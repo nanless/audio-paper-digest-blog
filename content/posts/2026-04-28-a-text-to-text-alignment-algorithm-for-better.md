@@ -3,7 +3,7 @@ title: "A Text-To-Text Alignment Algorithm for Better Evaluation of Modern Speec
 date: 2026-04-28
 draft: false
 tags: [语音识别, 模型评估, 多语言, 开源工具]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "模型评估 | 7.5/10"
 hiddenInHomeList: true
 ---

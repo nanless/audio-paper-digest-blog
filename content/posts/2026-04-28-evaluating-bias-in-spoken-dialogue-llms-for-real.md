@@ -3,7 +3,7 @@ title: "Evaluating Bias in Spoken Dialogue LLMs for Real-World Decisions and Rec
 date: 2026-04-28
 draft: false
 tags: [模型评估, 公平性研究, 语音大模型, 基准测试, 数据集]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "模型评估 | 7.0/10"
 hiddenInHomeList: true
 ---

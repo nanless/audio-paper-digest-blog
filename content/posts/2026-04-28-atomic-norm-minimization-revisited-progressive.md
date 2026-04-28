@@ -3,7 +3,7 @@ title: "Atomic Norm Minimization Revisited: Progressive Atom Identification And 
 date: 2026-04-28
 draft: false
 tags: [声源定位, 信号处理, 麦克风阵列, 实时处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "声源定位 | 7.5/10"
 hiddenInHomeList: true
 ---

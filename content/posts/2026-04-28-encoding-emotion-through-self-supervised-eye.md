@@ -3,7 +3,7 @@ title: "Encoding Emotion Through Self-Supervised Eye Movement Reconstruction"
 date: 2026-04-28
 draft: false
 tags: [语音情感识别, 自监督学习, 眼动分析, 情感计算]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音情感识别 | 7.5/10"
 hiddenInHomeList: true
 ---

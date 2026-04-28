@@ -3,7 +3,7 @@ title: "Probing the Hidden Talent of ASR foundation models for L2 English Oral A
 date: 2026-04-28
 draft: false
 tags: [预训练, 迁移学习, 零样本, 语音评估]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "预训练 | 7.5/10"
 hiddenInHomeList: true
 ---

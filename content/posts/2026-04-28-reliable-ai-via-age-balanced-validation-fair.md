@@ -3,7 +3,7 @@ title: "Reliable AI via Age-Balanced Validation: Fair Model Selection for Parkin
 date: 2026-04-28
 draft: false
 tags: [语音生物标志物, 模型评估, 数据集, 跨模态, 音频分类]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音生物标志物 | 7.5/10"
 hiddenInHomeList: true
 ---

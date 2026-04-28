@@ -3,7 +3,7 @@ title: "More Than a Shortcut: A Hyperbolic Approach to Early-Exit Networks"
 date: 2026-04-28
 draft: false
 tags: [音频事件检测, 双曲几何, 早期退出网络, 音频分类]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频事件检测 | 8.0/10"
 hiddenInHomeList: true
 ---

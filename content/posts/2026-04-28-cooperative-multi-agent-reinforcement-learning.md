@@ -3,7 +3,7 @@ title: "Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation 
 date: 2026-04-28
 draft: false
 tags: [联邦学习, 强化学习, 音频分类, 对抗样本, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "联邦学习 | 7.0/10"
 hiddenInHomeList: true
 ---

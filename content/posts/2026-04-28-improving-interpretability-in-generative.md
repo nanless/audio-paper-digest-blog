@@ -3,7 +3,7 @@ title: "Improving Interpretability in Generative Multitimbral DDSP Frameworks vi
 date: 2026-04-28
 draft: false
 tags: [音频生成, 音乐生成, 信号处理, 解耦表示]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---

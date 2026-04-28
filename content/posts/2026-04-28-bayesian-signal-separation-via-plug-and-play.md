@@ -3,7 +3,7 @@ title: "Bayesian Signal Separation Via Plug-and-Play Diffusion-Within-Gibbs Samp
 date: 2026-04-28
 draft: false
 tags: [语音分离, 扩散模型, 信号处理, 生物声学]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音分离 | 7.5/10"
 hiddenInHomeList: true
 ---

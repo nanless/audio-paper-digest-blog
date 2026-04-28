@@ -3,7 +3,7 @@ title: "Ara-BEST-RQ: Multi Dialectal Arabic SSL"
 date: 2026-04-28
 draft: false
 tags: [语音识别, 自监督学习, 多语言, 低资源, 阿拉伯语]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 6.5/10"
 hiddenInHomeList: true
 ---

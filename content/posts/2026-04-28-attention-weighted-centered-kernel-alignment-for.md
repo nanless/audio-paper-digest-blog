@@ -3,7 +3,7 @@ title: "Attention-Weighted Centered Kernel Alignment for Knowledge Distillation 
 date: 2026-04-28
 draft: false
 tags: [语音情感识别, 知识蒸馏, 语音大模型, 多模态模型]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音情感识别 | 8.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Tran
 date: 2026-04-28
 draft: false
 tags: [音视频, 扩散模型, 流匹配, DiT]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音视频 | 7.0/10"
 hiddenInHomeList: true
 ---

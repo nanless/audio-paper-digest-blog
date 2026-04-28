@@ -3,7 +3,7 @@ title: "Ailive Mixer: A Deep Learning Based Zero Latency Automatic Music Mixer f
 date: 2026-04-28
 draft: false
 tags: [音乐混合, 深度学习, 实时处理, 串音消除]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐混合 | 7.0/10"
 hiddenInHomeList: true
 ---

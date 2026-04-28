@@ -3,7 +3,7 @@ title: "Beyond Mapping: Domain-Invariant Representations via Spectral Embedding 
 date: 2026-04-28
 draft: false
 tags: [领域适应, 最优传输, 谱图嵌入, 音频分类]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "领域适应 | 7.5/10"
 hiddenInHomeList: true
 ---

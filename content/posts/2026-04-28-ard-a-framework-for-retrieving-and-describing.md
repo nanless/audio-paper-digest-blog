@@ -3,7 +3,7 @@ title: "AR&D: A Framework for Retrieving and Describing Concepts for Interpretin
 date: 2026-04-28
 draft: false
 tags: [音频大模型, 自监督学习, 模型评估]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频大模型 | 6.5/10"
 hiddenInHomeList: true
 ---

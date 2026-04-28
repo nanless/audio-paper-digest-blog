@@ -3,7 +3,7 @@ title: "HFSQVAE: Hierarchical Vector Quantization with Residuals for Frequency-S
 date: 2026-04-28
 draft: false
 tags: [向量量化, 音频生成, 音频分类, 图像重建, 信号处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频生成 | 7.0/10"
 hiddenInHomeList: true
 ---

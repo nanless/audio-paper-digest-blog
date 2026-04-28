@@ -3,7 +3,7 @@ title: "When Voice Matters: A Controlled Study of Audio LLM Behavior in Clinical
 date: 2026-04-28
 draft: false
 tags: [模型评估, 音频大模型, 语音合成, 基准测试, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "模型评估 | 7.0/10"
 hiddenInHomeList: true
 ---

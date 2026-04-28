@@ -3,7 +3,7 @@ title: "Generating Moving 3d Soundscapes with Latent Diffusion Models"
 date: 2026-04-28
 draft: false
 tags: [空间音频, 扩散模型, 音频生成, 数据增强, 多通道]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "空间音频 | 7.5/10"
 hiddenInHomeList: true
 ---

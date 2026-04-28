@@ -3,7 +3,7 @@ title: "DSRMS-TransUnet: A Decentralized Non-Shifted Transunet for Shallow Water
 date: 2026-04-28
 draft: false
 tags: [声源定位, 自回归模型, 端到端, 鲁棒性, 模型评估]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "声源定位 | 8.0/10"
 hiddenInHomeList: true
 ---

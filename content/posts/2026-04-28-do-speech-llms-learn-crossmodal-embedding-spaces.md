@@ -3,7 +3,7 @@ title: "Do Speech LLMs Learn Crossmodal Embedding Spaces?"
 date: 2026-04-28
 draft: false
 tags: [语音大模型, 模型评估, 跨模态, 音频检索]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频检索 | 6.5/10"
 hiddenInHomeList: true
 ---

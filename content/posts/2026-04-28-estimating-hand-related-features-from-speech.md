@@ -3,7 +3,7 @@ title: "Estimating Hand-Related Features from Speech Using Machine Learning"
 date: 2026-04-28
 draft: false
 tags: [语音生物标志物, 传统机器学习, 跨模态]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音生物标志物 | 5.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Structure-Aware Diffusion Schrödinger Bridge"
 date: 2026-04-28
 draft: false
 tags: [数据集对齐, 扩散模型, 领域适应]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "数据集对齐 | 7.7/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "LipsAM: Lipschitz-Continuous Amplitude Modifier for Audio Signal Process
 date: 2026-04-28
 draft: false
 tags: [语音增强, 即插即用学习, Lipschitz连续性, 鲁棒性, 信号处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音增强 | 7.5/10"
 hiddenInHomeList: true
 ---

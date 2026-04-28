@@ -3,7 +3,7 @@ title: "Cross-Cultural Bias in Mel-Scale Representations: Evidence and Alternati
 date: 2026-04-28
 draft: false
 tags: [语音识别, 音乐信息检索, 时频分析, 多语言, 基准测试]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 7.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Bridging the Front-End and Back-End for Robust ASR via Cross-Attention-B
 date: 2026-04-28
 draft: false
 tags: [语音识别, 交叉注意力, U-Net, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 7.0/10"
 hiddenInHomeList: true
 ---

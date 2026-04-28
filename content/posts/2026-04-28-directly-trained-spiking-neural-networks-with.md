@@ -3,7 +3,7 @@ title: "Directly Trained Spiking Neural Networks with Adaptive Phase Coding"
 date: 2026-04-28
 draft: false
 tags: [音频分类, 时间编码, 脉冲神经网络]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频分类 | 7.0/10"
 hiddenInHomeList: true
 ---

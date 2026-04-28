@@ -3,7 +3,7 @@ title: "GLoRIA: Gated Low-Rank Interpretable Adaptation for Dialectal ASR"
 date: 2026-04-28
 draft: false
 tags: [语音识别, 领域适应, 参数高效微调, 可解释性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 8.0/10"
 hiddenInHomeList: true
 ---

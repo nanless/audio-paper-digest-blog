@@ -3,7 +3,7 @@ title: "EEND-SAA: Enrollment-Less Main Speaker Voice Activity Detection Using Se
 date: 2026-04-28
 draft: false
 tags: [语音活动检测, 端到端, 说话人分离, 流式处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音活动检测 | 7.5/10"
 hiddenInHomeList: true
 ---

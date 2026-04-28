@@ -3,7 +3,7 @@ title: "Exploring How Audio Effects Alter Emotion with Foundation Models"
 date: 2026-04-28
 draft: false
 tags: [音乐理解, 情感计算, 音频大模型, 模型评估, 预训练]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐理解 | 7.0/10"
 hiddenInHomeList: true
 ---

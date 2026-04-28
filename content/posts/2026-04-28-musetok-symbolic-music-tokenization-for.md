@@ -3,7 +3,7 @@ title: "MuseTok: Symbolic Music Tokenization for Generation and Semantic Underst
 date: 2026-04-28
 draft: false
 tags: [音乐生成, 音乐理解, 预训练, 数据集]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐生成 | 8.5/10"
 hiddenInHomeList: true
 ---

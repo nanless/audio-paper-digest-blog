@@ -3,7 +3,7 @@ title: "nGPT as a Scalable Architecture for Speech Recognition and Translation"
 date: 2026-04-28
 draft: false
 tags: [语音识别, 语音翻译, nGPT, 多语言, 位置编码]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---

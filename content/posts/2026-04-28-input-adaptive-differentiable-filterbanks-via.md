@@ -3,7 +3,7 @@ title: "Input-Adaptive Differentiable Filterbanks via Hypernetworks for Robust S
 date: 2026-04-28
 draft: false
 tags: [语音识别, 音频分类, 语音情感识别, 自监督学习, 时频分析, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---

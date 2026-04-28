@@ -3,7 +3,7 @@ title: "Frequency-Independent Ambisonics Upscaling Using Deep Learning"
 date: 2026-04-28
 draft: false
 tags: [空间音频, 深度学习, 音频信号处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "空间音频 | 6.5/10"
 hiddenInHomeList: true
 ---

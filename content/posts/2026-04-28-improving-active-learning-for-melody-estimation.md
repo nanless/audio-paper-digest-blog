@@ -3,7 +3,7 @@ title: "Improving Active Learning for Melody Estimation by Disentangling Uncerta
 date: 2026-04-28
 draft: false
 tags: [音乐信息检索, 不确定性估计, 迁移学习, 少样本]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐信息检索 | 7.5/10"
 hiddenInHomeList: true
 ---

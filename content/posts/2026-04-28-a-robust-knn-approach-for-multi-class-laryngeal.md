@@ -3,7 +3,7 @@ title: "A Robust KNN Approach for Multi-Class Laryngeal Disease Detection using 
 date: 2026-04-28
 draft: false
 tags: [音频分类, 信号处理, 图神经网络, 医疗AI, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频分类 | 7.5/10"
 hiddenInHomeList: true
 ---

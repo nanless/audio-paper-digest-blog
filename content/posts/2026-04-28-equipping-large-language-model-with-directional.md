@@ -3,7 +3,7 @@ title: "Equipping Large Language Model with Directional Speech Understanding Cap
 date: 2026-04-28
 draft: false
 tags: [语音识别, 语音翻译, 语音分离, 波束成形, 大语言模型, 流式处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 语音翻译 | 7.0/10"
 hiddenInHomeList: true
 ---

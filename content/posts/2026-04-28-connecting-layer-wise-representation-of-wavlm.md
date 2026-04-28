@@ -3,7 +3,7 @@ title: "Connecting Layer-Wise Representation of Wavlm with Spectro-Temporal Modu
 date: 2026-04-28
 draft: false
 tags: [说话人验证, 自监督学习, 模型分析, 可解释性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "说话人验证 | 6.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Investigating Modality Contribution in Audio LLMs for Music"
 date: 2026-04-28
 draft: false
 tags: [音频大模型, 模型评估, 可解释AI, 音乐理解, 多模态模型]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "模型评估 | 6.5/10"
 hiddenInHomeList: true
 ---

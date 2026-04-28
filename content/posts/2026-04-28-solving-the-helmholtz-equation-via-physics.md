@@ -3,7 +3,7 @@ title: "Solving the Helmholtz Equation Via Physics-Informed Neural Networks with
 date: 2026-04-28
 draft: false
 tags: [声学建模, 物理信息神经网络, 自适应学习]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "声学建模 | 6.5/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Multimodal Co-Training with Subtractive Unlabeled-Benefit Bounds"
 date: 2026-04-28
 draft: false
 tags: [多模态学习, 半监督学习, 协同训练, 理论分析]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "多模态学习 | 6.0/10"
 hiddenInHomeList: true
 ---

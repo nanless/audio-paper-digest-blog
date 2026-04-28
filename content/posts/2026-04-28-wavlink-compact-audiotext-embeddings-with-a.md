@@ -3,7 +3,7 @@ title: "WavLink: Compact Audio–Text Embeddings with a Global Whisper Token"
 date: 2026-04-28
 draft: false
 tags: [音频检索, 对比学习, 零样本, 预训练, 迁移学习]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频检索 | 8.0/10"
 hiddenInHomeList: true
 ---

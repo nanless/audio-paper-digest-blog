@@ -3,7 +3,7 @@ title: "Scaling Spoken Language Models with Syllabic Speech Tokenization"
 date: 2026-04-28
 draft: false
 tags: [语音大模型, 语音理解, 分词技术, 自监督学习, 模型比较]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音理解 | 7.0/10"
 hiddenInHomeList: true
 ---

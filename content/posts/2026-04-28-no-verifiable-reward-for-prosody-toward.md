@@ -3,7 +3,7 @@ title: "No Verifiable Reward for Prosody: Toward Preference-Guided Prosody Learn
 date: 2026-04-28
 draft: false
 tags: [语音合成, 强化学习, 偏好学习, 数据集]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音合成 | 8.0/10"
 hiddenInHomeList: true
 ---

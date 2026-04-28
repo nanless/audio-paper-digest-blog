@@ -3,7 +3,7 @@ title: "MR-FlowDPO: Multi-Reward Direct Preference Optimization for Flow-Matchin
 date: 2026-04-28
 draft: false
 tags: [音乐生成, 流匹配, 强化学习, 自监督学习, 模型评估]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐生成 | 7.5/10"
 hiddenInHomeList: true
 ---

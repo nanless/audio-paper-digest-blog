@@ -3,7 +3,7 @@ title: "RoCo: Robust Code for Fast and Effective Proactive Defense against Voice
 date: 2026-04-28
 draft: false
 tags: [音频安全, 对抗样本, 语音克隆, 语音合成, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频安全 | 7.5/10"
 hiddenInHomeList: true
 ---

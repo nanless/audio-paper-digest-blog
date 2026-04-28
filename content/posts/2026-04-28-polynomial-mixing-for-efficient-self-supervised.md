@@ -3,7 +3,7 @@ title: "Polynomial Mixing for Efficient Self-Supervised Speech Encoders"
 date: 2026-04-28
 draft: false
 tags: [语音识别, 自监督学习, 端到端, 低资源, 开源工具]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 8.0/10"
 hiddenInHomeList: true
 ---

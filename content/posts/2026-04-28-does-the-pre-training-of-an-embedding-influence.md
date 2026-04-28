@@ -3,7 +3,7 @@ title: "Does the Pre-Training of an Embedding Influence its Encoding of Age?"
 date: 2026-04-28
 draft: false
 tags: [语音生物标志物, 说话人识别, 预训练, 模型比较]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音生物标志物 | 7.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "MAG: Multi-Modal Aligned Autoregressive Co-Speech Gesture Generation Wit
 date: 2026-04-28
 draft: false
 tags: [音频生成, 多模态模型, 扩散模型, 对比学习]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频生成 | 8.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognitio
 date: 2026-04-28
 draft: false
 tags: [音乐信息检索, 时频分析, 音频分类, 鲁棒性, 基准测试]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐信息检索 | 7.0/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Physics-Informed Neural Networks for Ocean Acoustic Field Reconstruction
 date: 2026-04-28
 draft: false
 tags: [声源定位, 物理信息神经网络, 水声学, 匹配场处理, 信号处理]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "声源定位 | 7.5/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Sequence-Level Unsupervised Training in Speech Recognition: A Theoretica
 date: 2026-04-28
 draft: false
 tags: [语音识别, 无监督学习, 低资源]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音识别 | 6.5/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "BSMP-SENet:Band-Split Magnitude-Phase Network for Speech Enhancement"
 date: 2026-04-28
 draft: false
 tags: [语音增强, 信号处理, 时频分析, 模型评估]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音增强 | 7.0/10"
 hiddenInHomeList: true
 ---

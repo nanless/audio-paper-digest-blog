@@ -3,7 +3,7 @@ title: "Low-Resource Speech-Based Early Alzheimers Detection via Cross-Lingual a
 date: 2026-04-28
 draft: false
 tags: [语音生物标志物, 迁移学习, 多语言, 少样本, 低资源]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音生物标志物 | 7.5/10"
 hiddenInHomeList: true
 ---

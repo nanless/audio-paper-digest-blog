@@ -3,7 +3,7 @@ title: "A State-Dependent Markov Diffusion Process for Generative Speech Enhance
 date: 2026-04-28
 draft: false
 tags: [语音增强, 扩散模型, 图注意力, 混合损失]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音增强 | 6.5/10"
 hiddenInHomeList: true
 ---

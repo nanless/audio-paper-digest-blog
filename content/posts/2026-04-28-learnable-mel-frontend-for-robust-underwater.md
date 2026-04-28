@@ -3,7 +3,7 @@ title: "Learnable Mel-Frontend for Robust Underwater Acoustic Target Detection u
 date: 2026-04-28
 draft: false
 tags: [水下声学目标检测, 可学习前端, 音频分类, 时频分析, 鲁棒性]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频分类 | 6.5/10"
 hiddenInHomeList: true
 ---

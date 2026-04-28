@@ -3,7 +3,7 @@ title: "SAGA-SR: Semantically and Acoustically Guided Audio Super-Resolution"
 date: 2026-04-28
 draft: false
 tags: [音频增强, 扩散模型, 流匹配, 生成模型]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频增强 | 7.5/10"
 hiddenInHomeList: true
 ---

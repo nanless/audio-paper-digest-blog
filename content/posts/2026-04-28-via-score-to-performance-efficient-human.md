@@ -3,7 +3,7 @@ title: "Via Score to Performance: Efficient Human-Controllable Long Song Generat
 date: 2026-04-28
 draft: false
 tags: [音乐生成, 自回归模型, 音频生成, 开源工具]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐生成 | 7.5/10"
 hiddenInHomeList: true
 ---

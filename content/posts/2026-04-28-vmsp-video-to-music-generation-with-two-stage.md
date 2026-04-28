@@ -3,7 +3,7 @@ title: "VMSP: Video-to-Music Generation with Two-Stage Alignment and Synthesis"
 date: 2026-04-28
 draft: false
 tags: [音乐生成, 扩散模型, 多模态模型, 跨模态]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐生成 | 7.0/10"
 hiddenInHomeList: true
 ---

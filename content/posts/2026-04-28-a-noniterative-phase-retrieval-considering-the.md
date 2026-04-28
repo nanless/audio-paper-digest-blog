@@ -3,7 +3,7 @@ title: "A Noniterative Phase Retrieval Considering the Zeros of STFT Magnitude"
 date: 2026-04-28
 draft: false
 tags: [信号处理, 时频分析, 语音增强]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "信号处理 | 7.5/10"
 hiddenInHomeList: true
 ---

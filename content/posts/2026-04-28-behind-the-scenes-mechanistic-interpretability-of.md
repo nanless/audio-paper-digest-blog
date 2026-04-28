@@ -3,7 +3,7 @@ title: "Behind the Scenes: Mechanistic Interpretability of Lora-Adapted Whisper 
 date: 2026-04-28
 draft: false
 tags: [语音情感识别, 语音大模型, 参数高效微调, 机制解释性研究, 低资源]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音情感识别 | 7.5/10"
 hiddenInHomeList: true
 ---

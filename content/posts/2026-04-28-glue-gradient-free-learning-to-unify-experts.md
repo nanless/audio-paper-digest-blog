@@ -3,7 +3,7 @@ title: "GLUE: Gradient-free Learning to Unify Experts"
 date: 2026-04-28
 draft: false
 tags: [迁移学习, 预训练, 知识蒸馏, 多任务学习]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "迁移学习 | 6.5/10"
 hiddenInHomeList: true
 ---

@@ -3,7 +3,7 @@ title: "Temporal Distillation for Music Representation Learning"
 date: 2026-04-28
 draft: false
 tags: [音乐信息检索, 自监督学习, 知识蒸馏, 音频大模型]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音乐信息检索 | 7.5/10"
 hiddenInHomeList: true
 ---

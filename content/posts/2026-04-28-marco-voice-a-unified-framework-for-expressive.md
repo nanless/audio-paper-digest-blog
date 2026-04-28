@@ -3,7 +3,7 @@ title: "Marco-Voice: A Unified Framework for Expressive Speech Synthesis with Vo
 date: 2026-04-28
 draft: false
 tags: [语音合成, 语音克隆, 流匹配, 情感合成, 数据集]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音合成 | 8.0/10"
 hiddenInHomeList: true
 ---

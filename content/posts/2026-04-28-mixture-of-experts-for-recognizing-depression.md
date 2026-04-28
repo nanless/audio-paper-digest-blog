@@ -3,7 +3,7 @@ title: "Mixture of Experts for Recognizing Depression from Interview and Reading
 date: 2026-04-28
 draft: false
 tags: [语音生物标志物, 混合专家模型, 多模态模型, 端到端]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "语音生物标志物 | 6.0/10"
 hiddenInHomeList: true
 ---

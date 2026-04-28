@@ -3,7 +3,7 @@ title: "ECHO: Frequency-Aware Hierarchical Encoding for Variable-Length Signals"
 date: 2026-04-28
 draft: false
 tags: [音频大模型, 音频分类, 自监督学习, 工业应用, 开源工具]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频分类 | 9.5/10"
 hiddenInHomeList: true
 ---

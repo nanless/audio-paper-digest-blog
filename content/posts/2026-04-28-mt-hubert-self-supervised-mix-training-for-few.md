@@ -3,7 +3,7 @@ title: "MT-HuBERT: Self-Supervised Mix-Training for Few-Shot Keyword Spotting in
 date: 2026-04-28
 draft: false
 tags: [关键词检测, 自监督学习, 混合语音处理, 少样本学习]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "关键词检测 | 7.0/10"
 hiddenInHomeList: true
 ---

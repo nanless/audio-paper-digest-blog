@@ -3,7 +3,7 @@ title: "Toward Faithful Explanations in Acoustic Anomaly Detection"
 date: 2026-04-28
 draft: false
 tags: [音频事件检测, 自监督学习, 工业应用]
-categories: [论文速递]
+categories: [icassp-2026]
 description: "音频事件检测 | 7.5/10"
 hiddenInHomeList: true
 ---

@@ -23,6 +23,9 @@ menu:
     - name: "分类"
       url: "/categories/"
       weight: 3
+    - name: "ICASSP 2026"
+      url: "/categories/icassp-2026/"
+      weight: 4
 
 params:
   env: production
