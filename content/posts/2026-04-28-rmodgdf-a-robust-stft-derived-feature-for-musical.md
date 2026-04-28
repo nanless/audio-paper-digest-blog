@@ -40,8 +40,8 @@ hiddenInHomeList: true
 | MODGDF | 98.674 ± 0.387 | 89.167 ± 1.083 | 99.498 ± 0.308 | 91.449 ± 2.840 |
 | RMODGDF (本文) | 99.299 ± 0.157 | 91.496 ± 1.564 | 99.747 ± 0.184 | 93.023 ± 1.526 |
 
-![图1描述](pdf-image-page3-idx0)
-![图2描述](pdf-image-page3-idx1)
+![图1描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460487-0.png)
+![图2描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460487-1.png)
 图1和图2（论文中标为Fig. 1与Fig. 2）展示了MODGDF与RMODGDF特征图的视觉对比。RMODGDF的对数变换增强了低能量区域的细节，同时保持了高能量区域的判别性，整体对比度更优。
 
 5. 实际意义：为音频特征表示（尤其是相位信息利用）提供了一个简单、原理清晰且有效的改进方案，对提升MIR相关任务性能有潜在价值。
@@ -115,10 +115,10 @@ hiddenInHomeList: true
 | Cos + Sin of Phase | 67.607 ± 5.325 | 69.080 ± 3.012 | 67.607 ± 5.325 | 65.564 ± 3.807 | 93.497 ± 1.101 |
 | RMODGDF (Proposed) | 93.023 ± 1.526 | 94.069 ± 0.520 | 93.023 ± 1.526 | 92.782 ± 1.065 | 99.747 ± 0.184 |
 
-![图1描述](pdf-image-page3-idx0)
+![图1描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460487-0.png)
 图1：MODGDF特征图可视化。
 
-![图2描述](pdf-image-page3-idx1)
+![图2描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460487-1.png)
 图2：RMODGDF特征图可视化。对比图1，RMODGDF的图像动态范围更均衡，低亮度（低能量）区域的细节更清晰，有助于模型学习。
 
 关键结论与消融分析：

@@ -51,7 +51,7 @@ MR-FlowDPO是一个针对Flow-Matching模型的微调框架，而非一个端到
 - 偏好数据构建与DPO训练：利用上述三个奖励，通过“多奖励强支配”算法从参考模型生成的样本池中挑选出成对的偏好数据（Xw, Xl, Y），其中Xw在所有三个奖励上均强于Xl。然后，使用这些数据对Flow-Matching模型进行DPO微调。损失函数是DPO-diffusion损失的变体，优化目标是最大化正样本向量场预测的似然，同时最小化负样本的似然。
 - 奖励提示（Reward Prompting）：在DPO训练时，将正样本的奖励值作为自然语言字符串前置到文本描述Y中，一同作为模型输入。在推理时，则将训练集中奖励值的99百分位数作为理想奖励值，同样提示给模型，引导其生成高质量输出。
 
-![图1: MR-FlowDPO流程概览](pdf-image-page1-idx0)
+![图1: MR-FlowDPO流程概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11465005-0.png)
 图1说明：展示了MR-FlowDPO的工作流程。首先，参考模型（Ref Model）根据文本提示（Text Prompt）生成多个音乐样本。然后，每个样本经过三个奖励模块（如制作质量预测器）进行打分。接着，根据这些分数，通过配对策略（Pairing）挑选出偏好对（Preference pairs）。最后，使用这些偏好对，通过DPO损失函数对参考模型进行微调，得到MR-FlowDPO模型。图中特别标注了奖励提示机制（Reward Prompting）。
 
 ### 💡 核心创新点
@@ -107,7 +107,7 @@ MR-FlowDPO是一个针对Flow-Matching模型的微调框架，而非一个端到
 | Ours-1B vs. MelodyFlow | 16.67±10.00 | 43.26±10.50 | 1.88±9.30 | 17.00±10.30 |
 结论：MR-FlowDPO-400M在所有指标上大幅超越其参考模型Flow-400M。MR-FlowDPO-1B在音频质量和音乐性上显著优于强大的基线MelodyFlow-1B，但在文本对齐上与之持平。
 
-![图2: MR-FLOWDPO-1B 对比 MelodyFlow-1B 人工评估胜率](pdf-image-page4-idx1)
+![图2: MR-FLOWDPO-1B 对比 MelodyFlow-1B 人工评估胜率](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11465005-1.png)
 图2说明：展示了MR-FLOWDPO-1B相对于MelodyFlow-1B在四个评估维度上的净胜率。在音频质量（~43%）和音乐性（~17%）上优势明显，在整体偏好上也获得正胜率（~17%），文本对齐上略有优势但置信区间包含零，表明两者相当。
 
 表3. 消融研究：奖励构成与边际阈值影响（在内部测试集上）

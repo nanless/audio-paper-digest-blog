@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page3-idx0](pdf-image-page3-idx0)
+![图1: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11463225-0.png)
 整体架构： 如图1所示，所提模块接收两路输入：增强语音的Fbank特征（Ze） 和 带噪语音的Fbank特征（Zn）。每路输入通过一个独立的分支进行处理，两个分支结构对称，均包含一个编码器、一个解码器以及一个门控融合模块。最终，融合后的特征被送入下游ASR后端（如Whisper）。
 
 组件详解：
@@ -101,8 +101,8 @@ hiddenInHomeList: true
 结果表明所有模块都有正向贡献。
 
 图表引用：
-- 图1 (`![图1: pdf-image-page3-idx0](pdf-image-page3-idx0)`)：展示了所提模块的整体双分支U-Net架构、交叉注意力交互和门控融合的完整流程。
-- 图2 (`![图2: pdf-image-page3-idx1](pdf-image-page3-idx1)`)：详细示意了交叉注意力模块如何工作，即增强语音特征如何作为查询去从带噪语音特征（键和值）中提取信息。
+- 图1 (`![图1: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11463225-0.png)`)：展示了所提模块的整体双分支U-Net架构、交叉注意力交互和门控融合的完整流程。
+- 图2 (`![图2: pdf-image-page3-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11463225-1.png)`)：详细示意了交叉注意力模块如何工作，即增强语音特征如何作为查询去从带噪语音特征（键和值）中提取信息。
 
 ### ⚖️ 评分理由
 

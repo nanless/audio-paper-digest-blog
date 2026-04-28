@@ -107,13 +107,13 @@ hiddenInHomeList: true
 
 实验结果图表：
 - 图2：展示了APC在CIFAR数据集上显著降低各层脉冲发放率的效果。
-  ![图2: CIFAR数据集上APC对脉冲率的影响](pdf-image-page4-idx1)
+  ![图2: CIFAR数据集上APC对脉冲率的影响](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460632-1.png)
   （描述：两个子图分别显示CIFAR10和CIFAR100中，使用APC后各模块（block）的相对脉冲率（蓝色线）均显著低于基线（1.00，橙色虚线），直观展示了能效提升。）
 - 图3：展示了APC在DVS-Gesture和SHD数据集上对脉冲率的影响。
-  ![图3: DVS-Gesture和SHD数据集上APC对脉冲率的影响](pdf-image-page4-idx2)
+  ![图3: DVS-Gesture和SHD数据集上APC对脉冲率的影响](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460632-2.png)
   （描述：(a) DVS-Gesture：APC在大多数层降低了脉冲率。（b) SHD：APC在不同层对脉冲率的影响不一，有增有减，但整体精度大幅提升，表明网络更智能地分配了脉冲。）
 - 图1：说明了速率编码、相位编码和TTFS编码的区别，有助于理解APC的动机。
-  ![图1: 三种常见编码方案示意图](pdf-image-page4-idx0)
+  ![图1: 三种常见编码方案示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-28/11460632-0.png)
 
 ### ⚖️ 评分理由
 
