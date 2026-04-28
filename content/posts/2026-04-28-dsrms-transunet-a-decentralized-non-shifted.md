@@ -56,7 +56,7 @@ DSRMS-TransUNet是一个端到端的深度学习模型，整体分为特征提�
 
 3.  特征评估阶段：将解码器输出的特征图展平，通过三个全连接层（每层后接BN和ReLU）进行分类。最终输出一个$N \times L$的矩阵，表示$N$个样本属于$L$个距离类别的概率分布，使用二元交叉熵损失进行训练。
 
-![pdf-image-page3-idx0](https://github.com/binzhangbin/DSRMS-TranUNet/raw/main/fig/1.png)
+pdf-image-page3-idx0]
 图1 (pdf-image-page3-idx0)：DSRMS-TransUNet整体架构图。展示了从数据接收、特征提取（协方差矩阵双通道分解）、特征学习（DSC编码器-RViT-解码器）到特征评估（MLP分类）的完整流程，以及RViT模块的内部结构。
 
 ### 💡 核心创新点
@@ -104,10 +104,10 @@ DSRMS-TransUNet是一个端到端的深度学习模型，整体分为特征提�
 结论：DSRMS-TransUnet的RMSE最低，误差最小。
 - 主流骨干模型交叉验证（表IV）：在HLAH和HLAS上，DSRMS-TransUnet的平均准确率（89.6%, 91.6%）和中位数准确率（90%, 91%）均最高，且四分位距（IQR）小，表明性能稳定。
 
-![pdf-image-page3-idx1](https://github.com/binzhangbin/DSRMS-TranUNet/raw/main/fig/2.png)
+pdf-image-page3-idx1]
 图2 (pdf-image-page3-idx1)：三个模型（Baseline, DS-TransUnet, DSRMS-TransUnet）在HLAH和HLAS数据集上预测范围与真实范围的散点分布对比图。DSRMS-TransUnet的点最贴近对角线，准确率最高。
 
-![pdf-image-page3-idx2](https://github.com/binzhangbin/DSRMS-TranUNet/raw/main/fig/3.png)
+pdf-image-page3-idx2]
 图3 (pdf-image-page3-idx2)：论文中用于生成模拟数据的水下环境示意图，展示了垂直线阵、声源、海底分层结构等信息。
 
 ### ⚖️ 评分理由
