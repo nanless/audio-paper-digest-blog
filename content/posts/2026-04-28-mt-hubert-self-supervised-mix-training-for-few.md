@@ -38,7 +38,7 @@ hiddenInHomeList: true
 
 MT-HuBERT的整体架构基于HuBERT，并进行了目标函数的关键修改。下图展示了标准HuBERT与MT-HuBERT的对比。
 
-![MT-HuBERT 架构对比](https://ieeexplore.ieee.org/elementImg/remote/12043482/325/12043482.pdf)
+MT-HuBERT 架构对比
 
 图1：Clean HuBERT (a) 与 MT-HuBERT (b) 的对比示意图。
 
@@ -147,7 +147,7 @@ MT-HuBERT的整体架构基于HuBERT，并进行了目标函数的关键修改�
 
 MT-HuBERT的整体架构基于HuBERT，并进行了目标函数的关键修改。下图展示了标准HuBERT与MT-HuBERT的对比。
 
-![MT-HuBERT 架构对比](https://ieeexplore.ieee.org/elementImg/remote/12043482/325/12043482.pdf)
+MT-HuBERT 架构对比
 
 图1：Clean HuBERT (a) 与 MT-HuBERT (b) 的对比示意图。
 

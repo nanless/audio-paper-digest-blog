@@ -63,7 +63,7 @@ hiddenInHomeList: true
     - 公式: `D_S^(Lips)(z) = (min(S(|z|), |z|))+ ⊙ sign(z)`。
     - 动机：`min` 操作直接实现了 `A(x)ₙ ≤ xₙ` 的约束，ReLU防止产生负幅度。
 
-![LipsAM-SE Architecture](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/5912/11463775/11464386/11463775-fig-1-3112244-large-1.jpg)
+LipsAM-SE Architecture
 (图1展示了LipsAM-SE和LipsAM-RE的架构。红色部分是可训练的DNN（S或R），蓝色部分是为了强制Lipschitz连续性而引入的层。左图为LipsAM-SE，可以看到在S的输出后接了一个元素级的`min`操作，该操作与输入幅度比较；右图为LipsAM-RE，在R的输出后直接应用ReLU `(·)+` 作为残差，并确保其非负。)
 
 2.  LipsAM-RE（残差估计器）:
@@ -107,7 +107,7 @@ hiddenInHomeList: true
 - 方法：通过优化计算Jacobian矩阵的算子范数的上界B（式13），对多种架构（AM-SE， LipsAM-SE， AM-RE， LipsAM-RE）在不同S/R Lipschitz常数下进行100次随机实验。
 - 关键结论：传统AM（DS， DR）的B值轻易超过阈值5（发散）。而LipsAM（D_S^(Lips)， D_R^(Lips)）的B值严格被定理5的理论线（√(Lip(S)²+1) 和 Lip(R)+1）所约束。
 
-![Numerical Lipschitz Bound](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/5912/11463775/11464386/11463775-fig-2-3112244-large-1.jpg)
+Numerical Lipschitz Bound
 (图2：Jacobian算子范数上界B的数值估计。点代表100次试验的结果，大圆圈标出最大值。实线是定理5的理论界限。阴影区域表示B>5（终止阈值）。结果清晰表明LipsAM的B值被理论界限紧密控制，而传统AM则发散。)
 
 2. PnP语音去混响应用（图3， 表1， 图4）

@@ -100,7 +100,7 @@ hiddenInHomeList: true
 *   主要对比基线为PGHI。Fig. 2 展示了20个样本的SCdB散点图，其中绝大多数点位于对角线下方，表明所提方法在多数样本上优于PGHI。
 *   Fig. 1(c)-(h) 提供了可视化对比，显示所提方法在零点附近的相位误差更小，整体信号重建误差（g, h）也更低。
 
-![Fig.1](https://ieeexplore.ieee.org/primary/xpl/articleMedium/images/11465060-1.jpg)
+Fig.1
 图1：典型数据结果。(a)原始信号，(b)STFT对数幅度，(c)(d)分别为所提方法和PGHI的相位误差，(e)(f)为相位误差局部放大，(g)(h)为使用所提方法和PGHI相位重建后的信号误差。
 
 不同条件下的结果：实验仅在MOCHA-TIMIT数据集上进行，未探讨不同窗函数、不同语音类型（如噪声环境）下的性能。

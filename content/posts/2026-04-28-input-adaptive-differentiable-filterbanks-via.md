@@ -109,23 +109,23 @@ hiddenInHomeList: true
 关键结论：移除动态适应（使用静态Oracle）导致性能显著下降，确认了动态适应是主要贡献。移除自监督预训练或多尺度控制器也导致明显性能下降，验证了各组件的有效性。
 
 图1. LibriSpeech上的数据效率
-![Fig. 1. Data efficiency on LibriSpeech. HyperFB shows a marked advantage in the low-resource (100h) regime.](https://ieeexplore.ieee.org/element/doi/10.1109/ICASSP55912.2026.11460970/media/x1.png)
+Fig. 1. Data efficiency on LibriSpeech. HyperFB shows a marked advantage in the low-resource (100h) regime.
 关键结论：在低资源（100小时）设置下，HyperFB的WER显著低于其他模型，显示出强大的数据效率优势。
 
 图2. HyperFB在不同声学场景下自适应滤波器组
-![Fig. 2. HyperFB adapts its filterbank across acoustic scenes.](https://ieeexplore.ieee.org/element/doi/10.1109/ICASSP55912.2026.11460970/media/x2.png)
+Fig. 2. HyperFB adapts its filterbank across acoustic scenes.
 关键结论：直观展示了HyperFB如何根据输入噪声（干净语音、高频嘶声、低频隆隆声）动态调整滤波器组的形状和中心频率分布，以优化特征提取。
 
 图3. HyperFB的自适应频谱缩放提高特征保真度
-![Fig. 3. HyperFB’s adaptive zoom improves feature fidelity.](https://ieeexplore.ieee.org/element/doi/10.1109/ICASSP55912.2026.11460970/media/x3.png)
+Fig. 3. HyperFB’s adaptive zoom improves feature fidelity.
 关键结论：当语音共振峰被噪声掩蔽时，HyperFB生成更窄的滤波器精确聚焦于真实语音峰值，物理上排除大部分噪声能量，输出特征保真度远优于静态方法。
 
 图4. 滤波器轨迹在稳定噪声(a)和突发声学事件(b)下的平滑性与反应性
-![Fig. 4. Filter trajectories are smooth for stable noise (a) and reactive for abrupt events (b).](https://ieeexplore.ieee.org/element/doi/10.1109/ICASSP55912.2026.11460970/media/x4.png)
+Fig. 4. Filter trajectories are smooth for stable noise (a) and reactive for abrupt events (b).
 关键结论：在稳定噪声下，滤波器轨迹平滑稳定；在突发事件（如爆破音）发生时，轨迹能快速反应进行调整，验证了轨迹生成机制的有效性。
 
 图5. 多尺度注意力权重适应输入的时间特性
-![Fig. 5. Multi-scale attention weights adapt to the input’s temporal nature.](https://ieeexplore.ieee.org/element/doi/10.1109/ICASSP55912.2026.11460970/media/x5.png)
+Fig. 5. Multi-scale attention weights adapt to the input’s temporal nature.
 关键结论：对于尖锐瞬态事件（a），模型主要关注短尺度（micro）；对于语音起始段（b），关注中尺度（meso）；对于稳定背景噪声（c），关注长尺度（macro）。这证实了多尺度控制器能自适应地聚焦于最相关的时间��度。
 
 表4. 计算成本比较

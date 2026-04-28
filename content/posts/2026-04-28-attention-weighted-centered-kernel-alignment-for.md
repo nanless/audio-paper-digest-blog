@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 PL-Distill框架旨在将大型教师模型（Qwen2-Audio，8.4B）的知识蒸馏到同架构但更小的学生模型（Qwen2-0.5B，1.1B）中。整体架构如图1所示。
 
-![PL-Distill Framework](https://ieeexplore.ieee.org/mediastore/IEEE/content/media/11464906/11558778/11558886/11558786/11464906.f1.png)
+PL-Distill Framework
 
 图1. PL-Distill框架概览，包含投影器级蒸馏（PDist）和Logits级蒸馏（LDist）。
 

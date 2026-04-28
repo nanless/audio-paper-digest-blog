@@ -47,9 +47,9 @@ hiddenInHomeList: true
 | | MC-NPI | 0.47 | 0.21 ± 0.02 |
 
 表1：两个模型在不同实验设置下的准确率和平均音频模态贡献度（A-SHAP）。
-![MM-SHAP计算过程示意图](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/11463300/11463349/11463350/11463350-fig-1-source-large.gif)
+MM-SHAP计算过程示意图
 图1：MM-SHAP计算流程示意图。通过掩码所有可能的输入组合（近似为随机排列），并计算基础答案（未掩码推理）的对数变化来平均得到Shapley值。
-![定性分析示例](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/11463300/11463349/11463350/11463350-fig-2-source-large.gif)
+定性分析示例
 图2：QwenAudio定性分析示例。展示了对于输出token“bell”，输入文本和音频各区域的Shapley值贡献，绝对值高的区域（深色）对应模型认为重要的特征。
 
 5. 实际意义：揭示了当前音频大模型在音乐问答任务上可能存在“模态坍缩”现象，即过度依赖文本推理。警示社区在评估模型时需设计更可靠的基准，并为模型可解释性研究提供了方法范式。
