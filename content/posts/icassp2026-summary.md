@@ -137,6 +137,7 @@ layout: "posts"
 - [音频描述](/audio-paper-digest-blog/posts/icassp2026-task-126/)（1篇）
 - [主动噪声控制](/audio-paper-digest-blog/posts/icassp2026-task-000/)（1篇）
 - [音乐分离](/audio-paper-digest-blog/posts/icassp2026-task-102/)（1篇）
+- [音乐源提取](/audio-paper-digest-blog/posts/icassp2026-task-108/)（1篇）
 - [音乐转录](/audio-paper-digest-blog/posts/icassp2026-task-111/)（1篇）
 - [房间脉冲响应](/audio-paper-digest-blog/posts/icassp2026-task-028/)（1篇）
 - [语音识别 #语音合成](/audio-paper-digest-blog/posts/icassp2026-task-079/)（1篇）
@@ -157,7 +158,6 @@ layout: "posts"
 - [音乐分类](/audio-paper-digest-blog/posts/icassp2026-task-103/)（1篇）
 - [槽填充](/audio-paper-digest-blog/posts/icassp2026-task-032/)（1篇）
 - [多模态学习](/audio-paper-digest-blog/posts/icassp2026-task-015/)（1篇）
-- [音乐源提取](/audio-paper-digest-blog/posts/icassp2026-task-108/)（1篇）
 
 ---
 
@@ -178,7 +178,7 @@ layout: "posts"
 | #音乐生成 | 31篇 | ███████████████ |
 | #空间音频 | 31篇 | ███████████████ |
 
-### 📊 论文评分排行榜（850 篇，按分数降序）
+### 📊 论文评分排行榜（896 篇，按分数降序）
 
 | 排名 | 论文 | 评分 | 分档 | 主任务 |
 |------|------|------|------|------|
@@ -204,882 +204,882 @@ layout: "posts"
 | 20. | [ECSA: Dual-Branch Emotion Compensation for Emotion-Cons](/audio-paper-digest-blog/posts/2026-04-29-ecsa-dual-branch-emotion-compensation-for-emotion) | 8.5分 | 前25% | #语音匿名化 |
 | 21. | [Adaptive Rotary Steering with Joint Autoregression for ](/audio-paper-digest-blog/posts/2026-04-29-adaptive-rotary-steering-with-joint) | 8.5分 | 前25% | #语音分离 |
 | 22. | [Lisa: Lightweight Yet Superb Neural Speech Coding](/audio-paper-digest-blog/posts/2026-04-29-lisa-lightweight-yet-superb-neural-speech-coding) | 8.5分 | 前25% | #语音编码 |
-| 23. | [Bridging the Semantic Gap: Cross-Attentive Fusion for J](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-semantic-gap-cross-attentive-fusion) | 8.5分 | 前25% | #语音质量评估 |
-| 24. | [Shared Representation Learning for Reference-Guided Tar](/audio-paper-digest-blog/posts/2026-04-29-shared-representation-learning-for-reference) | 8.5分 | 前25% | #音频事件检测 |
-| 25. | [Self-Supervised Note Tracking and Multi-Pitch Estimatio](/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch) | 8.5分 | 前25% | #多音高估计 #音符跟踪 |
-| 26. | [Spatial-CLAP: Learning Spatially-Aware Audio–Text Embed](/audio-paper-digest-blog/posts/2026-04-29-spatial-clap-learning-spatially-aware-audiotext) | 8.5分 | 前25% | #空间音频 |
-| 27. | [Time-Shifted Token Scheduling for Symbolic Music Genera](/audio-paper-digest-blog/posts/2026-04-29-time-shifted-token-scheduling-for-symbolic-music) | 8.5分 | 前25% | #音乐生成 |
-| 28. | [Bridging the Measurement–Simulation Gap in Room Acousti](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-measurementsimulation-gap-in-room) | 8.5分 | 前25% | #声源定位 |
-| 29. | [Low-Resource Guidance for Controllable Latent Audio Dif](/audio-paper-digest-blog/posts/2026-04-29-low-resource-guidance-for-controllable-latent) | 8.5分 | 前25% | #音乐生成 |
-| 30. | [Synthcloner: Synthesizer-Style Audio Transfer via Facto](/audio-paper-digest-blog/posts/2026-04-29-synthcloner-synthesizer-style-audio-transfer-via) | 8.5分 | 前25% | #音频生成 |
-| 31. | [A Generative-First Neural Audio Autoencoder](/audio-paper-digest-blog/posts/2026-04-29-a-generative-first-neural-audio-autoencoder) | 8.5分 | 前25% | #音乐生成 |
-| 32. | [Musicdetr: A Position-Aware Spectral Note Detection Mod](/audio-paper-digest-blog/posts/2026-04-29-musicdetr-a-position-aware-spectral-note) | 8.5分 | 前10% | #歌唱语音转录 |
-| 33. | [ACAVCaps: Enabling Large-Scale Training for Fine-Graine](/audio-paper-digest-blog/posts/2026-04-29-acavcaps-enabling-large-scale-training-for-fine) | 8.5分 | 前25% | #音频分类 |
-| 34. | [CASTELLA: Long Audio Dataset with Captions and Temporal](/audio-paper-digest-blog/posts/2026-04-29-castella-long-audio-dataset-with-captions-and) | 8.5分 | 前25% | #音频检索 |
-| 35. | [DiTSE: High-Fidelity Generative Speech Enhancement via ](/audio-paper-digest-blog/posts/2026-04-29-ditse-high-fidelity-generative-speech-enhancement) | 8.5分 | 前10% | #语音增强 |
-| 36. | [Dynamic Spectrogram Analysis with Local-Aware Graph Net](/audio-paper-digest-blog/posts/2026-04-29-dynamic-spectrogram-analysis-with-local-aware) | 8.5分 | 前10% | #音频深度伪造检测 |
-| 37. | [RASD-SR: A Robust Anomalous Sound Detection Framework w](/audio-paper-digest-blog/posts/2026-04-29-rasd-sr-a-robust-anomalous-sound-detection) | 8.5分 | 前10% | #异常声音检测 |
-| 38. | [Toward Robust And Efficient Beat Tracking Via Beat-Awar](/audio-paper-digest-blog/posts/2026-04-29-toward-robust-and-efficient-beat-tracking-via) | 8.5分 | 前25% | #音乐理解 |
-| 39. | [Temporally Heterogeneous Graph Contrastive Learning for](/audio-paper-digest-blog/posts/2026-04-29-temporally-heterogeneous-graph-contrastive) | 8.5分 | 前25% | #音频事件检测 |
-| 40. | [The Muse Benchmark: Probing Music Perception and Audito](/audio-paper-digest-blog/posts/2026-04-29-the-muse-benchmark-probing-music-perception-and) | 8.5分 | 前25% | #音乐理解 |
-| 41. | [PersonaPlex: Voice and Role Control for Full Duplex Con](/audio-paper-digest-blog/posts/2026-04-29-personaplex-voice-and-role-control-for-full) | 8.5分 | 前25% | #语音对话系统 |
-| 42. | [The Impact of Audio Watermarking on Audio Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-the-impact-of-audio-watermarking-on-audio-anti) | 8.5分 | 前25% | #音频深度伪造检测 |
-| 43. | [VoXtream: Full-Stream Text-To-Speech With Extremely Low](/audio-paper-digest-blog/posts/2026-04-29-voxtream-full-stream-text-to-speech-with) | 8.5分 | 前25% | #语音合成 |
-| 44. | [SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper](/audio-paper-digest-blog/posts/2026-04-29-se-dicow-self-enrolled-diarization-conditioned) | 8.5分 | 前25% | #语音识别 |
-| 45. | [Scaling Multi-Talker ASR with Speaker-Agnostic Activity](/audio-paper-digest-blog/posts/2026-04-29-scaling-multi-talker-asr-with-speaker-agnostic) | 8.5分 | 前25% | #语音识别 |
-| 46. | [Towards Lightweight Adaptation of Speech Enhancement Mo](/audio-paper-digest-blog/posts/2026-04-29-towards-lightweight-adaptation-of-speech) | 8.5分 | 前25% | #语音增强 |
-| 47. | [FastEnhancer: Speed-Optimized Streaming Neural Speech E](/audio-paper-digest-blog/posts/2026-04-29-fastenhancer-speed-optimized-streaming-neural) | 8.5分 | 前25% | #语音增强 |
-| 48. | [EMORL-TTS: Reinforcement Learning for Fine-Grained Emot](/audio-paper-digest-blog/posts/2026-04-29-emorl-tts-reinforcement-learning-for-fine-grained) | 8.5分 | 前25% | #语音合成 |
-| 49. | [DisContSE: Single-Step Diffusion Speech Enhancement bas](/audio-paper-digest-blog/posts/2026-04-29-discontse-single-step-diffusion-speech) | 8.5分 | 前10% | #语音增强 |
-| 50. | [VBx for End-to-End Neural and Clustering-Based Diarizat](/audio-paper-digest-blog/posts/2026-04-29-vbx-for-end-to-end-neural-and-clustering-based) | 8.5分 | 前25% | #说话人分离 |
-| 51. | [StyleBench: Evaluating Speech Language Models on Conver](/audio-paper-digest-blog/posts/2026-04-29-stylebench-evaluating-speech-language-models-on) | 8.5分 | 前25% | #基准测试 |
-| 52. | [Sidon: Fast and Robust Open-Source Multilingual Speech ](/audio-paper-digest-blog/posts/2026-04-29-sidon-fast-and-robust-open-source-multilingual) | 8.5分 | 前25% | #语音增强 |
-| 53. | [Improving Contextual Asr Via Multi-Grained Fusion With ](/audio-paper-digest-blog/posts/2026-04-29-improving-contextual-asr-via-multi-grained-fusion) | 8.5分 | 前25% | #语音识别 |
-| 54. | [RCAL: Reinforced Cross-Modal Alignment for Multimodal S](/audio-paper-digest-blog/posts/2026-04-29-rcal-reinforced-cross-modal-alignment-for) | 8.5分 | 前25% | #多模态模型 |
-| 55. | [Enhancing Audio Question-Answering Performance Through ](/audio-paper-digest-blog/posts/2026-04-29-enhancing-audio-question-answering-performance) | 8.5分 | 前25% | #音频问答 |
-| 56. | [MTP-S2UT: Enhancing Speech-to-Speech Translation Qualit](/audio-paper-digest-blog/posts/2026-04-29-mtp-s2ut-enhancing-speech-to-speech-translation) | 8.5分 | 前25% | #语音翻译 |
-| 57. | [Unseen but Not Unknown: Using Dataset Concealment to Ro](/audio-paper-digest-blog/posts/2026-04-29-unseen-but-not-unknown-using-dataset-concealment) | 8.3分 | 前25% | #语音质量评估 |
-| 58. | [AISHELL6-Whisper: A Chinese Mandarin Audio-Visual Whisp](/audio-paper-digest-blog/posts/2026-04-29-aishell6-whisper-a-chinese-mandarin-audio-visual) | 8.3分 | 前25% | #语音识别 |
-| 59. | [Beyond Face Swapping: A Diffusion-Based Digital Human B](/audio-paper-digest-blog/posts/2026-04-29-beyond-face-swapping-a-diffusion-based-digital) | 8.1分 | 前25% | #音频深度伪造检测 |
-| 60. | [Polynomial Mixing for Efficient Self-Supervised Speech ](/audio-paper-digest-blog/posts/2026-04-29-polynomial-mixing-for-efficient-self-supervised) | 8.0分 | 前25% | #语音识别 |
-| 61. | [WavLink: Compact Audio–Text Embeddings with a Global Wh](/audio-paper-digest-blog/posts/2026-04-29-wavlink-compact-audiotext-embeddings-with-a) | 8.0分 | 前25% | #音频检索 |
-| 62. | [Virtual Consistency for Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-virtual-consistency-for-audio-editing) | 8.0分 | 前25% | #音乐生成 |
-| 63. | [MAG: Multi-Modal Aligned Autoregressive Co-Speech Gestu](/audio-paper-digest-blog/posts/2026-04-29-mag-multi-modal-aligned-autoregressive-co-speech) | 8.0分 | 前25% | #音频生成 |
-| 64. | [No Verifiable Reward for Prosody: Toward Preference-Gui](/audio-paper-digest-blog/posts/2026-04-29-no-verifiable-reward-for-prosody-toward) | 8.0分 | 前25% | #语音合成 |
-| 65. | [Marco-Voice: A Unified Framework for Expressive Speech ](/audio-paper-digest-blog/posts/2026-04-29-marco-voice-a-unified-framework-for-expressive) | 8.0分 | 前25% | #语音合成 |
-| 66. | [GLoRIA: Gated Low-Rank Interpretable Adaptation for Dia](/audio-paper-digest-blog/posts/2026-04-29-gloria-gated-low-rank-interpretable-adaptation) | 8.0分 | 前25% | #语音识别 |
-| 67. | [Do Bias Benchmarks Generalise? Evidence from Voice-Base](/audio-paper-digest-blog/posts/2026-04-29-do-bias-benchmarks-generalise-evidence-from-voice) | 8.0分 | 前25% | #模型评估 |
-| 68. | [Attention-Weighted Centered Kernel Alignment for Knowle](/audio-paper-digest-blog/posts/2026-04-29-attention-weighted-centered-kernel-alignment-for) | 8.0分 | 前25% | #语音情感识别 |
-| 69. | [More Than a Shortcut: A Hyperbolic Approach to Early-Ex](/audio-paper-digest-blog/posts/2026-04-29-more-than-a-shortcut-a-hyperbolic-approach-to) | 8.0分 | 前25% | #音频事件检测 |
-| 70. | [DSRMS-TransUnet: A Decentralized Non-Shifted Transunet ](/audio-paper-digest-blog/posts/2026-04-29-dsrms-transunet-a-decentralized-non-shifted) | 8.0分 | 前10% | #声源定位 |
-| 71. | [FED-PISA: Federated Voice Cloning Via Personalized Iden](/audio-paper-digest-blog/posts/2026-04-29-fed-pisa-federated-voice-cloning-via-personalized) | 8.0分 | 前25% | #语音克隆 |
-| 72. | [Neuromamba: Adaptive Frequency Filtering with a Pyramid](/audio-paper-digest-blog/posts/2026-04-29-neuromamba-adaptive-frequency-filtering-with-a) | 8.0分 | 前25% | #语音合成 |
-| 73. | [SAASDNet: An EEG-Based Streaming Auditory Attention Swi](/audio-paper-digest-blog/posts/2026-04-29-saasdnet-an-eeg-based-streaming-auditory) | 8.0分 | 前25% | #脑机接口 |
-| 74. | [Automated Dysphagia Screening Using Noninvasive Neck Ac](/audio-paper-digest-blog/posts/2026-04-29-automated-dysphagia-screening-using-noninvasive) | 8.0分 | 前25% | #音频分类 |
-| 75. | [AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining f](/audio-paper-digest-blog/posts/2026-04-29-animalclap-taxonomy-aware-language-audio) | 8.0分 | 前25% | #音频分类 |
-| 76. | [Improving Multimodal Brain Encoding Model with Dynamic ](/audio-paper-digest-blog/posts/2026-04-29-improving-multimodal-brain-encoding-model-with) | 8.0分 | 前25% | #脑信号编码 |
-| 77. | [Non-Line-of-Sight Vehicle Detection via Audio-Visual Fu](/audio-paper-digest-blog/posts/2026-04-29-non-line-of-sight-vehicle-detection-via-audio) | 8.0分 | 前25% | #音频分类 |
-| 78. | [MCF: Text LLMS for Multimodal Emotional Causality](/audio-paper-digest-blog/posts/2026-04-29-mcf-text-llms-for-multimodal-emotional-causality) | 8.0分 | 前25% | #情感分析 |
-| 79. | [Training-Free Multimodal Guidance for Video to Audio Ge](/audio-paper-digest-blog/posts/2026-04-29-training-free-multimodal-guidance-for-video-to) | 8.0分 | 前25% | #音频生成 |
-| 80. | [Audience-Aware Co-speech Gesture Generation in Public S](/audio-paper-digest-blog/posts/2026-04-29-audience-aware-co-speech-gesture-generation-in) | 8.0分 | 前50% | #音频生成 |
-| 81. | [Rethinking Entity Disambiguation in Complex Modalities](/audio-paper-digest-blog/posts/2026-04-29-rethinking-entity-disambiguation-in-complex) | 8.0分 | 前25% | #实体消歧 |
-| 82. | [HAVT-IVD: Heterogeneity-Aware Cross-Modal Network for A](/audio-paper-digest-blog/posts/2026-04-29-havt-ivd-heterogeneity-aware-cross-modal-network) | 8.0分 | 前25% | #音频事件检测 |
-| 83. | [Staged Diffusion with Hybrid Mixture-of-Experts (MOE) f](/audio-paper-digest-blog/posts/2026-04-29-staged-diffusion-with-hybrid-mixture-of-experts) | 8.0分 | 前25% | #语音情感识别 |
-| 84. | [NeuroSIFT: A Biologically-Inspired Framework with Expli](/audio-paper-digest-blog/posts/2026-04-29-neurosift-a-biologically-inspired-framework-with) | 8.0分 | 前25% | #多模态情感识别 |
-| 85. | [Hashing-Baseline: Rethinking Hashing in the Age of Pret](/audio-paper-digest-blog/posts/2026-04-29-hashing-baseline-rethinking-hashing-in-the-age-of) | 8.0分 | 前25% | #音频检索 #音频分类 |
-| 86. | [DGSDNet: Dual-Graph Spectral Diffusion Network for Inco](/audio-paper-digest-blog/posts/2026-04-29-dgsdnet-dual-graph-spectral-diffusion-network-for) | 8.0分 | 前25% | #语音情感识别 |
-| 87. | [Graph-based Modality Alignment for Robustness in Conver](/audio-paper-digest-blog/posts/2026-04-29-graph-based-modality-alignment-for-robustness-in) | 8.0分 | 前25% | #语音情感识别 |
-| 88. | [Multimodal Self-Attention Network with Temporal Alignme](/audio-paper-digest-blog/posts/2026-04-29-multimodal-self-attention-network-with-temporal) | 8.0分 | 前25% | #语音情感识别 |
-| 89. | [Uncertainty-Aware 3D Emotional Talking Face Synthesis w](/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face) | 8.0分 | 前25% | #音视频 |
-| 90. | [StreamMark: A Deep Learning-Based Semi-Fragile Audio Wa](/audio-paper-digest-blog/posts/2026-04-29-streammark-a-deep-learning-based-semi-fragile) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 91. | [Voting-Based Pitch Estimation with Temporal and Frequen](/audio-paper-digest-blog/posts/2026-04-29-voting-based-pitch-estimation-with-temporal-and) | 8.0分 | 前25% | #语音识别 |
-| 92. | [Spike-Driven Low-Power Speech Bandwidth Extension](/audio-paper-digest-blog/posts/2026-04-29-spike-driven-low-power-speech-bandwidth-extension) | 8.0分 | 前25% | #语音增强 |
-| 93. | [Flexio: Flexible Single- and Multi-Channel Speech Separ](/audio-paper-digest-blog/posts/2026-04-29-flexio-flexible-single-and-multi-channel-speech) | 8.0分 | 前25% | #语音分离 |
-| 94. | [SLAP: Scalable Language-Audio Pretraining with Variable](/audio-paper-digest-blog/posts/2026-04-29-slap-scalable-language-audio-pretraining-with) | 8.0分 | 前25% | #音频检索 |
-| 95. | [Matching Reverberant Speech Through Learned Acoustic Em](/audio-paper-digest-blog/posts/2026-04-29-matching-reverberant-speech-through-learned) | 8.0分 | 前25% | #音频生成 |
-| 96. | [Regularized Inverse Filter Design for Rigid Spherical M](/audio-paper-digest-blog/posts/2026-04-29-regularized-inverse-filter-design-for-rigid) | 8.0分 | 前25% | #空间音频 |
-| 97. | [Noise-to-Notes: Diffusion-Based Generation and Refineme](/audio-paper-digest-blog/posts/2026-04-29-noise-to-notes-diffusion-based-generation-and) | 8.0分 | 前10% | #音乐信息检索 |
-| 98. | [DSpAST: Disentangled Representations for Spatial Audio ](/audio-paper-digest-blog/posts/2026-04-29-dspast-disentangled-representations-for-spatial) | 8.0分 | 前25% | #音频问答 |
-| 99. | [Lightweight and Generalizable Acoustic Scene Representa](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-generalizable-acoustic-scene) | 8.0分 | 前25% | #音频场景理解 |
-| 100. | [AnyAccomp: Generalizable Accompaniment Generation Via Q](/audio-paper-digest-blog/posts/2026-04-29-anyaccomp-generalizable-accompaniment-generation) | 8.0分 | 前25% | #音乐生成 |
-| 101. | [FUN-SSL: Full-Band Layer Followed by U-Net With Narrow-](/audio-paper-digest-blog/posts/2026-04-29-fun-ssl-full-band-layer-followed-by-u-net-with) | 8.0分 | 前25% | #声源定位 |
-| 102. | [Event Classification by Physics-Informed Inpainting for](/audio-paper-digest-blog/posts/2026-04-29-event-classification-by-physics-informed) | 8.0分 | 前25% | #音频事件检测 |
-| 103. | [Time-Domain Synthesis of Virtual Sound Source Within Pe](/audio-paper-digest-blog/posts/2026-04-29-time-domain-synthesis-of-virtual-sound-source) | 8.0分 | 前25% | #空间音频 |
-| 104. | [Assessing The Perceptual Impact of Low-Altitude Aircraf](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-perceptual-impact-of-low-altitude) | 8.0分 | 前25% | #音频生成 |
-| 105. | [Enabling Multi-Species Bird Classification on Low-Power](/audio-paper-digest-blog/posts/2026-04-29-enabling-multi-species-bird-classification-on-low) | 8.0分 | 前25% | #生物声学 |
-| 106. | [USVexplorer: Robust Detection of Ultrasonic Vocalizatio](/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic) | 8.0分 | 前25% | #音频事件检测 |
-| 107. | [Leveraging Diffusion U-Net Features for Predominant Ins](/audio-paper-digest-blog/posts/2026-04-29-leveraging-diffusion-u-net-features-for) | 8.0分 | 前25% | #音乐信息检索 |
-| 108. | [Subsequence SDTW: Differentiable Alignment with Flexibl](/audio-paper-digest-blog/posts/2026-04-29-subsequence-sdtw-differentiable-alignment-with) | 8.0分 | 前25% | #音乐信息检索 |
-| 109. | [Distributed Multichannel Active Noise Control with Asyn](/audio-paper-digest-blog/posts/2026-04-29-distributed-multichannel-active-noise-control) | 8.0分 | 前25% | #信号处理 |
-| 110. | [MixGAN-based Non-blind Bandwidth Extension for Audio Co](/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for) | 8.0分 | 前25% | #音频增强 |
-| 111. | [MAGE: A Coarse-to-Fine Speech Enhancer with Masked Gene](/audio-paper-digest-blog/posts/2026-04-29-mage-a-coarse-to-fine-speech-enhancer-with-masked) | 8.0分 | 前25% | #语音增强 |
-| 112. | [Adaptive Deterministic Flow Matching for Target Speaker](/audio-paper-digest-blog/posts/2026-04-29-adaptive-deterministic-flow-matching-for-target) | 8.0分 | 前25% | #目标说话人提取 |
-| 113. | [Text2Move: Text-To-Moving Sound Generation via Trajecto](/audio-paper-digest-blog/posts/2026-04-29-text2move-text-to-moving-sound-generation-via) | 8.0分 | 前25% | #空间音频 |
-| 114. | [Deep Learning-Based Joint Optimization of Adaptive Feed](/audio-paper-digest-blog/posts/2026-04-29-deep-learning-based-joint-optimization-of) | 8.0分 | 前25% | #语音增强 |
-| 115. | [MMAudioSep: Taming Video-to-Audio Generative Model Towa](/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model) | 8.0分 | 前25% | #语音分离 |
-| 116. | [VChangeCodec: An Ultra Low-Complexity Neural Speech Cod](/audio-paper-digest-blog/posts/2026-04-29-vchangecodec-an-ultra-low-complexity-neural) | 8.0分 | 前25% | #语音转换 #语音增强 |
-| 117. | [Assessing the Impact of Speaker Identity in Speech Spoo](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-impact-of-speaker-identity-in) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 118. | [Cross-Domain Contrastive Learning with Dynamic Threshol](/audio-paper-digest-blog/posts/2026-04-29-cross-domain-contrastive-learning-with-dynamic) | 8.0分 | 前25% | #说话人验证 |
-| 119. | [Universr: Unified and Versatile Audio Super-Resolution ](/audio-paper-digest-blog/posts/2026-04-29-universr-unified-and-versatile-audio-super) | 8.0分 | 前25% | #音频超分辨率 |
-| 120. | [Improving Anomalous Sound Detection with Attribute-Awar](/audio-paper-digest-blog/posts/2026-04-29-improving-anomalous-sound-detection-with) | 8.0分 | 前10% | #音频事件检测 |
-| 121. | [Parametric Neural Amp Modeling with Active Learning](/audio-paper-digest-blog/posts/2026-04-29-parametric-neural-amp-modeling-with-active) | 8.0分 | 前25% | #音频生成 |
-| 122. | [A Unsupervised Domain Adaptation Framework For Semi-Sup](/audio-paper-digest-blog/posts/2026-04-29-a-unsupervised-domain-adaptation-framework-for) | 8.0分 | 前25% | #音乐信息检索 |
-| 123. | [Robust and Lightweight F0 Estimation Through Mid-Level ](/audio-paper-digest-blog/posts/2026-04-29-robust-and-lightweight-f0-estimation-through-mid) | 8.0分 | 前25% | #基频估计 |
-| 124. | [Evaluating High-Resolution Piano Sustain Pedal Depth Es](/audio-paper-digest-blog/posts/2026-04-29-evaluating-high-resolution-piano-sustain-pedal) | 8.0分 | 前25% | #音乐信息检索 |
-| 125. | [Group Relative Policy Optimization for Text-to-Speech w](/audio-paper-digest-blog/posts/2026-04-29-group-relative-policy-optimization-for-text-to) | 8.0分 | 前25% | #语音合成 |
-| 126. | [HyFlowSE: Hybrid End-To-End Flow-Matching Speech Enhanc](/audio-paper-digest-blog/posts/2026-04-29-hyflowse-hybrid-end-to-end-flow-matching-speech) | 8.0分 | 前25% | #语音增强 |
-| 127. | [HCGAN: Harmonic-Coupled Generative Adversarial Network ](/audio-paper-digest-blog/posts/2026-04-29-hcgan-harmonic-coupled-generative-adversarial) | 8.0分 | 前50% | #语音增强 |
-| 128. | [It Is Personal: The Importance of Personalization for R](/audio-paper-digest-blog/posts/2026-04-29-it-is-personal-the-importance-of-personalization) | 8.0分 | 前25% | #语音情感识别 |
-| 129. | [AMBER2: Dual Ambiguity-Aware Emotion Recognition Applie](/audio-paper-digest-blog/posts/2026-04-29-amber2-dual-ambiguity-aware-emotion-recognition) | 8.0分 | 前25% | #语音情感识别 |
-| 130. | [Subgraph Localization in the Subbands for Partially Spo](/audio-paper-digest-blog/posts/2026-04-29-subgraph-localization-in-the-subbands-for) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 131. | [On deepfake voice detection - It’s all in the presentat](/audio-paper-digest-blog/posts/2026-04-29-on-deepfake-voice-detection-its-all-in-the) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 132. | [Dynamic Noise-Aware Multi Lora Framework Towards Real-W](/audio-paper-digest-blog/posts/2026-04-29-dynamic-noise-aware-multi-lora-framework-towards) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 133. | [Mispronunciation Detection and Diagnosis Without Model ](/audio-paper-digest-blog/posts/2026-04-29-mispronunciation-detection-and-diagnosis-without) | 8.0分 | 前25% | #语音评估 |
-| 134. | [Mixture To Beamformed Mixture: Leveraging Beamformed Mi](/audio-paper-digest-blog/posts/2026-04-29-mixture-to-beamformed-mixture-leveraging) | 8.0分 | 前25% | #语音增强 |
-| 135. | [Lattice-Guided Consistency Regularization of Dual-Mode ](/audio-paper-digest-blog/posts/2026-04-29-lattice-guided-consistency-regularization-of-dual) | 8.0分 | 前25% | #语音识别 |
-| 136. | [BiRQ: Bi-Level Self-Labeling Random Quantization for Se](/audio-paper-digest-blog/posts/2026-04-29-birq-bi-level-self-labeling-random-quantization) | 8.0分 | 前25% | #语音识别 |
-| 137. | [MI-Fuse: Label Fusion for Unsupervised Domain Adaptatio](/audio-paper-digest-blog/posts/2026-04-29-mi-fuse-label-fusion-for-unsupervised-domain) | 8.0分 | 前25% | #语音情感识别 |
-| 138. | [Hybrid Pruning: In-Situ Compression of Self-Supervised ](/audio-paper-digest-blog/posts/2026-04-29-hybrid-pruning-in-situ-compression-of-self) | 8.0分 | 前25% | #说话人验证 |
-| 139. | [Distilling Attention Knowledge for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-distilling-attention-knowledge-for-speaker) | 8.0分 | 前25% | #说话人验证 |
-| 140. | [Cross-Architecture Knowledge Distillation of WavLM for ](/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of) | 8.0分 | 前25% | #说话人验证 |
-| 141. | [Do You Hear What I Mean? Quantifying the Instruction-Pe](/audio-paper-digest-blog/posts/2026-04-29-do-you-hear-what-i-mean-quantifying-the) | 8.0分 | 前25% | #语音合成 |
-| 142. | [OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-t](/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct) | 8.0分 | 前25% | #语音合成 |
-| 143. | [HD-PPT: Hierarchical Decoding of Content- and Prompt-Pr](/audio-paper-digest-blog/posts/2026-04-29-hd-ppt-hierarchical-decoding-of-content-and) | 8.0分 | 前25% | #语音合成 |
-| 144. | [Emotion-Aligned Generation in Diffusion Text to Speech ](/audio-paper-digest-blog/posts/2026-04-29-emotion-aligned-generation-in-diffusion-text-to) | 8.0分 | 前25% | #语音合成 |
-| 145. | [Hanui: Harnessing Distributional Discrepancies for Sing](/audio-paper-digest-blog/posts/2026-04-29-hanui-harnessing-distributional-discrepancies-for) | 8.0分 | 前10% | #音频深度伪造检测 |
-| 146. | [Localizing Speech Deepfakes Beyond Transitions via Segm](/audio-paper-digest-blog/posts/2026-04-29-localizing-speech-deepfakes-beyond-transitions) | 8.0分 | 前25% | #音频深度伪造检测 |
-| 147. | [Exploring Fine-Tuning Of Large Audio Language Models Fo](/audio-paper-digest-blog/posts/2026-04-29-exploring-fine-tuning-of-large-audio-language) | 8.0分 | 前25% | #语音理解 |
-| 148. | [Synthetic Data Domain Adaptation for ASR via LLM-Based ](/audio-paper-digest-blog/posts/2026-04-29-synthetic-data-domain-adaptation-for-asr-via-llm) | 8.0分 | 前25% | #语音识别 |
-| 149. | [Lingometer: On-Device Personal Speech Word Counting Sys](/audio-paper-digest-blog/posts/2026-04-29-lingometer-on-device-personal-speech-word) | 8.0分 | 前25% | #语音活动检测 |
-| 150. | [FocalCodec-Stream: Streaming Low-Bitrate Speech Coding ](/audio-paper-digest-blog/posts/2026-04-29-focalcodec-stream-streaming-low-bitrate-speech) | 8.0分 | 前25% | #语音编码 |
-| 151. | [AUV: Teaching Audio Universal Vector Quantization with ](/audio-paper-digest-blog/posts/2026-04-29-auv-teaching-audio-universal-vector-quantization) | 8.0分 | 前25% | #音频生成 |
-| 152. | [STACodec: Semantic Token Assignment for Balancing Acous](/audio-paper-digest-blog/posts/2026-04-29-stacodec-semantic-token-assignment-for-balancing) | 8.0分 | 前25% | #语音识别 |
-| 153. | [EuleroDec: A Complex-Valued RVQ-VAE for Efficient and R](/audio-paper-digest-blog/posts/2026-04-29-eulerodec-a-complex-valued-rvq-vae-for-efficient) | 8.0分 | 前25% | #音频生成 |
-| 154. | [FAC-FACodec: Controllable Zero-Shot Foreign Accent Conv](/audio-paper-digest-blog/posts/2026-04-29-fac-facodec-controllable-zero-shot-foreign-accent) | 8.0分 | 前25% | #语音转换 |
-| 155. | [Language-Infused Retrieval-Augmented CTC with Adaptive ](/audio-paper-digest-blog/posts/2026-04-29-language-infused-retrieval-augmented-ctc-with) | 8.0分 | 前25% | #语音识别 |
-| 156. | [Speech Emotion Recognition based on Hierarchical Transf](/audio-paper-digest-blog/posts/2026-04-29-speech-emotion-recognition-based-on-hierarchical) | 8.0分 | 前25% | #语音情感识别 |
-| 157. | [Measuring Prosody Diversity in Zero-Shot TTS: A New Met](/audio-paper-digest-blog/posts/2026-04-29-measuring-prosody-diversity-in-zero-shot-tts-a) | 8.0分 | 前25% | #语音合成 |
-| 158. | [DAIEN-TTS: Disentangled Audio Infilling for Environment](/audio-paper-digest-blog/posts/2026-04-29-daien-tts-disentangled-audio-infilling-for) | 8.0分 | 前25% | #语音合成 |
-| 159. | [Affect-Jigsaw: Integrating Core and Peripheral Emotions](/audio-paper-digest-blog/posts/2026-04-29-affect-jigsaw-integrating-core-and-peripheral) | 8.0分 | 前25% | #语音情感识别 |
-| 160. | [Modeling Strategies For Speech Enhancement in The Laten](/audio-paper-digest-blog/posts/2026-04-29-modeling-strategies-for-speech-enhancement-in-the) | 8.0分 | 前50% | #语音增强 |
-| 161. | [LAFUFU: Latent Acoustic Features For Ultra-Fast Utteran](/audio-paper-digest-blog/posts/2026-04-29-lafufu-latent-acoustic-features-for-ultra-fast) | 8.0分 | 前25% | #语音增强 |
-| 162. | [Relative Time Intervals Representation For Word-Level T](/audio-paper-digest-blog/posts/2026-04-29-relative-time-intervals-representation-for-word) | 8.0分 | 前25% | #语音识别 |
-| 163. | [Influence of Clean Speech Characteristics on Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-influence-of-clean-speech-characteristics-on) | 8.0分 | 前25% | #语音增强 |
-| 164. | [Spatially Aware Self-Supervised Models for Multi-Channe](/audio-paper-digest-blog/posts/2026-04-29-spatially-aware-self-supervised-models-for-multi) | 8.0分 | 前25% | #说话人分离 |
-| 165. | [Dual-Strategy-Enhanced Conbimamba for Neural Speaker Di](/audio-paper-digest-blog/posts/2026-04-29-dual-strategy-enhanced-conbimamba-for-neural) | 8.0分 | 前25% | #说话人分离 |
-| 166. | [Attention-Based Encoder-Decoder Target-Speaker Voice Ac](/audio-paper-digest-blog/posts/2026-04-29-attention-based-encoder-decoder-target-speaker) | 8.0分 | 前25% | #说话人分离 |
-| 167. | [Matrix-Structured Hierarchical Convolutional Modeling f](/audio-paper-digest-blog/posts/2026-04-29-matrix-structured-hierarchical-convolutional) | 8.0分 | 前25% | #语音评估 |
-| 168. | [Unsupervised Lexicon Learning from Speech is Limited by](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-lexicon-learning-from-speech-is) | 8.0分 | 前25% | #语音发现 |
-| 169. | [BridgeCode: A Dual Speech Representation Paradigm for A](/audio-paper-digest-blog/posts/2026-04-29-bridgecode-a-dual-speech-representation-paradigm) | 8.0分 | 前25% | #语音合成 |
-| 170. | [RLBR: Reinforcement Learning with Biasing Rewards for C](/audio-paper-digest-blog/posts/2026-04-29-rlbr-reinforcement-learning-with-biasing-rewards) | 8.0分 | 前25% | #语音识别 |
-| 171. | [Prosody-Guided Harmonic Attention for Phase-Coherent Ne](/audio-paper-digest-blog/posts/2026-04-29-prosody-guided-harmonic-attention-for-phase) | 8.0分 | 前25% | #语音合成 |
-| 172. | [Grey-Box Prompt Tuning With Graph Alignment for Speech-](/audio-paper-digest-blog/posts/2026-04-29-grey-box-prompt-tuning-with-graph-alignment-for) | 8.0分 | 前25% | #语音识别 |
-| 173. | [Phonological Tokenizer: Prosody-Aware Phonetic Token Vi](/audio-paper-digest-blog/posts/2026-04-29-phonological-tokenizer-prosody-aware-phonetic) | 8.0分 | 前25% | #语音表示学习 |
-| 174. | [Frontend Token Enhancement for Token-Based Speech Recog](/audio-paper-digest-blog/posts/2026-04-29-frontend-token-enhancement-for-token-based-speech) | 8.0分 | 前25% | #语音识别 |
-| 175. | [ATOM: Adaptive Token-Level Optimal Transport Mixup for ](/audio-paper-digest-blog/posts/2026-04-29-atom-adaptive-token-level-optimal-transport-mixup) | 8.0分 | 前25% | #语音翻译 |
-| 176. | [The Curious Case of Visual Grounding: Different Effects](/audio-paper-digest-blog/posts/2026-04-29-the-curious-case-of-visual-grounding-different) | 8.0分 | 前25% | #模型评估 |
-| 177. | [Noise-Robust AV-ASR Using Visual Features both in the W](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-av-asr-using-visual-features-both-in) | 8.0分 | 前25% | #语音识别 |
-| 178. | [When Audio Matters: A Lightweight, Hierarchical Fusion ](/audio-paper-digest-blog/posts/2026-04-29-when-audio-matters-a-lightweight-hierarchical) | 8.0分 | 前25% | #语音情感识别 |
-| 179. | [Conditional Diffusion Models for Mental Health-Preservi](/audio-paper-digest-blog/posts/2026-04-29-conditional-diffusion-models-for-mental-health) | 8.0分 | 前25% | #语音转换 |
-| 180. | [Discrete-Continuous Fusion With Adaptive Hierarchical F](/audio-paper-digest-blog/posts/2026-04-29-discrete-continuous-fusion-with-adaptive) | 8.0分 | 前10% | #音频深度伪造检测 |
-| 181. | [WaveSP-Net: Learnable Wavelet-Domain Sparse Prompt Tuni](/audio-paper-digest-blog/posts/2026-04-29-wavesp-net-learnable-wavelet-domain-sparse-prompt) | 8.0分 | 前25% | #语音伪造检测 |
-| 182. | [Fine-Grained Frame Modeling in Multi-Head Self-Attentio](/audio-paper-digest-blog/posts/2026-04-29-fine-grained-frame-modeling-in-multi-head-self) | 8.0分 | 前25% | #语音伪造检测 |
-| 183. | [Optimizing Speech Language Models for Acoustic Consiste](/audio-paper-digest-blog/posts/2026-04-29-optimizing-speech-language-models-for-acoustic) | 8.0分 | 前25% | #语音合成 |
-| 184. | [Synthesized Data Selection via Score Distribution Match](/audio-paper-digest-blog/posts/2026-04-29-synthesized-data-selection-via-score-distribution) | 8.0分 | 前25% | #语音识别 |
-| 185. | [NCF-TTS: Enhancing Flow Matching Based Text-To-Speech w](/audio-paper-digest-blog/posts/2026-04-29-ncf-tts-enhancing-flow-matching-based-text-to) | 8.0分 | 前25% | #语音合成 |
-| 186. | [ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model w](/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech) | 8.0分 | 前25% | #语音合成 |
-| 187. | [Bayesian Low-Rank Factorization for Robust Model Adapta](/audio-paper-digest-blog/posts/2026-04-29-bayesian-low-rank-factorization-for-robust-model) | 8.0分 | 前25% | #语音识别 |
-| 188. | [LongSpeech: A Scalable Benchmark for Transcription, Tra](/audio-paper-digest-blog/posts/2026-04-29-longspeech-a-scalable-benchmark-for-transcription) | 7.8分 | 前25% | #基准测试 |
-| 189. | [CosyAccent: Duration-Controllable Accent Normalization ](/audio-paper-digest-blog/posts/2026-04-29-cosyaccent-duration-controllable-accent) | 7.8分 | 前25% | #语音转换 |
-| 190. | [Structure-Aware Diffusion Schrödinger Bridge](/audio-paper-digest-blog/posts/2026-04-29-structure-aware-diffusion-schrdinger-bridge) | 7.7分 | 前50% | #数据集对齐 |
-| 191. | [A Metric Learning Approach to Heart Murmur Detection fr](/audio-paper-digest-blog/posts/2026-04-29-a-metric-learning-approach-to-heart-murmur) | 7.7分 | 前25% | #音频分类 |
-| 192. | [Stemphonic: All-At-Once Flexible Multi-Stem Music Gener](/audio-paper-digest-blog/posts/2026-04-29-stemphonic-all-at-once-flexible-multi-stem-music) | 7.7分 | 前25% | #音乐生成 |
-| 193. | [Target Speaker Anonymization in Multi-Speaker Recording](/audio-paper-digest-blog/posts/2026-04-29-target-speaker-anonymization-in-multi-speaker) | 7.6分 | 前50% | #语音匿名化 |
-| 194. | [Bayesian Signal Separation Via Plug-and-Play Diffusion-](/audio-paper-digest-blog/posts/2026-04-29-bayesian-signal-separation-via-plug-and-play) | 7.5分 | 前25% | #语音分离 |
-| 195. | [Atomic Norm Minimization Revisited: Progressive Atom Id](/audio-paper-digest-blog/posts/2026-04-29-atomic-norm-minimization-revisited-progressive) | 7.5分 | 前25% | #声源定位 |
-| 196. | [LipsAM: Lipschitz-Continuous Amplitude Modifier for Aud](/audio-paper-digest-blog/posts/2026-04-29-lipsam-lipschitz-continuous-amplitude-modifier) | 7.5分 | 前25% | #语音增强 |
-| 197. | [A Noniterative Phase Retrieval Considering the Zeros of](/audio-paper-digest-blog/posts/2026-04-29-a-noniterative-phase-retrieval-considering-the) | 7.5分 | 前25% | #信号处理 |
-| 198. | [nGPT as a Scalable Architecture for Speech Recognition ](/audio-paper-digest-blog/posts/2026-04-29-ngpt-as-a-scalable-architecture-for-speech) | 7.5分 | 前25% | #语音识别 |
-| 199. | [Physics-Informed Neural Networks for Ocean Acoustic Fie](/audio-paper-digest-blog/posts/2026-04-29-physics-informed-neural-networks-for-ocean) | 7.5分 | 前25% | #声源定位 |
-| 200. | [EEND-SAA: Enrollment-Less Main Speaker Voice Activity D](/audio-paper-digest-blog/posts/2026-04-29-eend-saa-enrollment-less-main-speaker-voice) | 7.5分 | 前25% | #语音活动检测 |
-| 201. | [RoCo: Robust Code for Fast and Effective Proactive Defe](/audio-paper-digest-blog/posts/2026-04-29-roco-robust-code-for-fast-and-effective-proactive) | 7.5分 | 前25% | #音频安全 |
-| 202. | [Input-Adaptive Differentiable Filterbanks via Hypernetw](/audio-paper-digest-blog/posts/2026-04-29-input-adaptive-differentiable-filterbanks-via) | 7.5分 | 前25% | #语音识别 |
-| 203. | [A Study of Data Selection Strategies for Pre-Training S](/audio-paper-digest-blog/posts/2026-04-29-a-study-of-data-selection-strategies-for-pre) | 7.5分 | 前25% | #语音识别 |
-| 204. | [SAGA-SR: Semantically and Acoustically Guided Audio Sup](/audio-paper-digest-blog/posts/2026-04-29-saga-sr-semantically-and-acoustically-guided) | 7.5分 | 前25% | #音频增强 |
-| 205. | [MR-FlowDPO: Multi-Reward Direct Preference Optimization](/audio-paper-digest-blog/posts/2026-04-29-mr-flowdpo-multi-reward-direct-preference) | 7.5分 | 前25% | #音乐生成 |
-| 206. | [Low-Resource Speech-Based Early Alzheimers Detection vi](/audio-paper-digest-blog/posts/2026-04-29-low-resource-speech-based-early-alzheimers) | 7.5分 | 前25% | #语音生物标志物 |
-| 207. | [Improving Interpretability in Generative Multitimbral D](/audio-paper-digest-blog/posts/2026-04-29-improving-interpretability-in-generative) | 7.5分 | 前25% | #音频生成 |
-| 208. | [Generating Moving 3d Soundscapes with Latent Diffusion ](/audio-paper-digest-blog/posts/2026-04-29-generating-moving-3d-soundscapes-with-latent) | 7.5分 | 前25% | #空间音频 |
-| 209. | [Reliable AI via Age-Balanced Validation: Fair Model Sel](/audio-paper-digest-blog/posts/2026-04-29-reliable-ai-via-age-balanced-validation-fair) | 7.5分 | 前25% | #语音生物标志物 |
-| 210. | [K-Function: Joint Pronunciation Transcription and Feedb](/audio-paper-digest-blog/posts/2026-04-29-k-function-joint-pronunciation-transcription-and) | 7.5分 | 前25% | #语音识别 |
-| 211. | [Improving Active Learning for Melody Estimation by Dise](/audio-paper-digest-blog/posts/2026-04-29-improving-active-learning-for-melody-estimation) | 7.5分 | 前25% | #音乐信息检索 |
-| 212. | [A Text-To-Text Alignment Algorithm for Better Evaluatio](/audio-paper-digest-blog/posts/2026-04-29-a-text-to-text-alignment-algorithm-for-better) | 7.5分 | 前25% | #模型评估 |
-| 213. | [A Robust KNN Approach for Multi-Class Laryngeal Disease](/audio-paper-digest-blog/posts/2026-04-29-a-robust-knn-approach-for-multi-class-laryngeal) | 7.5分 | 前25% | #音频分类 |
-| 214. | [Probing the Hidden Talent of ASR foundation models for ](/audio-paper-digest-blog/posts/2026-04-29-probing-the-hidden-talent-of-asr-foundation) | 7.5分 | 前25% | #预训练 |
-| 215. | [Beyond Mapping: Domain-Invariant Representations via Sp](/audio-paper-digest-blog/posts/2026-04-29-beyond-mapping-domain-invariant-representations) | 7.5分 | 前25% | #领域适应 |
-| 216. | [Via Score to Performance: Efficient Human-Controllable ](/audio-paper-digest-blog/posts/2026-04-29-via-score-to-performance-efficient-human) | 7.5分 | 前25% | #音乐生成 |
-| 217. | [Flexi-LoRA with Input-Adaptive Ranks: Efficient Finetun](/audio-paper-digest-blog/posts/2026-04-29-flexi-lora-with-input-adaptive-ranks-efficient) | 7.5分 | 前25% | #语音识别 |
-| 218. | [Toward Faithful Explanations in Acoustic Anomaly Detect](/audio-paper-digest-blog/posts/2026-04-29-toward-faithful-explanations-in-acoustic-anomaly) | 7.5分 | 前25% | #音频事件检测 |
-| 219. | [Behind the Scenes: Mechanistic Interpretability of Lora](/audio-paper-digest-blog/posts/2026-04-29-behind-the-scenes-mechanistic-interpretability-of) | 7.5分 | 前25% | #语音情感识别 |
-| 220. | [Encoding Emotion Through Self-Supervised Eye Movement R](/audio-paper-digest-blog/posts/2026-04-29-encoding-emotion-through-self-supervised-eye) | 7.5分 | 前25% | #语音情感识别 |
-| 221. | [Temporal Distillation for Music Representation Learning](/audio-paper-digest-blog/posts/2026-04-29-temporal-distillation-for-music-representation) | 7.5分 | 前25% | #音乐信息检索 |
-| 222. | [UMV: A Mixture-Of-Experts Vision Transformer with Multi](/audio-paper-digest-blog/posts/2026-04-29-umv-a-mixture-of-experts-vision-transformer-with) | 7.5分 | 前25% | #音频分类 |
-| 223. | [AudioFuse: Unified Spectral-Temporal Learning Via A Hyb](/audio-paper-digest-blog/posts/2026-04-29-audiofuse-unified-spectral-temporal-learning-via) | 7.5分 | 前25% | #音频分类 |
-| 224. | [LESS: Large Language Model Enhanced Semi-Supervised Lea](/audio-paper-digest-blog/posts/2026-04-29-less-large-language-model-enhanced-semi) | 7.5分 | 前25% | #语音识别 #语音翻译 |
-| 225. | [Audio Classification Models are Vulnerable to Filter Pe](/audio-paper-digest-blog/posts/2026-04-29-audio-classification-models-are-vulnerable-to) | 7.5分 | 前25% | #音频分类 |
-| 226. | [SpeechCT-CLIP: Distilling Text-Image Knowledge to Speec](/audio-paper-digest-blog/posts/2026-04-29-speechct-clip-distilling-text-image-knowledge-to) | 7.5分 | 前25% | #医疗AI |
-| 227. | [MSANET: Multi-Scale Semantic Aggregation Network for Br](/audio-paper-digest-blog/posts/2026-04-29-msanet-multi-scale-semantic-aggregation-network) | 7.5分 | 前25% | #语音增强 |
-| 228. | [Multi-Scale Physiologically-Motivated Alignment for Aud](/audio-paper-digest-blog/posts/2026-04-29-multi-scale-physiologically-motivated-alignment) | 7.5分 | 前25% | #听觉注意力解码 |
-| 229. | [PC-MCL: Patient-Consistent Multi-Cycle Learning with Mu](/audio-paper-digest-blog/posts/2026-04-29-pc-mcl-patient-consistent-multi-cycle-learning) | 7.5分 | 前10% | #音频分类 |
-| 230. | [EMG-to-Speech with Fewer Channels](/audio-paper-digest-blog/posts/2026-04-29-emg-to-speech-with-fewer-channels) | 7.5分 | 前25% | #语音合成 |
-| 231. | [A Robust Multi-Scale Framework with Test-Time Adaptatio](/audio-paper-digest-blog/posts/2026-04-29-a-robust-multi-scale-framework-with-test-time) | 7.5分 | 前25% | #语音解码 |
-| 232. | [FD-ARL: Feature Disentanglement with Adversarial-Recons](/audio-paper-digest-blog/posts/2026-04-29-fd-arl-feature-disentanglement-with-adversarial) | 7.5分 | 前10% | #听觉注意力解码 |
-| 233. | [Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synt](/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound) | 7.5分 | 前25% | #音频生成 |
-| 234. | [Disentangling Physiology from Fidelity: Latent-Guided D](/audio-paper-digest-blog/posts/2026-04-29-disentangling-physiology-from-fidelity-latent) | 7.5分 | 前25% | #音频生成 |
-| 235. | [PSTalker: Realistic 3D Talking Head Synthesis via a Sem](/audio-paper-digest-blog/posts/2026-04-29-pstalker-realistic-3d-talking-head-synthesis-via) | 7.5分 | 前25% | #说话人合成 |
-| 236. | [Perceptual Quality Assessment for Stylized Talking Head](/audio-paper-digest-blog/posts/2026-04-29-perceptual-quality-assessment-for-stylized) | 7.5分 | 前50% | #模型评估 |
-| 237. | [GRNet: Graph Reconstruction Network for Robust Multimod](/audio-paper-digest-blog/posts/2026-04-29-grnet-graph-reconstruction-network-for-robust) | 7.5分 | 前25% | #多模态情感分析 |
-| 238. | [Assessing Identity Leakage in Talking Face Generation: ](/audio-paper-digest-blog/posts/2026-04-29-assessing-identity-leakage-in-talking-face) | 7.5分 | 前25% | #说话人脸生成 |
-| 239. | [ADH-VA: Adaptive Directed-Hypergraph Convolution with V](/audio-paper-digest-blog/posts/2026-04-29-adh-va-adaptive-directed-hypergraph-convolution) | 7.5分 | 前10% | #语音情感识别 |
-| 240. | [Graph-Based Emotion Consensus Perception Learning for M](/audio-paper-digest-blog/posts/2026-04-29-graph-based-emotion-consensus-perception-learning) | 7.5分 | 前25% | #多模态情感识别 |
-| 241. | [APKD: Aligned And Paced Knowledge Distillation Towards ](/audio-paper-digest-blog/posts/2026-04-29-apkd-aligned-and-paced-knowledge-distillation) | 7.5分 | 前25% | #情感识别 |
-| 242. | [An Audio-Visual Speech Separation Network with Joint Cr](/audio-paper-digest-blog/posts/2026-04-29-an-audio-visual-speech-separation-network-with) | 7.5分 | 前25% | #语音分离 |
-| 243. | [Audio-Guided Multimodal Approach for Fine-Grained Align](/audio-paper-digest-blog/posts/2026-04-29-audio-guided-multimodal-approach-for-fine-grained) | 7.5分 | 前25% | #说话人检测 |
-| 244. | [SURE: Synergistic Uncertainty-Aware Reasoning for Multi](/audio-paper-digest-blog/posts/2026-04-29-sure-synergistic-uncertainty-aware-reasoning-for) | 7.5分 | 前25% | #语音情感识别 |
-| 245. | [Dynamic Balanced Cross-Modal Attention with Gated Seque](/audio-paper-digest-blog/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated) | 7.5分 | 前25% | #跨模态 |
-| 246. | [Savgbench: Benchmarking Spatially Aligned Audio-Video G](/audio-paper-digest-blog/posts/2026-04-29-savgbench-benchmarking-spatially-aligned-audio) | 7.5分 | 前50% | #基准测试 |
-| 247. | [Tpeformer: Temporal Patch Embedding Transformer](/audio-paper-digest-blog/posts/2026-04-29-tpeformer-temporal-patch-embedding-transformer) | 7.5分 | 前25% | #语音情感识别 |
-| 248. | [CaMoD: Causal-Aware Modality Denoising for Multimodal D](/audio-paper-digest-blog/posts/2026-04-29-camod-causal-aware-modality-denoising-for) | 7.5分 | 前25% | #多模态对话意图识别 |
-| 249. | [SceneRAG: Scene-Level Retrieval-Augmented Generation fo](/audio-paper-digest-blog/posts/2026-04-29-scenerag-scene-level-retrieval-augmented) | 7.5分 | 前25% | #视频理解 |
-| 250. | [Streamingbench: Assessing the Gap for MLLMs to Achieve ](/audio-paper-digest-blog/posts/2026-04-29-streamingbench-assessing-the-gap-for-mllms-to) | 7.5分 | 前25% | #基准测试 |
-| 251. | [Towards Effective Negation Modeling in Joint Audio-Text](/audio-paper-digest-blog/posts/2026-04-29-towards-effective-negation-modeling-in-joint) | 7.5分 | 前25% | #音乐理解 |
-| 252. | [MusiCRS: Benchmarking Audio-Centric Conversational Reco](/audio-paper-digest-blog/posts/2026-04-29-musicrs-benchmarking-audio-centric-conversational) | 7.5分 | 前25% | #音乐推荐 |
-| 253. | [LETPAV: Lexicon-Enhanced Text with Progressive Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-letpav-lexicon-enhanced-text-with-progressive) | 7.5分 | 前25% | #语音情感识别 |
-| 254. | [Coupling Acoustic Geometry and Visual Semantics for Rob](/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics) | 7.5分 | 前25% | #空间音频 |
-| 255. | [Constructing Composite Features for Interpretable Music](/audio-paper-digest-blog/posts/2026-04-29-constructing-composite-features-for-interpretable) | 7.5分 | 前25% | #音乐信息检索 |
-| 256. | [GMS-CAVP: Improving Audio-Video Correspondence with Mul](/audio-paper-digest-blog/posts/2026-04-29-gms-cavp-improving-audio-video-correspondence) | 7.5分 | 前25% | #音频生成 |
-| 257. | [Multimodal Variational Graph Network for Multimodal Sen](/audio-paper-digest-blog/posts/2026-04-29-multimodal-variational-graph-network-for) | 7.5分 | 前25% | #语音情感识别 |
-| 258. | [KSDIFF: Keyframe-Augmented Speech-Aware Dual-Path Diffu](/audio-paper-digest-blog/posts/2026-04-29-ksdiff-keyframe-augmented-speech-aware-dual-path) | 7.5分 | 前25% | #音频生成 |
-| 259. | [VividTalker: A Modular Framework for Expressive 3D Talk](/audio-paper-digest-blog/posts/2026-04-29-vividtalker-a-modular-framework-for-expressive-3d) | 7.5分 | 前25% | #语音合成 |
-| 260. | [Diffemotalk: Audio-Driven Facial Animation with Fine-Gr](/audio-paper-digest-blog/posts/2026-04-29-diffemotalk-audio-driven-facial-animation-with) | 7.5分 | 前25% | #语音情感识别 |
-| 261. | [Membership Inference Attack against Music Diffusion Mod](/audio-paper-digest-blog/posts/2026-04-29-membership-inference-attack-against-music) | 7.5分 | 前25% | #音频安全 |
-| 262. | [Adversarial Fine-Tuning on Speech Foundation Model with](/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation) | 7.5分 | 前25% | #语音识别 |
-| 263. | [Content Anonymization for Privacy in Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-content-anonymization-for-privacy-in-long-form) | 7.5分 | 前25% | #语音匿名化 |
-| 264. | [MFF-RVRDI: Multimodal Fusion Framework for Robust Video](/audio-paper-digest-blog/posts/2026-04-29-mff-rvrdi-multimodal-fusion-framework-for-robust) | 7.5分 | 前25% | #视频设备识别 |
-| 265. | [Detecting and Attributing Synthetic Spanish Speech: The](/audio-paper-digest-blog/posts/2026-04-29-detecting-and-attributing-synthetic-spanish) | 7.5分 | 前25% | #语音伪造检测 |
-| 266. | [Content Leakage in Librispeech and its Impact on the Pr](/audio-paper-digest-blog/posts/2026-04-29-content-leakage-in-librispeech-and-its-impact-on) | 7.5分 | 前25% | #语音匿名化 |
-| 267. | [Improving the Speaker Anonymization Evaluation’s Robust](/audio-paper-digest-blog/posts/2026-04-29-improving-the-speaker-anonymization-evaluations) | 7.5分 | 前50% | #语音匿名化 |
-| 268. | [DPO-Regularized Regression for Age Prediction](/audio-paper-digest-blog/posts/2026-04-29-dpo-regularized-regression-for-age-prediction) | 7.5分 | 前25% | #说话人识别 |
-| 269. | [ZK-VSA: Zero-Knowledge Verifiable Speaker Anonymization](/audio-paper-digest-blog/posts/2026-04-29-zk-vsa-zero-knowledge-verifiable-speaker) | 7.5分 | 前25% | #语音匿名化 |
-| 270. | [A Feature-Optimized Audio Watermarking Algorithm with A](/audio-paper-digest-blog/posts/2026-04-29-a-feature-optimized-audio-watermarking-algorithm) | 7.5分 | 前25% | #音频安全 |
-| 271. | [Multi-Task Transformer for Explainable Speech Deepfake ](/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech) | 7.5分 | 前25% | #语音伪造检测 |
-| 272. | [AVATAR: Audio-Visual Adaptive Fusion via Trained Agent ](/audio-paper-digest-blog/posts/2026-04-29-avatar-audio-visual-adaptive-fusion-via-trained) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 273. | [FOCA: Multimodal Malware Classification via Hyperbolic ](/audio-paper-digest-blog/posts/2026-04-29-foca-multimodal-malware-classification-via) | 7.5分 | 前25% | #音频分类 |
-| 274. | [Full Band Denoising of Room Impulse Response in the Wav](/audio-paper-digest-blog/posts/2026-04-29-full-band-denoising-of-room-impulse-response-in) | 7.5分 | 前25% | #房间脉冲响应去噪 |
-| 275. | [Bone-Conduction Guided Multimodal Speech Enhancement wi](/audio-paper-digest-blog/posts/2026-04-29-bone-conduction-guided-multimodal-speech) | 7.5分 | 前25% | #语音增强 |
-| 276. | [Real-Time Streaming MEL Vocoding with Generative Flow M](/audio-paper-digest-blog/posts/2026-04-29-real-time-streaming-mel-vocoding-with-generative) | 7.5分 | 前25% | #语音合成 |
-| 277. | [Aneural Forward Filtering for Speaker-Image Separation](/audio-paper-digest-blog/posts/2026-04-29-aneural-forward-filtering-for-speaker-image) | 7.5分 | 前25% | #语音分离 |
-| 278. | [Str-DiffSep: Streamable Diffusion Model for Speech Sepa](/audio-paper-digest-blog/posts/2026-04-29-str-diffsep-streamable-diffusion-model-for-speech) | 7.5分 | 前25% | #语音分离 |
-| 279. | [PromptSep: Generative Audio Separation Via Multimodal P](/audio-paper-digest-blog/posts/2026-04-29-promptsep-generative-audio-separation-via) | 7.5分 | 前10% | #语音分离 |
-| 280. | [Sunac: Source-Aware Unified Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-sunac-source-aware-unified-neural-audio-codec) | 7.5分 | 前50% | #音频生成 |
-| 281. | [S-PRESSO: Ultra Low Bitrate Sound Effect Compression wi](/audio-paper-digest-blog/posts/2026-04-29-s-presso-ultra-low-bitrate-sound-effect) | 7.5分 | 前25% | #音频生成 |
-| 282. | [Deepaq: A Perceptual Audio Quality Metric Based on Foun](/audio-paper-digest-blog/posts/2026-04-29-deepaq-a-perceptual-audio-quality-metric-based-on) | 7.5分 | 前25% | #音频质量评估 |
-| 283. | [The 3rd Clarity Prediction Challenge: A Machine Learnin](/audio-paper-digest-blog/posts/2026-04-29-the-3rd-clarity-prediction-challenge-a-machine) | 7.5分 | 前25% | #语音增强 |
-| 284. | [Qastanet: A DNN-Based Quality Metric for Spatial Audio](/audio-paper-digest-blog/posts/2026-04-29-qastanet-a-dnn-based-quality-metric-for-spatial) | 7.5分 | 前50% | #空间音频 |
-| 285. | [PICOAUDIO2: Temporal Controllable Text-to-Audio Generat](/audio-paper-digest-blog/posts/2026-04-29-picoaudio2-temporal-controllable-text-to-audio) | 7.5分 | 前25% | #音频生成 |
-| 286. | [FoleyBench: A Benchmark for Video-to-Audio Models](/audio-paper-digest-blog/posts/2026-04-29-foleybench-a-benchmark-for-video-to-audio-models) | 7.5分 | 前25% | #音频生成 |
-| 287. | [AUDIOCARDS: Structured Metadata Improves Audio Language](/audio-paper-digest-blog/posts/2026-04-29-audiocards-structured-metadata-improves-audio) | 7.5分 | 前50% | #音频检索 |
-| 288. | [Task-Oriented Sound Privacy Preservation for Sound Even](/audio-paper-digest-blog/posts/2026-04-29-task-oriented-sound-privacy-preservation-for) | 7.5分 | 前25% | #音频事件检测 |
-| 289. | [WaveSpikeNet: A Wavelet-Spiking Fusion Architecture for](/audio-paper-digest-blog/posts/2026-04-29-wavespikenet-a-wavelet-spiking-fusion) | 7.5分 | 前25% | #音频分类 |
-| 290. | [Two-Stage Language Model Framework for Acoustic Echo Ca](/audio-paper-digest-blog/posts/2026-04-29-two-stage-language-model-framework-for-acoustic) | 7.5分 | 前25% | #语音增强 |
-| 291. | [Differentiable Grouped Feedback Delay Networks for Lear](/audio-paper-digest-blog/posts/2026-04-29-differentiable-grouped-feedback-delay-networks) | 7.5分 | 前25% | #空间音频 |
-| 292. | [Denoising Of Stochastic Ray Tracing Room Impulse Respon](/audio-paper-digest-blog/posts/2026-04-29-denoising-of-stochastic-ray-tracing-room-impulse) | 7.5分 | 前25% | #空间音频 |
-| 293. | [Automatic Music Sample Identification with Multi-Track ](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-sample-identification-with-multi) | 7.5分 | 前25% | #音频检索 |
-| 294. | [Joint Estimation of Piano Dynamics and Metrical Structu](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-piano-dynamics-and-metrical) | 7.5分 | 前25% | #音乐理解 |
-| 295. | [Sparse-View Visual-Acoustic Latent Learning for Novel-V](/audio-paper-digest-blog/posts/2026-04-29-sparse-view-visual-acoustic-latent-learning-for) | 7.5分 | 前25% | #空间音频 |
-| 296. | [E2E-AEC: Implementing An End-To-End Neural Network Lear](/audio-paper-digest-blog/posts/2026-04-29-e2e-aec-implementing-an-end-to-end-neural-network) | 7.5分 | 前25% | #语音增强 |
-| 297. | [Joint Estimation of Primary and Secondary Paths for Per](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-primary-and-secondary-paths) | 7.5分 | 前25% | #主动降噪 |
-| 298. | [Multimodal Room Impulse Response Generation Through Lat](/audio-paper-digest-blog/posts/2026-04-29-multimodal-room-impulse-response-generation) | 7.5分 | 前25% | #音频生成 |
-| 299. | [HiFi-HARP: A High-Fidelity 7th-Order Ambisonic Room Imp](/audio-paper-digest-blog/posts/2026-04-29-hifi-harp-a-high-fidelity-7th-order-ambisonic) | 7.5分 | 前25% | #数据集 |
-| 300. | [Audio-to-Score Jazz Solo Transcription with the Rhythm ](/audio-paper-digest-blog/posts/2026-04-29-audio-to-score-jazz-solo-transcription-with-the) | 7.5分 | 前25% | #音乐信息检索 |
-| 301. | [Motionbeat: Motion-Aligned Music Representation via Emb](/audio-paper-digest-blog/posts/2026-04-29-motionbeat-motion-aligned-music-representation) | 7.5分 | 前25% | #舞蹈生成 |
-| 302. | [Benchmarking Music Autotagging with MGPHot Expert Annot](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-music-autotagging-with-mgphot-expert) | 7.5分 | 前25% | #音乐信息检索 |
-| 303. | [UTI-LLM: A Personalized Articulatory-Speech Therapy Ass](/audio-paper-digest-blog/posts/2026-04-29-uti-llm-a-personalized-articulatory-speech) | 7.5分 | 前25% | #语音对话系统 |
-| 304. | [Multi-Layer Attentive Probing Improves Transfer of Audi](/audio-paper-digest-blog/posts/2026-04-29-multi-layer-attentive-probing-improves-transfer) | 7.5分 | 前25% | #生物声学 |
-| 305. | [Efficient Depression Detection from Speech via Language](/audio-paper-digest-blog/posts/2026-04-29-efficient-depression-detection-from-speech-via) | 7.5分 | 前25% | #语音生物标志物 |
-| 306. | [Time vs. Layer: Locating Predictive Cues for Dysarthric](/audio-paper-digest-blog/posts/2026-04-29-time-vs-layer-locating-predictive-cues-for) | 7.5分 | 前50% | #语音质量评估 |
-| 307. | [Theory and Application of Circular Relative Harmonic Co](/audio-paper-digest-blog/posts/2026-04-29-theory-and-application-of-circular-relative) | 7.5分 | 前25% | #声源定位 |
-| 308. | [Sequential and Simultaneous Optimization of Microphone ](/audio-paper-digest-blog/posts/2026-04-29-sequential-and-simultaneous-optimization-of) | 7.5分 | 前25% | #声源定位 |
-| 309. | [Adaptive Per-Channel Energy Normalization Front-End for](/audio-paper-digest-blog/posts/2026-04-29-adaptive-per-channel-energy-normalization-front) | 7.5分 | 前25% | #音频分类 |
-| 310. | [Adaptive Embedding Fusion with Contrastive Learning for](/audio-paper-digest-blog/posts/2026-04-29-adaptive-embedding-fusion-with-contrastive) | 7.5分 | 前25% | #音频分类 |
-| 311. | [Incremental Learning for Audio Classification with Hebb](/audio-paper-digest-blog/posts/2026-04-29-incremental-learning-for-audio-classification) | 7.5分 | 前25% | #音频分类 |
-| 312. | [A Task-Aware Dual-Level Self-Supervised Learning Method](/audio-paper-digest-blog/posts/2026-04-29-a-task-aware-dual-level-self-supervised-learning) | 7.5分 | 前25% | #音频事件检测 |
-| 313. | [Sing2Song: An Accompaniment Generation System Based on ](/audio-paper-digest-blog/posts/2026-04-29-sing2song-an-accompaniment-generation-system) | 7.5分 | 前25% | #音乐生成 |
-| 314. | [Differentiable Pulsetable Synthesis for Wind Instrument](/audio-paper-digest-blog/posts/2026-04-29-differentiable-pulsetable-synthesis-for-wind) | 7.5分 | 前25% | #音乐生成 |
-| 315. | [Compression meets Sampling: LZ78-SPA for Efficient Symb](/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient) | 7.5分 | 前25% | #音乐生成 |
-| 316. | [Break-the-Beat! Controllable MIDI-to-Drum audio synthes](/audio-paper-digest-blog/posts/2026-04-29-break-the-beat-controllable-midi-to-drum-audio) | 7.5分 | 前25% | #音乐生成 |
-| 317. | [Text2midi-InferAlign: Improving Symbolic Music Generati](/audio-paper-digest-blog/posts/2026-04-29-text2midi-inferalign-improving-symbolic-music) | 7.5分 | 前25% | #音乐生成 |
-| 318. | [Triad: Tri-Head with Auxiliary Duplicating Permutation ](/audio-paper-digest-blog/posts/2026-04-29-triad-tri-head-with-auxiliary-duplicating) | 7.5分 | 前25% | #音频事件检测 |
-| 319. | [Reconstruction of Spherical Sound Source Radiation Char](/audio-paper-digest-blog/posts/2026-04-29-reconstruction-of-spherical-sound-source) | 7.5分 | 前25% | #空间音频 |
-| 320. | [A Hybrid Convolution-Mamba Network with Tone-Octave Con](/audio-paper-digest-blog/posts/2026-04-29-a-hybrid-convolution-mamba-network-with-tone) | 7.5分 | 前25% | #歌唱旋律提取 |
-| 321. | [Diff-vs: Efficient Audio-Aware Diffusion U-Net for Voca](/audio-paper-digest-blog/posts/2026-04-29-diff-vs-efficient-audio-aware-diffusion-u-net-for) | 7.5分 | 前25% | #语音分离 |
-| 322. | [BeatMamba: Bidirectional Selective State-Space Modeling](/audio-paper-digest-blog/posts/2026-04-29-beatmamba-bidirectional-selective-state-space) | 7.5分 | 前25% | #音乐信息检索 |
-| 323. | [Spectrogram Event Based Feature Representation for Gene](/audio-paper-digest-blog/posts/2026-04-29-spectrogram-event-based-feature-representation) | 7.5分 | 前25% | #音乐信息检索 |
-| 324. | [SpatialNet-Echo: Real-Time Acoustic Echo Cancellation v](/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo) | 7.5分 | 前25% | #语音增强 |
-| 325. | [A Stabilized Hybrid Active Noise Control Algorithm of G](/audio-paper-digest-blog/posts/2026-04-29-a-stabilized-hybrid-active-noise-control) | 7.5分 | 前25% | #语音增强 |
-| 326. | [Group-Sparse Gaussian Process Regression for Inhomogene](/audio-paper-digest-blog/posts/2026-04-29-group-sparse-gaussian-process-regression-for) | 7.5分 | 前25% | #声场估计 |
-| 327. | [Speaker Anonymisation for Speech-Based Suicide Risk Det](/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide) | 7.5分 | 前25% | #语音匿名化 |
-| 328. | [Multi-View Hierarchical Hypergraph Neural Network for A](/audio-paper-digest-blog/posts/2026-04-29-multi-view-hierarchical-hypergraph-neural-network) | 7.5分 | 前25% | #语音生物标志物 |
-| 329. | [Evaluating Pretrained Speech Embedding Systems for Dysa](/audio-paper-digest-blog/posts/2026-04-29-evaluating-pretrained-speech-embedding-systems) | 7.5分 | 前50% | #语音生物标志物 |
-| 330. | [Attentive Masked Self-Distillation for Respiratory Soun](/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for) | 7.5分 | 前25% | #音频分类 |
-| 331. | [Reference-Aware SFM Layers for Intrusive Intelligibilit](/audio-paper-digest-blog/posts/2026-04-29-reference-aware-sfm-layers-for-intrusive) | 7.5分 | 前10% | #语音评估 |
-| 332. | [Leveraging Multiple Speech Enhancers for Non-Intrusive ](/audio-paper-digest-blog/posts/2026-04-29-leveraging-multiple-speech-enhancers-for-non) | 7.5分 | 前25% | #模型评估 |
-| 333. | [Enhancing Speech Intelligibility Prediction for Hearing](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speech-intelligibility-prediction-for) | 7.5分 | 前25% | #语音增强 |
-| 334. | [WAV2LEV: Predicting Levenshtein Edit Operation Sequence](/audio-paper-digest-blog/posts/2026-04-29-wav2lev-predicting-levenshtein-edit-operation) | 7.5分 | 前25% | #语音识别 |
-| 335. | [SingMOS-Pro: An Comprehensive Benchmark For Singing Qua](/audio-paper-digest-blog/posts/2026-04-29-singmos-pro-an-comprehensive-benchmark-for) | 7.5分 | 前25% | #歌唱语音合成 |
-| 336. | [A Learning-Based Automotive Sound Field Reproduction Me](/audio-paper-digest-blog/posts/2026-04-29-a-learning-based-automotive-sound-field) | 7.5分 | 前25% | #空间音频 |
-| 337. | [H-nnPBFDAF: Hierarchical Neural Network Partitioned Blo](/audio-paper-digest-blog/posts/2026-04-29-h-nnpbfdaf-hierarchical-neural-network) | 7.5分 | 前25% | #语音增强 |
-| 338. | [A Data-Driven Framework for Personal Sound Zone Control](/audio-paper-digest-blog/posts/2026-04-29-a-data-driven-framework-for-personal-sound-zone) | 7.5分 | 前25% | #空间音频 |
-| 339. | [Diffusion Timbre Transfer via Mutual Information Guided](/audio-paper-digest-blog/posts/2026-04-29-diffusion-timbre-transfer-via-mutual-information) | 7.5分 | 前25% | #音乐生成 |
-| 340. | [D3PIA: A Discrete Denoising Diffusion Model for Piano A](/audio-paper-digest-blog/posts/2026-04-29-d3pia-a-discrete-denoising-diffusion-model-for) | 7.5分 | 前25% | #音乐生成 |
-| 341. | [Evaluating Disentangled Representations for Controllabl](/audio-paper-digest-blog/posts/2026-04-29-evaluating-disentangled-representations-for) | 7.5分 | 前25% | #音乐生成 |
-| 342. | [Aligning Language Models for Lyric-to-Melody Generation](/audio-paper-digest-blog/posts/2026-04-29-aligning-language-models-for-lyric-to-melody) | 7.5分 | 前25% | #音乐生成 |
-| 343. | [RHO-PERFECT: Correlation Ceiling for Subjective Evaluat](/audio-paper-digest-blog/posts/2026-04-29-rho-perfect-correlation-ceiling-for-subjective) | 7.5分 | 前25% | #模型评估 |
-| 344. | [Multi-Task Learning For Speech Quality Assessment Using](/audio-paper-digest-blog/posts/2026-04-29-multi-task-learning-for-speech-quality-assessment) | 7.5分 | 前25% | #语音质量评估 |
-| 345. | [FUSEMOS: Perceptual Evaluation of Text-to-Music Generat](/audio-paper-digest-blog/posts/2026-04-29-fusemos-perceptual-evaluation-of-text-to-music) | 7.5分 | 前25% | #音乐生成 |
-| 346. | [Joint Deep Secondary Path Estimation and Adaptive Contr](/audio-paper-digest-blog/posts/2026-04-29-joint-deep-secondary-path-estimation-and-adaptive) | 7.5分 | 前25% | #语音增强 |
-| 347. | [Learning Domain-Robust Bioacoustic Representations for ](/audio-paper-digest-blog/posts/2026-04-29-learning-domain-robust-bioacoustic) | 7.5分 | 前25% | #生物声学 |
-| 348. | [Unsupervised Discovery and Analysis of the Vocal Repert](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-discovery-and-analysis-of-the-vocal) | 7.5分 | 前50% | #生物声学 |
-| 349. | [BioSEN: A Bio-Acoustic Signal Enhancement Network for A](/audio-paper-digest-blog/posts/2026-04-29-biosen-a-bio-acoustic-signal-enhancement-network) | 7.5分 | 前25% | #生物声学 |
-| 350. | [BACHI: Boundary-Aware Symbolic Chord Recognition Throug](/audio-paper-digest-blog/posts/2026-04-29-bachi-boundary-aware-symbolic-chord-recognition) | 7.5分 | 前25% | #音乐信息检索 |
-| 351. | [Controllable Embedding Transformation for Mood-Guided M](/audio-paper-digest-blog/posts/2026-04-29-controllable-embedding-transformation-for-mood) | 7.5分 | 前25% | #音乐检索 |
-| 352. | [An Event-Based Sequence Modeling Approach to Recognizin](/audio-paper-digest-blog/posts/2026-04-29-an-event-based-sequence-modeling-approach-to) | 7.5分 | 前25% | #音乐信息检索 |
-| 353. | [Beat and Downbeat Detection: A Reformulated Approach](/audio-paper-digest-blog/posts/2026-04-29-beat-and-downbeat-detection-a-reformulated) | 7.5分 | 前25% | #音乐理解 |
-| 354. | [Co-Initialization of Control Filter and Secondary Path ](/audio-paper-digest-blog/posts/2026-04-29-co-initialization-of-control-filter-and-secondary) | 7.5分 | 前25% | #音频安全 |
-| 355. | [Natural Language to Spatial Audio Parameters: Lightweig](/audio-paper-digest-blog/posts/2026-04-29-natural-language-to-spatial-audio-parameters) | 7.5分 | 前25% | #空间音频 |
-| 356. | [Hierarchical Activity Recognition and Captioning from L](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-activity-recognition-and-captioning) | 7.5分 | 前25% | #音频事件检测 |
-| 357. | [From Contrast to Commonality: Audio Commonality Caption](/audio-paper-digest-blog/posts/2026-04-29-from-contrast-to-commonality-audio-commonality) | 7.5分 | 前25% | #音频场景理解 |
-| 358. | [Improving Audio Question Answering with Variational Inf](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-question-answering-with) | 7.5分 | 前25% | #音频问答 |
-| 359. | [One Model–Three Tasks: Discovering a Shared Winning Tic](/audio-paper-digest-blog/posts/2026-04-29-one-modelthree-tasks-discovering-a-shared-winning) | 7.5分 | 前25% | #音频分类 |
-| 360. | [From Hallucination to Articulation: Language Model-Driv](/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model) | 7.5分 | 前25% | #语音合成 |
-| 361. | [Salad-VAE: Semantic Audio Compression with Language-Aud](/audio-paper-digest-blog/posts/2026-04-29-salad-vae-semantic-audio-compression-with) | 7.5分 | 前25% | #音频压缩 |
-| 362. | [Auden-Voice: General-Purpose Voice Encoder for Speech a](/audio-paper-digest-blog/posts/2026-04-29-auden-voice-general-purpose-voice-encoder-for) | 7.5分 | 前25% | #语音编码器 |
-| 363. | [Enhancing Noise Robustness for Neural Speech Codecs Thr](/audio-paper-digest-blog/posts/2026-04-29-enhancing-noise-robustness-for-neural-speech) | 7.5分 | 前25% | #语音增强 |
-| 364. | [Testing The Efficient Coding Hypothesis Beyond Humans: ](/audio-paper-digest-blog/posts/2026-04-29-testing-the-efficient-coding-hypothesis-beyond) | 7.5分 | 前25% | #生物声学 |
-| 365. | [Low-Bandwidth High-Fidelity Speech Transmission with Ge](/audio-paper-digest-blog/posts/2026-04-29-low-bandwidth-high-fidelity-speech-transmission) | 7.5分 | 前25% | #语音增强 |
-| 366. | [CodeSep: Low-Bitrate Codec-Driven Speech Separation wit](/audio-paper-digest-blog/posts/2026-04-29-codesep-low-bitrate-codec-driven-speech) | 7.5分 | 前25% | #语音分离 |
-| 367. | [From Diet to Free Lunch: Estimating Auxiliary Signal Pr](/audio-paper-digest-blog/posts/2026-04-29-from-diet-to-free-lunch-estimating-auxiliary) | 7.5分 | 前25% | #语音增强 |
-| 368. | [SLM-SS: Speech Language Model for Generative Speech Sep](/audio-paper-digest-blog/posts/2026-04-29-slm-ss-speech-language-model-for-generative) | 7.5分 | 前25% | #语音分离 |
-| 369. | [RFM-Editing: Rectified Flow Matching for Text-Guided Au](/audio-paper-digest-blog/posts/2026-04-29-rfm-editing-rectified-flow-matching-for-text) | 7.5分 | 前25% | #音频编辑 |
-| 370. | [Mix2Morph: Learning Sound Morphing from Noisy Mixes](/audio-paper-digest-blog/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes) | 7.5分 | 前25% | #音频生成 |
-| 371. | [Generative Audio Extension and Morphing](/audio-paper-digest-blog/posts/2026-04-29-generative-audio-extension-and-morphing) | 7.5分 | 前25% | #音频生成 |
-| 372. | [FlashFoley: Fast Interactive Sketch2audio Generation](/audio-paper-digest-blog/posts/2026-04-29-flashfoley-fast-interactive-sketch2audio) | 7.5分 | 前25% | #音频生成 |
-| 373. | [Representation-Based Data Quality Audits for Audio](/audio-paper-digest-blog/posts/2026-04-29-representation-based-data-quality-audits-for-audio) | 7.5分 | 前25% | #数据集 |
-| 374. | [SynParaSpeech: Automated Synthesis of Paralinguistic Da](/audio-paper-digest-blog/posts/2026-04-29-synparaspeech-automated-synthesis-of) | 7.5分 | 前25% | #语音合成 |
-| 375. | [LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Co](/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for) | 7.5分 | 前25% | #语音识别 |
-| 376. | [A Dataset of Robot-Patient and Doctor-Patient Medical D](/audio-paper-digest-blog/posts/2026-04-29-a-dataset-of-robot-patient-and-doctor-patient) | 7.5分 | 前25% | #语音对话系统 |
-| 377. | [TAU: A Benchmark for Cultural Sound Understanding Beyon](/audio-paper-digest-blog/posts/2026-04-29-tau-a-benchmark-for-cultural-sound-understanding) | 7.5分 | 前25% | #音频问答 |
-| 378. | [Beamforming Using Virtual Microphones for Hearing Aid A](/audio-paper-digest-blog/posts/2026-04-29-beamforming-using-virtual-microphones-for-hearing) | 7.5分 | 前50% | #语音增强 |
-| 379. | [Malefa: Multi-Granularity Learning and Effective False ](/audio-paper-digest-blog/posts/2026-04-29-malefa-multi-granularity-learning-and-effective) | 7.5分 | 前25% | #零样本关键词检测 |
-| 380. | [I-DCCRN-VAE: An Improved Deep Representation Learning F](/audio-paper-digest-blog/posts/2026-04-29-i-dccrn-vae-an-improved-deep-representation) | 7.5分 | 前25% | #语音增强 |
-| 381. | [Domain Partitioning Meets Parameter-Efficient Fine-Tuni](/audio-paper-digest-blog/posts/2026-04-29-domain-partitioning-meets-parameter-efficient) | 7.5分 | 前50% | #音频分离 |
-| 382. | [VM-UNSSOR: Unsupervised Neural Speech Separation Enhanc](/audio-paper-digest-blog/posts/2026-04-29-vm-unssor-unsupervised-neural-speech-separation) | 7.5分 | 前25% | #语音分离 |
-| 383. | [Do We Need EMA for Diffusion-Based Speech Enhancement? ](/audio-paper-digest-blog/posts/2026-04-29-do-we-need-ema-for-diffusion-based-speech) | 7.5分 | 前50% | #语音增强 |
-| 384. | [Hair Noise Analysis and Mitigation for Smart Glasses Au](/audio-paper-digest-blog/posts/2026-04-29-hair-noise-analysis-and-mitigation-for-smart) | 7.5分 | 前25% | #语音增强 |
-| 385. | [SoundCompass: Navigating Target Sound Extraction with E](/audio-paper-digest-blog/posts/2026-04-29-soundcompass-navigating-target-sound-extraction) | 7.5分 | 前25% | #语音分离 |
-| 386. | [AMBISONIC-DML: A Benchmark Dataset for Dynamic Higher-O](/audio-paper-digest-blog/posts/2026-04-29-ambisonic-dml-a-benchmark-dataset-for-dynamic) | 7.5分 | 前25% | #数据集 |
-| 387. | [TinyMU: A Compact Audio-Language Model for Music Unders](/audio-paper-digest-blog/posts/2026-04-29-tinymu-a-compact-audio-language-model-for-music) | 7.5分 | 前25% | #音乐理解 |
-| 388. | [MIDI-LLaMA: An Instruction-Following Multimodal LLM for](/audio-paper-digest-blog/posts/2026-04-29-midi-llama-an-instruction-following-multimodal) | 7.5分 | 前10% | #音乐理解 |
-| 389. | [Fine-Tuning Bigvgan-V2 for Robust Musical Tuning Preser](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-bigvgan-v2-for-robust-musical-tuning) | 7.5分 | 前25% | #音乐生成 |
-| 390. | [StylePitcher: Generating Style-Following and Expressive](/audio-paper-digest-blog/posts/2026-04-29-stylepitcher-generating-style-following-and) | 7.5分 | 前25% | #歌唱语音合成 |
-| 391. | [Mitigating Data Replication in Text-to-Audio Generative](/audio-paper-digest-blog/posts/2026-04-29-mitigating-data-replication-in-text-to-audio) | 7.5分 | 前25% | #音频生成 |
-| 392. | [LenslessMic: Audio Encryption and Authentication via Le](/audio-paper-digest-blog/posts/2026-04-29-lenslessmic-audio-encryption-and-authentication) | 7.5分 | 前25% | #音频安全 |
-| 393. | [Are Modern Speech Enhancement Systems Vulnerable to Adv](/audio-paper-digest-blog/posts/2026-04-29-are-modern-speech-enhancement-systems-vulnerable) | 7.5分 | 前25% | #语音增强 |
-| 394. | [Few-Shot Recognition of Audio Deepfake Generators using](/audio-paper-digest-blog/posts/2026-04-29-few-shot-recognition-of-audio-deepfake-generators) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 395. | [Bloodroot: When Watermarking Turns Poisonous for Stealt](/audio-paper-digest-blog/posts/2026-04-29-bloodroot-when-watermarking-turns-poisonous-for) | 7.5分 | 前25% | #音频安全 |
-| 396. | [LLAC: Learned Lossless Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec) | 7.5分 | 前25% | #音频无损编码 |
-| 397. | [UJCodec: An End-to-end Unet-Style Codec for Joint Speec](/audio-paper-digest-blog/posts/2026-04-29-ujcodec-an-end-to-end-unet-style-codec-for-joint) | 7.5分 | 前25% | #语音增强 |
-| 398. | [Audio Deepfake Detection at the First Greeting: "Hi!"](/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 399. | [Adversarial Defense via Generative Speech Enhancement M](/audio-paper-digest-blog/posts/2026-04-29-adversarial-defense-via-generative-speech) | 7.5分 | 前25% | #语音增强 #对抗防御 |
-| 400. | [Dissecting Performance Degradation in Audio Source Sepa](/audio-paper-digest-blog/posts/2026-04-29-dissecting-performance-degradation-in-audio) | 7.5分 | 前25% | #音乐源分离 |
-| 401. | [Class-Aware Permutation-Invariant Signal-to-Distortion ](/audio-paper-digest-blog/posts/2026-04-29-class-aware-permutation-invariant-signal-to) | 7.5分 | 前25% | #音频场景理解 |
-| 402. | [Spatial Covariance Matrix Reconstruction for Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-spatial-covariance-matrix-reconstruction-for) | 7.5分 | 前25% | #语音增强 |
-| 403. | [Refgen: Reference-Guided Synthetic Data Generation for ](/audio-paper-digest-blog/posts/2026-04-29-refgen-reference-guided-synthetic-data-generation) | 7.5分 | 前25% | #音频事件检测 |
-| 404. | [Timbre-Aware Audio Difference Captioning for Anomalous ](/audio-paper-digest-blog/posts/2026-04-29-timbre-aware-audio-difference-captioning-for) | 7.5分 | 前25% | #音频分类 |
-| 405. | [Learning Linearity in Audio Consistency Autoencoders vi](/audio-paper-digest-blog/posts/2026-04-29-learning-linearity-in-audio-consistency) | 7.5分 | 前25% | #音频生成 |
-| 406. | [Contrastive Timbre Representations for Musical Instrume](/audio-paper-digest-blog/posts/2026-04-29-contrastive-timbre-representations-for-musical) | 7.5分 | 前25% | #音频检索 |
-| 407. | [Spring Reverb Emulation with Hybrid Gated Convolutional](/audio-paper-digest-blog/posts/2026-04-29-spring-reverb-emulation-with-hybrid-gated) | 7.5分 | 前25% | #音频生成 |
-| 408. | [Training-Free Inference-Time Scaling for Audio Source S](/audio-paper-digest-blog/posts/2026-04-29-training-free-inference-time-scaling-for-audio) | 7.5分 | 前25% | #语音增强 |
-| 409. | [Off-The-Grid Multi-Pitch Estimation Using Optimal Trans](/audio-paper-digest-blog/posts/2026-04-29-off-the-grid-multi-pitch-estimation-using-optimal) | 7.5分 | 前25% | #音乐信息检索 |
-| 410. | [Forward Convolutive Prediction for Frame Online Monaura](/audio-paper-digest-blog/posts/2026-04-29-forward-convolutive-prediction-for-frame-online) | 7.5分 | 前50% | #语音增强 |
-| 411. | [Random Matrix-Driven Graph Representation Learning For ](/audio-paper-digest-blog/posts/2026-04-29-random-matrix-driven-graph-representation) | 7.5分 | 前25% | #生物声学 |
-| 412. | [StereoFoley: Object-Aware Stereo Audio Generation from ](/audio-paper-digest-blog/posts/2026-04-29-stereofoley-object-aware-stereo-audio-generation) | 7.5分 | 前25% | #音频生成 |
-| 413. | [Learning What to Hear: Boosting Sound-Source Associatio](/audio-paper-digest-blog/posts/2026-04-29-learning-what-to-hear-boosting-sound-source) | 7.5分 | 前25% | #音视频实例分割 |
-| 414. | [Efficient Audio-Visual Inference Via Token Clustering A](/audio-paper-digest-blog/posts/2026-04-29-efficient-audio-visual-inference-via-token) | 7.5分 | 前25% | #音频问答 |
-| 415. | [V2A-DPO: Omni-Preference Optimization for Video-To-Audi](/audio-paper-digest-blog/posts/2026-04-29-v2a-dpo-omni-preference-optimization-for-video-to) | 7.5分 | 前25% | #视频到音频生成 |
-| 416. | [AudioGen-Omni: A Unified Multimodal Diffusion Transform](/audio-paper-digest-blog/posts/2026-04-29-audiogen-omni-a-unified-multimodal-diffusion) | 7.5分 | 前25% | #音频生成 |
-| 417. | [Asynchrony-Aware Decoupled Multimodal Control for Cued ](/audio-paper-digest-blog/posts/2026-04-29-asynchrony-aware-decoupled-multimodal-control-for) | 7.5分 | 前10% | #语音合成 |
-| 418. | [Visual Keys to Symphonies: Latent Diffusion for Multi-S](/audio-paper-digest-blog/posts/2026-04-29-visual-keys-to-symphonies-latent-diffusion-for) | 7.5分 | 前25% | #音乐生成 |
-| 419. | [SightSound-R1: Cross-Modal Reasoning Distillation from ](/audio-paper-digest-blog/posts/2026-04-29-sightsound-r1-cross-modal-reasoning-distillation) | 7.5分 | 前25% | #音频问答 |
-| 420. | [Interpretable Music Harmonic Analysis Through Multiline](/audio-paper-digest-blog/posts/2026-04-29-interpretable-music-harmonic-analysis-through) | 7.5分 | 前25% | #音乐理解 |
-| 421. | [Leveraging prediction entropy for Automatic prompt weig](/audio-paper-digest-blog/posts/2026-04-29-leveraging-prediction-entropy-for-automatic) | 7.5分 | 前25% | #音频分类 |
-| 422. | [MeanFlowSE: One-Step Generative Speech Enhancement via ](/audio-paper-digest-blog/posts/2026-04-29-meanflowse-one-step-generative-speech-enhancement) | 7.5分 | 前10% | #语音增强 |
-| 423. | [FlowSE-GRPO: Training Flow Matching Speech Enhancement ](/audio-paper-digest-blog/posts/2026-04-29-flowse-grpo-training-flow-matching-speech) | 7.5分 | 前25% | #语音增强 |
-| 424. | [Aligning Generative Speech Enhancement with Perceptual ](/audio-paper-digest-blog/posts/2026-04-29-aligning-generative-speech-enhancement-with) | 7.5分 | 前25% | #语音增强 |
-| 425. | [PG-SE: Predictive Acceleration and Correction for Gener](/audio-paper-digest-blog/posts/2026-04-29-pg-se-predictive-acceleration-and-correction-for) | 7.5分 | 前25% | #语音增强 |
-| 426. | [MECap-R1: Emotion-Aware Policy with Reinforcement Learn](/audio-paper-digest-blog/posts/2026-04-29-mecap-r1-emotion-aware-policy-with-reinforcement) | 7.5分 | 前25% | #语音情感识别 |
-| 427. | [FIDIC:Fine-Grained Conversational Emotion Recognition v](/audio-paper-digest-blog/posts/2026-04-29-fidicfine-grained-conversational-emotion) | 7.5分 | 前25% | #语音情感识别 |
-| 428. | [Combining SSL Speech Features, Contextual Transformers ](/audio-paper-digest-blog/posts/2026-04-29-combining-ssl-speech-features-contextual) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 429. | [Keeping Models Listening: Segment- and time-aware atten](/audio-paper-digest-blog/posts/2026-04-29-keeping-models-listening-segment-and-time-aware) | 7.5分 | 前25% | #音频问答 |
-| 430. | [Understanding Textual Capability Degradation in Speech ](/audio-paper-digest-blog/posts/2026-04-29-understanding-textual-capability-degradation-in) | 7.5分 | 前25% | #语音问答 |
-| 431. | [The Role of Prosodic and Lexical Cues in Turn-Taking wi](/audio-paper-digest-blog/posts/2026-04-29-the-role-of-prosodic-and-lexical-cues-in-turn) | 7.5分 | 前25% | #语音对话系统 |
-| 432. | [Semantic Anchor Transfer from Short to Long Speech in a](/audio-paper-digest-blog/posts/2026-04-29-semantic-anchor-transfer-from-short-to-long) | 7.5分 | 前25% | #语音摘要 |
-| 433. | [Dynamically Slimmable Speech Enhancement Network with M](/audio-paper-digest-blog/posts/2026-04-29-dynamically-slimmable-speech-enhancement-network) | 7.5分 | 前25% | #语音增强 |
-| 434. | [Triage Knowledge Distillation for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-triage-knowledge-distillation-for-speaker) | 7.5分 | 前25% | #说话人验证 |
-| 435. | [Enhancing Speaker Verification with w2v-BERT 2.0 and Kn](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speaker-verification-with-w2v-bert-20) | 7.5分 | 前25% | #说话人验证 |
-| 436. | [DMP-TTS: Disentangled Multi-Modal Prompting for Control](/audio-paper-digest-blog/posts/2026-04-29-dmp-tts-disentangled-multi-modal-prompting-for) | 7.5分 | 前25% | #语音合成 |
-| 437. | [RRPO: Robust Reward Policy Optimization for LLM-Based E](/audio-paper-digest-blog/posts/2026-04-29-rrpo-robust-reward-policy-optimization-for-llm) | 7.5分 | 前25% | #语音合成 |
-| 438. | [AURA: A Stegaformer-Based Scalable Deep Audio Watermark](/audio-paper-digest-blog/posts/2026-04-29-aura-a-stegaformer-based-scalable-deep-audio) | 7.5分 | 前25% | #音频水印 |
-| 439. | [Benchmarking Humans And Machines On Complex Multilingua](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-humans-and-machines-on-complex) | 7.5分 | 前25% | #音频问答 |
-| 440. | [Do we really need self-attention for streaming automati](/audio-paper-digest-blog/posts/2026-04-29-do-we-really-need-self-attention-for-streaming) | 7.5分 | 前25% | #语音识别 |
-| 441. | [Syncspeech: Efficient and Low-Latency Text-to-Speech Ba](/audio-paper-digest-blog/posts/2026-04-29-syncspeech-efficient-and-low-latency-text-to) | 7.5分 | 前25% | #语音合成 |
-| 442. | [Principled Coarse-Grained Acceptance For Speculative De](/audio-paper-digest-blog/posts/2026-04-29-principled-coarse-grained-acceptance-for) | 7.5分 | 前25% | #语音合成 |
-| 443. | [SPADE: Structured Pruning and Adaptive Distillation for](/audio-paper-digest-blog/posts/2026-04-29-spade-structured-pruning-and-adaptive) | 7.5分 | 前25% | #语音合成 |
-| 444. | [Advancing LLM-Based Multi-Channel Multi-Speaker Speech ](/audio-paper-digest-blog/posts/2026-04-29-advancing-llm-based-multi-channel-multi-speaker) | 7.5分 | 前25% | #语音识别 |
-| 445. | [Adapting Diarization-Conditioned Whisper for End-to-End](/audio-paper-digest-blog/posts/2026-04-29-adapting-diarization-conditioned-whisper-for-end) | 7.5分 | 前25% | #语音识别 |
-| 446. | [CALM: Joint Contextual Acoustic-Linguistic Modeling for](/audio-paper-digest-blog/posts/2026-04-29-calm-joint-contextual-acoustic-linguistic) | 7.5分 | 前25% | #语音识别 |
-| 447. | [Lightweight Phoneme-Conditioned Bandwidth Extension for](/audio-paper-digest-blog/posts/2026-04-29-lightweight-phoneme-conditioned-bandwidth) | 7.5分 | 前25% | #语音增强 |
-| 448. | [Fast-ULCNet: A Fast and Ultra Low Complexity Network fo](/audio-paper-digest-blog/posts/2026-04-29-fast-ulcnet-a-fast-and-ultra-low-complexity) | 7.5分 | 前25% | #语音增强 |
-| 449. | [Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech](/audio-paper-digest-blog/posts/2026-04-29-entropy-guided-grvq-for-ultra-low-bitrate-neural) | 7.5分 | 前25% | #语音合成 |
-| 450. | [CodecSlime: Temporal Redundancy Compression of Neural S](/audio-paper-digest-blog/posts/2026-04-29-codecslime-temporal-redundancy-compression-of) | 7.5分 | 前10% | #语音编码 |
-| 451. | [Discrete Diffusion for Generative Modeling of Text-Alig](/audio-paper-digest-blog/posts/2026-04-29-discrete-diffusion-for-generative-modeling-of) | 7.5分 | 前25% | #语音合成 |
-| 452. | [Speaking Clearly: A Simplified Whisper-Based Codec for ](/audio-paper-digest-blog/posts/2026-04-29-speaking-clearly-a-simplified-whisper-based-codec) | 7.5分 | 前25% | #语音编码 |
-| 453. | [How to Label Resynthesized Audio: The Dual Role of Neur](/audio-paper-digest-blog/posts/2026-04-29-how-to-label-resynthesized-audio-the-dual-role-of) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 454. | [TTA: Transcribe, Translate and Alignment for Cross-Ling](/audio-paper-digest-blog/posts/2026-04-29-tta-transcribe-translate-and-alignment-for-cross) | 7.5分 | 前25% | #语音识别 |
-| 455. | [SEP-ST: Incorporating Speech Entity Prompt Into Large L](/audio-paper-digest-blog/posts/2026-04-29-sep-st-incorporating-speech-entity-prompt-into) | 7.5分 | 前25% | #语音翻译 |
-| 456. | [Whisper-QF: Leveraging Dual Cross-Attention Q-Former fo](/audio-paper-digest-blog/posts/2026-04-29-whisper-qf-leveraging-dual-cross-attention-q) | 7.5分 | 前25% | #语音情感识别 |
-| 457. | [Mixture-of-Experts Based Soft-Label Learning for Multi-](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-based-soft-label-learning-for) | 7.5分 | 前25% | #语音情感识别 |
-| 458. | [Multi-Channel Speech Enhancement for Cocktail Party Spe](/audio-paper-digest-blog/posts/2026-04-29-multi-channel-speech-enhancement-for-cocktail) | 7.5分 | 前25% | #语音情感识别 |
-| 459. | [Emotional Dimension Control in Language Model-Based Tex](/audio-paper-digest-blog/posts/2026-04-29-emotional-dimension-control-in-language-model) | 7.5分 | 前25% | #语音合成 |
-| 460. | [Beyond Global Emotion: Fine-Grained Emotional Speech Sy](/audio-paper-digest-blog/posts/2026-04-29-beyond-global-emotion-fine-grained-emotional) | 7.5分 | 前25% | #语音合成 |
-| 461. | [QFOCUS: Controllable Synthesis for Automated Speech Str](/audio-paper-digest-blog/posts/2026-04-29-qfocus-controllable-synthesis-for-automated) | 7.5分 | 前50% | #语音合成 |
-| 462. | [SynaSpot: A Lightweight, Streaming Multi-modal Framewor](/audio-paper-digest-blog/posts/2026-04-29-synaspot-a-lightweight-streaming-multi-modal) | 7.5分 | 前25% | #关键词检测 |
-| 463. | [Vocalnet-M2: Advancing Low-Latency Spoken Language Mode](/audio-paper-digest-blog/posts/2026-04-29-vocalnet-m2-advancing-low-latency-spoken-language) | 7.5分 | 前25% | #语音对话系统 |
-| 464. | [Mitigating Language Prior-Induced Hallucinations via Bi](/audio-paper-digest-blog/posts/2026-04-29-mitigating-language-prior-induced-hallucinations) | 7.5分 | 前25% | #多模态模型 |
-| 465. | [Prototype-Guided Cross-Modal Contrastive Learning for C](/audio-paper-digest-blog/posts/2026-04-29-prototype-guided-cross-modal-contrastive-learning) | 7.5分 | 前25% | #语音分离 |
-| 466. | [Session-Level Spoken Language Assessment with A Multimo](/audio-paper-digest-blog/posts/2026-04-29-session-level-spoken-language-assessment-with-a) | 7.5分 | 前25% | #语音评估 |
-| 467. | [QE-XVC: Zero-Shot Cross-Lingual Voice Conversion via Qu](/audio-paper-digest-blog/posts/2026-04-29-qe-xvc-zero-shot-cross-lingual-voice-conversion) | 7.5分 | 前25% | #语音转换 |
-| 468. | [MeanVC: Lightweight and Streaming Zero-Shot Voice Conve](/audio-paper-digest-blog/posts/2026-04-29-meanvc-lightweight-and-streaming-zero-shot-voice) | 7.5分 | 前25% | #语音转换 |
-| 469. | [Cross-Lingual F5-TTS: Towards Language-Agnostic Voice C](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-f5-tts-towards-language-agnostic) | 7.5分 | 前25% | #语音克隆 |
-| 470. | [Expressive Voice Conversion with Controllable Emotional](/audio-paper-digest-blog/posts/2026-04-29-expressive-voice-conversion-with-controllable) | 7.5分 | 前25% | #语音转换 |
-| 471. | [Lightweight and Perceptually-Guided Voice Conversion fo](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-perceptually-guided-voice) | 7.5分 | 前25% | #语音转换 |
-| 472. | [ParaGSE: Parallel Generative Speech Enhancement with Gr](/audio-paper-digest-blog/posts/2026-04-29-paragse-parallel-generative-speech-enhancement) | 7.5分 | 前25% | #语音增强 |
-| 473. | [High-Fidelity Speech Enhancement Via Discrete Audio Tok](/audio-paper-digest-blog/posts/2026-04-29-high-fidelity-speech-enhancement-via-discrete) | 7.5分 | 前25% | #语音增强 |
-| 474. | [DISSR: Disentangling Speech Representation for Degradat](/audio-paper-digest-blog/posts/2026-04-29-dissr-disentangling-speech-representation-for) | 7.5分 | 前25% | #语音增强 |
-| 475. | [Ranking The Impact of Contextual Specialization in Neur](/audio-paper-digest-blog/posts/2026-04-29-ranking-the-impact-of-contextual-specialization) | 7.5分 | 前25% | #语音增强 |
-| 476. | [β-AVSDNET: A Novel End-To-End Neural Network Architectu](/audio-paper-digest-blog/posts/2026-04-29-avsdnet-a-novel-end-to-end-neural-network) | 7.5分 | 前25% | #说话人分离 |
-| 477. | [A Framework for Controlled Multi-Speaker Audio Synthesi](/audio-paper-digest-blog/posts/2026-04-29-a-framework-for-controlled-multi-speaker-audio) | 7.5分 | 前25% | #说话人日志 |
-| 478. | [Synthetic yet Striking? Assessing Vocal Charisma in TTS](/audio-paper-digest-blog/posts/2026-04-29-synthetic-yet-striking-assessing-vocal-charisma) | 7.5分 | 前25% | #语音合成 |
-| 479. | [Emilia-NV: A Non-Verbal Speech Dataset with Word-Level ](/audio-paper-digest-blog/posts/2026-04-29-emilia-nv-a-non-verbal-speech-dataset-with-word) | 7.5分 | 前25% | #语音识别 |
-| 480. | [TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-tmd-tts-a-unified-tibetan-multi-dialect-text-to) | 7.5分 | 前25% | #语音合成 |
-| 481. | [Deep Dubbing: End-to-End Auto-Audiobook System with Tex](/audio-paper-digest-blog/posts/2026-04-29-deep-dubbing-end-to-end-auto-audiobook-system) | 7.5分 | 前25% | #语音合成 |
-| 482. | [Erasing Your Voice Before it’s Heard: Training-Free Spe](/audio-paper-digest-blog/posts/2026-04-29-erasing-your-voice-before-its-heard-training-free) | 7.5分 | 前25% | #语音合成 |
-| 483. | [LLM-Based Post-ASR Error Correction for Disordered Spee](/audio-paper-digest-blog/posts/2026-04-29-llm-based-post-asr-error-correction-for) | 7.5分 | 前50% | #语音识别 |
-| 484. | [InstructAudio: Unified Speech and Music Generation with](/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation) | 7.5分 | 前25% | #语音合成 |
-| 485. | [GLA-GRAD++: An Improved Griffin-Lim Guided Diffusion Mo](/audio-paper-digest-blog/posts/2026-04-29-gla-grad-an-improved-griffin-lim-guided-diffusion) | 7.5分 | 前25% | #语音合成 |
-| 486. | [Meanflow-Accelerated Multimodal Video-to-Audio Synthesi](/audio-paper-digest-blog/posts/2026-04-29-meanflow-accelerated-multimodal-video-to-audio) | 7.5分 | 前25% | #音频生成 |
-| 487. | [Cross-Lingual Interleaving for Speech Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-interleaving-for-speech-language) | 7.5分 | 前25% | #语音大模型 |
-| 488. | [Emotional Damage: Investigating Safety Vulnerabilities ](/audio-paper-digest-blog/posts/2026-04-29-emotional-damage-investigating-safety) | 7.5分 | 前25% | #音频安全 |
-| 489. | [Content-Preserving Speech Representation Learning Via A](/audio-paper-digest-blog/posts/2026-04-29-content-preserving-speech-representation-learning) | 7.5分 | 前25% | #语音识别 |
-| 490. | [Exploring SSL Discrete Tokens for Multilingual Automati](/audio-paper-digest-blog/posts/2026-04-29-exploring-ssl-discrete-tokens-for-multilingual) | 7.5分 | 前25% | #语音识别 |
-| 491. | [EchoRAG: A Two-Stage Framework for Audio-Text Retrieval](/audio-paper-digest-blog/posts/2026-04-29-echorag-a-two-stage-framework-for-audio-text) | 7.5分 | 前25% | #音频检索 |
-| 492. | [TICL: Text-Embedding KNN for Speech in-Context Learning](/audio-paper-digest-blog/posts/2026-04-29-ticl-text-embedding-knn-for-speech-in-context) | 7.5分 | 前25% | #语音识别 |
-| 493. | [Purification Before Fusion: Toward Mask-Free Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-purification-before-fusion-toward-mask-free) | 7.5分 | 前25% | #语音识别 |
-| 494. | [Cross-Modal Bottleneck Fusion for Noise Robust Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-bottleneck-fusion-for-noise-robust) | 7.5分 | 前25% | #语音识别 |
-| 495. | [Evaluating Emotion Recognition in Spoken Language Model](/audio-paper-digest-blog/posts/2026-04-29-evaluating-emotion-recognition-in-spoken-language) | 7.5分 | 前50% | #语音情感识别 |
-| 496. | [InconVAD: A Two-Stage Dual-Tower Framework for Multimod](/audio-paper-digest-blog/posts/2026-04-29-inconvad-a-two-stage-dual-tower-framework-for) | 7.5分 | 前25% | #语音情感识别 |
-| 497. | [MSF-SER: Enriching Acoustic Modeling with Multi-Granula](/audio-paper-digest-blog/posts/2026-04-29-msf-ser-enriching-acoustic-modeling-with-multi) | 7.5分 | 前25% | #语音情感识别 |
-| 498. | [KAN We Make Models Simpler for Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 499. | [Robust Deepfake Audio Detection via Multi-Level Interme](/audio-paper-digest-blog/posts/2026-04-29-robust-deepfake-audio-detection-via-multi-level) | 7.5分 | 前25% | #音频深度伪造检测 |
-| 500. | [Inverse-Hessian Regularization for Continual Learning i](/audio-paper-digest-blog/posts/2026-04-29-inverse-hessian-regularization-for-continual) | 7.5分 | 前25% | #语音识别 |
-| 501. | [BEST-RQ-based Self-Supervised Learning for Whisper Doma](/audio-paper-digest-blog/posts/2026-04-29-best-rq-based-self-supervised-learning-for) | 7.5分 | 前25% | #语音识别 |
-| 502. | [CCST: Cross-Modal and Consistency-Aware Self-Training f](/audio-paper-digest-blog/posts/2026-04-29-ccst-cross-modal-and-consistency-aware-self) | 7.5分 | 前25% | #语音识别 |
-| 503. | [Chunkwise Aligners for Streaming Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-chunkwise-aligners-for-streaming-speech) | 7.5分 | 前25% | #语音识别 |
-| 504. | [FinHuBERT: Hierarchical Feature Imitating Networks for ](/audio-paper-digest-blog/posts/2026-04-29-finhubert-hierarchical-feature-imitating-networks) | 7.5分 | 前25% | #语音识别 |
-| 505. | [UMA-SPLIT: Unimodal Aggregation for Both English and Ma](/audio-paper-digest-blog/posts/2026-04-29-uma-split-unimodal-aggregation-for-both-english) | 7.5分 | 前25% | #语音识别 |
-| 506. | [Dual Data Scaling for Robust Two-Stage User-Defined Key](/audio-paper-digest-blog/posts/2026-04-29-dual-data-scaling-for-robust-two-stage-user) | 7.5分 | 前25% | #语音活动检测 |
-| 507. | [MNV-17: A High-Quality Performative Mandarin Dataset fo](/audio-paper-digest-blog/posts/2026-04-29-mnv-17-a-high-quality-performative-mandarin) | 7.5分 | 前25% | #语音识别 |
-| 508. | [Int-MeanFlow: Few-Step Speech Generation with Integral ](/audio-paper-digest-blog/posts/2026-04-29-int-meanflow-few-step-speech-generation-with) | 7.5分 | 前25% | #语音合成 |
-| 509. | [Training Flow Matching Models with Reliable Labels via ](/audio-paper-digest-blog/posts/2026-04-29-training-flow-matching-models-with-reliable) | 7.5分 | 前25% | #语音合成 |
-| 510. | [Hierarchical Discrete Flow Matching For Multi-Codebook ](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-discrete-flow-matching-for-multi) | 7.5分 | 前25% | #语音合成 |
-| 511. | [Frame-Stacked Local Transformers for Efficient Multi-Co](/audio-paper-digest-blog/posts/2026-04-29-frame-stacked-local-transformers-for-efficient) | 7.5分 | 前25% | #语音合成 |
-| 512. | [Direct Preference Optimization For Speech Autoregressiv](/audio-paper-digest-blog/posts/2026-04-29-direct-preference-optimization-for-speech) | 7.5分 | 前25% | #语音合成 |
-| 513. | [Direct Transfer of Prosody in Speech-to-speech Translat](/audio-paper-digest-blog/posts/2026-04-29-direct-transfer-of-prosody-in-speech-to-speech) | 7.5分 | 前25% | #语音翻译 |
-| 514. | [PROST-LLM: Progressively Enhancing the Speech-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-prost-llm-progressively-enhancing-the-speech-to) | 7.5分 | 前25% | #语音翻译 |
-| 515. | [Revisiting Direct Speech-to-Text Translation with Speec](/audio-paper-digest-blog/posts/2026-04-29-revisiting-direct-speech-to-text-translation-with) | 7.5分 | 前50% | #语音翻译 |
-| 516. | [Listen, But Don't Leak: Sensitive Data Protection for P](/audio-paper-digest-blog/posts/2026-04-29-listen-but-dont-leak-sensitive-data-protection) | 7.5分 | 前25% | #语音识别 |
-| 517. | [EdgeSpot: Efficient and High-Performance Few-Shot Model](/audio-paper-digest-blog/posts/2026-04-29-edgespot-efficient-and-high-performance-few-shot) | 7.5分 | 前25% | #语音活动检测 |
-| 518. | [Confidence-Guided Error Correction for Disordered Speec](/audio-paper-digest-blog/posts/2026-04-29-confidence-guided-error-correction-for-disordered) | 7.5分 | 前25% | #语音识别 |
-| 519. | [Advancing Semi-Supervised Child Speech Recognition with](/audio-paper-digest-blog/posts/2026-04-29-advancing-semi-supervised-child-speech) | 7.5分 | 前25% | #语音识别 |
-| 520. | [Variational Low-Rank Adaptation for Personalized Impair](/audio-paper-digest-blog/posts/2026-04-29-variational-low-rank-adaptation-for-personalized) | 7.5分 | 前50% | #语音识别 |
-| 521. | [Decoder-Only Conformer with Modality-Aware Sparse Mixtu](/audio-paper-digest-blog/posts/2026-04-29-decoder-only-conformer-with-modality-aware-sparse) | 7.5分 | 前25% | #语音识别 |
-| 522. | [Loose Coupling of Spectral and Spatial Models for Multi](/audio-paper-digest-blog/posts/2026-04-29-loose-coupling-of-spectral-and-spatial-models-for) | 7.2分 | 前25% | #说话人日志 #语音分离 |
-| 523. | [BSMP-SENet:Band-Split Magnitude-Phase Network for Speec](/audio-paper-digest-blog/posts/2026-04-29-bsmp-senetband-split-magnitude-phase-network-for) | 7.0分 | 前25% | #语音增强 |
-| 524. | [Cooperative Multi-Agent Reinforcement Learning for Adap](/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning) | 7.0分 | 前50% | #联邦学习 |
-| 525. | [HFSQVAE: Hierarchical Vector Quantization with Residual](/audio-paper-digest-blog/posts/2026-04-29-hfsqvae-hierarchical-vector-quantization-with) | 7.0分 | 前25% | #音频生成 |
-| 526. | [When Voice Matters: A Controlled Study of Audio LLM Beh](/audio-paper-digest-blog/posts/2026-04-29-when-voice-matters-a-controlled-study-of-audio) | 7.0分 | 前25% | #模型评估 |
-| 527. | [Optimizing Domain-Adaptive Self-Supervised Learning for](/audio-paper-digest-blog/posts/2026-04-29-optimizing-domain-adaptive-self-supervised) | 7.0分 | 前25% | #语音生物标志物 |
-| 528. | [MT-HuBERT: Self-Supervised Mix-Training for Few-Shot Ke](/audio-paper-digest-blog/posts/2026-04-29-mt-hubert-self-supervised-mix-training-for-few) | 7.0分 | 前25% | #关键词检测 |
-| 529. | [Scaling Spoken Language Models with Syllabic Speech Tok](/audio-paper-digest-blog/posts/2026-04-29-scaling-spoken-language-models-with-syllabic) | 7.0分 | 前25% | #语音理解 |
-| 530. | [RAP: Real-Time Audio-Driven Portrait Animation with Vid](/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation) | 7.0分 | 前25% | #音视频 |
-| 531. | [Evaluating Bias in Spoken Dialogue LLMs for Real-World ](/audio-paper-digest-blog/posts/2026-04-29-evaluating-bias-in-spoken-dialogue-llms-for-real) | 7.0分 | 前25% | #模型评估 |
-| 532. | [Cross-Cultural Bias in Mel-Scale Representations: Evide](/audio-paper-digest-blog/posts/2026-04-29-cross-cultural-bias-in-mel-scale-representations) | 7.0分 | 前25% | #语音识别 |
-| 533. | [Ailive Mixer: A Deep Learning Based Zero Latency Automa](/audio-paper-digest-blog/posts/2026-04-29-ailive-mixer-a-deep-learning-based-zero-latency) | 7.0分 | 前25% | #音乐混合 |
-| 534. | [Bridging the Front-End and Back-End for Robust ASR via ](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-front-end-and-back-end-for-robust) | 7.0分 | 前25% | #语音识别 |
-| 535. | [VMSP: Video-to-Music Generation with Two-Stage Alignmen](/audio-paper-digest-blog/posts/2026-04-29-vmsp-video-to-music-generation-with-two-stage) | 7.0分 | 前25% | #音乐生成 |
-| 536. | [Directly Trained Spiking Neural Networks with Adaptive ](/audio-paper-digest-blog/posts/2026-04-29-directly-trained-spiking-neural-networks-with) | 7.0分 | 前25% | #音频分类 |
-| 537. | [Exploring How Audio Effects Alter Emotion with Foundati](/audio-paper-digest-blog/posts/2026-04-29-exploring-how-audio-effects-alter-emotion-with) | 7.0分 | 前50% | #音乐理解 |
-| 538. | [Does the Pre-Training of an Embedding Influence its Enc](/audio-paper-digest-blog/posts/2026-04-29-does-the-pre-training-of-an-embedding-influence) | 7.0分 | 前50% | #语音生物标志物 |
-| 539. | [Etude: Piano Cover Generation with a Three-Stage Approa](/audio-paper-digest-blog/posts/2026-04-29-etude-piano-cover-generation-with-a-three-stage) | 7.0分 | 前25% | #音乐生成 |
-| 540. | [Audio-Visual Feature Fusion for Calibrating Relevance S](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-feature-fusion-for-calibrating) | 7.0分 | 前25% | #视频片段检索 |
-| 541. | [MirrorTalk: Forging Personalized Avatars Via Disentangl](/audio-paper-digest-blog/posts/2026-04-29-mirrortalk-forging-personalized-avatars-via) | 7.0分 | 前25% | #语音合成 |
-| 542. | [An Anomaly-Aware and Audio-Enhanced Dual-Pathway Framew](/audio-paper-digest-blog/posts/2026-04-29-an-anomaly-aware-and-audio-enhanced-dual-pathway) | 7.0分 | 前25% | #语音生物标志物 |
-| 543. | [Leveraging Text-to-Speech and Voice Conversion as Data ](/audio-paper-digest-blog/posts/2026-04-29-leveraging-text-to-speech-and-voice-conversion-as) | 7.0分 | 前50% | #语音生物标志物 |
-| 544. | [Noise-Robust Contrastive Learning with an MFCC-Conforme](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-contrastive-learning-with-an-mfcc) | 7.0分 | 前50% | #音频分类 |
-| 545. | [EEG and Eye-Tracking Driven Dynamic Target Speaker Extr](/audio-paper-digest-blog/posts/2026-04-29-eeg-and-eye-tracking-driven-dynamic-target) | 7.0分 | 前25% | #语音分离 |
-| 546. | [DPT-Net: Dual-Path Transformer Network with Hierarchica](/audio-paper-digest-blog/posts/2026-04-29-dpt-net-dual-path-transformer-network-with) | 7.0分 | 前25% | #语音生物标志物 |
-| 547. | [DECAF: Dynamic Envelope Context-Aware Fusion for Speech](/audio-paper-digest-blog/posts/2026-04-29-decaf-dynamic-envelope-context-aware-fusion-for) | 7.0分 | 前25% | #语音增强 |
-| 548. | [Condition-Invariant fMRI decoding of speech intelligibi](/audio-paper-digest-blog/posts/2026-04-29-condition-invariant-fmri-decoding-of-speech) | 7.0分 | 前25% | #神经解码 |
-| 549. | [CMSA-Mamba: Hierarchical State Space Modeling for Audio](/audio-paper-digest-blog/posts/2026-04-29-cmsa-mamba-hierarchical-state-space-modeling-for) | 7.0分 | 前25% | #语音生物标志物 |
-| 550. | [Fusion of Multimodal Estimations by Extended State Hidd](/audio-paper-digest-blog/posts/2026-04-29-fusion-of-multimodal-estimations-by-extended) | 7.0分 | 前50% | #生物声学 |
-| 551. | [DAT-CFTNet: Speech Enhancement for Cochlear Implant Rec](/audio-paper-digest-blog/posts/2026-04-29-dat-cftnet-speech-enhancement-for-cochlear) | 7.0分 | 前50% | #语音增强 |
-| 552. | [Caption and Audio-Guided Video Representation Learning ](/audio-paper-digest-blog/posts/2026-04-29-caption-and-audio-guided-video-representation) | 7.0分 | 前25% | #视频检索 |
-| 553. | [Auto-MatchCut: An Audio-Visual Retrieval Framework for ](/audio-paper-digest-blog/posts/2026-04-29-auto-matchcut-an-audio-visual-retrieval-framework) | 7.0分 | 前50% | #跨模态检索 |
-| 554. | [Attentive AV-Fusionnet: Audio-Visual Quality Prediction](/audio-paper-digest-blog/posts/2026-04-29-attentive-av-fusionnet-audio-visual-quality) | 7.0分 | 前25% | #音视频 |
-| 555. | [Dual Contrastive Learning for Semi-Supervised Domain Ad](/audio-paper-digest-blog/posts/2026-04-29-dual-contrastive-learning-for-semi-supervised) | 7.0分 | 前25% | #语音生物标志物 |
-| 556. | [The Synergistic Role of Audio and Large Video-Language ](/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video) | 7.0分 | 前25% | #领域适应 |
-| 557. | [Spiking Temporal-Enhanced Network for Zero-Shot Audio-V](/audio-paper-digest-blog/posts/2026-04-29-spiking-temporal-enhanced-network-for-zero-shot) | 7.0分 | 前50% | #音频分类 |
-| 558. | [Style-Disentangled Diffusion for Controllable and Ident](/audio-paper-digest-blog/posts/2026-04-29-style-disentangled-diffusion-for-controllable-and) | 7.0分 | 前25% | #语音驱动动作生成 |
-| 559. | [Look, Listen and Segment: Towards Weakly Supervised Aud](/audio-paper-digest-blog/posts/2026-04-29-look-listen-and-segment-towards-weakly-supervised) | 7.0分 | 前25% | #音视频 |
-| 560. | [Face-Voice Association with Inductive Bias for Maximum ](/audio-paper-digest-blog/posts/2026-04-29-face-voice-association-with-inductive-bias-for) | 7.0分 | 前25% | #说话人验证 |
-| 561. | [DAMO: A Data-Efficient Multimodal Orchestrator for Temp](/audio-paper-digest-blog/posts/2026-04-29-damo-a-data-efficient-multimodal-orchestrator-for) | 7.0分 | 前25% | #视频问答 |
-| 562. | [Sounds that Shape: Audio-Driven 3D Mesh Generation with](/audio-paper-digest-blog/posts/2026-04-29-sounds-that-shape-audio-driven-3d-mesh-generation) | 7.0分 | 前25% | #音频生成 |
-| 563. | [Towards Multi-View Hierarchical Video-to-Piano Generati](/audio-paper-digest-blog/posts/2026-04-29-towards-multi-view-hierarchical-video-to-piano) | 7.0分 | 前25% | #音乐生成 |
-| 564. | [Lightweight Implicit Neural Network for Binaural Audio ](/audio-paper-digest-blog/posts/2026-04-29-lightweight-implicit-neural-network-for-binaural) | 7.0分 | 前25% | #空间音频 |
-| 565. | [AI-Generated Music Detection in Broadcast Monitoring](/audio-paper-digest-blog/posts/2026-04-29-ai-generated-music-detection-in-broadcast) | 7.0分 | 前50% | #音频深度伪造检测 |
-| 566. | [ACIR-MACL: Effective Multimodal Sentiment Analysis via ](/audio-paper-digest-blog/posts/2026-04-29-acir-macl-effective-multimodal-sentiment-analysis) | 7.0分 | 前25% | #情感分析 |
-| 567. | [Semantic-Guided Pseudo-Feature Attention Network for Au](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network) | 7.0分 | 前25% | #音频分类 #零样本学习 |
-| 568. | [Rationale-Guided Learning for Multimodal Emotion Recogn](/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion) | 7.0分 | 前25% | #语音情感识别 |
-| 569. | [Bimodal Fusion Framework for Dynamic Facial Expression ](/audio-paper-digest-blog/posts/2026-04-29-bimodal-fusion-framework-for-dynamic-facial) | 7.0分 | 前25% | #语音情感识别 |
-| 570. | [Dual-Perspective Multimodal Sentiment Analysis with MoE](/audio-paper-digest-blog/posts/2026-04-29-dual-perspective-multimodal-sentiment-analysis) | 7.0分 | 前50% | #多模态情感分析 |
-| 571. | [FastAV: Efficient Token Pruning for Audio-Visual Large ](/audio-paper-digest-blog/posts/2026-04-29-fastav-efficient-token-pruning-for-audio-visual) | 7.0分 | 前25% | #音频问答 |
-| 572. | [ST-HNTM: Joint Speech-Text Neural Topic Modeling on the](/audio-paper-digest-blog/posts/2026-04-29-st-hntm-joint-speech-text-neural-topic-modeling) | 7.0分 | 前25% | #主题建模 |
-| 573. | [UVT-LM: Unifying Visual and Tactile Perception with Lan](/audio-paper-digest-blog/posts/2026-04-29-uvt-lm-unifying-visual-and-tactile-perception) | 7.0分 | 前25% | #跨模态 |
-| 574. | [Teacher-Guided Pseudo Supervision and Cross-Modal Align](/audio-paper-digest-blog/posts/2026-04-29-teacher-guided-pseudo-supervision-and-cross-modal) | 7.0分 | 前25% | #音视频 |
-| 575. | [An End-to-End Multimodal System for Subtitle Recognitio](/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle) | 7.0分 | 前50% | #多模态模型 |
-| 576. | [Can Large Audio Language Models Understand Audio Well? ](/audio-paper-digest-blog/posts/2026-04-29-can-large-audio-language-models-understand-audio) | 7.0分 | 前25% | #基准测试 |
-| 577. | [AVO-65: A Large-Scale Hierarchical Audio-Visual Object ](/audio-paper-digest-blog/posts/2026-04-29-avo-65-a-large-scale-hierarchical-audio-visual) | 7.0分 | 前50% | #音视频 |
-| 578. | [HarmoNet: Music Grounding by Short Video via Harmonic R](/audio-paper-digest-blog/posts/2026-04-29-harmonet-music-grounding-by-short-video-via) | 7.0分 | 前25% | #音乐检索 |
-| 579. | [DepthTalk: Few-Shot Talking Head Generation with Depth-](/audio-paper-digest-blog/posts/2026-04-29-depthtalk-few-shot-talking-head-generation-with) | 7.0分 | 前25% | #说话人生成 |
-| 580. | [Multimodal Transformer with Multiperspective Training f](/audio-paper-digest-blog/posts/2026-04-29-multimodal-transformer-with-multiperspective) | 7.0分 | 前25% | #多模态模型 |
-| 581. | [ReCoM: Realistic Co-Speech Motion Generation with Recur](/audio-paper-digest-blog/posts/2026-04-29-recom-realistic-co-speech-motion-generation-with) | 7.0分 | 前25% | #音频生成 |
-| 582. | [A Dynamic Gated Cross-Attention Framework for Audio-Tex](/audio-paper-digest-blog/posts/2026-04-29-a-dynamic-gated-cross-attention-framework-for) | 7.0分 | 前25% | #音频分类 |
-| 583. | [Perceptual Loss Optimized HRTF Personalization in Spher](/audio-paper-digest-blog/posts/2026-04-29-perceptual-loss-optimized-hrtf-personalization-in) | 7.0分 | 前25% | #空间音频 |
-| 584. | [Leveraging Large Multimodal Models for Audio-Video Deep](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-multimodal-models-for-audio) | 7.0分 | 前25% | #音频深度伪造检测 |
-| 585. | [Impact of Phonetics on Speaker Identity in Adversarial ](/audio-paper-digest-blog/posts/2026-04-29-impact-of-phonetics-on-speaker-identity-in) | 7.0分 | 前50% | #说话人验证 |
-| 586. | [PRSA: Preventing Malicious Speaker Recognition and Spee](/audio-paper-digest-blog/posts/2026-04-29-prsa-preventing-malicious-speaker-recognition-and) | 7.0分 | 前25% | #语音匿名化 |
-| 587. | [Stream-Voice-Anon: Enhancing Utility of Real-Time Speak](/audio-paper-digest-blog/posts/2026-04-29-stream-voice-anon-enhancing-utility-of-real-time) | 7.0分 | 前25% | #语音匿名化 |
-| 588. | [Audio-Text Jailbreak Attack on Large Audio-Language Mod](/audio-paper-digest-blog/posts/2026-04-29-audio-text-jailbreak-attack-on-large-audio) | 7.0分 | 前25% | #音频安全 |
-| 589. | [Style Attack Disguise: When Fonts Become a Camouflage f](/audio-paper-digest-blog/posts/2026-04-29-style-attack-disguise-when-fonts-become-a) | 7.0分 | 前25% | #对抗样本 |
-| 590. | [Identity Leakage Through Accent Cues in Voice Anonymisa](/audio-paper-digest-blog/posts/2026-04-29-identity-leakage-through-accent-cues-in-voice) | 7.0分 | 前50% | #语音匿名化 |
-| 591. | [Fake Speech Wild: Detecting Deepfake Speech on Social M](/audio-paper-digest-blog/posts/2026-04-29-fake-speech-wild-detecting-deepfake-speech-on) | 7.0分 | 前25% | #语音伪造检测 |
-| 592. | [Robust Online Overdetermined Independent Vector Analysi](/audio-paper-digest-blog/posts/2026-04-29-robust-online-overdetermined-independent-vector) | 7.0分 | 前25% | #语音分离 |
-| 593. | [Acoustic Teleportation Via Disentangled Neural Audio Co](/audio-paper-digest-blog/posts/2026-04-29-acoustic-teleportation-via-disentangled-neural) | 7.0分 | 前25% | #语音增强 |
-| 594. | [Residual Tokens Enhance Masked Autoencoders for Speech ](/audio-paper-digest-blog/posts/2026-04-29-residual-tokens-enhance-masked-autoencoders-for) | 7.0分 | 前50% | #语音合成 |
-| 595. | [Arbitrarily Settable Frame Rate Neural Speech Codec wit](/audio-paper-digest-blog/posts/2026-04-29-arbitrarily-settable-frame-rate-neural-speech) | 7.0分 | 前25% | #音频生成 |
-| 596. | [Quality Assessment of Noisy and Enhanced Speech with Li](/audio-paper-digest-blog/posts/2026-04-29-quality-assessment-of-noisy-and-enhanced-speech) | 7.0分 | 前25% | #语音质量评估 |
-| 597. | [SA-SSL-MOS: Self-Supervised Learning MOS Prediction wit](/audio-paper-digest-blog/posts/2026-04-29-sa-ssl-mos-self-supervised-learning-mos) | 7.0分 | 前50% | #语音质量评估 |
-| 598. | [AUDIOGENIE-Reasoner: A Training-Free Multi-Agent Framew](/audio-paper-digest-blog/posts/2026-04-29-audiogenie-reasoner-a-training-free-multi-agent) | 7.0分 | 前25% | #音频问答 |
-| 599. | [LAMB: LLM-Based Audio Captioning with Modality Gap Brid](/audio-paper-digest-blog/posts/2026-04-29-lamb-llm-based-audio-captioning-with-modality-gap) | 7.0分 | 前25% | #音频描述 |
-| 600. | [Evaluating Compositional Structure in Audio Representat](/audio-paper-digest-blog/posts/2026-04-29-evaluating-compositional-structure-in-audio) | 7.0分 | 前50% | #模型评估 |
-| 601. | [Scalable Evaluation for Audio Identification Via Synthe](/audio-paper-digest-blog/posts/2026-04-29-scalable-evaluation-for-audio-identification-via) | 7.0分 | 前25% | #音频检索 |
-| 602. | [Synchronous Secondary Path Modeling and Kronecker-Facto](/audio-paper-digest-blog/posts/2026-04-29-synchronous-secondary-path-modeling-and-kronecker) | 7.0分 | 前25% | #主动噪声控制 |
-| 603. | [Separate this, and all of these Things Around It: Music](/audio-paper-digest-blog/posts/2026-04-29-separate-this-and-all-of-these-things-around-it) | 7.0分 | 前25% | #音乐分离 |
-| 604. | [A Bayesian Approach to Singing Skill Evaluation Using S](/audio-paper-digest-blog/posts/2026-04-29-a-bayesian-approach-to-singing-skill-evaluation) | 7.0分 | 前25% | #音乐理解 |
-| 605. | [SAUNA: Song-Level Audio & User-Listening Data Neural Al](/audio-paper-digest-blog/posts/2026-04-29-sauna-song-level-audio-user-listening-data-neural) | 7.0分 | 前25% | #音乐信息检索 |
-| 606. | [Spiking Attention Network: A Hybrid Neuromorphic Approa](/audio-paper-digest-blog/posts/2026-04-29-spiking-attention-network-a-hybrid-neuromorphic) | 7.0分 | 前25% | #声源定位 |
-| 607. | [Reference Microphone Selection for Guided Source Separa](/audio-paper-digest-blog/posts/2026-04-29-reference-microphone-selection-for-guided-source) | 7.0分 | 前50% | #语音增强 |
-| 608. | [Low-Latency Audio Front-End Region-of-Interest Beamform](/audio-paper-digest-blog/posts/2026-04-29-low-latency-audio-front-end-region-of-interest) | 7.0分 | 前25% | #语音增强 |
-| 609. | [AmbiDrop: Array-Agnostic Speech Enhancement Using Ambis](/audio-paper-digest-blog/posts/2026-04-29-ambidrop-array-agnostic-speech-enhancement-using) | 7.0分 | 前50% | #语音增强 |
-| 610. | [SONAR: Self-Distilled Continual Pre-Training for Domain](/audio-paper-digest-blog/posts/2026-04-29-sonar-self-distilled-continual-pre-training-for) | 7.0分 | 前25% | #音频事件检测 |
-| 611. | [Improving Audio Event Recognition with Consistency Regu](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-event-recognition-with) | 7.0分 | 前25% | #音频事件检测 |
-| 612. | [ViTex: Visual Texture Control for Multi-Track Symbolic ](/audio-paper-digest-blog/posts/2026-04-29-vitex-visual-texture-control-for-multi-track) | 7.0分 | 前50% | #音乐生成 |
-| 613. | [SELD-MOHA: A Fine-Tuning Method with the Mixture of Het](/audio-paper-digest-blog/posts/2026-04-29-seld-moha-a-fine-tuning-method-with-the-mixture) | 7.0分 | 前25% | #音频事件检测 |
-| 614. | [Timbre-Based Pretraining with Pseudo-Labels for Multi-I](/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for) | 7.0分 | 前25% | #音乐信息检索 |
-| 615. | [Towards Blind Data Cleaning: A Case Study in Music Sour](/audio-paper-digest-blog/posts/2026-04-29-towards-blind-data-cleaning-a-case-study-in-music) | 7.0分 | 前50% | #音乐信息检索 |
-| 616. | [A Distribution Matching Approach to Neural Piano Transc](/audio-paper-digest-blog/posts/2026-04-29-a-distribution-matching-approach-to-neural-piano) | 7.0分 | 前25% | #音乐转录 |
-| 617. | [Individualize the HRTF Neural Field Using Anthropometri](/audio-paper-digest-blog/posts/2026-04-29-individualize-the-hrtf-neural-field-using) | 7.0分 | 前25% | #空间音频 |
-| 618. | [Transfer Learning for Paediatric Sleep Apnoea Detection](/audio-paper-digest-blog/posts/2026-04-29-transfer-learning-for-paediatric-sleep-apnoea) | 7.0分 | 前25% | #音频分类 |
-| 619. | [Empowering Multimodal Respiratory Sound Classification ](/audio-paper-digest-blog/posts/2026-04-29-empowering-multimodal-respiratory-sound) | 7.0分 | 前25% | #音频分类 |
-| 620. | [Stress Prediction from Temporal Emotion Trajectories in](/audio-paper-digest-blog/posts/2026-04-29-stress-prediction-from-temporal-emotion) | 7.0分 | 前25% | #语音情感识别 |
-| 621. | [Speech Quality-Based Localization of Low-Quality Speech](/audio-paper-digest-blog/posts/2026-04-29-speech-quality-based-localization-of-low-quality) | 7.0分 | 前25% | #语音质量评估 |
-| 622. | [SP-MCQA: Evaluating Intelligibility of TTS Beyond the W](/audio-paper-digest-blog/posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond) | 7.0分 | 前50% | #语音合成 |
-| 623. | [A Speech-Driven Paradigm for Physics-Informed Modeling ](/audio-paper-digest-blog/posts/2026-04-29-a-speech-driven-paradigm-for-physics-informed) | 7.0分 | 前50% | #音频生成 |
-| 624. | [Decorrelation-Enhanced Multiband Subband Adaptive Filte](/audio-paper-digest-blog/posts/2026-04-29-decorrelation-enhanced-multiband-subband-adaptive) | 7.0分 | 前50% | #空间音频 |
-| 625. | [Instrument Generation Through Distributional Flow Match](/audio-paper-digest-blog/posts/2026-04-29-instrument-generation-through-distributional-flow) | 7.0分 | 前25% | #音乐生成 |
-| 626. | [When Noise Lowers the Loss: Rethinking Likelihood-Based](/audio-paper-digest-blog/posts/2026-04-29-when-noise-lowers-the-loss-rethinking-likelihood) | 7.0分 | 前25% | #音乐生成 |
-| 627. | [PADAM: Perceptual Audio Defect Assessment Model](/audio-paper-digest-blog/posts/2026-04-29-padam-perceptual-audio-defect-assessment-model) | 7.0分 | 前50% | #音频分类 |
-| 628. | [Enhanced Generative Machine Listener](/audio-paper-digest-blog/posts/2026-04-29-enhanced-generative-machine-listener) | 7.0分 | 前25% | #音频分类 |
-| 629. | [Phase-Retrieval-Based Physics-Informed Neural Networks ](/audio-paper-digest-blog/posts/2026-04-29-phase-retrieval-based-physics-informed-neural) | 7.0分 | 前50% | #声源定位 |
-| 630. | [Acoustic Feedback Cancellation in Hearing Aids Exploiti](/audio-paper-digest-blog/posts/2026-04-29-acoustic-feedback-cancellation-in-hearing-aids) | 7.0分 | 前25% | #音频分类 |
-| 631. | [On the Design of Higher-Order Time-Intensity Microphone](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-higher-order-time-intensity) | 7.0分 | 前25% | #空间音频 |
-| 632. | [Deep Spatial Clue Informed Ambisonic Encoding for Irreg](/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for) | 7.0分 | 前25% | #空间音频 |
-| 633. | [Identifying Birdsong Syllables without Labelled Data](/audio-paper-digest-blog/posts/2026-04-29-identifying-birdsong-syllables-without-labelled) | 7.0分 | 前50% | #生物声学 |
-| 634. | [Representation-Diverse Self-Supervision for Cross-Domai](/audio-paper-digest-blog/posts/2026-04-29-representation-diverse-self-supervision-for-cross) | 7.0分 | 前25% | #生物声学 |
-| 635. | [Do Foundational Audio Encoders Understand Music Structu](/audio-paper-digest-blog/posts/2026-04-29-do-foundational-audio-encoders-understand-music) | 7.0分 | 前25% | #音乐信息检索 |
-| 636. | [Sing What You Fit: A Perception-Based Dataset and Bench](/audio-paper-digest-blog/posts/2026-04-29-sing-what-you-fit-a-perception-based-dataset-and) | 7.0分 | 前25% | #音乐信息检索 |
-| 637. | [Joint Multichannel Acoustic Feedback Cancellation and S](/audio-paper-digest-blog/posts/2026-04-29-joint-multichannel-acoustic-feedback-cancellation) | 7.0分 | 前25% | #语音增强 |
-| 638. | [RIR-Former: Coordinate-Guided Transformer for Continuou](/audio-paper-digest-blog/posts/2026-04-29-rir-former-coordinate-guided-transformer-for) | 7.0分 | 前25% | #房间脉冲响应 |
-| 639. | [Segmentwise Pruning in Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-segmentwise-pruning-in-audio-language-models) | 7.0分 | 前50% | #音频问答 |
-| 640. | [Teaching Audio Models to Reason: A Unified Framework fo](/audio-paper-digest-blog/posts/2026-04-29-teaching-audio-models-to-reason-a-unified) | 7.0分 | 前25% | #音频问答 |
-| 641. | [AR-BSNet: Towards Ultra-Low Complexity Autoregressive T](/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity) | 7.0分 | 前25% | #语音分离 |
-| 642. | [Bleed No More: Generative Interference Reduction for Mu](/audio-paper-digest-blog/posts/2026-04-29-bleed-no-more-generative-interference-reduction) | 7.0分 | 前25% | #音乐源分离 |
-| 643. | [Gdiffuse: Diffusion-Based Speech Enhancement with Noise](/audio-paper-digest-blog/posts/2026-04-29-gdiffuse-diffusion-based-speech-enhancement-with) | 7.0分 | 前25% | #语音增强 |
-| 644. | [FxSearcher: Gradient-Free Text-Driven Audio Transformat](/audio-paper-digest-blog/posts/2026-04-29-fxsearcher-gradient-free-text-driven-audio) | 7.0分 | 前50% | #音频生成 |
-| 645. | [Auditory Illusion Benchmark for Large Audio Language Mo](/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio) | 7.0分 | 前50% | #模型评估 |
-| 646. | [TAGARELA - A Portuguese Speech Dataset from Podcasts](/audio-paper-digest-blog/posts/2026-04-29-tagarela-a-portuguese-speech-dataset-from-podcasts) | 7.0分 | 前25% | #语音识别 #语音合成 |
-| 647. | [DDSC: Dynamic Dual-Signal Curriculum for Data-Efficient](/audio-paper-digest-blog/posts/2026-04-29-ddsc-dynamic-dual-signal-curriculum-for-data) | 7.0分 | 前25% | #音频场景分类 |
-| 648. | [AFT: An Exemplar-Free Class Incremental Learning Method](/audio-paper-digest-blog/posts/2026-04-29-aft-an-exemplar-free-class-incremental-learning) | 7.0分 | 前25% | #音频分类 |
-| 649. | [An Unsupervised Alignment Feature Fusion System for Spo](/audio-paper-digest-blog/posts/2026-04-29-an-unsupervised-alignment-feature-fusion-system) | 7.0分 | 前25% | #语音生物标志物 |
-| 650. | [Transferable Audio Lottery Tickets: Gradient Accumulati](/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient) | 7.0分 | 前25% | #音频分类 |
-| 651. | [An Efficient Neural Network for Modeling Human Auditory](/audio-paper-digest-blog/posts/2026-04-29-an-efficient-neural-network-for-modeling-human) | 7.0分 | 前25% | #语音增强 |
-| 652. | [Modeling Inter-Segment Relationships in Speech for Deme](/audio-paper-digest-blog/posts/2026-04-29-modeling-inter-segment-relationships-in-speech) | 7.0分 | 前25% | #语音生物标志物 |
-| 653. | [AnyRIR: Robust Non-Intrusive Room Impulse Response Esti](/audio-paper-digest-blog/posts/2026-04-29-anyrir-robust-non-intrusive-room-impulse-response) | 7.0分 | 前25% | #空间音频 |
-| 654. | [Constraint Optimized Multichannel Mixer-Limiter Design](/audio-paper-digest-blog/posts/2026-04-29-constraint-optimized-multichannel-mixer-limiter) | 7.0分 | 前25% | #多通道 |
-| 655. | [Microphone-Less Measurement of Three-Dimensional Radiat](/audio-paper-digest-blog/posts/2026-04-29-microphone-less-measurement-of-three-dimensional) | 7.0分 | 前25% | #声源定位 |
-| 656. | [Improving Binaural Distance Estimation in Reverberant R](/audio-paper-digest-blog/posts/2026-04-29-improving-binaural-distance-estimation-in) | 7.0分 | 前25% | #声源定位 |
-| 657. | [Hierarchical Tokenization of Multimodal Music Data for ](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-tokenization-of-multimodal-music) | 7.0分 | 前25% | #音乐检索 |
-| 658. | [Rethinking Music Captioning with Music Metadata LLMS](/audio-paper-digest-blog/posts/2026-04-29-rethinking-music-captioning-with-music-metadata) | 7.0分 | 前25% | #音乐理解 |
-| 659. | [Symphony Rendering: Midi and Composer-Conditioned Auto ](/audio-paper-digest-blog/posts/2026-04-29-symphony-rendering-midi-and-composer-conditioned) | 7.0分 | 前50% | #音乐生成 |
-| 660. | [IBPCodec : A Low-Bitrate Lightweight Speech Codec With ](/audio-paper-digest-blog/posts/2026-04-29-ibpcodec-a-low-bitrate-lightweight-speech-codec) | 7.0分 | 前25% | #语音编码 |
-| 661. | [Neural Network-Based Time-Frequency-Bin-Wise Linear Com](/audio-paper-digest-blog/posts/2026-04-29-neural-network-based-time-frequency-bin-wise) | 7.0分 | 前25% | #语音分离 |
-| 662. | [Shortcut Flow Matching for Speech Enhancement: Step-Inv](/audio-paper-digest-blog/posts/2026-04-29-shortcut-flow-matching-for-speech-enhancement) | 7.0分 | 前25% | #语音增强 |
-| 663. | [Generalizability of Predictive and Generative Speech En](/audio-paper-digest-blog/posts/2026-04-29-generalizability-of-predictive-and-generative) | 7.0分 | 前50% | #语音增强 |
-| 664. | [Single-Step Controllable Music Bandwidth extension with](/audio-paper-digest-blog/posts/2026-04-29-single-step-controllable-music-bandwidth) | 7.0分 | 前25% | #音乐信息检索 |
-| 665. | [From Human Speech to Ocean Signals: Transferring Speech](/audio-paper-digest-blog/posts/2026-04-29-from-human-speech-to-ocean-signals-transferring) | 7.0分 | 前25% | #水下声学目标识别 |
-| 666. | [Influence-Aware Curation and Active Selection for Indus](/audio-paper-digest-blog/posts/2026-04-29-influence-aware-curation-and-active-selection-for) | 7.0分 | 前50% | #音频事件检测 |
-| 667. | [A LLM-Driven Acoustic Semantic Enriched Framework for U](/audio-paper-digest-blog/posts/2026-04-29-a-llm-driven-acoustic-semantic-enriched-framework) | 7.0分 | 前25% | #音频分类 |
-| 668. | [Adaptive Task-Incremental Learning For Underwater Acous](/audio-paper-digest-blog/posts/2026-04-29-adaptive-task-incremental-learning-for-underwater) | 7.0分 | 前25% | #水下声学目标识别 |
-| 669. | [Phase-Space Signal Processing of Acoustic Data for Adva](/audio-paper-digest-blog/posts/2026-04-29-phase-space-signal-processing-of-acoustic-data) | 7.0分 | 前50% | #音频事件检测 |
-| 670. | [S-SONDO: Self-Supervised Knowledge Distillation for Gen](/audio-paper-digest-blog/posts/2026-04-29-s-sondo-self-supervised-knowledge-distillation) | 7.0分 | 前25% | #音频分类 |
-| 671. | [Audio Effect Estimation with DNN-Based Prediction and S](/audio-paper-digest-blog/posts/2026-04-29-audio-effect-estimation-with-dnn-based-prediction) | 7.0分 | 前25% | #音频效果估计 |
-| 672. | [Leveraging Whisper Embeddings For Audio-Based Lyrics Ma](/audio-paper-digest-blog/posts/2026-04-29-leveraging-whisper-embeddings-for-audio-based) | 7.0分 | 前50% | #音乐信息检索 |
-| 673. | [Learning Piezoelectric Hysteresis in In-Ear MEMS Loudsp](/audio-paper-digest-blog/posts/2026-04-29-learning-piezoelectric-hysteresis-in-in-ear-mems) | 7.0分 | 前50% | #音频信号处理 |
-| 674. | [Acoustic Non-Stationarity Objective Assessment with Har](/audio-paper-digest-blog/posts/2026-04-29-acoustic-non-stationarity-objective-assessment) | 7.0分 | 前25% | #音频分类 |
-| 675. | [Single-Microphone Audio Point Source Discriminative Loc](/audio-paper-digest-blog/posts/2026-04-29-single-microphone-audio-point-source) | 7.0分 | 前25% | #说话人分离 |
-| 676. | [Maximum Likelihood Measurement Noise Estimation for Blo](/audio-paper-digest-blog/posts/2026-04-29-maximum-likelihood-measurement-noise-estimation) | 7.0分 | 前50% | #回声消除 |
-| 677. | [SIREN: Spatially-Informed Reconstruction of Binaural Au](/audio-paper-digest-blog/posts/2026-04-29-siren-spatially-informed-reconstruction-of) | 7.0分 | 前25% | #空间音频 |
-| 678. | [Enhancing Automatic Drum Transcription with Online Dyna](/audio-paper-digest-blog/posts/2026-04-29-enhancing-automatic-drum-transcription-with) | 7.0分 | 前25% | #音乐信息检索 |
-| 679. | [ALMA-Chor: Leveraging Audio-Lyric Alignment with Mamba ](/audio-paper-digest-blog/posts/2026-04-29-alma-chor-leveraging-audio-lyric-alignment-with) | 7.0分 | 前25% | #音乐信息检索 |
-| 680. | [Cross-Modal Knowledge Distillation for Speech Large Lan](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-knowledge-distillation-for-speech) | 7.0分 | 前25% | #语音大模型 |
-| 681. | [Why Do Speech Language Models Fail to Generate Semantic](/audio-paper-digest-blog/posts/2026-04-29-why-do-speech-language-models-fail-to-generate) | 7.0分 | 前25% | #语音生成 |
-| 682. | [Gelina: Unified Speech and Gesture Synthesis Via Interl](/audio-paper-digest-blog/posts/2026-04-29-gelina-unified-speech-and-gesture-synthesis-via) | 7.0分 | 前50% | #语音合成 |
-| 683. | [Addressing Gradient Misalignment in Data-Augmented Trai](/audio-paper-digest-blog/posts/2026-04-29-addressing-gradient-misalignment-in-data) | 7.0分 | 前25% | #语音伪造检测 |
-| 684. | [AQUA-Bench: Beyond finding answers to knowing when ther](/audio-paper-digest-blog/posts/2026-04-29-aqua-bench-beyond-finding-answers-to-knowing-when) | 7.0分 | 前50% | #音频问答 |
-| 685. | [SpeechMapper: Speech-To-Text Embedding Projector for LL](/audio-paper-digest-blog/posts/2026-04-29-speechmapper-speech-to-text-embedding-projector) | 7.0分 | 前25% | #语音大模型 |
-| 686. | [TASU: Text-only Alignment for Speech Understanding](/audio-paper-digest-blog/posts/2026-04-29-tasu-text-only-alignment-for-speech-understanding) | 7.0分 | 前25% | #语音识别 |
-| 687. | [Mambaformer: State-Space Augmented Self-Attention with ](/audio-paper-digest-blog/posts/2026-04-29-mambaformer-state-space-augmented-self-attention) | 7.0分 | 前25% | #语音增强 |
-| 688. | [Training Dynamics-Aware Multi-Factor Curriculum Learnin](/audio-paper-digest-blog/posts/2026-04-29-training-dynamics-aware-multi-factor-curriculum) | 7.0分 | 前25% | #语音分离 |
-| 689. | [Streaming Speech Recognition with Decoder-Only Large La](/audio-paper-digest-blog/posts/2026-04-29-streaming-speech-recognition-with-decoder-only) | 7.0分 | 前25% | #语音识别 |
-| 690. | [Reducing Prompt Sensitivity in LLM-Based Speech Recogni](/audio-paper-digest-blog/posts/2026-04-29-reducing-prompt-sensitivity-in-llm-based-speech) | 7.0分 | 前25% | #语音识别 |
-| 691. | [PAC: Pronunciation-Aware Contextualized Large Language ](/audio-paper-digest-blog/posts/2026-04-29-pac-pronunciation-aware-contextualized-large) | 7.0分 | 前25% | #语音识别 |
-| 692. | [Emo-TTA: Improving Test-Time Adaptation of Audio-Langua](/audio-paper-digest-blog/posts/2026-04-29-emo-tta-improving-test-time-adaptation-of-audio) | 7.0分 | 前25% | #语音情感识别 |
-| 693. | [A Superb-Style Benchmark of Self-Supervised Speech Mode](/audio-paper-digest-blog/posts/2026-04-29-a-superb-style-benchmark-of-self-supervised) | 7.0分 | 前25% | #音频深度伪造检测 |
-| 694. | [Understanding the Strengths and Weaknesses of SSL Model](/audio-paper-digest-blog/posts/2026-04-29-understanding-the-strengths-and-weaknesses-of-ssl) | 7.0分 | 前50% | #音频深度伪造检测 |
-| 695. | [Investigating The Effect Of Sentence-Level Syntactic St](/audio-paper-digest-blog/posts/2026-04-29-investigating-the-effect-of-sentence-level) | 7.0分 | 前50% | #语音识别 |
-| 696. | [Test-Time Scaling for Auditory Cognition in Audio Langu](/audio-paper-digest-blog/posts/2026-04-29-test-time-scaling-for-auditory-cognition-in-audio) | 7.0分 | 前25% | #音频问答 |
-| 697. | [SSVD-O: Parameter-Efficient Fine-Tuning with Structured](/audio-paper-digest-blog/posts/2026-04-29-ssvd-o-parameter-efficient-fine-tuning-with) | 7.0分 | 前25% | #语音识别 |
-| 698. | [Three Seconds is Sufficient: A Multi-Pronged Framework ](/audio-paper-digest-blog/posts/2026-04-29-three-seconds-is-sufficient-a-multi-pronged) | 7.0分 | 前50% | #语音识别 |
-| 699. | [In-Sync: Adaptation of Speech Aware Large Language Mode](/audio-paper-digest-blog/posts/2026-04-29-in-sync-adaptation-of-speech-aware-large-language) | 7.0分 | 前50% | #语音识别 |
-| 700. | [Retrieval-Based Speculative Decoding For Autoregressive](/audio-paper-digest-blog/posts/2026-04-29-retrieval-based-speculative-decoding-for) | 7.0分 | 前50% | #语音合成 |
-| 701. | [Auditory-Inspired Transformer for Binaural Speech Enhan](/audio-paper-digest-blog/posts/2026-04-29-auditory-inspired-transformer-for-binaural-speech) | 7.0分 | 前25% | #语音增强 |
-| 702. | [Easy Turn: Integrating Acoustic and Linguistic Modaliti](/audio-paper-digest-blog/posts/2026-04-29-easy-turn-integrating-acoustic-and-linguistic) | 7.0分 | 前25% | #语音对话系统 |
-| 703. | [T-Mimi: A Transformer-Based Mimi Decoder for Real-Time ](/audio-paper-digest-blog/posts/2026-04-29-t-mimi-a-transformer-based-mimi-decoder-for-real) | 7.0分 | 前50% | #语音合成 |
-| 704. | [Wave-Trainer-Fit: Neural Vocoder With Trainable Prior A](/audio-paper-digest-blog/posts/2026-04-29-wave-trainer-fit-neural-vocoder-with-trainable) | 7.0分 | 前25% | #语音合成 |
-| 705. | [AccLID: Accent-aware Language Identification for Robust](/audio-paper-digest-blog/posts/2026-04-29-acclid-accent-aware-language-identification-for) | 7.0分 | 前25% | #语音识别 |
-| 706. | [BBPE16: UTF-16-Based Byte-Level Byte-Pair Encoding for ](/audio-paper-digest-blog/posts/2026-04-29-bbpe16-utf-16-based-byte-level-byte-pair-encoding) | 7.0分 | 前50% | #语音识别 |
-| 707. | [Mixtures of Lightweight Articulatory Experts for Multil](/audio-paper-digest-blog/posts/2026-04-29-mixtures-of-lightweight-articulatory-experts-for) | 7.0分 | 前25% | #语音识别 |
-| 708. | [Towards Orthographically-Informed Evaluation of Speech ](/audio-paper-digest-blog/posts/2026-04-29-towards-orthographically-informed-evaluation-of) | 7.0分 | 前25% | #语音识别 |
-| 709. | [Test Time Adaptation for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-test-time-adaptation-for-speech-emotion) | 7.0分 | 前25% | #语音情感识别 |
-| 710. | [Plug-and-Play Emotion Graphs for Compositional Promptin](/audio-paper-digest-blog/posts/2026-04-29-plug-and-play-emotion-graphs-for-compositional) | 7.0分 | 前25% | #语音情感识别 |
-| 711. | [Reasoning Driven Captions to Assist Noise Robust Speech](/audio-paper-digest-blog/posts/2026-04-29-reasoning-driven-captions-to-assist-noise-robust) | 7.0分 | 前25% | #语音情感识别 |
-| 712. | [EmoShift: Lightweight Activation Steering for Enhanced ](/audio-paper-digest-blog/posts/2026-04-29-emoshift-lightweight-activation-steering-for) | 7.0分 | 前50% | #语音合成 |
-| 713. | [MeanVoiceFlow: One-Step Nonparallel Voice Conversion wi](/audio-paper-digest-blog/posts/2026-04-29-meanvoiceflow-one-step-nonparallel-voice) | 7.0分 | 前25% | #语音转换 |
-| 714. | [Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic](/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic) | 7.0分 | 前25% | #语音伪造检测 |
-| 715. | [Mitigating Intra-Speaker Variability in Diarization wit](/audio-paper-digest-blog/posts/2026-04-29-mitigating-intra-speaker-variability-in) | 7.0分 | 前25% | #说话人日志 |
-| 716. | [Fine-Tuning Large Multimodal Models for Automatic Pronu](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-multimodal-models-for-automatic) | 7.0分 | 前50% | #语音评估 |
-| 717. | [Quantifying Speaker Embedding Phonological Rule Interac](/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule) | 7.0分 | 前25% | #语音合成 |
-| 718. | [PFluxTTS: Hybrid Flow-Matching TTS with Robust Cross-Li](/audio-paper-digest-blog/posts/2026-04-29-pfluxtts-hybrid-flow-matching-tts-with-robust) | 7.0分 | 前50% | #语音合成 |
-| 719. | [Contextual Biasing for ASR in Speech LLM with Common Wo](/audio-paper-digest-blog/posts/2026-04-29-contextual-biasing-for-asr-in-speech-llm-with) | 7.0分 | 前25% | #语音识别 |
-| 720. | [Peeking Into the Future for Contextual Biasing](/audio-paper-digest-blog/posts/2026-04-29-peeking-into-the-future-for-contextual-biasing) | 7.0分 | 前50% | #语音识别 |
-| 721. | [The Singing Voice Conversion Challenge 2025: From Singe](/audio-paper-digest-blog/posts/2026-04-29-the-singing-voice-conversion-challenge-2025-from) | 7.0分 | 前50% | #歌唱语音转换 |
-| 722. | [S2Voice: Style-Aware Autoregressive Modeling with Enhan](/audio-paper-digest-blog/posts/2026-04-29-s2voice-style-aware-autoregressive-modeling-with) | 7.0分 | 前25% | #歌唱语音转换 |
-| 723. | [DiTSinger: Scaling Singing Voice Synthesis with Diffusi](/audio-paper-digest-blog/posts/2026-04-29-ditsinger-scaling-singing-voice-synthesis-with) | 7.0分 | 前25% | #歌唱语音合成 |
-| 724. | [LP-CFM: Perceptual Invariance-Aware Conditional Flow Ma](/audio-paper-digest-blog/posts/2026-04-29-lp-cfm-perceptual-invariance-aware-conditional) | 7.0分 | 前25% | #语音合成 |
-| 725. | [Learning Vocal-Tract Area And Radiation With A Physics-](/audio-paper-digest-blog/posts/2026-04-29-learning-vocal-tract-area-and-radiation-with-a) | 7.0分 | 前50% | #歌唱语音合成 |
-| 726. | [When Silence Matters: The Impact of Irrelevant Audio on](/audio-paper-digest-blog/posts/2026-04-29-when-silence-matters-the-impact-of-irrelevant) | 7.0分 | 前50% | #模型评估 |
-| 727. | [SLM-TTA: A Framework for Test-Time Adaptation of Genera](/audio-paper-digest-blog/posts/2026-04-29-slm-tta-a-framework-for-test-time-adaptation-of) | 7.0分 | 前50% | #语音识别 |
-| 728. | [Advancing Speech Understanding in Speech-Aware Language](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-understanding-in-speech-aware) | 7.0分 | 前25% | #语音问答 |
-| 729. | [Tokenchain: A Discrete Speech Chain via Semantic Token ](/audio-paper-digest-blog/posts/2026-04-29-tokenchain-a-discrete-speech-chain-via-semantic) | 7.0分 | 前25% | #语音识别 |
-| 730. | [Advanced modeling of interlanguage speech intelligibili](/audio-paper-digest-blog/posts/2026-04-29-advanced-modeling-of-interlanguage-speech) | 7.0分 | 前25% | #语音识别 |
-| 731. | [Leveraging Segment-Level Speech Representations for LLM](/audio-paper-digest-blog/posts/2026-04-29-leveraging-segment-level-speech-representations) | 7.0分 | 前50% | #语音识别 |
-| 732. | [Reading Between the Waves: Robust Topic Segmentation Us](/audio-paper-digest-blog/posts/2026-04-29-reading-between-the-waves-robust-topic) | 7.0分 | 前25% | #音频分类 |
-| 733. | [Advancing Speech Summarization in Multi-Modal LLMs with](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-summarization-in-multi-modal) | 7.0分 | 前50% | #音频问答 |
-| 734. | [A Personalized Real-Time Proactive Voice Memory Assista](/audio-paper-digest-blog/posts/2026-04-29-a-personalized-real-time-proactive-voice-memory) | 7.0分 | 前50% | #实时处理 |
-| 735. | [Mitigating Attention Sinks and Massive Activations in A](/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive) | 7.0分 | 前25% | #语音识别 |
-| 736. | [TVP-UNet: Threshold Variance Penalty U-Net for Voice Ac](/audio-paper-digest-blog/posts/2026-04-29-tvp-unet-threshold-variance-penalty-u-net-for) | 7.0分 | 前25% | #语音活动检测 |
-| 737. | [When Children Talk and Machines Listen: Toward an Inter](/audio-paper-digest-blog/posts/2026-04-29-when-children-talk-and-machines-listen-toward-an) | 7.0分 | 前50% | #语音生物标志物 |
-| 738. | [Towards Data Drift Monitoring for Speech Deepfake Detec](/audio-paper-digest-blog/posts/2026-04-29-towards-data-drift-monitoring-for-speech-deepfake) | 7.0分 | 前25% | #音频深度伪造检测 |
-| 739. | [CompSpoof: A Dataset and Joint Learning Framework for C](/audio-paper-digest-blog/posts/2026-04-29-compspoof-a-dataset-and-joint-learning-framework) | 7.0分 | 前25% | #音频深度伪造检测 |
-| 740. | [Tri-Attention Fusion: Joint Temporal-Spectral and Bidir](/audio-paper-digest-blog/posts/2026-04-29-tri-attention-fusion-joint-temporal-spectral-and) | 7.0分 | 前25% | #语音伪造检测 |
-| 741. | [EmoTri-RL: Emotion- and Cause-Aware Reinforcement Learn](/audio-paper-digest-blog/posts/2026-04-29-emotri-rl-emotion-and-cause-aware-reinforcement) | 7.0分 | 前25% | #语音情感识别 |
-| 742. | [Teaching the Teachers: Boosting Unsupervised Domain Ada](/audio-paper-digest-blog/posts/2026-04-29-teaching-the-teachers-boosting-unsupervised) | 7.0分 | 前25% | #语音识别 |
-| 743. | [SFM-TTS: Lightweight and Rapid Speech Synthesis with Fl](/audio-paper-digest-blog/posts/2026-04-29-sfm-tts-lightweight-and-rapid-speech-synthesis) | 7.0分 | 前25% | #语音合成 |
-| 744. | [MELA-TTS: Joint Transformer-Diffusion Model with Repres](/audio-paper-digest-blog/posts/2026-04-29-mela-tts-joint-transformer-diffusion-model-with) | 7.0分 | 前25% | #语音合成 |
-| 745. | [Attention2Probability: Attention-Driven Terminology Pro](/audio-paper-digest-blog/posts/2026-04-29-attention2probability-attention-driven) | 7.0分 | 前25% | #语音识别 |
-| 746. | [Joint Autoregressive Modeling of Multi-Talker Overlappe](/audio-paper-digest-blog/posts/2026-04-29-joint-autoregressive-modeling-of-multi-talker) | 7.0分 | 前25% | #语音识别 #语音翻译 |
-| 747. | [Whisper-MLA: Reducing GPU Memory Consumption of ASR Mod](/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of) | 7.0分 | 前25% | #语音识别 |
-| 748. | [Mind the Shift: Using Delta SSL Embeddings to Enhance C](/audio-paper-digest-blog/posts/2026-04-29-mind-the-shift-using-delta-ssl-embeddings-to) | 7.0分 | 前25% | #语音识别 |
-| 749. | [PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric ](/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced) | 7.0分 | 前50% | #语音识别 |
-| 750. | [Audio-Conditioned Diffusion LLMs for ASR and Deliberati](/audio-paper-digest-blog/posts/2026-04-29-audio-conditioned-diffusion-llms-for-asr-and) | 7.0分 | 前50% | #语音识别 |
-| 751. | [AR&D: A Framework for Retrieving and Describing Concept](/audio-paper-digest-blog/posts/2026-04-29-ard-a-framework-for-retrieving-and-describing) | 6.5分 | 前50% | #音频大模型 |
-| 752. | [Do Speech LLMs Learn Crossmodal Embedding Spaces?](/audio-paper-digest-blog/posts/2026-04-29-do-speech-llms-learn-crossmodal-embedding-spaces) | 6.5分 | 前50% | #音频检索 |
-| 753. | [Learnable Mel-Frontend for Robust Underwater Acoustic T](/audio-paper-digest-blog/posts/2026-04-29-learnable-mel-frontend-for-robust-underwater) | 6.5分 | 前50% | #音频分类 |
-| 754. | [Solving the Helmholtz Equation Via Physics-Informed Neu](/audio-paper-digest-blog/posts/2026-04-29-solving-the-helmholtz-equation-via-physics) | 6.5分 | 前50% | #声学建模 |
-| 755. | [Sequence-Level Unsupervised Training in Speech Recognit](/audio-paper-digest-blog/posts/2026-04-29-sequence-level-unsupervised-training-in-speech) | 6.5分 | 前50% | #语音识别 |
-| 756. | [GLUE: Gradient-free Learning to Unify Experts](/audio-paper-digest-blog/posts/2026-04-29-glue-gradient-free-learning-to-unify-experts) | 6.5分 | 前50% | #迁移学习 |
-| 757. | [Investigating Modality Contribution in Audio LLMs for M](/audio-paper-digest-blog/posts/2026-04-29-investigating-modality-contribution-in-audio-llms) | 6.5分 | 前50% | #模型评估 |
-| 758. | [Frequency-Independent Ambisonics Upscaling Using Deep L](/audio-paper-digest-blog/posts/2026-04-29-frequency-independent-ambisonics-upscaling-using) | 6.5分 | 前50% | #空间音频 |
-| 759. | [A State-Dependent Markov Diffusion Process for Generati](/audio-paper-digest-blog/posts/2026-04-29-a-state-dependent-markov-diffusion-process-for) | 6.5分 | 前25% | #语音增强 |
-| 760. | [Sparse Autoencoders Make Audio Foundation Models More E](/audio-paper-digest-blog/posts/2026-04-29-sparse-autoencoders-make-audio-foundation-models) | 6.5分 | 前50% | #模型评估 |
-| 761. | [Ara-BEST-RQ: Multi Dialectal Arabic SSL](/audio-paper-digest-blog/posts/2026-04-29-ara-best-rq-multi-dialectal-arabic-ssl) | 6.5分 | 前50% | #语音识别 |
-| 762. | [Medical ASR Enhancement by Domain-Specific Reinforcemen](/audio-paper-digest-blog/posts/2026-04-29-medical-asr-enhancement-by-domain-specific) | 6.5分 | 前25% | #语音识别 |
-| 763. | [Graph-Biased EEG Transformers for Silent Speech Decodin](/audio-paper-digest-blog/posts/2026-04-29-graph-biased-eeg-transformers-for-silent-speech) | 6.5分 | 前25% | #语音生物标志物 |
-| 764. | [StyHarmo: Efficient Style-Specific Video Generation wit](/audio-paper-digest-blog/posts/2026-04-29-styharmo-efficient-style-specific-video) | 6.5分 | 前50% | #视频生成 |
-| 765. | [Vib2Sound: Separation Of Multimodal Sound Sources](/audio-paper-digest-blog/posts/2026-04-29-vib2sound-separation-of-multimodal-sound-sources) | 6.5分 | 前50% | #语音分离 |
-| 766. | [CoVA: Text-Guided Composed Video Retrieval for Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-cova-text-guided-composed-video-retrieval-for) | 6.5分 | 前25% | #跨模态检索 |
-| 767. | [MSCT: Differential Cross-Modal Attention for Deepfake D](/audio-paper-digest-blog/posts/2026-04-29-msct-differential-cross-modal-attention-for) | 6.5分 | 前10% | #音频深度伪造检测 |
-| 768. | [FODGE : High-Fidelity Dance Generation via Full-Body Op](/audio-paper-digest-blog/posts/2026-04-29-fodge-high-fidelity-dance-generation-via-full) | 6.5分 | 前50% | #音频生成 |
-| 769. | [A New Method and Dataset for Classroom Teaching Stage S](/audio-paper-digest-blog/posts/2026-04-29-a-new-method-and-dataset-for-classroom-teaching) | 6.5分 | 前25% | #课堂阶段分割 |
-| 770. | [Multimodal Fusion-Based IPCLIP Network for Mixed Realit](/audio-paper-digest-blog/posts/2026-04-29-multimodal-fusion-based-ipclip-network-for-mixed) | 6.5分 | 前50% | #多模态模型 |
-| 771. | [Modeling Both Intra- And Inter-Utterance Variability fo](/audio-paper-digest-blog/posts/2026-04-29-modeling-both-intra-and-inter-utterance) | 6.5分 | 前25% | #语音情感识别 |
-| 772. | [Auxiliary Multi-Label Training For Improving the Robust](/audio-paper-digest-blog/posts/2026-04-29-auxiliary-multi-label-training-for-improving-the) | 6.5分 | 前50% | #音频深度伪造检测 |
-| 773. | [Audio-Visual Deepfake Generation and Detection: An Expl](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-deepfake-generation-and-detection-an) | 6.5分 | 前25% | #音频深度伪造检测 |
-| 774. | [Source Separation For A Cappella Music](/audio-paper-digest-blog/posts/2026-04-29-source-separation-for-a-cappella-music) | 6.5分 | 前50% | #语音分离 |
-| 775. | [A Consistent Learning Depression Detection Framework In](/audio-paper-digest-blog/posts/2026-04-29-a-consistent-learning-depression-detection) | 6.5分 | 前50% | #语音生物标志物 |
-| 776. | [A Unified SVD-Modal Solution for Sparse Sound Field Rec](/audio-paper-digest-blog/posts/2026-04-29-a-unified-svd-modal-solution-for-sparse-sound) | 6.5分 | 前25% | #声源定位 |
-| 777. | [Pianoroll-Event: A Novel Score Representation for Symbo](/audio-paper-digest-blog/posts/2026-04-29-pianoroll-event-a-novel-score-representation-for) | 6.5分 | 前25% | #音乐生成 |
-| 778. | [An Envelope Separation Aided Multi-Task Learning Model ](/audio-paper-digest-blog/posts/2026-04-29-an-envelope-separation-aided-multi-task-learning) | 6.5分 | 前25% | #声源定位 |
-| 779. | [A Noval Monte Carlo Gradient Method Based on Meta-Learn](/audio-paper-digest-blog/posts/2026-04-29-a-noval-monte-carlo-gradient-method-based-on-meta) | 6.5分 | 前50% | #噪声控制 |
-| 780. | [Estimating Respiratory Effort from Nocturnal Breathing ](/audio-paper-digest-blog/posts/2026-04-29-estimating-respiratory-effort-from-nocturnal) | 6.5分 | 前25% | #音频分类 |
-| 781. | [Obstructive Sleep Apnea Endotype Prediction During Wake](/audio-paper-digest-blog/posts/2026-04-29-obstructive-sleep-apnea-endotype-prediction) | 6.5分 | 前50% | #语音生物标志物 |
-| 782. | [Confidence-Based Filtering for Speech Dataset Curation ](/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset) | 6.5分 | 前50% | #语音增强 |
-| 783. | [Melos: Sentence-To-Section Training with Multi-Task Lea](/audio-paper-digest-blog/posts/2026-04-29-melos-sentence-to-section-training-with-multi) | 6.5分 | 前50% | #音乐生成 |
-| 784. | [A Generalization Strategy for Speech Quality Prediction](/audio-paper-digest-blog/posts/2026-04-29-a-generalization-strategy-for-speech-quality) | 6.5分 | 前25% | #语音质量评估 |
-| 785. | [Exterior Sound Field Estimation Based on Physics-Constr](/audio-paper-digest-blog/posts/2026-04-29-exterior-sound-field-estimation-based-on-physics) | 6.5分 | 前25% | #空间音频 |
-| 786. | [Domain-Invariant Representation Learning of Bird Sounds](/audio-paper-digest-blog/posts/2026-04-29-domain-invariant-representation-learning-of-bird) | 6.5分 | 前50% | #生物声学 |
-| 787. | [Mixture-of-Experts Framework for Field-of-View Enhanced](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-framework-for-field-of-view) | 6.5分 | 前50% | #空间音频 |
-| 788. | [Generating Localized Audible Zones Using a Single-Chann](/audio-paper-digest-blog/posts/2026-04-29-generating-localized-audible-zones-using-a-single) | 6.5分 | 前50% | #空间音频 |
-| 789. | [Towards Evaluating Generative Audio: Insights from Neur](/audio-paper-digest-blog/posts/2026-04-29-towards-evaluating-generative-audio-insights-from) | 6.5分 | 前50% | #模型评估 |
-| 790. | [Sampling-Rate-Agnostic Speech Super-Resolution Based on](/audio-paper-digest-blog/posts/2026-04-29-sampling-rate-agnostic-speech-super-resolution) | 6.5分 | 前25% | #语音增强 |
-| 791. | [Towards Distance-Aware Synthetic Audio Mixtures for Uni](/audio-paper-digest-blog/posts/2026-04-29-towards-distance-aware-synthetic-audio-mixtures) | 6.5分 | 前50% | #语音分离 |
-| 792. | [Taming Audio VAEs via Target-KL Regularization](/audio-paper-digest-blog/posts/2026-04-29-taming-audio-vaes-via-target-kl-regularization) | 6.5分 | 前25% | #音频生成 |
-| 793. | [Diverse and Few-Step Audio Captioning via Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-diverse-and-few-step-audio-captioning-via-flow) | 6.5分 | 前50% | #音频字幕生成 |
-| 794. | [MCI-OTFusion: A Multimodal Model for MCI Detection and ](/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection) | 6.5分 | 前50% | #轻度认知障碍检测 |
-| 795. | [Utilizing Information Theoretic Approach to Study Cochl](/audio-paper-digest-blog/posts/2026-04-29-utilizing-information-theoretic-approach-to-study) | 6.5分 | 前50% | #生物声学 |
-| 796. | [Adaptive Spectral Weighting in Sagittal-Plane Sound Loc](/audio-paper-digest-blog/posts/2026-04-29-adaptive-spectral-weighting-in-sagittal-plane) | 6.5分 | 前25% | #声源定位 |
-| 797. | [Thinking While Listening: Simple Test Time Scaling for ](/audio-paper-digest-blog/posts/2026-04-29-thinking-while-listening-simple-test-time-scaling) | 6.5分 | 前50% | #音频分类 |
-| 798. | [Snore Sound Classification Based on Physiological Featu](/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological) | 6.5分 | 前25% | #音频分类 |
-| 799. | [Fine-Tuning Large Audio-Language Models with Lora for P](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-audio-language-models-with-lora) | 6.5分 | 前50% | #音频事件检测 |
-| 800. | [Poly-SVC: Polyphony-Aware Singing Voice Conversion with](/audio-paper-digest-blog/posts/2026-04-29-poly-svc-polyphony-aware-singing-voice-conversion) | 6.5分 | 前50% | #歌唱语音转换 |
-| 801. | [Low-Frequency Harmonic Control for Speech Intelligibili](/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech) | 6.5分 | 前50% | #语音增强 |
-| 802. | [Disentangled Authenticity Representation for Partially ](/audio-paper-digest-blog/posts/2026-04-29-disentangled-authenticity-representation-for) | 6.5分 | 前25% | #音频深度伪造检测 |
-| 803. | [Linguard: Authenticating Speech Recordings Using Speech](/audio-paper-digest-blog/posts/2026-04-29-linguard-authenticating-speech-recordings-using) | 6.5分 | 前50% | #音频安全 |
-| 804. | [Vioptt: Violin Technique-Aware Transcription from Synth](/audio-paper-digest-blog/posts/2026-04-29-vioptt-violin-technique-aware-transcription-from) | 6.5分 | 前50% | #音乐信息检索 |
-| 805. | [Adversarial Rivalry Learning for Music Classification](/audio-paper-digest-blog/posts/2026-04-29-adversarial-rivalry-learning-for-music) | 6.5分 | 前25% | #音乐分类 |
-| 806. | [Scaling Ambiguity: Augmenting Human Annotation in Speec](/audio-paper-digest-blog/posts/2026-04-29-scaling-ambiguity-augmenting-human-annotation-in) | 6.5分 | 前50% | #语音情感识别 |
-| 807. | [Still Thinking or Stopped Talking? Dialogue Silence Int](/audio-paper-digest-blog/posts/2026-04-29-still-thinking-or-stopped-talking-dialogue) | 6.5分 | 前25% | #语音对话系统 |
-| 808. | [What the student learns in knowledge distillation: A su](/audio-paper-digest-blog/posts/2026-04-29-what-the-student-learns-in-knowledge-distillation) | 6.5分 | 前50% | #语音增强 |
-| 809. | [Recovering Performance in Speech Emotion Recognition fr](/audio-paper-digest-blog/posts/2026-04-29-recovering-performance-in-speech-emotion) | 6.5分 | 前50% | #语音情感识别 |
-| 810. | [B-GRPO: Unsupervised Speech Emotion Recognition Based o](/audio-paper-digest-blog/posts/2026-04-29-b-grpo-unsupervised-speech-emotion-recognition) | 6.5分 | 前50% | #语音情感识别 |
-| 811. | [Leveraging Large Speech Language Models as Evaluators f](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-speech-language-models-as) | 6.5分 | 前50% | #语音情感识别 |
-| 812. | [Curriculum Learning with Contrastive Loss for Lightweig](/audio-paper-digest-blog/posts/2026-04-29-curriculum-learning-with-contrastive-loss-for) | 6.5分 | 前25% | #说话人验证 |
-| 813. | [MeanSE: Efficient Generative Speech Enhancement with Me](/audio-paper-digest-blog/posts/2026-04-29-meanse-efficient-generative-speech-enhancement) | 6.5分 | 前25% | #语音增强 |
-| 814. | [Combining Multi-Order Attention and Multi-Resolution Di](/audio-paper-digest-blog/posts/2026-04-29-combining-multi-order-attention-and-multi) | 6.5分 | 前50% | #语音合成 |
-| 815. | [CTC-DID: CTC-Based Arabic Dialect Identification for St](/audio-paper-digest-blog/posts/2026-04-29-ctc-did-ctc-based-arabic-dialect-identification) | 6.5分 | 前50% | #语音识别 |
-| 816. | [Towards Fair ASR for Second Language Speakers using Fai](/audio-paper-digest-blog/posts/2026-04-29-towards-fair-asr-for-second-language-speakers) | 6.5分 | 前50% | #语音识别 |
-| 817. | [Gen-SER: When the Generative Model Meets Speech Emotion](/audio-paper-digest-blog/posts/2026-04-29-gen-ser-when-the-generative-model-meets-speech) | 6.5分 | 前50% | #语音情感识别 |
-| 818. | [SmoothCLAP: Soft-Target Enhanced Contrastive Language-A](/audio-paper-digest-blog/posts/2026-04-29-smoothclap-soft-target-enhanced-contrastive) | 6.5分 | 前50% | #语音情感识别 |
-| 819. | [Slot Filling as a Reasoning Task for Speechllms](/audio-paper-digest-blog/posts/2026-04-29-slot-filling-as-a-reasoning-task-for-speechllms) | 6.5分 | 前25% | #槽填充 |
-| 820. | [Selective Hub Fusion with Modality-Heterogeneous Expert](/audio-paper-digest-blog/posts/2026-04-29-selective-hub-fusion-with-modality-heterogeneous) | 6.5分 | 前25% | #多模态模型 |
-| 821. | [MaskVCT: Masked Voice Codec Transformer for Zero-Shot V](/audio-paper-digest-blog/posts/2026-04-29-maskvct-masked-voice-codec-transformer-for-zero) | 6.5分 | 前50% | #语音转换 |
-| 822. | [Integrating Speaker Embeddings and LLM-Derived Semantic](/audio-paper-digest-blog/posts/2026-04-29-integrating-speaker-embeddings-and-llm-derived) | 6.5分 | 前25% | #说话人分离 |
-| 823. | [Towards Building Speech Large Language Models for Multi](/audio-paper-digest-blog/posts/2026-04-29-towards-building-speech-large-language-models-for) | 6.5分 | 前25% | #语音识别 |
-| 824. | [Whisper: Courtside Edition - Enhancing ASR Performance ](/audio-paper-digest-blog/posts/2026-04-29-whisper-courtside-edition-enhancing-asr) | 6.5分 | 前50% | #语音识别 |
-| 825. | [Multimodal LLMs as Expert Speech Annotators: Acoustic M](/audio-paper-digest-blog/posts/2026-04-29-multimodal-llms-as-expert-speech-annotators) | 6.5分 | 前50% | #语音生物标志物 |
-| 826. | [SED: Structural Entropy Based Speech Discretization for](/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech) | 6.5分 | 前50% | #语音识别 |
-| 827. | [Z-Scores: A Metric for Linguistically Assessing Disflue](/audio-paper-digest-blog/posts/2026-04-29-z-scores-a-metric-for-linguistically-assessing) | 6.5分 | 前50% | #模型评估 |
-| 828. | [Multilingual Supervised Pretraining with Lm-Assisted De](/audio-paper-digest-blog/posts/2026-04-29-multilingual-supervised-pretraining-with-lm) | 6.5分 | 前50% | #语音识别 |
-| 829. | [Enhancing Dialogue-Related Speech Tasks with Generated ](/audio-paper-digest-blog/posts/2026-04-29-enhancing-dialogue-related-speech-tasks-with) | 6.5分 | 前25% | #语音对话系统 |
-| 830. | [Position-Invariant Fine-Tuning Of Speech Enhancement Mo](/audio-paper-digest-blog/posts/2026-04-29-position-invariant-fine-tuning-of-speech) | 6.5分 | 前50% | #语音增强 |
-| 831. | [Improving Automatic Speech Recognition by Mitigating Di](/audio-paper-digest-blog/posts/2026-04-29-improving-automatic-speech-recognition-by) | 6.5分 | 前25% | #语音识别 |
-| 832. | [Windowed SummaryMixing: An Efficient Fine-Tuning of Sel](/audio-paper-digest-blog/posts/2026-04-29-windowed-summarymixing-an-efficient-fine-tuning) | 6.5分 | 前50% | #语音识别 |
-| 833. | [Proficiency-Aware Adaptation and Data Augmentation for ](/audio-paper-digest-blog/posts/2026-04-29-proficiency-aware-adaptation-and-data) | 6.5分 | 前25% | #语音识别 |
-| 834. | [Domain-Aware Scheduling for ASR Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-domain-aware-scheduling-for-asr-fine-tuning) | 6.5分 | 前50% | #语音识别 |
-| 835. | [Online Register For Dual-Mode Self-Supervised Speech Mo](/audio-paper-digest-blog/posts/2026-04-29-online-register-for-dual-mode-self-supervised) | 6.5分 | 前50% | #语音识别 |
-| 836. | [Learning to Align with Unbalanced Optimal Transport in ](/audio-paper-digest-blog/posts/2026-04-29-learning-to-align-with-unbalanced-optimal) | 6.5分 | 前50% | #语音识别 |
-| 837. | [How Far Do SSL Speech Models Listen for Tone? Temporal ](/audio-paper-digest-blog/posts/2026-04-29-how-far-do-ssl-speech-models-listen-for-tone) | 6.5分 | 前50% | #语音识别 |
-| 838. | [Probing Whisper for Dysarthric Speech in Detection and ](/audio-paper-digest-blog/posts/2026-04-29-probing-whisper-for-dysarthric-speech-in) | 6.5分 | 前25% | #语音生物标志物 |
-| 839. | [Connecting Layer-Wise Representation of Wavlm with Spec](/audio-paper-digest-blog/posts/2026-04-29-connecting-layer-wise-representation-of-wavlm) | 6.0分 | 前50% | #说话人验证 |
-| 840. | [Multimodal Co-Training with Subtractive Unlabeled-Benef](/audio-paper-digest-blog/posts/2026-04-29-multimodal-co-training-with-subtractive-unlabeled) | 6.0分 | 前25% | #多模态学习 |
-| 841. | [Mixture of Experts for Recognizing Depression from Inte](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-for-recognizing-depression) | 6.0分 | 前50% | #语音生物标志物 |
-| 842. | [Acoustic and Facial Markers of Perceived Conversational](/audio-paper-digest-blog/posts/2026-04-29-acoustic-and-facial-markers-of-perceived) | 6.0分 | 前50% | #语音情感识别 |
-| 843. | [Secondary Source Placement for Sound Field Control Base](/audio-paper-digest-blog/posts/2026-04-29-secondary-source-placement-for-sound-field) | 6.0分 | 前25% | #空间音频 |
-| 844. | [Can Hierarchical Cross-Modal Fusion Predict Human Perce](/audio-paper-digest-blog/posts/2026-04-29-can-hierarchical-cross-modal-fusion-predict-human) | 6.0分 | 前25% | #模型评估 |
-| 845. | [Stereophonic Acoustic Echo Cancellation Using an Improv](/audio-paper-digest-blog/posts/2026-04-29-stereophonic-acoustic-echo-cancellation-using-an) | 6.0分 | 前50% | #语音增强 |
-| 846. | [Towards Real-Time Generative Speech Restoration with Fl](/audio-paper-digest-blog/posts/2026-04-29-towards-real-time-generative-speech-restoration) | 6.0分 | 前50% | #语音增强 |
-| 847. | [Is Phase Really Needed for Weakly-Supervised Dereverber](/audio-paper-digest-blog/posts/2026-04-29-is-phase-really-needed-for-weakly-supervised) | 6.0分 | 前50% | #语音增强 |
-| 848. | [Leveraging Audio-Visual Data to Reduce the Multilingual](/audio-paper-digest-blog/posts/2026-04-29-leveraging-audio-visual-data-to-reduce-the) | 6.0分 | 前50% | #语音识别 |
-| 849. | [Direct Simultaneous Translation Activation for Large Au](/audio-paper-digest-blog/posts/2026-04-29-direct-simultaneous-translation-activation-for) | 6.0分 | 前25% | #语音翻译 |
-| 850. | [Estimating Hand-Related Features from Speech Using Mach](/audio-paper-digest-blog/posts/2026-04-29-estimating-hand-related-features-from-speech) | 5.0分 | 前50% | #语音生物标志物 |
-| 851 | [RMODGDF: A Robust STFT-Derived Feature for Musical Inst](/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical) | N/A | - | - |
-| 852 | [Equipping Large Language Model with Directional Speech ](/audio-paper-digest-blog/posts/2026-04-29-equipping-large-language-model-with-directional) | N/A | - | - |
-| 853 | [A Bimodal Approach for Detecting Fatigue Using Speech a](/audio-paper-digest-blog/posts/2026-04-29-a-bimodal-approach-for-detecting-fatigue-using) | N/A | - | - |
-| 854 | [Brainprint-Modulated Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-brainprint-modulated-target-speaker-extraction) | N/A | - | - |
-| 855 | [Respire-Mamba C-UNet: Consistency-Trained Autoencoder f](/audio-paper-digest-blog/posts/2026-04-29-respire-mamba-c-unet-consistency-trained) | N/A | - | - |
-| 856 | [Phoneme-Level Visual Speech Recognition via Point-Visua](/audio-paper-digest-blog/posts/2026-04-29-phoneme-level-visual-speech-recognition-via-point) | N/A | - | - |
-| 857 | [Inter-Dialog Contrastive Learning for Multimodal Emotio](/audio-paper-digest-blog/posts/2026-04-29-inter-dialog-contrastive-learning-for-multimodal) | N/A | - | - |
-| 858 | [Temporal-Spatial Decouple Before Act: Disentangled Repr](/audio-paper-digest-blog/posts/2026-04-29-temporal-spatial-decouple-before-act-disentangled) | N/A | - | - |
-| 859 | [DSSR: Decoupling Salient and Subtle Representations Und](/audio-paper-digest-blog/posts/2026-04-29-dssr-decoupling-salient-and-subtle) | N/A | - | - |
-| 860 | [DBFT-SD: Weakly Supervised Multimodal Detection of Sens](/audio-paper-digest-blog/posts/2026-04-29-dbft-sd-weakly-supervised-multimodal-detection-of) | N/A | - | - |
-| 861 | [PerformSinger: Multimodal Singing Voice Synthesis Lever](/audio-paper-digest-blog/posts/2026-04-29-performsinger-multimodal-singing-voice-synthesis) | N/A | - | - |
-| 862 | [VT-Heads: Voice Cloning and Talking Head Generation fro](/audio-paper-digest-blog/posts/2026-04-29-vt-heads-voice-cloning-and-talking-head) | N/A | - | - |
-| 863 | [DDSR-Net: Robust Multimodal Sentiment Analysis via Dyna](/audio-paper-digest-blog/posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via) | N/A | - | - |
-| 864 | [PRoADS: Provably Secure And Robust Audio Diffusion Steg](/audio-paper-digest-blog/posts/2026-04-29-proads-provably-secure-and-robust-audio-diffusion) | N/A | - | - |
-| 865 | [SwitchCodec: Adaptive Residual-Expert Sparse Quantizati](/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse) | N/A | - | - |
-| 866 | [Automatic Music Mixing Using a Generative Model of Effe](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-mixing-using-a-generative-model) | N/A | - | - |
-| 867 | [SIRUP: A Diffusion-Based Virtual Upmixer of Steering Ve](/audio-paper-digest-blog/posts/2026-04-29-sirup-a-diffusion-based-virtual-upmixer-of) | N/A | - | - |
-| 868 | [GLAP: General Contrastive Audio-Text Pretraining Across](/audio-paper-digest-blog/posts/2026-04-29-glap-general-contrastive-audio-text-pretraining) | N/A | - | - |
-| 869 | [MC-MRX: Reference- and Midi-Guided Music Source Extract](/audio-paper-digest-blog/posts/2026-04-29-mc-mrx-reference-and-midi-guided-music-source) | N/A | - | - |
-| 870 | [SPAM: Style Prompt Adherence Metric for Prompt-Based TT](/audio-paper-digest-blog/posts/2026-04-29-spam-style-prompt-adherence-metric-for-prompt) | N/A | - | - |
-| 871 | [Personal Sound Zones with Flexible Bright Zone Control](/audio-paper-digest-blog/posts/2026-04-29-personal-sound-zones-with-flexible-bright-zone) | N/A | - | - |
-| 872 | [HergNet: A Fast Neural Surrogate Model for Sound Field ](/audio-paper-digest-blog/posts/2026-04-29-hergnet-a-fast-neural-surrogate-model-for-sound) | N/A | - | - |
-| 873 | [Identifying the Minimal and Maximal Phonetic Subspace o](/audio-paper-digest-blog/posts/2026-04-29-identifying-the-minimal-and-maximal-phonetic) | N/A | - | - |
-| 874 | [Feedback-Driven Retrieval-Augmented Audio Generation wi](/audio-paper-digest-blog/posts/2026-04-29-feedback-driven-retrieval-augmented-audio) | N/A | - | - |
-| 875 | [EchoFake: A Replay-Aware Dataset For Practical Speech D](/audio-paper-digest-blog/posts/2026-04-29-echofake-a-replay-aware-dataset-for-practical) | N/A | - | - |
-| 876 | [3D Mesh Grid Room Impulse Responses Measured with A Lin](/audio-paper-digest-blog/posts/2026-04-29-3d-mesh-grid-room-impulse-responses-measured-with) | N/A | - | - |
-| 877 | [Subspace Hybrid Adaptive Filtering for Phonocardiogram ](/audio-paper-digest-blog/posts/2026-04-29-subspace-hybrid-adaptive-filtering-for) | N/A | - | - |
-| 878 | [UNMIXX: Untangling Highly Correlated Singing Voices Mix](/audio-paper-digest-blog/posts/2026-04-29-unmixx-untangling-highly-correlated-singing) | N/A | - | - |
-| 879 | [Spectral or Spatial? Leveraging Both for Speaker Extrac](/audio-paper-digest-blog/posts/2026-04-29-spectral-or-spatial-leveraging-both-for-speaker) | N/A | - | - |
-| 880 | [Tldiffgan: A Latent Diffusion-Gan Framework with Tempor](/audio-paper-digest-blog/posts/2026-04-29-tldiffgan-a-latent-diffusion-gan-framework-with) | N/A | - | - |
-| 881 | [Continuation Method for Feedback Delay Network Modal De](/audio-paper-digest-blog/posts/2026-04-29-continuation-method-for-feedback-delay-network) | N/A | - | - |
-| 882 | [Game-Time: Evaluating Temporal Dynamics in Spoken Langu](/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken) | N/A | - | - |
-| 883 | [Exploring Resolution-Wise Shared Attention in Hybrid Ma](/audio-paper-digest-blog/posts/2026-04-29-exploring-resolution-wise-shared-attention-in) | N/A | - | - |
-| 884 | [Whisper-FEST: Single-Channel Far-Field Enhanced Speech-](/audio-paper-digest-blog/posts/2026-04-29-whisper-fest-single-channel-far-field-enhanced) | N/A | - | - |
-| 885 | [Cross-Lingual Alzheimer’s Disease Detection with Multim](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-alzheimers-disease-detection-with) | N/A | - | - |
-| 886 | [Production-Scale Dynamic Vocabulary ASR Biasing with Wo](/audio-paper-digest-blog/posts/2026-04-29-production-scale-dynamic-vocabulary-asr-biasing) | N/A | - | - |
-| 887 | [On The Design of Efficient Neural Methods for Geometry-](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-efficient-neural-methods-for) | N/A | - | - |
-| 888 | [Temporal Graph Modeling for Speech Emotion Recognition ](/audio-paper-digest-blog/posts/2026-04-29-temporal-graph-modeling-for-speech-emotion) | N/A | - | - |
-| 889 | [Task Vector in TTS: Toward Emotionally Expressive Diale](/audio-paper-digest-blog/posts/2026-04-29-task-vector-in-tts-toward-emotionally-expressive) | N/A | - | - |
-| 890 | [Automatic Estimation of Speaker Diarization Error Rate ](/audio-paper-digest-blog/posts/2026-04-29-automatic-estimation-of-speaker-diarization-error) | N/A | - | - |
-| 891 | [Continuous-Token Diffusion for Speaker-Referenced TTS i](/audio-paper-digest-blog/posts/2026-04-29-continuous-token-diffusion-for-speaker-referenced) | N/A | - | - |
-| 892 | [Phrased: Phrase Dictionary Biasing for Speech Translati](/audio-paper-digest-blog/posts/2026-04-29-phrased-phrase-dictionary-biasing-for-speech) | N/A | - | - |
-| 893 | [TAG: Structured Temporal Audio Generation via LLM-Guide](/audio-paper-digest-blog/posts/2026-04-29-tag-structured-temporal-audio-generation-via-llm) | N/A | - | - |
-| 894 | [OMNI-AVSR: Towards Unified Multimodal Speech Recognitio](/audio-paper-digest-blog/posts/2026-04-29-omni-avsr-towards-unified-multimodal-speech) | N/A | - | - |
-| 895 | [ZSV2C-MLLM: Zero-Shot Visual Voice Cloning Via Multimod](/audio-paper-digest-blog/posts/2026-04-29-zsv2c-mllm-zero-shot-visual-voice-cloning-via) | N/A | - | - |
-| 896 | [BEST-STD 2.0: Balanced and Efficient Speech Tokenizer f](/audio-paper-digest-blog/posts/2026-04-29-best-std-20-balanced-and-efficient-speech) | N/A | - | - |
-| 897 | [A Parameter-Efficient Multi-Scale Convolutional Adapter](/audio-paper-digest-blog/posts/2026-04-29-a-parameter-efficient-multi-scale-convolutional) | N/A | - | - |
-| 898 | [Chunk-Wise Attention Transducers for Fast and Accurate ](/audio-paper-digest-blog/posts/2026-04-29-chunk-wise-attention-transducers-for-fast-and) | N/A | - | - |
+| 23. | [SwitchCodec: Adaptive Residual-Expert Sparse Quantizati](/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse) | 8.5分 | 前25% | #音频生成 |
+| 24. | [Bridging the Semantic Gap: Cross-Attentive Fusion for J](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-semantic-gap-cross-attentive-fusion) | 8.5分 | 前25% | #语音质量评估 |
+| 25. | [Shared Representation Learning for Reference-Guided Tar](/audio-paper-digest-blog/posts/2026-04-29-shared-representation-learning-for-reference) | 8.5分 | 前25% | #音频事件检测 |
+| 26. | [Self-Supervised Note Tracking and Multi-Pitch Estimatio](/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch) | 8.5分 | 前25% | #多音高估计 #音符跟踪 |
+| 27. | [GLAP: General Contrastive Audio-Text Pretraining Across](/audio-paper-digest-blog/posts/2026-04-29-glap-general-contrastive-audio-text-pretraining) | 8.5分 | 前25% | #音频检索 |
+| 28. | [Spatial-CLAP: Learning Spatially-Aware Audio–Text Embed](/audio-paper-digest-blog/posts/2026-04-29-spatial-clap-learning-spatially-aware-audiotext) | 8.5分 | 前25% | #空间音频 |
+| 29. | [Time-Shifted Token Scheduling for Symbolic Music Genera](/audio-paper-digest-blog/posts/2026-04-29-time-shifted-token-scheduling-for-symbolic-music) | 8.5分 | 前25% | #音乐生成 |
+| 30. | [Bridging the Measurement–Simulation Gap in Room Acousti](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-measurementsimulation-gap-in-room) | 8.5分 | 前25% | #声源定位 |
+| 31. | [Low-Resource Guidance for Controllable Latent Audio Dif](/audio-paper-digest-blog/posts/2026-04-29-low-resource-guidance-for-controllable-latent) | 8.5分 | 前25% | #音乐生成 |
+| 32. | [Synthcloner: Synthesizer-Style Audio Transfer via Facto](/audio-paper-digest-blog/posts/2026-04-29-synthcloner-synthesizer-style-audio-transfer-via) | 8.5分 | 前25% | #音频生成 |
+| 33. | [A Generative-First Neural Audio Autoencoder](/audio-paper-digest-blog/posts/2026-04-29-a-generative-first-neural-audio-autoencoder) | 8.5分 | 前25% | #音乐生成 |
+| 34. | [Musicdetr: A Position-Aware Spectral Note Detection Mod](/audio-paper-digest-blog/posts/2026-04-29-musicdetr-a-position-aware-spectral-note) | 8.5分 | 前10% | #歌唱语音转录 |
+| 35. | [ACAVCaps: Enabling Large-Scale Training for Fine-Graine](/audio-paper-digest-blog/posts/2026-04-29-acavcaps-enabling-large-scale-training-for-fine) | 8.5分 | 前25% | #音频分类 |
+| 36. | [CASTELLA: Long Audio Dataset with Captions and Temporal](/audio-paper-digest-blog/posts/2026-04-29-castella-long-audio-dataset-with-captions-and) | 8.5分 | 前25% | #音频检索 |
+| 37. | [EchoFake: A Replay-Aware Dataset For Practical Speech D](/audio-paper-digest-blog/posts/2026-04-29-echofake-a-replay-aware-dataset-for-practical) | 8.5分 | 前25% | #音频深度伪造检测 |
+| 38. | [UNMIXX: Untangling Highly Correlated Singing Voices Mix](/audio-paper-digest-blog/posts/2026-04-29-unmixx-untangling-highly-correlated-singing) | 8.5分 | 前25% | #语音分离 |
+| 39. | [DiTSE: High-Fidelity Generative Speech Enhancement via ](/audio-paper-digest-blog/posts/2026-04-29-ditse-high-fidelity-generative-speech-enhancement) | 8.5分 | 前10% | #语音增强 |
+| 40. | [Dynamic Spectrogram Analysis with Local-Aware Graph Net](/audio-paper-digest-blog/posts/2026-04-29-dynamic-spectrogram-analysis-with-local-aware) | 8.5分 | 前10% | #音频深度伪造检测 |
+| 41. | [RASD-SR: A Robust Anomalous Sound Detection Framework w](/audio-paper-digest-blog/posts/2026-04-29-rasd-sr-a-robust-anomalous-sound-detection) | 8.5分 | 前10% | #异常声音检测 |
+| 42. | [Toward Robust And Efficient Beat Tracking Via Beat-Awar](/audio-paper-digest-blog/posts/2026-04-29-toward-robust-and-efficient-beat-tracking-via) | 8.5分 | 前25% | #音乐理解 |
+| 43. | [Temporally Heterogeneous Graph Contrastive Learning for](/audio-paper-digest-blog/posts/2026-04-29-temporally-heterogeneous-graph-contrastive) | 8.5分 | 前25% | #音频事件检测 |
+| 44. | [The Muse Benchmark: Probing Music Perception and Audito](/audio-paper-digest-blog/posts/2026-04-29-the-muse-benchmark-probing-music-perception-and) | 8.5分 | 前25% | #音乐理解 |
+| 45. | [PersonaPlex: Voice and Role Control for Full Duplex Con](/audio-paper-digest-blog/posts/2026-04-29-personaplex-voice-and-role-control-for-full) | 8.5分 | 前25% | #语音对话系统 |
+| 46. | [The Impact of Audio Watermarking on Audio Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-the-impact-of-audio-watermarking-on-audio-anti) | 8.5分 | 前25% | #音频深度伪造检测 |
+| 47. | [VoXtream: Full-Stream Text-To-Speech With Extremely Low](/audio-paper-digest-blog/posts/2026-04-29-voxtream-full-stream-text-to-speech-with) | 8.5分 | 前25% | #语音合成 |
+| 48. | [SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper](/audio-paper-digest-blog/posts/2026-04-29-se-dicow-self-enrolled-diarization-conditioned) | 8.5分 | 前25% | #语音识别 |
+| 49. | [Scaling Multi-Talker ASR with Speaker-Agnostic Activity](/audio-paper-digest-blog/posts/2026-04-29-scaling-multi-talker-asr-with-speaker-agnostic) | 8.5分 | 前25% | #语音识别 |
+| 50. | [Towards Lightweight Adaptation of Speech Enhancement Mo](/audio-paper-digest-blog/posts/2026-04-29-towards-lightweight-adaptation-of-speech) | 8.5分 | 前25% | #语音增强 |
+| 51. | [FastEnhancer: Speed-Optimized Streaming Neural Speech E](/audio-paper-digest-blog/posts/2026-04-29-fastenhancer-speed-optimized-streaming-neural) | 8.5分 | 前25% | #语音增强 |
+| 52. | [EMORL-TTS: Reinforcement Learning for Fine-Grained Emot](/audio-paper-digest-blog/posts/2026-04-29-emorl-tts-reinforcement-learning-for-fine-grained) | 8.5分 | 前25% | #语音合成 |
+| 53. | [DisContSE: Single-Step Diffusion Speech Enhancement bas](/audio-paper-digest-blog/posts/2026-04-29-discontse-single-step-diffusion-speech) | 8.5分 | 前10% | #语音增强 |
+| 54. | [VBx for End-to-End Neural and Clustering-Based Diarizat](/audio-paper-digest-blog/posts/2026-04-29-vbx-for-end-to-end-neural-and-clustering-based) | 8.5分 | 前25% | #说话人分离 |
+| 55. | [StyleBench: Evaluating Speech Language Models on Conver](/audio-paper-digest-blog/posts/2026-04-29-stylebench-evaluating-speech-language-models-on) | 8.5分 | 前25% | #基准测试 |
+| 56. | [Sidon: Fast and Robust Open-Source Multilingual Speech ](/audio-paper-digest-blog/posts/2026-04-29-sidon-fast-and-robust-open-source-multilingual) | 8.5分 | 前25% | #语音增强 |
+| 57. | [Improving Contextual Asr Via Multi-Grained Fusion With ](/audio-paper-digest-blog/posts/2026-04-29-improving-contextual-asr-via-multi-grained-fusion) | 8.5分 | 前25% | #语音识别 |
+| 58. | [RCAL: Reinforced Cross-Modal Alignment for Multimodal S](/audio-paper-digest-blog/posts/2026-04-29-rcal-reinforced-cross-modal-alignment-for) | 8.5分 | 前25% | #多模态模型 |
+| 59. | [Enhancing Audio Question-Answering Performance Through ](/audio-paper-digest-blog/posts/2026-04-29-enhancing-audio-question-answering-performance) | 8.5分 | 前25% | #音频问答 |
+| 60. | [MTP-S2UT: Enhancing Speech-to-Speech Translation Qualit](/audio-paper-digest-blog/posts/2026-04-29-mtp-s2ut-enhancing-speech-to-speech-translation) | 8.5分 | 前25% | #语音翻译 |
+| 61. | [Unseen but Not Unknown: Using Dataset Concealment to Ro](/audio-paper-digest-blog/posts/2026-04-29-unseen-but-not-unknown-using-dataset-concealment) | 8.3分 | 前25% | #语音质量评估 |
+| 62. | [3D Mesh Grid Room Impulse Responses Measured with A Lin](/audio-paper-digest-blog/posts/2026-04-29-3d-mesh-grid-room-impulse-responses-measured-with) | 8.3分 | 前25% | #空间音频 |
+| 63. | [AISHELL6-Whisper: A Chinese Mandarin Audio-Visual Whisp](/audio-paper-digest-blog/posts/2026-04-29-aishell6-whisper-a-chinese-mandarin-audio-visual) | 8.3分 | 前25% | #语音识别 |
+| 64. | [Beyond Face Swapping: A Diffusion-Based Digital Human B](/audio-paper-digest-blog/posts/2026-04-29-beyond-face-swapping-a-diffusion-based-digital) | 8.1分 | 前25% | #音频深度伪造检测 |
+| 65. | [Polynomial Mixing for Efficient Self-Supervised Speech ](/audio-paper-digest-blog/posts/2026-04-29-polynomial-mixing-for-efficient-self-supervised) | 8.0分 | 前25% | #语音识别 |
+| 66. | [WavLink: Compact Audio–Text Embeddings with a Global Wh](/audio-paper-digest-blog/posts/2026-04-29-wavlink-compact-audiotext-embeddings-with-a) | 8.0分 | 前25% | #音频检索 |
+| 67. | [Virtual Consistency for Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-virtual-consistency-for-audio-editing) | 8.0分 | 前25% | #音乐生成 |
+| 68. | [MAG: Multi-Modal Aligned Autoregressive Co-Speech Gestu](/audio-paper-digest-blog/posts/2026-04-29-mag-multi-modal-aligned-autoregressive-co-speech) | 8.0分 | 前25% | #音频生成 |
+| 69. | [No Verifiable Reward for Prosody: Toward Preference-Gui](/audio-paper-digest-blog/posts/2026-04-29-no-verifiable-reward-for-prosody-toward) | 8.0分 | 前25% | #语音合成 |
+| 70. | [Marco-Voice: A Unified Framework for Expressive Speech ](/audio-paper-digest-blog/posts/2026-04-29-marco-voice-a-unified-framework-for-expressive) | 8.0分 | 前25% | #语音合成 |
+| 71. | [GLoRIA: Gated Low-Rank Interpretable Adaptation for Dia](/audio-paper-digest-blog/posts/2026-04-29-gloria-gated-low-rank-interpretable-adaptation) | 8.0分 | 前25% | #语音识别 |
+| 72. | [Do Bias Benchmarks Generalise? Evidence from Voice-Base](/audio-paper-digest-blog/posts/2026-04-29-do-bias-benchmarks-generalise-evidence-from-voice) | 8.0分 | 前25% | #模型评估 |
+| 73. | [Attention-Weighted Centered Kernel Alignment for Knowle](/audio-paper-digest-blog/posts/2026-04-29-attention-weighted-centered-kernel-alignment-for) | 8.0分 | 前25% | #语音情感识别 |
+| 74. | [More Than a Shortcut: A Hyperbolic Approach to Early-Ex](/audio-paper-digest-blog/posts/2026-04-29-more-than-a-shortcut-a-hyperbolic-approach-to) | 8.0分 | 前25% | #音频事件检测 |
+| 75. | [DSRMS-TransUnet: A Decentralized Non-Shifted Transunet ](/audio-paper-digest-blog/posts/2026-04-29-dsrms-transunet-a-decentralized-non-shifted) | 8.0分 | 前10% | #声源定位 |
+| 76. | [FED-PISA: Federated Voice Cloning Via Personalized Iden](/audio-paper-digest-blog/posts/2026-04-29-fed-pisa-federated-voice-cloning-via-personalized) | 8.0分 | 前25% | #语音克隆 |
+| 77. | [Neuromamba: Adaptive Frequency Filtering with a Pyramid](/audio-paper-digest-blog/posts/2026-04-29-neuromamba-adaptive-frequency-filtering-with-a) | 8.0分 | 前25% | #语音合成 |
+| 78. | [Brainprint-Modulated Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-brainprint-modulated-target-speaker-extraction) | 8.0分 | 前25% | #语音分离 |
+| 79. | [SAASDNet: An EEG-Based Streaming Auditory Attention Swi](/audio-paper-digest-blog/posts/2026-04-29-saasdnet-an-eeg-based-streaming-auditory) | 8.0分 | 前25% | #脑机接口 |
+| 80. | [Automated Dysphagia Screening Using Noninvasive Neck Ac](/audio-paper-digest-blog/posts/2026-04-29-automated-dysphagia-screening-using-noninvasive) | 8.0分 | 前25% | #音频分类 |
+| 81. | [AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining f](/audio-paper-digest-blog/posts/2026-04-29-animalclap-taxonomy-aware-language-audio) | 8.0分 | 前25% | #音频分类 |
+| 82. | [Improving Multimodal Brain Encoding Model with Dynamic ](/audio-paper-digest-blog/posts/2026-04-29-improving-multimodal-brain-encoding-model-with) | 8.0分 | 前25% | #脑信号编码 |
+| 83. | [Non-Line-of-Sight Vehicle Detection via Audio-Visual Fu](/audio-paper-digest-blog/posts/2026-04-29-non-line-of-sight-vehicle-detection-via-audio) | 8.0分 | 前25% | #音频分类 |
+| 84. | [MCF: Text LLMS for Multimodal Emotional Causality](/audio-paper-digest-blog/posts/2026-04-29-mcf-text-llms-for-multimodal-emotional-causality) | 8.0分 | 前25% | #情感分析 |
+| 85. | [Training-Free Multimodal Guidance for Video to Audio Ge](/audio-paper-digest-blog/posts/2026-04-29-training-free-multimodal-guidance-for-video-to) | 8.0分 | 前25% | #音频生成 |
+| 86. | [Audience-Aware Co-speech Gesture Generation in Public S](/audio-paper-digest-blog/posts/2026-04-29-audience-aware-co-speech-gesture-generation-in) | 8.0分 | 前50% | #音频生成 |
+| 87. | [Rethinking Entity Disambiguation in Complex Modalities](/audio-paper-digest-blog/posts/2026-04-29-rethinking-entity-disambiguation-in-complex) | 8.0分 | 前25% | #实体消歧 |
+| 88. | [HAVT-IVD: Heterogeneity-Aware Cross-Modal Network for A](/audio-paper-digest-blog/posts/2026-04-29-havt-ivd-heterogeneity-aware-cross-modal-network) | 8.0分 | 前25% | #音频事件检测 |
+| 89. | [DBFT-SD: Weakly Supervised Multimodal Detection of Sens](/audio-paper-digest-blog/posts/2026-04-29-dbft-sd-weakly-supervised-multimodal-detection-of) | 8.0分 | 前25% | #音频事件检测 |
+| 90. | [Staged Diffusion with Hybrid Mixture-of-Experts (MOE) f](/audio-paper-digest-blog/posts/2026-04-29-staged-diffusion-with-hybrid-mixture-of-experts) | 8.0分 | 前25% | #语音情感识别 |
+| 91. | [NeuroSIFT: A Biologically-Inspired Framework with Expli](/audio-paper-digest-blog/posts/2026-04-29-neurosift-a-biologically-inspired-framework-with) | 8.0分 | 前25% | #多模态情感识别 |
+| 92. | [Hashing-Baseline: Rethinking Hashing in the Age of Pret](/audio-paper-digest-blog/posts/2026-04-29-hashing-baseline-rethinking-hashing-in-the-age-of) | 8.0分 | 前25% | #音频检索 #音频分类 |
+| 93. | [DGSDNet: Dual-Graph Spectral Diffusion Network for Inco](/audio-paper-digest-blog/posts/2026-04-29-dgsdnet-dual-graph-spectral-diffusion-network-for) | 8.0分 | 前25% | #语音情感识别 |
+| 94. | [Graph-based Modality Alignment for Robustness in Conver](/audio-paper-digest-blog/posts/2026-04-29-graph-based-modality-alignment-for-robustness-in) | 8.0分 | 前25% | #语音情感识别 |
+| 95. | [Multimodal Self-Attention Network with Temporal Alignme](/audio-paper-digest-blog/posts/2026-04-29-multimodal-self-attention-network-with-temporal) | 8.0分 | 前25% | #语音情感识别 |
+| 96. | [Uncertainty-Aware 3D Emotional Talking Face Synthesis w](/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face) | 8.0分 | 前25% | #音视频 |
+| 97. | [StreamMark: A Deep Learning-Based Semi-Fragile Audio Wa](/audio-paper-digest-blog/posts/2026-04-29-streammark-a-deep-learning-based-semi-fragile) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 98. | [Voting-Based Pitch Estimation with Temporal and Frequen](/audio-paper-digest-blog/posts/2026-04-29-voting-based-pitch-estimation-with-temporal-and) | 8.0分 | 前25% | #语音识别 |
+| 99. | [Spike-Driven Low-Power Speech Bandwidth Extension](/audio-paper-digest-blog/posts/2026-04-29-spike-driven-low-power-speech-bandwidth-extension) | 8.0分 | 前25% | #语音增强 |
+| 100. | [Flexio: Flexible Single- and Multi-Channel Speech Separ](/audio-paper-digest-blog/posts/2026-04-29-flexio-flexible-single-and-multi-channel-speech) | 8.0分 | 前25% | #语音分离 |
+| 101. | [SLAP: Scalable Language-Audio Pretraining with Variable](/audio-paper-digest-blog/posts/2026-04-29-slap-scalable-language-audio-pretraining-with) | 8.0分 | 前25% | #音频检索 |
+| 102. | [Matching Reverberant Speech Through Learned Acoustic Em](/audio-paper-digest-blog/posts/2026-04-29-matching-reverberant-speech-through-learned) | 8.0分 | 前25% | #音频生成 |
+| 103. | [Regularized Inverse Filter Design for Rigid Spherical M](/audio-paper-digest-blog/posts/2026-04-29-regularized-inverse-filter-design-for-rigid) | 8.0分 | 前25% | #空间音频 |
+| 104. | [Noise-to-Notes: Diffusion-Based Generation and Refineme](/audio-paper-digest-blog/posts/2026-04-29-noise-to-notes-diffusion-based-generation-and) | 8.0分 | 前10% | #音乐信息检索 |
+| 105. | [DSpAST: Disentangled Representations for Spatial Audio ](/audio-paper-digest-blog/posts/2026-04-29-dspast-disentangled-representations-for-spatial) | 8.0分 | 前25% | #音频问答 |
+| 106. | [Lightweight and Generalizable Acoustic Scene Representa](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-generalizable-acoustic-scene) | 8.0分 | 前25% | #音频场景理解 |
+| 107. | [AnyAccomp: Generalizable Accompaniment Generation Via Q](/audio-paper-digest-blog/posts/2026-04-29-anyaccomp-generalizable-accompaniment-generation) | 8.0分 | 前25% | #音乐生成 |
+| 108. | [FUN-SSL: Full-Band Layer Followed by U-Net With Narrow-](/audio-paper-digest-blog/posts/2026-04-29-fun-ssl-full-band-layer-followed-by-u-net-with) | 8.0分 | 前25% | #声源定位 |
+| 109. | [Event Classification by Physics-Informed Inpainting for](/audio-paper-digest-blog/posts/2026-04-29-event-classification-by-physics-informed) | 8.0分 | 前25% | #音频事件检测 |
+| 110. | [Time-Domain Synthesis of Virtual Sound Source Within Pe](/audio-paper-digest-blog/posts/2026-04-29-time-domain-synthesis-of-virtual-sound-source) | 8.0分 | 前25% | #空间音频 |
+| 111. | [Assessing The Perceptual Impact of Low-Altitude Aircraf](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-perceptual-impact-of-low-altitude) | 8.0分 | 前25% | #音频生成 |
+| 112. | [Enabling Multi-Species Bird Classification on Low-Power](/audio-paper-digest-blog/posts/2026-04-29-enabling-multi-species-bird-classification-on-low) | 8.0分 | 前25% | #生物声学 |
+| 113. | [USVexplorer: Robust Detection of Ultrasonic Vocalizatio](/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic) | 8.0分 | 前25% | #音频事件检测 |
+| 114. | [Leveraging Diffusion U-Net Features for Predominant Ins](/audio-paper-digest-blog/posts/2026-04-29-leveraging-diffusion-u-net-features-for) | 8.0分 | 前25% | #音乐信息检索 |
+| 115. | [Subsequence SDTW: Differentiable Alignment with Flexibl](/audio-paper-digest-blog/posts/2026-04-29-subsequence-sdtw-differentiable-alignment-with) | 8.0分 | 前25% | #音乐信息检索 |
+| 116. | [Distributed Multichannel Active Noise Control with Asyn](/audio-paper-digest-blog/posts/2026-04-29-distributed-multichannel-active-noise-control) | 8.0分 | 前25% | #信号处理 |
+| 117. | [MixGAN-based Non-blind Bandwidth Extension for Audio Co](/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for) | 8.0分 | 前25% | #音频增强 |
+| 118. | [Identifying the Minimal and Maximal Phonetic Subspace o](/audio-paper-digest-blog/posts/2026-04-29-identifying-the-minimal-and-maximal-phonetic) | 8.0分 | 前25% | #语音识别 |
+| 119. | [MAGE: A Coarse-to-Fine Speech Enhancer with Masked Gene](/audio-paper-digest-blog/posts/2026-04-29-mage-a-coarse-to-fine-speech-enhancer-with-masked) | 8.0分 | 前25% | #语音增强 |
+| 120. | [Adaptive Deterministic Flow Matching for Target Speaker](/audio-paper-digest-blog/posts/2026-04-29-adaptive-deterministic-flow-matching-for-target) | 8.0分 | 前25% | #目标说话人提取 |
+| 121. | [Text2Move: Text-To-Moving Sound Generation via Trajecto](/audio-paper-digest-blog/posts/2026-04-29-text2move-text-to-moving-sound-generation-via) | 8.0分 | 前25% | #空间音频 |
+| 122. | [Deep Learning-Based Joint Optimization of Adaptive Feed](/audio-paper-digest-blog/posts/2026-04-29-deep-learning-based-joint-optimization-of) | 8.0分 | 前25% | #语音增强 |
+| 123. | [MMAudioSep: Taming Video-to-Audio Generative Model Towa](/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model) | 8.0分 | 前25% | #语音分离 |
+| 124. | [VChangeCodec: An Ultra Low-Complexity Neural Speech Cod](/audio-paper-digest-blog/posts/2026-04-29-vchangecodec-an-ultra-low-complexity-neural) | 8.0分 | 前25% | #语音转换 #语音增强 |
+| 125. | [Assessing the Impact of Speaker Identity in Speech Spoo](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-impact-of-speaker-identity-in) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 126. | [Cross-Domain Contrastive Learning with Dynamic Threshol](/audio-paper-digest-blog/posts/2026-04-29-cross-domain-contrastive-learning-with-dynamic) | 8.0分 | 前25% | #说话人验证 |
+| 127. | [Universr: Unified and Versatile Audio Super-Resolution ](/audio-paper-digest-blog/posts/2026-04-29-universr-unified-and-versatile-audio-super) | 8.0分 | 前25% | #音频超分辨率 |
+| 128. | [Improving Anomalous Sound Detection with Attribute-Awar](/audio-paper-digest-blog/posts/2026-04-29-improving-anomalous-sound-detection-with) | 8.0分 | 前10% | #音频事件检测 |
+| 129. | [Parametric Neural Amp Modeling with Active Learning](/audio-paper-digest-blog/posts/2026-04-29-parametric-neural-amp-modeling-with-active) | 8.0分 | 前25% | #音频生成 |
+| 130. | [A Unsupervised Domain Adaptation Framework For Semi-Sup](/audio-paper-digest-blog/posts/2026-04-29-a-unsupervised-domain-adaptation-framework-for) | 8.0分 | 前25% | #音乐信息检索 |
+| 131. | [Robust and Lightweight F0 Estimation Through Mid-Level ](/audio-paper-digest-blog/posts/2026-04-29-robust-and-lightweight-f0-estimation-through-mid) | 8.0分 | 前25% | #基频估计 |
+| 132. | [Evaluating High-Resolution Piano Sustain Pedal Depth Es](/audio-paper-digest-blog/posts/2026-04-29-evaluating-high-resolution-piano-sustain-pedal) | 8.0分 | 前25% | #音乐信息检索 |
+| 133. | [Group Relative Policy Optimization for Text-to-Speech w](/audio-paper-digest-blog/posts/2026-04-29-group-relative-policy-optimization-for-text-to) | 8.0分 | 前25% | #语音合成 |
+| 134. | [HyFlowSE: Hybrid End-To-End Flow-Matching Speech Enhanc](/audio-paper-digest-blog/posts/2026-04-29-hyflowse-hybrid-end-to-end-flow-matching-speech) | 8.0分 | 前25% | #语音增强 |
+| 135. | [HCGAN: Harmonic-Coupled Generative Adversarial Network ](/audio-paper-digest-blog/posts/2026-04-29-hcgan-harmonic-coupled-generative-adversarial) | 8.0分 | 前50% | #语音增强 |
+| 136. | [It Is Personal: The Importance of Personalization for R](/audio-paper-digest-blog/posts/2026-04-29-it-is-personal-the-importance-of-personalization) | 8.0分 | 前25% | #语音情感识别 |
+| 137. | [AMBER2: Dual Ambiguity-Aware Emotion Recognition Applie](/audio-paper-digest-blog/posts/2026-04-29-amber2-dual-ambiguity-aware-emotion-recognition) | 8.0分 | 前25% | #语音情感识别 |
+| 138. | [Subgraph Localization in the Subbands for Partially Spo](/audio-paper-digest-blog/posts/2026-04-29-subgraph-localization-in-the-subbands-for) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 139. | [On deepfake voice detection - It’s all in the presentat](/audio-paper-digest-blog/posts/2026-04-29-on-deepfake-voice-detection-its-all-in-the) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 140. | [Dynamic Noise-Aware Multi Lora Framework Towards Real-W](/audio-paper-digest-blog/posts/2026-04-29-dynamic-noise-aware-multi-lora-framework-towards) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 141. | [Mispronunciation Detection and Diagnosis Without Model ](/audio-paper-digest-blog/posts/2026-04-29-mispronunciation-detection-and-diagnosis-without) | 8.0分 | 前25% | #语音评估 |
+| 142. | [Exploring Resolution-Wise Shared Attention in Hybrid Ma](/audio-paper-digest-blog/posts/2026-04-29-exploring-resolution-wise-shared-attention-in) | 8.0分 | 前25% | #语音增强 |
+| 143. | [Mixture To Beamformed Mixture: Leveraging Beamformed Mi](/audio-paper-digest-blog/posts/2026-04-29-mixture-to-beamformed-mixture-leveraging) | 8.0分 | 前25% | #语音增强 |
+| 144. | [Lattice-Guided Consistency Regularization of Dual-Mode ](/audio-paper-digest-blog/posts/2026-04-29-lattice-guided-consistency-regularization-of-dual) | 8.0分 | 前25% | #语音识别 |
+| 145. | [BiRQ: Bi-Level Self-Labeling Random Quantization for Se](/audio-paper-digest-blog/posts/2026-04-29-birq-bi-level-self-labeling-random-quantization) | 8.0分 | 前25% | #语音识别 |
+| 146. | [MI-Fuse: Label Fusion for Unsupervised Domain Adaptatio](/audio-paper-digest-blog/posts/2026-04-29-mi-fuse-label-fusion-for-unsupervised-domain) | 8.0分 | 前25% | #语音情感识别 |
+| 147. | [Hybrid Pruning: In-Situ Compression of Self-Supervised ](/audio-paper-digest-blog/posts/2026-04-29-hybrid-pruning-in-situ-compression-of-self) | 8.0分 | 前25% | #说话人验证 |
+| 148. | [Distilling Attention Knowledge for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-distilling-attention-knowledge-for-speaker) | 8.0分 | 前25% | #说话人验证 |
+| 149. | [Cross-Architecture Knowledge Distillation of WavLM for ](/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of) | 8.0分 | 前25% | #说话人验证 |
+| 150. | [Do You Hear What I Mean? Quantifying the Instruction-Pe](/audio-paper-digest-blog/posts/2026-04-29-do-you-hear-what-i-mean-quantifying-the) | 8.0分 | 前25% | #语音合成 |
+| 151. | [OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-t](/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct) | 8.0分 | 前25% | #语音合成 |
+| 152. | [HD-PPT: Hierarchical Decoding of Content- and Prompt-Pr](/audio-paper-digest-blog/posts/2026-04-29-hd-ppt-hierarchical-decoding-of-content-and) | 8.0分 | 前25% | #语音合成 |
+| 153. | [Emotion-Aligned Generation in Diffusion Text to Speech ](/audio-paper-digest-blog/posts/2026-04-29-emotion-aligned-generation-in-diffusion-text-to) | 8.0分 | 前25% | #语音合成 |
+| 154. | [Hanui: Harnessing Distributional Discrepancies for Sing](/audio-paper-digest-blog/posts/2026-04-29-hanui-harnessing-distributional-discrepancies-for) | 8.0分 | 前10% | #音频深度伪造检测 |
+| 155. | [Localizing Speech Deepfakes Beyond Transitions via Segm](/audio-paper-digest-blog/posts/2026-04-29-localizing-speech-deepfakes-beyond-transitions) | 8.0分 | 前25% | #音频深度伪造检测 |
+| 156. | [Exploring Fine-Tuning Of Large Audio Language Models Fo](/audio-paper-digest-blog/posts/2026-04-29-exploring-fine-tuning-of-large-audio-language) | 8.0分 | 前25% | #语音理解 |
+| 157. | [Synthetic Data Domain Adaptation for ASR via LLM-Based ](/audio-paper-digest-blog/posts/2026-04-29-synthetic-data-domain-adaptation-for-asr-via-llm) | 8.0分 | 前25% | #语音识别 |
+| 158. | [Lingometer: On-Device Personal Speech Word Counting Sys](/audio-paper-digest-blog/posts/2026-04-29-lingometer-on-device-personal-speech-word) | 8.0分 | 前25% | #语音活动检测 |
+| 159. | [FocalCodec-Stream: Streaming Low-Bitrate Speech Coding ](/audio-paper-digest-blog/posts/2026-04-29-focalcodec-stream-streaming-low-bitrate-speech) | 8.0分 | 前25% | #语音编码 |
+| 160. | [AUV: Teaching Audio Universal Vector Quantization with ](/audio-paper-digest-blog/posts/2026-04-29-auv-teaching-audio-universal-vector-quantization) | 8.0分 | 前25% | #音频生成 |
+| 161. | [STACodec: Semantic Token Assignment for Balancing Acous](/audio-paper-digest-blog/posts/2026-04-29-stacodec-semantic-token-assignment-for-balancing) | 8.0分 | 前25% | #语音识别 |
+| 162. | [EuleroDec: A Complex-Valued RVQ-VAE for Efficient and R](/audio-paper-digest-blog/posts/2026-04-29-eulerodec-a-complex-valued-rvq-vae-for-efficient) | 8.0分 | 前25% | #音频生成 |
+| 163. | [FAC-FACodec: Controllable Zero-Shot Foreign Accent Conv](/audio-paper-digest-blog/posts/2026-04-29-fac-facodec-controllable-zero-shot-foreign-accent) | 8.0分 | 前25% | #语音转换 |
+| 164. | [Language-Infused Retrieval-Augmented CTC with Adaptive ](/audio-paper-digest-blog/posts/2026-04-29-language-infused-retrieval-augmented-ctc-with) | 8.0分 | 前25% | #语音识别 |
+| 165. | [Speech Emotion Recognition based on Hierarchical Transf](/audio-paper-digest-blog/posts/2026-04-29-speech-emotion-recognition-based-on-hierarchical) | 8.0分 | 前25% | #语音情感识别 |
+| 166. | [Measuring Prosody Diversity in Zero-Shot TTS: A New Met](/audio-paper-digest-blog/posts/2026-04-29-measuring-prosody-diversity-in-zero-shot-tts-a) | 8.0分 | 前25% | #语音合成 |
+| 167. | [DAIEN-TTS: Disentangled Audio Infilling for Environment](/audio-paper-digest-blog/posts/2026-04-29-daien-tts-disentangled-audio-infilling-for) | 8.0分 | 前25% | #语音合成 |
+| 168. | [Affect-Jigsaw: Integrating Core and Peripheral Emotions](/audio-paper-digest-blog/posts/2026-04-29-affect-jigsaw-integrating-core-and-peripheral) | 8.0分 | 前25% | #语音情感识别 |
+| 169. | [Modeling Strategies For Speech Enhancement in The Laten](/audio-paper-digest-blog/posts/2026-04-29-modeling-strategies-for-speech-enhancement-in-the) | 8.0分 | 前50% | #语音增强 |
+| 170. | [LAFUFU: Latent Acoustic Features For Ultra-Fast Utteran](/audio-paper-digest-blog/posts/2026-04-29-lafufu-latent-acoustic-features-for-ultra-fast) | 8.0分 | 前25% | #语音增强 |
+| 171. | [Relative Time Intervals Representation For Word-Level T](/audio-paper-digest-blog/posts/2026-04-29-relative-time-intervals-representation-for-word) | 8.0分 | 前25% | #语音识别 |
+| 172. | [Influence of Clean Speech Characteristics on Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-influence-of-clean-speech-characteristics-on) | 8.0分 | 前25% | #语音增强 |
+| 173. | [Spatially Aware Self-Supervised Models for Multi-Channe](/audio-paper-digest-blog/posts/2026-04-29-spatially-aware-self-supervised-models-for-multi) | 8.0分 | 前25% | #说话人分离 |
+| 174. | [Dual-Strategy-Enhanced Conbimamba for Neural Speaker Di](/audio-paper-digest-blog/posts/2026-04-29-dual-strategy-enhanced-conbimamba-for-neural) | 8.0分 | 前25% | #说话人分离 |
+| 175. | [Attention-Based Encoder-Decoder Target-Speaker Voice Ac](/audio-paper-digest-blog/posts/2026-04-29-attention-based-encoder-decoder-target-speaker) | 8.0分 | 前25% | #说话人分离 |
+| 176. | [Matrix-Structured Hierarchical Convolutional Modeling f](/audio-paper-digest-blog/posts/2026-04-29-matrix-structured-hierarchical-convolutional) | 8.0分 | 前25% | #语音评估 |
+| 177. | [Unsupervised Lexicon Learning from Speech is Limited by](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-lexicon-learning-from-speech-is) | 8.0分 | 前25% | #语音发现 |
+| 178. | [BridgeCode: A Dual Speech Representation Paradigm for A](/audio-paper-digest-blog/posts/2026-04-29-bridgecode-a-dual-speech-representation-paradigm) | 8.0分 | 前25% | #语音合成 |
+| 179. | [Continuous-Token Diffusion for Speaker-Referenced TTS i](/audio-paper-digest-blog/posts/2026-04-29-continuous-token-diffusion-for-speaker-referenced) | 8.0分 | 前10% | #语音合成 |
+| 180. | [RLBR: Reinforcement Learning with Biasing Rewards for C](/audio-paper-digest-blog/posts/2026-04-29-rlbr-reinforcement-learning-with-biasing-rewards) | 8.0分 | 前25% | #语音识别 |
+| 181. | [Prosody-Guided Harmonic Attention for Phase-Coherent Ne](/audio-paper-digest-blog/posts/2026-04-29-prosody-guided-harmonic-attention-for-phase) | 8.0分 | 前25% | #语音合成 |
+| 182. | [Grey-Box Prompt Tuning With Graph Alignment for Speech-](/audio-paper-digest-blog/posts/2026-04-29-grey-box-prompt-tuning-with-graph-alignment-for) | 8.0分 | 前25% | #语音识别 |
+| 183. | [Phonological Tokenizer: Prosody-Aware Phonetic Token Vi](/audio-paper-digest-blog/posts/2026-04-29-phonological-tokenizer-prosody-aware-phonetic) | 8.0分 | 前25% | #语音表示学习 |
+| 184. | [Frontend Token Enhancement for Token-Based Speech Recog](/audio-paper-digest-blog/posts/2026-04-29-frontend-token-enhancement-for-token-based-speech) | 8.0分 | 前25% | #语音识别 |
+| 185. | [ATOM: Adaptive Token-Level Optimal Transport Mixup for ](/audio-paper-digest-blog/posts/2026-04-29-atom-adaptive-token-level-optimal-transport-mixup) | 8.0分 | 前25% | #语音翻译 |
+| 186. | [The Curious Case of Visual Grounding: Different Effects](/audio-paper-digest-blog/posts/2026-04-29-the-curious-case-of-visual-grounding-different) | 8.0分 | 前25% | #模型评估 |
+| 187. | [Noise-Robust AV-ASR Using Visual Features both in the W](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-av-asr-using-visual-features-both-in) | 8.0分 | 前25% | #语音识别 |
+| 188. | [When Audio Matters: A Lightweight, Hierarchical Fusion ](/audio-paper-digest-blog/posts/2026-04-29-when-audio-matters-a-lightweight-hierarchical) | 8.0分 | 前25% | #语音情感识别 |
+| 189. | [Conditional Diffusion Models for Mental Health-Preservi](/audio-paper-digest-blog/posts/2026-04-29-conditional-diffusion-models-for-mental-health) | 8.0分 | 前25% | #语音转换 |
+| 190. | [Discrete-Continuous Fusion With Adaptive Hierarchical F](/audio-paper-digest-blog/posts/2026-04-29-discrete-continuous-fusion-with-adaptive) | 8.0分 | 前10% | #音频深度伪造检测 |
+| 191. | [WaveSP-Net: Learnable Wavelet-Domain Sparse Prompt Tuni](/audio-paper-digest-blog/posts/2026-04-29-wavesp-net-learnable-wavelet-domain-sparse-prompt) | 8.0分 | 前25% | #语音伪造检测 |
+| 192. | [Fine-Grained Frame Modeling in Multi-Head Self-Attentio](/audio-paper-digest-blog/posts/2026-04-29-fine-grained-frame-modeling-in-multi-head-self) | 8.0分 | 前25% | #语音伪造检测 |
+| 193. | [Optimizing Speech Language Models for Acoustic Consiste](/audio-paper-digest-blog/posts/2026-04-29-optimizing-speech-language-models-for-acoustic) | 8.0分 | 前25% | #语音合成 |
+| 194. | [Synthesized Data Selection via Score Distribution Match](/audio-paper-digest-blog/posts/2026-04-29-synthesized-data-selection-via-score-distribution) | 8.0分 | 前25% | #语音识别 |
+| 195. | [NCF-TTS: Enhancing Flow Matching Based Text-To-Speech w](/audio-paper-digest-blog/posts/2026-04-29-ncf-tts-enhancing-flow-matching-based-text-to) | 8.0分 | 前25% | #语音合成 |
+| 196. | [ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model w](/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech) | 8.0分 | 前25% | #语音合成 |
+| 197. | [Bayesian Low-Rank Factorization for Robust Model Adapta](/audio-paper-digest-blog/posts/2026-04-29-bayesian-low-rank-factorization-for-robust-model) | 8.0分 | 前25% | #语音识别 |
+| 198. | [LongSpeech: A Scalable Benchmark for Transcription, Tra](/audio-paper-digest-blog/posts/2026-04-29-longspeech-a-scalable-benchmark-for-transcription) | 7.8分 | 前25% | #基准测试 |
+| 199. | [CosyAccent: Duration-Controllable Accent Normalization ](/audio-paper-digest-blog/posts/2026-04-29-cosyaccent-duration-controllable-accent) | 7.8分 | 前25% | #语音转换 |
+| 200. | [Structure-Aware Diffusion Schrödinger Bridge](/audio-paper-digest-blog/posts/2026-04-29-structure-aware-diffusion-schrdinger-bridge) | 7.7分 | 前50% | #数据集对齐 |
+| 201. | [A Metric Learning Approach to Heart Murmur Detection fr](/audio-paper-digest-blog/posts/2026-04-29-a-metric-learning-approach-to-heart-murmur) | 7.7分 | 前25% | #音频分类 |
+| 202. | [Stemphonic: All-At-Once Flexible Multi-Stem Music Gener](/audio-paper-digest-blog/posts/2026-04-29-stemphonic-all-at-once-flexible-multi-stem-music) | 7.7分 | 前25% | #音乐生成 |
+| 203. | [Target Speaker Anonymization in Multi-Speaker Recording](/audio-paper-digest-blog/posts/2026-04-29-target-speaker-anonymization-in-multi-speaker) | 7.6分 | 前50% | #语音匿名化 |
+| 204. | [Bayesian Signal Separation Via Plug-and-Play Diffusion-](/audio-paper-digest-blog/posts/2026-04-29-bayesian-signal-separation-via-plug-and-play) | 7.5分 | 前25% | #语音分离 |
+| 205. | [Atomic Norm Minimization Revisited: Progressive Atom Id](/audio-paper-digest-blog/posts/2026-04-29-atomic-norm-minimization-revisited-progressive) | 7.5分 | 前25% | #声源定位 |
+| 206. | [LipsAM: Lipschitz-Continuous Amplitude Modifier for Aud](/audio-paper-digest-blog/posts/2026-04-29-lipsam-lipschitz-continuous-amplitude-modifier) | 7.5分 | 前25% | #语音增强 |
+| 207. | [A Noniterative Phase Retrieval Considering the Zeros of](/audio-paper-digest-blog/posts/2026-04-29-a-noniterative-phase-retrieval-considering-the) | 7.5分 | 前25% | #信号处理 |
+| 208. | [nGPT as a Scalable Architecture for Speech Recognition ](/audio-paper-digest-blog/posts/2026-04-29-ngpt-as-a-scalable-architecture-for-speech) | 7.5分 | 前25% | #语音识别 |
+| 209. | [Physics-Informed Neural Networks for Ocean Acoustic Fie](/audio-paper-digest-blog/posts/2026-04-29-physics-informed-neural-networks-for-ocean) | 7.5分 | 前25% | #声源定位 |
+| 210. | [EEND-SAA: Enrollment-Less Main Speaker Voice Activity D](/audio-paper-digest-blog/posts/2026-04-29-eend-saa-enrollment-less-main-speaker-voice) | 7.5分 | 前25% | #语音活动检测 |
+| 211. | [RoCo: Robust Code for Fast and Effective Proactive Defe](/audio-paper-digest-blog/posts/2026-04-29-roco-robust-code-for-fast-and-effective-proactive) | 7.5分 | 前25% | #音频安全 |
+| 212. | [Input-Adaptive Differentiable Filterbanks via Hypernetw](/audio-paper-digest-blog/posts/2026-04-29-input-adaptive-differentiable-filterbanks-via) | 7.5分 | 前25% | #语音识别 |
+| 213. | [A Study of Data Selection Strategies for Pre-Training S](/audio-paper-digest-blog/posts/2026-04-29-a-study-of-data-selection-strategies-for-pre) | 7.5分 | 前25% | #语音识别 |
+| 214. | [SAGA-SR: Semantically and Acoustically Guided Audio Sup](/audio-paper-digest-blog/posts/2026-04-29-saga-sr-semantically-and-acoustically-guided) | 7.5分 | 前25% | #音频增强 |
+| 215. | [MR-FlowDPO: Multi-Reward Direct Preference Optimization](/audio-paper-digest-blog/posts/2026-04-29-mr-flowdpo-multi-reward-direct-preference) | 7.5分 | 前25% | #音乐生成 |
+| 216. | [Low-Resource Speech-Based Early Alzheimers Detection vi](/audio-paper-digest-blog/posts/2026-04-29-low-resource-speech-based-early-alzheimers) | 7.5分 | 前25% | #语音生物标志物 |
+| 217. | [Improving Interpretability in Generative Multitimbral D](/audio-paper-digest-blog/posts/2026-04-29-improving-interpretability-in-generative) | 7.5分 | 前25% | #音频生成 |
+| 218. | [Generating Moving 3d Soundscapes with Latent Diffusion ](/audio-paper-digest-blog/posts/2026-04-29-generating-moving-3d-soundscapes-with-latent) | 7.5分 | 前25% | #空间音频 |
+| 219. | [Reliable AI via Age-Balanced Validation: Fair Model Sel](/audio-paper-digest-blog/posts/2026-04-29-reliable-ai-via-age-balanced-validation-fair) | 7.5分 | 前25% | #语音生物标志物 |
+| 220. | [K-Function: Joint Pronunciation Transcription and Feedb](/audio-paper-digest-blog/posts/2026-04-29-k-function-joint-pronunciation-transcription-and) | 7.5分 | 前25% | #语音识别 |
+| 221. | [Improving Active Learning for Melody Estimation by Dise](/audio-paper-digest-blog/posts/2026-04-29-improving-active-learning-for-melody-estimation) | 7.5分 | 前25% | #音乐信息检索 |
+| 222. | [A Text-To-Text Alignment Algorithm for Better Evaluatio](/audio-paper-digest-blog/posts/2026-04-29-a-text-to-text-alignment-algorithm-for-better) | 7.5分 | 前25% | #模型评估 |
+| 223. | [A Robust KNN Approach for Multi-Class Laryngeal Disease](/audio-paper-digest-blog/posts/2026-04-29-a-robust-knn-approach-for-multi-class-laryngeal) | 7.5分 | 前25% | #音频分类 |
+| 224. | [Probing the Hidden Talent of ASR foundation models for ](/audio-paper-digest-blog/posts/2026-04-29-probing-the-hidden-talent-of-asr-foundation) | 7.5分 | 前25% | #预训练 |
+| 225. | [Beyond Mapping: Domain-Invariant Representations via Sp](/audio-paper-digest-blog/posts/2026-04-29-beyond-mapping-domain-invariant-representations) | 7.5分 | 前25% | #领域适应 |
+| 226. | [Via Score to Performance: Efficient Human-Controllable ](/audio-paper-digest-blog/posts/2026-04-29-via-score-to-performance-efficient-human) | 7.5分 | 前25% | #音乐生成 |
+| 227. | [Flexi-LoRA with Input-Adaptive Ranks: Efficient Finetun](/audio-paper-digest-blog/posts/2026-04-29-flexi-lora-with-input-adaptive-ranks-efficient) | 7.5分 | 前25% | #语音识别 |
+| 228. | [Toward Faithful Explanations in Acoustic Anomaly Detect](/audio-paper-digest-blog/posts/2026-04-29-toward-faithful-explanations-in-acoustic-anomaly) | 7.5分 | 前25% | #音频事件检测 |
+| 229. | [Behind the Scenes: Mechanistic Interpretability of Lora](/audio-paper-digest-blog/posts/2026-04-29-behind-the-scenes-mechanistic-interpretability-of) | 7.5分 | 前25% | #语音情感识别 |
+| 230. | [Encoding Emotion Through Self-Supervised Eye Movement R](/audio-paper-digest-blog/posts/2026-04-29-encoding-emotion-through-self-supervised-eye) | 7.5分 | 前25% | #语音情感识别 |
+| 231. | [Temporal Distillation for Music Representation Learning](/audio-paper-digest-blog/posts/2026-04-29-temporal-distillation-for-music-representation) | 7.5分 | 前25% | #音乐信息检索 |
+| 232. | [UMV: A Mixture-Of-Experts Vision Transformer with Multi](/audio-paper-digest-blog/posts/2026-04-29-umv-a-mixture-of-experts-vision-transformer-with) | 7.5分 | 前25% | #音频分类 |
+| 233. | [AudioFuse: Unified Spectral-Temporal Learning Via A Hyb](/audio-paper-digest-blog/posts/2026-04-29-audiofuse-unified-spectral-temporal-learning-via) | 7.5分 | 前25% | #音频分类 |
+| 234. | [LESS: Large Language Model Enhanced Semi-Supervised Lea](/audio-paper-digest-blog/posts/2026-04-29-less-large-language-model-enhanced-semi) | 7.5分 | 前25% | #语音识别 #语音翻译 |
+| 235. | [Audio Classification Models are Vulnerable to Filter Pe](/audio-paper-digest-blog/posts/2026-04-29-audio-classification-models-are-vulnerable-to) | 7.5分 | 前25% | #音频分类 |
+| 236. | [SpeechCT-CLIP: Distilling Text-Image Knowledge to Speec](/audio-paper-digest-blog/posts/2026-04-29-speechct-clip-distilling-text-image-knowledge-to) | 7.5分 | 前25% | #医疗AI |
+| 237. | [MSANET: Multi-Scale Semantic Aggregation Network for Br](/audio-paper-digest-blog/posts/2026-04-29-msanet-multi-scale-semantic-aggregation-network) | 7.5分 | 前25% | #语音增强 |
+| 238. | [Multi-Scale Physiologically-Motivated Alignment for Aud](/audio-paper-digest-blog/posts/2026-04-29-multi-scale-physiologically-motivated-alignment) | 7.5分 | 前25% | #听觉注意力解码 |
+| 239. | [PC-MCL: Patient-Consistent Multi-Cycle Learning with Mu](/audio-paper-digest-blog/posts/2026-04-29-pc-mcl-patient-consistent-multi-cycle-learning) | 7.5分 | 前10% | #音频分类 |
+| 240. | [EMG-to-Speech with Fewer Channels](/audio-paper-digest-blog/posts/2026-04-29-emg-to-speech-with-fewer-channels) | 7.5分 | 前25% | #语音合成 |
+| 241. | [A Robust Multi-Scale Framework with Test-Time Adaptatio](/audio-paper-digest-blog/posts/2026-04-29-a-robust-multi-scale-framework-with-test-time) | 7.5分 | 前25% | #语音解码 |
+| 242. | [FD-ARL: Feature Disentanglement with Adversarial-Recons](/audio-paper-digest-blog/posts/2026-04-29-fd-arl-feature-disentanglement-with-adversarial) | 7.5分 | 前10% | #听觉注意力解码 |
+| 243. | [Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synt](/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound) | 7.5分 | 前25% | #音频生成 |
+| 244. | [Disentangling Physiology from Fidelity: Latent-Guided D](/audio-paper-digest-blog/posts/2026-04-29-disentangling-physiology-from-fidelity-latent) | 7.5分 | 前25% | #音频生成 |
+| 245. | [PSTalker: Realistic 3D Talking Head Synthesis via a Sem](/audio-paper-digest-blog/posts/2026-04-29-pstalker-realistic-3d-talking-head-synthesis-via) | 7.5分 | 前25% | #说话人合成 |
+| 246. | [Perceptual Quality Assessment for Stylized Talking Head](/audio-paper-digest-blog/posts/2026-04-29-perceptual-quality-assessment-for-stylized) | 7.5分 | 前50% | #模型评估 |
+| 247. | [GRNet: Graph Reconstruction Network for Robust Multimod](/audio-paper-digest-blog/posts/2026-04-29-grnet-graph-reconstruction-network-for-robust) | 7.5分 | 前25% | #多模态情感分析 |
+| 248. | [Assessing Identity Leakage in Talking Face Generation: ](/audio-paper-digest-blog/posts/2026-04-29-assessing-identity-leakage-in-talking-face) | 7.5分 | 前25% | #说话人脸生成 |
+| 249. | [Phoneme-Level Visual Speech Recognition via Point-Visua](/audio-paper-digest-blog/posts/2026-04-29-phoneme-level-visual-speech-recognition-via-point) | 7.5分 | 前25% | #视觉语音识别 |
+| 250. | [Inter-Dialog Contrastive Learning for Multimodal Emotio](/audio-paper-digest-blog/posts/2026-04-29-inter-dialog-contrastive-learning-for-multimodal) | 7.5分 | 前25% | #语音情感识别 |
+| 251. | [ADH-VA: Adaptive Directed-Hypergraph Convolution with V](/audio-paper-digest-blog/posts/2026-04-29-adh-va-adaptive-directed-hypergraph-convolution) | 7.5分 | 前10% | #语音情感识别 |
+| 252. | [Graph-Based Emotion Consensus Perception Learning for M](/audio-paper-digest-blog/posts/2026-04-29-graph-based-emotion-consensus-perception-learning) | 7.5分 | 前25% | #多模态情感识别 |
+| 253. | [APKD: Aligned And Paced Knowledge Distillation Towards ](/audio-paper-digest-blog/posts/2026-04-29-apkd-aligned-and-paced-knowledge-distillation) | 7.5分 | 前25% | #情感识别 |
+| 254. | [An Audio-Visual Speech Separation Network with Joint Cr](/audio-paper-digest-blog/posts/2026-04-29-an-audio-visual-speech-separation-network-with) | 7.5分 | 前25% | #语音分离 |
+| 255. | [Audio-Guided Multimodal Approach for Fine-Grained Align](/audio-paper-digest-blog/posts/2026-04-29-audio-guided-multimodal-approach-for-fine-grained) | 7.5分 | 前25% | #说话人检测 |
+| 256. | [SURE: Synergistic Uncertainty-Aware Reasoning for Multi](/audio-paper-digest-blog/posts/2026-04-29-sure-synergistic-uncertainty-aware-reasoning-for) | 7.5分 | 前25% | #语音情感识别 |
+| 257. | [Temporal-Spatial Decouple Before Act: Disentangled Repr](/audio-paper-digest-blog/posts/2026-04-29-temporal-spatial-decouple-before-act-disentangled) | 7.5分 | 前25% | #情感分析 |
+| 258. | [Dynamic Balanced Cross-Modal Attention with Gated Seque](/audio-paper-digest-blog/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated) | 7.5分 | 前25% | #跨模态 |
+| 259. | [Savgbench: Benchmarking Spatially Aligned Audio-Video G](/audio-paper-digest-blog/posts/2026-04-29-savgbench-benchmarking-spatially-aligned-audio) | 7.5分 | 前50% | #基准测试 |
+| 260. | [Tpeformer: Temporal Patch Embedding Transformer](/audio-paper-digest-blog/posts/2026-04-29-tpeformer-temporal-patch-embedding-transformer) | 7.5分 | 前25% | #语音情感识别 |
+| 261. | [DSSR: Decoupling Salient and Subtle Representations Und](/audio-paper-digest-blog/posts/2026-04-29-dssr-decoupling-salient-and-subtle) | 7.5分 | 前25% | #情感识别 |
+| 262. | [CaMoD: Causal-Aware Modality Denoising for Multimodal D](/audio-paper-digest-blog/posts/2026-04-29-camod-causal-aware-modality-denoising-for) | 7.5分 | 前25% | #多模态对话意图识别 |
+| 263. | [SceneRAG: Scene-Level Retrieval-Augmented Generation fo](/audio-paper-digest-blog/posts/2026-04-29-scenerag-scene-level-retrieval-augmented) | 7.5分 | 前25% | #视频理解 |
+| 264. | [Streamingbench: Assessing the Gap for MLLMs to Achieve ](/audio-paper-digest-blog/posts/2026-04-29-streamingbench-assessing-the-gap-for-mllms-to) | 7.5分 | 前25% | #基准测试 |
+| 265. | [Towards Effective Negation Modeling in Joint Audio-Text](/audio-paper-digest-blog/posts/2026-04-29-towards-effective-negation-modeling-in-joint) | 7.5分 | 前25% | #音乐理解 |
+| 266. | [MusiCRS: Benchmarking Audio-Centric Conversational Reco](/audio-paper-digest-blog/posts/2026-04-29-musicrs-benchmarking-audio-centric-conversational) | 7.5分 | 前25% | #音乐推荐 |
+| 267. | [LETPAV: Lexicon-Enhanced Text with Progressive Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-letpav-lexicon-enhanced-text-with-progressive) | 7.5分 | 前25% | #语音情感识别 |
+| 268. | [Coupling Acoustic Geometry and Visual Semantics for Rob](/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics) | 7.5分 | 前25% | #空间音频 |
+| 269. | [Constructing Composite Features for Interpretable Music](/audio-paper-digest-blog/posts/2026-04-29-constructing-composite-features-for-interpretable) | 7.5分 | 前25% | #音乐信息检索 |
+| 270. | [GMS-CAVP: Improving Audio-Video Correspondence with Mul](/audio-paper-digest-blog/posts/2026-04-29-gms-cavp-improving-audio-video-correspondence) | 7.5分 | 前25% | #音频生成 |
+| 271. | [Multimodal Variational Graph Network for Multimodal Sen](/audio-paper-digest-blog/posts/2026-04-29-multimodal-variational-graph-network-for) | 7.5分 | 前25% | #语音情感识别 |
+| 272. | [KSDIFF: Keyframe-Augmented Speech-Aware Dual-Path Diffu](/audio-paper-digest-blog/posts/2026-04-29-ksdiff-keyframe-augmented-speech-aware-dual-path) | 7.5分 | 前25% | #音频生成 |
+| 273. | [VividTalker: A Modular Framework for Expressive 3D Talk](/audio-paper-digest-blog/posts/2026-04-29-vividtalker-a-modular-framework-for-expressive-3d) | 7.5分 | 前25% | #语音合成 |
+| 274. | [Diffemotalk: Audio-Driven Facial Animation with Fine-Gr](/audio-paper-digest-blog/posts/2026-04-29-diffemotalk-audio-driven-facial-animation-with) | 7.5分 | 前25% | #语音情感识别 |
+| 275. | [Membership Inference Attack against Music Diffusion Mod](/audio-paper-digest-blog/posts/2026-04-29-membership-inference-attack-against-music) | 7.5分 | 前25% | #音频安全 |
+| 276. | [Adversarial Fine-Tuning on Speech Foundation Model with](/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation) | 7.5分 | 前25% | #语音识别 |
+| 277. | [Content Anonymization for Privacy in Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-content-anonymization-for-privacy-in-long-form) | 7.5分 | 前25% | #语音匿名化 |
+| 278. | [MFF-RVRDI: Multimodal Fusion Framework for Robust Video](/audio-paper-digest-blog/posts/2026-04-29-mff-rvrdi-multimodal-fusion-framework-for-robust) | 7.5分 | 前25% | #视频设备识别 |
+| 279. | [Detecting and Attributing Synthetic Spanish Speech: The](/audio-paper-digest-blog/posts/2026-04-29-detecting-and-attributing-synthetic-spanish) | 7.5分 | 前25% | #语音伪造检测 |
+| 280. | [Content Leakage in Librispeech and its Impact on the Pr](/audio-paper-digest-blog/posts/2026-04-29-content-leakage-in-librispeech-and-its-impact-on) | 7.5分 | 前25% | #语音匿名化 |
+| 281. | [Improving the Speaker Anonymization Evaluation’s Robust](/audio-paper-digest-blog/posts/2026-04-29-improving-the-speaker-anonymization-evaluations) | 7.5分 | 前50% | #语音匿名化 |
+| 282. | [DPO-Regularized Regression for Age Prediction](/audio-paper-digest-blog/posts/2026-04-29-dpo-regularized-regression-for-age-prediction) | 7.5分 | 前25% | #说话人识别 |
+| 283. | [ZK-VSA: Zero-Knowledge Verifiable Speaker Anonymization](/audio-paper-digest-blog/posts/2026-04-29-zk-vsa-zero-knowledge-verifiable-speaker) | 7.5分 | 前25% | #语音匿名化 |
+| 284. | [A Feature-Optimized Audio Watermarking Algorithm with A](/audio-paper-digest-blog/posts/2026-04-29-a-feature-optimized-audio-watermarking-algorithm) | 7.5分 | 前25% | #音频安全 |
+| 285. | [Multi-Task Transformer for Explainable Speech Deepfake ](/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech) | 7.5分 | 前25% | #语音伪造检测 |
+| 286. | [AVATAR: Audio-Visual Adaptive Fusion via Trained Agent ](/audio-paper-digest-blog/posts/2026-04-29-avatar-audio-visual-adaptive-fusion-via-trained) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 287. | [FOCA: Multimodal Malware Classification via Hyperbolic ](/audio-paper-digest-blog/posts/2026-04-29-foca-multimodal-malware-classification-via) | 7.5分 | 前25% | #音频分类 |
+| 288. | [Full Band Denoising of Room Impulse Response in the Wav](/audio-paper-digest-blog/posts/2026-04-29-full-band-denoising-of-room-impulse-response-in) | 7.5分 | 前25% | #房间脉冲响应去噪 |
+| 289. | [Bone-Conduction Guided Multimodal Speech Enhancement wi](/audio-paper-digest-blog/posts/2026-04-29-bone-conduction-guided-multimodal-speech) | 7.5分 | 前25% | #语音增强 |
+| 290. | [Real-Time Streaming MEL Vocoding with Generative Flow M](/audio-paper-digest-blog/posts/2026-04-29-real-time-streaming-mel-vocoding-with-generative) | 7.5分 | 前25% | #语音合成 |
+| 291. | [Aneural Forward Filtering for Speaker-Image Separation](/audio-paper-digest-blog/posts/2026-04-29-aneural-forward-filtering-for-speaker-image) | 7.5分 | 前25% | #语音分离 |
+| 292. | [Str-DiffSep: Streamable Diffusion Model for Speech Sepa](/audio-paper-digest-blog/posts/2026-04-29-str-diffsep-streamable-diffusion-model-for-speech) | 7.5分 | 前25% | #语音分离 |
+| 293. | [PromptSep: Generative Audio Separation Via Multimodal P](/audio-paper-digest-blog/posts/2026-04-29-promptsep-generative-audio-separation-via) | 7.5分 | 前10% | #语音分离 |
+| 294. | [Sunac: Source-Aware Unified Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-sunac-source-aware-unified-neural-audio-codec) | 7.5分 | 前50% | #音频生成 |
+| 295. | [S-PRESSO: Ultra Low Bitrate Sound Effect Compression wi](/audio-paper-digest-blog/posts/2026-04-29-s-presso-ultra-low-bitrate-sound-effect) | 7.5分 | 前25% | #音频生成 |
+| 296. | [Deepaq: A Perceptual Audio Quality Metric Based on Foun](/audio-paper-digest-blog/posts/2026-04-29-deepaq-a-perceptual-audio-quality-metric-based-on) | 7.5分 | 前25% | #音频质量评估 |
+| 297. | [The 3rd Clarity Prediction Challenge: A Machine Learnin](/audio-paper-digest-blog/posts/2026-04-29-the-3rd-clarity-prediction-challenge-a-machine) | 7.5分 | 前25% | #语音增强 |
+| 298. | [Qastanet: A DNN-Based Quality Metric for Spatial Audio](/audio-paper-digest-blog/posts/2026-04-29-qastanet-a-dnn-based-quality-metric-for-spatial) | 7.5分 | 前50% | #空间音频 |
+| 299. | [PICOAUDIO2: Temporal Controllable Text-to-Audio Generat](/audio-paper-digest-blog/posts/2026-04-29-picoaudio2-temporal-controllable-text-to-audio) | 7.5分 | 前25% | #音频生成 |
+| 300. | [FoleyBench: A Benchmark for Video-to-Audio Models](/audio-paper-digest-blog/posts/2026-04-29-foleybench-a-benchmark-for-video-to-audio-models) | 7.5分 | 前25% | #音频生成 |
+| 301. | [AUDIOCARDS: Structured Metadata Improves Audio Language](/audio-paper-digest-blog/posts/2026-04-29-audiocards-structured-metadata-improves-audio) | 7.5分 | 前50% | #音频检索 |
+| 302. | [Task-Oriented Sound Privacy Preservation for Sound Even](/audio-paper-digest-blog/posts/2026-04-29-task-oriented-sound-privacy-preservation-for) | 7.5分 | 前25% | #音频事件检测 |
+| 303. | [WaveSpikeNet: A Wavelet-Spiking Fusion Architecture for](/audio-paper-digest-blog/posts/2026-04-29-wavespikenet-a-wavelet-spiking-fusion) | 7.5分 | 前25% | #音频分类 |
+| 304. | [Two-Stage Language Model Framework for Acoustic Echo Ca](/audio-paper-digest-blog/posts/2026-04-29-two-stage-language-model-framework-for-acoustic) | 7.5分 | 前25% | #语音增强 |
+| 305. | [Differentiable Grouped Feedback Delay Networks for Lear](/audio-paper-digest-blog/posts/2026-04-29-differentiable-grouped-feedback-delay-networks) | 7.5分 | 前25% | #空间音频 |
+| 306. | [Denoising Of Stochastic Ray Tracing Room Impulse Respon](/audio-paper-digest-blog/posts/2026-04-29-denoising-of-stochastic-ray-tracing-room-impulse) | 7.5分 | 前25% | #空间音频 |
+| 307. | [Automatic Music Mixing Using a Generative Model of Effe](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-mixing-using-a-generative-model) | 7.5分 | 前25% | #音乐生成 |
+| 308. | [Automatic Music Sample Identification with Multi-Track ](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-sample-identification-with-multi) | 7.5分 | 前25% | #音频检索 |
+| 309. | [Joint Estimation of Piano Dynamics and Metrical Structu](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-piano-dynamics-and-metrical) | 7.5分 | 前25% | #音乐理解 |
+| 310. | [Sparse-View Visual-Acoustic Latent Learning for Novel-V](/audio-paper-digest-blog/posts/2026-04-29-sparse-view-visual-acoustic-latent-learning-for) | 7.5分 | 前25% | #空间音频 |
+| 311. | [E2E-AEC: Implementing An End-To-End Neural Network Lear](/audio-paper-digest-blog/posts/2026-04-29-e2e-aec-implementing-an-end-to-end-neural-network) | 7.5分 | 前25% | #语音增强 |
+| 312. | [Joint Estimation of Primary and Secondary Paths for Per](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-primary-and-secondary-paths) | 7.5分 | 前25% | #主动降噪 |
+| 313. | [Multimodal Room Impulse Response Generation Through Lat](/audio-paper-digest-blog/posts/2026-04-29-multimodal-room-impulse-response-generation) | 7.5分 | 前25% | #音频生成 |
+| 314. | [HiFi-HARP: A High-Fidelity 7th-Order Ambisonic Room Imp](/audio-paper-digest-blog/posts/2026-04-29-hifi-harp-a-high-fidelity-7th-order-ambisonic) | 7.5分 | 前25% | #数据集 |
+| 315. | [Audio-to-Score Jazz Solo Transcription with the Rhythm ](/audio-paper-digest-blog/posts/2026-04-29-audio-to-score-jazz-solo-transcription-with-the) | 7.5分 | 前25% | #音乐信息检索 |
+| 316. | [Motionbeat: Motion-Aligned Music Representation via Emb](/audio-paper-digest-blog/posts/2026-04-29-motionbeat-motion-aligned-music-representation) | 7.5分 | 前25% | #舞蹈生成 |
+| 317. | [Benchmarking Music Autotagging with MGPHot Expert Annot](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-music-autotagging-with-mgphot-expert) | 7.5分 | 前25% | #音乐信息检索 |
+| 318. | [UTI-LLM: A Personalized Articulatory-Speech Therapy Ass](/audio-paper-digest-blog/posts/2026-04-29-uti-llm-a-personalized-articulatory-speech) | 7.5分 | 前25% | #语音对话系统 |
+| 319. | [Multi-Layer Attentive Probing Improves Transfer of Audi](/audio-paper-digest-blog/posts/2026-04-29-multi-layer-attentive-probing-improves-transfer) | 7.5分 | 前25% | #生物声学 |
+| 320. | [Efficient Depression Detection from Speech via Language](/audio-paper-digest-blog/posts/2026-04-29-efficient-depression-detection-from-speech-via) | 7.5分 | 前25% | #语音生物标志物 |
+| 321. | [Time vs. Layer: Locating Predictive Cues for Dysarthric](/audio-paper-digest-blog/posts/2026-04-29-time-vs-layer-locating-predictive-cues-for) | 7.5分 | 前50% | #语音质量评估 |
+| 322. | [Theory and Application of Circular Relative Harmonic Co](/audio-paper-digest-blog/posts/2026-04-29-theory-and-application-of-circular-relative) | 7.5分 | 前25% | #声源定位 |
+| 323. | [Sequential and Simultaneous Optimization of Microphone ](/audio-paper-digest-blog/posts/2026-04-29-sequential-and-simultaneous-optimization-of) | 7.5分 | 前25% | #声源定位 |
+| 324. | [Adaptive Per-Channel Energy Normalization Front-End for](/audio-paper-digest-blog/posts/2026-04-29-adaptive-per-channel-energy-normalization-front) | 7.5分 | 前25% | #音频分类 |
+| 325. | [Adaptive Embedding Fusion with Contrastive Learning for](/audio-paper-digest-blog/posts/2026-04-29-adaptive-embedding-fusion-with-contrastive) | 7.5分 | 前25% | #音频分类 |
+| 326. | [Incremental Learning for Audio Classification with Hebb](/audio-paper-digest-blog/posts/2026-04-29-incremental-learning-for-audio-classification) | 7.5分 | 前25% | #音频分类 |
+| 327. | [A Task-Aware Dual-Level Self-Supervised Learning Method](/audio-paper-digest-blog/posts/2026-04-29-a-task-aware-dual-level-self-supervised-learning) | 7.5分 | 前25% | #音频事件检测 |
+| 328. | [Sing2Song: An Accompaniment Generation System Based on ](/audio-paper-digest-blog/posts/2026-04-29-sing2song-an-accompaniment-generation-system) | 7.5分 | 前25% | #音乐生成 |
+| 329. | [Differentiable Pulsetable Synthesis for Wind Instrument](/audio-paper-digest-blog/posts/2026-04-29-differentiable-pulsetable-synthesis-for-wind) | 7.5分 | 前25% | #音乐生成 |
+| 330. | [Compression meets Sampling: LZ78-SPA for Efficient Symb](/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient) | 7.5分 | 前25% | #音乐生成 |
+| 331. | [Break-the-Beat! Controllable MIDI-to-Drum audio synthes](/audio-paper-digest-blog/posts/2026-04-29-break-the-beat-controllable-midi-to-drum-audio) | 7.5分 | 前25% | #音乐生成 |
+| 332. | [Text2midi-InferAlign: Improving Symbolic Music Generati](/audio-paper-digest-blog/posts/2026-04-29-text2midi-inferalign-improving-symbolic-music) | 7.5分 | 前25% | #音乐生成 |
+| 333. | [Triad: Tri-Head with Auxiliary Duplicating Permutation ](/audio-paper-digest-blog/posts/2026-04-29-triad-tri-head-with-auxiliary-duplicating) | 7.5分 | 前25% | #音频事件检测 |
+| 334. | [Reconstruction of Spherical Sound Source Radiation Char](/audio-paper-digest-blog/posts/2026-04-29-reconstruction-of-spherical-sound-source) | 7.5分 | 前25% | #空间音频 |
+| 335. | [A Hybrid Convolution-Mamba Network with Tone-Octave Con](/audio-paper-digest-blog/posts/2026-04-29-a-hybrid-convolution-mamba-network-with-tone) | 7.5分 | 前25% | #歌唱旋律提取 |
+| 336. | [Diff-vs: Efficient Audio-Aware Diffusion U-Net for Voca](/audio-paper-digest-blog/posts/2026-04-29-diff-vs-efficient-audio-aware-diffusion-u-net-for) | 7.5分 | 前25% | #语音分离 |
+| 337. | [BeatMamba: Bidirectional Selective State-Space Modeling](/audio-paper-digest-blog/posts/2026-04-29-beatmamba-bidirectional-selective-state-space) | 7.5分 | 前25% | #音乐信息检索 |
+| 338. | [Spectrogram Event Based Feature Representation for Gene](/audio-paper-digest-blog/posts/2026-04-29-spectrogram-event-based-feature-representation) | 7.5分 | 前25% | #音乐信息检索 |
+| 339. | [SpatialNet-Echo: Real-Time Acoustic Echo Cancellation v](/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo) | 7.5分 | 前25% | #语音增强 |
+| 340. | [A Stabilized Hybrid Active Noise Control Algorithm of G](/audio-paper-digest-blog/posts/2026-04-29-a-stabilized-hybrid-active-noise-control) | 7.5分 | 前25% | #语音增强 |
+| 341. | [Group-Sparse Gaussian Process Regression for Inhomogene](/audio-paper-digest-blog/posts/2026-04-29-group-sparse-gaussian-process-regression-for) | 7.5分 | 前25% | #声场估计 |
+| 342. | [Speaker Anonymisation for Speech-Based Suicide Risk Det](/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide) | 7.5分 | 前25% | #语音匿名化 |
+| 343. | [Multi-View Hierarchical Hypergraph Neural Network for A](/audio-paper-digest-blog/posts/2026-04-29-multi-view-hierarchical-hypergraph-neural-network) | 7.5分 | 前25% | #语音生物标志物 |
+| 344. | [Evaluating Pretrained Speech Embedding Systems for Dysa](/audio-paper-digest-blog/posts/2026-04-29-evaluating-pretrained-speech-embedding-systems) | 7.5分 | 前50% | #语音生物标志物 |
+| 345. | [Attentive Masked Self-Distillation for Respiratory Soun](/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for) | 7.5分 | 前25% | #音频分类 |
+| 346. | [Reference-Aware SFM Layers for Intrusive Intelligibilit](/audio-paper-digest-blog/posts/2026-04-29-reference-aware-sfm-layers-for-intrusive) | 7.5分 | 前10% | #语音评估 |
+| 347. | [Leveraging Multiple Speech Enhancers for Non-Intrusive ](/audio-paper-digest-blog/posts/2026-04-29-leveraging-multiple-speech-enhancers-for-non) | 7.5分 | 前25% | #模型评估 |
+| 348. | [Enhancing Speech Intelligibility Prediction for Hearing](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speech-intelligibility-prediction-for) | 7.5分 | 前25% | #语音增强 |
+| 349. | [WAV2LEV: Predicting Levenshtein Edit Operation Sequence](/audio-paper-digest-blog/posts/2026-04-29-wav2lev-predicting-levenshtein-edit-operation) | 7.5分 | 前25% | #语音识别 |
+| 350. | [SingMOS-Pro: An Comprehensive Benchmark For Singing Qua](/audio-paper-digest-blog/posts/2026-04-29-singmos-pro-an-comprehensive-benchmark-for) | 7.5分 | 前25% | #歌唱语音合成 |
+| 351. | [A Learning-Based Automotive Sound Field Reproduction Me](/audio-paper-digest-blog/posts/2026-04-29-a-learning-based-automotive-sound-field) | 7.5分 | 前25% | #空间音频 |
+| 352. | [H-nnPBFDAF: Hierarchical Neural Network Partitioned Blo](/audio-paper-digest-blog/posts/2026-04-29-h-nnpbfdaf-hierarchical-neural-network) | 7.5分 | 前25% | #语音增强 |
+| 353. | [A Data-Driven Framework for Personal Sound Zone Control](/audio-paper-digest-blog/posts/2026-04-29-a-data-driven-framework-for-personal-sound-zone) | 7.5分 | 前25% | #空间音频 |
+| 354. | [Personal Sound Zones with Flexible Bright Zone Control](/audio-paper-digest-blog/posts/2026-04-29-personal-sound-zones-with-flexible-bright-zone) | 7.5分 | 前25% | #空间音频 |
+| 355. | [Diffusion Timbre Transfer via Mutual Information Guided](/audio-paper-digest-blog/posts/2026-04-29-diffusion-timbre-transfer-via-mutual-information) | 7.5分 | 前25% | #音乐生成 |
+| 356. | [D3PIA: A Discrete Denoising Diffusion Model for Piano A](/audio-paper-digest-blog/posts/2026-04-29-d3pia-a-discrete-denoising-diffusion-model-for) | 7.5分 | 前25% | #音乐生成 |
+| 357. | [Evaluating Disentangled Representations for Controllabl](/audio-paper-digest-blog/posts/2026-04-29-evaluating-disentangled-representations-for) | 7.5分 | 前25% | #音乐生成 |
+| 358. | [Aligning Language Models for Lyric-to-Melody Generation](/audio-paper-digest-blog/posts/2026-04-29-aligning-language-models-for-lyric-to-melody) | 7.5分 | 前25% | #音乐生成 |
+| 359. | [RHO-PERFECT: Correlation Ceiling for Subjective Evaluat](/audio-paper-digest-blog/posts/2026-04-29-rho-perfect-correlation-ceiling-for-subjective) | 7.5分 | 前25% | #模型评估 |
+| 360. | [Multi-Task Learning For Speech Quality Assessment Using](/audio-paper-digest-blog/posts/2026-04-29-multi-task-learning-for-speech-quality-assessment) | 7.5分 | 前25% | #语音质量评估 |
+| 361. | [FUSEMOS: Perceptual Evaluation of Text-to-Music Generat](/audio-paper-digest-blog/posts/2026-04-29-fusemos-perceptual-evaluation-of-text-to-music) | 7.5分 | 前25% | #音乐生成 |
+| 362. | [Joint Deep Secondary Path Estimation and Adaptive Contr](/audio-paper-digest-blog/posts/2026-04-29-joint-deep-secondary-path-estimation-and-adaptive) | 7.5分 | 前25% | #语音增强 |
+| 363. | [Learning Domain-Robust Bioacoustic Representations for ](/audio-paper-digest-blog/posts/2026-04-29-learning-domain-robust-bioacoustic) | 7.5分 | 前25% | #生物声学 |
+| 364. | [Unsupervised Discovery and Analysis of the Vocal Repert](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-discovery-and-analysis-of-the-vocal) | 7.5分 | 前50% | #生物声学 |
+| 365. | [BioSEN: A Bio-Acoustic Signal Enhancement Network for A](/audio-paper-digest-blog/posts/2026-04-29-biosen-a-bio-acoustic-signal-enhancement-network) | 7.5分 | 前25% | #生物声学 |
+| 366. | [BACHI: Boundary-Aware Symbolic Chord Recognition Throug](/audio-paper-digest-blog/posts/2026-04-29-bachi-boundary-aware-symbolic-chord-recognition) | 7.5分 | 前25% | #音乐信息检索 |
+| 367. | [Controllable Embedding Transformation for Mood-Guided M](/audio-paper-digest-blog/posts/2026-04-29-controllable-embedding-transformation-for-mood) | 7.5分 | 前25% | #音乐检索 |
+| 368. | [An Event-Based Sequence Modeling Approach to Recognizin](/audio-paper-digest-blog/posts/2026-04-29-an-event-based-sequence-modeling-approach-to) | 7.5分 | 前25% | #音乐信息检索 |
+| 369. | [Beat and Downbeat Detection: A Reformulated Approach](/audio-paper-digest-blog/posts/2026-04-29-beat-and-downbeat-detection-a-reformulated) | 7.5分 | 前25% | #音乐理解 |
+| 370. | [Co-Initialization of Control Filter and Secondary Path ](/audio-paper-digest-blog/posts/2026-04-29-co-initialization-of-control-filter-and-secondary) | 7.5分 | 前25% | #音频安全 |
+| 371. | [Natural Language to Spatial Audio Parameters: Lightweig](/audio-paper-digest-blog/posts/2026-04-29-natural-language-to-spatial-audio-parameters) | 7.5分 | 前25% | #空间音频 |
+| 372. | [Hierarchical Activity Recognition and Captioning from L](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-activity-recognition-and-captioning) | 7.5分 | 前25% | #音频事件检测 |
+| 373. | [From Contrast to Commonality: Audio Commonality Caption](/audio-paper-digest-blog/posts/2026-04-29-from-contrast-to-commonality-audio-commonality) | 7.5分 | 前25% | #音频场景理解 |
+| 374. | [Improving Audio Question Answering with Variational Inf](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-question-answering-with) | 7.5分 | 前25% | #音频问答 |
+| 375. | [One Model–Three Tasks: Discovering a Shared Winning Tic](/audio-paper-digest-blog/posts/2026-04-29-one-modelthree-tasks-discovering-a-shared-winning) | 7.5分 | 前25% | #音频分类 |
+| 376. | [From Hallucination to Articulation: Language Model-Driv](/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model) | 7.5分 | 前25% | #语音合成 |
+| 377. | [Salad-VAE: Semantic Audio Compression with Language-Aud](/audio-paper-digest-blog/posts/2026-04-29-salad-vae-semantic-audio-compression-with) | 7.5分 | 前25% | #音频压缩 |
+| 378. | [Auden-Voice: General-Purpose Voice Encoder for Speech a](/audio-paper-digest-blog/posts/2026-04-29-auden-voice-general-purpose-voice-encoder-for) | 7.5分 | 前25% | #语音编码器 |
+| 379. | [Enhancing Noise Robustness for Neural Speech Codecs Thr](/audio-paper-digest-blog/posts/2026-04-29-enhancing-noise-robustness-for-neural-speech) | 7.5分 | 前25% | #语音增强 |
+| 380. | [Testing The Efficient Coding Hypothesis Beyond Humans: ](/audio-paper-digest-blog/posts/2026-04-29-testing-the-efficient-coding-hypothesis-beyond) | 7.5分 | 前25% | #生物声学 |
+| 381. | [Low-Bandwidth High-Fidelity Speech Transmission with Ge](/audio-paper-digest-blog/posts/2026-04-29-low-bandwidth-high-fidelity-speech-transmission) | 7.5分 | 前25% | #语音增强 |
+| 382. | [CodeSep: Low-Bitrate Codec-Driven Speech Separation wit](/audio-paper-digest-blog/posts/2026-04-29-codesep-low-bitrate-codec-driven-speech) | 7.5分 | 前25% | #语音分离 |
+| 383. | [From Diet to Free Lunch: Estimating Auxiliary Signal Pr](/audio-paper-digest-blog/posts/2026-04-29-from-diet-to-free-lunch-estimating-auxiliary) | 7.5分 | 前25% | #语音增强 |
+| 384. | [SLM-SS: Speech Language Model for Generative Speech Sep](/audio-paper-digest-blog/posts/2026-04-29-slm-ss-speech-language-model-for-generative) | 7.5分 | 前25% | #语音分离 |
+| 385. | [RFM-Editing: Rectified Flow Matching for Text-Guided Au](/audio-paper-digest-blog/posts/2026-04-29-rfm-editing-rectified-flow-matching-for-text) | 7.5分 | 前25% | #音频编辑 |
+| 386. | [Mix2Morph: Learning Sound Morphing from Noisy Mixes](/audio-paper-digest-blog/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes) | 7.5分 | 前25% | #音频生成 |
+| 387. | [Generative Audio Extension and Morphing](/audio-paper-digest-blog/posts/2026-04-29-generative-audio-extension-and-morphing) | 7.5分 | 前25% | #音频生成 |
+| 388. | [FlashFoley: Fast Interactive Sketch2audio Generation](/audio-paper-digest-blog/posts/2026-04-29-flashfoley-fast-interactive-sketch2audio) | 7.5分 | 前25% | #音频生成 |
+| 389. | [Representation-Based Data Quality Audits for Audio](/audio-paper-digest-blog/posts/2026-04-29-representation-based-data-quality-audits-for-audio) | 7.5分 | 前25% | #数据集 |
+| 390. | [SynParaSpeech: Automated Synthesis of Paralinguistic Da](/audio-paper-digest-blog/posts/2026-04-29-synparaspeech-automated-synthesis-of) | 7.5分 | 前25% | #语音合成 |
+| 391. | [LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Co](/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for) | 7.5分 | 前25% | #语音识别 |
+| 392. | [A Dataset of Robot-Patient and Doctor-Patient Medical D](/audio-paper-digest-blog/posts/2026-04-29-a-dataset-of-robot-patient-and-doctor-patient) | 7.5分 | 前25% | #语音对话系统 |
+| 393. | [TAU: A Benchmark for Cultural Sound Understanding Beyon](/audio-paper-digest-blog/posts/2026-04-29-tau-a-benchmark-for-cultural-sound-understanding) | 7.5分 | 前25% | #音频问答 |
+| 394. | [Beamforming Using Virtual Microphones for Hearing Aid A](/audio-paper-digest-blog/posts/2026-04-29-beamforming-using-virtual-microphones-for-hearing) | 7.5分 | 前50% | #语音增强 |
+| 395. | [Malefa: Multi-Granularity Learning and Effective False ](/audio-paper-digest-blog/posts/2026-04-29-malefa-multi-granularity-learning-and-effective) | 7.5分 | 前25% | #零样本关键词检测 |
+| 396. | [I-DCCRN-VAE: An Improved Deep Representation Learning F](/audio-paper-digest-blog/posts/2026-04-29-i-dccrn-vae-an-improved-deep-representation) | 7.5分 | 前25% | #语音增强 |
+| 397. | [Domain Partitioning Meets Parameter-Efficient Fine-Tuni](/audio-paper-digest-blog/posts/2026-04-29-domain-partitioning-meets-parameter-efficient) | 7.5分 | 前50% | #音频分离 |
+| 398. | [VM-UNSSOR: Unsupervised Neural Speech Separation Enhanc](/audio-paper-digest-blog/posts/2026-04-29-vm-unssor-unsupervised-neural-speech-separation) | 7.5分 | 前25% | #语音分离 |
+| 399. | [Do We Need EMA for Diffusion-Based Speech Enhancement? ](/audio-paper-digest-blog/posts/2026-04-29-do-we-need-ema-for-diffusion-based-speech) | 7.5分 | 前50% | #语音增强 |
+| 400. | [Hair Noise Analysis and Mitigation for Smart Glasses Au](/audio-paper-digest-blog/posts/2026-04-29-hair-noise-analysis-and-mitigation-for-smart) | 7.5分 | 前25% | #语音增强 |
+| 401. | [SoundCompass: Navigating Target Sound Extraction with E](/audio-paper-digest-blog/posts/2026-04-29-soundcompass-navigating-target-sound-extraction) | 7.5分 | 前25% | #语音分离 |
+| 402. | [AMBISONIC-DML: A Benchmark Dataset for Dynamic Higher-O](/audio-paper-digest-blog/posts/2026-04-29-ambisonic-dml-a-benchmark-dataset-for-dynamic) | 7.5分 | 前25% | #数据集 |
+| 403. | [TinyMU: A Compact Audio-Language Model for Music Unders](/audio-paper-digest-blog/posts/2026-04-29-tinymu-a-compact-audio-language-model-for-music) | 7.5分 | 前25% | #音乐理解 |
+| 404. | [MIDI-LLaMA: An Instruction-Following Multimodal LLM for](/audio-paper-digest-blog/posts/2026-04-29-midi-llama-an-instruction-following-multimodal) | 7.5分 | 前10% | #音乐理解 |
+| 405. | [Fine-Tuning Bigvgan-V2 for Robust Musical Tuning Preser](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-bigvgan-v2-for-robust-musical-tuning) | 7.5分 | 前25% | #音乐生成 |
+| 406. | [StylePitcher: Generating Style-Following and Expressive](/audio-paper-digest-blog/posts/2026-04-29-stylepitcher-generating-style-following-and) | 7.5分 | 前25% | #歌唱语音合成 |
+| 407. | [Mitigating Data Replication in Text-to-Audio Generative](/audio-paper-digest-blog/posts/2026-04-29-mitigating-data-replication-in-text-to-audio) | 7.5分 | 前25% | #音频生成 |
+| 408. | [LenslessMic: Audio Encryption and Authentication via Le](/audio-paper-digest-blog/posts/2026-04-29-lenslessmic-audio-encryption-and-authentication) | 7.5分 | 前25% | #音频安全 |
+| 409. | [Are Modern Speech Enhancement Systems Vulnerable to Adv](/audio-paper-digest-blog/posts/2026-04-29-are-modern-speech-enhancement-systems-vulnerable) | 7.5分 | 前25% | #语音增强 |
+| 410. | [Few-Shot Recognition of Audio Deepfake Generators using](/audio-paper-digest-blog/posts/2026-04-29-few-shot-recognition-of-audio-deepfake-generators) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 411. | [Bloodroot: When Watermarking Turns Poisonous for Stealt](/audio-paper-digest-blog/posts/2026-04-29-bloodroot-when-watermarking-turns-poisonous-for) | 7.5分 | 前25% | #音频安全 |
+| 412. | [LLAC: Learned Lossless Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec) | 7.5分 | 前25% | #音频无损编码 |
+| 413. | [UJCodec: An End-to-end Unet-Style Codec for Joint Speec](/audio-paper-digest-blog/posts/2026-04-29-ujcodec-an-end-to-end-unet-style-codec-for-joint) | 7.5分 | 前25% | #语音增强 |
+| 414. | [Audio Deepfake Detection at the First Greeting: "Hi!"](/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 415. | [Adversarial Defense via Generative Speech Enhancement M](/audio-paper-digest-blog/posts/2026-04-29-adversarial-defense-via-generative-speech) | 7.5分 | 前25% | #语音增强 #对抗防御 |
+| 416. | [Dissecting Performance Degradation in Audio Source Sepa](/audio-paper-digest-blog/posts/2026-04-29-dissecting-performance-degradation-in-audio) | 7.5分 | 前25% | #音乐源分离 |
+| 417. | [Class-Aware Permutation-Invariant Signal-to-Distortion ](/audio-paper-digest-blog/posts/2026-04-29-class-aware-permutation-invariant-signal-to) | 7.5分 | 前25% | #音频场景理解 |
+| 418. | [Spatial Covariance Matrix Reconstruction for Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-spatial-covariance-matrix-reconstruction-for) | 7.5分 | 前25% | #语音增强 |
+| 419. | [Refgen: Reference-Guided Synthetic Data Generation for ](/audio-paper-digest-blog/posts/2026-04-29-refgen-reference-guided-synthetic-data-generation) | 7.5分 | 前25% | #音频事件检测 |
+| 420. | [Timbre-Aware Audio Difference Captioning for Anomalous ](/audio-paper-digest-blog/posts/2026-04-29-timbre-aware-audio-difference-captioning-for) | 7.5分 | 前25% | #音频分类 |
+| 421. | [Tldiffgan: A Latent Diffusion-Gan Framework with Tempor](/audio-paper-digest-blog/posts/2026-04-29-tldiffgan-a-latent-diffusion-gan-framework-with) | 7.5分 | 前25% | #音频事件检测 |
+| 422. | [Learning Linearity in Audio Consistency Autoencoders vi](/audio-paper-digest-blog/posts/2026-04-29-learning-linearity-in-audio-consistency) | 7.5分 | 前25% | #音频生成 |
+| 423. | [Contrastive Timbre Representations for Musical Instrume](/audio-paper-digest-blog/posts/2026-04-29-contrastive-timbre-representations-for-musical) | 7.5分 | 前25% | #音频检索 |
+| 424. | [Spring Reverb Emulation with Hybrid Gated Convolutional](/audio-paper-digest-blog/posts/2026-04-29-spring-reverb-emulation-with-hybrid-gated) | 7.5分 | 前25% | #音频生成 |
+| 425. | [Training-Free Inference-Time Scaling for Audio Source S](/audio-paper-digest-blog/posts/2026-04-29-training-free-inference-time-scaling-for-audio) | 7.5分 | 前25% | #语音增强 |
+| 426. | [Off-The-Grid Multi-Pitch Estimation Using Optimal Trans](/audio-paper-digest-blog/posts/2026-04-29-off-the-grid-multi-pitch-estimation-using-optimal) | 7.5分 | 前25% | #音乐信息检索 |
+| 427. | [Forward Convolutive Prediction for Frame Online Monaura](/audio-paper-digest-blog/posts/2026-04-29-forward-convolutive-prediction-for-frame-online) | 7.5分 | 前50% | #语音增强 |
+| 428. | [Random Matrix-Driven Graph Representation Learning For ](/audio-paper-digest-blog/posts/2026-04-29-random-matrix-driven-graph-representation) | 7.5分 | 前25% | #生物声学 |
+| 429. | [StereoFoley: Object-Aware Stereo Audio Generation from ](/audio-paper-digest-blog/posts/2026-04-29-stereofoley-object-aware-stereo-audio-generation) | 7.5分 | 前25% | #音频生成 |
+| 430. | [Learning What to Hear: Boosting Sound-Source Associatio](/audio-paper-digest-blog/posts/2026-04-29-learning-what-to-hear-boosting-sound-source) | 7.5分 | 前25% | #音视频实例分割 |
+| 431. | [Efficient Audio-Visual Inference Via Token Clustering A](/audio-paper-digest-blog/posts/2026-04-29-efficient-audio-visual-inference-via-token) | 7.5分 | 前25% | #音频问答 |
+| 432. | [V2A-DPO: Omni-Preference Optimization for Video-To-Audi](/audio-paper-digest-blog/posts/2026-04-29-v2a-dpo-omni-preference-optimization-for-video-to) | 7.5分 | 前25% | #视频到音频生成 |
+| 433. | [AudioGen-Omni: A Unified Multimodal Diffusion Transform](/audio-paper-digest-blog/posts/2026-04-29-audiogen-omni-a-unified-multimodal-diffusion) | 7.5分 | 前25% | #音频生成 |
+| 434. | [Asynchrony-Aware Decoupled Multimodal Control for Cued ](/audio-paper-digest-blog/posts/2026-04-29-asynchrony-aware-decoupled-multimodal-control-for) | 7.5分 | 前10% | #语音合成 |
+| 435. | [Visual Keys to Symphonies: Latent Diffusion for Multi-S](/audio-paper-digest-blog/posts/2026-04-29-visual-keys-to-symphonies-latent-diffusion-for) | 7.5分 | 前25% | #音乐生成 |
+| 436. | [SightSound-R1: Cross-Modal Reasoning Distillation from ](/audio-paper-digest-blog/posts/2026-04-29-sightsound-r1-cross-modal-reasoning-distillation) | 7.5分 | 前25% | #音频问答 |
+| 437. | [Interpretable Music Harmonic Analysis Through Multiline](/audio-paper-digest-blog/posts/2026-04-29-interpretable-music-harmonic-analysis-through) | 7.5分 | 前25% | #音乐理解 |
+| 438. | [Leveraging prediction entropy for Automatic prompt weig](/audio-paper-digest-blog/posts/2026-04-29-leveraging-prediction-entropy-for-automatic) | 7.5分 | 前25% | #音频分类 |
+| 439. | [MeanFlowSE: One-Step Generative Speech Enhancement via ](/audio-paper-digest-blog/posts/2026-04-29-meanflowse-one-step-generative-speech-enhancement) | 7.5分 | 前10% | #语音增强 |
+| 440. | [FlowSE-GRPO: Training Flow Matching Speech Enhancement ](/audio-paper-digest-blog/posts/2026-04-29-flowse-grpo-training-flow-matching-speech) | 7.5分 | 前25% | #语音增强 |
+| 441. | [Aligning Generative Speech Enhancement with Perceptual ](/audio-paper-digest-blog/posts/2026-04-29-aligning-generative-speech-enhancement-with) | 7.5分 | 前25% | #语音增强 |
+| 442. | [PG-SE: Predictive Acceleration and Correction for Gener](/audio-paper-digest-blog/posts/2026-04-29-pg-se-predictive-acceleration-and-correction-for) | 7.5分 | 前25% | #语音增强 |
+| 443. | [MECap-R1: Emotion-Aware Policy with Reinforcement Learn](/audio-paper-digest-blog/posts/2026-04-29-mecap-r1-emotion-aware-policy-with-reinforcement) | 7.5分 | 前25% | #语音情感识别 |
+| 444. | [FIDIC:Fine-Grained Conversational Emotion Recognition v](/audio-paper-digest-blog/posts/2026-04-29-fidicfine-grained-conversational-emotion) | 7.5分 | 前25% | #语音情感识别 |
+| 445. | [Combining SSL Speech Features, Contextual Transformers ](/audio-paper-digest-blog/posts/2026-04-29-combining-ssl-speech-features-contextual) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 446. | [Keeping Models Listening: Segment- and time-aware atten](/audio-paper-digest-blog/posts/2026-04-29-keeping-models-listening-segment-and-time-aware) | 7.5分 | 前25% | #音频问答 |
+| 447. | [Understanding Textual Capability Degradation in Speech ](/audio-paper-digest-blog/posts/2026-04-29-understanding-textual-capability-degradation-in) | 7.5分 | 前25% | #语音问答 |
+| 448. | [Game-Time: Evaluating Temporal Dynamics in Spoken Langu](/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken) | 7.5分 | 前25% | #语音对话系统 |
+| 449. | [The Role of Prosodic and Lexical Cues in Turn-Taking wi](/audio-paper-digest-blog/posts/2026-04-29-the-role-of-prosodic-and-lexical-cues-in-turn) | 7.5分 | 前25% | #语音对话系统 |
+| 450. | [Semantic Anchor Transfer from Short to Long Speech in a](/audio-paper-digest-blog/posts/2026-04-29-semantic-anchor-transfer-from-short-to-long) | 7.5分 | 前25% | #语音摘要 |
+| 451. | [Dynamically Slimmable Speech Enhancement Network with M](/audio-paper-digest-blog/posts/2026-04-29-dynamically-slimmable-speech-enhancement-network) | 7.5分 | 前25% | #语音增强 |
+| 452. | [Whisper-FEST: Single-Channel Far-Field Enhanced Speech-](/audio-paper-digest-blog/posts/2026-04-29-whisper-fest-single-channel-far-field-enhanced) | 7.5分 | 前50% | #语音识别 |
+| 453. | [Triage Knowledge Distillation for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-triage-knowledge-distillation-for-speaker) | 7.5分 | 前25% | #说话人验证 |
+| 454. | [Enhancing Speaker Verification with w2v-BERT 2.0 and Kn](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speaker-verification-with-w2v-bert-20) | 7.5分 | 前25% | #说话人验证 |
+| 455. | [DMP-TTS: Disentangled Multi-Modal Prompting for Control](/audio-paper-digest-blog/posts/2026-04-29-dmp-tts-disentangled-multi-modal-prompting-for) | 7.5分 | 前25% | #语音合成 |
+| 456. | [RRPO: Robust Reward Policy Optimization for LLM-Based E](/audio-paper-digest-blog/posts/2026-04-29-rrpo-robust-reward-policy-optimization-for-llm) | 7.5分 | 前25% | #语音合成 |
+| 457. | [AURA: A Stegaformer-Based Scalable Deep Audio Watermark](/audio-paper-digest-blog/posts/2026-04-29-aura-a-stegaformer-based-scalable-deep-audio) | 7.5分 | 前25% | #音频水印 |
+| 458. | [Benchmarking Humans And Machines On Complex Multilingua](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-humans-and-machines-on-complex) | 7.5分 | 前25% | #音频问答 |
+| 459. | [Production-Scale Dynamic Vocabulary ASR Biasing with Wo](/audio-paper-digest-blog/posts/2026-04-29-production-scale-dynamic-vocabulary-asr-biasing) | 7.5分 | 前25% | #语音识别 |
+| 460. | [Do we really need self-attention for streaming automati](/audio-paper-digest-blog/posts/2026-04-29-do-we-really-need-self-attention-for-streaming) | 7.5分 | 前25% | #语音识别 |
+| 461. | [Syncspeech: Efficient and Low-Latency Text-to-Speech Ba](/audio-paper-digest-blog/posts/2026-04-29-syncspeech-efficient-and-low-latency-text-to) | 7.5分 | 前25% | #语音合成 |
+| 462. | [Principled Coarse-Grained Acceptance For Speculative De](/audio-paper-digest-blog/posts/2026-04-29-principled-coarse-grained-acceptance-for) | 7.5分 | 前25% | #语音合成 |
+| 463. | [SPADE: Structured Pruning and Adaptive Distillation for](/audio-paper-digest-blog/posts/2026-04-29-spade-structured-pruning-and-adaptive) | 7.5分 | 前25% | #语音合成 |
+| 464. | [Advancing LLM-Based Multi-Channel Multi-Speaker Speech ](/audio-paper-digest-blog/posts/2026-04-29-advancing-llm-based-multi-channel-multi-speaker) | 7.5分 | 前25% | #语音识别 |
+| 465. | [Adapting Diarization-Conditioned Whisper for End-to-End](/audio-paper-digest-blog/posts/2026-04-29-adapting-diarization-conditioned-whisper-for-end) | 7.5分 | 前25% | #语音识别 |
+| 466. | [CALM: Joint Contextual Acoustic-Linguistic Modeling for](/audio-paper-digest-blog/posts/2026-04-29-calm-joint-contextual-acoustic-linguistic) | 7.5分 | 前25% | #语音识别 |
+| 467. | [Lightweight Phoneme-Conditioned Bandwidth Extension for](/audio-paper-digest-blog/posts/2026-04-29-lightweight-phoneme-conditioned-bandwidth) | 7.5分 | 前25% | #语音增强 |
+| 468. | [Fast-ULCNet: A Fast and Ultra Low Complexity Network fo](/audio-paper-digest-blog/posts/2026-04-29-fast-ulcnet-a-fast-and-ultra-low-complexity) | 7.5分 | 前25% | #语音增强 |
+| 469. | [Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech](/audio-paper-digest-blog/posts/2026-04-29-entropy-guided-grvq-for-ultra-low-bitrate-neural) | 7.5分 | 前25% | #语音合成 |
+| 470. | [CodecSlime: Temporal Redundancy Compression of Neural S](/audio-paper-digest-blog/posts/2026-04-29-codecslime-temporal-redundancy-compression-of) | 7.5分 | 前10% | #语音编码 |
+| 471. | [Discrete Diffusion for Generative Modeling of Text-Alig](/audio-paper-digest-blog/posts/2026-04-29-discrete-diffusion-for-generative-modeling-of) | 7.5分 | 前25% | #语音合成 |
+| 472. | [Speaking Clearly: A Simplified Whisper-Based Codec for ](/audio-paper-digest-blog/posts/2026-04-29-speaking-clearly-a-simplified-whisper-based-codec) | 7.5分 | 前25% | #语音编码 |
+| 473. | [How to Label Resynthesized Audio: The Dual Role of Neur](/audio-paper-digest-blog/posts/2026-04-29-how-to-label-resynthesized-audio-the-dual-role-of) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 474. | [TTA: Transcribe, Translate and Alignment for Cross-Ling](/audio-paper-digest-blog/posts/2026-04-29-tta-transcribe-translate-and-alignment-for-cross) | 7.5分 | 前25% | #语音识别 |
+| 475. | [SEP-ST: Incorporating Speech Entity Prompt Into Large L](/audio-paper-digest-blog/posts/2026-04-29-sep-st-incorporating-speech-entity-prompt-into) | 7.5分 | 前25% | #语音翻译 |
+| 476. | [Whisper-QF: Leveraging Dual Cross-Attention Q-Former fo](/audio-paper-digest-blog/posts/2026-04-29-whisper-qf-leveraging-dual-cross-attention-q) | 7.5分 | 前25% | #语音情感识别 |
+| 477. | [Temporal Graph Modeling for Speech Emotion Recognition ](/audio-paper-digest-blog/posts/2026-04-29-temporal-graph-modeling-for-speech-emotion) | 7.5分 | 前25% | #语音情感识别 |
+| 478. | [Mixture-of-Experts Based Soft-Label Learning for Multi-](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-based-soft-label-learning-for) | 7.5分 | 前25% | #语音情感识别 |
+| 479. | [Multi-Channel Speech Enhancement for Cocktail Party Spe](/audio-paper-digest-blog/posts/2026-04-29-multi-channel-speech-enhancement-for-cocktail) | 7.5分 | 前25% | #语音情感识别 |
+| 480. | [Emotional Dimension Control in Language Model-Based Tex](/audio-paper-digest-blog/posts/2026-04-29-emotional-dimension-control-in-language-model) | 7.5分 | 前25% | #语音合成 |
+| 481. | [Beyond Global Emotion: Fine-Grained Emotional Speech Sy](/audio-paper-digest-blog/posts/2026-04-29-beyond-global-emotion-fine-grained-emotional) | 7.5分 | 前25% | #语音合成 |
+| 482. | [QFOCUS: Controllable Synthesis for Automated Speech Str](/audio-paper-digest-blog/posts/2026-04-29-qfocus-controllable-synthesis-for-automated) | 7.5分 | 前50% | #语音合成 |
+| 483. | [SynaSpot: A Lightweight, Streaming Multi-modal Framewor](/audio-paper-digest-blog/posts/2026-04-29-synaspot-a-lightweight-streaming-multi-modal) | 7.5分 | 前25% | #关键词检测 |
+| 484. | [Vocalnet-M2: Advancing Low-Latency Spoken Language Mode](/audio-paper-digest-blog/posts/2026-04-29-vocalnet-m2-advancing-low-latency-spoken-language) | 7.5分 | 前25% | #语音对话系统 |
+| 485. | [Mitigating Language Prior-Induced Hallucinations via Bi](/audio-paper-digest-blog/posts/2026-04-29-mitigating-language-prior-induced-hallucinations) | 7.5分 | 前25% | #多模态模型 |
+| 486. | [Prototype-Guided Cross-Modal Contrastive Learning for C](/audio-paper-digest-blog/posts/2026-04-29-prototype-guided-cross-modal-contrastive-learning) | 7.5分 | 前25% | #语音分离 |
+| 487. | [Session-Level Spoken Language Assessment with A Multimo](/audio-paper-digest-blog/posts/2026-04-29-session-level-spoken-language-assessment-with-a) | 7.5分 | 前25% | #语音评估 |
+| 488. | [QE-XVC: Zero-Shot Cross-Lingual Voice Conversion via Qu](/audio-paper-digest-blog/posts/2026-04-29-qe-xvc-zero-shot-cross-lingual-voice-conversion) | 7.5分 | 前25% | #语音转换 |
+| 489. | [MeanVC: Lightweight and Streaming Zero-Shot Voice Conve](/audio-paper-digest-blog/posts/2026-04-29-meanvc-lightweight-and-streaming-zero-shot-voice) | 7.5分 | 前25% | #语音转换 |
+| 490. | [Cross-Lingual F5-TTS: Towards Language-Agnostic Voice C](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-f5-tts-towards-language-agnostic) | 7.5分 | 前25% | #语音克隆 |
+| 491. | [Expressive Voice Conversion with Controllable Emotional](/audio-paper-digest-blog/posts/2026-04-29-expressive-voice-conversion-with-controllable) | 7.5分 | 前25% | #语音转换 |
+| 492. | [Lightweight and Perceptually-Guided Voice Conversion fo](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-perceptually-guided-voice) | 7.5分 | 前25% | #语音转换 |
+| 493. | [ParaGSE: Parallel Generative Speech Enhancement with Gr](/audio-paper-digest-blog/posts/2026-04-29-paragse-parallel-generative-speech-enhancement) | 7.5分 | 前25% | #语音增强 |
+| 494. | [High-Fidelity Speech Enhancement Via Discrete Audio Tok](/audio-paper-digest-blog/posts/2026-04-29-high-fidelity-speech-enhancement-via-discrete) | 7.5分 | 前25% | #语音增强 |
+| 495. | [DISSR: Disentangling Speech Representation for Degradat](/audio-paper-digest-blog/posts/2026-04-29-dissr-disentangling-speech-representation-for) | 7.5分 | 前25% | #语音增强 |
+| 496. | [Ranking The Impact of Contextual Specialization in Neur](/audio-paper-digest-blog/posts/2026-04-29-ranking-the-impact-of-contextual-specialization) | 7.5分 | 前25% | #语音增强 |
+| 497. | [β-AVSDNET: A Novel End-To-End Neural Network Architectu](/audio-paper-digest-blog/posts/2026-04-29-avsdnet-a-novel-end-to-end-neural-network) | 7.5分 | 前25% | #说话人分离 |
+| 498. | [Automatic Estimation of Speaker Diarization Error Rate ](/audio-paper-digest-blog/posts/2026-04-29-automatic-estimation-of-speaker-diarization-error) | 7.5分 | 前25% | #说话人分离 |
+| 499. | [A Framework for Controlled Multi-Speaker Audio Synthesi](/audio-paper-digest-blog/posts/2026-04-29-a-framework-for-controlled-multi-speaker-audio) | 7.5分 | 前25% | #说话人日志 |
+| 500. | [Synthetic yet Striking? Assessing Vocal Charisma in TTS](/audio-paper-digest-blog/posts/2026-04-29-synthetic-yet-striking-assessing-vocal-charisma) | 7.5分 | 前25% | #语音合成 |
+| 501. | [Emilia-NV: A Non-Verbal Speech Dataset with Word-Level ](/audio-paper-digest-blog/posts/2026-04-29-emilia-nv-a-non-verbal-speech-dataset-with-word) | 7.5分 | 前25% | #语音识别 |
+| 502. | [TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-tmd-tts-a-unified-tibetan-multi-dialect-text-to) | 7.5分 | 前25% | #语音合成 |
+| 503. | [Deep Dubbing: End-to-End Auto-Audiobook System with Tex](/audio-paper-digest-blog/posts/2026-04-29-deep-dubbing-end-to-end-auto-audiobook-system) | 7.5分 | 前25% | #语音合成 |
+| 504. | [Erasing Your Voice Before it’s Heard: Training-Free Spe](/audio-paper-digest-blog/posts/2026-04-29-erasing-your-voice-before-its-heard-training-free) | 7.5分 | 前25% | #语音合成 |
+| 505. | [Phrased: Phrase Dictionary Biasing for Speech Translati](/audio-paper-digest-blog/posts/2026-04-29-phrased-phrase-dictionary-biasing-for-speech) | 7.5分 | 前25% | #语音翻译 |
+| 506. | [LLM-Based Post-ASR Error Correction for Disordered Spee](/audio-paper-digest-blog/posts/2026-04-29-llm-based-post-asr-error-correction-for) | 7.5分 | 前50% | #语音识别 |
+| 507. | [InstructAudio: Unified Speech and Music Generation with](/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation) | 7.5分 | 前25% | #语音合成 |
+| 508. | [GLA-GRAD++: An Improved Griffin-Lim Guided Diffusion Mo](/audio-paper-digest-blog/posts/2026-04-29-gla-grad-an-improved-griffin-lim-guided-diffusion) | 7.5分 | 前25% | #语音合成 |
+| 509. | [Meanflow-Accelerated Multimodal Video-to-Audio Synthesi](/audio-paper-digest-blog/posts/2026-04-29-meanflow-accelerated-multimodal-video-to-audio) | 7.5分 | 前25% | #音频生成 |
+| 510. | [TAG: Structured Temporal Audio Generation via LLM-Guide](/audio-paper-digest-blog/posts/2026-04-29-tag-structured-temporal-audio-generation-via-llm) | 7.5分 | 前25% | #音频生成 |
+| 511. | [Cross-Lingual Interleaving for Speech Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-interleaving-for-speech-language) | 7.5分 | 前25% | #语音大模型 |
+| 512. | [Emotional Damage: Investigating Safety Vulnerabilities ](/audio-paper-digest-blog/posts/2026-04-29-emotional-damage-investigating-safety) | 7.5分 | 前25% | #音频安全 |
+| 513. | [Content-Preserving Speech Representation Learning Via A](/audio-paper-digest-blog/posts/2026-04-29-content-preserving-speech-representation-learning) | 7.5分 | 前25% | #语音识别 |
+| 514. | [Exploring SSL Discrete Tokens for Multilingual Automati](/audio-paper-digest-blog/posts/2026-04-29-exploring-ssl-discrete-tokens-for-multilingual) | 7.5分 | 前25% | #语音识别 |
+| 515. | [BEST-STD 2.0: Balanced and Efficient Speech Tokenizer f](/audio-paper-digest-blog/posts/2026-04-29-best-std-20-balanced-and-efficient-speech) | 7.5分 | 前25% | #音频检索 |
+| 516. | [EchoRAG: A Two-Stage Framework for Audio-Text Retrieval](/audio-paper-digest-blog/posts/2026-04-29-echorag-a-two-stage-framework-for-audio-text) | 7.5分 | 前25% | #音频检索 |
+| 517. | [TICL: Text-Embedding KNN for Speech in-Context Learning](/audio-paper-digest-blog/posts/2026-04-29-ticl-text-embedding-knn-for-speech-in-context) | 7.5分 | 前25% | #语音识别 |
+| 518. | [Purification Before Fusion: Toward Mask-Free Speech Enh](/audio-paper-digest-blog/posts/2026-04-29-purification-before-fusion-toward-mask-free) | 7.5分 | 前25% | #语音识别 |
+| 519. | [Cross-Modal Bottleneck Fusion for Noise Robust Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-bottleneck-fusion-for-noise-robust) | 7.5分 | 前25% | #语音识别 |
+| 520. | [Evaluating Emotion Recognition in Spoken Language Model](/audio-paper-digest-blog/posts/2026-04-29-evaluating-emotion-recognition-in-spoken-language) | 7.5分 | 前50% | #语音情感识别 |
+| 521. | [InconVAD: A Two-Stage Dual-Tower Framework for Multimod](/audio-paper-digest-blog/posts/2026-04-29-inconvad-a-two-stage-dual-tower-framework-for) | 7.5分 | 前25% | #语音情感识别 |
+| 522. | [MSF-SER: Enriching Acoustic Modeling with Multi-Granula](/audio-paper-digest-blog/posts/2026-04-29-msf-ser-enriching-acoustic-modeling-with-multi) | 7.5分 | 前25% | #语音情感识别 |
+| 523. | [KAN We Make Models Simpler for Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 524. | [Robust Deepfake Audio Detection via Multi-Level Interme](/audio-paper-digest-blog/posts/2026-04-29-robust-deepfake-audio-detection-via-multi-level) | 7.5分 | 前25% | #音频深度伪造检测 |
+| 525. | [Inverse-Hessian Regularization for Continual Learning i](/audio-paper-digest-blog/posts/2026-04-29-inverse-hessian-regularization-for-continual) | 7.5分 | 前25% | #语音识别 |
+| 526. | [BEST-RQ-based Self-Supervised Learning for Whisper Doma](/audio-paper-digest-blog/posts/2026-04-29-best-rq-based-self-supervised-learning-for) | 7.5分 | 前25% | #语音识别 |
+| 527. | [CCST: Cross-Modal and Consistency-Aware Self-Training f](/audio-paper-digest-blog/posts/2026-04-29-ccst-cross-modal-and-consistency-aware-self) | 7.5分 | 前25% | #语音识别 |
+| 528. | [Chunk-Wise Attention Transducers for Fast and Accurate ](/audio-paper-digest-blog/posts/2026-04-29-chunk-wise-attention-transducers-for-fast-and) | 7.5分 | 前25% | #语音识别 |
+| 529. | [Chunkwise Aligners for Streaming Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-chunkwise-aligners-for-streaming-speech) | 7.5分 | 前25% | #语音识别 |
+| 530. | [FinHuBERT: Hierarchical Feature Imitating Networks for ](/audio-paper-digest-blog/posts/2026-04-29-finhubert-hierarchical-feature-imitating-networks) | 7.5分 | 前25% | #语音识别 |
+| 531. | [UMA-SPLIT: Unimodal Aggregation for Both English and Ma](/audio-paper-digest-blog/posts/2026-04-29-uma-split-unimodal-aggregation-for-both-english) | 7.5分 | 前25% | #语音识别 |
+| 532. | [Dual Data Scaling for Robust Two-Stage User-Defined Key](/audio-paper-digest-blog/posts/2026-04-29-dual-data-scaling-for-robust-two-stage-user) | 7.5分 | 前25% | #语音活动检测 |
+| 533. | [MNV-17: A High-Quality Performative Mandarin Dataset fo](/audio-paper-digest-blog/posts/2026-04-29-mnv-17-a-high-quality-performative-mandarin) | 7.5分 | 前25% | #语音识别 |
+| 534. | [Int-MeanFlow: Few-Step Speech Generation with Integral ](/audio-paper-digest-blog/posts/2026-04-29-int-meanflow-few-step-speech-generation-with) | 7.5分 | 前25% | #语音合成 |
+| 535. | [Training Flow Matching Models with Reliable Labels via ](/audio-paper-digest-blog/posts/2026-04-29-training-flow-matching-models-with-reliable) | 7.5分 | 前25% | #语音合成 |
+| 536. | [Hierarchical Discrete Flow Matching For Multi-Codebook ](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-discrete-flow-matching-for-multi) | 7.5分 | 前25% | #语音合成 |
+| 537. | [Frame-Stacked Local Transformers for Efficient Multi-Co](/audio-paper-digest-blog/posts/2026-04-29-frame-stacked-local-transformers-for-efficient) | 7.5分 | 前25% | #语音合成 |
+| 538. | [Direct Preference Optimization For Speech Autoregressiv](/audio-paper-digest-blog/posts/2026-04-29-direct-preference-optimization-for-speech) | 7.5分 | 前25% | #语音合成 |
+| 539. | [Direct Transfer of Prosody in Speech-to-speech Translat](/audio-paper-digest-blog/posts/2026-04-29-direct-transfer-of-prosody-in-speech-to-speech) | 7.5分 | 前25% | #语音翻译 |
+| 540. | [PROST-LLM: Progressively Enhancing the Speech-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-prost-llm-progressively-enhancing-the-speech-to) | 7.5分 | 前25% | #语音翻译 |
+| 541. | [Revisiting Direct Speech-to-Text Translation with Speec](/audio-paper-digest-blog/posts/2026-04-29-revisiting-direct-speech-to-text-translation-with) | 7.5分 | 前50% | #语音翻译 |
+| 542. | [Listen, But Don't Leak: Sensitive Data Protection for P](/audio-paper-digest-blog/posts/2026-04-29-listen-but-dont-leak-sensitive-data-protection) | 7.5分 | 前25% | #语音识别 |
+| 543. | [EdgeSpot: Efficient and High-Performance Few-Shot Model](/audio-paper-digest-blog/posts/2026-04-29-edgespot-efficient-and-high-performance-few-shot) | 7.5分 | 前25% | #语音活动检测 |
+| 544. | [Confidence-Guided Error Correction for Disordered Speec](/audio-paper-digest-blog/posts/2026-04-29-confidence-guided-error-correction-for-disordered) | 7.5分 | 前25% | #语音识别 |
+| 545. | [Advancing Semi-Supervised Child Speech Recognition with](/audio-paper-digest-blog/posts/2026-04-29-advancing-semi-supervised-child-speech) | 7.5分 | 前25% | #语音识别 |
+| 546. | [Variational Low-Rank Adaptation for Personalized Impair](/audio-paper-digest-blog/posts/2026-04-29-variational-low-rank-adaptation-for-personalized) | 7.5分 | 前50% | #语音识别 |
+| 547. | [Decoder-Only Conformer with Modality-Aware Sparse Mixtu](/audio-paper-digest-blog/posts/2026-04-29-decoder-only-conformer-with-modality-aware-sparse) | 7.5分 | 前25% | #语音识别 |
+| 548. | [Loose Coupling of Spectral and Spatial Models for Multi](/audio-paper-digest-blog/posts/2026-04-29-loose-coupling-of-spectral-and-spatial-models-for) | 7.2分 | 前25% | #说话人日志 #语音分离 |
+| 549. | [BSMP-SENet:Band-Split Magnitude-Phase Network for Speec](/audio-paper-digest-blog/posts/2026-04-29-bsmp-senetband-split-magnitude-phase-network-for) | 7.0分 | 前25% | #语音增强 |
+| 550. | [Cooperative Multi-Agent Reinforcement Learning for Adap](/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning) | 7.0分 | 前50% | #联邦学习 |
+| 551. | [HFSQVAE: Hierarchical Vector Quantization with Residual](/audio-paper-digest-blog/posts/2026-04-29-hfsqvae-hierarchical-vector-quantization-with) | 7.0分 | 前25% | #音频生成 |
+| 552. | [When Voice Matters: A Controlled Study of Audio LLM Beh](/audio-paper-digest-blog/posts/2026-04-29-when-voice-matters-a-controlled-study-of-audio) | 7.0分 | 前25% | #模型评估 |
+| 553. | [Optimizing Domain-Adaptive Self-Supervised Learning for](/audio-paper-digest-blog/posts/2026-04-29-optimizing-domain-adaptive-self-supervised) | 7.0分 | 前25% | #语音生物标志物 |
+| 554. | [MT-HuBERT: Self-Supervised Mix-Training for Few-Shot Ke](/audio-paper-digest-blog/posts/2026-04-29-mt-hubert-self-supervised-mix-training-for-few) | 7.0分 | 前25% | #关键词检测 |
+| 555. | [Scaling Spoken Language Models with Syllabic Speech Tok](/audio-paper-digest-blog/posts/2026-04-29-scaling-spoken-language-models-with-syllabic) | 7.0分 | 前25% | #语音理解 |
+| 556. | [RAP: Real-Time Audio-Driven Portrait Animation with Vid](/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation) | 7.0分 | 前25% | #音视频 |
+| 557. | [Evaluating Bias in Spoken Dialogue LLMs for Real-World ](/audio-paper-digest-blog/posts/2026-04-29-evaluating-bias-in-spoken-dialogue-llms-for-real) | 7.0分 | 前25% | #模型评估 |
+| 558. | [Cross-Cultural Bias in Mel-Scale Representations: Evide](/audio-paper-digest-blog/posts/2026-04-29-cross-cultural-bias-in-mel-scale-representations) | 7.0分 | 前25% | #语音识别 |
+| 559. | [RMODGDF: A Robust STFT-Derived Feature for Musical Inst](/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical) | 7.0分 | 前50% | #音乐信息检索 |
+| 560. | [Equipping Large Language Model with Directional Speech ](/audio-paper-digest-blog/posts/2026-04-29-equipping-large-language-model-with-directional) | 7.0分 | 前50% | #语音识别 #语音翻译 |
+| 561. | [Ailive Mixer: A Deep Learning Based Zero Latency Automa](/audio-paper-digest-blog/posts/2026-04-29-ailive-mixer-a-deep-learning-based-zero-latency) | 7.0分 | 前25% | #音乐混合 |
+| 562. | [Bridging the Front-End and Back-End for Robust ASR via ](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-front-end-and-back-end-for-robust) | 7.0分 | 前25% | #语音识别 |
+| 563. | [VMSP: Video-to-Music Generation with Two-Stage Alignmen](/audio-paper-digest-blog/posts/2026-04-29-vmsp-video-to-music-generation-with-two-stage) | 7.0分 | 前25% | #音乐生成 |
+| 564. | [Directly Trained Spiking Neural Networks with Adaptive ](/audio-paper-digest-blog/posts/2026-04-29-directly-trained-spiking-neural-networks-with) | 7.0分 | 前25% | #音频分类 |
+| 565. | [Exploring How Audio Effects Alter Emotion with Foundati](/audio-paper-digest-blog/posts/2026-04-29-exploring-how-audio-effects-alter-emotion-with) | 7.0分 | 前50% | #音乐理解 |
+| 566. | [Does the Pre-Training of an Embedding Influence its Enc](/audio-paper-digest-blog/posts/2026-04-29-does-the-pre-training-of-an-embedding-influence) | 7.0分 | 前50% | #语音生物标志物 |
+| 567. | [Etude: Piano Cover Generation with a Three-Stage Approa](/audio-paper-digest-blog/posts/2026-04-29-etude-piano-cover-generation-with-a-three-stage) | 7.0分 | 前25% | #音乐生成 |
+| 568. | [Audio-Visual Feature Fusion for Calibrating Relevance S](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-feature-fusion-for-calibrating) | 7.0分 | 前25% | #视频片段检索 |
+| 569. | [MirrorTalk: Forging Personalized Avatars Via Disentangl](/audio-paper-digest-blog/posts/2026-04-29-mirrortalk-forging-personalized-avatars-via) | 7.0分 | 前25% | #语音合成 |
+| 570. | [An Anomaly-Aware and Audio-Enhanced Dual-Pathway Framew](/audio-paper-digest-blog/posts/2026-04-29-an-anomaly-aware-and-audio-enhanced-dual-pathway) | 7.0分 | 前25% | #语音生物标志物 |
+| 571. | [Leveraging Text-to-Speech and Voice Conversion as Data ](/audio-paper-digest-blog/posts/2026-04-29-leveraging-text-to-speech-and-voice-conversion-as) | 7.0分 | 前50% | #语音生物标志物 |
+| 572. | [Noise-Robust Contrastive Learning with an MFCC-Conforme](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-contrastive-learning-with-an-mfcc) | 7.0分 | 前50% | #音频分类 |
+| 573. | [EEG and Eye-Tracking Driven Dynamic Target Speaker Extr](/audio-paper-digest-blog/posts/2026-04-29-eeg-and-eye-tracking-driven-dynamic-target) | 7.0分 | 前25% | #语音分离 |
+| 574. | [DPT-Net: Dual-Path Transformer Network with Hierarchica](/audio-paper-digest-blog/posts/2026-04-29-dpt-net-dual-path-transformer-network-with) | 7.0分 | 前25% | #语音生物标志物 |
+| 575. | [DECAF: Dynamic Envelope Context-Aware Fusion for Speech](/audio-paper-digest-blog/posts/2026-04-29-decaf-dynamic-envelope-context-aware-fusion-for) | 7.0分 | 前25% | #语音增强 |
+| 576. | [Condition-Invariant fMRI decoding of speech intelligibi](/audio-paper-digest-blog/posts/2026-04-29-condition-invariant-fmri-decoding-of-speech) | 7.0分 | 前25% | #神经解码 |
+| 577. | [CMSA-Mamba: Hierarchical State Space Modeling for Audio](/audio-paper-digest-blog/posts/2026-04-29-cmsa-mamba-hierarchical-state-space-modeling-for) | 7.0分 | 前25% | #语音生物标志物 |
+| 578. | [Fusion of Multimodal Estimations by Extended State Hidd](/audio-paper-digest-blog/posts/2026-04-29-fusion-of-multimodal-estimations-by-extended) | 7.0分 | 前50% | #生物声学 |
+| 579. | [DAT-CFTNet: Speech Enhancement for Cochlear Implant Rec](/audio-paper-digest-blog/posts/2026-04-29-dat-cftnet-speech-enhancement-for-cochlear) | 7.0分 | 前50% | #语音增强 |
+| 580. | [Respire-Mamba C-UNet: Consistency-Trained Autoencoder f](/audio-paper-digest-blog/posts/2026-04-29-respire-mamba-c-unet-consistency-trained) | 7.0分 | 前25% | #音频压缩 |
+| 581. | [Caption and Audio-Guided Video Representation Learning ](/audio-paper-digest-blog/posts/2026-04-29-caption-and-audio-guided-video-representation) | 7.0分 | 前25% | #视频检索 |
+| 582. | [Auto-MatchCut: An Audio-Visual Retrieval Framework for ](/audio-paper-digest-blog/posts/2026-04-29-auto-matchcut-an-audio-visual-retrieval-framework) | 7.0分 | 前50% | #跨模态检索 |
+| 583. | [Attentive AV-Fusionnet: Audio-Visual Quality Prediction](/audio-paper-digest-blog/posts/2026-04-29-attentive-av-fusionnet-audio-visual-quality) | 7.0分 | 前25% | #音视频 |
+| 584. | [Dual Contrastive Learning for Semi-Supervised Domain Ad](/audio-paper-digest-blog/posts/2026-04-29-dual-contrastive-learning-for-semi-supervised) | 7.0分 | 前25% | #语音生物标志物 |
+| 585. | [The Synergistic Role of Audio and Large Video-Language ](/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video) | 7.0分 | 前25% | #领域适应 |
+| 586. | [Spiking Temporal-Enhanced Network for Zero-Shot Audio-V](/audio-paper-digest-blog/posts/2026-04-29-spiking-temporal-enhanced-network-for-zero-shot) | 7.0分 | 前50% | #音频分类 |
+| 587. | [Style-Disentangled Diffusion for Controllable and Ident](/audio-paper-digest-blog/posts/2026-04-29-style-disentangled-diffusion-for-controllable-and) | 7.0分 | 前25% | #语音驱动动作生成 |
+| 588. | [Look, Listen and Segment: Towards Weakly Supervised Aud](/audio-paper-digest-blog/posts/2026-04-29-look-listen-and-segment-towards-weakly-supervised) | 7.0分 | 前25% | #音视频 |
+| 589. | [Face-Voice Association with Inductive Bias for Maximum ](/audio-paper-digest-blog/posts/2026-04-29-face-voice-association-with-inductive-bias-for) | 7.0分 | 前25% | #说话人验证 |
+| 590. | [DAMO: A Data-Efficient Multimodal Orchestrator for Temp](/audio-paper-digest-blog/posts/2026-04-29-damo-a-data-efficient-multimodal-orchestrator-for) | 7.0分 | 前25% | #视频问答 |
+| 591. | [Sounds that Shape: Audio-Driven 3D Mesh Generation with](/audio-paper-digest-blog/posts/2026-04-29-sounds-that-shape-audio-driven-3d-mesh-generation) | 7.0分 | 前25% | #音频生成 |
+| 592. | [Towards Multi-View Hierarchical Video-to-Piano Generati](/audio-paper-digest-blog/posts/2026-04-29-towards-multi-view-hierarchical-video-to-piano) | 7.0分 | 前25% | #音乐生成 |
+| 593. | [Lightweight Implicit Neural Network for Binaural Audio ](/audio-paper-digest-blog/posts/2026-04-29-lightweight-implicit-neural-network-for-binaural) | 7.0分 | 前25% | #空间音频 |
+| 594. | [AI-Generated Music Detection in Broadcast Monitoring](/audio-paper-digest-blog/posts/2026-04-29-ai-generated-music-detection-in-broadcast) | 7.0分 | 前50% | #音频深度伪造检测 |
+| 595. | [ACIR-MACL: Effective Multimodal Sentiment Analysis via ](/audio-paper-digest-blog/posts/2026-04-29-acir-macl-effective-multimodal-sentiment-analysis) | 7.0分 | 前25% | #情感分析 |
+| 596. | [Semantic-Guided Pseudo-Feature Attention Network for Au](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network) | 7.0分 | 前25% | #音频分类 #零样本学习 |
+| 597. | [Rationale-Guided Learning for Multimodal Emotion Recogn](/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion) | 7.0分 | 前25% | #语音情感识别 |
+| 598. | [Bimodal Fusion Framework for Dynamic Facial Expression ](/audio-paper-digest-blog/posts/2026-04-29-bimodal-fusion-framework-for-dynamic-facial) | 7.0分 | 前25% | #语音情感识别 |
+| 599. | [Dual-Perspective Multimodal Sentiment Analysis with MoE](/audio-paper-digest-blog/posts/2026-04-29-dual-perspective-multimodal-sentiment-analysis) | 7.0分 | 前50% | #多模态情感分析 |
+| 600. | [FastAV: Efficient Token Pruning for Audio-Visual Large ](/audio-paper-digest-blog/posts/2026-04-29-fastav-efficient-token-pruning-for-audio-visual) | 7.0分 | 前25% | #音频问答 |
+| 601. | [ST-HNTM: Joint Speech-Text Neural Topic Modeling on the](/audio-paper-digest-blog/posts/2026-04-29-st-hntm-joint-speech-text-neural-topic-modeling) | 7.0分 | 前25% | #主题建模 |
+| 602. | [UVT-LM: Unifying Visual and Tactile Perception with Lan](/audio-paper-digest-blog/posts/2026-04-29-uvt-lm-unifying-visual-and-tactile-perception) | 7.0分 | 前25% | #跨模态 |
+| 603. | [Teacher-Guided Pseudo Supervision and Cross-Modal Align](/audio-paper-digest-blog/posts/2026-04-29-teacher-guided-pseudo-supervision-and-cross-modal) | 7.0分 | 前25% | #音视频 |
+| 604. | [An End-to-End Multimodal System for Subtitle Recognitio](/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle) | 7.0分 | 前50% | #多模态模型 |
+| 605. | [Can Large Audio Language Models Understand Audio Well? ](/audio-paper-digest-blog/posts/2026-04-29-can-large-audio-language-models-understand-audio) | 7.0分 | 前25% | #基准测试 |
+| 606. | [AVO-65: A Large-Scale Hierarchical Audio-Visual Object ](/audio-paper-digest-blog/posts/2026-04-29-avo-65-a-large-scale-hierarchical-audio-visual) | 7.0分 | 前50% | #音视频 |
+| 607. | [HarmoNet: Music Grounding by Short Video via Harmonic R](/audio-paper-digest-blog/posts/2026-04-29-harmonet-music-grounding-by-short-video-via) | 7.0分 | 前25% | #音乐检索 |
+| 608. | [DepthTalk: Few-Shot Talking Head Generation with Depth-](/audio-paper-digest-blog/posts/2026-04-29-depthtalk-few-shot-talking-head-generation-with) | 7.0分 | 前25% | #说话人生成 |
+| 609. | [Multimodal Transformer with Multiperspective Training f](/audio-paper-digest-blog/posts/2026-04-29-multimodal-transformer-with-multiperspective) | 7.0分 | 前25% | #多模态模型 |
+| 610. | [ReCoM: Realistic Co-Speech Motion Generation with Recur](/audio-paper-digest-blog/posts/2026-04-29-recom-realistic-co-speech-motion-generation-with) | 7.0分 | 前25% | #音频生成 |
+| 611. | [A Dynamic Gated Cross-Attention Framework for Audio-Tex](/audio-paper-digest-blog/posts/2026-04-29-a-dynamic-gated-cross-attention-framework-for) | 7.0分 | 前25% | #音频分类 |
+| 612. | [Perceptual Loss Optimized HRTF Personalization in Spher](/audio-paper-digest-blog/posts/2026-04-29-perceptual-loss-optimized-hrtf-personalization-in) | 7.0分 | 前25% | #空间音频 |
+| 613. | [Leveraging Large Multimodal Models for Audio-Video Deep](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-multimodal-models-for-audio) | 7.0分 | 前25% | #音频深度伪造检测 |
+| 614. | [Impact of Phonetics on Speaker Identity in Adversarial ](/audio-paper-digest-blog/posts/2026-04-29-impact-of-phonetics-on-speaker-identity-in) | 7.0分 | 前50% | #说话人验证 |
+| 615. | [PRSA: Preventing Malicious Speaker Recognition and Spee](/audio-paper-digest-blog/posts/2026-04-29-prsa-preventing-malicious-speaker-recognition-and) | 7.0分 | 前25% | #语音匿名化 |
+| 616. | [Stream-Voice-Anon: Enhancing Utility of Real-Time Speak](/audio-paper-digest-blog/posts/2026-04-29-stream-voice-anon-enhancing-utility-of-real-time) | 7.0分 | 前25% | #语音匿名化 |
+| 617. | [Audio-Text Jailbreak Attack on Large Audio-Language Mod](/audio-paper-digest-blog/posts/2026-04-29-audio-text-jailbreak-attack-on-large-audio) | 7.0分 | 前25% | #音频安全 |
+| 618. | [Style Attack Disguise: When Fonts Become a Camouflage f](/audio-paper-digest-blog/posts/2026-04-29-style-attack-disguise-when-fonts-become-a) | 7.0分 | 前25% | #对抗样本 |
+| 619. | [Identity Leakage Through Accent Cues in Voice Anonymisa](/audio-paper-digest-blog/posts/2026-04-29-identity-leakage-through-accent-cues-in-voice) | 7.0分 | 前50% | #语音匿名化 |
+| 620. | [Fake Speech Wild: Detecting Deepfake Speech on Social M](/audio-paper-digest-blog/posts/2026-04-29-fake-speech-wild-detecting-deepfake-speech-on) | 7.0分 | 前25% | #语音伪造检测 |
+| 621. | [Robust Online Overdetermined Independent Vector Analysi](/audio-paper-digest-blog/posts/2026-04-29-robust-online-overdetermined-independent-vector) | 7.0分 | 前25% | #语音分离 |
+| 622. | [Acoustic Teleportation Via Disentangled Neural Audio Co](/audio-paper-digest-blog/posts/2026-04-29-acoustic-teleportation-via-disentangled-neural) | 7.0分 | 前25% | #语音增强 |
+| 623. | [Residual Tokens Enhance Masked Autoencoders for Speech ](/audio-paper-digest-blog/posts/2026-04-29-residual-tokens-enhance-masked-autoencoders-for) | 7.0分 | 前50% | #语音合成 |
+| 624. | [Arbitrarily Settable Frame Rate Neural Speech Codec wit](/audio-paper-digest-blog/posts/2026-04-29-arbitrarily-settable-frame-rate-neural-speech) | 7.0分 | 前25% | #音频生成 |
+| 625. | [Quality Assessment of Noisy and Enhanced Speech with Li](/audio-paper-digest-blog/posts/2026-04-29-quality-assessment-of-noisy-and-enhanced-speech) | 7.0分 | 前25% | #语音质量评估 |
+| 626. | [SA-SSL-MOS: Self-Supervised Learning MOS Prediction wit](/audio-paper-digest-blog/posts/2026-04-29-sa-ssl-mos-self-supervised-learning-mos) | 7.0分 | 前50% | #语音质量评估 |
+| 627. | [AUDIOGENIE-Reasoner: A Training-Free Multi-Agent Framew](/audio-paper-digest-blog/posts/2026-04-29-audiogenie-reasoner-a-training-free-multi-agent) | 7.0分 | 前25% | #音频问答 |
+| 628. | [LAMB: LLM-Based Audio Captioning with Modality Gap Brid](/audio-paper-digest-blog/posts/2026-04-29-lamb-llm-based-audio-captioning-with-modality-gap) | 7.0分 | 前25% | #音频描述 |
+| 629. | [Evaluating Compositional Structure in Audio Representat](/audio-paper-digest-blog/posts/2026-04-29-evaluating-compositional-structure-in-audio) | 7.0分 | 前50% | #模型评估 |
+| 630. | [Scalable Evaluation for Audio Identification Via Synthe](/audio-paper-digest-blog/posts/2026-04-29-scalable-evaluation-for-audio-identification-via) | 7.0分 | 前25% | #音频检索 |
+| 631. | [Synchronous Secondary Path Modeling and Kronecker-Facto](/audio-paper-digest-blog/posts/2026-04-29-synchronous-secondary-path-modeling-and-kronecker) | 7.0分 | 前25% | #主动噪声控制 |
+| 632. | [Separate this, and all of these Things Around It: Music](/audio-paper-digest-blog/posts/2026-04-29-separate-this-and-all-of-these-things-around-it) | 7.0分 | 前25% | #音乐分离 |
+| 633. | [A Bayesian Approach to Singing Skill Evaluation Using S](/audio-paper-digest-blog/posts/2026-04-29-a-bayesian-approach-to-singing-skill-evaluation) | 7.0分 | 前25% | #音乐理解 |
+| 634. | [SAUNA: Song-Level Audio & User-Listening Data Neural Al](/audio-paper-digest-blog/posts/2026-04-29-sauna-song-level-audio-user-listening-data-neural) | 7.0分 | 前25% | #音乐信息检索 |
+| 635. | [Spiking Attention Network: A Hybrid Neuromorphic Approa](/audio-paper-digest-blog/posts/2026-04-29-spiking-attention-network-a-hybrid-neuromorphic) | 7.0分 | 前25% | #声源定位 |
+| 636. | [SIRUP: A Diffusion-Based Virtual Upmixer of Steering Ve](/audio-paper-digest-blog/posts/2026-04-29-sirup-a-diffusion-based-virtual-upmixer-of) | 7.0分 | 前25% | #声源定位 |
+| 637. | [Reference Microphone Selection for Guided Source Separa](/audio-paper-digest-blog/posts/2026-04-29-reference-microphone-selection-for-guided-source) | 7.0分 | 前50% | #语音增强 |
+| 638. | [Low-Latency Audio Front-End Region-of-Interest Beamform](/audio-paper-digest-blog/posts/2026-04-29-low-latency-audio-front-end-region-of-interest) | 7.0分 | 前25% | #语音增强 |
+| 639. | [AmbiDrop: Array-Agnostic Speech Enhancement Using Ambis](/audio-paper-digest-blog/posts/2026-04-29-ambidrop-array-agnostic-speech-enhancement-using) | 7.0分 | 前50% | #语音增强 |
+| 640. | [SONAR: Self-Distilled Continual Pre-Training for Domain](/audio-paper-digest-blog/posts/2026-04-29-sonar-self-distilled-continual-pre-training-for) | 7.0分 | 前25% | #音频事件检测 |
+| 641. | [Improving Audio Event Recognition with Consistency Regu](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-event-recognition-with) | 7.0分 | 前25% | #音频事件检测 |
+| 642. | [ViTex: Visual Texture Control for Multi-Track Symbolic ](/audio-paper-digest-blog/posts/2026-04-29-vitex-visual-texture-control-for-multi-track) | 7.0分 | 前50% | #音乐生成 |
+| 643. | [SELD-MOHA: A Fine-Tuning Method with the Mixture of Het](/audio-paper-digest-blog/posts/2026-04-29-seld-moha-a-fine-tuning-method-with-the-mixture) | 7.0分 | 前25% | #音频事件检测 |
+| 644. | [Timbre-Based Pretraining with Pseudo-Labels for Multi-I](/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for) | 7.0分 | 前25% | #音乐信息检索 |
+| 645. | [Towards Blind Data Cleaning: A Case Study in Music Sour](/audio-paper-digest-blog/posts/2026-04-29-towards-blind-data-cleaning-a-case-study-in-music) | 7.0分 | 前50% | #音乐信息检索 |
+| 646. | [MC-MRX: Reference- and Midi-Guided Music Source Extract](/audio-paper-digest-blog/posts/2026-04-29-mc-mrx-reference-and-midi-guided-music-source) | 7.0分 | 前25% | #音乐源提取 |
+| 647. | [A Distribution Matching Approach to Neural Piano Transc](/audio-paper-digest-blog/posts/2026-04-29-a-distribution-matching-approach-to-neural-piano) | 7.0分 | 前25% | #音乐转录 |
+| 648. | [Individualize the HRTF Neural Field Using Anthropometri](/audio-paper-digest-blog/posts/2026-04-29-individualize-the-hrtf-neural-field-using) | 7.0分 | 前25% | #空间音频 |
+| 649. | [Transfer Learning for Paediatric Sleep Apnoea Detection](/audio-paper-digest-blog/posts/2026-04-29-transfer-learning-for-paediatric-sleep-apnoea) | 7.0分 | 前25% | #音频分类 |
+| 650. | [Empowering Multimodal Respiratory Sound Classification ](/audio-paper-digest-blog/posts/2026-04-29-empowering-multimodal-respiratory-sound) | 7.0分 | 前25% | #音频分类 |
+| 651. | [Stress Prediction from Temporal Emotion Trajectories in](/audio-paper-digest-blog/posts/2026-04-29-stress-prediction-from-temporal-emotion) | 7.0分 | 前25% | #语音情感识别 |
+| 652. | [Speech Quality-Based Localization of Low-Quality Speech](/audio-paper-digest-blog/posts/2026-04-29-speech-quality-based-localization-of-low-quality) | 7.0分 | 前25% | #语音质量评估 |
+| 653. | [SP-MCQA: Evaluating Intelligibility of TTS Beyond the W](/audio-paper-digest-blog/posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond) | 7.0分 | 前50% | #语音合成 |
+| 654. | [SPAM: Style Prompt Adherence Metric for Prompt-Based TT](/audio-paper-digest-blog/posts/2026-04-29-spam-style-prompt-adherence-metric-for-prompt) | 7.0分 | 前50% | #语音合成 |
+| 655. | [A Speech-Driven Paradigm for Physics-Informed Modeling ](/audio-paper-digest-blog/posts/2026-04-29-a-speech-driven-paradigm-for-physics-informed) | 7.0分 | 前50% | #音频生成 |
+| 656. | [Decorrelation-Enhanced Multiband Subband Adaptive Filte](/audio-paper-digest-blog/posts/2026-04-29-decorrelation-enhanced-multiband-subband-adaptive) | 7.0分 | 前50% | #空间音频 |
+| 657. | [Instrument Generation Through Distributional Flow Match](/audio-paper-digest-blog/posts/2026-04-29-instrument-generation-through-distributional-flow) | 7.0分 | 前25% | #音乐生成 |
+| 658. | [When Noise Lowers the Loss: Rethinking Likelihood-Based](/audio-paper-digest-blog/posts/2026-04-29-when-noise-lowers-the-loss-rethinking-likelihood) | 7.0分 | 前25% | #音乐生成 |
+| 659. | [PADAM: Perceptual Audio Defect Assessment Model](/audio-paper-digest-blog/posts/2026-04-29-padam-perceptual-audio-defect-assessment-model) | 7.0分 | 前50% | #音频分类 |
+| 660. | [Enhanced Generative Machine Listener](/audio-paper-digest-blog/posts/2026-04-29-enhanced-generative-machine-listener) | 7.0分 | 前25% | #音频分类 |
+| 661. | [Phase-Retrieval-Based Physics-Informed Neural Networks ](/audio-paper-digest-blog/posts/2026-04-29-phase-retrieval-based-physics-informed-neural) | 7.0分 | 前50% | #声源定位 |
+| 662. | [Acoustic Feedback Cancellation in Hearing Aids Exploiti](/audio-paper-digest-blog/posts/2026-04-29-acoustic-feedback-cancellation-in-hearing-aids) | 7.0分 | 前25% | #音频分类 |
+| 663. | [On the Design of Higher-Order Time-Intensity Microphone](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-higher-order-time-intensity) | 7.0分 | 前25% | #空间音频 |
+| 664. | [Deep Spatial Clue Informed Ambisonic Encoding for Irreg](/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for) | 7.0分 | 前25% | #空间音频 |
+| 665. | [HergNet: A Fast Neural Surrogate Model for Sound Field ](/audio-paper-digest-blog/posts/2026-04-29-hergnet-a-fast-neural-surrogate-model-for-sound) | 7.0分 | 前25% | #空间音频 |
+| 666. | [Identifying Birdsong Syllables without Labelled Data](/audio-paper-digest-blog/posts/2026-04-29-identifying-birdsong-syllables-without-labelled) | 7.0分 | 前50% | #生物声学 |
+| 667. | [Representation-Diverse Self-Supervision for Cross-Domai](/audio-paper-digest-blog/posts/2026-04-29-representation-diverse-self-supervision-for-cross) | 7.0分 | 前25% | #生物声学 |
+| 668. | [Do Foundational Audio Encoders Understand Music Structu](/audio-paper-digest-blog/posts/2026-04-29-do-foundational-audio-encoders-understand-music) | 7.0分 | 前25% | #音乐信息检索 |
+| 669. | [Sing What You Fit: A Perception-Based Dataset and Bench](/audio-paper-digest-blog/posts/2026-04-29-sing-what-you-fit-a-perception-based-dataset-and) | 7.0分 | 前25% | #音乐信息检索 |
+| 670. | [Joint Multichannel Acoustic Feedback Cancellation and S](/audio-paper-digest-blog/posts/2026-04-29-joint-multichannel-acoustic-feedback-cancellation) | 7.0分 | 前25% | #语音增强 |
+| 671. | [RIR-Former: Coordinate-Guided Transformer for Continuou](/audio-paper-digest-blog/posts/2026-04-29-rir-former-coordinate-guided-transformer-for) | 7.0分 | 前25% | #房间脉冲响应 |
+| 672. | [Segmentwise Pruning in Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-segmentwise-pruning-in-audio-language-models) | 7.0分 | 前50% | #音频问答 |
+| 673. | [Teaching Audio Models to Reason: A Unified Framework fo](/audio-paper-digest-blog/posts/2026-04-29-teaching-audio-models-to-reason-a-unified) | 7.0分 | 前25% | #音频问答 |
+| 674. | [AR-BSNet: Towards Ultra-Low Complexity Autoregressive T](/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity) | 7.0分 | 前25% | #语音分离 |
+| 675. | [Bleed No More: Generative Interference Reduction for Mu](/audio-paper-digest-blog/posts/2026-04-29-bleed-no-more-generative-interference-reduction) | 7.0分 | 前25% | #音乐源分离 |
+| 676. | [Gdiffuse: Diffusion-Based Speech Enhancement with Noise](/audio-paper-digest-blog/posts/2026-04-29-gdiffuse-diffusion-based-speech-enhancement-with) | 7.0分 | 前25% | #语音增强 |
+| 677. | [FxSearcher: Gradient-Free Text-Driven Audio Transformat](/audio-paper-digest-blog/posts/2026-04-29-fxsearcher-gradient-free-text-driven-audio) | 7.0分 | 前50% | #音频生成 |
+| 678. | [Auditory Illusion Benchmark for Large Audio Language Mo](/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio) | 7.0分 | 前50% | #模型评估 |
+| 679. | [TAGARELA - A Portuguese Speech Dataset from Podcasts](/audio-paper-digest-blog/posts/2026-04-29-tagarela-a-portuguese-speech-dataset-from-podcasts) | 7.0分 | 前25% | #语音识别 #语音合成 |
+| 680. | [DDSC: Dynamic Dual-Signal Curriculum for Data-Efficient](/audio-paper-digest-blog/posts/2026-04-29-ddsc-dynamic-dual-signal-curriculum-for-data) | 7.0分 | 前25% | #音频场景分类 |
+| 681. | [AFT: An Exemplar-Free Class Incremental Learning Method](/audio-paper-digest-blog/posts/2026-04-29-aft-an-exemplar-free-class-incremental-learning) | 7.0分 | 前25% | #音频分类 |
+| 682. | [Subspace Hybrid Adaptive Filtering for Phonocardiogram ](/audio-paper-digest-blog/posts/2026-04-29-subspace-hybrid-adaptive-filtering-for) | 7.0分 | 前50% | #音频增强 |
+| 683. | [An Unsupervised Alignment Feature Fusion System for Spo](/audio-paper-digest-blog/posts/2026-04-29-an-unsupervised-alignment-feature-fusion-system) | 7.0分 | 前25% | #语音生物标志物 |
+| 684. | [Transferable Audio Lottery Tickets: Gradient Accumulati](/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient) | 7.0分 | 前25% | #音频分类 |
+| 685. | [An Efficient Neural Network for Modeling Human Auditory](/audio-paper-digest-blog/posts/2026-04-29-an-efficient-neural-network-for-modeling-human) | 7.0分 | 前25% | #语音增强 |
+| 686. | [Modeling Inter-Segment Relationships in Speech for Deme](/audio-paper-digest-blog/posts/2026-04-29-modeling-inter-segment-relationships-in-speech) | 7.0分 | 前25% | #语音生物标志物 |
+| 687. | [Spectral or Spatial? Leveraging Both for Speaker Extrac](/audio-paper-digest-blog/posts/2026-04-29-spectral-or-spatial-leveraging-both-for-speaker) | 7.0分 | 前25% | #语音分离 |
+| 688. | [AnyRIR: Robust Non-Intrusive Room Impulse Response Esti](/audio-paper-digest-blog/posts/2026-04-29-anyrir-robust-non-intrusive-room-impulse-response) | 7.0分 | 前25% | #空间音频 |
+| 689. | [Constraint Optimized Multichannel Mixer-Limiter Design](/audio-paper-digest-blog/posts/2026-04-29-constraint-optimized-multichannel-mixer-limiter) | 7.0分 | 前25% | #多通道 |
+| 690. | [Microphone-Less Measurement of Three-Dimensional Radiat](/audio-paper-digest-blog/posts/2026-04-29-microphone-less-measurement-of-three-dimensional) | 7.0分 | 前25% | #声源定位 |
+| 691. | [Improving Binaural Distance Estimation in Reverberant R](/audio-paper-digest-blog/posts/2026-04-29-improving-binaural-distance-estimation-in) | 7.0分 | 前25% | #声源定位 |
+| 692. | [Hierarchical Tokenization of Multimodal Music Data for ](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-tokenization-of-multimodal-music) | 7.0分 | 前25% | #音乐检索 |
+| 693. | [Rethinking Music Captioning with Music Metadata LLMS](/audio-paper-digest-blog/posts/2026-04-29-rethinking-music-captioning-with-music-metadata) | 7.0分 | 前25% | #音乐理解 |
+| 694. | [Symphony Rendering: Midi and Composer-Conditioned Auto ](/audio-paper-digest-blog/posts/2026-04-29-symphony-rendering-midi-and-composer-conditioned) | 7.0分 | 前50% | #音乐生成 |
+| 695. | [IBPCodec : A Low-Bitrate Lightweight Speech Codec With ](/audio-paper-digest-blog/posts/2026-04-29-ibpcodec-a-low-bitrate-lightweight-speech-codec) | 7.0分 | 前25% | #语音编码 |
+| 696. | [Neural Network-Based Time-Frequency-Bin-Wise Linear Com](/audio-paper-digest-blog/posts/2026-04-29-neural-network-based-time-frequency-bin-wise) | 7.0分 | 前25% | #语音分离 |
+| 697. | [Shortcut Flow Matching for Speech Enhancement: Step-Inv](/audio-paper-digest-blog/posts/2026-04-29-shortcut-flow-matching-for-speech-enhancement) | 7.0分 | 前25% | #语音增强 |
+| 698. | [Generalizability of Predictive and Generative Speech En](/audio-paper-digest-blog/posts/2026-04-29-generalizability-of-predictive-and-generative) | 7.0分 | 前50% | #语音增强 |
+| 699. | [Single-Step Controllable Music Bandwidth extension with](/audio-paper-digest-blog/posts/2026-04-29-single-step-controllable-music-bandwidth) | 7.0分 | 前25% | #音乐信息检索 |
+| 700. | [From Human Speech to Ocean Signals: Transferring Speech](/audio-paper-digest-blog/posts/2026-04-29-from-human-speech-to-ocean-signals-transferring) | 7.0分 | 前25% | #水下声学目标识别 |
+| 701. | [Influence-Aware Curation and Active Selection for Indus](/audio-paper-digest-blog/posts/2026-04-29-influence-aware-curation-and-active-selection-for) | 7.0分 | 前50% | #音频事件检测 |
+| 702. | [A LLM-Driven Acoustic Semantic Enriched Framework for U](/audio-paper-digest-blog/posts/2026-04-29-a-llm-driven-acoustic-semantic-enriched-framework) | 7.0分 | 前25% | #音频分类 |
+| 703. | [Adaptive Task-Incremental Learning For Underwater Acous](/audio-paper-digest-blog/posts/2026-04-29-adaptive-task-incremental-learning-for-underwater) | 7.0分 | 前25% | #水下声学目标识别 |
+| 704. | [Phase-Space Signal Processing of Acoustic Data for Adva](/audio-paper-digest-blog/posts/2026-04-29-phase-space-signal-processing-of-acoustic-data) | 7.0分 | 前50% | #音频事件检测 |
+| 705. | [S-SONDO: Self-Supervised Knowledge Distillation for Gen](/audio-paper-digest-blog/posts/2026-04-29-s-sondo-self-supervised-knowledge-distillation) | 7.0分 | 前25% | #音频分类 |
+| 706. | [Audio Effect Estimation with DNN-Based Prediction and S](/audio-paper-digest-blog/posts/2026-04-29-audio-effect-estimation-with-dnn-based-prediction) | 7.0分 | 前25% | #音频效果估计 |
+| 707. | [Leveraging Whisper Embeddings For Audio-Based Lyrics Ma](/audio-paper-digest-blog/posts/2026-04-29-leveraging-whisper-embeddings-for-audio-based) | 7.0分 | 前50% | #音乐信息检索 |
+| 708. | [Learning Piezoelectric Hysteresis in In-Ear MEMS Loudsp](/audio-paper-digest-blog/posts/2026-04-29-learning-piezoelectric-hysteresis-in-in-ear-mems) | 7.0分 | 前50% | #音频信号处理 |
+| 709. | [Acoustic Non-Stationarity Objective Assessment with Har](/audio-paper-digest-blog/posts/2026-04-29-acoustic-non-stationarity-objective-assessment) | 7.0分 | 前25% | #音频分类 |
+| 710. | [Single-Microphone Audio Point Source Discriminative Loc](/audio-paper-digest-blog/posts/2026-04-29-single-microphone-audio-point-source) | 7.0分 | 前25% | #说话人分离 |
+| 711. | [Maximum Likelihood Measurement Noise Estimation for Blo](/audio-paper-digest-blog/posts/2026-04-29-maximum-likelihood-measurement-noise-estimation) | 7.0分 | 前50% | #回声消除 |
+| 712. | [SIREN: Spatially-Informed Reconstruction of Binaural Au](/audio-paper-digest-blog/posts/2026-04-29-siren-spatially-informed-reconstruction-of) | 7.0分 | 前25% | #空间音频 |
+| 713. | [Enhancing Automatic Drum Transcription with Online Dyna](/audio-paper-digest-blog/posts/2026-04-29-enhancing-automatic-drum-transcription-with) | 7.0分 | 前25% | #音乐信息检索 |
+| 714. | [ALMA-Chor: Leveraging Audio-Lyric Alignment with Mamba ](/audio-paper-digest-blog/posts/2026-04-29-alma-chor-leveraging-audio-lyric-alignment-with) | 7.0分 | 前25% | #音乐信息检索 |
+| 715. | [Cross-Modal Knowledge Distillation for Speech Large Lan](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-knowledge-distillation-for-speech) | 7.0分 | 前25% | #语音大模型 |
+| 716. | [Why Do Speech Language Models Fail to Generate Semantic](/audio-paper-digest-blog/posts/2026-04-29-why-do-speech-language-models-fail-to-generate) | 7.0分 | 前25% | #语音生成 |
+| 717. | [Gelina: Unified Speech and Gesture Synthesis Via Interl](/audio-paper-digest-blog/posts/2026-04-29-gelina-unified-speech-and-gesture-synthesis-via) | 7.0分 | 前50% | #语音合成 |
+| 718. | [Addressing Gradient Misalignment in Data-Augmented Trai](/audio-paper-digest-blog/posts/2026-04-29-addressing-gradient-misalignment-in-data) | 7.0分 | 前25% | #语音伪造检测 |
+| 719. | [AQUA-Bench: Beyond finding answers to knowing when ther](/audio-paper-digest-blog/posts/2026-04-29-aqua-bench-beyond-finding-answers-to-knowing-when) | 7.0分 | 前50% | #音频问答 |
+| 720. | [SpeechMapper: Speech-To-Text Embedding Projector for LL](/audio-paper-digest-blog/posts/2026-04-29-speechmapper-speech-to-text-embedding-projector) | 7.0分 | 前25% | #语音大模型 |
+| 721. | [TASU: Text-only Alignment for Speech Understanding](/audio-paper-digest-blog/posts/2026-04-29-tasu-text-only-alignment-for-speech-understanding) | 7.0分 | 前25% | #语音识别 |
+| 722. | [Mambaformer: State-Space Augmented Self-Attention with ](/audio-paper-digest-blog/posts/2026-04-29-mambaformer-state-space-augmented-self-attention) | 7.0分 | 前25% | #语音增强 |
+| 723. | [Training Dynamics-Aware Multi-Factor Curriculum Learnin](/audio-paper-digest-blog/posts/2026-04-29-training-dynamics-aware-multi-factor-curriculum) | 7.0分 | 前25% | #语音分离 |
+| 724. | [Streaming Speech Recognition with Decoder-Only Large La](/audio-paper-digest-blog/posts/2026-04-29-streaming-speech-recognition-with-decoder-only) | 7.0分 | 前25% | #语音识别 |
+| 725. | [Reducing Prompt Sensitivity in LLM-Based Speech Recogni](/audio-paper-digest-blog/posts/2026-04-29-reducing-prompt-sensitivity-in-llm-based-speech) | 7.0分 | 前25% | #语音识别 |
+| 726. | [PAC: Pronunciation-Aware Contextualized Large Language ](/audio-paper-digest-blog/posts/2026-04-29-pac-pronunciation-aware-contextualized-large) | 7.0分 | 前25% | #语音识别 |
+| 727. | [Emo-TTA: Improving Test-Time Adaptation of Audio-Langua](/audio-paper-digest-blog/posts/2026-04-29-emo-tta-improving-test-time-adaptation-of-audio) | 7.0分 | 前25% | #语音情感识别 |
+| 728. | [A Superb-Style Benchmark of Self-Supervised Speech Mode](/audio-paper-digest-blog/posts/2026-04-29-a-superb-style-benchmark-of-self-supervised) | 7.0分 | 前25% | #音频深度伪造检测 |
+| 729. | [Understanding the Strengths and Weaknesses of SSL Model](/audio-paper-digest-blog/posts/2026-04-29-understanding-the-strengths-and-weaknesses-of-ssl) | 7.0分 | 前50% | #音频深度伪造检测 |
+| 730. | [Investigating The Effect Of Sentence-Level Syntactic St](/audio-paper-digest-blog/posts/2026-04-29-investigating-the-effect-of-sentence-level) | 7.0分 | 前50% | #语音识别 |
+| 731. | [Test-Time Scaling for Auditory Cognition in Audio Langu](/audio-paper-digest-blog/posts/2026-04-29-test-time-scaling-for-auditory-cognition-in-audio) | 7.0分 | 前25% | #音频问答 |
+| 732. | [SSVD-O: Parameter-Efficient Fine-Tuning with Structured](/audio-paper-digest-blog/posts/2026-04-29-ssvd-o-parameter-efficient-fine-tuning-with) | 7.0分 | 前25% | #语音识别 |
+| 733. | [Three Seconds is Sufficient: A Multi-Pronged Framework ](/audio-paper-digest-blog/posts/2026-04-29-three-seconds-is-sufficient-a-multi-pronged) | 7.0分 | 前50% | #语音识别 |
+| 734. | [In-Sync: Adaptation of Speech Aware Large Language Mode](/audio-paper-digest-blog/posts/2026-04-29-in-sync-adaptation-of-speech-aware-large-language) | 7.0分 | 前50% | #语音识别 |
+| 735. | [Retrieval-Based Speculative Decoding For Autoregressive](/audio-paper-digest-blog/posts/2026-04-29-retrieval-based-speculative-decoding-for) | 7.0分 | 前50% | #语音合成 |
+| 736. | [Auditory-Inspired Transformer for Binaural Speech Enhan](/audio-paper-digest-blog/posts/2026-04-29-auditory-inspired-transformer-for-binaural-speech) | 7.0分 | 前25% | #语音增强 |
+| 737. | [Easy Turn: Integrating Acoustic and Linguistic Modaliti](/audio-paper-digest-blog/posts/2026-04-29-easy-turn-integrating-acoustic-and-linguistic) | 7.0分 | 前25% | #语音对话系统 |
+| 738. | [T-Mimi: A Transformer-Based Mimi Decoder for Real-Time ](/audio-paper-digest-blog/posts/2026-04-29-t-mimi-a-transformer-based-mimi-decoder-for-real) | 7.0分 | 前50% | #语音合成 |
+| 739. | [Wave-Trainer-Fit: Neural Vocoder With Trainable Prior A](/audio-paper-digest-blog/posts/2026-04-29-wave-trainer-fit-neural-vocoder-with-trainable) | 7.0分 | 前25% | #语音合成 |
+| 740. | [AccLID: Accent-aware Language Identification for Robust](/audio-paper-digest-blog/posts/2026-04-29-acclid-accent-aware-language-identification-for) | 7.0分 | 前25% | #语音识别 |
+| 741. | [BBPE16: UTF-16-Based Byte-Level Byte-Pair Encoding for ](/audio-paper-digest-blog/posts/2026-04-29-bbpe16-utf-16-based-byte-level-byte-pair-encoding) | 7.0分 | 前50% | #语音识别 |
+| 742. | [Mixtures of Lightweight Articulatory Experts for Multil](/audio-paper-digest-blog/posts/2026-04-29-mixtures-of-lightweight-articulatory-experts-for) | 7.0分 | 前25% | #语音识别 |
+| 743. | [Towards Orthographically-Informed Evaluation of Speech ](/audio-paper-digest-blog/posts/2026-04-29-towards-orthographically-informed-evaluation-of) | 7.0分 | 前25% | #语音识别 |
+| 744. | [Test Time Adaptation for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-test-time-adaptation-for-speech-emotion) | 7.0分 | 前25% | #语音情感识别 |
+| 745. | [Plug-and-Play Emotion Graphs for Compositional Promptin](/audio-paper-digest-blog/posts/2026-04-29-plug-and-play-emotion-graphs-for-compositional) | 7.0分 | 前25% | #语音情感识别 |
+| 746. | [Reasoning Driven Captions to Assist Noise Robust Speech](/audio-paper-digest-blog/posts/2026-04-29-reasoning-driven-captions-to-assist-noise-robust) | 7.0分 | 前25% | #语音情感识别 |
+| 747. | [EmoShift: Lightweight Activation Steering for Enhanced ](/audio-paper-digest-blog/posts/2026-04-29-emoshift-lightweight-activation-steering-for) | 7.0分 | 前50% | #语音合成 |
+| 748. | [Task Vector in TTS: Toward Emotionally Expressive Diale](/audio-paper-digest-blog/posts/2026-04-29-task-vector-in-tts-toward-emotionally-expressive) | 7.0分 | 前50% | #语音合成 |
+| 749. | [MeanVoiceFlow: One-Step Nonparallel Voice Conversion wi](/audio-paper-digest-blog/posts/2026-04-29-meanvoiceflow-one-step-nonparallel-voice) | 7.0分 | 前25% | #语音转换 |
+| 750. | [Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic](/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic) | 7.0分 | 前25% | #语音伪造检测 |
+| 751. | [Mitigating Intra-Speaker Variability in Diarization wit](/audio-paper-digest-blog/posts/2026-04-29-mitigating-intra-speaker-variability-in) | 7.0分 | 前25% | #说话人日志 |
+| 752. | [Fine-Tuning Large Multimodal Models for Automatic Pronu](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-multimodal-models-for-automatic) | 7.0分 | 前50% | #语音评估 |
+| 753. | [Quantifying Speaker Embedding Phonological Rule Interac](/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule) | 7.0分 | 前25% | #语音合成 |
+| 754. | [PFluxTTS: Hybrid Flow-Matching TTS with Robust Cross-Li](/audio-paper-digest-blog/posts/2026-04-29-pfluxtts-hybrid-flow-matching-tts-with-robust) | 7.0分 | 前50% | #语音合成 |
+| 755. | [Contextual Biasing for ASR in Speech LLM with Common Wo](/audio-paper-digest-blog/posts/2026-04-29-contextual-biasing-for-asr-in-speech-llm-with) | 7.0分 | 前25% | #语音识别 |
+| 756. | [Peeking Into the Future for Contextual Biasing](/audio-paper-digest-blog/posts/2026-04-29-peeking-into-the-future-for-contextual-biasing) | 7.0分 | 前50% | #语音识别 |
+| 757. | [The Singing Voice Conversion Challenge 2025: From Singe](/audio-paper-digest-blog/posts/2026-04-29-the-singing-voice-conversion-challenge-2025-from) | 7.0分 | 前50% | #歌唱语音转换 |
+| 758. | [S2Voice: Style-Aware Autoregressive Modeling with Enhan](/audio-paper-digest-blog/posts/2026-04-29-s2voice-style-aware-autoregressive-modeling-with) | 7.0分 | 前25% | #歌唱语音转换 |
+| 759. | [DiTSinger: Scaling Singing Voice Synthesis with Diffusi](/audio-paper-digest-blog/posts/2026-04-29-ditsinger-scaling-singing-voice-synthesis-with) | 7.0分 | 前25% | #歌唱语音合成 |
+| 760. | [LP-CFM: Perceptual Invariance-Aware Conditional Flow Ma](/audio-paper-digest-blog/posts/2026-04-29-lp-cfm-perceptual-invariance-aware-conditional) | 7.0分 | 前25% | #语音合成 |
+| 761. | [Learning Vocal-Tract Area And Radiation With A Physics-](/audio-paper-digest-blog/posts/2026-04-29-learning-vocal-tract-area-and-radiation-with-a) | 7.0分 | 前50% | #歌唱语音合成 |
+| 762. | [When Silence Matters: The Impact of Irrelevant Audio on](/audio-paper-digest-blog/posts/2026-04-29-when-silence-matters-the-impact-of-irrelevant) | 7.0分 | 前50% | #模型评估 |
+| 763. | [SLM-TTA: A Framework for Test-Time Adaptation of Genera](/audio-paper-digest-blog/posts/2026-04-29-slm-tta-a-framework-for-test-time-adaptation-of) | 7.0分 | 前50% | #语音识别 |
+| 764. | [Advancing Speech Understanding in Speech-Aware Language](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-understanding-in-speech-aware) | 7.0分 | 前25% | #语音问答 |
+| 765. | [Tokenchain: A Discrete Speech Chain via Semantic Token ](/audio-paper-digest-blog/posts/2026-04-29-tokenchain-a-discrete-speech-chain-via-semantic) | 7.0分 | 前25% | #语音识别 |
+| 766. | [Advanced modeling of interlanguage speech intelligibili](/audio-paper-digest-blog/posts/2026-04-29-advanced-modeling-of-interlanguage-speech) | 7.0分 | 前25% | #语音识别 |
+| 767. | [Leveraging Segment-Level Speech Representations for LLM](/audio-paper-digest-blog/posts/2026-04-29-leveraging-segment-level-speech-representations) | 7.0分 | 前50% | #语音识别 |
+| 768. | [Reading Between the Waves: Robust Topic Segmentation Us](/audio-paper-digest-blog/posts/2026-04-29-reading-between-the-waves-robust-topic) | 7.0分 | 前25% | #音频分类 |
+| 769. | [Advancing Speech Summarization in Multi-Modal LLMs with](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-summarization-in-multi-modal) | 7.0分 | 前50% | #音频问答 |
+| 770. | [A Personalized Real-Time Proactive Voice Memory Assista](/audio-paper-digest-blog/posts/2026-04-29-a-personalized-real-time-proactive-voice-memory) | 7.0分 | 前50% | #实时处理 |
+| 771. | [Mitigating Attention Sinks and Massive Activations in A](/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive) | 7.0分 | 前25% | #语音识别 |
+| 772. | [TVP-UNet: Threshold Variance Penalty U-Net for Voice Ac](/audio-paper-digest-blog/posts/2026-04-29-tvp-unet-threshold-variance-penalty-u-net-for) | 7.0分 | 前25% | #语音活动检测 |
+| 773. | [When Children Talk and Machines Listen: Toward an Inter](/audio-paper-digest-blog/posts/2026-04-29-when-children-talk-and-machines-listen-toward-an) | 7.0分 | 前50% | #语音生物标志物 |
+| 774. | [Towards Data Drift Monitoring for Speech Deepfake Detec](/audio-paper-digest-blog/posts/2026-04-29-towards-data-drift-monitoring-for-speech-deepfake) | 7.0分 | 前25% | #音频深度伪造检测 |
+| 775. | [CompSpoof: A Dataset and Joint Learning Framework for C](/audio-paper-digest-blog/posts/2026-04-29-compspoof-a-dataset-and-joint-learning-framework) | 7.0分 | 前25% | #音频深度伪造检测 |
+| 776. | [A Parameter-Efficient Multi-Scale Convolutional Adapter](/audio-paper-digest-blog/posts/2026-04-29-a-parameter-efficient-multi-scale-convolutional) | 7.0分 | - | - |
+| 777. | [Tri-Attention Fusion: Joint Temporal-Spectral and Bidir](/audio-paper-digest-blog/posts/2026-04-29-tri-attention-fusion-joint-temporal-spectral-and) | 7.0分 | 前25% | #语音伪造检测 |
+| 778. | [EmoTri-RL: Emotion- and Cause-Aware Reinforcement Learn](/audio-paper-digest-blog/posts/2026-04-29-emotri-rl-emotion-and-cause-aware-reinforcement) | 7.0分 | 前25% | #语音情感识别 |
+| 779. | [Teaching the Teachers: Boosting Unsupervised Domain Ada](/audio-paper-digest-blog/posts/2026-04-29-teaching-the-teachers-boosting-unsupervised) | 7.0分 | 前25% | #语音识别 |
+| 780. | [SFM-TTS: Lightweight and Rapid Speech Synthesis with Fl](/audio-paper-digest-blog/posts/2026-04-29-sfm-tts-lightweight-and-rapid-speech-synthesis) | 7.0分 | 前25% | #语音合成 |
+| 781. | [MELA-TTS: Joint Transformer-Diffusion Model with Repres](/audio-paper-digest-blog/posts/2026-04-29-mela-tts-joint-transformer-diffusion-model-with) | 7.0分 | 前25% | #语音合成 |
+| 782. | [Attention2Probability: Attention-Driven Terminology Pro](/audio-paper-digest-blog/posts/2026-04-29-attention2probability-attention-driven) | 7.0分 | 前25% | #语音识别 |
+| 783. | [Joint Autoregressive Modeling of Multi-Talker Overlappe](/audio-paper-digest-blog/posts/2026-04-29-joint-autoregressive-modeling-of-multi-talker) | 7.0分 | 前25% | #语音识别 #语音翻译 |
+| 784. | [Whisper-MLA: Reducing GPU Memory Consumption of ASR Mod](/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of) | 7.0分 | 前25% | #语音识别 |
+| 785. | [Mind the Shift: Using Delta SSL Embeddings to Enhance C](/audio-paper-digest-blog/posts/2026-04-29-mind-the-shift-using-delta-ssl-embeddings-to) | 7.0分 | 前25% | #语音识别 |
+| 786. | [PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric ](/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced) | 7.0分 | 前50% | #语音识别 |
+| 787. | [Audio-Conditioned Diffusion LLMs for ASR and Deliberati](/audio-paper-digest-blog/posts/2026-04-29-audio-conditioned-diffusion-llms-for-asr-and) | 7.0分 | 前50% | #语音识别 |
+| 788. | [AR&D: A Framework for Retrieving and Describing Concept](/audio-paper-digest-blog/posts/2026-04-29-ard-a-framework-for-retrieving-and-describing) | 6.5分 | 前50% | #音频大模型 |
+| 789. | [Do Speech LLMs Learn Crossmodal Embedding Spaces?](/audio-paper-digest-blog/posts/2026-04-29-do-speech-llms-learn-crossmodal-embedding-spaces) | 6.5分 | 前50% | #音频检索 |
+| 790. | [Learnable Mel-Frontend for Robust Underwater Acoustic T](/audio-paper-digest-blog/posts/2026-04-29-learnable-mel-frontend-for-robust-underwater) | 6.5分 | 前50% | #音频分类 |
+| 791. | [Solving the Helmholtz Equation Via Physics-Informed Neu](/audio-paper-digest-blog/posts/2026-04-29-solving-the-helmholtz-equation-via-physics) | 6.5分 | 前50% | #声学建模 |
+| 792. | [Sequence-Level Unsupervised Training in Speech Recognit](/audio-paper-digest-blog/posts/2026-04-29-sequence-level-unsupervised-training-in-speech) | 6.5分 | 前50% | #语音识别 |
+| 793. | [GLUE: Gradient-free Learning to Unify Experts](/audio-paper-digest-blog/posts/2026-04-29-glue-gradient-free-learning-to-unify-experts) | 6.5分 | 前50% | #迁移学习 |
+| 794. | [Investigating Modality Contribution in Audio LLMs for M](/audio-paper-digest-blog/posts/2026-04-29-investigating-modality-contribution-in-audio-llms) | 6.5分 | 前50% | #模型评估 |
+| 795. | [Frequency-Independent Ambisonics Upscaling Using Deep L](/audio-paper-digest-blog/posts/2026-04-29-frequency-independent-ambisonics-upscaling-using) | 6.5分 | 前50% | #空间音频 |
+| 796. | [A State-Dependent Markov Diffusion Process for Generati](/audio-paper-digest-blog/posts/2026-04-29-a-state-dependent-markov-diffusion-process-for) | 6.5分 | 前25% | #语音增强 |
+| 797. | [Sparse Autoencoders Make Audio Foundation Models More E](/audio-paper-digest-blog/posts/2026-04-29-sparse-autoencoders-make-audio-foundation-models) | 6.5分 | 前50% | #模型评估 |
+| 798. | [Ara-BEST-RQ: Multi Dialectal Arabic SSL](/audio-paper-digest-blog/posts/2026-04-29-ara-best-rq-multi-dialectal-arabic-ssl) | 6.5分 | 前50% | #语音识别 |
+| 799. | [A Bimodal Approach for Detecting Fatigue Using Speech a](/audio-paper-digest-blog/posts/2026-04-29-a-bimodal-approach-for-detecting-fatigue-using) | 6.5分 | - | - |
+| 800. | [Medical ASR Enhancement by Domain-Specific Reinforcemen](/audio-paper-digest-blog/posts/2026-04-29-medical-asr-enhancement-by-domain-specific) | 6.5分 | 前25% | #语音识别 |
+| 801. | [Graph-Biased EEG Transformers for Silent Speech Decodin](/audio-paper-digest-blog/posts/2026-04-29-graph-biased-eeg-transformers-for-silent-speech) | 6.5分 | 前25% | #语音生物标志物 |
+| 802. | [StyHarmo: Efficient Style-Specific Video Generation wit](/audio-paper-digest-blog/posts/2026-04-29-styharmo-efficient-style-specific-video) | 6.5分 | 前50% | #视频生成 |
+| 803. | [Vib2Sound: Separation Of Multimodal Sound Sources](/audio-paper-digest-blog/posts/2026-04-29-vib2sound-separation-of-multimodal-sound-sources) | 6.5分 | 前50% | #语音分离 |
+| 804. | [CoVA: Text-Guided Composed Video Retrieval for Audio-Vi](/audio-paper-digest-blog/posts/2026-04-29-cova-text-guided-composed-video-retrieval-for) | 6.5分 | 前25% | #跨模态检索 |
+| 805. | [MSCT: Differential Cross-Modal Attention for Deepfake D](/audio-paper-digest-blog/posts/2026-04-29-msct-differential-cross-modal-attention-for) | 6.5分 | 前10% | #音频深度伪造检测 |
+| 806. | [FODGE : High-Fidelity Dance Generation via Full-Body Op](/audio-paper-digest-blog/posts/2026-04-29-fodge-high-fidelity-dance-generation-via-full) | 6.5分 | 前50% | #音频生成 |
+| 807. | [A New Method and Dataset for Classroom Teaching Stage S](/audio-paper-digest-blog/posts/2026-04-29-a-new-method-and-dataset-for-classroom-teaching) | 6.5分 | 前25% | #课堂阶段分割 |
+| 808. | [Multimodal Fusion-Based IPCLIP Network for Mixed Realit](/audio-paper-digest-blog/posts/2026-04-29-multimodal-fusion-based-ipclip-network-for-mixed) | 6.5分 | 前50% | #多模态模型 |
+| 809. | [VT-Heads: Voice Cloning and Talking Head Generation fro](/audio-paper-digest-blog/posts/2026-04-29-vt-heads-voice-cloning-and-talking-head) | 6.5分 | 前50% | #视频生成 |
+| 810. | [Modeling Both Intra- And Inter-Utterance Variability fo](/audio-paper-digest-blog/posts/2026-04-29-modeling-both-intra-and-inter-utterance) | 6.5分 | 前25% | #语音情感识别 |
+| 811. | [DDSR-Net: Robust Multimodal Sentiment Analysis via Dyna](/audio-paper-digest-blog/posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via) | 6.5分 | 前50% | #语音情感识别 |
+| 812. | [PRoADS: Provably Secure And Robust Audio Diffusion Steg](/audio-paper-digest-blog/posts/2026-04-29-proads-provably-secure-and-robust-audio-diffusion) | 6.5分 | 前50% | #音频安全 |
+| 813. | [Auxiliary Multi-Label Training For Improving the Robust](/audio-paper-digest-blog/posts/2026-04-29-auxiliary-multi-label-training-for-improving-the) | 6.5分 | 前50% | #音频深度伪造检测 |
+| 814. | [Audio-Visual Deepfake Generation and Detection: An Expl](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-deepfake-generation-and-detection-an) | 6.5分 | 前25% | #音频深度伪造检测 |
+| 815. | [Source Separation For A Cappella Music](/audio-paper-digest-blog/posts/2026-04-29-source-separation-for-a-cappella-music) | 6.5分 | 前50% | #语音分离 |
+| 816. | [A Consistent Learning Depression Detection Framework In](/audio-paper-digest-blog/posts/2026-04-29-a-consistent-learning-depression-detection) | 6.5分 | 前50% | #语音生物标志物 |
+| 817. | [A Unified SVD-Modal Solution for Sparse Sound Field Rec](/audio-paper-digest-blog/posts/2026-04-29-a-unified-svd-modal-solution-for-sparse-sound) | 6.5分 | 前25% | #声源定位 |
+| 818. | [Pianoroll-Event: A Novel Score Representation for Symbo](/audio-paper-digest-blog/posts/2026-04-29-pianoroll-event-a-novel-score-representation-for) | 6.5分 | 前25% | #音乐生成 |
+| 819. | [An Envelope Separation Aided Multi-Task Learning Model ](/audio-paper-digest-blog/posts/2026-04-29-an-envelope-separation-aided-multi-task-learning) | 6.5分 | 前25% | #声源定位 |
+| 820. | [A Noval Monte Carlo Gradient Method Based on Meta-Learn](/audio-paper-digest-blog/posts/2026-04-29-a-noval-monte-carlo-gradient-method-based-on-meta) | 6.5分 | 前50% | #噪声控制 |
+| 821. | [Estimating Respiratory Effort from Nocturnal Breathing ](/audio-paper-digest-blog/posts/2026-04-29-estimating-respiratory-effort-from-nocturnal) | 6.5分 | 前25% | #音频分类 |
+| 822. | [Obstructive Sleep Apnea Endotype Prediction During Wake](/audio-paper-digest-blog/posts/2026-04-29-obstructive-sleep-apnea-endotype-prediction) | 6.5分 | 前50% | #语音生物标志物 |
+| 823. | [Confidence-Based Filtering for Speech Dataset Curation ](/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset) | 6.5分 | 前50% | #语音增强 |
+| 824. | [Melos: Sentence-To-Section Training with Multi-Task Lea](/audio-paper-digest-blog/posts/2026-04-29-melos-sentence-to-section-training-with-multi) | 6.5分 | 前50% | #音乐生成 |
+| 825. | [A Generalization Strategy for Speech Quality Prediction](/audio-paper-digest-blog/posts/2026-04-29-a-generalization-strategy-for-speech-quality) | 6.5分 | 前25% | #语音质量评估 |
+| 826. | [Exterior Sound Field Estimation Based on Physics-Constr](/audio-paper-digest-blog/posts/2026-04-29-exterior-sound-field-estimation-based-on-physics) | 6.5分 | 前25% | #空间音频 |
+| 827. | [Domain-Invariant Representation Learning of Bird Sounds](/audio-paper-digest-blog/posts/2026-04-29-domain-invariant-representation-learning-of-bird) | 6.5分 | 前50% | #生物声学 |
+| 828. | [Mixture-of-Experts Framework for Field-of-View Enhanced](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-framework-for-field-of-view) | 6.5分 | 前50% | #空间音频 |
+| 829. | [Generating Localized Audible Zones Using a Single-Chann](/audio-paper-digest-blog/posts/2026-04-29-generating-localized-audible-zones-using-a-single) | 6.5分 | 前50% | #空间音频 |
+| 830. | [Towards Evaluating Generative Audio: Insights from Neur](/audio-paper-digest-blog/posts/2026-04-29-towards-evaluating-generative-audio-insights-from) | 6.5分 | 前50% | #模型评估 |
+| 831. | [Sampling-Rate-Agnostic Speech Super-Resolution Based on](/audio-paper-digest-blog/posts/2026-04-29-sampling-rate-agnostic-speech-super-resolution) | 6.5分 | 前25% | #语音增强 |
+| 832. | [Towards Distance-Aware Synthetic Audio Mixtures for Uni](/audio-paper-digest-blog/posts/2026-04-29-towards-distance-aware-synthetic-audio-mixtures) | 6.5分 | 前50% | #语音分离 |
+| 833. | [Feedback-Driven Retrieval-Augmented Audio Generation wi](/audio-paper-digest-blog/posts/2026-04-29-feedback-driven-retrieval-augmented-audio) | 6.5分 | 前25% | #音频生成 |
+| 834. | [Taming Audio VAEs via Target-KL Regularization](/audio-paper-digest-blog/posts/2026-04-29-taming-audio-vaes-via-target-kl-regularization) | 6.5分 | 前25% | #音频生成 |
+| 835. | [Diverse and Few-Step Audio Captioning via Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-diverse-and-few-step-audio-captioning-via-flow) | 6.5分 | 前50% | #音频字幕生成 |
+| 836. | [MCI-OTFusion: A Multimodal Model for MCI Detection and ](/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection) | 6.5分 | 前50% | #轻度认知障碍检测 |
+| 837. | [Utilizing Information Theoretic Approach to Study Cochl](/audio-paper-digest-blog/posts/2026-04-29-utilizing-information-theoretic-approach-to-study) | 6.5分 | 前50% | #生物声学 |
+| 838. | [Adaptive Spectral Weighting in Sagittal-Plane Sound Loc](/audio-paper-digest-blog/posts/2026-04-29-adaptive-spectral-weighting-in-sagittal-plane) | 6.5分 | 前25% | #声源定位 |
+| 839. | [Thinking While Listening: Simple Test Time Scaling for ](/audio-paper-digest-blog/posts/2026-04-29-thinking-while-listening-simple-test-time-scaling) | 6.5分 | 前50% | #音频分类 |
+| 840. | [Snore Sound Classification Based on Physiological Featu](/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological) | 6.5分 | 前25% | #音频分类 |
+| 841. | [Fine-Tuning Large Audio-Language Models with Lora for P](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-audio-language-models-with-lora) | 6.5分 | 前50% | #音频事件检测 |
+| 842. | [Poly-SVC: Polyphony-Aware Singing Voice Conversion with](/audio-paper-digest-blog/posts/2026-04-29-poly-svc-polyphony-aware-singing-voice-conversion) | 6.5分 | 前50% | #歌唱语音转换 |
+| 843. | [Low-Frequency Harmonic Control for Speech Intelligibili](/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech) | 6.5分 | 前50% | #语音增强 |
+| 844. | [Disentangled Authenticity Representation for Partially ](/audio-paper-digest-blog/posts/2026-04-29-disentangled-authenticity-representation-for) | 6.5分 | 前25% | #音频深度伪造检测 |
+| 845. | [Linguard: Authenticating Speech Recordings Using Speech](/audio-paper-digest-blog/posts/2026-04-29-linguard-authenticating-speech-recordings-using) | 6.5分 | 前50% | #音频安全 |
+| 846. | [Vioptt: Violin Technique-Aware Transcription from Synth](/audio-paper-digest-blog/posts/2026-04-29-vioptt-violin-technique-aware-transcription-from) | 6.5分 | 前50% | #音乐信息检索 |
+| 847. | [Continuation Method for Feedback Delay Network Modal De](/audio-paper-digest-blog/posts/2026-04-29-continuation-method-for-feedback-delay-network) | 6.5分 | 前50% | #空间音频 |
+| 848. | [Adversarial Rivalry Learning for Music Classification](/audio-paper-digest-blog/posts/2026-04-29-adversarial-rivalry-learning-for-music) | 6.5分 | 前25% | #音乐分类 |
+| 849. | [Scaling Ambiguity: Augmenting Human Annotation in Speec](/audio-paper-digest-blog/posts/2026-04-29-scaling-ambiguity-augmenting-human-annotation-in) | 6.5分 | 前50% | #语音情感识别 |
+| 850. | [Still Thinking or Stopped Talking? Dialogue Silence Int](/audio-paper-digest-blog/posts/2026-04-29-still-thinking-or-stopped-talking-dialogue) | 6.5分 | 前25% | #语音对话系统 |
+| 851. | [What the student learns in knowledge distillation: A su](/audio-paper-digest-blog/posts/2026-04-29-what-the-student-learns-in-knowledge-distillation) | 6.5分 | 前50% | #语音增强 |
+| 852. | [Recovering Performance in Speech Emotion Recognition fr](/audio-paper-digest-blog/posts/2026-04-29-recovering-performance-in-speech-emotion) | 6.5分 | 前50% | #语音情感识别 |
+| 853. | [B-GRPO: Unsupervised Speech Emotion Recognition Based o](/audio-paper-digest-blog/posts/2026-04-29-b-grpo-unsupervised-speech-emotion-recognition) | 6.5分 | 前50% | #语音情感识别 |
+| 854. | [Leveraging Large Speech Language Models as Evaluators f](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-speech-language-models-as) | 6.5分 | 前50% | #语音情感识别 |
+| 855. | [Curriculum Learning with Contrastive Loss for Lightweig](/audio-paper-digest-blog/posts/2026-04-29-curriculum-learning-with-contrastive-loss-for) | 6.5分 | 前25% | #说话人验证 |
+| 856. | [Cross-Lingual Alzheimer’s Disease Detection with Multim](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-alzheimers-disease-detection-with) | 6.5分 | 前25% | #语音生物标志物 |
+| 857. | [MeanSE: Efficient Generative Speech Enhancement with Me](/audio-paper-digest-blog/posts/2026-04-29-meanse-efficient-generative-speech-enhancement) | 6.5分 | 前25% | #语音增强 |
+| 858. | [On The Design of Efficient Neural Methods for Geometry-](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-efficient-neural-methods-for) | 6.5分 | 前50% | #语音增强 |
+| 859. | [Combining Multi-Order Attention and Multi-Resolution Di](/audio-paper-digest-blog/posts/2026-04-29-combining-multi-order-attention-and-multi) | 6.5分 | 前50% | #语音合成 |
+| 860. | [CTC-DID: CTC-Based Arabic Dialect Identification for St](/audio-paper-digest-blog/posts/2026-04-29-ctc-did-ctc-based-arabic-dialect-identification) | 6.5分 | 前50% | #语音识别 |
+| 861. | [Towards Fair ASR for Second Language Speakers using Fai](/audio-paper-digest-blog/posts/2026-04-29-towards-fair-asr-for-second-language-speakers) | 6.5分 | 前50% | #语音识别 |
+| 862. | [Gen-SER: When the Generative Model Meets Speech Emotion](/audio-paper-digest-blog/posts/2026-04-29-gen-ser-when-the-generative-model-meets-speech) | 6.5分 | 前50% | #语音情感识别 |
+| 863. | [SmoothCLAP: Soft-Target Enhanced Contrastive Language-A](/audio-paper-digest-blog/posts/2026-04-29-smoothclap-soft-target-enhanced-contrastive) | 6.5分 | 前50% | #语音情感识别 |
+| 864. | [Slot Filling as a Reasoning Task for Speechllms](/audio-paper-digest-blog/posts/2026-04-29-slot-filling-as-a-reasoning-task-for-speechllms) | 6.5分 | 前25% | #槽填充 |
+| 865. | [Selective Hub Fusion with Modality-Heterogeneous Expert](/audio-paper-digest-blog/posts/2026-04-29-selective-hub-fusion-with-modality-heterogeneous) | 6.5分 | 前25% | #多模态模型 |
+| 866. | [MaskVCT: Masked Voice Codec Transformer for Zero-Shot V](/audio-paper-digest-blog/posts/2026-04-29-maskvct-masked-voice-codec-transformer-for-zero) | 6.5分 | 前50% | #语音转换 |
+| 867. | [Integrating Speaker Embeddings and LLM-Derived Semantic](/audio-paper-digest-blog/posts/2026-04-29-integrating-speaker-embeddings-and-llm-derived) | 6.5分 | 前25% | #说话人分离 |
+| 868. | [Towards Building Speech Large Language Models for Multi](/audio-paper-digest-blog/posts/2026-04-29-towards-building-speech-large-language-models-for) | 6.5分 | 前25% | #语音识别 |
+| 869. | [Whisper: Courtside Edition - Enhancing ASR Performance ](/audio-paper-digest-blog/posts/2026-04-29-whisper-courtside-edition-enhancing-asr) | 6.5分 | 前50% | #语音识别 |
+| 870. | [ZSV2C-MLLM: Zero-Shot Visual Voice Cloning Via Multimod](/audio-paper-digest-blog/posts/2026-04-29-zsv2c-mllm-zero-shot-visual-voice-cloning-via) | 6.5分 | 前50% | #语音克隆 |
+| 871. | [Multimodal LLMs as Expert Speech Annotators: Acoustic M](/audio-paper-digest-blog/posts/2026-04-29-multimodal-llms-as-expert-speech-annotators) | 6.5分 | 前50% | #语音生物标志物 |
+| 872. | [SED: Structural Entropy Based Speech Discretization for](/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech) | 6.5分 | 前50% | #语音识别 |
+| 873. | [Z-Scores: A Metric for Linguistically Assessing Disflue](/audio-paper-digest-blog/posts/2026-04-29-z-scores-a-metric-for-linguistically-assessing) | 6.5分 | 前50% | #模型评估 |
+| 874. | [Multilingual Supervised Pretraining with Lm-Assisted De](/audio-paper-digest-blog/posts/2026-04-29-multilingual-supervised-pretraining-with-lm) | 6.5分 | 前50% | #语音识别 |
+| 875. | [Enhancing Dialogue-Related Speech Tasks with Generated ](/audio-paper-digest-blog/posts/2026-04-29-enhancing-dialogue-related-speech-tasks-with) | 6.5分 | 前25% | #语音对话系统 |
+| 876. | [Position-Invariant Fine-Tuning Of Speech Enhancement Mo](/audio-paper-digest-blog/posts/2026-04-29-position-invariant-fine-tuning-of-speech) | 6.5分 | 前50% | #语音增强 |
+| 877. | [Improving Automatic Speech Recognition by Mitigating Di](/audio-paper-digest-blog/posts/2026-04-29-improving-automatic-speech-recognition-by) | 6.5分 | 前25% | #语音识别 |
+| 878. | [Windowed SummaryMixing: An Efficient Fine-Tuning of Sel](/audio-paper-digest-blog/posts/2026-04-29-windowed-summarymixing-an-efficient-fine-tuning) | 6.5分 | 前50% | #语音识别 |
+| 879. | [Proficiency-Aware Adaptation and Data Augmentation for ](/audio-paper-digest-blog/posts/2026-04-29-proficiency-aware-adaptation-and-data) | 6.5分 | 前25% | #语音识别 |
+| 880. | [Domain-Aware Scheduling for ASR Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-domain-aware-scheduling-for-asr-fine-tuning) | 6.5分 | 前50% | #语音识别 |
+| 881. | [Online Register For Dual-Mode Self-Supervised Speech Mo](/audio-paper-digest-blog/posts/2026-04-29-online-register-for-dual-mode-self-supervised) | 6.5分 | 前50% | #语音识别 |
+| 882. | [Learning to Align with Unbalanced Optimal Transport in ](/audio-paper-digest-blog/posts/2026-04-29-learning-to-align-with-unbalanced-optimal) | 6.5分 | 前50% | #语音识别 |
+| 883. | [How Far Do SSL Speech Models Listen for Tone? Temporal ](/audio-paper-digest-blog/posts/2026-04-29-how-far-do-ssl-speech-models-listen-for-tone) | 6.5分 | 前50% | #语音识别 |
+| 884. | [Probing Whisper for Dysarthric Speech in Detection and ](/audio-paper-digest-blog/posts/2026-04-29-probing-whisper-for-dysarthric-speech-in) | 6.5分 | 前25% | #语音生物标志物 |
+| 885. | [Connecting Layer-Wise Representation of Wavlm with Spec](/audio-paper-digest-blog/posts/2026-04-29-connecting-layer-wise-representation-of-wavlm) | 6.0分 | 前50% | #说话人验证 |
+| 886. | [Multimodal Co-Training with Subtractive Unlabeled-Benef](/audio-paper-digest-blog/posts/2026-04-29-multimodal-co-training-with-subtractive-unlabeled) | 6.0分 | 前25% | #多模态学习 |
+| 887. | [Mixture of Experts for Recognizing Depression from Inte](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-for-recognizing-depression) | 6.0分 | 前50% | #语音生物标志物 |
+| 888. | [Acoustic and Facial Markers of Perceived Conversational](/audio-paper-digest-blog/posts/2026-04-29-acoustic-and-facial-markers-of-perceived) | 6.0分 | 前50% | #语音情感识别 |
+| 889. | [Secondary Source Placement for Sound Field Control Base](/audio-paper-digest-blog/posts/2026-04-29-secondary-source-placement-for-sound-field) | 6.0分 | 前25% | #空间音频 |
+| 890. | [Can Hierarchical Cross-Modal Fusion Predict Human Perce](/audio-paper-digest-blog/posts/2026-04-29-can-hierarchical-cross-modal-fusion-predict-human) | 6.0分 | 前25% | #模型评估 |
+| 891. | [Stereophonic Acoustic Echo Cancellation Using an Improv](/audio-paper-digest-blog/posts/2026-04-29-stereophonic-acoustic-echo-cancellation-using-an) | 6.0分 | 前50% | #语音增强 |
+| 892. | [Towards Real-Time Generative Speech Restoration with Fl](/audio-paper-digest-blog/posts/2026-04-29-towards-real-time-generative-speech-restoration) | 6.0分 | 前50% | #语音增强 |
+| 893. | [Is Phase Really Needed for Weakly-Supervised Dereverber](/audio-paper-digest-blog/posts/2026-04-29-is-phase-really-needed-for-weakly-supervised) | 6.0分 | 前50% | #语音增强 |
+| 894. | [Leveraging Audio-Visual Data to Reduce the Multilingual](/audio-paper-digest-blog/posts/2026-04-29-leveraging-audio-visual-data-to-reduce-the) | 6.0分 | 前50% | #语音识别 |
+| 895. | [Direct Simultaneous Translation Activation for Large Au](/audio-paper-digest-blog/posts/2026-04-29-direct-simultaneous-translation-activation-for) | 6.0分 | 前25% | #语音翻译 |
+| 896. | [Estimating Hand-Related Features from Speech Using Mach](/audio-paper-digest-blog/posts/2026-04-29-estimating-hand-related-features-from-speech) | 5.0分 | 前50% | #语音生物标志物 |
+| 897 | [PerformSinger: Multimodal Singing Voice Synthesis Lever](/audio-paper-digest-blog/posts/2026-04-29-performsinger-multimodal-singing-voice-synthesis) | N/A | - | - |
+| 898 | [OMNI-AVSR: Towards Unified Multimodal Speech Recognitio](/audio-paper-digest-blog/posts/2026-04-29-omni-avsr-towards-unified-multimodal-speech) | N/A | - | - |
 
 ---
 
@@ -1795,7 +1795,45 @@ layout: "posts"
 
 ---
 
-### 23. [Bridging the Semantic Gap: Cross-Attentive Fusion for Joint Acoustic-Semantic Speech Quality Assessment](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-semantic-gap-cross-attentive-fusion)
+### 23. [SwitchCodec: Adaptive Residual-Expert Sparse Quantization for High-Fidelity Neural Audio Coding](/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse)
+
+前25% | #音频生成 | #模型评估 | #向量量化 #混合专家
+
+👥 **作者与机构**
+
+- 第一作者：Xiangbo Wang（杭州电子科技大学通信工程学院）
+- 通讯作者：Wenbin Jiang（杭州电子科技大学通信工程学院）
+- 作者列表：Xiangbo Wang（杭州电子科技大学通信工程学院）、Wenbin Jiang（杭州电子科技大学通信工程学院，通讯作者）、Jin Wang（杭州电子科技大学通信工程学院）、Yubo You（杭州电子科技大学通信工程学院）、Sheng Fang（杭州电子科技大学电子信息学院）、Fei Wen（上海交通大学信息科学与电子工程学院）
+
+💡 **毒舌点评**
+
+**亮点**：将混合专家的思想与残差量化巧妙结合，通过“选择-顺序解耦”的设计，既保留了RVQ能量递减的稳定性，又实现了根据内容动态分配比特，最终在2.67 kbps下获得了极高的MUSHRA主观分数（91.7），证明了该策略的有效性。**短板**：侧信息（路由掩码）的传输开销在极低比特率下可能被低估，且论文未与更多最新或专门的音频编码模型（如HiFi-Codec, TiCodec）进行对比，削弱了“全面领先”结论的说服力。
+
+📌 **核心摘要**
+
+1. **问题**：现有基于残差向量量化（RVQ）的神经音频编解码器使用固定数量的量化器，导致在简单音频段上比特分配浪费，在复杂音频段上表示能力不足，效率低下。
+2. **核心方法**：提出SwitchCodec，其核心是**残差专家向量量化（REVQ）**。该框架包含一个共享的基量化器和一组可稀疏激活的路由专家量化器。通过一个门控网络动态选择一小部分（top-k）最匹配当前音频段的专家进行残差细化。
+3. **创新之处**：与现有自适应RVQ或MoE-VQ相比，创新点在于**解耦了量化器的选择与应用顺序**。被选中的专家仍按固定索引顺序应用于残差，保留了能量递减的稳定层次结构，避免了训练不稳定问题。此外，通过调整推理时激活的专家数量（k），实现了单模型的可变比特率（VBR）操作。
+4. **实验结果**：在VCTK等数据集上，SwitchCodec在2.67 kbps和5.33 kbps比特率下，所有客观指标（Mel距离， STFT距离， PESQ， ViSQOL）均显著优于EnCodec和DAC。主观MUSHRA测试得分分别达到91.7和93.4，接近原始音质。消融实验显示，增加专家池数量（Nr）到9以上，在激活率下降的同时能维持质量。关键数据对比如下表：
+
+| Codec   | Bitrate (kbps) | Mel distance ↓ | STFT distance ↓ | PESQ ↑ | ViSQOL ↑ | MUSHRA ↑ |
+| :------ | :------------- | :------------- | :-------------- | :----- | :------- | :------- |
+| SwitchCodec | 2.67          | 0.75           | 1.71            | 2.87   | 4.04     | 91.7     |
+|         | 5.33          | 0.66           | 1.65            | 3.49   | 4.25     | 93.4     |
+| EnCodec | 3             | 1.20           | 2.43            | 1.71   | 2.09     | 61.3     |
+|         | 6             | 1.06           | 2.29            | 2.21   | 2.71     | 70.4     |
+| DAC     | 2.67          | 0.87           | 1.89            | 2.31   | 3.61     | 86.3     |
+|         | 5.33          | 0.72           | 1.77            | 3.31   | 3.87     | 88.9     |
+
+![图3: Mel频谱图对比](pdf-image-page2-idx2)
+*图3：Mel频谱图对比。(a)原始音频；(b)SwitchCodec生成；(c)DAC生成；(d)EnCodec生成。SwitchCodec的输出在复杂区域（如高频谐波）模糊最少，与原始频谱最接近。*
+
+5. **实际意义**：该工作展示了动态、内容自适应的量化策略在音频编码中的巨大潜力，实现了“一个模型覆盖广泛比特率”的灵活性，有助于降低流媒体服务的带宽成本和存储需求。
+6. **主要局限性**：1) 论文未公开代码和模型权重，可复现性有限。2) 门控网络和路由选择的引入增加了模型复杂度和训练难度。3) 路由掩码作为边信息需要传输，虽然论文计算开销低，但在极低比特率场景下其影响值得进一步考察。
+
+---
+
+### 24. [Bridging the Semantic Gap: Cross-Attentive Fusion for Joint Acoustic-Semantic Speech Quality Assessment](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-semantic-gap-cross-attentive-fusion)
 
 🔥 **8.5/10** | 前25% | #语音质量评估 | #对比学习 | #预训练 #交叉注意力
 
@@ -1821,7 +1859,7 @@ layout: "posts"
 
 ---
 
-### 24. [Shared Representation Learning for Reference-Guided Targeted Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-shared-representation-learning-for-reference)
+### 25. [Shared Representation Learning for Reference-Guided Targeted Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-shared-representation-learning-for-reference)
 
 🔥 **8.5/10** | 前25% | #音频事件检测 | #多任务学习 | #预训练 #音频检索
 
@@ -1864,7 +1902,7 @@ layout: "posts"
 
 ---
 
-### 25. [Self-Supervised Note Tracking and Multi-Pitch Estimation Via Reconstruction-Based Learning](/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch)
+### 26. [Self-Supervised Note Tracking and Multi-Pitch Estimation Via Reconstruction-Based Learning](/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch)
 
 🔥 **8.5/10** | 前25% | #多音高估计 #音符跟踪 | #自监督学习 #重构学习 | #多音高估计 #音符跟踪
 
@@ -1893,7 +1931,36 @@ layout: "posts"
 
 ---
 
-### 26. [Spatial-CLAP: Learning Spatially-Aware Audio–Text Embeddings for Multi-Source Conditions](/audio-paper-digest-blog/posts/2026-04-29-spatial-clap-learning-spatially-aware-audiotext)
+### 27. [GLAP: General Contrastive Audio-Text Pretraining Across Domains and Languages](/audio-paper-digest-blog/posts/2026-04-29-glap-general-contrastive-audio-text-pretraining)
+
+前25% | #音频检索 | #对比学习 #预训练 | #对比学习 #预训练
+
+👥 **作者与机构**
+
+- 第一作者：Heinrich Dinkel (MiLM Plus, Xiaomi Inc., China)
+- 通讯作者：未说明
+- 作者列表：Heinrich Dinkel (MiLM Plus, Xiaomi Inc., China)、Zhiyong Yan (MiLM Plus, Xiaomi Inc., China)、Tianzi Wang (MiLM Plus, Xiaomi Inc., China)、Yongqing Wang (MiLM Plus, Xiaomi Inc., China)、Xingwei Sun (MiLM Plus, Xiaomi Inc., China)、Yadong Niu (MiLM Plus, Xiaomi Inc., China)、Jizhong Liu (MiLM Plus, Xiaomi Inc., China)、Gang Li (MiLM Plus, Xiaomi Inc., China)、Junbo Zhang (MiLM Plus, Xiaomi Inc., China)、Jian Luan (MiLM Plus, Xiaomi Inc., China)
+
+💡 **毒舌点评**
+
+亮点：GLAP真正实现了将语音内容理解无缝整合进音频-文本对齐框架，并在多语言语音任务上取得了远超前辈模型（如L-CLAP, MSCLAP）的惊人效果，证明了“一个模型通吃所有音频类型”的可行性。短板：其语音理解能力的显著提升，很大程度上归功于选择了对语音建模能力强的Dasheng作为音频编码器，这更像是一个工程上的“正确组合”，而非方法论上的根本性突破，且其性能在非英语语言的零样本声音分类上仍有明显衰减。
+
+📌 **核心摘要**
+
+1. **问题**：现有的对比语言-音频预训练（CLAP）模型主要针对英文的声音和音乐事件，在处理**语音（spoken language）内容**和**多语言**任务上表现不佳，无法满足通用音频理解的需求。
+2. **方法核心**：提出**GLAP（General Language Audio Pretraining）** 框架。核心是在对比学习框架下，使用一个**通用音频编码器（Dasheng）** 来提取音频特征，并与强大的**多语言文本编码器（Sonar）** 的文本特征进行对齐。训练时，除了英文声音/音乐数据，还加入了大规模多语言语音数据（YODAS）以及通过机器翻译得到的多语言声音/音乐描述。
+3. **与已有方法相比新在哪里**：a) **统一性**：首次在一个单一框架中，平衡了声音事件、音乐和语音内容的理解能力，不牺牲原有声音/音乐任务的性能。b) **多语言**：系统性地将多语言能力扩展至音频-文本对齐模型，在50种语言的关键词识别等任务上展现出前所未有的效果。c) **训练目标**：采用更适合大批次的**sigmoid loss**替代标准的交叉熵损失，在检索任务上获得1%-5%的性能提升。
+4. **主要实验结果**：
+    - **检索**：在音乐/语音检索基准（LibriSpeech, AISHELL-2, MusicCaps）上大幅超越现有方法，例如在LibriSpeech Test-other上文本到音频检索R@1达到**93.8%**（对比最强基线L-CLAP的0.1%）。在标准声音事件检索基准（AudioCaps, Clotho）上达到或超越SOTA水平，如在AudioCaps上文本到音频R@1达到**41.7%**。
+    - **零样本分类**：在Speech Commands V1/V2（SCV1/2）等语音指令数据集上，准确率高达**96.6%和95.8%**，远超所有基线。在声音和音乐分类任务（ESC-50, GTZAN等）上保持竞争力。
+    - **多语言**：在包含50种语言的MSW数据集上进行零样本关键词识别，平均准确率显著，并在如奥里亚语、瓜拉尼语等低资源语言上取得较好效果。多语言声音/音乐分类（表7）显示，虽然性能较英语有所下降，但模型仍有效。
+    - 关键结果见表2（检索）、表5（零样本分类）和图3（多语言）。
+5. **实际意义**：GLAP为构建能够理解**完整音频内容（包括声音、音乐和语音）** 的通用音频基础模型提供了可行方案，尤其在多语言和跨领域检索、零样本分类方面具有重要应用价值，推动了音频智能从“事件检测”向“内容理解”的演进。
+6. **主要局限性**：a) 模型对语音内容的强大理解能力，部分依赖于选择特定的预训练音频编码器（Dasheng），其架构细节非本文重点。b) 多语言声音/音乐分类性能较英语有明显下降（表7），表明跨语言泛化仍有提升空间。c) 训练数据YODAS包含大量自动转录的噪声数据，可能影响上限。
+
+---
+
+### 28. [Spatial-CLAP: Learning Spatially-Aware Audio–Text Embeddings for Multi-Source Conditions](/audio-paper-digest-blog/posts/2026-04-29-spatial-clap-learning-spatially-aware-audiotext)
 
 🔥 **8.5/10** | 前25% | #空间音频 | #对比学习 | #声源定位 #跨模态
 
@@ -1926,7 +1993,7 @@ layout: "posts"
 
 ---
 
-### 27. [Time-Shifted Token Scheduling for Symbolic Music Generation](/audio-paper-digest-blog/posts/2026-04-29-time-shifted-token-scheduling-for-symbolic-music)
+### 29. [Time-Shifted Token Scheduling for Symbolic Music Generation](/audio-paper-digest-blog/posts/2026-04-29-time-shifted-token-scheduling-for-symbolic-music)
 
 🔥 **8.5/10** | 前25% | #音乐生成 | #自回归模型 | #多轨音乐
 
@@ -1958,7 +2025,7 @@ layout: "posts"
 
 ---
 
-### 28. [Bridging the Measurement–Simulation Gap in Room Acoustics with Real2sim Diffusion](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-measurementsimulation-gap-in-room)
+### 30. [Bridging the Measurement–Simulation Gap in Room Acoustics with Real2sim Diffusion](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-measurementsimulation-gap-in-room)
 
 🔥 **8.5/10** | 前25% | #声源定位 | #扩散模型 | #麦克风阵列 #信号处理
 
@@ -1995,7 +2062,7 @@ layout: "posts"
 
 ---
 
-### 29. [Low-Resource Guidance for Controllable Latent Audio Diffusion](/audio-paper-digest-blog/posts/2026-04-29-low-resource-guidance-for-controllable-latent)
+### 31. [Low-Resource Guidance for Controllable Latent Audio Diffusion](/audio-paper-digest-blog/posts/2026-04-29-low-resource-guidance-for-controllable-latent)
 
 🔥 **8.5/10** | 前25% | #音乐生成 | #扩散模型 | #控制生成 #推理优化
 
@@ -2027,7 +2094,7 @@ layout: "posts"
 
 ---
 
-### 30. [Synthcloner: Synthesizer-Style Audio Transfer via Factorized Codec with ADSR Envelope Control](/audio-paper-digest-blog/posts/2026-04-29-synthcloner-synthesizer-style-audio-transfer-via)
+### 32. [Synthcloner: Synthesizer-Style Audio Transfer via Factorized Codec with ADSR Envelope Control](/audio-paper-digest-blog/posts/2026-04-29-synthcloner-synthesizer-style-audio-transfer-via)
 
 🔥 **8.5/10** | 前25% | #音频生成 | #解耦表征学习 | #因子分解 #合成器
 
@@ -2057,7 +2124,7 @@ layout: "posts"
 
 ---
 
-### 31. [A Generative-First Neural Audio Autoencoder](/audio-paper-digest-blog/posts/2026-04-29-a-generative-first-neural-audio-autoencoder)
+### 33. [A Generative-First Neural Audio Autoencoder](/audio-paper-digest-blog/posts/2026-04-29-a-generative-first-neural-audio-autoencoder)
 
 🔥 **8.5/10** | 前25% | #音乐生成 | #生成模型 | #音频大模型 #流式处理
 
@@ -2094,7 +2161,7 @@ layout: "posts"
 
 ---
 
-### 32. [Musicdetr: A Position-Aware Spectral Note Detection Model for Singing Transcription](/audio-paper-digest-blog/posts/2026-04-29-musicdetr-a-position-aware-spectral-note)
+### 34. [Musicdetr: A Position-Aware Spectral Note Detection Model for Singing Transcription](/audio-paper-digest-blog/posts/2026-04-29-musicdetr-a-position-aware-spectral-note)
 
 🔥 **8.5/10** | 前10% | #歌唱语音转录 | #对象检测 | #音乐信息检索 #注意力机制
 
@@ -2131,7 +2198,7 @@ layout: "posts"
 
 ---
 
-### 33. [ACAVCaps: Enabling Large-Scale Training for Fine-Grained and Diverse Audio Understanding](/audio-paper-digest-blog/posts/2026-04-29-acavcaps-enabling-large-scale-training-for-fine)
+### 35. [ACAVCaps: Enabling Large-Scale Training for Fine-Grained and Diverse Audio Understanding](/audio-paper-digest-blog/posts/2026-04-29-acavcaps-enabling-large-scale-training-for-fine)
 
 🔥 **8.5/10** | 前25% | #音频分类 | #数据集 | #预训练 #多任务学习
 
@@ -2151,7 +2218,7 @@ layout: "posts"
 
 ---
 
-### 34. [CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries](/audio-paper-digest-blog/posts/2026-04-29-castella-long-audio-dataset-with-captions-and)
+### 36. [CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries](/audio-paper-digest-blog/posts/2026-04-29-castella-long-audio-dataset-with-captions-and)
 
 🔥 **8.5/10** | 前25% | #音频检索 | #迁移学习 | #多模态模型 #预训练
 
@@ -2185,7 +2252,74 @@ layout: "posts"
 
 ---
 
-### 35. [DiTSE: High-Fidelity Generative Speech Enhancement via Latent Diffusion Transformers](/audio-paper-digest-blog/posts/2026-04-29-ditse-high-fidelity-generative-speech-enhancement)
+### 37. [EchoFake: A Replay-Aware Dataset For Practical Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-echofake-a-replay-aware-dataset-for-practical)
+
+前25% | #音频深度伪造检测 | #数据集 | #语音伪造检测 #重放攻击
+
+👥 **作者与机构**
+
+- 第一作者：Tong Zhang (武汉大学 网络空间安全学院)
+- 通讯作者：Yanzhen Ren (武汉大学 网络空间安全学院)
+- 作者列表：Tong Zhang (武汉大学 网络空间安全学院), Yihuan Huang (武汉大学 网络空间安全学院), Yanzhen Ren (武汉大学 网络空间安全学院; 教育部空天信息安全与可信计算重点实验室)
+
+💡 **毒舌点评**
+
+**亮点**：这篇论文如同为反语音欺诈领域量身打造了一套更逼真的“演习靶场”，精准戳中了现有检测模型在真实世界遭遇“物理回放”攻击时不堪一击的痛点，数据集构建的系统性和全面性值得称道。**短板**：它本质上是一份详尽的“战场报告”和“新式靶标”而非“新式武器”，在检测模型本身并无创新，且基线评估略显常规，距离真正解决“重放攻击”这一顽疾还有距离。
+
+📌 **核心摘要**
+
+1.  **问题**：现有的音频深度伪造检测模型在实验室环境下表现良好，但在面对真实世界中常见的低成本“物理重放攻击”（即将合成语音通过扬声器播放并重新录制）时，性能会急剧下降，严重威胁其实际部署的可靠性。
+2.  **方法**：为了解决这一问题，作者构建了EchoFake数据集。其核心在于**首次系统地将前沿的零样本文本转语音（TTS）生成的伪造语音与多样化的物理重放录音相结合**。数据集包含四种音频类型：真实语音、重放真实语音、伪造语音、重放伪造语音。
+3.  **创新**：与已有数据集（如ASVspoof）主要关注单一攻击方式（仅合成或仅重放真实语音）不同，EchoFake的创新在于覆盖了更复杂的**复合攻击场景**——即“合成+重放”。同时，它采用了多种最新开源的零样本TTS模型，并在采集重放数据时系统化地变化了播放/录音设备、环境、距离等条件。
+4.  **主要实验结果**：
+    *   使用EchoFake训练的三个基线模型（RawNet2， AASIST， Wav2Vec2）在跨数据集评估中表现出更好的泛化能力，平均EER显著低于在传统数据集上训练的模型（见表3）。
+    *   模型在EchoFake封闭集评估中表现优异（如AASIST的二分类EER为0.46%），但在开放集评估中性能大幅下降（如AASIST的二分类EER升至14.88%），**重放样本是主要错误来源**（见表4）。
+    *   消融实验证明，在训练数据中包含重放样本，能显著提升模型在重放攻击场景下的鲁棒性，而在传统基准上性能损失很小。
+5.  **实际意义**：EchoFake提供了一个更接近真实威胁模型的评估基准，有助于推动检测算法从实验室走向实际应用，提升对复杂欺诈攻击的防御能力。
+6.  **局限性**：尽管模型在EchoFake上得到提升，但在面对未见过的重放条件（开放集）时，性能仍有明显下降，表明在建模复杂信道效应和提高跨设备/环境泛化能力方面仍有挑战。论文未提出新的检测模型。
+
+---
+
+### 38. [UNMIXX: Untangling Highly Correlated Singing Voices Mixtures](/audio-paper-digest-blog/posts/2026-04-29-unmixx-untangling-highly-correlated-singing)
+
+前25% | #语音分离 | #时频分析 | #歌唱语音合成 #数据增强
+
+👥 **作者与机构**
+
+- 第一作者：Jihoo Jung（韩国科学技术院， Korea Advanced Institute of Science and Technology, South Korea）
+- 通讯作者：未说明（论文中未明确标注）
+- 作者列表：Jihoo Jung（韩国科学技术院）、Ji-Hoon Kim（韩国科学技术院）、Doyeop Kwak（韩国科学技术院）、Junwon Lee（韩国科学技术院）、Juhan Nam（韩国科学技术院）、Joon Son Chung（韩国科学技术院）
+
+💡 **毒舌点评**
+
+**亮点：** 论文对问题（高相关、数据稀缺）的洞察和解决方案设计（MIM生成相关数据、CS Attention解耦表示）非常系统且直击要害，实验验证也堪称范本，尤其是提出了HSSNR这个更合理的评估指标来应对同歌手场景。**短板：** 依赖合成数据（MIM）来解决数据问题，与真实多轨录音的差距未充分探讨；且所有对比实验均在单一的MedleyVox数据集上进行，未见其他公开数据集上的验证，说服力略打折扣。
+
+📌 **核心摘要**
+
+1.  **问题：** 本文旨在解决多人歌唱语音分离（MSVS）任务，该任务面临两大独特挑战：可用的训练数据极度稀缺，且混合的歌唱语音本身具有高度相关性（如共享歌词、和声、时间对齐），这使得现有语音分离方法效果不佳。
+2.  **方法核心：** 提出UNMIXX框架，包含三个关键组件：（1）音乐信息混合（MIM）策略，通过选择时间节奏和音高和谐的歌曲进行配对，合成高度相关且逼真的训练数据，以缓解数据稀缺；（2）跨源注意力（CS Attention），通过“反向注意力”机制主动抑制两个歌手表示中的相似区域，强制表示分离；（3）幅度惩罚损失（Magnitude Penalty Loss），在训练后期显式惩罚目标频谱图中残留的干扰能量。
+3.  **创新点：** 1）首次提出针对MSVS任务的、模拟真实音乐相关性的数据合成方法（MIM）。2）在架构（CS Attention）和损失（LPenalty）两个层面引入跨源互斥约束，专门针对“高相关性”这一难点。3）为同演唱者场景提出了更合理的评估指标HSSNR。
+4.  **实验结果：** 在MedleyVox评估集上，UNMIXX相对于此前最优方法（MedleyVox基线）取得了显著提升，在duet子集上SDRi提升2.42 dB，在unison子集上提升2.26 dB。消融实验证明了每个组件的有效性。
+    - **主实验对比（关键数据）：**
+    | 方法 | #参数 | Duet SDRi (↑) | Unison SDRi (↑) |
+    | :--- | :--- | :--- | :--- |
+    | MedleyVox | 5M | 15.10 | 4.90 |
+    | TIGER* | 947k | 16.58 | 5.96 |
+    | **UNMIXX** | **951k** | **17.52** | **7.16** |
+    - **消融实验（部分关键结果）：**
+    | 方法 | Duet SDRi | Unison SDRi |
+    | :--- | :--- | :--- |
+    | TIGER* (基线) | 16.58 | 5.96 |
+    | + MIM (m=8) | 16.79 | 7.31 |
+    | + CS attention | 18.01 | 6.17 |
+    | + Mag, Penalty loss | 16.68 | 6.44 |
+    | **UNMIXX (全组件)** | **17.52** | **7.16** |
+5.  **实际意义：** 为处理真实音乐中常见的多轨人声混合提供了有效工具，可应用于音乐制作（人声轨道分离）、卡拉OK（伴奏与任意人声分离）、以及后续的单人歌唱信息检索任务。
+6.  **主要局限性：** 1）模型性能高度依赖于MIM合成的数据与真实数据的匹配度；2）实验仅在一个评估数据集上进行，泛化能力有待进一步验证；3）模型为离线处理，未讨论实时性。
+
+---
+
+### 39. [DiTSE: High-Fidelity Generative Speech Enhancement via Latent Diffusion Transformers](/audio-paper-digest-blog/posts/2026-04-29-ditse-high-fidelity-generative-speech-enhancement)
 
 🔥 **8.5/10** | 前10% | #语音增强 | #扩散模型 | #Transformer #高保真音频
 
@@ -2231,7 +2365,7 @@ layout: "posts"
 
 ---
 
-### 36. [Dynamic Spectrogram Analysis with Local-Aware Graph Networks for Audio Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-dynamic-spectrogram-analysis-with-local-aware)
+### 40. [Dynamic Spectrogram Analysis with Local-Aware Graph Networks for Audio Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-dynamic-spectrogram-analysis-with-local-aware)
 
 🔥 **8.5/10** | 前10% | #音频深度伪造检测 | #图神经网络 | #自监督学习 #动态卷积
 
@@ -2256,7 +2390,7 @@ layout: "posts"
 
 ---
 
-### 37. [RASD-SR: A Robust Anomalous Sound Detection Framework with Score Recalibration](/audio-paper-digest-blog/posts/2026-04-29-rasd-sr-a-robust-anomalous-sound-detection)
+### 41. [RASD-SR: A Robust Anomalous Sound Detection Framework with Score Recalibration](/audio-paper-digest-blog/posts/2026-04-29-rasd-sr-a-robust-anomalous-sound-detection)
 
 🔥 **8.5/10** | 前10% | #异常声音检测 | #预训练 #自监督学习 | #音频事件检测 #预训练
 
@@ -2300,7 +2434,7 @@ layout: "posts"
 
 ---
 
-### 38. [Toward Robust And Efficient Beat Tracking Via Beat-Aware Attention](/audio-paper-digest-blog/posts/2026-04-29-toward-robust-and-efficient-beat-tracking-via)
+### 42. [Toward Robust And Efficient Beat Tracking Via Beat-Aware Attention](/audio-paper-digest-blog/posts/2026-04-29-toward-robust-and-efficient-beat-tracking-via)
 
 🔥 **8.5/10** | 前25% | #音乐理解 | #注意力机制 | #端到端 #鲁棒性
 
@@ -2326,7 +2460,7 @@ layout: "posts"
 
 ---
 
-### 39. [Temporally Heterogeneous Graph Contrastive Learning for Multimodal Acoustic Event Classification](/audio-paper-digest-blog/posts/2026-04-29-temporally-heterogeneous-graph-contrastive)
+### 43. [Temporally Heterogeneous Graph Contrastive Learning for Multimodal Acoustic Event Classification](/audio-paper-digest-blog/posts/2026-04-29-temporally-heterogeneous-graph-contrastive)
 
 🔥 **8.5/10** | 前25% | #音频事件检测 | #对比学习 #图神经网络 | #对比学习 #图神经网络
 
@@ -2359,7 +2493,7 @@ layout: "posts"
 
 ---
 
-### 40. [The Muse Benchmark: Probing Music Perception and Auditory Relational Reasoning in Audio LLMs](/audio-paper-digest-blog/posts/2026-04-29-the-muse-benchmark-probing-music-perception-and)
+### 44. [The Muse Benchmark: Probing Music Perception and Auditory Relational Reasoning in Audio LLMs](/audio-paper-digest-blog/posts/2026-04-29-the-muse-benchmark-probing-music-perception-and)
 
 🔥 **8.5/10** | 前25% | #音乐理解 | #基准测试 | #音频大模型 #模型评估
 
@@ -2384,7 +2518,7 @@ layout: "posts"
 
 ---
 
-### 41. [PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models](/audio-paper-digest-blog/posts/2026-04-29-personaplex-voice-and-role-control-for-full)
+### 45. [PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models](/audio-paper-digest-blog/posts/2026-04-29-personaplex-voice-and-role-control-for-full)
 
 🔥 **8.5/10** | 前25% | #语音对话系统 | #语音大模型 | #语音克隆 #零样本
 
@@ -2412,7 +2546,7 @@ layout: "posts"
 
 ---
 
-### 42. [The Impact of Audio Watermarking on Audio Anti-Spoofing Countermeasures](/audio-paper-digest-blog/posts/2026-04-29-the-impact-of-audio-watermarking-on-audio-anti)
+### 46. [The Impact of Audio Watermarking on Audio Anti-Spoofing Countermeasures](/audio-paper-digest-blog/posts/2026-04-29-the-impact-of-audio-watermarking-on-audio-anti)
 
 🔥 **8.5/10** | 前25% | #音频深度伪造检测 | #领域适应 | #知识蒸馏 #音频水印
 
@@ -2438,7 +2572,7 @@ layout: "posts"
 
 ---
 
-### 43. [VoXtream: Full-Stream Text-To-Speech With Extremely Low Latency](/audio-paper-digest-blog/posts/2026-04-29-voxtream-full-stream-text-to-speech-with)
+### 47. [VoXtream: Full-Stream Text-To-Speech With Extremely Low Latency](/audio-paper-digest-blog/posts/2026-04-29-voxtream-full-stream-text-to-speech-with)
 
 🔥 **8.5/10** | 前25% | #语音合成 | #自回归模型 | #流式处理 #零样本
 
@@ -2463,7 +2597,7 @@ layout: "posts"
 
 ---
 
-### 44. [SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper](/audio-paper-digest-blog/posts/2026-04-29-se-dicow-self-enrolled-diarization-conditioned)
+### 48. [SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper](/audio-paper-digest-blog/posts/2026-04-29-se-dicow-self-enrolled-diarization-conditioned)
 
 🔥 **8.5/10** | 前25% | #语音识别 | #条件生成 | #预训练 #数据增强
 
@@ -2496,7 +2630,7 @@ layout: "posts"
 
 ---
 
-### 45. [Scaling Multi-Talker ASR with Speaker-Agnostic Activity Streams](/audio-paper-digest-blog/posts/2026-04-29-scaling-multi-talker-asr-with-speaker-agnostic)
+### 49. [Scaling Multi-Talker ASR with Speaker-Agnostic Activity Streams](/audio-paper-digest-blog/posts/2026-04-29-scaling-multi-talker-asr-with-speaker-agnostic)
 
 🔥 **8.5/10** | 前25% | #语音识别 | #预训练 | #说话人分离 #端到端
 
@@ -2521,7 +2655,7 @@ layout: "posts"
 
 ---
 
-### 46. [Towards Lightweight Adaptation of Speech Enhancement Models in Real-World Environments](/audio-paper-digest-blog/posts/2026-04-29-towards-lightweight-adaptation-of-speech)
+### 50. [Towards Lightweight Adaptation of Speech Enhancement Models in Real-World Environments](/audio-paper-digest-blog/posts/2026-04-29-towards-lightweight-adaptation-of-speech)
 
 🔥 **8.5/10** | 前25% | #语音增强 | #低秩适配 | #低辐射 #自监督学习
 
@@ -2542,7 +2676,7 @@ layout: "posts"
 
 ---
 
-### 47. [FastEnhancer: Speed-Optimized Streaming Neural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-fastenhancer-speed-optimized-streaming-neural)
+### 51. [FastEnhancer: Speed-Optimized Streaming Neural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-fastenhancer-speed-optimized-streaming-neural)
 
 🔥 **8.5/10** | 前25% | #语音增强 | #神经网络 | #流式处理 #实时处理
 
@@ -2586,7 +2720,7 @@ layout: "posts"
 
 ---
 
-### 48. [EMORL-TTS: Reinforcement Learning for Fine-Grained Emotion Control in LLM-based TTS](/audio-paper-digest-blog/posts/2026-04-29-emorl-tts-reinforcement-learning-for-fine-grained)
+### 52. [EMORL-TTS: Reinforcement Learning for Fine-Grained Emotion Control in LLM-based TTS](/audio-paper-digest-blog/posts/2026-04-29-emorl-tts-reinforcement-learning-for-fine-grained)
 
 🔥 **8.5/10** | 前25% | #语音合成 | #强化学习 | #语音情感识别 #大语言模型
 
@@ -2638,7 +2772,7 @@ layout: "posts"
 
 ---
 
-### 49. [DisContSE: Single-Step Diffusion Speech Enhancement based on Joint Discrete and Continuous Embeddings](/audio-paper-digest-blog/posts/2026-04-29-discontse-single-step-diffusion-speech)
+### 53. [DisContSE: Single-Step Diffusion Speech Enhancement based on Joint Discrete and Continuous Embeddings](/audio-paper-digest-blog/posts/2026-04-29-discontse-single-step-diffusion-speech)
 
 🔥 **8.5/10** | 前10% | #语音增强 | #扩散模型 | #音频大模型 #自回归模型
 
@@ -2672,7 +2806,7 @@ layout: "posts"
 
 ---
 
-### 50. [VBx for End-to-End Neural and Clustering-Based Diarization](/audio-paper-digest-blog/posts/2026-04-29-vbx-for-end-to-end-neural-and-clustering-based)
+### 54. [VBx for End-to-End Neural and Clustering-Based Diarization](/audio-paper-digest-blog/posts/2026-04-29-vbx-for-end-to-end-neural-and-clustering-based)
 
 🔥 **8.5/10** | 前25% | #说话人分离 | #聚类算法 | #自监督学习 #端到端
 
@@ -2703,7 +2837,7 @@ layout: "posts"
 
 ---
 
-### 51. [StyleBench: Evaluating Speech Language Models on Conversational Speaking Style Control](/audio-paper-digest-blog/posts/2026-04-29-stylebench-evaluating-speech-language-models-on)
+### 55. [StyleBench: Evaluating Speech Language Models on Conversational Speaking Style Control](/audio-paper-digest-blog/posts/2026-04-29-stylebench-evaluating-speech-language-models-on)
 
 🔥 **8.5/10** | 前25% | #基准测试 | #模型评估 | #语音大模型 #语音情感识别
 
@@ -2745,7 +2879,7 @@ layout: "posts"
 
 ---
 
-### 52. [Sidon: Fast and Robust Open-Source Multilingual Speech Restoration for Large-Scale Dataset Cleansing](/audio-paper-digest-blog/posts/2026-04-29-sidon-fast-and-robust-open-source-multilingual)
+### 56. [Sidon: Fast and Robust Open-Source Multilingual Speech Restoration for Large-Scale Dataset Cleansing](/audio-paper-digest-blog/posts/2026-04-29-sidon-fast-and-robust-open-source-multilingual)
 
 🔥 **8.5/10** | 前25% | #语音增强 | #自监督学习 | #语音合成 #多语言
 
@@ -2774,7 +2908,7 @@ layout: "posts"
 
 ---
 
-### 53. [Improving Contextual Asr Via Multi-Grained Fusion With Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-improving-contextual-asr-via-multi-grained-fusion)
+### 57. [Improving Contextual Asr Via Multi-Grained Fusion With Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-improving-contextual-asr-via-multi-grained-fusion)
 
 🔥 **8.5/10** | 前25% | #语音识别 | #多粒度融合 | #大语言模型 #端到端
 
@@ -2818,7 +2952,7 @@ layout: "posts"
 
 ---
 
-### 54. [RCAL: Reinforced Cross-Modal Alignment for Multimodal Sentiment Analysis with Sparse Visual Frames](/audio-paper-digest-blog/posts/2026-04-29-rcal-reinforced-cross-modal-alignment-for)
+### 58. [RCAL: Reinforced Cross-Modal Alignment for Multimodal Sentiment Analysis with Sparse Visual Frames](/audio-paper-digest-blog/posts/2026-04-29-rcal-reinforced-cross-modal-alignment-for)
 
 🔥 **8.5/10** | 前25% | #多模态模型 | #对比学习 | #稀疏输入 #跨模态
 
@@ -2852,7 +2986,7 @@ layout: "posts"
 
 ---
 
-### 55. [Enhancing Audio Question-Answering Performance Through Log-Likelihood Guided Reward Functions](/audio-paper-digest-blog/posts/2026-04-29-enhancing-audio-question-answering-performance)
+### 59. [Enhancing Audio Question-Answering Performance Through Log-Likelihood Guided Reward Functions](/audio-paper-digest-blog/posts/2026-04-29-enhancing-audio-question-answering-performance)
 
 🔥 **8.5/10** | 前25% | #音频问答 | #强化学习 | #多模态模型 #基准测试
 
@@ -2892,7 +3026,7 @@ layout: "posts"
 
 ---
 
-### 56. [MTP-S2UT: Enhancing Speech-to-Speech Translation Quality with Multi-Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-mtp-s2ut-enhancing-speech-to-speech-translation)
+### 60. [MTP-S2UT: Enhancing Speech-to-Speech Translation Quality with Multi-Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-mtp-s2ut-enhancing-speech-to-speech-translation)
 
 🔥 **8.5/10** | 前25% | #语音翻译 | #多任务学习 | #语音大模型 #多语言
 
@@ -2953,7 +3087,7 @@ layout: "posts"
 
 ---
 
-### 57. [Unseen but Not Unknown: Using Dataset Concealment to Robustly Evaluate Speech Quality Estimation Models](/audio-paper-digest-blog/posts/2026-04-29-unseen-but-not-unknown-using-dataset-concealment)
+### 61. [Unseen but Not Unknown: Using Dataset Concealment to Robustly Evaluate Speech Quality Estimation Models](/audio-paper-digest-blog/posts/2026-04-29-unseen-but-not-unknown-using-dataset-concealment)
 
 🔥 **8.3/10** | 前25% | #语音质量评估 | #模型评估 | #鲁棒性
 
@@ -2978,7 +3112,27 @@ layout: "posts"
 
 ---
 
-### 58. [AISHELL6-Whisper: A Chinese Mandarin Audio-Visual Whisper Speech Dataset with Speech Recognition Baselines](/audio-paper-digest-blog/posts/2026-04-29-aishell6-whisper-a-chinese-mandarin-audio-visual)
+### 62. [3D Mesh Grid Room Impulse Responses Measured with A Linear Microphone Array And Suppression of Frame Reflections](/audio-paper-digest-blog/posts/2026-04-29-3d-mesh-grid-room-impulse-responses-measured-with)
+
+前25% | #空间音频 | #麦克风阵列 | #3D音频 #信号处理
+
+👥 **作者与机构**
+
+- 第一作者：Yoichi Haneda（The University of Electro-Communications, Tokyo, Japan）
+- 通讯作者：未说明
+- 作者列表：Yoichi Haneda（The University of Electro-Communications）、Yi Ren（The University of Electro-Communications）
+
+💡 **毒舌点评**
+
+亮点在于其“授人以渔”的思路：不仅提供了一个罕见的、高分辨率的3D实测RIR数据集，还详细阐述了为获取该数据集而开发的、用于抑制测量系统自身干扰的专用信号处理方法，这为后续类似测量工作提供了实用参考。短板在于测量系统本身引入了需要额外处理的人工反射，且该方法的有效性在空间边缘区域有所下降，限制了数据集的完整利用率。
+
+📌 **核心摘要**
+
+本文旨在构建一个大规模、高空间分辨率的3D房间脉冲响应（RIR）数据库，以支持RIR插值、外推及基于物理信息神经网络（PINN）等机器学习方法的研究。为解决使用线性麦克风阵列进行自动化三维扫描时，支撑导轨和框架会产生不可忽略的早期反射干扰这一核心问题，作者提出了一种基于频率-波数域的二进制掩蔽方法。该方法通过二维傅里叶变换将信号变换到频域-波数域，识别并抑制主要沿特定方向（如x轴或z轴）传播的框架反射分量。实验表明，该方法有效抑制了位于直达声之后的框架反射。利用该系统，作者在一个8.4m×6.14m×2.66m的房间内，针对4个扬声器位置，以2cm的网格间距测量了共计4×63,648个RIRs（16kHz采样率）。所有数据已公开。PINN插值实验证实了该数据集用于驱动数据驱动声场重建模型的有效性。主要局限性包括：处理后边缘麦克风的反射抑制效果不佳需被剔除；测量环境受限于特定房间及扫描体积。
+
+---
+
+### 63. [AISHELL6-Whisper: A Chinese Mandarin Audio-Visual Whisper Speech Dataset with Speech Recognition Baselines](/audio-paper-digest-blog/posts/2026-04-29-aishell6-whisper-a-chinese-mandarin-audio-visual)
 
 🔥 **8.3/10** | 前25% | #语音识别 | #迁移学习 | #数据集 #音视频
 
@@ -3014,7 +3168,7 @@ layout: "posts"
 
 ---
 
-### 59. [Beyond Face Swapping: A Diffusion-Based Digital Human Benchmark for Multimodal Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-beyond-face-swapping-a-diffusion-based-digital)
+### 64. [Beyond Face Swapping: A Diffusion-Based Digital Human Benchmark for Multimodal Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-beyond-face-swapping-a-diffusion-based-digital)
 
 🔥 **8.1/10** | 前25% | #音频深度伪造检测 | #多模态模型 | #基准测试 #扩散模型
 
@@ -3069,7 +3223,7 @@ layout: "posts"
 
 ---
 
-### 60. [Polynomial Mixing for Efficient Self-Supervised Speech Encoders](/audio-paper-digest-blog/posts/2026-04-29-polynomial-mixing-for-efficient-self-supervised)
+### 65. [Polynomial Mixing for Efficient Self-Supervised Speech Encoders](/audio-paper-digest-blog/posts/2026-04-29-polynomial-mixing-for-efficient-self-supervised)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #自监督学习 | #端到端 #低资源
 
@@ -3094,7 +3248,7 @@ layout: "posts"
 
 ---
 
-### 61. [WavLink: Compact Audio–Text Embeddings with a Global Whisper Token](/audio-paper-digest-blog/posts/2026-04-29-wavlink-compact-audiotext-embeddings-with-a)
+### 66. [WavLink: Compact Audio–Text Embeddings with a Global Whisper Token](/audio-paper-digest-blog/posts/2026-04-29-wavlink-compact-audiotext-embeddings-with-a)
 
 🔥 **8.0/10** | 前25% | #音频检索 | #对比学习 | #零样本 #预训练
 
@@ -3143,7 +3297,7 @@ layout: "posts"
 
 ---
 
-### 62. [Virtual Consistency for Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-virtual-consistency-for-audio-editing)
+### 67. [Virtual Consistency for Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-virtual-consistency-for-audio-editing)
 
 🔥 **8.0/10** | 前25% | #音乐生成 | #扩散模型 | #音频处理
 
@@ -3169,7 +3323,7 @@ layout: "posts"
 
 ---
 
-### 63. [MAG: Multi-Modal Aligned Autoregressive Co-Speech Gesture Generation Without Vector Quantization](/audio-paper-digest-blog/posts/2026-04-29-mag-multi-modal-aligned-autoregressive-co-speech)
+### 68. [MAG: Multi-Modal Aligned Autoregressive Co-Speech Gesture Generation Without Vector Quantization](/audio-paper-digest-blog/posts/2026-04-29-mag-multi-modal-aligned-autoregressive-co-speech)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #多模态模型 #扩散模型 | #多模态模型 #扩散模型
 
@@ -3194,7 +3348,7 @@ layout: "posts"
 
 ---
 
-### 64. [No Verifiable Reward for Prosody: Toward Preference-Guided Prosody Learning in TTS](/audio-paper-digest-blog/posts/2026-04-29-no-verifiable-reward-for-prosody-toward)
+### 69. [No Verifiable Reward for Prosody: Toward Preference-Guided Prosody Learning in TTS](/audio-paper-digest-blog/posts/2026-04-29-no-verifiable-reward-for-prosody-toward)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #强化学习 | #偏好学习 #数据集
 
@@ -3237,7 +3391,7 @@ layout: "posts"
 
 ---
 
-### 65. [Marco-Voice: A Unified Framework for Expressive Speech Synthesis with Voice Cloning](/audio-paper-digest-blog/posts/2026-04-29-marco-voice-a-unified-framework-for-expressive)
+### 70. [Marco-Voice: A Unified Framework for Expressive Speech Synthesis with Voice Cloning](/audio-paper-digest-blog/posts/2026-04-29-marco-voice-a-unified-framework-for-expressive)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #流匹配 | #语音克隆 #情感合成
 
@@ -3271,7 +3425,7 @@ layout: "posts"
 
 ---
 
-### 66. [GLoRIA: Gated Low-Rank Interpretable Adaptation for Dialectal ASR](/audio-paper-digest-blog/posts/2026-04-29-gloria-gated-low-rank-interpretable-adaptation)
+### 71. [GLoRIA: Gated Low-Rank Interpretable Adaptation for Dialectal ASR](/audio-paper-digest-blog/posts/2026-04-29-gloria-gated-low-rank-interpretable-adaptation)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #领域适应 | #参数高效微调 #可解释性
 
@@ -3297,7 +3451,7 @@ layout: "posts"
 
 ---
 
-### 67. [Do Bias Benchmarks Generalise? Evidence from Voice-Based Evaluation of Gender Bias in Speechllms](/audio-paper-digest-blog/posts/2026-04-29-do-bias-benchmarks-generalise-evidence-from-voice)
+### 72. [Do Bias Benchmarks Generalise? Evidence from Voice-Based Evaluation of Gender Bias in Speechllms](/audio-paper-digest-blog/posts/2026-04-29-do-bias-benchmarks-generalise-evidence-from-voice)
 
 🔥 **8.0/10** | 前25% | #模型评估 | #基准测试 | #语音大模型 #数据集
 
@@ -3322,7 +3476,7 @@ layout: "posts"
 
 ---
 
-### 68. [Attention-Weighted Centered Kernel Alignment for Knowledge Distillation in Large Audio-Language Models Applied To Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-attention-weighted-centered-kernel-alignment-for)
+### 73. [Attention-Weighted Centered Kernel Alignment for Knowledge Distillation in Large Audio-Language Models Applied To Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-attention-weighted-centered-kernel-alignment-for)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #知识蒸馏 | #语音大模型 #多模态模型
 
@@ -3347,7 +3501,7 @@ layout: "posts"
 
 ---
 
-### 69. [More Than a Shortcut: A Hyperbolic Approach to Early-Exit Networks](/audio-paper-digest-blog/posts/2026-04-29-more-than-a-shortcut-a-hyperbolic-approach-to)
+### 74. [More Than a Shortcut: A Hyperbolic Approach to Early-Exit Networks](/audio-paper-digest-blog/posts/2026-04-29-more-than-a-shortcut-a-hyperbolic-approach-to)
 
 🔥 **8.0/10** | 前25% | #音频事件检测 | #双曲几何 | #早期退出网络 #音频分类
 
@@ -3393,7 +3547,7 @@ layout: "posts"
 
 ---
 
-### 70. [DSRMS-TransUnet: A Decentralized Non-Shifted Transunet for Shallow Water Acoustic Source Range Estimation](/audio-paper-digest-blog/posts/2026-04-29-dsrms-transunet-a-decentralized-non-shifted)
+### 75. [DSRMS-TransUnet: A Decentralized Non-Shifted Transunet for Shallow Water Acoustic Source Range Estimation](/audio-paper-digest-blog/posts/2026-04-29-dsrms-transunet-a-decentralized-non-shifted)
 
 🔥 **8.0/10** | 前10% | #声源定位 | #端到端 | #自回归模型 #鲁棒性
 
@@ -3424,7 +3578,7 @@ layout: "posts"
 
 ---
 
-### 71. [FED-PISA: Federated Voice Cloning Via Personalized Identity-Style Adaptation](/audio-paper-digest-blog/posts/2026-04-29-fed-pisa-federated-voice-cloning-via-personalized)
+### 76. [FED-PISA: Federated Voice Cloning Via Personalized Identity-Style Adaptation](/audio-paper-digest-blog/posts/2026-04-29-fed-pisa-federated-voice-cloning-via-personalized)
 
 🔥 **8.0/10** | 前25% | #语音克隆 | #联邦学习 | #语音合成 #低秩适配
 
@@ -3459,7 +3613,7 @@ layout: "posts"
 
 ---
 
-### 72. [Neuromamba: Adaptive Frequency Filtering with a Pyramid Mamba for sEEG-driven Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-neuromamba-adaptive-frequency-filtering-with-a)
+### 77. [Neuromamba: Adaptive Frequency Filtering with a Pyramid Mamba for sEEG-driven Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-neuromamba-adaptive-frequency-filtering-with-a)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #信号处理 #状态空间模型 | #信号处理 #状态空间模型
 
@@ -3484,7 +3638,36 @@ layout: "posts"
 
 ---
 
-### 73. [SAASDNet: An EEG-Based Streaming Auditory Attention Switch Decoding Network for Self-Initiated Attention Switching in Mixed Speech](/audio-paper-digest-blog/posts/2026-04-29-saasdnet-an-eeg-based-streaming-auditory)
+### 78. [Brainprint-Modulated Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-brainprint-modulated-target-speaker-extraction)
+
+前25% | #语音分离 | #多任务学习 | #语音增强 #多模态模型
+
+👥 **作者与机构**
+
+- 第一作者：Qiushi Han（南京邮电大学电子与光学工程学院 & 柔性电子（未来技术）学院）
+- 通讯作者：Liya Huang（南京邮电大学电子与光学工程学院 & 柔性电子（未来技术）学院）
+- 作者列表：
+    - Qiushi Han（南京邮电大学电子与光学工程学院 & 柔性电子（未来技术）学院）（†共同第一作者）
+    - Yuan Liao（香港中文大学（深圳）人工智能与数据科学学院 & 研究生院）（†共同第一作者）
+    - Youhao Si（南京邮电大学电子与光学工程学院 & 柔性电子（未来技术）学院）
+    - Liya Huang（南京邮电大学电子与光学工程学院 & 柔性电子（未来技术）学院）（⋆通讯作者）
+
+💡 **毒舌点评**
+
+本文最大的亮点在于“脑印调制”这一概念的提出，巧妙地将通常被视为噪声的个体EEG差异转化为可用的生物特征信号来指导音频分离，思路新颖且实验验证充分。不过，论文的短板在于对“个性化”的论证稍显单一，主要依赖于SID和AAD任务的监督，缺乏对脑印嵌入空间本身可解释性、跨会话稳定性以及在真实助听器设备上实时性、功耗等方面的深入讨论，使得这项工作的工程化前景存在不确定性。
+
+📌 **核心摘要**
+
+1.  **要解决的问题**：当前基于脑电图（EEG）的目标说话人提取（TSE）系统面临两个核心挑战：EEG信号的非平稳性导致跨会话性能不稳定，以及显著的个体间差异限制了通用模型的泛化能力。
+2.  **方法核心**：本文提出了脑印调制目标说话人提取（BM-TSE）框架。该框架首先使用一个带有自适应频谱增益（ASG）模块的时空EEG编码器，从非平稳信号中提取稳定特征。其核心是一个“个性化脑印调制”机制：通过联合优化说话人识别（SID）和听觉注意解码（AAD）任务，学习一个统一的“脑图”嵌入（brainmap embedding），该嵌入同时编码用户的静态身份和动态注意状态，并用它主动调制和优化音频分离过程，实现个性化输出。
+3.  **与已有方法相比新在哪里**：传统TSE方法通常将EEG中的身份特异性信息视为需要抑制的统计噪声。BM-TSE则创新地利用这些“脑印”信息，将其作为个性化的调制信号，直接作用于语音分离网络，从“被动解码注意力”转向“主动利用身份特征进行定制化增强”。
+4.  **主要实验结果**：在KUL和Cocktail Party两个公开数据集上的实验表明，BM-TSE在语音质量（SI-SDR）和可懂度（STOI, ESTOI）上均达到了当前最优（SOTA）。例如，在Cocktail Party数据集上，BM-TSE的SI-SDR为14.02 dB，优于之前的SOTA方法MSFNet（12.89 dB）。消融研究证实了LS-TConv、ASG、SConv模块以及LSID损失的关键作用。
+5.  **实际意义**：该研究为开发新一代真正个性化、高保真的神经调制助听设备提供了有力的技术路径，证明了将用户独特的神经特征融入核心音频处理管线的巨大潜力。
+6.  **主要局限性**：论文未深入探讨该框架在真实实时助听器设备上的计算复杂度、功耗及延迟；对于脑印嵌入在更长时间跨度（如数月或数年）下的稳定性验证不足；此外，实验数据集均为健康被试在实验室环境下录制，模型在听力损失患者及真实嘈杂场景中的泛化能力有待进一步验证。
+
+---
+
+### 79. [SAASDNet: An EEG-Based Streaming Auditory Attention Switch Decoding Network for Self-Initiated Attention Switching in Mixed Speech](/audio-paper-digest-blog/posts/2026-04-29-saasdnet-an-eeg-based-streaming-auditory)
 
 🔥 **8.0/10** | 前25% | #脑机接口 | #端到端 | #流式处理 #数据集
 
@@ -3521,7 +3704,7 @@ layout: "posts"
 
 ---
 
-### 74. [Automated Dysphagia Screening Using Noninvasive Neck Acoustic Sensing](/audio-paper-digest-blog/posts/2026-04-29-automated-dysphagia-screening-using-noninvasive)
+### 80. [Automated Dysphagia Screening Using Noninvasive Neck Acoustic Sensing](/audio-paper-digest-blog/posts/2026-04-29-automated-dysphagia-screening-using-noninvasive)
 
 🔥 **8.0/10** | 前25% | #音频分类 | #信号处理 | #数字健康 #生物声学
 
@@ -3557,7 +3740,7 @@ layout: "posts"
 
 ---
 
-### 75. [AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference](/audio-paper-digest-blog/posts/2026-04-29-animalclap-taxonomy-aware-language-audio)
+### 81. [AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference](/audio-paper-digest-blog/posts/2026-04-29-animalclap-taxonomy-aware-language-audio)
 
 🔥 **8.0/10** | 前25% | #音频分类 | #对比学习 | #多模态模型 #数据集
 
@@ -3585,7 +3768,7 @@ layout: "posts"
 
 ---
 
-### 76. [Improving Multimodal Brain Encoding Model with Dynamic Subject-Awareness Routing](/audio-paper-digest-blog/posts/2026-04-29-improving-multimodal-brain-encoding-model-with)
+### 82. [Improving Multimodal Brain Encoding Model with Dynamic Subject-Awareness Routing](/audio-paper-digest-blog/posts/2026-04-29-improving-multimodal-brain-encoding-model-with)
 
 🔥 **8.0/10** | 前25% | #脑信号编码 | #混合专家 | #多模态模型 #动态路由
 
@@ -3624,7 +3807,7 @@ layout: "posts"
 
 ---
 
-### 77. [Non-Line-of-Sight Vehicle Detection via Audio-Visual Fusion](/audio-paper-digest-blog/posts/2026-04-29-non-line-of-sight-vehicle-detection-via-audio)
+### 83. [Non-Line-of-Sight Vehicle Detection via Audio-Visual Fusion](/audio-paper-digest-blog/posts/2026-04-29-non-line-of-sight-vehicle-detection-via-audio)
 
 🔥 **8.0/10** | 前25% | #音频分类 | #多模态模型 | #时频分析 #Conformer
 
@@ -3649,7 +3832,7 @@ layout: "posts"
 
 ---
 
-### 78. [MCF: Text LLMS for Multimodal Emotional Causality](/audio-paper-digest-blog/posts/2026-04-29-mcf-text-llms-for-multimodal-emotional-causality)
+### 84. [MCF: Text LLMS for Multimodal Emotional Causality](/audio-paper-digest-blog/posts/2026-04-29-mcf-text-llms-for-multimodal-emotional-causality)
 
 🔥 **8.0/10** | 前25% | #情感分析 | #多模态模型 | #大语言模型 #数据集
 
@@ -3697,7 +3880,7 @@ layout: "posts"
 
 ---
 
-### 79. [Training-Free Multimodal Guidance for Video to Audio Generation](/audio-paper-digest-blog/posts/2026-04-29-training-free-multimodal-guidance-for-video-to)
+### 85. [Training-Free Multimodal Guidance for Video to Audio Generation](/audio-paper-digest-blog/posts/2026-04-29-training-free-multimodal-guidance-for-video-to)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #扩散模型 #多模态模型 | #多模态模型 #扩散模型
 
@@ -3722,7 +3905,7 @@ layout: "posts"
 
 ---
 
-### 80. [Audience-Aware Co-speech Gesture Generation in Public Speaking via Anticipation Tokens](/audio-paper-digest-blog/posts/2026-04-29-audience-aware-co-speech-gesture-generation-in)
+### 86. [Audience-Aware Co-speech Gesture Generation in Public Speaking via Anticipation Tokens](/audio-paper-digest-blog/posts/2026-04-29-audience-aware-co-speech-gesture-generation-in)
 
 🔥 **8.0/10** | 前50% | #音频生成 | #扩散模型 | #跨模态 #多模态模型
 
@@ -3755,7 +3938,7 @@ layout: "posts"
 
 ---
 
-### 81. [Rethinking Entity Disambiguation in Complex Modalities](/audio-paper-digest-blog/posts/2026-04-29-rethinking-entity-disambiguation-in-complex)
+### 87. [Rethinking Entity Disambiguation in Complex Modalities](/audio-paper-digest-blog/posts/2026-04-29-rethinking-entity-disambiguation-in-complex)
 
 🔥 **8.0/10** | 前25% | #实体消歧 | #多模态模型 | #对比学习 #音视频
 
@@ -3780,7 +3963,7 @@ layout: "posts"
 
 ---
 
-### 82. [HAVT-IVD: Heterogeneity-Aware Cross-Modal Network for Audio-Visual Surveillance: Idling Vehicles Detection with Multichannel Audio and Multiscale Visual Cues](/audio-paper-digest-blog/posts/2026-04-29-havt-ivd-heterogeneity-aware-cross-modal-network)
+### 88. [HAVT-IVD: Heterogeneity-Aware Cross-Modal Network for Audio-Visual Surveillance: Idling Vehicles Detection with Multichannel Audio and Multiscale Visual Cues](/audio-paper-digest-blog/posts/2026-04-29-havt-ivd-heterogeneity-aware-cross-modal-network)
 
 🔥 **8.0/10** | 前25% | #音频事件检测 | #多模态模型 | #端到端 #麦克风阵列
 
@@ -3805,7 +3988,27 @@ layout: "posts"
 
 ---
 
-### 83. [Staged Diffusion with Hybrid Mixture-of-Experts (MOE) for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-staged-diffusion-with-hybrid-mixture-of-experts)
+### 89. [DBFT-SD: Weakly Supervised Multimodal Detection of Sensitive Audio-Visual Content](/audio-paper-digest-blog/posts/2026-04-29-dbft-sd-weakly-supervised-multimodal-detection-of)
+
+前25% | #音频事件检测 | #对比学习 #知识蒸馏 | #多模态模型 #对比学习
+
+👥 **作者与机构**
+
+- 第一作者：Song Xiao (中国科学技术大学， 北京电子科学和技术学院)
+- 通讯作者：Xu Ji (中国科学技术大学)
+- 作者列表：Song Xiao（中国科学技术大学， 北京电子科学和技术学院）、Xu Ji（中国科学技术大学， 北京电子科学和技术学院）、Haodong Yan（西安电子科技大学）、Xinyue Yu（中国科学技术大学）
+
+💡 **毒舌点评**
+
+论文的核心亮点在于其双分支自蒸馏架构，巧妙地利用一个更稳定的视觉分支来“教导”多模态分支，有效缓解了弱监督场景下音频噪声和模态不平衡问题。然而，作为一篇顶会论文，其核心方法（瓶颈融合、混合头部注意力）的理论深度和新意略显不足，更多是工程技巧的有效组合与验证，对比学习部分的马氏距离度量也相对常规。
+
+📌 **核心摘要**
+
+本文针对弱监督下大规模在线音视频敏感内容（如暴力、色情）检测的挑战，提出了动态瓶颈融合Transformer（DBFT）及其自蒸馏变体DBFT-SD。要解决的核心问题是现有方法中多模态信息融合效率低、弱监督标签噪声大以及模态间不平衡导致性能受限。方法核心是：1）在DBFT中，设计了包含动态路由的混合头部注意力机制和瓶颈融合Transformer，实现自适应的模态内与模态间特征聚合；2）在DBFT-SD中，引入一个仅使用视觉特征的辅助分支，通过基于余弦调度器的权重移动平均自蒸馏，将视觉分支的稳定知识迁移至多模态分支，并结合基于马氏距离的对比学习来增强关键帧的判别力。与已有方法相比，新在提出了整合动态注意力、瓶颈融合和自蒸馏的端到端多模态检测框架，能更好地处理噪声和模态不平衡。主要实验在XD-Violence数据集上进行，DBFT-SD达到了85.9%的平均精度（AP），超越了之前最优的多模态方法BN-WVAD（85.26% AP）和视觉方法VadCLIP（84.51% AP）。实际意义在于为社交媒体、视频平台的内容安全审核提供了更高效准确的自动化工具。主要局限性是对比实验仅在一个标准数据集上进行，缺乏更多样化或更具挑战性场景的验证。
+
+---
+
+### 90. [Staged Diffusion with Hybrid Mixture-of-Experts (MOE) for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-staged-diffusion-with-hybrid-mixture-of-experts)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #多模态模型 | #扩散模型 #鲁棒性
 
@@ -3830,7 +4033,7 @@ layout: "posts"
 
 ---
 
-### 84. [NeuroSIFT: A Biologically-Inspired Framework with Explicit Signal-Noise Separation for Robust Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-neurosift-a-biologically-inspired-framework-with)
+### 91. [NeuroSIFT: A Biologically-Inspired Framework with Explicit Signal-Noise Separation for Robust Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-neurosift-a-biologically-inspired-framework-with)
 
 🔥 **8.0/10** | 前25% | #多模态情感识别 | #神经形态计算 | #多任务学习 #鲁棒性
 
@@ -3863,7 +4066,7 @@ layout: "posts"
 
 ---
 
-### 85. [Hashing-Baseline: Rethinking Hashing in the Age of Pretrained Models](/audio-paper-digest-blog/posts/2026-04-29-hashing-baseline-rethinking-hashing-in-the-age-of)
+### 92. [Hashing-Baseline: Rethinking Hashing in the Age of Pretrained Models](/audio-paper-digest-blog/posts/2026-04-29-hashing-baseline-rethinking-hashing-in-the-age-of)
 
 🔥 **8.0/10** | 前25% | #音频检索 #音频分类 | #预训练 | #音频检索 #图像检索
 
@@ -3900,7 +4103,7 @@ layout: "posts"
 
 ---
 
-### 86. [DGSDNet: Dual-Graph Spectral Diffusion Network for Incomplete Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-dgsdnet-dual-graph-spectral-diffusion-network-for)
+### 93. [DGSDNet: Dual-Graph Spectral Diffusion Network for Incomplete Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-dgsdnet-dual-graph-spectral-diffusion-network-for)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #扩散模型 | #图神经网络 #多模态模型
 
@@ -3926,7 +4129,7 @@ layout: "posts"
 
 ---
 
-### 87. [Graph-based Modality Alignment for Robustness in Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-graph-based-modality-alignment-for-robustness-in)
+### 94. [Graph-based Modality Alignment for Robustness in Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-graph-based-modality-alignment-for-robustness-in)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #多模态模型 | #对比学习 #鲁棒性
 
@@ -3959,7 +4162,7 @@ layout: "posts"
 
 ---
 
-### 88. [Multimodal Self-Attention Network with Temporal Alignment for Audio-Visual Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-multimodal-self-attention-network-with-temporal)
+### 95. [Multimodal Self-Attention Network with Temporal Alignment for Audio-Visual Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-multimodal-self-attention-network-with-temporal)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #多模态模型 | #跨模态 #音视频
 
@@ -3984,7 +4187,7 @@ layout: "posts"
 
 ---
 
-### 89. [Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation](/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face)
+### 96. [Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation](/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face)
 
 🔥 **8.0/10** | 前25% | #音视频 | #生成模型 | #不确定性估计 #多模态模型
 
@@ -4024,7 +4227,7 @@ layout: "posts"
 
 ---
 
-### 90. [StreamMark: A Deep Learning-Based Semi-Fragile Audio Watermarking for Proactive Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-streammark-a-deep-learning-based-semi-fragile)
+### 97. [StreamMark: A Deep Learning-Based Semi-Fragile Audio Watermarking for Proactive Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-streammark-a-deep-learning-based-semi-fragile)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #端到端 | #鲁棒性 #数据集
 
@@ -4070,7 +4273,7 @@ layout: "posts"
 
 ---
 
-### 91. [Voting-Based Pitch Estimation with Temporal and Frequential Alignment and Correlation Aware Selection](/audio-paper-digest-blog/posts/2026-04-29-voting-based-pitch-estimation-with-temporal-and)
+### 98. [Voting-Based Pitch Estimation with Temporal and Frequential Alignment and Correlation Aware Selection](/audio-paper-digest-blog/posts/2026-04-29-voting-based-pitch-estimation-with-temporal-and)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #信号处理 | #集成学习 #鲁棒性
 
@@ -4096,7 +4299,7 @@ layout: "posts"
 
 ---
 
-### 92. [Spike-Driven Low-Power Speech Bandwidth Extension](/audio-paper-digest-blog/posts/2026-04-29-spike-driven-low-power-speech-bandwidth-extension)
+### 99. [Spike-Driven Low-Power Speech Bandwidth Extension](/audio-paper-digest-blog/posts/2026-04-29-spike-driven-low-power-speech-bandwidth-extension)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #脉冲神经网络 | #低功耗 #流式处理
 
@@ -4130,7 +4333,7 @@ layout: "posts"
 
 ---
 
-### 93. [Flexio: Flexible Single- and Multi-Channel Speech Separation and Enhancement](/audio-paper-digest-blog/posts/2026-04-29-flexio-flexible-single-and-multi-channel-speech)
+### 100. [Flexio: Flexible Single- and Multi-Channel Speech Separation and Enhancement](/audio-paper-digest-blog/posts/2026-04-29-flexio-flexible-single-and-multi-channel-speech)
 
 🔥 **8.0/10** | 前25% | #语音分离 | #多通道 | #语音增强 #麦克风阵列
 
@@ -4151,7 +4354,7 @@ FlexIO旨在解决语音分离与增强（SSE）系统中处理可变麦克风�
 
 ---
 
-### 94. [SLAP: Scalable Language-Audio Pretraining with Variable-Duration Audio and Multi-Objective Training](/audio-paper-digest-blog/posts/2026-04-29-slap-scalable-language-audio-pretraining-with)
+### 101. [SLAP: Scalable Language-Audio Pretraining with Variable-Duration Audio and Multi-Objective Training](/audio-paper-digest-blog/posts/2026-04-29-slap-scalable-language-audio-pretraining-with)
 
 🔥 **8.0/10** | 前25% | #音频检索 | #预训练 | #音频分类 #多模态模型
 
@@ -4180,7 +4383,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 95. [Matching Reverberant Speech Through Learned Acoustic Embeddings](/audio-paper-digest-blog/posts/2026-04-29-matching-reverberant-speech-through-learned)
+### 102. [Matching Reverberant Speech Through Learned Acoustic Embeddings](/audio-paper-digest-blog/posts/2026-04-29-matching-reverberant-speech-through-learned)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #信号处理 | #空间音频 #实时处理
 
@@ -4210,7 +4413,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 96. [Regularized Inverse Filter Design for Rigid Spherical Microphone Array Processing: Laplace- And Time-Domain Representations](/audio-paper-digest-blog/posts/2026-04-29-regularized-inverse-filter-design-for-rigid)
+### 103. [Regularized Inverse Filter Design for Rigid Spherical Microphone Array Processing: Laplace- And Time-Domain Representations](/audio-paper-digest-blog/posts/2026-04-29-regularized-inverse-filter-design-for-rigid)
 
 🔥 **8.0/10** | 前25% | #空间音频 | #信号处理 | #麦克风阵列 #正则化
 
@@ -4236,7 +4439,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 97. [Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription](/audio-paper-digest-blog/posts/2026-04-29-noise-to-notes-diffusion-based-generation-and)
+### 104. [Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription](/audio-paper-digest-blog/posts/2026-04-29-noise-to-notes-diffusion-based-generation-and)
 
 🔥 **8.0/10** | 前10% | #音乐信息检索 | #扩散模型 | #生成模型 #鲁棒性
 
@@ -4257,7 +4460,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 98. [DSpAST: Disentangled Representations for Spatial Audio Reasoning with Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-dspast-disentangled-representations-for-spatial)
+### 105. [DSpAST: Disentangled Representations for Spatial Audio Reasoning with Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-dspast-disentangled-representations-for-spatial)
 
 🔥 **8.0/10** | 前25% | #音频问答 | #多任务学习 | #音频大模型 #空间音频
 
@@ -4290,7 +4493,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 99. [Lightweight and Generalizable Acoustic Scene Representations Via Contrastive Fine-Tuning and Distillation](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-generalizable-acoustic-scene)
+### 106. [Lightweight and Generalizable Acoustic Scene Representations Via Contrastive Fine-Tuning and Distillation](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-generalizable-acoustic-scene)
 
 🔥 **8.0/10** | 前25% | #音频场景理解 | #对比学习 | #知识蒸馏 #少样本学习
 
@@ -4346,7 +4549,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 100. [AnyAccomp: Generalizable Accompaniment Generation Via Quantized Melodic Bottleneck](/audio-paper-digest-blog/posts/2026-04-29-anyaccomp-generalizable-accompaniment-generation)
+### 107. [AnyAccomp: Generalizable Accompaniment Generation Via Quantized Melodic Bottleneck](/audio-paper-digest-blog/posts/2026-04-29-anyaccomp-generalizable-accompaniment-generation)
 
 🔥 **8.0/10** | 前25% | #音乐生成 | #流匹配 #量化 | #流匹配 #量化
 
@@ -4375,7 +4578,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 101. [FUN-SSL: Full-Band Layer Followed by U-Net With Narrow-Band Layers for Multiple Moving Sound Source Localization](/audio-paper-digest-blog/posts/2026-04-29-fun-ssl-full-band-layer-followed-by-u-net-with)
+### 108. [FUN-SSL: Full-Band Layer Followed by U-Net With Narrow-Band Layers for Multiple Moving Sound Source Localization](/audio-paper-digest-blog/posts/2026-04-29-fun-ssl-full-band-layer-followed-by-u-net-with)
 
 🔥 **8.0/10** | 前25% | #声源定位 | #U-Net | #深度学习 #麦克风阵列
 
@@ -4396,7 +4599,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 102. [Event Classification by Physics-Informed Inpainting for Distributed Multichannel Acoustic Sensor with Partially Degraded Channels](/audio-paper-digest-blog/posts/2026-04-29-event-classification-by-physics-informed)
+### 109. [Event Classification by Physics-Informed Inpainting for Distributed Multichannel Acoustic Sensor with Partially Degraded Channels](/audio-paper-digest-blog/posts/2026-04-29-event-classification-by-physics-informed)
 
 🔥 **8.0/10** | 前25% | #音频事件检测 | #信号处理 | #麦克风阵列 #多通道
 
@@ -4422,7 +4625,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 103. [Time-Domain Synthesis of Virtual Sound Source Within Personalized Sound Zone using a Linear Loudspeaker Array](/audio-paper-digest-blog/posts/2026-04-29-time-domain-synthesis-of-virtual-sound-source)
+### 110. [Time-Domain Synthesis of Virtual Sound Source Within Personalized Sound Zone using a Linear Loudspeaker Array](/audio-paper-digest-blog/posts/2026-04-29-time-domain-synthesis-of-virtual-sound-source)
 
 🔥 **8.0/10** | 前25% | #空间音频 | #信号处理 | #实时处理 #麦克风阵列
 
@@ -4448,7 +4651,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 104. [Assessing The Perceptual Impact of Low-Altitude Aircraft Noise in Cities: An Auralization Framework Using Gaussian Beam Tracing](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-perceptual-impact-of-low-altitude)
+### 111. [Assessing The Perceptual Impact of Low-Altitude Aircraft Noise in Cities: An Auralization Framework Using Gaussian Beam Tracing](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-perceptual-impact-of-low-altitude)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #信号处理 | #空间音频 #声源定位
 
@@ -4477,7 +4680,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 105. [Enabling Multi-Species Bird Classification on Low-Power Bioacoustic Loggers](/audio-paper-digest-blog/posts/2026-04-29-enabling-multi-species-bird-classification-on-low)
+### 112. [Enabling Multi-Species Bird Classification on Low-Power Bioacoustic Loggers](/audio-paper-digest-blog/posts/2026-04-29-enabling-multi-species-bird-classification-on-low)
 
 🔥 **8.0/10** | 前25% | #生物声学 | #知识蒸馏 | #时频分析 #边缘计算
 
@@ -4497,7 +4700,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 106. [USVexplorer: Robust Detection of Ultrasonic Vocalizations with Cross Species Generalization](/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic)
+### 113. [USVexplorer: Robust Detection of Ultrasonic Vocalizations with Cross Species Generalization](/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic)
 
 🔥 **8.0/10** | 前25% | #音频事件检测 | #端到端 | #生物声学 #时频分析
 
@@ -4535,7 +4738,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 107. [Leveraging Diffusion U-Net Features for Predominant Instrument Recognition](/audio-paper-digest-blog/posts/2026-04-29-leveraging-diffusion-u-net-features-for)
+### 114. [Leveraging Diffusion U-Net Features for Predominant Instrument Recognition](/audio-paper-digest-blog/posts/2026-04-29-leveraging-diffusion-u-net-features-for)
 
 🔥 **8.0/10** | 前25% | #音乐信息检索 | #扩散模型 | #特征学习 #低资源
 
@@ -4555,7 +4758,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 108. [Subsequence SDTW: Differentiable Alignment with Flexible Boundary Conditions](/audio-paper-digest-blog/posts/2026-04-29-subsequence-sdtw-differentiable-alignment-with)
+### 115. [Subsequence SDTW: Differentiable Alignment with Flexible Boundary Conditions](/audio-paper-digest-blog/posts/2026-04-29-subsequence-sdtw-differentiable-alignment-with)
 
 🔥 **8.0/10** | 前25% | #音乐信息检索 | #信号处理 | #弱监督学习 #音频生成
 
@@ -4587,7 +4790,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 109. [Distributed Multichannel Active Noise Control with Asynchronous Communication](/audio-paper-digest-blog/posts/2026-04-29-distributed-multichannel-active-noise-control)
+### 116. [Distributed Multichannel Active Noise Control with Asynchronous Communication](/audio-paper-digest-blog/posts/2026-04-29-distributed-multichannel-active-noise-control)
 
 🔥 **8.0/10** | 前25% | #信号处理 | #分布式算法 | #多通道 #实时处理
 
@@ -4618,7 +4821,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 110. [MixGAN-based Non-blind Bandwidth Extension for Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for)
+### 117. [MixGAN-based Non-blind Bandwidth Extension for Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for)
 
 🔥 **8.0/10** | 前25% | #音频增强 | #生成对抗网络 | #音频编解码器 #非盲
 
@@ -4657,7 +4860,41 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 111. [MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model](/audio-paper-digest-blog/posts/2026-04-29-mage-a-coarse-to-fine-speech-enhancer-with-masked)
+### 118. [Identifying the Minimal and Maximal Phonetic Subspace of Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-identifying-the-minimal-and-maximal-phonetic)
+
+前25% | #语音识别 | #自监督学习 | #模型评估 #语音特征
+
+👥 **作者与机构**
+
+- 第一作者：Xingwen Han（爱丁堡大学信息学院）
+- 通讯作者：未说明
+- 作者列表：Xingwen Han（爱丁堡大学信息学院）、Hao Tang（爱丁堡大学信息学院）
+
+💡 **毒舌点评**
+
+**亮点**：论文将NLP中“属性编码在低维子空间”的思路成功迁移到语音SSL模型分析，并提出了“最小/最大音素子空间”的互补定义，逻辑自洽且实验验证扎实，特别是发现最小音素子空间（~22维）与说话人子空间近乎正交，这为开发“说话人不变”的紧凑语音表示提供了理论依据。**短板**：研究的核心发现（如维度冗余、信息正交性）在先前对APC/CPC的分析中已有迹象，本文更多是定义、确认和量化这些现象在更大规模模型上的表现，突破性略显不足，且最大音素子空间的实验方法（PCA残差）存在已知局限（论文自身也提及）。
+
+📌 **核心摘要**
+
+1. **要解决什么问题**：澄清自监督学习（SSL）语音模型（如wav2vec 2.0, HuBERT, wavLM）中音素信息编码的几何结构，特别是其所在的子空间维度下限（最小）和上限（最大）。
+2. **方法核心是什么**：正式定义了“最小音素子空间”（在可容忍精度损失α内保持音素分类精度的最低维子空间）和“最大音素子空间”（其正交补中不包含音素信息的最低维子空间）。使用秩约束探测器、PCA、LDA等方法在LibriSpeech数据集上，针对模型第9层768维表示进行识别和分析。
+3. **与已有方法相比新在哪里**：相比先前对APC/CPC模型的固定维度（39维）子空间分析，本文首次形式化定义了最小和最大子空间的概念，并系统性地在更复杂的SSL模型上扫描维度阈值、量化子空间重叠（通过CRV指标）和验证其与说话人子空间的正交性。
+4. **主要实验结果如何**：(1) 最小音素子空间维度极低：wav2vec 2.0为21维，HuBERT和wavLM为22维，此时音素分类准确率与768维原始空间相当（约86.3%）。(2) 这些最小音素子空间非唯一，但彼此有约70%的方差重叠。(3) 最小音素子空间与说话人子空间近乎正交：在其上进行说话人探测，准确率接近随机水平（~5%）。(4) 最大音素子空间维度极高（>753），表明音素信息在表示空间中高度冗余。(5) 关键对比数据见下表：
+
+| 子空间类型 | 维度 | HuBERT音素准确率 | wav2vec 2.0音素准确率 | wavLM音素准确率 | 说明 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 原始空间 | 768 | ~86.35% | ~86.27% | ~86.35% | 基准 |
+| 最小音素子空间（秩约束探测器） | 22/21/22 | 86.29% | 86.17% | 86.17% | 与原始空间性能相当 |
+| 38维LDA子空间 | 38 | 83.41% | 82.82% | 82.87% | 性能下降，优于PCA |
+| 39维PCA类中心子空间 | 39 | 79.43% | 78.66% | 78.45% | 性能进一步下降 |
+| 最小维度的随机子空间 | 22/21/22 | 27.93% | 33.05% | 29.61% | 接近随机水平 |
+
+5. **实际意义是什**：研究结论支持两个应用方向：(1) 开发更紧凑的语音表示（降至~22维）以降低下游计算成本；(2) 利用音素与说话人信息的正交性，设计更公平、说话人不变的语音处理系统。
+6. **主要局限性是什**：(1) 最大音素子空间的定义和实验方法（PCA残差）可能高估其维度，论文指出其为上界。(2) 实验仅聚焦于英语（LibriSpeech）和模型的第9层，结论的普遍性有待验证。(3) 未探讨最小音素子空间在更复杂下游任务（如大词汇量ASR）中的有效性。
+
+---
+
+### 119. [MAGE: A Coarse-to-Fine Speech Enhancer with Masked Generative Model](/audio-paper-digest-blog/posts/2026-04-29-mage-a-coarse-to-fine-speech-enhancer-with-masked)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #生成模型 | #大语言模型 #掩码预测
 
@@ -4693,7 +4930,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 112. [Adaptive Deterministic Flow Matching for Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-adaptive-deterministic-flow-matching-for-target)
+### 120. [Adaptive Deterministic Flow Matching for Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-adaptive-deterministic-flow-matching-for-target)
 
 🔥 **8.0/10** | 前25% | #目标说话人提取 | #流匹配 | #语音增强 #生成模型
 
@@ -4719,7 +4956,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 113. [Text2Move: Text-To-Moving Sound Generation via Trajectory Prediction and Temporal Alignment](/audio-paper-digest-blog/posts/2026-04-29-text2move-text-to-moving-sound-generation-via)
+### 121. [Text2Move: Text-To-Moving Sound Generation via Trajectory Prediction and Temporal Alignment](/audio-paper-digest-blog/posts/2026-04-29-text2move-text-to-moving-sound-generation-via)
 
 🔥 **8.0/10** | 前25% | #空间音频 | #多任务学习 | #音频生成 #预训练
 
@@ -4747,7 +4984,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 114. [Deep Learning-Based Joint Optimization of Adaptive Feedback Cancellation and Residual Feedback Suppression for Hearing Aids](/audio-paper-digest-blog/posts/2026-04-29-deep-learning-based-joint-optimization-of)
+### 122. [Deep Learning-Based Joint Optimization of Adaptive Feedback Cancellation and Residual Feedback Suppression for Hearing Aids](/audio-paper-digest-blog/posts/2026-04-29-deep-learning-based-joint-optimization-of)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #深度学习 | #信号处理 #实时处理
 
@@ -4790,7 +5027,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 115. [MMAudioSep: Taming Video-to-Audio Generative Model Towards Video/Text-Queried Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model)
+### 123. [MMAudioSep: Taming Video-to-Audio Generative Model Towards Video/Text-Queried Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model)
 
 🔥 **8.0/10** | 前25% | #语音分离 | #流匹配 | #多模态模型 #预训练
 
@@ -4834,7 +5071,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 116. [VChangeCodec: An Ultra Low-Complexity Neural Speech Codec with Built-In Voice Changer for Customized Real-Time Communication](/audio-paper-digest-blog/posts/2026-04-29-vchangecodec-an-ultra-low-complexity-neural)
+### 124. [VChangeCodec: An Ultra Low-Complexity Neural Speech Codec with Built-In Voice Changer for Customized Real-Time Communication](/audio-paper-digest-blog/posts/2026-04-29-vchangecodec-an-ultra-low-complexity-neural)
 
 🔥 **8.0/10** | 前25% | #语音转换 #语音增强 | #端到端 | #语音转换 #语音增强
 
@@ -4870,7 +5107,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 117. [Assessing the Impact of Speaker Identity in Speech Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-impact-of-speaker-identity-in)
+### 125. [Assessing the Impact of Speaker Identity in Speech Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-assessing-the-impact-of-speaker-identity-in)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #多任务学习 | #自监督学习 #说话人识别
 
@@ -4903,7 +5140,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 118. [Cross-Domain Contrastive Learning with Dynamic Threshold Calibration for Source Speaker Tracing](/audio-paper-digest-blog/posts/2026-04-29-cross-domain-contrastive-learning-with-dynamic)
+### 126. [Cross-Domain Contrastive Learning with Dynamic Threshold Calibration for Source Speaker Tracing](/audio-paper-digest-blog/posts/2026-04-29-cross-domain-contrastive-learning-with-dynamic)
 
 🔥 **8.0/10** | 前25% | #说话人验证 | #对比学习 | #音频安全 #跨领域
 
@@ -4923,7 +5160,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 119. [Universr: Unified and Versatile Audio Super-Resolution Via Vocoder-Free Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-universr-unified-and-versatile-audio-super)
+### 127. [Universr: Unified and Versatile Audio Super-Resolution Via Vocoder-Free Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-universr-unified-and-versatile-audio-super)
 
 🔥 **8.0/10** | 前25% | #音频超分辨率 | #流匹配 | #语音增强 #音频生成
 
@@ -4953,7 +5190,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 120. [Improving Anomalous Sound Detection with Attribute-Aware Representation from Domain-Adaptive Pre-Training](/audio-paper-digest-blog/posts/2026-04-29-improving-anomalous-sound-detection-with)
+### 128. [Improving Anomalous Sound Detection with Attribute-Aware Representation from Domain-Adaptive Pre-Training](/audio-paper-digest-blog/posts/2026-04-29-improving-anomalous-sound-detection-with)
 
 🔥 **8.0/10** | 前10% | #音频事件检测 | #预训练 #自监督学习 #领域适应 | #预训练 #自监督学习
 
@@ -4986,7 +5223,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 121. [Parametric Neural Amp Modeling with Active Learning](/audio-paper-digest-blog/posts/2026-04-29-parametric-neural-amp-modeling-with-active)
+### 129. [Parametric Neural Amp Modeling with Active Learning](/audio-paper-digest-blog/posts/2026-04-29-parametric-neural-amp-modeling-with-active)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #主动学习 | #LSTM #WaveNet
 
@@ -5006,7 +5243,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 122. [A Unsupervised Domain Adaptation Framework For Semi-Supervised Melody Extraction Using Confidence Matrix Replace and Nearest Neighbour Supervision](/audio-paper-digest-blog/posts/2026-04-29-a-unsupervised-domain-adaptation-framework-for)
+### 130. [A Unsupervised Domain Adaptation Framework For Semi-Supervised Melody Extraction Using Confidence Matrix Replace and Nearest Neighbour Supervision](/audio-paper-digest-blog/posts/2026-04-29-a-unsupervised-domain-adaptation-framework-for)
 
 🔥 **8.0/10** | 前25% | #音乐信息检索 | #领域适应 | #对比学习 #半监督学习
 
@@ -5042,7 +5279,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 123. [Robust and Lightweight F0 Estimation Through Mid-Level Fusion of DSP-Informed Features](/audio-paper-digest-blog/posts/2026-04-29-robust-and-lightweight-f0-estimation-through-mid)
+### 131. [Robust and Lightweight F0 Estimation Through Mid-Level Fusion of DSP-Informed Features](/audio-paper-digest-blog/posts/2026-04-29-robust-and-lightweight-f0-estimation-through-mid)
 
 🔥 **8.0/10** | 前25% | #基频估计 | #信号处理 | #模型融合 #鲁棒性
 
@@ -5068,7 +5305,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 124. [Evaluating High-Resolution Piano Sustain Pedal Depth Estimation with Musically Informed Metrics](/audio-paper-digest-blog/posts/2026-04-29-evaluating-high-resolution-piano-sustain-pedal)
+### 132. [Evaluating High-Resolution Piano Sustain Pedal Depth Estimation with Musically Informed Metrics](/audio-paper-digest-blog/posts/2026-04-29-evaluating-high-resolution-piano-sustain-pedal)
 
 🔥 **8.0/10** | 前25% | #音乐信息检索 | #模型评估 | #数据集 #开源工具
 
@@ -5097,7 +5334,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 125. [Group Relative Policy Optimization for Text-to-Speech with Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-group-relative-policy-optimization-for-text-to)
+### 133. [Group Relative Policy Optimization for Text-to-Speech with Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-group-relative-policy-optimization-for-text-to)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #强化学习 | #多语言 #零样本
 
@@ -5122,7 +5359,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 126. [HyFlowSE: Hybrid End-To-End Flow-Matching Speech Enhancement via Generative-Discriminative Learning](/audio-paper-digest-blog/posts/2026-04-29-hyflowse-hybrid-end-to-end-flow-matching-speech)
+### 134. [HyFlowSE: Hybrid End-To-End Flow-Matching Speech Enhancement via Generative-Discriminative Learning](/audio-paper-digest-blog/posts/2026-04-29-hyflowse-hybrid-end-to-end-flow-matching-speech)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #流匹配 | #端到端 #轻量化模型
 
@@ -5147,7 +5384,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 127. [HCGAN: Harmonic-Coupled Generative Adversarial Network for Speech Super-Resolution in Low-Bandwidth Scenarios](/audio-paper-digest-blog/posts/2026-04-29-hcgan-harmonic-coupled-generative-adversarial)
+### 135. [HCGAN: Harmonic-Coupled Generative Adversarial Network for Speech Super-Resolution in Low-Bandwidth Scenarios](/audio-paper-digest-blog/posts/2026-04-29-hcgan-harmonic-coupled-generative-adversarial)
 
 🔥 **8.0/10** | 前50% | #语音增强 | #生成模型 | #端到端 #低资源
 
@@ -5190,7 +5427,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 128. [It Is Personal: The Importance of Personalization for Recognizing Self-Reported Emotion](/audio-paper-digest-blog/posts/2026-04-29-it-is-personal-the-importance-of-personalization)
+### 136. [It Is Personal: The Importance of Personalization for Recognizing Self-Reported Emotion](/audio-paper-digest-blog/posts/2026-04-29-it-is-personal-the-importance-of-personalization)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #迁移学习 | #多任务学习 #零样本
 
@@ -5232,7 +5469,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 129. [AMBER2: Dual Ambiguity-Aware Emotion Recognition Applied to Speech and Text](/audio-paper-digest-blog/posts/2026-04-29-amber2-dual-ambiguity-aware-emotion-recognition)
+### 137. [AMBER2: Dual Ambiguity-Aware Emotion Recognition Applied to Speech and Text](/audio-paper-digest-blog/posts/2026-04-29-amber2-dual-ambiguity-aware-emotion-recognition)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #知识蒸馏 | #多模态模型 #鲁棒性
 
@@ -5257,7 +5494,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 130. [Subgraph Localization in the Subbands for Partially Spoofed Speech Detection](/audio-paper-digest-blog/posts/2026-04-29-subgraph-localization-in-the-subbands-for)
+### 138. [Subgraph Localization in the Subbands for Partially Spoofed Speech Detection](/audio-paper-digest-blog/posts/2026-04-29-subgraph-localization-in-the-subbands-for)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #图神经网络 | #信号处理 #时频分析
 
@@ -5277,7 +5514,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 131. [On deepfake voice detection - It’s all in the presentation](/audio-paper-digest-blog/posts/2026-04-29-on-deepfake-voice-detection-its-all-in-the)
+### 139. [On deepfake voice detection - It’s all in the presentation](/audio-paper-digest-blog/posts/2026-04-29-on-deepfake-voice-detection-its-all-in-the)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #数据增强 | #自监督学习 #预训练
 
@@ -5297,7 +5534,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 132. [Dynamic Noise-Aware Multi Lora Framework Towards Real-World Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-dynamic-noise-aware-multi-lora-framework-towards)
+### 140. [Dynamic Noise-Aware Multi Lora Framework Towards Real-World Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-dynamic-noise-aware-multi-lora-framework-towards)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #领域适应 | #鲁棒性
 
@@ -5322,7 +5559,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 133. [Mispronunciation Detection and Diagnosis Without Model Training: A Retrieval-Based Approach](/audio-paper-digest-blog/posts/2026-04-29-mispronunciation-detection-and-diagnosis-without)
+### 141. [Mispronunciation Detection and Diagnosis Without Model Training: A Retrieval-Based Approach](/audio-paper-digest-blog/posts/2026-04-29-mispronunciation-detection-and-diagnosis-without)
 
 🔥 **8.0/10** | 前25% | #语音评估 | #检索增强 | #预训练 #零样本
 
@@ -5347,7 +5584,32 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 134. [Mixture To Beamformed Mixture: Leveraging Beamformed Mixture As Weak-Supervision for Speech Enhancement and Noise-Robust ASR](/audio-paper-digest-blog/posts/2026-04-29-mixture-to-beamformed-mixture-leveraging)
+### 142. [Exploring Resolution-Wise Shared Attention in Hybrid Mamba-U-Nets for Improved Cross-Corpus Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-exploring-resolution-wise-shared-attention-in)
+
+前25% | #语音增强 | #混合模型 | #Mamba #跨语料库
+
+👥 **作者与机构**
+
+- 第一作者：Nikolai Lund Kühne（奥尔堡大学电子系）
+- 通讯作者：未明确说明（推测为Jan Østergaard，同一单位）
+- 作者列表：Nikolai Lund Kühne（奥尔堡大学电子系）、Jesper Jensen（奥尔堡大学电子系；Oticon A/S）、Jan Østergaard（奥尔堡大学电子系）、Zheng-Hua Tan（奥尔堡大学电子系）
+
+💡 **毒舌点评**
+
+亮点：提出的RWSA机制构思巧妙，通过在U-Net的不同分辨率层间共享注意力参数，不仅减少了计算开销，还显著提升了模型在未见数据集（跨语料库）上的泛化能力，这是当前语音增强领域的一个关键痛点。短板：模型架构相对复杂，涉及Mamba、注意力机制、U-Net以及多种损失函数，虽然提供了代码，但其核心贡献“分辨率共享注意力”更像是一种工程优化，而非根本性的理论突破；此外，论文虽然声称SOTA，但与部分基线模型的参数量和计算量差距并不总是特别巨大，说服力可进一步增强。
+
+📌 **核心摘要**
+
+1. **要解决什么问题**：现有语音增强模型在训练集以外的语料（跨语料库）上性能下降显著，尤其是基于序列模型（如LSTM， Mamba）的方法。本文旨在提升模型的跨语料库泛化能力。
+2. **方法核心是什么**：提出了RWSA-MambaUNet模型。其核心是**分辨率共享注意力（RWSA）** 机制，即在U-Net结构的下采样和上采样路径中，将对应时间/频率分辨率的MambAttention块内的多头注意力（MHA）模块参数共享。模型结合了Mamba在时频维度建模的线性复杂度优势与注意力机制的全局关系捕捉能力。
+3. **与已有方法相比新在哪里**：首次将RWSA引入基于Mamba的U-Net架构用于语音增强。通过层间共享注意力参数，模型能在不同分辨率上对齐全局时频依赖关系，这被认为对跨语料库泛化至关重要。与先前MambAttention模型相比，本文模型更轻量且泛化能力更强。
+4. **主要实验结果如何**：在两个域外测试集上达到SOTA。例如，在VB-DemandEx训练的模型中，最小的RWSA-MambaUNet-XS（1.02M参数）在DNS 2020测试集上PESQ达2.940， SSNR达9.421， ESTOI达0.922；在EARS-WHAM v2测试集上SSNR达3.106， ESTOI达0.729， SI-SDR达8.541，超越了所有基线模型（如MambAttention、MP-SENet），同时参数量和FLOPs大幅减少。消融实验证实了RWSA和MHA模块对性能的贡献。
+5. **实际意义是什么**：该工作为构建高效、强泛化能力的语音增强系统提供了新思路，特别是在处理训练数据未覆盖的新说话人、新噪声场景时具有潜在应用价值（如助听器、移动通信）。
+6. **主要局限性是什么**：论文未提及模型在含混响数据或真实复杂环境下的性能；SI-SDR指标在部分测试集上不如基线，作者归因于参考信号特性，但这可能影响其在需要波形精确匹配场景下的适用性；此外，实验设置（如STFT参数）与某些近期工作有差异，可能影响公平比较。
+
+---
+
+### 143. [Mixture To Beamformed Mixture: Leveraging Beamformed Mixture As Weak-Supervision for Speech Enhancement and Noise-Robust ASR](/audio-paper-digest-blog/posts/2026-04-29-mixture-to-beamformed-mixture-leveraging)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #波束成形 | #语音识别 #多通道
 
@@ -5372,7 +5634,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 135. [Lattice-Guided Consistency Regularization of Dual-Mode Transducers for Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-lattice-guided-consistency-regularization-of-dual)
+### 144. [Lattice-Guided Consistency Regularization of Dual-Mode Transducers for Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-lattice-guided-consistency-regularization-of-dual)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #一致性正则化 | #自回归模型 #端到端
 
@@ -5392,7 +5654,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 136. [BiRQ: Bi-Level Self-Labeling Random Quantization for Self-Supervised Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-birq-bi-level-self-labeling-random-quantization)
+### 145. [BiRQ: Bi-Level Self-Labeling Random Quantization for Self-Supervised Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-birq-bi-level-self-labeling-random-quantization)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #自监督学习 | #低资源 #预训练
 
@@ -5423,7 +5685,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 137. [MI-Fuse: Label Fusion for Unsupervised Domain Adaptation with Closed-Source Large Audio-Language Model](/audio-paper-digest-blog/posts/2026-04-29-mi-fuse-label-fusion-for-unsupervised-domain)
+### 146. [MI-Fuse: Label Fusion for Unsupervised Domain Adaptation with Closed-Source Large Audio-Language Model](/audio-paper-digest-blog/posts/2026-04-29-mi-fuse-label-fusion-for-unsupervised-domain)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #领域适应 | #知识蒸馏 #语音大模型
 
@@ -5459,7 +5721,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 138. [Hybrid Pruning: In-Situ Compression of Self-Supervised Speech Models for Speaker Verification and Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-hybrid-pruning-in-situ-compression-of-self)
+### 147. [Hybrid Pruning: In-Situ Compression of Self-Supervised Speech Models for Speaker Verification and Anti-Spoofing](/audio-paper-digest-blog/posts/2026-04-29-hybrid-pruning-in-situ-compression-of-self)
 
 🔥 **8.0/10** | 前25% | #说话人验证 | #自监督学习 | #语音伪造检测 #结构化剪枝
 
@@ -5479,7 +5741,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 139. [Distilling Attention Knowledge for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-distilling-attention-knowledge-for-speaker)
+### 148. [Distilling Attention Knowledge for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-distilling-attention-knowledge-for-speaker)
 
 🔥 **8.0/10** | 前25% | #说话人验证 | #知识蒸馏 | #注意力机制 #语音预训练模型
 
@@ -5513,7 +5775,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 140. [Cross-Architecture Knowledge Distillation of WavLM for Lightweight Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of)
+### 149. [Cross-Architecture Knowledge Distillation of WavLM for Lightweight Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of)
 
 🔥 **8.0/10** | 前25% | #说话人验证 | #知识蒸馏 | #自监督学习 #模型压缩
 
@@ -5569,7 +5831,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 141. [Do You Hear What I Mean? Quantifying the Instruction-Perception GAP in Instruction-Guided Expressive Text-to-Speech Systems](/audio-paper-digest-blog/posts/2026-04-29-do-you-hear-what-i-mean-quantifying-the)
+### 150. [Do You Hear What I Mean? Quantifying the Instruction-Perception GAP in Instruction-Guided Expressive Text-to-Speech Systems](/audio-paper-digest-blog/posts/2026-04-29-do-you-hear-what-i-mean-quantifying-the)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #模型评估 | #数据集 #语音情感识别
 
@@ -5604,7 +5866,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 142. [OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct)
+### 151. [OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #推理 | #大语言模型 #数据集
 
@@ -5646,7 +5908,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 143. [HD-PPT: Hierarchical Decoding of Content- and Prompt-Preference Tokens for Instruction-Based TTS](/audio-paper-digest-blog/posts/2026-04-29-hd-ppt-hierarchical-decoding-of-content-and)
+### 152. [HD-PPT: Hierarchical Decoding of Content- and Prompt-Preference Tokens for Instruction-Based TTS](/audio-paper-digest-blog/posts/2026-04-29-hd-ppt-hierarchical-decoding-of-content-and)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #大语言模型 | #自回归模型 #对比学习
 
@@ -5682,7 +5944,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 144. [Emotion-Aligned Generation in Diffusion Text to Speech Models Via Preference-Guided Optimization](/audio-paper-digest-blog/posts/2026-04-29-emotion-aligned-generation-in-diffusion-text-to)
+### 153. [Emotion-Aligned Generation in Diffusion Text to Speech Models Via Preference-Guided Optimization](/audio-paper-digest-blog/posts/2026-04-29-emotion-aligned-generation-in-diffusion-text-to)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #扩散模型 #强化学习 | #扩散模型 #强化学习
 
@@ -5707,7 +5969,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 145. [Hanui: Harnessing Distributional Discrepancies for Singing Voice Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-hanui-harnessing-distributional-discrepancies-for)
+### 154. [Hanui: Harnessing Distributional Discrepancies for Singing Voice Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-hanui-harnessing-distributional-discrepancies-for)
 
 🔥 **8.0/10** | 前10% | #音频深度伪造检测 | #生成模型 | #自监督学习 #音频分类
 
@@ -5733,7 +5995,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 146. [Localizing Speech Deepfakes Beyond Transitions via Segment-Aware Learning](/audio-paper-digest-blog/posts/2026-04-29-localizing-speech-deepfakes-beyond-transitions)
+### 155. [Localizing Speech Deepfakes Beyond Transitions via Segment-Aware Learning](/audio-paper-digest-blog/posts/2026-04-29-localizing-speech-deepfakes-beyond-transitions)
 
 🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #数据增强 | #自监督学习 #语音安全
 
@@ -5758,7 +6020,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 147. [Exploring Fine-Tuning Of Large Audio Language Models For Spoken Language Understanding Under Limited Speech Data](/audio-paper-digest-blog/posts/2026-04-29-exploring-fine-tuning-of-large-audio-language)
+### 156. [Exploring Fine-Tuning Of Large Audio Language Models For Spoken Language Understanding Under Limited Speech Data](/audio-paper-digest-blog/posts/2026-04-29-exploring-fine-tuning-of-large-audio-language)
 
 🔥 **8.0/10** | 前25% | #语音理解 | #迁移学习 | #低资源 #多语言
 
@@ -5807,7 +6069,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 148. [Synthetic Data Domain Adaptation for ASR via LLM-Based Text and Phonetic Respelling Augmentation](/audio-paper-digest-blog/posts/2026-04-29-synthetic-data-domain-adaptation-for-asr-via-llm)
+### 157. [Synthetic Data Domain Adaptation for ASR via LLM-Based Text and Phonetic Respelling Augmentation](/audio-paper-digest-blog/posts/2026-04-29-synthetic-data-domain-adaptation-for-asr-via-llm)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #领域适应 | #数据增强 #大语言模型
 
@@ -5828,7 +6090,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 149. [Lingometer: On-Device Personal Speech Word Counting System](/audio-paper-digest-blog/posts/2026-04-29-lingometer-on-device-personal-speech-word)
+### 158. [Lingometer: On-Device Personal Speech Word Counting System](/audio-paper-digest-blog/posts/2026-04-29-lingometer-on-device-personal-speech-word)
 
 🔥 **8.0/10** | 前25% | #语音活动检测 | #端到端 | #低资源 #数据增强
 
@@ -5875,7 +6137,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 150. [FocalCodec-Stream: Streaming Low-Bitrate Speech Coding via Causal Distillation](/audio-paper-digest-blog/posts/2026-04-29-focalcodec-stream-streaming-low-bitrate-speech)
+### 159. [FocalCodec-Stream: Streaming Low-Bitrate Speech Coding via Causal Distillation](/audio-paper-digest-blog/posts/2026-04-29-focalcodec-stream-streaming-low-bitrate-speech)
 
 🔥 **8.0/10** | 前25% | #语音编码 | #知识蒸馏 | #流式处理 #语音大模型
 
@@ -5904,7 +6166,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 151. [AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook](/audio-paper-digest-blog/posts/2026-04-29-auv-teaching-audio-universal-vector-quantization)
+### 160. [AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook](/audio-paper-digest-blog/posts/2026-04-29-auv-teaching-audio-universal-vector-quantization)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #知识蒸馏 | #统一音频模型 #自监督学习
 
@@ -5929,7 +6191,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 152. [STACodec: Semantic Token Assignment for Balancing Acoustic Fidelity and Semantic Information in Audio Codecs](/audio-paper-digest-blog/posts/2026-04-29-stacodec-semantic-token-assignment-for-balancing)
+### 161. [STACodec: Semantic Token Assignment for Balancing Acoustic Fidelity and Semantic Information in Audio Codecs](/audio-paper-digest-blog/posts/2026-04-29-stacodec-semantic-token-assignment-for-balancing)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #知识蒸馏 | #语音合成 #统一音频模型
 
@@ -5963,7 +6225,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 153. [EuleroDec: A Complex-Valued RVQ-VAE for Efficient and Robust Audio Coding](/audio-paper-digest-blog/posts/2026-04-29-eulerodec-a-complex-valued-rvq-vae-for-efficient)
+### 162. [EuleroDec: A Complex-Valued RVQ-VAE for Efficient and Robust Audio Coding](/audio-paper-digest-blog/posts/2026-04-29-eulerodec-a-complex-valued-rvq-vae-for-efficient)
 
 🔥 **8.0/10** | 前25% | #音频生成 | #自编码器 | #复数值 #音频编码
 
@@ -6001,7 +6263,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 154. [FAC-FACodec: Controllable Zero-Shot Foreign Accent Conversion with Factorized Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-fac-facodec-controllable-zero-shot-foreign-accent)
+### 163. [FAC-FACodec: Controllable Zero-Shot Foreign Accent Conversion with Factorized Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-fac-facodec-controllable-zero-shot-foreign-accent)
 
 🔥 **8.0/10** | 前25% | #语音转换 | #扩散模型 | #零样本 #语音编解码器
 
@@ -6034,7 +6296,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 155. [Language-Infused Retrieval-Augmented CTC with Adaptive Soft-Hard Gating for Robust Code-Switching ASR](/audio-paper-digest-blog/posts/2026-04-29-language-infused-retrieval-augmented-ctc-with)
+### 164. [Language-Infused Retrieval-Augmented CTC with Adaptive Soft-Hard Gating for Robust Code-Switching ASR](/audio-paper-digest-blog/posts/2026-04-29-language-infused-retrieval-augmented-ctc-with)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #检索增强 | #端到端 #零样本
 
@@ -6066,7 +6328,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 156. [Speech Emotion Recognition based on Hierarchical Transformer with Shifted Windows](/audio-paper-digest-blog/posts/2026-04-29-speech-emotion-recognition-based-on-hierarchical)
+### 165. [Speech Emotion Recognition based on Hierarchical Transformer with Shifted Windows](/audio-paper-digest-blog/posts/2026-04-29-speech-emotion-recognition-based-on-hierarchical)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #分层Transformer | #预训练 #对比学习
 
@@ -6095,7 +6357,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 157. [Measuring Prosody Diversity in Zero-Shot TTS: A New Metric, Benchmark, and Exploration](/audio-paper-digest-blog/posts/2026-04-29-measuring-prosody-diversity-in-zero-shot-tts-a)
+### 166. [Measuring Prosody Diversity in Zero-Shot TTS: A New Metric, Benchmark, and Exploration](/audio-paper-digest-blog/posts/2026-04-29-measuring-prosody-diversity-in-zero-shot-tts-a)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #模型评估 | #基准测试 #自监督学习
 
@@ -6140,7 +6402,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 158. [DAIEN-TTS: Disentangled Audio Infilling for Environment-Aware Text-to-Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-daien-tts-disentangled-audio-infilling-for)
+### 167. [DAIEN-TTS: Disentangled Audio Infilling for Environment-Aware Text-to-Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-daien-tts-disentangled-audio-infilling-for)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #流匹配 | #零样本
 
@@ -6177,7 +6439,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 159. [Affect-Jigsaw: Integrating Core and Peripheral Emotions for Harmonious Fine-Grained Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-affect-jigsaw-integrating-core-and-peripheral)
+### 168. [Affect-Jigsaw: Integrating Core and Peripheral Emotions for Harmonious Fine-Grained Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-affect-jigsaw-integrating-core-and-peripheral)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #多模态模型 | #零样本
 
@@ -6209,7 +6471,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 160. [Modeling Strategies For Speech Enhancement in The Latent Space of a Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-modeling-strategies-for-speech-enhancement-in-the)
+### 169. [Modeling Strategies For Speech Enhancement in The Latent Space of a Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-modeling-strategies-for-speech-enhancement-in-the)
 
 🔥 **8.0/10** | 前50% | #语音增强 | #神经音频编解码器 | #自回归模型 #模型比较
 
@@ -6237,7 +6499,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 161. [LAFUFU: Latent Acoustic Features For Ultra-Fast Utterance Restoration](/audio-paper-digest-blog/posts/2026-04-29-lafufu-latent-acoustic-features-for-ultra-fast)
+### 170. [LAFUFU: Latent Acoustic Features For Ultra-Fast Utterance Restoration](/audio-paper-digest-blog/posts/2026-04-29-lafufu-latent-acoustic-features-for-ultra-fast)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #扩散模型 | #实时处理 #潜在空间
 
@@ -6270,7 +6532,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 162. [Relative Time Intervals Representation For Word-Level Timestamping With Masked Training](/audio-paper-digest-blog/posts/2026-04-29-relative-time-intervals-representation-for-word)
+### 171. [Relative Time Intervals Representation For Word-Level Timestamping With Masked Training](/audio-paper-digest-blog/posts/2026-04-29-relative-time-intervals-representation-for-word)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #大语言模型 | #相对时间表示 #参数高效微调
 
@@ -6295,7 +6557,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 163. [Influence of Clean Speech Characteristics on Speech Enhancement Performance](/audio-paper-digest-blog/posts/2026-04-29-influence-of-clean-speech-characteristics-on)
+### 172. [Influence of Clean Speech Characteristics on Speech Enhancement Performance](/audio-paper-digest-blog/posts/2026-04-29-influence-of-clean-speech-characteristics-on)
 
 🔥 **8.0/10** | 前25% | #语音增强 | #模型比较 | #多语言 #声学特征
 
@@ -6329,7 +6591,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 164. [Spatially Aware Self-Supervised Models for Multi-Channel Neural Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-spatially-aware-self-supervised-models-for-multi)
+### 173. [Spatially Aware Self-Supervised Models for Multi-Channel Neural Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-spatially-aware-self-supervised-models-for-multi)
 
 🔥 **8.0/10** | 前25% | #说话人分离 | #自监督学习 #麦克风阵列 | #自监督学习 #麦克风阵列
 
@@ -6377,7 +6639,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 165. [Dual-Strategy-Enhanced Conbimamba for Neural Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-dual-strategy-enhanced-conbimamba-for-neural)
+### 174. [Dual-Strategy-Enhanced Conbimamba for Neural Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-dual-strategy-enhanced-conbimamba-for-neural)
 
 🔥 **8.0/10** | 前25% | #说话人分离 | #多任务学习 | #端到端 #边界增强
 
@@ -6406,7 +6668,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 166. [Attention-Based Encoder-Decoder Target-Speaker Voice Activity Detection for Robust Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-attention-based-encoder-decoder-target-speaker)
+### 175. [Attention-Based Encoder-Decoder Target-Speaker Voice Activity Detection for Robust Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-attention-based-encoder-decoder-target-speaker)
 
 🔥 **8.0/10** | 前25% | #说话人分离 | #编码器-解码器 | #自监督学习 #模型评估
 
@@ -6426,7 +6688,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 167. [Matrix-Structured Hierarchical Convolutional Modeling for Pronunciation Assessment and Mispronunciation Detection](/audio-paper-digest-blog/posts/2026-04-29-matrix-structured-hierarchical-convolutional)
+### 176. [Matrix-Structured Hierarchical Convolutional Modeling for Pronunciation Assessment and Mispronunciation Detection](/audio-paper-digest-blog/posts/2026-04-29-matrix-structured-hierarchical-convolutional)
 
 🔥 **8.0/10** | 前25% | #语音评估 | #卷积神经网络 | #错音检测 #自监督学习
 
@@ -6461,7 +6723,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 168. [Unsupervised Lexicon Learning from Speech is Limited by Representations Rather than Clustering](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-lexicon-learning-from-speech-is)
+### 177. [Unsupervised Lexicon Learning from Speech is Limited by Representations Rather than Clustering](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-lexicon-learning-from-speech-is)
 
 🔥 **8.0/10** | 前25% | #语音发现 | #聚类 | #自监督学习 #零资源
 
@@ -6495,7 +6757,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 169. [BridgeCode: A Dual Speech Representation Paradigm for Autoregressive Zero-Shot Text-to-Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-bridgecode-a-dual-speech-representation-paradigm)
+### 178. [BridgeCode: A Dual Speech Representation Paradigm for Autoregressive Zero-Shot Text-to-Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-bridgecode-a-dual-speech-representation-paradigm)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #自回归模型 | #零样本 #模型评估
 
@@ -6543,7 +6805,39 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 170. [RLBR: Reinforcement Learning with Biasing Rewards for Contextual Speech Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-rlbr-reinforcement-learning-with-biasing-rewards)
+### 179. [Continuous-Token Diffusion for Speaker-Referenced TTS in Multimodal LLMs](/audio-paper-digest-blog/posts/2026-04-29-continuous-token-diffusion-for-speaker-referenced)
+
+前10% | #语音合成 | #扩散模型 | #多模态模型 #自回归模型
+
+👥 **作者与机构**
+
+- 第一作者：Xinlu He（Worcester Polytechnic Institute， Amazon AGI）
+- 通讯作者：未说明
+- 作者列表：Xinlu He*（Worcester Polytechnic Institute， Amazon AGI）， Swayambhu Nath Ray（Amazon AGI）， Harish Mallidi（Amazon AGI）， Jia-Hong Huang（Amazon AGI）， Ashwin Bellur（Amazon AGI）， Chander Chandak（Amazon AGI）， M. Maruf（Amazon AGI）， Venkatesh Ravichandran（Amazon AGI）
+
+💡 **毒舌点评**
+
+亮点在于其高效的双头架构设计和两阶段训练策略，成功将连续token扩散“塞进”了自回归框架并取得了SOTA的自回归TTS结果，参数效率极高。短板则是开源精神的缺失，在声称“仅用于研究”的同时，却未提供任何模型、代码或数据，让“复现”成了镜花水月。
+
+📌 **核心摘要**
+
+1. **问题**：当前基于多模态大语言模型（MLLM）的语音合成（TTS）方法依赖离散语音token，会丢失连续语音信号中宝贵的细粒度声学细节，限制合成自然度与保真度。
+2. **方法核心**：提出一种双头架构，在自回归MLLM骨干网络上同时添加“语言模型头”和“连续token扩散头”。扩散头在帧级别（25Hz）自回归地生成连续的语音嵌入表示，而语言模型头负责预测语音的起止标记，以实现变量长度合成。
+3. **创新点**：首次将严格的**逐帧连续token扩散**直接集成到自回归MLLM中，避免了量化瓶颈。为解决训练中的暴露偏差和联合优化不稳定问题，提出了**掩码训练**和**两阶段训练策略**（第二阶段冻结LLM以稳定扩散头输入分布）。
+4. **实验结果**：在LibriSpeech（PC）test-clean上评估，该方法在自回归模型中达到SOTA性能：词错率（WER）**1.95%**，说话人相似度（SIM-R）**0.54**， UTMOS **4.00**， MOS **3.77**。两阶段训练相比单阶段训练，实现了**46%的相对WER降低**。该模型（约160M参数）性能优于多个更大规模的基线模型（如VALL-E， MegaTTS， Voicebox）。
+   * 主要对比结果（表1）：
+| 方法 | 建模方式 | Token类型 | 模型大小 | WER(%)↓ | SIM↑ | UTMOS↑ | MOS↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Ground Truth | - | - | - | - | 2.84 | 0.69 | 4.16 |
+| VALL-E† | AR+NAR | 离散 | .4B | 6.11 | 0.47 | 3.68 | 4.38 |
+| Mega TTS† | AR+NAR | 连续 | .5B | 2.32 | 0.53 | 4.02 | 4.06 |
+| **Proposed Method** | **AR** | **连续** | **.2B** | **1.95** | **0.54** | **4.00** | **3.77** |
+5. **实际意义**：证明了将连续语音生成与自回归建模相结合的有效性，为构建支持语音、文本等多任务的统一MLLM基础模型提供了一条可行路径。
+6. **主要局限性**：1）方法依赖特定的预训练VAE（用于声学表示）和自回归LLM骨干（OPT-125M）；2）实验仅在英语有声书数据（LibriVox/LibriSpeech）上验证，对其他语言、说话风格的泛化性未测试；3）论文未提供代码、模型等开源资源，限制了技术的快速复现与验证。
+
+---
+
+### 180. [RLBR: Reinforcement Learning with Biasing Rewards for Contextual Speech Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-rlbr-reinforcement-learning-with-biasing-rewards)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #强化学习 | #语音大模型 #端到端
 
@@ -6568,7 +6862,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 171. [Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum](/audio-paper-digest-blog/posts/2026-04-29-prosody-guided-harmonic-attention-for-phase)
+### 181. [Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum](/audio-paper-digest-blog/posts/2026-04-29-prosody-guided-harmonic-attention-for-phase)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #生成模型 | #信号处理 #实时处理
 
@@ -6588,7 +6882,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 172. [Grey-Box Prompt Tuning With Graph Alignment for Speech-Language Models](/audio-paper-digest-blog/posts/2026-04-29-grey-box-prompt-tuning-with-graph-alignment-for)
+### 182. [Grey-Box Prompt Tuning With Graph Alignment for Speech-Language Models](/audio-paper-digest-blog/posts/2026-04-29-grey-box-prompt-tuning-with-graph-alignment-for)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #图神经网络 | #提示调优 #语音大模型
 
@@ -6608,7 +6902,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 173. [Phonological Tokenizer: Prosody-Aware Phonetic Token Via Multi-Objective Fine-Tuning with Differentiable K-Means](/audio-paper-digest-blog/posts/2026-04-29-phonological-tokenizer-prosody-aware-phonetic)
+### 183. [Phonological Tokenizer: Prosody-Aware Phonetic Token Via Multi-Objective Fine-Tuning with Differentiable K-Means](/audio-paper-digest-blog/posts/2026-04-29-phonological-tokenizer-prosody-aware-phonetic)
 
 🔥 **8.0/10** | 前25% | #语音表示学习 | #离散token | #多任务学习 #自监督学习
 
@@ -6644,7 +6938,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 174. [Frontend Token Enhancement for Token-Based Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-frontend-token-enhancement-for-token-based-speech)
+### 184. [Frontend Token Enhancement for Token-Based Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-frontend-token-enhancement-for-token-based-speech)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #自监督学习 | #语音增强 #鲁棒性
 
@@ -6674,7 +6968,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 175. [ATOM: Adaptive Token-Level Optimal Transport Mixup for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-atom-adaptive-token-level-optimal-transport-mixup)
+### 185. [ATOM: Adaptive Token-Level Optimal Transport Mixup for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-atom-adaptive-token-level-optimal-transport-mixup)
 
 🔥 **8.0/10** | 前25% | #语音翻译 | #对比学习 | #多任务学习 #数据增强
 
@@ -6712,7 +7006,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 176. [The Curious Case of Visual Grounding: Different Effects for Speech-and Text-Based Language Encoders](/audio-paper-digest-blog/posts/2026-04-29-the-curious-case-of-visual-grounding-different)
+### 186. [The Curious Case of Visual Grounding: Different Effects for Speech-and Text-Based Language Encoders](/audio-paper-digest-blog/posts/2026-04-29-the-curious-case-of-visual-grounding-different)
 
 🔥 **8.0/10** | 前25% | #模型评估 | #对比学习 | #多模态模型 #自监督学习
 
@@ -6742,7 +7036,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 177. [Noise-Robust AV-ASR Using Visual Features both in the Whisper Encoder and Decoder](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-av-asr-using-visual-features-both-in)
+### 187. [Noise-Robust AV-ASR Using Visual Features both in the Whisper Encoder and Decoder](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-av-asr-using-visual-features-both-in)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #预训练 | #音视频 #鲁棒性
 
@@ -6767,7 +7061,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 178. [When Audio Matters: A Lightweight, Hierarchical Fusion Model for Speech and Non-Verbal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-when-audio-matters-a-lightweight-hierarchical)
+### 188. [When Audio Matters: A Lightweight, Hierarchical Fusion Model for Speech and Non-Verbal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-when-audio-matters-a-lightweight-hierarchical)
 
 🔥 **8.0/10** | 前25% | #语音情感识别 | #多模态模型 | #音频分类 #自监督学习
 
@@ -6803,7 +7097,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 179. [Conditional Diffusion Models for Mental Health-Preserving Voice Conversion](/audio-paper-digest-blog/posts/2026-04-29-conditional-diffusion-models-for-mental-health)
+### 189. [Conditional Diffusion Models for Mental Health-Preserving Voice Conversion](/audio-paper-digest-blog/posts/2026-04-29-conditional-diffusion-models-for-mental-health)
 
 🔥 **8.0/10** | 前25% | #语音转换 | #扩散模型 | #语音匿名化 #语音生物标志物
 
@@ -6835,7 +7129,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 180. [Discrete-Continuous Fusion With Adaptive Hierarchical Features For Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-discrete-continuous-fusion-with-adaptive)
+### 190. [Discrete-Continuous Fusion With Adaptive Hierarchical Features For Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-discrete-continuous-fusion-with-adaptive)
 
 🔥 **8.0/10** | 前10% | #音频深度伪造检测 | #迁移学习 #自监督学习 | #迁移学习 #自监督学习
 
@@ -6883,7 +7177,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 181. [WaveSP-Net: Learnable Wavelet-Domain Sparse Prompt Tuning for Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-wavesp-net-learnable-wavelet-domain-sparse-prompt)
+### 191. [WaveSP-Net: Learnable Wavelet-Domain Sparse Prompt Tuning for Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-wavesp-net-learnable-wavelet-domain-sparse-prompt)
 
 🔥 **8.0/10** | 前25% | #语音伪造检测 | #时频分析 #预训练 | #时频分析 #预训练
 
@@ -6915,7 +7209,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 182. [Fine-Grained Frame Modeling in Multi-Head Self-Attention for Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-fine-grained-frame-modeling-in-multi-head-self)
+### 192. [Fine-Grained Frame Modeling in Multi-Head Self-Attention for Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-fine-grained-frame-modeling-in-multi-head-self)
 
 🔥 **8.0/10** | 前25% | #语音伪造检测 | #自监督学习 | #模型评估 #Conformer
 
@@ -6950,7 +7244,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 183. [Optimizing Speech Language Models for Acoustic Consistency](/audio-paper-digest-blog/posts/2026-04-29-optimizing-speech-language-models-for-acoustic)
+### 193. [Optimizing Speech Language Models for Acoustic Consistency](/audio-paper-digest-blog/posts/2026-04-29-optimizing-speech-language-models-for-acoustic)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #自监督学习 | #语音大模型 #鲁棒性
 
@@ -6975,7 +7269,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 184. [Synthesized Data Selection via Score Distribution Matching for Te Reo Māori Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-synthesized-data-selection-via-score-distribution)
+### 194. [Synthesized Data Selection via Score Distribution Matching for Te Reo Māori Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-synthesized-data-selection-via-score-distribution)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #数据增强 | #低资源 #迁移学习
 
@@ -7012,7 +7306,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 185. [NCF-TTS: Enhancing Flow Matching Based Text-To-Speech with Neighborhood Consistency Flow](/audio-paper-digest-blog/posts/2026-04-29-ncf-tts-enhancing-flow-matching-based-text-to)
+### 195. [NCF-TTS: Enhancing Flow Matching Based Text-To-Speech with Neighborhood Consistency Flow](/audio-paper-digest-blog/posts/2026-04-29-ncf-tts-enhancing-flow-matching-based-text-to)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #流匹配 | #多语言 #实时处理
 
@@ -7044,7 +7338,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 186. [ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference](/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech)
+### 196. [ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference](/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech)
 
 🔥 **8.0/10** | 前25% | #语音合成 | #流匹配 | #自监督学习 #零样本
 
@@ -7090,7 +7384,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 187. [Bayesian Low-Rank Factorization for Robust Model Adaptation](/audio-paper-digest-blog/posts/2026-04-29-bayesian-low-rank-factorization-for-robust-model)
+### 197. [Bayesian Low-Rank Factorization for Robust Model Adaptation](/audio-paper-digest-blog/posts/2026-04-29-bayesian-low-rank-factorization-for-robust-model)
 
 🔥 **8.0/10** | 前25% | #语音识别 | #领域适应 | #多语言 #低资源
 
@@ -7131,7 +7425,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 188. [LongSpeech: A Scalable Benchmark for Transcription, Translation and Understanding in Long Speech](/audio-paper-digest-blog/posts/2026-04-29-longspeech-a-scalable-benchmark-for-transcription)
+### 198. [LongSpeech: A Scalable Benchmark for Transcription, Translation and Understanding in Long Speech](/audio-paper-digest-blog/posts/2026-04-29-longspeech-a-scalable-benchmark-for-transcription)
 
 ✅ **7.8/10** | 前25% | #基准测试 | #数据集 | #语音识别 #语音翻译
 
@@ -7186,7 +7480,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 189. [CosyAccent: Duration-Controllable Accent Normalization using Source-Synthesis Training Data](/audio-paper-digest-blog/posts/2026-04-29-cosyaccent-duration-controllable-accent)
+### 199. [CosyAccent: Duration-Controllable Accent Normalization using Source-Synthesis Training Data](/audio-paper-digest-blog/posts/2026-04-29-cosyaccent-duration-controllable-accent)
 
 ✅ **7.8/10** | 前25% | #语音转换 | #流匹配 | #语音合成 #数据增强
 
@@ -7206,7 +7500,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 190. [Structure-Aware Diffusion Schrödinger Bridge](/audio-paper-digest-blog/posts/2026-04-29-structure-aware-diffusion-schrdinger-bridge)
+### 200. [Structure-Aware Diffusion Schrödinger Bridge](/audio-paper-digest-blog/posts/2026-04-29-structure-aware-diffusion-schrdinger-bridge)
 
 ✅ **7.7/10** | 前50% | #数据集对齐 | #扩散模型 | #领域适应
 
@@ -7243,7 +7537,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 191. [A Metric Learning Approach to Heart Murmur Detection from Phonocardiogram Recordings](/audio-paper-digest-blog/posts/2026-04-29-a-metric-learning-approach-to-heart-murmur)
+### 201. [A Metric Learning Approach to Heart Murmur Detection from Phonocardiogram Recordings](/audio-paper-digest-blog/posts/2026-04-29-a-metric-learning-approach-to-heart-murmur)
 
 ✅ **7.7/10** | 前25% | #音频分类 | #对比学习 | #数据增强 #生物声学
 
@@ -7287,7 +7581,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 192. [Stemphonic: All-At-Once Flexible Multi-Stem Music Generation](/audio-paper-digest-blog/posts/2026-04-29-stemphonic-all-at-once-flexible-multi-stem-music)
+### 202. [Stemphonic: All-At-Once Flexible Multi-Stem Music Generation](/audio-paper-digest-blog/posts/2026-04-29-stemphonic-all-at-once-flexible-multi-stem-music)
 
 ✅ **7.7/10** | 前25% | #音乐生成 | #扩散模型 #流匹配 | #扩散模型 #流匹配
 
@@ -7315,7 +7609,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 193. [Target Speaker Anonymization in Multi-Speaker Recordings](/audio-paper-digest-blog/posts/2026-04-29-target-speaker-anonymization-in-multi-speaker)
+### 203. [Target Speaker Anonymization in Multi-Speaker Recordings](/audio-paper-digest-blog/posts/2026-04-29-target-speaker-anonymization-in-multi-speaker)
 
 ✅ **7.6/10** | 前50% | #语音匿名化 | #语音转换 | #说话人分离 #说话人验证
 
@@ -7335,7 +7629,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 194. [Bayesian Signal Separation Via Plug-and-Play Diffusion-Within-Gibbs Sampling](/audio-paper-digest-blog/posts/2026-04-29-bayesian-signal-separation-via-plug-and-play)
+### 204. [Bayesian Signal Separation Via Plug-and-Play Diffusion-Within-Gibbs Sampling](/audio-paper-digest-blog/posts/2026-04-29-bayesian-signal-separation-via-plug-and-play)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #扩散模型 | #信号处理 #生物声学
 
@@ -7356,7 +7650,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 195. [Atomic Norm Minimization Revisited: Progressive Atom Identification And Refinement](/audio-paper-digest-blog/posts/2026-04-29-atomic-norm-minimization-revisited-progressive)
+### 205. [Atomic Norm Minimization Revisited: Progressive Atom Identification And Refinement](/audio-paper-digest-blog/posts/2026-04-29-atomic-norm-minimization-revisited-progressive)
 
 ✅ **7.5/10** | 前25% | #声源定位 | #信号处理 | #麦克风阵列 #实时处理
 
@@ -7385,7 +7679,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 196. [LipsAM: Lipschitz-Continuous Amplitude Modifier for Audio Signal Processing and its Application to Plug-And-Play Dereverberation](/audio-paper-digest-blog/posts/2026-04-29-lipsam-lipschitz-continuous-amplitude-modifier)
+### 206. [LipsAM: Lipschitz-Continuous Amplitude Modifier for Audio Signal Processing and its Application to Plug-And-Play Dereverberation](/audio-paper-digest-blog/posts/2026-04-29-lipsam-lipschitz-continuous-amplitude-modifier)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #信号处理 | #即插即用学习 #Lipschitz连续性
 
@@ -7423,7 +7717,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 197. [A Noniterative Phase Retrieval Considering the Zeros of STFT Magnitude](/audio-paper-digest-blog/posts/2026-04-29-a-noniterative-phase-retrieval-considering-the)
+### 207. [A Noniterative Phase Retrieval Considering the Zeros of STFT Magnitude](/audio-paper-digest-blog/posts/2026-04-29-a-noniterative-phase-retrieval-considering-the)
 
 ✅ **7.5/10** | 前25% | #信号处理 | #信号处理 | #时频分析 #语音增强
 
@@ -7448,7 +7742,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 198. [nGPT as a Scalable Architecture for Speech Recognition and Translation](/audio-paper-digest-blog/posts/2026-04-29-ngpt-as-a-scalable-architecture-for-speech)
+### 208. [nGPT as a Scalable Architecture for Speech Recognition and Translation](/audio-paper-digest-blog/posts/2026-04-29-ngpt-as-a-scalable-architecture-for-speech)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #nGPT | #语音翻译 #多语言
 
@@ -7474,7 +7768,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 199. [Physics-Informed Neural Networks for Ocean Acoustic Field Reconstruction and Source Localization](/audio-paper-digest-blog/posts/2026-04-29-physics-informed-neural-networks-for-ocean)
+### 209. [Physics-Informed Neural Networks for Ocean Acoustic Field Reconstruction and Source Localization](/audio-paper-digest-blog/posts/2026-04-29-physics-informed-neural-networks-for-ocean)
 
 ✅ **7.5/10** | 前25% | #声源定位 | #物理信息神经网络 | #水声学 #匹配场处理
 
@@ -7494,7 +7788,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 200. [EEND-SAA: Enrollment-Less Main Speaker Voice Activity Detection Using Self-Attention Attractors](/audio-paper-digest-blog/posts/2026-04-29-eend-saa-enrollment-less-main-speaker-voice)
+### 210. [EEND-SAA: Enrollment-Less Main Speaker Voice Activity Detection Using Self-Attention Attractors](/audio-paper-digest-blog/posts/2026-04-29-eend-saa-enrollment-less-main-speaker-voice)
 
 ✅ **7.5/10** | 前25% | #语音活动检测 | #端到端 | #说话人分离 #流式处理
 
@@ -7525,7 +7819,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ---
 
-### 201. [RoCo: Robust Code for Fast and Effective Proactive Defense against Voice Cloning Attack](/audio-paper-digest-blog/posts/2026-04-29-roco-robust-code-for-fast-and-effective-proactive)
+### 211. [RoCo: Robust Code for Fast and Effective Proactive Defense against Voice Cloning Attack](/audio-paper-digest-blog/posts/2026-04-29-roco-robust-code-for-fast-and-effective-proactive)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #对抗样本 | #语音克隆 #语音合成
 
@@ -7545,7 +7839,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 202. [Input-Adaptive Differentiable Filterbanks via Hypernetworks for Robust Speech Processing](/audio-paper-digest-blog/posts/2026-04-29-input-adaptive-differentiable-filterbanks-via)
+### 212. [Input-Adaptive Differentiable Filterbanks via Hypernetworks for Robust Speech Processing](/audio-paper-digest-blog/posts/2026-04-29-input-adaptive-differentiable-filterbanks-via)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 | #音频分类 #语音情感识别
 
@@ -7570,7 +7864,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 203. [A Study of Data Selection Strategies for Pre-Training Self-Supervised Speech Models](/audio-paper-digest-blog/posts/2026-04-29-a-study-of-data-selection-strategies-for-pre)
+### 213. [A Study of Data Selection Strategies for Pre-Training Self-Supervised Speech Models](/audio-paper-digest-blog/posts/2026-04-29-a-study-of-data-selection-strategies-for-pre)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #预训练 | #自监督学习 #数据集
 
@@ -7606,7 +7900,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 204. [SAGA-SR: Semantically and Acoustically Guided Audio Super-Resolution](/audio-paper-digest-blog/posts/2026-04-29-saga-sr-semantically-and-acoustically-guided)
+### 214. [SAGA-SR: Semantically and Acoustically Guided Audio Super-Resolution](/audio-paper-digest-blog/posts/2026-04-29-saga-sr-semantically-and-acoustically-guided)
 
 ✅ **7.5/10** | 前25% | #音频增强 | #扩散模型 | #流匹配 #生成模型
 
@@ -7631,7 +7925,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 205. [MR-FlowDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation](/audio-paper-digest-blog/posts/2026-04-29-mr-flowdpo-multi-reward-direct-preference)
+### 215. [MR-FlowDPO: Multi-Reward Direct Preference Optimization for Flow-Matching Text-to-Music Generation](/audio-paper-digest-blog/posts/2026-04-29-mr-flowdpo-multi-reward-direct-preference)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #流匹配 | #强化学习 #自监督学习
 
@@ -7656,7 +7950,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 206. [Low-Resource Speech-Based Early Alzheimers Detection via Cross-Lingual and Few-Shot Transfer Learning](/audio-paper-digest-blog/posts/2026-04-29-low-resource-speech-based-early-alzheimers)
+### 216. [Low-Resource Speech-Based Early Alzheimers Detection via Cross-Lingual and Few-Shot Transfer Learning](/audio-paper-digest-blog/posts/2026-04-29-low-resource-speech-based-early-alzheimers)
 
 ✅ **7.5/10** | 前25% | #语音生物标志物 | #迁移学习 | #多语言 #少样本
 
@@ -7686,7 +7980,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 207. [Improving Interpretability in Generative Multitimbral DDSP Frameworks via Semantically-Disentangled Musical Attributes](/audio-paper-digest-blog/posts/2026-04-29-improving-interpretability-in-generative)
+### 217. [Improving Interpretability in Generative Multitimbral DDSP Frameworks via Semantically-Disentangled Musical Attributes](/audio-paper-digest-blog/posts/2026-04-29-improving-interpretability-in-generative)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #信号处理 | #音乐生成 #解耦表示
 
@@ -7725,7 +8019,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 208. [Generating Moving 3d Soundscapes with Latent Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-generating-moving-3d-soundscapes-with-latent)
+### 218. [Generating Moving 3d Soundscapes with Latent Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-generating-moving-3d-soundscapes-with-latent)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #扩散模型 | #音频生成 #数据增强
 
@@ -7750,7 +8044,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 209. [Reliable AI via Age-Balanced Validation: Fair Model Selection for Parkinson’s Detection from Voice](/audio-paper-digest-blog/posts/2026-04-29-reliable-ai-via-age-balanced-validation-fair)
+### 219. [Reliable AI via Age-Balanced Validation: Fair Model Selection for Parkinson’s Detection from Voice](/audio-paper-digest-blog/posts/2026-04-29-reliable-ai-via-age-balanced-validation-fair)
 
 ✅ **7.5/10** | 前25% | #语音生物标志物 | #模型评估 | #数据集 #跨模态
 
@@ -7786,7 +8080,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 210. [K-Function: Joint Pronunciation Transcription and Feedback for Evaluating Kids Language Function](/audio-paper-digest-blog/posts/2026-04-29-k-function-joint-pronunciation-transcription-and)
+### 220. [K-Function: Joint Pronunciation Transcription and Feedback for Evaluating Kids Language Function](/audio-paper-digest-blog/posts/2026-04-29-k-function-joint-pronunciation-transcription-and)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #大语言模型 | #领域适应 #端到端
 
@@ -7806,7 +8100,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 211. [Improving Active Learning for Melody Estimation by Disentangling Uncertainties](/audio-paper-digest-blog/posts/2026-04-29-improving-active-learning-for-melody-estimation)
+### 221. [Improving Active Learning for Melody Estimation by Disentangling Uncertainties](/audio-paper-digest-blog/posts/2026-04-29-improving-active-learning-for-melody-estimation)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #不确定性估计 | #迁移学习 #少样本
 
@@ -7827,7 +8121,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 212. [A Text-To-Text Alignment Algorithm for Better Evaluation of Modern Speech Recognition Systems](/audio-paper-digest-blog/posts/2026-04-29-a-text-to-text-alignment-algorithm-for-better)
+### 222. [A Text-To-Text Alignment Algorithm for Better Evaluation of Modern Speech Recognition Systems](/audio-paper-digest-blog/posts/2026-04-29-a-text-to-text-alignment-algorithm-for-better)
 
 ✅ **7.5/10** | 前25% | #模型评估 | #模型评估 | #语音识别 #多语言
 
@@ -7870,7 +8164,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 213. [A Robust KNN Approach for Multi-Class Laryngeal Disease Detection using MFCC Features](/audio-paper-digest-blog/posts/2026-04-29-a-robust-knn-approach-for-multi-class-laryngeal)
+### 223. [A Robust KNN Approach for Multi-Class Laryngeal Disease Detection using MFCC Features](/audio-paper-digest-blog/posts/2026-04-29-a-robust-knn-approach-for-multi-class-laryngeal)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #信号处理 | #图神经网络 #医疗AI
 
@@ -7903,7 +8197,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 214. [Probing the Hidden Talent of ASR foundation models for L2 English Oral Assessment](/audio-paper-digest-blog/posts/2026-04-29-probing-the-hidden-talent-of-asr-foundation)
+### 224. [Probing the Hidden Talent of ASR foundation models for L2 English Oral Assessment](/audio-paper-digest-blog/posts/2026-04-29-probing-the-hidden-talent-of-asr-foundation)
 
 ✅ **7.5/10** | 前25% | #预训练 | #迁移学习 | #零样本 #语音评估
 
@@ -7936,7 +8230,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 215. [Beyond Mapping: Domain-Invariant Representations via Spectral Embedding of Optimal Transport Plans](/audio-paper-digest-blog/posts/2026-04-29-beyond-mapping-domain-invariant-representations)
+### 225. [Beyond Mapping: Domain-Invariant Representations via Spectral Embedding of Optimal Transport Plans](/audio-paper-digest-blog/posts/2026-04-29-beyond-mapping-domain-invariant-representations)
 
 ✅ **7.5/10** | 前25% | #领域适应 | #最优传输 #谱图嵌入 | #最优传输 #谱图嵌入
 
@@ -7961,7 +8255,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 216. [Via Score to Performance: Efficient Human-Controllable Long Song Generation with Bar-Level Symbolic Notation](/audio-paper-digest-blog/posts/2026-04-29-via-score-to-performance-efficient-human)
+### 226. [Via Score to Performance: Efficient Human-Controllable Long Song Generation with Bar-Level Symbolic Notation](/audio-paper-digest-blog/posts/2026-04-29-via-score-to-performance-efficient-human)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #自回归模型 | #音频生成 #开源工具
 
@@ -7989,7 +8283,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 217. [Flexi-LoRA with Input-Adaptive Ranks: Efficient Finetuning for Speech and Reasoning Tasks](/audio-paper-digest-blog/posts/2026-04-29-flexi-lora-with-input-adaptive-ranks-efficient)
+### 227. [Flexi-LoRA with Input-Adaptive Ranks: Efficient Finetuning for Speech and Reasoning Tasks](/audio-paper-digest-blog/posts/2026-04-29-flexi-lora-with-input-adaptive-ranks-efficient)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #参数高效微调 | #大语言模型 #动态秩适应
 
@@ -8010,7 +8304,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 218. [Toward Faithful Explanations in Acoustic Anomaly Detection](/audio-paper-digest-blog/posts/2026-04-29-toward-faithful-explanations-in-acoustic-anomaly)
+### 228. [Toward Faithful Explanations in Acoustic Anomaly Detection](/audio-paper-digest-blog/posts/2026-04-29-toward-faithful-explanations-in-acoustic-anomaly)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #自监督学习 | #工业应用
 
@@ -8036,7 +8330,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 219. [Behind the Scenes: Mechanistic Interpretability of Lora-Adapted Whisper for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-behind-the-scenes-mechanistic-interpretability-of)
+### 229. [Behind the Scenes: Mechanistic Interpretability of Lora-Adapted Whisper for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-behind-the-scenes-mechanistic-interpretability-of)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #参数高效微调 | #语音大模型 #机制解释性研究
 
@@ -8062,7 +8356,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 220. [Encoding Emotion Through Self-Supervised Eye Movement Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-encoding-emotion-through-self-supervised-eye)
+### 230. [Encoding Emotion Through Self-Supervised Eye Movement Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-encoding-emotion-through-self-supervised-eye)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #自监督学习 | #眼动分析 #情感计算
 
@@ -8087,7 +8381,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 221. [Temporal Distillation for Music Representation Learning](/audio-paper-digest-blog/posts/2026-04-29-temporal-distillation-for-music-representation)
+### 231. [Temporal Distillation for Music Representation Learning](/audio-paper-digest-blog/posts/2026-04-29-temporal-distillation-for-music-representation)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #知识蒸馏 | #自监督学习 #音频大模型
 
@@ -8138,7 +8432,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 222. [UMV: A Mixture-Of-Experts Vision Transformer with Multi-Spectrogram Fusion for Underwater Ship Noise Classification](/audio-paper-digest-blog/posts/2026-04-29-umv-a-mixture-of-experts-vision-transformer-with)
+### 232. [UMV: A Mixture-Of-Experts Vision Transformer with Multi-Spectrogram Fusion for Underwater Ship Noise Classification](/audio-paper-digest-blog/posts/2026-04-29-umv-a-mixture-of-experts-vision-transformer-with)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #混合专家模型 | #时频分析 #Vision
 
@@ -8160,7 +8454,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 223. [AudioFuse: Unified Spectral-Temporal Learning Via A Hybrid VIT-1D CNN Architecture for Phonocardiogram Classification](/audio-paper-digest-blog/posts/2026-04-29-audiofuse-unified-spectral-temporal-learning-via)
+### 233. [AudioFuse: Unified Spectral-Temporal Learning Via A Hybrid VIT-1D CNN Architecture for Phonocardiogram Classification](/audio-paper-digest-blog/posts/2026-04-29-audiofuse-unified-spectral-temporal-learning-via)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #多模态模型 #混合架构 | #多模态模型 #混合架构
 
@@ -8198,7 +8492,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 224. [LESS: Large Language Model Enhanced Semi-Supervised Learning for Speech Foundational Models Using in-the-wild Data](/audio-paper-digest-blog/posts/2026-04-29-less-large-language-model-enhanced-semi)
+### 234. [LESS: Large Language Model Enhanced Semi-Supervised Learning for Speech Foundational Models Using in-the-wild Data](/audio-paper-digest-blog/posts/2026-04-29-less-large-language-model-enhanced-semi)
 
 ✅ **7.5/10** | 前25% | #语音识别 #语音翻译 | #半监督学习 #大语言模型 | #语音识别 #语音翻译
 
@@ -8226,7 +8520,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 225. [Audio Classification Models are Vulnerable to Filter Perturbations](/audio-paper-digest-blog/posts/2026-04-29-audio-classification-models-are-vulnerable-to)
+### 235. [Audio Classification Models are Vulnerable to Filter Perturbations](/audio-paper-digest-blog/posts/2026-04-29-audio-classification-models-are-vulnerable-to)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #对抗样本 | #鲁棒性 #信号处理
 
@@ -8255,7 +8549,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 226. [SpeechCT-CLIP: Distilling Text-Image Knowledge to Speech for Voice-Native Multimodal CT Analysis](/audio-paper-digest-blog/posts/2026-04-29-speechct-clip-distilling-text-image-knowledge-to)
+### 236. [SpeechCT-CLIP: Distilling Text-Image Knowledge to Speech for Voice-Native Multimodal CT Analysis](/audio-paper-digest-blog/posts/2026-04-29-speechct-clip-distilling-text-image-knowledge-to)
 
 ✅ **7.5/10** | 前25% | #医疗AI | #知识蒸馏 | #多模态模型 #对比学习
 
@@ -8280,7 +8574,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 227. [MSANET: Multi-Scale Semantic Aggregation Network for Brain-Assisted Speech Enhancement in Multi-Speaker Conditions](/audio-paper-digest-blog/posts/2026-04-29-msanet-multi-scale-semantic-aggregation-network)
+### 237. [MSANET: Multi-Scale Semantic Aggregation Network for Brain-Assisted Speech Enhancement in Multi-Speaker Conditions](/audio-paper-digest-blog/posts/2026-04-29-msanet-multi-scale-semantic-aggregation-network)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #多模态模型 #图神经网络
 
@@ -8316,7 +8610,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 228. [Multi-Scale Physiologically-Motivated Alignment for Auditory Attention Decoding](/audio-paper-digest-blog/posts/2026-04-29-multi-scale-physiologically-motivated-alignment)
+### 238. [Multi-Scale Physiologically-Motivated Alignment for Auditory Attention Decoding](/audio-paper-digest-blog/posts/2026-04-29-multi-scale-physiologically-motivated-alignment)
 
 ✅ **7.5/10** | 前25% | #听觉注意力解码 | #对比学习 | #生物声学 #自监督学习
 
@@ -8370,7 +8664,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 229. [PC-MCL: Patient-Consistent Multi-Cycle Learning with Multi-Label Bias Correction for Respiratory Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-pc-mcl-patient-consistent-multi-cycle-learning)
+### 239. [PC-MCL: Patient-Consistent Multi-Cycle Learning with Multi-Label Bias Correction for Respiratory Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-pc-mcl-patient-consistent-multi-cycle-learning)
 
 ✅ **7.5/10** | 前10% | #音频分类 | #数据增强 | #多任务学习
 
@@ -8395,7 +8689,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 230. [EMG-to-Speech with Fewer Channels](/audio-paper-digest-blog/posts/2026-04-29-emg-to-speech-with-fewer-channels)
+### 240. [EMG-to-Speech with Fewer Channels](/audio-paper-digest-blog/posts/2026-04-29-emg-to-speech-with-fewer-channels)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #多任务学习 | #少样本 #数据增强
 
@@ -8423,7 +8717,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 231. [A Robust Multi-Scale Framework with Test-Time Adaptation for sEEG-Based Speech Decoding](/audio-paper-digest-blog/posts/2026-04-29-a-robust-multi-scale-framework-with-test-time)
+### 241. [A Robust Multi-Scale Framework with Test-Time Adaptation for sEEG-Based Speech Decoding](/audio-paper-digest-blog/posts/2026-04-29-a-robust-multi-scale-framework-with-test-time)
 
 ✅ **7.5/10** | 前25% | #语音解码 | #领域适应 | #脑机接口 #多尺度特征学习
 
@@ -8453,7 +8747,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 232. [FD-ARL: Feature Disentanglement with Adversarial-Reconstruction Learning for Cross-Subject Auditory Attention Decoding](/audio-paper-digest-blog/posts/2026-04-29-fd-arl-feature-disentanglement-with-adversarial)
+### 242. [FD-ARL: Feature Disentanglement with Adversarial-Reconstruction Learning for Cross-Subject Auditory Attention Decoding](/audio-paper-digest-blog/posts/2026-04-29-fd-arl-feature-disentanglement-with-adversarial)
 
 ✅ **7.5/10** | 前10% | #听觉注意力解码 | #领域适应 | #Transformer #脑电信号
 
@@ -8478,7 +8772,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 233. [Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion](/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound)
+### 243. [Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion](/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #数据增强 #生物声学
 
@@ -8515,7 +8809,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 234. [Disentangling Physiology from Fidelity: Latent-Guided Diffusion Models for Cross-Modal Cardiac Synthesis](/audio-paper-digest-blog/posts/2026-04-29-disentangling-physiology-from-fidelity-latent)
+### 244. [Disentangling Physiology from Fidelity: Latent-Guided Diffusion Models for Cross-Modal Cardiac Synthesis](/audio-paper-digest-blog/posts/2026-04-29-disentangling-physiology-from-fidelity-latent)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #状态空间模型 #数据增强
 
@@ -8540,7 +8834,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 235. [PSTalker: Realistic 3D Talking Head Synthesis via a Semantic-Aware Audio-Driven Point-Based Shape](/audio-paper-digest-blog/posts/2026-04-29-pstalker-realistic-3d-talking-head-synthesis-via)
+### 245. [PSTalker: Realistic 3D Talking Head Synthesis via a Semantic-Aware Audio-Driven Point-Based Shape](/audio-paper-digest-blog/posts/2026-04-29-pstalker-realistic-3d-talking-head-synthesis-via)
 
 ✅ **7.5/10** | 前25% | #说话人合成 | #3D音频 | #语音合成 #音视频
 
@@ -8565,7 +8859,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 236. [Perceptual Quality Assessment for Stylized Talking Heads](/audio-paper-digest-blog/posts/2026-04-29-perceptual-quality-assessment-for-stylized)
+### 246. [Perceptual Quality Assessment for Stylized Talking Heads](/audio-paper-digest-blog/posts/2026-04-29-perceptual-quality-assessment-for-stylized)
 
 ✅ **7.5/10** | 前50% | #模型评估 | #多模态模型 | #数据集
 
@@ -8590,7 +8884,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 237. [GRNet: Graph Reconstruction Network for Robust Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-grnet-graph-reconstruction-network-for-robust)
+### 247. [GRNet: Graph Reconstruction Network for Robust Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-grnet-graph-reconstruction-network-for-robust)
 
 ✅ **7.5/10** | 前25% | #多模态情感分析 | #图神经网络 | #鲁棒性 #缺失模态学习
 
@@ -8615,7 +8909,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 238. [Assessing Identity Leakage in Talking Face Generation: Metrics and Evaluation Framework](/audio-paper-digest-blog/posts/2026-04-29-assessing-identity-leakage-in-talking-face)
+### 248. [Assessing Identity Leakage in Talking Face Generation: Metrics and Evaluation Framework](/audio-paper-digest-blog/posts/2026-04-29-assessing-identity-leakage-in-talking-face)
 
 ✅ **7.5/10** | 前25% | #说话人脸生成 | #模型评估 | #基准测试 #音视频
 
@@ -8650,7 +8944,78 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 239. [ADH-VA: Adaptive Directed-Hypergraph Convolution with VA Contrastive Learning for Multimodal Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-adh-va-adaptive-directed-hypergraph-convolution)
+### 249. [Phoneme-Level Visual Speech Recognition via Point-Visual Fusion and Language Model Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-phoneme-level-visual-speech-recognition-via-point)
+
+前25% | #视觉语音识别 | #音素建模 #关键点检测 #大语言模型 | #音素建模 #关键点检测
+
+👥 **作者与机构**
+
+- 第一作者：Matthew Kit Khinn Teng（九州工业大学）
+- 通讯作者：未说明
+- 作者列表：Matthew Kit Khinn Teng（九州工业大学）、Haibo Zhang（九州工业大学）、Takeshi Saitoh（九州工业大学）
+
+💡 **毒舌点评**
+
+这篇论文巧妙地将人脸关键点的几何信息与视觉外观特征相融合，为解决唇读中的视素歧义问题提供了一条清晰的音素建模路径，其使用紧凑的NLLB模型替代巨型LLM进行句子重建的思路也颇具工程吸引力。然而，论文的“故事”讲得不够完整——关键点特征在复杂场景下的脆弱性（如侧脸、遮挡）被明确提出，却缺乏系统性的解决或更鲁棒的融合机制；同时，核心的两阶段框架高度依赖于上游音素预测的准确性，而实验中对第一阶段（PV-ASR）音素预测性能的分析篇幅和深度，相较于对第二阶段LLM的调优，显得有些头重脚轻。
+
+📌 **核心摘要**
+
+1.  **解决的问题**：视觉语音识别（唇读）面临视素歧义（多个音素对应相似唇部视觉外观）和说话者差异性带来的挑战，导致直接进行词或字符级预测困难且容易出错。
+2.  **方法核心**：提出一种两阶段、基于音素的框架（PV-ASR）。第一阶段，将视频帧和密集唇部关键点运动特征分别通过视觉编码器（3D CNN + ResNet-18 + Conformer）和关键点编码器（ST-GCN + Conformer）提取并融合，使用混合CTC/Attention损失预测音素序列。第二阶段，使用预训练的NLLB（No Language Left Behind）编码器-解码器模型，将预测的音素序列重构为自然语言句子。
+3.  **与已有方法相比的新意**：1) 创新地融合了密集的唇部/下巴区域关键点运动特征（117个点）与视觉外观特征，以建模发音几何信息；2) 使用紧凑的、非自回归的NLLB模型（而非大型自回归LLM如LLaMA）进行音素到文本的重建；3) 在训练第二阶段LLM时引入音素级数据增强（随机插入、删除、替换），以提高对第一阶段预测噪声的鲁棒性。
+4.  **主要实验结果**：在LRS2测试集上达到**16.0% WER**，在LRS3测试集上达到**20.3% WER**。消融实验表明，PV-ASR（视频+关键点）优于单独的V-ASR和P-ASR；在训练中引入10%-20%的音素错误率能显著降低第二阶段LLM重建的WER，其中NLLB-1.3B模型表现最佳。具体结果见下表。
+
+**表1：在LRS2和LRS3数据集上与最新方法的WER(%)对比**
+
+| 方法 | 输入模态 | LLM | 额外数据 | LRS2 WER [%] | LRS3 WER [%] | 总训练小时数 (LRS2/LRS3) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Auto-AVSR [2] | 视频 | - | 是 | 14.6 | 19.1 | 3448 |
+| VALLR [8] | 视频 | LLaMA | 否 | 20.8 | 18.7 | 28 / 30 |
+| ViT-3D [18] | 视频 | - | 是 | - | 17.0 | 90000 |
+| Ours (P-ASR) | 117个关键点 | NLLB(1.3B) | 否 | 72.2 | 66.4 | 223 / 438 |
+| Ours (V-ASR) | 视频 | NLLB(1.3B) | 否 | 17.1 | 17.3 | 223 / 438 |
+| **Ours (PV-ASR)** | **视频+117个关键点** | **NLLB(1.3B)** | **否** | **16.0** | **20.3** | **223 / 438** |
+
+**表2：不同LLM及噪声水平下的WER(%)对比（部分关键数据）**
+
+| 模型输入 | LLM | 训练噪声错误率 | LRS2 WER (Beam) [%] | LRS3 WER (Beam) [%] |
+| :--- | :--- | :--- | :--- | :--- |
+| PV-ASR | NLLB (1.3B) | 0.0% | 24.93 | 32.90 |
+| PV-ASR | NLLB (1.3B) | 10.0% | 16.48 | 21.82 |
+| PV-ASR | NLLB (1.3B) | **20.0%** | **16.03** | **20.26** |
+| PV-ASR | NLLB (1.3B) | 30.0% | 17.70 | 21.32 |
+
+5.  **实际意义**：该工作为在有限计算资源下实现较高性能的视觉语音识别提供了一种可行方案。其两阶段解耦的设计和对音素级建模的坚持，为处理视素歧义和跨说话者泛化提供了新思路。
+6.  **主要局限性**：1) 对关键点检测质量高度依赖，在人脸大角度或遮挡时性能会下降；2) 第二阶段重建完全依赖第一阶段的音素预测，存在错误传播风险；3) 论文未提供代码和模型权重，可复现性存疑。
+
+---
+
+### 250. [Inter-Dialog Contrastive Learning for Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-inter-dialog-contrastive-learning-for-multimodal)
+
+前25% | #语音情感识别 | #对比学习 | #多模态模型 #跨模态
+
+👥 **作者与机构**
+
+- 第一作者：Dong-Hyuk Lee (Department of Electronics and Communications Engineering, Kwangwoon University)
+- 通讯作者：Young-Seok Choi (Department of Electronics and Communications Engineering, Kwangwoon University, yschoi@kw.ac.kr)
+- 作者列表：Dong-Hyuk Lee (Department of Electronics and Communications Engineering, Kwangwoon University)、Dae Hyeon Kim (Department of Electronics and Communications Engineering, Kwangwoon University)、Young-Seok Choi (Department of Electronics and Communications Engineering, Kwangwoon University)
+
+💡 **毒舌点评**
+
+亮点在于提出了“跨对话上下文”（Inter-dialog context）这一新颖维度，并设计了IDCL对比学习框架来有效利用它，为传统上仅关注对话内部的上下文建模提供了补充。短板在于方法创新的深度略显不足，核心是对比学习在模态间和对话间的应用组合，且论文缺少代码和模型细节，使得复现存在不确定性。
+
+📌 **核心摘要**
+
+1.  **问题**：对话中的多模态情感识别（MERC）面临挑战，现有方法大多仅关注单个对话内部（intra-dialog）的上下文，而忽略了不同对话之间共享的情感模式（inter-dialog context）这一重要信息源。
+2.  **方法核心**：提出跨对话对比学习（IDCL）框架。该框架的核心假设是，具有相似情感轨迹的对话应共享底层的上下文模式。IDCL通过识别锚定对话在同一模态（如文本）中的Top-K最近邻对话，并将这些对话在另一模态（如语音）的表示作为正样本对，来增强对话级表示的学习。
+3.  **创新点**：与传统仅在单一对话内建模上下文的方法相比，IDCL首次系统地探索并利用了对话间的上下文信息。它通过跨模态、跨对话的对比学习，使模型能够学习到更具鲁棒性和泛化性的情感特征。
+4.  **实验结果**：在IEMOCAP数据集上进行了实验。在更具挑战性的6分类任务中，IDCL取得了**66.4%的准确率（Acc.）**和**66.6%的加权F1值（WF1）**，超过了包括COSMIC、RGAT在内的多种现有方法。在4分类任务中，IDCL达到了**85.9%的准确率**和**85.8%的加权F1值**，达到了新的最先进水平（SOTA）。消融实验表明，Top-K邻居大小（K）的选择对性能有显著影响，存在一个最优区间。
+5.  **实际意义**：验证了跨对话依赖关系对于构建更鲁棒、准确的情感识别系统的潜力，为多模态情感分析领域提供了新的建模视角。
+6.  **局限性**：论文未充分讨论IDCL框架在更大规模、更多样化数据集上的泛化能力；其核心假设（即跨对话的情感模式一致性）的强度和适用范围有待进一步验证；此外，论文未提供代码，限制了结果的完全复现。
+
+---
+
+### 251. [ADH-VA: Adaptive Directed-Hypergraph Convolution with VA Contrastive Learning for Multimodal Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-adh-va-adaptive-directed-hypergraph-convolution)
 
 ✅ **7.5/10** | 前10% | #语音情感识别 | #超图网络 | #多模态模型 #对比学习
 
@@ -8675,7 +9040,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 240. [Graph-Based Emotion Consensus Perception Learning for Multimodal Emotion Recognition in Conversation](/audio-paper-digest-blog/posts/2026-04-29-graph-based-emotion-consensus-perception-learning)
+### 252. [Graph-Based Emotion Consensus Perception Learning for Multimodal Emotion Recognition in Conversation](/audio-paper-digest-blog/posts/2026-04-29-graph-based-emotion-consensus-perception-learning)
 
 ✅ **7.5/10** | 前25% | #多模态情感识别 | #图神经网络 | #对比学习 #会话理解
 
@@ -8702,7 +9067,7 @@ RoCo巧妙地将主动防御的“战场”从脆弱的波形域转移到结构�
 
 ---
 
-### 241. [APKD: Aligned And Paced Knowledge Distillation Towards Lightweight Heterogeneous Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-apkd-aligned-and-paced-knowledge-distillation)
+### 253. [APKD: Aligned And Paced Knowledge Distillation Towards Lightweight Heterogeneous Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-apkd-aligned-and-paced-knowledge-distillation)
 
 ✅ **7.5/10** | 前25% | #情感识别 | #知识蒸馏 | #多模态模型 #语音情感识别
 
@@ -8727,7 +9092,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 242. [An Audio-Visual Speech Separation Network with Joint Cross-Attention and Iterative Modeling](/audio-paper-digest-blog/posts/2026-04-29-an-audio-visual-speech-separation-network-with)
+### 254. [An Audio-Visual Speech Separation Network with Joint Cross-Attention and Iterative Modeling](/audio-paper-digest-blog/posts/2026-04-29-an-audio-visual-speech-separation-network-with)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #注意力机制 | #迭代建模 #音视频
 
@@ -8760,7 +9125,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 243. [Audio-Guided Multimodal Approach for Fine-Grained Alignment and Boundary Modeling in Active Speaker Detection](/audio-paper-digest-blog/posts/2026-04-29-audio-guided-multimodal-approach-for-fine-grained)
+### 255. [Audio-Guided Multimodal Approach for Fine-Grained Alignment and Boundary Modeling in Active Speaker Detection](/audio-paper-digest-blog/posts/2026-04-29-audio-guided-multimodal-approach-for-fine-grained)
 
 ✅ **7.5/10** | 前25% | #说话人检测 | #多模态模型 | #对比学习 #预训练
 
@@ -8780,7 +9145,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 244. [SURE: Synergistic Uncertainty-Aware Reasoning for Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-sure-synergistic-uncertainty-aware-reasoning-for)
+### 256. [SURE: Synergistic Uncertainty-Aware Reasoning for Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-sure-synergistic-uncertainty-aware-reasoning-for)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多模态模型 | #混合专家 #鲁棒性
 
@@ -8816,7 +9181,65 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 245. [Dynamic Balanced Cross-Modal Attention with Gated Sequence Restoration: Towards Robust Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated)
+### 257. [Temporal-Spatial Decouple Before Act: Disentangled Representation Learning for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-temporal-spatial-decouple-before-act-disentangled)
+
+前25% | #情感分析 | #解耦学习 | #多模态模型 #音视频
+
+👥 **作者与机构**
+
+- 第一作者：Chunlei Meng (Fudan University, 即复旦大学)
+- 通讯作者：Chun Ouyang (Fudan University, 即复旦大学)
+- 作者列表：Chunlei Meng（复旦大学）†、Ziyang Zhou（汕头大学）、Lucas He（伦敦大学学院）、Xiaojing Du（南澳大学）、Chun Ouyang（复旦大学）†、Zhongxue Gan（复旦大学） （†表示通讯作者）
+
+💡 **毒舌点评**
+
+**亮点**：论文的动机非常清晰，直指当前多模态融合中“时空信息混合建模”导致静态特征主导的痛点，并为此设计了一套从解耦、对齐到重耦合的完整技术流水线，逻辑自洽且实验验证充分。
+**短板**：论文的可视化分析（图2）虽然展示了特征分布的改善，但缺乏对“解耦出的时空特征究竟学到了什么”更具体的语义或模态内解释，使得这个“黑箱”模型的可解释性打了折扣；此外，论文未开源代码，限制了其即时影响力。
+
+📌 **核心摘要**
+
+1. **要解决的问题**：现有主流多模态情感分析方法在进行跨模态交互前，将时间动态信息（如语音韵律突变、视频微表情）和空间结构信息（如说话人身份、背景、句子整体极性）混合编码为单一嵌入，导致学习过程偏向于更稳定、方差大的静态成分，从而忽略了关键的时间轨迹信息，造成“时空信息不对称”，性能受限。
+2. **方法核心**：提出TSDA（Temporal-Spatial Decouple before Act）框架。其核心是在任何跨模态交互之前，先为每个模态（语言、视觉、声学）学习解耦的“时间动态”和“空间结构”表征。具体包括：（1）独立的时间编码器和空间编码器；（2）因子一致性跨模态对齐（FCCA），使用块对角掩码注意力确保时间特征只与其它模态的时间特征对齐，空间特征同理；（3）门控重耦合（GR）模块，根据可靠度自适应融合对齐后的时间与空间表征。
+3. **与已有方法相比新在哪里**：不同于大多数方法在融合前进行模态内或跨模态的不变/特定因子解耦（如MISA），TSDA更进一步，将**时间与空间**这两个正交的维度显式地解耦并独立进行跨模态对齐。这避免了传统混合编码中时空信息的相互干扰，是一种更细粒度的解耦学习范式。
+4. **主要实验结果**：TSDA在CMU-MOSI和CMU-MOSEI两个标准基准测试的所有指标上均取得了最优（SOTA）结果。具体对比如下表所示，尤其在平均绝对误差（MAE）和7类准确率（ACC7）上优势明显。消融实验证明了解耦、FCCA和门控重耦合等各组件的必要性。
+
+**表1：在CMU-MOSI和CMU-MOSEI数据集上与现有方法的性能对比（对齐/未对齐设置）**
+
+| 方法 | CMU-MOSI MAE (↓) | CMU-MOSI ACC7 (%) | CMU-MOSI ACC2 (%) | CMU-MOSI F1 (%) | CMU-MOSEI MAE (↓) | CMU-MOSEI ACC7 (%) | CMU-MOSEI ACC2 (%) | CMU-MOSEI F1 (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| LMF [20] | 0.931 / 0.963 | 36.9 / 31.1 | 78.7 / 79.1 | 78.7 / 79.1 | 0.564 / 0.565 | 52.3 / 51.9 | 84.7 / 83.8 | 84.5 / 83.9 |
+| MuLT [21] | 0.936 / 0.933 | 35.1 / 33.2 | 80.0 / 80.3 | 80.1 / 80.3 | 0.572 / 0.556 | 52.3 / 53.2 | 82.7 / 84.0 | 82.8 / 84.0 |
+| TFN [22] | 0.953 / 0.995 | 31.9 / 35.3 | 78.8 / 76.5 | 78.9 / 76.6 | 0.574 / 0.573 | 50.9 / 50.2 | 80.4 / 84.2 | 80.7 / 84.0 |
+| MISA [12] | 0.754 / 0.742 | 41.8 / 43.6 | 84.2 / 83.8 | 84.2 / 83.9 | 0.543 / 0.557 | 52.3 / 51.0 | 85.3 / 84.8 | 85.1 / 84.8 |
+| FDMER [13] | - / 0.725 | - / 44.2 | - / 84.6 | - / 84.7 | - / 0.536 | - / 53.8 | - / 84.1 | - / 84.0 |
+| ConFEDE [11] | - / 0.742 | - / 46.3 | - / 84.2 | - / 84.2 | - / 0.523 | - / 54.9 | - / 81.8 | - / 82.3 |
+| Self-MM [5] | 0.738 / 0.724 | 45.3 / 45.7 | 84.9 / 83.4 | 84.9 / 83.6 | 0.540 / 0.535 | 53.2 / 52.9 | 84.5 / 85.3 | 84.3 / 84.8 |
+| MMIN [4] | - / 0.741 | - / - | 83.5 / 85.5 | 83.5 / 85.51 | - / 0.542 | - / - | 83.8 / 85.9 | 83.9 / 85.76 |
+| DMD [9] | 0.721 / 0.721 | 46.2 / 46.7 | 83.2 / 84.0 | 83.2 / 84.0 | 0.546 / 0.536 | 52.4 / 53.1 | 84.8 / 84.7 | 84.7 / 84.7 |
+| DEVA [6] | - / 0.730 | - / 46.3 | - / 84.4 | - / 84.5 | - / 0.541 | - / 52.3 | - / 83.3 | - / 82.9 |
+| DLF [15] | - / 0.731 | - / 47.1 | - / 85.1 | - / 85.1 | - / 0.536 | - / 53.9 | - / 84.4 | - / 85.3 |
+| EMOE [10] | 0.710 / 0.697 | 47.7 / 47.8 | 85.4 / 85.4 | 85.4 / 85.3 | 0.536 / 0.533 | 54.1 / 53.9 | 85.3 / 85.5 | 85.3 / 85.5 |
+| **TSDA (Ours)** | **0.695 / 0.680** | **48.6 / 48.5** | **86.3 / 86.5** | **86.2 / 86.5** | **0.529 / 0.527** | **54.9 / 54.9** | **86.3 / 86.4** | **86.2 / 86.5** |
+
+**表2：TSDA在CMU-MOSI和CMU-MOSEI数据集上的消融实验结果**
+
+| 模型 | CMU-MOSI MAE (↓) | CMU-MOSI ACC7 (%) | CMU-MOSEI MAE (↓) | CMU-MOSEI ACC7 (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| TSDA (Ours) | 0.680 | 48.5 | 0.527 | 54.9 |
+| w/o Temporal | 0.726 | 46.0 | 0.552 | 52.5 |
+| w/o Spatial | 0.716 | 46.8 | 0.546 | 53.0 |
+| w/o ST Disen. | 0.731 | 45.7 | 0.555 | 52.2 |
+| w/o FCCA | 0.728 | 45.5 | 0.552 | 51.9 |
+| w/o Lpur | 0.722 | 46.5 | 0.548 | 52.9 |
+| w/o Ldecorr | 0.713 | 46.9 | 0.541 | 53.3 |
+| w/o Lorth | 0.714 | 47.1 | 0.542 | 53.4 |
+
+5. **实际意义**：TSDA为多模态情感分析乃至其他音视频融合任务提供了一种新的、更精细的表征学习思路，强调在交互前处理好不同信号源内部的时空异质性，这对于提升模型在复杂真实场景下的鲁棒性和可解释性有积极意义。
+6. **主要局限性**：论文未在更广泛的、更具挑战性的大规模“野外”数据集上进行验证；其计算开销（双编码器+两路注意力+门控）未与基线方法进行详细对比；对于解耦出的“时间”和“空间”表征的可解释性分析仅停留在t-SNE可视化，缺乏更深入的定量或定性分析。
+
+---
+
+### 258. [Dynamic Balanced Cross-Modal Attention with Gated Sequence Restoration: Towards Robust Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated)
 
 ✅ **7.5/10** | 前25% | #跨模态 | #多任务学习 | #语音情感识别 #鲁棒性
 
@@ -8841,7 +9264,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 246. [Savgbench: Benchmarking Spatially Aligned Audio-Video Generation](/audio-paper-digest-blog/posts/2026-04-29-savgbench-benchmarking-spatially-aligned-audio)
+### 259. [Savgbench: Benchmarking Spatially Aligned Audio-Video Generation](/audio-paper-digest-blog/posts/2026-04-29-savgbench-benchmarking-spatially-aligned-audio)
 
 ✅ **7.5/10** | 前50% | #基准测试 | #扩散模型 | #跨模态 #空间音频
 
@@ -8873,7 +9296,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 247. [Tpeformer: Temporal Patch Embedding Transformer](/audio-paper-digest-blog/posts/2026-04-29-tpeformer-temporal-patch-embedding-transformer)
+### 260. [Tpeformer: Temporal Patch Embedding Transformer](/audio-paper-digest-blog/posts/2026-04-29-tpeformer-temporal-patch-embedding-transformer)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多模态模型 | #端到端 #预训练
 
@@ -8898,7 +9321,32 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 248. [CaMoD: Causal-Aware Modality Denoising for Multimodal Dialogue Intent Recognition](/audio-paper-digest-blog/posts/2026-04-29-camod-causal-aware-modality-denoising-for)
+### 261. [DSSR: Decoupling Salient and Subtle Representations Under Missing Modalities for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-dssr-decoupling-salient-and-subtle)
+
+前25% | #情感识别 | #对比学习 | #多模态模型 #鲁棒性
+
+👥 **作者与机构**
+
+- 第一作者：Huan Zhao（湖南大学计算机科学与电子工程学院）
+- 通讯作者：Yingxue Gao*（湖南大学计算机科学与电子工程学院）
+- 作者列表：Huan Zhao（湖南大学计算机科学与电子工程学院）、Zhijie Yu（未说明）、Yong Wei（未说明）、Bo Li（未说明）、Yingxue Gao（湖南大学计算机科学与电子工程学院）
+
+💡 **毒舌点评**
+
+这篇论文最大的亮点在于其问题洞察和框架设计——将模糊的“模态缺失鲁棒性”问题，转化为对“显著”与“细微”情感表征的显式解耦与利用，MHDW机制对此提供了巧妙的工程实现。短板在于，其生成模块（GM）采用简单的1D卷积聚合可用模态信息来“补全”缺失模态，这一假设（缺失模态信息可由其他模态线性合成）可能过于理想，在更极端或语义不一致的缺失场景下其有效性值得怀疑，论文对此缺乏深入分析。
+
+📌 **核心摘要**
+
+1. **问题**：多模态情感识别（MER）在实际部署中常面临模态缺失问题（如传感器故障），导致关键情感信号（尤其是微妙线索）丢失或模糊。现有注意力方法易受主导但无关信号干扰，难以捕获细微但有辨别力的线索。
+2. **方法核心**：提出DSSR（解耦显著与细微表征）两阶段框架。第一阶段，通过动态对比学习在完整模态数据上训练通用编码器，提取跨模态不变的“显著”情感表征。第二阶段，针对缺失模态场景，先利用轻量生成模块补全缺失模态特征；然后，将显著表征作为自适应提示，通过多头动态加权（MHDW）机制，在多个子空间中评估并选择性地增强各模态的“细微”情感表征。
+3. **创新点**：相较于现有直接融合或恢复缺失模态的方法，DSSR首次将情感表征显式分解为“显著”和“细微”两部分，并设计了针对性的学习机制（动态对比学习提取显著表征，MHDW增强细微表征）来分别处理，框架设计新颖。
+4. **主要实验结果**：在CMU-MOSI、CMU-MOSEI和IEMOCAP三个基准数据集的多种模态缺失场景（如仅声学、仅文本、缺两模态等）下，DSSR整体性能达到了SOTA。例如，在CMU-MOSI上，平均准确率/F1为75.86%/75.05%，优于次优方法P-RMF（76.71%/未提供）。消融实验证实，去除MHDW模块导致性能下降最大（如CMU-MOSI平均准确率下降2.82%）。
+5. **实际意义**：该方法提高了MER系统在传感器故障、数据传输不完整等现实挑战下的可靠性，增强了其在人机交互、情感计算等应用中的实用性。
+6. **主要局限性**：生成模块（GM）的补全能力依赖于其他模态的“线性聚合”假设，其对于复杂或语义冲突的缺失情况可能效果有限，论文未对此进行深入探讨和验证。
+
+---
+
+### 262. [CaMoD: Causal-Aware Modality Denoising for Multimodal Dialogue Intent Recognition](/audio-paper-digest-blog/posts/2026-04-29-camod-causal-aware-modality-denoising-for)
 
 ✅ **7.5/10** | 前25% | #多模态对话意图识别 | #因果推理 | #多模态模型 #音频事件检测
 
@@ -8924,7 +9372,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 249. [SceneRAG: Scene-Level Retrieval-Augmented Generation for Video Understanding](/audio-paper-digest-blog/posts/2026-04-29-scenerag-scene-level-retrieval-augmented)
+### 263. [SceneRAG: Scene-Level Retrieval-Augmented Generation for Video Understanding](/audio-paper-digest-blog/posts/2026-04-29-scenerag-scene-level-retrieval-augmented)
 
 ✅ **7.5/10** | 前25% | #视频理解 | #检索增强生成 | #长视频理解 #场景分割
 
@@ -8949,7 +9397,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 250. [Streamingbench: Assessing the Gap for MLLMs to Achieve Streaming Video Understanding](/audio-paper-digest-blog/posts/2026-04-29-streamingbench-assessing-the-gap-for-mllms-to)
+### 264. [Streamingbench: Assessing the Gap for MLLMs to Achieve Streaming Video Understanding](/audio-paper-digest-blog/posts/2026-04-29-streamingbench-assessing-the-gap-for-mllms-to)
 
 ✅ **7.5/10** | 前25% | #基准测试 | #多模态模型 | #模型评估 #音视频
 
@@ -8985,7 +9433,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 251. [Towards Effective Negation Modeling in Joint Audio-Text Models for Music](/audio-paper-digest-blog/posts/2026-04-29-towards-effective-negation-modeling-in-joint)
+### 265. [Towards Effective Negation Modeling in Joint Audio-Text Models for Music](/audio-paper-digest-blog/posts/2026-04-29-towards-effective-negation-modeling-in-joint)
 
 ✅ **7.5/10** | 前25% | #音乐理解 | #对比学习 | #多模态模型 #音乐检索
 
@@ -9006,7 +9454,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 252. [MusiCRS: Benchmarking Audio-Centric Conversational Recommendation](/audio-paper-digest-blog/posts/2026-04-29-musicrs-benchmarking-audio-centric-conversational)
+### 266. [MusiCRS: Benchmarking Audio-Centric Conversational Recommendation](/audio-paper-digest-blog/posts/2026-04-29-musicrs-benchmarking-audio-centric-conversational)
 
 ✅ **7.5/10** | 前25% | #音乐推荐 | #多模态模型 | #基准测试 #音频检索
 
@@ -9050,7 +9498,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 253. [LETPAV: Lexicon-Enhanced Text with Progressive Audio-Visual Fusion for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-letpav-lexicon-enhanced-text-with-progressive)
+### 267. [LETPAV: Lexicon-Enhanced Text with Progressive Audio-Visual Fusion for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-letpav-lexicon-enhanced-text-with-progressive)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多模态模型 | #跨模态 #对比学习
 
@@ -9070,7 +9518,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 254. [Coupling Acoustic Geometry and Visual Semantics for Robust Depth Estimation](/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics)
+### 268. [Coupling Acoustic Geometry and Visual Semantics for Robust Depth Estimation](/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #多模态模型 | #时频分析 #鲁棒性
 
@@ -9102,7 +9550,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 255. [Constructing Composite Features for Interpretable Music-Tagging](/audio-paper-digest-blog/posts/2026-04-29-constructing-composite-features-for-interpretable)
+### 269. [Constructing Composite Features for Interpretable Music-Tagging](/audio-paper-digest-blog/posts/2026-04-29-constructing-composite-features-for-interpretable)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #遗传编程 | #音频分类 #开源工具
 
@@ -9133,7 +9581,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 256. [GMS-CAVP: Improving Audio-Video Correspondence with Multi-Scale Constrative and Generative Pretraining](/audio-paper-digest-blog/posts/2026-04-29-gms-cavp-improving-audio-video-correspondence)
+### 270. [GMS-CAVP: Improving Audio-Video Correspondence with Multi-Scale Constrative and Generative Pretraining](/audio-paper-digest-blog/posts/2026-04-29-gms-cavp-improving-audio-video-correspondence)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #音视频 #对比学习
 
@@ -9168,7 +9616,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 257. [Multimodal Variational Graph Network for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-multimodal-variational-graph-network-for)
+### 271. [Multimodal Variational Graph Network for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-multimodal-variational-graph-network-for)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #图神经网络 | #变分编码 #多模态融合
 
@@ -9203,7 +9651,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 258. [KSDIFF: Keyframe-Augmented Speech-Aware Dual-Path Diffusion for Facial Animation](/audio-paper-digest-blog/posts/2026-04-29-ksdiff-keyframe-augmented-speech-aware-dual-path)
+### 272. [KSDIFF: Keyframe-Augmented Speech-Aware Dual-Path Diffusion for Facial Animation](/audio-paper-digest-blog/posts/2026-04-29-ksdiff-keyframe-augmented-speech-aware-dual-path)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #跨模态 #关键帧检测
 
@@ -9228,7 +9676,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 259. [VividTalker: A Modular Framework for Expressive 3D Talking Avatars with Controllable Gaze and Blink](/audio-paper-digest-blog/posts/2026-04-29-vividtalker-a-modular-framework-for-expressive-3d)
+### 273. [VividTalker: A Modular Framework for Expressive 3D Talking Avatars with Controllable Gaze and Blink](/audio-paper-digest-blog/posts/2026-04-29-vividtalker-a-modular-framework-for-expressive-3d)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #模块化架构 | #音视频 #扩散模型
 
@@ -9271,7 +9719,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 260. [Diffemotalk: Audio-Driven Facial Animation with Fine-Grained Emotion Control via Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-diffemotalk-audio-driven-facial-animation-with)
+### 274. [Diffemotalk: Audio-Driven Facial Animation with Fine-Grained Emotion Control via Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-diffemotalk-audio-driven-facial-animation-with)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #扩散模型 | #对比学习 #跨模态
 
@@ -9296,7 +9744,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 261. [Membership Inference Attack against Music Diffusion Models via Generative Manifold Perturbation](/audio-paper-digest-blog/posts/2026-04-29-membership-inference-attack-against-music)
+### 275. [Membership Inference Attack against Music Diffusion Models via Generative Manifold Perturbation](/audio-paper-digest-blog/posts/2026-04-29-membership-inference-attack-against-music)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #扩散模型 | #对抗样本 #鲁棒性
 
@@ -9322,7 +9770,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 262. [Adversarial Fine-Tuning on Speech Foundation Model with Vulnerable Attention Consistency Regularization for Robust Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation)
+### 276. [Adversarial Fine-Tuning on Speech Foundation Model with Vulnerable Attention Consistency Regularization for Robust Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #对抗样本 | #语音大模型 #预训练
 
@@ -9359,7 +9807,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 263. [Content Anonymization for Privacy in Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-content-anonymization-for-privacy-in-long-form)
+### 277. [Content Anonymization for Privacy in Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-content-anonymization-for-privacy-in-long-form)
 
 ✅ **7.5/10** | 前25% | #语音匿名化 | #大语言模型 | #说话人验证 #端到端
 
@@ -9384,7 +9832,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 264. [MFF-RVRDI: Multimodal Fusion Framework for Robust Video Recording Device Identification](/audio-paper-digest-blog/posts/2026-04-29-mff-rvrdi-multimodal-fusion-framework-for-robust)
+### 278. [MFF-RVRDI: Multimodal Fusion Framework for Robust Video Recording Device Identification](/audio-paper-digest-blog/posts/2026-04-29-mff-rvrdi-multimodal-fusion-framework-for-robust)
 
 ✅ **7.5/10** | 前25% | #视频设备识别 | #多模态融合 | #注意力机制 #鲁棒性
 
@@ -9412,7 +9860,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 265. [Detecting and Attributing Synthetic Spanish Speech: The HISPASpoof Dataset](/audio-paper-digest-blog/posts/2026-04-29-detecting-and-attributing-synthetic-spanish)
+### 279. [Detecting and Attributing Synthetic Spanish Speech: The HISPASpoof Dataset](/audio-paper-digest-blog/posts/2026-04-29-detecting-and-attributing-synthetic-spanish)
 
 ✅ **7.5/10** | 前25% | #语音伪造检测 | #数据集 | #多语言 #零样本
 
@@ -9444,7 +9892,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 266. [Content Leakage in Librispeech and its Impact on the Privacy Evaluation of Speaker Anonymization](/audio-paper-digest-blog/posts/2026-04-29-content-leakage-in-librispeech-and-its-impact-on)
+### 280. [Content Leakage in Librispeech and its Impact on the Privacy Evaluation of Speaker Anonymization](/audio-paper-digest-blog/posts/2026-04-29-content-leakage-in-librispeech-and-its-impact-on)
 
 ✅ **7.5/10** | 前25% | #语音匿名化 | #模型评估 #数据集 | #模型评估 #数据集
 
@@ -9478,7 +9926,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 267. [Improving the Speaker Anonymization Evaluation’s Robustness to Target Speakers with Adversarial Learning](/audio-paper-digest-blog/posts/2026-04-29-improving-the-speaker-anonymization-evaluations)
+### 281. [Improving the Speaker Anonymization Evaluation’s Robustness to Target Speakers with Adversarial Learning](/audio-paper-digest-blog/posts/2026-04-29-improving-the-speaker-anonymization-evaluations)
 
 ✅ **7.5/10** | 前50% | #语音匿名化 | #对抗学习 | #说话人识别 #模型评估
 
@@ -9526,7 +9974,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 268. [DPO-Regularized Regression for Age Prediction](/audio-paper-digest-blog/posts/2026-04-29-dpo-regularized-regression-for-age-prediction)
+### 282. [DPO-Regularized Regression for Age Prediction](/audio-paper-digest-blog/posts/2026-04-29-dpo-regularized-regression-for-age-prediction)
 
 ✅ **7.5/10** | 前25% | #说话人识别 | #回归模型 | #偏好学习 #DPO
 
@@ -9557,7 +10005,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 269. [ZK-VSA: Zero-Knowledge Verifiable Speaker Anonymization Leveraging Phase Vocoder with Time-Scale Modification](/audio-paper-digest-blog/posts/2026-04-29-zk-vsa-zero-knowledge-verifiable-speaker)
+### 283. [ZK-VSA: Zero-Knowledge Verifiable Speaker Anonymization Leveraging Phase Vocoder with Time-Scale Modification](/audio-paper-digest-blog/posts/2026-04-29-zk-vsa-zero-knowledge-verifiable-speaker)
 
 ✅ **7.5/10** | 前25% | #语音匿名化 | #零知识证明 | #信号处理 #音频安全
 
@@ -9582,7 +10030,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 270. [A Feature-Optimized Audio Watermarking Algorithm with Adaptive Embedding Strength](/audio-paper-digest-blog/posts/2026-04-29-a-feature-optimized-audio-watermarking-algorithm)
+### 284. [A Feature-Optimized Audio Watermarking Algorithm with Adaptive Embedding Strength](/audio-paper-digest-blog/posts/2026-04-29-a-feature-optimized-audio-watermarking-algorithm)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #深度学习 | #鲁棒性 #信号处理
 
@@ -9617,7 +10065,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 271. [Multi-Task Transformer for Explainable Speech Deepfake Detection via Formant Modeling](/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech)
+### 285. [Multi-Task Transformer for Explainable Speech Deepfake Detection via Formant Modeling](/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech)
 
 ✅ **7.5/10** | 前25% | #语音伪造检测 | #多任务学习 | #Transformer #音频安全
 
@@ -9648,7 +10096,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 272. [AVATAR: Audio-Visual Adaptive Fusion via Trained Agent Reinforcement for Multimodal Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-avatar-audio-visual-adaptive-fusion-via-trained)
+### 286. [AVATAR: Audio-Visual Adaptive Fusion via Trained Agent Reinforcement for Multimodal Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-avatar-audio-visual-adaptive-fusion-via-trained)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #强化学习 | #多模态模型 #鲁棒性
 
@@ -9668,7 +10116,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 273. [FOCA: Multimodal Malware Classification via Hyperbolic Cross-Attention](/audio-paper-digest-blog/posts/2026-04-29-foca-multimodal-malware-classification-via)
+### 287. [FOCA: Multimodal Malware Classification via Hyperbolic Cross-Attention](/audio-paper-digest-blog/posts/2026-04-29-foca-multimodal-malware-classification-via)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #多模态模型 | #恶意软件检测 #双曲神经网络
 
@@ -9693,7 +10141,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 274. [Full Band Denoising of Room Impulse Response in the Wavelet Domain with Dictionary Learning](/audio-paper-digest-blog/posts/2026-04-29-full-band-denoising-of-room-impulse-response-in)
+### 288. [Full Band Denoising of Room Impulse Response in the Wavelet Domain with Dictionary Learning](/audio-paper-digest-blog/posts/2026-04-29-full-band-denoising-of-room-impulse-response-in)
 
 ✅ **7.5/10** | 前25% | #房间脉冲响应去噪 | #小波变换 #字典学习 | #小波变换 #字典学习
 
@@ -9720,7 +10168,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 275. [Bone-Conduction Guided Multimodal Speech Enhancement with Conditional Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-bone-conduction-guided-multimodal-speech)
+### 289. [Bone-Conduction Guided Multimodal Speech Enhancement with Conditional Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-bone-conduction-guided-multimodal-speech)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #扩散模型 | #骨传导 #多模态模型
 
@@ -9754,7 +10202,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 276. [Real-Time Streaming MEL Vocoding with Generative Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-real-time-streaming-mel-vocoding-with-generative)
+### 290. [Real-Time Streaming MEL Vocoding with Generative Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-real-time-streaming-mel-vocoding-with-generative)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #流式处理 #实时处理
 
@@ -9779,7 +10227,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 277. [Aneural Forward Filtering for Speaker-Image Separation](/audio-paper-digest-blog/posts/2026-04-29-aneural-forward-filtering-for-speaker-image)
+### 291. [Aneural Forward Filtering for Speaker-Image Separation](/audio-paper-digest-blog/posts/2026-04-29-aneural-forward-filtering-for-speaker-image)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #信号处理 | #语音增强
 
@@ -9814,7 +10262,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 278. [Str-DiffSep: Streamable Diffusion Model for Speech Separation](/audio-paper-digest-blog/posts/2026-04-29-str-diffsep-streamable-diffusion-model-for-speech)
+### 292. [Str-DiffSep: Streamable Diffusion Model for Speech Separation](/audio-paper-digest-blog/posts/2026-04-29-str-diffsep-streamable-diffusion-model-for-speech)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #扩散模型 | #流式处理 #实时处理
 
@@ -9845,7 +10293,7 @@ APKD框架的亮点在于其问题洞察力——指出异构蒸馏中“特征�
 
 ---
 
-### 279. [PromptSep: Generative Audio Separation Via Multimodal Prompting](/audio-paper-digest-blog/posts/2026-04-29-promptsep-generative-audio-separation-via)
+### 293. [PromptSep: Generative Audio Separation Via Multimodal Prompting](/audio-paper-digest-blog/posts/2026-04-29-promptsep-generative-audio-separation-via)
 
 ✅ **7.5/10** | 前10% | #语音分离 | #扩散模型 | #数据增强 #多模态模型
 
@@ -9865,7 +10313,7 @@ PromptSep旨在解决现有语言查询音频源分离系统的两大局限：�
 
 ---
 
-### 280. [Sunac: Source-Aware Unified Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-sunac-source-aware-unified-neural-audio-codec)
+### 294. [Sunac: Source-Aware Unified Neural Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-sunac-source-aware-unified-neural-audio-codec)
 
 ✅ **7.5/10** | 前50% | #音频生成 | #提示学习 | #语音分离 #端到端
 
@@ -9904,7 +10352,7 @@ PromptSep旨在解决现有语言查询音频源分离系统的两大局限：�
 
 ---
 
-### 281. [S-PRESSO: Ultra Low Bitrate Sound Effect Compression with Diffusion Autoencoders and Offline Quantization](/audio-paper-digest-blog/posts/2026-04-29-s-presso-ultra-low-bitrate-sound-effect)
+### 295. [S-PRESSO: Ultra Low Bitrate Sound Effect Compression with Diffusion Autoencoders and Offline Quantization](/audio-paper-digest-blog/posts/2026-04-29-s-presso-ultra-low-bitrate-sound-effect)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #量化 #模型比较
 
@@ -9933,7 +10381,7 @@ S-PRESSO巧妙地将扩散先验与离线量化结合，在0.096kbps下实现了
 
 ---
 
-### 282. [Deepaq: A Perceptual Audio Quality Metric Based on Foundational Models and Weakly Supervised Learning](/audio-paper-digest-blog/posts/2026-04-29-deepaq-a-perceptual-audio-quality-metric-based-on)
+### 296. [Deepaq: A Perceptual Audio Quality Metric Based on Foundational Models and Weakly Supervised Learning](/audio-paper-digest-blog/posts/2026-04-29-deepaq-a-perceptual-audio-quality-metric-based-on)
 
 ✅ **7.5/10** | 前25% | #音频质量评估 | #弱监督学习 | #度量学习 #音频大模型
 
@@ -9974,7 +10422,7 @@ S-PRESSO巧妙地将扩散先验与离线量化结合，在0.096kbps下实现了
 
 ---
 
-### 283. [The 3rd Clarity Prediction Challenge: A Machine Learning Challenge for Hearing aid Speech Intelligibility Prediction](/audio-paper-digest-blog/posts/2026-04-29-the-3rd-clarity-prediction-challenge-a-machine)
+### 297. [The 3rd Clarity Prediction Challenge: A Machine Learning Challenge for Hearing aid Speech Intelligibility Prediction](/audio-paper-digest-blog/posts/2026-04-29-the-3rd-clarity-prediction-challenge-a-machine)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #预训练 | #基准测试 #模型评估
 
@@ -10009,7 +10457,7 @@ S-PRESSO巧妙地将扩散先验与离线量化结合，在0.096kbps下实现了
 
 ---
 
-### 284. [Qastanet: A DNN-Based Quality Metric for Spatial Audio](/audio-paper-digest-blog/posts/2026-04-29-qastanet-a-dnn-based-quality-metric-for-spatial)
+### 298. [Qastanet: A DNN-Based Quality Metric for Spatial Audio](/audio-paper-digest-blog/posts/2026-04-29-qastanet-a-dnn-based-quality-metric-for-spatial)
 
 ✅ **7.5/10** | 前50% | #空间音频 | #信号处理 | #多通道 #模型评估
 
@@ -10048,7 +10496,7 @@ QASTAnet的预测值与主观分数高度一致（图3），尤其是在包含�
 
 ---
 
-### 285. [PICOAUDIO2: Temporal Controllable Text-to-Audio Generation with Natural Language Description](/audio-paper-digest-blog/posts/2026-04-29-picoaudio2-temporal-controllable-text-to-audio)
+### 299. [PICOAUDIO2: Temporal Controllable Text-to-Audio Generation with Natural Language Description](/audio-paper-digest-blog/posts/2026-04-29-picoaudio2-temporal-controllable-text-to-audio)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #文本到音频 #时间控制
 
@@ -10068,7 +10516,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 286. [FoleyBench: A Benchmark for Video-to-Audio Models](/audio-paper-digest-blog/posts/2026-04-29-foleybench-a-benchmark-for-video-to-audio-models)
+### 300. [FoleyBench: A Benchmark for Video-to-Audio Models](/audio-paper-digest-blog/posts/2026-04-29-foleybench-a-benchmark-for-video-to-audio-models)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #基准测试 | #音视频 #多模态模型
 
@@ -10102,7 +10550,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 287. [AUDIOCARDS: Structured Metadata Improves Audio Language Models for Sound Design](/audio-paper-digest-blog/posts/2026-04-29-audiocards-structured-metadata-improves-audio)
+### 301. [AUDIOCARDS: Structured Metadata Improves Audio Language Models for Sound Design](/audio-paper-digest-blog/posts/2026-04-29-audiocards-structured-metadata-improves-audio)
 
 ✅ **7.5/10** | 前50% | #音频检索 | #对比学习 | #音频分类 #数据集
 
@@ -10151,7 +10599,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 288. [Task-Oriented Sound Privacy Preservation for Sound Event Detection Via End-to-End Adversarial Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-task-oriented-sound-privacy-preservation-for)
+### 302. [Task-Oriented Sound Privacy Preservation for Sound Event Detection Via End-to-End Adversarial Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-task-oriented-sound-privacy-preservation-for)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #对抗学习 | #多任务学习 #隐私保护
 
@@ -10176,7 +10624,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 289. [WaveSpikeNet: A Wavelet-Spiking Fusion Architecture for Audio Classification on Edge Devices](/audio-paper-digest-blog/posts/2026-04-29-wavespikenet-a-wavelet-spiking-fusion)
+### 303. [WaveSpikeNet: A Wavelet-Spiking Fusion Architecture for Audio Classification on Edge Devices](/audio-paper-digest-blog/posts/2026-04-29-wavespikenet-a-wavelet-spiking-fusion)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #脉冲神经网络 | #边缘计算 #生物启发计算
 
@@ -10201,7 +10649,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 290. [Two-Stage Language Model Framework for Acoustic Echo Cancellation](/audio-paper-digest-blog/posts/2026-04-29-two-stage-language-model-framework-for-acoustic)
+### 304. [Two-Stage Language Model Framework for Acoustic Echo Cancellation](/audio-paper-digest-blog/posts/2026-04-29-two-stage-language-model-framework-for-acoustic)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #语音大模型 | #生成模型 #鲁棒性
 
@@ -10221,7 +10669,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 291. [Differentiable Grouped Feedback Delay Networks for Learning Direction and Position-Dependent Late Reverberation](/audio-paper-digest-blog/posts/2026-04-29-differentiable-grouped-feedback-delay-networks)
+### 305. [Differentiable Grouped Feedback Delay Networks for Learning Direction and Position-Dependent Late Reverberation](/audio-paper-digest-blog/posts/2026-04-29-differentiable-grouped-feedback-delay-networks)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #可微分渲染 | #深度学习 #信号处理
 
@@ -10267,7 +10715,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 292. [Denoising Of Stochastic Ray Tracing Room Impulse Responses](/audio-paper-digest-blog/posts/2026-04-29-denoising-of-stochastic-ray-tracing-room-impulse)
+### 306. [Denoising Of Stochastic Ray Tracing Room Impulse Responses](/audio-paper-digest-blog/posts/2026-04-29-denoising-of-stochastic-ray-tracing-room-impulse)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #信号处理 | #数据集 #开源工具
 
@@ -10292,7 +10740,27 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 293. [Automatic Music Sample Identification with Multi-Track Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-sample-identification-with-multi)
+### 307. [Automatic Music Mixing Using a Generative Model of Effect Embeddings](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-mixing-using-a-generative-model)
+
+前25% | #音乐生成 | #扩散模型 | #领域适应 #音乐信息检索
+
+👥 **作者与机构**
+
+- 第一作者：Eloi Moliner（Aalto大学，DICE声学实验室）
+- 通讯作者：未说明
+- 作者列表：Eloi Moliner（Aalto大学，DICE声学实验室）、Marco A. Mart´ınez-Ram´ırez（Sony AI）、Junghyun Koo（Sony AI）、Wei-Hsiang Liao（Sony AI）、Kin Wai Cheuk（Sony AI）、Joan Serr`a（Sony AI）、Vesa V¨alim¨aki（Aalto大学，DICE声学实验室）、Yuki Mitsufuji（Sony AI， Sony Group Corporation）
+
+💡 **毒舌点评**
+
+MEGAMI的核心亮点在于巧妙地将扩散模型应用于效应嵌入空间，解决了自动混音中“一对多”的根本难题，同时其领域适应策略为利用海量无配对湿录音数据提供了优雅的解决方案，架构设计完整且有深度。然而，论文的评估严重依赖内部数据集，缺乏在大型公开基准上的可复现比较，且其“接近人类水平”的结论在部分主观测试结果中略显主观，实际泛化能力与可落地性仍有疑问。
+
+📌 **核心摘要**
+
+这篇论文旨在解决自动音乐混音中的核心挑战：专业混音本质上是主观的，同一组干录音存在多种同样有效的混音方案，而现有的确定性回归方法无法捕捉这种多样性。论文提出了MEGAMI（Multitrack Embedding Generative Auto MIxing），一个生成式框架，它使用条件扩散模型在效应嵌入空间中建模给定干音轨的专业混音的条件分布。其核心方法是将混音决策（由效应嵌入表示）与音乐内容分离，并设计了一个排列等变的Transformer架构以处理任意数量和顺序的音轨。与已有方法相比，MEGAMI的创新在于：（1）首次将生成模型（扩散模型）用于自动混音；（2）提出了一种效应嵌入因式分解；（3）通过领域适应策略，使模型能利用大量仅有湿录音的公开数据集进行训练。实验表明，在客观分布性指标（KAD）上，MEGAMI优于所有基线；主观听力测试显示其性能接近人类混音师，在部分曲目上甚至超越了人类参考混音。这项工作为自动音乐生成开辟了新方向，其框架可用于合成混音数据集。主要局限性在于评估数据集大部分为内部数据，且模型性能依赖于CLAP和FxEncoder++等预训练嵌入模型的质量。
+
+---
+
+### 308. [Automatic Music Sample Identification with Multi-Track Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-sample-identification-with-multi)
 
 ✅ **7.5/10** | 前25% | #音频检索 | #对比学习 | #自监督学习 #数据增强
 
@@ -10343,7 +10811,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 294. [Joint Estimation of Piano Dynamics and Metrical Structure with a Multi-Task Multi-Scale Network](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-piano-dynamics-and-metrical)
+### 309. [Joint Estimation of Piano Dynamics and Metrical Structure with a Multi-Task Multi-Scale Network](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-piano-dynamics-and-metrical)
 
 ✅ **7.5/10** | 前25% | #音乐理解 | #多任务学习 | #时频分析 #端到端
 
@@ -10389,7 +10857,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 295. [Sparse-View Visual-Acoustic Latent Learning for Novel-View Audio Synthesis](/audio-paper-digest-blog/posts/2026-04-29-sparse-view-visual-acoustic-latent-learning-for)
+### 310. [Sparse-View Visual-Acoustic Latent Learning for Novel-View Audio Synthesis](/audio-paper-digest-blog/posts/2026-04-29-sparse-view-visual-acoustic-latent-learning-for)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #多模态模型 | #自监督学习 #音视频
 
@@ -10414,7 +10882,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 296. [E2E-AEC: Implementing An End-To-End Neural Network Learning Approach for Acoustic Echo Cancellation](/audio-paper-digest-blog/posts/2026-04-29-e2e-aec-implementing-an-end-to-end-neural-network)
+### 311. [E2E-AEC: Implementing An End-To-End Neural Network Learning Approach for Acoustic Echo Cancellation](/audio-paper-digest-blog/posts/2026-04-29-e2e-aec-implementing-an-end-to-end-neural-network)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #迁移学习 #声学回声消除
 
@@ -10445,7 +10913,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 297. [Joint Estimation of Primary and Secondary Paths for Personalized Hearable Applications](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-primary-and-secondary-paths)
+### 312. [Joint Estimation of Primary and Secondary Paths for Personalized Hearable Applications](/audio-paper-digest-blog/posts/2026-04-29-joint-estimation-of-primary-and-secondary-paths)
 
 ✅ **7.5/10** | 前25% | #主动降噪 | #信号处理 | #自适应滤波器 #实时处理
 
@@ -10471,7 +10939,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 298. [Multimodal Room Impulse Response Generation Through Latent Rectified Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-multimodal-room-impulse-response-generation)
+### 313. [Multimodal Room Impulse Response Generation Through Latent Rectified Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-multimodal-room-impulse-response-generation)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #流匹配 | #空间音频
 
@@ -10502,7 +10970,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 299. [HiFi-HARP: A High-Fidelity 7th-Order Ambisonic Room Impulse Response Dataset](/audio-paper-digest-blog/posts/2026-04-29-hifi-harp-a-high-fidelity-7th-order-ambisonic)
+### 314. [HiFi-HARP: A High-Fidelity 7th-Order Ambisonic Room Impulse Response Dataset](/audio-paper-digest-blog/posts/2026-04-29-hifi-harp-a-high-fidelity-7th-order-ambisonic)
 
 ✅ **7.5/10** | 前25% | #数据集 | #混合仿真 | #麦克风阵列 #空间音频
 
@@ -10532,7 +11000,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 300. [Audio-to-Score Jazz Solo Transcription with the Rhythm Perceiver](/audio-paper-digest-blog/posts/2026-04-29-audio-to-score-jazz-solo-transcription-with-the)
+### 315. [Audio-to-Score Jazz Solo Transcription with the Rhythm Perceiver](/audio-paper-digest-blog/posts/2026-04-29-audio-to-score-jazz-solo-transcription-with-the)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #端到端 | #爵士乐 #音频转录
 
@@ -10552,7 +11020,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 301. [Motionbeat: Motion-Aligned Music Representation via Embodied Contrastive Learning and Bar-Equivariant Contact-Aware Encoding](/audio-paper-digest-blog/posts/2026-04-29-motionbeat-motion-aligned-music-representation)
+### 316. [Motionbeat: Motion-Aligned Music Representation via Embodied Contrastive Learning and Bar-Equivariant Contact-Aware Encoding](/audio-paper-digest-blog/posts/2026-04-29-motionbeat-motion-aligned-music-representation)
 
 ✅ **7.5/10** | 前25% | #舞蹈生成 | #对比学习 | #音频表征学习 #音乐生成
 
@@ -10578,7 +11046,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 302. [Benchmarking Music Autotagging with MGPHot Expert Annotations vs. Generic Tag Datasets](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-music-autotagging-with-mgphot-expert)
+### 317. [Benchmarking Music Autotagging with MGPHot Expert Annotations vs. Generic Tag Datasets](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-music-autotagging-with-mgphot-expert)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #基准测试 | #模型评估 #音频分类
 
@@ -10611,7 +11079,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 303. [UTI-LLM: A Personalized Articulatory-Speech Therapy Assistance System Based on Multimodal Large Language Model](/audio-paper-digest-blog/posts/2026-04-29-uti-llm-a-personalized-articulatory-speech)
+### 318. [UTI-LLM: A Personalized Articulatory-Speech Therapy Assistance System Based on Multimodal Large Language Model](/audio-paper-digest-blog/posts/2026-04-29-uti-llm-a-personalized-articulatory-speech)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #多模态模型 | #医疗应用 #数据集
 
@@ -10641,7 +11109,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 304. [Multi-Layer Attentive Probing Improves Transfer of Audio Representations for Bioacoustics](/audio-paper-digest-blog/posts/2026-04-29-multi-layer-attentive-probing-improves-transfer)
+### 319. [Multi-Layer Attentive Probing Improves Transfer of Audio Representations for Bioacoustics](/audio-paper-digest-blog/posts/2026-04-29-multi-layer-attentive-probing-improves-transfer)
 
 ✅ **7.5/10** | 前25% | #生物声学 | #自监督学习 #迁移学习 | #自监督学习 #迁移学习
 
@@ -10666,7 +11134,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 305. [Efficient Depression Detection from Speech via Language-Independent Prompt-Driven Reprogramming](/audio-paper-digest-blog/posts/2026-04-29-efficient-depression-detection-from-speech-via)
+### 320. [Efficient Depression Detection from Speech via Language-Independent Prompt-Driven Reprogramming](/audio-paper-digest-blog/posts/2026-04-29-efficient-depression-detection-from-speech-via)
 
 ✅ **7.5/10** | 前25% | #语音生物标志物 | #迁移学习 | #预训练 #数据增强
 
@@ -10691,7 +11159,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 306. [Time vs. Layer: Locating Predictive Cues for Dysarthric Speech Descriptors in Wav2vec 2.0](/audio-paper-digest-blog/posts/2026-04-29-time-vs-layer-locating-predictive-cues-for)
+### 321. [Time vs. Layer: Locating Predictive Cues for Dysarthric Speech Descriptors in Wav2vec 2.0](/audio-paper-digest-blog/posts/2026-04-29-time-vs-layer-locating-predictive-cues-for)
 
 ✅ **7.5/10** | 前50% | #语音质量评估 | #注意力机制 | #预训练模型 #病理语音
 
@@ -10725,7 +11193,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 307. [Theory and Application of Circular Relative Harmonic Coefficients](/audio-paper-digest-blog/posts/2026-04-29-theory-and-application-of-circular-relative)
+### 322. [Theory and Application of Circular Relative Harmonic Coefficients](/audio-paper-digest-blog/posts/2026-04-29-theory-and-application-of-circular-relative)
 
 ✅ **7.5/10** | 前25% | #声源定位 | #麦克风阵列 | #信号处理 #多通道
 
@@ -10750,7 +11218,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 308. [Sequential and Simultaneous Optimization of Microphone Array Geometry and Region-of-Interest Beamforming](/audio-paper-digest-blog/posts/2026-04-29-sequential-and-simultaneous-optimization-of)
+### 323. [Sequential and Simultaneous Optimization of Microphone Array Geometry and Region-of-Interest Beamforming](/audio-paper-digest-blog/posts/2026-04-29-sequential-and-simultaneous-optimization-of)
 
 ✅ **7.5/10** | 前25% | #声源定位 | #波束成形 | #麦克风阵列 #空间音频
 
@@ -10775,7 +11243,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 309. [Adaptive Per-Channel Energy Normalization Front-End for Robust Audio Signal Processing](/audio-paper-digest-blog/posts/2026-04-29-adaptive-per-channel-energy-normalization-front)
+### 324. [Adaptive Per-Channel Energy Normalization Front-End for Robust Audio Signal Processing](/audio-paper-digest-blog/posts/2026-04-29-adaptive-per-channel-energy-normalization-front)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #自适应处理 | #信号处理 #音频前端
 
@@ -10800,7 +11268,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 310. [Adaptive Embedding Fusion with Contrastive Learning for Robust Fully Few-Shot Class-Incremental Audio Classification](/audio-paper-digest-blog/posts/2026-04-29-adaptive-embedding-fusion-with-contrastive)
+### 325. [Adaptive Embedding Fusion with Contrastive Learning for Robust Fully Few-Shot Class-Incremental Audio Classification](/audio-paper-digest-blog/posts/2026-04-29-adaptive-embedding-fusion-with-contrastive)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #对比学习 | #少样本学习 #增量学习
 
@@ -10825,7 +11293,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 311. [Incremental Learning for Audio Classification with Hebbian Deep Neural Networks](/audio-paper-digest-blog/posts/2026-04-29-incremental-learning-for-audio-classification)
+### 326. [Incremental Learning for Audio Classification with Hebbian Deep Neural Networks](/audio-paper-digest-blog/posts/2026-04-29-incremental-learning-for-audio-classification)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #增量学习 | #灾难性遗忘 #Hebbian学习
 
@@ -10850,7 +11318,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 312. [A Task-Aware Dual-Level Self-Supervised Learning Method for Effective Sound Event Detection](/audio-paper-digest-blog/posts/2026-04-29-a-task-aware-dual-level-self-supervised-learning)
+### 327. [A Task-Aware Dual-Level Self-Supervised Learning Method for Effective Sound Event Detection](/audio-paper-digest-blog/posts/2026-04-29-a-task-aware-dual-level-self-supervised-learning)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #自监督学习 #多任务学习 | #自监督学习 #多任务学习
 
@@ -10884,7 +11352,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 313. [Sing2Song: An Accompaniment Generation System Based on Solo Singing](/audio-paper-digest-blog/posts/2026-04-29-sing2song-an-accompaniment-generation-system)
+### 328. [Sing2Song: An Accompaniment Generation System Based on Solo Singing](/audio-paper-digest-blog/posts/2026-04-29-sing2song-an-accompaniment-generation-system)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #规则与模板 | #音乐信息检索 #歌唱语音合成
 
@@ -10910,7 +11378,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 314. [Differentiable Pulsetable Synthesis for Wind Instrument Modeling](/audio-paper-digest-blog/posts/2026-04-29-differentiable-pulsetable-synthesis-for-wind)
+### 329. [Differentiable Pulsetable Synthesis for Wind Instrument Modeling](/audio-paper-digest-blog/posts/2026-04-29-differentiable-pulsetable-synthesis-for-wind)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #可微分DSP | #信号处理 #轻量模型
 
@@ -10961,7 +11429,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 315. [Compression meets Sampling: LZ78-SPA for Efficient Symbolic Music Generation](/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient)
+### 330. [Compression meets Sampling: LZ78-SPA for Efficient Symbolic Music Generation](/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #自回归模型 | #压缩感知 #高效计算
 
@@ -11017,7 +11485,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 316. [Break-the-Beat! Controllable MIDI-to-Drum audio synthesis](/audio-paper-digest-blog/posts/2026-04-29-break-the-beat-controllable-midi-to-drum-audio)
+### 331. [Break-the-Beat! Controllable MIDI-to-Drum audio synthesis](/audio-paper-digest-blog/posts/2026-04-29-break-the-beat-controllable-midi-to-drum-audio)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #扩散模型 | #预训练 #音频生成
 
@@ -11037,7 +11505,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 317. [Text2midi-InferAlign: Improving Symbolic Music Generation with Inference-Time Alignment](/audio-paper-digest-blog/posts/2026-04-29-text2midi-inferalign-improving-symbolic-music)
+### 332. [Text2midi-InferAlign: Improving Symbolic Music Generation with Inference-Time Alignment](/audio-paper-digest-blog/posts/2026-04-29-text2midi-inferalign-improving-symbolic-music)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #强化学习 | #文本到音乐 #自回归模型
 
@@ -11062,7 +11530,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 318. [Triad: Tri-Head with Auxiliary Duplicating Permutation Invariant Training for Multi-Task Sound Event Localization and Detection](/audio-paper-digest-blog/posts/2026-04-29-triad-tri-head-with-auxiliary-duplicating)
+### 333. [Triad: Tri-Head with Auxiliary Duplicating Permutation Invariant Training for Multi-Task Sound Event Localization and Detection](/audio-paper-digest-blog/posts/2026-04-29-triad-tri-head-with-auxiliary-duplicating)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #多任务学习 | #声源定位 #立体声
 
@@ -11090,7 +11558,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 319. [Reconstruction of Spherical Sound Source Radiation Characteristics with Graph Signal Processing](/audio-paper-digest-blog/posts/2026-04-29-reconstruction-of-spherical-sound-source)
+### 334. [Reconstruction of Spherical Sound Source Radiation Characteristics with Graph Signal Processing](/audio-paper-digest-blog/posts/2026-04-29-reconstruction-of-spherical-sound-source)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #信号处理 | #声源定位 #麦克风阵列
 
@@ -11126,7 +11594,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 320. [A Hybrid Convolution-Mamba Network with Tone-Octave Contrastive Learning for Stratified Semi-Supervised Singing Melody Extraction](/audio-paper-digest-blog/posts/2026-04-29-a-hybrid-convolution-mamba-network-with-tone)
+### 335. [A Hybrid Convolution-Mamba Network with Tone-Octave Contrastive Learning for Stratified Semi-Supervised Singing Melody Extraction](/audio-paper-digest-blog/posts/2026-04-29-a-hybrid-convolution-mamba-network-with-tone)
 
 ✅ **7.5/10** | 前25% | #歌唱旋律提取 | #对比学习 | #音乐信息检索 #状态空间模型
 
@@ -11151,7 +11619,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 321. [Diff-vs: Efficient Audio-Aware Diffusion U-Net for Vocals Separation](/audio-paper-digest-blog/posts/2026-04-29-diff-vs-efficient-audio-aware-diffusion-u-net-for)
+### 336. [Diff-vs: Efficient Audio-Aware Diffusion U-Net for Vocals Separation](/audio-paper-digest-blog/posts/2026-04-29-diff-vs-efficient-audio-aware-diffusion-u-net-for)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #扩散模型 | #U-Net #数据增强
 
@@ -11176,7 +11644,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 322. [BeatMamba: Bidirectional Selective State-Space Modeling for Efficient Beat Tracking](/audio-paper-digest-blog/posts/2026-04-29-beatmamba-bidirectional-selective-state-space)
+### 337. [BeatMamba: Bidirectional Selective State-Space Modeling for Efficient Beat Tracking](/audio-paper-digest-blog/posts/2026-04-29-beatmamba-bidirectional-selective-state-space)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #选择性状态空间模型 | #节奏跟踪 #音频分析
 
@@ -11202,7 +11670,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 323. [Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription](/audio-paper-digest-blog/posts/2026-04-29-spectrogram-event-based-feature-representation)
+### 338. [Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription](/audio-paper-digest-blog/posts/2026-04-29-spectrogram-event-based-feature-representation)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #时频分析 | #跨乐器转录 #鲁棒性
 
@@ -11229,7 +11697,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 324. [SpatialNet-Echo: Real-Time Acoustic Echo Cancellation via Integrated Narrow-Band and Cross-Band Processing](/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo)
+### 339. [SpatialNet-Echo: Real-Time Acoustic Echo Cancellation via Integrated Narrow-Band and Cross-Band Processing](/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #自回归模型 | #声学回声消除 #端到端
 
@@ -11276,7 +11744,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 325. [A Stabilized Hybrid Active Noise Control Algorithm of GFANC and FxNLMS with Online Clustering](/audio-paper-digest-blog/posts/2026-04-29-a-stabilized-hybrid-active-noise-control)
+### 340. [A Stabilized Hybrid Active Noise Control Algorithm of GFANC and FxNLMS with Online Clustering](/audio-paper-digest-blog/posts/2026-04-29-a-stabilized-hybrid-active-noise-control)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #信号处理 #深度学习 | #信号处理 #深度学习
 
@@ -11312,7 +11780,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 326. [Group-Sparse Gaussian Process Regression for Inhomogeneous Sound Field Estimation](/audio-paper-digest-blog/posts/2026-04-29-group-sparse-gaussian-process-regression-for)
+### 341. [Group-Sparse Gaussian Process Regression for Inhomogeneous Sound Field Estimation](/audio-paper-digest-blog/posts/2026-04-29-group-sparse-gaussian-process-regression-for)
 
 ✅ **7.5/10** | 前25% | #声场估计 | #高斯过程回归 | #麦克风阵列 #稀疏优化
 
@@ -11337,7 +11805,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 327. [Speaker Anonymisation for Speech-Based Suicide Risk Detection](/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide)
+### 342. [Speaker Anonymisation for Speech-Based Suicide Risk Detection](/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide)
 
 ✅ **7.5/10** | 前25% | #语音匿名化 | #语音转换 | #语音大模型 #语音情感识别
 
@@ -11374,7 +11842,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 328. [Multi-View Hierarchical Hypergraph Neural Network for Automatic Stuttering Detection](/audio-paper-digest-blog/posts/2026-04-29-multi-view-hierarchical-hypergraph-neural-network)
+### 343. [Multi-View Hierarchical Hypergraph Neural Network for Automatic Stuttering Detection](/audio-paper-digest-blog/posts/2026-04-29-multi-view-hierarchical-hypergraph-neural-network)
 
 ✅ **7.5/10** | 前25% | #语音生物标志物 | #超图神经网络 | #自监督学习 #语音情感识别
 
@@ -11394,7 +11862,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 329. [Evaluating Pretrained Speech Embedding Systems for Dysarthria Detection Across Heterogenous Datasets](/audio-paper-digest-blog/posts/2026-04-29-evaluating-pretrained-speech-embedding-systems)
+### 344. [Evaluating Pretrained Speech Embedding Systems for Dysarthria Detection Across Heterogenous Datasets](/audio-paper-digest-blog/posts/2026-04-29-evaluating-pretrained-speech-embedding-systems)
 
 ✅ **7.5/10** | 前50% | #语音生物标志物 | #模型评估 | #基准测试 #数据集
 
@@ -11427,7 +11895,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 330. [Attentive Masked Self-Distillation for Respiratory Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for)
+### 345. [Attentive Masked Self-Distillation for Respiratory Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #知识蒸馏 | #数据增强 #医学音频
 
@@ -11486,7 +11954,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 331. [Reference-Aware SFM Layers for Intrusive Intelligibility Prediction](/audio-paper-digest-blog/posts/2026-04-29-reference-aware-sfm-layers-for-intrusive)
+### 346. [Reference-Aware SFM Layers for Intrusive Intelligibility Prediction](/audio-paper-digest-blog/posts/2026-04-29-reference-aware-sfm-layers-for-intrusive)
 
 ✅ **7.5/10** | 前10% | #语音评估 | #语音大模型 | #预训练 #模型评估
 
@@ -11522,7 +11990,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 332. [Leveraging Multiple Speech Enhancers for Non-Intrusive Intelligibility Prediction for Hearing-Impaired Listeners](/audio-paper-digest-blog/posts/2026-04-29-leveraging-multiple-speech-enhancers-for-non)
+### 347. [Leveraging Multiple Speech Enhancers for Non-Intrusive Intelligibility Prediction for Hearing-Impaired Listeners](/audio-paper-digest-blog/posts/2026-04-29-leveraging-multiple-speech-enhancers-for-non)
 
 ✅ **7.5/10** | 前25% | #模型评估 | #数据增强 | #语音增强 #预训练
 
@@ -11565,7 +12033,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 333. [Enhancing Speech Intelligibility Prediction for Hearing Aids with Complementary Speech Foundation Model Representations](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speech-intelligibility-prediction-for)
+### 348. [Enhancing Speech Intelligibility Prediction for Hearing Aids with Complementary Speech Foundation Model Representations](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speech-intelligibility-prediction-for)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #预训练 | #多任务学习 #模型评估
 
@@ -11597,7 +12065,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 334. [WAV2LEV: Predicting Levenshtein Edit Operation Sequences For Fine-Grained Estimation of Automatic Speech Recognition Error](/audio-paper-digest-blog/posts/2026-04-29-wav2lev-predicting-levenshtein-edit-operation)
+### 349. [WAV2LEV: Predicting Levenshtein Edit Operation Sequences For Fine-Grained Estimation of Automatic Speech Recognition Error](/audio-paper-digest-blog/posts/2026-04-29-wav2lev-predicting-levenshtein-edit-operation)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #数据增强 | #模型评估 #数据集
 
@@ -11622,7 +12090,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 335. [SingMOS-Pro: An Comprehensive Benchmark For Singing Quality Assessment](/audio-paper-digest-blog/posts/2026-04-29-singmos-pro-an-comprehensive-benchmark-for)
+### 350. [SingMOS-Pro: An Comprehensive Benchmark For Singing Quality Assessment](/audio-paper-digest-blog/posts/2026-04-29-singmos-pro-an-comprehensive-benchmark-for)
 
 ✅ **7.5/10** | 前25% | #歌唱语音合成 | #基准测试 | #数据集 #模型评估
 
@@ -11663,7 +12131,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 336. [A Learning-Based Automotive Sound Field Reproduction Method Using Plane-Wave Decomposition and Multi-Position Constraint](/audio-paper-digest-blog/posts/2026-04-29-a-learning-based-automotive-sound-field)
+### 351. [A Learning-Based Automotive Sound Field Reproduction Method Using Plane-Wave Decomposition and Multi-Position Constraint](/audio-paper-digest-blog/posts/2026-04-29-a-learning-based-automotive-sound-field)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #波束成形 #深度学习 | #波束成形 #深度学习
 
@@ -11689,7 +12157,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 337. [H-nnPBFDAF: Hierarchical Neural Network Partitioned Block Frequency Domain Adaptive Filter with Novel Block Activation Probability](/audio-paper-digest-blog/posts/2026-04-29-h-nnpbfdaf-hierarchical-neural-network)
+### 352. [H-nnPBFDAF: Hierarchical Neural Network Partitioned Block Frequency Domain Adaptive Filter with Novel Block Activation Probability](/audio-paper-digest-blog/posts/2026-04-29-h-nnpbfdaf-hierarchical-neural-network)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #信号处理 | #时频分析 #实时处理
 
@@ -11714,7 +12182,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 338. [A Data-Driven Framework for Personal Sound Zone Control Addressing Loudspeaker Nonlinearities](/audio-paper-digest-blog/posts/2026-04-29-a-data-driven-framework-for-personal-sound-zone)
+### 353. [A Data-Driven Framework for Personal Sound Zone Control Addressing Loudspeaker Nonlinearities](/audio-paper-digest-blog/posts/2026-04-29-a-data-driven-framework-for-personal-sound-zone)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #信号处理 | #麦克风阵列 #深度学习
 
@@ -11754,7 +12222,33 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 339. [Diffusion Timbre Transfer via Mutual Information Guided Inpainting](/audio-paper-digest-blog/posts/2026-04-29-diffusion-timbre-transfer-via-mutual-information)
+### 354. [Personal Sound Zones with Flexible Bright Zone Control](/audio-paper-digest-blog/posts/2026-04-29-personal-sound-zones-with-flexible-bright-zone)
+
+前25% | #空间音频 | #卷积神经网络 | #信号处理 #麦克风阵列
+
+👥 **作者与机构**
+
+- 第一作者：Wenye Zhu（浙江大学；西湖大学 & 西湖高等研究院）
+- 通讯作者：Xiaofei Li（西湖大学 & 西湖高等研究院）
+- 作者列表：Wenye Zhu（浙江大学，西湖大学 & 西湖高等研究院），Jun Tang（西湖大学 & 西湖高等研究院），Xiaofei Li（西湖大学 & 西湖高等研究院）
+
+💡 **毒舌点评**
+
+**亮点**：实验设计非常用心，创新性地引入“监控点网格”和“随机网格掩码”训练策略，有效解决了过拟合和泛化性问题，使网络真正学习到空间连续信息，而非仅仅拟合离散控制点。  
+**短板**：网络架构采用了非常成熟的3D ResNet，缺乏针对声学问题本身的结构性创新；此外，所有实验均基于模拟数据，未在真实房间和硬件系统中进行验证，结论的工程实用性仍需打上问号。
+
+📌 **核心摘要**
+
+1.  **问题**：传统个人声区（PSZ）系统依赖于固定的麦克风控制网格来测量声学传递函数（ATF），当目标声场或控制点位置变化时，需要重新测量和计算，这限制了其实际应用的灵活性和便捷性。
+2.  **方法核心**：提出了一种基于3D卷积神经网络（CNN）的端到端模型，该模型以目标声区的ATF（在灵活或稀疏的麦克风网格上采样）为输入，直接输出用于扬声器阵列的预滤波器组。
+3.  **创新性**：与传统压力匹配（PM）等方法相比，该方法在一次训练后，能够同时处理**可变的目标声场**、**灵活的麦克风网格模式**以及**更稀疏的控制点**，显著提升了系统的适应性和轻量化潜力。
+4.  **主要实验结果**：在模拟混响环境中，所提方法在亮区相对均方根误差（REB）和声学对比度（AC）等关键指标上全面优于基线PM方法。例如，在3×3稀疏控制网格（Grid-3#1）下，Neural PSZ的REB为-21.79 dB，远优于PM的-9.67 dB；AC为14.12 dB，也高于PM的9.61 dB（见表1）。图表4和表2显示，其性能在网格变得稀疏时下降缓慢，而PM性能则急剧下降。
+5.  **实际意义**：该工作推动了PSZ技术向更灵活、轻量化的实际应用迈进，使得利用少量麦克风快速部署和切换不同虚拟声学场景成为可能，适用于AR/VR、家庭娱乐等场景。
+6.  **主要局限性**：研究完全基于仿真实验，未涉及真实硬件系统部署；网络架构为通用设计，未探索针对声学问题的特定优化；模型训练细节（如具体迭代次数）和计算开销分析不够详细。
+
+---
+
+### 355. [Diffusion Timbre Transfer via Mutual Information Guided Inpainting](/audio-paper-digest-blog/posts/2026-04-29-diffusion-timbre-transfer-via-mutual-information)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #扩散模型 | #音频生成 #零样本
 
@@ -11789,7 +12283,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 340. [D3PIA: A Discrete Denoising Diffusion Model for Piano Accompaniment Generation from Lead Sheet](/audio-paper-digest-blog/posts/2026-04-29-d3pia-a-discrete-denoising-diffusion-model-for)
+### 356. [D3PIA: A Discrete Denoising Diffusion Model for Piano Accompaniment Generation from Lead Sheet](/audio-paper-digest-blog/posts/2026-04-29-d3pia-a-discrete-denoising-diffusion-model-for)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #扩散模型 | #邻域注意力 #钢琴伴奏
 
@@ -11809,7 +12303,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 341. [Evaluating Disentangled Representations for Controllable Music Generation](/audio-paper-digest-blog/posts/2026-04-29-evaluating-disentangled-representations-for)
+### 357. [Evaluating Disentangled Representations for Controllable Music Generation](/audio-paper-digest-blog/posts/2026-04-29-evaluating-disentangled-representations-for)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #模型评估 | #解纠缠学习 #数据集
 
@@ -11837,7 +12331,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 342. [Aligning Language Models for Lyric-to-Melody Generation with Rule-Based Musical Constraints](/audio-paper-digest-blog/posts/2026-04-29-aligning-language-models-for-lyric-to-melody)
+### 358. [Aligning Language Models for Lyric-to-Melody Generation with Rule-Based Musical Constraints](/audio-paper-digest-blog/posts/2026-04-29-aligning-language-models-for-lyric-to-melody)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #强化学习 | #大语言模型 #自回归模型
 
@@ -11897,7 +12391,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 343. [RHO-PERFECT: Correlation Ceiling for Subjective Evaluation Datasets](/audio-paper-digest-blog/posts/2026-04-29-rho-perfect-correlation-ceiling-for-subjective)
+### 359. [RHO-PERFECT: Correlation Ceiling for Subjective Evaluation Datasets](/audio-paper-digest-blog/posts/2026-04-29-rho-perfect-correlation-ceiling-for-subjective)
 
 ✅ **7.5/10** | 前25% | #模型评估 | #基准测试 | #数据集
 
@@ -11928,7 +12422,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 344. [Multi-Task Learning For Speech Quality Assessment Using ASR-Derived Entropy Features](/audio-paper-digest-blog/posts/2026-04-29-multi-task-learning-for-speech-quality-assessment)
+### 360. [Multi-Task Learning For Speech Quality Assessment Using ASR-Derived Entropy Features](/audio-paper-digest-blog/posts/2026-04-29-multi-task-learning-for-speech-quality-assessment)
 
 ✅ **7.5/10** | 前25% | #语音质量评估 | #多任务学习 | #预训练 #语音增强
 
@@ -11960,7 +12454,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 345. [FUSEMOS: Perceptual Evaluation of Text-to-Music Generation with Dual-Encoder Fusion and Ranking-Aware Composite Loss](/audio-paper-digest-blog/posts/2026-04-29-fusemos-perceptual-evaluation-of-text-to-music)
+### 361. [FUSEMOS: Perceptual Evaluation of Text-to-Music Generation with Dual-Encoder Fusion and Ranking-Aware Composite Loss](/audio-paper-digest-blog/posts/2026-04-29-fusemos-perceptual-evaluation-of-text-to-music)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #多任务学习 | #模型评估 #预训练
 
@@ -11993,7 +12487,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 346. [Joint Deep Secondary Path Estimation and Adaptive Control for Active Noise Cancellation](/audio-paper-digest-blog/posts/2026-04-29-joint-deep-secondary-path-estimation-and-adaptive)
+### 362. [Joint Deep Secondary Path Estimation and Adaptive Control for Active Noise Cancellation](/audio-paper-digest-blog/posts/2026-04-29-joint-deep-secondary-path-estimation-and-adaptive)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #实时处理 #深度学习
 
@@ -12021,7 +12515,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 347. [Learning Domain-Robust Bioacoustic Representations for Mosquito Species Classification with Contrastive Learning and Distribution Alignment](/audio-paper-digest-blog/posts/2026-04-29-learning-domain-robust-bioacoustic)
+### 363. [Learning Domain-Robust Bioacoustic Representations for Mosquito Species Classification with Contrastive Learning and Distribution Alignment](/audio-paper-digest-blog/posts/2026-04-29-learning-domain-robust-bioacoustic)
 
 ✅ **7.5/10** | 前25% | #生物声学 | #对比学习 | #领域适应 #音频分类
 
@@ -12063,7 +12557,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 348. [Unsupervised Discovery and Analysis of the Vocal Repertoires and Patterns of Select Corvid Species](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-discovery-and-analysis-of-the-vocal)
+### 364. [Unsupervised Discovery and Analysis of the Vocal Repertoires and Patterns of Select Corvid Species](/audio-paper-digest-blog/posts/2026-04-29-unsupervised-discovery-and-analysis-of-the-vocal)
 
 ✅ **7.5/10** | 前50% | #生物声学 | #聚类 | #时频分析 #音频分类
 
@@ -12084,7 +12578,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 349. [BioSEN: A Bio-Acoustic Signal Enhancement Network for Animal Vocalizations](/audio-paper-digest-blog/posts/2026-04-29-biosen-a-bio-acoustic-signal-enhancement-network)
+### 365. [BioSEN: A Bio-Acoustic Signal Enhancement Network for Animal Vocalizations](/audio-paper-digest-blog/posts/2026-04-29-biosen-a-bio-acoustic-signal-enhancement-network)
 
 ✅ **7.5/10** | 前25% | #生物声学 | #时频分析 | #模型比较 #数据集
 
@@ -12105,7 +12599,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 350. [BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music](/audio-paper-digest-blog/posts/2026-04-29-bachi-boundary-aware-symbolic-chord-recognition)
+### 366. [BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music](/audio-paper-digest-blog/posts/2026-04-29-bachi-boundary-aware-symbolic-chord-recognition)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #迭代解码 | #符号音乐 #Transformer
 
@@ -12130,7 +12624,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 351. [Controllable Embedding Transformation for Mood-Guided Music Retrieval](/audio-paper-digest-blog/posts/2026-04-29-controllable-embedding-transformation-for-mood)
+### 367. [Controllable Embedding Transformation for Mood-Guided Music Retrieval](/audio-paper-digest-blog/posts/2026-04-29-controllable-embedding-transformation-for-mood)
 
 ✅ **7.5/10** | 前25% | #音乐检索 | #对比学习 | #音乐理解 #嵌入变换
 
@@ -12169,7 +12663,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 352. [An Event-Based Sequence Modeling Approach to Recognizing Non-Triad Chords with Oversegmentation Minimization](/audio-paper-digest-blog/posts/2026-04-29-an-event-based-sequence-modeling-approach-to)
+### 368. [An Event-Based Sequence Modeling Approach to Recognizing Non-Triad Chords with Oversegmentation Minimization](/audio-paper-digest-blog/posts/2026-04-29-an-event-based-sequence-modeling-approach-to)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #自回归模型 | #预训练 #时频分析
 
@@ -12199,7 +12693,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 353. [Beat and Downbeat Detection: A Reformulated Approach](/audio-paper-digest-blog/posts/2026-04-29-beat-and-downbeat-detection-a-reformulated)
+### 369. [Beat and Downbeat Detection: A Reformulated Approach](/audio-paper-digest-blog/posts/2026-04-29-beat-and-downbeat-detection-a-reformulated)
 
 ✅ **7.5/10** | 前25% | #音乐理解 | #端到端模型 | #相位建模 #回归任务
 
@@ -12224,7 +12718,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 354. [Co-Initialization of Control Filter and Secondary Path via Meta-Learning for Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-co-initialization-of-control-filter-and-secondary)
+### 370. [Co-Initialization of Control Filter and Secondary Path via Meta-Learning for Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-co-initialization-of-control-filter-and-secondary)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #元学习 | #信号处理 #少样本学习
 
@@ -12255,7 +12749,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 355. [Natural Language to Spatial Audio Parameters: Lightweight Deterministic Rendering for Creative Authoring](/audio-paper-digest-blog/posts/2026-04-29-natural-language-to-spatial-audio-parameters)
+### 371. [Natural Language to Spatial Audio Parameters: Lightweight Deterministic Rendering for Creative Authoring](/audio-paper-digest-blog/posts/2026-04-29-natural-language-to-spatial-audio-parameters)
 
 ✅ **7.5/10** | 前25% | #空间音频 | #回归模型 | #多语言 #跨模态
 
@@ -12292,7 +12786,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 356. [Hierarchical Activity Recognition and Captioning from Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-activity-recognition-and-captioning)
+### 372. [Hierarchical Activity Recognition and Captioning from Long-Form Audio](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-activity-recognition-and-captioning)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #多任务学习 | #音频分类 #预训练
 
@@ -12321,7 +12815,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 357. [From Contrast to Commonality: Audio Commonality Captioning for Enhanced Audio-Text Cross-Modal Understanding in Multimodal LLMS](/audio-paper-digest-blog/posts/2026-04-29-from-contrast-to-commonality-audio-commonality)
+### 373. [From Contrast to Commonality: Audio Commonality Captioning for Enhanced Audio-Text Cross-Modal Understanding in Multimodal LLMS](/audio-paper-digest-blog/posts/2026-04-29-from-contrast-to-commonality-audio-commonality)
 
 ✅ **7.5/10** | 前25% | #音频场景理解 | #多任务学习 | #跨模态 #音频大模型
 
@@ -12341,7 +12835,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 358. [Improving Audio Question Answering with Variational Inference](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-question-answering-with)
+### 374. [Improving Audio Question Answering with Variational Inference](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-question-answering-with)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #变分推断 | #音频大模型 #模型校准
 
@@ -12370,7 +12864,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 359. [One Model–Three Tasks: Discovering a Shared Winning Ticket for Low-Complexity Audio Intelligence](/audio-paper-digest-blog/posts/2026-04-29-one-modelthree-tasks-discovering-a-shared-winning)
+### 375. [One Model–Three Tasks: Discovering a Shared Winning Ticket for Low-Complexity Audio Intelligence](/audio-paper-digest-blog/posts/2026-04-29-one-modelthree-tasks-discovering-a-shared-winning)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #多任务学习 #彩票假设 | #多任务学习 #彩票假设
 
@@ -12421,7 +12915,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 360. [From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding](/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model)
+### 376. [From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding](/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #知识蒸馏 | #自监督学习 #低资源
 
@@ -12461,7 +12955,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 361. [Salad-VAE: Semantic Audio Compression with Language-Audio Distillation](/audio-paper-digest-blog/posts/2026-04-29-salad-vae-semantic-audio-compression-with)
+### 377. [Salad-VAE: Semantic Audio Compression with Language-Audio Distillation](/audio-paper-digest-blog/posts/2026-04-29-salad-vae-semantic-audio-compression-with)
 
 ✅ **7.5/10** | 前25% | #音频压缩 | #变分自编码器 | #对比学习 #知识蒸馏
 
@@ -12500,7 +12994,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 362. [Auden-Voice: General-Purpose Voice Encoder for Speech and Language Understanding](/audio-paper-digest-blog/posts/2026-04-29-auden-voice-general-purpose-voice-encoder-for)
+### 378. [Auden-Voice: General-Purpose Voice Encoder for Speech and Language Understanding](/audio-paper-digest-blog/posts/2026-04-29-auden-voice-general-purpose-voice-encoder-for)
 
 ✅ **7.5/10** | 前25% | #语音编码器 | #多任务学习 | #说话人识别 #副语言理解
 
@@ -12528,7 +13022,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 363. [Enhancing Noise Robustness for Neural Speech Codecs Through Resource-Efficient Progressive Quantization Perturbation Simulation](/audio-paper-digest-blog/posts/2026-04-29-enhancing-noise-robustness-for-neural-speech)
+### 379. [Enhancing Noise Robustness for Neural Speech Codecs Through Resource-Efficient Progressive Quantization Perturbation Simulation](/audio-paper-digest-blog/posts/2026-04-29-enhancing-noise-robustness-for-neural-speech)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #数据增强 | #鲁棒性 #自监督学习
 
@@ -12560,7 +13054,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 364. [Testing The Efficient Coding Hypothesis Beyond Humans: The Auditory Kernels of Bat Vocalizations](/audio-paper-digest-blog/posts/2026-04-29-testing-the-efficient-coding-hypothesis-beyond)
+### 380. [Testing The Efficient Coding Hypothesis Beyond Humans: The Auditory Kernels of Bat Vocalizations](/audio-paper-digest-blog/posts/2026-04-29-testing-the-efficient-coding-hypothesis-beyond)
 
 ✅ **7.5/10** | 前25% | #生物声学 | #稀疏编码 | #信号处理 #音频分类
 
@@ -12585,7 +13079,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 365. [Low-Bandwidth High-Fidelity Speech Transmission with Generative Latent Joint Source-Channel Coding](/audio-paper-digest-blog/posts/2026-04-29-low-bandwidth-high-fidelity-speech-transmission)
+### 381. [Low-Bandwidth High-Fidelity Speech Transmission with Generative Latent Joint Source-Channel Coding](/audio-paper-digest-blog/posts/2026-04-29-low-bandwidth-high-fidelity-speech-transmission)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #语义通信 #生成对抗网络
 
@@ -12610,7 +13104,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 366. [CodeSep: Low-Bitrate Codec-Driven Speech Separation with Base-Token Disentanglement and Auxiliary-Token Serial Prediction](/audio-paper-digest-blog/posts/2026-04-29-codesep-low-bitrate-codec-driven-speech)
+### 382. [CodeSep: Low-Bitrate Codec-Driven Speech Separation with Base-Token Disentanglement and Auxiliary-Token Serial Prediction](/audio-paper-digest-blog/posts/2026-04-29-codesep-low-bitrate-codec-driven-speech)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #多任务学习 | #语音编码 #音频编解码
 
@@ -12662,7 +13156,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 367. [From Diet to Free Lunch: Estimating Auxiliary Signal Properties Using Dynamic Pruning Masks in Speech Enhancement Networks](/audio-paper-digest-blog/posts/2026-04-29-from-diet-to-free-lunch-estimating-auxiliary)
+### 383. [From Diet to Free Lunch: Estimating Auxiliary Signal Properties Using Dynamic Pruning Masks in Speech Enhancement Networks](/audio-paper-digest-blog/posts/2026-04-29-from-diet-to-free-lunch-estimating-auxiliary)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #多任务学习 | #语音活动检测 #动态网络
 
@@ -12698,7 +13192,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 368. [SLM-SS: Speech Language Model for Generative Speech Separation](/audio-paper-digest-blog/posts/2026-04-29-slm-ss-speech-language-model-for-generative)
+### 384. [SLM-SS: Speech Language Model for Generative Speech Separation](/audio-paper-digest-blog/posts/2026-04-29-slm-ss-speech-language-model-for-generative)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #自回归模型 | #语音大模型 #语音增强
 
@@ -12732,7 +13226,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 369. [RFM-Editing: Rectified Flow Matching for Text-Guided Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-rfm-editing-rectified-flow-matching-for-text)
+### 385. [RFM-Editing: Rectified Flow Matching for Text-Guided Audio Editing](/audio-paper-digest-blog/posts/2026-04-29-rfm-editing-rectified-flow-matching-for-text)
 
 ✅ **7.5/10** | 前25% | #音频编辑 | #流匹配 | #扩散模型 #数据集
 
@@ -12757,7 +13251,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 370. [Mix2Morph: Learning Sound Morphing from Noisy Mixes](/audio-paper-digest-blog/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes)
+### 386. [Mix2Morph: Learning Sound Morphing from Noisy Mixes](/audio-paper-digest-blog/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #数据增强 #模型评估
 
@@ -12783,7 +13277,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 371. [Generative Audio Extension and Morphing](/audio-paper-digest-blog/posts/2026-04-29-generative-audio-extension-and-morphing)
+### 387. [Generative Audio Extension and Morphing](/audio-paper-digest-blog/posts/2026-04-29-generative-audio-extension-and-morphing)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #数据集 #音频编辑
 
@@ -12821,7 +13315,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 372. [FlashFoley: Fast Interactive Sketch2audio Generation](/audio-paper-digest-blog/posts/2026-04-29-flashfoley-fast-interactive-sketch2audio)
+### 388. [FlashFoley: Fast Interactive Sketch2audio Generation](/audio-paper-digest-blog/posts/2026-04-29-flashfoley-fast-interactive-sketch2audio)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #流匹配 | #对抗训练 #实时处理
 
@@ -12859,7 +13353,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 373. [Representation-Based Data Quality Audits for Audio](/audio-paper-digest-blog/posts/2026-04-29-representation-based-data-quality-audits-for-audio)
+### 389. [Representation-Based Data Quality Audits for Audio](/audio-paper-digest-blog/posts/2026-04-29-representation-based-data-quality-audits-for-audio)
 
 ✅ **7.5/10** | 前25% | #数据集 | #自监督学习 #对比学习 | #自监督学习 #对比学习
 
@@ -12894,7 +13388,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 374. [SynParaSpeech: Automated Synthesis of Paralinguistic Datasets for Speech Generation and Understanding](/audio-paper-digest-blog/posts/2026-04-29-synparaspeech-automated-synthesis-of)
+### 390. [SynParaSpeech: Automated Synthesis of Paralinguistic Datasets for Speech Generation and Understanding](/audio-paper-digest-blog/posts/2026-04-29-synparaspeech-automated-synthesis-of)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #数据增强 | #数据集 #语音活动检测
 
@@ -12932,7 +13426,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 375. [LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR](/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for)
+### 391. [LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR](/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #数据集 | #远场语音 #迁移学习
 
@@ -12980,7 +13474,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 376. [A Dataset of Robot-Patient and Doctor-Patient Medical Dialogues for Spoken Language Processing Tasks](/audio-paper-digest-blog/posts/2026-04-29-a-dataset-of-robot-patient-and-doctor-patient)
+### 392. [A Dataset of Robot-Patient and Doctor-Patient Medical Dialogues for Spoken Language Processing Tasks](/audio-paper-digest-blog/posts/2026-04-29-a-dataset-of-robot-patient-and-doctor-patient)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #数据集 | #大语言模型 #模型评估
 
@@ -13015,7 +13509,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 377. [TAU: A Benchmark for Cultural Sound Understanding Beyond Semantics](/audio-paper-digest-blog/posts/2026-04-29-tau-a-benchmark-for-cultural-sound-understanding)
+### 393. [TAU: A Benchmark for Cultural Sound Understanding Beyond Semantics](/audio-paper-digest-blog/posts/2026-04-29-tau-a-benchmark-for-cultural-sound-understanding)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #基准测试 | #数据集 #模型评估
 
@@ -13052,7 +13546,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 378. [Beamforming Using Virtual Microphones for Hearing Aid Applications](/audio-paper-digest-blog/posts/2026-04-29-beamforming-using-virtual-microphones-for-hearing)
+### 394. [Beamforming Using Virtual Microphones for Hearing Aid Applications](/audio-paper-digest-blog/posts/2026-04-29-beamforming-using-virtual-microphones-for-hearing)
 
 ✅ **7.5/10** | 前50% | #语音增强 | #波束成形 | #麦克风阵列 #助听器
 
@@ -13072,7 +13566,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 379. [Malefa: Multi-Granularity Learning and Effective False Alarm Suppression for Zero-Shot Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-malefa-multi-granularity-learning-and-effective)
+### 395. [Malefa: Multi-Granularity Learning and Effective False Alarm Suppression for Zero-Shot Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-malefa-multi-granularity-learning-and-effective)
 
 ✅ **7.5/10** | 前25% | #零样本关键词检测 | #对比学习 #多任务学习 | #对比学习 #多任务学习
 
@@ -13097,7 +13591,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 380. [I-DCCRN-VAE: An Improved Deep Representation Learning Framework for Complex VAE-Based Single-Channel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-i-dccrn-vae-an-improved-deep-representation)
+### 396. [I-DCCRN-VAE: An Improved Deep Representation Learning Framework for Complex VAE-Based Single-Channel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-i-dccrn-vae-an-improved-deep-representation)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #变分自编码器 | #预训练 #鲁棒性
 
@@ -13134,7 +13628,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 381. [Domain Partitioning Meets Parameter-Efficient Fine-Tuning: A Novel Method for Improved Language-Queried Audio Source Separation](/audio-paper-digest-blog/posts/2026-04-29-domain-partitioning-meets-parameter-efficient)
+### 397. [Domain Partitioning Meets Parameter-Efficient Fine-Tuning: A Novel Method for Improved Language-Queried Audio Source Separation](/audio-paper-digest-blog/posts/2026-04-29-domain-partitioning-meets-parameter-efficient)
 
 ✅ **7.5/10** | 前50% | #音频分离 | #参数高效微调 | #领域适应 #预训练
 
@@ -13170,7 +13664,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 382. [VM-UNSSOR: Unsupervised Neural Speech Separation Enhanced by Higher-SNR Virtual Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-vm-unssor-unsupervised-neural-speech-separation)
+### 398. [VM-UNSSOR: Unsupervised Neural Speech Separation Enhanced by Higher-SNR Virtual Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-vm-unssor-unsupervised-neural-speech-separation)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #麦克风阵列 | #无监督学习
 
@@ -13201,7 +13695,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 383. [Do We Need EMA for Diffusion-Based Speech Enhancement? Toward A Magnitude-Preserving Network Architecture](/audio-paper-digest-blog/posts/2026-04-29-do-we-need-ema-for-diffusion-based-speech)
+### 399. [Do We Need EMA for Diffusion-Based Speech Enhancement? Toward A Magnitude-Preserving Network Architecture](/audio-paper-digest-blog/posts/2026-04-29-do-we-need-ema-for-diffusion-based-speech)
 
 ✅ **7.5/10** | 前50% | #语音增强 | #扩散模型 | #Schrödinger桥 #幅度保持
 
@@ -13227,7 +13721,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 384. [Hair Noise Analysis and Mitigation for Smart Glasses Audio Captures](/audio-paper-digest-blog/posts/2026-04-29-hair-noise-analysis-and-mitigation-for-smart)
+### 400. [Hair Noise Analysis and Mitigation for Smart Glasses Audio Captures](/audio-paper-digest-blog/posts/2026-04-29-hair-noise-analysis-and-mitigation-for-smart)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #信号处理 | #麦克风阵列 #音频分类
 
@@ -13261,7 +13755,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 385. [SoundCompass: Navigating Target Sound Extraction with Effective Directional Clue Integration in Complex Acoustic Scenes](/audio-paper-digest-blog/posts/2026-04-29-soundcompass-navigating-target-sound-extraction)
+### 401. [SoundCompass: Navigating Target Sound Extraction with Effective Directional Clue Integration in Complex Acoustic Scenes](/audio-paper-digest-blog/posts/2026-04-29-soundcompass-navigating-target-sound-extraction)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #麦克风阵列 | #信号处理 #多通道
 
@@ -13281,7 +13775,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 386. [AMBISONIC-DML: A Benchmark Dataset for Dynamic Higher-Order Ambisonics Music with Motion-Aligned Stems](/audio-paper-digest-blog/posts/2026-04-29-ambisonic-dml-a-benchmark-dataset-for-dynamic)
+### 402. [AMBISONIC-DML: A Benchmark Dataset for Dynamic Higher-Order Ambisonics Music with Motion-Aligned Stems](/audio-paper-digest-blog/posts/2026-04-29-ambisonic-dml-a-benchmark-dataset-for-dynamic)
 
 ✅ **7.5/10** | 前25% | #数据集 | #信号处理 | #空间音频 #基准测试
 
@@ -13306,7 +13800,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 387. [TinyMU: A Compact Audio-Language Model for Music Understanding](/audio-paper-digest-blog/posts/2026-04-29-tinymu-a-compact-audio-language-model-for-music)
+### 403. [TinyMU: A Compact Audio-Language Model for Music Understanding](/audio-paper-digest-blog/posts/2026-04-29-tinymu-a-compact-audio-language-model-for-music)
 
 ✅ **7.5/10** | 前25% | #音乐理解 | #多模态模型 | #自监督学习 #数据集
 
@@ -13335,7 +13829,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 388. [MIDI-LLaMA: An Instruction-Following Multimodal LLM for Symbolic Music Understanding](/audio-paper-digest-blog/posts/2026-04-29-midi-llama-an-instruction-following-multimodal)
+### 404. [MIDI-LLaMA: An Instruction-Following Multimodal LLM for Symbolic Music Understanding](/audio-paper-digest-blog/posts/2026-04-29-midi-llama-an-instruction-following-multimodal)
 
 ✅ **7.5/10** | 前10% | #音乐理解 | #多模态模型 | #大语言模型 #指令微调
 
@@ -13372,7 +13866,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 389. [Fine-Tuning Bigvgan-V2 for Robust Musical Tuning Preservation](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-bigvgan-v2-for-robust-musical-tuning)
+### 405. [Fine-Tuning Bigvgan-V2 for Robust Musical Tuning Preservation](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-bigvgan-v2-for-robust-musical-tuning)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #领域适应 | #数据增强 #声码器
 
@@ -13392,7 +13886,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 390. [StylePitcher: Generating Style-Following and Expressive Pitch Curves for Versatile Singing Tasks](/audio-paper-digest-blog/posts/2026-04-29-stylepitcher-generating-style-following-and)
+### 406. [StylePitcher: Generating Style-Following and Expressive Pitch Curves for Versatile Singing Tasks](/audio-paper-digest-blog/posts/2026-04-29-stylepitcher-generating-style-following-and)
 
 ✅ **7.5/10** | 前25% | #歌唱语音合成 | #流匹配 | #音频生成 #语音转换
 
@@ -13429,7 +13923,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 391. [Mitigating Data Replication in Text-to-Audio Generative Diffusion Models Through Anti-Memorization Guidance](/audio-paper-digest-blog/posts/2026-04-29-mitigating-data-replication-in-text-to-audio)
+### 407. [Mitigating Data Replication in Text-to-Audio Generative Diffusion Models Through Anti-Memorization Guidance](/audio-paper-digest-blog/posts/2026-04-29-mitigating-data-replication-in-text-to-audio)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #音频安全
 
@@ -13457,7 +13951,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 392. [LenslessMic: Audio Encryption and Authentication via Lensless Computational Imaging](/audio-paper-digest-blog/posts/2026-04-29-lenslessmic-audio-encryption-and-authentication)
+### 408. [LenslessMic: Audio Encryption and Authentication via Lensless Computational Imaging](/audio-paper-digest-blog/posts/2026-04-29-lenslessmic-audio-encryption-and-authentication)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #无透镜成像 | #神经音频编码 #音频分类
 
@@ -13482,7 +13976,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 393. [Are Modern Speech Enhancement Systems Vulnerable to Adversarial Attacks?](/audio-paper-digest-blog/posts/2026-04-29-are-modern-speech-enhancement-systems-vulnerable)
+### 409. [Are Modern Speech Enhancement Systems Vulnerable to Adversarial Attacks?](/audio-paper-digest-blog/posts/2026-04-29-are-modern-speech-enhancement-systems-vulnerable)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #对抗样本 | #扩散模型 #鲁棒性
 
@@ -13507,7 +14001,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 394. [Few-Shot Recognition of Audio Deepfake Generators using Graph-Based Prototype Adaptation](/audio-paper-digest-blog/posts/2026-04-29-few-shot-recognition-of-audio-deepfake-generators)
+### 410. [Few-Shot Recognition of Audio Deepfake Generators using Graph-Based Prototype Adaptation](/audio-paper-digest-blog/posts/2026-04-29-few-shot-recognition-of-audio-deepfake-generators)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #图神经网络 | #少样本学习 #音频取证
 
@@ -13532,7 +14026,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 395. [Bloodroot: When Watermarking Turns Poisonous for Stealthy Backdoor](/audio-paper-digest-blog/posts/2026-04-29-bloodroot-when-watermarking-turns-poisonous-for)
+### 411. [Bloodroot: When Watermarking Turns Poisonous for Stealthy Backdoor](/audio-paper-digest-blog/posts/2026-04-29-bloodroot-when-watermarking-turns-poisonous-for)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #水印 | #鲁棒性
 
@@ -13563,7 +14057,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 396. [LLAC: Learned Lossless Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec)
+### 412. [LLAC: Learned Lossless Audio Codec](/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec)
 
 ✅ **7.5/10** | 前25% | #音频无损编码 | #生成模型 | #模型评估
 
@@ -13592,7 +14086,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 397. [UJCodec: An End-to-end Unet-Style Codec for Joint Speech Compression and Enhancement](/audio-paper-digest-blog/posts/2026-04-29-ujcodec-an-end-to-end-unet-style-codec-for-joint)
+### 413. [UJCodec: An End-to-end Unet-Style Codec for Joint Speech Compression and Enhancement](/audio-paper-digest-blog/posts/2026-04-29-ujcodec-an-end-to-end-unet-style-codec-for-joint)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #低资源 #实时处理
 
@@ -13617,7 +14111,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 398. [Audio Deepfake Detection at the First Greeting: "Hi!"](/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi)
+### 414. [Audio Deepfake Detection at the First Greeting: "Hi!"](/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #时频分析 | #端到端 #鲁棒性
 
@@ -13658,7 +14152,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 399. [Adversarial Defense via Generative Speech Enhancement Module](/audio-paper-digest-blog/posts/2026-04-29-adversarial-defense-via-generative-speech)
+### 415. [Adversarial Defense via Generative Speech Enhancement Module](/audio-paper-digest-blog/posts/2026-04-29-adversarial-defense-via-generative-speech)
 
 ✅ **7.5/10** | 前25% | #语音增强 #对抗防御 | #语音增强 #数据增强 | #语音增强 #对抗防御
 
@@ -13678,7 +14172,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 400. [Dissecting Performance Degradation in Audio Source Separation under Sampling Frequency Mismatch](/audio-paper-digest-blog/posts/2026-04-29-dissecting-performance-degradation-in-audio)
+### 416. [Dissecting Performance Degradation in Audio Source Separation under Sampling Frequency Mismatch](/audio-paper-digest-blog/posts/2026-04-29-dissecting-performance-degradation-in-audio)
 
 ✅ **7.5/10** | 前25% | #音乐源分离 | #信号处理 | #鲁棒性 #数据增强
 
@@ -13703,7 +14197,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 401. [Class-Aware Permutation-Invariant Signal-to-Distortion Ratio for Semantic Segmentation of Sound Scene with Same-Class Sources](/audio-paper-digest-blog/posts/2026-04-29-class-aware-permutation-invariant-signal-to)
+### 417. [Class-Aware Permutation-Invariant Signal-to-Distortion Ratio for Semantic Segmentation of Sound Scene with Same-Class Sources](/audio-paper-digest-blog/posts/2026-04-29-class-aware-permutation-invariant-signal-to)
 
 ✅ **7.5/10** | 前25% | #音频场景理解 | #多任务学习 | #置换不变训练 #空间音频
 
@@ -13731,7 +14225,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 402. [Spatial Covariance Matrix Reconstruction for Speech Enhancement in Reverberant Multi-Source Environments](/audio-paper-digest-blog/posts/2026-04-29-spatial-covariance-matrix-reconstruction-for)
+### 418. [Spatial Covariance Matrix Reconstruction for Speech Enhancement in Reverberant Multi-Source Environments](/audio-paper-digest-blog/posts/2026-04-29-spatial-covariance-matrix-reconstruction-for)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #麦克风阵列 | #波束成形 #空间音频
 
@@ -13755,7 +14249,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 403. [Refgen: Reference-Guided Synthetic Data Generation for Anomalous Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-refgen-reference-guided-synthetic-data-generation)
+### 419. [Refgen: Reference-Guided Synthetic Data Generation for Anomalous Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-refgen-reference-guided-synthetic-data-generation)
 
 ✅ **7.5/10** | 前25% | #音频事件检测 | #流匹配 | #数据增强 #工业应用
 
@@ -13789,7 +14283,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 404. [Timbre-Aware Audio Difference Captioning for Anomalous Machine Sounds without Paired Training Data via Synthetic Perturbations](/audio-paper-digest-blog/posts/2026-04-29-timbre-aware-audio-difference-captioning-for)
+### 420. [Timbre-Aware Audio Difference Captioning for Anomalous Machine Sounds without Paired Training Data via Synthetic Perturbations](/audio-paper-digest-blog/posts/2026-04-29-timbre-aware-audio-difference-captioning-for)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #数据增强 | #音色分析 #异常检测
 
@@ -13814,7 +14308,27 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 405. [Learning Linearity in Audio Consistency Autoencoders via Implicit Regularization](/audio-paper-digest-blog/posts/2026-04-29-learning-linearity-in-audio-consistency)
+### 421. [Tldiffgan: A Latent Diffusion-Gan Framework with Temporal Information Fusion for Anomalous Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-tldiffgan-a-latent-diffusion-gan-framework-with)
+
+前25% | #音频事件检测 | #扩散模型 | #生成模型 #预训练
+
+👥 **作者与机构**
+
+- 第一作者：Chengyuan Ma (清华大学深圳国际研究生院)
+- 通讯作者：Wenming Yang (清华大学深圳国际研究生院)
+- 作者列表：Chengyuan Ma (清华大学深圳国际研究生院)， Peng Jia (大连海事大学交通运输协同创新中心)， Hongyue Guo (大连海事大学交通运输协同创新中心)， Wenming Yang (清华大学深圳国际研究生院)
+
+💡 **毒舌点评**
+
+论文在框架设计上确实展现了巧妙的组合能力，通过双分支结构（LDGAN重建+预训练编码器嵌入）有效融合了频谱图和波形两种互补信息源，并通过精心的消融实验证实了各模块的有效性。然而，其创新更多是将已有的强大组件（潜在扩散模型、GAN、预训练音频模型）进行整合与适配，而非提出全新的核心算法；此外，所有实验仅在单一基准数据集（DCASE 2020 Task 2）上进行，虽然性能优越，但缺乏在更多样化场景或最新数据集上的验证，限制了结论的泛化说服力。
+
+📌 **核心摘要**
+
+本文针对无监督异常声音检测（ASD）中生成模型难以完全捕捉正常声音复杂分布的问题，提出了一个名为TLDiffGAN的新框架。该框架包含两个互补分支：一个分支将潜在扩散模型（LDM）整合到GAN的生成器中（称为LDGAN），通过对抗训练提高生成质量和训练稳定性；另一个分支利用预训练的音频模型编码器直接从原始波形提取特征，以弥补Mel频谱图可能丢失的信息。此外，论文引入了一种自适应时间混合（TMixup）增强技术，通过注意力机制增强模型对局部时间模式的敏感性。在DCASE 2020 Challenge Task 2数据集上的大量实验表明，TLDiffGAN在平均AUC（88.60%）和pAUC（74.35%）上均优于其他主流生成模型（如AEGAN-AD、ASD-Diffusion），并具备优秀的异常时频定位能力。该工作的实际意义在于提升了工业设备声音监控中异常检测的性能和可解释性。其主要局限性在于评估完全基于单个数据集，且依赖多个经典的异常检测算法进行最终决策。
+
+---
+
+### 422. [Learning Linearity in Audio Consistency Autoencoders via Implicit Regularization](/audio-paper-digest-blog/posts/2026-04-29-learning-linearity-in-audio-consistency)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #音乐生成 #数据增强
 
@@ -13842,7 +14356,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 406. [Contrastive Timbre Representations for Musical Instrument And Synthesizer Retrieval](/audio-paper-digest-blog/posts/2026-04-29-contrastive-timbre-representations-for-musical)
+### 423. [Contrastive Timbre Representations for Musical Instrument And Synthesizer Retrieval](/audio-paper-digest-blog/posts/2026-04-29-contrastive-timbre-representations-for-musical)
 
 ✅ **7.5/10** | 前25% | #音频检索 | #对比学习 | #预训练 #数据增强
 
@@ -13880,7 +14394,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 407. [Spring Reverb Emulation with Hybrid Gated Convolutional Networks and State Space Models](/audio-paper-digest-blog/posts/2026-04-29-spring-reverb-emulation-with-hybrid-gated)
+### 424. [Spring Reverb Emulation with Hybrid Gated Convolutional Networks and State Space Models](/audio-paper-digest-blog/posts/2026-04-29-spring-reverb-emulation-with-hybrid-gated)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #状态空间模型 | #门控卷积网络 #实时处理
 
@@ -13931,7 +14445,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 408. [Training-Free Inference-Time Scaling for Audio Source Separation](/audio-paper-digest-blog/posts/2026-04-29-training-free-inference-time-scaling-for-audio)
+### 425. [Training-Free Inference-Time Scaling for Audio Source Separation](/audio-paper-digest-blog/posts/2026-04-29-training-free-inference-time-scaling-for-audio)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #预训练 | #音乐源分离 #数据增强
 
@@ -13974,7 +14488,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 409. [Off-The-Grid Multi-Pitch Estimation Using Optimal Transport](/audio-paper-digest-blog/posts/2026-04-29-off-the-grid-multi-pitch-estimation-using-optimal)
+### 426. [Off-The-Grid Multi-Pitch Estimation Using Optimal Transport](/audio-paper-digest-blog/posts/2026-04-29-off-the-grid-multi-pitch-estimation-using-optimal)
 
 ✅ **7.5/10** | 前25% | #音乐信息检索 | #信号处理 | #鲁棒性 #优化算法
 
@@ -14008,7 +14522,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 410. [Forward Convolutive Prediction for Frame Online Monaural Speech Dereverberation based on Kronecker Product Decomposition](/audio-paper-digest-blog/posts/2026-04-29-forward-convolutive-prediction-for-frame-online)
+### 427. [Forward Convolutive Prediction for Frame Online Monaural Speech Dereverberation based on Kronecker Product Decomposition](/audio-paper-digest-blog/posts/2026-04-29-forward-convolutive-prediction-for-frame-online)
 
 ✅ **7.5/10** | 前50% | #语音增强 | #信号处理 | #Kronecker分解 #在线处理
 
@@ -14028,7 +14542,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 411. [Random Matrix-Driven Graph Representation Learning For Bioacoustic Recognition](/audio-paper-digest-blog/posts/2026-04-29-random-matrix-driven-graph-representation)
+### 428. [Random Matrix-Driven Graph Representation Learning For Bioacoustic Recognition](/audio-paper-digest-blog/posts/2026-04-29-random-matrix-driven-graph-representation)
 
 ✅ **7.5/10** | 前25% | #生物声学 | #图表示学习 | #时频分析 #鲁棒性
 
@@ -14053,7 +14567,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 412. [StereoFoley: Object-Aware Stereo Audio Generation from Video](/audio-paper-digest-blog/posts/2026-04-29-stereofoley-object-aware-stereo-audio-generation)
+### 429. [StereoFoley: Object-Aware Stereo Audio Generation from Video](/audio-paper-digest-blog/posts/2026-04-29-stereofoley-object-aware-stereo-audio-generation)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #空间音频 #跨模态
 
@@ -14080,7 +14594,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 413. [Learning What to Hear: Boosting Sound-Source Association for Robust Audiovisual Instance Segmentation](/audio-paper-digest-blog/posts/2026-04-29-learning-what-to-hear-boosting-sound-source)
+### 430. [Learning What to Hear: Boosting Sound-Source Association for Robust Audiovisual Instance Segmentation](/audio-paper-digest-blog/posts/2026-04-29-learning-what-to-hear-boosting-sound-source)
 
 ✅ **7.5/10** | 前25% | #音视频实例分割 | #查询学习 | #多模态模型 #注意力机制
 
@@ -14105,7 +14619,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 414. [Efficient Audio-Visual Inference Via Token Clustering And Modality Fusion](/audio-paper-digest-blog/posts/2026-04-29-efficient-audio-visual-inference-via-token)
+### 431. [Efficient Audio-Visual Inference Via Token Clustering And Modality Fusion](/audio-paper-digest-blog/posts/2026-04-29-efficient-audio-visual-inference-via-token)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #音频大模型 #多模态模型 | #音视频 #多模态模型
 
@@ -14143,7 +14657,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 415. [V2A-DPO: Omni-Preference Optimization for Video-To-Audio Generation](/audio-paper-digest-blog/posts/2026-04-29-v2a-dpo-omni-preference-optimization-for-video-to)
+### 432. [V2A-DPO: Omni-Preference Optimization for Video-To-Audio Generation](/audio-paper-digest-blog/posts/2026-04-29-v2a-dpo-omni-preference-optimization-for-video-to)
 
 ✅ **7.5/10** | 前25% | #视频到音频生成 | #直接偏好优化 | #音视频 #流匹配
 
@@ -14163,7 +14677,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 416. [AudioGen-Omni: A Unified Multimodal Diffusion Transformer for Video-Synchronized Audio, Speech, and Song Generation](/audio-paper-digest-blog/posts/2026-04-29-audiogen-omni-a-unified-multimodal-diffusion)
+### 433. [AudioGen-Omni: A Unified Multimodal Diffusion Transformer for Video-Synchronized Audio, Speech, and Song Generation](/audio-paper-digest-blog/posts/2026-04-29-audiogen-omni-a-unified-multimodal-diffusion)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #多模态模型 | #语音合成 #扩散模型
 
@@ -14189,7 +14703,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 417. [Asynchrony-Aware Decoupled Multimodal Control for Cued Speech Video Generation](/audio-paper-digest-blog/posts/2026-04-29-asynchrony-aware-decoupled-multimodal-control-for)
+### 434. [Asynchrony-Aware Decoupled Multimodal Control for Cued Speech Video Generation](/audio-paper-digest-blog/posts/2026-04-29-asynchrony-aware-decoupled-multimodal-control-for)
 
 ✅ **7.5/10** | 前10% | #语音合成 | #扩散模型 | #流匹配 #音视频
 
@@ -14214,7 +14728,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 418. [Visual Keys to Symphonies: Latent Diffusion for Multi-Scene Video-to-Music Generation](/audio-paper-digest-blog/posts/2026-04-29-visual-keys-to-symphonies-latent-diffusion-for)
+### 435. [Visual Keys to Symphonies: Latent Diffusion for Multi-Scene Video-to-Music Generation](/audio-paper-digest-blog/posts/2026-04-29-visual-keys-to-symphonies-latent-diffusion-for)
 
 ✅ **7.5/10** | 前25% | #音乐生成 | #扩散模型 | #跨模态 #数据集
 
@@ -14239,7 +14753,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 419. [SightSound-R1: Cross-Modal Reasoning Distillation from Vision to Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-sightsound-r1-cross-modal-reasoning-distillation)
+### 436. [SightSound-R1: Cross-Modal Reasoning Distillation from Vision to Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-sightsound-r1-cross-modal-reasoning-distillation)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #知识蒸馏 | #多模态模型 #迁移学习
 
@@ -14264,7 +14778,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 420. [Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts](/audio-paper-digest-blog/posts/2026-04-29-interpretable-music-harmonic-analysis-through)
+### 437. [Interpretable Music Harmonic Analysis Through Multilinear Mixture of Experts](/audio-paper-digest-blog/posts/2026-04-29-interpretable-music-harmonic-analysis-through)
 
 ✅ **7.5/10** | 前25% | #音乐理解 | #混合专家模型 | #模型评估 #音乐信息检索
 
@@ -14292,7 +14806,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 421. [Leveraging prediction entropy for Automatic prompt weighting in Zero-Shot Audio-Language Classification](/audio-paper-digest-blog/posts/2026-04-29-leveraging-prediction-entropy-for-automatic)
+### 438. [Leveraging prediction entropy for Automatic prompt weighting in Zero-Shot Audio-Language Classification](/audio-paper-digest-blog/posts/2026-04-29-leveraging-prediction-entropy-for-automatic)
 
 ✅ **7.5/10** | 前25% | #音频分类 | #零样本 | #多模态模型 #基准测试
 
@@ -14336,7 +14850,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 422. [MeanFlowSE: One-Step Generative Speech Enhancement via Conditional Mean Flow](/audio-paper-digest-blog/posts/2026-04-29-meanflowse-one-step-generative-speech-enhancement)
+### 439. [MeanFlowSE: One-Step Generative Speech Enhancement via Conditional Mean Flow](/audio-paper-digest-blog/posts/2026-04-29-meanflowse-one-step-generative-speech-enhancement)
 
 ✅ **7.5/10** | 前10% | #语音增强 | #流匹配 | #实时处理 #生成模型
 
@@ -14362,7 +14876,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 423. [FlowSE-GRPO: Training Flow Matching Speech Enhancement via Online Reinforcement Learning](/audio-paper-digest-blog/posts/2026-04-29-flowse-grpo-training-flow-matching-speech)
+### 440. [FlowSE-GRPO: Training Flow Matching Speech Enhancement via Online Reinforcement Learning](/audio-paper-digest-blog/posts/2026-04-29-flowse-grpo-training-flow-matching-speech)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #强化学习 | #流匹配 #迁移学习
 
@@ -14395,7 +14909,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 424. [Aligning Generative Speech Enhancement with Perceptual Feedback](/audio-paper-digest-blog/posts/2026-04-29-aligning-generative-speech-enhancement-with)
+### 441. [Aligning Generative Speech Enhancement with Perceptual Feedback](/audio-paper-digest-blog/posts/2026-04-29-aligning-generative-speech-enhancement-with)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #强化学习 | #语音大模型 #基准测试
 
@@ -14438,7 +14952,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 425. [PG-SE: Predictive Acceleration and Correction for Generative Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-pg-se-predictive-acceleration-and-correction-for)
+### 442. [PG-SE: Predictive Acceleration and Correction for Generative Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-pg-se-predictive-acceleration-and-correction-for)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #扩散模型 | #生成模型 #预测模型
 
@@ -14463,7 +14977,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 426. [MECap-R1: Emotion-Aware Policy with Reinforcement Learning for Multimodal Emotion Captioning](/audio-paper-digest-blog/posts/2026-04-29-mecap-r1-emotion-aware-policy-with-reinforcement)
+### 443. [MECap-R1: Emotion-Aware Policy with Reinforcement Learning for Multimodal Emotion Captioning](/audio-paper-digest-blog/posts/2026-04-29-mecap-r1-emotion-aware-policy-with-reinforcement)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #强化学习 | #多模态模型 #生成模型
 
@@ -14491,7 +15005,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 427. [FIDIC:Fine-Grained Conversational Emotion Recognition via Individual Differences in Inertia and Contagion](/audio-paper-digest-blog/posts/2026-04-29-fidicfine-grained-conversational-emotion)
+### 444. [FIDIC:Fine-Grained Conversational Emotion Recognition via Individual Differences in Inertia and Contagion](/audio-paper-digest-blog/posts/2026-04-29-fidicfine-grained-conversational-emotion)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #对话建模 | #心理学启发 #记忆网络
 
@@ -14511,7 +15025,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 428. [Combining SSL Speech Features, Contextual Transformers and Mamba Models for Realistic Audio Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-combining-ssl-speech-features-contextual)
+### 445. [Combining SSL Speech Features, Contextual Transformers and Mamba Models for Realistic Audio Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-combining-ssl-speech-features-contextual)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #状态空间模型 | #预训练 #自监督学习
 
@@ -14542,7 +15056,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 429. [Keeping Models Listening: Segment- and time-aware attention rescaling at decoding time](/audio-paper-digest-blog/posts/2026-04-29-keeping-models-listening-segment-and-time-aware)
+### 446. [Keeping Models Listening: Segment- and time-aware attention rescaling at decoding time](/audio-paper-digest-blog/posts/2026-04-29-keeping-models-listening-segment-and-time-aware)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #推理时调整 | #音频分类 #音频大模型
 
@@ -14572,7 +15086,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 430. [Understanding Textual Capability Degradation in Speech LLMS via Parameter Importance Analysis](/audio-paper-digest-blog/posts/2026-04-29-understanding-textual-capability-degradation-in)
+### 447. [Understanding Textual Capability Degradation in Speech LLMS via Parameter Importance Analysis](/audio-paper-digest-blog/posts/2026-04-29-understanding-textual-capability-degradation-in)
 
 ✅ **7.5/10** | 前25% | #语音问答 | #参数重要性分析 | #语音大模型 #低秩适应
 
@@ -14613,7 +15127,47 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 431. [The Role of Prosodic and Lexical Cues in Turn-Taking with Self-Supervised Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-the-role-of-prosodic-and-lexical-cues-in-turn)
+### 448. [Game-Time: Evaluating Temporal Dynamics in Spoken Language Models](/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken)
+
+前25% | #语音对话系统 | #基准测试 | #模型评估 #语音大模型
+
+👥 **作者与机构**
+
+- 第一作者：Kai-Wei Chang*1（麻省理工学院），En-Pei Hu*2（台湾大学） （*表示共同第一作者）
+- 通讯作者：未说明 （论文中未明确标注通讯作者）
+- 作者列表：Kai-Wei Chang (麻省理工学院), En-Pei Hu (台湾大学), Chun-Yi Kuan (台湾大学), Wenze Ren (台湾大学), Wei-Chih Chen (台湾大学), Guan-Ting Lin (台湾大学), Yu Tsao (中央研究院), Shao-Hua Sun (台湾大学), Hung-yi Lee (台湾大学), James Glass (麻省理工学院)
+
+💡 **毒舌点评**
+
+**亮点**：选题精准地击中了当前语音对话模型“懂内容，不懂时间”的痛点，并创新性地将儿童语言学习中的“游戏化”概念引入评测框架设计，思路新颖且系统。**短板**：实验规模（模型数量与评测样本）相对有限，且高度依赖外部工具（如Whisper转录、Gemini作为Judge）进行评估，使得评测流程的自主性与结果的绝对可靠性存在一定折扣。
+
+📌 **核心摘要**
+
+1. **问题**：当前对话式语音语言模型（SLM）的评测主要集中在内容生成、风格模仿和轮次转换上，严重缺乏对“时间动态”能力的评估。这种能力包括时间控制、节奏把握和同时说话（全双工），是实现自然、流畅人机语音交互的关键瓶颈。
+2. **方法核心**：本文提出了“Game-Time”评测基准。其灵感来源于儿童通过游戏（如石头剪刀布）学习语言中时间和节奏的过程。该基准包含两大类任务：基础任务（Basic Tasks）测试SLM的基础指令跟随能力；高级任务（Advanced Tasks）在基础任务上增加严格的时间约束（如快/慢速、静音等待、节奏同步、同时发言）。
+3. **新在何处**：与现有仅关注内容、风格或轮次的基准不同，Game-Time首次系统性地、量化地评估SLM的“时间意识”和全双工交互能力。它提出了一个形式化的指令跟随框架，用于生成带有精确时间约束的测试用例，并设计了基于双通道转录和LLM推理的评估方法。
+4. **主要实验结果**：论文评估了多种SLM架构（包括商业API）。结果显示：在基础任务上，最先进的商业模型（如GPT-Realtime）表现良好，但部分学术模型仍存在缺陷。**关键结果**是，几乎所有模型在引入时间约束后性能都急剧下降。具体而言：模型在“快速/慢速”任务上尚可，但在需要精确“静音等待”或“节奏遵循”的任务上几乎全部失败。全双工同步任务（如同时跟读、石头剪刀布）对所有模型都极具挑战。**具体数值见下表：**
+
+| 模型 | 全双工方法 | 基础任务平均分（推测） | 高级任务平均分（推测） | 关键观察 |
+| :--- | :--- | :--- | :--- | :--- |
+| SSML-LLM（Oracle） | 非因果补全 | 最高 | 最高 | 理论性能天花板 |
+| GPT-realtime | 未说明 | 很高 | 显著下降，但仍可能领先 | 在重复任务上表现突出 |
+| Gemini-Live | 未说明 | 高 | 显著下降 | 商业模型表现尚可 |
+| Freeze-Omni | 时分复用 | 中高 | 性能大幅下降 | 基础任务尚可，时间任务困难 |
+| Unmute | 时分复用 | 中 | 性能大幅下降 | 类似Freeze-Omni |
+| Moshi | 双通道 | 中低 | 性能大幅下降 | 基础任务已落后，时间任务更差 |
+
+（注：论文图3展示了详细分数，但未提供具体数值表格，上表根据图表趋势和文字描述总结。）
+
+![图3：Game-Time基准得分](pdf-image-page4-idx2)
+**结论**：该图清晰展示了所有模型在高级任务（Bottom）上的得分远低于基础任务（Top），且离Oracle系统差距巨大，证实了时间动态是当前SLM的普遍弱点。
+
+5. **实际意义**：该基准为SLM研究提供了一个关键的评测维度，指明了未来模型需要重点突破的方向——时间意识。它推动了从“说什么”到“何时说”的评测范式转变，对开发更自然、更实用的语音交互AI具有重要指导意义。
+6. **主要局限性**：1) 评测的模型数量有限，可能无法覆盖所有最新进展。2) 评估流程依赖ASR转录和LLM判断，其准确性可能影响最终得分。3) 高级任务的设计虽具代表性，但现实对话中的时间动态可能更为复杂和微妙。4) 论文是评测工作，未提出解决时间动态问题的新模型方法。
+
+---
+
+### 449. [The Role of Prosodic and Lexical Cues in Turn-Taking with Self-Supervised Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-the-role-of-prosodic-and-lexical-cues-in-turn)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #自监督学习 | #语音活动检测 #语音表示学习
 
@@ -14641,7 +15195,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 432. [Semantic Anchor Transfer from Short to Long Speech in a Distillation-Based Summarization Framework](/audio-paper-digest-blog/posts/2026-04-29-semantic-anchor-transfer-from-short-to-long)
+### 450. [Semantic Anchor Transfer from Short to Long Speech in a Distillation-Based Summarization Framework](/audio-paper-digest-blog/posts/2026-04-29-semantic-anchor-transfer-from-short-to-long)
 
 ✅ **7.5/10** | 前25% | #语音摘要 | #知识蒸馏 | #端到端 #迁移学习
 
@@ -14678,7 +15232,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 433. [Dynamically Slimmable Speech Enhancement Network with Metric-Guided Training](/audio-paper-digest-blog/posts/2026-04-29-dynamically-slimmable-speech-enhancement-network)
+### 451. [Dynamically Slimmable Speech Enhancement Network with Metric-Guided Training](/audio-paper-digest-blog/posts/2026-04-29-dynamically-slimmable-speech-enhancement-network)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #动态网络 | #指标引导训练 #轻量模型
 
@@ -14709,7 +15263,37 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 434. [Triage Knowledge Distillation for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-triage-knowledge-distillation-for-speaker)
+### 452. [Whisper-FEST: Single-Channel Far-Field Enhanced Speech-to-text without Parallel Data](/audio-paper-digest-blog/posts/2026-04-29-whisper-fest-single-channel-far-field-enhanced)
+
+前50% | #语音识别 | #语音增强 | #边缘计算 #多任务学习
+
+👥 **作者与机构**
+
+- 第一作者：未说明（论文作者列表未明确标注第一作者，根据列表顺序推测为 M A Basha Shaik）
+- 通讯作者：未说明
+- 作者列表：M A Basha Shaik (Samsung Research Institute, Bangalore, India), Vijendra R. Apsingekar (Samsung Research America, Mountain View, USA), Vineeth Rao (RV College of Engineering, Bangalore, India), Manonmani V. Amarnath (RV College of Engineering, Bangalore, India), Rahil Khan (RV College of Engineering, Bangalore, India), Mohammed Iqbal (RV College of Engineering, Bangalore, India), Manonmani Srinivasan (RV College of Engineering, Bangalore, India)
+
+💡 **毒舌点评**
+
+**亮点：** 该工作直面“如何在不重训大模型的前提下，让Whisper这类近场专家处理远场信号”的工程难题，其“即插即用”的模块化前端设计理念非常务实，且在VOiCES干净远场条件下取得了惊人的64.7%相对WER下降，证明了Conformer瓶颈对声学降质建模的有效性。**短板：** 论文中“计划开源”的承诺如同“画饼”，对至关重要的训练超参数细节（如学习率）语焉不详，让想复现的同行望而却步；此外，其方法本质上仍是“语音增强+ASR”的级联范式，未探索与Whisper更深度的端到端联合优化潜力。
+
+📌 **核心摘要**
+
+1.  **问题**：单通道远场语音转文本（S2T）性能在复杂声学条件下（如混响、噪声）显著下降，阻碍了其在真实世界边缘设备中的可靠部署。现有的数据增强或联合训练方法成本高，且可能损害近场性能。
+2.  **方法核心**：提出Whisper-FEST框架，其核心是一个名为TU-Net的前端增强模型。TU-Net是一个增强的U-Net架构，在其瓶颈层嵌入了Conformer模块，以更好地建模长距离声学降质。该模型直接在梅尔谱图上进行特征到特征的变换，并通过一个“S2T感知”的损失函数（结合谱图损失和冻结的Whisper编码器特征损失）进行训练，以确保增强后的信号对后端ASR友好。
+3.  **新颖性**：与传统方法相比，该工作无需并行数据（如近-远场配对数据），也不需要重新训练或微调已部署的Whisper模型，实现了模块化集成。其架构设计（Conformer瓶颈）和训练目标（直接优化对Whisper编码器友好的特征）是主要创新点。
+4.  **实验结果**：在VOiCES数据集上，与Whisper baseline相比，远场干净条件WER从24.6%降至8.6%（相对降低64.7%），远场噪声条件WER从46.2%降至38.8%（相对降低16.0%），同时近场性能保持稳定或略有提升。在AMI数据集上，与Whisper tiny.en结合，SDM（单远场麦克风）的WER从71.8%降至52.6%（相对降低约27%），小模型（Whisper small.en）下WER从40.2%降至35.63%（相对降低11.4%）。主要对比数据见下表：
+| 方法 | 语料库/条件 | 基线WER(%) | 增强后WER(%) | 相对降低(%) |
+| :--- | :--- | :--- | :--- | :--- |
+| TU-NET (ours) | VOiCES (Far-Field Clean) | 24.60 | 8.68 | 64.7 |
+| TU-NET (ours) | VOiCES (Far-Field Noisy) | 46.24 | 38.84 | 16.0 |
+| TU-NET (ours) | AMI (SDM) + Whisper small.en | 40.20 | 35.63 | 11.4 |
+5.  **实际意义**：该框架为提升已部署的轻量级ASR模型（如Whisper tiny/small）的远场性能提供了一种计算高效、即插即用的解决方案，非常适合资源受限的边缘设备。
+6.  **局限性**：主要依赖于预训练的Whisper编码器作为“教师”，其性能上限可能受此约束；训练策略虽然创新，但混合损失中权重W的网格搜索细节未充分披露；论文主要关注英语数据集，多语言泛化能力未验证。
+
+---
+
+### 453. [Triage Knowledge Distillation for Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-triage-knowledge-distillation-for-speaker)
 
 ✅ **7.5/10** | 前25% | #说话人验证 | #知识蒸馏 | #模型压缩 #课程学习
 
@@ -14734,7 +15318,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 435. [Enhancing Speaker Verification with w2v-BERT 2.0 and Knowledge Distillation Guided Structured Pruning](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speaker-verification-with-w2v-bert-20)
+### 454. [Enhancing Speaker Verification with w2v-BERT 2.0 and Knowledge Distillation Guided Structured Pruning](/audio-paper-digest-blog/posts/2026-04-29-enhancing-speaker-verification-with-w2v-bert-20)
 
 ✅ **7.5/10** | 前25% | #说话人验证 | #知识蒸馏 | #预训练 #模型压缩
 
@@ -14759,7 +15343,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 436. [DMP-TTS: Disentangled Multi-Modal Prompting for Controllable Text-to-Speech with Chained Guidance](/audio-paper-digest-blog/posts/2026-04-29-dmp-tts-disentangled-multi-modal-prompting-for)
+### 455. [DMP-TTS: Disentangled Multi-Modal Prompting for Controllable Text-to-Speech with Chained Guidance](/audio-paper-digest-blog/posts/2026-04-29-dmp-tts-disentangled-multi-modal-prompting-for)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #可控语音 #对比学习
 
@@ -14788,7 +15372,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 437. [RRPO: Robust Reward Policy Optimization for LLM-Based Emotional TTS](/audio-paper-digest-blog/posts/2026-04-29-rrpo-robust-reward-policy-optimization-for-llm)
+### 456. [RRPO: Robust Reward Policy Optimization for LLM-Based Emotional TTS](/audio-paper-digest-blog/posts/2026-04-29-rrpo-robust-reward-policy-optimization-for-llm)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #强化学习 | #大语言模型 #鲁棒性
 
@@ -14808,7 +15392,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 438. [AURA: A Stegaformer-Based Scalable Deep Audio Watermark with Extreme Robustness](/audio-paper-digest-blog/posts/2026-04-29-aura-a-stegaformer-based-scalable-deep-audio)
+### 457. [AURA: A Stegaformer-Based Scalable Deep Audio Watermark with Extreme Robustness](/audio-paper-digest-blog/posts/2026-04-29-aura-a-stegaformer-based-scalable-deep-audio)
 
 ✅ **7.5/10** | 前25% | #音频水印 | #条件生成 | #音频安全 #Conformer
 
@@ -14846,7 +15430,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 439. [Benchmarking Humans And Machines On Complex Multilingual Speech Understanding Tasks](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-humans-and-machines-on-complex)
+### 458. [Benchmarking Humans And Machines On Complex Multilingual Speech Understanding Tasks](/audio-paper-digest-blog/posts/2026-04-29-benchmarking-humans-and-machines-on-complex)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #语音大模型 | #多语言 #模型评估
 
@@ -14871,7 +15455,28 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 440. [Do we really need self-attention for streaming automatic speech recognition?](/audio-paper-digest-blog/posts/2026-04-29-do-we-really-need-self-attention-for-streaming)
+### 459. [Production-Scale Dynamic Vocabulary ASR Biasing with Word-Level FST and Robust Training](/audio-paper-digest-blog/posts/2026-04-29-production-scale-dynamic-vocabulary-asr-biasing)
+
+前25% | #语音识别 | #上下文偏差 | #动态词汇 #有限状态转录机
+
+👥 **作者与机构**
+
+- 第一作者：José E. García Lainez（微软核心AI）
+- 通讯作者：未说明
+- 作者列表：José E. García Lainez（微软核心AI）， Tianyang Sun（微软核心AI）， Shaoshi Ling（微软核心AI）， Yifan Gong（微软核心AI）， Huaming Wang（微软核心AI）
+
+💡 **毒舌点评**
+
+**亮点**：这篇论文没有停留在提出一个“新方法”，而是系统性地诊断并解决了其前身DynVoc技术在走向生产部署时会遇到的所有“硬骨头”（如短语重叠、虚警、无偏退化），展现了非常扎实的工程问题解决能力。
+**短板**：所有实验均在微软未公开的大规模内部数据上进行，这虽然是工业论文的常态，但极大地限制了方法的可验证性和可复现性，使得学术界难以直接跟进和公平比较。
+
+📌 **核心摘要**
+
+这篇论文旨在解决动态词汇语音识别偏差技术在生产环境部署中面临的三大挑战：1) 对重叠或多词短语的处理能力差，易导致重复识别；2) 偏差过强，虚警率高；3) 引入偏差训练后，在无偏差场景下基础ASR性能下降。为此，作者提出了一套改进方案：核心方法是引入**词级有限状态转录机**来保留多词短语的序列信息，解决歧义；同时采用**训练时扩充干扰项、动态对数几率缩放和边缘损失**来降低虚警；并通过在训练中引入**无偏批次采样**来恢复无偏性能。在基于6万小时英语语音训练的510M参数混合CTC/注意力模型上，实验表明，改进后的方法相比原始DynVoc方法，在**召回率上绝对提升6.34%，虚警率绝对降低4.72%**，同时将无偏场景的词错率恢复至基线水平。该工作首次将DynVoc技术扩展到生产规模并系统性地解决了其实用化障碍，显著提升了上下文偏差的准确性和可靠性。
+
+---
+
+### 460. [Do we really need self-attention for streaming automatic speech recognition?](/audio-paper-digest-blog/posts/2026-04-29-do-we-really-need-self-attention-for-streaming)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自注意力机制 | #流式处理 #模型架构
 
@@ -14904,7 +15509,7 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 ---
 
-### 441. [Syncspeech: Efficient and Low-Latency Text-to-Speech Based on Temporal Masked Transformer](/audio-paper-digest-blog/posts/2026-04-29-syncspeech-efficient-and-low-latency-text-to)
+### 461. [Syncspeech: Efficient and Low-Latency Text-to-Speech Based on Temporal Masked Transformer](/audio-paper-digest-blog/posts/2026-04-29-syncspeech-efficient-and-low-latency-text-to)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #自回归模型 | #流式处理 #预训练
 
@@ -14932,7 +15537,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 442. [Principled Coarse-Grained Acceptance For Speculative Decoding In Speech](/audio-paper-digest-blog/posts/2026-04-29-principled-coarse-grained-acceptance-for)
+### 462. [Principled Coarse-Grained Acceptance For Speculative Decoding In Speech](/audio-paper-digest-blog/posts/2026-04-29-principled-coarse-grained-acceptance-for)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #推测解码 | #语音大模型 #自回归模型
 
@@ -14964,7 +15569,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 443. [SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS](/audio-paper-digest-blog/posts/2026-04-29-spade-structured-pruning-and-adaptive)
+### 463. [SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS](/audio-paper-digest-blog/posts/2026-04-29-spade-structured-pruning-and-adaptive)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #知识蒸馏 | #大语言模型 #零样本
 
@@ -14998,7 +15603,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 444. [Advancing LLM-Based Multi-Channel Multi-Speaker Speech Recognition with Global Cross-Channel Attention and Sentence-Ordered First-In First-Out Serialized Output Training](/audio-paper-digest-blog/posts/2026-04-29-advancing-llm-based-multi-channel-multi-speaker)
+### 464. [Advancing LLM-Based Multi-Channel Multi-Speaker Speech Recognition with Global Cross-Channel Attention and Sentence-Ordered First-In First-Out Serialized Output Training](/audio-paper-digest-blog/posts/2026-04-29-advancing-llm-based-multi-channel-multi-speaker)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #语音大模型 | #多通道 #预训练
 
@@ -15019,7 +15624,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 445. [Adapting Diarization-Conditioned Whisper for End-to-End Multi-Talker Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-adapting-diarization-conditioned-whisper-for-end)
+### 465. [Adapting Diarization-Conditioned Whisper for End-to-End Multi-Talker Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-adapting-diarization-conditioned-whisper-for-end)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #语音大模型 #说话人分离
 
@@ -15049,7 +15654,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 446. [CALM: Joint Contextual Acoustic-Linguistic Modeling for Personalization of Multi-Speaker ASR](/audio-paper-digest-blog/posts/2026-04-29-calm-joint-contextual-acoustic-linguistic)
+### 466. [CALM: Joint Contextual Acoustic-Linguistic Modeling for Personalization of Multi-Speaker ASR](/audio-paper-digest-blog/posts/2026-04-29-calm-joint-contextual-acoustic-linguistic)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #多任务学习 #多语言
 
@@ -15080,7 +15685,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 447. [Lightweight Phoneme-Conditioned Bandwidth Extension for Body-Conducted Speech](/audio-paper-digest-blog/posts/2026-04-29-lightweight-phoneme-conditioned-bandwidth)
+### 467. [Lightweight Phoneme-Conditioned Bandwidth Extension for Body-Conducted Speech](/audio-paper-digest-blog/posts/2026-04-29-lightweight-phoneme-conditioned-bandwidth)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #条件生成 | #轻量化模型 #流式处理
 
@@ -15116,7 +15721,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 448. [Fast-ULCNet: A Fast and Ultra Low Complexity Network for Single-Channel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-fast-ulcnet-a-fast-and-ultra-low-complexity)
+### 468. [Fast-ULCNet: A Fast and Ultra Low Complexity Network for Single-Channel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-fast-ulcnet-a-fast-and-ultra-low-complexity)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #循环神经网络 | #低资源 #实时处理
 
@@ -15141,7 +15746,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 449. [Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-entropy-guided-grvq-for-ultra-low-bitrate-neural)
+### 469. [Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-entropy-guided-grvq-for-ultra-low-bitrate-neural)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #信号处理 | #低资源 #流式处理
 
@@ -15176,7 +15781,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 450. [CodecSlime: Temporal Redundancy Compression of Neural Speech Codec via Dynamic Frame Rate](/audio-paper-digest-blog/posts/2026-04-29-codecslime-temporal-redundancy-compression-of)
+### 470. [CodecSlime: Temporal Redundancy Compression of Neural Speech Codec via Dynamic Frame Rate](/audio-paper-digest-blog/posts/2026-04-29-codecslime-temporal-redundancy-compression-of)
 
 ✅ **7.5/10** | 前10% | #语音编码 | #动态帧率 | #VQ-GAN #插件式方法
 
@@ -15209,7 +15814,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 451. [Discrete Diffusion for Generative Modeling of Text-Aligned Speech Tokens](/audio-paper-digest-blog/posts/2026-04-29-discrete-diffusion-for-generative-modeling-of)
+### 471. [Discrete Diffusion for Generative Modeling of Text-Aligned Speech Tokens](/audio-paper-digest-blog/posts/2026-04-29-discrete-diffusion-for-generative-modeling-of)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #自回归模型 #语音表示
 
@@ -15241,7 +15846,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 452. [Speaking Clearly: A Simplified Whisper-Based Codec for Low-Bitrate Speech Coding](/audio-paper-digest-blog/posts/2026-04-29-speaking-clearly-a-simplified-whisper-based-codec)
+### 472. [Speaking Clearly: A Simplified Whisper-Based Codec for Low-Bitrate Speech Coding](/audio-paper-digest-blog/posts/2026-04-29-speaking-clearly-a-simplified-whisper-based-codec)
 
 ✅ **7.5/10** | 前25% | #语音编码 | #预训练 | #语音增强 #Whisper模型
 
@@ -15275,7 +15880,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 453. [How to Label Resynthesized Audio: The Dual Role of Neural Audio Codecs in Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-how-to-label-resynthesized-audio-the-dual-role-of)
+### 473. [How to Label Resynthesized Audio: The Dual Role of Neural Audio Codecs in Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-how-to-label-resynthesized-audio-the-dual-role-of)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #数据集 | #模型评估 #语音合成
 
@@ -15314,7 +15919,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 454. [TTA: Transcribe, Translate and Alignment for Cross-Lingual Speech Representation](/audio-paper-digest-blog/posts/2026-04-29-tta-transcribe-translate-and-alignment-for-cross)
+### 474. [TTA: Transcribe, Translate and Alignment for Cross-Lingual Speech Representation](/audio-paper-digest-blog/posts/2026-04-29-tta-transcribe-translate-and-alignment-for-cross)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #多任务学习 | #语音翻译 #多语言
 
@@ -15348,7 +15953,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 455. [SEP-ST: Incorporating Speech Entity Prompt Into Large Language Models for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-sep-st-incorporating-speech-entity-prompt-into)
+### 475. [SEP-ST: Incorporating Speech Entity Prompt Into Large Language Models for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-sep-st-incorporating-speech-entity-prompt-into)
 
 ✅ **7.5/10** | 前25% | #语音翻译 | #多任务学习 | #大语言模型 #命名实体识别
 
@@ -15377,7 +15982,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 456. [Whisper-QF: Leveraging Dual Cross-Attention Q-Former for Speech Emotion Recognition With Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-whisper-qf-leveraging-dual-cross-attention-q)
+### 476. [Whisper-QF: Leveraging Dual Cross-Attention Q-Former for Speech Emotion Recognition With Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-whisper-qf-leveraging-dual-cross-attention-q)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多任务学习 | #语音大模型 #Q-Former
 
@@ -15408,7 +16013,38 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 457. [Mixture-of-Experts Based Soft-Label Learning for Multi-Label Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-based-soft-label-learning-for)
+### 477. [Temporal Graph Modeling for Speech Emotion Recognition Using LSTM-Aggregated Multigraph Networks](/audio-paper-digest-blog/posts/2026-04-29-temporal-graph-modeling-for-speech-emotion)
+
+前25% | #语音情感识别 | #图神经网络 | #自监督学习 #多图网络
+
+👥 **作者与机构**
+
+- 第一作者：Patitapaban Palo（印度理工学院克勒格布尔分校电气工程系）
+- 通讯作者：未说明
+- 作者列表：Patitapaban Palo（印度理工学院克勒格布尔分校电气工程系）、Pooja Kumawat（印度理工学院克勒格布尔分校电气工程系）、Aurobinda Routray（印度理工学院克勒格布尔分校电气工程系）
+
+💡 **毒舌点评**
+
+**亮点**：论文巧妙地将“语音帧作为图节点”的思想与能够建模多关系的多图卷积网络（MGCN）结合，并创新性地用LSTM替代求和聚合来捕捉邻域内的时序依赖，这个设计直觉清晰且实验效果显著。**短板**：论文对“多图”（Multigraph）在语音任务中到底建模了哪几种“关系”的论述略显模糊（主要依赖初始图构建），且未提供代码和核心损失函数，对于一个声称“复现性强”的方法论工作来说有些扣分。
+
+📌 **核心摘要**
+
+1.  **要解决的问题**：语音情感识别（SER）需要有效捕捉语音信号中复杂、动态的时序依赖关系，传统RNN/CNN方法在建模长程依赖和复杂关系上存在局限。
+2.  **方法核心**：提出一种基于图神经网络（GNN）的SER框架。首先用预训练的wav2vec 2.0模型提取帧级特征作为图节点特征，并根据帧间相似性构建时序图。然后，采用一种改进的多图卷积网络（MGCN）进行分类，其关键创新在于使用LSTM进行邻域信息聚合，以更好地建模时序结构。
+3.  **与已有方法相比新在哪里**：a) 将自监督学习（SSL）特征以及时序图表示引入基于GNN的SER；b) 将最初用于分子建模的MGCN迁移到语音领域；c) 用LSTM聚合替代了GNN中传统的求和/均值聚合，以显式建模邻域节点（帧）的序列关系。
+4.  **主要实验结果**：在IEMOCAP数据集上，所提MGCN-LSTM方法达到78.22%的UWA，优于GCN、Graph U-Net以及使用求和聚合的MGCN（75.10%）。在BAUM-1数据集上，该方法达到69.89%的UWA，同样取得最佳性能。消融实验证明，基于时序相似度的图构建和LSTM聚合带来了显著性能提升。
+    | 方法 | IEMOCAP UWA(%) | BAUM-1 UWA(%) |
+    |---|---|---|
+    | GCN | 72.77 | 52.41 |
+    | GUNET | 36.98 | 42.38 |
+    | MGCN (Sum) | 75.10 | 65.84 |
+    | MGCN (LSTM) | **78.22** | **69.89** |
+5.  **实际意义**：为语音情感识别提供了一种新的、可解释性更强的图建模框架，展示了结合SSL和GNN在情感计算任务中的潜力。
+6.  **主要局限性**：a) “多图”中的多关系主要由初始图定义，对“多关系”学习的深度和必要性探讨不足；b) 实验分析较浅，缺乏错误分析、不同情绪类别性能、与更先进SSL模型（如HuBERT）的对比；c) 部分技术细节（如损失函数）未公开，影响复现性。
+
+---
+
+### 478. [Mixture-of-Experts Based Soft-Label Learning for Multi-Label Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-based-soft-label-learning-for)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #预训练 | #模型评估
 
@@ -15428,7 +16064,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 458. [Multi-Channel Speech Enhancement for Cocktail Party Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-multi-channel-speech-enhancement-for-cocktail)
+### 479. [Multi-Channel Speech Enhancement for Cocktail Party Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-multi-channel-speech-enhancement-for-cocktail)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #波束成形 | #语音增强 #多通道
 
@@ -15489,7 +16125,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 459. [Emotional Dimension Control in Language Model-Based Text-To-Speech: Spanning a Broad Spectrum of Human Emotions](/audio-paper-digest-blog/posts/2026-04-29-emotional-dimension-control-in-language-model)
+### 480. [Emotional Dimension Control in Language Model-Based Text-To-Speech: Spanning a Broad Spectrum of Human Emotions](/audio-paper-digest-blog/posts/2026-04-29-emotional-dimension-control-in-language-model)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #预训练 #零样本
 
@@ -15514,7 +16150,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 460. [Beyond Global Emotion: Fine-Grained Emotional Speech Synthesis with Dynamic Word-Level Modulation](/audio-paper-digest-blog/posts/2026-04-29-beyond-global-emotion-fine-grained-emotional)
+### 481. [Beyond Global Emotion: Fine-Grained Emotional Speech Synthesis with Dynamic Word-Level Modulation](/audio-paper-digest-blog/posts/2026-04-29-beyond-global-emotion-fine-grained-emotional)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #特征调制 | #情感语音合成 #流匹配
 
@@ -15534,7 +16170,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 461. [QFOCUS: Controllable Synthesis for Automated Speech Stress Editing to Deliver Human-Like Emphatic Intent](/audio-paper-digest-blog/posts/2026-04-29-qfocus-controllable-synthesis-for-automated)
+### 482. [QFOCUS: Controllable Synthesis for Automated Speech Stress Editing to Deliver Human-Like Emphatic Intent](/audio-paper-digest-blog/posts/2026-04-29-qfocus-controllable-synthesis-for-automated)
 
 ✅ **7.5/10** | 前50% | #语音合成 | #端到端 | #注意力机制 #少样本
 
@@ -15568,7 +16204,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 462. [SynaSpot: A Lightweight, Streaming Multi-modal Framework for Keyword Spotting with Audio-Text Synergy](/audio-paper-digest-blog/posts/2026-04-29-synaspot-a-lightweight-streaming-multi-modal)
+### 483. [SynaSpot: A Lightweight, Streaming Multi-modal Framework for Keyword Spotting with Audio-Text Synergy](/audio-paper-digest-blog/posts/2026-04-29-synaspot-a-lightweight-streaming-multi-modal)
 
 ✅ **7.5/10** | 前25% | #关键词检测 | #多模态模型 | #流式处理 #对比学习
 
@@ -15588,7 +16224,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 463. [Vocalnet-M2: Advancing Low-Latency Spoken Language Modeling via Integrated Multi-Codebook Tokenization and Multi-Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-vocalnet-m2-advancing-low-latency-spoken-language)
+### 484. [Vocalnet-M2: Advancing Low-Latency Spoken Language Modeling via Integrated Multi-Codebook Tokenization and Multi-Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-vocalnet-m2-advancing-low-latency-spoken-language)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #多令牌预测 | #多码本分词 #语音大模型
 
@@ -15608,7 +16244,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 464. [Mitigating Language Prior-Induced Hallucinations via Bi-Level Contrastive Decoding](/audio-paper-digest-blog/posts/2026-04-29-mitigating-language-prior-induced-hallucinations)
+### 485. [Mitigating Language Prior-Induced Hallucinations via Bi-Level Contrastive Decoding](/audio-paper-digest-blog/posts/2026-04-29-mitigating-language-prior-induced-hallucinations)
 
 ✅ **7.5/10** | 前25% | #多模态模型 | #对比学习 | #音频问答 #模型评估
 
@@ -15641,7 +16277,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 465. [Prototype-Guided Cross-Modal Contrastive Learning for Continual Audio-Visual Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-prototype-guided-cross-modal-contrastive-learning)
+### 486. [Prototype-Guided Cross-Modal Contrastive Learning for Continual Audio-Visual Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-prototype-guided-cross-modal-contrastive-learning)
 
 ✅ **7.5/10** | 前25% | #语音分离 | #对比学习 | #持续学习 #多模态模型
 
@@ -15666,7 +16302,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 466. [Session-Level Spoken Language Assessment with A Multimodal Foundation Model Via Multi-Target Learning](/audio-paper-digest-blog/posts/2026-04-29-session-level-spoken-language-assessment-with-a)
+### 487. [Session-Level Spoken Language Assessment with A Multimodal Foundation Model Via Multi-Target Learning](/audio-paper-digest-blog/posts/2026-04-29-session-level-spoken-language-assessment-with-a)
 
 ✅ **7.5/10** | 前25% | #语音评估 | #多任务学习 | #语音大模型 #多模态模型
 
@@ -15691,7 +16327,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 467. [QE-XVC: Zero-Shot Cross-Lingual Voice Conversion via Query-Enhancement and Conditional Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-qe-xvc-zero-shot-cross-lingual-voice-conversion)
+### 488. [QE-XVC: Zero-Shot Cross-Lingual Voice Conversion via Query-Enhancement and Conditional Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-qe-xvc-zero-shot-cross-lingual-voice-conversion)
 
 ✅ **7.5/10** | 前25% | #语音转换 | #流匹配 | #跨语言 #零样本
 
@@ -15716,7 +16352,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 468. [MeanVC: Lightweight and Streaming Zero-Shot Voice Conversion via Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanvc-lightweight-and-streaming-zero-shot-voice)
+### 489. [MeanVC: Lightweight and Streaming Zero-Shot Voice Conversion via Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanvc-lightweight-and-streaming-zero-shot-voice)
 
 ✅ **7.5/10** | 前25% | #语音转换 | #流匹配 | #零样本 #自回归模型
 
@@ -15749,7 +16385,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 469. [Cross-Lingual F5-TTS: Towards Language-Agnostic Voice Cloning and Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-f5-tts-towards-language-agnostic)
+### 490. [Cross-Lingual F5-TTS: Towards Language-Agnostic Voice Cloning and Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-f5-tts-towards-language-agnostic)
 
 ✅ **7.5/10** | 前25% | #语音克隆 | #流匹配 | #语音合成 #多语言
 
@@ -15774,7 +16410,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 470. [Expressive Voice Conversion with Controllable Emotional Intensity](/audio-paper-digest-blog/posts/2026-04-29-expressive-voice-conversion-with-controllable)
+### 491. [Expressive Voice Conversion with Controllable Emotional Intensity](/audio-paper-digest-blog/posts/2026-04-29-expressive-voice-conversion-with-controllable)
 
 ✅ **7.5/10** | 前25% | #语音转换 | #数据增强 | #注意力机制 #语音情感识别
 
@@ -15799,7 +16435,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 471. [Lightweight and Perceptually-Guided Voice Conversion for Electro-Laryngeal Speech](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-perceptually-guided-voice)
+### 492. [Lightweight and Perceptually-Guided Voice Conversion for Electro-Laryngeal Speech](/audio-paper-digest-blog/posts/2026-04-29-lightweight-and-perceptually-guided-voice)
 
 ✅ **7.5/10** | 前25% | #语音转换 | #自监督学习 | #语音增强 #低资源
 
@@ -15819,7 +16455,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 472. [ParaGSE: Parallel Generative Speech Enhancement with Group-Vector-Quantization-Based Neural Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-paragse-parallel-generative-speech-enhancement)
+### 493. [ParaGSE: Parallel Generative Speech Enhancement with Group-Vector-Quantization-Based Neural Speech Codec](/audio-paper-digest-blog/posts/2026-04-29-paragse-parallel-generative-speech-enhancement)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #生成模型 | #模型/架构 #神经网络编解码器
 
@@ -15844,7 +16480,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 473. [High-Fidelity Speech Enhancement Via Discrete Audio Tokens](/audio-paper-digest-blog/posts/2026-04-29-high-fidelity-speech-enhancement-via-discrete)
+### 494. [High-Fidelity Speech Enhancement Via Discrete Audio Tokens](/audio-paper-digest-blog/posts/2026-04-29-high-fidelity-speech-enhancement-via-discrete)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #自回归模型 | #语音大模型 #数据集
 
@@ -15869,7 +16505,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 474. [DISSR: Disentangling Speech Representation for Degradation-Prior Guided Cross-Domain Speech Restoration](/audio-paper-digest-blog/posts/2026-04-29-dissr-disentangling-speech-representation-for)
+### 495. [DISSR: Disentangling Speech Representation for Degradation-Prior Guided Cross-Domain Speech Restoration](/audio-paper-digest-blog/posts/2026-04-29-dissr-disentangling-speech-representation-for)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #扩散模型 | #对比学习 #领域适应
 
@@ -15895,7 +16531,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 475. [Ranking The Impact of Contextual Specialization in Neural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-ranking-the-impact-of-contextual-specialization)
+### 496. [Ranking The Impact of Contextual Specialization in Neural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-ranking-the-impact-of-contextual-specialization)
 
 ✅ **7.5/10** | 前25% | #语音增强 | #迁移学习 | #领域适应 #低资源
 
@@ -15924,7 +16560,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 476. [β-AVSDNET: A Novel End-To-End Neural Network Architecture For Audio-Visual Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-avsdnet-a-novel-end-to-end-neural-network)
+### 497. [β-AVSDNET: A Novel End-To-End Neural Network Architecture For Audio-Visual Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-avsdnet-a-novel-end-to-end-neural-network)
 
 ✅ **7.5/10** | 前25% | #说话人分离 | #端到端 | #音视频 #多模态模型
 
@@ -15949,7 +16585,49 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 477. [A Framework for Controlled Multi-Speaker Audio Synthesis for Robustness Evaluation of Speaker Diarisation Systems](/audio-paper-digest-blog/posts/2026-04-29-a-framework-for-controlled-multi-speaker-audio)
+### 498. [Automatic Estimation of Speaker Diarization Error Rate Based on Features of Audio Quality and Speaker Discriminability](/audio-paper-digest-blog/posts/2026-04-29-automatic-estimation-of-speaker-diarization-error)
+
+前25% | #说话人分离 | #说话人日志 | #模型评估 #语音活动检测
+
+👥 **作者与机构**
+
+- 第一作者：Kenkichi Ishizuka (RevComm Inc.)
+- 通讯作者：未说明
+- 作者列表：Kenkichi Ishizuka (RevComm Inc., Tokyo, Japan), Chang Zeng (RevComm Inc., Tokyo, Japan), Masaki Ono (RevComm Inc., Tokyo, Japan), Taiichi Hashimoto (RevComm Inc., Tokyo, Japan)
+
+💡 **毒舌点评**
+
+本文的亮点在于它精准地识别并填补了“说话人日志误差率（DER）自动估计”这一实用但被忽视的研究空白，并设计了一个逻辑自洽、实验充分的框架来证明其可行性。其短板则在于方法创新性略显不足，核心贡献是启发式地组合了现有特征（VAD差异、DNSMOS、聚类指标）和回归模型，更像一个精心设计的工程解决方案，而非在理论或模型上有深层突破。
+
+📌 **核心摘要**
+
+1. **问题**：说话人日志（SD）算法的性能在嘈杂环境、相似语音等挑战条件下会显著下降，而预估其性能（DER）通常需要人工标注，成本高昂。因此，本文旨在解决如何自动、无需标签地从音频信号中估计说话人日志误差率（DER）。
+2. **方法核心**：提出一个由三部分组成的系统：音频质量特征提取器、说话人可区分性特征提取器和回归模型。音频质量特征包括“VAD差异率”（通过比较简单与鲁棒VAD的输出差异来反映噪声水平）和“DNSMOS”（预测语音感知质量）。说话人可区分性特征包括“轮廓系数”和“戴维森-博尔丁指数”（从说话人嵌入空间评估聚类质量）。最后，使用支持向量回归（SVR）模型将这些特征映射到预测的DER。
+3. **创新**：这是首次系统性地提出自动估计DER的方法，将估计问题分解为“音频质量”和“说话人可区分性”两个互补维度进行建模，为运行时自适应SD系统（如算法切换）提供了定量决策依据。
+4. **主要实验结果**：在MSDWild和VoxConverse的混合测试集（899个样本）上，SVR模型在两个不同的SD系统（PyAnnote Audio 3.1和Wespeaker）上均取得了约0.8的皮尔逊相关系数（PCC），表明预测值与真实DER有强相关性。消融实验证明四个特征均对模型有贡献。具体结果如下表所示。
+
+**表2：实际DER与估计DER的PCC和RMSE对比**
+| 模型   | PCC   | RMSE  |
+|--------|-------|-------|
+|        | PyAn  | Wesp  | PyAn  | Wesp  |
+| LR     | 0.723 | 0.784 | 16.703| 16.751|
+| **SVR**| **0.806** | **0.800** | **14.323**| **15.949**|
+
+**表3：消融实验结果**
+| 配置       | PCC (PyAn) | PCC (Wesp) | RMSE (PyAn) | RMSE (Wesp) |
+|------------|------------|------------|-------------|-------------|
+| Full       | 0.806      | 0.800      | 14.323      | 15.949      |
+| - VAD差异率| 0.779      | 0.763      | 15.407      | 17.532      |
+| - DNSMOS   | 0.728      | 0.756      | 16.262      | 17.236      |
+| - 轮廓系数 | 0.774      | 0.791      | 15.779      | 16.260      |
+| - DBI      | 0.785      | 0.803      | 15.261      | 16.010      |
+
+5. **实际意义**：该方法可实现运行时的SD性能监控与预估，支持在清晰音频上使用低成本模型，在困难音频上动态切换至高精度（但高耗能）模型，平衡了效率与精度。
+6. **主要局限**：方法依赖于目标SD系统生成的初步结果（如语音段、说话人嵌入），其本身可能不准确；特征设计具有启发性，缺乏理论最优性的证明；实验仅在两个英文数据集和两个SD系统上进行，其泛化性有待验证。
+
+---
+
+### 499. [A Framework for Controlled Multi-Speaker Audio Synthesis for Robustness Evaluation of Speaker Diarisation Systems](/audio-paper-digest-blog/posts/2026-04-29-a-framework-for-controlled-multi-speaker-audio)
 
 ✅ **7.5/10** | 前25% | #说话人日志 | #数据增强 | #说话人分离 #基准测试
 
@@ -15988,7 +16666,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 478. [Synthetic yet Striking? Assessing Vocal Charisma in TTS via Perceptual and Algorithmic Measures](/audio-paper-digest-blog/posts/2026-04-29-synthetic-yet-striking-assessing-vocal-charisma)
+### 500. [Synthetic yet Striking? Assessing Vocal Charisma in TTS via Perceptual and Algorithmic Measures](/audio-paper-digest-blog/posts/2026-04-29-synthetic-yet-striking-assessing-vocal-charisma)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #模型评估 | #语音情感识别 #偏见与公平
 
@@ -16017,7 +16695,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 479. [Emilia-NV: A Non-Verbal Speech Dataset with Word-Level Annotation for Human-Like Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-emilia-nv-a-non-verbal-speech-dataset-with-word)
+### 501. [Emilia-NV: A Non-Verbal Speech Dataset with Word-Level Annotation for Human-Like Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-emilia-nv-a-non-verbal-speech-dataset-with-word)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #数据集 | #语音合成 #零样本
 
@@ -16037,7 +16715,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 480. [TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech Framework for Ü-Tsang, Amdo and Kham Speech Dataset Generation](/audio-paper-digest-blog/posts/2026-04-29-tmd-tts-a-unified-tibetan-multi-dialect-text-to)
+### 502. [TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech Framework for Ü-Tsang, Amdo and Kham Speech Dataset Generation](/audio-paper-digest-blog/posts/2026-04-29-tmd-tts-a-unified-tibetan-multi-dialect-text-to)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #方言建模 #低资源
 
@@ -16062,7 +16740,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 481. [Deep Dubbing: End-to-End Auto-Audiobook System with Text-to-Timbre and Context-Aware Instruct-TTS](/audio-paper-digest-blog/posts/2026-04-29-deep-dubbing-end-to-end-auto-audiobook-system)
+### 503. [Deep Dubbing: End-to-End Auto-Audiobook System with Text-to-Timbre and Context-Aware Instruct-TTS](/audio-paper-digest-blog/posts/2026-04-29-deep-dubbing-end-to-end-auto-audiobook-system)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #端到端 #有声书生成
 
@@ -16109,7 +16787,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 482. [Erasing Your Voice Before it’s Heard: Training-Free Speaker Unlearning for Zero-Shot Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-erasing-your-voice-before-its-heard-training-free)
+### 504. [Erasing Your Voice Before it’s Heard: Training-Free Speaker Unlearning for Zero-Shot Text-to-Speech](/audio-paper-digest-blog/posts/2026-04-29-erasing-your-voice-before-its-heard-training-free)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #说话人识别 #音频安全
 
@@ -16146,7 +16824,51 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 483. [LLM-Based Post-ASR Error Correction for Disordered Speech](/audio-paper-digest-blog/posts/2026-04-29-llm-based-post-asr-error-correction-for)
+### 505. [Phrased: Phrase Dictionary Biasing for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-phrased-phrase-dictionary-biasing-for-speech)
+
+前25% | #语音翻译 | #偏差学习 | #多语言 #流式处理
+
+👥 **作者与机构**
+
+- 第一作者：Peidong Wang（Microsoft CoreAI）
+- 通讯作者：Jinyu Li（Microsoft CoreAI）
+- 作者列表：Peidong Wang（Microsoft CoreAI）、Jian Xue（Microsoft CoreAI）、Rui Zhao（Microsoft CoreAI）、Junkun Chen（Microsoft CoreAI）、Aswin Shanmugam Subramanian（Microsoft CoreAI）、Jinyu Li（Microsoft CoreAI）
+
+💡 **毒舌点评**
+
+**亮点**：本文提出的PHRASED方法具有良好的通用性，能将同一个思路（利用双语短语对）同时应用于传统的流式端到端模型（CTC-GMM）和新兴的多模态大模型，并在后者上实现了显著的短语召回率提升。**短板**：实验仅在中-英翻译任务上验证，且所用的“短语列表”规模（3K）与真实工业场景（可能包含数十万条目）的匹配度和鲁棒性存疑；此外，论文未提供任何代码或模型，极大地限制了其可复现性和直接应用价值。
+
+📌 **核心摘要**
+
+1.  **要解决的问题**：实体短语（如专有名词、新词）因在训练数据中罕见，在端到端语音翻译（ST）中容易被错误翻译，影响核心语义理解。
+2.  **方法核心**：提出短语字典偏差（PHRASED），利用用户提供的源语言-目标语言实体短语对 `{I: O}` 来增强翻译。核心是先从中间表示（如ASR文本）中匹配源语言短语 `I`，再对匹配到的目标语言短语 `O` 进行概率加分。
+3.  **新在何处**：首次为端到端语音翻译设计并验证了“短语字典偏差”机制，与传统的仅使用目标短语列表（PLB）的偏差方法不同，它显式利用了源语言信息。同时，将该方法成功适配到流式Transducer模型和多模态大模型两种架构。
+4.  **主要实验结果**：在中文到英文的RealSI测试集上，PHRASED使流式CTC-GMM模型的短语召回率相对PLB提升了21%；使Phi-4多模态大模型的BLEU提升2.9点，短语召回率相对基线提升85%，远超PLB在大模型上失败的表现。关键数据见下表。
+
+**表1：流式语音翻译模型结果（RealSI 中-英）**
+| 方法 | BLEU | 召回率 |
+| :--- | :--- | :--- |
+| CT基线 | 16.5 | 21.62% |
+| CT + PLB | 19.2 | 32.43% |
+| CTC-GMM基线 | 18.3 | 28.83% |
+| CTC-GMM + PLB | 19.9 | 43.24% |
+| CTC-GMM + PHRASED_PS | **20.0** | **52.25%** |
+| CTC-GMM + PLB (大bonus) | 4.6 | 49.55% |
+
+**表2：多模态大模型结果（RealSI 中-英）**
+| 方法 | BLEU | 召回率 |
+| :--- | :--- | :--- |
+| Phi-4-multimodal 基线 | 21.1 | 36.04% |
+| Phi-4-multimodal + PLB | 1.1 | 8.11% |
+| Phi-4-multimodal + PHRASED_PS | 23.8 | 54.95% |
+| Phi-4-multimodal + PHRASED_JB | **24.0** | **66.67%** |
+
+5.  **实际意义**：为解决语音翻译中的“冷启动”实体短语问题提供了有效且灵活的工程化方案，尤其在多模态大模型框架下展示了利用外部知识库的可行性。
+6.  **主要局限性**：方法高度依赖预先构建的源-目标短语对字典；在流式模型中的效果依赖于中间ASR表示（z）的质量；实验场景单一（中-英），缺乏在其他语言对、极长上下文或真实噪声环境下的验证。
+
+---
+
+### 506. [LLM-Based Post-ASR Error Correction for Disordered Speech](/audio-paper-digest-blog/posts/2026-04-29-llm-based-post-asr-error-correction-for)
 
 ✅ **7.5/10** | 前50% | #语音识别 | #大语言模型 | #少样本 #低资源
 
@@ -16183,7 +16905,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 484. [InstructAudio: Unified Speech and Music Generation with Natural Language Instruction](/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation)
+### 507. [InstructAudio: Unified Speech and Music Generation with Natural Language Instruction](/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #音乐生成 #多任务学习
 
@@ -16211,7 +16933,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 485. [GLA-GRAD++: An Improved Griffin-Lim Guided Diffusion Model for Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-gla-grad-an-improved-griffin-lim-guided-diffusion)
+### 508. [GLA-GRAD++: An Improved Griffin-Lim Guided Diffusion Model for Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-gla-grad-an-improved-griffin-lim-guided-diffusion)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #领域适应
 
@@ -16231,7 +16953,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 486. [Meanflow-Accelerated Multimodal Video-to-Audio Synthesis Via One-Step Generation](/audio-paper-digest-blog/posts/2026-04-29-meanflow-accelerated-multimodal-video-to-audio)
+### 509. [Meanflow-Accelerated Multimodal Video-to-Audio Synthesis Via One-Step Generation](/audio-paper-digest-blog/posts/2026-04-29-meanflow-accelerated-multimodal-video-to-audio)
 
 ✅ **7.5/10** | 前25% | #音频生成 | #流匹配 | #音视频 #实时处理
 
@@ -16269,7 +16991,32 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 487. [Cross-Lingual Interleaving for Speech Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-interleaving-for-speech-language)
+### 510. [TAG: Structured Temporal Audio Generation via LLM-Guided Manual Scription and Control](/audio-paper-digest-blog/posts/2026-04-29-tag-structured-temporal-audio-generation-via-llm)
+
+前25% | #音频生成 | #扩散模型 | #大语言模型 #免训练方法
+
+👥 **作者与机构**
+
+- 第一作者：Hanwen Zhang（USC，美国）
+- 通讯作者：Shuhui Wang（ICT, CAS，中国）；Wei Yang（HUST，中国）
+- 作者列表：
+    - Hanwen Zhang（USC，美国）
+    - Jinshen Zhang（HUST，中国）
+    - Cong Zhang（UCAS，中国）
+    - Shuhui Wang（ICT, CAS，中国）
+    - Wei Yang（HUST，中国）
+
+💡 **毒舌点评**
+
+**亮点**：该工作最大的价值在于提出了一个“即插即用”的免训练框架，通过操纵已有音频生成模型的注意力图来实现精确的时间控制，巧妙地将语言理解的复杂性与生成模型的控制分离。**短板**：其性能高度依赖于作为“大脑”的LLM的指令遵循能力和基础生成模型的预训练质量，论文未能充分分析这种依赖性带来的边界情况或失效模式。
+
+📌 **核心摘要**
+
+本文针对现有文本到音频生成方法在生成具有复杂时间结构的音频时面临的挑战，提出了一种名为TAG的两阶段框架。**问题**：现有方法独立构建结构化信息，缺乏灵活性，且现有时间控制方法计算成本高或适应性有限。**方法核心**：第一阶段利用大语言模型作为推理器和规划器，将复杂文本提示解析为结构化的“音频生成手册”；第二阶段是一个免训练的生成框架，通过对扩散模型的交叉注意力图进行动态、自适应的调制，实现精确的时间控制。**新意**：相比独立于模型构建结构或需要重新训练的方法，TAG将LLM的语义规划能力与对现有模型注意力的无损操作相结合，且可轻松集成到各种基于注意力的扩散模型中（如UNet和DiT架构）。**实验结果**：在Audiocaps数据集上，TAG在保持或提升音频质量（FAD, CLAP）的同时，显著提升了文本-音频对齐度。在AudioCondition数据集上的时间控制评估表明，TAG在事件基指标（Eb）和宏观F1（At）上大幅超越了基线模型和先前的SOTA方法，例如，Stable Audio Open + TAG在Eb上达到47.21（基线8.13），At达到74.77（基线56.96）。**实际意义**：为可定制、时间结构精确的音频生成提供了一个高效、通用且易于部署的解决方案。**局限性**：方法的上限受限于基础生成模型的能力和LLM对复杂指令的解析精度；免训练的控制方式可能在某些极端场景下对原始生成分布造成干扰。
+
+---
+
+### 511. [Cross-Lingual Interleaving for Speech Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-interleaving-for-speech-language)
 
 ✅ **7.5/10** | 前25% | #语音大模型 | #预训练 #多语言 | #预训练 #多语言
 
@@ -16310,7 +17057,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 488. [Emotional Damage: Investigating Safety Vulnerabilities of Large Audio-Language Models Under Speaker Emotional Variations](/audio-paper-digest-blog/posts/2026-04-29-emotional-damage-investigating-safety)
+### 512. [Emotional Damage: Investigating Safety Vulnerabilities of Large Audio-Language Models Under Speaker Emotional Variations](/audio-paper-digest-blog/posts/2026-04-29-emotional-damage-investigating-safety)
 
 ✅ **7.5/10** | 前25% | #音频安全 | #对抗样本 | #音频大模型 #语音合成
 
@@ -16353,7 +17100,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 489. [Content-Preserving Speech Representation Learning Via Adaptive Segment-Level Alignment](/audio-paper-digest-blog/posts/2026-04-29-content-preserving-speech-representation-learning)
+### 513. [Content-Preserving Speech Representation Learning Via Adaptive Segment-Level Alignment](/audio-paper-digest-blog/posts/2026-04-29-content-preserving-speech-representation-learning)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 | #数据增强 #基准测试
 
@@ -16373,7 +17120,7 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 490. [Exploring SSL Discrete Tokens for Multilingual Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-exploring-ssl-discrete-tokens-for-multilingual)
+### 514. [Exploring SSL Discrete Tokens for Multilingual Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-exploring-ssl-discrete-tokens-for-multilingual)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 | #多语言 #端到端
 
@@ -16407,7 +17154,32 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 
 ---
 
-### 491. [EchoRAG: A Two-Stage Framework for Audio-Text Retrieval and Temporal Grounding](/audio-paper-digest-blog/posts/2026-04-29-echorag-a-two-stage-framework-for-audio-text)
+### 515. [BEST-STD 2.0: Balanced and Efficient Speech Tokenizer for Spoken Term Detection](/audio-paper-digest-blog/posts/2026-04-29-best-std-20-balanced-and-efficient-speech)
+
+前25% | #音频检索 | #自监督学习 | #对比学习 #最优传输
+
+👥 **作者与机构**
+
+- 第一作者：Anup Singh（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）
+- 通讯作者：Vipul Arora（ESAT-PSI, KU Leuven, Belgium；标注有⋆表示equal advising）
+- 作者列表：Anup Singh（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）、Vipul Arora（ESAT-PSI, KU Leuven, Belgium）、Kris Demuynck（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）
+
+💡 **毒舌点评**
+
+亮点在于将最优传输（OT）优雅地用于解决语音分词码本坍缩这一老大难问题，使得大码本训练稳定且高效，且在抗噪抗混响的鲁棒性上做到了超越同类基线（包括大模型WavLM的分词）的扎实水平。短板是研究的问题域（查询式语音术语检索）略显小众，且其核心的“稳健性”提升高度依赖于特定的任务和评价指标（Jaccard相似度、MTWV），对于通用语音理解或生成任务的直接启示有限。
+
+📌 **核心摘要**
+
+1.  **解决的问题**：针对查询式语音术语检索（QbE-STD）任务，现有离散分词方法在嘈杂和混响环境中鲁棒性差，且存在码本坍缩（即分词码本利用率不均衡）导致的效率低下问题。
+2.  **方法核心**：提出BEST-STD 2.0框架。其一，采用双向Mamba编码器，并通过引入噪声/混响增强的对比学习和鲁棒一致性损失，训练出抗噪且说话人无关的帧级连续表示。其二，在向量量化（VQ）阶段，引入基于最优传输（OT）的正则化，将码本学习重构为平衡聚类问题，强制码本均匀使用，防止坍缩。最终采用TF-IDF索引和渐进式检索策略加速搜索。
+3.  **创新之处**：与之前工作（如BEST-STD 1.0）相比，新在：a) 系统性地设计了针对噪声和混响的自监督训练策略；b) 首次将最优传输理论应用于语音分词的码本平衡，解决代码崩溃；c) 专门引入针对离散分词的鲁棒性损失。
+4.  **主要实验结果**：在LibriSpeech和TIMIT数据集上的评估显示，该方法在各种噪声（-5dB到20dB SNR）和混响条件下，分词的Jaccard相似度和检索MTWV均显著优于基线（包括HuBERT、WavLM、SpeechTokenizer及上一代BEST-STD）。例如，在**噪声+混响(t60=0.7s)** 的极端条件下，LibriSpeech OOV任务的MTWV在5dB SNR时，BEST-STD 2.0达到**0.56**，而BEST-STD 1.0仅为**0.27**，WavLM为**0.14**。其分词码本熵在码本大小1024-4096下均保持在**0.96**以上，而KMeans基线低于0.76。
+5.  **实际意义**：提供了一种更鲁棒、高效的语音分词方案，使原始语音能够像文本一样被快速索引和检索，对于构建大规模语音数据库的检索系统具有实用价值。
+6.  **主要局限性**：方法主要针对帧级分词和检索任务设计，其生成的离散标记对语音合成、对话等需要更高级语义或韵律信息的任务是否同样有效，未进行验证。训练和评估集中于英语数据集，跨语言通用性未明。
+
+---
+
+### 516. [EchoRAG: A Two-Stage Framework for Audio-Text Retrieval and Temporal Grounding](/audio-paper-digest-blog/posts/2026-04-29-echorag-a-two-stage-framework-for-audio-text)
 
 ✅ **7.5/10** | 前25% | #音频检索 | #知识蒸馏 | #对比学习
 
@@ -16449,7 +17221,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 492. [TICL: Text-Embedding KNN for Speech in-Context Learning Unlocks Speech Recognition Abilities of Large Multimodal Models](/audio-paper-digest-blog/posts/2026-04-29-ticl-text-embedding-knn-for-speech-in-context)
+### 517. [TICL: Text-Embedding KNN for Speech in-Context Learning Unlocks Speech Recognition Abilities of Large Multimodal Models](/audio-paper-digest-blog/posts/2026-04-29-ticl-text-embedding-knn-for-speech-in-context)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #少样本学习 | #多语言 #低资源
 
@@ -16478,7 +17250,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 493. [Purification Before Fusion: Toward Mask-Free Speech Enhancement for Robust Audio-Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-purification-before-fusion-toward-mask-free)
+### 518. [Purification Before Fusion: Toward Mask-Free Speech Enhancement for Robust Audio-Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-purification-before-fusion-toward-mask-free)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #多任务学习 | #音视频 #语音增强
 
@@ -16511,7 +17283,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 494. [Cross-Modal Bottleneck Fusion for Noise Robust Audio-Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-bottleneck-fusion-for-noise-robust)
+### 519. [Cross-Modal Bottleneck Fusion for Noise Robust Audio-Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-bottleneck-fusion-for-noise-robust)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #多模态模型 | #跨模态 #鲁棒性
 
@@ -16546,7 +17318,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 495. [Evaluating Emotion Recognition in Spoken Language Models on Emotionally Incongruent Speech](/audio-paper-digest-blog/posts/2026-04-29-evaluating-emotion-recognition-in-spoken-language)
+### 520. [Evaluating Emotion Recognition in Spoken Language Models on Emotionally Incongruent Speech](/audio-paper-digest-blog/posts/2026-04-29-evaluating-emotion-recognition-in-spoken-language)
 
 ✅ **7.5/10** | 前50% | #语音情感识别 | #模型评估 | #基准测试 #数据集
 
@@ -16572,7 +17344,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 496. [InconVAD: A Two-Stage Dual-Tower Framework for Multimodal Emotion Inconsistency Detection](/audio-paper-digest-blog/posts/2026-04-29-inconvad-a-two-stage-dual-tower-framework-for)
+### 521. [InconVAD: A Two-Stage Dual-Tower Framework for Multimodal Emotion Inconsistency Detection](/audio-paper-digest-blog/posts/2026-04-29-inconvad-a-two-stage-dual-tower-framework-for)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多模态模型 | #不确定性估计
 
@@ -16597,7 +17369,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 497. [MSF-SER: Enriching Acoustic Modeling with Multi-Granularity Semantics for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-msf-ser-enriching-acoustic-modeling-with-multi)
+### 522. [MSF-SER: Enriching Acoustic Modeling with Multi-Granularity Semantics for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-msf-ser-enriching-acoustic-modeling-with-multi)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #多模态模型 | #预训练 #音频大模型
 
@@ -16631,7 +17403,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 498. [KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?](/audio-paper-digest-blog/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake)
+### 523. [KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?](/audio-paper-digest-blog/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #自监督学习 | #KAN
 
@@ -16654,7 +17426,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 499. [Robust Deepfake Audio Detection via Multi-Level Intermediate Feature Fusion](/audio-paper-digest-blog/posts/2026-04-29-robust-deepfake-audio-detection-via-multi-level)
+### 524. [Robust Deepfake Audio Detection via Multi-Level Intermediate Feature Fusion](/audio-paper-digest-blog/posts/2026-04-29-robust-deepfake-audio-detection-via-multi-level)
 
 ✅ **7.5/10** | 前25% | #音频深度伪造检测 | #特征融合 | #自监督学习 #鲁棒性
 
@@ -16674,7 +17446,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 500. [Inverse-Hessian Regularization for Continual Learning in ASR](/audio-paper-digest-blog/posts/2026-04-29-inverse-hessian-regularization-for-continual)
+### 525. [Inverse-Hessian Regularization for Continual Learning in ASR](/audio-paper-digest-blog/posts/2026-04-29-inverse-hessian-regularization-for-continual)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #持续学习 #正则化 | #持续学习 #正则化
 
@@ -16708,7 +17480,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 501. [BEST-RQ-based Self-Supervised Learning for Whisper Domain Adaptation](/audio-paper-digest-blog/posts/2026-04-29-best-rq-based-self-supervised-learning-for)
+### 526. [BEST-RQ-based Self-Supervised Learning for Whisper Domain Adaptation](/audio-paper-digest-blog/posts/2026-04-29-best-rq-based-self-supervised-learning-for)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 | #领域适应 #Whisper
 
@@ -16743,7 +17515,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 ---
 
-### 502. [CCST: Cross-Modal and Consistency-Aware Self-Training for Source-Free Unsupervised Domain Adaptation in Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-ccst-cross-modal-and-consistency-aware-self)
+### 527. [CCST: Cross-Modal and Consistency-Aware Self-Training for Source-Free Unsupervised Domain Adaptation in Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-ccst-cross-modal-and-consistency-aware-self)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #领域适应 | #语音大模型
 
@@ -16778,7 +17550,32 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 503. [Chunkwise Aligners for Streaming Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-chunkwise-aligners-for-streaming-speech)
+### 528. [Chunk-Wise Attention Transducers for Fast and Accurate Streaming Speech-to-Text](/audio-paper-digest-blog/posts/2026-04-29-chunk-wise-attention-transducers-for-fast-and)
+
+前25% | #语音识别 | #注意力机制 | #语音翻译 #流式处理
+
+👥 **作者与机构**
+
+- 第一作者：Hainan Xu（NVIDIA Corporation）
+- 通讯作者：未说明
+- 作者列表：Hainan Xu（NVIDIA Corporation）、Vladimir Bataev（NVIDIA Corporation）、Travis M. Bartley（NVIDIA Corporation）、Jagadeesh Balam（NVIDIA Corporation）
+
+💡 **毒舌点评**
+
+**亮点**：通过在RNN-T的Joiner中引入“分块注意力”机制，巧妙地在保持流式特性的同时，打破了其严格的单调对齐限制，从而在语音翻译任务上获得了高达18%的BLEU提升，这确实是RNN-T架构一个非常实用且有效的改进方向。**短板**：论文将效率提升归因于T维度的缩减，但未深入分析在分块注意力引入的计算复杂度（O(C^2)）与RNN-T全序列对齐复杂度之间的权衡，也缺乏对不同分块大小选择对模型性能影响的系统性超参数搜索分析。
+
+📌 **核心摘要**
+
+1.  **问题**：标准的RNN-T模型在流式语音处理中存在两个主要问题：一是严格的单调对齐限制了其在需要灵活对齐任务（如语音翻译）上的性能；二是基于全序列对齐格的训练和推理计算开销大，效率低。
+2.  **方法**：本文提出了分块注意力转导器（CHAT）。该模型将音频输入划分为固定大小的帧块（chunk），并在Joiner网络中使用多头交叉注意力来聚合每个块内的编码器表示，而不是逐帧处理。模型整体仍保持RNN-T的预测流程（发出空白则推进到下一块，否则在当前块内更新）。
+3.  **创新**：这是首次将分块处理与注意力机制深度结合到RNN-T的Joiner架构中。与RNN-T相比，它在块内引入了非单调、灵活的对齐能力；与纯注意力模型相比，它通过分块和保持空白预测机制，天然支持流式处理。
+4.  **结果**：在多个语言和任务上，CHAT相对于RNN-T基线取得了显著提升。在语音识别（ASR）任务上，相对WER降低最高达6.3%；在语音翻译（AST）任务上，相对BLEU提升最高达18.0%。效率方面，训练峰值内存降低46.2%，训练速度最高提升1.36倍，单句推理速度最高提升1.69倍（见表1和表2）。
+5.  **意义**：CHAT为部署更强大、更高效的流式语音模型提供了一条实用路径，尤其证明了其在语音翻译等复杂任务上的巨大潜力，同时严格保持实时约束。
+6.  **局限**：模型性能依赖于分块大小的选择，论文中未提供选择最优分块大小的通用准则或理论指导。此外，论文未深入分析在块内进行注意力计算带来的额外延迟特性。
+
+---
+
+### 529. [Chunkwise Aligners for Streaming Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-chunkwise-aligners-for-streaming-speech)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #流式处理 #模型架构
 
@@ -16799,7 +17596,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 504. [FinHuBERT: Hierarchical Feature Imitating Networks for Low-Resource Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-finhubert-hierarchical-feature-imitating-networks)
+### 530. [FinHuBERT: Hierarchical Feature Imitating Networks for Low-Resource Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-finhubert-hierarchical-feature-imitating-networks)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 | #低资源 #语音大模型
 
@@ -16828,7 +17625,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 505. [UMA-SPLIT: Unimodal Aggregation for Both English and Mandarin Non-Autoregressive Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-uma-split-unimodal-aggregation-for-both-english)
+### 531. [UMA-SPLIT: Unimodal Aggregation for Both English and Mandarin Non-Autoregressive Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-uma-split-unimodal-aggregation-for-both-english)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #多语言 #非自回归模型
 
@@ -16860,7 +17657,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 506. [Dual Data Scaling for Robust Two-Stage User-Defined Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-dual-data-scaling-for-robust-two-stage-user)
+### 532. [Dual Data Scaling for Robust Two-Stage User-Defined Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-dual-data-scaling-for-robust-two-stage-user)
 
 ✅ **7.5/10** | 前25% | #语音活动检测 | #多任务学习 | #对比学习 #零样本
 
@@ -16932,7 +17729,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 507. [MNV-17: A High-Quality Performative Mandarin Dataset for Nonverbal Vocalization Recognition in Speech](/audio-paper-digest-blog/posts/2026-04-29-mnv-17-a-high-quality-performative-mandarin)
+### 533. [MNV-17: A High-Quality Performative Mandarin Dataset for Nonverbal Vocalization Recognition in Speech](/audio-paper-digest-blog/posts/2026-04-29-mnv-17-a-high-quality-performative-mandarin)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #数据集 | #语音大模型 #多任务学习
 
@@ -16965,7 +17762,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 508. [Int-MeanFlow: Few-Step Speech Generation with Integral Velocity Distillation](/audio-paper-digest-blog/posts/2026-04-29-int-meanflow-few-step-speech-generation-with)
+### 534. [Int-MeanFlow: Few-Step Speech Generation with Integral Velocity Distillation](/audio-paper-digest-blog/posts/2026-04-29-int-meanflow-few-step-speech-generation-with)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #知识蒸馏 #流式处理
 
@@ -16990,7 +17787,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 509. [Training Flow Matching Models with Reliable Labels via Self-Purification](/audio-paper-digest-blog/posts/2026-04-29-training-flow-matching-models-with-reliable)
+### 535. [Training Flow Matching Models with Reliable Labels via Self-Purification](/audio-paper-digest-blog/posts/2026-04-29-training-flow-matching-models-with-reliable)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #数据集 #鲁棒性
 
@@ -17015,7 +17812,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 510. [Hierarchical Discrete Flow Matching For Multi-Codebook Codec-Based Text-To-Speech](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-discrete-flow-matching-for-multi)
+### 536. [Hierarchical Discrete Flow Matching For Multi-Codebook Codec-Based Text-To-Speech](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-discrete-flow-matching-for-multi)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #零样本 #音频生成
 
@@ -17049,7 +17846,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 511. [Frame-Stacked Local Transformers for Efficient Multi-Codebook Speech Generation](/audio-paper-digest-blog/posts/2026-04-29-frame-stacked-local-transformers-for-efficient)
+### 537. [Frame-Stacked Local Transformers for Efficient Multi-Codebook Speech Generation](/audio-paper-digest-blog/posts/2026-04-29-frame-stacked-local-transformers-for-efficient)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #自回归模型 | #语音大模型 #局部Transformer
 
@@ -17069,7 +17866,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 512. [Direct Preference Optimization For Speech Autoregressive Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-direct-preference-optimization-for-speech)
+### 538. [Direct Preference Optimization For Speech Autoregressive Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-direct-preference-optimization-for-speech)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #偏好优化 #零样本
 
@@ -17116,7 +17913,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 513. [Direct Transfer of Prosody in Speech-to-speech Translation using Disentangled Speech Tokens](/audio-paper-digest-blog/posts/2026-04-29-direct-transfer-of-prosody-in-speech-to-speech)
+### 539. [Direct Transfer of Prosody in Speech-to-speech Translation using Disentangled Speech Tokens](/audio-paper-digest-blog/posts/2026-04-29-direct-transfer-of-prosody-in-speech-to-speech)
 
 ✅ **7.5/10** | 前25% | #语音翻译 | #端到端 | #自监督学习 #多语言
 
@@ -17141,7 +17938,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 514. [PROST-LLM: Progressively Enhancing the Speech-to-Speech Translation Capability in LLMs](/audio-paper-digest-blog/posts/2026-04-29-prost-llm-progressively-enhancing-the-speech-to)
+### 540. [PROST-LLM: Progressively Enhancing the Speech-to-Speech Translation Capability in LLMs](/audio-paper-digest-blog/posts/2026-04-29-prost-llm-progressively-enhancing-the-speech-to)
 
 ✅ **7.5/10** | 前25% | #语音翻译 | #偏好优化 | #大语言模型 #多任务学习
 
@@ -17166,7 +17963,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 515. [Revisiting Direct Speech-to-Text Translation with Speech LLMS: Better Scaling than Cot Prompting?](/audio-paper-digest-blog/posts/2026-04-29-revisiting-direct-speech-to-text-translation-with)
+### 541. [Revisiting Direct Speech-to-Text Translation with Speech LLMS: Better Scaling than Cot Prompting?](/audio-paper-digest-blog/posts/2026-04-29-revisiting-direct-speech-to-text-translation-with)
 
 ✅ **7.5/10** | 前50% | #语音翻译 | #语音大模型 | #端到端 #多语言
 
@@ -17195,7 +17992,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 516. [Listen, But Don't Leak: Sensitive Data Protection for Privacy Aware Automatic Speech Recognition with Acoustic Triggers](/audio-paper-digest-blog/posts/2026-04-29-listen-but-dont-leak-sensitive-data-protection)
+### 542. [Listen, But Don't Leak: Sensitive Data Protection for Privacy Aware Automatic Speech Recognition with Acoustic Triggers](/audio-paper-digest-blog/posts/2026-04-29-listen-but-dont-leak-sensitive-data-protection)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #对抗样本 | #隐私保护 #模型微调
 
@@ -17227,7 +18024,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 517. [EdgeSpot: Efficient and High-Performance Few-Shot Model for Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-edgespot-efficient-and-high-performance-few-shot)
+### 543. [EdgeSpot: Efficient and High-Performance Few-Shot Model for Keyword Spotting](/audio-paper-digest-blog/posts/2026-04-29-edgespot-efficient-and-high-performance-few-shot)
 
 ✅ **7.5/10** | 前25% | #语音活动检测 | #知识蒸馏 | #自监督学习 #少样本
 
@@ -17251,7 +18048,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 518. [Confidence-Guided Error Correction for Disordered Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-confidence-guided-error-correction-for-disordered)
+### 544. [Confidence-Guided Error Correction for Disordered Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-confidence-guided-error-correction-for-disordered)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #大语言模型 | #自回归模型 #鲁棒性
 
@@ -17271,7 +18068,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 519. [Advancing Semi-Supervised Child Speech Recognition with Omni-Temporal Classification under Label Noise](/audio-paper-digest-blog/posts/2026-04-29-advancing-semi-supervised-child-speech)
+### 545. [Advancing Semi-Supervised Child Speech Recognition with Omni-Temporal Classification under Label Noise](/audio-paper-digest-blog/posts/2026-04-29-advancing-semi-supervised-child-speech)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #自监督学习 #半监督学习 | #自监督学习 #半监督学习
 
@@ -17311,7 +18108,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 520. [Variational Low-Rank Adaptation for Personalized Impaired Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-variational-low-rank-adaptation-for-personalized)
+### 546. [Variational Low-Rank Adaptation for Personalized Impaired Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-variational-low-rank-adaptation-for-personalized)
 
 ✅ **7.5/10** | 前50% | #语音识别 | #领域适应 | #多语言 #少样本
 
@@ -17345,7 +18142,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 521. [Decoder-Only Conformer with Modality-Aware Sparse Mixtures of Experts for ASR](/audio-paper-digest-blog/posts/2026-04-29-decoder-only-conformer-with-modality-aware-sparse)
+### 547. [Decoder-Only Conformer with Modality-Aware Sparse Mixtures of Experts for ASR](/audio-paper-digest-blog/posts/2026-04-29-decoder-only-conformer-with-modality-aware-sparse)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #混合专家模型 | #多任务学习 #多语言
 
@@ -17385,7 +18182,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 522. [Loose Coupling of Spectral and Spatial Models for Multi-Channel Diarization and Enhancement of Meetings in Dynamic Environments](/audio-paper-digest-blog/posts/2026-04-29-loose-coupling-of-spectral-and-spatial-models-for)
+### 548. [Loose Coupling of Spectral and Spatial Models for Multi-Channel Diarization and Enhancement of Meetings in Dynamic Environments](/audio-paper-digest-blog/posts/2026-04-29-loose-coupling-of-spectral-and-spatial-models-for)
 
 ✅ **7.2/10** | 前25% | #说话人日志 #语音分离 | #麦克风阵列 #波束成形 | #说话人日志 #语音分离
 
@@ -17419,7 +18216,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 523. [BSMP-SENet:Band-Split Magnitude-Phase Network for Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-bsmp-senetband-split-magnitude-phase-network-for)
+### 549. [BSMP-SENet:Band-Split Magnitude-Phase Network for Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-bsmp-senetband-split-magnitude-phase-network-for)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #信号处理 #时频分析 | #信号处理 #时频分析
 
@@ -17447,7 +18244,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 524. [Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data](/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning)
+### 550. [Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data](/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning)
 
 ✅ **7.0/10** | 前50% | #联邦学习 | #强化学习 | #音频分类 #对抗样本
 
@@ -17496,7 +18293,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 525. [HFSQVAE: Hierarchical Vector Quantization with Residuals for Frequency-Specific Embedding](/audio-paper-digest-blog/posts/2026-04-29-hfsqvae-hierarchical-vector-quantization-with)
+### 551. [HFSQVAE: Hierarchical Vector Quantization with Residuals for Frequency-Specific Embedding](/audio-paper-digest-blog/posts/2026-04-29-hfsqvae-hierarchical-vector-quantization-with)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #向量量化 | #音频分类 #图像重建
 
@@ -17522,7 +18319,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 526. [When Voice Matters: A Controlled Study of Audio LLM Behavior in Clinical Decision-Making](/audio-paper-digest-blog/posts/2026-04-29-when-voice-matters-a-controlled-study-of-audio)
+### 552. [When Voice Matters: A Controlled Study of Audio LLM Behavior in Clinical Decision-Making](/audio-paper-digest-blog/posts/2026-04-29-when-voice-matters-a-controlled-study-of-audio)
 
 ✅ **7.0/10** | 前25% | #模型评估 | #基准测试 | #音频大模型 #语音合成
 
@@ -17567,7 +18364,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 527. [Optimizing Domain-Adaptive Self-Supervised Learning for Clinical Voice-Based Disease Classification](/audio-paper-digest-blog/posts/2026-04-29-optimizing-domain-adaptive-self-supervised)
+### 553. [Optimizing Domain-Adaptive Self-Supervised Learning for Clinical Voice-Based Disease Classification](/audio-paper-digest-blog/posts/2026-04-29-optimizing-domain-adaptive-self-supervised)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #自监督学习 | #领域适应 #音频分类
 
@@ -17608,7 +18405,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 528. [MT-HuBERT: Self-Supervised Mix-Training for Few-Shot Keyword Spotting in Mixed Speech](/audio-paper-digest-blog/posts/2026-04-29-mt-hubert-self-supervised-mix-training-for-few)
+### 554. [MT-HuBERT: Self-Supervised Mix-Training for Few-Shot Keyword Spotting in Mixed Speech](/audio-paper-digest-blog/posts/2026-04-29-mt-hubert-self-supervised-mix-training-for-few)
 
 ✅ **7.0/10** | 前25% | #关键词检测 | #自监督学习 | #混合语音处理 #少样本学习
 
@@ -17633,7 +18430,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 529. [Scaling Spoken Language Models with Syllabic Speech Tokenization](/audio-paper-digest-blog/posts/2026-04-29-scaling-spoken-language-models-with-syllabic)
+### 555. [Scaling Spoken Language Models with Syllabic Speech Tokenization](/audio-paper-digest-blog/posts/2026-04-29-scaling-spoken-language-models-with-syllabic)
 
 ✅ **7.0/10** | 前25% | #语音理解 | #分词技术 | #语音大模型 #自监督学习
 
@@ -17665,7 +18462,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 530. [RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer](/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation)
+### 556. [RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer](/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation)
 
 ✅ **7.0/10** | 前25% | #音视频 | #扩散模型 | #流匹配 #DiT
 
@@ -17715,7 +18512,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 531. [Evaluating Bias in Spoken Dialogue LLMs for Real-World Decisions and Recommendations](/audio-paper-digest-blog/posts/2026-04-29-evaluating-bias-in-spoken-dialogue-llms-for-real)
+### 557. [Evaluating Bias in Spoken Dialogue LLMs for Real-World Decisions and Recommendations](/audio-paper-digest-blog/posts/2026-04-29-evaluating-bias-in-spoken-dialogue-llms-for-real)
 
 ✅ **7.0/10** | 前25% | #模型评估 | #公平性研究 | #语音大模型 #基准测试
 
@@ -17762,7 +18559,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 532. [Cross-Cultural Bias in Mel-Scale Representations: Evidence and Alternatives from Speech and Music](/audio-paper-digest-blog/posts/2026-04-29-cross-cultural-bias-in-mel-scale-representations)
+### 558. [Cross-Cultural Bias in Mel-Scale Representations: Evidence and Alternatives from Speech and Music](/audio-paper-digest-blog/posts/2026-04-29-cross-cultural-bias-in-mel-scale-representations)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #时频分析 | #音乐信息检索 #多语言
 
@@ -17788,7 +18585,83 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 533. [Ailive Mixer: A Deep Learning Based Zero Latency Automatic Music Mixer for Live Music Performances](/audio-paper-digest-blog/posts/2026-04-29-ailive-mixer-a-deep-learning-based-zero-latency)
+### 559. [RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition](/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical)
+
+前50% | #音乐信息检索 | #时频分析 | #音频分类 #鲁棒性
+
+👥 **作者与机构**
+
+- 第一作者：Hao ZHOU（南开大学软件学院）
+- 通讯作者：Binhui WANG（南开大学创新与智能设计中心 I²DC， 南开大学软件学院）、Haining ZHANG（南开大学软件学院， 天津市软件体验与人机交互重点实验室）
+- 作者列表：Hao ZHOU（南开大学软件学院；天津市软件体验与人机交互重点实验室）、Zhen LI（独立研究者）、Binhui WANG（南开大学软件学院；创新与智能设计中心 I²DC）、Haining ZHANG（南开大学软件学院；天津市软件体验与人机交互重点实验室）
+
+💡 **毒舌点评**
+
+论文核心亮点在于巧妙地将“对数变换提升梅尔频谱图性能”的思路迁移到相位特征上，提出了RMODGDF，并提供了严谨的统计检验来证明其有效性。然而，其短板在于创新幅度较小，本质上是已有MODGDF的一个简单数学变换（加log），且仅在单一CNN模型上验证，未能探索其与更先进的Transformer模型结合的可能性，也未开源代码，限制了社区的快速验证与应用。
+
+📌 **核心摘要**
+
+1. **问题**：当前主流音乐乐器识别方法严重依赖幅度谱特征（如Log-Mel频谱图），而丢弃了可能包含时域结构、瞬态和音色关键信息的相位信息。
+2. **方法核心**：提出“反射修正群延迟函数（RMODGDF）”，通过对修正群延迟函数（MODGDF）施加对数变换（`sign(τ) * log(1 + |τ|^α)`）来压缩动态范围、增强判别性特征，类比于从梅尔频谱图到对数梅尔频谱图的成功演进。
+3. **与已有方法相比的新颖性**：与直接使用原始相位（Cos+Sin分量）或未做对数变换的MODGDF相比，RMODGDF是一种更结构化、更鲁棒的相位信息表示方法。它首次系统地将对数压缩这一关键操作应用于群延迟特征，旨在提升其在分类任务中的判别力。
+4. **主要实验结果**：在IRMAS（西方乐器）和ChMusic（中国民族乐器）两个数据集上，使用ConvNeXt-V2 Base模型进行评估。RMODGDF在所有指标上均优于Log-Mel频谱图基线、原始相位组合及MODGDF。关键数据见下表：
+
+| 特征表示 | IRMAS AUROC (%) | IRMAS 准确率 (%) | ChMusic AUROC (%) | ChMusic 准确率 (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| Log-Mel Spectrogram | 98.717 ± 0.203 | 89.291 ± 0.937 | 99.520 ± 0.320 | 92.271 ± 1.199 |
+| MODGDF | 98.674 ± 0.387 | 89.167 ± 1.083 | 99.498 ± 0.308 | 91.449 ± 2.840 |
+| RMODGDF (本文) | **99.299 ± 0.157** | **91.496 ± 1.564** | **99.747 ± 0.184** | **93.023 ± 1.526** |
+
+![图1描述](pdf-image-page3-idx0)
+![图2描述](pdf-image-page3-idx1)
+*图1和图2（论文中标为Fig. 1与Fig. 2）展示了MODGDF与RMODGDF特征图的视觉对比。RMODGDF的对数变换增强了低能量区域的细节，同时保持了高能量区域的判别性，整体对比度更优。*
+
+5. **实际意义**：为音频特征表示（尤其是相位信息利用）提供了一个简单、原理清晰且有效的改进方案，对提升MIR相关任务性能有潜在价值。
+6. **主要局限性**：方法创新局限于对已有特征的简单数学变换；评估仅使用单一CNN模型（ConvNeXt-V2），未与更先进的Transformer模型对比；未提供代码，部分统计显著性结果为边际显著（p<0.10）。
+
+---
+
+### 560. [Equipping Large Language Model with Directional Speech Understanding Capabilities](/audio-paper-digest-blog/posts/2026-04-29-equipping-large-language-model-with-directional)
+
+前50% | #语音识别 #语音翻译 | #语音分离 #波束成形 | #语音识别 #语音翻译
+
+👥 **作者与机构**
+
+- 第一作者：Ju Lin（Meta, USA）
+- 通讯作者：未说明（论文中未明确标注）
+- 作者列表：Ju Lin（Meta, USA）、Jing Pan（Meta, USA）、Ruizhi Li（Meta, USA）、Ming Sun（Meta, USA）、Yuzong Liu（Meta, USA）、Alaa Hassan（Meta, USA）、Jing Zheng（Meta, USA）、Florian Metze（Meta, USA）
+
+💡 **毒舌点评**
+
+**亮点**：论文精准聚焦于智能眼镜“听清特定人”的刚需，提出了从系统架构（级联/端到端）到流式推理的全套解决方案，实验设计也比较全面，覆盖了分离、识别、翻译三个环节。**短板**：所有实验都在模拟数据上“闭卷考试”，缺乏真实世界复杂声学环境的“开卷考验”，这让人对其宣称的“鲁棒性”和实际落地能力打上一个问号；此外，端到端SOT方案在部分任务上不如传统的级联方案，显示出“大而全”未必总是最优解。
+
+📌 **核心摘要**
+
+这篇论文旨在解决基于大语言模型（LLM）的语音系统在智能眼镜场景中面临的挑战：现有模型多为单通道、单说话人设计，难以处理多麦克风阵列录制的、包含佩戴者（近场）和对话者（远场）的定向多人语音。
+
+论文提出了两种将方向性理解能力集成到LLM中的新方法：1) **级联系统**：先利用基于编码器-解码器架构的流式语音分离模型分离佩戴者和对话者的语音，再通过比较RMS比值判断说话人身份，最后将参考通道音频连同任务提示输入LLM；2) **端到端系统**：采用序列化输出训练（SOT）策略，直接对LLM进行微调，使其能够处理经非线性约束最小方差（NLCMV）波束成形增强后的单通道音频，并同时输出带说话人标签的识别与翻译结果。两种方法都利用了LoRA进行高效微调，并实现了600毫秒分块的流式推理。
+
+主要实验结果（基于模拟的FLEURS测试集）如下表所示，表明两种方法在说话人归属准确率、语音识别（WER）和翻译（BLEU）任务上均优于或媲美传统基线系统。在“伙伴说西班牙语”场景中，级联SS+SLM和端到端SOT+SLM的BLEU分数分别达到25.3和22.6，显著高于JSTAR基线的18.3。
+
+| 模型 | Wearer | Partner | |
+| :--- | :--- | :--- | :--- |
+| | WER[%]↓ | SA[%]↓ | BLEU↑ | WER[%]↓ | SA[%]↓ | BLEU↑ |
+| **伙伴：西班牙语** | | | | | | |
+| Multi-channel ASR [1] | 16.5 | 0.0 | - | 13.2 | 0.0 | - |
+| JSTAR [22] | 16.7 | 0.0 | 18.6 | 13.2 | 0.0 | 18.3 |
+| **SS+SLM** | **12.5** | 0.0 | **22.0** | **10.6** | 0.6 | **25.3** |
+| Multi-channel SOT+SLM | 17.3 | 0.0 | 19.6 | 16.5 | 1.8 | 22.6 |
+| **伙伴：法语** | | | | | | |
+| Multi-channel ASR [1] | 16.7 | 0.0 | - | 22.0 | 0.0 | - |
+| JSTAR [22] | 16.5 | 0.0 | 19.3 | 21.9 | 0.0 | 16.5 |
+| **SS+SLM** | **12.9** | 0.0 | **36.9** | 22.8 | 0.4 | **28.4** |
+| Multi-channel SOT+SLM | 15.5 | 0.2 | 34.7 | 25.9 | 2.5 | 26.5 |
+
+论文的实际意义在于为下一代智能可穿戴设备提供了可行的实时多语言交互技术方案。其主要局限性是**所有实验数据均为模拟生成**，缺乏真实世界录音的验证；同时，端到端的SOT+SLM方案在说话人归属准确率（SA）上仍存在少量错误，且在部分识别任务上性能不及基线。
+
+---
+
+### 561. [Ailive Mixer: A Deep Learning Based Zero Latency Automatic Music Mixer for Live Music Performances](/audio-paper-digest-blog/posts/2026-04-29-ailive-mixer-a-deep-learning-based-zero-latency)
 
 ✅ **7.0/10** | 前25% | #音乐混合 | #深度学习 | #实时处理 #串音消除
 
@@ -17808,7 +18681,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 534. [Bridging the Front-End and Back-End for Robust ASR via Cross-Attention-Based U-Net](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-front-end-and-back-end-for-robust)
+### 562. [Bridging the Front-End and Back-End for Robust ASR via Cross-Attention-Based U-Net](/audio-paper-digest-blog/posts/2026-04-29-bridging-the-front-end-and-back-end-for-robust)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #交叉注意力 | #U-Net #鲁棒性
 
@@ -17842,7 +18715,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 535. [VMSP: Video-to-Music Generation with Two-Stage Alignment and Synthesis](/audio-paper-digest-blog/posts/2026-04-29-vmsp-video-to-music-generation-with-two-stage)
+### 563. [VMSP: Video-to-Music Generation with Two-Stage Alignment and Synthesis](/audio-paper-digest-blog/posts/2026-04-29-vmsp-video-to-music-generation-with-two-stage)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #扩散模型 | #多模态模型 #跨模态
 
@@ -17888,7 +18761,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 536. [Directly Trained Spiking Neural Networks with Adaptive Phase Coding](/audio-paper-digest-blog/posts/2026-04-29-directly-trained-spiking-neural-networks-with)
+### 564. [Directly Trained Spiking Neural Networks with Adaptive Phase Coding](/audio-paper-digest-blog/posts/2026-04-29-directly-trained-spiking-neural-networks-with)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #时间编码 | #脉冲神经网络
 
@@ -17909,7 +18782,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 537. [Exploring How Audio Effects Alter Emotion with Foundation Models](/audio-paper-digest-blog/posts/2026-04-29-exploring-how-audio-effects-alter-emotion-with)
+### 565. [Exploring How Audio Effects Alter Emotion with Foundation Models](/audio-paper-digest-blog/posts/2026-04-29-exploring-how-audio-effects-alter-emotion-with)
 
 ✅ **7.0/10** | 前50% | #音乐理解 | #预训练 | #情感计算 #音频大模型
 
@@ -17934,7 +18807,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 538. [Does the Pre-Training of an Embedding Influence its Encoding of Age?](/audio-paper-digest-blog/posts/2026-04-29-does-the-pre-training-of-an-embedding-influence)
+### 566. [Does the Pre-Training of an Embedding Influence its Encoding of Age?](/audio-paper-digest-blog/posts/2026-04-29-does-the-pre-training-of-an-embedding-influence)
 
 ✅ **7.0/10** | 前50% | #语音生物标志物 | #预训练 | #说话人识别 #模型比较
 
@@ -17954,7 +18827,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 539. [Etude: Piano Cover Generation with a Three-Stage Approach — Extract, Structuralize, and Decode](/audio-paper-digest-blog/posts/2026-04-29-etude-piano-cover-generation-with-a-three-stage)
+### 567. [Etude: Piano Cover Generation with a Three-Stage Approach — Extract, Structuralize, and Decode](/audio-paper-digest-blog/posts/2026-04-29-etude-piano-cover-generation-with-a-three-stage)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #自回归模型 | #生成模型 #音乐信息检索
 
@@ -17988,7 +18861,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 540. [Audio-Visual Feature Fusion for Calibrating Relevance Scores of Video Moment Retrieval](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-feature-fusion-for-calibrating)
+### 568. [Audio-Visual Feature Fusion for Calibrating Relevance Scores of Video Moment Retrieval](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-feature-fusion-for-calibrating)
 
 ✅ **7.0/10** | 前25% | #视频片段检索 | #晚期融合 | #重评分 #音视频
 
@@ -18017,7 +18890,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 541. [MirrorTalk: Forging Personalized Avatars Via Disentangled Style and Hierarchical Motion Control](/audio-paper-digest-blog/posts/2026-04-29-mirrortalk-forging-personalized-avatars-via)
+### 569. [MirrorTalk: Forging Personalized Avatars Via Disentangled Style and Hierarchical Motion Control](/audio-paper-digest-blog/posts/2026-04-29-mirrortalk-forging-personalized-avatars-via)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #扩散模型 | #个性化生成 #多模态
 
@@ -18042,7 +18915,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 542. [An Anomaly-Aware and Audio-Enhanced Dual-Pathway Framework for Alzheimer’s Disease Progression Classification](/audio-paper-digest-blog/posts/2026-04-29-an-anomaly-aware-and-audio-enhanced-dual-pathway)
+### 570. [An Anomaly-Aware and Audio-Enhanced Dual-Pathway Framework for Alzheimer’s Disease Progression Classification](/audio-paper-digest-blog/posts/2026-04-29-an-anomaly-aware-and-audio-enhanced-dual-pathway)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #多模态模型 | #大语言模型 #对比学习
 
@@ -18068,7 +18941,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 543. [Leveraging Text-to-Speech and Voice Conversion as Data Augmentation for Alzheimer's Disease Detection from Spontaneous Speech](/audio-paper-digest-blog/posts/2026-04-29-leveraging-text-to-speech-and-voice-conversion-as)
+### 571. [Leveraging Text-to-Speech and Voice Conversion as Data Augmentation for Alzheimer's Disease Detection from Spontaneous Speech](/audio-paper-digest-blog/posts/2026-04-29-leveraging-text-to-speech-and-voice-conversion-as)
 
 ✅ **7.0/10** | 前50% | #语音生物标志物 | #数据增强 | #语音合成 #语音转换
 
@@ -18106,7 +18979,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 544. [Noise-Robust Contrastive Learning with an MFCC-Conformer for Coronary Artery Disease Detection](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-contrastive-learning-with-an-mfcc)
+### 572. [Noise-Robust Contrastive Learning with an MFCC-Conformer for Coronary Artery Disease Detection](/audio-paper-digest-blog/posts/2026-04-29-noise-robust-contrastive-learning-with-an-mfcc)
 
 ✅ **7.0/10** | 前50% | #音频分类 | #对比学习 | #Conformer #鲁棒性
 
@@ -18139,7 +19012,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 545. [EEG and Eye-Tracking Driven Dynamic Target Speaker Extraction with Spontaneous Attention Switching](/audio-paper-digest-blog/posts/2026-04-29-eeg-and-eye-tracking-driven-dynamic-target)
+### 573. [EEG and Eye-Tracking Driven Dynamic Target Speaker Extraction with Spontaneous Attention Switching](/audio-paper-digest-blog/posts/2026-04-29-eeg-and-eye-tracking-driven-dynamic-target)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #多模态模型 | #多任务学习 #生物声学
 
@@ -18164,7 +19037,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 546. [DPT-Net: Dual-Path Transformer Network with Hierarchical Fusion for EEG-based Envelope Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-dpt-net-dual-path-transformer-network-with)
+### 574. [DPT-Net: Dual-Path Transformer Network with Hierarchical Fusion for EEG-based Envelope Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-dpt-net-dual-path-transformer-network-with)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #对比学习 | #多模态模型 #跨模态
 
@@ -18198,7 +19071,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 547. [DECAF: Dynamic Envelope Context-Aware Fusion for Speech-Envelope Reconstruction from EEG](/audio-paper-digest-blog/posts/2026-04-29-decaf-dynamic-envelope-context-aware-fusion-for)
+### 575. [DECAF: Dynamic Envelope Context-Aware Fusion for Speech-Envelope Reconstruction from EEG](/audio-paper-digest-blog/posts/2026-04-29-decaf-dynamic-envelope-context-aware-fusion-for)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #状态空间模型 | #跨模态 #信号处理
 
@@ -18229,7 +19102,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 548. [Condition-Invariant fMRI decoding of speech intelligibility with deep state space model](/audio-paper-digest-blog/posts/2026-04-29-condition-invariant-fmri-decoding-of-speech)
+### 576. [Condition-Invariant fMRI decoding of speech intelligibility with deep state space model](/audio-paper-digest-blog/posts/2026-04-29-condition-invariant-fmri-decoding-of-speech)
 
 ✅ **7.0/10** | 前25% | #神经解码 | #状态空间模型 | #语音可懂度解码 #跨条件迁移
 
@@ -18249,7 +19122,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 549. [CMSA-Mamba: Hierarchical State Space Modeling for Audio-Based Depression Detection](/audio-paper-digest-blog/posts/2026-04-29-cmsa-mamba-hierarchical-state-space-modeling-for)
+### 577. [CMSA-Mamba: Hierarchical State Space Modeling for Audio-Based Depression Detection](/audio-paper-digest-blog/posts/2026-04-29-cmsa-mamba-hierarchical-state-space-modeling-for)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #模型/架构 | #Mamba #多尺度分析
 
@@ -18269,7 +19142,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 550. [Fusion of Multimodal Estimations by Extended State Hidden Markov Model: Application to Fetal Heart Rate Monitoring](/audio-paper-digest-blog/posts/2026-04-29-fusion-of-multimodal-estimations-by-extended)
+### 578. [Fusion of Multimodal Estimations by Extended State Hidden Markov Model: Application to Fetal Heart Rate Monitoring](/audio-paper-digest-blog/posts/2026-04-29-fusion-of-multimodal-estimations-by-extended)
 
 ✅ **7.0/10** | 前50% | #生物声学 | #信号处理 | #多任务学习 #医疗
 
@@ -18305,7 +19178,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 551. [DAT-CFTNet: Speech Enhancement for Cochlear Implant Recipients using Attention-based Dual-Path Recurrent Neural Network](/audio-paper-digest-blog/posts/2026-04-29-dat-cftnet-speech-enhancement-for-cochlear)
+### 579. [DAT-CFTNet: Speech Enhancement for Cochlear Implant Recipients using Attention-based Dual-Path Recurrent Neural Network](/audio-paper-digest-blog/posts/2026-04-29-dat-cftnet-speech-enhancement-for-cochlear)
 
 ✅ **7.0/10** | 前50% | #语音增强 | #注意力机制 | #双路径RNN #复数值网络
 
@@ -18325,7 +19198,40 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 552. [Caption and Audio-Guided Video Representation Learning with Gated Attention for Partially Relevant Video Retrieval](/audio-paper-digest-blog/posts/2026-04-29-caption-and-audio-guided-video-representation)
+### 580. [Respire-Mamba C-UNet: Consistency-Trained Autoencoder for High-Fidelity Respiratory Sound Compression](/audio-paper-digest-blog/posts/2026-04-29-respire-mamba-c-unet-consistency-trained)
+
+前25% | #音频压缩 | #一致性训练 | #状态空间模型 #远程医疗
+
+👥 **作者与机构**
+
+- 第一作者：Rishabh（德里大学计算机科学系）
+- 通讯作者：未说明
+- 作者列表：Rishabh（德里大学计算机科学系）、Yogendra Meena（德里理工大学应用数学系）、Dhirendra Kumar（贾瓦哈拉尔·尼赫鲁大学计算机与系统科学学院）、Kuldeep Singh（德里大学计算机科学系）、Nidhi（J.C. Bose科学技术大学 YMCA）
+
+💡 **毒舌点评**
+
+论文成功地将多个前沿技术（SincConv、U-Net金字塔、Mamba、一致性模型）缝合在一起，在呼吸音压缩任务上取得了令人印象深刻的保真度（CC=1.0000），这是其显著亮点。然而，其核心短板在于压缩比（CR=3.91）相对温和，且论文主要贡献更偏向于“工程整合”而非“理论突破”，此外，关键的消融实验（如表1）中“去掉方差缩放/频率门控”性能反而略好于完整模型，这略显反常，论文未给出充分解释。
+
+📌 **核心摘要**
+
+1. **要解决的问题**：慢性呼吸疾病诊断中，数字听诊器录音的高效压缩与高保真重建，以支持可扩展的远程医疗。
+2. **方法核心**：提出Respire-Mamba C-UNet，一个统一的自编码器框架。它结合生理感知的SincConv前端进行特征提取，金字塔UNet进行多尺度编码，以及一个由时间Mamba瓶颈增强的一致性训练UNet进行单步解码重建。
+3. **与已有方法相比新在哪里**：不同于先前工作孤立处理前端、编码、解码，或追求极端压缩比，本文首次将SincConv的生理感知前端、金字塔多尺度表示、Mamba的高效长程建模与一致性训练的单步重建能力整合，共同优化以获得临床级保真度。
+4. **主要实验结果**：在SPRSound 2024基准测试上，模型实现了PRD=0.85%， CC=1.0000， CR=3.91，显著优于现有自编码器和压缩感知基线。消融研究证实了各组件的互补增益。关键对比如下表所示：
+| 方法 | PRD (%) | CC | CR |
+| :--- | :--- | :--- | :--- |
+| 压缩感知 [10] | 50.1 | 0.8630 | 3.5 |
+| VAE+Transformer [11] | 20.5 | 0.9800 | 256 |
+| 卷积自编码器 [9] | 22.3 | 0.9720 | 222.1 |
+| 生成式VAE [9] | 7.60 | 0.9757 | 42.67 |
+| 压缩感知 [9] | 5.30 | 0.9311 | 4 |
+| **本文方法** | **0.85** | **1.0000** | **3.91** |
+5. **实际意义**：为医疗远程听诊提供了一种高质量、低延迟（单次前向传播）的音频压缩解决方案，有助于推动远程呼吸诊断的普及。
+6. **主要局限性**：压缩比相对较低，未在更广泛的音频或疾病类型数据集上验证；消融实验中个别结果的解读需要更多分析；未提供代码与模型以支持复现。
+
+---
+
+### 581. [Caption and Audio-Guided Video Representation Learning with Gated Attention for Partially Relevant Video Retrieval](/audio-paper-digest-blog/posts/2026-04-29-caption-and-audio-guided-video-representation)
 
 ✅ **7.0/10** | 前25% | #视频检索 | #多模态模型 | #注意力机制 #视觉语言模型
 
@@ -18350,7 +19256,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 553. [Auto-MatchCut: An Audio-Visual Retrieval Framework for Seamless Match Cutting](/audio-paper-digest-blog/posts/2026-04-29-auto-matchcut-an-audio-visual-retrieval-framework)
+### 582. [Auto-MatchCut: An Audio-Visual Retrieval Framework for Seamless Match Cutting](/audio-paper-digest-blog/posts/2026-04-29-auto-matchcut-an-audio-visual-retrieval-framework)
 
 ✅ **7.0/10** | 前50% | #跨模态检索 | #音频检索 | #视频检索 #跨模态
 
@@ -18376,7 +19282,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 554. [Attentive AV-Fusionnet: Audio-Visual Quality Prediction with Hybrid Attention](/audio-paper-digest-blog/posts/2026-04-29-attentive-av-fusionnet-audio-visual-quality)
+### 583. [Attentive AV-Fusionnet: Audio-Visual Quality Prediction with Hybrid Attention](/audio-paper-digest-blog/posts/2026-04-29-attentive-av-fusionnet-audio-visual-quality)
 
 ✅ **7.0/10** | 前25% | #音视频 | #注意力机制 | #多模态模型 #模型评估
 
@@ -18401,7 +19307,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 555. [Dual Contrastive Learning for Semi-Supervised Domain Adaptation in Bi-Modal Depression Recognition](/audio-paper-digest-blog/posts/2026-04-29-dual-contrastive-learning-for-semi-supervised)
+### 584. [Dual Contrastive Learning for Semi-Supervised Domain Adaptation in Bi-Modal Depression Recognition](/audio-paper-digest-blog/posts/2026-04-29-dual-contrastive-learning-for-semi-supervised)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #对比学习 | #领域适应 #多模态模型
 
@@ -18421,7 +19327,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 556. [The Synergistic Role of Audio and Large Video-Language Model in Source-Free Video Domain Adaptation](/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video)
+### 585. [The Synergistic Role of Audio and Large Video-Language Model in Source-Free Video Domain Adaptation](/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video)
 
 ✅ **7.0/10** | 前25% | #领域适应 | #多模态模型 | #预训练 #知识蒸馏
 
@@ -18463,7 +19369,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 557. [Spiking Temporal-Enhanced Network for Zero-Shot Audio-Visual Learning](/audio-paper-digest-blog/posts/2026-04-29-spiking-temporal-enhanced-network-for-zero-shot)
+### 586. [Spiking Temporal-Enhanced Network for Zero-Shot Audio-Visual Learning](/audio-paper-digest-blog/posts/2026-04-29-spiking-temporal-enhanced-network-for-zero-shot)
 
 ✅ **7.0/10** | 前50% | #音频分类 | #脉冲神经网络 | #音视频 #零样本
 
@@ -18492,7 +19398,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 558. [Style-Disentangled Diffusion for Controllable and Identity-Generalized Speech-Driven Body Motion Generation](/audio-paper-digest-blog/posts/2026-04-29-style-disentangled-diffusion-for-controllable-and)
+### 587. [Style-Disentangled Diffusion for Controllable and Identity-Generalized Speech-Driven Body Motion Generation](/audio-paper-digest-blog/posts/2026-04-29-style-disentangled-diffusion-for-controllable-and)
 
 ✅ **7.0/10** | 前25% | #语音驱动动作生成 | #扩散模型 | #对比学习 #解耦学习
 
@@ -18512,7 +19418,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 559. [Look, Listen and Segment: Towards Weakly Supervised Audio-Visual Semantic Segmentation](/audio-paper-digest-blog/posts/2026-04-29-look-listen-and-segment-towards-weakly-supervised)
+### 588. [Look, Listen and Segment: Towards Weakly Supervised Audio-Visual Semantic Segmentation](/audio-paper-digest-blog/posts/2026-04-29-look-listen-and-segment-towards-weakly-supervised)
 
 ✅ **7.0/10** | 前25% | #音视频 | #对比学习 | #音视频语义分割 #弱监督学习
 
@@ -18554,7 +19460,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 560. [Face-Voice Association with Inductive Bias for Maximum Class Separation](/audio-paper-digest-blog/posts/2026-04-29-face-voice-association-with-inductive-bias-for)
+### 589. [Face-Voice Association with Inductive Bias for Maximum Class Separation](/audio-paper-digest-blog/posts/2026-04-29-face-voice-association-with-inductive-bias-for)
 
 ✅ **7.0/10** | 前25% | #说话人验证 | #归纳偏置 | #跨模态 #对比学习
 
@@ -18594,7 +19500,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 561. [DAMO: A Data-Efficient Multimodal Orchestrator for Temporal Reasoning with Video LLMS](/audio-paper-digest-blog/posts/2026-04-29-damo-a-data-efficient-multimodal-orchestrator-for)
+### 590. [DAMO: A Data-Efficient Multimodal Orchestrator for Temporal Reasoning with Video LLMS](/audio-paper-digest-blog/posts/2026-04-29-damo-a-data-efficient-multimodal-orchestrator-for)
 
 ✅ **7.0/10** | 前25% | #视频问答 | #多模态模型 | #时间定位 #渐进训练
 
@@ -18635,7 +19541,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 562. [Sounds that Shape: Audio-Driven 3D Mesh Generation with Attribute-Decoupled Score Distillation Sampling](/audio-paper-digest-blog/posts/2026-04-29-sounds-that-shape-audio-driven-3d-mesh-generation)
+### 591. [Sounds that Shape: Audio-Driven 3D Mesh Generation with Attribute-Decoupled Score Distillation Sampling](/audio-paper-digest-blog/posts/2026-04-29-sounds-that-shape-audio-driven-3d-mesh-generation)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #扩散模型 | #3D音频 #知识蒸馏
 
@@ -18663,7 +19569,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 563. [Towards Multi-View Hierarchical Video-to-Piano Generation with MIDI Guidance](/audio-paper-digest-blog/posts/2026-04-29-towards-multi-view-hierarchical-video-to-piano)
+### 592. [Towards Multi-View Hierarchical Video-to-Piano Generation with MIDI Guidance](/audio-paper-digest-blog/posts/2026-04-29-towards-multi-view-hierarchical-video-to-piano)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #扩散模型 | #多模态模型 #跨模态
 
@@ -18688,7 +19594,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 564. [Lightweight Implicit Neural Network for Binaural Audio Synthesis](/audio-paper-digest-blog/posts/2026-04-29-lightweight-implicit-neural-network-for-binaural)
+### 593. [Lightweight Implicit Neural Network for Binaural Audio Synthesis](/audio-paper-digest-blog/posts/2026-04-29-lightweight-implicit-neural-network-for-binaural)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #隐式神经网络 | #轻量模型 #端到端
 
@@ -18719,7 +19625,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 565. [AI-Generated Music Detection in Broadcast Monitoring](/audio-paper-digest-blog/posts/2026-04-29-ai-generated-music-detection-in-broadcast)
+### 594. [AI-Generated Music Detection in Broadcast Monitoring](/audio-paper-digest-blog/posts/2026-04-29-ai-generated-music-detection-in-broadcast)
 
 ✅ **7.0/10** | 前50% | #音频深度伪造检测 | #数据集 | #鲁棒性 #工业应用
 
@@ -18752,7 +19658,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 566. [ACIR-MACL: Effective Multimodal Sentiment Analysis via Attention-Based Causal Intervention Regularization and Multi-Aspect Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-acir-macl-effective-multimodal-sentiment-analysis)
+### 595. [ACIR-MACL: Effective Multimodal Sentiment Analysis via Attention-Based Causal Intervention Regularization and Multi-Aspect Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-acir-macl-effective-multimodal-sentiment-analysis)
 
 ✅ **7.0/10** | 前25% | #情感分析 | #对比学习 | #因果推理 #多模态模型
 
@@ -18777,7 +19683,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 567. [Semantic-Guided Pseudo-Feature Attention Network for Audio-Visual Zero-Shot Learning](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network)
+### 596. [Semantic-Guided Pseudo-Feature Attention Network for Audio-Visual Zero-Shot Learning](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network)
 
 ✅ **7.0/10** | 前25% | #音频分类 #零样本学习 | #多模态模型 #对比学习 | #音频分类 #零样本学习
 
@@ -18797,7 +19703,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 568. [Rationale-Guided Learning for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion)
+### 597. [Rationale-Guided Learning for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #对比学习 | #多模态模型
 
@@ -18845,7 +19751,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 569. [Bimodal Fusion Framework for Dynamic Facial Expression Recognition In-The-Wild](/audio-paper-digest-blog/posts/2026-04-29-bimodal-fusion-framework-for-dynamic-facial)
+### 598. [Bimodal Fusion Framework for Dynamic Facial Expression Recognition In-The-Wild](/audio-paper-digest-blog/posts/2026-04-29-bimodal-fusion-framework-for-dynamic-facial)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #多模态模型 | #跨模态 #音视频
 
@@ -18865,7 +19771,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 570. [Dual-Perspective Multimodal Sentiment Analysis with MoE Fusion: Representation Learning via Semantic Resonance and Divergence](/audio-paper-digest-blog/posts/2026-04-29-dual-perspective-multimodal-sentiment-analysis)
+### 599. [Dual-Perspective Multimodal Sentiment Analysis with MoE Fusion: Representation Learning via Semantic Resonance and Divergence](/audio-paper-digest-blog/posts/2026-04-29-dual-perspective-multimodal-sentiment-analysis)
 
 ✅ **7.0/10** | 前50% | #多模态情感分析 | #多模态模型 | #对比学习 #混合专家
 
@@ -18890,7 +19796,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 571. [FastAV: Efficient Token Pruning for Audio-Visual Large Language Model Inference](/audio-paper-digest-blog/posts/2026-04-29-fastav-efficient-token-pruning-for-audio-visual)
+### 600. [FastAV: Efficient Token Pruning for Audio-Visual Large Language Model Inference](/audio-paper-digest-blog/posts/2026-04-29-fastav-efficient-token-pruning-for-audio-visual)
 
 ✅ **7.0/10** | 前25% | #音频问答 | #大语言模型的压缩与加速 | #音视频 #多模态模型
 
@@ -18916,7 +19822,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 572. [ST-HNTM: Joint Speech-Text Neural Topic Modeling on the Hypersphere](/audio-paper-digest-blog/posts/2026-04-29-st-hntm-joint-speech-text-neural-topic-modeling)
+### 601. [ST-HNTM: Joint Speech-Text Neural Topic Modeling on the Hypersphere](/audio-paper-digest-blog/posts/2026-04-29-st-hntm-joint-speech-text-neural-topic-modeling)
 
 ✅ **7.0/10** | 前25% | #主题建模 | #多模态模型 | #超球面表示 #语音理解
 
@@ -18941,7 +19847,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 573. [UVT-LM: Unifying Visual and Tactile Perception with Language Model](/audio-paper-digest-blog/posts/2026-04-29-uvt-lm-unifying-visual-and-tactile-perception)
+### 602. [UVT-LM: Unifying Visual and Tactile Perception with Language Model](/audio-paper-digest-blog/posts/2026-04-29-uvt-lm-unifying-visual-and-tactile-perception)
 
 ✅ **7.0/10** | 前25% | #跨模态 | #多模态模型 | #音频分类 #大语言模型
 
@@ -18976,7 +19882,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 574. [Teacher-Guided Pseudo Supervision and Cross-Modal Alignment for Audio-Visual Video Parsing](/audio-paper-digest-blog/posts/2026-04-29-teacher-guided-pseudo-supervision-and-cross-modal)
+### 603. [Teacher-Guided Pseudo Supervision and Cross-Modal Alignment for Audio-Visual Video Parsing](/audio-paper-digest-blog/posts/2026-04-29-teacher-guided-pseudo-supervision-and-cross-modal)
 
 ✅ **7.0/10** | 前25% | #音视频 | #知识蒸馏 | #视频理解 #弱监督学习
 
@@ -19032,7 +19938,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 575. [An End-to-End Multimodal System for Subtitle Recognition and Chinese-Japanese Translation in Short Dramas](/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle)
+### 604. [An End-to-End Multimodal System for Subtitle Recognition and Chinese-Japanese Translation in Short Dramas](/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle)
 
 ✅ **7.0/10** | 前50% | #多模态模型 | #端到端 | #语音识别 #机器翻译
 
@@ -19069,7 +19975,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 576. [Can Large Audio Language Models Understand Audio Well? Speech, Scene and Events Understanding Benchmark for LALMs](/audio-paper-digest-blog/posts/2026-04-29-can-large-audio-language-models-understand-audio)
+### 605. [Can Large Audio Language Models Understand Audio Well? Speech, Scene and Events Understanding Benchmark for LALMs](/audio-paper-digest-blog/posts/2026-04-29-can-large-audio-language-models-understand-audio)
 
 ✅ **7.0/10** | 前25% | #基准测试 | #链式推理 | #音频大模型 #音频场景理解
 
@@ -19106,7 +20012,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 577. [AVO-65: A Large-Scale Hierarchical Audio-Visual Object Dataset](/audio-paper-digest-blog/posts/2026-04-29-avo-65-a-large-scale-hierarchical-audio-visual)
+### 606. [AVO-65: A Large-Scale Hierarchical Audio-Visual Object Dataset](/audio-paper-digest-blog/posts/2026-04-29-avo-65-a-large-scale-hierarchical-audio-visual)
 
 ✅ **7.0/10** | 前50% | #音视频 | #数据集 | #多模态模型 #模型评估
 
@@ -19140,7 +20046,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 578. [HarmoNet: Music Grounding by Short Video via Harmonic Resample and Dynamic Sparse Alignment](/audio-paper-digest-blog/posts/2026-04-29-harmonet-music-grounding-by-short-video-via)
+### 607. [HarmoNet: Music Grounding by Short Video via Harmonic Resample and Dynamic Sparse Alignment](/audio-paper-digest-blog/posts/2026-04-29-harmonet-music-grounding-by-short-video-via)
 
 ✅ **7.0/10** | 前25% | #音乐检索 | #注意力机制 | #跨模态 #对比学习
 
@@ -19179,7 +20085,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 579. [DepthTalk: Few-Shot Talking Head Generation with Depth-Aware 3D Gaussian Field Motion](/audio-paper-digest-blog/posts/2026-04-29-depthtalk-few-shot-talking-head-generation-with)
+### 608. [DepthTalk: Few-Shot Talking Head Generation with Depth-Aware 3D Gaussian Field Motion](/audio-paper-digest-blog/posts/2026-04-29-depthtalk-few-shot-talking-head-generation-with)
 
 ✅ **7.0/10** | 前25% | #说话人生成 | #3D高斯溅射 | #少样本学习 #音视频
 
@@ -19204,7 +20110,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 580. [Multimodal Transformer with Multiperspective Training for Predicting Self-Expression Skills from Video Interview](/audio-paper-digest-blog/posts/2026-04-29-multimodal-transformer-with-multiperspective)
+### 609. [Multimodal Transformer with Multiperspective Training for Predicting Self-Expression Skills from Video Interview](/audio-paper-digest-blog/posts/2026-04-29-multimodal-transformer-with-multiperspective)
 
 ✅ **7.0/10** | 前25% | #多模态模型 | #多模态模型 | #多模态学习 #数据集
 
@@ -19230,7 +20136,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 581. [ReCoM: Realistic Co-Speech Motion Generation with Recurrent Embedded Transformer](/audio-paper-digest-blog/posts/2026-04-29-recom-realistic-co-speech-motion-generation-with)
+### 610. [ReCoM: Realistic Co-Speech Motion Generation with Recurrent Embedded Transformer](/audio-paper-digest-blog/posts/2026-04-29-recom-realistic-co-speech-motion-generation-with)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #Transformer | #语音生成 #动作生成
 
@@ -19255,7 +20161,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 582. [A Dynamic Gated Cross-Attention Framework for Audio-Text Apparent Personality Analysis](/audio-paper-digest-blog/posts/2026-04-29-a-dynamic-gated-cross-attention-framework-for)
+### 611. [A Dynamic Gated Cross-Attention Framework for Audio-Text Apparent Personality Analysis](/audio-paper-digest-blog/posts/2026-04-29-a-dynamic-gated-cross-attention-framework-for)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #多模态模型 | #人格分析 #跨模态
 
@@ -19302,7 +20208,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 583. [Perceptual Loss Optimized HRTF Personalization in Spherical Harmonic Domain](/audio-paper-digest-blog/posts/2026-04-29-perceptual-loss-optimized-hrtf-personalization-in)
+### 612. [Perceptual Loss Optimized HRTF Personalization in Spherical Harmonic Domain](/audio-paper-digest-blog/posts/2026-04-29-perceptual-loss-optimized-hrtf-personalization-in)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #信号处理 | #迁移学习
 
@@ -19328,7 +20234,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 584. [Leveraging Large Multimodal Models for Audio-Video Deepfake Detection: A Pilot Study](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-multimodal-models-for-audio)
+### 613. [Leveraging Large Multimodal Models for Audio-Video Deepfake Detection: A Pilot Study](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-multimodal-models-for-audio)
 
 ✅ **7.0/10** | 前25% | #音频深度伪造检测 | #多模态模型 | #监督微调 #跨模态
 
@@ -19354,7 +20260,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 585. [Impact of Phonetics on Speaker Identity in Adversarial Voice Attack](/audio-paper-digest-blog/posts/2026-04-29-impact-of-phonetics-on-speaker-identity-in)
+### 614. [Impact of Phonetics on Speaker Identity in Adversarial Voice Attack](/audio-paper-digest-blog/posts/2026-04-29-impact-of-phonetics-on-speaker-identity-in)
 
 ✅ **7.0/10** | 前50% | #说话人验证 | #对抗样本 | #语音识别 #音频安全
 
@@ -19374,7 +20280,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 586. [PRSA: Preventing Malicious Speaker Recognition and Speech Synthesis Simultaneously with Adversarial Examples](/audio-paper-digest-blog/posts/2026-04-29-prsa-preventing-malicious-speaker-recognition-and)
+### 615. [PRSA: Preventing Malicious Speaker Recognition and Speech Synthesis Simultaneously with Adversarial Examples](/audio-paper-digest-blog/posts/2026-04-29-prsa-preventing-malicious-speaker-recognition-and)
 
 ✅ **7.0/10** | 前25% | #语音匿名化 | #对抗样本 | #说话人识别 #语音合成
 
@@ -19414,7 +20320,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 587. [Stream-Voice-Anon: Enhancing Utility of Real-Time Speaker Anonymization Via Neural Audio Codec and Language Models](/audio-paper-digest-blog/posts/2026-04-29-stream-voice-anon-enhancing-utility-of-real-time)
+### 616. [Stream-Voice-Anon: Enhancing Utility of Real-Time Speaker Anonymization Via Neural Audio Codec and Language Models](/audio-paper-digest-blog/posts/2026-04-29-stream-voice-anon-enhancing-utility-of-real-time)
 
 ✅ **7.0/10** | 前25% | #语音匿名化 | #神经音频编解码器 | #自回归模型 #实时处理
 
@@ -19450,7 +20356,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 588. [Audio-Text Jailbreak Attack on Large Audio-Language Models: Towards Generality and Stealthiness](/audio-paper-digest-blog/posts/2026-04-29-audio-text-jailbreak-attack-on-large-audio)
+### 617. [Audio-Text Jailbreak Attack on Large Audio-Language Models: Towards Generality and Stealthiness](/audio-paper-digest-blog/posts/2026-04-29-audio-text-jailbreak-attack-on-large-audio)
 
 ✅ **7.0/10** | 前25% | #音频安全 | #对抗样本 | #多模态模型 #跨模态
 
@@ -19490,7 +20396,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 589. [Style Attack Disguise: When Fonts Become a Camouflage for Adversarial Intent](/audio-paper-digest-blog/posts/2026-04-29-style-attack-disguise-when-fonts-become-a)
+### 618. [Style Attack Disguise: When Fonts Become a Camouflage for Adversarial Intent](/audio-paper-digest-blog/posts/2026-04-29-style-attack-disguise-when-fonts-become-a)
 
 ✅ **7.0/10** | 前25% | #对抗样本 | #数据增强 | #文本分类 #机器翻译
 
@@ -19526,7 +20432,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 590. [Identity Leakage Through Accent Cues in Voice Anonymisation](/audio-paper-digest-blog/posts/2026-04-29-identity-leakage-through-accent-cues-in-voice)
+### 619. [Identity Leakage Through Accent Cues in Voice Anonymisation](/audio-paper-digest-blog/posts/2026-04-29-identity-leakage-through-accent-cues-in-voice)
 
 ✅ **7.0/10** | 前50% | #语音匿名化 | #模型评估 | #隐私保护 #公平性
 
@@ -19556,7 +20462,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 591. [Fake Speech Wild: Detecting Deepfake Speech on Social Media Platform](/audio-paper-digest-blog/posts/2026-04-29-fake-speech-wild-detecting-deepfake-speech-on)
+### 620. [Fake Speech Wild: Detecting Deepfake Speech on Social Media Platform](/audio-paper-digest-blog/posts/2026-04-29-fake-speech-wild-detecting-deepfake-speech-on)
 
 ✅ **7.0/10** | 前25% | #语音伪造检测 | #自监督学习 | #数据增强 #鲁棒性
 
@@ -19589,7 +20495,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 592. [Robust Online Overdetermined Independent Vector Analysis Based on Bilinear Decomposition](/audio-paper-digest-blog/posts/2026-04-29-robust-online-overdetermined-independent-vector)
+### 621. [Robust Online Overdetermined Independent Vector Analysis Based on Bilinear Decomposition](/audio-paper-digest-blog/posts/2026-04-29-robust-online-overdetermined-independent-vector)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #信号处理 | #麦克风阵列 #实时处理
 
@@ -19614,7 +20520,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 593. [Acoustic Teleportation Via Disentangled Neural Audio Codec Representations](/audio-paper-digest-blog/posts/2026-04-29-acoustic-teleportation-via-disentangled-neural)
+### 622. [Acoustic Teleportation Via Disentangled Neural Audio Codec Representations](/audio-paper-digest-blog/posts/2026-04-29-acoustic-teleportation-via-disentangled-neural)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #神经音频编解码器 | #音频场景理解 #信号处理
 
@@ -19639,7 +20545,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 594. [Residual Tokens Enhance Masked Autoencoders for Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-residual-tokens-enhance-masked-autoencoders-for)
+### 623. [Residual Tokens Enhance Masked Autoencoders for Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-residual-tokens-enhance-masked-autoencoders-for)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #掩码自编码器 | #自监督学习 #语音增强
 
@@ -19668,7 +20574,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 595. [Arbitrarily Settable Frame Rate Neural Speech Codec with Content Adaptive Variable Length Segmentation](/audio-paper-digest-blog/posts/2026-04-29-arbitrarily-settable-frame-rate-neural-speech)
+### 624. [Arbitrarily Settable Frame Rate Neural Speech Codec with Content Adaptive Variable Length Segmentation](/audio-paper-digest-blog/posts/2026-04-29-arbitrarily-settable-frame-rate-neural-speech)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #神经语音编解码 | #可变帧率 #语音表示学习
 
@@ -19693,7 +20599,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 596. [Quality Assessment of Noisy and Enhanced Speech with Limited Data: UWB-NTIS System for Voicemos 2024](/audio-paper-digest-blog/posts/2026-04-29-quality-assessment-of-noisy-and-enhanced-speech)
+### 625. [Quality Assessment of Noisy and Enhanced Speech with Limited Data: UWB-NTIS System for Voicemos 2024](/audio-paper-digest-blog/posts/2026-04-29-quality-assessment-of-noisy-and-enhanced-speech)
 
 ✅ **7.0/10** | 前25% | #语音质量评估 | #迁移学习 | #语音增强 #预训练
 
@@ -19731,7 +20637,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 597. [SA-SSL-MOS: Self-Supervised Learning MOS Prediction with Spectral Augmentation for Generalized Multi-Rate Speech Assessment](/audio-paper-digest-blog/posts/2026-04-29-sa-ssl-mos-self-supervised-learning-mos)
+### 626. [SA-SSL-MOS: Self-Supervised Learning MOS Prediction with Spectral Augmentation for Generalized Multi-Rate Speech Assessment](/audio-paper-digest-blog/posts/2026-04-29-sa-ssl-mos-self-supervised-learning-mos)
 
 ✅ **7.0/10** | 前50% | #语音质量评估 | #自监督学习 | #数据增强 #多语言
 
@@ -19766,7 +20672,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 598. [AUDIOGENIE-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning](/audio-paper-digest-blog/posts/2026-04-29-audiogenie-reasoner-a-training-free-multi-agent)
+### 627. [AUDIOGENIE-Reasoner: A Training-Free Multi-Agent Framework for Coarse-to-Fine Audio Deep Reasoning](/audio-paper-digest-blog/posts/2026-04-29-audiogenie-reasoner-a-training-free-multi-agent)
 
 ✅ **7.0/10** | 前25% | #音频问答 | #多智能体 | #音频场景理解 #迭代优化
 
@@ -19813,7 +20719,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 599. [LAMB: LLM-Based Audio Captioning with Modality Gap Bridging Via Cauchy-Schwarz Divergence](/audio-paper-digest-blog/posts/2026-04-29-lamb-llm-based-audio-captioning-with-modality-gap)
+### 628. [LAMB: LLM-Based Audio Captioning with Modality Gap Bridging Via Cauchy-Schwarz Divergence](/audio-paper-digest-blog/posts/2026-04-29-lamb-llm-based-audio-captioning-with-modality-gap)
 
 ✅ **7.0/10** | 前25% | #音频描述 | #跨模态对齐 | #大语言模型 #音频场景理解
 
@@ -19845,7 +20751,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 600. [Evaluating Compositional Structure in Audio Representations](/audio-paper-digest-blog/posts/2026-04-29-evaluating-compositional-structure-in-audio)
+### 629. [Evaluating Compositional Structure in Audio Representations](/audio-paper-digest-blog/posts/2026-04-29-evaluating-compositional-structure-in-audio)
 
 ✅ **7.0/10** | 前50% | #模型评估 | #自监督学习 | #音频大模型 #基准测试
 
@@ -19882,7 +20788,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 601. [Scalable Evaluation for Audio Identification Via Synthetic Latent Fingerprint Generation](/audio-paper-digest-blog/posts/2026-04-29-scalable-evaluation-for-audio-identification-via)
+### 630. [Scalable Evaluation for Audio Identification Via Synthetic Latent Fingerprint Generation](/audio-paper-digest-blog/posts/2026-04-29-scalable-evaluation-for-audio-identification-via)
 
 ✅ **7.0/10** | 前25% | #音频检索 | #流匹配 | #扩散模型 #数据集
 
@@ -19907,7 +20813,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 602. [Synchronous Secondary Path Modeling and Kronecker-Factorized Adaptive Algorithm for Multichannel Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-synchronous-secondary-path-modeling-and-kronecker)
+### 631. [Synchronous Secondary Path Modeling and Kronecker-Factorized Adaptive Algorithm for Multichannel Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-synchronous-secondary-path-modeling-and-kronecker)
 
 ✅ **7.0/10** | 前25% | #主动噪声控制 | #Kronecker分解 #信号处理 | #Kronecker分解 #信号处理
 
@@ -19944,7 +20850,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 603. [Separate this, and all of these Things Around It: Music Source Separation Via Hyperellipsoidal Queries](/audio-paper-digest-blog/posts/2026-04-29-separate-this-and-all-of-these-things-around-it)
+### 632. [Separate this, and all of these Things Around It: Music Source Separation Via Hyperellipsoidal Queries](/audio-paper-digest-blog/posts/2026-04-29-separate-this-and-all-of-these-things-around-it)
 
 ✅ **7.0/10** | 前25% | #音乐分离 | #音频检索 | #零样本 #少样本
 
@@ -19976,7 +20882,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 604. [A Bayesian Approach to Singing Skill Evaluation Using Semitone Pitch Histogram and MCMC-Based Generated Quantities](/audio-paper-digest-blog/posts/2026-04-29-a-bayesian-approach-to-singing-skill-evaluation)
+### 633. [A Bayesian Approach to Singing Skill Evaluation Using Semitone Pitch Histogram and MCMC-Based Generated Quantities](/audio-paper-digest-blog/posts/2026-04-29-a-bayesian-approach-to-singing-skill-evaluation)
 
 ✅ **7.0/10** | 前25% | #音乐理解 | #贝叶斯建模 | #信号处理 #模型评估
 
@@ -20002,7 +20908,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 605. [SAUNA: Song-Level Audio & User-Listening Data Neural Alignment](/audio-paper-digest-blog/posts/2026-04-29-sauna-song-level-audio-user-listening-data-neural)
+### 634. [SAUNA: Song-Level Audio & User-Listening Data Neural Alignment](/audio-paper-digest-blog/posts/2026-04-29-sauna-song-level-audio-user-listening-data-neural)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #预训练 | #迁移学习 #音乐理解
 
@@ -20038,7 +20944,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 606. [Spiking Attention Network: A Hybrid Neuromorphic Approach to Underwater Acoustic Localization and Zero-Shot Adaptation](/audio-paper-digest-blog/posts/2026-04-29-spiking-attention-network-a-hybrid-neuromorphic)
+### 635. [Spiking Attention Network: A Hybrid Neuromorphic Approach to Underwater Acoustic Localization and Zero-Shot Adaptation](/audio-paper-digest-blog/posts/2026-04-29-spiking-attention-network-a-hybrid-neuromorphic)
 
 ✅ **7.0/10** | 前25% | #声源定位 | #脉冲神经网络 | #注意力机制 #零样本
 
@@ -20070,7 +20976,32 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 607. [Reference Microphone Selection for Guided Source Separation Based on The Normalized L-P Norm](/audio-paper-digest-blog/posts/2026-04-29-reference-microphone-selection-for-guided-source)
+### 636. [SIRUP: A Diffusion-Based Virtual Upmixer of Steering Vectors for Highly-Directive Spatialization with First-Order Ambisonics](/audio-paper-digest-blog/posts/2026-04-29-sirup-a-diffusion-based-virtual-upmixer-of)
+
+前25% | #声源定位 | #扩散模型 | #空间音频 #波束成形
+
+👥 **作者与机构**
+
+- 第一作者：Emilio Picard（法国索邦大学，日本RIKEN高级智能项目中心）
+- 通讯作者：未说明
+- 作者列表：Emilio Picard（法国索邦大学，日本RIKEN高级智能项目中心）、Diego Di Carlo（日本RIKEN高级智能项目中心）、Aditya Arie Nugraha（日本RIKEN高级智能项目中心）、Mathieu Fontaine（法国巴黎电信学院LTCI实验室，日本RIKEN高级智能项目中心）、Kazuyoshi Yoshii（日本京都大学工程研究生院，日本RIKEN高级智能项目中心）
+
+💡 **毒舌点评**
+
+**亮点**：将图像领域的潜在扩散模型“上采样”思路巧妙地移植到空间音频的波束成形向量超分辨率问题上，是一个非常具体且聪明的类比应用，实验结果也清晰展示了在狭窄波束和低旁瓣方面的显著提升。**短板**：整篇论文的验证完全依赖于模拟数据，对于真实世界中复杂的声场、阵列误差和未知噪声的鲁棒性只字未提，这极大地限制了其结论的说服力和实际应用价值的判断。
+
+📌 **核心摘要**
+
+1.  **问题**：现有的高空间分辨率音频系统（如高阶Ambisonics， HOA）需要昂贵的麦克风阵列。常见的一阶Ambisonics（FOA）系统空间分辨率低，导致声源定位不精确，波束成形效果差。传统上混方法（先估计声源参数再渲染）会误差传播。
+2.  **方法**：本文提出SIRUP，一种基于潜在扩散模型的波束成形向量（SV）虚拟上混方法。其核心是直接学习将低阶FOA SV映射到高阶HOA SV的潜在空间。具体分为两步：首先，用变分自编码器（VAE）学习HOA SV的紧凑潜在表示；然后，训练一个以FOA SV为条件的扩散模型，在该潜在空间中生成高阶SV的嵌入。
+3.  **创新**：与传统“估计-渲染”级联方法不同，SIRUP直接操作和超分辨率波束成形向量本身，避免了中间参数估计误差的传播。它利用扩散模型在数据分布上的强大生成能力，学习FOA与HOA SV之间的复杂非线性映射。
+4.  **结果**：实验在模拟房间环境中进行。与FOA基线相比，SIRUP上混后的SV在声源定位（DOA误差）、空间滤波质量（-3dB波束宽度平均提升+10°，旁瓣抑制-9dB）和双声源语音分离（SIR，SAR等指标）上均取得显著改进，性能接近真实HOA系统。**关键数据见表1与表2**。
+5.  **意义**：为低成本FOA设备提供了一种软件方式，使其能够虚拟达到接近昂贵HOA设备的空间分析和渲染性能，对空间音频应用、机器人听觉等有潜在价值。
+6.  **局限**：所有实验基于模拟数据，缺乏真实世界复杂环境的验证；混响增大时，相对于HOA基线的优势减小；模型目前仅适用于单声源SV估计场景。
+
+---
+
+### 637. [Reference Microphone Selection for Guided Source Separation Based on The Normalized L-P Norm](/audio-paper-digest-blog/posts/2026-04-29-reference-microphone-selection-for-guided-source)
 
 ✅ **7.0/10** | 前50% | #语音增强 | #波束成形 | #麦克风阵列 #语音识别
 
@@ -20105,7 +21036,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 608. [Low-Latency Audio Front-End Region-of-Interest Beamforming for Smart Glasses](/audio-paper-digest-blog/posts/2026-04-29-low-latency-audio-front-end-region-of-interest)
+### 638. [Low-Latency Audio Front-End Region-of-Interest Beamforming for Smart Glasses](/audio-paper-digest-blog/posts/2026-04-29-low-latency-audio-front-end-region-of-interest)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #波束成形 | #实时处理 #多通道
 
@@ -20131,7 +21062,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 609. [AmbiDrop: Array-Agnostic Speech Enhancement Using Ambisonics Encoding and Dropout-Based Learning](/audio-paper-digest-blog/posts/2026-04-29-ambidrop-array-agnostic-speech-enhancement-using)
+### 639. [AmbiDrop: Array-Agnostic Speech Enhancement Using Ambisonics Encoding and Dropout-Based Learning](/audio-paper-digest-blog/posts/2026-04-29-ambidrop-array-agnostic-speech-enhancement-using)
 
 ✅ **7.0/10** | 前50% | #语音增强 | #麦克风阵列 | #阵列无关 #鲁棒性
 
@@ -20168,7 +21099,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 610. [SONAR: Self-Distilled Continual Pre-Training for Domain Adaptive Audio Representation](/audio-paper-digest-blog/posts/2026-04-29-sonar-self-distilled-continual-pre-training-for)
+### 640. [SONAR: Self-Distilled Continual Pre-Training for Domain Adaptive Audio Representation](/audio-paper-digest-blog/posts/2026-04-29-sonar-self-distilled-continual-pre-training-for)
 
 ✅ **7.0/10** | 前25% | #音频事件检测 | #自监督学习 | #领域适应 #预训练
 
@@ -20208,7 +21139,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 611. [Improving Audio Event Recognition with Consistency Regularization](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-event-recognition-with)
+### 641. [Improving Audio Event Recognition with Consistency Regularization](/audio-paper-digest-blog/posts/2026-04-29-improving-audio-event-recognition-with)
 
 ✅ **7.0/10** | 前25% | #音频事件检测 | #数据增强 | #自监督学习 #Transformer
 
@@ -20242,7 +21173,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 612. [ViTex: Visual Texture Control for Multi-Track Symbolic Music Generation via Discrete Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-vitex-visual-texture-control-for-multi-track)
+### 642. [ViTex: Visual Texture Control for Multi-Track Symbolic Music Generation via Discrete Diffusion Models](/audio-paper-digest-blog/posts/2026-04-29-vitex-visual-texture-control-for-multi-track)
 
 ✅ **7.0/10** | 前50% | #音乐生成 | #扩散模型 | #可控生成 #多轨道
 
@@ -20267,7 +21198,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 613. [SELD-MOHA: A Fine-Tuning Method with the Mixture of Heterogeneous Adapters for Sound Event Localization and Detection](/audio-paper-digest-blog/posts/2026-04-29-seld-moha-a-fine-tuning-method-with-the-mixture)
+### 643. [SELD-MOHA: A Fine-Tuning Method with the Mixture of Heterogeneous Adapters for Sound Event Localization and Detection](/audio-paper-digest-blog/posts/2026-04-29-seld-moha-a-fine-tuning-method-with-the-mixture)
 
 ✅ **7.0/10** | 前25% | #音频事件检测 | #迁移学习 | #声源定位 #多通道音频
 
@@ -20301,7 +21232,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 614. [Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription](/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for)
+### 644. [Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription](/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #预训练 | #自监督学习 #生成模型
 
@@ -20326,7 +21257,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 615. [Towards Blind Data Cleaning: A Case Study in Music Source Separation](/audio-paper-digest-blog/posts/2026-04-29-towards-blind-data-cleaning-a-case-study-in-music)
+### 645. [Towards Blind Data Cleaning: A Case Study in Music Source Separation](/audio-paper-digest-blog/posts/2026-04-29-towards-blind-data-cleaning-a-case-study-in-music)
 
 ✅ **7.0/10** | 前50% | #音乐信息检索 | #数据增强 | #自监督学习 #鲁棒性
 
@@ -20380,7 +21311,32 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 616. [A Distribution Matching Approach to Neural Piano Transcription with Optimal Transport](/audio-paper-digest-blog/posts/2026-04-29-a-distribution-matching-approach-to-neural-piano)
+### 646. [MC-MRX: Reference- and Midi-Guided Music Source Extraction with Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-mc-mrx-reference-and-midi-guided-music-source)
+
+前25% | #音乐源提取 | #对比学习 | #多任务学习 #音频引导
+
+👥 **作者与机构**
+
+- 第一作者：Xueyan Chen（University of Science and Technology Beijing, China）
+- 通讯作者：Xinyuan Qian（University of Science and Technology Beijing, China）
+- 作者列表：Xueyan Chen（University of Science and Technology Beijing, China）、Zexu Pan（Tongyi Lab, Alibaba Group, Singapore）、Ziyang Jiang（University of Science and Technology Beijing, China）、Jiadong Wang（Technical University of Munich, Germany）、Kainan Chen（Eigenspace GmbH, Germany）、Xinyuan Qian（University of Science and Technology Beijing, China）
+
+💡 **毒舌点评**
+
+这篇论文的亮点在于将MIDI时序音高锚点和参考音频这两种异构的多模态先验，通过一个精心设计的框架（MC-MRX）融合进音乐源提取任务，实验结果显著，为该领域引入“结构化提示”提供了有力论证。然而，其“自产自销”的短板也很明显：作为核心输入之一的MIDI依赖于外部的MT3模型，论文并未深入探讨该模型性能的波动对最终结果的影响，同时**全文没有任何开源信息的披露**，对于一篇声称推动SOTA的工作而言，这无疑削弱了其可验证性和社区影响力。
+
+📌 **核心摘要**
+
+1. **问题**：现有音乐源提取（MSE）方法面临源特征混淆和音色失配偏差的挑战，主要因为它们缺乏对音乐信号固有属性（如结构、音色）的有效建模。
+2. **方法核心**：提出MC-MRX框架，将MIDI信号（通过MT3模型从混合音频中生成）和参考音频作为双引导。MIDI提供音高和节奏的时序锚点，参考音频提供音色条件。模型采用多分辨率编码、Conformer特征提取器进行跨模态融合，并采用SI-SNR损失和对比学习损失进行联合优化。
+3. **创新点**：与已有方法相比，新在：1）首次将MIDI作为关键结构化提示引入MSE框架；2）结合参考音频进行音色锚定；3）设计对比学习机制以增强目标音轨与干扰音轨的判别性。
+4. **主要结果**：在MUSDB18-HQ数据集上，MC-MRX在Bass、Drums、Other、Vocals四个音轨上的SI-SNRi分别达到11.45、10.21、10.13和12.79 dB，相比基线MRX平均提升2.483 dB。消融实验证明MIDI引导、参考音频和对比学习均不可或缺。
+5. **实际意义**：验证了MIDI作为多模态提示的有效性，为高质量MSE建立了新范式，可应用于卡拉OK制作、音乐教育、音频后期处理等领域。
+6. **主要局限性**：高度依赖外部MT3模型进行MIDI转录，其精度和延迟会影响整体系统；实验仅在MUSDB18-HQ（不含MIDI标注）上进行，MIDI输入是模型生成的，未讨论生成错误的影响；未提供开源代码或模型，复现门槛高。
+
+---
+
+### 647. [A Distribution Matching Approach to Neural Piano Transcription with Optimal Transport](/audio-paper-digest-blog/posts/2026-04-29-a-distribution-matching-approach-to-neural-piano)
 
 ✅ **7.0/10** | 前25% | #音乐转录 | #最优传输 | #注意力机制 #循环神经网络
 
@@ -20405,7 +21361,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 617. [Individualize the HRTF Neural Field Using Anthropometric Parameters Weighted by Direction-Attention](/audio-paper-digest-blog/posts/2026-04-29-individualize-the-hrtf-neural-field-using)
+### 648. [Individualize the HRTF Neural Field Using Anthropometric Parameters Weighted by Direction-Attention](/audio-paper-digest-blog/posts/2026-04-29-individualize-the-hrtf-neural-field-using)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #条件神经场 | #个性化建模 #HRTF
 
@@ -20435,7 +21391,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 618. [Transfer Learning for Paediatric Sleep Apnoea Detection using Physiology-Guided Acoustic Models](/audio-paper-digest-blog/posts/2026-04-29-transfer-learning-for-paediatric-sleep-apnoea)
+### 649. [Transfer Learning for Paediatric Sleep Apnoea Detection using Physiology-Guided Acoustic Models](/audio-paper-digest-blog/posts/2026-04-29-transfer-learning-for-paediatric-sleep-apnoea)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #迁移学习 | #生物声学 #多任务学习
 
@@ -20466,7 +21422,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 619. [Empowering Multimodal Respiratory Sound Classification with Counterfactual Adversarial Debiasing for Out-of-Distribution Robustness](/audio-paper-digest-blog/posts/2026-04-29-empowering-multimodal-respiratory-sound)
+### 650. [Empowering Multimodal Respiratory Sound Classification with Counterfactual Adversarial Debiasing for Out-of-Distribution Robustness](/audio-paper-digest-blog/posts/2026-04-29-empowering-multimodal-respiratory-sound)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #对比学习 | #生物声学 #数据增强
 
@@ -20491,7 +21447,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 620. [Stress Prediction from Temporal Emotion Trajectories in Clinical Patient-Physician Conversations](/audio-paper-digest-blog/posts/2026-04-29-stress-prediction-from-temporal-emotion)
+### 651. [Stress Prediction from Temporal Emotion Trajectories in Clinical Patient-Physician Conversations](/audio-paper-digest-blog/posts/2026-04-29-stress-prediction-from-temporal-emotion)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #多任务学习 | #迁移学习 #少样本
 
@@ -20533,7 +21489,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 621. [Speech Quality-Based Localization of Low-Quality Speech and Text-to-Speech Synthesis Artefacts](/audio-paper-digest-blog/posts/2026-04-29-speech-quality-based-localization-of-low-quality)
+### 652. [Speech Quality-Based Localization of Low-Quality Speech and Text-to-Speech Synthesis Artefacts](/audio-paper-digest-blog/posts/2026-04-29-speech-quality-based-localization-of-low-quality)
 
 ✅ **7.0/10** | 前25% | #语音质量评估 | #自监督学习 | #语音伪造检测 #语音合成
 
@@ -20561,7 +21517,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 622. [SP-MCQA: Evaluating Intelligibility of TTS Beyond the Word Level](/audio-paper-digest-blog/posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond)
+### 653. [SP-MCQA: Evaluating Intelligibility of TTS Beyond the Word Level](/audio-paper-digest-blog/posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #基准测试 | #模型评估 #数据集
 
@@ -20593,7 +21549,45 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 623. [A Speech-Driven Paradigm for Physics-Informed Modeling of Coupled Micro-Speakers](/audio-paper-digest-blog/posts/2026-04-29-a-speech-driven-paradigm-for-physics-informed)
+### 654. [SPAM: Style Prompt Adherence Metric for Prompt-Based TTS](/audio-paper-digest-blog/posts/2026-04-29-spam-style-prompt-adherence-metric-for-prompt)
+
+前50% | #语音合成 | #对比学习 | #模型评估 #大语言模型
+
+👥 **作者与机构**
+
+- 第一作者：Chanhee Cho†（Chung-Ang University）
+- 通讯作者：Bugeun Kim（Chung-Ang University）
+- 作者列表：Chanhee Cho†（Chung-Ang University）、Nayeon Kim†（Chung-Ang University）、Bugeun Kim（Chung-Ang University）。其中†表示“同等贡献”。
+
+💡 **毒舌点评**
+
+**亮点**：精准抓住了基于提示的语音合成评估中的核心痛点——现有方法缺乏“合理性”（与人类判断一致）和“忠实性”（对语义变化敏感），并设计了针对性的解决方案。**短板**：实验说服力打了折扣，既没有与当前流行的“LLM-as-a-judge”评估范式（如用GPT-4o直接打分）进行对比，也缺少对自身方法在极端或边界案例下的鲁棒性分析，使得结论的普适性存疑。
+
+📌 **核心摘要**
+
+1. **要解决的问题**：现有的基于提示的语音合成（Prompt-based TTS）系统缺乏可靠、自动化的指标来评估合成语音对文本提示（尤其是风格描述）的遵循程度。传统MOS评估成本高昂，现有自动方法或依赖主观的嵌入聚类分析，或使用可能不忠实于提示内容的LLM评估。
+2. **方法核心**：提出Style Prompt Adherence Metric（SPAM），一个受CLAP启发的对比学习框架。它将语音波形、说话人特征和转录文本编码后融合，再通过并行分支提取和强化全局波形、语速、音高、能量等声学属性特征，最终与使用Llama-3编码的文本提示嵌入计算相似度。
+3. **与已有方法相比新在哪里**：**a)** 显式地因子化并监督学习关键的声学属性（音高、语速、能量），确保评估基于这些具体特征；**b)** 针对一个提示可能对应多个语音（多正样本）的问题，采用监督对比损失（SupCon）替代标准CLAP损失，提升训练稳定性；**c)** 使用强大的Llama-3作为文本编码器，以更好地区分提示中的细微语义差别。
+4. **主要实验结果**：实验包括合理性（与人类MOS的相关性）和忠实性（对正/负提示的区分能力）。**合理性**：在TextrolSpeech数据集上，SPAM（WavLM版）与MOS的线性相关系数（LCC）为0.584，高于基线RA-CLAP（0.520）。**忠实性**：SPAM在Adherence Rate（AR）上达到0.862，表明它能有效区分正负提示；配对t检验显示，SPAM能接受负提示得分显著低于原提示的假设（H2），且对正提示的评分与原提示无显著差异（拒绝H1），优于RA-CLAP。详见表1。
+
+| 实验 | 指标 | 数据集 | SPAM (WavLM) | SPAM (CLAP) | RA-CLAP |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **合理性** | LCC | TextrolSpeech | **0.584** | 0.554 | 0.520 |
+| | LCC | LibriTTS-P | **0.580** | 0.516 | 0.429 |
+| **忠实性** | AR | TextrolSpeech | **0.862** | 0.841 | 0.852 |
+| | AR | LibriTTS-P | **0.771** | 0.766 | 0.750 |
+| | 原提示均值 | TextrolSpeech | 0.361±0.153 | 0.039±0.026 | 0.400±0.324 |
+| | 正提示均值 (p值) | TextrolSpeech | 0.357±0.143 (-2.025) | 0.035±0.025 (-3.699***) | 0.380±0.312 (-3.479**) |
+| | 负提示均值 (p值) | TextrolSpeech | 0.050±0.221 (-20.145***) | -0.005±0.030 (-17.538***) | -0.020±0.219 (-16.912***) |
+
+**表1：论文中关于SPAM合理性和忠实性的核心实验结果**。SPAM (WavLM)在各项关键指标上表现最佳。
+
+5. **实际意义**：为Prompt-based TTS的自动化、标准化评估提供了一个可选的、可解释的度量工具有助于加速该领域模型的迭代与比较。
+6. **主要局限性**：实验仅基于两个开源数据集，未覆盖更多样化的提示风格或非英语语言；基线对比未包含当前先进的“LLM-as-a-Judge”评估方法，未能证明其绝对优越性；未公开代码和模型，限制了研究的可复现性和社区采纳。
+
+---
+
+### 655. [A Speech-Driven Paradigm for Physics-Informed Modeling of Coupled Micro-Speakers](/audio-paper-digest-blog/posts/2026-04-29-a-speech-driven-paradigm-for-physics-informed)
 
 ✅ **7.0/10** | 前50% | #音频生成 | #信号处理 | #端到端 #声源定位
 
@@ -20626,7 +21620,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 624. [Decorrelation-Enhanced Multiband Subband Adaptive Filtering for RIR Tracking in Sound Field Control](/audio-paper-digest-blog/posts/2026-04-29-decorrelation-enhanced-multiband-subband-adaptive)
+### 656. [Decorrelation-Enhanced Multiband Subband Adaptive Filtering for RIR Tracking in Sound Field Control](/audio-paper-digest-blog/posts/2026-04-29-decorrelation-enhanced-multiband-subband-adaptive)
 
 ✅ **7.0/10** | 前50% | #空间音频 | #自适应滤波 | #信号处理 #麦克风阵列
 
@@ -20651,7 +21645,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 625. [Instrument Generation Through Distributional Flow Matching and Test-Time Search](/audio-paper-digest-blog/posts/2026-04-29-instrument-generation-through-distributional-flow)
+### 657. [Instrument Generation Through Distributional Flow Matching and Test-Time Search](/audio-paper-digest-blog/posts/2026-04-29-instrument-generation-through-distributional-flow)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #流匹配 | #扩散模型 #测试时搜索
 
@@ -20695,7 +21689,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 626. [When Noise Lowers the Loss: Rethinking Likelihood-Based Evaluation in Music Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-when-noise-lowers-the-loss-rethinking-likelihood)
+### 658. [When Noise Lowers the Loss: Rethinking Likelihood-Based Evaluation in Music Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-when-noise-lowers-the-loss-rethinking-likelihood)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #模型评估 | #自回归模型 #音频大模型
 
@@ -20723,7 +21717,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 627. [PADAM: Perceptual Audio Defect Assessment Model](/audio-paper-digest-blog/posts/2026-04-29-padam-perceptual-audio-defect-assessment-model)
+### 659. [PADAM: Perceptual Audio Defect Assessment Model](/audio-paper-digest-blog/posts/2026-04-29-padam-perceptual-audio-defect-assessment-model)
 
 ✅ **7.0/10** | 前50% | #音频分类 | #对比学习 | #预训练 #音频安全
 
@@ -20772,7 +21766,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 628. [Enhanced Generative Machine Listener](/audio-paper-digest-blog/posts/2026-04-29-enhanced-generative-machine-listener)
+### 660. [Enhanced Generative Machine Listener](/audio-paper-digest-blog/posts/2026-04-29-enhanced-generative-machine-listener)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #生成模型 | #深度学习 #音频编码
 
@@ -20809,7 +21803,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 629. [Phase-Retrieval-Based Physics-Informed Neural Networks For Acoustic Magnitude Field Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-phase-retrieval-based-physics-informed-neural)
+### 661. [Phase-Retrieval-Based Physics-Informed Neural Networks For Acoustic Magnitude Field Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-phase-retrieval-based-physics-informed-neural)
 
 ✅ **7.0/10** | 前50% | #声源定位 | #物理信息神经网络 | #声场估计 #相位检索
 
@@ -20829,7 +21823,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 630. [Acoustic Feedback Cancellation in Hearing Aids Exploiting an Inertial Sensor](/audio-paper-digest-blog/posts/2026-04-29-acoustic-feedback-cancellation-in-hearing-aids)
+### 662. [Acoustic Feedback Cancellation in Hearing Aids Exploiting an Inertial Sensor](/audio-paper-digest-blog/posts/2026-04-29-acoustic-feedback-cancellation-in-hearing-aids)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #信号处理 | #实时处理 #多模态模型
 
@@ -20861,7 +21855,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 631. [On the Design of Higher-Order Time-Intensity Microphone Arrays for Panoramic Audio Recording and Reproduction](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-higher-order-time-intensity)
+### 663. [On the Design of Higher-Order Time-Intensity Microphone Arrays for Panoramic Audio Recording and Reproduction](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-higher-order-time-intensity)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #麦克风阵列 | #波束成形 #信号处理
 
@@ -20897,7 +21891,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 632. [Deep Spatial Clue Informed Ambisonic Encoding for Irregular Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for)
+### 664. [Deep Spatial Clue Informed Ambisonic Encoding for Irregular Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #麦克风阵列 | #RNN #UNet
 
@@ -20933,7 +21927,39 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 633. [Identifying Birdsong Syllables without Labelled Data](/audio-paper-digest-blog/posts/2026-04-29-identifying-birdsong-syllables-without-labelled)
+### 665. [HergNet: A Fast Neural Surrogate Model for Sound Field Predictions Via Superposition of Plane Waves](/audio-paper-digest-blog/posts/2026-04-29-hergnet-a-fast-neural-surrogate-model-for-sound)
+
+前25% | #空间音频 | #物理信息神经网络 | #声学模拟
+
+👥 **作者与机构**
+
+- 第一作者：Matteo Calafà（丹麦技术大学，电气与光子工程系，声学技术部门）
+- 通讯作者：论文中未明确标注通讯作者
+- 作者列表：Matteo Calafà（丹麦技术大学，电气与光子工程系，声学技术部门）、Yuanxin Xia（丹麦技术大学，电气与光子工程系，声学技术部门）、Cheol-Ho Jeong（丹麦技术大学，电气与光子工程系，声学技术部门）
+
+💡 **毒舌点评**
+
+这篇论文最聪明的地方在于把“物理定律”硬编码进了网络架构，让神经网络生来就是“正确”的，省去了经典PINNs在内部点计算损失的苦工，在中高频段算得又快又准。不过，为了追求“快速”和“物理正确”，它默认了声场就是平面波的叠加，导致在低频段（更像扩散问题时）表现拉胯，而且对比的主要是自己实现的解析解，没能和工业界常用的FEM、BEM等“老大哥”直接掰手腕，显得有点“偏科”。
+
+📌 **核心摘要**
+
+1.  **要解决什么问题**：传统数值方法（如FEM）和经典物理信息神经网络（PINNs）在模拟中高频声场时计算成本高、收敛困难。本文旨在提出一种更高效、物理上精确的神经网络代理模型。
+2.  **方法核心是什么**：提出HergNet架构。其核心思想是基于Herglotz表示定理，将声场显式表示为可训练平面波（带方向`s_j`、相位`d_j`）的叠加。其中，每个平面波的复振幅由一个共享的、以入射方向为输入的神经网络`˜h`来预测。损失函数仅基于边界条件计算，网络输出自动满足齐次Helmholtz方程。
+3.  **与已有方法相比新在哪里**：与传统PINNs将物理定律作为软约束（损失函数项）不同，HergNet通过网络结构本身（平面波叠加）实现了物理定律的硬约束，使输出自动满足波动方程。因此，训练仅需边界数据，无需在计算域内部采样，极大提升了计算效率和内存优势。同时，通过神经网络学习`˜h`函数，保证了物理量在方向空间上的连续性。
+4.  **主要实验结果如何**：
+    *   在6000 Hz的3D鞋盒房间声场预测中，HergNet预测结果与解析解在实部、虚部上吻合良好，最大边界误差0.16 Pa，相对误差<10%。
+    *   训练时间仅124秒（RTX 5090），但内存消耗是瓶颈（24.07 GB）。
+    *   频率扫描（100 Hz - 6000 Hz）显示，在中高频段，预测的声压级（SPL）和相位与解析解匹配完美，SPL偏差低于1 dB的听觉差异阈值。但在低频段（<500 Hz）误差相对增大。
+    *   计算成本随频率平方增长（`Nquad`, `Ntrain ∝ f^2`），优于体积类方法（如PINNs、FEM）的立方增长。
+5.  **实际意义是什么**：为房间声学、电磁学、光学等领域的波场预测提供了一种快速、可扩展的深度学习工具，特别适合需要反复进行参数化仿真（如改变频率、边界条件）的场景，有望在虚拟现实、建筑声学设计中得到应用。
+6.  **主要局限性是什么**：
+    *   **低频性能下降**：在低频段（波动问题接近扩散问题时），平面波叠加表示变得低效，导致误差增大。
+    *   **内存瓶颈**：训练时，所有训练点需要与所有平面波参数交互，导致内存消耗以`O(f^4)`增长，成为高频下的主要限制。
+    *   **对比基线有限**：实验主要与自实现的解析解对比，未与其他主流数值方法（如FEM、BEM）或最新神经网络方法进行直接性能（速度、精度）对比。
+
+---
+
+### 666. [Identifying Birdsong Syllables without Labelled Data](/audio-paper-digest-blog/posts/2026-04-29-identifying-birdsong-syllables-without-labelled)
 
 ✅ **7.0/10** | 前50% | #生物声学 | #无监督学习 | #聚类 #信号处理
 
@@ -20963,7 +21989,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 634. [Representation-Diverse Self-Supervision for Cross-Domain Bioacoustic Learning in Low-Resource Settings](/audio-paper-digest-blog/posts/2026-04-29-representation-diverse-self-supervision-for-cross)
+### 667. [Representation-Diverse Self-Supervision for Cross-Domain Bioacoustic Learning in Low-Resource Settings](/audio-paper-digest-blog/posts/2026-04-29-representation-diverse-self-supervision-for-cross)
 
 ✅ **7.0/10** | 前25% | #生物声学 | #对比学习 | #自监督学习 #迁移学习
 
@@ -20996,7 +22022,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 635. [Do Foundational Audio Encoders Understand Music Structure?](/audio-paper-digest-blog/posts/2026-04-29-do-foundational-audio-encoders-understand-music)
+### 668. [Do Foundational Audio Encoders Understand Music Structure?](/audio-paper-digest-blog/posts/2026-04-29-do-foundational-audio-encoders-understand-music)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #模型比较 | #音乐理解 #预训练
 
@@ -21021,7 +22047,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 636. [Sing What You Fit: A Perception-Based Dataset and Benchmark for Vocal-Song Suitability Analysis](/audio-paper-digest-blog/posts/2026-04-29-sing-what-you-fit-a-perception-based-dataset-and)
+### 669. [Sing What You Fit: A Perception-Based Dataset and Benchmark for Vocal-Song Suitability Analysis](/audio-paper-digest-blog/posts/2026-04-29-sing-what-you-fit-a-perception-based-dataset-and)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #监督学习 | #数据集 #模型评估
 
@@ -21060,7 +22086,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 637. [Joint Multichannel Acoustic Feedback Cancellation and Speaker Extraction via Kalman Filter and Deep Non-Linear Spatial Filter](/audio-paper-digest-blog/posts/2026-04-29-joint-multichannel-acoustic-feedback-cancellation)
+### 670. [Joint Multichannel Acoustic Feedback Cancellation and Speaker Extraction via Kalman Filter and Deep Non-Linear Spatial Filter](/audio-paper-digest-blog/posts/2026-04-29-joint-multichannel-acoustic-feedback-cancellation)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #信号处理 | #语音分离 #麦克风阵列
 
@@ -21080,7 +22106,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 638. [RIR-Former: Coordinate-Guided Transformer for Continuous Reconstruction of Room Impulse Responses](/audio-paper-digest-blog/posts/2026-04-29-rir-former-coordinate-guided-transformer-for)
+### 671. [RIR-Former: Coordinate-Guided Transformer for Continuous Reconstruction of Room Impulse Responses](/audio-paper-digest-blog/posts/2026-04-29-rir-former-coordinate-guided-transformer-for)
 
 ✅ **7.0/10** | 前25% | #房间脉冲响应 | #Transformer | #麦克风阵列 #空间音频
 
@@ -21105,7 +22131,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 639. [Segmentwise Pruning in Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-segmentwise-pruning-in-audio-language-models)
+### 672. [Segmentwise Pruning in Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-segmentwise-pruning-in-audio-language-models)
 
 ✅ **7.0/10** | 前50% | #音频问答 | #token剪枝 | #音频场景理解 #音频大模型
 
@@ -21131,7 +22157,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 640. [Teaching Audio Models to Reason: A Unified Framework for Source- and Layer-Wise Distillation](/audio-paper-digest-blog/posts/2026-04-29-teaching-audio-models-to-reason-a-unified)
+### 673. [Teaching Audio Models to Reason: A Unified Framework for Source- and Layer-Wise Distillation](/audio-paper-digest-blog/posts/2026-04-29-teaching-audio-models-to-reason-a-unified)
 
 ✅ **7.0/10** | 前25% | #音频问答 | #知识蒸馏 | #音频大模型 #音频场景理解
 
@@ -21165,7 +22191,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 641. [AR-BSNet: Towards Ultra-Low Complexity Autoregressive Target Speaker Extraction With Band-Split Modeling](/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity)
+### 674. [AR-BSNet: Towards Ultra-Low Complexity Autoregressive Target Speaker Extraction With Band-Split Modeling](/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #自回归模型 | #时频分析 #实时处理
 
@@ -21203,7 +22229,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 642. [Bleed No More: Generative Interference Reduction for Musical Recordings](/audio-paper-digest-blog/posts/2026-04-29-bleed-no-more-generative-interference-reduction)
+### 675. [Bleed No More: Generative Interference Reduction for Musical Recordings](/audio-paper-digest-blog/posts/2026-04-29-bleed-no-more-generative-interference-reduction)
 
 ✅ **7.0/10** | 前25% | #音乐源分离 | #生成模型 | #对抗学习 #数据集
 
@@ -21236,7 +22262,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 643. [Gdiffuse: Diffusion-Based Speech Enhancement with Noise Model Guidance](/audio-paper-digest-blog/posts/2026-04-29-gdiffuse-diffusion-based-speech-enhancement-with)
+### 676. [Gdiffuse: Diffusion-Based Speech Enhancement with Noise Model Guidance](/audio-paper-digest-blog/posts/2026-04-29-gdiffuse-diffusion-based-speech-enhancement-with)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #扩散模型 | #领域适应 #鲁棒性
 
@@ -21261,7 +22287,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 644. [FxSearcher: Gradient-Free Text-Driven Audio Transformation](/audio-paper-digest-blog/posts/2026-04-29-fxsearcher-gradient-free-text-driven-audio)
+### 677. [FxSearcher: Gradient-Free Text-Driven Audio Transformation](/audio-paper-digest-blog/posts/2026-04-29-fxsearcher-gradient-free-text-driven-audio)
 
 ✅ **7.0/10** | 前50% | #音频生成 | #贝叶斯优化 | #CLAP #音频效果处理
 
@@ -21289,7 +22315,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 645. [Auditory Illusion Benchmark for Large Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio)
+### 678. [Auditory Illusion Benchmark for Large Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio)
 
 ✅ **7.0/10** | 前50% | #模型评估 | #基准测试 | #音频大模型 #听觉认知
 
@@ -21329,7 +22355,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 646. [TAGARELA - A Portuguese Speech Dataset from Podcasts](/audio-paper-digest-blog/posts/2026-04-29-tagarela-a-portuguese-speech-dataset-from-podcasts)
+### 679. [TAGARELA - A Portuguese Speech Dataset from Podcasts](/audio-paper-digest-blog/posts/2026-04-29-tagarela-a-portuguese-speech-dataset-from-podcasts)
 
 ✅ **7.0/10** | 前25% | #语音识别 #语音合成 | #预训练 | #语音识别 #语音合成
 
@@ -21358,7 +22384,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 647. [DDSC: Dynamic Dual-Signal Curriculum for Data-Efficient Acoustic Scene Classification Under Domain Shift](/audio-paper-digest-blog/posts/2026-04-29-ddsc-dynamic-dual-signal-curriculum-for-data)
+### 680. [DDSC: Dynamic Dual-Signal Curriculum for Data-Efficient Acoustic Scene Classification Under Domain Shift](/audio-paper-digest-blog/posts/2026-04-29-ddsc-dynamic-dual-signal-curriculum-for-data)
 
 ✅ **7.0/10** | 前25% | #音频场景分类 | #课程学习 | #领域适应 #低资源
 
@@ -21393,7 +22419,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 648. [AFT: An Exemplar-Free Class Incremental Learning Method for Environmental Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-aft-an-exemplar-free-class-incremental-learning)
+### 681. [AFT: An Exemplar-Free Class Incremental Learning Method for Environmental Sound Classification](/audio-paper-digest-blog/posts/2026-04-29-aft-an-exemplar-free-class-incremental-learning)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #知识蒸馏 | #迁移学习 #低资源
 
@@ -21428,7 +22454,32 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 649. [An Unsupervised Alignment Feature Fusion System for Spoken Language-Based Dementia Detection](/audio-paper-digest-blog/posts/2026-04-29-an-unsupervised-alignment-feature-fusion-system)
+### 682. [Subspace Hybrid Adaptive Filtering for Phonocardiogram Signal Denoising](/audio-paper-digest-blog/posts/2026-04-29-subspace-hybrid-adaptive-filtering-for)
+
+前50% | #音频增强 | #信号处理 | #心音信号 #自适应滤波
+
+👥 **作者与机构**
+
+- 第一作者：Wageesha N. Manamperi (University of Moratuwa, Sri Lanka, Department of Electronic & Telecommunication Engineering)
+- 通讯作者：论文中未明确标注通讯作者
+- 作者列表：Wageesha N. Manamperi (University of Moratuwa, Sri Lanka, Department of Electronic & Telecommunication Engineering; Audio & Acoustic Signal Processing Group, Australian National University, Australia), Thushara D. Abhayapala (Audio & Acoustic Signal Processing Group, Australian National University, Australia)
+
+💡 **毒舌点评**
+
+亮点在于将经典的NLMS、GMM维纳滤波与多通道PCA子空间方法进行“混搭”，形成一个两阶段流水线，逻辑清晰且有实验验证，为传统信号处理方法在心音降噪领域的应用提供了新思路。短板是其核心创新（两阶段串联）更偏向于工程组合而非理论突破，且代码与训练细节完全未公开，对于希望复现或深入理解参数影响的读者极不友好，削弱了论文的实际影响力。
+
+📌 **核心摘要**
+
+1. **问题**：心血管疾病早期诊断依赖于心音（PCG）信号，但录制过程中存在的各种背景噪声严重影响诊断准确性。现有单通道降噪方法在低信噪比条件下性能不足或计算成本高。
+2. **方法核心**：提出一种两阶段子空间混合自适应滤波方法。第一阶段，结合归一化最小均方（NLMS）滤波器和基于高斯混合模型的维纳滤波器（GMM WF）进行初步降噪；第二阶段，将第一阶段的两个输出视为双通道信号，通过主成分分析（PCA）子空间投影来进一步抑制残留噪声。
+3. **创新性**：该方法是首次将GMM WF应用于心音降噪，并创新性地将NLMS和GMM WF的输出作为PCA的两个输入通道进行联合处理，利用信号子空间投影提升降噪效果。
+4. **实验结果**：在PASCAL和PhysioNet两个公开数据集上，于多种真实噪声和低信噪比（-10 dB至10 dB）条件下进行评估。结果显示，所提方法（SS-Hybrid）在信噪比提升（ΔSNR）上显著优于小波阈值（WT）、去噪自编码器（DAE）和U-Net等基线方法。在PASCAL数据集上，SS-Hybrid的ΔSNR达到5.0289 dB，而次优的U-Net为-2.4449 dB；在PhysioNet数据集消融实验中，SS-Hybrid的信号失真比（SDR）达到15.27±4.41 dB，优于单独使用NLMS（11.83±4.13 dB）或GMM WF（12.80±6.44 dB）。
+5. **实际意义**：该方法为单麦克风采集的心音信号提供了一种有效的降噪方案，有望提升基于PCG的心血管疾病诊断的准确性和可靠性，尤其在便携式或低成本医疗场景中具有应用潜力。
+6. **局限性**：论文未说明训练和推理的具体计算复杂度；未在真实临床场景中进行大规模验证；未提供代码和模型，可复现性存疑；方法对噪声GMM模型的依赖性较强，其泛化能力有待进一步考察。
+
+---
+
+### 683. [An Unsupervised Alignment Feature Fusion System for Spoken Language-Based Dementia Detection](/audio-paper-digest-blog/posts/2026-04-29-an-unsupervised-alignment-feature-fusion-system)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #多模态模型 | #预训练 #跨模态
 
@@ -21474,7 +22525,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 650. [Transferable Audio Lottery Tickets: Gradient Accumulation for Extreme Sparsity](/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient)
+### 684. [Transferable Audio Lottery Tickets: Gradient Accumulation for Extreme Sparsity](/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #迁移学习 | #模型压缩 #鲁棒性
 
@@ -21511,7 +22562,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 651. [An Efficient Neural Network for Modeling Human Auditory Neurograms for Speech](/audio-paper-digest-blog/posts/2026-04-29-an-efficient-neural-network-for-modeling-human)
+### 685. [An Efficient Neural Network for Modeling Human Auditory Neurograms for Speech](/audio-paper-digest-blog/posts/2026-04-29-an-efficient-neural-network-for-modeling-human)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #卷积神经网络 | #听觉编码 #流式处理
 
@@ -21531,7 +22582,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 652. [Modeling Inter-Segment Relationships in Speech for Dementia Detection with Audio Spectrogram Transformers and Graph Attention Networks](/audio-paper-digest-blog/posts/2026-04-29-modeling-inter-segment-relationships-in-speech)
+### 686. [Modeling Inter-Segment Relationships in Speech for Dementia Detection with Audio Spectrogram Transformers and Graph Attention Networks](/audio-paper-digest-blog/posts/2026-04-29-modeling-inter-segment-relationships-in-speech)
 
 ✅ **7.0/10** | 前25% | #语音生物标志物 | #图神经网络 | #音频大模型 #预训练
 
@@ -21556,7 +22607,27 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 653. [AnyRIR: Robust Non-Intrusive Room Impulse Response Estimation in the Wild](/audio-paper-digest-blog/posts/2026-04-29-anyrir-robust-non-intrusive-room-impulse-response)
+### 687. [Spectral or Spatial? Leveraging Both for Speaker Extraction in Challenging Data Conditions](/audio-paper-digest-blog/posts/2026-04-29-spectral-or-spatial-leveraging-both-for-speaker)
+
+前25% | #语音分离 | #波束成形 | #多通道 #鲁棒性
+
+👥 **作者与机构**
+
+- 第一作者：Aviad Eisenberg（Bar-Ilan大学工程学院， OriginAI）
+- 通讯作者：未说明
+- 作者列表：Aviad Eisenberg（Bar-Ilan大学��程学院， OriginAI）、 Sharon Gannot（Bar-Ilan大学工程学院）、 Shlomo E. Chazan（OriginAI）
+
+💡 **毒舌点评**
+
+这篇论文的亮点在于其训练策略的巧妙设计，通过故意引入错误的注册信息（随机DOA或随机说话人声音）进行联合训练，并辅以一个轻量级分类器，使模型学会了在一种线索失效时自动“偏信”另一种，这在处理真实世界不完美数据时非常实用。不过，论文的“新意”更多体现在工程组合与稳健性训练上，其核心架构（U-Net + FiLM）并非独创，且实验中评估的“SOTA”基线相对有限，主要与自身的单通道和仅空间基线对比，缺乏与近年来其他复杂多通道分离方法的直接较量。
+
+📌 **核心摘要**
+
+这篇论文旨在解决多通道说话人提取任务中，当用于引导模型的参考信息（如说话人语音注册或目标说话人方向DOA）存在错误或噪声时，系统性能严重下降的问题。其核心方法是设计一个集成网络，同时接受频谱参考（一段注册语音）和空间参考（DOA）作为输入，并通过一个场景分类器动态评估两者的可靠性，从而在训练中学会优先利用更准确的信息源，甚至在某一参考完全失效时仍能稳定工作。与已有方法通常只依赖单一类型线索或简单结合不同，该方法强调了在错误参考下的鲁棒性，并通过专门的训练策略（引入随机错误参考进行联合训练）来实现这一点。实验结果表明，在包括说话人空间接近（CSP）、同性别混合（SGM）、随机DOA参考（SGM-RDR）、随机频谱参考（SGM-RSR）和低信噪比频谱注册（SGM-LSSE）等六种挑战性场景下，所提模型（SI-SDRi）均优于或持平于仅使用频谱或仅使用空间信息的基线模型。例如，在SGM-RSR（频谱参考错误）场景下，所提模型达到8.86 dB，显著优于纯空间基线（8.33 dB）；在SGM-RDR（DOA参考错误）场景下，所提模型达到7.8 dB，而纯频谱基线为6.83 dB，纯空间基线则完全失效。该工作的实际意义在于提升了说话人提取系统在真实复杂声学环境（参考信息易出错）下的可靠性。其主要局限性在于，分类器训练时模拟的错误类型（随机DOA或随机说话人）可能与实际推理时遇到的错误分布不完全匹配，这可能影响其泛化能力。
+
+---
+
+### 688. [AnyRIR: Robust Non-Intrusive Room Impulse Response Estimation in the Wild](/audio-paper-digest-blog/posts/2026-04-29-anyrir-robust-non-intrusive-room-impulse-response)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #信号处理 | #鲁棒性
 
@@ -21591,7 +22662,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 654. [Constraint Optimized Multichannel Mixer-Limiter Design](/audio-paper-digest-blog/posts/2026-04-29-constraint-optimized-multichannel-mixer-limiter)
+### 689. [Constraint Optimized Multichannel Mixer-Limiter Design](/audio-paper-digest-blog/posts/2026-04-29-constraint-optimized-multichannel-mixer-limiter)
 
 ✅ **7.0/10** | 前25% | #多通道 | #信号处理 | #音频生成 #实时处理
 
@@ -21622,7 +22693,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 655. [Microphone-Less Measurement of Three-Dimensional Radiating Impulse Response of Sound Source using Spherical Harmonic-Domain Acousto-Optic Tomography](/audio-paper-digest-blog/posts/2026-04-29-microphone-less-measurement-of-three-dimensional)
+### 690. [Microphone-Less Measurement of Three-Dimensional Radiating Impulse Response of Sound Source using Spherical Harmonic-Domain Acousto-Optic Tomography](/audio-paper-digest-blog/posts/2026-04-29-microphone-less-measurement-of-three-dimensional)
 
 ✅ **7.0/10** | 前25% | #声源定位 | #信号处理 | #3D音频 #麦克风阵列
 
@@ -21642,7 +22713,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 656. [Improving Binaural Distance Estimation in Reverberant Rooms Through Contrastive And Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-improving-binaural-distance-estimation-in)
+### 691. [Improving Binaural Distance Estimation in Reverberant Rooms Through Contrastive And Multi-Task Learning](/audio-paper-digest-blog/posts/2026-04-29-improving-binaural-distance-estimation-in)
 
 ✅ **7.0/10** | 前25% | #声源定位 | #对比学习 | #多任务学习 #鲁棒性
 
@@ -21667,7 +22738,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 657. [Hierarchical Tokenization of Multimodal Music Data for Generative Music Retrieval](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-tokenization-of-multimodal-music)
+### 692. [Hierarchical Tokenization of Multimodal Music Data for Generative Music Retrieval](/audio-paper-digest-blog/posts/2026-04-29-hierarchical-tokenization-of-multimodal-music)
 
 ✅ **7.0/10** | 前25% | #音乐检索 | #大语言模型 | #多模态模型 #工业应用
 
@@ -21688,7 +22759,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 658. [Rethinking Music Captioning with Music Metadata LLMS](/audio-paper-digest-blog/posts/2026-04-29-rethinking-music-captioning-with-music-metadata)
+### 693. [Rethinking Music Captioning with Music Metadata LLMS](/audio-paper-digest-blog/posts/2026-04-29-rethinking-music-captioning-with-music-metadata)
 
 ✅ **7.0/10** | 前25% | #音乐理解 | #多模态模型 | #大语言模型 #数据集
 
@@ -21743,7 +22814,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 659. [Symphony Rendering: Midi and Composer-Conditioned Auto Orchestration with Flow-Matching Transformers](/audio-paper-digest-blog/posts/2026-04-29-symphony-rendering-midi-and-composer-conditioned)
+### 694. [Symphony Rendering: Midi and Composer-Conditioned Auto Orchestration with Flow-Matching Transformers](/audio-paper-digest-blog/posts/2026-04-29-symphony-rendering-midi-and-composer-conditioned)
 
 ✅ **7.0/10** | 前50% | #音乐生成 | #流匹配 | #扩散Transformer #数据集
 
@@ -21788,7 +22859,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 660. [IBPCodec : A Low-Bitrate Lightweight Speech Codec With Inter-Band Prediction](/audio-paper-digest-blog/posts/2026-04-29-ibpcodec-a-low-bitrate-lightweight-speech-codec)
+### 695. [IBPCodec : A Low-Bitrate Lightweight Speech Codec With Inter-Band Prediction](/audio-paper-digest-blog/posts/2026-04-29-ibpcodec-a-low-bitrate-lightweight-speech-codec)
 
 ✅ **7.0/10** | 前25% | #语音编码 | #信号处理 | #语音合成 #轻量模型
 
@@ -21809,7 +22880,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 661. [Neural Network-Based Time-Frequency-Bin-Wise Linear Combination of Beamformers for Underdetermined Target Source Extraction](/audio-paper-digest-blog/posts/2026-04-29-neural-network-based-time-frequency-bin-wise)
+### 696. [Neural Network-Based Time-Frequency-Bin-Wise Linear Combination of Beamformers for Underdetermined Target Source Extraction](/audio-paper-digest-blog/posts/2026-04-29-neural-network-based-time-frequency-bin-wise)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #波束成形 | #神经网络 #多通道
 
@@ -21841,7 +22912,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 662. [Shortcut Flow Matching for Speech Enhancement: Step-Invariant Flows via Single Stage Training](/audio-paper-digest-blog/posts/2026-04-29-shortcut-flow-matching-for-speech-enhancement)
+### 697. [Shortcut Flow Matching for Speech Enhancement: Step-Invariant Flows via Single Stage Training](/audio-paper-digest-blog/posts/2026-04-29-shortcut-flow-matching-for-speech-enhancement)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #流匹配 | #扩散模型 #实时处理
 
@@ -21881,7 +22952,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 663. [Generalizability of Predictive and Generative Speech Enhancement Models to Pathological Speakers](/audio-paper-digest-blog/posts/2026-04-29-generalizability-of-predictive-and-generative)
+### 698. [Generalizability of Predictive and Generative Speech Enhancement Models to Pathological Speakers](/audio-paper-digest-blog/posts/2026-04-29-generalizability-of-predictive-and-generative)
 
 ✅ **7.0/10** | 前50% | #语音增强 | #迁移学习 | #扩散模型 #鲁棒性
 
@@ -21909,7 +22980,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 664. [Single-Step Controllable Music Bandwidth extension with Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-single-step-controllable-music-bandwidth)
+### 699. [Single-Step Controllable Music Bandwidth extension with Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-single-step-controllable-music-bandwidth)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #流匹配 | #音频处理 #可控制
 
@@ -21935,7 +23006,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 665. [From Human Speech to Ocean Signals: Transferring Speech Large Models for Underwater Acoustic Target Recognition](/audio-paper-digest-blog/posts/2026-04-29-from-human-speech-to-ocean-signals-transferring)
+### 700. [From Human Speech to Ocean Signals: Transferring Speech Large Models for Underwater Acoustic Target Recognition](/audio-paper-digest-blog/posts/2026-04-29-from-human-speech-to-ocean-signals-transferring)
 
 ✅ **7.0/10** | 前25% | #水下声学目标识别 | #迁移学习 | #语音大模型 #跨域泛化
 
@@ -21955,7 +23026,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 666. [Influence-Aware Curation and Active Selection for Industrial and Surveillance Sound Events](/audio-paper-digest-blog/posts/2026-04-29-influence-aware-curation-and-active-selection-for)
+### 701. [Influence-Aware Curation and Active Selection for Industrial and Surveillance Sound Events](/audio-paper-digest-blog/posts/2026-04-29-influence-aware-curation-and-active-selection-for)
 
 ✅ **7.0/10** | 前50% | #音频事件检测 | #迁移学习 | #主动学习 #音频分类
 
@@ -21984,7 +23055,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 667. [A LLM-Driven Acoustic Semantic Enriched Framework for Underwater Acoustic Target Recognition](/audio-paper-digest-blog/posts/2026-04-29-a-llm-driven-acoustic-semantic-enriched-framework)
+### 702. [A LLM-Driven Acoustic Semantic Enriched Framework for Underwater Acoustic Target Recognition](/audio-paper-digest-blog/posts/2026-04-29-a-llm-driven-acoustic-semantic-enriched-framework)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #对比学习 #大语言模型 | #水声目标识别 #对比学习
 
@@ -22010,7 +23081,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 668. [Adaptive Task-Incremental Learning For Underwater Acoustic Recognition Based on Mixture-of-Experts Adapter](/audio-paper-digest-blog/posts/2026-04-29-adaptive-task-incremental-learning-for-underwater)
+### 703. [Adaptive Task-Incremental Learning For Underwater Acoustic Recognition Based on Mixture-of-Experts Adapter](/audio-paper-digest-blog/posts/2026-04-29-adaptive-task-incremental-learning-for-underwater)
 
 ✅ **7.0/10** | 前25% | #水下声学目标识别 | #混合专家 | #增量学习 #适配器
 
@@ -22031,7 +23102,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 669. [Phase-Space Signal Processing of Acoustic Data for Advanced Manufacturing In-Situ Monitoring](/audio-paper-digest-blog/posts/2026-04-29-phase-space-signal-processing-of-acoustic-data)
+### 704. [Phase-Space Signal Processing of Acoustic Data for Advanced Manufacturing In-Situ Monitoring](/audio-paper-digest-blog/posts/2026-04-29-phase-space-signal-processing-of-acoustic-data)
 
 ✅ **7.0/10** | 前50% | #音频事件检测 | #信号处理 | #工业应用
 
@@ -22059,7 +23130,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 670. [S-SONDO: Self-Supervised Knowledge Distillation for General Audio Foundation Models](/audio-paper-digest-blog/posts/2026-04-29-s-sondo-self-supervised-knowledge-distillation)
+### 705. [S-SONDO: Self-Supervised Knowledge Distillation for General Audio Foundation Models](/audio-paper-digest-blog/posts/2026-04-29-s-sondo-self-supervised-knowledge-distillation)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #知识蒸馏 | #自监督学习 #模型压缩
 
@@ -22085,7 +23156,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 671. [Audio Effect Estimation with DNN-Based Prediction and Search Algorithm](/audio-paper-digest-blog/posts/2026-04-29-audio-effect-estimation-with-dnn-based-prediction)
+### 706. [Audio Effect Estimation with DNN-Based Prediction and Search Algorithm](/audio-paper-digest-blog/posts/2026-04-29-audio-effect-estimation-with-dnn-based-prediction)
 
 ✅ **7.0/10** | 前25% | #音频效果估计 | #深度神经网络 #优化算法 | #音乐信息检索 #深度神经网络
 
@@ -22125,7 +23196,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 672. [Leveraging Whisper Embeddings For Audio-Based Lyrics Matching](/audio-paper-digest-blog/posts/2026-04-29-leveraging-whisper-embeddings-for-audio-based)
+### 707. [Leveraging Whisper Embeddings For Audio-Based Lyrics Matching](/audio-paper-digest-blog/posts/2026-04-29-leveraging-whisper-embeddings-for-audio-based)
 
 ✅ **7.0/10** | 前50% | #音乐信息检索 | #对比学习 | #音频检索 #Whisper
 
@@ -22150,7 +23221,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 673. [Learning Piezoelectric Hysteresis in In-Ear MEMS Loudspeakers from Acoustic Measurements](/audio-paper-digest-blog/posts/2026-04-29-learning-piezoelectric-hysteresis-in-in-ear-mems)
+### 708. [Learning Piezoelectric Hysteresis in In-Ear MEMS Loudspeakers from Acoustic Measurements](/audio-paper-digest-blog/posts/2026-04-29-learning-piezoelectric-hysteresis-in-in-ear-mems)
 
 ✅ **7.0/10** | 前50% | #音频信号处理 | #神经网络模型 | #非线性建模 #波数字滤波
 
@@ -22175,7 +23246,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 674. [Acoustic Non-Stationarity Objective Assessment with Hard Label Criteria for Supervised Learning Models](/audio-paper-digest-blog/posts/2026-04-29-acoustic-non-stationarity-objective-assessment)
+### 709. [Acoustic Non-Stationarity Objective Assessment with Hard Label Criteria for Supervised Learning Models](/audio-paper-digest-blog/posts/2026-04-29-acoustic-non-stationarity-objective-assessment)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #时频分析 | #信号处理 #实时处理
 
@@ -22208,7 +23279,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 675. [Single-Microphone Audio Point Source Discriminative Localization from Reverberation Late Tail Estimation](/audio-paper-digest-blog/posts/2026-04-29-single-microphone-audio-point-source)
+### 710. [Single-Microphone Audio Point Source Discriminative Localization from Reverberation Late Tail Estimation](/audio-paper-digest-blog/posts/2026-04-29-single-microphone-audio-point-source)
 
 ✅ **7.0/10** | 前25% | #说话人分离 | #信号处理 | #声源定位 #单通道
 
@@ -22240,7 +23311,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 676. [Maximum Likelihood Measurement Noise Estimation for Block-Time Domain Kalman Filters](/audio-paper-digest-blog/posts/2026-04-29-maximum-likelihood-measurement-noise-estimation)
+### 711. [Maximum Likelihood Measurement Noise Estimation for Block-Time Domain Kalman Filters](/audio-paper-digest-blog/posts/2026-04-29-maximum-likelihood-measurement-noise-estimation)
 
 ✅ **7.0/10** | 前50% | #回声消除 | #信号处理 #卡尔曼滤波器 | #信号处理 #卡尔曼滤波器
 
@@ -22265,7 +23336,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 ---
 
-### 677. [SIREN: Spatially-Informed Reconstruction of Binaural Audio with Vision](/audio-paper-digest-blog/posts/2026-04-29-siren-spatially-informed-reconstruction-of)
+### 712. [SIREN: Spatially-Informed Reconstruction of Binaural Audio with Vision](/audio-paper-digest-blog/posts/2026-04-29-siren-spatially-informed-reconstruction-of)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #音视频 | #Transformer
 
@@ -22329,7 +23400,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 678. [Enhancing Automatic Drum Transcription with Online Dynamic Few-Shot Learning](/audio-paper-digest-blog/posts/2026-04-29-enhancing-automatic-drum-transcription-with)
+### 713. [Enhancing Automatic Drum Transcription with Online Dynamic Few-Shot Learning](/audio-paper-digest-blog/posts/2026-04-29-enhancing-automatic-drum-transcription-with)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #少样本学习 | #领域适应 #实时处理
 
@@ -22349,7 +23420,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 679. [ALMA-Chor: Leveraging Audio-Lyric Alignment with Mamba for Chorus Detection](/audio-paper-digest-blog/posts/2026-04-29-alma-chor-leveraging-audio-lyric-alignment-with)
+### 714. [ALMA-Chor: Leveraging Audio-Lyric Alignment with Mamba for Chorus Detection](/audio-paper-digest-blog/posts/2026-04-29-alma-chor-leveraging-audio-lyric-alignment-with)
 
 ✅ **7.0/10** | 前25% | #音乐信息检索 | #多模态模型 | #对比学习 #Mamba
 
@@ -22383,7 +23454,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 680. [Cross-Modal Knowledge Distillation for Speech Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-knowledge-distillation-for-speech)
+### 715. [Cross-Modal Knowledge Distillation for Speech Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-cross-modal-knowledge-distillation-for-speech)
 
 ✅ **7.0/10** | 前25% | #语音大模型 | #知识蒸馏 | #跨模态 #多任务学习
 
@@ -22408,7 +23479,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 681. [Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective](/audio-paper-digest-blog/posts/2026-04-29-why-do-speech-language-models-fail-to-generate)
+### 716. [Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective](/audio-paper-digest-blog/posts/2026-04-29-why-do-speech-language-models-fail-to-generate)
 
 ✅ **7.0/10** | 前25% | #语音生成 | #模型评估 | #语音大模型 #零样本
 
@@ -22439,7 +23510,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 682. [Gelina: Unified Speech and Gesture Synthesis Via Interleaved Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-gelina-unified-speech-and-gesture-synthesis-via)
+### 717. [Gelina: Unified Speech and Gesture Synthesis Via Interleaved Token Prediction](/audio-paper-digest-blog/posts/2026-04-29-gelina-unified-speech-and-gesture-synthesis-via)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #自回归模型 | #手势生成 #流匹配
 
@@ -22472,7 +23543,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 683. [Addressing Gradient Misalignment in Data-Augmented Training for Robust Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-addressing-gradient-misalignment-in-data)
+### 718. [Addressing Gradient Misalignment in Data-Augmented Training for Robust Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-addressing-gradient-misalignment-in-data)
 
 ✅ **7.0/10** | 前25% | #语音伪造检测 | #数据增强 | #鲁棒性 #梯度优化
 
@@ -22492,7 +23563,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 684. [AQUA-Bench: Beyond finding answers to knowing when there are None in Audio Question Answering](/audio-paper-digest-blog/posts/2026-04-29-aqua-bench-beyond-finding-answers-to-knowing-when)
+### 719. [AQUA-Bench: Beyond finding answers to knowing when there are None in Audio Question Answering](/audio-paper-digest-blog/posts/2026-04-29-aqua-bench-beyond-finding-answers-to-knowing-when)
 
 ✅ **7.0/10** | 前50% | #音频问答 | #基准测试 | #多模态模型 #鲁棒性
 
@@ -22517,7 +23588,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 685. [SpeechMapper: Speech-To-Text Embedding Projector for LLMs](/audio-paper-digest-blog/posts/2026-04-29-speechmapper-speech-to-text-embedding-projector)
+### 720. [SpeechMapper: Speech-To-Text Embedding Projector for LLMs](/audio-paper-digest-blog/posts/2026-04-29-speechmapper-speech-to-text-embedding-projector)
 
 ✅ **7.0/10** | 前25% | #语音大模型 | #预训练 | #零样本 #大语言模型
 
@@ -22548,7 +23619,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 686. [TASU: Text-only Alignment for Speech Understanding](/audio-paper-digest-blog/posts/2026-04-29-tasu-text-only-alignment-for-speech-understanding)
+### 721. [TASU: Text-only Alignment for Speech Understanding](/audio-paper-digest-blog/posts/2026-04-29-tasu-text-only-alignment-for-speech-understanding)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #对齐 | #语音大模型 #预训练
 
@@ -22568,7 +23639,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 687. [Mambaformer: State-Space Augmented Self-Attention with Downup Sampling for Monaural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-mambaformer-state-space-augmented-self-attention)
+### 722. [Mambaformer: State-Space Augmented Self-Attention with Downup Sampling for Monaural Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-mambaformer-state-space-augmented-self-attention)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #状态空间模型 | #Transformer #双路径模型
 
@@ -22599,7 +23670,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 688. [Training Dynamics-Aware Multi-Factor Curriculum Learning for Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-training-dynamics-aware-multi-factor-curriculum)
+### 723. [Training Dynamics-Aware Multi-Factor Curriculum Learning for Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-training-dynamics-aware-multi-factor-curriculum)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #课程学习 | #音频安全 #数据集
 
@@ -22633,7 +23704,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 689. [Streaming Speech Recognition with Decoder-Only Large Language Models and Latency Optimization](/audio-paper-digest-blog/posts/2026-04-29-streaming-speech-recognition-with-decoder-only)
+### 724. [Streaming Speech Recognition with Decoder-Only Large Language Models and Latency Optimization](/audio-paper-digest-blog/posts/2026-04-29-streaming-speech-recognition-with-decoder-only)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #语音大模型 | #流式处理 #端到端
 
@@ -22664,7 +23735,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 690. [Reducing Prompt Sensitivity in LLM-Based Speech Recognition Through Learnable Projection](/audio-paper-digest-blog/posts/2026-04-29-reducing-prompt-sensitivity-in-llm-based-speech)
+### 725. [Reducing Prompt Sensitivity in LLM-Based Speech Recognition Through Learnable Projection](/audio-paper-digest-blog/posts/2026-04-29-reducing-prompt-sensitivity-in-llm-based-speech)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #语音大模型 | #鲁棒性
 
@@ -22703,7 +23774,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 691. [PAC: Pronunciation-Aware Contextualized Large Language Model-Based Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-pac-pronunciation-aware-contextualized-large)
+### 726. [PAC: Pronunciation-Aware Contextualized Large Language Model-Based Automatic Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-pac-pronunciation-aware-contextualized-large)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #大语言模型 | #多语言 #强化学习
 
@@ -22738,7 +23809,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 692. [Emo-TTA: Improving Test-Time Adaptation of Audio-Language Models for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-emo-tta-improving-test-time-adaptation-of-audio)
+### 727. [Emo-TTA: Improving Test-Time Adaptation of Audio-Language Models for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-emo-tta-improving-test-time-adaptation-of-audio)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #领域适应 | #音频大模型 #零样本
 
@@ -22771,7 +23842,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 693. [A Superb-Style Benchmark of Self-Supervised Speech Models for Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-a-superb-style-benchmark-of-self-supervised)
+### 728. [A Superb-Style Benchmark of Self-Supervised Speech Models for Audio Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-a-superb-style-benchmark-of-self-supervised)
 
 ✅ **7.0/10** | 前25% | #音频深度伪造检测 | #自监督学习 | #基准测试 #模型评估
 
@@ -22826,7 +23897,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 694. [Understanding the Strengths and Weaknesses of SSL Models for Audio Deepfake Model Attribution](/audio-paper-digest-blog/posts/2026-04-29-understanding-the-strengths-and-weaknesses-of-ssl)
+### 729. [Understanding the Strengths and Weaknesses of SSL Models for Audio Deepfake Model Attribution](/audio-paper-digest-blog/posts/2026-04-29-understanding-the-strengths-and-weaknesses-of-ssl)
 
 ✅ **7.0/10** | 前50% | #音频深度伪造检测 | #自监督学习 | #语音合成
 
@@ -22866,7 +23937,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 695. [Investigating The Effect Of Sentence-Level Syntactic Structure On Information Loss In The Human Auditory System](/audio-paper-digest-blog/posts/2026-04-29-investigating-the-effect-of-sentence-level)
+### 730. [Investigating The Effect Of Sentence-Level Syntactic Structure On Information Loss In The Human Auditory System](/audio-paper-digest-blog/posts/2026-04-29-investigating-the-effect-of-sentence-level)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #信号处理 | #语言学 #模型评估
 
@@ -22902,7 +23973,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 696. [Test-Time Scaling for Auditory Cognition in Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-test-time-scaling-for-auditory-cognition-in-audio)
+### 731. [Test-Time Scaling for Auditory Cognition in Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-test-time-scaling-for-auditory-cognition-in-audio)
 
 ✅ **7.0/10** | 前25% | #音频问答 | #测试时扩展 | #音频大模型 #大语言模型
 
@@ -22956,7 +24027,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 697. [SSVD-O: Parameter-Efficient Fine-Tuning with Structured SVD for Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-ssvd-o-parameter-efficient-fine-tuning-with)
+### 732. [SSVD-O: Parameter-Efficient Fine-Tuning with Structured SVD for Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-ssvd-o-parameter-efficient-fine-tuning-with)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #领域适应 | #低资源 #语音大模型
 
@@ -22996,7 +24067,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 698. [Three Seconds is Sufficient: A Multi-Pronged Framework for Model-Based Speaker Adaptation in ASR Under Data-Scarce Conditions](/audio-paper-digest-blog/posts/2026-04-29-three-seconds-is-sufficient-a-multi-pronged)
+### 733. [Three Seconds is Sufficient: A Multi-Pronged Framework for Model-Based Speaker Adaptation in ASR Under Data-Scarce Conditions](/audio-paper-digest-blog/posts/2026-04-29-three-seconds-is-sufficient-a-multi-pronged)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #迁移学习 | #低资源 #数据增强
 
@@ -23031,7 +24102,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 699. [In-Sync: Adaptation of Speech Aware Large Language Models for ASR with Word level timestamp predictions](/audio-paper-digest-blog/posts/2026-04-29-in-sync-adaptation-of-speech-aware-large-language)
+### 734. [In-Sync: Adaptation of Speech Aware Large Language Models for ASR with Word level timestamp predictions](/audio-paper-digest-blog/posts/2026-04-29-in-sync-adaptation-of-speech-aware-large-language)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #多任务学习 | #语音大模型 #数据增强
 
@@ -23057,7 +24128,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 700. [Retrieval-Based Speculative Decoding For Autoregressive Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-retrieval-based-speculative-decoding-for)
+### 735. [Retrieval-Based Speculative Decoding For Autoregressive Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-retrieval-based-speculative-decoding-for)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #检索式推测解码 | #自回归模型 #推理加速
 
@@ -23089,7 +24160,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 701. [Auditory-Inspired Transformer for Binaural Speech Enhancement and Spatial Cue Preservation](/audio-paper-digest-blog/posts/2026-04-29-auditory-inspired-transformer-for-binaural-speech)
+### 736. [Auditory-Inspired Transformer for Binaural Speech Enhancement and Spatial Cue Preservation](/audio-paper-digest-blog/posts/2026-04-29-auditory-inspired-transformer-for-binaural-speech)
 
 ✅ **7.0/10** | 前25% | #语音增强 | #端到端 | #空间音频 #多通道
 
@@ -23114,7 +24185,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 702. [Easy Turn: Integrating Acoustic and Linguistic Modalities for Robust Turn-Taking in Full-Duplex Spoken Dialogue Systems](/audio-paper-digest-blog/posts/2026-04-29-easy-turn-integrating-acoustic-and-linguistic)
+### 737. [Easy Turn: Integrating Acoustic and Linguistic Modalities for Robust Turn-Taking in Full-Duplex Spoken Dialogue Systems](/audio-paper-digest-blog/posts/2026-04-29-easy-turn-integrating-acoustic-and-linguistic)
 
 ✅ **7.0/10** | 前25% | #语音对话系统 | #多模态模型 | #大语言模型 #数据集
 
@@ -23146,7 +24217,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 703. [T-Mimi: A Transformer-Based Mimi Decoder for Real-Time On-Phone TTS](/audio-paper-digest-blog/posts/2026-04-29-t-mimi-a-transformer-based-mimi-decoder-for-real)
+### 738. [T-Mimi: A Transformer-Based Mimi Decoder for Real-Time On-Phone TTS](/audio-paper-digest-blog/posts/2026-04-29-t-mimi-a-transformer-based-mimi-decoder-for-real)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #自回归模型 | #端到端 #量化
 
@@ -23174,7 +24245,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 704. [Wave-Trainer-Fit: Neural Vocoder With Trainable Prior And Fixed-Point Iteration Towards High-Quality Speech Generation From SSL Features](/audio-paper-digest-blog/posts/2026-04-29-wave-trainer-fit-neural-vocoder-with-trainable)
+### 739. [Wave-Trainer-Fit: Neural Vocoder With Trainable Prior And Fixed-Point Iteration Towards High-Quality Speech Generation From SSL Features](/audio-paper-digest-blog/posts/2026-04-29-wave-trainer-fit-neural-vocoder-with-trainable)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #生成模型 | #自监督学习 #扩散模型
 
@@ -23218,7 +24289,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 705. [AccLID: Accent-aware Language Identification for Robust Multilingual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-acclid-accent-aware-language-identification-for)
+### 740. [AccLID: Accent-aware Language Identification for Robust Multilingual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-acclid-accent-aware-language-identification-for)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #多任务学习 | #领域适应 #多语言
 
@@ -23244,7 +24315,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 706. [BBPE16: UTF-16-Based Byte-Level Byte-Pair Encoding for Improved Multilingual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-bbpe16-utf-16-based-byte-level-byte-pair-encoding)
+### 741. [BBPE16: UTF-16-Based Byte-Level Byte-Pair Encoding for Improved Multilingual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-bbpe16-utf-16-based-byte-level-byte-pair-encoding)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #词元化 | #多语言 #工业应用
 
@@ -23276,7 +24347,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 707. [Mixtures of Lightweight Articulatory Experts for Multilingual Asr](/audio-paper-digest-blog/posts/2026-04-29-mixtures-of-lightweight-articulatory-experts-for)
+### 742. [Mixtures of Lightweight Articulatory Experts for Multilingual Asr](/audio-paper-digest-blog/posts/2026-04-29-mixtures-of-lightweight-articulatory-experts-for)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #混合专家模型 | #多语言 #低资源
 
@@ -23313,7 +24384,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 708. [Towards Orthographically-Informed Evaluation of Speech Recognition Systems for Indian Languages](/audio-paper-digest-blog/posts/2026-04-29-towards-orthographically-informed-evaluation-of)
+### 743. [Towards Orthographically-Informed Evaluation of Speech Recognition Systems for Indian Languages](/audio-paper-digest-blog/posts/2026-04-29-towards-orthographically-informed-evaluation-of)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #基准测试 | #大语言模型 #多语言
 
@@ -23352,7 +24423,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 709. [Test Time Adaptation for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-test-time-adaptation-for-speech-emotion)
+### 744. [Test Time Adaptation for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-test-time-adaptation-for-speech-emotion)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #领域适应 | #跨语料库 #预训练
 
@@ -23397,7 +24468,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 710. [Plug-and-Play Emotion Graphs for Compositional Prompting in Zero-Shot Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-plug-and-play-emotion-graphs-for-compositional)
+### 745. [Plug-and-Play Emotion Graphs for Compositional Prompting in Zero-Shot Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-plug-and-play-emotion-graphs-for-compositional)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #零样本 | #语音大模型 #提示工程
 
@@ -23417,7 +24488,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 711. [Reasoning Driven Captions to Assist Noise Robust Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-reasoning-driven-captions-to-assist-noise-robust)
+### 746. [Reasoning Driven Captions to Assist Noise Robust Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-reasoning-driven-captions-to-assist-noise-robust)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #多模态模型 | #预训练 #鲁棒性
 
@@ -23443,7 +24514,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 712. [EmoShift: Lightweight Activation Steering for Enhanced Emotion-Aware Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-emoshift-lightweight-activation-steering-for)
+### 747. [EmoShift: Lightweight Activation Steering for Enhanced Emotion-Aware Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-emoshift-lightweight-activation-steering-for)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #激活引导 | #大语言模型 #流匹配
 
@@ -23463,7 +24534,44 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 713. [MeanVoiceFlow: One-Step Nonparallel Voice Conversion with Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanvoiceflow-one-step-nonparallel-voice)
+### 748. [Task Vector in TTS: Toward Emotionally Expressive Dialectal Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-task-vector-in-tts-toward-emotionally-expressive)
+
+前50% | #语音合成 | #流匹配 | #零样本 #低资源
+
+👥 **作者与机构**
+
+- 第一作者：未说明（作者列表标注“Pengchao Feng1,2∗, Yao Xiao1∗”为共同第一作者）
+- 通讯作者：Xie Chen1,2†（上海交通大学X-LANCE实验室）
+- 作者列表：Pengchao Feng（1上海交通大学X-LANCE实验室, 2上海创新研究院），Yao Xiao（1上海交通大学X-LANCE实验室），Ziyang Ma（1上海交通大学X-LANCE实验室），Zhikang Niu（1上海交通大学X-LANCE实验室, 2上海创新研究院），Shuai Fan（1上海交通大学X-LANCE实验室），Yao Li（3上海航空电器有限公司），Sheng Wang（1上海交通大学X-LANCE实验室, 3上海航空电器有限公司），Xie Chen（1上海交通大学X-LANCE实验室, 2上海创新研究院）
+
+💡 **毒舌点评**
+
+亮点在于其“分而治之”的策略，通过独立建模再分层整合，巧妙地绕过了缺乏方言情感联合标注数据的难题，并在实验上证明了其优于简单串联或直接合并的基线。短板则是该方法的泛化能力存疑，在对另一个主流TTS框架（CosyVoice）上尝试时效果不佳，暗示其可能过度依赖于特定的F5-TTS架构特性，通用性打了折扣。
+
+📌 **核心摘要**
+
+1. **要解决什么问题**：在语音合成领域，如何在缺乏大量方言与情感联合标注数据的情况下，生成同时具有特定方言口音和丰富情感表达的语音。
+2. **方法核心是什么**：提出了一种两阶段方法“分层表达向量（HE-Vector）”。第一阶段，基于F5-TTS模型，通过微调并提取“任务向量”来独立构建表示方言和情感的“表达向量（E-Vector）”。第二阶段，设计了一个“分层合并策略”，将方言E-Vector应用于模型的文本嵌入层和早期DiT块（负责音素发音），将情感E-Vector应用于后期DiT块（负责韵律语调），从而在推理时融合两种风格。
+3. **与已有方法相比新在哪里**：相比于直接合并不同风格的任务向量（会导致风格干扰）或采用双阶段流水线（易造成误差累积），该方法的核心创新在于提出了基于模型层功能分工的“分层整合”机制，使得方言和情感特征能更独立、更少干扰地被建模和融合，且无需联合标注数据。
+4. **主要实验结果如何**：在方言合成任务上，E-Vector增强模型（α=3.0）在8个方言上的平均MOS达到3.18，显著优于CosyVoice2（2.62）和全量微调模型（1.85）。在情感方言合成任务上，HE-Vector框架取得最佳平均MOS（2.83），优于完全合并E-Vector（2.76）、双阶段流水线（2.56）和CosyVoice2（1.87）。具体MOS对比见下表：
+
+| 方法 | 平均MOS (方言合成) | 平均MOS (情感方言合成) |
+| :--- | :--- | :--- |
+| CosyVoice2 | 2.62 | 1.87 |
+| FT (微调) | 1.85 | 未提供 |
+| FT-last (过度微调) | 2.85 | 未提供 |
+| E-Vector (α=3.0) | 3.18 | 未提供 |
+| LoRA E-Vector | 2.35 | 未提供 |
+| Fully E-Vector | 未提供 | 2.76 |
+| Dual-stage | 未提供 | 2.56 |
+| HE-Vector (Ours) | 未提供 | 2.83 |
+
+5. **实际意义是什么**：为低资源甚至零样本下的复杂表达性语音合成（如方言+情感）提供了一种数据高效的解决方案，有助于方言文化遗产保护和更自然的个性化语音交互。
+6. **主要局限性是什么**：E-Vector的构建基于任务向量的线性缩放，而论文分析指出风格迁移的参数变化并非严格线性；该方法在其他TTS架构（如CosyVoice）上效果不佳，表明其通用性有限；实验中使用的方言和情感数据集部分为内部数据，未完全公开。
+
+---
+
+### 749. [MeanVoiceFlow: One-Step Nonparallel Voice Conversion with Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanvoiceflow-one-step-nonparallel-voice)
 
 ✅ **7.0/10** | 前25% | #语音转换 | #流匹配 | #非并行训练 #零样本
 
@@ -23498,7 +24606,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 714. [Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators](/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic)
+### 750. [Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators](/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic)
 
 ✅ **7.0/10** | 前25% | #语音伪造检测 | #音位分析 | #语音合成 #模型比较
 
@@ -23535,7 +24643,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 715. [Mitigating Intra-Speaker Variability in Diarization with Style-Controllable Speech Augmentation](/audio-paper-digest-blog/posts/2026-04-29-mitigating-intra-speaker-variability-in)
+### 751. [Mitigating Intra-Speaker Variability in Diarization with Style-Controllable Speech Augmentation](/audio-paper-digest-blog/posts/2026-04-29-mitigating-intra-speaker-variability-in)
 
 ✅ **7.0/10** | 前25% | #说话人日志 | #数据增强 | #语音合成 #流匹配
 
@@ -23569,7 +24677,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 716. [Fine-Tuning Large Multimodal Models for Automatic Pronunciation Assessment](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-multimodal-models-for-automatic)
+### 752. [Fine-Tuning Large Multimodal Models for Automatic Pronunciation Assessment](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-multimodal-models-for-automatic)
 
 ✅ **7.0/10** | 前50% | #语音评估 | #微调 | #语音大模型 #提示工程
 
@@ -23597,7 +24705,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 717. [Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule)
+### 753. [Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #数据增强 | #语音转换 #低资源
 
@@ -23657,7 +24765,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 718. [PFluxTTS: Hybrid Flow-Matching TTS with Robust Cross-Lingual Voice Cloning and Inference-Time Model Fusion](/audio-paper-digest-blog/posts/2026-04-29-pfluxtts-hybrid-flow-matching-tts-with-robust)
+### 754. [PFluxTTS: Hybrid Flow-Matching TTS with Robust Cross-Lingual Voice Cloning and Inference-Time Model Fusion](/audio-paper-digest-blog/posts/2026-04-29-pfluxtts-hybrid-flow-matching-tts-with-robust)
 
 ✅ **7.0/10** | 前50% | #语音合成 | #流匹配 | #语音克隆 #多语言
 
@@ -23702,7 +24810,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 719. [Contextual Biasing for ASR in Speech LLM with Common Word Cues and Bias Word Position Prediction](/audio-paper-digest-blog/posts/2026-04-29-contextual-biasing-for-asr-in-speech-llm-with)
+### 755. [Contextual Biasing for ASR in Speech LLM with Common Word Cues and Bias Word Position Prediction](/audio-paper-digest-blog/posts/2026-04-29-contextual-biasing-for-asr-in-speech-llm-with)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #多任务学习 | #语音大模型 #鲁棒性
 
@@ -23736,7 +24844,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 720. [Peeking Into the Future for Contextual Biasing](/audio-paper-digest-blog/posts/2026-04-29-peeking-into-the-future-for-contextual-biasing)
+### 756. [Peeking Into the Future for Contextual Biasing](/audio-paper-digest-blog/posts/2026-04-29-peeking-into-the-future-for-contextual-biasing)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #多任务学习 | #端到端 #上下文建模
 
@@ -23780,7 +24888,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 721. [The Singing Voice Conversion Challenge 2025: From Singer Identity Conversion to Singing Style Conversion](/audio-paper-digest-blog/posts/2026-04-29-the-singing-voice-conversion-challenge-2025-from)
+### 757. [The Singing Voice Conversion Challenge 2025: From Singer Identity Conversion to Singing Style Conversion](/audio-paper-digest-blog/posts/2026-04-29-the-singing-voice-conversion-challenge-2025-from)
 
 ✅ **7.0/10** | 前50% | #歌唱语音转换 | #基准测试 | #数据集 #开源工具
 
@@ -23800,7 +24908,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 722. [S2Voice: Style-Aware Autoregressive Modeling with Enhanced Conditioning for Singing Style Conversion](/audio-paper-digest-blog/posts/2026-04-29-s2voice-style-aware-autoregressive-modeling-with)
+### 758. [S2Voice: Style-Aware Autoregressive Modeling with Enhanced Conditioning for Singing Style Conversion](/audio-paper-digest-blog/posts/2026-04-29-s2voice-style-aware-autoregressive-modeling-with)
 
 ✅ **7.0/10** | 前25% | #歌唱语音转换 | #流匹配 | #语音转换 #自回归模型
 
@@ -23835,7 +24943,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 723. [DiTSinger: Scaling Singing Voice Synthesis with Diffusion Transformer and Implicit Alignment](/audio-paper-digest-blog/posts/2026-04-29-ditsinger-scaling-singing-voice-synthesis-with)
+### 759. [DiTSinger: Scaling Singing Voice Synthesis with Diffusion Transformer and Implicit Alignment](/audio-paper-digest-blog/posts/2026-04-29-ditsinger-scaling-singing-voice-synthesis-with)
 
 ✅ **7.0/10** | 前25% | #歌唱语音合成 | #扩散模型 | #数据增强 #隐式对齐
 
@@ -23859,7 +24967,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 724. [LP-CFM: Perceptual Invariance-Aware Conditional Flow Matching for Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-lp-cfm-perceptual-invariance-aware-conditional)
+### 760. [LP-CFM: Perceptual Invariance-Aware Conditional Flow Matching for Speech Modeling](/audio-paper-digest-blog/posts/2026-04-29-lp-cfm-perceptual-invariance-aware-conditional)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #流匹配 | #低资源 #鲁棒性
 
@@ -23884,7 +24992,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 725. [Learning Vocal-Tract Area And Radiation With A Physics-Informed Webster Model](/audio-paper-digest-blog/posts/2026-04-29-learning-vocal-tract-area-and-radiation-with-a)
+### 761. [Learning Vocal-Tract Area And Radiation With A Physics-Informed Webster Model](/audio-paper-digest-blog/posts/2026-04-29-learning-vocal-tract-area-and-radiation-with-a)
 
 ✅ **7.0/10** | 前50% | #歌唱语音合成 | #信号处理 | #物理信息神经网络 #语音合成
 
@@ -23921,7 +25029,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 726. [When Silence Matters: The Impact of Irrelevant Audio on Text Reasoning in Large Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-when-silence-matters-the-impact-of-irrelevant)
+### 762. [When Silence Matters: The Impact of Irrelevant Audio on Text Reasoning in Large Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-when-silence-matters-the-impact-of-irrelevant)
 
 ✅ **7.0/10** | 前50% | #模型评估 | #鲁棒性 | #音频大模型 #跨模态
 
@@ -23953,7 +25061,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 727. [SLM-TTA: A Framework for Test-Time Adaptation of Generative Spoken Language Models](/audio-paper-digest-blog/posts/2026-04-29-slm-tta-a-framework-for-test-time-adaptation-of)
+### 763. [SLM-TTA: A Framework for Test-Time Adaptation of Generative Spoken Language Models](/audio-paper-digest-blog/posts/2026-04-29-slm-tta-a-framework-for-test-time-adaptation-of)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #领域适应 | #语音翻译 #自适应学习
 
@@ -23985,7 +25093,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 728. [Advancing Speech Understanding in Speech-Aware Language Models with GRPO](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-understanding-in-speech-aware)
+### 764. [Advancing Speech Understanding in Speech-Aware Language Models with GRPO](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-understanding-in-speech-aware)
 
 ✅ **7.0/10** | 前25% | #语音问答 | #强化学习 | #语音大模型 #语音翻译
 
@@ -24010,7 +25118,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 729. [Tokenchain: A Discrete Speech Chain via Semantic Token Modeling](/audio-paper-digest-blog/posts/2026-04-29-tokenchain-a-discrete-speech-chain-via-semantic)
+### 765. [Tokenchain: A Discrete Speech Chain via Semantic Token Modeling](/audio-paper-digest-blog/posts/2026-04-29-tokenchain-a-discrete-speech-chain-via-semantic)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #自回归模型 | #端到端 #多任务学习
 
@@ -24048,7 +25156,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 730. [Advanced modeling of interlanguage speech intelligibility benefit with L1-L2 multi-task learning using differentiable K-means for accent-robust discrete token-based ASR](/audio-paper-digest-blog/posts/2026-04-29-advanced-modeling-of-interlanguage-speech)
+### 766. [Advanced modeling of interlanguage speech intelligibility benefit with L1-L2 multi-task learning using differentiable K-means for accent-robust discrete token-based ASR](/audio-paper-digest-blog/posts/2026-04-29-advanced-modeling-of-interlanguage-speech)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #多任务学习 | #自监督学习 #鲁棒性
 
@@ -24075,7 +25183,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 731. [Leveraging Segment-Level Speech Representations for LLM-Based Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-leveraging-segment-level-speech-representations)
+### 767. [Leveraging Segment-Level Speech Representations for LLM-Based Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-leveraging-segment-level-speech-representations)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #语音大模型 | #预训练 #自监督学习
 
@@ -24100,7 +25208,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 732. [Reading Between the Waves: Robust Topic Segmentation Using Inter-Sentence Audio Features](/audio-paper-digest-blog/posts/2026-04-29-reading-between-the-waves-robust-topic)
+### 768. [Reading Between the Waves: Robust Topic Segmentation Using Inter-Sentence Audio Features](/audio-paper-digest-blog/posts/2026-04-29-reading-between-the-waves-robust-topic)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #多模态模型 | #预训练 #自监督学习
 
@@ -24146,7 +25254,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 733. [Advancing Speech Summarization in Multi-Modal LLMs with Reinforcement Learning](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-summarization-in-multi-modal)
+### 769. [Advancing Speech Summarization in Multi-Modal LLMs with Reinforcement Learning](/audio-paper-digest-blog/posts/2026-04-29-advancing-speech-summarization-in-multi-modal)
 
 ✅ **7.0/10** | 前50% | #音频问答 | #强化学习 | #知识蒸馏 #多模态模型
 
@@ -24183,7 +25291,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 734. [A Personalized Real-Time Proactive Voice Memory Assistant](/audio-paper-digest-blog/posts/2026-04-29-a-personalized-real-time-proactive-voice-memory)
+### 770. [A Personalized Real-Time Proactive Voice Memory Assistant](/audio-paper-digest-blog/posts/2026-04-29-a-personalized-real-time-proactive-voice-memory)
 
 ✅ **7.0/10** | 前50% | #实时处理 | #大语言模型 | #语音识别 #说话人识别
 
@@ -24215,7 +25323,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 735. [Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech Recognition with LLMs](/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive)
+### 771. [Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech Recognition with LLMs](/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #语音大模型 | #多模态模型 #音视频
 
@@ -24253,7 +25361,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 736. [TVP-UNet: Threshold Variance Penalty U-Net for Voice Activity Detection in Dysarthric Speech](/audio-paper-digest-blog/posts/2026-04-29-tvp-unet-threshold-variance-penalty-u-net-for)
+### 772. [TVP-UNet: Threshold Variance Penalty U-Net for Voice Activity Detection in Dysarthric Speech](/audio-paper-digest-blog/posts/2026-04-29-tvp-unet-threshold-variance-penalty-u-net-for)
 
 ✅ **7.0/10** | 前25% | #语音活动检测 | #U-Net | #阈值方差惩罚 #构音障碍
 
@@ -24287,7 +25395,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 737. [When Children Talk and Machines Listen: Toward an Interpretable Speech-Based Screener for Dutch Developmental Language Disorder](/audio-paper-digest-blog/posts/2026-04-29-when-children-talk-and-machines-listen-toward-an)
+### 773. [When Children Talk and Machines Listen: Toward an Interpretable Speech-Based Screener for Dutch Developmental Language Disorder](/audio-paper-digest-blog/posts/2026-04-29-when-children-talk-and-machines-listen-toward-an)
 
 ✅ **7.0/10** | 前50% | #语音生物标志物 | #特征选择 | #领域适应
 
@@ -24321,7 +25429,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 738. [Towards Data Drift Monitoring for Speech Deepfake Detection in the Context of MLOps](/audio-paper-digest-blog/posts/2026-04-29-towards-data-drift-monitoring-for-speech-deepfake)
+### 774. [Towards Data Drift Monitoring for Speech Deepfake Detection in the Context of MLOps](/audio-paper-digest-blog/posts/2026-04-29-towards-data-drift-monitoring-for-speech-deepfake)
 
 ✅ **7.0/10** | 前25% | #音频深度伪造检测 | #数据漂移监控 | #模型微调 #MLOps
 
@@ -24349,7 +25457,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 739. [CompSpoof: A Dataset and Joint Learning Framework for Component-Level Audio Anti-Spoofing Countermeasures](/audio-paper-digest-blog/posts/2026-04-29-compspoof-a-dataset-and-joint-learning-framework)
+### 775. [CompSpoof: A Dataset and Joint Learning Framework for Component-Level Audio Anti-Spoofing Countermeasures](/audio-paper-digest-blog/posts/2026-04-29-compspoof-a-dataset-and-joint-learning-framework)
 
 ✅ **7.0/10** | 前25% | #音频深度伪造检测 | #语音分离 | #多任务学习 #数据集
 
@@ -24386,7 +25494,27 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 740. [Tri-Attention Fusion: Joint Temporal-Spectral and Bidirectional Modeling for Speech Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-tri-attention-fusion-joint-temporal-spectral-and)
+### 776. [A Parameter-Efficient Multi-Scale Convolutional Adapter for Synthetic Speech Detection](/audio-paper-digest-blog/posts/2026-04-29-a-parameter-efficient-multi-scale-convolutional)
+
+#音频深度伪造检测 #自监督学习
+
+👥 **作者与机构**
+
+- 第一作者：Yassine El Kheir（DFKI, Germany；Gretchen AI, Germany）
+- 通讯作者：未说明
+- 作者列表：Yassine El Kheir（DFKI, Germany；Gretchen AI, Germany）、Fabian Ritter-Guttierez（Nanyang Technological University, Singapore）、Arnab Das（DFKI, Germany；Gretchen AI, Germany）、Tim Polzehl（DFKI, Germany；Gretchen AI, Germany）、Sebastian Moller（DFKI, Germany；Technical University of Berlin, Germany）
+
+💡 **毒舌点评**
+
+亮点在于设计了一个巧妙的参数高效适配器，用仅1%的参数就显著超越了全微调方法，在效率与性能的权衡上取得了亮眼成绩。但短板也很明显：论文没有提供代码或模型链接，让复现成了“开卷考试但没带书”；另外，对多尺度特征融合的物理意义（如具体哪些特征对应短时/长时伪影）缺乏更深入的可视化分析或解释。
+
+📌 **核心摘要**
+
+这篇论文针对现有基于自监督学习（SSL）的语音合成检测模型在全微调时计算成本高、而通用参数高效微调（PEFT）方法缺乏捕捉音频多尺度时间伪影的特定归纳偏置这一问题，提出了一种新的**多尺度卷积适配器（MultiConvAdapter）**。该方法的核心是在SSL骨干网络（如XLSR）的Transformer层中的多头自注意力（MHSA）模块后，插入一个并行的、使用不同大小卷积核的深度卷积模块，使模型能同时学习短时伪影和长时失真。与已有方法（如LoRA、Houlsby适配器）相比，新方法显式地引入了针对音频时间结构的先验知识。主要实验结果表明，在五个公开数据集（ASVspoof LA19、DF21、ITW、MLAAD、ASV5）上，MultiConvAdapter仅使用**3.17M**可训练参数（仅为317M骨干模型的1%），其平均EER（等错误率）达到**5.91%**，相比全微调方法（7.07%）相对降低了16.41%，并优于其他PEFT方法（如LoRA为8.43%）。该方法的意义在于为部署高效、鲁棒的合成语音检测系统提供了一种可行的参数高效解决方案。主要局限性在于论文未公开代码和模型，且分析局限于标准数据集，未探讨在极端对抗环境或更复杂编解码条件下的泛化能力。
+
+---
+
+### 777. [Tri-Attention Fusion: Joint Temporal-Spectral and Bidirectional Modeling for Speech Spoofing Detection](/audio-paper-digest-blog/posts/2026-04-29-tri-attention-fusion-joint-temporal-spectral-and)
 
 ✅ **7.0/10** | 前25% | #语音伪造检测 | #注意力机制 | #状态空间模型 #端到端
 
@@ -24406,7 +25534,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 741. [EmoTri-RL: Emotion- and Cause-Aware Reinforcement Learning for Multi-Modal Empathetic Dialogue](/audio-paper-digest-blog/posts/2026-04-29-emotri-rl-emotion-and-cause-aware-reinforcement)
+### 778. [EmoTri-RL: Emotion- and Cause-Aware Reinforcement Learning for Multi-Modal Empathetic Dialogue](/audio-paper-digest-blog/posts/2026-04-29-emotri-rl-emotion-and-cause-aware-reinforcement)
 
 ✅ **7.0/10** | 前25% | #语音情感识别 | #强化学习 | #多模态模型 #生成模型
 
@@ -24431,7 +25559,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 742. [Teaching the Teachers: Boosting Unsupervised Domain Adaptation In Speech Recognition By Ensemble Update](/audio-paper-digest-blog/posts/2026-04-29-teaching-the-teachers-boosting-unsupervised)
+### 779. [Teaching the Teachers: Boosting Unsupervised Domain Adaptation In Speech Recognition By Ensemble Update](/audio-paper-digest-blog/posts/2026-04-29-teaching-the-teachers-boosting-unsupervised)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #领域适应 | #知识蒸馏 #半监督学习
 
@@ -24473,7 +25601,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 743. [SFM-TTS: Lightweight and Rapid Speech Synthesis with Flexible Shortcut Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-sfm-tts-lightweight-and-rapid-speech-synthesis)
+### 780. [SFM-TTS: Lightweight and Rapid Speech Synthesis with Flexible Shortcut Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-sfm-tts-lightweight-and-rapid-speech-synthesis)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #流匹配 | #轻量化模型 #实时处理
 
@@ -24509,7 +25637,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 744. [MELA-TTS: Joint Transformer-Diffusion Model with Representation Alignment for Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-mela-tts-joint-transformer-diffusion-model-with)
+### 781. [MELA-TTS: Joint Transformer-Diffusion Model with Representation Alignment for Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-mela-tts-joint-transformer-diffusion-model-with)
 
 ✅ **7.0/10** | 前25% | #语音合成 | #扩散模型 | #自回归模型 #端到端
 
@@ -24530,7 +25658,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 745. [Attention2Probability: Attention-Driven Terminology Probability Estimation for Robust Speech-to-text System](/audio-paper-digest-blog/posts/2026-04-29-attention2probability-attention-driven)
+### 782. [Attention2Probability: Attention-Driven Terminology Probability Estimation for Robust Speech-to-text System](/audio-paper-digest-blog/posts/2026-04-29-attention2probability-attention-driven)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #交叉注意力 | #语音翻译 #语音大模型
 
@@ -24564,7 +25692,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 746. [Joint Autoregressive Modeling of Multi-Talker Overlapped Speech Recognition and Translation](/audio-paper-digest-blog/posts/2026-04-29-joint-autoregressive-modeling-of-multi-talker)
+### 783. [Joint Autoregressive Modeling of Multi-Talker Overlapped Speech Recognition and Translation](/audio-paper-digest-blog/posts/2026-04-29-joint-autoregressive-modeling-of-multi-talker)
 
 ✅ **7.0/10** | 前25% | #语音识别 #语音翻译 | #自回归模型 #多任务学习 | #语音识别 #语音翻译
 
@@ -24588,7 +25716,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 747. [Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion](/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of)
+### 784. [Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion](/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #注意力机制 | #语音大模型 #模型优化
 
@@ -24627,7 +25755,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 748. [Mind the Shift: Using Delta SSL Embeddings to Enhance Child ASR](/audio-paper-digest-blog/posts/2026-04-29-mind-the-shift-using-delta-ssl-embeddings-to)
+### 785. [Mind the Shift: Using Delta SSL Embeddings to Enhance Child ASR](/audio-paper-digest-blog/posts/2026-04-29-mind-the-shift-using-delta-ssl-embeddings-to)
 
 ✅ **7.0/10** | 前25% | #语音识别 | #自监督学习 | #低资源 #特征融合
 
@@ -24647,7 +25775,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 749. [PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced)
+### 786. [PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #音素混淆矩阵 | #构音障碍语音 #大语言模型
 
@@ -24706,7 +25834,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 750. [Audio-Conditioned Diffusion LLMs for ASR and Deliberation Processing](/audio-paper-digest-blog/posts/2026-04-29-audio-conditioned-diffusion-llms-for-asr-and)
+### 787. [Audio-Conditioned Diffusion LLMs for ASR and Deliberation Processing](/audio-paper-digest-blog/posts/2026-04-29-audio-conditioned-diffusion-llms-for-asr-and)
 
 ✅ **7.0/10** | 前50% | #语音识别 | #扩散模型 | #语音大模型 #预训练
 
@@ -24739,7 +25867,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 751. [AR&D: A Framework for Retrieving and Describing Concepts for Interpreting AudioLLMs](/audio-paper-digest-blog/posts/2026-04-29-ard-a-framework-for-retrieving-and-describing)
+### 788. [AR&D: A Framework for Retrieving and Describing Concepts for Interpreting AudioLLMs](/audio-paper-digest-blog/posts/2026-04-29-ard-a-framework-for-retrieving-and-describing)
 
 ✅ **6.5/10** | 前50% | #音频大模型 | #自监督学习 | #模型评估
 
@@ -24769,7 +25897,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 752. [Do Speech LLMs Learn Crossmodal Embedding Spaces?](/audio-paper-digest-blog/posts/2026-04-29-do-speech-llms-learn-crossmodal-embedding-spaces)
+### 789. [Do Speech LLMs Learn Crossmodal Embedding Spaces?](/audio-paper-digest-blog/posts/2026-04-29-do-speech-llms-learn-crossmodal-embedding-spaces)
 
 ✅ **6.5/10** | 前50% | #音频检索 | #模型评估 | #语音大模型 #跨模态
 
@@ -24804,7 +25932,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 753. [Learnable Mel-Frontend for Robust Underwater Acoustic Target Detection under Non-Target Interference](/audio-paper-digest-blog/posts/2026-04-29-learnable-mel-frontend-for-robust-underwater)
+### 790. [Learnable Mel-Frontend for Robust Underwater Acoustic Target Detection under Non-Target Interference](/audio-paper-digest-blog/posts/2026-04-29-learnable-mel-frontend-for-robust-underwater)
 
 ✅ **6.5/10** | 前50% | #音频分类 | #时频分析 | #水下声学目标检测 #可学习前端
 
@@ -24829,7 +25957,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 754. [Solving the Helmholtz Equation Via Physics-Informed Neural Networks with an Adaptive Weighting Strategy](/audio-paper-digest-blog/posts/2026-04-29-solving-the-helmholtz-equation-via-physics)
+### 791. [Solving the Helmholtz Equation Via Physics-Informed Neural Networks with an Adaptive Weighting Strategy](/audio-paper-digest-blog/posts/2026-04-29-solving-the-helmholtz-equation-via-physics)
 
 ✅ **6.5/10** | 前50% | #声学建模 | #物理信息神经网络 | #自适应学习
 
@@ -24849,7 +25977,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 755. [Sequence-Level Unsupervised Training in Speech Recognition: A Theoretical Study](/audio-paper-digest-blog/posts/2026-04-29-sequence-level-unsupervised-training-in-speech)
+### 792. [Sequence-Level Unsupervised Training in Speech Recognition: A Theoretical Study](/audio-paper-digest-blog/posts/2026-04-29-sequence-level-unsupervised-training-in-speech)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #无监督学习 | #低资源
 
@@ -24869,7 +25997,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 756. [GLUE: Gradient-free Learning to Unify Experts](/audio-paper-digest-blog/posts/2026-04-29-glue-gradient-free-learning-to-unify-experts)
+### 793. [GLUE: Gradient-free Learning to Unify Experts](/audio-paper-digest-blog/posts/2026-04-29-glue-gradient-free-learning-to-unify-experts)
 
 ✅ **6.5/10** | 前50% | #迁移学习 | #预训练 | #知识蒸馏 #多任务学习
 
@@ -24899,7 +26027,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 757. [Investigating Modality Contribution in Audio LLMs for Music](/audio-paper-digest-blog/posts/2026-04-29-investigating-modality-contribution-in-audio-llms)
+### 794. [Investigating Modality Contribution in Audio LLMs for Music](/audio-paper-digest-blog/posts/2026-04-29-investigating-modality-contribution-in-audio-llms)
 
 ✅ **6.5/10** | 前50% | #模型评估 | #可解释AI | #音频大模型 #音乐理解
 
@@ -24939,7 +26067,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 758. [Frequency-Independent Ambisonics Upscaling Using Deep Learning](/audio-paper-digest-blog/posts/2026-04-29-frequency-independent-ambisonics-upscaling-using)
+### 795. [Frequency-Independent Ambisonics Upscaling Using Deep Learning](/audio-paper-digest-blog/posts/2026-04-29-frequency-independent-ambisonics-upscaling-using)
 
 ✅ **6.5/10** | 前50% | #空间音频 | #深度学习 | #音频信号处理
 
@@ -24969,7 +26097,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 759. [A State-Dependent Markov Diffusion Process for Generative Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-a-state-dependent-markov-diffusion-process-for)
+### 796. [A State-Dependent Markov Diffusion Process for Generative Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-a-state-dependent-markov-diffusion-process-for)
 
 ✅ **6.5/10** | 前25% | #语音增强 | #扩散模型 | #图注意力 #混合损失
 
@@ -24989,7 +26117,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 760. [Sparse Autoencoders Make Audio Foundation Models More Explainable](/audio-paper-digest-blog/posts/2026-04-29-sparse-autoencoders-make-audio-foundation-models)
+### 797. [Sparse Autoencoders Make Audio Foundation Models More Explainable](/audio-paper-digest-blog/posts/2026-04-29-sparse-autoencoders-make-audio-foundation-models)
 
 ✅ **6.5/10** | 前50% | #模型评估 | #自监督学习 | #音频大模型 #歌唱语音合成
 
@@ -25036,7 +26164,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 761. [Ara-BEST-RQ: Multi Dialectal Arabic SSL](/audio-paper-digest-blog/posts/2026-04-29-ara-best-rq-multi-dialectal-arabic-ssl)
+### 798. [Ara-BEST-RQ: Multi Dialectal Arabic SSL](/audio-paper-digest-blog/posts/2026-04-29-ara-best-rq-multi-dialectal-arabic-ssl)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 | #多语言 #低资源
 
@@ -25087,7 +26215,42 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 762. [Medical ASR Enhancement by Domain-Specific Reinforcement Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-medical-asr-enhancement-by-domain-specific)
+### 799. [A Bimodal Approach for Detecting Fatigue Using Speech and Personal Assessments in College Students](/audio-paper-digest-blog/posts/2026-04-29-a-bimodal-approach-for-detecting-fatigue-using)
+
+#语音生物标志物 #特征提取
+
+👥 **作者与机构**
+
+- 第一作者：Kapotaksha Das（密歇根大学计算机与信息科学系）
+- 通讯作者：未说明
+- 作者列表：Kapotaksha Das（密歇根大学计算机与信息科学系）、Mihai Burzo（密歇根大学机械工程系）、John Elson（福特汽车公司）、Clay Maranville（福特汽车公司）、Mohamed Abouelenien（密歇根大学计算机与信息科学系）
+
+💡 **毒舌点评**
+
+这篇论文最大的亮点是提出了一个“聪明”的低成本、非侵入式疲劳检测框架——只需一次性的问卷就能“校准”后续语音分析，这个想法在个性化健康监测上很有巧思。然而，其短板也同样明显：用仅12个大学生的数据就下了结论，且分类器用的是传统的XGBoost而非更复杂的模型，这让“增强性能”的说服力打了折扣，更像是一个概念验证（Proof-of-Concept）。
+
+📌 **核心摘要**
+
+1. **问题**：传统疲劳检测方法（如视觉、生理信号）存在不便、不客观或不实时的问题，亟需一种便捷、可扩展的检测手段。
+2. **方法核心**：提出一种双模态框架，融合**自发语音的声学特征**与**一次性问卷调查的个人评估数据**（包括晨/夜型、睡眠质量等），以检测大学生的自我报告疲劳状态。
+3. **创新点**：首次系统性地探索将静态、个性化的问卷数据作为先验知识，与实时的语音特征早期融合，以增强模型对个体疲劳状态的判别能力。相比仅使用语音或仅使用问卷，这提供了新的结合路径。
+4. **主要实验结果**：在12名大学生的自建数据集上，使用16秒语音片段。仅用语音特征（eGeMAPS）时F1分为59.63%；融合所有问卷特征后，**最佳F1分提升至64.62%**。实验结果表格如下：
+
+    | 特征使用          | ComParE 2016 (16s) | eGeMAPSv02 (16s) |
+    |-------------------|--------------------|-------------------|
+    | 仅语音            | 60.10%             | 59.63%            |
+    | 语音 + OLQ        | 59.99%             | 63.24%            |
+    | 语音 + PSQI       | 58.26%             | 63.66%            |
+    | 语音 + MCQ        | 64.07%             | 64.05%            |
+    | 语音 + 所有问卷   | 61.70%             | **64.62%**        |
+
+    通过t-SNE可视化（图1 vs 图2），融合问卷数据后，疲劳与非疲劳状态的数据点分离度有所改善。
+5. **实际意义**：证明了结合语音和简单问卷进行个性化疲劳检测的可行性，为开发低数据需求、可扩展的非侵入式健康监测系统提供了新思路。
+6. **主要局限性**：样本量极小（仅12人），限制了结论的普适性；自我报告标签存在主观性；模型选择相对简单（XGBoost），未探索深度学习的潜力；研究环境为受控实验室，与真实场景有差距。
+
+---
+
+### 800. [Medical ASR Enhancement by Domain-Specific Reinforcement Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-medical-asr-enhancement-by-domain-specific)
 
 ✅ **6.5/10** | 前25% | #语音识别 | #强化学习 | #领域适应 #大语言模型
 
@@ -25107,7 +26270,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 763. [Graph-Biased EEG Transformers for Silent Speech Decoding](/audio-paper-digest-blog/posts/2026-04-29-graph-biased-eeg-transformers-for-silent-speech)
+### 801. [Graph-Biased EEG Transformers for Silent Speech Decoding](/audio-paper-digest-blog/posts/2026-04-29-graph-biased-eeg-transformers-for-silent-speech)
 
 ✅ **6.5/10** | 前25% | #语音生物标志物 | #预训练 | #图神经网络 #脑机接口
 
@@ -25149,7 +26312,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 764. [StyHarmo: Efficient Style-Specific Video Generation with Music Synchronization](/audio-paper-digest-blog/posts/2026-04-29-styharmo-efficient-style-specific-video)
+### 802. [StyHarmo: Efficient Style-Specific Video Generation with Music Synchronization](/audio-paper-digest-blog/posts/2026-04-29-styharmo-efficient-style-specific-video)
 
 ✅ **6.5/10** | 前50% | #视频生成 | #扩散模型 | #音乐同步
 
@@ -25177,7 +26340,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 765. [Vib2Sound: Separation Of Multimodal Sound Sources](/audio-paper-digest-blog/posts/2026-04-29-vib2sound-separation-of-multimodal-sound-sources)
+### 803. [Vib2Sound: Separation Of Multimodal Sound Sources](/audio-paper-digest-blog/posts/2026-04-29-vib2sound-separation-of-multimodal-sound-sources)
 
 ✅ **6.5/10** | 前50% | #语音分离 | #麦克风阵列 | #生物声学 #信号处理
 
@@ -25202,7 +26365,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 766. [CoVA: Text-Guided Composed Video Retrieval for Audio-Visual Content](/audio-paper-digest-blog/posts/2026-04-29-cova-text-guided-composed-video-retrieval-for)
+### 804. [CoVA: Text-Guided Composed Video Retrieval for Audio-Visual Content](/audio-paper-digest-blog/posts/2026-04-29-cova-text-guided-composed-video-retrieval-for)
 
 ✅ **6.5/10** | 前25% | #跨模态检索 | #多模态模型 | #音视频 #对比学习
 
@@ -25234,7 +26397,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 767. [MSCT: Differential Cross-Modal Attention for Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-msct-differential-cross-modal-attention-for)
+### 805. [MSCT: Differential Cross-Modal Attention for Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-msct-differential-cross-modal-attention-for)
 
 ✅ **6.5/10** | 前10% | #音频深度伪造检测 | #注意力机制 | #音视频 #多模态模型
 
@@ -25259,7 +26422,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 768. [FODGE : High-Fidelity Dance Generation via Full-Body Optimization](/audio-paper-digest-blog/posts/2026-04-29-fodge-high-fidelity-dance-generation-via-full)
+### 806. [FODGE : High-Fidelity Dance Generation via Full-Body Optimization](/audio-paper-digest-blog/posts/2026-04-29-fodge-high-fidelity-dance-generation-via-full)
 
 ✅ **6.5/10** | 前50% | #音频生成 | #扩散模型 | #全身优化
 
@@ -25294,7 +26457,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 769. [A New Method and Dataset for Classroom Teaching Stage Segmentation](/audio-paper-digest-blog/posts/2026-04-29-a-new-method-and-dataset-for-classroom-teaching)
+### 807. [A New Method and Dataset for Classroom Teaching Stage Segmentation](/audio-paper-digest-blog/posts/2026-04-29-a-new-method-and-dataset-for-classroom-teaching)
 
 ✅ **6.5/10** | 前25% | #课堂阶段分割 | #多模态融合 | #教育技术 #数据集
 
@@ -25314,7 +26477,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 770. [Multimodal Fusion-Based IPCLIP Network for Mixed Reality Surgical Assistance](/audio-paper-digest-blog/posts/2026-04-29-multimodal-fusion-based-ipclip-network-for-mixed)
+### 808. [Multimodal Fusion-Based IPCLIP Network for Mixed Reality Surgical Assistance](/audio-paper-digest-blog/posts/2026-04-29-multimodal-fusion-based-ipclip-network-for-mixed)
 
 ✅ **6.5/10** | 前50% | #多模态模型 | #数据增强 | #跨模态 #工业应用
 
@@ -25339,7 +26502,28 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 771. [Modeling Both Intra- And Inter-Utterance Variability for Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-modeling-both-intra-and-inter-utterance)
+### 809. [VT-Heads: Voice Cloning and Talking Head Generation from Text Based on V-DiT](/audio-paper-digest-blog/posts/2026-04-29-vt-heads-voice-cloning-and-talking-head)
+
+前50% | #视频生成 | #扩散模型 | #语音克隆 #多模态模型
+
+👥 **作者与机构**
+
+- 第一作者：Yali Cai（国防科技大学计算机学院）
+- 通讯作者：Peng Qiao*, Dongsheng Li*（国防科技大学计算机学院，并行与分布式计算国家重点实验室）
+- 作者列表：Yali Cai, Peng Qiao*, Dongsheng Li*（国防科技大学计算机学院，并行与分布式计算国家重点实验室）
+
+💡 **毒舌点评**
+
+**亮点**：论文将语音克隆、多模态融合和视频扩散模型（V-DiT）整合成一个端到端框架，并创新性地为T2S模块引入帧级时间锚点以改善音视频同步，整体技术路线清晰。
+**短板**：T2S模块中“动态节奏控制”的具体机制（公式f(S, Θ)）描述过于模糊，核心创新点之一缺乏技术细节支撑；实验部分的对比方法（如表3）更新不够及时，且部分指标（如多样性Diver）在所有方法中几乎无差异，难以证明其优越性。
+
+📌 **核心摘要**
+
+这篇论文旨在解决文本驱动会说话头部生成（THG）中存在的唇部同步不准确和面部表情多样性有限的问题。方法核心是提出一个多模态融合框架VT-Heads，它包含三个关键部分：1）一个带有帧级时间锚点和动态节奏控制的T2S模块，用于生成与视频帧节奏同步的语音；2）一个基于注意力的多模态融合模块，用于细粒度融合文本和语音特征；3）一个以条件V-DiT为骨干的扩散模型，将视频生成建模为时序迭代去噪过程。与现有两阶段方法（先T2S再驱动视频）不同，VT-Heads通过多模态融合增强了文本语义与视觉生成的关联。实验表明，在HDTF数据集和YouTube视频上，VT-Heads在图像质量（FID↓10.12）、唇形同步（Sync↑5.99/6.21）等指标上优于部分基线。其实际意义在于为文本驱动的数字人内容生成提供了一种更同步、更自然的方案。主要局限性在于T2S模块的技术细节不够透明，且与最新SOTA方法的对比有待加强。
+
+---
+
+### 810. [Modeling Both Intra- And Inter-Utterance Variability for Conversational Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-modeling-both-intra-and-inter-utterance)
 
 ✅ **6.5/10** | 前25% | #语音情感识别 | #图神经网络 | #大语言模型 #多模态模型
 
@@ -25367,7 +26551,48 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 772. [Auxiliary Multi-Label Training For Improving the Robustness of Audio Deepfake Detection on AI-Processed Data](/audio-paper-digest-blog/posts/2026-04-29-auxiliary-multi-label-training-for-improving-the)
+### 811. [DDSR-Net: Robust Multimodal Sentiment Analysis via Dynamic Modality Reliability Assessment](/audio-paper-digest-blog/posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via)
+
+前50% | #语音情感识别 | #对比学习 | #多模态模型 #特征分解
+
+👥 **作者与机构**
+
+- 第一作者：Jianwen Hou (新疆大学计算机科学与技术学院)
+- 通讯作者：Kurban Ubul (新疆大学计算机科学与技术学院)
+- 作者列表：Jianwen Hou (新疆大学计算机科学与技术学院), Enguang Zuo (新疆大学智能科学与技术学院, 清华大学电子工程系), Chaorui Shi (新疆大学计算机科学与技术学院), Kurban Ubul (新疆大学计算机科学与技术学院)
+
+💡 **毒舌点评**
+
+该论文的“评估-修复-聚焦”闭环设计思路巧妙，为处理多模态数据中的质量不均衡问题提供了一个系统性框架，且在主流基准测试上取得了不错的成绩。然而，其核心组件之一“协同重建”的生成器（QGME-Net）内部结构细节在正文和附图中均未清晰展示，这为理解其工作原理和复现带来了障碍。
+
+📌 **核心摘要**
+
+这篇论文旨在解决多模态情感分析中，现实场景下非对齐数据存在的模态质量动态不均和噪声问题。其核心方法DDSR-Net提出了一种“动态质量感知”的框架，包含四个主要模块：模态质量评估模块（为每个样本的每个模态计算可靠性分数）、特征分解模块（将特征分解为共享和模态特定部分）、协同重建模块（利用高质量模态信息修复低质量模态的特定特征）以及动态聚焦注意力模块（根据质量分数自适应融合特征）。该方法通过“评估-修复-聚焦”的闭环流程，动态处理噪声和不对称性。实验结果在CMU-MOSI和CMU-MOSEI两个基准数据集上，DDSR-Net在多数指标（如MOSI的MAE、Corr、Acc-5）上超越了已有的最先进方法。其实际意义在于提升了多模态情感分析模型在非理想数据下的鲁棒性。主要局限性在于协同重建模块的具体生成器架构描述不够详细，可能影响理解和复现。
+
+---
+
+### 812. [PRoADS: Provably Secure And Robust Audio Diffusion Steganography With Latent Optimization And Backward Euler Inversion](/audio-paper-digest-blog/posts/2026-04-29-proads-provably-secure-and-robust-audio-diffusion)
+
+前50% | #音频安全 | #扩散模型 | #音频生成
+
+👥 **作者与机构**
+
+- 第一作者：Yongpeng Yan（武汉大学国家网络安全学院）
+- 通讯作者：Yanzhen Ren（武汉大学国家网络安全学院）
+- 作者列表：Yongpeng Yan（武汉大学国家网络安全学院），Yanan Li（武汉大学国家网络安全学院），Qiyang Xiao（武汉大学国家网络安全学院），Yanzhen Ren（武汉大学国家网络安全学院，武汉大学航空航天信息安全与可信计算教育部重点实验室）
+
+💡 **毒舌点评**
+
+**亮点：** 本文精准地抓住了“初始噪声嵌入式”扩散隐写方法在逆向提取时的痛点——重建误差，并针对性地提出了“潜在空间优化”和“后向欧拉反演”两个技术改进，实验结果也清晰地证明了其有效性（BER显著降低），是一篇问题导向明确、解决方案扎实的改进型工作。
+**短板：** 论文最大的软肋在于其核心实验基础——EzAudio模型——的复现信息几乎完全缺失，且未开源任何代码，这使得其宣称的“可复现”和“高效”大打折扣；同时，提取过程的高计算开销（106秒 vs 6.8秒）限制了其实时应用场景，论文对此的讨论也较为轻描淡写。
+
+📌 **核心摘要**
+
+本文旨在解决基于扩散模型的生成式音频隐写术中，由于扩散模型逆向过程误差导致的秘密消息提取比特错误率（BER）过高的问题。其核心方法是提出PRoADS框架，通过正交矩阵投影将消息嵌入扩散模型初始噪声，并引入两项关键技术来最小化逆向误差：一是在编码器将隐写音频转为潜在表示后，进行潜在空间梯度优化以逼近原始潜在变量；二是采用更精确的后向欧拉迭代法替代朴素的DDIM反演来求解扩散逆过程。与现有方法（如Hu[17]）相比，本文的主要新意在于同时从“潜在变量重构”和“扩散逆过程求解”两个层面减少误差。实验表明，在EzAudio模型上，PRoADS在64 kbps MP3压缩攻击下实现了0.15%的低BER，相比基线方法有显著提升（例如在DPMSolver下，较Hu[17]降低约0.5%）。该工作的实际意义在于为生成式音频隐写提供了更高鲁棒性的解决方案，主要局限性是提取过程计算开销大（106秒），且未提供开源代码和详细模型参数，限制了复现与应用。
+
+---
+
+### 813. [Auxiliary Multi-Label Training For Improving the Robustness of Audio Deepfake Detection on AI-Processed Data](/audio-paper-digest-blog/posts/2026-04-29-auxiliary-multi-label-training-for-improving-the)
 
 ✅ **6.5/10** | 前50% | #音频深度伪造检测 | #数据增强 | #多任务学习 #自监督学习
 
@@ -25392,7 +26617,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 773. [Audio-Visual Deepfake Generation and Detection: An Exploratory Survey](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-deepfake-generation-and-detection-an)
+### 814. [Audio-Visual Deepfake Generation and Detection: An Exploratory Survey](/audio-paper-digest-blog/posts/2026-04-29-audio-visual-deepfake-generation-and-detection-an)
 
 ✅ **6.5/10** | 前25% | #音频深度伪造检测 | #对比学习 | #语音伪造检测 #基准测试
 
@@ -25429,7 +26654,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 774. [Source Separation For A Cappella Music](/audio-paper-digest-blog/posts/2026-04-29-source-separation-for-a-cappella-music)
+### 815. [Source Separation For A Cappella Music](/audio-paper-digest-blog/posts/2026-04-29-source-separation-for-a-cappella-music)
 
 ✅ **6.5/10** | 前50% | #语音分离 | #数据增强 | #波形建模
 
@@ -25475,7 +26700,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 775. [A Consistent Learning Depression Detection Framework Integrating Multi-View Attention](/audio-paper-digest-blog/posts/2026-04-29-a-consistent-learning-depression-detection)
+### 816. [A Consistent Learning Depression Detection Framework Integrating Multi-View Attention](/audio-paper-digest-blog/posts/2026-04-29-a-consistent-learning-depression-detection)
 
 ✅ **6.5/10** | 前50% | #语音生物标志物 | #一致性学习 | #注意力机制 #数据增强
 
@@ -25495,7 +26720,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 776. [A Unified SVD-Modal Solution for Sparse Sound Field Reconstruction with Hybrid Spherical-Linear Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-a-unified-svd-modal-solution-for-sparse-sound)
+### 817. [A Unified SVD-Modal Solution for Sparse Sound Field Reconstruction with Hybrid Spherical-Linear Microphone Arrays](/audio-paper-digest-blog/posts/2026-04-29-a-unified-svd-modal-solution-for-sparse-sound)
 
 ✅ **6.5/10** | 前25% | #声源定位 | #麦克风阵列 | #信号处理 #鲁棒性
 
@@ -25525,7 +26750,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 777. [Pianoroll-Event: A Novel Score Representation for Symbolic Music](/audio-paper-digest-blog/posts/2026-04-29-pianoroll-event-a-novel-score-representation-for)
+### 818. [Pianoroll-Event: A Novel Score Representation for Symbolic Music](/audio-paper-digest-blog/posts/2026-04-29-pianoroll-event-a-novel-score-representation-for)
 
 ✅ **6.5/10** | 前25% | #音乐生成 | #自回归模型 | #数据集 #模型评估
 
@@ -25550,7 +26775,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 778. [An Envelope Separation Aided Multi-Task Learning Model for Blind Source Counting and Localization](/audio-paper-digest-blog/posts/2026-04-29-an-envelope-separation-aided-multi-task-learning)
+### 819. [An Envelope Separation Aided Multi-Task Learning Model for Blind Source Counting and Localization](/audio-paper-digest-blog/posts/2026-04-29-an-envelope-separation-aided-multi-task-learning)
 
 ✅ **6.5/10** | 前25% | #声源定位 | #多任务学习 | #麦克风阵列 #端到端
 
@@ -25575,7 +26800,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 779. [A Noval Monte Carlo Gradient Method Based on Meta-Learning for Effective Step-Size Selection in Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-a-noval-monte-carlo-gradient-method-based-on-meta)
+### 820. [A Noval Monte Carlo Gradient Method Based on Meta-Learning for Effective Step-Size Selection in Active Noise Control](/audio-paper-digest-blog/posts/2026-04-29-a-noval-monte-carlo-gradient-method-based-on-meta)
 
 ✅ **6.5/10** | 前50% | #噪声控制 | #元学习 | #信号处理 #自适应滤波器
 
@@ -25610,7 +26835,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 780. [Estimating Respiratory Effort from Nocturnal Breathing Sounds for Obstructive Sleep Apnoea Screening](/audio-paper-digest-blog/posts/2026-04-29-estimating-respiratory-effort-from-nocturnal)
+### 821. [Estimating Respiratory Effort from Nocturnal Breathing Sounds for Obstructive Sleep Apnoea Screening](/audio-paper-digest-blog/posts/2026-04-29-estimating-respiratory-effort-from-nocturnal)
 
 ✅ **6.5/10** | 前25% | #音频分类 | #多任务学习 | #CNN-LSTM #医疗声学
 
@@ -25630,7 +26855,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 781. [Obstructive Sleep Apnea Endotype Prediction During Wakefulness Using Voice Biomarkers](/audio-paper-digest-blog/posts/2026-04-29-obstructive-sleep-apnea-endotype-prediction)
+### 822. [Obstructive Sleep Apnea Endotype Prediction During Wakefulness Using Voice Biomarkers](/audio-paper-digest-blog/posts/2026-04-29-obstructive-sleep-apnea-endotype-prediction)
 
 ✅ **6.5/10** | 前50% | #语音生物标志物 | #多任务学习 | #自编码器 #特征选择
 
@@ -25658,7 +26883,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 782. [Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens](/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset)
+### 823. [Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens](/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset)
 
 ✅ **6.5/10** | 前50% | #语音增强 | #生成模型 | #数据集 #语音合成
 
@@ -25711,7 +26936,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 783. [Melos: Sentence-To-Section Training with Multi-Task Learning for LLM-Driven Song Generation](/audio-paper-digest-blog/posts/2026-04-29-melos-sentence-to-section-training-with-multi)
+### 824. [Melos: Sentence-To-Section Training with Multi-Task Learning for LLM-Driven Song Generation](/audio-paper-digest-blog/posts/2026-04-29-melos-sentence-to-section-training-with-multi)
 
 ✅ **6.5/10** | 前50% | #音乐生成 | #多任务学习 | #自回归模型 #歌唱语音合成
 
@@ -25738,7 +26963,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 784. [A Generalization Strategy for Speech Quality Prediction: From Domain-Specific to Unified Datasets](/audio-paper-digest-blog/posts/2026-04-29-a-generalization-strategy-for-speech-quality)
+### 825. [A Generalization Strategy for Speech Quality Prediction: From Domain-Specific to Unified Datasets](/audio-paper-digest-blog/posts/2026-04-29-a-generalization-strategy-for-speech-quality)
 
 ✅ **6.5/10** | 前25% | #语音质量评估 | #领域适应 | #轻量化模型 #语音增强
 
@@ -25773,7 +26998,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 785. [Exterior Sound Field Estimation Based on Physics-Constrained Kernel](/audio-paper-digest-blog/posts/2026-04-29-exterior-sound-field-estimation-based-on-physics)
+### 826. [Exterior Sound Field Estimation Based on Physics-Constrained Kernel](/audio-paper-digest-blog/posts/2026-04-29-exterior-sound-field-estimation-based-on-physics)
 
 ✅ **6.5/10** | 前25% | #空间音频 | #高斯过程回归 | #声源定位 #物理约束核
 
@@ -25798,7 +27023,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 786. [Domain-Invariant Representation Learning of Bird Sounds](/audio-paper-digest-blog/posts/2026-04-29-domain-invariant-representation-learning-of-bird)
+### 827. [Domain-Invariant Representation Learning of Bird Sounds](/audio-paper-digest-blog/posts/2026-04-29-domain-invariant-representation-learning-of-bird)
 
 ✅ **6.5/10** | 前50% | #生物声学 | #对比学习 | #自监督学习 #领域适应
 
@@ -25834,7 +27059,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 787. [Mixture-of-Experts Framework for Field-of-View Enhanced Signal-Dependent Binauralization of Moving Talkers](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-framework-for-field-of-view)
+### 828. [Mixture-of-Experts Framework for Field-of-View Enhanced Signal-Dependent Binauralization of Moving Talkers](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-framework-for-field-of-view)
 
 ✅ **6.5/10** | 前50% | #空间音频 | #波束成形 #信号处理 | #波束成形 #信号处理
 
@@ -25859,7 +27084,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 788. [Generating Localized Audible Zones Using a Single-Channel Parametric Loudspeaker](/audio-paper-digest-blog/posts/2026-04-29-generating-localized-audible-zones-using-a-single)
+### 829. [Generating Localized Audible Zones Using a Single-Channel Parametric Loudspeaker](/audio-paper-digest-blog/posts/2026-04-29-generating-localized-audible-zones-using-a-single)
 
 ✅ **6.5/10** | 前50% | #空间音频 | #麦克风阵列 | #信号处理 #音频生成
 
@@ -25879,7 +27104,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 789. [Towards Evaluating Generative Audio: Insights from Neural Audio Codec Embedding Distances](/audio-paper-digest-blog/posts/2026-04-29-towards-evaluating-generative-audio-insights-from)
+### 830. [Towards Evaluating Generative Audio: Insights from Neural Audio Codec Embedding Distances](/audio-paper-digest-blog/posts/2026-04-29-towards-evaluating-generative-audio-insights-from)
 
 ✅ **6.5/10** | 前50% | #模型评估 | #神经音频编解码器 | #距离度量
 
@@ -25919,7 +27144,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 790. [Sampling-Rate-Agnostic Speech Super-Resolution Based on Gaussian Process Dynamical Systems with Deep Kernel Learning](/audio-paper-digest-blog/posts/2026-04-29-sampling-rate-agnostic-speech-super-resolution)
+### 831. [Sampling-Rate-Agnostic Speech Super-Resolution Based on Gaussian Process Dynamical Systems with Deep Kernel Learning](/audio-paper-digest-blog/posts/2026-04-29-sampling-rate-agnostic-speech-super-resolution)
 
 ✅ **6.5/10** | 前25% | #语音增强 | #高斯过程 | #深度核学习 #鲁棒性
 
@@ -25944,7 +27169,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 791. [Towards Distance-Aware Synthetic Audio Mixtures for Universal Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-towards-distance-aware-synthetic-audio-mixtures)
+### 832. [Towards Distance-Aware Synthetic Audio Mixtures for Universal Sound Separation](/audio-paper-digest-blog/posts/2026-04-29-towards-distance-aware-synthetic-audio-mixtures)
 
 ✅ **6.5/10** | 前50% | #语音分离 | #数据增强 | #大语言模型
 
@@ -25965,7 +27190,59 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 792. [Taming Audio VAEs via Target-KL Regularization](/audio-paper-digest-blog/posts/2026-04-29-taming-audio-vaes-via-target-kl-regularization)
+### 833. [Feedback-Driven Retrieval-Augmented Audio Generation with Large Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-feedback-driven-retrieval-augmented-audio)
+
+前25% | #音频生成 | #检索增强 | #大型音频模型 #扩散模型
+
+👥 **作者与机构**
+
+- 第一作者：Junqi Zhao（University of Surrey， CVSSP；Tencent AI Lab， Beijing）
+- 通讯作者：Wenwu Wang（University of Surrey， CVSSP）
+- 作者列表：
+  Junqi Zhao（University of Surrey， CVSSP；Tencent AI Lab， Beijing）
+  Chenxing Li（Tencent AI Lab， Beijing）
+  Jinzheng Zhao（University of Surrey， CVSSP；Tencent AI Lab， Beijing）
+  Rilin Chen（Tencent AI Lab， Beijing）
+  Dong Yu（Tencent AI Lab， Seattle）
+  Mark D. Plumbley（University of Surrey， CVSSP）
+  Wenwu Wang（University of Surrey， CVSSP） （通讯作者）
+
+💡 **毒舌点评**
+
+亮点在于其“反馈驱动”的框架设计很巧妙，让一个大型音频模型（LALM）去检查另一个生成模型（TTA）的作业，找出了“漏写的声音”，然后去资料库（检索数据库）里找参考答案补上，实现了一种通用且低成本的性能增强。短板是这套流程的“下限”严重依赖那个外部资料库（音频数据库）的全面性和质量，论文中并未充分探讨当数据库里没有合适参考或LALM“找错题”时的容错机制，且评估指标虽然全面，但未能揭示在极端复杂音频场景下的具体失效模式。
+
+📌 **核心摘要**
+
+1.  **要解决的问题**：文本到音频（TTA）生成模型受限于训练数据，难以生成稀有或未见过的声音事件，且在处理复杂多事件场景时容易遗漏或生成质量不佳的声音事件。现有RAG方法需要从头训练专用模型，成本高且不灵活。
+2.  **方法核心**：提出一个通用的、反馈驱动的检索增强生成框架。首先，利用微调后的大型音频语言模型（LALM）评估预训练TTA模型生成的音频，识别其中缺失或质量不佳的声音事件描述。然后，基于这些描述从外部音频数据库中检索相关音频片段。最后，通过一个带有解耦交叉注意力的轻量级音频融合器，将检索到的音频作为额外条件注入到原始TTA模型中，指导其生成更完整的音频。
+3.  **与已有方法相比新在哪里**：区别于Re-AudioLDM和Audiobox TTA-RAG需要从头训练专用RAG模型，本方法通过“评估-检索-融合”的闭环，以即插即用的方式增强任何预训练的TTA模型，无需修改或重训其核心生成模块，具有更高的通用性和更低的训练成本。
+4.  **主要实验结果**：在AudioCaps（ID）测试集上，本方法应用于AudioLDM2和TangoFlux基线，使CLAP分数分别从45.20%提升至46.22%、从58.60%保持至58.60%，KL散度和FD均有改善，优于Re-AudioLDM和Audiobox TTA-RAG等专用RAG模型。在RiTTA Count（OOD）测试集上，应用于AudioLDM2和TangoFlux，CLAP分数分别从29.0%大幅提升至34.2%、从43.3%略升至43.7%，FD和FAD也有显著降低，证明了方法的泛化能力。LALM（Qwen2.5-Omni）经微调后，在缺失声音事件识别任务上的BERTScore（93.3%）和SimCSE（92.6%）均超过微调前（53.8%， 73.8%）。
+    *   **表2：AudioCaps测试集性能对比**
+
+| 模型 | 数据集 | 检索信息 | 数据库与检索数 | KL ↓ | FD ↓ | IS ↑ | CLAP (%) ↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Re-AudioLDM-L | AudioCaps | 音频与文本 | AC →10 | 1.20 | - | 7.39 | 37.12 |
+| Audiobox TTA-RAG | AudioCaps | 音频 | AC →3 | 1.44 | - | 8.40 | 37.37 |
+| AudioLDM2 | AC+AS+6 others | % | % | 1.59 | 33.2 | 7.40 | 45.20 |
+| **AudioLDM2-RAG (ours)** | AC+AS+6 others | 音频 | AS →1 | 1.55 | 30.6 | 8.49 | 46.22 |
+| TangoFlux | AC+1 other | % | % | 1.21 | 19.23 | 12.60 | 58.60 |
+| **TangoFlux-RAG (ours)** | AC+1 other | 音频 | AS →1 | 1.20 | 18.98 | 12.81 | 58.60 |
+
+    *   **表3：RiTTA Count测试集性能对比（OOD）**
+
+| 模型 | KL ↓ | FD ↓ | FAD ↓ | IS ↑ | CLAP (%) ↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| AudioLDM2 | 2.81 | 38.5 | 7.7 | 7.4 | 29.0 |
+| **AudioLDM2-RAG (ours)** | 2.71 | 35.2 | 4.4 | 8.5 | 34.2 |
+| TangoFlux | 2.22 | 46.8 | 7.3 | 7.0 | 43.3 |
+| **TangoFlux-RAG (ours)** | 2.18 | 37.7 | 5.1 | 7.3 | 43.7 |
+
+5.  **实际意义**：提供了一种通用、低成本、易于集成的方案来增强现有文本到音频生成系统的性能，特别是提升其对稀有/复杂声音事件的生成能力，推动了音频生成技术在更广泛实际场景中的应用。
+6.  **主要局限性**：系统性能高度依赖外部音频数据库的覆盖范围和质量；LALM对缺失事件的识别能力虽经微调提升，但仍可能出错，导致错误的检索；论文未讨论引入检索和融合模块带来的推理延迟开销；在最强基线（TangoFlux）上提升幅度有限，可能表明该框架对顶尖模型的增益存在上限。
+
+---
+
+### 834. [Taming Audio VAEs via Target-KL Regularization](/audio-paper-digest-blog/posts/2026-04-29-taming-audio-vaes-via-target-kl-regularization)
 
 ✅ **6.5/10** | 前25% | #音频生成 | #扩散模型 | #自编码器 #低资源
 
@@ -26001,7 +27278,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 793. [Diverse and Few-Step Audio Captioning via Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-diverse-and-few-step-audio-captioning-via-flow)
+### 835. [Diverse and Few-Step Audio Captioning via Flow Matching](/audio-paper-digest-blog/posts/2026-04-29-diverse-and-few-step-audio-captioning-via-flow)
 
 ✅ **6.5/10** | 前50% | #音频字幕生成 | #流匹配 | #音频生成 #高效生成
 
@@ -26027,7 +27304,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 794. [MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction](/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection)
+### 836. [MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction](/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection)
 
 ✅ **6.5/10** | 前50% | #轻度认知障碍检测 | #多模态融合 | #最优传输 #双向交叉注意力
 
@@ -26081,7 +27358,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 795. [Utilizing Information Theoretic Approach to Study Cochlear Neural Degeneration](/audio-paper-digest-blog/posts/2026-04-29-utilizing-information-theoretic-approach-to-study)
+### 837. [Utilizing Information Theoretic Approach to Study Cochlear Neural Degeneration](/audio-paper-digest-blog/posts/2026-04-29-utilizing-information-theoretic-approach-to-study)
 
 ✅ **6.5/10** | 前50% | #生物声学 | #信息论 | #模型评估 #信号处理
 
@@ -26106,7 +27383,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 796. [Adaptive Spectral Weighting in Sagittal-Plane Sound Localization: A Reliability-Driven Approach](/audio-paper-digest-blog/posts/2026-04-29-adaptive-spectral-weighting-in-sagittal-plane)
+### 838. [Adaptive Spectral Weighting in Sagittal-Plane Sound Localization: A Reliability-Driven Approach](/audio-paper-digest-blog/posts/2026-04-29-adaptive-spectral-weighting-in-sagittal-plane)
 
 ✅ **6.5/10** | 前25% | #声源定位 | #贝叶斯推理 | #信号处理 #空间音频
 
@@ -26135,7 +27412,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 797. [Thinking While Listening: Simple Test Time Scaling for Audio Classification](/audio-paper-digest-blog/posts/2026-04-29-thinking-while-listening-simple-test-time-scaling)
+### 839. [Thinking While Listening: Simple Test Time Scaling for Audio Classification](/audio-paper-digest-blog/posts/2026-04-29-thinking-while-listening-simple-test-time-scaling)
 
 ✅ **6.5/10** | 前50% | #音频分类 | #测试时缩放 | #预训练 #大语言模型
 
@@ -26177,7 +27454,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 798. [Snore Sound Classification Based on Physiological Features and Adaptive Loss Function](/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological)
+### 840. [Snore Sound Classification Based on Physiological Features and Adaptive Loss Function](/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological)
 
 ✅ **6.5/10** | 前25% | #音频分类 | #时频分析 | #信号处理 #生物声学
 
@@ -26225,7 +27502,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 799. [Fine-Tuning Large Audio-Language Models with Lora for Precise Temporal Localization of Prolonged Exposure Therapy Elements](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-audio-language-models-with-lora)
+### 841. [Fine-Tuning Large Audio-Language Models with Lora for Precise Temporal Localization of Prolonged Exposure Therapy Elements](/audio-paper-digest-blog/posts/2026-04-29-fine-tuning-large-audio-language-models-with-lora)
 
 ✅ **6.5/10** | 前50% | #音频事件检测 | #多模态模型 | #语音生物标志物 #迁移学习
 
@@ -26258,7 +27535,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 800. [Poly-SVC: Polyphony-Aware Singing Voice Conversion with Harmonic Modeling](/audio-paper-digest-blog/posts/2026-04-29-poly-svc-polyphony-aware-singing-voice-conversion)
+### 842. [Poly-SVC: Polyphony-Aware Singing Voice Conversion with Harmonic Modeling](/audio-paper-digest-blog/posts/2026-04-29-poly-svc-polyphony-aware-singing-voice-conversion)
 
 ✅ **6.5/10** | 前50% | #歌唱语音转换 | #流匹配 | #和声建模 #零样本
 
@@ -26283,7 +27560,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 801. [Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones](/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech)
+### 843. [Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones](/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech)
 
 ✅ **6.5/10** | 前50% | #语音增强 | #信号处理 | #鲁棒性 #实时处理
 
@@ -26324,7 +27601,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 802. [Disentangled Authenticity Representation for Partially Deepfake Audio Localization](/audio-paper-digest-blog/posts/2026-04-29-disentangled-authenticity-representation-for)
+### 844. [Disentangled Authenticity Representation for Partially Deepfake Audio Localization](/audio-paper-digest-blog/posts/2026-04-29-disentangled-authenticity-representation-for)
 
 ✅ **6.5/10** | 前25% | #音频深度伪造检测 | #对比学习 | #语音伪造检测 #音频安全
 
@@ -26357,7 +27634,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 803. [Linguard: Authenticating Speech Recordings Using Speech Recognition and Watermark](/audio-paper-digest-blog/posts/2026-04-29-linguard-authenticating-speech-recordings-using)
+### 845. [Linguard: Authenticating Speech Recordings Using Speech Recognition and Watermark](/audio-paper-digest-blog/posts/2026-04-29-linguard-authenticating-speech-recordings-using)
 
 ✅ **6.5/10** | 前50% | #音频安全 | #信号处理 | #语音识别 #说话人验证
 
@@ -26406,7 +27683,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 804. [Vioptt: Violin Technique-Aware Transcription from Synthetic Data Augmentation](/audio-paper-digest-blog/posts/2026-04-29-vioptt-violin-technique-aware-transcription-from)
+### 846. [Vioptt: Violin Technique-Aware Transcription from Synthetic Data Augmentation](/audio-paper-digest-blog/posts/2026-04-29-vioptt-violin-technique-aware-transcription-from)
 
 ✅ **6.5/10** | 前50% | #音乐信息检索 | #数据增强 | #小提琴转录 #多任务学习
 
@@ -26461,7 +27738,32 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 805. [Adversarial Rivalry Learning for Music Classification](/audio-paper-digest-blog/posts/2026-04-29-adversarial-rivalry-learning-for-music)
+### 847. [Continuation Method for Feedback Delay Network Modal Decomposition](/audio-paper-digest-blog/posts/2026-04-29-continuation-method-for-feedback-delay-network)
+
+前50% | #空间音频 | #信号处理 | #计算声学
+
+👥 **作者与机构**
+
+- 第一作者：Jeremy B. Bai（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）
+- 通讯作者：未说明
+- 作者列表：Jeremy B. Bai（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）、Sebastian J. Schlecht（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）
+
+💡 **毒舌点评**
+
+**亮点**：论文将“延续方法”这一经典的数值计算范式巧妙地迁移到FDN模态分析的参数追踪问题中，并提出了几何意义上更自然的指数同伦路径，为连续调谐FDN参数提供了新的数学工具。**短板**：尽管方法优雅，但论文在性能评估上略显保守——与基线EAI的对比主要停留在计算复杂度层面（甚至承认优势不明显），缺乏在特定应用任务（如参数调优收敛速度、音质评价）上的深度验证，使得其实际效用的说服力打了折扣。
+
+📌 **核心摘要**
+
+1. **问题**：反馈延迟网络（FDN）的模态分解（求解其传递函数的极点）通常需要求解大规模的矩阵多项式特征值问题，当FDN的反馈矩阵A需要连续变化（如参数调谐、优化训练）时，每次都重新求解计算代价高昂。
+2. **方法核心**：提出一种基于延续法（Continuation Method）的预测校正方案。在反馈矩阵从A0到A1的连续变化路径（同伦）上，利用特征对的导数进行预测，并用带边界的牛顿法进行校正，从而连续追踪极点{λi(t)}的轨迹。论文探索了线性和指数（矩阵指数）两种同伦路径，并提出了仅更新相位以保持无损系统极点在单位圆上的策略。
+3. **创新点**：首次将延续法系统性地应用于FDN的模态分解问题；提出使用指数同伦路径，该路径在保持矩阵结构性（如幺正性）和产生更平滑极点轨迹方面优于线性路径；将问题保持在矩阵多项式形式，避免了高维伴随矩阵的构造。
+4. **实验结果**：在多个中等规模FDN（N≤8，M最高达7679）上进行实验。结果表明，沿着指数同伦路径，极点轨迹平滑。当追踪步长L足够大（如L=50）时，极点丢失数显著减少（见Table 1）。相比于线性路径，指数路径在拉伸阶段产生更线性的极点幅值演化（图5）。计算复杂度为O(LMN^3)，作者认为其主要优势在于可解释性而非绝对速度。
+5. **实际意义**：为FDN的参数化设计、声学特性匹配（如拟合房间冲激响应）以及基于梯度的可微FDN训练提供了一种连续追踪模态变化的框架，有助于理解和控制FDN的动态行为。
+6. **主要局限性**：计算开销并未显著优于传统EAI方法，尤其在系统阶数M很大且非线性强烈时需要很多步长L；极点丢失问题在步长不足时仍会发生；实验未涉及非常大规模的FDN或与更先进优化方法的对比。
+
+---
+
+### 848. [Adversarial Rivalry Learning for Music Classification](/audio-paper-digest-blog/posts/2026-04-29-adversarial-rivalry-learning-for-music)
 
 ✅ **6.5/10** | 前25% | #音乐分类 | #对抗学习 | #音乐信息检索 #注意力机制
 
@@ -26510,7 +27812,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 806. [Scaling Ambiguity: Augmenting Human Annotation in Speech Emotion Recognition with Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-scaling-ambiguity-augmenting-human-annotation-in)
+### 849. [Scaling Ambiguity: Augmenting Human Annotation in Speech Emotion Recognition with Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-scaling-ambiguity-augmenting-human-annotation-in)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #数据增强 | #音频大模型 #多模态模型
 
@@ -26540,7 +27842,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 807. [Still Thinking or Stopped Talking? Dialogue Silence Intention Classification Using Multimodal Large Language Model](/audio-paper-digest-blog/posts/2026-04-29-still-thinking-or-stopped-talking-dialogue)
+### 850. [Still Thinking or Stopped Talking? Dialogue Silence Intention Classification Using Multimodal Large Language Model](/audio-paper-digest-blog/posts/2026-04-29-still-thinking-or-stopped-talking-dialogue)
 
 ✅ **6.5/10** | 前25% | #语音对话系统 | #多模态模型 | #数据集 #大语言模型
 
@@ -26561,7 +27863,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 808. [What the student learns in knowledge distillation: A subspace view and evidence on Convolutional Recurrent Network](/audio-paper-digest-blog/posts/2026-04-29-what-the-student-learns-in-knowledge-distillation)
+### 851. [What the student learns in knowledge distillation: A subspace view and evidence on Convolutional Recurrent Network](/audio-paper-digest-blog/posts/2026-04-29-what-the-student-learns-in-knowledge-distillation)
 
 ✅ **6.5/10** | 前50% | #语音增强 | #知识蒸馏 | #模型压缩 #子空间学习
 
@@ -26581,7 +27883,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 809. [Recovering Performance in Speech Emotion Recognition from Discrete Tokens Via Multi-Layer Fusion and Paralinguistic Feature Integration](/audio-paper-digest-blog/posts/2026-04-29-recovering-performance-in-speech-emotion)
+### 852. [Recovering Performance in Speech Emotion Recognition from Discrete Tokens Via Multi-Layer Fusion and Paralinguistic Feature Integration](/audio-paper-digest-blog/posts/2026-04-29-recovering-performance-in-speech-emotion)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #特征融合 | #自监督学习 #预训练
 
@@ -26610,7 +27912,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 810. [B-GRPO: Unsupervised Speech Emotion Recognition Based on Batched-Group Relative Policy Optimization](/audio-paper-digest-blog/posts/2026-04-29-b-grpo-unsupervised-speech-emotion-recognition)
+### 853. [B-GRPO: Unsupervised Speech Emotion Recognition Based on Batched-Group Relative Policy Optimization](/audio-paper-digest-blog/posts/2026-04-29-b-grpo-unsupervised-speech-emotion-recognition)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #强化学习 | #自监督学习 #多语言
 
@@ -26630,7 +27932,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 811. [Leveraging Large Speech Language Models as Evaluators for Expressive Speech](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-speech-language-models-as)
+### 854. [Leveraging Large Speech Language Models as Evaluators for Expressive Speech](/audio-paper-digest-blog/posts/2026-04-29-leveraging-large-speech-language-models-as)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #语音大模型 | #模型评估 #预训练
 
@@ -26658,7 +27960,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 812. [Curriculum Learning with Contrastive Loss for Lightweight Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-curriculum-learning-with-contrastive-loss-for)
+### 855. [Curriculum Learning with Contrastive Loss for Lightweight Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-curriculum-learning-with-contrastive-loss-for)
 
 ✅ **6.5/10** | 前25% | #说话人验证 | #对比学习 #课程学习 | #对比学习 #课程学习
 
@@ -26699,7 +28001,45 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 813. [MeanSE: Efficient Generative Speech Enhancement with Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanse-efficient-generative-speech-enhancement)
+### 856. [Cross-Lingual Alzheimer’s Disease Detection with Multimodal LLMs via Speech Cue-Augmented Prompting and Instruction Tuning](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-alzheimers-disease-detection-with)
+
+前25% | #语音生物标志物 | #语音大模型 | #多语言 #零样本学习
+
+👥 **作者与机构**
+
+第一作者：Yin-Long Liu（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+通讯作者：Jiahong Yuan（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+作者列表：
+  - Yin-Long Liu（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+  - Yuanchao Li（爱丁堡大学语音技术研究中心）
+  - Yuang Chen（中国科学技术大学语言科学交叉研究中心）
+  - Liu He（中国科学技术大学语言科学交叉研究中心）
+  - Rui Feng（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+  - Jiaxin Chen（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+  - Jiahong Yuan（中国科学技术大学国家语音及语言信息处理工程研究中心、语言科学交叉研究中心）
+
+💡 **毒舌点评**
+
+**亮点**：论文首次系统性地探索了多模态大语言模型在跨语言AD检测中的应用，并提出了“语音线索增强提示”（SCAP）这一巧妙方法，将领域专家知识转化为结构化提示，在零样本设置下取得了与监督模型可比甚至更优的效果，展现了大模型的潜力。**短板**：SCAP的核心（特征提取与离散化）仍依赖传统的信号处理和手工规则（如填充停顿率的定义、ASR模型的微调），本质上是将“硬编码”的领域知识注入大模型，而非让模型自主学习发现新的跨语言生物标志物，这在一定程度上限制了方法的创新深度和向新语言/任务迁移的彻底性。
+
+📌 **核心摘要**
+
+1.  **要解决什么问题**：传统监督学习的AD语音检测模型跨语言、跨数据集泛化能力差，且依赖大量标注数据。本文旨在探索利用多模态大语言模型（MLLM）的零样本和少样本能力，实现鲁棒的跨语言AD检测。
+2.  **方法核心是什么**：提出了一种**语音线索增强提示（SCAP）** 方法。该方法首先自动提取与AD相关的四类语音线索（语音时序特征、填充停顿率、ASR错误分布、声学特征），然后利用训练集数据分布将其离散化为“低/中/高”的自然语言描述，并将其预置到提示词中，以增强MLLM对说话者认知状态的理解。在此基础上，结合**指令微调**（通过LoRA）进一步优化模型。
+3.  **与已有方法相比新在哪里**：
+    - **范式创新**：首次系统评估MLLM（MiDashengLM, Qwen2-Audio, Qwen2.5-Omni）在跨语言AD检测上的零样本性能。
+    - **提示工程创新**：设计并比较了四种提示策略，发现结合上下文和思维链的“Contextual-CoT”提示最有效。核心创新是提出SCAP，将专家知识编码为提示。
+    - **轻量适配**：通过LoRA进行指令微调，在保持大部分参数冻结的情况下，显著提升性能和泛化性。
+4.  **主要实验结果如何**：
+    - **零样本**：SCAP显著提升了所有MLLM在所有数据集上的性能。其中，**Qwen2.5-Omni + SCAP + Contextual-CoT** 在ADReSS、PROCESS、iFLYTEK三个数据集上的准确率分别达到 **66.67%、62.50%、71.62%**，超越了部分监督基线（如eGeMAPS+Naive Bayes）。
+    - **指令微调**：在单个数据集（如ADReSS）上微调后，模型在**域内（ID）和跨域（OOD）** 测试集上均表现优异。例如，Qwen2.5-Omni + SCAP在ADReSS上微调后，在ADReSS（ID）、PROCESS、iFLYTEK（OOD）上的准确率分别为 **83.33%、67.50%、72.97%**，全面超越最强监督基线（Whisper+MLP）。
+    - **关键数据表格**：论文提供了详细的零样本（表3）和指令微调（表4）结果对比表格，展示了不同模型、不同提示策略、有无SCAP、不同训练源数据集下的性能。
+5.  **实际意义是什么**：证明了经过精心设计的提示和轻量微调，通用MLLM可以被转化为强大、鲁棒且**语言无关**的AD检测工具，为资源有限或跨语言医疗AI应用提供了新思路。
+6.  **主要局限性是什么**：SCAP方法依赖预先定义的特征和手动设计的阈值进行离散化，这本质上是将传统特征工程与大模型结合，而非纯粹的端到端学习。此外，评估使用的数据集规模相对较小，且部分为私有数据，可能影响结论的普遍性。
+
+---
+
+### 857. [MeanSE: Efficient Generative Speech Enhancement with Mean Flows](/audio-paper-digest-blog/posts/2026-04-29-meanse-efficient-generative-speech-enhancement)
 
 ✅ **6.5/10** | 前25% | #语音增强 | #流匹配 | #生成模型 #实时处理
 
@@ -26743,7 +28083,42 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 814. [Combining Multi-Order Attention and Multi-Resolution Discriminator for High-Fidelity Neural Vocoder](/audio-paper-digest-blog/posts/2026-04-29-combining-multi-order-attention-and-multi)
+### 858. [On The Design of Efficient Neural Methods for Geometry-Agnostic Multichannel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-efficient-neural-methods-for)
+
+前50% | #语音增强 | #波束成形 | #麦克风阵列 #实时处理
+
+👥 **作者与机构**
+
+- 第一作者：Dongzhe Zhang（意大利米兰理工大学 Dipartimento di Elettronica, Informazione e Bioingegneria）
+- 通讯作者：未说明
+- 作者列表：Dongzhe Zhang（意大利米兰理工大学）、Jianfeng Chen（中国西北工业大学 海洋科学与技术学院）、Mou Wang（中国科学院 声学研究所）、Alessandro Ilic Mezza（意大利米兰理工大学）、Alberto Bernardini（意大利米兰理工大学）
+
+💡 **毒舌点评**
+
+**亮点：** 论文最大的价值在于为基于空间滤波器组（SFB）的几何无关语音增强系统，从理论上解决了“滤波器通道数I该设为多少”这个一直靠拍脑袋决定的关键超参数问题，并提出了简洁有效的计算准则，这对工程实践有切实指导意义。
+**短板：** 创新性有限，主要贡献在于对已有框架（SFB）的参数优化和后端网络的“降级”替换（用LSTM替代Attention），属于系统效率优化范畴，而非提出新的信号处理原理或学习范式。此外，论文未开源代码、模型和完整训练细节，大大削弱了其可复现性和实际影响力。
+
+📌 **核心摘要**
+
+1.  **问题：** 当前深度学习驱动的多通道语音增强方法严重依赖于特定的麦克风阵列几何结构，导致硬件泛化能力差。虽然几何无关方法（如SFB）出现，但其核心参数——SFB的通道数I——一直依赖经验选择，往往设置过高，导致特征冗余和计算开销巨大。
+2.  **方法核心：** 本文提出了一个理论框架来确定任意波束方向图下的最优SFB通道数I，该框架基于确保空间无缝覆盖并最小化信息冗余的原则（公式6）。同时，作者将基线模型（SFB-TSCBM）中计算量大的多头自注意力（MHSA）层替换为更高效的LSTM网络，构建了新的SFB-LSTM架构。
+3.  **新意：** 新意在于两点：一是为SFB通道数设计提供了有理论依据的通用启发式原则（见表1）；二是证明了在优化前端通道数后，一个相对简单的LSTM后端就能达到甚至超越复杂注意力模型的性能，同时计算量显著降低。
+4.  **主要实验结果：** 实验在随机生成的阵列几何、房间声学和噪声条件下进行。核心结果见下表：
+    | 模型 | 参数量(M) | GFLOPS | 二阶超心形PESQ | 一阶超心形PESQ |
+    | :--- | :--- | :--- | :--- | :--- |
+    | SFB-TSCBM (I=9) | 0.50 | 21.99 | 2.03 | 1.97 |
+    | SFB-TSCBM (I=3) | 0.50 | 21.94 | 2.06 | 1.99 |
+    | SFB-LSTM (I=9) | 0.48 | 16.48 | 2.09 | 2.01 |
+    | SFB-LSTM (I=3) | 0.48 | 16.36 | 2.08 | 2.01 |
+    | 固定波束成形（需DOA） | – | – | 1.87 | 1.80 |
+    | 未处理（含噪） | – | – | 1.62 | 1.62 |
+    **关键结论：** SFB-LSTM (I=3) 在几乎所有指标上都略优于或持平于SFB-TSCBM (I=9)，同时GFLOPS降低了约25.4%。将I从9降至3对性能几乎无损，验证了理论预测。
+5.  **实际意义：** 为在资源受限设备（如助听器、智能音箱）上部署高性能、适配任意阵列的语音增强模型提供了更清晰的设计路径，降低了算法与硬件的耦合度。
+6.  **主要局限性：** 论文没有公开代码、模型权重和完整的训练配置，复现难度较大。所提方法属于系统级优化，其核心理论贡献（公式6）的普适性和在更复杂场景（如强混响、高相关噪声）下的鲁棒性有待更多验证。
+
+---
+
+### 859. [Combining Multi-Order Attention and Multi-Resolution Discriminator for High-Fidelity Neural Vocoder](/audio-paper-digest-blog/posts/2026-04-29-combining-multi-order-attention-and-multi)
 
 ✅ **6.5/10** | 前50% | #语音合成 | #生成模型 | #音频生成 #注意力机制
 
@@ -26768,7 +28143,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 815. [CTC-DID: CTC-Based Arabic Dialect Identification for Streaming Applications](/audio-paper-digest-blog/posts/2026-04-29-ctc-did-ctc-based-arabic-dialect-identification)
+### 860. [CTC-DID: CTC-Based Arabic Dialect Identification for Streaming Applications](/audio-paper-digest-blog/posts/2026-04-29-ctc-did-ctc-based-arabic-dialect-identification)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 | #低资源 #流式处理
 
@@ -26810,7 +28185,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 816. [Towards Fair ASR for Second Language Speakers using Fairness Prompted Finetuning](/audio-paper-digest-blog/posts/2026-04-29-towards-fair-asr-for-second-language-speakers)
+### 861. [Towards Fair ASR for Second Language Speakers using Fairness Prompted Finetuning](/audio-paper-digest-blog/posts/2026-04-29-towards-fair-asr-for-second-language-speakers)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #迁移学习 | #多语言 #领域适应
 
@@ -26848,7 +28223,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 817. [Gen-SER: When the Generative Model Meets Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-gen-ser-when-the-generative-model-meets-speech)
+### 862. [Gen-SER: When the Generative Model Meets Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-gen-ser-when-the-generative-model-meets-speech)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #流匹配 | #预训练 #生成模型
 
@@ -26873,7 +28248,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 818. [SmoothCLAP: Soft-Target Enhanced Contrastive Language-Audio Pretraining for Affective Computing](/audio-paper-digest-blog/posts/2026-04-29-smoothclap-soft-target-enhanced-contrastive)
+### 863. [SmoothCLAP: Soft-Target Enhanced Contrastive Language-Audio Pretraining for Affective Computing](/audio-paper-digest-blog/posts/2026-04-29-smoothclap-soft-target-enhanced-contrastive)
 
 ✅ **6.5/10** | 前50% | #语音情感识别 | #对比学习 | #预训练 #零样本
 
@@ -26918,7 +28293,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 819. [Slot Filling as a Reasoning Task for Speechllms](/audio-paper-digest-blog/posts/2026-04-29-slot-filling-as-a-reasoning-task-for-speechllms)
+### 864. [Slot Filling as a Reasoning Task for Speechllms](/audio-paper-digest-blog/posts/2026-04-29-slot-filling-as-a-reasoning-task-for-speechllms)
 
 ✅ **6.5/10** | 前25% | #槽填充 | #思维链 | #语音理解 #语音大模型
 
@@ -26943,7 +28318,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 820. [Selective Hub Fusion with Modality-Heterogeneous Experts for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-selective-hub-fusion-with-modality-heterogeneous)
+### 865. [Selective Hub Fusion with Modality-Heterogeneous Experts for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-selective-hub-fusion-with-modality-heterogeneous)
 
 ✅ **6.5/10** | 前25% | #多模态模型 | #混合专家 | #跨模态 #情感识别
 
@@ -26979,7 +28354,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 821. [MaskVCT: Masked Voice Codec Transformer for Zero-Shot Voice Conversion with Increased Controllability via Multiple Guidances](/audio-paper-digest-blog/posts/2026-04-29-maskvct-masked-voice-codec-transformer-for-zero)
+### 866. [MaskVCT: Masked Voice Codec Transformer for Zero-Shot Voice Conversion with Increased Controllability via Multiple Guidances](/audio-paper-digest-blog/posts/2026-04-29-maskvct-masked-voice-codec-transformer-for-zero)
 
 ✅ **6.5/10** | 前50% | #语音转换 | #掩码建模 | #无分类器引导 #零样本
 
@@ -27011,7 +28386,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 822. [Integrating Speaker Embeddings and LLM-Derived Semantic Representations for Streaming Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-integrating-speaker-embeddings-and-llm-derived)
+### 867. [Integrating Speaker Embeddings and LLM-Derived Semantic Representations for Streaming Speaker Diarization](/audio-paper-digest-blog/posts/2026-04-29-integrating-speaker-embeddings-and-llm-derived)
 
 ✅ **6.5/10** | 前25% | #说话人分离 | #大语言模型 | #流式处理 #模型评估
 
@@ -27036,7 +28411,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 823. [Towards Building Speech Large Language Models for Multitask Understanding in Low-Resource Languages](/audio-paper-digest-blog/posts/2026-04-29-towards-building-speech-large-language-models-for)
+### 868. [Towards Building Speech Large Language Models for Multitask Understanding in Low-Resource Languages](/audio-paper-digest-blog/posts/2026-04-29-towards-building-speech-large-language-models-for)
 
 ✅ **6.5/10** | 前25% | #语音识别 | #自监督学习 | #语音大模型 #低资源
 
@@ -27067,7 +28442,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 824. [Whisper: Courtside Edition - Enhancing ASR Performance through LLM-Driven Context Generation](/audio-paper-digest-blog/posts/2026-04-29-whisper-courtside-edition-enhancing-asr)
+### 869. [Whisper: Courtside Edition - Enhancing ASR Performance through LLM-Driven Context Generation](/audio-paper-digest-blog/posts/2026-04-29-whisper-courtside-edition-enhancing-asr)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #大语言模型 | #领域适应
 
@@ -27087,7 +28462,32 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 825. [Multimodal LLMs as Expert Speech Annotators: Acoustic Macro-Descriptors for Parkinson's Detection](/audio-paper-digest-blog/posts/2026-04-29-multimodal-llms-as-expert-speech-annotators)
+### 870. [ZSV2C-MLLM: Zero-Shot Visual Voice Cloning Via Multimodal Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-zsv2c-mllm-zero-shot-visual-voice-cloning-via)
+
+前50% | #语音克隆 | #多模态模型 | #零样本 #强化学习
+
+👥 **作者与机构**
+
+- 第一作者：Yanling Zhang（昆明理工大学）
+- 通讯作者：Shengxiang Gao（昆明理工大学）
+- 作者列表：Yanling Zhang（昆明理工大学，云南人工智能重点实验室）、Linqing Wang（昆明理工大学，云南人工智能重点实验室）、Shengxiang Gao（昆明理工大学，云南人工智能重点实验室）
+
+💡 **毒舌点评**
+
+**亮点**：论文最大的亮点在于将“情感规划”这个抽象任务显式地交给一个经过微调的大语言模型来完成，这个思路比传统基于规则或回归的方法更灵活，也更契合当前LLM赋能各任务的潮流。**短板**：论文在最关键的“如何做到零样本”和“LLM具体如何规划韵律”这两个核心问题上，细节描述过于粗疏，比如对“融合”操作（公式1）和“情绪调制”函数（公式4）的实现一笔带过，给人的感觉是框架大于细节，实验数据漂亮但“黑盒”感较强。
+
+📌 **核心摘要**
+
+1. **要解决的问题**：现有的视觉语音克隆（V2C）方法大多依赖于配对的音频-视觉数据，缺乏零样本能力，这限制了其在资源受限环境（如无配对数据）下的可扩展性。
+2. **方法核心**：提出一个零样本V2C框架，集成文本、静音视频、参考音频和用户情感标签作为输入。其核心创新是一个基于预训练大语言模型（Qwen）的情感韵律规划器，它能根据多模态融合特征生成连续的韵律轨迹（如音高、语速、停顿）。
+3. **与已有方法相比新在哪里**：主要区别在于引入了LLM作为多模态信息整合与情感韵律规划的中心模块，并实现了无需配对音频数据的零样本推理。相比于V2C-Net、Face-TTS等方法，该框架在数据要求上更灵活。
+4. **主要实验结果**：在GRID和CHEM两个数据集上，该方法在语音质量（MOS-S）、自然度（MOS-N）和说话人相似度（SPK-SIM）上均显著优于基线方法。例如，在GRID数据集上，MOS-S达到3.94，比最强基线Multi-TTS（3.50）高0.44；SPK-SIM达到71.52，远高于其他方法。消融实验证明，移除视觉输入、情感控制、强化学习或LLM规划器都会导致性能明显下降。
+5. **实际意义**：为电影配音、语音修复、交互媒体等需要情感化语音合成但缺乏配对训练数据的场景，提供了一种可扩展的解决方案。
+6. **主要局限性**：实验仅在两个相对小规模和特定领域的数据集（GRID为命令式语音，CHEM为情感语音）上验证，对于更复杂、更自然对话场景的泛化能力未证明。此外，论文未公开代码和模型细节，可复现性存疑。
+
+---
+
+### 871. [Multimodal LLMs as Expert Speech Annotators: Acoustic Macro-Descriptors for Parkinson's Detection](/audio-paper-digest-blog/posts/2026-04-29-multimodal-llms-as-expert-speech-annotators)
 
 ✅ **6.5/10** | 前50% | #语音生物标志物 | #多模态模型 | #音频大模型 #零样本
 
@@ -27121,7 +28521,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 826. [SED: Structural Entropy Based Speech Discretization for Discrete Token-Based ASR](/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech)
+### 872. [SED: Structural Entropy Based Speech Discretization for Discrete Token-Based ASR](/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 #聚类 | #自监督学习 #聚类
 
@@ -27158,7 +28558,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 827. [Z-Scores: A Metric for Linguistically Assessing Disfluency Removal](/audio-paper-digest-blog/posts/2026-04-29-z-scores-a-metric-for-linguistically-assessing)
+### 873. [Z-Scores: A Metric for Linguistically Assessing Disfluency Removal](/audio-paper-digest-blog/posts/2026-04-29-z-scores-a-metric-for-linguistically-assessing)
 
 ✅ **6.5/10** | 前50% | #模型评估 | #语音大模型 | #语音识别 #大语言模型
 
@@ -27178,7 +28578,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 828. [Multilingual Supervised Pretraining with Lm-Assisted Decoding for Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-multilingual-supervised-pretraining-with-lm)
+### 874. [Multilingual Supervised Pretraining with Lm-Assisted Decoding for Visual Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-multilingual-supervised-pretraining-with-lm)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #预训练 | #多语言 #低资源
 
@@ -27211,7 +28611,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 829. [Enhancing Dialogue-Related Speech Tasks with Generated Spoken Dialogues](/audio-paper-digest-blog/posts/2026-04-29-enhancing-dialogue-related-speech-tasks-with)
+### 875. [Enhancing Dialogue-Related Speech Tasks with Generated Spoken Dialogues](/audio-paper-digest-blog/posts/2026-04-29-enhancing-dialogue-related-speech-tasks-with)
 
 ✅ **6.5/10** | 前25% | #语音对话系统 | #数据增强 | #语音大模型 #说话人分离
 
@@ -27272,7 +28672,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 830. [Position-Invariant Fine-Tuning Of Speech Enhancement Models With Self-Supervised Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-position-invariant-fine-tuning-of-speech)
+### 876. [Position-Invariant Fine-Tuning Of Speech Enhancement Models With Self-Supervised Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-position-invariant-fine-tuning-of-speech)
 
 ✅ **6.5/10** | 前50% | #语音增强 | #自监督学习 | #鲁棒性 #语音识别
 
@@ -27293,7 +28693,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 831. [Improving Automatic Speech Recognition by Mitigating Distortions Introduced by Speech Enhancement Under Drone Noise](/audio-paper-digest-blog/posts/2026-04-29-improving-automatic-speech-recognition-by)
+### 877. [Improving Automatic Speech Recognition by Mitigating Distortions Introduced by Speech Enhancement Under Drone Noise](/audio-paper-digest-blog/posts/2026-04-29-improving-automatic-speech-recognition-by)
 
 ✅ **6.5/10** | 前25% | #语音识别 | #语音增强 #扩散模型 | #语音增强 #扩散模型
 
@@ -27325,7 +28725,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 832. [Windowed SummaryMixing: An Efficient Fine-Tuning of Self-Supervised Learning Models for Low-Resource Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-windowed-summarymixing-an-efficient-fine-tuning)
+### 878. [Windowed SummaryMixing: An Efficient Fine-Tuning of Self-Supervised Learning Models for Low-Resource Speech Recognition](/audio-paper-digest-blog/posts/2026-04-29-windowed-summarymixing-an-efficient-fine-tuning)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 | #迁移学习 #低资源
 
@@ -27345,7 +28745,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 833. [Proficiency-Aware Adaptation and Data Augmentation for Robust L2 ASR](/audio-paper-digest-blog/posts/2026-04-29-proficiency-aware-adaptation-and-data)
+### 879. [Proficiency-Aware Adaptation and Data Augmentation for Robust L2 ASR](/audio-paper-digest-blog/posts/2026-04-29-proficiency-aware-adaptation-and-data)
 
 ✅ **6.5/10** | 前25% | #语音识别 | #多任务学习 | #数据增强 #领域适应
 
@@ -27379,7 +28779,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 834. [Domain-Aware Scheduling for ASR Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-domain-aware-scheduling-for-asr-fine-tuning)
+### 880. [Domain-Aware Scheduling for ASR Fine-Tuning](/audio-paper-digest-blog/posts/2026-04-29-domain-aware-scheduling-for-asr-fine-tuning)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #领域适应 | #低资源 #数据选择
 
@@ -27417,7 +28817,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 835. [Online Register For Dual-Mode Self-Supervised Speech Models: Mitigating the Lack of Future Context](/audio-paper-digest-blog/posts/2026-04-29-online-register-for-dual-mode-self-supervised)
+### 881. [Online Register For Dual-Mode Self-Supervised Speech Models: Mitigating the Lack of Future Context](/audio-paper-digest-blog/posts/2026-04-29-online-register-for-dual-mode-self-supervised)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 | #流式处理 #预训练
 
@@ -27451,7 +28851,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 836. [Learning to Align with Unbalanced Optimal Transport in Linguistic Knowledge Transfer for ASR](/audio-paper-digest-blog/posts/2026-04-29-learning-to-align-with-unbalanced-optimal)
+### 882. [Learning to Align with Unbalanced Optimal Transport in Linguistic Knowledge Transfer for ASR](/audio-paper-digest-blog/posts/2026-04-29-learning-to-align-with-unbalanced-optimal)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #迁移学习 | #知识蒸馏 #端到端
 
@@ -27476,7 +28876,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 837. [How Far Do SSL Speech Models Listen for Tone? Temporal Focus of Tone Representation under Low-Resource Transfer](/audio-paper-digest-blog/posts/2026-04-29-how-far-do-ssl-speech-models-listen-for-tone)
+### 883. [How Far Do SSL Speech Models Listen for Tone? Temporal Focus of Tone Representation under Low-Resource Transfer](/audio-paper-digest-blog/posts/2026-04-29-how-far-do-ssl-speech-models-listen-for-tone)
 
 ✅ **6.5/10** | 前50% | #语音识别 | #自监督学习 #迁移学习 | #自监督学习 #迁移学习
 
@@ -27501,7 +28901,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 838. [Probing Whisper for Dysarthric Speech in Detection and Assessment](/audio-paper-digest-blog/posts/2026-04-29-probing-whisper-for-dysarthric-speech-in)
+### 884. [Probing Whisper for Dysarthric Speech in Detection and Assessment](/audio-paper-digest-blog/posts/2026-04-29-probing-whisper-for-dysarthric-speech-in)
 
 ✅ **6.5/10** | 前25% | #语音生物标志物 | #多任务学习 | #迁移学习 #模型评估
 
@@ -27526,7 +28926,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 839. [Connecting Layer-Wise Representation of Wavlm with Spectro-Temporal Modulation on Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-connecting-layer-wise-representation-of-wavlm)
+### 885. [Connecting Layer-Wise Representation of Wavlm with Spectro-Temporal Modulation on Speaker Verification](/audio-paper-digest-blog/posts/2026-04-29-connecting-layer-wise-representation-of-wavlm)
 
 ✅ **6.0/10** | 前50% | #说话人验证 | #自监督学习 | #模型分析 #可解释性
 
@@ -27554,7 +28954,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 840. [Multimodal Co-Training with Subtractive Unlabeled-Benefit Bounds](/audio-paper-digest-blog/posts/2026-04-29-multimodal-co-training-with-subtractive-unlabeled)
+### 886. [Multimodal Co-Training with Subtractive Unlabeled-Benefit Bounds](/audio-paper-digest-blog/posts/2026-04-29-multimodal-co-training-with-subtractive-unlabeled)
 
 ✅ **6.0/10** | 前25% | #多模态学习 | #半监督学习 #协同训练 | #半监督学习 #协同训练
 
@@ -27579,7 +28979,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 841. [Mixture of Experts for Recognizing Depression from Interview and Reading Tasks](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-for-recognizing-depression)
+### 887. [Mixture of Experts for Recognizing Depression from Interview and Reading Tasks](/audio-paper-digest-blog/posts/2026-04-29-mixture-of-experts-for-recognizing-depression)
 
 ✅ **6.0/10** | 前50% | #语音生物标志物 | #混合专家模型 | #多模态模型 #端到端
 
@@ -27605,7 +29005,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 842. [Acoustic and Facial Markers of Perceived Conversational Success in Spontaneous Speech](/audio-paper-digest-blog/posts/2026-04-29-acoustic-and-facial-markers-of-perceived)
+### 888. [Acoustic and Facial Markers of Perceived Conversational Success in Spontaneous Speech](/audio-paper-digest-blog/posts/2026-04-29-acoustic-and-facial-markers-of-perceived)
 
 ✅ **6.0/10** | 前50% | #语音情感识别 | #多模态模型 | #面部动作单元 #协同说话
 
@@ -27625,7 +29025,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 843. [Secondary Source Placement for Sound Field Control Based on Ising Model](/audio-paper-digest-blog/posts/2026-04-29-secondary-source-placement-for-sound-field)
+### 889. [Secondary Source Placement for Sound Field Control Based on Ising Model](/audio-paper-digest-blog/posts/2026-04-29-secondary-source-placement-for-sound-field)
 
 ✅ **6.0/10** | 前25% | #空间音频 | #优化 | #麦克风阵列 #信号处理
 
@@ -27650,7 +29050,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 844. [Can Hierarchical Cross-Modal Fusion Predict Human Perception of AI Dubbed Content?](/audio-paper-digest-blog/posts/2026-04-29-can-hierarchical-cross-modal-fusion-predict-human)
+### 890. [Can Hierarchical Cross-Modal Fusion Predict Human Perception of AI Dubbed Content?](/audio-paper-digest-blog/posts/2026-04-29-can-hierarchical-cross-modal-fusion-predict-human)
 
 ✅ **6.0/10** | 前25% | #模型评估 | #多模态模型 | #音频分类 #音视频
 
@@ -27675,7 +29075,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 845. [Stereophonic Acoustic Echo Cancellation Using an Improved Affine Projection Algorithm with Adaptive Multiple Sub-Filters](/audio-paper-digest-blog/posts/2026-04-29-stereophonic-acoustic-echo-cancellation-using-an)
+### 891. [Stereophonic Acoustic Echo Cancellation Using an Improved Affine Projection Algorithm with Adaptive Multiple Sub-Filters](/audio-paper-digest-blog/posts/2026-04-29-stereophonic-acoustic-echo-cancellation-using-an)
 
 ✅ **6.0/10** | 前50% | #语音增强 | #自适应滤波 | #实时处理 #声学回声消除
 
@@ -27700,7 +29100,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 846. [Towards Real-Time Generative Speech Restoration with Flow-Matching](/audio-paper-digest-blog/posts/2026-04-29-towards-real-time-generative-speech-restoration)
+### 892. [Towards Real-Time Generative Speech Restoration with Flow-Matching](/audio-paper-digest-blog/posts/2026-04-29-towards-real-time-generative-speech-restoration)
 
 ✅ **6.0/10** | 前50% | #语音增强 | #流匹配 | #实时处理 #模型比较
 
@@ -27725,7 +29125,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 847. [Is Phase Really Needed for Weakly-Supervised Dereverberation?](/audio-paper-digest-blog/posts/2026-04-29-is-phase-really-needed-for-weakly-supervised)
+### 893. [Is Phase Really Needed for Weakly-Supervised Dereverberation?](/audio-paper-digest-blog/posts/2026-04-29-is-phase-really-needed-for-weakly-supervised)
 
 ✅ **6.0/10** | 前50% | #语音增强 | #自监督学习 | #弱监督学习 #信号处理
 
@@ -27759,7 +29159,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 848. [Leveraging Audio-Visual Data to Reduce the Multilingual Gap in Self-Supervised Speech Models](/audio-paper-digest-blog/posts/2026-04-29-leveraging-audio-visual-data-to-reduce-the)
+### 894. [Leveraging Audio-Visual Data to Reduce the Multilingual Gap in Self-Supervised Speech Models](/audio-paper-digest-blog/posts/2026-04-29-leveraging-audio-visual-data-to-reduce-the)
 
 ✅ **6.0/10** | 前50% | #语音识别 | #自监督学习 | #多模态模型 #多语言
 
@@ -27795,7 +29195,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 849. [Direct Simultaneous Translation Activation for Large Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-direct-simultaneous-translation-activation-for)
+### 895. [Direct Simultaneous Translation Activation for Large Audio-Language Models](/audio-paper-digest-blog/posts/2026-04-29-direct-simultaneous-translation-activation-for)
 
 ✅ **6.0/10** | 前25% | #语音翻译 | #数据增强 | #语音大模型 #流式处理
 
@@ -27827,7 +29227,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 850. [Estimating Hand-Related Features from Speech Using Machine Learning](/audio-paper-digest-blog/posts/2026-04-29-estimating-hand-related-features-from-speech)
+### 896. [Estimating Hand-Related Features from Speech Using Machine Learning](/audio-paper-digest-blog/posts/2026-04-29-estimating-hand-related-features-from-speech)
 
 📝 **5.0/10** | 前50% | #语音生物标志物 | #传统机器学习 | #跨模态
 
@@ -27874,99 +29274,7 @@ SIREN巧妙地将Transformer的注意力机制“一分为二”，用作左右�
 
 ---
 
-### 851. [RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition](/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical)
+### 897. [PerformSinger: Multimodal Singing Voice Synthesis Leveraging Synchronized Lip Cues from Singing Performance Videos](/audio-paper-digest-blog/posts/2026-04-29-performsinger-multimodal-singing-voice-synthesis)
 
-### 852. [Equipping Large Language Model with Directional Speech Understanding Capabilities](/audio-paper-digest-blog/posts/2026-04-29-equipping-large-language-model-with-directional)
-
-### 853. [A Bimodal Approach for Detecting Fatigue Using Speech and Personal Assessments in College Students](/audio-paper-digest-blog/posts/2026-04-29-a-bimodal-approach-for-detecting-fatigue-using)
-
-### 854. [Brainprint-Modulated Target Speaker Extraction](/audio-paper-digest-blog/posts/2026-04-29-brainprint-modulated-target-speaker-extraction)
-
-### 855. [Respire-Mamba C-UNet: Consistency-Trained Autoencoder for High-Fidelity Respiratory Sound Compression](/audio-paper-digest-blog/posts/2026-04-29-respire-mamba-c-unet-consistency-trained)
-
-### 856. [Phoneme-Level Visual Speech Recognition via Point-Visual Fusion and Language Model Reconstruction](/audio-paper-digest-blog/posts/2026-04-29-phoneme-level-visual-speech-recognition-via-point)
-
-### 857. [Inter-Dialog Contrastive Learning for Multimodal Emotion Recognition in Conversations](/audio-paper-digest-blog/posts/2026-04-29-inter-dialog-contrastive-learning-for-multimodal)
-
-### 858. [Temporal-Spatial Decouple Before Act: Disentangled Representation Learning for Multimodal Sentiment Analysis](/audio-paper-digest-blog/posts/2026-04-29-temporal-spatial-decouple-before-act-disentangled)
-
-### 859. [DSSR: Decoupling Salient and Subtle Representations Under Missing Modalities for Multimodal Emotion Recognition](/audio-paper-digest-blog/posts/2026-04-29-dssr-decoupling-salient-and-subtle)
-
-### 860. [DBFT-SD: Weakly Supervised Multimodal Detection of Sensitive Audio-Visual Content](/audio-paper-digest-blog/posts/2026-04-29-dbft-sd-weakly-supervised-multimodal-detection-of)
-
-### 861. [PerformSinger: Multimodal Singing Voice Synthesis Leveraging Synchronized Lip Cues from Singing Performance Videos](/audio-paper-digest-blog/posts/2026-04-29-performsinger-multimodal-singing-voice-synthesis)
-
-### 862. [VT-Heads: Voice Cloning and Talking Head Generation from Text Based on V-DiT](/audio-paper-digest-blog/posts/2026-04-29-vt-heads-voice-cloning-and-talking-head)
-
-### 863. [DDSR-Net: Robust Multimodal Sentiment Analysis via Dynamic Modality Reliability Assessment](/audio-paper-digest-blog/posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via)
-
-### 864. [PRoADS: Provably Secure And Robust Audio Diffusion Steganography With Latent Optimization And Backward Euler Inversion](/audio-paper-digest-blog/posts/2026-04-29-proads-provably-secure-and-robust-audio-diffusion)
-
-### 865. [SwitchCodec: Adaptive Residual-Expert Sparse Quantization for High-Fidelity Neural Audio Coding](/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse)
-
-### 866. [Automatic Music Mixing Using a Generative Model of Effect Embeddings](/audio-paper-digest-blog/posts/2026-04-29-automatic-music-mixing-using-a-generative-model)
-
-### 867. [SIRUP: A Diffusion-Based Virtual Upmixer of Steering Vectors for Highly-Directive Spatialization with First-Order Ambisonics](/audio-paper-digest-blog/posts/2026-04-29-sirup-a-diffusion-based-virtual-upmixer-of)
-
-### 868. [GLAP: General Contrastive Audio-Text Pretraining Across Domains and Languages](/audio-paper-digest-blog/posts/2026-04-29-glap-general-contrastive-audio-text-pretraining)
-
-### 869. [MC-MRX: Reference- and Midi-Guided Music Source Extraction with Contrastive Learning](/audio-paper-digest-blog/posts/2026-04-29-mc-mrx-reference-and-midi-guided-music-source)
-
-### 870. [SPAM: Style Prompt Adherence Metric for Prompt-Based TTS](/audio-paper-digest-blog/posts/2026-04-29-spam-style-prompt-adherence-metric-for-prompt)
-
-### 871. [Personal Sound Zones with Flexible Bright Zone Control](/audio-paper-digest-blog/posts/2026-04-29-personal-sound-zones-with-flexible-bright-zone)
-
-### 872. [HergNet: A Fast Neural Surrogate Model for Sound Field Predictions Via Superposition of Plane Waves](/audio-paper-digest-blog/posts/2026-04-29-hergnet-a-fast-neural-surrogate-model-for-sound)
-
-### 873. [Identifying the Minimal and Maximal Phonetic Subspace of Speech Representations](/audio-paper-digest-blog/posts/2026-04-29-identifying-the-minimal-and-maximal-phonetic)
-
-### 874. [Feedback-Driven Retrieval-Augmented Audio Generation with Large Audio Language Models](/audio-paper-digest-blog/posts/2026-04-29-feedback-driven-retrieval-augmented-audio)
-
-### 875. [EchoFake: A Replay-Aware Dataset For Practical Speech Deepfake Detection](/audio-paper-digest-blog/posts/2026-04-29-echofake-a-replay-aware-dataset-for-practical)
-
-### 876. [3D Mesh Grid Room Impulse Responses Measured with A Linear Microphone Array And Suppression of Frame Reflections](/audio-paper-digest-blog/posts/2026-04-29-3d-mesh-grid-room-impulse-responses-measured-with)
-
-### 877. [Subspace Hybrid Adaptive Filtering for Phonocardiogram Signal Denoising](/audio-paper-digest-blog/posts/2026-04-29-subspace-hybrid-adaptive-filtering-for)
-
-### 878. [UNMIXX: Untangling Highly Correlated Singing Voices Mixtures](/audio-paper-digest-blog/posts/2026-04-29-unmixx-untangling-highly-correlated-singing)
-
-### 879. [Spectral or Spatial? Leveraging Both for Speaker Extraction in Challenging Data Conditions](/audio-paper-digest-blog/posts/2026-04-29-spectral-or-spatial-leveraging-both-for-speaker)
-
-### 880. [Tldiffgan: A Latent Diffusion-Gan Framework with Temporal Information Fusion for Anomalous Sound Detection](/audio-paper-digest-blog/posts/2026-04-29-tldiffgan-a-latent-diffusion-gan-framework-with)
-
-### 881. [Continuation Method for Feedback Delay Network Modal Decomposition](/audio-paper-digest-blog/posts/2026-04-29-continuation-method-for-feedback-delay-network)
-
-### 882. [Game-Time: Evaluating Temporal Dynamics in Spoken Language Models](/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken)
-
-### 883. [Exploring Resolution-Wise Shared Attention in Hybrid Mamba-U-Nets for Improved Cross-Corpus Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-exploring-resolution-wise-shared-attention-in)
-
-### 884. [Whisper-FEST: Single-Channel Far-Field Enhanced Speech-to-text without Parallel Data](/audio-paper-digest-blog/posts/2026-04-29-whisper-fest-single-channel-far-field-enhanced)
-
-### 885. [Cross-Lingual Alzheimer’s Disease Detection with Multimodal LLMs via Speech Cue-Augmented Prompting and Instruction Tuning](/audio-paper-digest-blog/posts/2026-04-29-cross-lingual-alzheimers-disease-detection-with)
-
-### 886. [Production-Scale Dynamic Vocabulary ASR Biasing with Word-Level FST and Robust Training](/audio-paper-digest-blog/posts/2026-04-29-production-scale-dynamic-vocabulary-asr-biasing)
-
-### 887. [On The Design of Efficient Neural Methods for Geometry-Agnostic Multichannel Speech Enhancement](/audio-paper-digest-blog/posts/2026-04-29-on-the-design-of-efficient-neural-methods-for)
-
-### 888. [Temporal Graph Modeling for Speech Emotion Recognition Using LSTM-Aggregated Multigraph Networks](/audio-paper-digest-blog/posts/2026-04-29-temporal-graph-modeling-for-speech-emotion)
-
-### 889. [Task Vector in TTS: Toward Emotionally Expressive Dialectal Speech Synthesis](/audio-paper-digest-blog/posts/2026-04-29-task-vector-in-tts-toward-emotionally-expressive)
-
-### 890. [Automatic Estimation of Speaker Diarization Error Rate Based on Features of Audio Quality and Speaker Discriminability](/audio-paper-digest-blog/posts/2026-04-29-automatic-estimation-of-speaker-diarization-error)
-
-### 891. [Continuous-Token Diffusion for Speaker-Referenced TTS in Multimodal LLMs](/audio-paper-digest-blog/posts/2026-04-29-continuous-token-diffusion-for-speaker-referenced)
-
-### 892. [Phrased: Phrase Dictionary Biasing for Speech Translation](/audio-paper-digest-blog/posts/2026-04-29-phrased-phrase-dictionary-biasing-for-speech)
-
-### 893. [TAG: Structured Temporal Audio Generation via LLM-Guided Manual Scription and Control](/audio-paper-digest-blog/posts/2026-04-29-tag-structured-temporal-audio-generation-via-llm)
-
-### 894. [OMNI-AVSR: Towards Unified Multimodal Speech Recognition With Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-omni-avsr-towards-unified-multimodal-speech)
-
-### 895. [ZSV2C-MLLM: Zero-Shot Visual Voice Cloning Via Multimodal Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-zsv2c-mllm-zero-shot-visual-voice-cloning-via)
-
-### 896. [BEST-STD 2.0: Balanced and Efficient Speech Tokenizer for Spoken Term Detection](/audio-paper-digest-blog/posts/2026-04-29-best-std-20-balanced-and-efficient-speech)
-
-### 897. [A Parameter-Efficient Multi-Scale Convolutional Adapter for Synthetic Speech Detection](/audio-paper-digest-blog/posts/2026-04-29-a-parameter-efficient-multi-scale-convolutional)
-
-### 898. [Chunk-Wise Attention Transducers for Fast and Accurate Streaming Speech-to-Text](/audio-paper-digest-blog/posts/2026-04-29-chunk-wise-attention-transducers-for-fast-and)
+### 898. [OMNI-AVSR: Towards Unified Multimodal Speech Recognition With Large Language Models](/audio-paper-digest-blog/posts/2026-04-29-omni-avsr-towards-unified-multimodal-speech)
 
