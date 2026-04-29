@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 生物声学 论文列表"
 date: 2026-04-29
 draft: false
-tags: [生物声学]
+tags: ["生物声学"]
 categories: [icassp-2026]
 description: "共 12 篇 ICASSP 2026 生物声学 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-生物声学/
 ---
 
 # ICASSP 2026 - 生物声学

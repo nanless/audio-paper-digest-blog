@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 声源定位 论文列表"
 date: 2026-04-29
 draft: false
-tags: [声源定位]
+tags: ["声源定位"]
 categories: [icassp-2026]
 description: "共 15 篇 ICASSP 2026 声源定位 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-声源定位/
 ---
 
 # ICASSP 2026 - 声源定位

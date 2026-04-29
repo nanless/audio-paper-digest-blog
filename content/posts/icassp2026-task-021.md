@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 多音高估计 #音符跟踪 论文列表"
 date: 2026-04-29
 draft: false
-tags: [多音高估计 #音符跟踪]
+tags: ["多音高估计 #音符跟踪"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 多音高估计 #音符跟踪 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-多音高估计-音符跟踪/
 ---
 
 # ICASSP 2026 - 多音高估计 #音符跟踪

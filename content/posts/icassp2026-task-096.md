@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 跨模态 论文列表"
 date: 2026-04-29
 draft: false
-tags: [跨模态]
+tags: ["跨模态"]
 categories: [icassp-2026]
 description: "共 2 篇 ICASSP 2026 跨模态 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-跨模态/
 ---
 
 # ICASSP 2026 - 跨模态

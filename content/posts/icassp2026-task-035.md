@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 歌唱语音合成 论文列表"
 date: 2026-04-29
 draft: false
-tags: [歌唱语音合成]
+tags: ["歌唱语音合成"]
 categories: [icassp-2026]
 description: "共 4 篇 ICASSP 2026 歌唱语音合成 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-歌唱语音合成/
 ---
 
 # ICASSP 2026 - 歌唱语音合成

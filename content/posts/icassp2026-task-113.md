@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 音视频实例分割 论文列表"
 date: 2026-04-29
 draft: false
-tags: [音视频实例分割]
+tags: ["音视频实例分割"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 音视频实例分割 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-音视频实例分割/
 ---
 
 # ICASSP 2026 - 音视频实例分割

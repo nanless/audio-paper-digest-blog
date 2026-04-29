@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 领域适应 论文列表"
 date: 2026-04-29
 draft: false
-tags: [领域适应]
+tags: ["领域适应"]
 categories: [icassp-2026]
 description: "共 2 篇 ICASSP 2026 领域适应 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-领域适应/
 ---
 
 # ICASSP 2026 - 领域适应

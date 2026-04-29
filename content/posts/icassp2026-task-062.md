@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 语音增强 论文列表"
 date: 2026-04-29
 draft: false
-tags: [语音增强]
+tags: ["语音增强"]
 categories: [icassp-2026]
 description: "共 75 篇 ICASSP 2026 语音增强 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-语音增强/
 ---
 
 # ICASSP 2026 - 语音增强

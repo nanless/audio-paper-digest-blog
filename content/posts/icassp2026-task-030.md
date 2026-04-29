@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 数据集 论文列表"
 date: 2026-04-29
 draft: false
-tags: [数据集]
+tags: ["数据集"]
 categories: [icassp-2026]
 description: "共 3 篇 ICASSP 2026 数据集 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-数据集/
 ---
 
 # ICASSP 2026 - 数据集

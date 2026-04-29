@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 音频安全 论文列表"
 date: 2026-04-29
 draft: false
-tags: [音频安全]
+tags: ["音频安全"]
 categories: [icassp-2026]
 description: "共 11 篇 ICASSP 2026 音频安全 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-音频安全/
 ---
 
 # ICASSP 2026 - 音频安全

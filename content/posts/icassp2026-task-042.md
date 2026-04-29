@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 空间音频 论文列表"
 date: 2026-04-29
 draft: false
-tags: [空间音频]
+tags: ["空间音频"]
 categories: [icassp-2026]
 description: "共 31 篇 ICASSP 2026 空间音频 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-空间音频/
 ---
 
 # ICASSP 2026 - 空间音频

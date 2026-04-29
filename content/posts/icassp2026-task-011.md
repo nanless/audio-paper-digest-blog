@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 基频估计 论文列表"
 date: 2026-04-29
 draft: false
-tags: [基频估计]
+tags: ["基频估计"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 基频估计 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-基频估计/
 ---
 
 # ICASSP 2026 - 基频估计

@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 语音生物标志物 论文列表"
 date: 2026-04-29
 draft: false
-tags: [语音生物标志物]
+tags: ["语音生物标志物"]
 categories: [icassp-2026]
 description: "共 24 篇 ICASSP 2026 语音生物标志物 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-语音生物标志物/
 ---
 
 # ICASSP 2026 - 语音生物标志物

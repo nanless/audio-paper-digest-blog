@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 零样本关键词检测 论文列表"
 date: 2026-04-29
 draft: false
-tags: [零样本关键词检测]
+tags: ["零样本关键词检测"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 零样本关键词检测 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-零样本关键词检测/
 ---
 
 # ICASSP 2026 - 零样本关键词检测

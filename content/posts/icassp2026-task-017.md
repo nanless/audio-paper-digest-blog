@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 多模态情感分析 论文列表"
 date: 2026-04-29
 draft: false
-tags: [多模态情感分析]
+tags: ["多模态情感分析"]
 categories: [icassp-2026]
 description: "共 2 篇 ICASSP 2026 多模态情感分析 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-多模态情感分析/
 ---
 
 # ICASSP 2026 - 多模态情感分析

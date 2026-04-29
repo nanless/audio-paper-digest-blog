@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 音频增强 论文列表"
 date: 2026-04-29
 draft: false
-tags: [音频增强]
+tags: ["音频增强"]
 categories: [icassp-2026]
 description: "共 3 篇 ICASSP 2026 音频增强 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-音频增强/
 ---
 
 # ICASSP 2026 - 音频增强

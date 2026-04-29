@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 说话人分离 论文列表"
 date: 2026-04-29
 draft: false
-tags: [说话人分离]
+tags: ["说话人分离"]
 categories: [icassp-2026]
 description: "共 9 篇 ICASSP 2026 说话人分离 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-说话人分离/
 ---
 
 # ICASSP 2026 - 说话人分离

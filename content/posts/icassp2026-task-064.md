@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 语音大模型 论文列表"
 date: 2026-04-29
 draft: false
-tags: [语音大模型]
+tags: ["语音大模型"]
 categories: [icassp-2026]
 description: "共 3 篇 ICASSP 2026 语音大模型 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-语音大模型/
 ---
 
 # ICASSP 2026 - 语音大模型

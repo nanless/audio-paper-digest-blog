@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 歌唱语音转换 论文列表"
 date: 2026-04-29
 draft: false
-tags: [歌唱语音转换]
+tags: ["歌唱语音转换"]
 categories: [icassp-2026]
 description: "共 3 篇 ICASSP 2026 歌唱语音转换 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-歌唱语音转换/
 ---
 
 # ICASSP 2026 - 歌唱语音转换

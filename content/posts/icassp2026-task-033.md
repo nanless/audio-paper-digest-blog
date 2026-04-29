@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 模型评估 论文列表"
 date: 2026-04-29
 draft: false
-tags: [模型评估]
+tags: ["模型评估"]
 categories: [icassp-2026]
 description: "共 16 篇 ICASSP 2026 模型评估 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-模型评估/
 ---
 
 # ICASSP 2026 - 模型评估

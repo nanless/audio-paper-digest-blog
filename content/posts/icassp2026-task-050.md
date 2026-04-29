@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 视频片段检索 论文列表"
 date: 2026-04-29
 draft: false
-tags: [视频片段检索]
+tags: ["视频片段检索"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 视频片段检索 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-视频片段检索/
 ---
 
 # ICASSP 2026 - 视频片段检索

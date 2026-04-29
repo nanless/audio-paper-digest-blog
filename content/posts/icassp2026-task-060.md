@@ -2,11 +2,10 @@
 title: "ICASSP 2026 - 语音发现 论文列表"
 date: 2026-04-29
 draft: false
-tags: [语音发现]
+tags: ["语音发现"]
 categories: [icassp-2026]
 description: "共 1 篇 ICASSP 2026 语音发现 方向论文"
 hiddenInHomeList: true
-url: /posts/icassp2026-语音发现/
 ---
 
 # ICASSP 2026 - 语音发现
