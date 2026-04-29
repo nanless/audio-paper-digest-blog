@@ -21,3 +21,26 @@ hiddenInHomeList: true
 | 🥇 | [Semantic-Guided Pseudo-Feature Attention Network for Audio-V](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network) | 7.0分 | 前25% |
 
 ---
+
+## 📋 论文详情
+
+### 🥇 [Semantic-Guided Pseudo-Feature Attention Network for Audio-Visual Zero-Shot Learning](/audio-paper-digest-blog/posts/2026-04-29-semantic-guided-pseudo-feature-attention-network)
+
+✅ **7.0/10** | 前25% | #音频分类 #零样本学习 | #多模态模型 #对比学习 | #音频分类 #零样本学习
+
+👥 **作者与机构**
+
+- 第一作者：Siteng Ma（苏州大学）
+- 通讯作者：Wenrui Li（哈尔滨工业大学）
+- 作者列表：Siteng Ma（苏州大学）、Wenrui Li（哈尔滨工业大学）、Haocheng Tang（北京大学）、Yeyu Chai（哈尔滨工业大学）、Jisheng Chu（哈尔滨工业大学）、Xingtao Wang（哈尔滨工业大学）
+
+💡 **毒舌点评**
+
+本文的亮点在于将自适应模态加权、语义引导的变分生成与语义对齐的对比学习巧妙融合，形成了一个逻辑自洽的统一框架来解决GZSL中的核心矛盾，并在两个基准数据集上取得了SOTA。然而，其短板在于对SVG模块中具体网络结构的描述较为简略，且未提供任何开源代码或详细的超参数搜索过程，使得完全复现该工作的细节变得困难。
+
+📌 **核心摘要**
+
+这篇论文旨在解决音频-视觉广义零样本学习（GZSL）中因模态竞争和类间分布重叠导致的对可见类过度偏置问题。核心方法是提出一个名为SGPAN的多模态框架，它集成了三个关键组件：1）自适应模态重加权（AMR），动态调整音频和视觉分支的损失权重以平衡学习；2）语义引导变分生成（SVG），利用文本语义条件化的VAE生成伪特征，以扩大类内覆盖并缓解类别混淆；3）语义对齐对比损失（SACL），在投影空间中对齐跨模态特征并扩大类间距。与已有方法相比，新在将特征生成、动态模态平衡与对比学习在同一个端到端框架内协同优化。实验表明，SGPAN在UCF-GZSL和VGGSound-GZSL数据集上的调和平均精度（HM）上取得了当时最优的结果。该工作的实际意义在于为开放世界下的多模态视频理解提供了一个更鲁棒的零样本识别方案。主要局限性包括模型性能对语义标签的质量以及batch统计量的依赖。
+
+---
+
