@@ -136,4 +136,4 @@ D3PIA由一个主旋律谱编码器和一个离散去噪解码器组成，二者
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

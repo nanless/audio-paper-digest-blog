@@ -146,4 +146,4 @@ CoBRA采用双流编码器-解码器架构，其核心是引入瓶颈融合机�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

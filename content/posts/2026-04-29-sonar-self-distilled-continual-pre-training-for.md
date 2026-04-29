@@ -129,4 +129,4 @@ SONAR框架（图1）建立在BEATs模型之上，包含一个音频分词器（
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

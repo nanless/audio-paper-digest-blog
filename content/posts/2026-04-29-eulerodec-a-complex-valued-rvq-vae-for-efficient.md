@@ -156,4 +156,4 @@ EuleroDec 是一个完全基于复数值的 VQ-VAE 架构，用于音频编解�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

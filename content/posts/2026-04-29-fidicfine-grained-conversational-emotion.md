@@ -135,4 +135,4 @@ FIDIC模型是一个由六个功能模块协作构成的序列处理框架，旨
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

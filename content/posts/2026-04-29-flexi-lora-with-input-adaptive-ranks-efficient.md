@@ -135,4 +135,4 @@ Flexi-LoRA (2,8) 在平均F1和EM指标上均取得最佳成绩，同时参数�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

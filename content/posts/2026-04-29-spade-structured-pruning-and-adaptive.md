@@ -166,4 +166,4 @@ SPADE并非提出一个新的TTS模型架构，而是一个模型压缩框架，
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

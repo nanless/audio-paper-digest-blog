@@ -148,4 +148,4 @@ WaveNeXt 2 的整体架构旨在成为一个兼容GAN与扩散模型的统一生
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

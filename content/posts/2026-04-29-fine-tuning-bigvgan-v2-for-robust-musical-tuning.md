@@ -129,4 +129,4 @@ Fig. 3 为调音散点图，显示了`τ`与`̂τ`的关系。`(a) BV2-80`的样
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

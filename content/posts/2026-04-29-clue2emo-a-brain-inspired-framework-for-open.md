@@ -184,4 +184,4 @@ Clue2Emo是一个两阶段的框架，旨在将多模态输入转化为开放词
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

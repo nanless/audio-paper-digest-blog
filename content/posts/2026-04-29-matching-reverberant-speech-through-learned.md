@@ -127,4 +127,4 @@ FAD值越低表示生成的音频与真实音频分布越接近。所提方法�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

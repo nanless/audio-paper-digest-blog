@@ -134,4 +134,4 @@ WAV2LEV的模型架构是一个基于Whisper大模型的序列到序列系统，
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

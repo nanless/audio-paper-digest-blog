@@ -140,4 +140,4 @@ CCoT-Emo是一个两阶段的提示框架，不直接修改底层模型参数，
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

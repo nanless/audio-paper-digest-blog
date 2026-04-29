@@ -156,4 +156,4 @@ DS-WED在不同SSL骨干（HuBERT/WavLM）、不同Transformer层（6-9层最佳
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

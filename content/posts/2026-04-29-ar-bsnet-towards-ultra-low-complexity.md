@@ -147,4 +147,4 @@ AR-BSNet是一个基于时频域、采用编码器-提取器-解码器结构的�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -145,4 +145,4 @@ AutoMatchCut是一个由存储、查询和创建三阶段构成的检索框架�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

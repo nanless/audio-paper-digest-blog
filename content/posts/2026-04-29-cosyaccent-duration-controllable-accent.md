@@ -136,4 +136,4 @@ CosyAccent是一个非自回归的口音归一化模型，整体架构包含四�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

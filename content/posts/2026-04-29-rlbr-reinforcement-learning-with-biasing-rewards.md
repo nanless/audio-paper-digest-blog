@@ -140,4 +140,4 @@ RLBR是一种训练方法，而非新的模型架构。它在现有的语音大�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

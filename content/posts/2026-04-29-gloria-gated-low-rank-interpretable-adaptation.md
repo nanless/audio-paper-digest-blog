@@ -167,4 +167,4 @@ GLoRIA的架构核心是对预训练ASR编码器中每个前馈（FF）子层进
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -127,4 +127,4 @@ SALAD-VAE是一个完全在频域工作的卷积变分自编码器，其核心�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

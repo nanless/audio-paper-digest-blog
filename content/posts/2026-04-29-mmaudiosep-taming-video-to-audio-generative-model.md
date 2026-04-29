@@ -149,4 +149,4 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

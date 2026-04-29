@@ -146,4 +146,4 @@ TinyMU的架构由三个核心组件构成，如图2所示。其数据流和交�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

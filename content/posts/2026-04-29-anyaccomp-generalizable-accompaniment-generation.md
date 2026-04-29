@@ -151,4 +151,4 @@ Table 1展示了在三个测试集上的关键客观指标（FAD↓， APA↑，
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

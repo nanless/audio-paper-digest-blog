@@ -164,4 +164,4 @@ TLDiffGAN在平均AUC和pAUC上分别达到了88.60% 和 74.35%，显著优于�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

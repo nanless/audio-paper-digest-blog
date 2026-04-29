@@ -176,4 +176,4 @@ JEDIS-LLM的整体架构基于Speech-LLM范式，并针对说话人分离任务�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

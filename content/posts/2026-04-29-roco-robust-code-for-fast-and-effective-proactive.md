@@ -163,4 +163,4 @@ RoCo的整体框架旨在利用一个基于神经音频编解码器的语音合�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

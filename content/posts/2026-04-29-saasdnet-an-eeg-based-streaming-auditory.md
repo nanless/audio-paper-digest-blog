@@ -169,4 +169,4 @@ SAASDNet是一个为流式EEG听觉注意力切换解码设计的端到端网络
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

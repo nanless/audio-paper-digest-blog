@@ -166,4 +166,4 @@ WavLink在VGGSound上表现优异，但在ESC-50和US8K上落后于专为分类�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

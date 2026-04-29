@@ -141,4 +141,4 @@ MMSE驱动策略分析：如表2所示，利用训练好的MCI-OTFusion模型进
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

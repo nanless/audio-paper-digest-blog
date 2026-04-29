@@ -119,4 +119,4 @@ EdgeSpot的整体输入输出流程如下：输入1秒16kHz音频，转换为40�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

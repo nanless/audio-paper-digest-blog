@@ -171,4 +171,4 @@ SyncSpeech采用两阶段架构：文本到词元（Text-to-Token）模型和词
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

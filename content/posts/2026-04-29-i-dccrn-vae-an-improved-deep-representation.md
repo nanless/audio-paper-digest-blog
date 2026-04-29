@@ -154,4 +154,4 @@ I-DCCRN-VAE系统（图1）是一个基于复数域VAE的单通道语音增强�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

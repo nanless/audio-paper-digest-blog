@@ -153,4 +153,4 @@ SIRUP模型是一个条件潜在扩散模型，旨在将M通道的FOA SV（估�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

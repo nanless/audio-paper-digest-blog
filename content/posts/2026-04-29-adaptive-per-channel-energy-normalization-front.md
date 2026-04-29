@@ -128,4 +128,4 @@ LEAF-APCEN的整体架构建立在LEAF框架之上，由三个串联的固定模
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

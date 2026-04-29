@@ -146,4 +146,4 @@ FUN块（图1下部详细结构）：每个FUN块是模型的核心计算单元�
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
