@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本文提出的CMR-NNS框架是一个面向半监督域适应的端到端深度学习模型，旨在利用带标签的源域数据和无标签的目标域数据训练旋律提取模型。
 
-![图1: 模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464453-0.png)
+![图1: 模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464453-0.png)
 （图1：CMR-NNS框架示意图。左侧展示了NNS模块如何通过最近邻搜索对齐源域和目标域的特征分布。右侧展示了CMR模块如何生成新的增强样本：从两个视图（原始和弱增强）的预测图中提取高置信度和低置信度的patch，并通过特征匹配进行交换，最后强制模型对新样本的预测保持一致。）
 
 - 输入与增强：模型输入为源域带标签数据对`{(xi, yi)}`和目标域无标签数据`{xi}`。对所有数据应用增强`xi' = A(xi; θ)`，生成一致性训练所需的多个视图。输入特征采用Combined Frequency and Periodicity (CFP)表示，融合了频谱和周期性信息。
@@ -128,12 +128,12 @@ hiddenInHomeList: true
 
 分析：NNS模块在三个不同的骨干网络（MSNet, FTANet, LcMLP）上均带来了性能提升，证明了其通用性和有效性。
 
-![图2: 可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464453-1.jpg)
+![图2: 可视化对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464453-1.jpg)
 （图2：在J→C任务（爵士到古典）上的旋律提取可视化对比。左图（a）是基线MSNet的结果，显示了严重的片段化问题，许多有效旋律段被错误分类为无声段（值为0）。右图（b）是本文CMR-NNS的结果，生成了连续完整的旋律轨迹，与地面真相（GT）紧密对齐。）
 
 图2分析：该可视化直观地展示了CMR-NNS方法在解决域适应导致的旋律断裂问题上的优势，证明了其在改善发声检测鲁棒性方面的有效性。
 
-![图3: （论文中未明确说明此图的具体分析，此处为根据提供的图片链接进行占位描述）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464453-2.jpg)
+![图3: （论文中未明确说明此图的具体分析，此处为根据提供的图片链接进行占位描述）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464453-2.jpg)
 
 ### ⚖️ 评分理由
 

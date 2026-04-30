@@ -64,10 +64,10 @@ LAFUFU采用两阶段架构：一个任务专用的自编码器（AE）和一个
 架构图说明：
 论文提供了图2（`pdf-image-page1-idx1`）对比了传统SGMSE+（a）和LAFUFU（b）的流程，清晰地展示了LAFUFU如何通过引入AE将扩散过程“嵌入”到潜在空间中。图3（`pdf-image-page1-idx2`）详细展示了所用自编码器的架构，包括其损失计算（MRSTFT-Loss + Reg-Loss）和特征连接方式。
 
-![LAFUFU架构与传统SGMSE+对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460812-1.png)
+![LAFUFU架构与传统SGMSE+对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460812-1.png)
 图2: (a) 传统SGMSE+在谱图空间直接操作；(b) LAFUFU先用AE编码到潜在空间，在潜在空间扩散，再解码回谱图。
 
-![自编码器架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460812-2.png)
+![自编码器架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460812-2.png)
 图3: LAFUFU所用的自编码器架构示意图，展示了编码、潜在空间、解码以及多分辨率STFT损失和正则化损失的计算位置。解码器同时接收来自失真输入的多级特征。
 
 ### 💡 核心创新点

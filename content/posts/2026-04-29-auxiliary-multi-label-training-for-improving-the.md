@@ -106,7 +106,7 @@ AMLT的训练流程（以4L-2L为例）：
 | DSD (伪造) | 81.78 / 88.20 | 86.14 / 92.26 |
 | ITW (伪造) | 99.60 / 99.51 | 99.86 / 99.69 |
 
-![图1: 性能随AP数据比例变化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464242-0.png)
+![图1: 性能随AP数据比例变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464242-0.png)
 图1说明：随着训练/评估数据中AP样本比例的增加，模型的准确率和等错误率（EER）持续恶化，直接证明了AP数据对检测性能的负面影响。
 
 表3：不同训练方法的准确率（%）对比
@@ -117,10 +117,10 @@ AMLT的训练流程（以4L-2L为例）：
 | AMLT (3L-2L) | 70.13 | 73.03 |
 | AMLT (4L-2L) | 72.28 | 76.63 |
 
-![图2: 混淆矩阵对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464242-1.png)
+![图2: 混淆矩阵对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464242-1.png)
 图2说明：对比了SSL-AASIST和SSL-Conformer在数据增强（Aug）和4L-2L训练下的混淆矩阵。4L-2L方法在真实（Bonafide）和伪造（Spoof）两类上的分类性能均优于简单数据增强，特别是在减少将AP处理的真实样本误判为伪造（假阴性）方面效果显著。
 
-![图3: t-SNE嵌入可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464242-2.png)
+![图3: t-SNE嵌入可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464242-2.png)
 图3说明：t-SNE可视化显示，4L-2L方法（c, d）比数据增强方法（a, b）能在嵌入空间中更清晰地分离原始标签（Bonafide vs Spoof），特别是能更好地区分原始真实样本与AP处理后的真实样本（Bonafide vs AP bona），直观验证了AMLT能学习到更具判别性的特征。
 
 主要结论：AMLT，尤其是使用所有辅助标签的4L-2L设置，在两个先进的基线模型上均实现了比基线和简单数据增强方法更好的检测性能，平均准确率提升超过7%（如SSL-Conformer从71.21%提升至76.63%）。消融实验显示，使用所有辅助标签（4L）优于只使用部分辅助标签（3L）。

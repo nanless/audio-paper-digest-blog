@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 本文并非提出新的生成模型，而是提出一个评估框架。其架构可理解为一个系统性的评估流程，如下图所示：
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464517-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464517-0.png)
 图1：标准音频驱动说话人脸生成流程。输入包含音频、面部视频序列和身份参考图像，模型输出生成的唇部区域已同步的视频序列。
 
 评估框架的核心流程与组件如下：

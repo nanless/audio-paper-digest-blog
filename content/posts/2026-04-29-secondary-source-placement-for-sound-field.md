@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 本文并非提出一个传统的端到端神经网络模型，而是提出一个用于求解“次级声源布局优化”问题的优化框架。其核心是将一个离散组合优化问题，转化为适合Ising机器求解的形式。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-0.png)
 图1：声场控制中的次级声源布局问题示意图。图中展示了目标区域Ω（灰色），候选次级声源位置（绿色圆点），以及用于控制/评估的传声器位置（蓝色叉）。优化目标是选择L个次级声源，使得在Ω上合成的声场与期望声场之间的均方误差最小。
 
 完整流程：
@@ -60,7 +60,7 @@ hiddenInHomeList: true
 3.  求解器：使用虚拟Ising机（基于模拟退火）来最小化上述目标函数。Ising机器通过迭代更新自旋状态（即声源选择状态），逐步寻找能量最低的状态，即最优布局。
 4.  输出：一个长度为I的二元选择向量`φ`，其中值为+1的位置对应被选中的次级声源。
 
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-1.png)
 图2：实验装置示意图。浅蓝色区域为目标控制区，绿色圆点为200个候选声源位置，蓝色叉为240个控制点。实验在该2.4m x 2.4m的混响房间模型中进行。
 
 ### 💡 核心创新点
@@ -100,16 +100,16 @@ hiddenInHomeList: true
 注：以上数值为从图3中读取的近似值，用于说明趋势。论文明确指出“below 500 Hz”时Ising性能优于Greedy。
 
 图3：平均NMSE随频率变化曲线。
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-2.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-2.png)
 图3说明：横轴为频率，纵轴为平均NMSE（dB）。灰色区域表示Random方法1000次试验的标准差。关键结论：在约500Hz以下，Ising曲线明显低于Greedy曲线，表明性能更优；在500Hz以上，Ising曲线略高于Greedy。
 
 图4：300 Hz时不同平面波传播方向的NMSE。
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-3.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-3.png)
 图4说明：横轴为平面波传播角度，纵轴为NMSE。Ising方法的曲线几乎是一条水平线，表明其对不同方向的期望声场鲁棒性很强，而Greedy方法的性能则随角度剧烈波动。
 
 图5与图6：300Hz，传播角41.9度时的声压分布与误差分布。
-![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-4.png)
-![图6](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460723-5.png)
+![图5](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-4.png)
+![图6](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460723-5.png)
 图5/6说明：图5显示合成声压场，图6显示归一化误差场。绿色点为选中的20个源。对比可见，Ising方法选择的源集中在左侧（x=-1.0线附近），其误差在大部分区域都非常小（平均NMSE -44.7dB）；而Greedy方法选择的源分散在两侧，其误差在区域中心附近较大（平均NMSE -36.7dB）。这直观展示了不同布局策略导致的性能差异。
 
 计算时间：Greedy方法耗时331秒，Ising方法耗时1.1秒。Ising方法在宽带情况下计算效率优势巨大。

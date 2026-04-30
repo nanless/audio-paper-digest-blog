@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 Harmonia本身并非一个独立的模型架构，而是一个应用于已有编码器（如MusicFM）的知识蒸馏框架。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464051-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464051-0.png)
 图1：Harmonia框架示意图。左侧为传统的逐帧蒸馏，教师和学生对齐每个时间步的输出分布。右侧为Harmonia的核心，教师和学生模型分别处理输入，输出隐藏序列表征 \(z \in R^{L \times D}\)。对于每个特征维度 \(d\)，在时间轴上应用softmax得到时间分布向量 \(q_d\)。框架的目标是计算所有维度上教师与学生时间分布的KL散度（Temporal KL Loss），并以此来训练学生模型。
 
 整体流程：
@@ -145,10 +145,10 @@ Harmonia本身并非一个独立的模型架构，而是一个应用于已有编
 *   图3（训练对比）：显示Harmonia的训练曲线（绿色）比教师模型（蓝色）收敛更快，且最终损失更低，这提供了训练效率提升的直观证据。
 
 图表引用与说明：
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464051-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464051-1.png)
 图2：预训练模型的时间连贯性验证。左图为预训练教师模型输出的相邻帧余弦相似度分布（红色），峰值接近0.85，表明高度连贯；右图为随机张量的分布（蓝色），接近0。此图证实了教师模型隐含了强大的时间先验，这是Harmonia方法成立的前提。
 
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464051-2.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464051-2.png)
 图3：训练过程对比。横轴为训练步数，纵轴为损失。绿色曲线（Harmonia）下降更快且最终低于蓝色曲线（教师模型），直观证明了Harmonia能提升训练效率，达到更低的损失值。
 
 ### ⚖️ 评分理由

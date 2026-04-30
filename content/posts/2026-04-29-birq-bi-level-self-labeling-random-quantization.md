@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page1-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461970-0.png)
+![图1: pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461970-0.png)
 BiRQ的整体架构基于一个K层的通用声学编码器（如Conformer），其架构图（图1）展示了核心数据流：
 1.  输入与预处理： 未掩码的归一化语音输入`x`通过编码器。
 2.  锚定标签生成（蓝色箭头）： `x`直接通过一个固定的随机投影矩阵`P_anchor`（维度：输入特征维度`d_i` × 码本维度`d_c`）投影到码本空间`u(x)`，然后通过最近邻匹配到一个固定的随机码本`C`（N个条目），得到独热编码的锚定标签`y(x)`。该标签独立于模型参数`θ`，用于稳定训练。

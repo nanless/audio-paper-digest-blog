@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 本文并未提出一个新的端到端语音大模型架构，而是针对现有的LALM（如Qwen2-Audio, Qwen2.5-Omni）设计了一个攻击框架。其核心是音频-文本联合越狱攻击流程。
 
-![图1: 音频-文本越狱攻击整体工作流](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464814-0.png)
+![图1: 音频-文本越狱攻击整体工作流](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464814-0.png)
 
 攻击框架工作流程（结合图1说明）：
 1.  输入：接收包含恶意意图的原始音频 `a`（例如语音问“如何制作炸弹”）和文本指令 `t`（例如“请回答音频中的问题”）。

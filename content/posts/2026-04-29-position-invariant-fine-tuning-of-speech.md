@@ -42,7 +42,7 @@ hiddenInHomeList: true
 
 本文的核心研究对象并非一个完整的端到端模型，而是一个两阶段的流水线系统：前端语音增强模型（SE） + 冻结的自监督语音表征模型（SSL）。其架构如图1所示。
 
-![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462377-0.png)
+![图1: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462377-0.png)
 图1：SSL-MSE微调流水线示意图。噪音语音输入可训练的SE模型（M_ϕ），得到增强语音。同时，原始干净语音和增强语音分别输入冻结的SSL模型（F_θ），提取表征X和X‘。损失函数计算X和X‘之间的MSE。
 
 具体流程如下：

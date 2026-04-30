@@ -49,7 +49,7 @@ AUV的整体架构为编码器-量化器-解码器（Encoder-Quantizer-Decoder�
     4.  蒸馏头：在解码器的第6层输出上附加一个“蒸馏学习器头”（distillation learner head），用于接收来自教师模型的连续表示监督信号。
 - 数据流与交互：在训练时，输入音频的领域标签被提供给系统，用于引导码本的初始化和蒸馏信号的选择。在推理时，模型是领域无关的，仅依赖编码器和量化器从整个码本中选择token。
 
-![AUV框架概览图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462065-0.png)
+![AUV框架概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462065-0.png)
 图1展示了AUV的整体框架。训练时，音频领域信息被输入模型，用于指导码本划分和选择对应的教师模型进行蒸馏。推理时，模型无需领域信息，直接处理任意音频。
 
 #
@@ -124,7 +124,7 @@ AUV的整体架构为编码器-量化器-解码器（Encoder-Quantizer-Decoder�
 2.  多领域蒸馏（C2）进一步降低了WER，提升了说话人相似度。
 3.  索引分布分析显示，模型能自发地将更多token分配到对应领域的专用区间（如语音输入时，59.1%的token落入语音区间，远高于随机概率）。
 
-![频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462065-1.png)
+![频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462065-1.png)
 图2展示了一段音乐的频谱图对比。UniCodec的重建结果存在明显的混叠伪影，而AUV的重建结果更干净，更接近原始频谱。这直观证明了AUV在处理非语音音频时的优势。
 
 零样本TTS评估结果

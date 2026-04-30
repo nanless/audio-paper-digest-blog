@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 整体架构包含两个主要阶段：基线VMR模型和提出的LARS模块。基线模型通常采用带有早期特征融合（EFF）的QD-DETR。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464564-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464564-0.png)
 
 1. 基线VMR模型 (QD-DETR with EFF):
 - 输入：视觉特征序列 `V`（由CLIP和SlowFast编码）、音频特征序列 `A`（由PANNs或ASR文本嵌入编码）、音素级文本查询嵌入 `Q`。
@@ -122,9 +122,9 @@ hiddenInHomeList: true
 - 互补性：在大多数情况下，EFF+LARS的组合优于单独使用任一方法。例如，表1中CLIP+Slowfast+PANNs特征，EFF+LARS在三个数据集的所有指标上均取得最高值。
 - LARS对音频信息的利用：对比表1中EFF× LARS✓ 和 EFF× LARS× 两行，可以看到LARS���过后期融合有效地利用了音频特征（PANNs或ASR-text emb.）来提升性能。
 - 定性分析：
-    ![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464564-1.jpg)
+    ![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464564-1.jpg)
     图2展示了在HiREST数据集上的示例。基线QD-DETR预测的片段边界与场景跳变对齐，而加入EFF后，预测片段更准确地覆盖了与查询相关的语音内容区间。
-    ![图3: pdf-image-page2-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464564-2.jpg)
+    ![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464564-2.jpg)
     图3展示了在Charades-Audiomatter数据集上的示例。基线模型为一个包含无关打喷嚏声的片段分配了高分（0.80），而LARS通过计算音视觉对齐分数，将该片段的分数显著降低（至0.20），同时将包含正确“打喷嚏”声的片段分数提升（至0.99），从而修正了排序。
 
 ### ⚖️ 评分理由

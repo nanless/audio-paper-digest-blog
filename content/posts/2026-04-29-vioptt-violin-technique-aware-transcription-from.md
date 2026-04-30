@@ -89,7 +89,7 @@ VioPTT采用级联（cascade）架构，由两个独立训练的模块组成：�
     *   设计动机：显式地融合时域/频域的声学信息（技巧影响音色）和高层音乐结构信息（技巧与音符时序强相关），以提升分类准确性。
 
 模型架构图（图1）：
-![论文中的模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464063-0.png)
+![论文中的模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464063-0.png)
 图示内容：左侧为多尺度梅尔频谱输入；中间上方为转录模块（CRNN），输出onset, offset, velocity, frame；下方为articulation模块，分别接收原始频谱（声学特征）和转录模块输出（转录特征），融合后输出技巧类别。
 
 ### 💡 核心创新点

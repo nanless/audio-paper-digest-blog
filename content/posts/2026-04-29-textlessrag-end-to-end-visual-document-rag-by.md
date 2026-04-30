@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文的核心架构如图2所示，是一个分为检索和生成两侧的端到端管线。
-![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462642-15.jpg)
+![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462642-15.jpg)
 检索侧：
 1.  编码器 (Enc)：使用预训练的ColQwen-Omni视觉语言模型。它作为一个统一的编码器，分别将用户输入的语音查询`q`和知识库中的文档图像页面集合`I={P1, P2...Pn}`编码为向量表示`eq`和`E={e1, e2...en}`。
 2.  相似度计算与初检索：计算查询向量`eq`与每个文档页面向量`ei`之间的MaxSim分数（类似ColBERT），据此对文档页面进行排序，得到Top-k候选页面`Tk`。
@@ -114,7 +114,7 @@ hiddenInHomeList: true
 注：“†”表示使用Gold（黄金标准页）输入；“”表示使用Top-5检索结果并经过布局重排序。黄色高亮为Gold输入最佳，绿色高亮为Top-5输入最佳。*
 
 3. 延迟与准确性分析 (图4)
-![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462642-16.jpg)
+![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462642-16.jpg)
 图4左图显示了端到端准确率与延迟的散点图。TextLessRAG在延迟（约35-45单位）上显著低于ViDoRAG（约115-120单位），同时准确率接近。图4右图分解了各组件延迟，突出了ASR、TTS、OCR是传统管线的主要延迟来源，而TextlessRAG的去文本化设计消除了这些开销。
 
 ### ⚖️ 评分理由

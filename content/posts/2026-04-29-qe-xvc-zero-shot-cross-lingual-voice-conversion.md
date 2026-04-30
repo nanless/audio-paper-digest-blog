@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 QE-XVC的整体架构如图1所示，主要分为三个模块：
-![QE-XVC架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460747-0.jpg)
+![QE-XVC架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460747-0.jpg)
 
 1.  SSL表征提取模块：
     *   输入：源语音 `y_src` 和目标语音 `y_tgt`。
@@ -98,7 +98,7 @@ QE-XVC的整体架构如图1所示，主要分为三个模块：
 关键结论：QE-XVC在CER和F0-PCC上取得了最佳表现，显著降低了发音错误并提升了韵律保持。其自然度（NMOS）和相似度（SMOS）与最强基线（vec2wav 2.0）相当或略优。跨语言任务上，其CER优势更为明显。
 
 F0轮廓可视化（图2）
-![F0轮廓对比图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460747-1.jpg)
+![F0轮廓对比图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460747-1.jpg)
 图2展示了将一名女性英语说话人转换为一名男性西班牙说话人时的F0曲线。Source为源语音，QE-XVC和Diff-HierVC为转换后的语音。可以看到，QE-XVC的转换结果更好地保留了源语音的F0起伏轮廓。
 
 消融实验（表2）

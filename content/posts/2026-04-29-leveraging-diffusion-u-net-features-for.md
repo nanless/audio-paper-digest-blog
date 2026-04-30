@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 本文的核心并非提出一个端到端的新模型，而是利用一个已有的扩散模型作为特征提取器，再外接一个轻量级分类器。其完整流程（见图1）如下：
 
-![图1: 本文提出的中间特征提取与分类器头训练流程概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464738-0.jpg)
+![图1: 本文提出的中间特征提取与分类器头训练流程概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464738-0.jpg)
 
 1.  特征提取阶段：
     *   输入：一段音频的梅尔频谱图。
@@ -79,7 +79,7 @@ hiddenInHomeList: true
 
 由于论文未提供完整的数字结果表格，关键结论和部分数据从图3中提取：
 
-![图3: 每种训练数据和扩散模型组合下，最优噪声、层和分类器参数对应的各类别及总体Micro F1分数，以及与Han et al.基线的对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464738-2.jpg)
+![图3: 每种训练数据和扩散模型组合下，最优噪声、层和分类器参数对应的各类别及总体Micro F1分数，以及与Han et al.基线的对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464738-2.jpg)
 
 主要实验结果：
 1.  特征选择规律：最佳性能出现在低噪声时间步（t小）和瓶颈层（第二、三瓶颈层）。这与计算机视觉领域的发现一致。

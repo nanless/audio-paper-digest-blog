@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 论文提出了名为Spectrogram Event Based Feature Representation (SEFR) 的特征提取模块，其整体结构如图1(a)所示。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462342-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462342-0.png)
 
 完整输入输出流程：
 1.  输入：常数Q变换（CQT）谱图，每半音4个频率bin。

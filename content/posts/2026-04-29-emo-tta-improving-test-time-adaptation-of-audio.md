@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 Emo-TTA不是一个传统意义上的神经网络模型，而是一个在推理阶段包裹在冻结的音频语言模型（如CLAP）外部的、基于统计推断的适应框架。其整体流程如图1所示。
 
-![图1: Emo-TTA框架概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463811-0.png)
+![图1: Emo-TTA框架概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463811-0.png)
 
 完整输入输出流程：
 1.  输入：逐个到达的、未标注的测试音频样本 \( a_t \)。

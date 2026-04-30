@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 DGSDNet的架构（如图2所示）分为三个主要阶段：
 
-![整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463805-1.png)
+![整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463805-1.png)
 图2：DGSDNet整体架构示意图
 
 1.  节点构建（Node Construction）：
@@ -169,7 +169,7 @@ DGSDNet的架构（如图2所示）分为三个主要阶段：
 关键结论： 移除核心模块（DSD）导致性能下降最大（2.35%和2.8%），验证了其核心作用��移除任一图路径（SP或TP）均有损失，同时移除两者损失更大，证明了双图结构的协同价值。GSC模块也提供了稳定的性能增益。
 
 超参数敏感性分析：
-![超参数实验](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463805-5.png)
+![超参数实验](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463805-5.png)
 图3：超参数敏感性分析（在缺失率0.5下）
 图3展示了在50%缺失率下，三个关键超参数（α， β， λ）归一化值变化对两个数据集WAF1的影响。结果显示，模型性能对参数变化相对稳定，WAF1在76.0%-76.5%（IEMOCAP）和76.1%-76.4%（CMU-MOSI）范围内波动，表明模型具有一定的鲁棒性。
 

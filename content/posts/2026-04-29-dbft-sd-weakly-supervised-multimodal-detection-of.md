@@ -39,8 +39,8 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464529-0.png)
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464529-1.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464529-0.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464529-1.png)
 模型整体架构（图1）采用双分支结构：一个多模态分支（上方）和一个视觉分支（下方）。
 1.  输入与特征提取：输入视频被分为T个段。视觉特征通过I3D或CLIP提取，音频特征通过VGGish提取。所有特征通过一个线性层映射到统一的128维空间。
 2.  模态内信息聚合（Intra-modal Aggregation）：每个模态（视觉/音频）的特征序列`F`首先通过一个包含“局部Transformer层”和“全局Transformer层”的堆叠结构，捕捉局部和全局上下文。

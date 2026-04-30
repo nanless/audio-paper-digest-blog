@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 论文提出了一种基于微调的扩散Transformer（DiT）模型架构，旨在将鼓MIDI序列和参考音频合成目标鼓音频。整体流程如图1所示。
 
-![图1: 方法概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464812-0.jpg)
+![图1: 方法概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464812-0.jpg)
 图1展示了模型的整体框架。原始Stable Audio Open（SAO）的文本到音频架构被修改为以鼓MIDI和参考音频为条件。核心组件包括：MIDI二值化器、VAE编码器、内容编码器、混合条件机制以及扩散Transformer。
 
 模型的完整输入输出流程如下：
@@ -122,10 +122,10 @@ hiddenInHomeList: true
 | Proposed | Random | GT Tap | 0.83 | 0.256 | 17.73 | 68.44 | 0.05 | 0.13 |
 | w/o reference context | - | - | 1.43 | 0.339 | 19.41 | 66.60 | 0.06 | 0.13 |
 
-![图2: 从StemGMD中生成的乐器级鼓音频与真实音频对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464812-1.jpg)
+![图2: 从StemGMD中生成的乐器级鼓音频与真实音频对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464812-1.jpg)
 图2展示了模型成功按照多乐器编排（Arrangement）MIDI，合成了单个乐器（如底鼓、军鼓）的音频，并与真实音频在波形和频谱上高度相似，验证了模型对节奏和音色的控制能力。
 
-![图3: 从两种编排MIDI生成的鼓音频与真实音频对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464812-2.jpg)
+![图3: 从两种编排MIDI生成的鼓音频与真实音频对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464812-2.jpg)
 图3展示了模型处理不同类型输入的能力。左侧是2小节的“Beat”（重复节奏型），右侧是1小节的“Fill”（过门）。模型生成的音频在时域波形和频谱上都与真实音频一致，且下方的MIDI表示清晰展示了输入的节奏结构。
 
 关键结论：

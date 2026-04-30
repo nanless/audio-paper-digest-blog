@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 GLA-Grad++是一个针对扩散声码器（如WaveGrad）的推理阶段增强框架，而非一个独立的端到端模型。其整体架构可分为两个串联的阶段：
 
-![GLA-Grad++ 总体框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463979-0.png)
+![GLA-Grad++ 总体框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463979-0.png)
 图1：GLA-Grad++ 总体框架图。Stage 1：校正步骤（上部）：在开始扩散过程之前，从条件梅尔频谱图出发，首先应用梅尔滤波器组伪逆得到幅度谱，然后通过Griffin-Lim算法（GLA）进行相位恢复，最后通过iSTFT得到一个估计的时域音频信号˜x。Stage 2：“经典”扩散步骤（下部）：从随机噪声开始执行标准的扩散反向过程。关键修改在于，在Stage 2的早期扩散步骤（步骤1至n）中，更新公式（公式9）中的第一项（预测y0项）被替换为Stage 1生成的˜x；当扩散过程进行到后续步骤（步骤n+1至T）时，则切换回标准的WaveGrad更新公式（公式5/8）。
 
 输入：条件梅尔频谱图 ˜X。
@@ -106,7 +106,7 @@ GLA-Grad++是一个针对扩散声码器（如WaveGrad）的推理阶段增强�
 结论：GLA-Grad++推理速度快于GLA-Grad（因仅应用一次GLA），略慢于原始WaveGrad（增加了GLA计算开销），但整体维持高效推理。
 
 4. 消融实验：Stage 1的结束时间步影响
-![LJSpeech上不同Stage 1结束时间步的PESQ最优文件数直方图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463979-1.png)
+![LJSpeech上不同Stage 1结束时间步的PESQ最优文件数直方图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463979-1.png)
 图2：LJSpeech数据集上，针对PESQ指标，每个测试文件的最佳Stage 1结束时间步直方图。
 - LJSpeech结果：结束时间步为2时PESQ最高（3.892），为0（即纯GLA）时WARP-Q最优（1.182）。
 - VCTK结果：结束时间步为2时PESQ最高（3.830），为0时WARP-Q最优（1.082）。

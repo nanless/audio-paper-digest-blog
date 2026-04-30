@@ -43,10 +43,10 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1：UniverSR整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460830-0.jpg)
+![图1：UniverSR整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460830-0.jpg)
 整体流程：模型采用端到端设计。输入为低分辨率（LR）波形 `s_lr`，首先通过 sinc 插值上采样至目标高分辨率（HR）长度，然后进行STFT得到复数谱。从复数谱中提取包含所有可能高频区域的固定大小高频目标 `X_h`，以及对应于原始LR带宽的低频谱 `X_l`。训练时，向量场估计器（VFE）在流匹配目标下学习，以低频谱 `X_l` 为条件，从高斯噪声中逐步生成 `X_h`。推理时，从噪声开始，通过ODE求解器迭代生成 `X_h`，最后与 `X_l` 拼接成完整频谱，并通过iSTFT得到HR波形。
 
-![图2：向量场估计器(VFE)与特征编码器架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460830-1.jpg)
+![图2：向量场估计器(VFE)与特征编码器架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460830-1.jpg)
 核心组件：
 1.  向量场估计器 (VFE)：模型的主体，是一个U-Net架构，使用2D ConvNeXt V2块作为基本单元。它接收带有时间步信息的噪声高频谱 `X_h_t` 和条件集 `c` 作为输入，预测目标向量场。U-Net具有编码器-瓶颈-解码器结构，通过跳跃连接传递特征。
 2.  条件机制：
@@ -110,12 +110,12 @@ hiddenInHomeList: true
 
 主观听感测试（MOS）：
 
-![图3：主观评估MOS结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460830-2.jpg)
+![图3：主观评估MOS结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460830-2.jpg)
 关键结论：在8kHz→48kHz任务中，所提模型在语音、音乐、音效三个领域的平均MOS均最高，且语音MOS甚至高于“经vocoder处理的真实音频（GT (Vocoded)）”，表明其听感质量超越了vocoder本身的重建能力。
 
 定性分析：
 
-![图4：谐波器乐样本频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460830-3.jpg)
+![图4：谐波器乐样本频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460830-3.jpg)
 关键结论：所提模型生成的频谱高频谐波结构比AudioSR和FlashSR更清晰、更完整。有趣的是，与使用vocoder的真实频谱（GT (Vocoded)）相比，所提模型生成的高频部分细节更丰富，表明vocoder在高频重建上存在模糊化倾向。
 
 消融研究（引导尺度ω的影响）：

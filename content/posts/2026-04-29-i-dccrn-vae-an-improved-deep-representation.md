@@ -78,7 +78,7 @@ I-DCCRN-VAE系统（图1）是一个基于复数域VAE的单通道语音增强�
     - NSVAE训练：将带噪语音 `Y` 输入NSVAE编码器，输出 `z_x` 和 `z_v`。损失函数迫使 `q(z_x|Y)` 逼近 `q(z_x|X)`， `q(z_v|Y)` 逼近 `q(z_v|V)`。此时CVAE和NVAE的参数被冻结。
     - 微调：将带噪语音 `Y` 输入NSVAE编码器得到 `z_x`，再将 `z_x` 输入CVAE解码器，得到掩码 `M` 并估计干净语音 `X̂`。仅微调CVAE解码器的参数。
 
-![图1：I-DCCRN-VAE系统概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464594-0.png)
+![图1：I-DCCRN-VAE系统概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464594-0.png)
 图1：I-DCCRN-VAE系统概览。分为(a) NSVAE编码器训练和(b) 解码器微调两个主要步骤，展示了包含CVAE、NVAE和NSVAE三个模块及其数据流向。
 
 ### 💡 核心创新点

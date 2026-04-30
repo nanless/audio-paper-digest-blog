@@ -68,7 +68,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 论文的整体架构（图1）由四个主要部分组成，遵循一个典型的跨模态对比学习框架：
-![图1: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462957-0.jpg)
+![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462957-0.jpg)
 1.  语音编码器：从原始语音中提取多层次特征：wav2vec 2.0表示、GPT-2语义特征和语音包络。这些特征在时间对齐后被拼接，形成输入语音特征 `A ∈ R^{B×69×T}`。
 2.  EEG编码器（HMOE-based Encoder Block， 图1a）：输入原始EEG数据。首先通过空间注意力层和1×1卷积得到中间特征 `H_E`。然后由三个异构专家混合块（HMOE） 进行处理。每个HMOE块包含三个专家网络（局部、序列、上下文），通过片段级门控机制（基于输入特征路由）和残差连接进行加权融合，最终输出EEG表示 `Z ∈ R^{B×C×T}`。
 3.  时间对齐模块（训练时， 图1b）：这是本文的核心创新。该模块接收EEG编码器的中间特征 `H_E` 和经过线性层对齐维度后的语音特征 `H_A`。它包含四个并行的分支，分别对应音素（40ms）、音节（250ms）、词汇（640ms）、语义（1000ms） 四个时间尺度。每个分支内部先通过一个特定的1D卷积（核长度由时间尺度转换） 进行时域平滑和特征提取，然后计算带带宽约束的Soft-DTW损失。四个尺度的损失通过可学习权重（softmax归一化） 进行融合，得到最终的对齐损失 `L_align`。
@@ -108,7 +108,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 论文在SparrKULee数据集上进行了全面的实验评估，核心指标为匹配-不匹配分类准确率。
-![图2: pdf-image-page3-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462957-1.jpg)
+![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462957-1.jpg)
 *   主要对比结果：如表1和表2所示，本文方法在两种决策窗口下均超越了所有对比方法。特别地：
     *   在3秒窗口下，总准确率87.61%，比当时SOTA（HERMES，87.19%）提高0.42个百分点。
     *   在1秒窗口下，总准确率73.52%，比当时SOTA（HERMES，69.67%）显著提高3.85个百分点。这表明多尺度对齐在时间约束更紧的短窗口任务中优势更为明显。

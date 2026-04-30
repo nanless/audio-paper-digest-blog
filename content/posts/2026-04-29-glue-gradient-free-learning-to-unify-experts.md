@@ -106,13 +106,13 @@ GLUE（Config 4）与其它基线的微调测试准确率对比显示：
 
 关键结论：GLUE生成的先验更强，微调收敛更快，最终性能与计算代价高昂的全梯度方法相当，并显著优于启发式方法。
 
-![图1: 不同数据集上微调测试准确率随训练轮数的变化曲线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460408-0.jpg)
+![图1: 不同数据集上微调测试准确率随训练轮数的变化曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460408-0.jpg)
 图1说明：展示了在CIFAR-10、SVHN和Imagenette数据集上，使用四种不同混合系数方法初始化后，在目标域微调过程中的测试准确率曲线。GLUE（Config 4）的曲线（绿色）与全梯度优化方法（Config 3，蓝色）的曲线紧密贴合，且两者均显著高于数据量加权（Config 1，橙色）和代理准确性加权（Config 2，灰色）的基线曲线，表明GLUE能从一个更强的起点开始微调，并达到更高的最终准确率。
 
-![图2: 10个专家在三个数据集上的性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460408-1.jpg)
+![图2: 10个专家在三个数据集上的性能对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460408-1.jpg)
 图2说明：这是表1的可视化。柱状图展示了10个专家在CIFAR-10、SVHN和Imagenette三个数据集上的单独测试准确率，直观地显示了不同专家在不同任务上的性能差异，为理解混合的必要性提供了依据。
 
-![图3: 超参数敏感性分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460408-2.jpg)
+![图3: 超参数敏感性分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460408-2.jpg)
 图3说明：论文中未对此图进行文字描述。根据上下文推测，这可能展示了GLUE方法中某个超参数（如扰动半径μ）对性能的影响，体现了方法的实际调优过程。
 
 ### ⚖️ 评分理由

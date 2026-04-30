@@ -54,7 +54,7 @@ hiddenInHomeList: true
 3.  输出与预测：ViT编码器输出全局表示后，通过平均池化得到音频的全局特征向量。在其上添加一个线性层，输出对应每个音频事件类别的逻辑值（Logits），经Sigmoid函数得到每个类别的预测概率，用于多标签分类。
 4.  一致性正则化模块（图1）：这是本文的核心创新模块。对于每个输入音频`x`，通过数据增强管道生成`k`个增强视图`{x_1, x_2, ..., x_k}`。每个增强视图都通过同一个ViT编码器和分类头，得到预测概率分布`{p_1, p_2, ..., p_k}`。CR损失计算所有不同视图对（`i != j`）之间预测的交叉熵损失的平均值，要求它们相互一致。该损失与标准的监督损失（BCE Loss）加权求和，共同优化模型。
 
-    ![架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-0.png)
+    ![架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-0.png)
     图1：整体方法架构示意图（以2个增强视图为例）。输入音频`x`被增强为`x_1`和`x_2`，共享的模型（ViT编码器+分类头）对它们进行预测，得到`p_1`和`p_2`。损失函数由监督损失`L_BCE`（来自`p_1`和真实标签`y`）和一致性损失`L_CR`（来自`p_1`和`p_2`）组成。
 
 5.  数据增强管道（图2）：包括三种技术：
@@ -62,7 +62,7 @@ hiddenInHomeList: true
     *   SpecAugment：对频谱图进行时间掩蔽、频率掩蔽或两者结合。
     *   Random Erasing：随机擦除频谱图中的矩形区域，该技术源于计算机视觉，论文发现其对音频有效。
 
-    ![增强示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-1.png)
+    ![增强示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-1.png)
     图2：数据增强技术示例。(a) 原始频谱图，(b) 时间掩蔽，(c) 频率掩蔽，(d) 时间+频率掩蔽，(e) 随机擦除。
 
 ### 💡 核心创新点
@@ -122,16 +122,16 @@ hiddenInHomeList: true
 - 使用λ1=1.5， λ2=1.0时，半监督模型在AS-20k上达到36.6 mAP（dev set），相比最佳监督模型（λ=2.0时为35.8 mAP）有0.8 mAP提升。
 - 对无标签数据应用Mixup或Random Erasing会损害性能。
 
-![SpecAugment示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-2.png)
+![SpecAugment示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-2.png)
 此图与图2相同，为数据增强的可视化示例，用于支持方法描述。
 
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-3.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-3.png)
 此图在论文中未提供具体说明，可能为其他可视化内容，但对核心结论支持有限。
 
-![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-4.png)
+![图5](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-4.png)
 此图在论文中未提供具体说明，可能为其他可视化内容，但对核心结论支持有限。
 
-![图6](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461299-5.png)
+![图6](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461299-5.png)
 此图在论文中未提供具体说明，可能为其他可视化内容，但对核心结论支持有限。
 
 结论：本文提出的监督CR方法在两个数据集规模上均显著超越了复现的基线（在20k上提升1.7 mAP， 在2M上提升2.1 mAP）。半监督方法在20k设置下进一步获得提升。与表4顶部的其他模型相比，本文方法在使用相同预训练初始化时，达到了与AST、SSLAM等模型有竞争力的性能（尽管AS-2M上基线较弱）。

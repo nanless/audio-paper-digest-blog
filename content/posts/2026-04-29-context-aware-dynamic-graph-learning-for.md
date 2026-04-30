@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![模型整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464400-0.png)
+![模型整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464400-0.png)
 模型架构（如图1所示）是一个端到端的联合优化框架，主要包含以下模块和数据流��
 
 1.  输入表示：对于对话中的每个话语\(u_i\)，其初始节点表示\(h_i\)由可用模态特征（音频、视频、文本）与说话人嵌入拼接而成（公式1）。缺失模态用0填充。

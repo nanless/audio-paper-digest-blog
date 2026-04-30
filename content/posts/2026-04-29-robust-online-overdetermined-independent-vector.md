@@ -80,10 +80,10 @@ hiddenInHomeList: true
 
 实验结果表格：论文中未提供数值表格，结果以曲线图（图1）和语谱图（图2）形式呈现。
 
-![图1：收敛性能曲线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462932-0.png)
+![图1：收敛性能曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462932-0.png)
 图1显示了三种算法的平均SIR改善（a）和SDR改善（b）随时间变化曲线。BiIVA（绿色）在收敛后性能显著优于OverIVA（红色）和AuxIVA（蓝色）。
 
-![图2：语谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462932-1.png)
+![图2：语谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462932-1.png)
 图2展示了原始观测、目标语音以及三种算法分离后信号的语谱图。BiIVA的输出最接近目标，干扰抑制最彻底。
 
 ### ⚖️ 评分理由

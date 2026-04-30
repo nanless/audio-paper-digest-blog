@@ -41,7 +41,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 SilenceLLM是一个端到端的多模态分类模型，其输入为一段5秒的语音区间和紧随其后的2秒静音区间（共7秒的音频-视频数据），输出为静音意图的分类标签（“Thinking”或“Stopped”）。
-![模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464331-0.png)
+![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464331-0.png)
 模型架构如图1所示，包含五个主要组件：
 1.  视觉编码器：处理输入的视频帧（25Hz），将人脸和上半身的视觉信息编码为固定长度的特征向量。论文对比了四种编码器。
 2.  音频编码器：处理输入的音频（16kHz），使用Whisper或HuBERT提取特征，并通过1D卷积下采样至25Hz，以与视频特征对齐。

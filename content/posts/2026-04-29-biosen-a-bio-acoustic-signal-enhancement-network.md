@@ -132,16 +132,16 @@ BioSEN的整体架构如图1所示，是一个编码器-解码器（Autoencoder�
 
 关键结论：BioSEN在所有四个指标上均优于其他模型，尤其在Mixed data（涵盖多种动物）上优势明显，表明其良好的泛化能力和鲁棒性。
 
-![pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463818-0.jpg)
+![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463818-0.jpg)
 图1展示了BioSEN的整体架构，清晰地呈现了编码器（内含MSDA）、解码器以及连接两者的EAGC模块。数据流从左至右，EAGC模块位于中间，对编码器到解码器的特征传递进行过滤。
 
-![pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463818-1.jpg)
+![pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463818-1.jpg)
 图2详细展示了MSDA模块的内部结构，可以看到双轴注意力（时间与频率）的并行处理路径，以及通道注意力的生成和融合过程，最后通过1x1卷积和残差连接输出。
 
-![pdf-image-page3-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463818-2.jpg)
+![pdf-image-page3-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463818-2.jpg)
 图3展示了BHME模块，其核心是多个并行的、不同尺寸(kx1)的各向异性卷积分支，用于捕获不同尺度的谐波结构，最终融合并与输入进行残差连接。
 
-![pdf-image-page3-idx3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463818-3.png)
+![pdf-image-page3-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463818-3.png)
 图4展示了EAGC模块，包括频率加权门控、交叉注意力（以解码器状态D为查询）以及处理分辨率差异的双线性插值步骤，说明了其如何智能地选择和传递编码器特征。
 
 ### ⚖️ 评分理由

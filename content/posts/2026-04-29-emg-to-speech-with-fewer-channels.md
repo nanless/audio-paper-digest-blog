@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 论文沿用了Gaddy et al. [13] 提出的EMG-to-speech框架（如图1所示），其核心是一个结合了卷积层和Transformer层的序列模型。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465132-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465132-0.png)
 
 - 输入：8通道的表面肌电图（EMG）信号，经预处理后形成时序特征。每个通道对应面部/颈部特定肌肉位置的电活动。
 - EMG编码器：主体为卷积层（用于局部特征提取）与Transformer层（用于建模长程时序依赖）的混合架构。编码器输出一个高维的上下文表示。
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 
 注：“1”表示该通道被包含在子集中，“0”表示被排除。
 
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465132-1.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465132-1.png)
 图2展示了贪心消除法得到的不同通道数量下的最佳WER（蓝色连线）。随着通道减少，WER整体上升，但存在波动（如某些更少通道的子集性能优于更多通道的子集），说明了通道冗余或噪声的存在。
 
 表2：基于所有4通道子集的通道平均WER排名
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 | 前元音 | 24.4 | 28.8 | 7 |
 
 3. 微调策略结果
-![图3: pdf-image-page2-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465132-2.png)
+![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465132-2.png)
 图3是本文最核心的结果图，展示了在不同通道数量（7,6,5,4）和不同预训练通道dropout概率（p=0, 0.125, 0.25）下，微调模型（Fine-tune）与从头训练（Scratch）模型的WER对比。蓝色虚线为8通道基线性能。
 关键结论：
 - 在4, 5, 6通道设置下，微调模型（所有p值）的WER均低于从头训练的模型，验证了预训练策略的有效性。

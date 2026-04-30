@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 SFM-TTS是一个端到端的非自回归文本到语音模型，整体架构如图1所示，包含三个主要组件：文本编码器、时长预测器和SFM解码器。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460811-1.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460811-1.png)
 图1：SFM-TTS模型架构及灵活捷径流匹配示意图。 左侧为模型整体框图，右侧展示了从噪声x₀到真实音频x₁的两条可能路径（红色和蓝色箭头）。橙色模块（流匹配解码器）在训练和推理时均使用，蓝色模块（如“Text condition”）仅训练时作为条件，黄色模块（“Audio”）仅推理时使用。
 
 1.  文本编码器 (Text Encoder)：

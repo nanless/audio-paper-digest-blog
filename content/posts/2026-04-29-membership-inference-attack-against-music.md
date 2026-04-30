@@ -87,7 +87,7 @@ LSA-Probe是一个双层循环优化过程（图1）：
 - 与最强基线对比：LSA-Probe在所有设置下均优于最佳基线（Loss/Trajectory/SecMI）。在DiffWave模型上的提升尤为明显（TPR@1%FPR绝对提升7-8个百分点）。同时表明LDM（MusicLDM）比DDPM（DiffWave）对成员推断攻击更具鲁棒性。
 
 图2：关键分析（固定τ=P95，DDIM, p=2, η_max=0.8）
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461689-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461689-1.png)
 - (a) ROC曲线：在t_ratio=0.6时，LSA-Probe（红线）在低FPR区域（左侧）明显高于基线，与表1结果一致，证实了其在低误报率场景下的优势。
 - (b) 时间步消融：扫描t_ratio∈{0.2, 0.4, 0.6, 0.8}，中段时间步（0.6）展现出最强的分离度（最高的TPR@1%FPR）。这符合直觉：反向路径早期关注全局布局，晚期关注细节，而中期可能包含了与训练数据关联最强的特征。
 - (c) 预算消融：增加扰动预算η能持续提升TPR@1%FPR，但在η≈0.6-0.8附近出现轻微饱和。这表明在一定范围内，更大的搜索空间有助于发现更优的对抗方向。

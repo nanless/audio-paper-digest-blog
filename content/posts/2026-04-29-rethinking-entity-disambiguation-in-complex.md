@@ -49,7 +49,7 @@ CMED框架（如图2所示）旨在处理一个包含视频、提及词和辅助
 *   全局特征生成器：聚合所有关键帧的视觉特征，生成全局视频表示 `V_G`。论文探索了三种方式：Mean Pooling、LSTM、Transformer。
 *   局部特征生成器：定位并提取与上下文 `C_M` 最相关的关键帧。通过计算每帧特征 `F^i` 与 `C_M` 的余弦相似度 `S_f(i)`，选择相似度最高的帧 `î` 的特征作为局部视觉特征 `V_L`。
 
-![CMED框架概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464617-1.jpg)
+![CMED框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464617-1.jpg)
 (图2：CMED框架概览。展示了从多模态输入（视频、文本、音频）到特征提取、多级相似度计算直至最终预测的完整流程。)
 
 2. 多级相似度计算模块
@@ -118,10 +118,10 @@ CMED框架（如图2所示）旨在处理一个包含视频、提及词和辅助
 - 全局特征生成方法比较（图3）：Transformer（12.7M参数）在所有指标上均优于LSTM和Mean Pooling，表明其更强的序列建模能力。
 - 局部特征生成方法比较（图4）：本文提出的基于相似度的关键帧选择方法，在大多数指标上优于两个时序句子定位方法（CPL, CNM），尤其是在更严格的Hits@1上优势明显。
 
-![不同全局特征生成方法比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464617-4.png)
+![不同全局特征生成方法比较](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464617-4.png)
 (图3：在Focus-H和Focus-A数据集上，比较Mean Pooling, LSTM, Transformer三种全局特征生成方法的性能。Transformer效果最佳。)
 
-![不同局部特征生成方法比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464617-5.jpg)
+![不同局部特征生成方法比较](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464617-5.jpg)
 (图4：在Focus-H和Focus-A数据集上，比较本文方法（CMED）与CPL、CNM两种时序定位方法作为局部特征生成器的性能。本文方法占优。)
 
 ### ⚖️ 评分理由

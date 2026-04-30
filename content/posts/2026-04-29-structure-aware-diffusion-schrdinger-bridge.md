@@ -91,15 +91,15 @@ hiddenInHomeList: true
     *   定量指标（聚类传输分数）：见上文核心摘要中的表格。在所有维度（2至50维）上，SDSB的分数均显著优于DSB，且更接近理想的真实分布分数，量化证明了其在聚类保持上的优越性。
 
 实验结果图表：
-![图1: 最优传输与结构保持传输对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460455-0.png)
+![图1: 最优传输与结构保持传输对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460455-0.png)
 图1说明：直观展示了标准最优传输（OT/SB）可能破坏数据簇结构（a），而本文追求的是保持样本间相对距离的映射（b），这是提出正则化项的动机。
-![图2: 双月形数据45°和60°旋转的传输结果对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460455-1.png)
+![图2: 双月形数据45°和60°旋转的传输结果对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460455-1.png)
 图2说明：展示了DSB与SDSB在不同旋转角度下的传输轨迹和生成样本。关键结论是SDSB在更大角度下仍能保持月牙几何形状。
-![图3: 结构损失训练曲线对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460455-2.png)
+![图3: 结构损失训练曲线对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460455-2.png)
 图3说明：展示了在月牙->60°月牙任务中，DSB和SDSB训练过程中结构损失的变化。关键结论是SDSB的结构损失能有效收敛至低值。
-![图4: 双月形数据旋转并缩放的传输结果对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460455-3.png)
+![图4: 双月形数据旋转并缩放的传输结果对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460455-3.png)
 图4说明：展示了在目标分布发生尺度变化时，DSB与SDSB的传输效果。关键结论是SDSB的结构保持具有尺度不变性。
-![图5: 高斯混合模型传输轨迹对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460455-4.png)
+![图5: 高斯混合模型传输轨迹对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460455-4.png)
 图5说明：展示了2维高斯混合模型的传输轨迹。关键结论是DSB会分裂聚类，而SDSB能保持聚类完整。
 
 ### ⚖️ 评分理由

@@ -69,7 +69,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 DigiShield的架构如图2所示，是一个典型的双流多模态融合网络。
-![DigiShield框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462517-1.png)
+![DigiShield框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462517-1.png)
 整体流程：输入为视频片段和对应的音频信号（转为梅尔频谱）。视频流和音频流分别通过各自的编码器提取特征，然后经过多模态时空融合模块，最后进行二分类判断真伪。
 
 1.  时空双流管道 (Spatiotemporal Two-Stream Pipeline)：

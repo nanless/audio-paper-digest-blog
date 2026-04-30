@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 PASST的整体流程如图1所示，可分为三个主要阶段：解耦编码、内容翻译、韵律对齐与解码。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464610-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464610-0.png)
 
 1.  解耦编码（FACodec Encoder）：
     - 输入：源语音波形 `x`。

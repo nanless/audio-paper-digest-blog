@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 整体架构是一个两阶段的语言建模框架，将语音增强分解为从噪音到语义，再从语义到语音的过程。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461654-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461654-0.png)
 
 1.  阶段一：噪音到语义的N2S LM
     *   输入：带噪音频波形 `v`。
@@ -129,7 +129,7 @@ hiddenInHomeList: true
 2.  CE损失的“锚定”作用：结合CE和DPO的GSEPF_CE+DPO在说话人相似度（SECS）上表现最佳，尤其是在“w/ Reverb”条件下（0.477），说明CE损失有助于保持说话人特征，防止DPO过度优化。
 3.  主观偏好验证：图2展示了A/B测试结果。在30个样本中，20位听众投票显示，GSEPF_CE+DPO的输出获得378票，优于基线GenSE*的222票，赢得了23/30个对比案例，证实了其主观自然度和听感舒适度的优势。
 
-![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461654-1.png)
+![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461654-1.png)
 图2：A/B偏好测试结果示意图。左图为支持GSEPF的票数/案例数，右图为支持基线的票数/案例数。GSEPF明显更受青睐。
 
 表2：偏好对构建策略消融实验
@@ -147,7 +147,7 @@ hiddenInHomeList: true
 2.  使用从参考模型采样的偏好对（Z=1和Z=4）均能有效提升感知指标。虽然Z=4的感知分数略低于Z=1，但其说话人相似度（SECS）更好，尤其是在“w/ Reverb”条件下。
 
 定性分析：
-![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461654-2.png)
+![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461654-2.png)
 图3：语谱图对比案例。上方为GenSE基线结果，下方为GSEPF_CE+DPO结果。可以看到基线在语音谐波结构（如浊音区域）引入了更多伪影，而GSEPF更好地保留了谐波的清晰度和连续性，这与主观听感中“更自然”的评价相符。*
 
 ### ⚖️ 评分理由

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 GDiffuSE系统包含两个主要组件，在训练和推理阶段协同工作，如图1所示。
 
-![图1: GDiffuSE系统示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462263-0.png)
+![图1: GDiffuSE系统示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462263-0.png)
 
 组件一：预训练的扩散模型（DiffWave，参数θ）
 - 功能：作为语音先验的“生成引擎”，在干净语音上训练，学习从高斯噪声逐步去噪生成语音的逆过程。

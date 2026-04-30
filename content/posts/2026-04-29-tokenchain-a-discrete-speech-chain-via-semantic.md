@@ -52,7 +52,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 TokenChain的整体架构如图1所示，是一个由离散token接口连接的闭环系统，包含三个核心组件：
-![TokenChain框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
+![TokenChain框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
 1.  离散语义Token ASR：一个编码器-解码器模型（带可选CTC分支），输入为语义token序列`s`（来自SpeechTokenizer的RVQ-1），输出为文本token序列`y`。其解码器产生温度Softmax概率`pt_y`。
 2.  自回归文本-语义模型（T2S）：一个LLaMA风格的因果语言模型，输入为文本token`P`和一个随机采样的语义前缀`sp`（用于提供说话人上下文），输出为目标语义token序列。训练时，其损失`L_{T2S}`仅在语义目标位置计算。
 3.  非自回归语义-声学模型（S2A）：一个SoundStorm风格的掩码生成式Transformer，仅用于音频合成，不参与链式训练。它以语义token序列`s`和一个短声学提示`ap`为条件，逐步（从粗到细）生成RVQ的声学token层`a_{2:8}`。
@@ -153,11 +153,11 @@ TokenChain的整体架构如图1所示，是一个由离散token接口连接的�
 关键结论：链式训练在目标域TTS上也带来普遍提升。最佳WER由ST-Gumbel 1.0达到（相对降低30.5%），而最佳说话人相似度和自然度由ST-Argmax取得。
 
 5. 收敛效率（图2）：
-![学习曲线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
+![学习曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
 关键结论：TokenChain的CER和WER学习曲线始终位于基线之下，证明其收敛更快（提前2-6 epoch达到基线最终精度）且最终性能更好。
 
 6. 域行为（图3）：
-![域适应增益-遗忘分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
+![域适应增益-遗忘分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463160-0.png)
 关键结论：在TED-LIUM（目标域）上获得大幅正确率提升（字符+7.5%，词+16.3%）的同时，在LibriSpeech（源域）上仅有微小性能退化（字符-0.6-0.7%，词-1.8-1.9%），表明闭环反馈能促进域不变的语义对齐，实现有效适应且遗忘极少。
 
 与最强基线/SOTA的差距：论文的基线是其自身的“仅ASR”训练设置，而非文献中的其他SOTA模型。TokenChain通过闭环训练，在自身基线上实现了显著的性能提升，尤其是在跨域适应方面（WER降低56%）。论文未直接与其他顶尖ASR或TTS模型对比。

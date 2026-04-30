@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 UVT-LM的整体架构（如图1所示）是一个四阶段的管道，旨在将异构输入统一到由LLM主导的语义空间中。
 
-![UVT-LM 架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463176-0.png)
+![UVT-LM 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463176-0.png)
 
 1.  数据到嵌入编码器 (Data-to-Embedding Encoder)：
     *   功能：将不同模态的原始数据转换为模态特定的嵌入向量。
@@ -117,7 +117,7 @@ UVT-LM的整体架构（如图1所示）是一个四阶段的管道，旨在将�
 
 1. 物体识别任务（Au数据集）
 
-![不同音频片段波形图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463176-1.png)
+![不同音频片段波形图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463176-1.png)
 图2：展示了触觉音频（Tactile-Audio）、人声（Human Voice）和音乐（Music）的波形对比。论文指出触觉音频具有高噪声和稀疏尖锐振荡的特点，与人声/音乐的结构化模式不同，这解释了为何Whisper等针对语音设计的模型处理触觉音频效果不佳。
 
 | 模型 | 视觉编码器 | 触觉编码器 | 融合方法 | 准确率(%) | F1(%) |

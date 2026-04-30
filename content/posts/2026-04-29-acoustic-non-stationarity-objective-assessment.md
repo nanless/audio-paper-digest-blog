@@ -53,7 +53,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 NANSA模型是一个用于二分类的端到端神经网络，整体架构如图2所示，包含两个核心模块：
-![NANSA模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460401-3.jpg)
+![NANSA模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460401-3.jpg)
 1.  ANS编码器：负责将原始音频频谱转换为紧凑的嵌入表示。
     *   输入：对16kHz采样的音频进行STFT（20ms窗长，50%重叠），得到频谱图 S。
        处理：频谱图依次通过两个全连接层（中间有ReLU激活）。第一个全连接层将维度从257扩展到 `β_FC  257`，第二个再映射回257维，起到缩放变换的作用。
@@ -106,11 +106,11 @@ NANSA模型是一个用于二分类的端到端神经网络，整体架构如图
 消融实验：移除ANS编码器模块后，NANSA在三个数据集上的平均EER增加了10.5%，NANSALW增加了12.5%，证明该编码器对特征提取有积极作用。
 
 速度对比：这是本文最亮眼的实验结果之一。
-![处理时间对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460401-2.jpg)
+![处理时间对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460401-2.jpg)
 *   关键结论：传统INS算法处理一段音频需要约12.6秒。而所有基于HLC训练的模型都将时间缩短至毫秒级。其中，NANSA需要约27.3毫秒（比INS快466倍），轻量级的NANSALW仅需约3.2毫秒（比INS快3957倍）。这直接验证了本文解决“计算不友好”问题的有效性。
 
 ROC曲线与AUC：
-![ROC曲线与AUC](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460401-1.jpg)
+![ROC曲线与AUC](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460401-1.jpg)
 *   关键结论：在三个数据集上，NANSA和NANSALW的ROC曲线最靠近左上角，对应的AUC值也最高（在DCASE上达到0.996），表明其分类性能最优。
 
 HLC算法自身验证：

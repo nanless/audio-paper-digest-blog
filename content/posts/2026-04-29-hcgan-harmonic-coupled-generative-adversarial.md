@@ -64,7 +64,7 @@ hiddenInHomeList: true
 
 HCGAN是一个在GAN框架下的双分支生成器模型，其整体架构如图1所示。其核心思想是分别建模语音的频谱特征和谐波结构，然后进行融合。
 
-![图1：HCGAN的整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462170-0.jpg)
+![图1：HCGAN的整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462170-0.jpg)
 图1：HCGAN的整体架构。生成器包含谱分支和谐波分支，两者输出融合后生成高分辨率频谱，再经iSTFT得到波形。判别器评估生成语音的真实性。
 
 1.  输入：窄带语音`x`（4kHz或8kHz采样）。
@@ -76,7 +76,7 @@ HCGAN是一个在GAN框架下的双分支生成器模型，其整体架构如图
 5.  波形合成：对`˜Y’`进行逆STFT（iSTFT）得到生成的16kHz语音波形`˜y`。
 6.  判别器：采用多尺度判别器（源自MelGAN），在不同时间分辨率下评估生成语音`˜y`和真实语音`y`的真实性，引导生成器提升输出的自然度。
 
-![图2：HCGAN生成器中的两个分支细节](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462170-1.jpg)
+![图2：HCGAN生成器中的两个分支细节](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462170-1.jpg)
 图2：HCGAN生成器两个分支的详细结构。展示了谱分支（左）的U-Net-Mamba结构和谐波分支（右）的TH模块堆叠结构，以及输入输出维度。
 
 ### 💡 核心创新点
@@ -111,10 +111,10 @@ HCGAN是一个在GAN框架下的双分支生成器模型，其整体架构如图
 
 2. 频谱分析与可视化：
 - 图3 (4kHz->16kHz示例)：展示了输入4kHz语音、HCGAN恢复的16kHz语音以及真实16kHz语音的频谱图。从频谱图中可以直观看出，HCGAN比“无谐波分支”的变体更好地恢复了高频谐波成分，使得频谱结构更接近真实语音。
-  ![图3：4kHz到16kHz的语音频谱示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462170-2.jpg)
+  ![图3：4kHz到16kHz的语音频谱示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462170-2.jpg)
   图3：语音频谱示例。对比输入、HCGAN输出（w/o和w/谐波分支）以及真实值的频谱。
 - 图4 (谐波误差统计分析)：统计了不同基频下，HCGAN与无谐波分支变体在恢复高频谐波时的误差。结果表明，在基频低于300Hz时，HCGAN的误差明显更小，验证了其在主流基频范围内的有效性。但在基频>300Hz时，优势不明显，这是因为低频谐波矩阵包含的信息有限。
-  ![图4：谐波误差的统计结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462170-3.jpg)
+  ![图4：谐波误差的统计结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462170-3.jpg)
   图4：谐波误差统计。横轴为基频，纵轴为误差，HCGAN（红线）在大部分基频区间误差低于变体（蓝线）。
 
 3. 消融实验（表3）：

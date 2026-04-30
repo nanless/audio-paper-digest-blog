@@ -78,15 +78,15 @@ hiddenInHomeList: true
 - 基线对比：与VoicePrivacy 2024（VPC 2024）的结果对比，指出使用更大的ECAPA-TDNN会降低EER（从48.2%降至34.8%），表明模型容量增加能更好地利用内容泄露。
 
 图1: pdf-image-page2-idx0
-![图1描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460623-0.png)
+![图1描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460623-0.png)
 （图1描述：展示了Librispeech中每个说话人被STT-TTS匿名化后的EER。EER值跨度很大，从低于10%到超过50%，直观地表明某些说话人由于内容独特而更容易被识别。）
 
 图2: pdf-image-page2-idx1
-![图2描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460623-1.png)
+![图2描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460623-1.png)
 （图2描述：对比了两名Librispeech说话人（3570和908）的音素频率。说话人3570的“AH”音素频率更高，而说话人908的“AY”频率更高，这与他们的EER差异（7.9% vs 33.5%）相关。）
 
 图3: pdf-image-page2-idx2
-![图3描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460623-2.png)
+![图3描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460623-2.png)
 （图3描述：展示了STT-TTS匿名化后，不同口音人群的组内EER（Intra-EER）和组间EER（Inter-EER）。揭示了匿名化对不同口音群体提供的隐私保护水平存在差异。）
 
 ### ⚖️ 评分理由

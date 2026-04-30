@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![MVGNet框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465145-1.jpg)
+![MVGNet框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465145-1.jpg)
 MVGNet的完整流程可分为三个主要阶段：
 
 1.  多模态特征嵌入模块：
@@ -164,10 +164,10 @@ MVGNet的完整流程可分为三个主要阶段：
 
 关键图表分析：
 
-![GRGCS层数影响图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465145-12.jpg)
+![GRGCS层数影响图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465145-12.jpg)
 图3分析：该图展示了GRGCS层数（1-7）对MOSI和MOSEI数据集各项指标的影响。可以看出，当层数为2时，模型在准确率、F1值、相关性和MAE上均达到最佳平衡。1层时性能不足，层数超过3后，性能开始下降（如MOSI的MAE上升），这验证了论文中关于“过平滑”和“过拟合”的论述。
 
-![超参数λ和β的热力图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465145-13.png)
+![超参数λ和β的热力图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465145-13.png)
 图4分析：该热力图显示了MWVEM损失中两个超参数λ（一致性损失权重）和β（KL损失权重）在MOSI数据集上的网格搜索结果（以Accuracy和F1为指标）。最佳性能（深红色区域）集中在 `λ=0.5, β=0.5` 附近。当λ或β过小时，性能明显下降；过大时性能也会受损，表明需要平衡一致性约束和变分正��化。
 
 与最强基线对比：在MOSI上，MVGNet的MAE比次优的CENet低了0.015，准确率（Acc-2）高出约1个百分点。在MOSEI上，MAE与CENet持平，但F1分数高出近1个百分点。这表明MVGNet在分类和回归任务上均取得了有竞争力的改进。

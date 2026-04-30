@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2: pdf-image-page1-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg)
+![图2: pdf-image-page1-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg)
 
 本文的模型架构分为两大部分：AFIRE框架和MIND解码器，如图2所示。
 
@@ -72,7 +72,7 @@ hiddenInHomeList: true
 - 关键设计选择：引入位置编码和时序MLP，是为了在保持框架“无关性”（不依赖特定编码器结构）的同时，补偿从编码器的采样率（如2Hz）到fMRI采样率（TR）的聚合过程，并建模必要的时间动态。
 
 2. MIND：混合专家集成解码器
-![图2: pdf-image-page1-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg) (同图2，参见上图b部分)
+![图2: pdf-image-page1-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg) (同图2，参见上图b部分)
 - 功能与目标：接收AFIRE输出的标准令牌 `{zt}`，预测每个时间点 `t` 对应的全脑fMRI响应（即 `O` 个脑区的活动值，如1000个Schaefer分区）。
 - 核心组件：
     - 专家网络：包含 `E` 个独立的多层感知机（MLP）专家 `fe: R^D → R^O`。每个专家学习一种映射模式。
@@ -185,10 +185,10 @@ hiddenInHomeList: true
 关键结论：单独使用令牌路由器或先验路由器性能均远低于两者结合，证实了SADGate中双路径设计的必要性。
 
 可视化分析：
-![图3: pdf-image-page1-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464749-2.jpg)
+![图3: pdf-image-page1-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-2.jpg)
 图3：不同骨干网络（TRIBE, ImageBind, Qwen2.5-Omni，均使用MIND解码）在同一剧集上的逐体素预测-测量相关性（Pearson r）图。三者显示出相似的空间模式和高相关区域重叠，支持了AFIRE框架的融合无关性和MIND解码器的即插即用性。
 
-![图4: pdf-image-page1-idx3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464749-3.png)
+![图4: pdf-image-page1-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-3.png)
 图4：被试路由动态（前100个TR）。展示了同一剧集下，S1, S2, S3, S5四位被试的专家权重随时间变化的曲线。不同颜色代表不同专家。曲线差异表明MIND成功捕捉到了基于被试先验和当前令牌内容的个性化、动态的专家偏好模式。
 
 #

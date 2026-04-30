@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 整体架构（如图1所示）包含三个主要模块：音视觉特征提取、说话人边界建模和多模态融合与分类。
 
-![图1: 整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464605-0.jpg)
+![图1: 整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464605-0.jpg)
 
 1.  音视觉特征提取模块：
     *   输入：视频片段V ∈ R^{B×N×T×112×112} 和对应的16kHz单声道音频。
@@ -51,7 +51,7 @@ hiddenInHomeList: true
         *   使用冻结的预训练ECAPA-TDNN说话人编码器提取说话人特征F′s，同样经插值、Adapter和PCA处理得到Fs ∈ R^{B×T×D}。
     *   监督与对齐：Fa和Fv分别用于预测帧级语音活动预测值ŷa和视觉说话人预测值ŷv，并通过交叉熵损失（La， Lv）进行监督。关键创新在于使用帧级监督对比学习（损失Lsim），以Fa为锚点，利用预训练得到的语音标签la和视觉标签lv，拉近匹配的音视觉特征，推远不匹配的特征，实现细粒度语义对齐（如图2所示）。
 
-![图2: 语音活动特征与视觉特征对齐示意](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464605-1.png)
+![图2: 语音活动特征与视觉特征对齐示意](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464605-1.png)
 
 2.  说话人边界建模模块：
     *   两阶段跨注意力融合：首先以语音特征Fa为Query，视觉特征Fv为Key/Value，通过注意力机制得到音视觉融合特征Fav。然后以说话人特征Fs为Query，Fav为Key/Value，进行第二轮注意力融合，得到最终融合特征Ffused。

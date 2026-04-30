@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 论文的整体架构基于一个扩散Transformer（DiT）骨干网络，并遵循Rectified Flow（RF）目标进行训练。其核心设计是“解耦课程学习”（DCL），分为三个阶段（如图2所示）：
 
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461568-1.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461568-1.png)
 
 Stage-1（语音分支训练）：
 - 输入：参考人脸图像 `Iface` 和语音波形。
@@ -110,13 +110,13 @@ MS-CWD推理策略（算法2）：
 2.  消融分析：移除DCL（解耦训练）导致性能大幅回退至与UAD相当，证明其对稳定训练和多模态融合至关重要。移除RAR主要影响手部清晰度（HKC）和唇音同步。移除SAMP主要影响FVD和手部指标，但不影响唇音同步（Sync-C），符合其“主要改善手势自然度”的定位。移除MS-CWD导致FVD和唇音同步显著下降，证实其对长视频一致性的重要作用。
 
 定性结果与长视频分析：
-![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461568-2.png)
+![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461568-2.png)
 图3 显示了在第81、193、325帧的定性对比。SA方法在后期帧出现了明显的身份退化和姿态失真，而本文方法保持了更好的身份一致性和姿态准确性。
 
-![图4: pdf-image-page4-idx3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461568-3.png)
+![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461568-3.png)
 图4(a) 展示了区域对比。相较于UAD，应用RAR后生成的嘴唇轮廓更清晰，手部手指细节更分明，伪影更少。
 
-![图5: pdf-image-page4-idx4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461568-4.png)
+![图5: pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461568-4.png)
 图5（论文中标为图4(b)） 和 图6: pdf-image-page4-idx5 展示了长视频一致性分析。随着视频帧数增加，SA和UAD的关键点置信度（HKC）和唇音同步置信度（Sync-C）显著衰减，而本文方法的性能衰减非常轻微，在500帧时衰减率仅约3%，证明��MS-CWD策略的有效性。
 
 ### ⚖️ 评分理由

@@ -67,7 +67,7 @@ hiddenInHomeList: true
 - 树注意力：实现了一次前向传播验证多个序列的核心加速。
 - 过滤接受：结合概率匹配和重复惩罚，平衡了语音的合理模糊性与生成的稳定性。
 
-![图1: 检索式推测解码框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461456-0.png)
+![图1: 检索式推测解码框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461456-0.png)
 图1展示了框架概览：当前生成的上下文被用于查询语音token数据store。检索出的序列构成一个候选Trie，然后通过树注意力被目标LLM并行验证。
 
 #

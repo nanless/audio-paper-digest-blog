@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 模型的整体输入是原始语音，输出是情感类别概率。
-![模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464251-0.png)
+![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464251-0.png)
 1.  特征提取与编码：首先使用预训练的WavLM模型将原始语音转换为特征序列 `x ∈ R^(T×D)`，并添加位置编码以注入时序信息。
 2.  分层特征提取（Stage 1-3）：
     *   Stage 1-3 均由移位窗口Transformer（SW-Transformer） 和块合并（Patch Merging） 模块交替构成。
@@ -120,10 +120,10 @@ hiddenInHomeList: true
 
 实验图表：
 *   混淆矩阵：论文提供了四个数据集的混淆矩阵图。
-    ![混淆矩阵](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464251-1.png)
+    ![混淆矩阵](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464251-1.png)
     结论：在IEMOCAP (5-fold) 和CASIA上，对“angry”和“sad”/“neutral”识别准确率高。MELD数据集上，少数类（如“fear”, “disgust”）识别率极低（<20%），证实了类别不平衡问题。
 *   t-SNE可视化：论文在IEMOCAP数据集上对HTSW与Speechformer++、DST、DWFormer的特征进行了可视化对比。
-    ![t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464251-2.png)
+    ![t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464251-2.png)
     结论：HTSW（图d）生成的特征在同类中更紧凑，不同类之间分离度更清晰，直观地证明了其优越的特征判别能力。
 
 ### ⚖️ 评分理由

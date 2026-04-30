@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 β-AVSDnet是一个端到端的多模态神经网络，整体架构如图3所示，旨在联合处理视频、音频和说话人嵌入，输出每个说话人在每个时间帧的活动概率。
 
-![β-AVSDnet End-to-End Neural Network Architecture](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460727-2.jpg)
+![β-AVSDnet End-to-End Neural Network Architecture](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460727-2.jpg)
 (图3: β-AVSDnet端到端神经网络架构图)
 
 主要组件及数据流：
@@ -59,7 +59,7 @@ hiddenInHomeList: true
     *   功能：融合视觉嵌入和说话人嵌入，生成一个联合的音视频身份表示。其结构如图4所示。
     *   处理：将视觉嵌入（时间维度与音频对齐后）和说话人嵌入进行拼接。然后通过两个并行路径：a) 一个单层LSTM，捕捉时序动态；b) 一个线性层后接ReLU，强调静态身份线索。两个路径的输出再次拼接，经过一个线性投影层，得到联合音频-视觉嵌入。
 
-![β-AV Embedding Subnet](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460727-3.png)
+![β-AV Embedding Subnet](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460727-3.png)
 (图4: β-AV嵌入子网络结构图)
 
 4.  音频流：

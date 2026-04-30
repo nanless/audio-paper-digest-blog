@@ -50,7 +50,7 @@ hiddenInHomeList: true
 *   RAW_DATA: 包含原始文件。
 *   REFINED_DATA: 包含归一化后的干声（-35 LUFS）、HOA5音频、轨迹日志及元数据（annotation.xls）。数据按项目分组（EXPEDITION, DIALOGUE），文件索引跨模态同步。
 
-![图1: 数据对示例与生成管线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460491-0.png)
+![图1: 数据对示例与生成管线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460491-0.png)
 图1(a)展示了数据集中一个条目的组成部分：干声音频、HOA5混音音频和XYZ轨迹。图1(b)展示了使用SPAT Revolution通过基于OSC的运动路径将音轨渲染为36通道AmbiX格式的生成管线。
 
 关键设计选择：

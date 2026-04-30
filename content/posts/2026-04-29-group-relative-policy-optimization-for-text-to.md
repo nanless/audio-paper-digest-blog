@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 本文的核心贡献是提出一种基于GRPO的微调流程，而非一个全新的TTS生成架构。其流程如图2所示，适用于两类主流的LLM-based TTS模型。
 
-![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462553-1.jpg)
+![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-1.jpg)
 图2：GRPO微调流程。灰色模块表示冻结。预训练的语音Token LLM作为策略模型πθ，同时初始化参考模型πref（冻结）。对于输入文本y，策略模型进行G次采样得到一组输出语音token O。这些token经解码器（如Codec解码器或流匹配+声码器）转换为波形X。随后，使用一个现成的ASR模型（如Whisper）对X进行识别，并计算复合奖励R。根据奖励计算组内相对优势A，最后通过最大化GRPO目标函数（公式7）更新策略模型参数。
 
 完整流程与组件交互：
@@ -115,9 +115,9 @@ hiddenInHomeList: true
 分析实验图表：
 *   图3（散点图）：显示RCER与RNLL的相关性很弱，证明了两者提供互补信息。
 *   图4 & 图5（频谱图对比）：
-    *   ![图4: pdf-image-page4-idx3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462553-3.jpg)
+    *   ![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-3.jpg)
         图4：中文示例频谱图。基线模型（a, b）存在漏字（“差距”）和发音错误（“于”），而GRPO-NLL（c）和GRPO-CER-NLL（d）修正了这些错误，且韵律停顿更自然。
-    *   ![图5: pdf-image-page4-idx4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462553-4.png)
+    *   ![图5: pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-4.png)
         图5：英文示例频谱图。与图4类似，GRPO微调后的模型（c, d）修正了基线模型（a, b）的转录错误（如“at” vs “a”），生成了更准确的语音。
     这些直观示例佐证了定量指标的改善。
 

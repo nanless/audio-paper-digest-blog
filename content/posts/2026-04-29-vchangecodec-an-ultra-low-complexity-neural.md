@@ -51,10 +51,10 @@ hiddenInHomeList: true
 
 VChangeCodec的整体架构是一个编码器-量化器-解码器框架，其中集成了一个用于音色转换的轻量级模块（Converter）。它支持两种工作模式：原始语音模式和变声模式。
 
-![图1: 不同音色定制方案在RTC中的对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461501-0.png)
+![图1: 不同音色定制方案在RTC中的对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461501-0.png)
    图1对比了传统级联方案和VChangeCodec集成方案。左图(a)展示了传统方案：VC系统先运行，产生延迟，然后经过编解码和传输，总延迟高。右图(b)展示了VChangeCodec方案：VC模块（蓝色块）直接集成在编解码器中，支持模式切换，大幅降低了算法延迟。
 
-![图2: VChangeCodec整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461501-1.png)
+![图2: VChangeCodec整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461501-1.png)
 *   图2详细展示了VChangeCodec的架构。
     *   (a) 编码器：输入16kHz语音，经过一个1D卷积层、预处理层（因果卷积+ReLU+平均池化下采样）、四个下采样块（每个块由四个扩张率为{1,3,5,7}的扩张残差单元和平均池化组成）和一个带tanh激活的1D卷积层，输出84维的潜在特征`z`。整个编码器是全因果的，支持流式处理。
        (b) 标量量化器：对潜在特征`z`的每个维度进行标量量化（SQ），公式为`ẑ = round(z  R)/R`。这里`R`控制比特率。论文探索了较小的标量值级别（`R=2`）和较低的比特率（6 kbps）。
@@ -158,7 +158,7 @@ VChangeCodec的整体架构是一个编码器-量化器-解码器框架，其中
 
 结论：VChangeCodec的编码器和解码器实时因子均低于Lyra2，证明其计算效率更高。变声模式仅增加约0.003的RTF开销。
 
-![图3: 实验结果相关图表（可能包含更多主观评分或波形/频谱对比）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461501-11.png)
+![图3: 实验结果相关图表（可能包含更多主观评分或波形/频谱对比）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461501-11.png)
 注：由于用户提供的图片列表中，图3-14的具体内容未知，且论文正文中未引用这些图片进行实验结果展示，故此处仅基于文中表格和文字描述进行分析。
 
 ### ⚖️ 评分理由

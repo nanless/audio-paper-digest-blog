@@ -60,7 +60,7 @@ FinHuBERT采用两阶段架构，如图1所示。
   - CCA对齐：使用典型相关分析（CCA）定期（每1000步）重新计算线性投影，确保FIN输出与HuBERT表示空间对齐，最大化两者相关性。
 - 训练策略：首先冻结FIN权重训练10k步，然后以较低学习率（1e-5）对FIN进行微调。HuBERT模型全程可训练。总损失函数为：`L_total = L_FIN + αL_mask + βL_CCA`，其中`L_mask`是HuBERT原始的掩码预测损失，`L_CCA`是跨特征层的CCA一致性损失。
 
-![pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464914-0.jpg)
+![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464914-0.jpg)
 
 ### 💡 核心创新点
 
@@ -140,7 +140,7 @@ FinHuBERT采用两阶段架构，如图1所示。
 结论：声学特征近似最准确（LFQ最高），语言特征最难。所有层级的特征整合度（FIS）都很高，表明协同工作有效。
 
 6. 注意力权重分布（图2描述）
-![pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464914-0.jpg)
+![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464914-0.jpg)
 结论：该图可视化了第8层Transformer上，三种特征的注意力权重在语音片段上的动态变化。权重分布与表6的AWD范围一致，并且展示了语音学特异性：声学特征权重在辅音（C）处达到峰值，韵律特征在短语边界（B）处峰值，语言特征在元音（V）处上升。这证明了模型能自适应地、语音学合理地利用不同层次特征。
 
 ### ⚖️ 评分理由

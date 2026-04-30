@@ -85,10 +85,10 @@ hiddenInHomeList: true
     *   架构见图2右侧。
 
 架构图：
-![图1: 论文中的预处理步骤和SpeechCARE模型架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462646-0.png)
+![图1: 论文中的预处理步骤和SpeechCARE模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462646-0.png)
 图1说明：展示了从原始音频到模型预测的完整流程。上半部分是SpeechCARE-AGF（多模态）的架构，清晰地展示了声学编码器（mHuBERT + 分段 + 自注意力）和语言编码器（mGTE）的并行处理，以及通过门控网络进行融合的过程。下半部分是SpeechCARE-Whisper（纯声学）的架构，展示了Whisper编码器直接处理频谱图，并通过自注意力机制和MLP进行分类。
 
-![图2: TTS（左）和VC（右）管道架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462646-1.png)
+![图2: TTS（左）和VC（右）管道架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462646-1.png)
 图2说明：详细描述了两种数据增强方法的内部结构。左侧TTS管道展示了从诊断标签/线索输入LLM生成文本，再结合参考说话人嵌入通过SparkTTS生成语音的流程。右侧VC管道展示了通过提取声学特征、构建图模型进行说话人配对，最后使用OpenVoice进行语音转换的流程。
 
 #
@@ -157,7 +157,7 @@ hiddenInHomeList: true
 | | TTS + VC | 90.1 | 90.1 |
 
 实验结果图表：
-![图3-7: 论文中的其他图表](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462646-2.png)
+![图3-7: 论文中的其他图表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462646-2.png)
 注：论文中图3-7的图像URL已提供，但根据任务描述，此处无需重复粘贴已在上文详细分析中解读过的图1和图2。实验结果的量化数据已通过表格完整呈现。
 
 #

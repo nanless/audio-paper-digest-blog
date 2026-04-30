@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 表2展示了主实验结果，本文提出的OV-InstructTTS-TEP在指令遵循的客观与主观指标上均取得最优。
 
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464784-1.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464784-1.png)
 图2展示了OV-InstructTTS-TEP的模型架构(a)和一个具体的工作示例(b)。架构图清晰地表明了模型接收开放式指令和转录文本后，首先生成推理过程（Think Token），然后基于推理结果生成带有情感和副语言标签的富化转录文本以及对应的音频Token。
 
 ### 🏗️ 模型架构

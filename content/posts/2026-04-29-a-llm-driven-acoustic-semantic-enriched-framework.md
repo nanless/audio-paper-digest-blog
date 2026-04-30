@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 本文提出的ASE-CLAP框架整体架构如图1所示。其完整流程和主要组件如下：
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461966-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461966-0.png)
 
 1.  音频特征提取：输入原始音频波形，首先使用预训练的CLAP音频编码器提取通用音频嵌入。为适配水声领域，嵌入通过一个由两个线性层、ReLU激活和BatchNorm组成的可训练适配器进行转换，最终得到512维的水声域特征向量 a。
 
@@ -166,7 +166,7 @@ hiddenInHomeList: true
 关键结论：Top-k阈值（按相似度比例筛选）为0.9时性能最佳。过高（1.0）会引入噪声，过低（<0.9）则丢失必要语义信息。
 
 图2: pdf-image-page2-idx1
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461966-1.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461966-1.png)
 关键结论：该图可视化了基线模型（a）和本文ASE-CLAP模型（b）学到的音频嵌入（使用t-SNE降维）。ASE-CLAP的嵌入点聚类更紧凑、不同类别之间的边界更清晰，直观证明了其学到的特征更具判别性。
 
 #

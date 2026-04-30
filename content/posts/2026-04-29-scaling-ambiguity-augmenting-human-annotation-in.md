@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 本论文的整体框架（图1）是一个数据生成-增强-训练的管线，而非单一端到端模型。其核心是利用一个ALM（图中标为Qwen2-Audio骨干）来完成合成标注生成和最终的情感分布预测两个任务。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463753-4.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463753-4.png)
 （图1：框架概览。包含三个模块：(1) 合成感知代理；(2) DiME-Aug；(3) ALM微调。）
 
 详细流程如下：
@@ -103,7 +103,7 @@ hiddenInHomeList: true
 论文的核心实验围绕三个问题展开，关键结果如下：
 
 1. 合成标注与人工标注的相似性（图2）
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464198-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464198-1.png)
 （图2：合成标注数量与JS散度的关系。随合成标注增多，JS散度下降并趋于饱和。IEMOCAP饱和点约6，MSP-Podcast约10。）
 
 2. 不同标注源对AER模型性能的影响（表2）
@@ -126,7 +126,7 @@ hiddenInHomeList: true
 - 结论：在MSP-Podcast上，组合标注+DiME-Aug取得了最佳性能。在IEMOCAP上，人工标注+DiME-Aug性能最优，组合标注略逊。仅使用合成标注的效果始终最差。
 
 3. 不同模糊度层级的性能分析（图3）
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463753-4.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463753-4.png)
 （图3：在不同模糊度（低/中/高）水平下，人工标注与组合标注训练的模型的JS散度对比。在低、中模糊区，组合标注优于或接近人工标注；在高模糊区，组合标注效果下降，甚至不如人工标注。）
 
 4. 标注统计分析（表3）

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 FastAV本身并非一个独立的音视频大语言模型，而是一个应用于现有模型（如VideoLLaMA2、video-SALMONN2）推理阶段的加速框架。其整体流程如图3所示。
-![FastAV框架概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463130-2.jpg)
+![FastAV框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463130-2.jpg)
 图3：FastAV框架概览。输入序列包含视频（X_vis）、音频（X_aud）和文本（X_lang）token。整体推理过程（a）在中间层（L/2）进行全局剪枝，在后续层进行精细剪枝。剪枝机制（b）展示了全局剪枝依据注意力回溯，精细剪枝依据最后查询token的注意力分析。
 
 核心组件与流程：
@@ -121,7 +121,7 @@ FastAV本身并非一个独立的音视频大语言模型，而是一个应用�
 表4：不同精细剪枝比例P的对比。P=20%在FLOPs和平均性能间取得最佳平衡。
 
 层级选择分析（图4）
-![层级选择分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463130-8.png)
+![层级选择分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463130-8.png)
 图4：VideoLLaMA2在AVHBench子任务上不同起始剪枝层的性能。在中间层（如第14层）开始剪枝，能在两项任务上取得最佳平衡。
 
 ### ⚖️ 评分理由

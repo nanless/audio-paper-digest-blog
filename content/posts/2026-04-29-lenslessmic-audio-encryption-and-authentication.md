@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 LenslessMic是一个端到端的音频加密与认证系统，其架构包含编码、加密（物理拍摄）、解密（重建）和解码四个主要阶段。
 
-![LenslessMic Pipeline](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463973-0.png)
+![LenslessMic Pipeline](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463973-0.png)
 图1：LenslessMic系统流程图。展示了音频信号如何经过神经音频编码、视觉表示转换、无透镜相机捕获、计算重建，最终解密恢复音频的过程。
 
 1. 音频编码与视觉表示生成：

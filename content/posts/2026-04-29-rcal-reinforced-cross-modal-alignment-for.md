@@ -48,7 +48,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 RCAL是一个以视觉为中心的多模态情感分析框架，其整体流程如下图所示。
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461715-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461715-0.png)
 输入：稀疏的视觉帧（经过采样）、文本序列、音频波形。
 1.  模态编码：
     *   视觉：使用预训练ResNet提取帧级特征，投影到d维空间，再通过多层Transformer编码器（L层）得到层级视觉表示 `h(i)_v`。
@@ -56,7 +56,7 @@ RCAL是一个以视觉为中心的多模态情感分析框架，其整体流程�
     *   音频：经过线性投影后，由一个Transformer编码器处理，得到音频表示 `h_a`。
 2.  核心模块 - RCAL Block (迭代记忆精炼)：
     RCAL由L个堆叠的RCAL块组成，每个块包含“记忆更新”和“记忆反馈”两个阶段，如图2所示。
-    ![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461715-1.png)
+    ![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461715-1.png)
     *   Stage A: 记忆更新：一个全局的视觉记忆 `hv_hyper`（初始化为可学习参数或零）通过多头注意力（MHA）整合当前层的视觉表示 `h(i)_v` 与文本 `h_l`、音频 `h_a` 的信息。同时，一个关键的“强化学习门控”控制是否将“音频-文本交互” `h_la` 注入记忆。更新公式：`hv_hyper ← hv_hyper + MHA(h(i)_v, h_a, h_a) + MHA(h(i)_v, h_l, h_l) + h_used,(i)_la`。
     *   Stage B: 记忆反馈：更新后的记忆 `hv_hyper` 被投影并经过一个Transformer层，反馈回视觉流，指导下一层的视觉编码：`h(i+1)_v ← h(i+1)_v + Transformer_pred(Proj_fb(hv_hyper))`。
     这个更新-反馈循环使记忆能迭代地积累跨越帧的、稳定的情感线索。
@@ -129,9 +129,9 @@ RCAL是一个以视觉为中心的多模态情感分析框架，其整体流程�
 结论：性能随帧数增加而提升，但5帧已能取得非常强的结果，展示了框架在极端稀疏下的鲁棒性。
 
 可视化分析 (图3, 图4)：
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461715-2.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461715-2.png)
 图3展示了门控激活与音频-文本注意力。不同层的门控激活率不同（Layer 0: 0.51, Layer 1: 0.36, Layer 2: 0.71），表明模型能自适应调节不同层级的融合深度。音频-文本注意力在不同层关注不同的模态关系。
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461715-3.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461715-3.png)
 图4展示了对比损失的效果。训练后，类内余弦相似度从0.41提升到0.68，类间相似度从0.32降至0.18，表明嵌入空间按情感得到了更清晰的结构化组织。
 
 ### ⚖️ 评分理由

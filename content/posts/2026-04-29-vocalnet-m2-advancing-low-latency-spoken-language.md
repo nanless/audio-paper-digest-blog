@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 VocalNet-M2采用“Thinker-Talker”（思考者-说话者）架构，如图1所示。
 
-![图1: VocalNet-M2架构���](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461309-0.png)
+![图1: VocalNet-M2架构���](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461309-0.png)
 
 1.  输入处理：原始音频输入`xa`首先经过一个基于Whisper-large-v3的音频编码器和一个下采样适配器，转换为连续的语音表示`ra_1:T`。
 2.  Thinker模块：初始化自Qwen3-8B。它接收语音表示，自回归地生成文本响应令牌`ttext_1:N`及其对应的隐藏状态`htext_1:N`。该模块主要利用LLM的语义理解和生成能力。
@@ -104,7 +104,7 @@ VocalNet-M2采用“Thinker-Talker”（思考者-说话者）架构，如图1�
 结论：引入MTP层能显著提升性能（WER从8.56降至6.07），4层时达到最佳平衡。
 
 图2. 首块延迟分解
-![图2: 延迟分解图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461309-0.png)
+![图2: 延迟分解图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461309-0.png)
 
 结论：延迟主要由Thinker、Talker和Vocoder三部分构成。采用多码本（XY-Tokenizer）和MTP后，Talker和Vocoder阶段的延迟被显著压缩，最终总延迟从725ms降至349ms。
 

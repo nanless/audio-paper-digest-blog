@@ -44,13 +44,13 @@ S-PRESSO巧妙地将扩散先验与离线量化结合，在0.096kbps下实现了
 
 S-PRESSO是一个端到端的音频压缩-解压框架，其核心是利用预训练的生成模型作为解码器。整体流程分为三个阶段，如图1所示。
 
-![图1：S-PRESSO方法概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463920-0.png)
+![图1：S-PRESSO方法概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463920-0.png)
 图1 说明：该图清晰地展示了三步训练流程。Step 1是扩散自编码器训练，原始音频经一个低压缩率的AudioAE编码为`x0`，再由潜在编码器`gψ`压缩为`z`，`z`经线性层`fϕ`上采样后作为条件，输入到预训练的扩散Transformer（DiT）解码器`Dθ`中，`Dθ`被训练从加噪的`x0`中重建出干净的`x0`。Step 2是对`z`进行离线量化得到`zq`。Step 3是用`zq`替换`z`，微调`Dθ`和`fϕ`。
 
 - Audio Autoencoder (AudioAE)：一个基于GAN的低压缩率自编码器，用于将原始48kHz波形转换为更紧凑、信息更丰富的潜在表示`x0`。其解码器基于Vocos[13]，直接预测STFT复数系数，以减少上采样伪影。其作用是为后续的高压缩提供一个高质量的潜在表示空间。
 - 潜在编码器 (Latent Encoder, `gψ`)：如图2(a)所示，这是一个深度可变的Transformer编码器。它沿时间和频率轴对`x0`进行下采样，时间压缩因子`t`根据目标帧率调整（帧率=100/t Hz）。它使用RoPE位置编码，并通过平均池化实现时间下采样，输出压缩后的潜在表示`z`。
 
-![图2：架构细节](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463920-1.png)
+![图2：架构细节](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463920-1.png)
 图2(a)说明：展示了潜在编码器的结构：输入`x0`经过多个Transformer块（使用RoPE），然后通过线性层和平均池化层实现时间下采样，得到`z`。
 图2(b)说明：展示了扩散解码器中的条件注入机制。压缩后的音频条件`audio↓`（来自`fϕ(z)`）被视为第三种模态，通过专门的Q、K、V层注入到DiT中，并与原始音频模态共享降采样的RoPE位置编码以保持对齐。
 
@@ -117,11 +117,11 @@ S-PRESSO是一个端到端的音频压缩-解压框架，其核心是利用预�
 结论：在低比特率下，S-PRESSO的FADCLAP (0.048) 比SemantiCodec (0.136) 好一个数量级。在超低比特率0.3kbps下，S-PRESSO在几乎所有指标上都优于SemantiCodec，尤其在感知质量（FADCLAP）和相似度（CLAPaudio）上优势明显。
 
 图3：MUSHRA主观评测结果
-![图3：MUSHRA得分对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463920-2.png)
+![图3：MUSHRA得分对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463920-2.png)
 图3 说明：在约1.35 kbps和约0.3 kbps两个比特率下，S-PRESSO的“质量”和“相似度”得分均显著高于SemantiCodec和低通锚点，证实了其在主观感知上的优势。但两者均未达到参考音频（ref）的水平。
 
 图4：不同比特率/帧率配置下的性能变化
-![图4：比特率与帧率的影响](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463920-3.png)
+![图4：比特率与帧率的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463920-3.png)
 图4 说明：该图显示，对于固定的帧率（如1Hz），增加码本数量（从8到25）能提升性能（FADCLAP降低，CLAPaudio升高）。对于固定的比特率，更高的帧率（如11Hz vs 1Hz）带来更好的性能。同时，比较微调（ft）与未微调的结果，显示微调步骤在所有配置下都带来了性能提升。
 
 ### ⚖️ 评分理由

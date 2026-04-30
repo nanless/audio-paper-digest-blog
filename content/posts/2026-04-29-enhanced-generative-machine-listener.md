@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和待测音频（˜x）的信号对，输出为预测的MUSHRA分数均值及其对应的Beta分布参数（α, β）。
 
-![pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461866-0.png)
+![pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-0.png)
 图1（论文图1）：预测分数与真实MUSHRA分数的散点对比图。GMLv2（最右列）的预测点紧密围绕对角线（理想预测线），显示其在所有测试集上预测的一致性和准确性显著优于PEAQ和ViSQOL。
 
 整体流程与关键组件：
@@ -117,13 +117,13 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
 *   细分结果：GMLv2的优势在传统编解码器（如USAC系列）和神经编解码器（NAC Mono/Stereo）上均有体现，且在双耳音频（Binaural）和ODAQ（含各类失真）上也表现稳健，证明了其广泛的泛化能力。
 *   可视化证据：论文提供了图1（散点图），直观展示了GMLv2的预测点相比PEAQ和ViSQOL更紧密地聚集在对角线周围，支持了其定量结果。
 
-![pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461866-1.png)
+![pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-1.png)
 （注：根据用户提供的图片列表，此图对应图2，但论文正文中未明确引用图2。可能为其他结果图。）
 
-![pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461866-2.png)
+![pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-2.png)
 （注：根据用户提供的图片列表，此图对应图3，但论文正文中未明确引用图3。可能为其他结果图。）
 
-![pdf-image-page4-idx3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461866-3.png)
+![pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-3.png)
 （注：根据用户提供的图片列表，此图对应图4，但论文正文中未明确引用图4。可能为其他结果图。）
 
 #

@@ -51,10 +51,10 @@ WaveSpikeNet的整体架构（如图2所示）是一个端到端的音频分类�
 5.  分类输出：融合后的特征送入分类器（论文中未详细说明分类头结构，通常为全局平均池化后接全连接层）进行分类预测。
 
 架构图说明：
-![WaveSpikeNet整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462706-1.png)
+![WaveSpikeNet整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462706-1.png)
 图2展示了从梅尔频谱图输入到分类输出的生物启发式双通路设计。频率解耦模块将频谱图分解为LL、LH、HL、HH子带，分别送入低频通路和高频通路，最后通过注意力和融合模块整合。
 
-![核心组件](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462706-0.jpg)
+![核心组件](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462706-0.jpg)
 图3展示了两个核心组件：(a) 基于提升方案的可学习小波变换模块，展示了如何通过可学习的预测（P）和更新（U）操作分解输入；(b) 用于高频通路的状态化LIF神经元模型，显示了膜电位（mem）随输入积累、泄漏、发放脉冲（spikes）和重置的过程。
 
 ### 💡 核心创新点
@@ -195,7 +195,7 @@ AudioSet (Balanced 20k) 性能 (Table 3)
 关键结论：双通路设计（-2.23%）和可学习小波变换（-1.79% vs 固定Haar， -1.56% vs 无LDWT）是性能贡献最大的组件。脉冲机制和中间融合也带来了超过1%的提升。模型缩放显示，Base变体效率最高，Tiny精度损失明显，Large则收益递减。
 
 效率对比图：
-![Accuracy vs. Parameters on UrbanSound8K](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462706-0.jpg)
+![Accuracy vs. Parameters on UrbanSound8K](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462706-0.jpg)
 图1在参数量（对数尺度）与准确率的平面上，展示了各模型的分布。WaveSpikeNet（尤其是Base）位于左上方，表明其以极少的参数实现了高精度，定义了新的参数效率前沿。
 
 ### ⚖️ 评分理由

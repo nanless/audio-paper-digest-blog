@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 本文的核心并非提出一个新的SDD检测模型，而是提出一个训练框架（DPDA），该框架可应用于各种现有的SDD模型架构。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464739-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464739-0.png)
 架构流程说明：
 1.  双路径输入：对于一个训练语句，同时生成其原始波形`x`和增强波形`˜x`（如通过RawBoost处理）。
 2.  共享模型：两个输入分别或以mini-batch形式送入同一个待训练的SDD模型`f(θ)`（如XLSR-Conformer-TCM），计算各自的损失`L(x)`和`L(˜x)`。
@@ -117,7 +117,7 @@ hiddenInHomeList: true
 | | + PCGrad | 1.63 | 7.19 | 2.91 |
 结论：梯度对齐在多种增强策略下均有效。RawBoost增强本身效果最强。
 
-![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464739-1.png)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464739-1.png)
 图2说明：展示了训练过程中原始输入和增强输入的损失（log10尺度）和梯度范数的平均值。可以清晰看到，增强输入的损失和梯度范数始终高于原始输入，这种不平衡可能导致模型更新被增强输入主导。这为梯度冲突提供了直观证据。
 
 关键消融与分析：

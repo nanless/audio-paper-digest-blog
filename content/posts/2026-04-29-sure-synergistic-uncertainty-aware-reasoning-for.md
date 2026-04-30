@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![SURE整体框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464547-0.png)
+![SURE整体框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464547-0.png)
 图1：SURE整体框架图
 
 SURE框架接收对话中每个话语的多模态特征（文本、声学、视觉）作为输入，最终输出每个话语的情感类别。其整体流程如图1上部所示，主要包含四个阶段：特征提取、不确定性感知特征精炼、迭代上下文推理、多模态交互融合与分类。

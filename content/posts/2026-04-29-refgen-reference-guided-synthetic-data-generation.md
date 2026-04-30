@@ -54,7 +54,7 @@ RefGEN是一个四阶段框架，整体架构如图1所示。
 3.  (C) 数据过滤：使用一个在原始DCASE数据集上微调好的BEATs属性分类器`f_ϕ`对每个生成样本进行预测。只保留预测属性与生成时使用的条件标签一致的样本（`I(a_i, c_i)=1`），形成过滤后的合成数据集`D_filtered`。
 4.  (D) ASD系统：将原始真实数据`D_original`与过滤后的合成数据`D_filtered`合并，用于训练最终的ASD模型。该模型使用BEATs初始化的ViT主干，采用FMQAP进行特征融合，并用ArcFace损失进行微调。推理时，分别为源域和目标域建立KNN检测器，取最小归一化余弦距离作为异常分数。
 
-![RefGEN整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461896-0.jpg)
+![RefGEN整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461896-0.jpg)
 
 ### 💡 核心创新点
 
@@ -95,7 +95,7 @@ RefGEN是一个四阶段框架，整体架构如图1所示。
 
 频谱图对比（见图2）：直观展示了参考引导生成（中间行）比纯文本生成（底行）能更好地保留原始音频（顶行）的频谱时频结构和关键特征。
 
-![频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461896-9.png)
+![频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461896-9.png)
 图2：从左到右分别为Valve和ToyTrain类型。每行从上到下：真实音频、参考引导生成、参考引导生成（α=0.1）、参考自由生成（α=1.0）。 结论：参考引导生成能有效平衡保真度和多样性，生成数据的频谱结构更接近真实分布。
 
 ### ⚖️ 评分理由

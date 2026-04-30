@@ -111,10 +111,10 @@ hiddenInHomeList: true
 2.  重放真实语音（RB）是最难检测的类别（F1最低， EER最高），因其缺乏合成伪影且与真实语音高度相似。
 3.  纯合成语音（F）在开放集中仍相对容易识别，说明模型可能过度依赖合成伪影，而重放引入的信道失真掩盖了这些伪影。
 
-![图1：ADD模型在真实世界条件下的误分类示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464778-0.png)
+![图1：ADD模型在真实世界条件下的误分类示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464778-0.png)
 图1直观展示了两个核心问题：(a) 普通用户的真实语音易被误判为伪造；(b) 攻击者通过重放伪造语音可以绕过检测。
 
-![图2：EchoFake数据集构建流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464778-1.jpg)
+![图2：EchoFake数据集构建流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464778-1.jpg)
 图2展示了数据集的构建流程，从CommonVoice采样，经过TTS合成和重放，最终形成四种类型的音频（B, RB, F, RF）。
 
 ### ⚖️ 评分理由

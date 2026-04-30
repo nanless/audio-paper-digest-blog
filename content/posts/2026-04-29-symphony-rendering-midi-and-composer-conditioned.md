@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 本系统的整体架构是一个条件生成流水线，分为训练和推理两个阶段，核心是流匹配Transformer在音频VAE的潜在空间中进行生成。
 
-![图1: 系统整体框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462437-0.png)
+![图1: 系统整体框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462437-0.png)
 
 完整输入输出流程与主要组件：
 1.  条件提取模块：

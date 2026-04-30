@@ -76,7 +76,7 @@ hiddenInHomeList: true
     *   后处理：对原始帧级概率输出进行处理：节拍/下拍通过阈值（50%）和峰值拾取；动态级别在节拍位置取argmax；变化点先通过阈值（75%）筛选，再对齐到最近的节拍上。
 
 架构图：
-![模型整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460839-1.png)
+![模型整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460839-1.png)
 图2详细展示了从输入BSSL/log-Mel特征，经过三尺度编码器生成共享表示Z，再通过MMoE模块（8个专家+4个门控）为每个任务生成特化表示，最终通过线性头输出的完整数据流。
 
 ### 💡 核心创新点

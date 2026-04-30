@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 CoVA框架整体分为三个模块：特征提取、门控融合Transformer（GFT）和AVT组合融合。其完整流程如下：
 
-![CoVA框架概览图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461962-2.jpg)
+![CoVA框架概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461962-2.jpg)
 
 1.  特征提取：
     - 视觉特征：从参考视频中均匀采样N帧，通过CLIP图像编码器提取每帧的[CLS]特征，得到帧特征序列`f`。

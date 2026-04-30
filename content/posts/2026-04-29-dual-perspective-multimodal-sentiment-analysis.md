@@ -63,7 +63,7 @@ hiddenInHomeList: true
     *   单模态解码器（Mono Decoder）：一个辅助回归头，对各个单模态子空间特征进行独立预测，起到正则化作用。
     *   总损失：结合主预测损失（MSE）、对比学习损失（用于对齐子空间表征）和辅助单模态损失。
 
-![图1: DPMSA-MoE框架架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462471-0.png)
+![图1: DPMSA-MoE框架架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462471-0.png)
 图1展示了从单模态编码、双视角投影到六个专家、再到门控融合的完整数据流。图示清晰地表明了每个模态的特征如何分裂为共振和分歧两个路径，并最终通过加权融合汇聚。
 
 ### 💡 核心创新点

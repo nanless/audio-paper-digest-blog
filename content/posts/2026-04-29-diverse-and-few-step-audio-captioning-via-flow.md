@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 FAC的整体架构遵循DAC-RLD流水线，如图1所示。其核心是用一个流匹配模块替代了原有的扩散去噪模块。
 
-![图1: FAC模型架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462589-0.png)
+![图1: FAC模型架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462589-0.png)
 
 完整流程：
 1.  音频编码：输入的音频片段首先通过一个预训练的音频编码器（BEATs）转换为声学特征表示 `a`。
@@ -135,7 +135,7 @@ FAC的整体架构遵循DAC-RLD流水线，如图1所示。其核心是用一个
 结论：推理速度提升约12倍（论文摘要提及25倍是基于采样步数减少25倍，而实际墙钟时间受每步计算量影响）。
 
 消融实验：噪声尺度σ的影响（图3）
-![图3: 不同噪声尺度σ对FAC性能的影响](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462589-0.png)
+![图3: 不同噪声尺度σ对FAC性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462589-0.png)
 结论：增大σ（训练噪声）会使生成多样性降低（mB4↑， BLEU4↑），中等σ（≈1.0）时SPIDEr（准确性与多样性综合指标）达到最优。这证明了通过σ控制多样性的有效性。
 
 ### ⚖️ 评分理由

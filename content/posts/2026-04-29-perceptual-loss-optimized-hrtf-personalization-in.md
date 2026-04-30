@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 论文的整体模型架构如图1所示。
 
-![图1: 模型架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460447-0.jpg)
+![图1: 模型架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460447-0.jpg)
 
 完整输入输出流程：
 1.  输入：对于每个频率索引k，输入包括：(a) 通用HRTF（作为先验）；(b) 该个体的17个标准化人体测量参数（9个耳部相关，8个头部相关）；(c) 当前频率索引k。
@@ -133,7 +133,7 @@ hiddenInHomeList: true
 - 结论：提出方法（w/ LCB）在减少前后混淆率和提高方位准确率上均显著优于使用通用HRTF和基线DP-SHT。特别是在上中面，引入CB损失使混淆率从47.22%大幅下降到30.56%。论文将此归因于对HRTF陷波（notch）频率更准确的预测，如图2(f)所示。
 
 HRTF可视化对比（图2）：
-![图2: HRTF对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460447-1.jpg)
+![图2: HRTF对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460447-1.jpg)
 -   子图(a)-(d)：展示了水平面上对数幅度谱的俯视图。可以直观看出，(d) 提出方法预测的HRTF比(c) 基线DP-SHT预测的HRTF，在细节纹理（如亮线和暗带）上更接近(a) 真实HRTF和(b) SHT重建的真实HRTF。
 -   子图(e)-(f)：在特定方向（正前方）的幅度谱对比。图(f)的红框区域显示，提出方法对频率陷波（notch）的预测（橙线）比基线（绿线）更接近真实值（蓝线）和SHT重建值（虚线），这被认为是改善垂直定位的关键。
 

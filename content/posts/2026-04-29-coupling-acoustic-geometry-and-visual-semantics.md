@@ -44,7 +44,7 @@ hiddenInHomeList: true
 6. 主要局限性是什么：实验完全基于模拟生成的回声数据，缺乏真实世界采集的音视觉配对数据的验证；仅评估了室内场景；声学模型单一（仅模拟了单回声源），未考虑更复杂的声学环境。
 
 EchoFormer的整体架构如图1所示，其输入为128x128的RGB图像和对应的回声频谱图，输出为密集深度图。
-![EchoFormer框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-0.png)
+![EchoFormer框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-0.png)
 架构主要包含以下组件和数据流：
 1.  编码器：采用三个预训练骨干网络。
     *   RGB编码器：使用ResNet-50提取图像特征。
@@ -134,9 +134,9 @@ EchoFormer的整体架构如图1所示，其输入为128x128的RGB图像和对�
 
 定性对比与可视化：
 - 图2展示了EchoFormer与VisualEchoes、BI2D等方法在Replica和Mp3D数据集上的定性对比。可以观察到，EchoFormer在纹理稀疏或声学模糊区域能产生更清晰的边界和更连贯的深度结构。
-![定性对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-1.png)
+![定性对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-1.png)
 - 图3是消融研究的可视化结果。从左到右依次为：RGB图像、仅基线模型（Baseline）、基线+SGCD、基线+SGCD+DUGF（即完整模型）、GT（真值）。图像显示SGCD显著改善了几何布局的准确性，而DUGF在退化区域进一步提升了细粒度精度。
-![消融可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-2.png)
+![消融可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-2.png)
 
 - 学术质量：6.0/7：论文提出了一个技术路径清晰、逻辑自洽的解决方案。创新点（SQI， SGCD， DUGF）针对性地解决了多模态融合中的对齐和自适应加权问题，具有较好的技术新颖性。实验部分在两个标准数据集上进行了全面的定量对比（有明确的SOTA提升数字）和定性分析，消融实验设计合理，证明了各模块的贡献。技术正确性高。主要扣分点在于实验均基于合成声学数据，缺乏真实世界验证，且创新主要局限于融合架构，对单模态或基础模型的突破有限。
 - 选题价值：1.5/2：将主动声学线索与视觉融合用于深度估计是一个有前沿性的交叉研究方向，尤其在机器人、自动驾驶、AR等需要鲁棒感知的领域有明确的应用价值。该工作有效推动了此方向的技术进步。给1.5分而非满分是因为其应用场景目前仍相对垂直和特定。
@@ -154,7 +154,7 @@ EchoFormer的整体架构如图1所示，其输入为128x128的RGB图像和对�
 ### 🏗️ 模型架构
 
 EchoFormer的整体架构如图1所示，其输入为128x128的RGB图像和对应的回声频谱图，输出为密集深度图。
-![EchoFormer框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-0.png)
+![EchoFormer框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-0.png)
 架构主要包含以下组件和数据流：
 1.  编码器：采用三个预训练骨干网络。
     *   RGB编码器：使用ResNet-50提取图像特征。
@@ -250,9 +250,9 @@ EchoFormer的整体架构如图1所示，其输入为128x128的RGB图像和对�
 
 定性对比与可视化：
 - 图2展示了EchoFormer与VisualEchoes、BI2D等方法在Replica和Mp3D数据集上的定性对比。可以观察到，EchoFormer在纹理稀疏或声学模糊区域能产生更清晰的边界和更连贯的深度结构。
-![定性对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-1.png)
+![定性对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-1.png)
 - 图3是消融研究的可视化结果。从左到右依次为：RGB图像、仅基线模型（Baseline）、基线+SGCD、基线+SGCD+DUGF（即完整模型）、GT（真值）。图像显示SGCD显著改善了几何布局的准确性，而DUGF在退化区域进一步提升了细粒度精度。
-![消融可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464149-2.png)
+![消融可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464149-2.png)
 
 ### ⚖️ 评分理由
 

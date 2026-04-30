@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 UMV的整体架构（如图1所示）是一个端到端的系统，包含数据预处理、特征融合、Transformer编码和分类四个主要阶段。
 
-![系统架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460467-0.jpg)
+![系统架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460467-0.jpg)
 图1: UMV系统架构图。图中展示了从原始音频输入到最终分类输出的完整流程。
 
 1.  数据预处理与频谱生成：

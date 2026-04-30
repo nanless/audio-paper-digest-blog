@@ -44,7 +44,7 @@ hiddenInHomeList: true
 | Non-blind BWE (Vanilla) | 69.52 | 0.915 | 66.32 | 0.725 |
 | Non-blind BWE (Proposed) | 84.44 | 0.846 | 84.28 | 0.663 |
 
-![图4：频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463670-3.jpg)
+![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463670-3.jpg)
 （图4显示，在复杂频谱结构的交响乐片段中，所提方法（e）能准确恢复谐波细节，而HiFi-GAN+（a）和NU-Wave2（b）表现较差。）
 
 5.  意义：为在低比特率通信系统中实现高质量、低延迟的通用音频编解码器提供了新的技术路径，特别是在蓝牙耳机、无线通话等场景中具有直接应用潜力。
@@ -73,13 +73,13 @@ hiddenInHomeList: true
     *   阶段二：单帧对抗训练。引入MixGAN判别器（包含多个Mix波形判别器和Mix STFT判别器），加入对抗损失和特征损失，优化模型恢复细节的能力。
     *   阶段三：重叠优化阶段。将BWE帧加窗重叠形成片段，计算损失，解决前两阶段因忽略重叠区域相位一致性而导致的帧间不连续和频谱模糊问题。
 
-![图1：整体框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463670-0.jpg)
+![图1：整体框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463670-0.jpg)
 （图1展示了从编码器提取侧信息，到解码器利用LF帧和侧信息生成HF帧，再到重叠加与包络调整的全流程。）
 
-![图2：侧信息模型与非盲BWE模型结构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463670-1.jpg)
+![图2：侧信息模型与非盲BWE模型结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463670-1.jpg)
 （图2左侧简略展示了侧信息模型（侧特征提取），右侧详细展示了基于U-Net的非盲BWE模型结构，包括LF特征提取路径、HF重建路径以及多尺度特征拼接。）
 
-![图3：三阶段训练策略](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463670-2.jpg)
+![图3：三阶段训练策略](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463670-2.jpg)
 （图3清晰地勾勒出从单帧预热、单帧对抗到重叠优化的三个训练阶段，以及各阶段使用的损失函数。）
 
 ### 💡 核心创新点
@@ -145,7 +145,7 @@ hiddenInHomeList: true
     *   MixGAN的有效性：对比Non-blind BWE (Vanilla)（使用传统GAN）和Proposed版本，MUSHRA在语音上提升约15分，证明MixGAN对训练稳定性和最终性能有决定性作用。
     *   量化鲁棒性：对比“无量化”（352比特）和“侧特征1比特”（14比特）配置，性能下降轻微，证明了模型对简重量化方案的鲁棒性（图4中标注e, g, h）。
 
-![图4：频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463670-3.jpg)
+![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463670-3.jpg)
 （图4以交响乐为例，直观展示了不同方法重建频谱的差异。可以看到所提方法（e）恢复了清晰的谐波（亮线），而其他方法存在模糊（HiFi-GAN+）、失败（NU-Wave2）或不准确（EVS）。图中LSD数字也印证了量化分析部分的结论。）
 
 ### ⚖️ 评分理由

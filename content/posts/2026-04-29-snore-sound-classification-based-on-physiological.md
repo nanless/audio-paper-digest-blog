@@ -50,10 +50,10 @@ hiddenInHomeList: true
 | Base | × | – | 0.819 | 75.7 | 72.3 | 58.5 | 86.1 |
 | Adaptive Loss | ✓ | (4,2) | 0.838 | 78.0 | 75.6 | 65.4 | 85.7 |
 
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460686-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460686-1.png)
 图2展示了三个生理特征（ER、STD、SIM）在简单鼾声（蓝色）和病理性鼾声（橙色）上的箱线图分布。STD和SIM特征显示出明显的可分性：病理性鼾声的STD更高、SIM更低。
 
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460686-2.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460686-2.png)
 图3展示了10,000个鼾声片段的频带能量比（ER）分布，简单鼾声整体呈现更高的ER值，而病理性鼾声的ER值相对集中且较低。
 
 5. 实际意义：为家庭环境下的OSA非接触、可解释筛查提供了一种有潜力的技术方案，模型决策过程具有明确的生理依据。
@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460686-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460686-0.png)
 图1：提出方法的流程图。SE表示Squeeze-and-Excitation模块，GAP表示全局平均池化，Adaptive Weight根据能量比调整损失。
 
 整体架构：该方法是一个特征工程+浅层神经网络的流程，而非端到端的深度学习模型。其架构可分为三个主要阶段，如图1所示：

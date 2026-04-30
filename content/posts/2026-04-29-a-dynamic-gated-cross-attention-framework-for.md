@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1：模型架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461985-0.png)
+![图1：模型架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461985-0.png)
 该模型是一个端到端的双流多模态融合框架，主要包含三个部分：音频编码器、文本编码器和动态门控交叉注意力融合模块。
 1.  输入：原始音频波形（s ∈ ℝᴺ）和对应的文本（T）。
 2.  音频编码路径：

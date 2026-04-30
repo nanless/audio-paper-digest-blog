@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 整体框架（如图1所示）主要分为三个阶段：特征编码、时序异质图构建和时序异质图网络（THGN）学习。
 
-![图1: THGCL整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461650-0.jpg)
+![图1: THGCL整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461650-0.jpg)
 图1展示了THGCL的整体流程。左侧为数据输入与特征编码模块；中间展示了时序异质图的构建过程，其中包含音频/视频节点、模态内/间边，以及通过高斯和Hawkes过程进行的边加权；右侧为THGN网络，用于聚合图信息并进行对比学习和最终分类。
 
 1.  特征编码模块：
@@ -72,7 +72,7 @@ hiddenInHomeList: true
         *   可学习池化层：将聚合后的节点表示汇总为一个图级嵌入 `XG`，用于最终分类。
     *   整体损失：由焦点损失（FL，用于分类）和对比损失（CL）加权组合而成（公式5），平衡了分类准确性和跨模态表示学习。
 
-![图2: THGN网络架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461650-1.jpg)
+![图2: THGN网络架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461650-1.jpg)
 图2展示了THGN的具体结构，包括多个时序图层（GNN-A， GNN-V， GAT-AV），以及随后的对比学习模块和可学习池化层，最终输出用于分类的图嵌入。
 
 ### 💡 核心创新点
@@ -120,7 +120,7 @@ hiddenInHomeList: true
     结论：结合两种过程（ID-1）效果最佳。仅使用Hawkes过程（ID-2）次之，仅使用高斯过程（ID-3）效果最差，证明了区分模态内外不同时间依赖关系的必要性。
 
 2.  损失函数消融（图3）：
-![图3: 不同损失函数效果对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461650-2.jpg)
+![图3: 不同损失函数效果对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461650-2.jpg)
 图3(a)显示了训练损失曲线：联合损失（FL+CL）下降最快且最终最低。图3(b)显示了测试mAP曲线：FL+CL不仅初始提升快，且在整个训练过程中保持性能优势。
 结论：加入对比学习（CL）能显著加速收敛、提升最终性能并增强训练稳定性，证实了对比学习目标的有效性。
 

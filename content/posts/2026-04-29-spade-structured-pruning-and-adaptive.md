@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 SPADE并非提出一个新的TTS模型架构，而是一个模型压缩框架，应用于现有的LLM-TTS模型（如CosyVoice 2， LLaSA）。其流程分为两个阶段：
 
-![SPADE框架概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
+![SPADE框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
 
 架构流程详解：
 1.  输入：原始的、未经压缩的LLM-TTS教师模型。
@@ -142,10 +142,10 @@ SPADE并非提出一个新的TTS模型架构，而是一个模型压缩框架，
 结论：余弦距离剪枝导致WER和CER显著上升；静态对应层蒸馏效果也劣于动态自适应蒸馏。证明了WLI指标和动态蒸馏策略的有效性。
 
 相关图表：
-![WER和余弦距离层重要性分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
+![WER和余弦距离层重要性分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
 图2：展示了CosyVoice 2和LLaSA各层的WLI（WER变化）和CLI（余弦距离）。关键结论：基于WLI，位于模型起始、中部和末尾的层通常更关键；且WLI与CLI的模式不完全一致，支持了采用WLI作为剪枝指标的必要性。
 
-![内存使用对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
+![内存使用对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
 图3：展示了模型平均/峰值内存使用与Transformer层数的关系。关键结论：SPADE通过减少层数，有效降低了VRAM使用，例如CosyVoice 2降低14%， LLaSA降低20%。
 
 ### ⚖️ 评分理由

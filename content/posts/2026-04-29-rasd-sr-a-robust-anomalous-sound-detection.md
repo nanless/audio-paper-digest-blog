@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 RASD-SR的完整架构如图1所示。它是一个多层次的框架，集成了特征提取、表示学习、异常评分和集成优化。
 
-![图1: RASD-SR整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461278-0.png)
+![图1: RASD-SR整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461278-0.png)
 
 1. 数据预处理与特征提取：
 *   输入：原始10秒音频波形。
@@ -142,7 +142,7 @@ RASD-SR在两个评估集上均达到最佳Hmean：
     *   最终RASD-SR（集成所有骨干网络及其多种训练策略产生的嵌入）性能远超任何单模型或单策略配置。
 
 3. ACP算法迭代过程（图2）：
-![图2: ACP算法迭代过程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461278-1.png)
+![图2: ACP算法迭代过程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461278-1.png)
 该图显示了在10次独立运行中，ACP算法优化后的集成性能（Hmean）随迭代次数的变化。曲线显示性能在迭代初期快速提升并趋于稳定，表明ACP算法能有效且稳定地找到高性能的集成配置。
 
 表2：不同骨干网络与训练策略的性能对比（Hmean%）

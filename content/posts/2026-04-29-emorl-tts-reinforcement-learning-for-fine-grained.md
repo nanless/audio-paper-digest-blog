@@ -84,7 +84,7 @@ EMORL-TTS的架构如图1所示，它建立在Spark-TTS基座上，主要包含�
     *   SFT阶段：目的是让模型初步学会根据情感和强度Token生成对应情感的语音，为后续强化学习提供一个合理的起点。
     *   GRPO阶段：目的是利用强化学习，通过设计精细的奖励函数，让模型“隐式学习”如何在离散Token空间中实现连续的、细粒度的情感与强调控制，弥补SFT的不足。
 
-![图1：EMORL-TTS框架概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460999-0.png)
+![图1：EMORL-TTS框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460999-0.png)
 图1清晰展示了流程：文本、情感、强度Token输入LLM，生成语音Token，再由BiCodec解码。右侧显示了三个奖励信号（情感分类、全局强度、局部强调）如何通过GRPO优化LLM策略。
 
 ### 💡 核心创新点
@@ -132,7 +132,7 @@ EMORL-TTS的架构如图1所示，它建立在Spark-TTS基座上，主要包含�
 4.  语音质量与自然度：客观（NISQA评分）和主观（MOS）。结果见表5。EMORL-TTS的MOS（4.94）和NISQA（4.11）与Spark-TTS、CosyVoice2等强基线几乎持平，证明强化学习未损害质量。
 5.  词性对强调效果的影响（POSET）：新探索的实验。通过让听众对不同词性（副词、形容词、动词、名词等）被强调的语音进行情感强度排序，得出聚合分数。结果见图2。
 
-![图2：不同词性强调的聚合情感强度分数](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460999-1.png)
+![图2：不同词性强调的聚合情感强度分数](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460999-1.png)
 图2的关键结论：强调副词（Adverbs）产生的感知情感强��最强，其次是形容词（Adjectives），其他词类（动词、名词等）的效果相对较弱。这为通过强调特定词性来精细调节情感提供了实证依据。
 
 与最强基线的差距：

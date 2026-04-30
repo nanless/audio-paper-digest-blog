@@ -59,7 +59,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文并非提出新模型，而是对现有音频LLM进行偏见评估。因此，其“架构”指代的是评估框架（如图1所示）。
-![评估框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463343-0.png)
+![评估框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463343-0.png)
 该框架流程如下：
 1.  输入源：使用DDXPlus数据集提供的170个标准化临床文本病例。
 2.  语音合成：通过TTS模型（Sesame-1B），将每个文本病例合成为36种不同声音特征的语音。这些特征通过说话人档案（Speaker Profile） 系统地变化，涵盖：

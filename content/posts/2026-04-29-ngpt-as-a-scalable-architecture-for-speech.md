@@ -64,10 +64,10 @@ nGPT编码器层内部结构（结合图1）：
     - 对称ALiBi：本文首次引入语音领域的方案。它为注意力分数添加一个静态的、与位置成线性关系的偏置。与原始因果ALiBi不同，本文将其修改为对称矩阵（见图2），使得编码器在处理完整音频序列时，左右上下文受到同等对待，更适合离线任务。
 
 架构图示例：
-![图1：nGPT架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461315-0.png)
+![图1：nGPT架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461315-0.png)
 图1展示了nGPT的完整流程：输入特征经线性子采样后进入nGPT编码器层堆叠，每个层包含RoPE、多头注意力、门控前馈模块，并全程应用超球面归一化。最后由Transformer解码器生成文本。
 
-![图2：对称ALiBi偏置矩阵](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461315-1.png)
+![图2：对称ALiBi偏置矩阵](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461315-1.png)
 图2展示了对称ALiBi的偏置矩阵。与因果ALiBi不同，该矩阵关于对角线对称，确保对当前token左侧和右侧的token施加的线性惩罚是相等的，从而平衡双向上下文。
 
 ### 💡 核心创新点
@@ -157,7 +157,7 @@ nGPT编码器层内部结构（结合图1）：
 3.  任务差异性：nGPT在翻译任务（尤其是X→EN）上的优势比ASR任务更明显。
 
 长序列位置编码实验（图3）
-![图3：长序列ASR中ALiBi与RoPE的对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461315-2.png)
+![图3：长序列ASR中ALiBi与RoPE的对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461315-2.png)
 图3展示了在Earnings长音频数据集上的ASR性能（WER）。横轴代表不同的位置编码处理策略：对于RoPE，是插值因子（越大表示角速度减小越多以适应更长序列）；对于ALiBi，是偏置缩放因子（越小表示对远距离token的惩罚越轻）。纵轴是词错误率（WER）。结果显示，ALiBi在处理长序列时WER更低（性能更好），且调整缩放因子带来的改善比RoPE调整插值因子更显著。
 
 关键结论：在长上下文ASR推理中，ALiBi比RoPE插值更有效。论文指出，ASR任务更依赖局部上下文，因此ALiBi对远距离注意力的适度抑制反而有益；而ST任务可能需要更多全局上下文，RoPE可能更合适。

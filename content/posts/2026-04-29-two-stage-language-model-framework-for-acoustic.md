@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 该模型整体架构为两阶段框架，如图1所示。
 
-![图1: The architecture of the proposed method.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460730-0.jpg)
+![图1: The architecture of the proposed method.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460730-0.jpg)
 
 第一阶段：语义建模 (Semantic Modeling)
 1.  输入：麦克风信号 `y(n)` 和远端参考信号 `r(n)` 的波形。
@@ -96,7 +96,7 @@ hiddenInHomeList: true
 结论：所提方法在所有SER条件下均取得了最高的EMOS和DMOS分数，尤其在低SER（-10dB, -5dB）和单讲场景下优势明显。ERLE指标（66.98 dB）远超基线，表明其极强的回声抑制能力。
 
 图2：不同方法估计的近端语音频谱图对比
-![图2: Spectrograms comparison.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460730-1.png)
+![图2: Spectrograms comparison.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460730-1.png)
 (a) DTLN AEC, (b) MTFAA-NET, (c) Proposed, (d) Ground Truth
 结论：从频谱图可以直观看出，本文方法估计的频谱（c）与干净语音（d）在细节结构上最为接近，而其他方法存在更明显的频谱失真或残留回声成分。
 

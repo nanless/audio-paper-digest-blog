@@ -50,10 +50,10 @@ hiddenInHomeList: true
 5.  输出头：解码后的特征通过卷积投影器生成旋律显著图（salience map）。同时，中间特征被送到另一个投影器用于预测“非旋律”概率。
 6.  辅助模块（用于对比学习和半监督）：在编码器中间层特征上，分别连接音调投影器（T-Proj.） 和八度投影器（O-Proj.），输出用于计算对比损失 `Lcontrast`。同时，维护音调原型（T-Proto.） 和八度原型（O-Proto.），这些原型通过指数移动平均（EMA）由有标签数据特征更新，并在分层半监督学习中用于计算原型相似度置信度 `pa`。
 
-![HybridNet整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463865-0.jpg)
+![HybridNet整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463865-0.jpg)
 图1：HybridNet整体架构图。展示了从输入频谱图到编码器（包含Hybrid Block和Octave Pool）、解码器（包含Octave Unpool和Bin Unpool）、以及用于对比学习（TOCL）和分层半监督学习（S-SSL）的各模块连接关系。
 
-![混合块与八度池化详细结构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463865-1.jpg)
+![混合块与八度池化详细结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463865-1.jpg)
 图2：混合块（Hybrid Block）和八度池化（Octave Pooling）的内部结构。左部详细展示了HB中卷积、双轴Mamba、特征细化（FR）的流程；右部展示了八度池化如何将频率轴reshape为八度-音调网格并沿八度维池化。
 
 ### 💡 核心创新点
@@ -143,7 +143,7 @@ hiddenInHomeList: true
 关键结论：三个组件对最终性能均有显著贡献。移除八度池化（OP）导致性能下降最大（OA -3.33%），证明了显式编码音调层次的重要性。移除对比学习（TOCL）和分层半监督（S-SSL）也分别导致了1.38%和1.32%的OA下降。值得注意的是，移除S-SSL后VFA从8.19显著降低到5.22，表明模型在模糊区域采取了更保守的策略。
 
 - 特征可视化对比（图3）：
-![旋律提取结果可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463865-2.jpg)
+![旋律提取结果可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463865-2.jpg)
 图3：在Opera male5片段上的旋律提取可视化对比。 (a) HybridNet的特征热图，显示干净、结构化的特征，清晰捕捉八度谐波。 (b) HybridNet的预测轮廓（红色虚线）与真值（绿色实线）高度吻合，即使在颤音区域。 (c) SpectMamba的特征热图，特征较为模糊。 (d) SpectMamba的预测轮廓在快速变化部分误差较大。
 关键结论：可视化直观展示了HybridNet生成的特征更具可解释性和判别性，这直接转化为更准确的旋律预测，尤其在处理复杂音乐片段时。
 

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 该模型整体由编码器网络和孪生上下文网络两大部分组成（见图1）。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462317-0.jpg)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462317-0.jpg)
 
 1.  编码器网络：
     *   输入：音频频谱图。

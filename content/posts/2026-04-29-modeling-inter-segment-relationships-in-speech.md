@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 模型架构如图1所示，整体分为三个阶段：音频编码、图构建和图分类。
 
-![图1: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464316-0.png)
+![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464316-0.png)
 
 1.  音频分割与节点特征提取：输入一段完整的自发语音。首先将其分割为 `Nw` 个重叠的10秒窗口（窗口步长5秒）。每个窗口 `wi` 送入一个预训练的音频频谱图Transformer（AST，具体为`ast-finetuned-audioset-10-10-0.4593`），移除其分类头，对最终隐藏状态进行全局平均池化，得到一个768维的谱时序嵌入 `ei`。同时，从整个录音中提取一个共享的5维声调特征向量 `s`（包含时长、RMS能量、平均停顿时长、停顿频率、语音静默比）。将每个窗口的AST嵌入 `ei` 与这个全局声调特征 `s` 拼接，形成773维的节点特征向量 `xi`。因此，一段语音被表示为一个包含 `Nw` 个节点的序列。
 

@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 模型整体架构如图1所示。它以梅尔频谱图块作为输入，逐帧输出鼓点转录结果。
 
-![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462709-0.png)
+![图1: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462709-0.png)
 
 各组件及数据流如下：
 1.  嵌入网络：输入为梅尔频谱图块（CNN处理25帧， CRNN处理200帧）。通过卷积层（+可选的GRU层）和线性层，将输入映射到256维的潜在空间，输出帧级的潜在表示。
@@ -123,7 +123,7 @@ hiddenInHomeList: true
 - 结论：对于有理想支持集的ORACOFSL，单样本（N=1）效果最好。而对于实际的OFSL，使用多个样本（N=5）略有帮助，可能因为多样本减轻了单个不准确样本的影响。
 
 分类别性能分析（图2）
-![图2: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462709-0.png)
+![图2: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462709-0.png)
 - 结论（以ENST数据集为例）：在线动态FSL（OFSL）对基础性能已经较好的类别（如低音鼓BD、军鼓SD、踩镲HH）有稳定提升，而对基础性能较差的类别（如铃铛BE、镲片CY、叮叮镲RD）改善有限。这表明在线适配更依赖于模型已有的一定识别能力。
 
 关键消融结论：论文指出，总增益中很大一部分（约4.4%的平均相对提升）实际上来自第二阶段使用原始混合数据的训练，而非在线适应本身。在线适应在RBMA13数据集上（当使用理想起始点时）展现出巨大潜力，但在MDB和ENST上增益相对较小。

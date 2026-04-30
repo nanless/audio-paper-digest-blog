@@ -53,10 +53,10 @@ hiddenInHomeList: true
 
 训练时采用 CTC/Attention混合损失（公式1），权重α在验证集上调整。推理时，解码分数由注意力解码分数、CTC分数和外部LM分数加权融合（公式2）。
 
-![模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461766-0.png)
+![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461766-0.png)
 图1展示了整体架构。左侧是处理视频序列的3D-Stem ResNet-18视觉前端，中间是Conformer编码器，右侧是Transformer解码器。训练时，CTC和Attention的损失共同作用于编码器输出和解码器输出。
 
-![渐进冻结策略图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461766-1.png)
+![渐进冻结策略图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461766-1.png)
 图2说明了用于分析跨语言迁移能力的渐进冻结策略。模型被分为前端、编码器、解码器三个部分，实验中逐步冻结这些部分，以观察其对性能的影响。
 
 ### 💡 核心创新点
@@ -119,7 +119,7 @@ hiddenInHomeList: true
 | + RNN LM           | 40.3         | 7.6        |
 结论：LM融合大幅提升性能，Transformer LM在藏语上更优，RNN LM在普通话上更优。
 
-![渐进冻结实验结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461766-2.png)
+![渐进冻结实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461766-2.png)
 图4的图表直观展示了渐进冻结策略对藏语SER和普通话CER的影响。从左到右依次冻结更多模块，错误率呈现上升趋势，尤其是冻结编码器和解码器后上升显著，支持了“前端通用，后端专用”的结论。
 
 ### ⚖️ 评分理由

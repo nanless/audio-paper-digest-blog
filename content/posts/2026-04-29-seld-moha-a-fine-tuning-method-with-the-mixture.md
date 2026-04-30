@@ -60,7 +60,7 @@ SELD-MoHA的整体架构是在一个几乎冻结的预训练Swin Transformer骨�
 4.  路由与聚合：对于每个token，路由器计算其对4个适配器的注意力权重，加权求和各适配器的输出。
 5.  输出：聚合后的特征 `f_MoE` 被送回Transformer块的后续处理流程，最终输出用于预测声音事件类别、时间及方位。
 
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462164-1.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462164-1.png)
 图2：一个Swin Transformer块内SELD-MoHA模型的结构示意图。 核心是在多头自注意力（MSA）或窗口多头自注意力（W-MSA）层后，插入了MoHA模块。输入特征 `x_l` 同时进入四个并行适配器，路由器 `G` 根据token特征为每个适配器生成权重，加权求和后得到 `f_MoE`，再与原输入通过残差连接输出 `x_{l+1}`。
 
 主要组件详解：
@@ -69,7 +69,7 @@ SELD-MoHA的整体架构是在一个几乎冻结的预训练Swin Transformer骨�
     *   ConvAdapter (图3b)：采用多尺度（3x3, 5x5, 7x7）深度可分离卷积，旨在捕捉不同尺度的局部时频模式。
     *   DCTAdapter (图3c)：先将特征进行二维离散余弦变换（DCT），再通过MLP瓶颈处理。DCT能产生去相关、紧凑的表示，有助于分离重叠事件和噪声。
     *   SEAdapter (图3d)：基于“挤压-激励”机制，通过全局平均池化和MLP生成通道注意力权重，对特征进行通道维度的重标定，强调重要信息通道。
-    ![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462164-2.png)
+    ![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462164-2.png)
     图3：四种异构适配器的详细架构图。 (a) MLPAdapter: `x -> Linear Down -> GELU -> Linear Up -> (+x)`; (b) ConvAdapter: 引入多尺度深度卷积并行分支; (c) DCTAdapter: 先进行DCT变换再接MLP; (d) SEAdapter: 引入SE通道注意力机制。
 
 2.  路由策略 (Routing Strategy)：
@@ -143,8 +143,8 @@ SELD-MoHA的整体架构是在一个几乎冻结的预训练Swin Transformer骨�
 - 图4b（t-SNE）显示，不同专家处理后的token特征在嵌入空间形成聚类，说明路由机制有效引导了特征专业化。
 - 图5（层级路由分布）显示，在浅层Transformer块中，ConvAdapter更受青睐（可能处理局部基础特征），而在深层块中，DCTAdapter占据主导（可能处理高层语义去相关特征）。
 
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462164-3.png)
-![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462164-4.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462164-3.png)
+![图5](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462164-4.png)
 图4：专家分配与特征可视化。 (a) 显示路由器将相似区域的token分配给相同专家；(b) t-SNE图显示不同适配器处理的token特征形成不同聚类。
 图5：适配器路由分布随Transformer层深的变化。 可见ConvAdapter在浅层占优，DCTAdapter在深层占优。
 

@@ -57,10 +57,10 @@ AccLID是一个模块化的后处理框架，而非一个端到端的新模型�
 图片说明：
 论文中提供了两张图表（图1和图2），但未提供完整的模型架构图。因此，以下基于论文提供的图表描述相关结论。
 
-![图1: LID准确率与延迟的权衡](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463939-0.png)
+![图1: LID准确率与延迟的权衡](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463939-0.png)
 图1显示了不同方法在FLEURS数据集上的LID准确率（y轴）与处理延迟（x轴）的关系。AccLID的三个变体（+Whisper, +MMS, +SpeechBrain）位于图的右上区域，表明它们在保持高准确率的同时，延迟（约38ms）远低于学术方法（如Geolocation-aware LID，延迟在200ms以上），实现了更优的效率-准确率权衡。
 
-![图2: 不同口音条件下准确率与假设大小N的关系](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463939-1.png)
+![图2: 不同口音条件下准确率与假设大小N的关系](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463939-1.png)
 图2展示了AccLID在不同口音条件（Native, Mild, Moderate, Strong）下，LID准确率随候选语言假设大小N变化的趋势。强口音（Strong）条件下，准确率随N增加而显著提升，直到N≈20后趋于饱和；而母语者（Native）在N≈5时即达饱和。这验证了自适应调整N策略的必要性。
 
 ### 💡 核心创新点

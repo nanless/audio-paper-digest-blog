@@ -77,7 +77,7 @@ VividTalker的整体架构是一个串行的七阶段模块化管道，旨在将
 7.  最终渲染：将增强后的3DMM序列使用Blender或FFmpeg渲染成最终的3D面部动画视频。
 
 架构图说明：
-![图1: VividTalker 模块化流程框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464801-0.jpg)
+![图1: VividTalker 模块化流程框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464801-0.jpg)
 图1清晰地展示了从文本/语音输入到最终3D动画输出的完整流水线。左侧是输入，右侧是输出。中间的七个模块（用不同颜色和图标表示）按顺序连接，数据流明确。特别突出了“Gaze Controller”和“Center-Column Injection”这两个与核心创新相关的步骤，它们作用于从SadTalker-vivid输出的音频特征和3D关键点上，最终通过FFmpeg或Blender渲染出结果。
 
 #
@@ -134,10 +134,10 @@ VividTalker的整体架构是一个串行的七阶段模块化管道，旨在将
 结论：模块化管道带来最大的效率提升（-110s）。随后逐步添加的眼部动态模块（基础注视、扫视、头部补偿、眨眼）以少量时间开销（+23s）为代价，持续且显著地提升了动态真实度（注视抖动从6.2°降至3.4°，眨眼从2.1 BPM提升至16.8 BPM）和用户偏好（从30%提升至62%）。
 
 跨语言评估结果（图2）：
-![图2: 跨语言性能评估](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464801-1.jpg)
+![图2: 跨语言性能评估](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464801-1.jpg)
 图2展示了在英语、普通话、西班牙语和法语上，SyncNet LSE-C分数、注视质量（注视抖动）和真实感MOS都保持高度稳定和一致，证明框架的核心动画和增强模块具有良好的语言无关性。
 
-![图3: 运行时间跨语言稳定性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464801-2.jpg)
+![图3: 运行时间跨语言稳定性](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464801-2.jpg)
 图3进一步证实了框架的运行时间在不同语言间几乎无波动（约158秒），体现了架构的稳健性。
 
 #

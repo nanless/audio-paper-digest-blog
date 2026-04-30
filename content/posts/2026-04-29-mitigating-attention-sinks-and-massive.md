@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 （注：表1显示，在低压缩率下性能提升微小，高压缩率下改善显著，尤其VSR任务。表2表明本方法优于现有的注意力校准（ACT）方法。）
 
-![图1: 不同任务和压缩率下的注意力沉降图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463794-0.png)
+![图1: 不同任务和压缩率下的注意力沉降图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463794-0.png)
 图1 (a-c) 显示了在ASR、VSR和AVSR任务中，BOS token和部分中间token（如索引20、21）存在异常高的注意力分数（颜色更深）。图(d)展示了在Llama-AVSR (16,5)模型第5层，这些沉降token的某些特征维度激活值（z轴）远超其他token。
 
 #
@@ -76,13 +76,13 @@ hiddenInHomeList: true
 -   根源分析：通过计算沉降token与BOS token隐层状态的余弦相似度（公式7），发现中间沉降token与BOS高度方向对齐，从而解释了为何它们会吸引相同注意力并激活相同特征维度。
 -   验证实验：通过控制旋转（公式8，9）改变token的隐层方向，直接证明了方向对齐是产生注意力沉降和大规模激活的充分条件。
 
-![图2: 中间注意力沉降的起源与大规模激活的来源](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463794-1.png)
+![图2: 中间注意力沉降的起源与大规模激活的来源](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463794-1.png)
 图2(a)显示中间注意力沉降从第2层之后开始出现。图2(b)通过分解第2层组件的贡献，证明大规模激活源自MLP模块。
 
-![图3: 余弦相似度分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463794-2.png)
+![图3: 余弦相似度分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463794-2.png)
 图3(a)显示中间沉降token与BOS token的余弦相似度从第2层起就很高，而非沉降token则很低。图3(b)的成对余弦相似度热力图显示，沉降token（索引0, 20, 21）彼此高度相似，而与其他token正交。
 
-![图4: 控制旋转实验的验证](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463794-3.png)
+![图4: 控制旋转实验的验证](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463794-3.png)
 图4(a,b)显示，将沉降token的方向旋转至与非沉降token一致后，其沉降和大规模激活现象消失。图4(c,d)显示，将一个非沉降token旋转至与BOS方向一致后，该token立刻出现了沉降和大规模激活现象。
 
 ### 💡 核心创新点

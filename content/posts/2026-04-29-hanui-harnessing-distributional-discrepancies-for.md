@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 Hanui的整体架构如图1所示，主要由两个阶段、两大模块构成：自编码器（含判别器）和深度伪造检测器。
 
-![图1：Hanui的整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461904-0.png)
+![图1：Hanui的整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461904-0.png)
 
 1.  自编码器（Autoencoder）阶段：
     *   目的：学习真实歌声的分布，并为检测器提供富含分布差异信息的特征图。
@@ -108,7 +108,7 @@ Hanui的整体架构如图1所示，主要由两个阶段、两大模块构成�
 2.  在最具挑战性的未见条件（T04：未见歌手、语言、风格） 和 CtrSVDD（未见数据集） 上，Hanui优势尤为明显。在T04上EER为21.36%，比wav2vec2+AASIST的34.18%降低了约37.5%（相对值）。在CtrSVDD Test集上，EER从40.2%降至32.23%。
 3.  消融实验证实了分布差异假设。图2显示，真实样本（bona fide）在判别器上的重建损失（特征图损失）持续高于伪造样本（spoofed），验证了原始假设。
 
-![图2：真实样本与伪造样本的特征图重建损失对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461904-1.png)
+![图2：真实样本与伪造样本的特征图重建损失对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461904-1.png)
 （图2说明：该图展示了在SingFake数据集上，使用MRD特征计算的真实样本与伪造样本的重建损失对比。真实样本的损失值（蓝色曲线）系统地高于伪造样本（橙色曲线），为“真实歌声更难重建”的假设提供了直接证据。）
 
 4.  关于融合策略的消融实验表明，提出的中层融合策略（Hanui） 优于晚期融合策略（Hanui-l），尤其是在泛化条件T04上（21.36% vs 23.73%）。

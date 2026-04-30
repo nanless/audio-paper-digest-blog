@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 论文提出的Ambisonics阶数提升系统采用序列化框架，整体流程如下：
 
-![图1: HOA upscaling系统架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464166-0.png)
+![图1: HOA upscaling系统架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464166-0.png)
 
 1.  输入与预处理：输入为一阶Ambisonics信号 `x_{nm}^{(1)}(t)` (4个通道)。首先通过短时傅里叶变换（STFT）将其转换到时频域，得到 `x_{nm}^{(1)}(λ, μ)`，其中 `λ` 是帧索引，`μ` 是频率箱索引。
 2.  序列化提升框架：系统由 `L = \hat{N}-1` 个独立模型组成，每个模型 `l` (l=1,...,L) 负责将输入的 `l` 阶HOA信号提升到 `l+1` 阶。
@@ -99,7 +99,7 @@ hiddenInHomeList: true
 主要结果：
 论文提供了箱线图（图2）展示各方法在不同场景和阶数下的空间相似性分布。
 
-![图2: 不同方法在不同测试集上的空间相似性分布箱线图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464166-1.png)
+![图2: 不同方法在不同测试集上的空间相似性分布箱线图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464166-1.png)
 
 关键结论：
 1.  所提模型（Novel）在所有测试场景和阶数下，其中位空间相似性（箱线图中线）和分布方差（箱体长度和须线范围）均优于DirAC和全带模型。
@@ -110,7 +110,7 @@ hiddenInHomeList: true
 案例展示（SRP图）：
 论文展示了一个5声源场景的SRP图（图3），直观比较了输入、目标、DirAC估计和所提模型估计的空间能量分布。
 
-![图3: 一个测试案例的SRP图，对比输入、目标、DirAC和所提模型在阶数6的估计](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464166-2.png)
+![图3: 一个测试案例的SRP图，对比输入、目标、DirAC和所提模型在阶数6的估计](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464166-2.png)
 
 图示分析：一阶输入（左上）空间分辨率低，无法区分5个声源。目标（右上）有5个清晰峰值。DirAC（左下）虽然捕捉了大部分峰值，但在某些声源之间（如小提琴2-3之间）出现了不应有的高能量区域。所提模型（右下）更准确地捕捉了所有峰值，同时有效抑制了虚假成分，空间分辨率更高。这与其更高的空间相似性值（86% vs DirAC的83%）相对应。
 

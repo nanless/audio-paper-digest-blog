@@ -71,7 +71,7 @@ hiddenInHomeList: true
     *   设计选择：动机是利用LLM在大规模文本数据上学到的推理能力。零样本路径探索LLM的即用推理能力；微调嵌入层路径则尝试以极小代价（仅更新一个矩阵）激活LLM中与分类任务相关的连接，结果显示后者在ESC-50上更优。
 
 论文图1描述了整个流程：
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461539-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461539-0.png)
 （图1：方法描述。训练阶段，模型被允许因果地预测每个补丁的类别以获得补丁级类别输出。推理阶段，模型和音频固定。我们从每个补丁的后验概率类别分布中多次采样（定义为每个补丁的采样轨迹长度）以得到一个推理轨迹。该轨迹随后被用于理解类别，通过一个冻结的LLM推理模型如GPT-OSS 20B或一个冻结的GPT-2模型（使用新的嵌入矩阵）进行聚合，并给出音频的准确预测。）
 
 ### 💡 核心创新点
@@ -110,13 +110,13 @@ hiddenInHomeList: true
 *   ESC-50（单标签分类）：指标为Top-1准确率。
     *   主要结果：如表1和表2所示。关键发现包括：1) 随着采样轨迹长度增加，准确率持续提升。例如，冻结AST模型在采样长度为32时（88.3%）接近全量微调的88.8%。2) 微调GPT-2嵌入层的方法优于强大的零样本推理模型（GPT-OSS-20B， Qwen3-14B）。3) AST优于YAMNet。
 
-![图2: pdf-image-page3-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461539-1.png)
+![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461539-1.png)
 （图2：ESC-50数据集上，冻结YAMNet和AST的测试时缩放结果，使用GPT-2和Qwen-14B进行类别预测，随采样轨迹长度变化的准确率。图表显示了准确率随采样长度增加而上升的趋势，以及不同模型间的对比。）
 
 *   FSD-50K（多标签分类）：指标为AUC。
     *   主要结果：如图3所示。对于修改后支持补丁级预测的Audio Transformer基线，在1秒输入下，较短的采样轨迹可能因信息损失而性能不增反降。但当每个补丁的采样次数增加到8次时，性能超过基线。趋势同样是性能随轨迹长度增加而提升。
 
-![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461539-2.png)
+![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461539-2.png)
 （图3：FSD-50K数据集上1秒音频片段的结果，针对不同采样轨迹长度。我们使用一个冻结的GPT-2骨干网络（具有训练过的嵌入矩阵）对基线Audio Transformer和骨干网络进行推理。图表显示了AUC随采样次数的变化，表明在达到一定采样次数（如8次）后，方法开始优于基线。）
 
 *   与最强基线/ SOTA的差距：在ESC-50上，本方法的最优结果（冻结AST + 32次采样 + GPT-2）为88.3%，与全量微调的AST（88.8%）差距很小（0.5%），但与该数据集上更新的SOTA（论文未引用对比）的差距未知。

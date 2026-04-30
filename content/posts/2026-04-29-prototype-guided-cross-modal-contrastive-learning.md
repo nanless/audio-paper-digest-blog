@@ -64,7 +64,7 @@ PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体�
 
 5.  总体目标：最终损失是分离损失、原型增强对比损失和蒸馏损失的加权和（公式11），共同优化模型以适应新类别、保留旧知识并保持跨模态对齐。
 
-![图1: Overview of the PGCCL framework. Class-level prototypes are incorporated into each batch for pairwise cross-modal contrastive learning, structuring the representation space and improving modality alignment. EMA updates and mask distillation preserve historical knowledge, enabling stable incremental learning of new sound categories.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464249-0.png)
+![图1: Overview of the PGCCL framework. Class-level prototypes are incorporated into each batch for pairwise cross-modal contrastive learning, structuring the representation space and improving modality alignment. EMA updates and mask distillation preserve historical knowledge, enabling stable incremental learning of new sound categories.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-0.png)
 
 ### 💡 核心创新点
 
@@ -127,8 +127,8 @@ PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体�
 
 可视化结果：论文展示了t-SNE可视化（图2）和跨阶段性能曲线（图3）。图2显示PGCCL的特征表示比基线EWF具有更清晰的类间边界和更少的模态间重叠。图3显示PGCCL在持续学习的各个阶段均保持领先的SDR和SIR。
 
-![图2: t-SNE visualization of all samples at the final incremental stage. Left: results from EWF baseline. Right: results using PGCCL. PGCCL produces clearer inter-modal boundaries and less overlap between modalities, indicating more structured multi-modal representations.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464249-1.png)
-![图3: SDR and SIR across incremental learning stages. Our method consistently outperforms baselines.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464249-2.png)
+![图2: t-SNE visualization of all samples at the final incremental stage. Left: results from EWF baseline. Right: results using PGCCL. PGCCL produces clearer inter-modal boundaries and less overlap between modalities, indicating more structured multi-modal representations.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-1.png)
+![图3: SDR and SIR across incremental learning stages. Our method consistently outperforms baselines.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-2.png)
 
 ### ⚖️ 评分理由
 

@@ -53,7 +53,7 @@ hiddenInHomeList: true
     | MMAudio-L-44k (基础) | 0.97 | 17.40 | 33.22 |
     | MMAudioSep (pretrain w/frozen) | 1.76 | 14.99 | 30.35 |
 
-    ![图4：频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
+    ![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
     图4展示了MMAudioSep与AudioSep的分离结果对比，其生成的频谱在细节和伪影方面表现更优。
 
 5.  实际意义：该研究证明了将基础生成模型微调用于下游感知任务的可行性，为“一个基础模型，多种音频任务”的范式提供了有力证据，可能推动音频领域基础模型的发展。
@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于流匹配（Flow Matching）的多模态Transformer网络（MM-DiT）。
 
-![图2：MMAudioSep架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462711-1.png)
+![图2：MMAudioSep架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-1.png)
 图2展示了MMAudioSep的完整架构，其核心是在MMAudio基础上修改了音频投影层。
 
 输入输出流程：
@@ -79,7 +79,7 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 *   MM-DiT：核心网络，通过自注意力机制融合视频、文本和音频（混合音频+噪声）特征。使用自适应层归一化（adaLN）注入全局的视频/文本条件。
 *   通道拼接条件机制：这是将生成模型改造为分离模型的关键。它将混合音频`x_m`作为一个不变的条件通道与需要生成的目标音频的噪声`x_0`并行输入。在流匹配的前向过程中，噪声仅添加给目标通道`x_0`，而混合音频通道`x_m`保持不变。这类似于用混合信号来“指导”生成过程，从而分离出目标源。
 
-![图3：通道拼接条件机制](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462711-2.png)
+![图3：通道拼接条件机制](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-2.png)
 图3详细说明了通道拼接机制：噪声`x_0`和混合音频潜在向量`x_m`沿通道维度（C）拼接，一同输入网络。训练时，损失仅计算在目标音频通道上。
 
 #
@@ -125,7 +125,7 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 不同条件下的结果：
 论文展示了仅使用文本查询和结合视频+文本查询的结果。结合视频查询通常能带来性能提升，尤其是在音视频同步性（DeSync）和语义对齐（IB-Score, CLAP-A）上，这符合多模态信息互补的预期。
 
-![图4：频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
+![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
 图4直观展示了分离质量的对比。与AudioSep相比，MMAudioSep分离出的“教堂钟声”频谱在细节保留和伪影抑制方面看起来更优，与Ground Truth更接近。
 
 #

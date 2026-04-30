@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 论文提出的AEF-EDE模型架构是对基线EDE的改进，其整体流程和核心模块如图1、图2所示。
 
-![图1: 论文整体方法概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463521-0.png)
+![图1: 论文整体方法概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463521-0.png)
 图1：论文整体方法概览。图中展示了模型在多个增量学习会话（Session）中的工作流程。在每个新会话`si`中，会引入一个新的特征提取器`ψsi`（蓝色框）。与原始EDE（左）的直接拼接不同，本方法（右）在拼接预训练特征`ψpre`（粉色框）后，使用“自适应嵌入融合（AEF）”模块对所有任务特定特征`ψsi`进行加权融合，输出固定大小的最终特征`ψ`。同时，在所有增量会话中引入对比学习损失`LCL`。
 
 完整输入输出流程：
@@ -164,7 +164,7 @@ hiddenInHomeList: true
 4.  对比实验也表明，可学习的AEF优于固定的等权融合（Embedding Fusion）。
 
 图3：t-SNE可视化分析
-![图3: t-SNE可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463521-2.png)
+![图3: t-SNE可视化对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463521-2.png)
 图3：LS-100数据集上的t-SNE可视化。图(a)为不使用对比学习损失的结果，图(b)为使用对比学习损失的结果。对比可见，引入对比学习后，同类别的特征聚类（不同颜色）变得更加紧凑、清晰，类间分离度也更高。这直观地验证了对比学习损失对于提升特征判别性、缓解混淆的有效作用，是性能提升的重要原因。
 
 其他细分结果：

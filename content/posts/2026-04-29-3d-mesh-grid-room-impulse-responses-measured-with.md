@@ -47,10 +47,10 @@ hiddenInHomeList: true
     - 逆变换与重建：对掩蔽后的频谱进行逆2D FFT，并与原始信号在时间窗区域进行重叠相加，得到抑制了反射的修正RIR `g(xm, n)`。
     - 处理顺序：先对所有z位置的数据进行x轴方向处理（使用 `ML`, `MR`），然后对所有x位置的数据进行z轴方向处理（使用 `MU(kz, ω)`）。
 
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461569-3.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461569-3.png)
 图4展示了应用于x轴阵列RIR的时间窗（红色虚线）。窗函数避开了直达声，但包含了早期房间反射和需要抑制的框架反射。这确保了掩蔽操作只针对干扰信号，而不损害真实的声学响应。
 
-![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461569-4.png)
+![图5](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461569-4.png)
 图5展示了应用频率-波数域掩蔽方法后，沿x轴和z轴的RIR波形。与图3的原始测量结果相比，位于直达声之后的框架反射（图3中红色线标示区域）被显著抑制，验证了该方法的有效性。
 
 ### 💡 核心创新点
@@ -90,7 +90,7 @@ hiddenInHomeList: true
 - 任务：使用PINN在已知的 `10×10` 采样点上训练，预测 `48×51` 整个平面上的RIR波形。
 - 结果：图7展示了PINN预测结果与真实值（ground-truth）的对比。图7左半部分对应直达声，右半部分对应来自天花板和地板的早期反射。PINN成功重建了整个平面的RIR时空分布，证明了数据集的质量足以用于训练先进的插值模型。
 
-![图7](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461569-6.png)
+![图7](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461569-6.png)
 图7展示了PINN插值实验的结果。上图为真实数据（黑叉为训练点），下图为PINN的预测结果。无论直达声（左）还是早期反射（右），预测波形都与真实波形高度吻合，验证了数据集对机器学习研究的可用性。
 
 注：论文未提供量化的性能指标表格（如信噪比、误差率等）。

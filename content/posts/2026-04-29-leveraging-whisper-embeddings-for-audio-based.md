@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 WEALY采用一个两阶段的管线架构，如图1所示：
 
-![WEALY架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461231-0.png)
+![WEALY架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461231-0.png)
 
 阶段一：特征提取 (Feature Extraction)
 - 输入：原始混合音频（未经人声分离），重采样为16kHz单声道，截断至最长5分钟。

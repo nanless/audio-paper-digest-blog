@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463608-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-0.png)
 该论文提出的“子空间混合自适应滤波”方法是一个两阶段串联系统，整体架构如图1所示。
 
 输入：含噪声的单通道心音信号 `x(t)`。
@@ -119,9 +119,9 @@ hiddenInHomeList: true
 
 结论：单独使用NLMS或GMM WF均能大幅改善SDR。而结合两者的SS-Hybrid方法进一步提升了SDR（从约12.8 dB到15.3 dB）并降低了RMSE，证明了混合框架的互补效益。
 
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463608-1.png)
-![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463608-2.png)
-![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463608-3.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-1.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-2.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-3.png)
 图2展示了在-5 dB SNR医院环境噪声下的去噪输出。（a）为频谱图，从上到下依次为混合信号、NLMS输出、GMM WF输出和SS-Hybrid输出。可以直观看到SS-Hybrid输出的频谱图背景噪声最弱，心音成分最清晰。（b）为时域波形，同样显示SS-Hybrid在抑制噪声的同时，保留了更完整的心音信号形态。
 
 #

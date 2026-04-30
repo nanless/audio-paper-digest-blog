@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 SimWhisper-Codec是一个端到端的神经语音编解码器，其整体架构如图1所示。模型主要由五个模块组成：简化的Whisper编码器、下采样器、量化器、上采样器和对称解码器，最后通过Vocos声码器生成波形。
 
-![SimWhisper-Codec 架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461724-0.png)
+![SimWhisper-Codec 架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461724-0.png)
 图1：SimWhisper-Codec 架构概览。
 
 1.  编码器 (Encoder)：初始化自预训练的Whisper-small模型（12层Transformer，768维隐藏状态，12头注意力）。进行了两处关键修改：
@@ -127,10 +127,10 @@ SimWhisper-Codec是一个端到端的神经语音编解码器，其整体架构�
 
 声学属性保留分析：如图3所示，通过在THCHS-30数据集上的音高（F0）追踪实验，简化后的Whisper编码器在所有层都保持了稳定的皮尔逊相关系数（PCC ≈0.76），而标准Whisper编码器在6层后性能显著下降。这证明简化操作更好地保留了对高质量合成至关重要的韵律信息。
 
-![自注意力图可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461724-1.png)
+![自注意力图可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461724-1.png)
 图2：自注意力图可视化。展示了有无位置编码时，模型对重复结构“one, two, three, four, four, three, two, one”的注意力模式差异。移除位置编码后，对角线主导性降低，注意力更灵活。
 
-![音高追踪性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461724-2.png)
+![音高追踪性能对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461724-2.png)
 图3：音高追踪性能。简化Whisper编码器（蓝线）在各层均保持稳定且较高的F0预测相关性，而标准Whisper编码器（红线）性能随层深入而下降。
 
 ### ⚖️ 评分理由

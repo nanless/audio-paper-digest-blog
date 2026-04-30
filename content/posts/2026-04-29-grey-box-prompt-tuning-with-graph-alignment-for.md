@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 架构图说明：
 论文中提供了框架的整体示意图（图1，对应提供的图片列表中的图片）。
-![图1：提出的框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461757-0.jpg)
+![图1：提出的框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461757-0.jpg)
 图1展示了完整的处理流程。左侧，语音经过“Speech Encoder”（如HuBERT）得到声学特征，文本经过“Text Prompt”模块。这些特征和提示一同输入到“GAT”模块进行跨模态对齐与融合。对齐后的声学特征（ZA）和文本特征（ZT）与各自的可学习提示（PA， PT）结合，通过“Cross Attention”等方式注入到冻结的“LLM”中。右下角展示了“Two-stage Optimization”的过程，包括无提示基线（“w/o prompts”）产生的教师分布和带提示模型（“w/ prompts”）产生的学生分布，通过计算KL散度等进行优化。顶部展示了联合提示生成的概念，声学和文本提示被共同优化。整个流程强调在“Grey-box slot”中操作，不修改主干参数（“Frozen”）。
 
 ### 💡 核心创新点
@@ -145,7 +145,7 @@ hiddenInHomeList: true
 消融实验 (图2)
 论文在AISHELL-NER和SLURP-NER两个数据集上，对比了完整模型（w/ Graph Align）和移除图对齐模块的变体（w/o Graph Align）。结果以柱状图呈现。
 
-![图2：有无图对齐模块的消融实验对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461757-1.jpg)
+![图2：有无图对齐模块的消融实验对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461757-1.jpg)
 图2显示了在两个NER数据集上，完整模型在Precision和F1指标上显著优于移除图对齐模块的版本，而在CER和WER上两者表现相当。
 关键结论：图对齐模块能显著提升语义理解类任务（如命名实体识别）的性能，验证了其跨模态对齐的有效性。
 

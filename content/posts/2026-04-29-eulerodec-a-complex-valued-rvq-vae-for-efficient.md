@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 模型架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460428-0.jpg)
+![图1: 模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460428-0.jpg)
 EuleroDec 是一个完全基于复数值的 VQ-VAE 架构，用于音频编解码。整体流程为：原始音频 → STFT → 编码器 → RVQ量化器 → 解码器 → ISTFT → 重建音频。所有模块均在复数域（complex64类型）操作。
 
 1.  编码器（Encoder）：
@@ -134,7 +134,7 @@ EuleroDec 是一个完全基于复数值的 VQ-VAE 架构，用于音频编解�
     - 时间轴向注意力（Table 2）：移除时间轴向注意力后，SI-SDR、PESQ、STOI均有下降，证明了其对时序一致性的贡献。
     - 复数值vs实数值自编码器（Table 3）：复数值AE（cplx AE）在LSD（更低）和PESQ（更高）上均显著优于将实/虚部分开处理的split AE和容量匹配的extra cplx AE，验证了复数域操作的优势。
 
-![图2: modReLU激活函数可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460428-1.jpg)
+![图2: modReLU激活函数可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460428-1.jpg)
 图2说明：此图可视化了modReLU激活函数。它显示了一个复平面上的变换，横轴可能是输入模值。函数在输入模值小于某个阈值（-b）时输出0；当模值大于阈值时，输出为 `ReLU(|z|+b) * (z/|z|)`，即仅将输入的模值减去阈值后再应用ReLU缩放，但完全保留输入的相位角。这直观地解释了modReLU如何“尊重相位”。
 
 ### ⚖️ 评分理由

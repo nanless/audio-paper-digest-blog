@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 本文提出的Text2Move框架由两个主要部分构成，其整体架构如图1所示。
 
-![图1: Text2Move系统整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461410-0.png)
+![图1: Text2Move系统整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461410-0.png)
 
 1. 文本到轨迹预测模型 (Text-to-Trajectory Prediction)
 该模型旨在从文本描述中预测一个移动声源的三维时空轨迹（方位角、仰角、距离随时间的变化）。
@@ -68,7 +68,7 @@ hiddenInHomeList: true
 - 基于对象的空间化：利用上一步生成的与轨迹时间对齐的单声道音频，结合预测的轨迹，通过与HRTF进行逐帧卷积来模拟生成双耳空间音频。
 
 图2展示了数据集构建过程，该过程对于训练上述模型至关重要。
-![图2: 数据集构建流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461410-1.png)
+![图2: 数据集构建流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461410-1.png)
 
 #
 

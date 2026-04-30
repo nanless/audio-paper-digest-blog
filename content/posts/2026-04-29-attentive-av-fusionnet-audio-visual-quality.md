@@ -61,7 +61,7 @@ Attentive AV-FusionNet 是一个端到端的全参考音视频质量预测模型
     - 特征变化范数：比较交叉注意力前后模态嵌入的变化，较小的变化表明该模态在融合中更独立、稳定。
     - 最终重要性得分为两者加权组合。
 
-![Attentive AV-FusionNet模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462098-0.png)
+![Attentive AV-FusionNet模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462098-0.png)
 图1：Attentive AV-FusionNet架构示意图。展示了从VMAF和GML提取特征，通过投影层对齐，经过双向交叉注意力和自注意力进行融合，最终通过FFN输出质量分数的过程。模型总参数量约为740万。
 
 ### 💡 核心创新点
@@ -124,7 +124,7 @@ Attentive AV-FusionNet 是一个端到端的全参考音视频质量预测模型
     - 表2（超参数搜索空间）显示，模型在层数、头数、学习率等多个维度进行了系统调优。
 
 模态重要性估计结果：
-![模态重要性估计示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462098-1.jpg)
+![模态重要性估计示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462098-1.jpg)
 图2：模型对不同内容类型预测的模态重要性。(a)音频主导型内容（包含密集瞬态的音频挑战性场景），模型分配更高权重给音频。(b)视频主导型内容（视觉动态、音乐简单），模型分配更高权重给视频。这直观展示了模型“内容感知”的特性。
 
 ### ⚖️ 评分理由

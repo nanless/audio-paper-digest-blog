@@ -76,10 +76,10 @@ hiddenInHomeList: true
 *   基于平均距离排序：为了处理一个OOD样本可能与多个种子样本匹配的情况，采用平均距离可以获得更稳定的相似度评分。
 *   等预算分阶段：确保每个阶段计算量相当，便于与基线方法公平比较。
 
-![域感知调度（DAS）概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460834-0.jpg)
+![域感知调度（DAS）概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460834-0.jpg)
 图1 展示了DAS的整体流程：从种子和OOD池开始，经过特征提取、域校准、KNN距离计算和排序，得到排序后的数据；然后按阶段使用这些数据从远到近微调模型。
 
-![排序用的复杂对象示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460834-1.png)
+![排序用的复杂对象示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460834-1.png)
 图2 对比了“仅选择”方法（只保留样本ID）和DAS方法（创建包含样本ID和平均距离的复合对象）在数据结构上的区别，后者是实现基于距离排序的关键。
 
 ### 💡 核心创新点
@@ -113,7 +113,7 @@ hiddenInHomeList: true
 
 主要结果（100小时预算，WER↓）：详见上方“核心摘要”中的表格。DAS在所有数据集（除Gigaspeech的一个种子外）上均优于SO和Random基线。平均而言，DAS相比SO将WER降低了2.52个点（11.32%相对减少），相比Random降低了4.14个点（17.29%相对减少）。标准差较小，表明改进稳定。
 
-![不同训练预算下的WER](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460834-2.png)
+![不同训练预算下的WER](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460834-2.png)
 图3 展示了在10小时、50小时、100小时三种预算下，Random、SO和DAS三种方法的WER。关键结论：DAS的性能随着数据预算的增加而稳定提升，并且在所有预算下都优于两个基线，显示出对噪声域外数据的鲁棒性。
 
 消融/分析实验：

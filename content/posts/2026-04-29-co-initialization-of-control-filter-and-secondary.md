@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 本论文的核心不是传统意义上的神经网络模型，而是一个基于元学习的自适应滤波系统初始化框架。其“架构”可分为离线学习和在线部署两个逻辑部分。
 
-![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463219-0.jpg)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463219-0.jpg)
 图1：改进的带辅助噪声的交叉更新在线次级路径建模系统框图（含误差跳变检测器）。
 
 在线部署架构（图1）：
@@ -122,7 +122,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主要对比实验（图2）：
-![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463219-1.jpg)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463219-1.jpg)
 图2：在线建模FxLMS在路径切换下的表现（路径在t=60s和t=120s切换）。上图：滑动MSE（dB）；下图：注入的辅助噪声功率。
 
 关键结论：

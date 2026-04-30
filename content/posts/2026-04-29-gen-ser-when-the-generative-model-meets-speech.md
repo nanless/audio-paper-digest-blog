@@ -45,7 +45,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 模型架构（Gen-SER）包含特征提取、目标生成和生成传输三个核心部分，整体流程如下图所示：
-![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463095-0.png)
+![图1: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463095-0.png)
 图1展示了不同时间步（t）下，从初始语音特征向量x1（(a)）逐步演变为目标类别向量x0（(f)）的平均过程，验证了分布传输的有效性。
 
 1.  输入与特征提取：输入语音信号s，通过预训练的HuBERT模型提取特征。具体地，取最后一层的输出经时间轴平均后作为初始数据样本x1（代表语音的情感分布），取前面若干层的输出经平均后作为条件变量Xc。
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 结论：推理步数增加能稳步提升准确率，但即使单步推理（N=1）也能达到0.5613，与最终结果0.5644相差无几，说明模型生成效率高。
 
 图1分析：
-![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463095-0.png)
+![图1: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463095-0.png)
 如图1所示，从(a)初始语音特征x1，经过(b) t=0.75, (c) t=0.5, (d) t=0.25, (e) t=0.03等中间时刻的估计向量，最终平滑过渡到(f)目标类别向量x0。这直观展示了模型学习的分布传输轨迹是连续且符合预期的。
 
 #

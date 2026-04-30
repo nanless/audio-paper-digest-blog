@@ -56,7 +56,7 @@ FD-ARL的整体架构（图1）分为两个阶段：并行时空特征编码和�
 
 最终损失为加权和：`L_total = L_task + λL_domain + βL_recon`，其中λ动态增加，β固定为0.5。
 
-![FD-ARL框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461770-0.png)
+![FD-ARL框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461770-0.png)
 图1：FD-ARL框架整体架构图。(a) 并行时空特征提取器；(b) 特征解耦模块及联合损失优化。
 
 ### 💡 核心创新点
@@ -125,7 +125,7 @@ FD-ARL的整体架构（图1）分为两个阶段：并行时空特征编码和�
 关键结论：去除时间分支性能下降最大（-7.6%），表明时间建模最关键。对抗训练（-2.0%）比重建损失（-0.9%）贡献更大，但二者协同（-2.3%）能带来最大收益。
 
 可视化分析（图2）：
-![t-SNE特征可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461770-1.png)
+![t-SNE特征可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461770-1.png)
 图2：t-SNE可视化对比。左列为原始EEG数据，右列为FD-ARL学习到的任务相关码z_task。可以看出，原始数据在不同注意力条件下高度重叠，而z_task形成了清晰可分的聚类，证明了模型有效过滤了被试特异性噪声，提取了核心注意模式。
 
 ### ⚖️ 评分理由

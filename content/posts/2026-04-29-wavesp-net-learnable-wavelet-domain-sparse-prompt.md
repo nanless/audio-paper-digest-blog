@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 WaveSP-Net 是一个端到端的语音深度伪造检测模型，其架构（如图1所示）可分为三个主要部分：冻结的SSL特征提取前端、可学习的小波域稀疏提示调优模块和Mamba后端分类器。
 
-![图1: WaveSP-Net 架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461768-0.png)
+![图1: WaveSP-Net 架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461768-0.png)
 （图1：论文展示了五种XLSR前端变体，最右侧为提出的WaveSP-Net架构，集成Partial-WSPT-XLSR前端与Mamba分类器）
 
 1. 冻结的SSL特征提取前端 (XLSR-300M)
@@ -166,9 +166,9 @@ WaveSP-Net 是一个端到端的语音深度伪造检测模型，其架构（如
 3.  超参数敏感性： 最优配置为稀疏比0.1（论文中未列出0.1，但根据上下文及“Best results”可知最优为0.1），4个小波令牌。改变这些超参数（如增加令牌数至6个或提高稀疏比）通常会导致性能下降。
 
 可视化结果（图2）
-![图2: 2D t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461768-1.png)
-![图2: 2D t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461768-2.png)
-![图2: 2D t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461768-3.png)
+![图2: 2D t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461768-1.png)
+![图2: 2D t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461768-2.png)
+![图2: 2D t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461768-3.png)
 （图2：DE24测试集的2D t-SNE可视化。(a) FourierPT-XLSR， (b) WSPT-XLSR， (c) Partial-WSPT-XLSR。蓝色为真实样本，红色为伪造样本。）
 结论： 可视化图清晰地显示，相比前两种方法，Partial-WSPT-XLSR提取的特征在潜在空间中形成了真实样本与伪造样本之间更分离、更紧凑的聚类，直观地证明了该方法学习到更具判别性的特征表示的能力。
 

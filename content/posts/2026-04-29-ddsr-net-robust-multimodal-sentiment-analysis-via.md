@@ -33,7 +33,7 @@ hiddenInHomeList: true
 
 DDSR-Net的整体架构如图1所示，是一个端到端的多阶段处理框架，输入为文本(T)、音频(A)、视觉(V)三种模态的非对齐特征序列，最终输出一个连续的情感预测值。
 
-![DDSR-Net的整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462473-0.jpg)
+![DDSR-Net的整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462473-0.jpg)
 
 模型主要包含以下四个核心模块：
 1.  模态质量评估模块 (Modality Quality Assessor Module)：为每个模态的特征计算一个可靠性分数。首先对每个模态的特征序列进行平均池化得到全局表示`fm`，然后通过一个独立的MLP和Sigmoid函数预测出质量分数`qm`。所有模态的分数组成向量`Qscore`。其功能是量化每个模态在当前样本中的信息质量。
@@ -122,7 +122,7 @@ DDSR-Net的整体架构如图1所示，是一个端到端的多阶段处理框�
 
 DDSR-Net的整体架构如图1所示，是一个端到端的多阶段处理框架，输入为文本(T)、音频(A)、视觉(V)三种模态的非对齐特征序列，最终输出一个连续的情感预测值。
 
-![DDSR-Net的整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462473-0.jpg)
+![DDSR-Net的整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462473-0.jpg)
 
 模型主要包含以下四个核心模块：
 1.  模态质量评估模块 (Modality Quality Assessor Module)：为每个模态的特征计算一个可靠性分数。首先对每个模态的特征序列进行平均池化得到全局表示`fm`，然后通过一个独立的MLP和Sigmoid函数预测出质量分数`qm`。所有模态的分数组成向量`Qscore`。其功能是量化每个模态在当前样本中的信息质量。

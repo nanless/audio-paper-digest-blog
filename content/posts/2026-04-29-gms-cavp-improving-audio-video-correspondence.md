@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 GMS-CAVP是一个统一的判别-生成预训练框架，旨在学习鲁棒的音视频对应表示。
 
-![GMS-CAVP架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463022-0.png)
+![GMS-CAVP架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463022-0.png)
 
 完整输入输出流程与组件：
 1.  输入：视频帧序列 `V` 和对应的音频梅尔频谱图 `A`。

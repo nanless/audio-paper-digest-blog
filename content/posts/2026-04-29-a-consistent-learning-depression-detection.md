@@ -47,7 +47,7 @@ DSCAM的完整架构如图1(a)所示，是一个基于双学生模型的半监�
 5.  特征维度注意力（FAM）：FAM的结构如图1(c)所示。它是一个小型神经网络，接收 `Xglobal`，经过线性层（降维）、ReLU激活、线性层（升维）和Sigmoid激活，生成特征注意力权重 `Wfeature`（公式13）。该权重与 `Xglobal` 逐元素相乘，增强重要特征维度（公式14）。
 6.  分类与损失：增强后的特征 `Xenhanced` 通过一个分类器（包含BN、Dropout和两层线性层）得到最终预测 `P`（公式15）。模型总损失（公式21）由三部分组成：有标签数据的交叉熵损失（`Li_cls`），无标签数据两个增强视图之间的一致性损失（`Li_con`，公式16），以及两个学生模型之间的稳定性损失（`Li_stab`，公式19）。稳定性损失的设计是改进的关键，它根据模型自身预测的稳定性（`si`）来决定是否及如何互相监督。
 
-![图1: 架构总览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464848-0.png)
+![图1: 架构总览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464848-0.png)
 图1说明： (a)展示了DSCAM的整体双学生框架，数据流从左到右，包括数据增强、两个并行的学生模型（S1/S2）处理流程，以及最终的联合损失计算。(b)和(c)分别放大展示了TAM和FAM的内部结构。
 
 #
@@ -111,7 +111,7 @@ DSCAM的完整架构如图1(a)所示，是一个基于双学生模型的半监�
 关键结论：在DAIC-WOZ数据集上，DSCAM的F1（0.683）和Recall（0.710）均为最高，相比第二优模型（Ghadiri et al. 的F1 0.634）分别提升了4.9%和4.3%。在CMDC数据集上，DSCAM的F1和Recall均为0.955，显著高于其他方法。值得注意的是，部分基线方法（如Sun et al.[15], Wu et al.[16]）的Precision或Recall未报告。
 
 消融研究：在两个数据集上对比了DSCAM与三个变体：(i) w/o dual students (单模型监督学习)，(ii) w/o fea (去掉FAM)，(iii) w/o tem (去掉TAM)。结果如图2所示。
-![图2: 消融实验结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464848-1.png)
+![图2: 消融实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464848-1.png)
 图2说明： 在DAIC和CMDC数据集上，移除任何模块（双学生、FAM、TAM）都会导致Precision、F1和Recall三个指标的下降。在DAIC-WOZ数据集上，完整模型相比“w/o dual students”变体，在三项指标上分别提升了0.9%， 1.1%， 2.8%。这表明在噪声更大的DAIC-WOZ数据集上，一致性学习（双学生框架）的贡献更显著。同时，FAM和TAM的去除也带来了明显的性能下降，尤其在DAIC数据集上（FAM去除导致F1下降3.0%），验证了两个注意力模块的有效性。
 
 #

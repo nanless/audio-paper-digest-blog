@@ -59,7 +59,7 @@ QASTAnet的预测值与主观分数高度一致（图3），尤其是在包含�
 ### 🏗️ 模型架构
 
 QASTAnet的整体架构如图1所示，是一个典型的“特征提取-比较-回归”的全参考质量评估模型。
-![图1: QASTAnet架构示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461971-0.jpg)
+![图1: QASTAnet架构示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461971-0.jpg)
 完整流程：
 1.  输入：一对参考和失真的空间音频信号（3阶Ambisonics格式）。
 2.  特征提取：
@@ -147,11 +147,11 @@ QASTAnet的整体架构如图1所示，是一个典型的“特征提取-比较-
     - 添加预加权模块，进一步提升相关性（0.89 -> 0.90）。
 
 图3：预测分数与主观分数散点对比
-![图3: QASTAnet与eMoBi-Q预测分数 vs MUSHRA评分](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461971-1.jpg)
+![图3: QASTAnet与eMoBi-Q预测分数 vs MUSHRA评分](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461971-1.jpg)
 左图为QASTAnet，右图为eMoBi-Q。不同颜色和形状代表不同的刺激与失真组合。黑色点代表消声平面波合成信号，橙色点代表含空间混响的信号。关键结论：QASTAnet的散点更紧密地沿对角线（理想预测线）分布，尤其是在橙色点（混响信号）区域，表明其预测更准确、偏差更小。
 
 图2：MUSHRA分数分布直方图
-![图2: 训练集与测试集MUSHRA分数分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461971-1.jpg)
+![图2: 训练集与测试集MUSHRA分数分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461971-1.jpg)
 此图展示了训练集和测试集（不含隐藏参考）的主观评分分布。关键结论：训练集（红色）的分数分布相对于测��集（蓝色）有向低分偏移的趋势。论文推测这可能是导致QASTAnet预测存在系统性低估偏差的原因之一。
 
 #

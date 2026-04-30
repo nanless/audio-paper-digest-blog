@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 AiLive Mixer（ALM）的系统架构如图1所示，其核心是处理多通道音频输入，为每个通道预测一个单声道增益参数，最终将所有增益应用后的音频波形求和，生成混合输出。
 
-![图1: AiLive Mixer 系统概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462222-0.png)
+![图1: AiLive Mixer 系统概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462222-0.png)
 
 完整数据流与组件详解：
 1.  音频嵌入模型：每个原始音频通道首先通过一个预训练的VGGish模型，该模型在975ms（F1） 的长帧上运行，提取与乐器类型及串音程度相关的嵌入特征。论文通过微调使VGGish能感知串音信息。

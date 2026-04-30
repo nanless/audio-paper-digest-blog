@@ -46,10 +46,10 @@ hiddenInHomeList: true
 
 该论文提出的“提示驱动重编程”框架整体架构清晰，主要分为数据增强和模型重编程两个阶段，如图1和图2所示。
 
-![图1: pdf-image-page1-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463362-0.png)
+![图1: pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463362-0.png)
 图1：概念示意图。展示了在冻结的预训练声学编码器前，输入由原始语音和前后拼接的提示（Prompt）组成，最后通过一个调谐的线性分类器进行抑郁/健康二分类。
 
-![图2: pdf-image-page1-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463362-1.png)
+![图2: pdf-image-page1-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463362-1.png)
 图2：方法总览。(a) 数据增强：对原始音频进行滑动窗分割、说话人中心过滤（只保留参与者语音）和语音倒置（反转波形）。(b) 模型重编程：��增强后的音频片段与可学习的音频提示在时间维度上拼接，输入冻结的Transformer编码器，提取特征后由线性层分类。
 
 完整输入输出流程与组件：
@@ -135,7 +135,7 @@ hiddenInHomeList: true
 结论：提示驱动重编程（Ours）以与线性探测（LP）完全相同的参数量，在所有指标上显著优于LP和全参数微调（FT），同时吞吐量（TPS）远高于FT。
 
 消融实验：
-![图3: pdf-image-page2-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463362-2.png)
+![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463362-2.png)
 图3：在DAIC-WoZ上，累积应用数据增强策略的性能变化。从左到右依次应用滑动窗、说话人中心过滤、语音倒置。括号内为健康对照（# of HC）与抑郁（# of MDD）的样本数。结论：每种增强都带来性能提升，三者结合达到最优。
 
 #

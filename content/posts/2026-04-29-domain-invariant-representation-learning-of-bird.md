@@ -60,7 +60,7 @@ hiddenInHomeList: true
 - 关键设计选择与动机：
     - 原型替代成对比较：动机是降低计算复杂度（从O(N²)到O(N×C)）和梯度方差，因为原型是对类内分布的平滑估计。论文通过分析SupCon的梯度公式，指出ProtoCLR在形式上与之相似，但在负样本项上使用了原型的加权平均，而非单个样本。
 - 架构图：论文中提供了一张示意图（图1）来说明ProtoCLR的训练过程。图中显示，一个锚点音频被增强后，其嵌入被拉向同类别其他样本形成的原型（Prototype），同时被推离其他类别的原型。
-![ProtoCLR训练过程示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463533-0.jpg)
+![ProtoCLR训练过程示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463533-0.jpg)
 
 ### 💡 核心创新点
 

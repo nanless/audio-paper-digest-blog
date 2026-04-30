@@ -63,7 +63,7 @@ VA分支：结构与VC分支对称，但将字幕特征替换为音频特征 `a`
 - MGF门控机制：核心创新点。自适应地学习每个模态特征在每个时间步的可信度，从而抑制来自不可靠字幕（如描述错误）或嘈杂音频（如背景噪声）的干扰，这是对盲目融合多模态信息的重要改进。
 - 查询多样化损失：针对同一视频的不同查询可能映射到相似表示的“语义坍塌”问题，通过损失函数在嵌入空间中适度推开这些查询，鼓励模型学习更具区分度的时序语义。
 
-![CAVIGATE框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463517-1.jpg)
+![CAVIGATE框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463517-1.jpg)
 图2：CAVIGATE整体框架（左）和模态门控融合Transformer结构（右）。左图展示了VC和VA两个分支，以及各自使用CLIP、Wav2Vec2进行特征提取的流程。右图详细展示了MGF Transformer中的门控融合块和门控函数结构。
 
 ### 💡 核心创新点
@@ -125,7 +125,7 @@ VA分支：结构与VC分支对称，但将字幕特征替换为音频特征 `a`
 - 加入查询多样化损失（QDL）：最终达到184.5
 结果清晰地验证了每个设计模块的有效性。
 
-![消融实验表](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463517-13.jpg)
+![消融实验表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463517-13.jpg)
 图（论文中Table 2）：消融研究结果，展示了逐步添加组件（VC、VA、MGF、QDL）带来的性能提升。
 
 ### ⚖️ 评分理由

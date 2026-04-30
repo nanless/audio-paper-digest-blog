@@ -46,7 +46,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 系统总体架构如图1（论文中标记为`pdf-image-page2-idx0`）所示，是一个端到端的流水线。
-![图1: MemoryAids整体流程图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462192-0.png)
+![图1: MemoryAids整体流程图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462192-0.png)
 1.  输入：来自多说话人（如耳机麦克风）的实时音频流。
 2.  低延迟主人检测模块：接收音频流，使用预存的主人语音嵌入（通过初始化阶段的前导序列获得）进行实时匹配，仅保留主人语音片段。该模块输出主人的语音片段流。
 3.  流式语音识别（ASR）：将过滤后的主人语音片段转录为文本流。论文中提及使用了Whisper的一个变体。
@@ -97,16 +97,16 @@ hiddenInHomeList: true
 | | - RAG (嵌入+LLM) | | 平均延迟 | 793.9 ms | 表3, 瓶颈 |
 | 用户体验 | MemoryAids | 用户研究 (12人) | 主观评分 (5分制) | 高分 (图5) | 评估“准确性”与“及时性” |
 
-![图3: (a) 主人语音检测召回率 (b) 非主人语音特异性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462192-2.png)
+![图3: (a) 主人语音检测召回率 (b) 非主人语音特异性](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462192-2.png)
 图3展示了系统在12名用户上检测主人语音的性能，平均召回率为90.7%，特异性高达98.8%，表明系统能有效过滤他人语音以保护隐私。
 
-![图4: 句子类型检测准确率](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462192-3.jpg)
+![图4: 句子类型检测准确率](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462192-3.jpg)
 图4展示了LLM对“回忆时刻”和“事实句子”的检测准确率，虽然因ASR误差对部分用户略有波动，但整体表现良好。
 
-![图5: 用户主观评分](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462192-2.png)
+![图5: 用户主观评分](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462192-2.png)
 图5显示参与者在“提示准确性”和“提示及时性”两个维度上均给出了高分，认可系统的辅助效果。
 
-![图2: LLM提示示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462192-1.png)
+![图2: LLM提示示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462192-1.png)
 图2展示了用于上下文学习的提示模板，包含输入、上下文和期望输出，通过示例教LLM区分“回忆”与“事实”类型。
 
 关键结论：系统在受控实验中表现良好，达到了亚秒级延迟和高检测精度。与专用模型（LLAMAPIE）相比，使用通用LLM（Gemini Pro）在检测准确率上甚至更优，验证了上下文学习方法的有效性。

@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: JCA-Net的整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464199-0.jpg)
+![图1: JCA-Net的整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464199-0.jpg)
 论文提出的JCA-Net整体框架如上图所示。其完整流程如下：
 1.  输入：混合音频信号 `x` 和目标说话人唇部运动视频 `y`。
 2.  编码器与特征精炼：
@@ -64,8 +64,8 @@ hiddenInHomeList: true
     *   最终输出：所有迭代结束后，通过一个卷积层和ReLU激活生成估计的掩码矩阵 `M`。
 5.  解码器：将掩码 `M` 与原始音频特征 `Fa` 在复数域进行点乘，得到目标语音的频域特征 `S~`，再通过转置卷积和iSTFT恢复为目标说话人的时域波形 `ŝ`。
 
-![图2: JCA模块的结构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464199-1.jpg)
-![图3: 分离模块的结构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464199-2.jpg)
+![图2: JCA模块的结构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464199-1.jpg)
+![图3: 分离模块的结构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464199-2.jpg)
 
 ### 💡 核心创新点
 

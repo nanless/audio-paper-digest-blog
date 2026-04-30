@@ -49,10 +49,10 @@ hiddenInHomeList: true
 
 DisContSE是一个由三个主要模块和一个共享的离散扩散解码器构成的混合架构。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460808-0.png)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460808-0.png)
 图1 (a) 整体架构与训练策略：清晰地展示了训练时的数据流和损失计算。干净语音x(n)经DAC编码为离散token (Xtok) 和连续嵌入。训练时，随机掩码生成器（MaskGIT）根据时间步t对Xtok生成掩码Mt，得到部分掩码的token Xt。离散增强模块对Xt进行处理。同时，连续增强模块和语义增强模块分别对带噪语音y(n)的DAC连续编码和WavLM特征进行增强，生成Econt和Esem。这两部分信息与离散增强模块的输出相加，作为条件输入到掩码语言模型（Masked LM）。掩码语言模型预测被掩盖位置的干净token，通过交叉熵损失Jdis_CE进行优化。此外，连续增强模块输出预测的连续嵌入，语义增强模块输出预测的语义特征，分别通过MAE损失Jcont_MA和Jsem_MA进行优化。最后，自判别器（self-critic）利用二元交叉熵损失Jcritic_BCE来优化模型判断token真伪的能力。
 
-![图2: pdf-image-page3-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460808-1.jpg)
+![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460808-1.jpg)
 图2 推理过程：推理的核心是单步扩散。首先，根据选择的初始时间步T（论文最优为0.1）生成初始掩码MT。论文提出了两种生成MT的策略，其中核心的“量化误差掩码初始化”（左侧虚线箭头）利用连续增强模块输出与DAC量化之间的误差矩阵Δquant，在误差最大的位置设置掩码。初始掩码Mt与离散增强模块输出的干净token估计X0合并，得到初始状态XT，连同Econt+Esem一起输入离散增强模块。在单步（N=1）情况下，模型直接输出最终预测X0，送入DAC解码器得到增强语音x̂(n)。如果执行多步，则会在中间步骤根据模型输出的置信度重新进行掩码（如红色框内流程）。
 
 主要组件详解：

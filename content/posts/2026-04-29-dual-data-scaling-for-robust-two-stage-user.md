@@ -87,7 +87,7 @@ hiddenInHomeList: true
 
 DS-KWS是一个两阶段（Two-Stage）的用户自定义关键词检测框架，整体架构如图1所示。
 
-![图1：DS-KWS整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460636-0.png)
+![图1：DS-KWS整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460636-0.png)
 图1：DS-KWS整体架构
 *   阶段一（CTC-based UDKWS）：负责从连续语音流中定位关键词的候选片段。
     *   输入：原始音频波形。
@@ -102,7 +102,7 @@ DS-KWS是一个两阶段（Two-Stage）的用户自定义关键词检测框架�
     *   Text Projection：一个简单的 `nn.Embedding` 层，将关键词的音素索引直接映射为文本特征 `Et`。
     *   Phoneme Matcher Module：核心验证模块，其详细实现如图2所示。
 
-    ![图2：音素匹配器模块实现](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460636-1.png)
+    ![图2：音素匹配器模块实现](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460636-1.png)
     图2：音素匹配器模块实现
     该模块使用一个轻量级的注意力机制（Attention）将音频特征 `Ea` 与文本特征 `Et` 进行对齐。对齐后的特征被送入一个判别器（由GRU和全连接层组成），同时输出两个层级的判断结果：
     1.  音素级匹配：判断每个音素位置是否匹配，训练损失为 `Lphon`。
@@ -142,7 +142,7 @@ DS-KWS是一个两阶段（Two-Stage）的用户自定义关键词检测框架�
 
 实验结果在表1、表2、表3、表4和图3中呈现。
 
-![图3：DS-KWS-M0与M2分数分布对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460636-2.png)
+![图3：DS-KWS-M0与M2分数分布对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460636-2.png)
 图3：DS-KWS-M0与M2分数分布对比
 该图对比了仅用第一阶段CTC打分的M0模型和经过第二阶段验证的M2模型在Hey-Snips数据集上的分数分布。M0的正样本分数分布较宽，与负样本有重叠；经过第二阶段过滤后，M2的正样本分数明显更集中，与负样本分离更清晰，直观证明了第二阶段验证模块有效提升了区分度。
 

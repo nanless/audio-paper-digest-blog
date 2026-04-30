@@ -57,10 +57,10 @@ AV-LMMDetect的整体架构直接建立在已有的大型多模态模型Qwen 2.5
     *   Stage 1 (LoRA Alignment)：冻结视觉和音频编码器。仅对语言模型部分应用LoRA（Low-Rank Adaptation），进行轻量级微调，使模型的语言能力适应“Real/Fake”二分类任务。
     *   Stage 2 (Full Fine-tuning)：解冻视觉编码器和音频编码器。对包括编码器在内的所有模态参数进行全量微调，旨在让模型学习任务特定的多模态表征，更好地捕捉音视频间的不一致线索。
 
-![架构图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463461-1.jpg)
+![架构图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463461-1.jpg)
 图2：AV-LMMDetect的两阶段训练概览。第一阶段通过LoRA对齐，第二阶段进行音视频编码器全量微调。
 
-![架构图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463461-2.jpg)
+![架构图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463461-2.jpg)
 图1：与基座模型Qwen 2.5 Omni的性能对比示意图。展示了未微调的基座模型无法确定答案，而微调后的AV-LMMDetect正确识别为“Fake”。
 
 ### 💡 核心创新点
@@ -139,7 +139,7 @@ AV-LMMDetect的整体架构直接建立在已有的大型多模态模型Qwen 2.5
 结论：两阶段训练策略效果显著。仅进行LoRA对齐（Stage 1）即可将准确率从32.26%提升至73.40%；仅进行全量微调（Stage 2）可达80.61%；而组合两者（Ours）可达到最佳的85.09%，验证了策略的有效性。
 
 混淆矩阵分析 (MAVOS-DD Open-set full)
-![混淆矩阵](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463461-8.png)
+![混淆矩阵](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463461-8.png)
 图3：各方法在MAVOS-DD Open-set full场景下的混淆矩阵。
 结论：AV-LMMDetect在该场景下的假阴性率最低（14.9%），即对伪造视频的检测能力最强；同时假阳性率也较低（7.5%），表明其区分真实和伪造视频的能力最为均衡和鲁棒。
 

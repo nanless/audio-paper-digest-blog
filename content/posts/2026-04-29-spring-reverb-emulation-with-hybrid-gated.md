@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 论文的核心是GCN-SSM混合架构，其设计目标是结合馈馈结构与循环结构的优势。根据图2的架构示意图，可以详细描述如下：
 
-![GCN-SSM模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461485-4.png)
+![GCN-SSM模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461485-4.png)
 图2. 论文中提出的模型架构：a) CONV, b) CONV-SSM, c) GCN-SSM。
 
 - 整体流程：输入为原始波形（44.1kHz单声道），经过一系列交错处理的GCN块和SSM层，最终输出同样格式的波形。

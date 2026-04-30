@@ -102,13 +102,13 @@ hiddenInHomeList: true
 3.  存在权衡：随着记忆化缓解，Prompt Adherence（提示遵循度）普遍下降，Full AMG模式下从0.32降至0.14。
 4.  一个反直觉的发现：衡量生成音频与真实数据分布差异的FAD指标在应用AMG后反而���善（降低），Full AMG模式下从4.27降至2.57。论文推测这是因为基线的“记忆化”产生了重复、单调的输出，而AMG鼓励了更多样性，从而更接近多样化的参考数据分布。
 
-![图1：频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463809-0.png)
+![图1：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463809-0.png)
 图1显示： (a)是原始训练音频的频谱图；(b)是使用相同提示但未应用AMG生成的音频，其时频结构与(a)高度相似；(c)是应用AMG后生成的音频，其时频结构与(a)有显著差异，表明记忆化被缓解。
 
-![图2：结构相似性矩阵对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463809-1.png)
+![图2：结构相似性矩阵对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463809-1.png)
 图2显示：矩阵的每个元素表示生成音频段与训练音频段的相似度。(a)未应用AMG，高相似度区域集中在对角线，表明存在逐段的复制。(b)应用AMG后，高相似度区域偏离对角线，表明生成内容与训练内容在时间结构上已不同。
 
-![图3：t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463809-2.png)
+![图3：t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463809-2.png)
 图3显示：将数据集样本、未经缓解的生成样本（Memorization）和经AMG缓解的生成样本（Full AMG）的嵌入进行可视化。(a)使用CLAPlaion嵌入，(b)使用MERT嵌入。在两种嵌入空间中，未经缓解的生成样本都与训练数据簇紧密聚集，而应用AMG的生成样本则分布更为分散，远离训练数据簇。
 
 ### ⚖️ 评分理由

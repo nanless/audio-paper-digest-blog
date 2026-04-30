@@ -63,7 +63,7 @@ hiddenInHomeList: true
         b. 通过一个全连接层（输入128维，输出1维），将特征映射为帧级清晰度分数。
         c. 沿帧级维度进行平均池化，得到最终的句子级语音清晰度预测分数。
 
-![图1: ECR-SIPNet 架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463862-0.png)
+![图1: ECR-SIPNet 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463862-0.png)
 （图1展示了特征提取与融合模块(a)以及预测头模块(b)的详细结构，清晰地描绘了从双SFM特征提取、维度统一、拼接、Bi-LSTM处理到多头注意力预测的全过程。）
 
 ### 💡 核心创新点
@@ -123,7 +123,7 @@ hiddenInHomeList: true
 3.  特征级融合（Dim-Concat）的效果优于模型集成方法（Average, Weighted Average），证明了特征层面学习互补信息的有效性。
 
 图表分析：
-![图2: WavLM和Whisper嵌入表示分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463862-1.png)
+![图2: WavLM和Whisper嵌入表示分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463862-1.png)
 （图2通过可视化展示了同一语音波形下，WavLM和Whisper嵌入在特征维度上的分布模式差异。WavLM（左）在中心区域变化剧烈，边缘均匀，符合其捕捉声学细节的特性；Whisper（右）则呈现更复杂的高低值分布，反映其丰富的语义信息。这从数据分布角度支持了特征互补的假设。）
 
 ### ⚖️ 评分理由

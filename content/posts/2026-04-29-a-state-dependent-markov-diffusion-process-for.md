@@ -49,7 +49,7 @@ hiddenInHomeList: true
     - 图滤波注意力：在U-Net的不同下采样层级（16x16， 32x32， 64x64分辨率）引入。它使用Network-in-Network（NIN）生成查询（Q）、键（K）、值（V），并计算注意力权重$W$。其关键在于引入了可学习的偏置$b$（公式12），使注意力机制能够进行自适应的图滤波，从而更好地捕捉语音信号中的长程依赖关系。
 - 输出：解码器输出为增强的复数频谱图$\hat{x}_0$（2通道：实部、虚部），再通过iSTFT转换为时域波形。
 
-![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463754-0.jpg)
+![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463754-0.jpg)
 图1展示了SDMDP框架与GUGA架构的整体流程。左侧显示前向过程（$x_0 \to x_t \to y$）与反向过程（$y \to x_t \to \hat{x}_0$），右侧详细展示了GUGA网络结构，包括输入构造、时间步嵌入、编码器、图注意力模块和解码器。
 
 ### 💡 核心创新点
@@ -132,7 +132,7 @@ hiddenInHomeList: true
 2.  GUGA架构优于标准NCSN++架构（在固定速率或SDMDP下均如此）。
 3.  混合损失显著优于单一MSE损失。添加感知损失（PESQ， STOI）能持续提升PESQ和ESTOI，最终达到最佳性能（3.84， 0.90）。
 
-![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463754-1.png)
+![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463754-1.png)
 图2展示了不同SDMDP训练范式（Score, Denoise, Predict）在不同反向扩散步数（N）下的PESQ性能。可以清晰看到，SDMDP (Predict) 方法（蓝色线）在N=40步时就达到了最高的3.84分，且整体性能最高，验证了其效率。其他方法在N>60步后性能提升趋于平缓。
 
 ### ⚖️ 评分理由

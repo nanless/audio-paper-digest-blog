@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 整体流程：输入视频帧序列 -> 第一阶段(PV-ASR)：视觉编码器+关键点编码器 -> 特征融合 -> CTC/Attention解码 -> 输出音素序列。-> 第二阶段：NLLB模型 -> 将音素序列解码为英文句子。
 
-![图1: 概览图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462334-0.png)
+![图1: 概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462334-0.png)
 图1. 该论文提出的架构概览。视觉编码器提取视觉特征，关键点编码器提取唇部关键点特征。这两种表示被融合后，通过CTC投影和Transformer解码器进行序列建模。融合后的输出进一步由NLLB模型处理以重建音素。
 
 主要组件详解：

@@ -45,7 +45,7 @@ hiddenInHomeList: true
 SonicMotion是一个端到端的框架，整体流程分为数据准备、自编码器训练和扩散模型生成三个主要阶段。
 
 整体架构图：
-![图1: 数据集空间增强流程与SonicMotion位置条件器工作流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461767-0.png)
+![图1: 数据集空间增强流程与SonicMotion位置条件器工作流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461767-0.png)
 
 1.  数据集构建（图1左侧）：输入为单声道音频和文本提示。对每个样本，随机生成静态或动态的方位角/仰角轨迹。对于动态轨迹，线性插值生成随时间变化的角度，并编码为FOA格式（使用公式1）。同时，利用LLM（Gemma-3）将原始文本提示重写为包含空间信息的描述性文本。
 2.  空间自编码器（预训练组件）：
