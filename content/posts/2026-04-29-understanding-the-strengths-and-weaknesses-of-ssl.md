@@ -107,10 +107,10 @@ hiddenInHomeList: true
 5.  说话人依赖性：用新说话人微调模型后，若支持集无该说话人样本，架构归因性能暴跌（表1行9/10）。w2v-bert-2.0（0.657）比wav2vec2（0.361）更鲁棒。微调模型常被归因到早期检查点或跨架构错误（如Grad-TTS→Matcha-TTS）。
 6.  零初始化实验：未训练模型（输出噪声）在架构归因上达到完美F1=1.0，但用这些噪声模型去归因正常训练模型则完全失败（F1=0.1），验证了架构固有偏差的存在。
 
-![图1: k值对验证集F1分数的影响](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464412-0.png)
+![图1: k值对验证集F1分数的影响](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464412-0.png)
 图1显示，随着邻居数k增加，检查点归因和架构归因的F1分数均先上升后趋于平稳。架构归因性能在两个SSL模型间差异不大，而wav2vec2在检查点归因上持续优于w2v-bert。
 
-![图2: 基线混淆矩阵（使用w2v-bert-2.0特征）](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464412-1.png)
+![图2: 基线混淆矩阵（使用w2v-bert-2.0特征）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464412-1.png)
 图2展示了40个检查点间的归因混淆矩阵。对角线颜色越深表示归因正确率越高。可见VITS的检查点（右侧块）整体区分度较好，而FastPitch等架构在后期检查点间混淆增多。跨架构的混淆非常少。
 
 ### ⚖️ 评分理由

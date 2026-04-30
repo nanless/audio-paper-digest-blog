@@ -36,7 +36,7 @@ hiddenInHomeList: true
 
 本文提出的“分块对齐器”延续了经典的“编码器-预测器-连接器”架构，但对关键组件进行了创新设计以实现分块流式处理。
 
-![图1: pdf-image-page4-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463400-0.png)
+![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463400-0.png)
 图1：分块对齐器架构示意图。
 - 输入流程：输入语音特征序列被分割为N个固定长度Lc的块。例如，在流式设置中，块大小Lc=15（经4倍降采样后对应600ms延迟）。
 - 编码器：采用Conformer块处理每个音频块，生成高级表示`Henc_n`。为支持流式，使用了因果深度卷积。其核心创新在于“分块自转导”：编码器内的自注意力模块被训练为在每个块内部，将所有标签信息重新排列，对齐到该块最左侧的帧。这与原Aligner在整句上全局对齐不同，降低了学习难度。
@@ -96,7 +96,7 @@ hiddenInHomeList: true
 
 结论：分块对齐器达到了与Transducer相当的WER（2.2%/5.0%），但RTF（0.12）远优于Transducer（0.30），解码速度快2.5倍。同时，其性能优于原Aligner（需数据拼接），且无需数据拼接技巧。使用CTC对齐与使用真实对齐性能一致。
 
-![图2: pdf-image-page4-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463400-1.png)
+![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463400-1.png)
 图2：(a)原Aligner与(b)分块对齐器在第16层编码器中的自注意力权重可视化。
 结论：该图直观验证了架构创新。图(a)显示原Aligner将整句标签（34个token）全局对齐到句子开头。图(b)显示分块对齐器在每个块（红框标记）的边界处进行对齐，印证了其“分块自转导”机制，对齐距离更短、更局部。
 

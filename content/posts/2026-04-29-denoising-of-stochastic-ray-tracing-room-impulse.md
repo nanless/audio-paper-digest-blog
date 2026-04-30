@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 模型整体是一个基于1D U-Net的信号到信号翻译网络，用于从带噪声的输入特征预测干净的压力EDC。
 
-![图2：模型架构示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463874-1.jpg)
+![图2：模型架构示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463874-1.jpg)
 （图2： Denoising of stochastic ray tracing room impulse responses as signal-to-signal translation task.）
 
 - 输入特征：共6个通道，分为三类：
@@ -121,7 +121,7 @@ hiddenInHomeList: true
         - FiLM层位置：仅在解码器使用FiLM（标准设置）略优于仅在编码器使用或双阶段使用。
 
 - 定性结果（图4）：
-    ![图4：定性结果示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463874-3.png)
+    ![图4：定性结果示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463753-4.png)
     （图4： Example of features, targets, baseline and the outputs of the model for 2 instances of the CLT dataset.）
     结论：对于低杂乱度（a）场景，输入EDC已较平滑，基线方法能平滑它但改变了衰减斜率。对于高杂乱度（b）场景，输入EDC噪声严重，基线方法过于平滑导致斜率错误。本文方法能更准确地恢复衰减斜率，尽管在信号尾部可能有些微噪声，但整体形状更接近目标。
 

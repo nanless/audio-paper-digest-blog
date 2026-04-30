@@ -46,7 +46,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 论文未提出新模型架构，而是评估现有多个模型。被评估的大型音频语言模型（LALMs）通常共享一个通用的多模态架构，如图1所示，主要包括三个组件：
-![图1: pdf-image-page1-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463785-0.jpg)
+![图1: pdf-image-page1-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463785-0.jpg)
 1.  音频编码器：负责将原始音频信号转换为音频表示向量。
 2.  模态适配器：作为桥梁，将音频表示向量转换为大型语言模型（LLM）骨干网络可以理解的格式（例如，投影到嵌入空间）。
 3.  骨干大型语言模型：负责融合音频和文本表示（通过拼接、交叉注意力等方式），并基于融合后的上下文进行自回归生成，输出文本推理结果。
@@ -88,19 +88,19 @@ hiddenInHomeList: true
 - 干扰条件：无（clean）， 静音（silence）， 合成高斯噪声（noise）， FSD50K环境音（fsd50k）。
 
 主要实验结果（见图2）：
-![图2: pdf-image-page1-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463785-1.jpg)
+![图2: pdf-image-page1-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463785-1.jpg)
 - 总体趋势：在所有基准和模型上，引入任何类型的无关音频（silence, noise, fsd50k）都会导致准确率相较于clean条件下降，同时影响率显著上升。
 - 干扰类型比较：静音和合成噪声产生的干扰效应强度相似，而FSD50K的影响有时更强但不统一。
 - 模型规模效应：同一架构下更大的模型（如Qwen2.5-Omni-7B vs 3B）通常表现出更高的准确率和更低的影响率，即更鲁棒。
 - 任务差异：MMLU任务比GSM8K和ARC-Challenge受到的影响更大（准确率下降和IR上升更明显）。
 
 消融实验结果（见图3）：
-![图3: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463785-0.jpg)
+![图3: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463785-0.jpg)
 - 时长影响：随着静音或噪声时长从0秒（clean）增加到30秒，准确率持续下降，影响率持续上升。以Qwen2.5-Omni-3B在GSM8K上为例，30秒静音导致IR从~0.00升至~0.15。
 - 振幅影响：随着噪声振幅从-60 dBFS增加到-20 dBFS，准确率下降和影响率上升的趋势加剧。
 
 解码温度影响（见图4）：
-![图4: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463785-0.jpg)
+![图4: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463785-0.jpg)
 - 低温（如0.0）时，模型较稳定，干扰影响小。
 - 温度升高（如0.5， 1.0）会急剧放大干扰效应，表现为准确率陡降和影响率飙升。Phi-4-Multimodal比Qwen2.5-Omni-7B对温度升高更敏感。
 

@@ -65,10 +65,10 @@ hiddenInHomeList: true
 1.  编码器嵌入拼接（Concatenation）：将前序/未来语句的完整编码器输出序列，与当前语句的输入在每个MHSA层之前进行拼接，作为长程上下文信息（图2中黑色虚线①）。
 2.  编码器嵌入池化投影（Pooling Projection）：通过一个设计的紧凑模块（Compact Module），对前序/未来语句的完整编码器输出进行注意力池化，投影为固定长度 $L \times D$ 的低维表示，再与当前语句结合（图2中黑色实线②）。这种方法更高效。
 
-![图1: 离散语音token化流程图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460887-0.png)
+![图1: 离散语音token化流程图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460887-0.png)
 图1展示了两种生成离散token的路径：一种是对XLSR-53或WavLM-Large的中间层输出进行K-means聚类；另一种是通过EnCodec直接进行量化。
 
-![图2: Zipformer-Transducer架构及跨语句上下文建模示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460887-1.png)
+![图2: Zipformer-Transducer架构及跨语句上下文建模示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460887-1.png)
 图2展示了Z-T模型如何利用前序（蓝色虚线框）和未来（红色虚线框）语句的上下文。①代表拼接方式，②代表通过紧凑模块进行池化投影的方式。
 
 ### 💡 核心创新点
@@ -79,7 +79,7 @@ hiddenInHomeList: true
 4.  揭示了离散Token在训练效率上的巨大优势：通过详尽的实验（如图3），量化证明了使用离散token作为输入（即使建模复杂上下文）能比使用连续SSL特征减少超过80%的训练时间，同时保持有竞争力的识别性能。
 5.  探索了多语言训练中离散Token的生成策略：通过消融实验（表2），分析了数据混合、共享K-means聚类以及聚类单元数对多语言ASR性能的影响，为未来更优的多语言离散token系统设计提供了参考。
 
-![图3: 训练时间对比图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460887-2.png)
+![图3: 训练时间对比图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460887-2.png)
 图3展示了在不同语言上，基于离散token和连续SSL特征的非上下文与上下文系统每轮（epoch）的训练时间（分钟）。离散token系统训练速度显著更快。
 
 ### 🔬 细节详述

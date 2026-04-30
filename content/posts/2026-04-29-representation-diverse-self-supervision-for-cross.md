@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 本文提出的管道架构分为三个阶段（见论文图3）：
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461507-2.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461507-2.png)
 论文图3：所提管道架构概览。I. 数据处理：对同一段海豚叫声信号，分别生成频谱图和能量图。II. 对比学习：两个编码器（共享权重）分别处理频谱图和能量图，通过投影头输出嵌入，然后使用InfoNCE损失最大化正对（同一音频的两种表示）相似度，最小化负对（不同音频的表示）相似度。III. 下游任务：将预训练的编码器（去掉投影头）连接分类头，在鸟类叫声的频谱图上进行端到端微调。
 
 完整流程：
@@ -127,14 +127,14 @@ hiddenInHomeList: true
 *   模型架构：ResNet18和ViT-B/16在最佳配置下性能接近且优于MobileNetV2。ViT在监督设置下表现最差，但通过对比学习获得提升最大，论文归因于其更依赖数据量。
 *   能量图类型：离散TKEO与正则化TKEO性能非常接近，互有胜负，表明两种变体均有效。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461507-1.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461507-1.png)
 论文图2：展示了一只虎鲸（上）和一只旋转海豚（下）叫声的离散TKEO能量图（左）与频谱图（右）。能量图清晰突出了叫声中的调制结构，视觉上与频谱图形成互补。
 
 其他图表：
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461507-0.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461507-0.png)
 论文图1：能量图生成流程框图。原始信号`g`s通过一组Gabor带通滤波器`g1, g2...gk`，每个滤波器的输出再经过TKEO（Ψ）算子，最后对每个滤波器通道在时间维度上取最大能量，形成能量图的各行。这相当于一个基于调制能量的注意力机制。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461507-5.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461507-5.png)
 此图在论文中未在正文中直接引用，但根据描述可能对应其他实验或补充材料。
 
 #

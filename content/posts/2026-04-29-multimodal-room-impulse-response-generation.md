@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 PromptReverb的架构分为三个核心部分（如图1所示）：
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463324-0.jpg)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463324-0.jpg)
 
 整体流程：输入为自然语言文本描述，最终输出为一段全频带（48kHz）的房间脉冲响应音频波形。
 
@@ -141,7 +141,7 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 
 *   结论：PromptReverb所有变体产生的RT60值在动态范围和方差上都比Image2Reverb更接近真实分布，表明其能更真实地建模多样声学环境。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463324-1.jpg)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463324-1.jpg)
 
 *   图2说明：主观评估结果显示，PromptReverb在“混响质量”和“文本匹配度”两个维度上的平均得分（3.79和3.50）均高于Image2Reverb（3.51和3.26）。其质量得分甚至略高于真实录音（3.32），尽管作者对“优于真实录音”的结论持谨慎态度。
 
@@ -149,7 +149,7 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 *   模型规模影响：更大的模型（如XL）在长提示下性能更好（误差8.8%），而较小的模型在短提示下可能表现更佳，说明模型容量与提示复杂度之间存在交互。
 *   文本编码器评估：论文评估了15+种配置。如表2所示，在语义分离度指标上，T5-Large + First（0.095）和T5-Base + First（0.079）表现最佳，但整体差异不大，表明文本编码并非决定性瓶颈。
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463324-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463324-2.png)
 *   图3说明：此图展示了PromptReverb在不同提示长度下，随模型规模增大，其预测的RT60均值、中位数和最大值都逐渐向真实值靠近，而Image2Reverb的预测值则显著偏低。
 
 #

@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 本文的核心“模型”是TAGARELA数据构建流水线（见图1），而非一个用于端到端推理的神经网络模型。该流水线是一个多阶段的串联系统，旨在将原始的播客音频转化为高质量的语音-文本对数据集。
 
-![图1：TAGARELA预处理流水线概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462137-0.png)
+![图1：TAGARELA预处理流水线概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462137-0.png)
 
 1.  输入与初始化：原始的“Cem Mil Podcasts”音频（~76,000小时，未经处理）。
 2.  音频标准化与分割：将所有音频统一格式为FLAC, 16kHz, 16-bit, 单声道。随后将长录音分割成5-20秒的片段，并尽量在自然停顿处分割。
@@ -106,12 +106,12 @@ hiddenInHomeList: true
 
 数据质量客观评估图（图3）
 
-![图3：STOI, PESQ和SI-SDR的分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462137-2.png)
+![图3：STOI, PESQ和SI-SDR的分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462137-2.png)
 *   说明：该图展示了经流水线处理后，TAGARELA数据集中音频片段的客观质量指标（STOI, PESQ, SI-SDR）分布。这些指标通常需要干净参考信号，此处使用了无参考估计。结果表明，经过降噪等处理后，数据集整体音频质量处于较高水平。
 
 音频片段时长分布图（图2）
 
-![图2：不同口音和性别下的音频片段时长分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462137-1.png)
+![图2：不同口音和性别下的音频片段时长分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462137-1.png)
 *   说明：左图比较了巴西葡萄牙语（pt-br）和欧洲葡萄牙语（pt-pt）片段的时长分布，右图比较了男性和女性说话人的片段时长分布。可以观察到分布的大致形态和可能存在的差异。
 
 ### ⚖️ 评分理由

@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 PCAS的整体架构（如图1所示）旨在模拟“看-听-分割”的感知过程，分为“Looking-before-Listening”和“Listening-before-Segmentation”两大阶段。
 
-![图1: 模型架构总览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461336-0.jpg)
+![图1: 模型架构总览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461336-0.jpg)
 
 1.  Looking-before-Listening (表示学习阶段)：
     *   输入：一帧视频图像和对应的一段音频（转换为梅尔频谱）。
@@ -148,9 +148,9 @@ PCAS的整体架构（如图1所示）旨在模拟“看-听-分割”的感知�
 
 5.  特征可视化（图3）：t-SNE图显示，未经CMC对齐时，不同模态（`v_cls`, `v_sem`, `a_sem`）的特征分布在不同区域；经CMC对齐后，同类别的多模态特征聚集在一起，证明了CMC在全局语义对齐上的有效性。
 6.  案例研究（图4 & 图5）：
-    ![图4: AVS-S4测试集上的可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461336-3.jpg)
+    ![图4: AVS-S4测试集上的可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461336-3.jpg)
     图4显示，与WS-AVS等基线方法相比，PCAS生成的掩码在物体边界（如人的肩膀、猎豹的耳朵和腿）上更准确、更完整。
-    ![图5: AVSS测试集上的PCAS结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461336-4.jpg)
+    ![图5: AVSS测试集上的PCAS结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461336-4.jpg)
     图5展示了PCAS在更复杂的多物体AVSS场景中的表现，能够将不同的音频类别映射到对应的图像区域。
 
 ### ⚖️ 评分理由

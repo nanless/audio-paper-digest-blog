@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463443-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463443-1.png)
 模型整体架构：采用标准的UNet结构（图2），以处理被噪声污染的多轨道钢琴卷帘（pianoroll）`xt`。模型接收两个额外条件输入：乐器织体特征`y1`（ViTex）和和弦进行`y2`。
 - 输入：`xt`是一个四维张量 `{0,1,2,3}^{128×128×11}`（128时间步，128音高，11个乐器轨道，状态为静音/起始/持续/掩码），以及时间步`t`的嵌入。
 - 条件注入：条件`y1`（乐器织体，形状`{0,1}^{8×8×33}`）和`y2`（和弦，形状`{0,1}^{32×12×3}`）首先通过一个“Reshape Block”。该模块通过直接拉伸对齐宽度维度，并使用小型MLP变换高度和通道维度，以匹配UNet各层的特征图尺寸。对齐后的条件特征图通过元素级加法注入到UNet的相应层级。具体地，`y1`注入到底部两层，`y2`注入到中间两层。
@@ -101,8 +101,8 @@ PCE: 音高类熵；GPS: 律动模式相似度；表示越接近真实值越好�
 关键结论：在条件生成中，本模型在所有控制指标和质量指标上均显著优于基线Q&A。在无条件生成中，本模型在律动相似度（GPS）和编排质量（DOA）上超越了基线MMT和AMT，PCE略有偏差但优于MMT。
 
 主观听音测试（图3）
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463443-2.png)
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463443-3.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463443-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463443-3.png)
 *(图a) 音乐续写任务：本模型在“创造性”上得分最高，在“连贯性”和“音乐性”上略低于AMT但高于MMT。
 (图b) 给定乐器生成任务：本模型在“连贯性”、“音乐性”、“创造性”三项指标上均显著高于MMT和Q&A基线。*
 

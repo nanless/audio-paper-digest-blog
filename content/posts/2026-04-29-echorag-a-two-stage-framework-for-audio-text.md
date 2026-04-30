@@ -63,7 +63,7 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 
 EchoRAG是一个端到端的检索与定位框架，采用两阶段、教师-学生架构。其整体流程如下图所示：
 
-![EchoRAG框架图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461592-1.png)
+![EchoRAG框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461592-1.png)
 图2: EchoRAG框架概览。上半部分为第一阶段，全局CLS编码器（教师）生成紧凑表示进行快速检索；下半部分为第二阶段，token-frame LI模块（学生）对短名单进行精排和时间预测，并受峰值-平滑正则化约束。
 
 完整输入输出流程：
@@ -134,22 +134,22 @@ EchoRAG是一个端到端的检索与定位框架，采用两阶段、教师-学
 ### 📊 实验结果
 
 1. 音频-文本检索（表1）
-![表1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461592-1.png)
+![表1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461592-1.png)
 图（论文内表格）展示了在SQuAD-Spoken和AudioCaps上的检索性能。
 - 结论：EchoRAG在SQuAD-Spoken上R@10达到0.9260，显著优于WavRAG的0.8979。在AudioCaps上，EchoRAG在几乎所有指标上均为最优，例如NDCG@10为0.8459，高于CLAP的0.8211和WavRAG的0.5252。这证明了其在语音和非语音音频检索场景下的有效性。
 
 2. 音频定位（表2）
-![表2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461592-0.png)
+![表2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461592-0.png)
 图（论文内表格）展示了在音频定位任务上的性能。
 - 结论：EchoRAG的精确率（Precision）最高，为37.25%，优于TAG（28.60%）和WSTAG（36.44%）。但召回率（31.07%）和F1值（33.88%）略低于WSTAG（召回率32.98%， F1 34.62%）。这表明EchoRAG的定位边界可能更精确，但可能漏检部分相关片段。
 
 3. 生成结果（表3）
-![表3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461592-1.png)
+![表3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461592-1.png)
 图（论文内表格）展示了在问答生成任务上的性能。
 - 结论：在Top-1设置下，EchoRAG在HotpotQA的EM和FS上与TextRAG持平或略优，但在SLUE-SQA-5上表现更好。在Oracle设置（使用金标证据）下，EchoRAG的EM和FS均取得最高值（例如HotpotQA EM 0.6301， FS 0.6537），表明当检索完美时，其生成模型能更好地利用证据。整体上，EchoRAG在事实一致性（FactScore） 方面优势明显，这与其细粒度检索能提供更相关证据的假设一致。
 
 4. 消融实验（表4）
-![表4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461592-1.png)
+![表4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461592-1.png)
 图（论文内表格）展示了在SQuAD-Spoken上的消融结果。
 - 结论：从基线（SP + CLS-Only）开始，单独加入Multi-positive（MP）损失或LI模块都能提升性能。两者结合（MP + CLS→LI）取得最佳结果（R@1 0.6535， NDCG@10 0.8341），验证了两个技术点的互补性：MP处理假阴性，LI实现细粒度对齐。
 

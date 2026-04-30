@@ -90,13 +90,13 @@ MAE的检测性能略有下降，但标准差更大，表明训练稳定性可�
 
 解释性评估关键结果：
 - F-score（图4）：在所有方法和阈值上，MAE始终优于AE。MAE最佳为显著图在98th百分位阈值下的0.63，AE最佳为误差图在96th百分位阈值下的0.55。
-![图4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461714-5.png)
+![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461714-5.png)
 （图4显示MAE的F-score曲线（虚线）普遍高于AE（实线），且峰值更高。）
 - 忠实度分数（图5）：同样，MAE在所有方法和阈值上均优于AE。MAE的误差图在95%-98%阈值范围内忠实度得分最高，表明其突出的区域对模型误差影响最大。
-![图5](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461714-6.png)
+![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461714-6.png)
 （图5显示MAE的忠实度分数（虚线）普遍高于AE（实线），尤其是误差图。）
 - 定性分析（图3）：以断板异常为例，MAE的归因图（特别是误差图）产生的解释更集中、结构化，清晰勾勒出异常的非直线水平线，且与标注区域吻合度更高。AE的归因图则较为分散或聚焦于无关区域。
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461714-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461714-2.png)
 （图3展示了AE和MAE在同一异常样本上，六种解释方法生成的2D归因图及其二值化掩码和1D时间信号。MAE的结果明显更聚焦于标注的异常区域。）
 
 ### ⚖️ 评分理由

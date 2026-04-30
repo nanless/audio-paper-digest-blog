@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 论文中未提供专门的模型架构图。 方法流程在论文图1中有示意性说明。
 
-![图1: 灾难性遗忘与逆Hessian正则化示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461503-0.png)
+![图1: 灾难性遗忘与逆Hessian正则化示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461503-0.png)
 图1说明：该图直观展示了问题与解决思路。左侧蓝点θ_{t-1}是旧模型，橙点˜θ_t是微调后的新模型，但其可能位于旧任务（蓝色区域）的高损失区。IHR方法通过逆Hessian调整更新方向，使最终模型θ_t（绿点）仍位于新旧任务低损失区域的交集中。
 
 ### 💡 核心创新点
@@ -113,7 +113,7 @@ hiddenInHomeList: true
 4.  消融研究（Table 2）显示：使用仅最近任务的逆Hessian（H_{t-1}^{t-1}）与使用所有历史任务之和（∑H_i^i）效果相当；对剩余参数使用α_p=1/t的平均进一步提升了性能。
 
 图2分析：超参数τ的影响
-![图2: WER随超参数τ的变化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461503-1.png)
+![图2: WER随超参数τ的变化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461503-1.png)
 图2说明：该图展示了在第一次适应步骤（1-US → 2-ENG）中，WER随缩放因子τ的变化。虚线（No IHR）表示不应用逆Hessian，直接移动更新步长。可以观察到，应用逆Hessian（实线）后，模型对τ的取值鲁棒得多。即使τ增大到5.0，平均WER和旧任务WER仍保持稳定；而无IHR时，从τ=2.0开始性能就快速恶化。这直观证明了逆Hessian正则化将更新引导至“安全方向”的有效性。
 
 ### ⚖️ 评分理由

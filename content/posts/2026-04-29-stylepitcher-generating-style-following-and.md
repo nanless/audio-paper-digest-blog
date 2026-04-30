@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 模型架构与应用](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461590-0.png)
+![图1: 模型架构与应用](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461590-0.png)
 StylePitcher的模型架构和工作流程如图1(a)所示。其核心是将音高曲线生成问题转化为一个条件掩码填充任务。
 
 1.  输入处理：
@@ -73,7 +73,7 @@ StylePitcher的模型架构和工作流程如图1(a)所示。其核心是将音�
     *   SVS：将参考音高`xref`、目标音符`ytgt`与内容占位`xtgt`拼接，掩码`xtgt`部分，生成遵循参考风格的目标音高。
     *   SVC：将参考音高`xref`与目标内容音高`xtgt`拼接，掩码`xtgt`部分进行重新生成，以传递风格。
 
-![图2: 三个任务的示例结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461590-5.png)
+![图2: 三个任务的示例结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461590-5.png)
 图2展示了StylePitcher在三个任务上的实际效果。蓝色为输入曲线，红色为StylePitcher生成的曲线，绿色为基线方法的曲线。可以看到，StylePitcher能更好地从输入曲线中捕捉并保留滑音（a）、颤音（b, c）等风格特征。
 
 ### 💡 核心创新点
@@ -136,7 +136,7 @@ StylePitcher的模型架构和工作流程如图1(a)所示。其核心是将音�
 2.  SVS：StylePitcher的风格捕捉能力（3.33）优于StyleSinger（3.07），质量相当（3.11 vs 3.07），验证了其作为即插即用模块的有效性。
 3.  SVC：与使用原始F0的基线相比，StylePitcher在风格捕捉（2.95 vs 2.62）上有提升，但整体质量（2.72 vs 3.03）略低，印证了论文提到的在缺乏内容感知时可能产生不自然结果的局限性。
 
-![图2: 三个任务的示例结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461590-5.png)
+![图2: 三个任务的示例结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461590-5.png)
 （此图已在“模型架构”部分引用并说明）
 
 ### ⚖️ 评分理由

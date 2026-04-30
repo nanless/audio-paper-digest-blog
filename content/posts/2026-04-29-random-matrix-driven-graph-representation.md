@@ -49,10 +49,10 @@ RM-GRL框架的整体架构如图1所示，主要包含三个阶段：时频图�
 4.  图神经网络编码：使用图卷积网络（GNN）处理超图。为稳定训练，约束了图卷积算子的Lipschitz常数。采用最大相对聚合方式（式9）更新节点特征，即拼接中心节点特征与其邻域中差异最大的特征。
 5.  图级嵌入与分类：通过全局平均池化获得整个图的嵌入向量 `g`，然后通过一个全连接层和Sigmoid激活函数输出二分类预测。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460933-0.jpg)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460933-0.jpg)
 图1：RM-GRL框架概览。展示了从三通道梅尔频谱图输入，到超图构建，再到通过带有Lipschitz约束的GNN编码器进行多尺度特征整合与图精炼的流程。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460933-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460933-1.png)
 图2：动态图结构构建基础框架。展示了对数梅尔、Delta、Delta-Delta三个通道的特征如何通过随机矩阵投影和自适应可学习缩放，映射到图结构中的空间关系。
 
 ### 💡 核心创新点
@@ -109,13 +109,13 @@ RM-GRL框架的整体架构如图1所示，主要包含三个阶段：时频图�
 | 品种级对比 | Our Model | 21个物种 | Accuracy & F1 Score | 在图5a（准确率热图）和图5b（F1分数热图）中，在大多数物种上，本方法的指标（颜色深度）优于或持平于基线，尤其在F1分数上优势更明显。 |
 | 消融研究 | 完整模型 | 未说明具体数据集 | 性能增益 | 随机矩阵投影模块贡献 +2.3%；超图构建贡献 +1.5%；Lipschitz约束和ADD损失确保稳定性和判别性。 |
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460933-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460933-2.png)
 图3：四个样本比例下的精确率-召回率曲线。展示了本模型（紫色）在不同不平衡程度下均能保持较好的精确率和召回率平衡，优于其他基线。
 
-![图4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460933-3.png)
+![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460933-3.png)
 图4：21种生物声音的ROC-AUC曲线。展示了本模型在所有类别上都取得了0.8以上的高AUC值，证明了其鲁棒性和有效性。
 
-![图5](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460933-4.png)
+![图5](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460933-4.png)
 图5：五种模型在21个物种上的性能热图对比。(a) 准确率对比；(b) F1分数对比。直观显示了本方法在大部分物种识别任务上的优势。
 
 ### ⚖️ 评分理由

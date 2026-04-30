@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 PhonCon是一个端到端的序列到序列模型，整体架构如图1所示，旨在将BC语音的log-mel谱图映射为接近AC语音的log-mel谱图。其核心包含三个串联组件：
 
-![PhonCon架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460573-0.png)
+![PhonCon架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460573-0.png)
 *   语音到音素（S2P）分类器：一个冻结的、基于CTC损失的单向LSTM模型。输入是BC语音的MFCC特征，输出是每帧的音素逻辑值（未归一化的logits）。该模型在训练后被固定，仅用于为下游BWE网络提供音素条件信号`P`。
 *   紧凑循环骨干网络：负责对BC语音的log-mel特征进行时序建模。论文提供了两种变体：
     *   LSTM变体：由L个（L=3）堆叠的循环块构成。每个块包含RMS归一化层和一个单向LSTM单元。隐藏维度`H`=128。
@@ -60,7 +60,7 @@ PhonCon是一个端到端的序列到序列模型，整体架构如图1所示，
     *   FiLM调制（式5-7）：对每个时间步`t`，根据当前帧的音素逻辑值`pt`，通过一个线性层生成仿射变换参数`γt`（缩放）和`βt`（偏移），然后对隐藏状态`ht`执行`γt ⊙ ht + βt`的操作。这实现了逐帧、逐特征的调制。
     *   TFiLM调制（式8-10）：为了以更低的成本引入长程依赖，它将时间轴划分为不重叠的块（chunk）。对每个块内的音素逻辑值进行池化（平均或最大）得到一个摘要向量`sn`。然后，将这些摘要序列输入一个单向LSTM，生成每个块的仿射参数`γ'_n`和`β'_n`，并广播到该块的所有时间帧进行调制。这引入了至多M-1帧的算法延迟。
 
-![Mamba残差块示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460573-1.png)
+![Mamba残差块示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460573-1.png)
 
 数据流：输入BC log-mel谱图`X_BC` → 第一个循环块处理 → FiLM/TFiLM调制 → 第二个循环块处理 → FiLM/TFiLM调制 → … → 最终块输出`U(L)` → 线性层投影（仅LSTM变体） → 预测的AC log-mel谱图`X̂_AC`。最后，通过逆mel变换和STFT（使用原始BC相位）重建波形。
 
@@ -115,10 +115,10 @@ PhonCon是一个端到端的序列到序列模型，整体架构如图1所示，
     - Mamba vs LSTM：在同等条件下，Mamba变体的MFLOPS大约是对应LSTM变体的一半，显示出显著的计算效率优势。
 3.  与基线比较：所有PhonCon模型（尤其是条件化版本）都显著优于DDAE和TRAMBA。EBEN在PESQ和STOI上表现最佳，是当前Vibravox上的SOTA，但其模型大小（7.42MB）和计算量（1334.77 MFLOPS）远高于TFiLM-Mamba（后者的大小约为其1/2.5，计算量约为其1/25）。这凸显了本文方法在资源受限场景下的优越性。
 
-![语音质量指标分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460573-2.png)
+![语音质量指标分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460573-2.png)
 *   图3说明：展示了不同模型在测试集上PESQ和STOI分数的分布（箱线图）。可以直观地看到，条件化模型（FiLM/TFiLM变体）的分布中心和中位数普遍高于对应的非条件基线。
 
-![性能与模型大小关系图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460573-3.png)
+![性能与模型大小关系图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460573-3.png)
 *   图4说明：以模型大小（MB）为横轴，PESQ或STOI为纵轴绘制散点图。清晰地展示了“性能-大小”帕累托前沿。Mamba变体（尤其是TFiLM-Mamba）在较小的尺寸下取得了有竞争力的性能，而EBEN虽然性能更高，但位置靠右上（尺寸大得多）。
 
 ### ⚖️ 评分理由

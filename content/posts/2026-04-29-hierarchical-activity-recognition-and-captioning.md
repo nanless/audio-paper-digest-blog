@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文提出的统一层级框架（见图2）包含三个主要组件，协同工作以处理长音频的层级理解和生成任务。
 
-![图2: 论文提出的统一层级模型架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461538-1.png)
+![图2: 论文提出的统一层级模型架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461538-1.png)
 
 1.  Auditory SlowFast (ASF) 特征提取器：
     *   功能：作为整个系统的共享音频特征骨干网络，从原始音频中提取帧级表示。
@@ -142,7 +142,7 @@ hiddenInHomeList: true
 | Eval | 69.2 | 74.4 | 75.6 | 87.2 | 87.2 | 80.8 |
 结论：使用较短训练上下文（2-4个子活动）时，活动错误率（AER）最低。随着训练上下文变长，AER显著上升。这表明模型难以建模长程依赖关系，序列预测是关键挑战。
 
-![图1: MultiAct数据集的层级结构与LLM辅助标注流程](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461538-0.jpg)
+![图1: MultiAct数据集的层级结构与LLM辅助标注流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461538-0.jpg)
 结论：此图直观展示了MultiAct数据集的核心——三层级标注结构（活动 > 子活动 > 事件），以及利用LLM辅助、人工审核的标注构建流程。
 
 表5：字幕生成任务基线模型结果 (%) ↑

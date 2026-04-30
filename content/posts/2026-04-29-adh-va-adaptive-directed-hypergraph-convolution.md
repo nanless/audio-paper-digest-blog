@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 ADH-VA的整体架构如图1所示，主要包含四个阶段：数据预处理、VA驱动的对比学习、自适应有向超图卷积和分类器。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460507-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460507-0.png)
 图1：ADH-VA总体架构图
 
 1. 数据预处理与单模态编码：
@@ -133,7 +133,7 @@ ADH-VA的整体架构如图1所示，主要包含四个阶段：数据预处理�
 3. 超参数敏感性分析：
 图2展示了四个关键超参数对模型性能的影响。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460507-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460507-1.png)
 图2：IEMOCAP和MELD数据集上的超参数敏感性分析
 
 结论：模型对超参数有一定鲁棒性，但也存在最优区间。例如，对比损失权重λ_CL在IEMOCAP上为0.1时最优，而在数据不平衡的MELD上需要更大的权重。正样本阈值δ=0.1是一个合理的折中。

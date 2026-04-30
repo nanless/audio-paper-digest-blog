@@ -41,10 +41,10 @@ hiddenInHomeList: true
 
 本文提出的“节奏感知器”（Rhythm Perceiver）架构旨在以端到端的方式从音频中生成单声部乐谱，其核心是将任务分为节奏分类和音高预测两个阶段。
 
-![Rhythm Perceiver Architecture](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461977-0.png)
+![Rhythm Perceiver Architecture](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461977-0.png)
 图1：Rhythm Perceiver 架构总览。 模型接收音频特征序列（frames）和起始/结束点信息（onsets/offsets）。这些特征首先通过一个交叉注意力模块（cross-attention），其中音频特征作为Key和Value，一组可学习的潜在向量（bin latents和rhythm latents的拼接）作为Query。该步骤将高维的音频特征映射到一个低维的潜在空间。随后，拼接后的潜在向量被送入一个共享的Transformer编码器（latent transformer）。处理后，潜在向量被拆分为两部分：节奏潜变量（rhythm latents）和音符位置潜变量（bin latents）。节奏潜变量进入节奏分支，通过一个线性分类器预测每个拍子的“节拍特征”类别。音符位置潜变量进入音高分支，首先接收来自节奏分支预测结果生成的“节奏掩码”（rhythm mask）进行条件注入，然后通过一个额外的Transformer编码器（bin transformer）和线性分类器，预测每个“时间槽”（bin）的音高。模型采用分层位置编码，包含共享的节拍级和拍子级编码，以及针对音频帧和音符位置各自的低级编码。
 
-![Examples of beat signatures](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461977-1.png)
+![Examples of beat signatures](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461977-1.png)
 图2：节拍特征（节奏掩码）示例。 展示了在每个拍子内（12个时间槽），音符起始（O）、延续（T）和休止（R）的模式，这些模式对应了不同的节奏型（如四分音符、八分音符三连音等）。
 
 整体流程与关键设计选择：
@@ -109,10 +109,10 @@ hiddenInHomeList: true
 
 关键结论：Rhythm Perceiver在Omnibook这个更具挑战性的数据集上，相比强大的基线方法[11]，在所有可比较的指标上都取得了显著提升，尤其是在钢琴卷帘准确率（0.53 vs 0.19）和节奏准确率（0.53 vs 0.18）上。这证实了该方法的有效性和优越性。论文还提到，通过划分“简单”和“困难”测试子集，发现性能对节拍跟踪的质量敏感。
 
-![Histogram of beat-signature classes](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461977-2.png)
+![Histogram of beat-signature classes](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461977-2.png)
 图3：节拍特征类别频率直方图。 展示了在Filosax数据集中，经过双倍速增强前后，最常见节拍特征类别的频率分布。增强后，基于16分音符的节奏型变得更常见，这反映了爵士乐中同一乐句可能以不同时间密度演奏的特点。
 
-![Workflow of audio feature extraction](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461977-3.png)
+![Workflow of audio feature extraction](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461977-3.png)
 图4：音频特征提取流程。 展示了音频前端的工作流：输入音频片段 -> 声源分离（得到主奏乐器和伴奏）-> 对伴奏进行节拍跟踪 -> 通过CRNN前端（基于原始混合音频的梅尔频谱图）预测起始点、结束点和音高帧。
 
 #

@@ -62,7 +62,7 @@ hiddenInHomeList: true
     *   失真控制约束：动机是避免传统“无失真”约束在ROI较宽时导致的性能恶化，允许一定的灵活性以提升鲁棒性。
     *   WNG约束：动机是直接约束波束成形器的白噪声增益，确保对传感器噪声和失配的鲁棒性，这比事后检查更可靠。
 
-![图1: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461491-0.png)
+![图1: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461491-0.png)
 图1展示了优化得到的麦克风布局示意图。空心圆为未占用的候选位置，实心圆为优化选择的麦克风位置。对于较窄的ROI（ΦROI=[-10°,10°]，图1a），阵列布局更稀疏，沿x轴延伸以增大孔径提升指向性。对于较宽的ROI（ΦROI=[-40°,40°]，图1b），布局更紧凑，以维持整个区域内的性能。虚线标示了子阵列划分方式，数字表示优化阶段顺序。
 
 ### 💡 核心创新点
@@ -113,10 +113,10 @@ hiddenInHomeList: true
 - 指向性（DF）：当声源DOA偏离ROI中心较远时，DF更优；在ROI中心附近性能相当。
 - 整体ROI性能：在高频段的ROI平均直接性因子DROI也更优。
 
-![图2: pdf-image-page3-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461491-1.png)
+![图2: pdf-image-page3-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461491-1.png)
 图2对比了SO-SCCA和SCCA的DF和WNG。子图(a)和(b)显示DF，(c)和(d)显示WNG。结论是SO-SCCA在DOA偏离大时DF更优，且在整个ROI内WNG显著更高。
 
-![图3: pdf-image-page4-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461491-2.png)
+![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461491-2.png)
 图3对比了三种方法在整个ROI上的平均性能。子图(a)为DROI，(b)为WROI。结论是SO-SCCA在WROI上全面领先，在2kHz以上的DROI也领先。
 
 ### ⚖️ 评分理由

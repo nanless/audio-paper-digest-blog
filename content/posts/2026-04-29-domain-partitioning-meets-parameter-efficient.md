@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本文方法整体架构分为三个连续阶段，旨在将一个通用LASS模型（AudioSep）转化为针对不同声音子领域的“专家集合”。
 
-![图1: pdf-image-page4-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460403-0.png)
+![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460403-0.png)
 
 阶段1：领域划分（Domain Partitioning）
 -   输入：完整的AudioSet训练集（仅包含单类别音频）。
@@ -132,7 +132,7 @@ hiddenInHomeList: true
     -   ReConv-Adapter在所有测试集上均取得最优分离结果，验证了其有效性。
 -   领域划分分析（图3）：使用t-SNE可视化CLAP嵌入的聚类结果。图中显示，大部分相同颜色的点（同一子域）形成清晰的簇，不同簇之间有明确边界，直观验证了基于CLAP嵌入进行K-Means聚类的有效性。同时观察到声学特征相似的类别（如各类人声）倾向于聚在一起，与语义分类不完全一致。
 
-![图3: pdf-image-page4-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460403-0.png)
+![图3: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460403-0.png)
 
 ### ⚖️ 评分理由
 

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 论文提出的整体检测框架（如图1所示）包含三个核心阶段：数据构建、特征提取和目标检测。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465045-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465045-0.png)
 图1：提出的水下声学目标检测方法流程图。(a) 将非目标干扰信号与目标信号混合构建数据集；(b) 特征提取：对比了两种前端，下方是传统的固定Mel前端（STFT -> 固定Mel滤波器组 -> LOG），上方是所提出的可学习前端learnMel（STFT -> 可学习滤波器组 -> PCEN）；(c) 目标检测：将特征输入TResNet模型，使用BCE损失进行二分类。
 
 1.  目标检测数据集构建：通过控制信干比（SIR），将目标信号与非目标干扰信号按比例混合，生成正样本（混合信号）；随机选择纯干扰信号作为负样本。这模拟了实际水下环境中目标与干扰共存的复杂场景。
@@ -98,10 +98,10 @@ hiddenInHomeList: true
 
 关键结论：learnMel（PCEN-learnMel）的特征内存和推理时间与log-Mel、PCEN-Mel等固定前端相当（均在0.25MB和0.3s左右），但远低于LEAF前端（156.25MB）。这证明了learnMel在实现性能提升的同时，没有带来显著的计算负担。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465045-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465045-1.png)
 图2：两个数据集中正样本的信干比(SIR)分布图。显示了训练集、验证集和测试集在不同SIR区间的样本数量，表明实验覆盖了从-40dB到+40dB的广泛干扰强度范围。
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465045-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465045-2.png)
 图3：(a) ShipsEar数据集上的ROC-AUC曲线；(b) DeepShip数据集上的ROC-AUC曲线（因性能极高，曲线集中于左上角）；(c) ShipsEar数据集上不同SIR区间内的检测概率(DP)；(d) DeepShip数据集上不同SIR区间内的检测概率。图3(a)显示PCEN-learnMel在低虚警率区域（FAR<10%）表现优异。图3(c)显示在ShipsEar中，即使在SIR低于-10dB的强干扰下，PCEN-learnMel仍能保持约77%-93%的检测概率。
 
 ### ⚖️ 评分理由

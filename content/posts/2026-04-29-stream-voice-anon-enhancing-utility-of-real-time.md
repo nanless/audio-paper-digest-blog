@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 系统整体架构如图1所示，主要包含训练和推理两个流程。
 
-![图1: 训练和推理流程](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463808-0.jpg)
+![图1: 训练和推理流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463808-0.jpg)
 
 训练流程 (Fig. 1a)：
 1.  内容编码器 (Content Encoder)：输入源语音，通过因果卷积和Transformer提取与说话人无关的离散内容码 `ct`。该编码器在训练ARVC模型时被冻结。
@@ -133,7 +133,7 @@ hiddenInHomeList: true
 关键结论：增加提示的多样性（从固定单一说话人到跨数据集随机选择）能显著提升对抗半知情攻击者的隐私保护（EER从15.92提升到18.98），但对lazy-informed攻击者影响不大。这表明多样性策略有助于隐藏源说话人的特定线索。
 
 图2：延迟与隐私/实用性的权衡
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463808-1.jpg)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463808-1.jpg)
 关键结论：在130-440ms延迟范围内，隐私（EER）基本保持不变。语音实用性（WER）随延迟增加而改善，在180ms后趋于平缓。动态延迟模型（蓝色曲线）与固定延迟d=4的模型（黑色标记）对比显示，动态延迟在保持相似隐私水平下，提供了更灵活的延迟选择权。
 
 表3：延迟与实时因子（RTF）性能

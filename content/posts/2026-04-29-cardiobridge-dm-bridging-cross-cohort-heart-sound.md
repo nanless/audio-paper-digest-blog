@@ -41,16 +41,16 @@ hiddenInHomeList: true
 | AudioLDM (adapted) | 9.8±0.5 | 2.6±0.1 | 0.52±0.03 | 0.58±0.06 |
 | CardioBridge-DM (Ours) | 4.3±0.3 | 3.7±0.2 | 0.74±0.02 | 0.82±0.03 |
 
-![图2: 不同模型生成的心音波形定性比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460614-1.png)
+![图2: 不同模型生成的心音波形定性比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460614-1.png)
 
-![图3: 模型对引导尺度s和调制因子α的敏感性分析](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460614-2.png)
+![图3: 模型对引导尺度s和调制因子α的敏感性分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460614-2.png)
 
 5. 实际意义是什么：提供了一种可扩展的数据增强方案，能利用大规模弱标注数据生成高质量、临床逼真的合成心音，有望缓解医疗数据稀缺问题，提升心脏听诊AI模型的鲁棒性和临床适用性。
 6. 主要局限性是什么：对于训练数据中极其稀少且描述模糊的复杂病理（如特定类型的心房颤动），合成效果仍有不足。感知评估的受试者规模（15人）较小。论文未开源代码和模型，限制了社区的复现与应用。
 
 ### 🏗️ 模型架构
 
-![图1: CardioBridge-DM框架图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460614-0.png)
+![图1: CardioBridge-DM框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460614-0.png)
 CardioBridge-DM采用两阶段架构：
 
 阶段1：通用声学表征学习

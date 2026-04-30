@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 本文提出了三种核心架构，均共享下游的注意力池化与分类头（见图1）。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461897-0.jpg)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461897-0.jpg)
 图1: 论文提出的离散SER框架。(a) 多层离散单元来自微调的WavLM，使用层级特定的码本。(b) 通过EnCodec, DAC和SpeechTokenizer进行神经编解码器tokenization。(c) 分层融合，通过量化后的OpenSMILE副语言特征增强离散语音表示。所有模型使用相同的下游架构（层注意力、池化、分类器）。
 
 1.  基础SSL离散架构 (图1(a)):
@@ -121,17 +121,17 @@ hiddenInHomeList: true
 （注：表格数据直接取自论文表2，为保持一致性，未做格式转换）
 
 图2：离散化影响与多层融合效果
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461897-1.jpg)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461897-1.jpg)
 图2：不同WavLM层配置和码本大小（K）下的性能（Macro F1 Score）。红色线表示连续特征模型作为参考基线。
 - 关键结论：连续特征性能稳定（~0.36）。离散token性能随配置变化波动，但多层融合（如All_layers）显著优于单层（Last_layer）。最佳离散性能（K=4000）仍低于连续基准。
 
 图3：注意力权重分析
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461897-2.jpg)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461897-2.jpg)
 图3：所有24层WavLM注意力权重分析（K=1000， Macro F1=0.3441）。分布呈双峰：最后两层（L22�� L23）至关重要，同时一些早期层也有贡献。
 - 关键结论：模型学到了合理的层权重，主要依赖高层语义（最后两层占57%），但也整合了必要的低层声学信息。
 
 图4：OpenSMILE特征增强效果
-![图4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461897-8.jpg)
+![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461897-8.jpg)
 图4：为离散WavLM模型（K=1000）添加副语言特征的性能提升（%）。结果显示出明显的逆关系：稀疏层配置（左）从显式副语言线索中获益最多，而密集配置（右）由于信息已较丰富，增益递减。
 - 关键结论：特征增强对信息不足的模型（如Sparse层）提升效果最显著（最高~4%）。共振峰和谱特征是提升最大的单类特征。
 

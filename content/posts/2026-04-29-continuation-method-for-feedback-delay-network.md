@@ -99,13 +99,13 @@ hiddenInHomeList: true
 
     结论：对于给定的FDN，增加追踪步数L能显著降低极点丢失率。例如，对于M=7679的最大系统，L从15增加到50，丢失数从106降至20。
 
-![图6: 不同步数L下两个极点的追踪轨迹示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460431-3.png)
+![图6: 不同步数L下两个极点的追踪轨迹示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图6说明：展示了在L=15和L=20时，两个特定极点的追踪轨迹。L=15时轨迹在末端出现分叉（丢失或错误合并），而L=20时轨迹保持连贯，直观说明了步数对鲁棒性的影响。
 
-![图4: 沿直接指数路径的极点追踪](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460431-3.png)
+![图4: 沿直接指数路径的极点追踪](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图4说明：左图为极点在复z平面上的轨迹，中图和右图分别为极点的幅值和相位随追踪步数的变化，展示了轨迹的平滑连续性。
 
-![图5: 指数路径与线性路径下极点幅值演化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460431-3.png)
+![图5: 指数路径与线性路径下极点幅值演化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图5说明：对比了图2、3中“拉伸”阶段两种同伦路径下，极点幅值的演化情况。指数路径（上图）的演化更接近线性，而线性路径（下图）的演化呈现明显非线性。
 
 #

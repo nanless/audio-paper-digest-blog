@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 本文提出的方法旨在从给定感兴趣脑区的fMRI体素时间序列中，分类每次扫描时的语音可懂度（高/低）。其核心架构基于深度状态空间模型（Deep SSM），具体扩展了S5模型以处理双向序列。
 
-![模型架构总览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461445-2.png)
+![模型架构总览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461445-2.png)
 图3：所提方法的架构概览。
 
 整体流程如下：
@@ -109,13 +109,13 @@ hiddenInHomeList: true
 
 表3关键结论：完整模型在HG、STG、IFG、SMG上取得最优或并列最优。去掉双向扫描（w/o Bidir.）或替换掉S5层（w/o S5）后，在多个脑区性能有所下降，证明了这两个组件的有效性，但影响幅度不一。
 
-![实验流程与行为学验证](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461445-0.png)
+![实验流程与行为学验证](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461445-0.png)
 图1：跨不同声学条件的fMRI解码语音可懂度流程图。
 
-![行为与客观指标相关性](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461445-1.png)
+![行为与客观指标相关性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461445-1.png)
 图2：STOI与跨条件感知语音可懂度评分的相关性。 显示主观评分与客观STOI指标高度相关（r=0.78），验证了行为目标的有效性。
 
-![全脑MVPA结果可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461445-3.png)
+![全脑MVPA结果可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461445-3.png)
 图4：语音可懂度解码显著脑区可视化。(a) 全脑MVPA结果（FWE校正，p<0.001）。(b) 嘈杂条件下解码性能最高的前五个ROI。 该图直观展示了双边STG、MTG、PreCG等区域在解码中的关键作用。
 
 ### ⚖️ 评分理由

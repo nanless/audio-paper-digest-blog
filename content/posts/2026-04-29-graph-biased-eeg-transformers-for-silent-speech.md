@@ -66,7 +66,7 @@ Graphormer++的整体流程如下：
 5.  Graphormer分类器：在电极特征 `H` 前拼接一个可学习的 `[CLS]` token。将 `H` 和 `B` 输入由 `L` 层组成的Graphormer。其核心是偏置注意力计算（公式3）：对于第 `h` 个头，注意力得分不仅包含标准的 `Q·K/√d` 项，还加上一个由先验张量 `B` 线性组合而成的偏置项 `Σ wh,k * B(k)_ij`。其中 `wh,k` 是每个头每个先验通道的可学习权重，`α` 是全局缩放因子。
 6.  输出与分类：从最后一层Graphormer的输出中取出 `[CLS]` token的表示，通过一个分类头预测静默语音的单词类别（5类）。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465134-0.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465134-0.png)
 （注：根据论文描述，此图应为Graphormer++的流程图或架构图，展示了从EEG输入到电极池化、先验计算、Graphormer层和最终分类的完整数据流。）
 
 ### 💡 核心创新点
@@ -107,7 +107,7 @@ Graphormer++的整体流程如下：
     *   注意力图分析：论文展示了图1，对比了微调后的EEGPT（ vanilla）和附加Graphormer++后的EEGPT的通道级注意力图。结果显示，vanilla注意力分布弥散，而Graphormer++的注意力集中在额叶、中央和颞区（与语音运动规划和隐性发音相关的脑区），枕叶活动较低，这与任务的神经生理学预期一致，提供了可解释性证据。
     *   局限性分析：论文坦诚讨论了受试者间泛化失败的可能原因（个体间EEG的显著差异），并指出当前词汇量和试次数较小，是未来工作的方向。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465134-1.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465134-1.png)
 （注：根据论文描述，此图应为图1，展示了两个不同数据集受试者上的通道级注意力地形图对比，左侧为vanilla EEGPT，右侧为Graphormer++，清晰地显示了注意力分布从弥散到集中的变化，且集中区域符合语音相关脑区定位。）
 
 ### ⚖️ 评分理由

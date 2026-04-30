@@ -59,7 +59,7 @@ hiddenInHomeList: true
     *   Watermark-as-Trigger：核心思想是利用水印技术已优化的“不可感知性”和“鲁棒性”来解决后门攻击的痛点。
     *   LoRA微调：动机是轻量级、高效地让通用的水印生成器专注于生成对目标任务（SR/SID）更有效的触发模式，而非通用的水印。
 
-![Bloodroot框架概览图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462072-0.png)
+![Bloodroot框架概览图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462072-0.png)
 图1：Bloodroot框架概览。(a) 训练阶段：受害者模型在含有少量有毒样本的数据集上训练。(b) 推理阶段：带触发器的输入会激活后门（导致错误分类），干净输入则正常处理。(c) Bloodroot基础版：使用预训练的AudioSeal生成器，α=5控制扰动强度。(d) Bloodroot-FT：通过LoRA微调生成器，以优化鲁棒性和不可感知性之间的平衡。
 
 ### 💡 核心创新点

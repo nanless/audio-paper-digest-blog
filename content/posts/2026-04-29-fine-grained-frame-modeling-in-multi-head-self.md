@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464918-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464918-0.png)
 整体架构（如图1所示）：本文的FGFM模型建立在XLSR-Conformer基线模型之上。流程如下：
 1.  输入处理：输入语音信号经预训练的XLS-R模型提取帧级特征，再通过线性层投影。在序列前添加一个可学习的分类符`X_cls`，构成完整的编码器输入。
 2.  基线编码器：输入序列通过L个（原文为4个）标准的Conformer块（内含MHSA），每个块输出中间表示。每个MHSA会产生K个头的注意力图。
@@ -137,7 +137,7 @@ hiddenInHomeList: true
 
 -   可视化分析：图2展示了MHV模块选择的帧（红色竖线）在真实和伪造语音频谱上的分布。可见模型倾向于选择语音能量高的区域，避免了静音段，这被认为是有效利用了关键信息。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464918-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464918-1.png)
 图2说明：MHV模块选择的帧（红色竖线）在真实（上）和伪造（下）语音频谱图上的分布。红色线集中在语音活动区域，表明模型能有效定位富含信息的语音帧。
 
 ### ⚖️ 评分理由

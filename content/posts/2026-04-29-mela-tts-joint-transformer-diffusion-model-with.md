@@ -51,11 +51,11 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 3.  组件交互：Transformer解码器生成语义和韵律信息的骨架（`h`），RAM在训练时强制该骨架富含语义信息，扩散模型则在该骨架的指导下，负责填充具体的声学细节（梅尔谱图）。这种设计实现了语义建模和声学建模的解耦与协作。
 4.  流式合成：如图3所示，通过交错文本token和梅尔谱图块（比例n:m=4:3）的训练方式，使单一模型同时支持流式和离流式合成。生成终止由二分类模块控制。
 
-![图1: 联合Transformer和扩散架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461891-0.png)
+![图1: 联合Transformer和扩散架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461891-0.png)
 
-![图2: 左侧为扩散模块条件示意；右侧为表示对齐模块](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461891-1.png)
+![图2: 左侧为扩散模块条件示意；右侧为表示对齐模块](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461891-1.png)
 
-![图3: 流式合成的自回归语言模型示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461891-2.png)
+![图3: 流式合成的自回归语言模型示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461891-2.png)
 
 ### 💡 核心创新点
 
@@ -114,7 +114,7 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 4.  结合两者（Exp 4）达到最优离线性能，显示协同效应。
 5.  流式模式（Exp 6）与离线模式（Exp 4）性能相当，证明模型鲁棒性。
 
-![图4: 有无表示对齐训练过程中的WER对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461891-3.png)
+![图4: 有无表示对齐训练过程中的WER对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461891-3.png)
 
 表2：在170k小时数据上的零样本TTS性能对比（在seed-tts-eval上评估）
 | 模型 | test-zh | test-en | test-hard |
@@ -141,7 +141,7 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 4.  流式性能：流式模式与离流式模式在各项指标上几乎无差别。
 5.  主观评价（图5）：MELA-TTS在A/B测试中，以66.7%的胜率优于CosyVoice2，以57.3%的胜率优于CosyVoice3。
 
-![图5: MELA-TTS与CosyVoice的主观偏好对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461891-4.png)
+![图5: MELA-TTS与CosyVoice的主观偏好对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461891-4.png)
 
 ### ⚖️ 评分理由
 

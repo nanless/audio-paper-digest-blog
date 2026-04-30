@@ -64,7 +64,7 @@ hiddenInHomeList: true
 数据流示例（参照图2）：
 `任意麦克风阵列信号` → `STFT` → `SFB (M维→I维)` → `CaC表示` → `点卷积(扩展至64通道)` → `DenseNet块(特征提取)` → `LSTM块(时序建模)` → `LSTM块(频率建模)` → `解码器(上采样重建)` → `iSTFT` → `增强语音`
 
-![SFB-LSTM框架图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461458-1.png)
+![SFB-LSTM框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461458-1.png)
 图2：SFB-LSTM框架示意图，清晰地展示了从任意麦克风阵列输入到增强语音输出的完整数据流，包括SFB前端、编码器、增强网络（含LSTM）和解码器各组件及其连接关系。
 
 ### 💡 核心创新点
@@ -110,7 +110,7 @@ hiddenInHomeList: true
 3.  多通道优势： 与使用理想DOA信息的单通道固定波束成形+SFB-LSTM (I=1, w/ DOA) 相比，使用3个通道（I=3）的SFB-LSTM性能更好（PESQ 2.08 vs. 1.99），证明了多个非目标方向波束能提供有用的上下文信息，帮助网络更好地抑制噪声和混响。
 4.  波束类型影响： 所有模型在一阶超心形波束下的性能普遍略低于二阶超心形波束。论文指出这源于更低阶波束本身更低的指向性指数和更大的后瓣。
 
-![性能随通道数I变化曲线](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461458-2.png)
+![性能随通道数I变化曲线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461458-2.png)
 图3：SFB-TSCBM模型的PESQ和STOI指标随SFB通道数I的变化曲线。实线为二阶超心形，虚线为一阶超心形。清晰地显示了性能在I=3左右达到饱和的现象。
 
 ### ⚖️ 评分理由

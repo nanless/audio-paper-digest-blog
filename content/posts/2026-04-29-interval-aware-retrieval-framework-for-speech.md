@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 模型整体架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461711-0.png)
+![图1: 模型整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461711-0.png)
 本论文提出的“区间感知检索框架”是一个端到端的多模态系统，其整体架构如图1所示。它主要分为三个阶段，旨在将语音和文本信息进行深度整合，并显式建模时序偏差。
 
 1. 输入与编码阶段
@@ -125,10 +125,10 @@ hiddenInHomeList: true
     - 移除停顿与不流畅标记（w/o Pause & Disfl.）：性能崩溃至64.58%，这几乎是随机猜测的水平，说明时序线索（停顿、不流畅）是AD检测的核心特征。
     - 单模态变体（Text only / Audio only）性能均远低于多模态融合（分别为81.25%和72.92%），证实了融合两种模态的必要性。
 - 可视化分析：
-    ![图2: 最终话语表示在ADReSS测试集上的2D投影](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461711-1.png)
+    ![图2: 最终话语表示在ADReSS测试集上的2D投影](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461711-1.png)
     图2展示了模型最终输出的话语级表示的降维可视化。PCA投影（左）显示两类有一定分离但存在重叠。UMAP投影（右）则显示出更清晰的分离，NC（0）和AD（1）形成了较为紧凑的簇，仅有少量边界混合。这直观地证明了模型学习到的表示具有判别性。
-    ![图3: 两个话语的token权重可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461711-2.png)
-    ![图4: 两个话语的token权重可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461711-3.png)
+    ![图3: 两个话语的token权重可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461711-2.png)
+    ![图4: 两个话语的token权重可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461711-3.png)
     图3和图4展示了区间感知增强器生成的token权重`w`。权重分布稀疏且峰值明显。图3(a)显示最高权重落在`[*]`（停顿）和`[]`（不流畅）标记上。图3(b)则显示一个内容词（如“walk”）因其前后伴随不流畅和停顿而获得高峰值权重。这些可视化提供了模型关注时序异常区域的可解释性证据。
 
 #

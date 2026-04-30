@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 GLAP采用标准的双塔对比学习架构，如图2所示。
-![图2: GLAP enables multilingual speech-content retrieval, on top of the standard sound/music capabilities.](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463948-0.png)
+![图2: GLAP enables multilingual speech-content retrieval, on top of the standard sound/music capabilities.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463948-0.png)
 - 整体流程：输入为音频-文本对（a, t）。分别通过音频编码器和文本编码器提取特征，再经过线性映射层（MLP）对齐维度，最后计算特征向量间的余弦相似度作为得分。训练目标是拉近匹配对的相似度，推远不匹配对的相似度。
 - 音频编码器 (E_A)：选择预训练的Dasheng模型。它是一个通用的音频表示模型，设计目标是在声音、音乐和语音任务上都有良好表现。论文中将其与CED, Beats, Whisper, WavLM等编码器进行了对比（表4），发现Dasheng在跨域任务上最均衡。
 - 文本编码器 (E_T)：使用预训练的多语言文本编码器Sonar。这是一个基于Transformer的模型，能够处理多种语言，为GLAP的多语言能力提供基础。
@@ -117,7 +117,7 @@ GLAP采用标准的双塔对比学习架构，如图2所示。
 结论：GLAP在语音指令分类上实现了革命性突破，声音和音乐分类则保持竞争力。
 
 图3：多语言零样本关键词识别性能
-![图3: Multilingual zero-shot keyword spotting performance across 50 languages.](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463948-0.png)
+![图3: Multilingual zero-shot keyword spotting performance across 50 languages.](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463948-0.png)
 结论：图示为50种语言在MSW数据集上的零样本准确率。性能跨度较大，但整体展示了GLAP强大的多语言覆盖能力，即使在低资源语言上也有不错表现。
 
 表7：多语言声音/音乐零样本分类 (US8K, ESC-50, GTZAN)

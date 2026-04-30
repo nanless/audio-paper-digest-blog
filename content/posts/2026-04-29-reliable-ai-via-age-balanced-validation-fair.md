@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 整体数据流与交互：论文的流程如图1所示。首先从原始语音录音中提取特征：要么使用DistilHuBERT直接编码，要么使用OpenSMILE工具箱提取88维的eGeMAPS静态声学特征（供TabNet和XGBoost使用）。然后，这些特征被用于训练对应的模型。模型的选择（如超参数调优）是在年龄平衡验证集上完成的，而非传统的随机验证集。最终，选中的模型在独立的内部测试集和全新的外部VD测试集上进行评估。
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464625-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464625-0.png)
 图1 是整个模型选择流程的示意图，清晰地展示了从特征提取、构建年龄平衡验证集、超参数调优到模型选择，最终在多个测试集上评估的完整闭环。
 
 ### 💡 核心创新点
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 | | | XGBoost | 53.4 | 58.6 | 54.2 | 81.0 | 59.3 | 63.8 | 59.3 | 78.7 |
 | | | TabNet | 50.2 | 54.6 | 50.2 | 79.3 | 66.4 | 70.0 | 66.4 | 79.8 |
 
-![图2: pdf-image-page4-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464625-1.png)
+![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464625-1.png)
 图2 是对表格核心结果的可视化总结，横轴为不同模型在三种数据/验证设置下的表现，纵轴为准确率。蓝色柱子代表使用年龄平衡验证集调优的模型性能，橙色代表随机验证集。图表清晰地显示：在外部VD测试集上，蓝色柱子显著高于橙色柱子，证明了年龄平衡验证策略带来的巨大性能提升；而在内部验证集上，橙色柱子反而更高，这说明了随机验证集会导致过拟合的乐观评估。
 
 关键发现与消融：

@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 Clue2Emo是一个两阶段的框架，旨在将多模态输入转化为开放词汇的情感描述，其整体架构如图1所示。
 
-![Clue2Emo整体架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460916-0.png)
+![Clue2Emo整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460916-0.png)
 图1: Clue2Emo整体架构图。展示了从多模态输入，经过第一阶段生成线索，再到第二阶段整合线索进行情感推理的完整流程。
 
 第一阶段：感官线索生成 (Sensory Clue Generation)
@@ -163,7 +163,7 @@ Clue2Emo是一个两阶段的框架，旨在将多模态输入转化为开放词
 
 训练稳定性与鲁棒性：图2（在文本中描述，未提供图片URL，故用文字说明）展示了不同模型在第二阶段训练过程中的OV-MERD Avg分数变化。结果显示，Clue2Emo及其SE版本在整个训练过程中性能更稳定，且始终高于AffectGPT及其SE版本，表明所提框架带来了更平滑的收敛和更好的鲁棒性。
 
-![不同模型在OV-MERD上性能随训练轮次变化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460916-1.jpg)
+![不同模型在OV-MERD上性能随训练轮次变化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460916-1.jpg)
 图2: 不同模型在OV-MERD数据集上性能随训练轮次变化的对比图。图中显示Clue2Emo（紫色线）在训练中后期性能持续高于AffectGPT（红色线），且波动更小，表明收敛更稳定。
 
 ### ⚖️ 评分理由

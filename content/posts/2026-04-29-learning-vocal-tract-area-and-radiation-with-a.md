@@ -78,7 +78,7 @@ hiddenInHomeList: true
 *   Robin辐射边界：用一个标量ζ参数化复杂的口端辐射阻抗，在低频近似下合理，且使问题可解。
 *   训练/推理分离：这是本文的核心创新之一，旨在平衡学习稳定性（训练时可用神经辅助）与结果的可解释性和可迁移性（推理时是纯物理求解）。
 
-![图1: 系统概述图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460533-0.jpg)
+![图1: 系统概述图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460533-0.jpg)
 
 ### 💡 核心创新点
 
@@ -162,7 +162,7 @@ hiddenInHomeList: true
     - 恢复的Â(x)曲线平滑且为正，捕捉了元音的宏观特征，如/i/在前端的窄化和/u/在口端的窄化。但细部（如/i/的精确收缩点）在单通道稳态监督下是模糊和非唯一确定的。
     - 恢复的辐射系数ζ在不同元音间高度一致（~0.127），表明它可能吸收了模型误差。
 
-![图2: 恢复的声道面积函数Â(x)](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460533-1.png)
+![图2: 恢复的声道面积函数Â(x)](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460533-1.png)
 
 ### ⚖️ 评分理由
 

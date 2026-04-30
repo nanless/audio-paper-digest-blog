@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 整体架构基于预训练的CTC ASR模型（Conformer编码器+Transformer解码器），核心扩展在于检索增强解码部分。
 
-![LIRA-CTC框架图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463989-0.png)
+![LIRA-CTC框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463989-0.png)
 图1：LIRA-CTC框架概述
 
 1.  输入与特征提取：音频输入经过Conformer编码器，产生帧级隐藏表示 `f(X)`。

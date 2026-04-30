@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 DeePAQ的整体架构遵循“嵌入-距离-映射”的范式，具体流程如下：
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465130-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465130-0.png)
 (架构图描述：左侧为训练阶段，右侧为推理阶段。训练阶段将音频三元组输入MERT，冻结CNN，微调Transformer（使用LoRA），通过投影头得到嵌入，计算RnC损失。推理阶段分别输入测试音频和参考音频，得到嵌入后计算欧氏距离，再通过映射函数得到主观分数。)
 
 1.  编码器（MERT Foundation Model）：
@@ -117,7 +117,7 @@ DeePAQ的整体架构遵循“嵌入-距离-映射”的范式，具体流程如
 
 论文在9个听测集上进行了全面评估，覆盖音频编码和音源分离两大任务。核心对比指标是预测分数与主观分数的Pearson线性相关系数（PCC） 和Spearman秩相关系数（SRCC）。
 
-![图2: pdf-image-page2-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465130-1.png)
+![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465130-1.png)
 (散点图描述：展示了六个指标（ViSQOL, PEAQ, HAAQI, 2f-model, 微调wav2vec 2.0, 提出的方法）的预测分数与主观分数在所有测试样本上的散点图及线性回归拟合线。可以直观看出，提出的方法（子图f）的散点更紧密地聚集在拟合线周围，表明其预测更准确，线性关系更强。)
 
 关键实验结果表格（节选自Table 1）：
@@ -145,7 +145,7 @@ DeePAQ的整体架构遵循“嵌入-距离-映射”的范式，具体流程如
 - 损失函数：加入基于码率的RnC损失项，带来了约1-3% 的性能提升。
 - 映射函数：原始欧氏距离的SRCC通常高于PCC。使用三次多项式或MLP映射后，PCC大幅提升，SRCC基本不变，表明映射函数对于校正线性相关至关重要。
 
-![图3: pdf-image-page3-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465130-2.png)
+![图3: pdf-image-page3-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465130-2.png)
 (图表内容应与Table 1的数值对应，为不同测试集上的性能对比可视化。)
 
 #

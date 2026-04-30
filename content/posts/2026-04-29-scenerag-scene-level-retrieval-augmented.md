@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 SceneRAG的整体架构（如图2所示）是一个包含离线构建与在线检索两个阶段的多阶段流水线。
 
-![图2: SceneRAG架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462022-1.png)
+![图2: SceneRAG架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462022-1.png)
 
 第一阶段：场景分割与知识图谱构建
 1.  输入与分块：输入长视频`V`，首先被分割成重叠的时间片段`Chunks`（公式1）。
@@ -125,8 +125,8 @@ SceneRAG的整体架构（如图2所示）是一个包含离线构建与在线�
 - 图3(b)展示了关键帧采样间隔（2-10秒/帧）对性能的影响，最优值在6秒/帧左右，表明场景结构而非帧密度是主要性能驱动因素。
 - 图1直观展示了固定30秒分块与场景级分块在叙事连贯性和最终胜率上的差异（53.26% vs 65.5%）。
 
-![图1: 分块方式对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462022-0.png)
-![图3: 消融分析图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462022-2.jpg)
+![图1: 分块方式对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462022-0.png)
+![图3: 消融分析图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462022-2.jpg)
 
 ### ⚖️ 评分理由
 

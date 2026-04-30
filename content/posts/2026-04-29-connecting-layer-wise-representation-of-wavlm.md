@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 本文并未提出一个新的端到端说话人验证模型，而是提出了一套分析框架，用于研究预训练WavLM模型的层表示与生物听觉特征（STM）之间的关系。整体分析流程如下图所示：
 
-![图2: pdf-image-page2-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461375-1.png)
+![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461375-1.png)
 
 流程详解：
 1.  输入：语音波形。
@@ -83,7 +83,7 @@ hiddenInHomeList: true
         *   尺度选择性：对于男性语音（左图），高相关性出现在较高尺度（Ω ≈ 4-8 cycles/octave）；对于女性语音（右图），高相关性出现在较低尺度（Ω ≈ 2-4 cycles/octave）。
         *   速率偏好：两者都与较慢的时间调制速率（如±2-4 Hz）有更强关联。
     *   图表：
-        ![图3: pdf-image-page3-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461375-2.png)
+        ![图3: pdf-image-page3-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461375-2.png)
 
 2.  监督回归与相似度分析（图5）：
     *   结果描述：图5展示了通过监督回归任务得到的相似度得分（SIM）热图，横轴是尺度，纵轴是WavLM的24个Transformer层（Layer 0-23），同样分男性和女性。热图颜色越深，表示该层对该调制模式的重构能力越强（相似度越高）。
@@ -93,7 +93,7 @@ hiddenInHomeList: true
         *   时间速率对称性：中间层（如5-9层）对正/负速率表现出对称响应，可能编码了对称的时间结构；而早期层（如0， 2， 4层）表现出不对称性，可能偏好特定方向的调制扫频。
         *   深层衰减：超过第13层后，相似度得分普遍下降，表明这些层可能更倾向于编码与调制特征无关的高层语义信息。
     *   图表：
-        ![图5: pdf-image-page4-idx4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461375-4.png)
+        ![图5: pdf-image-page4-idx4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11461375-4.png)
 
 注：论文未提供将上述发现与改进后的说话人验证系统最终性能（如EER降低）进行关联的具体数值表格。论文中提到的0.66% EER是WavLM+ECAPA-TDNN系统在VoxCeleb-O上的现有基准，而非本研究的直接改进结果。
 

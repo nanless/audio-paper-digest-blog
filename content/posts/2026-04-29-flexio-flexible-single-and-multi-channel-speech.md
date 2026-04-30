@@ -42,7 +42,7 @@ FlexIO旨在解决语音分离与增强（SSE）系统中处理可变麦克风�
 
 FlexIO的整体架构如图1所示，其输入为M通道的STFT混合信号 `(X1, ..., XM)` 和N个提示向量 `p`，输出为N个说话人在参考通道m上的源图像估计 `{ˆS1,m, ..., ˆSN,m}`。
 
-![FlexIO系统架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462393-0.png)
+![FlexIO系统架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462393-0.png)
 
 主要组件及数据流如下：
 1.  编码器：每个通道的STFT信号 `Xm` 独立通过相同的2D卷积和全局层归一化，编码为初始特征表示 `Zm ∈ R^{D×T×F}`。
@@ -55,7 +55,7 @@ FlexIO的整体架构如图1所示，其输入为M通道的STFT混合信号 `(X1
 - 阵列无关处理：通过引入TAC等通道通信机制，使模型能够处理任意数量的麦克风输入。TAC（变换-平均-拼接）机制（图2所示）通过平均池化聚合全局信息，自然支持可变通道数。
 - 参考通道对齐：在TSE模块后，模型专注于估计参考通道上的源信号，这有助于模型学习明确的空间滤波目标。
 
-![TAC机制示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462393-1.png)
+![TAC机制示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462393-1.png)
 
 #
 

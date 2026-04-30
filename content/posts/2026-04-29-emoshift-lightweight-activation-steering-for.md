@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 EmoShift的框架如图2所示，其核心是在一个基于LLM的自回归语音合成模型（骨干为CosyVoice-300M-Instruct）中插入了一个EmoSteer层。
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464460-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464460-1.png)
 
 输入与建模流程：
 1.  输入编码：模型接收三种条件信息并编码为嵌入：说话人嵌入 `s`、情感提示 `Q`（如“happy”）的提示嵌入序列 `{q_i}`，以及文本 `X` 的文本嵌入 `{x_j}`。
@@ -125,7 +125,7 @@ EmoSteer层（核心组件）：
 消融与分析
 - EmoSteer层有效性（表3）：在CosyVoice和CosyVoice-SFT上添加EmoSteer层后，进行AB偏好测试。结果显示，添加层的版本在MOS和Emo-MOS上的胜率均超过71%，证明该层能有效增强情感表达并可能改善自然度。
 - 推理时缩放因子α的影响（图3）
-    ![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464460-2.png)
+    ![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464460-2.png)
     随着α从1增加到3，情感识别准确率上升并在α=3时达到峰值（约76%），之后在α=4时急剧下降。这表明适度的引导增强有效，但过度引导会破坏生成质量。
 - 情感强度感知测试（表4）：在α从1增加到3的对比中，除快乐外，其他情感的“更强”版本胜率均超过50%，其中惊讶（68.39%）和愤怒（64.48%）感知最强。证实了α调节对情感强度的实际感知影响。
 

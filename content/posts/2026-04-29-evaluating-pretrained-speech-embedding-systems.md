@@ -56,7 +56,7 @@ hiddenInHomeList: true
 3.  时间聚合：对于输出包含时间轴的模型（如CRDNN+CTC），取时间维度的平均值得到单一向量。
 4.  分类：将固定长度嵌入作为特征，输入到随机森林分类器（1000棵树，scikit-learn默认配置）中进行二分类（健康 vs. 构音障碍）。分类器在交叉验证中训练和评估。
 
-![图1: t-SNE可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462994-0.png)
+![图1: t-SNE可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462994-0.png)
 图1展示了UniSpeech、x-vector、DigiPsychProsody和CRDNN+CTC四种嵌入系统的t-SNE可视化。可以看出，UniSpeech和x-vector空间能清晰区分不同数据集，x-vector还能形成说话人聚类。相比之下，CRDNN+CTC的数据集分离度较低，但健康/障碍类别分离也不明显。这直观说明了不同嵌入系统的表征特性差异。
 
 ### 💡 核心创新点
@@ -90,7 +90,7 @@ hiddenInHomeList: true
 | | 2. EWA (训练) -> Neurovoz (测试)：准确率从60.27%（数据集内）降至54.08%。 |
 | 统计显著性 | 102个“系统-数据集”组合中，有94个的平均准确率显著高于零假设分布（p<0.05，Bonferroni校正后）。 |
 
-![图2: 数据集内准确率分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462994-0.png)
+![图2: 数据集内准确率分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462994-0.png)
 图2左图按模型排列，显示每个模型在6个数据集上的准确率（点）及其四分位数范围（箱线图）。右图按数据集排列，显示每个数据集上17个模型的准确率分布。清晰展示了数据集间性能的巨大差异（如SSNCE vs. EWA）。
 
 图3: 跨数据集 vs 数据集内准确率]

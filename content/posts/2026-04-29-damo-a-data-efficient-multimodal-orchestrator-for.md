@@ -74,10 +74,10 @@ DaMO的整体架构（如图2所示）是一个端到端的音视频推理系统
     *   T-Fuseformer输出的融合token通过Q-Former和线性层投影到大语言模型（LLM）的嵌入空间，作为软提示。
     *   LLM采用冻结的LLaVA-v1.6-Mistral-7B，并通过LoRA进行适配。用户提示与软提示拼接后输入LLM，生成最终响应。
 
-![DaMO整体架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464336-1.png)
+![DaMO整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464336-1.png)
 图2：DaMO整体架构图。展示了从视觉/音频编码器输入，经过空间/时间通路处理，进入T-Fuseformer融合，最终通过Q-Former和LLM生成响应的完整流程。
 
-![T-Fuseformer模块图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464336-2.png)
+![T-Fuseformer模块图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464336-2.png)
 图3：T-Fuseformer详细结构。展示了单模态注意力（左）和多模态注意力（右）的结构，以及可学习查询token在其中的作用。
 
 ### 💡 核心创新点

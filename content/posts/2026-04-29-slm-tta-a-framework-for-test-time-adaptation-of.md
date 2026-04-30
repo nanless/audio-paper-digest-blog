@@ -64,7 +64,7 @@ hiddenInHomeList: true
 
 架构图说明：
 论文中的图1（`pdf-image-page2-idx0`）展示了该框架的概览。
-![SLM-TTA框架概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463745-0.png)
+![SLM-TTA框架概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
 *   左侧：标准的语音语言模型数据流。音频通过编码器和投影器，与分词后的文本提示一起输入SLM。
 *   右侧：测试时自适应部分。SLM的输出（token概率分布）被送入“置信度过滤”模块。该模块根据置信度阈值选择高置信度的token，然后用于计算两个无监督目标之一：“1. 熵最小化”或“2. 伪标签（交叉熵）”。这些目标（损失函数）的梯度被用来更新SLM中选定的参数（用虚线箭头表示更新路径）。
 *   关键设计选择与动机：

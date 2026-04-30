@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 CAST方法的核心架构是一个解码器专用Transformer，它在原始文本LLM（如Gemma 3 1B）的基础上，扩展了语音token的词表，形成统一的文本-语音词汇空间。
 
-![图1：CAST方法概述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462001-0.png)
+![图1：CAST方法概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462001-0.png)
 图1说明：该图展示了CAST的整体设计。(a) 语音（通过Codec）和文本（通过BPE）被分词并交错排列。(b) 解码器Transformer在统一序列上预测下一个token。(c) 通过SSL初始化的语音token嵌入，结合粗粒度和下一个Code的辅助目标，来改进语音建模。
 
 完整输入输出流程与组件交互：

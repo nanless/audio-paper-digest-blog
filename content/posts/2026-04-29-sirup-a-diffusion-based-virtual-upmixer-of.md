@@ -43,7 +43,7 @@ hiddenInHomeList: true
 SIRUP模型是一个条件潜在扩散模型，旨在将M通道的FOA SV（估计值或代数值）上混为M‘通道（M‘>M）的HOA SV。其整体流程分为训练和推理两个阶段，核心组件包括变分自编码器（VAE） 和潜在扩散模型（LDM）。
 
 模型架构与数据流：
-![模型流程图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464234-0.png)
+![模型流程图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464234-0.png)
 图1：SIRUP用于下游任务的上混流程图。FOA信号首先经过STFT，然后从空间协方差矩阵（SCM）估计SV，接着SIRUP模型进行上混，最后进行波束成形、声源合成、DOA估计等。
 
 1.  输入与条件化：
@@ -130,10 +130,10 @@ SIRUP模型是一个条件潜在扩散模型，旨在将M通道的FOA SV（估�
 关键结论：直接使用SIRUP输出的前M通道（SV-SIRUP-M）进行波束成形，性能略优于原始FOA测量SV，体现了模型的去噪能力。使用SIRUP进行SSL后再用代数SV波束成形（SV-alg SIRUP），性能也略优于FOA版本。
 
 实验图表：
-![DOA误差随SNR和RT60变化图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464234-1.png)
+![DOA误差随SNR和RT60变化图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464234-1.png)
 图2：不同定位方法和SV模型的平均角度误差。(a) SNR变化 (b) RT60变化。SIRUP在噪声条件下性能接近真实HOA，但随混响增加优势减弱。
 
-![波束图对比热图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464234-2.png)
+![波束图对比热图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464234-2.png)
 图3：估计SV的2D热图对比。FOA的SV波束宽且有高旁瓣，而SIRUP上混后的SV与真实HOA SV同样尖锐，空间分辨率显著提升。
 
 ### ⚖️ 评分理由

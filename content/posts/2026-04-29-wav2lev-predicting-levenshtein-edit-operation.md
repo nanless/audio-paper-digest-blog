@@ -53,7 +53,7 @@ WAV2LEV的模型架构是一个基于Whisper大模型的序列到序列系统，
 6.  序列预测：拼接后的特征序列被送入一个12层、16头、隐藏维度1024的Transformer解码器。该解码器通过自注意力机制对齐和融合多模态信息，最终输出一个序列，其中每个位置对应一个编辑操作类别（匹配、替换、删除、插入）的logit分布。
 7.  输出：通过贪心解码，得到预测的Levenshtein编辑操作序列。从该序列可计算出预测的WER，并可获得每个token对应的错误类型标签（token级细粒度错误）。
 
-![模型架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462338-0.png)
+![模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462338-0.png)
 图1. WAV2LEV语音到WER的流程图。展示了从音频和假设文本输入，经过Whisper编码器、解码器生成不确定性特征，最后由WAV2LEV解码器预测编辑操作序列的过程。
 
 #
@@ -100,10 +100,10 @@ WAV2LEV的模型架构是一个基于Whisper大模型的序列到序列系统，
 - 模型预测的WER均值（0.3178）与真实WER均值（0.3162）非常接近。
 - 但模型倾向于低估WER为0%和100%的极端样本（如图3所示）。
 
-![预测WER与目标WER散点图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462338-1.png)
+![预测WER与目标WER散点图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462338-1.png)
 图2. WAV2LEV (a) 与 WHISP-MLP (b) 在Mini-CNoiSY测试集上的预测WER与目标WER对比散点图。两者都表现出较强的相关性，但WHISP-MLP的点似乎更紧密地围绕对角线。
 
-![预测与目标WER分布直方图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462338-2.png)
+![预测与目标WER分布直方图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462338-2.png)
 图3. WAV2LEV在Mini-CNoiSY测试集上的预测WER（a）与目标WER（b）的分布直方图。可以看出预测分布与真实分布趋势相似，但两端（0和1）的预测频率偏低。
 
 #

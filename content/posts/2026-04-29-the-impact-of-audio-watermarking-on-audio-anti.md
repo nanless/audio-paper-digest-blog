@@ -67,7 +67,7 @@ hiddenInHomeList: true
     - 仅更新中间层：允许模型通过微调中间层的特征组合方式，来适应水印引入的特征分布变化，而不破坏已经学到的表示和决策逻辑。
     - 结合知识蒸馏与参数锚定：双重约束（输出层面和参数层面）确保适应过程是渐进的、受控的，避免灾难性遗忘或对水印的过拟合。
 
-![图1: Knowledge-Preserving Watermark Learning框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461271-0.png)
+![图1: Knowledge-Preserving Watermark Learning框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461271-0.png)
 图1展示了KPWL框架。左侧是“Original Baseline Pretraining”阶段，模型在原始数据上训练。右侧是“Knowledge-Preserving Watermark Learning”阶段，虚线框表示被冻结的部分（SSL前端和分类器），仅中间层被更新。同时，通过教师-学生网络（由虚线箭头连接的“Teacher”和“Student”）实现对称知识蒸馏（L_KD），并通过参数锚定（L2-SP）约束中间层参数不偏离初始值（Wi）。最终损失L由任务损失、蒸馏损失和锚定损失组成。
 
 #

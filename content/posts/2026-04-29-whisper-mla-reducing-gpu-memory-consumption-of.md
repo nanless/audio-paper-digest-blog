@@ -43,10 +43,10 @@ hiddenInHomeList: true
 | Whisper-MLA (DSO) | 2-范数 | 81.25% | 7.33 | 16.17 | 7.82 | 16.18 | 12.06 |
 
 图表说明：
-![图1: 三种注意力架构对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464317-0.png)
+![图1: 三种注意力架构对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464317-0.png)
 图1展示了原始MHA、全压缩MLA和维度保留MLA的结构。维度保留MLA通过保留一小部分原始Key维度（阴影部分）来维持性能，其余维度与Value一同压缩到低秩潜在空间。
 
-![图2: Whisper到Whisper-MLA的转换方法](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464317-1.png)
+![图2: Whisper到Whisper-MLA的转换方法](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464317-1.png)
 图2详细说明了转换流程：将预训练的Key投影矩阵拆分为保留部分(Wkp)和可压缩部分(Wkc)，然后对[Wkc, Wv]进行联合SVD分解，得到低秩投影矩阵(Wuk, Wuv)，从而复用原始参数。
 
 图3：GPU内存消耗对比
@@ -63,7 +63,7 @@ Whisper-MLA的整体架构与原始Whisper保持一致，均为编码器-解码�
 - 输出：最终输出为token序列（文本转录）。
 
 2. MLA层内部结构（针对Whisper适配）：
-![图1: 三种注意力架构对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464317-0.png)
+![图1: 三种注意力架构对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464317-0.png)
 （此图与上文引用为同一张）
 - 查询(Q)：保留原始Whisper的查询处理方式，不参与KV缓存，因此不改变。
 - 键(K)与值(V)：这是内存优化的关键。
@@ -118,7 +118,7 @@ Whisper-MLA的整体架构与原始Whisper保持一致，均为编码器-解码�
 | Whisper-MLA (DSO) | 2-范数 | 81.25% | 7.33 | 16.17 | 7.82 | 16.18 | 12.06 |
 
 图表说明：
-![图3: GPU内存消耗对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464317-1.png)
+![图3: GPU内存消耗对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464317-1.png)
 （注意：根据用户说明，图3应为不同批次和序列长度下的内存消耗曲线图，但提供的图片URL对应的是图2的转换方法图。此处按论文描述内容进行说明，而非直接贴图。）
 图3（按论文描述）：该图直观展示了在推理阶段，Whisper-MLA在各种批次大小(bsz)和序列长度组合下，均比原始Whisper消耗更少的GPU内存。关键结论是：1) 内存节省随序列长度和批次增大而增大；2) 在极端情况（如bsz=64，序列长度=2048），Whisper发生显存溢出（OOM），而Whisper-MLA仍能正常运行，凸显其在长语音和高吞吐场景下的实用性。
 

@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![训练框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461636-0.jpg)
+![训练框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461636-0.jpg)
 (图1. Cross-Lingual F5-TTS 训练框架。MMS强制对齐为训练数据生成词边界，左侧片段作为无转录的音频提示，右侧片段的梅尔谱被掩码用于预测)
 
 该框架包含两个主要模块：

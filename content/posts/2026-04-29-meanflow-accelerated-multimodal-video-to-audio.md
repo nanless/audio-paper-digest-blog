@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，主要包含三个阶段：
 
-![MF-MJT模型架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-1.jpg)
+![MF-MJT模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-1.jpg)
 图2：MF-MJT的模型架构图。展示了从多模态输入到输出平均速度场的完整流程。
 
 1.  多模态条件编码与投影：
@@ -126,7 +126,7 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 
 1. 主要对比实验（VTA任务 - VGGSound测试集）
 
-![VTA对比结果表](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-6.png)
+![VTA对比结果表](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-6.png)
 表1（论文中）：VGGSound测试集VTA合成方法性能对比。MF-MJT（一步）在FAD、FD、KL、IS和RTF上达到最佳或次佳。
 
 关键结论：
@@ -136,7 +136,7 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 
 2. 主要对比实验（TTA任务 - AudioCaps测试集）
 
-![TTA对比结果表](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-7.png)
+![TTA对比结果表](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-7.png)
 表2（论文中）：AudioCaps测试集TTA合成方法性能对比。MF-MJT（一步）在FAD和FD上大幅领先AudioLCM。
 
 关键结论：
@@ -145,13 +145,13 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 
 3. 消融实验
 - CFG策略消融（图3）：对比了标准CFG（CFG-stand）和提出的CFG-scaled。
-    ![CFG消融结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-8.png)
+    ![CFG消融结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-8.png)
     图3a：一步生成下，IS分数随CFG强度ω变化。CFG-scaled在所有ω>1时均优于CFG-stand，且随着ω增加下降更缓。
-    ![CFG消融结果-多步](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-9.png)
+    ![CFG消融结果-多步](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-9.png)
     图3b：多步生成下，IS分数随CFG强度ω变化。趋势与一步生成不同，多步生成下更高ω带来更好质量。
     - 结论：在一步生成中，CFG-scaled能有效缓解过冲，在更高引导强度下保持更好的感知质量（IS）。
 - 训练中r≠t比例消融（图4）：研究了训练时 `r≠t` 采样对的比例对性能的影响。
-    ![r不等于t比例消融](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461369-0.jpg)
+    ![r不等于t比例消融](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461369-0.jpg)
     图4：不同r≠t比例对IB分数（语义对齐）和DeSync分数（时间同步）的影响（一步生成， ω=1.5）。
     - 结论：更低的 `r≠t` 比例（如10%）能带来更好的语义对齐（IB↑）和时间同步（DeSync↓）。这表明在平均速度场学习中，提供与 `r=t` 对应的直接点对点监督信号对跨模态对齐至关重要。
 

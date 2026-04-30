@@ -64,7 +64,7 @@ hiddenInHomeList: true
     5.  HiFi-GAN声码器将梅尔频谱图转换为最终的语音波形。
 *   关键设计选择：将情感信息从传统的分类标签或参考语音，解耦并参数化为连续的ED向量，直接注入到自回归LM的条件中。这使得模型可以“学习”如何将不同的PAD向量映射到相应的韵律和风格变化上。
 
-![图1：论文框架概览，(a)为情感维度预测器训练流程，(b)为文本到语音合成流程。](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462862-0.png)
+![图1：论文框架概览，(a)为情感维度预测器训练流程，(b)为文本到语音合成流程。](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462862-0.png)
 
 ### 💡 核心创新点
 
@@ -111,15 +111,15 @@ hiddenInHomeList: true
 | Baseline CosyVoice [12] | 4.36 ± 0.13 |
 
 图3：零样本情感克隆任务的情感可懂度（E-MOS）评估
-![图3：不同系统在四种基本情感下的E-MOS分数对比���](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462862-2.png)
+![图3：不同系统在四种基本情感下的E-MOS分数对比���](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462862-2.png)
 结论：在情感可懂度上，本方法在所有四种情感（生气、高兴、悲伤、惊喜）上的得分均高于CosyVoice基线，但低于在有情感数据上训练的MixedEmotion系统。
 
 图2：合成语音的声学特征分析
-![图2：通过ED控制合成的9种情绪语音在音高和频谱通量上的统计分布。](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462862-1.png)
+![图2：通过ED控制合成的9种情绪语音在音高和频谱通量上的统计分布。](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462862-1.png)
 结论：兴奋、惊喜、高兴等高唤醒度情绪的音高和频谱通量值较高，悲伤、生气、中性等低唤醒度或抑制性情绪的值较低，与情感心理学理论预期一致。
 
 图4：XAB配对测试结果（评估情感可区分性）
-![图4：对四组易混淆情感对进行XAB测试的正确匹配率。](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462862-3.png)
+![图4：对四组易混淆情感对进行XAB测试的正确匹配率。](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462862-3.png)
 结论：系统能够较好地区分这些情感对，特别是“愤怒 vs 焦虑”对（正确率84%），这与“支配度”是区分它们的关键这一理论相吻合。
 
 ### ⚖️ 评分理由

@@ -87,7 +87,7 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
     2.  声学单元到梅尔频谱的流匹配模型：使用一个DiT网络，将LLM输出的声学单元序列映射为梅尔频谱图。其条件包括音色嵌入、声学单元序列和被掩码的声学特征。
     3.  梅尔频谱到波形的声码器：采用NSF-BigVGAN模型，将梅尔频谱转换为高质量波形。
 
-![图1: DeepDubbing系统概览。(a)端到端合成流水线；(b)Text-to-Timbre模块架构；(c) CA-Instruct-TTS模型整体结构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464066-0.png)
+![图1: DeepDubbing系统概览。(a)端到端合成流水线；(b)Text-to-Timbre模块架构；(c) CA-Instruct-TTS模型整体结构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464066-0.png)
 
 #
 
@@ -125,7 +125,7 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 
 主要评估指标与结果：
 1.  TTT模型评估（表2）：使用生成的音色嵌入合成语音后，由专家评估。指标包括性别准确率（SA）、年龄准确率（AA）和角色匹配度（CMS， 0-4分）。结果表明，采用Qwen3-0.6B作为文本编码器的TTT模型在几乎所有指标上均优于基于T5和Roberta的变体，尤其在年龄准确率和CMS上优势明显。但儿童声音的性别分类准确率（96.25%）显著低于其他年龄段。
-    ![图2: 年龄分层的说话人嵌入性别聚类t-SNE分析](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464066-1.png)
+    ![图2: 年龄分层的说话人嵌入性别聚类t-SNE分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464066-1.png)
     图2的t-SNE可视化展示了不同年龄段说话人嵌入的性别聚类情况。论文指出，儿童组别的性别区分度较差，这与表2中较低的儿童性别准确率一致，并归因于儿童声音声学相似性高以及训练数据中存在成人模仿童声。
 
 2.  CA-Instruct-TTS模型评估（表3）：合成195个覆盖44种情感的语句，由专家评估自然度（MOS-N）和情感表达（MOS-E），同时计算Whisper-large-v3的词错误率（WER）。与无指令基线（CA-TTS）相比，CA-Instruct-TTS在保持相近WER（2.54% vs 2.39%）的同时，自然度（3.33 vs 3.10）和情感表达（4.15 vs 3.67）均有显著提升，证明了上下文指令的有效性。

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 EAML的整体架构围绕一个核心的混淆网络（OBFNet）和多个任务网络展开，通过对抗学习和多任务损失联合训练。
 
-![EAML实现架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462584-0.jpg)
+![EAML实现架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462584-0.jpg)
 图1. EAML架构示意图（对应表1中T3配置：TAD和ASI为混淆任务，SED为目标任务）。图中展示了数据流与训练梯度路径。
 
 完整输入输出流程：
@@ -126,7 +126,7 @@ EAML的整体架构围绕一个核心的混淆网络（OBFNet）和多个任务�
 *   T3配置引入TAD作为混淆任务后，键盘打字检测的AUC从T1的0.99大幅下降至0.72（随机基线为0.5），表明系统成功学习了混淆打字声。但代价是SED总体F-score下降较多（从82.88%降至72.13%），论文指出这是因为“电话”和“拍手”声与打字声在频谱和瞬态特性上相似，导致混淆。
 
 图2（对应pdf-image-page4-idx2）: 混淆效果频谱图对比
-![频谱图对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462584-2.jpg)
+![频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462584-2.jpg)
 左：原始信号频谱，包含清晰的语音谐波结构。中：F-T1配置（无SI-SDR损失）的混淆后频谱，区域(a)显示语音的谐波结构被有效抹平，旨在破坏说话人身份信息。右：F-T2配置（有SI-SDR损失）的混淆后频谱，区域(b)显示非目标事件（如电话声）的细节保留得比F-T1更好，表明音频质量损失有助于维持信号的整体结构。
 
 ### ⚖️ 评分理由

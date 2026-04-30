@@ -69,7 +69,7 @@ hiddenInHomeList: true
     *   特征提取：分别使用预训练的Whisper-large-v3编码器和MERT-v1-330M编码器，提取上下文嵌入向量（Whisper为1280维，MERT维度未明确说明）。
     *   融合与预测：将人声和歌曲的嵌入序列送入一个两层的Transformer编码器（4个注意力头）进行跨模态融合，经过平均池化后，接入全连接层和Sigmoid输出预测得分。此架构中，仅下游Transformer和预测头参数可训练。
 
-![架构比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464377-2.png)
+![架构比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464377-2.png)
 图3展示了四种监督学习基线的架构比较。左侧两幅为传统特征方法（MFCC+MLP和梅尔谱+ResNet），右侧两幅为预训练编码器方法（Whisper和MERT，它们共享相同的下游Transformer融合块）。
 
 ### 💡 核心创新点
@@ -110,10 +110,10 @@ hiddenInHomeList: true
 *   监督学习：Spectrogram + ResNet显著领先，MAE低至0.1040，Pearson高达0.8913，表明梅尔谱特征结合强大的图像识别骨干网络能极好地捕捉适配性所需的声学直观特征。Whisper基线次之。MERT基线表现最差，可能与其预训练任务（侧重乐器和结构）对人声细微差别关注不足有关。
 *   零样本评估：所有MLLMs均表现出一定理解能力，但性能远低于监督学习最优模型。Gemini-2.5-Pro在MAE和Pearson上均为最佳（0.2154, 0.6703）。误差分析（图4）显示，Gemini预测最稳定但略偏保守（误差分布偏负），其他模型预测方差更大。散点图（图5）揭示了所有MLLMs的输出存在量化效应（预测值集中在几个离散水平），这导致即使MAE不高，Pearson相关性也会受损。
 
-![误差分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464377-3.png)
+![误差分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464377-3.png)
 图4：多模态大模型在零样本评估中的误差分布图。横轴为预测值减去真实值（误差），纵轴为核密度估计。可见Gemini-2.5-Pro的误差分布最窄（最稳定），但中位数略低于0；其他模型分布较宽，且Kimi-Audio的分布呈现多峰。
 
-![预测散点图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464377-4.png)
+![预测散点图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464377-4.png)
 图5：多模态大模型零样本预测的散点图。横轴为真实值，纵轴为预测值。所有模型的预测点都呈现出明显的水平带状分布（量化效应），表明模型倾向于将连续的回归任务粗粒度化为有限的几个离散得分。
 
 *   与最强基线的差距：零样本最佳模型Gemini-2.5-Pro（MAE=0.2154）与监督学习最佳Spectrogram+ResNet（MAE=0.1040）相比，MAE高出约107%，Pearson低约25%，差距非常显著，凸显了领域特定监督数据的必要性。

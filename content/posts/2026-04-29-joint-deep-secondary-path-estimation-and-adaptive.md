@@ -72,10 +72,10 @@ hiddenInHomeList: true
     *   抗噪声信号 `ŷ(n)` 由 `y(n)` 与 预测的 二次路径 `Ŝ(z)` 卷积生成。
     *   残余误差 `e(n)` 为原始噪声 `d(n)` 与 `ŷ(n)` 之差，该误差被反馈用于在线更新ANC-Net（如算法1所示）。
 
-![图2：ANC-Net控制器模块图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461474-1.png)
+![图2：ANC-Net控制器模块图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461474-1.png)
 图2详细展示了ANC-Net的内部结构，包括卷积层、SE模块、BiLSTM、多头注意力以及最终生成二进制权重向量的过程。
 
-![图3：完整的端到端ANC系统框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461474-2.jpg)
+![图3：完整的端到端ANC系统框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461474-2.jpg)
 图3展示了整个系统的信号流和模块集成方式，清晰地标明了DeepSPE和ANC-Net如何协同工作，并与传统的参考麦克风、误差麦克风、主路径、次路径等声学组件交互。
 
 #
@@ -125,7 +125,7 @@ hiddenInHomeList: true
 
 表2总结：DeepSPE在精度上大幅领先传统自适应方法。消融研究证明，去除注意力机制和BiLSTM会导致性能显著下降，验证了多组件集成设计的有效性。
 
-![图4：二次路径脉冲响应估计对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461474-3.png)
+![图4：二次路径脉冲响应估计对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461474-3.png)
 图4直观展示了DeepSPE估计的脉冲响应与真实脉冲响应几乎完全重合，而经典方法则存在明显的偏差和振荡，视觉上印证了表2的定量结果。
 
 2. ANC-Net控制器性能对比
@@ -146,7 +146,7 @@ hiddenInHomeList: true
 表3总结：ANC-Net在NMSE上优于所有对比的深度模型（ResNet， DenseNet），同时参数量小一个数量级，延迟低4-6倍。消融研究再次证实了SE块、BiLSTM和注意力机制对精度的贡献。
 
 3. 端到端系统性能
-![图5：不同ANC算法在飞机噪声下的残余噪声水平对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461474-4.jpg)
+![图5：不同ANC算法在飞机噪声下的残余噪声水平对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461474-4.jpg)
 图5是系统性能的核心证据。在飞机噪声场景下，所提方法（Proposed）的残余噪声功率谱在整个频带内都是最低的，且收敛速度最快。相比之下，传统方法（Eriksson， Kuo， Akhtar）和早期的深度学习方法（SFANC， GFANC）在中高频段的噪声抑制效果明显较差，稳态误差更高。论文指出该结果在5次随机试验中方差小于0.3 dB。
 
 #

@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![模型框架图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460429-1.png)
+![模型框架图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460429-1.png)
 图2: cWGAN-IR干扰消除框架概览。左：训练流程（U-Net生成器、PatchGAN判别器（WGAN+GP）和L1损失）。右：推理流程（生成器输出、相位重用和ISTFT）。
 
 整体流程：

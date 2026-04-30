@@ -56,9 +56,9 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1(a)](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462274-0.png)
-![图1(b)](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462274-1.png)
-![图1(c)](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462274-2.png)
+![图1(a)](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462274-0.png)
+![图1(b)](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462274-1.png)
+![图1(c)](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462274-2.png)
 
 模型的整体架构如图1(a)所示，是一个端到端的可微分框架，旨在处理双耳语音信号。其核心是构建了并行的“噪声路径”和“增强路径”来提取可懂度相关表征。
 

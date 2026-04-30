@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 MotionBeat是一个双流编码器框架，旨在学习与人类运动对齐的音乐嵌入表示。其整体架构如图1所示。
 
-![图1：MotionBeat架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460499-0.jpg)
+![图1：MotionBeat架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460499-0.jpg)
 
 完整输入输出流程：
 1.  输入：成对的音乐波形和3D人体姿态序列（或SMPL参数）。

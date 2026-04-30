@@ -79,13 +79,13 @@ hiddenInHomeList: true
 | Proposed (2mic+2vm, λ=-3,-4) | 性能最优 | 性能最优 | 性能最优 | 添加第二个虚拟麦克风带来进一步提升 |
 
 关键图表与结论：
-![图2: Effect of VM relative location](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462612-1.png)
+![图2: Effect of VM relative location](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462612-1.png)
 图2结论：虚拟麦克风位置对不同方位角的目标效果不同。将VM放在用户前方（λ=-0.5）对正前方（0°）目标ISNR提升最大；放在后方（λ=1.5）对后方（180°）目标效果最佳。这符合SNR在VM最接近目标时最高的直觉。对于助听器，推荐将VM置于前方。
 
-![图3: Effect of VM distance](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462612-2.png)
+![图3: Effect of VM distance](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462612-2.png)
 图3结论：随着|λ|增大（VM远离参考麦克风），ISNR先提升后下降。性能在λ=-4左右达到峰值。这表明增大虚拟阵列孔径有助于提升空间分辨率，但距离过大会导致空间混叠，性能下降。最优λ可能随频率变化。
 
-![图4: Performance comparison](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462612-3.png)
+![图4: Performance comparison](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462612-3.png)
 图4结论：在所有测试维度上，所提方法（尤其是使用两个虚拟麦克风时）都显著优于基线和GAI方法。其性能在各种输入SNR、不同噪声类型（包括可能削弱WDO假设的多说话人噪声）以及不同混响水平下都保持鲁棒。
 
 ### ⚖️ 评分理由

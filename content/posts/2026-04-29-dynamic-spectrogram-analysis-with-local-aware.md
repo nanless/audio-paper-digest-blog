@@ -55,13 +55,13 @@ hiddenInHomeList: true
         *   稀疏残差主节点（SRM）：计算每个节点相对于所在域均值的残差向量，并基于残差的幅度、方差和稀疏度计算异���分数（AS）。选择异常分数最高的节点组成“残差区域（Region R）”。SRM节点同样通过注意力机制聚合这些节点的残差信息。
 5.  输出：在读出阶段，聚合来自五个来源的信息：全局主节点、LVM节点、SRM节点、以及时域/频域节点的平均池化和最大池化表示。最终通过分类器输出真伪判断。
 
-![模型总体架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464633-1.jpg)
+![模型总体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464633-1.jpg)
 图2：提出的模型架构概览。展示了双分支前端（频谱分支包含SKS块，波形分支使用wav2vec 2.0）通过残差式快捷连接整合，并馈入增强的AASIST图网络后端。后端中的M-HS-GAL层包含了新增的局部主节点（LVM和SRM）。
 
-![频谱分支详细架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464633-2.jpg)
+![频谱分支详细架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464633-2.jpg)
 图3：频谱分支的详细架构。输入梅尔频谱被构建为三个视图，经共享卷积提取后生成上下文图C。C通过轻量级注意力模块生成权重，用于动态加权不同尺度的卷积。最后通过位置编码器生成嵌入。
 
-![局部主节点生成示意](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464633-3.jpg)
+![局部主节点生成示意](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464633-3.jpg)
 图4：M-HS-GAL模块中局部主节点的生成过程。LVM从基于变化统计划分的时间/频率图中选择节点；SRM则基于残差的幅度、方差和稀疏度选择节点。
 
 ### 💡 核心创新点

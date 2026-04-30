@@ -61,10 +61,10 @@ hiddenInHomeList: true
 - 保留困难样本：允许模态缺失、列表外物体共存，以提高模型的鲁棒性和泛化能力。
 - 层次化标签：为了支持多粒度学习，并揭示类别间的语义关系（如同源发声机制）。
 
-![图1：音视频对应关系示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464684-0.png)
+![图1：音视频对应关系示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464684-0.png)
 图1展示了一个音视频物体（大提琴）在视频中的四种可能状态（同时可见可闻、仅可闻、仅可见、其他）。这直观说明了音视频时域对应可能不完全同步，是构建数据集时需要处理的核心问题之一。
 
-![图3：AVO-65的多粒度层次标签结构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464684-2.png)
+![图3：AVO-65的多粒度层次标签结构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464684-2.png)
 图3清晰地展示了基于H-S分类法的四层层次树结构，以“Cello（大提琴）”为例，其路径为：第1层 Chordophones（弦乐器）-> 第2层 Composite chordophones（复合弦乐器）-> 第3层 Lutes（琉特琴类）-> 第4层 Cello。这体现了数据集如何为每个细粒度类别提供多层次的语义信息。
 
 ### 💡 核心创新点
@@ -130,7 +130,7 @@ hiddenInHomeList: true
 
 结论4：专门的音视频多模态模型（MBT， UAVM）性能优于基线CNN融合模型。UAVM在Top-1准确率上达到了最高值。
 
-![图2：AVO-65各类别样本数量分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464684-1.png)
+![图2：AVO-65各类别样本数量分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464684-1.png)
 图2展示了65个类别的样本数量分布，呈长尾形态，头部类别（如“piano”）样本超过1600个，尾部类别样本不足30个。这反映了真实世界数据分布的特点，也为模型的泛化能力提出了挑战。
 
 ### ⚖️ 评分理由

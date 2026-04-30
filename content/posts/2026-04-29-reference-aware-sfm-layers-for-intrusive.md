@@ -70,7 +70,7 @@ hiddenInHomeList: true
     *   将“严重程度”令牌（severity token）附加在左、右耳分支在经过所有融合操作后的表示位置。将此令牌的输出向量送入一个共享的多层感知机（MLP）头，分别预测左耳和右耳的分数。
     *   采用温度控制的对数求和指数（Log-Sum-Exp）池化（即softmax）将双耳分数合并为最终的整句分数，这被称为“最佳耳”池化。该操作是可微的，并能隐式地选择分数更高的耳朵。
 
-![图1：模型架构概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-0.jpg)
+![图1：模型架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-0.jpg)
 图1展示了该管道：A部分为前端，B部分为跨耳融合，C部分为跨参考融合，D部分为最佳耳评分。它清晰地描绘了SFM与MSCNN的融合、跨参考/跨耳注意力的连接位置以及最终的评分机制。
 
 ### 💡 核心创新点
@@ -126,15 +126,15 @@ hiddenInHomeList: true
     - 四层块选择（窗口=4）：如图3所示，所有方法在层12-15区块表现最佳。此时，本文提出的severity token读出方法（Setup A）在层12-15上达到最佳RMSE 22.89，显著优于CLS（23.70）和均值池化（23.85）。这证实了多层聚合和听者条件化读出的优越性。
     - 在Parakeet模型上的验证：类似地，Setup A在层12-15区块上也表现最佳（RMSE 23.02）（图4）。
 
-![图2：Canary-1B-flash单层扫描结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-1.jpg)
+![图2：Canary-1B-flash单层扫描结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-1.jpg)
 图2显示了在Canary-1B-flash上进行单层扫描（窗口=1）时，Setup C（CLS）在L20和Setup B（均值）在L21获得最低验证集RMSE。
-![图3：Canary-1B-flash四层块扫描结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-2.jpg)
+![图3：Canary-1B-flash四层块扫描结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-2.jpg)
 图3比较了在四层窗口下，三种读出方式在Canary-1B-flash上的表现。Setup A（severity token）在层12-15块上取得最佳RMSE。
-![图4：Parakeet模型层选择](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-3.png)
+![图4：Parakeet模型层选择](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-3.png)
 图4显示了在parakeet-tdt-0.6b-v2模型上的层选择，Setup A和均值池化基线都倾向于中深层（12-15），峰值在12-15块（23.02）。
-![图5：按增强系统和听者分层的误差分析](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-4.png)
+![图5：按增强系统和听者分层的误差分析](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-4.png)
 图5对评估集误差进行分层分析。(A)训练集和评估集共有的系统，(B)仅评估集系统，(C)训练集见过的听者，(D)仅评估集听者。观察到模型对训练集见过的听者（C）预测更好。
-![图6：评估集场景误差分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465091-5.jpg)
+![图6：评估集场景误差分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11465091-5.jpg)
 图6展示了1163个评估场景的RMSE分布直方图，呈右偏态。大多数场景RMSE在15-30之间，但有少量（约6%）RMSE超过40的难题场景拉高了整体误差。
 
 ### ⚖️ 评分理由

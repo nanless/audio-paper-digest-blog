@@ -34,7 +34,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文提出的DuCL（双对比学习）框架整体架构如图1所示。
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463256-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463256-0.png)
 模型以双模态数据作为输入：音频特征X(a)（来自log-Mel频谱图）和视频特征X(v)（来自二维人脸关键点）。架构主要由四个部分组成：
 
 1.  特征编码与相似度建模：
@@ -97,12 +97,12 @@ hiddenInHomeList: true
 
 消融实验与分析：
 图2展示了消融实验结果。
-![图2: pdf-image-page2-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463256-1.jpg)
+![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463256-1.jpg)
  (a) 模态与SCW消融：从音频单模态(A)到音频+视频双模态(A+V)带来F1提升（0.04-0.10）；加入对比学习(UCL)后进一步提升（0.04，0.03）；再加入语义一致性权重(SCW)后获得额外提升（0.05，0.06）。这验证了多模态融合和SCW-UCL的有效性。
  (b) 伪标签策略消融：比较了无伪标签加权(o/w PW)、仅使用分类器伪标签(PW(cls))、仅使用相似性伪标签(PW(sim))和联合伪标签(JPW)。JPW在两个迁移任务上均取得最佳F1（0.52，0.48），证明了联合策略的优势。
 
 图3展示了目标域有标签样本比例的影响。
-![图3: pdf-image-page2-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463256-2.png)
+![图3: pdf-image-page2-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463256-2.png)
 * 随着标签比例从0.1增加到0.4，F1分数整体呈上升趋势，但在C→A任务中增长较线性（0.36→0.48），在D→A任务中较早饱和（0.52）。这说明伪标签机制在少量标签时已能有效工作。
 
 ### ⚖️ 评分理由

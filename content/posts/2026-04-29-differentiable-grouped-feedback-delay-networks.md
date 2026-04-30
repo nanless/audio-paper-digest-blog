@@ -64,7 +64,7 @@ hiddenInHomeList: true
 1. 整体架构（单个八度频带内）
 如图1（pdf-image-page2-idx0）所示，核心是一个由G个群组构成的DiffGFDN。每个群组k包含 N' = (N_sh + 1)^2 条延迟线（N_sh为最大球谐阶数）。每个群组使用固定的延迟长度和基于公共衰减时间T60k计算的吸收增益。可学习参数包括群组内的反馈矩阵 A_k 和输入/输出增益 b_k, c_k。位置依赖的源增益 g_in,k 和接收器增益 g_out,k 通过MLP从傅里叶编码的空间坐标预测得到，并在球谐域中表示。传递函数为各群组贡献的总和（公式2）。
 
-![DiffGFDN架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-0.png)
+![DiffGFDN架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-0.png)
 图1: 提出的单个频带DiffGFDN架构。粗线代表多通道信号。H_q(z) 和 \hat{H}_q(z) 分别是第q个接收位置 x_rq 处的参考和预测方向依赖传递函数。x_s 表示源位置。
 
 2. 训练流程
@@ -74,7 +74,7 @@ hiddenInHomeList: true
     c.  方向转换：每个子带的SRTFs通过球面分析滤波器组（SFB）转换为J个方向的房间传递函数（DRTFs），方向采样自球面t-design网格（公式3）。
     d.  预测与损失计算：DiffGFDN预测子带SRTFs，同样经过SFB转换为DRTFs。计算预测与参考DRTFs之间的方向性能量衰减曲线（DEDC）损失、频谱损失和稀疏损失（公式5, 6, 7），并反向传播更新所有可学习参数。
 
-![训练与推理流程](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-1.png)
+![训练与推理流程](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-1.png)
 图2: (a) 训练流程。参考SRTFs先经过重建的全八度滤波器组。然后，参考子带SRTFs和DiffGFDN预测的子带SRTFs被波束成形为DRTFs并送入损失函数计算器L。(b) 推理流程。干声信号先经过滤波器组，每个子带由训练好的子带DiffGFDN处理。DiffGFDN的输出被波束成形为扇区，然后求和并编码用于扬声器/双耳播放。
 
 3. 推理流程
@@ -134,16 +134,16 @@ hiddenInHomeList: true
 方向EDC误差空间分布：
 如图3（pdf-image-page3-idx2至pdf-image-page3-idx9）所示。该图展示了1 kHz频带下，两种相反方向（方位角0°和180°）的平均绝对EDC误差在空间位置上的分布，分别对应DiffGFDN（图a-d）和CS插值器（图e-h），以及0.9米和0.6米两种训练网格间距。
 
-![图3a](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-2.png)
-![图3b](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-3.png)
-![图3c](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-4.png)
-![图3d](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-5.png)
+![图3a](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-2.png)
+![图3b](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-3.png)
+![图3c](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-4.png)
+![图3d](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-5.png)
 图3: DiffGFDN重建的DEDC误差。(a) 方位角180°，0.9m网格；(b) 180°，0.6m网格；(c) 0°，0.9m网格；(d) 0°，0.6m网格。
 
-![图3e](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-6.png)
-![图3f](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-7.png)
-![图3g](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-8.png)
-![图3h](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461624-9.png)
+![图3e](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-6.png)
+![图3f](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-7.png)
+![图3g](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-8.png)
+![图3h](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461624-9.png)
 图3: DNN CS插值器的DEDC误差。(e) 方位角180°，0.9m网格；(f) 180°，0.6m网格；(g) 0°，0.9m网格；(h) 0°，0.6m网格。
 
 - 关键结论：

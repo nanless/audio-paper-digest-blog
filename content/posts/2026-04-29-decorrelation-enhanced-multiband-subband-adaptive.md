@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 本文提出的并非传统的神经网络模型，而是一个自适应信号处理系统架构，用于在声场控制（SFC）框架下实时跟踪房间脉冲响应（RIR）。其核心是图1所示的系统框图。
 
-![图1: 系统框图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464373-0.jpg)
+![图1: 系统框图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464373-0.jpg)
 
 完整流程：
 1.  激励信号生成：输入信号 `x(n)` 经过声场控制滤波器组 `q(n)` 产生控制滤波后的激励信号 `bl(n)`。当检测到可能的RIR变化时（误差 `||eq(n)||^2 > εq`），系统切换至RIR跟踪模式。
@@ -90,7 +90,7 @@ hiddenInHomeList: true
 论文主要通过两个仿真实验验证算法性能，评价指标为归一化失调（NM），单位为dB。
 
 实验1：不同去相关方法的收敛性能（图2）
-![图2: 收敛性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464373-1.jpg)
+![图2: 收敛性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464373-1.jpg)
 图表描述与结论：该图展示了以音乐为激励信号时，三种方法（时间域NLMS、MSAF、IMSAF）的NM随迭代次数变化的曲线。
 *   基线：时间域NLMS（参考文献[13]）性能最差，收敛慢，稳态误差高。
 *   MSAF：相比NLMS，收敛更快，稳态误差显著降低。论文指出改善了约10 dB。

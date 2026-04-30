@@ -45,7 +45,7 @@ hiddenInHomeList: true
     *   PDE损失：在域Ω内随机采样P个点{x_p}，计算重构复声压u(x)代入亥姆霍兹方程（(∇² + k²)u(x) = 0）的残差平方和（公式3），作为物理约束。
        总损失：L = λdata  Ldata + λPDE * LPDE。训练目标是最小化该损失函数，使网络预测既拟合测量数据，又符合波动方程物理规律。
 
-![图2: 模型架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460963-1.png)
+![图2: 模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460963-1.png)
 图2描述：展示了数据流（蓝色箭头）和物理约束流（红色箭头）���输入坐标经过RFF后，分别送入幅度MLP和相位MLP。幅度路径直接计算数据损失；相位与幅度组合成复声压后，计算其关于亥姆霍兹方程的残差，作为PDE损失。
 
 关键设计动机：
@@ -108,13 +108,13 @@ PDE损失权重消融实验（图6）：
 可视化结果（图5）：
 展示了200Hz和400Hz下，测量点数为20和50时的x-z平面幅度分布重建图。关键观察：PRB-PINN重建的幅度分布空间变化模式（特别是零点/节线位置）比NF更接近Ground Truth，尤其是200Hz时。但PRB-PINN预测的相位与Ground Truth相位完全不符，说明模型找到了另一个满足幅度约束和PDE方程的相位解，但这仍能有效提升幅度重建质量。
 
-![图4: 测试集数据损失对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460963-3.png)
+![图4: 测试集数据损失对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460963-3.png)
 图4描述：展示了三种方法在不同频率和测量点数下的测试数据损失(Ldata)。结论：PRB-PINN在所有条件下损失最低。
 
-![图6: PDE损失权重影响](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460963-5.png)
+![图6: PDE损失权重影响](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460963-5.png)
 图6描述：展示了λPDE=0, 0.001, 1时的Ldata和LPDE。结论：λPDE需要仔细权衡，过大的λPDE反而会损害数据重建精度。
 
-![图5: 幅度分布可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460963-4.png)
+![图5: 幅度分布可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460963-4.png)
 图5描述：对比了Ground Truth、Baseline、NF和PRB-PINN重建的幅度分布。结论：PRB-PINN在空间结构重建上优于NF，但预测的相位与真实相位无关。
 
 ### ⚖️ 评分理由

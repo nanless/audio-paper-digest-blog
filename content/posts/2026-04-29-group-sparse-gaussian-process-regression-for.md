@@ -91,10 +91,10 @@ hiddenInHomeList: true
 - 在高频（4 kHz附近），Proposed的NMSE降低了超过5 dB。
 - MP-PSD仅在较高频率且使用更密网格（δ=0.05m）时表现出对PSD的明显优势，而在低频时两者性能相同（因为都选择了 ν_tr=0）。
 
-![图1：NMSE (dB) 随频率变化图。Proposed方法在大部分频率范围内的NMSE显著低于PSD和MP-PSD基线方法，且对网格间隔更鲁棒。](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464046-0.png)
+![图1：NMSE (dB) 随频率变化图。Proposed方法在大部分频率范围内的NMSE显著低于PSD和MP-PSD基线方法，且对网格间隔更鲁棒。](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464046-0.png)
 
 定性结果（图2 & 描述中的图3）：
-![图2：在2 kHz时，目标声场与各方法估计声场的实部对比（网格间隔δ=0.1m）。Proposed方法的估计结果（c）与目标声场（a）高度吻合，而PSD（b）和MP-PSD（d）的估计结果在声源附近及整个区域都存在明显失真。](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464046-1.png)
+![图2：在2 kHz时，目标声场与各方法估计声场的实部对比（网格间隔δ=0.1m）。Proposed方法的估计结果（c）与目标声场（a）高度吻合，而PSD（b）和MP-PSD（d）的估计结果在声源附近及整个区域都存在明显失真。](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464046-1.png)
 - 图2（pdf-image-page4-idx1）直观展示了Proposed方法在2 kHz时能更准确地重建声场。PSD和MP-PSD由于激活了错误或多余的网格点，导致整个声场重建出现误差。
 - 论文提及的图3（未提供URL）展示了归一化误差分布，Proposed方法的误差在整个评估区域都更低。
 

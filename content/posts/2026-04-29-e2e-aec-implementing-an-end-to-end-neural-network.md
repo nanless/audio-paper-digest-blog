@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 模型整体为基于时频掩蔽的端到端神经网络，输入为带混响、回声和噪声的麦克风信号的STFT特征，输出为纯净近端语音的STFT频谱估计（中间阶段为回声抑制后的语音+噪声频谱）。
 
-![E2E-AEC系统概述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464951-0.png)
+![E2E-AEC系统概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464951-0.png)
 
 架构主要组件与数据流（结合图1）：
 1.  输入：麦克风信号`mic`（包含近端语音x、回声r*hr、噪声v）和远端参考信号`ref`（包含回声源r）的STFT特征。
@@ -143,7 +143,7 @@ VAD层选择消融实验（表3，基于Exp 6）：
 结论：从第5层提取VAD进行掩码，ERLE和MOSavg均达到最优。
 
 时间延迟估计可视化（图2）：
-![TDE results for a sample](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464951-1.png)
+![TDE results for a sample](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464951-1.png)
 图示：显示了650ms真实延迟下，不同方法的延迟估计曲线。`Attention+MSE`（红线）最接近真实值（灰色虚线），平均误差仅-3ms，方差94ms，在声学场景变化（如6s引��噪声，10s转为双讲）时能快速收敛。
 
 ### ⚖️ 评分理由

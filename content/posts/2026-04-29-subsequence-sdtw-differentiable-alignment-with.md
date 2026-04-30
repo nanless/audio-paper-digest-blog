@@ -46,11 +46,11 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本论文的核心贡献不是提出一个新的神经网络模型，而是提出一个新的、可微分的损失函数（subSDTW），它可以与任何现有的序列预测模型（如论文中用于多音高估计的卷积网络）结合使用。
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463857-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463857-0.png)
 （图1: 展示了边界不匹配的问题场景。a) 乐谱作为弱对齐目标。b) DNN的预测帧。c) 带有边界不确定性±∆的输入音频。d) subSDTW的代价矩阵，显示了具有灵活边界条件的对齐路径。）
 
 其核心计算架构体现在前向和后向传播的动态规划递归中：
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463857-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463857-1.png)
 （图2: subSDTW前向与后向传播示意图。前向过程（蓝色）从起始边界条件（紫色）开始累积代价；后向过程（绿色）计算梯度，并考虑结束边界条件（橙色）的直接贡献。除边界更新外，算法与标准SDTW一致。）
 
 完整流程：
@@ -124,7 +124,7 @@ hiddenInHomeList: true
 2.  加权subSDTW的鲁棒性：通过精心设计的边界权重（subSDTW-W），即使在∆=±2.0秒的大偏移下，模型仍能维持0.66的F值，仅略低于使用完美强对齐数据训练的基准（0.67）。这证明了该方法能有效抵御边界噪声。
 3.  标准SDTW的相对稳定性：标准SDTW在偏移下性能下降较慢，论文解释为随机偏移的平均效应使其“错误假设”仍能给出尚可结果，但其性能天花板明显低于加权subSDTW。
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463857-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463857-2.png)
 （图3: 不同配置下的边界条件与权重设置示意图。a) 标准SDTW：固定起点终点。b) 无权重subSDTW：允许灵活边界，权重均匀。c) 加权subSDTW (subSDTW-W)：灵活边界，并根据预期路径长度设置递增/递减的权重，以惩罚过短路径。）
 
 ### ⚖️ 评分理由

@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 SInMT框架的整体架构如下：
 
-![SInMT框架架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462102-0.png)
+![SInMT框架架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462102-0.png)
 图1: SInMT模型架构示意图
 
 该架构主要由以下组件构成：
@@ -106,7 +106,7 @@ SInMT框架的整体架构如下：
     - 针对ASVspoof 2021 LA数据集的13种攻击类型（A07-A19）进行了详细分析。SInMT框架的两个变体在所有攻击类型上均优于MHFA基线。
     - 关键发现：在最具挑战性的攻击类型A10和A11上，提升最为显著。MHFA-IVspk模型将A11的EER从17.02%降至8.76%，相对降低48%。
 - 可视化证据（图2）：
-    ![t-SNE可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462102-1.png)
+    ![t-SNE可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462102-1.png)
     图2: MHFA, MHFA-spk, MHFA-IVspk模型嵌入的t-SNE可视化对比（10个说话人样本）
     - MHFA：嵌入空间显示出部分按说话人分离的倾向，但聚类紧密，表明保留了部分说话人信息。
     - MHFA-spk：嵌入空间显示出非常清晰的按说话人ID聚类，每个说话人形成独立的小簇，表明该模型显著强化了说话人特定信息的表示。

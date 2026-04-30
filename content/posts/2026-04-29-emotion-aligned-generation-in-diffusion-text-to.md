@@ -135,7 +135,7 @@ hiddenInHomeList: true
 | Diff.-DPO | 97.85 | 3.67 | 3.82 | 4.37 |
 | EASPO | 99.15 | 3.89 | 3.74 | 4.47 |
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464274-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464274-0.png)
 图1：EASPO与其它扩散DPO方法的对比示意图。EASPO（右侧）在每个时间步采样多个候选，通过EASPM打分并构建偏好对进行优化，然后随机选择下一步起点，实现了逐步对齐。
 
 ### ⚖️ 评分理由

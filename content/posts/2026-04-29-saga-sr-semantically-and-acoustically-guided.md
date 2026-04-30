@@ -54,7 +54,7 @@ SAGA-SR的整体架构（图1）是一个以条件DiT为核心的生成模型，
 4.  输出生成：推理时，从噪声$z_0$出发，通过ODE求解器（如Euler方法）在DiT的引导下迭代去噪，得到估计的高分辨率潜在表示$\hat{z}_h$。
 5.  后处理：$\hat{z}_h$通过预训练的VAE解码器恢复成音频信号，最后进行低频替换，将输入音频$x_l$的低频部分（截止频率以下）直接复制到输出中，以确保低频信息的绝对一致。
 
-![图1：SAGA-SR模型架构总览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460886-0.png)
+![图1：SAGA-SR模型架构总览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460886-0.png)
 图1展示了SAGA-SR的完整流程：音频对通过VAE编码，文本和频谱滚降特征被提取并注入到DiT中，最终由DiT估计高分辨率潜在表示，再经VAE解码和低频替换后得到输出。
 
 ### 💡 核心创新点
@@ -117,10 +117,10 @@ SAGA-SR的整体架构（图1）是一个以条件DiT为核心的生成模型，
 
 结论：SAGA-SR在所有类别上均获得最高主观评分，尤其在音效上领先优势明显（3.88 vs 3.34）。
 
-![图2：不同模型生成音频的频谱图对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460886-1.png)
+![图2：不同模型生成音频的频谱图对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460886-1.png)
 图2显示，AudioSR和FlashSR的输出在高频区域（10kHz以上）能量分布不一致，且AudioSR有明显齿音伪影。SAGA-SR的频谱图与真实值（Ground Truth）更接近，高频结构更清晰、一致。
 
-![图3：调整目标频谱滚降频率的效果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460886-2.png)
+![图3：调整目标频谱滚降频率的效果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460886-2.png)
 图3展示了通过调节目标归一化滚降频率标量，可以控制生成音频的高频能量强度，从较暗（左）到较亮（右）。
 
 ### ⚖️ 评分理由

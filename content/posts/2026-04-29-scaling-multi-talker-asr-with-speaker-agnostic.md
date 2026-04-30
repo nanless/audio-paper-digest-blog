@@ -54,10 +54,10 @@ hiddenInHomeList: true
     *   解耦关键：传统方法为每个说话人运行一次编码器-解码器。本文方法将输入从“\(K\) 个说话人活动”转换为“2个流活动”，使得ASR模型只需运行两次，从而将推理成本与说话人数解耦。
     *   启发式设计动机：朴素的First-available启发式会导致两个流的内容高度相似（模型坍塌）。新启发式旨在平衡两个关键点：(1) 负载均衡，防止单一流主导模型训练；(2) 连续性，确保同一段连贯对话的语句不被拆散到不同流中，以便语言模型利用上下文。Speaker-continuity启发式通过优先保持说话人连续性来同时优化这两点。
 
-![HEAT活动条件示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461880-0.png)
+![HEAT活动条件示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461880-0.png)
 图1说明：此图直观展示了HEAT的工作流程。原始音频包含多个说话人（不同颜色），其活动信号被合并为两个说话人无关的流（Stream 1, Stream 2），每个流内部没有重叠。然后，ASR模型（DiCoW）仅对这两个流分别进行处理，生成最终转录。这清晰地展示了如何将推理成本固定为两次。
 
-![不同启发式分配示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461880-1.png)
+![不同启发式分配示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461880-1.png)
 图2说明：此图展示了五句话（三个说话人）在不同HEAT启发式下被分配到两个流（S1, S2）的结果。图中清晰地对比了First-available（可能导致负载不均或不连续）、Alternating（严格交替但不考虑说话人）、Recency-continuity（优先分配给最近使用的流）和Speaker-continuity（优先保持同一说话人）的区别。Speaker-continuity在保持对话连贯性（将说话人A和B的连续话轮放在同一流）和平衡性上表现最好。
 
 ### 💡 核心创新点
@@ -123,7 +123,7 @@ hiddenInHomeList: true
 
 *   结论：在两人重叠且比例不高时，HEAT性能与基线相当甚至略优。随着重叠比例增加，性能差距逐渐扩大。对于三人重叠，即使在低重叠比例下，HEAT的性能下降也比两人重叠时更明显，验证了方法对高重叠人数的局限性。
 
-![不同启发式性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461880-1.png)
+![不同启发式性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461880-1.png)
 图2说明：此图虽主要用于说明启发式原理，但也间接展示了不同分配��略可能导致的语音流在时间上的分布差异，这与最终的识别性能（表1）直接相关。
 
 ### ⚖️ 评分理由

@@ -68,7 +68,7 @@ hiddenInHomeList: true
 3.  CTC损失训练：训练时，对于一段语音，其目标序列`Y`由单一的方言标签重复`L`次构成（`L`由LAH或ASR估算）。模型输出logits序列`X`与目标`Y`通过CTC损失函数进行对齐和训练。CTC允许模型在不知道精确帧-标签对齐的情况下进行学习，鼓励模型在每个时间步都输出正确的方言标签。
 4.  推理与解码：在推理时，模型输出整个语音的logits序列。采用CTC解码（本文仅使用贪心解码），得到一条由方言标签和`<blank>`符号组成的序列。最后，通过一个简单的后处理步骤：统计序列中各方言标签（去除`<blank>`和重复符号后）出现的频率，选择出现次数最多的标签作为最终的整句方言预测结果。
 
-![图1: CTC-DID 方法流程图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463104-0.jpg)
+![图1: CTC-DID 方法流程图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463104-0.jpg)
 *   图1说明：清晰展示了上述流程。输入音频经过冻结或可微调的SSL编码器（如mHuBERT），再经过Transformer任务头，得到帧级logits。训练阶段使用CTC损失计算目标（重复的方言标签）。推理阶段，经过CTC解码和频率投票，输出最终的方言标签。图中灰色框内的组件（SSL编码器和Transformer头）是可配置为冻结或微调的训练部分，绿色框为推理流水线。
 
 ### 💡 核心创新点
@@ -102,12 +102,12 @@ hiddenInHomeList: true
     | LAH | 77.34 | 51.36 |
     | ASR | 79.35 | 51.84 |
 2.  短语音鲁棒性（图2）：CTC-DID模型在所有评估的时长阈值（≤3秒至≤15秒）下，F1分数的相对下降率都是最低的，证明其鲁棒性最强。
-    ![图2: F1分数相对下降与时长阈值的关系](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463104-1.png)
+    ![图2: F1分数相对下降与时长阈值的关系](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463104-1.png)
     *   图2说明：纵轴为F1分数相对下降率，横轴为语音时长阈值。CTC-DID（微调SSL）曲线最低且最平缓，说明其对短语音的性能影响最小。
 3.  流式推理性能（图3）：探索了不同流式配置。关键发现是：随着上下文窗口（context）增加，性能呈指数提升（图3a）；随着块大小（chunk）增加，性能呈线性提升（图3b）。当总窗口（chunk+context）大于4秒时，流式F1分数达到82.34，与离线推理的86.98接近。
-    ![图3a: F1分数与上下文窗口的关系](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463104-2.png)
+    ![图3a: F1分数与上下文窗口的关系](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463104-2.png)
     *   图3a说明：不同chunk size下，F1分数随context window增大的变化。曲线表明增大上下文能快速提升性能。
-    ![图3b: F1分数与块大小的关系](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463104-3.png)
+    ![图3b: F1分数与块大小的关系](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463104-3.png)
     *   图3b说明：不同context window下，F1分数随chunk size增大的变化。曲线更趋于线性。
 4.  SSL编码器冻结 vs 微调：在所有设置下，微调SSL编码器（“+ fine-tuned SSL”）的性能都优于仅使用其作为特征提取器（冻结）。
 

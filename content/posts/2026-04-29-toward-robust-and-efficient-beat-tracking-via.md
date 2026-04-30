@@ -47,7 +47,7 @@ hiddenInHomeList: true
     *   每个子层都使用残差连接和层归一化。
 3.  多尺度融合：最终，将最后一个BAT Block的输出 `F_N` 与最开始的浅层特征 `F_S` 进行长距离跳跃连接（`F_D = F_N + F_S`），融合局部声学线索与全局节奏语义。
 4.  输出：融合后的特征 `F_D` 输入一个分类器（具体结构未说明），在每个时间步输出节拍和下拍的激活概率。
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461306-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461306-0.png)
 图1展示了BAT的整体架构（a）以及BAA模块（b）和偏移网络（c）的内部结构。
 
 BAA模块详细工作机制（图1b & 1c）：

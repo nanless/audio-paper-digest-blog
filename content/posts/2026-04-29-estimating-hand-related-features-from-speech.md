@@ -63,14 +63,14 @@ hiddenInHomeList: true
 1.  首次探索语音与手部形态的双向关联：这是本文最核心的创新。不同于以往语音到人脸（S2F）的研究，本文将语音与另一类具体的解剖特征——手部测量（手指长度、掌宽等比例）联系起来，并验证了双向预测的可能性，开辟了新的跨模态研究方向。
 2.  提出基于假设检验的评估框架：为证明模型的预测优于简单的基线估计（即训练集平均值），论文采用配对t检验，通过计算损失比率（`L_i / LB_i`）的置信区间来判断可预测性。这为评估跨模态估计的有效性提供了一种统计严谨的方法，如图3和图4所示。
 
-![图3: S2H实验中各手部AM比率的平均1-CIupper值（RF和FFN）](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-2.png)
-![图4: H2S实验中语音特征预测对的平均1-CIupper值（RF）](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-3.png)
+![图3: S2H实验中各手部AM比率的平均1-CIupper值（RF和FFN）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-2.png)
+![图4: H2S实验中语音特征预测对的平均1-CIupper值（RF）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-3.png)
 
 3.  特征重要性分析揭示关键关联：通过RF模型的Gini指数分析，论文指出能量的变异性和闪烁（Shimmer）的变异性是预测手部AM比率（特别是中间三指比例）最重要的语音特征，为理解这种跨模态关联提供了具体线索。如图5、6、7所示。
 
-![图5: il/tl的特征重要性](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-4.png)
-![图6: ml/tl的特征重要性](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-5.png)
-![图7: rl/tl的特征重要性](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-6.png)
+![图5: il/tl的特征重要性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-4.png)
+![图6: ml/tl的特征重要性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-5.png)
+![图7: rl/tl的特征重要性](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-6.png)
 
 ### 🔬 细节详述
 
@@ -101,7 +101,7 @@ hiddenInHomeList: true
 *   关键消融/分析：论文没有进行模型复杂度的消融实验。核心分析在于通过假设检验区分“可预测”与“不可预测”的特征。
 *   结果图表：图3和图4是关键结果图，分别总结了S2H和H2S方向各特征/比率的可预测性统计证据。图5、6、7是具体模型（RF）的特征重要性示例。
 
-![图8: (此处应为论文中的其他图表，但用户提供的标识列表到图7为止，且图7的描述为“FFN-based plots have not been given here due to space restrictions”，因此论文正文中可能没有提供完整的图8对应内容。根据上下文，此处可能为笔误或指代未展示的FFN图。按规则，不插入不存在的图片。)](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464173-7.png)
+![图8: (此处应为论文中的其他图表，但用户提供的标识列表到图7为止，且图7的描述为“FFN-based plots have not been given here due to space restrictions”，因此论文正文中可能没有提供完整的图8对应内容。根据上下文，此处可能为笔误或指代未展示的FFN图。按规则，不插入不存在的图片。)](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464173-7.png)
 
 ### ⚖️ 评分理由
 

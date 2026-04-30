@@ -100,14 +100,14 @@ hiddenInHomeList: true
 | （其他测试集数据类似） | | | | |
 
 图1（MSE对比） 与 图2（SRCC对比） 分析：
-![图1: pdf-image-page4-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464267-0.png)
+![图1: pdf-image-page4-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464267-0.png)
 图1：MSE对比。在12个测试集中，有8个（BVCC, SOMOS, SingMOS, TMHINT-QI, BC-19, VMC‘23-2, VMC‘23-3, P501）的MSE在使用SAM+Adam后显著低于单独使用Adam。这直观地证明了SAM减少了预测误差。
 
-![图2: pdf-image-page4-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464267-1.png)
+![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464267-1.png)
 图2：SRCC对比。与MSE趋势一致，在同样的8个测试集上，SAM+Adam取得了更高的SRCC，表明模型排序与人类评价的一致性更好。例外情况（如NISQA FOR, LIVETALK, VMC‘23-1a, 1b）可能与语言差异有关。
 
 图3（性能损失缓解） 分析：
-![图3: pdf-image-page4-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464267-2.png)
+![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464267-2.png)
 图3：从“最佳单一数据集”到“统一数据集”训练带来的性能变化（∆）。正向的∆MSE（柱子越高）和负向的∆SRCC（柱子越低）代表性能损失越大。图中显示，在8个测试集上，SAM+Adam（黄色/橙色柱）的∆值均小于或等于Adam（蓝色/红色柱），即SAM显著减轻了因引入多域数据导致的性能下降。例如，在SOMOS上，Adam的∆MSE高达约0.77，而SAM+Adam的∆MSE显著降低。
 
 与最强基线对比：本文的主要基线是标准的Adam优化器。论文并未与近期提出的其他专门解决MOS泛化问题的方法（如AlignNet， Bias-aware loss， 对比回归等）或在更大规模的SSL模型上直接比较SRCC/MSE数值。 因此，无法判断该方法是否达到了当前SOTA水平。其实验结论是SAM在所述设置下优于Adam，且能缓解统一训练的负面影响。

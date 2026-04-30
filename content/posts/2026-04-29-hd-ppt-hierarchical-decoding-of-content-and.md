@@ -51,9 +51,9 @@ hiddenInHomeList: true
 
 HD-PPT框架由三个主要组件构成，其目标是将语音合成从预测一个单一的声学序列，转变为一个结构化的分层生成过程。
 
-![图2: pdf-image-page2-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460424-1.png)
+![图2: pdf-image-page2-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460424-1.png)
 
-![图3: pdf-image-page2-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460424-2.png)
+![图3: pdf-image-page2-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460424-2.png)
 
 1.  语音编解码器（Speech Token Codec）：其作用是从预训练的语音tokenizer（如CosyVoice2）输出的原始语音token中，提取出两种具有不同偏好的离散token。
     *   输入：原始语音token序列。

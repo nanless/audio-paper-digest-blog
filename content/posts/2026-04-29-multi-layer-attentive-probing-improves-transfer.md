@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 本文研究的核心是探针（Probe）架构，而非一个全新的编码器模型。其目的是评估已有的预训练音频编码器（Base Model）。探针架构主要涉及两种策略和两种头类型：
 
-![图1: 探针架构概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464333-0.png)
+![图1: 探针架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464333-0.png)
 
 *   A. 最后一层探针 (Last-layer probing)：预训练编码器的所有参数（frozen）保持不变，仅在最后一层输出（`hL`）之上添加一个可训练的探针头 `gϕ` 进行分类。这是传统做法。
 *   B. 多层探针 (All-layer probing)：这是本文的核心改进。它从编码器的所有块（Block）中提取隐藏表示 `hl`。由于不同块（尤其是CNN和Transformer之间）输出的维度（`d1, d2, d3`）可能不同，需要先通过适配器 (Adapter) `Aψl` 将它们投影到统一的格式 `(Tmax, Fmax)`。
@@ -88,7 +88,7 @@ hiddenInHomeList: true
 
 论文在两个基准上，对多种基座模型和六种“探针配置（层策略）+ 探针头类型”组合进行了评估。主要结果汇总见图2。
 
-![图2: 各模型在不同探针设置下的性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464333-1.png)
+![图2: 各模型在不同探针设置下的性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464333-1.png)
 图2说明：该图展示了基座模型在BEANs分类（Top-1准确率）、BEANs检测（mAP）和BirdSet（mAP）三个评估指标下，六种探针组合的性能。关键结论是：对于几乎所有模型，使用所有层（“All”）的性能优于仅使用最后一层（“Last”），且注意力探针（Attention）通常优于线性探针（Linear），这一优势在SSL模型上尤为明显。
 
 关键定量发现（基于图2描述）：
@@ -101,7 +101,7 @@ hiddenInHomeList: true
 3.  全微调上界：全微调（Fully FT）提供了最佳性能，尤其对于SSL模型，但参数更新代价高昂。
 
 层权重分析（图3）：
-![图3: SSL与SL模型在不同数据集上学到的层权重分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464333-2.png)
+![图3: SSL与SL模型在不同数据集上学到的层权重分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464333-2.png)
 图3说明：该图对比了SSL模型与SL模型在BEANs和BirdSet各数据集上，多层探针学习到的权重（αl）分布。结论显示：鸟类数据集上，SL模型更依赖高层（上部），SSL模型更依赖中层；在混合或哺乳类数据集上，知识分布更均匀。
 
 论文未明确提供各具体数据集-模型-探针组合的精确数值表格，但通过图2给出了直观的性能对比和趋势结论。 论文也提到其“Linear (Last)”结果略低于先前工作，主要因为训练epoch更少且采用��线生成特征的方式。

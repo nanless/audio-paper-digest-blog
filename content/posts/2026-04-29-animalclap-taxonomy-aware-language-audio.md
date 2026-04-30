@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 AnimalCLAP模型是一个标准的双塔（Dual-Encoder）对比学习框架，其核心目标是将音频和文本映射到同一向量空间，并通过对比损失对齐它们的表示。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463001-0.jpg)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463001-0.jpg)
 图1: AnimalCLAP数据集和模型示意图。(a) 展示了分类学感知的预训练：音频通过编码器得到音频嵌入，文本通过文本编码器（输入是经过增强的物种描述模板）得到文本嵌入，两者通过对比学习对齐。(b) 展示了生态特征微调：冻结音频编码器和MLP层，仅训练线性分类器来预测具体的生态特征标签。
 
 完整输入输出流程：
@@ -106,7 +106,7 @@ AnimalCLAP模型是一个标准的双塔（Dual-Encoder）对比学习框架，�
 
 *   关键结论：将分类序列“Class -> Order -> Family -> Genus -> Species”随机打乱后，所有评估提示下的Top-1准确率均下降。例如，使用“Sci”提示时，准确率从26.1% 降至 21.3%。这证明了有序的层次结构对模型学习生物知识至关重要。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463001-6.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463001-6.png)
 图3: 分类学准确率分析（当物种预测错误时）。纵轴是更高分类阶元（属、科、目、纲）预测正确的比例。有序训练（Ordered Taxonomy）在所有阶元上都显著优于随机训练（Random Taxonomy），表明有序训练使模型的错误在生物分类上更具“一致性”。
 
 主要实验3：生态特征预测（表5）
@@ -125,7 +125,7 @@ AnimalCLAP模型是一个标准的双塔（Dual-Encoder）对比学习框架，�
 *   关键结论：AnimalCLAP在所有生态特征上全面超越CLAP。在行为特征上提升极大，例如“活动模式”（83.7% vs 28.4%），“迁徙”（84.8% vs 49.9%）。在环境特征（如“森林”、“热带”）上也有稳定提升，但幅度相对较小，论文解释这些类别生态多样性高，声学特征更复杂。
 
 可视化分析（图2）
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463001-1.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463001-1.png)
 图2: t-SNE可视化。上排为动物纲级别，下排为目的级别。AnimalCLAP生成的音频嵌入（左列）相比CLAP（右列），在纲和目的层级上都形成了更清晰、与生物分类更吻合的簇，直观证明了其学到的表示空间具有更好的层次结构。
 
 ### ⚖️ 评分理由

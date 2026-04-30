@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 HyFlowSE是一个端到端的语音增强框架，其整体架构如图1所示。
 
-![图1: HyFlowSE框架示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464634-0.png)
+![图1: HyFlowSE框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464634-0.png)
 
 完整输入输出流程：
 - 输入：带噪语音波形 `y`。

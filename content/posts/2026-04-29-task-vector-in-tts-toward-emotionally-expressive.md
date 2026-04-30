@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 本文提出的方法（HE-Vector）是一个两阶段的框架，旨在增强预训练TTS模型（F5-TTS）以实现可控的表达性语音合成。整体架构如图1所示。
 
-![图1: Hierarchical Expressive Vector: (a) Construction of the E-Vector and enhancement of F5-TTS, (b) Fully merging strategy for dialect and emotion E-Vectors, (c) Hierarchically merging strategy for dialect and emotion E-Vectors](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462894-0.png)
+![图1: Hierarchical Expressive Vector: (a) Construction of the E-Vector and enhancement of F5-TTS, (b) Fully merging strategy for dialect and emotion E-Vectors, (c) Hierarchically merging strategy for dialect and emotion E-Vectors](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462894-0.png)
 
 - 第一阶段：构建表达向量（E-Vector）
     - 输入：预训练的F5-TTS模型参数θpre，以及针对单一风格（如某一种方言或某一种情感）的少量标注语音数据。

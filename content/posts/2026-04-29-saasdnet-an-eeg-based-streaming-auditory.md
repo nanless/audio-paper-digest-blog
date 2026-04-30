@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 SAASDNet是一个为流式EEG听觉注意力切换解码设计的端到端网络，整体架构如图1所示。其核心流程如下：
 
-![SAASDNet 架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463832-0.png)
+![SAASDNet 架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463832-0.png)
 
 1.  输入：在每个决策窗口t，输入是多频带EEG数据 `E_t ∈ R^{N×C×T}`（N个子频带，C个通道，T个时间步）和两个语音流 `S_t^{(1)}`, `S_t^{(2)}` 的语音特征。
 2.  EEG编码器 (MMAEnc)：

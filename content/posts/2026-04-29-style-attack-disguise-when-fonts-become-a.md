@@ -109,7 +109,7 @@ SAD是一个攻击框架，而非一个传统的生成式模型。其整体流�
 | SADlight | 44.48 | 0.967 | 3.97 | 42.13 | 0.967 | 3.96 | 41.20 | 0.960 | 2.47 | 57.95 | 0.975 | 2.81 |
 | SADstrong | 87.10 | 0.805 | 1 | 76.61 | 0.803 | 1 | 67.75 | 0.796 | 1 | 82.55 | 0.801 | 1 |
 
-![表1对应图示](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463036-5.jpg)
+![表1对应图示](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463036-5.jpg)
 图3显示了SAD与部分基线在三个LLM上的攻击成功率（ASR）和语义相似度（Sim）。在SST5数据集上，SADlight在所有LLM上均取得了最高的ASR（约88%-99%）和接近1的Sim；SADstrong的ASR也极高，但Sim有所下降。在Emotion数据集上趋势类似，但基线方法如HQA-Attack、LimeAttack表现更弱，SAD的优势更为明显。
 
 表2. 机器翻译任务攻击性能 (OPUS-MT)

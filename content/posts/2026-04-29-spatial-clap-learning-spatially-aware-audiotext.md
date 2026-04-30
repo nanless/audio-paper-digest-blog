@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 Spatial-CLAP的整体架构是一个双塔模型，由音频编码器和文本编码器组成，最终输出对齐的嵌入向量。
 
-![图1: 空间编码器比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460767-0.png)
+![图1: 空间编码器比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460767-0.png)
 图1展示了传统方法与本文方法在音频编码器设计上的核心区别。(a)传统方法将内容编码器和空间编码器独立输出，导致多声源下的排列问题；(b) Spatial-CLAP的内容感知空间编码器（CA-SE）使空间编码与内容信息耦合。
 
 音频编码器：
@@ -107,7 +107,7 @@ Spatial-CLAP的整体架构是一个双塔模型，由音频编码器和文本�
 - 结论：Ours在所有常规指标（BLEU， CIDEr等）和空间指标（DW-SBERT， Spatial desc.）上均达到最佳。特别是在空间描述正确率（Spatial desc.）上，Ours达到79.42%，比Conventional（69.55%）和Monaural（17.70%）有显著提升。这证明其学习的嵌入能有效支撑需要空间感知的生成任务。
 
 3. 嵌入可视化 (图3)
-![图3: 嵌入t-SNE可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460767-1.png)
+![图3: 嵌入t-SNE可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460767-1.png)
 图3展示了在单声源条件下，原始文本编码器（RoBERTa）与本文模型（Ours）生成的音频和文本嵌入的t-SNE可视化。
 - 结论：RoBERTa的嵌入在空间类别上混合、无序；而Ours的嵌入形成了按空间类别清晰分离的聚类，表明对比学习过程成功地在音频-文本共享空间中凸显并组织了空间信息。
 

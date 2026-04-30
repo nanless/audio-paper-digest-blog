@@ -70,10 +70,10 @@ hiddenInHomeList: true
     *   解码：使用预训练的BigVGAN声码器将梅尔频谱图转换为原始波形。
 
 架构图：
-![图2: 风格可控数据增强模型框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462934-1.png)
+![图2: 风格可控数据增强模型框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462934-1.png)
 该图清晰地展示了两阶段结构。第一阶段（上方）从文本和风格嵌入生成内容风格标记；第二阶段（下方）以这些标记和说话人嵌入为条件，通过流匹配解码器生成梅尔频谱图。
 
-![图3: 整体说话人日志流程示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462934-2.png)
+![图3: 整体说话人日志流程示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462934-2.png)
 该图展示了完整的三阶段流程：初始聚类（a）-> 风格增强（b）-> 混合嵌入重聚类（c），直观体现了增强模型如何嵌入到整个系统中。
 
 ### 💡 核心创新点

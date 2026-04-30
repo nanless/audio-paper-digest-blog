@@ -55,7 +55,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文的核心贡献并非提出一个新的神经网络模型，而是提出一个数据收集与评估系统。其系统架构如下图所示：
-![图1: pdf-image-page1-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461707-0.png)
+![图1: pdf-image-page1-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461707-0.png)
 系统工作流程详解：
 1.  核心设置：采用Wizard-of-Oz方法。人类医生作为“遥操作者”，在独立房间通过耳机和笔记本电脑（接收患者视频与转录文本）与Pepper机器人交互。
 2.  人机交互流程：
@@ -98,10 +98,10 @@ hiddenInHomeList: true
 2.  噪声鲁棒性：引入ASR噪声后，Claude Sonnet 4的性能甚至略有提升（平衡准确率从0.7119到0.7473），而DeepSeek V3性能显著下降（从0.6271到0.5598），表明不同模型对噪声的敏感度不同。
 3.  校准问题：这是论文最重要的发现之一。下图展示了模型预测概率的分布。
     - 图2：高斯分布图
-        ![图2: pdf-image-page4-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461707-1.png)
+        ![图2: pdf-image-page4-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461707-1.png)
         说明：直线代表正确预测的置信度分布，虚线代表错误预测的置信度分布。理想模型应使直线靠右（高置信），虚线靠左（低置信）。但图中所有模型的两曲线高度重叠，计算出的重叠系数（OVL）均超过0.7，表明模型无论对错都给出相似的高概率。
     - 图3：可靠性图
-        ![图3: pdf-image-page4-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461707-2.png)
+        ![图3: pdf-image-page4-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461707-2.png)
         说明：理想模型的点应落在对角线上（预测概率=实际频率）。图中点明显偏离对角线，尤其是在高概率区域，模型实际正确率远低于其预测概率，证实了过度自信。
 4.  统计显著性：作者使用符号检验、Wilcoxon符号秩检验和T检验，确认了Claude Sonnet 4与DeepSeek V3的性能差异显著（p < .05）。
 

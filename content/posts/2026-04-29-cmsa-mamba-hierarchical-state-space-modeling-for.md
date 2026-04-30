@@ -48,7 +48,7 @@ hiddenInHomeList: true
 4.  层次化处理：MSSS块采用层级设计，随着网络加深，特征维度逐步增加（96 → 192 → 384 → 768），同时空间尺寸通过步长为2的卷积进行下采样，从而构建从细节到全局的层次化特征表示。
 5.  分类：经过多层MSSS块后，最终得到的特征序列通过聚合（如平均池化）后送入分类器，得到抑郁检测的预测结果。在推理时，会对同一个原始语音生成的多个增强频谱图的预测结果进行平均，以获得最终的被试水平抑郁评分。
 
-![图1：CMSA-MAMBA架构示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460844-0.png)
+![图1：CMSA-MAMBA架构示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460844-0.png)
 图1展示了整体方法流程： 原始语音 → Log-Mel频谱图 → SpecAugment数据增强 → 输入CMSA-Mamba网络。网络内部由多个CMSSS块堆叠，每个块包含CMSVSS块（集成了CoPE和SE）和ConvFFN块。
 
 #
@@ -122,7 +122,7 @@ hiddenInHomeList: true
 3.  性能平衡：相较于一些基线（如GRU、DepAudioNet）召回率高但精确率低，或（如Al Hanai et al.）精确率高但召回率低的情况，CMSA-MAMBA提供了更平衡的性能。
 4.  可视化证据：图3提供了注意力图和Grad-CAM热图，直观显示了模型对抑郁语音中紊乱的共振峰和节奏的关注，与非抑郁语音中更清晰的音高变化形成对比，增强了结果的可解释性。
 
-![图3：注意力图与Grad-CAM可视化](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460844-2.png)
+![图3：注意力图与Grad-CAM可视化](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460844-2.png)
 图3展示了模型的可解释性分析： (a) 显示了MS2D在四个扫描方向上生成的注意力图。(b) 展示了抑郁与非抑郁案例的Log-Mel频谱图及其对应的Grad-CAM热图，高亮了模型决策所依据的关键频谱区域。
 
 #

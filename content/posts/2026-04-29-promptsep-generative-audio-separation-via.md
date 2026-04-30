@@ -35,7 +35,7 @@ PromptSep旨在解决现有语言查询音频源分离系统的两大局限：�
 
 PromptSep是一个基于潜在扩散模型的架构，整体流程如图1所示。
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460803-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460803-0.png)
 
 输入与处理流程：
 1.  音频混合信号：10秒的单声道音频，由2-5个不同类别的声音事件混合而成（SNR在-3到10 dB间随机采样）。

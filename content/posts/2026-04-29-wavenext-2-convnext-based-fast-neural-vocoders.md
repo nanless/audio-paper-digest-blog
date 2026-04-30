@@ -47,13 +47,13 @@ hiddenInHomeList: true
 
 WaveNeXt 2 的整体架构旨在成为一个兼容GAN与扩散模型的统一生成器。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461371-1.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461371-1.png)
 图2：提出的WaveNeXt生成器与子模型架构
 -   WaveNeXt生成器 (图2a)：保留了原始WaveNeXt的核心结构。输入是梅尔频谱图，输出是预测的噪声分量（而非最终波形）。其内部由一个STFT模块和n=8个ConvNeXt块组成。STFT模块将输入的梅尔频谱图转换为STFT谱（Real和Imag部分），与梅尔频谱图拼接后送入后续网络。
 -   ConvNeXt块：是架构的核心，源自图像处理领域ConvNeXt，因其在保持高性能的同时结构简单高效而被采用。在语音任务中，它作为强大的序列到序列映射模块。
 -   残差去噪子模型 (图2b)：这是实现统一框架的关键。每个子模型接收两个输入：1）梅尔频谱图（条件信息）；2）当前步的含噪波形或残差。其输出是预测的噪声或残差，用于更新波形。这个设计使得生成器可以灵活地集成到不同的训练流程中。
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461371-0.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461371-0.png)
 图1：GAN-WaveNeXt 2 (a) 与 Diff-WaveNeXt 2 (b) 的训练方案
 -   数据流与交互：
     -   GAN-WaveNeXt 2：采用类似WaveFit的固定点迭代训练。对于t个迭代步，生成器（子模型）依次接收梅尔谱图和上一步的波形`yt`，预测并更新为`yt-1`，最终得到`y0`。损失由判别器提供的对抗损失和STFT损失共同监督。
@@ -110,7 +110,7 @@ WaveNeXt 2 的整体架构旨在成为一个兼容GAN与扩散模型的统一生
 | FastDiff w/ sub-modeling | 0.0282 | 0.80 | 3.67 ± 0.20 | 3.78 ± 0.06 | 4.32 ± 0.69 | 0.24 ± 0.33 | 62.52M |
 | Diff-WaveNeXt 2 | 0.0164 | 0.16 | 3.81 ± 0.19 | 3.87 ± 0.05 | 4.16 ± 0. 88 | 0. 12 ± 0. 01 | 57.68M |
 
-![描述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461371-3.png)
+![描述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461371-3.png)
 图4：MOS主观评价结果
 该图（图4）显示了主观MOS评分。GAN-WaveNeXt 2（4次迭代）的MOS分数与WaveFit（5次迭代）和HiFi-GAN非常接近，且置信区间重叠，表明主观质量相当。
 

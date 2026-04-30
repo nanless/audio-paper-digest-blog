@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 论文提出的Judge-Editor智能体（JEA）并非一个全新的神经网络架构，而是一个利用现有大语言模型（LLM）执行特定角色和任务的智能体工作流。其核心是将ASR的后处理纠错过程建模为一个序列到序列的转换任务。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463344-0.jpg)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463344-0.jpg)
 图1：Judge–Editor智能体（JEA）工作流程图。给定ASR的多假设输入，JEA首先在片段级别判断不确定性和跨假设一致性，然后对这些片段进行编辑和融合，最终生成一个保留原始意图的转录文本。
 
 -   完整输入输出流程：

@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 HergNet的整体架构如图1所示，其设计核心是将数学表示（Herglotz波函数）直接转化为神经网络结构。
 
-![图1: HergNet架构示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461335-0.png)
+![图1: HergNet架构示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461335-0.png)
 
 完整输入输出流程：
 - 输入：目标空间点的坐标`x`（以及给定的波数`k`、声速`c`等物理参数）。
@@ -126,8 +126,8 @@ HergNet的整体架构如图1所示，其设计核心是将数学表示（Herglo
 - 相位：解包裹后的相位在全频段与解析解完美匹配。
 - 脉冲响应：通过IFFT得到的预测脉冲响应与解析解吻合良好，相对误差大部分低于10%。
 
-![图2: 6000 Hz声场预测与误差](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461335-1.png)
-![图3: 全频段传递函数与脉冲响应](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461335-2.png)
+![图2: 6000 Hz声场预测与误差](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461335-1.png)
+![图3: 全频段传递函数与脉冲响应](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461335-2.png)
 
 与最强基线的差距：
 论文未直接与FEM、BEM等传统数值方法或最新神经网络基线进行速度、精度的定量对比。文中定性指出，FEM在6 PPW下需超过3百万单元，成本远高于HergNet；经典PINNs在类似问题上训练时间更长（数分钟至数小时）且难以收敛。

@@ -60,7 +60,7 @@ Pianoroll-Event本身不是一个神经网络模型，而是一个符号音乐�
 - 互补的事件类型：帧事件提供时间锚点，模式事件捕获局部和弦/旋律片段，间隙事件处理稀疏性，音乐结构事件提供全局乐理上下文。这种分工确保了编码既紧凑又信息丰富。
 
 架构图：
-![Pianoroll-Event转换过程示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462490-0.png)
+![Pianoroll-Event转换过程示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462490-0.png)
 图中清晰展示了从钢琴卷帘输入，经过帧分割、块划分，再通过四种事件类型进行编码，最终生成紧凑事件序列的全过程。
 
 ### 💡 核心创新点

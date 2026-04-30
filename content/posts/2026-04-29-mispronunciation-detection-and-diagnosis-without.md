@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462649-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462649-0.png)
 该模型（PER-MDD）的整体架构是一个两阶段的检索流水线：
 1.  音素嵌入池构建阶段（离线）：
     *   输入：带音素级时间对齐标注的训练语音数据集。
@@ -119,7 +119,7 @@ hiddenInHomeList: true
 *   池化策略：中间帧策略（Mid）在F1和FRR上均优于平均帧（Mean）和全帧（All）策略，且池体积更小。
 
 图1：模型流程示意图（已在上方模型架构部分引用）
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462649-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462649-0.png)
 此图清晰地展示了PER-MDD的两阶段流程：左侧为离线构建音素嵌入池（使用HuBERT和带对齐的训练数据），右侧为在线检索预测过程（对测试音频提帧、检索、投票、后处理、对齐诊断）。
 
 #

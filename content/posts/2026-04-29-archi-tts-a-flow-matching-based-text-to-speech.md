@@ -52,10 +52,10 @@ hiddenInHomeList: true
 | DiTAR | - | - | 1.02 | 0.75 | - | SeedTTS test-zh |
 | ARCHI-TTS | - | - | 1.42 | 0.70 | - | SeedTTS test-zh |
 
-![架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463968-0.png)
+![架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463968-0.png)
 (图1：ARCHI-TTS整体架构概览图，展示了语义对齐器、条件编码器、速度解码器及数据流。)
 
-![推理效率图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463968-1.png)
+![推理效率图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463968-1.png)
 (图2：WER和SSIM（左）、RTF（右）随条件编码器输出共享比例的变化曲线。)
 
 5.  实际意义：本文提供了一个高效、高质量的非自回归TTS新方案。其“低令牌率”表征和“训练无关的推理加速”策略，对于降低TTS系统的部署成本（计算、延迟）具有直接的工程价值，推动了非自回归模型在实际应用中的可行性。
@@ -211,7 +211,7 @@ ARCHI-TTS是一个完全非自回归的语音合成模型，旨在根据输入�
 2.  语义向量量化（VQ）：对语义特征进行VQ能略微提升SSIM（0.71），但WER略有上升。将码本大小加倍后，WER恢复到与原始模型相当的水平（2.15% vs 2.16%），说明VQ正则化是有益的。
 
 推理加速效果
-![推理加速效果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463968-1.png)
+![推理加速效果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463968-1.png)
 (图2：WER（实线，左轴）、SSIM（虚线，左轴）和RTF（右轴）随条件编码器输出共享比例的变化。) 
 关键结论：随着共享比例增加，RTF显著下降（推理速度大幅提升），WER和SSIM仅有轻微、缓慢的下降。在NFE=32、共享比例75%时，WER仍保持在1.98%，SSIM为0.70，RTF降至0.09，证明了该策略的有效性和鲁棒性。
 

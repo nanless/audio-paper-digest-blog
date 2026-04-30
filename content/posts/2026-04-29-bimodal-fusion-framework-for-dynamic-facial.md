@@ -33,7 +33,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: BFF-DFER整体架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465074-0.jpg)
+![图1: BFF-DFER整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465074-0.jpg)
 BFF-DFER的整体架构如图1(a)所示，是一个端到端的双模态融合框架。
 1.  输入：接收视频（M帧RGB图像）和音频（梅尔频谱图）作为输入。
 2.  骨干网络：使用两个独立的预训练Transformer编码器（L=12层），分别处理视频和音频。论文引用的骨干模型是MAE-Face和MAE-AST。
@@ -108,10 +108,10 @@ BFF-DFER的整体架构如图1(a)所示，是一个端到端的双模态融合�
 | ✓ | ✓ | ✓ | 67.52 | 78.28 | 44.46 | 58.41 |
 结论：每个模块都带来性能增益，三者结合达到最优。MSA贡献最大，BFA和CMTM分别在跨模态融合和时序建模上提供补充提升。
 
-![图2: 单模态与双模态性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465074-5.png)
+![图2: 单模态与双模态性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465074-5.png)
 图2显示了在DFEW和MAFW数据集上，仅使用音频、仅使用视频以及音视频融合（本框架）的性能对比。音视频融合（红色柱）在所有指标上均优于单模态，证实了模态互补性。
 
-![图3: t-SNE可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465074-6.png)
+![图3: t-SNE可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465074-6.png)
 图3展示了BFF-DFER与基线模型在DFEW和MAFW测试集首折（fd1）上的特征t-SNE可视化。BFF-DFER（上）的特征聚类更紧凑、类间分离度更高，其类间/类内距离比（Dist. Ratio）显著高于基线（下），直观证明了其学习到更具判别性的特征表示。
 
 ### ⚖️ 评分理由

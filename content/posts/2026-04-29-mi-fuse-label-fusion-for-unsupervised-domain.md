@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 MI-Fuse的架构核心是双教师-单学生框架，旨在生成更可靠的伪标签用于无监督域适应（图1）。
 
-![图1: SFUDA设置与MI-Fuse方法概述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464525-0.png)
+![图1: SFUDA设置与MI-Fuse方法概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464525-0.png)
 
 - 输入与整体流程：
     1.  输入：未标记的目标域音频数据 `x_t`。
@@ -131,7 +131,7 @@ MI-Fuse的架构核心是双教师-单学生框架，旨在生成更可靠的伪
     3.  加权方式：基于互信息（MI）的加权优于基于熵（Entropy）的加权和等权重（Equal），验证了使用认识不确定性进行加权的有效性。
 
 - 训练稳定性分析（图2）：
-    ![图2: IMP→IEM迁移中开发集准确率随训练步数变化曲线](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464525-1.png)
+    ![图2: IMP→IEM迁移中开发集准确率随训练步数变化曲线](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464525-1.png)
     结论：MI-Fuse（红线）的训练曲线持续稳定上升，而分类器教师（紫线）在约400步后因过拟合早期伪标签而下降，LALM教师（蓝线）性能最差且起步即大幅下跌。这直观证明了MI-Fuse通过融合与稳定训练机制，有效平衡了两个教师的信息并抑制了噪声。
 
 ### ⚖️ 评分理由

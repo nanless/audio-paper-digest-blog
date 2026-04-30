@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 整体架构如图1所示，是一个双分支、共享嵌入空间的多模态模型。
 
-![图1: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465053-0.png)
+![图1: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465053-0.png)
 
 完整流程与组件：
 1.  输入：一个视频片段 `i`，包含人脸图像和语音音频。

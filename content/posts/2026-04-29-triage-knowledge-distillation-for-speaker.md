@@ -49,7 +49,7 @@ hiddenInHomeList: true
 3.  数据流：`教师logit → Softmax → 基于τ(k)的三质量划分 → 计算L_TMKD和L_CFKD → 加权求和得到LTRKD → 与标准分类损失L_AAM相加作为总损失`。该框架不改变教师/学生的内部结构，仅修改训练目标。
 
 由于论文提供的图片中没有明确的TRKD架构示意图，但图1（pdf-image-page2-idx0）清晰对比了KD、DKD与TRKD的损失函数结构，可以说明TRKD的工作原理。
-![图1对比KD、DKD与TRKD](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461888-0.png)
+![图1对比KD、DKD与TRKD](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461888-0.png)
 图1 (c)展示了TRKD如何将教师后验概率划分为三部分（y, F, B），并仅传输与y和F相关的监督信号。
 
 ### 💡 核心创新点
@@ -113,7 +113,7 @@ hiddenInHomeList: true
 结论：消融实验证实，直接替换损失项而不使用τ课程调度会导致训练不稳定（ID#2）。τ课程调度对于稳定训练至关重要（ID#3）。同时，替换背景集条件项（LNCKD）为混淆集条件项（LCFKD）带来的增益（ID#4）大于仅使用三元质量项（ID#3），而两者结合（ID#5）效果最优，证明了各组件的互补性。
 
 图2（pdf-image-page4-idx1）展示了固定教师为ReDimNet-B5时，不同学生模型规模下TRKD与最强基线（DKD/GKD中较优者）的EER对比。
-![图2 TRKD vs 最强基线在不同学生规模下的EER](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461888-1.png)
+![图2 TRKD vs 最强基线在不同学生规模下的EER](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461888-1.png)
 图2显示，TRKD（实线）在所有学生模型规模上均优于最强基线（虚线），平均相对改进约5.8%，尤其在中等规模学生（如RN18, RN34）上增益明显，甚至将大容量学生（如RN101）的性能提升至与教师持平。
 
 ### ⚖️ 评分理由

@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 本文提出的Lite-INN是一个两阶段的端到端框架，目标是从单声道音频`x`和随时间变化的声源位姿`P(t)`合成双耳音频`y`。
 
-![Lite-INN架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463675-0.png)
+![Lite-INN架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463675-0.png)
 图1：Lite-INN架构示意图。这是一个两阶段过程：第一阶段由时间域翘曲（TDW）网络进行初始合成，第二阶段由隐式双耳校正器（IBC）进行频谱细化。
 
 完整流程：
@@ -117,7 +117,7 @@ hiddenInHomeList: true
 *   性能权衡：Lite-INN在Wave-ℓ2和Amplitude-ℓ2上接近NFS，在Phase-ℓ2和IPD-ℓ2上优于NFS。虽然其Amplitude-ℓ2和IPD-ℓ2指标略逊于更强的DPATFNet，但差距不大，且以极小的模型规模实现了具有竞争力的客观性能。
 
 2. 感知评估（Fig. 2）：
-![MOS Listening Test Results](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463675-0.png)
+![MOS Listening Test Results](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463675-0.png)
 图2：MOS听感测试的小提琴图，包括(a) MOS-Q，(b) MOS-S，和(c) MOS-Sim。统计显著性通过成对Wilcoxon符号秩检验确定（表示p < 0.05, *表示p < 0.001）。
 
 关键结论：
@@ -140,7 +140,7 @@ hiddenInHomeList: true
 *   时间编码影响较小：移除时间位置编码（w/o TimePE）对性能影响微弱。论文解释这是因为时间建模任务已主要由TDW阶段承担，IBC可以专注于频谱校正。
 
 4. 可解释性分析（Fig. 3）：
-![Interpretability Analysis](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463675-0.png)
+![Interpretability Analysis](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463675-0.png)
 图3：IBC预测的幅度校正（∆logA）和相位校正（∆φ）随声源位置变化的可视化（对主导强度通道的频率取平均）。(a) 纵向运动（沿y轴），(b) 横向运动（沿x轴）。
 
 关键结论：

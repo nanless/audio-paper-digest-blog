@@ -34,7 +34,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 论文提出的模型架构（如图1所示）主要包含两个模块：表示提取模块和混合专家（MoE）模块。
-![架构概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460912-0.png)
+![架构概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460912-0.png)
 *   表示提取模块：输入为音频信号，首先使用预训练的“wav2vec2-L-robust-12”模型的前12层Transformer（冻结CNN层，可调Transformer层）提取帧级特征序列 X = [x₁, x₂, ..., xₜ] ∈ ℝ^{D×T}。随后，一个注意力池化（AP）层将变长的帧级表示聚合为固定长度的话语级表示向量 r ∈ ℝ^{D×1}。其注意力权重计算公式为 αₜ = exp(w^T tanh(Wxₜ)) / Σₜ exp(w^T tanh(Wxₜ))，其中 W 和 w 是可学习参数。聚合后得到 r = Σₜ αₜxₜ。最后，通过一个包含线性层、批归一化、ReLU和dropout的多层感知机（MLP1）将 r 映射为最终表示 m = MLP₁(r) ∈ ℝ^{D×1}。
 *   门控机制：表示 m 被输入到一个门控网络中，通过线性变换和softmax函数生成N维权重向量 β = softmax(W_g^T m + b_g) ∈ ℝ^{N×1}，其中 N 是专家数量。该向量 β 决定了每个专家网络的输出在最终预测中的贡献比例。
 *   混合专家（MoE）模块：该模块包含 N 个独立的专家网络，每个专家 i 包含一个由 L 个“线性层-批归一化-ReLU-dropout”块组成的MLP2^(i)(·)，以及一个输出K维向量的全连接层（K为情感类别总数）。每个专家 i 处理输入 m 后生成一个情感向量 eᵢ ∈ ℝ^{K×1}。所有专家的输出组成矩阵 E = [e₁, e₂, ..., e_N] ∈ ℝ^{K×N}。
@@ -104,7 +104,7 @@ hiddenInHomeList: true
 3.  专家网络层数L的影响（表4）：专家MLP的深度（L）对性能有影响，最佳值可能因数据集而异（MSP-IMPROV上L=3略优，IEMOCAP上L=1或2略优）。
 
 图表分析：
-![Top-k UAR性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460912-1.png)
+![Top-k UAR性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460912-1.png)
 图2 展示了所提方法与最强基线在不同k值下的“Top-k UAR”（取最佳召回率的k个类别的平均召回率）。图中显示，所提方法在不同的k值下（从k=1到k=9）均保持稳定且优于基线的性能，这表明该方法在不同数量的情感类别上都能取得较好的识别效果，性能更稳定。
 
 ### ⚖️ 评分理由

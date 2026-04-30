@@ -53,11 +53,11 @@ hiddenInHomeList: true
 | 仅Condenser麦微调 | Pathumma-whisper-th-large-v3 | Condenser | 20.77 | 79.54 | 50.12 |
 | Condenser麦微调+混响增强 | Pathumma-whisper-th-large-v3 | Condenser+Reverb | 20.17 | 65.39 | 45.86 |
 
-![图1: pdf-image-page1-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463048-0.png)
-![图2: pdf-image-page1-idx1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463048-1.png)
+![图1: pdf-image-page1-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
+![图2: pdf-image-page1-idx1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
 图1展示了LOTUSDIS的房间布局与麦克风位置，以及各类型麦克风的频谱图对比，清晰体现了信号质量随距离和设备类型的变化。
 
-![图3: pdf-image-page1-idx2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463048-2.png)
+![图3: pdf-image-page1-idx2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463048-2.png)
 图2展示了不同麦克风条件下，单人发言与重叠语音的WER分布，表明重叠语音在所有麦克风（尤其是远场）上均导致性能显著下降，且误差分布更广。
 
 5. 实际意义是什么：为泰语远场对话ASR研究提供了急需的、标准化的、可公开获取的基准数据集，将直接推动相关算法（如鲁棒声学模型、重叠语音处理、单通道远场增强）的研发与公平比较。其设计理念也为其他低资源语言构建类似资源提供了参考。

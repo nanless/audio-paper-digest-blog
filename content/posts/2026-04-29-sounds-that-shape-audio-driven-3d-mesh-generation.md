@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 本文提出的“Sounds That Shape”系统是一个基于分数蒸馏采样的迭代优化框架，旨在从音频和可选文本提示生成显式的3D高斯表示，并最终提取网格。其整体架构如图2所示。
 
-![Sounds That Shape系统概览](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464799-1.jpg)
+![Sounds That Shape系统概览](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464799-1.jpg)
 
 核心流程与组件：
 1.  输入与编码：
@@ -104,11 +104,11 @@ hiddenInHomeList: true
 结论：本文方法（Ours）在所有三个指标上均取得最佳结果，表明其生成的3D物体在音频语义对齐、多视角一致性和文本语义对齐方面均优于基线。与最强基线“Baseline”（即单独使用音频条件SDS）相比，CLAP360提升了约24.6%，CLIP360提升了约6.5%，CLIPi-v降低了约23.1%。
 
 定性对比（图3）：
-![定性比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464799-2.jpg)
+![定性比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464799-2.jpg)
 说明：图3展示了四组定性比较。对于“椅子”配不同音频（火焰爆裂、森林、水下冒泡），基线方法（S-AI3D， S-AT3D， Baseline）要么生成失败，要么形状与文本提示不符，要么纹理与音频语义不匹配。而本文方法（Ours）能稳定生成形状符合“椅子”文本、纹理/氛围（如火焰的橙红色、森林的绿色、水下的蓝色气泡）反映对应音频语义的3D物体。
 
 消融实验（图4）：
-![消融实验](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464799-3.jpg)
+![消融实验](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464799-3.jpg)
 说明：图4展示了消融研究，文本提示为“a chair”，音频为“fire cracking”。
 - `w/o ADG`：去除属性解耦，直接用音频条件SDS更新所有参数，导致纹理混乱，形状结构不清晰。
 - `w/o ℒ_SDS-T`：去除文本条件SDS，仅用音频更新纹理，几何由随机初始化发展而来，导致形状完全错误（一个球体）。

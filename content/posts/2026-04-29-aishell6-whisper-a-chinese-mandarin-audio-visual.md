@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 关键设计动机：投影层通过残差连接确保了训练初期模型行为的稳定性（初始化为恒等映射），并专注于学习耳语与普通语音嵌入之间的差异补偿。并行训练则显式地利用了两种语音数据的对应关系，避免了模型在耳语这种单一模态上训练时可能发生的过拟合或特征漂移。
 
-![图2：本文提出的基线模型架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462272-1.png)
+![图2：本文提出的基线模型架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462272-1.png)
 图2：模型架构图。第一阶段（上）展示了并行训练与投影层的作用；第二阶段（下）展示了通过门控交叉注意力集成AV-HuBERT视觉特征的音视频训练过程。
 
 ### 💡 核心创新点
@@ -115,7 +115,7 @@ hiddenInHomeList: true
 2. 在wTIMIT测试集上的性能（表4）
 论文对wTIMIT进行了重划分。使用在AISHELL6-Whisper上预训练的模型进行微调后，结果显著优于直接微调基线。
 
-![图3：wTIMIT测试集上的性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462272-2.png)
+![图3：wTIMIT测试集上的性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462272-2.png)
 图3：展示了在wTIMIT测试集上，使用预训练模型（Pre-trained）和提出策略（Proposed Strategies）后，WER和CER的显著下降，尤其是在较难的SG口音上。
 
 | Model | Pre-trained | Proposed Strategies | WER (%) N-US | WER (%) N-SG | WER (%) W-US | WER (%) W-SG | CER (%) N-US | CER (%) N-SG | CER (%) W-US | CER (%) W-SG |

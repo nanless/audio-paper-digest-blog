@@ -39,7 +39,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: In-Sync系统架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462062-0.png)
+![图1: In-Sync系统架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462062-0.png)
 In-Sync的整体架构如图1(a)所示，基于Gransite-speech-8B框架，包含三个核心组件：
 1.  预训练音频编码器：一个10层的Conformer模型，用于从原始音频波形中提取高维声学特征。该编码器在训练中被冻结。
 2.  任务感知投影器：一个多层感知机（MLP），作为适配器连接音频编码器和LLM。其关键设计在于是“任务感知”的：在输入端拼接一个任务指示token（`<1>`代表ASR，`<2>`代表SRWT），使得投影器能为同一段语音生成不同的表征，以适配不同任务。

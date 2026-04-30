@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![GECP整体架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462004-0.png)
+![GECP整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462004-0.png)
 图1展示了GECP的总体架构，其处理流程如下：
 1.  模态编码（Modality Encoding）：将每个话语的文本、音频、视觉三种模态数据分别编码。文本使用双向GRU，音频和视觉使用单层MLP。之后，为每个说话者学习一个嵌入向量，并将其加到各模态特征中，得到具有说话者和上下文感知的单模态表示。
 2.  共识感知学习模块（CAL Module）：这是框架的核心创新部分，包含两个单元：

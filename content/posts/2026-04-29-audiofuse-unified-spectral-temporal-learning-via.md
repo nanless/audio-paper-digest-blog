@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 AudioFuse是一个双分支、后期融合的混合架构，整体流程如图1所示。
 
-![图1: pdf-image-page3-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464477-0.jpg)
+![图1: pdf-image-page3-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464477-0.jpg)
 
 整体输入输出：
 - 输入：5秒长度的原始心音波形（110,250个采样点）。

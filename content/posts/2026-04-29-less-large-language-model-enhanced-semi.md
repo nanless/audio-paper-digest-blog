@@ -53,7 +53,7 @@ hiddenInHomeList: true
 5.  数据过滤：计算原始伪标签（贪心解码结果）与LLM校正后文本之间的WER（作为近似质量指标）。设定一个过滤阈值（默认为0.1），仅保留WER低于该阈值的样本，即LLM修正幅度较小、被认为质量较高的样本。
 6.  迭代训练：将过滤后高质量的“LLM校正伪标签”数据与原始有标签数据按一定比例混合，用于微调当前的SFMs，得到一个新的“学生模型”，并作为下一轮迭代的起点。该过程重复直至收敛。
 
-![LESS框架示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462195-0.png)
+![LESS框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462195-0.png)
 图1展示了以ES-to-EN AST任务为例的LESS流水线。橙色箭头表示初始微调，后续迭代包括：对YouTube原始音频进行VAD分割 -> 使用初始SFM生成英语翻译 -> LLM进行文本校正 -> 数据过滤 -> 使用混合数据微调SFM得到新模型。
 
 关键设计选择及动机：
@@ -143,7 +143,7 @@ hiddenInHomeList: true
 
 结论：直接将真实世界数据用于标准NST会轻微降低性能（BLEU下降）。而LESS方法在仅一轮迭代后，就在所有测试集（包括域内的Callhome/Fisher和域外的Common Voice）上超过了监督基线和标准NST，达到了最佳性能。
 
-图1（即架构图）也同时作为流程示意图，展示了LESS框架的执行步骤。![LESS框架示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462195-0.png)
+图1（即架构图）也同时作为流程示意图，展示了LESS框架的执行步骤。![LESS框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462195-0.png)
 
 ### ⚖️ 评分理由
 

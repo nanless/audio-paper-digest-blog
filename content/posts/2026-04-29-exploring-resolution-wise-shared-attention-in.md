@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462738-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462738-0.png)
 图1：RWSA-MambaUNet整体架构示意图。展示了从带噪语音输入到增强语音输出的完整流程。
 
 RWSA-MambaUNet的整体架构是一个编码器-解码器结构的U-Net，其主要组件和数据流如下：

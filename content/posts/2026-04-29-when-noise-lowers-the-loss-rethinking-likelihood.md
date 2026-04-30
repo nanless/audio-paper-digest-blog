@@ -110,20 +110,20 @@ hiddenInHomeList: true
 
 关键结论：随着注入噪声长度的增加，损失差 `Δℓ` 普遍变为负值（即损失降低）。此趋势在所有模型和数据集上一致，并通过Pearson/Spearman相关检验（r < -0.85, p < 0.001）得到验证。YuE模型上也复现了此现象。
 
-![图2：不同MusicGen模型在白噪声注入下的性能比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463405-1.png)
+![图2：不同MusicGen模型在白噪声注入下的性能比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463405-1.png)
 图2显示了损失差（Δℓ）随噪声注入长度变化的趋势。横轴为噪声长度（token），纵轴为损失差。三条线分别代表OOD、TrainingSet和Generated数据集。在所有子图（a-d）中，随着噪声长度增加，损失差普遍呈下降趋势，且为负值。
 
 2. 损失动态分析：三阶段效应（图3，图4）
 通过对扰动区间的逐Token损失差 `Δℓ_t` 进行可视化和自动区域检测，论文发现了三个特征区域：
-![图3：噪声注入实验的损失曲线示意](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463405-2.png)
+![图3：噪声注入实验的损失曲线示意](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463405-2.png)
 图3示意性地展示了在音乐上下文中注入噪声时，绝对损失的动态变化。横轴为时间（token），纵轴为绝对损失。可以清晰看到三个阶段：1) 噪声开始时的“Peak”（峰值）；2) 噪声持续期间的“Assimilation”（同化，损失降低）；3) 噪声结束后的“Recovery”（恢复，损失波动）。
 
-![图4：三个特征反应区域的自动化检测结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463405-3.png)
+![图4：三个特征反应区域的自动化检测结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463405-3.png)
 图4展示了通过自动化区域检测方法，在四个MusicGen模型上量化得到的三个区域（Peak， Assimilation， Recovery）的平均损失差。所有模型均显示Peak区域损失差为正（约0.5-0.8），Assimilation区域损失差为负（范围从-0.86到-3.83），Recovery区域接近零。这定量验证了三阶段行为。
 
 3. 顺序打乱实验（图5）
 作为更接近真实音乐结构破坏的扰动，顺序打乱实验也观察到了类似的模式：短段打乱导致损失峰值，长段打乱后模型适应新顺序，整体损失变化不大。
-![图5：顺序打乱扰动实验示例及结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463405-4.png)
+![图5：顺序打乱扰动实验示例及结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463405-4.png)
 图5左侧示意了将音乐片段顺序打乱的操作。右侧的图表（虽然标签被截断，但根据描述）显示了类似的损失差随打乱长度变化的趋势，与噪声注入实验结论一致。
 
 ### ⚖️ 评分理由

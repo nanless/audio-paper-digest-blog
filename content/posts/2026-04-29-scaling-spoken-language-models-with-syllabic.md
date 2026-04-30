@@ -103,10 +103,10 @@ hiddenInHomeList: true
 4.  词汇表大小影响：词汇表大小（5k-40k）对最终性能的影响相对有限，但20k在多数任务上表现均衡。
 
 实验结果图表：
-![Fig. 1. 模型在tSC任务上性能与计算量的关系](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464423-0.png)
+![Fig. 1. 模型在tSC任务上性能与计算量的关系](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464423-0.png)
 （图注：此图改编自[1]，展示了不同SLM在Topic Story-Cloze (tSC) 任务上性能随训练计算量变化的曲线。深绿色线条代表本文的Sylber模型，显示其在较低计算量下达到了具有竞争力的性能。）
 
-![Fig. 2. 模型性能随训练令牌预算的变化趋势](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464423-0.png)
+![Fig. 2. 模型性能随训练令牌预算的变化趋势](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464423-0.png)
 （图注：此图展示了Hubert和不同词汇表大小的Sylber分词器在四个评估指标（sBLIMP, sSC, tSC, GenPPL）和两种模型尺寸（Qwen2.5-0.5B, OPT-125M）下的性能随训练令牌数增加的变化趋势。清晰显示了Sylber模型在理解任务上的优势以及在生成任务上的劣势。）
 
 ### ⚖️ 评分理由

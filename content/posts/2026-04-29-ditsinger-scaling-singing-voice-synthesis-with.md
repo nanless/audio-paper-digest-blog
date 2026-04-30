@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 DiTSinger是一个基于Transformer的潜在扩散模型，整体流程是将音频的梅尔谱图编码为潜在表示，然后在该表示空间进行扩散与去噪。
 
-![DiTSinger Training Phase](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463059-1.jpg)
+![DiTSinger Training Phase](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463059-1.jpg)
 图2：DiTSinger训练阶段架构图
 
 完整输入输出流程：
@@ -150,7 +150,7 @@ DiTSinger是一个基于Transformer的潜在扩散模型，整体流程是将音
 
 2. 模型与数据扩展性实验（图3）
 
-![Scaling results of DiTSinger](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463059-2.jpg)
+![Scaling results of DiTSinger](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463059-2.jpg)
 图3：DiTSinger的扩展性结果。
 
 - 图3(a)：架构扩展提升MCD。展示了不同配置（Small/Base/Large，不同分辨率`_2/_3/_4`）在MCD上的表现。关键结论：1）在相同分辨率下，更大的模型（从S到B到L）MCD更低；2）分辨率至关重要，例如`S_2`（小模型、低分辨率）优于`B_4`（基础模型、高分辨率），表明梅尔谱的时频分辨率对合成质量影响巨大。

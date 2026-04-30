@@ -60,9 +60,9 @@ VT-Heads的整体架构是一个条件扩散模型框架，其输入为驱动文
 
 关键设计选择：采用V-DiT（Video Diffusion Transformer）而非传统的UNet，旨在更好地建模视频的长程时空依赖性。
 
-![图1：VT-Heads框架整体示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464335-0.jpg)
+![图1：VT-Heads框架整体示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464335-0.jpg)
 
-![图2：多模态融合模块结构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464335-1.jpg)
+![图2：多模态融合模块结构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464335-1.jpg)
 
 ### 💡 核心创新点
 
@@ -129,10 +129,10 @@ VT-Heads的整体架构是一个条件扩散模型框架，其输入为驱动文
 | Ours | 10.12 | 32.35 | 6.21 | 0.26 | 0.27 |
 结论：VT-Heads在FID（图像质量）、PSNR（图像保真度）、Sync（唇形同步）和BA（音频-运动对齐）上取得最佳或并列最佳结果。但在Set B上，Sync指标（6.21）略低于ACTalker（6.98），多样性（Diver）在所有方法中无差异（均为0.26）。
 
-![图3：不同骨干网络（UNet, DiT-a, V-DiT）生成质量的视觉对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464335-2.jpg)
+![图3：不同骨干网络（UNet, DiT-a, V-DiT）生成质量的视觉对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464335-2.jpg)
 结论：V-DiT在细节保留（如牙齿、胡须）上优于UNet和DiT-a。
 
-![图4：与Wav2LiP, Text2Video, SadTalker, DAWN, Styletalk, ACTalker等方法的定性对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464335-15.jpg)
+![图4：与Wav2LiP, Text2Video, SadTalker, DAWN, Styletalk, ACTalker等方法的定性对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464335-15.jpg)
 结论：论文展示了在遮挡、头部倾斜等挑战性场景下，VT-Heads在身份保持和细节生成上的优势。
 
 ### ⚖️ 评分理由

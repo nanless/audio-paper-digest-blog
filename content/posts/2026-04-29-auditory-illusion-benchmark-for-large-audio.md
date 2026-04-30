@@ -52,7 +52,7 @@ hiddenInHomeList: true
 | Qwen2-Audio | 8.4B | 0.985/0.015/0.971 | 0.015/0.111/-0.096 | 0.744/0.256/0.489 | 0.083/0.217/0.134 | 0.633/0.183/0.450 |
 | Qwen2-Audio-Instruct | 8.4B | 0.182/0.818/-0.636 | 0.314/0.222/0.092 | 0.470/0.530/-0.059 | 0.088/0.217/0.129 | -0.232/0.616/-0.848 |
 
-![图1: AIB基准示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462423-0.png)
+![图1: AIB基准示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462423-0.png)
 图1展示了AIB中三个错觉刺激（基音缺失、Zwicker音调、Tartini音调）及其对照刺激的示例，以及用于查询人类和AI模型的提示格式。这直观地说明了如何将听觉错觉感知转化为可评估的任务。
 
 #
@@ -100,7 +100,7 @@ hiddenInHomeList: true
 - 总体平均：人类ISI≈1.0。模型中，Audio Flamingo Chat的平均ISI最高（0.845），表明其整体上最容易产生人类式的感知偏差。MuLLaMa（0.279）和Qwen2-Audio（0.450）次之。Qwen-Audio-Chat和Qwen2-Audio-Instruct则表现出与物理事实的紧密对齐（负ISI）。
 - 语音类错觉（细分）：论文指出，人类在语音转歌曲和音素恢复上易感性极强。大多数模型在这两项上失败（ISI≈0）。唯一例外是Qwen2-Audio在音素恢复上达到完美人类对齐（ISI=1.0），但在语音转歌曲上依然失败。
 
-![图1: AIB基准示例](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462423-0.png)
+![图1: AIB基准示例](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462423-0.png)
 此图（即图1）也展示了评估使用的典型刺激和问题格式，是理解实验设计的关键。
 
 #

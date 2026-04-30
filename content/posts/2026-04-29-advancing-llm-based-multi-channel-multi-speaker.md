@@ -58,7 +58,7 @@ hiddenInHomeList: true
     - 优势：1）通过自注意力机制建模了所有通道间的全局依赖关系；2）由于全局令牌不依赖于具体通道数，因此支持可变数量的输入通道，无需填充；3）训练时随机丢弃部分通道（通道丢弃策略），进一步增强了模型对不同通道配置的鲁棒性。
 - 输出与解码：LLM解码器在微调阶段采用本文提出的“句子有序FIFO SOT”策略，其输出序列按照对话中句子的绝对开始时间排序，并在说话人变化时插入<sc>符号。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460599-0.jpg)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460599-0.jpg)
 图1 展示了本文提出的两阶段训练框架。Stage1为单通道数据预训练架构，Stage2为本文提出的多通道训练框架，其中包含了GCCA模块。
 
 ### 💡 核心创新点
@@ -125,10 +125,10 @@ hiddenInHomeList: true
 - Sentence-Ordered SOT：如图3所示，在重叠测试集（b）上，Sentence-Ordered SOT在所有通道配置下均优于Speaker-Ordered SOT，证明了保持时间顺序对多说话人场景的益处。
 - GCCA模块：如图4所示，GCCA在单人（a）和重叠（b）测试集上，在所有通道数（1，2，4，8）下均取得了最低的CER。它显著优于通道平均、通道拼接+注意力（CCA）等方法。例如，在8通道重叠测试集上，GCCA将CER从24.41%（平均）降至22.75%。
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460599-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460599-2.png)
 图3 比较了两种SOT方法在不同输入通道数下的CER。在单说话人测试集(a)上二者接近，在重叠测试集(b)上，句子有序SOT（橙色线）一致优于说话人有序SOT（蓝色线）。
 
-![图4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460599-3.png)
+![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460599-3.png)
 图4 比较了四种通道融合方法在不同输入通道数下��CER。GCCA（红色线）在所有情况下均取得最低的错误率，展现了优越性和泛化能力。
 
 ### ⚖️ 评分理由

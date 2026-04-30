@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 论文的核心模型GLASS采用经典的两阶段“预训练-微调”范式，其整体架构如图2所示。
 
-![GLASS架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463336-1.png)
+![GLASS架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463336-1.png)
 
 阶段一：自监督预训练（左图）
 -   输入：连续`Ti`帧（默认150帧，即5秒）的6通道（左眼XYZ、右眼XYZ）眼动时间序列数据。

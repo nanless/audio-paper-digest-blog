@@ -45,7 +45,7 @@ hiddenInHomeList: true
 - 动态适应机制：一个额外的跟踪模块（公式20）计算权重向量变化的能量方差$\chi_w(n)$。当$\chi_w(n)$发生突变（公式21）时，表明回声路径改变，此时会重置步长$\mu(n)$为1，以促进快速重新收敛。
 - 设计动机：MSF结构可以降低输入信号的高相关性。复数APA和VSS机制旨在分别处理信号的非圆性并优化收敛速度。突变检测机制旨在增强算法在动态环境下的鲁棒性。
 
-![图1: 提出的βMSF基于可变步长复数APA的系统结构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462547-0.jpg)
+![图1: 提出的βMSF基于可变步长复数APA的系统结构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462547-0.jpg)
 图1展示了系统整体结构。远端立体声信号经过处理后形成复数输入，并被分割为多个子段。每个子段由一个独立的自适应滤波器（子滤波器）处理，其输出求和后与近端信号比较得到误差。变步长控制器和路径变化检测模块共同管理所有子滤波器的更新过程。
 
 ### 💡 核心创新点
@@ -89,19 +89,19 @@ hiddenInHomeList: true
 关键结论：所提方法（Proposed）在所有SNR条件下，无论对合成信号还是真实语音，ERLE均最高。例如，在SNR=35dB真实语音测试中，其ERLE（24.3 dB）比次优的α-MSF VSS-CAPA（23.1 dB）高1.2 dB，比传统的SLF VSS-CAPA（21.7 dB）高2.6 dB。
 
 图2：合成信号下的归一化均方偏差（NMSD）比较
-![图2: (a) SNR=5 dB 和 (b) SNR=35 dB 下的NMSD比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462547-1.jpg)
+![图2: (a) SNR=5 dB 和 (b) SNR=35 dB 下的NMSD比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462547-1.jpg)
 图2显示了不同算法在两种SNR下的收敛曲线。所提方法（Proposed）在两种情况下都达到了更低的稳态NMSD（即更低的失配），验证了其在理想条件下的优越性。
 
 图3：真实语音信号的频谱图
-![图3: (a) 原始回声语音频谱；(b) SLF VSS-CAPA恢复信号；(c) αMSF VSS-CAPA恢复信号；(d) βMSF VSS-CAPA恢复信号](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462547-2.jpg)
+![图3: (a) 原始回声语音频谱；(b) SLF VSS-CAPA恢复信号；(c) αMSF VSS-CAPA恢复信号；(d) βMSF VSS-CAPA恢复信号](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462547-2.jpg)
 图3对比了不同算法处理后语音的频谱。图(d)（所提方法）相比(b)和(c)，能更清晰地恢复出语音的频谱结构，残留的回声“阴影”更少，直观证明了其更好的回声抑制效果。
 
 图4：真实语音下的ERLE曲线
-![图4: (a) SNR = 5 dB 和 (b) SNR = 35 dB 下的ERLE性能比较](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462547-3.jpg)
+![图4: (a) SNR = 5 dB 和 (b) SNR = 35 dB 下的ERLE性能比较](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462547-3.jpg)
 图4展示了ERLE随时间收敛的过程。所提方法（Proposed）在两个SNR下都收敛最快，且稳态ERLE最高，与表1数据一致。
 
 图5：动态路径突变下的跟踪性能
-![图5: (a) SNR = 5 dB 和 (b) SNR = 35 dB 下的跟踪性能](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462547-4.jpg)
+![图5: (a) SNR = 5 dB 和 (b) SNR = 35 dB 下的跟踪性能](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462547-4.jpg)
 图5是验证算法跟踪能力的关键实验。在n=20,000时回声路径发生突变。所提方法（Proposed）的NMSD在突变后下降速度最快，能迅速重新收敛到低失配状态，证明了其提出的步长重置机制的有效性。
 
 表2：计算复杂度比较

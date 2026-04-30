@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 4.  总体目标：最终损失函数`L = γ  Lrec + (1-γ)  Lcls`，通过端到端训练联合优化重建任务和分类任务。
 
-![图2：GRNet整体架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463932-1.jpg)
+![图2：GRNet整体架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463932-1.jpg)
 图2展示了GRNet的三个核心部分：(a)特征提取与数据模拟；(b)基于TGN和NGN的图重建模块；(c)多路径分类策略。TGN和NGN通过不同的图结构建模时间和邻居关系，其重建特征共同用于最终的多路径分类。
 
 ### 💡 核心创新点
@@ -130,13 +130,13 @@ hiddenInHomeList: true
 不同缺失率下的性能曲线（图3）：
 展示了GRNet与基线方法在MOSI数据集上随着缺失率增加，F1和MAE的变化。GRNet曲线始终位于更优位置（更高F1，更低MAE），证明其鲁棒性。
 
-![图3：MOSI数据集上不同缺失率的性能对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463932-2.jpg)
+![图3：MOSI数据集上不同缺失率的性能对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463932-2.jpg)
 图3显示，随着缺失率从0增加到0.9，GRNet（蓝线）的F1分数(a)始终保持最高，MAE(b)始终最低，表明其在不同噪声水平下均优于对比方法。
 
 重建特征可视化（图4a-b）：
 通过t-SNE可视化了在50%缺失率下，有无GRNet时重建特征与原始特征的分布。
 
-![图4a-b：特征可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463932-7.png)
+![图4a-b：特征可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463932-7.png)
 图4(a)显示，没有GRNet时，重建特征（蓝色）与原始特征（红色）分布差异较大；(b)显示，使用GRNet后，两者分布高度重叠，表明重建效果显著。
 
 计算开销分析（表3）：

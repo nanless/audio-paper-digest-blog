@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 论文提出了一个清晰的端到端流水线，主要包含两个部分：上下文感知文本生成和基于跨注意力的多模态融合架构。整体架构如图1所示。
 
-![图1: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460654-0.png)
+![图1: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460654-0.png)
 
 1. 上下文感知文本生成（Context-Aware Text Integration）：
 - 输入：干净的或带噪的语音音频。
@@ -129,9 +129,9 @@ hiddenInHomeList: true
 2.  推理字幕（Mellow）持续优于其他文本类型：在采用Proposed架构时，Mellow在绝大多数情况下平均CCC最高。例如在-10dB SNR下，Mellow平均CCC比场景描述基线高约5.5%（0.2860 vs 0.2711），比MS-CLAP基线高约9.3%（0.2860 vs 0.2617）。
 3.  低信噪比下性能优势与均衡性：在-5dB和-10dB下，Mellow在唤醒度和效价上的提升尤为明显（如-10dB唤醒度0.3523 vs 场景0.3195）。图3显示，在低SNR下，使用Mellow（橙色柱）在三个维度上比使用转录文本（蓝色柱）的预测更均衡，有效缓解了转录文本的偏差。
 
-![图2: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460654-0.png) 图2展示了不同实验配置下平均CCC分数的对比，直观呈现了CrossAttn+Mellow组合在低SNR下的优势。
+![图2: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460654-0.png) 图2展示了不同实验配置下平均CCC分数的对比，直观呈现了CrossAttn+Mellow组合在低SNR下的优势。
 
-![图3: pdf-image-page2-idx0](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460654-0.png) 图3对比了使用转录文本和Mellow推理字幕时，在不同SNR下三个情绪维度的预测分数，突显了Mellow带来的更均衡的提升。
+![图3: pdf-image-page2-idx0](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460654-0.png) 图3对比了使用转录文本和Mellow推理字幕时，在不同SNR下三个情绪维度的预测分数，突显了Mellow带来的更均衡的提升。
 
 ### ⚖️ 评分理由
 

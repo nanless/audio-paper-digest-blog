@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 这些模型的架构细节（如Transformer编码器、量化模块等）在论文中未详细说明，因为它们都是已发表模型。论文的核心是分析这些模型在处理声调信息时内部表征的特性，而非模型本身。分析流程如图所示：
 
-![SSL模型分析流程示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-0.png)
+![SSL模型分析流程示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-0.png)
 图1：展示了四种目标语言的声调分布和数据集规模，说明了研究问题的背景和数据的低资源特性。
 
 论文没有提供针对本研究的完整架构图，分析是针对上述现有模型的内部表示进行的。
@@ -74,23 +74,23 @@ hiddenInHomeList: true
 论文的核心实验结果主要通过图表展示：
 
 1. 基线时间跨度分析 (图2)
-![声学基线分析图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-1.png)
+![声学基线分析图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-1.png)
 图2：显示不同窗口长度（20-300ms）下逻辑回归分类器的宏F1分数。缅甸语和泰语在100ms左右达到峰值，而老挝语和越南语在180ms左右达到峰值，超过此范围性能下降。这确立了语言特定的声调时间跨度基线。
 
 2. 基于梯度的时间敏感性分析 (图3)
-![梯度能量热图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-2.png)
+![梯度能量热图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-2.png)
 图3：展示了XLS-R模型在为目标语言ASR微调后，各层梯度能量在时间偏移量上的归一化分布。缅甸语/泰语的梯度能量紧密集中在声调中心附近（窄范围），而老挝语/越南语的梯度能量分布更宽，这与图2的声学基线高度一致。
 
 3. 不同微调任务的层间探测性能 (图4)
-![层间探测F1分数](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-3.png)
+![层间探测F1分数](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-3.png)
 图4：展示了多种SSL模型和微调设置下，各层对声调分类的宏F1分数。关键发现：a) 性能峰值通常出现在中高层（12-24层）。b) 目标语言ASR微调（XLS-R-target）在所有语言上均获得最佳性能，显著高于基线模型。c) 跨语言ASR微调中，普通话（含声调）优于英语。d) 韵律/说话人任务微调（情绪、性别、ASV）的性能与未微调模型（vanilla）几乎无差别。
 
 4. 不同微调任务下的有效时间跨度 (图5, 6, 7)
-![XLS-R有效时间跨度分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-4.png)
+![XLS-R有效时间跨度分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-4.png)
 图5：XLS-R模型在不同微调任务下，高层（12-24）和低层（0-11）梯度有效跨度（2r_com）的箱线图。红色线为图2的声学基线。只有目标语言ASR微调的跨度与基线高度吻合。其他任务，尤其是韵律/说话人任务，导致跨度显著过长。*
-![MMS模型有效时间跨度分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-5.png)
+![MMS模型有效时间跨度分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-5.png)
 图6：MMS模型的有效时间跨度分布。同样，目标语言ASR微调实现了最佳的跨度对齐。
-![mHuBERT模型有效时间跨度分布](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463946-6.png)
+![mHuBERT模型有效时间跨度分布](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11463946-6.png)
 图7：mHuBERT-147模型的有效时间跨度分布。模式与XLS-R和MMS一致。
 
 关键数值结论：论文未以表格形式给出所有对比的精确F1数值，但通过图表和文字明确指出：目标语言ASR微调是使SSL模型声调表示质量（以探测F1和时间跨度对齐度衡量）最优的关键；普通话ASR微调次之；英语ASR微调优于未微调模型；而情绪、性别、说话人验证等任务的微调对声调表示几乎没有帮助甚至有害。

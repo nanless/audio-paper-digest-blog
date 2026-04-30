@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从音频特征直接预测节拍和节拍点的PDM。
 
-![模型架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461608-1.png)
+![模型架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461608-1.png)
 图2：KAPTURE完整模型架构图
 
 1.  输入：128维的对数梅尔频谱图，帧率20ms，采样率22,050 Hz。
@@ -74,7 +74,7 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
     - 如何起作用：直接最小化预测PDM与理想PDM之间的绝对误差。
     - 收益：简化了训练流程（无需复杂的损失函数调整）；模型输出范围天然受限（归一化PDM），但论文指出这同时也导致了预测峰值不够尖锐的缺点（见图3）。
 
-![输出对比图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461608-2.png)
+![输出对比图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461608-2.png)
 图3：BeatThis的logits输出与KAPTURE的PDM行均值对比。红点为真实节拍点。KAPTURE的输出峰值更平缓。
 
 3.  Kolmogorov-Arnold网络（KAN）在音频任务中的扩展应用：
@@ -127,7 +127,7 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
 | Beatles (23) | 0.912 | 0.934 | 0.903 | 0.882 |
 | ...（其他数据集略） | ... | ... | ... | ... |
 
-![验证集结果分布图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461608-6.png) (假设此图对应表3可视化，但论文未明确标注对应关系)
+![验证集结果分布图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461608-6.png) (假设此图对应表3可视化，但论文未明确标注对应关系)
 图（假设）：可能展示各验证集F1分数的对比。论文中未提供此图的具体描述，仅在正文提及“Table 3”。
 
 其他实验现象：

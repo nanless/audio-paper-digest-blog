@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 SPAM的整体架构（见图1）由三个主要模块组成，旨在将语音和文本提示映射到同一语义空间并计算相似度得分。
 
-![SPAM架构图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462023-0.png)
+![SPAM架构图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462023-0.png)
 图1：SPAM架构图。 该图展示了数据从输入到输出相似度分数的完整流程。
 
 1.  语音编码器：负责生成信息丰富的音频嵌入。它融合了三种信息源：
@@ -114,7 +114,7 @@ SPAM的整体架构（见图1）由三个主要模块组成，旨在将语音和
 2. 忠实性实验结果
 通过比较模型对原始提示、语义等价的正提示和语义不等价的负提示的评分来评估。
 
-![实验示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462023-1.png)
+![实验示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462023-1.png)
 图2：合理性与忠实性实验示意图。 左图展示了合理性实验中计算MOS与指标相关性的过程；右图展示了忠实性实验中生成正、负提示并检验指标反应的过程。
 
 关键指标包括：

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 论文中的架构对比图如下：
 
-![架构对比图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460608-0.png)
+![架构对比图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460608-0.png)
 
 模型整体基于预训练的语音大模型（FireRedASR-LLM）架构，该架构由音频编码器、投影层、文本嵌入层、解码器层和语言模型头组成。主要创新在于时间戳生成部分的设计。
 

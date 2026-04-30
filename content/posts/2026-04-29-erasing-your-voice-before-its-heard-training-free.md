@@ -51,7 +51,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 TruS并非一个独立训练的模型，而是一个插入到预训练TTS模型（如F5-TTS）推理过程中的干预模块。其整体工作流程如图2所示。
-![图2: TruS整体框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462017-1.jpg)
+![图2: TruS整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462017-1.jpg)
 图2展示了TruS与TTS模型协同工作的流程：
 1.  输入：目标文本 `x`，以及两个参考语音池：`R`（用于构建ID原型的保留说话人语音）和 `O`（一个opt-out说话人的参考语音）。
 2.  ID原型预计算：对于`R`中的`N`个说话人，各取一句语音，输入TTS模型，提取其各DiT块在扩散/流动各时间步`t`的FFN层输出激活 `X(ℓ,t)_Ret`，并平均得到ID原型 `P(ℓ,t)_Ret`。
@@ -138,7 +138,7 @@ TruS并非一个独立训练的模型，而是一个插入到预训练TTS模型�
 
 消融实验结果（层选择策略，表4）
 
-![图3: 不同层的余弦相似度变化示��](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462017-2.jpg)
+![图3: 不同层的余弦相似度变化示��](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11462017-2.jpg)
 图3 展示了不同层在生成过程中余弦相似度的变化，说明了动态选择的必要性。
 
 | 阈值 τ | SIM-SO ↓ | WER-SO ↓ | Spk-ZRF-SO ↑ | SIM-UO ↓ | WER-UO ↓ | Spk-ZRF-UO ↑ |

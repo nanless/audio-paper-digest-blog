@@ -58,13 +58,13 @@ BACH是一个三阶段的系统流水线：
     - 人声：使用VOCALOID软件将乐谱和歌词合成为歌声。
     - 混合：将两轨音频混合成最终歌曲。
 
-![BACH的生成流程示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463956-0.png)
+![BACH的生成流程示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463956-0.png)
 图1：展示了传统音频直接生成（即兴表演）与BACH“先作曲后演奏”方法的对比。后者生成可编辑的多轨乐谱，再分别渲染。
 
-![小节级与事件级生成的对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463956-1.jpg)
+![小节级与事件级生成的对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463956-1.jpg)
 图2：展示了事件级（左）和小节级（右）记谱方式的区别，强调小节级排列更符合音乐理论，听感更和谐。
 
-![BACH的ABC乐谱生成方法](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463956-2.jpg)
+![BACH的ABC乐谱生成方法](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463956-2.jpg)
 图3：详细展示了BACH的生成序列格式。模型基于指令、标签、歌词，结合Dual-NTP和Chain-of-Score方法，生成包含`<SOA>`, `<EOA>`标记的音频token序列。
 
 #
@@ -137,10 +137,10 @@ BACH是一个三阶段的系统流水线：
 - 音乐性A/B测试（图4）：热图显示BACH对战多数模型的胜率超过50%，尤其对比Hailuo， Tiangong， YuE-light有显著优势；对比Suno略处下风，但胜率仍在50%附近，表明具有竞争力。
 - 可控性维度分析（图5）：雷达图显示BACH在“节拍/节奏”和“人声与伴奏平衡”上表现突出，但在“风格”和“情感”上相对较弱。
 
-![人类评估音乐性热图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463956-3.jpg)
+![人类评估音乐性热图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463956-3.jpg)
 图4：A/B测试胜率热图。BACH（左侧）对阵其他模型（上方）的胜率由颜色和数字表示。红色框突出了BACH的胜率，表明其优于多数基线。
 
-![可控性与音乐质量维度雷达图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463956-4.jpg)
+![可控性与音乐质量维度雷达图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463956-4.jpg)
 图5：雷达图对比了不同模型在多个音乐质量和可控性维度上的表现。BACH（红色线）在伴奏、人声匹配、节拍/节奏等方面表现突出。
 
 效率与生成能力：

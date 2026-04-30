@@ -71,13 +71,13 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
 架构图示：
 论文图1（`pdf-image-page3-idx0`）展示了手势分词器（RVQ-VAE）的结构，图`pdf-image-page3-idx1`展示了交错的自回归骨干网络，图`pdf-image-page3-idx2`展示了条件流匹配手势解码器。
 
-![图1: 手势分词器（RVQ-VAE）](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464562-0.png)
+![图1: 手势分词器（RVQ-VAE）](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464562-0.png)
 该图详细描述了手势分词器的训练和推理过程，展示了多层残差向量量化的结构。
 
-![图2: 语音和手势自回归骨干网络](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464562-1.png)
+![图2: 语音和手势自回归骨干网络](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464562-1.png)
 该图核心展示了交错的token序列（蓝-语音，红-手势），以及文本编码器、自回归解码器和跨模态对齐的结构。
 
-![图3: 手势条件流匹配解码器](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464562-2.png)
+![图3: 手势条件流匹配解码器](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464562-2.png)
 该图展示了解码器如何从AR骨干获取条件信息，并通过一个基于Transformer的U-Net从噪声中逐步恢复手势信号。
 
 ### 💡 核心创新点
@@ -141,7 +141,7 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
 3.  消融实验：“Gelina w/o Flow”（直接用RVQ-VAE解码手势）的FGD-B急剧恶化至0.6107，证明了条件流匹配解码器的关键作用。
 4.  用户研究（图2，`pdf-image-page4-idx3`）：96名参与者评分显示，在语音自然度上，Gelina Clon.显著高于Lina-Speech（3.21 vs 2.98），与CosyVoice-2（3.70）有差距但更接近；在手势自然度和同步性上，Gelina与RAG-Gesture表现最佳且无显著差异，均显著优于EMAGE和CAMN。
 
-![图4: 用户研究MOS结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464562-3.png)
+![图4: 用户研究MOS结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11464562-3.png)
 该图展示了用户研究在语音自然度、手势自然度和音视频同步性三个方面的平均分及95%置信区间。Gelina在各项中均表现靠前。
 
 ### ⚖️ 评分理由

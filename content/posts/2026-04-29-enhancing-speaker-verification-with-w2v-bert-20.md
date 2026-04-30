@@ -48,7 +48,7 @@ hiddenInHomeList: true
     *   LoRA + Layer Adapter + MFA：在上述架构基础上，进一步对PTM中每个Conformer层自注意力模块的查询（Query）和值（Value）权重矩阵应用低秩适应（LoRA）。LoRA通过注入可训练的低秩矩阵 `A` 和 `B` 来更新原始权重 `W`，在微调时只需训练这些少量新增参数。
 3.  模型压缩：为部署需要，对上述微调后的PTM部分（不包括Layer Adapter等下游模块）进行知识蒸馏指导的结构化剪枝。采用教师-学生框架，教师模型为未剪枝的PTM，学生模型为目标剪枝模型。通过联合优化蒸馏损失（L1损失与余弦距离的加权和）和L0正则化项（通过Hard Concrete分布建模），对FFN中间维度、卷积通道数和注意力头数进行结构化稀疏化，以实现模型压缩。
 
-![图1: 模块架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11461727-0.png)
+![图1: 模块架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11461727-0.png)
 
 图1展示了整个系统的模块化架构。左侧（a）部分显示了MFA结构（或带Layer Adapter）的工作流程：w2v-BERT 2.0的多层输出经过适配（如Layer Adapter）后拼接，通过ASP和线性层得到说话人嵌入。右侧（b）部分展示了基于知识蒸馏的结构化剪枝流程：冻结的教师模型（原始w2v-BERT 2.0）指导可剪枝的学生模型，通过L0正则化和蒸馏损失联合优化，实现对模型结构（如FFN、卷积、注意力头）的稀疏化。
 

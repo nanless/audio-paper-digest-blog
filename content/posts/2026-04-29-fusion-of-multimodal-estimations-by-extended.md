@@ -68,7 +68,7 @@ hiddenInHomeList: true
 4.  FuSEmHR的特别设计：当获得可靠的并发信号（mHR）参考 Wᶜₖ 时，在 Z⁽ⁱ⁾ₖ = C 的情况下，发射概率 P(M⁽ⁱ⁾ₖ | Wᶜₖ, Z⁽ⁱ⁾ₖ = C) 会利用 Wᶜₖ 信息来更精确地建模观测，如公式(11)所示。这提供了更强大的先验信息来区分fHR和mHR。
 5.  推理：使用扩展后的Viterbi算法（公式更新为基于状态Xₖ）来寻找最可能的隐藏状态序列 ŜH₀:ₜ。对于在线应用，可以省略回溯步骤，直接取每个时刻的最优状态。
 
-![图1](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463080-0.png)
+![图1](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463080-0.png)
 图1展示了传统的双模态HMM图模型。论文提出的FuSE/FuSEmHR模型在此基础上，将每个观测变量M⁽ⁱ⁾ₖ与一个隐含的“类型变量”Z⁽ⁱ⁾ₖ（表示观测是H, C, N）相连，并允许Z⁽ⁱ⁾ₖ序列具有自身的转移概率。
 
 ### 💡 核心创新点
@@ -91,13 +91,13 @@ hiddenInHomeList: true
 
 主要实验结果已在核心摘要的表格中列出。以下结合图表补充关键结论：
 
-![图2](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463080-1.png)
+![图2](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463080-1.png)
 图2（RGA箱线图）显示：ECG和PCG单模态性能差异大且不稳定。三种融合方法（Fus, FuSE, FuSEmHR）的RGA中位数和稳定性（箱体范围）均优于单模态，且FuSEmHR最佳。
 
-![图3](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463080-2.png)
+![图3](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463080-2.png)
 图3（逐个受试者的RGA对比）显示：对于原始Fus方法表现较差的后半段受试者，FuSEmHR（红线）相比Fus（蓝线）有显著提升（绿色区域），表明其鲁棒性增强。左侧箱线图量化了这种提升幅度（多数为正向提升）。
 
-![图4](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11463080-3.png)
+![图4](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11463080-3.png)
 图4（RMC箱线图）显示：ECG的母体混淆率最高。FuSEmHR的RMC中位数和上四分位数均为最低，证实了其利用mHR信息后抗混淆能力的显著优势。
 
 与最强基线的差距：FuSEmHR在RGA（中位数88% vs 79%）和RMC（中位数1.5% vs 3%）两个关键指标上均优于最强基线Fus [12]。

@@ -46,7 +46,7 @@ Flexi-LoRA的整体架构包含两个核心组件：一个难度感知路由器�
 3.  自适应LoRA应用：预测的秩 \( r \) 被统一应用于所有Transformer层。对于每一层的权重更新，只使用对应秩 \( r \) 的LoRA矩阵 \( A_{r} \) 和 \( B_{r} \) 的前 \( r \) 行/列，计算增量 \( \Delta W = B_{r} A_{r} \)。最终的层输出为 \( H = W H_{prev} + \alpha_r \cdot (B_{r} A_{r} H_{prev}) \)，其中 \( \alpha_r \) 是与秩相关的缩放因子。
 4.  训练与推理一致性：关键创新在于，训练和推理阶段都使用同一个路由器进行样本级的秩分配，从而保证了动态秩模式的一致性。而在同一个批次内，不同样本可以拥有不同的秩。
 
-![Flexi-LoRA框架示意图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11462836-1.png)
+![Flexi-LoRA框架示意图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11462836-1.png)
 图2：Flexi-LoRA框架。路由器分析输入嵌入并为Transformer层输出秩分配（绿色箭头）。红蓝梯形代表LoRA的A、B矩阵，颜色深浅指示秩大小（深色=秩2，浅色=秩8）。路由器实现了基于输入复杂度的动态秩分配。
 
 #

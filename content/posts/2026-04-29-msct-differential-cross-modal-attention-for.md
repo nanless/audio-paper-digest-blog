@@ -40,14 +40,14 @@ hiddenInHomeList: true
 
 本文提出的多尺度跨模态Transformer编码器（MSCT）框架如图2所示，包含单模态特征提取和多模态特征融合两大模块。
 
-![图2：模型整体框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460824-1.png)
+![图2：模型整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460824-1.png)
 
 1.  预编码器：分别对音频（A_E）和视觉（V_E）输入进行处理。音频输入经过线性投影层；视觉输入使用集成了小波卷积和CBAM的改进版Res2Net，以提取多尺度视觉特征。
 2.  Transformer编码器：核心融合模块，包含6个Transformer块。每个块内集成本文提出的两个核心注意力模块：
     *   多尺度自注意力（MSSA）：用于提取单模态内部的多尺度时间特征。
     *   差分跨模态注意力（DCA）：用于融合来自两个模态的特征。以模态A为例，其结构如图3所示。
 
-![图3：差分跨模态注意力（DCA）模块](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460824-2.png)
+![图3：差分跨模态注意力（DCA）模块](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460824-2.png)
 DCA模块接收来自模态B的查询（Q_B^cross）和模态A的键（K_A���、值（V_A）。它首先计算传统的跨模态注意力矩阵Attn_BA = Q_B^cross  K_A^T，以及模态A的自注意力矩阵Attn_AA = Q_A  K_A^T。然后，计算二者的差值作为最终的注意力矩阵Diff_Attn_A = Attn_AA - Attn_BA。最后，用此差值注意力矩阵与V_A相乘得到输出。其设计动机是：对于伪造视频，跨模态对齐损失会强烈约束Attn_BA，而Attn_AA不受影响，因此差值Diff_Attn_A会被放大，从而增强模型对伪造线索的敏感度。
 
 3.  多尺度自注意力（MSSA）：如图4所示。它接收Q, K, V，将K沿着注意力头维度分割成四部分，每部分用不同尺度的2D卷积处理（以捕获不同时间尺度的邻近信息），然后拼接并与Q相乘生成注意力矩阵，最后与V相乘得到输出。
@@ -105,7 +105,7 @@ DCA模块接收来自模态B的查询（Q_B^cross）和模态A的键（K_A��
 - 两个模块结合（DCA+MSSA）取得了最佳性能，证明了模块间的互补性。
 
 可视化结果：图5展示了不同模型配置下T-SNE的特征分布。
-![图5：不同模型的T-SNE可视化结果对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460824-4.jpg)
+![图5：不同模型的T-SNE可视化结果对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11460824-4.jpg)
 分析：基线模型（CA+SA）难以区分“真实音频-真实视频”（RA-RV）和“真实音频-伪造视频”（RA-FV）类别。而本文方法（DCA+MSSA）的特征分布中，不同类别分离度更高，特别是RA-RV和RA-FV之间的界限更清晰，直观验证了模型判别能力的提升。
 
 ### ⚖️ 评分理由

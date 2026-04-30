@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-论文中的图1（`![Affect-Jigsaw框架概述图](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11460645-0.jpg)`）展示了Affect-Jigsaw的整体架构。该框架主要由两个并行分支和一个整合机制组成：
+论文中的图1（`![Affect-Jigsaw框架概述图](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-29/11460645-0.jpg)`）展示了Affect-Jigsaw的整体架构。该框架主要由两个并行分支和一个整合机制组成：
 
 1.  输入：多模态输入包括视频帧（Vision）、音频波形（Audio）和文本/字幕（Text）。
 2.  基础模型：采用Qwen2.5-Omni-7B作为基础多模态大语言模型（MLLM）。在微调时，仅对“Thinker”（语言模型部分）应用低秩适应（LoRA），并对视觉编码器和音频编码器到LLM的适配器进行微调，其他模块（如原始编码器）冻结。

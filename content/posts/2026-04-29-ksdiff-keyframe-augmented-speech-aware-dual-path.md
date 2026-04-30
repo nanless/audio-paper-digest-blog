@@ -62,7 +62,7 @@ KSDiff的整体架构如图2所示。系统接收原始音频 `a1:N` 和转录�
     *   最终渲染：生成的系数通过DECA模型渲染成完整的说话人头部动画 `m1:T`。
 
 架构图说明：
-![图2：KSDiff整体框架](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465063-1.png)
+![图2：KSDiff整体框架](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465063-1.png)
 此图清晰展示了从音频输入到DPSE特征分离，再到KEL关键帧预测，最后通过双路径扩散生成器输出系数的整体��据流。图2(b)则详细展示了DPSE的内部结构，包括MSDC、FiLM调制、MHCA等模块的连接关系。
 
 ### 💡 核心创新点
@@ -140,7 +140,7 @@ KSDiff的整体架构如图2所示。系统接收原始音频 `a1:N` 和转录�
 结论：每个组件的去除都导致性能不同程度下降，其中“w/o speech split”对LSE-C和Diversity影响最大，“w/o transcript”导致LVE显著上升，证明了所有模块的必要性。
 
 可视化结果：
-![图3：可视化对比](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11465063-2.jpg)
+![图3：可视化对比](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11465063-2.jpg)
 结论：图3显示，在单词“bread”的发音过程中，KSDiff生成的头部运动轨迹和表情变化比DiffSpeaker和SadTalker更贴近真实序列，且运动更自然，没有SadTalker中出现的夸张动态。
 
 ### ⚖️ 评分理由

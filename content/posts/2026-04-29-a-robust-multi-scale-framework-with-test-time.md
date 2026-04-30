@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 模型的整体架构](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464168-0.jpg)
+![图1: 模型的整体架构](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464168-0.jpg)
 图1 展示了MDM-Tent的整体架构流程。其核心组件和数据流如下：
 1.  输入：多通道sEEG信号。
 2.  多尺度分解混合模块：信号首先经过一个包含`Conv2D`、`BatchNorm`和`Linear`的Tokenizer进行分块和嵌入。随后进入Multi-Scale Decomposable Mixing (MDM)模块。该模块通过递归平均池化构建时间金字塔，然后通过自上而下的残差路径，使用低秩MLP将不同尺度的特征进行融合。其最终输出是融合了多尺度时序信息的特征序列。
@@ -81,7 +81,7 @@ hiddenInHomeList: true
 (此处仅展示Table 1的部分结果，完整表格包含12个受试者。在所有受试者上，MDM-Tent均优于其他基线模型。)
 
 消融实验结果（来自图2）：
-![图2: 消融实验结果](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464168-1.jpg)
+![图2: 消融实验结果](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464168-1.jpg)
 图2 展示了从基线DU-IN开始，逐步添加自蒸馏（SD）、MDM模块和测试时适应（Tent）后，在受试者06-12上的分类准确率变化。
 - 基线（DU-IN）平均准确率：约52.02%
 - +SD：小幅提升至约54.03%

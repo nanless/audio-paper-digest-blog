@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ACIR-MACL框架整体分为三个阶段：单模态特征编码、融合与表示学习（包含ACIR和MACL）、预测与损失计算。其详细架构如图1所示。
 
-![ACIR-MACL框架概述](/audio-paper-digest-blog/images/icassp-2026/2026-04-29/11464008-0.png)
+![ACIR-MACL框架概述](https://audio-paper-digest-images.bkt.clouddn.com/icassp-2026/2026-04-28/11464008-0.png)
 图1：ACIR-MACL框架概述。展示了单模态编码、ACIR双路径模块和MACL并行表示学习模块的结构与数据流。
 
 1.  单模态特征编码：
