@@ -37,10 +37,20 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：未提及
 
 - 补充链接（自动提取）：
+  - 代码仓库：https://github.com/LLaVA-VL/LLaVA-NeXT
+  - 代码仓库：https://github.com/OpenBMB/MiniCPM
   - 代码仓库：https://github.com/OpenBMB/MiniCPM-o
-  - 代码仓库：https://github.com/open-compass/opencompass
-  - 代码仓库：https://github.com/snakers4/silero-vad
-  - HuggingFace：https://huggingface.co/openbmb/MiniCPM-o-4_5
+  - 代码仓库：https://github.com/QwenLM/Qwen3
+  - 代码仓库：https://github.com/RLHF-V/RLAIF-V
+  - 代码仓库：https://github.com/deepseek-ai/DeepSeek-V3/blob/main/technical_report.pdf
+  - 代码仓库：https://github.com/ggerganov/llama.cpp
+  - 代码仓库：https://github.com/google-research/big_vision
+  - 代码仓库：https://github.com/microsoft/unilm/tree/master/speech
+  - 代码仓库：https://github.com/openai/whisper
+  - 代码仓库：https://github.com/tobran/CapsFusion
+  - 代码仓库：https://github.com/vllm-project/vllm
+  - HuggingFace：https://huggingface.co/OpenBMB/MiniCPM-o-4_5
+  - HuggingFace：https://huggingface.co/spaces/OpenBMB/MiniCPM-o-4_5
 
 ### 📌 核心摘要
 
