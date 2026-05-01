@@ -36,6 +36,12 @@ MiniCPM-o 4.5 的亮点在于其提出的 Omni-Flow 框架成功地将多模态�
 - 复现材料：论文中包含了模型架构描述、性能对比数据和关键设计选择，为复现提供了基础信息。具体的训练细节、超参数配置等更完整信息应在开源仓库中。
 - 引用的开源项目：论文摘要中未提及，但此类工作通常会依赖如Hugging Face Transformers、PyTorch、特定音频处理库等开源工具，具体列表需查阅论文全文。
 
+- 补充链接（自动提取）：
+  - 代码仓库：https://github.com/OpenBMB/MiniCPM-o
+  - 代码仓库：https://github.com/open-compass/opencompass
+  - 代码仓库：https://github.com/snakers4/silero-vad
+  - HuggingFace：https://huggingface.co/openbmb/MiniCPM-o-4_5
+
 ### 📌 核心摘要
 
 1.  解决的问题：现有的多模态大模型在实时交互方面存在两个核心瓶颈：一是感知与生成仍然是交替进行的，无法在生成时动态调整以适应新输入；二是模型多为被动响应，缺乏基于对场景连续理解的主动行为能力。
