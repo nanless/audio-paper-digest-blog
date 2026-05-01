@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音质量评估 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Multi-Task Learning For Speech Quality Assessment Using ASR-Derived Entropy Features
+
+#语音质量评估 #多任务学习 #预训练 #语音增强 #鲁棒性
+
+✅ **7.5/10** | 前25% | #语音质量评估 | #多任务学习 | #预训练 #语音增强
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.3 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Tri Dung Do（Viettel AI， Viettel Group； University of Engineering and Technology – Vietnam National University， Hanoi）
 - 通讯作者：Van Hai Do（Thuyloi University）
 - 作者列表：Tri Dung Do（Viettel AI， Viettel Group； University of Engineering and Technology – Vietnam National University， Hanoi）， Bao Thang Ta（Viettel AI， Viettel Group； Hanoi University of Science and Technology）， Van Hai Do（Viettel AI， Viettel Group； Thuyloi University）
+
 ### 💡 毒舌点评
 
 亮点在于将ASR模型输出的不确定性（熵）作为一个新颖且可量化信号，与语音质量评估任务进行关联，并通过多任务学习框架显式地利用这一信号，思路巧妙。短板是，尽管在NISQA数据集上取得了改进，但论文未与更多当前先进的无参考评估方法（如基于自监督模型或特定Transformer架构的方法）进行直接、充分的对比，说服力稍显不足；另外，对熵特征的物理意义及其与具体失真类型关系的分析深度有限。
+
 ### 🔗 开源详情
 
 *   代码：论文中明确提到“The code is available upon request”，但未提供公开的代码仓库链接。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 *   复现材料：论文提供了较详细的模型架构、训练策略（优化器、学习率、轮数、动态权重算法）和部分超参数设置，但缺失batch size、Dropout率、具体硬件等细节。
 *   论文中引用的开源项目/模型：主要依赖Wav2Vec2-Base模型（在LibriSpeech上预训练），并引用了NISQA语料库。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：本文旨在解决无参考语音质量评估（Non-reference SQA）问题，即无需干净参考语音即可预测语音的感知质量（如MOS分数）。
@@ -42,11 +52,12 @@ hiddenInHomeList: true
 
 5.  实际意义：为无参考语音质量评估提供了新的视角和有效方法，证明了利用ASR模型内在不确定性信息的价值。该方法在推理时高效，有望应用于实时语音通信监控、语音合成系统评估等场景。
 6.  局限性：主要验证仅在一个数据集（NISQA）上进行；使用的预训练ASR模型单一（Wav2Vec2-Base），未探索其他模型的影响；未深入分析熵特征与具体语音失真类型（如噪声、回声、断续）之间的细粒度关系。
+
 ### 🏗️ 模型架构
 
 本文提出的模型架构如图2所示，由两个主要模块构成：预训练ASR模块和多任务学习模块。
 
-![图2: 整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461815-1.png)
+![图2: 整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461815-1.png)
 
 1.  预训练ASR模块：使用固定的Wav2Vec2-Base模型（在960小时LibriSpeech数据上预训练并微调）。该模块作为特征提取器，接收原始语音波形，输出形状为 `(T, D)` 的帧级嵌入序列（T为帧数，D为嵌入维度，Base模型D=768）。论文中明确指出不对此模块进行微调。
 
@@ -61,15 +72,17 @@ hiddenInHomeList: true
 *   使用冻结的预训练ASR模型：旨在利用其在大规模语音数据上学到的通用表征，特别是其对语音不确定性的敏感性。
 *   动态任务权重：训练初期权重侧重于熵预测（w0=0.9），旨在让共享编码器优先学习捕捉不确定性特征；后期权重线性平滑过渡到侧重MOS预测。这被假设有助于模型先打好表征基础，再优化最终目标。
 *   熵的显式预测：与直接拼接熵特征作为输入（Single-task + Entropy）不同，本文让模型主动学习预测熵，被认为能引导模型学习更鲁棒、对噪声更敏感的内部表示。
+
 ### 💡 核心创新点
 
 1.  提出并验证ASR熵与语音质量的相关性：这是本文的基石假设。通过实证分析（公式1），证明在89.25%的帧上，噪声语音的ASR编码器输出熵高于对应干净语音（图1）。这为利用ASR不确定性评估质量提供了理论依据。
 
-    ![图1: 干净语音（蓝）与噪声语音（橙）的ASR编码器输出熵随时间变化的对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461815-0.png)
+    ![图1: 干净语音（蓝）与噪声语音（橙）的ASR编码器输出熵随时间变化的对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461815-0.png)
 
 2.  设计熵引导的多任务学习框架：这是方法论的核心创新。不是简单地将熵作为静态特征输入，而是设计了一个辅助任务——“预测帧级熵”。这个辅助任务充当一个强正则化信号，迫使共享的BiLSTM编码器学习能够区分不同质量语音的、对不确定性敏感的表征，从而提升主任务（MOS预测）的性能。
 3.  动态任务加权策略：创新的训练策略。通过在训练过程中动态调整两个任务的损失权重，实现了从“学习特征（熵）”到“应用特征（预测MOS）”的平滑过渡，避免了固定权重可能导致的任务冲突或学习效率低下问题。
 4.  高效的推理部署设计：一个关键且实用的创新点是，训练完成的模型在推理阶段可以完全移除熵预测分支。这使得模型在获得性能提升的同时，保持了与单任务基线相同的计算效率，为实际部署扫清了障碍。
+
 ### 🔬 细节详述
 
 *   训练数据：使用NISQA语料库。具体包括：训练集（10,000模拟样本 + 1,020实时样本），验证集（2,500模拟样本 + 200实时样本），测试集（TEST FOR: 240样本， TEST LIVETALK: 232样本， TEST P501: 240样本）。数据预处理和增强细节论文中未提及。
@@ -87,6 +100,7 @@ hiddenInHomeList: true
 *   训练硬件：论文中未提及GPU型号、数量及训练时长。
 *   推理细节：推理时直接移除熵预测分支，仅运行ASR编码器、BiLSTM和MOS预测头。解码策略、温度、beam size等不适用于此回归任务。
 *   正则化或稳定训练技巧：除了MLP中的Dropout，论文未提及其他正则化技巧（如权重衰减、梯度裁剪）。
+
 ### 📊 实验结果
 
 本文在NISQA语料库的多个子集上评估了MOS预测性能，主要指标为Pearson相关系数（PCC，↑）和均方根误差（RMSE，↓）。
@@ -106,6 +120,7 @@ hiddenInHomeList: true
 *   效率：论文强调，尽管多任务方法在训练时更复杂，但推理速度与单任务基线相同，因为熵预测分支在测试时被移除。
 
 实验不足：论文未提供与ICASSP、INTERSPEECH上其他最先进无参考SOTA方法（例如基于Conformer、专门设计的SSL模型微调方法）的直接对比数字，仅与论文自己设计的基线进行比较。消融实验也较简单，主要对比了直接使用熵特征与多任务学习两种方式。
+
 ### ⚖️ 评分理由
 
 *   学术质量：6.0/7
@@ -125,3 +140,8 @@ hiddenInHomeList: true
     *   复现的难度中等，关键信息基本具备，但部分细节（如MLP Dropout率、batch size）缺失。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

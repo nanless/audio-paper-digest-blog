@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音活动检测 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 TVP-UNet: Threshold Variance Penalty U-Net for Voice Activity Detection in Dysarthric Speech
+
+#语音活动检测 #U-Net #阈值方差惩罚 #构音障碍 #半监督学习
+
+✅ **7.0/10** | 前25% | #语音活动检测 | #U-Net | #阈值方差惩罚 #构音障碍
+
+学术质量 5.5/7 | 选题价值 1.2/2 | 复现加成 0.2 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Aditya Pandey (School of Computer Science and Engineering, Vellore Institute of Technology, Chennai, India)
@@ -14,12 +24,14 @@ hiddenInHomeList: true
 - 作者列表：Aditya Pandey（VIT Chennai），Tanuka Bhattacharjee, Prasanta Kumar Ghosh（Indian Institute of Science, Bengaluru），Madassu Keerthipriya, Darshan Chikktimmegowda, Dipti Baskar, Yamini BK, Seena Vengalil, Atchayaram Nalini, Ravi Yadav（National Institute of Mental Health and Neurosciences, Bengaluru）。
 
 #
+
 ### 💡 毒舌点评
 
 亮点：这是首个专门针对构音障碍语音的VAD研究，问题定义精准且临床意义明确；提出的TVP损失通过“阈值方差惩罚”巧妙地稳定了弱分类器在模糊边界上的决策，是一个可解释性强的正则化技巧。
 短板：实验基线过于陈旧（2022年的方法），未能与当前先进的自监督、基于变换器的VAD模型对比，削弱了方法在通用场景下竞争力的说服力；且未提供任何代码或模型，在开源盛行的今天，严重阻碍了其影响力扩散。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 复现材料：论文在方法、实验设置部分提供了详细的训练超参数、损失函数公式和评估方案，可作为复现指南，但缺少代码和预训练模型，实际复现需从头构建。
 - 论文中引用的开源项目：提到了Audacity用于标注，无其他关键依赖。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  解决的问题：传统语音活动检测（VAD）方法在应对构音障碍（如ALS、PD患者）语音时失效，因其具有异常韵律、发音不精准、强度多变等特征，导致误检和漏检。
@@ -50,16 +60,18 @@ hiddenInHomeList: true
 6.  主要局限性：a) 对比基线较少且陈旧，未与当前先进的VAD模型对比；b) 实验数据集为自建私有数据集，虽然描述详细，但社区无法直接获取和验证；c) 论文未提供代码和模型权重。
 
 #
+
 ### 🏗️ 模型架构
 
 模型是一个紧凑的1D U-Net自编码器，输入为100ms的原始音频波形帧，输出为同尺寸的重构波形帧。
-![图2: pdf-image-page3-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464151-1.png)
+![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464151-1.png)
 *   编码器（下采样路径）：由三个下采样块组成。每个块包含卷积层（核大小3，步长1，无偏置）、最大池化层（步长2）。通道数从输入通道 `Cin`（应为1）经过 `f→2f→4f` 的过程，`f` 初始化为6。
 *   瓶颈层：位于编码器和解码器之间，包含层归一化（LayerNorm）、添加标准高斯噪声，以及一个学习到的乘性门控机制（结合tanh/sigmoid和SiLU激活）。
 *   解码器（上采样路径）：由四个卷积阶段组成（`4f→2f`, `2f→f`, `f→f`, 最后 `Conv1D→Cin`）。使用最近邻上采样（上采样因子2），并通过加性跳跃连接（Additive Skip Connections）融合编码器对应层的特征。激活函数为GELU。
 *   训练机制：如图1所示，输入信号 `x` 送入U-Net得到重构信号 `ŷ`。`ŷ` 同时被送入一个基于统计量的“弱估计器”（公式2）和一个可微的软分数函数（公式3，使用sigmoid），生成不同阈值下的置信度。这些分数与真实标签（或伪标签）一起计算TVP损失，与 `x` 和 `ŷ` 之间的重构损失组合成总损失，进行端到端训练。
 
 #
+
 ### 💡 核心创新点
 
 1.  首个针对构音障碍的VAD研究：明确指出了现有VAD在病理语音上的失效原因，并首次构建了专用数据集和评估框架，填补了研究空白。
@@ -67,6 +79,7 @@ hiddenInHomeList: true
 3.  统一的多模式训练框架：通过将TVP与重构损失结合，并利用硬伪标签（由弱估计器在平均阈值下生成）和加权BCE损失，TVP-UNet可以无缝地在有监督、半监督和无监督三种模式下训练，显著降低了对标注数据的依赖。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：来自印度NIMHANS的私有数据集，包含230名ALS、142名PD患者和137名健康对照（HC）的语音录音。总时长约1041分钟。音频由专业人员用Audacity手动标注。
@@ -82,13 +95,15 @@ hiddenInHomeList: true
 - 正则化：初始dropout(p=0.3)；瓶颈层的层归一化和高斯噪声注入；TVP本身可视为一种正则化。
 
 #
+
 ### 📊 实验结果
 
 主要实验结果如上文表格所示。论文还展示了在不同严重程度组（SV， ML， ND， HC）上的细分结果（表3），表明模型在各组均有稳定表现，但HC组性能略低，可能因样本量小导致。图3展示了在不同标签比例（0-100%）下，模型性能指标（F1， Recall， Precision， AUCROC）的变化曲线。关键结论是：性能从0%到25%标签时提升最显著，之后趋于平缓，50%标签已接近全监督性能。
-![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464151-2.png)
+![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464151-2.png)
 （图3描述了不同标签比例下模型性能均值与标准差。曲线显示，随着标签比例增加，Precision（精确率）几乎单调上升；F1和Recall在25%后提升放缓；所有指标在50%后基本稳定，且方差减小。这验证了TVP在标签稀缺场景的有效性。）
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：创新性（TVP）和针对性（构音障碍）明确，技术路线正确，实验设计（多比例、多组别）充分。扣分点在于对比基线不够强（未与SOTA对比）、未提供公开数据或模型影响可复现性。
@@ -96,3 +111,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.2/1：论文提供了非常详细的模型、损失、训练策略描述，理论上可复现。但完全未提供代码、模型权重或公开数据集，这在当代论文中是一个重大缺陷，因此加成很低。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

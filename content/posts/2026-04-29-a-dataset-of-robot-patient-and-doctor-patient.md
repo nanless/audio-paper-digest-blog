@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音对话系统 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 A Dataset of Robot-Patient and Doctor-Patient Medical Dialogues for Spoken Language Processing Tasks
+
+#语音对话系统 #数据集 #大语言模型 #模型评估 #语音识别
+
+✅ **7.5/10** | 前25% | #语音对话系统 | #数据集 | #大语言模型 #模型评估
+
+学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Heriberto Cuayáhuitl（University of Lincoln, School of Engineering and Physical Sciences）
@@ -16,11 +26,13 @@ hiddenInHomeList: true
     - Grace Jang（Lincoln Medical School, Universities of Lincoln and Nottingham）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：数据集规模（111+小时）和收集方法（结合远程操控机器人与真实医患对话）在公开免费资源中独树一帜，并创新性地设计了模拟ASR噪声的评估协议。短板：对LLM的评估停留在通用多选题任务上，未能深入设计更能体现医疗对话复杂性和安全性的评测，使得这项重要的数据资源在论文中的价值释放略显不足，更像一个“半成品”基准。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。提到将提供用于回放对话的独立应用程序（本地Web服务器，基于.NET和Node.js），但未说明是否开源。
@@ -36,9 +48,7 @@ hiddenInHomeList: true
     - 录音工具：MS Teams (用于人人对话)，Audacity (用于标注)。
     - 评估模型：引用了GPT-5 mini、DeepSeek V3、Claude Sonnet 4。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：尽管大语言模型（LLM）发展迅速，但其在文本或语音形式的医疗问诊中应用仍是一个开放问题，主要瓶颈之一是缺乏大规模、公开、包含人机交互的医疗对话语音数据集。
@@ -57,10 +67,11 @@ hiddenInHomeList: true
 6.  主要局限性：1) 参与者为模拟患者而非真实患者，可能影响对话的临床真实性；2) 论文提出的基准任务相对简单，未深入探索对话生成、临床推理等更复杂任务；3) 对揭示的LLM“过度自信”问题，未能提出有效的解决方案。
 
 #
+
 ### 🏗️ 模型架构
 
 本文的核心贡献并非提出一个新的神经网络模型，而是提出一个数据收集与评估系统。其系统架构如下图所示：
-![图1: pdf-image-page1-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461707-0.png)
+![图1: pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461707-0.png)
 系统工作流程详解：
 1.  核心设置：采用Wizard-of-Oz方法。人类医生作为“遥操作者”，在独立房间通过耳机和笔记本电脑（接收患者视频与转录文本）与Pepper机器人交互。
 2.  人机交互流程：
@@ -71,6 +82,7 @@ hiddenInHomeList: true
 5.  数据处理：最终数据被分割为每轮对话的独立音频文件，并提供了包含时间戳和说话人标签（医生、机器人、患者）的转录文本（`.txt`）及Audacity工程文件（`.aup3`）。
 
 #
+
 ### 💡 核心创新点
 
 1.  首个大规模、免费的混合式医疗对话语音数据集：数据集包含111+小时、581个对话，融合了机器人-患者（使用TTS）和医生-患者（自然语音）两种模态，这在现有公开数据集中是独特的。
@@ -79,6 +91,7 @@ hiddenInHomeList: true
 4.  对LLM过度自信的实证分析：通过高斯分布图和重叠系数，直观且定量地证明了当前顶尖LLM在医疗句子选择任务中存在严重的概率校准问题，无论对错都表现出高置信度。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：即MeDial-Speech数据集本身。包含325名未付费参与者（主要为大学生，年龄18-24岁占87.1%），模拟四种病情（路易体痴呆、心力衰竭、肩痛、心绞痛）。数据集总大小12.6GB，包含26.4万词，6100个独立词汇。
@@ -93,6 +106,7 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：不适用。
 
 #
+
 ### 📊 实验结果
 
 论文主要评估了三个LLM在句子选择任务上的性能。关键结果表格（Table 2） 已在“核心摘要”部分完整列出。核心结论如下：
@@ -100,14 +114,15 @@ hiddenInHomeList: true
 2.  噪声鲁棒性：引入ASR噪声后，Claude Sonnet 4的性能甚至略有提升（平衡准确率从0.7119到0.7473），而DeepSeek V3性能显著下降（从0.6271到0.5598），表明不同模型对噪声的敏感度不同。
 3.  校准问题：这是论文最重要的发现之一。下图展示了模型预测概率的分布。
     - 图2：高斯分布图
-        ![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461707-1.png)
+        ![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461707-1.png)
         说明：直线代表正确预测的置信度分布，虚线代表错误预测的置信度分布。理想模型应使直线靠右（高置信），虚线靠左（低置信）。但图中所有模型的两曲线高度重叠，计算出的重叠系数（OVL）均超过0.7，表明模型无论对错都给出相似的高概率。
     - 图3：可靠性图
-        ![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461707-2.png)
+        ![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461707-2.png)
         说明：理想模型的点应落在对角线上（预测概率=实际频率）。图中点明显偏离对角线，尤其是在高概率区域，模型实际正确率远低于其预测概率，证实了过度自信。
 4.  统计显著性：作者使用符号检验、Wilcoxon符号秩检验和T检验，确认了Claude Sonnet 4与DeepSeek V3的性能差异显著（p < .05）。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：数据集构建工作扎实、系统，设计合理，并包含了一个有价值的基准测试。实验部分评估了多个模型并得出了有洞察力的发现（过度自信）。但创新主要体现在“资源整合与评估设计”上，而非底层方法或模型的突破。评估任务（多选一）相对简单，对数据集潜力的挖掘不够深入。
@@ -115,3 +130,8 @@ hiddenInHomeList: true
 - 开源与复现加成：1.0/1：论文明确承诺数据集免费开放，并提供了详细的统计、格式和回放工具说明。基准测试的评估提示词也计划公开，复现门槛低。但未提及开源数据处理代码或更复杂的分析脚本。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

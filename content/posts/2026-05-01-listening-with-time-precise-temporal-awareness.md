@@ -27,6 +27,7 @@ hiddenInHomeList: true
 
 这篇论文的亮点在于其“庖丁解牛”式的系统设计：面对长音频时间感知这一老大难问题，没有硬磕模型本身，而是从数据、评测、推理范式三个层面给出了一套“组合拳”，尤其是构建全球-局部时间线的TWA-CoT思路清晰有效。然而，其短板也很明显：框架的计算开销和多轮推理的延迟使其在实时或流式场景下的应用面临挑战，且最终性能的天花板依然受限于所采用的骨干模型（Qwen3-Omni）的基础能力。
 
+
 ### 🔗 开源详情
 
 - 代码：论文承诺开源，并提供了GitHub仓库链接：https://github.com/alanshaoTT/LAT-Audio-Repo。
@@ -41,6 +42,7 @@ hiddenInHomeList: true
     - 评估指标：FENSE (Zhou et al., 2022; Dinkel et al., 2025)
     - 原子标注中使用的模型：Gemini-2.5-Pro、LLM-ForceAligner (Mu et al., 2026)
     - 强化学习算法：Group Relative Policy Optimization (Shao et al., 2024)
+
 
 ### 📌 核心摘要
 

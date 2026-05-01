@@ -61,10 +61,6 @@ hiddenInHomeList: true
 - 复现材料： 提供了完整的实现细节，包括：音频预处理方式、使用的SSL模型（XLSR-300M）、提示令牌数量、稀疏比率、Mamba块数量、dropout率、batch size、学习率、优化器、训练轮数、早停策略以及开发集选择标准。
 - 论文中引用的开源项目： 依赖Facebook的XLSR-300M预训练模型（Hugging Face提供）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题： 当前基于全微调大型自监督模型（如XLSR）的语音深度伪造检测方法参数效率低，且在面对真实世界中未见过的复杂攻击、编解码器和压缩格式时，泛化能力可能不足。
@@ -102,10 +98,6 @@ hiddenInHomeList: true
 -   Demo：未提及。
 -   复现材料：论文描述了模型架构和主要超参数（如`v=24`），但未提供训练脚本、详细超参数（学习率、优化器等）、配置文件或检查点。复现需要较多额外工作。
 -   引用的开源项目：论文中引用并依赖了预训练模型XLS-R作为特征提取器。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -154,10 +146,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：使用了多个开源的TTS系统生成数据（XTTS-v1/v2, YourTTS, FishSpeech, F5-Spanish），并评估了多个开源检测器实现（LFCC-GMM, MFCC-ResNet, Spec-ResNet, PaSST, Wav2Vec2-AASIST）。
 - 总体开源情况：论文在数据集和评估代码开源方面做得较好，但完整复现所需的训练细节和模型权重未提供。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前先进的语音合成（TTS）和语音克隆技术可生成高度逼真的合成语音，带来严重的欺诈和滥用风险。尽管针对英语和中文已有成熟的检测器和数据集，但作为全球6亿人使用的语言，西班牙语在语音取证领域却严重缺乏研究和评估基准。
@@ -202,10 +190,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文提供了详细的超参数、损失函数权重、训练硬件及时长等信息，但未提供训练好的模型检查点或完整的配置文件。
 - 论文中引用的开源项目：Parselmouth (用于提取F1, F2)，pYIN算法（用于提取F0）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -252,10 +236,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了数据集，部分训练细节（优化器、学习率、轮数）在论文中说明。但未提供配置文件、检查点、环境配置、硬件信息等。
 - 论文中引用的开源项目：使用了pyannote进行VAD分割（https://huggingface.co/pyannote/segmentation），以及预训练SSL模型WavLM-large和XLS-R（来自Hugging Face）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -305,10 +285,6 @@ hiddenInHomeList: true
 - 复现材料：提供了代码仓库，是核心复现材料。论文描述了模型架构、数据增强方法（RawBoost配置4）、训练策略（如早停、批大小）等关键细节，但缺少如学习率、优化器、具体硬件等训练超参数。
 - 引用的开源项目：论文依赖并提及了XLSR模型（来自Hugging Face）、RawBoost增强工具、以及作为对比的多种SDD模型代码。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对语音深度伪造检测（SDD）模型在使用数据增强（DA）训练时，原始输入与增强输入反向传播梯度方向不一致（冲突）导致优化矛盾、影响模型泛化的问题，提出了一种双路径数据增强训练框架与梯度对齐方法。该框架将每个训练语句同时通过原始路径和增强路径输入共享模型，计算损失后，在梯度更新前使用PCGrad等梯度对齐技术处理冲突。主要创新在于首次在SDD领域系统研究并量化了DA训练中的梯度冲突（约25%的迭代存在冲突），并通过损失曲面可视化证明冲突源于不同的损失景观。实验表明，该方法在XLSR-AASIST、XLSR-Conformer-TCM、XLSR-Mamba三种架构上，配合RawBoost等多种增强方法，在ASVspoof2021-DF、In-the-Wild、FoR等挑战性测试集上均能稳定提升性能。例如，在XLSR-Conformer-TCM上，使用PCGrad在ITW数据集上将EER从7.97%降至6.48%，相对降低约18.69%。该方法能加速收敛（提前至第4个epoch达到最低验证损失）。其实际意义在于提供了一种即插即用、与模型和增强技术无关的训练优化策略，以提升SDD的鲁棒性。局限性在于主要从经验层面分析，缺乏对梯度冲突产生理论条件的深层探究，且梯度对齐技术本身非本文原创。
@@ -340,10 +316,6 @@ hiddenInHomeList: true
 -   复现材料：未提供训练细节、配置、检查点或详细附录说明。分析方法描述足够，但执行所需资源和具体操作细节缺失。
 -   论文中引用的开源项目：明确引用了Montreal Forced Aligner (MFA) 作为强制对齐工具。此外，评估的生成器（如HiFi-GAN, VITS, YourTTS等）大多是公开的开源项目，但论文未列出具体依赖链接。
 -   论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -391,10 +363,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了较为详细的训练细节、超参数设置（学习率、批大小、优化器、训练轮数）、损失函数权重、数据增强算法选择以及硬件信息（单卡A800）。部分超参数（如Sinc卷积的具体参数、SE-Res2Net的内部结构）引用了先前工作[17, 19]，但未在附录中完整复述。
 - 论文中引用的开源项目：论文引用了多个开源项目或其官方实现作为基线进行对比，如RawBMamba [19], BiCrossMamba-ST [14], AASIST [6], SE-Rawformer [9], XLSR-Mamba [10]等。
 - 总体开源情况：论文中未提及开源计划（代码、模型）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

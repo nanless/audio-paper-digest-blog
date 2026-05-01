@@ -56,10 +56,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Hugging Face上的HuBERT、Data2vec、Wav2vec2模型。
 - 总结：论文中未提及开源计划。复现需自行处理数据集、实现检索逻辑并复用公开的预训练模型。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统的发音错误检测与诊断（MDD）系统通常需要训练或微调专门的声学模型（如音素识别器），过程复杂且依赖大量标注数据。
@@ -100,10 +96,6 @@ hiddenInHomeList: true
 - 复现材料：提供了核心实现代码，并在论文中详细说明了特征准备、模型结构、训练配置（优化器、学习率、批大小、Epoch数）等关键细节。
 - 论文中引用的开源项目/模型：依赖了多种开源预训练模型作为特征提取器：HuBERT [12]、Wav2Vec 2.0 [13]、WavLM [14]。
 - 总结：论文提供了较好的开源基础，代码和关键训练信息可得，但完整的复现环境（如特征提取的详细步骤、环境依赖）可能需要进一步配置。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -151,10 +143,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了较为详细的模型结构描述、训练参数（优化器、学习率、batch size、epoch数等）和消融实验设置。但完整的代码、配置文件、预训练检查点及详细预处理步骤均未提供。
 - 论文中引用的开源项目：论文引用了两个NVIDIA的预训练语音基础模型作为主干：Canary-1B-flash和parakeet-tdt-0.6b-v2。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -205,10 +193,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了模型架构、训练策略（优化器、学习率、批大小、轮次等）、关键超参数（模型维度、MLP结构）以及评估指标，为复现提供了充分的信息框架。
 - 论文中引用的开源项目：主要依赖Phi-4-Multimodal [14]和Whisper [17]作为基础模型，并使用了LoRA [16]进行高效微调。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的自动口语语言评估（SLA）系统要么采用易产生误差传播的级联管道，要么使用只能处理短时音频的端到端模型，无法像人类考官那样整合整个测试会话的语篇级证据进行综合评分。
@@ -247,10 +231,6 @@ hiddenInHomeList: true
     3.  SimPO：用于偏好优化。
     4.  Speechocean762：作为主要训练和评估数据集。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

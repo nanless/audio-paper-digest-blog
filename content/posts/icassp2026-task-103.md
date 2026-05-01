@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了算法伪代码（Algorithm 1）和部分训练超参数（如学习率、早停步数），但未提供完整的训练配置、环境依赖、检查点或附录的详细说明。核心复现材料（代码）缺失。
 - 引用的开源项目：论文提到了作为骨干模型的MERT，以及用于对比的genreMERT、Short-chunk ResNet、M2D、AST-Fusion等模型，但未明确说明是否依赖或整合了这些模型的开源实现。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有的Learnable Counterfactual Attention (LCA)机制为引导注意力学习，依赖于多个损失项来满足复杂的反事实标准，导致超参数调优负担重、优化不稳定，且因标准模糊而难以跨数据集/任务迁移。

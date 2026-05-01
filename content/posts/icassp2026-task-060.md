@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 引用的开源项目/模型：`FAISS` (Facebook Research), `scikit-learn`, `igraph`, `Montreal Forced Aligner`。SSL模型来自Hugging Face模型库（HuBERT, WavLM, mHuBERT）。
 - 总体开源情况：论文本身未提供完整代码包，但其复现高度依赖并整合了现有的开源模型和工具，给出了清晰的组合和配置指南。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：论文研究在无监督词汇学习任务中，当获得理想的词边界（真实边界）时，最终诱导出的词汇质量仍不完美的原因究竟是源于语音段的表示方法不够一致，还是聚类方法本身不够强大。

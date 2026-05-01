@@ -114,10 +114,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了MaskGCT作为基线实现，以及DeepCache, LazyMAR, AudioCache等相关缓存工作的代码或思想。
 - 论文中提及了代码和音频样例的获取地址，因此有开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：基于掩码生成Transformer（MGT）的文本到语音（TTS）系统（如MaskGCT）虽然支持并行生成且质量高，但其迭代式反掩码过程需要数十步解码，导致推理计算成本高昂，难以实时部署。
@@ -165,10 +161,6 @@ hiddenInHomeList: true
 -   复现材料：提供了部分复现信息，包括训练硬件（A100 40GB）、训练时长、关键超参数（如梅尔谱维度、跳步大小、噪声调度等），但未提供完整的训练脚本、配置文件或检查点。
 -   论文中引用的开源项目：ParallelWaveGAN（用于HiFi-GAN实现）、wavefit-pytorch、FastDiff官方实现、Vocos官方实现、BDDM（用于噪声调度预测）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有神经声码器大多局限于GAN或扩散模型中的一种，难以统一；且原始的ConvNeXt声码器（如WaveNeXt）在多说话人场景下性能有限。
@@ -211,10 +203,6 @@ hiddenInHomeList: true
 - 引用的开源项目：g2p（音素转换）、Mimi编解码器、Montreal Forced Aligner (MFA)、CSM模型、ReDimNet说话人编码器、Llama架构。
 - 总体开源情况：论文提供了核心的推理代码和演示，但训练所需的完整复现材料（如预处理数据、详细训练配置、预训练模型权重）并未完全公开。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前流式文本转语音（TTS）系统存在较高的初始延迟（从输入文本到发出第一个音素的时间），或需要复杂的多阶段流水线，影响了实时交互体验。
@@ -249,10 +237,6 @@ hiddenInHomeList: true
 - Demo：提供了在线合成演示页面。
 - 复现材料：论文详细描述了两阶段训练流程、损失函数、奖励设计公式和主要超参数，这为复现提供了较好的理论指导。但缺乏训练脚本、具体配置文件和模型检查点。
 - 论文中引用的开源项目/工具：依赖的基座模型 Spark-TTS，情感识别模型 Emotion2vec，强制对齐工具 NeMo Forced Aligner，以及VAD预测器均为开源或已有工作。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -317,10 +301,6 @@ hiddenInHomeList: true
     - 工具：`pyannote.audio` (v3.0), `Whisper-large-v3`
     - 数据：`AIHUB` (https://aihub.or.kr/)
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：在神经TTS中，使用基于转录错误率（CER）和负对数似然（NLL）的强化学习（如GRPO）优化模型，虽然提升了语音识别准确性，但会导致生成的语音韵律单调、不自然（“韵律坍塌”）。同时，简单加入说话人相似度奖励会破坏训练稳定性。
@@ -374,10 +354,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的实现细节，包括模型基于CosyVoice1实现、训练硬件（8xA100）、优化器设置（Adam, 不同模块不同学习率）、批大小（32/GPU）、关键超参数选择（如N=10）等。未提供预训练配置文件或检查点说明。
 - 论文中引用的开源项目/模型：CosyVoice1/2（基线系统），emotion2vec（情感特征提取器），Whisper（用于WER计算）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 解决的问题：现有语音合成系统难以独立、高质量地控制“说话人身份”和“情感表达”，两者容易纠缠，且缺乏高质量的中文情感语音数据。
@@ -425,10 +401,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：论文引用了LeGUI（MATLAB包）用于电极定位可视化，LibROSA用于音频处理，以及Mamba的核心代码实现（参考文献[19, 20]）。
 - 总体开源情况：论文中提供了代码仓库链接，承诺了开源计划。但对于支持完全复现的详细训练配置和数据，公开计划不明确。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有从立体脑电图（sEEG）信号合成语音的方法存在两大局限：一是依赖固定的、预定义的频率频段，无法充分利用sEEG丰富的频谱信息；二是使用单一时间尺度的模型（如LSTM），难以捕捉语音产生过程中多层级的时间动态（如快速音素与慢速韵律）。
@@ -469,10 +441,6 @@ hiddenInHomeList: true
     - 评估工具：Paraformer-zh (来自FunASR[22]) 用于中文CER，WavLM[23]用于说话人嵌入提取。
     - 算法参考：GRPO [19] (源自DeepSeekMath)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有基于大语言模型（LLM）的文本到语音（TTS）模型在使用强化学习（RL）进行微调时，面临训练流程复杂（如PPO需要维护价值模型）、或依赖昂贵的偏好数据（如DPO）等问题。
@@ -507,10 +475,6 @@ hiddenInHomeList: true
 - 复现材料：论文描述了E-VOC的构建过程（文本生成、提示词设计、标注流程、质量控制协议），并提供了评估指标（表2，表3，表4）和结果图表（图1，图2），为复现其评估实验提供了必要信息。
 - 论文中引用的开源项目：引用了Parler-TTS（开源）、PromptTTS++（开源）、UniAudio（开源）的模型或代码库。评估中的其他依赖如CREPE（音高估计模型）、NRC Emotion Intensity Lexicon（情感词典）也是公开资源。
 - 论文中未提及开源计划：关于分析流水线（Analysis Pipeline）的具体代码，论文提到将公开，但未给出链接。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -568,10 +532,6 @@ hiddenInHomeList: true
     - 数据集构建相关：Qwen3-32B， Deepseek-R1， Qwen2-Audio-7B， ContextSpeech， NVSpeech170k。
     - 评估工具：Paraformerzh (FunASR工具包)， WavLM。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决现有“指令驱动语音合成”（InstructTTS）系统无法处理灵活、高层次的自然语言描述，只能依赖预定义声学属性标签的局限性。其核心方法是提出一个新的范式——OV-InstructTTS，并配套提出了一个由专用数据集OV-Speech和一个推理驱动的框架OV-InstructTTS-TEP组成的完整解决方案。与之前方法相比，新范式直接面向从叙事上下文中生成的开放式词汇指令，而新框架在合成前通过一个显式的“思考”步骤，将高层指令分解并推断出具体的情感、声学和副语言特征。主要实验结果表明，OV-InstructTTS-TEP在指令遵循度（Gemini Score 70.42， Gemini Rank 3.39/6）、语音自然度（MOS 4.28）和指令一致性（ICMOS 3.91）上均优于包括GPT-4o（API）和CosyVoice2在内的多个强大基线。该工作的实际意义在于推动TTS系统从“参数控制”向更直观的“意图控制”演进，提升用户友好性。其主要局限性在于数据集OV-Speech的构建过程高度依赖多个大型语言模型，可能引入偏差，且完全复现模型需要未公开的权重和更多硬件信息。
@@ -616,10 +576,6 @@ hiddenInHomeList: true
 - 复现材料：提供了一些关键训练细节（如GPU型号、学习率、epoch数、模型层数等），但缺乏数据预处理、代码框架、超参数搜索过程等完整复现所需的关键信息。
 - 论文中引用的开源项目：CosyVoice/2（语音tokenizer和声码器）、Whisper-Small（ASR）、RoBERTa-base（文本嵌入）、Qwen2.5-0.5B（LLM主干）。
 - 总结：论文中未提及开源计划，复现主要依赖公开的第三方模型和论文中提供的部分配置信息。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -672,10 +628,6 @@ hiddenInHomeList: true
     6.  emotion2vec-base：用于计算Emo SIM指标。
 - 论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：现有的情感文本到语音(TTS)方法，尤其是在扩散模型中，依赖粗粒度的情感标签或代理分类器，且仅在生成终点提供反馈，导致对情感和韵律等时变信号的监督信号稀疏、不充分。
@@ -714,10 +666,6 @@ hiddenInHomeList: true
 - Demo：未提及在线演示。
 - 复现材料：论文提供了详细的评测设置（如DS-WED使用的SSL层、聚类数）、基准测试所用的语音来源（LibriSpeech test-clean, Seed-TTS test-en），以及消融实验的具体配置。
 - 论文中引用的开源项目：Silero-VAD (用于语音活动检测)、HuBERT、WavLM (用于语音表示)、以及所评测的TTS系统（XTTS-v2, CosyVoice, MaskGCT, E2 TTS, F5-TTS, ZipVoice）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -774,10 +722,6 @@ hiddenInHomeList: true
 -   复现材料：论文提供了一定的训练细节（数据集、步骤、硬件、批大小、模型部分参数），但缺少完整的训练脚本、优化器配置、声码器训练细节等，信息不算充分。
 -   论文中引用的开源项目：论文基于F5-TTS框架，并引用了Whisper-large-v3用于WER评估，WavLM-large用于说话人嵌入提取。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的零样本语音合成（TTS）系统难以在合成语音时，独立且可控地改变背景声学环境（如从安静房间切换到嘈杂街道），特别是对于时间变化的环境。
@@ -823,10 +767,6 @@ hiddenInHomeList: true
 - Demo：提供了在线语音合成演示页面链接：https://test1562.github.io/demo/.
 - 复现材料：给出了部分训练细节（如优化器、学习率、batch size、训练步数、硬件），但未提供完整的训练配置文件、模型架构详细参数或检查点。
 - 论文中引用的开源项目：wav2vec 2.0 Base（特征编码器）、HiFi-GAN（vocoder）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -891,10 +831,6 @@ hiddenInHomeList: true
     - 扩散模型基础：引用了DDPM [7]和改进DDPM [23]。
 - 总体开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：当前基于多模态大语言模型（MLLM）的语音合成（TTS）方法依赖离散语音token，会丢失连续语音信号中宝贵的细粒度声学细节，限制合成自然度与保真度。
@@ -936,10 +872,6 @@ hiddenInHomeList: true
 - 复现材料：论文中提供了主要的训练超参数（优化器、学习率、批次大小、权重衰减）和部分预处理细节（STFT参数、F0提取算法）。但损失函数的具体权重、模型架构的详细尺寸、训练步数等关键信息未说明。
 - 论文中引用的开源项目：论文依赖公开的Harvest F0估计算法。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决神经声码器中存在的音高（F0）建模能力有限和相位重建不准确的问题，这两个问题直接影响合成语音的音高保真度和自然度。其核心方法是提出一个统一的神经声码器框架，包含三个关键组件：1）一个由F0引导的谐波注意力机制，用于在编码阶段增强对有声段和谐波结构的建模；2）一个直接预测复数频谱（实部和虚部）的解码器，以实现相位相干的波形重建；3）一个多目标感知训练策略，结合了对抗损失、频谱损失和相位感知损失。与依赖梅尔谱、相位信息丢失或需要后处理的现有方法（如HiFi-GAN, AutoVocoder）相比，该工作的创新点在于首次将F0引导的注意力机制与直接复数谱预测结合在一个端到端的框架中，从而同时、显式地提升音高精度和相位连贯性。在LJSpeech和VCTK数据集上的实验表明，该方法在所有评估指标上均优于HiFi-GAN和AutoVocoder等基线：F0均方根误差（F0-RMSE）相比HiFi-GAN降低了22%，浊音/清音错误率降低了18%，平均意见得分（MOS）提升了0.15分。其实际意义在于为更自然、更具表现力的语音合成（如情感语音、语音克隆）提供了更强大的声码器基础。主要局限性在于F0信息依赖外部算法提取，且论文未评估模型在F0预测不准时的��棒性，也未充分验证其声称的实时处理能力。
@@ -978,10 +910,6 @@ hiddenInHomeList: true
 -   Demo：是。论文提供了在线演示链接：`https://mortezaro.github.io/speech-cast/`。
 -   复现材料：论文给出了一些训练超参数（学习率、batch size等），但未提供完整的训练配置、检查点或详细的复现说明。
 -   论文中引用的开源项目：引用了WavTokenizer（分词器）、HuBERT（SSL编码器）、Gemma（语言模型骨干）等相关工作。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1025,10 +953,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：F5-TTS, Vocos, Whisper, Paraformer, FunASR, AdamW, ConvNeXt V2, DiT, WavLM。
 - 总结：论文提供了充分的复现技术细节和演示，但未明确公开训练/推理代码的仓库地址，这是复现层面最大的不确定性。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：基于流匹配的文本到语音（TTS）模型在实际应用中受制于缓慢的推理速度，且经典的分类器自由引导（CFG）方法与少步采样模型存在理论不兼容，导致在少步推理时难以平衡质量与效率。
@@ -1067,10 +991,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的模型架构描述、超参数设置（如层数、学习率、批次大小、损失函数权重）、训练硬件和时长等关键信息，有利于复现。
 - 论文中引用的开源项目：主要依赖和参考了Emilia数据集、ConvNeXt V2（用于文本编码）、Stable Audio的VAE架构、以及用于提取说话人嵌入的CAM++模型。
 - 总结：论文有明确的开源计划和部分复现信息，但开源信息（特别是代码链接和模型权重）在提供的PDF中不完整。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1136,10 +1056,6 @@ hiddenInHomeList: true
     - 声码器使用了HiFi-GAN [16]���
     - 语音识别使用了OpenAI的Whisper模型 [17]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决问题：表面肌电图（EMG）驱动的无声语音接口性能高度依赖传感器通道数量和位置，但减少通道会导致性能下降。本文旨在系统研究通道重要性，并缓解通道减少带来的性能损失。
@@ -1195,10 +1111,6 @@ hiddenInHomeList: true
     5.  FaceFormer：用于时序精修和音频驱动动画。
     6.  FFmpeg & Blender：用于最终渲染。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：当前3D说话头像生成存在两大瓶颈：一是生成管道碎片化、效率低且难复现；二是生成的头像眼部动态僵硬，呈现“死鱼眼”状态，严重损害真实感和可信度。
@@ -1247,10 +1159,6 @@ hiddenInHomeList: true
 - 复现材料：提供了较为详细的训练配置（数据集、优化器、学习率调度、batch size、训练轮数等）。代码仓库本身也是重要的复现材料。
 - 论文中引用的开源项目：SpeechBrain (用于提供HiFi-GAN基线), FlowDec (用于流匹配框架), Continual Inference Networks (用于流式推理参考)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：解决将梅尔频谱图实时流式地转换为高质量波形（即Mel声码）的问题，这是许多文本到语音（TTS）系统的关键环节，尤其适用于需要自然、实时交互的场景。
@@ -1284,10 +1192,6 @@ hiddenInHomeList: true
 - Demo：论文明确提供在线演示样本链接。
 - 复现材料：论文提供了代码、检查点和演示，训练细节（三阶段、超参数）在论文中有描述，但未提供详细的配置文件或训练脚本。
 - 论文中引用的开源项目：Whisper, BERT, WavLM, HuBERT, HiFi-GAN, webMUSHRA, Montreal Forced Aligner, YAAPT, wav2vec 2.0。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1353,10 +1257,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了数据合成流水线的每一步（Stage I-V），并提供了TTS和检测任务的训练超参数、优化器设置等，复现指导性强。
 - 论文中引用的开源项目：Whisper, SenseVoice, Paraformer, Stable Whisper, Deepseek V3, CAM++, SeedVC, CosyVoice2, F5-TTS, CLAP, RoBERTa, MMSU等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有副语言（如笑声、叹息）数据集存在规模小、标注不精确、不公开或分布不平衡等问题，限制了更自然语音生成和副语言事件检测技术的发展。
@@ -1396,10 +1296,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了一些实现细节（如基础模型、主要模块、分阶段训练思路、学习率），但缺少关键复现信息，如：完整的超参数配置、具体的数据预处理流程、评估脚本、以及用于推理的MS-CWD的具体参数设置。
 - 引用的开源项目：论文在方法中引用了多个开源工具/模型作为组件或基线，包括：Wan2.1 [28]（基础模型），Wav2Vec 2.0 [29]（语音编码器），uMT5 [30]（文本编码器），CLIP [31]（图像编码器），DWPose [22]（姿态提取）。在对比实验中引用了StableAnimator [33] 和 UniAnimate-DiT [20]。
 - 开源计划：论文中未提及任何开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1453,10 +1349,6 @@ hiddenInHomeList: true
     - 用于强制对齐的：`https://github.com/MahmoudAshraf97/ctc-forced-aligner`
 - 论文中未提及开源计划细节：如开源的具体时间、模型权重是否包含等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决可控文本转语音（TTS）系统中说话人音色与说话风格难以独立控制、容易相互纠缠的核心问题。论文提出了DMP-TTS，一个基于潜在扩散Transformer（DiT）的框架，其核心创新在于引入了三个关键技术：1）Style-CLAP：一个统一的多模态风格编码器，通过对比学习和多任务监督，将音频参考和文本描述映射到共享的风格嵌入空间；2）链式无分类器指导（cCFG）：一种训练时采用层级条件丢弃、推理时允许独立调节内容、音色和风格引导强度的机制；3）表示对齐（REPA）：利用预训练Whisper模型的特征来指导DiT中间层的学习，以稳定训练和加速收敛。实验基于一个约300小时的中文内部数据集，结果表明，DMP-TTS在风格控制准确性（情绪、能量、语速）上显著优于CosyVoice、CosyVoice2等开源基线，同时保持了有竞争力的自然度和清晰度。消融实验证实了多任务监督主要提升风格控制，REPA主要提升清晰度并加速收敛。该工作的实际意义在于为构建更灵活、自然的个性化语音交互系统提供了新的技术路径。其主要局限性包括：说话人相似度与部分基线仍有差距；高情感表现力会诱发音色变化，揭示了表现力与音色保真之间存在内在权衡；模型训练依赖于高质量、有标注的内部数据集。
@@ -1485,10 +1377,6 @@ hiddenInHomeList: true
 - Demo：提供了在线演示页面链接：https://lrwinr.github.io/RRPO-CosyVoice。
 - 复现材料：给出了关键的训练超参数（`ε`, `ε_adv`, `α`, 学习率）和硬件信息（8x A800），但缺少模型架构细节、训练日志和最终检查点。算法1详细描述了能量自适应混合（EAM）的流程。
 - 引用的开源项目：论文未明确列出其依赖的开源工具或模型，但提到了CosyVoice2作为基线模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1525,10 +1413,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
     1.  Montreal Forced Aligner (MFA) 用于对齐。
     2.  CosyVoice2：作为基础，用于语音词元器、语音解码器（条件流匹配解码器+HiFi-GAN）。
     3.  Llama 2：TMT的架构基础。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1569,10 +1453,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文提供了一些关键超参数（温度、推测长度、阈值范围）和模型规格（LLaSA-8B，3层草稿模型），但缺少完整的训练配置、代码和预训练权重，不足以支持完整复现。
 - 论文中引用的开源项目：引用了LLaSA [12]、Libri-heavy [14]、WavLM [16] 等，但未说明是否使用了其开源实现或权重。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1615,10 +1495,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文提供了关键的方法描述（WLI计算、蒸馏损失）、训练设置（数据量、GPU、epoch数）和评估指标。但部分训练超参数（如学习率、优化器）未说明，完整的训练脚本或配置文件未提供。
 - 依赖的开源项目：明确依赖并基于CosyVoice 2和LLaSA进行实验。引用了Whisper模型用于计算WLI，以及VERSA toolkit用于评估。
 - 总结：论文未明确声明开源全部复现材料（代码、权重、完整配置），但提供了基础模型和评估工具的链接，以及项目演示。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1663,10 +1539,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文中详细描述了模型架构、损失函数、训练策略（数据、硬件、批次大小）和关键超参数，提供了较好的文本复现指南。
 - 论文中引用的开源项目：明确基于Mimi[13]架构进行改进，并参考了SpeechTokenizer[12]的语义蒸馏方法、HiFi-Codec[21]的GRVQ思想，以及WavLM[10]用于语义蒸馏。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1716,10 +1588,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
     - 评估工具：Torchaudio-Squim [30], WavLM [33], TitaNet [34], WV-MOS [31], UTMOS [32]
     - DDM相关：D3PM [1], MDLM [2], ReMDM [4], Confidence-based Samplers [13, 14, 15]
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的TASTE语音token化框架依赖自回归（AR）解码器来重建语音，这导致推理速度慢，且重建质量可能非最优。
@@ -1761,10 +1629,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：提供了模型架构描述、关键超参数（如ED预测器的训练设置、TTS模型各组件维度）、数据集规模等信息。但未提供完整的训练脚本、配置文件或预训练检查点。
 - 论文中引用的开源项目：引用了CosyVoice、HiFi-GAN、3D-Speaker（用于说话人嵌入）、WavLM、UMAP等开源模型和工具。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：当前的情感语音合成（TTS）系统受限于数据集中的少量离散情感标签（如喜怒哀乐），无法覆盖人类丰富（理论上有约34000种）且微妙的情感光谱，导致生成语音的情感表达有限、不自然。
@@ -1803,10 +1667,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：给出了部分训练细节（优化器、batch size、epoch），但关键模型架构（基于CosyVoice2）和更详尽的超参数配置未说明，不足以完全复现。
 - 论文中引用的开源项目：明确提及并使用了emotion2vec（特征提取）、CosyVoice2（生成框架）、Montreal Forced Aligner (MFA)（对齐）、HiFi-GAN（声码器）、Whisper-Large-v3（WER评估）等开源工具或模型。
 - 整体开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1849,10 +1709,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 论文中引用的开源项目：列出了哪些依赖的开源工具/模型？
 - 如果论文中未提及，明确说明“论文中未提及开源计划”
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 用 5-8 句话总结这篇论文，必须覆盖：
@@ -1892,10 +1748,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：提供了TTS输入的文本内容（附录）。但未提供生成的TTS音频文件，也未提供PICSA算法的详细实现参数或工具。
 - 论文中引用的开源项目：提到了使用MaryTTS系统（开源），但未提供其在研究中使用的具体版本或配置。其余均为商业平台（Google, Amazon, Microsoft, Apple）或未开源的系统。
 - 总结：论文中未提及开源计划。复现该研究需要自行获取多个商业TTS平台的API，并独立实施或获取PICSA算法，门槛较高。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1941,10 +1793,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文给出了一些关键训练设置（优化器、步数、硬件、主要超参数），但未提供完整的配置文件、损失函数细节或预训练检查点，复现材料不够充分。
 - 论文中引用的开源项目：引用了Matcha-TTS [15], BigVGAN [12], VITS2 [3], MetricGAN+ [18] 等作为基线或组件。
 - 总结：论文在数据集开源方面有明确承诺，但模型和代码的开源计划未提及。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1995,10 +1843,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文提供了部分模型架构细节、超参数设置（如TTT的DiT层数、隐藏维度等）。但未提供完整的训练配置、检查点、或LLM指令生成的详细代码/模板。
 - 论文中引用的开源项目：CosyVoice [1,2]， F5-TTS [3]， DreamVoice [4]， NANSY++ [5]， Qwen3-Embedding [3.1.2节提及]， Cam++ [24]， Whisper [26]， BigVGAN [22]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：自动化多角色有声书生成面临两大挑战：如何从文本描述自动获取匹配角色的声音音色，以及如何根据叙事上下文生成情感表达丰富、语调自然的语音。
@@ -2047,10 +1891,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文给出了部分超参数（如α=1.2, N=30），并进行了相关消融实验，但缺少详细的推理脚本、环境依赖（如F5-TTS的具体版本）、以及构建ID原型的具体操作脚本等复现材料。
 - 论文中引用的开源项目：主要依赖F5-TTS（[5]）作为基座模型。评估中使用了ECAPA-TDNN（[31]）计算SIM，Whisper large-V3（[32]）计算WER，emotion2vec（[33]）计算SIM-Emo。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：零样本文本到语音（TTS）模型能高度逼真地模仿任意说话人的声音，这带来了严重的隐私和安全风险，可能导致未授权的语音生成。现有应对方案如水印（事后追溯）、语音匿名化（身份替换）和基于训练的遗忘（成本高、无法处理未见说话人）均存在不足。本文旨在提出一种高效、可扩展的“拒绝生成”机制。
@@ -2096,10 +1936,6 @@ SyncSpeech 巧妙地将自回归模型的“时序感”与非自回归模型的
 - 复现材料：论文给出了模型参数量（1.34B）、主要架构层数、优化器、初始学习率和GPU数量，但缺少学习率调度策略、训练步数/轮数、梯度裁剪等关键训练细节，复现材料不充分。
 - 论文中引用的开源项目：引用了多个开源模型（如CosyVoice2, ACE-Step, DiffRhythm+）和工具（如Resemblyzer, emotion2vec, Qwen2.5），但未提及是否在代码或模型中集成了其他特定开源项目。
 - 总结：论文中未提及开源计划（如代码、模型、数据的开源时间表）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2238,10 +2074,6 @@ InstructAudio整体架构示意图（图2）。
 - 论文中引用的开源项目：提到了WaveGrad [5]、HiFi-GAN [27]等作为基线或参考，但未明确列出本工作所依赖的开源代码库。
 - 开源计划：论文中未明确提及未来开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决基于扩散模型的声码器在条件梅尔频谱图与训练分布不匹配时性能下降且计算成本高的问题。其核心方法GLA-Grad++通过在扩散反向过程的早期，将神经网络预测的“干净语音”（预测y0）替换为从条件梅尔频谱图中通过一次Griffin-Lim算法（GLA）恢复的音频信号（˜x），来引导生成过程。与先前工作GLA-Grad（在多个扩散步骤中重复应用GLA）相比，本方法仅在扩散开始前应用一次GLA，显著加速了生成。实验表明，GLA-Grad++在感知语音质量（PESQ）和短时客观可懂度（STOI）上持续优于WaveGrad和GLA-Grad基线，尤其在未见过的说话人（VCTK数据集）场景下优势明显。例如，在VCTK上，GLA-Grad++的PESQ得分（3.772）相比WaveGrad（3.453）提升了约9.2%。该工作的实际意义在于为扩散声码器提供了一种无需重新训练、即插即用的增强方案，能有效提升合成语音在跨领域场景下的稳定性和质量。其主要局限性是方法性能（尤其是阶段切换点）对单个音频文件可能存在依赖性，论文建议未来可自适应选择最佳切换点。
@@ -2280,10 +2112,6 @@ InstructAudio整体架构示意图（图2）。
     - Paraformer-zh：用于中文WER计算。
     - WavLM：用于说话人嵌入提取，计算SIM-o。
 - 论文中未提及开源计划：除Demo链接外，论文正文未明确承诺未来将开源代码或模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2326,10 +2154,6 @@ InstructAudio整体架构示意图（图2）。
     - 语音识别：Whisper large-v2
     - 数据处理：WhisperX, DEMUCS
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：条件生成模型（如TTS）训练时，数据集中的错误标签（噪声标签）会严重损害模型性能，而人工清洗大规模数据集成本高昂。
@@ -2364,10 +2188,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：论文中给出了部分训练细节（如数据集、迭代步数、GPU型号），但缺失关键超参数（模型维度、完整优化器配置）和训练时长，复现材料不充分。
 - 论文中引用的开源项目：依赖的开源项目/模型包括F5-TTS、HiFi-Codec、Whisper-large-v3、WavLM-large、UTMOS。
 - 整体开源情况：论文中未提及全面的开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2416,10 +2236,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：提供了模型架构描述、关键超参数（层数、维度、帧率、码本数）、采样设置（CFG, top-k, 温度, MaskGIT步数）和评估细节，但未提供完整的训练配置（如学习率调度、batch size）、检查点或附录。
 - 论文中引用的开源项目：引用了NanoCodec [11]（未提及是否开源）、Parakeet-TDT-1.1b [17]（开源ASR模型）、TitaNet-Large [18]（开源说话人嵌入模型）、UTMOSv2 [20]（未提及开源）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决基于大语言模型的语音合成系统中，多码本声学码预测所面临的依赖性建模与解码效率的矛盾。方法核心是引入一个轻量的“局部Transformer”来替代传统的并行预测头，该LT以迭代方式（自回归或MaskGIT）对单帧内的多个码本进行依赖性建模；同时，利用LT分担计算负载，让主Transformer预测多帧（帧堆叠），从而提升整体吞吐率。与已有方法相比，新在系统性地评估了两种LT架构（AR与MaskGIT）与不同帧堆叠因子的组合，并在控制模型总参数量的前提下进行了公平比较。主要实验结果显示：1）所有LT模型在Fréchet Distance（FD）指标上均优于并行预测基线；2）使用AR LT且堆叠因子为2时，在SSIM（0.757 vs 0.695）和MOS（3.70 vs 3.46）上与基线持平或更优，同时速度快2.1倍；3）堆叠因子为4时，AR LT仍能保持较好的MOS（3.71），而MaskGIT的MOS显著下降（3.41）。实际意义在于为工业部署提供了明确的指南：质量优先选AR LT（无堆叠），速度与质量平衡选2x堆叠AR LT，极致速度可选4x堆叠LT。主要局限性是MaskGIT方法在高堆叠因子下性能不稳定，且研究未涉及与最新SOTA TTS模型的横向对比。
@@ -2457,10 +2273,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：未提供在线演示链接。补充材料页面可能包含音频样本，但不是交互式Demo。
 - 复现材料：论文提供了详细的训练超参数（学习率、优化器、批次大小等）和硬件信息（32张A100），复现基础模型训练可能可行。但ARDM-DPO训练所必需的、经过精心筛选的偏好数据集未公开，是复现的主要障碍。
 - 论文中引用的开源项目：DiTAR模型（基于ARTransformer）、Whisper-large-v3（用于WER）、Paraformer-zh（用于CER）、WavLM-TDCNN（用于说话人相似度计算）、Seed-TTS-Eval2（评估工具包）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2512,10 +2324,6 @@ InstructAudio整体架构示意图（图2）。
 - 引用的开源项目：论文引用并基于以下开源工作：FLAME (3DMM模型)、SMIRK (表情预测)、MICA (形状估计)、3DDFA (姿态估计)、Wav2Lip (运动专家预训练模型)、PIRenderer (神经渲染器)、DiT (扩散模型架构)。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的音频驱动说话脸生成方法存在“说话风格”与“语义内容”在面部运动中纠缠的问题，导致将一个人的风格迁移到新的语音内容时，唇形同步精度下降，面部运动不自然。
@@ -2550,10 +2358,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：论文提供了实验设置（数据集、属性提取方法、模型架构参数、训练轮数、硬件）和部分超参数（如τ=0.5）。但未提供完整的训练脚本、配置文件、损失函数权重细节或预训练检查点。
 - 论文中引用的开源项目：CREPE [27]（音高提取）、ECAPA-TDNN [28]（说话人编码器）、HiFi-GAN [22]（声码器）、CLUB [36]（互信息估计）、SQUIM [31]（评估工具）。
 - 复现材料评价：提供了中等程度的复现信息，有代码示例和基本设置，但缺少一键复现的完整包。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2593,10 +2397,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：论文提供了实验设置的关键细节（如标注员要求、黄金测试题机制、模型推理硬件），但缺乏构建评测集自动化工具的完整代码和配置。
 - 论文中引用的开源项目：Ultimate Vocal Remover (UVR), WhisperX, pyannote-audio, NLTK, GPT-4o-mini, WavLM-TDNN。被评估的TTS模型代码来自其各自的官方GitHub仓库。
 - 开源计划总结：数据集开源，但完整的评测工具链未开源。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2639,10 +2439,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：未提及。
 - 复现材料：未给出详细的训练超参数、配置文件或检查点。
 - 引用的开源项目/模型：论文中明确提及并依赖了以下开源工作：WavLM、X-Vector、Llama-3.1、TextrolSpeech数据集、SpeechCraft数据集、LibriTTS-P数据集。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2692,10 +2488,6 @@ InstructAudio整体架构示意图（图2）。
 - 论文中引用的开源项目：WavTokenizer [21]， Encodec [20]， Whisper-large-v3 [29]， Matcha-TTS [18]， Lina-Speech [6]， EMAGE [8]， CAMN [9]， RAG-Gesture [32]。
 - 总结：论文公开了演示和详细的技术细节，但未提供核心的开源代码和模型，因此复现门槛较高。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：当前生成语音和伴随手势的多模态系统大多采用级联（先语音后手势）的方式，导致两者同步性弱、韵律对齐不足，且不符合人类通信中多模态协同产生的心理语言学原理。
@@ -2736,10 +2528,6 @@ InstructAudio整体架构示意图（图2）。
 🔗 **开源详情**
 
 论文中未提及任何开源计划。代码、模型权重、数据集（除使用公开LibriTTS外）、Demo或详细复现指南均未提供。论文中引用的开源项目包括CosyVoice 2 [4]、LibriTTS [11]、ERes2Net [12] 和 UTMOS [13]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2784,10 +2572,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：论文提供了部分训练细节（如损失函数、权重、学习率、两阶段策略、数据增强方法）、关键超参数（层数、维度）和消融实验设置，但未提供完整的配置文件、检查点或训练日志。
 - 论文中引用的开源项目：引用了Google的XNNPACK推理框架和PyTorch的TorchAO量化库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有流式神经音频编解码器（如Mimi）的解码器因其反卷积层在移动CPU（如XNNPACK框架）上计算效率低下，导致在手机端部署实时TTS时存在严重的延迟瓶颈（42.1ms生成一个80ms音频帧）。
@@ -2831,10 +2615,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：论文提供了一个在线演示页面链接：`https://i17oonaka-h.github.io/projects/research_topics/wave_trainer_fit/`。
 - 复现材料：论文提供了主要超参数（如λGuide, λPM, 训练步数），但未提供完整的训练配置（如优化器、学习率策略）。部分实现细节（如编码器结构修改）在正文有说明，但完整配置可能需参考其代码仓库及所基于的WaveFit开源实现。
 - 论文中引用的开源项目：WaveFit, RestoreGrad, DCUnet, SpeechBERTScore, Harvest F0估计器, ECAPA-TDNN, SpeechBrain。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2893,10 +2673,6 @@ InstructAudio整体架构示意图（图2）。
 - 论文中引用的开源项目：CosyVoice（骨干模型）、Whisper-Large-v3（ASR评估）、WavLM-Base（SpkSIM计算）、DNSMOS（质量评估）、emotion2vec（情感识别评估）。
 - 总结：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文针对情感语音合成中模型难以直接建模情感特有潜在动态的问题，提出了EmoShift框架。其核心是在基于LLM的TTS模型中引入一个名为EmoSteer的轻量层，该层为每种目标情感学习一个特定的转向向量，用于在输出嵌入空间中捕获相对于中性表达的潜在偏移量。与以往通过缩放固定情感嵌入或依赖外部指导的方法不同，EmoShift直接学习并注入情感特异性的激活偏移，实现了更精确和一致的控制。在ESD数据集上的实验表明，EmoShift以仅10M的可训练参数，在情感分类准确率（如整体从69.68%提升至74.26%）和主观情感评分（Emo-MOS从3.67提升至3.96）上均优于零样本和全参数微调基线。此外，分析显示，通过在推理时调整缩放因子α，可以平滑调节情感强度。该方法的意义在于提供了一种参数高效、可解释且即插即用的情感控制方案。主要局限性在于实验仅在单一英文数据集和有限的五种情感上进行验证。
@@ -2931,10 +2707,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：提供了在线演示页面（与代码链接相同）。
 - 复现材料：给出了E-Vector和LoRA的关键超参数（α， r），但未提供完整的训练配置、检查点或附录。
 - 论文中引用的开源项目：依赖于F5-TTS模型。此外，评估使用了Seed ASR和3D-Speaker模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -2987,10 +2759,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：提供了在线语音样本演示页面（https://sav-eng.github.io/icassp_samples.html）。
 - 复现材料：提供了代码实现规则。训练细节、模型配置等未提供，因为论文主要使用预训练模型进行合成与分析。
 - 论文中引用的开源项目：Misaki G2P， Kokoro TTS， Vox-Profile， Wav2Vec2Phoneme， UTMOS。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -3064,10 +2832,6 @@ InstructAudio整体架构示意图（图2）。
 - 论文中引用的开源项目：文中引用的开源工具/模型包括：espeak-ng, ECAPA-TDNN, Whisper, pyannote, Silero VAD, CED Base, SeamlessM4T, One-TTS-Alignment, Flux.1, VITS, F5-TTS, NVSR, BigVGAN, AudioSR, ConvNeXt V2-P, ReDimNet。
 - 整体开源计划：论文中未明确提及未来的开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的基于流匹配（Flow-Matching）的TTS系统面临三个核心挑战：需要在稳定性（时长可控）和自然性（流畅度）之间做权衡；跨语言语音克隆能力较弱，无法有效利用长语音提示且容易跳词；从低帧率梅尔特征重建高保真48kHz波形的质量有待提升。
@@ -3121,10 +2885,6 @@ InstructAudio整体架构示意图（图2）。
 - Demo：未提及。
 - 复现材料：论文中给出了相对详细的训练超参数、数据划分、硬件信息和评估指标，但未提供预训练模型、完整配置文件或复现脚本。
 - 论文中引用的开源项目：引用了HiFi-GAN（作为对比基线或参考），以及HuggingFace Diffusers库中的UNet2D模型作为解码器骨干。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -3203,10 +2963,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：论文详细描述了模型架构、训练数据（规模）、超参数（模型维度、层数、帧率、块大小、采样器设置等）、损失函数构成、评估指标和基线模型，提供了较高的可复现信息。
 - 论文中引用的开源项目：引用了Qwen2（文本嵌入）、SenseVoice-Large（ASR编码器）、3D-Speaker（说话人编码器）、HiFTNet（声码器）、Whisper/Paraformer（评估工具）等开源工作。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文提出了MELA-TTS，一种用于端到端文本到语音合成的联合Transformer-扩散模型框架。其旨在解决离散token方法存在的信息损失和多阶段流水线复杂性问题，以及现有端到端连续特征生成方法在内容一致性和训练收敛速度上的不足。方法的核心是自回归Transformer解码器生成连续向量作为条件，由扩散模型生成梅尔谱图块，并引入表示对齐模块，将Transformer解码器的输出与预训练ASR编码器的语义表示进行对齐，以增强语义一致性。与已往方法相比，新在：1）提出无需离散化的端到端连续特征生成框架；2）提出表示对齐模块作为核心创新，以预训练ASR语义特征作为对齐目标，而非梅尔谱图本身；3）统一支持流式和非流式合成。主要实验结果显示：在LibriTTS消融实验中，表示对齐将WER从6.3降至5.3，并加速训练超过3.3倍；在17万小时大规模数据上，MELA-TTS在测试集test-zh上的CER（0.9）优于使用相同数据的CosyVoice 3.0（1.3），在test-en上的WER（2.4）与DiTAR（1.7）可比，但说话人相似度（SS1/SS2）在英文测试集上低于CosyVoice系列。实际意义是为TTS领域提供了一种有竞争力的、基于连续特征的端到端新范式，特别在内容一致性和训练效率上有所提升。主要局限性是声音克隆的说话人相似度仍有优化空间，作者指出这可能源于扩散模块仅利用局部上下文，无法像多阶段系统那样访问全部历史token。
@@ -3238,10 +2994,6 @@ InstructAudio整体架构示意图（图2）。
 - 复现材料：给出了训练硬件（4×V100 16G）、批次大小（每GPU 16）、迭代次数（200万）、优化器（AdamW，具体超参数）、学习率调度（余弦衰减）等关键信息。
 - 论文中引用的开源项目：引用了并基于以下开源项目进行对比和集成：HiFi-GAN， BigVGAN， Vocos。
 - 其他：论文中未提及更详细的开源计划（如训练配置文件、检查点等）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

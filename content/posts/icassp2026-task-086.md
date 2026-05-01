@@ -55,10 +55,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的训练设置（数据集构成、超参数、硬件、优化器等）和算法伪代码（Algorithm 1），为复现提供了关键信息。
 - 论文中引用的开源项目：SpeechBrain（用于语言识别）、Silero VAD（用于VAD分块）、dvector提取器（基于Res2Net，具体实现未说明）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：联合自动语音识别（ASR）与说话人分离（“谁在什么时间说了什么”）在长音频上的流式处理是一个重大挑战，现有端到端模型通常局限于短音频，而处理长音频的级联系统存在错误传播问题。
@@ -114,10 +110,6 @@ hiddenInHomeList: true
     - WavLM (自监督预训练模型)
     - VoxCeleb2 (训练数据集)
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：端到端神经与向量聚类结合的说话人日志化框架（EEND-VC）中的聚类阶段（传统上使用层次聚类AHC）仍有改进空间，尤其是在说话人数量多、单人语音片段短的复杂场景下。
@@ -166,10 +158,6 @@ hiddenInHomeList: true
   - WPE [33]
   - BeamformIt [34]
 - 论文中未提及开源计划以外的其他内容。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -237,10 +225,6 @@ hiddenInHomeList: true
     - 优化工具：scikit-optimize (用于聚类超参数搜索)
     - 基线模型：Pyannote.audio (https://github.com/pyannote/pyannote-audio)
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有端到端神经说话人日志方法（如基于Pyannote的）在建模长音频序列时面临计算效率与记忆开销问题，且在说话人切换边界处的预测不稳定，导致迪亚化错误率（DER）升高。Conformer模型在长序列上存在计算瓶颈，Mamba模型则可能牺牲局部细节。
@@ -288,10 +272,6 @@ hiddenInHomeList: true
     - WavLM：微软的预训练自监督语音模型，用作前端特征提取器。
 - 论文中未提及开源计划：未说明。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文针对目标说话人语音活动检测（TS-VAD）在多样真实数据集上缺乏全面评估的问题，提出了一种基于注意力编码器-解码器的网络（AED-TSVAD）。该方法的核心是使用Conformer编码器和标准Transformer解码器，并创新性地引入了一个轻量级门控机制，将解码器的线性投影输出与基于点积的吸引子风格分数进行动态融合。与已有方法相比，其新意在于：1) 设计了一个更简洁、易于复现并与EEND-VC方法公平对比的架构；2) 提出的门控融合增强了模型的表达能力；3) 建立了一套从模拟数据预训练到真实数据微调的复合训练策略。主要实验结果表明，在采用WavLM-Base+前端和强初始化系统的情况下，AED-TSVAD在AliMeeting, AISHELL-4, NOTSOFAR-SC, DIHARD-2和DIHARD-3等5个数据集上达到了报告时（2025年8月）的SOTA水平。例如，在使用r-vector和SP-DiariZen-Base+初始化时，WavLM-Base+前端模型在AliMeeting上的DER为11.1%，在DIHARD-2上为20.7%。论文的实际意义在于推动了TS-VAD方法在复杂、多样化场景下的标准化评估和可复现研究。主要局限性是模型对说话人数超过固定上限（如N=10）的场景（如VoxConverse）泛化能力不足，且其性能高度依赖初始化系统的质量。
@@ -322,10 +302,6 @@ hiddenInHomeList: true
 -   Demo：未提供在线演示。
 -   复现材料：提供了模型架构图（图2,3,4）、主要超参数范围（α）、训练策略描述。但未提供完整的训练配置、超参数列表、检查点或附录。
 -   论文中引用的开源项目：引用了MISP 2025 AVSD Baseline [23]、RetinaFace [24]、ECAPA-TDNN [8]、Dover-Lap [32]、Mixup [33]、Silero VAD [30]、WeSpeaker [31]、Kaldi [29]、Pyannote [2] 等开源工具或模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -361,10 +337,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了一些关键实现细节（如使用的具体VAD工具、SD系统名称），但缺乏训练流程、超参数配置等核心复现信息。
 - 论文中引用的开源项目：PyAnnote Audio 3.1, Wespeaker, Silero VAD, WebRTC VAD, Whisper large-v3。
 - 总结：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -417,10 +389,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了WPE的主要参数（窗长、滤波器长度、延迟、迭代次数）和用于比较的窗口大小。但未提供LDA训练所用开发集的构成、分布参数估计细节、以及基线x-vector系统的完整复现信息。
 - 论文中引用的开源项目：提到了用于生成模拟房间响应的Image Method（[43]）以及x-vector基线系统（ReNet-101， [36]）。但未明确说明是否直接使用了这些项目的代码。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对单麦克风音频源位置区分问题，提出了一种基于房间混响晚期拖尾估计的统计判别方法。核心思想是利用WPE去混响滤波器的特性，该滤波器主要建模与房间几何形状相关且相对稳定的混响晚期成分。论文假设，如果两个音频片段来自同一位置，其对应的WPE滤波器在幅度和相位（反映延迟） 上应相似。方法通过估计滤波器间的幅度差异（α̂）和延迟差异（d̂），并计算在“同源”与“异源”假设下的对数似然比，最后使用LDA融合两个分数得到最终判别得分。
@@ -462,10 +430,6 @@ hiddenInHomeList: true
 - 复现材料：提供了部分训练细节，如ASR和说话人模型的参数量、冻结策略、LoRA学习率、文本维度、相似度阈值。但关键组件（如ASR转向点标注方法、说话人模型训练数据、融合模型的具体损失函数）信息不足。
 - 论文中引用的开源项目：引用了Conformer (ASR编码器)、RepVGG (说话人提取器骨干)、LoRA (LLM微调)等通用技术或模型，但这些并非其专属的开源复现材料。
 - 开源计划：论文中未提及任何开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

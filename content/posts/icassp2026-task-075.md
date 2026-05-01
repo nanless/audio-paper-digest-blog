@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：给出了部分训练细节（如两阶段训练、学习率、epoch数、α值），但未提供完整的配置文件、检查点或详细的超参数列表。
 - 论文中引用的开源项目：ESPnet， HiFi-GAN（ParallelWaveGAN）， ECAPA-TDNN（SpeechBrain）， WavLM， Qwen2.5， Llama-3.2等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有的离散语音token（声学token和语音学token）要么保留过多冗余声学信息（如说话人身份），要么过度抽象丢失关键的韵律信息，都不适合作为语音语言模型（speechLMs）的理想输入。

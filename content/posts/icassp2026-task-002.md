@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：依赖预训练词嵌入`glove-wiki-gigaword-100`和预训练语音模型`wav2vec2-base-960h`。
 - 总体：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有神经主题模型（NTMs）主要局限于文本输入，忽略了语音中丰富的语义和副语言信息。同时，基于文本的多模态主题建模也较少探索语音这一关键模态。

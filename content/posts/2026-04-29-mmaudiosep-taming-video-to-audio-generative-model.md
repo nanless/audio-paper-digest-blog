@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音分离 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 MMAudioSep: Taming Video-to-Audio Generative Model Towards Video/Text-Queried Sound Separation
+
+#语音分离 #流匹配 #多模态模型 #预训练 #迁移学习
+
+🔥 **8.0/10** | 前25% | #语音分离 | #流匹配 | #多模态模型 #预训练
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Akira Takahashi（Sony Group Corporation, Japan）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Akira Takahashi（Sony Group Corporation, Japan）、Shusuke Takahashi（Sony Group Corporation, Japan）、Yuki Mitsufuji（Sony Group Corporation, Japan & Sony AI, USA）
 
 #
+
 ### 💡 毒舌点评
 
 亮点在于极具创意地“废物利用”，让一个“造声音”的生成模型去干“分声音”的分离活儿，还干得不错，这种跨任务的知识迁移思路本身就很值钱。短板则在于，用生成模型的评价体系（FAD, CLAP）来评判分离任务的好坏，如同用“饭菜香气”来评价厨师刀工是否精准，方法论的适配性有待更深入的讨论；另外，模型在分离后“不忘本”的生成能力验证也略显粗糙。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中提供了代码仓库链接：`https://github.com/sony/mmaudiosep`。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
 - 复现材料：论文提供了架构图、关键超参数（如ODE步数、引导强度）和训练策略的大致描述，但缺少如学习率、batch size、具体训练步数等关键复现细节。复现强依赖于预训练的MMAudio模型。
 - 论文中引用的开源项目：主要依赖于MMAudio（预训练模型）、CLIP、Synchformer、BiGVGAN（声码器）、AudioSep（评估数据集）、以及用于评估的av-benchmark工具。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：传统声音分离模型通常基于判别式方法，而近期基于生成模型的声音分离也开始出现，但与同样使用生成模型的视频到音频（V2A）任务发展相互独立。本文旨在探索能否利用强大的预训练生成模型知识来提升分离任务。
@@ -53,18 +63,19 @@ hiddenInHomeList: true
     | MMAudio-L-44k (基础) | 0.97 | 17.40 | 33.22 |
     | MMAudioSep (pretrain w/frozen) | 1.76 | 14.99 | 30.35 |
 
-    ![图4：频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462711-3.png)
+    ![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
     图4展示了MMAudioSep与AudioSep的分离结果对比，其生成的频谱在细节和伪影方面表现更优。
 
 5.  实际意义：该研究证明了将基础生成模型微调用于下游感知任务的可行性，为“一个基础模型，多种音频任务”的范式提供了有力证据，可能推动音频领域基础模型的发展。
 6.  主要局限性：1) 评价体系偏向生成质量，对分离的保真度度量不足；2) V2A能力保留的验证方法简单，未分析生成音频中“噪声”残留的问题；3) 模型训练依赖大规模预训练模型，复现成本高。
 
 #
+
 ### 🏗️ 模型架构
 
 MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于流匹配（Flow Matching）的多模态Transformer网络（MM-DiT）。
 
-![图2：MMAudioSep架构概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462711-1.png)
+![图2：MMAudioSep架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-1.png)
 图2展示了MMAudioSep的完整架构，其核心是在MMAudio基础上修改了音频投影层。
 
 输入输出流程：
@@ -78,10 +89,11 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 *   MM-DiT：核心网络，通过自注意力机制融合视频、文本和音频（混合音频+噪声）特征。使用自适应层归一化（adaLN）注入全局的视频/文本条件。
 *   通道拼接条件机制：这是将生成模型改造为分离模型的关键。它将混合音频`x_m`作为一个不变的条件通道与需要生成的目标音频的噪声`x_0`并行输入。在流匹配的前向过程中，噪声仅添加给目标通道`x_0`，而混合音频通道`x_m`保持不变。这类似于用混合信号来“指导”生成过程，从而分离出目标源。
 
-![图3：通道拼接条件机制](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462711-2.png)
+![图3：通道拼接条件机制](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-2.png)
 图3详细说明了通道拼接机制：噪声`x_0`和混合音频潜在向量`x_m`沿通道维度（C）拼接，一同输入网络。训练时，损失仅计算在目标音频通道上。
 
 #
+
 ### 💡 核心创新点
 
 1.  跨任务迁移范式：首次成功地将一个大规模预训练的视频到音频生成模型通过微调转变为视频/文本查询的声音分离模型。这打破了生成和分离任务长期独立发展的壁垒，证明了生成模型中蕴含的丰富多模态知识可以有效服务于感知任务。
@@ -90,6 +102,7 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 4.  生成式评价指标应用于分离：采用更适合生成模型的FAD、CLAP等指标来评估分离质量，补充了传统SDR等指标的不足，更关注分离结果的语义保真度和整体分布，这为评估生成式分离模型提供了更合适的框架。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：使用与预训练MMAudio相同的数据集，总计约2500小时。包括400小时的视频-音频-标签数据（VGGSound）和2100小时的音频-文本数据（AudioCaps, Clotho, WavCaps），后者裁剪为8秒片段共约951K对。
@@ -101,6 +114,7 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 - 正则化或稳定训练技巧：论文中未提及额外技巧，主要依赖冻结预训练参数来稳定训练。
 
 #
+
 ### 📊 实验结果
 
 主要Benchmark与数据集：
@@ -121,10 +135,11 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 不同条件下的结果：
 论文展示了仅使用文本查询和结合视频+文本查询的结果。结合视频查询通常能带来性能提升，尤其是在音视频同步性（DeSync）和语义对齐（IB-Score, CLAP-A）上，这符合多模态信息互补的预期。
 
-![图4：频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462711-3.png)
+![图4：频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462711-3.png)
 图4直观展示了分离质量的对比。与AudioSep相比，MMAudioSep分离出的“教堂钟声”频谱在细节保留和伪影抑制方面看起来更优，与Ground Truth更接近。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：创新性显著，提出了将生成模型迁移到分离任务的新颖范式。技术方案（通道拼接）设计合理。实验在主要任务上对比了相关基线，并提供了消融研究。证据较可信。扣分点在于：1）实验主要依赖生成式指标，与分离任务的传统评估标准（如SDR）脱节；2）对生成能力保留的验证深度不足；3）模型训练依赖于一个未完全公开的庞大预训练模型，限制了可复现性和独立验证。
@@ -132,3 +147,8 @@ MMAudioSep的架构基于预训练的MMAudio生成模型，整体是一个基于
 - 开源与复现加成：0.5/1：提供了代码仓库链接，这是一个重要的积极信号。然而，论文未明确模型权重是否公开、数据集如何获取、完整的训练超参数和配置，使得从零复现较为困难，需要大量额外工作。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

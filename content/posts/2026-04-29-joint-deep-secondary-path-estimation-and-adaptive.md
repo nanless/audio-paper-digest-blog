@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音增强 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Joint Deep Secondary Path Estimation and Adaptive Control for Active Noise Cancellation
+
+#语音增强 #端到端 #实时处理 #深度学习 #信号处理
+
+✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #实时处理 #深度学习
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Fareedha (National Institute of Technology, Warangal, Telangana, India)
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Fareedha (National Institute of Technology, Warangal, Telangana, India)、Vasundhara (National Institute of Technology, Warangal, Telangana, India)、Asutosh Kar (Birmingham City University, Birmingham, UK)、Mads Græsbøll Christensen (Aalborg University, Denmark)
 
 #
+
 ### 💡 毒舌点评
 
 论文将深度学习中的估计与控制模块“缝合”得相当流畅，消融实验做得很扎实，有力地证明了注意力机制和双向LSTM在其中的价值。然而，核心创新更多是工程层面的集成优化，而非方法论的革新；且实验场景（主要是飞机噪声）稍显单一，要宣称在“动态环境”下鲁棒，或许还应挑战更多极端的非平稳声学条件。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接或开源计划。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
 - 复现材料：论文给出了部分训练细节（如优化器、学习率、帧长）和模型架构参数（如表1），但未提供完整的配置文件、训练脚本或检查点。
 - 论文中引用的开源项目：论文引用了PyTorch作为实现框架，并引用了多个基线方法的论文（如SFANC， GFANC），但未明确列出依赖的具体开源代码库。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 要解决什么问题：传统主动噪声控制（ANC）系统依赖自适应滤波器，其二次路径估计（SPE）收敛慢且难以适应快速变化的声学环境；而现有基于深度学习的ANC方法通常假设二次路径固定，限制了其实际应用。
@@ -44,6 +54,7 @@ hiddenInHomeList: true
 6. 主要局限性是什么：论文的评估主要集中在飞机噪声场景和合成/模拟的脉冲响应上；缺乏在更复杂、非平稳的真实世界噪声环境（如办公室突变噪声、街道交通噪声）中的广泛验证。此外，模型完全依赖合成数据训练和评估，与真实部署可能存在的差距尚未充分探讨。
 
 #
+
 ### 🏗️ 模型架构
 
 本文提出的系统由两个核心深度学习模块（DeepSPE 和 ANC-Net）以及一个传统的子带滤波器选择机制构成，整体架构如图3所示。
@@ -71,13 +82,14 @@ hiddenInHomeList: true
     *   抗噪声信号 `ŷ(n)` 由 `y(n)` 与 预测的 二次路径 `Ŝ(z)` 卷积生成。
     *   残余误差 `e(n)` 为原始噪声 `d(n)` 与 `ŷ(n)` 之差，该误差被反馈用于在线更新ANC-Net（如算法1所示）。
 
-![图2：ANC-Net控制器模块图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461474-1.png)
+![图2：ANC-Net控制器模块图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461474-1.png)
 图2详细展示了ANC-Net的内部结构，包括卷积层、SE模块、BiLSTM、多头注意力以及最终生成二进制权重向量的过程。
 
-![图3：完整的端到端ANC系统框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461474-2.jpg)
+![图3：完整的端到端ANC系统框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461474-2.jpg)
 图3展示了整个系统的信号流和模块集成方式，清晰地标明了DeepSPE和ANC-Net如何协同工作，并与传统的参考麦克风、误差麦克风、主路径、次路径等声学组件交互。
 
 #
+
 ### 💡 核心创新点
 
 1.  联合估计与控制的端到端框架：是什么：将二次路径估计（SPE）和抗噪声控制信号生成两个通常分离的任务，整合到一个统一的、由数据驱动的端到端系统中。之前局限：传统方法将SPE和控制滤波器更新解耦，需要迭代适应；现有深度学习ANC方法假设SPE固定。如何起作用：DeepSPE的输出直接作为ANC-Net的输入之一，引导控制器根据当前估计的声学路径动态调整策略。收益：消除了迭代适应的收敛时间，提高了对动态环境的响应速度。
@@ -85,6 +97,7 @@ hiddenInHomeList: true
 3.  融合多种机制的深度学习组件设计：是什么：在DeepSPE和ANC-Net中，有针对性地融合了CNN（捕获局部模式）、RNN/BiLSTM（建模长期依赖）和注意力机制（聚焦关键信息）。之前局限：单一结构（如纯CNN或纯RNN）可能无法全面建模复杂的声学信号和路径特征。如何起作用：例如，BiLSTM处理序列上下文，注意力机制帮助网络忽略不相关的时间段。收益：消融实验（表2， 表3）定量证明了每个组件对最终性能的贡献，增强了模型的可解释性和有效性。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -104,6 +117,7 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：未明确说明。模型架构中使用了ReLU激活函数和Batch Normalization（如图2所示）。
 
 #
+
 ### 📊 实验结果
 
 论文在三个层面进行了评估：二次路径估计性能、控制器性能以及端到端系统性能。
@@ -121,7 +135,7 @@ hiddenInHomeList: true
 
 表2总结：DeepSPE在精度上大幅领先传统自适应方法。消融研究证明，去除注意力机制和BiLSTM会导致性能显著下降，验证了多组件集成设计的有效性。
 
-![图4：二次路径脉冲响应估计对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461474-3.png)
+![图4：二次路径脉冲响应估计对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461474-3.png)
 图4直观展示了DeepSPE估计的脉冲响应与真实脉冲响应几乎完全重合，而经典方法则存在明显的偏差和振荡，视觉上印证了表2的定量结果。
 
 2. ANC-Net控制器性能对比
@@ -142,10 +156,11 @@ hiddenInHomeList: true
 表3总结：ANC-Net在NMSE上优于所有对比的深度模型（ResNet， DenseNet），同时参数量小一个数量级，延迟低4-6倍。消融研究再次证实了SE块、BiLSTM和注意力机制对精度的贡献。
 
 3. 端到端系统性能
-![图5：不同ANC算法在飞机噪声下的残余噪声水平对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461474-4.jpg)
+![图5：不同ANC算法在飞机噪声下的残余噪声水平对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461474-4.jpg)
 图5是系统性能的核心证据。在飞机噪声场景下，所提方法（Proposed）的残余噪声功率谱在整个频带内都是最低的，且收敛速度最快。相比之下，传统方法（Eriksson， Kuo， Akhtar）和早期的深度学习方法（SFANC， GFANC）在中高频段的噪声抑制效果明显较差，稳态误差更高。论文指出该结果在5次随机试验中方差小于0.3 dB。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文工��扎实，问题定义明确，提出的双流端到端框架具有新颖性，技术细节（模型架构、数据生成、训练设置）描述清晰。消融实验设计合理，有力地支持了各个模块的有效性。主要扣分点在于：1）核心创新点更偏向于现有技术的集成与优化，而非原理性突破；2）实验场景和噪声类型相对单一（主要是飞机噪声），缺乏对更广泛、更极端动态声学环境的验证，使得“鲁棒性”结论的普适性存疑。
@@ -153,3 +168,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0/1：论文中未提及任何代码、预训练模型或数据集的开源计划。尽管论文描述了实验设置和超参数，但缺乏开源材料会极大阻碍研究社区的快速验证和后续研究，因此此项不给分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

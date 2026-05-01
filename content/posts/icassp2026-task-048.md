@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的训练细节（优化器、学习率、批大小、步数、硬件）、关键超参数（β, score_Δ, N, γ）以及数据集构建流程，复现信息较为充分。
 - 引用的开源项目：论文依赖或对比了多个开源项目，包括：ImageBind, CLAP, Synchformer, PANNs (用于IS), PESQ, MMAudio, Frieren, V2A-Mapper, FoleyCrafter, Seeing&Hearing, V-AURA, ThinkSound等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对基于流匹配的视频到音频（V2A）生成模型难以与人类偏好对齐的问题，提出了V2A-DPO优化框架。核心方法包括：1）设计了一个综合评分系统AudioScore，整合现有模型评估视频与生成音频的语义一致性、时间同步性和感知质量，并通过少量人类标注进行校准；2）基于AudioScore自动化地生成大规模偏好对数据；3）引入课程学习策略优化DPO训练过程，从易到难使用偏好对。与直接使用DDPO或未优化的基线模型相比，经V2A-DPO优化的Frieren和MMAudio模型在VGGSound测试集上的IS（感知质量）最高提升1.81（10.4%相对提升），IB-score（语义一致性）提升0.86（2.6%相对提升），DeSync（时间失同步）降低0.09（20.5%相对降低），其中优化后的MMAudio在多项指标上达到SOTA。该工作的实际意义在于提升了V2A模型的实用性和用户体验，局限性在于其优化框架高度依赖特定的预训练基础模型和基于现有指标构建的AudioScore，而后者对音频“审美吸引力”的评估仍不完善。

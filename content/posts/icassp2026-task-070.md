@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了多个开源工作作为基线或方法参考，如GSLM， AudioLM， TWIST， SpeechGPT， SpiritLM， VALL-E， SALMONN等。在实验中，使用了开源的SentencePiece进行分词，HuBERT-large进行语音编码，Kaldi进行音素对齐，Whisper-large-v3进行语音转录，Llama-3.1-8B进行困惑度计算。
 - 总体情况：论文中未提及明确的开源计划，但提供了复现所需的大部分超参数和设置信息。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：论文旨在系统性地分析为何端到端语音语言模型（SLM）无法像文本大语言模型（LLM）一样生成语义连贯的输出。核心问题是：语音模态相比文本模态，在训练上显著更难的根本原因是什么？

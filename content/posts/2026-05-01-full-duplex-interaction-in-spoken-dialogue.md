@@ -27,6 +27,7 @@ hiddenInHomeList: true
 
 本文为全双工语音对话系统的研究提供了一套详尽、实用的“考试大纲”和“模拟题库”，其数据集构建和评测框架设计是当前该领域急需的公共产品，对推动后续研究非常有益；但作为一篇“综合性研究”，它更像是一个挑战赛报告和资源发布文档，缺乏自身提出的、经过严格验证的新型模型或核心算法，学术增量主要体现在“评测”而非“建模”上。
 
+
 ### 🔗 开源详情
 
 - 代码：论文中提及基准测试代码基于Full-Duplex-Bench v1.5构建，并提供了GitHub链接（https://github.com/ASLP-lab/HumDial-FDBench），但未明确说明挑战赛参赛队伍的具体代码是否全部开源。
@@ -36,6 +37,7 @@ hiddenInHomeList: true
 - 复现材料：提供了数据集、评测协议（指标定义、评分公式）和公开排行榜结果，为复现其评测过程提供了充分信息。但未提供训练细节（因未提出新模型）。
 - 论文中引用的开源项目：引用了DeepSeek (LLM用于脚本生成和行为分类)、Paraformer (ASR)、Parakeet-TDT (ASR)、Silero-VAD (VAD)、Easy-Turn, Osum-EChat, Freeze-Omni, Moshi, Gemini 2.5, Full-Duplex-Bench v1.5等开源工具或模型。
 - 开源计划：论文通过发布数据集和排行榜，实质上提供了开源的评测基础设施。
+
 
 ### 📌 核心摘要
 

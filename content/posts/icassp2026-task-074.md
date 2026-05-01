@@ -55,10 +55,6 @@ hiddenInHomeList: true
 - 复现材料：论文在“模型设置”和“实验”部分提供了较为详细的训练配置（如模型维度、层CECTC权重、MTP的N值等），有助于复现。但未提供完整的训练脚本、学习率调度等细节。
 - 论文中引用的开源项目：fairseq（用于ASR评估）、SentencePiece（文本分词）、HiFi-GAN（语音合成）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前主流的直接语音到语音翻译（S2ST）方法，如S2UT模型，使用离散的语音token作为中间表示。但单个语音token语义信息稀疏，需要多个token才能表达一个完整语义单元，这增加了预测的熵和建模的复杂度。
@@ -129,10 +125,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了详细的实验设置、超参数配置（学习率、批大小、优化器、模型维度等）、评估指标和数据集统计，为复现提供了基础信息，但未提供完整的训练代码或配置文件。
 - 论文中引用的开源项目：明确基于 FAIRSEQ 工具包进行实现；使用了 HuBERT 作为语音编码器；使用了 SentencePiece 进行分词；使用了 sacreBLEU 进行评估。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：端到端语音翻译（ST）面临训练数据稀缺和源语言语音与目标语言文本之间存在巨大模态鸿沟的双重挑战。
@@ -179,10 +171,6 @@ hiddenInHomeList: true
 -   复现材料：提供了基本的训练细节（优化器、学习率、warmup步数、调度策略）和模型架构描述。关键超参数（λ值）、硬件信息、完整的训练配置文件未说明。
 -   引用的开源项目：依赖预训练模型：Whisper-large-V3（语音编码器）、Qwen2.5（LLM）、Q-Former（适配器）、roberta-large-ner-english（NER工具）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前端到端语音翻译模型在翻译命名实体（如人名、地名、机构名）时准确率不足，而依赖级联或外部知识库的方法存在误差传播和泛化性差的问题。
@@ -225,10 +213,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了一些训练超参数（如学习率、步数）和模型规模，但未提供完整的训练配置、数据预处理脚本或评估代码。不足以支撑完全复现。
 - 论文中引用的开源项目：未提及依赖的特定开源工具/模型，Phi-4-multimodal为外部开源模型。
 - 总体，论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -291,10 +275,6 @@ hiddenInHomeList: true
     - 关键推理设置：beam size=5，注意力取自解码器第6层并平均所有头。
 - 论文中引用的开源项目/模型：w2v-BERT 2.0, FACodec (NaturalSpeech 3), SeamlessM4T, TransVIP, Unit-to-Unit, Whisper (用于ASR评估), MPM (用于P-Sim评估), NISQA-TTS (用于NISQA评估), LibriLight (用于FACodec预训练)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前语音到语音翻译（S2ST）系统在翻译时往往丢失源语音的韵律（节奏、音调、情感），主要原因是缺乏韵律对齐的平行训练数据，导致模型只能间接建模韵律，存在训练-推理不匹配问题。
@@ -340,10 +320,6 @@ hiddenInHomeList: true
     *   偏好优化: DPO (引用[14])、SimPO (引用[15])。
 -   论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：大语言模型在语音到语音翻译（S2ST）任务上应用不足，主要受限于高质量的配对S2ST数据稀缺。
@@ -385,10 +361,6 @@ hiddenInHomeList: true
     - 训练框架：Transformers, DeepSpeed
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前基于LLM的端到端语音到文本翻译（S2TT）主流采用思维链（CoT）提示策略，即先转录后翻译。但CoT的优势主要源于可利用海量ASR和文本翻译（T2TT）数据。本文研究随着专用S2TT数据规模增加，CoT是否仍是最佳选择，以及直接翻译（Direct）策略的扩展潜力。
@@ -426,10 +398,6 @@ hiddenInHomeList: true
 -   Demo：未提供在线演示。
 -   复现材料：提供了详细的训练超参数（LoRA配置、优化器设置等）、评估脚本所用的库（SacreBLEU, XCOMET）以及推理设置（chunk size, rollback）。但缺乏“文本推测”算法的完整伪代码或实现细节。
 -   论文中引用的开源项目：ms-swift（训练框架）， Qwen2-Audio（基础模型）， CoVoST2（数据集）， SacreBLEU（BLEU计算）， XCOMET-XXL（评估模型）， LoRA（微调方法）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

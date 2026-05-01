@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频分类 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Enhanced Generative Machine Listener
+
+#音频分类 #生成模型 #深度学习 #音频编码
+
+✅ **7.0/10** | 前25% | #音频分类 | #生成模型 | #深度学习 #音频编码
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 -0.5 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：未说明
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Vishnu Raj（Dolby Laboratories）、Gouthaman KV（Dolby Laboratories）、Shiv Gehlot（Dolby Laboratories）、Lars Villemoes（Dolby Laboratories）、Arijit Biswas（Dolby Laboratories）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文将主观听测分数建模问题，从传统的单点预测提升到对分数概率分布（Beta分布）的建模，这一理论视角的升级更为本质，能自然处理分数的边界和偏态分布。短板：实验虽全面，但核心创新是改进损失函数（Beta loss）和数据扩展，缺乏对模型架构本身（如Inception块）的深入剖析或创新，且置信区间的预测价值未被定量验证，略显“画饼”。
 
 #
+
 ### 🔗 开源详情
 
 *   代码：论文中未提及代码链接。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
 *   复现材料：论文提供了较为详细的训练配置（GPU型号、batch size、优化器、学习率、训练步数、语谱图参数），但缺少网络具体架构配置、完整的预处理脚本和检查点信息。
 *   论文中引用的开源项目：引用了多个公开的神经音频编解码器模型（如Encodec, Descript Audio Codec, MDCTNet），这些可能作为测试数据的一部分。也提到了PEAQ和ViSQOL的开源实现。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：自动化的客观音频质量评估模型通常输出单一分数，无法捕捉主观评价中的内在不确定性和变异性，尤其是在边界或歧义情况下。
@@ -53,11 +63,12 @@ hiddenInHomeList: true
 6.  主要局限性：(1) 论文中未提供模型权重和代码开源计划，复现依赖外部资源；(2) 虽然模型预测了分布参数，但文中明确指出“置信区间的定量评估留待未来工作”；(3) 模型架构主体沿用前作的Inception块，创新主要集中在损失函数和训练数据扩展。
 
 #
+
 ### 🏗️ 模型架构
 
 GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和待测音频（˜x）的信号对，输出为预测的MUSHRA分数均值及其对应的Beta分布参数（α, β）。
 
-![pdf-image-page4-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461866-0.png)
+![pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-0.png)
 图1（论文图1）：预测分数与真实MUSHRA分数的散点对比图。GMLv2（最右列）的预测点紧密围绕对角线（理想预测线），显示其在所有测试集上预测的一致性和准确性显著优于PEAQ和ViSQOL。
 
 整体流程与关键组件：
@@ -76,6 +87,7 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
     *   不确定性量化：模型直接提供了描述分数分布形状的`α`和`β`参数。方差`Var[z] = αβ/[(α+β)²(α+β+1)]` 可用于表征预测的不确定性。论文中提到，置信区间的计算方法沿用GMLv1，即基于t分布，但定量验证未完成。
 
 #
+
 ### 💡 核心创新点
 
 1.  采用Beta分布作为输出概率模型：这是最核心的理论创新。传统的音频质量模型（如PEAQ、ViSQOL）输出单一确定性分数。GMLv1开始建模分布，但使用高斯/逻辑斯蒂分布（无界、对称）。MUSHRA分数是[0,100]间的有界分数，且听众分布可能不对称或被截断。Beta分布天然定义在[0,1]区间，且形状灵活（对称、左偏、右偏、钟形），无需人工修正即可完美拟合有界数据，这在统计上是更合理、更优的选择。
@@ -83,6 +95,7 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
 3.  扩展的训练数据，覆盖神经音频编解码器（NAC）：在GMLv1数据集基础上，加入了大量来自传统编解码器（AAC, AC-4等）和新型神经编解码器（Encodec, DAC, MDCTNet等）的MUSHRA测试数据，总数据量达82,191样本对。这显著增强了模型在现代音频编码技术上的泛化能力，是其在多个NAC测试集上表现优异的关键。
 
 #
+
 ### 🔬 细节详述
 
 *   训练数据：
@@ -103,6 +116,7 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
 *   正则化技巧：论文未提及使用Dropout、权重衰减等正则化技巧。
 
 #
+
 ### 📊 实验结果
 
 *   主要Benchmark与指标：
@@ -113,16 +127,17 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
 *   细分结果：GMLv2的优势在传统编解码器（如USAC系列）和神经编解码器（NAC Mono/Stereo）上均有体现，且在双耳音频（Binaural）和ODAQ（含各类失真）上也表现稳健，证明了其广泛的泛化能力。
 *   可视化证据：论文提供了图1（散点图），直观展示了GMLv2的预测点相比PEAQ和ViSQOL更紧密地聚集在对角线周围，支持了其定量结果。
 
-![pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461866-1.png)
+![pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-1.png)
 （注：根据用户提供的图片列表，此图对应图2，但论文正文中未明确引用图2。可能为其他结果图。）
 
-![pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461866-2.png)
+![pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-2.png)
 （注：根据用户提供的图片列表，此图对应图3，但论文正文中未明确引用图3。可能为其他结果图。）
 
-![pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461866-3.png)
+![pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461866-3.png)
 （注：根据用户提供的图片列表，此图对应图4，但论文正文中未明确引用图4。可能为其他结果图。）
 
 #
+
 ### ⚖️ 评分理由
 
 *   学术质量：6.5/7：创新性明确（Beta分布建模），技术路线正确且合理，实验设计非常全面（多数据集、多指标、多基线对比），数据规模大，结果有说服力。扣分点在于：网络架构主体非原创，是重要创新点之一（Beta分布）的理论应用，但缺少更深入的消融分析或理论探讨；此外，关于置信区间的承诺未能在本文兑现。
@@ -130,3 +145,8 @@ GMLv2是一个参考型深度学习模型，其输入为参考音频（x）和�
 *   开源与复现加成：-0.5/1：论文未提供代码、模型权重、训练数据的开源链接或获取方式。虽然详细描述了训练配置（硬件、优化器、超参数），但由于模型架构细节（如Inception块具体配置）未完全公开，且缺乏预训练模型，完全复现论文结果的难度很高。因此给予负分加成。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

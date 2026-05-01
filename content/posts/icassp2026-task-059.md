@@ -57,10 +57,6 @@ hiddenInHomeList: true
 -   论文中引用的开源项目：emotion2vec+, ECAPA-TDNN, HuBERT, OHNN, HiFi-GAN。
 -   论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：现有的说话人匿名化技术（如基于OHNN的方案）在有效隐藏说话人身份的同时，会严重破坏语音中的情感信息，限制了其在医疗、人机交互等情感敏感场景中的应用。
@@ -94,10 +90,6 @@ hiddenInHomeList: true
 - Demo：提供了音频样本的在线演示页面（https://sites.google.com/view/target-speaker-anonymization）。
 - 复现材料：论文描述了实验设置和使用的工具，但未提供详细的训练配置、超参数或检查点。
 - 论文中引用的开源项目：SpeechBrain, pyannote.audio, DiariZen, MeetEval。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -133,10 +125,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了代码仓库，其中应包含使用提示词和模型进行推断的脚本。论文中描述了实验设置（如Fisher语料库的“hard”评估设定），但未提供超参数配置文件或训练日志。
 - 论文中引用的开源项目：Whisper, XTTS, Gemma, WavLM, SLUAR, Binoculars, SSL-AASIST, Sentence-BERT（用于语义相似度计算）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -178,10 +166,6 @@ hiddenInHomeList: true
   - SpAnE评估框架 [5]
   - private kNN-VC中的音素识别器 [15]
   - g2p模型和CMU发音词典（用于音素转换）
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -233,10 +217,6 @@ hiddenInHomeList: true
     *   kNN-VC [17] & private kNN-VC [6]: 论文中测试的匿名化器。
     *   ASR-BN [4]: 论文中测试的匿名化器（VPC2024基线）。
 *   论文中未提及后续的开源计划（如更新权重或扩展数据集）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -302,10 +282,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了gnark框架[18]（用于实现SNARK电路和GKR哈希验证）、Poseidon2哈希[20]、EdDSA签名[22]等。
 - 总结：论文中未提及完整的开源计划或提供可直接复现的代码库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：现有语音匿名化方法只能隐藏说话人身份，但第三方无法验证所发布的匿名语音是否确实由一个可信的原始录音经过预定义的匿名化处理得到，同时又不能泄露原始信息。这带来了对语音证据完整性和处理过程可信度的担忧。
@@ -345,10 +321,6 @@ hiddenInHomeList: true
     - CosyVoice 2.0: `https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B`
     - RVC项目: `https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI`
     - Emotion2Vec: `https://huggingface.co/emotion2vec/emotion2vec_plus_seed`
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -402,10 +374,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了部分关键超参数（如ε， λ， β， γ， 迭代次数N），但缺乏完整的训练配置、数据处理流程和核心模块实现代码。
 - 论文中引用的开源项目：提及了使用的开源模型/系统：X-VECTOR， ECAPA-TDNN， WavLM， Unispeech-SAT， YourTTS， SV2TTS， Tortoise， StyleTTS2， AdaIN， Whisper。但这些并非作者为本项目提供的开源材料。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：当前利用对抗样本保护语音隐私的方法存在缺陷，要么只能防御自动说话人验证（ASV），要么只能防御文本到语音（TTS）合成攻击，缺乏一种能同时有效防御两者的综合方案。
@@ -456,10 +424,6 @@ hiddenInHomeList: true
   - [ConvNeXt](https://arxiv.org/abs/2201.03545)：内容编码器的骨干网络。
   - [SwiGLU](https://arxiv.org/abs/2002.05202), [RoPE](https://arxiv.org/abs/2104.09864)：Transformer中的激活函数和位置编码。
 - 总体而言：论文中未提及开源计划（除演示页面外）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -512,10 +476,6 @@ hiddenInHomeList: true
     - ECAPA-TDNN（说话人验证模型，E-VPC基于此）
     - kNN-VC（语音转换，用于T8-5）
 - 论文中未提及开源计划：除引用的外部项目外，论文本身未提及将其提出的B4*系统或其他评估代码开源的计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

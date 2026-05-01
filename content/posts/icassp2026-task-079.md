@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：提供了处理流水线的高层次描述、数据集统计信息和模型评估结果。提供了用于特定步骤（重叠检测、降噪）的模型检查点。但缺少详细的超参数配置、训练日志等深度复现材料。
 - 论文中引用的开源项目：pyannote.audio（说话人分离）、Wav2vec2-XLS-R（重叠检测、转录一致性检查）、Whisper large-v3（转录）、Vocos（降噪）、RedimNet B6（说话人嵌入）、HDBSCAN（聚类）、wav2vec-base（方言分类）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：葡萄牙语作为全球广泛使用的语言，缺乏像英语那样大规模、高质量的公开语音数据集，这严重制约了葡萄牙语自动语音识别和文本转语音技术的发展。

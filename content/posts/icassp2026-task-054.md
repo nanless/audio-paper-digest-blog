@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：提供了较为充分的复现信息，包括模型架构细节、四阶段训练流程的具体数据量、优化器配置、硬件环境、关键超参数（帧数、查询数、维度等）。
 - 引用的开源项目：论文依赖并引用了多个开源项目/模型作为基线或组件，包括：ViT-L/14 (EVA-CLIP)、Whisper-small、LLaVA-v1.6-Mistral-7B、LoRA、Video-LLaMA、VTimeLLM、VideoChat2等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：当前的视频大语言模型在细粒度时间推理（如将答案归因于精确时刻）和音视频紧密融合方面存在不足，且通常需要大量数据和计算资源进行训练。

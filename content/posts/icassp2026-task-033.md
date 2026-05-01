@@ -63,10 +63,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了LoRA（[26, 27]）、LLM-as-a-judge（[30]）等方法，并依赖Qwen2-Audio、LTU-AS、LLaMA-Omni等预训练模型。
 - 开源计划：论文提供了明确的开源链接，表明其承诺开放代码和数据集。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：当前评估语音大模型（SpeechLLMs）性别偏差主要依赖多选题（MCQA）基准，但此类基准是否能可靠预测模型在更自然、更长篇任务中的真实偏差表现尚不清楚。
@@ -107,10 +103,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文详细描述了实验设置、分析方法和数据构建流程，代码应包含这些细节。论文提供了代码和数据的明确链接。
 - 论文中引用的开源项目：wav2vec2, LibriSpeech, FaST-VGS+, SpokenCOCO, BERT, VG-BERT, MS COCO, WordNet, CMU Pronouncing Dictionary, MALD, GloVe。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -160,10 +152,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文给出了算法的核心公式和设计思路，代码已开源，基本可复现。但未提供详细的复现教程、超参数搜索空间或附录。
 - 论文中引用的开源项目：RapidFuzz [6]（用于实现LWA基线）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -218,10 +206,6 @@ hiddenInHomeList: true
 - 复现材料：提供了训练的主要超参数（学习率、epoch数、batch size、优化器）和交叉验证设置，但未提供详细的配置文件、检查点或附录。
 - 论文中引用的开源项目：列出了其依赖的生成方法和评估工具，如Aniportrait， Sadtalker， Audio2head， Dreamtalk， Echomimic， EDtalk， Hallo， Real3D（生成模型）； BRISQUE， NIQE， IL-NIQE， CPBD， V-BLIINDS， RAPIQUE， SimpVQA， Fast-VQA， VSFA， BVQA（对比方法）；以及MediaPipe FaceMesh， Video Swin Transformer， ResNet50等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的数字人类质量评估方法主要针对真实人脸，无法有效处理风格化说话人头部（如动漫、卡通风格）在失真、头部抖动和音画同步等方面的独特质量问题，阻碍了该领域的发展。
@@ -270,10 +254,6 @@ hiddenInHomeList: true
     - 语音基础模型：Parakeet (parakeet-tdt-0.6b-v2)（论文描述为“SOTA SFM”）。
     - 其他基准模型：CPC2 Champion模型、HASPI模型（作为基线引用，未提供实现）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：传统评估助听器效果的方法依赖干净的参考语音，这在现实中往往不可得。本文旨在解决无需干净参考信号（非侵入式）即可准确预测听障人群语音可懂度的问题。
@@ -321,10 +301,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：未提及除自身代码库外的其他特定开源工具或模型依赖。
 - 总体开源计划：论文中提供了核心计算代码，但未提及更广泛的开源计划（如持续维护、详细文档等）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：主观评估数据集中的评分固有噪声（异方差噪声）限制了任何客观模型与人类评分之间可能达到的最大相关性，但这一相关性上限（或称“相关性天花板”）通常未被量化，可能导致对模型性能的误判。
@@ -365,10 +341,6 @@ hiddenInHomeList: true
 - 复现材料：提供了数据集的详细统计表格，但未提供训练细节、配置、检查点。未说明合成语音的具体参数配置。
 - 论文中引用的开源项目：Common Voice [15], Expresso [16], Sesame-1B [17], Whisper [18], MOSANet+ [19]。
 - 总结：论文中未明确提及开源计划（如GitHub仓库）。数据集本身具备公开价值，但获取渠道未说明。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -428,10 +400,6 @@ hiddenInHomeList: true
     3.  语音识别（ASR）系统：Whisper [32]。
     4.  其他基准/数据集（用于对比或背景）：WinoBias [19], StereoSet [20], CrowS-Pairs [21]等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文系统性地评估了端到端语音对话模型（SDMs）在真实决策和推荐任务中，受说话人年龄、性别、口音等副语言特征影响而产生的偏见问题。其核心方法是构建一个名为FairDialogue的受控数据集，并引入两套度量标准：用于决策任务的组不公平分数（GUS）和用于推荐任务的相似度归一化统计率（SNSR/SNSV）。与现有仅关注文本或语音识别偏见的研究相比，本文的新颖之处在于首次全面评估兼具语音输入输出的模型，并创新性地研究了多轮对话中偏见是否会持续存在或被放大。主要实验结果显示：1）所有测试的开源（Qwen2.5-Omni, GLM-4-Voice）和闭源（GPT-4o Audio, Gemini-2.5-Flash）模型都存在可测量的偏见；2）闭源模型在决策任务中表现出更低的偏见（例如，Gemini-2.5平均GUS为0.12-0.14，优于Qwen2.5的0.17-0.20）；3）开源模型对年龄和性别属性更敏感；4）在多轮对话中，初始的偏见决策可能持续存在，且不同属性群体需要不同次数的纠正反馈才能改变决策。这项工作的实际意义在于，为公平、可靠的语音交互系统开发提供了首个评估基准和关键数据集（FairDialogue）。主要局限性在于未能深入剖析偏见产生的根本原因（如模型内部机制、训练数据偏差），也未探索任何偏见缓解方法。
@@ -488,10 +456,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细提供了数据生成流程、属性定义、平衡算法（Entrofy）、A-TRE模型训练的所有超参数（优化器、学习率、批大小、早停策略等），复现信息非常充分。
 - 论文中引用的开源项目：`learnfm` (FM合成器)， `Entrofy` (数据平衡算法)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有的音频表示评估主要关注下游任务（如分类）的性能或少数泛化属性（如等变性），但忽略了与人类听觉感知密切相关的“组合性”（即用部分和组合规则表示复杂声景的能力）。
@@ -541,10 +505,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了数据集和刺激生成代码，复现评估结果需要访问被评估的模型及其权重（这些通常是公开的）。论文未提供详细的评估脚本或配置文件。
 - 论文中引用的开源项目：引用了多个被评估模型的开源项目，如Pengi、Audio Flamingo、MuLLaMa、Qwen-Audio等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -598,10 +558,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：列出了vLLM [33] 和 Transformers [34] 作为推理工具。
 - 总结：论文提供了基本的代码复现支持，但未涉及模型训练，因此复现材料集中于评估部分。论文中未提及开源计划（因相关代码已开源）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：研究大型音频语言模型在执行纯文本推理任务时，其性能是否会受到输入中不相关音频（如静音、噪声、环境声）的干扰，即跨模态干扰的鲁棒性问题。
@@ -647,10 +603,6 @@ hiddenInHomeList: true
 - Demo：论文提到提供了交互式图表演示页面，但未给出具体链接。
 - 复现材料：论文中提供了代码和基于公开模型与数据的分析框架，但缺乏详细的训练/评估超参数配置文件和分步指南。
 - 引用的开源项目：依赖shap库进行Shapley值计算；依赖Qwen-Audio和MU-LLaMA的官方代码库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -708,10 +660,6 @@ hiddenInHomeList: true
 - 复现材料：提供了主要超参数（学习率、批大小、优化器、稀疏度范围、维度设置），但未提供完整的配置文件、检查点或详细的训练步骤日志。
 - 引用的开源项目：论文代码可能依赖PyTorch等标准框架。分析中使用了OpenSMILE库（用于提取eGeMAPS特征）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：音频自监督学习（SSL）模型（如HuBERT, AST, MERT）性能强大，但其学到的内部表示难以解释，现有分析方法（如线性探测）深度不足。
@@ -763,10 +711,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：FADTK [23]、MMD实现 [24]、OpenL3 [31]。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：随着生成音频技术的发展，需要可靠的自动化评估方法来替代耗时的主观测试。论文聚焦于一个基础问题：在评估音频感知质量时，是使用Fréchet Audio Distance（FAD）还是Maximum Mean Discrepancy（MMD）更有效？以及，使用何种音频嵌入模型（如神经音频编解码器NAC或通用模型）能获得与人类判断更一致的评估结果？
@@ -816,10 +760,6 @@ hiddenInHomeList: true
 *   复现材料：提供了核心的评估代码包。复现论文中的案例研究需要自行准备`gpt-4o-mini`的API访问权限和Switchboard数据集。
 *   论文中引用的开源项目：论文依赖了Gestalt模式匹配算法[23]（原始论文为1988年的描述，具体实现代码在发布的包中）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决现有评估指标（如整体F1分数）在评估语音不流畅去除系统时无法揭示模型对不同类型不流畅现象处理能力差异的问题。方法的核心是提出了一个名为Z-Scores的新指标，它基于Shriberg的语言学框架，将不流畅类型分为EDITED（编辑/修复）、INTJ（插入词）和PRN（插入语），并在span级别计算模型对每类不流畅的去除成功率。为实现这一点，作者开发了一个确定性的对齐模块，用于将生成模型的输出文本与原始不流畅文本进行token级别的可靠对齐。与已有方法（如LCS、BLEU/ROUGE或不确定的统计加权）相比，该对齐模块更可靠，且能处理生成模型可能产生的幻觉token。论文通过一个基于gpt-4o-mini和Switchboard数据集的案例研究表明，传统E-Scores（整体F1）可能掩盖模型在特定类型（如INTJ和PRN）上的弱点，而Z-Scores能够揭示这些弱点，并指导通过针对性的元提示（Metaprompting）策略进行改进，例如将ZI（INTJ）分数从约61.9提升到约79.6，ZP（PRN）分数从约65.0提升到约87.1。该工作的实际意义在于为研究人员和从业者提供了一个更精细的诊断工具，以识别模型失败模式并设计针对性干预措施。主要局限性在于实验规模较小，仅在一个数据集上使用一个代表性模型进行了验证，且评估指标本身并不直接提升去除性能。
@@ -852,10 +792,6 @@ hiddenInHomeList: true
 - Demo：未提供在线演示。
 - 复现材料：提供了模型架构描述、超参数设置（LoRA rank, learning rate, batch size等）和训练流程概述，但缺乏完整的配置文件、检查点或详细的实验代码。
 - 引用的开源项目：论文引用了多个作为编码器基础的预训练模型（TimeSformer, Wav2Vec2.0, ECAPA-TDNN, Emo2Vec, Sentence-BERT, LoRA），以及用于生成数据的Gemini-9B, F5-TTS等，但未明确说明是否计划开源其贡献的部分。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -62,10 +62,6 @@ hiddenInHomeList: true
     - Qwen2.5-coder-32b-instruct (通过NVIDIA NIM访问)
     - ESPnet (用于对比的基线结果)
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：当前最先进的语音基础模型（SFMs）在半监督学习中利用从真实世界（in-the-wild）收集的未标注音频数据时，面临一个核心挑战：这些数据声学环境复杂多样，模型生成的伪标签质量较低，导致训练效果不佳。
@@ -102,10 +98,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文提供了模型架构描述、训练超参数（如LoRA rank, 学习率, batch size, 优化器, 训练轮数）、评估指标和数据集来源（Common Voice, MLS, Fleurs, LibriSpeech），但缺乏关键的模拟数据生成脚本、NLCMV波束成形的具体实现细节（被指向另一篇论文）。
 - 论文中引用的开源项目：Gemma-3n 4B模型（来自Hugging Face）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -156,10 +148,6 @@ hiddenInHomeList: true
 - 复现材料：给出了模型架构、部分超参数（层数、维度、词汇表大小）、优化器、正则化方法等信息，但缺失训练硬件、batch size、学习率、完整训练曲线等细节。
 - 论文中引用的开源项目：提到了SentencePiece分词工具、SACREBLEU评估工具。
 - 总体：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

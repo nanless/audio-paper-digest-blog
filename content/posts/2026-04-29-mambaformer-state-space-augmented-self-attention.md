@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音增强 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Mambaformer: State-Space Augmented Self-Attention with Downup Sampling for Monaural Speech Enhancement
+
+#语音增强 #状态空间模型 #Transformer #双路径模型 #时频分析
+
+✅ **7.0/10** | 前25% | #语音增强 | #状态空间模型 | #Transformer #双路径模型
+
+学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 -0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：未说明
 - 通讯作者：未说明
 - 作者列表：Shengkui Zhao, Haoxu Wang, Zexu Pan, Yiheng Jiang, Biao Tian, Bin Ma, Xiangang Li (阿里巴巴通义实验室，新加坡)
+
 ### 💡 毒舌点评
 
 这篇论文在工程集成上确实下足了功夫，将Mamba、Conformer、ZipFormer等多种组件巧妙地缝合在一个双路径框架里，最终在标准测试集上刷新了指标。然而，其核心创新更偏向于“有效的组合技”而非“范式革新”，更像是对现有技术模块进行了一次成功的超参调优和工程排列组合，略显缺乏令人眼前一亮的原创思想火花。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的架构描述、训练配置（数据集、损失函数、优化器、学习率策略、超参数表）和硬件信息，复现信息较为充分。
 - 论文中引用的开源项目：论文中引用了多个先前工作（如DPRNN, DPT-FSNet, CMGAN, MP-SENet, ZipEnhancer, SEMamba等）并进行了对比，这些是相关领域的重要开源工作，但MambaFormer本身未表明基于或依赖哪个具体开源仓库。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 这篇论文要解决的是单通道语音增强任务中，如何更有效地结合Transformer的全局建模能力和状态空间模型（SSM）的高效序列处理能力的问题。
@@ -41,11 +51,12 @@ hiddenInHomeList: true
 | MambaFormer (M) | 3.69 | 3.82 | 9.04 |
 
 实际意义在于验证了SSM与Transformer协同工作的有效性，为语音增强模型设计提供了新的模块化组合思路。主要局限性在于：1）创新更多是组合与适配，原创性有限；2）论文未提供代码和模型权重，复现性未验证；3）虽然提出了新的SOTA，但与基线的绝对提升幅度并不巨大。
+
 ### 🏗️ 模型架构
 
 MambaFormer采用编码器-解码器结构，核心是堆叠的N个DP_MambaFormer块，整体流程如图1所示。
 
-![MambaFormer整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462536-0.png)
+![MambaFormer整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462536-0.png)
 图1：MambaFormer模型概述。(a) 包含STFT/iSTFT、编码器/解码器以及N个堆叠的DP_MambaFormer块的模型流程图。(b) 用于频率建模的F_MambaFormer模块配置（用于时间建模的T_MambaFormer模块采用相同结构）。(c) Mamba结构。(d) 非线性注意力（NLA）结构。
 
 1.  输入与编码器：输入为含噪语音波形 `y`。首先进行STFT，得到幅度谱 `Y_mag` 和相位谱 `Y_pha`，将两者拼接 `Y_in = [Y_mag, Y_pha]` 作为编码器输入。编码器（Encoder）由两个卷积块和中间的膨胀密集网络（Dilated DenseNet）组成，将输入映射到紧凑的时-频特征空间。
@@ -61,11 +72,13 @@ MambaFormer采用编码器-解码器结构，核心是堆叠的N个DP_MambaForme
 *   Mamba + 自注意力：利用Mamba高效的、输入依赖的序列建模能力处理局部连续性，同时用自注意力捕获全局的、非序列依赖关系，形成互补。
 *   双路径（DP）：分别沿时间轴和频率轴建模，更有效地捕捉二维时频图的结构依赖，这是语音增强领域的经典有效范式。
 *   降采样/升采样：通过降低时频分辨率来减少计算复杂度，同时通过可学习权重和对称结构尽量保留信息，实现效率与性能的平衡。
+
 ### 💡 核心创新点
 
 1.  Mamba与Transformer自注意力的深度融合：不同于以往SE-Mamba仅使用Mamba，或ZipEnhancer仅使用Transformer，MambaFormer创新性地将Mamba模块作为自注意力模块前的一个关键组件，形成了“Mamba -> 双层自注意力（NLA + SA）”的序列。这使得模型能在早期利用Mamba进行高效的自适应序列推理，再通过后续注意力层精炼全局交互，理论上结合了二者的互补优势。
 2.  基于ZipFormer改进的双层自注意力与权重共享：采用并行两次注意力计算（先NLA，后标准SA）来增强全局建模能力。通过预计算并共享多头注意力权重（MHAW），在增强表征能力的同时控制了计算成本的大幅增长。
 3.  可学习的对称降采样/升采样策略：设计了一种带有可学习softmax权重的降采样模块，并在块后使用对称的升采样模块。消融实验证明，这种设计在显著降低计算量（FLOPs）的同时，只引起微小的性能损失，实现了良好的效率-性能权衡。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -89,6 +102,7 @@ MambaFormer采用编码器-解码器结构，核心是堆叠的N个DP_MambaForme
 - 训练硬件：使用单块80GB NVIDIA A800 GPU。
 - 推理细节：论文未明确说明解码策略（如波束搜索等），对于增强任务，通常是直接前向推理得到增强谱后做iSTFT。未提及流式设置。
 - 正则化：论文未明确提及Dropout等额外正则化手段。
+
 ### 📊 实验结果
 
 论文在两个主流基准测试集上进行了全面评估，并与多种最新方法进行了对比。
@@ -118,8 +132,14 @@ MambaFormer采用编码器-解码器结构，核心是堆叠的N个DP_MambaForme
 
 图2：语音谱图可视化对比。 (由于当前上下文未提供此图片的URL，无法插入。)
 描述：该图可视化了含噪语音、干净真值以及SEMamba、ZipEnhancer (S)和MambaFormer (S)的增强输出谱图。MambaFormer的输出在语音成分的清晰度和噪声抑制方面���现良好，直观地展示了其增强效果。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7：论文技术路线清晰，实验设计规范，在两个权威数据集上均报告了SOTA结果，消融实验充分验证了各组件的有效性。主要扣分点在于创新性偏工程集成，虽然组合巧妙，但未提出颠覆性的新概念或新框架，属于优秀但非突破性的渐进式工作。
 - 选题价值：1.0/2：语音增强是成熟且重要的研究方向，Mamba（SSM）与Transformer的结合是当前热门趋势，论文选题具有前沿性。但其应用场景（单通道语音增强）相对具体，对广泛的音频/语音读者的直接普适性价值中等。
 - 开源与复现加成：-0.5/1：论文详细报告了训练数据、超参数、损失函数权重、硬件环境等信息，具备较好的文字复现指导性。然而，论文中未提及代码、模型权重或任何开源计划的链接或说明，这是重大的扣分项，严重影响社区的可复现性和验证效率。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

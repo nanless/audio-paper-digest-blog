@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "音频检索 | 8.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 GLAP: General Contrastive Audio-Text Pretraining Across Domains and Languages
+
+#音频检索 #对比学习 #预训练 #多语言 #零样本
+
+🔥 **8.5/10** | 前25% | #音频检索 | #对比学习 #预训练 | #对比学习 #预训练
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Heinrich Dinkel (MiLM Plus, Xiaomi Inc., China)
 - 通讯作者：未说明
 - 作者列表：Heinrich Dinkel (MiLM Plus, Xiaomi Inc., China)、Zhiyong Yan (MiLM Plus, Xiaomi Inc., China)、Tianzi Wang (MiLM Plus, Xiaomi Inc., China)、Yongqing Wang (MiLM Plus, Xiaomi Inc., China)、Xingwei Sun (MiLM Plus, Xiaomi Inc., China)、Yadong Niu (MiLM Plus, Xiaomi Inc., China)、Jizhong Liu (MiLM Plus, Xiaomi Inc., China)、Gang Li (MiLM Plus, Xiaomi Inc., China)、Junbo Zhang (MiLM Plus, Xiaomi Inc., China)、Jian Luan (MiLM Plus, Xiaomi Inc., China)
+
 ### 💡 毒舌点评
 
 亮点：GLAP真正实现了将语音内容理解无缝整合进音频-文本对齐框架，并在多语言语音任务上取得了远超前辈模型（如L-CLAP, MSCLAP）的惊人效果，证明了“一个模型通吃所有音频类型”的可行性。短板：其语音理解能力的显著提升，很大程度上归功于选择了对语音建模能力强的Dasheng作为音频编码器，这更像是一个工程上的“正确组合”，而非方法论上的根本性突破，且其性能在非英语语言的零样本声音分类上仍有明显衰减。
+
 ### 🔗 开源详情
 
 - 代码：提供了公开的代码仓库链接 `github.com/xiaomi-research/dasheng-glap`。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练配置（优化器、学习率调度、batch size、损失函数初始化）、模型架构选择依据和评估协议，复现信息较为充分。
 - 论文中引用的开源项目：使用了Sonar文本编码器、Dasheng音频编码器（并对其进行了对比实验），以及依赖于多个公开的音频-文本数据集。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有的对比语言-音频预训练（CLAP）模型主要针对英文的声音和音乐事件，在处理语音（spoken language）内容和多语言任务上表现不佳，无法满足通用音频理解的需求。
@@ -39,16 +49,18 @@ hiddenInHomeList: true
     - 关键结果见表2（检索）、表5（零样本分类）和图3（多语言）。
 5. 实际意义：GLAP为构建能够理解完整音频内容（包括声音、音乐和语音） 的通用音频基础模型提供了可行方案，尤其在多语言和跨领域检索、零样本分类方面具有重要应用价值，推动了音频智能从“事件检测”向“内容理解”的演进。
 6. 主要局限性：a) 模型对语音内容的强大理解能力，部分依赖于选择特定的预训练音频编码器（Dasheng），其架构细节非本文重点。b) 多语言声音/音乐分类性能较英语有明显下降（表7），表明跨语言泛化仍有提升空间。c) 训练数据YODAS包含大量自动转录的噪声数据，可能影响上限。
+
 ### 🏗️ 模型架构
 
 GLAP采用标准的双塔对比学习架构，如图2所示。
-![图2: GLAP enables multilingual speech-content retrieval, on top of the standard sound/music capabilities.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463948-0.png)
+![图2: GLAP enables multilingual speech-content retrieval, on top of the standard sound/music capabilities.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463948-0.png)
 - 整体流程：输入为音频-文本对（a, t）。分别通过音频编码器和文本编码器提取特征，再经过线性映射层（MLP）对齐维度，最后计算特征向量间的余弦相似度作为得分。训练目标是拉近匹配对的相似度，推远不匹配对的相似度。
 - 音频编码器 (E_A)：选择预训练的Dasheng模型。它是一个通用的音频表示模型，设计目标是在声音、音乐和语音任务上都有良好表现。论文中将其与CED, Beats, Whisper, WavLM等编码器进行了对比（表4），发现Dasheng在跨域任务上最均衡。
 - 文本编码器 (E_T)：使用预训练的多语言文本编码器Sonar。这是一个基于Transformer的模型，能够处理多种语言，为GLAP的多语言能力提供基础。
 - 对齐层 (MLP)：在音频和文本编码器之后，各添加一个可训练的多层感知机（MLP）。其作用是将不同编码器输出的特征向量映射到相同的维度空间，以便计算相似度。
 - 相似度计算：使用余弦距离 `s = (e_a · e_t^T) / (||e_a|| · ||e_t||)`。
 - 训练目标：采用sigmoid损失函数（L），其公式为 `L = -1/B  Σ_i Σ_j log σ(s'(i,j)  ψ[i,j])`，其中 `s'(i,j) = s(i,j) + β/τ`，`ψ[i,j]` 是标签（正对为1，负对为-1），`β` 和 `τ` 是可学习参数。这种损失在大批次下性能更优。
+
 ### 💡 核心创新点
 
 1.  提出统一的多领域音频-文本对比预训练框架（GLAP）：
@@ -65,6 +77,7 @@ GLAP采用标准的双塔对比学习架构，如图2所示。
     - 局限：标准的交叉熵对比损失在超大批次训练中可能不是最优选择。
     - 如何起作用：采用sigmoid损失作为主要目标，它对正负样本对独立处理，更适合大规模负样本的对比学习。
     - 收益：论文报告在所有检索任务上获得了1%-5%的性能提升。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -82,6 +95,7 @@ GLAP采用标准的双塔对比学习架构，如图2所示。
 - 训练硬件：未说明 GPU型号、数量和训练总时长。
 - 推理细节：对于零样本分类，使用特定的文本提示模板（表3）。例如，对于声音事件，提示为“The sound of {label} can be heard.”。
 - 正则化技巧：未提及明确的正则化技巧（如Dropout, Weight Decay）。
+
 ### 📊 实验结果
 
 主要实验结果表格：
@@ -113,7 +127,7 @@ GLAP采用标准的双塔对比学习架构，如图2所示。
 结论：GLAP在语音指令分类上实现了革命性突破，声音和音乐分类则保持竞争力。
 
 图3：多语言零样本关键词识别性能
-![图3: Multilingual zero-shot keyword spotting performance across 50 languages.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463948-0.png)
+![图3: Multilingual zero-shot keyword spotting performance across 50 languages.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463948-0.png)
 结论：图示为50种语言在MSW数据集上的零样本准确率。性能跨度较大，但整体展示了GLAP强大的多语言覆盖能力，即使在低资源语言上也有不错表现。
 
 表7：多语言声音/音乐零样本分类 (US8K, ESC-50, GTZAN)
@@ -123,8 +137,14 @@ GLAP采用标准的双塔对比学习架构，如图2所示。
 | ESC-50 | 88.8 | 64.3 | 71.4 | 74.3 | 62.1 |
 | GTZAN | 69.6 | 68.3 | 62.5 | 63.2 | 65.3 |
 结论：模型的多语言声音/音乐分类能力存在，但相较于英语基线性能有显著下降。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7。创新点清晰且实用，解决了CLAP模型在语音和多语言上的重大缺陷。技术方案（通用编码器+翻译数据+sigmoid损失）正确且有效。实验设计全面，对比了多个领域的多个基准，提供了丰富的数字证据。扣分在于：方法整体是对现有对比学习框架的应用���扩展，核心音频编码器Dasheng的细节并非本文原创；多语言能力部分依赖于外部强大的文本编码器和机器翻译。
 - 选题价值：1.5/2。选题非常前沿，推动了音频-语言模型向通用内容理解和多语言支持发展，具有明确的学术价值和应用前景（如通用音频检索、多语言语音交互的前端）。
 - 开源与复现加成：0.8/1。积极开源了代码和模型检查点，提供了详细的关键训练超参数和数据处理方法，极大便利了复现。未能提供训练硬件和时长信息，部分数据集的获取细节未说明。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -52,10 +52,6 @@ hiddenInHomeList: true
 *   复现材料：论文详细描述了数据预处理（Fbank提取、SpecAugment、标准化）、网络架构（ASP层、ArcFace头）、训练策略（学习率schedule、warmup、batch size、epochs）等关键信息，复现基础良好。
 *   引用的开源项目：论文依赖于三个开源的预训练音频模型：BEATs [13]、SSLAM [14] 和 EAT [15]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：本文针对工业监测中的异常声音检测（ASD）任务，旨在解决三个关键挑战：训练数据中属性标签不完整导致模型无法充分学习工况表示；微调大型预训练模型会损害其泛化能力，导致在不同设备上性能不均衡；以及从不同网络提取的嵌入表示存在差异，难以有效集成。

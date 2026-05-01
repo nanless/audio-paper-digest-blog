@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：在论文的“Implementation Details”部分提供了训练所用的优化器（Adam）、学习率（1e-3）、batch size（64）、训练轮数（50 epochs）、GPU型号（NVIDIA GTX A6000）以及超参数调优方法（网格搜索）。
 - 论文中引用的开源项目：依赖的开源工具/模型包括：CLIP（特征提取）、SBERT（句子编码）、BERT（基线）、BLINK（基线）以及多个多模态基线模型（ALBEF, MaPLe, ClipBERT等）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统实体消歧方法主要依赖静态的文本或图像信息，难以处理真实世界中日益复杂的、包含动态视频和音频信息的多模态场景。

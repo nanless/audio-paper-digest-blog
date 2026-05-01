@@ -58,10 +58,6 @@ hiddenInHomeList: true
     - `SentenceFormer`: 用于文本嵌入的模型。
     - `Fliege-Maier grid`: 用于球形麦克风阵列设计的网格点生成方法。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：为了解决现有大规模房间脉冲响应（RIR）数据集要么Ambisonic阶数低（如FOA），要么声学仿真方法单一（仅几何声学或仅波导），要么房间场景过于简单（鞋盒模型）的问题，本论文旨在创建一个结合了高阶、高保真仿真和复杂真实场景的大规模RIR数据集。
@@ -111,10 +107,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了CLMR [10], CAV-MAE [11], EAT [12], BEATs [13], M2D [14], Dejavu [22], Isolation Forest (PyOD [17]), Confident Learning/Cleanlab [23, 24]。
 - 论文中未提及完整的代码仓库链接，但提供了项目主页作为入口。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：音频数据集中的离题样本、近重复样本和标签错误等数据质量问题，会严重损害音频系统的性能，且现有清洗方法多针对单一问题、依赖特定模型。
@@ -151,10 +143,6 @@ hiddenInHomeList: true
 - Demo：未提及在线演示。
 - 复现材料：提供了归一化后的音频文件、轨迹日志和标注表（annotation.xls）。但完整的数据生成流程代码和环境配置未提供。
 - 论文中引用的开源项目：提到了使用 `pyLoudnorm` 工具包计算响度，以及使用 `AmbiX`、`MagLS` 等开源工具进行Ambisonics分析和双耳渲染验证。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

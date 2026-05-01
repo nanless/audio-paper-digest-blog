@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "说话人分离 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 β-AVSDNET: A Novel End-To-End Neural Network Architecture For Audio-Visual Speaker Diarization
+
+#说话人分离 #端到端 #音视频 #多模态模型
+
+✅ **7.5/10** | 前25% | #说话人分离 | #端到端 | #音视频 #多模态模型
+
+学术质量 5.8/7 | 选题价值 1.5/2 | 复现加成 0.3 | 置信度 高
+
+
 ### 👥 作者与机构
 
 -   第一作者：Chang Huai You（Singapore Institute for Infocomm Research (I2R), A*STAR）
 -   通讯作者：未说明
 -   作者列表：Chang Huai You（Singapore Institute for Infocomm Research (I2R), A*STAR）
+
 ### 💡 毒舌点评
 
 这篇论文在“用巧劲”上做得不错，把LeNet这种“古董级”轻量化网络用在了音视频分离任务上，配合巧妙的ROI-delta特征设计，反而比ResNet-18等更复杂的模型效果更好，证明了在特定任务上“合适”比“复杂”更重要。但论文对训练的“黑盒”部分描述有所保留，比如具体的训练硬件、优化器、学习率变化等关键复现细节一笔带过，让想跟着跑的同行心里有点没底。
+
 ### 🔗 开源详情
 
 -   代码：论文中未提供本研究提出的β-AVSDnet模型的代码仓库链接。但明确指出了MISP 2025挑战赛的AVSD基线代码库：https://github.com/mispchallenge/MISP-2025-AVSD-Baseline。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 -   复现材料：提供了模型架构图（图2,3,4）、主要超参数范围（α）、训练策略描述。但未提供完整的训练配置、超参数列表、检查点或附录。
 -   论文中引用的开源项目：引用了MISP 2025 AVSD Baseline [23]、RetinaFace [24]、ECAPA-TDNN [8]、Dover-Lap [32]、Mixup [33]、Silero VAD [30]、WeSpeaker [31]、Kaldi [29]、Pyannote [2] 等开源工具或模型。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：传统音频说话人分离在远场、混响、重叠语音等复杂声学环境下性能受限，现有的多模态音视频分离系统常采用两阶段分离架构，优化困难且复杂。
@@ -35,11 +45,12 @@ hiddenInHomeList: true
 4.  主要实验结果：在MISP 2025挑战赛的远场开发集上，β-AVSDnet的最佳单通道配置（β:Retina-Delta ECAPA）将词错误率（DER）从基线系统的15.38%降低到12.20%，模型参数量从58.9M降至26.7M（减少54%）。在多通道融合后，DER进一步降至10.98%。使用额外训练数据和数据增强后，DER达到7.25%，优于报告中的其他系统。关键对比数据见表2。
 5.  实际意义：该工作为复杂声学环境下的会议转写、多模态对话分析等应用提供了一种更高效、更鲁棒的解决方案。其轻量化特性也便于在端侧部署。
 6.  主要局限性：a) 评估仅基于MISP数据集，其泛化能力有待验证；b) 论文对训练的具体硬件、优化器、学习率调度等关键复现细节描述不足；c) 双目标训练中权重系数α的动态调整策略（“在0.80和0.98之间变化”）的具体机制和影响未充分讨论。
+
 ### 🏗️ 模型架构
 
 β-AVSDnet是一个端到端的多模态神经网络，整体架构如图3所示，旨在联合处理视频、音频和说话人嵌入，输出每个说话人在每个时间帧的活动概率。
 
-![β-AVSDnet End-to-End Neural Network Architecture](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460727-2.jpg)
+![β-AVSDnet End-to-End Neural Network Architecture](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460727-2.jpg)
 (图3: β-AVSDnet端到端神经网络架构图)
 
 主要组件及数据流：
@@ -58,7 +69,7 @@ hiddenInHomeList: true
     *   功能：融合视觉嵌入和说话人嵌入，生成一个联合的音视频身份表示。其结构如图4所示。
     *   处理：将视觉嵌入（时间维度与音频对齐后）和说话人嵌入进行拼接。然后通过两个并行路径：a) 一个单层LSTM，捕捉时序动态；b) 一个线性层后接ReLU，强调静态身份线索。两个路径的输出再次拼接，经过一个线性投影层，得到联合音频-视觉嵌入。
 
-![β-AV Embedding Subnet](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460727-3.png)
+![β-AV Embedding Subnet](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460727-3.png)
 (图4: β-AV嵌入子网络结构图)
 
 4.  音频流：
@@ -70,6 +81,7 @@ hiddenInHomeList: true
     *   建模：该联合特征依次通过两个BLSTM投影模块，进行深度时序建模。
     *   输出：最后通过K个并行的线性层（K为最大说话人数），生成每个说话人的活动概率 Ω̂_{k,n}（见图3右侧分支）。
     *   辅助输出：从视觉嵌入引出一个辅助分支，也通过K个并行的线性层，生成中间的视觉预测概率 Λ̂_{k,n}（见图3中上部分支），用于双目标训练。
+
 ### 💡 核心创新点
 
 1.  ROI-delta视觉表征：
@@ -89,6 +101,7 @@ hiddenInHomeList: true
     *   局限：单目标训练可能使模型在融合多模态信息时，视觉分支的监督信号较弱。
     *   如何起作用：该策略强制视觉分支（Λ̂）也直接学习说话人活动标签，确保视觉信息得到充分学习和利用。动态调整α（在0.80到0.98之间）有助于平衡两个目标，引导模型收敛。
     *   收益：这是一个整体的架构设计思想，使得端到端训练更稳定，最终系统性能得以提升。
+
 ### 🔬 细节详述
 
 -   训练数据：
@@ -125,6 +138,7 @@ hiddenInHomeList: true
     *   使用了BatchNorm（在音频流和视觉流中）。
     *   双目标训练本身可视为一种正则化手段。
     *   动态调整损失权重α。
+
 ### 📊 实验结果
 
 实验在MISP 2025挑战赛的远场（Far-field）开发集上进行，评测指标为说话人分离错误率（DER）。
@@ -173,6 +187,7 @@ hiddenInHomeList: true
     *   特征与嵌入：引入ROI-delta特征和ECAPA-TDNN嵌入（β:Retina-Delta ECAPA, 12.20%）带来显著性能提升。
 5.  多通道融合：在RTTM层面使用Dover-Lap融合6通道音频后，DER进一步降低至10.98%。
 6.  数据增强与额外数据：结合Mixup、WPE增强和中距离数据，单通道DER大幅降至7.25%，超越了报告的WUH-ALIBABA系统（7.84%）。
+
 ### ⚖️ 评分理由
 
 -   学术质量：5.8/7
@@ -191,3 +206,8 @@ hiddenInHomeList: true
     *   数据集：使用了MISP挑战赛的数据集，获取方式需遵循挑战赛协议，论文中未提及是否公开。
     *   复现材料：提供了架构细节、部分超参数（如α范围）和主要结果表格。但缺少训练硬件、完整超参数列表（优化器、lr等）、配置文件，复现门槛较高。
     *   依赖项目：列出了RetinaFace、ECAPA-TDNN、Dover-Lap、Mixup等依赖的开源工具/模型。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

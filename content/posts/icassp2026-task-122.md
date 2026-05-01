@@ -52,10 +52,6 @@ hiddenInHomeList: true
     *   NU-Wave2 的官方实现：https://github.com/maum-ai/nuwave2
 *   总体开源情况：论文本身未提及任何开源计划，但对复现有一定的指导意义。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的AI带宽扩展（BWE）方法很少考虑集成到实际音频编解码器时面临的约束，如比特流兼容性、处理延迟和解码失真。
@@ -104,10 +100,6 @@ hiddenInHomeList: true
 *   复现材料：论文提供了详细的训练超参数（学习率、batch size、优化器、步数、调度器参数等）、数据预处理方法（滤波器类型、截止频率范围）和推理设置（采样步数、引导尺度）。但未提供模型结构细节（如DiT具体配置）、训练硬件信息、检查点文件或完整的训练配置代码。
 *   论文中引用的开源项目：依赖预训练的VAE（来自`[12]` Stable Audio Open）、Qwen2-Audio（用于音频字幕生成）、T5-base（文本编码器）、librosa（频谱滚降计算）以及参考了AudioSR、FlashSR等工作的代码实现（用于对比）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的通用音频超分辨率方法（如AudioSR、FlashSR）在重建高频时，常出现语义不匹配（如生成不自然的齿音）和高频能量分布不一致的问题。
@@ -145,10 +137,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文描述了算法流程和关键公式，但未提供训练细节配置、超参数列表或检查点。部分关键参数（如PCA的 `η` 和 `T0`）未明确给出。
 - 论文中引用的开源项目：未提及。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

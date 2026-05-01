@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音乐检索 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Controllable Embedding Transformation for Mood-Guided Music Retrieval
+
+#音乐检索 #音乐理解 #对比学习 #嵌入变换
+
+✅ **7.5/10** | 前25% | #音乐检索 | #对比学习 | #音乐理解 #嵌入变换
+
+学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 0.0 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Julia Wilkins（SiriusXM-Pandora, USA；New York University, New York, USA）
@@ -19,11 +29,13 @@ hiddenInHomeList: true
     - Matthew C. McCallum（SiriusXM-Pandora, USA）
 
 #
+
 ### 💡 毒舌点评
 
 论文精准地抓住了音乐推荐系统从“千人千面”到“一键微调”的体验升级需求，并设计了一个工程上可行的嵌入变换框架，其“相似但不同情绪”的检索范式非常直观且实用。然而，整个方法高度依赖于高质量的MULE预训练嵌入和标签，在嵌入空间本身质量不高的情况下效果必然大打折扣，且“情绪”这一高度主观的属性用四个离散标签来定义和变换，其颗粒度和泛化能力值得怀疑。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码仓库链接。
@@ -34,9 +46,7 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：明确引用了 MULE 嵌入（`[19]`），并指出其代码开源。其他引用均为方法或数据集论文。
 - 开源计划：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有音乐嵌入（如MULE）虽然能很好地表示音乐，但缺乏对单一属性（如情绪）进行细粒度控制的能力，用户无法便捷地找到“类似但更快乐”的歌曲。
@@ -56,9 +66,10 @@ hiddenInHomeList: true
 6. 主要局限性：a) 高度依赖预训练MULE嵌入的质量和标签的准确性；b) 实验中的情绪被简化为4个离散类别，与连续的情绪谱系有差距；c) 论文未公开代码和模型，限制了复现和直接应用。
 
 #
+
 ### 🏗️ 模型架构
 
-![Mood-Guided Embedding Transformation Framework](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461460-0.png)
+![Mood-Guided Embedding Transformation Framework](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461460-0.png)
 图1：情绪引导的嵌入变换框架
 模型整体是一个端到端的、基于MLP的嵌入变换网络。其核心流程如下：
 1.  输入：模型接收三个输入：种子音频的MULE嵌入 `x_s` (维度 d=1728)、种子情绪标签 `y_s` 和目标情绪标签 `y_t` (均为 one-hot 编码，维度 m=4)。
@@ -69,6 +80,7 @@ hiddenInHomeList: true
 设计动机：这种“投影-拼接-再投影”的架构旨在将高维的内容嵌入和低维的标签指令解耦处理，通过独立的投影器增强标签信号的表征能力，最后融合并生成结果嵌入，是一个轻量且灵活的设计。
 
 #
+
 ### 💡 核心创新点
 
 1.  任务定义创新：首次明确将“可控音乐嵌入变换”作为一个独立的检索任务提出，专注于在音频嵌入空间中进行单属性（情绪）的定向编辑，同时保持其他属性不变。这区别于传统的音乐风格迁移（生成新音频）和解耦表示学习（分离属性但不一定支持编辑）。
@@ -76,6 +88,7 @@ hiddenInHomeList: true
 3.  联合目标函数设计创新：设计了三个互补的损失函数：`L_cosine` 用于基础对齐，`L_triplet` 强制变换后的嵌入远离种子、靠近目标（驱动变换发生），`L_cosBCE` 作为一个标签感知的调节器，在情绪相同时强对齐（身份映射），在情绪不同时放松对齐。三者结合平衡了“改变情绪”与“保持属性”这对矛盾需求。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -103,6 +116,7 @@ hiddenInHomeList: true
 - 正则化：在MLP层间使用了dropout，`p_s` 的dropout率为0.3，`p_y` 为0.4，`p_f` 为0.3。
 
 #
+
 ### 📊 实验结果
 
 主要对比结果：论文通过表1对比了本文方法与多个基线。
@@ -112,10 +126,11 @@ hiddenInHomeList: true
 
 损失函数消融实验：图2以条形图形式展示了不同损失组合相对于随机基线的百分点提升（pp）。
 - 关键结论：单一损失会导致性能不平衡。`L_cosine` 对流派保持较好但情绪变换差；`L_triplet` 对情绪变换贡献大但破坏流派保持；`L_cosBCE` 极大提升流派保持但几乎无效于情绪变换。三者结合时，在两个数据集上均实现了情绪变换和流派保持的最佳平衡（私有：情绪+70.8pp，流派+27.5pp；MTG-Jamendo：情绪+55.7pp，流派+26.7pp）。
-![Loss Ablation on Large-scale Dataset and MTG-Jamendo](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461460-0.png)
+![Loss Ablation on Large-scale Dataset and MTG-Jamendo](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461460-0.png)
 图2：损失函数消融研究（注：此处仅提供一张图的标识，论文实际包含两张子图，分别对应两个数据集。图中展示了不同损失组合在“情绪变换”和“流派保持”两个指标上相对于随机基线的百分点提升。）
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7：论文解决了一个实际且具体的问题，提出的方法框架完整、��术正确，实验设计严谨，包含了重要的消融研究和上界分析，证据可信。扣分点在于创新性主要体现在任务定义和损失组合的工程化设计，而非底层方法论的突破。
@@ -123,3 +138,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.0/1：虽然论文使用了开源嵌入（MULE），但其核心贡献的代码、模型权重及训练细节均未公开，严重阻碍了复现和后续研究，因此此项加成为零。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

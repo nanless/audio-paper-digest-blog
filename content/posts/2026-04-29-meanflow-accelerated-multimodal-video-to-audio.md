@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Meanflow-Accelerated Multimodal Video-to-Audio Synthesis Via One-Step Generation
+
+#音频生成 #流匹配 #音视频 #实时处理
+
+✅ **7.5/10** | 前25% | #音频生成 | #流匹配 | #音视频 #实时处理
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Xiaoran Yang（武汉大学电子信息学院）
 - 通讯作者：Gongping Huang（武汉大学电子信息学院）
 - 作者列表：Xiaoran Yang（武汉大学电子信息学院）、Jianxuan Yang（小米MiLM Plus，武汉）、Xinyue Guo（小米MiLM Plus，武汉）、Haoyu Wang（西南财经大学计算机与人工智能学院）、Ningning Pan（西南财经大学计算机与人工智能学院）、Gongping Huang（武汉大学电子信息学院）
+
 ### 💡 毒舌点评
 
 这篇论文的核心亮点是将MeanFlow的一步生成能力成功“移植”到多模态VTA合成任务上，实现了推理速度的数量级提升，这在实际应用中极具吸引力。然而，其短板也相当明显：核心创新组件（MeanFlow和CFG-scaled）均非作者首次提出，论文更偏向于一项有价值的工程集成与任务适配，且消融实验仅探讨了CFG强度和训练配对比例，对于MeanFlow框架如何具体适配多模态条件融合的机制剖析不够深入。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -25,9 +37,7 @@ hiddenInHomeList: true
 - 引用的开源项目/模型：CLIP、Synchformer、VAE（具体模型未说明）、MMAudio、MeanFlow、CFG-Zero。
 - 总结：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：现有的基于流匹配的视频到音频（VTA）合成方法依赖多步迭代采样，导致推理速度慢，难以满足实时应用需求。同时，一步生成场景下应用分类器引导（CFG）容易因缺乏迭代修正而产生过冲和失真。
@@ -49,11 +59,12 @@ hiddenInHomeList: true
 
 5.  实际意义是什么：实现了VTA合成的高效推理（RTF=0.007），为实时视频配音、交互式多媒体内容生成等应用提供了可行的技术方案，并展示了联合训练框架在VTA和TTA任务上的通用性。
 6.  主要局限性是什么：方法的性能高度依赖MeanFlow框架本身，创新集成性质较强；消融实验主要集中在CFG强度和训练数据配对比例上，对多模态条件与MeanFlow结合的具体机制探讨较少；论文未提供开源代码或模型。
+
 ### 🏗️ 模型架构
 
 MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，主要包含三个阶段：
 
-![MF-MJT模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-1.jpg)
+![MF-MJT模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-1.jpg)
 图2：MF-MJT的模型架构图。展示了从多模态输入到输出平均速度场的完整流程。
 
 1.  多模态条件编码与投影：
@@ -77,6 +88,7 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 - 采用“先融合后精炼”的两阶段设计：MM-DiT负责跨模态对齐，DiT负责音频细节生成。
 - 使用Synchformer特征显式增强音视频同步性。
 - 输出为平均速度场 `uθ`（对应MeanFlow公式中的 `u(zt, r, t)`），而非传统流匹配的瞬时速度场 `vθ`，这是实现一步生成的关键。
+
 ### 💡 核心创新点
 
 1.  将MeanFlow引入多模态VTA合成实现原生一步生成：
@@ -93,6 +105,7 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
     - 局限：许多VTA模型需要依赖预训练的TTA模型，灵活性受限。
     - 创新：构建从头联合训练视频、音频、文本模态的端到端框架（基于MMAudio），使模型同时具备VTA和TTA能力。
     - 收益：无需微调即可在TTA任务（AudioCaps）上取得优异表现（表2），证明了统一语义空间的有效性和模型的泛化能力。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -117,13 +130,14 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
     - CFG强度 `ω`：一步生成为1.5， 多步生成为4.5。
     - 推理时，音频输入为随机噪声 `ε ∼ N(0,1)`。
     - 支持可变长度音频生成（如VGGSound 8秒， AudioCaps 10秒），因未使用绝对位置编码。
+
 ### 📊 实验结果
 
 论文在VTA和TTA任务上进行了全面的基线对比和消融实验。
 
 1. 主要对比实验（VTA任务 - VGGSound测试集）
 
-![VTA对比结果表](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-6.png)
+![VTA对比结果表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-6.png)
 表1（论文中）：VGGSound测试集VTA合成方法性能对比。MF-MJT（一步）在FAD、FD、KL、IS和RTF上达到最佳或次佳。
 
 关键结论：
@@ -133,7 +147,7 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 
 2. 主要对比实验（TTA任务 - AudioCaps测试集）
 
-![TTA对比结果表](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-7.png)
+![TTA对比结果表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-7.png)
 表2（论文中）：AudioCaps测试集TTA合成方法性能对比。MF-MJT（一步）在FAD和FD上大幅领先AudioLCM。
 
 关键结论：
@@ -142,17 +156,23 @@ MF-MJT的架构（如图2所示）建立在多模态联合训练骨干之上，�
 
 3. 消融实验
 - CFG策略消融（图3）：对比了标准CFG（CFG-stand）和提出的CFG-scaled。
-    ![CFG消融结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-8.png)
+    ![CFG消融结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-8.png)
     图3a：一步生成下，IS分数随CFG强度ω变化。CFG-scaled在所有ω>1时均优于CFG-stand，且随着ω增加下降更缓。
-    ![CFG消融结果-多步](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-9.png)
+    ![CFG消融结果-多步](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-9.png)
     图3b：多步生成下，IS分数随CFG强度ω变化。趋势与一步生成不同，多步生成下更高ω带来更好质量。
     - 结论：在一步生成中，CFG-scaled能有效缓解过冲，在更高引导强度下保持更好的感知质量（IS）。
 - 训练中r≠t比例消融（图4）：研究了训练时 `r≠t` 采样对的比例对性能的影响。
-    ![r不等于t比例消融](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461369-0.jpg)
+    ![r不等于t比例消融](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461369-0.jpg)
     图4：不同r≠t比例对IB分数（语义对齐）和DeSync分数（时间同步）的影响（一步生成， ω=1.5）。
     - 结论：更低的 `r≠t` 比例（如10%）能带来更好的语义对齐（IB↑）和时间同步（DeSync↓）。这表明在平均速度场学习中，提供与 `r=t` 对应的直接点对点监督信号对跨模态对齐至关重要。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文问题定义清晰，方法逻辑严谨，实验设计全面且对比充分，结果令人信服。主要扣分点在于核心技术创新（MeanFlow， CFG-scaled）并非作者首次提出，论文的贡献在于将这些技术有效组合并适配到多模态VTA合成任务中，属于扎实的系统改进而非基础突破。
 - 选题价值：1.5/2：选择推理效率这一关键瓶颈进行优化，具有明确的实际应用价值。VTA合成是前沿热点，加速推理能直接推动该技术的实用化。与音频/语音读者的相关性较高。
 - 开源与复现加成：0.0/1：论文未提及任何开源代码、模型权重或在线演示。虽然提供了详尽的训练细节，有利于复现，但无实际开源资源释放，因此该项加分为0。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

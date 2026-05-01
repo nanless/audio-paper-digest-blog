@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了InsTaG（[2]）、SyncTalk（[10]）、GeneFace（[14]）、MimicTalk（[15]）等开源工作作为基线或技术参考。
 - 总体：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：基于3D高斯溅射（3DGS）的说话人生成模型在优化时存在深度歧义，导致在渲染新视角（尤其是大角度偏转）时产生模糊、暗区等视觉伪影。现有方法仅在训练阶段引入深度监督，缺乏重建时的深度感知机制。

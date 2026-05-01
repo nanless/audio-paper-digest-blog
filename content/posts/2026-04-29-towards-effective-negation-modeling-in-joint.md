@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音乐理解 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Towards Effective Negation Modeling in Joint Audio-Text Models for Music
+
+#多模态模型 #对比学习 #音乐理解 #音乐检索 #数据增强
+
+✅ **7.5/10** | 前25% | #音乐理解 | #对比学习 | #多模态模型 #音乐检索
+
+学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 -   第一作者：Yannis Vasilakis（Queen Mary University of London）
@@ -14,12 +24,14 @@ hiddenInHomeList: true
 -   作者列表：Yannis Vasilakis（Queen Mary University of London, UKRI Centre for Doctoral Training in AI and Music）、Rachel Bittner（Spotify）、Johan Pauwels（Queen Mary University of London）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文没有停留在指出“模型不懂否定”的现象上，而是设计了一套从训练方法到评估协议的系统性解决方案，尤其是提出将否定建模拆解为检索和二分类任务进行量化评估，这为社区未来研究类似问题提供了可借鉴的范式。
 短板：所提方法（文本增强与对比损失项）本质上是启发式的，未能深入探索语言模型中更复杂的否定语义结构；且所有实验基于合成增强的标签数据，其能否迁移到真实世界复杂多变的自然语言查询，文中未予验证，结论的普适性存疑。
 
 #
+
 ### 🔗 开源详情
 
 -   代码：论文中提供了代码仓库链接：github.com/YannisBilly/towards-effective-negation-modeling-in-joint-audio-text-models-for-music。并明确说明“All of our experiments and evaluation protocols are conducted on publicly available datasets. The code and model are publicly available for reproduction purposes.”
@@ -29,14 +41,13 @@ hiddenInHomeList: true
 -   复现材料：论文提供了评估协议的具体描述和代码，但未提供详细的训练配置文件（如YAML文件）、超参数搜索日志或预训练检查点。
 -   引用的开源项目：论文明确基于CLAP模型进行研究，并引用了相关的开源工作（如LP-MusicCaps数据集）。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 这篇论文旨在解决联合音频-文本模型（如CLAP）在处理音乐相关文本中的否定概念时表现不佳的问题。其核心方法是从零训练CLAP模型，并引入两种技术：1）文本增强（Negation Insert），通过在原始描述中随机插入否定词和未出现过的标签来生成训练样本；2）相似性损失项（Dissimilarity Term），在对比学习损失之外，额外添加一项损失以拉大原始描述与其完全否定版本在嵌入空间中的距离。与已有方法相比，本文的新颖之处在于：a）首次系统性地从训练端改进音乐多模态模型的否定建模能力；b）提出了专门针对否定能力的检索和二分类评估协议。实验表明，两种方法单独或结合使用，都能有效提升模型区分不同程度否定描述的能力，同时基本保持原有的检索性能。例如，加入损失项后，模型对完全否定描述的检索召回率（R@10）降至接近0（见图2）。这项工作的实际意义在于能提升音乐搜索的准确性，避免因用户表述中的否定而返回错误结果。其主要局限性在于依赖合成的否定文本，可能无法完全覆盖自然语言中复杂否定的语义。
 
 #
+
 ### 🏗️ 模型架构
 
 论文的核心模型架构是标准的CLAP (Contrastive Language-Audio Pre-training) 模型，一个双塔结构。
@@ -48,6 +59,7 @@ hiddenInHomeList: true
 -   补充解释：CLAP模型的目标是学习一个共享的嵌入空间，使得语义相似的音频和文本在该空间中距离接近。这与CLIP在视觉-语言领域的做法类似。
 
 #
+
 ### 💡 核心创新点
 
 1.  针对性的否定文本增强方法（Negation Insert）：
@@ -69,6 +81,7 @@ hiddenInHomeList: true
     -   收益：该协议清晰地揭示了不同方法（基线、文本增强、损失项、组合）在区分不同程度否定上的能力差异（见图4），例如发现损失项模型能很好区分“原始”和“否定”，但在区分“半否定”和“完全否定”上表现较弱。
 
 #
+
 ### 🔬 细节详述
 
 -   训练数据：
@@ -96,6 +109,7 @@ hiddenInHomeList: true
 -   正则化或稳定训练技巧：未说明。
 
 #
+
 ### 📊 实验结果
 
 主要结论：两种提出的方法（文本增强、损失项）及其组合，均能提升模型在否定建模评估任务上的表现，同时对标准检索性能的影响较小。
@@ -117,6 +131,7 @@ hiddenInHomeList: true
 具体数值：论文未提供所有图表的精确数值，但上述趋势从图表中可清晰观察。关键数字如：基线模型在完全否定描述上的R@10仍很高；损失项（k=1e-2）将完全否定描述的R@10降至≈0；组合模型在半否定vs完全否定分类上准确率提升至≈0.6。
 
 #
+
 ### ⚖️ 评分理由
 
 -   学术质量（5.5/7）：论文提出的问题重要，解决方案系统（涵盖训练与评估），实验充分且分析深入（进行了方法对比、超参数敏感性分析、多种评估视角）。创新性在于将否定建模作为核心研究目标，并提供了新的评估范式，但技术手段（增强与损失设计）并非极其前沿。实验仅基于自己训练的模型，缺乏与其它强基线在否定任务上的直接对比，证据强度因此受限。
@@ -124,3 +139,8 @@ hiddenInHomeList: true
 -   开源与复现加成（0.5/1）：提供了代码仓库链接，并承诺开源模型和代码，极大地便利了复现。但论文中未详细说明训练环境（硬件、时间）、超参数搜索空间细节，以及模型权重的具体获取方式，因此加成分为中等。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

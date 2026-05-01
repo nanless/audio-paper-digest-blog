@@ -53,10 +53,6 @@ hiddenInHomeList: true
 - 引用的开源项目：论文依赖并引用了BERT、Swin-Transformer、Wav2Vec 2.0、AdamW等开源模型和优化器。
 - 开源计划：论文中未提及任何开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有方法在多模态对话意图识别中，盲目融合所有模态（文本、视频、音频）信息，忽略了模态本身可能存在的噪声或与意图无关的情况，导致模型对噪声敏感且泛化能力差。

@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 StereoFoley: Object-Aware Stereo Audio Generation from Video
+
+#音频生成 #扩散模型 #空间音频 #跨模态
+
+✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #空间音频 #跨模态
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Tornike Karchkhadze（UC San Diego）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Tornike Karchkhadze（UC San Diego）、Kuan-Lin Chen（Apple）、Mojtaba Heydari（Apple）、Robert Henzel（Apple）、Alessandro Toso（Apple）、Mehrez Souden（Apple）、Joshua Atkins（Apple）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文的核心贡献——合成数据管线，巧妙地将视频对象分割、跟踪与音频空间化规则结合，为解决小众任务的冷启动问题提供了一个系统且可扩展的“数据工厂”蓝图。短板：论文对合成数据与真实数据的差距讨论不足，且关键组件（如OVD、T2A模型）均为“内部”或“借鉴”，极大限制了结果的可复现性和社区验证。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 引用的开源项目：论文引用并基于了Synchformer、SAM2等开源模型或思想，但具体集成方式未详述。
 - 整体：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有视频到音频生成模型大多只能生成单声道，或无法实现基于视频中物体位置的、语义一致的立体声效。主要瓶颈在于缺乏专业的、空间信息准确的立体声V2A训练数据集。
@@ -44,11 +54,12 @@ hiddenInHomeList: true
 6. 局限性：合成数据管线依赖多个复杂的、未公开的内部模型，其生成数据的真实感和多样性可能不足。模型规模庞大（~1.1B参数），训练成本高。
 
 #
+
 ### 🏗️ 模型架构
 
 StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模型两大部分组成。
 
-![图1: pdf-image-page1-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464717-0.jpg)
+![图1: pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464717-0.jpg)
 
 1. 输入与编码器：
    - 音频编码：立体声音频 `x_audio` (采样率 fs=48kHz) 通过一个内部的立体声编解码器（Codec）编码为潜表示 `z` (维度 Tz x Dz=224x256)。
@@ -61,6 +72,7 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
    - 训练目标：使用v-objective，最小化真实速度 `v` 与模型预测速度 `v_theta` 之间的均方误差。
 
 #
+
 ### 💡 核心创新点
 
 1. 合成数据生成管线：这是论文的核心贡献。该管线（图2）整合了多模态LLM分析、开放词汇检测（OVD）、视频分割（SAM2）、文本到音频（T2A）生成以及基于物理规则的立体声空间化，能够为任意视频自动合成出具有正确对象-声音空间对应关系的立体声音频训练数据。
@@ -68,9 +80,10 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
 3. 引入新的评估指标：提出了“分箱对齐分数”（BAS），用于客观评估生成音频的空间化是否与视频物体位置对齐，填补了该领域的评估空白。
 4. 验证了数据瓶颈假说：通过实验证明，在使用相同的基底模型架构下，仅通过用合成的对象感知数据对部分训练集进行替换和微调（从StereoFoley-base到StereoFoley-obj），就能显著提升模型的立体声对象感知能力，表明数据质量而非模型架构是当前的主要瓶颈。
 
-![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464717-1.jpg)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464717-1.jpg)
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -86,6 +99,7 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
 - 训练硬件：8×NVIDIA A100 GPU。
 
 #
+
 ### 📊 实验结果
 
 基线对比（表1）
@@ -115,6 +129,7 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
 结论：在对象感知立体声对齐方面，StereoFoley-obj在客观BAS分数和主观MOS评分上均显著优于包括原始VGGSound音频在内的所有基线，验证了合成数据训练的有效性。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文工作完整，从问题定义、方法提出（合成管线+模型）、实验验证到指标设计，形成了一个扎实的研究闭环。创新集中于数据生成范式而非模型架构本身。实验设计全面，包含了与SOTA的定量对比、验证核心思想的消融实验（base vs. obj）、新指标的引入以及大规模用户研究（131名有效评估者，1341个评分），证据可信。
@@ -122,3 +137,8 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
 - 开源与复现加成：0/1：论文未提供任何开源资源。合成管线严重依赖未公开的内部模型（OVD， T2A， 特定的SAM2使用方式），使得复现该工作几乎不可能。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

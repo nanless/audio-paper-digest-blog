@@ -55,10 +55,6 @@ hiddenInHomeList: true
     3.  E-Prime 3.0：用于实验刺激控制。
     4.  AdamW：优化器。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的EEG听觉注意力切换解码（AASD）范式大多依赖外部提示线索（如蜂鸣声）和空间化音频，无法捕捉自然状态下由听者自发发起的注意力切换，且可能引入非听觉伪迹。

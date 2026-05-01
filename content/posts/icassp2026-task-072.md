@@ -51,10 +51,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练配置（数据集、优化器、学习率、步长、硬件），足以支持复现。代码仓库应包含模型定义和训练脚本。
 - 引用的开源项目：论文引用了多个作为基线的开源项目/工具，如FunCodec [12]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有神经语音编码器在低/超低比特率下，编码效率受限于特征表示能力和量化过程的不足，特别是传统残差向量量化（RVQ）在初始阶段后，残差变得不规则，导致量化损失高、效率低下。
@@ -92,10 +88,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及在线演示。
 - 复现材料：论文提供了架构图和主要的训练阶段描述，但具体的超参数配置、训练脚本、依赖环境等细节需参考代码仓库。
 - 论文中引用的开源项目：主要依赖WavLM、Vocos等开源模型或架构。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -135,10 +127,6 @@ hiddenInHomeList: true
 -   Demo：提供了在线音频样本演示页面（`https://x-lance.github.io/codecslime/`）。
 -   复现材料：论文中详细给出了骨干模型、CodecSlime各阶段的超参数设置、训练步数、硬件配置等，复现信息较为充分。
 -   引用的开源项目：明确引用了BigCodec、EnCodec等项目的代码实现，以及多种评估工具（NeMo ASR, pystoi, PESQ, Resemblyzer等）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -180,10 +168,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及在线演示。
 - 复现材料：论文详细说明了模型架构、训练数据、损失函数、训练策略（优化器、学习率、步数）和关键超参数（模型大小、FSQ配置）。这些信息对于复现是充足的，但未提供具体的配置文件或检查点下载链接。
 - 论文中引用的开源项目：提到了依赖或对比的开源项目，包括：HiFiGAN、Vocos、FSQ（来自“Low frame-rate speech codec”），以及基线模型EnCodec, DAC-RVQ3, SpeechTokenizer, Mimi-RVQ8, BigCodec, XCodec2.0, XY-Tokenizer等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -232,10 +216,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及。
 - 复现材料：论文中提供了详细的训练硬件（单卡RTX 3090）、优化器参数、学习率调度、STFT参数、模型结构配置（层数、通道数、卷积核大小等），复现指导较为充分。
 - 引用的开源项目：论文提到了FunCodec、FocalCodec、Hifi-codec等开源工具或相关工作，但未明确说明IBPCodec的代码是否基于或借鉴了这些项目。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

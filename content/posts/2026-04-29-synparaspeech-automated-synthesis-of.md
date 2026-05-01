@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音合成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 SynParaSpeech: Automated Synthesis of Paralinguistic Datasets for Speech Generation and Understanding
+
+#语音合成 #数据集 #数据增强 #语音活动检测
+
+✅ **7.5/10** | 前25% | #语音合成 | #数据增强 | #数据集 #语音活动检测
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Bingsong Bai（北京邮电大学人工智能学院）， Qihang Lu（北京邮电大学人工智能学院）， Wenbing Yang（北京邮电大学人工智能学院）（论文标注为并列第一作者）
@@ -25,11 +35,13 @@ hiddenInHomeList: true
     - Jun Gao（Hello Group Inc.）
 
 #
+
 ### 💡 毒舌点评
 
 这篇论文的亮点在于构建了一条颇为精巧的“副语言数据自动化工厂”流水线，把ASR投票、LLM“加标点”、语音转换“换音色”等技术模块组装得很有条理，并通过扎实的实验证明了用这套流水线生产出的数据集确实好用。其短板在于，这条流水线本身是“站在巨人肩膀上”的工程集成，核心的算法创新性相对有限；而且，用合成数据训练的模型，其生成的“副语言”是否真正捕捉到了人类情感的细微之处，可能还需在更复杂的交互场景中打个问号。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中提供了代码仓库链接：https://github.com/ShawnPi233/SynParaSpeech。
@@ -39,9 +51,7 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了数据合成流水线的每一步（Stage I-V），并提供了TTS和检测任务的训练超参数、优化器设置等，复现指导性强。
 - 论文中引用的开源项目：Whisper, SenseVoice, Paraformer, Stable Whisper, Deepseek V3, CAM++, SeedVC, CosyVoice2, F5-TTS, CLAP, RoBERTa, MMSU等。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决的问题：现有副语言（如笑声、叹息）数据集存在规模小、标注不精确、不公开或分布不平衡等问题，限制了更自然语音生成和副语言事件检测技术的发展。
@@ -54,6 +64,7 @@ hiddenInHomeList: true
 6.  主要局限性：数据集是通过自动化流水线合成的，其自然度和情感真实性可能与真实人类表达存在差异，可能引入数据偏差。此外，方法在合成过程中依赖了多个外部模型（ASR、LLM、VC），其性能上限可能受这些组件制约。数据集主要覆盖6类副语言事件，其他类别尚未涵盖。
 
 #
+
 ### 🏗️ 模型架构
 
 本文的核心贡献并非一个单一的预测模型，而是一个自动化数据集构建与验证流水线（Pipeline），其整体架构如图1所示，包含五个阶段：
@@ -67,9 +78,11 @@ hiddenInHomeList: true
 3.  Stage III: Verification（人工辅助验证）：邀请专业人士对合成音频的自然度、副语言质量、音频质量和时间对齐准确性进行评估和筛选，保留合格的音频。
 4.  Stage IV & V: Application（应用）：将构建好的SynParaSpeech数据集应用于语音合成（通过SFT/DPO微调TTS模型）和语音理解（通过提示调优增强MLLM的检测能力）。
 
+![SynParaSpeech 流程图](https://raw.githubusercontent.com/ShawnPi233/SynParaSpeech/main/figs/pipeline.png)
 图1：SynParaSpeech 自动化合成与应用流程概览。左上展示了Stage I（文本标签合成）和Stage II（音频合成）的细节，右下展示了Stage IV（合成）和Stage V（理解）的应用方式。
 
 #
+
 ### 💡 核心创新点
 
 1.  首个自动化大规模副语言数据集构建框架：之前的方法要么依赖昂贵的人工标注，要么使用性能有限的ASR模型进行自动标注，导致数据集有偏差或规模有限。本文的创新在于设计了一套全自动的、基于多模型协同（ASR投票、LLM标注、语音转换）的合成流水线，实现了高效、可扩展的数据生产。
@@ -78,6 +91,7 @@ hiddenInHomeList: true
 4.  验证数据集在生成与理解双任务上的有效性：通过在CosyVoice2/F5-TTS上的微调实验，证明了该数据集能显著提升TTS模型的副语言生成质量；通过在Kimi Audio/Qwen 2.5 Omni上的提示调优实验，证明了该数据集能增强模型对副语言事件的检测能力。实验设计全面，包含了模型对比、训练策略对比（DPO）和提示数量消融。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -97,6 +111,7 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：CosyVoice2训练中使用了梯度裁剪、梯度累积和动态批次大小。DPO训练中使用了参考模型`πref`。
 
 #
+
 ### 📊 实验结果
 
 主要结果表：
@@ -132,6 +147,7 @@ hiddenInHomeList: true
 表4：副语言事件检测结果。关键发现：SynParaSpeech提示调优对两个模型均有提升，且在提示样本数为5时达到最优效果，更多上下文（7）反而可能导致性能下降。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量（6.0/7）：
@@ -151,3 +167,8 @@ hiddenInHomeList: true
     - 训练细节：提供了关键超参数、训练配置和框架选择，复现信息充分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

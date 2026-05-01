@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：Whisper, Distil-Whisper, SBERT, BLIP2。
 - 开源计划：代码计划开源，其他资源（数据、模型权重）情况未明确说明。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：传统语音口语评估（SLA）方法通常只利用ASR模型的转录文本，忽略了丰富的声学信息，且受模型输入长度限制，难以处理长语音。本文旨在挖掘Whisper基础模型在L2英语口语评估中的“隐藏潜力”，利用其内部隐藏表征进行更全面的评估。

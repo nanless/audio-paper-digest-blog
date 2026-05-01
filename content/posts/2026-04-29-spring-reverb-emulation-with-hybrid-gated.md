@@ -7,15 +7,27 @@ categories: [icassp-2026]
 description: "音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Spring Reverb Emulation with Hybrid Gated Convolutional Networks and State Space Models
+
+#音频生成 #状态空间模型 #门控卷积网络 #实时处理 #数据集
+
+✅ **7.5/10** | 前25% | #音频生成 | #状态空间模型 | #门控卷积网络 #实时处理
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Jonas Janser (Institute of Computer Technology, TU Wien, Austria)
 - 通讯作者：未明确说明（论文中未标注通讯作者）
 - 作者列表：Jonas Janser (Institute of Computer Technology, TU Wien, Austria)、Matthias Wess (Institute of Computer Technology, TU Wien, Austria; Christian Doppler Laboratory for Embedded Machine Learning, TU Wien, Austria)、Dominik Dallinger (Institute of Computer Technology, TU Wien, Austria; Christian Doppler Laboratory for Embedded Machine Learning, TU Wien, Austria)、Matthias Bittner (Institute of Computer Technology, TU Wien, Austria; Christian Doppler Laboratory for Embedded Machine Learning, TU Wien, Austria)、Daniel Schnöll (Institute of Computer Technology, TU Wien, Austria; Christian Doppler Laboratory for Embedded Machine Learning, TU Wien, Austria)、Axel Jantsch (Institute of Computer Technology, TU Wien, Austria; Christian Doppler Laboratory for Embedded Machine Learning, TU Wien, Austria)
+
 ### 💡 毒舌点评
 
 亮点：论文核心贡献在于提出了GCN-SSM混合架构，通过交错馈馈网络与状态空间模型，有效解决了纯卷积模型相位不准和纯状态空间模型混响尾音不真实、有振铃伪影的问题，实现了“分工合作”，在主观听感上获得了最高分。  
 短板：尽管标题声称“state-of-the-art”，但实验中并未与近年来在音频效果建模领域其他强劲的基线（如更新的扩散模型或更复杂的循环网络变体）进行直接对比，使得其最优性结论的支撑略显单薄。
+
 ### 🔗 开源详情
 
 - 代码：提供。论文明确提供了代码仓库链接：https://Kffeekltsch.github.io/spring-ssm/ (此链接同时指向项目主页和代码库)。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
     - `Cpp-NN`：用于SSM层的C++高效推理基准测试。
     - `webMUSHRA`：用于进行主观听力测试的框架。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 要解决什么问题：弹簧混响器具有复杂的非线性、时变特性和长混响尾，现有深度学习方法难以同时精确建模其瞬态响应、动态衰减和相位特性。
@@ -64,11 +74,12 @@ hiddenInHomeList: true
 
 5. 实际意义是什么：证明了混合架构在建模复杂音频效果上的有效性，为开发高保真、实时可部署的虚拟模拟音频插件提供了新的模型选择和技术路径。
 6. 主要局限性是什么：实验对比的基线主要来自论文自身的变体和较早的工作，缺乏与最新发表的强力模型的直接对比；同时，论文也指出其损失函数设计仍不完美，如GCN-SSM-O的案例显示客观指标与主观听感可能存在不一致。
+
 ### 🏗️ 模型架构
 
 论文的核心是GCN-SSM混合架构，其设计目标是结合馈馈结构与循环结构的优势。根据图2的架构示意图，可以详细描述如下：
 
-![GCN-SSM模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461485-4.png)
+![GCN-SSM模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461485-4.png)
 图2. 论文中提出的模型架构：a) CONV, b) CONV-SSM, c) GCN-SSM。
 
 - 整体流程：输入为原始波形（44.1kHz单声道），经过一系列交错处理的GCN块和SSM层，最终输出同样格式的波形。
@@ -82,6 +93,7 @@ hiddenInHomeList: true
 - 动机：纯GCN（馈馈）可能难以维持完美的相位保真度；纯SSM可能无法生成逼真的混响尾并引入振铃伪影。交错设计旨在让GCN负责建模动态的脉冲响应（IR）包络，而SSM负责精修复杂的相位关系，实现功能分工。
 
 其他架构：CONV是纯膨胀卷积模型；CONV-SSM是先堆叠15个卷积层再接6个SSM层；GCN是纯GCN模型（不含SSM）。
+
 ### 💡 核心创新点
 
 1.  提出GCN-SSM混合架构：
@@ -101,6 +113,7 @@ hiddenInHomeList: true
     - 之前局限：之前的研究（如Papaleo等）缺乏正式的主观听感评估，且结论可能受限于数据集。
     - 如何起作用：通过控制变量（有无SSM、不同的馈馈结构）和全面的评估指标（5项客观+MUSHRA主观），清晰地揭示了各组件贡献和架构优劣。
     - 收益：为“为何混合架构有效”提供了强有力的实证证据，结论可靠。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -141,6 +154,7 @@ hiddenInHomeList: true
     - 对SSM核心参数使用更低的学习率。
     - 在GCN和GCN-SSM中使用残差连接。
     - 未提及其他如Dropout、权重衰减等技巧。
+
 ### 📊 实验结果
 
 - 主要Benchmark/指标：在一个自建的弹簧混响测试集上进行评估。
@@ -159,8 +173,14 @@ hiddenInHomeList: true
     - 表格数据已在“核心摘要”部分完整列出。
     - 论文中的图3（pdf-image-page2-idx2）可能是一个示例波形对比，但图中信息未在正文中描述。关键结论均体现在上述表格的数字中。
 - 未提及内容：未提供与外部最先进（SOTA）模型（如其他团队在音频效果建模上提出的最新模型）的直接量化对比表。
+
 ### ⚖️ 评分理由
 
 - 学术质量 (6.5/7)：创新性（2.0/2.5）：将GCN与SSM交错结合的想法新颖且针对性强，解决了具体痛点。技术正确性（1.5/1.5）：方法描述清晰，实验设计合理，训练细节明确。实验充分性（1.5/2.0）：进行了系统的架构消融、采用了复合损失和正式的主观测试，证据链完整。扣分原因：缺少与领域内最新、最强竞争模型的横向比较，使得“state-of-the-art”声明的强度略有不足。
 - 选题价值 (1.5/2)：前沿性（0.8/1.0）：音频效果建模，特别是复杂模拟硬件的建模，是音频AI的活跃前沿。潜在影响与应用（0.7/1.0）：成果可直接用于开发新一代的虚拟模拟音频插件，对音乐制作人和音频工程师有实用价值，也为处理类似长时序、非线性信号的问题提供了思路。
 - 开源与复现加成 (0.5/1)：代码与模型：提供了完整的模型代码仓库。数据集：提供了专用的高质量数据集。训练细节：详细列出了损失函数、优化器、学习率策略等关键超参数。复现基础极好。扣分原因：未明确提及预训练模型权重的直接发布（但有代码和数据，可自行训练）。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

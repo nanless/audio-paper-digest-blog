@@ -60,10 +60,6 @@ hiddenInHomeList: true
     - DNSMOS: 用于评估语音自然度。
     - Lyra2 (官方C实现): 用于基准测试实时因子。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题？ 现有的实时通信（RTC）中实现个性化音色定制（变声）面临高延迟问题，因为通常需要将流式语音转换（VC）系统与神经语音编解码器（NSC）级联，总算法延迟远超RTC要求的几十毫秒。

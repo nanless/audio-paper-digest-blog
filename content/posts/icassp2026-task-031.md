@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文提及了基于DSBM [8]的代码库进行实现，并给出了关键超参数（λ=100，内/外层迭代次数，网络结构等），但未提供完整的训练配置文件或详细步骤。论文中未提及开源计划。
 - 论文中引用的开源项目：明确引用并基于 [8] Diffusion Schrödinger Bridge Matching 的代码库进行实验。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决什么问题：现有的基于Schrödinger Bridge (SB)的数据集对齐方法在学习分布间的映射时，缺乏对数据内在几何结构（如聚类、相对距离）的感知，可能导致在传输过程中破坏这些对下游任务至关重要的结构。

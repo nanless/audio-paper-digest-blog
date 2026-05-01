@@ -53,10 +53,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练配置（数据增强、优化器、学习率、调度策略等），但未提供最终的模型检查点、训练日志或详细的配置文件。论文中未提及开源计划。
 - 论文中引用的开源项目：论文引用了多个已发表的方法（如ResNet, TSM, TCN, DC-TCN等）作为基线，但未明确说明其实现或代码来源。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统唇读前端方法主要在空间域提取特征，难以有效处理唇部动作这种混合了低频宏观轮廓和高频细节的复杂信号，导致关键信息提取不足。
@@ -123,10 +119,6 @@ hiddenInHomeList: true
 - 复现材料：论文描述了主要架构和训练策略，但未提供完整的配置文件、检查点或附录中的详细实现说明。
 - 论文中引用的开源项目：MediaPipe（用于关键点提取）、NVIDIA NeMo toolkit（用于文本规范化）、SoundChoice toolkit（用于音素转换）。这些是工具依赖，而非论文本身的开源贡献。
 - 论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

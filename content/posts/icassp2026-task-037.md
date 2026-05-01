@@ -50,10 +50,6 @@ hiddenInHomeList: true
 *   论文中引用的开源项目：包括Serenade， Amphion (Vevo1.5)， ContentVec， Whisper， HuBERT， DSPGAN， SiFi-GAN， VERSA， SERAFE等。
 *   论文中未提及开源计划：对于参赛系统的完整开源计划未做统一说明。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文介绍了2025年歌唱语音转换挑战赛（SVCC 2025）的研究发现，其核心目标是推动歌唱语音转换研究从单一的歌手身份转换转向更具挑战性的歌唱风格转换。为此，挑战赛设计了两个任务：同域歌唱风格转换（任务1）和零样本歌唱风格转换（任务2），并基于GTSinger数据集构建了专门的评估集。论文开放了三个基线系统并评估了总计26个参赛系统。主要实验结果表明：1) 在歌手身份相似度上，最佳系统已接近真实录音水平；2) 但在歌唱风格相似度和自然度上，所有系统与真实录音仍有明显差距，其中动态特征显著的风格（如气声、滑音、颤音）最难建模。图1展示了自然度与风格相似度的总体关系，图2的箱线图则具体呈现了三项主观评估指标的分布。该挑战赛揭示了当前技术在联合建模歌手身份与歌唱风格，特别是动态风格特征方面的局限性，指明了未来的重要改进方向。
@@ -87,10 +83,6 @@ hiddenInHomeList: true
 - Demo： 提供了在线演示链接：https://honee-w.github.io/SVC-Challenge-Demo/
 - 复现材料： 论文给出了SFT和DPO阶段的学习率。但未提供模型配置文件、检查点、详细超参数（如隐藏维度、层数、码本大小）、硬件信息和训练时长。
 - 论文中引用的开源项目： 论文明确使用了或依赖于以下开源工具/模型：ECAPA-TDNN [25]（用于说话人嵌入/风格编码）、HuBERT [13]/Wav2Vec 2.0 [14]（用于内容特征提取）、Whisper [27]/Paraformer [29]（用于自动转录）、音乐人声分离模型 [28]、Qwen3 [30]（用于转录精炼）、DNSMOS [31]（用于质量评估）。基线系统Vevo [8]也是开源的。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -136,10 +128,6 @@ hiddenInHomeList: true
 - Demo：未提及提供在线演示。
 - 复现材料：给出了部分超参数（如CQT设置、优化器），但缺失训练步数、batch size、硬件信息、数据预处理流程等关键细节。
 - 论文中引用的开源项目：Whisper, CampPlus, OpenVoice, Firefly-GAN, SeedVC, UVR等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

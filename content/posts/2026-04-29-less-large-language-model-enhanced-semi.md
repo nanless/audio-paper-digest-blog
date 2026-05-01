@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音识别 语音翻译 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 LESS: Large Language Model Enhanced Semi-Supervised Learning for Speech Foundational Models Using in-the-wild Data
+
+#语音识别 #语音翻译 #半监督学习 #大语言模型 #多语言
+
+✅ **7.5/10** | 前25% | #语音识别 #语音翻译 | #半监督学习 #大语言模型 | #语音识别 #语音翻译
+
+学术质量 7.0/7 | 选题价值 7.5/2 | 复现加成 1.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Wen Ding（NVIDIA Corporation）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Wen Ding（NVIDIA Corporation），Fan Qian（NVIDIA Corporation）
 
 #
+
 ### 💡 毒舌点评
 
 这篇论文巧妙地将一个在NLP领域成熟的工具（LLM）转化为解决语音SSL中“脏数据”问题的利器，思路实用且效果显著，特别是在AST任务上SOTA的结果很有说服力。然而，其验证的“语音大模型”高度集中于Whisper，缺乏对其他架构（如USM, MMS）的验证，让人好奇该框架是否具有更普适的迁移能力。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：提供。论文明确提供了开源配方的GitHub仓库链接：`github.com/nvidia-china-sae/mair-hub/tree/main/speech-llm/less_recipe`。
@@ -37,9 +49,7 @@ hiddenInHomeList: true
     - Qwen2.5-coder-32b-instruct (通过NVIDIA NIM访问)
     - ESPnet (用于对比的基线结果)
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决的问题：当前最先进的语音基础模型（SFMs）在半监督学习中利用从真实世界（in-the-wild）收集的未标注音频数据时，面临一个核心挑战：这些数据声学环境复杂多样，模型生成的伪标签质量较低，导致训练效果不佳。
@@ -51,6 +61,7 @@ hiddenInHomeList: true
     - 消融实验：验证了通用LLM（Yi-Large）比代码专精LLM（Qwen2.5-coder）更适合纠错；WER提示词（WER Prompting）和严格的过滤阈值（0.1）能带来性能提升。
 5.  实际意义：该框架为利用海量、易获取但质量低劣的网络语音数据训练更强健、适应性更广的语音大模型提供了一种有效的工程化路径，有助于降低对昂贵精标数据的依赖。
 6.  主要局限性：研究中使用的语音大模型（SFMs）主要局限于Whisper Large-v3，未验证该方法在其他主流架构（如USM, MMS）上的泛化能力。此外，对于AST任务，仅进行了一轮迭代实验，多轮迭代的潜力和收敛情况有待探索。真实世界数据的噪声和多样性控制标准未深入讨论。
+
 ### 🏗️ 模型架构
 
 论文提出的是一个迭代优化的流水线框架（LESS），而非一个独立的新模型架构。其核心组件和数据流如下：
@@ -61,13 +72,14 @@ hiddenInHomeList: true
 5.  数据过滤：计算原始伪标签（贪心解码结果）与LLM校正后文本之间的WER（作为近似质量指标）。设定一个过滤阈值（默认为0.1），仅保留WER低于该阈值的样本，即LLM修正幅度较小、被认为质量较高的样本。
 6.  迭代训练：将过滤后高质量的“LLM校正伪标签”数据与原始有标签数据按一定比例混合，用于微调当前的SFMs，得到一个新的“学生模型”，并作为下一轮迭代的起点。该过程重复直至收敛。
 
-![LESS框架示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462195-0.png)
+![LESS框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462195-0.png)
 图1展示了以ES-to-EN AST任务为例的LESS流水线。橙色箭头表示初始微调，后续迭代包括：对YouTube原始音频进行VAD分割 -> 使用初始SFM生成英语翻译 -> LLM进行文本校正 -> 数据过滤 -> 使用混合数据微调SFM得到新模型。
 
 关键设计选择及动机：
 - LLM作为外部校正器：动机在于LLM在海量文本数据上训练，具备强大的语言模型先验和纠错能力，可以弥补纯语音模型在文本流畅性、事实一致性上的不足。
 - 基于WER的过滤策略：动机是假设LLM修正与原始假设差异过大的样本，其修正可能是错误的或引入新错误。该策略旨在筛选出LLM“小幅修正即可优化”的可靠样本。
 - 迭代式半监督学习：沿用经典的Noisy Student Training框架，通过逐步提升模型能力和伪标签质量来利用无标签数据。
+
 ### 💡 核心创新点
 
 1.  将LLM作为伪标签质量提升的“校正器”集成到语音SSL流程中：
@@ -84,6 +96,7 @@ hiddenInHomeList: true
     - 局限：许多SSL研究使用的是相对干净、经过筛选的“无标签”数据集（如LibriSpeech-unlabeled），未能充分应对真实网络数据（in-the-wild）固有的高噪声、多样性和领域偏移。
     - 创新与作用：LESS从数据收集（直接来自YouTube）、处理（仅做VAD切分）到整个校正-过滤流程，都设计用于应对这种复杂性。它不回避数据的“脏”，而是通过LLM去“洗”数据。
     - 收益：实验表明，该方法能有效提升模型在噪声更大、更多样化的测试集（如WenetSpeech）上的表现，增强了模型的泛化鲁棒性。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -112,6 +125,7 @@ hiddenInHomeList: true
     - 使用贪心解码（Greedy decoding）以简化和加速推理流程。
     - 在LLM校正环节，通过NVIDIA NIM服务调用LLM，具体解码参数（如温度、top_k）未说明。
 - 正则化或稳定训练技巧：未明确提及除模型平均和数据过滤外的其他正则化技巧。
+
 ### 📊 实验结果
 
 论文主要在两个任务上进行了评估：中文普通话的自动语音识别（ZH ASR）和西班牙语到英语的语音翻译（ES-to-EN AST）。
@@ -148,7 +162,8 @@ hiddenInHomeList: true
 
 结论：直接将真实世界数据用于标准NST会轻微降低性能（BLEU下降）。而LESS方法在仅一轮迭代后，就在所有测试集（包括域内的Callhome/Fisher和域外的Common Voice）上超过了监督基线和标准NST，达到了最佳性能。
 
-图1（即架构图）也同时作为流程示意图，展示了LESS框架的执行步骤。![LESS框架示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462195-0.png)
+图1（即架构图）也同时作为流程示意图，展示了LESS框架的执行步骤。![LESS框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462195-0.png)
+
 ### ⚖️ 评分理由
 
 - 学术质量（5.0/7）：创新性（3.0/3）：将LLM作为校正模块集成到语音SSL中，特别是针对真实世界数据的场景，是一个新颖且有效的思路。技术正确性（1.0/1）：框架设计合理，实验流程清晰，消融实验支持了关键设计选择。实验充分性（0.5/2）：在ASR和AST两个任务上验证了方法，提供了关键组件的消融分析。但主要局限于单一语音基础模型（Whisper），未与更广泛的SFMs对比；AST实验迭代次数少；对“真实世界”数据的复杂性分析不足。证据可信度（0.5/1）：实验数字明确，有对比基线，但部分训练细节（如batch size， 优化器）缺失，影响完全复现。
@@ -156,3 +171,8 @@ hiddenInHomeList: true
 - 开源与复现加成（+1.0/1）：论文提供了开源配方（recipe）的GitHub链接，明确使用了公开的模型（Whisper， Yi-Large， LLaMA-3）和工具（K2 Icefall），并详细描述了实验设置（如学习率， epoch数），为复现提供了极大便利。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

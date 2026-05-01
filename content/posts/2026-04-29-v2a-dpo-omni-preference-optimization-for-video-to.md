@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "视频到音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 V2A-DPO: Omni-Preference Optimization for Video-To-Audio Generation
+
+#音视频 #直接偏好优化 #流匹配 #模型评估
+
+✅ **7.5/10** | 前25% | #视频到音频生成 | #直接偏好优化 | #音视频 #流匹配
+
+学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Nolan Chan（The Chinese University of Hong Kong, Hong Kong SAR, China）
 - 通讯作者：Dingdong Wang（The Chinese University of Hong Kong, Hong Kong SAR, China）（论文脚注中对应邮箱 yjchen@se.cuhk.edu.hk）
 - 作者列表：Nolan Chan（The Chinese University of Hong Kong, Hong Kong SAR, China），Timmy Gang（National Research Council Canada, Canada），Yongqian Wang（The University of Warwick, UK），Yuzhe Liang（Shanghai Jiao Tong University, China），Dingdong Wang（The Chinese University of Hong Kong, Hong Kong SAR, China）
+
 ### 💡 毒舌点评
 
 这篇论文堪称“模范工程论文”：它没有声称发明了全新的生成范式，而是精准地识别了当前视频音频生成模型在“对齐人类审美与同步偏好”上的短板，并系统性地设计了一套包含自动评估、数据生成、课程训练的完整解决方案，实验结果也验证了其有效性。不过，其核心创新更偏向于应用层面的“术”而非基础理论层面的“道”，AudioScore本身是现有工具的集成而非原理创新，课程学习DPO的引入也较为直接。
+
 ### 🔗 开源详情
 
 - 代码：论文中明确提供了代码仓库链接：`https://nolanchan23.github.io/V2A-DPO/`。
@@ -24,19 +36,18 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的训练细节（优化器、学习率、批大小、步数、硬件）、关键超参数（β, score_Δ, N, γ）以及数据集构建流程，复现信息较为充分。
 - 引用的开源项目：论文依赖或对比了多个开源项目，包括：ImageBind, CLAP, Synchformer, PANNs (用于IS), PESQ, MMAudio, Frieren, V2A-Mapper, FoleyCrafter, Seeing&Hearing, V-AURA, ThinkSound等。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 本文针对基于流匹配的视频到音频（V2A）生成模型难以与人类偏好对齐的问题，提出了V2A-DPO优化框架。核心方法包括：1）设计了一个综合评分系统AudioScore，整合现有模型评估视频与生成音频的语义一致性、时间同步性和感知质量，并通过少量人类标注进行校准；2）基于AudioScore自动化地生成大规模偏好对数据；3）引入课程学习策略优化DPO训练过程，从易到难使用偏好对。与直接使用DDPO或未优化的基线模型相比，经V2A-DPO优化的Frieren和MMAudio模型在VGGSound测试集上的IS（感知质量）最高提升1.81（10.4%相对提升），IB-score（语义一致性）提升0.86（2.6%相对提升），DeSync（时间失同步）降低0.09（20.5%相对降低），其中优化后的MMAudio在多项指标上达到SOTA。该工作的实际意义在于提升了V2A模型的实用性和用户体验，局限性在于其优化框架高度依赖特定的预训练基础模型和基于现有指标构建的AudioScore，而后者对音频“审美吸引力”的评估仍不完善。
 
 #
+
 ### 🏗️ 模型架构
 
 本文的核心并非提出一个新的生成模型架构，而是提出一个用于优化现有基于流匹配的V2A模型的框架。其整体架构如图1所示，包含三个主要组件：
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463624-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463624-0.png)
 
 1.  AudioScore评分系统：
     *   输入：生成的音频、对应的视频，以及可选的文本提示。
@@ -63,6 +74,7 @@ hiddenInHomeList: true
     *   核心优化目标：Flow-DPO损失函数（公式5）。该损失旨在引导模型的预测向量场（u_θ）更接近获胜样本的目标向量场（v_w），同时远离失败样本的目标向量场（v_l）。
 
 #
+
 ### 💡 核心创新点
 
 1.  首个面向流匹配V2A模型的DPO框架：将直接偏好优化技术成功适配到基于流匹配的视频到音频生成任务中，并针对性地提出了Flow-DPO的损失形式（公式5），填补了该领域偏好对齐方法的空白。
@@ -70,6 +82,7 @@ hiddenInHomeList: true
 3.  课程学习优化DPO训练：将课程学习理念引入V2A-DPO，根据偏好对的难度（复杂度分数）设计渐进式训练策略。实验表明（表2），该策略相比标准DPO能带来更稳定的性能提升，尤其在处理细微差异样本时更有效。
 
 #
+
 ### 🔬 细节详述
 
 *   训练数据：
@@ -96,6 +109,7 @@ hiddenInHomeList: true
 *   正则化/稳定技巧：使用固定权重的预训练基础模型构建AudioScore；在DPO中使用常数β（而非随时间变化的β_t）以简化并获得更好性能；采用课程学习策略以稳定训练。
 
 #
+
 ### 📊 实验结果
 
 主要在VGGSound测试集上进行评估，与多个基线模型对比。关键结果如下表所示：
@@ -132,11 +146,17 @@ hiddenInHomeList: true
 
 论文图2（pdf-image-page4-idx1）展示了生成音频的可视化对比，DPO优化后的MMAudio能够更好地对齐视频中不同幅度的手部动作（轻扫与快速扫弦），而DDPO和基线模型则难以做到。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463624-1.jpg)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463624-1.jpg)
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：论文技术路线清晰正确，方法设计合理，实验设置公平且充分（有基线对比、消融研究），数据可靠支撑了结论。创新主要在于将DPO、课程学习与一套自动化评估流程进行有效整合，应用于V2A这一特定任务，并取得了可验证的性能提升。这是一项扎实、完整的系统优化工作，但非颠覆性创新。
 - 选题价值：1.5/2：视频到音频生成是当前多模态生成领域的热点之一，直接关系到虚拟现实、影视创作等应用的用户体验。本文聚焦于提升生成音频的“人类偏好”对齐，解决了该领域一个关键且实际的痛点，具有明确的应用价值和研究意义。
 - 开源与复现加成：+0.5/1：论文提供了代码和演示的在线链接（https://nolanchan23.github.io/V2A-DPO/），在正文中给出了详细的训练超参数、硬件配置和数据集构建方法，极大地便利了其他研究者复现和跟进。扣分点在于未提及是否公开预训练的优化后模型权重，以及AudioScore中使用的MLP具体结构（虽然描述简单）和标注数据。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

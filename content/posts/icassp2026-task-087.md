@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 引用的开源项目：论文依赖并引用��多个开源工作，包括FLAME模型、3D Gaussian Splatting、HuBERT（用于音频特征提取）等。
 - 总结：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的音频驱动3D说话头生成方法（基于NeRF或3DGS）存在唇同步不准确、在头部转动时头颈接合处产生伪影、以及合成结果缺乏参数化可控性三大挑战。

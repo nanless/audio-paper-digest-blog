@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了FLAC和ALAC的GitHub实现用于基线对比[6][7]，以及LINNE的官方实现[4]。
 - 总结：论文中未提及任何针对LLAC本身的开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统无损音��编码（如FLAC）依赖线性预测和Rice编码，其编码效率在处理复杂或快速变化的音频信号时存在理论饱和，亟需更先进的技术来突破瓶颈。

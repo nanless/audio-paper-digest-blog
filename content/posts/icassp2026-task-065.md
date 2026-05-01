@@ -56,10 +56,6 @@ hiddenInHomeList: true
 *   复现材料：论文提供了关键的超参数设置（假设数N=5， 门控阈值p=0.5， 生成长度64， 扩散步数32）、优化器学习率（1e-5）、训练轮数（10 epochs）以及骨干模型（RoBERTa-base），但未提供更详细的训练配置（如batch size）、检查点、完整训练日志或附录中的额外设置。
 *   论文中引用的开源项目：论文明确提到使用了开源的LLaDA模型（[14] Nie et al., ICLR 2025 Workshop），以及作为下游骨干的RoBERTa [20]。ASR使用了Whisper Large-v3。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对自动语音识别（ASR）错误会传播并损害下游口语理解（SLU）任务（如意图分类和槽填充）性能的问题，提出了一个模型无关的框架DOMA。DOMA的核心是使用扩散语言模型（DLM）对ASR转录文本进行细化，并引入了一个自适应先验（AP）机制来引导DLM的生成过程。具体来说，DOMA首先使用DLM生成多个候选细化假设，然后利用一个轻量级的、可训练的AP模块（包含自注意力和门控机制）来识别并保留原始ASR转录中可能正确的token，从而构建一个部分掩码的初始序列，而非从完全掩码开始生成。这有助于减少DLM的过度纠正，同时减少所需的扩散步数，提升推理效率。在SLURP、ATIS和SNIPS三个基准数据集上的实验表明，DOMA在多种基线模型（如RoBERTa, SpokenCSE）上一致提升了ICSF性能，相对提升最高达3.2%（例如，DOMA+SpokenCSE在SLURP上的IC准确率从85.51%提升至88.26%）。同时，与自回归LLM细化方法相比，DOMA将推理延迟降低了34.8%（RTF从0.66降至0.43）。该框架的意义在于为提升SLU系统对ASR错误的鲁棒性提供了一种高效、通用的后处理方案。主要局限性在于其效果依赖于强大的预训练DLM（如LLaDA-8B），且AP模块的训练需要额外数据和计算资源。
@@ -105,10 +101,6 @@ hiddenInHomeList: true
 -   Demo：论文中未提及在线演示链接。
 -   复现材料：论文提供了详细的训练超参数（学习率、优化器、步长、batch size等）、数据合成方法和步骤、以及模型架构的说明，复现细节充分。
 -   论文中引用的开源项目：论文明确基于Moshi [2]架构，并提及使用了Qwen-3-32B、GPT-OSS-120B进行文本生成，使用了Dia [20]和Chatterbox [21]进行语音合成，以及WavLM [24]进行说话人验证。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -162,10 +154,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：论文中明确引用并使用了以下开源模型/数据集：Qwen2.5-7B [23], HuBERT [24], CLIP ViT-L/14 [25], AUSpeech [27]。在数据生成过程中使用了DeepSeek-V3-671B [26]。
 - 总结：论文中未提及明确的开源计划（代码、自建数据集、训练好的模型权重）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决传统言语康复治疗中专业治疗师短缺、反馈不实时和缺乏客观评估手段的问题。论文的核心方法是构建一个基于多模态大语言模型（MLLM）的言语康复辅助系统（UTI-LLM），该系统能够同时处理超声舌成像（UTI）视频和语音信号，提供个性化的发音分析和康复建议。与已有方法相比，本文的创新之处在于：1) 设计了一个双智能体协作框架，自动构建高质量的UTI-语音对话数据集；2) 提出了一个能够联合处理UTI时空特征和语音特征的模型架构；3) 首次将UTI-语音并行数据用于言语康复的推理对话。主要实验结果表明，UTI-LLM在舌部运动自然语言生成评估指标（平均得分0.3994，比最佳基线高4.5%）、构音障碍评估（准确率90.98%，比最强基线Qwen2-Audio高16.11%）以及多维度的专家评估中均优于对比的基线模型。其实际意义在于为言语康复提供了一种客观、可交互的新型辅助工具。主要局限性包括：所提的多模态融合方法相对直接，模型的临床实际疗效和用户接受度未得到验证，且开源程度有限。
@@ -208,10 +196,6 @@ hiddenInHomeList: true
     - 机器人平台：Pepper机器人。
     - 录音工具：MS Teams (用于人人对话)，Audacity (用于标注)。
     - 评估模型：引用了GPT-5 mini、DeepSeek V3、Claude Sonnet 4。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -257,10 +241,6 @@ hiddenInHomeList: true
 *   复现材料：论文提供了详细的基准构建流程、任务定义表格（表1）和评估方法描述。可能缺少具体的LLM评判prompt模板。
 *   论文中引用的开源项目：在数据构建中提到了CosyVoice [39]（语音合成）和Google TTS。在评估中使用了Whisper（转录）和Gemini 2.5 Pro [41]（作为评判LLM）。
 *   总结：论文遵守了评测工作的开源规范，开放了核心数据集和演示，但更完整的复现工具链（如数据生成、评估脚本）的开放情况需查看其项目网站确认。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -315,10 +295,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细说明了训练超参数（学习率、batch size、epoch数）、vocoder参数、评估指标和划分方法，提供了充分的复现细节。
 - 引用的开源项目：主要依赖WORLD vocoder、Whisper（用于计算WER）、CPC和wav2vec 2.0预训练模型。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：基于自监督语音表示（S3R）的轮次预测模型性能优异，但其决策依赖于语音中的哪些线索（韵律 vs. 词汇）尚不清楚，这限制了模型的可解释性、隐私保护和轻量化潜力。
@@ -358,10 +334,6 @@ hiddenInHomeList: true
 - 复现材料：提供了部分训练细节（如数据来源、模型初始化、三阶段训练策略），但关键超参数（如学习率、batch size、优化器、训练步数）和硬件信息缺失，不足以支撑完整复现。
 - 论文中引用的开源项目：引用了Whisper、Qwen3-8B、CosyVoice2、Emilia等开源模型/数据集。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决当前端到端语音语言模型因自回归生成和依赖流匹配模型导致的响应延迟过高问题。方法核心是提出VocalNet-M2，一个采用“思考者-说话者”架构的低延迟模态对齐SLM。其创新在于：1）集成多码本分词器，直接生成包含丰富声学信息的8码本语音令牌，从而省去了高延迟的流匹配声学重建模型；2）设计了针对多码本生成的多令牌预测策略，在单次推理步骤中预测多个未来令牌，进一步提升效率并改善性能。主要实验结果表明，VocalNet-M2在保持与主流SLM竞争性的文本与语音质量（如AlpacaEval 7.29， WER 6.07）的同时，将首音频块延迟从基线系统的约725毫秒大幅降低至约349毫秒，实现了约2倍的推理加速。该工作的实际意义在于为构建低延迟、高响应的实时语音交互系统提供了有价值的架构设计和对比分析。主要局限性在于，学习多码本语音令牌比单码本令牌更困难，对训练数据的质量和数量要求更高。
@@ -396,10 +368,6 @@ hiddenInHomeList: true
 - Demo：论文未提及在线演示。
 - 复现材料：论文提供了详细的训练数据处理流水线（图1）、两阶段训练策略、具体的学习率、批大小、epoch数、硬件环境（8x RTX 4090）以及推理配置（贪心搜索，温度1.0），复现信息较为充分。
 - 引用的开源项目/模型：论文明确使用了以下开源工具/模型作为基线或组件：TEN Turn Detection， Smart Turn V2， Whisper， Qwen2.5系列， Wav2Vec2， Paraformer， CosyVoice 2， WeNet toolkit。此外，训练数据构建中使用了MagicData-RAMC， Emilia， AudioQA-1M等开源数据集。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -446,10 +414,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：CLIP [13], SigLip2 [14], AV-HuBERT [15], Marlin [16], Whisper, HuBERT, BLIP-2/Q-former [17], MMS-LlaMA [18], VideoLLaMA2/STPConnector [12], Qwen3, Llama3.2, Perceiver IO [19], Adam [20], LoRA [21]。
 - 总结：论文中未提及明确的开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决对话式语音系统（SDS）中用户长暂停（沉默）意图不明确的问题，即无法判断用户是在“思考”还是已“停止发言”。方法核心是将此问题重新定义为多模态（音频-视频）分类任务，并构建了一个包含63名日语母语者与“倾听系统”交互的专用数据集，对2秒以上的静音区间基于前后文语言线索、视觉线索和后续行为进行标注。基于此数据集，作者提出了一种名为SilenceLLM的多模态大语言模型架构，该架构结合了视觉编码器（评估了CLIP， SigLip2， AV-HuBERT， Marlin）、音频编码器（Whisper， HuBERT）、AV Q-former和LLM解码器。与已有方法相比，其新意在于专门针对沉默理解设计了数据集和端到端的分类框架，并在多个组件组合上进行了系统性对比。实验表明，最优配置（Qwen3-1.7B + SigLip2 (带STPConnector) + Whisper）达到了0.857的宏F1分数，显著优于单模态基线（音频0.662， 视频0.392），且与通用多模态LLM（如MMS-LlaMA）相比也有显著提升（p<0.05）。这项工作的实际意义在于为提升对话系统的交互自然性提供了关键模块和评估数据集。主要局限性是数据集规模较小、语种单一，且模型的创新性更多体现在系统集成而非底层算法突破。
@@ -481,10 +445,6 @@ hiddenInHomeList: true
 - 复现材料：论文描述了下游任务的模型架构（如CRDNN， ResNet-LSTM）和使用的工具包（SpeechBrain， EEND官方工具），但未提供训练超参数配置、检查点或详细的复现说明。对于核心的生成对话部分，未提供任何复现材料。
 - 论文中引用的开源项目：SpeechBrain， wav2vec2， EEND官方工具包， pyannote.audio， Silero VAD， CDER_Metric toolkit。
 - 开源计划：论文中未提及任何开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

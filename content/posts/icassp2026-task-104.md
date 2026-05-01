@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 复现材料：提供了数据集构建流程的详细描述（第2.1节）、评估协议（第3.1节）和代码仓库，基本复现评估是可行的。但训练新模型所需的具体配置、超参数等未说明（因本文不训练新模型）。
 - 论文中引用的开源项目：引用了多个开源预训练模型和数据集工具，包括：Qwen2.5, Gemma-3, Pushshift Reddit Dataset, CLAP, CoLLAP, SALMONN, Audio Flamingo 3, Phi-4-Multimodal, Million Song Dataset等（详见参考文献列表）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：现有的音乐对话推荐系统评估基准要么缺乏真实对话，要么缺乏与对话直接关联的真实音频内容（grounding），无法有效评估模型在多模态（文本对话+音频内容）环境下的跨模态推理与整合能力。

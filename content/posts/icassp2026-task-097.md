@@ -53,10 +53,6 @@ hiddenInHomeList: true
 - 复现材料：未提供训练细节、配置文件或检查点。论文中给出了核心算法公式，但工程实现细节缺失。
 - 论文中引用的开源项目：依赖的开源模型/工具包括 CLAP [17] 和 CLIP [18]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 解决的问题：视频匹配剪辑（Match Cutting）是一个耗时耗力的电影剪辑技术，需要找到视觉或听觉上能平滑过渡的镜头对。现有方法多局限于单一模态（仅视觉或仅音频），导致转场效果不完整。
@@ -97,10 +93,6 @@ hiddenInHomeList: true
   3.  Qwen2.5-VL-32B-Instruct（用于生成视频描述）
   4.  Gemini（用于生成修改文本）
   5.  AudioCaps 2.0（提供人工标注的音频描述）
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

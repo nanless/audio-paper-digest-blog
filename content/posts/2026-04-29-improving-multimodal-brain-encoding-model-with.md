@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "脑信号编码 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Improving Multimodal Brain Encoding Model with Dynamic Subject-Awareness Routing
+
+#多模态模型 #脑信号编码 #混合专家 #动态路由 #跨被试泛化
+
+🔥 **8.0/10** | 前25% | #脑信号编码 | #混合专家 | #多模态模型 #动态路由
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Xuanhua Yin（悉尼大学计算机科学学院）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Xuanhua Yin（悉尼大学计算机科学学院）、Runkai Zhao（悉尼大学计算机科学学院）、Weidong Cai（悉尼大学计算机科学学院）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文巧妙地将混合专家模型中的“门控”从单一输入驱动，改造为融合了稳定“被试先验”和动态“令牌上下文”的双路径路由，这一设计在解决跨被试异质性问题上既直观又有效，且实验验证了其相对于单一路由方式的优越性。短板：整个惊人的性能提升（如在ImageBind上r从0.131提升至0.221）完全建立在“Algonauts 2025”这一个基准和仅4名被试上，在未见数据集或更多被试上效果如何存在疑问，这削弱了其宣称的“通用性”和实际影响力。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码仓库链接。
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 引用的开源项目：论文引用了多个开源模型和框架作为骨干网络或基线，包括TRIBE [9]、ImageBind [10]、Qwen2.5-Omni [11] 和 MMoE [23]。
 - 总体：论文中未提及任何开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决的问题：在多模态（视、听、文）fMRI脑编码任务中，相同的刺激在不同被试中会引发系统性的神经响应差异（即跨被试变异性）。传统的群体级解码器难以捕捉这种个性化差异，导致泛化能力差。
@@ -56,9 +66,10 @@ hiddenInHomeList: true
 6.  主要局限性：1) 实验规模有限（仅一个数据集，4名被试），结论的普适性有待验证。2) 性能高度依赖上游编码器输出的“后融合令牌”质量。3) 引入混合专家模型增加了推理时的计算成本。
 
 #
+
 ### 🏗️ 模型架构
 
-![图2: pdf-image-page1-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464749-1.jpg)
+![图2: pdf-image-page1-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg)
 
 本文的模型架构分为两大部分：AFIRE框架和MIND解码器，如图2所示。
 
@@ -72,7 +83,7 @@ hiddenInHomeList: true
 - 关键设计选择：引入位置编码和时序MLP，是为了在保持框架“无关性”（不依赖特定编码器结构）的同时，补偿从编码器的采样率（如2Hz）到fMRI采样率（TR）的聚合过程，并建模必要的时间动态。
 
 2. MIND：混合专家集成解码器
-![图2: pdf-image-page1-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464749-1.jpg) (同图2，参见上图b部分)
+![图2: pdf-image-page1-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-1.jpg) (同图2，参见上图b部分)
 - 功能与目标：接收AFIRE输出的标准令牌 `{zt}`，预测每个时间点 `t` 对应的全脑fMRI响应（即 `O` 个脑区的活动值，如1000个Schaefer分区）。
 - 核心组件：
     - 专家网络：包含 `E` 个独立的多层感知机（MLP）专家 `fe: R^D → R^O`。每个专家学习一种映射模式。
@@ -85,6 +96,7 @@ hiddenInHomeList: true
 组件交互：AFIRE的输出令牌 `zt` 被同时送入MIND的“专家网络”和“SADGate的令牌路由器”。SADGate结合了被试ID信息和令牌信息，生成稀疏的专家权重，用于调制专家网络的输出。整个流程（包括AFIRE投影器、路由器、专家网络）是端到端联合训练的。
 
 #
+
 ### 💡 核心创新点
 
 1.  解耦的、无关融合的接口（AFIRE）：
@@ -103,6 +115,7 @@ hiddenInHomeList: true
     - 收益：MIND在ISG指标上取得了最大幅度的提升（如在TRIBE上从0.187提升到0.241），表明该方法确实增强了模型对未见被试的预测能力。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -141,6 +154,7 @@ hiddenInHomeList: true
     - 时序MLP中的层归一化也有助于稳定训练。
 
 #
+
 ### 📊 实验结果
 
 本文的实验在Algonauts 2025基准上，使用三个不同的多模态融合骨干网络进行。关键结果汇总在表1中。
@@ -182,13 +196,14 @@ hiddenInHomeList: true
 关键结论：单独使用令牌路由器或先验路由器性能均远低于两者结合，证实了SADGate中双路径设计的必要性。
 
 可视化分析：
-![图3: pdf-image-page1-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464749-2.jpg)
+![图3: pdf-image-page1-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-2.jpg)
 图3：不同骨干网络（TRIBE, ImageBind, Qwen2.5-Omni，均使用MIND解码）在同一剧集上的逐体素预测-测量相关性（Pearson r）图。三者显示出相似的空间模式和高相关区域重叠，支持了AFIRE框架的融合无关性和MIND解码器的即插即用性。
 
-![图4: pdf-image-page1-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464749-3.png)
+![图4: pdf-image-page1-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464749-3.png)
 图4：被试路由动态（前100个TR）。展示了同一剧集下，S1, S2, S3, S5四位被试的专家权重随时间变化的曲线。不同颜色代表不同专家。曲线差异表明MIND成功捕捉到了基于被试先验和当前令牌内容的个性化、动态的专家偏好模式。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7
@@ -206,3 +221,8 @@ hiddenInHomeList: true
   - 论文未提供代码、预训练模型、数据集链接或完整的超参数配置列表，使得其他研究者难以复现其结果。因此，在此维度上无法获得加分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

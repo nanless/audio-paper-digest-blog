@@ -7,15 +7,27 @@ categories: [icassp-2026]
 description: "音乐信息检索 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription
+
+#音乐信息检索 #扩散模型 #生成模型 #鲁棒性
+
+🔥 **8.0/10** | 前10% | #音乐信息检索 | #扩散模型 | #生成模型 #鲁棒性
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：未说明（论文未明确标注）
 - 通讯作者：未说明（论文未明确标注）
 - 作者列表：Michael Yeung（Sony Group Corporation, Tokyo, Japan）、Keisuke Toyama（Sony Group Corporation, Tokyo, Japan）、Toya Teramoto（Sony Group Corporation, Tokyo, Japan）、Shusuke Takahashi（Sony Group Corporation, Tokyo, Japan）、Tamaki Kojima（Sony Group Corporation, Tokyo, Japan）
+
 ### 💡 毒舌点评
 
 亮点：首次将扩散模型作为生成范式应用于自动鼓转录（ADT），不仅在多个基准测试上超越了所有判别模型，还展示了在音频部分缺失情况下的“修复”能力，这在ADT乃至更广的音乐转录领域都是新颖的。
 短板：论文的核心卖点是“生成模型超越判别模型”，但作为生成模型的代价是推理速度显著慢于同等性能的判别模型（例如，单步推理0.163s vs. 0.086s），这使得其在实时或低延迟应用场景中的实用性大打折扣。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -31,20 +43,19 @@ hiddenInHomeList: true
     - 数据集：E-GMD， ADTOF (用于对比)， IDMT, MDB。
 - 总结：论文在数据、评估、训练配置等复现信息上比较公开透明，但缺少代码实现这一关键复现材料。因此，对于希望直接使用或修改模型的研究者来说，复现门槛中等偏高。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 这篇论文旨在解决自动鼓转录（ADT）任务中判别模型泛化能力不足和性能瓶颈的问题。其核心方法是将ADT重新定义为一个条件生成任务，并提出了一个名为Noise-to-Notes (N2N) 的扩散模型框架。N2N从音频条件的高斯噪声开始，通过迭代去噪过程生成鼓的起始时间（onset）和力度（velocity）信息。与已有方法相比，其创新点在于：1）首次使用生成式扩散模型处理ADT；2）提出Annealed Pseudo-Huber (APH) 损失函数，解决了标准MSE损失无法有效联合优化二值起始和连续力度值的难题；3）创新性地融合了梅尔频谱图和来自音乐基础模型（MFM） 的高级语义特征，显著提升了模型对域外（out-of-domain）音频的鲁棒性。实验表明，N2N在E-GMD、IDMT和MDB等多个主流基准测试上均取得了新的最先进（SOTA）性能。例如，在E-GMD测试集上，使用10步采样时，其起始F1分数达到89.68，力度F1分数达到82.80，超过了所有对比的判别模型。论文的主要意义在于证明了生成模型在音乐转录任务上的优越性潜力，并带来了如音频修复等新能力。主要局限是其推理速度相较于判别模型较慢，且模型参数量更大（50M vs. 5.5M）。
+
 ### 🏗️ 模型架构
 
 N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数据流如图1（pdf-image-page1-idx0）和图2（pdf-image-page1-idx1）所示。
 
-![Noise-to-Notes框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-0.jpg)
+![Noise-to-Notes框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-0.jpg)
 图1：Noise-to-Notes框架概览。展示了N2N作为扩散模型的三种能力：条件生成（基于完整音频转录）、修复（基于部分音频转录）和无条件生成（无音频输入）。核心流程是学习从加噪的转录`x_t`和音频条件`ϕ_audio`中去噪恢复干净转录`x_0`。
 
-![Noise-to-Notes架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-1.png)
+![Noise-to-Notes架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-1.png)
 图2：Noise-to-Notes架构。这是一个基于Transformer的解码器架构，详细展示了各组件。
 
 1.  输入与条件编码：
@@ -65,6 +76,7 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 3.  输出与迭代：
     *   解码器的最终输出经过线性层和Tanh激活，生成预测的干净转录`x̂0`。
     *   在推理时，可以通过引入方差更小的新高斯噪声进行细化（refinement）：`x_t ∼ q(x_t'|x_t)`，然后在更小的时间步上再次去噪，以迭代提升生成质量。
+
 ### 💡 核心创新点
 
 1.  将ADT重新定义为生成任务：
@@ -85,6 +97,7 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 4.  为扩散模型设计的Dropout策略：
     *   创新：在音频条件输入上应用两种Dropout（部分和完全），以支持修复和无条件生成任务的训练。
     *   收益：使单一模型具备多种能力，如图1和图6所示的修复示例。
+
 ### 🔬 细节详述
 
 - 训练数据：使用E-GMD数据集的训练划分，包含440小时的人类鼓表演，43套鼓组，是唯一公开包含起始和力度MIDI标注的数据集。鼓组件设置为7种：Kick, Snare, Tom, Hi-hat, Crash, Ride, Bell。
@@ -110,6 +123,7 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
     - 评估指标：使用`mir_eval`库计算注释级（note-wise）的起始和力度F1分数。预测音符持续时间为100ms，容忍度为50ms。
     - 基线对比设置：为公平比较，hFT-Transformer基线按照OaF Drums的设置进行适配。
 - 正则化技巧：除Dropout外，论文未提及其它正则化方法。
+
 ### 📊 实验结果
 
 论文在三个主要基准数据集上进行了评估：E-GMD（域内），MDB和IDMT（域外）。主要指标是起始（Onset）和力度（Velocity）的F1分数。
@@ -126,10 +140,10 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 
 注：D=判别式，G=生成式，T=Transformer。最佳性能加粗。
 
-![各鼓组件起始F1分数](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-2.jpg)
+![各鼓组件起始F1分数](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-2.jpg)
 图3：各鼓组件的起始F1分数对比。在E-GMD上训练，在E-GMD、MDB、IDMT上评估。显示N2N在困难组件（如镲片）上相比OaF Drums有显著提升，且在域外数据（IDMT, MDB）上保持了稳定高性能。
 
-![速度-精度权衡](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-3.png)
+![速度-精度权衡](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-3.png)
 图4：速度-精度权衡。展示了N2N在不同采样步数（1-25）下的性能与推理时间。关键结论：从1步到5-10步有显著提升，之后趋于饱和。
 
 消融研究（表2）：
@@ -149,11 +163,12 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 *   关键发现2（特征）：在域内数据（E-GMD）上，仅用MFM特征与用梅尔频谱图性能相近。但在域外数据（MDB, IDMT）上，MFM特征带来了巨大的性能跃升（MDB: 71.15->82.16, IDMT: 80.89->90.36）。两者结合性能最佳。
 
 特征可视化与修复示例：
-![梅尔频谱图与MFM特征的t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-4.jpg)
+![梅尔频谱图与MFM特征的t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-4.jpg)
 图5：t-SNE可视化。左图（梅尔频谱图特征）显示不同数据集的特征重叠较多。右图（MFM特征）显示特征更具可分性，解释了其提升泛化能力的原因。
 
-![修复示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-5.png)
+![修复示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-5.png)
 图6：音频修复示例。给定5秒音频，后3秒被屏蔽（替换为null嵌入），N2N利用前2秒的上下文生成了连贯的完整转录，展示了其生成能力。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7
@@ -170,3 +185,8 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
     - 论文详细提供了训练数据集（E-GMD）、预训练MFM模型（MERT）、评估数据集（IDMT, MDB）和评估工具（mir_eval）的信息。
     - 训练超参数（学习率、batch size等）和模型架构描述比较详细。
     - 但是，论文未提供代码仓库、模型权重或详细的复现脚本链接。对于50M参数模型的具体实现，缺乏代码将给完全复现带来障碍。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

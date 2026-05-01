@@ -51,10 +51,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细说明了训练数据构建、训练超参数（学习率、epoch数）、模型架构组件（Flan-T5+LoRA， U-Net， VAE， BigVGAN）和评估指标，提供了较好的复现基础。
 - 论文中引用的开源项目：Flan-T5， LoRA， BigVGAN声码器， AudioLDM， CLAP， PANNs， VGGish。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的文本引导音频编辑方法要么依赖昂贵的训练时优化（如null-text optimization），要么需要完整的目标描述文本或人工掩码，在复杂重叠声音场景下编辑效果不佳且实用性受限。

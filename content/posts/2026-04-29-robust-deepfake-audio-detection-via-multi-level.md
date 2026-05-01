@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频深度伪造检测 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Robust Deepfake Audio Detection via Multi-Level Intermediate Feature Fusion
+
+#音频深度伪造检测 #特征融合 #自监督学习 #鲁棒性
+
+✅ **7.5/10** | 前25% | #音频深度伪造检测 | #特征融合 | #自监督学习 #鲁棒性
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Jinpeng Zhao（中山大学计算机科学与工程学院）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Jinpeng Zhao, Jian Zhao, Yufei Zhou, Peijia Zheng†, Yusong Du（中山大学计算机科学与工程学院）
 
 #
+
 ### 💡 毒舌点评
 
 亮点在于，论文非常务实地通过一个轻量级（仅增加0.002%计算量）的MIFF模块，有效挖掘了现有强大骨干网络（XLSR-Mamba）中被忽视的中间层信息，实现了“小改进，大收益”。短板是，该工作本质上是将成熟的注意力机制（SE block）应用于特定模型（Mamba）的中间层特征融合，创新深度有限，更像是一个有效但非突破性的工程优化。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -34,19 +46,18 @@ hiddenInHomeList: true
     5.  Squeeze-and-Excitation Networks [17]：MIFF模块中注意力机制的灵感来源。
     6.  其他对比方法（AASIST [4], Conformer [5], SLS [6]等）。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 本文针对现有深度伪造音频检测器（如XLSR-Mamba）主要依赖最终层特征、导致中间层判别性信息丢失的问题，提出了多级中间特征融合模块。该模块应用于双列双向Mamba网络的每个方向，通过引入Squeeze-and-Excitation机制，自适应地计算并加权聚合所有Mamba层的输出特征，并与最终层的残差输出融合，从而生成一个更全面、更具判别力的表征用于分类。实验表明，在ASVspoof 2021 DF和In-The-Wild数据集上，该方法分别取得了1.68%和5.66%的EER，相比基线XLSR-Mamba（1.88%和6.71%）实现了10.6%和15.6%的相对误差降低，尤其在应对自回归神经声码器生成的伪音时表现突出。该研究证明了多层次特征融合对于增强检测模型鲁棒性的有效意义。主要局限性在于方法未在更多样化的攻击类型或跨语言场景下进行验证，且依赖于特定的XLSR前端和Mamba后端组合。
 
 #
+
 ### 🏗️ 模型架构
 
 论文提出的检测框架（见图1）由三部分组成：预训练的XLS-R前端、双列双向Mamba后端以及新增的MIFF模块。
 
-![模型整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462275-0.jpg)
+![模型整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462275-0.jpg)
 
 1.  XLS-R前端：将输入的原始音频波形转换为一系列高维声学表征序列。
 2.  双列双向Mamba后端：该后端（DuaBiMamba）包含两个独立的Mamba列，分别沿时间正向和反向处理来自XLS-R的特征序列。
@@ -62,6 +73,7 @@ hiddenInHomeList: true
 关键设计选择：MIFF模块的动机是浅层特征保留细粒度声学伪迹，深层特征捕获抽象语义，动态融合可以兼顾两者，防止信息在传播中稀释。采用SE模块进行注意力加权是一种轻量且有效的方式。
 
 #
+
 ### 💡 核心创新点
 
 1.  提出MIFF模块进行多层特征自适应融合：
@@ -80,6 +92,7 @@ hiddenInHomeList: true
     - 收益：结果显示，该方法在大部分条件下优于或持平于XLSR-Mamba，尤其在检测自回归神经声码器（N）伪造时，池化EER从3.32%降至2.57%（22.5%相对提升），表明其能有效捕捉高保真生成模型的细微伪迹。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：在ASVspoof 2019 LA数据集上进行训练和验证，包含约25,000个语音片段，来自6种TTS和VC攻击类型。
@@ -101,6 +114,7 @@ hiddenInHomeList: true
 - 正则化技巧：使用了数据增强（RawBoost）和层归一化（LayerNorm），未提及其他特定正则化技巧。
 
 #
+
 ### 📊 实验结果
 
 主要评估数据集为ASVspoof 2021 LA、DF和In-The-Wild，主要评估指标为EER（等错误率）。
@@ -120,7 +134,7 @@ hiddenInHomeList: true
 
 关键结论：本文方法在DF数据集上取得了最优结果（1.68% EER），在LA和In-The-Wild数据集上也取得了极具竞争力的结果。与基线XLSR-Mamba相比，在三个数据集上均有提升，尤其是在In-The-Wild数据集上实现了15.6%的相对EER降低。
 
-![不同特征维度对性能的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462275-1.jpg)
+![不同特征维度对性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462275-1.jpg)
 图2（对应论文图2）：展示了特征维度（144， 256， 512， 1024）对DF和In-The-Wild数据集EER的影响。关键结论是：特征维度为256时性能最佳。
 
 表3：MIFF模块消融研究
@@ -152,6 +166,7 @@ hiddenInHomeList: true
 关键结论：完整的双向模型（Forward ✓, Backward ✓）在所有数据集上都取得了最佳性能，显著优于无融合基线和单向变体，证明了从两个时间方向融合中间层特征对于增强鲁棒性至关重要。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7。创新性（3/7）：MIFF模块设计合理，有效，但属于对现有技术（SE网络、特征融合）在特定任务（Mamba层融合）上的成功应用，而非基础性的架构创新。技术正确性（2/2）：方法设计合理，实验验证充分，结果一致。实验充分性（2/2）：实验设计全面，包括多数据集对比、细粒度分析、详尽的消融研究，证据链完整。
@@ -159,3 +174,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.0/1。代码、模型权重、训练脚本均未公开，完全复现需要依赖论文描述和基线模型的实现，因此得分为0。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

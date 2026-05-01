@@ -51,10 +51,6 @@ hiddenInHomeList: true
 - 音频生成/同步相关工作：SonicVisionLM [13], MMAudio [14], Video2Music [15], Vidmuse [16]
 - 评估指标相关：ImageBind [26], LanguageBind [27]
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：现有文本到视频生成模型在推理效率（长视频生成慢）和音频-视频同步（生成的视频与音乐节奏不匹配）两方面存在不足，且缺乏能同时高效生成特定风格视频并实现音乐同步的统一框架。
@@ -99,10 +95,6 @@ hiddenInHomeList: true
 - 复现材料：给出了部分训练超参数（优化器、学习率、EMA衰减率、T2S模块的batch size和epoch数）和数据集信息。未提供模型架构图的详细尺寸、损失函数、完整的数据预处理流程等。
 - 论文中引用的开源项目：引用了FastSpeech 2 [13]、FREEVC [22]、VITS2 [23]等作为对比或基础。
 - 论文中未提及明确的开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

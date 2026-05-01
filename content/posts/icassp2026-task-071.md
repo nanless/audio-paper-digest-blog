@@ -83,10 +83,6 @@ hiddenInHomeList: true
 - 引用的开源项目：论文中引用的开源工具/模型主要包括：Whisper（用于转录和时间戳）、HuBERT（语音编码器）、RoBERTa（文本编码器）。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决基于自发语音的阿尔茨海默病（AD）自动检测中，现有方法未能充分建模和利用患者语音中特有的“时间节律异常”（如停顿、拖音、不流畅）的问题。论文提出了一种区间感知的检索增强框架，其核心包含三个部分：1）一个RAG模块，从健康人的语音数据中检索词级别的时序先验，作为判断异常与否的“归一化参考”；2）一个CTC引导的跨模态对齐模块，在无需语音-文本精确对齐标注的情况下，实现文本表示与语音帧的软对齐；3）一个区间感知增强器，通过对比当前语音的实际时序与检索到的健康先验，将偏差转化为残差权重，以突出异常的语音片段。与已有方法相比，该框架的新颖之处在于引入外部健康时序知识作为基准、采用无监督对齐技术、以及显式地将时序偏差融入特征表示。在ADReSS和ADReSSo两个基准测试集上，本文方法分别取得了94.79%和88.73%的准确率，相比此前最优方法错误率降低了13.4%和11.1%，并在所有评估指标上均达到最佳。该工作的实际意义在于提供了一种可扩展、非侵入的AD早期筛查工具，其可解释的权重可视化也能辅助临床医生进行审查。主要局限性是其性能依赖于所构建的健康语音时序记忆库的覆盖度和质量，且可能存在跨数据集、录音条件的领域偏移。
@@ -118,10 +114,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文提供了较为详细的实验设置（模型超参数、训练策略），但未提供具体的配置文件、检查点或附录。
 - 论文中引用的开源项目：使用了预训练模型Wav2Vec2-large-XLSR-53 [18]，并参考了LoRA [17] 方法。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -167,10 +159,6 @@ hiddenInHomeList: true
     -   模型/框架：DistilHuBERT [16], TabNet [18], XGBoost [19], scikit-learn [20]。
     -   工具库：OpenSMILE [17], Hugging Face Transformers [22]。
 -   总结：论文中未提及完整的开源计划。核心的外部验证数据集不公开，代码也未开源，这限制了社区对其方法进行独立验证和扩展。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -221,10 +209,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了关键训练细节（优化器、学习率、轮数、提示长度、音频长度等），但完整的配置可能需要参考代码仓库。
 - 引用的开源项目：依赖的开源模型包括AST [11]、HuBERT [12]、Whisper [13]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：抑郁症检测依赖的医疗数据稀缺、类别不平衡，且现有方法大多依赖特定语言，泛化能力差。
@@ -262,10 +246,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：论文未明确列出其代码实现所依赖的开源工具或库（尽管可以推断使用了PyTorch和SSL模型）。
 - 总结：论文中未提及开源计划，但提供了足够详细的超参数和训练设置供研究者尝试复现。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对自动口吃检测中的两大挑战：严重的类别不平衡（少数口吃类型不足5%）和跨越多个非相邻语音片段的长程时序依赖，提出了HyDRA（Hypergraph Dysfluency Recognition Architecture）。该模型是一个多视图层次化超图神经网络，其核心方法是：首先，将检测任务层次化分解为二元口吃识别和子类型分类，以缓解类别不平衡问题；其次，从wav2vec2和HuBERT两种自监督学习（SSL）语音特征分别构建视图特定的超图，超图中的超边可连接多个声学相似片段，从而建模重复模式和韵律簇，这是传统成对图无法实现的。在SEP-28k数据集上的实验表明，HyDRA在子类型分类上取得了47.2的宏平均F1分数，相比平坦基线提升超过16个点，在少数类上增益尤其明显。跨数据集评估在FluencyBank上也证实了模型的泛化能力。该工作为解决自动口吃检测中的不平衡与依赖问题提供了一种原理性的解决方案，其实际意义在于为言语障碍的自动化评估提供了更准确、更鲁棒的工具。主要局限性在于模型性能受限于检测阶段的质量，且计算成本高于简单的端到端模型。
@@ -298,10 +278,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了详细的交叉验证设置（20次5折，按说话人分组）、分类器参数（1000棵树）以及特征提取流程。但未提供具体的训练脚本或配置文件。
 - 论文中引用的开源项目：列出了大量依赖的开源工具/模型，包括：`Hugging Face Transformers` (Wav2Vec2, UniSpeech等), `SpeechBrain` (CRDNN, ECAPA-TDNN, x-vector等), `Librosa`/`openSMILE` (eGeMAPSv2), `scikit-learn` (随机森林), `Resemblyzer` 等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -351,10 +327,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练策略、关键超参数（如学习率、batch size、优化器设置）、模型结构（AST编码器、解码器参数）、损失函数选择、特征提取工具（OpenSMILE, Praat）等信息，复现指南相对充分。
 - 引用的开源项目：AST模型、SSAST方法、OpenSMILE工具、Parselmouth/Praat接口、Focal Loss实现。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：利用语音进行疾病分析的深度学习模型面临两大挑战：医疗语音数据标注稀缺，且通用大规模音频预训练模型与临床病理语音存在严重的领域错配，无法有效捕捉细微的病理声学特征。
@@ -399,10 +371,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了下游MLP的详细超参数（学习率、批大小、优化器）和训练流程，但未提供配置文件或检查点。
 - 论文中引用的开源项目：WeSpeaker toolkit, PraatSauce, PsyToolKit, lmerTest package (R语言)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文研究了语音自监督学习（SSL）嵌入提取器的预训练策略如何影响其对说话人年龄信息的编码。为解决两个问题：1. 如何用人类感知验证自动年龄检测系统的性能；2. 不同预训练目标的嵌入是否在年龄检测上表现不同，作者进行了两项工作。首先，他们建立了一个基于WeSpeaker嵌入和简单MLP的年龄检测系统，并在VoxCeleb2-age数据集上实现了6.8年的平均绝对误差（MAE）。然后，他们设计了一个感知实验，让人类听者判断语音对中说话人的年龄差异。实验发现，人类准确度与系统MAE显著相关，即系统判断困难的语音对，人类也更难判断。其次，他们比较了四个不同嵌入提取器（WeSpeaker、MMS LID、wavLM base+、BA-LR）在相同年龄检测任务上的性能。结果显示，为说话人识别设计的WeSpeaker表现最佳（MAE 6.8），而为语言识别优化的MMS LID表现最差（MAE 9.1）。这支持了他们的假设：预训练目标（如追求说话人独立性的语言识别）会削弱嵌入中的年龄相关信息。主要局限性包括：仅在一个数据集和下游任务上验证，且未深入探究嵌入内部的年龄编码机制。
@@ -432,10 +400,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文提供了部分训练细节（超参数、损失函数、数据生成方法），但未提供完整的训练配置、检查点或附录。关键融合阶段的实现细节缺失。
 - 论文中引用的开源项目：明确提及并依赖以下开源项目/模型：Llama-3, DistilBERT, LoRA, AudioMAE, Azure Neural TTS (服务), 以及用于数据生成的GEC模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -474,10 +438,6 @@ hiddenInHomeList: true
 - Demo：未提供在线演示。
 - 复现材料：论文描述了方法框架和部分参数（如SpecAugment设置、特征选择），但缺乏完整的训练脚本、配置文件和超参数搜索细节。
 - 论文中引用的开源项目：提到了以下开源工具/模型：WhisperX, LLaMA-3.1-405B (用于说话人分离), mGTE, mHuBERT, Whisper, LLaMA-3.1-8B-Instruct, medGemma-27B-it, SparkTTS-0.5B, OpenVoice。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -529,10 +489,6 @@ hiddenInHomeList: true
 -   论文中引用的开源项目：论文中引用了多个基线模型（VLAAI, HappyQuokka, CL-Transformer, SSM2Mel），但未明确说明是否依赖或集成了这些项目的代码。文中提及DPT-Net的时序动态路径遵循作者先前工作[15]，对齐路径采用了[13]的设计。
 -   论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：从非侵入式EEG信号中解码语音包络，因EEG信噪比低、个体间差异大而极具挑战性，现有方法或仅关注单模态内部时序建模，或仅进行跨模态潜在空间对齐，未能充分利用两者的优势。
@@ -580,10 +536,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了一些训练超参数（学习率、批大小、早停设置），但缺失损失函数、数据增强的精确参数、训练时长等关键细节，复现材料不充分。
 - 论文中引用的开源项目：未提及依赖哪些开源工具或模型。论文框架基于PyTorch实现。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决基于语音的自动抑郁症检测任务中现有方法难以同时建模多层次时序特征的问题。其核心方法是提出了CMSA-Mamba，一种新的音频处理架构，它将多尺度Mamba状态空间模型与上下文位置编码相结合，能够更有效地捕捉语音频谱图中的局部和全局时序模式。与已有的固定尺度模型相比，其创新在于首次为语音抑郁症检测引入了层次化的多尺度状态空间建模框架，并在多尺度扫描模块中集成了能够根据上下文自适应调整位置信息的CoPE机制。主要实验结果表明，CMSA-Mamba在两个标准抑郁症检测数据集（DAIC-WoZ和EATD-Corpus）上均取得了当前最优的性能，F1分数分别达到0.84和0.91，显著超越了包括AST-ViT和Audio Mamba在内的多种基线模型。该工作为心理健康评估提供了更准确、高效的语音分析工具，具有潜在的临床应用价值。主要局限性在于所用数据集规模相对较小，模型仅处理单一音频模态，且未提供开源代码限制了其可复现性。
@@ -615,10 +567,6 @@ hiddenInHomeList: true
 - 复现材料：论文未提供训练超参数、模型配置、检查点或附录说明。
 - 论文中引用的开源项目：论文未明确列出所依赖的开源工具或模型代码库。
 - 总结：论文中未提及任何开源计划或具体材料。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -654,10 +602,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：给出了部分训练细节（优化器、学习率、Dropout、轮数），但缺少数据预处理代码、随机种子、模型完整配置等关键复现信息。
 - 论文中引用的开源项目：主要依赖预训练模型库（如Hugging Face Transformers中的BERT和Whisper），并在数据预处理中提到了参考[16]的方法。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -713,10 +657,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：主要依赖预训练模型AST和图注意力网络（GAT）的经典实现，未引用特定工具库。框架使用PyTorch和PyTorch Geometric。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 本文旨在解决基于语音的痴呆症自动检测中，现有方法普遍忽略话语层面段间依赖关系的问题。这些复杂的图状关系被认为是认知障碍的早期标志，尤其是在局部声学特征尚未明显退化的轻度认知障碍（MCI）阶段。
@@ -750,10 +690,6 @@ hiddenInHomeList: true
 - Demo：未提供在线演示。
 - 复现材料：论文详细说明了数据预处理步骤、特征列表、分类器和特征选择方法，但未提供具体的训练脚本、超参数配置文件或处理好的特征文件。
 - 论文中引用的开源项目：PyAnnote (说话人分割), MetricGAN-OKD (语音增强), Silero VAD (语音活动检测), librosa (特征提取), Praat (via Parselmouth, 嗓音质量特征提取)。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -798,10 +734,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 *   Demo：论文中未提及在线演示。
 *   复现材料：论文提供了算法伪代码（Algorithm 1）、详细的超参数表（Table 1）和数据集描述，为复现提供了文本依据。
 *   引用的开源项目：论文未明确列出依赖的开源工具或模型代码库，仅引用了作为对比的预训练模型名称（EEGPT, LaBraM, NeuroLM）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -858,10 +790,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 - 复现材料：论文给出了基本的超参数设置（λ1, λ2, σ, p, 学习率, batch size, BiLSTM维度）和数据预处理流程，但缺少模型具体层结构参数（如FAM中间层维度、多头注意力头数）、训练轮数、Dropout率、代码框架（如PyTorch/TensorFlow）等关键信息。
 - 论文中引用的开源项目：论文中引用了VGGish[7]和eGeMAPS[6]（通过OpenSMILE工具[6]实现）作为特征提取器，这些是公开可用的模型和工具。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在解决基于音频的自动抑郁症检测中面临的信号噪声大、模型鲁棒性不足的问题。作者提出了DSCAM（Dual-Student Consistency Learning Framework with Multi-view Attention）框架，其核心是采用两个独立初始化的学生模型，通过对未标注数据施加高斯噪声和通道掩码增强，利用一致性损失和稳定性损失约束两个模型输出的一致性，从而学习对噪声鲁棒的表示。同时，提出了时间注意力模块（TAM）和特征注意力模块（FAM），分别从时间和特征维度关注关键信息并抑制噪声。实验在CMDC和DAIC-WOZ两个抑郁症数据集上进行，结果表明DSCAM在F1分数和召回率上优于所对比的监督学习方法，例如在DAIC-WOZ数据集上F1达到0.683，召回率达0.710，在CMDC数据集上F1和召回率均达到0.955。消融实验证明了每个模块的贡献。该工作的实际意义在于为临床抑郁症的早期、客观筛查提供了一种潜在的自动化工具。主要局限性包括：1）实验对比不够全面，部分关键基线指标缺失；2）方法高度依赖半监督学习设置，且在更复杂的真实噪声环境下的泛化能力有待验证；3）未提供代码或模型复现资源。
@@ -897,10 +825,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 - 复现材料：未提供详细的训练配置、超参数搜索过程或检查点。
 - 论文中引用的开源项目：提及使用了Librosa（用于声学特征提取）、Parselmouth（用于语音特征提取）、PUPbeta toolkit（用于从PSG数据提取内型金标准）等开源工具。
 - 总体：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -948,10 +872,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 - 复现材料：论文详细说明了LoRA超参数、训练配置和数据划分比例，但未提供完整的配置文件或检查点。
 - 论文中引用的开源项目：依赖了Qwen系列MLLM、Whisper ASR模型、Praat等工具，但未明确列出所有依赖。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：传统监督学习的AD语音检测模型跨语言、跨数据集泛化能力差，且依赖大量标注数据。本文旨在探索利用多模态大语言模型（MLLM）的零样本和少样本能力，实现鲁棒的跨语言AD检测。
@@ -997,10 +917,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 *   复现材料：论文正文和补充材料应包含了核心的提示词（Prompt）模板、评估指标计算方法、分类器设置等复现所需的关键信息。
 *   论文中引用的开源项目：使用了`scikit-learn`作为机器学习分类器实现库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：帕金森病（PD）的语音评估依赖专家，具有主观性且难以扩展；直接用多模态大语言模型（MLLM）进行疾病诊断则不稳定且缺乏可解释性。
@@ -1045,10 +961,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 - 复现材料：给出了部分训练超参数（如分类器学习率、微调步数），但缺乏完整的训练脚本、环境配置和预处理细节。
 - 引用的开源项目：论文引用了`torchaudio`、`scikit-learn`、`librosa`等开源工具用于特征提取和评估。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：大规模语音预训练模型（如Whisper）内部表征如何处理病理性语音（构音障碍）尚不清楚，这阻碍了它们在可解释的临床评估工具中的应用。本文旨在系统探测Whisper编码器各层对构音障碍语音检测（是否患病）和评估（严重程度分级）任务的信息量。
@@ -1088,10 +1000,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 - 复现材料：提供了基本的超参数设置（学习率、batch size、优化器、专家数量等）和硬件信息，但缺乏实现细节。
 - 论文中引用的开源项目：librosa（用于音频处理），AlexNet（用于特征提取）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有抑郁症语音识别方法存在三个局限：通常只分析自发语音而忽略朗读语音；依赖难以获取或易出错的转录文本；以及未采用能根据输入内容自适应调整计算方式的模型（如MoE）。
@@ -1128,10 +1036,6 @@ Table 3. Mean ± Std Macro F1: Whisper vs. Handcrafted Features
 *   复现材料：给出了RF和FFN模型的详细超参数设置，以及特征提取方法（OpenSMILE eGeMAPS, Librosa, MediaPipe），部分训练细节可复现。但由于核心数据私有，完整复现不可能。
 *   论文中引用的开源项目：OpenSMILE [17]， Librosa [18]， MediaPipe [19]。
 *   整体开源情况：论文中未提及开源计划。其核心数据不公开，是复现的主要障碍。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

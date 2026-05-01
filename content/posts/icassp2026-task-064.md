@@ -50,10 +50,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：Mimi音频编解码器、WavLM（用于语音验证）、Llama 3.2和Qwen2模型初始化、Adam优化器。
 - 总结：论文在数据集层面做出了有价值的开源贡献，但在代码和模型层面的开源信息不足。复现需要依赖文中描述的细节自行搭建训练流程。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的语音语言模型（SLM）在多语言场景下进展缓慢，主要瓶颈在于缺乏不依赖文本监督的跨语言训练方法，以及适用于跨语言语义评估的语音基准。
@@ -105,10 +101,6 @@ hiddenInHomeList: true
 - 引用的开源项目：CosyVoice 2 (TTS), Open-Orca (数据集), Cloths (数据集), Kimi-audio toolkit (评估工具)。
 - 总体：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：在将预训练文本大模型（LLM）扩展为语音大模型（Speech LLM）时，普遍存在两种性能退化现象：(1) 灾难性遗忘，即引入语音能力后，模型在处理文本输入时的知识和推理能力下降；(2) 模态不平等问题，即同一模型处理语音输入时的性能显著低于文本输入。
@@ -143,10 +135,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了非常详细的训练设置（库、硬件、步数、学习率等）和损失函数公式，为复现提供了重要信息。但最终模型和代码的缺失仍是障碍。
 - 论文中引用的开源项目：使用了Seamless-m4t-v2-large作为SFM，Llama-3.1-8B-Instruct和EuroLLM-9B-Instruct作为LLM，并引用了pasero[29]、torchtune[32]、transformers[33]等库。
 - 论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

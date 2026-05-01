@@ -59,10 +59,6 @@ hiddenInHomeList: true
 - 复现材料：提供了基本的实现细节，如音频编码器、LLM型号、LoRA、查询数量、优化器、学习率、批大小、训练轮数等，但未提供详细的训练脚本、配置文件或检查点。
 - 论文中引用的开源项目：音频编码器采用“Consistent Ensemble Distillation”模型；文本解码器采用LLaMA 2；使用LoRA进行微调；使用InfoNCE损失和UMAP进行可视化。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决基于大语言模型的自动音频描述（AAC）任务中存在的模态差距问题，即音频特征被简单投影到LLM嵌入空间后，与文本嵌入空间对齐不佳，限制了LLM的推理能力。方法核心是提出LAMB框架，其创新之处在于首次将柯西-散度引入AAC任务，设计了一个跨模态对齐器（Cross-Modal Aligner）来最小化音频与文本分布的距离，同时最大化互信息。此外，通过双流适配器（Two-Stream Adapter）提取更丰富的语义和时序音频特征，并利用令牌引导（Token Guide）在LLM词表空间内直接引导解码。在AudioCaps数据集上，LAMB在CIDEr、SPIDEr等指标上取得了显著提升（如CIDEr从SOTA的84.1提升到91.1），达到了新的技术水平。其实际意义在于证明了显式跨模态对齐对于释放LLM在音频理解任务中潜力的关键作用。主要局限性在于，尽���在AudioCaps上表现突出，但在更复杂、标注更多样的Clotho数据集上，性能提升相对有限，且其泛化性在其他音频任务上尚未得到验证。

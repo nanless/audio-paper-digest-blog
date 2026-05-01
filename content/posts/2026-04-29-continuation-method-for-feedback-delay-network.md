@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "空间音频 | 6.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Continuation Method for Feedback Delay Network Modal Decomposition
+
+#空间音频 #信号处理 #计算声学
+
+✅ **6.5/10** | 前50% | #空间音频 | #信号处理 | #计算声学
+
+学术质量 5.5/7 | 选题价值 0.5/2 | 复现加成 0.5 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Jeremy B. Bai（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Jeremy B. Bai（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）、Sebastian J. Schlecht（Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Multimedia Communications & Signal Processing）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文将“延续方法”这一经典的数值计算范式巧妙地迁移到FDN模态分析的参数追踪问题中，并提出了几何意义上更自然的指数同伦路径，为连续调谐FDN参数提供了新的数学工具。短板：尽管方法优雅，但论文在性能评估上略显保守——与基线EAI的对比主要停留在计算复杂度层面（甚至承认优势不明显），缺乏在特定应用任务（如参数调优收敛速度、音质评价）上的深度验证，使得其实际效用的说服力打了折扣。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接或开源仓库。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
 - 复现材料：论文提供了算法伪代码（Algorithm 1）和关键公式，但未提供详细的复现指南、训练细节、配置文件或检查点。
 - 论文中引用的开源项目：论文引用了多项关于FDN、矩阵微扰理论的基础工作，但未明确指出使用了哪些特定的开源工具或库来实现算法（仅提及使用Python）。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：反馈延迟网络（FDN）的模态分解（求解其传递函数的极点）通常需要求解大规模的矩阵多项式特征值问题，当FDN的反馈矩阵A需要连续变化（如参数调谐、优化训练）时，每次都重新求解计算代价高昂。
@@ -41,6 +51,7 @@ hiddenInHomeList: true
 6. 主要局限性：计算开销并未显著优于传统EAI方法，尤其在系统阶数M很大且非线性强烈时需要很多步长L；极点丢失问题在步长不足时仍会发生；实验未涉及非常大规模的FDN或与更先进优化方法的对比。
 
 #
+
 ### 🏗️ 模型架构
 
 本文不涉及传统的神经网络模型架构，而是提出一个数值计算算法的整体框架（Algorithm 1），用于连续追踪FDN的极点。其核心组件与流程如下：
@@ -52,6 +63,7 @@ hiddenInHomeList: true
 4.  初始与迭代：算法在t=0时初始化所有极点及其特征向量（通过SVD或解析解），然后沿离散化的t步（0=t0<…<tL=1）循环执行预测和校正步骤，直至t=1，得到完整的极点轨迹。
 
 #
+
 ### 💡 核心创新点
 
 1.  将延续法引入FDN模态分解：这是核心的方法论创新。传统方法（如EAI）是求解单个固定A的极点。本文将问题转化为在参数空间A(t)中连续追踪极点族{λi(t)}，为FDN的参数调谐和灵敏度分析提供了新工具。
@@ -60,6 +72,7 @@ hiddenInHomeList: true
 4.  基于矩阵多项式而非标量多项式的表述：算法全程在矩阵空间N×N内工作（求解边界系统），避免了将问题线性化为M×M伴随矩阵（M>>N）带来的巨大计算和存储开销，使得对中等规模FDN的计算可行。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：未说明。本文不涉及机器学习意义上的训练，实验使用的是合成的FDN参数（反馈矩阵A和延迟向量m）。
@@ -74,6 +87,7 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：算法中的“相位更新”可视为一种针对无损情况的正则化。在牛顿校正中，通过限制迭代次数Jmax来防止不收敛。
 
 #
+
 ### 📊 实验结果
 
 论文在多个FDN配置上进行了实验，主要验证极点轨迹的平滑性和极点丢失情况。
@@ -95,16 +109,17 @@ hiddenInHomeList: true
 
     结论：对于给定的FDN，增加追踪步数L能显著降低极点丢失率。例如，对于M=7679的最大系统，L从15增加到50，丢失数从106降至20。
 
-![图6: 不同步数L下两个极点的追踪轨迹示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460431-3.png)
+![图6: 不同步数L下两个极点的追踪轨迹示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图6说明：展示了在L=15和L=20时，两个特定极点的追踪轨迹。L=15时轨迹在末端出现分叉（丢失或错误合并），而L=20时轨迹保持连贯，直观说明了步数对鲁棒性的影响。
 
-![图4: 沿直接指数路径的极点追踪](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460431-3.png)
+![图4: 沿直接指数路径的极点追踪](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图4说明：左图为极点在复z平面上的轨迹，中图和右图分别为极点的幅值和相位随追踪步数的变化，展示了轨迹的平滑连续性。
 
-![图5: 指数路径与线性路径下极点幅值演化对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460431-3.png)
+![图5: 指数路径与线性路径下极点幅值演化对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460431-3.png)
 图5说明：对比了图2、3中“拉伸”阶段两种同伦路径下，极点幅值的演化情况。指数路径（上图）的演化更接近线性，而线性路径（下图）的演化呈现明显非线性。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：论文提出了一个完整且技术合理的计算框架，创新点明确（延续法、指数路径），实验设计能够支撑其关于轨迹平滑性和鲁棒性的主要结论。扣分点在于与基线的对比不够充分（未提供具体运行时间对比），且问题的解决属于对现有方法的改进应用，而非根本性突破。
@@ -112,3 +127,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.5/1：算法描述详尽，理论上可复现。但缺少代码和精确的实验参数，使得“复现”需要读者自行实现并调试，门槛较高。未提及开源计划。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

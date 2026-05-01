@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音合成 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Group Relative Policy Optimization for Text-to-Speech with Large Language Models
+
+#语音合成 #强化学习 #多语言 #零样本 #语音大模型
+
+🔥 **8.0/10** | 前25% | #语音合成 | #强化学习 | #多语言 #零样本
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Chang Liu（中国科学技术大学，国家语音及语言信息处理工程技术研究中心）
 - 通讯作者：Zhen-Hua Ling（中国科学技术大学，国家语音及语言信息处理工程技术研究中心）
 - 作者列表：Chang Liu（中国科学技术大学），Ya-Jun Hu（科大讯飞研究院），Ying-Ying Gao（九天人工智能研究院），Shi-Lei Zhang（九天人工智能研究院），Zhen-Hua Ling（中国科学技术大学）
+
 ### 💡 毒舌点评
 
 亮点在于巧妙地将源自数学推理的GRPO算法“移植”到语音合成领域，并用一个现成的ASR模型构建了简单有效的复合奖励，实现了训练复杂度的显著降低和性能的稳定提升。短板则在于对“自然度提升”的深层机理探讨不足，仅通过MOS分数和少量示例论证，缺乏更系统的声学或韵律学分析，且Llasa-1B上的主观评估结果不佳也未得到充分解释。
+
 ### 🔗 开源详情
 
 - 代码：提供了GitHub仓库链接：https://ryuclc.github.io/LLM-TTS-GRPO。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
     - 评估工具：Paraformer-zh (来自FunASR[22]) 用于中文CER，WavLM[23]用于说话人嵌入提取。
     - 算法参考：GRPO [19] (源自DeepSeekMath)。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：现有基于大语言模型（LLM）的文本到语音（TTS）模型在使用强化学习（RL）进行微调时，面临训练流程复杂（如PPO需要维护价值模型）、或依赖昂贵的偏好数据（如DPO）等问题。
@@ -39,11 +49,12 @@ hiddenInHomeList: true
 4.  主要实验结果：在CosyVoice2和Llasa-1B两个开源基线模型上，GRPO微调显著提升了零样本合成的可懂度（CER/WER降低）和自然度（MOS提升）。例如，对CosyVoice2，中文CER从1.41降至1.07，英文WER从2.46降至2.30；主观平均意见得分（MOS）在四种语言上均有统计显著提升（如中文从4.42提升至4.58）。消融实验证明，结合CER与NLL的复合奖励优于单一奖励。
 5.  实际意义：该方法简化了LLM-TTS模型的RL训练管线，使其更稳定、易于实施，并有效提升了合成语音的质量和鲁棒性。
 6.  主要局限性：方法依赖于一个高质量的ASR模型作为奖励提供者；论文未深入分析NLL奖励如何具体改善语音自然度的机理；在Llasa-1B模型上，RL微调未能带来主观自然度的显著提升，原因未充分探究。
+
 ### 🏗️ 模型架构
 
 本文的核心贡献是提出一种基于GRPO的微调流程，而非一个全新的TTS生成架构。其流程如图2所示，适用于两类主流的LLM-based TTS模型。
 
-![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462553-1.jpg)
+![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-1.jpg)
 图2：GRPO微调流程。灰色模块表示冻结。预训练的语音Token LLM作为策略模型πθ，同时初始化参考模型πref（冻结）。对于输入文本y，策略模型进行G次采样得到一组输出语音token O。这些token经解码器（如Codec解码器或流匹配+声码器）转换为波形X。随后，使用一个现成的ASR模型（如Whisper）对X进行识别，并计算复合奖励R。根据奖励计算组内相对优势A，最后通过最大化GRPO目标函数（公式7）更新策略模型参数。
 
 完整流程与组件交互：
@@ -60,12 +71,14 @@ hiddenInHomeList: true
 *   使用GRPO替代PPO：消除了价值模型，降低了内存和计算开销，简化了训练。
 *   使用离线ASR模型计算奖励：避免了为TTS训练专门的奖励模型（如DiffRO中的token-to-text模型）。
 *   复合奖励设计：CER提供明确的“对错”信号，NLL提供连续、细粒度的置信度信号，两者互补，如图3散点图所示，它们的相关性很弱(r=0.3371)，结合使用信息更丰富。
+
 ### 💡 核心创新点
 
 1.  首次将GRPO应用于LLM-based TTS：将原本用于语言模型数学推理的GRPO算法成功迁移到语音生成领域，证明了其在TTS任务上的有效性和稳定性。
 2.  基于现成ASR的复合奖励函数设计：创新性地结合了CER（可懂度）和NLL（模型信心）作为奖励，无需额外训练奖励模型，且能提供更全面、稳定的优化信号。调和平均的应用是另一个细致的设计。
 3.  简化且通用的训练框架：所提方法可无缝应用于不同架构（声学token与语义token）的LLM-TTS模型，大幅降低了使用强化学习提升TTS模型性能的技术门槛和资源消耗。
 4.  实证验证了奖励组件的互补性：通过严格的消融实验（表1和表2），定量证明了CER-NLL复合奖励优于单一奖励，尤其是在自然度（MOS）提升上。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -83,6 +96,7 @@ hiddenInHomeList: true
 - 训练硬件：未说明。
 - 推理细节：评估时采用零样本合成。用于奖励计算的ASR模型是冻结的Whisper-large-v3。
 - 正则化/稳定技巧：GRPO本身通过组内相对优势归一化和KL惩罚来稳定训练。奖励函数使用`tanh`和`exp`进行归一化，将其映射到[0,1]范围。
+
 ### 📊 实验结果
 
 实验在两类模型（CosyVoice2、Llasa-1B）���验证了方法的有效性。
@@ -115,13 +129,19 @@ hiddenInHomeList: true
 分析实验图表：
 *   图3（散点图）：显示RCER与RNLL的相关性很弱，证明了两者提供互补信息。
 *   图4 & 图5（频谱图对比）：
-    *   ![图4: pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462553-3.jpg)
+    *   ![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-3.jpg)
         图4：中文示例频谱图。基线模型（a, b）存在漏字（“差距”）和发音错误（“于”），而GRPO-NLL（c）和GRPO-CER-NLL（d）修正了这些错误，且韵律停顿更自然。
-    *   ![图5: pdf-image-page4-idx4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462553-4.png)
+    *   ![图5: pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462553-4.png)
         图5：英文示例频谱图。与图4类似，GRPO微调后的模型（c, d）修正了基线模型（a, b）的转录错误（如“at” vs “a”），生成了更准确的语音。
     这些直观示例佐证了定量指标的改善。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7。创新点清晰且具有实践价值（方法迁移与奖励设计）；技术路线正确，实验设计全面，覆盖不同模型、语言、主客观指标及消融分析；结果可靠，有统计检验。扣分点在于对GRPO在TTS中生效的深层原理分析不足，以及Llasa-1B主观评估缺失原因未深究。
 - 选题价值：1.5/2。研究处于LLM-TTS与强化学习交叉的热点领域，提出的简化方案对降低研究门槛、促进应用有直接意义，对语音合成社区有较高价值。
 - 开源与复现加成：1.0/1。论文提供了代码、模型、演示和详细文档，复现门槛低，对社区贡献大。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

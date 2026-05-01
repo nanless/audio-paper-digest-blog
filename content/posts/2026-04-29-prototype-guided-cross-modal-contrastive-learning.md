@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音分离 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Prototype-Guided Cross-Modal Contrastive Learning for Continual Audio-Visual Sound Separation
+
+#语音分离 #对比学习 #持续学习 #多模态模型 #音视频
+
+✅ **7.5/10** | 前25% | #语音分离 | #对比学习 | #持续学习 #多模态模型
+
+学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 0.0 | 置信度 中
+
+
 ### 👥 作者与机构
 
 -   第一作者：Wanrong Ma (国防科技大学计算机科学与技术学院，2. 国防科技大学并行与分布式计算国家重点实验室) （注：论文标注为共同第一作者）
 -   通讯作者：Kele Xu (国防科技大学计算机科学与技术学院，2. 国防科技大学并行与分布式计算国家重点实验室)
 -   作者列表：Wanrong Ma（国防科技大学计算机科学与技术学院；国防科技大学并行与分布式计算国家重点实验室）、Hongyu Wen（国防科技大学计算机科学与技术学院；国防科技大学并行与分布式计算国家重点实验室）、Zijian Gao（国防科技大学计算机科学与技术学院；国防科技大学并行与分布式计算国家重点实验室）、Qisheng Xu（国防科技大学计算机科学与技术学院；国防科技大学并行与分布式计算国家重点实验室）、Kele Xu（国防科技大学计算机科学与技术学院；国防科技大学并行与分布式计算国家重点实验室）
+
 ### 💡 毒舌点评
 
 该工作在持续学习与多模态声音分离的交叉领域做得扎实，用原型和对比学习“框住”特征空间的想法巧妙且实验效果显著。但任务场景较为细分，且论文完全没提代码开源，对于想快速复现或在其他多模态任务上借鉴的读者不太友好。
+
 ### 🔗 开源详情
 
 论文中未提及代码链接。
@@ -25,9 +37,7 @@ hiddenInHomeList: true
 论文中引用的开源项目/工具包括：iQuery [5] (用于特征提取流程参考)、Video-MAE [15] (预训练视频编码器)、CLIP [16] (预训练视觉编码器)。
 论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：本文研究持续音视频声音分离（CAVSS），即模型需在不断学习新声音类别的同时，不忘记如何分离已学类别的声音。主要挑战是灾难性遗忘（学新忘旧）和跨模态干扰（不同类别或不同模态的特征在表示空间中纠缠不清）。
@@ -36,6 +46,7 @@ hiddenInHomeList: true
 4.  实验结果：在MUSIC-21数据集上的实验表明，PGCCL显著优于所有基线方法。在最后一个学习步骤上，其SDR达到8.16（最强基线ContAV-Sep为6.49），SIR和SAR也分别为14.11和13.26。在所有步骤的平均性能上，SDR为6.87。消融实验证明原型对比学习（PRO）、EMA和掩码蒸馏（MD）三个组件共同作用时性能最佳（SDR 7.88）。增加回放样本数（NS）能持续提升性能。t-SNE可视化（图2）显示PGCCL产生的多模态特征边界更清晰，重叠更少。
 5.  实际意义：为动态环境中的音频-视觉协同处理（如机器人、增强现实、辅助听觉设备）提供了一种可扩展的持续学习解决方案。
 6.  主要局限性：实验仅在一个数据集（MUSIC-21，仅21类乐器）上进行，验证了方法在该设置下的有效性，但对其在更复杂、更多样的真实世界声音场景中的泛化能力尚未验证。此外，论文未提供代码，限制了可复现性和快速验证。
+
 ### 🏗️ 模型架构
 
 PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体流程和核心组件如下：
@@ -64,12 +75,14 @@ PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体�
 
 5.  总体目标：最终损失是分离损失、原型增强对比损失和蒸馏损失的加权和（公式11），共同优化模型以适应新类别、保留旧知识并保持跨模态对齐。
 
-![图1: Overview of the PGCCL framework. Class-level prototypes are incorporated into each batch for pairwise cross-modal contrastive learning, structuring the representation space and improving modality alignment. EMA updates and mask distillation preserve historical knowledge, enabling stable incremental learning of new sound categories.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464249-0.png)
+![图1: Overview of the PGCCL framework. Class-level prototypes are incorporated into each batch for pairwise cross-modal contrastive learning, structuring the representation space and improving modality alignment. EMA updates and mask distillation preserve historical knowledge, enabling stable incremental learning of new sound categories.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-0.png)
+
 ### 💡 核心创新点
 
 1.  基于原型的多模态表示空间结构化：提出将类级原型作为稳定锚点，显式地组织多模态特征空间。这不仅为新类提供了学习参考，也为旧类提供了“防遗忘”的约束边界，有效缓解跨模态干扰和灾难性遗忘。局限：原型是静态平均，对类内多样性或分布变化不敏感。
 2.  原型引导的跨模态对比学习框架：设计了一种创新的批次构建方式，将原型与新旧样本特征混合，并进行成对的跨模态对比学习。这同时实现了实例判别（区分不同样本）和类别对齐（聚合同类别不同模态），增强了特征的可判别性与跨模态一致性。收益：实验证明该框架在消融研究中贡献显著（去掉后SDR下降1.54）。
 3.  EMA与掩码蒸馏的协同稳定机制：结合了参数级的EMA稳定和输出级的掩码蒸馏，在持续学习过程中从两个层面（特征表示和最终预测）巩固历史知识，形成了更鲁棒的稳定性-可塑性平衡。证据：消融实验显示，移除EMA或MD均会导致性能下降，三者结合效果最优。
+
 ### 🔬 细节详述
 
 -   训练数据：使用MUSIC-21数据集，包含21种乐器独奏视频（共985个）。划分为训练集（794）、验证集（93）和测试集（96）。论文未说明具体的数据预处理或增强方法。
@@ -86,6 +99,7 @@ PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体�
 -   训练硬件：未说明。
 -   推理细节：未说明。
 -   正则化或稳定训练技巧：使用了EMA稳定训练过程。
+
 ### 📊 实验结果
 
 实验在MUSIC-21数据集上进行，采用持续学习设置（逐步增加类别）。评估指标为SDR（信号失真比）、SIR（信号干扰比）和SAR（信号伪影比），数值越高越好。
@@ -124,10 +138,16 @@ PGCCL框架（图1）旨在处理持续音视频声音分离任务。其整体�
 
 可视化结果：论文展示了t-SNE可视化（图2）和跨阶段性能曲线（图3）。图2显示PGCCL的特征表示比基线EWF具有更清晰的类间边界和更少的模态间重叠。图3显示PGCCL在持续学习的各个阶段均保持领先的SDR和SIR。
 
-![图2: t-SNE visualization of all samples at the final incremental stage. Left: results from EWF baseline. Right: results using PGCCL. PGCCL produces clearer inter-modal boundaries and less overlap between modalities, indicating more structured multi-modal representations.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464249-1.png)
-![图3: SDR and SIR across incremental learning stages. Our method consistently outperforms baselines.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464249-2.png)
+![图2: t-SNE visualization of all samples at the final incremental stage. Left: results from EWF baseline. Right: results using PGCCL. PGCCL produces clearer inter-modal boundaries and less overlap between modalities, indicating more structured multi-modal representations.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-1.png)
+![图3: SDR and SIR across incremental learning stages. Our method consistently outperforms baselines.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464249-2.png)
+
 ### ⚖️ 评分理由
 
 -   学术质量：6.5/7。论文聚焦于一个具体且新兴的交叉问题（CAVSS），提出了一个逻辑清晰、组件设计合理的解决方案（PGCCL）。创新在于有效组合了原型学习、对比学习和持续学习技术来解决多模态表示空间的特定问题。实验设置规范，在标准数据集上与多个相关基线进行了比较，并通过消融研究验证了各组件的有效性，结果具有说服力。扣分点在于创新更多是“组合式”和“适配性”的，而非提出全新的核心思想或解决更大范围的问题。
 -   选题价值：1.0/2。持续多模态学习是前沿方向，本文所选的CAVSS任务具有理论价值和潜在应用场景（如动态环境下的机器人、AR）。然而，任务本身非常垂直和细分，应用广度有限。论文未充分论证该任务对于更广泛的语音/音频研究社区的核心重要性。
 -   开源与复现加成：0.0/1。论文未提及任何代码、模型、数据或详细配置的开源计划，严重限制了其他研究者快速验证和扩展其工作的可能性。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

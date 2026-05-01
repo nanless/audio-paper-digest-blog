@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Adversarial Fine-Tuning on Speech Foundation Model with Vulnerable Attention Consistency Regularization for Robust Speech Recognition
+
+#语音识别 #语音大模型 #预训练 #对抗样本 #鲁棒性
+
+✅ **7.5/10** | 前25% | #语音识别 | #对抗样本 | #语音大模型 #预训练
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Yanyun Wang (The Hong Kong University of Science and Technology (Guangzhou))
 - 通讯作者：Li Liu (The Hong Kong University of Science and Technology (Guangzhou), avrillliu@hkust-gz.edu.cn)
 - 作者列表：Yanyun Wang (The Hong Kong University of Science and Technology (Guangzhou)), Baoyuan Wu (The Chinese University of Hong Kong, Shenzhen; Shenzhen Loop Area Institute), Li Liu (The Hong Kong University of Science and Technology (Guangzhou))
+
 ### 💡 毒舌点评
 
 亮点：这篇工作敏锐地抓住了“防御SFM时，不能像对待传统模型那样容忍精度大幅下降”这一核心矛盾，通过CKA分析定位脆弱层并设计了针对性的双重正则化（注意力散度和特征相似性），思路清晰且可解释性强。短板：实验基本局限于Whisper模型在LibriSpeech一个数据集上的表现，对于SFM在多语言、多噪声环境下的泛化能力验证不足，使得“SOTA”的宣称在更大范围内略显底气不足。
+
 ### 🔗 开源详情
 
 - 代码：论文提供了代码仓库链接：https://github.com/FlaAI/VAIR。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 - 复现材料：论文提及代码和训练细节可用，并给出了关键超参数（如λFS， λAD）的消融范围，但未提供完整的训练配置文件（如学习率具体值、batch size）或预训练检查点。
 - 引用的开源项目：论文主要基于Whisper模型，因此依赖OpenAI的Whisper库。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：语音基础模型（SFM）如Whisper易受对抗性攻击，而现有防御方法（检测、预处理、传统对抗训练）在应用于SFM时，要么无效，要么会严重损害其通过大规模预训练获得的核心实用性（Utility）。
@@ -45,8 +55,9 @@ hiddenInHomeList: true
 | small.en (244M) | Pre-trained | 1.08 | 2.89 | 16.92 | 28.32 |
 | | + VAIR (Ours) | 1.43 | 3.77 | 8.40 | 16.42 |
 
-![图1：VAIR方法整体框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462855-0.png)
+![图1：VAIR方法整体框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462855-0.png)
 图1展示了VAIR的整体框架。模型同时处理干净波形、PGD对抗波形和高斯噪声波形。监督损失（黑色箭头）作用于干净样本，对抗损失（橙色箭头）作用于对抗样本。两个新的正则化项（蓝色箭头）：① 特征相似性约束对抗样本与高斯噪声样本在脆弱层（输出投影器）的特征相似；② 注意力散度约束对抗样本与干净样本在脆弱层（早期解码器交叉注意力）的注意力分布相似。
+
 ### 🏗️ 模型架构
 
 VAIR方法并非提出一个新模型，而是一种微调策略，应用于现有的基于Transformer的语音基础模型（论文以Whisper为例）。其核心在于在标准微调和对抗训练的基础上，引入两个针对模型脆弱部分的正则化项。
@@ -64,8 +75,9 @@ VAIR方法并非提出一个新模型，而是一种微调策略，应用于现�
 
 脆弱层定位：论文通过CKA分析（图2）发现，对抗脆弱性主要集中在解码器第0-1层的编码器-交叉注意力和解码器第1-3层的自注意力。VAIR主要针对编码器-交叉注意力进行正则化，因为其脆弱性最先出现，且实践表明包含后续自注意力收益不大。
 
-![图2：使用CKA分析脆弱层](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462855-1.png)
+![图2：使用CKA分析脆弱层](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462855-1.png)
 图2展示了CKA分析结果。左/中图分别显示从干净数据到高斯/PGD噪声数据的CKA变化。右图显示两种变化的差异。结果清晰表明，无论是哪种噪声，解码器早期层的编码器-交叉注意力都是变化最剧烈的脆弱区域。
+
 ### 💡 核心创新点
 
 1.  首次系统研究针对SFM的对抗性微调：明确指出在防御SFM时，保持其预训练获得的“实用性”与提升“鲁棒性”同等重要，这是一个新的研究范式。
@@ -73,6 +85,7 @@ VAIR方法并非提出一个新模型，而是一种微调策略，应用于现�
 3.  提出VAIR双重正则化框架：
     *   注意力散度（Attention Divergence）：直接约束最脆弱的注意力层，使其对干净和对抗输入的注意力模式保持一致。
     *   特征相似性（Feature Similarity）：巧妙地引入高斯噪声作为“锚点”，引导对抗样本在脆弱层的特征向随机化（RS）行为靠拢，旨在融合RS保持实用性的优点和AT提升鲁棒性的优点。
+
 ### 🔬 细节详述
 
 - 训练数据：使用LibriSpeech的 `train-clean-100` 子集（约100小时）进行微调。使用 `dev-clean` 进行早停。未提供数据增强细节。
@@ -89,6 +102,7 @@ VAIR方法并非提出一个新模型，而是一种微调策略，应用于现�
 - 训练硬件与时间：论文中未说明。
 - 推理细节：论文中未明确说明解码策略（如beam search的beam size）。使用标准的Whisper推理流程。
 - 正则化技巧：除了VAIR，论文在图3f中展示了额外的数据增强（如时间掩码）可以进一步帮助保持实用性，但这不是VAIR的核心部分。
+
 ### 📊 实验结果
 
 主要Benchmark与结果：所有实验在LibriSpeech `test-clean` 上进行，评估指标为CER和WER。表1为最核心的结果表。
@@ -120,10 +134,16 @@ VAIR方法并非提出一个新模型，而是一种微调策略，应用于现�
 | tiny.en Pre-trained | test-other | 7.30 | 14.23 | 61.65 | 93.49 |
 | tiny.en + VAIR | test-other | 8.90 | 17.79 | 38.21 | 61.63 |
 
-![图3：消融研究图表](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462855-2.png)
+![图3：消融研究图表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462855-2.png)
 图3为一系列消融研究图表，验证了VAIR各个组件（FS、AD）的有效性，以及关键超参数（λFS， λAD， 学习率， λAdv）对性能的影响，并展示了额外数据增强的效果。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7：论文动机明确，首次研究问题具有开创性；通过CKA分析定位脆弱层并设计针对性正则化，方法具有可解释性；实验设计全面，包含多模型规模、多攻击类型、充分消融和泛化测试，结果支持其论点。扣分点在于��创新本质上是两种现有正则化技术（约束注意力、约束特征）的组合与适配，理论深度有限；实验主要在单一模型家族（Whisper）和单一数据集（LibriSpeech）上验证，泛化性论证不够充分。
 - 选题价值：1.5/2：选题高度前沿，直接针对大模型时代的核心安全挑战（鲁棒性），对推动安全、可靠的语音AI应用有重要价值。扣分点在于，目前仅解决了Whisper这一类模型的问题，能否扩展到其他SFM（如非自回归模型）尚不明确。
 - 开源与复现加成：+0.5/1：论文明确提供了代码仓库链接（GitHub），并给出了训练设置的关键点和超参数范围，有利于复现。但未提供训练好的模型权重和完整的配置文件，增加了完全复现的难度。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

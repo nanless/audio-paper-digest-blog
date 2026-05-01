@@ -55,10 +55,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的数据集构建流程描述和评估指标定义，但具体的训练/评估超参数、硬件配置等细节未说明。
 - 论文中引用的开源项目：CosyVoice2（用于语音合成）、FFmpeg（用于音频后处理）、Whisper-large-v3（用于转录）、Emotion2Vec（用于情感分类）、RAVDESS（情感语音参考数据集）、Qwen3-4B-Instruct（用于语义相关性判断）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有的语音语言模型（SLM）已具备根据提示控制生成语音风格（如情感、语速）的能力，但领域内缺乏一个系统性的基准（Benchmark）来客观评估模型在多轮对话中理解和控制风格及强度的能力。
@@ -122,10 +118,6 @@ hiddenInHomeList: true
 -   复现材料：论文提供了数据构建的方法论和流程描述，这是重要的复现材料。但未提供数据预处理脚本、评估脚本或具体的超参数配置。
 -   引用的开源项目：论文引用了被评估的音频语言模型的代码库或技术报告，如Whisper [1], Qwen2-Audio [5], Kimi-Audio [6], AudioFlamingo3 [9], Voxtral [10], DashengLM [11]。也引用了评估工具如GPT-4-Turbo [14]和指标库如ROUGE [13]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决问题：现有语音基准测试（如LibriSpeech）主要针对短音频，无法有效评估模型处理真实世界长时音频（如会议、讲座）的能力，特别是在需要跨片段理解、推理和跟踪复杂信息时。
@@ -188,10 +180,6 @@ hiddenInHomeList: true
     - 扩散模型：Guided Diffusion（用于超分辨率模型初始化），DDPM，DPM-Solver。
 - 论文中未提及开源计划：模型权重、在线Demo。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有的视频生成模型大多忽略了生成的音频与视频之间的空间对齐（例如，声音的方向应与画面中发声物体的位置匹配），这限制了沉浸式体验。目前缺乏针对这一任务的标准评测基准。
@@ -232,10 +220,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文在附录（未提供）中应包含更详细的评估设置说明（如对非流式模型的评估方法）。正文中给出了一些评估配置（如输入帧数、分辨率处理）。
 - 引用的开源项目：论文引用了大量开源模型作为评估对象，包括LLaVA-OneVision, Qwen2-VL, InternVL2, MiniCPM系列, VideoLLM-online, Flash-VStream等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -286,10 +270,6 @@ hiddenInHomeList: true
 - Demo： 论文未提及在线演示。
 - 复现材料： 论文提供了详细的评估方法描述、CoT推理步骤说明，并声称将公开所有Prompt模板。
 - 论文中引用的开源项目： 依赖DESED、MAESTRO-Real数据集，VCTK语料库，以及被评估的开源模型（LTU-AS, Qwen2-Audio, Kimi-Audio, Step-Audio）和CLAP模型。评估中使用了OpenAI的文本嵌入模型API。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

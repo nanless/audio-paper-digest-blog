@@ -79,10 +79,6 @@ hiddenInHomeList: true
     - 数据集：E-GMD， ADTOF (用于对比)， IDMT, MDB。
 - 总结：论文在数据、评估、训练配置等复现信息上比较公开透明，但缺少代码实现这一关键复现材料。因此，对于希望直接使用或修改模型的研究者来说，复现门槛中等偏高。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决自动鼓转录（ADT）任务中判别模型泛化能力不足和性能瓶颈的问题。其核心方法是将ADT重新定义为一个条件生成任务，并提出了一个名为Noise-to-Notes (N2N) 的扩散模型框架。N2N从音频条件的高斯噪声开始，通过迭代去噪过程生成鼓的起始时间（onset）和力度（velocity）信息。与已有方法相比，其创新点在于：1）首次使用生成式扩散模型处理ADT；2）提出Annealed Pseudo-Huber (APH) 损失函数，解决了标准MSE损失无法有效联合优化二值起始和连续力度值的难题；3）创新性地融合了梅尔频谱图和来自音乐基础模型（MFM） 的高级语义特征，显著提升了模型对域外（out-of-domain）音频的鲁棒性。实验表明，N2N在E-GMD、IDMT和MDB等多个主流基准测试上均取得了新的最先进（SOTA）性能。例如，在E-GMD测试集上，使用10步采样时，其起始F1分数达到89.68，力度F1分数达到82.80，超过了所有对比的判别模型。论文的主要意义在于证明了生成模型在音乐转录任务上的优越性潜力，并带来了如音频修复等新能力。主要局限是其推理速度相较于判别模型较慢，且模型参数量更大（50M vs. 5.5M）。
@@ -112,10 +108,6 @@ hiddenInHomeList: true
 - 复现材料：提供了扩散模型训练参数表格（表1）、特征提取和分类器评估的系统化流程（图1），代码仓库应包含相关实现。但部分训练细节（如优化器、学习率）未在论文正文中详述。
 - 论文中引用的开源项目：引用了`a-unet`， `audio-diffusion-pytorch`用于构建扩散模型；`SoundStream`用于声码器；`IRMAS`、`OpenMIC`作为数据源。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决音乐信息检索（MIR）中的主要乐器识别（PIR）任务面临的数据标注有限和类间性能差异大的问题。其核心方法是：首次将预训练的音频扩散模型（U-Net结构）作为固定的特征提取器，通过探究其在不同去噪时间步（t）和网络层的中间表征，搭配轻量级分类器头（如MLP、CNN）来完成PIR任务。为弥合训练集（单标签）与测试集（多标签）的不匹配，论文还提出了一个新的多标签注释数据集OpenPIR。实验表明，在低噪声条件下的瓶颈层特征最具判别力，且使用OpenPIR数据能一致提升所有模型的性能。虽然扩散特征的整体性能（例如，最佳模型的Micro F1接近但未全面超越Han et al. CNN基线的0.65）尚未成为新的SOTA，但在电吉他、原声吉他和钢琴等特定乐器上已展现出超越基线的潜力。这项工作为“生成模型可用于判别性任务”在音频领域提供了早期证据，指明了探索统一生成-识别框架的方向。其主要局限性在于，对于大提琴、单簧管等乐器的识别依然困难，且所用扩散模型参数量（240M）远大于分类器，整体方案效率有待评估。
@@ -144,10 +136,6 @@ hiddenInHomeList: true
 - Demo：未提及在线演示。
 - 复现材料：论文提供了超参数设置（如γ， 步权重），并指出完整代码已开源，包含了训练细节。
 - 引用的开源项目：模型架构基于“Onsets and Frames” [17]的Python实现。使用了Adam优化器 [20]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -190,10 +178,6 @@ hiddenInHomeList: true
 - 复现材料：给出了部分实现细节（如使用`pysndfx`进行增强，Adam优化器，学习率0.0005，λ1=0.1， λ2=0.2， CFP特征参数），但未提供完整的训练配置、代码或附录。
 - 论文中引用的开源项目：引用了`pysndfx`用于音频增强，`mir_eval`用于评估指标计算。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -240,10 +224,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细说明了模型架构（变体）、数据集、损失函数、优化器、学习率调度策略、批大小、训练轮数和硬件环境。提供了代码仓库，可能包含进一步复现细节。
 - 论文中引用的开源项目：论文引用了使用[4]进行音频到MIDI转录的工作，可能依赖该项目的代码。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有钢琴延音踏板深度估计模型主要依赖帧级指标（如MSE, F1）进行评估，这些指标无法有效捕捉对音乐至关重要的边界时序正确性和踏板曲线轮廓特征，评估结果音乐可解释性差。
@@ -285,10 +265,6 @@ hiddenInHomeList: true
     1.  mir_eval：用于评估MIR指标的工具库。
     2.  论文未明确提及其他依赖的开源模型或框架。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决旋律估计任务中，主动学习样本选择策略未能有效利用不同不确定性信息的问题。方法核心是采用证据深度学习（Evidential Deep Learning）框架，分别训练分类（M1）和回归（M2）两种模型，以解耦并独立输出估计音高的“随机不确定性”（Aleatoric Uncertainty，源于数据歧义）和“认知不确定性”（Epistemic Uncertainty，源于模型认知不足）。与已有使用聚合不确定性（如β-NLL）或未解耦不确定性（如TCP置信度）的方法相比，本文的新颖之处在于系统地研究了这两种不确定性在跨域主动学习中的相对效果。主要实验结果表明，在HAR数据集上的域适应任务中，基于认知不确定性的回归模型（M2 (E)）仅使用200个标注样本进行微调，整体准确率（OA）就能达到96.0%，显著优于使用随机不确定性（M2 (A)）的69.2%和其他基线方法（见论文图1及描述）。该工作的实际意义在于，能以极少的标注代价将模型从源域（如MIR-1K中文卡拉OK）高效迁移到新域（如印度古典音乐），降低了标注门槛。其主要局限性是实验验证的数据集规模较小且数量有限，可能限制了结论的普遍性；此外，论文未将所提方法与旋律估计领域已知的最先进（SOTA）模型进行直接对比。
@@ -312,10 +288,6 @@ hiddenInHomeList: true
 🔗 **开源详情**
 
 论文中未提及代码仓库、模型权重、数据集的任何开源计划或链接。训练细节（如优化器、学习率、batch size）在论文中有说明，但完整的训练脚本、配置文件和预训练检查点均未提供。因此，论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -381,10 +353,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细给出了GP库（DEAP）、所有超参数（种群大小、代数、交叉突变率、复杂度惩罚λ、XGBoost参数）、数据集划分信息（参考文献[5, 26]），复现信息充分。
 - 引用的开源项目：Essentia库、Omnizart库、DEAP库、XGBoost。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：音乐标签任务中，深度学习模型性能优越但缺乏可解释性，而传统手工特征方法可解释但无法系统地发现有效的特征组合。
@@ -432,10 +400,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Ultimate Vocal Remover (UVR) [19]用于声源分离， Madmom [20]用于节拍跟踪， music21 [21]用于将预测序列转换为MusicXML格式。
 - 总结：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决即兴爵士独奏的音频到乐谱自动转录任务，特别是克服传统模块化流水线中错误累积的问题。其核心方法是提出一个名为“节奏感知器”（Rhythm Perceiver）的端到端神经网络模型。与先前方法不同，它逆向了处理逻辑：首先，模型预测每个小节中每个拍子的节奏结构（称为“节拍特征”），然后基于预测的节奏结构，在指定的起始点预测音高。模型采用了一种带有跨注意力机制的感知器（Perceiver）风格Transformer架构，将音频帧特征与节拍同步的节奏嵌入进行联合对齐。主要实验结果在极具挑战性的Charlie Parker“Omnibook”数据集上显示，该方法在多项指标上（如钢琴卷帘准确率、节奏准确率）显著优于现有的基线系统（CRNN+qparse），证明了显式建模节拍级节奏单元的有效性。其实际意义在于能为音乐分析和教育提供更准确的乐谱标注工具。主要局限性在于模型针对主流爵士乐节奏范式（如Bebop）进行训练，可能难以完美处理更复杂或前卫的节奏风格，且存在训练数据（Filosax）与测试数据（Omnibook）之间的领域差距。
@@ -477,10 +441,6 @@ hiddenInHomeList: true
 - 复现材料：非常充分。论文详细描述了所有实验设置（探测架构、超参数、优化器设置），并提供了预计算特征，使得他人无需运行耗时的编码器推理即可完全复现其探测实验结果。论文还提供了交互式的逐标签结果查看工具 (`https://pramoneda.github.io/tagbenchmark`)。
 - 论文中引用的开源项目：引用了多个作为评估对象的模型（WHISPER, CLAP, MAEST, MERT, MUSICFM, OMAR-RQ）及其相关代码库/预训练模型。还引用了Qwen2.5 LLM用于音频收集过程。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前音乐自动标注模型的评估多依赖于通用、众包的标签数据集（如MagnaTagATune），这些标注不一致且缺乏细粒度，阻碍了对模型真实音乐理解能力的精确评估。
@@ -509,6 +469,8 @@ hiddenInHomeList: true
 注：MAP为宏平均精度，RMSE为均方根误差。加粗为最优结果。
 
 图3：各模型在不同音乐类别上的性能热力图
+
+![图3: pdf-image-page4-idx2](https://raw.githubusercontent.com/paperswithcode/datasets/refs/heads/main/docs/assets/mgphot/mgphot-results.png)
 
 （注：为示意图，实际应引用论文中提供的图片URL）
 
@@ -542,10 +504,6 @@ hiddenInHomeList: true
 - 复现材料：给出了模型架构、损失函数公式、关键超参数（λ=0.3， 下采样64倍， C=96）以及实验设置概述（30秒， 8192Hz），但训练优化细节（优化器、学习率、批量大小、训练步数）和硬件信息未说明。
 - 论文中引用的开源项目：引用了Mamba模型（[17]），但未明确说明是否依赖其他特定开源代码库。
 - 总结：论文中未提及开源计划。复现需要依赖论文描述自行搭建模型并搜索缺失的训练超参数。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -586,10 +544,6 @@ hiddenInHomeList: true
 - 引用的开源项目：提到了依赖的开源工具，如`mir eval`（用于评估），以及基线模型`HPPNet`和`Onsets and Frames`。
 - 总结：论文中未提及完整的开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：当前基于深度学习的自动音乐转录（AMT）模型在训练数据分布之外（如不同钢琴音色、录音环境或未见过的乐器）表现严重下降，泛化能力不足。
@@ -628,10 +582,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的训练设置（优化器、学习率调度、数据增强等关键超参数），这为复现实验提供了充分信息。
 - 论文中引用的开源项目：论文引用了music21工具包，用于将罗马数字和弦标注转换为绝对和弦标签。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有符号（乐谱）和弦识别（ACR）研究面临两大挑战：一是缺乏高质量、大规模标注的符号音乐数据集；二是现有模型方法未充分考虑并模拟人类音乐分析的渐进过程。
@@ -667,10 +617,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：
     - 主要对比模型：BTC（Bi-directional Transformer for Chord recognition），并引用了其GitHub仓库。
     - 使用的度量工具：WCSR的计算可能依赖于`mir_eval`等库，但论文未明确列出。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -715,10 +661,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的算法描述、关键公式和超参数设置，为复现提供了必要信息。
 - 论文中引用的开源项目：论文未明确提及依赖的其他开源工具或模型。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：本文旨在解决多音高估计中的两大挑战：一是传统方法依赖于预定义的离散音高网格，限制了估计精度；二是大多数方法假设信号为完美谐波结构，对实际信号中存在的非谐波性（inharmonicity）敏感。
@@ -761,10 +703,6 @@ hiddenInHomeList: true
 - Demo：未提供在线演示。
 - 复现材料：论文详细给出了STFT参数、特征提取公式、模型架构选择、训练策略（优化器、学习率调度、早停）、数据集划分比例和数据增强方法，这些信息对于复现实验是充分的。但缺少具体的命令行参数、配置文件或检查点信息。
 - 论文中引用的开源项目：主要依赖了公开的ConvNeXt-V2预训练模型（来自Facebook）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -811,10 +749,6 @@ hiddenInHomeList: true
 *   复现材料：论文提供了模型架构的关键描述（如通道数、池化方式）、训练超参数（学习率、warmup步数、优化器、训练步数、硬件）和损失函数，但未提供完整配置、检查点或详细附录。
 *   论文中引用的开源项目：在结构分析任务对比中引用了LinkSeg [19]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：音乐信息检索（MIR）任务，如预览生成、结构分析，依赖于识别歌曲中吸引听众的时刻，但现有监督信号（如人工标注、启发式规则）成本高、主观性强或有限。
@@ -859,10 +793,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了详细的训练策略、超参数配置、评估指标计算方法和数据集划分协议。
 - 引用的开源项目：DDSP， Jointist (Onsets and Frames)， NSynth， Lakh MIDI Dataset， mir_eval。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1002,10 +932,6 @@ hiddenInHomeList: true
     - CLAP：基于自然语言监督的音频表示模型。
     - 其他挑战赛相关工具和基线（如SDXDB23相关）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：音乐源分离模型的性能严重受制于训练数据的质量，但大规模数据集中常存在难以检测的污染（如音频泄漏、标签噪声），且其类型和程度未知（“盲”状态），针对特定噪声的清洗方法不具备通用性。
@@ -1067,10 +993,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的实验设置（数据集划分、训练超参数、后处理方法）和评估代码，复现基础实验可行性高。
 - 引用的开源项目：论文引用了大量开源工具和模型，如mir_eval（评估库）、MusicFM、MERT、AudioMAE、PANNs、EnCodec、CLAP等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文旨在回答一个核心问题：当前主流的基础音频编码器（FAE）是否真正理解音乐的结构？为此，作者系统性地评估了11种不同类型的FAE（涵盖自监督学习、监督学习、跨模态学习等）在音乐结构分析（MSA）任务上的表现。研究发现，采用掩码语言建模（MLM）在长形式音乐数据上进行自监督预训练的模型（如MusicFM）表现最为出色，尤其在长上下文建模和捕捉语义特征方面优势明显。实验在Harmonix数据集上进行，以简单的线性探测后端评估FAE特征，结果显示MusicFM在边界检测（HR3F达63.91%）和功能预测（ACC达68.13%）上均达到最优。研究证明了FAE的预训练范式与训练数据选择对下游结构理解任务至关重要，并建议社区可重新审视基于此类FAE的生成模型评估指标。局限性在于仅使用了简单的线性后端，且未探索自回归模型等其他范式。
@@ -1104,10 +1026,6 @@ hiddenInHomeList: true
     *   预训练模型：Whisper [11], MERT [12]
     *   基准模型：MFCC [20], ResNet [21]
     *   评估MLLMs：Qwen2.5-Omni [13], Kimi-Audio [14], GPT-4o [15], Gemini-2.5-Pro [16]
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1158,10 +1076,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了关键模型架构参数（如Transformer层数、维度）和DSC的计算超参数。但缺失训练学习率、优化器、batch size、训练步数等关键训练细节，也未提供预训练的BigVGAN声码器或DSC计算工具的具体代码或链接。
 - 论文中引用的开源项目：引用了FlowHigh的原始代码库、BigVGAN模型、librosa音频分析库、Frechet Audio Distance工具包以及CFG-ZERO⋆方法。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：本文针对音乐录音中常见的带宽缺失（如历史录音、有损压缩）问题，旨在开发一种既能高质量恢复全频带音频，又能让用户精确控制恢复程度的生成模型。
@@ -1198,10 +1112,6 @@ hiddenInHomeList: true
     - Whisper [1]（预训练ASR模型）
     - Sentence-BERT (SBERT) [18]（用于基线）
     - 可能引用的其他基线实现（如CLEWS [6]， ByteCover [7,8]）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1242,10 +1152,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了mir_eval库用于评估。
 - 总体：论文中未提及任何开源计划或资源发布。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 该论文旨在解决自动鼓转录（ADT）中鼓音色高度多样化、但同一首歌内音色相对一致的挑战，导致即使SOTA模型泛化能力也有限的问题。其核心方法是在线动态少样本学习（Online Dynamic FSL），在推理时同时运行两个转录分支：一个基于训练好的基础原型（BaseOnly），另一个使用从当前歌曲中动态检测到的鼓点作为支持集，通过少样本原型生成器创建自适应原型（AdaptedClass）。最终将两个分支的分类得分加权平均，用于生成最终的转录结果。与已有动态FSL方法相比，其新意在于首次实现了无需预知完整歌曲、在推理过程中实时进行逐歌曲适配，适用于流式场景。主要实验在三个数据集（MDB， ENST， RBMA13）和两个网络架构（CNN， CRNN）上验证，平均相对性能提升约4.4%。该方法的实际意义在于为实时音乐处理（如卡拉OK伴奏生成、音乐编辑）提供了更精准的鼓点识别能力。其主要局限性是，在某些数据集上，在线适配带来的直接增益相比仅通过改进训练阶段获得的增益要小，且对基础性能就较差的鼓类（如镲片、铃铛）改善有限。
@@ -1281,10 +1187,6 @@ hiddenInHomeList: true
 - 复现材料：论文描述了训练的两阶段策略、优化器、学习率、早停条件等，但未提供完整的训练脚本、配置文件或预训练模型，细节不足以完全复现。
 - 论文中引用的开源项目：使用了MSAF工具（用于复现CNMF和SCluster基线），以及基础模型MERT和歌词编码器架构（遵循SongGen）。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1339,10 +1241,6 @@ hiddenInHomeList: true
     - Synchron Solo Violin I：商业级虚拟乐器插件。
     - mir_eval：用于音乐信息检索评估的Python库。
     - 其他数据集：MOSA, URMP, Bach10, RWC。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

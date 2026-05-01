@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了主要超参数（推理时的α, β）、使用的VLLM（BLIP）和硬件信息（NVIDIA 4070 Ti Super），但未提供完整的训练脚本、配置文件或检查点。
 - 引用的开源项目：主要依赖的开源工具/模型包括：CLIP, Wav2Vec2, BLIP（作为VLLM），以及相关的基线方法代码（如GMMFormer等）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：部分相关视频检索（PRVR）中，长视频包含大量冗余的视觉和听觉语义，而只有与查询相关的显著子集决定了相关性。现有方法平等对待所有视觉内容，且忽略音频线索，导致视频表示冗余且不全面。

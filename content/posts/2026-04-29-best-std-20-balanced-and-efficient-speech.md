@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频检索 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 BEST-STD 2.0: Balanced and Efficient Speech Tokenizer for Spoken Term Detection
+
+#音频检索 #自监督学习 #对比学习 #最优传输 #语音分词
+
+✅ **7.5/10** | 前25% | #音频检索 | #自监督学习 | #对比学习 #最优传输
+
+学术质量 6.0/7 | 选题价值 1.0/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Anup Singh（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Anup Singh（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）、Vipul Arora（ESAT-PSI, KU Leuven, Belgium）、Kris Demuynck（IDLab, Department of Electronics and Information Systems, Ghent University, Belgium）
 
 #
+
 ### 💡 毒舌点评
 
 亮点在于将最优传输（OT）优雅地用于解决语音分词码本坍缩这一老大难问题，使得大码本训练稳定且高效，且在抗噪抗混响的鲁棒性上做到了超越同类基线（包括大模型WavLM的分词）的扎实水平。短板是研究的问题域（查询式语音术语检索）略显小众，且其核心的“稳健性”提升高度依赖于特定的任务和评价指标（Jaccard相似度、MTWV），对于通用语音理解或生成任务的直接启示有限。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：提供代码仓库链接：https://github.com/anupsingh15/BEST-STD2.0
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 依赖的开源项目：论文中提到了SpeechBrain工具包（用于WavLM的K-Means分词），以及IVF-PQ索引库。此外，模型基于Mamba架构。
 - 论文中未提及更广泛的开源计划（如提供处理好的中间特征、评估脚本等）。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  解决的问题：针对查询式语音术语检索（QbE-STD）任务，现有离散分词方法在嘈杂和混响环境中鲁棒性差，且存在码本坍缩（即分词码本利用率不均衡）导致的效率低下问题。
@@ -42,6 +52,7 @@ hiddenInHomeList: true
 6.  主要局限性：方法主要针对帧级分词和检索任务设计，其生成的离散标记对语音合成、对话等需要更高级语义或韵律信息的任务是否同样有效，未进行验证。训练和评估集中于英语数据集，跨语言通用性未明。
 
 #
+
 ### 🏗️ 模型架构
 
 整体架构（见图1）包含编码、自监督训练和检索三个核心部分。
@@ -61,9 +72,10 @@ hiddenInHomeList: true
     *   索引：将音频库分割为固定长度（1s）重叠片段。对每个片段提取连续表示Z，量化得到离散标记序列。构建TF-IDF表示，并使用IVF-PQ进行快速索引。
     *   渐进检索：给定查询，生成其TF-IDF表示。第一阶段从索引中检索候选集`P1`；第二阶段用Jaccard相似度过滤得到`P2`；第三阶段用基于编辑距离的时序过滤得到最终结果`P3`。
 
-![图1: 本文提出的用于鲁棒语音分词的自监督学习框架示意图。图中展示了从输入MFCC特征，经双向Mamba编码器得到嵌入，利用DTW对齐构建锚点-正样本对，再通过VQ和OT正则化进行分词训练的过程。](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-0.jpg)
+![图1: 本文提出的用于鲁棒语音分词的自监督学习框架示意图。图中展示了从输入MFCC特征，经双向Mamba编码器得到嵌入，利用DTW对齐构建锚点-正样本对，再通过VQ和OT正则化进行分词训练的过程。](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-0.jpg)
 
 #
+
 ### 💡 核心创新点
 
 1.  噪声与混响增强的对比学习框架：通过在训练中引入随机的噪声和混响失真，并利用DTW对齐构建失真前后同一语音片段的嵌入对，强制模型学习不变特征。此前方法（如BEST-STD 1.0）缺乏此类系统性的抗噪训练，导致分词在嘈杂环境下性能骤降。
@@ -72,6 +84,7 @@ hiddenInHomeList: true
 4.  BiMamba与Transformer的实验对比：论文在相同框架下比较了BiMamba和Transformer编码器，发现在抗噪任务上BiMamba优于Transformer，归因于其线性时间建模更有效。这为选择语音分词的编码器架构提供了实证参考。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：在LibriSpeech `train-clean-360`子集上训练，在`test-clean`上验证。语音库和查询使用`train-clean-100`子集构建，确保评估使用未见过的说话人。数据增强使用MUSAN语料库的噪声和房间冲激响应（RIR）。
@@ -93,6 +106,7 @@ hiddenInHomeList: true
 - 正则化/稳定训练技巧：OT正则化本身就是最重要的稳定训练技巧，防止码本坍缩。此外，对嵌入和码字进行了L2归一化。
 
 #
+
 ### 📊 实验结果
 
 1. 分词一致性分析（表1）：在5k个跨说话人语音词对上计算Jaccard相似度。在各种失真条件下，BEST-STD 2.0均表现最优。在Clean条件下，其相似度为0.86，远高于BEST-STD的0.72。在Noise+Reverb (t60=0.7s) 条件下，即使在-5dB SNR，其相似度仍达0.61，而BEST-STD仅为0.19，WavLM为0.06。这直接证明了方法的鲁棒性。
@@ -149,10 +163,11 @@ hiddenInHomeList: true
 
 5. 编码器消融：表1和表2显示，在相同框架下，BiMamba编码器（BEST-STD 2.0）在所有指标上均优于Transformer编码器（Ours-Transformer），证明了BiMamba在抗噪时序建模上的优势。
 
-![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-1.jpg)
-![图3: pdf-image-page2-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-2.jpg)
+![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-1.jpg)
+![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-2.jpg)
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文工作扎实，针对明确的工程问题（STD鲁棒性、码本坍缩）提出了技术上合理且有效的解决方案。创新在于巧妙组合了OT、对比学习和抗噪训练，并在该特定任务上实现了SOTA。实验全面，有消融，数据支持充分。但核心编码器非原创，整体创新幅度属于“优秀改进”而非“范式突破”。
@@ -160,3 +175,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.5/1：提供了核心代码和详尽的训练配置，具备较高的可复现性。但未公开模型权重和部分数据资源，扣分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音乐信息检索 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Audio-to-Score Jazz Solo Transcription with the Rhythm Perceiver
+
+#音乐信息检索 #爵士乐 #音频转录 #端到端 #节奏感知
+
+✅ **7.5/10** | 前25% | #音乐信息检索 | #端到端 | #爵士乐 #音频转录
+
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.3 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：未说明（论文标题页列出三位作者，但未明确标注第一作者）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Ivan Shanin（Queen Mary University of London, Centre for Digital Music）， Xavier Riley（Sound Patrol Inc.）， Simon Dixon（Queen Mary University of London, Centre for Digital Music）
 
 #
+
 ### 💡 毒舌点评
 
 论文巧妙地将爵士乐转录问题拆解为“节奏优先，音高后补”的二阶段任务，并用一个统一的Transformer架构优雅地实现，这确实是模仿人类专家工作流程的聪明做法，在特定数据集上也取得了显著进步。然而，这种高度垂直的“爵士萨克斯独奏”任务定位，加上对高质量标注数据（如Omnibook）的强依赖，使其通用性和影响力打了个折扣；论文里对模型为何能有效泛化到节奏风格更复杂的帕克作品解释得也不够深入。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -29,22 +41,21 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Ultimate Vocal Remover (UVR) [19]用于声源分离， Madmom [20]用于节拍跟踪， music21 [21]用于将预测序列转换为MusicXML格式。
 - 总结：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 这篇论文旨在解决即兴爵士独奏的音频到乐谱自动转录任务，特别是克服传统模块化流水线中错误累积的问题。其核心方法是提出一个名为“节奏感知器”（Rhythm Perceiver）的端到端神经网络模型。与先前方法不同，它逆向了处理逻辑：首先，模型预测每个小节中每个拍子的节奏结构（称为“节拍特征”），然后基于预测的节奏结构，在指定的起始点预测音高。模型采用了一种带有跨注意力机制的感知器（Perceiver）风格Transformer架构，将音频帧特征与节拍同步的节奏嵌入进行联合对齐。主要实验结果在极具挑战性的Charlie Parker“Omnibook”数据集上显示，该方法在多项指标上（如钢琴卷帘准确率、节奏准确率）显著优于现有的基线系统（CRNN+qparse），证明了显式建模节拍级节奏单元的有效性。其实际意义在于能为音乐分析和教育提供更准确的乐谱标注工具。主要局限性在于模型针对主流爵士乐节奏范式（如Bebop）进行训练，可能难以完美处理更复杂或前卫的节奏风格，且存在训练数据（Filosax）与测试数据（Omnibook）之间的领域差距。
 
 #
+
 ### 🏗️ 模型架构
 
 本文提出的“节奏感知器”（Rhythm Perceiver）架构旨在以端到端的方式从音频中生成单声部乐谱，其核心是将任务分为节奏分类和音高预测两个阶段。
 
-![Rhythm Perceiver Architecture](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461977-0.png)
+![Rhythm Perceiver Architecture](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461977-0.png)
 图1：Rhythm Perceiver 架构总览。 模型接收音频特征序列（frames）和起始/结束点信息（onsets/offsets）。这些特征首先通过一个交叉注意力模块（cross-attention），其中音频特征作为Key和Value，一组可学习的潜在向量（bin latents和rhythm latents的拼接）作为Query。该步骤将高维的音频特征映射到一个低维的潜在空间。随后，拼接后的潜在向量被送入一个共享的Transformer编码器（latent transformer）。处理后，潜在向量被拆分为两部分：节奏潜变量（rhythm latents）和音符位置潜变量（bin latents）。节奏潜变量进入节奏分支，通过一个线性分类器预测每个拍子的“节拍特征”类别。音符位置潜变量进入音高分支，首先接收来自节奏分支预测结果生成的“节奏掩码”（rhythm mask）进行条件注入，然后通过一个额外的Transformer编码器（bin transformer）和线性分类器，预测每个“时间槽”（bin）的音高。模型采用分层位置编码，包含共享的节拍级和拍子级编码，以及针对音频帧和音符位置各自的低级编码。
 
-![Examples of beat signatures](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461977-1.png)
+![Examples of beat signatures](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461977-1.png)
 图2：节拍特征（节奏掩码）示例。 展示了在每个拍子内（12个时间槽），音符起始（O）、延续（T）和休止（R）的模式，这些模式对应了不同的节奏型（如四分音符、八分音符三连音等）。
 
 整体流程与关键设计选择：
@@ -56,6 +67,7 @@ hiddenInHomeList: true
 4.  位置编码创新：采用共享的、与拍子同步的分层位置编码，将音乐的层级结构（小节->拍子->拍内位置）显式地注入模型，对音频和乐谱两个模态使用统一的高层编码。
 
 #
+
 ### 💡 核心创新点
 
 1.  逆转任务逻辑的二阶段端到端框架：模仿人类转录专家“先识别节奏，再填充音高”的过程，设计了一个联合优化节奏预测与音高预测的端到端模型。这避免了传统流水线中由于中间步骤（如自动节拍跟踪、后处理量化）错误传递和累积的问题。
@@ -64,6 +76,7 @@ hiddenInHomeList: true
 4.  条件化的音高预测分支：通过将节奏分类的输出（节奏掩码）注入音高预测分支，实现了两个阶段的显式耦合。这保证了生成的乐谱在节奏上是合法的（每个音符都始于一个“起始”标记），并极大地简化了音高预测任务（只需在特定位置预测音高）。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -83,6 +96,7 @@ hiddenInHomeList: true
 - 正则化技巧：使用了dropout（0.1）。
 
 #
+
 ### 📊 实验结果
 
 论文在两个主要数据集上进行了评估：Filosax（用于消融研究）和Omnibook（用于与SOTA对比）。
@@ -106,13 +120,14 @@ hiddenInHomeList: true
 
 关键结论：Rhythm Perceiver在Omnibook这个更具挑战性的数据集上，相比强大的基线方法[11]，在所有可比较的指标上都取得了显著提升，尤其是在钢琴卷帘准确率（0.53 vs 0.19）和节奏准确率（0.53 vs 0.18）上。这证实了该方法的有效性和优越性。论文还提到，通过划分“简单”和“困难”测试子集，发现性能对节拍跟踪的质量敏感。
 
-![Histogram of beat-signature classes](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461977-2.png)
+![Histogram of beat-signature classes](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461977-2.png)
 图3：节拍特征类别频率直方图。 展示了在Filosax数据集中，经过双倍速增强前后，最常见节拍特征类别的频率分布。增强后，基于16分音符的节奏型变得更常见，这反映了爵士乐中同一乐句可能以不同时间密度演奏的特点。
 
-![Workflow of audio feature extraction](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461977-3.png)
+![Workflow of audio feature extraction](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461977-3.png)
 图4：音频特征提取流程。 展示了音频前端的工作流：输入音频片段 -> 声源分离（得到主奏乐器和伴奏）-> 对伴奏进行节拍跟踪 -> 通过CRNN前端（基于原始混合音频的梅尔频谱图）预测起始点、结束点和音高帧。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7。论文提出了一个逻辑清晰、设计精巧的端到端模型，针对特定问题（爵士独奏转录）进行了有效的创新。实验设计完整，包含充分的消融研究和与基线的对比，结果可信。主要技术（Perceiver、Transformer）并非原创，且解决的问题范围较为垂直，因此未给予更高分数。
@@ -120,3 +135,8 @@ hiddenInHomeList: true
 - 开源与复现加成：0.3/1。论文详细描述了模型架构、训练数据和关键超参数，具有一定的可复现性。但未提供代码、预训练模型或完整的复现脚本，也未提及开源计划，因此加成有限。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

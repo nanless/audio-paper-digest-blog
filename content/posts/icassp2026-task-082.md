@@ -59,10 +59,6 @@ hiddenInHomeList: true
 - 复现材料：提供了完整的训练细节（优化器、学习率、批大小、epoch数、硬件）、模型架构细节、预处理流程（文本归一化、音素转换、对齐工具），以及关键超参数（网络尺寸、噪声调度、推理步数）。
 - 引用的开源项目：Nvidia NeMo文本归一化、Phonemizer、Wav2Vec2 XLSR（对齐）、FACodec、Whisper（评测）、SpeechBrain/WavLM（说话人相似度评测）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的口音转换方法缺乏对转换强度的显式控制，难以在“更地道”和“更像本人”之间灵活权衡。
@@ -105,10 +101,6 @@ hiddenInHomeList: true
 - 复现材料：给出了模型规模（23M/67M）、优化器（AdamW）、学习率（5e-5）、训练轮数（446）、批大小（32）、训练硬件（单A100）和时长（72小时）等关键信息。
 - 论文中引用的开源项目/工具：引用了XLS-R (Wav2Vec 2.0)、VQ-VAE、YAAPT、OpenSMILE（eGeMAPS特征）、Whisper、StyleEncoder、Vevo-Voice、QuickVC等相关模型或工具，但未指明本文是否直接依赖这些项目的开源代码。
 - 整体开源情况：论文中未提及完整的开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -157,10 +149,6 @@ hiddenInHomeList: true
     - 其他基准模型代码：FramAN [13], TokAN [18]。
 - 论文中未提及开源计划的其他方面：如合成数据集权重。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文针对口音归一化（AN）中训练数据稀缺和时长建模生硬两大挑战，提出了一种新的解决方案。核心方法包括：1）提出“源合成”训练数据构建策略，使用强大的提示式TTS（CosyVoice2）从大规模母语语料中合成非母语语音，从而在完全不使用真实L2数据的情况下，构建以高质量母语语音为目标的平行训练对。2）提出了CosyAccent模型，一个基于流匹配的非自回归（NAR）系统，它通过隐式韵律建模保证自然度，并引入“位置缩放”技术实现对输出总时长的显式控制。实验结果显示，尽管未使用真实L2数据训练，CosyAccent在内容保持（WER降至12.96% vs. 基线16.21%）和自然度（主观NAT评分64.62）上显著优于使用真实数据的基线模型。该工作证明了合成数据策略的有效性，为减少对稀缺口音数据的依赖提供了新途径。其主要局限性在于合成数据可能缺乏真实L2语音的声学复杂性和副语言特征。
@@ -193,10 +181,6 @@ hiddenInHomeList: true
 -   Demo：提供了一个在线语音样本展示页面：https://hjguo01.github.io/QE-XVC/。
 -   复现材料：给出了部分关键实现细节（如优化器、学习率、推理步数），但未提供完整的训练配置文件、环境依赖列表或预训练模型链接。
 -   引用的开源项目：XLSR-53（预训练SSL模型）、CAM++（说话人验证模型）、HiFi-GAN（声码器）、Whisper（用于计算CER）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -245,10 +229,6 @@ hiddenInHomeList: true
     4.  数据集：Emilia, WenetSpeech, Aishell3, Seed-TTS Test Set
     5.  评估工具：Paraformer-zh (用于计算CER)， Seed-tts-eval (用于计算SSIM)， DNSMOS (用于评估语音质量)
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的流式零样本语音转换方法要么模型庞大、延迟高（如基于AR的StreamVoice），要么牺牲转换质量与泛化能力（如基于NAR的DualVC2和Seed-VC），无法同时满足“快速、轻量、高保真”的需求。
@@ -287,10 +267,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了方法的基本描述和公式，但缺乏具体的训练细节（如优化器、学习率、批大小、训练时长）和模型配置信息。
 - 引用的开源项目：论文未明确列出所有依赖项，但可以推断其使用了Wav2vec 2.0（用于特征提取）、以及可能的HiFi-GAN（作为声码器）等开源模型。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：现有的表现力语音转换（VC）方法要么专注于说话人身份和情感风格的迁移，要么专注于情感强度的可控调节，未能很好地将两者结合。本文旨在提出一个能同时实现高质量说话人转换、情感迁移，并允许用户精细控制目标情感强度的VC模型。
@@ -327,10 +303,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了详细的超参数设置（学习率、批大小、训练步数、优化器参数、模型大小等）、数据预处理流程（对齐、增强）和损失函数组合，复现信息较为充分。
 - 论文中引用的开源项目：StreamVC非官方实现、mHuBERT-147、Whisper、FCPE音高估计器、FastSpeech2（未直接使用，但在相关工作提及）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文针对喉切除患者使用的电子喉（EL）语音存在音高单调、韵律缺失和机械噪声的问题，提出了一种轻量级且感知引导的语音转换（VC）方法。其核心方法是在现有的流式Voice Conversion架构StreamVC基础上进行针对性适配：1）移除了不适用于EL语音的音高（F0）和能量估计模块以简化模型；2）设计了一种利用Whisper编码器特征和DTW对EL-HE（健康语音）平行数据进行时间对齐的预处理流程；3）在训练中引入了包括WavLM感知损失、人类反馈（HF）损失、可懂度损失等多种感知引导损失函数。与已有方法相比，本文的新意在于为EL语音转换这一特殊场景提供了端到端的轻量级流式解决方案，并系统评估了不同感知损失组合的影响。实验结果表明，最佳模型配置（+WavLM+HF）将EL语音的字符错误率（CER）从88.2%大幅降低至41.9%，将自然度评分（nMOS）从1.1提升至3.3，显著缩小了与健康语音的差距。其实际意义在于为语音康复提供了一种低延迟、轻量化的潜在工具。主要局限性是韵律生成和极端条件下的可懂度仍是瓶颈。
@@ -363,10 +335,6 @@ hiddenInHomeList: true
 - Demo：未提供在线交互式演示，仅有音频样本文件。
 - 复现材料：论文提供了相当详细的实验设置、网络架构、超参数和训练策略，具备较高的可复现性潜力，但缺少官方代码实现。
 - 依赖的开源项目：论文中引用并可能依赖了以下开源工具/模型：HiFi-GAN（声码器）、说话人编码器（基于Jia et al. 2018）、瓶颈特征提取器（基于Liu et al. 2021）、UTMOS/DNSMOS/DNSMOS Pro（评测指标）、WavLM（提取说话人嵌入）、Whisper（计算CER）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -432,10 +400,6 @@ hiddenInHomeList: true
     - CommonAccent：用于计算口音相似度A-SIM。
     - UTMOS v2：用于计算自动质量评分。
 - 论文中未提及完整的开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Pyroomacoustics用于数据模拟。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：房间脉冲响应（RIR）是声学信号处理的关键，但密集测量不切实际。现有方法或局限于规则网格、低频段，或需要针对每个新场景重新训练，缺乏一种通用、高效、能处理任意测量位置的RIR重建方法。

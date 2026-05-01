@@ -51,10 +51,6 @@ hiddenInHomeList: true
     - 说话人日志模型：PyAnnote 3.0, NeMo Sortformer, DiariZen (基于WavLM)。
     - 工具：Montreal Forced Aligner (MFA) (用于词对齐)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：说话人日志系统的鲁棒性评估缺乏能够严格控制变量、同时保留真实对话动态（如重叠、打断）的可控基准数据集。
@@ -103,10 +99,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了部分实现细节（如训练步数、学习率、特征维度），但缺少完整的配置文件、训练日志、预训练检查点或更详尽的超参数列表。
 - 论文中引用的开源项目：GST[11]， Vevo[12]， ECAPA-TDNN[4]， BigVGAN[14]， 谱聚类工具[15]， dscore评分工具[1]。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

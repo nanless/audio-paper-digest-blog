@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音视频 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Teacher-Guided Pseudo Supervision and Cross-Modal Alignment for Audio-Visual Video Parsing
+
+#音视频 #视频理解 #知识蒸馏 #弱监督学习
+
+✅ **7.0/10** | 前25% | #音视频 | #知识蒸馏 | #视频理解 #弱监督学习
+
+学术质量 6.5/7 | 选题价值 7.5/2 | 复现加成 0.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Yaru Chen (Centre for Vision Speech and Signal Processing, University of Surrey, United Kingdom)
@@ -19,9 +29,11 @@ hiddenInHomeList: true
   - Qingyu Luo (Centre for Vision Speech and Signal Processing, University of Surrey, United Kingdom)
   - Zhenbo Li (College of Information and Electrical Engineering, China Agricultural University, China)
   - Wenwu Wang (Centre for Vision Speech and Signal Processing, University of Surrey, United Kingdom)
+
 ### 💡 毒舌点评
 
 这篇论文的亮点在于其系统性和针对性：它精准地指出了现有弱监督AVVP方法的两个痛点（缺乏稳定段监督、粗糙的跨模态对齐），并用EMA和CMA这两个成熟但组合起来很有效的方案“对症下药”，在LLP数据集上的视觉和音视频联合指标上取得了实实在在的提升。但短板也十分明显：创新程度更像是一个“集大成”的工程优化方案，而非提出一个全新的学习范式；而且，论文在追求性能报告上非常详细，却在开源复现信息上极为吝啬，这对于一个旨在推动领域前进的会议论文来说，是减分项。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接或开源计划。
@@ -31,9 +43,7 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了模型架构、损失函数和主要思路，并报告了在标准数据集上的结果。然而，关键的训练超参数（如学习率、EMA动量α、阈值γ、Top-k的k值等）未在正文中明确给出，这使得精确复现存在困难。
 - 论文中引用的开源项目：论文明确指出其基线是CoLeaF [8]，并使用了预训练模型CLIP [12] 和 CLAP [13]。在UnAV-100实验中使用了I3D [19] 和VGGish [20] 模型提取特征。这些都是可公开获取的开源项目/预训练模型。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  解决的问题：本文针对弱监督音视频视频解析（AVVP）任务，旨在仅使用视频级标签训练模型，以定位视频中仅音频、仅视频以及音视频事件的时间范围与类别。核心挑战在于缺乏精确的段级监督信号，以及现有跨模态对齐方法过于全局化，忽略了不同类别事件在不同模态、不同时间出现的特性。
@@ -66,11 +76,12 @@ hiddenInHomeList: true
 
 5.  实际意义：该工作提升了弱监督条件下音视频事件解析的精度，为减少视频分析中的密集人工标注成本提供了更优的算法方案，对智能安防、视频内容理解与检索等领域有应用价值。
 6.  主要局限性：论文承认其伪标签生成策略（自适应阈值/Top-k）是固定的，可能无法充分适应视频中复杂的事件分布变化。此外，论文未提供代码和完整的复现实例，限制了其可重复性和社区快速跟进。
+
 ### 🏗️ 模型架构
 
 本文提出的E-CMA框架建立在CoLeaF基线之上，整体架构如图2所示。
 
-![图2: E-CMA框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463157-1.png)
+![图2: E-CMA框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463157-1.png)
 
 整体输入输出流程：
 1.  输入：一段T秒的视频，被划分为T个不重叠的1秒片段。每个片段提取出音频特征 `xa_t` 和视觉特征 `xv_t`。
@@ -86,6 +97,7 @@ hiddenInHomeList: true
 *   EMA教师：核心作用是作为学生网络的“稳定版”参考，生成更可靠的伪标签，缓解因学生网络训练早期波动或噪声标签导致的错误传播。
 *   CMA模块：核心作用是“选择性”对齐。它不强求所有时段音频和视觉特征相似，而是只在模型已经“确信”是某个事件发生的时段，鼓励模态特征一致，从而避免将无关内容错误对齐。
 *   HAN与MMIL：是继承自基线的特征聚合模块，负责从编码后的特征中提取时空和跨模态信息，并映射到任务标签。
+
 ### 💡 核心创新点
 
 1.  EMA引导的动态伪监督框架：
@@ -102,6 +114,7 @@ hiddenInHomeList: true
 
 3.  模块的互补性：
     *   消融实验（表3）表明，EMA主要提升事件级一致性（Event@AV），而CMA主要提升跨模态指标（视觉和音视频F1）。两者结合带来全面提升，证明了其互补性。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -129,6 +142,7 @@ hiddenInHomeList: true
 - 训练硬件：未说明。
 - 推理细节：未明确说明，推测与训练时学生网络的前向传播相同。
 - 正则化或稳定训练技巧：核心的稳定训练技巧就是EMA教师网络和基于置信度的伪标签选择。
+
 ### 📊 实验结果
 
 主要Benchmark与结果：
@@ -161,8 +175,14 @@ hiddenInHomeList: true
 - 完整模型：在所有指标上均优于基线CoLeaF†和任何单模块移除的变体。
 
 不同条件/场景下的结果：论文未提供跨语言或不同场景的细分结果，实验仅在两个英文视频数据集上进行。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7：论文提出的E-CMA框架技术路线正确，实验设计完整，包含多个基线的对比和充分的消融研究，结果可信。两个创新点（EMA伪监督、CMA损失）各自有效且互补，共同推动了性能提升。创新性属于将已有技术（EMA、选择性损失）在特定问题上进行有效组合与适配，而非提出全新的模型或理论，因此未给予更高分数。
 - 选题价值：1.5/2：弱监督音视频理解是一个活跃且有实际意义的研究方向，本文针对该任务中的具体挑战提出了解决方案，具有一定的前沿性和应用潜力。
 - 开源与复现加成：0.0/1：论文未提供代码、模型权重或足够详细的训练配置（如具体超参数值、优化器设置），这严重影响了其可复现性，因此不加分。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

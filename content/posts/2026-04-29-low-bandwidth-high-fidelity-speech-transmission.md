@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "语音增强 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Low-Bandwidth High-Fidelity Speech Transmission with Generative Latent Joint Source-Channel Coding
+
+#语音增强 #语义通信 #端到端 #生成对抗网络 #流式处理
+
+✅ **7.5/10** | 前25% | #语音增强 | #端到端 | #语义通信 #生成对抗网络
+
+学术质量 6.5/7 | 选题价值 0.5/2 | 复现加成 0.5 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Guangkuan Li（北京邮电大学）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Guangkuan Li（北京邮电大学）、Shengshi Yao（北京邮电大学）、Sixian Wang（上海交通大学）、Zhenyu Liu（University of Surrey）、Kai Niu（北京邮电大学）、Jincheng Dai（北京邮电大学）
 
 #
+
 ### 💡 毒舌点评
 
 亮点：该工作聪明地将神经音频编解码器（RVQ-GAN）与联合源信道编码（JSCC）解耦后又紧密融合，利用生成模型在低带宽下提供先验信息，有效缓解了传统JSCC在极低带宽下的质量崩塌问题。短板：虽然声称“节省60%带宽”，但对比基线（Opus+LDPC, Encodec+LDPC）的配置细节（如Opus的码率、LDPC的开销）未在文中清晰界定，使得“节省”的绝对值在不同实际部署条件下可能有所变化。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Encodec（神经音频编解码器）、5G LDPC编码等作为对比基线。具体代码仓库未在提供的文本中列出。
 - 总结：论文提供了理论框架和部分实现细节，并附有Demo，但未开源核心代码和模型，因此严格复现仍需一定工作量。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：现有的语音联合源信道编码（JSCC）方法在带宽极度受限时，感知质量会急剧下降，难以满足高保真传输需求。
@@ -40,11 +50,12 @@ hiddenInHomeList: true
 4.  主要实验结果：在AWGN和COST2100衰落信道下，GL-JSCC在低信噪比（SNR）和低带宽条件下均优于传统方法（Opus+LDPC, AMR-WB+LDPC）和神经网络基线（DeepSC-S, Encodec+LDPC）。例如，在SNR=2dB的AWGN信道下，GL-JSCC能达到与Opus+LDPC相同的感知质量（PESQ分数），但节省高达60%的带宽。主观MUSHRA测试也证实了其优越的听感。
 5.  实际意义：该框架为在带宽受限的弱网络（如工业物联网、偏远地区）中进行高质量语音传输提供了一种有效解决方案，推动了语义通信在音频领域的实用化。
 6.  主要局限性：性能上限受限于RVQ-GAN神经编解码器本身的重建质量（PESQ分数最高约4）；实验主要基于英文语音数据集（LibriSpeech），在其他语言或声学环境下的泛化能力未验证。
+
 ### 🏗️ 模型架构
 
 GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（Latent Codec） 和 联合源信道编解码器（JSCC Codec），其流程如公式(1)所示：`语音 x -> 潜在编码器 E -> 潜在表示 l -> JSCC编码器 J_e -> 发送符号 s -> 无线信道 -> 接收符号 ŝ -> JSCC解码器 J_d -> 潜在表示 l̂ -> 潜在解码器 D -> 重建语音 x̂`。
 
-![GL-JSCC 架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-0.png)
+![GL-JSCC 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-0.png)
 图1: (a) GL-JSCC的整体架构。语音经潜在编码器E压缩为潜在表示l，JSCC编码器Je将其转换为信道符号s传输。接收端经JSCC解码器Jd恢复潜在表示l̂，再经潜在解码器D重建语音x̂。(b) JSCC编码器Je的具体结构，采用带RoPE的流式Transformer，输入为潜在帧和SNR token，输出为信道符号。
 
 主要组件：
@@ -58,6 +69,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
     *   JSCC解码器 J_d：与编码器结构镜像，负责从接收符号ŝ重建潜在表示l̂。
 
 关键设计动机：在生成式潜在空间而非原始语音空间进行JSCC，是因为该空间更稀疏、更符合人感知，且生成模型本身能提供高质量重建的先验，这在低带宽时尤为重要。
+
 ### 💡 核心创新点
 
 1.  生成式潜在空间中的JSCC：这是最核心的创新。不同于传统JSCC在源信号空间或简单的端到端神经网络隐空间操作，GL-JSCC首先利用RVQ-GAN构建一个高质量、感知对齐的生成式潜在空间，然后在此空间内进行JSCC。这使得信道编码能更有效地保护语义和感知关键信息。
@@ -66,6 +78,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
     *   阶段II：固定潜在编解码器，训练JSCC模块以最小化潜在表示的MSE并预测RVQ索引，实现低带宽传输适配。
     *   阶段III：端到端微调，联合优化除潜在编码器外的所有模块，结合潜在空间监督和原始感知损失，实现最优重建。
 3.  针对低带宽与低信噪比的针对性设计：包括RVQ带来的高压缩率、Transformer的状态缓冲以实现高效流式推理、以及显式的SNR token以增强模型对恶劣信道的适应能力。
+
 ### 🔬 细节详述
 
 - 训练数据：使用LibriSpeech数据集（英文语音，16kHz采样）。训练时随机截断语音至最长3秒。
@@ -78,6 +91,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
 - 训练硬件：论文中未说明。
 - 推理细节：使用状态缓冲实现低延迟流式推理，上下文窗口为50帧。解码时无需特殊策略（如beam search），直接前向传播。
 - 正则化/稳定训练技巧：采用对抗训练和特征匹配损失稳定GAN训练；使用STE解决量化器的梯度传播问题；分阶段训练确保稳定性。
+
 ### 📊 实验结果
 
 主要评估设置：数据集LibriSpeech（16kHz）。信道模型：AWGN和COST 2100室内5.3GHz衰落信道。评估指标：客观PESQ，主观MUSHRA测试。
@@ -87,7 +101,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
 2.  不同SNR下的性能（AWGN信道，K=2kHz）：如图3(b)所示，GL-JSCC在所有SNR（-2dB到10dB）下PESQ得分均最高，优势在低SNR时尤为明显。
 3.  不同SNR下的性能（AWGN与COST2100信道，K=4kHz）：如图3(c)(d)所示，GL-JSCC在两种信道、所有SNR下均表现最佳，展现了强大的鲁棒性。注意DeepSC-S的带宽为12kHz（图中绿线）。
 
-![PESQ与带宽/SNR关系图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-2.png)
+![PESQ与带宽/SNR关系图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-2.png)
 图3: (a) AWGN信道，SNR=2dB时PESQ与带宽关系。GL-JSCC以更少带宽达到更高质量。(b) AWGN信道，K=2kHz时PESQ与SNR关系。(c)(d) AWGN和COST2100信道，K=4kHz时PESQ与SNR关系。GL-JSCC均表现最优。
 
 主观评估（MUSHRA测试）：
@@ -96,7 +110,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
 - SNR=6dB，AWGN信道：GL-JSCC得分依然最高，且用更少带宽提供更好听感。
 Demo链接已提供。
 
-![MUSHRA得分图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-3.png)
+![MUSHRA得分图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-3.png)
 图4: 不同信道条件下的MUSHRA主观评分。(a) SNR=2dB，(b) SNR=6dB。GL-JSCC在低带宽下均获得更高主观分数。
 
 消融研究（潜在空间监督）：
@@ -109,8 +123,14 @@ Demo链接已提供。
 | w/o ℓsupervision | 2.55 | 2.88 | 3.02 | 3.19 | 3.31 | 3.43 |
 
 表1：潜在空间监督的消融实验。在2kHz带宽下，加入监督能全面提升PESQ。
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7：创新性在于将生成式模型与JSCC在潜在空间结合，并设计了完整的三阶段训练流程，解决了低带宽下的质量崩塌问题。技术实现严谨，实验设计全面（包括客观/主观评估、多信道模型、消融研究）。主要扣分点：对比的神经编解码器基线（Encodec）并非专为JSCC设计，未能直接体现GL-JSCC相对于“神经JSCC+神经编解码器”这一更强范式的增益；对RVQ-GAN本身重建质量上限（PESQ~4）的分析和改进讨论有限。
 - 选题价值：0.5/2：选题聚焦于工业物联网、弱网环境等实际场景中的低带宽高保真语音传输，具有明确的应用需求和前沿性。但相较于通用语音理解或生成任务，应用面相对垂直，且框架的实用部署可能还需考虑计算复杂度、标准化等因素。
 - 开源与复现加成：0.5/1：论文未提供代码、模型权重或训练脚本链接。但详细给出了网络结构参数、损失函数公式、训练阶段策略及部分超参数，为同行复现提供了较扎实的理论蓝图。因此给予中等加分。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

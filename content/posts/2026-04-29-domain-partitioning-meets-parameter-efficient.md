@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "音频分离 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Domain Partitioning Meets Parameter-Efficient Fine-Tuning: A Novel Method for Improved Language-Queried Audio Source Separation
+
+#音频分离 #参数高效微调 #领域适应 #预训练
+
+✅ **7.5/10** | 前50% | #音频分离 | #参数高效微调 | #领域适应 #预训练
+
+学术质量 7.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 -   第一作者：Yinkai Zhang（新疆大学计算机科学与技术学院 / 丝绸之路多语言认知计算联合国际实验室 / 新疆多语言信息技术重点实验室）
 -   通讯作者：Kai Wang, Hao Huang（新疆大学计算机科学与技术学院 / 丝绸之路多语言认知计算联合国际实验室 / 新疆多语言信息技术重点实验室）
 -   作者列表：Yinkai Zhang（新疆大学计算机科学与技术学院等），Dingbang Zhang（新疆大学计算机科学与技术学院等），Tao Wang（新疆大学计算机科学与技术学院等），Diana Rakhimova（哈萨克斯坦阿勒法拉比国立大学信息系统系），Kai Wang（新疆大学计算机科学与技术学院等），Hao Huang（新疆大学计算机科学与技术学院等）。
+
 ### 💡 毒舌点评
 
 亮点：论文巧妙地将LLM领域的“领域划分+PEFT微调”范式迁移到音频分离任务，思路清晰且实验效果扎实，在多个数据集上稳定超越强基线AudioSep。短板：创新更多是框架层面的组合，作为核心组件的ReConv-Adapter是在Conv-Adapter基础上“加宽”而非原创性设计，其参数效率与性能增益的权衡有待更深入探讨。
+
 ### 🔗 开源详情
 
 -   代码：提供开源代码仓库链接：https://github.com/butterflykite/DP-LASS。
@@ -24,9 +36,7 @@ hiddenInHomeList: true
 -   复现材料：论文提供了较为充分的复现信息，包括：训练数据构建方式（单类音频，混合采样）、关键超参数（学习率、batch size、训练步数）、硬件配置（RTX 3090 GPU）以及消融实验设置。
 -   引用的开源项目：论文依赖并引用了AudioSep的官方实现和预训练模型（https://github.com/Audio-AGI/AudioSep），以及HuggingFace PEFT库（用于DoRA/LoRA的实现）。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：语言查询音频源分离（LASS）任务面临一个关键挑战：不同声音类别之间特征分布差异巨大，使得单一模型难以有效建模所有类别。
@@ -46,11 +56,12 @@ hiddenInHomeList: true
 
 5.  实际意义：该方法提供了一种提升通用音频分离模型在特定领域性能的高效范式，具有较好的可扩展性和实用性。
 6.  主要局限性：1）领域划分依赖于K-Means聚类，子领域数量需手动设定，且划分质量影响最终性能；2）提出的ReConv-Adapter参数量（19M）显著高于DoRA/LoRA（约0.26M），在效率上并非最优选择；3）论文未探讨该方法在更复杂、多目标的现实场景中的泛化能力。
+
 ### 🏗️ 模型架构
 
 本文方法整体架构分为三个连续阶段，旨在将一个通用LASS模型（AudioSep）转化为针对不同声音子领域的“专家集合”。
 
-![图1: pdf-image-page4-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460403-0.png)
+![图1: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460403-0.png)
 
 阶段1：领域划分（Domain Partitioning）
 -   输入：完整的AudioSet训练集（仅包含单类别音频）。
@@ -76,6 +87,7 @@ hiddenInHomeList: true
 -   输出：根据文本查询分离出的目标音频源。
 
 关键设计动机：通过领域划分减小子域内的特征分布差异，使每个子域的微调更高效、更专注；通过PEFT（ReConv-Adapter）以较小的参数增量实现领域适应，避免全量微调的高成本和灾难性遗忘；通过子域分类器实现自动化的推理路由。
+
 ### 💡 核心创新点
 
 1.  “领域划分+PEFT”的LASS新范式：
@@ -95,6 +107,7 @@ hiddenInHomeList: true
     -   之前局限：若没有分类器，推理时需要遍历所有PEFT模块进行尝试，或人工指定，不切实际。
     -   如何起作用：结合CLAP的多模态嵌入和轻量级的CNN-Transformer结构，快速、准确地完成路由决策。
     -   收益：表1显示，使用分类器的推理结果（9.76 dB）与理论最优的“oracle”选择（10.05 dB）差距很小，证明了该分类器的有效性。
+
 ### 🔬 细节详述
 
 -   训练数据：
@@ -117,6 +130,7 @@ hiddenInHomeList: true
 -   正则化技巧：
     -   零卷积（Zero Convolution）：ReConv-Adapter初始化权重为零，是稳定训练的关键技巧。
     -   冻结预训练模型：整个微调过程中，AudioSep的基座参数保持冻结。
+
 ### 📊 实验结果
 
 -   主要Benchmark与结果：在AudioSep论文使用的同一套六个测试集（AudioCaps, VGGSound, AudioSet, MUSIC, ESC-50, Clotho v2）上进行评估。核心指标为SDRi和SI-SDR。
@@ -128,9 +142,15 @@ hiddenInHomeList: true
     -   ReConv-Adapter在所有测试集上均取得最优分离结果，验证了其有效性。
 -   领域划分分析（图3）：使用t-SNE可视化CLAP嵌入的聚类结果。图中显示，大部分相同颜色的点（同一子域）形成清晰的簇，不同簇之间有明确边界，直观验证了基于CLAP嵌入进行K-Means聚类的有效性。同时观察到声学特征相似的类别（如各类人声）倾向于聚在一起，与语义分类不完全一致。
 
-![图3: pdf-image-page4-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460403-0.png)
+![图3: pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460403-0.png)
+
 ### ⚖️ 评分理由
 
 -   学术质量（5.5/7）：论文工作扎实，技术路线完整且有实验验证。创新性在于将LLM训练范式迁移到音频分离领域，并针对卷积网络设计了ReConv-Adapter。但创新更多是框架层面的组合，核心模块ReConv-Adapter的原创性有限。实验设计合理，对比了多种方法和策略，结果可信。
 -   选题价值（1.5/2）：LASS是当前音频AI的热点和难点，具有明确的应用场景和学术价值。论文针对该任务的核心挑战（特征分布差异）提出方案，有较强的实际意义和影响力。
 -   开源与复现加成（0.5/1）：论文提供了GitHub代码仓库链接，极大方便了复现。文中给出了详细的训练超参数、数据构建和硬件信息，复现基础好。���未明确提及是否开源预训练模型权重（尤其是微调后的PEFT模块），这可能增加复现完整性能的难度。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -54,10 +54,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了关键仿真参数（节点数、滤波器长度、步长、惩罚因子、采样率）和系统设置，但未提供声学路径的具体数据、补偿滤波器的估计方法细节或代码配置文件。复现需要基于这些参数自行搭建仿真环境或获取原始声学测量数据。
 - 论文中引用的开源项目：未明确引用其他依赖的开源工具或模型。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统的分布式多通道主动噪声控制（DMCANC）方法通常假设节点间同步且频繁地通信，导致通信开销过高，难以适应异构或资源受限的网络环境。
@@ -95,10 +91,6 @@ hiddenInHomeList: true
 - Demo：未提供在线演示。
 - 复现材料：给出了实验设置（硬件、软件库、STFT参数），但未提供核心算法的实现代码、超参数选择依据或详细配置。
 - 论文中引用的开源项目：引用了LTFAT (Large Time-Frequency Analysis Toolbox) 作为信号处理工具库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

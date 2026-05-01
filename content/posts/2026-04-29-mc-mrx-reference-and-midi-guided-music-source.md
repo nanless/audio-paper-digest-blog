@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音乐源提取 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 MC-MRX: Reference- and Midi-Guided Music Source Extraction with Contrastive Learning
+
+#音乐源提取 #对比学习 #多任务学习 #音频引导
+
+✅ **7.0/10** | 前25% | #音乐源提取 | #对比学习 | #多任务学习 #音频引导
+
+学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Xueyan Chen（University of Science and Technology Beijing, China）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Xueyan Chen（University of Science and Technology Beijing, China）、Zexu Pan（Tongyi Lab, Alibaba Group, Singapore）、Ziyang Jiang（University of Science and Technology Beijing, China）、Jiadong Wang（Technical University of Munich, Germany）、Kainan Chen（Eigenspace GmbH, Germany）、Xinyuan Qian（University of Science and Technology Beijing, China）
 
 #
+
 ### 💡 毒舌点评
 
 这篇论文的亮点在于将MIDI时序音高锚点和参考音频这两种异构的多模态先验，通过一个精心设计的框架（MC-MRX）融合进音乐源提取任务，实验结果显著，为该领域引入“结构化提示”提供了有力论证。然而，其“自产自销”的短板也很明显：作为核心输入之一的MIDI依赖于外部的MT3模型，论文并未深入探讨该模型性能的波动对最终结果的影响，同时全文没有任何开源信息的披露，对于一篇声称推动SOTA的工作而言，这无疑削弱了其可验证性和社区影响力。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -32,9 +44,7 @@ hiddenInHomeList: true
     - MRX：作为改进的基础框架。
 - 总体评估：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有音乐源提取（MSE）方法面临源特征混淆和音色失配偏差的挑战，主要因为它们缺乏对音乐信号固有属性（如结构、音色）的有效建模。
@@ -45,6 +55,7 @@ hiddenInHomeList: true
 6. 主要局限性：高度依赖外部MT3模型进行MIDI转录，其精度和延迟会影响整体系统；实验仅在MUSDB18-HQ（不含MIDI标注）上进行，MIDI输入是模型生成的，未讨论生成错误的影响；未提供开源代码或模型，复现门槛高。
 
 #
+
 ### 🏗️ 模型架构
 
 MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混合音频中提取单个目标音轨。其完整输入输出流程及核心组件如下：
@@ -78,8 +89,9 @@ MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混�
 
 数据流与交互：混合音频和参考音频经多分辨率编码后，与对齐的MIDI特征在每个分辨率上拼接，形成多模态输入。这些输入经过共享的Conformer提取器处理，生成融合表征。最后，解码器利用此表征估计掩码并重建目标音频。训练时，对比学习模块在嵌入空间对预测结果进行约束。
 
-![图1：MC-MRX网络架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460788-0.png)
+![图1：MC-MRX网络架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460788-0.png)
 图1展示了完整的网络流程：输入（mixture, reference, MIDI）经过多分辨率音频编码器、MIDI适配器融合，进入Conformer提取器，再由多个掩码解码器在不同分辨率下输出估计的目标音轨。对比学习模块在训练阶段介入，优化嵌入空间。
+
 ### 💡 核心创新点
 
 1.  MIDI引导的结构化约束：
@@ -99,6 +111,7 @@ MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混�
     *   之前局限：单一的重建损失主要关注波形保真度，对特征空间的判别性约束不足。
     *   如何起作用：对比损失将预测的目标嵌入拉近至真实目标嵌入（正样本），同时推远至非目标音轨嵌入（负样本），在特征空间中明确划定目标边界。
     *   收益/证据：消融实验（表2）表明，移除对比损失后，Bass和Drums的SI-SNRi分别下降0.97 dB和1.05 dB，验证了其在增强鲁棒性和区分度上的作用。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -124,6 +137,7 @@ MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混�
 - 训练硬件：未说明。
 - 推理细节：未说明。模型架构支持端到端波形输出。
 - 正则化/稳定训练技巧：主要使用了梯度裁剪（max norm 5.0）。
+
 ### 📊 实验结果
 
 论文在MUSDB18-HQ数据集上进行了实验，评估指标为SI-SNRi（dB）和SDRi（dB）。
@@ -157,6 +171,7 @@ MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混�
 | - Reference | 5.58 (-2.08) | 1.15 (-8.87) | 4.10 (-3.03) | -0.81 (-11.24) |
 
 结论：SDRi指标对模块移除更敏感。移除MIDI引导对Drums造成毁灭性打击（从10.02降至1.13 dB）。移除参考音频导致Vocals的SDRi变为负值，表明残留干扰极大。这凸显了音色锚定在抑制泄漏方面的关键作用。
+
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7
@@ -171,3 +186,8 @@ MC-MRX模型架构（如图1所示）旨在通过多模态线索引导，从混�
     - 论文详细列出了超参数、优化器设置，但完全没有提及代码、预训练模型或数据的开源。对于一篇依赖外部转录模型且通过数据重混增强的方法，缺乏这些信息使得完全复现的难度极高，因此给予中性评分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

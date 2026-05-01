@@ -67,10 +67,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了多个开源模型和数据集，如Qwen2.5-Omni, AVQA, MMAU, EchoInk-R1。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：现有的强化学习与验证奖励（RLVR）方法在训练音频问答系统时，通常只使用格式是否正确和答案是否完全匹配的二元奖励信号，这种稀疏的信号对模型几乎正确但未得分的样本无法提供有效的学习指导。
@@ -121,10 +117,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练课程（三阶段）、关键超参数（学习率、批次大小、损失权重）、模型参数量对比，以及特征注意力模块的具体公式，复现细节较为充分。
 - 论文中引用的开源项目：依赖了AudioMAE（用于初始化）、BAT系统（作为下游推理模型）、AudioSet数据集、SoundSpaces 2.0仿真平台。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：使用单一音频编码器（如SpatialAST）处理空间音频推理任务（声音事件检测SED、距离预测DP、方向估计DoAE）时，由于各任务所需信息（事件类型、距离、方向）大多相互独立，导致表征纠缠，单一任务的优化可能损害其他任务的性能。
@@ -167,10 +159,6 @@ hiddenInHomeList: true
 - 复现材料：提供了非常充分的训练细节、配置和超参数设置，有利于复现。
 - 论文中引用的开源项目：主要引用了作为基础模型的 Qwen2.5-Omni [6] 和作为微调方法的 LoRA [25]。优化器 IVON [14] 本身也是一项开源工作。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：多模态大模型（如音频问答模型）在微调后常常过于自信（overconfident），预测置信度不能反映真实准确率（校准差），导致在需要可靠判断的风险敏感应用中不可信。
@@ -209,10 +197,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了基准构建的五阶段流程，但未提供构建过程中使用的具体工具版本、LLM提示词模板、过滤的精确统计检验参数（如t值）等完整复现细节。
 - 论文中引用的开源项目：明确提到了在数据集构建和评估中使用的开源模型，包括Whisper (large-v3) 用于转录，LLaMA-3.1 (8B) 用于文本泄漏检测，Gemini 2.5 Flash 用于辅助问题生成。
 - 总体开源计划：论文中未提及明确的开源计划（如后续将在GitHub开源代码和数据）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -265,10 +249,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的模型架构描述、训练超参数（学习率、批次大小）、硬件环境（4x RTX 3090）以及算法伪代码（算法1），这些是重要的复现信息。但未提供完整的配置文件、检查点或更细致的训练日志。
 - 论文中引用的开源项目：明确提到了作为基础架构的VideoLLaMA2，并引用了其使用的组件：视觉编码器SigLIP [22]， 音频编码器BEATs [23]， 以及语言模型Qwen2-7B [24]。也引用了LoRA [14]等训练技术。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：多模态大语言模型在处理音视频问答任务时，因音频和视觉token数量庞大导致计算和内存开销高，且现有的融合方法往往忽略了音频token的冗余问题，影响了效率和跨模态对齐效果。
@@ -317,10 +297,6 @@ hiddenInHomeList: true
 -   复现材料：论文详细说明了训练细节、配置（如SFT和GRPO的具体超参数、硬件、批次大小、学习率等）、验证集选择策略。未提供检查点或附录。
 -   论文中引用的开源项目：SWIFT框架、LoRA、vLLM。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：大型音频语言模型（LALMs）在复杂音频场景下的推理能力落后于视觉语言模型（LVLMs），主要瓶颈是缺乏大规模、高质量的音频链式思考（CoT）数据来训练逐步推理能力。
@@ -359,10 +335,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了Algorithm 1伪代码和完整的超参数设置，足以复现核心方法。但缺乏具体代码实现和运行脚本。
 - 引用的开源项目：论文未提及直接依赖的开源项目代码。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -405,10 +377,6 @@ hiddenInHomeList: true
 - 复现材料：未给出详细的训练细节、配置、检查点或附录说明。
 - 论文中引用的开源项目：引用了Audio-Flamingo模型，并提到了其开源性质。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：如何系统地量化人类在多语言环境（特别是母语与第二语言）中处理混合通道（鸡尾酒会）语音的听觉注意力能力，并与当前先进的语音大模型（Speech LLMs）进行基准比较。
@@ -443,10 +411,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文给出了关键超参数（剪枝层选择、P=20%、保留的token数量），描述了剪枝算法的公式和步骤，但未提供完整的配置文件、脚本或检查点。
 - 论文中引用的开源项目：引用了VideoLLaMA2和video-SALMONN2作为基线模型，并链接了VideoLLaMA2的GitHub仓库（https://github.com/DAMO-NLP-SG/VideoLLaMA2/tree/audio_visual），但这是基线模型的仓库，而非FastAV的实现。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -499,10 +463,6 @@ hiddenInHomeList: true
     2.  转录模型：Whisper-Turbo [18]。
     3.  LLM：GPT-3.5-turbo [19] 和 GPT-4o [17] (用于智能体和答案后处理)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 用 5-8 句话总结这篇论文，必须覆盖：
@@ -550,10 +510,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了实验设置（模型版本、音频处理参数、解码方式、关键超参数S=10），这为复现提供了良好基础。但未提供具体的脚本、配置文件或结果检查点。
 - 论文中引用的开源项目：Whisper-large-v3 (语音识别模型), Qwen2-Audio (音频语言模型), Audio Flamingo 3 (音频语言模型), Sentence-BERT (句子嵌入模型), VisionZip (视觉token剪枝方法)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：音频-语言模型（ALMs）通常将长序列的音频编码与文本嵌入拼接后送入Transformer，导致注意力机制的计算复杂度随序列长度平方增长，造成巨大的计算开销，限制了模型在长音频任务中的效率。
@@ -593,10 +549,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：给出了部分训练细节（学习率、损失权重、训练轮数、硬件），但缺乏关键复现信息（如完整的超参数列表、优化器配置、预处理脚本）。
 - 论文中引用的开源项目：引用了CoTA数据集、Qwen2.5-Omni-7B、Qwen3-8B等。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -643,10 +595,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了详细的评估协议（两阶段测试、条件准确率）、基础数据集来源（ESC-50等）和答案提取方法（正则表达式）。但未提供具体的Prompt模板（除示例外）、正则表达式代码或超参数设置。
 - 论文中引用的开源项目：主要引用并基于以下开源项目/基准进行数据构建：ESC-50 [29], MMAU [20], Dynamic-SUPERB [22, 23], Qwen-Audio [1], Qwen2-Audio [2], SALMONN [3], LTU [4], Audio Flamingo 2/3 [11, 12] 等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：当前的音频问答基准（如Dynamic-SUPERB, MMAU）默认所有问题都有答案，忽略了现实世界中常见的、模型应拒绝回答的“不可回答”问题（如问题与音频不相关、选项缺失等），导致对模型可靠性的评估不全面。
@@ -680,10 +628,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文给出了TTS策略的文字描述和图表，但未提供完整的训练/评估配置文件、超参数列表或复现脚本。
 - 论文中引用的开源项目：论文引用了QwenLM、Flamingo等模型架构作为开源模型的基础。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -748,10 +692,6 @@ hiddenInHomeList: true
 - 复现材料：论文中提供了一些关键训练细节，如LoRA参数（α=32， rank=16）、训练轮数、GPU数量、使用的框架（verl， vLLM）。但完全依赖GPT-4o作为教师模型和评估工具，构成了复现的主要障碍。
 - 论文中引用的开源项目：verl [20]， vLLM [21]。
 - 总结：论文中未提及开源计划。其方法的可复现性高度依赖于对GPT-4o的访问权限。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

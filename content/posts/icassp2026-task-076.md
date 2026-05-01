@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文中部分训练细节（如优化器、学习率、batch size）未说明。消融实验的完整结果可在提供的GitHub链接中获取。
 - 论文中引用的开源项目：论文引用了多个基线模型的开源实现或相关工作，如DU-IN、EEGNet、Tent等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：sEEG信号固有的非平稳性导致训练和测试数据之间存在分布偏移（域偏移），严重影响了解码模型的鲁棒性和在临床BCI中的可靠性。

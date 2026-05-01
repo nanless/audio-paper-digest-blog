@@ -56,10 +56,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：论文依赖以下开源模型/工具：Descript Audio Codec (DAC) [14]， Whisper [9]。
 - 总结：论文代码开源，这是复现的重要基础。但完整的端到端复现可能需要研究者自行准备数据集并下载预训练的DAC和Whisper模型，并按照论文描述的策略进行训练。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有非侵入式语音质量评估（SQA）模型过度依赖语义预训练模型（如Wav2Vec， Whisper），这些模型在训练时追求对声学变异（如噪声、通道效应）的不变性，却忽略了人类感知质量所依赖的精细声学线索，导致“语义鸿沟”，影响模型在多样化场景下的泛化能力。
@@ -93,10 +89,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及提供在线演示。
 - 复现材料：论文在“5. EXAMPLE DATASET CONCEALMENT RESULTS”小节末尾提到“Full details are provided at https://github.com/NTIA/Dataset-Concealment”，表明GitHub仓库中包含了实现DSC所需的更完整的训练细节和配置。论文本身也阐述了关键的训练策略（如随机种子、Aligner冻结条件）。
 - 引用的开源项目：论文基于AlignNet架构（[3]）的Aligner模块，并使用了Wav2Vec2.0等模型。GitHub仓库中可能包含这些依赖项的引用或实现。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -143,10 +135,6 @@ hiddenInHomeList: true
     *   Speech Accessibility Project (SAP) 数据集 [21]
 *   总体开源情况：论文依赖于多个开源组件（模型、工具、数据集），但未将本研究特有的代码和产物开源。论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：预训练的Wav2vec 2.0模型在病理语音分析中表现出色，但其内部不同层和时间步的表示对预测具体临床描述符（如可懂度、声音刺耳等）的贡献尚不清楚。本文旨在系统研究是聚合不同层的信息（层聚合）还是聚合同一层内的时间信息（时间聚合）对回归不同的构音障碍语音描述符更有效。
@@ -191,10 +179,6 @@ hiddenInHomeList: true
 *   复现材料：论文提供了较详细的模型架构、训练策略（优化器、学习率、轮数、动态权重算法）和部分超参数设置，但缺失batch size、Dropout率、具体硬件等细节。
 *   论文中引用的开源项目/模型：主要依赖Wav2Vec2-Base模型（在LibriSpeech上预训练），并引用了NISQA语料库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：本文旨在解决无参考语音质量评估（Non-reference SQA）问题，即无需干净参考语音即可预测语音的感知质量（如MOS分数）。
@@ -235,10 +219,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了极其详细的数据生成规则、预训练和微调流程、关键超参数（学习率、epoch数、输入采样策略等），复现者可根据描述重建数据集并训练模型。论文的arXiv版本（https://doi.org/10.48550/arXiv.2506.00506）可能包含附录，但正文中未直接提供链接。
 - 论文中引用的开源项目：MS-SNSD（数据生成）、Lhotse（数据加载与处理）、ESC-50/MUSAN/AudioSet（噪声数据）、HuggingFace上的多个语音增强模型（用于生成退化数据）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -292,10 +272,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目/模型：主要依赖于预训练的SSL模型Wav2vec2-XLSR-2B（引用[7]），以及DNSMOS Pro（引用[16]）的架构作为SPM设计的参考。实现代码基于PyTorch（脚注中提到了torchaudio）。
 - 总结：论文提供了核心代码，具备基本的复现基础，但缺乏模型权重和更完备的复现材料，因此开源程度为中等。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有基于自监督学习（SSL）的语音质量评估（SQA）模型主要在16kHz语音上预训练，无法利用高采样率（24-48kHz）语音中的高频信息，导致对多速率语音的评估性能不佳。同时，公开的多速率MOS标注数据集规模较小，模型易过拟合且泛化能力弱。
@@ -342,10 +318,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了详细的模型配置表（表1）、关键超参数（学习率、训练轮数、切片长度等）和损失函数公式，但未提供训练日志、完整配置文件或硬件信息。
 - 论文中引用的开源项目：明确提到了 `SHEET [9]` 作为实验设置参考，以及 `BAM [22]`、`sed_scores_eval`、`replikant [26]` 等工具。核心依赖的预训练模型为 `WavLM [20]`。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有的自动语音质量评估模型通常只给出句子级别的质量分数，无法解释低分的原因，也无法定位具体的劣质片段。尝试预测帧级分数的模型，其预测值往往因缺乏局部监督而显得不稳定和不一致。
@@ -385,10 +357,6 @@ hiddenInHomeList: true
     1.  SHEET [16]：用于下载和处理MOS数据集的工具包。
     2.  AttentiveMOS [4]：本文实验所使用的基础模型。
 - 其他：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -52,10 +52,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了方法概述、算法步骤、实验设置（分类器结构、优化器参数）和详细结果，为复现提供了基础。但缺少关键超参数（如Wasserstein重心权重、ε和k的最终选择值）的搜索细节和具体数值。
 - 论文中引用的开源项目：提到了文献[11]中的Wasserstein重心计算算法。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：解决机器学习中训练数据（源域）与推理数据（目标域）存在分布偏移导致模型性能下降的问题。
@@ -93,10 +89,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：部分训练细节（如学习率、批大小、epoch数）已给出，但缺失硬件信息、完整的训练脚本和模型配置文件。
 - 论文中引用的开源项目：引用并使用了VideoCLIP-XL、Pengi、CLIP等预训练模型，以及FFMPEG用于数据处理。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

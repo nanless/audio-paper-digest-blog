@@ -55,10 +55,6 @@ hiddenInHomeList: true
     - MRX：作为改进的基础框架。
 - 总体评估：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有音乐源提取（MSE）方法面临源特征混淆和音色失配偏差的挑战，主要因为它们缺乏对音乐信号固有属性（如结构、音色）的有效建模。

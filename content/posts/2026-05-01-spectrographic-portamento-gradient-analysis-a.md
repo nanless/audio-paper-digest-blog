@@ -27,6 +27,7 @@ hiddenInHomeList: true
 
 这篇论文巧妙地将宏观的历史音乐表演风格变迁（滑音的衰减），解构为一个连续的、可物理测量的微观参数（频谱梯度），其“渐平”假说比“消失”说更具解释力。然而，其验证过程严重依赖研究者的主观听觉判断来校准谱图标记点，且将贝多芬两首奏鸣曲的开头作为全部分析材料，结论的普适性需要打上一个问号。
 
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -35,6 +36,7 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了详细的测量协议、校准参数（表1）和分析步骤（第IV、V节），构成了可复现的操作指南。
 - 论文中引用的开源项目：Sonic Visualizer（由Chris Cannam在Queen Mary University of London开发）、GIMP（GNU Image Manipulation Program）、Sibelius（乐谱软件，用于标注）。
+
 
 ### 📌 核心摘要
 

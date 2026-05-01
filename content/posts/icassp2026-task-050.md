@@ -59,10 +59,6 @@ hiddenInHomeList: true
     7.  Sentence-BERT [26]：用于编码ASR文本。
 - 总结：论文在实验复现性上部分依赖于已有的开源工具和基线模型，但未提供其自身贡献部分（LARS）的开源实现，这限制了论文的可复现性。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的DETR类视频片段检索（VMR）模型存在两个主要问题：（1）突变的视觉场景容易导致片段边界误检；（2）由于DETR的条件独立输出和sigmoid分数校准问题，模型输出的片段相关性分数不可靠，导致排序不佳。

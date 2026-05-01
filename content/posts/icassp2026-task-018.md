@@ -49,10 +49,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了部分关键架构和损失函数公式，但缺少完整的超参数配置、训练日志和检查点。
 - 论文中引用的开源项目：未提及引用了哪些特定的开源代码库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有多模态情感识别（MER）方法因无法显式分离真实世界中的复杂噪声（感知、结构、语义噪声）而性能下降，多依赖隐式的噪声适应策略。
@@ -102,10 +98,6 @@ hiddenInHomeList: true
     - 代码仓库（假设包含实现）。
     - 但未提供：训练日志、最终检查点、详细的环境配置文档。
 - 论文中引用的开源项目：论文在参考文献中引用了多个开源数据集（如IEMOCAP [17]， MELD [18]）和基线模型代码（如DialogueRNN [19]， DialogueGCN [21]等）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -7,15 +7,27 @@ categories: [icassp-2026]
 description: "语音合成 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 MELA-TTS: Joint Transformer-Diffusion Model with Representation Alignment for Speech Synthesis
+
+#语音合成 #扩散模型 #自回归模型 #端到端 #零样本
+
+✅ **7.0/10** | 前25% | #语音合成 | #扩散模型 | #自回归模型 #端到端
+
+学术质量 5.5/7 | 选题价值 1.0/2 | 复现加成 0.5 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Keyu An（Alibaba group）
 - 通讯作者：Zhiyu Zhang（National Mobile Communications Research Laboratory, Southeast University）
 - 作者列表：Keyu An⋆（Alibaba group）、Zhiyu Zhang⋆†（Alibaba group, National Mobile Communications Research Laboratory, Southeast University）、Changfeng Gao⋆（Alibaba group）、Yabin Li⋆（Alibaba group）、Zhendong Peng⋆（Alibaba group）、Haoxu Wang⋆（Alibaba group）、Zhihao Du⋆（Alibaba group）、Han Zhao⋆（Alibaba group）、Zhifu Gao⋆（Alibaba group）、Xiangang Li⋆（Alibaba group）
 - 注：⋆表示Alibaba group，†表示National Mobile Communications Research Laboratory, Southeast University。第一作者和通讯作者基于论文标题下方作者列表顺序及贡献说明（“The first two authors contribute equally to this work.”）判断。
+
 ### 💡 毒舌点评
 
 亮点在于用“表示对齐”模块巧妙地借用了预训练ASR编码器的语义知识来指导自回归模型生成更连贯的语义表示，确实显著加速了收敛并提升了内容一致性（WER大幅下降）。但其声称的“端到端”仍依赖预训练的说话人编码器和ASR编码器进行对齐，且声音克隆的说话人相似度（SS）在英文测试集上反而弱于其主要对比基线CosyVoice，暴露了该架构在全局声学上下文利用上的短板。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -25,14 +37,13 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了模型架构、训练数据（规模）、超参数（模型维度、层数、帧率、块大小、采样器设置等）、损失函数构成、评估指标和基线模型，提供了较高的可复现信息。
 - 论文中引用的开源项目：引用了Qwen2（文本嵌入）、SenseVoice-Large（ASR编码器）、3D-Speaker（说话人编码器）、HiFTNet（声码器）、Whisper/Paraformer（评估工具）等开源工作。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 本文提出了MELA-TTS，一种用于端到端文本到语音合成的联合Transformer-扩散模型框架。其旨在解决离散token方法存在的信息损失和多阶段流水线复杂性问题，以及现有端到端连续特征生成方法在内容一致性和训练收敛速度上的不足。方法的核心是自回归Transformer解码器生成连续向量作为条件，由扩散模型生成梅尔谱图块，并引入表示对齐模块，将Transformer解码器的输出与预训练ASR编码器的语义表示进行对齐，以增强语义一致性。与已往方法相比，新在：1）提出无需离散化的端到端连续特征生成框架；2）提出表示对齐模块作为核心创新，以预训练ASR语义特征作为对齐目标，而非梅尔谱图本身；3）统一支持流式和非流式合成。主要实验结果显示：在LibriTTS消融实验中，表示对齐将WER从6.3降至5.3，并加速训练超过3.3倍；在17万小时大规模数据上，MELA-TTS在测试集test-zh上的CER（0.9）优于使用相同数据的CosyVoice 3.0（1.3），在test-en上的WER（2.4）与DiTAR（1.7）可比，但说话人相似度（SS1/SS2）在英文测试集上低于CosyVoice系列。实际意义是为TTS领域提供了一种有竞争力的、基于连续特征的端到端新范式，特别在内容一致性和训练效率上有所提升。主要局限性是声音克隆的说话人相似度仍有优化空间，作者指出这可能源于扩散模块仅利用局部上下文，无法像多阶段系统那样访问全部历史token。
 
 #
+
 ### 🏗️ 模型架构
 
 MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1所示，包含三个核心组件：自回归Transformer解码器、扩散模块和表示对齐模块。
@@ -50,17 +61,19 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 3.  组件交互：Transformer解码器生成语义和韵律信息的骨架（`h`），RAM在训练时强制该骨架富含语义信息，扩散模型则在该骨架的指导下，负责填充具体的声学细节（梅尔谱图）。这种设计实现了语义建模和声学建模的解耦与协作。
 4.  流式合成：如图3所示，通过交错文本token和梅尔谱图块（比例n:m=4:3）的训练方式，使单一模型同时支持流式和离流式合成。生成终止由二分类模块控制。
 
-![图1: 联合Transformer和扩散架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461891-0.png)
+![图1: 联合Transformer和扩散架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461891-0.png)
 
-![图2: 左侧为扩散模块条件示意；右侧为表示对齐模块](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461891-1.png)
+![图2: 左侧为扩散模块条件示意；右侧为表示对齐模块](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461891-1.png)
 
-![图3: 流式合成的自回归语言模型示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461891-2.png)
+![图3: 流式合成的自回归语言模型示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461891-2.png)
+
 ### 💡 核心创新点
 
 1.  端到端的连续特征生成框架：摒弃了离散token的量化步骤和多阶段解码流水线，直接从文本自回归生成梅尔谱图块。这消除了离散化带来的信息损失和系统复杂性，是范式上的一个重要探索方向。
 2.  表示对齐模块（RAM）：这是解决端到端连续生成两大痛点（内容一致性差、训练收敛慢）的关键。创新性地选择对齐目标为预训练ASR编码器的输出（语义表示），而非梅尔谱图本身。实验证明，这一选择至关重要，直接对齐梅尔谱图反而会损害性能。该模块有效引导模型学习语义解耦的表示，加速了收敛。
 3.  统一的流式/非流式训练与推理：通过交错的训练策略，同一个模型无需修改即可处理完整的离线输入或流式输入，提高了部署灵活性。
 4.  充分利用预训练大模型：将强大的文本大模型（Qwen2）作为Transformer解码器的初始化，有效利用了其丰富的语言知识，为生成高质量语音提供了基础。
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -88,6 +101,7 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
     - 支持无分类器指导（CFG）以提升生成质量。
     - 流式合成中，文本和梅尔谱图块交错输入，生成由停止模块终结。
 - 正则化技巧：论文未明确提及Dropout、权重衰减等具体设置。
+
 ### 📊 实验结果
 
 论文在消融实验（LibriTTS）和主实验（170k小时数据）上，评估了内容一致性（WER/CER）和说话人相似度（SS）。
@@ -110,7 +124,7 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 4.  结合两者（Exp 4）达到最优离线性能，显示协同效应。
 5.  流式模式（Exp 6）与离线模式（Exp 4）性能相当，证明模型鲁棒性。
 
-![图4: 有无表示对齐训练过程中的WER对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461891-3.png)
+![图4: 有无表示对齐训练过程中的WER对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461891-3.png)
 
 表2：在170k小时数据上的零样本TTS性能对比（在seed-tts-eval上评估）
 | 模型 | test-zh | test-en | test-hard |
@@ -137,7 +151,8 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 4.  流式性能：流式模式与离流式模式在各项指标上几乎无差别。
 5.  主观评价（图5）：MELA-TTS在A/B测试中，以66.7%的胜率优于CosyVoice2，以57.3%的胜率优于CosyVoice3。
 
-![图5: MELA-TTS与CosyVoice的主观偏好对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461891-4.png)
+![图5: MELA-TTS与CosyVoice的主观偏好对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461891-4.png)
+
 ### ⚖️ 评分理由
 
 - 学术质量（5.5/7）：论文技术路线正确，实验设计全面（消融实验、大规模数据验证、主观客观评测），数据支撑有力。核心创新点“表示对齐模块”设计合理且效果显著。但整体创新属于在连续生成范式上的重要改进，而非颠覆性创新。在说话人相似度上的不足被诚实分析，但也暴露了当前架构的局限。
@@ -145,3 +160,8 @@ MELA-TTS是一个端到端的文本到语音合成框架，整体架构如图1�
 - 开源与复现加成（0.5/1）：论文详细披露了模型配置、数据规模、损失函数、推理设置等关键信息，为复现提供了良好基础。尽管未提及代码和模型公开，但信息的透明度值得肯定。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

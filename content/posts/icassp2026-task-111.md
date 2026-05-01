@@ -47,10 +47,6 @@ hiddenInHomeList: true
 - 复现材料：论文中提到了一些关键训练细节（数据集分割、CQT参数、优化器），但缺少batch size、具体epoch数、硬件信息等关键复现参数。
 - 论文中引用的开源项目：提到了mir_eval库用于评估。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 该论文要解决自动钢琴转录中传统帧级二分类交叉熵（BCE）损失对时间错位过于敏感、导致模型需过度拟合微小对齐误差的问题。

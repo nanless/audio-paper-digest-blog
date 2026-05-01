@@ -53,10 +53,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了非常详细的训练配置（优化器、学习率、warmup、硬件、训练轮次、batch size等）和评估细节（解码策略、beam size、置信区间计算），有助于复现。
 - 论文中引用的开源项目：论文主要依赖并微调了公开模型 Qwen2-Audio-7B-Instruct。所用数据集（SLURP, ITALIC, Speech-MASSIVE, MASSIVE）均为开源数据集。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：研究在语音-标签配对数据稀缺的现实约束下，如何高效微调大型音频语言模型（LALMs）以完成口语理解（SLU）任务。
@@ -109,10 +105,6 @@ hiddenInHomeList: true
 *   Demo：未提及。
 *   复现材料：论文详细描述了基于Slamkit框架的实验设置、模型架构、数据处理和超参数，为复现提供了路线图。
 *   依赖的开源项目/模型：明确使用了Slamkit [1]、Sylber [8]、Hubert [5]、WavLM [6]、OPT [18]、Qwen2.5 [19]、SpeechBrain [17]、Whisper [23]、Llama-3.2 [24] 以及Conditional Flow-Matching [14]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

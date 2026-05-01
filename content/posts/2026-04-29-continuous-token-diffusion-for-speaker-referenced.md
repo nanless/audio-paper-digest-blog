@@ -7,14 +7,26 @@ categories: [icassp-2026]
 description: "语音合成 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Continuous-Token Diffusion for Speaker-Referenced TTS in Multimodal LLMs
+
+#语音合成 #多模态模型 #扩散模型 #自回归模型
+
+🔥 **8.0/10** | 前10% | #语音合成 | #扩散模型 | #多模态模型 #自回归模型
+
+学术质量 6.5/7 | 选题价值 1.8/2 | 复现加成 -0.3 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Xinlu He（Worcester Polytechnic Institute， Amazon AGI）
 - 通讯作者：未说明
 - 作者列表：Xinlu He*（Worcester Polytechnic Institute， Amazon AGI）， Swayambhu Nath Ray（Amazon AGI）， Harish Mallidi（Amazon AGI）， Jia-Hong Huang（Amazon AGI）， Ashwin Bellur（Amazon AGI）， Chander Chandak（Amazon AGI）， M. Maruf（Amazon AGI）， Venkatesh Ravichandran（Amazon AGI）
+
 ### 💡 毒舌点评
 
 亮点在于其高效的双头架构设计和两阶段训练策略，成功将连续token扩散“塞进”了自回归框架并取得了SOTA的自回归TTS结果，参数效率极高。短板则是开源精神的缺失，在声称“仅用于研究”的同时，却未提供任何模型、代码或数据，让“复现”成了镜花水月。
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -30,9 +42,7 @@ hiddenInHomeList: true
     - 扩散模型基础：引用了DDPM [7]和改进DDPM [23]。
 - 总体开源计划：论文中未提及开源计划。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：当前基于多模态大语言模型（MLLM）的语音合成（TTS）方法依赖离散语音token，会丢失连续语音信号中宝贵的细粒度声学细节，限制合成自然度与保真度。
@@ -48,6 +58,7 @@ hiddenInHomeList: true
 | Proposed Method | AR | 连续 | .2B | 1.95 | 0.54 | 4.00 | 3.77 |
 5. 实际意义：证明了将连续语音生成与自回归建模相结合的有效性，为构建支持语音、文本等多任务的统一MLLM基础模型提供了一条可行路径。
 6. 主要局限性：1）方法依赖特定的预训练VAE（用于声学表示）和自回归LLM骨干（OPT-125M）；2）实验仅在英语有声书数据（LibriVox/LibriSpeech）上验证，对其他语言、说话风格的泛化性未测试；3）论文未提供代码、模型等开源资源，限制了技术的快速复现与验证。
+
 ### 🏗️ 模型架构
 
 模型整体是一个双头多模态自回归大语言模型（Dual-Head Multimodal Autoregressive LLM），其核心是在标准自回归LLM骨干上并行添加两个解码头，分别用于语言控制和连续语音生成。
@@ -72,6 +83,7 @@ hiddenInHomeList: true
 2.  双头设计：动机是保持LLM的多任务能力。LM头负责序列级控制（开始/结束），扩散头负责帧级生成，两者在同一骨干上协同工作，构成统一框架。
 3.  逐帧自回归扩散：区别于先前使用中间语义token或多帧块的方法，本文坚持严格逐帧顺序，以保证生成的因果性和稳定性。
 4.  控制标记`<cont_speech_gen>`：虽在推理时不输出，但在训练时提供密集监督信号，鼓励模型持续生成语音帧，减少过早结束的问题。
+
 ### 💡 核心创新点
 
 1.  在自回归MLLM中集成逐帧连续token扩散头：
@@ -93,6 +105,7 @@ hiddenInHomeList: true
     *   局限：联合优化LLM和扩散头时，LLM参数更新导致其输出分布漂移，使得扩散头面对非平稳输入，训练不稳定。
     *   如何起作用：第一阶段联合训练；第二阶段冻结整个LLM侧（骨干+LM头+投影层），仅训练扩散头。这为扩散头提供了一个固定的输入分布。
     *   收益：两阶段训练是性能飞跃的关键。对比实验显示，它带来了46%的相对WER降低（从3.61%到1.95%），并大幅提升说话人相似度和自然度。
+
 ### 🔬 细节详述
 
 - 训练数据：使用LibriVox的一个50k小时子集，内容为英语有声书，包含数千名说话人。评估集为LibriSpeech（PC）test-clean。
@@ -118,6 +131,7 @@ hiddenInHomeList: true
     - 无classifier-free guidance（CFG=1）。
     - 推理时间因子（RTF）：在AWS g16实例（NVIDIA L4， batch size 1）上为0.29。生成10秒语音约需0.58 TFLOPs。
 - 正则化/稳定技巧：两阶段训练是核心的稳定化技巧。扩散头MLP使用层归一化和自适应层归一化调制，有助于稳定训练。消融实验显示适当的掩码率（30%）也能提升稳定性。
+
 ### 📊 实验结果
 
 主要基准与指标：
@@ -129,7 +143,7 @@ hiddenInHomeList: true
     - 主观评价：MOS（5位评估者打分）。
 
 主要对比结果：
-![Table 1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461916-4.png)
+![Table 1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461916-4.png)
 （注：图3即论文中的表1）
 如表1所示，本文提出的方法在各项指标上均超越或达到了报告的对比方法：
 - 相比离散token基线VALL-E，WER从6.11%大幅降低至1.95%，说话人相似度从0.47提升至0.54。
@@ -177,8 +191,14 @@ hiddenInHomeList: true
 | 0.9 | 100 | 1.95 | 0.54 | 0.50 | 4.00 |
 | 0.8 | 100 | 16.11 | 0.45 | 0.41 | 3.01 |
 | 0.8 | 80 | 19.88 | 0.44 | 0.39 | 4.07 |
+
 ### ⚖️ 评分理由
 
 - 学术质量（6.5/7）：创新性体现在架构（双头、连续扩散）和训练策略（掩码、两阶段）的巧妙结合，解决了MLLM-TTS中的具体技术难题。技术实现描述清晰，消融实验充分证明了各组件的贡献。实验结果在报告的自回归基线中达到SOTA，数值可信。扣分主要在于：1）缺乏与所有对比方法在相同训练数据和评估条件下的完全重现实验；2）论文未讨论其方法在多说话人、跨语言或对抗噪声等更复杂场景下的表现与局限。
 - 选题价值（1.8/2）：课题直指MLLM统一语音生成的核心瓶颈（离散化损失），并提出了一个优雅的解决方案。将TTS能力深度融入LLM框架，符合当前构建通用多模态模型的趋势，对学术界和工业界（如对话系统、内容创作）均有明确价值。
 - 开源与复现加成（-0.3/1）：论文提供了极为详细的架构和超参数描述，理论上可复现。然而，论文明确表示模型仅用于研究且未提供任何开源材料（代码、权重、数据），这构成了复现的重大障碍，与开源社区的期望相悖。因此，在“开源与复现”维度给予负分。
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

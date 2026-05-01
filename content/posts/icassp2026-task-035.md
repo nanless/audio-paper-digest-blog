@@ -51,10 +51,6 @@ hiddenInHomeList: true
 - 复现材料：提供了非常详细的训练超参数（学习率、batch size等）、数据集划分比例、以及依赖的骨干模型名称（wav2vec2-large），具有较高的可复现性。关键训练配置在论文中有说明。
 - 引用的开源项目：模型部分引用了大量开源歌唱生成系统（如NNSVS, Diffsinger, VISinger等），评估基线引用了UTMOS，DNSMOS， SHEET-ssqa等开源或公开的模型。音频处理依赖了MelBand Roformer进行人声分离。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对歌唱语音生成（包括合成、转换、重合成）领域缺乏高效、可靠、统一的自动质量评估方法的问题，提出了一个全面的解决方案：SingMOS-Pro数据集及其基准测试。该数据集的核心是构建了一个包含7,981个歌唱片段（来自12个数据集的41个模型）的大规模语料库，这些片段由经验丰富的标注者在三个维度（整体质量、歌词清晰度、旋律自然性）上进行了超过44,000次评分。与已有工作相比，其新在于：1) 首次提供多任务（SVS/SVC/SVR）、多语言（中文/日文）、多维度（整体/歌词/旋律）的细粒度歌唱MOS数据；2) 系统性地将语音质量评估中常用的自监督学习（SSL）模型（如wav2vec2）应用于歌唱任务，并探索了如何有效利用来自不同标注标准（批次）的训练数据，提出了域标识（Domain ID）和多数据集微调（MDF）两种策略。主要实验结果表明：1) 直接将语音MOS模型（UTMOS, DNSMOS）用于歌唱评估效果不佳，证明了领域差距；2) 在统一的16kHz音频上，采用SSL骨干网络并微调后，系统级加权平均SRCC可达0.77（整体MOS预测），优于仅用预训练版本SingMOS训练的模型（SRCC 0.69），表明更广泛的数据能缓解过拟合；3) 融合音高直方图等特征可带来轻微但有限的性能提升。该工作的实际意义是为歌唱生成技术研究提供了一个标准化的评测平台和数据资源。主要局限性是自动评估模型在旋律、歌词等细粒度维度的预测能力仍有待加强，且新提出的评估模型在创新性上有所不足。
@@ -104,10 +100,6 @@ hiddenInHomeList: true
 - Demo：提供在线演示网站链接：https://stylepitcher.github.io/
 - 复现材料：论文提供了详细的模型架构、训练超参数、数据处理步骤和评估方法，复现信息较为充分。
 - 论文中引用的开源项目：RMVPE（用于F0估计）、Basic Pitch（用于MIDI提取）、torchdiffeq（用于ODE求解）、FlashAttention-2（用于加速训练）、librosa（用于评估指标计算）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -159,10 +151,6 @@ hiddenInHomeList: true
 - 复现材料：论文中给出了主要的训练设置（GPU型号、数量、优化器、学习率、batch size、训练步数、数据比例等），但模型具体配置（如各变体的确切层数、宽度表）和部分训练细节（如学习率调度、精确的推理步数）未完全公开。
 - 论文中引用的开源项目：DiffSinger、StyleSinger、TCSinger、M4Singer、HiFi-GAN、DPM-Solver。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 这篇论文旨在解决歌唱语音合成（SVS）领域面临的训练数据稀缺和对齐标签依赖两大挑战。
@@ -197,10 +185,6 @@ hiddenInHomeList: true
 - Demo：提供了项目页面链接，可能包含音频示例demo。
 - 复现材料：论文中提及“权重调度和归一化细节在发布代码中指定”，表明部分训练细节需要在代码中查找。未提供详细的超参数列表、训练日志等。
 - 论文中引用的开源项目：未明确列出依赖的第三方开源项目，但技术栈隐含了使用SIREN、DDSP等已有概念或库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -247,10 +231,6 @@ hiddenInHomeList: true
 Demo：未提及
 复现材料：论文中未提及
 论文中引用的开源项目：未说明
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

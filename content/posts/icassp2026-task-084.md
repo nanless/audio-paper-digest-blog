@@ -50,10 +50,6 @@ hiddenInHomeList: true
 - 复现材料：论文中未提供详细的训练超参数、配置文件、检查点或更深入的附录说明。
 - 引用的开源项目：ColQwen-Omni (Hugging Face), ColBERT (GitHub), DocLayout-YOLO (GitHub), Qwen2.5-Omni (Hugging Face), Doubao TTS API, Tesseract OCR。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有基于视觉文档的知识问答（RAG）系统通常需要将语音查询通过ASR转换为文本，并将文档内容通过OCR提取文本，这增加了延迟和潜在的错误传播，且无法直接处理图表等非文本视觉元素。
@@ -91,10 +87,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：论文提供了一定的训练细节（如数据集、LoRA秩参数、分层学习率公式中的λ值），但缺失关键超参数（如基础学习率、batch size）和训练硬件信息，不足以完全复现实验。
 - 论文中引用的开源项目：论文主要引用了LLaMA-Omni的代码/架构，以及LLaMA系列模型、LoRA方法和Whisper编码器（作为语音编码器被引用）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -144,10 +136,6 @@ hiddenInHomeList: true
 - Demo：未提及。
 - 复现材料：提供了较为详细的实验配置（超参数搜索范围、训练硬件、GRPO具体参数如β和G），但未提供最终选定的完整配置和检查点。
 - 论文中引用的开源项目：引用了Granite Speech模型 [4] 和 Granite 3.0语言模型 [27] 作为基础，使用了AdamW优化器。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

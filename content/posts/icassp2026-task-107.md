@@ -48,10 +48,6 @@ hiddenInHomeList: true
 - 复现材料：论文详细描述了实验设置（数据集划分、重采样参数、网络结构、训练超参数等），并提供了参考代码链接，具备较好的复现基础。
 - 论文中引用的开源项目：TorchAudio（用于实现常规重采样）， BandSplitRNN-PyTorch（BSRNN实现）， Music-Source-Separation-Training（多个预训练模型）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：基于DNN的音频源分离模型通常在单一采样频率下训练。当处理不同采样率的输入时，常用重采样到训练采样率的方法，但这会导致性能下降，尤其是当输入采样率低于训练采样率时。
@@ -89,10 +85,6 @@ hiddenInHomeList: true
 - Demo：提供了在线音频示例页面：`listeningtech.github.io/cGANIR/`。
 - 复现材料：给出了部分训练细节（优化器、学习率、epoch数、batch size、损失权重α），但缺失硬件、训练时长、详细模型配置等关键信息。
 - 引用的开源项目：使用了`pyroomacoustics`进行房间模拟。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

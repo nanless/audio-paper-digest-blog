@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频深度伪造检测 | 8.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Localizing Speech Deepfakes Beyond Transitions via Segment-Aware Learning
+
+#音频深度伪造检测 #数据增强 #自监督学习 #语音安全 #鲁棒性
+
+🔥 **8.0/10** | 前25% | #音频深度伪造检测 | #数据增强 | #自监督学习 #语音安全
+
+学术质量 7.5/7 | 选题价值 0.5/2 | 复现加成 0.0 | 置信度 高
+
+
 ### 👥 作者与机构
 
 - 第一作者：Yuchen Mao
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Yuchen Mao (Auditory Cognition and Computational Acoustics Lab, MoE Key Lab of Artificial Intelligence, AI Institute, School of Computer Science, Shanghai Jiao Tong University), Wen Huang (同Yuchen Mao的单位), Yanmin Qian (上海交通大学计算机科学学院 听觉认知与��算声学实验室，教育部人工智能重点实验室，AI学院； VUI Labs)
 
 #
+
 ### 💡 毒舌点评
 
 亮点：论文精准地指出了现有方法过度依赖“过渡区域伪影”的“捷径学习”短板，并提出了简洁有效的“段感知学习”框架，通过位置监督和跨段混合，强制模型理解伪造内容本身，显著提升了在最具挑战性的“中间段”的检测能力和跨数据集泛化性能。短板：尽管实验充分，但对模型容量（如Conformer块的具体参数）、训练硬件和时长的描述不够详尽，且未公开模型权重，这为学术界和工业界的复现与直接应用设置了一定门槛。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中提供了代码仓库链接：https://github.com/SentryMao/SAL。
@@ -29,9 +41,7 @@ hiddenInHomeList: true
 - 引用的开源项目：论文依赖并引用了多个开源预训练模型，包括：Wav2Vec2-XLSR ([19])， WavLM ([20])；以及数据增强方法RawBoost ([22])。
 - 总结：论文提供了可运行的代码仓库，但完整的模型复现仍需读者根据文中描述自行配置环境和训练，权重未公开。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有针对部分语音伪造的检测方法过度依赖过渡区域的伪影，而忽视了伪造内容本身的特征，导致在伪造内容中间区域检测性能差，且泛化能力受限。
@@ -42,6 +52,7 @@ hiddenInHomeList: true
 6. 主要局限性：论文未提供预训练模型权重；部分训练细节（如具体GPU型号、总训练时长）未说明；泛化性验证虽包含跨数据集，但测试场景（语言、伪造方法）仍有限。
 
 #
+
 ### 🏗️ 模型架构
 
 本文提出的段感知学习（SAL）框架是在标准帧级检测（Frame-Level Detection, FLD）流水线基础上的增强，其核心架构图如图2所示。
@@ -65,6 +76,7 @@ hiddenInHomeList: true
 - 双头预测：通过引入辅助的段位置预测任务，强制主干网络在学习真/假分类的同时，额外感知每帧在连续同类片段中的位置，从而促使模型理解片段内部结构，摆脱对过渡区域的单一依赖。
 
 #
+
 ### 💡 核心创新点
 
 1.  问题重新定义与洞察：明确指出并验证了现有方法（包括强大的过渡感知方法）存在“捷径学习”，即过度依赖过渡伪影而忽略伪造内容本身。这为改进指明了方向。
@@ -73,6 +85,7 @@ hiddenInHomeList: true
 4.  系统性的实验验证与分析：不仅在多个数据集（PS， HAD， LPS）上进行了全面的性能对比和消融研究，还通过Grad-CAM可视化（图1）和位置误差分析（图3）直观、定量地证明了SAL模型确实将注意力从过渡区域扩展到了整个伪造片段内部。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -100,6 +113,7 @@ hiddenInHomeList: true
 - 正则化技巧：应用了RawBoost数据增强（模拟信道、背景等扰动）和CSM（增强样本多样性）。
 
 #
+
 ### 📊 实验结果
 
 主要性能对比：
@@ -154,6 +168,7 @@ hiddenInHomeList: true
 结论：中间位置（Middle）的伪造片段占比最高（62.5%）。SAL模型在此类最具挑战性的片段上，相比基线FLD的误差率大幅下降，验证了其核心优势。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7
@@ -170,3 +185,8 @@ hiddenInHomeList: true
     - 但未公开模型权重，且部分训练细节（如硬件）未说明，未能提供超越“仅提供代码”的额外复现便利，因此加成为0。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

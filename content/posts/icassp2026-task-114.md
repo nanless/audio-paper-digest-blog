@@ -72,10 +72,6 @@ hiddenInHomeList: true
     - sed_eval：用于计算评估指标。
     - URBAN-SED, UrbanSound8K：用于构建实验数据集。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：传统声事件检测（SED）需对所有预定义类别进行标签，而目标声检测（TSD）旨在根据一个参考音频片段，在更长且可能嘈杂的混合音频中检测并定位特定目标声音，这更符合人类选择性听觉注意的特性，也更利于处理未见类别和减少标注依赖。
@@ -127,10 +123,6 @@ hiddenInHomeList: true
 - 复现材料：论文中详细说明了特征维度、图构建参数、优化器、学习率、训练轮数等关键训练细节。未提及提供配置文件、检查点或详细的复现文档。
 - 论文中引用的开源项目：主要依赖的预训练模型包括VGGish（用于音频特征提取）和S3D（用于视频特征提取），具体实现可能基于公开库。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：多模态声学事件分类中，音频和视觉信号难以在时间上精确对齐，且易受跨模态噪声干扰，导致识别性能下降。
@@ -181,10 +173,6 @@ hiddenInHomeList: true
     - 评估指标：PSDS [39]。
     - 基线训练策略：“mixed”训练策略 [35]。
     - 双曲几何实现相关：论文引用了Lorentz模型 [32] 和 Hyperbolic Entailment Cones [11] 的相关工作作为理论基础。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -247,10 +235,6 @@ hiddenInHomeList: true
 - 复现材料：提供了部分训练细节：输入尺寸（224x224，16帧；音频128x469）、优化器（未说明）、学习率（1e-3）、Batch size（16）、训练轮数（100 epochs with early stopping patience 50）、损失权重（λconf=1, λcls=1, λreg=5）、训练硬件（NVIDIA A6000）。但未提供完整的配置文件、检查点或更详细的附录。
 - 引用的开源项目：论文未明确列出依赖的外部开源工具或模型，但编码器部分使用了MobileNetV3等标准架构。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：论文研究音频-视觉监控下的怠速车辆检测（IVD）任务，即结合视频和多通道音频，定位并分类车辆状态为移动、怠速或熄火。主要挑战包括：视觉与音频模态间的异质性（空间分布不匹配）、车辆尺度变化大、以及联合检测头的梯度冲突。
@@ -291,10 +275,6 @@ hiddenInHomeList: true
 - 复现材料：论文提供了部分训练细节（优化器、学习率、批大小、epoch数、硬件、Dropout率、关键自蒸馏超参数）。
 - 论文中引用的开源项目：未明确列出依赖的开源工具或模型，但特征提取使用了I3D/CLIP (视觉) 和 VGGish (音频)。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对弱监督下大规模在线音视频敏感内容（如暴力、色情）检测的挑战，提出了动态瓶颈融合Transformer（DBFT）及其自蒸馏变体DBFT-SD。要解决的核心问题是现有方法中多模态信息融合效率低、弱监督标签噪声大以及模态间不平衡导致性能受限。方法核心是：1）在DBFT中，设计了包含动态路由的混合头部注意力机制和瓶颈融合Transformer，实现自适应的模态内与模态间特征聚合；2）在DBFT-SD中，引入一个仅使用视觉特征的辅助分支，通过基于余弦调度器的权重移动平均自蒸馏，将视觉分支的稳定知识迁移至多模态分支，并结合基于马氏距离的对比学习来增强关键帧的判别力。与已有方法相比，新在提出了整合动态注意力、瓶颈融合和自蒸馏的端到端多模态检测框架，能更好地处理噪声和模态不平衡。主要实验在XD-Violence数据集上进行，DBFT-SD达到了85.9%的平均精度（AP），超越了之前最优的多模态方法BN-WVAD（85.26% AP）和视觉方法VadCLIP（84.51% AP）。实际意义在于为社交媒体、视频平台的内容安全审核提供了更高效准确的自动化工具。主要局限性是对比实验仅在一个标准数据集上进行，缺乏更多样化或更具挑战性场景的验证。
@@ -326,10 +306,6 @@ hiddenInHomeList: true
 -   Demo：未提及在线演示。
 -   复现材料：论文详细说明了模拟数据生成流程、模型架构（AST）、训练超参数（Adam, lr=0.001, epochs=20）和评估方法（五折交叉验证），提供了较高的复现信息。
 -   论文中引用的开源项目：引用了AST（Audio Spectrogram Transformer）模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -368,10 +344,6 @@ hiddenInHomeList: true
 *   Demo：未提供在线演示。
 *   复现材料：论文提供了详细的训练协议（学习率、优化器、调度、损失函数）、模型架构参数（Transformer层�数、头数等）、数据预处理步骤和评估指标，复现信息较为充分。
 *   引用的开源项目：论文未明确列出依赖的开源工具/模型。但根据方法描述，实现必然依赖PyTorch、STFT计算工具、FFmpeg（用于音视频同步）等常见库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -421,10 +393,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：主要依赖EAT (Efficient Audio Transformer) 项目作为框架基础。
 - 总结：论文中未提及开源计划，复现信息不够充分。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：异常声音检测（ASD）常被构建为机器属性分类任务，但获取所有机器的属性标签成本高昂且不切实际。本文旨在解决属性标签缺失这一挑战。
@@ -468,10 +436,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了详细的训练设置（优化器、学习率、批大小、轮数、调度策略）、模型消融实验结果、评估指标计算方法。代码仓库的提供使得完全复现成为可能。
 - 引用的开源项目：使用了Captum库进行模型解释。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：基于深度学习的声学异常检测模型（如自编码器）性能虽强，但作为“黑箱”缺乏可解释性，可能依赖虚假特征，在工业安全关键场景中难以建立用户信任。
@@ -512,10 +476,6 @@ hiddenInHomeList: true
     - SI-SDR度量 [26]：Erdogan et al., 2019.
 - 整体开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：声音事件检测（SED）在智能家居等场景的应用需要持续录音，这会导致说话人身份、键盘敲击声等隐私信息泄露。现有方法多集中于分离并处理语音，不够灵活，无法保护非语音的隐私信息，且混淆机制依赖手动设计。
@@ -549,10 +509,6 @@ hiddenInHomeList: true
 *   Demo：未提及在线演示。
 *   复现材料：提供了较为详细的训练超参数（如学习率、batch size、epoch数、损失权重等）和模型结构描述（如Transformer块数、LoRA配置），但未提供训练脚本或配置文件。
 *   引用的开源项目：论文中引用的开源项目包括：PaSST [21]（作为编码器）、以及用于特征提取和上采样的方法参考自[16]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -598,10 +554,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及在线演示。
 - 复现材料：论文详细说明了模型架构、损失函数、训练设置（优化器、学习率、调度、批次大小）、评估指标和关键超参数（如轨道数N，温度τ，γ值），提供了较好的复现基础。
 - 引用的开源项目：论文未提及依赖的特定开源工具或模型库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -649,10 +601,6 @@ hiddenInHomeList: true
     4.  Conformer：用于序列预测任务的编码器。
     5.  GPT-4o：用于辅助数据集标注的LLM。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决的问题：现有音频理解研究大多局限于短片段和孤立事件，缺乏对真实世界长音频中具有层次化（活动-子活动-事件）和序列化结构的复杂人类活动的理解。
@@ -693,10 +641,6 @@ hiddenInHomeList: true
 - 复现材料：论文给出了一些训练细节（如GPU型号、epoch数、音频参数），但缺失生成模型的关键超参数（如学习率、`Steptotal`）和过滤器训练的完整细节。
 - 论文中引用的开源项目：TangoFlux [18]、BEATs [4]、LoRA [6]、ArcFace [26]、SpecAug [27]。
 - 总体开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -751,10 +695,6 @@ hiddenInHomeList: true
     - TMixup的灵感来源：[14] Choi & Choi, “Noisy-ARCMix”
 - 总体开源状态：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 本文针对无监督异常声音检测（ASD）中生成模型难以完全捕捉正常声音复杂分布的问题，提出了一个名为TLDiffGAN的新框架。该框架包含两个互补分支：一个分支将潜在扩散模型（LDM）整合到GAN的生成器中（称为LDGAN），通过对抗训练提高生成质量和训练稳定性；另一个分支利用预训练的音频模型编码器直接从原始波形提取特征，以弥补Mel频谱图可能丢失的信息。此外，论文引入了一种自适应时间混合（TMixup）增强技术，通过注意力机制增强模型对局部时间模式的敏感性。在DCASE 2020 Challenge Task 2数据集上的大量实验表明，TLDiffGAN在平均AUC（88.60%）和pAUC（74.35%）上均优于其他主流生成模型（如AEGAN-AD、ASD-Diffusion），并具备优秀的异常时频定位能力。该工作的实际意义在于提升了工业设备声音监控中异常检测的性能和可解释性。其主要局限性在于评估完全基于单个数据集，且依赖多个经典的异常检测算法进行最终决策。
@@ -786,10 +726,6 @@ hiddenInHomeList: true
 - ���现材料：给出了主要超参数（学习率、正则化权重、EMA参数、对比损失参数等）和训练epoch数，但缺少batch size、完整优化器配置、数据预处理细节、检查点策略等。
 - 论文中引用的开源项目：主要基于BEATs [6]模型。
 - 总结：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -841,10 +777,6 @@ hiddenInHomeList: true
 - 复现材料：提供了代码仓库，但论文正文未详细说明复现所需的全部配置文件、超参数设置脚本或硬件要求。训练细节（如学习率、epoch）在论文中给出。
 - 论文中引用的开源项目：引用了AudioMAE [11]（其预训练检查点用作初始化），以及Kaldi-compatible fbank特征计算工具。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题： 音频事件识别（AER）任务中，如何进一步提升模型泛化能力，尤其是在标注数据有限（如20k样本）或半监督场景下。
@@ -893,10 +825,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：引用了Swin Transformer作为骨干网络（来自ICCV 2021），以及MoE路由策略参考了WACV 2025的工作（Domain generalization using large pretrained models with mixture-of-adapters）。
 - 论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：现有的声音事件定位与检测（SELD）微调方法大多依赖单一类型（如MLP）的适配器，这限制了模型捕捉复杂声学场景中多样时频模式的能力，导致泛化性能不佳。
@@ -944,10 +872,6 @@ hiddenInHomeList: true
     - 近似最近邻搜索：FAISS [25], HNSW [26]
     - 理论支撑：Johnson-Lindenstrauss随机投影 [27]
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决什么问题：在工业和监控场景的声音事件检测（SED）中，数据质量差（标签噪声、边界模糊）和标注预算有限是主要瓶颈。如何在模型（预训练编码器）冻结的条件下，低成本地筛选有害训练数据，并高效选择最值得标注的新数据，是论文要解决的两个核心问题。
@@ -985,10 +909,6 @@ hiddenInHomeList: true
 - Demo：未提及在线演示。
 - 复现材料：未给出详细训练细节、配置或检查点。
 - 论文中引用的开源项目：未提及。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -1038,10 +958,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及在线演示。
 - 复现材料：论文提供了详细的实验设置（优化器、学习率、LoRA参数等），但未提供预训练模型的具体版本、数据预处理脚本或训练配置文件。
 - 论文中引用的开源项目：明确依赖并微调了 Qwen2-Audio（Qwen2-Audio-7B-Instruct）模型；使用了 Amazon HealthScribe 进行语音转录。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

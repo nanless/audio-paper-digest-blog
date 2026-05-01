@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音乐生成 | 7.5/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Via Score to Performance: Efficient Human-Controllable Long Song Generation with Bar-Level Symbolic Notation
+
+#音乐生成 #自回归模型 #音频生成 #开源工具
+
+✅ **7.5/10** | 前25% | #音乐生成 | #自回归模型 | #音频生成 #开源工具
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Tongxi Wang（Southeast University， 中国）
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Tongxi Wang（Southeast University）， Yang Yu（Southeast University）， Qing Wang（Southeast University）， Junlang Qian（Nanyang Technological University）
 
 #
+
 ### 💡 毒舌点评
 
 这篇论文的“先乐谱后表演”范式巧妙地将复杂音频生成问题解耦为可解释的符号生成和相对成熟的音频渲染问题，在可控性和效率上取得了显著进步，是思路清晰的“曲线救国”方案。然而，其“演奏”阶段严重依赖商用歌声合成软件VOCALOID和通用MIDI合成器FluidSynth，这使得最终音频质量的上限被锁定在这些工具的能力上，论文的“端到端”生成能力并非完全自包含，这在一定程度上削弱了其作为完全自主生成系统的创新性说服力。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：提供代码仓库链接：https://github.com/WtxwNs/BACH。代码已开源。
@@ -33,9 +45,7 @@ hiddenInHomeList: true
     - YuE等基线模型（用于对比）
 - 总结：代码开源是主要亮点，但完整的模型复现（尤其是获得相似性能）可能因缺乏预训练权重、具体训练参数以及依赖商业VOCALOID而存在障碍。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有基于音频的歌曲生成方法存在可控性差、可解释性弱、计算开销大的问题。将歌曲生成视为同时学习音乐理论与演奏的“即兴表演”，任务过于复杂。
@@ -49,6 +59,7 @@ hiddenInHomeList: true
 6. 主要局限性：最终音频渲染质量受限于外部工具（VOCALOID， FluidSynth），非端到端的纯AI生成；在风格和情感控制等可控性维度上仍有提升空间；论文未公开模型权重和完整训练细节。
 
 #
+
 ### 🏗️ 模型架构
 
 BACH是一个三阶段的系统流水线：
@@ -62,16 +73,17 @@ BACH是一个三阶段的系统流水线：
     - 人声：使用VOCALOID软件将乐谱和歌词合成为歌声。
     - 混合：将两轨音频混合成最终歌曲。
 
-![BACH的生成流程示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463956-0.png)
+![BACH的生成流程示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463956-0.png)
 图1：展示了传统音频直接生成（即兴表演）与BACH“先作曲后演奏”方法的对比。后者生成可编辑的多轨乐谱，再分别渲染。
 
-![小节级与事件级生成的对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463956-1.jpg)
+![小节级与事件级生成的对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463956-1.jpg)
 图2：展示了事件级（左）和小节级（右）记谱方式的区别，强调小节级排列更符合音乐理论，听感更和谐。
 
-![BACH的ABC乐谱生成方法](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463956-2.jpg)
+![BACH的ABC乐谱生成方法](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463956-2.jpg)
 图3：详细展示了BACH的生成序列格式。模型基于指令、标签、歌词，结合Dual-NTP和Chain-of-Score方法，生成包含`<SOA>`, `<EOA>`标记的音频token序列。
 
 #
+
 ### 💡 核心创新点
 
 1.  “先作曲后演奏”的歌曲生成新范式：
@@ -95,6 +107,7 @@ BACH是一个三阶段的系统流水线：
     - 收益：增强了模型对歌曲宏观结构的保持能力，是生成高质量长歌曲的关键。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：论文提及使用公开音乐语料、授权人声数据以及一个合成子集。总计包含约1B条件人声token，约10B无条件音乐token（混合与分轨），以及2B链式乐谱音乐token。预处理后的混合比例为条件:无条件=3:1，音乐:语音=10:1。数据集名称未说明，论文称将在发表后开源。
@@ -109,6 +122,7 @@ BACH是一个三阶段的系统流水线：
 - 正则化或稳定训练技巧：未明确说明。
 
 #
+
 ### 📊 实验结果
 
 主要Benchmark与对比：
@@ -138,10 +152,10 @@ BACH是一个三阶段的系统流水线：
 - 音乐性A/B测试（图4）：热图显示BACH对战多数模型的胜率超过50%，尤其对比Hailuo， Tiangong， YuE-light有显著优势；对比Suno略处下风，但胜率仍在50%附近，表明具有竞争力。
 - 可控性维度分析（图5）：雷达图显示BACH在“节拍/节奏”和“人声与伴奏平衡”上表现突出，但在“风格”和“情感”上相对较弱。
 
-![人类评估音乐性热图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463956-3.jpg)
+![人类评估音乐性热图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463956-3.jpg)
 图4：A/B测试胜率热图。BACH（左侧）对阵其他模型（上方）的胜率由颜色和数字表示。红色框突出了BACH的胜率，表明其优于多数基线。
 
-![可控性与音乐质量维度雷达图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463956-4.jpg)
+![可控性与音乐质量维度雷达图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463956-4.jpg)
 图5：雷达图对比了不同模型在多个音乐质量和可控性维度上的表现。BACH（红色线）在伴奏、人声匹配、节拍/节奏等方面表现突出。
 
 效率与生成能力：
@@ -152,6 +166,7 @@ BACH是一个三阶段的系统流水线：
 与最强基线对比：BACH在综合得分上大幅超越所有基线（包括Suno的0.41），在多个单项指标上领先或持平。在人类音乐性评估上，与Suno的差距较小，但已超越所有其他开源和闭源基线。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量（6.5/7）：创新性强，提出了新颖且完整的“符号乐谱生成”范式。技术方案设计合理（小节表示，Dual-NTP， CoS）。实验对比全面，基线强大（包括商业系统Suno），评估指标多样且结果令人信服。扣分点：1) 模型具体架构参数（如层数、维度）未公开；2) 端到端生成依赖外部不可开源的商业软件，影响了系统的完全自主性与学术复现价值。
@@ -159,3 +174,8 @@ BACH是一个三阶段的系统流水线：
 - 开源与复现加成（0.5/1）：承诺开源代码（已提供GitHub链接）和数据集（将在发表后开源），这是重大贡献。但扣分在于：1) 未公开预训练模型权重；2) 关键依赖（VOCALOID）为商业软件；3) 部分核心训练细节（超参数、硬件）缺失。因此无法给予满分加成。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -7,6 +7,16 @@ categories: [icassp-2026]
 description: "音频增强 | 7.0/10"
 hiddenInHomeList: true
 ---
+
+# 📄 Subspace Hybrid Adaptive Filtering for Phonocardiogram Signal Denoising
+
+#心音信号 #信号处理 #自适应滤波 #音频增强 #时频分析
+
+✅ **7.0/10** | 前50% | #音频增强 | #信号处理 | #心音信号 #自适应滤波
+
+学术质量 6.0/7 | 选题价值 2.0/2 | 复现加成 -0.5 | 置信度 中
+
+
 ### 👥 作者与机构
 
 - 第一作者：Wageesha N. Manamperi (University of Moratuwa, Sri Lanka, Department of Electronic & Telecommunication Engineering)
@@ -14,11 +24,13 @@ hiddenInHomeList: true
 - 作者列表：Wageesha N. Manamperi (University of Moratuwa, Sri Lanka, Department of Electronic & Telecommunication Engineering; Audio & Acoustic Signal Processing Group, Australian National University, Australia), Thushara D. Abhayapala (Audio & Acoustic Signal Processing Group, Australian National University, Australia)
 
 #
+
 ### 💡 毒舌点评
 
 亮点在于将经典的NLMS、GMM维纳滤波与多通道PCA子空间方法进行“混搭”，形成一个两阶段流水线，逻辑清晰且有实验验证，为传统信号处理方法在心音降噪领域的应用提供了新思路。短板是其核心创新（两阶段串联）更偏向于工程组合而非理论突破，且代码与训练细节完全未公开，对于希望复现或深入理解参数影响的读者极不友好，削弱了论文的实际影响力。
 
 #
+
 ### 🔗 开源详情
 
 - 代码：论文中未提及代码链接。
@@ -28,9 +40,7 @@ hiddenInHomeList: true
 - 复现材料：论文描述了算法流程和关键公式，但未提供训练细节配置、超参数列表或检查点。部分关键参数（如PCA的 `η` 和 `T0`）未明确给出。
 - 论文中引用的开源项目：未提及。
 
----
 
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：心血管疾病早期诊断依赖于心音（PCG）信号，但录制过程中存在的各种背景噪声严重影响诊断准确性。现有单通道降噪方法在低信噪比条件下性能不足或计算成本高。
@@ -41,9 +51,10 @@ hiddenInHomeList: true
 6. 局限性：论文未说明训练和推理的具体计算复杂度；未在真实临床场景中进行大规模验证；未提供代码和模型，可复现性存疑；方法对噪声GMM模型的依赖性较强，其泛化能力有待进一步考察。
 
 #
+
 ### 🏗️ 模型架构
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463608-0.png)
+![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-0.png)
 该论文提出的“子空间混合自适应滤波”方法是一个两阶段串联系统，整体架构如图1所示。
 
 输入：含噪声的单通道心音信号 `x(t)`。
@@ -62,6 +73,7 @@ hiddenInHomeList: true
 关键设计：动机在于NLMS和GMM WF从不同角度（时域线性自适应与频域统计建模）抑制噪声，但各自会留下残留噪声。将它们的输出视为“双通道”观测，利用PCA能够分离相关性高的信号成分的特性，可以进一步提取两者共同增强的PCG信号部分，抑制不相关的残留噪声。
 
 #
+
 ### 💡 核心创新点
 
 1.  将GMM WF引入PCG降噪：此前GMM WF主要用于语音增强，本文首次将其应用于心音降噪领域，并验证了其有效性。
@@ -70,6 +82,7 @@ hiddenInHomeList: true
 4.  在低SNR下的鲁棒性验证：在-10 dB到10 dB的宽SNR范围内，使用多种真实噪声对方法进行了充分评估，展示了其在极端条件下的性能优势。
 
 #
+
 ### 🔬 细节详述
 
 - 训练数据：
@@ -89,6 +102,7 @@ hiddenInHomeList: true
 - 推理细节：方法是帧级别的，基于STFT。未提及具体的解码策略、温度等，因为不是生成模型。
 
 #
+
 ### 📊 实验结果
 
 1. 主要性能对比（PASCAL数据集）
@@ -115,12 +129,13 @@ hiddenInHomeList: true
 
 结论：单独使用NLMS或GMM WF均能大幅改善SDR。而结合两者的SS-Hybrid方法进一步提升了SDR（从约12.8 dB到15.3 dB）并降低了RMSE，证明了混合框架的互补效益。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463608-1.png)
-![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463608-2.png)
-![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463608-3.png)
+![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-1.png)
+![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-2.png)
+![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463608-3.png)
 图2展示了在-5 dB SNR医院环境噪声下的去噪输出。（a）为频谱图，从上到下依次为混合信号、NLMS输出、GMM WF输出和SS-Hybrid输出。可以直观看到SS-Hybrid输出的频谱图背景噪声最弱，心音成分最清晰。（b）为时域波形，同样显示SS-Hybrid在抑制噪声的同时，保留了更完整的心音信号形态。
 
 #
+
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：创新性在于方法组合，有一定新意，但并非理论突破。技术实现路径清晰，正确。实验在两个标准数据集上进行，对比了多种基线，并进行了消融研究，证据较为充分。扣分点在于未公开代码与关键实现细节（如PCA的超参数），部分实验设置描述模糊，且缺乏与更先进或同期工作的更广泛对比。
@@ -128,3 +143,8 @@ hiddenInHomeList: true
 - 开源与复现加成：-1.0/1：论文未提供代码、模型权重或详细的训练/推理配置。关键参数如PCA的遗忘因子、时间常数等未给出具体数值。这使得完全复现论文结果存在较大困难，因此给予负向扣分。
 
 #
+
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

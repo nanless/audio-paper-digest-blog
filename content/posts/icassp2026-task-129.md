@@ -57,10 +57,6 @@ hiddenInHomeList: true
 - 复现材料：提供了详细的训练配置（优化器、学习率调度、batch size、损失函数初始化）、模型架构选择依据和评估协议，复现信息较为充分。
 - 论文中引用的开源项目：使用了Sonar文本编码器、Dasheng音频编码器（并对其进行了对比实验），以及依赖于多个公开的音频-文本数据集。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：现有的对比语言-音频预训练（CLAP）模型主要针对英文的声音和音乐事件，在处理语音（spoken language）内容和多语言任务上表现不佳，无法满足通用音频理解的需求。
@@ -102,10 +98,6 @@ hiddenInHomeList: true
     - 实验框架：Lighthouse [30] (`https://github.com/taichi-m108/lighthouse`)
     - DETR网络：引用了QD-DETR [24], Moment-DETR [25], UVCOM [26] 的原始论文。
     - 优化器：AdamW [29]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -149,10 +141,6 @@ hiddenInHomeList: true
 -   Demo：未提及。
 -   复现材料：提供了详细的训练超参数、硬件配置、模型尺寸规格，以及系统性的设计扫描思路，但这些信息仅存在于论文文本中，未以独立仓库或文档形式提供。
 -   论文中引用的开源项目：依赖的主要开源项目为预训练模型Whisper、CLIP、ModernBERT以及LoRA方法。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -213,10 +201,6 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 - 论文中引用的开源项目：引用了Flash Attention [17]用于高效计算，以及ModernBERT [15]、SpecAugment [22]等开源工作/工具。
 - 开源计划：论文中未提及开源计划。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  要解决什么问题：当前对比语言-音频预训练（CLAP）模型存在三大局限：训练数据规模相对较小（通常百万级）、音频输入时长固定（通常≤10秒）且需要填充/截断、以及全局对比学习损失阻碍了密集细粒度音频特征的学习。
@@ -254,10 +238,6 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 - Demo：未提及。
 - 复现���料：论文提供了模型训练的关键超参数（如学习率、批大小、步数）和架构选择，但缺乏完整的训练代码、配置文件和检查点。
 - 论文中引用的开源项目：依赖了Whisper（音频编码器）、RoBERTa（文本编码器）、HTSAT（音频编码器）、DistilBERT（分类器）、CREPE（音高估计）和LAION-CLAP（对比学习框架）等开源模型和工具。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -316,10 +296,6 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 - Demo：未提及。
 - 复现材料：提供了详细的训练代码、配置（学习率、batch size、优化器、调度策略等）以及硬件要求，复现指引充分。
 - 论文中引用的开源项目：使用了Demucs (HT-Demucs) 作为基线比较的一部分，并引用了CQT/VQT工具箱。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -386,10 +362,6 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 - 复现材料：给出了部分训练超参数（如批大小、损失类型），但学习率、优化器、训练轮次等关键细节未说明。论文引用了开源的AST模型和Demucs工具。
 - 论文中引用的开源项目：AST [21], Demucs [15, 22], NSynth [16], Slakh [20], Surge [19]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  问题：在数字音乐制作中，从包含多种乐器的音频混合中快速、准确地检索出特定乐器的音色是一个挑战。传统的文本描述不充分，而单独聆听大量音色库效率低下。
@@ -443,10 +415,6 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 - 依赖的开源项目：论文中提到了SpeechBrain工具包（用于WavLM的K-Means分词），以及IVF-PQ索引库。此外，模型基于Mamba架构。
 - 论文中未提及更广泛的开源计划（如提供处理好的中间特征、评估脚本等）。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1.  解决的问题：针对查询式语音术语检索（QbE-STD）任务，现有离散分词方法在嘈杂和混响环境中鲁棒性差，且存在码本坍缩（即分词码本利用率不均衡）导致的效率低下问题。
@@ -487,10 +455,6 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 - 复现材料：论文提供了较为详细的实现细节（模型架构、训练三阶段、损失函数、优化器设置、硬件环境），但未提供完整的配置文件、训练脚本或检查点。
 - 引用的开源项目：论文依赖预训练模型 CLAP，并引用了 Whisper（用于基线ASR）、 BGE-M3、 Qwen3-Embedding（文本嵌入基线）、 Qwen2-Audio（生成模型）等开源项目或模型。
 - 开源计划：论文中未提及开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -555,10 +519,6 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
   - 数据集：FMA [13]。
   - 检索索引：IVF-PQ [14]。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 要解决的问题：音频指纹识别系统的真实大规模评估受限于大型公共音乐数据库的稀缺性（因版权、存储等限制）。
@@ -599,10 +559,6 @@ EchoRAG 的亮点在于其工程设计的巧妙，将稳定的全局检索（教
 - 复现材料：论文给出了模型的基本架构参数和评估指标的定义，但未提供完整的训练细节、配置文件或附录。复现需要依赖原模型论文中的信息。
 - 论文中引用的开源项目：引用了HuBERT, Whisper, TOWER等模型，但未明确说明是否提供了本次评估使用的具体版本。
 - 总体而言，论文中未提及针对本分析工作的开源计划。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

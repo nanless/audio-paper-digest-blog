@@ -50,10 +50,6 @@ hiddenInHomeList: true
 - 论文中引用的开源项目：Pyannote.audio (用于说话人嵌入)、Whisper (用于ASR)、Sentence BERT (用于句子嵌入)。
 - 开源计划总结：论文中未提及开源计划。整个系统严重依赖商业闭源服务（Gemini），复现门槛极高。
 
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
-
 📌 **核心摘要**
 
 1. 问题：对于患有痴呆症或记忆障碍的人（全球5700万），在实时对话中及时回忆细节至关重要。现有辅助技术依赖手动查询，缺乏对对话所有权的感知，易导致无关信息检索和隐私泄露，在多人动态对话中效果有限。

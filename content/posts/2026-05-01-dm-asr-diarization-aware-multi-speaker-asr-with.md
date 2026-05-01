@@ -32,6 +32,7 @@ hiddenInHomeList: true
 
 #
 
+
 ### 🔗 开源详情
 
 - 代码： 论文中未提及DM-ASR的完整代码仓库链接。仅在评估部分引用了公开的评估工具MeetEval。
@@ -47,6 +48,7 @@ hiddenInHomeList: true
     - 缺失信息： 未明确总训练步数/轮数、warmup比例、具体解码参数（如beam size）、以及是否提供预训练检查点。
 - 论文中引用的开源项目： Whisper (语音编码器), Gemma, Qwen (LLM解码器), MFA (词级时间戳对齐), MeetEval (评估工具), DiariZen, S2SND (前端日志系统)。
 - 总结： 论文提供了充分的复现思路和关键配置，但缺乏直接可用的“一键复现”材料（如代码仓库、模型权重），因此公开程度为中等偏上。
+
 
 ### 📌 核心摘要
 
