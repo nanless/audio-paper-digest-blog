@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "空间音频 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Differentiable Grouped Feedback Delay Networks for Learning Direction and Position-Dependent Late Reverberation
-
-#空间音频 #可微分渲染 #深度学习 #信号处理 #实时处理
-
-✅ **7.5/10** | 前25% | #空间音频 | #可微分渲染 | #深度学习 #信号处理
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Orchisama Das（Kings College London, Dept. of Engineering, United Kingdom）
@@ -26,11 +16,22 @@ hiddenInHomeList: true
     - Sebastian J. Schlecht（Friedrich-Alexander Universit¨at Erlangen-N¨urnberg, Multimedia Comms. and Signal Process., Germany）
     - Gloria Dal Santo（Aalto University, Acoustics Lab, Dept. of Info. and Comms. Engineering., Finland）
     - Zoran Cvetkovi´c（Kings College London, Dept. of Engineering, United Kingdom）
-
 ### 💡 毒舌点评
 
 亮点在于巧妙地将传统可变声场渲染模型（FDN）与神经网络结合，在保持结构先验的同时实现了端到端学习和高效的多位置渲染，计算复杂度优势明显。短板则是其精度略逊于最强基线（NAF），且在房间过渡区域误差有可见增加，表明其建模复杂空间动态的能力仍有提升空间。
+### 🔗 开源详情
 
+- 代码：是。论文末尾提供了GitHub仓库链接：https://github.com/orchidas/DiffGFDN。
+- 模型权重：论文中未提及公开已训练的模型权重。
+- 数据集：论文中引用了一个相关的模拟数据集[29]（https://zenodo.org/records/13338346），但未明确说明本研究使用的数据集是否完全相同或如何获取。听觉示例链接指向一个网站。
+- Demo：论文提供了一个包含听觉示例的网站链接：https://ccrma.stanford.edu/~orchi/FDN/GFDN/DiffGFDN/ICASSP26/。
+- 复现材料：论文详细描述了模型架构、损失函数、��练超参数（层数、神经元数、学习率、批大小、轮数）和关键设置（位置编码参数），为复现提供了充分信息。
+- 论文中引用的开源项目：依赖了PyFar库中的滤波器组设计工具（链接：https://pyfar.readthedocs.io/stable/modules/pyfar.dsp.filter.html）。
+- 总结：论文提供了代码和听觉示例，在复现细节上描述较充分，但未明确承诺公开数据集和预训练模型。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：在扩展现实（XR）中，实现六自由度（6-DoF）音频渲染需要动态建模房间混响。在耦合空间中，晚期混响的衰减特性随听者位置和方向变化而呈现多斜率、各向异性的特点。
@@ -56,7 +57,6 @@ hiddenInHomeList: true
 
 5.  实际意义：为XR等应用提供了一种计算高效的、能动态渲染方向和位置相关晚期混响的渲染器。
 6.  主要局限性：目前仅在模拟数据上评估，未进行主观听音测试；其预测的EDC误差在绝对数值上仍高于NAF；在房间交界区域的建模误差较大。
-
 ### 🏗️ 模型架构
 
 该模型架构旨在学习并渲染方向和位置依赖的晚期混响。整体分为训练和推理两个流程。
@@ -89,14 +89,12 @@ hiddenInHomeList: true
 - 球谐域方向编码：利用球谐函数的完备性，通过预测球谐接收器增益来参数化方向依赖性，避免了直接为每个方向存储独立滤波器。
 - 位置编码：采用傅里叶特征映射，将3D坐标编码为高维向量，便于MLP学习复杂的空间变化函数。
 - 延迟线与FDN结构：继承了FDN高效渲染长混响尾音的能力，且其群组结构对应“公共斜率”模型，提供了物理可解释性。
-
 ### 💡 核心创新点
 
 1.  将DiffGFDN扩展至方向依赖性建模：首次在可微分FDN框架中引入球谐域的接收器增益，使原本建模全向混响的架构能够学习各向异性的晚期混响场，这是对基础模型的功能性扩展。
 2.  直接从空间RIR中学习方向依赖的晚期尾音：区别于需要分别渲染方向和空间的传统混合方法，该模型可直接从SRTFs数据中端到端学习晚期混响的方向特性，有望提升一致性。
 3.  支持高效多位置渲染：核心FDN结构（延迟线、反馈矩阵）是位置无关的，为不同位置仅需预测并更新接收器增益，极大降低了为多听众或多6-DoF位置实时渲染时的计算和存储开销，相比卷积方法优势明显。
 4.  子带并行处理与复合损失设计：将问题分解到多个八度频带独立解决，并设计了同时关注频谱包络（频谱损失）、稀疏性（稀疏损失）和时域能量衰减曲线（DEDC损失）的复合损失函数，以全面约束学习。
-
 ### 🔬 细节详述
 
 - 训练数据：未提供数据集名称，但描述为使用Treble引擎生成的模拟数据集[29]。包含三间耦合房间的二阶Ambisonics SRIRs，源固定，838个接收位置在0.3米网格上（平面1.5米高）。代码库链接提到一个Zenodo数据集[29]。
@@ -116,7 +114,6 @@ hiddenInHomeList: true
 - 训练硬件：未说明。
 - 推理细节：推理时，干声经子带滤波器组、DiffGFDN、SFB波束成形后合成。可输出为Ambisonics、多声道扬声器或双耳信号。论文给出了其计算复杂度公式（公式8），并与均匀分段重叠相加（OLA）卷积的复杂度（公式9）进行了理论对比。
 - 正则化或稳定训练技巧：稀疏损失起到了正则化作用；对DEDC损失使用随机时间掩码以防止过拟合；对预测的球谐接收器增益进行能量归一化。
-
 ### 📊 实验结果
 
 主要评估：在模拟的耦合房间数据集上，评估双耳RIR合成的质量，主要指标是平均绝对EDC误差（dB）。比较了提出的DiffGFDN渲染器、基于DNN的CS振幅插值器[16]和神经声场（NAF）[8]方法。
@@ -151,23 +148,8 @@ hiddenInHomeList: true
     2.  CS插值器在更细的网格（0.6m）上训练时，误差下降更明显（对比图e和f），表明其对采样密度更敏感。
     3.  DiffGFDN的误差分布在不同网格间距下变化相对较小，表现出更好的泛化潜力。
     4.  在房间的某些区域，误差分布具有方向依赖性（对比图a和c，或e和g）。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：创新性地将FDN与神经网络结合用于方向依赖性混响建模，技术路径清晰完整。实验设置了合理的对比基线（NAF代表高精度上限，CS插值器代表同类学习方法），并提供了详细的误差分析和计算复杂度对比。但创新性更多是现有框架（DiffGFDN）的功能性扩展而非范式突破；实验仅基于模拟数据，缺乏真实数据验证和主观听音测试；报告的精度未超越最强基线（NAF）。
 - 选题价值：1.5/2：课题直接针对XR/AR音频渲染的核心挑战之一（动态混响），具有明确的应用前景和前沿性。空间音频是重要发展方向，该研究提供了高效渲染的新思路。
 - 开源与复现加成：+0.5/1：论文明确提供了代码仓库链接（https://github.com/orchidas/DiffGFDN），这是非常积极的复现信号。但未提及模型权重和训练数据的公开（尽管引用了相关数据集），因此加成有限。
-
-### 🔗 开源详情
-
-- 代码：是。论文末尾提供了GitHub仓库链接：https://github.com/orchidas/DiffGFDN。
-- 模型权重：论文中未提及公开已训练的模型权重。
-- 数据集：论文中引用了一个相关的模拟数据集[29]（https://zenodo.org/records/13338346），但未明确说明本研究使用的数据集是否完全相同或如何获取。听觉示例链接指向一个网站。
-- Demo：论文提供了一个包含听觉示例的网站链接：https://ccrma.stanford.edu/~orchi/FDN/GFDN/DiffGFDN/ICASSP26/。
-- 复现材料：论文详细描述了模型架构、损失函数、��练超参数（层数、神经元数、学习率、批大小、轮数）和关键设置（位置编码参数），为复现提供了充分信息。
-- 论文中引用的开源项目：依赖了PyFar库中的滤波器组设计工具（链接：https://pyfar.readthedocs.io/stable/modules/pyfar.dsp.filter.html）。
-- 总结：论文提供了代码和听觉示例，在复现细节上描述较充分，但未明确承诺公开数据集和预训练模型。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

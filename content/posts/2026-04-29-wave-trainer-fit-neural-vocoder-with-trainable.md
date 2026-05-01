@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音合成 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Wave-Trainer-Fit: Neural Vocoder With Trainable Prior And Fixed-Point Iteration Towards High-Quality Speech Generation From SSL Features
-
-#语音合成 #生成模型 #自监督学习 #扩散模型 #鲁棒性
-
-✅ **7.0/10** | 前25% | #语音合成 | #生成模型 | #自监督学习 #扩散模型
-
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Hien Ohnaka（Nara Institute of Science and Technology）
@@ -27,13 +17,23 @@ hiddenInHomeList: true
     - Masaya Kawamura（LY Corporation, Tokyo, Japan）
 
 #
-
 ### 💡 毒舌点评
 
 亮点：该工作敏锐地抓住了将基于梅尔谱设计的声码器（WaveFit）迁移到SSL特征时遇到的两个核心痛点（初始噪声和增益调整），并提出了优雅的解决方案。在说话人相似度指标（S-MOS）上取得了显著且一致的提升，尤其是使用Whisper特征时，这证明了方法的有效性。短板：方法在自然度（N-MOS）上的表现并不稳定，甚至在使用某些SSL特征时被基线反超，这暗示了“可训练先验”可能引入了新的不稳定性或对超参数过于敏感，论文对此的讨论和验证尚不充分。
 
 #
+### 🔗 开源详情
 
+- 代码：论文明确提供了代码仓库链接：`https://github.com/line/WaveTrainerFit`。
+- 模型权重：论文提到提供了“pre-trained models”，即预训练模型权重包含在上述代码仓库中。
+- 数据集：使用的是公开的LibriTTS-R语料库，但论文未提及是否提供数据预处理脚本或具体获取方式。
+- Demo：论文提供了一个在线演示页面链接：`https://i17oonaka-h.github.io/projects/research_topics/wave_trainer_fit/`。
+- 复现材料：论文提供了主要超参数（如λGuide, λPM, 训练步数），但未提供完整的训练配置（如优化器、学习率策略）。部分实现细节（如编码器结构修改）在正文有说明，但完整配置可能需参考其代码仓库及所基于的WaveFit开源实现。
+- 论文中引用的开源项目：WaveFit, RestoreGrad, DCUnet, SpeechBERTScore, Harvest F0估计器, ECAPA-TDNN, SpeechBrain。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 要解决什么问题：现有神经声码器（如WaveFit）在直接利用数据驱动的SSL特征生成波形时，由于缺乏信号处理先验知识，存在初始噪声采样不合理（远离目标）和增益调整依赖隐式学习两大局限。
@@ -60,7 +60,6 @@ hiddenInHomeList: true
 6. 主要局限性是什么：方法的有效性可能依赖于对引导损失权重（λGuide, λPM）的精细调节，论文承认其可能存在超参数敏感性。在部分实验设置下，生成的波形自然度（N-MOS）不及基线，说明模型在优化说话人相似度与自然度之间可能需要更好的平衡。
 
 #
-
 ### 🏗️ 模型架构
 
 WaveTrainerFit的整体架构是在WaveFit声码器的基础上，增加了用于可训练先验的先验编码器和后验编码器。
@@ -81,7 +80,6 @@ WaveTrainerFit的整体架构是在WaveFit声码器的基础上，增加了用�
 4.  关键设计选择及动机：在时频域建模Σ（而非时域），是为了缩短序列长度，降低学习复杂度。引入L_guide损失是为了引导先验编码器学习到与语音能量相关的表征，从而实现参考感知的增益调整。
 
 #
-
 ### 💡 核心创新点
 
 1.  引入可训练先验进行初始噪声采样：
@@ -100,7 +98,6 @@ WaveTrainerFit的整体架构是在WaveFit声码器的基础上，增加了用�
     - 收益：显著降低了先验模型的建模复杂度，使其更易于训练。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：使用LibriTTS-R语料库，包含24kHz、585小时、2456位说话人。划分：train-clean-360（训练）、dev-clean（验证）、test-clean（测试）。
@@ -122,7 +119,6 @@ WaveTrainerFit的整体架构是在WaveFit声码器的基础上，增加了用�
 - 正则化或稳定训练技巧：LGuide中的第二项（公式9第二项）起到正则化作用，防止后验编码器输出数值膨胀。
 
 #
-
 ### 📊 实验结果
 
 主要对比实验（基于表1）：
@@ -147,7 +143,6 @@ SSL特征深度鲁棒性实验（基于表2）：
 论文提供了图3（未在提供的URL列表中），描述显示其在不同迭代次数下的各项指标均优于WaveFit。RTF因先验编码器和采样过程略有增加。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：问题定义准确，解决方案有创新且与问题紧密匹配。技术实现基于成熟框架，逻辑自洽。实验全面，有多个基线、多种SSL特征、主客观评估、消融实验（深度分析）。扣分点：1）承认超参数敏感性；2）部分结果（N-MOS）不理想，暴露了方法可能存在的权衡问题；3）训练和实现的部分细节未公开，影响可复现性。
@@ -155,16 +150,3 @@ SSL特征深度鲁棒性实验（基于表2）：
 - 开源与复现加成：0.0/1：论文在“Conclusion”后明确提供了代码和预训练模型的GitHub链接，这是一个重大加分项。然而，论文正文对训练细节（如优化器、学习率、warmup、硬件）的描述不够完整，完全复现可能需要参考其他基线（WaveFit）的开源代码。因此，加成取中值。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文明确提供了代码仓库链接：`https://github.com/line/WaveTrainerFit`。
-- 模型权重：论文提到提供了“pre-trained models”，即预训练模型权重包含在上述代码仓库中。
-- 数据集：使用的是公开的LibriTTS-R语料库，但论文未提及是否提供数据预处理脚本或具体获取方式。
-- Demo：论文提供了一个在线演示页面链接：`https://i17oonaka-h.github.io/projects/research_topics/wave_trainer_fit/`。
-- 复现材料：论文提供了主要超参数（如λGuide, λPM, 训练步数），但未提供完整的训练配置（如优化器、学习率策略）。部分实现细节（如编码器结构修改）在正文有说明，但完整配置可能需参考其代码仓库及所基于的WaveFit开源实现。
-- 论文中引用的开源项目：WaveFit, RestoreGrad, DCUnet, SpeechBERTScore, Harvest F0估计器, ECAPA-TDNN, SpeechBrain。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

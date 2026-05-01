@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "说话人分离 | 8.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 VBx for End-to-End Neural and Clustering-Based Diarization
-
-#说话人分离 #聚类算法 #自监督学习 #端到端
-
-🔥 **8.5/10** | 前25% | #说话人分离 | #聚类算法 | #自监督学习 #端到端
-
-学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Petr Palka（布尔诺理工大学 Speech@FIT 实验室）
@@ -24,13 +14,28 @@ hiddenInHomeList: true
 - 作者列表：Petr Palka（布尔诺理工大学 Speech@FIT 实验室）、Jiangyu Han（布尔诺理工大学 Speech@FIT 实验室）、Marc Delcroix（NTT公司）、Naohiro Tawara（NTT公司）、Lukáš Burget（布尔诺理工大学 Speech@FIT 实验室）
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文巧妙地将传统聚类算法VBx“降维”为GMM-VBx以适配现代EEND-VC框架，并通过过滤低质量嵌入解决了该框架下的一个具体痛点，实现了稳健的性能提升。不过，其核心改进局限于聚类后端，并未触及EEND模型本身的创新，且整体方案高度依赖于特定的DiariZen系统，独立价值稍显不足。
 
 #
+### 🔗 开源详情
 
+- 代码：提供了代码仓库链接：https://github.com/BUTSpeechFIT/DiariZen。
+- 模型权重：论文中未提及公开本文实验所用的EEND模型（DiariZen-Large）或聚类模型的权重。DiariZen仓库可能提供，但论文未明确说明。
+- 数据集：所使用的8个数据集均为公开学术数据集（AMI, AISHELL-4, AliMeeting, NOTSOFAR-1, MSDWild, DIHARD3, RAMC, VoxConverse），可通过其原始出处获取。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详细的实验设置（Section 4）、模型配置、超参数选择说明（如过滤阈值E）以及评估指标定义。引用了具体的工具包（pyannote, Wespeaker）和预训练模型（WavLM, ResNet34-LM）。
+- 论文中引用的开源项目：
+    - DiariZen (代码框架)
+    - pyannote.audio (基线流水线)
+    - Wespeaker (说话人嵌入工具包)
+    - WavLM (自监督预训练模型)
+    - VoxCeleb2 (训练数据集)
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：端到端神经与向量聚类结合的说话人日志化框架（EEND-VC）中的聚类阶段（传统上使用层次聚类AHC）仍有改进空间，尤其是在说话人数量多、单人语音片段短的复杂场景下。
@@ -47,7 +52,6 @@ hiddenInHomeList: true
 6.  局限性：改进仅限于聚类阶段，未对EEND模型本身进行探索；过滤短片段的阈值E需要根据窗口大小选择，可能过于激进而丢失一些说话人信息；最终性能仍依赖于高质量的前端EEND模型（如DiariZen-Large）。
 
 #
-
 ### 🏗️ 模型架构
 
 本文的模型架构是一个两阶段的EEND-VC流水线（如论文图1及描述所示）：
@@ -67,7 +71,6 @@ hiddenInHomeList: true
 图1：展示了单个输入窗口内的局部EEND输出（不同颜色代表不同说话人），以及如何为每个说话人（如绿色、橙色）拼接其语音片段以提取一个嵌入向量。当说话人仅在重叠区域活动时（橙色），则使用所有活动区域进行拼接。
 
 #
-
 ### 💡 核心创新点
 
 1.  简化VBx为GMM-VBx以适配EEND-VC框架：
@@ -89,7 +92,6 @@ hiddenInHomeList: true
     - 收益：性能提升，尤其是在全局说话人数量多于窗口内活跃说话人时（表2中cVBx优于VBx）。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：EEND模型（DiariZen）的训练使用了多个数据集的训练集：AMI, AISHELL-4, AliMeeting, NOTSOFAR-1, MSDWild, DIHARD3 full, RAMC, VoxConverse。其中，WavLM Base+版模型仅在AMI， AISHELL-4， AliMeeting上训练；WavLM Large版模型在所有数据集的训练集上训练。说话人嵌入提取器（ResNet34-LM）和PLDA模型在VoxCeleb2数据集上训练。
@@ -111,7 +113,6 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：未针对聚类部分提及。EEND模型的训练使用了结构化剪枝（移除80%参数）以获得DiariZen-Large模型。
 
 #
-
 ### 📊 实验结果
 
 主要Benchmark与数据集：8个公开数据集：AMI， AISHELL-4， AliMeeting， NOTSOFAR-1， MSDWild， DIHARD3 full， RAMC， VoxConverse，覆盖了会议、远程、野外等多种场景。
@@ -140,7 +141,6 @@ hiddenInHomeList: true
 图3：t-SNE图展示了嵌入聚类效果。(a) 使用cVBx聚类产生了6个簇（多了一个紫色簇）；(b) 真实标签为5个说话人；(c) 颜色表示提取嵌入所用拼接语音的时长，紫色簇几乎全由短片段嵌入组成。这直观地说明了短片段嵌入会导致虚假聚类，而过滤能避免此问题。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量（6.5/7）：创新是具体且有效的工程改进（GMM-VBx适配、过滤策略），技术路线正确。实验设计严谨，消融分析充分，在广泛且多样的基准上验证了方法的有效性和泛化能力。结果具有说服力。但创新属于优化范畴，未提出新的原理或模型架构。
@@ -148,21 +148,3 @@ hiddenInHomeList: true
 - 开源与复现加成（0.5/1）：提供了代码链接（DiariZen），并详述了实验配置、数据集划分和评估方法，复现门槛较低。但未公开EEND模型权重、完整的训练日志或更底层的实现细节，加成有限。
 
 #
-
-### 🔗 开源详情
-
-- 代码：提供了代码仓库链接：https://github.com/BUTSpeechFIT/DiariZen。
-- 模型权重：论文中未提及公开本文实验所用的EEND模型（DiariZen-Large）或聚类模型的权重。DiariZen仓库可能提供，但论文未明确说明。
-- 数据集：所使用的8个数据集均为公开学术数据集（AMI, AISHELL-4, AliMeeting, NOTSOFAR-1, MSDWild, DIHARD3, RAMC, VoxConverse），可通过其原始出处获取。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了详细的实验设置（Section 4）、模型配置、超参数选择说明（如过滤阈值E）以及评估指标定义。引用了具体的工具包（pyannote, Wespeaker）和预训练模型（WavLM, ResNet34-LM）。
-- 论文中引用的开源项目：
-    - DiariZen (代码框架)
-    - pyannote.audio (基线流水线)
-    - Wespeaker (说话人嵌入工具包)
-    - WavLM (自监督预训练模型)
-    - VoxCeleb2 (训练数据集)
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

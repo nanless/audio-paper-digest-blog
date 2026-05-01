@@ -7,27 +7,31 @@ categories: [icassp-2026]
 description: "音频事件检测 | 8.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Shared Representation Learning for Reference-Guided Targeted Sound Detection
-
-#音频事件检测 #多任务学习 #预训练 #音频检索
-
-🔥 **8.5/10** | 前25% | #音频事件检测 | #多任务学习 | #预训练 #音频检索
-
-学术质量 6.2/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Shubham Gupta（印度理工学院海得拉巴分校，语音信息与处理实验室）
 - 通讯作者：K. S. Rama Murty（ksrm@ee.iith.ac.in，印度理工学院海得拉巴分校）
 - 作者列表：Shubham Gupta（印度理工学院海得拉巴分校，语音信息与处理实验室），Adarsh Arigala（印度理工学院海得拉巴分校，语音信息与处理实验室），B. R. Dilleswari（RGUKT R.K. Valley），K. S. Rama Murty（印度理工学院海得拉巴分校，语音信息与处理实验室）。*号表示贡献均等。
-
 ### 💡 毒舌点评
 
 亮点：提出将双分支参考/混合编码器统一为单一ConvNeXt编码器的思路清晰有效，不仅简化了架构，还在URBAN-SED上取得了显著的性能提升（~7%相对增益），证明了共享表示学习对特征对齐的有效性。
 短板：论文的核心验证基于一个合成且规模不大的数据集（URBAN-SED），尽管有跨域评估，但现实世界复杂声学场景下的泛化能力仍待更强有力的证明。此外，任务本身（给定参考检测特定声音）的通用性和影响力相比语音分离、生成等任务略显狭窄。
+### 🔗 开源详情
 
+- 代码：论文明确提供了代码仓库链接：`https://github.com/ArigalaAdarsh/Reference-Guided-Targeted-Sound-Detection`。
+- 模型权重：论文中提到了“pretrained models are available”，但未在正文提供具体下载链接。需访问上述GitHub仓库获取详情。
+- 数据集：论文中描述了基于URBAN-SED和UrbanSound8K构建数据集的协议，并提供了统计表，但数据集本身需根据协议自行生成，论文中未提供直接下载链接。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文提供了详细的训练配置（优化器、学习率、调度器、数据增强）、模型架构描述和关键超参数，有利于复现。
+- 论文中引用的开源项目：
+    - ConvNeXt：作为骨干网络。
+    - AudioSet：用于预训练和评估。
+    - sed_eval：用于计算评估指标。
+    - URBAN-SED, UrbanSound8K：用于构建实验数据集。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：传统声事件检测（SED）需对所有预定义类别进行标签，而目标声检测（TSD）旨在根据一个参考音频片段，在更长且可能嘈杂的混合音频中检测并定位特定目标声音，这更符合人类选择性听觉注意的特性，也更利于处理未见类别和减少标注依赖。
@@ -53,7 +57,6 @@ hiddenInHomeList: true
 | Unified | CNN14 | 74.20 | 91.66 |
 | Dual-branch | ConvNeXt | 80.38 | 93.81 |
 | Unified | ConvNeXt | 83.15 | 95.17 |
-
 ### 🏗️ 模型架构
 
 图1: pdf-image-page2-idx0]
@@ -72,7 +75,6 @@ hiddenInHomeList: true
     - 损失函数：采用多任务学习框架。总损失 `L_total = L_CE + L_SED`。其中 `L_CE` 是片段级交叉熵损失（监督参考嵌入对类别进行分类），`L_SED` 是帧级二元交叉熵损失（监督混合音频中目标事件的定位）。这种设计让模型同时学习“是什么”和“在哪里”。
 
 数据流：混合音频与参考音频 -> 共享ConvNeXt编码器 -> 两种嵌入 -> 投影 -> 融合 -> BiGRU -> 帧级概率 + 片段级分类 -> 多任务损失。
-
 ### 💡 核心创新点
 
 1.  统一编码器架构：
@@ -87,7 +89,6 @@ hiddenInHomeList: true
 
 3.  多任务损失优化：
     - 创新与收益：将片段级分类损失（监督参考嵌入）与帧级检测损失（监督融合后特征）相结合。这确保了参考嵌入具有区分性，同时驱动模型进行精确的时序定位，是取得高F1和准确率的关键。
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -107,7 +108,6 @@ hiddenInHomeList: true
 - 训练硬件：论文中未说明具体的GPU/TPU型号和数量。
 - 推理细节：对帧级概率应用阈值和中值滤波后，根据编码器帧移映射为起始/结束时间戳。系统进行二值化的存在/不存在判断。
 - 正则化：使用了数据增强（频谱遮蔽、时间偏移）来提升鲁棒性和防止过拟合。预训练的ConvNeXt编码器在训练中进行微调。
-
 ### 📊 实验结果
 
 主要基准结果：
@@ -149,7 +149,6 @@ hiddenInHomeList: true
 图3: pdf-image-page4-idx2]
 （图3：时序定位可视化示例。波形上标注了真实和预测的事件边界，下方显示了模型的逐帧置信度分数。）
 - 负样本影响：在更现实的Urban-TSD-Strong+（包含参考类别不存在于混合音频中的负样本）上训练时，性能下降至78.94% F1，表明任务更难。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.2/7
@@ -161,20 +160,3 @@ hiddenInHomeList: true
   - 应用空间与读者相关性（0.5/1）：在安防、人机交互、多媒体检索有明确应用。对专注于音频事件检测、检索的读者相关性较高。
 - 开源与复现加成：0.8/1
   - 论文提供了明确的代码仓库链接（https://github.com/ArigalaAdarsh/Reference-Guided-Targeted-Sound-Detection），且详细描述了训练配置、超参数和数据处理流程，这极大方便了复现。扣分点在于未提及公开预训练模型权重的具体下载方式。
-
-### 🔗 开源详情
-
-- 代码：论文明确提供了代码仓库链接：`https://github.com/ArigalaAdarsh/Reference-Guided-Targeted-Sound-Detection`。
-- 模型权重：论文中提到了“pretrained models are available”，但未在正文提供具体下载链接。需访问上述GitHub仓库获取详情。
-- 数据集：论文中描述了基于URBAN-SED和UrbanSound8K构建数据集的协议，并提供了统计表，但数据集本身需根据协议自行生成，论文中未提供直接下载链接。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文提供了详细的训练配置（优化器、学习率、调度器、数据增强）、模型架构描述和关键超参数，有利于复现。
-- 论文中引用的开源项目：
-    - ConvNeXt：作为骨干网络。
-    - AudioSet：用于预训练和评估。
-    - sed_eval：用于计算评估指标。
-    - URBAN-SED, UrbanSound8K：用于构建实验数据集。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "模型评估 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 A Text-To-Text Alignment Algorithm for Better Evaluation of Modern Speech Recognition Systems
-
-#语音识别 #模型评估 #多语言 #开源工具
-
-✅ **7.5/10** | 前25% | #模型评估 | #模型评估 | #语音识别 #多语言
-
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Lasse Borgholt (Corti, Aalborg University, Pioneer Centre for AI)
@@ -29,13 +19,23 @@ hiddenInHomeList: true
   Zheng-Hua Tan (Aalborg University, Department of Electronic Systems; Pioneer Centre for Artificial Intelligence, Copenhagen)
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文的亮点在于巧妙地将动态规划与波束搜索结合，直击传统Levenshtein对齐在语音识别评估中的两大痛点（一对一约束与歧义），设计了一个实用且有效的工具。短板是作为评估方法论文，其核心贡献略显“工具化”，理论深度和新颖性有局限，且提出的GLE评估指标需要更多独立验证才能确立其公信力。
 
 #
+### 🔗 开源详情
 
+- 代码：提供代码仓库链接：https://github.com/corticph/error-align
+- 模型权重：未提及。本文提出的是对齐算法，非神经网络模型。
+- 数据集：未提供新数据集。评估使用公开基准数据集（Common Voice, TED-LIUM, PriMock57）。
+- Demo：未提及。
+- 复现材料：论文给出了算法的核心公式和设计思路，代码已开源，基本可复现。但未提供详细的复现教程、超参数搜索空间或附录。
+- 论文中引用的开源项目：RapidFuzz [6]（用于实现LWA基线）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 本文旨在解决现代语音识别系统评估中的一个关键问题：传统的词错误率（WER）和基于Levenshtein的文本对齐方法无法精确捕捉和分析模型在罕见词、专有名词等关键信息上的错误，阻碍了对模型性能的深层理解。
@@ -59,7 +59,6 @@ hiddenInHomeList: true
 | Swahili | 73.9 | 45.3 | 34.4 |
 
 #
-
 ### 🏗️ 模型架构
 
 本文提出的并非一个传统意义上的神经网络模型，而是一个用于文本对齐的算法架构。其整体流程如下：
@@ -79,7 +78,6 @@ hiddenInHomeList: true
 *   结构化转换成本：动机是利用语音学常识（如元音-辅音替换比同类型替换代价更高）来指导搜索，使对齐更符合语言学直觉。
 
 #
-
 ### 💡 核心创新点
 
 1.  打破词级对齐的一对一约束：传统Levenshtein词级对齐要求一个参考词只能对应一个假设词（或空）。本算法在字符级DAG上进行搜索，通过设计规则（公式9），允许一个参考词映射到假设中的多个连续字符（如将`some things`对齐到`something`），解决了形态丰富的语言中常见的复合词对齐错误。
@@ -87,7 +85,6 @@ hiddenInHomeList: true
 3.  两阶段锚定-优化搜索策略：直接在字符级DAG上搜索最优词对齐路径是NP难问题。创新性地采用Levenshtein回溯图作为“粗锚”，并在此基础上进行带惩罚的波束搜索，在计算可行性和对齐质量之间取得了有效平衡。
 
 #
-
 ### 🔬 细节详述
 
 *   训练数据：本文算法无需训练。评估使用的数据集包括Common Voice (CV-EN等)、TED-LIUM (TED)、PriMock57 (PM57)，均为公开语音识别基准数据集。
@@ -99,7 +96,6 @@ hiddenInHomeList: true
 *   正则化或稳定训练技巧：不适用。
 
 #
-
 ### 📊 实验结果
 
 评估指标：论文提出了一个新的评估指标——全局到局部编辑距离（GLE）。其核心思想是，对于一个对齐，只计算插入和删除操作的代价，并惩罚不合理的替换（当对齐的子串长度不同时），然后通过对所有对齐的该代价求和，并与一个理论下界（仅用插入/删除的总编辑距离）求比值（公式10）。GLE越高，表示对齐越准确。
@@ -144,7 +140,6 @@ hiddenInHomeList: true
 5.  消融实验表明，公式（1）的替换罚分和搜索限制在 `Gb` 内是性能的主要贡献来源。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7。论文动机清晰，问题定义明确。提出的算法架构设计合理，通过消融实验和广泛的对比实验验证了其有效性。技术方案在工程上是创新的。主要扣分点在于：1）作为评估工具论文，理论突破性有限；2）提出的GLE指标需要社区进一步验证其区分度和普适性；3）未深入分析算法的时间/空间复杂度。
@@ -152,16 +147,3 @@ hiddenInHomeList: true
 - 开源与复现加成：0.5/1。提供了公开的代码仓库链接，这是最大的复现便利。但论文中未提及更详细的环境配置、参数敏感性分析或更复杂的使用案例，因此加成有限。
 
 #
-
-### 🔗 开源详情
-
-- 代码：提供代码仓库链接：https://github.com/corticph/error-align
-- 模型权重：未提及。本文提出的是对齐算法，非神经网络模型。
-- 数据集：未提供新数据集。评估使用公开基准数据集（Common Voice, TED-LIUM, PriMock57）。
-- Demo：未提及。
-- 复现材料：论文给出了算法的核心公式和设计思路，代码已开源，基本可复现。但未提供详细的复现教程、超参数搜索空间或附录。
-- 论文中引用的开源项目：RapidFuzz [6]（用于实现LWA基线）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

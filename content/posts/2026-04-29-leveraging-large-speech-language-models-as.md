@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音情感识别 | 6.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Leveraging Large Speech Language Models as Evaluators for Expressive Speech
-
-#语音情感识别 #语音大模型 #模型评估 #预训练 #数据集
-
-✅ **6.5/10** | 前50% | #语音情感识别 | #语音大模型 | #模型评估 #预训练
-
-学术质量 4.5/7 | 选题价值 1.5/2 | 复现加成 0.3 | 置信度 中
-
-
 ### 👥 作者与机构
 
 - 第一作者：未说明（论文署名为 Bismarck Bamfo Odoom, Philipp Koehn，未明确区分第一作者）
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Bismarck Bamfo Odoom（Johns Hopkins University, Center for Language and Speech Processing）、Philipp Koehn（Johns Hopkins University, Center for Language and Speech Processing）
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文巧妙地将表达性语音评估任务转化为一个“听懂并描述”问题，让SLM兼职当“考官”，思路值得肯定。但遗憾的是，“考官”的评分体系（微调后的分类性能）虽然在数字上有所提升，却更像是完成了一份填空题答卷，而非输出了能指导TTS优化的深度分析报告，其“评估器”的真正价值尚未被充分挖掘和验证。
 
 #
+### 🔗 开源详情
 
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及是否公开微调后的模型权重。
+- 数据集：提及使用了多个公开数据集（MSP-Podcast, CREMA-D等），并构建了合成数据集ExpressoSynth（使用Parler-TTS在LibriSpeech上生成），但未说明是否公开该合成数据集。
+- Demo：未提供在线演示。
+- 复现材料：给出了训练细节（LoRA rank/alpha, 学习率， batch size， epochs）和评估提示设计思路。
+- 论文中引用的开源项目：Parler-TTS (TTS模型), LoRA (微调方法), Whisper/HuBERT/Wav2Vec2.0 (可能作为SLM的基础编码器), 以及多个用于训练和评估的语音数据集。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  解决什么问题：如何高效、客观地评估生成语音（TTS）中的表达性（如情感、语调、说话风格等），以减少对昂贵且易受偏差影响的人工主观听测的依赖。
@@ -44,7 +44,6 @@ hiddenInHomeList: true
 6.  主要局限性：实验规模有限（每数据集仅1k训练样本）；微调后的模型实质上是将评估转化为分类/回归任务，论文未深入分析其自然语言输出的“评估”质量与信息量；未能验证使用此自动评估器是否能实际提升TTS系统生成语音的表达性质量。
 
 #
-
 ### 🏗️ 模型架构
 
 论文未提供全新的模型架构。其核心是直接使用现有的预训练大型语音语言模型（SLM）作为基础架构，具体使用了 Qwen-Audio 和 Qwen2-Audio。这两个模型通常由一个音频编码器（如基于Whisper的）和一个大型语言模型（如Qwen）后端组成。
@@ -55,7 +54,6 @@ hiddenInHomeList: true
 *   微调方式：采用低秩适配（LoRA）对整个模型进行参数高效微调，而非全参数微调。
 
 #
-
 ### 💡 核心创新点
 
 1.  将SLM应用于表达性语音评估：核心在于利用通用SLM强大的语音感知与理解能力，将其作为表达性语音的多维度自动评估器，超越了传统单一任务的评估模型。
@@ -63,7 +61,6 @@ hiddenInHomeList: true
 3.  对比无约束与有约束提示：研究了在微调和评估时，是否在提示中提供可能答案选项（“有���束”）对模型性能的影响，发现约束提示在微调后能带来一定的性能提升，尤其在情绪识别等任务上。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：使用了6个公开数据集和一个合成数据集（ExpressoSynth）的子集进行训练，每个数据集采样1000个样本，总计约6000个样本。所有音频重采样至16kHz。数据集覆盖的属性见原文表2。
@@ -75,7 +72,6 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：未说明。
 
 #
-
 ### 📊 实验结果
 
 论文主要结果集中于两张表格。
@@ -105,7 +101,6 @@ hiddenInHomeList: true
 与专用模型对比（表4&5关键结论）：微调后的Qwen-Audio和Qwen2-Audio在MSP-Podcast和RAVDESS的情感识别准确率上，均超过了专用的WavLM-Large和Wav2Vec2-XLSR模型。在MSP-Podcast的唤醒度（Arousal）和优势度（Dominance）预测上，微调后的Qwen2-Audio的MAE（0.15， 0.13）相比WavLM-Large（0.43， 0.64）有大幅提升（分别降低约65%和80%）。但在效价（Valence）预测上，WavLM-Large的MAE（0.11）优于微调后的SLM。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：4.5/7。工作完整，有明确的问题、方法和实验验证。创新点在于将SLM应用于新的评估任务，但本质仍是微调做分类/回归，方法论突破有限。实验设计合理，包含了必要的基线对比和消融（有/无约束提示），但数据量较小，且未深入分析模型输出的自然语言评估内容的质量。
@@ -113,16 +108,3 @@ hiddenInHomeList: true
 - 开源与复现加成：0.3/1。提供了详细的训练超参数和设置，使得在使用相同预训练模型和数据集的前提下可以复现主要实验。但未开源其微调代码、模型权重以及合成的ExpressoSynth数据集，降低了可及性。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及是否公开微调后的模型权重。
-- 数据集：提及使用了多个公开数据集（MSP-Podcast, CREMA-D等），并构建了合成数据集ExpressoSynth（使用Parler-TTS在LibriSpeech上生成），但未说明是否公开该合成数据集。
-- Demo：未提供在线演示。
-- 复现材料：给出了训练细节（LoRA rank/alpha, 学习率， batch size， epochs）和评估提示设计思路。
-- 论文中引用的开源项目：Parler-TTS (TTS模型), LoRA (微调方法), Whisper/HuBERT/Wav2Vec2.0 (可能作为SLM的基础编码器), 以及多个用于训练和评估的语音数据集。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -47,6 +47,19 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：论文提供了一个代码仓库链接：`https://bit.ly/autointerpret-audiollm`。
+- 模型权重：未提及是否开源训练好的SAE模型或中间表示。
+- 数据集：所使用的WavCaps， IEMOCAP， FSD50k， VoxCeleb1等均为公开数据集，论文未提供其修改版本或私有数据。
+- Demo：未提及。
+- 复现材料：论文提供了一些关键超参数（如K=250， e=8， lr=1e-5）和训练步数，但缺少详细的训练硬件、完整的配置文件、评估脚本和附录说明。复现细节不充分。
+- 论文中引用的开源项目：TopK-SAE [17]， CLAP [19]， SeaLLM-Audio-7B [20]， Qwen2-Audio-7B-Instruct [1]， Llama-3-70B-Instruct。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 问题：音频大模型（AudioLLM）性能强大但内部决策机制不透明，神经元呈现多义性，限制了其在高风险领域的可信部署。

@@ -42,6 +42,27 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：论文中提及实验基于开源的lighthouse仓库 [27]。但未提供作者自身LARS模块的代码仓库链接。
+- 模型权重：未提及是否公开预训练的LARS模型权重。
+- 数据集：使用的是公开数据集（QVHighlights, HiREST, Charades-Audiomatter），论文中未提供数据集获取方式，但这些数据集通常可从原论文链接获取。
+- Demo：未提及。
+- 复现材料：论文中说明了使用lighthouse库、与QD-DETR相同的超参数，但未给出具体的超参数配置（如学习率、batch size等）、训练配置文件或检查点。
+- 引用的开源项目：
+    1.  lighthouse [27]：用于VMR-HD的复现性工具库。
+    2.  QD-DETR [9]：基线VMR模型。
+    3.  CLIP [21]：视觉和文本编码器。
+    4.  SlowFast [22]：视觉编码器骨干网络。
+    5.  PANNs [23]：音频编码器。
+    6.  Whisper [25]：用于生成ASR文本。
+    7.  Sentence-BERT [26]：用于编码ASR文本。
+- 总结：论文在实验复现性上部分依赖于已有的开源工具和基线模型，但未提供其自身贡献部分（LARS）的开源实现，这限制了论文的可复现性。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的DETR类视频片段检索（VMR）模型存在两个主要问题：（1）突变的视觉场景容易导致片段边界误检；（2）由于DETR的条件独立输出和sigmoid分数校准问题，模型输出的片段相关性分数不可靠，导致排序不佳。

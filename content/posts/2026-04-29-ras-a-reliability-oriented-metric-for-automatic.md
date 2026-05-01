@@ -7,32 +7,31 @@ categories: [论文速递]
 description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 RAS: a Reliability Oriented Metric for Automatic Speech Recognition
-
-#语音识别 #强化学习 #鲁棒性 #模型评估 #数据集
-
-✅ **7.5/10** | 前25% | #语音识别 | #强化学习 | #鲁棒性 #模型评估 | [arxiv](https://arxiv.org/abs/2604.24278v2)
-
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Wenbin Huang（上海交通大学，X-LANCE Lab）
 - 通讯作者：未明确说明（论文首页提供的邮箱为`hartmann_psi, qiuyuhang, kai.yu@sjtu.edu.cn`，可推测Kai Yu为资深作者或通讯作者之一）
 - 作者列表：Wenbin Huang（上海交通大学，X-LANCE Lab）、Yuhang Qiu（上海交通大学，X-LANCE Lab）、Bohan Li（未说明）、Yiwei Guo（未说明）、Jing Peng（未说明）、Hankun Wang（未说明）、Xie Chen（未说明）、Kai Yu（上海交通大学，X-LANCE Lab）。所有作者均隶属于“X-LANCE Lab, School of Computer Science, Shanghai Jiao Tong University, China”以及“MoE Key Lab of Artificial Intelligence; Jiangsu Key Lab of Language Computing, China”。
-
 ### 💡 毒舌点评
 
 亮点：本文敏锐地抓住了ASR“自信但错误”输出在实际应用中的危害，并系统性地提出从评估指标（RAS）到训练范式（PH-Supv+RL）的完整解决方案，技术贡献扎实且思路清晰。短板：所采用的基线模型（Whisper-Tiny）和对比方法相对传统（如基于logit的启发式方法），缺乏与当前基于大语言模型的ASR或更前沿的主动学习、不确定性估计方法的直接对比，消融研究也仅验证了RL阶段，对PH-Supv阶段不同策略的探讨不足。
+### 🔗 开源详情
 
+- 代码：论文明确提供了代码仓库链接：https://github.com/HartmannPsi/Reliability-Aware-Score。
+- 模型权重：未提及公开模型权重。
+- 数据集：使用了公开数据集LibriSpeech和TALCS。论文未提及是否公开其构造的Noisy LibriSpeech数据集或训练用的带PH伪标签数据集。
+- Demo：未提及在线演示。
+- 复现材料：论文在方法描述和实验设置部分提供了较详细的训练超参数（如学习率、批量大小、epoch数、GRPO的G值、KL惩罚设置等）。但未提及完整的代码环境配置、预训练模型下载链接、详细的预处理步骤或附录。
+- 论文中引用的开源项目：依赖Whisper模型及其tokenizer，并引用了BeaqleJS框架用于人类听测。
+
+---
+
+[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
 ### 📌 核心摘要
 
 本文针对自动语音识别（ASR）系统在嘈杂或模糊条件下容易产生“表面流畅但实质错误”的转录问题，提出了一种提升转录可靠性的新范式。方法的核心是为ASR模型引入一个专用的“占位符”（PH），允许模型在局部片段不确定性高时选择“弃选”（输出PH），而非强行输出错误文本。在此基础上，论文提出了一个与人类偏好对齐的新评估指标——可靠性感知评分（RAS），该指标通过动态规划算法计算，并通过人类听测实验校准了其关键参数α。为训练具备弃选能力的ASR模型，论文设计了两阶段训练流程：首先通过“占位符监督”（PH-Supv）构建训练数据，让模型学会输出PH；然后采用“群体相对策略优化”（GRPO）强化学习，以RAS作为奖励信号进一步优化模型。实验在LibriSpeech（干净与噪声版本）和TALCS（中英混合）数据集上进行，结果表明，所提方法能显著提升转录的可靠性（RAS）。例如，在TALCS数据集上，RAS从基线模型的-0.1093大幅提升至0.4786；在SNR=0dB的噪声LibriSpeech上，RAS相比基线提升0.2657。该工作的实际意义在于为高风险领域（如医疗、法律）的ASR应用提供了更可信的输出，其局限性在于与最新方法的对比有待加强，且实际部署中弃选片段的后续处理需进一步设计。
 
 #
-
 ### 🏗️ 模型架构
 
 本文的核心并非提出一个新的端到端ASR模型架构，而是在现有ASR模型（论文中使用Whisper-Tiny作为基线）上增加“弃选”能力，并围绕此设计了新的评估指标和训练流程。其整体流程如下：
@@ -48,7 +47,6 @@ hiddenInHomeList: true
     - 阶段二：强化学习（RL）：使用GRPO算法，以RAS作为奖励信号，对PH-Supv阶段的模型进行进一步优化。模型生成多个候选转录，根据每个转录计算RAS奖励，并优化策略以最大化期望RAS。
 
 #
-
 ### 💡 核心创新点
 
 1.  细粒度弃选范式：将机器学习中的“弃选”（abstention）或“选择性预测”（selective prediction）从传统的实例级（整句接受或拒绝）扩展到ASR的序列级/片段级，允许模型在词或子词粒度上选择性输出PH，从而更精准地定位不确定性，避免错误传播。
@@ -56,7 +54,6 @@ hiddenInHomeList: true
 3.  基于RAS奖励的强化学习训练：建立了一套完整的训练流程（PH-Supv + GRPO），其中强化学习阶段直接以RAS作为奖励信号进行优化。这使得模型的训练目标直接与最终评估指标对齐，是一种目标导向的有效训练策略。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -76,7 +73,6 @@ hiddenInHomeList: true
 - 正则化技巧：在GRPO中使用KL散度约束（公式13）防止策略崩溃。
 
 #
-
 ### 📊 实验结果
 
 主要结果（表1）：在干净的LibriSpeech和TALCS数据集上，本文方法（Base+PH-Supv+RL）在RAS指标上均显著优于基线（Base）和基于logit的弃选方法（Base+Logit）。
@@ -98,22 +94,8 @@ hiddenInHomeList: true
 | Base+PH-Supv+RL | 0.8811 | 0.9376 | 0.0565 | 0.4786 | 0.7391 | 0.2940 |
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：创新性良好，提出了细粒度弃选范式和与人对齐的RAS指标。技术路线清晰，从指标定义到训练方法构成一个闭环。实验设计合理，覆盖了干净、噪声、跨语言场景。主要短板在于：1）与更先进的基线（如基于大模型的ASR、主动学习）对比不足；2）消融实验较为基础，未深入探究PH-Supv阶段不同错误替换策略的影响；3）模型规模较小（Whisper-Tiny），在大规模模型上的效果有待验证。
 - 选题价值：1.5/2：关注ASR可靠性是一个重要但相对细分的方向，尤其对医疗、法律等高风险应用有明确价值。工作具有较好的前瞻性和实际应用潜力。
 - 开源与复现加成：0.5/1：论文提供了代码链接（GitHub），并给出了关键训练超参数。但未提及模型权重、训练数据集的详细获取方式或处理脚本，也未提供Demo或更详细的复现指南（如环境配置、检查点），复现门槛仍存在。
-
-### 🔗 开源详情
-
-- 代码：论文明确提供了代码仓库链接：https://github.com/HartmannPsi/Reliability-Aware-Score。
-- 模型权重：未提及公开模型权重。
-- 数据集：使用了公开数据集LibriSpeech和TALCS。论文未提及是否公开其构造的Noisy LibriSpeech数据集或训练用的带PH伪标签数据集。
-- Demo：未提及在线演示。
-- 复现材料：论文在方法描述和实验设置部分提供了较详细的训练超参数（如学习率、批量大小、epoch数、GRPO的G值、KL惩罚设置等）。但未提及完整的代码环境配置、预训练模型下载链接、详细的预处理步骤或附录。
-- 论文中引用的开源项目：依赖Whisper模型及其tokenizer，并引用了BeaqleJS框架用于人类听测。
-
----
-
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)

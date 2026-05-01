@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR
-
-#语音识别 #数据集 #远场语音 #迁移学习 #低资源
-
-✅ **7.5/10** | 前25% | #语音识别 | #数据集 | #远场语音 #迁移学习
-
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：未说明（论文作者列表未按顺序标注第一作者）
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Pattara Tipaksorn (NECTEC Speech and Text Understanding Research Team), Sumonmas Thatphithakkul (NECTEC Speech and Text Understanding Research Team), Vataya Chunwijitra (NECTEC Speech and Text Understanding Research Team), Kwanchiva Thangthai (NECTEC Speech and Text Understanding Research Team)
 
 #
-
 ### 💡 毒舌点评
 
 亮点：数据集设计非常“接地气”——在真实的、有冰箱和空调噪音的办公室里，用从领夹麦到10米远蓝牙音箱的多种普通设备录音，完美模拟了真实会议中“设备杂、距离远、有混响”的痛点，比用专业阵列录音更有工程实践价值。短板：论文的学术贡献主要停留在“造轮子立规矩”阶段，虽然验证了Whisper微调的有效性，但缺乏对ASR模型本身更深入的技术探索（例如如何更好地处理重叠或超远场语音），更像是一个详实的“产品说明书”和“测试报告”。
 
 #
+### 🔗 开源详情
 
+- 代码：提供了GitHub仓库链接：https://github.com/CAI-NECTEC/LOTUSDIS，包含训练和评估脚本。
+- 模型权重：论文中未提及公开发布微调后的模型权重，但提供了可复现训练的脚本。
+- 数据集：公开提供，许可证为CC-BY-SA 4.0。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了训练和评估脚本、数据划分，以及关键的训练设置（如Whisper模型版本、训练轮数、硬件）。详细的超参数配置需在代码仓库中查看。
+- 论文中引用的开源项目：PyThaiNLP（分词）、NaraWPE（去混响）、OpenSLR-28（房间脉冲响应数据）、Whisper模型、以及文中对比的其他泰语Whisper模型（Pathumma, Biodatlab, Monsoon）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 要解决什么问题：现有泰语语音识别（ASR）数据集大多局限于近场朗读或广播语音，缺乏用于评估和训练系统在真实会议场景下，应对远场、混响、噪声和说话人重叠等挑战的公开语料，严重阻碍了泰语远场对话ASR的研究与应用。
@@ -64,13 +64,11 @@ hiddenInHomeList: true
 6. 主要局限性是什么：（1）数据集本身创新多于方法创新，论文未提出新的ASR模型架构；（2）实验主要基于Whisper进行验证，未探索其他模型（如Conformer等）在该数据集上的表现；（3）会议场景限于三人，说话人重叠比例约30%，对于更复杂的多人（>4人）重叠场景未覆盖；（4）论文未提供数据集的详细采集、标注质量评估（如标注者间一致性）等元信息。
 
 #
-
 ### 🏗️ 模型架构
 
 论文中未提及新设计的ASR模型架构。本文的核心是数据集而非模型。论文中使用的“模型”均为现有的Whisper架构变体（Whisper-large-v3及其泰语微调版本Pathumma-whisper-th-large-v3）。因此，本节不适用。
 
 #
-
 ### 💡 核心创新点
 
 1.  首个公开泰语远场对话ASR语料库：填补了泰语在远场、自然对话场景下无公开大规模数据集的空白，且许可证（CC-BY-SA 4.0）宽松，促进了可复现研究。
@@ -78,7 +76,6 @@ hiddenInHomeList: true
 3.  系统性的基准分析与洞察：不仅发布数据，还通过大量消融实验（微调、前端处理、单麦训练、数据增强、重叠分析）深入剖析了远场ASR的挑战，并给出了实用建议（如距离多样性训练数据的重要性、特定前端处理的局限性、数据增强的有效性），为后续研究指明了方向。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：LOTUSDIS数据集本身。Train集：17:37小时（5麦克风总时长88:07小时），包含69个会议会话，74位参与者，120,245条话语。
@@ -93,7 +90,6 @@ hiddenInHomeList: true
 - 正则化或稳定训练技巧：未说明。
 
 #
-
 ### 📊 实验结果
 
 实验在LOTUSDIS测试集（11个会话，13.17小时5麦克风总时长）上进行，主要指标为词错误率（WER%）。所有关键结果均已在核心摘要的表格中列出。
@@ -108,7 +104,6 @@ hiddenInHomeList: true
 - 重叠语音分析（图2）：如图所示，对于所有麦克风，重叠语音的WER均显著高于单人语音。这种效应在远场设备（BT3m, BT10m）上尤为严重，其WER分布的上四分位数和最大值极高，表明重叠与距离问题存在强交互作用。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：论文技术扎实，实验设计系统、全面，结论有数据支撑，可信度高。主要缺陷是创新性有限，属于数据集构建和基准测试工作，而非提出新的算法理论或模型架构。
@@ -116,16 +111,3 @@ hiddenInHomeList: true
 - 开源与复现加成：0.5/1：积极开放数据集、基线代码和训练脚本，极大提升了研究的可复现性。加分项明确。未开源具体微调后的模型权重，但提供了从头训练的完整脚本，因此给+0.5分。
 
 #
-
-### 🔗 开源详情
-
-- 代码：提供了GitHub仓库链接：https://github.com/CAI-NECTEC/LOTUSDIS，包含训练和评估脚本。
-- 模型权重：论文中未提及公开发布微调后的模型权重，但提供了可复现训练的脚本。
-- 数据集：公开提供，许可证为CC-BY-SA 4.0。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了训练和评估脚本、数据划分，以及关键的训练设置（如Whisper模型版本、训练轮数、硬件）。详细的超参数配置需在代码仓库中查看。
-- 论文中引用的开源项目：PyThaiNLP（分词）、NaraWPE（去混响）、OpenSLR-28（房间脉冲响应数据）、Whisper模型、以及文中对比的其他泰语Whisper模型（Pathumma, Biodatlab, Monsoon）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

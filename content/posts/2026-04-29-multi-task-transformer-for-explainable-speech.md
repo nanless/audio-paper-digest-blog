@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音伪造检测 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Multi-Task Transformer for Explainable Speech Deepfake Detection via Formant Modeling
-
-#语音伪造检测 #多任务学习 #Transformer #音频安全
-
-✅ **7.5/10** | 前25% | #语音伪造检测 | #多任务学习 | #Transformer #音频安全
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 中
-
-
 ### 👥 作者与机构
 
 - 第一作者：Viola Negroni (Politecnico di Milano, 意大利米兰理工大学电子、信息与生物工程系)
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Viola Negroni (Politecnico di Milano), Luca Cuccovillo† (Fraunhofer IDMT), Paolo Bestagini (Politecnico di Milano), Patrick Aichroth† (Fraunhofer IDMT), Stefano Tubaro (Politecnico di Milano)。 和 † 对应其所属机构。
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文的亮点在于其“设计即解释”的思路，通过引入共振峰预测和发声区域检测作为辅助任务，让模型决策过程更具物理意义，而非纯粹的黑箱分类。然而，其短板也十分明显：与自身前代模型的对比固然重要，但若想在领域内立足，缺少与 AASIST、RawNet2 等经典基线的直接较量，说服力难免打折扣；更致命的是，全文只字未提开源计划，让“可复现性”在实践中沦为一句空话。
 
 #
+### 🔗 开源详情
 
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及。
+- 数据集：使用公开数据集（ASVspoof 5, In-the-Wild, FakeOrReal, TIMIT-TTS），但未提供额外数据。
+- Demo：未提及。
+- 复现材料：论文提供了详细的超参数、损失函数权重、训练硬件及时长等信息，但未提供训练好的模型检查点或完整的配置文件。
+- 论文中引用的开源项目：Parselmouth (用于提取F1, F2)，pYIN算法（用于提取F0）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：现有语音深度伪造检测模型往往缺乏可解释性，决策可能依赖于背景噪声等与语音内容无关的线索，且部分模型计算复杂度高。
@@ -47,7 +47,6 @@ hiddenInHomeList: true
 6.  主要局限性：（1）缺乏与当前领域内SOTA模型的直接性能对比；（2）未提供开源代码或模型，复现性不足；（3）其可解释性分析依赖于注意力权重，这本身也是一种近似，并非绝对的因果解释；（4）模型对编码压缩等真实世界条件的鲁棒性仍有待通过数据增强进一步提升。
 
 #
-
 ### 🏗️ 模型架构
 
 模型整体是一个多任务Transformer编码器-解码器架构，旨在同时完成语音表征学习、辅助任务（共振峰轨迹预测、发声区域检测）和最终分类任务，并内建可解释性。
@@ -72,7 +71,6 @@ hiddenInHomeList: true
 - 注意力池化替代分类token：动机是为了获得帧级的决策权重，从而实现可解释性。
 
 #
-
 ### 💡 核心创新点
 
 1.  面向可解释性的多任务框架设计：将伪造检测与共振峰轨迹预测、发声区域检测这两个具有明确物理语音学意义的辅助任务紧密结合，使模型的中间过程和决策依据更易理解。
@@ -81,7 +79,6 @@ hiddenInHomeList: true
 4.  模型轻量化：在保持或提升性能的前提下，将参数量从64.7M减少至41.8M，使其更易于部署。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：在ASVspoof 5数据集的训练集和开发集上训练，并使用其评估集进行域内测试。同时使用In-the-Wild、FakeOrReal和TIMIT-TTS三个数据集进行域外泛化评估。所有语音重采样至16kHz。训练时未使用数据增强，真实语音过采样以保持类别平衡。
@@ -109,7 +106,6 @@ hiddenInHomeList: true
     - 编码器训练时不使用掩码（与SFATNet-3不同）。
 
 #
-
 ### 📊 实验结果
 
 主要对比模型是其前代 SFATNet-3。论文未提供与领域内其他最先进模型（如AASIST, RawNet2）的直接对比数据。
@@ -147,7 +143,6 @@ hiddenInHomeList: true
 - 伪造语音：在所有数据集上，模型都显著更依赖清音区域（权重占70%-80%）。这表明，合成语音在清音部分（如无声摩擦音、停顿）的伪影可能是该模型检测的关键线索。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文工作扎实，技术路线清晰，实验覆盖了性能、泛化、鲁棒性和可解释性多个维度。主要不足在于创新性为渐进式改进，且缺乏与领域内非自身系列SOTA模型的对比，削弱了其贡献的突出性。
@@ -155,16 +150,3 @@ hiddenInHomeList: true
 - 开源与复现加成：0.0/1：尽管论文详细描述了实验设置，但完全未提供代码、模型或任何复现实验的开源材料，严重阻碍了学术社区的验证与跟进，这是一个重大缺陷。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及。
-- 数据集：使用公开数据集（ASVspoof 5, In-the-Wild, FakeOrReal, TIMIT-TTS），但未提供额外数据。
-- Demo：未提及。
-- 复现材料：论文提供了详细的超参数、损失函数权重、训练硬件及时长等信息，但未提供训练好的模型检查点或完整的配置文件。
-- 论文中引用的开源项目：Parselmouth (用于提取F1, F2)，pYIN算法（用于提取F0）。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

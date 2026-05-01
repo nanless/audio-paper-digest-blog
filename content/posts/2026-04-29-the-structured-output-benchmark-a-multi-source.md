@@ -7,26 +7,26 @@ categories: [论文速递]
 description: "基准测试 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 The Structured Output Benchmark: A Multi-Source Benchmark for Evaluating Structured Output Quality in Large Language Models
-
-#基准测试 #模型评估 #大语言模型 #数据集 #跨模态
-
-✅ **7.0/10** | 前25% | #基准测试 | #大语言模型 | #模型评估 #数据集 | [arxiv](https://arxiv.org/abs/2604.25359)
-
-学术质量 6.0/7 | 选题价值 1.0/2 | 复现加成 0.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Abhinav Kumar Singh（JigsawStack, Inc.）
 - 通讯作者：未说明
 - 作者列表：Abhinav Kumar Singh（JigsawStack, Inc., New Delhi, India），Harsha Vardhan Khurdula（JigsawStack, Inc., San Francisco, CA, USA），Yoeven D Khemlani（JigsawStack, Inc., San Francisco, CA, USA），Vineet Agarwal（JigsawStack, Inc., Durgapur, WB, India）
-
 ### 💡 毒舌点评
 
 这篇论文直击了大模型应用中的一个真实痛点：生成的JSON格式完美但内容胡说八道，并提供了迄今最系统的跨模态评估框架。不过，其“多模态”评估实则是把图像和音频先转成文本再喂给模型，相当于跳过了最关键、最容易出错的视觉和语音理解环节，这使得对多模态大模型的直接评估力度大打折扣。
+### 🔗 开源详情
 
+- 代码：论文中明确声明“We release the dataset, evaluation pipeline, and all related code.”，但未在正文中提供具体仓库链接。按要求，应总结为“论文声明将开源，但未在文中提供具体链接”。
+- 模型权重：未提及。本文为基准评估工作，不涉及模型训练。
+- 数据集：论文声明将发布基准数据集（SOB），包含文本、图像、音频三种来源的评估记录。
+- Demo：未提及。
+- 复现材料：提供了详细的评估指标定义（附录C）、数据集构建流程（附录H）、分类类别说明（附录G）和示例（附录D， F），复现信息较为充分。
+- 论文中引用的开源项目：HotpotQA（文本来源）， olmOCR-bench（图像来源）， AMI Meeting Corpus（音频来源）， vLLM（模型服务）， Pydantic和jsonschema（数据验证）， Gemini 2.5 Flash/Pro（LLM交叉验证）。
+
+---
+
+[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
 ### 📌 核心摘要
 
 1.  问题：现有评估大模型生成结构化输出（如JSON）的方法只关注格式是否正确（Schema Compliance），或只在单一来源（如纯文本）上测试值的正确性，忽略了实际部署中从多种来源提取数据并保证每个字段值都准确的难题。
@@ -42,7 +42,6 @@ hiddenInHomeList: true
     *   非端到端评估：图像和音频均通过预处理（OCR/人工转录）变为文本，未评估模型直接处理原始图像或音频的能力。
     *   评估严格性：采用严格精确匹配，会惩罚语义相同但表述不同的正确答案（如“USA” vs “United States”）。
     *   音频数据集较小：仅115条记录，且基于高质量人工转录，代表的是性能上界。
-
 ### 🏗️ 模型架构
 
 本文并非提出新的生成模型，而是提出一个评估框架与基准测试集。其“模型架构”即SOB评估流程，如下图所示：
@@ -59,13 +58,11 @@ hiddenInHomeList: true
 4.  扁平化比较：将地面真值(`g`)和模型预测(`r`)均展平为以路径为键、叶节点值为值的映射（如`directors.0.nationality: “American”`）。
 5.  逐字段评分：对每个叶路径字段进行比较，计算七项指标（见§4.1），包括精确匹配（Value Accuracy）、Token级F1（Faithfulness）、结构覆盖等。
 6.  聚合与报告：对每条记录计算各指标，再按Schema复杂度加权平均，得到模型在文本、图像、音频上的最终分数。
-
 ### 💡 核心创新点
 
 1.  跨模态统一结构化输出基准：首次将文本、图像（通过OCR）、音频（通过转录）三种来源的提取任务置于同一评估框架下，使用相同的Schema和评分标准，实现了真正的跨模态能力横向比较。
 2.  聚焦“值准确性”的细粒度评估体系：设计了以“Value Accuracy”（字段值精确匹配）为核心的七项指标，并引入“硬化评分”机制，明确区分了“生成有效JSON”和“生成正确JSON”这两个不同层次的能力。
 3.  基于实际需求的生产化视角：基准的构建（如选择多跳问答、复杂文档、会议记录）和评估（如Schema复杂度加权、对长上下文的关注）紧密围绕企业数据提取场景（发票、医疗记录、会议纪要），揭示了真实落地中“格式正确但内容错误”这一关键风险。
-
 ### 🔬 细节详述
 
 - 训练数据：论文不涉及模型训练，而是构建评估数据集。数据来源与规模：
@@ -81,7 +78,6 @@ hiddenInHomeList: true
 - 训练硬件：未说明（本文为评估工作）。
 - 推理细节：所有模型使用vLLM服务，禁用推理模式（reasoning）以隔离提取能力。对于三个模型（GPT-5， GPT-5-Mini， DS-R1-Distill-32B），使用其最低推理强度配置。
 - 正则化或稳定训练技巧：不适用。
-
 ### 📊 实验结果
 
 主要基准结果：跨模态统一排行榜（表2摘要）
@@ -110,7 +106,6 @@ hiddenInHomeList: true
 | Gemini-2.5-Flash | 0.237 | 0.270 | 0.860 | 0.956 |
 | GPT-5.4 | 0.180 | 0.173 | 0.869 | 0.808 |
 > 结论：使用结构化解码对JSON合规率有提升，但对Value Accuracy改善有限（±0.033），表明值准确性瓶颈不在格式约束。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7
@@ -123,16 +118,3 @@ hiddenInHomeList: true
     - 与读者相关性：对于关注大模型应用、数据工程、信息抽取的读者价值很高。对于专注于语音合成/识别的读者，相关性较弱，因音频评估已转为文本。
 - 开源与复现加成：0.0/1
     - 论文明确承诺发布数据集、评估代码和所有模型输出，这极大地促进了研究的可复现性和后续工作。这是本研究的重要加分项。但未提供预训练模型或训练代码，符合其评估工作的定位。
-
-### 🔗 开源详情
-
-- 代码：论文中明确声明“We release the dataset, evaluation pipeline, and all related code.”，但未在正文中提供具体仓库链接。按要求，应总结为“论文声明将开源，但未在文中提供具体链接”。
-- 模型权重：未提及。本文为基准评估工作，不涉及模型训练。
-- 数据集：论文声明将发布基准数据集（SOB），包含文本、图像、音频三种来源的评估记录。
-- Demo：未提及。
-- 复现材料：提供了详细的评估指标定义（附录C）、数据集构建流程（附录H）、分类类别说明（附录G）和示例（附录D， F），复现信息较为充分。
-- 论文中引用的开源项目：HotpotQA（文本来源）， olmOCR-bench（图像来源）， AMI Meeting Corpus（音频来源）， vLLM（模型服务）， Pydantic和jsonschema（数据验证）， Gemini 2.5 Flash/Pro（LLM交叉验证）。
-
----
-
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)

@@ -7,26 +7,26 @@ categories: [icassp-2026]
 description: "音乐信息检索 | 8.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Evaluating High-Resolution Piano Sustain Pedal Depth Estimation with Musically Informed Metrics
-
-#音乐信息检索 #模型评估 #数据集 #开源工具
-
-🔥 **8.0/10** | 前25% | #音乐信息检索 | #模型评估 | #数据集 #开源工具
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Hanwen Zhang (Schulich School of Music, McGill University)
 - 通讯作者：未说明 (论文中未明确标注通讯作者)
 - 作者列表：Hanwen Zhang (Schulich School of Music, McGill University), Kun Fang (Schulich School of Music, McGill University), Ziyu Wang (Courant Institute of Mathematical Sciences, New York University; Mohamed bin Zayed University of Artificial Intelligence), Ichiro Fujinaga (Schulich School of Music, McGill University)
-
 ### 💡 毒舌点评
 
 亮点：论文没有满足于用MSE/MAE糊弄事，而是从钢琴演奏和教学的真实需求出发，硬生生构建了一套“动作-手势”二层评估体系，为模型诊断提供了像“病历”一样具体的反馈，这比单纯跑分更有价值。短板：所提出的评估框架依赖额外的后处理步骤（如滑动窗口回归、手势分割与分类），增加了评估流程的复杂度；且手势类型的四象限划分标准（阈值）是基于特定数据集统计得出的，其普适性未在其他数据集上验证。
+### 🔗 开源详情
 
+- 代码：提供了GitHub仓库链接：https://github.com/kunfang98927/PedalDetection/blob/icassp2026/
+- 模型权重：论文中未提及是否公开训练好的模型权重。
+- 数据集：使用了公开数据集MAESTRO v3.0.0。
+- Demo：未提及在线演示。
+- 复现材料：论文详细说明了模型架构（变体）、数据集、损失函数、优化器、学习率调度策略、批大小、训练轮数和硬件环境。提供了代码仓库，可能包含进一步复现细节。
+- 论文中引用的开源项目：论文引用了使用[4]进行音频到MIDI转录的工作，可能依赖该项目的代码。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：现有钢琴延音踏板深度估计模型主要依赖帧级指标（如MSE, F1）进行评估，这些指标无法有效捕捉对音乐至关重要的边界时序正确性和踏板曲线轮廓特征，评估结果音乐可解释性差。
@@ -39,7 +39,6 @@ hiddenInHomeList: true
     - 关键发现（图3）：二值化模型（AUDIO (BINARY)）倾向于预测“高地”手势，而对更复杂的“山脉”等手势识别能力很差。
 5. 实际意义：为踏板深度估计任务提供了更全面、更具音乐解释性的评估工具，有助于指导模型设计与改进，推动该领域向更实用的方向发展。
 6. 主要局限性：所有模型对于短促、快速变化的手势（如Pinnacle）预测仍具挑战性；评估框架中的一些参数（如手势分类阈值）需要根据数据集调整；模型性能尚未在感知实验中验证。
-
 ### 🏗️ 模型架构
 
 论文未提供统一的模型架构图。根据文字描述，三个模型变体均基于相同的Transformer编码器架构，主要区别在于输入和损失。
@@ -60,7 +59,6 @@ hiddenInHomeList: true
         - AUDIO (BINARY)：使用二值化标签训练，输出原始sigmoid值作为预测深度。
         - AUDIO：基线模型，在连续深度值上进行回归训练。
         - AUDIO+MIDI：在AUDIO基础上增加MIDI输入流。
-
 ### 💡 核心创新点
 
 1.  提出音乐感知的三层级评估框架：这是本文最核心的创新。突破了传统帧级指标的局限，引入了动作级评估（评估踏板操作的“按压/保持/释放”状态识别）和手势级评估（评估完整踏板乐句的轮廓形状），使评估结果更符合音乐实践与教学认知。
@@ -68,7 +66,6 @@ hiddenInHomeList: true
 3.  设计针对性的形状相似度指标：在手势级评估中，采用傅里叶描述子（滤除高频噪声，关注主形状）和5点关键特征分析（起始、结束、中位数、均值、最大值）来计算预测轮廓与真实轮廓的MSE，比原始帧级MSE更具鲁棒性和可解释性。
 4.  系统性的消融实验设计：通过构建AUDIO、AUDIO+MIDI、AUDIO (BINARY)三个控制变量模型，清晰地展示了连续值估计的必要性（对比BINARY模型）以及MIDI结构信息的增益（对比AUDIO模型），验证了评估框架区分模型细微性能差异的能力。
 5.  揭示了“连续估计”的根本重要性：实验证明，仅优化二值分类（AUDIO (BINARY)）会严重损害对复杂踏板表达（如Mountain）的建模能力，这为任务的目标函数设计提供了直接指导。
-
 ### 🔬 细节详述
 
 - 训练数据：MAESTRO v3.0.0数据集。这是一个专业钢琴演奏数据集，包含同步的音频、MIDI和光学传感器采集的连续踏板深度数据。
@@ -86,7 +83,6 @@ hiddenInHomeList: true
 - 训练硬件：单块NVIDIA H100 (80 GB) GPU。
 - 推理细节：论文中未提及推理阶段的特殊策略（如解码、温度、beam size等），默认为帧级前向传播。
 - 正则化或稳定训练技巧：使用了AdamW的权重衰减和OneCycle学习率调度，这是常见的稳定训练技巧。
-
 ### 📊 实验结果
 
 主要对比实验结果：
@@ -126,22 +122,8 @@ hiddenInHomeList: true
 
 踏板动作与手势分布图]
 图3：地面真值（GT）与三个模型预测的踏板动作（上）和手势（下）分布。ACTION分布显示AUDIO(BINARY)与其他模型在Press/Release状态比例上有差异。GESTURE分布清晰显示AUDIO(BINARY)过度预测Highland，而忽略Mountain等复杂手势；AUDIO+MIDI的分布最接近GT。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：本文的创新集中于评估方法论，提出了一个逻辑自洽、有音乐学支撑的三层评估体系，并通过精心设计的实验证明了其有效性和诊断价值。技术实现（状态检测、形状比较）扎实。模型架构是标准的Transformer多任务网络，本身创新有限。实验对比充分，数据支撑有力。扣分点在于评估框架的某些参数需依赖数据集统计，普适性有待进一步验证。
 - 选题价值：1.5/2：针对踏板深度估计这一垂直MIR任务的评估痛点提出解决方案，切中��害。音乐感知指标的引入具有启发性和实用价值，对相关领域的研究者（如MIR、音乐教育技术）有明确参考意义。但任务的受众和应用面相对较窄。
 - 开源与复现加成：0.5/1：论文提供了代码仓库链接、公开数据集（MAESTRO）、详细的训练超参数和硬件信息，为复现提供了良好基础。但未提及是否提供预训练模型权重，也未提供完整的复现脚本或配置文件，因此加成有限。
-
-### 🔗 开源详情
-
-- 代码：提供了GitHub仓库链接：https://github.com/kunfang98927/PedalDetection/blob/icassp2026/
-- 模型权重：论文中未提及是否公开训练好的模型权重。
-- 数据集：使用了公开数据集MAESTRO v3.0.0。
-- Demo：未提及在线演示。
-- 复现材料：论文详细说明了模型架构（变体）、数据集、损失函数、优化器、学习率调度策略、批大小、训练轮数和硬件环境。提供了代码仓库，可能包含进一步复现细节。
-- 论文中引用的开源项目：论文引用了使用[4]进行音频到MIDI转录的工作，可能依赖该项目的代码。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

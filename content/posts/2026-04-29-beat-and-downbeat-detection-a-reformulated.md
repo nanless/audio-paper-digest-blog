@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音乐理解 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Beat and Downbeat Detection: A Reformulated Approach
-
-#音乐理解 #端到端模型 #相位建模 #回归任务
-
-✅ **7.5/10** | 前25% | #音乐理解 | #端到端模型 | #相位建模 #回归任务
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 中
-
-
 ### 👥 作者与机构
 
 - 第一作者：James Bolt (Queen Mary University of London, School of Electronic Engineering and Computer Science)
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：James Bolt (Queen Mary University of London, School of Electronic Engineering and Computer Science), Johan Pauwels (Queen Mary University of London, School of Electronic Engineering and Computer Science), George Fazekas (Queen Mary University of London, School of Electronic Engineering and Computer Science)
 
 #
-
 ### 💡 毒舌点评
 
 亮点在于大胆地用相位差矩阵（PDM）和回归损失彻底绕开了困扰该领域多年的类别不平衡问题，思路清奇；短板则是实验对比过于“单挑”BeatThis，缺乏与其他主流方法（如基于Transformer或不同损失函数的模型）的横向对比，说服力打了折扣。
 
 #
+### 🔗 开源详情
 
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及公开权重。
+- 数据集：使用了公开数据集，但论文本身未提供新的数据集。
+- Demo：未提供在线演示。
+- 复现材料：提供了模型架构图、主要训练参数（优化器、学习率、epoch、输入规格）和峰值检测的简要描述。但缺少完整的超参数搜索细节、损失曲线、代码实现和预训练模型。
+- 论文中引用的开源项目：论文引用了多个数据集和方法（如BeatThis, BeatKAN），但未说明其复现是否依赖特定的开源代码库。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决的问题：传统节拍/节拍点检测采用二分类方法，导致严重的类别不平衡（非节拍帧远多于节拍帧），并通常依赖动态贝叶斯网络（DBN）进行后处理以提升时间一致性。
@@ -41,7 +41,6 @@ hiddenInHomeList: true
 6.  主要局限性：PDM预测的峰值不够尖锐，导致性能对峰值检测算法和阈值选择高度敏感；与SOTA的对比基线单一；未使用DBN，但在CMLt/AMLt指标上仍低于使用DBN的BeatThis，说明完全替代DBN仍有挑战。
 
 #
-
 ### 🏗️ 模型架构
 
 KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从音频特征直接预测节拍和节拍点的PDM。
@@ -59,7 +58,6 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
 - KAN层：替代传统线性层和ReLU激活函数，使用可学习的单变量函数（此处为Gram多项式），据称能以更少参数达到相似建模能力。
 - PDM作为输出目标：核心创新点。将节拍/节拍点检测问题转化为一个全局矩阵回归问题，避免了逐帧分类。
 - 并行双输出头：分别处理节拍和节拍点，共享前端和TCN的特征表示。
-
 ### 💡 核心创新点
 
 1.  相位差矩阵（PDM）作为新型预测目标：
@@ -82,7 +80,6 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
     - 之前局限：此前BeatKAN已用于节拍检测，但未处理节拍点，且使用的是不同的范式。
     - 如何起作用：利用KAN层以更少参数建模复杂函数的能力，并将其扩展至联合节拍与节拍点检测任务。
     - 收益：在达到与BeatThis（使用更庞大Transformer架构）相当性能的同时，模型参数量减少近一半（11M vs ~20M）。
-
 ### 🔬 细节详述
 
 - 训练数据：13个数据集（ASAP, Ballroom, Beatles, Candombe, Filosax, Groovemidi, Guitar Set, Hainsworth, Harmonix, HJDB, JAAH, Tapcorrect, RWC），共3276首歌曲（每数据集留出10%验证）。测试集为GTZAN。数据增强使用了音高偏移和时间拉伸（具体增强方式未说明）。
@@ -102,7 +99,6 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
 - 训练硬件：论文中未提及。
 - 推理细节：从预测PDM的行均值序列中，通过自适应阈值进行峰值拾取得到最终节拍/节拍点序列。
 - 正则化/稳定训练技巧：未明确提及除数据增强外的其他技巧。
-
 ### 📊 实验结果
 
 主要评估在GTZAN测试集上，并与BeatThis（fold 0）进行对比。同时报告了在多个训练集验证集上的F1分数。
@@ -133,7 +129,6 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
 其他实验现象：
 - 论文指出，排除验证集少于20首的数据集后，KAPTURE与BeatThis在平均F1上的差异无统计显著性（p>0.05）。
 - 相位建模（PDM）在节拍点AMLt指标上的提升可能源于节拍级PDM对半小节位置的偏向。
-
 ### ⚖️ 评分理由
 
 - 学术质量（6.0/7）：
@@ -147,16 +142,3 @@ KAPTURE的整体架构（见图2）是一个端到端的神经网络，用于从
   - 论文提供了足够的架构和训练概要信息，但缺乏代码、模型权重、完整的超参数列表和训练日志，完全复现需要大量额外工作。无开源计划声明。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及公开权重。
-- 数据集：使用了公开数据集，但论文本身未提供新的数据集。
-- Demo：未提供在线演示。
-- 复现材料：提供了模型架构图、主要训练参数（优化器、学习率、epoch、输入规格）和峰值检测的简要描述。但缺少完整的超参数搜索细节、损失曲线、代码实现和预训练模型。
-- 论文中引用的开源项目：论文引用了多个数据集和方法（如BeatThis, BeatKAN），但未说明其复现是否依赖特定的开源代码库。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

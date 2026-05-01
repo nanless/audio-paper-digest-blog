@@ -42,6 +42,19 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：论文中未提及公开模型权重。
+- 数据集：Speech-RATE数据集承诺在 Hugging Face 上公开发布（地址：`https://huggingface.co/datasets/lbuess/Speech-RATE`）。
+- Demo：未提供在线演示。
+- 复现材料：论文给出了基本的训练超参数（学习率、batch size、优化器、训练步数），但缺少详细配置、检查点及更完整的复现说明（如环境配置、数据预处理脚本）。蒸馏权重λ等关键超参数未提供。
+- 论文中引用的开源项目：依赖的开源工具/模型包括：Kokoro TTS引擎、CT-RATE数据集、CT-CLIP模型、Whisper、HuBERT、wav2vec 2.0等预训练模型。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  问题：临床放射学报告主要通过口述生成，但现有的医学多模态基础模型（如CT-CLIP）完全依赖书面文本进行训练，忽略了语音这一原生输入模态，且依赖ASR转录会引入错误并丢失信息。

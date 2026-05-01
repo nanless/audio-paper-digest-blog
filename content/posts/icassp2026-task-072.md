@@ -42,6 +42,19 @@ hiddenInHomeList: true
 
 论文提出的“调节残差使其更利于量化”这一核心思想非常巧妙且实用，直击传统RVQ在后续阶段效率低下的痛点，最终实现了在超低比特率下用极小的模型超越一众巨型模型（如参数量4.98M vs 872M的SemantiCodec）。不过，实验部分略显“基础”，虽然对比了多个模型，但缺乏对更复杂噪声环境、不同语言或说话人风格下鲁棒性的分析，也缺乏直接的主观听感（MOS）测试，说服力上稍打折扣。
 
+🔗 **开源详情**
+
+- 代码：提供代码仓库链接：https://arsx958.github.io/Lisa-Lightweight-Yet-Superb-Neural-Speech-Coding/
+- 模型权重：提供预训练模型下载（论文中提及“pretrained model can be downloaded from our GitHub repository”）。
+- 数据集：使用公开的LibriTTS数据集，未说明是否提供额外处理后的数据。
+- Demo：论文页面链接可能包含演示，但文中未明确说明。
+- 复现材料：提供了详细的训练配置（数据集、优化器、学习率、步长、硬件），足以支持复现。代码仓库应包含模型定义和训练脚本。
+- 引用的开源项目：论文引用了多个作为基线的开源项目/工具，如FunCodec [12]。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  问题：现有神经语音编码器在低/超低比特率下，编码效率受限于特征表示能力和量化过程的不足，特别是传统残差向量量化（RVQ）在初始阶段后，残差变得不规则，导致量化损失高、效率低下。
@@ -70,6 +83,19 @@ hiddenInHomeList: true
 本文巧妙地将非流式的WavLM“蒸”成一个能实时处理的语音编码器，通过多阶段训练和一个轻巧的“精修工”模块，在80毫秒的低延迟下实现了比肩甚至超越同类流式编解码器的音质和下游性能，堪称工程实践的典范。不过，为了塞进WavLM这个大块头，模型参数量几乎翻倍（249M vs. 142M），其在资源受限设备上的部署可能是个挑战，且多语言泛化能力虽优于部分基线，但仍有明显下滑。
 
 #
+
+🔗 **开源详情**
+
+- 代码：论文明确表示将在GitHub（https://github.com/lucadellalib/focalcodec）发布代码。
+- 模型权重：论文提到会发布“检查点（checkpoints）”，但未提供直接下载链接。
+- 数据集：论文使用的训练和评估数据集（LibriTTS, Libri-Light, MLS, LibriSpeech, IEMOCAP等）均为公开数据集，但未提供处理后的版本。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文提供了架构图和主要的训练阶段描述，但具体的超参数配置、训练脚本、依赖环境等细节需参考代码仓库。
+- 论文中引用的开源项目：主要依赖WavLM、Vocos等开源模型或架构。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -100,6 +126,19 @@ hiddenInHomeList: true
 
 亮点：CodecSlime 提出了一种优雅的“动态帧率”压缩方案，通过自适应地合并信息密度低的语音帧（如长元音），在不增加码本容量的前提下显著降低了重建WER（相对降低32%），为低比特率语音编码提供了新思路。  
 短板：其训练过程需要两阶段的“熔化-冷却”微调，相比直接训练固定帧率模型增加了复杂度；且动态压缩比受限于最大合并窗口（U=4），对于超长冗余段的压缩能力可能有限。
+
+🔗 **开源详情**
+
+-   代码：论文中提及训练代码基于BigCodec的官方实现（`https://github.com/Aria-K-Alethia/BigCodec`），并提供了CodecSlime的示例代码链接（`https://x-lance.github.io/codecslime/`）。未明确承诺提供CodecSlime独立的完整代码仓库。
+-   模型权重：未提及公开预训练模型权重。
+-   数据集：使用LibriSpeech和LibriTTS，均为公开数据集。评测使用UniCATS测试集B。
+-   Demo：提供了在线音频样本演示页面（`https://x-lance.github.io/codecslime/`）。
+-   复现材料：论文中详细给出了骨干模型、CodecSlime各阶段的超参数设置、训练步数、硬件配置等，复现信息较为充分。
+-   引用的开源项目：明确引用了BigCodec、EnCodec等项目的代码实现，以及多种评估工具（NeMo ASR, pystoi, PESQ, Resemblyzer等）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -132,6 +171,19 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 亮点是思路清奇，反其道而行之，没有在声学编解码器上叠加语义监督，而是把一个现成的ASR模型（Whisper）“改造”成编解码器，通过简单的架构简化（去掉GELU和位置编码）就解锁了其声学建模能力，实验结果也相当能打。短板在于，这种“简化”本质上是针对特定任务（编解码）的工程化调整，其理论解释（位置编码影响注意模式、GELU抑制频谱细节）略显粗浅，且论文声称的“State-of-the-art”结论仅在英语数据集（LibriSpeech）上得到验证，对于多语言、噪声环境等更复杂场景的泛化能力未做探讨。
+
+🔗 **开源详情**
+
+- 代码：是，提供GitHub仓库链接：https://github.com/ZhangXinWhut/SimWhisper-Codec。
+- 模型权重：论文中未明确提及是否公开简化后的Whisper编码器或完整编解码器的预训练权重。
+- 数据集：使用的是公开的LibriSpeech和LJSpeech数据集，但未提供处理后的数据或特定数据集的链接。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文详细说明了模型架构、训练数据、损失函数、训练策略（优化器、学习率、步数）和关键超参数（模型大小、FSQ配置）。这些信息对于复现是充足的，但未提供具体的配置文件或检查点下载链接。
+- 论文中引用的开源项目：提到了依赖或对比的开源项目，包括：HiFiGAN、Vocos、FSQ（来自“Low frame-rate speech codec”），以及基线模型EnCodec, DAC-RVQ3, SpeechTokenizer, Mimi-RVQ8, BigCodec, XCodec2.0, XY-Tokenizer等。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -171,6 +223,19 @@ hiddenInHomeList: true
 短板：IBPM目前的结构（三层逐点卷积）过于简单，其预测能力存在明显天花板（当P=0.5时质量下降），本质上仍是低频信息的线性外推，论文未探讨更强大的生成式预测模型（如扩散模型）的可能性；此外，模型在1 kbps下的绝对质量（PESQ 2.2）距离“可用”仍有距离，创新性更多是工程上的巧妙设计而非原理性突破。
 
 #
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：论文中未提及。
+- 数据集：使用了LibriTTS和VCTK公开数据集，但论文中未提供具体的数据预处理脚本或说明。
+- Demo：论文中未提及。
+- 复现材料：论文中提供了详细的训练硬件（单卡RTX 3090）、优化器参数、学习率调度、STFT参数、模型结构配置（层数、通道数、卷积核大小等），复现指导较为充分。
+- 引用的开源项目：论文提到了FunCodec、FocalCodec、Hifi-codec等开源工具或相关工作，但未明确说明IBPCodec的代码是否基于或借鉴了这些项目。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音频分类 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Incremental Learning for Audio Classification with Hebbian Deep Neural Networks
-
-#音频分类 #增量学习 #灾难性遗忘 #Hebbian学习 #稳定性-可塑性
-
-✅ **7.5/10** | 前25% | #音频分类 | #增量学习 | #灾难性遗忘 #Hebbian学习
-
-学术质量 7.0/7 | 选题价值 7.5/2 | 复现加成 8.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Riccardo Casciotti (Tampere University, Signal Processing Research Centre)
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Riccardo Casciotti (Tampere University, Signal Processing Research Centre), Francesco De Santis (Politecnico di Milano, Department of Electronics, Information and Bioengineering), Alberto Antonietti (Politecnico di Milano, Department of Electronics, Information and Bioengineering), Annamaria Mesaros (Tampere University, Signal Processing Research Centre)
 
 #
-
 ### 💡 毒舌点评
 
 亮点：巧妙借用神经科学中的“多巴胺调节”概念，设计了一个简单而有效的核可塑性调制规则，在Hebbian学习框架下稳定了记忆，这是一个优雅的生物启发式工程实现。短板：所有验证仅基于一个规模和难度都有限的环境声数据集ESC-50，这使得“显著提升”和“生物合理性”的说法缺乏更有力的普适性证据，让人怀疑该方法在更大、更复杂的音频任务（如语音、音乐）或开放集增量学习中的真实效用。
 
 #
+### 🔗 开源详情
 
+- 代码：是，论文提供了代码仓库链接 `https://github.com/RiccardoCasciotti/Hebbian-TIL`。
+- 模型权重：论文中未提及公开的预训练模型权重。
+- 数据集：使用的是公开的ESC-50数据集，论文未提及数据获取的特殊说明。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文给出了关键超参数（top K， α， β， 监控间隔）、模型架构描述和评估指标公式。代码仓库应包含更多实现细节。
+- 论文中引用的开源项目：提到了SoftHebb架构 `[16]`（其基础代码可能已开源），并依赖于ESC-50 `[21]` 和 UrbanSound8K `[26]` 数据集。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：深度学习模型在增量学习（持续学习新任务）时普遍遭遇“灾难性遗忘”，即学习新知识会导致对旧知识的严重遗忘。本文针对音频分类任务，旨在解决此问题。
@@ -41,7 +41,6 @@ hiddenInHomeList: true
 6.  主要局限性是什么：验证数据集（ESC-50）规模小且任务简单；方法依赖任务标签（任务增量学习），未验证在更通用的类增量学习场景下的有效性；性能与同架构的联合学习相比并无优势，表明方法的增量学习能力提升是以牺牲部分模型容量或学习效率为代价的。
 
 #
-
 ### 🏗️ 模型架构
 
 模型架构（如图1所示）采用“特征提取器 + 任务专属分类头”的串行设计。
@@ -55,7 +54,6 @@ hiddenInHomeList: true
 图1展示了所提出的Hebbian卷积网络与任务依赖分类头的架构。左侧为特征提取器，由5个Hebbian卷积层（Hebb Conv1-5）及相应的池化层（MaxPool, AvgPool）组成，最终展平为30维特征。右侧显示了针对不同任务（Task 0, Task t）的独立分类头（Head0, Headt）。
 
 #
-
 ### 💡 核心创新点
 
 1.  将Hebbian学习应用于音频增量学习：这是首次将生物启发的、无监督的Hebbian学习机制引入音频分类的增量学习场景，探索了其作为反向传播替代方案的可能性。
@@ -63,7 +61,6 @@ hiddenInHomeList: true
 3.  双组件保护策略：分别对存储通用特征表示的特征提取器和存储任务特定决策边界的分类头采取保护。特征提取器采用核可塑性调制，分类头则通过存储独立副本实现天然隔离。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -87,7 +84,6 @@ hiddenInHomeList: true
 - 正则化/稳定训练技巧：核心技巧即所提的“核可塑性”调制。此外，网络使用了Batch Normalization。
 
 #
-
 ### 📊 实验结果
 
 主要结果对比（表1）
@@ -129,7 +125,6 @@ hiddenInHomeList: true
 图2（论文描述为Fig. 2）展示了在ESC-50上使用或不使用KP进行增量学习时，各任务（Task 0-4）在最终步骤的准确率对比。KP模型在所有任务（尤其是早期任务）上表现更稳定，而不带KP的模型在早期任务上性能下降显著，表明严重的灾难性遗忘。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：7.0/7：论文提出了一个清晰、有生物启发性的技术方案来解决一个公认难题。方法设计有一定新意，实验设置合理，提供了多角度的定量分析。主要扣分点在于实验场景单一（仅ESC-50），且与更强的基线（如更先进的反向传播增量学习方法）对比不足，结论的普适性和优越性证据链有待加强。
@@ -137,16 +132,3 @@ hiddenInHomeList: true
 - 开源与复现加成：0.5/1：提供了代码链接是重大加分项。论文对实验设置和关键超参数有描述。但未提供训练好的模型权重、详细的运行环境配置和更深入的复现指南，扣分。
 
 #
-
-### 🔗 开源详情
-
-- 代码：是，论文提供了代码仓库链接 `https://github.com/RiccardoCasciotti/Hebbian-TIL`。
-- 模型权重：论文中未提及公开的预训练模型权重。
-- 数据集：使用的是公开的ESC-50数据集，论文未提及数据获取的特殊说明。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文给出了关键超参数（top K， α， β， 监控间隔）、模型架构描述和评估指标公式。代码仓库应包含更多实现细节。
-- 论文中引用的开源项目：提到了SoftHebb架构 `[16]`（其基础代码可能已开源），并依赖于ESC-50 `[21]` 和 UrbanSound8K `[26]` 数据集。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

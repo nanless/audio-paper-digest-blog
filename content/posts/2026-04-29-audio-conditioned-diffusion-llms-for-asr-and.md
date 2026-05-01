@@ -7,26 +7,26 @@ categories: [icassp-2026]
 description: "语音识别 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Audio-Conditioned Diffusion LLMs for ASR and Deliberation Processing
-
-#语音识别 #扩散模型 #语音大模型 #预训练
-
-✅ **7.0/10** | 前50% | #语音识别 | #扩散模型 | #语音大模型 #预训练
-
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0 | 置信度 中
-
-
 ### 👥 作者与机构
 
 - 第一作者：Mengqi Wang (University of Illinois at Urbana-Champaign) 与 Zhan Liu (Tsinghua University) 共同贡献
 - 通讯作者：未说明
 - 作者列表：Mengqi Wang (University of Illinois at Urbana-Champaign), Zhan Liu (Tsinghua University), Zengrui Jin (Tsinghua University), Guangzhi Sun (University of Cambridge), Chao Zhang (Tsinghua University), Philip C. Woodland (University of Cambridge)
-
 ### 💡 毒舌点评
 
 亮点：论文系统性地将新兴的扩散LLM（LLaDA）引入语音识别的“审思”环节和直接解码，证明了在引入音频条件后，扩散模型的双向注意力能有效修正自回归模型的错误，且部分配置下推理速度更快。短板：所有实验仅在LibriSpeech上进行，与最强的Whisper-Large v3基线相比仍有明显性能差距，且关键复现细节（如训练GPU型号、总时长）和开源材料均未提供，限制了工作的说服力和可验证性。
+### 🔗 开源详情
 
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及公开本工作的Whisper-LLaDA或Whisper-LLaMA微调权重。
+- 数据集：使用公开的LibriSpeech数据集。
+- Demo：未提及。
+- 复现材料：提供了训练策略（优化器、学习率调度）、模型配置（LoRA参数、Q-Former设置）等部分细节，但缺失训练硬件、总训练时长等关键信息。
+- 论文中引用的开源项目：LLaDA [33]、Whisper [5]、LLaMA [40]、LoRA [39]、Q-Former (来自BLIP-2 [38])。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：传统自回归（AR）语音识别解码速度慢，而非自回归（NAR）方法常伴随精度损失。本文旨在探索基于扩散的大语言模型（DLLM，如LLaDA）作为ASR的新解码器或后处理模块，以期在效率和性能之间取得更好平衡。
@@ -43,7 +43,6 @@ hiddenInHomeList: true
 
 5.  实际意义是什么：为ASR解码提供了新范式，展示了扩散模型在提升NAR解码精度和实现高效推理方面的潜力。其审思模块可作为现有ASR系统的即插即用增强组件。
 6.  主要局限性是什么：模型性能（WER）仍落后于最强大的AR解码器（如Whisper-Large v3）；实验仅在单一英文数据集LibriSpeech上验证，缺乏多语言和复杂场景测试；未提供代码和模型权重，可复现性差。
-
 ### 🏗️ 模型架构
 
 整体架构：Whisper-LLaDA是一个级联的端到端模型，由音频编码器、模态适配器和扩散语言模型解码器三部分构成（见图1）。
@@ -57,7 +56,6 @@ hiddenInHomeList: true
 3.  扩散语言模型解码器：采用LLaDA-8B-Instruct模型。这是一个基于Transformer的掩码扩散语言模型，采用双向注意力。仅对其自注意力块中的Query、Key、Value投影层应用LoRA进行微调（秩8，缩放因子4.0，丢弃率0.1）。
     *   解码流程：输入由文本指令（Prompt）、音频特征（α）和响应块（Response Block）组成。响应块初始化为掩码序列[MASK]（直接解码）或来自Whisper-LLaMA的转录（审思）。LLaDA执行多步迭代去噪，每一步并行预测所有掩码位置上的token，并根据置信度逐步揭示，直到生成完整序列。
     *   可训练参数：仅Q-Former、投影层和LLaDA的LoRA模块，总计约8700万参数。Whisper编码器和LLaDA的主干参数均被冻结。
-
 ### 💡 核心创新点
 
 1.  首次系统性将扩散LLM引入ASR：将LLaDA这类新兴的扩散语言模型应用于语音识别任务，并深入探索了两种应用范式：作为外部审思模块和作为内部解码器。这为解决AR解码效率低、NAR解码精度差的老问题提供了新思路。
@@ -66,7 +64,6 @@ hiddenInHomeList: true
     图2]
     图2：四种解码和审思策略概览。(a)扩散解码；(b)半自回归解码；(c)扩散审思；(d)半自回归审思。
 4.  实证揭示扩散ASR的权衡特性：通过大量超参数实验（去噪步数N、子块数M、掩码比例p），系统性地揭示了扩散模型在ASR中“速度-精度”曲线的变化规律，并找到了如64步解码、子块数为2的审思等有效配置。
-
 ### 🔬 细节详述
 
 - 训练数据：LibriSpeech语料库（约960小时英文有声读物）。进行了语速扰动（系数0.9和1.1）进行数据增强。
@@ -85,7 +82,6 @@ hiddenInHomeList: true
     - 扩散解码：迭代N步（1到128），每步保留置信度最高的K=128/N个token，其余重掩码。应用提前停止：一旦解码出[EOS]，后续位置强制为[EOS]。
     - 半自回归解码：将128-token块分为M个子块（1到16），在每个子块内执行扩散解码（步数1到128/M），子块间顺序执行。
     - 审思策略：(1) 随机掩码比例p；(2) 掩码置信度最低的p比例token；(3) 半自回归掩码与恢复。
-
 ### 📊 实验结果
 
 所有实验在LibriSpeech test-clean和test-other集上进行，指标为词错误率（WER%）和实时因子（RTF）。
@@ -112,22 +108,8 @@ hiddenInHomeList: true
 3. 消融实验与图表分析
 - 图3（审思策略的掩码比例影响）：显示随着随机/低置信度掩码比例增加，test-other的WER单调下降，说明在审思任务中，激进的重掩码更有效。
 - 图4（直接解码的参数影响）：(a) 每个子块的去噪步数增加能降低WER，但超过16步后收益递减。(b) 在不同总步数下，设置子块数为4（半自回归）常能取得较好的test-other性能，如M=4， N=32时达4.96%。
-
 ### ⚖️ 评分理由
 
 - 学术质量：5.5/7：创新性地将扩散LLM引入ASR，方法设计系统（包含两种模式、多种策略），实验全面并揭示了关键规律。技术路线正确，但最终性能未超越最强基线，且部分实验细节（如硬件）缺失，限制了证据强度。
 - 选题价值：1.5/2：探索“扩散模型+大语言模型”在语音解码中的应用是当前非常前沿的交叉方向。工作验证了该路线的可行性和潜力，对ASR社区具有明确的启发和参考价值。
 - 开源与复现加成：0/1：论文未提供任何与本工作直接相关的开源材料（代码、模型、配置）。尽管依赖开源项目（LLaDA, Whisper），但自身复现门槛高，严重扣分。
-
-### 🔗 开源详情
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及公开本工作的Whisper-LLaDA或Whisper-LLaMA微调权重。
-- 数据集：使用公开的LibriSpeech数据集。
-- Demo：未提及。
-- 复现材料：提供了训练策略（优化器、学习率调度）、模型配置（LoRA参数、Q-Former设置）等部分细节，但缺失训练硬件、总训练时长等关键信息。
-- 论文中引用的开源项目：LLaDA [33]、Whisper [5]、LLaMA [40]、LoRA [39]、Q-Former (来自BLIP-2 [38])。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

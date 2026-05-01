@@ -38,6 +38,19 @@ hiddenInHomeList: true
 
 亮点：论文巧妙地将LLM领域的“领域划分+PEFT微调”范式迁移到音频分离任务，思路清晰且实验效果扎实，在多个数据集上稳定超越强基线AudioSep。短板：创新更多是框架层面的组合，作为核心组件的ReConv-Adapter是在Conv-Adapter基础上“加宽”而非原创性设计，其参数效率与性能增益的权衡有待更深入探讨。
 
+🔗 **开源详情**
+
+-   代码：提供开源代码仓库链接：https://github.com/butterflykite/DP-LASS。
+-   模型权重：论文中未明确提及是否公开预训练模型或微调后的模型权重。
+-   数据集：基于公开数据集AudioSet进行训练，未提供独立的自建数据集。评估使用公开的AudioCaps, Clotho等基准测试集。
+-   Demo：论文中未提及在线演示（Demo）。
+-   复现材料：论文提供了较为充分的复现信息，包括：训练数据构建方式（单类音频，混合采样）、关键超参数（学习率、batch size、训练步数）、硬件配置（RTX 3090 GPU）以及消融实验设置。
+-   引用的开源项目：论文依赖并引用了AudioSep的官方实现和预训练模型（https://github.com/Audio-AGI/AudioSep），以及HuggingFace PEFT库（用于DoRA/LoRA的实现）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  问题：语言查询音频源分离（LASS）任务面临一个关键挑战：不同声音类别之间特征分布差异巨大，使得单一模型难以有效建模所有类别。

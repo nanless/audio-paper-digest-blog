@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音频生成 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Multimodal Room Impulse Response Generation Through Latent Rectified Flow Matching
-
-#音频生成 #流匹配 #空间音频
-
-✅ **7.5/10** | 前25% | #音频生成 | #流匹配 | #空间音频
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Ali Vosoughi（University of Rochester）
@@ -24,13 +14,24 @@ hiddenInHomeList: true
 - 作者列表：Ali Vosoughi（University of Rochester）、Yongyi Zang（Smule Labs）、Qihui Yang（University of California, San Diego）、Nathan Paek（Stanford University）、Randal Leistikow（Smule Labs）、Chenliang Xu（University of Rochester）。所有作者贡献均等标注为‡。
 
 #
-
 ### 💡 毒舌点评
 
 这篇工作巧妙地用“两阶段法”绕开了RIR领域的两大痛点：先让VAE学会了“脑补”高频，再用流匹配模型学会了“听懂人话”。其核心创新（文本条件生成全频带RIR）和扎实的实验（RT60误差从-37%跃升至8.8%）令人印象深刻，是近期RIR生成领域的一个亮点。但“caption-then-rewrite”流程依赖一堆闭源模型（VLM, LLM）来生成训练数据，这种“用魔法打败魔法”的做法虽然有效，却可能成为复现和分析的黑箱，且最终模型效果的上限恐怕被合成数据的质量牢牢锁死。
 
 #
+### 🔗 开源详情
 
+*   代码：论文中未提及代码链接。主页链接`https://ali-vosoughi.github.io/PromptReverb/`仅提供音频样例演示。
+*   模型权重：未提及公开权重。
+*   数据集：论文使用了多个公开数据集，并声称数据集将公开，但未提供当前获取链接或说明。
+*   Demo：提供了在线音频样例演示（通过上述主页链接）。
+*   复现材料：论文给出了较为详细的模型架构描述、损失函数、部分训练超参数（如β值、CFG强度、模型尺寸），但未提供完整的训练脚本、配置文件或预训练检查点。
+*   引用的开源项目/模型：论文明确依赖或借鉴了以下开源项目/模型：Moondream2, Qwen2-VL, Microsoft Phi-4 (用于文本生成)，WavTokenizer, HiFi-GAN, PyRoomAcoustics等。
+*   总结：论文未提及完整的开源计划，仅提供了演示页面和部分技术细节。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：现有房间脉冲响应（RIR）生成方法面临两大核心挑战：一是缺乏高质量的全频带（如48kHz）RIR训练数据集；二是现有模型无法从多样化的输入（尤其是自然语言）中生成声学准确的RIR，限制了其在创意和实际应用中的使用。
@@ -47,7 +48,6 @@ hiddenInHomeList: true
 6.  主要局限性：(1) 模型性能的上限可能受限于训练数据的质量和多样性，其中大量数据来自合成（PyRoomAcoustics）或历史录音，未必完全覆盖真实世界的复杂声学场景。(2) “caption-then-rewrite”流程本身依赖于多个外部模型，其质量直接影响最终生成效果。(3) 论文未提供代码、模型权重或数据集，复现依赖较大。
 
 #
-
 ### 🏗️ 模型架构
 
 PromptReverb的架构分为三个核心部分（如图1所示）：
@@ -79,7 +79,6 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 数据流：文本描述 → 文本编码器 → 条件`c`；随机噪声`x0` → DiT（在`t`时刻，以`c`为条件）→ 估计速度场 → 通过ODE求解逐步去噪得到潜在表示`x1` → 冻结的VAE解码器 → 48kHz RIR波形。
 
 #
-
 ### 💡 核心创新点
 
 1.  两阶段解耦架构：将“从低质量数据生成高质量全频带RIR”和“从文本生成RIR特征”这两个难题解耦。VAE专注于学习全频带重建和上采样能力，生成模型专注于从文本到声学特征的映射，降低了单个模型的学习难度。
@@ -88,7 +87,6 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 4.  在RIR生成中应用Rectified Flow Matching：将rectified flow matching这一高效的生成范式应用于RIR的潜在空间生成。相比传统扩散模型，其直线传输路径可能带来更稳定的训练和更少的采样步数。
 
 #
-
 ### 🔬 细节详述
 
 *   训练数据：
@@ -112,7 +110,6 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 *   正则化或稳定训练技巧：VAE采用β-VAE框架（小β值）和对抗训练。生成模型使用条件dropout实现CFG。
 
 #
-
 ### 📊 实验结果
 
 主要对比与结果：
@@ -153,7 +150,6 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
 *   图3说明：此图展示了PromptReverb在不同提示长度下，随模型规模增大，其预测的RT60均值、中位数和最大值都逐渐向真实值靠近，而Image2Reverb的预测值则显著偏低。
 
 #
-
 ### ⚖️ 评分理由
 
 *   学术质量：6.0/7
@@ -170,17 +166,3 @@ PromptReverb的架构分为三个核心部分（如图1所示）：
     *   论文未提供代码、模型或数据集的公开链接。虽然描述了训练细节，但复现仍需大量额外工作，因此未给予加成。
 
 #
-
-### 🔗 开源详情
-
-*   代码：论文中未提及代码链接。主页链接`https://ali-vosoughi.github.io/PromptReverb/`仅提供音频样例演示。
-*   模型权重：未提及公开权重。
-*   数据集：论文使用了多个公开数据集，并声称数据集将公开，但未提供当前获取链接或说明。
-*   Demo：提供了在线音频样例演示（通过上述主页链接）。
-*   复现材料：论文给出了较为详细的模型架构描述、损失函数、部分训练超参数（如β值、CFG强度、模型尺寸），但未提供完整的训练脚本、配置文件或预训练检查点。
-*   引用的开源项目/模型：论文明确依赖或借鉴了以下开源项目/模型：Moondream2, Qwen2-VL, Microsoft Phi-4 (用于文本生成)，WavTokenizer, HiFi-GAN, PyRoomAcoustics等。
-*   总结：论文未提及完整的开源计划，仅提供了演示页面和部分技术细节。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

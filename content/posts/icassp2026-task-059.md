@@ -47,6 +47,20 @@ hiddenInHomeList: true
 
 这篇论文的亮点在于其系统性地解构并攻克了“匿名化必然损伤情感”这一核心矛盾，提出的双分支补偿模块设计思路清晰，从数据集先验（静态）和实例残差（动态）两个层面进行修复，实验结果也确实显著优于同类工作。短板则在于其验证范围较为局限，虽然在IEMOCAP上表现优异，但整个系统在非英语环境下的鲁棒性以及面对更复杂情感（如混合情绪）的处理能力，论文未提供任何数据支撑，使得这个“通用解决方案”的宣称打上了折扣。
 
+🔗 **开源详情**
+
+-   代码：论文中未提及代码链接。
+-   模型权重：未提及公开权重。
+-   数据集：论文中使用的VoxCeleb-2, MSP-IMPROV, ESD, LibriSpeech, IEMOCAP均为公开数据集。未提及是否公开了处理后的实验数据或中间产物。
+-   Demo：未提及。
+-   复现材料：论文在“实现细节”部分提供了优化器、学习率、损失函数权重等关键超参数，为复现提供了重要信息。未提供训练日志、检查点或附录。
+-   论文中引用的开源项目：emotion2vec+, ECAPA-TDNN, HuBERT, OHNN, HiFi-GAN。
+-   论文中未提及开源计划。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 要解决的问题：现有的说话人匿名化技术（如基于OHNN的方案）在有效隐藏说话人身份的同时，会严重破坏语音中的情感信息，限制了其在医疗、人机交互等情感敏感场景中的应用。
@@ -72,6 +86,19 @@ hiddenInHomeList: true
 
 亮点在于清晰地定义了多说话人场景下目标匿名化这一重要且实际的问题，并初步建立了一个包含“提取-匿名化-重组”的端到端评估框架，其对评估指标的讨论（如tcpWER、DER）比单纯追求更低EER更具工程指导意义。短板在于方法上本质上是将已有的TSE和匿名化模型进行管道式拼接，缺乏针对该联合任务的深度融合与创新，且实验揭示了管道中误差传递导致最终实用性（tcpWER）显著下降的核心矛盾，但论文并未提出根本性的解决方案。
 
+🔗 **开源详情**
+
+- 代码：论文中未提供TSA框架或核心实验的代码仓库链接。但提供了用于评估的MeetEval工具包链接（https://github.com/fgnt/meeteval）和引用的开源TSE工具（WeSep, https://github.com/wenet-e2e/wesep）。
+- 模型权重：未提及公开训练好的TSA或匿名化模型权重。
+- 数据集：使用了公开数据集SparseLibriMix（来源：https://github.com/popcornell/SparseLibriMix）。
+- Demo：提供了音频样本的在线演示页面（https://sites.google.com/view/target-speaker-anonymization）。
+- 复现材料：论文描述了实验设置和使用的工具，但未提供详细的训练配置、超参数或检查点。
+- 论文中引用的开源项目：SpeechBrain, pyannote.audio, DiariZen, MeetEval。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 这篇论文旨在解决现有语音匿名化技术无法处理多说话人录音中仅匿名化特定目标说话人（如客服场景中的客户）这一局限性问题。其核心方法是提出一个名为目标说话人匿名化（TSA）的流程框架：首先使用目标说话人提取（TSE）模型从混合语音中分离出目标说话人的语音，然后仅对该语音应用神经网络匿名化方法进行处理，最后将处理后的语音与未匿名的其他说话人语音重新混合。与以往研究相比，本文的新颖之处在于：1）首次系统性地研究了多说话人场景下的针对性匿名化；2）构建了更贴合实际的评估体系，不仅评估隐私性（ASV-EER），还重点评估了匿名化后整个对话的实用性（基于说话人分离的tcpWER和DER）。主要实验结果表明，使用性能较好的WeSep BSRNN TSE模型后，最终的匿名化对话在隐私保护（EER约36.9%）上相比单说话人场景（32.4%）有所提升，但整个对话的转写错误率（tcpWER）从原始的5.0%显著上升至14.6%，表明分离误差和匿名化处理严重损害了内容可懂度。该工作的实际意义在于为保护多说话人通话中的特定用户隐私提供了初步的解决方案和评估范式，但主要局限性是TSE的分离质量与匿名化处理共同造成了显著的实用性损失，且该框架的性能高度依赖于上游TSE和下游匿名化模型的单独性能。
@@ -91,6 +118,25 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 本文敏锐地指出了当前语音匿名化研究在长音频场景下的“皇帝新衣”——只藏声音不改说话方式等于白藏，并提出了用LLM改写文本来釜底抽薪的思路，是这个小众但重要的领域一次扎实的“问题-方案”闭环。不过，文中仅拿出了几个现成LLM模型进行“平A”，并未深入探究文本风格改写的具体机制与边界（比如对口语化、情感色彩的保持能力），在实验深度上略显保守。
+
+🔗 **开源详情**
+
+- 代码：提供GitHub仓库链接：https://github.com/caggazzotti/long-form-speech-anonymization
+- 模型权重：论文中使用的模型均为开源模型或公开API：
+    *   ASR：Whisper-medium（开源）
+    *   TTS：XTTS（开源）
+    *   LLM：Gemma-3-4B（开源）， GPT-4o-mini 和 GPT-5（通过OpenAI API，但论文提及了其系统卡）
+    *   说话人验证：WavLM-Base（开源）
+    *   作者归属：Sentence LUAR (SLUAR)（开源，论文提供了HuggingFace链接）
+    *   检测器：SSL-AASIST 和 Binoculars（均为开源）
+- 数据集：使用了公开语料库 Fisher Speech Corpus 和 VoxCeleb2，未提及如何获取或划分评估集的具体信息。
+- Demo：未提及。
+- 复现材料：提供了代码仓库，其中应包含使用提示词和模型进行推断的脚本。论文中描述了实验设置（如Fisher语料库的“hard”评估设定），但未提供超参数配置文件或训练日志。
+- 论文中引用的开源项目：Whisper, XTTS, Gemma, WavLM, SLUAR, Binoculars, SSL-AASIST, Sentence-BERT（用于语义相似度计算）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -117,6 +163,25 @@ hiddenInHomeList: true
 
 亮点：论文像一名侦探，敏锐地抓住了“说话人匿名化”评估中的一个核心悖论——如果匿名化旨在隐藏身份但保留内容，而内容本身却能暴露身份，那么评估就失去了公平性。研究通过严密的实验设计，将这个潜在的“房间里的大象”清晰地揭示了出来。
 短板：文章的核心贡献是提出了问题并推荐了一个更好的“考场”（EdAcc），而非提供解决“考试作弊”（内容泄露攻击）的新“防作弊技术”或新的匿名化算法。对于寻求具体算法改进的读者而言，其直接的技术增量有限。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及提供新的代码仓库。评估框架SpAnE [5]是作者此前工作，但论文未给出链接。
+- 模型权重：未提及公开本文使用的模型权重。
+- 数据集：使用了两个公开数据集Librispeech和EdAcc。论文未提供EdAcc的获取链接，但EdAcc [4]是公开发布的。
+- Demo：未提及。
+- 复现材料：论文详细描述了评估流程、数据划分、特征提取方法（音素识别器、ECAPA-TDNN），足以让同行按照相同设置进行复现分析。
+- 论文中引用的开源项目：
+  - SpeechBrain ECAPA-TDNN [7]
+  - Whisper ASR [10]
+  - NeMo TTS (FastPitch + HiFiGAN) [11, 12]
+  - SpAnE评估框架 [5]
+  - private kNN-VC中的音素识别器 [15]
+  - g2p模型和CMU发音词典（用于音素转换）
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -154,6 +219,24 @@ hiddenInHomeList: true
 亮点：问题定义精准——直指现有评估框架在面对同性别目标选择时的“假高分”漏洞，并提出了一个诊断清晰（目标分类器VER）且治疗直接（对抗学习）的方案。短板：创新更偏工程优化而非理论突破，且方法对匿名化能力本身较弱的系统（如kNN-VC）几乎无效，显示其作为评估工具的普适性仍有边界。
 
 #
+
+🔗 **开源详情**
+
+*   代码：提供了代码仓库链接：https://github.com/carlosfranzreb/spane。论文中明确声明“All the necessary code and information to reproduce our experiments is available on GitHub”。
+*   模型权重：论文中未提及是否公开训练好的模型权重。
+*   数据集：使用了公开数据集LibriSpeech和LibriTTS。论文未提供这些数据集的直接获取方式或处理脚本，但数据集本身是公开可得的。
+*   Demo：论文中未提及提供在线演示。
+*   复现材料：论文声称GitHub仓库包含复现所需的所有信息和代码。具体的训练细节、超参数、检查点等需参考该代码仓库。论文正文未提供附录说明。
+*   引用的开源项目/工具：
+    *   SpAnE [16]: 作者之前提出的评估框架，也是本次实验的基础。
+    *   SpeechBrain [9]: 提供了ECAPA-TDNN说话人识别器的实现。
+    *   kNN-VC [17] & private kNN-VC [6]: 论文中测试的匿名化器。
+    *   ASR-BN [4]: 论文中测试的匿名化器（VPC2024基线）。
+*   论文中未提及后续的开源计划（如更新权重或扩展数据集）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -209,6 +292,20 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：论文中未提及公开的代码仓库链接。仅提供了一个演示页面：https://wizicer.github.io/zkVSA/
+- 模型权重：未提及。系统不涉及神经网络模型。
+- 数据集：使用公开的LibriSpeech数据集，但未提及提供其他专有数据。
+- Demo：提供了在线演示页面链接：https://wizicer.github.io/zkVSA/
+- 复现材料：论文详细描述了电路设计算法（Algorithm 1, 2）和实验设置，但未提供完整的代码、训练脚本、超参数配置文件或检查点。复现需要自行实现复杂的SNARK电路。
+- 论文中引用的开源项目：引用了gnark框架[18]（用于实现SNARK电路和GKR哈希验证）、Poseidon2哈希[20]、EdDSA签名[22]等。
+- 总结：论文中未提及完整的开源计划或提供可直接复现的代码库。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  解决的问题：现有语音匿名化方法只能隐藏说话人身份，但第三方无法验证所发布的匿名语音是否确实由一个可信的原始录音经过预定义的匿名化处理得到，同时又不能泄露原始信息。这带来了对语音证据完整性和处理过程可信度的担忧。
@@ -233,6 +330,25 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 亮点：这是首个系统性研究语音匿名化对下游自杀风险检测任务影响的工作，其构建的多维评估框架（语音质量、说话人鉴别、语义/情感保留）和对互补性匿名化策略的验证（CosyVoice+RVC组合）具有很强的实用指导价值。短板：论文的核心下游任务（自杀风险检测）仅为一个简单的二分类，且未公开核心数据集和代码，使得其关键结论（如“接近原始性能”）的普适性和可复现性大打折扣。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及提供本研究工作的代码仓库链接。
+- 模型权重：未提及公开论文中使用的匿名化模型（如SSL-SAS, FreeVC等）或下游检测模型的权重。
+- 数据集：数据集为临床采集的青少年语音，涉及隐私，未公开。
+- Demo：未提供在线演示。
+- 复现材料：未给出训练细节（如学习率）、超参配置文件或检查点。
+- 论文中引用的开源项目：论文在脚注中引用了多个开源项目或模型，包括：
+    - Qwen2.5-Omni-7B: `https://huggingface.co/Qwen/Qwen2.5-Omni-7B`
+    - Paraformer/FunASR
+    - Spark-TTS: `https://huggingface.co/SparkAudio/Spark-TTS-0.5B`
+    - CosyVoice 2.0: `https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B`
+    - RVC项目: `https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI`
+    - Emotion2Vec: `https://huggingface.co/emotion2vec/emotion2vec_plus_seed`
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -277,6 +393,19 @@ hiddenInHomeList: true
 
 这篇论文精准地抓住了现有语音对抗防御研究“各自为战”的痛点，提出了一个“一石二鸟”的统一防御框架（PRSA），实验设计也相当全面，同时对抗ASV和TTS多个系统。然而，其核心创新——“同时防御”更多是目标设定上的新颖，而非技术手段上的革命性突破，且代码未开源让其声称的优越性能打了折扣，读者很难直接验证。
 
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及。
+- 数据集：实验使用公开数据集LibriSpeech， VCTK， TIMIT，但论文未说明其具体获取或预处理方式。
+- Demo：未提及。
+- 复现材料：论文提供了部分关键超参数（如ε， λ， β， γ， 迭代次数N），但缺乏完整的训练配置、数据处理流程和核心模块实现代码。
+- 论文中引用的开源项目：提及了使用的开源模型/系统：X-VECTOR， ECAPA-TDNN， WavLM， Unispeech-SAT， YourTTS， SV2TTS， Tortoise， StyleTTS2， AdaIN， Whisper。但这些并非作者为本项目提供的开源材料。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 问题：当前利用对抗样本保护语音隐私的方法存在缺陷，要么只能防御自动说话人验证（ASV），要么只能防御文本到语音（TTS）合成攻击，缺乏一种能同时有效防御两者的综合方案。
@@ -310,6 +439,27 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 这篇论文的最大亮点在于成功地将当前火热的流式神经音频编解码器（NAC）与因果语言模型架构，从语音转换（VC）“搬运”到了说话人匿名化（SA）领域，并通过一系列工程技巧（如动态延迟、混合嵌入、多样化提示池）实实在在地提升了匿名化语音的“好用程度”（WER和UAR）。然而，其短板也很明显：面对一个稍微“用功”一点的攻击者（半知情攻击者），隐私保护性能就会显著下降，这暗示了其匿名化核心机制可能过于依赖表面特征变换，而非深度的身份信息剥离。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及。
+- 数据集：训练集（LibriHeavy, CommonVoice）和提示池（VCTK, ESD, VoxCeleb1, CREMA-D）均为公开数据集，论文未说明其独占数据。
+- Demo：提供在线演示页面：`https://paniquex.github.io/Stream-Voice-Anon`。
+- 复现材料：论文提供了较为详细的模型配置（第3.3节）、训练细节（第3.3节）和评估协议（第3.2节），但未提供预训练检查点或脚本。
+- 论文中引用的开源项目：
+  - [HuBERT](https://arxiv.org/abs/2106.07447)：用于内容编码器的蒸馏特征提取。
+  - [ECAPA-TDNN](https://arxiv.org/abs/2010.11255)：用于构建lazy-informed攻击者模型。
+  - [CAM++](https://arxiv.org/abs/2303.00332)：用作说话人编码器。
+  - [SparkTTS](https://arxiv.org/abs/2501.13756)：使用其全局分词器。
+  - [FishSpeech](https://github.com/fishaudio/fish-speech)：使用其Firefly-GAN声学编码器/解码器。
+  - [ConvNeXt](https://arxiv.org/abs/2201.03545)：内容编码器的骨干网络。
+  - [SwiGLU](https://arxiv.org/abs/2002.05202), [RoPE](https://arxiv.org/abs/2104.09864)：Transformer中的激活函数和位置编码。
+- 总体而言：论文中未提及开源计划（除演示页面外）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -347,6 +497,25 @@ hiddenInHomeList: true
 
 亮点：论文敏锐地抓住了语音匿名化评估中一个关键盲点——非时域线索（口音）的残留风险，并系统性地利用多种嵌入（时域、非时域、口音相关）和攻击场景进行量化分析，逻辑严谨，论证有力，提出的公平性问题也很有价值。
 短板：对于其提出的改进方案B4*，分析略显“止步于现象”，缺乏对其内部机制（字符级条件反射如何具体抑制口音线索）的深入解构或对比消融；此外，实验部分因部分参赛系统代码不可用，导致对比不够完整，削弱了结论的普适性。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及完整匿名化系统或实验流程的代码仓库链接。仅提供了所使用的口音识别模型GenAID的链接：`https://github.com/jzmzhong/GenAID`。
+- 模型权重：未提及公开的匿名化模型（如B3-B5， T系列）权重。GenAID模型权重可能随其仓库提供。
+- 数据集：使用了`COMMON ACCENT`（基于Common Voice）和`Libri-test`，均为公开数据集。
+- Demo：未提及。
+- 复现材料：论文未提供训练细节、配置、检查点或附录来复现其评估的匿名化系统。仅描述了系统架构概念。
+- 论文中引用的开源项目：
+    - GenAID（口音识别模型）
+    - EnCodec（神经音频编解码器，用于B4）
+    - Vocos（声码器，用于B4*）
+    - ECAPA-TDNN（说话人验证模型，E-VPC基于此）
+    - kNN-VC（语音转换，用于T8-5）
+- 论文中未提及开源计划：除引用的外部项目外，论文本身未提及将其提出的B4*系统或其他评估代码开源的计划。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音增强 | 8.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Spike-Driven Low-Power Speech Bandwidth Extension
-
-#语音增强 #脉冲神经网络 #低功耗 #流式处理
-
-🔥 **8.0/10** | 前25% | #语音增强 | #脉冲神经网络 | #低功耗 #流式处理
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Donghyun Kim (Department of Electronic Engineering, Hanyang University, Seoul, Republic of Korea)
@@ -24,13 +14,26 @@ hiddenInHomeList: true
 - 作者列表：Donghyun Kim (Hanyang University), Sangho Han (Hanyang University), Joon-Hyuk Chang (Hanyang University)
 
 #
-
 ### 💡 毒舌点评
 
 亮点：模型在效率上实现了质变，参数量仅为最强对比模型(AP-BWE)的约1/20，能耗降低了约93%，将语音带宽扩展任务拉入了“毫焦耳”时代。短板：在生成质量的“天花板”上并未超越现有最佳ANN模型，甚至在最重要的PESQ和ESTOI指标上落后约0.5分，表明SNN在捕获复杂生成任务的感知细节上可能仍有瓶颈。
 
 #
+### 🔗 开源详情
 
+- 代码：论文提到“Demo is available at here”并隐含引用代码库（链接指向TUNet的GitHub仓库：https://github.com/NXTProduct/TUNet）。推测SpikeBWE的代码可能基于此仓库修改，但论文未明确提供独立的代码仓库链接。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：使用公开的TIMIT数据集，但论文未说明数据集的获取方式。
+- Demo：论文摘要中提及提供在线Demo（“Demo is available at here”），但未提供具体URL。
+- 复现材料：提供了部分训练细节（优化器、学习率、批量大���、训练轮数），但缺失关键信息如模型具体维度（卷积通道数、ESN隐藏单元数等）和训练硬件环境。
+- 论文中引用的开源项目：
+    1.  TUNet：作为基线模型，其代码被直接引用（https://github.com/NXTProduct/TUNet）。
+    2.  auraloss v2.0.1：用于计算STFT损失。
+    3.  Adam optimizer：标准优化器。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：传统的基于深度学习的语音带宽扩展（BWE）方法在追求高质量的同时，模型复杂度（参数、计算量、能耗）不断增加，限制了其在功耗和资源受限的边缘设备上的实际部署。
@@ -50,7 +53,6 @@ hiddenInHomeList: true
 6.  主要局限性是什么：生成语音的感知质量（PESQ, ESTOI）尚未达到最新ANN模型的最佳水平；研究主要基于标准TIMIT数据集，在噪声环境、不同说话人、不同语言等更复杂场景下的泛化能力有待进一步验证。
 
 #
-
 ### 🏗️ 模型架构
 
 SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件均被改造为在脉冲域（Spike Domain）运行，以处理离散事件。
@@ -73,7 +75,6 @@ SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件
     - 所有卷积层和SNN层均通过非对称左侧填充实现因果卷积，确保模型在任何时间步t只依赖当前及过去的信息，使其适用于实时流式处理。
 
 #
-
 ### 💡 核心创新点
 
 1.  首次将脉冲神经网络（SNN）应用于语音带宽扩展（BWE）任务：
@@ -92,7 +93,6 @@ SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件
     - 收益：确保了深层SNN的稳定训练，并直接针对BWE任务的感知目标进行优化，有助于提升语音可懂度和频谱相似度（尤其体现在LSD-LF指标上）。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -122,7 +122,6 @@ SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件
 - 正则化或稳定训练技巧：使用了学习率平台期调度以防止过拟合和促进收敛。
 
 #
-
 ### 📊 实验结果
 
 论文在TIMIT数据集上进行了全面的对比实验和消融研究。
@@ -149,7 +148,6 @@ SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件
 结论：每个组件（ESN, SConv, Subband Loss）的加入都能逐步改善LSD。ESN替换Transformer是能耗降低的关键。SConv在进一步降低LSD的同时保持了最佳能耗。因果设计使LSD轻微上升至1.44，但几乎不影响能耗和功率，证明了其适用于实时应用。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：本文提出了一个清晰的、有目的性的新框架（SpikeBWE），首次将SNN引入BWE。技术路线正确，通过精心的架构设计（ESN, SConv）和损失函数设计（Subband Loss）取得了显著的效率提升和有竞争力的质量。实验设计较为完整，包含对比实验和消融实验，数据可信。扣分点在于：1）生成质量的“天花板”未突破现有最佳ANN（AP-BWE）；2）缺乏在更具挑战性的实际场景（如噪声、远讲）下的评估。
@@ -157,19 +155,3 @@ SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件
 - 开源与复现加成：0.5/1：论文提供了代码仓库链接（指向TUNet官方代码库，暗示SpikeBWE代码可能在此基础上扩展）和在线Demo，这是加分项。但未提供训练好的SpikeBWE模型权重、详细的网络配置文件、训练日志或超参数搜索细节，复现所需信息不完全充分。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文提到“Demo is available at here”并隐含引用代码库（链接指向TUNet的GitHub仓库：https://github.com/NXTProduct/TUNet）。推测SpikeBWE的代码可能基于此仓库修改，但论文未明确提供独立的代码仓库链接。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：使用公开的TIMIT数据集，但论文未说明数据集的获取方式。
-- Demo：论文摘要中提及提供在线Demo（“Demo is available at here”），但未提供具体URL。
-- 复现材料：提供了部分训练细节（优化器、学习率、批量大���、训练轮数），但缺失关键信息如模型具体维度（卷积通道数、ESN隐藏单元数等）和训练硬件环境。
-- 论文中引用的开源项目：
-    1.  TUNet：作为基线模型，其代码被直接引用（https://github.com/NXTProduct/TUNet）。
-    2.  auraloss v2.0.1：用于计算STFT损失。
-    3.  Adam optimizer：标准优化器。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

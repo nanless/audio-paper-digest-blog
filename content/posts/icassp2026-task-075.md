@@ -38,6 +38,19 @@ hiddenInHomeList: true
 
 这篇论文的亮点在于其巧妙地利用多目标优化和可微分k-means，在理论上“纯净”的语音学token和“丰富”的声学token之间找到了一个实用且性能优异的平衡点，尤其在情感识别和语音转换等韵律敏感任务上取得了显著提升。然而，其短板在于对“不同iable k-means”这一核心工具的离散化本质在端到端训练中可能带来的优化挑战（如梯度估计方差）探讨不足，且虽然声码器使用了预训练说话人编码器进行条件化以“剥离”说话人信息，但这种剥离是否彻底以及对下游任务的潜在影响分析不够深入。
 
+🔗 **开源详情**
+
+- 代码：论文中未提及代码仓库链接。方法基于ESPnet工具包实现。
+- 模型权重：未提及是否公开微调后的模型权重。
+- 数据集：使用了VCTK， LibriSpeech， RAVDESS， VoxCeleb， LJSpeech， TIMIT， Expresso， LibriLight等公开数据集，获取方式见各自官网。
+- Demo：提供了在线演示网站：`https://ondatk68.github.io/onda-demo/projects/phonological-tokenizer`。
+- 复现材料：给出了部分训练细节（如两阶段训练、学习率、epoch数、α值），但未提供完整的配置文件、检查点或详细的超参数列表。
+- 论文中引用的开源项目：ESPnet， HiFi-GAN（ParallelWaveGAN）， ECAPA-TDNN（SpeechBrain）， WavLM， Qwen2.5， Llama-3.2等。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  要解决的问题：现有的离散语音token（声学token和语音学token）要么保留过多冗余声学信息（如说话人身份），要么过度抽象丢失关键的韵律信息，都不适合作为语音语言模型（speechLMs）的理想输入。

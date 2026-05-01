@@ -41,6 +41,19 @@ hiddenInHomeList: true
 亮点：创新性地提出了完全“去文本化”的语音文档RAG框架，将语音交互的便捷性与视觉文档理解相结合，是“多模态原生”交互的一次有意义探索，并首次发布了双语语音-文档RAG基准数据集。  
 短板：端到端框架严重依赖现有的强多模态模型（ColQwen-Omni， Qwen2.5-Omni），核心的“无文本”生成质量在部分数据集（如DUDE、CDR）上仍明显低于使用文本的SOTA模型，延迟优势相对SOTA（ViDoRAG）的差距也未充分证明。
 
+🔗 **开源详情**
+
+- 代码：论文提供GitHub链接 (https://github.com/xiepeijinhit-hue/textlessrag)，承诺发布pipeline代码。
+- 模型权重：未提及自行训练的模型权重。框架依赖的ColQwen-Omni和Qwen2.5-Omni是现有开源模型。
+- 数据集：承诺发布论文中构建的SV-DOC数据集，包含增强的英文数据集和全新的中文CDR数据集。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文中未提供详细的训练超参数、配置文件、检查点或更深入的附录说明。
+- 引用的开源项目：ColQwen-Omni (Hugging Face), ColBERT (GitHub), DocLayout-YOLO (GitHub), Qwen2.5-Omni (Hugging Face), Doubao TTS API, Tesseract OCR。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  问题：现有基于视觉文档的知识问答（RAG）系统通常需要将语音查询通过ASR转换为文本，并将文档内容通过OCR提取文本，这增加了延迟和潜在的错误传播，且无法直接处理图表等非文本视觉元素。
@@ -69,6 +82,19 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 本文的亮点在于提出了一个新颖的分析框架，利用参数重要性分数从“层”的维度定量揭示了语音微调导致文字能力退化的内部机制——即“文字重要参数分布偏移”，并据此为LoRA等流行技术的有效性提供了理论解释。然而，其局限也相当明显：整个分析局限于“编码器-适配器”这一特定范式，结论能否推广至更主流的基于语音离散token的端到端语音大模型（如Moshi, Qwen-Audio等）存疑，且所有代码、模型均未开源，大大削弱了其可复现性和即时影响力。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及任何代码仓库链接或开源计划。
+- 模型权重：未提及。
+- 数据集：论文使用了公开数据集VoiceAssistant-400K和Spoken-Alpaca-GPT4（均托管在HuggingFace），但未提及本文是否贡献了新数据集。
+- Demo：未提及。
+- 复现材料：论文提供了一定的训练细节（如数据集、LoRA秩参数、分层学习率公式中的λ值），但缺失关键超参数（如基础学习率、batch size）和训练硬件信息，不足以完全复现实验。
+- 论文中引用的开源项目：论文主要引用了LLaMA-Omni的代码/架构，以及LLaMA系列模型、LoRA方法和Whisper编码器（作为语音编码器被引用）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -109,6 +135,19 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 论文成功地将GRPO和可验证奖励（BLEU）应用于语音大模型的开放生成任务，并展示了其优于SFT的性能，方法简洁有效且结果扎实。然而，其核心贡献更多是应用层面的迁移与验证，而非算法本身的重大革新，且完全未开源代码与模型，对社区的可复用性打了折扣。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及是否公开训练后的模型权重。
+- 数据集：使用了公开数据集LibriSQA和CoVoST2，并说明了数据划分。
+- Demo：未提及。
+- 复现材料：提供了较为详细的实验配置（超参数搜索范围、训练硬件、GRPO具体参数如β和G），但未提供最终选定的完整配置和检查点。
+- 论文中引用的开源项目：引用了Granite Speech模型 [4] 和 Granite 3.0语言模型 [27] 作为基础，使用了AdamW优化器。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

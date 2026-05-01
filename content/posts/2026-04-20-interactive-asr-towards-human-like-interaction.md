@@ -7,14 +7,6 @@ categories: [论文速递]
 description: "这篇论文针对传统ASR的两大盲区——WER指标对语义错误不敏感、以及系统无法通过自然交互进行纠错——提出了Interactive ASR框架。首先，作者引入S²ER（Sentence-level Semantic Error Rate），利用LLM-as-a-Judge二元判断识别结果与参考文本是否"
 hiddenInHomeList: true
 ---
-
-# 📄 Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition
-
-#语音识别 #大语言模型 #多语言 #模型评估
-
-✅ **评分：6.5/10** | [arxiv](https://arxiv.org/abs/2604.09121v3)
-
-
 ### 👥 作者与机构
 
 - 第一作者：Peng Wang（上海交通大学 X-LANCE Lab）
@@ -32,19 +24,27 @@ hiddenInHomeList: true
   - Xie Chen（上海交通大学 X-LANCE Lab）
 
 ---
-
 ### 💡 毒舌点评
 
 这篇论文把LLM的“打工人”属性开发到了极致：让同一个32B大模型同时兼任裁判、戏精用户和外科医生，硬生生凑出了一套“交互ASR”流水线。S²ER指标确实比WER更懂人话，但这个“交互”本质上是大模型prompt engineering的高级套壳——仿真里的User Simulator比真实用户配合一万倍，10轮纠错上限更像是实验室里的自我感动，真放到车载或音箱场景里，用户可能在第二轮就开始骂娘了。
 
 ---
+### 🔗 开源详情
 
+- **代码**：论文中声明“We will release the code to facilitate future research in interactive and agentic ASR”，但未提供具体的GitHub/GitLab仓库地址、stars数量或代码框架。
+- **模型权重**：未公开。实验使用的Qwen3-ASR-1.7B、Qwen3-32B、Index-TTS-1.5均为阿里通义系列已发布的预训练模型，但论文自身未释放新的微调权重。
+- **数据集**：未公开新构建的数据集。测试使用的GigaSpeech、WenetSpeech、ASRU2019均为已有公开benchmark。
+- **预训练权重**：未提供（推理框架不涉及新预训练权重）。
+- **在线Demo**：有。Live demo地址为 https://i-asr.sjtuxlance.com/；项目主页为 https://interactiveasr.github.io/。
+- **依赖的开源项目**：Qwen3-ASR-1.7B、Qwen3-32B、Index-TTS-1.5（均属阿里巴巴通义系列）。
+- **结论**：论文承诺未来开源，但目前仅提供在线体验Demo和项目主页，尚未公开具体代码仓库。
+
+---
 ### 📌 核心摘要
 
 这篇论文针对传统ASR的两大盲区——WER指标对语义错误不敏感、以及系统无法通过自然交互进行纠错——提出了Interactive ASR框架。首先，作者引入S²ER（Sentence-level Semantic Error Rate），利用LLM-as-a-Judge二元判断识别结果与参考文本是否在句子级别语义等价，人工对齐实验显示LLM评分与人类共识的Pearson相关系数达0.828，甚至超过平均领域专家水平。其次，作者设计了一套LLM驱动的Agentic框架：通过Intent Router判断用户新输入是“继续对话”还是“纠正上一句”，若是后者，则触发基于Chain-of-Thought的Reasoning Corrector，执行“定位-推理-替换”三步手术式修正。为了系统评测，作者还构建了自动化仿真流程，利用语音克隆TTS和LLM模拟用户纠错行为。在GigaSpeech（英语）、WenetSpeech（中文）和ASRU2019（汉英码切换）上的实验表明，仅需1-2轮交互，S²ER即可从约15%-27%骤降至3%-8%，而传统WER/CER几乎纹丝不动，证明语义级指标才是衡量交互收益的关键。当前局限在于系统依赖32B大模型进行推理，实时性与部署成本仍是落地瓶颈。
 
 ---
-
 ### 🏗️ 模型架构
 
 论文提出的Interactive ASR并非端到端重训的新模型，而是一个**基于现有预训练模型拼接的Agentic推理框架**。整体可分为**在线交互推理管线**与**自动化仿真评测管线**两部分。
@@ -90,7 +90,6 @@ hiddenInHomeList: true
    - **Stage 2**：Semantic Judge比对 $Y_0$ 与 $Y_{GT}$，若为Yes则成功。
    - **Stage 3**：若为No，User Simulator生成纠正语音 $I_t$。
    - **Stage 4**：Interactive ASR接收 $I_t$，经ASR得到 $H_t$，再由Reasoning Corrector更新 $Y_t$，回到Stage 2，直至成功或达到最大轮数（10轮）。
-
 ### 💡 核心创新点
 
 **1. S²ER：基于LLM二元判决的句子级语义错误率**
@@ -108,7 +107,6 @@ hiddenInHomeList: true
 - **之前的方法**：交互式ASR缺乏公开benchmark和大规模可复现评测协议，人工多轮实验成本极高。
 - **解决机制**：设计了一个全自动仿真器，利用LLM生成多样化纠正文本，再利用零样本TTS（Index-TTS-1.5）克隆原说话人音色合成纠正语音，从而构建高保真的多轮交互测试环境。
 - **实际效果**：使得在三个跨语言benchmark上进行10轮大规模交互评测成为可能。
-
 ### 🔬 细节详述
 
 **训练数据**
@@ -141,7 +139,6 @@ hiddenInHomeList: true
 
 **数据增强/正则化**
 - 无。
-
 ### 📊 实验结果
 
 **一、Human-AI Alignment Study（表1）**
@@ -174,7 +171,6 @@ LLM Judge与人类的整体相关性（0.8281）超过平均领域专家（0.810
 - **S²ER的断崖式下降**：仅经过1轮交互，S²ER在GigaSpeech上从14.12%降至6.03%，WenetSpeech从15.56%降至6.26%，ASRU2019从26.89%降至8.10%。2轮后进一步降至3.66%、3.81%、4.59%。10轮后接近完美（约1%）。
 - **传统指标的麻痹性**：与此形成鲜明对比的是，WER/CER/MER在10轮内几乎保持不变（如GigaSpeech的WER仅从12.25%微降至10.53%），SER也下降有限。这说明传统的token级指标完全无法捕捉交互纠错带来的语义收益，有力论证了S²ER的必要性。
 - **瓶颈分析**：10轮后极少数失败案例主要源于级联ASR错误——当基础ASR反复误解用户的纠正指令时，LLM缺乏可靠的文本锚点，导致修正循环停滞。
-
 ### ⚖️ 评分理由
 
 **创新性：7/10**
@@ -190,19 +186,6 @@ LLM Judge与人类的整体相关性（0.8281）超过平均领域专家（0.810
 概念包装（如“Agentic”、“Human-Like”）略重，但核心问题真实、实验数据诚实（明确承认失败案例源于级联ASR错误），整体属于较为实在的工作。
 
 ---
-
-### 🔗 开源详情
-
-- **代码**：论文中声明“We will release the code to facilitate future research in interactive and agentic ASR”，但未提供具体的GitHub/GitLab仓库地址、stars数量或代码框架。
-- **模型权重**：未公开。实验使用的Qwen3-ASR-1.7B、Qwen3-32B、Index-TTS-1.5均为阿里通义系列已发布的预训练模型，但论文自身未释放新的微调权重。
-- **数据集**：未公开新构建的数据集。测试使用的GigaSpeech、WenetSpeech、ASRU2019均为已有公开benchmark。
-- **预训练权重**：未提供（推理框架不涉及新预训练权重）。
-- **在线Demo**：有。Live demo地址为 https://i-asr.sjtuxlance.com/；项目主页为 https://interactiveasr.github.io/。
-- **依赖的开源项目**：Qwen3-ASR-1.7B、Qwen3-32B、Index-TTS-1.5（均属阿里巴巴通义系列）。
-- **结论**：论文承诺未来开源，但目前仅提供在线体验Demo和项目主页，尚未公开具体代码仓库。
-
----
-
 ### 🖼️ 图片与表格
 
 **图片保留建议：**
@@ -229,7 +212,6 @@ LLM Judge与人类的整体相关性（0.8281）超过平均领域专家（0.810
 | 2 | 10.82 | 58.03 | 3.66 | 4.07 | 26.97 | 3.81 | 3.21 | 23.04 | 4.59 |
 | 3 | 10.68 | 57.80 | 2.67 | 3.82 | 26.30 | 2.71 | 3.09 | 22.08 | 3.06 |
 | 10 | 10.53 | 57.59 | 1.08 | 3.51 | 25.32 | 1.11 | 2.88 | 20.88 | 0.82 |
-
 ### 📸 论文图片
 
 ![figure](https://arxiv.org/html/2604.09121v3/x1.png)

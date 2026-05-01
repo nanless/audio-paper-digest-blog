@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音频事件检测 | 8.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 HAVT-IVD: Heterogeneity-Aware Cross-Modal Network for Audio-Visual Surveillance: Idling Vehicles Detection with Multichannel Audio and Multiscale Visual Cues
-
-#音频事件检测 #多模态模型 #端到端 #麦克风阵列
-
-🔥 **8.0/10** | 前25% | #音频事件检测 | #多模态模型 | #端到端 #麦克风阵列
-
-学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Xiwen Li（Scientific Computing and Imaging Institute, University of Utah）
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Xiwen Li（Scientific Computing and Imaging Institute, University of Utah）、Xiaoya Tang（Scientific Computing and Imaging Institute, University of Utah）、Tolga Tasdizen（Scientific Computing and Imaging Institute, University of Utah; Department of Electrical and Computer Engineering, University of Utah）
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文的亮点在于其问题导向的系统设计，针对异质性模态融合、多尺度检测和训练不稳定这三个具体痛点，分别用Transformer、特征金字塔和解耦头给出了清晰的解决方案，实验增益显著。然而，其短板在于创新点的“组合”色彩较重，每个组件（如Transformer用于融合、FPN、解耦头）在其他视觉任务中已有广泛应用，论文的核心贡献更多是巧妙地将这些成熟模块应用于特定任务，而非提出根本性的新机制。
 
 #
+### 🔗 开源详情
 
+- 代码：论文中明确提供了代码仓库链接：`https://github.com/lix4/AVIVDNet`。
+- 模型权重：未提及是否提供预训练模型权重。
+- 数据集：未提及AVIVD或MAVD数据集是否公开或如何获取。
+- Demo：未提及在线演示。
+- 复现材料：提供了部分训练细节：输入尺寸（224x224，16帧；音频128x469）、优化器（未说明）、学习率（1e-3）、Batch size（16）、训练轮数（100 epochs with early stopping patience 50）、损失权重（λconf=1, λcls=1, λreg=5）、训练硬件（NVIDIA A6000）。但未提供完整的配置文件、检查点或更详细的附录。
+- 引用的开源项目：论文未明确列出依赖的外部开源工具或模型，但编码器部分使用了MobileNetV3等标准架构。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：论文研究音频-视觉监控下的怠速车辆检测（IVD）任务，即结合视频和多通道音频，定位并分类车辆状态为移动、怠速或熄火。主要挑战包括：视觉与音频模态间的异质性（空间分布不匹配）、车辆尺度变化大、以及联合检测头的梯度冲突。
@@ -41,7 +41,6 @@ hiddenInHomeList: true
 6.  主要局限性是什么：模型偶尔会产生误报，例如将环境声音（如割草机）误判为发动机噪声。未来工作计划将问题重新定义为纯分类任务以简化流程。
 
 #
-
 ### 🏗️ 模型架构
 
 HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1所示。流程如下：
@@ -59,7 +58,6 @@ HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1�
 ![图1: HAVT-IVD架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461232-0.png)
 
 #
-
 ### 💡 核心创新点
 
 1.  异质性感知的音频-视觉Transformer融合：针对音频与视觉模态在空间分布和语义上的固有差异（如图2所示），模型不强行将音频特征转换为视觉空间，而是直接对齐原始的视觉和音频patch。通过12层自注意力网络进行全局路由，使不同模态的patch能够根据内容相互查询和融合，从而更有效地处理跨模态异质性。
@@ -69,7 +67,6 @@ HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1�
 ![图2: 实例异质性示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461232-1.png)
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：使用AVIVD数据集，包含76,490个训练视频-音频对，标注了每辆车的边界框和类别（M/I/Eoff）。测试集为8,431个对，独立划分。数据来自医院候客区，使用远程监控摄像头和6个均匀分布的无线麦克风采集。
@@ -80,7 +77,6 @@ HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1�
 - 正则化技巧：未明确提及使用Dropout或权重衰减等，但早停是主要的防止过拟合手段。
 
 #
-
 ### 📊 实验结果
 
 论文在AVIVD和MAVD两个数据集上进行了评估，主要指标为mAP@0.5和各类别的AP。
@@ -131,7 +127,6 @@ HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1�
 关键结论：在MAVD数据集上，HAVT-IVD（无知识蒸馏）的性能大幅超越AVIVDNet，并在mAP@Avg和mAP@0.5上优于所有使用了知识蒸馏的先前方法，证明了模型良好的泛化能力。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量（6.5/7）：论文的技术路线清晰，针对明确的问题设计了有效的解决方案（异质性融合、多尺度、解耦头）。实验设计严谨，包含与多个基线（包括通用AVS模型）的对比、充分的消融研究、以及跨数据集验证，数字证据有力地支撑了结论。主要不足在于创新更多是成熟技术的巧妙组合与应用，而非提出全新的理论或架构。
@@ -139,16 +134,3 @@ HAVT-IVD是一个端到端的音频-视觉融合网络，其整体架构如图1�
 - 开源与复现加成（0.5/1）：论文提供了明确的代码链接（GitHub），并详细给出了训练超参数、损失权重、输入格式等关键信息，极大地便利了复现。但未提供预训练模型权重、数据集获取方式或完整的训练配置文件，因此未获得满分加成。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文中明确提供了代码仓库链接：`https://github.com/lix4/AVIVDNet`。
-- 模型权重：未提及是否提供预训练模型权重。
-- 数据集：未提及AVIVD或MAVD数据集是否公开或如何获取。
-- Demo：未提及在线演示。
-- 复现材料：提供了部分训练细节：输入尺寸（224x224，16帧；音频128x469）、优化器（未说明）、学习率（1e-3）、Batch size（16）、训练轮数（100 epochs with early stopping patience 50）、损失权重（λconf=1, λcls=1, λreg=5）、训练硬件（NVIDIA A6000）。但未提供完整的配置文件、检查点或更详细的附录。
-- 引用的开源项目：论文未明确列出依赖的外部开源工具或模型，但编码器部分使用了MobileNetV3等标准架构。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -7,26 +7,27 @@ categories: [icassp-2026]
 description: "语音合成 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Gelina: Unified Speech and Gesture Synthesis Via Interleaved Token Prediction
-
-#语音合成 #手势生成 #自回归模型 #流匹配 #多模态模型
-
-✅ **7.0/10** | 前50% | #语音合成 | #自回归模型 | #手势生成 #流匹配
-
-学术质量 6.5/7 | 选题价值 2.0/2 | 复现加成 -0.5 | 置信度 中
-
-
 ### 👥 作者与机构
 
 - 第一作者：Téo Guichoux（ISIR, Sorbonne Université；STMS Lab – IRCAM, Sorbonne Université）
 - 通讯作者：未说明
 - 作者列表：Téo Guichoux（ISIR, Sorbonne Université；STMS Lab – IRCAM, Sorbonne Université）， Théodor Lemerle（STMS Lab – IRCAM, Sorbonne Université）， Shivam Mehta（KTH皇家理工学院）， Jonas Beskow（KTH皇家理工学院）， Gustav Eje Henter（KTH皇家理工学院）， Laure Soulier（ISIR, Sorbonne Université）， Catherine Pelachaud（ISIR, Sorbonne Université；CNRS）， Nicolas Obin（STMS Lab – IRCAM, Sorbonne Université）
-
 ### 💡 毒舌点评
 
 这篇论文的亮点在于其“交错token预测”的架构设计直觉上非常优雅，为多模态序列建模提供了一个统一且时序对齐的方案，并在同步性上取得了可观的实验结果。然而，其最大的短板在于“统一”的代价——它在语音生成质量上显著落后于最新的纯语音SOTA（如CosyVoice-2），在手势丰富度（如手指）上也进行了简化，这使其宣称的“统一”和“竞争”显得有些取舍过重，更像是一次有潜力的概念验证而非成熟的系统性方案。
+### 🔗 开源详情
 
+- 代码：论文中未提及代码仓库链接。
+- 模型权重：未提及公开权重。
+- 数据集：论文中使用的BEAT2、GigaSpeech、LibriTTS等均为公开数据集，但论文本身未提供新数据集。
+- Demo：提供了在线演示链接：https://TGuichoux.github.io/。
+- 复现材料：论文给出了详细的训练配置（数据集、学习率、批大小、GPU型号/数量、训练步数），为复现提供了重要信息，但缺少完整的超参数配置文件或代码。
+- 论文中引用的开源项目：WavTokenizer [21]， Encodec [20]， Whisper-large-v3 [29]， Matcha-TTS [18]， Lina-Speech [6]， EMAGE [8]， CAMN [9]， RAG-Gesture [32]。
+- 总结：论文公开了演示和详细的技术细节，但未提供核心的开源代码和模型，因此复现门槛较高。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：当前生成语音和伴随手势的多模态系统大多采用级联（先语音后手势）的方式，导致两者同步性弱、韵律对齐不足，且不符合人类通信中多模态协同产生的心理语言学原理。
@@ -43,7 +44,6 @@ hiddenInHomeList: true
 | CosyVoice-2 | - | - | - | 3.5 ±.5 | 3.70 ±.04 | 63.9 |
 5. 意义：验证了在统一框架内联合生成语音和手势的可行性，且能获得具有竞争力的同步性和自然度，为具身对话智能体提供了更自然的多模态生成思路。
 6. 局限：目前仅建模身体姿态，未包含手指和面部表情；语音质量受限于离散化tokenizer（WavTokenizer）的瓶颈；计算效率（RTF 1.47）低于专用单模态模型。
-
 ### 🏗️ 模型架构
 
 Gelina是一个分阶段的多模态生成系统，其核心流程如下：
@@ -79,7 +79,6 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
 
 ![图3: 手势条件流匹配解码器](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464562-2.png)
 该图展示了解码器如何从AR骨干获取条件信息，并通过一个基于Transformer的U-Net从噪声中逐步恢复手势信号。
-
 ### 💡 核心创新点
 
 1.  交错Token预测的统一自回归架构：
@@ -96,7 +95,6 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
     *   之前局限：许多模型依赖于固定的说话人嵌入来支持多说话人，这限制了其在训练时未见过的新说话人上的泛化，且难以同时克隆语音和手势风格。
     *   如何起作用：Gelina支持以“文本 + 一段语音-手势对”作为提示（prompt），通过自回归序列续写的方式，生成与提示在声音和肢体风格上相似的新内容。这是一种隐式的、基于上下文的克隆。
     *   收益：无需显式设计说话人嵌入模块，即可实现语音和手势风格的联合克隆，实验表明克隆模式（Gelina Clon.）在多项指标上优于基础模型。
-
 ### 🔬 细节详述
 
 *   训练数据：
@@ -114,7 +112,6 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
 *   训练硬件：预训练使用4xH100，微调使用1xH100，流匹配解码器训练使用3xH100。
 *   推理细节：AR生成采用自回归采样（论文未指定具体解码策略，如温度或beam search）。流匹配解码器采用确定性Euler采样，步数100。运行时分析在A5000上完成，Gelina的RTF为1.47。
 *   正则化��稳定训练技巧：为稳定AR训练，丢弃了手势的RVQ残差层（仅用第一层token），依赖流匹配解码器恢复细节。这是一个关键的设计选择。
-
 ### 📊 实验结果
 
 主要对比实验：在BEAT2数据集上，与多个单模态手势生成基线（CAMN, EMAGE, RAG-Gesture）和单模态语音合成基线（Lina-Speech, CosyVoice-2）进行对比。
@@ -143,23 +140,8 @@ Gelina是一个分阶段的多模态生成系统，其核心流程如下：
 
 ![图4: 用户研究MOS结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464562-3.png)
 该图展示了用户研究在语音自然度、手势自然度和音视频同步性三个方面的平均分及95%置信区间。Gelina在各项中均表现靠前。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：提出了有新意的交错token预测架构和两阶段训练策略，解决了多模态生成中的对齐和数据稀缺问题。实验全面，进行了客观指标和大规模用户研究对比。但技术深度受限于手势建模的简化（无手指）和语音质量未达到SOTA，创新更多是架构层面的组合而非基础性突破。
 - 选题价值：1.5/2：研究方向（统一语音-手势生成）具有重要前沿意义，是通往更自然人机交互的关键步骤。应用潜力明确，但相较于通用语音合成，任务领域相对较窄。
 - 开源与复现加成：-0.5/1：论文提供了演示页面，描述了关键训练细节，但未提供代码、模型权重或训练脚本，使得完全复现其工作（尤其是预训练阶段）存在较大障碍。
-
-### 🔗 开源详情
-
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：未提及公开权重。
-- 数据集：论文中使用的BEAT2、GigaSpeech、LibriTTS等均为公开数据集，但论文本身未提供新数据集。
-- Demo：提供了在线演示链接：https://TGuichoux.github.io/。
-- 复现材料：论文给出了详细的训练配置（数据集、学习率、批大小、GPU型号/数量、训练步数），为复现提供了重要信息，但缺少完整的超参数配置文件或代码。
-- 论文中引用的开源项目：WavTokenizer [21]， Encodec [20]， Whisper-large-v3 [29]， Matcha-TTS [18]， Lina-Speech [6]， EMAGE [8]， CAMN [9]， RAG-Gesture [32]。
-- 总结：论文公开了演示和详细的技术细节，但未提供核心的开源代码和模型，因此复现门槛较高。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

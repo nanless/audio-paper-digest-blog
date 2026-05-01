@@ -41,6 +41,19 @@ hiddenInHomeList: true
 
 这篇论文堪称生物识别安全领域的一声警钟，它用优雅的技术（解纠缠表示学习）和极低的成本（5秒音频），制造出了一个足以让现有语音验证系统头疼不已的“合成身份”。其亮点在于将看似复杂的攻击变得异常简单高效；短板则是，这种“降维打击”式的技术突破，也立刻暴露了当前ASV系统在应对此类高级、细粒度伪造时的脆弱性，给防御方带来了前所未有的压力。
 
+🔗 **开源详情**
+
+-   代码：论文中提供了代码仓库链接：`Vcbsl/VoxMorph`。
+-   模型权重：论文中未明确提及是否公开预训练模型权重，但鉴于其代码开源，权重很可能包含在内或后续会提供。
+-   数据集：公开。论文明确声明“we release the first publicly available dataset of 10, 000 high-fidelity voice morphs”，并提供了项目页面链接。
+-   Demo：论文中未提及在线演示。
+-   复现材料：论文提供了充分的复现信息，包括：数据集（LibriSpeech）、评估指标（FAD, KLD, WER, MMPMR/FMMPMR）及其计算方式、使用的基线模型（ViM, Vevo, MorphFader）、硬件环境（RTX 5000 Ada GPU）以及详细的消融实验设置。
+-   引用的开源项目：论文引用并依赖了多个开源项目/模型，包括：GE2E（说话人验证）、CAM++（说话人验证）、自回归语言模型（如LLaMA）、条件流匹配模型（如COSYVOICE）、HiFTNet（声码器）、ECAPA-TDNN、HuBERT、Wav2Vec2（用于编码器消融）、Resemblyzer（用于评估）、Wav2Vec2-Base-960h（用于WER计算）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1.  解决的问题：现有的语音身份变形（VIM）攻击方法存在严重缺陷：计算成本高、不可扩展（需要为每对说话人微调）、依赖声学相似的说话人对，且生成语音质量低。这些限制了其作为实际威胁的可行性。
@@ -75,6 +88,20 @@ hiddenInHomeList: true
 
 亮点： 论文框架设计巧妙，通过解耦“身份（ID-LoRA）”和“风格（Style-LoRA）”，并借鉴协同过滤思想进行个性化聚合，优雅地解决了联邦学习中“隐私保护-通信效率-个性化”三者间的矛盾，是一个完整且实用的系统方案。
 短板： 实验部分缺少对最新、最强的端到端语音大模型（如GPT-SoVITS的最新版本或CosyVoice 2的直接微调基线）的深入对比，使得其“显著优于零样本方法”的结论在当前技术背景下略显单薄，也未能充分展示其在更复杂（如跨语言）场景下的泛化能力。
+
+🔗 **开源详情**
+
+- 代码： 提供了一个Hugging Face Spaces Demo链接 (`https://huggingface.co/spaces/sDuoluoluos/FedPISA-Demo`)，但论文未提供完整的训练或评估代码仓库链接。
+- 模型权重： 论文未提及是否公开FED-PISA或其组件（如训练好的ID-LoRA、Style-LoRA）的权重。
+- 数据集： 使用了四个公开数据集（ESD, EmoV-DB, RAVDESS, CREMA-D），并说明了数据获取与预处理方式，但未提供统一的预处理后数据包。
+- Demo： 提供了在线演示链接。
+- 复现材料： 论文非常详细地给出了模型配置（骨干版本、LoRA秩/缩放）、训练超参数（学习率、batch size、轮数、步数分配）、优化器、评估指标（包括使用的模型，如Whisper, emotion2vec, ECAPA-TDNN）和硬件环境，复现细节充分。
+- 引用的开源项目： GPT-SOVITS-V4（作为骨干）、emotion2vec（用于风格标签映射和评估）、Whisper-large-v3 Turbo（用于文本标注和WER/CER计算）、SpeechBrain（提供ECAPA-TDNN用于说话人相似度评估）。
+- 论文中未提及代码仓库链接和模型权重下载地址，但提供了Demo链接。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 
@@ -114,6 +141,19 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：提供了Demo链接（https://huggingface.co/spaces/chenxie95/Cross-Lingual_F5-TTS_Space）和个人主页示例（https://qingyuliu0521.github.io/Cross_lingual-F5-TTS/）。论文指出Cross-Lingual F5-TTS的代码可通过这些链接访问，暗示已开源。
+- 模型权重：基础模型F5-TTS-Base已开源。本文提出的Cross-Lingual F5-TTS模型和说话率预测器的具体权重下载地址论文中未明确提供。
+- 数据集：使用了公开数据集Emilia、LibriSpeech、FLEURS。未提供本文特有的测试集（跨语言测试集）的独立下载。
+- Demo：提供了交互式HuggingFace Spaces Demo。
+- 复现材料：提供了详尽的训练配置（模型架构、优化器、学习率、batch size、训练步数）、推理设置（NFE、CFG等）和预处理方法描述，为复现提供了坚实基础。
+- 依赖的开源项目：MMS (forced alignment), Vocos (vocoder), Whisper-large-V3 (WER评估), Paraformer-zh (中文WER评估), WavLM (说话人相似度评估), UTMOS (自然度评估)。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 问题：现有的基于流匹配的文本转语音（TTS）模型在进行跨语言语音克隆时，严重依赖于对音频提示（参考音频）的转录文本，这在目标语言未知或转录不可用时无法实现。
@@ -140,6 +180,20 @@ hiddenInHomeList: true
 💡 **毒舌点评**
 
 亮点：论文最大的亮点在于将“情感规划”这个抽象任务显式地交给一个经过微调的大语言模型来完成，这个思路比传统基于规则或回归的方法更灵活，也更契合当前LLM赋能各任务的潮流。短板：论文在最关键的“如何做到零样本”和“LLM具体如何规划韵律”这两个核心问题上，细节描述过于粗疏，比如对“融合”操作（公式1）和“情绪调制”函数（公式4）的实现一笔带过，给人的感觉是框架大于细节，实验数据漂亮但“黑盒”感较强。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及公开模型权重。
+- 数据集：使用了公开数据集GRID和CHEM，但未提供获取方式或预处理脚本。
+- Demo：未提及在线演示。
+- 复现材料：仅提供了极有限的训练设置（优化器、学习率、硬件），缺乏复现所需的详细配置文件、超参数表、代码或检查点。
+- 论文中引用的开源项目：引用了CosyVoice/CosyVoice2的工作，但未明确说明其开源项目是否被直接使用或作为基础进行构建。
+- 总结：论文中未提及任何开源计划。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 
 📌 **核心摘要**
 

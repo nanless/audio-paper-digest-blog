@@ -42,6 +42,19 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：提供了GitHub仓库链接（https://github.com/AudenAI/Auden/tree/main/examples/voice），论文明确表示将公开代码和训练配方。
+- 模型权重：提到了“the resulting Auden-voice encoder”将开源，但未在正文中给出具体下载链接，推测包含在上述代码仓库中。
+- 数据集：未提供新的或专有数据集。训练所用数据集（VoxCeleb2, CREMA-D, ParaSpeechCaps等）均为公开数据集，论文未提供获取方式的详细说明。
+- Demo：未提及。
+- 复现材料：提供了详细的训练超参数（学习率0.0045、优化器、数据增强SpecAugment）、模型规格（156M参数、768维输出）和评估设置。代码仓库承诺包含“training recipes”。
+- 引用的开源项目：依赖的开源工具/模型包括：Zipformer [35]（基础架构）、Whisper [7]（对比基线）、wav2vec2.0 [39]（对比基线）、emotion2vec [26]（对比基线）、Wespeaker [25]（对比基线）、RoBERTa [42]（CLAP文本编码器）、PyAnnote 3.1 [40]（说话人分离评估）、Qwen2.5-7B-Instruct [45]（LLM-QA）。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 问题：现有大型音频-语言模型（LALM）的声学编码器（如Whisper）主要为转录优化，对说话人身份和副语言信息（如情感、语调）理解不足，成为感知能力的瓶颈。

@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音合成 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Deep Dubbing: End-to-End Auto-Audiobook System with Text-to-Timbre and Context-Aware Instruct-TTS
-
-#语音合成 #流匹配 #端到端 #有声书生成
-
-✅ **7.5/10** | 前25% | #语音合成 | #流匹配 | #端到端 #有声书生成
-
-学术质量 6.5/7 | 选题价值 2.0/2 | 复现加成 0.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Ziqi Dai（北京建筑大学智能科学与技术学院，腾讯音乐娱乐Lyra实验室）†
@@ -35,13 +25,23 @@ hiddenInHomeList: true
     - Ruohua Zhou⋆（北京建筑大学智能科学与技术学院）
 
 #
-
 ### 💡 毒舌点评
 
 亮点：该工作将“为角色从文本生成声音”和“根据上下文生成情感语音”这两个有声书制作的关键环节进行了系统性建模，并提出了Text-to-Timbre (TTT) 这一新颖任务及其流匹配解决方案。短板：其“端到端”的声明略显模糊，因为核心的上下文理解与指令生成依赖于一个外部的大语言模型，这限制了系统真正的自动化程度和独立性。
 
 #
+### 🔗 开源详情
 
+- 代码：提供了GitHub仓库链接（https://github.com/TME-Lyra-Lab/DeepDubbing）。
+- 模型权重：论文中未提及公开模型权重。
+- 数据集：宣布将发布BookVoice-50h合成数据集（用于TTT和CA-Instruct-TTS任务）至Hugging Face。
+- Demo：提供了在线演示页面（https://tme-lyra-lab.github.io/DeepDubbing）。
+- 复现材料：论文提供了部分模型架构细节、超参数设置（如TTT的DiT层数、隐藏维度等）。但未提供完整的训练配置、检查点、或LLM指令生成的详细代码/模板。
+- 论文中引用的开源项目：CosyVoice [1,2]， F5-TTS [3]， DreamVoice [4]， NANSY++ [5]， Qwen3-Embedding [3.1.2节提及]， Cam++ [24]， Whisper [26]， BigVGAN [22]。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 问题：自动化多角色有声书生成面临两大挑战：如何从文本描述自动获取匹配角色的声音音色，以及如何根据叙事上下文生成情感表达丰富、语调自然的语音。
@@ -63,7 +63,6 @@ hiddenInHomeList: true
 6. 主要局限性：TTT模型在儿童声音（尤其是性别区分）生成上表现不佳，受训练数据中真实儿童语音稀缺的限制；系统依赖外部LLM生成指令，增加了复杂性和不确定性；缺乏与当前最先进TTS系统在开放域对话或情感表达上的直接对比。
 
 #
-
 ### 🏗️ 模型架构
 
 DeepDubbing系统是一个两阶段的自动化流水线（如图1(a)所示）：
@@ -90,7 +89,6 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 ![图1: DeepDubbing系统概览。(a)端到端合成流水线；(b)Text-to-Timbre模块架构；(c) CA-Instruct-TTS模型整体结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464066-0.png)
 
 #
-
 ### 💡 核心创新点
 
 1.  提出Text-to-Timbre (TTT) 任务与模型：首次系统化地研究如何从自然语言描述自动生成匹配角色的说话人音色嵌入。与基于扩散的DreamVoice或依赖属性标量的NANSY++相比，TTT使用条件流匹配，结合多尺度文本条件和显式性别控制，能更灵活、可控地从文本生成音色。
@@ -98,7 +96,6 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 3.  构建并发布BookVoice-50h数据集：这是一个支持TTT和CA-Instruct-TTS两项新任务的合成数据集，提供了结构化的音色描述和情感场景指令模板，为相关研究提供了宝贵的基准资源。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -120,7 +117,6 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 - 正则化或稳定训练技巧：TTT模型中使用了分类器无关引导（CFG）和条件丢弃，这既是条件注入方式也是训练稳定技巧。
 
 #
-
 ### 📊 实验结果
 
 主要评估指标与结果：
@@ -133,7 +129,6 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 缺失对比：论文未将CA-Instruct-TTS与当前公开的最先进端到端TTS系统（如CosyVoice 2、F5-TTS）在相同有声书测试集上进行直接对比。实验主要与自身基线（无指令版本）和消融版本（不同文本编码器）进行比较。
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.5/7。工作具有明确的动机和系统性创新（TTT任务、CA-Instruct-TTS指令机制），技术路线（流匹配）选取得当，架构设计完整。实验在内部数据集上充分，有消融研究，结果分析深入（如儿童声音问题）。主要不足是实验对比的广度和深度有限，缺乏与当前业界/学术界最强系统的直接较量，部分实现细节（如LLM指令生成模块）未公开。
@@ -141,16 +136,3 @@ Context-Aware Instruct-TTS (CA-Instruct-TTS) 模型架构（如图1(c)所示）�
 - 开源与复现加成：-0.5/1。正面：提供了代码仓库链接（GitHub）、发布了合成数据集（BookVoice-50h）。负面：核心模型权重、用于训练的主数据集（4000小时）、以及最关键的上下文指令生成所用的LLM及其���示词工程未公开，使得外部研究者难以完全复现其系统，只能复现其公开的部分组件。
 
 #
-
-### 🔗 开源详情
-
-- 代码：提供了GitHub仓库链接（https://github.com/TME-Lyra-Lab/DeepDubbing）。
-- 模型权重：论文中未提及公开模型权重。
-- 数据集：宣布将发布BookVoice-50h合成数据集（用于TTT和CA-Instruct-TTS任务）至Hugging Face。
-- Demo：提供了在线演示页面（https://tme-lyra-lab.github.io/DeepDubbing）。
-- 复现材料：论文提供了部分模型架构细节、超参数设置（如TTT的DiT层数、隐藏维度等）。但未提供完整的训练配置、检查点、或LLM指令生成的详细代码/模板。
-- 论文中引用的开源项目：CosyVoice [1,2]， F5-TTS [3]， DreamVoice [4]， NANSY++ [5]， Qwen3-Embedding [3.1.2节提及]， Cam++ [24]， Whisper [26]， BigVGAN [22]。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

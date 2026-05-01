@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音乐信息检索 | 7.5/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Constructing Composite Features for Interpretable Music-Tagging
-
-#音乐信息检索 #遗传编程 #音频分类 #开源工具
-
-✅ **7.5/10** | 前25% | #音乐信息检索 | #遗传编程 | #音频分类 #开源工具
-
-学术质量 6.5/7 | 选题价值 0.0/2 | 复现加成 +1.0 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Chenhao Xue (University of Oxford)
@@ -24,13 +14,23 @@ hiddenInHomeList: true
 - 作者列表：Chenhao Xue (University of Oxford), Weitao Hu (Independent Researcher), Joyraj Chakraborty (University of Oxford), Zhijin Guo (University of Oxford), Kang Li (University of Oxford), Tianyu Shi (University of Toronto), Martin Reed (University of Essex), Nikolaos Thomos (University of Essex)
 
 #
-
 ### 💡 毒舌点评
 
 亮点：论文将遗传编程（GP）系统地应用于音乐特征构造，成功地将“可解释性”从特征重要性分析提升到了特征组合公式本身的透明化，为对抗深度学习黑箱提供了一条优雅的符号回归路径。短板：实验所用的GTZAN数据集已被认为过于简单且存在缺陷，在此之上取得的显著提升（如5%准确率）难以证明方法的普适性和先进性；同时，论文声称“接近深度学习SOTA”，但缺乏对当前最强端到端模型（如PANNs， Transformer）在相同条件下的公平对比，使得SOTA宣称略显单薄。
 
 #
+### 🔗 开源详情
 
+- 代码：论文明确提供了代码仓库链接：https://github.com/ChenHX111/GP-Music-Tagging。
+- 模型权重：未提及公开GP进化出的特征表达式或XGBoost模型权重。
+- 数据集：MTG-Jamendo和GTZAN均为公开数据集，论文中给出了引用。
+- Demo：未提及。
+- 复现材料：论文详细给出了GP库（DEAP）、所有超参数（种群大小、代数、交叉突变率、复杂度惩罚λ、XGBoost参数）、数据集划分信息（参考文献[5, 26]），复现信息充分。
+- 引用的开源项目：Essentia库、Omnizart库、DEAP库、XGBoost。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1. 要解决的问题：音乐标签任务中，深度学习模型性能优越但缺乏可解释性，而传统手工特征方法可解释但无法系统地发现有效的特征组合。
@@ -47,7 +47,6 @@ hiddenInHomeList: true
 6. 主要局限性：实验规模相对较小，且依赖于可能已过时的基准数据集；方法的计算成本随特征数量增长，且对基础特征的质量和完备性仍有依赖。
 
 #
-
 ### 🏗️ 模型架构
 
 论文提出的不是传统的端到端神经网络，而是一个三阶段的特征构建与建模流水线（见图1）。
@@ -73,13 +72,11 @@ hiddenInHomeList: true
 *   迭代添加特征：每轮GP只进化一个特征，便于量化每个新特征的贡献。
 *   XGBoost作为评估器：因其在表格数据上的高效性和鲁棒性。
 *   复杂度惩罚：这是保持表达式可解释、防止膨胀的关键。
-
 ### 💡 核心创新点
 
 1.  用于特征构建的可解释GP流水线：创新性地将遗传编程作为自动化、系统化的特征工程工具，直接生成可读的数学公式来组合音乐特征。这解决了传统手工组合无法规模化，以及深度学习融合不可解释的矛盾。
 2.  在音乐标签任务上的有效性验证：证明了该方法在不同抽象层级的基础特征和不同标签任务（多标签、多分类）上都能带来一致的性能提升，验证了方法的普适性。
 3.  基于符号表达式的可解释性分析：超越了特征重要性排序，深入分析进化出的最优表达式（如表2）和特征-算子共现模式（如图7、图8）。这揭示了哪些特征交互（如“频谱扩展”与“音色”特征）和变换（如对时间特征取对数）对标签预测有益，提供了黑箱模型无法给出的洞察。
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -94,7 +91,6 @@ hiddenInHomeList: true
 - 训练硬件：在RTX 3080Ti GPU上运行。每次评估耗时：MTG-Jamendo约5.5秒，GTZAN约1.2秒。
 - 推理细节：GP生成的复合特征表达式一旦进化完成，在部署时只需要进行基本的数学运算，计算成本集中于训练阶段。
 - 正则化/稳定技巧：使用受保护的运算符（如`log(1+|x|)`）避免数值错误；对无效值（NaN/∞）进行适应度惩罚；对每个候选特征在评估前进行标准化。
-
 ### 📊 实验结果
 
 主要Benchmark结果（表1）：
@@ -136,7 +132,6 @@ hiddenInHomeList: true
 
 ![图8: MTG-Jamendo ALL62算子-特征性能](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-7.png)
 图8显示了特定算子作用于特定特征时的平均AUC。例如，对“可舞性”、“起拍率”等时间特征使用对数（log）运算带来了高AUC。
-
 ### ⚖️ 评分理由
 
 - 学术质量（6.5/7）：方法设计合理，实验充分且结果稳定，分析深入。主要创新点清晰。扣分主要因为：a) 对比的深度学习基线并非当前最强；b) GTZAN数据集的代表性受限，使得“state-of-the-art”宣称的力度打折；c) 未探讨方法在更大规模、更新的数据集（如MusicNet）上的表现。
@@ -144,16 +139,3 @@ hiddenInHomeList: true
 - 开源与复现加成（+1.0/1）：代码开源，超参数明确，复现路径清晰，加成满分。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文明确提供了代码仓库链接：https://github.com/ChenHX111/GP-Music-Tagging。
-- 模型权重：未提及公开GP进化出的特征表达式或XGBoost模型权重。
-- 数据集：MTG-Jamendo和GTZAN均为公开数据集，论文中给出了引用。
-- Demo：未提及。
-- 复现材料：论文详细给出了GP库（DEAP）、所有超参数（种群大小、代数、交叉突变率、复杂度惩罚λ、XGBoost参数）、数据集划分信息（参考文献[5, 26]），复现信息充分。
-- 引用的开源项目：Essentia库、Omnizart库、DEAP库、XGBoost。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

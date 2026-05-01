@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "语音识别 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 Reducing Prompt Sensitivity in LLM-Based Speech Recognition Through Learnable Projection
-
-#语音识别 #语音大模型 #鲁棒性
-
-✅ **7.0/10** | 前25% | #语音识别 | #语音大模型 | #鲁棒性
-
-学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Sergio Burdisso (Idiap Research Institute)
@@ -24,11 +14,25 @@ hiddenInHomeList: true
 - 作者列表：Sergio Burdisso (Idiap Research Institute), Esa´u Villatoro-Tello (Idiap Research Institute), Shashi Kumar (Idiap Research Institute, EPFL), Srikanth Madikeri (University of Zurich), Andr´es Carofilis (Idiap Research Institute), Pradeep Rangappa (Idiap Research Institute), Manjunath K E (Uniphore), Kadri Hacioglu (Uniphore), Petr Motlicek (Idiap Research Institute, Brno University of Technology), Andreas Stolcke (Uniphore)
 
 #
-
 ### 💡 毒舌点评
 
 这篇论文的亮点在于它像一个严谨的“系统诊断医生”，首次系统地量化了LLM-ASR中一个被广泛忽视但影响显著的“过敏源”（提示词），并提出了一个简洁有效的“抗过敏药”（提示投影器）。但其短板在于，这个“药方”更像是对现有流行架构（SLAM-ASR）的微小修补，核心创新（一个两层MLP）在深度学习领域过于基础，其普适性（对其他架构是否有效）和与更先进的软提示学习方法的对比仍有待验证。
+### 🔗 开源详情
 
+- 代码：提供代码仓库链接：`https://github.com/idiap/llm-asr-prompt`
+- 模型权重：论文中未提及是否公开训练好的模型权重。
+- 数据集：所使用的LibriSpeech、CallHome、AMI为公开数据集。ContactCenter为专有数据集，未公开。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文详细给出了训练和推理的超参数（学习率、批量大小、优化器、LoRA配置、beam size等）、模型架构细节（维度、激活函数）、训练策略（冻结设置、epoch数）以及实验的计算资源（单卡H100）。在GitHub仓库中可能包含更详细的配置文件或附录。
+- 论文中引用的开源项目：
+    - 语音编码器：WavLM-large (`https://huggingface.co/microsoft/wavlm-large`)
+    - 大语言模型：Vicuna-7B (`https://huggingface.co/lmsys/vicuna-7b-v1.5`)
+    - 基线ASR架构：SLAM-ASR (论文[3])
+    - 其他用于提示设计参考的工作：SpeechVerse[18], SpeechLLM[29]
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  要解决什么问题：论文研究了基于大语言模型的自动语音识别（LLM-ASR）系统中，固定的、手工设计的文本提示词对模型性能有显著影响且导致不稳定的问题。现有研究忽略了这一关键组件。
@@ -51,7 +55,6 @@ hiddenInHomeList: true
     *   添加投影器后，即使是原本表现较差的“base”提示，其性能也能超越不加投影器时的“best”提示（例如，在CC上11.23% vs 11.81%）。投影器显著减少了不同提示词之间性能的方差（通过图3的箱线图直观展示）。
 5.  实际意义是什么：该研究为部署基于LLM的语音识别系统提供了重要工程指导。它证明了一个简单的模块可以显著增强系统对提示词的鲁棒性，降低了对人工提示工程的依赖，使系统更稳定、更可靠，有助于推动LLM-ASR技术的实际应用。
 6.  主要局限性是什么：研究仅在单一的基线架构（SLAM-ASR）上验证，其结论对更复杂的LLM-ASR系统（如使用不同投影器或端到端训练的系统）的普适性需进一步检验。此外，论文未将提出的提示投影器与更主流的软提示学习方法进行直接、公平的对比。
-
 ### 🏗️ 模型架构
 
 论文研究的基线模型（“vanilla”）是SLAM-ASR架构，其核心组件及数据流如下：
@@ -66,13 +69,11 @@ pdf-image-page2-idx0]
 提出的扩展——提示投影器 (pp(·))：
 *   功能：在冻结原模型（语音编码器、语音投影器、LLM）后，仅训练这个新模块。它接收来自LLM的、代表原始提示词的嵌入序列 `x_1, ..., x_m`，并通过一个与语音投影器结构相同的两层MLP（隐藏层维度同为2048）进行变换，输出新的嵌入序列 `pp(x_1), ..., pp(x_m)`。然后，将这些变换后的提示词嵌入与语音嵌入 `{speech}` 拼接后送入LLM。
 *   关键设计选择：共享与语音投影器一致的MLP架构，保持系统设计的简洁和一致性；学习一个通用的投影函数，应用于所有原始提示词嵌入，而非为每个提示词学习独立的软提示嵌入。
-
 ### 💡 核心创新点
 
 1.  首次系统分析LLM-ASR中的提示词敏感性：揭示了固定手工提示词是性能不稳定的关键来源，且没有万能提示。这为该领域的研究者和工程师提供了一个重要的新视角和基准评估思路（即应包含无提示基线）。
 2.  提出轻量级“提示投影器”模块：这是一种新颖、简洁的即插即用解决方案。其核心思想是为静态的文本提示嵌入学习一个动态的、数据驱动的投影，以对齐到更优的表示空间。这不同于修改提示词本身（如软提示），也不同于改变模型架构。
 3.  实现鲁棒性提升的实证验证：通过跨四个领域差异显著的数据集（朗读、电话、会议、客服）的大量实验证明，该模块能一致地提升性能、降低方差，并使次优提示的表现超越原最优提示。
-
 ### 🔬 细节详述
 
 *   训练数据：
@@ -92,7 +93,6 @@ pdf-image-page2-idx0]
 *   训练硬件：所有实验在单块NVIDIA H100 (80GB VRAM) GPU上完成。总计超过150次训练-评估试验。
 *   推理细节：未提及温度等参数，仅使用beam search解码。
 *   正则化/稳定训练技巧：论文发现解冻底层模型（语音编码器和LLM）会导致训练不稳定和性能下降，因此全程采用冻结策略。
-
 ### 📊 实验结果
 
 主要Benchmark与结果：
@@ -112,26 +112,8 @@ pdf-image-page3-idx1]
 
 pdf-image-page4-idx2]
 图3：箱线图展示了在不同数据集上应用提示投影器 `pp(·)` 前后WER分布的变化。每个子图比较了原提示（vanilla）与投影后提示（+pp(·)）的WER分布。结果表明，应用`pp(·)`后，WER分布整体下移（性能提升）且更紧凑（方差减小）。
-
 ### ⚖️ 评分理由
 
 - 学术质量：6.0/7：论文工作扎实，问题定义清晰，实验设计合理且充分（跨数据集、多提示、消融分析），结论可靠。但核心技术创新（添加一个小型投影器）相对简单，属于对现有成熟架构的增量改进，而非方法论上的突破。
 - 选题价值：1.5/2：研究了一个实际工程中普遍存在但被忽视的痛点，解决方案实用、成本低，对提升LLM-ASR系统的鲁棒性和易用性有直接帮助。但该问题局限于采用固定提示词范式的LLM-ASR系统，应用范围有一定针对性。
 - 开源与复现加成：0.5/1：提供了代码仓库链接（`https://github.com/idiap/llm-asr-prompt`），并详细公开了训练超参数、模型配置和评估协议，为复现提供了良好基础。但未提供预训练模型权重，这是复现的完全实现所必需的。
-
-### 🔗 开源详情
-
-- 代码：提供代码仓库链接：`https://github.com/idiap/llm-asr-prompt`
-- 模型权重：论文中未提及是否公开训练好的模型权重。
-- 数据集：所使用的LibriSpeech、CallHome、AMI为公开数据集。ContactCenter为专有数据集，未公开。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文详细给出了训练和推理的超参数（学习率、批量大小、优化器、LoRA配置、beam size等）、模型架构细节（维度、激活函数）、训练策略（冻结设置、epoch数）以及实验的计算资源（单卡H100）。在GitHub仓库中可能包含更详细的配置文件或附录。
-- 论文中引用的开源项目：
-    - 语音编码器：WavLM-large (`https://huggingface.co/microsoft/wavlm-large`)
-    - 大语言模型：Vicuna-7B (`https://huggingface.co/lmsys/vicuna-7b-v1.5`)
-    - 基线ASR架构：SLAM-ASR (论文[3])
-    - 其他用于提示设计参考的工作：SpeechVerse[18], SpeechLLM[29]
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

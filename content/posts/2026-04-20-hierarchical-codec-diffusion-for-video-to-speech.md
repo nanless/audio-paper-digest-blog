@@ -7,14 +7,6 @@ categories: [论文速递]
 description: "本论文针对 Video-to-Speech（VTS）生成中视觉-语音模态信息不对称的问题，提出现有方法忽略了语音从粗粒度语义到细粒度韵律的层次结构，导致视觉条件无法与语音表示精准对齐。为此，作者提出 HiCoDiT（Hierarchical Codec Diffusion Transformer），"
 hiddenInHomeList: true
 ---
-
-# 📄 Hierarchical Codec Diffusion for Video-to-Speech Generation
-
-#语音合成 #扩散模型 #多模态模型 #零样本 #跨模态
-
-🔥 **评分：8.5/10** | [arxiv](https://arxiv.org/abs/2604.15923v1)
-
-
 ### 👥 作者与机构
 
 - 第一作者：Jiaxin Ye（Fudan University）
@@ -27,7 +19,6 @@ hiddenInHomeList: true
   - Boyuan Cao（Fudan University）
 
 ---
-
 ### 💡 毒舌点评
 
 **亮点**：这篇论文像个严谨的“交通协管员”，终于把 RVQ 不同层级当成了不同的车道——让嘴唇和身份去底层飙内容，让表情去高层管情绪，治好了 VTS 领域长期存在的“视觉条件瞎注入”的拥堵病。
@@ -35,13 +26,21 @@ hiddenInHomeList: true
 **槽点**：虽然口口声声“首个”层次化离散扩散，但骨子里是 SEDD + MaskGCT Codec + DiT AdaLN 的“学术拼好饭”；更妙的是训练时偷偷用真实音频的 GE2E 特征来 stabilize 模型，推理时却只能看脸硬撑，这算不算一种“开卷考试练出的学霸”？
 
 ---
+### 🔗 开源详情
 
+- **代码**：已开源，GitHub 仓库地址：https://github.com/Jiaxin-Ye/HiCoDiT
+- **模型权重**：论文中未明确说明是否公开预训练权重文件。
+- **数据集**：使用公开数据集 VoxCeleb2，作者进行了多阶段预处理（语言过滤、说话人分割、语音增强、对齐过滤），但预处理后的 261.5 小时数据集未说明是否提供下载。
+- **预训练权重**：未提及是否提供基于 VoxCeleb2 训练的 checkpoint。
+- **在线 Demo**：论文提到 speech demo 可在项目页面或 GitHub 获取，但未提供具体在线交互网址。
+- **依赖的开源项目**：AV-HuBERT（唇动特征）、ArcFace（人脸身份）、Poster2（表情识别）、GE2E（说话人嵌入）、MaskGCT（RVQ Codec）、SEDD（离散扩散框架）、ClearerVoice（语音增强）、SyncNet（唇音同步评估）、ECAPA-TDNN（说话人相似度）、emotion2vec / EmoBox（语音情感评估）、PyAnnote（说话人分割）、SpeechBrain / VoxLingua107（语言识别）。
+
+---
 ### 📌 核心摘要
 
 本论文针对 Video-to-Speech（VTS）生成中视觉-语音模态信息不对称的问题，提出现有方法忽略了语音从粗粒度语义到细粒度韵律的层次结构，导致视觉条件无法与语音表示精准对齐。为此，作者提出 HiCoDiT（Hierarchical Codec Diffusion Transformer），首次将 RVQ 编解码器的固有层次先验显式引入离散扩散框架：低层 token（VQ 1-2 层）主要由唇动与面部身份条件控制，以生成说话人相关的语义内容；高层 token（VQ 3-12 层）由面部表情情感条件调制，以捕捉细粒度韵律动态。同时，论文设计了双尺度自适应层归一化（Dual-scale AdaLN），通过通道归一化建模全局音色风格、通过时间归一化捕捉局部韵律变化。在 VoxCeleb2 上训练后，模型在零样本的 LRS2 与 LRS3 基准上超越了 FTV、AlignDiT、EmoDubber 等最新 SOTA，取得更优的语音自然度（UTMOS/DNSMOS）、可懂度（WER）与唇音同步性（LSE-C）。消融实验验证了层次化建模与双尺度 AdaLN 的有效性。局限在于训练数据说话人多样性不足时，纯视觉条件下的说话人相似度仍略逊于使用音频引导的对比方案。
 
 ---
-
 ### 🏗️ 模型架构
 
 HiCoDiT 的整体流程可以概括为：**“视频特征解耦 → RVQ 语音 token 分层 → 层次化离散扩散去噪 → Codec 解码重建波形”**。
@@ -85,7 +84,6 @@ HiCoDiT 的整体流程可以概括为：**“视频特征解耦 → RVQ 语音 
 去噪后的 12 层 RVQ token 输入预训练的 **Codec Decoder**，直接重建出高保真语音波形。
 
 ---
-
 ### 💡 核心创新点
 
 **创新点 1：层次化离散扩散框架（Hierarchical Codec Diffusion）**
@@ -107,7 +105,6 @@ HiCoDiT 的整体流程可以概括为：**“视频特征解耦 → RVQ 语音 
 - **效果**：消融显示，去掉双尺度 AdaLN 后，LRS3 的 MCD 从 9.62 升至 9.75，LSE-C 从 7.15 降至 7.12，韵律同步性下降。
 
 ---
-
 ### 🔬 细节详述
 
 **训练数据**
@@ -167,7 +164,6 @@ HiCoDiT 的整体流程可以概括为：**“视频特征解耦 → RVQ 语音 
 - 输出 concrete score 后，经 RVQ Codec Decoder 合成波形。
 
 ---
-
 ### 📊 实验结果
 
 **LRS3 客观指标对比（Table 1）**
@@ -238,7 +234,6 @@ A/B 测试偏好率：
 | HiCoDiT (full) | 29.41 | 9.62 | 3.50 | 79.41 | 56.78 | 6.58 |
 
 ---
-
 ### ⚖️ 评分理由
 
 - **创新性：8.5/10** — 首次将 RVQ 层级结构与离散扩散结合用于 VTS，并提出了视觉条件与 token 层级的显式对齐策略，思路清晰且有效。但 SEDD 扩散框架、MaskGCT Codec、AdaLN 均为已有技术，属于“高明的组装创新”，尚未建立全新范式。
@@ -247,18 +242,6 @@ A/B 测试偏好率：
 - **灌水程度：1.5/10** — 方法简洁，实验扎实，claims 基本有数据支撑。仅有个别“first”表述（如“first discrete diffusion framework for VTS”）需要加若干限定词才能严格成立，整体不属于灌水。
 
 ---
-
-### 🔗 开源详情
-
-- **代码**：已开源，GitHub 仓库地址：https://github.com/Jiaxin-Ye/HiCoDiT
-- **模型权重**：论文中未明确说明是否公开预训练权重文件。
-- **数据集**：使用公开数据集 VoxCeleb2，作者进行了多阶段预处理（语言过滤、说话人分割、语音增强、对齐过滤），但预处理后的 261.5 小时数据集未说明是否提供下载。
-- **预训练权重**：未提及是否提供基于 VoxCeleb2 训练的 checkpoint。
-- **在线 Demo**：论文提到 speech demo 可在项目页面或 GitHub 获取，但未提供具体在线交互网址。
-- **依赖的开源项目**：AV-HuBERT（唇动特征）、ArcFace（人脸身份）、Poster2（表情识别）、GE2E（说话人嵌入）、MaskGCT（RVQ Codec）、SEDD（离散扩散框架）、ClearerVoice（语音增强）、SyncNet（唇音同步评估）、ECAPA-TDNN（说话人相似度）、emotion2vec / EmoBox（语音情感评估）、PyAnnote（说话人分割）、SpeechBrain / VoxLingua107（语言识别）。
-
----
-
 ### 🖼️ 图片与表格
 
 - **图 1: HiCoDiT 整体架构图** | 保留: **是** — 该图展示了从视频输入到三个解耦适配器（Lip/Identity/Emotion），再到 Low-level / High-level Blocks、12 个 Score Head，最终到 Codec Decoder 的完整数据流，是理解方法的核心。
@@ -272,7 +255,6 @@ A/B 测试偏好率：
 - Table 5（消融实验）已完整复述两个数据集下的所有数值。
 - Table 6（OOD 实验）已完整复述。
 - Table 7（视觉条件消融）已完整复述。
-
 ### 📸 论文图片
 
 ![figure](https://arxiv.org/html/2604.15923v1/x1.png)

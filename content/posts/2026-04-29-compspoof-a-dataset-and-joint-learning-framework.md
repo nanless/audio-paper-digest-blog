@@ -7,16 +7,6 @@ categories: [icassp-2026]
 description: "音频深度伪造检测 | 7.0/10"
 hiddenInHomeList: true
 ---
-
-# 📄 CompSpoof: A Dataset and Joint Learning Framework for Component-Level Audio Anti-Spoofing Countermeasures
-
-#音频深度伪造检测 #语音分离 #多任务学习 #数据集
-
-✅ **7.0/10** | 前25% | #音频深度伪造检测 | #语音分离 | #多任务学习 #数据集
-
-学术质量 4.7/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
-
-
 ### 👥 作者与机构
 
 - 第一作者：Xueping Zhang（苏州昆山杜克大学，多模态智能系统苏州市重点实验室；数字创新研究中心）
@@ -29,14 +19,29 @@ hiddenInHomeList: true
   - Ming Li（苏州昆山杜克大学，多模态智能系统苏州市重点实验室；数字创新研究中心）
 
 #
-
 ### 💡 毒舌点评
 
 亮点：敏锐地捕捉并定义了“成分级伪造”这一更隐蔽的攻击新范式，并为此构建了首个配套数据集和完整的端到端解决方案，框架设计逻辑自洽。
 短板：提出的数据集规模较小（2500条），且环境声伪造检测效果显著弱于语音伪造检测，说明所提的“专用环境声反欺骗模型”（直接复用XLSR-AASIST）可能并不完全适配，成为系统性能短板。
 
 #
+### 🔗 开源详情
 
+- 代码：论文提供了明确的GitHub仓库链接：`https://github.com/XuepingZhang/CompSpoof`。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：论文提供了数据集的项目主页链接：`https://xuepingzhang.github.io/CompSpoof-dataset/`，表明数据集公开可用。
+- Demo：未提及在线演示。
+- 复现材料：论文给出了训练细节（优化器、学习率、分阶段训练、损失函数公式及权重），提供了框架图（图1），但更细粒度的超参数（如UNet结构、batch size）和硬件信息未说明。
+- 引用的开源项目/工具：
+    - 模型：XLSR-AASIST (基线及反欺骗模型)、UNet (分离网络)。
+    - 工具/库：Adam优化器。
+    - 数据集：ASVspoof5、CommonVoice、SSTC、VGGSound、VCapAV（用于构建CompSpoof）。
+    - 信号处理：STFT/iSTFT。
+- 总结：论文提供了复现所需的代码、数据和关键训练配置，开源情况良好，但完整的实验环境和模型权重信息有待补充。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
 ### 📌 核心摘要
 
 1.  问题：现有音频反欺骗方法假设整段音频是真实或伪造的，无法有效检测仅伪造音频中特定成分（如仅伪造语音，保留真实环境声；或反之）的更隐蔽的“成分级伪造”攻击。
@@ -53,7 +58,6 @@ hiddenInHomeList: true
 6.  主要局限性：数据集规模相对较小，且场景仅限于语音与环境声的混合，未验证音乐、其他类型背景声等场景；环境声成分的伪造检测性能仍是短板，可能受限于所用模型的通用性。
 
 #
-
 ### 🏗️ 模型架构
 
 图1: pdf-image-page2-idx0]
@@ -100,7 +104,6 @@ hiddenInHomeList: true
         6. 对于长音频，分段处理后通过多数投票得到文件级标签。
 
 #
-
 ### 💡 核心创新点
 
 1.  提出“成分级音频伪造”新问题：明确定义了仅伪造音频中特定语义成分（如语音或环境声）的新型攻击场景，填补了现有研究在检测粒度上的空白。
@@ -109,7 +112,6 @@ hiddenInHomeList: true
 4.  实现对混合音频各成分的独立真伪评估：与将混合音频视为单一整体进行分类的基线方法不同，本框架能分别给出语音和环境声的真伪判断，提供了更细粒度、更具解释性的检测结果。
 
 #
-
 ### 🔬 细节详述
 
 - 训练数据：
@@ -143,7 +145,6 @@ hiddenInHomeList: true
     - 自适应软掩膜用于抑制分离中的语音泄漏。
 
 #
-
 ### 📊 实验结果
 
 论文在CompSpoof数据集的开发集和评估集上进行了实验。
@@ -181,7 +182,6 @@ hiddenInHomeList: true
 (注：此为论文中的成分级性能分析表格截图，对应原文Table 3。)
 
 #
-
 ### ⚖️ 评分理由
 
 - 学术质量：4.7/7
@@ -197,21 +197,3 @@ hiddenInHomeList: true
     - 未提及模型权重、完整的超参数配置（如batch size）和训练硬件，略有不足。
 
 #
-
-### 🔗 开源详情
-
-- 代码：论文提供了明确的GitHub仓库链接：`https://github.com/XuepingZhang/CompSpoof`。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：论文提供了数据集的项目主页链接：`https://xuepingzhang.github.io/CompSpoof-dataset/`，表明数据集公开可用。
-- Demo：未提及在线演示。
-- 复现材料：论文给出了训练细节（优化器、学习率、分阶段训练、损失函数公式及权重），提供了框架图（图1），但更细粒度的超参数（如UNet结构、batch size）和硬件信息未说明。
-- 引用的开源项目/工具：
-    - 模型：XLSR-AASIST (基线及反欺骗模型)、UNet (分离网络)。
-    - 工具/库：Adam优化器。
-    - 数据集：ASVspoof5、CommonVoice、SSTC、VGGSound、VCapAV（用于构建CompSpoof）。
-    - 信号处理：STFT/iSTFT。
-- 总结：论文提供了复现所需的代码、数据和关键训练配置，开源情况良好，但完整的实验环境和模型权重信息有待补充。
-
----
-
-[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)

@@ -42,6 +42,19 @@ hiddenInHomeList: true
 
 #
 
+🔗 **开源详情**
+
+- 代码：论文中提及了项目主页（https://katelin-glt.github.io/RFM-Editing-Demo/），但未明确说明是否提供代码仓库链接。推测可能为Demo页面，代码未提及是否开源。
+- 模型权重：论文中未提及是否公开模型权重。
+- 数据集：论文明确构造了新的音频编辑数据集，并提供了规模和构成细节，但未说明数据集是否已公开或如何获取。
+- Demo：项目主页可能包含在线演示（从链接名称推断），但论文正文未明确描述。
+- 复现材料：论文详细说明了训练数据构建、训练超参数（学习率、epoch数）、模型架构组件（Flan-T5+LoRA， U-Net， VAE， BigVGAN）和评估指标，提供了较好的复现基础。
+- 论文中引用的开源项目：Flan-T5， LoRA， BigVGAN声码器， AudioLDM， CLAP， PANNs， VGGish。
+
+---
+
+[← 返回 ICASSP 2026 论文分析](/audio-paper-digest-blog/posts/icassp2026-summary/)
+
 📌 **核心摘要**
 
 1. 要解决什么问题：现有的文本引导音频编辑方法要么依赖昂贵的训练时优化（如null-text optimization），要么需要完整的目标描述文本或人工掩码，在复杂重叠声音场景下编辑效果不佳且实用性受限。
