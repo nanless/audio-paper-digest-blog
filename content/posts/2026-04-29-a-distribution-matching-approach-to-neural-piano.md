@@ -46,10 +46,10 @@ hiddenInHomeList: true
 3.  时间循环层：使用频率分组LSTM（FG-LSTM）。它并非将整个特征图展平后送入一个LSTM，而是为每个频率分组独立运行一个LSTM，从而避免不同音高特征的相互干扰，更精准地追踪每个音高的时序活动。
 4.  输出头：FG-LSTM的输出先经过时间反卷积上采样，然后分别通过两个独立的多层感知机（MLP）分支，经sigmoid激活函数后，生成最终的音头和音尾质量分布 Mon 和 Moff。
 
-![SFT-CRNN模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461003-1.png)
+![SFT-CRNN模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461003-1.png)
 图2展示了SFT-CRNN的架构。数据从底部的CQT频谱图（T x F）输入，依次经过卷积块（3 x Conv2d）、时间卷积与谐波注意力块（9 x）、FG-LSTM，最后通过时间反卷积和MLP输出音头（onsets）与音尾（offsets）预测。
 
-![OT损失示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461003-0.png)
+![OT损失示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461003-0.png)
 图1展示了OT损失的工作原理。左图是真实的音符事件（Targets, u）和模型的预测质量分布（Predictions, v）。右图是对应的成本矩阵，编码了将预测质量运输到真实音符位置所需的代价。
 
 ### 💡 核心创新点
@@ -110,7 +110,7 @@ OT损失有效性消融实验：
 表3：SFT-CRNN组件消融研究。LSTM和谐波注意力对性能均有显著贡献。
 
 定性结果：
-![BCE与OT损失输出对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461003-2.png)
+![BCE与OT损失输出对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461003-2.png)
 图3：BCE损失训练的模型输出（中）在真实音头（左）附近产生扩散的激活，需要后处理；OT损失训练的模型输出（右）则产生尖锐、集中的单帧激活，与真实音头完美对齐。
 
 ### ⚖️ 评分理由

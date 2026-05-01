@@ -99,8 +99,8 @@ hiddenInHomeList: true
 - 在英语数据集上，ΔPESQ的提升也很明显（Q4比Q1高约0.2-0.3分）。
 
 说话人内部变异性分析（见图1）：
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463108-0.png)
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463108-1.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463108-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463108-1.png)
 - 图1展示了SB模型在一位英语和一位西班牙语说话人所有话语上的ΔfwSSNR散点图（话语按F3均值升序排列）。
 - 关键结论： 即使来自同一说话人，不同话语的ΔfwSSNR值也存在巨大波动（英语说话人范围约5-9 dB， 西班牙语说话人约4-7 dB），这直接证明了说话人内部声学变异性是影响SE性能的关键因素，而不仅仅是说话人间的差异。性能波动部分可由F3均值的变化解释。
 

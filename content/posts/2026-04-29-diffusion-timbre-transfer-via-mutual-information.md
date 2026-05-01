@@ -109,7 +109,7 @@ hiddenInHomeList: true
     -   MUSHRA听测（29人，60段音频）：与BDDM19（WaveTransfer）对比，本文方法在“内容保持”上无显著差异（p=0.568），在“音频质量”上显著更好（p<0.001），但在“音色相似度”上显著更低（p<0.001）。
     -   MOS真实度评分：本文方法MOS=3.52，显著高于BDDM19的2.10，表明其生成结果更自然真实。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464056-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464056-0.png)
 (图1：展示了M2L2潜在维度与乐器类别和音高之间的归一化互信息分数。可以明显看出，不同维度对音色（Timbre MI）和音高（Pitch MI）的信息携带量存在差异，这为选择性干预提供了依据。)
 
 #

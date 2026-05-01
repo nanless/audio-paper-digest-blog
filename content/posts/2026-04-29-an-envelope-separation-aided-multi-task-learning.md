@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464467-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464467-0.png)
 如图1所示，模型整体框架由三个串行模块构成：
 1.  输入与输出：输入为一阶环绕声（FOA）混合信号。输出为对每个活跃声源的四个预测：存在概率、DOA（方向）、距离和包络。
 2.  声学特征提取模块（AFEM）：如图2(a)所示，受SpatialNet启发，将FOA信号经短时傅里叶变换（STFT）转换到时频域，然后通过时域卷积、跨频带模块和窄带模块提取特征，输出混合信号的声学特征嵌入 `B_mix` (维度 F×T×H)。
@@ -54,8 +54,8 @@ hiddenInHomeList: true
     - 声源定位分支：输入为 `B_A * (1 - gate)`，通过全连接层回归每个声源的3D笛卡尔坐标 `d̂`，并计算距离。
     - 联合优化：两个分支的损失通过PIT（排列不变训练）策略进行联合优化，找到最佳排列π以最小化联合损失 `L_j`，从而解决多源输出顺序匹配问题。最终总损失 `L` 为声源存在概率损失 `L_p` 和联合损失 `L_j` 的加权和。
 
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464467-1.png)
-![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464467-2.png)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464467-1.png)
+![图3: pdf-image-page2-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464467-2.png)
 
 #
 
@@ -109,10 +109,10 @@ hiddenInHomeList: true
 | ours (w/ ESA) | 10.59 | 6.74 | 0.64 | 22.08 |
 - 结论：本文方法（w/ ESA）在所有定位误差指标上均取得最佳结果。方位角误差降至10.59°，比最强基线SEET（17.52°）降低了约40%。消融实验显示，添加ESA模块使方位角误差从16.31°降至10.59°，相对距离误差从26.69%降至22.08%，验证了多任务学习对定位精度的提升。
 
-![图4: pdf-image-page3-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464467-3.png)
+![图4: pdf-image-page3-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464467-3.png)
 - 图4结论：热力图直观展示了不同方法在1-3个声源混合场景下的性能。本文模型（最后一列）的计数预测更准确，且定位结果围绕真实值形成更尖锐、集中的峰值，表明其精度和鲁棒性更优。
 
-![图5: pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464467-4.png)
+![图5: pdf-image-page4-idx4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464467-4.png)
 - 图5结论：t-SNE可视化显示，不同声源的吸引子在高维嵌入空间中形成了清晰分离的聚类，证明了自适应吸引子模块能够有效地区分不同声源。
 
 #

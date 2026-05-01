@@ -38,7 +38,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2：网络架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462151-1.png)
+![图2：网络架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462151-1.png)
 
 UJCodec采用端到端的编码器-量化器-解码器架构，并融入了UNet风格的跳跃连接。
 1.  整体输入输出：输入为含噪语音波形（或干净语音），输出为重建的（增强后的）语音波形。
@@ -108,7 +108,7 @@ UJCodec采用端到端的编码器-量化器-解码器架构，并融入了UNet�
 
 关键结论：在所有测试比特率下，UJCodec在干净和噪声条件下的PESQ以及噪声条件下的WER上均优于所有对比方法。优势在最低的750 bps比特率下最为显著。
 
-![图5：主观评分](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462151-4.jpg)
+![图5：主观评分](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462151-4.jpg)
 图5说明：左图为MUSHRA（干净语音质量），右图为MOS（噪声语音综合质量）。在750 bps、3 kbps、6 kbps下，UJCodec（红色）的分数均高于其他基线，与目标评估结论一致。
 
 表2：消融实验结果 (基准为UJCodec@6kbps)
@@ -122,7 +122,7 @@ UJCodec采用端到端的编码器-量化器-解码器架构，并融入了UNet�
 
 关键结论：移除任何一项核心设计（FSQ量化器、三阶段训练、潜在帧损坏模拟）都会导致性能下降，其中对WER影响最大的是损坏模拟（+0.83%），对PESQ影响最大的是FSQ（-0.232）。
 
-![图6：感知质量与效率比较](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462151-5.jpg)
+![图6：感知质量与效率比较](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462151-5.jpg)
 图6说明：在6 kbps下，横轴为实时因子（RTF，越低越快），纵轴为PESQ。圆圈大小代表参数量。UJCodec位于左上方（低延迟、高质量），在效率与质量的权衡上优于SDCodec、NRVRVQ及所有级联方法（右侧，延迟高）。红色竖线（RTF=1）左侧支持实时推理。
 
 ### ⚖️ 评分理由

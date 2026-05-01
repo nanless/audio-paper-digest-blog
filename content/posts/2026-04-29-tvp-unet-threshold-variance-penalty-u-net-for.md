@@ -54,7 +54,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 模型是一个紧凑的1D U-Net自编码器，输入为100ms的原始音频波形帧，输出为同尺寸的重构波形帧。
-![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464151-1.png)
+![图2: pdf-image-page3-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464151-1.png)
 *   编码器（下采样路径）：由三个下采样块组成。每个块包含卷积层（核大小3，步长1，无偏置）、最大池化层（步长2）。通道数从输入通道 `Cin`（应为1）经过 `f→2f→4f` 的过程，`f` 初始化为6。
 *   瓶颈层：位于编码器和解码器之间，包含层归一化（LayerNorm）、添加标准高斯噪声，以及一个学习到的乘性门控机制（结合tanh/sigmoid和SiLU激活）。
 *   解码器（上采样路径）：由四个卷积阶段组成（`4f→2f`, `2f→f`, `f→f`, 最后 `Conv1D→Cin`）。使用最近邻上采样（上采样因子2），并通过加性跳跃连接（Additive Skip Connections）融合编码器对应层的特征。激活函数为GELU。
@@ -89,7 +89,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主要实验结果如上文表格所示。论文还展示了在不同严重程度组（SV， ML， ND， HC）上的细分结果（表3），表明模型在各组均有稳定表现，但HC组性能略低，可能因样本量小导致。图3展示了在不同标签比例（0-100%）下，模型性能指标（F1， Recall， Precision， AUCROC）的变化曲线。关键结论是：性能从0%到25%标签时提升最显著，之后趋于平缓，50%标签已接近全监督性能。
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464151-2.png)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464151-2.png)
 （图3描述了不同标签比例下模型性能均值与标准差。曲线显示，随着标签比例增加，Precision（精确率）几乎单调上升；F1和Recall在25%后提升放缓；所有指标在50%后基本稳定，且方差减小。这验证了TVP在标签稀缺场景的有效性。）
 
 #

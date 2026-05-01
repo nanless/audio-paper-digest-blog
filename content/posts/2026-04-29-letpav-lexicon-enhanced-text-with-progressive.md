@@ -70,7 +70,7 @@ LETPAV模型的整体框架如图1所示，其处理流程和主要组件如下�
     *   `Ldir`：方向一致性损失，约束上下文预测分数 `sctx_i` 的方向与词典极性分数 `~slex_i` 保持一致。
     *   `Lva-align`：对比学习损失（NT-Xent），用于对齐音频和视觉的模态内表示。
 
-![LETPAV框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461822-0.png)
+![LETPAV框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461822-0.png)
 图1展示了LETPAV的完整流程：输入经过各自的特征提取后，文本流通过LECT模块增强；视觉和音频流通过PAVF模块（包含多层交叉注意力和加权聚合）融合；增强的文本特征与音视频融合特征在最后通过通道注意力进行整合并预测。
 
 ### 💡 核心创新点

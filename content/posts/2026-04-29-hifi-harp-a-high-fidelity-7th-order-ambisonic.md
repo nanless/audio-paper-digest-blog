@@ -138,13 +138,13 @@ hiddenInHomeList: true
 | 7阶ARIR | 1.93 | 0.90 |
 
 实验结果图表：
-![图2: 仿真RIR与测量RIR的定量比较](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463573-1.png)
+![图2: 仿真RIR与测量RIR的定量比较](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463573-1.png)
 图2显示了本文方法与商业仿真模型Treble在再现GENDA Challenge RIR时的误差。宽带和八度频带的T20 MAPE、EDF MSE以及DRR MSE均被报告。结论是：本文方法与Treble和测量值存在差异，主要原因是本文的材料估计基于语义标签，而非Treble使用的实测吸收和散射系数，后者物理精度更高。
 
-![图3: 真实测量与仿真参数提取对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463573-2.png)
+![图3: 真实测量与仿真参数提取对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463573-2.png)
 图3对比了使用商用Eigenmike EM32进行真实测量和本文方法提取的声学参数（箱线图）。结论是：两者存在微小误差，可能源于几何简化。材料属性从有效声学分布中采样，可能与特定房间不完全匹配，导致在250 Hz处方差较高。未来工作可通过多模态方法改进保真度。
 
-![图4: 数据集的RT60分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463573-3.png)
+![图4: 数据集的RT60分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463573-3.png)
 图4展示了HiFi-HARP数据集中RIR的RT60（混响时间）分布。RT60被集中在0.2-0.8秒范围内，覆盖了典型的室内场景，与参考文献[4]的分布相似。
 
 #

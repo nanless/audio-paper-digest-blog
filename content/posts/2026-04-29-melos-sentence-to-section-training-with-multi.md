@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 Melos采用基于LLM的自回归生成范式，整体架构如图1所示。
 
-![Melos模型整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464630-0.png)
+![Melos模型整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464630-0.png)
 
 完整输入输出流程：
 1.  输入：

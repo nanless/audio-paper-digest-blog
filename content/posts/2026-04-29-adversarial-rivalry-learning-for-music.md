@@ -77,10 +77,10 @@ hiddenInHomeList: true
 
 架构图说明：
 论文提供了两张关键图片。
-![图1: LCA的因果图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463306-0.png)
+![图1: LCA的因果图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463306-0.png)
 图1：LCA的因果图。它展示了特征图X如何分别生成主注意力图A和反事实注意力图Ã，两者与X共同决定预测y和反事实预测ỹ。效应yeffect定义为y与ỹ之差。ARL正是用基于分支性能对比的竞争，取代了这种通过显式定义yeffect和多个损失来满足的反事实约束。
 
-![图2: genreMERT (with ARL) 架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463306-1.png)
+![图2: genreMERT (with ARL) 架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463306-1.png)
 图2：集成了ARL的genreMERT架构。图示了两个并行的注意力分支（Original Branch 和 Auxiliary Branch）在训练期间的动态交互：它们竞争决定“训练者”和“冻结者”的角色，表现差的分支通过学习来超越对手。⊗表示矩阵乘法。T是序列长度。此图清晰地展示了ARL作为训练时添加的并行分支的架构关系。
 
 ### 💡 核心创新点

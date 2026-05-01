@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 SA-SSL-MOS采用并行的双分支架构处理输入语音音频 `x`，并预测其MOS分数 `y`。
 
-![SA-SSL-MOS架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463706-0.png)
+![SA-SSL-MOS架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463706-0.png)
 图1：SSL-Layer-MOS（左）与SA-SSL-MOS（右）架构对比。SA-SSL-MOS新增了处理48kHz上采样音频的频谱处理模块（SPM）分支。
 
 输入：原始语音信号。输出：MOS预测均值 `û` 和方差 `σ̂²`。
@@ -67,7 +67,7 @@ SA-SSL-MOS采用并行的双分支架构处理输入语音音频 `x`，并预测
 3.  特征融合与预测：将FPM输出的SSL特征向量与SPM输出的谱图特征向量进行拼接，得到一个640维的联合特征向量。该向量被送入MOS映射模块，该模块包含三个全连接层，并最终通过两个独立的线性层分别映射为预测的均值 `û` 和方差 `σ̂²`。
 4.  训练目标：模型参数通过最小化高斯负对数似然（GNLL）损失函数来优化。该损失函数建模MOS的后验分布为高斯分布，同时优化点估计精度并提供不确定性估计。
 
-![SA-SSL-MOS详细层架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463706-1.png)
+![SA-SSL-MOS详细层架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463706-1.png)
 图2：SA-SSL-MOS的详细分层架构图，清晰展示了SSL分支（左侧蓝色流程）和谱图分支（右侧橙色流程）的具体模块构成及拼接预测过程。
 
 关键设计选择：

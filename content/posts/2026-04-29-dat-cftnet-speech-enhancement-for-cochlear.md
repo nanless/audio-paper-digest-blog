@@ -46,7 +46,7 @@ DAT-CFTNet的整体架构（如图1所示）是一个端到端的时频域语音
 
 数据流与交互：编码器特征经层归一化（LN）后进入DAT-RNN，首先被分割为重叠的块。Intra-chunk RNN处理每个块并应用注意力，然后输出传递给Inter-chunk RNN对所有块进行全局处理并再次应用注意力。增强后的特征被传递给解码器进行最终重建。整个设计旨在同时优化局部和全局上下文信息的处理。
 
-![图1: DAT-CFTNet 整体架构与 DAT-RNN 模块](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463084-0.png)
+![图1: DAT-CFTNet 整体架构与 DAT-RNN 模块](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463084-0.png)
 
 ### 💡 核心创新点
 
@@ -133,7 +133,7 @@ DAT-CFTNet的整体架构（如图1所示）是一个端到端的时频域语音
 
 消融结论：引入DPRNN替代GRU后，性能有提升。进一步加入注意力机制后，SISDR和PESQ获得明显改善。调整FTB位置（F变体）带来额外提升。使用DSC的L变体参数大幅减少，但多项指标下降，LSD和IS变差。
 
-图2（`![图2: CI电极刺激响应与频谱图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463084-2.jpg)`）展示了在汽车噪声SNR 0dB条件下，原始、含噪和DAT-CFTNet-F处理后语音的频谱图和人工耳蜗电极图。结果显示，增强后的语音频谱更清晰，电极图保留了清晰的谐波结构，而噪声成分被有效抑制，证明了该方法对CI用户的潜在价值。
+图2（`![图2: CI电极刺激响应与频谱图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463084-2.jpg)`）展示了在汽车噪声SNR 0dB条件下，原始、含噪和DAT-CFTNet-F处理后语音的频谱图和人工耳蜗电极图。结果显示，增强后的语音频谱更清晰，电极图保留了清晰的谐波结构，而噪声成分被有效抑制，证明了该方法对CI用户的潜在价值。
 
 ### ⚖️ 评分理由
 

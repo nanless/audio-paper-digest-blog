@@ -47,7 +47,7 @@ hiddenInHomeList: true
     -   辅助任务头（h_ϕ^aux）：执行患者匹配任务，输出一个二分类概率，判断输入的两个周期是否来自同一患者（y_aux）。
 5.  输出：主任务头的输出用于计算主任务损失（L_main），辅助任务头的输出用于计算辅助任务损失（L_aux）。最终损失为两者的加权和。
 
-![图1: Overview of the proposed PC-MCL framework.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461974-0.png)
+![图1: Overview of the proposed PC-MCL framework.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461974-0.png)
 图1说明：该图清晰地展示了PC-MCL的流程。左侧是输入的多周期拼接与转换为梅尔频谱图的过程。中间是共享的编码器（Backbone Encoder）。右侧是两个并行的任务头：上方的主任务（Pathology Classification）和下方的辅助任务（Patient-Matching）。这体现了多任务学习的框架设计。
 
 ### 💡 核心创新点
@@ -133,9 +133,9 @@ hiddenInHomeList: true
 3.  表3：三个组件协同作用。单独添加拼接（Concat）主要提升Se但Sp下降；单独添加多标签（Multi）显著提升Se和Score；同时使用两者（Concat+Multi）后，添加患者匹配（PM）任务进一步稳定提升了Sp和Score至最佳。
 4.  表4：3标签公式虽然Se低于2标签，但Sp大幅提升，导致最终Score远高于2标签公式，直观展示了纠正分布偏差的价值。
 5.  图2（t-SNE可视化）：直观显示了3标签模型（右）能将混合样本（蓝色）与纯异常样本（红色）在特征空间中分开，而2标签模型（左）则将两者混杂，证实了3标签公式在保留信息上的有效性。
-![图2: Comparison of feature spaces learned by the conventional 2-label and our proposed 3-label models, visualized using t-SNE.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461974-1.png)
+![图2: Comparison of feature spaces learned by the conventional 2-label and our proposed 3-label models, visualized using t-SNE.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461974-1.png)
 6.  图3（精确率-召回率曲线）：显示了从基线CE模型到中间模型（仅多标签）再到最终PC-MCL模型的逐步性能提升。仅引入多标签公式就使得异常类的平均精度（AP）大幅提升，而完整框架进一步小幅提升，验证了各组件的累积效益。
-![图3: Precision-Recall Curves for the three classes (Normal, Crackle, Wheeze) on the ICBHI test set.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461974-2.png)
+![图3: Precision-Recall Curves for the three classes (Normal, Crackle, Wheeze) on the ICBHI test set.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461974-2.png)
 
 ### ⚖️ 评分理由
 

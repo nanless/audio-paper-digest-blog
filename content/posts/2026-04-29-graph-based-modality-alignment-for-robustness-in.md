@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461220-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461220-0.png)
 整体架构：EmotionHeart是一个端到端框架，输入为一段对话，输出为每个话轮的情感预测。其流程可分为三个阶段：
 1.  图构建与特征初始化：将一段对话建模为一个异构图 G=(V, E, R)。节点集合V包含所有话轮（Nu个）的三种模态：音频（Va）、文本（Vt）和视觉（Vv），因此总节点数 Nv = 3 × Nu。边集合E包含三种关系类型（R）：同说话者内（rintra）、跨说话者间（rinter）、跨模态间（rmodal）。每个节点的初始特征由预训练模型提取：音频用openSMILE，文本用Sentence-BERT，视觉用DenseNet。
 2.  异构图Transformer编码：这是模型的核心，负责在单一图结构上联合学习所有信息。
@@ -145,11 +145,11 @@ hiddenInHomeList: true
 结论：单独加入异构性编码或跨模态GCL都能提升性能并降低标准差。两者结合后，性能和稳定性达到最佳，证明了二者的协同效应。
 
 模态对齐可视化：
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461220-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461220-1.png)
 (a) 初始嵌入空间，各类情感和模态混杂。
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461220-2.png)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461220-2.png)
 (b) 无跨模态GCL的嵌入空间，情感类分离较好，但同一话轮的不同模态表示（用线连接）较为分散。
-![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461220-3.png)
+![图4: pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461220-3.png)
 (c) EmotionHeart（完整模型）的嵌入空间，同一话轮的模态表示紧密聚集，同时不同类簇分离良好。
 结论：可视化直观地证实了跨模态GCL确实能实现紧密的模态对齐，形成“模态一致且判别性强”的表示。
 

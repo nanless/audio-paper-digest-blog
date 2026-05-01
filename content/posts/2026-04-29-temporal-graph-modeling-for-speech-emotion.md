@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 整体架构是一个端到端的系统，包含三个主要阶段：特征提取、图构建与MGCN分类。
 
-![图1: 模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461805-0.png)
+![图1: 模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461805-0.png)
 
 1.  特征提取：输入原始语音波形，使用预训练的`wav2vec 2.0 (wav2vec2-large-960h)`模型提取特征。该模型输出每个语音帧的1024维上下文表示，作为后续图节点的特征向量 `f_j`。
 2.  时序图构建：以每个语音样本为一个独立的图。每个帧对应图中的一个节点。

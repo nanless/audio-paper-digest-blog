@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 条件化策略（核心创新）：论文提出了两种将骨传导信号\( y_c \)融入评分网络的方法，如图1所示。
 
-![图1: BCDM大型变体的IC（红色）和DC（蓝色）两种条件化策略概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463781-0.png)
+![图1: BCDM大型变体的IC（红色）和DC（蓝色）两种条件化策略概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463781-0.png)
 
 1.  输入拼接（IC, BCDM-IC）：最直接的方法。将时间对齐的骨传导语音频谱图、带噪空气传导语音频谱图以及当前扩散状态频谱图在通道维度进行拼接，然后一同输入到共享的U-Net编码器中。优点是结构简单，参数增量少。
 2.  解码器条件化（DC, BCDM-DC）：更精细的方法。为骨传导信号设计一个独立的条件编码器。��编码器由基于BigGAN的残差块构成，并受扩散时间步条件调制。其输出的特征图在U-Net解码器的各个上采样层，通过跳跃连接注入到主干网络中。注入后，会与主干特征和跳跃连接特征拼接，再通过1x1卷积降维以匹配原网络通道数。这种方法能更独立地提取骨传导特征，并实现多尺度条件注入。
@@ -129,7 +129,7 @@ hiddenInHomeList: true
 图表分析：
 图2（论文中Fig. 2）展示了在-5dB SNR下，BCDM的小模型（IC-S和DC-S）的PESQ分数随扩散步数N变化的曲线。图中同时绘制了基线模型BiNet和DCCRN的固定性能线（因为它们是预测模型，无需采样步数）。结论是：BCDM-IC-S约在N=10步时超越DCCRN，N=20步时超越BiNet并接近其峰值性能；BCDM-DC-S需要更多步数达到相似性能。
 
-![图2: BCDM小模型在-5dB SNR下PESQ随扩散步数N的变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463781-0.png)
+![图2: BCDM小模型在-5dB SNR下PESQ随扩散步数N的变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463781-0.png)
 
 ### ⚖️ 评分理由
 

@@ -69,7 +69,7 @@ hiddenInHomeList: true
 - 整体流程：输入语音 `x` → CTC-GMM编码器（包含CTC压缩模块）→ 中间表示 `z`（BBPE分词的ASR文本） → Transducer解码器 → 输出翻译 `y`。
 - 关键组件：CTC压缩模块是核心，它将语音编码器输出进行压缩，对齐到文本模态，其输出可自然地作为中间表示 `z`。该模块预训练于多语言ASR数据。
 - PHRASED_PS集成：在解码阶段，利用中间表示 `z` 与源语言短语列表 `I` 进行匹配，选择出匹配的短语 `Im` 及其对应的目标短语 `Om`。然后，在计算每个解码步的输出概率时，对与 `Om` 当前未完成匹配的词片（word piece）对应的输出维度施加额外的奖励（bonus）。这改变了最终的解码得分（公式4）。
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462714-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462714-0.png)
 图1：PHRASED_PS应用于CTC-GMM的示意图。Step 1 在ASR中间表示z中匹配源语言短语；Step 2 对匹配到的目标语言短语在ST模型输出时加分。
 
 2. 基于Phi-4-multimodal的多模态LLM：
@@ -78,7 +78,7 @@ hiddenInHomeList: true
 - PHRASED集成：
     - PHRASED_PS：提示为“The output should contain [Om].”，其中 `Om` 是从 `z` 中匹配出的目标短语（公式6）。
     - PHRASED_JB：提示为“The [Im] in the audio clip should be translated to [Om].”，同时提供了源短语 `Im`、目标短语 `Om` 以及它们在 `z` 中出现的上下文信息（公式7）。这显式地利用了字典映射关系。
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462714-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462714-1.png)
 图2：PHRASED_JB应用于多模态LLM的示意图。Step 1匹配短语；Step 2将选中的目标短语及相关信息（源短语、上下文）添加到提示中。
 
 #

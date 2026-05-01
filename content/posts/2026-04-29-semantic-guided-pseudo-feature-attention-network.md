@@ -38,7 +38,7 @@ hiddenInHomeList: true
 2.  语义引导变分生成（SVG）：该模块旨在为每个类生成伪特征。对于类嵌入 w，首先通过一个投影层得到 ˆw，然后经过语义引导门控注意力模块（SGAM）进行精炼得到 ˜w。接着，对于每个模态（音频/视觉），一个条件VAE将 ˜w 映射为潜在分布 (μ_m, log σ²_m)，并采样得到潜在变量 z_m。解码器 D_m 将 z_m 解码为伪特征 ˆx_m。引入受控噪声 δ 以增加生成多样性。
 3.  损失函数集成：模型的总损失由四部分组成：跨注意力损失 l_cr、自适应模态重加权损失 l_AMR、语义对齐对比损失 l_s 和生成损失 l_g。这些损失共同优化整个框架。
 
-![模型整体结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463644-0.png)
+![模型整体结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463644-0.png)
 图1：SGPAN的整体结构图。展示了从输入特征提取、跨模态注意力融合、到三个核心模块（AMR、SVG、SACL）的集成，以及最终的预测过程。
 
 ### 💡 核心创新点
@@ -120,13 +120,13 @@ hiddenInHomeList: true
 特征可视化（图2）：
 论文提供了在UCF数据集上的t-SNE可视化对比。与AVCA（b）相比，SGPAN（a）学习到的特征表示中，未见类（不同颜色点）的聚类更紧凑、分离度更好，且同一类的音频-视频特征在空间中更接近，直观地验证了SVG和SACL在缓解类间混淆和增强跨模态对齐方面的效果。
 
-![t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463644-1.png)
+![t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463644-1.png)
 图2：在UCF数据集上的t-SNE可视化。 (a) SGPAN 的表示显示更清晰的类间分离和更紧密的类内聚类。 (b) AVCA 的表示显示出拉长的结构���未见类之间的混合。
 
 组件消融（图3）：
 针对SVG模块的进一步消融显示，移除SGAM（语义引导门控注意力）或zaug（统计增强）都会导致UCF数据集上的HM显著下降（从32.52%分别降至25.60%和28.78%），表明语义引导和特征增强对生成判别性伪特征至关重要。
 
-![SVG组件消融](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463644-2.png)
+![SVG组件消融](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463644-2.png)
 图3：关于SGAM和zaug组件的消融研究。移除任一组件都会导致性能下降，证实了SVG模块内部设计的有效性。
 
 ### ⚖️ 评分理由

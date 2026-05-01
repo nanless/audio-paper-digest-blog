@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 论文提出的不是传统的端到端神经网络，而是一个三阶段的特征构建与建模流水线（见图1）。
 
-![图1: GP流水线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-0.jpg)
+![图1: GP流水线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-0.jpg)
 
 1.  音频特征提取：输入音频，提取两组不同抽象层次的基础特征：
     *   信号级特征 (E23)：使用Essentia库提取的23维特征，如响度、BPM、过零率、频谱质心等。
@@ -65,7 +65,7 @@ hiddenInHomeList: true
     *   输出：一组进化得到的、最优的复合特征表达式 `f1(X), ..., fM(X)`。
 3.  标签模型训练：将原始基础特征 `X` 与所有GP生成的复合特征 `f1(X), ..., fM(X)` 拼接，输入XGBoost分类器进行最终的多标签（MTG-Jamendo）或多分类（GTZAN）预测。
 
-![图2: GP交叉操作](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-1.jpg)
+![图2: GP交叉操作](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-1.jpg)
 图2展示了GP如何通过交叉操作组合不同的子表达式（如f1和f2）生成新的复合特征表达式（f3），同时，简单性惩罚（parsimony pressure）会倾向于选择像f3这样的较小树而非像f4这样的大树。
 
 关键设计选择：
@@ -115,26 +115,26 @@ hiddenInHomeList: true
 3.  性能分布稳定：图3和图4显示，所有GP生成的特征集（而不只是最佳的）的性能分布中位数均优于基线，表明GP普遍有效。
 4.  高效收敛：图5和图6显示了“任意时间轨迹”，最佳性能在最初几百次评估内快速上升，之后趋于平缓。GTZAN在约300次评估内接近最优，MTG-Jamendo则需要约1000次。
 
-![图3: MTG-Jamendo AUC分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-2.png)
+![图3: MTG-Jamendo AUC分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-2.png)
 图3显示了所有GP增强特征集在MTG-Jamendo上的AUC分布，中位数均高于基线，且箱体较窄。
 
-![图4: GTZAN准确率分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-3.png)
+![图4: GTZAN准确率分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-3.png)
 图4显示了所有GP增强特征集在GTZAN上的准确率分布，同样显示中位数提升。
 
-![图5: MTG-Jamendo改进轨迹](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-4.png)
+![图5: MTG-Jamendo改进轨迹](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-4.png)
 图5显示，随着评估次数增加，最佳AUC和运行平均AUC在早期快速增长。
 
-![图6: GTZAN改进轨迹](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-5.png)
+![图6: GTZAN改进轨迹](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-5.png)
 图6显示GTZAN的性能增长更快，在约300次评估后趋于平稳。
 
 可解释性分析结果（表2，图7，图8）：
 *   表达式分析：进化出的表达式形式多样，包括线性（`Loudness - BPMdom_dom`）、非线性（`2·Length - 3·Onset Rate`）和条件语句（`if(Mode > 0, ...)`）。低复杂度表达式（节点少）也能达到高性能，证实了复杂度惩罚的有效性。
 *   共现分析：图7和图8（以MTG-Jamendo为例）揭示了任务特定的特征协同和算子偏好。例如，对时间特征（Danceability, Onset Rate）取对数频繁出现且性能高，可能反映了人类节奏感知的非线性。
 
-![图7: MTG-Jamendo ALL62共现矩阵](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-6.png)
+![图7: MTG-Jamendo ALL62共现矩阵](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-6.png)
 图7的下三角显示了特征对在top-500表达式中的共现频率，上三角显示了共现时的平均AUC。例如，“频谱扩展”与“音色”特征共现时性能较高。
 
-![图8: MTG-Jamendo ALL62算子-特征性能](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462876-7.png)
+![图8: MTG-Jamendo ALL62算子-特征性能](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462876-7.png)
 图8显示了特定算子作用于特定特征时的平均AUC。例如，对“可舞性”、“起拍率”等时间特征使用对数（log）运算带来了高AUC。
 
 ### ⚖️ 评分理由

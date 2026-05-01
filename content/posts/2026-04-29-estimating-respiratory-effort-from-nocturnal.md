@@ -54,7 +54,7 @@ hiddenInHomeList: true
 - 输出：片段级的OSA事件概率。后续通过合并连续阳性片段计算夜间AHI。
 - 整体数据流：音频特征 → [呼吸努力估计器] → 呼吸努力嵌入 → [与音频嵌入拼接] → 分类头 → OSA事件预测。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460863-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460863-0.png)
 图1：所提潜在融合方法的系统示意图。CNN-LSTM编码器分别从夜间音频中提取通用声学嵌入和面向呼吸努力的潜在表示。这些表示被融合后输入分类器，用于预测呼吸暂停/低通气事件。
 
 ### 💡 核心创新点
@@ -102,7 +102,7 @@ hiddenInHomeList: true
 | RMSE ↓ | 1.053 ± 0.123 |
 | MAE ↓ | 0.793 ± 0.092 |
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460863-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460863-1.png)
 图2：预测呼吸努力信号（虚线）与测量真实信号（实线）的典型示例。第一个例子显示模型能捕捉整体趋势；第二个例子时间对齐良好；第三个例子出现相位偏移。
 关键结论：估计信号能捕捉呼吸动态的基本模式和幅度，但精度有限，且存在时间对齐问题，这解释了其作为补充特征的收益并非压倒性。
 

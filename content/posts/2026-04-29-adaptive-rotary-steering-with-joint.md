@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 本文提出的不是一个单一的神经网络模型，而是一个集成框架，它将旋转转向（Rotary Steering）、目标说话人跟踪（TST）和空间选择性滤波（SSF）增强模块组合在一起，以处理动态场景下的目标说话人提取（TSE）问题。其整体架构如下图所示：
 
-![图1: 三种说话人提取流程对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460750-0.png)
+![图1: 三种说话人提取流程对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460750-0.png)
 
 该架构的核心是利用Ambisonics信号的旋转不变性进行条件化处理，并创新性地引入了联合自回归（AR）反馈。具体流程分解如下：
 
@@ -98,7 +98,7 @@ hiddenInHomeList: true
 
 注：表中数值为McNet/SpatialNet两种增强网络结果中的前者/后者。
 
-![图2: 合成数据集中说话人轨迹与跟踪性能示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460750-1.png)
+![图2: 合成数据集中说话人轨迹与跟踪性能示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460750-1.png)
 图2展示了三个说话人的模拟运动轨迹以及使用非AR和AR版本的SELDnet进行跟踪的性能。AR版本在轨迹交叉点附近表现出更小的角度误差。
 
 关键发现（结合图3、图4）：

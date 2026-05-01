@@ -78,10 +78,10 @@ hiddenInHomeList: true
 6.  输出：优化后的学生网络参数θ，以及其产生的说话人嵌入z，用于后续验证（通过余弦评分）。
 
 架构图引用与说明：
-![图2：课程学习负样本选择流程图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462096-1.jpg)
+![图2：课程学习负样本选择流程图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462096-1.jpg)
 图2详细展示了上述流程：教师网络提取锚点和负样本的嵌入，计算相似度得分并排序，根据节奏函数选择Q个最容易的样本，将索引传递给学生网络，学生网络利用这些负样本计算损失并反向传播。
 
-![图1：课程学习示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462096-0.jpg)
+![图1：课程学习示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462096-0.jpg)
 图1直观地说明了课程学习的理念：训练初期只使用少量、容易的负样本，随着训练进行，逐渐引入越来越难的负样本，最后使用全部数据。
 
 #
@@ -163,10 +163,10 @@ hiddenInHomeList: true
 | Fast ResNet-34 | 1.4M | CurriNeg-AMS (ours) | 1.82 | 0.131 |
 表4：在Fast ResNet34架构下，CurriNeg-AMS取得了最优的EER（1.82%）和minDCF（0.131）（论文Table 4）
 
-![图3：节奏函数示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462096-2.jpg)
+![图3：节奏函数示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462096-2.jpg)
 图3展示了三种节奏函数Q=f(t)随epoch增长的趋势：指数增长最快，线性居中，对数最慢。
 
-![图4：节奏步数对性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462096-2.jpg) (论文中同一页面)
+![图4：节奏步数对性能的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462096-2.jpg) (论文中同一页面)
 图4（右）显示了线性节奏函数中“步数”（staircase steps）对EER的影响。存在一个最优值（约20步），步数过少或过多都会导致性能下降。
 
 关键结论：

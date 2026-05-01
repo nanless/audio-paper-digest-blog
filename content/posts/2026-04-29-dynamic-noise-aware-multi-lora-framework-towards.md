@@ -38,7 +38,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-如图1（`![图1: Dynamic Noise-Aware Multi LoRA framework architecture](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463424-0.png)`)所示，DNA Multi LoRA框架是一个三阶段系统：
+如图1（`![图1: Dynamic Noise-Aware Multi LoRA framework architecture](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463424-0.png)`)所示，DNA Multi LoRA框架是一个三阶段系统：
 
 1.  噪声分类模块：作为前置处理器，输入4秒的音频窗口，提取三种声学特征：频谱图（捕捉全局频谱分布，如环境噪声）、MFCC（编码音色和共振峰特征）和F0（捕捉基频变化，用于检测音高操纵）。这些特征分别通过独立的CNN-LSTM网络提取嵌入向量，然后拼接并经过一个特征融合层，最终通过一个线性分类器预测预定义的噪声类别（如D0-D7）。
 2.  路由器（Router）：接收噪声分类模块的输出（噪声类型标签），根据标签索引并选择与之对应的、预先训练好的特定噪声LoRA适配器（LoRA_i, i=1..n）。
@@ -84,7 +84,7 @@ hiddenInHomeList: true
 结论：DNA Multi LoRA框架在三个数据集上实现了平均41.4%的EER降低，池化EER性能与全量微调相当，但参数量仅为后者的约8.5%。
 
 灾难性遗忘分析（图2）：
-![图2: Sequential fine-tuning on D1→D7 showing performance degradation on cumulative previous domains.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463424-0.png)
+![图2: Sequential fine-tuning on D1→D7 showing performance degradation on cumulative previous domains.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463424-0.png)
 描述：图2展示了ConformerTCM和AASIST-SSL两个基线模型在D1到D7上顺序微调时，在所有已见过域上的累积性能（EER）。横轴是微调阶段，纵轴是EER。可以清晰地看到，随着在新域上微调，模型在旧域上的性能急剧下降（ConformerTCM的EER从0.17%升至5.04%，AASIST-SSL从0.03%升至4.81%），直观证明了传统顺序微调会导致严重的灾难性遗忘。
 
 噪声特定LoRA性能（表4）：
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 结论：本文提出的轻量级CNN-LSTM分类器以远小于其他模型的参数量（7.2M）达到了95%的分类准确率，平衡了性能与效率。
 
 特征可视化（图3）：
-![图3: t-SNE visualization of feature representations from ConformerTCM under D5 (speech manipulation) noise domains: (a) baseline, (b) fine-tuned, and (c) D5-specific LoRA.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463424-0.png)
+![图3: t-SNE visualization of feature representations from ConformerTCM under D5 (speech manipulation) noise domains: (a) baseline, (b) fine-tuned, and (c) D5-specific LoRA.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463424-0.png)
 描述：图3展示了在D5（语音操纵）噪声域下，ConformerTCM模型提取的特征的2D t-SNE可视化。(a)基线模型的特征混杂；(b)全量微调后的特征有所改善；(c)使用D5特定LoRA适配器后，伪造（spoof）和真实（bonafide）的特征分离最为清晰。这从特征表示层面直观地验证了噪声特定LoRA的有效性。
 
 ### ⚖️ 评分理由

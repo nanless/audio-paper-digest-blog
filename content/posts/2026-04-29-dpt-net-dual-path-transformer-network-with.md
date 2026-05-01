@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![DPT-Net架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464366-0.png)
+![DPT-Net架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464366-0.png)
 DPT-Net的整体架构如图1所示，主要包含两个并行的特征提取路径和一个分层重建模块。
 
 1.  输入：原始EEG信号序列，以及对应的语音包络序列（在训练/对齐阶段）。
@@ -124,7 +124,7 @@ DPT-Net的整体架构如图1所示，主要包含两个并行的特征提取路
 
 -   图表结果：
     图2：在SparrKULee数据集上进行梅尔谱图重建的性能对比
-    ![图2：梅尔谱图重建性能对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464366-1.png)
+    ![图2：梅尔谱图重建性能对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464366-1.png)
     关键结论：在更困难的10维梅尔谱图重建任务上，DPT-Net相比VLAAI和HappyQuokka分别提升28.32%和31.71% (p<0.001)，且在平均分数上超过SSM2Mel（S1: 0.0668 vs. SSM2Mel的0.208（注：此处原文数据有歧义，图示中SSM2Mel的S1值明显更高，可能是图表或文字表述有误，但结论是DPT-Net超过SSM2Mel））。这进一步证实了DPT-Net的鲁棒性和泛化能力。
 
 ### ⚖️ 评分理由

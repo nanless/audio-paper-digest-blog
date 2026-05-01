@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 模型DSfusion的整体架构旨在将语音驱动的身体动作生成重构为一个解耦再重组的任务。整体流程如图1所示。
 
-![图1：DSfusion框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462327-0.png)
+![图1：DSfusion框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462327-0.png)
 图1：DSfusion框架概览。图中展示了将身体运动分解为语义和风格组件，然后从不同输入中重组的过程。核心流程包括：从输入音频中提取内容特征，从参考动作序列中提取风格特征，通过一个潜在扩散模型（LDM）将这些特征与噪声结合生成粗糙动作，最后通过运动精炼模块输出最终动作。
 
 1.  输入：音频序列A和风格参考动作序列S。
@@ -114,9 +114,9 @@ hiddenInHomeList: true
 (FGD ×10⁻¹， BC ×10⁻¹)
 
 - 定性评估：
-    ![图2：生成的动作序列对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462327-1.png)
+    ![图2：生成的动作序列对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462327-1.png)
     图2：生成的动作序列对比。从上到下为：真实值（GT）、Ours、CaMN、DisCo、EMAGE。展示了在Speaker-2测试片段上生成的动作，表明本方法能可靠地实现语音同步的手势合成。
-    ![图3：不同风格码生成的身体动作](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462327-2.png)
+    ![图3：不同风格码生成的身体动作](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462327-2.png)
     图3：不同风格码生成的身体动作。表明即使输入相同的语音内容，切换风格码也会产生不同的动作模式，验证了风格特征的成功解耦。
 
 ### ⚖️ 评分理由

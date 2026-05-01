@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 DisAR是一个端到端的双分支框架，整体流程分为训练和推理两个阶段，其核心是特征解耦与重建。下图展示了其完整架构：
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464342-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464342-0.png)
 
 架构流程详解：
 1.  输入与特征提取：输入音频被分成重叠帧，每帧提取1024维的Wav2Vec2特征（`xt`），这些特征保留了时序信息。

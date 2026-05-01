@@ -93,7 +93,7 @@ hiddenInHomeList: true
 1.  概率采样 vs. 随机采样（Proposed†）：表2显示，概率采样在所有条件下均优于随机采样（Proposed†），证明了结构化扰动的重要性。
 2.  渐进式 vs. 直接应用（图2）：图2展示了在渐进应用（从第6到第1 VQ）过程中PESQ和UTMOS的稳定上升。直接对所有VQ应用（Direct Top-K）的效果明显更差，验证了渐进策略的必要性。
 
-![图2: PESQ和UTMOS趋势随着概率Top-K采样策略从第6个VQ逐步应用到第1个VQ的变化。左纵轴为PESQ分数，右纵轴为UTMOS分数。](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460846-1.png)
+![图2: PESQ和UTMOS趋势随着概率Top-K采样策略从第6个VQ逐步应用到第1个VQ的变化。左纵轴为PESQ分数，右纵轴为UTMOS分数。](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460846-1.png)
 （图2说明：随着扰动从外围量化层向核心层逐步引入，语音质量评估指标呈现稳定上升趋势，证实了渐进式课程学习的有效性。）
 
 ### ⚖️ 评分理由

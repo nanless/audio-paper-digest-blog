@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 论文提出的检测框架（见图1）由三部分组成：预训练的XLS-R前端、双列双向Mamba后端以及新增的MIFF模块。
 
-![模型整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462275-0.jpg)
+![模型整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462275-0.jpg)
 
 1.  XLS-R前端：将输入的原始音频波形转换为一系列高维声学表征序列。
 2.  双列双向Mamba后端：该后端（DuaBiMamba）包含两个独立的Mamba列，分别沿时间正向和反向处理来自XLS-R的特征序列。
@@ -118,7 +118,7 @@ hiddenInHomeList: true
 
 关键结论：本文方法在DF数据集上取得了最优结果（1.68% EER），在LA和In-The-Wild数据集上也取得了极具竞争力的结果。与基线XLSR-Mamba相比，在三个数据集上均有提升，尤其是在In-The-Wild数据集上实现了15.6%的相对EER降低。
 
-![不同特征维度对性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462275-1.jpg)
+![不同特征维度对性能的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462275-1.jpg)
 图2（对应论文图2）：展示了特征维度（144， 256， 512， 1024）对DF和In-The-Wild数据集EER的影响。关键结论是：特征维度为256时性能最佳。
 
 表3：MIFF模块消融研究

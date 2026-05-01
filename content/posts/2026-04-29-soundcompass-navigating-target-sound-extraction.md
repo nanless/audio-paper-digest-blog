@@ -48,10 +48,10 @@ hiddenInHomeList: true
 3.  特征聚合与解码：融合后的特征送入多个特征聚合（FA）块，沿频谱和时间维度分别应用多头自注意力和Mamba前馈网络，进行目标源的特征分离。最后，两个并行的音频解码器（结构相同）将特征维度从D恢复到2M，分别重建直达声和混响，经逆STFT（iSTFT）得到最终波形。
 4.  迭代细化（CoI）：如图2所示，第一阶段的输出被送入一个声音事件检测（SED）解码器，预测帧级二值时间掩码。该掩码与原始SH嵌入结合，形成时变方向线索，线性插值后注入到第二个相同的TSE阶段，实现迭代优化。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461583-0.jpg)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461583-0.jpg)
 图1：(a) SoundCompass整体架构图，展示了从多通道混合输入到最终目标波形提取的完整流程，核心是融合模块。(b) 融合模块内部细节，展示了SPIN如何处理复数谱图，以及如何与SH编码的方向线索在K个子带内通过FiLM层融合。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461583-1.jpg)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461583-1.jpg)
 图2：迭代细化（CoI）策略细节图。第一阶段TSE的输出经SED解码器得到时间激活序列，与SH嵌入结合生成时变线索，输入到第二阶段TSE进行精细化处理。
 
 #
@@ -110,10 +110,10 @@ hiddenInHomeList: true
     *   图3（FiLM scale参数的t-SNE可视化）：显示方位角变化形成近圆流形且不同俯仰角下保持分离，俯仰角轨迹收敛。不同子带的模式不同，证明模型学习到了频率特定的空间相关性。
     *   图4（SI-SNRi灵敏度轮廓图）：在±15°偏离真实方向时，性能下降，但圆形高性能区域表明模型有效利用了方向引导，且存在一定容错性。
 
-![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461583-2.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461583-2.png)
 图3：三个不同子带中，FiLM层缩放（γ）参数随方位角（上）和俯仰角（下）变化的t-SNE轨迹可视化。证明了SH嵌入有效编码了连续角度，且子带处理捕获了频率依赖的空间信息。
 
-![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461583-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461583-3.png)
 图4：在真实目标方向（“X”标记）附近±15°范围内，SI-SNRi的灵敏度轮廓图。显示性能峰值靠近真实方向，随偏离而下降，展示了模型的方向敏感性和一定的鲁棒性。
 
 #

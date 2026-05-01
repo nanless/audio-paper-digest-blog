@@ -78,7 +78,7 @@ Omni-AVSR的架构旨在统一处理音频、视频输入，并输出文本转�
 7.  输出：LLM以自回归方式生成转录文本Y。
 
 架构图：
-![Omni-AVSR整体架构及其LoRA变体](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461431-0.png)
+![Omni-AVSR整体架构及其LoRA变体](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461431-0.png)
 图1：Omni-AVSR架构概览(a)及其LoRA变体(b)。音频和视频输入分别由预训练编码器处理，通过选定的压缩率压缩后投影到LLM空间。模型探索了三种LoRA适配策略。
 
 ### 💡 核心创新点
@@ -147,7 +147,7 @@ Omni-AVSR在噪声环境下性能稳定，尤其在低SNR下表现优于或不�
 
 缩放趋势分析：
 
-![LLM规模对性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461431-2.png)
+![LLM规模对性能的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461431-2.png)
 图2右侧：在LRS3上，随着LLM参数规模从0.5B增加到32B，ASR/VSR/AVSR任务的WER均下降，尤其在VSR和高压缩率ASR上收益更明显。1-3B规模是性能与效率的较好平衡点。
 
 ### ⚖️ 评分理由

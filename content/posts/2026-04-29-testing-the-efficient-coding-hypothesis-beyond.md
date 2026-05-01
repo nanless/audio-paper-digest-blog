@@ -53,7 +53,7 @@ hiddenInHomeList: true
     - 重建效率分析（RQ2）：与傅里叶/小波基进行比特率-保真度（SNR）比较。
     - 特化性分析（RQ3）：对叫声的稀疏表示向量（32维激活计数）进行K-means聚类，分析核的激活模式是否对应不同的叫声变体。
     - 稀疏性分析（RQ4）：计算激活向量的稀疏度度量（Gini指数等）。
-![图1: Sparse coding decomposition of a bat call](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11465100-0.png)
+![图1: Sparse coding decomposition of a bat call](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11465100-0.png)
 图1展示了稀疏编码分解过程：(a)原始波形，(b)由200个来自13个核的激活重建的波形，(c)残差能量。顶部显示了核激活在时间和质心频率上的分布，点的大小表示振幅，颜色表示核的ID。这直观展示了如何用少量特化核捕获复杂声学结构。
 
 #
@@ -102,12 +102,12 @@ hiddenInHomeList: true
 | PQ (R. pearsonii) | (8.0 ± 1.6) × 10⁻⁴ | (1.2 ± 0.8) × 10⁻⁴ |
 R. pearsonii显示出比R. affinis更高的稀疏度，可能因为其叫声频率范围与学习核的中心频率匹配度较低。
 
-![图4: Fidelity-rate curves](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11465100-3.png)
+![图4: Fidelity-rate curves](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11465100-3.png)
 图4：不同编码方法的比特率-保真度曲线。实线为R. affinis，虚线为R. pearsonii。阴影区域为95%置信区间。结果显示MP在R. affinis上表现最佳，但跨物种泛化能力有限。
 
 - 核特性（RQ1）：学习到的核中心频率范围10-90 kHz，带宽1-40 kHz，偏度接近0（对称）。明显分为窄带高频核（>70kHz，对应CF成分）和宽带低频核（>30kHz，对应FM成分）两类（表1， 图3）。窄带核在早期高能量激活中占主导，宽带核在后期激活中增多，符合叫声CF-FM结构。
 
-![图3: Kernel activations across R. affinis echolocation calls](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11465100-2.png)
+![图3: Kernel activations across R. affinis echolocation calls](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11465100-2.png)
 图3：32个核在R. affinis叫声中的激活计数分布（前70个激活）。最频繁的核是窄带高频信号，很可能是CF特化的，因其高能量在早期被捕获。
 
 - 特化性（RQ3）：聚类分析（k=27，图5， 图6）产生了可分离的簇，每个簇包含声学轮廓相似的叫声。例如，C1簇包含突出次级谐波的叫声，C5簇包含非常窄的CF叫声。这表明核激活模式可以捕获叫声的功能性变化。

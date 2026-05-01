@@ -56,10 +56,10 @@ hiddenInHomeList: true
 3.  动态层选择：在模型的最后一层`L_full`的输出中，选择概率最高的top-k个token。然后，遍历从第`n`层到倒数第二层的每一层`i`，计算该层对这top-k token的预测分布与`L_full`的分布之间的余弦距离`D(i)`。选择使`D(i)`最大的层作为`i*`，其logits即为`L_inter`。该策略旨在找到与最终输出“最不一致”的中间层，认为其最强烈地代表了尚未被纠正的内部语言先验。
 4.  融合与生成：根据公式 `L_bcd = L_full + α · (L_full - L_text) + β · (L_full - L_inter)` 计算修正后的logits。最后，对`L_bcd`进行softmax和采样，得到下一个token。
 
-![图2：语言先验示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463602-1.jpg)
+![图2：语言先验示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463602-1.jpg)
 图2展示了语言先验在输入层和层间的影响。左图示例：即使有完整图像，模型也可能基于“墙通常是灰色”的语言先验忽略视觉证据。右图显示在错误案例中，两种先验都起到了重要作用。
 
-![图3：BCD范式概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463602-1.jpg)
+![图3：BCD范式概述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463602-1.jpg)
 图3清晰地展示了BCD的范式：通过结合`L_full`、`L_text`和动态选择的`L_inter`三者的差异来修正输出分布，同时抑制输入层和层间的语言先验。
 
 ### 💡 核心创新点
@@ -134,10 +134,10 @@ hiddenInHomeList: true
 - 但两者结合（完整BCD）取得了最佳性能，证明了两个校正项的互补性。
 - 超参数敏感性分析（图4b）显示，在不同α和β组合下，BCD均优于基线，但平衡的权重配置效果更好。
 
-![图1：不同模型上的效果对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463602-0.jpg)
+![图1：不同模型上的效果对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463602-0.jpg)
 图1直观展示了BCD在四种不同模型（视觉+音频）上均带来了一致的准确率提升。
 
-![图4：消融实验](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463602-1.jpg)
+![图4：消融实验](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463602-1.jpg)
 图4a展示了组件对比，图4b展示了超参数敏感性热力图，验证了方法的有效性和稳健性。
 
 ### ⚖️ 评分理由

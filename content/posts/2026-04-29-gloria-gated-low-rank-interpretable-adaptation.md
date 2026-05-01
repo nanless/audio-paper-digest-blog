@@ -145,8 +145,8 @@ GLoRIA的架构核心是对预训练ASR编码器中每个前馈（FF）子层进
 *   图1：展示了通过NMF从GLoRIA门控激活中提取的四个典型适配成分在地理空间上的激活强度分布图。每个成分的激活热区与已知的方言区（如Frans-Vlaams, Limburgs, Oost-Vlaams, Antwerp）高度吻合。这直观证明了GLoRIA学到的适配模式具有明确的地理语义。
 *   图2：展示了16个NMF成分在9个方言区平均激活值的聚类热图。结果显示，地理和语言学上接近的区域具有相似的激活模式（聚类在一起），且每个区域通常由少数几个成分主导激活。
 
-![图1: 四个NMF适配成分的地理激活分布图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462008-0.png)
-![图2: NMF成分激活值按方言区的聚类热图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462008-1.png)
+![图1: 四个NMF适配成分的地理激活分布图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462008-0.png)
+![图2: NMF成分激活值按方言区的聚类热图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462008-1.png)
 
 ### ⚖️ 评分理由
 

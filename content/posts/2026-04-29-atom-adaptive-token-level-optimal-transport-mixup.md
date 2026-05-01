@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![ATOM模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462782-0.jpg)
+![ATOM模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462782-0.jpg)
 
 ATOM是一个端到端的语音翻译模型，其整体架构如上图所示，主要由五个协同工作的组件构成：
 
@@ -137,7 +137,7 @@ ATOM是一个端到端的语音翻译模型，其整体架构如上图所示，�
     *   分析：此实验在En-De上测试了不同对齐机制的影响。基于对比学习的CTR损失优于直接的OT距离损失和基于注意力的CAR损失，验证了对比学习在构建判别性跨模态表示方面的有效性。
 
 *   超参数敏感性分析（图2）：
-    ![CTR Loss权重λCTR对BLEU的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462782-1.jpg)
+    ![CTR Loss权重λCTR对BLEU的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462782-1.jpg)
     *   分析：该图展示了对比学习损失权重 `λ_CTRL` 对性能的影响。当 `λ_CTRL = 0.9` 时取得最优性能。过低（0.5）则梯度信号不足，过高（0.92）则可能过度优化对比学习目标而损害翻译任务本身。这为该超参数的选择提供了依据。
 
 ### ⚖️ 评分理由

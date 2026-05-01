@@ -46,7 +46,7 @@ hiddenInHomeList: true
 | Decoder-Only,<br>Discretized via SE (ours) | HuBERT-Large + GPT2 | 2.83 | 5.71 | 2.94 | 6.02 |
 | | WavLM-Large + GPT2 | 3.10 | 6.52 | 3.21 | 6.58 |
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461907-2.png)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461907-2.png)
 图2：展示了Ground Truth, K-means (K=2000), 和 SE聚类在top-10和top-20簇上的PCA可视化。论文指出，SE聚类比基于质心的K-means更能保持数据的有机结构，并在复杂簇中表现更优。
 
 5. 实际意义是什么：为语音大模型（SpeechLLM）提供了一种更自适应、更鲁棒的语音离散化方案，有望提升下游语音理解任务的性能，尤其是在噪声和复杂声学环境下。
@@ -65,7 +65,7 @@ SED的整体流程是一个两阶段管线：语音特征提取与离散化 -> �
     *   扩展性处理：为处理长语音，引入了下采样（采样因子s=0.001）和分块处理（块长度L=1000）策略。对每个语音块依次进行图构建和增量2D-SE最小化，并动态更新分区。
 3.  离散token-based ASR：将SED生成的离散token序列Z与文本Y一起输入到解码器-only的大语言模型（如GPT2-medium， Qwen2-0.5B）中。LLM的词表被扩展，增加了语音token的嵌入（随机初始化）。模型以自回归方式（next-token-prediction）训练，损失函数为交叉熵损失（公式5）。
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461907-0.png)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461907-0.png)
 图1：展示了SED方法的框架和工作流程。上层是语音离散化流程：原始语音 -> SSL特征提取 -> 相似度图构建 -> 基于2D-SE最小化的自适应聚类 -> 离散语音token。下层是ASR流程：离散语音token与文本token拼接后输入解码器-only LLM进行自回归训练。
 
 #
@@ -127,7 +127,7 @@ SED的整体流程是一个两阶段管线：语音特征提取与离散化 -> �
 
 3. 可视化分析
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461907-1.png)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461907-1.png)
 图2：该图对比了真实音素标签、K-means聚类和SED聚类在LibriSpeech dev-clean子集上的PCA可视化。论文分析指出：K-means形成紧凑但可能僵化的簇；SED则能捕捉更有机、灵活的数据结构，在处理复杂簇时保持更好的分离度，更有效地反映了底层数据分布。
 
 #

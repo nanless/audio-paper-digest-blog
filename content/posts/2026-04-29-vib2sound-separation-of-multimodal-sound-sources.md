@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 Vib2Sound是一个端到端的神经网络声源分离模型，其核心目标是：给定包含多个动物发声的混合多通道麦克风信号（Mic）以及每个目标动物佩戴的加速度计信号（Acc），输出分离后的干净发声频谱。
 
-![Vib2Sound 结构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464288-1.png)
+![Vib2Sound 结构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464288-1.png)
 图2：Vib2Sound 模型结构。图中清晰展示了两条输入流：混合音频流（多通道麦克风）和加速度计流。音频流经过CNN处理，加速度计频谱图与其拼接后送入LSTM，最终由全连接层生成掩码，用于从原始混合频谱中估计出两个分离的声源频谱。
 
 架构流程详解：
@@ -122,12 +122,12 @@ Vib2Sound是一个端到端的神经网络声源分离模型，其核心目标�
 - 加速度计信号至关重要：移除加速度计信号（audio-only模型）导致性能严重下降（如Dataset2欧氏距离从0.527升至1.197）。而移除多通道信息（single-channel Vib2Sound）性能几乎不变。
 - 可扩展到3-4只鸟：分离3只或4只鸟混合信号时，性能相比2只鸟场景仅有轻微下降，且仍远优于麦克风-only基线。
 
-![分离效果示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464288-3.png)
+![分离效果示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464288-3.png)
 图4：Vib2Sound分离一个人工混合声的示例。从左到右依次为：混合的麦克风输入、对应的加速度计信号、模型预测结果、真实干净信号、预测与真实值的绝对差值。预测频谱与真实值高度吻合，残差极小。
 
 2. 真实世界混合数据评估
 
-![音高分布对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464288-4.png)
+![音高分布对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464288-4.png)
 图5：干净叫声、重叠叫声以及Vib2Sound分离后叫声的平均音高分布（核密度估计图）。
 
 - 评估对象：196个自然发生的重叠叫声（同一只鸟的一种谐波叫声）。

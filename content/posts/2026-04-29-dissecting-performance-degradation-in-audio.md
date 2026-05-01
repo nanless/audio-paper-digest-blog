@@ -50,7 +50,7 @@ hiddenInHomeList: true
 - 噪声核重采样：在计算插值时，对窗口化Sinc插值核k(win-sinc)添加高斯噪声，得到k(noisy)，从而生成包含高频成分的重采样信号。
 - 可训练核重采样：用一个小型MLP（k(tr)）来参数化插值核，该MLP在固定分离模型的情况下，通过联合损失函数进行端到端训练。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461313-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461313-0.png)
 图1：重采样处理流水线及各方法核函数示意图。(a)为处理非训练SF的通用流程；(b)(c)(d)分别为本文提出的三种改进重采样方法。
 
 ### 💡 核心创新点
@@ -78,7 +78,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主要实验：不同重采样方法在BSRNN模型上的对比（图2）
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461313-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461313-1.png)
 图2：常规重采样、后重采样噪声添加、噪声核重采样、可训练核重采样在BSRNN模型上的SDR（单位：dB）对比。横轴为测试数据采样率（kHz），纵轴为SDR。
 
 - 关键结论：对于人声(vocals)，常规重采样将SDR从训练采样率(44.1kHz)下的约6.5dB，在8kHz输入时降至约3.5dB。噪声核和可训练核重采样能将SDR恢复至6.0dB以上。后重采样噪声添加效果最差。对于贝斯(bass)、鼓(drums)、其他(other)，趋势类似但降幅较小。
@@ -122,10 +122,10 @@ hiddenInHomeList: true
 关键结论：对于在常规重采样下性能显著下降的模型（如Conv-TasNet， BSRNN， Mel-RoFormer， HT-Demucs），噪声核重采样（粗体数字）普遍能提升性能（↑）。对于本身鲁棒的模型（BS-RoFormer， MDX23C， SCNet），噪声核重采样影响不大，不会损害性能。
 
 核函数分析与频谱示例（图3， 图4）
-![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461313-2.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461313-2.png)
 图3：8kHz到44.1kHz重采样时，常规核、噪声核和可训练核的波形及频率响应对比。红色虚线为输入Nyquist频率(4kHz)，灰色虚线为训练Nyquist频率(22.05kHz)。噪声核和可训练核在4kHz以上有显著能量。
 
-![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461313-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461313-3.png)
 图4：不同方法重采样后的频谱图。(a)常规重采样在4kHz以上为暗区；(b)后重采样噪声添加产生无意义的宽频噪声；(c)噪声核重采样产生与低频相关的条纹状高频成分；(d)可训练核重采样产生混叠结构。
 
 关键结论：图3证实噪声核在4kHz以上引入了更多能量。图4直观显示，噪声核添加的高频成分与低频信号相关，这支持了假设二；而后重采样噪声添加的噪声与信号无关，导致性能下降。

@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 本文提出的分层V2P框架包含三个阶段，其整体架构如图2所示。
 
-![图2: 框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465075-1.png)
+![图2: 框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11465075-1.png)
 
 整体流程与组件：
 1.  Stage 1: V2A学习 (基线)：训练一个多模态扩散变换器（Multi-Modal DiT），直接从视频帧和文本描述生成音频波形。这是一个标准的基于流匹配（Flow Matching）的条件生成模型，作为后续阶段的初始化。其损失函数为条件流匹配（CFM）损失（公式1）。

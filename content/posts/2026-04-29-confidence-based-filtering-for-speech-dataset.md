@@ -58,17 +58,17 @@ hiddenInHomeList: true
 | 增强后（保留置信度Top 80%） | 224,104 | 3.80 | 3.17 | 18.79 |
 | 增强后（保留置信度Top 70%） | 196,091 | 3.76 | 3.15 | 18.14 |
 
-![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464183-8.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464183-8.png)
 （图3：一个GSE幻觉错误示例。右侧增强后的语谱图和转录（“now you can so didn’t harm”）与左侧原始干净语音（“how you can play guitar”）在语义上严重不符，但UTMOS评分却很高（4.01），而提出的置信度分数（-1.45）和LPS（0.030）则很低，能有效识别此类错误。）
 
-![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464183-9.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464183-9.png)
 （图4：不同过滤方法在数据保留率（X轴）与平均侵入指标分数（Y轴）关系上的对比。在相同保留率下，Genhancer confidence（红色实线）在所有指标上均领先于其他非侵入指标过滤方法。）
 
 ### 🏗️ 模型架构
 
 论文的核心方法并非提出一个全新的网络架构，而是提出一种基于现有GSE模型输出进行后处理过滤的流程。其系统架构如下图所示：
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464183-4.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464183-4.png)
 （图2：提出的基于置信度过滤的完整流程图。）
 
 1.  输入：嘈杂语音 `w_noisy`。

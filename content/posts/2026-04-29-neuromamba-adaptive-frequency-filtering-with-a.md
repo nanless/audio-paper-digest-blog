@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![NeuroMamba框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462161-0.jpg)
+![NeuroMamba框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462161-0.jpg)
 图1展示了NeuroMamba的整体架构，分为(a)整体流程、(b)自适应频率模块（AFM）内部结构和(c)时间金字塔Mamba（TPM）内部结构。
 
 整体流程 (a)：输入为sEEG信号，依次经过AFM进行频率感知的特征提取，Dropout层进行正则化，TPM进行多尺度时间建模，最后通过全连接层预测梅尔频谱图。预测的梅尔频谱图再送入声码器（Vocoder）重建为语音波形。
@@ -134,7 +134,7 @@ hiddenInHomeList: true
 这证明了AFM和TPM模块各自对最终性能都有不可替代的贡献。
 
 实验结果图表：论文提供了sEEG电极位置图（图2）和样本解码梅尔频谱图（通过GitHub链接提供，但未在文中直接展示）。图2用于说明被试的电极植入位置，图中以不同颜色标识同一电极轴上的触点，直观展示了sEEG的空间覆盖范围。
-![sEEG电极位置图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462161-1.jpg)
+![sEEG电极位置图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462161-1.jpg)
 图2：两名被试的sEEG电极位置。相同颜色的点表示来自同一电极轴的触点。位置通过术后CT与术前MRI配准确定。
 
 #

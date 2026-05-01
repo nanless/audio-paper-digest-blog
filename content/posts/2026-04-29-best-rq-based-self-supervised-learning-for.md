@@ -69,7 +69,7 @@ BEARD框架的架构如图1所示，旨在不改变Whisper解码器的前提下�
     -   λ, β：权重系数，控制蒸馏损失的强度。
 7.  适配后流程：BEARD阶段完成后，将重新训练好的学生编码器S与原始的、冻结的Whisper解码器重新拼接，然后在少量有标注的领域数据上联合微调编码器和解码器，完成最终的ASR模型适配。
 
-![BEARD框架架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462685-0.png)
+![BEARD框架架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462685-0.png)
 图1展示了BEARD的核心组件：左侧为基于BEST-RQ目标的自监督学习路径（应用于中间层ℓ）；右侧为利用冻结教师编码器在中间层ℓ和输出层n进行的知识蒸馏路径。
 
 #
@@ -141,7 +141,7 @@ BEARD框架的架构如图1所示，旨在不改变Whisper解码器的前提下�
 结论：即使使用500小时无标注数据，BEARD仍能带来明显收益。
 
 跨信噪比（SNR）分析：
-![不同SNR下的WER对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462685-2.png)
+![不同SNR下的WER对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462685-2.png)
 图2：BEARD最佳配置（蓝色）在所有SNR区间内，WER均低于仅微调（橙色）基线。在[10,20]dB区间改进最大（相对19%），在负SNR区间也有15%的相对改进。
 
 总结：BEARD框架通过充分利用无标注数据，在多个实验条件下均稳定提升了Whisper在航空管制领域的识别性能，验证了该方法的有效性和鲁棒性。

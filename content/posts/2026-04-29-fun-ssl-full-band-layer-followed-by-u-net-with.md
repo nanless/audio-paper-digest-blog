@@ -42,7 +42,7 @@ hiddenInHomeList: true
 
 本文提出的FUN-SSL是一个端到端的深度学习模型，其整体架构和核心模块FUN-block的详细设计如下图所示。
 
-![图1：FUN-SSL网络架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461558-0.png)
+![图1：FUN-SSL网络架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461558-0.png)
 
 整体架构（图1上部）：
 1.  输入：多通道音频信号的短时傅里叶变换（STFT）表示，形状为 `N × K × 2M`（帧数N，频率点K，麦克风数M，实虚部2）。输入经过拉普拉斯归一化。

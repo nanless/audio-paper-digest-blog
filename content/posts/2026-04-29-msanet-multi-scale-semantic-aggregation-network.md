@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![MSANet 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465152-0.jpg)
+![MSANet 架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11465152-0.jpg)
 图1：MSANet整体架构示意图（来自论文图1）
 
 MSANet是一个端到端的编码器-融合-解码器框架，输入混合语音和对应的EEG信号，输出增强后的目标语音波形。
@@ -149,7 +149,7 @@ MSANet是一个端到端的编码器-融合-解码器框架，输入混合语音
 
 超参数研究（表3）：在Cocktail Party数据集上，分析了K, L, M, H的影响，找到了最优配置。
 
-![跨被试性能可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11465152-1.jpg)
+![跨被试性能可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11465152-1.jpg)
 图2：MSANet在不同被试上的SI-SDR、STOI和PESQ性能（来自论文图2）。柱状图展示了33名被试的性能，顶部数字为中位数。结果表明模型在不同个体上表现稳定。
 
 ### ⚖️ 评分理由

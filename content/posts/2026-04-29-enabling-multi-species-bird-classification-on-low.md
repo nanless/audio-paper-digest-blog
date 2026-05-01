@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 WrenNet是一个为边缘设备流式处理设计的端到端神经网络，其整体流程如论文图1所示，处理一段3秒的音频信号，输出物种分类概率。
 
-![WrenNet架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463679-0.png)
+![WrenNet架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463679-0.png)
 
 1.  输入：原始音频波形（32kHz采样率，3秒）。
 2.  前端（频谱特征提取）：
@@ -143,7 +143,7 @@ WrenNet是一个为边缘设备流式处理设计的端到端神经网络，其�
 
 关键结论：WrenNet在AudioMoth上能耗极低（77mJ），在树莓派上相比BirdNET实现16倍能耗和速度提升。
 
-![图2：不同频率映射配置对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463679-0.png)
+![图2：不同频率映射配置对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463679-0.png)
 此图实际为图1（架构图），论文中图2（频率映射对比图）未提供URL，故根据描述说明：该图展示了在固定转折点b=4000Hz下，不同过渡宽度w的Sigmoid映射与纯对数、纯线性、梅尔映射的频率曲线对比，直观显示了半可学习方法的灵活性。
 
 #

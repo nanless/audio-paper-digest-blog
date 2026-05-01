@@ -73,7 +73,7 @@ hiddenInHomeList: true
 
 TSDA的整体架构（如图1所示）遵循“解耦-对齐-重耦合”的流程，处理语言(L)、视觉(V)、声学(A)三个模态的输入。
 
-![图1: TSDA框架示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463049-0.png)
+![图1: TSDA框架示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463049-0.png)
 图1：TSDA架构示意图。对于每个模态，输入首先被分离到时间编码器和空间编码器中。随后，因子一致性跨模态对齐（FCCA）模块分别对时间特征和空间特征进行跨模态交互（使用块对角掩码确保因子内部交互）。最后，门控重耦合（GR）模块根据可靠度信号自适应地融合对齐后的时间与空间表征，用于最终的情感预测任务。
 
 完整输入输出流程：
@@ -155,13 +155,13 @@ TSDA的整体架构（如图1所示）遵循“解耦-对齐-重耦合”的流�
 4.  移除任何一项正则化(L_pur, L_decorr, Lorth)都会导致性能下降，其中L_pur影响最大，说明因子纯度监督至关重要。
 
 可视化分析结果：
-![图2: MOSI数据集上的T-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463049-1.png)
+![图2: MOSI数据集上的T-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463049-1.png)
 图2：不同模型设置在CMU-MOSI测试集上的t-SNE特征可视化（红色表示更强的正向情感）。从(a)无时空解耦，到(b)解耦但无FCCA，再到(c)解耦+FCCA但无GR，最后到(d)完整的TSDA，可以看到特征分布变得越来越紧凑、极性梯度越来越清晰有序，证明TSDA各组件逐步改善了表征质量。
 
-![图3: MOSI训练过程中的正则化曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463049-2.png)
+![图3: MOSI训练过程中的正则化曲线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463049-2.png)
 图3：在CMU-MOSI训练过程中，正则化损失L_pur, L_decorr, L_orth的变化曲线。三者均呈单调下降并收敛，表明因子分离过程稳定有效，模型持续学到了更纯净、更独立的时空表征。
 
-![图4: 超参数α, β, γ的敏感性分析](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463049-3.png)
+![图4: 超参数α, β, γ的敏感性分析](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463049-3.png)
 图4：在CMU-MOSI和CMU-MOSEI数据集上，固定其他两个超参数，分别扫描α、β、γ在不同取值时的模型性能（MAE和ACC7）。曲线波动很小，表明TSDA的性能对这些超参数的具体选择不敏感，验证了架构设计的鲁棒性。
 
 ### ⚖️ 评分理由

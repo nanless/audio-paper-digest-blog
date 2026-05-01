@@ -64,10 +64,10 @@ hiddenInHomeList: true
 
 表3: 消融实验（引自论文）
 
-![图1: AMS-D训练流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463787-0.png)
+![图1: AMS-D训练流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463787-0.png)
 图1展示了AMS-D的整体框架：左侧为渐进式自蒸馏，t-1 epoch的教师模型提供logits用于计算蒸馏损失；右侧为注意力掩码策略，教师模型的最终层特征经Token权重模块生成掩码，应用于t epoch学生的输入，并加入了重建任务。
 
-![图2: 掩码策略可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463787-1.png)
+![图2: 掩码策略可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463787-1.png)
 图2展示了在喘鸣音（crackle）声谱图上不同掩码策略的对比（上排），以及注意力掩码在不同训练阶段的选择频率热图（下排）。它表明，注意力掩码策略能动态地、结构性地屏蔽与病理特征相关的区域（如红框所示的高频区域），而非随机分散。
 
 ### 🏗️ 模型架构

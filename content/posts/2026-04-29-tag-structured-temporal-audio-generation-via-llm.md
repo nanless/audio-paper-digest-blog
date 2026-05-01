@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 本文提出的TAG（Structured Temporal Audio Generation）框架是一个两阶段的系统。
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461814-0.png)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461814-0.png)
 图1 展示了TAG的整体框架：上半部分是“音频生成手册构建”阶段，下半部分是“基于注意力的时间控制音频生成”阶段。
 
 第一阶段：音频生成手册构建 (Audio Generation Manual Construction)
@@ -145,9 +145,9 @@ hiddenInHomeList: true
 1. 显著提升：TAG框架（尤其是与Stable Audio Open结合时）在Eb和At指标上大幅超越了所有基线模型和已发表的SOTA方法，甚至接近或超过真实音频的Eb值。
 2. 消融实验：移除LLM阶段（w/o LLM stage）直接使用原始时间注释时，性能已很高，但加入LLM阶段后，两项指标均有进一步提升（如TANGO2+TAG的Eb从39.61提升至43.34，At从66.80提升至73.45），证明了LLM进行需求分析和手册构建的有效性。
 
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461814-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461814-1.png)
 图2 (Audiocaps案例)：展示了基线模型在处理多个事件时容易遗漏或错序，而TAG框架能成功安排并生成所有指定事件并保持时序关系。
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461814-2.png)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461814-2.png)
 图3 (AudioCondition案例)：展示了集成TAG的Stable Audio Open模型能实现精确的时间控制。
 
 #

@@ -37,7 +37,7 @@ hiddenInHomeList: true
 
 本文的核心并非提出一个新的生成模型架构，而是提出一个用于优化现有基于流匹配的V2A模型的框架。其整体架构如图1所示，包含三个主要组件：
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463624-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463624-0.png)
 
 1.  AudioScore评分系统：
     *   输入：生成的音频、对应的视频，以及可选的文本提示。
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 
 论文图2（pdf-image-page4-idx1）展示了生成音频的可视化对比，DPO优化后的MMAudio能够更好地对齐视频中不同幅度的手部动作（轻扫与快速扫弦），而DDPO和基线模型则难以做到。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463624-1.jpg)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463624-1.jpg)
 
 #
 

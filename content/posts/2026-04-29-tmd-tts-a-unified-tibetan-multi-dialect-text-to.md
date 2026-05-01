@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 TMD-TTS是一个基于流匹配（Matcha-TTS）的端到端文本到语音（TTS）合成模型，其整体架构如图1所示。
 
-![TMD-TTS框架总体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463471-0.png)
+![TMD-TTS框架总体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463471-0.png)
 
 模型接收的输入是藏语文本，输出是波形语音。主要处理流程如下：
 1.  文本编码：藏文字符首先通过一个嵌入层和编码器，生成文本隐层表示 `h_text`。
@@ -110,10 +110,10 @@ TMD-TTS是一个基于流匹配（Matcha-TTS）的端到端文本到语音（TTS
 数据集生成与下游任务验证：基于TMD-TTS生成的TMDD数据集（表3）规模是基线数据集的20倍以上。使用TMDD训练的S2SDC模型（DurFlex-EVC）在主观MOS上优于使用基线数据集训练的模型（表4），验证了生成数据的实用性。
 
 图表分析：
-![方言分类准确率可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463471-1.jpg)
+![方言分类准确率可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463471-1.jpg)
 图2（左VITS2，右TMD-TTS）展示了在三个方言测试样本上，由预训练分类器输出的平均方言分类概率。TMD-TTS的输出在目标方言上的概率柱状图更高、更集中，表明其生成的语音具有更鲜明、更准确的方言特征。
 
-![方言嵌入t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463471-2.png)
+![方言嵌入t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463471-2.png)
 图3（左VITS2，右TMD-TTS）是方言嵌入的t-SNE可视化。TMD-TTS的嵌入点聚类更紧密，且三个簇（代表三个方言）分离度更好，证明其学习到的方言表示更具区分性。
 
 ### ⚖️ 评分理由

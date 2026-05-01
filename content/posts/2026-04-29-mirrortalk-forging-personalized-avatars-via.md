@@ -39,7 +39,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 MirrorTalk的整体流程分为两个主要部分：风格编码和运动合成。
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462039-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462039-0.jpg)
 
 1.  输入与预处理：输入为目标说话人的一段参考视频 \(V_i\) 和任意语音音频。首先使用3DMM模型（FLAME）从参考视频中提取面部参数序列 \(P_{1:T} = \{\alpha_t, \beta_t, \theta_t\}\)（形状、表情、姿态）。
 2.  语义解耦风格编码器：
@@ -104,7 +104,7 @@ MirrorTalk的整体流程分为两个主要部分：风格编码和运动合成�
 
 关键结论：移除任何核心模块都会导致性能下降。其中，移除解耦模块（Dis-Module）导致所有指标全面严重下降，证明了显式解耦的必要性。移除分层调制（H-Scales）主要影响唇形同步精度。移除三元组损失主要影响风格判别性（StyleSim）。
 
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462039-1.jpg)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462039-1.jpg)
 图2展示了定性比较。可以看出，与AniTalker（表情僵硬）、SadTalker和Echomimic（上脸区域不够自然）以及V-Express（风格保持不足）相比，MirrorTalk生成的动画在唇形准确性和表情自然度上达到了更好的平衡，更好地保留了说话人的风格。
 
 ### ⚖️ 评分理由

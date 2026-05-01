@@ -98,7 +98,7 @@ Sidon采用两阶段参数化重合成的框架，整体架构清晰地展示在
 注：表中仅列出10种语言，完整100种语言结果见论文在线项目页。
 结论：Sidon在平均CER和DNSMOS上优于Miipher-2，SpkSim持平，NISQA略低（但NISQA可能不适合多语言评估）。Sidon在所有语言上均显著提升了语音质量（对比Noisy行）。
 
-![图2：多语言恢复结果详细表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460553-1.png)
+![图2：多语言恢复结果详细表](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460553-1.png)
 描述：图2（表3的扩展）展示了100种语言中10种的详细恢复数据。可以看到Sidon在中文、英文、西班牙文、俄文、法文等语言的CER和DNSMOS指标上均表现优异，且普遍优于或接近Miipher-2。
 
 表4：TTS模型质量评估结果（TED-LIUM数据清洗后训练F5-TTS）

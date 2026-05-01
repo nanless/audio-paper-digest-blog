@@ -49,11 +49,11 @@ BinauralViT的完整架构如图1所示，是一个端到端的双耳语音增�
 4.  相位敏感掩码（PSM）估计与重建：整合表征R_PSP分别送入左右通道的自注意力层和线性层，经sigmoid激活后得到估计的PSM。将估计的PSM与输入的幅度谱逐元素相乘，即可得到增强后的干净语音幅度谱。结合原始相位信息，通过逆STFT重建时域语音信号。
 
 图1：BinauralViT模型架构总览
-![BinauralViT模型架构总览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462218-0.png)
+![BinauralViT模型架构总览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462218-0.png)
 此图展示了模型的端到端流程：从左右耳信号输入，经过特征提取、多个修改的ViT编码器处理，通过表示集成块融合，最后经线性解码器输出增强的语音。图1b详细展示了表示集成块的内部结构，包括交叉注意力和自注意力层。
 
 图2：修改的视觉Transformer编码器
-![修改的视觉Transformer编码器](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462218-1.png)
+![修改的视觉Transformer编码器](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462218-1.png)
 此图详细说明了如何修改标准ViT：去除了线性投影，并添加了蓝色的注意力掩码。掩码确保了在自注意力计算中，每个patch（代表一个时间-频率位置）只能与同一时间帧（即同一列）内的其他patch进行交互。
 
 ### 💡 核心创新点
@@ -138,7 +138,7 @@ BinauralViT的完整架构如图1所示，是一个端到端的双耳语音增�
     3.  双耳线索互补：同时移除IPD和ILD特征导致性能全面下降（PESQ 2.35， ∆ILD 5.09）。单独移除任一特征会导致该特征相关的误差略微降低（如移除IPD特征后，∆IPD略降至1.08），但另一特征的误差会上升（如移除IPD后，∆ILD升至4.39），这印证了双耳定位理论中的双线索（duplex theory）互补性。
 
 图3：频谱图比较
-![频谱图比较](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462218-2.png)
+![频谱图比较](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462218-2.png)
 此图定性展示了带噪信号、干净信号和经不同方法增强后的信号频谱。从视觉上看，BCCTN（中间右）残留了较多噪声，BiTasNet（中间左）虽然保留了谐波结构但引入了干扰，而BinauralViT（右）的增强结果最接近干净参考（上），背景更干净。这与表1中的客观指标趋势一致。
 
 ### ⚖️ 评分理由

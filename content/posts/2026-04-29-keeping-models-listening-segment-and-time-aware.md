@@ -63,10 +63,10 @@ AttnAdapter内部组件：
 
 与已有架构的关系：AttnAdapter不改变原模型的架构、位置编码(RoPE)、掩码机制、KV缓存更新逻辑，也不改变计算复杂度。它被设计为一个即插即用的模块，可以在推理时启用。
 
-![图1：解码过程示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460793-0.png)
+![图1：解码过程示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460793-0.png)
 图1 展示了ALLMs推理过程及注意力漂移现象。左侧是模型输入序列（系统、音频、文本令牌），右侧是解码生成的文本。图中示意了解码过程中，注意力（红色箭头）从音频块逐渐减弱并偏向已生成的文本令牌，导致回答可能与音频输入脱节。AttnAdapter（下方插图）则试图通过重缩放注意力来缓解这一问题。
 
-![图2：跨层注意力衰减可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460793-1.png)
+![图2：跨层注意力衰减可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460793-1.png)
 图2 展示了注意力路由退化现象。图示了在解码器的早期、中期和晚期层中，查询对不同键段（S：系统， A：音频， P：提示/生成文本）的注意力分布。可以清晰看到，随着层加深，对音频块A的注意力明显减弱，而对文本块P的注意力增强。
 
 #
@@ -125,10 +125,10 @@ AttnAdapter内部组件：
 3.  全面性：提升覆盖了“声音”、“音乐”、“语音”以及“混合音频”等多个类别，证明了方法的普适性。
 4.  高效性：带来显著性能提升的同时，计算开销极低（延迟增加<2%）。
 
-![图3：Attention Maps对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460793-2.png)
+![图3：Attention Maps对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460793-2.png)
 图3 展示了在有无AttnAdapter的情况下，解码某一步的注意力图对比。左侧“Original”图显示注意力集中在文本令牌上；右侧“Adapted”图显示应用AttnAdapter后，对音频令牌块的注意力被显著加强。
 
-![图4：解码不确定性示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460793-3.png)
+![图4：解码不确定性示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460793-3.png)
 图4 进一步阐释了AttnAdapter的工作机制。当模型在解码过程中对下一步生成的内容不确定性较高时（图中紫色区域），AttnAdapter会增强对音频关键点的访问，帮助模型“重新聆听”以获得更准确的信息。
 
 #

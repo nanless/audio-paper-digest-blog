@@ -65,10 +65,10 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1：多阶段早期退出系统示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460989-0.png)
+![图1：多阶段早期退出系统示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460989-0.png)
 图1展示了传统早期退出网络（Top）和本文提出的HypEE（Bottom）的对比。标准EE网络的嵌入空间缺乏结构（Bottom-left），而HypEE在双曲空间中学习到了按出口层次（径向）和类别（角度）组织的结构（Bottom-right）。
 
-![图2：HypEE框架详细示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460989-1.png)
+![图2：HypEE框架详细示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460989-1.png)
 图2是HypEE的核心框架图。左图展示了训练过程：欧氏嵌入被映射到洛伦兹超曲面，并通过层次蕴含损失施加偏序约束。右图展示了学习后的嵌入空间：嵌入点按出口级别径向排列（离原点越远表示确定性越高），按类别角度聚类，形成从内到外的精炼轨迹。
 
 整体流程：
@@ -119,12 +119,12 @@ hiddenInHomeList: true
 主要结果已在“核心摘要”的表格中列出。此处补充其他关键图表。
 
 图3：潜在维度影响与嵌入范数分布
-![图3：潜在维度影响与嵌入范数分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460989-2.png)
+![图3：潜在维度影响与嵌入范数分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460989-2.png)
 - 左图：展示了在ESC-50数据集上，HypEE与EucEE在EE0和EE1出口的准确率随潜在维度（32， 128）的变化。关键结论：HypEE在仅32维时就能达到EucEE在128维时的性能（例如，EE0准确率：HypEE-32维 ~82%， EucEE-128维 ~42%），证明其表征更紧凑、空间利用效率更高。
 - 右图：展示了HypEE各出口（EE0， EE1， Final）嵌入范数`||h||`的分布。关键结论：分布按出口清晰分离且有序（EE0最靠近原点，Final最远离），直观验��了蕴含损失成功学习到了预期的层次结构。
 
 图4：双曲嵌入的t-SNE可视化
-![图4：双曲嵌入的t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460989-3.png)
+![图4：双曲嵌入的t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460989-3.png)
 - 左图（按出口着色）：显示了嵌入在切空间投影后的t-SNE图。EE0的嵌入形成核心区域，EE1和Final的嵌入在其周围扩展，体现了“一致性核心-精炼外延”的层次动态。
 - 右图（按类别着色）：显示了同一嵌入空间按真实类别着色的结果。不同颜色的簇清晰分离，表明HypEE同时学习到了良好的语义聚类。这证实了学习到的空间是“双结构”的：同时编码了出口层次和类别语义。
 

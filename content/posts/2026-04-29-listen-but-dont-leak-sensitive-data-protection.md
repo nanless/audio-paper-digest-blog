@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 架构图引用：
 论文中提供了概览图（图1），展示了无触发、句子级编辑、短语级编辑三种情况下的输入输出示例。
-![PAT方法概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461572-0.png)
+![PAT方法概览图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461572-0.png)
 图1说明：该图直观地展示了PAT的工作原理。顶部为标准转录；中部展示当音频前附加了触发信号（蓝色波形部分）时，整个句子的转录结果被替换为一连串`<REDACTED>`；底部展示更细粒度的控制，仅将“John Doe”和“555-123456”这两个敏感实体替换为`<REDACTED>`，而其余内容“calls from”和“every Monday”等被保留。
 
 ### 💡 核心创新点
@@ -94,7 +94,7 @@ hiddenInHomeList: true
 细分结果（类别分析）：论文提供了短语级编辑在不同敏感信息类别上的短语编辑精度（PRA）（表格4），显示模型对结构化信息（如电话号码，>98%）的保护效果优于复杂实体（如地址，~86%）。
 
 图表：
-![PAT方法概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461572-0.png)
+![PAT方法概览图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461572-0.png)
 图1说明：已在架构部分详述，展示了方法的输入输出概念。
 
 ### ⚖️ 评分理由

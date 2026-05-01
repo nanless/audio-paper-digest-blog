@@ -50,7 +50,7 @@ hiddenInHomeList: true
     *   思维链（Chain-of-Thought, CoT）：在提示中引导模型进行多步骤分析推理，并要求其在给出答案前阐述推理过程。
 4.  评估执行与记录：每个任务运行三次（不同随机种子），取平均准确率以应对模型输出的随机性。所有推理日志被系统记录。
 
-![pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462479-0.png)
+![pdf-image-page4-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462479-0.png)
 图1：MUSE基准上SOTA模型与人类被试的对比。图中显示了四个模型（AF3, Qwen, Flash, Pro）与人类非专家和专家在10项任务上的准确率。可以看出模型间差异巨大，且人类专家在多项高级任务上显著领先。
 
 ### 💡 核心创新点
@@ -97,7 +97,7 @@ hiddenInHomeList: true
 
 注：带号任务需要处理两个音频。人类分数中，灰色背景表示优于最佳模型。随机水平见论文表2底部。*
 
-![pdf-image-page4-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462479-0.png) （同图1，已使用）
+![pdf-image-page4-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462479-0.png) （同图1，已使用）
 图1结论：Gemini Pro在所有模型中表现最强，尤其在初级任务上表现突出。然而，在需要复杂推理的高级任务上，它与人类专家的差距显著。Qwen和Audio Flamingo 3在多项任务上表现接近或低于随机水平。
 
 模型学习与人类学习对比分析（图2）：

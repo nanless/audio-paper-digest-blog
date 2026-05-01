@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 该论文的系统架构围绕集成教师-学生（Ensemble Teacher-Student） 框架构建，核心是同时更新教师模型。
 
-![系统框图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462897-0.png)
+![系统框图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462897-0.png)
 图1：同时更新教师模型的系统框图。无标签音频输入所有教师模型，每个模型输出后验概率。通过选择与过滤机制，选出一个最优后验概率分布，解码成伪标签，用于训练学生模型。学生模型通过EMA方式更新所有教师模型。
 
 主要组件与数据流：
@@ -141,7 +141,7 @@ hiddenInHomeList: true
 | | CH | 27.3 | 22.3 |
 | | SB | 19.3 | 15.0 |
 
-![验证集WER收敛曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462897-1.png)
+![验证集WER收敛曲线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462897-1.png)
 图2：不同超参数下学生模型验证集WER的收敛曲线。 (a) 不同α值的影响（Δ固定为1）。 (b) 不同Δ值的影响（α相应调整）。 (c) 不同τ值的影响（α和Δ固定）。
 
 关键结论：

@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（Latent Codec） 和 联合源信道编解码器（JSCC Codec），其流程如公式(1)所示：`语音 x -> 潜在编码器 E -> 潜在表示 l -> JSCC编码器 J_e -> 发送符号 s -> 无线信道 -> 接收符号 ŝ -> JSCC解码器 J_d -> 潜在表示 l̂ -> 潜在解码器 D -> 重建语音 x̂`。
 
-![GL-JSCC 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-0.png)
+![GL-JSCC 架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-0.png)
 图1: (a) GL-JSCC的整体架构。语音经潜在编码器E压缩为潜在表示l，JSCC编码器Je将其转换为信道符号s传输。接收端经JSCC解码器Jd恢复潜在表示l̂，再经潜在解码器D重建语音x̂。(b) JSCC编码器Je的具体结构，采用带RoPE的流式Transformer，输入为潜在帧和SNR token，输出为信道符号。
 
 主要组件：
@@ -90,7 +90,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
 2.  不同SNR下的性能（AWGN信道，K=2kHz）：如图3(b)所示，GL-JSCC在所有SNR（-2dB到10dB）下PESQ得分均最高，优势在低SNR时尤为明显。
 3.  不同SNR下的性能（AWGN与COST2100信道，K=4kHz）：如图3(c)(d)所示，GL-JSCC在两种信道、所有SNR下均表现最佳，展现了强大的鲁棒性。注意DeepSC-S的带宽为12kHz（图中绿线）。
 
-![PESQ与带宽/SNR关系图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-2.png)
+![PESQ与带宽/SNR关系图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-2.png)
 图3: (a) AWGN信道，SNR=2dB时PESQ与带宽关系。GL-JSCC以更少带宽达到更高质量。(b) AWGN信道，K=2kHz时PESQ与SNR关系。(c)(d) AWGN和COST2100信道，K=4kHz时PESQ与SNR关系。GL-JSCC均表现最优。
 
 主观评估（MUSHRA测试）：
@@ -99,7 +99,7 @@ GL-JSCC的整体架构分为两个核心部分：生成式潜在编解码器（L
 - SNR=6dB，AWGN信道：GL-JSCC得分依然最高，且用更少带宽提供更好听感。
 Demo链接已提供。
 
-![MUSHRA得分图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461563-3.png)
+![MUSHRA得分图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461563-3.png)
 图4: 不同信道条件下的MUSHRA主观评分。(a) SNR=2dB，(b) SNR=6dB。GL-JSCC在低带宽下均获得更高主观分数。
 
 消融研究（潜在空间监督）：

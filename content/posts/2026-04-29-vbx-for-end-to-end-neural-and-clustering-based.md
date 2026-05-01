@@ -63,7 +63,7 @@ hiddenInHomeList: true
     - 全局标签重分配：对于每个窗口，将局部说话人嵌入与全局聚类质心计算相似度矩阵Mw。使用约束的匈牙利算法（即“c”前缀方法，如cAHC， cVBx）进行一对一的最优分配，修复了pyannote原有实现的错误。
     - 拼接与后处理：将所有重叠窗口的局部预测通过投票机制聚合成一致的全局说话人活动时间线，并可进行短间隙填充等后处理。
 
-![局部EEND输出与嵌入提取示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462054-0.jpg)
+![局部EEND输出与嵌入提取示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462054-0.jpg)
 图1：展示了单个输入窗口内的局部EEND输出（不同颜色代表不同说话人），以及如何为每个说话人（如绿色、橙色）拼接其语音片段以提取一个嵌入向量。当说话人仅在重叠区域活动时（橙色），则使用所有活动区域进行拼接。
 
 #
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 4.  细分结果：在说话人多（如AISHELL-4， 5-7人）、录音长（如NOTSOFAR-1， 平均6.3分钟）或场景复杂（如VoxConverse， 最多21人）的数据集上，改进尤为显著。
 
 实验结果图表：
-![聚类效果t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462054-0.jpg)
+![聚类效果t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462054-0.jpg)
 图3：t-SNE图展示了嵌入聚类效果。(a) 使用cVBx聚类产生了6个簇（多了一个紫色簇）；(b) 真实标签为5个说话人；(c) 颜色表示提取嵌入所用拼接语音的时长，紫色簇几乎全由短片段嵌入组成。这直观地说明了短片段嵌入会导致虚假聚类，而过滤能避免此问题。
 
 #

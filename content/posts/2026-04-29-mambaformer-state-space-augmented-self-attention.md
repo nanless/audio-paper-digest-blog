@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 MambaFormer采用编码器-解码器结构，核心是堆叠的N个DP_MambaFormer块，整体流程如图1所示。
 
-![MambaFormer整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462536-0.png)
+![MambaFormer整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462536-0.png)
 图1：MambaFormer模型概述。(a) 包含STFT/iSTFT、编码器/解码器以及N个堆叠的DP_MambaFormer块的模型流程图。(b) 用于频率建模的F_MambaFormer模块配置（用于时间建模的T_MambaFormer模块采用相同结构）。(c) Mamba结构。(d) 非线性注意力（NLA）结构。
 
 1.  输入与编码器：输入为含噪语音波形 `y`。首先进行STFT，得到幅度谱 `Y_mag` 和相位谱 `Y_pha`，将两者拼接 `Y_in = [Y_mag, Y_pha]` 作为编码器输入。编码器（Encoder）由两个卷积块和中间的膨胀密集网络（Dilated DenseNet）组成，将输入映射到紧凑的时-频特征空间。

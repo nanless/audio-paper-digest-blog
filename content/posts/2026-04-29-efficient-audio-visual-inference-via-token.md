@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 EAVI框架的整体架构如图2（左）所示。它建立在类似VideoLLaMA2的架构之上，主要改进了音频处理和跨模态融合部分。
 
-![图2：EAVI模型结构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460991-1.png)
+![图2：EAVI模型结构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460991-1.png)
 
 完整流程如下：
 1.  多模态编码：
@@ -146,7 +146,7 @@ EAVI框架的整体架构如图2（左）所示。它建立在类似VideoLLaMA2�
 
 案例研究：
 图3展示了一个案例，说明双向融合模块如何工作。
-![图3：模态融合可视化案例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460991-2.png)
+![图3：模态融合可视化案例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460991-2.png)
 对于问题“有多少音乐家？”，模型的注意力（question-to-audio）聚焦于13-16秒的音频片段。通过回溯融合模块，发现该音频片段主要关注了对应时间段的视频帧（包含8位演奏者）。EAVI成功将这4秒的音频特征与对应的视频帧融合，从而关注到正确的视觉信息并回答“Eight”。而基线模型VideoLLaMA2则过度关注第一帧，错误地预测了“Ten”。这直观地展示了双向融合在定位关键时序信息上的有效性。
 
 #

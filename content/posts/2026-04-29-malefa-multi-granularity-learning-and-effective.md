@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 MALEFA的架构（如图2所示）包含三个核心组件，旨在将音频信号与文本关键词（及其音素表示）在多层次上进行对齐和判别。
 
-![MALEFA模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463661-1.jpg)
+![MALEFA模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463661-1.jpg)
 
 1.  特征提取器：
     *   音频编码器：采用双流结构。一路使用预训练的Google语音嵌入模型提取96维特征；另一路将原始波形转换为Log-Mel频谱图，再通过一个轻量级的可训练卷积层进行投影。两路特征拼接形成128维的音频嵌入序列 `Ea`。
@@ -136,10 +136,10 @@ MALEFA的架构（如图2所示）包含三个核心组件，旨在将音频信�
 消融实验结果：从表1和表2的“w/o PCL”、“w/o UCL”、“w/o FA”行可见，移除任何一个组件都会导致性能下降（AUC降低、EER升高、FAR升高）。其中，移除FA-aware损失对FAR的影响最为剧烈（w/o FA在AMI上FAR为14.542%）；移除UCL对整体鲁棒性（LPH上的AUC/EER）影响显著；移除PCL则影响精细对齐（LPH性能下降��。这证明了三个创新点的互补性和必要性。
 
 可视化分析：
-![音频-文本相似度矩阵对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463661-2.png)
+![音频-文本相似度矩阵对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463661-2.png)
 图3展示了不同版本模型在五个关键词上的余弦相似度矩阵。原始基线（左图）存在较多非对角线的高相似度（误匹配风险）。加入UCL（中图）后，非匹配对的相似度显著降低，矩阵变得更“干净”。进一步加入PCL（右图），匹配对的相似度更集中于对角线，非匹配相似度被进一步压制，对齐更精准。
 
-![音素-帧对齐热力图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463661-3.png)
+![音素-帧对齐热力图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463661-3.png)
 图4展示了关键词“hey android”的音素（行）与音频帧（列）的对齐热力图。上方（无PCL）的对齐较为分散、模糊，可能导致音素边界不清。下方（使用PCL）的对齐则变得非常尖锐、集中，每个音素精确地对应到少数几个音频帧，表明PCL有效提升了模型的细粒度判别和定位能力。
 
 ### ⚖️ 评分理由

@@ -51,7 +51,7 @@ hiddenInHomeList: true
 3.  语言模型骨干：一个Decoder-only Transformer。在输入阶段，拼接音频嵌入（经过适配器）和文本提示的嵌入，然后送入Transformer层进行处理（如图1所示）。
 4.  本文提出的剪枝模块：图1中标注为“Segmentwise Top-K”的适配器部分。它被插入在音频编码器之后、送入语言模型之前。其核心操作是：将长度为N的音频token序列分成S个片段，从每个片段中选取注意力得分最高的 `⌊K/S⌋` 个token，最终保留K个token。这减少了送入语言模型的序列长度。
 
-![图1: 音频-语言模型架构与分段Top-K剪枝示意](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463308-0.png)
+![图1: 音频-语言模型架构与分段Top-K剪枝示意](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463308-0.png)
 
 #
 

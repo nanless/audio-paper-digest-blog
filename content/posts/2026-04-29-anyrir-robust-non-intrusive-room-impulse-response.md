@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 本文没有传统意义上的“神经网络”模型架构，其核心是一个基于优化的信号处理流程。图2（pdf-image-page1-idx1）清晰地展示了该流程。
 
-![图2：AnyRIR方法流程图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463200-1.jpg)
+![图2：AnyRIR方法流程图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463200-1.jpg)
 
 完整输入输出流程：
 1.  输入：在含噪环境（如咖啡馆）录制的音乐信号 `y`（包含激励信号 `x` 与房间响应 `h` 的卷积，以及加性噪声 `n`），以及通过音乐识别（如Shazam）获取的对应干净音乐参考信号 `x`。
@@ -67,7 +67,7 @@ hiddenInHomeList: true
 *   IRLS + LSMR：IRLS提供了一种将ℓ1问题转化为易解子问题的框架；LSMR作为无矩阵迭代求解器，能够处理由长激励信号和卷积结构导致的病态大系统，且内存效率高。
 *   EQ预处理：作为预条件器，显著改善了LSMR的收敛速度（如图3所示，pdf-image-page2-idx2）。
 
-![图3：EQ预处理对LSMR收敛速度的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463200-2.png)
+![图3：EQ预处理对LSMR收敛速度的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463200-2.png)
 
 ### 💡 核心创新点
 
@@ -114,9 +114,9 @@ hiddenInHomeList: true
 关键消融/分析实验：
 *   EQ预处理有效性：图3（pdf-image-page2-idx2）显示，EQ预处理将LSMR收敛所需的迭代次数减少了约10倍。
 *   权重机制可视化：图4（pdf-image-page3-idx3）展示了AnyRIR如何为含噪声的时频单元分配接近0的权重，为干净单元分配接近1的权重，直观证明了其抑制非平稳噪声的机制。
-    ![图4：AnyRIR计算的权重可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463200-3.png)
+    ![图4：AnyRIR计算的权重可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463200-3.png)
 *   RIR估计对比：图5（pdf-image-page4-idx4）展示了不同方法估计出的RIR的能量衰减曲线对比，AnyRIR明显更接近地面真值。
-    ![图5：不同方法估计的RIR能量衰减曲线对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463200-4.png)
+    ![图5：不同方法估计的RIR能量衰减曲线对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463200-4.png)
 
 ### ⚖️ 评分理由
 

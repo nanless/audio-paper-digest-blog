@@ -59,7 +59,7 @@ hiddenInHomeList: true
 | SpatialNet-Echo | 1.71 | 28.31 | SI-SNR | 4.74 | 4.59 | 4.01 | 4.21 |
 | SpatialNet-Echo | 1.71 | 28.31 | Hybrid | 4.81 | 4.59 | 4.05 | 4.17 |
 
-![图2：双讲场景下的结果可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462409-1.jpg)
+![图2：双讲场景下的结果可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462409-1.jpg)
 图2展示了在一个双讲场景下，原始麦克风信号(a)、参考信号(b)、基线模型估计的近端语音(c)以及本文提出模型估计的近端语音(d)的时频谱图。可以直观地看出，本文提出的方法在从混合信号中提取近端语音方面优于基线模型，其时频能量表示更为完整和准确。
 
 #
@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 SpatialNet-Echo是一个端到端的流式AEC网络，其整体架构（图1(a)）输入为参考信号和麦克风信号的实部虚部频谱 `[Xr, Xi, Yr, Yi]`，输出为估计的近端语音实部虚部频谱 `[Ŝr, Ŝi]`，最终通过iSTFT恢复时域信号。其核心是一个由输入卷积层（T-Conv1d）、N个重复的跨带块-SE块-窄带块组合构成的编码器-解码器结构。
 
-![图1：SpatialNet-Echo架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462409-0.jpg)
+![图1：SpatialNet-Echo架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462409-0.jpg)
 - (a) 整体结构：展示了数据流：STFT -> T-Conv1d -> N次重复的[跨带块 -> SE块 -> 窄带块] -> Linear -> iSTFT。其中，跨带块和窄带块通过SE块进行连接和通道注意力加权。
 - (b) 时间-频率卷积块 (TFCB)：一个轻量级的残差单元。它首先通过逐点2D卷积（P-Conv2D）调整通道数，然后通过一个3x3的深度可分离卷积（D-Conv2D）进行时频分析。残差连接确保了信息流的畅通。该模块以较少的参数高效提取时频联合特征。
 - (c) 跨带块：该模块在每个时间帧独立处理所有频率带。它包含两个频率维度的卷积模块（F-Conv Module）和一个全带线性模块（Full-band Linear Module）。频率卷积模块（含LayerNorm, F-GConv1d, PReLU）建模相邻频率间的相关性；全带线性模块（含压缩、F-Linear、恢复）则捕获全局的跨频率依赖关系。这种设计旨在学习回声的结构化频谱模式。

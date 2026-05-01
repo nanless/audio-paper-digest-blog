@@ -51,7 +51,7 @@ hiddenInHomeList: true
     *   输出：最终的匿名化多说话人混合语音。
 
 架构图说明：
-![图1: Target speaker anonymization (TSA)](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462673-0.jpg)
+![图1: Target speaker anonymization (TSA)](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462673-0.jpg)
 图1清晰地展示了上述三步流程。左侧是混合语音输入，顶部路径是目标说话人（用户）的提取与匿名化分支，底部路径是直接获取非目标说话人（操作员）的语音，最后在右侧将匿名后的用户语音与原始的操作员语音合并输出。
 
 ### 💡 核心创新点

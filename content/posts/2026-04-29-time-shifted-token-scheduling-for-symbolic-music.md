@@ -58,9 +58,9 @@ hiddenInHomeList: true
 5.  数据流：DP调度仅改变了训练时的目标序列构造和推理时的逐步采样顺序，Transformer解码器本身架构不变。
 
 架构图说明：论文提供了两幅架构图。
-![图1: DP调度机制在复合token上的可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-0.png)
+![图1: DP调度机制在复合token上的可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-0.png)
 图1清晰展示了DP机制的工作原理。水平轴是自回归时间步，垂直轴是子字段。可以看到，一个事件（例如事件$e_2$）的多个属性（type, beat, ...）被分散到相邻的时间步进行预测，箭头表示子字段之间潜在的依赖关系被显式建模。
-![图2: 系统架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-1.png)
+![图2: 系统架构概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-1.png)
 图2展示了将DP调度集成到多轨音乐Transformer中的整体框架。图中强调了DP调度器与编码器-解码器框架的结合。
 
 ### 💡 核心创新点
@@ -82,15 +82,15 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主观听觉测试：26名参与者对2小节续写任务进行盲听评分（1-5分）。MMT-DP在所有维度上相比MMT基线均有提升，达到与NMT和REMI+可比的水平。MOS评分图表如下：
-![图3: 管弦乐生成MOS评分及95%置信区间](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-2.png)
+![图3: 管弦乐生成MOS评分及95%置信区间](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-2.png)
 图3显示，MMT-DP在“一致性”、“连贯性”和“总体评分”上提升明显，其分数条和置信区间与NMT、REMI+高度重叠，表明感知质量接近。
 
 客观评估：在SymphonyNet测试集上测量三个指标（越接近Ground Truth越好）。结果如上文核心摘要中的表格所示。MMT-DP在所有指标上均优于MMT基线。
 
 案例研究：图4展示了三个测试提示的续写对比。
-![图4: 三个测试提示的续写对比（左：无DP，右：有DP）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-3.jpg)
-![图4续图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-4.jpg)
-![图4续图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462860-5.jpg)
+![图4: 三个测试提示的续写对比（左：无DP，右：有DP）](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-3.jpg)
+![图4续图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-4.jpg)
+![图4续图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462860-5.jpg)
 案例(a)-(c)均显示，无DP的MMT生成容易出现节奏断裂、纹理不连贯、旋律散乱等问题；而使用DP的MMT-DP生成的续写在节奏稳定性、纹理一致性和整体连贯性上明显更优。
 
 推理效率：比较推理速度（音符/秒）和复杂度。结果表格如下：

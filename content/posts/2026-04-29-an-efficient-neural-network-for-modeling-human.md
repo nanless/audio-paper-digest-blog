@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 模型的核心任务是将原始语音波形映射为模拟Bruce听觉神经模型确定性率路径的多通道神经图。整体架构如图1所示，可分为预处理、频带分割与编码、后处理三个主要阶段。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463528-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463528-0.png)
 
 1.  输入与预处理：输入为干净的语音波形。首先进行分帧（150毫秒窗，100毫秒重叠），并以100 kHz进行上采样以符合参考模型要求。
 2.  频带分割：将每个150毫秒的帧映射到一个ERB间距的特征频率（CF）网格上，并将33个CF通道划分为三个互不重叠的频带：低频（CF 0-16，共17通道）、中频（CF 17-28，共12通道）和高频（CF 29-32，共4通道）。分割的动机是稳定不同动态范围频带的优化过程。分割后的信号作为三个独立编码器的输入。
@@ -86,7 +86,7 @@ hiddenInHomeList: true
 | 测试集 | 0.901 ± 0.075 | 0.944 ± 0.015 | 0.962 ± 0.007 |
 
 图2：测试集上每个CF通道的PCC
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463528-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463528-1.png)
 图示：PCC在CF通道0-32上的分布。垂直虚线标记了低频/中频带（约CF 16/17）和中频/高频带（约CF 28/29）的边界。整体趋势是PCC随CF增加而提高，但在低频与中频带边界（CF 15-16附近）出现轻微下降。
 
 表2：信噪比（SNR， 以10log10(SNR)单���为dB报告， 越高越好）

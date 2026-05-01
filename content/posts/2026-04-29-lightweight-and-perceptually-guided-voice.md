@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 该模型架构（如图1所示）是对StreamVC的轻量级自适应改造，整体是一个全卷积、因果（支持流式处理）的编码器-解码器结构，用于执行从EL语音到HE语音的转换。
 
-![图1: 适应于EL-HE语音转换的StreamVC架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461243-0.jpg)
+![图1: 适应于EL-HE语音转换的StreamVC架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461243-0.jpg)
 
 完整流程：输入EL语音波形，经过内容编码器提取语言内容特征（与说话人无关），同时通过说话人编码器提取目标HE说话人的声纹嵌入。内容特征与说话人嵌入通过FiLM条件层调制后，送入解码器重构出目标HE语音波形。整个模型在GAN框架下训练，包含一个判别器（遵循HiFi-GAN的MPD和MSD设计）。
 
@@ -140,12 +140,12 @@ hiddenInHomeList: true
 可视化分析：
 - 梅尔频谱对比（图4）：清晰显示EL输入的恒定F0和谐波结构，而转换后语音（+WavLM+HF）成功去除了机械噪声，恢复了自然的谐波结构和共振峰，与健康语音真值高度相似。但句末的强音高变化被“压平”，提示韵律建模仍有改进空间。
 
-![图4: 梅尔频谱对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461243-3.png)
+![图4: 梅尔频谱对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461243-3.png)
 (a) EL输入，(b) 健康语音真值 (GT)，(c) 使用+WavLM+HF模型转换后的语音。
 
 - 噪声鲁棒性（图5）：在准平稳和非平稳噪声下，转换后语音的CER随SNR降低而上升。非平稳噪声（如警报声）影响更大。在SNR高于约5dB时，转换后的语音比原始EL语音可懂度更高；但在SNR低于5dB时，性能会恶化至低于未转换的EL语音。
 
-![图5: 不同噪声条件下的CER](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461243-4.png)
+![图5: 不同噪声条件下的CER](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461243-4.png)
 在准平稳和非平稳噪声条件下，转换语音的CER随信噪比（SNR）变化曲线。红线表示无噪声的原始EL语音CER。
 
 ### ⚖️ 评分理由

@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460821-0.png)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460821-0.png)
 InconVAD是一个两阶段框架，整体架构如图1所示。
 
 *   第一阶段（Phase A：单模态VAD预训练）：

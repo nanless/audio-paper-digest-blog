@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![Mood-Guided Embedding Transformation Framework](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461460-0.png)
+![Mood-Guided Embedding Transformation Framework](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461460-0.png)
 图1：情绪引导的嵌入变换框架
 模型整体是一个端到端的、基于MLP的嵌入变换网络。其核心流程如下：
 1.  输入：模型接收三个输入：种子音频的MULE嵌入 `x_s` (维度 d=1728)、种子情绪标签 `y_s` 和目标情绪标签 `y_t` (均为 one-hot 编码，维度 m=4)。
@@ -115,7 +115,7 @@ hiddenInHomeList: true
 
 损失函数消融实验：图2以条形图形式展示了不同损失组合相对于随机基线的百分点提升（pp）。
 - 关键结论：单一损失会导致性能不平衡。`L_cosine` 对流派保持较好但情绪变换差；`L_triplet` 对情绪变换贡献大但破坏流派保持；`L_cosBCE` 极大提升流派保持但几乎无效于情绪变换。三者结合时，在两个数据集上均实现了情绪变换和流派保持的最佳平衡（私有：情绪+70.8pp，流派+27.5pp；MTG-Jamendo：情绪+55.7pp，流派+26.7pp）。
-![Loss Ablation on Large-scale Dataset and MTG-Jamendo](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461460-0.png)
+![Loss Ablation on Large-scale Dataset and MTG-Jamendo](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461460-0.png)
 图2：损失函数消融研究（注：此处仅提供一张图的标识，论文实际包含两张子图，分别对应两个数据集。图中展示了不同损失组合在“情绪变换”和“流派保持”两个指标上相对于随机基线的百分点提升。）
 
 #

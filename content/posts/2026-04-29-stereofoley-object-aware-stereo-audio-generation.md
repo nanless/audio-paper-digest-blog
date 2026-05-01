@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模型两大部分组成。
 
-![图1: pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464717-0.jpg)
+![图1: pdf-image-page1-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464717-0.jpg)
 
 1. 输入与编码器：
    - 音频编码：立体声音频 `x_audio` (采样率 fs=48kHz) 通过一个内部的立体声编解码器（Codec）编码为潜表示 `z` (维度 Tz x Dz=224x256)。
@@ -69,7 +69,7 @@ StereoFoley的架构基于潜扩散模型，由编码器和扩散生成基础模
 3. 引入新的评估指标：提出了“分箱对齐分数”（BAS），用于客观评估生成音频的空间化是否与视频物体位置对齐，填补了该领域的评估空白。
 4. 验证了数据瓶颈假说：通过实验证明，在使用相同的基底模型架构下，仅通过用合成的对象感知数据对部分训练集进行替换和微调（从StereoFoley-base到StereoFoley-obj），就能显著提升模型的立体声对象感知能力，表明数据质量而非模型架构是当前的主要瓶颈。
 
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464717-1.jpg)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464717-1.jpg)
 
 #
 

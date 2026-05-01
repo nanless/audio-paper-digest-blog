@@ -33,7 +33,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460508-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460508-0.png)
 图1展示了PMoE的整体框架。其数据处理流程如下：
 1.  输入映射与缺失模态生成：对于每个模态（文本T， 音频A， 视频V），首先通过模态特定的连接器将其映射到共享语义空间。当某个模态缺失时（例如音频缺失），通过一个跨模态注意力机制，利用存在的模态（视频和文本）生成缺失模态的表示（公式1-7）。生成过程中引入了“生成式Prompt”（P_Ga）。
 2.  统一表示构建与Prompt注入：结合观察到的特征、生成的缺失特征（通过置信度分数c_a进行加权融合，公式11-12），以及两层Prompt（局部信号Prompt和全局类型Prompt融合而成的统一Prompt P_Unified， 公式8-12），形成统一的输入表示z‘。
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 
 关键结论：PMoE在所有数据集、几乎所有缺失模态设置下均取得最佳性能。优势在严重缺失（如只有文本{t}或只有视频{v}）时尤为明显。例如，在MOSEI上，PMoE的平均ACC（75.09%）比最强的基线MPLMM（73.75%）高出1.34%。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460508-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460508-1.png)
 图2展示了在CMU-MOSI和IEMOCAP数据集上，随着模态缺失率从0%增加到100%，不同方法准确率和F1分数的变化曲线。关键结论是：PMoE（红色曲线）在高缺失率（>60%）下，性能下降的斜率最缓，展现出最强的鲁棒性。
 
 表2: 在CMU-MOSI数据集上集成PMoE前后的性能对比

@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 整体架构（如图2(a)所示）由四个核心组件顺序连接，输入为语音，输出为翻译文本。
-![模型整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464222-4.png)
+![模型整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464222-4.png)
 1.  语音编码器（Speech Encoder）：采用预训练的Whisper-large-V3模型。功能是从原始语音信号中提取全面的帧级声学表示。
 2.  语音适配器（Speech Adapter）：结合预训练的Q-Former和MLP。功能是将语音编码器输出的高维表示压缩并投影到与LLM文本嵌入空间相匹配的维度。
 3.  语音实体提示提取模块（SEP Extract）：这是本文的核心创新模块，有CTC-based（图2(b)）和Transformer-based（图2(c)）两种实现。功能是并行地从语音编码器的输出中，直接提取与命名实体相关的嵌入特征（SEP embedding）。
@@ -99,7 +99,7 @@ hiddenInHomeList: true
 4.  案例研究（表2）：展示了在英→德、英→日、英→中翻译中，SEP-ST能正确翻译“San Francisco Bay Area”、“Kohoutek”、“Mavis”等实体，而基线模型翻译错误。
 
 图1. 不同方法变体示意图（用于说明问题与本文方法）
-![不同方法变体示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464222-0.png)
+![不同方法变体示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464222-0.png)
 图1展示了传统端到端(a)、基于LLM的级联(b)、知识检索(c)和本文提出的SEP-ST(d)四种方法在处理语音命名实体时的不同路径，直观体现了本文方法（直接从语音提取实体提示）的简化与直接性。
 
 ### ⚖️ 评分理由

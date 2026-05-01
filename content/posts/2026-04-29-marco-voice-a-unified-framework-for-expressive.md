@@ -48,7 +48,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 Marco-Voice是一个四阶段的统一语音合成系统，其整体架构如图1所示。
-![图1: Marco-Voice的整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463753-0.png)
+![图1: Marco-Voice的整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463753-0.png)
 
 完整输入输出流程：输入为文本和可选的参考语音（用于克隆和/或情感提示）。输出为合成的情感语音波形。
 
@@ -137,11 +137,11 @@ Marco-Voice是一个四阶段的统一语音合成系统，其整体架构如图
 结论：各版本Marco-Voice的WER与基线相当或更优，DNS-MOS保持较高水平，表明增强情感和说话人控制能力并未牺牲基础合成质量。
 
 5. 情感准确率分析（图2）
-![图2: 中/英文情感合成整体准确率](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463753-1.png)
+![图2: 中/英文情感合成整体准确率](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463753-1.png)
 结论：随着模块逐个添加，情感准确率整体呈上升趋势。Marco-V4在中文上最高（~0.74），Marco-V3在英文上最高（~0.76）。
 
 6. 分性别情感准确率分析（图3，中文）
-![图3: 中文数据集分性别情感准确率](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463753-2.png)
+![图3: 中文数据集分性别情感准确率](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463753-2.png)
 结论：女性说话人在多数情感上的识别准确率高于男性，尤其在“惊讶”和“悲伤”情感上差异明显。
 
 ### ⚖️ 评分理由

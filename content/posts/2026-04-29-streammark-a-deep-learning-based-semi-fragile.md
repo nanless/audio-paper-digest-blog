@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 StreamMark采用 Encoder-Distortion-Decoder 的三阶段端到端架构（见图1），核心在于训练时引入模拟现实变换的失真层。
 
-![图1: StreamMark模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463325-0.png)
+![图1: StreamMark模型架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463325-0.png)
 
 1.  编码器层：负责将水印嵌入原始音频。
     - 输入：原始音频信号。

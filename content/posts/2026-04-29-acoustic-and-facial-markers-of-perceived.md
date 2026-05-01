@@ -45,7 +45,7 @@ hiddenInHomeList: true
 4.  感知对话成功（PCS）构建：对21项调查问卷进行主成分分析（PCA），选取PCA1对应的11个积极情感与互动指标，标准化后平均得到PCS分数。根据分布，选取PCS≤0.6（LSC）和≥0.9（HSC）的极端子集进行对比。
 5.  关联性分析：使用Mann-Whitney U检验（针对非正态数据）或Welch’s t检验，比较LSC和HSC组在各项特征上的差异。
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463536-0.jpg)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463536-0.jpg)
 （图1：不同特征与PCS的关联箱线图。展示了在HSC（高成功）和LSC（低成功）对话中，轮次时长（a）、停顿时长（b）以及轮次计数（c）的分布差异。关键结论：HSC对话拥有更多轮次、更长的总轮次时长和更短的停顿。）
 
 ### 💡 核心创新点
@@ -92,9 +92,9 @@ hiddenInHomeList: true
 
 注：µL/µH分别为LSC/HSC组的平均Fisher Z相关系数。
 
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463536-1.jpg)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463536-1.jpg)
 （此图未在论文图片列表中提供，但根据描述，论文中应有类似图1的图表展示声学邻近性结果。）
-![描述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463536-2.jpg)
+![描述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463536-2.jpg)
 （此图未在论文图片列表中提供，但根据描述，论文中应有展示FAU同步性结果的图表。）
 
 主要结论：高成功对话在行为动态（更多轮次、更长话语、更短停顿）、声学特征（更强的音高和强度协同）以及面部表情（微笑相关动作单元更强的同步性）三个层面均展现出与低成功对话的显著差异。

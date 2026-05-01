@@ -47,7 +47,7 @@ SightSound-R1本身是一个框架，而非一个单一模型。其整体架构�
     *   第二阶段（GRPO）：基于强化学习优化。从当前策略采样G个完整回答（包含CoT），由奖励函数打分。奖励包括准确性奖励（+1，答案与老师标签匹配）和格式奖励（+1，正确使用和<answer>标签）。优化目标（公式2）采用带KL散度约束的裁剪策略目标，鼓励模型在锚定SFT模型的基础上，探索并优化更准确、格式更规范的推理与回答。
 
 架构图：
-![SightSound-R1框架概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463295-1.png)
+![SightSound-R1框架概述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463295-1.png)
 图2详细说明了整个流程：静音视频和问题被输入到“LVLM教师”（Qwen2.5-VL-32B）中，通过测试时采样生成多个“音频焦点CoT”；这些CoT与真实音频一起被送入“GPT-4o-audio事实检查器”进行验证；通过验证的CoT和标签用于两个阶段训练“LALM学生”（Qwen2-Audio-7B）：先进行监督微调（SFT），再进行带奖励的强化学习（GRPO）。
 
 ### 💡 核心创新点

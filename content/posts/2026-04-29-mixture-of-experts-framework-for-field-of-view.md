@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 该系统是一个端到端的信号处理流水线，其架构如图1所示。
 
-![系统图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461442-0.png)
+![系统图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461442-0.png)
 
 输入输出流程：
 - 输入：来自 `Nm` 个麦克风的阵列信号 `x[t, f]`（STFT域）。
@@ -84,13 +84,13 @@ hiddenInHomeList: true
 
 表格：论文未提供包含具体数值的对比表格。所有结果主要通过图表（图3，图4）及其描述性文字呈现。
 
-![残差跟踪与权重图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461442-2.png)
+![残差跟踪与权重图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461442-2.png)
 图3：模拟（上）与实测（下）中，残差能量最小值随时间的变化（对应声源角度）及相应的波束混合权重热力图。显示了算法对连续移动声源的准确跟踪和自适应混合能力。
 
-![ITD/ILD误差图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461442-3.png)
+![ITD/ILD误差图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461442-3.png)
 图4：各候选方向滤波器渲染信号的平均ITD和ILD误差随时间的变化。结果表明，所提方法能保持与基准BSM方法相当的双耳线索精度。
 
-![FoVE效果示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461442-1.png)
+![FoVE效果示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461442-1.png)
 图2：以正前方为中心、增益为FoV的方向依赖增益图。左图展示固定δ下改变γ的效果，右图展示固定γ下改变δ的效果。直观显示了视野增强的控制能力。
 
 ### ⚖️ 评分理由

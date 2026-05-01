@@ -52,10 +52,10 @@ SA-Net（Spiking Attention Network）是一个用于水下声源距离回归的�
 4.  Conformer块：在残差网络和SNN之后，使用2个Conformer块。Conformer结合了卷积和自注意力，能同时建模序列的局部（卷积）和全局（注意力）依赖关系，用于提取更高级的序列特征。
 5.  MLP回归头：一个两层MLP，将512维的最终特征向量映射为标量输出，即估计的距离（km）。
 
-![SA-Net架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464621-0.png)
+![SA-Net架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464621-0.png)
 图1展示了SA-Net的整体架构。输入信号依次经过Residual Blocks进行初步处理，然后通过LIF SNN层进行脉冲编码和时序整合，接着由Conformer Blocks进行上下文信息融合，最后通过MLP得到距离预测值。
 
-![LIF神经元动力学与脉冲产生示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464621-1.png)
+![LIF神经元动力学与脉冲产生示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464621-1.png)
 图2解释了LIF神经元的膜电位变化（A）和二元输出脉冲神经元的概念（B）。输入电流I[t]使膜电位U[t]上升，达到阈值Vthr时产生脉冲S[t]并重置电位，这个过程是处理时序数据的关键。
 
 ### 💡 核心创新点
@@ -120,7 +120,7 @@ SA-Net在MAE和MSE指标上均大幅领先现有方法，MAE从次优的0.2718 k
 消融实验（表2）：验证了各组件的必要性。最佳配置为使用Standard归一化，并包含ResNets、LIF-SNNs和Conformers所有模块。
 
 特征可视化（图3）：
-![不同层输出热力图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464621-2.png)
+![不同层输出热力图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464621-2.png)
 图3展示了不同网络层输出的热力图。(A)和(B)对比显示，LIF SNN层相比Residual Block层，其激活模式更稀疏、更具选择性，可能对应于过滤噪声和编码关键时序特征。(C)和(D)显示Conformer块进一步整合信息，突出了显著的特征区域。
 
 ### ⚖️ 评分理由

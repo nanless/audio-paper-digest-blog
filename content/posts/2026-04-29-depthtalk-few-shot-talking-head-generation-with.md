@@ -38,7 +38,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![DepthTalk框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462686-1.png)
+![DepthTalk框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462686-1.png)
 论文的整体架构如图2所示。输入是音频特征、上半脸表情控制信号和头部姿态（相机位姿）。核心流程如下：
 
 1.  高斯场构建：首先从多身份视频构建一个初始的3D高斯场表示。
@@ -89,7 +89,7 @@ hiddenInHomeList: true
 
 关键结论：DepthTalk在所有图像质量指标（PSNR, LPIPS, SSIM）和运动精度（LMD）上均优于对比方法，特别是与最强大的基线InsTaG相比，有显著提升。训练时间与InsTaG相当，但推理速度略低。
 
-![消融实验与定性结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462686-2.png)
+![消融实验与定性结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462686-2.png)
 表2：DepthTalk消融研究（5秒训练数据）
 | DAGM | MF | DGL | PSNR↑ | LPIPS↓ | SSIM↑ |
 | :---: | :---: | :---: | :---: | :---: | :---: |

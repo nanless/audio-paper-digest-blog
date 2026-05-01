@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文提出的AFT（声学特征变换）框架旨在解决无样例类增量学习中的特征漂移问题。其整体架构和数据流如下图所示：
 
-![AFT框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460616-1.png)
+![AFT框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460616-1.png)
 图2：AFT框架示意图
 
 1.  输入与骨干网络：输入为环境声音频（预处理为MFCC特征），送入TCResNet-8骨干网络。该网络是一个轻量级的时间卷积网络，包含三个残差块，适用于移动端实时处理。
@@ -62,7 +62,7 @@ hiddenInHomeList: true
     *   声学特征变换网络（AFT Network, M）：这是本文的核心创新。它是一个额外的小型网络，其输入是旧特征`f_{t-1}(x)`，输出是变换后的特征`M(f_{t-1}(x))`。训练目标是让这个变换后的特征与新模型在当前数据上提取的特征`f_t(x)`对齐，即最小化损失`L_trans = ||f_t(x) - M(f_{t-1}(x))||^2`。这个网络的作用是主动学习一种映射关系，将旧模型的特征空间“翻译”到新模型的特征空间，从而在概念上连接了新旧知识。
     *   选择性压缩特征空间（Selective Compression）：在每个任务结束后，需要为每个已学类别保存一个原型特征（prototype）。简单取均值容易受噪声和异常值影响（见图3左）。AFT方法首先通过模型预测与真实标签的比较，剔除预测错误的“离群点”样本（见图3右），然后计算剩余高质量样本的特征均值作为该类别的原型。此外，在后续任务中，这些存储的旧类别原型也会通过AFT网络`M`进行变换更新，以保持与当前特征空间的一致性。
 
-![选择性压缩示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460616-2.png)
+![选择性压缩示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460616-2.png)
 图3：选择性压缩特征空间示意
 数据流总结：对于当前任务`t`的数据，新模型通过`L_ce`学习分类，同时通过`L_kfd`和`L_trans`分别保留与旧模型输出特征和旧特征变换后的相似性。任务结束后，新类别原型（经选择性压缩）与旧类别原型（经AFT网络变换后）共同构成当前阶段的特征库，供下一个增量任务使用。
 
@@ -125,9 +125,9 @@ hiddenInHomeList: true
 
 特征可视化
 图1和图5通过t-SNE图提供了直观证据。
-![t-SNE可视化：遗忘问题](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460616-0.png)
+![t-SNE可视化：遗忘问题](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460616-0.png)
 图1： 展示了在微调后，“手提钻”（jackhammer）的特征严重漂移，导致32%被误分类为“电钻”（drilling），而“街头音乐”（street_music）因特征差异大受影响小，直观说明了特征漂移问题是无样例增量学习的难点。
-![t-SNE可视化：AFT效果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460616-4.jpg)
+![t-SNE可视化：AFT效果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460616-4.jpg)
 图5： 展示了两个类别特征分布的变化：(a)原始清晰边界；(b)微调后边界模糊；(c)应用AFT后，特征重新对齐，恢复了清晰的类间分离。
 
 ### ⚖️ 评分理由

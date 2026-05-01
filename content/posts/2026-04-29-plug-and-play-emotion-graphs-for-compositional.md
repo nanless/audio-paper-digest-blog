@@ -47,10 +47,10 @@ CCoT-Emo是一个两阶段的提示框架，不直接修改底层模型参数，
     *   模型推理：LALM（如Qwen2-Audio）同时处理编码后的音频token `τ(ψϕ(I))` 和由文本tokenizer处理后的提示token `l(Pout)`，生成最终的情绪标签答案 `R`。
 
 架构图说明：
-![CCoT-Emo框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464273-0.png)
+![CCoT-Emo框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464273-0.png)
 图1说明：此图完整展示了CCoT-Emo的两个阶段。左侧“Emotion Graph Generation”部分展示了如何通过DSP提取音频特征、通过LLM（此处可能指RoBERTa/KeyBERT）提取文本特征和关键词，并最终通过GPT-4（图中用“LLM”泛指）生成跨模态关系，输出为JSON格式的情绪图。右侧“Response Generation”部分展示了如何将原始音频、情绪图、任务指令等组合成最终提示，输入给LALM进行情绪预测。
 
-![示例情绪图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464273-1.png)
+![示例情绪图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464273-1.png)
 图2说明：这是一个情绪图的JSON格式示例。它清晰地展示了图的三部分：`acoustic`数组列出声学特征的离散化状态；`text`数组包含转录文本、情感和关键词；`relationships`数组描述了每个声学特征（如音高、音量）与文本情感（positive）的关系（supports/conflicts）。这个结构化的表示是CCoT-Emo的核心。
 
 ### 💡 核心创新点

@@ -54,7 +54,7 @@ hiddenInHomeList: true
     *   将序列 `{ft}` 输入LSTM网络，捕捉时间依赖关系，输出对齐特征 `Fa`。
 5.  特征融合与回归：将三个分支的特征 `Fv`、`Fj`、`Fa` 拼接成统一的质量特征 `F`，然后通过两个全连接层作为回归器，预测最终的质量分数。
 
-![图4: 本文提出的无参考质量评估方法框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461498-3.jpg)
+![图4: 本文提出的无参考质量评估方法框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461498-3.jpg)
 图4展示了整体框架。左侧为视频输入，分支分别提取视觉（Swin-T）、抖动（FaceMesh->统计）和对齐（ResNet+MFCC->LSTM）特征，最后在右侧融合并回归出质量分。
 
 ### 💡 核心创新点

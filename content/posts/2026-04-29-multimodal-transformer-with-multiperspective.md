@@ -41,7 +41,7 @@ hiddenInHomeList: true
 
 模型整体是一个端到端的多模态Transformer系统，用于从视频面试中预测四个维度的自我表达技能分数。其架构如图2所示，主要包含三个部分：
 
-![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460622-0.jpg)
+![模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460622-0.jpg)
 
 1.  透视特定编码器：
     *   说话内容编码器：输入为经ASR（自动语音识别）转换的文本转录，通过一个预训练的Transformer编码器（类似BERT）处理，提取文本语义特征。
@@ -123,7 +123,7 @@ hiddenInHomeList: true
 3.  多模态融合的优势：结合所有四个编码器（A+V）并使用多视角训练，获得了所有单模态或多模态设置中的最佳性能。
 4.  与人类水平对比：所提最优模型在说话风格和面部表情两个维度的预测相关性上，与人类评估员的表现相当甚至略优（0.710 vs 0.711， 0.750 vs 0.711），证明了模型的有效性。在说话内容和手势维度，模型仍略低于人类水平。
 
-![图1: 标注分数分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460622-0.jpg)
+![图1: 标注分数分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460622-0.jpg)
 图1显示了四个视角标注分数的分布直方图，整体接近正态分布，说明数据集适合用于建模。
 
 ### ⚖️ 评分理由

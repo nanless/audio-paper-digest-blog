@@ -55,7 +55,7 @@ hiddenInHomeList: true
         *   声码器：使用预训练的HiFi-GAN，负责将估计的干净梅尔谱转换为波形。该部分在GRPO后训练阶段冻结。
     *   设计动机：流匹配方法在生成质量和效率上具有优势，但其确定性解码过程不适用于在线RL。GRPO的引入旨在通过引入随机性来优化后训练过程。
 
-![Flow Matching SE模型结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-0.png)
+![Flow Matching SE模型结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-0.png)
 图1(a) 展示了Flow-Matching SE模型的结构。带噪梅尔谱c与噪声状态xt被输入DiT模块，预测出流（速度场），进而更新状态，最终得到估计的干净梅尔谱，再通过HiFi-GAN转换为波形。
 
 2.  GRPO后训练流程：
@@ -63,7 +63,7 @@ hiddenInHomeList: true
        ODE到SDE的转换：为在线RL引入随机性，将原始确定性ODE采样（公式2）转换为等效的SDE采样（公式3-5）。SDE采样通过添加噪声（σ_t）实现，其中σ_t = a  sqrt((1-t)/t)，超参数a控制随机性大小。为加速训练，采用窗口训练策略，仅在早期去噪步骤（t∈S）应用SDE采样，其余步骤使用确定性ODE。
     *   GRPO优化：对于每个带噪提示c，生成G=10个候选增强语音样本，并��算各自的奖励。优势（Â_i）通过组内奖励的相对排名计算（公式8）。策略通过最大化一个带有裁剪和KL散度惩罚的GRPO目标函数（公式9）进行更新。
 
-![GRPO后训练流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-1.png)
+![GRPO后训练流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-1.png)
 图1(b) 展示了GRPO后训练流程。对于一个带噪提示c，模型采样生成一组G个候选增强语音及其轨迹，由奖励模型打分后，通过组内相对优势计算和策略优化来更新模型参数。
 
 ### 💡 核心创新点
@@ -117,13 +117,13 @@ hiddenInHomeList: true
 奖励黑客与多指标优化（表2 & 图2）：
 论文发现，单独优化DNSMOS（图2a蓝色曲线）虽快速提升该指标，但可能损害其他指标。使用多指标奖励（图2a红色曲线）后，在OVRL、说话人相似度和SpeechBERTScore上均获得稳定提升，验证了策略的有效性。
 
-![DNSMOS随训练步数变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-2.png)
+![DNSMOS随训练步数变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-2.png)
 图2(a) 展示了不同噪声水平（a）下，DNSMOS分数随训练步数的变化。可见a=0.4（绿色）提升更快，但可能不稳定。
-![说话人相似度随训练步数变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-3.png)
+![说话人相似度随训练步数变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-3.png)
 图2(b) 展示了不同噪声水平下，说话人相似度随训练步数的变化。
-![窗口训练效果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-4.png)
+![窗口训练效果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-4.png)
 图2(c) 消融了窗口训练策略，显示仅在早期步骤（Fast）训练比全流程训练（Non-Fast）能更快提升奖励。
-![SpeechBERTScore随训练步数变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461623-5.png)
+![SpeechBERTScore随训练步数变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461623-5.png)
 图2(d) 展示了不同噪声水平下，SpeechBERTScore随训练步数的变化。
 
 消融研究：

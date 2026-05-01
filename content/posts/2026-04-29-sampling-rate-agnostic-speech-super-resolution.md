@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 模型整体是一个基于变分自编码器（VAE）思想的生成与推断框架，核心是利用GPDS和DKL在连续时间域进行建模。
 
-![模型概述图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462432-0.png)
+![模型概述图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462432-0.png)
 图1：GPDS-SR核心概念图。 展示了模型如何从低采样率输入（4kHz）通过GPDS-SR生成任意高采样率的输出（如13931Hz， 16kHz， 19391Hz），阴影区域表示95%置信区间，体现了模型的采样率无关性和概率预测特性。
 
 1. 生成模型（Generation Model）
@@ -103,11 +103,11 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主要对比实验（目标16kHz，输入不同采样率）：
-![性能对比图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462432-1.png)
+![性能对比图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462432-1.png)
 图2（上）：目标输出为16kHz时，不同输入采样率下的性能指标（2kHz，4kHz，8kHz）。 可见，在LSD-HF（高频估计）上，GPDS-SR与扩散模型基线UDM+性能接近，但在ViSQOL（感知质量）和LSD-LF（低频保真）上明显落后。
 
 主要对比实验（输入4kHz，目标不同输出采样率）：
-![性能对比图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462432-1.png)
+![性能对比图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462432-1.png)
 图2（下）：输入为4kHz时，不同输出采样率（13931Hz，16000Hz，19391Hz）下的性能指标。 结果表明，GPDS-SR对任意输出采样率均有效，且在非标准输出率（13931Hz，19391Hz）上具有优势，而基线模型在输出非标准率时性能依赖于后续重采样。
 
 鲁棒性实验（目标16kHz，输入4kHz，含随机丢弃样本）：
@@ -119,7 +119,7 @@ hiddenInHomeList: true
 表1：GPDS-SR在不同样本丢弃率下的性能。 数据表明，随着输入样本缺失增多，低频保真度（LSD-LF）下降明显，但高频估计能力（LSD-HF）保持相对稳定。
 
 频谱图示例（4kHz -> 19391Hz）：
-![频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462432-10.png)
+![频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462432-10.png)
 图3：从4kHz到19391Hz的频谱图对比。 (a)参考信号；(b) NU-Wave 2输出在约8kHz以上出现噪声；(c) UDM+输出在8kHz以上无内容；(d) GPDS-SR输出能生成超过输入奈奎斯特频率（蓝线）的高频谐波，但在约4kHz处有伪影，且存在频谱复制。
 
 ### ⚖️ 评分理由

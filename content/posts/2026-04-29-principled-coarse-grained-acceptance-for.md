@@ -46,7 +46,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 论文并未提出一个新的生成模型架构，而是提出了一个适用于现有自回归语音生成模型的推测解码框架。其整体流程如图2所示。
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464026-1.png)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464026-1.png)
 *   组件与数据流：
     1.  离线组构建：在目标模型 \(q\) 的嵌入空间中，根据余弦相似度阈值 \(\theta\) 为所有语音标记 \(t\) 构建声学相似性组（ASG）集合 \(\{G_k\}_{k=1}^M\)。一个标记可属于多个组（重叠）。
     2.  草稿模型提议：快速草稿模型 \(p\) 自回归地生成长度为 \(L_d\) 的草案标记序列 \(x_1, ..., x_{L_d}\)。
@@ -93,7 +93,7 @@ hiddenInHomeList: true
     - 推测长度消融：未给出具体数据，但论文指出推测长度为3时最优。
 - 图表：
     - 图3：精度-加速权衡曲线：
-        ![图3: pdf-image-page3-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464026-2.png)
+        ![图3: pdf-image-page3-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464026-2.png)
         *   结论：该图展示了不同方法（SD， SSD， PCG）在WER与加速比之间的权衡。标准SD（蓝点）位于左下角（低加速、低WER）。SSD（橙点）位于其右上方，加速比提升但WER显著增加。PCG（绿点）的曲线位于SSD曲线的下方和左侧，表明在相同WER下PCG能获得更高加速比，或在相同加速比下WER更低，体现了更优的权衡。
 
 ### ⚖️ 评分理由

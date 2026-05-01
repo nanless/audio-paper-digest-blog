@@ -70,7 +70,7 @@ BridgeCode： 这是一个用于学习和转换双语音表示的框架，包含
 
 两个Bridge网络通过对称设计和层间对齐约束（Layer-wise alignment）实现精确的双向转换，整体训练由代码预测损失（Lcode）、特征重建损失（Lfeat）和语音对抗损失（Ladv）联合优化。
 
-![BridgeCode架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463242-1.png)
+![BridgeCode架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463242-1.png)
 图2: BridgeCode的架构与桥接模块细节。展示了SparseBridge的压缩过程和DenseBridge的重建过程，以及训练时的层间对齐约束。
 
 BridgeTTS： 基于BridgeCode构建的自回归TTS框架，其AR生成器基于GPT-2模型重训练。其独特之处在于AR的推理范式：
@@ -80,7 +80,7 @@ BridgeTTS： 基于BridgeCode构建的自回归TTS框架，其AR生成器基于G
 
 训练时，损失函数为token预测损失（Ltoken）与特征重建损失（Lfeatures）之和。
 
-![BridgeTTS架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463242-2.png)
+![BridgeTTS架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463242-2.png)
 图3: BridgeTTS的训练和推理流程。(A)训练过程：AR模型在token损失和特征损失下优化。(B)推理过程：AR生成token，通过DenseBridge转换为特征，再输入模型进行下一轮预测。
 
 ### 💡 核心创新点
@@ -130,10 +130,10 @@ BridgeTTS： 基于BridgeCode构建的自回归TTS框架，其AR生成器基于G
     - 移除DenseBridge（即直接用稀疏token生成）导致WER飙升至13.8%，各项主观分数大幅下降，证明DenseBridge对于恢复高质量语音至关重要。
     - 移除特征损失（Lfeatures）后，WER从4.9%上升至7.1%，SMOS、QMOS、UTMOS均有明显下降，证明联合优化特征损失对提升自然度和可懂度有直接贡献。
 
-![对比实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463242-0.png)
+![对比实验结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463242-0.png)
 图1: 现有AR-TTS框架（A）与提出的BridgeTTS（B）在token生成率与质量权衡上的对比示意图。
 
-![消融实验与速度对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463242-2.png)
+![消融实验与速度对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463242-2.png)
 图3: BridgeTTS的架构与流程，同时也展示了通过桥接模块实现高效生成的机制，这与表3中的RTF提升直接对应。
 
 ### ⚖️ 评分理由

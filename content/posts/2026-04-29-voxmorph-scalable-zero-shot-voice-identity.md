@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 VoxMorph是一个端到端的零样本语音身份变形框架，其整体架构如图1所示，包含提取、插值、合成三个核心阶段。
 
-![VoxMorph框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462383-0.jpg)
+![VoxMorph框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462383-0.jpg)
 图1：VoxMorph框架概览。该流程包含三个核心阶段：(1) 提取：从两个说话人身份中提取解纠缠的韵律（风格）和音色（身份）嵌入。(2) 插值：使用Slerp对嵌入表示进行独立插值。(3) 合成/变形：融合的韵律嵌入调节自回归语言模型，而融合的音色嵌入引导条件流匹配网络生成梅尔频谱图。最后，神经声码器将频谱图转换为高保真的变形波形。
 
 详细架构分解：
@@ -119,10 +119,10 @@ VoxMorph是一个端到端的零样本语音身份变形框架，其整体架构
 1.  插值方法消融 (表2)：比较了线性平均(Lerp)、混合插值(Lerp/Slerp)和纯Slerp。纯Slerp方法（VoxMorph）在FMMPMR上达到67.8%，显著优于Lerp的62.6%，验证了在超球面上进行插值的有效性。
 2.  韵律编码器消融 (表3)：比较了GE2E、ECAPA-TDNN、HuBERT、Wav2Vec2作为韵律编码器。基于LSTM的GE2E编码器在FMMPMR上达到60.6%，显著优于其他编码器，表明其对动态韵律特征的捕获能力更适合变形任务。
 
-![插值方法消融研究](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462383-0.jpg)
+![插值方法消融研究](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462383-0.jpg)
 表2：插值方法消融研究。Slerp方法在FMMPMR上表现出显著优势。
 
-![韵律编码器消融研究](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462383-0.jpg)
+![韵律编码器消融研究](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462383-0.jpg)
 表3：不同韵律编码器模型的消融研究。GE2E编码器在严格的0.01%阈值下表现出最高的FMMPMR。
 
 ### ⚖️ 评分理由

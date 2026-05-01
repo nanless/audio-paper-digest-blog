@@ -65,10 +65,10 @@ hiddenInHomeList: true
 
 WaveTrainerFit的整体架构是在WaveFit声码器的基础上，增加了用于可训练先验的先验编码器和后验编码器。
 
-![图1: Conceptual diagrams and noise examples of each methods.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461239-0.png)
+![图1: Conceptual diagrams and noise examples of each methods.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461239-0.png)
 图1：展示了WaveFit（a）与WaveTrainerFit（b）的概念对比。左图显示WaveFit从标准高斯噪声N(0,I)开始迭代，DNN需隐式预测信号能量。右图显示WaveTrainerFit从“接近目标波形”的可训练先验N(0, Σ)开始迭代，并通过“参考感知增益调整”显式处理能量。底部图示了初始噪声的梅尔谱对比。
 
-![图2: Overview of the proposed model.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461239-1.jpg)
+![图2: Overview of the proposed model.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461239-1.jpg)
 图2：WaveTrainerFit的模型概览图。训练时（虚线），目标波形和SSL特征输入后验编码器得到Σpost，用于采样初始噪声yT并计算增益调整。推理时（实线），仅SSL特征输入先验编码器得到Σprior，用于采样初始噪声和增益调整。Σpost和Σprior同时送入KL散度损失LPM进行约束。
 
 1.  输入输出：输入为SSL特征（经2倍上采样）和（仅在训练时）目标波形。输出为生成的波形。

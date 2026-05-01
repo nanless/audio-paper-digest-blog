@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 整体架构是一个端到端的自编码器，包含前端、编码器、瓶颈和解码器。
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461668-0.png)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461668-0.png)
 
 1.  音频预处理：原始波形重采样至16kHz，裁剪/填充至固定2秒窗口，进行峰值归一化。
 2.  特征提取前端 (SincFrontend)：

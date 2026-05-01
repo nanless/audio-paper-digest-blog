@@ -61,10 +61,10 @@ hiddenInHomeList: true
 | 100 | 18.3 | 13.7 |
 | 200 | 18.3 | 13.6 |
 
-![图1: PhoenixDSR框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460791-0.png)
+![图1: PhoenixDSR框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460791-0.png)
 图1展示了PhoenixDSR的整体流程。左侧为音素识别模型（基于Wav2Vec2-CTC），将输入的病理语音（Dysarthric Speech）转换为音素序列。中间的“Phoneme Confusion Matrix”模块利用健康语音的基准和病理数据的对齐信息，估计并个性化一个音素混淆先验。右侧为多任务大语言模型解码器，其输入是病理音素序列（`p(d)`）和从混淆矩阵中检索出的候选音素及概率（`P`）。LLM通过多任务训练，最终输出纠正后的文本（`t(h)`）和中间的规范化音素（`p(h)`）。
 
-![图2: 顶部混淆音素对](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460791-1.png)
+![图2: 顶部混淆音素对](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460791-1.png)
 图2可视化了在CDSD数据集上最常见的音素混淆对，揭示了构音障碍语音中系统性的发音偏差模式，例如声调替换（如u5→u4）、齿龈音与卷舌音混淆（z→zh）、元音或韵尾的偏移等。这正是PhoenixDSR框架试图显式建模和纠正的核心问题。
 
 5.  实际意义：为构音障碍患者提供了一种更高效、可解释的语音识别方案，只需少量个性化数据即可定制，有助于改善其沟通辅助工具的体验。

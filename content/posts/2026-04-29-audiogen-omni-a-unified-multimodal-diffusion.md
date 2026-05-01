@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 AudioGen-Omni是一个端到端的多模态扩散变换器，旨在根据可选的视频和文本输入，生成同步的音频、语音或歌曲。
 
-![模型整体流程图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461581-0.png)
+![模型整体流程图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461581-0.png)
 图1 (a) 模型整体架构图：展示了所有组件及其交互。左侧为编码器部分，包括冻结的视觉编码器、文本编码器（Flan-T5）、梅尔编码器，以及可训练的歌词转录编码器（LT-Encoder）和投影层。中间是核心的多模态变换器块（MM-DiT），处理来自视频（V）、文本（T）、转录/歌词（C）和音频（A）的特征。右侧是梅尔解码器和损失计算部分。缺失模态（如纯文本生成）使用学习到的嵌入替代。
 
 完整输入输出流程：
@@ -56,7 +56,7 @@ AudioGen-Omni是一个端到端的多模态扩散变换器，旨在根据可选�
 5.  音频专用细化：经过多模态块后，特征会通过专门的音频单模态变换器块（类似FLUX设计）进一步细化，专注于音频信号的细节生成。
 6.  解码与损失：细化后的音频特征通过梅尔解码器重建为音频波形。训练时，模型采用条件流匹配（CFM）损失，学习从噪声到目标音频潜在表示的速度场。
 
-![MM-DiT块内部结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461581-1.png)
+![MM-DiT块内部结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461581-1.png)
 图1 (b) 一个MM-DiT块的内部结构：详细展示了联合注意力、PAAPI（RoPE）、全局条件（通过AdaLN注入）以及卷积MLP（ConvMLP）等组件。可以看到视频（Vp）、转录文本（Cp）和全局文本（Tp）的特征如何通过拼接、加和以及条件调制参与到注意力计算中。
 
 关键设计选择与动机：
@@ -141,7 +141,7 @@ AudioGen-Omni是一个端到端的多模态扩散变换器，旨在根据可选�
 关键结论：在说话人相似度评估中，AudioGen-Omni在GE2E和VoxSim两个指标上均取得了最高分，表明其能更好地从视频中捕捉并合成具有目标说话人特征的语音。
 
 图表分析：
-![Mel谱图可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461581-13.png)
+![Mel谱图可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461581-13.png)
 图2 (Mel-spectrogram visualization)：该图对比了不同方法生成的语音Mel谱图与真实语音（GT）。可以清晰地看到，AudioGen-Omni（Ours(25)）生成的谱图在基频（F0）的动态变化、谐波结构上与GT高度相似，而其他方法（如Face2Voice, DiffV2S）则显得模糊或失真。这直观证明了其在捕捉语音细节和表情韵律方面的优势。
 
 ### ⚖️ 评分理由

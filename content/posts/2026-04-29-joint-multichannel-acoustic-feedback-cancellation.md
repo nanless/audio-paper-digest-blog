@@ -49,7 +49,7 @@ hiddenInHomeList: true
 4.  输出与闭环：参考麦克风（0通道）的最终目标语音估计为 `Ŝ_0(k) = F_s(k) ⊙ D_0(k)`（`⊙`为哈达玛积）。这个估计值被放大（增益K）和延迟（Δt）后作为扬声器信号 `u(n)` 播放，重新进入声学环境，形成闭环。DNSF被设计为流式处理，每帧独立生成cIRM。
 
 架构图：
-![图1：AFC-SPEX系统示意图与DNSF网络结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464513-0.jpg)
+![图1：AFC-SPEX系统示意图与DNSF网络结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464513-0.jpg)
 图1(a)展示了AFC-SPEX的完整信号流。`d_m(n)`进入PBFDKF得到补偿信号`e_m(n)`。`D_m(k)`和`E_m(k)`的实虚部作为输入送入DNSF，DNSF输出掩膜`F_s(k)`作用于`D_0(k)`得到目标语音估计`ŝ_0(n)`。`ŝ_0(n)`经过增益K和延迟Δt后生成扬声器信号`u(n)`，`u(n)`与反馈路径卷积产生`y_m(n)`，形成闭环。图1(b)展示了DNSF内部结构：输入被reshape后，依次通过双向LSTM、单向LSTM和全连接层，最终输出cIRM。
 
 #
@@ -98,7 +98,7 @@ hiddenInHomeList: true
 3.  空间信息的重要性：对比`1ch-AFC-SPEX`和`AFC-SPEX`，多通道版本在场景A的SI-SDR从-5.30提升到4.38，证明空间信息对于在复杂声学场景中区分目标与干扰/反馈至关重要。
 
 图表：
-![图3：代表性频谱图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464513-0.jpg)
+![图3：代表性频谱图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464513-0.jpg)
 图3展示了仿真A中不同方法的输出频谱图（与表1结果对应）。从图中可以直观看到，AFC-SPEX的输出频谱相比Rank2-MWF和AFC+DNSF，能够更干净地保留目标语音（高频部分清晰），同时有效抑制了反馈（啸叫成分）和干扰语音。
 
 #

@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 该模型是一个基于知识蒸馏的端到端语音摘要系统，核心是在冻结的大语言模型（LLM）前，接入一个可训练的语音编码器和一个跨模态桥接模块（Q-Former）。整体架构如图2所示。
 
-![图2: 锚点学习与滑动窗口迁移框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461416-1.png)
+![图2: 锚点学习与滑动窗口迁移框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461416-1.png)
 
 主要组件与数据流：
 1.  语音编码器 (Eφ)：采用预训练的HuBERT模型，输入原始语音波形，输出帧级语音表示。

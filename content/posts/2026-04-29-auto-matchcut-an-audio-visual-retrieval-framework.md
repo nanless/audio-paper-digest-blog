@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 AutoMatchCut是一个由存储、查询和创建三阶段构成的检索框架，而非一个可学习的端到端模型。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460464-1.jpg)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460464-1.jpg)
 图2：AutoMatchCut框架概览。(a)存储：视频被分段，音频和视频帧分别通过编码器得到嵌入并存入数据库。(b)查询：查询视频同样分段编码，并根据指定的距离阈值τ在嵌入空间中检索最远的匹配片段。(c)创建：在选定的片段对处进行拼接，生成匹配剪辑。
 
 1.  存储阶段：

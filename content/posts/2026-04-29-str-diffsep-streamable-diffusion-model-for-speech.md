@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 Str-DiffSep的整体架构旨在实现端到端的流式语音分离。其输入是连续的混合语音流，输出是按时间顺序生成的分离后语音流。
 
-![SkiM-based score for speech separation](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464660-0.jpg)
+![SkiM-based score for speech separation](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464660-0.jpg)
 图1: SkiM-based分数函数网络架构。模型接收连续语音流，收集足够长度的一个片段（chunk）后进行计算。
 
 主要组件与数据流：
@@ -58,7 +58,7 @@ Str-DiffSep的整体架构旨在实现端到端的流式语音分离。其输入
 4.  解码与输出：经过L个Block处理后，最终的表示通过一个线性投影层（解码）映射到与说话人数量相同的维度，输出每个说话人的分数预测 `score 1: ∇x1`, `score 2: ∇x2`。
 5.  流式推理：在推理时，每个新到的音频块 `s` 都会携带来自块 `s-1` 的状态信息。模型对每个块独立执行一次分数预测，然后通过MultiDiffusion策略融合重叠区域的预测，最后应用逆扩散过程（Eq.19）更新该块的音频表示。
 
-![Application of MultiDiffusion in speech separation](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464660-1.png)
+![Application of MultiDiffusion in speech separation](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464660-1.png)
 图2: MultiDiffusion在语音分离中的应用。`Fs`从当前扩散结果音频 `Jt` 中提取第s帧。对于重叠区域，融合来自相邻块的独立去噪结果。
 
 关键设计选择：
@@ -104,7 +104,7 @@ Str-DiffSep的整体架构旨在实现端到端的流式语音分离。其输入
 *   vs. SkiM（判别式流式基线）：Str-DiffSep在SI-SDR（14.74 vs 13.69）和SI-SAR（14.97 vs 14.01）上显著优于SkiM，表明扩散模型在信号保真度上具有优势。PESQ略低（2.74 vs 2.92），STOI几乎持平。
 
 2. 模型泛化性（表2）：
-![DNSMOS results](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464660-2.jpg) （论文中未提供此图表URL，根据描述应为表2的位置）
+![DNSMOS results](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464660-2.jpg) （论文中未提供此图表URL，根据描述应为表2的位置）
 | 数据集 | 模型 | OVRL | SIG | BAK | P808 MOS |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | WSJ0-2mix | Str-DiffSep | 2.86 (0.29) | 3.27 (0.34) | 3.96 (0.13) | 3.05 (0.23) |

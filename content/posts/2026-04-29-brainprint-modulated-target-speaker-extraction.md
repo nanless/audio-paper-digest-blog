@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 BM-TSE是一个端到端的多模态（EEG+音频）系统，整体架构如图1所示。
 
-![图1: BM-TSE架构总览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461698-0.png)
+![图1: BM-TSE架构总览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461698-0.png)
 
 完整输入输出流程：
 1.  输入：原始EEG信号（B×C×T）和混合多人语音波形。
@@ -136,7 +136,7 @@ BM-TSE是一个端到端的多模态（EEG+音频）系统，整体架构如图1
 关键结论：移除LS-TConv导致性能崩溃（SI-SDRi下降超过11 dB），证明其不可或缺。移除SConv、ASG或L_SID均导致显著但相对较小的性能下降，验证了各组件的重要性。
 
 可视化分析：图2通过梅尔频谱图对比，直观展示了不同消融变体生成的音频质量差异。
-![图2: 消融研究的梅尔频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461698-1.png)
+![图2: 消融研究的梅尔频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461698-1.png)
 关键结论：(a)干净语音为基准；(b)完整模型重建质量高；(c)移除ASG导致高频细节丢失；(d)移除L_SID引入频谱失真；(e)移除SConv导致斑块状伪影；(f)移除LS-TConv模糊了时间动态。这从听觉感知层面佐证了各模块的必要性。
 
 ### ⚖️ 评分理由

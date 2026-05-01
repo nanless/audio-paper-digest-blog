@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 论文提出的模型架构遵循“源-滤波器”分解框架，并采用扩散模型进行条件生成。整体流程如图1所示。
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464847-0.jpg)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464847-0.jpg)
 
 完整输入输出流程：输入源语音Xmel，经过特征解耦网络（图1-A），提取出四个嵌入：内容嵌入w2v、音高嵌入f0、源说话人嵌入s、以及抑郁嵌入d。在训练时，s用于重建；在转换时，使用目标说话人嵌入s'。这四个嵌入与原始Mel谱图一起，输入到条件扩散模型（图1-B， C）中，最终输出转换后的语音波形。
 
@@ -118,7 +118,7 @@ hiddenInHomeList: true
 
 表1: Zero-shot VC results on unseen speakers] [注：此处使用文本描述代替插入图片]
 
-![图3: Distribution of PHQ-8 values using original speech, speech from proposed models and from the baselines.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464847-2.png)
+![图3: Distribution of PHQ-8 values using original speech, speech from proposed models and from the baselines.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464847-2.png)
 图3显示，原始语音和所提DM模型输出的PHQ-8预测分数分布较广且相似，而基线模型（Vevo-Voice， QuickVC）的预测分数分布严重集中在某一狭窄区间，导致其KL散度巨大（约24），表明它们丢失了抑郁症严重程度的变异信息。
 
 消融与细分结果：

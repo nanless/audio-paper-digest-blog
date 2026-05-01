@@ -42,7 +42,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![TPEformer整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461622-0.png)
+![TPEformer整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461622-0.png)
 
 如图1所示，TPEformer的架构包含两个对称的流（音频流和视频流）以及一个融合模块。
 - 输入处理：
