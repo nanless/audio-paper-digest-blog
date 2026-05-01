@@ -30,7 +30,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：论文中未提及代码链接
 - 模型权重：论文中未提及具体模型权重链接
 - 数据集：AppTek Call-Center Dialogues，可通过以下链接获取：https://huggingface.co/datasets/apptek-com/apptek_callcenter_dialogues，采用 Creative Commons 4.0 BY-SA 协议（https://creativecommons.org/licenses/by-sa/4.0/）。

@@ -42,7 +42,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：论文中未提及代码仓库链接
 - 模型权重：论文中未提及模型权重下载链接（如HuggingFace或ModelScope）
 - 数据集：

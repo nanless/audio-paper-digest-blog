@@ -34,7 +34,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：https://github.com/thibault-roux/metric-evaluator
 - 模型权重：论文中未提及
 - 数据集：HATS (Human-Assessed Transcription Side-by-Side)；获取链接为代码仓库 https://github.com/thibault-roux/metric-evaluator；论文中指出该数据集被“freely released to the scientific community”，但未明确具体的开源协议。

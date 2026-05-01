@@ -31,7 +31,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：https://github.com/BUTSpeechFIT/CHiME-9-AV-TS-ASR
 - 模型权重：论文中未提及
 - 数据集：论文中提及了使用的训练数据集（包括AVYT、LRS3、AMI以及MCoRec挑战赛数据集），但未提供具体的下载链接或开源协议。

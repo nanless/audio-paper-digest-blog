@@ -29,7 +29,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：https://github.com/NazarKozak/disfluo
 - 模型权重：可通过上述GitHub仓库的发布版获取（论文中未在HuggingFace或ModelScope等平台发布独立链接）。
 - 数据集：

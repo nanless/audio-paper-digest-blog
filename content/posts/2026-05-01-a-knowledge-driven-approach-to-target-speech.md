@@ -27,7 +27,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：论文中未提及代码链接。
 - 模型权重：论文中未提及。
 - 数据集：论文中使用并引用了 DNR-nonverbal 数据集。该数据集是 Sound Demixing Challenge 的一部分。论文中未提供直接的下载链接或项目主页URL。

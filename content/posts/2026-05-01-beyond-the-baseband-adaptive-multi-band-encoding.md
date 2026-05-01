@@ -30,7 +30,6 @@ hiddenInHomeList: true
 
 ### 🔗 开源详情
 
-## 开源详情
 - 代码：https://github.com/earthspecies/multiband-audio
 - 模型权重：论文中未提及
 - 数据集：论文中未提及
