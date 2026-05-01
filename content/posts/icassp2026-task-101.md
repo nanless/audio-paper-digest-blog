@@ -370,8 +370,6 @@ hiddenInHomeList: true
 
 图3：各模型在不同音乐类别上的性能热力图
 
-![图3: pdf-image-page4-idx2](https://raw.githubusercontent.com/paperswithcode/datasets/refs/heads/main/docs/assets/mgphot/mgphot-results.png)
-
 （注：为示意图，实际应引用论文中提供的图片URL）
 
 图表说明：

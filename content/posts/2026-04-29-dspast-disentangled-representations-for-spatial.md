@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Kevin Wilkinghoff（奥尔堡大学电子系统系， Pioneer Centre for AI）
@@ -59,7 +58,7 @@ DSpAST的架构图（如图1所示）展示了从双耳音频输入到最终表�
 4.  表示堆叠与输出：三个分支输出的表示（包括CLS token和音频token）在维度上被堆叠起来，恢复到与SpatialAST相同维度的输出（B×P×D）。这堆叠后的表示既包含了任务特定的解耦信息，又保持了与下游模型（如BAT中的Q-Former）接口的兼容性。
 5.  训练与推理：训练时，每个任务分支的CLS token分别用于对应的分类头（SED用sigmoid， DP和DoAE用softmax），计算各自任务的损失并加权求和。推理时，该编码器为下游LLM提供空间音频嵌入。
 
-![DSpAST Architecture](https://raw.githubusercontent.com/wilkinghoff/DSpAST/main/figures/dspast_architecture.png) (注：由于无法访问论文原始URL，此处仅为架构描述示意)
+ (注：由于无法访问论文原始URL，此处仅为架构描述示意)
 
 ### 💡 核心创新点
 
@@ -106,7 +105,7 @@ DSpAST的架构图（如图1所示）展示了从双耳音频输入到最终表�
 - 解耦训练：仅用单一任务损失训练会导致其他任务性能崩溃，证明了多任务联合学习和解耦的必要性。
 - 注意力权重分析：如图2所示，SED分支对GCC-PHAT特征的注意力权重极低，而DP和DoAE分支则高度依赖GCC-PHAT。
 
-![Feature Attention Weights](https://raw.githubusercontent.com/wilkinghoff/DSpAST/main/figures/attention_weights.png) (注：由于无法访问论文原始URL，此处仅为图表描述示意)
+ (注：由于无法访问论文原始URL，此处仅为图表描述示意)
 
 表2：基于不同音频编码器的BAT系统在SpatialSoundQA上的性能（表3）
 | 音频编码器 | SED: mAP (type A, C) | DoAE: Acc (type B, D) | DP: DER (type B, D) | 空间推理: BAcc (type E) |

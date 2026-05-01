@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 7.0/7 | 选题价值 2.0/2 | 复现加成 0.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Mohan Shi（UCLA， Microsoft CoreAI）
@@ -63,7 +62,7 @@ JEDIS-LLM的整体架构基于Speech-LLM范式，并针对说话人分离任务�
 5.  说话人解码器（Spk-Decoder）：仅在训练阶段使用。这是一个3层的Transformer解码器，接收语音编码器的输出 `Hs` 和词级说话人ID序列 `T_spk`，预测输出说话人ID序列 `T_hat_spk`。其目的是向语音编码器注入更强的说话人区分信号，训练后丢弃。
 
 架构图：
-![JEDIS-LLM 架构图](https://raw.githubusercontent.com/your-repo/your-branch/main/figures/jedis_llm_architecture.png)  (注：由于未提供实际URL，此为示意。论文图1(a)展示了训练流程，图1(b)展示了推理时SPC的使用流程。)
+  (注：由于未提供实际URL，此为示意。论文图1(a)展示了训练流程，图1(b)展示了推理时SPC的使用流程。)
 
 关键设计选择：
 *   目标函数：采用段级说话人归属转录作为LLM的训练目标。相比于词级目标（在每个词前插入说话人ID），段级目标能减少序列长度，更好地利用LLM的上下文建模能力，加速推理。

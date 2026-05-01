@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 7.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：David López-Ayala (Music Technology Group, Universitat Pompeu Fabra, Barcelona, Spain)
@@ -109,10 +108,8 @@ hiddenInHomeList: true
 *   设置：在AI-OpenBMAT全数据集（54.9小时）上进行评估。
 *   结果：最佳模型SPECTTTRA-γ的整体F1仅为61.1%。性能与片段类别强相关：在“音乐(music)”和“前景音乐(fg)”（信噪比高）类别上表现尚可（84-88% F1），但在“背景音乐(bg)”和“低背景音乐(bgvl)”（信噪比低、被语音掩蔽）类别上表现极差（33-47% F1）。CNN基线在所有类别上性能均显著低于SPECTTTRA模型。
 
-![AI-OpenBMAT数据集中不同片段类别的总时长分布图](https://github.com/DaveLoay/AI-OpenBMAT/raw/main/figures/segments_distribution.png)
 图1. AI-OpenBMAT数据集中不同片段类别的总时长分布图。横轴为片段类别，纵轴为该类别音频占总时长的百分比。可以看出，“无音乐(no-music)”片段占据了绝大部分（48.4%），其次是“音乐(music)”（20.1%），而各种背景音乐片段占比较小，这符合以语音为主的广播场景。
 
-![图2. 环境因素对性能的影响：左图-F1分数随SNR变化；右图-F1分数随输入音频时长变化。](https://github.com/DaveLoay/AI-OpenBMAT/raw/main/figures/main_results.png)
 图2. 环境因素对性能的影响：左图-F1分数随SNR变化；右图-F1分数随输入音频时长变化。两图共享图例（CNN, SPECTTTRA-α/β/γ）。左图显示随着信噪比降低（语音变强），所有模型性能均下降，其中CNN下降最快。右图显示随着输入音频时长缩短，SPECTTTRA模型性能下降比CNN更早、更显著。
 
 #

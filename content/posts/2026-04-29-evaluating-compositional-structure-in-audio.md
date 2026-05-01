@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Chuyang Chen（纽约大学音乐与音频研究实验室）
@@ -108,11 +107,9 @@ hiddenInHomeList: true
 
 图表分析：
 - Fig. 1 (模型分数分布)：
-    ![Fig. 1 模型分数分布箱线图](https://raw.githubusercontent.com/chuyangchencd/audio-compositionality/main/figs/boxplots.png)
     图1显示了各模型在A-COAT (a)和A-TRE (b)任务上的分数分布箱线图。A-COAT任务上，AudioMAE和BEATs均值最高；A-TRE任务上，AudioMAE、BEATs和Whisper表现突出。任务间分数分布差异显著，表明两个任务评估了模型的不同方面。
 
 - Fig. 2 (性能与多样性的关系)：
-    ![Fig. 2 性能随多样性变化图](https://raw.githubusercontent.com/chuyangchencd/audio-compositionality/main/figs/sensitivity.png)
     图2(a)显示，除BEATs外，大多数模型在A-COAT上的分数随四元组多样性 `H_quad` 增加而下降，表明处理更复杂的组合场景更困难。图2(b)显示，AudioMAE和Whisper在A-TRE上的分数随场景多样性 `H` 变化几乎保持平稳，说明其属性组合表示非常鲁棒；而其他模型则表现出不同程度的波动。
 
 关键结论与差距：

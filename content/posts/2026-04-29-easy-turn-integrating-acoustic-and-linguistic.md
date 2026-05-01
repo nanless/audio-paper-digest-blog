@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 2.0/2 | 复现加成 1.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Guojian Li（西北工业大学计算机学院，音频、语音与语言处理组）
@@ -49,7 +48,6 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![Easy Turn 模型架构](https://github.com/ASLP-lab/Easy-Turn/raw/main/figures/model.png)
 (注：此为论文描述的架构图，但无法确认其原始URL。上图链接来自论文引用的GitHub仓库，推测为论文中的图2)
 
 Easy Turn的模型架构（如图所示）采用三段式模块化设计：

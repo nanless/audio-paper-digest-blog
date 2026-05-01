@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Xikun Lu（华东师范大学教育人工智能研究院）
@@ -42,7 +41,6 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 GAF-Net采用编码器-骨干网络-解码器的结构，核心处理流程如下：
-![GAF-Net Structure](https://raw.githubusercontent.com/Luxikun669/GAF-Net/main/figures/gafnet_structure.png)
 图1：GAF-Net整体架构示意图（来源：论文图1）。
 
 1.  输入与双特征编码与融合：
@@ -50,7 +48,6 @@ GAF-Net采用编码器-骨干网络-解码器的结构，核心处理流程如�
     *   双特征提取：主路径生成复数STFT谱图；次路径使用Gammatone滤波器组生成感知特征。
     *   特征融合：两路特征分别经过LightConv 1D块编码后，通过跨通道注意力机制融合。Gammatone特征的幅度图生成注意力掩模，调制STFT特征，然后通过一个复数Squeeze-and-Excitation（SE）块进行通道校准，生成综合表征Z。
 2.  骨干网络：全局自适应傅里叶调制器（GAFM）：
-    ![Global Adaptive Fourier Modulator](https://raw.githubusercontent.com/Luxikun669/GAF-Net/main/figures/gafm_structure.png)
     图2：GAFM模块结构图（来源：论文图1）。
     *   输入：融合后的复数特征Z ∈ C^{B×C×F×T}。
     *   核心思想：对每个频率f，动态合成一个全局滤波器（门控信号）来调制时间维度上的特征。

@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 7.0/7 | 选题价值 2.0/2 | 复现加成 0.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Sashi Novitasari（根据论文作者列表顺序推断）
@@ -59,7 +58,6 @@ hiddenInHomeList: true
 *   单词级发音提示的注入：在文本提示中，偏置词与其对应的提示词（如来自“Syl+CED”方法）直接关联（例如：“Gallian (gather, leave, under)”）。这使得LLM可以直接从文本上下文中获取发音线索。
 *   偏置词位置预测模块（训练时）：这是一个独立的、可移除的辅助模块。它接收来自语音编码器的特征 `Esp` 和来自LLM在处理 `Esp` 部分时产生的因果输出 `DLLM[1:I]`。两者进行元素级拼接后，输入一个前馈神经网络（FNN）组成的“偏置词标记器（Bias word tagger）”。该模块通过CTC损失进行训练，输出与语音帧对齐的字符级标签序列 `W`（标签为“bias”, “non-bias”, “whitespace”）。此模块仅在训练时使用，推理时移除，以保持标准SLLM结构不变。
 
-![图1. 所提SLLM训练流程图](https://raw.githubusercontent.com/your-repo-placeholder/image/main/figure1.png)
 图：论文图1展示了训练流程。语音S和文本提示(X,B)输入模型。LLM的输出用于生成转录T。同时，投影器的输出Esp和LLM的中间输出DLLM被送入偏置词标记器，生成字符级位置标签W。训练损失为ASR损失与CTC损失之和。
 
 ### 💡 核心创新点

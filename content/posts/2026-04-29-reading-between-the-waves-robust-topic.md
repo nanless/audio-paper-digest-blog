@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Steffen Freisinger（Technische Hochschule Nürnberg， Keßlerplatz 12, 90489 Nürnberg, Germany）
@@ -75,7 +74,6 @@ MultiSeg模型的整体架构是一个用于句子级主题变化二分类的序
     *   经过Sigmoid函数得到概率 `p_n = σ(y_n)`，表示句子n开始一个新主题的概率。
 6.  输出与训练：模型最小化二元交叉熵损失（BCE），训练整个网络端到端，音频编码器和文本编码器均参与微调。
 
-![图1：MultiSeg多模态主题变化架构图](https://github.com/steffrs/multimodal-topic-segmentation/raw/main/assets/architecture.png)
 （图片来源于论文，描述：架构图展示了文本编码器和孪生音频编码器如何分别处理句子和边界窗口，其输出经拼接后送入RoFormer进行序列标注，最终通过分类器预测主题是否在该句子处发生变化。）
 
 ### 💡 核心创新点

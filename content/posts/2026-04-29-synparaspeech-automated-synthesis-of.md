@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.8 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Bingsong Bai（北京邮电大学人工智能学院）， Qihang Lu（北京邮电大学人工智能学院）， Wenbing Yang（北京邮电大学人工智能学院）（论文标注为并列第一作者）
@@ -68,7 +67,6 @@ hiddenInHomeList: true
 3.  Stage III: Verification（人工辅助验证）：邀请专业人士对合成音频的自然度、副语言质量、音频质量和时间对齐准确性进行评估和筛选，保留合格的音频。
 4.  Stage IV & V: Application（应用）：将构建好的SynParaSpeech数据集应用于语音合成（通过SFT/DPO微调TTS模型）和语音理解（通过提示调优增强MLLM的检测能力）。
 
-![SynParaSpeech 流程图](https://raw.githubusercontent.com/ShawnPi233/SynParaSpeech/main/figs/pipeline.png)
 图1：SynParaSpeech 自动化合成与应用流程概览。左上展示了Stage I（文本标签合成）和Stage II（音频合成）的细节，右下展示了Stage IV（合成）和Stage V（理解）的应用方式。
 
 #

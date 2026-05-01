@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Sunghwan Ahn（首尔大学电气与计算机工程系，INMC）
@@ -58,8 +57,6 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 FastEnhancer是一个端到端的时频域流式语音增强模型，其整体架构如下图所示（基于论文图2）：
-
-![FastEnhancer架构图](https://raw.githubusercontent.com/aask1357/fastenhancer/main/figs/architecture.png)
 
 完整输入输出流程：
 1.  输入：单通道带噪语音波形 `x`。
