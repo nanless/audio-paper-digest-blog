@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 语音延续 论文列表"
+title: "ICLR 2026 - 语音理解 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音延续"]
+tags: ["语音理解"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 语音延续 方向论文"
+description: "共 1 篇 ICLR 2026 语音理解 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音延续
+# ICLR 2026 - 语音理解
 
 共 **1** 篇论文
 
@@ -18,46 +18,65 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TASTE: Text-Aligned Speech Tokenization and Embedding for Sp](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and) | 9.0分 | 前25% |
+| 🥇 | [Speech World Model: Causal State–Action Planning with Explic](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning) | 8.5分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and)
+### 🥇 [Speech World Model: Causal State–Action Planning with Explicit Reasoning for Speech](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning)
 
-🔥 **9.0/10** | 前25% | #语音延续 | #端到端 | #语音大模型 #语音合成
+🔥 **8.5/10** | 前10% | #语音理解 | #因果图 | #显式推理 #世界模型
 
 👥 **作者与机构**
 
-- 第一作者：Liang-Hsuan Tseng (台湾大学电气工程系研究生)、Yi-Chang Chen (MediaTek Research) [共同第一作者]
-- 通讯作者：Yi-Chang Chen (MediaTek Research)，Da-shan Shiu (MediaTek Research) [根据邮箱域名推断]
-- 作者列表：Liang-Hsuan Tseng (台湾大学电气工程系)、Yi-Chang Chen (MediaTek Research)、Kuan Yi Lee (台湾大学电气工程系)、Da-Shan Shiu (MediaTek Research)、Hung-yi Lee (台湾大学AI卓越研究中心)
+- 第一作者：Xuanru Zhou（浙江大学）
+- 通讯作者：Gopala Anumanchipalli（UC Berkeley）
+- 作者列表：Xuanru Zhou（浙江大学）， Jiachen Lian（UC Berkeley）， Henry Hong（UC Berkeley）， Xinyi Yang（浙江大学）， Gopala Anumanchipalli（UC Berkeley）
+
+#
 
 💡 **毒舌点评**
 
-TASTE的核心亮点在于，它用一个极其简洁优雅的设计（利用ASR输出的文本作为查询，通过交叉注意力聚合声学特征），一石二鸟地解决了联合语音语言建模中长期存在的“长度错配”和“信息冗余”两大痛点，实现了超低比特率下的高质量重建。其短板在于整个管线的“优雅”依赖于一个高质量的ASR转录，在真实噪声环境或无文本场景下的鲁棒性尚未充分验证，且消融实验中使用S3 token作为重建精度的代理指标，而非直接的端到端联合建模指标，略有绕弯。
+这篇论文的亮点在于，它并非简单地将大模型应用于语音，而是从认知科学出发，为语音理解设计了一套可解释的“骨架”（因果图），并用它来引导大模型进行结构化推理，这比单纯堆数据或参数更“聪明”。然而，其短板在于，这套“骨架”的模块划分（WMA, ToM, SA, Prag）带有一定的人为预设性，其完备性和对更复杂、开放式对话的泛化能力有待进一步验证。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文明确提供了代码仓库链接 (`https://mtkresearch.github.io/TASTE-SpokenLM.github.io` 页面中包含)。
-- 模型权重：论文明确提供了预训练模型的权重链接。
-- 数据集：训练使用了公开的Emilia（英文子集）和LibriTTS数据集。评估使用了公开的LibriSpeech test-clean， SALMON， 和StoryCloze基准。
-- Demo：论文明确提供了在线演示页面链接。
-- 复现材料：论文在附录（A.2 Training Details）中详细说明了训练配置、超参数、优化器设置和硬件信息，提供了充分的复现指导。
-- 论文中引用的开源项目：依赖的开源项目/模型包括：Whisper（编码器）、S3 Token（目标单元）、LLaMA系列（TASLM基础模型）、DeepSpeed、Liger Kernel、HiFi-GAN、Flow Matching vocoder、Montreal Forced Aligner（MFA）等。
+- 代码：论文承诺在 `https://github.com/eureka235/eureka235.github.io` 开源代码、训练和评估脚本，但当前链接可能为占位符。论文中未提供具体的可用代码仓库链接。
+- 模型权重：论文中未明确提及是否公开预训练好的因果图或指令微调后的模型权重。
+- 数据集：所用数据集（MELD, IEMOCAP, SLURP, VoxCeleb）均为公开数据集，论文未提及提供新的数据集。
+- Demo：图1中提供了一个音频演示链接 `http://bit.ly/4pBJuWP`。
+- 复现材料：提供了极其详细的实验设置（附录A.5）、模型架构（附录A.7）、评估指标计算方法（附录A.8）、数据生成提示词（附录A.4.2）等，复现指南完备。
+- 引用的开源项目/模型：主要依赖预训练模型，包括：文本编码器（distil-BERT）、声学编码器（WavLM）、指令微调基础模型（LLaMA-3.1-8B, Qwen2-Audio-7B-Instruct）、标签生成教师模型（Vicuna-13b-v1.5）、评估模型（GPT-4o）。
 
 📌 **核心摘要**
 
-这篇论文旨在解决联合文本-语音语言建模（SLM）中，由于语音标记序列远长于文本序列而产生的长度错配和信息冗余问题。其核心方法是提出TASTE（文本对齐的语音标记化与嵌入），通过一个基于注意力的聚合器，利用ASR模型提取的文本标记作为查询，从预训练的Whisper编码器表示中聚合出与文本一一对应的语音表示，再经过残差向量量化（RVQ）得到离散语音标记。与以往方法（如自监督离散化或神经编解码器）在固定下采样率下生成标记不同，TASTE的标记是动态的、文本对齐的，且设计上专注于承载韵律信息。主要实验结果表明：1) 在LibriSpeech上，TASTE以极低的比特率（~150 bps）实现了与高比特率方法（1500-4000 bps）相当甚至更优的语音重建质量和相似性（见表1）。2) 基于TASTE构建的语音语言模型（TASLM），仅通过LoRA微调一个1.3B的基础模型，在语音延续任务上（语义、声学、人类评估）全面超越了包括7B参数在内的其他预训练SLM（如Spirit LM, TWIST）（见表2）。该工作的实际意义在于，它证明了为联合建模任务专门设计的、高效的标记化方案是提升SLM性能的关键。主要局限性包括：依赖ASR转录，仅评估了英语，未涉及多说话人、重叠语音或非语言事件（如笑声）。
+1.  要解决的问题：当前的语音语言模型（SLM）将语音理解视为黑盒，在复杂推理（尤其是需要结合情感、意图、语境的深层理解）和稀疏监督下表现不佳，缺乏可解释的推理过程。
+2.  方法核心：提出Speech World Model（SWM），受认知科学启发，将语音理解因子化为四个模块（世界模型激活WMA、心智理论ToM、言语行为SA、语用意图Prag），并通过一个预定义的因果图建模它们之间的动态依赖关系。系统分两阶段训练：1）训练因果图以学习状态间的因果关系，形成结构化的认知状态搜索空间；2）将因果图的推理结果作为显式条件，对指令微调后的语言模型进行引导，生成结构化推理链和回应。
+3.  与已有方法相比新在哪里：
+    - 从黑盒到白盒：首次提出基于认知因果图的模块化语音模型，为推理提供了透明、可解释的“中间状态”。
+    - 从模式匹配到因果推理：利用因果图约束语言模型的搜索空间，使其推理过程更符合人类认知逻辑，而非单纯的统计关联。
+    - 高效的半监督学习：因果图结构允许在部分模块标签缺失时，通过梯度反向传播有效利用数据，提高训练效率。
+4.  主要实验结果：
+    - 训练效率：因果图训练收敛速度比无结构的随机图基线快约5倍（2.07小时 vs 10.39小时）。
+    - 推理能力：在指令微调后，SWM在推理指标（Model-as-Judge评分）上显著超越Qwen-Audio、Voxtral等开源模型，并在情绪识别准确率（EA）上甚至超过了GPT-4o（71.02% vs 45.16%）。
+    - 性能与效率平衡：整体M.J.得分略低于Gemini 2.5 Pro（7.59 vs 8.12），但训练成本极低（仅约20 GPU小时），证明了该范式的效率优势。
+    - 关键对比数据见下表：
 
-| 方法 | 续写 GPT-4o MOS ↑ | 续写 UTMOS ↑ | 续写 Human MOS ↑ | SALMON准确率 ↑ | StoryCloze准确率 ↑ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| Spirit LM (7B) | 2.79 | 3.41 | 2.38 | 59.1% | 72.0% |
-| Spirit LM Expr. (7B) | 1.90 | 3.40 | 2.41 | 69.0% | 66.2% |
-| TASLM 1B (token) | 3.08 | 4.07 | 3.93 | 60.8% | 76.5% |
-| TASLM 1B (embed.) | 3.16 | 4.22 | 4.16 | 57.7% | 76.7% |
-| Cascade (LLaMA3.2-1B) | 3.15 | 4.25 | 4.00 | - | - |
+| 方法 | Prompt Style | Overall M.J. Score | Reasoning Score | Response Score | EM (%) | EA (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| SWM (Qwen2-Audio) | CoT | 7.59 | 7.26 | 8.08 | 91.80 | 71.02 |
+| Qwen2-Audio-CoT (调优基线) | CoT | 5.18 | 4.76 | 5.82 | 92.11 | 34.72 |
+| Voxtral | CoT | 2.92 | 2.52 | 3.52 | 10.89 | 5.56 |
+| GPT-4o | CoT | 7.41 | 6.98 | 8.06 | 68.20 | 45.16 |
+| Gemini 2.5 Pro | CoT | 8.12 | 8.02 | 8.28 | 82.47 | 51.29 |
+
+5.  实际意义：为构建更可解释、可信、高效的语音交互系统提供了新范式，证明了结构化认知先验可以引导较小模型达到接近甚至超越超大模型的特定任务性能，对资源受限场景有重要价值。
+6.  主要局限性：1）当前模块数量有限（仅4个），可能无法捕捉所有语音动态；2）因果图结构是预定义的，缺乏对未知依赖关系的适应性；3）指令微调数据依赖于LLM生成，存在误差传播风险。
+
+#
 
 ---
 

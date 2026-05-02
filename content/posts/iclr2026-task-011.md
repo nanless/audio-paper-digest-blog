@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 生成模型 论文列表"
+title: "ICLR 2026 - 模型评估 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["生成模型"]
+tags: ["模型评估"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 生成模型 方向论文"
+description: "共 1 篇 ICLR 2026 模型评估 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 生成模型
+# ICLR 2026 - 模型评估
 
-共 **2** 篇论文
+共 **1** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,80 +18,51 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [DiffSDA: Unsupervised Diffusion Sequential Disentanglement A](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential) | 7.5分 | 前25% |
-| 🥈 | [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers) | 7.0分 | 前25% |
+| 🥇 | [SNAP-UQ: Self-supervised Next-Activation Prediction for Sing](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [DiffSDA: Unsupervised Diffusion Sequential Disentanglement Across Modalities](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential)
+### 🥇 [SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation)
 
-✅ **7.5/10** | 前25% | #生成模型 | #扩散模型 | #自监督学习 #视频理解
+✅ **7.0/10** | 前25% | #模型评估 | #自监督学习 | #音频事件检测 #TinyML
 
 👥 **作者与机构**
 
-- 第一作者：Hedi Zisling（Ben-Gurion University）， Ilan Naiman（Ben-Gurion University）
-- 通讯作者：Omri Azencot（Ben-Gurion University）
-- 作者列表：Hedi Zisling（Ben-Gurion University）， Ilan Naiman（Ben-Gurion University）， Nimrod Berman（Ben-Gurion University）， Supasorn Suwajanakorn（VISTEC）， Omri Azencot（Ben-Gurion University）
-
-#
+- 第一作者：Ismail Lamaakal（穆罕默德一世大学，纳达尔多学科学院）
+- 通讯作者：未明确说明
+- 作者列表：Ismail Lamaakal（穆罕默德一世大学，纳达尔多学科学院）、Chaymae Yahyati（穆罕默德一世大学，纳达尔多学科学院）、Khalid El Makkaoui（穆罕默德一世大学，纳达尔多学科学院）、Ibrahim Ouahbi（穆罕默德一世大学，纳达尔多学科学院）、Yassine Maleh（苏丹穆莱·斯利姆大学，ENS LaSTI实验室）
 
 💡 **毒舌点评**
 
-本文成功地将扩散模型的强大生成能力引入到序列解耦这一难题中，并证明了其在多个真实模态上的优越性，技术路线新颖且实验验证扎实。然而，其核心创新——“静态与动态因子依赖建模”的理论优势（如因果性）在论文中更多是概念性阐述，缺乏对其在实际生成结果中带来何种具体、可度量增益的深入剖析。此外，虽然方法是模态无关的，但针对不同模态（尤其是音频）的骨干网络修改仍需手动调整，并未实现真正的端到端统一，这略微削弱了“模态无关”主张的彻底性。
-
-#
+SNAP-UQ的精髓在于把“模型内部特征流是否正常”这一直觉做成了一个轻量级、单次前传就能计算的指标，巧妙避开了TinyML设备最怕的多次推理和状态保持，堪称“在螺蛳壳里做道场”。但其理论根基（与马氏距离的等价性等）描述稍显仓促，且在更复杂模型（如Transformer）上的泛化性未充分探讨，目前更像一个针对特定CNN/小模型的成功“工程魔法”。
 
 🔗 **开源详情**
 
-- 代码：提供代码仓库链接 https://github.com/azencot-group/DiffSDA。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：使用公开数据集（VoxCeleb， CelebV-HQ， TaiChi-HD， MUG， TIMIT， LibriSpeech， PhysioNet， Air Quality， ETTh1），并说明了预处理方式。
+- 代码：提供代码仓库链接：https://github.com/Ism-ail11/SNAP-UQ。
+- 模型权重：未提及。
+- 数据集：使用公开数据集（MNIST, CIFAR-10, TinyImageNet, SpeechCommands v2, MNIST-C等），未提及由作者发布新数据集。
 - Demo：未提及。
-- 复现材料：附录中提供了极其详细的超参数表（表6-8）、网络架构说明（表8）、训练数据预处理细节、评估指标定义（附录E）以及额外的实验分析（如图7及讨论），复现信息非常充分。
-- 引用的开源项目：依赖EDM（Karras et al., 2022）的采样框架和潜在扩散模型（Rombach et al., 2022）的VQ-VAE。具体实现中可能还依赖其他开源库（如PyTorch， MMEditing等），但论文中未明确列出依赖列表。
+- 复现材料：论文附录（A-O）提供了非常详细的训练细节、超参数设置、构建流程、评估协议和消融实验描述，复现指导性强。
+- 论文中引用的开源项目：未明确引用外部依赖项目，主要对比方法（如Deep Ensembles, MC Dropout）为通用方法。
 
 📌 **核心摘要**
 
-本文针对无监督序列解耦学习中现有方法（如基于VAE/GAN）存在复杂优化、评估协议不完善以及难以处理真实世界高维数据的问题，提出了基于扩散模型的概率建模框架DiffSDA。其核心创新在于：1）首次为序列解耦建立了扩散过程的概率形式化，将静态因子和动态因子建模为相互依赖的随机变量；2）设计了一个模态无关的架构，通过单一标准扩散损失进行优化，仅需更换编码器骨干（如视频用U-Net，音频用MLP）即可适配不同数据。在实验方面，本文在视频（VoxCeleb， CelebV-HQ， TaiChi-HD）、音频（TIMIT， LibriSpeech）和时间序列（PhysioNet， ETTh1）三大类数据的多个基准测试上，定量与定性结果均优于SPYL和DBSE等现有方法。例如，在VoxCeleb的条件交换任务中，DiffSDA的AKD（衡量动态保真度）为2.793，远低于SPYL（4.705）和DBSE（10.96）；在TIMIT音频说话人识别任务中，其解耦间隔（Dis. Gap）达到42.29%，显著优于DBSE（31.11%）。论文还首次提出了零样本解耦和通过PCA探索多因子解耦的新任务，并引入了新的视频解耦评估指标（AED， AKD）。该工作的实际意义在于提供了一个统一、强大的序列数据表示学习框架，可广泛应用于可控视频生成、语音内容-说话人分离、时间序列分析等领域。主要局限性包括：计算效率（虽采用EDM高效采样，但扩散模型固有迭代成本较高）、当前视频生成为逐帧操作可能影响时空一致性，以及多因子解耦的初步探索仍需深化。
-
-#
-
----
-
-### 🥈 [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers)
-
-✅ **7.0/10** | 前25% | #生成模型 | #扩散模型 | #自监督学习 #多语言
-
-👥 **作者与机构**
-
-- 第一作者：Yasaman Haghighi（未说明）
-- 通讯作者：未说明
-- 作者列表：Yasaman Haghighi（未说明）、Bastien Van Delft（未说明）、Mariam Hassan（未说明）、Alexandre Alahi（未说明）
-
-#
-
-💡 **毒舌点评**
-
-亮点：提出“用强层指导弱层”的自监督范式，概念优雅，巧妙地将扩散模型不同层表示质量的差异转化为训练优势，实现了“无需外部监督的自我提升”，且号称跨模态通用。短板：摘要仅展示“最佳结果”，缺乏具体架构图、消融实验（如不同层选择策略的影响、正则化权重的影响）以及与当前主流方法（如其他训练加速技术）的直接对比，使得“高效通用”的宣称略显空洞，说服力有待正文夯实。
-
-#
-
-🔗 **开源详情**
-
-论文中未提及开源计划。未提供代码仓库链接、模型权重、数据集获取方式、在线演示或详细的复现材料。
-
-📌 **核心摘要**
-
-1.  解决的问题：现有扩散模型训练常依赖外部监督信号（如预训练模型）来提升生成质量和训练效率，这增加了训练复杂性和资源需求。
-2.  方法核心：提出LayerSync，一种自监督正则化方法。其核心思想是，扩散模型中间层的表示质量存在差异，利用网络内部“最强”的语义表示作为监督信号，来指导“较弱”层的学习，从而实现自我对齐。
-3.  与已有方法相比的新颖性：区别于需要外部预训练模型或额外数据提供监督的传统方法，LayerSync是一种完全自给自足的即插即用模块，利用模型自身的中间表示构建监督信号，无需任何额外开销。
-4.  主要实验结果：论文称在图像生成（ImageNet数据集）上，将基于流匹配的transformer训练速度提升了8.75倍以上，同时生成质量（FID等指标）提升了23.6%。此外，该方法还展示了在音频、视频和动作生成等多个领域的适用性。（注：摘要未提供具体的对比基线、指标数值和消融实验细节。）
-5.  实际意义：为加速和改善扩散模型训练提供了一种通用、轻量且无需外部依赖的新思路，有望降低多模态生成模型的研发门槛。
-6.  主要局限性：摘要信息有限，其核心有效性高度依赖于“强层指导弱层”这一假设在不同架构和任务中的普适性，但缺乏理论分析和详细的消融研究；声称的跨模态有效性仅以“展示了适用性”表述，缺乏具体实验细节和量化对比。
-
-#
+1. 要解决什么问题：在TinyML场景下，微控制器（MCU）需要可靠的不确定性估计来检测模型故障、分布偏移或精度下降，但传统方法（如集成、MC Dropout）计算和存储开销过大，无法满足毫瓦级设备的严格预算。
+2. 方法核心是什么：提出SNAP-UQ方法，其核心是一种“自监督下一步激活预测”机制。它在网络的几个关键层（如中间层和倒数第二层）附加小型预测头，基于前一层激活的低秩投影来预测当前层激活的均值和对数方差，形成条件高斯模型。通过计算实际激活与预测分布之间的“惊讶度”（即标准化预测误差），聚合得到一个表示网络内部特征流动异常的单次前传不确定性分数。
+3. 与已有方法相比新在哪里：不同于依赖多次推理、额外分支或输出概率校准的常规方法，SNAP-UQ的不确定性信号源于对网络自身层间动态的建模，是条件于深度和自监督的。它不改变主干网络，无需时间缓冲区，所有计算可在标准前传中完成，且设计高度量化友好（int8头，LUT实现指数），额外开销仅为几十KB Flash和不到2%的MAC操作。
+4. 主要实验结果如何：在MNIST、CIFAR-10、TinyImageNet和SpeechCommands数据集上，SNAP-UQ相比基线方法显著降低了资源消耗（Flash减少约40-60%，延迟降低约25-35%），同时保持或提升了性能。关键结果如下表所示：
+   表1：MCU可部署性对比（SpeechCmd任务，Big-MCU）
+   | 方法 | Flash (KB) ↓ | Peak RAM (KB) ↓ | Latency (ms) ↓ | Energy (mJ) ↓ |
+   | :--- | :--- | :--- | :--- | :--- |
+   | BASE | 220 | 84 | 60 | 2.1 |
+   | EE-ens | 360 | 132 | 85 | 3.0 |
+   | DEEP | 290 | 108 | 70 | 2.5 |
+   | SNAP-UQ | 182 | 70 | 52 | 1.7 |
+   在损坏流监控（CIFAR-10-C）中，SNAP-UQ的AUPRC随腐蚀严重度增长最快。对于故障检测（ID✓ vs. ID×），其AUROC在MNIST上达到0.90，SpeechCmd上达到0.94，优于多数基线。
+5. 实际意义是什么：为部署在MCU上的TinyML模型提供了一种开销极低、易于集成、无需在线标签的在线不确定性监控方案，有助于提升设备侧AI应用的鲁棒性和安全性。
+6. 主要局限性是：依赖访问网络中间层激活，对无法修改或访问中间层的“黑盒”模型不适用；使用对角/低秩协方差建模，可能无法捕捉复杂的跨通道相关性；性能对“抽头层”的位置和投影秩的选择敏感。
 
 ---
 

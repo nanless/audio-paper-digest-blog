@@ -2,145 +2,142 @@
 title: "OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs"
 date: 2026-05-03
 draft: false
-tags: [多模态模型, 音视频, 音频问答, 基准测试, 模型评估]
+tags: [基准测试, 多模态模型, 音视频, 音频理解, 模型评估]
 categories: [iclr-2026]
-description: "音频问答 | 7.5/10"
+description: "基准测试 | 8.0/10"
 hiddenInHomeList: true
 ---
 
 # 📄 OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs
 
-#多模态模型 #音视频 #音频问答 #基准测试 #模型评估
+#基准测试 #多模态模型 #音视频 #音频理解 #模型评估
 
-✅ **7.5/10** | 前25% | #音频问答 | #基准测试 | #多模态模型 #音视频
+🔥 **8.0/10** | 前25% | #基准测试 | #多模态模型 | #音视频 #音频理解
 
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
 
 ### 👥 作者与机构
 
-- 第一作者：Caorui Li（东南大学，南京大学）
-- 通讯作者：Jiaheng Liu（南京大学）
-- 作者列表：Caorui Li（东南大学，南京大学），Yu Chen（东南大学，南京大学），Yiyan Ji（南京大学），Jin Xu（阿里巴巴集团），Zhenyu Cui（东南大学），Shihao Li（南京大学），Yuanxing Zhang（快手科技），Zhenghao Song（M-A-P），Dingling Zhang（南京大学），Ying He（北京科技大学），Haoxiang Liu（北京科技大学），Yuxuan Wang（阿里巴巴集团），Qiufeng Wang（东南大学），Jiafu Tang（南京大学），Zhenhe Wu（M-A-P），Jiehui Luo（中央音乐学院），Zhiyu Pan（南京大学），Weihao Xie（华中科技大学），Chenchen Zhang（M-A-P），Zhaohui Wang（南京大学），Jiayi Tian（阿里巴巴集团），Yanghai Wang（南京大学），Zhe Cao（南京大学），Minxin Dai（南京大学），Ke Wang（M-A-P），Runzhe Wen（南京大学），Yinghao Ma（Queen Mary University of London），Yaning Pan（复旦大学），Sungkyun Chang（Queen Mary University of London），Termeh Taheri（Queen Mary University of London），Haiwen Xia（北京大学），Christos Plachouras（Queen Mary University of London），Emmanouil Benetos（Queen Mary University of London），Yizhi Li（曼彻斯特大学），Ge Zhang（M-A-P），Jian Yang（M-A-P），Tianhao Peng（M-A-P），Zili Wang（M-A-P），Minghao Liu（2077AI），Junran Peng（北京科技大学），Zhaoxiang Zhang（中国科学院），Jiaheng Liu（南京大学）
+- 第一作者：Caorui Li (Nanjing University, Southeast University)
+- 通讯作者：Jiaheng Liu (Nanjing University)
+- 作者列表：Caorui Li (Nanjing University, Southeast University)、Yu Chen (Nanjing University, Southeast University)、Yiyan Ji (Nanjing University, Southeast University)、Jin Xu (Alibaba Group)、Zhenyu Cui (Southeast University)、Shihao Li (Nanjing University, Southeast University)、Yuanxing Zhang (Kuaishou Technology)、Zhenghao Song (M-A-P)、Dingling Zhang (Nanjing University, Southeast University)、Ying He (University of Science and Technology Beijing)、Haoxiang Liu (University of Science and Technology Beijing)、Yuxuan Wang (Alibaba Group)、Qiufeng Wang (Southeast University)、Jiafu Tang (Nanjing University, Southeast University)、Zhenhe Wu (M-A-P)、Jiehui Luo (Central Conservatory of Music)、Zhiyu Pan (Nanjing University, Southeast University)、Weihao Xie (Huazhong University of Science and Technology)、Chenchen Zhang (M-A-P)、Zhaohui Wang (Nanjing University, Southeast University)、Jiayi Tian (Alibaba Group)、Yanghai Wang (Nanjing University, Southeast University)、Zhe Cao (Nanjing University, Southeast University)、Minxin Dai (Nanjing University, Southeast University)、Ke Wang (M-A-P)、Runzhe Wen (Nanjing University, Southeast University)、Yinghao Ma (Queen Mary University of London)、Yaning Pan (Fudan University)、Sungkyun Chang (Queen Mary University of London)、Termeh Taheri (Queen Mary University of London)、Haiwen Xia (Peking University)、Christos Plachouras (Queen Mary University of London)、Emmanouil Benetos (Queen Mary University of London)、Yizhi Li (University of Manchester)、Ge Zhang (M-A-P)、Jian Yang (M-A-P)、Tianhao Peng (M-A-P)、Zili Wang (M-A-P)、Minghao Liu (2077AI)、Junran Peng (University of Science and Technology Beijing)、Zhaoxiang Zhang (Chinese Academy of Sciences)、Jiaheng Liu (Nanjing University)
+
+#
 
 ### 💡 毒舌点评
 
-这篇论文在“评估什么”这件事上做到了当前最细粒度和最严谨的实践之一，尤其是对音频模态（语音、音效、音乐）的区分和推理链标注，直指现有模型的软肋。然而，作为一个即将发布的“基准测试”，其说服力很大程度上依赖于后续社区的使用和认可，目前论文更像是一份详尽的“产品设计说明书”，模型能力差距的“诊断报告”虽然详细，但“药方”（如何改进模型）还留待后续研究。
+亮点：数据构建流水线堪称严谨典范——从视频筛选、多轮人工标注到基于先进模型的过滤，最终为每个问题都附带了原子化的推理链，这使得评估结果既可靠又能深入诊断模型弱点。短板：作为评测集本身，其设计虽全面，但“创新”主要体现在工程整合与规则设计上，缺乏理论层面的突破；此外，评估完全依赖选择题格式，对模型开放式生成能力的考察略显不足。
+
+#
 
 ### 🔗 开源详情
 
-- 代码：论文中未提及代码链接，但承诺“We will release OmniVideoBench to foster the development...”并在结论中表示“We promise to release the experimental code for evaluation in the future”。
-- 模型权重：未提及��本文是评测工作，不产出模型）。
-- 数据集：论文中承诺将发布OmniVideoBench数据集，但未提供具体下载链接或获取方式。
-- Demo：未提及。
-- 复现材料：论文在附录B详细说明了视频收集原则，附录C提供了评测所用的完整提示词（Prompt），为复现评测过程提供了关键信息。论文中引用的主要开源模型包括：Qwen2.5-Omni/XL，Qwen3-Omni，Baichuan-Omni-1.5，HumanOmni，MiniCPM-o，VideoLLaMA2，VITA-1.5，Qwen2.5-VL系列，DeepSeek-V3.1，Gemini系列（闭源），以及用于过滤的Gemini-2.0-Flash和DeepSeek-V3.1。
+- 代码：论文提供了GitHub仓库链接 `https://github.com/NJU-LINK/OmniVideoBench`，但说明将在未来发布代码和数据。论文中未提及当前是否有可用代码。
+- 模型权重：论文评估了多个开源模型（如Qwen3-Omni， Qwen2.5-Omni， Baichuan-Omni等），这些模型的权重由其原始团队发布。本文不提供新的模型权重。
+- 数据集：论文的核心贡献是OmniVideoBench数据集，承诺将公开发布。论文中未提供直接的下载链接，但提供了获取方式（通过GitHub仓库）。
+- Demo：论文中未提及提供在线演示。
+- 复现材料：提供了详细的复现声明，涵盖了数据构建、统计、任务定义、提示词和实验稳定性说明。附录中给出了视频分类表（表5）、收集原则（附录B）和完整的提示词模板（附录C）。
+- 论文中引用的开源项目/模型：Gemini系列（闭源）、Qwen系列（开源）、Baichuan-Omni（开源）、HumanOmni（开源）、MiniCPM-o（开源）、VideoLLaMA2（开源）、VITA-1.5（开源）、DeepSeek-V3/V3.1（开源）、Voxtral-Mini-3B（用于ASR，开源）。
 
 ### 📌 核心摘要
 
-1.  解决的问题：现有的多模态大语言模型（MLLM）评估基准无法全面评估模型在音视频协同推理方面的能力，往往忽略音频模态或未能逻辑一致地整合音视频信息。
-2.  方法核心：提出了一个大规模、设计严谨的基准测试集OmniVideoBench。其核心在于收集了628个涵盖多种类型和时长的真实视频，并构建了1000个高质量、多选题形式的问答对。每个问答对都附带有逐步的、明确标注模态（视觉/音频）和证据的推理链，强调模态互补和逻辑一致性。
-3.  与已有方法相比新在哪里：与现有音视频基准相比，OmniVideoBench在多个维度上进行了提升：（1）覆盖更广的视频时长（数秒到30分钟）和更丰富的现实场景（vlog、新闻、纪录片等）；（2）通过严格的三阶段过滤流程（单模态过滤、文本偏差过滤、人工修正）确保问题必须依赖音视频协同推理；（3）提供原子化的推理链标注，而不仅仅是最终答案，有助于分析模型推理过程。
-4.  主要实验结果：实验评估了多种开源和闭源模型，发现：（1）当前模型表现普遍不佳，最优模型Gemini-2.5-Pro准确率仅为58.90%，远低于人类表现的82.69%；（2）开源模型（除最新的Qwen3-Omni外）表现接近随机猜测；（3）模型对音乐类音频的理解能力最差；（4）在不同任务类型上性能差异巨大，背景音乐理解和计数任务较难，关系推理和总结较易。具体结果见下表：
+1. 问题：现有的多模态大模型（MLLMs）音视频理解评估基准存在明显缺陷：要么忽视音频，要么模态整合逻辑不一致，无法全面评估模型的协同推理能力。
+2. 方法核心：构建了OmniVideoBench，一个大规模、高质量的评测集。它包含628个时长可达30分钟的真实视频，1000个精心设计的多选题，并为每个问题标注了逐步的、分模态的推理链。
+3. 创新点：与已有基准相比，新在三点：a) 强调模态互补性与逻辑一致性，强制要求答案依赖音视频协同信息；b) 覆盖长视频和多样化的音频类型（语音、环境音、音乐）；c) 提供显式的推理轨迹，便于分析模型的推理过程。
+4. 主要实验结果：当前顶尖模型（如Gemini-2.5-Pro）在本基准上的准确率仅为58.90%，远低于人类水平的82.69%。开源模型（如Qwen2.5-Omni-7B）表现接近随机猜测（约29.3%）。具体而言，模型在音乐理解（最佳准确率38.46%）和背景理解任务上表现尤其糟糕，而在关系推理和摘要任务上较好。下表列出了部分关键结果：
 
-    | 模型 | 类型 | 平均准确率 |
-    | :--- | :--- | :--- |
-    | Gemini-2.5-Pro | 闭源 | 58.90% |
-    | Gemini-3.0-Flash | 闭源 | 55.10% |
-    | Qwen3-Omni-30B-A3B | 开源 | 38.40% |
-    | Qwen2.5-Omni-7B | 开源 | 29.30% |
-    | 人类表现 | - | 82.69% |
+| 模型 | 平均准确率 | 音乐准确率 | 语音准确率 | (0,1]分钟视频准确率 | (10,30]分钟视频准确率 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Gemini-2.5-Pro | 58.90% | 38.46% | 61.66% | 57.83% | 55.94% |
+| Gemini-2.0-Flash | 41.50% | 29.67% | 43.21% | 49.40% | 34.87% |
+| Qwen3-Omni-30B-A3B | 38.40% | 37.36% | 39.26% | 45.78% | 35.11% |
+| Qwen2.5-Omni-7B | 29.30% | 23.07% | 30.70% | 41.57% | 26.72% |
+| 人类性能 | 82.69% | 未提供 | 未提供 | 未提供 | 未提供 |
 
-5.  实际意义：OmniVideoBench为社区提供了一个标准化的、高难度的评估工具，能够更公平、更深入地诊断和推动MLLM在真实、复杂的音视频理解场景下的能力发展，特别是针对音频-视觉协同推理、长时间建模和抽象音频理解等核心挑战。
-6.  主要局限性：（1）作为评估基准，其自身不提出新的模型架构或训练方法；（2）问题类型虽多，但仍可能未覆盖所有现实世界的音视频推理场景；（3）依赖人工标注，规模（1000 QA对）相对有限，尽管质量很高。
+![OmniVideoBench与现有基准的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-3.png)
+图4展示了OmniVideoBench相较于其他基准（如Daily-Omni）对模型更具挑战性，多数模型表现接近随机水平（红线）。
+
+5. 实际意义：为音视频大模型的评估设立了更严格、更贴近真实需求的标准，揭示了当前模型在跨模态融合、长程时序建模及非语音音频理解上的重大不足，为后续研究指明了方向。
+6. 主要局限性：评测集本身的规模（1000个QA对）相对有限；评估方式限于选择题，可能无法完全反映模型开放式回答的综合能力；数据集构建依赖了部分先进模型（如Gemini）进行过滤，可能存在一定的偏差。
+
+#
 
 ### 🏗️ 模型架构
 
-本文的核心贡献是构建一个基准测试（Benchmark），而非提出一个新的可训练模型。因此，论文中未提供一个具体“模型架构”的描述。评估过程是将现有的多种多模态大语言模型（如Gemini系列、Qwen系列）作为黑盒，输入视频、音频和文本，让其生成答案和推理过程进行评测。
+本文的核心贡献是提出一个评测基准，而非提出一个新的模型架构。因此，论文中未说明具体的模型架构细节。基准的“架构”体现在其数据构建与评估流程上，如图2所示。
 
-数据收集与标注流程架构：论文详细描述了构建数据集的流程，这可以视为一种“数据构建流程架构”。
+![数据收集、标注与精炼的完整流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-1.png)
+图2展示了OmniVideoBench的构建流程：(1) 收集与初步标注，生成初始QA对；(2) 过滤，使用VLM和LLM分别剔除仅依赖单模态或文本信息的题目；(3) 精炼，人工复核并添加逐步推理链，最终得到高质量数据集。
 
-![OmniVideoBench的数据收集、标注与精炼完整流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-1.png)
-（图2：OmniVideoBench的数据收集、标注与精炼完整流程）
-该流程包含三个主要阶段：
-1.  收集与标注：从YouTube和Bilibili收集多样视频，人工设计初始多选题问答对。
-2.  过滤：
-    *   VLM过滤：使用Gemini 2.0 Flash模型过滤掉那些仅凭单模态（仅视觉或仅文本）就能回答正确的问题。
-    *   LLM过滤：使用DeepSeek-V3.1模型过滤掉那些依赖常识或存在文本偏差（如问题、选项长度不一致）的问题。
-3.  精炼：由另一组标注员最终审核，修正答案，确保正确性和唯一性，并为每个问题添加详细的、原子化的逐步推理链（每一步标注模态、证据、推理）。
+#
 
 ### 💡 核心创新点
 
-1.  明确强调模态互补性与逻辑一致性：与许多仅将音频作为附加信息的基准不同，OmniVideoBench从设计上就要求问题必须同时依赖视觉和音频信息才能正确回答，并通过严格的过滤流程保障这一点。这直接针对了现有模型“模态忽视”或“整合薄弱”的核心缺陷。
-2.  构建附带原子化推理链的评估数据集：为每个QA对提供了详细的、分步骤的推理链，并明确标注了每一步所依赖的模态（视觉V或音频A）和具体证据。这超越了仅评估最终答案准确性的传统方法，使得分析模型“如何推理”成为可能，为诊断模型能力瓶颈提供了更细粒度的信号。
-3.  全面覆盖音频类型与时长多样性：数据集包含对语音、环境音效和音乐三种音频类型的平衡考量，并且视频时长从数秒跨越至30分钟，旨在评估模型在不同时间尺度和音频语义复杂度下的鲁棒性。实验结果也证实了模型在处理音乐和长视频时的显著不足。
-4.  严谨的对抗数据泄露设计：在视频收集阶段，有意选择近期发布的视频，以避免与模型训练数据重叠；在问题设计上，限制答案长度、保持选项格式和语义距离一致、避免冗余信息，旨在减少模型利用“捷径”而非真正进行多模态推理的可能性。
+1.  强调模态互补与逻辑一致的基准设计：创新点在于系统性地要求每个问题及其答案必须逻辑上依赖于视觉和音频信息的协同，而非可选项。这解决了现有基准中音频被边缘化或模态整合松散的问题。
+2.  长视频与多样化音频覆盖：将评估范围扩展到长达30分钟的视频，并细致分类音频为语音、环境音、音乐三类。这能更好地测试模型对长期依赖的理解和对非语义音频信息的感知能力，超越了以短片为主的现有基准。
+3.  原子化推理链标注：为每个QA对提供平均5.68步的推理链，每步明确标注所用模态、证据和推论。这超越了只提供最终答案的评估，使得对模型失败原因的定量分析（如音频理解错误、多模态融合错误）成为可能。
+
+#
 
 ### 🔬 细节详述
 
-- 训练数据：本文不涉及模型训练，而是构建评测数据集。数据集详情：628个真实视频（来源：YouTube, Bilibili；时长：4-1955秒；分辨率：480p-1080p；类别：8大类，68小类）。1000个QA对，平均问题长度14.68词，平均答案长度4.92词，平均推理步骤5.68步。音频类型分布：语音（762）、音效（147）、音乐（91）。
-- 损失函数：未提及（非训练论文）。
-- 训练策略：未提及（非训练论文）。
-- 关键超参数：未提及（非训练论文）。
-- 训练硬件：未提及（非训练论文）。
-- 推理细节：论文附录C提供了统一的评测提示词。主要使用选择题（MCQ）格式，并提供了带逐步推理的提示词（C.3）和不带的提示词（C.1）。评测时直接让模型输出选项字母。
-- 正则化或稳定训练技巧：不适用。
+- 训练数据：基准测试本身即为评测数据。由628个真实世界视频构成，来源于YouTube和Bilibili，视频发布日期在2024年6月之后，以减少与训练集重叠。包含8大类68个子类，平均时长384.24秒，最低分辨率480p。
+- 损失函数：未说明，因为本文不涉及模型训练。
+- 训练策略：未说明，因为本文不涉及模型训练。
+- 关键超参数：未说明，因为本文不涉及模型训练。论文中提到了对输入帧数（32, 64, 128, 256）的消融实验。
+- 训练硬件：未说明，因为本文不涉及模型训练。
+- 推理细节：评估使用统一的多选题格式。论文附录C提供了具体的评估提示词，要求模型直接输出选项字母，对于能力受限的模型也要求做出选择。
+- 数据增强/正则化：未说明，因为本文不涉及模型训练。但数据构建过程本身有严格的过滤和精炼规则以控制质量。
+
+#
 
 ### 📊 实验结果
 
-论文在OmniVideoBench上对13个模型进行了系统评测，主要结果汇总如下表：
+论文对多个开源和闭源MLLM进行了全面评估。以下是部分关键结果表格：
 
 表3：不同模型在OmniVideoBench上的结果（按音频类型和视频时长划分）
-
-| 模型 | 类型 | 音乐 | 音效 | 语音 | (0,1]分钟 | (1,5]分钟 | (5,10]分钟 | (10,30]分钟 | 平均 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Omni-Modal Language Models (With Visual and Audio) | | | | | | | | | |
-| Gemini-3.0-Pro | 闭源 | 52.81 | 55.17 | 64.13 | 62.42 | 66.18 | 57.02 | 59.76 | 61.80 |
-| Gemini-2.5-Pro | 闭源 | 38.46 | 57.72 | 61.66 | 57.83 | 64.43 | 55.02 | 55.94 | 58.90 |
-| Qwen3-Omni-30B-A3B | 开源 | 37.36 | 34.67 | 39.26 | 45.78 | 37.03 | 38.86 | 35.11 | 38.40 |
-| Qwen2.5-Omni-7B | 开源 | 23.07 | 25.33 | 30.70 | 41.57 | 27.41 | 25.33 | 26.72 | 29.30 |
-| ... (其他模型略) | | | | | | | | | |
-| Omni-Modal Language Models (Visual Only) | | | | | | | | | |
-| Gemini-2.0-Flash | 闭源 | 25.27 | 36.67 | 30.99 | 33.73 | 35.86 | 32.75 | 22.48 | 31.30 |
-| Visual Language Models (Visual Only) | | | | | | | | | |
-| Qwen2.5-VL-72B | 开源 | 26.37 | 29.33 | 29.91 | 33.13 | 30.03 | 31.88 | 24.43 | 29.50 |
-| Baseline LLMs | | | | | | | | | |
-| DeepSeek-V3.1 | LLM | 28.57 | 26.17 | 27.28 | 30.91 | 27.57 | 25.00 | 26.44 | 27.60 |
+| 模型 | 音乐 | 声音 | 语音 | (0,1]分钟 | (1,5]分钟 | (5,10]分钟 | (10,30]分钟 | 平均 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Gemini-3.0-Pro | 52.81 | 55.17 | 64.13 | 62.42 | 66.18 | 57.02 | 59.76 | 61.80 |
+| Gemini-2.5-Pro | 38.46 | 57.72 | 61.66 | 57.83 | 64.43 | 55.02 | 55.94 | 58.90 |
+| Gemini-3.0-Flash | 49.45 | 50.34 | 56.69 | 58.43 | 55.10 | 55.90 | 52.29 | 55.10 |
+| Qwen3-Omni-30B-A3B | 37.36 | 34.67 | 39.26 | 45.78 | 37.03 | 38.86 | 35.11 | 38.40 |
+| Qwen2.5-Omni-7B | 23.07 | 25.33 | 30.70 | 41.57 | 27.41 | 25.33 | 26.72 | 29.30 |
+| 人类性能 | 未提供 | 未提供 | 未提供 | 未提供 | 未提供 | 未提供 | 未提供 | 82.69 |
 
 关键发现：
-1.  模型与人类差距巨大：最优闭源模型准确率不足62%，人类达到82.69%。
-2.  音视频模态必要性：仅使用视觉输入时，Gemini-2.0-Flash准确率从41.50%暴跌至31.30%，证明音频信息不可或缺。
-3.  音频理解短板：所有模型在音乐类音频上表现最差（Gemini-2.5-Pro仅38.46%），远低于对语音的理解。
-4.  长视频挑战：尽管最强模型在长视频上表现尚可，但多数模型（如Gemini-2.0-Flash）在超长视频（>10分钟）上性能显著下降。
+- 音频类型影响显著：所有模型在音乐主导视频上的准确率普遍最低。Gemini-2.5-Pro在音乐、声音、语音上的准确率分别为38.46%， 57.72%， 61.66%。
+- 视频时长影响复杂：对于多数开源模型（如Qwen3-Omni），随着视频变长，准确率下降明显。但闭源模型（如Gemini-2.5-Pro）在长视频上仍保持相对稳健。
+- 任务难度差异大：图5展示了模型在13个任务上的表现。背景与音乐理解任务最难（Gemini-2.5-Pro准确率<50%），关系推理和摘要任务相对容易（>80%）。
 
-图4与图5、图6、图7 提供了更直观的对比：
+![不同模型在13个任务上的表现对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-4.png)
+图5显示，闭源模型在几乎所有任务上都优于开源模型，尤其在关系推理、空间推理等需要复杂推理的任务上优势明显。背景与音乐理解任务是所有模型的短板。
 
-![图4：性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-3.png)
-（图4：性能对比）展示了OmniVideoBench比Daily-Omni等已有基准更具挑战性，模型表现更接近随机猜测线。
+- ASR文本无法替代原始音频：图6的消融实验表明，仅使用ASR文本+视觉的模型（如Qwen2.5-VL-7B）性能优于直接处理音频+视觉的同参数开源模型（如Qwen2.5-Omni-7B）。但对于音乐和环境音任务，ASR无法提供帮助，表明当前模型的音频理解能力薄弱。
 
-![图5：13类任务性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-4.jpg)
-（图5：13类任务性能对比）显示模型在“背景与音乐理解”任务上普遍表现最差，而在“关系推理”、“总结”等任务上表现较好。
+![不同输入条件下模型的准确率](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-5.png)
+图6(a)显示，提供ASR文本后，视觉模型的性能显著提升，但端到端的音视频模型（Omni）性能反而可能下降，说明当前模型融合音视频的能力不足。图6(b)显示，对于音乐和环境音，ASR基本无效。
 
-![图6：ASR转录本的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-5.jpg)
-（图6：ASR转录本的影响）表明，将音频转为文本（ASR）能提升纯视觉模型的表现，但无法完全替代原生音频理解，尤其在处理音乐和音效时。
+- 更多帧数有益：图7的实验表明，增加输入帧数（从32到256）可以稳定提升模型性能，尤其是在长视频上，这强调了密集时序采样对音视频推理的重要性。
 
-![图7：不同帧数的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-6.jpg)
-（图7：不同帧数的影响）显示增加输入视频帧数（32→256）能稳定提升模型准确率，尤其对长视频增益更明显。
+![不同帧数设置下的模型表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-6.png)
+图7(a)显示，随着输入帧数增加，两个模型的准确率均稳步提升。图7(b)显示，这种提升在更长的视频上更为明显。
 
-表4：开放式问答与多选题对比
-| 模型 | 开放式QA | 多选题（MCQ） |
-| :--- | :--- | :--- |
-| Gemini-2.0-Flash | 27.06% | 41.50% |
-| Qwen2.5-Omni-7B | 17.25% | 29.30% |
-这表明多选题格式可能高估了模型能力。
+- 错误分析：论文对模型错误进行了深入归因，分为六大类：多模态融合错误、时序推理错误、音频理解错误、视觉理解错误等。图12显示，对于开源模型，这三类错误是主要瓶颈。
 
-错误分析（基于图8-13及表6）：
-对错误进行分类后发现，主要失败原因集中在：多模态融合错误（如Gemini-2.0-Flash占61.03%）、音频理解错误和时序推理错误（后两者在开源模型中占比较高）。
+![模型错误类型分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-11.jpg)
+图12表明，对于开源模型Qwen2.5-Omni和Qwen3-Omni，时序推理、音频理解和多模态融合是主要错误来源。
+
+#
 
 ### ⚖️ 评分理由
 
-- 学术质量：5.5/7：论文在基准测试的构建上表现出很高的严谨性和系统性（视频筛选、三阶段过滤、推理链标注）。实验设计全面，对比了主流闭源与开源模型，并进行了多维度的深入分析（音频类型、时长、任务类型、错误归因）。其作为一项评测工作，技术正确性和证据可信度很强。创新性在于评测框架的设计理念（强调整合与推理链），而非提出新模型，因此分数良好但非顶尖。
-- 选题价值：1.5/2：音频-视觉协同理解是当前多模态AI从“感知”走向“认知”的关键瓶颈之一。OmniVideoBench直面这一挑战，其构建对于评估和推动模型发展具有直接且重要的价值，应用前景明确。
-- 开源与复现加成：0.5/1：论文承诺未来发布代码和数据集，这是重要的开源承诺。但当前文本中未提供可直接使用的资源链接，部分流程细节依赖附录，因此给予中等正向加成。
+- 学术质量（6.0/7）：论文在工程实践上表现出色：数据构建流程设计严谨（见图2），多轮过滤和人工验证保证了数据质量；评估框架全面，覆盖多维度；实验分析深入，包含大量对比表格和错误归因分析（如表3，图5，图6，图12）。不足在于，其核心创新是构建一个评测集，而非解决一个学术难题，因此在“原创性”和“技术深度”上相较于提出新模型或新算法的工作稍显平淡。
+- 选题价值（1.5/2）：音视频协同理解是通向真正通用人工智能的关键一步，本工作精准地指出了当前评估体系的缺陷，并提供了一个高质量的“标尺”。它对于驱动社区解决模型在真实世界复杂场景下的推理短板具有明确价值。主要限制是其受众相对垂直，主要面向多模态大模型的研究与开发人员。
+- 开源与复现加成（0.5/1）：论文在GitHub上提供了仓库链接（`https://github.com/NJU-LINK/OmniVideoBench`），并承诺发布数据集和代码。复现说明详尽，包括数据构建原则（附录B）、评估提示词（附录C）和错误分析方法（附录D）。目前代码和数据尚未发布，因此加成有限。论文中引用的主要开源模型/工具包括：Gemini系列、Qwen系列、DeepSeek-V3、Voxtral-Mini-3B（用于ASR）。
+
+#
 
 ---
 

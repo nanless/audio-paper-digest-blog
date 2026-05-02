@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 声源定位 论文列表"
+title: "ICLR 2026 - 听觉注意力解码 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["声源定位"]
+tags: ["听觉注意力解码"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 声源定位 方向论文"
+description: "共 1 篇 ICLR 2026 听觉注意力解码 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 声源定位
+# ICLR 2026 - 听觉注意力解码
 
 共 **1** 篇论文
 
@@ -18,56 +18,59 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Physics-Informed Audio-Geometry-Grid Representation Learning](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid) | 8.0分 | 前25% |
+| 🥇 | [MindMix: A Multimodal Foundation Model for Auditory Percepti](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Physics-Informed Audio-Geometry-Grid Representation Learning for Universal Sound Source Localization](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid)
+### 🥇 [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for)
 
-🔥 **8.0/10** | 前25% | #声源定位 | #麦克风阵列 | #表示学习 #物理信息
+✅ **7.5/10** | 前25% | #听觉注意力解码 | #预训练 | #多模态模型 #自监督学习
 
 👥 **作者与机构**
 
-- 第一作者：Min-Sang Baek (汉阳大学电子工程系)
-- 通讯作者：Joon-Hyuk Chang (汉阳大学电子工程系)
-- 作者列表：Min-Sang Baek (汉阳大学电子工程系), Gyeong-Su Kim (汉阳大学电子工程系), Donghyun Kim (汉阳大学电子工程系), Joon-Hyuk Chang (汉阳大学电子工程系)
-
-#
+- 第一作者：Rui Liu（香港理工大学）
+- 通讯作者：Jibin Wu（香港理工大学）、Kay Chen Tan（香港理工大学）
+- 作者列表：Rui Liu（香港理工大学），Zhige Chen（香港理工大学），Shu Peng（香港理工大学），Wenlong You（香港理工大学），Zhi-An Huang（香港城市大学东莞校区），Jibin Wu（香港理工大学），Kay Chen Tan（香港理工大学）
 
 💡 **毒舌点评**
 
-这篇工作就像一位严谨的“物理-几何”工匠，为SSL领域精心打造了一套可扩展的“乐高”框架（AGG-RL），并通过LNuDFT和rMPE两个精巧的“物理榫卯”增强了模型对真实声学规律的理解，实验数据翔实、可视化效果直观，展现了扎实的工程优化能力。然而，其复杂性也令人望而生畏——要同时搞定非均匀DFT学习、相对位置编码和双网络表示对齐，部署门槛不低；此外，模型依然假设声源数量已知，离真正的“开箱即用”通用方案还差最后一口气。
-
-#
+本文将多模态对齐技术引入EEG听觉解码，提出了一个新颖的CALRA模块进行精细交互，实验结果在特定协议下极其亮眼。但核心性能（如99.82%的AAD准确率）在严格的跨试验评估下出现断崖式下跌，且模型总参数达97M，实际部署的复杂度和数据需求存疑。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了代码仓库链接：https://github.com/BaekMS/Audio-Geometry-Grid_Representation-Learning。
-- 模型权重：论文中未提及是否提供预训练模型权重。
-- 数据集：实验使用了公开数据集（LibriSpeech， MS-SNSD， TIMIT， ESC-50， LOCATA， STARSS23），论文未提供自有数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了非常充分的复现信息。附录详细描述了模型架构（AuGeonet， Gridnet）、训练细节（损失函数、优化器、学习率、批次大小、CGT策略、DSCL设置）、数据生成算法（合成数据集）、评估指标定义、以及所有实验的具体设置（基线实现、超参数选择依据）。论文引用的开源工具包括：gpuRIR（RIR模拟）、fvcore（计算量测量）、py-webrtcvad（VAD标签生成）。
+- 代码：提供代码仓库链接：`https://github.com/CookieMikeLiu/MindMix`
+- 模型权重：论文中未提及是否公开预训练或微调后的模型权重。
+- 数据集：论文中使用的数据集均为公开数据集，但未提供统一的下载脚本或处理好的数据。获取方式需参考各原始数据集出处。
+- Demo：未提供在线演示。
+- 复现材料：论文在附录中提供了详细的实现细节（A.3），包括优化器配置、学习率调度、批次大小、关键超参数（表A2）、负采样策略以及模型复杂度分析（表A3），这些信息对复现有重要帮助。
+- 论文中引用的开源项目：使用了`Wav2Vec 2.0`作为音频编码器。依赖的框架包括PyTorch。
 
 📌 **核心摘要**
 
-1.  要解决的问题：现有基于深度学习的声源定位（SSL）方法大多受限于固定的麦克风阵列几何形状和预定义的方位角网格，导致模型无法泛化到新的阵列或网格设置，限制了其通用性和可扩展性。
-2.  方法核心：提出音频-几何-网格表示学习（AGG-RL）框架。该框架包含两个核心网络：音频-几何表示网络（AuGeonet）和网格表示网络（Gridnet）。AuGeonet从音频信号和阵列几何中提取音频-几何表示（AGR），Gridnet将候选DOA网格编码为网格表示（GR）。通过学习AGR与GR的内积相似度，模型输出任意候选DOA网格上的概率空间谱，从而实现网格灵活、几何不变的SSL。
-3.  与已有方法相比新在哪里：与现有固定网格分类或模板匹配方法不同，AGG-RL通过表示学习在共享潜空间中对齐音频-几何信息与网格信息，支持推理时灵活更换DOA网格而无需重训练。此外，引入了两个物理信息组件：(a) 可学习非均匀离散傅里叶变换（LNuDFT），自适应优化频率分配以强调信息丰富的相位区域；(b) 相对麦克风位置编码（rMPE），以相对坐标编码麦克风几何，符合TDOA/IPD的物理本质。
-4.  主要实验结果：在合成和真实数据集（LOCATA）上的实验表明，AGG-RL在未见阵列几何（如Eigenmike）和动态通道数（Dynamic-U）条件下均显著优于经典方法（MUSIC, SRP-PHAT）和现有DNN基线（Unet, Neural-SRP, GI-DOAEnet）。例如，在未见的Eigenmike数据集上，提出方法的MAE为11.24°，ACC10为72.17%，而次优的GI-DOAEnetFM的MAE高达93.61°（消融实验中(iii)-(vi)等变体进一步验证了各组件有效性）。关键实验数据如下表所示：
+这篇论文旨在解决从非侵入式EEG信号解码复杂听觉体验时，现有单模态基础模型因缺乏与听觉刺激的深度耦合而导致跨任务泛化能力不足的问题。其核心方法是提出一个多模态基础模型MindMix，采用两阶段训练：首先在3500多小时EEG数据上预训练一个高容量EEG编码器；其次在100多小时配对数据上，通过新颖的跨注意力低秩对齐模块学习神经-声学映射，并用对比学习优化整个框架。与已有方法相比，MindMix是首个专门设计用于学习细粒度、深度对齐的神经-声学表示的多模态基础模型。实验结果显示，MindMix在听觉注意力解码、听觉情感识别和跨模态检索等多个任务上显著超越现有基线，例如在KUL数据集上达到了99.82%的平衡准确率。这项工作为多模态大脑解码和听觉脑机接口的未来研究奠定了基础。主要局限性在于，其惊人的性能主要是在受控的、可能存在数据泄露风险的帧级评估协议下取得的；当采用更严格的跨试验评估协议时，性能会显著下降，且模型计算成本较高。
 
-| 方法 | NAO robot (seen) | Eigenmike (unseen) | Dynamic-S (seen) | Dynamic-U (unseen) |
+### 关键实验结果对比表
+| 任务 | 数据集 | 方法 | 指标 | 结果 |
 | :--- | :--- | :--- | :--- | :--- |
-| | MAE ↓ / ACC10 ↑ | MAE ↓ / ACC10 ↑ | MAE ↓ / ACC10 ↑ | MAE ↓ / ACC10 ↑ |
-| GI-DOAEnetFM | 11.31 / 77.36 | 93.61 / 0.00 | 15.49 / 64.36 | 54.81 / 6.10 |
-| Unet (with AGG-RL) | 12.79 / 77.33 | 16.86 / 55.69 | 21.23 / 53.74 | 20.11 / 56.08 |
-| Proposed | 8.25 / 90.78 | 11.24 / 72.17 | 10.32 / 77.34 | 14.12 / 63.17 |
+| 语音听觉注意力解码 (AAD) | KUL | DARNet (SOTA) | 平衡准确率 | 0.9481 ± 0.036 |
+| | | MindMix (Ours) | 平衡准确率 | 0.9982 ± 0.008* |
+| | DTU | AADNet | 平衡准确率 | 0.6875 ± 0.057 |
+| | | MindMix (Ours) | 平衡准确率 | 0.9993 ± 0.009* |
+| | ESAA | DARNet | 平衡准确率 | 0.9089 ± 0.054 |
+| | | MindMix (Ours) | 平衡准确率 | 1.0000 ± 0.000* |
+| 情感分析 | PME4 | MusicAAD | 平衡准确率 | 0.6142 ± 0.062 |
+| | | MindMix (Ours) | 平衡准确率 | 0.7256 ± 0.123* |
+| | HR-EEG4EMO | DARNet | 平衡准确率 | 0.8052 ± 0.081 |
+| | | MindMix (Ours) | 平衡准确率 | 0.8878 ± 0.045* |
+| 音乐检索 | MAD-EEG | AADNet | Duo准确率 | 0.8824 ± 0.071 |
+| | | MindMix (Ours) | Duo准确率 | 0.9475 ± 0.025* |
 
-5.  实际意义：该工作为构建适用于任意麦克风阵列和任意分析网格的“通用”SSL系统迈出重要一步，降低了针对不同硬件定制模型的成本，增强了SSL技术在机器人、自动驾驶、AR/VR等多样化实际场景中的适应性和部署灵活性。
-6.  主要局限性：(a) 框架复杂度较高，涉及多个网络和物理信息组件的联合训练；(b) 推理时仍需预先指定候选DOA网格；(c) 性能在“未见”条件（真实数据集）与“见过”条件（合成数据集）之间仍存在差距，表明领域适应仍有提升空间。
+注：标有表示基于配对t检验 (p-value correction, α = 0.05)，该方法显著优于比较方法。*
 
-#
+![MindMix 框架概览](icassp-img://1ifQzlETeG/0.png)
+图1展示了MindMix的整体框架，包括从头训练的EEG编码器、预训练的音频编码器（Wav2Vec 2.0）以及用于跨模态对齐的核心CALRA模块。整个框架通过对比学习目标在大规模配对数据上进行预训练，学习统一的EEG-音频表示空间。
 
 ---
 

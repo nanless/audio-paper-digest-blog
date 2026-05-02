@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 语音问答 论文列表"
+title: "ICLR 2026 - 跨模态 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音问答"]
+tags: ["跨模态"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 语音问答 方向论文"
+description: "共 1 篇 ICLR 2026 跨模态 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音问答
+# ICLR 2026 - 跨模态
 
 共 **1** 篇论文
 
@@ -18,64 +18,53 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Data-Centric Lessons To Improve Speech-Language Pretraining](/audio-paper-digest-blog/posts/2026-05-03-data-centric-lessons-to-improve-speech-language) | 8.5分 | 前10% |
+| 🥇 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Data-Centric Lessons To Improve Speech-Language Pretraining](/audio-paper-digest-blog/posts/2026-05-03-data-centric-lessons-to-improve-speech-language)
+### 🥇 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions)
 
-🔥 **8.5/10** | 前10% | #语音问答 | #预训练 | #数据增强 #语音大模型
+🔥 **8.5/10** | 前25% | #跨模态 | #对比学习 | #自监督学习 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Vishaal Udandarao（Apple, University of Cambridge, University of Tübingen）
-- 通讯作者：未说明
-- 作者列表：Vishaal Udandarao（Apple, University of Cambridge, University of Tübingen）、Zhiyun Lu（Apple）、Xuankai Chang（Apple）、Yongqiang Wang（Apple）、Albin Madappally Jose（Apple）、Fartash Faghri（Apple）、Josh Gardner（未说明具体机构）、Chung-Cheng Chiu（Apple）
+- 第一作者：Chiraag Kaushik（佐治亚理工学院电气与计算机工程学院）
+- 通讯作者：未明确标注。根据单位信息，Davis Barch和Andrea Fanelli均来自Dolby Laboratories（杜比实验室），可视为主要联系人。
+- 作者列表：Chiraag Kaushik（佐治亚理工学院电气与计算机工程学院）、Davis Barch（杜比实验室）、Andrea Fanelli（杜比实验室）
+
+#
 
 💡 **毒舌点评**
 
-这篇论文的核心亮点在于其方法论上的严谨性和系统性，将“数据为中心”的理念在语音-语言预训练领域进行了教科书级别的实践，通过干净的实验设计剥离出了清晰的数据策展“黄金法则”（如细粒度交错、混合合成数据）。但其短板也同样明显：整个研究局限于一个固定的3.8B模型架构，未能探索这些数据策略是否在不同模型规模（特别是更大规模）下依然成立或带来不同收益，这使得其结论的普适性打了折扣；此外，论文虽然强调了数据的重要性，但所提出的最佳数据集构建流程（依赖多个高质量ASR/TTS模型进行清洗和合成）本身可能需要高昂的成本，对资源受限团队的可复现性构成挑战。
+本文精准地诊断了当前多模态嵌入分析领域的一个“通病”——SAE学出的特征在不同模态间“各玩各的”，并给出了一个理论上优雅、实验上有效的药方（群稀疏约束）。其亮点在于将经典的结构化稀疏思想与前沿的多模态可解释性问题结合得恰到好处，且实验验证极为扎实。短板则在于，提出的掩码策略略显“手工”，计算开销的讨论完全缺失，对于大规模生产环境的适用性有待进一步验证。
+
+#
 
 🔗 **开源详情**
 
--   代码：论文中未提及提供代码仓库链接。
--   模型权重：未明确提及是否会公开SpeLangy模型的权重。
--   数据集：论文中描述了如何构建Krist和Quest数据集，但未说明是否会公开这些数据集或提供获取方式。
--   Demo：未提供在线演示。
--   复现材料：提供了非常详尽的训练细节、超参数设置、评估协议、数据处理流水线（附录A）和污染检测方法（附��L.5），这些信息对复现研究过程本身非常有帮助。
--   论文中引用的开源项目：
-    -   说话人分离：pyannote.audio (Bredin, 2023)
-    -   文本转语音：MeloTTS (Zhao et al., 2023)
-    -   语音识别：Whisper (Radford et al., 2023)， Nvidia-Parakeet-TDT-CTC
-    -   转录集成：ROVER (Fiscus, 1997)
-    -   文本分词：SentencePiece (Kudo & Richardson, 2018)
-    -   主题分类器：TopicClassifier-NoURL (Wettig et al., 2025)
-    -   LLM评估：lm-evaluation-harness (Gao et al., 2024a)
-    -   评估基准：AlpacaEval (Li et al., 2023)
+- 代码：论文中未提及官方代码仓库链接。但引用并可能适配了现有的SAE实现库（Marks et al., 2024），该库的代码可能是开源的。
+- 模型权重：未提及是否会公开训练好的GSAE/MGSAE模型权重。
+- 数据集：使用的是公开数据集（CC3M, JamendoMaxCaps, MS COCO, MusicBench等），并说明了获取方式。
+- Demo：未提供在线演示。
+- 复现材料：论文附录（Appendix A.2）提供了详细的实验细节，包括数据集描述、超参数网格搜索过程、训练步数、batch size、优化器等关键信息，复现支持度较好。
+- 论文中引用的开源项目：引用了`dictionary_learning`（Marks et al., 2024）作为SAE训练的实现基础，这很可能是一个开源项目。
 
 📌 **核心摘要**
 
-1.  问题：尽管语音-语言模型在语音问答任务上取得进展，但缺乏对预训练数据处理和策展策略的系统性研究，导致性能提升的驱动因素不明确。
-2.  方法核心：论文采用数据为中心的视角，通过控制变量实验，系统研究了三个关键问题：(1) 如何处理原始网络音频（发现细粒度交错更优）；(2) 如何构建合成数据集（提出Krist和Quest）；(3) 如何在交错训练中采样模态（发现确定性交替采样更优）。
-3.  新意：这是首个在统一、控制的实验设置下，对语音-语言交错预训练的数据处理策略进行系统比较和消融的工作，填补了该领域的空白。
-4.  主要实验结果：
-    *   细粒度交错：相比粗粒度，平均SQA准确率提升3.1%（40.7% vs 37.6%）。
-    *   合成数据：在网页爬取数据中混入34%的Quest数据，平均SQA准确率提升7.2%（47.9% vs 40.7%），同时大幅提升MMLU。
-    *   确定性采样：相比随机采样，平均SQA准确率提升1.0%（42.4% vs 41.4%）。
-    *   最佳模型（SpeLangy）：一个3.8B参数的模型，在三个SQA基准测试上的平均准确率达到51.8%，比参数量最大可达其3倍的基线模型（如10.5B的Kimi-Audio，41.6%）高出10.2%的绝对值。
+1. 问题：标准的稀疏自编码器（SAE）在处理CLIP、CLAP等多模态对齐嵌入空间时，会学到“分割字典”现象，即大部分神经元只对单一模态的输入激活，导致不同模态间语义概念的表示不对齐，限制了跨模态任务的性能和模型的可解释性。
+2. 方法核心：提出群稀疏自编码器（GSAE） 和掩码群稀疏自编码器（MGSAE）。核心是在标准SAE的重建损失上，增加一个针对配对多模态样本的群稀疏损失（L₂,₁范数），强制要求配对样本的稀疏编码具有相似的支撑集（即激活的神经元）。此外，引入跨模态随机掩码，在编码前对配对样本施加相同的随机掩码，进一步鼓励共享激活模式。
+3. 创新性：与之前仅应用标准SAE或后处理配对神经元的方法不同，本文是第一个从训练目标入手，通过显式正则化来学习跨模态对齐字典的工作。理论上证明了在对齐的嵌入空间上，存在一个比分割字典对齐性更好的非分割字典（定理1）。
+4. 主要实验结果：
+    - 减少死神经元：在CLIP和CLAP上，MGSAE学习到的同时激活两种模态的神经元数量显著多于标准SAE，死神经元（任何模态都不激活）数量大幅减少（见图3）。
+    - 提升语义性与多模态性：MGSAE的神经元在多模态单义性分数（MMS）上远高于标准SAE，表明其学到的概念既语义连贯又跨模态（见图4）。
+    - 提升零样本跨模态任务性能：在图像/文本任务（CIFAR-10/100， ImageNet）上，MGSAE的分类准确率相比标准SAE平均提升超过10个百分点，例如在CIFAR-10上从0.657提升至0.842（表1）。在音频/文本任务上也有显著提升（表2）。
+    - 提升可解释性：在CelebA属性预测任务中，MGSAE能识别出更准确、更相关（如“金发女孩”）和具有洞察力（如揭示“女性”这一虚假相关性）的概念（图5）。
+5. 实际意义：该方法使得在不损失跨模态对齐的前提下，对多模态模型进行稀疏分解和解释成为可能，为改进跨模态检索、生成任务中的可控性，以及检测多模态模型的偏差与虚假相关性提供了新的工具。
+6. 主要局限性：方法引入了额外的计算开销（群稀疏损失和掩码操作），但论文未讨论其对训练时间和资源的影响。实验主要聚焦于CLIP和CLAP框架，其对更异构或未对齐的多模态空间的效果未被验证。
 
-    | 模型 | 参数量 | SWQ | STQ | SLQ | 平均 |
-    | :--- | :---: | :---: | :---: | :---: | :---: |
-    | Kimi-Audio | 10.5B | 44.0 | 33.8 | 47.0 | 41.6 |
-    | Qwen-2-Audio | 8.4B | 45.7 | 33.4 | 47.0 | 42.0 |
-    | SpeLangy | 3.8B | 45.7 | 44.6 | 65.0 | 51.8 |
-    | GLM-4-Voice (SFT) | 9.9B | 43.3 | 52.4 | 64.7 | 53.4 |
-    | Voxtral-mini (SFT) | 4.7B | 41.6 | 46.6 | 65.3 | 51.2 |
-
-5.  实际意义：明确给出了构建高质量语音-语言预训练数据的实践指南，证明了小模型通过卓越的数据策展可以超越大模型，对降低训练成本和提升模型效率有重要指导作用。
-6.  主要局限性：所有实验结论均基于3.8B规模的单一架构验证；合成数据的构建依赖于昂贵的外部模型（GPT-4o, TTS）；评估集中于英文语音问答，跨语言泛化性未验证。
+#
 
 ---
 

@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 音乐理解 论文列表"
+title: "ICLR 2026 - 音视频 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音乐理解"]
+tags: ["音视频"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 音乐理解 方向论文"
+description: "共 3 篇 ICLR 2026 音视频 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音乐理解
+# ICLR 2026 - 音视频
 
-共 **2** 篇论文
+共 **3** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,106 +18,151 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Music Flamingo: Scaling Music Understanding in Audio Languag](/audio-paper-digest-blog/posts/2026-05-03-music-flamingo-scaling-music-understanding-in) | 9.0分 | 前10% |
-| 🥈 | [LadderSym: A Multimodal Interleaved Transformer for Music Pr](/audio-paper-digest-blog/posts/2026-05-03-laddersym-a-multimodal-interleaved-transformer) | 7.0分 | 前25% |
+| 🥇 | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset) | 8.5分 | 前10% |
+| 🥈 | [Instilling an Active Mind in Avatars via Cognitive Simulatio](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via) | 7.5分 | 前25% |
+| 🥉 | [Entropy-Monitored Kernelized Token Distillation for Audio-Vi](/audio-paper-digest-blog/posts/2026-05-03-entropy-monitored-kernelized-token-distillation) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Music Flamingo: Scaling Music Understanding in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-music-flamingo-scaling-music-understanding-in)
+### 🥇 [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset)
 
-🔥 **9.0/10** | 前10% | #音乐理解 | #音频大模型 | #多模态模型 #预训练
+🔥 **8.5/10** | 前10% | #音视频 | #数据集 | #多模态模型 #生成模型
 
 👥 **作者与机构**
 
-- 第一作者：Sreyan Ghosh（论文中未提供所属机构）
-- 通讯作者：未说明
-- 作者列表：Sreyan Ghosh（未说明）、Arushi Goel（未说明）、Lasha Koroshinadze（未说明）、Sang-gil Lee（未说明）、Zhifeng Kong（未说明）、Joao Felipe Santos（未说明）、Ramani Duraiswami（未说明）、Dinesh Manocha（未说明）、Wei Ping（未说明）、Mohammad Shoeybi（未说明）、Bryan Catanzaro（未说明）
-
-#
+- 第一作者：Youliang Zhang (清华大学)
+- 通讯作者：Duomin Wang (StepFun), Xiu Li (清华大学)
+- 作者列表：
+  - Youliang Zhang (清华大学, StepFun)
+  - Zhaoyang Li (StepFun)
+  - Duomin Wang (StepFun)
+  - Jiahe Zhang (未说明)
+  - Deyu Zhou (StepFun, 香港科技大学)
+  - Zixin Yin (StepFun, 香港科技大学)
+  - Xili Dai (香港科技大学)
+  - Gang Yu (StepFun)
+  - Xiu Li (清华大学)
 
 💡 **毒舌点评**
 
-亮点：本论文堪称“系统工程”的典范，它不满足于仅在模型架构上做文章，而是直击领域痛点——通过精心设计的多阶段流程，构建了高质量、细粒度标注的音乐数据集MF-Skills，并巧妙地将基于音乐理论的链式思考和强化学习融入训练流程，从而实现了从“能听”到“能想”的质变。短板：核心模型架构依赖于已有的“Audio Flamingo 3”骨架，原创性更多体现在“如何更好地训练和增强它”，而非提出一个全新的、可能更高效的音乐理解架构范式。
-
-#
+这篇论文最大的亮点在于其“基建狂魔”式的数据集构建工作：从YouTube收集了海量原始数据，通过一套涉及场景分割、说话人日志、人脸检测、唇形同步、ID校正等多步骤的自动化流水线，并辅以丰富的多模态标注和严苛的质量过滤，最终搭建起一个专用于“交互”场景的5M级数据集，这为整个社区做了一个很好的开路工作。短板在于，其配套提出的基线模型在架构上属于组合现有技术（Qwen2.5-Omni理解 + AR生成 + 扩散优化），在核心视频生成质量指标上并未达到SOTA，更像是一个“Demo”而非一个性能标杆，且论文未明确模型权重和代码库的开放细节，略显遗憾。
 
 🔗 **开源详情**
 
-- 代码：论文提供了Demo链接（https://musicflamingo.github.io），通常暗示将开源。根据摘要描述，项目应有配套代码仓库，但具体链接未在摘要中明确给出。
-- 模型权重：论文提到提供了Demo，且其工作性质为模型发布，极大概率公开了模型权重。具体下载链接需查阅论文或GitHub页面。
-- 数据集：论文明确构建了MF-Skills数据集，这是其核心贡献之一。根据此类论文的惯例，极大概率公开以促进研究。
-- Demo：是，提供了在线演示：https://musicflamingo.github.io
-- 复现材料：论文详细描述了训练配方（MF-Skills、MF-Think、GRPO），这为复现提供了关键蓝图。具体的超参数、配置等细节需查阅论文全文。
-- 引用的开源项目：论文明确使用并改进了 Audio Flamingo 3 作为基座模型。
+- 代码：论文中承诺将开源“数据处理代码”，但未提供具体的GitHub仓库链接。
+- 模型权重：论文中提供了基线模型的架构和训练细节，但未明确提及是否公开训练好的模型权重。
+- 数据集：论文中明确承诺将公开整个数据集，包括“原始数据（YouTube视频URL和时间戳）、标注和数据处理代码”，采用CC-BY-NC 4.0许可。获取方式应为通过URL索引自行下载原始视频。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文详细描述了数据集构建流程、标注内容（附录A.11）、基线模型架构、训练细节（附录A.7，硬件、超参数、三阶段训练），以及评测基准的构成和评估方法，复现信息较为充分。
+- 引用的开源项目：论文中引用了大量开源工具和模型，包括：
+    *   数据处理：PySceneDetect（场景分割）、3D-Speaker（说话人分离）、YOLO（人脸检测）、SyncNet（唇音同步校验）、ArcFace（人脸识别）、DWpose（姿态估计）、Whisper（ASR）、Qwen2.5-VL/Qwen3（多模态标注）。
+    *   质量评估：DOVER（视频质量）、PaddleOCR（文本检测）。
+    *   基线模型：Qwen2.5-Omni（多模态理解）、CosyVoice2（音频分词与解码）、3D-VAE（视频编解码）、NOVA中的空间转换器组件。
+    *   级联对比：Sonic, Hallo3。
 
 📌 **核心摘要**
 
-1. 问题：现有音频-语言模型在音乐理解方面能力有限，主要受限于高质量、细粒度音乐数据和标注的匮乏，导致模型只能生成表面化描述，缺乏对音乐层次结构、文化背景等深层信息的理解与推理能力。
-2. 方法：论文提出Music Flamingo模型。核心方法包括：(1) 构建大规模数据集MF-Skills，通过多阶段流程生成覆盖和声、结构、音色、歌词、文化背景的丰富描述与问答对；(2) 在Audio Flamingo 3基座模型上进行微调；(3) 引入两阶段后训练策略：先使用基于音乐理论的链式思考数据集MF-Think进行冷启动，再通过GRPO强化学习（使用自定义奖励）进一步提升推理能力。
-3. 创新点：相较于已有工作，其创新在于系统性地解决了音乐理解的特定挑战：提出了首个专注于音乐多维度理解的大规模细粒度标注数据集构建流程；设计了结合领域知识（音乐理论）的监督微调和强化学习的复合后训练策略，以引导模型进行更深度的推理。
-4. 实验结果：论文摘要声称，Music Flamingo在超过10个音乐理解与推理基准测试上取得了最先进的（SOTA）结果。这表明其在各项细分任务（如分类、描述、问答、推理）上均超越了之前的模型。（注：具体数值未在摘要中提供，需查阅原文表格）
-5. 实际意义：该工作为音频-语言模型树立了音乐理解的新标杆，展示了如何让模型超越简单的音频标签，实现更接近人类的、对歌曲的分层感知和逻辑推理，为下一代音乐AI应用提供了基础。
-6. 主要局限性：论文摘要未明确提及局限性。可能的局限包括：对极端非主流音乐文化的数据覆盖可能仍有不足；引入复杂后训练流程可能增加训练成本；模型对音乐理论推理的深度可能受限于其训练数据和预设规则。
-
-#
+1.  要解决什么问题：当前数字人生成技术正在从被动驱动向主动交互演进，但学术界缺乏专门为“音频-视觉双人交互”任务设计的大规模、高质量训练数据集。
+2.  方法核心是什么：提出了SpeakerVid-5M数据集构建流程。核心是从YouTube收集原始视频，通过自动化预处理（场景分割、说话人分离、人脸检测与跟踪、唇音同步、ID校正）、丰富的多模态标注（结构化文本、ASR、骨骼、模糊度分数等）以及严格的多维度质量过滤（亮度、视频质量、清晰度、模糊度、音频质量），系统化地产出训练数据。
+3.  与已有方法相比新在哪里：1) 首个专门面向音频-视觉双人交互生成的数据集，提供了完整的问答对，而不仅是单人说话数据。2) 规模最大：包含5.2M单人片段（8.7K小时）和770K对话对（1.8K小时）。3) 标注最丰富：集成了ASR、人脸/手模糊度、运动度评分、结构化文本等多维度信息。4) 分层设计：分为大规模预训练子集和高质量SFT子集。
+4.  主要实验结果如何：论文提供了一个基于自回归框架的基线模型，并在新构建的VidChatBench基准上进行了评估。关键结果见表2：
+    | 方法 | 设置 | FID ↓ | FVD ↓ | PSNR ↑ | SSIM ↑ | ArcFace ↑ | FIDEmotion ↓ |
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+    | 基线（仅音频） | 条件 | 57.03 | 55.16 | 15.31 | 0.62 | 0.630 | 3.45 |
+    | 基线（完整） | 条件 | 34.72 | 30.43 | 17.39 | 0.65 | 0.758 | 3.23 |
+    | 基线（完整） | 双人 | 32.35 | 28.82 | 17.55 | 0.66 | 0.772 | 3.22 |
+    结论：在更自然的“双人”设置下，模型性能全面优于基于文本条件的“条件”设置，且音视频联合生成并未损害视觉质量。
+5.  实际意义是什么：为音视频交互式数字人生成这一前沿任务奠定了关键的数据基础和评估标准，有望加速该领域的研究进展，推动更自然的虚拟助手、直播电商、在线教育等应用的发展。
+6.  主要局限性是什么：1) 数据集存在互联网数据固有的地理、语言和人口统计偏见（如英语、白人占比高）。2) 提出的基线模型架构相对简单，且在部分视觉保真度指标上不如大型级联扩散模型（如表4所示）。3) 论文未提供代码库的具体链接，模型权重的公开细节也不明确。
 
 ---
 
-### 🥈 [LadderSym: A Multimodal Interleaved Transformer for Music Practice Error Detection](/audio-paper-digest-blog/posts/2026-05-03-laddersym-a-multimodal-interleaved-transformer)
+### 🥈 [Instilling an Active Mind in Avatars via Cognitive Simulation](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via)
 
-✅ **7.0/10** | 前25% | #音乐理解 | #多模态模型 | #端到端 #基准测试
+✅ **7.5/10** | 前25% | #音视频 | #扩散模型 | #多模态模型 #大语言模型
 
 👥 **作者与机构**
 
-- 第一作者：Benjamin Shiue-Hal Chou（普渡大学）
-- 通讯作者：未明确说明。从作者列表和邮箱前缀推断，多位作者来自普渡大学，但论文未指定通讯作者。
-- 作者列表：
-  - Benjamin Shiue-Hal Chou¹ (chou150@purdue.edu)
-  - Purvish Jajal¹ (pjajal@purdue.edu)
-  - Nick John Eliopoulos¹ (neliopou@purdue.edu)
-  - James C. Davis¹ (davisjam@purdue.edu)
-  - George K. Thiruvathukal² (gkt@cs.luc.edu)
-  - Kristen Yeon-Ji Yun¹ (yun98@purdue.edu)
-  - Yung-Hsiang Lu¹ (yunglu@purdue.edu)
-- 机构：
-  ¹ Purdue University
-  ² Loyola University Chicago
+- 第一作者：Jianwen Jiang（ByteDance）
+- 通讯作者：Jianwen Jiang（ByteDance）
+- 作者列表：Jianwen Jiang（ByteDance）， Weihong Zeng（ByteDance）， Zerong Zheng（ByteDance）， Jiaqi Yang（ByteDance）， Chao Liang（ByteDance）， Wang Liao（ByteDance）， Han Liang（ByteDance）， Weifeng Chen（ByteDance）， Xing Wang（ByteDance）， Yuan Zhang（ByteDance）， Mingyuan Gao（ByteDance）
+
+#
 
 💡 **毒舌点评**
 
-论文巧妙地将“阶梯（Ladder）”的隐喻融入架构设计，通过交错的对齐模块解决了融合深度的两难问题，同时用符号乐谱提示“补全”了音频乐谱的模糊信息，是一个思路清晰、工程落地扎实的工作。然而，所有评估都建立在合成数据集上，虽然作者辛苦收集了20首真实初学者录音作为验证，但这点“真实世界”数据对深度学习模型来说更像是杯水车薪，离真正的应用验证还有距离。
+亮点在于将认知科学的“双系统理论”巧妙地映射到生成模型架构中，为视频头像注入“意图”提供了新颖且符合直觉的理论框架；短板是其训练依赖的海量（1.5万小时）视频数据完全未公开，且整体框架需要调用强大的MLLM（如miniCPM-o， Seed-1.5-VL）进行“思考”，这使得复现和部署成本极高，更像是一份面向工业巨头的技术蓝图而非学术社区的即用工具。
+
+#
 
 🔗 **开源详情**
 
-- 代码：提供代码仓库链接：`https://github.com/ben2002chou/LadderSYM`。
-- 模型权重：论文中未提及是否公开模型权重。
-- 数据集：
-    - MAESTRO-E 和 CocoChorales-E：公开的合成数据集，论文描述了生成过程。
-    - 真实初学者数据集：论文中描述了该数据集的收集和标注过程，但未明确说明是否公开。根据“我们评估了我们策划的真实数据”以及提供了具体曲目列表和逐曲目结果，推测可能不公开或部分公开。
-- Demo：论文提到提供了演示示例（“Demo examples of model outputs are available at: our demo page.”），但未给出具体URL。
-- 复现材料：论文在附录（§A.1-A.13）中提供了极为详细的复现信息，包括探针设置（A.1）、模型输入输出格式（A.2, A.3）、训练超参数（A.4，表7）、评估指标（A.5）、数据集生成细节（A.6）、真实数据集收集过程（A.7）、基线实现（A.8）、注意力可视化（A.9）、分乐器结果（A.10）、统计检验（A.11）、种子管理（A.12）。
-- 论文中引用的开源项目：
-    - 代码复用了 EfficientTTMs (Jajal et al., 2024) 和 Polytune (Chou et al., 2025) 的组件。
-    - 数据生成使用了 MIDI-DDSP (Wu et al., 2022)。
-    - 音频处理和转录基于 MT3 (Gardner et al., 2022)。
-    - 评估使用了 mir_eval (Raffel et al., 2014)。
-- 论文中未提及开源计划：未明确说明是否计划开源模型权重或真实数据集。
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及公开权重。
+- 数据集：未提及公开。
+- Demo：未提及。
+- 复现材料：论文在附录中提供了非���详细的实施细节、训练策略、超参数配置和评估协议，这对理论复现有一定帮助。但核心组件（预训练的MMDiT基础模型、清洗后的训练数据）的缺失，使得完整复现几乎不可能。
+- 论文中引用的开源项目：Whisper（用于音频编码）， Raft（用于光流计算）， SyncNet（用于过滤）， PySceneDetect， PaddleOCR， Q-align（用于数据过滤和评估）。
 
 📌 **核心摘要**
 
-本文旨在解决音乐练习中的错误检测问题，即对比学习者的演奏录音与标准乐谱，识别出多弹的音符、漏弹的音符以及错弹的音符。现有方法存在两大局限：一是后期融合（late fusion）限制了音频流之间的精细对齐；二是将乐谱仅表示为音频会引入频率重叠的歧义，影响并发音符的判断。为此，论文提出了LadderSym模型，其核心创新包括：1）设计了名为Ladder的双流编码器，在每个Transformer层前引入交叉注意力对齐模块，实现频繁的跨流信息交互与特征提取的解耦；2）引入符号乐谱作为解码器提示，为模型提供清晰无歧义的参考。在MAESTRO-E和CocoChorales-E两个合成基准数据集上，LadderSym相比前作Polytune取得了显著提升：在MAESTRO-E上，漏音（Missed）F1值从26.8%大幅提升至56.3%，多音（Extra）F1值从72.0%提升至86.4%；在CocoChorales-E上，漏音F1从51.3%提升至61.7%，多音F1从46.8%提升至61.4%。此外，论文还收集并发布了首个公开的真实初学者钢琴演奏错误数据集用于验证，LadderSym在此数据集上也表现出优于基线模型的泛化能力。该工作不仅为音乐教育提供了更精确的反馈工具，其关于跨模态对齐和比较的架构洞见也可能启发序列评估、技能评估等其他领域。主要局限性在于对极度复杂的并发音符（如密集和弦）的漏音检测仍具挑战，且模型不适用于与参考乐谱速度偏差极大的演奏。
-实验结果对比（关键数据）：
+1. 问题：现有视频头像模型主要学习音频到口型的低层关联，缺乏对情感、意图等高层语义的理解，导致生成的动作重复、缺乏情境合理性。
+2. 方法核心：提出一个基于认知“双系统理论”的新框架。系统2（审慎思考）：使用多模态大语言模型（MLLM）代理分析输入（图像、音频、文本），推理人物情感和意图，生成一个结构化的动作“计划”。系统1（快速反应）：采用新颖的多模态扩散Transformer（MMDiT）架构，将上述文本计划与音频、图像等信号进行深度融合，生成最终视频。
+3. 创新：首次将认知科学理论引入视频头像建模；提出了专门设计的MMDiT架构，并创新性地使用“伪最后帧”（Pseudo Last Frame）策略替代传统参考图像条件，以在保持身份的同时允许更动态的运动。
+4. 实验结果：在唇形同步精度、视频质量、动作自然度和语义一致性上达到领先水平。关键消融实验证明，移除推理模块（仅保留系统1）会导致手部动作方差（HKV）显著下降（从168.9降至122.4）。在主观用户研究中，其完整模型相比无推理版本，GSB得分提升0.58（-0.29至+0.29），运动不自然度（MU）显著降低。与OmniHuman-1等SOTA方法对比，在多个基准（CelebV-HQ， CyberHost）上指标持平或更优。
+5. 实际意义：为创建更可信、更具表现力的数字人/虚拟角色提供了新范式，可应用于AI电影制作、虚拟助手、游戏NPC等。
+6. 主要局限：框架复杂，依赖MLLM推理，带来额外延迟（约20-30秒）；训练需要巨大的计算资源和大规模高质量视频数据（论文未公开）；评估指标（如Sync-C）可能无法完全捕捉其语义优势。
 
-| 数据集 | 模型 | 正确音F1 | 漏音F1 | 多音F1 |
-| :--- | :--- | :--- | :--- | :--- |
-| MAESTRO-E | LadderSym | 94.4% | 54.7% | 86.4% |
-| MAESTRO-E | Polytune | 90.1% | 26.8% | 72.0% |
-| MAESTRO-E | 显式对齐基线 | 43.5% | 6.6% | 39.9% |
-| CocoChorales-E | LadderSym | 97.7% | 61.7% | 61.4% |
-| CocoChorales-E | Polytune | 95.4% | 51.3% | 46.8% |
-| CocoChorales-E | 显式对齐基线 | 36.7% | 7.7% | 23.5% |
+---
+
+### 🥉 [Entropy-Monitored Kernelized Token Distillation for Audio-Visual Compression](/audio-paper-digest-blog/posts/2026-05-03-entropy-monitored-kernelized-token-distillation)
+
+✅ **7.5/10** | 前25% | #音视频 | #知识蒸馏 | #多模态模型
+
+👥 **作者与机构**
+
+- 第一作者：Hyoungseob Park（Yale University；Amazon AGI 实习期间完成）
+- 通讯作者：未说明
+- 作者列表：Hyoungseob Park（Yale University, Amazon AGI）、Lipeng Ke（Amazon AGI）、Pritish Mohapatra（Amazon AGI）、Huajun Ying（Amazon AGI）、Sankar Venkataraman（Amazon AGI）、Alex Wong（Yale University）
+
+💡 **毒舌点评**
+
+亮点：论文提出的“核化token蒸馏”思路确实巧妙，将知识蒸馏从直接模仿特征或输出分布，提升到了学习“特征空间的结构关系”层面，且通过核函数设计获得了很好的架构灵活性，实验结果也扎实地证明了其优越性。短板：尽管声称方法是模态无关的，但所有实验和评估都严格局限于音视频任务，对于“通用多模态压缩”的声称缺乏跨模态验证，通用性声明略显超前。此外，熵监控依赖于在每个模态后增加一个任务头，这在一定程度上引入了额外的架构依赖。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接，但承诺将发布代码。
+- 模型权重：未提及是否公开预训练权重。
+- 数据集：使用公开的VGGSound和AVS-Bench数据集。
+- Demo：未提供在线演示。
+- 复现材料：论文附录E提供了详细的实验设置、超参数、基线细节和评估指标，为复现提供了良好基础。
+- 论文中引用的开源项目：引用了CAVMAE (Gong et al., 2022b)、UFE-AVS (Liu et al., 2024a)、AVSegFormer (Gao et al., 2023)等教师模型的实现。
+
+📌 **核心摘要**
+
+1.  问题：大型音视频模型难以部署到计算资源受限的边缘设备，需要将其知识蒸馏到参数量小得多的学生模型中。现有的潜在空间蒸馏方法受限于教师和学生模型需匹配特征维度，而输出空间蒸馏方法性能有限。
+2.  方法核心：提出核化token蒸馏（KTD），不直接模仿教师的潜在嵌入或输出，而是蒸馏同一模态内所有token之间的成对关系（以Gram矩阵表示）。该方法支持线性、多项式、RBF等多种核函数，无需匹配模型架构。进一步提出熵监控机制，通过测量每个模态预测输出的熵来衡量其信息量，自适应地调整不同模态在蒸馏损失中的权重，形成EM-KTD框架。
+3.  新在何处：1) 蒸馏对象：从蒸馏特征值或分布转变为蒸馏特征关系（Gram矩阵），实现架构无关的潜在空间蒸馏。2) 自适应加权：引入基于熵的监控，使蒸馏过程能感知不同模态在不同样本上的信息价值，避免噪声监督信号。
+4.  实验结果：在VGGSound音频-视觉事件识别上，EM-KTD使用6%教师参数，保留了96.9%的性能（准确率62.0%）。在AVS-Bench音频-视觉分割任务上，学生模型视觉编码器仅用教师4%的参数，在多声源分割任务上性能甚至超越教师。
+   *   VGGSound对比（Table 1）
+
+| 方法                     | 教师参数 | 学生骨干 | 学生参数 | Acc  | mAP  | mAUC |
+|------------------------|----------|----------|----------|------|------|------|
+| KD                     | 164M     | ViT-Tiny | 10M      | 56.1 | 57.3 | 97.1 |
+| MTST+KD                | 164M     | ViT-Tiny | 10M      | 57.6 | 58.5 | 97.0 |
+| EM-KTD+KD (Ours) | 164M     | ViT-Tiny | 10M      | 62.0 | 63.4 | 97.9 |
+
+   *   AVS-Bench MS3子任务对比（Table 2部分）
+
+| 方法                     | 教师视觉骨干 | 教师音频骨干 | 学生视觉骨干 | MJ   | MF   |
+|------------------------|--------------|--------------|--------------|------|------|
+| MTST                   | UFE-AVS      | VGGish       | PVTv2-b0     | 59.60| 69.89|
+| EM-KTD (Ours)    | UFE-AVS      | VGGish       | PVTv2-b0     | 64.43| 74.73|
+
+5.  实际意义：为在资源受限设备上部署高性能音视频理解模型提供了一种高效且灵活的压缩方案，具有明确的工业应用前景。
+6.  局限性：核函数（特别是RBF）增加了计算复杂度。熵监控模块需要为每个模态增加一个任务头。论文未探讨在更复杂多模态任务（如视频描述、问答）上的有效性。
 
 ---
 
