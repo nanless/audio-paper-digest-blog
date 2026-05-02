@@ -118,7 +118,7 @@ RoboOmni在所有任务套件和所有上下文指令类型上均大幅超越所
 | RoboOmni | 73.9 |
 在真实机器人部署中，端到端方法显著优于级联管道。
 
-![真实世界实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OJh7oBCYhL-4.png)
+![真实世界实验结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OJh7oBCYhL-4.png)
 图5展示了RoboOmni在真实机器人上对所有六种上下文指令类型的性能，均显著超过ASR+VLA基线。
 
 4. 消融研究（意图识别能力）
@@ -131,11 +131,11 @@ RoboOmni在所有任务套件和所有上下文指令类型上均大幅超越所
 证明了音频（核心语义）、视觉（上下文锚定）和副语言线索（消歧）的互补性和必要性。
 
 5. 推理效率
-![推理延迟对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OJh7oBCYhL-9.png)
+![推理延迟对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OJh7oBCYhL-9.png)
 以ASR+OpenVLA为基准（1.0×），RoboOmni的单次推理延迟仅为0.49×，消除了ASR瓶颈。
 
 6. 主动交互能力定性分析
-![主动交互能力对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OJh7oBCYhL-6.png)
+![主动交互能力对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OJh7oBCYhL-6.png)
 图7b展示了在复杂上下文推理和主动澄清交互上，RoboOmni明显优于作为基线的Qwen2.5-Omni和ASR+GPT-4o。
 
 ### ⚖️ 评分理由

@@ -61,7 +61,7 @@ VowelPrompt是一个端到端框架，其核心思想是将声学特征转化为
     *   强化学习与可验证奖励（RLVR）：在SFT基础上，使用GRPO算法进行进一步微调。奖励函数是组合式的：准确性奖励（预测是否匹配真实标签）和格式奖励（输出是否包含有效的推理和答案标签）。通过KL散度惩罚使策略保持接近SFT参考模型。
 5.  输出：LLM生成一个结构化的输出，包含对给定语音文本和韵律线索的推理过程，并给出最终的情感类别预测。
 
-![VowelPrompt框架示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/PMbionN5cC-0.png)
+![VowelPrompt框架示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/PMbionN5cC-0.png)
 图1描述：该图展示了VowelPrompt的工作流程。上方是对话转录和针对目标话语中特定元音提取的声学特征描述。下方显示了模型的输出，包括推理过程（``标签内）和最终预测（`<answer>`标签内）。这直观地体现了如何将细粒度的元音韵律信息整合到文本中，并引导LLM进行情感推理。
 
 ### 💡 核心创新点

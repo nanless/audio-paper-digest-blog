@@ -62,7 +62,7 @@ TTSDS2并非一个生成模型，而是一个评估指标框架。其核心架�
 4.  归一化打分：每个特征的得分通过公式 \(100 \times \frac{W_{NOISE}}{W_{REAL} + W_{NOISE}}\) 计算，范围[0, 100]，值越高表示越接近真实分布。
 5.  聚合：每个因子的得分是该因子下所有特征得分的算术平均。最终TTSDS2得分是四个因子得分的算术平均。
 
-![图1：分布比较示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uGai5lYHlV-0.png)
+![图1：分布比较示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uGai5lYHlV-0.png)
 图1直观展示了TTSDS的比较逻辑：真实语音（Ground Truth）和合成语音（Synthetic）的F0分布比与噪声分布（Noise）更接近。
 
 ### 💡 核心创新点
@@ -113,11 +113,11 @@ TTSDS2并非一个生成模型，而是一个评估指标框架。其核心架�
 
 结论：TTSDS2分数的排序与MOS/CMOS的整体排序趋势高度一致。
 
-![图2：TTSDS2、SQUIM、X-Vector与MOS在四个域上的散点图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uGai5lYHlV-1.png)
+![图2：TTSDS2、SQUIM、X-Vector与MOS在四个域上的散点图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uGai5lYHlV-1.png)
 图2显示TTSDS2与MOS呈连续、线性的关系；而SQUIM和X-Vector在某些域（如WILD）存在明显的聚类行为，泛化性存疑。
 
 多语言验证结果：
-![图3：14种语言的Ground Truth TTSDS2分数](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uGai5lYHlV-2.png)
+![图3：14种语言的Ground Truth TTSDS2分数](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uGai5lYHlV-2.png)
 图3显示，对于真实语音数据，TTSDS2分数在14种语言中保持在一个较窄的范围（约88-95），且低资源语言分数略低，符合预期。这间接验证了指标在多语言场景下的合理性。
 
 ### ⚖️ 评分理由

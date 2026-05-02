@@ -64,10 +64,10 @@ Skip-BART的整体架构如图1所示，旨在将音乐音频序列映射为对�
 5.  推理：使用受限随机温度控制（RSTC）采样。在自回归生成每一步时，根据温度参数对预测概率分布进行采样，并限制相邻帧的灯光变化幅度，以保证输出的多样性和平滑性。
 
 架构图说明：
-![图1：Skip-BART网络架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/a4Got6azjF-0.png)
+![图1：Skip-BART网络架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/a4Got6azjF-0.png)
 图1展示了Skip-BART的总体结构。左侧为音频编码路径（蓝色），使用OpenL3和MLP提取特征，输入到BART编码器（由PianoBART初始化）。右侧为灯光生成路径（绿色），灯光标签通过嵌入层输入。核心跳过连接（紫色）将编码器输出的音乐特征与解码器的灯光特征相加后，输入给BART解码器。最终解码器输出通过两个MLP头分别预测色相和亮度。
 
-![图3：Skip-BART工作流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/a4Got6azjF-2.png)
+![图3：Skip-BART工作流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/a4Got6azjF-2.png)
 图3更清晰地展示了模型的工作流程：包括MLM预训练（仅用音频）、端到端微调（用配对的音频-灯光数据）和RSTC推理三个阶段，以及跳过连接在帧级如何融合音乐和灯光特征。
 
 ### 💡 核心创新点
@@ -131,7 +131,7 @@ Skip-BART的整体架构如图1所示，旨在将音乐音频序列映射为对�
 
 结论：Skip-BART的总体得分（M=4.35）与地面真值（M=4.51）无统计学显著差异，表明其表现接近专业工程师。它在所有维度上都显著优于规则方法（p<0.001）。跨域评估（使用Suno生成的民谣、R&B、爵士音乐）中，Skip-BART同样表现最佳且显著优于规则方法。
 
-![图5：可视化结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/a4Got6azjF-4.png)
+![图5：可视化结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/a4Got6azjF-4.png)
 图5展示了两个例子。顶部为输入音乐的梅尔频谱图，中部为真实灯光序列，底部为Skip-BART生成的序列。每列的颜色代表该时刻的灯光颜色和亮度。图(b)中的红框高亮了一个成功识别的段落转换，Skip-BART生成的灯光在此处与真实值一样变亮，显示了其捕捉音乐结构的能力。
 
 ### ⚖️ 评分理由

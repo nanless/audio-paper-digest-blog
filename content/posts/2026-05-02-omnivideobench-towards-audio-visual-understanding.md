@@ -51,9 +51,9 @@ hiddenInHomeList: true
 | Qwen2.5-Omni-7B | 29.30% | 23.07% | 25.33% | 30.70% | 41.57% | 26.72% |
 | 人类 | 82.69% | / | / | / | / | / |
 
-![图4：OmniVideoBench与Daily-Omni上模型性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ItRYEe8E61-3.jpg)
+![图4：OmniVideoBench与Daily-Omni上模型性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ItRYEe8E61-3.jpg)
 
-![图5：部分模型在13类任务上的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ItRYEe8E61-4.jpg)
+![图5：部分模型在13类任务上的表现](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ItRYEe8E61-4.jpg)
 
 5.  实际意义是什么：为社区提供了一个更严格、更贴近真实多模态理解需求的评估标尺，能更有效地诊断和推动MLLMs在音视频协同推理方面的进步，尤其是在长程时序建模、非语音音频理解和跨模态融合等关键能力上的提升。
 6.  主要局限性是什么：(a) 未提出新模型：作为评估基准，论文本身未提出解决所发现问题的新算法或架构。(b) 数据集未完全开源：论文承诺开源，但当前文本未提供具体链接，可能影响即时复现。(c) 评估范围：基准主要针对英文视频和QA任务，对其他语言和任务形式的覆盖未说明。
@@ -84,11 +84,11 @@ hiddenInHomeList: true
 
 主要结果（Table 3）：如“核心摘要”部分表格所示，所有模型表现均未达到及格线（60%）。Gemini系列闭源模型领先，但开源模型（如Qwen3-Omni, Qwen2.5-Omni）性能接近随机。
 
-![图6：模型在不同音频类型和输入条件下的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ItRYEe8E61-5.jpg)
+![图6：模型在不同音频类型和输入条件下的表现](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ItRYEe8E61-5.jpg)
 （图6a）模型在不同输入（纯视觉、视觉+ASR文本、视觉+音频）下的准确率对比。关键结论：对于开源模型，输入ASR文本比输入原始音频更能提升性能，说明其音视频融合能力弱于文本理解能力。
 （图6b）Gemini-2.0-Flash在处理不同音频类型视频时，在纯视觉、视觉+ASR、视觉+音频三种输入下的表现。关键结论：ASR对语音类任务有帮助，但对音乐和声音类任务几乎无效，凸显了原始音频理解的不可替代性。
 
-![图7：模型在不同帧数输入下的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ItRYEe8E61-6.jpg)
+![图7：模型在不同帧数输入下的表现](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ItRYEe8E61-6.jpg)
 （图7a）两个模型在32、64、128、256帧输入下的准确率。关键结论：增加采样帧数能稳定提升性能。
 （图7b）Qwen3-Omni在不同视频时长和帧数下的准确率变化。关键结论：增加帧数对长视频性能的提升更为明显。
 
@@ -98,7 +98,7 @@ hiddenInHomeList: true
 - 任务类型分析（Figure 5）：揭示了模型在“背景与音乐理解”上最弱（<50%），在“关系推理”和“总结”上相对较强（>80%）。
 - 错误类型分析（Table 6, Figure 12-13）：通过将模型错误与标准推理链对比，将其分为6大类。开源模型的主要瓶颈在于“多模态融合错误”、“时序推理错误”和“音频理解错误”。闭源模型（如Gemini）则在“多模态融合错误”上比例很高。
 
-![图12：三个代表性模型的错误类型分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ItRYEe8E61-11.png)
+![图12：三个代表性模型的错误类型分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ItRYEe8E61-11.png)
 图12展示了Gemini-2.0-Flash、Qwen2.5-Omni和Qwen3-Omni的错误分布。关键结论：开源模型的核心瓶颈是多模态融合、时序推理和音频理解。
 
 细分结果（Table 7, Table 8）：论文提供了不同模型在不同视频时长和音频类型下的详细错误分布，进一步证实了上述发现。

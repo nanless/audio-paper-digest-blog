@@ -73,7 +73,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 JavisDiT是一个基于DiT的端到端联合音视频生成框架，整体架构如图2所示。
-![JavisDiT整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/y7HV7KT3Bd-1.jpg)
+![JavisDiT整体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/y7HV7KT3Bd-1.jpg)
 图2：JavisDiT整体架构（左）与核心模块结构（右）。
 
 整体流程：给定文本提示s，模型同时生成视频v和音频a的梅尔频谱图。整体由视频生成分支、音频生成分支和HiST-Sypo估计器三部分组成。两个生成分支结构对称，共享设计。
@@ -88,7 +88,7 @@ JavisDiT是一个基于DiT的端到端联合音视频生成框架，整体架构
     所有注意力模块使用16个头，隐藏维度为1152，FFN中间维度为隐藏维度的4倍。
 
 2.  HiST-Sypo估计器：其结构如图3所示。
-    ![HiST-Sypo估计器结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/y7HV7KT3Bd-2.jpg)
+    ![HiST-Sypo估计器结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/y7HV7KT3Bd-2.jpg)
     图3：时空先验估计器框架。
 
     它以文本提示s为输入，使用ImageBind的文本编码器提取77维隐藏状态。通过一个4层Transformer编码器-解码器，使用Ns=32个可学习空间token和Nt=32个可学习时间token去查询这些文本特征，输出时空先验ps和pt的高斯分布的均值和方差。通过重参数化技巧采样得到最终的先验token，以适应同一文本可能对应不同同步方案（如事件发生在不同位置/时间）的灵活性。训练时采用对比学习目标（详见02节）。
@@ -125,7 +125,7 @@ JavisDiT是一个基于DiT的端到端联合音视频生成框架，整体架构
 
 1. 在JavisBench上的主要结果（复杂场景）
 论文Table 1展示了JavisDiT与多种基线方法的对比。
-![JavisBench主要结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/y7HV7KT3Bd-4.jpg)
+![JavisBench主要结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/y7HV7KT3Bd-4.jpg)
 图5：不同方法在JavisBench各子类别上的同步性表现。
 
 | 方法 | 类型 | FVD↓ | KVD↓ | FAD↓ | TA-IB↑ | CLIP↑ | CLAP↑ | AV-IB↑ | AVHScore↑ | JavisScore↑ |
@@ -143,7 +143,7 @@ JavisDiT是一个基于DiT的端到端联合音视频生成框架，整体架构
 
 2. 在传统基准上的结果
 论文Table 2报告了在Landscape和AIST++上的结果。
-![传统基准结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/y7HV7KT3Bd-5.jpg)
+![传统基准结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/y7HV7KT3Bd-5.jpg)
 表2：在Landscape和AIST++数据集上的实验结果。
 
 | 方法 | Landscape FVD↓ | Landscape KVD↓ | Landscape FAD↓ | AIST++ FVD↓ | AIST++ KVD↓ | AIST++ FAD↓ |
@@ -158,7 +158,7 @@ JavisDiT是一个基于DiT的端到端联合音视频生成框架，整体架构
 
 3. 消融实验
 论文Tab. 3和Tab. 4进行了关键组件消融。
-![消融实验](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/y7HV7KT3Bd-8.jpg)
+![消融实验](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/y7HV7KT3Bd-8.jpg)
 图8：人类评估结果。
 
 | STDiT | HiST-Sypo | BiCA | Quality↓ | Consist↑ | Sync↑ |

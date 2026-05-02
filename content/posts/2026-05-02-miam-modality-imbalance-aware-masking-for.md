@@ -70,7 +70,7 @@ MIAM本身不是一个独立的模型架构，而是一种应用于多模态Tran
 *   动态调整： 固定分布无法适应训练过程中各模态学习动态的变化。通过监控每个模态的独立性能（sm）和学习速度（dm = |∇sm|），可以识别主导模态并增强对其的遮蔽，迫使模型关注其他模态。
 *   混合成分与权重： 鼓励��型同时学习从“几乎无输入”到“几乎全输入”的极端情况，提升鲁棒性和贡献分析能力。
 
-![MIAM概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oljjAkgZN4-1.png)
+![MIAM概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oljjAkgZN4-1.png)
 图2：MIAM概览。(a) 每个模态的token以概率pm被掩码，pm从混合乘积Beta分布中采样。(b) 分布参数由ρ_sm和ρ_dm调节，它们基于各模态的性能sm和其绝对导数dm计算。性能高且稳定的模态（高ρ_sm/ρ_dm）会被更频繁地掩码。
 
 ### 💡 核心创新点

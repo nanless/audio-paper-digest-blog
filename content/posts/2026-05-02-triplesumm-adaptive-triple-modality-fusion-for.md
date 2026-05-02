@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 模型整体架构遵循“编码-精炼-融合-预测”的流程，如图2所示。
 
-![图2：TripleSumm整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/x74NsHGywD-1.png)
+![图2：TripleSumm整体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/x74NsHGywD-1.png)
 
 1.  输入表示：原始视频的视觉、文本、音频流被预处理为等长的时间序列，并分别通过预训练的编码器（CLIP, RoBERTa, AST）提取特征，再通过线性投影和层归一化映射到统一维度D。同时，计算一个“融合令牌”Ef，作为三模态特征的锚点（论文实验中发现简单平均聚合效果最佳）。最终，为每个令牌添加时间位置编码和可学习的模态嵌入。
 
@@ -116,7 +116,7 @@ TripleSumm在所有指标上大幅超越此前最优的CFSum，且参数量和�
 *   MST与CMF模块消融：同时使用两者时性能最高（0.351, 0.472）。移除MST比移除CMF导致更严重的性能下降，说明时序建模是基础。
 *   融合方式消融：“Dynamic”（帧级自适应）融合（0.351, 0.472）显著优于“Global”（模态级自适应）和“Static”（平均）融合，验证了帧级动态权重的重要性。
 
-![图3：定性示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/x74NsHGywD-2.png)
+![图3：定性示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/x74NsHGywD-2.png)
 图3展示了模型在两个视频上动态分配模态注意力的权重。在吉他演示视频中，模型根据内容在文本、视觉和音频注意力之间切换；在手风琴演奏视频中，当文本和视觉信息较少时，模型主要依赖音频。
 
 ### ⚖️ 评分理由

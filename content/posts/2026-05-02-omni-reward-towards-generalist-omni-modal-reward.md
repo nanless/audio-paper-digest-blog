@@ -47,7 +47,7 @@ hiddenInHomeList: true
 论文提出了两种全模态奖励模型架构：
 
 1. 判别式奖励模型：Omni-RewardModel-BT
-![Omni-RewardModel架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/9C4gVbPqSy-1.jpg)
+![Omni-RewardModel架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/9C4gVbPqSy-1.jpg)
 如图2(1)所示，该模型基于多模态大语言模型MiniCPM-o-2.6构建。其架构核心是一个统一的编码器-解码器框架，包含一个视觉编码器（用于处理图像、视频帧、3D渲染图）、一个音频编码器（用于处理音频波形）和一个语言模型解码器（骨干网络）。对于输入`(c, x, y1, y2)`（其中`c`是自由形式偏好准则，`x`是提示，`y1/y2`是候选响应），模型将各模态信息（如视频帧序列、音频特征）与文本指令一同输入。模型输出一个标量奖励分数`r`，用于衡量在给定准则`c`下，某个响应`y`的质量。训练时，模型使用经典的Bradley-Terry损失（公式1）进行优化，该损失函数鼓励被偏好的响应获得更高的分数。关键设计选择是冻结视觉和音频编码器的参数，仅微调语言模型解码器和新增的价值头（Value Head），这有助于在适配新任务时保留预训练模型强大的基础感知能力。
 
 2. 生成式奖励模型：Omni-RewardModel-R1
@@ -97,7 +97,7 @@ hiddenInHomeList: true
 - VL-RewardBench：Omni-RewardModel-BT达到76.3%的准确率，超过所有报告的基线模型（表2），包括专用RM如IXC-2.5-Reward（65.8%）和UnifiedReward（66.1%）。
 - Multimodal RewardBench：Omni-RewardModel性能与Claude-3.5 Sonnet相当（论文中提及，具体数值见表9）。
 
-![任务间性能相关性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/9C4gVbPqSy-2.jpg)
+![任务间性能相关性热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/9C4gVbPqSy-2.jpg)
 图3展示了不同任务间性能的皮尔逊相关系数。可以看出，理解类任务（T2T, TI2T, TV2T, TA2T）之间以及生成类任务（T2I, T2V, T2A, T23D, TI2I）内部的性能存在较强的正相关性（相关系数多在0.7-0.9之间），表明奖励模型在相似任务类别内具有一定的迁移和泛化能力。
 
 ### ⚖️ 评分理由

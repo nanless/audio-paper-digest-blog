@@ -77,7 +77,7 @@ Music Flamingo并非一个从头设计的新架构，而是基于并改进了现
         *   结构化思考奖励（用于描述）：将生成的描述与预定义的结构化元数据（如流派、BPM、调性、乐器等）进行匹配，计算匹配词数比例作为奖励。
 5.  输出：生成对音乐的详细、分层化的文本描述或问题的答案。
 
-![架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RS7T9S16Bl-1.png)
+![架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RS7T9S16Bl-1.png)
 图2：数据标注流水线与训练流程。左图展示了MF-Skills数据集的构建过程：选择音乐源 -> 使用工具提取元数据（节拍、调性、和弦、歌词） -> LLM基于元数据生成详细描述和QA对 -> 质量过滤。右图展示了三阶段训练流程：I. 通过多说话人ASR等数据增强AF3基座；II. 在MF-Skills上全参数微调得到Music Flamingo基础模型；III. 在MF-Think上进行推理冷启动监督微调，随后使用GRPO强化学习进行优化。
 
 ### 💡 核心创新点
@@ -130,7 +130,7 @@ Music Flamingo并非一个从头设计的新架构，而是基于并改进了现
 2.  定性专家评估：附录E的用户研究（表4）显示，与Qwen3-Omni、GPT-4o和Gemini 2.5 Pro相比，Music Flamingo在“一般技术特征（速度、调性）”、“复杂技术特征（和弦进行、结构）”方面表现最佳或非常接近，尤其在输出调性、速度等量化信息上最一致。Gemini在“流派分类”上略优，但可能产生幻觉；GPT-4o在“编曲与制作描述”上表现稳定；Qwen3-Omni在所有方面均最浅显。
 3.  跨文化歌曲分析：附录F对五首不同文化歌曲的详细分析表明，Music Flamingo在提供准确、量化的技术特征（速度、调性）以及进行深入的和声/结构分析方面，整体优于其他模型。
 
-![caption示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RS7T9S16Bl-2.jpg)
+![caption示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RS7T9S16Bl-2.jpg)
 图3：展示了MF-Skills数据集中的描述、QA示例以及MF-Think中的链式思考示例。左侧为现有的简单标注，右侧为本文提出的“重新定义”的、更丰富、需要推理的标注。图中下方的QA示例展示了需要时间理解、属性识别、和声分析、歌词定位和比较推理等复杂技能的题目。
 
 ### ⚖️ 评分理由

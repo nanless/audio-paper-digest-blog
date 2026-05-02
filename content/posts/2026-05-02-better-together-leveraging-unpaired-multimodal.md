@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 本文的核心是Unpaired Multimodal Learner (UML) 框架。其架构设计旨在通过参数共享，从独立的不同模态数据中学习更强大的单模态表征。
 
-![UML架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5OIgg5YkC3-3.png)
+![UML架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5OIgg5YkC3-3.png)
 图4: UML架构示意图。(a) 自监督设置：图像patch嵌入和文本token嵌入通过独立的线性层映射到共享嵌入空间，然后输入到共享的Transformer网络，再通过各自模态的解码器进行重建/预测。(b) 监督设置：模态嵌入通过共享网络后，由共享的分类头进行标签预测。
 
 完整输入输出流程与组件：
@@ -121,10 +121,10 @@ hiddenInHomeList: true
 5.  跨模态迁移：使用BERT权重初始化的ViT在ImageNet上，无论骨干冻结还是微调，都比从头训练性能更好（如图7，微调提升42.7%）。
 6.  模态汇率：在Oxford-Pets上，对齐CLIP编码器的“汇率”为1 img ≈ 228 words；非对齐编码器（DINOv2+OpenLLaMA）的“汇率”为1 img ≈ 1034 words（如图8，图9）。
 
-![模态汇率示意图-CLIP](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5OIgg5YkC3-7.jpg)
+![模态汇率示意图-CLIP](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5OIgg5YkC3-7.jpg)
 图8: 基于CLIP编码器的图像-文本汇率。等高线显示达到相同测试准确率所需的图像和文本组合。
 
-![模态汇率示意图-非对齐](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5OIgg5YkC3-8.png)
+![模态汇率示意图-非对齐](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5OIgg5YkC3-8.png)
 图9: 基于非对齐编码器（DINOv2+OpenLLaMA）的图像-文本汇率。
 
 关键消融实验：

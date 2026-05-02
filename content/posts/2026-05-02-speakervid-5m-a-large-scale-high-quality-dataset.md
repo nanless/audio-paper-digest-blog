@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 论文提出了一种基于自回归（AR）的端到端音频-视觉生成基线模型，架构如图4所示。
 
-![图4：我们的自回归音视频生成方法](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/U004uqALWl-3.jpg)
+![图4：我们的自回归音视频生成方法](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/U004uqALWl-3.jpg)
 
 该模型主要组件及数据流如下：
 1.  多模态理解输入：输入包括发起者的视频、音频，以及响应者的参考图像。这些输入被送入Qwen2.5-Omni Thinker（一个冻结的多模态大模型）进行理解，输出隐藏状态和嵌入向量。参考图像也经过3D VAE编码。
@@ -141,7 +141,7 @@ hiddenInHomeList: true
 2.  情感与手势质量：端到端方法在情感对齐（FIDEmotion）和手部质量（Hand Quality）上优于更大的级联模型（如Hallo3），这归因于端到端架构保留了更多高阶语义信息，避免了中间文本转换的信息损失。
 3.  视频保真度：在FID/FVD等绝对视频质量指标上，本文方法（参数量0.8B）仍落后于使用了巨型扩散模型（Hallo3约10B参数）的级联管线，但优于参数量相当（Sonic约1.5B）的管线。
 
-![图5：我们的双人生成模型的定性结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/U004uqALWl-4.jpg)
+![图5：我们的双人生成模型的定性结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/U004uqALWl-4.jpg)
 图5展示了定性结果，从左至右为：发起者的输入视频、参考图像、模型生成的音视频响应。可以看出生成的响应在身份、表情和音唇同步上具有一定的一致性。
 
 ### ⚖️ 评分理由

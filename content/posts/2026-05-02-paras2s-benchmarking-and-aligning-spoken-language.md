@@ -74,7 +74,7 @@ hiddenInHomeList: true
 
 本文提出的 ParaS2S 是一个包含数据构建、自动评估和模型训练的完整框架，而非单一的模型架构。其整体流程如图1所示。
 
-![图1：ParaS2S框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/CcmDDh070o-0.png)
+![图1：ParaS2S框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/CcmDDh070o-0.png)
 图1：ParaS2S框架的底部展示了ParaS2SBench的数据集构建与自动评估器，顶部展示了ParaS2SAlign中奖励模型的蒸馏过程。蒸馏后的奖励模型可用于PPO、GRPO等标准RL算法。
 
 核心组件及流程如下：
@@ -167,7 +167,7 @@ hiddenInHomeList: true
     *   图表显示，使用不同量的SFT数据进行热身后，RL（GRPO）都能带来持续提升。
     *   仅使用 20小时 SFT数据热身并经RL后训练，其ParaS2SBench得分（约4.2）已超过使用全部 100小时 SFT数据训练的模型得分（约4.0）。
 
-![图2：不同数据量下的效果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/CcmDDh070o-1.png)
+![图2：不同数据量下的效果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/CcmDDh070o-1.png)
 图2：(a) 在不同标注数据量下研究RL的有效性。横轴为SFT数据的小时数，纵轴为ParaS2SBench平均分。红线（GRPO）在所有数据量下均高于蓝线（SFT）。(b) 比较不同模型的原始能力（VoiceBench，横轴）与副语言感知能力（ParaS2SBench，纵轴）。本文模型（绿色点）在两者上均表现优异。
 
 4.  人类主观评估（表7，附录）：
@@ -177,7 +177,7 @@ hiddenInHomeList: true
 5.  原始能力保留（图2b，图4）：
     *   在VoiceBench基准上，经过SFT和GRPO训练的模型在原始对话能力上没有显著下降，甚至因基座模型选择和训练技巧而保持领先。GRPO中的KL惩罚（β=0.2）对此至关重要。
 
-![图3：GRPO超参数消融](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/CcmDDh070o-2.png)
+![图3：GRPO超参数消融](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/CcmDDh070o-2.png)
 图3：(a) 全局batch size影响。(b) GRPO组大小影响：小于8时性能骤降。(c) KL权重β影响：β=0.2时在新能力（ParaS2SBench）和旧能力（VoiceBench）间取得最佳平衡。
 
 ### ⚖️ 评分理由

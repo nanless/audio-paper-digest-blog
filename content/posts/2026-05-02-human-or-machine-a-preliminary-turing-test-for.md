@@ -67,7 +67,7 @@ hiddenInHomeList: true
     *   第二阶段：可解释二分类：将第一阶段得到的18维得分`z`输入到一个带对称正则化的线性分类器中，输出最终的人类/机器二分类决策。由于输入`z`本身就是可解释的维度分数，最终的分类权重`W`可以直接揭示每个维度对决策的贡献，从而实现可解释性。
     *   数据流：`语音对话 -> Qwen2.5-Omni编码 -> 融合池化 -> 序数离散层 -> 18维人类类人性分数 -> 线性分类器 -> 人类/机器判断`。该架构的设计动机是让模型先学会像人类一样从多个细粒度维度感知对话，再基于这些感知做出最终判断，从而提供透明的决策依据。
 
-![图1：本文研究设计概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Pv5l6cvfno-0.png)
+![图1：本文研究设计概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Pv5l6cvfno-0.png)
 图1展示了研究的三个核心问题（A：S2S能否像人对话？B：为何不能？C：AI能否当评委？）以及对应的方法设计：图灵测试、细粒度诊断标注、可解释AI评判器的开发。
 
 ### 💡 核心创新点
@@ -106,13 +106,13 @@ hiddenInHomeList: true
     *   成功率：所有9个S2S系统的成功率均低于0.5。人类说话者在英语和中文对话中的成功率分别为0.87和0.70。伪人类对话的成功率低于人类但高于大多数S2S系统（如图4a，表9）。
     *   参与者的区分能力：AI熟悉度越高，区分人类与机器的准确率越高（最高78.8%），性别和教育水平影响较小（如图4b）。
 
-![图4：图灵测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Pv5l6cvfno-3.png)
+![图4：图灵测试结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Pv5l6cvfno-3.png)
 图4(a)显示了各S2S系统、伪人类及人类说话者被评判为“人”的成功率。图4(b)显示了不同人群（AI熟悉度、教育、年龄、性别）的评判准确率。
 
 2.  细粒度诊断分析：
     *   通过众包标注和专家修订，在18个维度上对对话进行1-5分评分（如图5）。分析显示，S2S系统在“记忆一致性”、“逻辑连贯性”、“发音准确率”上得分较高（接近人类），但在“韵律”、“语调”、“情感声学表达”、“谄媚行为”、“书面化表达”上得分显著偏低。
 
-![图5：细粒度人类类人性维度评分](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Pv5l6cvfno-4.png)
+![图5：细粒度人类类人性维度评分](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Pv5l6cvfno-4.png)
 图5展示了在18个人类类人性维度上，人-人（H-H）、人-机（H-M）和伪人类（PH）对话的平均众包评分。
 
 3.  AI评判器实验结果：
@@ -121,10 +121,10 @@ hiddenInHomeList: true
     *   可解释性分析：通过贡献度分析（图15），可以可视化每个细粒度维度分数对最终分类决策的贡献（正贡献指向机器类，负贡献指向人类类），验证了模型的可解释性。
     *   泛化能力：在三个分布外数据集（CosyVoice2合成、Fisher电话语音、MultiDialog干净语音）上测试，整体准确率仍高达97.40%（如表4）。
 
-![表3：二分类准确率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Pv5l6cvfno-9.jpg)
+![表3：二分类准确率对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Pv5l6cvfno-9.jpg)
 表3对比了本文模型（Ours）、Qwen2.5-Omni原版、LoRA微调版以及人类评判者在测试集三类对话上的二分类准确率。本文模型全面领先。
 
-![表4：分布外泛化测试](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Pv5l6cvfno-9.jpg)
+![表4：分布外泛化测试](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Pv5l6cvfno-9.jpg)
 表4展示了本文模型在三个分布外数据集上的分类准确率和整体ROC-AUC分数，证明了良好的泛化能力。
 
 ### ⚖️ 评分理由

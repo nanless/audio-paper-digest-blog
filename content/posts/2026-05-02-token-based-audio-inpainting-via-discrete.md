@@ -54,7 +54,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 AIDD的整体框架如图1所示，主要分为三个阶段：
-![图1: icassp-img://9ZogqiyWXm/0.png](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/9ZogqiyWXm-0.png)
+![图1: icassp-img://9ZogqiyWXm/0.png](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/9ZogqiyWXm-0.png)
 1.  音频tokenization：使用预训练的WavTokenizer编码器，将输入的原始波形（即使带有空缺）转换为一个紧凑的离散token序列。解码器则负责将修复后的token序列还原为波形。
 2.  离散扩散建模与修复：这是核心部分。采用了一个Diffusion Transformer (DiT) 架构，它是一个在标准Transformer编码器基础上融入了时间步条件（timestep conditioning）的模型。
     *   训练时：对干净的音频token序列进行span-based masking（后文详述），然后将掩码后的序列连同时间步`t`输入DiT。DiT被训练来预测“concrete score”（具体分数），即通过DWDSE损失函数学习逆转掩码过程的概率。

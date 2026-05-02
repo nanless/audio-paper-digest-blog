@@ -73,13 +73,13 @@ NANOMIND并非一个单一的神经网络模型，而是一个推理系统框架
 - 定制硬件：包括RK3566 SoC、并行LPDDR4x内存模块、专用电源管理单元（PMU）用于实时能耗监控，以及精简的Linux内核。
 - 软件栈：包括针对RKNN NPU的驱动、基于OpenCL的GPU内核（融合了线性注意力和反量化GEMM操作）、电池感知的电源管理策略、以及“按需级联推理”流水线（在低电量时采用顺序执行，每个模块“加载-执行-释放”）。
 
-![图1: NANOMIND工作流程：通过环形缓冲器实现VLM卸载至NPU/GPU的零拷贝嵌入传输](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-0.png)
+![图1: NANOMIND工作流程：通过环形缓冲器实现VLM卸载至NPU/GPU的零拷贝嵌入传输](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-0.png)
 图1展示了核心思想：视觉编码器（ViT）运行在NPU上，语言解码器（LLM）运行在GPU上，它们通过TABM管理的共享内存（Ring Buffer）交换数据，避免了CPU参与的冗余内存拷贝。
 
-![图3: NANOMIND架构：通过软硬件协同设计实现多模态推理](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-2.png)
+![图3: NANOMIND架构：通过软硬件协同设计实现多模态推理](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-2.png)
 图3是系统架构的完整视图。(a)部分展示了从硬件（SoC, PMU, 并行内存）、操作系统层（驱动、调度器）、计算内核到上层应用（级联推理流水线）的全栈设计。(b)部分展示了多模态推理的数据流：摄像头/麦克风输入 -> 语音/视觉编码器 -> LLM -> 语音/文本输出。
 
-![图2: 低功耗按需级联推理工作流](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-1.png)
+![图2: 低功耗按需级联推理工作流](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-1.png)
 图2展示了低功耗模式下的推理流程：每个模块按顺序执行，完成后立即释放资源，仅将最小输出（如嵌入向量或文本）传递给下一阶段，形成轻量的“多米诺骨牌”式执行链。
 
 ### 💡 核心创新点
@@ -121,21 +121,21 @@ NANOMIND并非一个单一的神经网络模型，而是一个推理系统框架
 论文在多个数据集（InfoVQA, DocVQA, MMBench, MME）上评估了模型精度，在自定义硬件上测量了资源使用和功耗。
 
 1.  内存使用对比（图5）：
-    ![图5: 不同硬件平台和框架下的内存占用](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-4.png)
+    ![图5: 不同硬件平台和框架下的内存占用](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-4.png)
     图5比较了Llava-onevision-0.5B, Qwen2-VL-2B, SmolVLM-500M在不同平台（NANOMIND, Orange Pi, Jetson Nano/AGX）和框架（llama.cpp, NanoVLM, NANOMIND自有实现）下的内存使用。关键结论：NANOMIND（自有实现）在多数情况下内存占用低于或接近其他高效框架（如NanoVLM），显著低于使用llama.cpp的方案。
 
 2.  吞吐量与延迟对比（图6）：
-    ![图6: Qwen2-VL-2B-Instruct在不同平台上的吞吐量和延迟](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-5.png)
+    ![图6: Qwen2-VL-2B-Instruct在不同平台上的吞吐量和延迟](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-5.png)
     图6展示了在InfoVQA数据集上运行Qwen2-VL-2B（4-bit）的性能。关键结论：尽管硬件性能弱于Orange Pi 5 Ultra和Jetson Nano，NANOMIND实现了与Jetson Nano（CUDA, NanoVLM）相当的吞吐量（约35.7 tok/s），且端到端延迟比Orange Pi 5 Ultra（官方rkllm）降低了36.2%。
 
 3.  系统组件分解性能（图7）：
-    ![图7: 系统分解性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-6.jpg)
+    ![图7: 系统分解性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-6.jpg)
     图7包含三个子图：(a) TABM与传统CPU拷贝方式的内存和CPU使用对比，显示TABM显著降低了CPU利用率。(b) 视觉嵌入模型（SigLip, ArcFace）在NPU、CPU、GPU上的单图像编码延迟，显示NPU具有明显优势。(c) 不同框架（NANOMIND内核, llama.cpp, MLC-LLM, PowerInfer-2）在RK3588和QCS6490上运行Qwen2-1.5B-W8A8的GPU解码吞吐量，显示NANOMIND内核表现最佳。
 
 4.  功耗与续航（图8，图9）：
-    ![图8: 三种功耗模式下的能耗-延迟权衡曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-7.png)
+    ![图8: 三种功耗模式下的能耗-延迟权衡曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-7.png)
     图8展示了系统如何根据电池电量（B）动态调整工作模式，在延迟和功耗间进行权衡。
-    ![图9: 功耗与估算运行时间](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ql30VWGyda-8.jpg)
+    ![图9: 功耗与估算运行时间](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ql30VWGyda-8.jpg)
     图9显示了在低功耗模式下，平均功耗为0.375W。使用标准2000mAh电池，估算续航时间可达20.8小时。
 
 与最强基线对比：

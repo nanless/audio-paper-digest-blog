@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 TRIBE模型的整体架构旨在将三种模态的刺激信息映射到全脑fMRI响应。其核心流程如图2所示。
 
-![图2: 模型架构示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/biegtqdqmg-1.png)
+![图2: 模型架构示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/biegtqdqmg-1.png)
 
 1. 输入与特征提取：
 - 输入：视频片段、对应的音频文件、以及带时间戳的文本转录稿。

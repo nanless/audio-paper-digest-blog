@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 论文涉及多个协同工作的模型组件，主要架构图见图1。
 
-![图1: GAPT 概念示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FXm5U16vxD-0.png)
+![图1: GAPT 概念示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FXm5U16vxD-0.png)
 *   在线策略模型（Online Policy, πθ）：一个基于解码器（Decoder-only）的Transformer模型（LLaMA风格，8层，8头，隐藏维度512）。其任务是接收自回归的旋律流 `x`，并实时生成对应的和弦序列 `y`。输入输出遵循在线约束 `πθ(yt | x<t, y<t)`，即生成当前和弦时不能看到当前的旋律token，只能看到历史旋律和已生成的和弦历史。
 *   离线基线模型（Offline Model, ϕω）：一个编码器-解码器（Encoder-Decoder）的Transformer，用于计算KL正则化项。它能在编码阶段看到完整的输入旋律 `x`，其输出作为策略模型的“锚点”。
 *   判别器（Discriminator, Dψ）：另一个独立的Transformer编码器（8层，8头，隐藏维度512）。它接收一个和弦轨迹序列 `y`（或 `x, y` 对，但论文主实验仅用 `y`），输出一个0到1的标量，表示该轨迹来自真实数据分布的概率。它被训练来区分策略生成的轨迹（负样本）和数据集中的真实轨迹（正样本）。
@@ -96,7 +96,7 @@ hiddenInHomeList: true
 | GAPT | 0.497 | 26.645 | 0.470 | 11.295 |
 | Ground Truth | 0.727 | 27.922 | 0.784 | 10.962 |
 
-![图4: 固定旋律模拟的和谐度-多样性Pareto前沿](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FXm5U16vxD-3.png)
+![图4: 固定旋律模拟的和谐度-多样性Pareto前沿](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FXm5U16vxD-3.png)
 *   图4结论：在测试集(a)和外部数据集(b)上，GAPT方法在“和谐度-多样性”权衡上明显优于基线，更接近真实数据（Ground Truth）的Pareto前沿。t-SNE可视化(c)也显示GAPT生成的和弦覆盖了更广的特征空间。
 
 与旋律智能体交互及用户研究结果
@@ -108,7 +108,7 @@ hiddenInHomeList: true
 | GAPT w/o Adv. | 0.540 | 5.658 | N/A | N/A |
 | GAPT | 0.648 | 12.914 | 0.467 | 11.794 |
 
-![图3: 用户研究主观评分](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FXm5U16vxD-2.png)
+![图3: 用户研究主观评分](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FXm5U16vxD-2.png)
 *   图3结论：在12位专家音乐家的实时交互研究中，GAPT在“适应速度”和“控制与能动性”两个指标上显著优于ReaLchords (p < 0.05)，在所有三个指标上均取得最高平均分。
 
 消融实验亮点

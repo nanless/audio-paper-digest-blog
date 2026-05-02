@@ -60,7 +60,7 @@ hiddenInHomeList: true
 3.  与已有方法相比新在哪里：新在系统性统一：首次提出了一个覆盖情感、认知、病理、社交四大维度的广义行为分类体系，并将异构数据集标准化。新在基准规模与多样性：提供了包含真实音频、视频、文本及提取的行为描述符的大规模基准。新在模型对比与洞察：系统比较了SFT、RL以及特征增强（BAM）三种范式在统一基准上的表现与权衡。
 4.  主要实验结果如何：
     - 多任务学习：在10项行为任务中，三个Omnisapiens模型在7-8项任务上超越了Qwen2.5-Omni-7B， Qwen2.5-VL-7B， Gemma-3-4B和HumanOmniV2-7B等基线。例如在情感（EMO）任务CREMA-D上，BAM模型达到0.548（基线最高0.560）；在抑郁检测（DEP）任务MMPSY(D)上，SFT模型达到0.813（基线最高0.813）。关键数据见表4。
-    ![图2: 多任务结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZKE23BBvlQ-1.png)
+    ![图2: 多任务结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZKE23BBvlQ-1.png)
     - 迁移学习：在留出数据集上，预训练后的Omnisapiens-7B SFT在微调后全面超越未经行为数据预训练的Qwen2.5-Omni-7B。例如在MUStARD（讽刺检测）上，准确率从0.473提升至0.658（+39.1%）。关键数据见表5。
     - 行为描述符效果：BAM模块在NVC（非言语沟通，+33%）、SAR（讽刺检测，+29%）等任务上带来显著提升，但在SOC和INT任务上性能下降。关键数据见表6。
     - 零样本迁移：预训练后的OMNISAPIENS-7B RL在四个留出数据集上进行零样本评估，均大幅超越Qwen2.5-Omni-7B，例如在抑郁检测（DAIC-WOZ）上从0.108提升至0.499（+362%）。关键数据见表8。
@@ -81,8 +81,8 @@ hiddenInHomeList: true
     - 设计动机：以即插即用、不破坏原始骨干表征的方式，显式集成从原始数据中提取的、更能表征行为细节的“行为描述符”（如人脸关键点、身体姿态、韵律特征）。
     - 结构：在骨干网络冻结的情况下，BAM作为一个残差适配器附加在h_penult上。它接收经过时序池化（均值和标准差）的行为描述符向量f，经过归一化、dropout和一个轻量级前馈网络（FFN）处理后，产生一个残差更新Δh_f。最终的适应表示h_adapt = h_penult + Δh_f，该表示再送入原有的分类头或解码头。
     - 关键点：更新是残差式的，因此可灵活地添加或移除，不影响骨干网络。BAM参数量小，训练高效。
-![图3: OMNISAPIENS-7B BAM 效果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZKE23BBvlQ-2.png)
-![图4: OMNISAPIENS-7B BAM 效果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZKE23BBvlQ-3.png)
+![图3: OMNISAPIENS-7B BAM 效果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZKE23BBvlQ-2.png)
+![图4: OMNISAPIENS-7B BAM 效果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZKE23BBvlQ-3.png)
 5.  OMNISAPIENS-7B RL：
     - 架构简化：移除了SFT中的分类头，所有任务统一使用一个基于LLM解码器的生成头来输出自由文本答案。
     - 训练方法：使用群体相对策略优化（GRPO） 进行强化学习。模型（策略）为每个提示生成一组回复，根据由准确性奖励、格式奖励和语义相似度奖励组成的复合奖励函数计算每个回复的奖励值，进而计算组内归一化的优势估计。策略通过带裁剪和KL散度正则化的目标进行更新，以优化生成高质量回复。

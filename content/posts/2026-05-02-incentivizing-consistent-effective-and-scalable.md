@@ -64,7 +64,7 @@ hiddenInHomeList: true
 
 本文提出的CESAR并非一个全新的模型架构，而是一个用于训练现有音频大模型（论文中使用Qwen2.5-Omni-7B作为基座）以提升其推理能力的训练框架。其核心在于奖励机制和优化流程。
 
-![图1: CESAR框架与对比方法](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DUr48hxO2h-0.jpg)
+![图1: CESAR框架与对比方法](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DUr48hxO2h-0.jpg)
 图1：CESAR框架与不同训练方法的对比。CESAR（右）通过奖励推理过程（一致性、关键词、过思考惩罚）来培养一致、有效、可扩展的推理能力，解决了左侧“简单、不一致和幻觉推理”的问题。
 
 - 输入输出流程：模型输入为音频`a_i`、问题`q_i`和选项集`C_i`。输出必须遵循指定格式：先生成推理过程`t_i</think>`，再生成最终答案`<answer>ŷ_i</answer>`。
@@ -150,10 +150,10 @@ hiddenInHomeList: true
 - 人类评估（3000+次判断）：CESAR相对Ke-Omni-R的总体胜率为 63.10%，平局22.10%，负14.80%。
 
 图表描述：
-![图3: 测试时缩放与AI裁判评估](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DUr48hxO2h-2.jpg)
+![图3: 测试时缩放与AI裁判评估](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DUr48hxO2h-2.jpg)
 图3：(左) 测试时缩放分析。基座模型（蓝）性能随推理长度增加而崩溃；Ke-Omni-R（橙）性能波动无收益；CESAR（绿）性能稳步提升并达到峰值（推理甜点��，且带过思考惩罚的版本（实线）峰值更高、所需推理长度更短。(右) AI裁判评估显示CESAR的推理过程在多数情况下优于基线。
 
-![图2: MMAU Test-mini任务分类对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DUr48hxO2h-1.jpg)
+![图2: MMAU Test-mini任务分类对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DUr48hxO2h-1.jpg)
 图2：MMAU Test-mini上不同方法在不同音频类型（语音、音乐、声音）和难度（简单、中等、困难）任务上的归一化性能雷达图。显示CESAR在不同任务类型和难度上表现均衡，而CESAR w/o OP在困难任务上表现更优。
 
 MMSU细分结果（感知 vs. 推理）：

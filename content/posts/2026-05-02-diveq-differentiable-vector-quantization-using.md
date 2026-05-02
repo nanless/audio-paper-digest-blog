@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 论文的核心贡献并非提出一个完整的端到端神经网络，而是提出两种改进的可微分向量量化（VQ）层设计，可嵌入任何使用VQ的架构中。其整体工作流程与标准VQ-VAE类似（如图1左侧），但将不可微的VQ操作替换为DiVeQ或SF-DiVeQ层（如图1右侧）。
 
-![图1: 标准VQ与DiVeQ工作流程对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/KRVnpTbx7R-0.png)
+![图1: 标准VQ与DiVeQ工作流程对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KRVnpTbx7R-0.png)
 
 图1：标准VQ与DiVeQ工作流程对比。左侧为标准VQ，梯度因`argmin`操作被阻断。右侧为DiVeQ，梯度可以通过加性误差模型流动。
 
@@ -118,7 +118,7 @@ hiddenInHomeList: true
 
 1. VQ-VAE图像压缩任务（以AFHQ数据集为例）：
 
-![图6: AFHQ图像压缩定量比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/KRVnpTbx7R-5.png)
+![图6: AFHQ图像压缩定量比较](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KRVnpTbx7R-5.png)
 
 图6：AFHQ图像压缩定量比较。横轴为码本大小（bit数），纵轴为SSIM、PSNR和LPIPS指标。每条曲线是三个独立运行的平均结果。DiVeQ（橙色）和SF-DiVeQ（绿色）在所有码本大小和指标上均持续优于其他方法，且优势随码本增大而扩大。
 
@@ -126,13 +126,13 @@ hiddenInHomeList: true
 
 定性结果：图5展示了不同方法重建的图像，DiVeQ和SF-DiVeQ的视觉质量明显更好，细节更清晰。
 
-![图5: VQ-VAE图像重建定性比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/KRVnpTbx7R-4.png)
+![图5: VQ-VAE图像重建定性比较](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KRVnpTbx7R-4.png)
 
 图5：VQ-VAE图像重建定性比较。展示了四个数据集上的原始图像和不同方法的重建结果（11-bit码本）。左下角为LPIPS↓值。DiVeQ和SF-DiVeQ的重建图像质量显著优于其他方法。
 
 2. VQGAN图像生成任务（以CELEBA-HQ数据集为例）：
 
-![图7: VQGAN图像生成定性比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/KRVnpTbx7R-6.png)
+![图7: VQGAN图像生成定性比较](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KRVnpTbx7R-6.png)
 
 图7：VQGAN图像生成定性比较。展示了不同方法生成的随机图像（CELEBA-HQ 9-bit, CHURCH 10-bit, FFHQ 10-bit）。左下角为FID↓值。DiVeQ和SF-DiVeQ生成的图像质量和逼真度更高。
 

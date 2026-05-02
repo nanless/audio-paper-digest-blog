@@ -60,10 +60,10 @@ hiddenInHomeList: true
     *   训练数据：使用合成的多通道音频进行训练，基于AI眼镜麦克风阵列配置模拟，通过真实环境房间脉冲响应（RIR）进行卷积，并添加随机信噪比（-5dB至40dB）的噪声和旁听对话。训练数据来自ASR数据和由LLM生成的语音问答数据，不包含WearVox测试集数据。
     *   训练目标：标准的下一token预测（自回归）损失函数。
 
-![图2: SC WearLlama与MC WearLlama推理示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QpaNErg7ug-1.png)
+![图2: SC WearLlama与MC WearLlama推理示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QpaNErg7ug-1.png)
 图2展示了两种模型的推理流程差异。SC WearLlama仅编码波束成形后的单通道音频（c_x），而MC WearLlama并行编码通道0（c_0）和波束成形通道（c_x），并将嵌入交错后输入解码器。
 
-![图8: 音频编码器权重共享示意](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QpaNErg7ug-7.png)
+![图8: 音频编码器权重共享示意](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QpaNErg7ug-7.png)
 图8更详细地说明了MC WearLlama如何使用同一个共享权重的音频编码器处理两个不同的输入通道（Channel 0和Channel X），并将它们的输出嵌入交错。
 
 ### 💡 核心创新点
@@ -129,7 +129,7 @@ hiddenInHomeList: true
 （列出了Construction Noise, Vehicles, Wind等13种噪音类型下各模型的表现）
 结���：风噪（Wind）对所有模型伤害最大。Gemini 2.5 Flash Thinking和MC WearLlama在Construction Noise等复杂噪音下表现出更强的鲁棒性。
 
-![图3: 声学环境对模型性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QpaNErg7ug-2.png)
+![图3: 声学环境对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QpaNErg7ug-2.png)
 图3展示了大多数模型在室外和噪音环境下的性能下降。Gemini 2.5 Flash Thinking和MC WearLlama展现了更强的噪音鲁棒性，MC WearLlama在室外噪音环境下比SC WearLlama高出约5%。
 
 ### ⚖️ 评分理由

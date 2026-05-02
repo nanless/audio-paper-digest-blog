@@ -48,16 +48,16 @@ hiddenInHomeList: true
 3. 与已有方法的对比创新：(1) 提供了首个针对序列解耦的扩散模型概率建模（Eq.1-2）；(2) 与先前工作不同，建模了静态与动态因子的相互依赖性（Dependent Prior），提升了表达力；(3) 整个模型仅需一个基于分数匹配的统一损失项（Eq.5），极大简化了优化。
 4. 主要实验结果：在多个真实世界数据集上全面超越SOTA（SPYL， DBSE）。视频任务中，在VoxCeleb条件交换的动态保留度（AKD）上从10.96降至2.793；音频任务中，在TIMIT上的解耦差距（Dis. Gap）从31.11%提升至42.29%；时序预测任务（ETTh1 MAE）从11.2降至9.89。首次实现了跨数据集的零样本视频解耦交换（如图2，4）。
 
-![图1：DiffSDA模型架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-0.jpg)
+![图1：DiffSDA模型架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-0.jpg)
 图1展示了DiffSDA的三大组件：序列语义编码器（上方，提取静态s0和动态d1:V 0因子）、随机编码器（下方，添加噪声得x1:V t）和随机解码器（右侧，条件于隐因子进行去噪得˜x1:V 0）。
 
-![图2：条件交换、零样本交换及多因子解耦示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-1.jpg)
+![图2：条件交换、零样本交换及多因子解耦示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-1.jpg)
 图2左侧展示了在真实视频上的条件交换（保留第一个人的静态特征，使用第二个人的动态）；中间展示了零样本交换（在VoxCeleb上训练，在MUG上测试）；右侧展示了通过对静态因子进行PCA遍历发现的可控语义属性（如性别）。
 
-![图3：与SPYL方法在多个数据集上的动态交换定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-2.jpg)
+![图3：与SPYL方法在多个数据集上的动态交换定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-2.jpg)
 图3对比了本文方法与SPYL方法在CelebV-HQ、VoxCeleb和TaiChi-HD数据集上的动态交换结果，表明DiffSDA能生成更高质量且动态保留更好的样本。
 
-![图4：零样本交换的更多示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-3.jpg)
+![图4：零样本交换的更多示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-3.jpg)
 图4展示了在VoxCeleb上训练，但在CelebV-HQ或MUG上进行零样本动态交换的结果，证明了模型的跨数据集泛化能力。
 
 5. 实际意义：为处理视频、音频、时序等序列数据的无监督解耦提供了统一、强大的生成式框架，有望应用于可控内容生成、数据增强、特征迁移等领域。
@@ -139,8 +139,8 @@ DiffSDA的整体架构如图1所示，包含三个核心组件：
 | CelebV-HQ (256×256) | 0.631 | 0.751 | 0.540 | 39.16 | 28.69 | 6.932 |
 | TaiChi-HD (64×64) | 0.443 | 0.325 | 0.326 | 7.681 | 6.312 | 2.143 |
 
-![图5：MUG数据集上“法官”评估失效案例分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-4.jpg)
-![图6：另一案例分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-5.jpg)
+![图5：MUG数据集上“法官”评估失效案例分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-4.jpg)
+![图6：另一案例分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-5.jpg)
 图5和图6分析了在MUG数据集上使用预训练分类器（法官）评估时，模型可能失败的原因。尽管生成的表情（C行）更符合原始动态（B行），但法官可能因为身份变化而预测错误，这表明传统评估方法的局限性，从而支持了本文提出的AED/AKD度量。
 
 表4：音频解耦指标 (TIMIT & LibriSpeech)
@@ -167,7 +167,7 @@ DiffSDA在TIMIT和LibriSpeech上的解耦差距（Dis. Gap）显著超过所有�
 - 图4：展示了跨数据集零样本交换的更多例子。
 - 图7：消融研究，展示了VQ-VAE对于实现跨数据集零样本交换的关键作用。
 
-![图7：VQ-VAE对零样本交换影响的消融研究](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/tooDJHBSvO-6.jpg)
+![图7：VQ-VAE对零样本交换影响的消融研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/tooDJHBSvO-6.jpg)
 图7对比了使用和未使用VQ-VAE的模型在零样本交换任务上的表现，表明VQ-VAE对于生成连贯的跨数据集表示至关重要。
 
 #

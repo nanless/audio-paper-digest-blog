@@ -141,16 +141,16 @@ hiddenInHomeList: true
 *   结论：当前系统均无法充分解决对话视频生成问题。SI2V管道在连贯性上较好，但依赖关键帧；T2V管道能捕捉部分高层语义，但在关系/互动模式的准确性上表现很差（如互动模式准确率仅18.70%），指令遵循度也远低于真实数据。
 
 实验相关图表：
-![图1：任务定义与示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/fBagP6w6yE-0.png)
+![图1：任务定义与示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/fBagP6w6yE-0.png)
 图1说明：展示了MM-DIA数据集中的对话片段及其层级标注（句子级和对话级）。右侧展示了MDG框架下的三个任务：显式控制（T1）、隐式视觉控制（T2）、隐式音频控制（T3）。
 
-![图2：数据处理流水线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/fBagP6w6yE-1.jpg)
+![图2：数据处理流水线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/fBagP6w6yE-1.jpg)
 图2说明：详细展示了从原始影视数据到最终标注对话片段的完整处理流程，包括字幕校准、多模态对话提取、细粒度标注等步骤。
 
-![图3：MM-DIA数据分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/fBagP6w6yE-2.jpg)
+![图3：MM-DIA数据分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/fBagP6w6yE-2.jpg)
 图3说明：展示了MM-DIA数据集中双人性别、关系类型、互动模式的分布情况，体现了数据的多样性和与真实社交互动的一致性。
 
-![图4：字幕校准案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/fBagP6w6yE-3.jpg)
+![图4：字幕校准案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/fBagP6w6yE-3.jpg)
 图4说明：展示了多源字幕校准中可能出现的问题案例，以及校准后的效果。
 
 ### ⚖️ 评分理由

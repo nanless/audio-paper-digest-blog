@@ -74,10 +74,10 @@ MMSU的架构设计是一个三层的树状分类体系，旨在系统性地评�
 3.  第三层：具体任务。每个子类别下包含多个具体任务，共计47个。例如，“音系学”下包含“语调感知”、“重音感知”、“塞音识别”等；“说话人特征”下包含“情绪识别”、“音高比较”等。  
     这个层级结构清晰地反映了评估的逻辑：从低层的声音特征识别（感知），到高层的语义与意图理解（推理），并贯穿了语音的全部语言学维度。
 
-![MMSU 数据集概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yHzCDP1tXw-0.png)
+![MMSU 数据集概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yHzCDP1tXw-0.png)
 图1：展示了MMSU数据集的三大特征：细粒度声学特征、语言学专家指导的数据创建、以及覆盖感知与推理的47个任务。
 
-![MMSU 任务分类体系](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yHzCDP1tXw-1.png)
+![MMSU 任务分类体系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yHzCDP1tXw-1.png)
 图2：详细展示了MMSU的47个任务在“感知-推理”维度与“语言学-副语言学”领域下的分布。左侧为24个感知任务，右侧为23个推理任务。
 
 ### 💡 核心创新点
@@ -100,7 +100,7 @@ MMSU的架构设计是一个三层的树状分类体系，旨在系统性地评�
 
 主要基准结果：论文在MMSU上评估了22个模型，核心结果见表3。
 
-![模型性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yHzCDP1tXw-4.png)
+![模型性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yHzCDP1tXw-4.png)
 图5(a)：展示了在不同噪声强度下（Level 1和Level 2），主要模型的性能变化。Gemini-1.5-Pro和Qwen2.5-Omni表现出最强的鲁棒性，验证了模型确实在利用音频信号。
 
 关键发现与分析：
@@ -109,7 +109,7 @@ MMSU的架构设计是一个三层的树状分类体系，旨在系统性地评�
 3.  音系学能力普遍薄弱：所有模型在音系学相关任务上表现最差。例如，感知任务中，最优模型Gemini-1.5-Pro在音系学上的准确率仅为53.60%，远低于语义学。
 4.  任务特异性分析（图4）：不同模型表现差异显著。GPT-4o-Audio在情绪识别、语调感知等感知任务上较弱；所有模型在“近同音词感知”、“辅音元音感知”等音系任务上表现不佳；在推理任务中，“对联匹配”、“反讽检测”等需要结合声学和高级知识的任务极具挑战。
 
-![错误类型分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yHzCDP1tXw-5.png)
+![错误类型分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yHzCDP1tXw-5.png)
 图5(b)：展示了Qwen2.5-Omni-7B在一个语调感知任务上的错误案例。模型正确转录了文本，但错误感知了语调，导致答案错误，这被归类为“感知错误”。
 
 错误分析（表4）：对5个代表性模型的300个错误样本分析显示，感知错误（PE） 是最主要的失败原因（约47-59%），其次是推理错误（RE）和知识缺乏（LK）。

@@ -69,7 +69,7 @@ hiddenInHomeList: true
 *   数据流（以模态合并为例）：合并后的模型在推理时，可以同时接收视觉、音频或视频输入。具体模态的输入会通过其对应的编码器（CLIP、BEATs、LanguageBind）和连接器，转换成LLM能理解的token表示，然后送入合并后的、统一的LLM骨干网络中进行处理，生成文本响应。
 *   关键设计选择：保留模态特定组件（编码器、连接器）而仅合并LLM参数，这一选择是合理的，因为不同模态的编码器架构和预训练目标差异巨大，直接合并权重意义不大；而LLM作为统一的语义理解和生成接口，其参数更易于通过数学操作进行融合。
 
-![OptMerge框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Me0n0iESJY-0.jpg)
+![OptMerge框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Me0n0iESJY-0.jpg)
 图1：展示了通过模型合并来统一MLLM的能力（①将不同任务微调模型合并）或模态（②将视觉、音频、视频模型合并），从而构建一个更强的多任务或全模态模型，且此过程无需原始训练数据。
 
 ### 💡 核心创新点
@@ -118,7 +118,7 @@ hiddenInHomeList: true
 | OptMerge (Ours) | 30.97 | 57.13 | 54.48 | 21.05 | 68.72 | 76.01 | 46.35 | 75.97 | 69.72 | 73.94 | 57.44 |
 | Mixture Training | 29.79 | 61.33 | 52.83 | 23.68 | 70.32 | 72.96 | 60.25 | 72.06 | 65.93 | 67.46 | 57.66 |
 
-![Table 2对应可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Me0n0iESJY-1.jpg)
+![Table 2对应可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Me0n0iESJY-1.jpg)
 ���2：展示了基准中任务向量的分布。(a, b)显示任务向量幅值较小，全微调模型呈右偏分布，LoRA模型呈多峰分布。(c, d)显示不同任务在不同层的归一化Frobenius范数差异显著，带来了合并挑战。
 
 表3：在Qwen2-VL（LoRA微调）上的能力合并结果
@@ -138,10 +138,10 @@ hiddenInHomeList: true
 | AVQA | 75.55 | 47.57 | 79.20 | 69.39 | 78.62 | 75.84 | 80.90 | 77.51 | 76.86 | 80.82 | 80.26 | 80.78 |
 | 平均 | 63.16 | 37.75 | 64.11 | 58.57 | 65.38 | 63.10 | 67.34 | 65.14 | 64.65 | 67.00 | 66.88 | 66.79 |
 
-![Table 5对应可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Me0n0iESJY-2.jpg)
+![Table 5对应可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Me0n0iESJY-2.jpg)
 图3：展示LoRA模型合并时，优化合并向量容易因低秩约束而通过增大幅值来“走捷径”达到正交，导致问题。
 
-![Table 5对应可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Me0n0iESJY-3.jpg)
+![Table 5对应可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Me0n0iESJY-3.jpg)
 图4：展示了OptMerge通过初始化与优化策略，在优化过程中能保持合并向量Frobenius范数的稳定，而WUDI Merging则会出现范数快速增长。
 
 表4：消融实验（在Qwen2-VL LoRA合并和Vicuna-7B模态合并上）

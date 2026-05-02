@@ -111,16 +111,16 @@ hiddenInHomeList: true
 7.  错误类型：最主要的错误是“问题误解”（模型未能正确理解问题要求或定位视频中的相关信息）。
 
 图表分析：
-![图1：三种推理类型示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/VI4kGUfPio-0.jpg)
+![图1：三种推理类型示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/VI4kGUfPio-0.jpg)
 图1说明：展示了“深度理解”、“概念迁移”和“问题聚焦”三种推理类型的示例，直观体现了基准测试的任务多样性。
 
-![图3：模型性能分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/VI4kGUfPio-2.jpg)
+![图3：模型性能分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/VI4kGUfPio-2.jpg)
 图3说明：
 *   (a) 模型在不同视频长度上的性能（CoT MBin+Sub），呈现“中等视频最佳”的趋势。
 *   (b) 字幕对性能的影响（CoT MBin），大多数模型在加入字幕后性能提升。
 *   (c) 输入帧数对性能的影响（CoT MCQ，以Qwen2.5-VL为例），增加帧数（尤其是对长视频）能持续提升性能。
 
-![图4：对比与错误分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/VI4kGUfPio-3.jpg)
+![图4：对比与错误分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/VI4kGUfPio-3.jpg)
 图4说明：
 *   (a) 盲文本模型、单图模型和视频模型的性能对比，凸显了视频级理解的必要性。
 *   (b) 问题难度（简单、中等、困难）与模型性能的关系，模型在困难问题上性能骤降。

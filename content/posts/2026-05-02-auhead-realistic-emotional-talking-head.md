@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 整体框架如图2所示，是一个清晰的两阶段管线。
 
-![图2: AUHead的两阶段框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/dmzlAUkulz-1.png)
+![图2: AUHead的两阶段框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/dmzlAUkulz-1.png)
 
 第一阶段：面部AU解耦（理解阶段）
 *   输入：原始音频（16kHz）。
@@ -124,11 +124,11 @@ hiddenInHomeList: true
 关键结论：采用“先情感后AU”的CoT策略（最后一行）在AU预测的精度、召回率、F1值和MAE上均优于其他配置，验证了该策略的有效性。
 
 图4：定性对比
-![图4：在MEAD和CREMA上与SOTA方法的定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/dmzlAUkulz-3.jpg)
+![图4：在MEAD和CREMA上与SOTA方法的定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/dmzlAUkulz-3.jpg)
 关键结论：论文中展示了ANIPORTrait、ECHOMIMIC、HALLOV1、MEMO与AUHead的生成结果对比。基线方法常出现牙齿异常、无牙、模糊、表情平淡等问题，而AUHead生成的结果更清晰、表情更生动、视觉连贯性更好。
 
 图3：不同AU引导尺度的影响
-![图3：不同AU引导尺度对视觉质量（FID）和情感表达（Emotion ACC和MAE）的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/dmzlAUkulz-2.jpg)
+![图3：不同AU引导尺度对视觉质量（FID）和情感表达（Emotion ACC和MAE）的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/dmzlAUkulz-2.jpg)
 关键结论：随着AU引导尺度（AU CFG scale）的增大，情感准确率（Emotion ACC）上升，AU预测的MAE下降，表明对表情的控制力增强。而FID先降后升，表明存在一个最佳平衡点（标记为星号，尺度约为3.5），在此点视觉质量与情感表达达到最佳折衷。
 
 表2：不同AU表示的消融研究

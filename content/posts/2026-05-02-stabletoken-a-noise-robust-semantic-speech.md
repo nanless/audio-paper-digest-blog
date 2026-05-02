@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 StableToken的整体架构建立在经典的“编码器-解码器”语音识别模型（初始化自Whisper-large-v3）之上，并在编码器中点插入核心创新模块。
 
-![StableToken架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/17DNmdQ9aU-1.png)
+![StableToken架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/17DNmdQ9aU-1.png)
 图2: StableToken架构图。训练时，输入同时生成纯净和扰动版本，分发给不同分支；推理时，输入送入所有分支进行投票。
 
 完整输入输出流程：
