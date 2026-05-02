@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 脑编码 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 空间音频 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["脑编码"]
+tags: ["空间音频"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 脑编码 方向论文"
+description: "共 1 篇 ICLR 2026 空间音频 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 脑编码
+# ICLR 2026 - 空间音频
 
 共 **1** 篇论文
 
@@ -18,42 +18,52 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response ](/audio-paper-digest-blog/posts/2026-05-02-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 7.5分 | 前25% |
+| 🥇 | [OWL : Geometry-Aware Spatial Reasoning for Audio Large Langu](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-02-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
+### 🥇 [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio)
 
-✅ **7.5/10** | 前25% | #脑编码 | #多模态模型 | #音频事件检测 #预训练
+✅ **7.0/10** | 前25% | #空间音频 | #音频大模型 | #音频事件检测 #声源定位
 
 👥 **作者与机构**
 
-- 第一作者：Stéphane d‘Ascoli（Meta AI）
-- 通讯作者：未明确说明（根据邮箱格式，所有作者邮箱均为个人邮箱，无明确标注通讯作者）
-- 作者列表：Stéphane d‘Ascoli（Meta AI）、Jérémy Rapin（Meta AI）、Yohann Benchetrit（Meta AI）、Hubert Banville（Meta AI）、Jean-Rémi King（Meta AI）
+- 第一作者：Subrata Biswas* (Worcester Polytechnic Institute, Department of Electrical & Computer Engineering)
+- 通讯作者：未说明（论文明确标注 * Equal Contribution，三位作者贡献均等，未指定通讯作者）
+- 作者列表：Subrata Biswas (Worcester Polytechnic Institute, Department of Electrical & Computer Engineering), Mohammad Nur Hossain Khan (Worcester Polytechnic Institute, Department of Electrical & Computer Engineering), Bashima Islam (Worcester Polytechnic Institute, Department of Electrical & Computer Engineering)
 
 💡 **毒舌点评**
 
-这篇论文在Algonauts竞赛中大获全胜，其“端到端多模态”的设计理念确实击中了当前脑编码模型的痛点，将不同模态的信息整合从一个线性后处理步骤提升到了模型的核心。然而，对于一篇旨在“通向整合认知模型”的工作，其核心Transformer编码器的细节（如注意力机制如何具体捕捉跨模态和跨时间信息）描述过于简略，宛如一个黑箱，这与论文宣称的“非线性”优势相称却不够透明。
+这篇论文在解决音频大模型（ALLM）空间推理短板这一具体问题上，工作做得非常扎实系统，从数据集构建（BiDepth）、几何感知编码器（SAGE）到带推理链的模型（OWL）形成了一个完整闭环，实验充分且开源承诺明确，体现了良好的工程素养。但其核心创新更多是“组合”与“加强”，将视觉领域的几何先验、CoT方法引入音频领域，且性能提升主要依赖精心设计的合成数据，对模拟与真实环境之间的鸿沟讨论尚不深入，创新性略显不足。
 
 🔗 **开源详情**
 
-- 代码：是。论文提供了代码仓库链接：https://github.com/facebookresearch/algonauts-2025。
-- 模型权重：未提及。论文中未明确说明TRIBE模型本身的预训练权重是否公开，仅提到了所使用的预训练基础模型（Llama, Wav2Vec-Bert, V-JEPA 2）的来源和许可证。
-- 数据集：未直接公开。论文使用的Courtois NeuroMod数据集有其自身的获取渠道（CC0许可证），但论文未提供直接下载链接。
-- Demo：未提及。
-- 复现材料：是。论文提供了详细的训练策略、超参数表格（表3）、硬件配置和模型架构描述，结合开源代码，复现细节较为充分。
+- 代码：论文提供了代码仓库链接：https://github.com/BASHLab/OWL。承诺开源。
+- 模型权重：论文中未提及是否公开预训练或微调后的模型权重。
+- 数据集：论文明确表示将公开发布的BiDepth数据集（包含1.1M QA对）。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文附录详细提供了SAGE和OWL的训练超参数（表10，表11）、特征提取细节、损失函数公式等，复现信息充分。
 - 论文中引用的开源项目：
-    - 预训练模型：Llama-3.2-3B， Wav2Vec-Bert-2.0， V-JEPA 2。
-    - 软件库：x-transformers， nilearn， PyTorch。
-    - 数据集：Courtois NeuroMod。
-- 论文中未提及开源计划：未提及模型权重的开源计划，未提及数据集的直接下载方式。
+    - SoundSpaces v2.0, Matterport3D (用于数据生成)
+    - AudioMAE (用于SAGE编码器初始化)
+    - Q-Former (来自BLIP-2，用作投影模块)
+    - LLaMA-2-7B (语言骨干)
+    - AudioSet (声音事件源)
+    - PyTorch, Hugging Face Transformers等通用库（隐含）
 
 📌 **核心摘要**
 
-这篇论文旨在解决传统脑编码模型局限于单模态、线性映射和被试特异性的问题，致力于构建一个能够统一预测不同大脑区域、不同个体对多模态刺激（视频）反应的通用模型。其核心方法是TRIBE模型，它分别从预训练的视频、音频和文本大模型中提取动态特征，并通过一个Transformer编码器融合这些特征，最后结合一个被试特定层来预测全脑1000个区域的fMRI BOLD信号。与已有方法相比，TRIBE的新颖之处在于它是首个同时实现了非线性融合（通过Transformer）、多被试联合训练和多模态输入的端到端脑编码模型。在Algonauts 2025竞赛中，TRIBE取得了第一名（平均编码分数0.2146），显著领先于其他团队。消融实验证明了多模态融合在高级联合皮层（如前额叶、顶枕颞叶皮层）的显著增益，以及Transformer和多被试训练的关键作用。该工作表明，多模态信息整合对于准确预测全脑活动至关重要，为构建整合性的人脑表征模型铺平了道路。其主要局限性在于：1) 在1000个脑区的粗粒度上建模，空间分辨率有限；2) 仅处理fMRI数据，缺乏更精确的时间分辨率；3) 仅基于4名被试的数据训练，泛化到新被试的能力尚未验证。
+1.  解决的问题：当前的音频大语言模型（ALLMs）在空间推理任务上存在两大核心缺陷：缺乏几何感知能力（无法有效利用声学场景的几何结构信息）和采用单步推理（缺乏可解释的、分步骤的空间推理过程）。
+2.  方法核心：提出OWL框架，包含两个关键组件：(1) 空间-声学几何编码器（SAGE），它在训练时使用双耳音频、全景深度图像和房间脉冲响应（RIR）进行多模态监督，以学习几何感知的音频表征，但在推理时仅需音频输入；(2) 基于空间感知链式思维（CoT）的推理机制，使OWL能够生成分步骤的、可解释的空间关系推理。
+3.  与已有方法相比新在哪里：相比先前工作（如BAT），OWL首次为音频LLM引入了显式的几何监督训练（通过RIR预测任务）和结构化的多步CoT推理，将空间感知与推理过程解耦并分阶段训练，支持更精细的（12时区）方向估计和多源场景推理。
+4.  主要实验结果：
+    *   在自建BiDepth数据集和公开SpatialSoundQA基准上评估。
+    *   SAGE在方向估计平均角度误差（MAE）上比Spatial-AST降低11°（表2），在距离误差率（DER）上比Spatial-AST降低31.34%（在BiDepth上）。
+    *   OWL在空间推理问答（Type III）准确率上比BAT提升约24.9%（77.89% vs. 69.46%），在带CoT的推理（Type IV）中BA达到76.53%，显著超越所有基线（表3）。在SpatialSoundQA零样本测试中，OWL的整体推理准确率达到79.06%，优于BAT的76.89%（表4）。
+5.  实际意义：推动了音频理解从“识别什么声音”向“理解声音在哪里以及如何关联”的跨越，为机器人听觉、AR/VR音频交互、助听器增强等需要精细空间感知的应用提供了新的技术框架和评估基准。
+6.  主要局限性：训练数据（BiDepth）完全基于模拟环境生成，尽管进行了真实世界泛化测试，但模型在复杂、动态的真实声学环境中的鲁棒性有待验证；当前推理任务局限于单轮问答，尚未扩展到多轮对话。
 
 ---
 

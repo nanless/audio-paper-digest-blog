@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频检索 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 音频分类 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["音频检索"]
+tags: ["音频分类"]
 categories: [iclr-2026]
-description: "共 4 篇 ICLR 2026 音频检索 方向论文"
+description: "共 4 篇 ICLR 2026 音频分类 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频检索
+# ICLR 2026 - 音频分类
 
 共 **4** 篇论文
 
@@ -18,168 +18,173 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [MindMix: A Multimodal Foundation Model for Auditory Percepti](/audio-paper-digest-blog/posts/2026-05-02-mindmix-a-multimodal-foundation-model-for) | 8.5分 | 前25% |
-| 🥈 | [OmniCVR: A Benchmark for Omni-Composed Video Retrieval with ](/audio-paper-digest-blog/posts/2026-05-02-omnicvr-a-benchmark-for-omni-composed-video) | 8.5分 | 前25% |
-| 🥉 | [Beyond Instance-Level Alignment: Dual-Level Optimal Transpor](/audio-paper-digest-blog/posts/2026-05-02-beyond-instance-level-alignment-dual-level) | 8.0分 | 前25% |
-| 4. | [SupCLAP: Controlling Optimization Trajectory Drift in Audio-](/audio-paper-digest-blog/posts/2026-05-02-supclap-controlling-optimization-trajectory-drift) | 7.5分 | 前25% |
+| 🥇 | [Unmute the Patch Tokens: Rethinking Probing in Multi-Label A](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in) | 8.5分 | 前25% |
+| 🥈 | [Resp-Agent: An Agent-Based System for Multimodal Respiratory](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal) | 8.5分 | 前25% |
+| 🥉 | [PACE: Pretrained Audio Continual Learning](/audio-paper-digest-blog/posts/2026-05-03-pace-pretrained-audio-continual-learning) | 7.5分 | 前25% |
+| 4. | [MindMix: A Multimodal Foundation Model for Auditory Percepti](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-02-mindmix-a-multimodal-foundation-model-for)
+### 🥇 [Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in)
 
-🔥 **8.5/10** | 前25% | #音频检索 | #多模态模型 | #对比学习 #自监督学习
-
-👥 **作者与机构**
-
-- 第一作者：Rui Liu（香港理工大学）
-- 通讯作者：Jibin Wu（香港理工大学）
-- 作者列表：Rui Liu（香港理工大学）、Zhige Chen（香港理工大学）、Shu Peng（香港理工大学）、Wenlong You（香港理工大学）、Zhi-An Huang（香港城市大学（东莞））、Jibin Wu（香港理工大学）、Kay Chen Tan（香港理工大学）
-
-💡 **毒舌点评**
-
-本文的核心创新“跨模态低秩对齐”（CALRA）模块设计得颇为精巧，通过类型感知、双向注意力与低秩融合的协同，确实实现了EEG与音频深度对齐，实验上也展示了“碾压式”的性能优势。然而，论文将几乎所有功劳归于这个对齐模块和多模态预训练，却轻描淡写地忽略了其巨大的模型规模（97M参数，是多数EEG基线模型的数十倍）和对高质量配对数据的强依赖，这些在现实部署中都是沉重的负担。
-
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接：https://github.com/CookieMikeLiu/MindMix。
-- 模型权重：论文中未明确提及是否公开预训练或微调后的模型权重。
-- 数据集：所有使用的数据集均为公开数据集，论文详细列出了各数据集的名称和来源。
-- Demo：论文中未提及提供在线演示。
-- 复现材料：提供了详尽的训练细节、超参数配置（Table A2）、分阶段的训练策略说明、评估指标定义以及数据预处理流程，复现材料非常充分。
-- 论文中引用的开源项目：使用了预训练的Wav2Vec 2.0模型作为音频编码器，并引用了PyTorch等深度学习框架。
-
-📌 **核心摘要**
-
-1. 解决的问题：现有EEG基础模型（如EEGPT, LaBraM）在听觉解码任务上表现不佳，因其为单模态预训练，缺乏与听觉刺激信息的深度耦合，导致泛化能力受限。
-2. 方法核心：提出MindMix，一个两阶段的多模态基础模型。第一阶段，在大规模EEG数据上预训练一个高容量的EEG编码器。第二阶段，利用一个新颖的“跨注意力低秩对齐”（CALRA）模块，在配对的EEG-音频数据上通过对比学习，学习深度对齐的神经-声学表示。
-3. 创新之处：这是首个专为学习精细对齐的神经-声学表示而设计的多模态基础模型。核心创新是CALRA模块，它超越了简单的投影对齐，通过类型特定对齐器、双向交叉注意力和共享低秩瓶颈融合，实现了模态间的深度交互。
-4. 实验结果：MindMix在多个听觉解码任务上大幅超越所有基线。在语音注意力解码（KUL数据集）上平衡准确率高达99.82%，最强基线DARNet为94.81%。在情感分析（HR-EEG4EMO数据集）上达到88.78%，比LaBraM高近16个百分点。关键对比数据如下表所示：
-
-| 任务 | 数据集 | 方法 | 平衡准确率 | 加权F1分数 |
-| :--- | :--- | :--- | :--- | :--- |
-| 语音注意力解码 | KUL | DARNet | 0.9481 ± 0.036 | 0.9567 ± 0.025 |
-| 语音注意力解码 | KUL | MindMix | 0.9982 ± 0.008 | 0.9991 ± 0.004 |
-| 情感分析 | HR-EEG4EMO | LaBraM | 0.7295 ± 0.082 | 0.7829 ± 0.081 |
-| 情感分析 | HR-EEG4EMO | MindMix | 0.8878 ± 0.045 | 0.8869 ± 0.046 |
-| 音乐检索 | MAD-EEG | CBraMod | 0.8011 (Duo Acc.) | 0.7654 (Trio Acc.) |
-| 音乐检索 | MAD-EEG | MindMix | 0.9475 (Duo Acc.) | 0.8824 (Trio Acc.) |
-
-5. 实际意义：为非侵入式听觉脑机接口和跨模态神经解码建立了强大的基准，推动了从“信号处理”到“神经-声学语义对齐”的研究范式转变。
-6. 主要局限性：论文明确指出，当前大规模配对EEG-音频数据的稀缺是制约该领域发展的首要瓶颈，也限制了对模型扩展规律的研究。
-
----
-
-### 🥈 [OmniCVR: A Benchmark for Omni-Composed Video Retrieval with Vision, Audio, and Text](/audio-paper-digest-blog/posts/2026-05-02-omnicvr-a-benchmark-for-omni-composed-video)
-
-🔥 **8.5/10** | 前25% | #音频检索 | #多模态模型 | #基准测试 #跨模态
+🔥 **8.5/10** | 前25% | #音频分类 | #自监督学习 #模型评估 | #自监督学习 #模型评估
 
 👥 **作者与机构**
 
-- 第一作者：Junyang Ji（清华大学、快手科技、南方科技大学）
-- 通讯作者：Zhihai He（南方科技大学）、Wenming Yang（清华大学）
-- 作者列表：Junyang Ji（清华大学、快手科技、南方科技大学）、Shengjun Zhang（快手科技）、Da Li（快手科技、中国科学院大学）、Yuxiao Luo（快手科技、北京大学）、Yan Wang（快手科技）、Di Xu（快手科技）、Biao Yang（快手科技）、Wei Yuan（快手科技）、Fan Yang（快手科技）、Zhihai He（南方科技大学）、Wenming Yang（清华大学）
-
-💡 **毒舌点评**
-
-本文核心贡献在于填补了组合视频检索基准中“音频模态缺失”的空白，并提出了一个扩展模型，其消融实验设计（如“盲目检索”、控制OmniEmbed骨干网络的音频表征方式）颇具巧思，有力地论证了“显式音频语义”的关键性。然而，其模型的核心创新“Audio-as-Text”在工程上略显“取巧”，完全依赖于现有大模型（Qwen2-Audio）的能力，并未在音频表征学习本身提出新方法，且额外的转录步骤带来了显著的延迟开销。
-
-🔗 **开源详情**
-
-- 代码：论文中提供了GitHub仓库链接：https://github.com/Kuaishou-Reasearch/OmniCVR，并声明将开源完整代码库。
-- 模型权重：论文中声明将开源AudioVLM2Vec的模型权重。
-- 数据集：论文中声明OmniCVR基准（包括160k+片段、50k+三元组和黄金测试集）将在发表后完全开源，数据集链接为：https://huggingface.co/datasets/Jun-Yang/OmniCVR。
-- Demo：论文中未提及。
-- 复现材料：论文提供了详细的数据生成流程、所有使用的提示词（见附录G）、以及对训练设置（基于开源预训练权重）的描述，为复现提供了良好基础。但部分具体训练超参数未在文中说明。
-- 论文中引用的开源项目/模型：Qwen2-Audio, Qwen2-VL, Qwen2.5-Omni, PySceneDetect, CLIP, CLAP, Gemini 2.5 Pro等。
-
-📌 **核心摘要**
-
-1. 要解决什么问题：现有的组合视频检索（CoVR）基准和方法主要关注视觉与文本的对齐，系统性地忽略了音频模态（语音、音乐、环境声）在视频理解中的关键作用，导致无法评估模型在需要同时修改视觉和音频的复杂现实场景中的检索能力。
-2. 方法核心是什么：论文提出了OmniCVR基准，这是首个将视觉、音频和文本视为同等重要模态的大规模组合视频检索基准。同时，提出了一种名为AudioVLM2Vec的模型，该模型通过将音频轨道转录为细粒度文本描述，并将其与视觉信息和用户查询一同输入大语言模型骨干，从而显式地注入音频语义。
-3. 与已有方法相比新在哪里：1) 任务定义：首次定义了“全模态组合检索”，涵盖视觉中心、音频中心和集成型查询；2) 数据构建：设计了一套包含内容感知分割、全模态标注和由大模型与人类专家双重验证的自动化数据生成流程；3) 模型架构：提出了一种将原始音频转换为文本描述再与视觉信息融合的简单但有效的音频表征学习范式，区别于其他“全模态”模型（如ImageBind、OmniEmbed）直接处理原始音频token的方式。
-4. 主要实验结果如何：AudioVLM2Vec在OmniCVR基准上取得了全面的最佳性能。例如，在整体查询上R@1达到66.98%，比强基线VLM2Vec（38.44%）高出28.54个百分点；在音频中心查询上R@1达到77.2%，而VLM2Vec仅为12.4%。消融实验证明，移除源视频会导致性能暴跌，证实了任务对组合推理的严格要求；将OmniEmbed的骨干从原生音频token替换为Audio-as-Text机制，其R@1从13.6%大幅提升至32.7%。
-5. 实际意义是什么：该工作为评估和推动真正具备多模态理解能力的视频检索系统建立了新的标准，揭示了当前最先进模型在音频理解和组合推理上的重大缺陷，并证明了将音频转化为语义文本是提升相关性能的有效途径，对智能视频搜索、内容审核、跨模态生成等应用具有指导意义。
-6. 主要局限性是什么：1) 推理效率：引入的音频转录步骤显著增加了推理延迟（从1.72s增加到4.77s），限制了实时应用；2) 音频表征依赖：性能高度依赖于Qwen2-Audio的转录质量，可能引入偏差或错误；3) 任务范围：专注于检索任务，未探索音频修改指令的生成等更复杂的交互。
-
----
-
-### 🥉 [Beyond Instance-Level Alignment: Dual-Level Optimal Transport for Audio-Text Retrieval](/audio-paper-digest-blog/posts/2026-05-02-beyond-instance-level-alignment-dual-level)
-
-🔥 **8.0/10** | 前25% | #音频检索 | #最优传输 | #对比学习 #鲁棒性
-
-👥 **作者与机构**
-
-- 第一作者：Wenqi Guo（上海交通大学）
-- 通讯作者：Shikui Tu（上海交通大学），Lei Xu（上海交通大学，深圳人工智能与数字经济广东省实验室）
-- 作者列表：Wenqi Guo（上海交通大学）、Shikui Tu（上海交通大学）、Lei Xu（上海交通大学，深圳人工智能与数字经济广东省实验室）
-
-💡 **毒舌点评**
-
-这篇论文的亮点在于它聪明地将最优传输（OT）从“实例级对齐”推广到“特征级正则化”，为解决小批量训练下的噪声敏感性问题提供了新颖且理论扎实的视角，实验结果在多个基准上确实很强。然而，其短板也很明显：提出的“可靠性感知边缘分布”计算依赖于批次统计量，在实际大规模分布式训练中的稳定性和计算开销可能成为落地隐患，且论文未提供代码，复现门槛较高。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：未提及公开模型权重。
-- 数据集：使用的AudioCaps, Clotho, ESC-50均为公开数据集，论文中给出了获取来源引用。
-- Demo：未提及在线演示。
-- 复现材料：提供了极其详细的复现材料：完整的训练算法伪代码（算法1）、所有实验的超参数设置（表6）、可靠性分数计算的具体公式（附录B）、理论证明（附录C）、以及所有消融和敏感性实验（表5, 7-13）。
-- 论文中引用的开源项目：引用了Sinkhorn算法（Cuturi, 2013），并使用了预训练的编码器（如BERT, Beats等）。
-
-📌 **核心摘要**
-
-1. 问题：现有的跨模态检索（如音频文本检索）方法主要依赖实例级对齐（如对比损失），隐含假设所有特征维度贡献相等。在小批量训练和标签稀缺时，这种假设会放大噪声，导致对齐信号不稳定且有偏差。
-2. 方法核心：提出DART（Dual-level Alignment via Robust Transport）框架，在实例级对齐（基于逆最优传输IOT）的基础上，增加了基于非平衡Wasserstein距离（UWD）的特征级正则化。同时，设计了“可靠性感知边缘分布”，根据通道的跨模态一致性、方差和峰度统计量，自适应地为特征通道赋权，以抑制噪声通道。
-3. 创新点：首次将OT视角从样本对齐拓展到特征通道对齐；引入可靠性先验引导特征级运输计划；提供了理论分析，证明特征级目标比实例级目标具有更紧的集中界，对异常值和噪声更鲁棒。
-4. 实验结果：在AudioCaps、Clotho两个音频文本检索基准和ESC-50零样本声音事件检测任务上，DART均取得了SOTA性能。例如，在AudioCaps上，与最强基线相比，文本到音频R@1提升1.1%，音频到文本R@1提升4.5%。在小批量（k=32）和40%标签缺失的困难设定下，性能下降幅度显著小于基线方法（见表2）。
-5. 实际意义：为资源受限（小批量训练）或数据质量不高（标签噪声）场景下的跨模态检索提供了更鲁棒的解决方案，提升了模型在实际应用中的可靠性和泛化能力。
-6. 主要局限性：引入的特征级正则化和可靠性计算增加了训练时的计算复杂度（虽然论文分析内存开销可控）。可靠性估计依赖于小批量统计，其稳定性有待更广泛验证。此外，论文未开源代码。
-
----
-
-### 4. [SupCLAP: Controlling Optimization Trajectory Drift in Audio-Text Contrastive Learning with Support Vector Regularization](/audio-paper-digest-blog/posts/2026-05-02-supclap-controlling-optimization-trajectory-drift)
-
-✅ **7.5/10** | 前25% | #音频检索 | #对比学习 | #多语言 #预训练
-
-👥 **作者与机构**
-
-- 第一作者：Jiehui Luo（中央音乐学院，2∗）
-- 通讯作者：Yuguo Yin（北京大学，1†）
+- 第一作者：Lukas Rauch（University of Kassel）
+- 通讯作者：未明确说明（论文中提供了作者邮箱，但未明确指定通讯作者；Christoph Scholz作为资深作者可能负责通讯，但未明确标注）
 - 作者列表：
-  - Jiehui Luo（中央音乐学院）
-  - Yuguo Yin（北京大学）
-  - Yuxin Xie（北京大学）
-  - Jinghan Ru（北京大学）
-  - Xianwei Zhuang（北京大学）
-  - Minghua He（北京大学）
-  - Aofan Liu（北京大学）
-  - Zihan Xiong（电子科技大学）
-  - Dongchao Yang（香港中文大学）
+    - Lukas Rauch（University of Kassel）
+    - René Heinrich（University of Kassel, Fraunhofer IEE）
+    - Houtan Ghaffari（Ghent University）
+    - Lukas Miklautz（Max Planck Institute of Biochemistry）
+    - Ilyass Moummad（INRIA Montpellier）
+    - Bernhard Sick（University of Kassel）
+    - Christoph Scholz（University of Kassel, Fraunhofer IEE）
 
 💡 **毒舌点评**
 
-本文的亮点在于从优化动力学的角度（力分解）为对比学习中的“轨迹漂移”现象提供了新颖的理论解释，并据此设计出简洁有效的SVR正则化方法，理论自洽且实验证据扎实。短板在于其验证主要依赖于相对较小规模的数据集（AudioCaps， Clotho），且未与更多、更强的近期基线（如一些大规模的CLIP式音频-文本模型）进行对比，其实效性和普适性在更大规模场景下有待进一步证明。
+亮点：论文像一位严谨的侦探，系统性地揭露了音频SSL评估中被忽视的“池化瓶颈”问题，并提出了“二值化原型探针”这一轻量却有效的“破案工具”，其基准测试的全面性（13个数据集）为该领域树立了新的评估标准。短板：所提方法本质上仍是对冻结特征的聚合，天花板受限于预训练模型本身；且所有实验均基于频谱图输入的ViT编码器，对其他音频表示（如波形、神经音频编码器）的适用性有待验证。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码链接。
-- 模型权重：论文中未提及公开预训练模型权重。
-- 数据集：使用了公开的AudioCaps和Clotho数据集，并自行构建了多语言翻译版本。多语言测试集的质量在附录E.9中进行了评估。
+- 代码：论文中提供了代码仓库链接：`https://github.com/lurauch/unmute-patch-tokens/`。
+- 模型权重：论文未明确说明是否提供所有用于评估的预训练SSL模型权重，但提到使用的均为公开发布的检查点（如EAT， BEATs等），其权重可能需从原论文渠道获取。
+- 数据集：论文明确提供了部分未公开数据集的托管地址：`https://huggingface.co/datasets/lrauch/desed`， `https://huggingface.co/datasets/lrauch/spass`， `https://huggingface.co/datasets/lrauch/urban-sed`。其他标准数据集（如AudioSet， FSD50K等）假定可公开获取。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文在正文和附录中提供了较为详尽的训练设置（超参数、优化器、硬件）、模型架构细节（编码器型号、MLP结构）以及评估方法，为复现提供了基础。
-- 引用的开源项目：论文依赖的编码器模型为CED（Dinkel et al., 2024）和SONAR-TE（Duquenne et al., 2023），均为公开可用模型。
-- 总结：论文中未提及开源计划。
+- 复现材料：提供了极其详尽的复现材料，包括：1) 完整的基准测试实施细节（附录D）；2) 所有数据集的详细描述（表8）；3) 所有池化方法的详细说明和参数量（表9）；4) 超参数选择的具体协议和固定参数（表10）；5) 完整的消融实验结果（表7）。
+- 论文中引用的开源项目：论文代码可能依赖于常见的深度学习框架（如PyTorch）和音频处理工具，但未在文中明确列出具体的依赖项目。论文中提及并比较的SSL模型（如Audio-MAE， BEATs， EAT， SSLAM等）均为先前发表的工作，其代码和模型可能各自有独立仓库。
 
 📌 **核心摘要**
 
-1. 本文针对音频-文本对比语言-音频预训练（CLAP）中优化轨迹漂移的问题，该问题源于负样本推力中不受控的垂直分量，导致训练不稳定和收敛缓慢。
-2. 方法核心是提出支持向量正则化（SVR），通过在原损失函数中添加一个辅助损失项，利用构造的文本“支持向量”来选择性地抑制推力的垂直分量，从而稳定优化轨迹。
-3. 与已有方法（如InfoNCE、SigLIP）相比，本文新在：(1) 首次从梯度力分解视角明确剖析了轨迹漂移问题；(2) 设计了SVR方法进行针对性干预，且无需额外数据和推理开销；(3) 提出了无监督的语义半径建模策略（StaticSVR 和 DynamicSVR）来控制干预强度。
-4. 主要实验结果：在AudioCaps和Clotho数据集上，bi-DynamicSVR 方法在单语和多语言文本-音频检索任务上均显著超越InfoNCE和SigLIP基线。例如，在AudioCaps的T2A R@1指标上，InfoNCE为41.87，而bi-DynamicSVR达到44.16（提升约2.3%）；在零样本ESC-50分类上，InfoNCE为89.6，bi-DynamicSVR为92.1（提升2.5%）。
-5. 实际意义在于，该方法以极低的额外计算成本（训练开销可忽略），提升了对比学习的训练效率和最终对齐质量，可直接应用于各种基于对比学习的音频-文本模型训练流程中。
-6. 主要局限性包括：(1) 实验数据集规模相对较小；(2) 与更先进的、可能已包含复杂技巧的基线对比不完全；(3) DynamicSVR的性能依赖于预测半径的准确性，在极端噪声环境下可能不稳定（论文附录E.7对其鲁棒性有一定分析）。
+1. 要解决什么问题：在音频自监督学习（SSL）中，尽管冻结模型加探针的评估范式高效且能反映嵌入质量，但该领域在追求State-of-the-Art性能时仍普遍采用计算成本高的微调方法。论文指出，核心原因是标准的全局池化（如使用[cls]令牌）创建了信息瓶颈，导致线性探针无法准确评估嵌入质量，尤其是对于分散、局部化的多标签音频事件。
+2. 方法核心是什么：论文提出“二值化原型探针”（Protobin）作为一种新的池化方法。它通过一组可学习的、二值化的原型（+/-1）对冻结模型输出的所有令牌进行相似度匹配和最大池化聚合，实现按类别的多向量信息提取，从而克服单向量瓶颈。该方法简单、高效（内存减少32倍），且无需显式的正交性损失。
+3. 与已有方法相比新在哪里：与使用单一[cls]令牌或全局可学习注意力池化相比，Protobin 能够激活不同的原型来捕捉同一音频片段中不同的声音事件，更适合多标签场景。与先前的原型方法相比，它简化了架构（解耦原型与类别，去除正交损失），并通过二值化实现了极高的内存效率，同时保持了竞争力。
+4. 主要实验结果如何：论文在一个覆盖5个通用多标签数据集、7个少样本生物声学数据集和2个多类别控制数据集的综合基准上，对6个SSL编码器（及3个监督微调版本）测试了11种池化方法。主要结果如下表所示（以通用多标签数据集`as20k`和`urban`上的EAT编码器为例）：
+
+| 数据集 | 模型 | 线性探针 (基线) | MHCA (最佳注意力) | Proto (类依赖) | Protobin (本文) | 微调 (上界) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| as20k | EAT | 17.29 | 26.11 | 31.06 | 31.67 | 40.2 |
+| urban | EAT | 77.76 | 86.43 | 89.11 | 89.24 | 未说明 |
+
+关键结论：Protobin 在绝大多数配置下显著优于线性和注意力探针，并在多标签任务上建立了清晰的方法层次：原型探针 > 注意力探针 > 固定全局探针。它弥合了探针与微调之间高达63%的性能差距。
+5. 实际意义是什么：该工作确立了探针作为一种有竞争力的、高效的音频SSL模型评估范式，挑战了对昂贵微调的依赖。它为研究者提供了一个更可靠、更轻量的工具来评估和比较预训练音频模型的真实嵌入质量，并可能启发面向多标签音频事件检测/定位任务的架构设计。
+6. 主要局限性是什么：探针性能的天花板仍然受制于预训练模型本身的质量。所有实验均基于频谱图和ViT编码器，对于其他音频输入形式或编码器架构的适用性未被验证。此外，原型数量（J）是一个需要针对任务调整的超参数。
+
+---
+
+### 🥈 [Resp-Agent: An Agent-Based System for Multimodal Respiratory Sound Generation and Disease Diagnosis](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal)
+
+🔥 **8.5/10** | 前25% | #音频分类 | #多模态模型 | #音频生成 #流匹配
+
+👥 **作者与机构**
+
+- 第一作者：Pengfei ZHANG（香港科技大学（广州））
+- 通讯作者：Li Liu（香港科技大学（广州））
+- 作者列表：Pengfei ZHANG（香港科技大学（广州））、Tianxin XIE（未说明）、Minghao YANG（未说明）、Li Liu（香港科技大学（广州））
+
+#
+
+💡 **毒舌点评**
+
+亮点在于其“分析-生成闭环”的系统设计哲学非常优雅，将生成模型从被动数据增强工具升级为主动识别模型弱点并生成针对性训练数据的“对手”，这超越了多数同类工作的思路。短板是尽管提供了详尽的下游任务评估，但对合成呼吸音的“临床真实性”仍停留在间接证明（模型能学会），缺乏由呼吸科医生进行的直接听感评估，这是医疗AI落地的关键一环。
+
+#
+
+🔗 **开源详情**
+
+*   代码：提供了GitHub仓库链接：https://github.com/zpforlove/Resp-Agent
+*   模型权重：提及了公开的模型检查点：https://huggingface.co/AustinZhang/resp-agent-models
+*   数据集：提及了公开的Resp-229k数据集：https://huggingface.co/datasets/AustinZhang/resp-agent-dataset
+*   Demo：论文中未提及在线演示。
+*   复现材料：论文提供了详细的实验设置（附录C）、超参数配置，并声称所有脚本和配置已开源。复现声明中明确指出了可复现性资源的地址。
+*   论文中引用的开源项目：依赖的开源项目/模型包括：BEATs, DeepSeek-V3.2-Exp (智能体核心), DeepSeek-R1-Distill-Qwen-7B (文本生成), Qwen3-0.6B-Base (生成器骨干), Longformer, Vocos (声码器), PANNs, AST, CLAP, HTS-AT, Conformer 等。
+
+📌 **核心摘要**
+
+1.  解决的问题：深度学习在呼吸音分析中面临两大根本挑战：一是将音频转为频谱图会导致瞬态事件和临床信息丢失；二是数据稀缺且类别严重不平衡，阻碍了模型的诊断鲁棒性。
+2.  方法核心：提出了 Resp-Agent，一个由新型“主动对抗课程智能体”(Thinker-A2CA) 调度的闭环多模态系统。该系统包含一个基于流匹配的可控呼吸音生成器（用于合成特定病理的音频）和一个基于模态编织的诊断器（融合临床文本与音频特征进行诊断）。智能体能主动分析诊断弱点，并调度生成器进行针对性合成，形成“诊断-合成”闭环。
+3.  与已有方法相比新在哪里：与静态管道或单纯的数据增强不同，Resp-Agent 实现了生成与诊断的协同设计；引入了首个用于可控呼吸音合成的多模态大语言模型（Resp-MLLM），解耦了病理内容与声学风格；提出了带有稀疏音频锚点的模态编织诊断架构，以线性复杂度捕捉长程依赖和毫秒级瞬态事件。
+4.  主要实验结果：在ICBHI官方测试集上，诊断器取得了72.70的Score，显著超越先前SOTA。在自建的大规模跨域基准Resp-229k上，完整的Resp-Agent系统在跨域测试集（Test-CD）上取得了0.8870的准确率和0.5980的宏F1分数，相比无合成基线提升了+0.3862。生成器在可控性和保真度上也优于c-WaveGAN、AudioLDM 2等基线（FAD=1.13）。
+5.  实际意义：为数据稀缺的医疗音频领域提供了一个端到端的解决范式，展示了通过智能体协调的可控生成来主动解决数据不平衡问题的巨大潜力，对推动医疗AI的公平性和鲁棒性有重要意义。
+6.  主要局限性：尽管提供了客观指标和下游任务验证，但合成音频的临床真实性仍需医学专家直接评估；系统涉及多个复杂组件（LLM、流匹配、长上下文Transformer），实际部署和训练成本较高；基准测试主要基于回顾性数据，前瞻性临床验证缺失。
+
+#
+
+---
+
+### 🥉 [PACE: Pretrained Audio Continual Learning](/audio-paper-digest-blog/posts/2026-05-03-pace-pretrained-audio-continual-learning)
+
+✅ **7.5/10** | 前25% | #音频分类 | #持续学习 | #预训练 #参数高效微调
+
+👥 **作者与机构**
+
+- 第一作者：Chang Li（清华大学心理与认知科学系），Kanglei Zhou（清华大学心理与认知科学系）（共同第一作者）
+- 通讯作者：Liyuan Wang（清华大学心理与认知科学系）
+- 作者列表：Chang Li（清华大学心理与认知科学系），Kanglei Zhou（清华大学心理与认知科学系），Liyuan Wang（清华大学心理与认知科学系）
+
+💡 **毒舌点评**
+
+亮点：论文首次系统性地揭示了预训练音频模型在持续学习场景中面临的核心挑战——表示饱和与表示偏移，并设计了针对性的两阶段（FSA+MSA）框架PACE，在多个基准上取得了显著且稳定的性能提升。
+短板：虽然实验充分，但核心基线（如RanPAC）本身在音频CL上的有效性已被揭示，PACE的创新更多体现在工程化的模块组合（LoRA、梯度投影、边界扰动）而非原理性突破；此外，所有实验基于单一自监督预训练模型（EAT），其泛化性虽在附录中用SSLAM验证，但仍是基于ViT架构，对卷积或其他音频骨干的适用性未知。
+
+🔗 **开源详情**
+
+- 代码：论文结论部分提及“我们将发布所有构建的基准和复现的基线以及我们的代码库”，但未提供具体代码仓库链接。当前状态：论文中提及将开源，但未提供具体链接。
+- 模型权重：未提及公开预训练或微调后的模型权重。
+- 数据集：使用了公开数据集（ESC-50, US8K, SC2, TIMIT, VocalSet），未创建新数据集。
+- Demo：未提及在线演示。
+- 复现材料：论文提供了详细的超参数设置（附录D）、算法伪代码（附录B）和实验细节，有助于复现。
+- 引用的开源项目：论文依赖了多个开源模型和工具，包括：EAT (Chen et al., 2024), SSLAM (Alex et al., 2025), LoRA (Hu et al., 2021), SpecAugment (Park et al., 2019), ViT架构等。
+
+📌 **核心摘要**
+
+1. 要解决什么问题：解决预训练音频模型在持续学习中，因强调低级频谱细节而非结构化语义，导致严重的上下游任务不对齐，进而引发灾难性遗忘的问题。
+2. 方法核心是什么：提出PACE框架，包含改进的首次适应（FSA）、自适应多会话子空间正交PEFT（MSA）和基于频谱图的边界感知扰动正则化。FSA通过分层LoRA和解析分类器稳定初始表征；MSA通过梯度投影到历史表征的零空间实现增量适应；边界扰动则用于增强类间可分性。
+3. 与已有方法相比新在哪里：不同于直接迁移视觉CL方法（如提示学习）到音频的失败做法，也超越了简单冻结骨干+解析分类器（如RanPAC）的基线。PACE是首个针对音频CL特点设计的、统一处理粗粒度和细粒度场景的框架。
+4. 主要实验结果如何：在三个粗粒度（ESC-50, US8K, SC2）和三个细粒度（TIMIT-2, TIMIT-3, VocalSet）音频CL基准上，PACE显著超越所有基线。例如，在细粒度任务上比RanPAC分别高出+5.3%（TIMIT-2）、+4.1%（TIMIT-3）和+6.3%（VocalSet）。与联合训练上界的差距也被大幅缩小（如在ESC-50上仅差0.75%）。关键消融实验证明每个核心模块（FSA, MSA, 梯度投影GP，边界损失Lreg）都不可或缺。
+   - 主要性能对比如表2所示（见详细分析部分）。
+   - 消融实验如表3和表4所示（见详细分析部分）。
+5. 实际意义是什么：为动态变化的现实音频应用（如智能家居声音监控、自适应语音识别、在线音乐分类）提供了使预训练模型能够持续学习新类而不遗忘旧类的有效解决方案。
+6. 主要局限性是什么：方法的计算开销高于纯冻结骨干的方法（如RanPAC）；超参数（如停止会话数`Nstop`、层冻结阈值`ρlayer`）需要针对任务进行调优；主要验证基于ViT架构的预训练音频模型，未在更广泛的音频模型架构上进行测试。
+
+---
+
+### 4. [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for)
+
+✅ **7.0/10** | 前25% | #音频分类 | #对比学习 | #多模态模型 #音频检索
+
+👥 **作者与机构**
+
+- 第一作者：RUI LIU（香港理工大学）
+- 通讯作者：Jibin Wu（香港理工大学）（论文中明确标注*Corresponding authors）
+- 作者列表：RUI LIU（香港理工大学），Zhige Chen（香港理工大学），Shu Peng（香港理工大学），Wenlong You（香港理工大学），Zhi-An Huang（香港城市大学（东莞）），Jibin Wu（香港理工大学），KC Tan（香港理工大学）
+
+💡 **毒舌点评**
+
+MindMix的核心亮点在于其CALRA模块，通过引入类型特定对齐和低秩融合，实现了EEG与音频表征的深度交互，而非简单的投影匹配，这在多模态BCI中是一个关键且有效的创新。然而，论文报告的近乎完美的分类准确率（如KUL数据集上的99.82%）在存在巨大个体差异和噪声的非侵入式EEG解码中令人惊讶，这强烈提示实验设置（如数据划分）可能过于理想化，其在真实世界复杂场景（如新被试、新环境）下的泛化能力仍需更严格的验证。
+
+🔗 **开源详情**
+
+- 代码：提供了代码仓库链接：https://github.com/CookieMikeLiu/MindMix。
+- 模型权重：论文中未提及公开预训练模型权重。
+- 数据集：论文中使用的数据集（如KUL, DTU, ESAA等）均为公开数据集，文中给出了引用。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文在正文和附录中提供了详尽的超参数配置（表A2）、训练硬件、优化器设置、数据预处理步骤、负采样策略和模型复杂度分析（表A3），复现指引充分。
+- 引用的开源项目：主要依赖了Wav2Vec 2.0作为音频编码器。EEG基础模型基线（LaBraM, CBraMod等）也引用了其官方实现。
+
+📌 **核心摘要**
+
+1. 问题：现有的EEG基础模型（如LaBraM, EEGPT）是单模态的，缺乏与听觉刺激的深度耦合，导致其在多样化的听觉解码任务（如注意解码、情感识别）上泛化能力不足。
+2. 方法核心：提出MindMix，一个两阶段训练的多模态基础模型。第一阶段在3500+小时EEG数据上预训练一个高容量EEG编码器；第二阶段利用CALRA（交叉注意力低秩对齐）模块，在100+小时配对EEG-音频数据上，通过对比学习进行深度跨模态对齐。
+3. 创新点：核心创新是CALRA模块，它包含类型特定对齐器（处理不同听觉刺激）、双向交叉注意力（全局上下文融合）和共享低秩对齐（强制双线性交互），超越了传统的浅层投影或拼接融合。
+4. 主要结果：在多个下游任务上显著超越基线。例如，在KUL听觉注意解码（AAD）任务上，MindMix达到99.82%的平衡准确率，远超最强基线DARNet（94.81%）和单模态基础模型LaBraM（63.30%）。在音乐检索任务上，Trio准确率达到88.24%，同样优于所有对比方法。
+5. 实际意义：为非侵入式听觉脑机接口（BCI）和认知神经科学研究提供了强大的基础模型，证明了深度跨模态对齐对神经解码的关键作用。
+6. 主要局限性：论文承认大规模配对EEG-音频数据集稀缺是主要瓶颈，限制了对模型缩放定律的探索；报告的极高性能可能受限于特定的实验评估设置，真实世界鲁棒性有待验证。
+
+#
 
 ---
 

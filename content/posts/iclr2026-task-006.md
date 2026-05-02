@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 数据集 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 实时视听问答 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["数据集"]
+tags: ["实时视听问答"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 数据集 方向论文"
+description: "共 1 篇 ICLR 2026 实时视听问答 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 数据集
+# ICLR 2026 - 实时视听问答
 
 共 **1** 篇论文
 
@@ -18,56 +18,53 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-](/audio-paper-digest-blog/posts/2026-05-02-speakervid-5m-a-large-scale-high-quality-dataset) | 7.5分 | 前25% |
+| 🥇 | [Can Vision-Language Models Answer Face to Face Questions in ](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-02-speakervid-5m-a-large-scale-high-quality-dataset)
+### 🥇 [Can Vision-Language Models Answer Face to Face Questions in the Real-World?](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face)
 
-✅ **7.5/10** | 前25% | #数据集 | #自回归模型 | #音视频 #多模态模型
+🔥 **8.0/10** | 前25% | #实时视听问答 | #基准测试 | #音频问答 #音视频
 
 👥 **作者与机构**
 
-- 第一作者：Youliang Zhang（清华大学，邮箱：zhangyou24@mails.tsinghua.edu.cn）
-- 通讯作者：Duomin Wang (wangduomin@gmail.com), Xiu Li (li.xiu@sz.tsinghua.edu.cn) （论文中标注了†和‡，通常表示通讯作者）
-- 作者列表：
-  - Youliang Zhang（清华大学）
-  - Zhaoyang Li（StepFun）
-  - Duomin Wang†（StepFun）
-  - Jiahe Zhang（未说明）
-  - Deyu Zhou（StepFun；香港科技大学（广州））
-  - Zixin Yin（StepFun；香港科技大学）
-  - Xili Dai（StepFun；香港科技大学）
-  - Gang Yu（StepFun）
-  - Xiu Li‡（清华大学（深圳））
+- 第一作者：Reza Pourreza（高通AI研究），Rishit Dagli（多伦多大学）并列第一贡献
+- 通讯作者：未说明
+- 作者列表：Reza Pourreza（高通AI研究）、Rishit Dagli（多伦多大学）、Apratim Bhattacharyya（高通AI研究）、Sunny Panchal（高通AI研究）、Guillaume Berger（高通AI研究）、Roland Memisevic（高通AI研究）
 
 💡 **毒舌点评**
 
-本文最大的亮点在于其填补了“音频-视觉双人交互虚拟人生成”这一关键任务的数据空白，以工业级的系统性和透明度构建了一个规模（520万片段）和质量（1080P+）俱佳的专用数据集，为后续研究铺平了道路。然而，其短板在于“新瓶装旧酒”感略强——基线模型采用的自回归+扩散架构并非全新，且在绝对视频生成质量上并未超越更庞大的级联扩散模型（如Hallo3），其主要优势更多体现在端到端带来的推理速度与情感保持上。
+亮点在于数据集QIVD的设计非常巧妙，它捕捉了“实时交互”中时间对齐和指代消歧的核心挑战，为评估AI的“情境感知”能力提供了迄今为止最逼真的舞台。短板则是论文的核心模型架构（流式ASR+视频LLM）是现有组件的拼接，并未提出全新的端到端融合模型来解决这一问题，更像是一个优秀的“系统集成与诊断报告”。
 
 🔗 **开源详情**
 
-- 代码：论文明确表示将开源“the entire dataset, including the raw data, annotations, and data processing pipeline”，即包含数据处理代码。但未提供具体仓库链接。
-- 模型权重：论文中提到了其基线模型，但未明确说明是否会公开训练好的模型权重。
-- 数据集：公开。论文明确表示将公开完整的SpeakerVid-5M数据集，包括视频URL、标注和处理代码。获取方式是通过提供的URL自行下载原始视频（遵循YouTube条款）。
+- 代码：论文中未提及提供代码仓库链接。
+- 模型权重：论文评估了多个开源模型（如VideoLLaMA系列、Qwen系列），这些模型的权重本身是公开的。微调后的特定模型权重是否公开未明确说明。
+- 数据集：论文公开了QIVD数据集，提供了访问链接：https://www.qualcomm.com/developer/software/qualcomm-interactive-video-dataset-qivd
 - Demo：论文中未提及提供在线演示。
-- 复现材料：提供了极其详尽的复现材料，包括：
-    - 数据处理全流程描述（第3节）。
-    - 模型架构细节（附录A.7-A.9）。
-    - 训练硬件、阶段、超参数（附录A.7）。
-    - 标注文件使用指南（附录A.11）。
-    - 使用的提示词（附录A.13）。
-- 论文中引用的开源项目：主要依赖以下开源工具/模型：
-    - 数据处理：SceneDetect, 3D-Speaker, YOLO, SyncNet, ArcFace, Qwen2.5-VL, Qwen-3, DWpose, Whisper。
-    - 基线模型：Qwen2.5-Omni（作为理解模块），CosyVoice2（音频tokenizer/解码器），3D VAE。
-    - 质量评估：DOVER。
-- 开源计划：论文中明确提及“Both the dataset and the data processing code will be publicly released.”，但未提供具体的发布平台和链接。
+- 复现材料：论文在附录中提供了极其详细的复现材料，包括：
+    - 微调时冻结与可训练模块的划分（表D.1）
+    - 详细的训练超参数配置（表D.2，包括学习率、优化器、批量大小等）
+    - Stream-Qwen-Omni的适配格式和训练细节（附录D.3）
+    - LLM裁判使用的完整提示词（表D.3， D.4）
+    - 针对GPT-4o的评测提示词（表D.5）
+- 论文中引用的开源项目：Whisper (Radford et al., 2023), Whisper-Streaming (Machácek et al., 2023), SigLIP (Zhai et al., 2023), BEATs (Chen et al., 2022), 以及多个作为评估基线的开源视觉语言模型（如InstructBLIP, VideoLLaMA系列, Qwen系列等）。
 
 📌 **核心摘要**
 
-这篇论文针对“音频-视觉双人交互虚拟人类生成”这一新兴但缺乏专用大规模数据集的任务，提出了第一个专用数据集SpeakerVid-5M。该数据集包含超过520万、总计8700多小时的单人说话视频片段，以及77万对（1800小时）双人对话音频-视觉对，覆盖多种身体构图和视角，并附有丰富的结构化标注（姿态、模糊度、ASR、文本描述等）。与已有数据集相比，其创新在于首次系统性地针对“交互”任务构建数据，并按交互类型和质量进行分层设计。论文同时提供了一个基于自回归框架（整合Qwen2.5-Omni与CosyVoice）的基线生成模型，并构建了评估基准VidChatBench。实验表明，该基线在VidChatBench上能有效工作，且端到端方法在情感对齐和推理速度上优于级联管线。该工作为虚拟人交互研究提供了关键基础设施，但数据集存在语言和人口统计偏差。主要局限性包括：数据集主要来自YouTube，存在固有偏见；基线模型在纯视觉质量指标上仍落后于顶级扩散模型。
+1.  解决的问题：当前视觉语言模型（VLM）在处理需要实时、动态理解正在展开的场景并回答“面对面”口头提问时表现不佳，现有评估基准无法衡量这种能力。
+2.  方法核心：提出Qualcomm Interactive Video Dataset (QIVD)，一个包含2900个真实世界短视频的问答数据集，每个视频包含用户提问、人工转录的文本问题、答案以及关键的“何时可以合理回答”的时间戳。设计了一个简单的基线流式处理方法：使用流式ASR（Whisper-Streaming）转录问题并检测结束时间，然后将视频和转录文本输入视频LLM生成答案。
+3.  与已有方法相比的新颖之处：这是首个专门为评估模型实时、在线视听问答能力而构建的基准。与离线数据集不同，QIVD要求模型处理同步的视听流，并解决指代表达（如“这个”、“这里”）、动作计数、音频视觉线索整合等真实交互挑战。
+4.  主要实验结果：实验显示，即使是GPT-4o等SOTA模型，在QIVD上的正确率（约58%）也远低于人类基线（约87%）。主要瓶颈是时间推理（如动作计数，人类85.7% vs 模型<35%）和视听融合。微调（如VideoLLaMA2.1-7B-AV）可显著缩小差距，尤其在动作理解和音频视觉任务上提升明显（分别+10%, +17.4%）。精确识别“何时回答”对性能有决定性影响（图3）。
+    | 模型 | 正确率（离线/GT设置） | BERT | METEOR | BLEU | ROUGE-L |
+    |---|---|---|---|---|---|
+    | GPT-4o | 58.76 | 89.36 | 51.18 | 15.72 | 42.55 |
+    | VideoLLaMA3-7B | 56.38 | 91.63 | 48.56 | 12.72 | 43.84 |
+    | 人类 | 87.33 | 93.01 | 53.21 | 17.40 | 49.76 |
+5.  实际意义：为开发能与人实时交互的AI助手（如客服、教育、生活指导机器人）提供了关键的评估标准和改进方向，指明了当前模型在动态情境理解上的短板。
+6.  主要局限性：数据集规模（2900视频）相对较小；录制环境虽多样但仍有控制成分；基线流式方法并非端到端，仍依赖独立的ASR和LLM模块，未能完全解决跨模态实时融合问题。
 
 ---
 

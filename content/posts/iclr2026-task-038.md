@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频场景理解 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 音视频理解 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["音频场景理解"]
+tags: ["音视频理解"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频场景理解 方向论文"
+description: "共 1 篇 ICLR 2026 音视频理解 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频场景理解
+# ICLR 2026 - 音视频理解
 
 共 **1** 篇论文
 
@@ -18,49 +18,59 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omn](/audio-paper-digest-blog/posts/2026-05-02-omni-captioner-data-pipeline-models-and-benchmark) | 9.0分 | 前25% |
+| 🥇 | [JointAVBench: A Benchmark for Joint Audio-Visual Reasoning E](/audio-paper-digest-blog/posts/2026-05-03-jointavbench-a-benchmark-for-joint-audio-visual) | 6.0分 | 前50% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omni Detailed Perception](/audio-paper-digest-blog/posts/2026-05-02-omni-captioner-data-pipeline-models-and-benchmark)
+### 🥇 [JointAVBench: A Benchmark for Joint Audio-Visual Reasoning Evaluation](/audio-paper-digest-blog/posts/2026-05-03-jointavbench-a-benchmark-for-joint-audio-visual)
 
-🔥 **9.0/10** | 前25% | #音频场景理解 | #多模态模型 | #基准测试 #数据集
+✅ **6.0/10** | 前50% | #音视频理解 | #基准测试 | #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Ziyang Ma（上海交通大学， 南洋理工大学）（论文中为共同第一作者）
-- 通讯作者：Xie Chen（上海交通大学， 上海创智学院）（论文中为共同通讯作者）
-- 作者列表：Ziyang Ma（上海交通大学， 南洋理工大学）、Ruiyang Xu（上海交通大学）（共同第一作者）、Zhenghao Xing（香港中文大学）（共同第一作者）、Yunfei Chu（阿里集团， Qwen团队）、Yuxuan Wang（阿里集团， Qwen团队）、Jinzheng He（阿里集团， Qwen团队）、Jin Xu†（阿里集团， Qwen团队）（项目负责人）、Pheng-Ann Heng（香港中文大学）、Kai Yu（上海交通大学）、Junyang Lin（阿里集团， Qwen团队）、Eng Siong Chng（南洋理工大学）、Xie Chen‡（上海交通大学， 上海创智学院）（共同通讯作者）
+- 第一作者：Jianghan Chao (中国人民大学高瓴人工智能学院)
+- 通讯作者：Ruihua Song (中国人民大学高瓴人工智能学院)
+- 作者列表：Jianghan Chao（中国人民大学高瓴人工智能学院），Jianzhang Gao（中国人民大学高瓴人工智能学院），Wenhui Tan（中国人民大学高瓴人工智能学院），Yuchong Sun（中国人民大学高瓴人工智能学院），Ruihua Song（中国人民大学高瓴人工智能学院），Liyun Ru（百川智能）
 
 #
 
 💡 **毒舌点评**
 
-亮点在于提出了一个从“侦探式”数据生成、到针对性模型训练、再到闭式基准评估的完整闭环方案，直面多模态描述中“细节-幻觉”权衡这一核心矛盾，系统性强且效果显著。短板则是“多模态细粒度描述生成”本身仍是一个相对垂直和小众的任务，且模型架构本身是基于现有骨干（Qwen2.5-Omni）的微调，并非底层架构创新。
+论文系统性地为音视频联合推理评估这一细分领域“立规矩”，提出了首个兼顾严格音视频相关性、多音频类型和多场景跨度的基准，方法论扎实。然而，其核心贡献是“测量工具”而非“新模型”，且完全依赖现有模型（如Qwen2.5）进行数据生成，可能无意中继承了生成模型的偏见与局限。
 
 #
 
 🔗 **开源详情**
 
-- 代码：提供完整代码仓库链接：https://github.com/ddlBoJack/Omni-Captioner
-- 模型权重：论文明确声明模型已开源，包含Audio-Captioner-7B和Omni-Captioner-7B。
-- 数据集：Omni-Detective生成的数据集和Omni-Cloze基准均随代码开源。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了极其详尽的附录，包括训练超参数表（表6）、Omni-Detective提示模板、Omni-Cloze数据策展流程和提示模板、评估设置、完整的结果表格（表7-18），复现指导非常充分。
-- 论文中引用的开源项目：骨干模型为Qwen2.5-Omni-7B。数据来源为VGGSound和FineVideo数据集。
+*   代码：论文中提及项目页面为`https://jointavbench.github.io`，但未明确提供生成流水线或评测的完整代码仓库链接。
+*   模型权重：不适用，本文为基准测试，不发布自有模型。
+*   数据集：已公开发布。论文声明将在项目页面发布数据集，并采用CC BY-NC-SA 4.0许可协议。
+*   Demo：未提及在线演示。
+*   复现材料：提供了详细的生成流程描述（包括各阶段使用的模型、提示词模板，如图10-16所示）、附录说明以及评测的实验设置（如帧采样数、模型配置），有助于复现其基准构建和评测过程。
+*   论文中引用的开源项目：明确引用了Short-Films 20K (SF20K)数据集、PySceneDetect、Qwen2.5-VL、Qwen2.5-Omni、Qwen2.5、Whisper-v3等开源工具和模型作为其流水线组件。
+*   论文中未提及完整的代码开源计划，但承诺发布数据集和提供生成流程细节。
 
 📌 **核心摘要**
 
-1. 要解决的问题：当前全模态语言模型（OLMs）在生成多模态细粒度描述时，存在“细节覆盖率”与“幻觉率”同步增长的固有矛盾。
-2. 方法核心：提出Omni-Detective agentic数据生成管线，模拟侦探模式，通过LLM代理调用多种工具（OCR， ASR， MLLM等）进行多轮、迭代的查询-观察循环，以自主生成高细节、低幻觉的标注数据。基于此数据，采用两阶段课程学习策略训练出Audio-Captioner（音频描述）和Omni-Captioner（音视频描述）模型。同时，设计并构建了首个闭式评估基准Omni-Cloze。
-3. 创新点与优势：(1) 揭示并尝试解耦“细节与幻觉共增长”现象；(2) 创新的侦探式数据生成管线，实现了自举式的高质量数据构造；(3) 提出的Omni-Cloze基准，能稳定、高效、全面地评估音频、视频及音视频细粒度描述能力。
-4. 主要实验结果：Omni-Captioner-7B在VDC基准上达到新的SOTA（55.0%准确率）；在video-SALMONN 2测试集上，在细节与幻觉率之间实现了最佳权衡（Miss% 17.8, Hall% 10.9）。在级联QA评估中，Audio-Captioner-7B在MMAU（70.0%）和MMAR（59.8%）上达到开源模型最佳，性能可比肩Gemini 2.5 Pro；Omni-Captioner在Video-MME、Video-Holmes等多个音视频QA基准上为开源模型最高分。在Omni-Cloze上，Audio-Captioner和Omni-Captioner均取得最佳准确率（分别为53.2%和56.4%）。
-5. 实际意义：为需要高精度、高信息密度多模态理解的场景（如辅助AI、科学报告、智能体）提供了可落后的技术栈和评估标准。
-6. 主要局限性：Omni-Cloze评估范式主要检测“内容级不准确”的幻觉，对于模型“生成完全无关内容”的幻觉类型难以可靠衡量。数据生成管线依赖当前工具和模型的性能上限。
+1.  解决的问题：现有基准在评估能够处理音频和视频的多模态大模型（Omni-LLMs）的联合推理能力时，普遍存在音频-视频相关性控制不严格、音频信息类型覆盖不全、缺乏对跨场景推理能力的评估等问题。
+2.  方法核心：提出了JointAVBench基准，包含一个由5个认知维度（时间、空间、情感、情节、长程）、4种音频类型（语音、人声特征、声事件、音乐）和3种场景跨度（单场景、跨场景、全场景）构成的系统分类法，并设计了15个评估任务。通过一个半自动化的三阶段流水线（全模态描述生成、问答对创建、质量控制）来构建数据集。
+3.  与已有方法相比新在哪里：它是第一个严格确保所有问题都同时依赖视觉和听觉信息才能回答（AV Correlation Ratio 100%），并系统性地涵盖多种音频类型和场景复杂度的音视频联合推理基准。
+4.  主要实验结果：在基准上评估了Omni-LLMs、Video-LLMs和Audio-LLMs。最优的Omni-LLM（Gemini 2.5 Pro）平均准确率仅为62.6%，显著优于单模态模型，但仍存在较大提升空间。模型在需要理解人声特征和语音的任务上表现较差，在跨场景推理任务上性能下降明显。具体结果见下表。
 
-#
+| 模型类别 | 模型名称 | 平均准确率 | 关键弱项任务示例（准确率） |
+| :--- | :--- | :--- | :--- |
+| Omni-LLMs | Gemini 2.5 Pro | 62.6% | SPER (35.2%), PDP (45.7%) |
+| | Qwen3-Omni | 62.1% | SPL (43.4%), CSA (42.1%) |
+| | Qwen2.5-Omni | 56.2% | SPER (30.6%), PTG (20.8%) |
+| Video-LLMs | InternVL 2.5 | 51.3% | SPER (23.6%), PTG (27.5%) |
+| | GPT-4o | 43.3% | MPO (13.5%), PTG (14.1%) |
+| Audio-LLMs | Kimi-Audio | 45.9% | SPL (21.9%), PDP (38.7%) |
+| | Qwen2-Audio | 40.0% | MPTI (40.0%), PDP (29.8%) |
+
+5.  实际意义：为评测和开发真正的全模态大模型提供了更严格、更全面的衡量标尺，指出了当前模型在音视频深度融合、尤其是抽象语义关联和跨场景推理方面的短板，为未来模型优化指明了方向。
+6.  主要局限性：数据集完全基于一个特定电影数据集（SF20K）构建，可能引入数据分布偏差；分类体系虽力求全面，但仍可能未覆盖所有音视频联合推理维度；实验受限于计算资源，未对所有可能模型进行评测。
 
 ---
 

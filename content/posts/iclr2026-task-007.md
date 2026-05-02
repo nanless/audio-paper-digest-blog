@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 无监督学习 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 情感识别 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["无监督学习"]
+tags: ["情感识别"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 无监督学习 方向论文"
+description: "共 1 篇 ICLR 2026 情感识别 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 无监督学习
+# ICLR 2026 - 情感识别
 
 共 **1** 篇论文
 
@@ -18,61 +18,60 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [DiffSDA: Unsupervised Diffusion Sequential Disentanglement A](/audio-paper-digest-blog/posts/2026-05-02-diffsda-unsupervised-diffusion-sequential) | 8.0分 | 前25% |
+| 🥇 | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [DiffSDA: Unsupervised Diffusion Sequential Disentanglement Across Modalities](/audio-paper-digest-blog/posts/2026-05-02-diffsda-unsupervised-diffusion-sequential)
+### 🥇 [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified)
 
-🔥 **8.0/10** | 前25% | #无监督学习 | #扩散模型 | #表征学习 #零样本
+✅ **7.0/10** | 前25% | #情感识别 | #多任务学习 | #多模态模型 #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Hedi Zisling（Ben-Gurion University）与Ilan Naiman并列第一作者
-- 通讯作者：Omri Azencot（Ben-Gurion University）
-- 作者列表：Hedi Zisling（Ben-Gurion University）、Ilan Naiman（Ben-Gurion University）、Nimrod Berman（Ben-Gurion University）、Supasorn Suwajanakorn（VISTEC）、Omri Azencot（Ben-Gurion University）
+- 第一作者：Keane Ong (MIT, National University of Singapore)，Wei Dai (MIT) - 论文标注为共同第一作者（*Equal contribution）
+- 通讯作者：未明确标注
+- 作者列表：Keane Ong (MIT, NUS), Wei Dai (MIT), Carol Li (MIT), Dewei Feng (MIT), Hengzhi Li (MIT, Imperial College London), Jingyao Wu (MIT), Jiaee Cheong (Harvard), Rui Mao (NTU), Gianmarco Mengaldo (NUS), Erik Cambria (NTU), Paul Pu Liang (MIT)
 
 #
 
 💡 **毒舌点评**
 
-亮点：首次将扩散模型正式、系统地引入序列解耦任务，提出了一个简洁（单一损失项）且强大的概率框架，并在包括高分辨率真实视频在内的多个模态上验证了其SOTA性能，特别是“零样本跨数据集解耦”展示了其强大的泛化能力。
-短板：生成过程目前是逐帧进行的，论文自述这可能限制视频的时空连贯性，未来需与视频扩散模型结合；此外，多因子解耦探索仍属初步，距离实用化的精细控制还有距离。
+这篇论文做了一件非常“工程化”但又极具价值的事情：它没有提出一个全新的复杂模型架构，而是致力于为“理解人类心理与社会行为”这个混乱的领域“立法”——建立了一个规模空前（10万+样本）、任务全面（10类行为任务）、格式统一的基准测试库，并在此基础上训练了三个强基线模型。亮点在于其系统性的构建工作和扎实的实验证明了统一训练带来的跨任务收益与迁移能力。短板则在于，其核心模型（OMNISAPIENS-7B）本质上是现有强大基座模型（Qwen2.5-Omni）在特定数据上的适配，在架构创新层面略显不足，更像是一个优秀的“领域适配+评测”工作。
 
 #
 
 🔗 **开源详情**
 
-- 代码：论文明确提供了GitHub代码仓库链接：https://github.com/azencot-group/DiffSDA。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：论文中使用的数据集（MUG， TaiChi-HD， VoxCeleb， CelebV-HQ， TIMIT， LibriSpeech， PhysioNet， ETTh1， Air Quality）均为公开学术数据集，并提供了获取方式的引用。
-- Demo：论文中未提供在线演示链接。
-- 复现材料：提供了极为详尽的复现材料，包括所有数据集的预处理步骤、训练的完整超参数配置表（Tab.6-8， 如学习率、批次大小、模型维度、序列长度、GPU型号等）、网络架构细节、评估指标定义以及消融实验设置。
-- 论文中引用的开源项目：EDM（采样框架）、LDM（潜在扩散模型， 使用预训练VQ-VAE）、U-Net、LSTM等标准架构；评估时使用了VGG-FACE（面部识别）、HRNet（姿态估计）等预训练模型。
+- 代码：论文提供GitHub仓库链接：`https://github.com/MIT-MI/human_behavior_atlas`，承诺将发布代码。
+- 模型权重：承诺发布训练好的OMNISAPIENS-7B SFT, BAM, RL模型权重。
+- 数据集：HUMAN BEHAVIOR ATLAS基准测试将发布，包含统一格式的样本。数据来源于多个公开数据集（已在文中列出）。
+- Demo：论文中未提及在线演示。
+- 复现材料：附录B和C提供了极其详细的模型架构、训练目标、超参数设置（如LoRA配置、GRPO参数、学习率、批大小等）和实验步骤。
+- 引用的开源项目：依赖的开源工具/模型包括Qwen2.5-Omni-7B（骨干）、MediaPipe（视觉描述符提取）、OpenSMILE（音频描述符提取）、Whisper v3（转录）、GPT-5-nano（LLM评判）。
 
 📌 **核心摘要**
 
-1. 问题：现有无监督序列解耦方法主要依赖VAE/GAN，需要复杂的多损失优化，在真实世界数据上效果有限，且缺乏统一的评估协议。扩散模型虽强大，但尚无理论框架用于序列解耦。
-2. 核心方法：提出DiffSDA，一个基于扩散过程的模态无关序列解耦框架。其核心是联合建模静态（时间不变）和动态（时间变化）隐因子，并引入一个条件于这些因子的扩散过程来生成数据序列。
-3. 与已有方法的对比创新：(1) 提供了首个针对序列解耦的扩散模型概率建模（Eq.1-2）；(2) 与先前工作不同，建模了静态与动态因子的相互依赖性（Dependent Prior），提升了表达力；(3) 整个模型仅需一个基于分数匹配的统一损失项（Eq.5），极大简化了优化。
-4. 主要实验结果：在多个真实世界数据集上全面超越SOTA（SPYL， DBSE）。视频任务中，在VoxCeleb条件交换的动态保留度（AKD）上从10.96降至2.793；音频任务中，在TIMIT上的解耦差距（Dis. Gap）从31.11%提升至42.29%；时序预测任务（ETTh1 MAE）从11.2降至9.89。首次实现了跨数据集的零样本视频解耦交换（如图2，4）。
+1.  问题：现有对人类心理和社会行为（如情感、认知、病理、社交）的理解多依赖专用数据集和单任务系统，缺乏可扩展、可迁移、能形成通用理解的基础模型。
+2.  方法核心：构建了 Human Behavior Atlas，一个包含超过10万多样本、涵盖文本/音频/视觉模态的统一基准测试。所有数据被标准化为提示-目标格式，评估指标也统一。在此基础上，训练了三个7B参数的多模态模型变体：OMNISAPIENS-7B SFT（监督微调）、OMNISAPIENS-7B BAM（集成残差式行为适配器模块，融入行为描述符）、OMNISAPIENS-7B RL（基于GRPO的强化学习）。
+3.  创新点：
+    *   统一基准测试：首次大规模（10万+样本）地将分散的情感、认知、病理、社交行为任务标准化到一个框架下。
+    *   标准化格式与评估：设计了通用的提示-目标格式，并为不同任务类型定义了统一的评估指标（如二分类加权F1、LLM评判准确率）。
+    *   行为适配器模块（BAM）：提出了一种轻量级的残差适配器，可将提取的面部/身体关键点、韵律等行为描述符非侵入式地整合到冻结的LLM骨干中，为目标任务提供可选增强。
+    *   系统性实验：通过多任务训练、迁移学习（至未见过的数据集和新任务）以及行为描述符消融实验，全面验证了统一训练的优势和BAM的有效性。
+4.  主要结果：
+    *   多任务表现：在10类行为任务中的8类上，训练后的OMNISAPIENS-7B变体（SFT/BAM）优于现有通用多模态大模型（如Qwen2.5-Omni）。具体见下表。
 
-![图1：DiffSDA模型架构](icassp-img://tooDJHBSvO/0.jpg)
-图1展示了DiffSDA的三大组件：序列语义编码器（上方，提取静态s0和动态d1:V 0因子）、随机编码器（下方，添加噪声得x1:V t）和随机解码器（右侧，条件于隐因子进行去噪得˜x1:V 0）。
-
-![图2：条件交换、零样本交换及多因子解耦示例](icassp-img://tooDJHBSvO/1.jpg)
-图2左侧展示了在真实视频上的条件交换（保留第一个人的静态特征，使用第二个人的动态）；中间展示了零样本交换（在VoxCeleb上训练，在MUG上测试）；右侧展示了通过对静态因子进行PCA遍历发现的可控语义属性（如性别）。
-
-![图3：与SPYL方法在多个数据集上的动态交换定性对比](icassp-img://tooDJHBSvO/2.jpg)
-图3对比了本文方法与SPYL方法在CelebV-HQ、VoxCeleb和TaiChi-HD数据集上的动态交换结果，表明DiffSDA能生成更高质量且动态保留更好的样本。
-
-![图4：零样本交换的更多示例](icassp-img://tooDJHBSvO/3.jpg)
-图4展示了在VoxCeleb上训练，但在CelebV-HQ或MUG上进行零样本动态交换的结果，证明了模型的跨数据集泛化能力。
-
-5. 实际意义：为处理视频、音频、时序等序列数据的无监督解耦提供了统一、强大的生成式框架，有望应用于可控内容生成、数据增强、特征迁移等领域。
-6. 主要局限性：当前视频生成为逐帧独立进行，可能影响时空一致性；多因子（不止静态/动态）解耦的探索是初步的。
+    | 模型 | EMO (均值) | HUM | INT | PTSD | ANX | DEP | SEN | SAR | SOC | NVC |
+    | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+    | Qwen 2.5-Omni-7B | .580 | .543 | .254 | .760 | .793 | .791 | .636 | .700 | .714 | .602 |
+    | OMNISAPIENS-7B SFT | .614 | .532 | .256 | 1.00 | .909 | .839 | .626 | .746 | .813 | .744 |
+    | OMNISAPIENS-7B BAM | .607 | .644 | .177 | 1.00 | .909 | .839 | .738 | .744 | .837 | .775 |
+    *   迁移学习：在留出数据集（MOSEI, MELD, DAIC-WOZ, MUStARD）上微调1个epoch后，OMNISAPIENS-7B SFT显著优于未在HBA上预训练的Qwen2.5-Omni SFT。例如，在MUStARD（讽刺检测，训练时未见任务）上，得分从0.473提升至0.658（+39.1%）。
+    *   BAM效果：集成BAM后，在NVC（+33%）、SAR（+29%）、HUM（+21%）等任务上带来显著提升，证明其可针对性地利用行为描述符增强特定任务性能。
+5.  实际意义：为构建通用的“人类行为理解”基础模型提供了首个大规模、标准化的公共基准和强基线，推动该领域从零散研究走向系统化、可比较的发展阶段。
+6.  主要局限性：(1) 模型本身（OMNISAPIENS-7B）的架构创新有限，主要贡献在于数据集构建和训练方法。(2) 基准测试所用数据集主要来自特定文化背景（英语为主），可能影响其普适性。(3) 部分自由文本生成任务（SOC, INT, NVC）的整体得分仍然较低，表明该领域仍有很大挑战。
 
 #
 

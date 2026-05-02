@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频检索 #视频检索 论文列表"
-date: 2026-05-02
+title: "ICLR 2026 - 音频场景理解 论文列表"
+date: 2026-05-03
 draft: false
-tags: ["音频检索 #视频检索"]
+tags: ["音频场景理解"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频检索 #视频检索 方向论文"
+description: "共 1 篇 ICLR 2026 音频场景理解 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频检索 #视频检索
+# ICLR 2026 - 音频场景理解
 
 共 **1** 篇论文
 
@@ -18,70 +18,48 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [WAVE: Learning Unified & Versatile Audio-Visual Embeddings w](/audio-paper-digest-blog/posts/2026-05-02-wave-learning-unified-versatile-audio-visual) | 8.5分 | 前10% |
+| 🥇 | [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omn](/audio-paper-digest-blog/posts/2026-05-03-omni-captioner-data-pipeline-models-and-benchmark) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [WAVE: Learning Unified & Versatile Audio-Visual Embeddings with Multimodal LLM](/audio-paper-digest-blog/posts/2026-05-02-wave-learning-unified-versatile-audio-visual)
+### 🥇 [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omni Detailed Perception](/audio-paper-digest-blog/posts/2026-05-03-omni-captioner-data-pipeline-models-and-benchmark)
 
-🔥 **8.5/10** | 前10% | #音频检索 #视频检索 | #对比学习 #多任务学习 | #多模态模型 #音频检索
+✅ **7.5/10** | 前25% | #音频场景理解 | #多模态模型 | #音频大模型 #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Changli Tang (清华大学)
-- 通讯作者：Chao Zhang (清华大学)
-- 作者列表：Changli Tang (清华大学)， Qinfan Xiao (清华大学)， Ke Mei (腾讯微信视觉)， Tianyi Wang (腾讯微信视觉)， Fengyun Rao (腾讯微信视觉)， Chao Zhang (清华大学)
+- 第一作者：Ziyang Ma (上海交通大学， 南洋理工大学)
+- 通讯作者：Jin Xu (阿里巴巴Qwen团队)， Xie Chen (上海交通大学， 上海创新研究院)
+- 作者列表：Ziyang Ma (上海交通大学， 南洋理工大学)， Ruiyang Xu (上海交通大学)， Zhenghao Xing (香港中文大学)， Yunfei Chu (阿里巴巴Qwen团队)， Yuxuan Wang (阿里巴巴Qwen团队)， Jinzheng He (阿里巴巴Qwen团队)， Jin Xu† (阿里巴巴Qwen团队)， Pheng-Ann Heng (香港中文大学)， Kai Yu (上海交通大学)， Junyang Lin (阿里巴巴Qwen团队)， Eng Siong Chng (南洋理工大学)， Xie Chen‡ (上海交通大学， 上海创新研究院)
 
 💡 **毒舌点评**
 
-亮点：该工作勇敢地填补了基于LLM的统一音频-视觉嵌入的空白，其提出的分层特征融合与联合训练策略在多项检索和QA任务上取得了令人信服的SOTA结果，显示了强大的跨模态理解与对齐能力。
-短板：模型的通用性在一定程度上受限于其基础架构（Qwen2.5-Omni），且论文中提出的“versatile audio-visual learning”新基准未在附录或实验部分详细说明其构成与评估方式，略显缺失。
+论文最大的亮点在于它并非只训练一个模型，而是系统性地构建了从“如何生成高质量训练数据”（Omni-Detective）到“如何评估细粒度描述”（Omni-Cloze）的完整闭环，直击了当前多模态模型“细节多=幻觉多”的痛点。然而，其核心模型（Omni-Captioner）本身在架构上并无革命性突破，更多是利用精心设计的数据和训练策略（冻结视觉编码器先训音频）对现有骨干进行精调，两阶段训练虽有效但可能牺牲了端到端训练的某些优势，且对计算资源要求不低。
 
 🔗 **开源详情**
 
-- 代码：提供GitHub链接：https://github.com/TCL606/WAVE。
-- 模型权重：论文明确提到将发布模型检查点（Checkpoints）。
-- 数据集：论文详细列出了训练所用数据集名称和规模，但未说明是否会开源这些整合后的数据集（特别是重标注后的Panda-70M子集）。
-- Demo：未提及。
-- 复现材料：提供了详尽的模型架构说明、训练规格（学习率、批次大小、硬件、时长）、关键超参数和完整的消融实验设置，复现指南清晰。
-- 论文中引用的开源项目：Qwen2.5-Omni（基础模型）、BEATs（音频编码器）、LoRA（微调技术）、以及多个公开数据集（WavCaps， AudioCaps， Clotho， Panda-70M等）。
+- 代码：是，提供了GitHub仓库链接：https://github.com/ddlBoJack/Omni-Captioner
+- 模型权重：是，论文提及所有数据管线、模型和基准均已开源。
+- 数据集：是，论文提出的新基准Omni-Cloze以及生成的训练数据集均已开源。
+- Demo：论文中未提及在线演示。
+- 复现材料：是，附录中提供了详细的训练数据统计、超参数表（表6）、Omni-Detective和Omni-Cloze的完整提示词模板。
+- 引用的开源项目：依赖或使用了VGGSound、FineVideo、Qwen2.5-Omni-7B等开源数据集和模型。
 
 📌 **核心摘要**
 
-1.  问题：现有基于LLM的多模态嵌入模型大多局限于视觉（尤其是静态图像），未能有效处理动态的音频和音视频模态，难以实现真正通用的跨模态表征空间。
-2.  方法核心：提出WAVE，首个基于多模态LLM（Qwen2.5-Omni）的统一音频-视觉嵌入模型。核心包括：(1) 设计了双音频编码器（语音+环境声）和分层特征融合模块（聚合多层LLM隐藏状态）；(2) 采用联合多模态、多任务对比学习策略进行训练。
-3.  新颖性：WAVE首次实现了文本、音频、静音视频和同步音视频到统一语义空间的映射，不仅能进行任意到任意的跨模态检索，还能生成依赖于用户指令的“提示感知”嵌入。
-4.  主要实验结果：在MMEB-v2视频基准上取得SOTA，整体性能超越工业级模型Seed-1.6-Embedding；在音频检索（AudioCaps/Clotho）、音视频检索（VGGSound/MusicCaps）和音频问答（MMAU/MMAR）任务上均显著优于基线模型。关键消融实验显示，联合训练和分层特征融合均能带来稳定性能提升。
-5.  实际意义：为跨模态任何到任何的应用（如统一音视频搜索、多模态问答）提供了强大的基础模型，展示了利用LLM构建通用多模态嵌入的巨大潜力。
-6.  主要局限性：模型性能依赖于高质量的基础LLM（Qwen2.5-Omni）；论文中提及的“versatile audio-visual learning”新基准未提供详细信息；主要在英文数据集上评估，多语言能力未验证。
-
-### 实验结果关键数据表：
-
-表1：视频嵌入基准测试结果
-| 模型 | MMEB-v2-Video Overall | CLS | QA | RET | MRET | LoVR text-to-clip | theme-to-clip |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| LamRA 7B | 35.0 | 39.3 | 42.6 | 24.3 | 32.8 | 62.9 | 60.2 |
-| GME 7B | 38.4 | 37.4 | 50.4 | 28.4 | 37.0 | 51.2 | 43.9 |
-| CAFe 7B | 42.4 | 35.8 | 58.7 | 34.4 | 39.5 | - | - |
-| Seed-1.6-Embedding | 55.3 | 55.0 | 60.9 | 51.3 | 53.5 | - | - |
-| WAVE 7B | 59.9 | 57.8 | 72.5 | 54.7 | 50.8 | 62.9 | 66.0 |
-
-表2：音频与音视频嵌入基准测试结果
-| 方法 | A-RET (AudioCaps) | A-RET (Clotho) | AV-RET (VGGSound) | AV-RET (MusicCaps) | A-QA (MMAU) | A-QA (MMAR) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 参考模型 (各领域最优) | 42.2 | 21.5 | 10.3 | 8.6 | 71.5 | 56.7 |
-| encoder-only retrieval model (ours) | - | - | - | - | - | - |
-| Qwen2.5-Omni 7B | - | - | - | - | - | - |
-| WAVE 7B | 44.2 | 25.6 | 25.0 | 20.4 | 76.6 | 68.1 |
-
-表3：提示感知嵌入对视频问答的影响
-| 模型 | MMEB-v2-Video QA Average |
-| :--- | :---: |
-| Seed-1.6-Embedding | 60.9 |
-| WAVE 7B, w/ a common prompt | 51.8 |
-| WAVE 7B, w/ separate questions | 72.5 |
+1. 问题：全模态大语言模型（OLMs）在生成音视频详细描述时，存在一个根本性矛盾：描述越详细，捕捉到的细粒度信息越多，但产生的幻觉（错误细节）也随之同步增长。
+2. 方法核心：本文提出了一个三支柱解决方案。(1) 数据层面，设计Omni-Detective管道，让LLM扮演“侦探”角色，通过多轮调用专用工具（OCR、ASR、MLLM等）像侦探取证一样迭代收集、交叉验证多模态证据，生成高细节、低幻觉的描述数据。(2) 模型层面，基于Qwen2.5-Omni-7B骨干，采用两阶段课程学习：先冻结视觉编码器，仅用音频数据训练对齐音频感知；再联合全参数微调，学习跨模态协同描述，得到Audio-Captioner和Omni-Captioner。(3) 评估层面，提出Omni-Cloze基准，采用“完形填空+多选”范式评估音频、视频及音视频描述的细节完整性，并引入“未提及”选项以明确区分遗漏与幻觉。
+3. 创新点：首次提出并通过实验验证了细粒度与幻觉的“共增长”现象；Omni-Detective管道实现了数据生成过程的自动化与自我纠错；Omni-Cloze是首个覆盖音频、视频、音视频三种模态配置的细粒度描述评估基准。
+4. 主要结果：
+    * 在视频详细描述基准VDC上，Omni-Captioner达到 55.0% 准确率，建立新SOTA。
+    * 在音视频描述测试集video-SALMONN 2上，Omni-Captioner在缺失率（17.8%）和幻觉率（10.9%）之间实现了最佳平衡。
+    * 在级联评估中，Audio-Captioner在音频问答基准MMAU上达到 70.0%，匹配Gemini 2.5 Pro并超越所有开源模型；Omni-Captioner在视频问答基准Video-MME上达到 67.1%，为开源模型最高。
+    * 在自建的Omni-Cloze基准上，Omni-Captioner总准确率达 56.4%，Audio-Captioner为 53.2%，均显著超过包括Gemini 2.5 Pro在内的所有基线模型。
+    * （关键图表）图2展示了Gemini-2.5-Pro在描述长度增加时，细节比例与幻觉比例同步上升的趋势。图6分析了Omni-Detective迭代步骤增加带来的细节率上升和幻觉率下降。图7显示Omni-Cloze准确率与人类Elo评分有高达0.91的皮尔逊相关系数，验证了其有效性。
+5. 实际意义：为开发更可靠、更详尽的多模态感知系统提供了从数据生成、模型训练到评估的全套开源工具和范式，尤其适用于需要高精度、高覆盖度描述的下游任务（如内容分析、辅助工具）。
+6. 主要局限性：Omni-Cloze基准虽能有效捕获“识别但说错”的幻觉，但难以量化“完全无关的离题生成”。模型性能仍显著落后于Gemini 2.5 Pro等顶级闭源模型。
 
 ---
 
