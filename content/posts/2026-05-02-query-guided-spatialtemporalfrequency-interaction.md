@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2：QSTar整体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/8CnU2kchiw-1.png)
+![图2：QSTar整体框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/8CnU2kchiw-1.png)
 
 QSTar是一个端到端的多模态问答网络，整体流程如下：
 
@@ -146,7 +146,7 @@ QSTar是一个端到端的多模态问答网络，整体流程如下：
 表4：效率对比。QSTar在参数和计算量与QA-TIGER相当的情况下，准确率更高。
 
 实验结果图表：
-![图3：定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/8CnU2kchiw-2.png)
+![图3：定性结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/8CnU2kchiw-2.png)
 图3(a)：展示QSTar在复杂多乐器场景（如大提琴视觉不明显时）优于QA-TIGER的示例。图3(b)：可视化QSTar在关键时间戳上关注的视觉区域和音频频率动态，例如能正确识别单簧管持续演奏而巴松管停止。
 
 ### ⚖️ 评分理由

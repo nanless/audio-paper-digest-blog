@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 本文提出一个统一的、模块化的框架，用于联合处理EPR和APT任务，并支持独立的风格推荐。
 
-![整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/173Pq3F31r-0.jpg)
+![整体框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-0.jpg)
 图1：整体框架与任务关系。
 
 框架主要由两部分组成：
@@ -62,7 +62,7 @@ hiddenInHomeList: true
     *   Score Encoder (PSR)：一个独立的Transformer编码器，从乐谱 `x`中提取全局内容嵌入 `eg`（使用`<CLS>` token）。
     *   扩散模型 (DDPM)：以 `eg`为条件，通过迭代去噪从标准高斯噪声中生成风格嵌入 `^zs`。训练时，`zs`的真值来自冻结的联合模型；推理时，生成的 `^zs`被送入Performance Decoder以进行可控的EPR。
 
-![PSR模块架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/173Pq3F31r-5.png)
+![PSR模块架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-5.png)
 图6：PSR模块的详细架构。
 
 数据流：
@@ -145,13 +145,13 @@ hiddenInHomeList: true
 4.  PSR模块有效性（ATEPP数据集）：
     *   历史时期聚类可视��（图4）：PSR生成的风格向量（右图）在历史时期聚类结构、分离度和质心位置上，与从真实表演中提取的风格向量（左图）高度一致。
 
-    ![主观评估图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/173Pq3F31r-1.jpg)
+    ![主观评估图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-1.jpg)
     图2：EPR主观评估结果。 (a) 总体评估显示Ours (Target Style)在所有属性上得分最高，Ours (PSR)紧随其后。 (b) 按作曲家细分，模型在不同风格上表现均衡。
 
-    ![风格表示可视化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/173Pq3F31r-2.jpg)
+    ![风格表示可视化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-2.jpg)
     图3：演奏风格表示的二维可视化。 (a) 按作曲家着色，(b) 按表演者着色。风格表示在二维空间形成了清晰的聚类。
 
-    ![PSR有效性可视化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/173Pq3F31r-3.png)
+    ![PSR有效性可视化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-3.png)
     图4：历史时期的风格表示可视化。 左图为真实表演提取的风格，右图为PSR生成的风格，两者聚类模式相似。
 
 ### ⚖️ 评分理由

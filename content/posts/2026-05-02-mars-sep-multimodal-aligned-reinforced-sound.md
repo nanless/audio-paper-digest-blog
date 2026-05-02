@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 MARS-Sep的整体架构（如图1所示）是一个强化学习循环系统，包含三个核心组件：基础策略（策略网络）、奖励模型和优化过程。
 
-![图1](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/AhvApZghHf-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/AhvApZghHf-0.png)
 图1：MARS-Sep的强化学习循环。分离器从Beta分布策略中生成随机掩码动作，冻结的快照作为旧策略用于稳定优化。多模态奖励（来自音频、文本、视觉嵌入）指导策略更新，熵和KL正则化增强探索和稳定性。
 
 1.  基础策略 (πθ)：即声音分离模型本身。它接收状态S，包括混合音频的频谱图X和用户查询Q（文本、音频或图像）。策略网络（基于U-Net的Separate-Net）输出一个确定性掩码提议Pθ(X, Q) ∈ [0, 1]^{H×W×K}。为将其转化为随机策略，每个时频-频率bin的掩码值被参数化为一个因子化Beta分布 πθ(M|X, Q) = ∏_{h,w,k} Beta(M_{h,w,k}; α_{h,w,k}, β_{h,w,k})，其中α = 1 + κPθ, β = 1 + κ(1 - Pθ)。通过重参数化采样，从该分布中采样掩码M，与混合频谱结合后重建波形ŷ。
@@ -58,7 +58,7 @@ MARS-Sep的整体架构（如图1所示）是一个强化学习循环系统，�
 
 3.  优化过程：采用PPO风格的裁剪信任区域策略梯度进行更新。训练时，从旧策略π_θ_old采样掩码M，计算奖励R和优势A（通过移动平均基线b和可选的组相对归一化）。然后通过最小化损失函数L_RL(θ) = -J_clip(θ)来更新策略θ，其中J_clip包括裁剪的重要性比率、熵正则化H(πθ)和KL散度惩罚KL(πθ || π_θ_old)。更新后，将当前策略快照为新的旧策略。此设计无需价值网络，直接关联策略更新与多模态奖励。
 
-![图2](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/AhvApZghHf-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/AhvApZghHf-1.png)
 图2：用于声源判别和分离的渐进式微调策略。编码器保持冻结，任务特定的头逐步解冻，每个阶段都从前一阶段的最佳检查点开始。后两个阶段使用部分前序阶段的配对数据进行训练，以避免灾难性遗忘。
 
 ### 💡 核心创新点
@@ -126,7 +126,7 @@ MARS-Sep的整体架构（如图1所示）是一个强化学习循环系统，�
 
 消融实验亮点（表11）：在VGGSound-clean+文本查询设置下，“RL+渐进式微调”（完整模型）的CLAP分数为9.03±0.94，显著高���仅RL（8.96±0.90）、仅微调（5.48±0.95）和基线（8.98±0.89）的设置。证明了两者的协同增益。
 
-![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/AhvApZghHf-2.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/AhvApZghHf-2.png)
 图3：在VGGSOUND-clean+数据集上，不同查询模态的分离音频log-mel谱图。目标源为“cattle bovinae cowbell”。从左到右：(a) “cattle bovinae cowbell”与“tap dancing”的混合；(b) 真实“cattle bovinae cowbell”；(c) 干扰“tap dancing”；(d) 基线模型文本查询分离；(e) 本文模型文本查询分离。
 结论：图3直观显示，MARSSep的分离结果更好地保留了目标源的谐波结构和时域连续性，同时更有效地抑制了干扰成分（如“tap dancing”的块状缺失），佐证了其在语义一致性和信号保真度上的提升。
 

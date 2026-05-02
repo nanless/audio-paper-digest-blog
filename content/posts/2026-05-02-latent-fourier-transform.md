@@ -52,7 +52,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 LATENTFT是一个端到端的编码器-解码器框架，核心是在训练时引入对潜在表示的频率域操作。整体流程如下：
-![LATENTFT框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ogMxCjdCCq-1.jpg)
+![LATENTFT框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ogMxCjdCCq-1.jpg)
 
 1.  编码器（Encoder）：将输入音频（波形或梅尔谱）映射为一个潜在时间序列 `z ∈ C' × T'`。论文尝试了三种编码器：MLP（逐帧处理梅尔谱）、1D U-Net（沿时间轴卷积）、以及使用DAC前端+1D U-Net（直接处理原始波形）。潜在序列的帧率 `fr` 决定了潜在频率的实际时间尺度。
 2.  潜在傅里叶变换（Latent Fourier Transform）：对潜在序列 `z` 沿时间轴应用DFT（公式3），得到潜在频谱 `Z ∈ C' × K`。为增加频率分辨率，会对 `z` 进行零填充。

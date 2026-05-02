@@ -40,7 +40,7 @@ hiddenInHomeList: true
 
 该论文的核心并非提出一个新的生成模型，而是一个用于分析和引导现有模型（MusicGen）内部表示的方法流水线。其整体架构如图1所示。
 
-![图1：多阶段概念发现与引导流水线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/mGtEoLYr9j-0.jpg)
+![图1：多阶段概念发现与引导流水线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/mGtEoLYr9j-0.jpg)
 
 完整流程分为三个主要阶段：
 
@@ -93,10 +93,10 @@ hiddenInHomeList: true
 | | 32 | 100 | 22 | 17 |
 
 2.  概念质量评估（CLAP分数）：图3显示了自动标签与特征音频的CLAP对齐分数随模型深度的变化。对于MusicGen-Large，更深的层产生更高CLAP分数的特征，表明其特征更易于与人类概念对齐。
-    ![图3：CLAP分数随层深度的变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/mGtEoLYr9j-2.jpg)
+    ![图3：CLAP分数随层深度的变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/mGtEoLYr9j-2.jpg)
 
 3.  自动标注方法对比：图4展示了所有SAE中特征的最大CLAP分数分布。Essentia分类器标签和Gemini生成标签都能获得较好的对齐分数，但没有单一策略占据绝对优势。
-    ![图4：最大CLAP分数分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/mGtEoLYr9j-3.jpg)
+    ![图4：最大CLAP分数分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/mGtEoLYr9j-3.jpg)
     人类验证：对400个特征进行的A/B测试显示，参与者对Essentia标签的信心（3.96/5，71%评分>4）高于对Gemini标签的信心（3.19/5，47%评分>4）。
 
 4.  特征引导效果：下表（基于论文Table 4.6）显示了不同SAE配置下，具有积极引导改善（引导后CLAP分数提高）的特征比例。
@@ -111,7 +111,7 @@ hiddenInHomeList: true
 | MGL | 32 | 32 | 46 | 16/71 (22.5%) |
 
     听觉引导测试：10名参与者对Top-50可引导特征进行三选一匹配测试（基线、随机引导、SAE引导）。结果SAE引导版本被选中66/100次，基线和随机引导各17次，差异极其显著（χ² = 48.02, p < .0001）。图5展示了引导效果示例。
-    ![图5：特征引导示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/mGtEoLYr9j-4.jpg)
+    ![图5：特征引导示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/mGtEoLYr9j-4.jpg)
 
 ### ⚖️ 评分理由
 

@@ -54,7 +54,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文的核心贡献并非提出一种新的端到端模型，而是设计并发布了名为STAR-Bench的评估基准测试。因此，其“架构”体现在评测体系的设计上，如图2所示。
-![STAR-Bench评测体系示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Ts6j3GoZDE-1.jpg)
+![STAR-Bench评测体系示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Ts6j3GoZDE-1.jpg)
 图2：STAR-Bench数据示例与任务架构。上部分为基础感知任务，下部分为整体时空推理任务（包括时序推理和空间推理）。
 
 该体系包含两大支柱：
@@ -119,17 +119,17 @@ hiddenInHomeList: true
 | Gemini 2.5 Flash | - | 39.72 | 30.70 | 28.35 | 32.92 |
 | Gemini 2.5 Pro | - | 46.64 | 58.52 | 43.62 | 49.59 |
 
-![基础感知任务中音高与响度辨别敏感度的消融分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Ts6j3GoZDE-7.jpg)
+![基础感知任务中音高与响度辨别敏感度的消融分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Ts6j3GoZDE-7.jpg)
 图8：基础感知的范围与敏感度分析。第一行显示模型在音高-响度空间上的感知范围（Gemini 2.5 Pro覆盖最广）。第二行显示随着任务难度降低（辨别差异变大），模型与人类在音高(e)、响度(f)、时长(g)上的表现差距。所有模型在感知精细差异（特别是响度）时表现急剧下降。
 
 消融实验（时序推理）：
 图9展示了在时序推理任务上提供额外信息的影响。
-![时序推理任务的消融实验](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Ts6j3GoZDE-8.jpg)
+![时序推理任务的消融实验](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Ts6j3GoZDE-8.jpg)
 图9：时序推理消融实验。‘base’为原始片段重排序任务；‘+global caption’添加了全局描述；‘+uncut audio’提供了未切割的完整音频参考。Gemini 2.5 Pro在提供完整音频时准确率飙升至99%，而开源模型几乎无提升，暴露了它们无法有效整合多个音频片段的弱点。
 
 错误分析：
 图6展示了错误类型分布。
-![错误类型分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Ts6j3GoZDE-5.jpg)
+![错误类型分布图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Ts6j3GoZDE-5.jpg)
 图6：时空推理任务上的错误类型分布。感知错误（Perception Error）在所有模型中都是主要错误类型，尤其对于Gemini 2.5 Pro（84%）。开源模型还普遍存在知识缺口（Knowledge Gap）和推理错误（Reasoning Error）。
 
 ### ⚖️ 评分理由

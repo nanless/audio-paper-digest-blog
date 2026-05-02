@@ -69,10 +69,10 @@ hiddenInHomeList: true
 
 SpeechJudge-GRM是一个生成式奖励模型（Generative Reward Model, GRM），其核心是一个经过专门微调的音频-文本多模态大语言模型。
 
-![图1: SpeechJudge-Data构建与任务示意](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I9ED9VWZq6-0.png)
+![图1: SpeechJudge-Data构建与任务示意](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I9ED9VWZq6-0.png)
 图1：数据集构建与任务示意。 左侧展示了数据集构建流程：使用多种TTS模型基于参考语音和目标文本生成语音对，人工标注进行可懂度（点式标注）和自然度（成对偏好）评估。右侧展示了GRM的任务：输入目标文本和两个音频，通过链式思维推理，输出自然度判断。
 
-![图2: SpeechJudge-Data分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I9ED9VWZq6-1.png)
+![图2: SpeechJudge-Data分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I9ED9VWZq6-1.png)
 图2：数据集分布。 展示了数据集在(a) TTS模型、(b) 参考语音来源、(c) 语言设置上的分布，体现了多样性。
 
 完整输入输出流程：
@@ -182,7 +182,7 @@ SpeechJudge-GRM是一个生成式奖励模型（Generative Reward Model, GRM）�
 
 4. 下游应用：语音合成模型后训练
 使用Qwen2.5-0.5B-TTS作为基础模型，对比了不同对齐方法的效果：
-![图6: 语音合成模型后训练结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I9ED9VWZq6-1.png)
+![图6: 语音合成模型后训练结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I9ED9VWZq6-1.png)
 图6：使用SpeechJudge进行后训练的效果。 (a) 显示文本准确率和自然度CMOS分数。(b) 显示说话人相似度的胜/负/平比例。
 结论：使用SpeechJudge-GRM作为奖励模型（无论是离线标注还是在线RL）进行后训练，在提升自然度的同时，保持或略微提升了说话人相似度。GRM-based方法在自然度提升上优于仅使用现有数据（INTP）的方法。
 

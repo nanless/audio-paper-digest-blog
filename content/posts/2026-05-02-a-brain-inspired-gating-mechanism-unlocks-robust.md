@@ -75,10 +75,10 @@ b) 计算输入电流通路 \( W_i D_t^i \)（路径2：驱动去极化）。
 - 使用 \( \phi \) 截断函数：确保 \( \rho_t \) 在合理范围内（如0到1），使衰减过程稳定。
 - 与LSTM的类比（如图2所示）：论文明确指出，\( \rho_t \) 的功能类似于LSTM中的遗忘门 \( f_t \)，而 \( \sum_i W_i D_t^i \) 类似于输入门 \( i_t \)。这为SNN模型引入门控提供了生物可解释性视角。
 
-![图1：LIF与DGN神经元模型示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5h741EyfQM-0.png)
+![图1：LIF与DGN神经元模型示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5h741EyfQM-0.png)
 图1清晰展示了LIF和DGN模型的结构差异。LIF（a）具有固定的泄漏电导 \( g_l \)。DGN（b）则引入了由突触活动调制的动态电导项 \( \sum C_i D_i \)，形成了动态的门控因子 \( \rho \)，从而根据输入动态自适应地调节膜电位衰减。
 
-![图2：LSTM与DGN门控结构对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5h741EyfQM-1.png)
+![图2：LSTM与DGN门控结构对比示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5h741EyfQM-1.png)
 图2直观地建立了DGN与LSTM在信息处理机制上的同构性。DGN的自适应衰减系数（源于动态电导）类比LSTM的遗忘门，动态突触电流累积类比输入门，而尖峰重置机制与LSTM的细胞状态更新方程在数学上对应。
 
 #
@@ -176,10 +176,10 @@ b) 计算输入电流通路 \( W_i D_t^i \)（路径2：驱动去极化）。
 - 消融研究：论文提出了简化版DGN（s-DGN），减少参数量。在SHD数据集上（表3），s-DGN以接近LIF的参数量，实现了显著高于LIF和其他基线的准确率和鲁棒性。
 - 不同扰动强度：图4（TIDIGITS前馈网络）和图6-8（其他设置）展示了在逐渐增强的扰动下，DGN的准确率下降最平缓，始终保持最高。这验证了其动态门控机制对扰动强度的良好适应性。
 
-![图3：SHD数据集上的噪声样本可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5h741EyfQM-2.png)
+![图3：SHD数据集上的噪声样本可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5h741EyfQM-2.png)
 图3展示了不同类型的噪声如何影响SHD数据集的输入信号（时间和通道维度），直观呈现了测试场景的复杂性。
 
-![图4：TIDIGITS前馈网络在不同扰动强度下的性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5h741EyfQM-3.png)
+![图4：TIDIGITS前馈网络在不同扰动强度下的性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5h741EyfQM-3.png)
 图4清晰地显示了DGN模型（黄色线）在所有扰动类型和强度下，分类准确率始终高于其他基线模型（LIF, HeterLIF, ALIF），且下降趋势最慢。
 
 #

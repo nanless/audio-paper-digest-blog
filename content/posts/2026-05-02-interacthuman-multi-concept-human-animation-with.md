@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 模型整体是一个基于MMDiT（Multi-Modal Diffusion Transformer）的视频生成框架，其核心创新在于加入了掩码预测与局部条件注入机制。
 
-![图2: 框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/rJilRU8D3c-1.jpg)
+![图2: 框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/rJilRU8D3c-1.jpg)
 图2 清晰地展示了框架的核心流程：
 1.  输入：文本提示T，多个概念的参考图像{Xi}，以及每个身份对应的音频片段{Yi}。
 2.  预处理：参考图像和音频分别通过VAE和wav2vec编码。文本提示通过LLM进行扩写以包含更详细的描述。
@@ -145,13 +145,13 @@ hiddenInHomeList: true
 结论：本文提出的动态掩码预测策略在音频-视觉对齐（Sync-D）和视频整体质量（FVD）上取得了最佳平衡，显著优于全局、隐式ID匹配和静态掩码等变体。
 
 定性结果图
-![图3: 多人音频驱动生成定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/rJilRU8D3c-2.jpg)
+![图3: 多人音频驱动生成定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/rJilRU8D3c-2.jpg)
 图3 展示了不同方法在多人对话场景下的生成结果。其他方法存在音频分配错误、表情僵硬或缺失情况，而本方法能准确地将音频信号分配给正确的身份，并生成更自然、动态的交互表情。
 
-![图4: 多概念定制定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/rJilRU8D3c-3.jpg)
+![图4: 多概念定制定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/rJilRU8D3c-3.jpg)
 图4 展示了多概念定制场景。本文方法在保持多个参考图像外观一致性和生成自然视频方面表现最佳，其他方法存在主体混淆或视觉质量下降的问题。
 
-![图6: 音频注入策略消融定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/rJilRU8D3c-5.jpg)
+![图6: 音频注入策略消融定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/rJilRU8D3c-5.jpg)
 图6 直观对比了不同音频注入策略。全局音频驱动所有身份，导致混乱；ID嵌入常匹配错误；固定掩码在角色移动时失效；而本文的预测掩码能动态适应，实现正确控制。
 
 ### ⚖️ 评分理由

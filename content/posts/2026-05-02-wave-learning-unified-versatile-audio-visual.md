@@ -76,7 +76,7 @@ hiddenInHomeList: true
 
 WAVE的架构（见下图）旨在将多种模态的输入统一到一个共享的语义嵌入空间中。
 
-![图1: WAVE模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/MiV3WXDYJb-0.png)
+![图1: WAVE模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MiV3WXDYJb-0.png)
 
 完整输入输出流程：模型接受文本、视频帧、音频波形或同步音视频对作为输入，最终输出一个统一的多模态嵌入向量，用于检索、分类或问答等下游任务。
 
@@ -175,7 +175,7 @@ WAVE的架构（见下图）旨在将多种模态的输入统一到一个共享�
 当为视频问答提供具体问题作为提示时（w/ separate questions），WAVE的平均准确率达到72.5%，远高于使用通用描述提示（w/ a common prompt）的51.8%。附录中的热力图（图2）直观展示了对于同一视频，针对不同问题生成的嵌入在语义上确实偏向了问题所关注的概念。
 
 图表引用：
-![图2: 提示感知嵌入相似性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/MiV3WXDYJb-1.jpg)
+![图2: 提示感知嵌入相似性热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MiV3WXDYJb-1.jpg)
 （该热力图显示，针对“视频中有什么动物？”（V2）、“背景有什么声音？”（V3）、“谁在说话？”（V4）等具体问题生成的视频嵌入，与对应概念文本（“狗”T2、“风”T3、“男人”T4）的余弦相似度，高于与其他概念文本的相似度，证明了嵌入的提示感知能力。）
 
 ### ⚖️ 评分理由

@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 VibeVoice是一个端到端的、基于大语言模型（LLM）和扩散模型的语音生成系统，旨在从文本脚本和声音提示生成长篇多说话人对话。其整体流程如图1所示。
 
-![图1：VibeVoice模型概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FihSkzyxdv-0.jpg)
+![图1：VibeVoice模型概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FihSkzyxdv-0.jpg)
 图1：VibeVoice可扩展且富有表现力的播客生成流程。用户提供声音提示和文本脚本作为初始输入。VibeVoice处理混合上下文特征，其隐状态条件化一个用于预测声学VAE特征的token级扩散头（D），随后由声学解码器（A）恢复波形。
 
 核心组件及数据流：
@@ -52,7 +52,7 @@ VibeVoice是一个端到端的、基于大语言模型（LLM）和扩散模型�
     *   声学分词器（Acoustic Tokenizer）：基于σ-VAE架构，负责将原始音频压缩为连续的声学隐向量（latent vector）。它以7.5Hz的超低帧率工作，这意味着每秒音频仅生成7.5个token，极大提升了长序列处理的效率。其结构为编码器-解码器对称设计，编码器使用7级改进的Transformer块（采用1D深度可分离因果卷积代替自注意力）实现3200倍下采样。训练目标是重建音频波形（如图2上半部分）。
     *   语义分词器（Semantic Tokenizer）：架构与声学分词器的编码器镜像，但去除了VAE组件。其训练目标是自动语音识别（ASR），通过Transformer解码层预测文本转录，从而提取与语言内容对齐的确定性语义特征（如图2下半部分）。训练后，解码器被丢弃。
 
-![图2：声学分词器与语义分词器对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FihSkzyxdv-1.jpg)
+![图2：声学分词器与语义分词器对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FihSkzyxdv-1.jpg)
 图2：声学分词器（上）通过σ-VAE重建波形，语义分词器（下）使用ASR作为代理任务。
 
 2.  输入表示（Input Representation）：对于每个说话人$k$，其声音提示$v_k$被声学分词器编码为序列$Z_{a,k}$。文本脚本$W_k$被嵌入为序列$E_k$。最终的输入序列$X$由说话人标识符、声学提示特征、文本脚本嵌入交错拼接而成，并以一个起始语音token `<S>` 结束。
@@ -144,7 +144,7 @@ VibeVoice-7B在平均分（3.76）上超越了所有基线，包括Gemini 2.5 Pr
 *   模型规模：从1.5B扩展到7B，整体WER从2.11降至0.66，SIM-O从0.59升至0.75，主观偏好分从3.54升至3.76，性能全面提升。
 *   CFG与扩散步数：WER在10步去噪和1.25的CFG比例下最优（图3a）。SIM-O在5步时已接近峰值，步数增加略有下降（图3b），表明过多的“去噪”可能会抹去对说话人识别有益的环境特征。
 
-![图3：CFG和扩散步数消融实验](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FihSkzyxdv-2.jpg)
+![图3：CFG和扩散步数消融实验](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FihSkzyxdv-2.jpg)
 图3：CFG和DDPM步数对WER和SIM-O的影响热图。(a) WER在10步、CFG 1.25时最优；(b) SIM-O在5步时已较高，步数增加略有下降。
 
 4. 重建质量对比

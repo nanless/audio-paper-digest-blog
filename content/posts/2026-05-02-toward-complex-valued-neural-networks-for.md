@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ComVo是一个基于生成对抗网络（GAN）的iSTFT基声码器，整体架构如图2所示。
 
-![图2：ComVo架构概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/U4GXPqm3Va-1.png)
+![图2：ComVo架构概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/U4GXPqm3Va-1.png)
 
 其核心组件包括：
 
@@ -141,7 +141,7 @@ ComVo是一个基于生成对抗网络（GAN）的iSTFT基声码器，整体架�
 - ComVo在几乎所有客观指标上达到了最佳值，在主观MOS上与最强基线持平或略优。
 - 消融实验（表5）：证明了复值生成器（GC）和复值判别器（DC）的有效性。GCDC组合优于其他组合。仅用cMRD的判别器在PESQ等指标上已优于实值MRD，表明复值判别器提供了更有效的约束。
 
-![图3: Grad-CAM可视化对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/U4GXPqm3Va-2.png)
+![图3: Grad-CAM可视化对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/U4GXPqm3Va-2.png)
 图3说明：可视化了不同生成器-判别器组合下，cMRD判别器的注意力图。使用复值判别器（GRDC, GCDC）时，注意力集中在清晰的谱图结构上，而实值判别器（GRDR, GCDR）的注意力则较为分散，直观证明了复值判别器能提供更精确的频谱反馈。
 
 - 相位量化消融（表6）：Nq=128在感知质量（UTMOS, PESQ）和重建误差（MR-STFT）之间取得了最佳平衡。

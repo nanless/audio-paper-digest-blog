@@ -59,7 +59,7 @@ hiddenInHomeList: true
 3.  文本模板化与实例化：为每种关系预定义了5个文本描述模板。通过将模板中的占位符替换为具体的音频事件名称（及其同义词），生成具体、多样的文本提示。
 4.  音频生成：根据实例化后的文本提示，从`AudioEventSet`中检索对应的音频事件波形片段，并按照关系描述进行组合（如时间拼接、空间效果混合、逻辑控制等），最终生成10秒的16kHz音频。
 
-![图4: <text,audio> pair generation illustration](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LAYCYiIgZ1-3.jpg)
+![图4: <text,audio> pair generation illustration](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LAYCYiIgZ1-3.jpg)
 图4说明：该图清晰展示了从关系语料库（AudioRelSet）和事件语料库（AudioEventSet）出发，通过模板化（rel2text templatization）和实例化（event instantiation）生成具体文本提示，最终组合成音频的流水线。它强调了该方法可生成“近乎无限”的、多样性高的训练对。
 
 关键设计选择与动机：将事件和关系解耦是本文的核心设计。其动机在于：a) 使数据集构建可扩展——可以独立扩展事件库和关系库；b) 支持系统性研究——可以隔离地研究模型对事件本身与关系建模的性能；c) 生成策略灵活——可组合出训练现有模型所需的大规模监督数据。
@@ -125,13 +125,13 @@ hiddenInHomeList: true
 
 其他分析（图6-8）：图6和图7分别展示了零样本和微调设置下，三个强模型在不同关系类别和元数上的mAMSR。普遍显示“组合关系”（Nested Combination）和高元数关系最难处理。图8揭示了训练数据规模的影响。
 
-![图6: mAMSR regarding 6 main relation category and 5 relation Arity in Zero-shot setting.](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LAYCYiIgZ1-5.jpg)
+![图6: mAMSR regarding 6 main relation category and 5 relation Arity in Zero-shot setting.](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LAYCYiIgZ1-5.jpg)
 图6说明：零样本设置下，三个模型在6大关系类别和5种关系元数上的性能热力图。整体性能极低，且对复杂类别（如嵌套组合）和更高元数（>1）几乎无效。
 
-![图7: mAMSR regarding 6 main relation category and 5 relation Arity in finetuning setting.](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LAYCYiIgZ1-6.png)
+![图7: mAMSR regarding 6 main relation category and 5 relation Arity in finetuning setting.](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LAYCYiIgZ1-6.png)
 图7说明：微调设置下的性能热力图。相比零样本有显著提升，但复杂关系和高元数仍是瓶颈。
 
-![图8: mAMSR variation w.r.t. training data size.](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LAYCYiIgZ1-7.jpg)
+![图8: mAMSR variation w.r.t. training data size.](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LAYCYiIgZ1-7.jpg)
 图8说明：mAMSR随训练数据量（100h, 200h, 300h）的变化趋势。显示从头训练（蓝线）持续提升，而微调（红线）在200-300h区间趋于饱和。
 
 ### ⚖️ 评分理由

@@ -58,7 +58,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文不提出新的模型架构，而是以现有的 Qwen2.5-Omni 作为基础模型进行后训练。其核心贡献在于数据构建与训练策略。因此，其“架构”体现在数据处理与训练流程上。
-![图1: 数据集构建流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/sJ0jUO9Mxr-0.png)
+![图1: 数据集构建流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sJ0jUO9Mxr-0.png)
 图1展示了AudioMCQ数据集的构建流程。流程始于多个音频描述/问答数据集，经过问题生成、选择题构建、结构化与非结构化思维链生成，以及最后的质量评分与过滤。这是一个多阶段、依赖LLM的生成与筛选管线，最终产出高质量的选择题数据集。
 
 ### 💡 核心创新点
@@ -114,7 +114,7 @@ hiddenInHomeList: true
     - 两者均显著优于Mixed-to-Mixed基线（MMAR: 64.9%, MMSU: 69.2%）。
 3.  音频贡献的影响（图5）：GRPO阶段使用强音频贡献数据对于提升模型在强音频贡献基准（MMAR-ACstrong, MMSU-ACstrong）上的性能至关重要。而SFT阶段的数据选择（弱或混合）则应与下游任务的分布匹配。
 
-![图5: 三种训练范式在不同基准及ACstrong子集上的性能曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/sJ0jUO9Mxr-4.png)
+![图5: 三种训练范式在不同基准及ACstrong子集上的性能曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sJ0jUO9Mxr-4.png)
 图5展示了训练过程中模型在不同基准上的性能变化。关键结论：使用强音频贡献数据进行GRPO训练（红色和绿色曲线）相比使用混合数据（蓝色曲线），能显著提升模型在ACstrong子集（即真正需要音频的题目）上的性能。
 
 ### ⚖️ 评分理由

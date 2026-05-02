@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 SpeechOp是一个基于潜在扩散模型的多任务模型，其架构如图3所示。整体包含两个主要输入路径和核心生成组件。
 
-![图3: SpeechOp架构概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eLsEjjFODE-2.png)
+![图3: SpeechOp架构概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eLsEjjFODE-2.png)
 
 1.  整体流程：模型在潜在空间操作。音频首先通过一个音频自编码器（附录C描述，基于DAC但使用连续变分瓶颈）压缩为潜在表示 `x0`。然后，扩散Transformer（DiT）在这个潜在空间中执行去噪任务，以生成目标音频的潜在表示，最后由解码器恢复波形。
 2.  文本到语音路径：处理文本转录本。转录文本由一个冻结的、预训练的ByT5-base编码器处理，得到字符级表示。这些表示通过交叉注意力机制输入到DiT中，指导去噪过程生成对应语音。为支持说话人提示生成和语音编辑，模型在训练中会进行“修复”（inpainting），即用干净的目标片段替换加噪潜在表示中的随机部分，并添加一个可学习的二进制嵌入来区分干净帧和噪声帧。
@@ -136,7 +136,7 @@ SpeechOp是一个基于潜在扩散模型的多任务模型，其架构如图3�
 
 图4（1D高斯混合模拟） 提供了直觉理解：得分平均（c）会产生“涂抹”分布，偏离增强先验；而TC-CFG（d）能将样本引导至目标分布而不破坏增强先验。
 
-![图4: 1D高斯混合模拟](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eLsEjjFODE-3.png)
+![图4: 1D高斯混合模拟](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eLsEjjFODE-3.png)
 
 ### ⚖️ 评分理由
 

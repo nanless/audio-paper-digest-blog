@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 LST的整体架构如图2所示，其设计灵感来源于字节级潜在变换器（BLT），旨在通过“补丁化”语音token来提升自回归建模的效率。
 
-![LST架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/krGpQzo8Mz-1.png)
+![LST架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/krGpQzo8Mz-1.png)
 
 1. 输入与整体流程：
 模型接受两种模态的输入：文本BPE token序列和语音HuBERT token序列。两者首先被分别嵌入。随后，语音嵌入序列经过补丁编码器被压缩成更短的“潜语音块”表示序列。这些语音块表示与文本token表示一起，被拼接成一个交错序列，输入给全局语音-文本Transformer进行自回归建模。在生成阶段，补丁解码器负责将全局Transformer输出的潜表示解码回语音token序列。
@@ -163,7 +163,7 @@ LST的整体架构如图2所示，其设计灵感来源于字节级潜在变换�
 *   关键结论：在相同数据量下，LST通过压缩序列长度实现了约20%的计算节省，同时性能大幅提升。课程分块LST将语音-文本性能差距从9.4%缩小至6.7%。
 
 扩展行为分析
-![扩展行为](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/krGpQzo8Mz-3.png)
+![扩展行为](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/krGpQzo8Mz-3.png)
 *   图4(a) 计算最优扩展：在420M-1.8B参数范围内，LST在两种模态上的性能均持续优于基线，且差距随模型规模增大而扩大（如在1.8B，语音HellaSwag上39.0% vs 35.3%）。
 *   图4(b) 次优token扩展 (7B)：在固定70B token预算（低于最优的~140B）下，LST全程保持更高的准确率和更快的收敛速度。
 

@@ -66,7 +66,7 @@ hiddenInHomeList: true
 *   Text-Prior Debiasing：直接抑制语言模型中固有的、与输入内容无关的“常识”偏见，这是情感推理中幻觉的主要来源之一。
 
 论文中的架构图（图4）清晰地展示了这两种偏好对的构建方式：
-![图4: AVEm-DPO中的偏好对](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/td682AAuPr-3.png)
+![图4: AVEm-DPO中的偏好对](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/td682AAuPr-3.png)
 
 ### 💡 核心创新点
 
@@ -134,7 +134,7 @@ hiddenInHomeList: true
 结论：去除TPD组件后，模型在“幻觉”测试上的性能从97.6%骤降至77.8%，证明TPD对消除幻觉至关重要。
 
 图表分析：
-![图5: AVEm-DPO的效果分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/td682AAuPr-4.png)
+![图5: AVEm-DPO的效果分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/td682AAuPr-4.png)
 左图：AVEm-DPO训练后，模型在音频/视觉推理任务上，对相关模态token的注意力比例显著增加。
 右图：AVEm-DPO训练后，对视觉推理任务，当音频输入被攻击性替换时，正确答案的对数似然分布偏移（Shift）从0.78大幅减少至0.04，表明模型鲁棒性增强。
 

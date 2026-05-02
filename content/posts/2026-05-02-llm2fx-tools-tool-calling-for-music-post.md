@@ -59,10 +59,10 @@ LLM2Fx-Tools是一个端到端的多模态自回归生成框架，旨在将音�
 
 数据流：干声(x_dry)和参考音频(x_ref) → Fx-Encoder++ → 适配器 → e_audio_dry, e_audio_ref。与指令token拼接 → LLM → 生成CoT, 工具调用序列C, 回复。
 
-![LLM2Fx-Tools框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OyIJvyyB3R-0.png)
+![LLM2Fx-Tools框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OyIJvyyB3R-0.png)
 图1：展示了整体框架。输入（指令、工具集、参考音频、伪干声）经过预处理（Fx-Removal， Fx-Norm）后输入LLM，输出CoT、工具调用和回复。工具调用结果可应用于新音频。
 
-![模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OyIJvyyB3R-1.png)
+![模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OyIJvyyB3R-1.png)
 图2：展示了多模态自回归生成架构。音频通过编码器和适配器转化为与文本token拼接的序列，输入LLM进行生成。
 
 ### 💡 核心创新点
@@ -141,7 +141,7 @@ LLM2Fx-Tools是一个端到端的多模态自回归生成框架，旨在将音�
 关键结论：LLM2Fx-Tools的工具调用成功率接近Gemini 2.5 Flash，且在指令跟随和CoT质量上更优，体现了领域微调的价值。
 
 4.  主观评估（MUSHRA测试）：
-    ![MUSHRA听觉测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/OyIJvyyB3R-3.png)
+    ![MUSHRA听觉测试结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/OyIJvyyB3R-3.png)
     图4：展示了主观评分。LLM2Fx-Tools (62.8) 显著高于Gemini 2.5 Flash (56.5)、DeepAFx-ST (54.8) 和 No Fx (39.1)。Regression (16.2) 和 MultiTask (34.9) 得分低于No Fx，表明错误的效果应用比不加效果更差。
 
 ### ⚖️ 评分理由

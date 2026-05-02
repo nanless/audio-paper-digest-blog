@@ -49,7 +49,7 @@ hiddenInHomeList: true
     - 群稀疏损失 `Lgs`：作用于稀疏码对 `(zx, zy)`，计算公式为 `Lgs(zx, zy) = ||[zx; zy]||_{2,1} = Σ_i sqrt(z_{x,i}^2 + z_{y,i}^2)`。这一范数鼓励对应坐标 `i` 的值 `z_{x,i}` 和 `z_{y,i}` 同时为零或同时为非零，即联合稀疏性。
     - 总损失：`L = L_recon_x + L_recon_y + λ * Lgs`。
 
-![图2: 掩码群稀疏自编码器训练流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZJlVXZ5dmK-1.png)
+![图2: 掩码群稀疏自编码器训练流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZJlVXZ5dmK-1.png)
 图2 直观展示了该流程：来自预训练编码器的对齐嵌入，分别经过共享的SAE编码器（含掩码和TopK），产生稀疏码，再经共享的线性SAE解码器重建，损失由重建损失和群稀疏损失组成。
 
 ### 💡 核心创新点
@@ -122,11 +122,11 @@ hiddenInHomeList: true
 关键结论：在音频任务上，群稀疏变体同样远超标准SAE。在GTZAN分类上，GSAE几乎追平原嵌入性能。这是首次将SAE应用于音频-文本嵌入空间的工作。
 
 3. 多模态神经元与死神经元分析（图3）：
-![图3: 各模态激活的神经元数量统计](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZJlVXZ5dmK-2.png)
+![图3: 各模态激活的神经元数量统计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZJlVXZ5dmK-2.png)
 关键结论：标准SAE（黄色）大量神经元仅对单一模态激活，且有相当数量的死神经元（Neither）。GSAE（绿色）和MGSAE（蓝色）显著增加了“Both”（双模态激活）的神经元数量，并大幅减少了“Neither”（死神经元）。MGSAE效果最优。
 
 4. 多模态单义性分数（MMS）分析（图4）：
-![图4: MMS分数分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZJlVXZ5dmK-3.png)
+![图4: MMS分数分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZJlVXZ5dmK-3.png)
 关键结论：标准SAE（橙线）大部分神经元的MMS分数（尤其是跨模态的`MMS(image, text)`）接近零。而GSAE（绿线）和MGSAE（蓝线）的大量神经元获得了高MMS分数，表明它们学到了更多既语义连贯又多模态的概念。
 
 5. 消融实验（附录表3）：在不同扩展因子和K值下，MGSAE的零样本性能（ImageNet）始终最优，证明了方法的鲁棒性。K值增大时，所有模型性能提升。

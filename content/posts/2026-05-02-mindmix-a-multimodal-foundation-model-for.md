@@ -59,11 +59,11 @@ hiddenInHomeList: true
 
 MindMix采用双流架构，包含EEG编码器、音频编码器和跨模态对齐模块，最终通过对比学习目标进行端到端优化。
 
-![MindMix框架概述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/1ifQzlETeG-0.png)
+![MindMix框架概述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/1ifQzlETeG-0.png)
 图1：MindMix框架概述。 模型接受配对的EEG和音频输入，分别通过各自的编码器生成初始投影（Eproj, Aproj），然后通过提出的CALRA模块进行深度交互与对齐，生成最终的对齐嵌入（Ealigned, Aaligned），用于对比学习。
 
 1. EEG编码器 (fEEG)：
-![EEG编码器预训练架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/1ifQzlETeG-1.png)
+![EEG编码器预训练架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/1ifQzlETeG-1.png)
 图2：EEG编码器的多任务预训练架构。
 - 输入：原始EEG信号 S_EEG ∈ R^{C×T}，C（通道数）可变。
 - 处理流程：
@@ -80,7 +80,7 @@ MindMix采用双流架构，包含EEG编码器、音频编码器和跨模态对�
 - 处理：对音频片段提取最终隐藏状态序列，经均值池化和线性投影后，得到音频嵌入 `A_proj`。
 
 3. 跨注意力低秩对齐模块 (CALRA)：
-![CALRA模块详细结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/1ifQzlETeG-2.png)
+![CALRA模块详细结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/1ifQzlETeG-2.png)
 图3：CALRA模块概览。
 - 输入：初始投影 `E_proj` 和 `A_proj`。
 - 核心组件：
@@ -167,13 +167,13 @@ MindMix采用双流架构，包含EEG编码器、音频编码器和跨模态对�
 | w/o Cross-Attention | 0.8482 | 0.9435 |
 
 多模态协同分析 (Figure 4)：与仅使用EEG编码器的单模态版本相比，完整的多模态MindMix在所有任务上都显示出显著的性能提升，量化了跨模态对齐带来的收益。
-![多模态协同分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/1ifQzlETeG-3.png)
+![多模态协同分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/1ifQzlETeG-3.png)
 图4：MindMix完整模型与其EEG-only版本在不同任务上的性能对比。 多模态对齐在所有任务上都带来了显著的性能提升。
 
 神经科学解释 (Figure 5)：
 - 音频重构：MindMix从EEG嵌入重构出的Mel频谱图与真实频谱图的皮尔逊相关系数（PCC）在DTU和KUL数据集上分别达到0.88和0.91，远超基线（如0.67和0.61），证明其学习到了听觉皮层的频谱时域感受野。
 - 空间注意力拓扑：模型在左侧颞区表现出高激活，这与左半球处理语音的神经科学共识一致，增强了模型的可信度。
-![神经科学解释图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/1ifQzlETeG-2.png)
+![神经科学解释图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/1ifQzlETeG-2.png)
 图5(a)：Mel频谱图重构对比。 MindMix的重构清晰捕捉了谐波结构，而基线方法则模糊不清。
 
 ### ⚖️ 评分理由

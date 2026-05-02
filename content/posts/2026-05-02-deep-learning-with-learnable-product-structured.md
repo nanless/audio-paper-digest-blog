@@ -64,7 +64,7 @@ LRNN是对MLP的推广，其核心是引入了“乘积结构激活函数”的�
     - 单变量组件函数可学习：赋予每个神经元极高的灵活性，使其能自适应地学习特定投影方向上的最优非线性变换。
     - 乘积而非求和：与MLP中特征的加法组合不同，乘积组合能更高效地表示特征间的交互关系，尤其在频谱分析中能产生丰富的组合频率（如引理2所示）。
 
-![Deep LRNN Architecture](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EB2Qgp5Vb0-9.png)
+![Deep LRNN Architecture](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EB2Qgp5Vb0-9.png)
 图10展示了深层LRNN的架构。输入 `x` 经过多个LRNN层的堆叠，每层包含线性投影和基于乘积结构的可学习激活函数，最后通过输出层得到预测。
 
 ### 💡 核心创新点
@@ -126,19 +126,19 @@ LRNN是对MLP的推广，其核心是引入了“乘积结构激活函数”的�
 
 图表结果说明：
 - 图2 (Scaling Laws)：展示了在图像表示任务上，LRNN-SPDER（2层）在相同参数量下PSNR持续高于3层/5层的SPDER和MLP模型，体现了优越的参数效率。
-![Scaling Laws for Image Representation](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EB2Qgp5Vb0-1.png)
+![Scaling Laws for Image Representation](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EB2Qgp5Vb0-1.png)
 图2：LRNN-SPDER在图像表示任务上的缩放定律。在相同参数量下，LRNN的性能（PSNR）始终优于更深的SPDER和MLP基线。
 
 - 图4 (ImageNet Robustness)：大规模鲁棒性测试显示，LRNN在所有PSNR目标上成功率最高，尤其在40dB的高要求下达到100%，而基线模型几乎失败。
-![ImageNet Robustness Study](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EB2Qgp5Vb0-3.png)
+![ImageNet Robustness Study](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EB2Qgp5Vb0-3.png)
 图4：在1000张ImageNet图像上达到不同PSNR目标的成功率。LRNN在所有目标上表现最佳，尤其在40dB时达到100%成功率。
 
 - 图7 (Audio Error)：显示LRNN-SPDER在时域和频域的绝对误差均远低于SIREN和SPDER，且收敛更快，频谱保真度更高。
-![Audio Representation Results](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EB2Qgp5Vb0-6.png)
+![Audio Representation Results](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EB2Qgp5Vb0-6.png)
 图7：bach音频表示任务的误差分析。LRNN-SPDER在时域和频域的绝对误差均显著低于基线模型。
 
 - 图8 (PDE Benchmark)：在Poisson PDE任务中，LRNN的MSE曲线远低于SIREN和MLP，且在低参数量时就达到了极低误差。
-![PDE Benchmark Results](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EB2Qgp5Vb0-7.png)
+![PDE Benchmark Results](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EB2Qgp5Vb0-7.png)
 图8：Poisson PDE基准测试结果。LRNN在所有频率下均实现了比SIREN和MLP低几个数量级的误差。
 
 ### ⚖️ 评分理由

@@ -47,7 +47,7 @@ hiddenInHomeList: true
 模型基于一个36层的自回归Transformer骨干（初始化自Qwen3-8B）。整体流程分为语音编码、LLM处理和语音解码三个部分。
 
 1. 模态分层架构（核心创新）
-![图3: 模型架构与训练策略](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zjaV5zmlkl-2.png)
+![图3: 模型架构与训练策略](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zjaV5zmlkl-2.png)
 图3展示了核心架构：一个共享的32层Transformer骨干（前32层）。在第32层后，隐藏状态被路由到两个平行的模态特定分支：
 - 文本分支：接在原始文本嵌入和语言模型头之后，包含4层额外的Transformer层和文本LM头，用于预测文本token。
 - 语音分支：接在语音token嵌入之后，包含4层独立的Transformer层和语音LM头，用于预测语音token。
@@ -128,7 +128,7 @@ hiddenInHomeList: true
 表8关键结论：在生成停顿、填充词（如轻笑）等非言语行为方面，本文模型显著优于GPT-4o和Gemini，证明了其在表现力上的优势。
 
 模型层级相似度分析（图2）：
-![图2: 不同层语音与文本表征相似度可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zjaV5zmlkl-1.png)
+![图2: 不同层语音与文本表征相似度可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zjaV5zmlkl-1.png)
 该图展示了在不同模型层（0， 10， 24， 27），语音和文本隐藏状态的余弦相似度热力图及整体得分曲线。关键发现：相似度在第10层左右达到高峰，在第25层后开始下降，在最后几层显著降低。这一��证观察直接驱动了“在第32层进行模态分层”的设计选择。
 
 ### ⚖️ 评分理由

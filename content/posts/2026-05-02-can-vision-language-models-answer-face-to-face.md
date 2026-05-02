@@ -107,15 +107,15 @@ hiddenInHomeList: true
 | Stream-Qwen-Omni | - | - | - | 0.52 | -0.62 | 0.53 |
 
 图2：微调与音频对VideoLLaMA2.1-7B-AV的影响
-![图2](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I3dPEvbp8o-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I3dPEvbp8o-1.png)
 该图对比了预训练模型（视频-only vs. 音视频）和微调后模型在不同类别任务上的正确率。关键结论：微调（FT）后，模型在音频信息丰富的类别（如Audio-Visual, Subjective）上提升显著，且音视频（AV）输入通常优于纯视频（V）输入，证明了端到端多模态训练的价值。
 
 图3：不同时机来源对Qwen2.5-Omni性能的影响
-![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I3dPEvbp8o-2.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I3dPEvbp8o-2.png)
 该图显示了使用真实最佳时机（GT）、Whisper预测时机（ASR）和Stream-Qwen-Omni预测时机（Qwen）时，模型在各任务上的正确率。关键结论：使用真实时机（红）性能最高，使用模型自身预测时机（绿）次之，使用ASR预测时机（蓝）最差，清晰地证明了“何时回答”的准确性对最终性能的巨大影响。
 
 图4：各类别任务下模型表现对比
-![图4](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/I3dPEvbp8o-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/I3dPEvbp8o-3.png)
 该图展示了人类与顶级模型（GPT-4o, Gemini, Qwen3-VL等）在13个语义类别上的正确率。关键结论：人类在所有类别上都远超模型，尤其在Action Counting, Audio-visual, Object Referencing等需要复杂时序或跨模态推理的任务上差距巨大（例如，人类Action Counting正确率85.7%，最强模型仅33.48%）。
 
 ### ⚖️ 评分理由

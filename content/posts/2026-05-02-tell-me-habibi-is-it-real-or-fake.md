@@ -52,7 +52,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文的主要贡献是数据集而非一个新的检测模型架构。论文的核心是ArEnAV数据生成管道，其架构如图1所示：
-![图1: 数据生成流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EbrPXZTVJ9-0.png)
+![图1: 数据生成流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EbrPXZTVJ9-0.png)
 整个流程分为三个主要阶段：
 1.  输入处理与转录操纵：输入的YouTube视频被处理，提取音频、面部和文本。使用GPT-4.1-mini，通过少样本提示（Few-shot Prompts）对转录文本进行受控的语码转换操纵。操纵规则如表2所示，包括“仅改变含义”、“改变含义+方言”、“改变含义+翻译”等多种模式，确保编辑的多样性。
 2.  音频生成：根据编辑后的转录文本，生成新的音频。管道集成了四种TTS克隆策略以应对阿拉伯语和英语混合内容：XTTS-v2、XTTS-v2+OpenVoice-v2、Fairseq Arabic TTS+OpenVoice-v2、GPT-TTS+OpenVoice-v2。生成的音频会通过Whisper-Turbo进行验证，确保与目标转录匹配。
@@ -118,13 +118,13 @@ hiddenInHomeList: true
 | LAA-Net | 50.04 | 86.94 | 99.96 | – |
 
 图3：转录文本质量评估
-![图3: 蕴含度和困惑度评估](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EbrPXZTVJ9-2.png)
+![图3: 蕴含度和困惑度评估](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EbrPXZTVJ9-2.png)
 - 图a (蕴含度)：显示了不同操作模式下，真实与伪造文本之间的双向蕴含质量均值分布。大部分样本得分低于0.5，表明成功注入了语义变化。
 - 图b (困惑度)：使用Jais-3B和Qwen-2.5-7B计算真实与伪造文本的困惑度。两者差距很小，表明伪造文本在语义被改变的同时，依然保持了语言流畅性和自然性。
 
 图4 & 5：BA-TFD+定性分析
-![图4: 伪造样本预测案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EbrPXZTVJ9-3.png)
-![图5: 真实语码转换样本被误判案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/EbrPXZTVJ9-4.png)
+![图4: 伪造样本预测案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EbrPXZTVJ9-3.png)
+![图5: 真实语码转换样本被误判案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/EbrPXZTVJ9-4.png)
 - 图4展示了模型在伪造样本上的预测。模型有时能正确识别类别并部分覆盖真实伪造区域（a），但定位往往不精确（b），甚至完全错误（c, d）。
 - 图5揭示了主要挑战：模型频繁将包含自然语码转换（阿拉伯语-英语切换）的真实视频误判为伪造（a-d），这表明模型难以区分自然的语言转换和合成的不一致性。
 

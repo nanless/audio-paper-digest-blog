@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![AudioX框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/qjJWxK3yWo-3.jpg)
+![AudioX框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/qjJWxK3yWo-3.jpg)
 图4：AudioX框架。 专用编码器处理不同模态，MAF模块将这些信号统一为条件嵌入Hc。DiT骨干网络处理噪声潜在输入zt，通过交叉注意力以Hc为条件，生成高质量音频和音乐。
 
 AudioX是一个端到端的条件扩散生成框架，其完整流程如下：
@@ -125,7 +125,7 @@ AudioX是一个端到端的条件扩散生成框架，其完整流程如下：
 | | | VidMuse | 0.73 | 1.32 | 29.95 | 2.46 | 5.88 | 6.89 | 0.20 |
 
 指令跟随能力评估（摘自论文Table 2）：
-![性能比较图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/qjJWxK3yWo-0.png)
+![性能比较图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/qjJWxK3yWo-0.png)
 图1：AudioX与基线的性能比较。 (a) 通过Inception Score (IS) 在多个基准上的综合比较。 (b) 在指令跟随基准上的结果。
 | 方法 | T2A-bench | | | | AudioTime | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

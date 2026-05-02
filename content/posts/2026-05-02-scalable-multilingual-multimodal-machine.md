@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 本文提出的SMT框架整体架构如图2所示，主要包含两个核心部分：MLLM预训练和自监督进化机制。
 
-![SMT框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HQMVRQUEaM-1.jpg)
+![SMT框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HQMVRQUEaM-1.jpg)
 
 完整输入输出流程：
 1.  输入：源语言文本 `t_text`。
@@ -167,7 +167,7 @@ b. 自监督进化机制的影响（FLORES-200基准）
 
 c. 自监督进化轮次与低资源语言性能
 
-![自监督进化轮次对低资源语言性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HQMVRQUEaM-0.jpg)
+![自监督进化轮次对低资源语言性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HQMVRQUEaM-0.jpg)
 *   关键结论：图4显示，自监督进化在第3轮左右为低资源语言（mya， lao， khm）带来最大的平均COMET和spBLEU提升。后续轮次提升趋于平缓，表明机制在迭代数次后达到饱和。
 
 d. 案例分析（欠翻译问题）

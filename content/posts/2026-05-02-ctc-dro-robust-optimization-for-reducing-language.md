@@ -88,7 +88,7 @@ CTC-DRO算法（Algorithm 1）在标准的CTC微调流程（使用如XLS-R/MMS�
 数据流：
 输入语音 `(x, y)` → 预训练编码器（如XLS-R） → Transformer层 → CTC输出头 → 计算CTC损失 `ℓi`。在训练循环中，长度匹配批处理器确保每批数据来自同一组且时长相近。所有组的损失被收集、平均后，用于平滑最大化目标更新组权重 `qg`。模型参数通过基于这些组加权损失的梯度进行更新。
 
-![图2: CTC-DRO算法与Group DRO算法在语言组权重上的变化对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yt40xuRBA9-1.png)
+![图2: CTC-DRO算法与Group DRO算法在语言组权重上的变化对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yt40xuRBA9-1.png)
 图2直观展示了平滑目标的作用。训练过程中，标准Group DRO的权重剧烈波动，常出现某个语言权重接近1，其他接近0的情况；而CTC-DRO的权重分布则平滑、稳定得多，能持续关注所有语言（包括表现最差的）。
 
 ### 💡 核心创新点
@@ -140,9 +140,9 @@ CTC-DRO算法（Algorithm 1）在标准的CTC微调流程（使用如XLS-R/MMS�
     - 对最优语言影响：分析表明，CTC-DRO并未显著降低表现最好语言的性能（平衡数据下，基线最优语言平均CER为3.0%，CTC-DRO为3.7%，t检验p=0.19无显著差异）。
     - 扩展性：附录H的18语言实验表明，CTC-DRO在更多语言组上依然有效（最差语言CER降低最高23.7%）。
 - 相关图表：
-![图3: MMS模型在设置5上的组权重轨迹](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yt40xuRBA9-2.png)
+![图3: MMS模型在设置5上的组权重轨迹](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yt40xuRBA9-2.png)
 图3显示MMS模型上，CTC-DRO同样实现了权重的稳定分布，与图2的XLS-R模型结论一致。
-![图4: MMS模型在设置2上的组权重轨迹](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/yt40xuRBA9-3.png)
+![图4: MMS模型在设置2上的组权重轨迹](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/yt40xuRBA9-3.png)
 图4进一步证实CTC-DRO的稳定性在不同语言集上具有泛化能力。
 
 ### ⚖️ 评分理由

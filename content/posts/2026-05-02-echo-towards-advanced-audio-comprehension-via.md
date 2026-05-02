@@ -74,7 +74,7 @@ Echo模型整体架构基于一个预训练的多模态大模型（Qwen2.5-Omni�
     *   第一阶段（SFT）：在基座模型πθ上进行。使用高质量的Audio-QA数据集（EAQA-SFT），其CoT标注中明确包含`<seg>`标签引用及对应的音频分析。通过标准交叉熵损失，教模型生成这种格式的“音频定位推理链”。此时模型尚未真正处理交错的音频token，因此被称为“冷启动模型”或“音频接地推理”。
     *   第二阶段（RL）：首先激活“音频交错推理”的推理机制。然后，在无需CoT标注的Audio-QA数据集（EAQA-RL）上进行强化学习。采用Group Relative Policy Optimization (GRPO) 算法，通过一个组合奖励函数（公式2）来优化策略，鼓励模型生成格式正确、答案准确、语义连贯且回听关键片段的响应。
 
-![图2：训练框架总结示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/xI6yOdOtga-1.jpg)
+![图2：训练框架总结示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/xI6yOdOtga-1.jpg)
 图2展示了整个训练框架：(a)基础模型；(b)通过SFT进行有监督微调，使模型学会生成包含`<seg>`标签的CoT；(c)获得的冷启动模型；(d)冷启动模型在推理时通过插入对应音频片段（Seg1, Seg2）执行音频交错推理；(e)在验证奖励信号下，采用RL（GRPO）进一步提升模型灵活调用音频和准确回答的能力。
 
 ### 💡 核心创新点
@@ -113,10 +113,10 @@ Echo模型整体架构基于一个预训练的多模态大模型（Qwen2.5-Omni�
     *   RL训练动态（图4）：准确度奖励波动上升，格式/一致性奖励快速收敛。模型学会引用约1.9个片段，平均时长3.0秒，片段重叠率低（~0.1），PPO KL散度接近0，训练健康。
     *   能力进化（图5）：从基座模型到冷启动模型再到Echo，10个代表性技能（如多说话人角色映射、情感状态总结、事件推理等）的准确率均有显著提升，最高提升达37.0%。
     *   片段覆盖（图6）：在1000个MMAR任务中，Echo在99.4%的响应中至少回听一个片段，78.0%回听两个片段。片段分布覆盖整个音频时间线，展现了泛化能力。
-![图5：在MMAU-mini上10种认知能力的进化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/xI6yOdOtga-4.jpg)
+![图5：在MMAU-mini上10种认知能力的进化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/xI6yOdOtga-4.jpg)
 图5展示了从基座模型到Echo在代表技能上的性能提升，证明了音频交错推理对需要精细音频感知和推理的任务有显著增强。
 
-![图6：Echo在MMAR任务上重听片段的位置分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/xI6yOdOtga-5.jpg)
+![图6：Echo在MMAR任务上重听片段的位置分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/xI6yOdOtga-5.jpg)
 图6显示Echo重听的片段均匀分布在音频时间线上，且能处理训练数据元数据未覆盖的长音频部分。
 
 ### ⚖️ 评分理由

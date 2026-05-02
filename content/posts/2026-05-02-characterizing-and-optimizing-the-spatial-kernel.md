@@ -69,7 +69,7 @@ hiddenInHomeList: true
 *   特征表 `F_l`：存储每个网格顶点处的可学习特征向量。
 
 R-MHE的关键设计：
-![图1: 论文概览，展示了MHE架构和R-MHE的概念](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/q05hC1Pzkr-0.jpg)
+![图1: 论文概览，展示了MHE架构和R-MHE的概念](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/q05hC1Pzkr-0.jpg)
 *   修改点：在每一层 `l`，对输入坐标 `x` 先应用一个层特定的旋转矩阵 `R_l`，然后再进行哈希和插值。即 `e_l(x) = Interpolate(F_l, H(⌊N_l R_l x⌉))`。
 *   动机与交互：通过为不同分辨率的网格赋予不同的方向，可以平均化各单个网格固有的轴对齐各向异性，从而获得更各向同性的整体PSF。
 *   旋转策略：
@@ -142,16 +142,16 @@ R-MHE的关键设计：
 *   结论：所有方法在SDF任务上都达到了近乎完美的重建（IoU > 0.996），性能饱和，R-MHE无额外增益。
 
 关键图表分析：
-*   ![图2: MHE PSF的数值验证](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/q05hC1Pzkr-1.png)
+*   ![图2: MHE PSF的数值验证](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/q05hC1Pzkr-1.png)
     *   图a，b：展示了PSF剖面。实线（实验）与虚线（含展宽因子的理论）完美贴合。清晰可见沿轴向（较窄）与对角线方向（较宽）的各向异性。
     *   图c，d：量化了各向异性比率和FWHM随参数变化的趋势，与理论预测一致。
-*   ![图3: 两点相互作用的经验分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/q05hC1Pzkr-2.png)
+*   ![图3: 两点相互作用的经验分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/q05hC1Pzkr-2.png)
     *   图b：展示了临界分辨距离 `d_crit` 与经验FWHM（与1/Navg成正比）呈线性关系，而非N_max。
-*   ![图5: R-MHE验证：各向同性与2D图像回归](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/q05hC1Pzkr-4.png)
+*   ![图5: R-MHE验证：各向同性与2D图像回归](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/q05hC1Pzkr-4.png)
     *   图a：展示了各向异性比率随旋转多样性M先降后升的趋势，证明适度旋转（如M=8）能最大化各向同性。
     *   图b：PSF形状从菱形（M=1）变为更圆的形状（M=4， 8），直观展示各向同性改善。
     *   图c-e：定性对比了重建图像的局部放大图，R-MHE在细节处伪影更少。
-*   ![图8: Synthetic NeRF实验的详细PSNR扫描](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/q05hC1Pzkr-7.png)
+*   ![图8: Synthetic NeRF实验的详细PSNR扫描](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/q05hC1Pzkr-7.png)
     *   展示了8个场景中PSNR随增长因子 `b` 的变化曲线。关键点在于，所有场景的性能峰值区域都包含了理论预测值 `b_theory ≈ 1.38`，有力验证了PSF分析指导超参数选择的有效性。
 
 ### ⚖️ 评分理由

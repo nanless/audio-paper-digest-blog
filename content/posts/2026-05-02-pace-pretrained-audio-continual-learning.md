@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 PACE是一个分阶段的统一框架，旨在重新对齐预训练音频骨干网络的表示以适应持续学习目标。
 
-![图4: PACE框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-3.jpg)
+![图4: PACE框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-3.jpg)
 图4：PACE框架。Stage 1执行带LoRA的首次适应，随后进行解析推断。Stage 2引入子空间正交PEFT，通过LoRA减法和梯度投影实现。边界感知正则化在前两个阶段进行。Stage 3固定骨干网络。蓝色：冻结；橙色：调整；箭头：适应路径。
 
 整体流程与组件：
@@ -152,19 +152,19 @@ PACE是一个分阶段的统一框架，旨在重新对齐预训练音频骨干�
 *   跨会话遗忘热图（图9）：完整PACE方法能维持各会话的高准确率，而移除MSA或梯度投影会导致严重的跨会话遗忘（如图9c中会话1准确率从100%降至7.9%）。
 *   边界扰动效果（图8）：时间-频谱掩码（图8b）比加性噪声（图8a）能更好地保持数据流形结构和类一致性。
 
-![图1: 音频与视觉域表示偏移对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-0.png)
+![图1: 音频与视觉域表示偏移对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-0.png)
 图1：在SpeechCommands V2（音频）和ImageNet-R（视觉）上的t-SNE可视化，显示音频域存在显著更强的表示偏移。
 
-![图2: 视觉CL与音频CL性能模式对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-1.png)
+![图2: 视觉CL与音频CL性能模式对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-1.png)
 图2：(a)和(b)显示了在图像和音频基准上，PEFT-FT方法在音频域性能下降更严重。(c)显示尽管PEFT-FT具有强可塑性，但大的表示偏移导致严重遗忘。
 
-![图3: 表示饱和分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-2.png)
+![图3: 表示饱和分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-2.png)
 图3：(a)(b)显示RanPAC在粗粒度数据集上FSA对后续任务准确率提升有限，表明表示饱和。(c)显示冻结浅层能改善性能。
 
-![图9: 跨会话准确率热图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-8.jpg)
+![图9: 跨会话准确率热图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-8.jpg)
 图9：(a)PACE维持高准确率。(b)无MSA性能下降。(c)无梯度投影导致灾难性遗忘。
 
-![图10: 粗细粒度数据集案例研究](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/k5PgSlNc4E-9.png)
+![图10: 粗细粒度数据集案例研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/k5PgSlNc4E-9.png)
 图10：ESC-50（粗粒度）和TIMIT（细粒度）的频谱图及PEFT-FT下的预测轨迹，展示细粒度任务的识别难度和遗忘严重性。
 
 ### ⚖️ 评分理由

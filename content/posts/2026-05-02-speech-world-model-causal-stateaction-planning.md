@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 SWM的架构分为两个主要阶段：因果图训练与指令微调。
 
-![图2：SWM系统流水线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YGUKPGO182-1.jpg)
+![图2：SWM系统流水线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YGUKPGO182-1.jpg)
 图2展示了整体流水线。第一阶段（因果图训练）：输入语音经文本、声学、韵律编码器编码并融合，送入因果图。每个节点（WMA, ToM, SA, Prag）根据其父节点状态和融合特征计算自身状态（一个概率分布）。训练时施加监督损失。第二阶段（指令微调）：将因果图推断出的状态符号化后，与指令一起输入LLM（语言仅模式）或与原始语音一起输入SLM（多模态模式），训练模型生成包含推理过程（[REASONING]）和最终响应（[RESPONSE]）的文本。
 
 阶段一：因果图训练
@@ -134,10 +134,10 @@ SWM的架构分为两个主要阶段：因果图训练与指令微调。
 | Gemini 2.5 Pro | CoT | 8.12 | 8.02 | 8.28 | 82.47 | 51.29 | 112.62 |
 表3：与开源及商业模型的性能对比。SWM模型在总体分数、特别是情感分类准确率（EA）上显著超越所有基线。
 
-![图5：因果图边因果效应（ACE/ICS）](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YGUKPGO182-4.jpg)
+![图5：因果图边因果效应（ACE/ICS）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YGUKPGO182-4.jpg)
 图5：展示了完全监督和半监督设置下各因果边的ACE和ICS值。关键发现：当某个模块（如ToM）无监督时，其相关边（如ToM→SA）的ACE下降，但其他路径（如WMA→SA）不受影响，证明模块已学习到解耦的表示。
 
-![案例对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YGUKPGO182-0.jpg)
+![案例对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YGUKPGO182-0.jpg)
 图1（案例对比）：展示了SWM在讽刺、间接命令和紧急情况检测上的优势。例如，对于“Oh, brilliant...”，Voxtral基线误解为真诚赞美，而SWM正确推断出[ToM: Anger]和[Prag: Complaint]，识别出讽刺。
 
 ### ⚖️ 评分理由

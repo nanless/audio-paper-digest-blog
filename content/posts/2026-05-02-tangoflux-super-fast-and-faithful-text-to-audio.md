@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: TangoFlux训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/qgNs5NmQB7-0.png)
+![图1: TangoFlux训练流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/qgNs5NmQB7-0.png)
 图1展示了TangoFlux的整体训练流程，主要包含预训练和在线迭代对齐（CRPO）两个阶段。
 - 音频编码：使用预训练的变分自编码器（VAE）将44.1kHz立体声音频编码为潜在表示Z。VAE在整个训练过程中保持冻结。
 - 条件注入：
@@ -106,11 +106,11 @@ hiddenInHomeList: true
 
 CRPO vs 静态数据集（表3）：使用CRPO动态生成的数据进行一次迭代优化（TangoFlux-crpo-1）后，模型在所有指标上均优于使用Audio-Alpaca或BATON静态数据集优化的版本，证明了动态数据的优势。
 
-![图2: CRPO在线 vs 离线训练轨迹](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/qgNs5NmQB7-1.png)
+![图2: CRPO在线 vs 离线训练轨迹](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/qgNs5NmQB7-1.png)
 图2显示，在CRPO的多次迭代中，在线（每迭代生成新数据）训练使CLAPscore持续上升，KLpasst持续下降，性能稳步提升。而离线（重复使用同一数据集）训练在第二次迭代后性能即饱和并恶化，证实了动态数据生成的重要性。
 
 损失函数分析（图3， 图4）：
-![图3: LCPRPO vs LDPO-FM性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/qgNs5NmQB7-2.png)
+![图3: LCPRPO vs LDPO-FM性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/qgNs5NmQB7-2.png)
 图3显示，LCRPO（本文方法）在CLAPscore上优于LDPO-FM，同时在KLpasst和FDopenl3上保持稳定或略优。
 图4（未提供URL）显示，两种损失函数下的赢/输损失均随迭代增加，但LCRPO的赢输损失增长更平缓、稳定，证明了添加LFM项的正则化效果，避免了LDPO-FM在后期迭代可能出现的过优化。
 

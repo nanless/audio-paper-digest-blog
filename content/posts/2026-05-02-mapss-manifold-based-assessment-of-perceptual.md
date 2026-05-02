@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 整体架构是一个分为四个阶段的流水线，如图1所示。
 
-![图1: MAPSS Pipeline](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZ5KmXsJsB-0.png)
+![图1: MAPSS Pipeline](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZ5KmXsJsB-0.png)
 
 1.  Stage 1: 感知失真生成。对每个参考源信号 \( y_i \) 独立施加一组 \( N_p \) （通常60-70种）基础感知失真（如削波、陷波滤波、音高偏移等），形成失真集 \( D_i \)。目的是在感知空间中围绕参考信号构建一个“扰动簇”。
 2.  Stage 2: 自监督编码。将所有参考信号、其对应的失真信号以及所有源的系统输出信号 \( \hat{y}_i \)，独立地输入到预训练的自监督模型（如wav2vec 2.0）中，得到高维特征表示 \( \Phi(\cdot) \)。
@@ -118,11 +118,11 @@ hiddenInHomeList: true
     *   泄漏与失真解耦验证：附录表10通过控制实验表明，PS对泄漏（α参数）变化敏感，而对失真（λ参数）变化不敏感；PM则相反，对失真敏感，对泄漏不敏感，验证了设计目标。
     *   理论误差界：表2和附录图9展示了PS和PM的确定性误差半径和95%置信区间。误差半径非常小（<1.4%），表明流形截断引入的偏差可忽略；置信区间（尤其PS）则提示了有限样本带来的统计不确定性。
 
-![图2: PS与PM的互补性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZ5KmXsJsB-1.png)
+![图2: PS与PM的互补性分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZ5KmXsJsB-1.png)
 
 图2展示了PS与PM值在不同阈值下的归一化互信息（NMI）。NMI值较低（最高约0.15）表明两个指标捕捉到的信息高度互补，尤其是在分离质量较差时（阈值收紧时NMI趋近0）。
 
-![图8: 时间错位的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZ5KmXsJsB-7.png)
+![图8: 时间错位的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZ5KmXsJsB-7.png)
 
 图8展示了人为引入的参考与输出之间的时间错位（0-100 ms）对PS和PM性能（SRCC）的影响。对于语音，超过20ms的错位会导致性能显著下降；对于音乐，性能则相对稳定。
 

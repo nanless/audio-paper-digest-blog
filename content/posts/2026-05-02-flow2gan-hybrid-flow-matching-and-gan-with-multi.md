@@ -49,11 +49,11 @@ hiddenInHomeList: true
 
 Flow2GAN采用两阶段、多分支的生成器架构。其核心是基于多分辨率傅里叶系数的网络（图3）。
 
-![图3: 多分辨率网络结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5eTpRIULtb-2.jpg)
+![图3: 多分辨率网络结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5eTpRIULtb-2.jpg)
 图3展示了Flow2GAN的多分辨率生成器骨干网络。输入x_t（带噪数据）和条件c（Mel谱图或离散token）首先通过一个共享的ConvNeXt条件编码器提取特征。随后，信号被并行输入三个分支，每个分支使用不同的STFT参数（N-FFT, Hop）获取不同时间-频率分辨率的复数傅里叶系数（实部和虚部拼接）。每个分支内部是一个ConvNeXt模型，负责处理这些系数并输出新的复数系数。每个分支的输出通过逆STFT（ISTFT）转换回波形域，最后将三个分支的波形输出相加得到最终生成波形。这种设计让模型能同时捕获音频的全局结构和局部细节。
 
 整体流程（图1）展示了两阶段训练策略：
-![图1: Flow2GAN整体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5eTpRIULtb-0.jpg)
+![图1: Flow2GAN整体框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5eTpRIULtb-0.jpg)
 图1：阶段一为改进的流匹配训练，网络g_θ学习从带噪状态x_t预测终点x_1（干净音频）。阶段二为GAN微调，从训练好的流匹配模型构建N步生成器G_θ^N（如图中N=2），并通过判别器（如MPD, MRD）进行对抗学习以精细化输出。
 
 ### 💡 核心创新点

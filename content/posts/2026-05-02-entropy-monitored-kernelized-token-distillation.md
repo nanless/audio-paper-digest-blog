@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 整体架构（如图2所示）分为教师模型和学生模型两部分，教师模型在蒸馏过程中冻结。
 
-![EM-KTD框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/nspzrcvzcB-1.png)
+![EM-KTD框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/nspzrcvzcB-1.png)
 
 1.  输入：教师和学生模型接收相同的RGB图像（I）和音频梅尔谱图（M）。
 2.  编码器：教师和学生模型各自拥有独立的视觉编码器（Vision Encoder）和音频编码器（Audio Encoder），将输入转换为潜在token序列（z_v, z_a）。编码器架构可以不同（如教师用ViT-Base，学生用ViT-Tiny）。
@@ -58,7 +58,7 @@ hiddenInHomeList: true
 5.  熵监控模块：为每个模态（视觉、音频、融合）各训练一个轻量级线性任务头（g_m(·)）。这些头对冻结教师模型的对应模态token进行预测（如分类），计算预测分布的熵H_m。熵值H_m被用来生成一个权重w_m = e^{-λH_m}，用于调整该模态蒸馏损失的权重。
 6.  蒸馏损失：最终的蒸馏损失是所有模态的加权Huber loss之和，用于最小化教师和学生模型对应Gram矩阵之间的差异。同时，学生模型还使用自身的分类头进行标准的任务损失训练。
 
-![图1：传统方法与EM-KTD的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/nspzrcvzcB-0.jpg)
+![图1：传统方法与EM-KTD的对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/nspzrcvzcB-0.jpg)
 （图1：传统潜空间蒸馏（a）需要投影模块匹配维度，且均匀蒸馏。本文方法（b）蒸馏token间关系，无需匹配架构，并根据模态熵自适应蒸馏。）
 
 ### 💡 核心创新点
@@ -158,7 +158,7 @@ hiddenInHomeList: true
 
 （表5：熵监控模块架构消融。简单的线性层已足够。）
 
-![熵分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/nspzrcvzcB-2.png)
+![熵分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/nspzrcvzcB-2.png)
 （图3：熵分析。(a)显示融合模态的熵分布更集中于低值区域。(b)显示随着熵增加，准确率下降，验证了熵监控的有效性。）
 
 ### ⚖️ 评分理由

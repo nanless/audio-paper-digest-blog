@@ -50,7 +50,7 @@ hiddenInHomeList: true
 TASTE的整体框架分为两个主要阶段：1) 文本对齐语音标记化（Tokenization）和嵌入学习；2) 基于该标记的口语语言模型构建。
 
 1. 文本对齐语音标记化与嵌入学习（TASTE Tokenizer & Decoder）
-![TASTE框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/6STb8DauN1-1.png)
+![TASTE框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/6STb8DauN1-1.png)
 *   输入：语音波形 `u` 和其对应的文本转录 `v`（由外部ASR系统获得）。
 *   流程：
     a. 语音编码器：使用预训练的Whisper ASR编码器（冻结参数）提取语音的多层次隐藏表示，主要利用最后一层 `h(L)` 和浅层 `h(l)`。
@@ -60,7 +60,7 @@ TASTE的整体框架分为两个主要阶段：1) 文本对齐语音标记化（
 *   关键设计动机：利用Whisper编码器最后层富含的对齐信息作为注意力权重，来聚合对重建更友好的浅层声学信息，从而在文本对齐的同时保留丰富的副语言信息（如语速、语调）。
 
 2. 口语语言模型（TASLM）
-![概念对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/6STb8DauN1-0.png)
+![概念对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/6STb8DauN1-0.png)
 *   由于TASTE的语音标记与文本token长度一致，可以无缝对接到预训练的文本LLM（如LLaMA）中进行联合建模。
 *   TASLMtoken：直接建模离散代码 `q`。在每一步同时预测下一个文本token和对应的多层RVQ语音代码。
 *   TASLMemb：建模连续嵌入 `̂z`。通过一个线性层预测分布参数（均值和方差），并采样得到潜在变量，用于预测下一个文本token。训练时引入KL散度损失和正则化损失。
@@ -120,7 +120,7 @@ TASTE的整体框架分为两个主要阶段：1) 文本对齐语音标记化（
 结论：1.3B的TASLM在语音续写的人类和GPT-4o评估上均大幅领先所有7B模型，在StoryCloze语义任务上也取得最佳成绩，整体表现优异。
 
 其他关键实验：
-- 文本对齐语音编辑：![语音编辑示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/6STb8DauN1-2.png) 通过交换两个相同转录但语速不同语音的对应词TASTE标记，可以实现精确的语速迁移，其他词的时长保持不变。
+- 文本对齐语音编辑：![语音编辑示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/6STb8DauN1-2.png) 通过交换两个相同转录但语速不同语音的对应词TASTE标记，可以实现精确的语速迁移，其他词的时长保持不变。
 - 少样本语音问答：在Table 3中，TASLM在Web Q.和LLaMA-Q.两个基准上，性能接近或超过其基础文本LLM（LLaMA3.2-1B），而其他端到端SLM通常会出现性能下降。
 - 消融研究：Table 4表明，聚合器显著降低了标记频率，量化器在引入少量精度损失后仍远超文本基线；使用浅层隐藏状态作为聚合器值优于仅用最后层。
 

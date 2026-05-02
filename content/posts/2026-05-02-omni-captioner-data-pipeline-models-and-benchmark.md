@@ -59,7 +59,7 @@ Omni-Detective 数据生成管线
 2.  工具箱（Tool Box）：包含多种专业工具，如多模态大语言模型（MLLM）、光学字符识别（OCR）、自动语音识别（ASR）等，用于从原始视频/音频中提取特定类型的精确信息。
 3.  观察者（Observers）：多个独立的、可接触原始音视频流的模块。它们接收侦探代理的查询，利用工具分析内容，并返回结构化的观察结果。
 
-![Omni-Detective Pipeline](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Z091XLyVkJ-2.jpg)
+![Omni-Detective Pipeline](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Z091XLyVkJ-2.jpg)
 
 工作流程：这是一个迭代的“查询-观察”循环。在每一轮中，侦探代理基于已收集的证据提出一个具体问题（例如“转录背景对话”、“识别画面中的文字”），并选择一个工具发送给对应的观察者。观察者调用工具分析音视频，将详细结果反馈给侦探代理。代理整合新证据，并决定下一步查询。此过程持续多轮（最多10轮），直至侦探代理认为已收集足够证据，最终整合所有观察结果，生成一份高度详细且经过交叉验证的描述。
 
@@ -111,7 +111,7 @@ Omni-Captioner 模型
 | Omni-Captioner-7B (Ours) | A+V | 55.0 | 2.7 | 17.8 | 10.9 |
 表：主要对比结果。Omni-Captioner在VDC上达到新SOTA，在video-SALMONN 2测试集上实现了细节缺失率和幻觉率的最佳权衡。
 
-![caption_length_vs_ratio](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Z091XLyVkJ-1.jpg)
+![caption_length_vs_ratio](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Z091XLyVkJ-1.jpg)
 图2：揭示了现有模型（Gemini-2.5-Pro）中，随着描述长度（细节量）增加，细节率与幻觉率同步上升的“共增长”现象。这是本文要解决的核心问题。
 
 2. 级联QA评估（衡量描述完整性）
@@ -145,10 +145,10 @@ Omni-Captioner 模型
 | Omni-Captioner-7B (Ours) | 56.4 |
 表：Omni-Captioner在Omni-Cloze上取得最佳准确率，证明了其描述的准确性和细节丰富度。
 
-![omni_cloze_accuracy_vs_elo](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Z091XLyVkJ-6.jpg)
+![omni_cloze_accuracy_vs_elo](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Z091XLyVkJ-6.jpg)
 图7a：Omni-Cloze准确率与人类Elo评分（代表人类偏好）散点图，相关系数r=0.91，表明该基准与人类判断高度一致，验证了其评估有效性。
 
-![ablation_steps_vs_metrics](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Z091XLyVkJ-5.jpg)
+![ablation_steps_vs_metrics](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Z091XLyVkJ-5.jpg)
 图6：对Omni-Detective管线的消融分析。随着迭代步数增加，细节率持续上升，而幻觉率在5-6步后趋于稳定，表明该管线能有效增加细节并抑制幻觉，但也存在工具性能带来的天花板。
 
 4. 关键消融实验
