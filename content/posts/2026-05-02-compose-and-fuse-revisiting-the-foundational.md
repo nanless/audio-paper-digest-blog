@@ -75,7 +75,6 @@ hiddenInHomeList: true
 | Phi4 | 80.0, 82.2, 99.6 | 79.1 (-0.9, -3.1, -20.5) |
 | 平均 | 73.2, 82.4, 94.6 | 52.0 (-21.2, -30.4, -42.6) |
 
-![图1：多模态逻辑推理设置和评估流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-0.png)
 图1说明：展示了逻辑推理示例（a），事实如何被渲染为文本、音频（TTS）和视觉（图示）三种模态（b），以及评估提示的模式（c）。该图阐明了实验的基本设置。
 
 ![图2：注意力探针与推理性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-1.jpg)

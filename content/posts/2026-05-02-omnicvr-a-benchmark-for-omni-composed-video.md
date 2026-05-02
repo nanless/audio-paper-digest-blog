@@ -49,7 +49,6 @@ hiddenInHomeList: true
 
 本文主要提出AudioVLM2Vec模型，其架构是VLM2Vec的扩展。整体流程如下图所示：
 
-![AudioVLM2Vec框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KxxR7emO5K-4.png)
 
 1.  输入：源视频和修改文本。
 2.  视觉编码：视频帧被输入到一个预训练的图像编码器（如来自Qwen2-VL的）中，提取视觉token。之后，通过一个轻量级的投影层（Projection）将其映射到大语言模型（LLM）的输入空间。
@@ -121,7 +120,6 @@ hiddenInHomeList: true
 | VLM2Vec (Qwen2-VL)          | 38.44  | 55.48  | 60.44  | 66.60  |
 | AudioVLM2Vec (Ours)     | 66.98 | 77.84 | 80.86 | 84.40 |
 
-![OmniCVR基准概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/KxxR7emO5K-0.png)
 
 表5：音频中心查询性能（大型模型）
 | 模型 (骨干)                 | R@1    | R@3    | R@5    | R@10   |

@@ -109,10 +109,8 @@ hiddenInHomeList: true
 *   模态分布差距分析（图5）：引入细粒度交错和合成数据后，条件分布的反向KL散度（语音vs文本）从3.20降至1.47，表明模态对齐得到改善。
 *   领域覆盖分析（图6）：网络爬取数据集中于娱乐、体育等领域；合成数据（Krist, Quest）则显著提升了科学、技术、健康、教育等领域的覆盖，使分布更接近评估集。
 
-![模态分布差距分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/4amNkYCDqX-4.png)
 图5：不同数据策略下，模型在文本和语音条件下输出分布的反向KL散度分布。均值越低，模态对齐越好。Fine+Syn策略效果最佳。
 
-![领域覆盖分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/4amNkYCDqX-5.png)
 图6：不同数据源的主题领域分布。合成数据（Krist, Quest）有效补充了网络爬取数据中缺失的领域（如科学、健康、教育），使预训练数据分布更接近下游评估集（蓝色部分）。
 
 ### ⚖️ 评分理由

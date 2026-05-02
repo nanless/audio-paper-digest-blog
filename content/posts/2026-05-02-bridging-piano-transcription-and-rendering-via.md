@@ -62,7 +62,6 @@ hiddenInHomeList: true
     *   Score Encoder (PSR)：一个独立的Transformer编码器，从乐谱 `x`中提取全局内容嵌入 `eg`（使用`<CLS>` token）。
     *   扩散模型 (DDPM)：以 `eg`为条件，通过迭代去噪从标准高斯噪声中生成风格嵌入 `^zs`。训练时，`zs`的真值来自冻结的联合模型；推理时，生成的 `^zs`被送入Performance Decoder以进行可控的EPR。
 
-![PSR模块架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-5.png)
 图6：PSR模块的详细架构。
 
 数据流：
@@ -151,7 +150,6 @@ hiddenInHomeList: true
     ![风格表示可视化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-2.jpg)
     图3：演奏风格表示的二维可视化。 (a) 按作曲家着色，(b) 按表演者着色。风格表示在二维空间形成了清晰的聚类。
 
-    ![PSR有效性可视化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/173Pq3F31r-3.png)
     图4：历史时期的风格表示可视化。 左图为真实表演提取的风格，右图为PSR生成的风格，两者聚类模式相似。
 
 ### ⚖️ 评分理由

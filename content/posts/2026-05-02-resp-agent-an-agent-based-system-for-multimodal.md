@@ -69,7 +69,6 @@ Resp-Agent是一个由中央LLM规划器驱动的闭环多智能体系统，其�
 
 ![图2：Resp-MLLM 详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-1.png)
 
-![图3：Diagnoser 架构：模态编织与战略全局注意力](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-2.png)
 
 ### 💡 核心创新点
 

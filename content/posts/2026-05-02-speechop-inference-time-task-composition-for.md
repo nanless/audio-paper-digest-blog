@@ -136,7 +136,6 @@ SpeechOp是一个基于潜在扩散模型的多任务模型，其架构如图3�
 
 图4（1D高斯混合模拟） 提供了直觉理解：得分平均（c）会产生“涂抹”分布，偏离增强先验；而TC-CFG（d）能将样本引导至目标分布而不破坏增强先验。
 
-![图4: 1D高斯混合模拟](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eLsEjjFODE-3.png)
 
 ### ⚖️ 评分理由
 

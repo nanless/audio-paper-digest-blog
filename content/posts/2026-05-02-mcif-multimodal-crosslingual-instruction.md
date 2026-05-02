@@ -98,7 +98,6 @@ hiddenInHomeList: true
 - MCIFfix vs. MCIFmix：模型对提示词变化敏感，尤其在识别任务上性能波动巨大（如UltraVox v0.5 WER变化>60）。
 
 模态消融实验（Figure 2）：
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/PtPYZYfa0h-1.png)
 图2展示了MLLMs（Gemma 3n, Ming-Lite-Omni, MiniCPM-o-2, Ola, Qwen2.5-Omni）在短（SHORT）和长（LONG）上下文下，分别使用文本（Text）、语音（Speech）、视频（Video）、语音+视频（Speech+Video）四种输入条件在识别（RECOGNITION）、翻译（TRANSLATION）、问答（QUESTION ANSWERING）、总结（SUMMARIZATION）任务上的性能（MCIFmix平均结果）。
 - 关键发现：视频模态单独使用时往往效果最差。在多数情况下，语音是主导模态。将语音和视频融合（Speech+Video）并不总能带来提升，甚至在某些模型和任务（如MiniCPM-o-2的总结）上会导致性能下降，表明当前MLLM多模态融合能力有限。
 

@@ -74,7 +74,6 @@ hiddenInHomeList: true
 
 本文并未提出一个新的SLS模型架构，其核心贡献是基准构建与评估框架。其“架构”体现在基准的构建流程和评估系统上，如下图所示：
 
-![VoxPrivacy基准构建与评估流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/GNo1qMqgPD-1.jpg)
 
 基准构建流程（Stage 1-4）：
 1.  LLM生成：使用多个LLM（Deepseek， Gemini， ChatGPT）并行生成覆盖8个类别的隐私秘密语句。
@@ -87,7 +86,6 @@ hiddenInHomeList: true
 - LLM评估器：使用Deepseek-V3和Gemini-2.5-Pro作为“法官”，通过结构化提示判断响应是否无效或泄露秘密。
 - 人工评估：在部分任务上用人工评估验证LLM评估器的一致性。
 
-![三层级任务定义](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/GNo1qMqgPD-0.png)
 图1: VoxPrivacy的三层级任务设计示意图。
 - Tier 1：模型收到明确保密指令（如“Keep it to yourself”），必须无条件遵守。
 - Tier 2：指令隐含保密对象（如“This part is just between us”），模型需使用说话者声纹作为密钥，只向原始说话者披露信息。

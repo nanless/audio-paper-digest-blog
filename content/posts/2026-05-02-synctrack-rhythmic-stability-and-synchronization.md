@@ -186,7 +186,6 @@ SyncTrack是一个类U-Net的编解码结构，其输入块、中间块和输出
 ![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-3.png)
 
 - 图A3：在Slakh2100上各轨道IRS得分对比图，直观显示SyncTrack（绿）的稳定性最接近Ground Truth（蓝）。
-![图A3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-16.png)
 
 - 图A4：跨轨道同步指标（CBS, CBD各统计量）对比图，清晰展示SyncTrack在同步性上优于其他生成模型。
 ![图A4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-17.png)

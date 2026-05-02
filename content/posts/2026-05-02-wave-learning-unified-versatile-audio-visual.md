@@ -76,7 +76,6 @@ hiddenInHomeList: true
 
 WAVE的架构（见下图）旨在将多种模态的输入统一到一个共享的语义嵌入空间中。
 
-![图1: WAVE模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MiV3WXDYJb-0.png)
 
 完整输入输出流程：模型接受文本、视频帧、音频波形或同步音视频对作为输入，最终输出一个统一的多模态嵌入向量，用于检索、分类或问答等下游任务。
 
