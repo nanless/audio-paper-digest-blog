@@ -48,10 +48,10 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 论文整体框架概念图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QaAgHKbJop-0.png)
+![图1: 论文整体框架概念图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QaAgHKbJop-0.png)
 图1展示了DualFlow如何统一处理交互式和反应式生成，并利用文本（经LLM分解）、音乐和检索样本作为条件输入。
 
-![图2: DualFlow详细架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QaAgHKbJop-1.png)
+![图2: DualFlow详细架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QaAgHKbJop-1.png)
 图2是DualFlow的具体架构，分为(a)整体流程和(b)单个DualFlow块内部结构。
 
 整体输入输出流程：
@@ -144,13 +144,13 @@ hiddenInHomeList: true
 - 表7（RAG消融）揭示了有趣现象：在交互任务中，检索样本数k=5是最佳平衡点；而在反应任务中，k=3更优，且移除音乐检索反而提升部分指标，表明在紧密同步中动作线索比音乐线索更重要。
 - 图4显示了FID随推理步数的变化曲线，清晰表明DualFlow仅需20步就能达到比InterGen 50步更好的FID值，效率优势明显。
 
-![图3: 用户研究结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QaAgHKbJop-2.png)
+![图3: 用户研究结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QaAgHKbJop-2.png)
 图3展示了用户研究结果，在语义对齐、音乐同步和总体质量三个维度上，DualFlow均获得了超过50%的偏好率，优于基线方法。
 
-![图4: FID与推理步数关系图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QaAgHKbJop-3.png)
+![图4: FID与推理步数关系图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QaAgHKbJop-3.png)
 图4直观对比了DualFlow与InterGen在不同推理步数下的FID表现，证实了Rectified Flow在采样效率上的优势。
 
-![图5: 定性对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QaAgHKbJop-4.png)
+![图5: 定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/QaAgHKbJop-4.png)
 图5通过可视化对比，展示了DualFlow生成的动作在协调性、平滑度和文本对齐上优于InterGen和DuoLando。
 
 ### ⚖️ 评分理由

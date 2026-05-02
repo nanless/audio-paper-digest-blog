@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 论文提出了PRESS-Net架构，其设计目标是支持高效早退出并保持高重建质量。整体流程遵循编码器-分离器-解码器模式，关键创新在于分离器的深层堆叠设计和在多个中间层设置独立退出点。
 
-![图2: PRESS-Net详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RKzBRfV6J8-1.png)
+![图2: PRESS-Net详细架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RKzBRfV6J8-1.png)
 图2详解：架构包含三个主要部分：
 1.  编码器头：将输入时域音频`x ∈ R^T`通过一维卷积（核大小16，步长4）、GELU、RMSNorm和线性层，映射为低维特征`R^(D_model × T/P)`。
 2.  早分割模块：这是架构的核心。首先经过`N_Enc`层线性RNN块处理混合语音，然后通过`SpeakerSplit`模块将特征沿通道维度分割为`S`个独立的说话人表示。之后进入解码器栈。

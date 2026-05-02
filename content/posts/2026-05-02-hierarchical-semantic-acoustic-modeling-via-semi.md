@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 VoxCPM是一个端到端的、自回归的层次化语音生成模型，其核心在于层次化的条件生成与半离散残差表示学习。整体架构如下图所示：
 
-![VoxCPM总体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/h5KLpGoqzC-0.png)
+![VoxCPM总体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/h5KLpGoqzC-0.png)
 
 图1: VoxCPM总体架构。 模型首先通过局部音频编码器（LocEnc）处理历史音频潜在表示，然后由文本语义语言模型（TSLM）和有限标量量化（FSQ）生成半离散的语义-韵律“骨架”，再由残差声学语言模型（RALM）恢复细节，两者结合的条件信号最终引导局部扩散Transformer解码器（LocDiT）生成当前语音潜在块。
 
@@ -173,7 +173,7 @@ CV3-EVAL基准结果（表2）：
 2.  残差声学模型（RALM）不可或缺：移除RALM，退化为单一连续模型（类似于DiTAR），性能显著下降。增加TSLM层数（30层）带来的收益远小于引入RALM的层次化设计，证明结构分离优于单纯增加容量。
 3.  预训练初始化对可懂度关键：移除TSLM的预训练语言模型初始化，英文WER从2.98%升至5.24%。
 
-![FSQ瓶颈维度消融研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/h5KLpGoqzC-1.png)
+![FSQ瓶颈维度消融研究](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/h5KLpGoqzC-1.png)
 图（附录表9可视化）：FSQ维度选择研究。 展示了不同FSQ维度（d4, d16, d64, d128, d256, d1024）以及去除FSQ和替换为VAE瓶颈时，在英文、中文及中文硬例句上的性能。256维在各项指标上取得了最佳平衡。
 
 ### ⚖️ 评分理由

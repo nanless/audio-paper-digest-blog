@@ -74,7 +74,7 @@ SyncTrack整体是一个基于潜在扩散模型（LDM）的多轨音频生成�
 SyncTrack模型内部结构：
 SyncTrack是一个类U-Net的编解码结构，其输入块、中间块和输出块由两类模块交替堆叠构成：
 
-![图2](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-1.png)
+![图2](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-1.png)
 图2：SyncTrack整体流程图。a. 训练与采样流程；b. SyncTrack由输入块、中间块和输出块组成，包含轨道特定模块和轨道共享模块。
 
 1. 轨道共享模块 (Track-shared Module)
@@ -85,7 +85,7 @@ SyncTrack是一个类U-Net的编解码结构，其输入块、中间块和输出
 *   全局跨轨道注意力 (Global cross-track attention) (图3c-i)：对于每个轨道在特定时间点`t`和频率点`f`的表示 `z_s^{t,f}`，将其作为Query，而所有轨道在全部时间`1:T`和频率`1:F`维度上的表示 `z_{1:S}^{1:T,1:F}` 作为Key和Value进行注意力计算（公式4）。动机：让每个轨道都能“看到”所有轨道在整个时间段上的全局信息，从而学习和保持一致的整体节拍框架（全局稳定性）。
 *   时间特定跨轨道注意力 (Time-specific cross-track attention) (图3c-ii)：对于每个轨道在特定时间点`t`的表示 `z_s^{t,f}`，将其作为Query，而所有轨道在同一时间点`t`、全部频率`1:F`维度上的表示 `z_{1:S}^{t,1:F}` 作为Key和Value进行注意力计算（公式5）。动机：强制不同轨道在完全相同的时间位置上对齐其音乐事件（如和弦起振），实现精细的瞬时同步。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-2.png)
+![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-2.png)
 图3：模块示意图。(a) 轨道共享模块，包含ResBlock、内轨道注意力、全局和时间特定跨轨道注意力。(b) 轨道特定模块，包含可学习乐器先验。(c) 两种跨轨道注意力子模块的可视化。
 
 2. 轨道特定模块 (Track-specific Module)
@@ -183,15 +183,16 @@ SyncTrack是一个类U-Net的编解码结构，其输入块、中间块和输出
 
 图表展示：
 - 图4：主观评分与客观指标（IRS, CBS, CBD）的散点图，展示了客观指标与人类感知的相关性，验证了所提指标的有效性。
-![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-3.png)
+![图4](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-3.png)
 
 - 图A3：在Slakh2100上各轨道IRS得分对比图，直观显示SyncTrack（绿）的稳定性最接近Ground Truth（蓝）。
+![图A3](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-16.png)
 
 - 图A4：跨轨道同步指标（CBS, CBD各统计量）对比图，清晰展示SyncTrack在同步性上优于其他生成模型。
-![图A4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-17.png)
+![图A4](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-17.png)
 
 - 附录图A7：展示了所提指标在Slakh2100、MUSDB18数据集以及MSG-LD、SyncTrack生成音乐上的分布，验证了指标的区分度。
-![图A7](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Jf7i0a8dr0-20.png)
+![图A7](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Jf7i0a8dr0-20.png)
 
 ### ⚖️ 评分理由
 

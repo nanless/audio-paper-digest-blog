@@ -62,8 +62,10 @@ hiddenInHomeList: true
 - 特殊标记符：使用 `[SOPR]`, `[EOPR]`, `[EOR]` 等标记推理块的开始、部分结束和整体结束，确保生成结构可控。
 
 架构图说明：
+![STITCH-R生成时序图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5Z1eMhCeTb-0.png)
 图1: STITCH-R的时序图。展示了模型如何在播放第一段语音音频（S1）的`tchunk`秒时间内，生成下一个推理块、文本块和语音块（S2）。关键在于生成所有token的时间`ttoken`小于音频播放时长`tchunk`。
 
+![不同生成方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5Z1eMhCeTb-1.png)
 图2: 对比了不同生成方法。(a) GLM-4-Voice基线：文本与语音块交错。(b) TBS：先生成完整推理，再交错生成文本与语音。(c) STITCH-R：推理块、文本块、语音块交错。(d) STITCH-S：文本块、语音块、推理块交错。清晰展示了STITCH在生成顺序上的创新。
 
 ### 💡 核心创新点
@@ -113,7 +115,7 @@ STITCH系列在知识问答和对话数据集（Llama Questions, TriviaQA, WebQu
 语音质量评估：UTMOSv2（感知质量）和GPT-4o-score（文本流畅度）分数显示，STITCH系列与基线相当（约3.1和4.7/5），表明引入推理未损害语音输出质量。
 
 动态调整推理长度实验：
-![调整推理长度的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5Z1eMhCeTb-2.png)
+![调整推理长度的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5Z1eMhCeTb-2.png)
 图3: (a)(b) 显示在STITCH-R和STITCH-S中，将推理块长度N‘_token从100缩减至60-90时，各数学任务准确率变化。结论：N’_token ≥80时，性能可恢复到Nreason=100时的90%以上。 (c) 显示使用不同外部模型作为“推理增强器”时，STITCH-R的平均准确率。更强的模型（GLM-4-9B）带来更好性能。
 
 ### ⚖️ 评分理由

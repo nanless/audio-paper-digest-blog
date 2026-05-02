@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 FlowBind的整体架构如图1所示，包含训练阶段（图1a） 和推理阶段（图1b）。
 
-![FlowBind 框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/7DeARTwvwL-0.jpg)
+![FlowBind 框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/7DeARTwvwL-0.jpg)
 
 图1：FlowBind框架概览。(a) 训练阶段：联合学习共享潜空间和漂移网络。(b) 推理阶段：使用每个模态的漂移网络进行灵活的任意到任意生成。
 
@@ -152,10 +152,10 @@ FlowBind的整体架构如图1所示，包含训练阶段（图1a） 和推理�
 
 表2：一对一生成保真度评估（关键数据摘录）
 
-![一对一定性结果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/7DeARTwvwL-7.jpg)
+![一对一定性结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/7DeARTwvwL-7.jpg)
 图8：文本到图像生成定性结果对比。FlowBind生成图像在细节和与文本对齐方面表现良好。
 
-![图像到文本定性结果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/7DeARTwvwL-8.png)
+![图像到文本定性结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/7DeARTwvwL-8.png)
 图9：图像到文本生成定性结果对比。FlowBind生成的描述更准确、流畅。
 
 *   多对一/一对多生成（表4，表5）：FlowBind在整合多模态条件时表现更均衡，减少了忽略某一条件的倾向。例如，在（文本+图像）→音频任务中，FlowBind的CLAP和AIS分数显著高于CoDi和OmniFlow。
@@ -168,7 +168,7 @@ FlowBind的整体架构如图1所示，包含训练阶段（图1a） 和推理�
 
 表4：多对一生成对齐性能（关键数据摘录）
 
-![多对一定性结果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/7DeARTwvwL-13.jpg)
+![多对一定性结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/7DeARTwvwL-13.jpg)
 图14：{文本+音频}→图像生成定性结果。FlowBind生成的图像同时融合了文本描述和音频内容。
 
 *   消融实验与分析：
@@ -176,7 +176,7 @@ FlowBind的整体架构如图1所示，包含训练阶段（图1a） 和推理�
     *   共享潜空间对齐性（表7）：共享潜空间的CKNNA分数（衡量对齐度）高于模态特定编码器的潜空间。
     *   鲁棒性分析（图4）：在条件冲突（不相关的文本和音频）下，FlowBind仍能生成融合两者内容的合理图像。
 
-![共享潜空间对齐性分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/7DeARTwvwL-4.jpg)
+![共享潜空间对齐性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/7DeARTwvwL-4.jpg)
 图5：共享潜空间可视化。(a) t-SNE图显示语义聚类。(b) 从不同簇解码的图像内容语义一致。
 
 *   扩展性实验（图6，图7）：添加3D点云模态后，FlowBind不仅在训练过的模态对（图像↔点云）上表现良好，还能泛化到未见过的跨模态任务（文本↔点云）。

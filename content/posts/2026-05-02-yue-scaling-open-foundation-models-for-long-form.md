@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 YuE是一个基于自回归语言模型（LLM）的两阶段框架，旨在将歌词转化为完整的歌曲波形。
 
-![图1: YuE两阶段歌词到歌曲生成框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/hZy6YG2Ij8-0.jpg)
+![图1: YuE两阶段歌词到歌曲生成框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/hZy6YG2Ij8-0.jpg)
 
 整体流程与组件：
 1.  音频分词器（Audio Tokenizer）：使用X-Codec，将原始音频波形转换为离散的token序列。它采用语义-声学融合策略，在一个统一的codebook中同时包含语义信息和声学细节。本文主要使用其8层RVQ中的第一层（codebook-0）作为语义丰富的代表。模型还配备了一个轻量级的上采样器（基于Vocos），将16kHz的重建音频提升至44.1kHz。
@@ -54,7 +54,7 @@ YuE是一个基于自回归语言模型（LLM）的两阶段框架，旨在将�
     为了处理长上下文，Stage-1 LM采用了结构化渐进条件（SPC）。它利用自动音乐结构分析工具将歌曲分段，然后在输入序列中，将结构标签（如`[verse]`, `[chorus]`）和对应的歌词与生成的音频token交错排列（如图2中“Lyrics2Song”所示）。这相当于为模型提供了分段的“进度条”，使其能在长序列中保持歌词对齐。
 4.  第二阶段语言模型（Stage-2 LM）：这是一个较小的模型（2B参数），负责残差建模。它以Stage-1生成的codebook-0 token为条件，自回归地预测剩余的codebook 1-7，从而细化音频细节，恢复高保真度。训练时，它先“看到”整个codebook-0序列，然后逐帧预测所有8个codebook的token。推理时，codebook-0被固定为Stage-1的输出，仅生成残差部分。
 
-![图2: Stage-1框架详图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/hZy6YG2Ij8-1.jpg)
+![图2: Stage-1框架详图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/hZy6YG2Ij8-1.jpg)
 图2详细展示了Stage-1 LM的输入序列构成。蓝色为人声token，橙色为伴奏token，灰色为残差token（用于Stage-2）。虚线表示Dual-NTP的双token预测。文本与音频token按结构交错（SPC）。绿色token代表用于ICL的参考音频片段。
 
 ### 💡 核心创新点
@@ -106,7 +106,7 @@ YuE在分布匹配指标KL上表现最佳，在FAD上优于Hailuo和Tiangong。�
 - SPC有效性（图8）：在150秒的生成长度上，SPC方法的字错误率（WER）显著低于Vanilla（前缀条件）、Curriculum（课程学习）和ABF（调整RoPE基频）等方法。同时，将模型从0.5B扩展到7B，WER从约70%降至约20%。
 - 测试时技巧（图9b）：ICL+CFG的组合在音乐性上获得最高的人类偏好胜率（0.79），远超仅使用SPC的基线（0.21）。
 
-![图8: 不同方法下的WER随时间变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/hZy6YG2Ij8-2.jpg)
+![图8: 不同方法下的WER随时间变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/hZy6YG2Ij8-2.jpg)
 图8清晰地显示了SPC方法和模型缩放在维持长时歌词跟随能力上的巨大优势。
 
 ### ⚖️ 评分理由

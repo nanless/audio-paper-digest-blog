@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 UniSS是一个端到端的自回归语言模型，其整体架构可概括为“统一tokenization -> LLM自回归生成 -> detokenization合成”。
 
-![图2：UniSS框架、跨模态CoT提示与三阶段渐进式训练示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5o0ZvYzh6B-1.png)
+![图2：UniSS框架、跨模态CoT提示与三阶段渐进式训练示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5o0ZvYzh6B-1.png)
 
 完整输入输出流程：
 输入源语音波形 `Xsrc`，输出目标语音波形 `Ytgt`。
@@ -125,7 +125,7 @@ UniSS是一个端到端的自回归语言模型，其整体架构可概括为“
 | 本文 | UniSS (P) | 1.5B | 30.28 | 23.61 | 0.99 | 0.97 | 3.77 |
 | 本文 | UniSS (Q) | 1.5B | 32.20 | 24.28 | 0.99 | 0.97 | 3.76 |
 
-![图1：UniSS与现有方法的性能对比雷达图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5o0ZvYzh6B-0.png)
+![图1：UniSS与现有方法的性能对比雷达图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/5o0ZvYzh6B-0.png)
 图1展示了UniSS（红色）在翻译保真度（Speech-BLEU）、说话人相似度（Voice SIM）、时长一致性（Duration Consistency）和语音质量（UTMOS）上全面优于之前的级联和端到端方法（蓝色区域），并有效转移了LLM的文本翻译能力。
 
 关键结果分析：

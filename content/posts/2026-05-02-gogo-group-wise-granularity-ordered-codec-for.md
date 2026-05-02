@@ -44,11 +44,11 @@ hiddenInHomeList: true
 
 本文提出了三个相互关联的模型组件，架构如下：
 
-![系统概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-0.jpg)
+![系统概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-0.jpg)
 图1展示了整体系统概览。文本输入通过GogoSpeech Stage I生成语音骨架（少量令牌），这些骨架令牌与文本共同输入Stage II，生成或跳过（由分配器决定）细粒度令牌。最终所有令牌通过Gogo解码为语音波形。
 
 1. Gogo编解码器
-![Gogo架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-1.png)
+![Gogo架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-1.png)
 图2详细展示了Gogo的内部结构。
 - 编码器：输入语音波形`w`先转换为梅尔频谱`x`。频谱按时间轴被划分为不重叠的“组”（每组g=20帧）。每组频谱`xi`与一组可学习的“语音查询”`qi`（nq=10个）拼接，形成`zi`。`zi`通过一个Transformer编码器处理后，丢弃原始频谱部分，仅对查询位置应用有限标量量化（FSQ），得到离散令牌`si`及其连续表示`¯qi`。
 - 重建模块：`¯qi`与占位符拼接，对齐为原始组长度，再经时间轴拼接得到连续表示`¯x`。`¯x`作为条件，输入一个基于流匹配（Flow-Matching） 的生成模型，逐步将高斯噪声`x0`去噪为目标梅尔频谱`x1`。最后，由预训练的Vocos声码器将梅尔频谱转换为波形`¯w`。
@@ -56,13 +56,13 @@ hiddenInHomeList: true
 - 关键设计：采用嵌套丢弃（Nested Dropout） 和损失平衡器（Loss Balancer） 强制实现粒度排序。嵌套丢弃随机丢弃组内后面的令牌，迫使前面的粗令牌学习更核心的信息；损失平衡器动态调整流匹配损失与ASR损失的权重，使粗令牌更关注语义，细细节更关注声学。
 
 2. GogoSpeech两阶段生成模型
-![GogoSpeech架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-2.jpg)
+![GogoSpeech架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-2.jpg)
 图3展示了GogoSpeech的两阶段生成流程。
 - Stage I (骨架构建)：给定文本和提示语音的骨架令牌（每组前b=3个令牌），自回归模型逐组生成目标语音的骨架令牌`˜Si,1:b`。此阶段在极低的令牌率（约14 Hz）下运行，旨在稳定地预测高层内容。
 - Stage II (细节丰富)：对于第i组，模型在给定提示语音所有令牌、之前生成组的所有令牌以及当前组骨架令牌的条件下，自回归地生成剩余的细粒度令牌`˜Si,b+1:nq`。此阶段令牌率恢复至标准水平（约33 Hz），以恢复声学细节。
 
 3. GRPO训练的令牌分配器
-![令牌分配器](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-3.png)
+![令牌分配器](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-3.png)
 图4展示了令牌分配器的训练与推理。
 - 功能：接收Stage I生成的骨架令牌`˜Si,1:b`作为输入，输出一个预算`ξi`，表示Stage II应为该组生成的细粒度令牌数量（0到nq-b之间）。未生成的细粒度令牌将被掩码令牌替换。
 - 训练：采用略作修改的群组相对策略优化（GRPO） 算法。训练时Gogo保持冻结。分配器对每个可能的预算（共nq-b+1种）生成重建样本，并计算两个奖励：`Rn`（惩罚使用的令牌数量）和`Rd`（惩罚重建失真）。通过组相对优势估计优化策略，使分配器学会在音质与效率间取得平衡。
@@ -118,10 +118,10 @@ hiddenInHomeList: true
 关键结论：GogoSpeech在长语音生成稳定性（†指标）上表现最佳，取得了最高的SIM和最低的WER。主观评价SMOS和CMOS也位列第一。令牌分配器使平均令牌率从47Hz降至36Hz，RTF从0.535降至0.455，而性能仅有微小下降，证明了其有效性。
 
 关键消融实验
-![信息编码分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-4.jpg)
+![信息编码分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-4.jpg)
 图5（论文Figure 5）展示了不同位置令牌对各类特征的预测损失。可以清晰看到：前3个令牌主要预测时长、词汇数等全局语言特征；中间令牌主要预测语速、抖动等韵律特征；后3个令牌主要预测音高、频谱质心等声学特征，验证了粒度排序的有效性。
 
-![令牌数影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/JbLmIoWwDC-6.jpg)
+![令牌数影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/JbLmIoWwDC-6.jpg)
 图7展示了随着每组保留令牌数增加，重建性能的变化。WER在保留前3-4个令牌时已显著下降并趋于平稳，而PESQ等声学指标在保留更多令牌（>4个）后仍有提升，验证了粗细令牌的功能分化。
 
 系统性消融（保持相同训练条件）

@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 本文提出的JointAVBench本身不是一个模型，而是一个评估基准。其核心“架构”是一个系统化的数据生成与质量评估流水线，旨在产出高质量、强关联的音视频问答对。整体流程如图2所示，可分为三个主要阶段：
 
-![JointAVBench构建流水线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Zg1YH8R5GG-1.jpg)
+![JointAVBench构建流水线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Zg1YH8R5GG-1.jpg)
 
 1.  全模态描述生成阶段：输入是长视频。
     *   场景分割：首先使用PySceneDetect工具将长视频分割为语义一致的场景片段。
@@ -106,19 +106,19 @@ hiddenInHomeList: true
 实验在JointAVBench上对三类共20个模型进行了全面评估。核心结果已总结在核心摘要部分的表3中。以下是更深入的分析：
 
 1. 跨模态类型性能分析（图4）
-![不同音频类型上的准确率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Zg1YH8R5GG-3.jpg)
+![不同音频类型上的准确率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Zg1YH8R5GG-3.jpg)
 *   结论：所有模型在“音乐”和“声音事件”相关的任务上准确率相对较高，而在“语音”和“声音特质”任务上表现明显较差。这表明当前模型在理解与视觉关联更直接、更物理性的音频信息方面较好，但在处理高度抽象、承载复杂语义（对话）和情感（语调、情绪）的音频信息方面存在严重不足。
 
 2. 跨场景复杂度性能分析（图5）
-![不同场景类型上的准确率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Zg1YH8R5GG-4.jpg)
+![不同场景类型上的准确率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Zg1YH8R5GG-4.jpg)
 *   结论：模型在“单场景”任务上通常表现最好，在“多场景”任务上性能下降显著。一个有趣的发现是，在“全场景”任务（要求综合整个视频的信息）上，部分模型的表现优于某些“多场景”任务。这暗示模型可能更擅长对视频建立全局性、粗粒度的理解，而非精确地建立跨场景片段的关联。
 
 3. 认知维度性能分析（图6）
-![不同认知维度上的准确率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Zg1YH8R5GG-5.jpg)
+![不同认知维度上的准确率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Zg1YH8R5GG-5.jpg)
 *   结论：Omni-LLMs在“时序”和“长形式”推理上优势明显，但在“情感”和“空间”任务上，其表现可能不如甚至落后于专门的单模态模型。这说明在需要高度聚焦于特定模态线索（如声音特质中的情绪、视觉中的空间布局）的任务中，当前全模态模型的融合机制可能引入了噪声或未能有效聚焦。
 
 4. 场景数量对性能的影响（图7）
-![多场景任务中场景数量与准确率关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Zg1YH8R5GG-6.jpg)
+![多场景任务中场景数量与准确率关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Zg1YH8R5GG-6.jpg)
 *   结论：在多场景任务中，随着视频片段数量的增加（从0-20到60+），模型的平均准确率呈现明显下降趋势。这直接证明了当前模型在长距离、多跳的跨场景信息整合上存在巨大挑战。
 
 5. 模态融合有效性分析（表4）

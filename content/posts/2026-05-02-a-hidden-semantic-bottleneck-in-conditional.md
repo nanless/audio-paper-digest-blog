@@ -55,7 +55,7 @@ hiddenInHomeList: true
 | REPA (剪枝 τ=0.02, ti) | ImageNet-1K | 9.2202 / 125.15 / 29.221 |
 | REPA (剪枝 τ=5.0, ti，移除头部) | ImageNet-1K | 356.135 / 1.77 / 21.922 |
 
-![剪枝尾部维度生成结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FetaeuGsEs-7.jpg)
+![剪枝尾部维度生成结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FetaeuGsEs-7.jpg)
 图8：不同阈值τ剪枝尾部维度后的生成图像。即使剪枝高达80%以上（τ=0.03），图像质量仍与基线REPA（τ=0）相当。
 
 5.  实际意义：揭示了扩散Transformer在条件编码上存在严重的过参数化，为设计更轻量、高效的条件注入机制（如使用稀疏向量、或只保留关键维度）提供了直接依据和理论洞察。
@@ -69,7 +69,7 @@ hiddenInHomeList: true
 *   AdaLN机制：这是理解论文发现的关键。给定隐藏状态 `h`，AdaLN计算为：`AdaLN(h | c) = γ(c) ⊙ (h - μ(h))/σ(h) + β(c)`。其中 `γ(c)` 和 `β(c)` 是通过线性投影 `W_γ c` 和 `W_β c` 得到的缩放和偏移参数。论文指出，正是这种全局线性投影机制，使得语义信息可以被压缩到 `c` 的少数几个维度上。
 *   交互方式：`c` 是每个去噪步骤中所有Transformer层共享的、全局恒定的输入，不参与序列内的注意力计算，而是独立地调制每一层的特征。
 
-![条件注入示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FetaeuGsEs-1.png)
+![条件注入示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FetaeuGsEs-1.png)
 图2：展示了Transformer扩散模型如何通过AdaLN将紧凑的条件向量 `v` (对应论文中的 `c`) 注入到生成过程中。
 
 ### 💡 核心创新点
@@ -92,7 +92,7 @@ hiddenInHomeList: true
 
 1. 余弦相似度分析
 
-![余弦相似度热图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FetaeuGsEs-2.jpg)
+![余弦相似度热图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FetaeuGsEs-2.jpg)
 图3：REPA模型在ImageNet-1K上1000个类条件向量的两两余弦相似度矩阵（左）及10个类的放大视图（右）。对角线外的值普遍高于0.99。
 
 表1：不同模型与任务下的条件嵌入指标对比
@@ -121,12 +121,12 @@ hiddenInHomeList: true
 | 头部剪枝 | τ=5.0 (ti) | 2/1152 (0.20%) | 7.8478 | 164.15 | 29.555 |
 | 头部剪枝 | τ=1.0 (ti) | 8/1152 (0.69%) | 523.7637 | 1.95 | 22.690 |
 
-![剪枝头部维度生成结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FetaeuGsEs-6.jpg)
+![剪枝头部维度生成结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FetaeuGsEs-6.jpg)
 图7：移除头部维度（高幅度）后的生成结果。仅移除极少数（如2-8个）头部维度就导致质量急剧下降。
 
 3. 方差分析
 
-![方差分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FetaeuGsEs-8.jpg)
+![方差分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FetaeuGsEs-8.jpg)
 图9：不同模型条件向量各维度的方差分布。方差高度集中在前15-20个“头部”维度，进一步证实语义信息集中。
 
 4. 其他模型剪枝验证

@@ -60,7 +60,7 @@ hiddenInHomeList: true
        将训练好的RFM方向`q_ℓ, j`按层权重`w_ℓ`、时间调度`ϕ(t)` 和随机门控`ψ_p(t)` 进行缩放，直接加到该层的残差流隐藏状态`h_t,ℓ`上（公式：`h'_{t,ℓ} = h_{t,ℓ} + η_ℓ(t)  q_{ℓ,j}`）。
     *   通过这种对激活空间的直接干预，引导模型的输出偏向目标概念，最后解码得到控制后的音频。
 
-![MusicRFM框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/NaHzPMaCY9-0.png)
+![MusicRFM框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/NaHzPMaCY9-0.png)
 图1：展示了MusicRFM的控制流程。左侧为探针训练，从模型各层激活中提取概念方向；右侧为推理时注入，通过钩子将方向加到隐藏状态上，实现引导。
 
 关键设计选择与动机：
@@ -132,9 +132,9 @@ hiddenInHomeList: true
 | 节拍 | 55.75 ± 7.08 | 73.33 ± 4.35 | 73.38 ± 4.75 |
 
 5. 时间控制（图1a, 1b）：探针softmax概率随时间调度函数（线性增加/衰减、正弦波等）精确变化，并展示了音符交叉淡化效果。
-![时间调度探针概率曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/NaHzPMaCY9-1.png)
+![时间调度探针概率曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/NaHzPMaCY9-1.png)
 图1a：不同时间调度下，目标音符类别的探针预测概率随生成步数的变化，曲线与调度函数高度吻合。
-![音符交叉淡化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/NaHzPMaCY9-2.png)
+![音符交叉淡化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/NaHzPMaCY9-2.png)
 图1b：两个音符的交叉淡化实验，展示了概率此消彼长的过程。
 
 6. 多方向控制（表6）：同时控制两个概念（如音符+和弦）时，控制强度增加仍能提升准确率，但FD、MMD和CLAP恶化更明显，表明多目标控制会放大分布漂移。

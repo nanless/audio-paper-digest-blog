@@ -75,12 +75,13 @@ hiddenInHomeList: true
 | Phi4 | 80.0, 82.2, 99.6 | 79.1 (-0.9, -3.1, -20.5) |
 | 平均 | 73.2, 82.4, 94.6 | 52.0 (-21.2, -30.4, -42.6) |
 
+![图1：多模态逻辑推理设置和评估流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-0.png)
 图1说明：展示了逻辑推理示例（a），事实如何被渲染为文本、音频（TTS）和视觉（图示）三种模态（b），以及评估提示的模式（c）。该图阐明了实验的基本设置。
 
-![图2：注意力探针与推理性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-1.jpg)
+![图2：注意力探针与推理性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-1.jpg)
 图2说明：(a) 对信息有用性进行注意力探针的准确率中等，表明模型无法清晰区分有用事实和干扰项。(b) 尽管模型在事实识别和文本推理上表现良好，但多模态推理性能显著下降，证实了瓶颈在于两者的联合执行。
 
-![图3：基于注意力模式的模态探针](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-2.png)
+![图3：基于注意力模式的模态探针](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-2.png)
 图3说明：(a) 所有模型都能通过注意力模式完美预测模态类型。(b) 对Qwen模型的线性探针权重显示，模态信息主要集中在前四层。(c) 调整前四层注意力的温度（从0.4到1.8）能显著提升推理准确率，而调整中间或后期层则效果甚微，证实了早期融合的偏见是关键。
 
 ### 🏗️ 模型架构
@@ -112,13 +113,13 @@ hiddenInHomeList: true
 
 主要的实验结果已在核心摘要的表格中给出。关键图表结果如下：
 
-![图4：等价交互提示模板与模型输出示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-3.png)
+![图4：等价交互提示模板与模型输出示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-3.png)
 图4说明：展示了“等价”交互的一个具体输入-输出示例。事实“Erin is friendly”以文本和音频（冗余）形式给出，模型正确推理出结论“Erin is purple”。这验证了评估框架的可行性。
 
-![图10：事实识别任务提示模板](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-9.png)
+![图10：事实识别任务提示模板](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-9.png)
 图10说明：展示了用于测试模型事实识别能力的提示模板。模型只需从给定的图像、音频、文本中找出被提及的事实，无需进行推理。该任务用于隔离“识别”能力。
 
-![图11：两步推理提示模板](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/oIvIsK5AwB-9.png)
+![图11：两步推理提示模板](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/oIvIsK5AwB-9.png)
 图11说明：展示了“两步推理”的提示模板。第一步要求模型列出各模态中的事实（识别），第二步再基于这些事实和规则进行推理（推理）。此方法有效缓解了“任务组合瓶颈”。
 
 关键消融实验：通过对比多模态设置与单模态基线（表1），发现只有“替代”交互带来平均+1.7%的轻微文本基线提升，而“蕴含”交互导致平均-12.8%的显著下降。在“独立”交互中（表2），文本基线平均准确率94.5%，但多模态平均仅70.3%，证实了性能偏见。在“互补”交互中（表4），多模态平均准确率52.0%，远低于任何单模态基线（文本基线94.6%），证实了融合偏见。

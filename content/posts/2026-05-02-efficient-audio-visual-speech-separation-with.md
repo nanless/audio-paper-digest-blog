@@ -46,7 +46,7 @@ Dolphin的双路径视觉编码器设计和基于热扩散方程的局部注意�
 
 Dolphin的整体架构如图1所示，包含五个主要组件：预训练视频编码器、音频编码器、音视频融合（AVF）模块、分离器和音频解码器。
 
-![Dolphin整体流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LaIkPfPu9K-0.png)
+![Dolphin整体流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LaIkPfPu9K-0.png)
 图1：Dolphin的整体流程图。其中“❄”表示参数被冻结（预训练后不更新）。
 
 工作流程：
@@ -57,7 +57,7 @@ Dolphin的整体架构如图1所示，包含五个主要组件：预训练视频
 5.  音频解码器：一个1D转置卷积层将E转换回时域信号，得到分离后的语音。
 
 DP-LipCoder架构（图2）：
-![DP-LipCoder架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LaIkPfPu9K-1.png)
+![DP-LipCoder架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LaIkPfPu9K-1.png)
 图2：DP-LipCoder的整体流程图（论文中标题为AVDP-MagVIT，但正文指代DP-LipCoder）。
 该编码器采用双路径设计，共享编码器结构但不共享参数：
 -   重建路径：负责捕获与说话人身份、表情等相关的视觉线索，目标是视频重建。
@@ -65,12 +65,12 @@ DP-LipCoder架构（图2）：
 编码器结构改编自MagVIT，由3D残差块、空间注意力块和空间下采样/上采样层交替堆叠而成。图2中详细展示了这两种基本块的构成（图6）。训练时，通过联合优化重建损失、VQ承诺损失和蒸馏损失（公式18）来同时提升两条路径的能力。
 
 分离器架构（图3）：
-![分离器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LaIkPfPu9K-2.png)
+![分离器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LaIkPfPu9K-2.png)
 图3：分离器的架构图，由多个GLA块、TDA块和下采样/上采样层组成。
 分离器以TDANet为骨干，但进行了关键改进：去除了原始的多次迭代设计，仅保留一次前向传播，以大幅提升效率。其性能通过引入全局-局部注意力（GLA）块来补偿。
 
 GLA块详解（图4）：
-![GLA块详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/LaIkPfPu9K-3.png)
+![GLA块详细架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/LaIkPfPu9K-3.png)
 图4：(a) GA块和 (b) LA块的详细架构。
 -   GA块：包含一个粗粒度自注意力（CSA）层和一个FFN。CSA层通过先降采样、应用多头自注意力、再上采样的方式，以O(N log N)的复杂度建模全局长程依赖。
 -   LA块：包含一个热扩散注意力（HDA）层和一个FFN。HDA层是创新的核心。它首先将特征通过离散余弦变换（DCT）转换到伪频域（公式3），然后利用基于热扩散方程的指数衰减函数（公式4）对不同频率分量进行自适应平滑，最后通过逆DCT和门控机制输出（公式5）。这相当于用一个物理约束的可学习滤波器高效建模局部特征，相比大核卷积更高效且泛化更好。

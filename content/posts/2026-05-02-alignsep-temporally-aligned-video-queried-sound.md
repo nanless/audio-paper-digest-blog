@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 AlignSep的整体架构是一个条件流匹配生成框架，旨在将混合音频的分布映射到与视觉信息对齐的目标干净音频分布。
 
-![图2：AlignSep模型架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DVDkFcxU1D-1.png)
+![图2：AlignSep模型架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DVDkFcxU1D-1.png)
 
 其完整流程如下：
 1.  输入：混合音频波形 `Am` 和对应的视频帧序列 `V`。
@@ -145,7 +145,7 @@ AlignSep的整体架构是一个条件流匹配生成框架，旨在将混合音
 3.  传统的整流流加速方法在此多条件任务上效果不佳。
 
 定性结果
-![图4：定性结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DVDkFcxU1D-3.jpg)
+![图4：定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DVDkFcxU1D-3.jpg)
 *   图4a：展示时序错位问题。当视频动作（打鼓）停止时，OmniSep仍生成鼓声（红色区域），而AlignSep能严格遵循视觉节奏停止（绿色区域）。
 *   图4b：展示频谱空洞问题。OmniSep在重叠区域产生频谱缺失（红色区域），而AlignSep生成完整、连续的频谱（绿色区域）。
 

@@ -55,11 +55,11 @@ hiddenInHomeList: true
 
 本文不是提出一种新模型的论文，而是一个评估基准的论文。 因此没有传统意义上的模型架构。其核心是基准的设计框架。
 整体框架：如图1所示，XModBench的构建基于“文本-图像-音频”三元组数据（图1a）。对于每个三元组，通过系统性地置换问题（上下文）和答案（候选）的模态，生成6种跨模态配置（图1b），例如：上下文是文本，候选是音频（T→A）；上下文是视觉，候选是文本（V→T）等。该框架覆盖了5个任务家族和17个子任务（图1c），最终形成61,320个多选题（图1d）。
-![XModBench Overview](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-0.png)
+![XModBench Overview](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-0.png)
 图1：XModBench概览。(a)实例由对齐的文本-图像-音频三元组构建；(b)通过排列上下文和候选模态，实例化为6种模态配置；(c)涵盖5个任务域，17个子任务，共61,320个问答对；(d)展示了平衡模态设置下的多选题示例。
 
 任务设计架构：论文详细设计了5个任务家族（图2），每个任务都遵循上述模态置换原则进行实例化。
-![Task Distribution](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-1.png)
+![Task Distribution](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-1.png)
 图2：XModBench问题在五个任务家族及其特定子任务上的分布。
 *   Task 1: 感知：识别跨模态下的同一对象或活动（如乐器、自然环境、活动）。
 *   Task 2: 空间推理：理解2D/3D空间中的位置和运动（如排列、定位、移动）。
@@ -67,7 +67,7 @@ hiddenInHomeList: true
 *   Task 4: 语言理解：识别和解释语言内容及情感（如识别、翻译、情感）。
 *   Task 5: 外部知识：关联多模态内容与世界知识（如电影、音乐流派、歌手识别）。
 图3展示了各子任务的具体实例化方式。
-![Task Examples](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-2.png)
+![Task Examples](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-2.png)
 图3：XModBench任务示例。展示了来自六个子任务的样本问题，每个问题包含来自不同模态的可能上下文。
 
 ### 💡 核心创新点
@@ -106,19 +106,19 @@ Table 2：在XModBench上的结果。报告了(a)不同输入模态下的性能�
 
 模态差异分析：
 结果展示于Figure 4。
-![Figure 4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-3.jpg)
+![Figure 4](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-3.jpg)
 图4：不同配置间的模态差异。负分表示性能差距，音频与文本间的差异最大。
 关键结论：文本是最稳健的模态。将音频替换为文本时性能损失最大（∆T vs. A），视觉次之（∆V vs. A），而文本和视觉之间的差异最小（∆T vs. V）。
 
 方向不平衡分析：
 结果展示于Figure 5。
-![Figure 5](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-4.png)
+![Figure 5](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-4.png)
 图5：方向不平衡：音频、视觉和文本成对逆向设置之间的准确率差距。模型显示出明显的不对称性，尤其是在视觉-文本和音频-文本对中。
 关键结论：模型存在系统性的方向不平衡。通常情况下，将文本作为候选（输出）比作为上下文（输入）更容易（例如V→T准确率 > T→V准确率）。这表明模型在跨模态生成或映射时，对文本输出有更强的先验。
 
 失败案例分析：
 Figure 6展示了两个典型的失败案例。
-![Figure 6](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/HaL9EZovFg-5.jpg)
+![Figure 6](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/HaL9EZovFg-5.jpg)
 图6：失败案例。(a) Gemini 2.5 Pro能通过文本正确识别迪吉里杜管，但无法匹配正确的图像候选；(b) Qwen2.5-Omni在从音频到文本与文本到音频任务中，误解了车辆的运动方向。这些案例说明了跨模态推理中的不对称性。
 
 ### ⚖️ 评分理由

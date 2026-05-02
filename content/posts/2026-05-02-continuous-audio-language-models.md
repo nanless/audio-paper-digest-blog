@@ -68,7 +68,7 @@ CALM的整体架构（图1）是一个端到端的连续自回归生成系统，
 
 关键设计选择：噪声注入长上下文是为了鲁棒性；短上下文是为了质量；一致性模型头是为了速度。三者缺一不可，消融实验（表6）证实了这一点。
 
-![图1：CALM模型概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MFrJ3NzA5H-0.png)
+![图1：CALM模型概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/MFrJ3NzA5H-0.png)
 
 ### 💡 核心创新点
 
@@ -145,10 +145,10 @@ CALM的整体架构（图1）是一个端到端的连续自回归生成系统，
 | w/o Any of the above (≈ MAR) | 8.38 ± 0.17 |
 结论：短上下文Transformer和噪声增强是性能最关键的组件，移除后FAD显著恶化。
 
-![图2：高斯温度采样对说话人相似性的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MFrJ3NzA5H-1.png)
+![图2：高斯温度采样对说话人相似性的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/MFrJ3NzA5H-1.png)
 图2结论：随着温度升高，生成语音的说话人成对相似度降低，表明多样性增加，这与离散模型的温度效应趋势一致。
 
-![图3：头批乘数值对训练收敛的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/MFrJ3NzA5H-2.png)
+![图3：头批乘数值对训练收敛的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/MFrJ3NzA5H-2.png)
 图3结论：使用更大的头批乘数值（如8或16）能显著加速FAD指标的收敛，验证了该技巧的有效性。
 
 ### ⚖️ 评分理由

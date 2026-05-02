@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 SVI的核心架构是基于视频扩散Transformer (DiT)，并通过误差回收微调（ERFT）进行增强，其主要流程如下：
 
-![模型流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/X96Ei9n34a-2.png)
+![模型流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/X96Ei9n34a-2.png)
 图3：Stable Video Infinity 的整体流程。 (a) 将误差注入干净输入以打破误差自由假设； (b) 通过单步积分双向近似预测并计算误差； (c) 从记忆库中动态存入和重采样误差，形成闭环循环。
 
 1.  输入准备：对于一个干净视频片段`{I_i}_{vid}`，通过3D VAE编码得到视频潜在表示`X_vid`和参考图像潜在表示`X_img`。同时采样噪声`X_noi`和时间步`t`。
@@ -120,10 +120,10 @@ SVI的核心架构是基于视频扩散Transformer (DiT)，并通过误差回收
 
 结论：1）SVI在所有一致性、质量和美学指标上全面超越现有方法；2）在超长设置下，SVI性能下降极小（主体一致性-0.63%），而其他方法大幅下降；3）消融实验表明，图像误差`E_img`的注入最为关键，移除它会导致性能显著下降，验证了干预轨迹起始点以模拟误差累积的重要性。
 
-![稳定性对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/X96Ei9n34a-4.png)
+![稳定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/X96Ei9n34a-4.png)
 图5：不同视频长度下的稳定性对比。SVI（蓝色实线）在长度增加时，主体一致性和背景一致性保持稳定，而其他方法（如FramePack，橙色虚线）呈现下降趋势。
 
-![定性对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/X96Ei9n34a-6.png)
+![定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/X96Ei9n34a-6.png)
 图7：定性对比。(a) 创造性视频生成：SVI-Film能根据提示词流实现平滑场景转换，而其他方法失败。(b) 一致视频生成：SVI-Shot保持高保真度和连贯性，其他方法出现颜色偏移和退化。(c) 多模态条件生成：SVI-Talk和SVI-Dance能稳定生成超长对话和舞蹈视频。
 
 ### ⚖️ 评分理由

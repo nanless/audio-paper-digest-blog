@@ -54,7 +54,7 @@ hiddenInHomeList: true
     *   视频收集与筛选：主要从FineVideo和MusicAVQA数据集中收集初始视频，然后经过三阶段系统过滤：(1) 按预设的领域分类过滤；(2) 基于预计算的音视频相关性和动态内容指标筛选片段；(3) 人工专家审核确保质量。
     *   问答对标注与质量控制：由80名专业标注员为每个视频创建需要音视频联合理解的多选问答对。质量控制采用“人工审核+MLLM自动验证”双重系统：人工审核检查问题的清晰性、多模态必要性和难度；MLLM验证则使用如Qwen2-VL等模型确保问题确实需要多模态信息，并使用Video-LLaMA2等模型检查问题是否过于简单。
 
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YxsfxAvJv4-2.jpg)
+![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YxsfxAvJv4-2.jpg)
 图3: 数据收集与QA标注流程。(a)展示了从源视频到最终1,662个视频片段的筛选过程，强调了音视频相关性和动态内容过滤。(b)展示了从QA对生成、到人工审核、MLLM验证、修订和最终确认的完整质量控制流程。
 
 2.  评估范式：
@@ -106,10 +106,10 @@ hiddenInHomeList: true
 | Gemini 2.5 Flash | - | 51.8 | 50.2 | 54.1 | 51.2 | 59.6 | 50.6 | 51.6 | 51.5 | 52.3 |
 | Gemini 2.5 Pro | - | 64.9 | 66.0 | 65.8 | 68.1 | 69.7 | 65.7 | 63.5 | 61.3 | 65.1 |
 
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YxsfxAvJv4-3.jpg)
+![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YxsfxAvJv4-3.jpg)
 图4: 不同模型在各类任务上的细粒度结果。显示了模型在音频理解、空间推理、情感相关任务上普遍表现较差。
 
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YxsfxAvJv4-4.jpg)
+![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YxsfxAvJv4-4.jpg)
 图5: 不同模型在不同类型音频信号上的细粒度结果。显示现有模型在不同音频类型（语音、环境声、音乐）上的性能表现不一致。
 
 关键发现：
@@ -131,10 +131,10 @@ hiddenInHomeList: true
 失败案例分析：
 对Gemini 1.5 Pro的130个错误样本分析（图6）表明，主要错误类型为音频理解错误和推理错误。图7展示了两个具体案例：一个是视觉识别错误（误读时钟），另一个是音乐节奏模式理解错误。
 
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YxsfxAvJv4-5.jpg)
+![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YxsfxAvJv4-5.jpg)
 图6: 错误类型分布。显示音频理解和推理错误是主要失败原因。
 
-![描述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/YxsfxAvJv4-6.jpg)
+![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/YxsfxAvJv4-6.jpg)
 图7: 失败案例示例。展示了视觉细节识别错误和音乐节奏模式理解错误。
 
 ### ⚖️ 评分理由

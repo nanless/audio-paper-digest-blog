@@ -61,10 +61,10 @@ hiddenInHomeList: true
        LLM生成：将筛选出的、大小可变的假设集输入到LLM（`MH2T`）中，生成最终纠正转录`ŷ`。
     *   阈值校准：阈值`λ`并非固定，而是在一个校准集上通过LTT程序（算法1）离线确定，以满足给定的风险水平`α`和错误率`δ`。
 
-![方法示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ck5T7QeiDh-0.png)
+![方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ck5T7QeiDh-0.png)
 图1(b)：标准GER（固定5个假设）与本文自适应GER（动态选择变长假设集并用风险控制约束性能退化）的对比示意图。
 
-![性能计算权衡曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ck5T7QeiDh-1.png)
+![性能计算权衡曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ck5T7QeiDh-1.png)
 图2：三个数据集上的性能-计算权衡曲线。曲线表示使用固定大小假设集（N=1至5）的WER性能。虚线为Oracle性能（每个样本单独选择最优大小的WER）。彩色标记点代表本文自适应方法在不同`α`值下的工作点，展示了其在WER和平均假设集大小上相比固定基线的更优权衡。
 
 ### 💡 核心创新点
@@ -117,10 +117,10 @@ hiddenInHomeList: true
 5.  多参数优化：使用Pareto Testing联合优化`(γ, τ, λ)`，发现了比手动参数选择更优的性能-效率权衡曲线。
 
 图示结果：
-![性能-计算权衡曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ck5T7QeiDh-1.png)
+![性能-计算权衡曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ck5T7QeiDh-1.png)
 图2（重复）：清晰展示了自适应方法的工作点（彩色点）相对于固定集大小曲线（蓝线）在WER-集大小权衡上的优势，即更靠近左下角。
 
-![代表性案例分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ck5T7QeiDh-2.png)
+![代表性案例分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ck5T7QeiDh-2.png)
 表2（图）：通过三个具体案例，说明了分数分布如何影响最优假设集大小。案例1（全集必需）分数密集，需要全部5个假设才能达到0% WER。案例2（单假设最优）分数区分度高，仅需第1个假设即可达到0% WER，更多假设会引入噪声。案例3（性能平台）分数密集但WER已稳定，自适应方法可通过选择较小集合节省计算而不损失性能。
 
 ### ⚖️ 评分理由

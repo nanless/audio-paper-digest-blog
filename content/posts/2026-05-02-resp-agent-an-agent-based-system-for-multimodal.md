@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 Resp-Agent是一个由中央LLM规划器驱动的闭环多智能体系统，其整体架构如图1所示。
 
-![图1：Resp-Agent 总体框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-0.png)
+![图1：Resp-Agent 总体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZkoojtEm3W-0.png)
 
 系统包含三个核心模块：
 1.  Thinker-A2CA (规划器)：基于DeepSeek-V3.2-Exp大语言模型。其功能是解析用户意图（如“诊断一段音频”或“合成某种疾病的呼吸音”），并调度任务至生成器或诊断器。关键在于它采用“计划-执行”范式，利用工具路由，并基于回收的诊断错误模式和置信度来调整后续行动（例如，针对识别不佳的类别请求生成更多数据），形成一个闭环。
@@ -67,8 +67,9 @@ Resp-Agent是一个由中央LLM规划器驱动的闭环多智能体系统，其�
     *   模态编织：在输入层，将文本EHR摘要的词嵌入和音频BEATs特征经投影后的嵌入交错编织成一个单一的序列，使跨模态交互从第一层就开始。
     *   战略全局注意力：基于Longformer架构，在编织的序列上分配稀疏的全局注意力token，包括分类token [CLS]、文本描述sentinel [DESCRIPTION]，以及以固定步长（s=4）采样的音频“锚点”（A）。这些锚点充当跨模态中心，允许文本token（如“喘息”）直接查询远处的瞬态音频事件，从而在保持线性计算复杂度的同时，实现约80.6ms的全局时间分辨率，有效捕捉转瞬即逝的呼吸音事件。
 
-![图2：Resp-MLLM 详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-1.png)
+![图2：Resp-MLLM 详细架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZkoojtEm3W-1.png)
 
+![图3：Diagnoser 架构：模态编织与战略全局注意力](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZkoojtEm3W-2.png)
 
 ### 💡 核心创新点
 
@@ -148,10 +149,10 @@ Resp-Agent以72.70的Score超越之前最优方法（67.55）5个百分点以上
 
 Resp-Agent生成的数据在两种诊断器上均带来最大提升，证明其合成数据的临床价值高于其他生成模型。
 
-![图4：生成器内容-风格解耦实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-3.png)
+![图4：生成器内容-风格解耦实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZkoojtEm3W-3.png)
 图4展示了生成器在风格交换和内容交换实验中，均能保持高保真度（低FAD）和高可控性（高风格相似度、高病理准确率），验证了其内容与风格解耦的有效性。
 
-![图5：规划器样本效率实验图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/ZkoojtEm3W-4.png)
+![图5：规划器样本效率实验图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/ZkoojtEm3W-4.png)
 图5显示，���相同合成预算下，Thinker-A2CA规划器比其他策略更早地获得更高的宏F1分数，体现了更高的数据利用效率。
 
 ### ⚖️ 评分理由

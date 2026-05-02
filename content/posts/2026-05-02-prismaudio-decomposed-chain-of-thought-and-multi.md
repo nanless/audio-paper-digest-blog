@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 PrismAudio的整体架构可分为三个主要阶段，建立在一个基于流匹配的扩散Transformer音频基础模型之上。
 
-![图1: PrismAudio框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cIfDKEbAky-0.jpg)
+![图1: PrismAudio框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cIfDKEbAky-0.jpg)
 图1: PrismAudio框架概览
 
 阶段一：CoT感知的音频基础模型
@@ -150,11 +150,11 @@ PrismAudio的整体架构可分为三个主要阶段，建立在一个基于流�
 | Multi-dimensional (Ours) | 0.52 | 0.36 | 6.68 | 4.26 | 12.87 | 1.92 |
 *   结论：单维度优化会导致严重的“目标纠缠”（如仅优化美学时，FD分布指标大幅恶化）。多维度奖励是唯一能实现所有维度平衡提升的方案。
 
-![图2: Fast-GRPO与Flow-GRPO训练收敛曲线对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cIfDKEbAky-1.jpg)
+![图2: Fast-GRPO与Flow-GRPO训练收敛曲线对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cIfDKEbAky-1.jpg)
 图2: Fast-GRPO与Flow-GRPO训练收敛曲线对比
 *   结论：Fast-GRPO收敛速度远快于Flow-GRPO（200步 vs 600+步），且最终奖励分数更高（~0.51 vs ~0.47），证明了其高效性和优化效果。
 
-![图3: 定性比较案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cIfDKEbAky-2.jpg)
+![图3: 定性比较案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cIfDKEbAky-2.jpg)
 图3: 定性比较案例
 *   结论：在尤克里里场景中，PrismAudio保留了更清晰的谐波和高频细节（美学质量高）；在铁匠场景中，其瞬态响应（锤击声）更准确、时间同步更好。
 

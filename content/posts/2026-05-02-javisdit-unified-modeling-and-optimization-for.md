@@ -70,7 +70,7 @@ hiddenInHomeList: true
 
 JavisDiT++的整体架构旨在将预训练的文本到视频（T2V）模型（Wan2.1-1.3B-T2V）扩展为联合音频视频生成模型。其核心思想是“统一处理，模态特异聚合”。
 
-![JavisDiT++ 架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/hRRWfFpKRp-2.jpg)
+![JavisDiT++ 架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/hRRWfFpKRp-2.jpg)
 图3：JavisDiT++ 架构示意图。视频和文本token经过嵌入后与音频token拼接，通过共享的自注意力层进行跨模态信息交互。之后，token被分离，分别送入模态特定的FFN（视频FFN和音频FFN）进行特征聚合，最后通过各自的预测头输出预测的噪声。时间对齐RoPE（TA-RoPE）作用于注意力计算中。
 
 完整输入输出流程：
@@ -90,7 +90,7 @@ JavisDiT++的整体架构旨在将预训练的文本到视频（T2V）模型（W
 
 TA-RoPE的详细设计：这是实现显式时间对齐的关键。
 
-![TA-RoPE 示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/hRRWfFpKRp-3.jpg)
+![TA-RoPE 示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/hRRWfFpKRp-3.jpg)
 图4：时间对齐旋转位置编码（TA-RoPE）示意图。视频token的位置ID沿（时间，高度，宽度）三个维度分配。音频token（来自梅尔频谱图）的位置ID被设计为：第一维（时间）与对齐的视频帧ID严格一致，后两维则通过偏移视频的高度H和宽度W来避免与视频token的位置ID重叠。
 
 *   视频token：位置ID格式为 `(t, h, w)`，其中 `t` 是时间步，`h, w` 是空间位置。

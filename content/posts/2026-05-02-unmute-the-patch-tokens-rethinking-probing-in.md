@@ -55,13 +55,13 @@ hiddenInHomeList: true
 | EAT | 17.29 | 26.11 | 31.67 |
 | SSLAM | 17.04 | 24.45 | 30.94 |
 
-![图1: 池化瓶颈示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-0.png)
+![图1: 池化瓶颈示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-0.png)
 图1展示了问题的核心：自监督模型（EAT）的嵌入是丰富但纠缠的，其[cls]-token注意力是扩散的；而监督微调后的模型（EAT+）嵌入则变得局部化且与事件对齐。作者的原型探测器（protobin）能解纠缠EAT的嵌入，恢复局部信息。
 
-![图2: 探测性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-1.png)
+![图2: 探测性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-1.png)
 图2显示了在as20k数据集上，使用EAT模型时，不同探测方法的性能。protobin显著优于linear和mhca，并接近微调（FT）的性能，直观证明了其有效性。
 
-![图5: 方法两两胜率矩阵](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-4.png)
+![图5: 方法两两胜率矩阵](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-4.png)
 图5汇总了所有数据集和基础编码器上，不同探测方法两两比较的胜率。protobin几乎在所有对比中获胜，建立了清晰的探测方法性能层级：原型池化 > 注意力池化 > 简单基线。
 
 ### 🏗️ 模型架构
@@ -78,7 +78,7 @@ hiddenInHomeList: true
 4.  分类头：池化得到的描述符（可以是单向量或多向量）被送入一个线性分类层，输出类别预测。
 
 二值化原型探测器（protobin）架构详解：
-![图3: 二值化原型池化示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-2.png)
+![图3: 二值化原型池化示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-2.png)
 *   组件：维护一组可学习的参数`~pj ∈ R^D`，共有`C·J`个（C是类别数，J是每个类别的原型数，如20）。这些原型是类无关的。
 *   前向计算：
     1.  二值化：将参数`~pj`通过符号函数转换为二值原型：`pj = sign(~pj) ∈ {-1, +1}^D`。这通过直通估计器（STE）实现梯度反向传播。
@@ -135,10 +135,10 @@ hiddenInHomeList: true
 3.  多标签特异性（Q3）：在单标签任务（sc-2, esc50）上，单向量方法（如mhca）可以接近甚至超过protobin（表3）。但在多标签任务上，protobin的优势非常显著，证实了池化瓶颈在多标签场景中尤为严重。
 4.  监督微调影响（Q4）：监督微调（Supervised+）主要提升了`[cls]`-token在域内任务上的质量，但对token级别的表征在跨域任务上的提升有限（图8）。原型方法在两种情况下都保持了稳健的优越性。
 
-![图6: 探测重新评估模型排名](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-5.png)
+![图6: 探测重新评估模型排名](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-5.png)
 图6清晰地显示，线性探测给出的模型排名（灰色柱）与protobin给出的排名（彩色柱）完全不同，证明了标准探测的不可靠性。
 
-![图7: 探测器相对线性探测的性能提升](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/FbY5Co2NWk-6.png)
+![图7: 探测器相对线性探测的性能提升](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/FbY5Co2NWk-6.png)
 图7展示了对于每个编码器，各探测方法相对于线性探测基线的性能提升（百分点）。可见提升幅度因编码器而异，但protobin的提升在所有编码器上都很大且稳定。
 
 消融实验（表7节选 - protobin vs. protofloat vs. proto）：

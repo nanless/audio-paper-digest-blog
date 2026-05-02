@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![DrVoice 架构概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/h5AiVx0Aiv-0.png)
+![DrVoice 架构概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/h5AiVx0Aiv-0.png)
 图1: DrVoice 架构概览。 用户端语音输入经过语音编码器（Whisper-Large-v3）和适配器后，与文本提示一起编码。在助手端，模型采用并行联合生成方式：共享LLM层的隐藏状态同时输入文本头（Text Head）和语音精细化头（SRH）。SRH通过k次前向传播（k为分组因子）自回归生成k个语音token，这些语音token与对应的文本token在下一时步被相加作为LLM的输入。
 
 模型整体由三个主要组件构成：
@@ -157,7 +157,7 @@ DrVoice的UTMOS与Qwen2.5-Omni相当，但ASR-WER（8.36）仍高于Qwen2.5-Omni
 关键发现：1) 移除连续语音编码器（CSE）对语音任务影响巨大。2) SRH及其预训练对语音生成（S2M, T2M）至关重要。3) CoM-Mixing提升了模型的灵活性和泛化性能。
 
 计算效率分析（图2）：
-![计算资源与分组因子关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/h5AiVx0Aiv-1.png)
+![计算资源与分组因子关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/h5AiVx0Aiv-1.png)
 图2: 不同分组因子下的计算资源（17K小时训练数据）。 该图清晰地显示了随着分组因子（Group Factor）从1增加到5，GPU小时数显著下降（例如，7B模型有连续编码器时，从约3360降至约1008小时），证明了分组机制带来的高效性。
 
 ### ⚖️ 评分理由

@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 TtT模型基于一个预训练的纯文本LLM（论文中使用Qwen2.5-Base）进行构建，通过扩展其词表以包含音频离散码元（来自GLM-4-Voice的音频分词器）和特殊控制符（如`<SOA>`、`<EOA>`、`<EOS>`）。整个框架是一个统一的Transformer编码器-解码器（在论文中记为`fθ`），共享一个输出头`W`用于在整个扩展词表`V`上预测logits。
 
-![模型框架与扩散反向过程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/e3XLWHFrnr-1.png)
+![模型框架与扩散反向过程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/e3XLWHFrnr-1.png)
 
 图2(a) 展示了TtT的整体推理框架：
 *   输入处理：用户输入（文本或音频）被编码为token序列。音频输入首先通过音频编码器转化为离散token。
@@ -153,7 +153,7 @@ TtT模型基于一个预训练的纯文本LLM（论文中使用Qwen2.5-Base）�
 | GLM-4-Voice | 9B | 85.82 | 61.63 | 55.47 | 51.89 |
 结论：Pretrain+TtT在高效模型中表现最佳，并在某些Pro任务上与7B模型可比，但与9B的GLM-4-Voice仍有差距。感知质量（NMOS/UTMOS）稳定在3.89-4.25区间。
 
-![TtT框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/e3XLWHFrnr-0.png)
+![TtT框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/e3XLWHFrnr-0.png)
 图1：形象地展示了文本（强目标间依赖）与音频（源目标依赖）在依赖结构上的根本差异，以及导致最后一个音频段长度不一致的“分词速率差异”问题。这正是TtT试图解决的动机。
 
 ### ⚖️ 评分理由

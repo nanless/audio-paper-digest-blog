@@ -57,7 +57,7 @@ SCRAPL并非一个神经网络模型，而是一个随机优化算法框架，�
 6.  权重更新：使用修正后的梯度 `g_SAGA` 和学习率 `αk` 更新网络权重 `w`。
 7.  θ-importance sampling初始化（可选）：在训练开始前，通过分析损失函数相对于合成器参数 `θ` 的曲率（海森矩阵最大特征值），为每条路径 `p` 计算一个采样概率 `πp`。这使得梯度信号能更集中地作用于对最终参数估计最重要的路径。
 
-![SCRAPL算法流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RuYwbd5xYa-0.png)
+![SCRAPL算法流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RuYwbd5xYa-0.png)
 图1: SCRAPL算法伪代码（Algorithm 1）。清晰展示了随机路径采样（draw an integer... according to π）、P-Adam和P-SAGA的交替更新过程。
 
 ### 💡 核心创新点
@@ -103,10 +103,10 @@ SCRAPL并非一个神经网络模型，而是一个随机优化算法框架，�
 
 结论：SCRAPL在精度上显著优于所有MSS变体和预训练嵌入损失（MS-CLAP, PANNs），其综合误差（65.7‰）接近全树JTFS（42.4‰），而计算成本仅为后者的小部分（图1）。
 
-![计算成本与精度权衡](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RuYwbd5xYa-0.png)
+![计算成本与精度权衡](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RuYwbd5xYa-0.png)
 图1: 计算成本（横轴）与合成器参数误差（纵轴）的帕累托前沿图。SCRAPL位于JTFS（高精度，高成本）和MSS（低成本，低精度）之间，形成了新的折衷点。
 
-![训练收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RuYwbd5xYa-1.png)
+![训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RuYwbd5xYa-1.png)
 图2: （右）颗粒合成任务的验证损失随优化步数的变化。SCRAPL收敛速度快于全树JTFS，且最终精度远高于MSS等方法。
 
 表2：SCRAPL组件消融实验（颗粒合成任务）
@@ -129,7 +129,7 @@ SCRAPL并非一个神经网络模型，而是一个随机优化算法框架，�
 
 结论：θ-IS显著提升了所有配置下对合成器参数的匹配精度，尤其在AM/FM调制范围较慢时效果更明显。
 
-![θ-IS路径概率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/RuYwbd5xYa-5.png)
+![θ-IS路径概率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/RuYwbd5xYa-5.png)
 图6: θ-IS为四种Chirplet合成器配置计算的路径采样概率分布（纵轴为概率比，1.0代表均匀采样）。黑色点为JTFS路径的AM/FM中心频率，虚线框标出了合成器的参数范围。可见高概率路径集中在对应合成器参数范围内的区域，直观验证了θ-IS的有效性。
 
 表4：Roland TR-808声音匹配任务部分结果（JTFS Audio Distance↓， FAD↓）

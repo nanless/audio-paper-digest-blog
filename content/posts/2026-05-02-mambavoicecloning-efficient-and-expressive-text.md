@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 MVC的总体框架旨在替代传统TTS系统中的注意力与循环神经网络条件路径。其架构图如下：
 
-![MVC框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/0oXyMbPMtP-0.png)
+![MVC框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/0oXyMbPMtP-0.png)
 
 核心组件与数据流：
 1.  输入处理： 输入语音转换为80维对数梅尔频谱图（M），文本经过归一化和音素化得到嵌入（x）。全局风格嵌入（e）由频谱图通过一个共享的浅层Conv/GRU模块计算得出，用于捕捉粗粒度的音色和表现力。
@@ -102,7 +102,7 @@ MVC的总体框架旨在替代传统TTS系统中的注意力与循环神经网�
 | StyleTTS2 | 0.651 ± 0.013 | 4.93 ± 0.06 | 6.50% | 3.79 ± 0.07 | 0.0174 |
 | MVC (ours) | 0.653 ± 0.014 | 4.91 ± 0.07 | 6.52% | 3.85 ± 0.06 | 0.0169 |
 
-![LJSpeech波形对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/0oXyMbPMtP-1.png)
+![LJSpeech波形对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/0oXyMbPMtP-1.png)
 图2：不同模型在LJSpeech上的合成波形对比。MVC与真实波形在时间结构、韵律变化和振幅一致性上对齐更紧密。
 
 表2：分布内（ID）与分布外（OOD）文本MOS
@@ -120,7 +120,7 @@ MVC的总体框架旨在替代传统TTS系统中的注意力与循环神经网�
 | StyleTTS2 | 4.15 | 3.91 | 0.0185 | 0.0200 |
 | MVC | 4.22 | 4.16 | 0.0177 | 0.0170 |
 
-![训练收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/0oXyMbPMtP-2.png)
+![训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/0oXyMbPMtP-2.png)
 图3：MVC与StyleTTS2在LJSpeech上的验证集MOS和F0 RMSE随训练epoch变化曲线。MVC收敛更快。
 
 表6：OOD文本组件移除消融（CMOS-N下降）
@@ -138,7 +138,7 @@ MVC的总体框架旨在替代传统TTS系统中的注意力与循环神经网�
 | 仅AdaLN (无Gating) | 3.95 ± 0.04 | 2.22 ± 0.05 | 0.0198 |
 | Concat (无Gating, 无AdaLN) | 3.64 ± 0.09 | 2.89 ± 0.07 | 0.0216 |
 
-![频谱图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/0oXyMbPMtP-3.png)
+![频谱图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/0oXyMbPMtP-3.png)
 图4：Ground Truth, MVC, StyleTTS2和JETS的频谱图对比。MVC在谐波连续性和共振峰轨迹上最接近真实情况。
 
 表5：流式合成（不同前瞻L）

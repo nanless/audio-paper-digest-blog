@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 TVTSyn是一个端到端的流式语音转换/匿名化系统，包含四个核心模块（见图1）：
 
-![图1: 系统架构总览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Tf4Lfw85lS-0.jpg)
+![图1: 系统架构总览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Tf4Lfw85lS-0.jpg)
 
 1.  流式内容编码器（Streaming Content Encoder）：
     - 功能：将输入语音波形转换为帧级（~50Hz）、与说话人无关的离散语言内容表示。

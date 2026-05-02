@@ -49,7 +49,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 NExT-OMNI的整体架构旨在通过单一的DFM骨干统一处理任意模态到任意模态的任务。
-![NExT-OMNI框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-0.jpg)
+![NExT-OMNI框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-0.jpg)
 图1：NExT-OMNI框架概览，展示了其统一的理解、生成和检索能力。
 
 完整流程：
@@ -65,7 +65,7 @@ NExT-OMNI的整体架构旨在通过单一的DFM骨干统一处理任意模态�
 *   模态头：轻量级解码头，针对每个模态（文本、视觉、音频）独立设计。由于采用多码本量化（MCQ），视觉和音频头需要预测多个子码本索引，论文采用了基于自回归的多头设计。
 *   训练目标：核心是DFM的交叉熵损失（`Lce`），但为了防止模型在DFM训练中丢失统一表征中的细粒度信息，同时复用了模态编码器的重建损失（`LVrec`, `LArec`）作为约束。
 
-![NExT-OMNI流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-1.jpg)
+![NExT-OMNI流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-1.jpg)
 图2：NExT-OMNI框架流程图。左侧展示了从噪声到干净序列的DFM过程；右侧展示了基于统一表征的跨模态检索。
 
 #
@@ -76,7 +76,7 @@ NExT-OMNI的整体架构旨在通过单一的DFM骨干统一处理任意模态�
 2.  重建反馈增强的统一表征：为了解决统一编码器在理解和生成任务间可能存在的粒度冲突，论文设计了一种训练策略：在预训练阶段，不仅进行语义对齐，还强制编码器通过辅助的量化器和解码器进行输入重构（图4）。这种重建损失约束，确保了编码器输出的统一表征同时包含用于检索/理解的丰富语义和用于生成的细节信息，是支撑其任何到任何能力的关键。
 3.  动态长度生成策略与自适应缓存加速：针对理解任务需要动态输出长度的问题，训练时在响应部分插入`<PAD>`，推理时根据`<EOS>`的置信度动态调整生成长度。同时，利用DFM多步去噪过程中特征变化平缓的特点，设计了自适应缓存机制（图3），对指令部分特征缓存不变，对响应部分特征根据余弦相似度选择性更新，结合并行解码，实现了比AR模型更快的推理速度（1.2×提升）。
 
-![动态生成与自适应缓存](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-2.jpg)
+![动态生成与自适应缓存](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-2.jpg)
 图3：动态长度生成策略（左）和自适应缓存设计（右）的示意图。
 
 #
@@ -136,13 +136,13 @@ NExT-OMNI的整体架构旨在通过单一的DFM骨干统一处理任意模态�
     | NExT-OMNI | DFM | 32.9 |
 
 消融实验（表5）：验证了DFM范式、统一表征、动态生成策略（DGS）和重建损失项的贡献。结果显示，DGS显著提升理解性能，重建损失项对生成和检索任务提升明显，并有助于维持统一表征的细粒度信息。
-![模态编码器重构可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-3.jpg)
+![模态编码器重构可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-3.jpg)
 图4：视觉编码器（左）和音频编码器（右）预训练训练流程。
-![音频重构可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-4.jpg)
+![音频重构可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-4.jpg)
 图5：音频重构的定性结果对比。
-![图像重构可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-5.jpg)
+![图像重构可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-5.jpg)
 图6：图像重构的定性结果对比。
-![模态头设计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/odatOcBi61-6.jpg)
+![模态头设计](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/odatOcBi61-6.jpg)
 图7：模态头设计示意图，展示了自回归多索引预测和并行多头预测两种结构。
 
 #

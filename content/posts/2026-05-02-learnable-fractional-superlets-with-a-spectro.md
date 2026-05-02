@@ -50,10 +50,10 @@ hiddenInHomeList: true
 
 本文的系统由两大部分组成：可学习分数阶Superlet变换（LFST）前端和光谱-时间情感编码器（STEE）。
 
-![LFST前端示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZGEEL20mU-0.png)
+![LFST前端示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZGEEL20mU-0.png)
 LFST前端（图1）：接收原始波形 `x` 作为输入。其核心是为每个频率带 `f_i` 和阶数 `o`（从1到O）学习一组Softmax权重 `w_{i,o}`，这些权重在离散阶数上形成一个凸组合，从而定义一个有效阶数 `o_eff`。对于每个 `(f_i, o)` 组合，使用一个由学习到的 `c_1(f_i)` 决定的DC校正Morlet小波进行卷积，得到复数响应 `W_{i,o}`。所有阶数的响应通过对数域加权几何平均聚合，得到最终的幅度图 `S`。同时，通过加权单位相量求和得到相位一致性图 `κ`，用于衡量跨阶的相位对齐程度。`S` 和 `κ` 作为双通道输入传递给STEE。LFST还包含一个可学习非对称硬阈值（LAHT）模块，仅对幅度图 `S` 进行稀疏化去噪。此外，频率网格和基循环数 `c_1` 也是可学习的参数。
 
-![STEE编码器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZGEEL20mU-1.png)
+![STEE编码器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZGEEL20mU-1.png)
 STEE编码器（图2）：接收双通道TF图 `S2 = [S, κ]`。其处理流程为：1) 时间深度卷积主干：沿时间维度进行深度卷积，捕获局部时序模式；2) 频谱残差块：沿频率维度进行深度卷积，捕获跨频带相关性；3) TF混合残差块与SE模块：并行使用时间和频率方向的深度卷积分支，融合后接Squeeze-and-Excitation通道注意力；4) 自适应FiLM频率门控（图3）：利用 `S` 和 `κ` 的时序统计量以及 `o_eff` 生成逐频率的通道调制因子，实现内容感知；5) 时间下采样与轴向自注意力：在时间维度下采样后，沿时间轴应用局部多头自注意力；6) 注意力统计池化与投影：在时间维度进行注意力加权的均值和标准差池化，拼接后投影得到最终的情感嵌入，再通过线性分类器输出类别。
 
 #
@@ -115,10 +115,10 @@ STEE编码器（图2）：接收双通道TF图 `S2 = [S, κ]`。其处理流程�
 该对比在控制下游模型容量的前提下，证实了LFST前端本身带来的性能提升。
 
 模型解释性可视化：
-![学习到的分数阶分布与频率关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZGEEL20mU-4.png)
+![学习到的分数阶分布与频率关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZGEEL20mU-4.png)
 图5展示了模型学习到的有效阶数 `o_eff` 随频率的变化以及完整的阶数权重分布热图。结果表明：1) 阶数分配在频率上是非均匀的；2) 在中高频（元音/共振峰区域）有效阶数较高，意味着模型学习到在此区域需要更精细的频率分辨率；3) 在低频（基频区域）有效阶数较低，意味着模型倾向于更好的时间精度以捕获韵律动态。
 
-![消融实验混淆矩阵](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/uZGEEL20mU-3.png)
+![消融实验混淆矩阵](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/uZGEEL20mU-3.png)
 图4展示了三个数据集的混淆矩阵。IEMOCAP中Happy与Angry存在混淆；EMO-DB中各类别表现均衡；NSPL-CRISE作为电话语音，性能有所下降，主要混淆发生在FCW（恐惧/担忧）与Sad/Neutral之间。
 
 #

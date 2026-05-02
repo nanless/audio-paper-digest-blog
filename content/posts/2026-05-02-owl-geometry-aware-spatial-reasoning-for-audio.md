@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 OWL系统包含两个核心模块：SAGE编码器和OWL语言模型管道。
 
-![OWL与SAGE架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zPv46YKv3w-3.png)
+![OWL与SAGE架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zPv46YKv3w-3.png)
 
 1.  SAGE (Spatial-Acoustic Geometry Encoder)：
     *   功能：一个几何感知的音频编码器，负责从双耳音频中提取空间感知特征。
@@ -103,7 +103,7 @@ OWL系统包含两个核心模块：SAGE编码器和OWL语言模型管道。
 | SAGE | BiDepth | 音频 | 49.75 | 36.89 | 26.32 | 17.11 |
 | SAGE | BiDepth | 音频+深度 | 49.81 | 28.13 | 21.67 | 14.32 |
 
-![BiDepth上SELD性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zPv46YKv3w-13.png)
+![BiDepth上SELD性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zPv46YKv3w-13.png)
 关键结论：SAGE在BiDepth上，相比最强基线Spatial-AST，在检测精度（mAP）相近的情况下，在定位任务上取得显著优势：ER20°下降18.5% (36.89 vs 45.29)，MAE下降20.2% (26.32 vs 32.99)，DER下降64.5% (17.11 vs 47.82)。引入深度监督后，定位性能进一步提升。
 
 OWL在BiDepth上的QA性能对比
@@ -116,7 +116,7 @@ OWL在BiDepth上的QA性能对比
 | OWL w CoT | 33.37 | 17.26 | 46.17 | 34.31 | 23.29 | 29.91 | 77.89 | 79.04/86.76/76.53 |
 
 注：BAT使用4扇区协议，同时提供了OWL的12扇区和4扇区（|后）结果以供对比。
-![BiDepth上OWL与基线模型QA性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zPv46YKv3w-14.png)
+![BiDepth上OWL与基线模型QA性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zPv46YKv3w-14.png)
 关键结论：OWL在BiDepth所有任务上均优于包括BAT在内的开源基线。OWL w CoT相比BAT，在双源检测mAP上提升97.2% (17.26 vs 8.73)，在空间推理（Type III）BA上提升12.1% (77.89 vs 69.46)，在CoT推理（Type IV）BA上提升25.0% (76.53 vs 61.29)。
 
 OWL在SpatialSoundQA上的零样本性能
@@ -125,7 +125,7 @@ OWL在SpatialSoundQA上的零样本性能
 | BAT | 26.34 | 9.89 | 75.54 | 37.65 | 29.16 | 47.90 | 69.77/84.04/76.89 |
 | OWL | 26.76 | 12.73 | 78.31 | 43.15 | 26.14 | 43.21 | 71.21/86.91/79.06 |
 
-![SpatialSoundQA上的零样本性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/zPv46YKv3w-15.png)
+![SpatialSoundQA上的零样本性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/zPv46YKv3w-15.png)
 关键结论：在未使用SpatialSoundQA训练数据的情况下，OWL在所有指标上均超越BAT，证明了其泛化能力。在推理平均准确率上提升2.17% (79.06% vs 76.89%)。
 
 消融实验关键发现

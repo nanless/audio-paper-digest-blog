@@ -48,7 +48,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 DART的整体架构是一个双层对齐框架，如图1所示。
-![图1](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cFhcd4WGjO-0.jpg)
+![图1](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cFhcd4WGjO-0.jpg)
 1.  输入：成对的音频波形和文本描述数据。
 2.  编码器：使用音频编码器和文本编码器（如ResNet38、BERT、Beats等）分别提取音频和文本的嵌入向量。
 3.  实例级对齐分支：
@@ -143,7 +143,7 @@ DART的整体架构是一个双层对齐框架，如图1所示。
 - 双层损失必要性（表10）：仅使用L_UWD性能接近随机（R@1≈0），仅使用L_IOT是强基线，两者结合性能最优，证明其互补性。
 
 #### 可视化分析（图3）
-![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cFhcd4WGjO-2.png)
+![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cFhcd4WGjO-2.png)
 结论：可靠性分数r_j与标准化运输成本C_j呈负相关（ρ≈-0.379）。低可靠性（红色）通道对应高运输成本区域，高可靠性（绿色）通道对应低成本区域，验证了RAM能有效识别并抑制噪声通道。
 
 ### ⚖️ 评分理由

@@ -62,7 +62,7 @@ hiddenInHomeList: true
     * 输出：一个标量损失值（公式2），其目标是最大化这两个层特征的相似度。
     * 交互方式：该损失 `L_LayerSync` 与原始的生成损失（如速度预测损失 `L_velocity`）相加，形成总损失（公式3）。超参数 `λ` 控制其权重。在反向传播时，强层 `k'` 的特征被 `stop_gradient` 操作，即只将其作为不动的目标，仅更新弱层 `k` 的参数。
 
-![图2：SiT-XL/2模型收敛时Transformer块之间的相关性矩阵。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/4itprlvbRQ-1.png)
+![图2：SiT-XL/2模型收敛时Transformer块之间的相关性矩阵。](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/4itprlvbRQ-1.png)
 图2显示，收敛后的Transformer块自然分成三个相关性高的功能组：初始的局部特征组、中间的全局特征组和最终的解码组。LayerSync的对齐通常选择在“全局特征组”内部或跨组进行。
 
 关键设计选择与动机：
@@ -145,7 +145,7 @@ hiddenInHomeList: true
 
 *   表示质量分析：在相同生成FID下，使用LayerSync训练的模型在Tiny ImageNet分类和PASCAL VOC分割的线性探测平均精度上显著优于基线模型（图4）。
 
-![图4：线性探测评估内部表示质量。LayerSync显著提升了各层的平均分类和分割精度。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/4itprlvbRQ-3.jpg)
+![图4：线性探测评估内部表示质量。LayerSync显著提升了各层的平均分类和分割精度。](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/4itprlvbRQ-3.jpg)
 图4显示，使用LayerSync（蓝色虚线）的模型在所有层的分类（a）和分割（b）精度均高于基线（红色虚线），且与DINOv2的对齐度（c）也更高。最佳性能层发生了偏移。
 
 *   消融实验：
@@ -154,7 +154,7 @@ hiddenInHomeList: true
     * 计算开销对比：与EMA方法SRA相比，LayerSync的FLOPs减少25.5%，训练速度快40.5%（表15）。
     * 与外部方法组合：LayerSync与REPA结合，在相同训练步数下性能优于单独使用REPA（表5）。
 
-![图3：定性对比。在相同噪声下，LayerSync生成的图像比Dispersive和基线更清晰、语义更明确。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/4itprlvbRQ-2.jpg)
+![图3：定性对比。在相同噪声下，LayerSync生成的图像比Dispersive和基线更清晰、语义更明确。](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/4itprlvbRQ-2.jpg)
 图3直观展示了LayerSync生成质量的提升，尤其在细节和一致性上。
 
 ### ⚖️ 评分理由

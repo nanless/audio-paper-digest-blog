@@ -49,10 +49,10 @@ hiddenInHomeList: true
 | OmniVinci | 53.73 | 48.23 | 66.50 | 46.47 | 58.40 | 70.6 |
 | OmniVinci + RL | 54.52 | 48.70 | 67.08 | 47.79 | - | - |
 
-![OmniVinci 在基准测试上的性能概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-0.jpg)
+![OmniVinci 在基准测试上的性能概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-0.jpg)
 图1展示了OmniVinci在全模态、音频和视觉理解基准测试上相对于其他模型的性能比较，直观显示了其在跨模态理解任务（Dailyomni）上的显著优势。
 
-![OmniVinci 模型架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-1.jpg)
+![OmniVinci 模型架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-1.jpg)
 图2展示了OmniVinci的架构：视觉、音频和文本输入分别经过编码器和投影层，再通过OmniAlignNet模块和所提出的时间编码技术（TEG, CRTE）融合成统一的“全模态嵌入序列”，最后输入LLM。
 
 5.  实际意义是什么： 该工作为构建高效、强大的全模态理解模型提供了一个系统化的架构和数据解决方案。其展示的下游应用（如机器人语音导航、体育视频理解、医疗分析、半导体工厂监控）证明了全模态理解在实际场景中的广泛应用潜力。
@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 OmniVinci的架构旨在将异构的视觉、音频和文本输入整合到一个统一的潜在空间中，供LLM进行自回归处理。
 
-![OmniAlignNet模块示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-2.jpg)
+![OmniAlignNet模块示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-2.jpg)
 整体流程（参考图2）：
 1.  输入：接收视频（分解为帧序列）、音频（包括语音和非语音）和文本/语音提示。
 2.  编码：
@@ -156,13 +156,13 @@ OmniVinci的架构旨在将异构的视觉、音频和文本输入整合到一�
 *   学习策略消融（表2）：对比了“仅视觉”、“视觉+音频（隐式学习）”、“视觉+音频+数据引擎（显式学习）”三种策略。结果显示，隐式学习（使用视频自带音频）已在Video-MME上带来提升；而使用显式学习数据后，性能进一步大幅提高（+5.70分），验证了数据引擎的有效性。
 *   RL训练消融（表8）：应用GRPO后训练后，模型在全模态基准测试上平均提升0.79分。图6显示OmniVinci的RL收敛速度和最终奖励均优于Qwen2.5-Omni。
 
-![隐式与显式学习方法对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-4.png)
+![隐式与显式学习方法对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-4.png)
 图5展示了训练数据的整体分布，全模态（Omni）数据占15%，是解决数据稀缺的关键部分。
 
-![全模态数据生成流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-3.jpg)
+![全模态数据生成流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-3.jpg)
 图4展示了全模态数据引擎的流程：独立生成视觉和音频描述后，由LLM进行跨模态修正和总结，生成更准确的联合描述，以此合成训练数据。
 
-![RL训练收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DZeic3NpHy-5.png)
+![RL训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DZeic3NpHy-5.png)
 图6展示了GRPO训练过程中，OmniVinci与Qwen2.5-Omni在准确率奖励和格式奖励上的收敛曲线对比，以及音频输入对RL训练的正面影响。
 
 ### ⚖️ 评分理由

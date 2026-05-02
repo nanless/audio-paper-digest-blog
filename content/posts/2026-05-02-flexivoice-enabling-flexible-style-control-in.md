@@ -55,7 +55,7 @@ FlexiVoice的架构基于一个预训练的大语言模型（LLM）核心。整�
 *   离散化表示：使用DualCodec将语音离散化，使得LLM能够直接处理语音信息，实现了文本、指令和语音的统一处理框架。
 *   流匹配解码：采用流匹配而非自回归方式生成连续的梅尔频谱图，以在保持高质量的同时提升解码效率。
 
-![FlexiVoice的整体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/F7GmbfyVg9-2.png)
+![FlexiVoice的整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/F7GmbfyVg9-2.png)
 图3：FlexiVoice的完整结构。 图中清晰展示了文本、指令和参考语音如何经过处理后输入到LLM，以及LLM输出如何通过流匹配和声码器最终生成语音。这个架构图直观地体现了其多模态输入、统一LLM处理和高质量解码的核心设计理念。
 
 ### 💡 核心创新点

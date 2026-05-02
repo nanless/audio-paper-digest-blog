@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 论文提出的AGG-RL框架整体架构如下图所示：
 
-![论文图2：AGG-RL框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/bWXpJFesLS-1.png)
+![论文图2：AGG-RL框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/bWXpJFesLS-1.png)
 
 该框架接受多声道音频信号、麦克风阵列几何坐标和候选DOA网格作为输入，输出每个候选方向上的概率性空间谱。其核心由两个网络构成：
 
@@ -54,7 +54,7 @@ hiddenInHomeList: true
     *   特征提取：经过批归一化、初始卷积块和4个残差卷积块处理后，通过通道级多头自注意力（CW-MHSA）（集成rMPE）捕获空间依赖关系，并利用帧级GRU建模时序关系。
     *   输出表征映射：最后通过多个表征映射块（RMB），将特征投影到低维共享潜在空间，生成音频-几何表征（AGR），维度为`O × G × L`（`O`为输出数量，`G`为表征维度，`L`为帧数）。每个RMB包含一个带层归一化的残差卷积块和一个线性层。
 
-![论文图4：AuGeonet架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/bWXpJFesLS-3.png)
+![论文图4：AuGeonet架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/bWXpJFesLS-3.png)
 
 2.  网格表征网络（Gridnet）：
     *   输入：候选DOA（方位角θd， 俯仰角ϕd）通过一个类似于rMPE的正弦网格编码函数 `hGrid` 转换为`G`维向量。
@@ -109,10 +109,10 @@ hiddenInHomeList: true
    (ii) aMPE vs. (i) rMPE：将rMPE替换为绝对位置编码（aMPE），在未见条件下性能下降（如Dynamic-U MAE从14.12°降至12.46°， 注意此消融中(i)的MAE更低，但ACC10更低，说明相对编码更稳健），表明相对编码的重要性。
 *   (vi) Fixed grid vs. Proposed：固定网格（`D=2048`）在训练条件匹配的Dynamic-S上略优，但在真实数据集上性能下降，凸显AGG-RL对泛化的关键作用。
 
-![论文图9：不同SNR和RT60条件下的性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/bWXpJFesLS-8.png)
+![论文图9：不同SNR和RT60条件下的性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/bWXpJFesLS-8.png)
 图9显示，在低信噪比和高混响条件下，所提方法的MAE更低、ACC10更高，且始终优于基线，证明了其鲁棒性。
 
-![论文图10：空间谱可视化（2说话人）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/bWXpJFesLS-6.png)
+![论文图10：空间谱可视化（2说话人）](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/bWXpJFesLS-6.png)
 图10展示了在两个说话人场景下的空间谱平均结果。所提方法产生了与真实情况（Oracle）高度吻合的尖锐峰值，而基线方法的峰值模糊或出现错误峰值，直观证明了其优越的分辨力和稳定性。
 
 ### ⚖️ 评分理由

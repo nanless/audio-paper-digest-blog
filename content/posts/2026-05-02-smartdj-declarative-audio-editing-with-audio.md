@@ -47,13 +47,13 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![SmartDJ框架概述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eNmANCkefl-0.png)
+![SmartDJ框架概述](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eNmANCkefl-0.png)
 图1展示了SmartDJ的整体工作流程：用户输入声明式指令（如“让这段音频听起来像晴朗的森林”）和原始立体声音频。ALM（规划器） 首先感知原始音频中的事件（如猫叫、下雨），并推理出一系列原子编辑步骤（如步骤1：移除下雨；步骤2：添加树叶沙沙声...）。这些步骤被送入LDM（编辑器），逐步对音频进行修改，最终输出编辑后的立体声音频。
 
-![SmartDJ框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eNmANCkefl-1.png)
+![SmartDJ框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eNmANCkefl-1.png)
 图2进一步阐述了框架组件：ALM以原始音频和指令为输入，输出原子编辑步骤序列。这些步骤依次被LDM处理，每个步骤都以当前音频和当前步骤指令为输入，生成更新后的音频，直到完成所有步骤。
 
-![SmartDJ详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eNmANCkefl-2.png)
+![SmartDJ详细架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eNmANCkefl-2.png)
 图3详细展示了ALM和LDM的内部结构：
 *   ALM：以预训练的CLAP音频编码器（冻结）提取原始音频的嵌入表示（za），与文本指令（P）的嵌入一起输入到一个基于大语言模型（LLM）（如Qwen2.5-3B）的规划器中。LLM通过LoRA进行微调，自回归地生成描述原子编辑步骤的文本序列。
 *   LDM：是一个基于Diffusion Transformer (DiT)的编辑器。它接收来自上一步的音频潜在表示（â_{i-1}）和当前步骤的文本指令（s_i），通过交叉注意力机制进行条件生成。训练目标是预测加在新噪声潜在变量上的噪声。它使用立体声音频VAE将音频压缩到低维潜在空间。
@@ -127,10 +127,10 @@ hiddenInHomeList: true
 
 关键结论：移除ALM或用“字幕模型+LLM”替代ALM都会导致性能明显下降，证明了ALM在复杂指令推理中的核心作用。
 
-![用户研究结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eNmANCkefl-6.png)
+![用户研究结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eNmANCkefl-6.png)
 图7显示了用户研究胜率：在声明式编辑的音频质量和对齐度上，SmartDJ对基线的胜率分别超过80%和87%；在单步编辑中胜率更高。所有结果p<0.001，具有统计显著性。
 
-![多轮编辑稳定性](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/eNmANCkefl-7.png)
+![多轮编辑稳定性](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/eNmANCkefl-7.png)
 图8展示了“往返编辑”实验结果：经过多轮“添加-移除”操作后，SmartDJ的输出与原始音频的LSD（对数谱距离）最低，表明其在多次编辑后仍能较好地保持未修改内容。
 
 ### ⚖️ 评分理由

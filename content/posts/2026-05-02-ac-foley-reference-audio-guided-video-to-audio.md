@@ -73,7 +73,7 @@ hiddenInHomeList: true
     - 梅尔谱图通过预训练的BigVGAN声码器转换为44.1kHz的音频波形。
 
 架构图（对应原文图2）：
-![AC-Foley 方法概述图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/URPXhnWdBF-1.jpg)
+![AC-Foley 方法概述图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/URPXhnWdBF-1.jpg)
 图2展示了多模态Transformer如何整合视频、文本和条件音频的信息。条件音频通过VAE编码器处理，提取完整的声学特征（而非仅语义），与文本、视频及同步特征一起构建多模态条件向量 `c`，通过adaLN注入Transformer。
 
 关键设计选择及其动机：
@@ -167,7 +167,7 @@ hiddenInHomeList: true
 - 模态必要性（表6）：移除同步特征（w/o sync）导致DeSync剧增（1.240）；移除音频条件（w/o audio）导致频谱失真（MCD↑）和分布匹配变差。证明多模态信息互补且必要。
 
 实验结果图表：
-![Foley生成定性示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/URPXhnWdBF-3.jpg)
+![Foley生成定性示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/URPXhnWdBF-3.jpg)
 图4：带音频条件的Foley生成定性示例。展示了模型根据不同的条件音频，为同一段静音视频（狗跑、开枪）生成具有不同声学特性的同步音频，直观体现了音色控制能力。
 
 ### ⚖️ 评分理由

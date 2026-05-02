@@ -18,8 +18,8 @@ layout: "posts"
 
 点击任务标签查看该方向所有论文：
 
+- [音频生成](/audio-paper-digest-blog/posts/iclr2026-task-043/)（14篇）
 - [语音对话系统](/audio-paper-digest-blog/posts/iclr2026-task-022/)（13篇）
-- [音频生成](/audio-paper-digest-blog/posts/iclr2026-task-043/)（13篇）
 - [音频问答](/audio-paper-digest-blog/posts/iclr2026-task-045/)（8篇）
 - [音乐生成](/audio-paper-digest-blog/posts/iclr2026-task-034/)（8篇）
 - [语音合成](/audio-paper-digest-blog/posts/iclr2026-task-019/)（7篇）
@@ -75,8 +75,8 @@ layout: "posts"
 
 | 方向 | 数量 | 分布 |
 |------|------|------|
+| #音频生成 | 14篇 | ██████████████ |
 | #语音对话系统 | 13篇 | █████████████ |
-| #音频生成 | 13篇 | █████████████ |
 | #音频问答 | 8篇 | ████████ |
 | #音乐生成 | 8篇 | ████████ |
 | #语音合成 | 7篇 | ███████ |
@@ -84,7 +84,7 @@ layout: "posts"
 | #音频分类 | 6篇 | ██████ |
 | #基准测试 | 6篇 | ██████ |
 
-### 📊 论文评分排行榜（132 篇，按分数降序）
+### 📊 论文评分排行榜（133 篇，按分数降序）
 
 | 排名 | 论文 | 评分 | 分档 | 主任务 |
 |------|------|------|------|------|
@@ -203,24 +203,24 @@ layout: "posts"
 | 113. | [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-02-latent-fourier-transform) | 7.5分 | 前25% | #音乐生成 |
 | 114. | [MIAM: Modality Imbalance-Aware Masking for Multimodal E](/audio-paper-digest-blog/posts/2026-05-02-miam-modality-imbalance-aware-masking-for) | 7.5分 | 前25% | #物种分布建模 |
 | 115. | [AudioX: A Unified Framework for Anything-to-Audio Gener](/audio-paper-digest-blog/posts/2026-05-02-audiox-a-unified-framework-for-anything-to-audio) | 7.5分 | 前25% | #音频生成 |
-| 116. | [Measuring Audio's Impact on Correctness: Audio-Contribu](/audio-paper-digest-blog/posts/2026-05-02-measuring-audios-impact-on-correctness-audio) | 7.5分 | 前25% | #音频问答 |
-| 117. | [AVERE: Improving Audiovisual Emotion Reasoning with Pre](/audio-paper-digest-blog/posts/2026-05-02-avere-improving-audiovisual-emotion-reasoning) | 7.5分 | 前25% | #情感识别 |
-| 118. | [Learnable Fractional Superlets with a Spectro-Temporal ](/audio-paper-digest-blog/posts/2026-05-02-learnable-fractional-superlets-with-a-spectro) | 7.5分 | 前25% | #语音情感识别 |
-| 119. | [SumRA: Parameter Efficient Fine-tuning with Singular Va](/audio-paper-digest-blog/posts/2026-05-02-sumra-parameter-efficient-fine-tuning-with) | 7.5分 | 前25% | #语音识别 |
-| 120. | [Better Together: Leveraging Unpaired Multimodal Data fo](/audio-paper-digest-blog/posts/2026-05-02-better-together-leveraging-unpaired-multimodal) | 7.0分 | 前25% | #多模态模型 |
-| 121. | [A Brain-Inspired Gating Mechanism Unlocks Robust Comput](/audio-paper-digest-blog/posts/2026-05-02-a-brain-inspired-gating-mechanism-unlocks-robust) | 7.0分 | 前25% | #音频分类 |
-| 122. | [Query-Guided Spatial–Temporal–Frequency Interaction for](/audio-paper-digest-blog/posts/2026-05-02-query-guided-spatialtemporalfrequency-interaction) | 7.0分 | 前25% | #音频问答 |
-| 123. | [Knowing When to Quit: Probabilistic Early Exits for Spe](/audio-paper-digest-blog/posts/2026-05-02-knowing-when-to-quit-probabilistic-early-exits) | 7.0分 | 前25% | #语音分离 |
-| 124. | [SongEcho: Towards Cover Song Generation via Instance-Ad](/audio-paper-digest-blog/posts/2026-05-02-songecho-towards-cover-song-generation-via) | 7.0分 | 前25% | #音乐生成 |
-| 125. | [VideoMathQA: Benchmarking Mathematical Reasoning via Mu](/audio-paper-digest-blog/posts/2026-05-02-videomathqa-benchmarking-mathematical-reasoning) | 7.0分 | 前25% | #多模态模型 |
-| 126. | [SNAP-UQ: Self-supervised Next-Activation Prediction for](/audio-paper-digest-blog/posts/2026-05-02-snap-uq-self-supervised-next-activation) | 7.0分 | 前25% | #音频分类 |
-| 127. | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimen](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi) | 7.0分 | 前25% | #音频生成 |
-| 128. | [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROAC](/audio-paper-digest-blog/posts/2026-05-02-tiny-but-mighty-a-software-hardware-co-design) | 7.0分 | 前25% | #多模态模型 |
-| 129. | [TTSDS2: Resources and Benchmark for Evaluating Human-Qu](/audio-paper-digest-blog/posts/2026-05-02-ttsds2-resources-and-benchmark-for-evaluating) | 7.0分 | 前25% | #模型评估 |
-| 130. | [OWL : Geometry-Aware Spatial Reasoning for Audio Large ](/audio-paper-digest-blog/posts/2026-05-02-owl-geometry-aware-spatial-reasoning-for-audio) | 7.0分 | 前25% | #空间音频 |
-| 131. | [A Hidden Semantic Bottleneck in Conditional Embeddings ](/audio-paper-digest-blog/posts/2026-05-02-a-hidden-semantic-bottleneck-in-conditional) | 6.5分 | 前50% | #生成模型 |
-| 132. | [From Natural Alignment to Conditional Controllability i](/audio-paper-digest-blog/posts/2026-05-02-from-natural-alignment-to-conditional) | 6.5分 | 前25% | #语音合成 |
-| 133 | [Syncphony: Synchronized Audio-to-Video Generation with ](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation) | N/A | - | - |
+| 116. | [Syncphony: Synchronized Audio-to-Video Generation with ](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation) | 7.5分 | 前25% | #音频生成 |
+| 117. | [Measuring Audio's Impact on Correctness: Audio-Contribu](/audio-paper-digest-blog/posts/2026-05-02-measuring-audios-impact-on-correctness-audio) | 7.5分 | 前25% | #音频问答 |
+| 118. | [AVERE: Improving Audiovisual Emotion Reasoning with Pre](/audio-paper-digest-blog/posts/2026-05-02-avere-improving-audiovisual-emotion-reasoning) | 7.5分 | 前25% | #情感识别 |
+| 119. | [Learnable Fractional Superlets with a Spectro-Temporal ](/audio-paper-digest-blog/posts/2026-05-02-learnable-fractional-superlets-with-a-spectro) | 7.5分 | 前25% | #语音情感识别 |
+| 120. | [SumRA: Parameter Efficient Fine-tuning with Singular Va](/audio-paper-digest-blog/posts/2026-05-02-sumra-parameter-efficient-fine-tuning-with) | 7.5分 | 前25% | #语音识别 |
+| 121. | [Better Together: Leveraging Unpaired Multimodal Data fo](/audio-paper-digest-blog/posts/2026-05-02-better-together-leveraging-unpaired-multimodal) | 7.0分 | 前25% | #多模态模型 |
+| 122. | [A Brain-Inspired Gating Mechanism Unlocks Robust Comput](/audio-paper-digest-blog/posts/2026-05-02-a-brain-inspired-gating-mechanism-unlocks-robust) | 7.0分 | 前25% | #音频分类 |
+| 123. | [Query-Guided Spatial–Temporal–Frequency Interaction for](/audio-paper-digest-blog/posts/2026-05-02-query-guided-spatialtemporalfrequency-interaction) | 7.0分 | 前25% | #音频问答 |
+| 124. | [Knowing When to Quit: Probabilistic Early Exits for Spe](/audio-paper-digest-blog/posts/2026-05-02-knowing-when-to-quit-probabilistic-early-exits) | 7.0分 | 前25% | #语音分离 |
+| 125. | [SongEcho: Towards Cover Song Generation via Instance-Ad](/audio-paper-digest-blog/posts/2026-05-02-songecho-towards-cover-song-generation-via) | 7.0分 | 前25% | #音乐生成 |
+| 126. | [VideoMathQA: Benchmarking Mathematical Reasoning via Mu](/audio-paper-digest-blog/posts/2026-05-02-videomathqa-benchmarking-mathematical-reasoning) | 7.0分 | 前25% | #多模态模型 |
+| 127. | [SNAP-UQ: Self-supervised Next-Activation Prediction for](/audio-paper-digest-blog/posts/2026-05-02-snap-uq-self-supervised-next-activation) | 7.0分 | 前25% | #音频分类 |
+| 128. | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimen](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi) | 7.0分 | 前25% | #音频生成 |
+| 129. | [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROAC](/audio-paper-digest-blog/posts/2026-05-02-tiny-but-mighty-a-software-hardware-co-design) | 7.0分 | 前25% | #多模态模型 |
+| 130. | [TTSDS2: Resources and Benchmark for Evaluating Human-Qu](/audio-paper-digest-blog/posts/2026-05-02-ttsds2-resources-and-benchmark-for-evaluating) | 7.0分 | 前25% | #模型评估 |
+| 131. | [OWL : Geometry-Aware Spatial Reasoning for Audio Large ](/audio-paper-digest-blog/posts/2026-05-02-owl-geometry-aware-spatial-reasoning-for-audio) | 7.0分 | 前25% | #空间音频 |
+| 132. | [A Hidden Semantic Bottleneck in Conditional Embeddings ](/audio-paper-digest-blog/posts/2026-05-02-a-hidden-semantic-bottleneck-in-conditional) | 6.5分 | 前50% | #生成模型 |
+| 133. | [From Natural Alignment to Conditional Controllability i](/audio-paper-digest-blog/posts/2026-05-02-from-natural-alignment-to-conditional) | 6.5分 | 前25% | #语音合成 |
 
 ---
 
@@ -4836,7 +4836,41 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 116. [Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models](/audio-paper-digest-blog/posts/2026-05-02-measuring-audios-impact-on-correctness-audio)
+### 116. [Syncphony: Synchronized Audio-to-Video Generation with Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation)
+
+✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #视频生成 #Transformer
+
+👥 **作者与机构**
+
+- 第一作者：Jibin Song（延世大学人工智能系， CineLingo）
+- 通讯作者：未说明（论文未明确指定通讯作者，根据邮箱格式推测 Youngjung Uh 为资深作者）
+- 作者列表：Jibin Song（延世大学人工智能系， CineLingo）、Mingi Kwon（延世大学人工智能系， CineLingo）、Jaeseok Jeong（延世大学人工智能系， CineLingo）、Youngjung Uh（延世大学人工智能系， CineLingo）
+
+💡 **毒舌点评**
+
+本文的亮点在于巧妙地解决了音频驱动视频生成中“精细同步”这一核心难题，其提出的 Motion-aware Loss 和 Audio Sync Guidance 机制设计简洁、逻辑清晰，实验设计（特别是新指标 CycleSync）有力地支撑了其主张。然而，短板在于其应用场景目前仍聚焦于非语音声音驱动的通用视觉运动，在需要高度语义理解的复杂场景（如音乐视频、对口型）中的泛化能力未被充分验证，且“Motion-aware Loss”并未显式区分音频相关运动与背景运动，鲁棒性存疑。
+
+🔗 **开源详情**
+
+- **代码**：论文中未提及具体代码链接，但承诺“will release our code”。
+- **模型权重**：论文中未提及具体权重链接，但承诺“will release... trained models”。
+- **数据集**：使用的AVSync15和TheGreatestHits是公开数据集，论文中提供了获取说明。
+- **Demo**：论文提供了一个项目页面链接 (https://jibin86.github.io/syncphony_project_page)，但未明确说明是否有在线Demo。
+- **复现材料**：论文提供了非常详细的补充材料，包括架构细节（D节）、损失函数说明（A节）、训练策略（I节）、超参数、消融实验设置、用户研究细节等，复现信息较为充分。
+- **论文中引用的开源项目**：Pyramid Flow（视频骨干）、DenseAV（音频编码器）、CLIP/T5（文本编码器）、V-AURA（用于CycleSync的V2A模型）、librosa（用于峰值检测）。
+
+📌 **核心摘要**
+
+1.  **问题**：现有音频到视频（A2V）生成模型由于间接的条件注入机制或有限的时间建模能力，难以实现音频与视频运动之间精细的时间同步。
+2.  **方法核心**：提出 Syncphony，一个基于预训练视频骨干（DiT架构）的 A2V 生成框架。其核心包括两个新组件：(1) **Motion-aware Loss**，通过在训练中赋予高运动区域更高的损失权重，强化模型对关键动作时机的学习；(2) **Audio Sync Guidance**，在推理时，通过一个禁用了音频层的“Off-sync模型”与完整模型进行引导插值，增强音频信号对运动的影响，同时保持视觉质量。
+3.  **创新**：直接将音频特征通过交叉注意力注入视觉生成过程；在时间维度上使用 Audio RoPE 注入精确的相对位置信息；提出首个面向高帧率视频的、基于重建的同步评估指标 CycleSync。
+4.  **主要实验**：在 AVSync15 和 The Greatest Hits 数据集上，Syncphony 在同步准确性（CycleSync 指标）和视觉质量（FID/FVD）上均优于现有方法。例如，在 TheGreatestHits 数据集上，CycleSync 分数达到 16.18±1.26，接近甚至超过真实视频的 15.99±1.5。
+5.  **实际意义**：为生成高质量、音画精确同步的视频内容（如自动配乐动画、虚拟主播、多媒体创作）提供了有效技术路径。
+6.  **主要局限性**：Motion-aware Loss 的加权基于真实运动幅度，并未显式过滤与音频无关的运动（如相机移动、背景晃动）；模型在非语音声音场景下验证，对语音或更复杂语义场景的泛化能力未展示；CycleSync 指标依赖于外部 V2A 模型的质量，可能存在偏差。
+
+---
+
+### 117. [Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models](/audio-paper-digest-blog/posts/2026-05-02-measuring-audios-impact-on-correctness-audio)
 
 ✅ **7.5/10** | 前25% | #音频问答 | #强化学习 | #音频大模型 #数据集
 
@@ -4880,7 +4914,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 117. [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-02-avere-improving-audiovisual-emotion-reasoning)
+### 118. [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-02-avere-improving-audiovisual-emotion-reasoning)
 
 ✅ **7.5/10** | 前25% | #情感识别 | #多模态模型 | #偏好优化 #基准测试
 
@@ -4917,7 +4951,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 118. [Learnable Fractional Superlets with a Spectro-Temporal Emotion Encoder for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-05-02-learnable-fractional-superlets-with-a-spectro)
+### 119. [Learnable Fractional Superlets with a Spectro-Temporal Emotion Encoder for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-05-02-learnable-fractional-superlets-with-a-spectro)
 
 ✅ **7.5/10** | 前25% | #语音情感识别 | #时频分析 | #端到端 #音频分类
 
@@ -4946,7 +4980,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 119. [SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis](/audio-paper-digest-blog/posts/2026-05-02-sumra-parameter-efficient-fine-tuning-with)
+### 120. [SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis](/audio-paper-digest-blog/posts/2026-05-02-sumra-parameter-efficient-fine-tuning-with)
 
 ✅ **7.5/10** | 前25% | #语音识别 | #参数高效微调 | #多语言 #低资源
 
@@ -4983,7 +5017,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 120. [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-02-better-together-leveraging-unpaired-multimodal)
+### 121. [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-02-better-together-leveraging-unpaired-multimodal)
 
 ✅ **7.0/10** | 前25% | #多模态模型 | #自监督学习 | #跨模态 #少样本
 
@@ -5031,7 +5065,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 121. [A Brain-Inspired Gating Mechanism Unlocks Robust Computation in Spiking Neural Networks](/audio-paper-digest-blog/posts/2026-05-02-a-brain-inspired-gating-mechanism-unlocks-robust)
+### 122. [A Brain-Inspired Gating Mechanism Unlocks Robust Computation in Spiking Neural Networks](/audio-paper-digest-blog/posts/2026-05-02-a-brain-inspired-gating-mechanism-unlocks-robust)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #脉冲神经网络 | #鲁棒性 #神经形态计算
 
@@ -5065,7 +5099,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 122. [Query-Guided Spatial–Temporal–Frequency Interaction for Music Audio–Visual Question Answering](/audio-paper-digest-blog/posts/2026-05-02-query-guided-spatialtemporalfrequency-interaction)
+### 123. [Query-Guided Spatial–Temporal–Frequency Interaction for Music Audio–Visual Question Answering](/audio-paper-digest-blog/posts/2026-05-02-query-guided-spatialtemporalfrequency-interaction)
 
 ✅ **7.0/10** | 前25% | #音频问答 | #多模态模型 | #时频分析 #跨模态
 
@@ -5099,7 +5133,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 123. [Knowing When to Quit: Probabilistic Early Exits for Speech Separation Networks](/audio-paper-digest-blog/posts/2026-05-02-knowing-when-to-quit-probabilistic-early-exits)
+### 124. [Knowing When to Quit: Probabilistic Early Exits for Speech Separation Networks](/audio-paper-digest-blog/posts/2026-05-02-knowing-when-to-quit-probabilistic-early-exits)
 
 ✅ **7.0/10** | 前25% | #语音分离 | #概率模型 | #线性RNN #计算效率
 
@@ -5133,7 +5167,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 124. [SongEcho: Towards Cover Song Generation via Instance-Adaptive Element-wise Linear Modulation](/audio-paper-digest-blog/posts/2026-05-02-songecho-towards-cover-song-generation-via)
+### 125. [SongEcho: Towards Cover Song Generation via Instance-Adaptive Element-wise Linear Modulation](/audio-paper-digest-blog/posts/2026-05-02-songecho-towards-cover-song-generation-via)
 
 ✅ **7.0/10** | 前25% | #音乐生成 | #扩散模型 | #条件生成 #数据集
 
@@ -5152,7 +5186,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 125. [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-02-videomathqa-benchmarking-mathematical-reasoning)
+### 126. [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-02-videomathqa-benchmarking-mathematical-reasoning)
 
 ✅ **7.0/10** | 前25% | #多模态模型 | #基准测试 | #大语言模型
 
@@ -5195,7 +5229,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 126. [SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML](/audio-paper-digest-blog/posts/2026-05-02-snap-uq-self-supervised-next-activation)
+### 127. [SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML](/audio-paper-digest-blog/posts/2026-05-02-snap-uq-self-supervised-next-activation)
 
 ✅ **7.0/10** | 前25% | #音频分类 | #自监督学习 | #鲁棒性 #模型评估
 
@@ -5236,7 +5270,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 127. [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensional Rewards for Video-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi)
+### 128. [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensional Rewards for Video-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #强化学习 | #扩散模型 #多模态模型
 
@@ -5270,7 +5304,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 128. [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR EFFICIENT MULTIMODAL IN- FERENCE ON BATTERY-POWERED SMALL DEVICES](/audio-paper-digest-blog/posts/2026-05-02-tiny-but-mighty-a-software-hardware-co-design)
+### 129. [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR EFFICIENT MULTIMODAL IN- FERENCE ON BATTERY-POWERED SMALL DEVICES](/audio-paper-digest-blog/posts/2026-05-02-tiny-but-mighty-a-software-hardware-co-design)
 
 ✅ **7.0/10** | 前25% | #多模态模型 | #实时处理 | #多通道 #开源工具
 
@@ -5310,7 +5344,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 129. [TTSDS2: Resources and Benchmark for Evaluating Human-Quality Text to Speech Systems](/audio-paper-digest-blog/posts/2026-05-02-ttsds2-resources-and-benchmark-for-evaluating)
+### 130. [TTSDS2: Resources and Benchmark for Evaluating Human-Quality Text to Speech Systems](/audio-paper-digest-blog/posts/2026-05-02-ttsds2-resources-and-benchmark-for-evaluating)
 
 ✅ **7.0/10** | 前25% | #模型评估 | #基准测试 | #语音合成 #多语言
 
@@ -5347,7 +5381,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 130. [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-02-owl-geometry-aware-spatial-reasoning-for-audio)
+### 131. [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-02-owl-geometry-aware-spatial-reasoning-for-audio)
 
 ✅ **7.0/10** | 前25% | #空间音频 | #音频大模型 | #声源定位 #链式思维
 
@@ -5381,7 +5415,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 131. [A Hidden Semantic Bottleneck in Conditional Embeddings of Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-02-a-hidden-semantic-bottleneck-in-conditional)
+### 132. [A Hidden Semantic Bottleneck in Conditional Embeddings of Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-02-a-hidden-semantic-bottleneck-in-conditional)
 
 ✅ **6.5/10** | 前50% | #生成模型 | #扩散模型 | #多模态模型 #模型评估
 
@@ -5431,7 +5465,7 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 
 ---
 
-### 132. [From Natural Alignment to Conditional Controllability in Multimodal Dialogue](/audio-paper-digest-blog/posts/2026-05-02-from-natural-alignment-to-conditional)
+### 133. [From Natural Alignment to Conditional Controllability in Multimodal Dialogue](/audio-paper-digest-blog/posts/2026-05-02-from-natural-alignment-to-conditional)
 
 ✅ **6.5/10** | 前25% | #语音合成 | #数据集 | #多模态模型 #基准测试
 
@@ -5481,6 +5515,4 @@ LRNNs通过将乘积结构激活函数“可学习化”，确实为表示高阶
 6.  **局限性**：工作重心在于数据集和评估框架的构建，未提出一个能统一处理多模态输入输出的端到端生成模型；数据集来源于影视作品，与真实日常对话可能存在域差距；部分依赖Gemini等大型多模态模型进行标注，引入了潜在偏差。
 
 ---
-
-### 133. [Syncphony: Synchronized Audio-to-Video Generation with Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation)
 

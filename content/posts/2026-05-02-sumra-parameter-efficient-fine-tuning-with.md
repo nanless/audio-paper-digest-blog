@@ -58,13 +58,13 @@ hiddenInHomeList: true
     *   初始化：对W₀进行奇异值分解（SVD）：W₀ = UΣV⊤。SumRA将矩阵Σ^(1/2)V⊤ ∈ ℝ^{k×k}按照特定策略（交错求和或贪心求和）“求和压缩”成矩阵A ∈ ℝ^{r×k}。A矩阵在训练过程中保持冻结。矩阵B初始化为零并可训练。
     *   训练：只更新B矩阵以及模型的归一化层参数，冻结模型原始权重W₀和初始化的A矩阵。
     *   多任务部署：对于不同的任务（如不同语言），可以共享同一个冻结的A矩阵，只需为每个任务存储和加载不同的B矩阵。
-![图1: 不同微调方法的对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/v23Pqcm6qp-0.png)
+![图1: 不同微调方法的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/v23Pqcm6qp-0.png)
 图1展示了全量微调、标准LoRA、PiSSA和SumRA的区别。SumRA（D）中，A矩阵是冻结的（蓝色），由求和后的奇异向量初始化，只有B矩阵（橙色）是可训练的。
 
-![图2: A矩阵初始化策略对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/v23Pqcm6qp-1.png)
+![图2: A矩阵初始化策略对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/v23Pqcm6qp-1.png)
 图2直观解释了核心动机：A) 标准LoRA随机初始化；B) PiSSA用顶部r个奇异向量初始化每行A；C) 每行A只影响一个概念子集；D) SumRA将多个奇异向量求和到一行A，使其能同时影响多个子集。
 
-![图3: 奇异向量求和策略](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/v23Pqcm6qp-2.png)
+![图3: 奇异向量求和策略](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/v23Pqcm6qp-2.png)
 图3展示了三种求和策略：A) 块求和会将重要的向量集中到一行，导致干扰；B) 交错求和和 C) 贪心求和则能均匀分配重要向量，最小化最大行负载。
 
 ### 💡 核心创新点
@@ -73,9 +73,9 @@ hiddenInHomeList: true
 2.  结构化求和策略以最小化干扰：认识到简单求和会导致重要向量间的破坏性干扰，提出了“交错求和”与“贪心求和”两种策略。其中贪心求和在理论上（附录A.1证明）能最优地最小化“最大行负载”（即分配到一行中的奇异值之和），确保重要信息分布均匀。
 3.  冻结A以实现极致参数效率与任务扩展性：继承并强化了LoRA-FA“冻结A，只训练B”的思想，但通过更优的初始化解决了LoRA-FA随机初始化导致性能差的问题。这使得在多任务场景下，A矩阵可共享，仅需存储B矩阵，存储成本线性降低（如图4所示）。
 4.  与模型平均的理论联系：论文从模型平均（Model Averaging）的视角解释了SumRA的有效性（图5）。SumRA的初始化相当于在训练前就对多个不同初始化方向的LoRA矩阵进行了求和集成，从而在单次训练中实现了集成学习的效果。
-![图4: 存储成本对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/v23Pqcm6qp-3.png)
+![图4: 存储成本对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/v23Pqcm6qp-3.png)
 图4清晰展示了在多任务场景下，LoRA/PiSSA为每个任务存储完整的A和B，而SumRA共享A，仅存储B，显著降低总存储开销。
-![图5: SumRA与模型平均的联系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/v23Pqcm6qp-4.png)
+![图5: SumRA与模型平均的联系](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/v23Pqcm6qp-4.png)
 图5阐释了交错求和策略如何等效于多个基于部分奇异向量初始化的LoRA A矩阵的加权平均。
 
 ### 🔬 细节详述

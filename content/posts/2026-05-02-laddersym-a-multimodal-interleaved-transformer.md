@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 LadderSym的整体架构可分为两个主要阶段：编码器阶段和解码器阶段。其核心输入是乐谱音频和练习音频，输出是标记了“正确”、“遗漏”、“多余”的音符序列。
 
-![LadderSym 架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cizuvfyQXs-2.png)
+![LadderSym 架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cizuvfyQXs-2.png)
 图3：LadderSym 架构：乐谱音频和练习音频分别输入Ladder编码器。编码器由多层组成，每一层都包含两个流（流A、流B）和一个交织的交叉注意力对齐模块。对齐后的两流特征被拼接（Concat），作为上下文（Context）输入到T5解码器。解码器的输入还包括一个由符号乐谱生成的“Sym提示”（Sym Prompt），置于序列起始。解码器以自回归方式生成类似MIDI的token序列，每个音符被标记为正确、遗漏或多余。
 
 主要组件：
@@ -179,10 +179,10 @@ LadderSym在参数更少（172M vs 192M）的情况下，编码器延迟和生�
 注意力模式可视化
 论文提供了多张注意力图来分析模型行为。
 
-![LadderSym 交叉注意力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cizuvfyQXs-7.png)
+![LadderSym 交叉注意力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cizuvfyQXs-7.png)
 图8：LadderSym 交叉注意力图：展示了不同层中练习流（y轴）对乐谱流（x轴）的注意力分布（已按音高维度平均）。浅色表示注意力值高。早期层显示出清晰的对角线结构，表明模型在学习时间对齐；深层则转向更抽象的对应关系。这证明了交织对齐模块的有效性。
 
-![第一层错误场景注意力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/cizuvfyQXs-8.png)
+![第一层错误场景注意力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/cizuvfyQXs-8.png)
 图9：第一层交叉注意力图（不同错误场景）：展示了在“遗漏”、“多余”、“错音”等不同错误类型下，第一层注意力图均呈强对角线模式，表明错误类型的区分可能发生在更深层。
 
 #

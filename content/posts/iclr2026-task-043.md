@@ -4,13 +4,13 @@ date: 2026-05-02
 draft: false
 tags: ["音频生成"]
 categories: [iclr-2026]
-description: "共 13 篇 ICLR 2026 音频生成 方向论文"
+description: "共 14 篇 ICLR 2026 音频生成 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 音频生成
 
-共 **13** 篇论文
+共 **14** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -30,7 +30,8 @@ hiddenInHomeList: true
 | 10. | [AC-Foley: Reference-Audio-Guided Video-to-Audio Synthesis wi](/audio-paper-digest-blog/posts/2026-05-02-ac-foley-reference-audio-guided-video-to-audio) | 7.5分 | 前25% |
 | 11. | [SmartDJ: Declarative Audio Editing with Audio Language Model](/audio-paper-digest-blog/posts/2026-05-02-smartdj-declarative-audio-editing-with-audio) | 7.5分 | 前25% |
 | 12. | [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-02-audiox-a-unified-framework-for-anything-to-audio) | 7.5分 | 前25% |
-| 13. | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensiona](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi) | 7.0分 | 前25% |
+| 13. | [Syncphony: Synchronized Audio-to-Video Generation with Diffu](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation) | 7.5分 | 前25% |
+| 14. | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensiona](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi) | 7.0分 | 前25% |
 
 ---
 
@@ -522,7 +523,41 @@ hiddenInHomeList: true
 
 ---
 
-### 13. [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensional Rewards for Video-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi)
+### 13. [Syncphony: Synchronized Audio-to-Video Generation with Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-02-syncphony-synchronized-audio-to-video-generation)
+
+✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #视频生成 #Transformer
+
+👥 **作者与机构**
+
+- 第一作者：Jibin Song（延世大学人工智能系， CineLingo）
+- 通讯作者：未说明（论文未明确指定通讯作者，根据邮箱格式推测 Youngjung Uh 为资深作者）
+- 作者列表：Jibin Song（延世大学人工智能系， CineLingo）、Mingi Kwon（延世大学人工智能系， CineLingo）、Jaeseok Jeong（延世大学人工智能系， CineLingo）、Youngjung Uh（延世大学人工智能系， CineLingo）
+
+💡 **毒舌点评**
+
+本文的亮点在于巧妙地解决了音频驱动视频生成中“精细同步”这一核心难题，其提出的 Motion-aware Loss 和 Audio Sync Guidance 机制设计简洁、逻辑清晰，实验设计（特别是新指标 CycleSync）有力地支撑了其主张。然而，短板在于其应用场景目前仍聚焦于非语音声音驱动的通用视觉运动，在需要高度语义理解的复杂场景（如音乐视频、对口型）中的泛化能力未被充分验证，且“Motion-aware Loss”并未显式区分音频相关运动与背景运动，鲁棒性存疑。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及具体代码链接，但承诺“will release our code”。
+- 模型权重：论文中未提及具体权重链接，但承诺“will release... trained models”。
+- 数据集：使用的AVSync15和TheGreatestHits是公开数据集，论文中提供了获取说明。
+- Demo：论文提供了一个项目页面链接 (https://jibin86.github.io/syncphony_project_page)，但未明确说明是否有在线Demo。
+- 复现材料：论文提供了非常详细的补充材料，包括架构细节（D节）、损失函数说明（A节）、训练策略（I节）、超参数、消融实验设置、用户研究细节等，复现信息较为充分。
+- 论文中引用的开源项目：Pyramid Flow（视频骨干）、DenseAV（音频编码器）、CLIP/T5（文本编码器）、V-AURA（用于CycleSync的V2A模型）、librosa（用于峰值检测）。
+
+📌 **核心摘要**
+
+1.  问题：现有音频到视频（A2V）生成模型由于间接的条件注入机制或有限的时间建模能力，难以实现音频与视频运动之间精细的时间同步。
+2.  方法核心：提出 Syncphony，一个基于预训练视频骨干（DiT架构）的 A2V 生成框架。其核心包括两个新组件：(1) Motion-aware Loss，通过在训练中赋予高运动区域更高的损失权重，强化模型对关键动作时机的学习；(2) Audio Sync Guidance，在推理时，通过一个禁用了音频层的“Off-sync模型”与完整模型进行引导插值，增强音频信号对运动的影响，同时保持视觉质量。
+3.  创新：直接将音频特征通过交叉注意力注入视觉生成过程；在时间维度上使用 Audio RoPE 注入精确的相对位置信息；提出首个面向高帧率视频的、基于重建的同步评估指标 CycleSync。
+4.  主要实验：在 AVSync15 和 The Greatest Hits 数据集上，Syncphony 在同步准确性（CycleSync 指标）和视觉质量（FID/FVD）上均优于现有方法。例如，在 TheGreatestHits 数据集上，CycleSync 分数达到 16.18±1.26，接近甚至超过真实视频的 15.99±1.5。
+5.  实际意义：为生成高质量、音画精确同步的视频内容（如自动配乐动画、虚拟主播、多媒体创作）提供了有效技术路径。
+6.  主要局限性：Motion-aware Loss 的加权基于真实运动幅度，并未显式过滤与音频无关的运动（如相机移动、背景晃动）；模型在非语音声音场景下验证，对语音或更复杂语义场景的泛化能力未展示；CycleSync 指标依赖于外部 V2A 模型的质量，可能存在偏差。
+
+---
+
+### 14. [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensional Rewards for Video-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-02-prismaudio-decomposed-chain-of-thought-and-multi)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #强化学习 | #扩散模型 #多模态模型
 

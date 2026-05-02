@@ -50,7 +50,7 @@ hiddenInHomeList: true
 | UALM-Gen (Ours) | 74.43 | 0.54 | 75.14 | 0.65 |
 | UALM (Unified, Ours) | 83.69 | 0.54 | 65.87 | 0.62 |
 
-![图5：消融实验分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/TsdlOjcQNu-4.png)
+![图5：消融实验分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/TsdlOjcQNu-4.png)
 图5说明：展示了CFG、DPO和增强VAE对生成质量的逐步提升效果，以及数据规模对性能的关键影响。
 
 5. 实际意义：为构建能够“听懂、创作、思考”的通用音频AI提供了可行的技术路线和范例，有望革新音乐创作、声音设计、智能助手等需要复杂音频交互的应用场景。
@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 UALM的整体架构如图2所示，是一个基于预训练解码器式文本LLM（Qwen2.5-7B）扩展的多模态模型。
 
-![图2：UALM架构概览与数据混合比例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/TsdlOjcQNu-1.png)
+![图2：UALM架构概览与数据混合比例](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/TsdlOjcQNu-1.png)
 图2说明：展示了UALM的组成：以冻结的预训练LLM为核心，通过MLP适配器连接音频编码器处理输入音频，通过扩展词表的嵌入层处理输出音频token。
 
 - 音频输入路径：采用“编码器-适配器-LLM”架构。音频波形（16kHz单声道）先经过一个声学编码器（来自Audio Flamingo 3，帧率25Hz），提取连续表示。然后通过一个单层MLP适配器进行模态对齐，将其映射到LLM的输入嵌入空间，与文本token一起作为LLM的输入。
@@ -119,7 +119,7 @@ UALM的整体架构如图2所示，是一个基于预训练解码器式文本LLM
 
 多模态推理：主观评估（5分制）显示，UALM-Reason在“丰富化”、“对话”、“自我反思”三个任务上的得分均显著高于基础UALM。
 
-![图6：训练过程中能力变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/TsdlOjcQNu-5.png)
+![图6：训练过程中能力变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/TsdlOjcQNu-5.png)
 图6说明：展示了音频理解能力（a）比音频生成能力（b）收敛更快的现象，解释了为何需要数据混合时对生成数据进行上采样。
 
 消融实验（表8）：证明了CFG、DPO和增强VAE对生成质量的贡献。例如，加入CFG后，AudioCaps的CL从0.25提升至0.51；加入增强VAE后，FD从186.01大幅改善至75.14。

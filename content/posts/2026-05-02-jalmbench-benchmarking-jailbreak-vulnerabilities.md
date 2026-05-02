@@ -125,10 +125,10 @@ JALMBench本身不是一个模型，而是一个用于评估模型的基准测�
 | Gemini-2.0 | 93.9 | 9.3 | 97.6 | 95.1 |
 | 平均 | 45.4 | 54.2 | 88.9 | 96.2 |
 
-![文本与文本迁移攻击成功率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-1.png)
+![文本与文本迁移攻击成功率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-1.png)
 图2展示了12个LALM在文本模态和音频模态下，面对原始有害查询及四种文本迁移攻击时的ASR。关键结论：PAP攻击最为有效；LLaMA-Omni在音频模态下远脆弱于文本模态。
 
-![音频原生攻击成功率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-2.png)
+![音频原生攻击成功率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-2.png)
 图3展示了12个LALM面对四种音频原生攻击时的ASR。关键结论：AdvWave攻击近乎完美（平均96.2%）；大多数模型在音频原生攻击下极其脆弱。
 
 主要结果表���3：声音多样性影响的平均ASR（%）
@@ -160,27 +160,27 @@ JALMBench本身不是一个模型，而是一个用于评估模型的基准测�
 
 攻击效率分析图
 
-![攻击效率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-3.png)
+![攻击效率](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-3.png)
 图4展示了不同攻击方法达到不同ASR所需的时间（每查询）。关键结论：高效攻击（如SSJ, AMSE）在<10秒内可实现约40% ASR，构成现实威胁；而高ASR攻击（如AdvWave, BoN）需要更长时间（>100秒）。
 
 话题敏感性分析图
 
-![话题影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-4.png)
+![话题影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-4.png)
 图5展示了不同有害话题在所有模型和攻击下的平均ASR。关键结论：明确的“仇恨与骚扰”内容ASR最低（41%），而隐晦的“错误信息”ASR较高（67%）。
 
 语言影响分析图
 
-![语言影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-5.jpg)
+![语言影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-5.jpg)
 图6展示了不同语言下所有LALM的平均ASR。关键结论：非英语语言的ASR普遍低于英语（AHarm），可能与训练数据不平衡有关。
 
 架构影响分析图
 
-![架构影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-6.jpg)
+![架构影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-6.jpg)
 图7展示了LLaMA-Omni、Qwen2-Audio和GLM-4-Voice在良性、有害和对抗性查询下的最后一层隐藏状态t-SNE可视化。关键结论：LLaMA-Omni（连续特征）存在严重的模态安全鸿沟；GLM-4-Voice（离散化编码）实现了文本和音频的良好对齐。
 
 效用-安全权衡分析图
 
-![效用-安全权衡](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/DJkQ236C8B-7.png)
+![效用-安全权衡](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/DJkQ236C8B-7.png)
 图8(a)展示了不同防御方法在ASR降低（安全）和QA准确率（效用）上的权衡，LLaMA-Guard和AdaShield是帕累托最优方法。图8(b)展示了不同模型在无防御下的拒绝率与效用的关系。
 
 主要结论：实验证明当前LALM普遍存在严重的越狱漏洞，尤其是面对音频原生攻击时。模型的音频编码策略（离散 vs. 连续）对其安全泛化能力有决定性影响。现有的通用防御方法效果有限，需要为音频模态设计专用防御。

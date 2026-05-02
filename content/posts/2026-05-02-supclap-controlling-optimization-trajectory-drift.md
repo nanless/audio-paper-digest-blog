@@ -66,7 +66,7 @@ SupCLAP的架构并未提出全新的编码器模型，而是在标准的对称�
 - 数据流与交互：`Lsvr` 的梯度会通过链式法则反向传播到文本编码器。附录D的数学分析表明，该梯度等效于对原始推力的垂直分量施加一个 `(1 - R / ||a+ - t+||)` 的缩放因子，从而选择性地抑制它。因此，`Lsvr` 并未引入新的编码器结构，而是通过改变梯度景观来优化训练过程。
 - 关键设计选择：引入 `tsup` 的动机是“重塑梯度空间”。其参数 `R` 不是直接监督学习的，而是通过无监督方式建模（见下节）。
 
-![优化轨迹漂移分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/S1CW6PLsqS-0.jpg)
+![优化轨迹漂移分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/S1CW6PLsqS-0.jpg)
 图1：优化轨迹漂移分析。该图用于验证“轨迹漂移”的存在。它衡量了更新向量与“拉力”向量之间的余弦相似度，相似度越高表示漂移越小。图中显示，相比InfoNCE损失，SVR方法（尤其是DynamicSVR）的相似度更高，表明其有效缓解了漂移。
 
 ### 💡 核心创新点
@@ -117,7 +117,7 @@ SupCLAP的架构并未提出全新的编码器模型，而是在标准的对称�
 
 结论：在InfoNCE和SigLIP基线上，添加SVR（尤其是bi-DynamicSVR）均带来显著性能提升。在AudioCaps T2A R@1上，相比InfoNCE提升2.29%，相比SigLIP提升6.35%。
 
-![零样本分类性能](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/S1CW6PLsqS-1.png)
+![零样本分类性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/S1CW6PLsqS-1.png)
 图3：语义半径变化结果。该图展示了训练过程中语义半径 `R` 的变化趋势。随着训练进行，`R` 逐渐减小。StaticSVR的曲线平滑，而DynamicSVR的曲线有波动。这表明模型在训练初期需要更强的正则化（大`R`）来稳定轨迹，后期则减弱以保留更多负样本信息。
 
 表2：CLAP模型的零样本音频分类性能
@@ -141,7 +141,7 @@ SupCLAP的架构并未提出全新的编码器模型，而是在标准的对称�
 
 结论：(1) 双向SVR优于单向；(2) DynamicSVR优于StaticSVR；(3) 为DynamicSVR添加约束项 `Lcons` 能进一步提升性能。
 
-![收敛速度对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/S1CW6PLsqS-4.png)
+![收敛速度对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/S1CW6PLsqS-4.png)
 图5：基线损失与SVR之间收敛速度的比较。四幅图分别展示了在SigLIP和InfoNCE基线上，添加SVR（StaticSVR和DynamicSVR）后，A2T和T2A任务的R@1随训练轮数的变化曲线。可以看到，SVR方法在早期epoch就能达到更高的性能，并始终保持优势，直观地证明了其稳定优化轨迹、加速收敛的效果。
 
 ### ⚖️ 评分理由

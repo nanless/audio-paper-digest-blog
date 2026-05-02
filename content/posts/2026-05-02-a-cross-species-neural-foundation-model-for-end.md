@@ -55,7 +55,7 @@ hiddenInHomeList: true
 | BIT Cascaded + Ensemble | Brain-to-Text '24 | 级联 | 5.10% |
 | Feghhi et al. (2025) + Ensemble | Brain-to-Text '24 | 级联 | 5.68% |
 
-![图2：不同基线模型在尝试和想象语音解码上的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
+![图2：不同基线模型在尝试和想象语音解码上的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
 图2展示了预训练（BIT-Human, BIT-All）相比从头训练（BIT-TFS）和RNN基线在两种任务和两种解码框架下的显著优势，尤其在想象语音任务上提升巨大。
 
 5.  实际意义：显著推进了端到端神经语音解码的性能，使其首次接近甚至超越成熟的级联框架，为未来更强大、更易优化的语音BCI系统奠定了基础。
@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1：BIT框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-0.jpg)
+![图1：BIT框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-0.jpg)
 整体流程：神经活动输入 -> Transformer神经编码器 -> 通过MLP投影器映射到文本嵌入空间 -> 与文本提示和目标文本嵌入拼接 -> Audio-LLM解码器自回归生成文本。
 
 1.  Transformer神经编码器：
@@ -145,7 +145,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 主要基准测试结果：
-![图2：不同基线模型在尝试和想象语音解码上的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
+![图2：不同基线模型在尝试和想象语音解码上的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
 
 表1：Brain-to-Text '24 竞赛结果（尝试语音，T12）
 
@@ -174,7 +174,7 @@ hiddenInHomeList: true
 | BIT Cascaded + Ensemble | 级联 | 1.76% (排名第1) |
 
 关键消融实验结果：
-![图3：LLM解码器在不同模态、模型大小、提示设计和对比学习使用下的消融研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-2.jpg)
+![图3：LLM解码器在不同模态、模型大小、提示设计和对比学习使用下的消融研究](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-2.jpg)
 结论：
 1.  解码器类型：在相似参数规模下，音频LLM（蓝色）持续优于文本LLM（黄色）。Aero1-Audio 1.5B表现最佳。
 2.  模态处理：将神经活动视为“神经模态”（实色）略优于视为“音频模态”（透明），但两者都受益于Audio-LLM的音频预训练知识。
@@ -182,11 +182,11 @@ hiddenInHomeList: true
 4.  对比学习：使用对比学习（非对角线阴影区域）一致降低WER。
 
 想象语音解码结果：
-![图2B：想象语音解码性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
+![图2B：想象语音解码性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-1.jpg)
 图2B显示，对于低资源的想象语音任务（50词词汇），预训练（BIT-Human, BIT-All）带来巨大提升（WER降低39-45%），且BIT-All（跨物种预训练）优于BIT-Cross-Task-Only（同被试监督预训练）。
 
 跨任务泛化分析：
-![图4：BIT对齐尝试与想象语音神经嵌入](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/Lp1noMpMUG-3.jpg)
+![图4：BIT对齐尝试与想象语音神经嵌入](/audio-paper-digest-blog/images/iclr-2026/2026-05-02/Lp1noMpMUG-3.jpg)
 图4B（原始PCA）显示两种任务的神经表征明显分离；图4C（BIT嵌入PCA）显示两者在语义空间中高度对齐。图4A的RSA分析表明，预训练后的编码器输出与Audio-LLM文本嵌入的表示相似度更高。图4D的注意力权重可视化表明两种任务存在相似的神经-文本时间对齐模式。
 
 ### ⚖️ 评分理由
