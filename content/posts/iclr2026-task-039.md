@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频修复 论文列表"
+title: "ICLR 2026 - 音视频描述 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频修复"]
+tags: ["音视频描述"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频修复 方向论文"
+description: "共 1 篇 ICLR 2026 音视频描述 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频修复
+# ICLR 2026 - 音视频描述
 
 共 **1** 篇论文
 
@@ -18,80 +18,51 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete) | 8.5分 | 前25% |
+| 🥇 | [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omn](/audio-paper-digest-blog/posts/2026-05-03-omni-captioner-data-pipeline-models-and-benchmark) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete)
+### 🥇 [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omni Detailed Perception](/audio-paper-digest-blog/posts/2026-05-03-omni-captioner-data-pipeline-models-and-benchmark)
 
-🔥 **8.5/10** | 前25% | #音频修复 | #扩散模型 | #音频生成 #零样本
+✅ **7.5/10** | 前25% | #音视频描述 | #多模态模型 | #基准测试 #预训练
 
 👥 **作者与机构**
 
-- 第一作者：Tali Dror（本-古里安大学电气与计算机工程学院）、Iftach Shoham（本-古里安大学计算机与信息科学学院，数据科学研究中心）
-- 通讯作者：Eliya Nachmani（本-古里安大学电气与计算机工程学院）
-- 作者列表：
-    - Tali Dror*（本-古里安大学电气与计算机工程学院）
-    - Iftach Shoham*（本-古里安大学计算机与信息科学学院，数据科学研究中心）
-    - Moshe Buchris（本-古里安大学电气与计算机工程学院）
-    - Oren Gal（海法大学）
-    - Haim H. Permuter（本-古里安大学电气与计算机工程学院）
-    - Gilad Katz（本-古里安大学计算机与信息科学学院，数据科学研究中心）
-    - Eliya Nachmani（本-古里安大学电气与计算机工程学院）
+- 第一作者：Ziyang Ma（Shanghai Jiao Tong University， Nanyang Technological University）
+- 通讯作者：Xie Chen（Shanghai Jiao Tong University， Shanghai Innovation Institution）
+- 作者列表：Ziyang Ma（Shanghai Jiao Tong University, Nanyang Technological University）、Ruiyang Xu（Shanghai Jiao Tong University）、Zhenghao Xing（The Chinese University of Hong Kong）、Yunfei Chu（Qwen Team, Alibaba Group）、Yuxuan Wang（Qwen Team, Alibaba Group）、Jinzheng He（Qwen Team, Alibaba Group）、Jin Xu（Qwen Team, Alibaba Group）、Pheng-Ann Heng（The Chinese University of Hong Kong）、Kai Yu（Shanghai Jiao Tong University）、Junyang Lin（Qwen Team, Alibaba Group）、Eng Siong Chng（Nanyang Technological University）、Xie Chen（Shanghai Jiao Tong University, Shanghai Innovation Institution）
 
 💡 **毒舌点评**
 
-亮点：这篇论文漂亮地完成了“跨界”——将主要处理文本或图像的离散扩散模型，成功嫁接到音频修复任务上，并通过引入针对序列建模的平滑正则化和结构化掩码策略来适配音频的连续性特点，思路新颖且有效。短板：模型的性能天花板被锁定在预训练分词器（WavTokenizer）的重建质量上，且训练时“先编码后掩码”与推理时“先掩码后编码”的不匹配是已知却未彻底解决的问题，这让整个方法显得不够独立完整。
+这篇论文提供了一个从数据生成、模型训练到评估的完整“端到端”解决方案，系统性很强，且在多个基准测试上取得了SOTA结果，实证工作扎实。然而，其核心数据生成引擎“Omni-Detective”本质上是“用强大的闭源工具（Gemini, GPT）来为开源工具生成训练数据”，这种“以彼之矛，攻彼之盾”的模式虽然有效，但创新上限和通用性略受质疑，且新提出的评估基准Omni-Cloze的有效性仍需更广泛的社区检验。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了代码仓库链接：`https://github.com/iftachShoham/AIDD`。
-- 模型权重：论文中未提及是否公开模型权重。
-- 数据集：使用了公开的MusicNet和MAESTRO数据集，但论文中未说明具体获取或预处理脚本。
-- Demo：论文中未提及在线演示链接。
-- 复现材料：论文提供了非常详细的超参数设置（见补充材料表8）、训练环境（单张A6000 GPU）、训练步数和时长，复现信息较为充分。
-- 论文中引用的开源项目：依赖于WavTokenizer（Ji et al., 2024）作为音频分词器，并提及了Diffusion Transformer (DiT)（Peebles & Xie, 2023）架构。
+- 代码：提供。论文明确指出所有数据流水线、模型和基准均已开源，并提供了GitHub仓库链接：`https://github.com/ddlBoJack/Omni-Captioner`。
+- 模型权重：已提及公开。论文标题包含“Models”，并承诺开源，可合理推断Audio-Captioner和Omni-Captioner的模型权重将随代码发布。
+- 数据集：已提及公开。论文承诺开源Omni-Detective流水线生成的数据集以及Omni-Cloze评估基准。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供。附录A详细列出了训练数据细节、提示模板和模型超参数（表6）。附录B详述了基准构建流程和统计数据。附录C提供了更多评估结果和设置。
+- 论文中引用的开源项目：主要依赖了Qwen-2.5-Omni作为骨干模型。数据生成流水线中使用了Gemini系列和GPT-4o等API作为工具（闭源）。训练数据基于公开的VGGSound2和FineVideo3数据集。评估基准VDC和video-SALMONN 2是先前工作。
+- 复现壁垒：论文中未提及开源计划。但根据其承诺和内容，主要复现壁垒在于完全执行Omni-Detective流水线需要访问Gemini Pro/Flash和GPT-4o等付费API，这会产生持续的成本。
 
 📌 **核心摘要**
 
-1.  问题：音频修复旨在恢复录音中缺失或损坏的片段。现有基���扩散模型的方法在处理大时间跨度的缺失区域（长间隙）时性能会下降，难以保持语义连贯性。
-2.  方法核心：提出音频修复离散扩散模型（AIDD），首次将离散扩散模型应用于令牌化的音频表示。方法流程为：使用预训练的WavTokenizer将音频编码为离散令牌序列；在离散令牌空间上，使用一个扩散Transformer（DiT）模型通过反向扩散过程预测被掩码的令牌；最后将预测的令牌解码回波形。
-3.  创新点：与已有连续扩散（在波形或频谱图上操作）的方法不同，AIDD在离散潜在空间进行扩散，能更好地捕捉高级语义结构。具体创新包括：(1) 首次在音乐修复中应用离散扩散；(2) 提出跨度掩码（Span Masking） 策略模拟更自然的局部到全局损坏过程；(3) 引入导数正则化损失，约束预测令牌嵌入的时序平滑性，以生成更连贯的结果。
-4.  主要实验结果：在MusicNet和MAESTRO数据集上，针对150ms至750ms的间隙进行评估。在MusicNet上，AIDD在大多数间隙长度下优于强基线（如CQT-Diff+）。例如，在300ms间隙时，AIDD的FAD（3.549）相比CQT-Diff+（4.652）降低了约24%。在MAESTRO上，AIDD在375ms间隙的ODG得分（-2.303）显著优于所有基线（最佳基线为-2.800）。主观MOS测试也显示AIDD（3.64）优于其他方法（3.51）。
-5.  实际意义：该方法为音频修复，特别是长间隙修复，提供了一种稳定且语义一致的新范式。其基于令牌的框架也可能扩展到其他音频生成任务。
-6.  主要局限性：性能受限于底层分词器（如WavTokenizer）的带宽和质量；存在训练（掩码干净令牌）与推理（掩码含间隙音频后编码）的不匹配；输出音频被限制在分词器的采样率（如24kHz）。
-
-### 实验结果关键表格：
-
-表1：MusicNet数据集不同间隙长度性能对比
-| 方法 | 150 ms | 200 ms | 250 ms | 300 ms |
-| :--- | :--- | :--- | :--- | :--- |
-| | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ |
-| Masked | 16.001 0.555 -3.873 | 18.244 0.763 -3.881 | 23.583 0.971 -3.891 | 33.342 1.162 -3.897 |
-| LPC | 3.172 0.184 -3.351 | 4.883 0.258 -3.467 | 7.934 0.336 -3.512 | 11.907 0.415 -3.550 |
-| A-SPAIN-L | 6.121 0.198 -3.668 | 12.038 0.311 -3.767 | 16.181 0.445 -3.801 | 21.574 0.610 -3.818 |
-| CQT-Diff+ | 1.525 0.164 -3.559 | 2.619 0.218 -3.651 | 3.202 0.272 -3.891 | 4.652 0.324 -3.711 |
-| AIDD | 1.866 0.162 -3.215 | 2.391 0.209 -3.250 | 2.438 0.260 -3.274 | 3.549 0.297 -3.284 |
-
-表2：MAESTRO数据集ODG (PEA-Q)得分对比
-| 方法 | 375 ms (↑) | 750 ms (↑) |
-| :--- | :--- | :--- |
-| GACELA | -3.232 ± 0.232 | -3.318 ± 0.202 |
-| bin2bin | -2.892 ± 0.510 | -3.039 ± 0.495 |
-| bin2bin-MIDI | -2.800 ± 0.491 | -2.976 ± 0.456 |
-| AIDD | -2.303 ± 0.692 | -2.596 ± 1.300 |
-
-表3：主观MOS测试结果（MAESTRO数据集）
-| 方法 | MOS (↑) |
-| :--- | :--- |
-| Original | 4.12 ± 0.96 |
-| GACELA | 3.51 ± 1.33 |
-| CQT-Diff+ | 3.51 ± 1.34 |
-| AIDD (WavTokenizer 24kHz) | 3.64 ± 1.26 |
-
-#
+1.  解决的问题：当前全模态语言模型（OLMs）在生成详细描述时，存在一个核心矛盾：描述越详细，包含的细粒度信息越多，但同时产生的幻觉（事实性错误）也同步增长（论文称之为“共生增长”）。现有方法难以平衡细节覆盖与事实准确性。
+2.  方法核心：提出了一个三合一的解决方案：
+    *   Omni-Detective：一个模拟侦探工作的代理式数据生成流水线。它通过多轮交互，调用多种工具（如ASR, OCR, MLLM）从音视频中收集、验证并整合证据，以生成高细节、低幻觉的标注数据。
+    *   Omni-Captioner：基于Qwen-2.5-Omni-7B骨架，采用两阶段课程学习训练的音视频详细描述模型。第一阶段冻结视觉编码器，专注音频细节对齐；第二阶段联合优化，生成跨模态的连贯叙述。
+    *   Omni-Cloze：首个覆盖音频、视觉和音视频场景的填空式详细描述评估基准，通过带“未提及”选项的选择题，稳定高效地评估细节完整性与幻觉。
+3.  与已有方法相比新在哪里：首次系统性地研究并试图解耦“细节”与“幻觉”的共生关系。Omni-Detective摒弃了传统的单轮提示生成数据的方式，采用了迭代、多工具、跨模态验证的代理流程。模型训练采用了针对模态不平衡设计的课程学习。评估方面，Omni-Cloze在覆盖模态（AV）、评估问题数量和效率（单次LLM调用）上均优于现有VDC基准。
+4.  主要实验结果：
+    *   直接评估：Omni-Captioner在VDC基准上达到SOTA（准确率55.0%），在video-SALMONN 2测试集上实现了细节（17.8%遗漏率）与幻觉（10.9%幻觉率）的最佳平衡。
+    *   级联评估（先生成描述再QA）：Audio-Captioner在音频QA基准MMAU（70.0%）和MMAR（59.8%）上超越所有开源模型及Gemini 2.5 Flash。Omni-Captioner在音视频QA基准Video-MME, Video-Holmes, WorldSense, Daily-Omni上均取得开源模型最佳。
+    *   新基准评估：在Omni-Cloze上，Audio-Captioner（音频53.2%）和Omni-Captioner（总56.4%）均大幅超越所有现有基线，包括Gemini 2.5 Pro。
+    *   分析：Omni-Detective分析显示，增加迭代步数可稳步提升细节率，但幻觉率收敛较早。Omni-Cloze的自动评估与人类偏好（Elo分数）相关性（r=0.91）高于VDC（r=0.86）。
+5.  实际意义：为开发更可靠、更丰富的多模态感知系统提供了完整的技术栈（数据、模型、评估）。高质量的细粒度描述对于辅助AI、科学报告、自主智能体等需要精确、全面理解音视频内容的应用至关重要。
+6.  主要局限性：Omni-Detective流水线高度依赖外部、部分闭源的MLLM和工具，其效果受制于这些工具的天花板。论文自述无法检测所有类型的幻觉（如完全无关的内容生成）。提出的Omni-Cloze基准虽通过人工验证，但其评估范式的普适性和长期稳定性有待更多研究验证。
 
 ---
 

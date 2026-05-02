@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音情感识别 论文列表"
+title: "ICLR 2026 - 语音对话系统 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音情感识别"]
+tags: ["语音对话系统"]
 categories: [iclr-2026]
-description: "共 4 篇 ICLR 2026 语音情感识别 方向论文"
+description: "共 8 篇 ICLR 2026 语音对话系统 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音情感识别
+# ICLR 2026 - 语音对话系统
 
-共 **4** 篇论文
+共 **8** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,156 +18,318 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Learnable Fractional Superlets with a Spectro-Temporal Emoti](/audio-paper-digest-blog/posts/2026-05-03-learnable-fractional-superlets-with-a-spectro) | 8.0分 | 前25% |
-| 🥈 | [VowelPrompt: Hearing Speech Emotions from Text via Vowel-lev](/audio-paper-digest-blog/posts/2026-05-03-vowelprompt-hearing-speech-emotions-from-text-via) | 7.5分 | 前25% |
-| 🥉 | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning) | 7.5分 | 前25% |
-| 4. | [EmotionThinker: Prosody-Aware Reinforcement Learning for Exp](/audio-paper-digest-blog/posts/2026-05-03-emotionthinker-prosody-aware-reinforcement) | 7.5分 | 前25% |
+| 🥇 | [ParaS2S: Benchmarking and Aligning Spoken Language Models fo](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language) | 8.5分 | 前25% |
+| 🥈 | [From Text to Talk: Audio-Language Model Needs Non-Autoregres](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non) | 8.0分 | 前25% |
+| 🥉 | [STITCH: Simultaneous Thinking and Talking with Chunked Reaso](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with) | 7.5分 | 前25% |
+| 4. | [WearVox: An Egocentric Multichannel Voice Assistant Benchmar](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice) | 7.5分 | 前25% |
+| 5. | [Speech World Model: Causal State–Action Planning with Explic](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning) | 7.5分 | 前25% |
+| 6. | [Human or Machine? A Preliminary Turing Test for Speech-to-Sp](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for) | 7.0分 | 前25% |
+| 7. | [Can Speech LLMs Think while Listening?](/audio-paper-digest-blog/posts/2026-05-03-can-speech-llms-think-while-listening) | 7.0分 | 前25% |
+| 8. | [DrVoice: Parallel Speech-Text Voice Conversation Model via D](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Learnable Fractional Superlets with a Spectro-Temporal Emotion Encoder for Speech Emotion Recognition](/audio-paper-digest-blog/posts/2026-05-03-learnable-fractional-superlets-with-a-spectro)
+### 🥇 [ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language)
 
-🔥 **8.0/10** | 前25% | #语音情感识别 | #时频分析 | #端到端 #语音增强
+🔥 **8.5/10** | 前25% | #语音对话系统 | #强化学习 | #基准测试 #语音情感识别
 
 👥 **作者与机构**
 
-- 第一作者：Alaa Nfissi (Concordia University, Data Science Laboratory (DOT-Lab), Université TÉLUQ)
-- 通讯作者：未说明（论文中未明确标注通讯作者）
-- 作者列表：Alaa Nfissi（Concordia University， DOT-Lab, Université TÉLUQ）、Wassim Bouachir（DOT-Lab, Université TÉLUQ）、Nizar Bouguila（Concordia Institute for Information Systems Engineering, Concordia University）、Brian Mishara（Psychology Department, University of Qu´ebec at Montr´eal；Center for Research and Intervention on Suicide, Ethical Issues and End-of-Life Practices）
+- 第一作者：Shu-wen Yang（台湾大学通讯工程研究所， 字节跳动Seed）†
+- 通讯作者：Lu Lu（字节跳动Seed）†， Andy T. Liu（字节跳动Seed）† （论文中用†表示共同通讯）
+- 作者列表：
+  - Shu-wen Yang（台湾大学通讯工程研究所， 字节跳动Seed）
+  - Ming Tu（字节跳动Seed）†
+  - Andy T. Liu（字节跳动Seed）†
+  - Xinghua Qu（字节跳动Seed）
+  - Hung-yi Lee（台湾大学通讯工程研究所）
+  - Lu Lu（字节跳动Seed）†
+  - Yuxuan Wang（字节跳动Seed）
+  - Yonghui Wu（字节跳动Seed）
 
 💡 **毒舌点评**
 
-亮点：将小波分析中的“Superlet”概念与深度学习完美融合，提出了理论上坚实、端到端可训练的LFST前端，彻底摒弃了传统固定时频变换的妥协，在多个数据集上实现了SOTA，尤其在嘈杂电话语音数据（NSPL-CRISE）上优势明显。短板：LFST前端的计算开销（201.5 GFLOPs）是STFT的数百倍，是LEAF的4.5倍，这种“重前端、轻编码器”的策略在实时或资源受限场景下的部署将面临严峻挑战，论文对此trade-off的讨论略显不足。
+亮点：论文巧妙地将强化学习的“探索-奖励”范式应用于解决高质量副语言标注数据稀缺的痛点，并用一个精心设计的、解耦内容与风格的多阶段自动评估器作为“裁判”，实现了数据高效的模型对齐。  
+短板：那个号称能抵抗风格幻觉的多阶段评估器，其训练依赖的“PolyTone”数据集构建过程描述不够透明，且奖励模型最终是用LoRA微调一个闭源API（GPT-4o）来充当评分器吗？这多少让“可复现的开源框架”承诺打了一点折扣。
 
 🔗 **开源详情**
 
-- 代码：提供了GitHub仓库链接：https://github.com/alaaNfissi/LFST-for-SER。
-- 模型权重：论文中未提及公开预训练模型权重。
-- 数据集：IEMOCAP和EMO-DB为公开数据集；NSPL-CRISE为私有数据集（标注过的电话录音），论文中未说明获取方式。
-- Demo：未提及。
-- 复现材料：论文正文和附录详细说明了所有组件（LFST, LAHT, STEE）的数学原理、实现细节（如伪代码）、训练协议、评估指标和关键超参数。提供了链接到复现仓库。
-- 引用的开源项目：论文中未明确列出其依赖的其他开源工具或模型，但其代码实现必然依赖于PyTorch等框架。
+- 代码：论文提及将开源代码，项目页面（https://paras2sbench.github.io/）已上线。论文中未直接提供代码仓库链接。
+- 模型权重：论文提及将开源模型，包括奖励模型和最终的GRPO后训练模型。
+- 数据集：ParaS2SBench测试集及SFT/RL训练数据将开源。
+- Demo：项目页面提供了在线演示链接。
+- 复现材料：论文附录详细说明了数据构建、自动评估器训练、RL训练的流程与超参数，为复现提供了良好基础。
+- 引用的开源项目：Whisper-V3, AudioReasoner (基于Qwen-Audio 2), LoRA, Emotion2vec, Kimi-Audio, CosyVoice, YourTTS等。
 
 📌 **核心摘要**
 
-1. 问题：传统语音情感识别（SER）方法使用的时频（TF）前端（如STFT、小波）具有固定的时频分辨率权衡，无法根据数据自适应调整，限制了性能。
-2. 方法核心：提出一种可学习的分数阶Superlet变换（LFST）作为全新的前端。LFST从原理上出发，将多个不同周期的Morlet小波响应通过对数域的加权几何平均进行融合，其权重、频率网格和基础周期均可学习。LFST输出幅度谱和相位一致性图，与一个紧凑的频谱-时域情感编码器（STEE）结合，实现端到端训练。
-3. 创新点：首次将超分辨率小波变换（Superlet）形式化为全可微、端到端可学习的前端；通过Softmax权重实现连续的分数阶序，避免了阶跃伪影；同时引入了可学习的非对称硬阈值（LAHT）模块用于TF激活去噪。
-4. 实验结果：在IEMOCAP（4类）上取得87.5%准确率/0.868 F1；在EMO-DB（7类）上取得91.4%准确率/0.904 F1；在嘈杂的NSPL-CRISE（5类，电话语音）上取得76.9%准确率/0.766 F1。在所有数据集上均超越了表2和表3中列出的其他方法，包括与相同STEE骨干网络的各种固定前端基线（STFT, CWT, 固定Superlet, LEAF）。关键消融实验（表6）表明，相位一致性通道（κ）贡献了大部分增益。
-5. 实际意义：为语音前端设计提供了一种新的、数学驱动的可学习范式，有望提升对噪声、非平稳信号的分析能力，可推广至其他音频处理任务。
-6. 主要局限性：LFST前端计算成本和内存占用远高于传统前端；模型仅在有限的数据集和语言（英语、德语）上验证；论文未与大型自监督预训练模型（如wav2vec 2.0）进行端到端比较。
+这篇论文旨在解决当前语音到语音（S2S）对话模型在响应用户情绪、语气等副语言线索时表现不佳的“tone-deaf”（不懂察言观色）问题。作者提出了一个名为ParaS2S的新框架，包含一个专门的基准测试ParaS2SBench和一个强化学习训练框架ParaS2SAlign。核心创新在于：1）设计了一个多阶段自动评估器，通过解耦语音内容和风格的转写与分析，避免了端到端大语言模型（如GPT-4o）在评分时产生的风格幻觉，其评分与人类偏好相关性高达0.78；2）证明了强化学习（采用GRPO算法） 比纯监督微调（SFT）在数据利用上更高效，能用更少的标注数据（仅10小时）训练出性能更优的模型。实验表明，在ParaS2SBench上，其强化学习后训练的模型在响应适当性上比SFT基线提升超过10%，并超越了包括Qwen2.5 Omni、GPT-4o语音模式在内的所有现有模型。该工作的意义在于为评估和提升语音模型的“情感智商”提供了首个完整的基准工具链和高效的训练方法。局限性在于其评估器的绝对性能仍有提升空间，且完全依赖合成数据构建的基准在评估真实世界复杂交互时可能存在偏差。
 
 ---
 
-### 🥈 [VowelPrompt: Hearing Speech Emotions from Text via Vowel-level Prosodic Augmentation](/audio-paper-digest-blog/posts/2026-05-03-vowelprompt-hearing-speech-emotions-from-text-via)
+### 🥈 [From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non)
 
-✅ **7.5/10** | 前25% | #语音情感识别 | #数据增强 | #大语言模型 #零样本
+🔥 **8.0/10** | 前25% | #语音对话系统 | #扩散模型 | #预训练 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Yancheng Wang（Meta Superintelligence Labs， Arizona State University）
-- 通讯作者：未明确说明（论文未指定通讯作者）
-- 作者列表：Yancheng Wang (Meta Superintelligence Labs, Arizona State University), Osama Hanna (Meta Superintelligence Labs), Ruiming Xie (Meta Superintelligence Labs), Xianfeng Rui (Meta Superintelligence Labs), Maohao Shen (Meta Superintelligence Labs, Massachusetts Institute of Technology), Xuedong Zhang (Meta Superintelligence Labs), Christian Fuegen (Meta Superintelligence Labs), Jilong Wu (Meta Superintelligence Labs), Debjyoti Paul (Meta Superintelligence Labs), Arthur Guo (Meta Superintelligence Labs), Zhihong Lei (Meta Superintelligence Labs), Ozlem Kalinli (Meta Superintelligence Labs), Qing He (Meta Superintelligence Labs), Yingzhen Yang (Arizona State University)
+- 第一作者：Tianqiao Liu（广东智能教育研究院暨南大学 & 好未来教育集团）
+- 通讯作者：Xueyi Li（广东智能教育研究院暨南大学）
+- 作者列表：Tianqiao Liu（广东智能教育研究院暨南大学 & 好未来教育集团）、Xueyi Li（广东智能教育研究院暨南大学）、Hao Wang（北京大学）、Haoxuan Li（北京大学）、Zhichao Chen（北京大学）、Weiqi Luo（广东智能教育研究院暨南大学）、Zitao Liu（广东智能教育研究院暨南大学）
 
 💡 **毒舌点评**
 
-亮点在于论文将语音学中“元音是情感韵律主要载体”的经典知识，非常工程化地落地为一个为LLM“翻译”语音韵律的文本提示框架，实验设计全面，说服力强。短板是其核心创新——将声学特征转换为离散文本描述——是一种“翻译”而非“理解”，可能丢失了连续特征间的复杂关系，且推理时对强制对齐的依赖使其“无需原始音频”的声称在实际部署中需要前置处理，稍显矛盾。
+亮点在于理论框架优雅，用吸收离散扩散模型的any-order AR特性统一了文本与音频生成的目标函数，从根本上回应了现有范式的缺陷；但论文中提出的三个训练策略（BANOM, PPM, SST）在核心贡献中被赋予过高权重，它们更多是工程上的“补丁”而非理论上的“基石”，且实验中“Pretrain+TtT”与“Pretrain+AR”在部分指标（如ASR）上的优势并不足以证明该混合范式在大规模预训练后仍具备决定性优势。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码链接。
+-   代码：提供了公开代码仓库链接：https://github.com/ai4ed/TtT。
+-   模型权重：论文中提到了公开发布权重（“Our code and model weights are publicly available”），但未在摘要或正文中给出直接链接，通常认为与代码仓库一同发布。
+-   数据集：论文中详细列出了所有训练和评估数据集的名称和规模，并指出代码和数据公开。具体数据获取方式需查看其GitHub仓库。
+-   Demo：论文中未提及提供在线演示。
+-   复现材料：提供了非常详尽的复现材料，包括：1）完整的训练超参数（学习率、批大小、优化器、三项训练策略的具体概率）；2）模型架构细节（基于Qwen2.5、音频tokenizer/decoder选型）；3）推理时的扩散生成参数（步数、块长度、CFG比例）；4）训练数据格式的完整示例（图4-9）。
+-   论文中引用的开源项目：主要依赖Qwen2.5-Base作为骨干模型，以���GLM-4-Voice的离散音频token化器和HiFi-GAN声码器。
+
+📌 **核心摘要**
+
+1.  要解决什么问题：现有端到端语音-语言模型（如Moshi, GLM-4-Voice）通常使用单一的自回归目标统一生成文本和音频token，忽略了文本（强目标-目标依赖）与音频（强源-目标依赖）在生成过程中本质不同的依赖结构，导致次优的训练动态和误差传播。
+2.  方法核心是什么：提出了Text-to-Talk (TtT)框架，在一个统一的Transformer中集成自回归文本生成和基于吸收离散扩散模型的非自回归音频生成。文本部分使用标准的因果交叉熵损失，音频部分使用扩散模型的去噪损失（等价于any-order AR目标）。通过设计模态感知注意力机制和三项训练策略来弥合训练-推理差异。
+3.  与已有方法相比新在哪里：1）理论创新：形式化了文本和音频的依赖不对称性，并利用吸收扩散与any-order AR的等价性，证明了其联合训练目标是对期望联合分布负对数似然的一个上界。2）架构创新：在单模型中混合了两种生成范式，音频生成可以并行化。3）训练策略创新：引入了BANOM、PPM和SST来稳定混合训练并提升可变长度生成能力。
+4.  主要实验结果如何：在3B参数规模下，TtT在多项任务上超越了强AR和NAR基线。例如，在Audio-QA的LQ.任务上，TtT-3B得分为34.68，而Qwen2.5-3B (AR)为10.00；在ASR的AISHELL-2数据集上，TtT-3B的WER为12.53，而Qwen2.5-3B (AR)为54.94。经大规模多模态预训练后（Pretrain+TtT），在URO-Bench综合基准上取得了高效模型（≤3B）的最佳性能，甚至在部分任务上超过了数倍大的模型（如Moshi-7B）。
+5.  实际意义是什么：为构建低延迟、高自然度的端到端语音交互系统提供了新的有效范式。混合生成方式允许音频并行合成，有望降低首token延迟，提升流式对话体验。
+6.  主要局限性是什么：1）论文中对比的最强SOTA（如GLM-4-Voice-9B, Kimi-Audio-7B）参数量远大于TtT，TtT虽在部分任务上超越，但并未证明其在同等规模下的绝对统治力。2）引入的三个训练策略增加了训练流程的复杂性。3）对于最终语音输出的质量评估，论文主要依赖ASR转写后的文本评分，对音频本身的声学质量、韵律自然度等评估不够直接。
+
+---
+
+### 🥉 [STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with)
+
+✅ **7.5/10** | 前25% | #语音对话系统 | #自回归模型 | #流式处理 #语音大模型
+
+👥 **作者与机构**
+
+- 第一作者：未说明
+- 通讯作者：未说明
+- 作者列表：Cheng-Han Chiang（未说明）、Xiaofei Wang（未说明）、Linjie Li（未说明）、Chung-Ching Lin（未说明）、Kevin Lin（未说明）、Shujie Liu（未说明）、Zhendong Wang（未说明）、Zhengyuan Yang（未说明）、Hung-yi Lee（未说明）、Lijuan Wang（未说明）
+
+💡 **毒舌点评**
+
+亮点在于“边想边说”的设计非常聪明，它没有为了加入思考过程而牺牲响应速度，反而巧妙地利用了音频播放的“垃圾时间”来进行推理，这在工程和应用上是一个很大的进步。短板是目前仅在数学推理任务上验证了其有效性，对于需要更复杂、多轮、开放式思考的真实对话场景（如日常闲聊、观点辩论）的表现是否同样出色，论文摘要未提供任何证据。
+
+🔗 **开源详情**
+
+- 代码：论文摘要提及了项目页面 `https://d223302.github.io/STITCH`，但未直接提供代码仓库链接。论文中未提及代码是否开源。
 - 模型权重：未提及。
-- 数据集：使用的是公开数据集（IEMOCAP， MELD， CaFE， EmoDB， ASVP-ESD）。
-- Demo：未提供在线演示。
-- 复现材料：论文中提供了非常详细的算法步骤、特征提取方法、归一化流程、提示模板（见附录B）和实验配置，为复现提供了充分的文本指南。
-- 论文中引用的开源项目：提到了Montreal Forced Aligner (MFA) 用于强制对齐。未提及其他依赖的开源模型或代码库。
+- 数据集：未提及。
+- Demo：论文摘要提及“Some animations and demonstrations are on the project page”，表明提供了演示。
+- 复现材料：论文中未提及训练细节、配置、检查点或附录说明。
+- 论文中引用的开源项目：摘要中未提及任何依赖的开源工具或模型。
 
 📌 **核心摘要**
 
-1.  问题：基于文本的大语言模型（LLM）在语音情感识别中因忽略精细的韵律信息（如音高、能量、时长）而性能受限。
-2.  方法核心：提出VowelPrompt，一个基于语音学理论的框架。它通过强制对齐从语音中提取时间对齐的元音片段，计算其韵律特征（音高、能量、时长），经标准化和分箱后转换为自然语言描述（如“high F0, rising, loud”），并附加到文本转录中，使LLM能联合推理语义和韵律信息。训练采用监督微调（SFT）+ 基于组相对策略优化（GRPO）的强化学习（RLVR）两阶段。
-3.  新在何处：不同于使用粗糙句子级描述或需要音频编码器的多模态模型，VowelPrompt提供了可解释的、精细到元音级别的文本韵律提示，且完全在文本LLM框架内工作。
-4.  主要结果：在五个基准数据集（IEMOCAP， MELD等）的广泛评估中，VowelPrompt在零样本、微调、跨域和跨语言条件下均优于基线方法。例如，在IEMOCAP零样本设置中，使用GPT-4o时WF1比基线高7.11%（表3）；在微调设置下，使用LLaMA-3-8B时WF1比SpeechCueLLM高1.47%（表4）。
-5.  实际意义：为在文本LLM系统中实现可解释、可审计的语音情感理解提供了一种轻量级、模块化的方案，便于部署。
-6.  主要局限性：依赖强制对齐的准确性；将连续声学特征离散化为文本描述可能损失信息；性能提升部分依赖于强大的基础LLM。
+1. 要解决什么问题：当前的语音语言模型（SLMs）缺乏在回答前进行内部、非语音的思考过程的能力，这限制了其产生清晰、简洁回复的能力。若采用传统的先完成完整思维链再回答的模式，会引入不可接受的额外延迟。
+2. 方法核心是什么：提出STITCH方法，让模型交替生成“非语音的推理块”和“语音的回应块”。其核心洞察是：生成一小段语音回应音频的时间，远大于生成该音频片段对应文本标记（tokens）的时间。因此，模型可以利用播放当前语音块时的“空闲时间”，去生成下一轮推理所需的内部思考标记，从而实现“同时思考与说话”。
+3. 与已有方法相比新在哪里：不同于要么无法思考（基线模型），要么思考完全阻塞回答（朴素CoT）的极端做法，STITCH创新地将思考过程与语音生成过程并行化、分块交错进行，在推理能力和响应延迟之间取得了最佳平衡。
+4. 主要实验结果如何：在数学推理数据集上，STITCH匹配了无法进行内部思考的基线模型的延迟，同时性能（具体指标未说明）提升了15%。在非推理数据集上，其性能与基线模型相当。这表明该方法在提升特定任务能力的同时，没有损害通用性能。
+5. 实际意义是什么：该方法使语音对话系统能够更像人类一样进行“即思即说”的交互，提升了回复的质量和逻辑性，同时保持了对话的流畅性和实时性，对构建下一代更智能、更自然的语音助手具有重要价值。
+6. 主要局限性是什么：论文摘要未说明方法的具体实现细节（如块大小、调度策略）、更广泛的评估（如开放域对话、其他推理任务）以及模型架构的通用性。其效果可能依赖于特定任务和数据分布。
 
 ---
 
-### 🥉 [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning)
+### 4. [WearVox: An Egocentric Multichannel Voice Assistant Benchmark for Wearables](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice)
 
-✅ **7.5/10** | 前25% | #语音情感识别 | #偏好优化 | #多模态模型 #基准测试
+✅ **7.5/10** | 前25% | #语音对话系统 | #基准测试 | #多通道 #语音大模型
 
 👥 **作者与机构**
 
-- 第一作者：Ashutosh Chaubey（南加州大学创新技术研究所）
-- 通讯作者：Mohammad Soleymani（南加州大学创新技术研究所）
-- 作者列表：Ashutosh Chaubey（南加州大学创新技术研究所）、Jiacheng Pang（未说明）、Maksim Siniukov（未说明）、Mohammad Soleymani（南加州大学创新技术研究所）
+- 第一作者：Zhaojiang Lin（Meta）
+- 通讯作者：未明确指定。根据投稿信息，邮箱包含zhaojiang@meta.com，可视为与第一作者一致。
+- 作者列表：Zhaojiang Lin (Meta), Yong Xu (Meta), Kai Sun (Meta), Jing Zheng (Meta), Yin Huang (Meta), Surya Teja Appini (Meta), Krish Narang (Meta), Renjie Tao (Meta), Ishan Kapil Jain (Meta), Siddhant Arora (Carnegie Mellon University, 实习于Meta), Ruizhi Li (Meta), Yiteng Huang (Meta), Kaushik Patnaik (Meta), Wenfang Xu (Meta), Suwon Shon (Meta), Yue Liu (Meta), Ahmed A Aly (Meta), Anuj Kumar (Meta), Florian Metze (Meta), Xin Luna Dong (Meta)。
 
 💡 **毒舌点评**
 
-亮点：论文直面多模态大模型在情感推理中的“硬伤”——将无关线索与情感关联的“推理错误”和凭空捏造线索的“感知错误”，并为此专门设计了一个可量化的基准（EmoReAlM）和一套组合拳式的优化方法（AVEm-DPO），系统性很强。短板：AVEm-DPO本质上是DPO在多模态场景下的一个特化应用（模态偏好+文本去偏），技术创新幅度有限，更多是工程组合与细致实验验证。
+亮点：论文精准抓住了可穿戴设备语音交互中被现有基准忽视的核心痛点（自我中心视角、多通道、侧向对话抑制），并构建了一个高质量、高真实度的评测集，为该细分领域提供了急需的“标尺”。短板：论文中作为技术验证的“多通道语音大模型”（MC WearLlama）部分，训练细节（如数据增强的具体RIR来源、混合比例）和模型权重均未公开，使得最具前瞻性的技术贡献部分“可望而不可即”，削弱了论文的完整影响力。
 
 🔗 **开源详情**
 
-- 代码：论文承诺将在项目页面（avere-iclr.github.io）开源代码。
-- 模型权重：论文承诺将开源模型权重。
-- 数据集：论文承诺将开源EmoReAlM基准测试集。偏好训练数据集由论文提及的源数据（MAFW, MER2025）通过公开流水线生成。
-- Demo：论文中未提及提供在线演示。
-- 复现材料：论文提供了详细的训练配置（学习率、批大小、优化器、LoRA设置等）、数据生成提示词（附录B.1）和超参数敏感性分析（附录E.7），复现材料充足。
-- 引用的开源项目：论文依赖了多个开源模型/工具，包括：LanguageBind（视频编码器）、Whisper-Large-v3（音频编码器）、Gemini-2.5 Flash（数据生成）、Prolific（众包平台）、以及作为基线的VideoLLaMA2、OLA、VITA-1.5、Qwen2.5 Omni等模型。
+- 代码：提供了代码仓库链接：https://github.com/facebookresearch/wearvox。
+- 模型权重：论文中未提及SC/MC WearLlama或其他用于评估的模型（如GPT-4o）的权重是否开源。
+- 数据集：WearVox数据集已公开，可通过上述GitHub仓库链接获取。
+- Demo：未提及在线演示。
+- 复现材料：论文在附录中提供了一些补充信息，如音频录制设置（图4）、环境分布（图6、7）、以及模型评估的LLM Judge提示词（Listing 5, 6）。对于MC WearLlama，提供了架构示意图（图2、8）和训练方法概述（附录A.6），但如前所述，缺少关键训练细节和权重。
+- 论文中引用的开源项目：论文在评估中引用了多个开源模型，包括Whisper（语音识别）、Gemma 3n、Kimi-Audio、Qwen2.5-Omni、Phi-4 Multimodal等。在构建MC WearLlama时，基于了Llama-4-Scout（开源LLM）和Conformer架构（已有开源实现）。
 
 📌 **核心摘要**
 
-1.  要解决的问题：当前用于情感理解的多模态大语言模型存在两大关键缺陷：一是将情感预测建立在无关的音频视觉线索上（推理错误），二是为了合理化情感而虚构出不存在的线索（感知错误），后者尤其受语言模型的文本先验驱动。
-2.  方法核心：提出AVEm-DPO，一种多模态直接偏好优化技术。它通过构建两类偏好对：(1) 基于提示的模态输入偏好，确保模型关注正确的模态线索；(2) 基于情感的响应偏好，惩罚那些包含无关线索或虚构线索的回答。同时引入文本先验去偏正则化项，减少模型对仅文本输入的依赖。
-3.  与已有方法的比较新意：与仅使用响应偏好的Naive-DPO不同，AVEm-DPO显式地在音频视觉输入层面和响应层面构建偏好，并专门针对情感推理任务设计了“推理正确但线索无关”和“情感相关但线索虚构”两类拒绝响应。与Vista-DPO相比，其模态偏好是提示词（prompt）驱动的，更具针对性。
-4.  主要实验结果：在提出的EmoReAlM基准测试上，AVEm-DPO使参考基线模型（“Our base”和“EmotionLLaMA⋆”）的平均准确率分别从65.1%提升至83.3%和从63.8%提升至80.1%（相对提升约28%和25.5%）。在零样本评估的现有数据集（DFEW, RAVDESS, MER2023, EMER）上，也获得了6-19%的相对性能提升。具体关键结果见下表。
+1.  要解决什么问题：现有的语音助手基准（如VoiceBench, Spoken-CoQA）主要关注干净、通用的对话音频，无法有效评估在真实可穿戴设备（如AI眼镜）上面临的独特挑战，例如自我中心视角下的运动噪声、风噪、快速交互以及区分设备指令与旁人对话的需要。
+2.  方法核心：本文提出了WearVox，第一个专门为可穿戴场景设计的多通道自我中心语音助手基准。它包含3842条通过AI眼镜录制的多通道音频，涵盖搜索问答、闭卷问答、工具调用、侧向对话抑制和语音翻译五种任务，并涵盖了丰富的室内/室外环境、噪声条件及多说话人角色（佩戴者、对话伙伴、旁观者）。
+3.  与已有方法相比新在哪里：WearVox首次将评估重点从“通用干净对话”转向“真实可穿戴交互”，核心差异在于：a) 数据源：使用可穿戴设备真实录制，而非TTS或桌面麦克风；b) 音频特性：包含多通道、自我中心、带有运动和复杂环境噪声的音频；c) 任务设计：专门纳入了侧向对话抑制（Side-Talk Rejection）等可穿戴特有任务。
+4.  主要实验结果如何：论文评估了多种先进的闭源（GPT-4o, Gemini 2.5 Flash）和开源（Qwen2.5-Omni等）语音大模型（SLLM）。主要发现是：a) 当前模型在WearVox上表现不佳，整体准确率在29%至59%之间；b) 在户外噪声环境下性能显著下降；c) 开启思维链模式（如Gemini 2.5 Flash Thinking）能提升准确率（从59.8%到71.3%）但大幅增加延迟（TTFT从~1.6秒到~5.5秒）；d) 关键案例研究：一个基于Llama-4构建的多通道SLLM（MC WearLlama）相比其单通道版本（SC WearLlama），在侧向对话抑制（93.9% vs 85.4%）和整体准确率（66.4% vs 61.9%）上均有提升，验证了多通道音频的空间信息对提升鲁棒性的价值。关键数据表格如下：
 
-| 模型 | DFEW (UAR/WAR) | RAVDESS (UAR/WAR) | MER2023 (F1) | EMER (Clue/Label/Spurious/Halluc.) |
-| :--- | :--- | :--- | :--- | :--- |
-| Our base | 56.78 / 60.14 | 53.59 / 53.01 | 89.19 | 5.63 / 6.45 / 5.41 / 5.19 |
-| + AVEm-DPO | 58.54 / 64.24 | 58.66 / 55.48 | 92.18 | 6.37 / 7.08 / 7.09 / 6.75 |
-| EmotionLLaMA⋆ | 54.89 / 58.26 | 52.59 / 48.12 | 90.01 | 5.78 / 6.21 / 5.36 / 5.23 |
-| + AVEm-DPO | 57.06 / 62.12 | 56.21 / 51.03 | 91.68 | 6.02 / 6.99 / 7.02 / 6.62 |
+| 模型 | 搜索问答 | 闭卷问答 | 工具调用 | 侧向对话抑制 | 转写微平均 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| GPT-5 w/ Whisper | 57.8 | 70.6 | 35.7 | 73.8 | 57.8 |
+| Gemini 2.5 Flash | 49.0 | 46.8 | 44.4 | 88.2 | 59.8 |
+| Gemini 2.5 Flash Thinking | 48.8 | 61.4 | 68.1 | 91.4 | 71.3 |
+| SC WearLlama | 43.3 | 42.5 | 58.5 | 85.4 | 61.9 |
+| MC WearLlama | 43.3 | 42.2 | 63.9 | 93.9 | 66.4 |
 
-5.  实际意义：提供了一个严谨的基准（EmoReAlM）和一个有效的优化框架（AVEm-DPO），可用于评估和提升多模态大模型在情感推理任务上的可靠性、可解释性和鲁棒性，推动社交AI发展。
-6.  主要局限性：EmoReAlM基准源自DFEW数据集，可能继承其文化偏差；当前工作主要针对短视频（~2-10秒），长视频情感推理尚未探索；对“厌恶”等模糊情感的识别仍有提升空间。
+5.  实际意义是什么：为可穿戴语音助手的研究和开发提供了一个标准化的、高真实度的测试平台，能够客观衡量系统在实际应用中的表现。其结论（如多通道音频的重要性、推理模式的延迟与性能权衡）直接指导了更鲁棒、更实用的可穿戴语音AI的设计。
+6.  主要局限性是什么：a) 基准���据集规模（约3.8k）相对有限，可能无法覆盖所有长尾场景；b) 评估任务均为“文本输入，语音输入，文本输出”，未包含纯语音输出或流式交互评估；c) 作为技术验证的多通道模型（MC WearLlama）细节未完全开源，限制了其贡献的深度；d) 基准未包含多模态（如视觉）输入，而现实可穿戴设备常具备视觉能力。
 
 ---
 
-### 4. [EmotionThinker: Prosody-Aware Reinforcement Learning for Explainable Speech Emotion Reasoning](/audio-paper-digest-blog/posts/2026-05-03-emotionthinker-prosody-aware-reinforcement)
+### 5. [Speech World Model: Causal State–Action Planning with Explicit Reasoning for Speech](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning)
 
-✅ **7.5/10** | 前25% | #语音情感识别 | #强化学习 | #数据集 #语音大模型
+✅ **7.5/10** | 前25% | #语音对话系统 | #自回归模型 | #语音大模型 #可解释性
 
 👥 **作者与机构**
 
--   第一作者：Dingdong WANG（香港中文大学信息工程系，微软亚洲研究院）
--   通讯作者：未说明
--   作者列表：Dingdong WANG（香港中文大学，微软）、Shujie LIU（微软）、Tianhua Zhang（香港中文大学）、Youjun Chen（香港中文大学）、Jinyu Li（微软）、Helen M. Meng（香港中文大学）
+- 第一作者：Xuanru Zhou
+- 通讯作者：未说明
+- 作者列表：Xuanru Zhou、Jiachen Lian、Henry Hong、Xinyi Yang、Gopala Anumanchipalli（均未说明所属机构）
 
 💡 **毒舌点评**
 
-亮点在于首次将RL范式引入语音情感推理，并通过精心设计的“渐进式信任奖励”来约束开放式推理质量，方法完整且实验扎实。短板在于其“可解释性”的本质仍是生成一段符合逻辑的文本描述，模型是否真正“理解”声学信号与情感间的因果关系，仍需更深入的探查，当前证据更多停留在“生成解释与正确标签对齐”上。
+这篇论文提出了一个极具野心和理论美感的模块化语音世界模型框架，试图为当前“暴力美学”式的端到端语音大模型提供一条可解释、可干预的新路径，这是其最大亮点。然而，致命短板在于摘要中未提供任何实验结果来证明这个精巧的“认知架构”在实际任务上是否有效，甚至没有提及与哪些基准进行了对比，这让其先进性成了空中楼阁，难以评估实际价值。
 
 🔗 **开源详情**
 
--   代码：提供GitHub仓库链接：https://github.com/dingdongwang/EmotionThinker
--   模型权重：论文中未明确提及是否开源预训练或最终的模型权重。
--   数据集：EmotionCoT-35K数据集已提供，可通过上述GitHub仓库获取。
--   Demo：论文中未提及在线演示。
--   复现材料：论文正文和附录提供了详细的实现细节，包括模型架构、训练策略、所有奖励函数定义、关键超参数设置、数据构建流水线、以及用于数据合成和评估的GPT-4o提示词模板。
--   引用的开源项目：基于Qwen2.5-Omni-7B和Qwen2.5-Omni-3B构建；使用WhiStress进行重音检测；使用wav2vec 2.0进行说话人特征分类；使用GPT-4o API进行数据合成与评估。
+根据论文摘要内容总结：
+- 代码：论文中未提及具体的代码仓库链接。
+- 模型权重：未提及具体的模型权重发布平台或链接，但论文结尾明确表示“我们将开源模型和数据”。
+- 数据集：未提及具体数据集名称或获取方式，但承诺会开源数据。
+- Demo：未提及在线演示。
+- 复现材料：未提及训练细节、配置文件、检查点或附录说明。
+- 依赖的开源项目：论文摘要中未提及。
+- 总结：论文有明确的开源意向，但缺乏任何可操作的具体信息。论文中未提及开源计划的具体实施细节和时间表。
 
 📌 **核心摘要**
 
-1.  问题：现有语音情感识别（SER）系统和语音大模型大多将情感理解视为简单的分类问题，缺乏可解释性，且未能充分利用大模型的推理能力。
-2.  方法：提出EmotionThinker框架，首次通过强化学习（RL）将SER重新定义为可解释的深度推理问题。框架分三步：(1) 构建包含思维链（CoT）注释的情感推理数据集EmotionCoT-35K；(2) 通过以韵律为中心的监督微调（SFT）增强基础模型的韵律感知能力；(3) 提出“渐进式信任感知推理奖励”的组相对策略优化（GRPO-PTR）进行RL训练，以生成准确且可解释的情感推理。
-3.  创新：核心创新在于(1) 问题重构：从分类到推理；(2) 数据构建：首个针对SER的韵律感知CoT数据集；(3) 模型增强：专门提升韵律感知；(4) 训练策略：提出GRPO-PTR，通过可信度权重动态调整推理奖励，确保推理过程与最终结果对齐。
-4.  结果：在四个基准数据集（IEMOCAP, MELD, RAVDESS, SAVEE）上，EmotionThinker的情感识别准确率和推理质量评分均显著优于16个基线模型。例如，在平均准确率上达到68.89%，比次优模型BLSP-Emo（65.41%）高出约3.5个百分点；推理质量平均分达3.98（5分制）。消融实验证明了GRPO-PTR各组件的有效性。
-5.  意义：推动了SER从“黑箱”分类向“可解释”推理的范式转变，增强了模型的可信度和人机交互潜力。
-6.  局限：推理过程的“可解释性”高度依赖生成的文本描述，模型对底层声学信号的理解深度仍待验证；框架构建复杂，包含数据合成、多阶段训练和奖励模型训练，工程成本较高。
+1. 要解决的问题：当前主流语音语言模型将语音理解视为端到端的“黑箱”，虽然内容转录能力强，但在需要显式推理（如因果分析、状态预测）的方面表现薄弱，尤其是在监督数据稀缺时。
+2. 方法核心：提出一种受认知科学启发的模块化“语音世界模型”。系统将语音理解分解为四个模块，通过一个因果图进行通信，构建一个认知状态搜索空间。利用该空间的后验轨迹，一个指令调优的语言模型生成简洁的因果分析和用户响应。
+3. 与已有方法相比新在哪里：首次将基于图的模块化架构和显式的“状态-动作”规划与推理引入语音理解任务，强调决策的模块化和透明性，支持反事实干预和可解释性，与端到端黑箱模型形成对比。
+4. 主要实验结果：论文摘要中 未提供任何具体的实验结果、数值或对比数据。无法得知该模型在标准任务（如ASR、SLU）上的性能。
+5. 实际意义：为构建更可靠、可解释、可控的语音交互系统提供了新的理论框架和架构设计，尤其适用于需要严谨推理的医疗、司法等高风险对话场景，以及对模型行为有解释需求的应用。
+6. 主要局限性：从摘要看，最大的局限是缺乏实验验证。其有效性、效率以及相较于强大端到端模型的性能差距完全未知。此外，模块化设计可能带来额外的训练复杂性和推理延迟。
+
+---
+
+### 6. [Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for)
+
+✅ **7.0/10** | 前25% | #语音对话系统 | #模型评估 | #语音大模型 #多语言
+
+👥 **作者与机构**
+
+- 第一作者：Xiang Li (李翔)（北京邮电大学网络与交换技术国家重点实验室、深圳大数据研究院、香港中文大学（深圳）、深圳湾区研究院）
+- 通讯作者：Jiale Han (韩嘉乐)（香港科技大学）
+- 作者列表：Xiang Li（北京邮电大学网络与交换技术国家重点实验室等），Jiabao Gao（香港中文大学（深圳）），Sipei Lin（香港中文大学（深圳）），Xuan Zhou（香港中文大学（深圳）），Chi Zhang（香港中文大学（深圳）），Bo Cheng（北京邮电大学），Jiale Han（香港科技大学），Benyou Wang（香港中文大学（深圳）、深圳大数据研究院）
+
+#
+
+💡 **毒舌点评**
+
+亮点：论文开创性地将图灵测试范式应用于现代语音到语音交互系统，并构建了一个包含18个维度的细粒度“人类相似性”诊断框架，其分析精准地指出当前系统的瓶颈已从语义理解转向副语言特征、情感表达和对话人格，这为行业研发提供了极具操作性的改进指南。短板：尽管提出了出色的评估框架和分析工具，但论文本身并未提出一种能显著缩小这一“拟人差距”的新型S2S模型或算法，核心贡献偏重于“诊断”而非“治疗”，其影响力很大程度上依赖于后续研究者如何利用这一工具。
+
+#
+
+🔗 **开源详情**
+
+- 代码：提供代码仓库链接：https://github.com/Carbohydrate1001/Turing-Test
+- 模型权重：论文中提到“我们公开了代码、数据和模型”，暗示已开源模型权重。具体为基于Qwen2.5-Omni-7B微调的评判器。
+- 数据集：包含人-机、人-人、伪人对话的数据集已随代码开源。
+- Demo：论文提到了用于收集图灵测试数据的游戏化在线平台，但未明确是否提供持续的公开在线演示。
+- 复现材料：附录详细提供了训练细节、超参数搜索空间、模型配置、标注指南等，复现信息充分。
+- 论文中引用的开源项目：依赖的主要开源项目包括Qwen2.5-Omni（骨干模型）、LoRA（用于微调）、以及构建数据集时使用的开源语音数据集（DailyTalk, IEMOCAP, MagicData）和TTS模型（Nari Dia-1.6B, Spark-TTS）。
+
+📌 **核心摘要**
+
+1. 问题：现代语音到语音（S2S）系统能否像人类一样自然对话？这是一个尚未被系统评估的关键问题。
+2. 方法：论文首次对S2S系统进行图灵测试。构建了包含人-机、人-人、伪人（TTS合成）对话的高质量数据集。通过游戏化平台收集近3000个人类判断。开发了一个包含5大类、18个细粒度维度的“人类相似性”评估体系，并对所有对话进行标注。最后，设计了一个可解释的AI评判模型。
+3. 创新点：a) 首次针对S2S系统的图灵测试；b) 提出细粒度的“人类相似性”分类诊断框架；c) 开发了一个基于有序离散化层（ODL）的可解释AI评判模型，能提供诊断性评分。
+4. 实验结果：关键发现：a) 无一被测S2S系统通过图灵测试（成功率远低于0.5）。如图4a所示，人类说话者成功率高达70-87%，而最佳S2S系统成功率仅约30%。b) 瓶颈在于副语言特征、情感表达和人格，而非语义（图5）。c) 现成AI模型作为评判者表现不佳（平均准确率45.27%，见表2），而作者提出的可解释AI评判器准确率达96.05%，超越人类评判（72.84%）和所有基线（表3）。
+5. 实际意义：为评估和改进对话AI的人类相似性提供了首个系统性框架和自动化工具，指明了研发方向。
+6. 局限性：框架的有效性高度依赖标注质量和维度选择的完备性；提出的AI评判器虽性能优异，但其判断是否完全等同于人类感知的“拟人度”仍需进一步验证。
+
+#
+
+---
+
+### 7. [Can Speech LLMs Think while Listening?](/audio-paper-digest-blog/posts/2026-05-03-can-speech-llms-think-while-listening)
+
+✅ **7.0/10** | 前25% | #语音对话系统 | #链式思维 | #语音大模型 #流式处理
+
+👥 **作者与机构**
+
+- 第一作者：Yi-Jen Shih（论文中未提及所属机构）
+- 通讯作者：论文中未说明
+- 作者列表：Yi-Jen Shih（论文中未提及所属机构）、Desh Raj（论文中未提及所属机构）、Chunyang Wu（论文中未提及所属机构）、Wei Zhou（论文中未提及所属机构）、SK Bong（论文中未提及所属机构）、Yashesh Gaur（论文中未提及所属机构）、Jay Mahadeokar（论文中未提及所属机构）、Ozlem Kalinli（论文中未提及所属机构）、Mike Seltzer（论文中未提及所属机构）
+
+💡 **毒舌点评**
+
+这篇论文抓住了语音交互中“思考延迟”这个非常实际的痛点，提出的“边听边想”（思考与听同时进行）思路很人性化，且通过信息熵来量化“听完了没”是很有工程智慧的点子。不过，摘要读下来方法听起来巧妙，但缺少架构图和与现有复杂语音LLM的详细对比，让人怀疑其通用性和具体实现细节是否经得起推敲。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接
+- 模型权重：论文中未提及
+- 数据集：论文中未提及
+- Demo：论文中未提及
+- 复现材料：论文中未提及训练细节、配置、检查点、附录说明
+- 论文中引用的开源项目：论文中未提及
+- 论文中未提及开源计划
+
+📌 **核心摘要**
+
+这篇论文旨在解决当前语音大语言模型在处理复杂推理任务时响应延迟过高的问题。其核心方法是将文本领域的“链式思维”微调技术应用于多流语音大模型，并在音频输入流上引入一种基于熵的“问题完整性”指标，该指标用于判断用户何时已说完话，从而允许模型在用户尚未完全说完时就开始“思考”（即生成思维链），实现“边听边想”。与传统的启发式方法（如基于静音时长）相比，该指标能更精准地控制推理的启动时机，在相同的延迟条件下将ARC-Easy任务的准确率提升了4%。进一步地，通过直接偏好优化技术对模型进行微调，在保持准确率不变的情况下，将响应延迟大幅降低了70%。该研究的意义在于为构建低延迟、高智能的实时语音对话系统提供了有效方案。主要局限性在于，论文摘要未提及所使用的具体语音大模型架构、训练数据细节以及在更广泛、更复杂任务上的泛化能力。
+
+---
+
+### 8. [DrVoice: Parallel Speech-Text Voice Conversation Model via Dual-Resolution Speech Representations](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation)
+
+✅ **7.0/10** | 前25% | #语音对话系统 | #自回归模型 | #语音大模型 #端到端
+
+👥 **作者与机构**
+
+- 第一作者：未说明（论文未明确标注第一作者，作者列表为并列顺序）
+- 通讯作者：未说明
+- 作者列表：Chao-Hong Tan, Qian Chen, Wen Wang, Chong Deng, Qinglin Zhang, Luyao Cheng, Hai Yu, Xin Zhang, Xiang Lv, Tianyu Zhao, Chong Zhang, Yukun Ma, Yafeng Chen, Hui Wang, Jiaqing Liu, Xiangang Li, Jieping Ye (均隶属于 Tongyi Fun Team, Alibaba Group)
+
+#
+
+💡 **毒舌点评**
+
+亮点：巧妙地通过“分组”和“解分组”机制，在并行语音-文本生成架构中实现了输入低帧率（5Hz）处理与输出高质量语音合成的兼顾，有效缓解了模态对齐问题并显著降低了计算成本（近50% GPU 时间）。  
+短板：论文将SOTA归功于模型整体，但核心架构（并行生成）和多数组件（语音分组、SRH）并非首次提出，更像是对现有技术（Moshi, SpeechTokenizer, CoT等）的工程化整合与调优；此外，在真实场景下的语音鲁棒性（如噪声、口音）讨论和实验略显不足。
+
+#
+
+🔗 **开源详情**
+
+- 代码：论文明确承诺“完整源代码”将随论文公开发布，并给出了GitHub仓库链接：`https://github.com/FunAudioLLM/Fun-Audio-Chat`。
+- 模型权重：论文承诺将提供“所有预训练模型检查点”，并提及基于增强基座模型的检查点，但未说明权重是否已在论文发表时公开。
+- 数据集：论文中使用的训练数据为合成数据，承诺提供必要的脚本和说明以复制该数据集。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：提供了极其详细的实现细节（附录A）、训练策略、超��数设置以及各模块的初始化来源。
+- 依赖的开源项目：明确依赖并整合了以下开源模型/工具：
+    - Whisper-Large-v3（语音编码器）
+    - CosyVoice（语音分词器S3Tokenizer与解分词器，用于数据合成和模型生成）
+    - Qwen2.5系列（基础LLM）
+    - HiFi-GAN（声码器）
+    - DeepSpeed ZeRO（分布式训练）
+- 论文未提及开源计划之外的模型或数据集。
+
+📌 **核心摘要**
+
+1.  问题：现有端到端语音-文本对话模型面临两大挑战：一是语音token帧率（12.5Hz或25Hz）远高于文本（~3Hz），导致计算开销大且模态频率不匹配；二是联合建模可能损害预训练大语言模型（LLM）原有的文本能力。
+2.  方法核心：提出DrVoice，一个基于并行自回归建模的语音对话模型。其核心创新是双分辨率语音表示（DRSR）：在输入端通过“分组”机制将25Hz离散语音token聚合为5Hz表示输入LLM，降低计算成本；在输出端通过语音精炼头（SRH） 将LLM输出的低分辨率表示“解分组”并自回归生成原始分辨率的语音token，保证生成质量。此外，引入了链式模态（CoM） 训练策略和核心鸡尾酒（Core-Cocktail） 训练策略来提升推理连贯性和保留LLM知识。
+3.  新颖性：相比已有的并行模型（如Moshi、Kimi-Audio），DrVoice系统性地提出了处理模态频率差异的DRSR方案，在保持联合建模优势的同时，大幅提高了效率和语言理解能力保留度。
+4.  实验结果：DrVoice-7B在OpenAudioBench、VoiceBench、UltraEval-Audio和Big Bench Audio四大基准测试上均取得SOTA（例如VoiceBench Overall 80.17，UltraEval-Audio Overall 56.66）。消融实验证实了DRSR中分组（将帧率从12.5Hz降至5Hz带来~13.7% S2T提升）和SRH（带来~77% S2M生成提升）的关键作用。
+5.  实际意义：该模型为构建高效、高质量的实时语音交互系统提供了有力方案，其低帧率设计对边缘部署和低延迟应用有重要价值。
+6.  局限性：论文指出未来需实现全双工交互和扩展至音乐、环境声等更广泛的音频模态。
+
+#
 
 ---
 

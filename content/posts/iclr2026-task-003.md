@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 声源定位 论文列表"
+title: "ICLR 2026 - 多人动作生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["声源定位"]
+tags: ["多人动作生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 声源定位 方向论文"
+description: "共 1 篇 ICLR 2026 多人动作生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 声源定位
+# ICLR 2026 - 多人动作生成
 
 共 **1** 篇论文
 
@@ -18,60 +18,53 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Physics-Informed Audio-Geometry-Grid Representation Learning](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid) | 8.0分 | 前25% |
+| 🥇 | [Unified Multi-Modal Interactive and Reactive 3D Motion Gener](/audio-paper-digest-blog/posts/2026-05-03-unified-multi-modal-interactive-and-reactive-3d) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Physics-Informed Audio-Geometry-Grid Representation Learning for Universal Sound Source Localization](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid)
+### 🥇 [Unified Multi-Modal Interactive and Reactive 3D Motion Generation via Rectified Flow](/audio-paper-digest-blog/posts/2026-05-03-unified-multi-modal-interactive-and-reactive-3d)
 
-🔥 **8.0/10** | 前25% | #声源定位 | #麦克风阵列 | #信号处理 #空间音频
+🔥 **8.0/10** | 前25% | #多人动作生成 | #流匹配 | #检索增强生成 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Min-Sang Baek（汉阳大学 电子工程系）
-- 通讯作者：Joon-Hyuk Chang（汉阳大学 电子工程系）
-- 作者列表：Min-Sang Baek（汉阳大学 电子工程系）、Gyeong-Su Kim（汉阳大学 电子工程系）、Donghyun Kim（汉阳大学 电子工程系）、Joon-Hyuk Chang（汉阳大学 电子工程系）
+- 第一作者：Prerit Gupta（Purdue University, Department of Computer Science）
+- 通讯作者：未说明（论文未明确标注通讯作者）
+- 作者列表：Prerit Gupta（Purdue University）、Shourya Verma（Purdue University）、Ananth Grama（Purdue University）、Aniket Bera（Purdue University）
 
 💡 **毒舌点评**
 
-亮点：本文成功地将“表示学习”思想与“物理信息”归纳偏置相结合，提出了一个优雅且有效的框架（AGG-RL），同时解决了SSL中长期存在的阵列几何与空间网格两大限制，思路具有启发性。短板：尽管实验全面，但论文聚焦于静态声源定位这一单一任务，框架向动态声源、声源跟踪或与其他任务（如语音识别）的联合扩展潜力尚未探索，且合成数据训练与真实世界复杂动态场景之间仍存在泛化鸿沟。
+这篇工作的核心亮点在于设计了一个“聪明的”统一架构（DualFlow），通过掩码机制让一个模型能同时胜任“双向协作”和“单向跟随”两种任务，并引入针对双人动作的RAG模块，思路非常工整。短板在于，虽然自称SOTA，但对比的基线（如InterGen、DuoLando）并非最新，且在某些指标（如FID）上优势并不明显，缺乏与近两年更多流式生成工作的直接对比，使其“最先进”的成色稍显不足。
 
 🔗 **开源详情**
 
-- 代码：提供公开GitHub仓库链接：https://github.com/BaekMS/Audio-Geometry-Grid_Representation-Learning
-- 模型权重：论文中未提及是否提供预训练模型权重。
-- 数据集：训练数据使用公开的LibriSpeech和MS-SNSD生成；评估使用了公开的LOCATA真实数据集和自行生成的合成评估集。论文中未提及是否公开生成的合成评估数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了极其详尽的复现材料，包括：模型架构细节（图4、5， 附录A.3-A.4）、训练超参数（附录A.9， 表6）、训练策略（CGT， DSCL）、数据生成算法（算法3）和代码链接。这极大地方便了复现。
-- 引用的开源项目：论文中引用的开源工具包括：gpuRIR（RIR模拟）、PyTorch、fvcore（复杂度计算）、webrtcvad（VAD）。模型实现上引用了Neural-SRP和GI-DOAEnet的公开代码。
+- 代码：论文在摘要和结论部分承诺“Full code...will be made open source...upon paper acceptance”，但论文中未提供具体的代码仓库链接。
+- 模型权重：未提及是否会公开预训练模型权重。
+- 数据集：论文使用的数据集（InterHuman-AS, DD100, MDD）是已公开或可获取的，但论文本身未提供新的数据集。
+- Demo：未提及在线演示链接。
+- 复现材料：论文提供了极其详尽的实现细节，包括模型架构参数、损失函数权重、超参数设置、训练策略、消融研究设置等，并在附录中给出了LLM提示词设计等细节，为复现提供了充分信息。
+- 论文中引用的开源项目：主要依赖CLIP（Radford et al., 2021）和Jukebox（Dhariwal et al., 2020）作为特征编码器，并基于InterGen（Liang et al., 2024）的动作表示格式。
 
 📌 **核心摘要**
 
-1.  要解决什么问题：现有的基于深度学习的声源定位（SSL）方法严重依赖特定的麦克风阵列（MA）几何结构和预定义的方向到达角（DOA）网格，导致模型泛化能力和可扩展性受限，无法适应任意阵列和网格配置。
-2.  方法核心：提出音频-几何-网格表示学习（AGG-RL）框架。该框架包含两个核心网络：音频-几何表示网络（AuGeonet）和网格表示网络（Gridnet）。AuGeonet从音频信号和MA几何中提取音频-几何表示（AGR）；Gridnet将候选DOA网格编码为网格表示（GR）。两者在一个共享的潜在空间中对齐，通过内积相似度生成概率空间谱，从而在不重新训练的情况下支持任意网格和几何的SSL。
-3.  与已有方法相比新在哪里：
-    - 统一的表示学习框架：首次将音频、几何、网格三方面信息通过表示学习统一建模，打破了固定网格分类范式。
-    - 物理信息组件：引入可学习的非均匀离散傅里叶变换（LNuDFT）自适应分配频率分辨率，强调信息丰富的相位区域；引入相对麦克风位置编码（rMPE），以相对坐标编码阵列几何，更符合到达时间差（TDOA）的物理本质。
-    - 灵活性和泛化性：实现了几何不变性和网格灵活性，在推理时可使用任意数量的候选网格。
-4.  主要实验结果如何：
-    - 在合成数据集（Dynamic-S/U）和真实数据集（NAO robot, Eigenmike）上，所提方法在平均绝对误差（MAE）和准确率（ACC10）指标上全面超越所有基线（包括MUSIC, SRP-PHAT, Unet, Neural-SRP, GI-DOAEnet）。
-    - 例如，在最具挑战性的未见过几何（Eigenmike）数据集上，所提方法MAE为11.24°（最佳基线GI-DOAEnetFM为93.61°）；在未见过通道数（Dynamic-U）上，MAE为14.12°（最佳基线GI-DOAEnetFM为54.81°）。
-    - 消融实验验证了LNuDFT、rMPE和AGG-RL各组件的有效性。网格灵活性实验证明，当网格点数D ≥ 512时性能趋于稳定。
-    - 关键实验结果表格：
-    表3：不同方法在所有评估数据集上的实验结果（关键节选）
-    | 方法 | NAO robot (MAE/ACC10) | Eigenmike (MAE/ACC10) | Dynamic-S (MAE/ACC10) | Dynamic-U (MAE/ACC10) |
-    | :--- | :--- | :--- | :--- | :--- |
-    | Unet | 10.89±1.53 / 86.25 | 14.89±1.76 / 65.82 | 19.94±0.69 / 58.88 | 19.15±0.94 / 60.57 |
-    | Neural-SRP | 9.72±2.28 / 78.66 | 52.75±18.61 / 22.16 | 19.60±0.74 / 52.32 | 21.18±1.01 / 45.51 |
-    | GI-DOAEnetFM | 11.31±2.54 / 77.36 | 93.61±13.06 / 0.00 | 15.49±0.55 / 64.36 | 54.81±1.73 / 6.10 |
-    | Proposed | 8.25±1.52 / 90.78 | 11.24±1.76 / 72.17 | 10.32±0.49 / 77.34 | 14.12±0.77 / 63.17 |
-5.  实际意义是什么：该工作为构建“通用”的空间声学场景理解模型迈出了重要一步。它使得一个预训练的模型可以直接应用于各种形状、通道数的麦克风阵列（如机器人、智能家居、无人机上的不同设备），并能灵活选择定位精度，无需重新训练，极大降低了部署成本和门槛。
-6.  主要局限性是什么：
-    - 任务范围：论文专注于静态声源定位，未探讨对移动声源跟踪或多任务（如检测与定位联合）的能力。
-    - 场景复杂度：虽然实验包含了不同混响和噪声条件，但训练数据仍基于模拟生成，与极其复杂的真实世界动态声学场景（如强混响、多个移动干扰源）可能存在泛化差距。
-    - 效率权衡：引入Gridnet增加了计算开销，虽然论文表明开销可控，但在资源极度受限的嵌入式设备上仍需权衡。
+1.  要解决什么问题：生成现实、上下文感知的双人3D动作是一个核心挑战。现有方法将交互式（双向协调）和反应式（单向跟随）视为独立任务，架构不统一，且大多仅支持单一模态（文本或音乐）条件。
+2.  方法核心是什么：提出了DualFlow，第一个统一的、基于修正流的双人动作生成框架。其核心包括：a) 统一架构：通过掩码机制，在一个Transformer模型中无缝切换交互生成（双分支激活）和反应生成（仅反应者分支激活，并使用带有前瞻窗口的因果注意力）；b) 双人动作RAG：利用LLM将文本分解为空间关系、身体动作、节奏三个维度，并结合音乐特征进行检索，将检索到的动作范例注入生成过程；c) 对比修正流与同步损失：使用修正流进行快速确定性采样，并引入对比损失增强语义对齐，以及同步损失提升双人动作的协调性。
+3.  与已有方法相比新在哪里：首次统一了交互与反应式生成；首次为双人动作引入基于LLM分解和多维度检索的RAG框架；将修正流应用于双人动作生成并设计了相应的对比与同步训练目标。
+4.  主要实验结果如何：在MDD、InterHuman-AS和DD100三个数据集上进行评估。以MDD数据集（文本+音乐条件）为例，关键结果如下表所示：
+
+| 任务 | 方法 | R-Precision@3 | FID↓ | MMDist↓ | BED↑ | BAS↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 交互式 | InterGen(Both) | 0.302 | 0.426 | 1.532 | 0.385 | 0.185 |
+| | DualFlow(Both) | 0.513 | 0.415 | 0.513 | 0.286 | 0.179 |
+| 反应式 | DuoLando(Both) | 0.219 | 0.698 | 2.113 | 0.395 | 0.224 |
+| | DualFlow(Both) | 0.471 | 0.686 | 1.056 | 0.215 | 0.226 |
+
+注：DualFlow在大多数语义对齐和协调性指标上显著优于基线，且推理仅需20步（约1.24秒），比需50步的InterGen快约2.5倍。
+
+5.  实际意义是什么：为VR/AR同伴、社交机器人、游戏智能体等需要生成协调、连贯双人动作的应用提供了高效、统一的解决方案，能根据多模态输入灵活生成交互行为。
+6.  主要局限性是什么：RAG的检索质量依赖于检索库和查询的匹配度，对模糊输入可能检索到错误范例；反应式生成中偶尔出现手部或躯干穿透；生成超长序列时可能出现时间漂移。
 
 ---
 

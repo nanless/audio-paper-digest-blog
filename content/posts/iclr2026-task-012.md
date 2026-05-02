@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 神经网络压缩 论文列表"
+title: "ICLR 2026 - 生物声学 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["神经网络压缩"]
+tags: ["生物声学"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 神经网络压缩 方向论文"
+description: "共 1 篇 ICLR 2026 生物声学 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 神经网络压缩
+# ICLR 2026 - 生物声学
 
 共 **1** 篇论文
 
@@ -18,147 +18,49 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [DiVeQ: Differentiable Vector Quantization Using the Reparame](/audio-paper-digest-blog/posts/2026-05-03-diveq-differentiable-vector-quantization-using) | 8.0分 | 前25% |
+| 🥇 | [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-03-avex-what-matters-for-animal-vocalization-encoding) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [DiVeQ: Differentiable Vector Quantization Using the Reparameterization Trick](/audio-paper-digest-blog/posts/2026-05-03-diveq-differentiable-vector-quantization-using)
+### 🥇 [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-03-avex-what-matters-for-animal-vocalization-encoding)
 
-🔥 **8.0/10** | 前25% | #神经网络压缩 | #向量量化 | #语音编码 #端到端学习
+🔥 **8.5/10** | 前25% | #生物声学 | #预训练 | #自监督学习 #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Mohammad Hassan Vali（阿尔托大学 ELLIS Institute Finland & 计算机科学系）
-- 通讯作者：未说明（论文提供了所有作者的邮箱，但未明确指定通讯作者）
-- 作者列表：Mohammad Hassan Vali（阿尔托大学 ELLIS Institute Finland & 计算机科学系），Tom Bäckström（阿尔托大学 信息与通信工程系），Arno Solin（阿尔托大学 ELLIS Institute Finland & 计算机科学系）
+- 第一作者：Marius Miron (Earth Species Project)、David Robinson (Earth Species Project) （论文标注同等贡献）
+- 通讯作者：Marius Miron、David Robinson （论文标注同等贡献）
+- 作者列表：Marius Miron (Earth Species Project), David Robinson (Earth Species Project), Milad Alizadeh (Earth Species Project), Ellen Gilsenan-McMahon (Earth Species Project), Gagan Narula (Earth Species Project), Emmanuel Chemla (Earth Species Project), Maddie Cusimano (Earth Species Project), Felix Effenberger (Earth Species Project), Masato Hagiwara (Earth Species Project), Benjamin Hoffman (Earth Species Project), Sara Keen (Earth Species Project), Diane Kim (Earth Species Project), Jane K. Lawton (Earth Species Project), Jen-Yu Liu (Earth Species Project), Aza Raskin (Earth Species Project), Olivier Pietquin (Earth Species Project), Matthieu Geist (Earth Species Project)
 
 💡 **毒舌点评**
 
-亮点在于作者抓住了向量量化“硬分配阻断梯度”这一经典痛点，用重参数化技巧设计了既保持前向硬分配又允许反向梯度流的巧妙方案（DiVeQ），并在此基础上进一步提出消除码本坍缩的SF-DiVeQ变体，思路清晰且有效。短板是全文更多聚焦于工程技巧的改进与实证比较，对于重参数化噪声如何影响学习动态、空间填充曲线的几何结构如何影响表示能力等理论机制的剖析略显单薄。
+亮点：这是一项规模巨大、设计周密的系统性实证研究，首次将数据多样性、模型架构、训练范式（SSL+SL）和广泛的下游任务评估（包括新提出的个体识别和发声库发现任务）整合到一个统一的框架中进行比较，得出了具有明确指导意义的“训练配方”。
+短板：研究聚焦于一个相对垂直的领域（生物声学），且为了公平对比将采样率统一为16kHz，可能损失了高频信息（论文已承认此局限），这在一定程度上限制了其结论对部分物种研究的普遍适用性。
 
 🔗 **开源详情**
 
-- 代码：论文提供了公开的代码仓库链接：`https://github.com/AaltoML/DiVeQ`。
-- 模型权重：论文中未提及提供预训练模型权重。
-- 数据集：使用了公开数据集（AFHQ, CELEBA-HQ, FFHQ, LSUN, VCTK），并说明了获取方式（Kaggle等），但未提及是否发布自定义预处理版本。
-- Demo：论文中未提及在线演示。
-- 复现材料：附录（Appendix A）提供了全面的实现细节，包括VQ-VAE压缩、VQGAN生成和DAC语音编码的模型架构、所有超参数设置、不同VQ优化方法的具体实现（如Gumbel-Softmax温度退火、Rotation Trick代码库）、以及训练建议（如SF-DiVeQ的初始化方法）。
-- 论文中引用的开源项目：提到了参考的实现代码，包括DeepMind和Zalando Research的VQ-VAE PyTorch实现、dome272的VQGAN PyTorch实现、karpathy的deep-vector-quantization（用于ST-GS实现）、lucidrains的vector-quantize-pytorch（用于RT实现）以及GaParmar的clean-fid（用于计算FID）。
+-   代码：论文提供了代码仓库链接 `https://github.com/earthspecies/avex`，称为AVEX库，包含模型加载、推理、训练和评估系统。
+-   模型权重：明确提到将释放模型检查点（checkpoints）。
+-   数据集：论文中整合的训练数据（Xeno-canto, iNaturalist等）均为公开数据集，但需注意部分（如Watkins）可能需特定许可。评估数据集大部分为公开基准（BEANS, BirdSet）或已公开数据。
+-   Demo：论文中未提及在线演示。
+-   复现材料：提供了详细的超参数表（表5）、评估指标的数学定义（附录B）、数据来源说明（附录B.4）和软件实现细节（附录B.5），复现支持充分。
+-   论文中引用的开源项目：BEATs, EAT, EfficientNetB0 (torchvision), BirdNet, Perch的TensorFlow实现等。
 
 📌 **核心摘要**
 
-本文旨在解决深度学习模型中向量量化（VQ）层因其离散性导致的梯度阻断问题，从而阻碍端到端训练。论文提出两种新方法：1) DiVeQ，通过重参数化技巧，在输入向量上添加一个方向指向最近码字、幅度等于量化误差的可控噪声向量，从而在保持前向传播硬分配的同时允许梯度回传；2) SF-DiVeQ，作为DiVeQ的扩展，将量化目标从离散码字拓展到码字间连线构成的连续曲线，以减少量化误差并确保码本完全利用，避免码本坍缩。与现有方法（如STE、EMA、NSVQ）相比，新方法无需额外损失项或复杂的超参调节，实现了真正的端到端训练。
-
-主要实验在VQ-VAE图像压缩、VQGAN图像生成（CELEBA-HQ, FFHQ等数据集）和DAC语音编码（VCTK数据集）任务上进行。结果表明，DiVeQ和SF-DiVeQ在重建质量和生成质量上均一致优于对比方法。例如，在AFHQ数据集的VQ-VAE压缩任务中（图6），SF-DiVeQ在SSIM、PSNR和LPIPS指标上均取得最佳；在VQGAN生成任务中（表2），DiVeQ和SF-DiVeQ在小码本设置下FID分数显著优于其他方法（如NSVQ），且对超参数更鲁棒，不易出现码本-隐表示失配问题。
-
-实际意义在于，该方法可作为标准VQ层的即插即用替换模块，提升各类依赖离散表示的深度模型的训练效率和最终性能。主要局限性在于：1) 方法的有效性部分依赖于噪声方差σ²需要设置得足够小，虽对具体值不敏感，但仍是一个需要设定的超参数；2) SF-DiVeQ的初始化方式（需先训练若干epoch再引入量化）可能略增工程复杂度；3) 论文中的理论分析有限，更多是实证验证。
-
-### 01.模型架构
-本文主要贡献是新的可微向量量化操作本身，而非一个完整的端到端模型架构。DiVeQ和SF-DiVeQ作为模块，被集成到现有的VQ-VAE、VQGAN和DAC模型中。
-
-完整输入输出流程（以DiVeQ为例）：
-1. 输入：编码器输出的连续隐变量向量 `z ∈ R^D`。
-2. 量化操作：
-   - 首先，通过硬量化（argmin）找到最近的码字 `c_i*`。
-   - 然后，计算一个方向性噪声向量 `v_d = v + (c_i* - z)`，其中 `v ∼ N(0, σ²I)`。
-   - 最终的量化隐变量为：`z_q = z + ||c_i - z||₂  sg[v_d / ||v_d||₂]`，其中 `sg[·]` 是停止梯度算子。该式使 `z_q` 在几何上精确指向 `c_i*`，同时 `z_q` 是 `z` 的可微函数。
-3. 输出：可微的量化表示 `z_q`，随后送入解码器。
-
-![图1：DiVeQ方法示意图](icassp-img://KRVnpTbx7R/0.png)
-图1展示了标准VQ（左）与DiVeQ（右）的对比。DiVeq在反向传播时允许梯度通过误差向量流动。
-
-核心组件与交互：
-- 硬量化器：用于前向传播时确定最近码字索引，保持量化离散性。
-- 重参数化噪声注入器：在反向传播时，利用从高斯分布采样并偏移的噪声 `v_d`，模拟量化误差的方向，构建可微的替代路径。其方向受 `v` 的扰动，但当 `σ²→0` 时，方向趋近于精确的 `c_i* - z`。
-- SF-DiVeQ扩展：将量化点从离散码字拓展到相邻码字连线。其量化操作为 `z_q = z + ||c_i - z||₂  sg[((1-λ)v_{di}) / ||v_{di}||] + ||c_{i+1} - z||₂  sg[(λ v_{di+1}) / ||v_{di+1}||]`，其中 `λ ∼ U(0,1)`，`v_{di}` 和 `v_{di+1}` 分别为指向 `c_i` 和 `c_{i+1}` 的方向噪声。这相当于将输入量化到一条空间填充曲线上。
-
-![图3：DiVeQ量化准确性随方差σ²变化](icassp-img://KRVnpTbx7R/2.png)
-图3展示了不同σ²下DiVeQ的量化映射。随着σ²减小，量化点从随机方向收敛到精确指向最近码字。
-
-### 02.核心创新点
-1. 基于方向重参数化的可微硬量化（DiVeQ）：将量化误差建模为一个方向受控的噪声向量。与NSVQ的随机方向误差相比，DiVeQ的误差方向在方差趋零时严格对齐最近码字，几何一致性更强，从而在保持硬分配的同时提供了更准确的梯度信号。收益：无需辅助损失（如承诺损失、码本损失）即可端到端训练，避免了梯度偏差和训练-测试不匹配问题。
-2. 空间填充量化变体（SF-DiVeQ）：将量化空间从离散点扩展到由码字连接而成的连续曲线。通过在训练时将输入量化到随机插值点，曲线会逐渐被拉入数据分布支撑区域。收益：1) 天然避免了码本坍缩和隐变量-码本表示失配（见图4）；2) 增加了表示的连续性和自由度，降低了量化误差；3) 消除了对启发式码本替换策略的依赖。
-3. 改进的基于重要性采样的码本替换算法：针对易发生码本坍缩的方法，提出根据码字使用频率进行替换，而非随机替换。收益：如图8所示，新策略能更快地实现更高的码本使用率（困惑度），从而提升训练初期的效率和最终性能。
-
-![图4：码本-隐表示失配可视化](icassp-img://KRVnpTbx7R/3.png)
-图4通过t-SNE展示了不同方法学习到的码本（红叉）与隐变量分布（灰点）的关系。其他方法常出现失配，而SF-DiVeQ（最右）的码本分布最均匀，与隐变量对齐最好。
-
-### 03.细节详述
-- 训练数据：
-    - 图像任务：AFHQ (15,803张), CELEBA-HQ (30k张), FFHQ (70k张), LSUN Bedroom (70k张), LSUN Church (70k张)。分辨率均为256x256。压缩任务按80/20%划分训练/测试集；生成任务对AFHQ和CELEBA-HQ使用全部数据。
-    - 语音任务：CSTR VCTK数据集，109位说话人，按80/20%划分，确保训练/测试集无说话人重叠。采样率降至16kHz。
-- 损失函数：
-    - VQ-VAE压缩：重构损失 = MSE(x, x_r) + 1.0 * LPIPS(x, x_r)（感知损失）。
-    - VQGAN生成：使用原始论文（Esser et al., 2021）的损失，包括重建损失、对抗损失和感知损失。
-    - DAC语音编码：使用原始模型（Kumar et al., 2023）的损失。
-    - 通用超参数：对于需额外损失的方法（如STE），其码本损失系数α=1，承诺损失系数β=0.25；EMA衰减率γ=0.99；ST-GS温度τ从1指数衰减至0.1。
-- 训练策略：
-    - 优化器：图像任务用Adam；语音任务用AdamW (betas=(0.8, 0.99))。
-    - 学习率：VQ-VAE压缩主实验lr=5.5e-4，在40和70 epoch减半；VQGAN生成主实验lr=2.5e-5(batch=8)或2.5e-4(batch=32)；DAC语音lr=1e-4。
-    - 批大小：图像任务主实验为32；语音任务主实验为64。消融实验测试了16, 32, 64, 128。
-    - 训练轮数：VQ-VAE压缩100 epochs；VQGAN生成100 epochs；DAC语音300 epochs。
-    - 码本替换：对DiVeQ等采用作者提出的基于重要性的替换策略，在训练前期更频繁地进行替换。
-- 关键超参数：
-    - 码本大小：图像任务测试码本位数B={4,5,6,7,8,9,10,11}，对应码本大小K=2^B；语音任务测试B={10,11,12,13}。
-    - 隐变量维度：图像任务为512维；语音任务为8维（但保持瓶颈层为512维以增加量化难度）。
-    - DiVeQ/SF-DiVeQ噪声方差σ²：主实验中，图像/语音任务σ²=1e-3，VQGAN生成σ²=1e-2。消融表明σ²≤1e-2时性能稳定。
-- 训练硬件：未在提供的论文内容中说明。
-- 推理细节：所有方法（除SF-DiVeQ外）在推理时均使用硬量化（argmin）。SF-DiVeQ推理时映射到空间填充曲线上最近点。
-- 其他技巧：SF-DiVeQ采用自定义初始化：先不带量化训练2个epoch，然后用最近20-50个批次的隐变量平均值初始化码本。
-
-### 04.实验结果
-论文在三个任务、多个数据集上进行了全面对比。
-
-1. VQ-VAE图像压缩（AFHQ数据集，批大小=32）
-![图6：VQ-VAE压缩定量比较](icassp-img://KRVnpTbx7R/5.png)
-图6显示，在不同码本大小下，DiVeQ和SF-DiVeQ在SSIM、PSNR和LPIPS三个指标上均一致优于STE、EMA、RT、ST-GS和NSVQ。例如，在11位码本(K=2048)下，SF-DiVeQ的LPIPS显著低于其他方法。
-
-2. VQGAN图像生成（CELEBA-HQ数据集）
-表2：VQGAN生成FID↓分数对比
-| 方法 | lr=2.5e-5, batch=8 | | | | lr=2.5e-4, batch=32 | | | |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 码本位数 | 8 | 9 | 10 | 12 | 8 | 9 | 10 | 12 |
-| STE | 6.64 | 5.57 | 5.28 | 6.69 | 334 | 7.54 | 7.34 | 9.45 |
-| EMA | 6.86 | 6.30 | 6.32 | 6.24 | 8.42 | 7.42 | 6.97 | 9.41 |
-| RT | 9.32 | 7.55 | 6.40 | 5.44 | 12.3 | 9.33 | 6.53 | 6.58 |
-| ST-GS | 8.47 | 6.81 | 5.48 | 5.47 | 309 | 41.1 | 197 | 155 |
-| NSVQ | 81.5 | 70.4 | 59.2 | 48.9 | 78.4 | 70.1 | 62.1 | 49.6 |
-| DiVeQ (ours) | 5.90 | 6.69 | 6.32 | 7.69 | 8.44 | 8.01 | 7.59 | 9.54 |
-| SF-DiVeQ (ours) | 6.24 | 5.21 | 5.57 | 6.00 | 8.46 | 6.66 | 7.02 | 7.40 |
-
-（表格复现自论文表2，红色高亮表示发生码本-隐表示失配的案例，FID>30）
-关键结论：1) 在小学习率/批大小（HP1）下，DiVeQ和SF-DiVeQ在小码本（8,9位）上FID显著优于NSVQ等方法；2) 在大学习率/批大小（HP2）下，STE、ST-GS等方法容易发生失配导致FID飙升，而DiVeQ和SF-DiVeQ更鲁棒，SF-DiVeQ未发生失配。
-
-3. DAC语音编码（VCTK数据集，批大小=64）
-表3：语音解压缩定量对比
-| 方法 | Log Spectral Distance↓ | | | | MFCC Distance↓ | | | | PESQ↑ | | | | STOI↑ | | | |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 码本位数 | 10 | 11 | 12 | 13 | 10 | 11 | 12 | 13 | 10 | 11 | 12 | 13 | 10 | 11 | 12 | 13 |
-| STE | 1.11 | 3.20 | 1.14 | 1.11 | 93.3 | 344 | 105 | 96.0 | 1.22 | 1.04 | 1.14 | 1.22 | 0.75 | 0.40 | 0.71 | 0.75 |
-| EMA | 3.40 | 1.03 | 1.03 | 1.02 | 317 | 72.6 | 72.4 | 69.1 | 1.03 | 1.55 | 1.59 | 1.67 | 0.39 | 0.83 | 0.84 | 0.84 |
-| RT | 1.09 | 1.05 | 1.04 | 1.05 | 92.6 | 84.0 | 82.8 | 80.8 | 1.27 | 1.35 | 1.43 | 1.41 | 0.76 | 0.80 | 0.80 | 0.81 |
-| ST-GS | 1.13 | 3.32 | 3.45 | 1.13 | 97.9 | 349 | 333 | 97.9 | 1.19 | 1.03 | 1.04 | 1.21 | 0.76 | 0.41 | 0.39 | 0.76 |
-| NSVQ | 1.11 | 1.09 | 1.10 | 1.07 | 108 | 103 | 101 | 93.6 | 1.35 | 1.43 | 1.49 | 1.56 | 0.79 | 0.81 | 0.82 | 0.83 |
-| DiVeQ (ours) | 1.04 | 1.04 | 1.04 | 1.02 | 77.2 | 75.5 | 73.9 | 72.6 | 1.41 | 1.55 | 1.53 | 1.64 | 0.82 | 0.83 | 0.83 | 0.85 |
-| SF-DiVeQ (ours) | 1.05 | 1.02 | 1.01 | 1.01 | 74.6 | 71.8 | 68.3 | 66.8 | 1.49 | 1.52 | 1.62 | 1.75 | 0.83 | 0.84 | 0.85 | 0.85 |
-
-（表格复现自论文表3，红色高亮表示发生失配、语音质量严重下降的案例）
-关键结论：DiVeQ和SF-DiVeQ在LSD、MFCC、PESQ、STOI四个指标上全面领先。特别是在高码本位数（13位）下，SF-DiVeQ的MFCC距离（66.8）远优于NSVQ（93.6）和RT（80.8）。
-
-### 05.评分理由
-- 学术质量：6.0/7：创新性体现在将重参数化技巧创造性地应用于解决VQ的梯度问题，并提出了空间填充的扩展思路。技术实现正确，实验设计严谨，覆盖了图像和语音领域的主流任务与模型，提供了详实的消融研究（方差、批大小、学习率、初始化、码本替换）。主要不足是理论分析稍弱，对空间填充曲线的拓扑结构如何影响学习效率和表示能力的讨论不够深入。
-- 选题价值：1.5/2：向量量化是深度学习处理离散表示的核心技术，其优化问题直接影响压缩、生成、量化神经网络等多个前沿方向。该工作提出的通用解决方案具有明确的实用价值和广泛的适用性，对音频/语音读者（尤其在神经音频编解码、语音生成领域）有直接参考意义。
-- 开源与复现加成：0.5/1：提供了公开的代码仓库链接，并在附录中给出了极其详尽的实现细节（模型结构、超参数、训练设置、不同方法的实现方式），可复现性高。但未提供预训练模型权重，无法进行即时的性能验证。
-
-## 开源详情
-- 代码：论文提供了公开的代码仓库链接：`https://github.com/AaltoML/DiVeQ`。
-- 模型权重：论文中未提及提供预训练模型权重。
-- 数据集：使用了公开数据集（AFHQ, CELEBA-HQ, FFHQ, LSUN, VCTK），并说明了获取方式（Kaggle等），但未提及是否发布自定义预处理版本。
-- Demo：论文中未提及在线演示。
-- 复现材料：附录（Appendix A）提供了全面的实现细节，包括VQ-VAE压缩、VQGAN生成和DAC语音编码的模型架构、所有超参数设置、不同VQ优化方法的具体实现（如Gumbel-Softmax温度退火、Rotation Trick代码库）、以及训练建议（如SF-DiVeQ的初始化方法）。
-- 论文中引用的开源项目：提到了参考的实现代码，包括DeepMind和Zalando Research的VQ-VAE PyTorch实现、dome272的VQGAN PyTorch实现、karpathy的deep-vector-quantization（用于ST-GS实现）、lucidrains的vector-quantize-pytorch（用于RT实现）以及GaParmar的clean-fid（用于计算FID）。
+1.  要解决的问题：生物声学领域缺乏一个通用、可迁移的编码器。现有模型通常局限于特定物种（如鸟类）、单一架构或训练范式，且评估任务单一，难以应对真实世界中需要识别新物种、个体或发现发声库的泛化需求。
+2.  方法核心：提出AVEX（Animal Vocalization Encoder），通过大规模实证研究，系统性地比较不同模型架构（EfficientNet, BEATs, EAT）、训练数据组合（生物声学数据、通用音频AudioSet）、训练范式（纯监督、纯自监督、先SSL预训练再SL微调）的效果。
+3.  与已有方法相比新在哪里：a) 系统性研究：首次在统一框架下对比CNN与Transformer、监督与自监督等多种组合；b) 数据多样性：强调并验证了混合生物声学与通用音频数据在预训练和微调阶段的重要性；c) 训练范式创新：提出并验证了“SSL预训练 + SL微调”的两阶段训练配方在分布内和分布外任务上的优越性；d) 评估拓展：扩展了评估基准，加入了个体识别和发声库发现等新任务，并引入了检索和聚类指标。
+4.  主要实验结果：在涵盖物种分类、检测、个体ID和发声库发现的26个数据集上评估，最终模型“sl-BEATs-all”（在混合数据上SSL预训练后SL微调）取得了整体最优性能。例如，在BEANS分类探测准确率达0.832，在BEANS检测探测mAP达0.604，在个体ID探测准确率达0.732，在发声库发现检索AUC达0.798。具体关键结果见下表：
+    | 模型 | BEANS 分类 (探测) | BEANS 分类 (检索 R-AUC) | BEANS 检测 (探测) | BEANS 检测 (检索 R-AUC) | BirdSet (探测) | 个体 ID (探测) | 发声库发现 (R-AUC) |
+    | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+    | sl-BEATS-all (本文最佳) | 0.832 | 0.813 | 0.604 | 0.408 | 0.726 | 0.732 | 0.798 |
+    | Perch (SOTA基线) | 0.768 | 0.759 | 0.478 | 0.368 | 0.674 | 0.656 | 0.705 |
+    | BirdNet (SOTA基线) | 0.796 | 0.772 | 0.523 | 0.392 | N/A | 0.472 | 0.795 |
+5.  实际意义：为生物声学研究和保护应用提供了一个性能更强的通用编码器（AVEX）和一个更全面的评估基准。明确的训练配方（数据混合、两阶段训练）为未来开发更强大的生物声学模型提供了可复用的路线图。
+6.  主要局限性：a) 所有模型在16kHz下训练，可能无法充分利用高于8kHz的声学信息；b) 评估任务虽然扩展，但仍未完全覆盖生物声学所有潜在应用；c) 模型的计算开销和部署便捷性未深入讨论。
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频摘要 论文列表"
+title: "ICLR 2026 - 视频生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["视频摘要"]
+tags: ["视频生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频摘要 方向论文"
+description: "共 1 篇 ICLR 2026 视频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频摘要
+# ICLR 2026 - 视频生成
 
 共 **1** 篇论文
 
@@ -18,56 +18,51 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TripleSumm: Adaptive Triple-Modality Fusion for Video Summar](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 8.0分 | 前25% |
+| 🥇 | [Stable Video Infinity: Infinite-Length Video Generation with](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
+### 🥇 [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video)
 
-🔥 **8.0/10** | 前25% | #视频摘要 | #注意力机制 | #多模态模型 #数据集
+✅ **7.0/10** | 前25% | #视频生成 | #扩散模型 | #流匹配 #生成模型
 
 👥 **作者与机构**
 
-- 第一作者：未说明（论文中标注了“∗Equal contribution”给前三位作者）
-- 通讯作者：Yoori Oh†（首尔大学）， Joonseok Lee†（首尔大学）
-- 作者列表：Sumin Kim（首尔大学）， Hyemin Jeong（首尔大学）， Mingu Kang（首尔大学）， Yejin Kim（首尔大学）， Yoori Oh（首尔大学）， Joonseok Lee（首尔大学）
+- 第一作者：Wuyang Li（机构未说明）
+- 通讯作者：未说明
+- 作者列表：Wuyang Li（机构未说明）、Wentao Pan（机构未说明）、Po-Chien Luan（机构未说明）、Yang Gao（机构未说明）、Alexandre Alahi（机构未说明）
+
+#
 
 💡 **毒舌点评**
 
-这篇论文最大的亮点在于“基建”贡献——提出了首个大规模、高质量的三模态视频摘要基准数据集MoSu，这对社区价值甚至超过了其模型本身；然而，其核心融合机制（基于查询的跨模态注意力）在思想上并不新颖，且依赖于YouTube“最常回放”统计数据作为监督信号，可能引入系统性偏差。
+亮点在于其“错误回收”训练机制的理论设计非常巧妙，将测试时的误差累积问题转化为训练时的监督信号，是从根本上解决问题的思路。但短板是摘要中缺乏任何定量的实验结果对比，一个号称“State-of-the-art”的方法却没有拿出硬数据（如FVD、人类评估分数），使得其有效性声明目前只停留在理论层面，说服力不足。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文在摘要中提供了代码仓库链接：https://github.com/smkim37/TripleSumm。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：论文引入并开源了MoSu数据集，并通过同一GitHub链接提供。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文在正文和附录中提供了极其详细的复现指南，包括完整的超参数设置（表I）、模型架构描述、数据预处理每一步的工具和参数、训练策略、以及所有评估实验的具体划分和协议。
-- 论文中引用的开源项目：论文依赖或提及了以下开源项目/模型：
-    - 特征提取：CLIP (视觉), RoBERTa (文本), Audio Spectrogram Transformer (AST) (音频)。
-    - 数据处理：YouTube-8M数据集。
-    - 基线模型：VASNet, PGL-SUM, CSTA, A2Summ, SSPVS, Joint-VA, UMT, CFSum等。
-    - 图像描述生成（用于外部基准）：Qwen2.5-VL-7B-Instruct。
-- 开源计划：论文中明确提供了开源链接，因此不存在“未提及开源计划”的情况。
+根据提供的论文摘要内容：
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及。
+- 数据集：未提及。
+- Demo：未提及。
+- 复现材料：未提及训练细节、配置、检查点或附录说明。
+- 论文中引用的开源项目：未提及。
+- 结论：论文中未提及任何开源计划。
 
 📌 **核心摘要**
 
-1.  解决的问题：现有视频摘要方法大多仅使用视觉模态，或使用静态、模态无关的融合策略，无法动态适应视频中不同帧处各模态重要性的变化。
-2.  方法核心：提出TripleSumm模型，包含两个关键组件：(1) 多尺度时间块（MST）：采用可变窗口大小的滑动窗口自注意力，逐层从局部到全局捕获时间依赖；(2) 跨模态融合块（CMF）：以中立的融合令牌为查询，通过注意力机制自适应地为每个时间步的视觉、文本、音频特征分配权重并融合。
-3.  新意所在：相比先前使用固定融合或偏向视觉模态的方法，TripleSumm在帧级别动态评估各模态的重要性。此外，引入了首个提供完整三模态特征和大规模标注的视频摘要数据集MoSu。
-4.  主要实验结果：TripleSumm在MoSu数据集上显著超越所有基线，例如在Kendall’s τ上达到0.351，高于最强基线CFSum的0.277。在Mr. HiSum、SumMe、TVSum等外部基准上也达到SOTA。消融实验证明MST和CMF模块及动态融合机制的有效性。具体对比结果见下表。
+1.  解决的问题：现有超长视频生成方法通过手工技巧（如修改噪声调度器）缓解误差累积，但受限于单一提示词外推，生成场景单调重复。其根本挑战在于训练时模型看到的是干净数据，而推理时却需处理自身生成的、带有误差的输出，存在假设差距。
+2.  方法核心：提出“错误回收微调”（Error-Recycling Fine-Tuning）。通过一个闭环系统，将扩散Transformer（DiT）自身生成的错误（通过单步双向积分近似计算残差得到）注入到干净输入中，模拟错误累积的轨迹进行训练，并将历史错误存入“误差银行”在不同时刻重采样作为新的训练输入，从而教会模型主动识别和纠正错误。
+3.  与已有方法不同：不同于以往仅通过外部技巧被动“缓解”误差的方法，SVI将错误内化为训练数据的一部分，通过闭环学习让模型主动从错误中学习，直接弥补了训练与测试时的条件分布差距。
+4.  主要实验结果：论文中未提供具体数值。摘要仅声明在三个基准（一致性、创造性、条件设置）上评估，验证了其通用性和当前最佳地位。
+5.  实际意义：能够以无额外推理成本的方式，将视频生成从几秒扩展到无限长度，同时支持音频、骨骼、文本等多种条件控制，为电影、动画、游戏等内容创作提供了强大工具。
+6.  主要局限性：摘要中未提及模型大小、训练数据规模、具体性能指标（如FVD、FID）和与SOTA方法的定量对比，其实验充分性和结论强度存疑。此外，未提及开源计划，可复现性未知。
 
-| 方法 | 模态 (V/T/A) | τ ↑ | ρ ↑ | mAP50 ↑ | mAP15 ↑ | 参数量 ↓ |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| CFSum | V, T, A | 0.277 | 0.374 | 70.97 | 38.20 | 19.83M |
-| TripleSumm (Ours) | V, T, A | 0.351 | 0.472 | 74.72 | 44.42 | 1.37M |
-
-![表2: MoSu数据集上的性能对比](icassp-img://x74NsHGywD/3.png)
-
-5.  实际意义：为多模态视频摘要提供了一个强效模型和一个可靠的大规模评测基准，推动了视频理解向更综合的多模态方向发展。
-6.  主要局限性：模型性能在完全缺失某一模态时会下降（虽然比偏向单一模态的基线更鲁棒）；数据集MoSu的监督信号来源于用户回放行为，可能不完美反映人类对内容“重要性”的判断；模型目前仍遵循“打分-分割-选择”的流程，而非端到端的摘要生成。
+#
 
 ---
 

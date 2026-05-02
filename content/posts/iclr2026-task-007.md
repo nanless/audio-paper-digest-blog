@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 情感识别 论文列表"
+title: "ICLR 2026 - 数字角色动画 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["情感识别"]
+tags: ["数字角色动画"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 情感识别 方向论文"
+description: "共 1 篇 ICLR 2026 数字角色动画 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 情感识别
+# ICLR 2026 - 数字角色动画
 
 共 **1** 篇论文
 
@@ -18,62 +18,44 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified) | 7.0分 | 前25% |
+| 🥇 | [Instilling an Active Mind in Avatars via Cognitive Simulatio](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified)
+### 🥇 [Instilling an Active Mind in Avatars via Cognitive Simulation](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via)
 
-✅ **7.0/10** | 前25% | #情感识别 | #多任务学习 | #多模态模型 #基准测试
+✅ **7.5/10** | 前25% | #数字角色动画 | #多模态融合 | #情感感知动画 #扩散模型
 
 👥 **作者与机构**
 
-- 第一作者：Keane Ong (MIT, National University of Singapore)，Wei Dai (MIT) - 论文标注为共同第一作者（*Equal contribution）
-- 通讯作者：未明确标注
-- 作者列表：Keane Ong (MIT, NUS), Wei Dai (MIT), Carol Li (MIT), Dewei Feng (MIT), Hengzhi Li (MIT, Imperial College London), Jingyao Wu (MIT), Jiaee Cheong (Harvard), Rui Mao (NTU), Gianmarco Mengaldo (NUS), Erik Cambria (NTU), Paul Pu Liang (MIT)
-
-#
+- 第一作者：未说明
+- 通讯作者：未说明
+- 作者列表：Jianwen Jiang、Weihong Zeng、Zerong Zheng、Jiaqi Yang、Chao Liang、Wang Liao、Han Liang、Weifeng Chen、XING WANG、Yuan Zhang、Mingyuan Gao（所有作者所属机构均未说明）
 
 💡 **毒舌点评**
 
-这篇论文做了一件非常“工程化”但又极具价值的事情：它没有提出一个全新的复杂模型架构，而是致力于为“理解人类心理与社会行为”这个混乱的领域“立法”——建立了一个规模空前（10万+样本）、任务全面（10类行为任务）、格式统一的基准测试库，并在此基础上训练了三个强基线模型。亮点在于其系统性的构建工作和扎实的实验证明了统一训练带来的跨任务收益与迁移能力。短板则在于，其核心模型（OMNISAPIENS-7B）本质上是现有强大基座模型（Qwen2.5-Omni）在特定数据上的适配，在架构创新层面略显不足，更像是一个优秀的“领域适配+评测”工作。
-
-#
+这篇论文的亮点在于直击了现有数字人模型“形似神不似”的核心痛点，提出的“用LLM注入灵魂”思路方向正确，且多模态扩散Transformer的融合设计看起来是为了解决真实世界复杂输入而生的务实创新。然而，最大的短板恰恰是作为一篇深度学习论文，摘要中竟未呈现任何定量实验结果对比（如FID、FVD、唇形同步分数等），仅靠一个结果网站链接和“全面实验”的断言，说服力大打折扣，让人不禁怀疑实验是否充分支撑了其宣称的“优越性”。
 
 🔗 **开源详情**
 
-- 代码：论文提供GitHub仓库链接：`https://github.com/MIT-MI/human_behavior_atlas`，承诺将发布代码。
-- 模型权重：承诺发布训练好的OMNISAPIENS-7B SFT, BAM, RL模型权重。
-- 数据集：HUMAN BEHAVIOR ATLAS基准测试将发布，包含统一格式的样本。数据来源于多个公开数据集（已在文中列出）。
-- Demo：论文中未提及在线演示。
-- 复现材料：附录B和C提供了极其详细的模型架构、训练目标、超参数设置（如LoRA配置、GRPO参数、学习率、批大小等）和实验步骤。
-- 引用的开源项目：依赖的开源工具/模型包括Qwen2.5-Omni-7B（骨干）、MediaPipe（视觉描述符提取）、OpenSMILE（音频描述符提取）、Whisper v3（转录）、GPT-5-nano（LLM评判）。
+- 代码：论文中未提及代码仓库链接。
+- 模型权重：未提及是否公开。
+- 数据集：未提及是否公开。
+- Demo：提供了在线演示链接：https://omnihuman-lab.github.io/v1_5/。
+- 复现材料：论文摘要中未给出任何训练细节、配置、检查点或附录说明。
+- 论文中引用的开源项目：摘要中未提及。
+- 总结：论文中未提及除演示链接外的任何开源计划。
 
 📌 **核心摘要**
 
-1.  问题：现有对人类心理和社会行为（如情感、认知、病理、社交）的理解多依赖专用数据集和单任务系统，缺乏可扩展、可迁移、能形成通用理解的基础模型。
-2.  方法核心：构建了 Human Behavior Atlas，一个包含超过10万多样本、涵盖文本/音频/视觉模态的统一基准测试。所有数据被标准化为提示-目标格式，评估指标也统一。在此基础上，训练了三个7B参数的多模态模型变体：OMNISAPIENS-7B SFT（监督微调）、OMNISAPIENS-7B BAM（集成残差式行为适配器模块，融入行为描述符）、OMNISAPIENS-7B RL（基于GRPO的强化学习）。
-3.  创新点：
-    *   统一基准测试：首次大规模（10万+样本）地将分散的情感、认知、病理、社交行为任务标准化到一个框架下。
-    *   标准化格式与评估：设计了通用的提示-目标格式，并为不同任务类型定义了统一的评估指标（如二分类加权F1、LLM评判准确率）。
-    *   行为适配器模块（BAM）：提出了一种轻量级的残差适配器，可将提取的面部/身体关键点、韵律等行为描述符非侵入式地整合到冻结的LLM骨干中，为目标任务提供可选增强。
-    *   系统性实验：通过多任务训练、迁移学习（至未见过的数据集和新任务）以及行为描述符消融实验，全面验证了统一训练的优势和BAM的有效性。
-4.  主要结果：
-    *   多任务表现：在10类行为任务中的8类上，训练后的OMNISAPIENS-7B变体（SFT/BAM）优于现有通用多模态大模型（如Qwen2.5-Omni）。具体见下表。
-
-    | 模型 | EMO (均值) | HUM | INT | PTSD | ANX | DEP | SEN | SAR | SOC | NVC |
-    | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-    | Qwen 2.5-Omni-7B | .580 | .543 | .254 | .760 | .793 | .791 | .636 | .700 | .714 | .602 |
-    | OMNISAPIENS-7B SFT | .614 | .532 | .256 | 1.00 | .909 | .839 | .626 | .746 | .813 | .744 |
-    | OMNISAPIENS-7B BAM | .607 | .644 | .177 | 1.00 | .909 | .839 | .738 | .744 | .837 | .775 |
-    *   迁移学习：在留出数据集（MOSEI, MELD, DAIC-WOZ, MUStARD）上微调1个epoch后，OMNISAPIENS-7B SFT显著优于未在HBA上预训练的Qwen2.5-Omni SFT。例如，在MUStARD（讽刺检测，训练时未见任务）上，得分从0.473提升至0.658（+39.1%）。
-    *   BAM效果：集成BAM后，在NVC（+33%）、SAR（+29%）、HUM（+21%）等任务上带来显著提升，证明其可针对性地利用行为描述符增强特定任务性能。
-5.  实际意义：为构建通用的“人类行为理解”基础模型提供了首个大规模、标准化的公共基准和强基线，推动该领域从零散研究走向系统化、可比较的发展阶段。
-6.  主要局限性：(1) 模型本身（OMNISAPIENS-7B）的架构创新有限，主要贡献在于数据集构建和训练方法。(2) 基准测试所用数据集主要来自特定文化背景（英语为主），可能影响其普适性。(3) 部分自由文本生成任务（SOC, INT, NVC）的整体得分仍然较低，表明该领域仍有很大挑战。
-
-#
+1.  问题：现有视频数字角色模型能生成流畅动画，但难以捕捉角色真实神韵，主要依赖低级音频线索（如嘴唇形状）同步动作，而无法理解高级语义（如情感、意图）。
+2.  方法核心：提出一个新框架，旨在生成物理合理且语义丰富、富有表现力的角色动画。其技术基础有二：一是利用多模态大语言模型（MLLM）从输入条件生成结构化文本，提供高层次语义指导；二是设计了专门的多模态扩散Transformer架构，采用新型的“伪最后一帧”设计，以鲁棒融合音频、图像和文本等多模态信号。
+3.  创新点：与已有方法相比，其核心创新在于将生成过程与高级语义理解和多模态深度融合相结合，而不仅仅是基于音频的浅层同步。
+4.  实验结果：论文声称在唇形同步精度、视频质量、动作自然度和语义一致性方面取得了令人信服的结果，并展示了对多人、非人类主体等复杂场景的强泛化能力。具体定量数值在摘要中未提供。
+5.  实际意义：该方法有望提升虚拟人、游戏角色、数字孪生等应用的表现力和真实感，使其更具情感交互能力。
+6.  主要局限性：摘要中未明确说明。可能的局限包括对高质量多模态数据集的依赖、模型计算复杂度，以及对复杂长文本语义理解的准确性有待验证。
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 实时视听问答 论文列表"
+title: "ICLR 2026 - 意图识别 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["实时视听问答"]
+tags: ["意图识别"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 实时视听问答 方向论文"
+description: "共 1 篇 ICLR 2026 意图识别 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 实时视听问答
+# ICLR 2026 - 意图识别
 
 共 **1** 篇论文
 
@@ -18,53 +18,47 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Can Vision-Language Models Answer Face to Face Questions in ](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face) | 8.0分 | 前25% |
+| 🥇 | [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Can Vision-Language Models Answer Face to Face Questions in the Real-World?](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face)
+### 🥇 [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni)
 
-🔥 **8.0/10** | 前25% | #实时视听问答 | #基准测试 | #音频问答 #音视频
+🔥 **8.5/10** | 前25% | #意图识别 | #多模态模型 | #语音对话系统 #端到端
 
 👥 **作者与机构**
 
-- 第一作者：Reza Pourreza（高通AI研究），Rishit Dagli（多伦多大学）并列第一贡献
+- 第一作者：未说明
 - 通讯作者：未说明
-- 作者列表：Reza Pourreza（高通AI研究）、Rishit Dagli（多伦多大学）、Apratim Bhattacharyya（高通AI研究）、Sunny Panchal（高通AI研究）、Guillaume Berger（高通AI研究）、Roland Memisevic（高通AI研究）
+- 作者列表：Siyin Wang（未说明）、Jinlan Fu（未说明）、Feihong Liu（未说明）、Xinzhe He（未说明）、Huangxuan Wu（未说明）、Junhao Shi（未说明）、Kexin Huang（未说明）、Zhaoye Fei（未说明）、Jingjing Gong（未说明）、Zuxuan Wu（未说明）、Yu-Gang Jiang（未说明）、See-Kiong Ng（未说明）、Tat-Seng Chua（未说明）、Xipeng Qiu（未说明）
 
 💡 **毒舌点评**
 
-亮点在于数据集QIVD的设计非常巧妙，它捕捉了“实时交互”中时间对齐和指代消歧的核心挑战，为评估AI的“情境感知”能力提供了迄今为止最逼真的舞台。短板则是论文的核心模型架构（流式ASR+视频LLM）是现有组件的拼接，并未提出全新的端到端融合模型来解决这一问题，更像是一个优秀的“系统集成与诊断报告”。
+论文提出了一个非常前沿且贴近真实场景的问题——让机器人从环境音、对话等非指令性信息中主动推断用户意图，这超越了传统的指令跟随范式，很有洞察力。然而，论文摘要中对核心模型“RoboOmni”的具体架构描述过于模糊（如Perceiver-Thinker-Talker-Executor各模块的内部细节、交互方式完全缺失），让人难以评估其技术深度和真正的创新性，更像是提出了一个宏大的任务框架。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及提供代码仓库链接。
-- 模型权重：论文评估了多个开源模型（如VideoLLaMA系列、Qwen系列），这些模型的权重本身是公开的。微调后的特定模型权重是否公开未明确说明。
-- 数据集：论文公开了QIVD数据集，提供了访问链接：https://www.qualcomm.com/developer/software/qualcomm-interactive-video-dataset-qivd
-- Demo：论文中未提及提供在线演示。
-- 复现材料：论文在附录中提供了极其详细的复现材料，包括：
-    - 微调时冻结与可训练模块的划分（表D.1）
-    - 详细的训练超参数配置（表D.2，包括学习率、优化器、批量大小等）
-    - Stream-Qwen-Omni的适配格式和训练细节（附录D.3）
-    - LLM裁判使用的完整提示词（表D.3， D.4）
-    - 针对GPT-4o的评测提示词（表D.5）
-- 论文中引用的开源项目：Whisper (Radford et al., 2023), Whisper-Streaming (Machácek et al., 2023), SigLIP (Zhai et al., 2023), BEATs (Chen et al., 2022), 以及多个作为评估基线的开源视觉语言模型（如InstructBLIP, VideoLLaMA系列, Qwen系列等）。
+- 代码：论文承诺公开代码，但未提供具体仓库链接。
+- 模型权重：论文未明确提及是否公开预训练的RoboOmni模型权重。
+- 数据集：论文承诺公开OmniAction数据集，但未说明具体发布平台和获取方式。
+- Demo：论文承诺公开真实世界演示视频，这可视作一种演示形式。
+- 复现材料：论文中未提供训练细节、配置文件或超参数设置。
+- 论文中引用的开源项目：摘要中未提及。
+- 总结：论文中提及了开源计划（数据、代码、视频），但未提供具体的链接、仓库地址或获取途径，目前处于“承诺但未公布”状态。
 
 📌 **核心摘要**
 
-1.  解决的问题：当前视觉语言模型（VLM）在处理需要实时、动态理解正在展开的场景并回答“面对面”口头提问时表现不佳，现有评估基准无法衡量这种能力。
-2.  方法核心：提出Qualcomm Interactive Video Dataset (QIVD)，一个包含2900个真实世界短视频的问答数据集，每个视频包含用户提问、人工转录的文本问题、答案以及关键的“何时可以合理回答”的时间戳。设计了一个简单的基线流式处理方法：使用流式ASR（Whisper-Streaming）转录问题并检测结束时间，然后将视频和转录文本输入视频LLM生成答案。
-3.  与已有方法相比的新颖之处：这是首个专门为评估模型实时、在线视听问答能力而构建的基准。与离线数据集不同，QIVD要求模型处理同步的视听流，并解决指代表达（如“这个”、“这里”）、动作计数、音频视觉线索整合等真实交互挑战。
-4.  主要实验结果：实验显示，即使是GPT-4o等SOTA模型，在QIVD上的正确率（约58%）也远低于人类基线（约87%）。主要瓶颈是时间推理（如动作计数，人类85.7% vs 模型<35%）和视听融合。微调（如VideoLLaMA2.1-7B-AV）可显著缩小差距，尤其在动作理解和音频视觉任务上提升明显（分别+10%, +17.4%）。精确识别“何时回答”对性能有决定性影响（图3）。
-    | 模型 | 正确率（离线/GT设置） | BERT | METEOR | BLEU | ROUGE-L |
-    |---|---|---|---|---|---|
-    | GPT-4o | 58.76 | 89.36 | 51.18 | 15.72 | 42.55 |
-    | VideoLLaMA3-7B | 56.38 | 91.63 | 48.56 | 12.72 | 43.84 |
-    | 人类 | 87.33 | 93.01 | 53.21 | 17.40 | 49.76 |
-5.  实际意义：为开发能与人实时交互的AI助手（如客服、教育、生活指导机器人）提供了关键的评估标准和改进方向，指明了当前模型在动态情境理解上的短板。
-6.  主要局限性：数据集规模（2900视频）相对较小；录制环境虽多样但仍有控制成分；基线流式方法并非端到端，仍依赖独立的ASR和LLM模块，未能完全解决跨模态实时融合问题。
+1.  要解决什么问题：当前机器人操控模型大多依赖用户明确的文本或语音指令，而在真实的人机协作中，用户意图往往隐含在对话、环境声音或视觉线索中。机器人需要具备主动理解和响应这种“跨模态上下文指令”的能力。
+2.  方法核心是什么：提出了RoboOmni框架，一个基于全模态大语言模型的端到端系统，包含感知（Perceiver）、思考（Thinker）、交互（Talker）和执行（Executor）四个阶段。它融合时空上的听觉和视觉信号来识别用户意图，并支持语音交互。
+3.  与已有方法相比新在哪里：
+    *   新任务设置：首次定义了“跨模态上下文指令”这一主动意图识别任务，脱离了对显式指令的依赖。
+    *   新框架：提出了一个统一的、端到端的框架来整合意图识别、交互确认和动作执行，而非分离处理。
+    *   新数据集：构建了大规模数据集OmniAction（140k episodes），包含多种语音、声音事件和背景，旨在解决该任务训练数据匮乏的问题。
+4.  主要实验结果如何：在仿真和真实世界实验中，RoboOmni在成功率、推理速度、意图识别准确性和主动辅助能力上均超越了基于文本和自动语音识别（ASR）的基线方法。论文未提供具体数值，但宣称“超越”（surpasses）。
+5.  实际意义是什么：推动机器人从被动的指令执行者向主动的、具备情境感知能力的协作者进化，对于人机协作、服务机器人等领域有重要应用前景。
+6.  主要局限性是什么：摘要中未明确提及。潜在的局限可能包括：对复杂环境声音和模糊意图的泛化能力、实时性要求、以及所依赖的大语言模型的推理成本和偏差。
 
 ---
 

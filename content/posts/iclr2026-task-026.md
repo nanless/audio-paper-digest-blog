@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音理解 论文列表"
+title: "ICLR 2026 - 语音延续 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音理解"]
+tags: ["语音延续"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 语音理解 方向论文"
+description: "共 1 篇 ICLR 2026 语音延续 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音理解
+# ICLR 2026 - 语音延续
 
-共 **2** 篇论文
+共 **1** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,91 +18,46 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Speech World Model: Causal State–Action Planning with Explic](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning) | 8.0分 | 前25% |
-| 🥈 | [MMSU: A Massive Multi-task Spoken Language Understanding and](/audio-paper-digest-blog/posts/2026-05-03-mmsu-a-massive-multi-task-spoken-language) | 7.0分 | 前25% |
+| 🥇 | [TASTE: Text-Aligned Speech Tokenization and Embedding for Sp](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and) | 9.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Speech World Model: Causal State–Action Planning with Explicit Reasoning for Speech](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning)
+### 🥇 [TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and)
 
-🔥 **8.0/10** | 前25% | #语音理解 | #因果图 | #语音大模型 #多模态模型
-
-👥 **作者与机构**
-
-- 第一作者：Xuanru Zhou（浙江大学）
-- 通讯作者：未说明
-- 作者列表：Xuanru Zhou（浙江大学）、Jiachen Lian（加州大学伯克利分校）、Henry Hong（加州大学伯克利分校）、Xinyi Yang（浙江大学）、Gopala Anumanchipalli（加州大学伯克利分校）
-
-💡 **毒舌点评**
-
-这篇论文最亮眼的地方在于其“认知导向”的设计哲学——它没有暴力堆砌参数，而是从语言学和认知科学理论中提炼出“世界模型”、“心理理论”等模块，并用一个因果图把它们优雅地串联起来，这种设计既具有可解释性，又带来了显著的训练效率提升（比随机图基线快5倍）。然而，系统的根基却建立在一个可能不牢靠的“合成标签”之上，使用Vicuna为大量数据打标，相当于让一个“学徒”为整个系统提供“专家知识”，其噪声和偏见可能会在因果链中被放大；此外，实验虽全面，但数据集总规模仅约113小时，与论文试图解决的通用语音理解问题的宏大目标相比，说服力略显单薄。
-
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接（https://github.com/eureka235/eureka235.github.io），承诺开源训练、评估脚本。
-- 模型权重：论文中未明确提及是否开源模型权重，但鉴于其开源代码的承诺，很可能包含。
-- 数据集：使用的是公开数据集（MELD, IEMOCAP, SLURP, VoxCeleb），论文中说明了获取方式。由Vicuna生成的标签数据，论文未明确是否开源。
-- Demo：提供了一个在线演示音频链接（http://bit.ly/4pBJuWP，对应图1）。
-- 复现材料：提供了极其详细的超参数设置、模型架构描述（附录A.7）、训练硬件信息、评估指标计算方法（附录A.8, A.9）以及所有数据集的统计信息（附录A.4.1），复现友好度高。
-- 引用的开源项目/模型：DistilBERT, WavLM, OpenSMILE（用于特征提取），Vicuna-13b-v1.5（用于标签生成），Llama3.1-8B, Qwen2-Audio（作为基座模型进行指令微调），GPT-4o（用于评估）。
-- 论文中明确说明了将开源代码、模型和数据，并附上了GitHub链接，开源意愿强烈。
-
-📌 **核心摘要**
-
-1.  解决的问题：当前主流的语音-语言模型（SLM）将语音理解视为一个黑箱，擅长内容识别但在复杂推理（尤其是情感、意图等深层语义）上能力薄弱，且训练成本高昂。
-2.  方法核心：提出了语音世界模型（SWM），这是一个基于因果图的模块化框架。它将语音理解分解为四个认知模块：世界模型激活（WMA，场景）、心理理论（ToM，情感）、言语行为（SA，功能）和语用意图（Prag，目标）。这些模块通过一个预设的因果图（如WMA→SA， ToM→Prag）连接，形成显式的推理链。
-3.  与已有的区别：不同于传统的端到端或链式思维（CoT）方法，SWM的推理过程是模块化、可解释且基于认知先验的。它首先通过因果图推理出结构化的状态表示，再将这些状态作为提示，指导语言模型生成推理分析和响应，从而约束其搜索空间，减少幻觉。
-4.  主要实验结果：
-    - 图评估：因果图在节点准确率上与随机图基线相当，但训练速度快约5倍（2.07h vs 10.39h），且学到的因果依赖（ACE/ICS指标）更稳定、可解释。
-    - 指令微调评估：使用`Overall M.J. Score`（推理与响应得分的加权和）评估。SWM（基于Llama3.1-8B）得分7.81，显著超过微调的Qwen2-Audio基线（5.18）和其他开源模型（如Voxtral得2.92）。在情绪分类准确率（EA）子指标上，SWM（66.26%）甚至超越了GPT-4o（45.16%）。整体得分仍低于Gemini 2.5 Pro（8.12）。
-    - 消融研究：证实了因果图结构、门控融合机制的有效性，以及半监督学习在缺失标签下的可行性。
-5.  实际意义：提供了一种资源高效的语音理解范式，证明通过注入结构化的认知先验，较小的模型也能在特定推理任务上达到有竞争力的性能，对开发可解释、低耗能的垂直领域语音AI有参考价值。
-6.  主要局限性：1）模块数量和因果结构是预定义的，可能无法覆盖所有语音动态；2）严重依赖LLM生成的伪标签进行训练，标签质量未知；3）实验数据集总规模（约113小时）相对有限，泛化性有待验证。
-
----
-
-### 🥈 [MMSU: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark](/audio-paper-digest-blog/posts/2026-05-03-mmsu-a-massive-multi-task-spoken-language)
-
-✅ **7.0/10** | 前25% | #语音理解 | #基准测试 | #数据集 #模型评估
+🔥 **9.0/10** | 前25% | #语音延续 | #端到端 | #语音大模型 #语音合成
 
 👥 **作者与机构**
 
-- 第一作者：Dingdong Wang（香港中文大学，邮箱：dingdongwang@link.cuhk.edu.hk）
-- 通讯作者：未明确说明，但根据学术惯例及邮箱，第一作者Dingdong Wang可能是主要联系人。
-- 作者列表：Dingdong Wang（香港中文大学）、Junan Li（香港中文大学）、Jincenzi Wu（香港中文大学）、Dongchao Yang（香港中文大学）、Xueyuan Chen（香港中文大学）、Tianhua Zhang（香港中文大学）、Helen M. Meng（香港中文大学）
+- 第一作者：Liang-Hsuan Tseng (台湾大学电气工程系研究生)、Yi-Chang Chen (MediaTek Research) [共同第一作者]
+- 通讯作者：Yi-Chang Chen (MediaTek Research)，Da-shan Shiu (MediaTek Research) [根据邮箱域名推断]
+- 作者列表：Liang-Hsuan Tseng (台湾大学电气工程系)、Yi-Chang Chen (MediaTek Research)、Kuan Yi Lee (台湾大学电气工程系)、Da-Shan Shiu (MediaTek Research)、Hung-yi Lee (台湾大学AI卓越研究中心)
 
 💡 **毒舌点评**
 
-亮点：本文最大的贡献在于系统性地将语言学理论引入语音理解基准测试的设计，填补了现有评估体系在音韵学（prosody, phonology）等“听声辨意”底层能力上的巨大盲区，迫使模型去处理“怎么说”而不仅仅是“说了什么”。  
-短板：作为一篇基准测试论文，其核心价值在于“评测”和“揭露问题”，而非“解决问题”。实验部分虽全面揭示了当前模型的短板（如音韵感知能力薄弱），但并未提出针对性的模型改进方法，对于想快速提升模型性能的研究者来说，指导性略显间接。
+TASTE的核心亮点在于，它用一个极其简洁优雅的设计（利用ASR输出的文本作为查询，通过交叉注意力聚合声学特征），一石二鸟地解决了联合语音语言建模中长期存在的“长度错配”和“信息冗余”两大痛点，实现了超低比特率下的高质量重建。其短板在于整个管线的“优雅”依赖于一个高质量的ASR转录，在真实噪声环境或无文本场景下的鲁棒性尚未充分验证，且消融实验中使用S3 token作为重建精度的代理指标，而非直接的端到端联合建模指标，略有绕弯。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码链接。未提供构建MMSU基准测试或进行模型评估的官方代码仓库。
-- 模型权重：未提及。本文评估的是现有模型，未提出新模型。
-- 数据集：公开。论文明确提供了数据集链接：`https://huggingface.co/datasets/ddwang2000/MMSU`。
-- Demo：未提及。
-- 复现材料：论文在附录中详细说明了任务定义、示例、数据来源、数据分布以及人工审查流程，为理解数据集构建提供了充分信息。但未提供数据收集、清洗、标注的脚本或工具。
-- 论文中引用的开源项目：引用了多个用于数据构建的开源数据集，包括MELD, GigaSpeech, CommonVoice, Emilia, CoVoST 2, EDACC, VCTK, CHILDES, SLURP, SEAME, Fake-or-Real, RAVDESS, Switchboard, LogicBench。
+- 代码：论文明确提供了代码仓库链接 (`https://mtkresearch.github.io/TASTE-SpokenLM.github.io` 页面中包含)。
+- 模型权重：论文明确提供了预训练模型的权重链接。
+- 数据集：训练使用了公开的Emilia（英文子集）和LibriTTS数据集。评估使用了公开的LibriSpeech test-clean， SALMON， 和StoryCloze基准。
+- Demo：论文明确提供了在线演示页面链接。
+- 复现材料：论文在附录（A.2 Training Details）中详细说明了训练配置、超参数、优化器设置和硬件信息，提供了充分的复现指导。
+- 论文中引用的开源项目：依赖的开源项目/模型包括：Whisper（编码器）、S3 Token（目标单元）、LLaMA系列（TASLM基础模型）、DeepSpeed、Liger Kernel、HiFi-GAN、Flow Matching vocoder、Montreal Forced Aligner（MFA）等。
 
 📌 **核心摘要**
 
-1. 问题：现有的语音大模型（SpeechLLM）评估基准主要关注语义理解，忽视了语音中丰富的副语言特征（情感、语调）和音韵特征（重音、韵律），且多依赖合成语音，无法全面评估模型在真实、细粒度语音理解与推理上的能力。
-2. 方法核心：提出MMSU基准测试，包含5000个精心标注的音频-问题-答案三元组，覆盖47个任务。其设计基于语言学理论（音韵学、修辞学、句法学等），并主要使用真实世界录音和专业录制的音频。
-3. 新意：这是首个系统性整合语言学原理的语音理解基准；任务覆盖远超现有基准，包含大量独特的音韵感知和推理任务（如双关语解释、讽刺检测、基于停顿/重音的推理）；数据以真实音频为主，保证了声学真实性。
-4. 实验结果：对22个模型进行评估。最强的Gemini-1.5-Pro平均准确率为60.68%，而人类基线为89.72%，差距显著。模型普遍在音韵相关任务（如近音词感知、音节感知）上表现不佳。开源模型Qwen2.5-Omni-7B（60.57%）与最强闭源模型性能接近。
+这篇论文旨在解决联合文本-语音语言建模（SLM）中，由于语音标记序列远长于文本序列而产生的长度错配和信息冗余问题。其核心方法是提出TASTE（文本对齐的语音标记化与嵌入），通过一个基于注意力的聚合器，利用ASR模型提取的文本标记作为查询，从预训练的Whisper编码器表示中聚合出与文本一一对应的语音表示，再经过残差向量量化（RVQ）得到离散语音标记。与以往方法（如自监督离散化或神经编解码器）在固定下采样率下生成标记不同，TASTE的标记是动态的、文本对齐的，且设计上专注于承载韵律信息。主要实验结果表明：1) 在LibriSpeech上，TASTE以极低的比特率（~150 bps）实现了与高比特率方法（1500-4000 bps）相当甚至更优的语音重建质量和相似性（见表1）。2) 基于TASTE构建的语音语言模型（TASLM），仅通过LoRA微调一个1.3B的基础模型，在语音延续任务上（语义、声学、人类评估）全面超越了包括7B参数在内的其他预训练SLM（如Spirit LM, TWIST）（见表2）。该工作的实际意义在于，它证明了为联合建模任务专门设计的、高效的标记化方案是提升SLM性能的关键。主要局限性包括：依赖ASR转录，仅评估了英语，未涉及多说话人、重叠语音或非语言事件（如笑声）。
 
-| 模型 | 参数量 | 感知-语义 | 感知-音韵 | 感知-副语言 | 推理-语义 | 推理-音韵 | 推理-副语言 | 平均准确率 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Human | - | 87.10% | 94.32% | 92.88% | 82.16% | 87.60% | 89.12% | 89.72% |
-| Gemini-1.5-Pro | - | 57.06% | 53.60% | 31.23% | 79.47% | 83.46% | 46.33% | 60.68% |
-| Qwen2.5-Omni-7B | 7B | 55.12% | 37.33% | 39.35% | 88.00% | 81.37% | 48.36% | 60.57% |
-| Kimi-Audio | 7B | 57.64% | 42.30% | 35.74% | 81.77% | 76.65% | 55.22% | 59.28% |
-| GPT-4o-Audio | - | 59.70% | 41.56% | 21.44% | 80.83% | 78.74% | 26.25% | 56.38% |
-5. 实际意义：为评估和推动更全面、更接近人类水平的语音交互AI提供了新的标准和方向，明确指出了当前模型在音韵理解和复杂推理上的不足。
-6. 主要局限性：作为基准测试，其自身不提出解决模型缺陷的方法；数据集规模（5000条）相对有限，可能无法覆盖所有语音现象；评估仅采用多选题形式，可能无法完全反映模型的生成或开放式理解能力。
+| 方法 | 续写 GPT-4o MOS ↑ | 续写 UTMOS ↑ | 续写 Human MOS ↑ | SALMON准确率 ↑ | StoryCloze准确率 ↑ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Spirit LM (7B) | 2.79 | 3.41 | 2.38 | 59.1% | 72.0% |
+| Spirit LM Expr. (7B) | 1.90 | 3.40 | 2.41 | 69.0% | 66.2% |
+| TASLM 1B (token) | 3.08 | 4.07 | 3.93 | 60.8% | 76.5% |
+| TASLM 1B (embed.) | 3.16 | 4.22 | 4.16 | 57.7% | 76.7% |
+| Cascade (LLaMA3.2-1B) | 3.15 | 4.25 | 4.00 | - | - |
 
 ---
 
