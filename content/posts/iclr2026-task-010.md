@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 生物声学 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 数据集 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["生物声学"]
+tags: ["数据集"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 生物声学 方向论文"
+description: "共 1 篇 ICLR 2026 数据集 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 生物声学
+# ICLR 2026 - 数据集
 
 共 **1** 篇论文
 
@@ -18,50 +18,55 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-03-avex-what-matters-for-animal-vocalization-encoding) | 8.0分 | 前10% |
+| 🥇 | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-](/audio-paper-digest-blog/posts/2026-05-04-speakervid-5m-a-large-scale-high-quality-dataset) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-03-avex-what-matters-for-animal-vocalization-encoding)
+### 🥇 [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-04-speakervid-5m-a-large-scale-high-quality-dataset)
 
-🔥 **8.0/10** | 前10% | #生物声学 | #自监督学习 | #音频分类 #音频检索
+✅ **7.0/10** | 前25% | #数据集 | #自回归模型 | #视频生成 #音视频
 
 👥 **作者与机构**
 
-- 第一作者：Marius Miron（Earth Species Project）
-- 通讯作者：Marius Miron（Earth Species Project）， David Robinson（Earth Species Project）
-- 作者列表：Marius Miron（Earth Species Project）、David Robinson（Earth Species Project）、Milad Alizadeh（Earth Species Project）、Ellen Gilsenan-McMahon（Earth Species Project）、Gagan Narula（Earth Species Project）、Emmanuel Chemla（Earth Species Project）、Maddie Cusimano（Earth Species Project）、Felix Effenberger（Earth Species Project）、Masato Hagiwara（Earth Species Project）、Benjamin Hoffman（Earth Species Project）、Sara Keen（Earth Species Project）、Diane Kim（Earth Species Project）、Jane Lawton（Earth Species Project）、Jen-Yu Liu（Earth Species Project）、Aza Raskin（Earth Species Project）、Olivier Pietquin（Earth Species Project）、Matthieu Geist（Earth Species Project）
+- 第一作者：Youliang Zhang（清华大学 & StepFun）
+- 通讯作者：Duomin Wang（StepFun，†表示）、Xiu Li（清华大学，‡表示）
+- 作者列表：Youliang Zhang（清华大学 & StepFun）、Zhaoyang Li（StepFun）、Duomin Wang（StepFun）、Jiahe Zhang（未说明）、Deyu Zhou（StepFun & 香港科技大学）、Zixin Yin（StepFun & 香港科技大学）、Xili Dai（StepFun & 香港科技大学）、Gang Yu（StepFun）、Xiu Li（清华大学）
 
 💡 **毒舌点评**
 
-这篇论文堪称生物声学领域的“系统性研究报告”，通过大规模、全方位的实证对比，为构建通用动物声音编码器提供了详尽的“食谱”和基线，其工程规模和开源贡献值得称赞。但另一方面，它更像一份详尽的“产品测试报告”而非一篇提出颠覆性架构的学术突破，其核心创新在于“发现什么有效”，而非“发明一种全新方法”。
-
-🔗 **开源详情**
-
-- **代码**：提供代码仓库链接：https://github.com/earthspecies/avex。
-- **模型权重**：明确提到公开了模型检查点（Checkpoints）。
-- **数据集**：论文中使用的训练数据大多来自公开来源（Xeno-canto， iNaturalist等），但编译和清洗后的具体数据集如何获取未在文中明确说明。评估数据集（BEANS， BirdSet及新提出的）是公开的。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：论文提供了非常详细的训练细节（附录B.6， 表5），包括学习率、批量大小、优化器、调度器、训练轮数等关键超参数，以及评估设置，为复现提供了充分信息。
-- **引用的开源项目**：BEATs（微软）， EAT， EfficientNet（torchvision）。
+这篇论文最亮眼的地方是其“填空”的决心和执行力：在交互式数字人生成这个新兴方向上，他们系统性地构建了一个规模空前（520万+片段）、注释维度极丰富（含姿态、模糊度、运动分数等）且划分明确（对话/单人/聆听/多轮）的专用数据集，并配套设计了评估基准和端到端基线，为社区提供了从数据到评测的完整基础设施。然而，其短板在于基线模型的架构创新性有限，本质是多个现有模块（Qwen2.5-Omni, 3D-VAE, CosyVoice）的工程化组装，论文的核心贡献高度集中在“数据”而非“新方法”上，对于期待算法突破的读者可能稍感不足。
 
 📌 **核心摘要**
 
-1. **解决的问题**：生物声学领域需要通用的声学编码器来处理物种分类、个体识别、发声模式发现等多样化任务，但现有模型多局限于单一物种（如鸟类）或单一训练范式，且评估任务和数据集有限。
-2. **方法核心**：通过大规模实证研究，系统评估训练数据多样性（生物声学数据+通用音频数据）、模型架构（CNN vs. Transformer）、训练范式（自监督预训练、监督微调、以及两者的组合）对编码器性能的影响。
-3. **与已有方法的新颖之处**：首次在生物声学领域进行如此全面的、控制变量的对比研究；提出了“自监督预训练在混合生物声学+通用音频数据上，再在相同数据混合集上进行监督后训练”的最佳实践配方；扩展了评估范围，加入了个体识别和发声模式发现等新任务及检索、聚类等新指标。
-4. **主要实验结果**：在26个数据集、4类任务（物种分类、检测、个体ID、发声模式发现）上评估了19个模型。关键结果如下表所示，最佳模型`sl-BEATs-all`在多数基准上达到SOTA。
-    | 模型 (最佳结果) | BEANS分类 (Probe准确率) | BEANS检测 (R-AUC) | BirdSet (Probe mAP) | 个体ID (Probe准确率) | 发声模式发现 (R-AUC) |
-    |---|---|---|---|---|---|
-    | sl-BEATs-all | 0.832 | 0.604 | 0.726 | 0.732 | 0.798 |
-    | BirdNet (基线) | 0.796 | 0.523 | N/A | N/A | 0.795 |
-    | BEATs (预训练基线) | 0.774 | 0.542 | 0.722 | 0.686 | 0.775 |
+1.  要解决什么问题：当前音频-视觉交互式虚拟人类生成任务缺乏大规模、高质量、且专为双人对话场景设计的公开数据集，这严重阻碍了该领域基础模型的研究与发展。
+2.  方法核心是什么：构建了SpeakerVid-5M数据集。该数据集从YouTube收集了15.3万个视频，经过场景分割、说话人分离、人脸检测、唇音同步校验等多步自动化处理，形成了包含520万+单人片段（8743小时）和77万+双人对话对（1800小时）的音视频数据。每个片段都附带了结构化文本描述、ASR转录、骨骼姿态序列、模糊度评分等丰富注释。数据集按交互类型分为四个分支，并按质量分为预训练子集和SFT子集。
+3.  与已有方法相比新在哪里：这是首个专门针对“音频-视觉双人交互”生成任务的大规模数据集，弥补了以往数据集要么侧重单人、要么质量/规模不足的空白。其系统化构建流程和多维度、分层级的注释设计是其显著特色。
+4.  主要实验结果如何：论文基于该数据集训练了一个自回归（AR）基线模型，并在新提出的VidChatBench基准上进行了评估。基线实验表明，使用音频-视觉联合输入（Dyadic设置）比仅使用文本条件（Conditioned设置）在多数指标上更优；引入空间Transformer和训练噪声注入能进一步提升视频质量（FID从56.82降至34.72）。与级联流水线方案相比，该端到端AR方法在情感对齐（FIDEmotion: 3.22 vs 3.73）和手部质量（HQ: 0.49 vs 0.42）上更优，且推理速度（3.17秒/帧）远快于基于扩散模型的级联方案（31.43-45.82秒/帧）。
+    *   主要定量结果（摘自Table 2）：
 
-    论文图2(b)形象展示了这一结论：纯监督模型在领域内任务（BEANS分类）表现最佳，但迁移到领域外任务（BEANS检测）时性能下降显著；而自监督预训练+监督后训练的模型在领域内外均表现强劲。论文图3显示了对SSL模型进行后训练带来的稳定增益。
-5. **实际意义**：为生物声学研究和保护应用提供了更强的通用基础模型和开源工具（AVEX库），并明确了构建这类模型的关键数据与技术路径。
-6. **主要局限性**：所有模型均在16kHz采样率下训练和评估，可能丢失部分物种高于8kHz的重要音频信息；评估虽广但未能完全控制所有变量（如数据分布、噪声条件）来深入剖析表示鲁棒性。
+| 方法 | 音频 | 空间优化 | 噪声 | FID ↓ | FVD ↓ | PSNR ↑ | SSIM ↑ | ArcFace ↑ | CLIPdialog ↑ | Syncconf ↑ | FIDEmotion ↓ | SIM-o ↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 条件设置 | | | | 56.82 | 55.06 | 15.26 | 0.62 | 0.638 | – | – | 3.45 | – |
+| 条件设置 | ✓ | | | 57.03 | 55.16 | 15.31 | 0.62 | 0.630 | – | 2.063 | 3.45 | 0.65 |
+| 条件设置 | ✓ | ✓ | | 38.53 | 34.64 | 16.79 | 0.64 | 0.732 | – | 2.459 | 3.36 | 0.64 |
+| 条件设置 | ✓ | ✓ | ✓ | 34.72 | 30.43 | 17.39 | 0.65 | 0.758 | – | 2.655 | 3.23 | 0.65 |
+| 双人设置 | | | | 49.97 | 47.23 | 15.74 | 0.62 | 0.637 | – | – | 3.48 | – |
+| 双人设置 | ✓ | | | 49.86 | 36.90 | 15.63 | 0.62 | 0.635 | 0.642 | 2.239 | 3.43 | 0.64 |
+| 双人设置 | ✓ | ✓ | | 35.67 | 31.28 | 17.44 | 0.65 | 0.749 | 0.643 | 2.541 | 3.33 | 0.65 |
+| 双人设置 | ✓ | ✓ | ✓ | 32.35 | 28.82 | 17.55 | 0.66 | 0.772 | 0.643 | 2.698 | 3.22 | 0.65 |
+
+    *   与级联方案对比（摘自Table 4）：
+
+| 方法 | FID ↓ | FVD ↓ | PSNR ↑ | SSIM ↑ | ArcFace ↑ | Syncconf ↑ | FIDEmotion ↓ | 单帧推理时间 ↓ | 手部质量 ↑ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Qwen2.5-omni + CosyVoice + Sonic | 33.26 | 30.52 | 17.38 | 0.61 | 0.692 | 2.972 | 3.73 | 31.43 | 0.21 |
+| Qwen2.5-omni + CosyVoice + Hallo3 | 28.43 | 27.65 | 17.31 | 0.69 | 0.775 | 3.324 | 4.15 | 45.82 | 0.42 |
+| Ours | 32.35 | 28.82 | 17.55 | 0.66 | 0.772 | 2.698 | 3.22 | 3.17 | 0.49 |
+
+5.  实际意义是什么：为音频-视觉交互式虚拟人类生成这一新兴领域提供了首个标准化的训练数据与评测基准，有望加速相关基础模型的研究和开发，推动数字人技术在虚拟助手、直播、教育等领域的应用。
+6.  主要局限性是什么：(1) 数据源依赖YouTube，存在地理、语言和人口统计偏差（如英语/西方内容占主导）；(2) 数据集中缺乏动态环境、复杂肢体动作、非口语交互（如手势、眼神）的高质量样本；(3) 提出的基线模型本身在架构上属于现有组件的整合，而非全新的算法创新。
 
 ---
 

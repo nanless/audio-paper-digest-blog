@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音视频描述 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 迁移学习 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["音视频描述"]
+tags: ["迁移学习"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音视频描述 方向论文"
+description: "共 1 篇 ICLR 2026 迁移学习 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音视频描述
+# ICLR 2026 - 迁移学习
 
 共 **1** 篇论文
 
@@ -18,38 +18,45 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal O](/audio-paper-digest-blog/posts/2026-05-03-avocado-an-audiovisual-video-captioner-driven-by) | 7.5分 | 前25% |
+| 🥇 | [Better Together: Leveraging Unpaired Multimodal Data for Str](/audio-paper-digest-blog/posts/2026-05-04-better-together-leveraging-unpaired-multimodal) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration](/audio-paper-digest-blog/posts/2026-05-03-avocado-an-audiovisual-video-captioner-driven-by)
+### 🥇 [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-04-better-together-leveraging-unpaired-multimodal)
 
-✅ **7.5/10** | 前25% | #音视频描述 | #强化学习 | #多模态模型
+🔥 **8.0/10** | 前25% | #迁移学习 | #多模态模型 | #音频分类 #自监督学习
 
 👥 **作者与机构**
 
-- 第一作者：Xinlong Chen（中国科学院自动化研究所；中国科学院大学；快手科技Kling团队）
-- 通讯作者：Qiang Liu（中国科学院自动化研究所）
-- 作者列表：Xinlong Chen（中国科学院自动化研究所/中国科学院大学/快手科技Kling团队），Yue Ding（中国科学院自动化研究所/中国科学院大学），Weihong Lin（快手科技Kling团队），Jingyun Hua（快手科技Kling团队），Linli Yao（北京大学），Yang Shi（北京大学），Bozhou Li（北京大学），Qiang Liu（中国科学院自动化研究所），Yuanxing Zhang（快手科技Kling团队），Pengfei Wan（快手科技Kling团队），Liang Wang（中国科学院自动化研究所）
+- 第一作者：Sharut Gupta (MIT CSAIL)
+- 通讯作者：未说明（论文未明确指定）
+- 作者列表：Sharut Gupta (MIT CSAIL), Shobhita Sundaram (MIT CSAIL), Chenyu Wang (MIT CSAIL), Stefanie Jegelka (TU Munich, MIT CSAIL), Phillip Isola (MIT CSAIL)
+
+#
 
 💡 **毒舌点评**
 
-亮点在于为音视频描述任务“量身定制”了一套从高质量数据构建（两阶段融合法）到强化学习奖励函数（清单奖励、对话奖励、长度奖励）的完整技术栈，实验结果在所选基准上确实“能打”。短板则在于其核心优化环节（奖励计算）严重依赖闭源商业模型（Gemini-2.5-Pro， GPT-4.1），这不仅抬高了复现门槛，也让“奖励信号”的稳定性和可控性打了个问号，算是“站在巨人肩膀上”但也“受制于巨人”。
+这篇论文最大的亮点是用一个看似“简单”（权重共享）的方法，在一个看似“不可能”（无配对数据）的设置下，给出了令人信服的理论保证和扎实的实验结果，优雅地回答了“非配对数据能否助力单模态学习”这个根本问题。然而，其理论分析基于较强的线性假设，且实验主要验证分类任务，对于生成、对话等更复杂的任务，以及模态冲突这一多模态训练中的顽疾，论文明确承认并未解决，这使得“Better Together”的普适性打了折扣。本质上，它更像是一个在特定约束下的优美的信息论证明和工程展示，而非一个放之四海而皆准的通用解决方案。
 
 🔗 **开源详情**
 
-- **代码**：论文中提及“Project webpage: https://avocado-captioner.github.io/”，并声明“This model will be open-source to facilitate future research”。但未在文中直接给出代码仓库的具体链接。
-- **模型权重**：承诺将开源模型权重。
-- **数据集**：论文构建的10.7K数据集未提及是否公开，但详细说明了数据来源（均为公开数据集），并公开了用于生成和过滤该数据集的提示词，理论上读者可以自行复现数据构建过程。
-- **Demo**：未提及在线演示。
-- **复现材料**：提供了极其详尽的训练细节（超参数、硬件、阈值选择依据）和完整的提示词（用于数据生成、关键点分解、奖励计算、QA评估），复现材料充分。
-- **引用的开源项目/模型**：主要依赖Qwen2.5-Omni作为基础模型；在数据构建和奖励计算中使用了Gemini-2.5系列和GPT-4.1系列闭源API。
+- 代码：论文中未提及代码仓库链接。
+- 模型权重：未提及公开的预训练模型权重。
+- 数据集：使用的是公开数据集（MultiBench, ImageNet系列, ImageNet-ESC等），但论文未提供其处理后的版本或链接。
+- Demo：未提供在线演示。
+- 复现材料：在附录B中提供了非常详细的训练协议、超参数网格、数据集构建细节（尤其是文本模板生成）和硬件环境，复现指导性强。
+- 论文中引用的开源项目：依赖的开源模型/工具包括：DINOv2（视觉编码器）、OpenLLaMA-3B（文本编码器）、CLIP、BERT、RoBERTa、GPT-2、AudioCLIP（音频编码器）。
 
 📌 **核心摘要**
 
-本文针对现有视频描述模型大多忽视音频信息、且简单拼接视听描述会导致时序错位的问题，提出了一种由视听时序协同驱动的音视频视频描述模型AVoCaDO。该模型基于Qwen2.5-Omni构建，其核心贡献在于一个精心设计的两阶段后训练流程：1）在作者团队构建的10.7万个高质量、时序对齐的音视频描述数据集上进行监督微调（SFT）；2）采用针对音视频描述特性设计的三个奖励函数（清单、对话、长度）进行组相对策略优化（GRPO）。实验表明，AVoCaDO在四个音视频描述基准测试（video-SALMONN-2 testset, UGC-VideoCap, Daily-Omni, WorldSense）上显著超越了现有开源模型，甚至在UGC-VideoCap上超越了Gemini-2.5系列；同时在VDC Detailed和DREAM-1K等纯视觉基准上也具有竞争力。消融研究证实了各训练阶段及奖励函数的有效性。该工作的实际意义在于提升了生成能同时准确描述画面和声音事件且时序正确的视频描述的能力，其局限性在于训练流程依赖外部强大模型进行数据构建和奖励计算，可能影响复现的完全独立性和稳定性。
+1. 要解决什么问题：传统的多模态学习严重依赖昂贵的配对数据（如图像-文本对），而现实中存在大量丰富但未配对的单模态数据。论文旨在探究：能否利用来自辅助模态（如文本）的非配对数据，直接增强目标模态（如图像）的表示学习。
+2. 方法核心是什么：提出了“非配对多模态学习器”（UML）框架。其核心思想是让一个共享参数的模型交替处理来自不同模态（如图像和文本）的输入，无需任何显式对齐。在自监督设置下，每个模态有自己的解码器进行重建/预测；在监督设置下，使用共享的分类头。通过权重共享，梯度可以从辅助模态流向目标模态编码器，从而隐式传递跨模态信息。
+3. 与已有方法相比新在哪里：不同于依赖配对数据进行显式对齐的传统方法，也不同于需要推断对齐或使用配对数据进行预对齐的现有工作。UML证明了在最一般的“完全非配对”场景下，仅通过共享权重就能从跨模态结构中获益。理论分析给出了严格的信息增益证明。
+4. 主要实验结果如何：在自监督（MultiBench等）和监督（多个图像分类基准）设置下，UML在图像和音频任务上均持续优于单模态基线。例如，在图像分类小样本（k=1）设置下，平均准确率从45.52%提升至51.36%；在音频分类任务（ImageNet-ESC）上也取得提升。论文还量化了模态间的“汇率”，例如使用对齐编码器（CLIP）时，1张图像的价值约等于228个文本词。
+5. 实际意义是什么：该工作为利用海量、自然存在的非配对多模态数据（如独立的图像库和文本语料库）来提升单个模态（图像、音频等）的模型性能提供了一个简单有效的框架和理论基础，有望降低对昂贵配对数据的依赖。
+6. 主要局限性是什么：理论分析基于线性数据生成假设；下游评估主要集中在分类任务；未显式解决或建模模态冲突与梯度干扰问题，而这些问题在多模态训练中常见；性能提升依赖于模态间共享语义信息，对语义无关的模态无效。
 
 ---
 

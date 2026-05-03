@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 空间音频 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 机器人操作 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["空间音频"]
+tags: ["机器人操作"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 空间音频 方向论文"
+description: "共 1 篇 ICLR 2026 机器人操作 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 空间音频
+# ICLR 2026 - 机器人操作
 
 共 **1** 篇论文
 
@@ -18,50 +18,52 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OWL : Geometry-Aware Spatial Reasoning for Audio Large Langu](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio) | 7.0分 | 前25% |
+| 🥇 | [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-04-roboomni-proactive-robot-manipulation-in-omni) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio)
+### 🥇 [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-04-roboomni-proactive-robot-manipulation-in-omni)
 
-✅ **7.0/10** | 前25% | #空间音频 | #音频大模型 | #音频问答 #音频事件检测
+🔥 **8.0/10** | 前25% | #机器人操作 | #多模态模型 | #数据集 #端到端
 
 👥 **作者与机构**
 
-第一作者：Subrata Biswas（Worcester Polytechnic Institute，电气与计算机工程系）
-通讯作者：未明确说明。论文首页标注“Equal Contribution”，通讯作者信息未在摘要、正文或附录中明确指出。
-作者列表：Subrata Biswas（Worcester Polytechnic Institute，电气与计算机工程系）、Mohammad Nur Hossain Khan（Worcester Polytechnic Institute，电气与计算机工程系）、Bashima Islam（Worcester Polytechnic Institute，电气与计算机工程系）
+- 第一作者：Siyin Wang（复旦大学，上海创新研究院）
+- 通讯作者：Jinlan Fu（新加坡国立大学），Xipeng Qiu（复旦大学）
+- 作者列表：Siyin Wang（复旦大学，上海创新研究院），Jinlan Fu（新加坡国立大学），Feihong Liu（复旦大学），Xinzhe He（复旦大学），Huangxuan Wu（复旦大学），Junhao Shi（复旦大学，上海创新研究院），Kexin Huang（复旦大学），Zhaoye Fei（复旦大学），Jingjing Gong（上海创新研究院），Zuxuan Wu（复旦大学，上海创新研究院），Yu-Gang Jiang（复旦大学），See-Kiong Ng（新加坡国立大学），Tat-Seng Chua（新加坡国立大学），Xipeng Qiu（复旦大学）
 
 💡 **毒舌点评**
 
-本文最大的亮点是构建了首个大规模、包含几何监督的多模态空间音频问答数据集BiDepth，并系统性地提出了从几何感知编码器（SAGE）到带思维链推理的音频大模型（OWL）的完整解决方案，实验结果显示其在定位和推理任务上显著优于基线。但一个明显的短板是，所有核心训练数据和评估均基于模拟环境，尽管作者进行了真实世界实验，但模拟到现实的泛化能力仍是潜在疑点，且当前的推理任务（如左右、远近判断）相对于人类复杂的空间认知仍显简单。
+这篇论文的核心亮点在于清晰定义了“主动意图推理”这一关键问题，并构建了迄今最大规模的、包含丰富副语言信息的机器人操作数据集（OmniAction），推动机器人从“指令执行者”向“对话合作者”演进。但其短板也明显：大规模数据集（140k episodes）主要通过TTS和模板合成，与真实世界复杂、嘈杂、充满即兴互动的家庭环境仍可能存在显著差距（domain gap），这使得在模拟（LIBERO）上的亮眼结果（85.6%）转换到真实场景（73.9%）时出现了不小的衰减，主动交互的鲁棒性尚需更多真实长期验证。
 
 🔗 **开源详情**
 
-- **代码**：论文提供了GitHub仓库链接 `https://github.com/BASHLab/OWL`，**承诺开源**。
-- **模型权重**：论文中未明确提及是否开源预训练好的SAGE和OWL模型权重，仅说明“code are available”。
-- **数据集**：论文明确指出将公开**BiDepth**数据集，并附有详细描述和统计信息。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：论文提供了非常充分的复现材料，包括：详细的模型架构描述、完整的训练超参数配置（学习率、batch size、优化器、epoch数、LoRA设置等）、各阶段训练数据组成、评估指标定义（附录F）、以及数据生成细节（附录A）。
-- **论文中引用的开源项目**：SoundSpaces v2.0, Matterport3D, AudioSet, LLaMA-2-7B (通过LoRA微调), Q-Former (作为投影器架构)。
-- **开源计划**：论文正文和摘要末尾均明确表示“dataset and code are available at”给定GitHub链接，表明有明确的开源计划。
+- 代码：论文中提供了代码仓库链接：`https://github.com/OpenMOSS/RoboOmni`。
+- 模型权重：论文中提及将开源模型权重，但未提供具体下载链接。
+- 数据集：OmniAction数据集承诺将公开，论文中未说明具体发布平台或获取方式。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文在附录和正文中提供了非常详细的数据集构建流程（包括TTS引擎、声音库来源）、模型架构细节、训练超参数、硬件配置和评估设置，复现信息充分。
+- 论文中引用的开源项目：依赖了多个开源项目，包括：LIBERO基准（仿真环境）、Qwen2.5-Omni（多模态LLM骨干）、FAST+（动作分词器）、OpenVLA、NORA、π0（基线模型）、Whisper（ASR基线）、MOSS-TTSD、CosyVoice、Gemini-TTS（语音合成）、DINOv2、SigLIP（视觉编码器）等。
 
 📌 **核心摘要**
 
-1. **要解决什么问题**：现有的音频大语言模型（ALLMs）在处理空间音频时，缺乏对几何结构的显式理解，且推理过程多为单步直接映射，导致方向/距离估计不精确，且无法提供可解释的推理过程。
-2. **方法核心是什么**：本文提出了OWL框架，包含两个核心组件：a) **SAGE（几何感知空间音频编码器）**：在训练时使用全景深度图和模拟房间脉冲响应（RIR）作为监督信号，学习对齐声学特征与3D空间结构，但推理时仅需音频。b) **OWL模型**：将SAGE与大语言模型（LLaMA-2-7B）通过投影器结合，并采用空间引导的思维链（CoT）进行推理。
-3. **与已有方法相比新在哪里**：a) **数据**：构建并公开了BiDepth数据集，首次将双耳音频、双耳RIR、全景深度图和超过110万条问答对四元组耦合，提供几何监督。b) **编码器**：SAGE通过辅助的RIR重建任务（结合深度图）来正则化音频编码器，使其具备几何感知能力。c) **推理**：引入了基于空间位置的思维链推理，将复杂问题分解为可解释的步骤。
-4. **主要实验结果如何**：在**BiDepth**数据集上，OWL在空间推理任务上比最强基线BAT高出约25%（类型III和IV）。在**SpatialSoundQA**上，OWL的零样本方向估计准确率达到78.31%（BAT为75.54%），思维链推理平均准确率79.06%（BAT为76.89%）。SAGE编码器将平均角度误差（MAE）降低了11°，距离误差率（DER）降低了33.5%。关键对比数据见下表：
+1. 要解决什么问题：现有机器人操作模型大多依赖于明确的文本指令，缺乏从多模态上下文（语音对话、环境声音、视觉线索）中主动推断用户潜在意图并进行交互确认的能力。
+2. 方法核心是什么：提出RoboOmni，一个端到端的全模态大语言模型框架，采用“感知器-思考者-对话者-执行者”（Perceiver-Thinker-Talker-Executor）架构，统一处理视觉、音频和文本输入，直接生成文本回复（用于交互确认）和动作token（用于操作）。
+3. 与已有方法相比新在哪里：(1) 提出“跨模态上下文指令”新范式，强调从多模态线索主动推理意图。(2) 设计端到端框架，直接处理原始音频，保留副语言信息（语调、情感、说话人身份），避免了ASR流水线的误差和信息损失。(3) 构建了首个大规模（140k episodes）专注于主动意图推理的多模态数据集OmniAction。
+4. 主要实验结果如何：在OmniAction-LIBERO-TTS仿真基准上，RoboOmni平均成功率（85.6%）大幅超越最强基线（ASR+NORA，25.9%）。在真实人类语音指令下，平均成功率达76.6%，优于最强文本基线π0（73.8%）。在真实机器人（WidowX 250S）实验中，成功率为73.9%，显著高于ASR+VLA基线（52.2%）。消融实验证明了视觉、音频和副语言信息的重要性。
 
-| 方法 | BiDepth (类型II - DoA准确率) | BiDepth (类型IV - BA) | SpatialSoundQA (推理平均BA) |
-| :--- | :--- | :--- | :--- |
-| BAT | 71.59% (4-bin) | 61.29% | 76.89% |
-| **OWL w CoT** | **46.17% (12-bin), 77.21% (4-bin)** | **76.53%** | **79.06%** |
+   | 任务套件 | Ground-truth文本 (最佳基线) | ASR转文本 (最佳基线) | RoboOmni |
+   | :--- | :--- | :--- | :--- |
+   | Spatial | 49.8% (NORA) | 56.5% (NORA) | 93.0% |
+   | Goal | 12.5% (NORA) | 16.3% (NORA) | 85.8% |
+   | Object | 7.2% (OpenVLA) | 13.8% (NORA) | 84.0% |
+   | Long | 32.3% (NORA) | 51.0% (NORA) | 79.5% |
+   | Average | 16.3% | 25.9% | 85.6% |
 
-5. **实际意义是什么**：该工作推动了音频大模型从单纯的感知（分类、识别）向具备空间推理能力的感知与认知结合发展，为构建能理解声学环境几何结构的智能体（如机器人、助听器）提供了技术基础。
-6. **主要局限性是什么**：a) 核心数据集BiDepth基于模拟生成，其声学和几何多样性可能受限，与真实复杂环境存在差距。b) 评估的推理任务相对基础（如二元判断），尚未涵盖更复杂的空间关系推理。c) 模型依赖于高质量的双耳音频输入，对录音设备和场景有一定要求。
+5. 实际意义是什么：为实现更自然、主动的人机协作机器人提供了关键的技术路径和评估基准。数据集OmniAction的发布将有力推动该领域的研究。
+6. 主要局限性是什么：数据集主要基于合成语音和模板对话构建，与真实世界的交互多样性存在差距；框架的推理效率虽然优于级联系统，但在实时性要求极高的场景下可能仍需优化；失败分析显示，意图理解错误和低层抓取失败是主要瓶颈。
 
 ---
 

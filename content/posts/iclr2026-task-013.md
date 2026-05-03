@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频摘要 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 物种分布建模 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["视频摘要"]
+tags: ["物种分布建模"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频摘要 方向论文"
+description: "共 1 篇 ICLR 2026 物种分布建模 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频摘要
+# ICLR 2026 - 物种分布建模
 
 共 **1** 篇论文
 
@@ -18,43 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TripleSumm: Adaptive Triple-Modality Fusion for Video Summar](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 8.5分 | 前25% |
+| 🥇 | [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecolog](/audio-paper-digest-blog/posts/2026-05-04-miam-modality-imbalance-aware-masking-for) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
+### 🥇 [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecological Applications](/audio-paper-digest-blog/posts/2026-05-04-miam-modality-imbalance-aware-masking-for)
 
-🔥 **8.5/10** | 前25% | #视频摘要 | #模态融合 | #多模态模型 #数据集
+🔥 **8.5/10** | 前25% | #物种分布建模 | #掩码学习 | #多模态模型 #生态AI
 
 👥 **作者与机构**
 
-- 第一作者：Sumin Kim、Hyemin Jeong、Mingu Kang（共同第一作者，未明确排序）
-- 通讯作者：Yoori Oh、Joonseok Lee
-- 作者列表：Sumin Kim、Hyemin Jeong、Mingu Kang、Yejin Kim、Yoori Oh、Joonseok Lee（均来自首尔国立大学 Seoul National University）
+- 第一作者：Robin Zbinden（EPFL）
+- 通讯作者：Robin Zbinden（EPFL）
+- 作者列表：Robin Zbinden（EPFL）、Wesley Monteith-Finas（EPFL）、Gencer Sumbul（EPFL）、Nina van Tiel（EPFL）、Chiara Vanalli（EPFL）、Devis Tuia（EPFL）
 
 💡 **毒舌点评**
 
-本文核心亮点在于提出的“动态加权融合”机制，通过一个中立的融合令牌让模型自主学习在每个视频帧中为视觉、文本和音频分配重要性，这比简单拼接或静态注意力更符合多模态信息的流变特性。然而，论文对音频模态的利用仍显初级，仅用了预训练的AST编码器特征，在消融实验中也显示音频单独效果最弱，如何更深入挖掘音频中的韵律、环境声等信息，以真正发挥其“三模态”的全部潜力，还有探索空间。
+MIAM 巧妙地将动态掩码与模态不平衡感知相结合，为多模态学习中的“强者恒强”问题提供了一个优雅的解决方案，并在生态学这一数据天然不完整的领域取得了显著效果；但其在更广泛的多模态社区（如视觉-语言任务）中的普适性和与 SOTA 大模型的结合潜力尚待验证，且生态建模这一垂直场景的复杂度可能让非本领域读者感到入门门槛较高。
 
 🔗 **开源详情**
 
-- **代码**：提供GitHub仓库链接：https://github.com/smkim37/TripleSumm。
-- **模型权重**：未明确提及是否公开预训练权重，但代码仓库通常会包含。
-- **数据集**：MoSu数据集已公开，可通过论文中提供的链接获取。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：附录中提供了非常详细的模型超参数（表I）、数据预处理细节（B.4）、评估协议（B.5）、架构消融（C节）等，复现信息充分。
-- **引用的开源项目**：依赖的预训练模型包括CLIP、RoBERTa、AST。用于外部数据集文本生成的有Qwen2.5-VL-7B-Instruct。
+*   代码：提供公开代码仓库链接：`https://github.com/zbirobin/MIAM`。
+*   模型权重：提供公开的训练模型权重，托管在 HuggingFace：`https://huggingface.co/zbirobin/MIAM`。
+*   数据集：使用的 GeoPlant 和 TaxaBench 均为公开数据集。论文提供了数据划分的具体 Python 代码（见附录图7、图8）。
+*   Demo：论文中未提及在线演示。
+*   复现材料：提供了极其详细的复现信息，包括：完整的模型架构描述（Transformer 层数、维度）、训练全流程超参数（优化器、学习率、batch size、epoch数）、数据预处理与划分方法、评估指标计算细节、所有基线方法的实现细节（如 OPM 的超参数设置），以及 MIAM 算法本身的所有参数（`κ`, `λ`）和调整逻辑。
+*   引用的开源项目：论文依赖并提到了多个开源项目/代码库，如 `verde`（用于空间块划分）、`PyTorch`（隐含的深度学习框架）、预训练的图像/音频编码器（来自 TaxaBench 原始工作）。
 
 📌 **核心摘要**
 
-1.  **要解决的问题**：现有视频摘要方法多依赖视觉单模态或采用静态/固定的多模态融合策略，无法适应视频内容中各模态重要性随时动态变化的特点，导致摘要质量受限。
-2.  **方法核心**：提出TripleSumm模型，核心是设计了多尺度时间块（MST）和跨模态融合块（CMF）的分层“精炼-融合”架构。MST通过可变窗口的自注意力捕获不同时间尺度的模态内时序依赖；CMF则使用一个中立的“融合令牌”作为查询，通过交叉注意力自适应地从三个模态中聚合最相关的信息。
-3.  **与已有方法相比新在哪里**：首次提出在视频摘要任务中进行**帧级、自适应**的三模态（视觉、文本、音频）加权融合，动态判断当前帧应主要依赖哪个模态。同时，为解决数据瓶颈，构建并发布了首个大规模、野外、提供三模态特征的视频摘要数据集MoSu。
-4.  **主要实验结果**：在MoSu、Mr. HiSum、SumMe和TVSum四个基准上均取得SOTA。在MoSu数据集上，TripleSumm在所有指标上显著超越现有方法，例如Kendall’s τ达到0.351（最强基线为0.277），且模型参数量仅1.37M，效率极高。消融实验验证了动态融合、多尺度窗口及每个组件的有效性。
-5.  **实际意义**：推动了多模态视频理解的发展，使模型能更智能地利用视频中的多种信息流（如音乐视频中的音频、教学视频中的文本）。新发布的MoSu数据集为后续研究提供了坚实的评测基础。
-6.  **主要局限性**：模型在音频模态上的特征表示和利用方式相对简单，未能充分挖掘音频的深层语义或声学特性。此外，最终的摘要生成仍依赖后处理的分割与选择，而非端到端的片段生成。
+1. 要解决的问题：在生态学等多模态应用中，数据常因收集限制而不完整（缺失模态或模态内缺失），且不同模态间存在“不平衡”现象——主导模态会压制其他模态的学习，导致模型无法充分利用所有信息。
+2. 方法核心：提出了模态不平衡感知掩码（MIAM），这是一种动态的训练时数据掩码策略。它首先将掩码策略形式化为在单位超立方体上的概率分布，然后设计了两个核心组件：一个基于Beta分布混合的“角优先”掩码分布，以探索所有可能的输入组合并强调关键配置；以及一个动态调整机制，根据每个模态的实时性能（sₘ）和学习速度（dₘ）计算“不平衡系数”（ρₛₘ， ρₔₘ），并据此调整掩码概率，更频繁地掩码那些性能已高且稳定的主导模态。
+3. 与已有方法相比的新意：与传统的静态、均匀或基于简单模态丢弃的掩码策略不同，MIAM 是首个系统性地同时满足全支持（可处理任意输入子集）、角优先（强调全有/全无等极端情况） 和 不平衡感知（动态调整） 三个原则的掩码策略。它直接解决了现有方法（如 Dirichlet、OPM）未能充分探索输入组合空间且忽略学习动态的问题。
+4. 主要实验结果：在两个生态数据集（GeoPlant 和 TaxaBench）的多标签/多类分类任务中，MIAM 在大多数输入子集上均显著优于所有基线方法。例如，在 GeoPlant 数据集上，MIAM 的平均 AUC 达到 86.1%，比第二好的基线（均匀掩码）高出 2.9%，尤其在主导模态（卫星图像）缺失或部分缺失的困难场景下提升巨大（如仅卫星图像中心块时从83.3%提升至89.5%）。在 TaxaBench 上，MIAM 的平均 Top-1 准确率达到 38.7%，同样领先。
+5. 实际意义：该方法不仅提升了多模态生态模型在数据不完整情况下的预测准确性和鲁棒性，还使得通过掩码分析进行精细的贡献度归因成为可能（例如，识别出 NDVI（红光+近红外波段）和2003年欧洲热浪等关键生态信号），为生态学家提供了宝贵的洞见。
+6. 主要局限性：MIAM 依赖于验证集上的模态性能分数来动态调整，这在无监督学习（SSL）等没有标签的场景下难以直接应用（论文中进行了初步探索但未完全解决）。此外，其核心优势在模态数量较多（≥3）且模态内存在多个token的场景下最为明显，对于简单的二模态问题提升有限。
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 多模态生成 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 多模态奖励建模 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["多模态生成"]
+tags: ["多模态奖励建模"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 多模态生成 方向论文"
+description: "共 1 篇 ICLR 2026 多模态奖励建模 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 多模态生成
+# ICLR 2026 - 多模态奖励建模
 
 共 **1** 篇论文
 
@@ -18,59 +18,58 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [FlowBind: Efficient Any-to-Any Generation with Bidirectional](/audio-paper-digest-blog/posts/2026-05-03-flowbind-efficient-any-to-any-generation-with) | 8.0分 | 前25% |
+| 🥇 | [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling w](/audio-paper-digest-blog/posts/2026-05-04-omni-reward-towards-generalist-omni-modal-reward) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [FlowBind: Efficient Any-to-Any Generation with Bidirectional Flows](/audio-paper-digest-blog/posts/2026-05-03-flowbind-efficient-any-to-any-generation-with)
+### 🥇 [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form Preferences](/audio-paper-digest-blog/posts/2026-05-04-omni-reward-towards-generalist-omni-modal-reward)
 
-🔥 **8.0/10** | 前25% | #多模态生成 | #流匹配 | #可逆流 #多模态模型
+🔥 **8.0/10** | 前25% | #多模态奖励建模 | #奖励模型 | #多模态模型 #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Yeonwoo Cha*（KAIST）
-- 通讯作者：未说明
-- 作者列表：Yeonwoo Cha*（KAIST）、Semin Kim*（KAIST）、Jinhyeon Kwon（KAIST）、Seunghoon Hong（KAIST）
+- 第一作者：Zhuoran Jin, Hongbang Yuan, Kejian Zhu (共同第一作者)
+- 通讯作者：Jun Zhao
+- 作者列表：
+    - Zhuoran Jin（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Hongbang Yuan（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Kejian Zhu（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Jiachun Li（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Pengfei Cao（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Yubo Chen（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Kang Liu（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
+    - Jun Zhao（中国科学院大学人工智能学院; 中国科学院自动化研究所认知与决策智能重点实验室）
 
 💡 **毒舌点评**
 
-**亮点**：论文提出的“共享潜在空间+模态专属可逆流”框架设计优雅，用单一的流匹配目标统一了对齐与生成，成功绕开了现有方法对完全配对数据或复杂多阶段训练的依赖，在效率和数据灵活性上实现了显著提升。**短板**：该框架的性能高度依赖于各模态预训练编码器（如CLIP、CLAP）的表示质量，相当于将“对齐”的重任部分转移给了这些冻结的编码器，对于流模型本身如何更独立地学习跨模态语义，探讨和验证不够深入。
+该工作精准地指出了当前奖励模型在“模态覆盖”与“偏好表达”上的两大痛点，并提出了首个覆盖五种模态、支持自由形式偏好的Benchmark和Dataset，为多模态对齐研究提供了急需的基础设施，这是其最大亮点。然而，其生成式奖励模型（Omni-RewardModel-R1）的训练仅用了3%的数据，虽然强调了可解释性，但这也意味着其性能上限可能受限于小数据规模，且论文中“自由形式偏好”的指令调优数据主要由GPT-4o生成，其质量与多样性是否足以代表真实人类偏好的复杂性存疑。
 
 🔗 **开源详情**
 
-- 代码：论文提供了项目主页链接 `https://yeonwoo378.github.io/official_flowbind`，并声称代码将在此发布。
-- 模型权重：未提及是否公开预训练模型权重。
-- 数据集：使用了公开数据集（LAION-COCO子集， Flickr-30K， AudioCaps v2， VGGSound），但论文本身未发布新数据集。
-- Demo：未提及在线演示。
-- 复现材料：论文附录提供了详细的实现细节（编码器/解码器选择、架构、训练配置）、算法伪代码和训练数据集总结，复现信息较充分。
-- 论文中引用的开源项目：CLIP， Stable-UnCLIP， CLAP， AudioLDM， EmbeddingGemma/Gemma3-1B， FLUX.1， Pix3D的PointFlow等。
-- 论文中未提及明确的后续开源计划时间表，但根据项目主页和声明，预计代码会开源。
+-   代码：提供代码仓库链接：https://github.com/HongbangYuan/OmniReward
+-   模型权重：论文中提及提供了Omni-RewardModel-BT和Omni-RewardModel-R1的权重。
+-   数据集：
+    -   Omni-RewardBench: https://hf.co/datasets/HongbangYuan/OmniRewardBench
+    -   Omni-RewardData: https://hf.co/datasets/jinzhuoran/OmniRewardData
+-   Demo：论文中未提及在线演示。
+-   复现材料：论文在正文和附录中详细描述了模型架构、训练流程（包括数据处理、标注指南）、评估协议、伦理与质量控制措施，复现信息较为充分。
+-   论文中引用的开源项目：主要依赖的开源模型/框架包括：MiniCPM-o-2.6, Qwen2.5-VL-7B-Instruct, Qwen2.5-Omni-7B, LLaVA-OneVision, InternVL2.5/3, Gemma-3等；使用的基准数据集如Skywork-Reward-Preference, RLAIF-V, HPDv2, VideoDPO等。
 
 📌 **核心摘要**
 
-1. **问题**：现有的基于流的任何到任何多模态生成模型存在效率瓶颈，需要大规模且严格配对的数据，计算成本高，且训练流程复杂（多阶段）。
-2. **核心方法**：FlowBind提出一个可学习的共享潜在空间来捕获跨模态共性，并通过模态特定的可逆流（Invertible Flow）将每个模态与该潜在空间连接。所有组件在单一的流匹配目标下联合优化。推理时，通过求解源模态流的逆ODE映射到共享潜在空间，再通过目标模态的ODE解码生成输出。
-3. **创新之处**：通过因子化多模态交互（解耦为每个模态与共享潜在空间的独立流），实现了使用任意子集模态数据进行训练；联合优化避免了多阶段训练；在紧凑的语义表示空间操作，降低了计算成本。
-4. **实验结果**：在文本、图像、音频的跨模态生成任务上，FlowBind使用仅约568M参数和48 GPU小时（相比OmniFlow的3.2B参数和480 GPU小时）训练，实现了具有竞争力的生成质量和跨模态对齐性能。例如，在图像-音频生成任务上，其AIS分数显著优于基线（见下表）。在许多到一、一对多生成任务上，也展现出更均衡的条件利用能力。
-
-**关键实验结果表（对齐分数）**：
-
-| 类别 | 模型 | 文本→图像 (CLIP↑) | 图像→文本 (CLIP↑) | 文本→音频 (CLAP↑) | 音频→文本 (CLAP↑) | 图像→音频 (AIS↑) | 音频→图像 (AIS↑) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **通用模型** | CoDi | 30.26 | 26.24 | 10.79 | 17.94 | 61.55 | 74.26 |
-| | OmniFlow | 31.52 | 27.71 | 24.23 | 45.08 | 71.71 | 59.22 |
-| | **FlowBind** | **28.35** | **29.74** | **29.08** | **36.70** | **82.89** | **78.17** |
-
-![论文中的流程图](icassp-img://7DeARTwvwL/0.png)
-图1: FlowBind概述。(a)训练阶段，共享潜在空间和各模态的漂移网络被联合学习。(b)推理阶段，学习到的漂移网络通过求解每个模态的ODE来执行灵活的任何到任何生成。
-
-![论文中的实验结果对比图](icassp-img://7DeARTwvwL/1.png)
-图2: 各种多对多生成任务的定性结果。展示了模型处理复杂输入并生成相应输出的能力。
-
-5. **实际意义**：为高效、灵活、数据高效的多模态通用生成模型提供了一个有前景的框架。
-6. **主要局限**：性能高度依赖预训练的模态特定编码器/解码器；对于更复杂的模态（如视频、3D）的扩展能力尚未充分验证；共享潜在空间的解释性和控制性有待进一步研究。
+1. 要解决的问题：现有奖励模型存在“模态不平衡”（主要集中于文本和图像，忽视视频、音频、3D）和“偏好刚性”（仅基于固定的二元偏好对训练，无法适应多样化的个性化偏好）两大核心挑战。
+2. 方法核心：提出“Omni-Reward”框架，通过构建Benchmark（Omni-RewardBench）、Dataset（Omni-RewardData）和Model（Omni-RewardModel）三位一体的方案来应对上述挑战。
+3. 与已有方法相比新在哪里：首次提出覆盖文本、图像、视频、音频、3D五种模态的奖励建模Benchmark，且引入自由形式文本描述的评价标准。构建了包含通用偏好和指令调优数据的大型多模态偏好数据集。模型同时包含判别式（基于Bradley-Terry损失）和生成式（基于强化学习的Chain-of-Thought推理）两种范式。
+4. 主要实验结果：Omni-RewardModel-BT在自建的Omni-RewardBench（w/o Ties设置）上达到73.68%的准确率，超越最强基线模型Claude 3.5 Sonnet（66.54%）超过7个百分点。在外部基准VL-RewardBench上也达到76.3%的SOTA性能。消融实验表明，混合多模态数据和指令调优数据对性能提升至关重要。具体结果如下表所示：
+| 模型 | Omni-RewardBench (w/o Ties) | Omni-RewardBench (w/ Ties) | VL-RewardBench |
+| :--- | :--- | :--- | :--- |
+| Claude 3.5 Sonnet | 未提供 | 66.54% | 55.3% |
+| Omni-RewardModel-BT | 73.68% | 65.36% | 76.3% |
+| Omni-RewardModel-R1 | 未提供 | 60.18% | 未提供 |
+5. 实际意义：为构建能理解和适应复杂、个性化人类偏好的通用型多模态AI系统提供了关键的基础模型、数据集和评估工具，推动了对齐技术向更通用、更灵活的方向发展。
+6. 主要局限性：Omni-RewardBench规模较小（3,725对），任务分类相对粗糙；偏好数据仅限于单轮交互；生成式奖励模型的强化学习探索尚处初步阶段；模态扩展性（如热成像、雷达等）有待验证。
 
 ---
 

@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 基准测试 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 听觉解码 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["基准测试"]
+tags: ["听觉解码"]
 categories: [iclr-2026]
-description: "共 9 篇 ICLR 2026 基准测试 方向论文"
+description: "共 1 篇 ICLR 2026 听觉解码 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 基准测试
+# ICLR 2026 - 听觉解码
 
-共 **9** 篇论文
+共 **1** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,451 +18,50 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [WorldSense: Evaluating Real-world Omnimodal Understanding fo](/audio-paper-digest-blog/posts/2026-05-03-worldsense-evaluating-real-world-omnimodal) | 9.0分 | 前25% |
-| 🥈 | [XModBench: Benchmarking Cross-Modal Capabilities and Consist](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities) | 8.5分 | 前25% |
-| 🥉 | [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio ](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning) | 8.5分 | 前25% |
-| 4. | [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling w](/audio-paper-digest-blog/posts/2026-05-03-omni-reward-towards-generalist-omni-modal-reward) | 8.0分 | 前25% |
-| 5. | [MCIF: Multimodal Crosslingual Instruction-Following Benchmar](/audio-paper-digest-blog/posts/2026-05-03-mcif-multimodal-crosslingual-instruction) | 8.0分 | 前25% |
-| 6. | [OmniVideoBench: Towards Audio-Visual Understanding Evaluatio](/audio-paper-digest-blog/posts/2026-05-03-omnivideobench-towards-audio-visual-understanding) | 7.5分 | 前50% |
-| 7. | [EchoMind: An Interrelated Multi-level Benchmark for Evaluati](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark) | 7.5分 | 前25% |
-| 8. | [VideoMathQA: Benchmarking Mathematical Reasoning via Multimo](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning) | 7.0分 | 前25% |
-| 9. | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified) | 7.0分 | 前25% |
+| 🥇 | [MindMix: A Multimodal Foundation Model for Auditory Percepti](/audio-paper-digest-blog/posts/2026-05-04-mindmix-a-multimodal-foundation-model-for) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [WorldSense: Evaluating Real-world Omnimodal Understanding for Multimodal LLMs](/audio-paper-digest-blog/posts/2026-05-03-worldsense-evaluating-real-world-omnimodal)
+### 🥇 [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-04-mindmix-a-multimodal-foundation-model-for)
 
-🔥 **9.0/10** | 前25% | #基准测试 | #多模态模型 | #音视频 #模型评估
-
-👥 **作者与机构**
-
-- 第一作者：Jack Hong (Xiaohongshu Inc.)
-- 通讯作者：Weidi Xie (Shanghai Jiao Tong University)
-- 作者列表：Jack Hong (Xiaohongshu Inc.)， Shilin Yan (Xiaohongshu Inc.)， Jiayin Cai (Xiaohongshu Inc.)， Xiaolong Jiang (Xiaohongshu Inc.)， Yao Hu (Xiaohongshu Inc.)， Weidi Xie (Shanghai Jiao Tong University)
-
-💡 **毒舌点评**
-
-这篇论文精准地戳中了当前多模态大模型“偏科视觉，忽视听觉”的痛点，其提出的WorldSense基准设计严谨、任务多样，成功构建了一个揭示模型短板的“考卷”。然而，论文本身并非提出新模型，而是一个评估工具，因此其技术贡献集中在数据与实验设计，而非算法突破；同时，尽管评估结论深刻，但给出的改进路线图（如耦合数据、架构改进）略显宽泛，缺乏具体的技术方案验证。
-
-🔗 **开源详情**
-
-- **代码**：论文中未提及代码链接。项目主页为 https://jaaackhongggg.github.io/WorldSense，可能包含数据集获取方式，但未明确说明代码仓库。
-- **模型权重**：未提及。论文评估的是现有模型，未发布新模型。
-- **数据集**：是。WorldSense数据集已公开发布，可通过项目主页或GitHub获取。
-- **Demo**：未提及。
-- **复现材料**：论文提供了详细的评估提示模板（附录A.4）和数据集统计信息（表1），但未提供训练细节（因其为评估基准）。
-- **论文中引用的开源项目**：论文中引用了多个作为评估对象的开源模型和基准，如：Unified-IO-2, OneLLM, VideoLLaMA2, VITA-1.5, Qwen2.5-Omni, video-SALMONN, Video-LLaVA, Qwen2-VL, mPLUG-Owl3, LLaVA-OneVision, InternVL2.5, LLaVA-Video，以及用于数据构建的FineVideo和Music-AVQA数据集。
-- **论文中未提及开源计划**：未明确提及未来是否会开源更多资源（如代码、训练脚本等）。
-
-📌 **核心摘要**
-
-1.  **要解决什么问题**：现有针对多模态大语言模型（MLLMs）的评估基准大多局限于视觉-文本，或无法充分评估模型整合音频、视频、文本等全模态信息以理解真实世界场景的能力。
-2.  **方法核心是什么**：提出WorldSense，首个专注于评估MLLM在真实世界场景中进行全模态视频理解的基准。其核心是设计强耦合音视频的问答任务，确保正确回答必须同时依赖视觉和听觉信息。
-3.  **与已有方法相比新在哪里**：WorldSense的特点是：（i）全模态强耦合：任务设计强调音视频协同感知，移除任一模态则无法正确回答；（ii）内容与任务多样化：包含1,662个音视频同步视频，覆盖8大类67子类场景，设计3,172个多选问答对，涉及26种任务，从基础感知到高级推理；（iii）高质量人工标注：所有问答对由80位专家标注员经过多轮校正完成。
-4.  **主要实验结果如何**：在WorldSense上评估了多种最先进模型。实验表明，现有模型在理解真实世界场景时面临巨大挑战。最佳模型Gemini 2.5 Pro准确率仅为65.1%。开源音视频模型（如Video-LLaMA2）表现接近随机猜测（~25%），甚至低于纯视频模型。消融实验显示，原始音频信号比字幕文本能提供更多信息（尤其对于音乐），且视觉输入对性能提升至关重要。
-    - 主要结果表格（表2核心数据）：
-
-    | 模型类型 | 方法 | 平均准确率 |
-    | :--- | :--- | :--- |
-    | **开源音视频模型** | Unified-IO-2 XXL (7B) | 25.9% |
-    | | VideoLLaMA2 (7B) | 25.4% |
-    | | VITA-1.5 (7B) | 36.9% |
-    | | Qwen2.5-Omni (7B) | 45.4% |
-    | | video-SALMONN 2+ (72B) | 56.5% |
-    | **开源视频模型** | LLaVA-OneVision (7B) | 37.7% |
-    | | InternVL2.5 (8B) | 39.1% |
-    | | LLaVA-Video (7B) | 40.2% |
-    | **闭源模型** | Claude 3.5 Sonnet | 34.8% |
-    | | GPT 4o | 42.6% |
-    | | Gemini 1.5 Pro | 48.0% |
-    | | Gemini 2.5 Pro | 65.1% |
-    - 图表结论：图4和图5展示了模型在不同任务类别和音频类型上的性能差异，暴露了模型在音频理解、空间推理、情感识别等方面的普遍短板。
-5.  **实际意义是什么**：为评估和推动MLLM的真实世界全模态理解能力提供了一个高质量、标准化的平台。揭示了当前模型在多模态融合方面的显著不足，为未来模型设计和训练指明了方向。
-6.  **主要局限性是什么**：基准采用多选题形式，一定程度上限制了对模型生成能力的评估；无法完全涵盖真实世界理解所需的开放式回答和复杂推理。
-
----
-
-### 🥈 [XModBench: Benchmarking Cross-Modal Capabilities and Consistency in Omni-Language Models](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities)
-
-🔥 **8.5/10** | 前25% | #基准测试 | #多模态模型 | #跨模态 #音频场景理解
+🔥 **8.0/10** | 前25% | #听觉解码 | #多模态模型 #对比学习 | #多模态模型 #对比学习
 
 👥 **作者与机构**
 
-- 第一作者：Xingrui Wang (AMD, Johns Hopkins University)
-- 通讯作者：Jiang Liu (AMD)
-- 作者列表：Xingrui Wang (AMD, Johns Hopkins University), Jiang Liu (AMD), Chao Huang (AMD, University of Rochester), Xiaodong Yu (AMD), Ze Wang (AMD), Ximeng Sun (AMD), Jialian Wu (AMD), Alan Yuille (Johns Hopkins University), Emad Barsoum (AMD), Zicheng Liu (AMD)
+- 第一作者：Rui Liu（香港理工大学）
+- 通讯作者：Jibin Wu（香港理工大学），Kay Chen Tan（香港理工大学）
+- 作者列表：Rui Liu（香港理工大学）、Zhige Chen（香港理工大学）、Shu Peng（香港理工大学）、Wenlong You（香港理工大学）、Zhi-An Huang（香港城市大学（东莞））、Jibin Wu（香港理工大学）、Kay Chen Tan（香港理工大学）
+
+#
 
 💡 **毒舌点评**
 
-亮点在于其系统性：首次提出了一个严格平衡、覆盖全部六种模态映射组合的跨模态一致性评估框架，填补了现有基准的重大空白，诊断指标（模态差异、方向不平衡）设计得颇为精妙。短板是其评估形式相对单一（仅限于多选题），且对于开源模型的深入技术剖析（如架构如何影响跨模态对齐）略显不足，更侧重于“发现问题”而非“解释原因”。
+亮点：论文提出的CALRA模块设计精巧，通过“类型对齐+双向交叉注意力+低秩双线性融合”的组合，有效解决了EEG-音频对齐中的非线性映射和刺激异质性问题，并在多个下游任务上取得了令人印象深刻的SOTA结果，实验验证极为扎实。
+短板：论文声称是“首个”用于听觉解码的多模态基础模型，但模型的核心架构（双流编码器+对比学习）与训练范式（预训练-微调）在多模态学习领域已非常成熟，创新更多体现在针对EEG特性的工程化适配上；此外，在Speech AAD任务上接近100%的准确率，可能暗示该任务在现有数据集和评估协议下已接近“饱和”，模型的真正泛化能力在更复杂、更真实的场景中仍需验证。
+
+#
 
 🔗 **开源详情**
 
-- **代码**：是，论文提供了代码仓库链接：https://github.com/XingruiWang/XModBench。
-- **模型权重**：否，本文是评估基准，未提出新的模型权重。
-- **数据集**：是，论文明确表示将公开XModBench数据集，并提供了数据集卡片链接。
-- **Demo**：未提及。
-- **复现材料**：提供了评估工具（evaluation tools）和详尽的附录（Appendix F关于人类评估， Appendix G关于数据来源）。训练/评估细节在论文中有描述，但如优化器等超参数未在主文给出。
-- **论文中引用的开源项目**：FireRedTTS (用于生成语音)， CIPIC HRTF database (用于空间音频)， RenderedText (用于生成文本图像)等。
+- 代码：提供代码仓库链接：https://github.com/CookieMikeLiu/MindMix
+- 模型权重：论文中未提及是否公开预训练或微调后的模型权重。
+- 数据集：论文使用的所有数据集均为公开数据集，但需要研究者自行下载。论文未提供处理好的数据或获取脚本。
+- Demo：未提及。
+- 复现材料：提供了非常充分的复现材料，包括：详细的超参数配置表（Table A2）、三阶段训练的具体设置、严格的数据划分和评估协议、预处理流程、损失函数定义等。
+- 引用的开源项目：主要依赖的开源模型包括Wav2Vec 2.0作为音频编码器，并在基线对比中使用了EEGNet、LaBraM、CBraMod等开源EEG模型。
 
 📌 **核心摘要**
 
-1.  **要解决什么问题**：当前全能语言模型（OLLMs）的评估主要关注整体问答性能，而忽略了模型在处理相同语义内容但来自不同模态（音频、视觉、文本）输入时，是否能保持一致、稳定的推理和输出，即“跨模态一致性”问题。
-2.  **方法核心是什么**：提出了XModBench，一个大规模、三模态对齐的基准测试。其核心设计是通过系统性地置换问题（<context>）和选项（<candidates>）的模态（文本T、视觉V、音频A），为每个语义实例生成六种模态配置（如A→T, A→V, T→A等），从而在严格控制语义内容不变的情况下，评估模型的模态无关推理能力。
-3.  **与已有方法相比新在哪里**：与现有基准（主要评估跨模态问答能力）相比，XModBench的新颖性在于：1) 显式地以“跨模态一致性”为评估目标；2) 覆盖了音频、视觉、文本之间所有六种模态组合方向；3) 设计了三个诊断维度：任务能力（平均性能）、模态差异（不同模态表现差）、方向不平衡（交换上下文与选项的性能差）。
-4.  **主要实验结果如何**：实验评估了12个主流OLLMs。结果表明，即使是最强的模型（Gemini 2.5 Pro）也远未实现模态无关推理：其在空间和时序推理任务上的平均准确率低于60%；当信息通过音频而非文本传递时，性能显著下降（音频是最薄弱的模态）；且存在系统性的方向不平衡，当文本作为选项时表现通常优于视觉作为选项时。最强模型Gemini 2.5 Pro的全基准平均准确率为70.6%，人类基准为91.5%。
-
-| 模型 | 全基准平均准确率 (Avg.) | 模态配置标准差 (Std.) | 空间推理 | 时序推理 |
-| :--- | :--- | :--- | :--- | :--- |
-| **Gemini 2.5 Pro** | **70.6** | 11.7 | 50.1 | 60.8 |
-| Gemini 2.5 Flash | 63.7 | 14.2 | 48.0 | 48.6 |
-| Qwen2.5-Omni | 58.6 | 10.1 | 38.4 | 32.3 |
-| EchoInk-R1 | 59.2 | 11.3 | 36.6 | 37.1 |
-| **Human** | **91.5** | 3.0 | 89.7 | 88.9 |
-
-5.  **实际意义是什么**：XModBench为诊断和改进OLLMs的跨模态对齐能力提供了关键工具。其揭示的弱点（如音频处理不足、方向不平衡）为未来的模型训练（如需要更多交错数据、平衡任务覆盖）提供了明确的方向。
-6.  **主要局限性是什么**：评估形式限于多选题，可能无法完全捕捉开放式生成场景下的跨模态一致性；虽然覆盖了五类任务，但某些子任务的深度和复杂性有待扩展；论文主要报告了模型的性能差距，但对于导致这些差距的模型架构或训练细节的深入分析有限。
-
----
-
-### 🥉 [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning)
-
-🔥 **8.5/10** | 前25% | #基准测试 | #模型评估 | #音频大模型 #空间音频
-
-👥 **作者与机构**
-
-- 第一作者：Zihan Liu（北京航空航天大学，上海人工智能实验室）
-- 通讯作者：Jiaqi Wang（上海人工智能实验室，香港中文大学），Dahua Lin（香港中文大学，上海人工智能实验室）
-- 作者列表：Zihan Liu（北京航空航天大学，上海人工智能实验室）、Zhikang Niu（上海交通大学，上海创新研究院）、Qiuyang Xiao（上海交通大学，上海创新研究院）、Zhisheng Zheng（上海交通大学，上海创新研究院）、Ruoqi Yuan（北京航空航天大学）、Yuhang Zang（上海人工智能实验室）、Yuhang Cao（上海人工智能实验室）、Xiaoyi Dong（上海人工智能实验室，香港中文大学）、Jianze Liang（上海人工智能实验室）、Xie Chen（上海交通大学，上海创新研究院）、Leilei Sun（北京航空航天大学）、Dahua Lin（香港中文大学，上海人工智能实验室）、Jiaqi Wang（上海人工智能实验室，香港中文大学，上海创新研究院）
-
-💡 **毒舌点评**
-
-**亮点**：这篇工作精准地抓住了当前音频大模型“语义理解尚可，物理感知不足”的软肋，提出的“音频4D智能”概念和配套的STAR-Bench基准测试设计得非常系统、严谨，从基础感知到复杂推理层层递进，为评估和改进模型提供了极具价值的标尺。**短板**：论文的震撼力更多来自于“诊断出病症”——即19个模型在基准上集体“翻车”，尤其是开源模型的表现甚至不如随机猜测，但这恰恰暴露了当前整个音频理解领域在底层物理建模上的普遍缺失，而本文作为基准提出者并未给出治疗方案。
-
-🔗 **开源详情**
-
-*   **代码**：提供了GitHub代码仓库链接：https://github.com/InternLM/StarBench。
-*   **模型权重**：论文未提及提供在STAR-Bench上训练或优化的模型权重。
-*   **数据集**：提供了HuggingFace数据集链接：https://huggingface.co/datasets/internlm/STAR-Bench。
-*   **Demo**：论文中未提及在线演示。
-*   **复现材料**：论文提供了详细的数据构建流程描述（包括标注指南、提示词示例）、评估协议（循环评测、多次运行）以及完整的模型评估结果表格，复现信息充分。附录中包含更多案例分析和结果细节。
-*   **论文中引用的开源项目**：明确提到了依赖 **Pyroomacoustics** 进行空间音频模拟，并引用了 **Clotho**、**FSD50K**、**STARSS23** 等开源数据集作为整体推理任务的数据源。评估的模型包括多个开源模型（如SALMONN, Qwen2-Audio, Audio Flamingo等）和闭源模型（Gemini 2.5, GPT-4o）。
-*   **论文中未提及开源计划**：未提及开源计划，因为其本身已提供了核心资源。
-
-📌 **核心摘要**
-
-1.  **问题**：现有音频大模型的基准测试主要评估可通过文本描述的语义内容，忽略了对声音在时间和三维空间中动态进行推理的能力（即“音频4D智能”）。实验表明，模型仅依靠文本描述就能在现有基准上取得接近原始音频的效果，证明这些基准未能测试细粒度、非语言的声学线索。
-2.  **方法核心**：本文提出了STAR-Bench基准，包含两个层级：**基础声学感知**（对音高、响度、时长、方位角、仰角、距离等属性的绝对范围与相对区分敏感度测试）和**整体时空推理**（包含需要因果、物理知识的音频片段重排序任务，以及复杂场景下的静态定位、多源关系、动态轨迹追踪等空间任务）。
-3.  **创新点**：首次形式化并实证检验了“音频4D智能”评估的必要性；设计了结合程序化合成与高质量人工标注的严谨数据构建流程；提供了涵盖闭源与开源模型的首个全面评测。
-4.  **主要实验结果**：评估了19个模型。人类基准在各项任务上表现优异（如时间推理88%准确率），而最强的闭源模型Gemini 2.5 Pro平均准确率仅49.59%，开源模型大多接近随机水平。误差分析显示，模型主要在细粒度感知（如Gemini 2.5 Pro在时间任务中84%错误源于感知错误）、物理世界知识和多音频信息整合上存在严重缺陷。
-5.  **实际意义**：为音频大模型的发展提供了清晰的“体检报告”和改进方向，强调了未来模型需要原生支持多通道音频输入、提升细粒度感知能力和整合物理知识，对推动模型向更真实的物理世界理解迈进有重要意义。
-6.  **主要局限性**：作为一个评估基准，其本身不解决模型性能问题；任务设计可能仍未能完全覆盖真实世界所有复杂的音频时空推理场景；对多通道音频的评估揭示了当前模型架构的普遍缺陷，但未提出新的建模方法。
-
----
-
-### 4. [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form Preferences](/audio-paper-digest-blog/posts/2026-05-03-omni-reward-towards-generalist-omni-modal-reward)
-
-🔥 **8.0/10** | 前25% | #基准测试 | #多模态模型 | #强化学习 #数据集
-
-👥 **作者与机构**
-
-- 第一作者：Zhuoran Jin（中国科学院自动化研究所/中国科学院大学）
-- 通讯作者：Jun Zhao（中国科学院自动化研究所）
-- 作者列表：Zhuoran Jin（中国科学院自动化研究所/中国科学院大学）、Hongbang Yuan（中国科学院自动化研究所/中国科学院大学）、Kejian Zhu（中国科学院自动化研究所/中国科学院大学）、Jiachun Li（中国科学院自动化研究所/中国科学院大学）、Pengfei Cao（中国科学院自动化研究所/中国科学院大学）、Yubo Chen（中国科学院自动化研究所/中国科学院大学）、Kang Liu（中国科学院自动化研究所/中国科学院大学）、Jun Zhao（中国科学院自动化研究所）
-
-💡 **毒舌点评**
-
-亮点在于系统性地提出了一个解决多模态奖励建模中“模态不平衡”和“偏好僵化”两大核心问题的完整框架（基准、数据集、模型），设计思路清晰且实验全面。短板是虽然提出了生成式奖励模型，但其训练仅用了3%的数据且基于GRPO的强化学习探索较为初步，模型在部分生成任务（如T2A）上的表现仍有明显提升空间。
-
-🔗 **开源详情**
-
-- **代码**：提供GitHub仓库链接：https://github.com/HongbangYuan/OmniReward
-- **模型权重**：论文中提及将发布Omni-RewardModel，但未提供直接下载链接（可能随代码仓库发布）。
-- **数据集**：Omni-RewardBench 和 Omni-RewardData 均提供Hugging Face链接：
-    - 基准：https://hf.co/datasets/HongbangYuan/OmniRewardBench
-    - 数据集：https://hf.co/datasets/jinzhuoran/OmniRewardData
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：论文有专门的“Reproducibility Statement”，并在附录中详细说明了标注流程、质量控制等。但具体的训练超参数（学习率、batch size等）未在主文中提供，需查看附录。
-- **引用的开源项目**：基座模型包括MiniCPM-o-2.6、Qwen2.5-VL-7B-Instruct等；数据集构建引用了Skywork-Reward-Preference, RLAIF-V, HPDv2, GenAI-Bench等多个现有开源数据集。
-
-📌 **核心摘要**
-
-1. **问题**：当前的奖励模型（RM）面临两大挑战：(1) 模态不平衡，主要关注文本和图像，对视频、音频、3D等模态支持不足；(2) 偏好僵化，基于固定二元偏好对训练，难以捕捉用户个性化、自由形式的偏好。
-2. **方法核心**：提出 Omni-Reward 框架，包含三个部分：(1) Omni-RewardBench：首个覆盖五种模态（文本、图像、视频、音频、3D）九个任务、支持自由形式偏好的RM基准；(2) Omni-RewardData：包含248K通用偏好对和69K指令微调对的多模态偏好数据集；(3) Omni-RewardModel：包括判别式（BT）和生成式（R1）两种RM。
-3. **新意**：与现有工作相比，其创新在于：首次在统一框架下处理全模态奖励建模；通过指令微调数据使RM能根据自由形式的文本标准动态调整评分；并探索了使用强化学习训练可解释的生成式RM。
-4. **主要实验结果**：Omni-RewardModel-BT在自有基准Omni-RewardBench上达到73.68%（w/o Ties）和65.36%（w/ Ties）的准确率，比基座模型MiniCPM-o-2.6（46.67%）提升显著。在公开基准VL-RewardBench上，其准确率达到76.3%，超越了GPT-4o（65.8%）和UnifiedReward（66.1%）等模型，取得SOTA。消融实验证实了多模态混合数据和指令微调数据的重要性。
-
-![Omni-RewardBench任务示例](icassp-img://9C4gVbPqSy/0.png)
-图1展示了Omni-RewardBench涵盖的九个任务及其自由形式偏好标注示例。
-
-![模型架构概览](icassp-img://9C4gVbPqSy/1.png)
-图2展示了Omni-RewardModel的两种架构：(1) 使用Bradley-Terry损失的判别式模型；(2) 使用强化学习的生成式模型。
-
-5. **实际意义**：为多模态AI系统的对齐提供了更全面的评估工具、数据资源和建模范式，推动了向能处理全模态且能适配个性化需求的通用奖励模型发展。
-6. **主要局限性**：基准规模（3725对）相对有限；任务定义尚属粗粒度；偏好数据为单轮对话，未涉及多轮交互；生成式模型的强化学习训练是初步探索。
-
----
-
-### 5. [MCIF: Multimodal Crosslingual Instruction-Following Benchmark from Scientific Talks](/audio-paper-digest-blog/posts/2026-05-03-mcif-multimodal-crosslingual-instruction)
-
-🔥 **8.0/10** | 前25% | #基准测试 | #模型评估 | #多语言 #多模态
-
-👥 **作者与机构**
-
-- 第一作者：Sara Papi (Fondazione Bruno Kessler, Italy)
-- 通讯作者：未说明（论文未明确指定通讯作者，但提供了作者邮箱，可推测团队负责人可能为 Luisa Bentivogli 或 Jan Niehues）
-- 作者列表：Sara Papi (Fondazione Bruno Kessler), Maike Züfle (Karlsruhe Institute of Technology), Marco Gaido (Fondazione Bruno Kessler), Beatrice Savoldi (Fondazione Bruno Kessler), Danni Liu (Karlsruhe Institute of Technology), Ioannis Douros (Translated), Luisa Bentivogli (Fondazione Bruno Kessler), Jan Niehues (Karlsruhe Institute of Technology)
-
-💡 **毒舌点评**
-
-亮点：在“什么都需要评测”的AI时代，这篇论文提供了一套设计精巧、维度齐全（多模态、跨语言、长短句、多任务）且完全开源的“考卷”，直接戳中当前多模态模型“偏科严重”和“长文困难”的痛点。短板：本质上是“裁判员”的工作而非“运动员”，其深度体现在评测的广度与严谨性，而非提出新的建模思想；所有结论都依赖于评估的现有模型，其上限受限于当前模型的发展水平。
-
-🔗 **开源详情**
-
-- **代码**：提供代码仓库链接：[https://github.com/hlt-mt/mcif](https://github.com/hlt-mt/mcif)，包含推理和评估脚本，以及所有基线系统的输出。
-- **模型权重**：论文未提供新的模型权重，而是评测了现有的公开模型（如Gemma 3, Llama 3.1, Qwen2.5-Omni等）。
-- **数据集**：MCIF基准数据集已在HuggingFace上发布，遵循CC-BY 4.0许可：[https://hf.co/datasets/FBK-MT/MCIF](https://hf.co/datasets/FBK-MT/MCIF)。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：提供了极其详细的复现材料，包括：完整的标注指南（转录、翻译、问答）、所有使用的提示词列表（附录C）、所有评测模型的详细列表与生成设置（附录D）、以及每个模型的完整输出文件。
-- **论文中引用的开源项目**：使用了SHAS进行语音分割，使用jiWER计算WER，使用COMET评估翻译质量，使用BERTScore评估问答与摘要，使用MateDub/MateCat作为CAT工具（未公开代码）。
-
-📌 **核心摘要**
-
-1.  **要解决什么问题**：当前多模态大语言模型（MLLM）的评估基准存在严重不足：大多局限于英语、单一模态、短文本输入，或缺乏高质量人工标注，无法系统性地评估模型在跨语言、多模态融合以及处理长上下文时的指令跟随能力。
-2.  **方法核心是什么**：论文提出了MCIF，一个从科学演讲中构建的人工标注基准。它包含三种模态（语音、视频、文本）、四种语言（英、德、意、中）、长短两种输入形式、13个具体任务（归入识别、翻译、问答、摘要4个宏任务），并设计了固定和随机两种提示词变体（MCIFfix/MCIFmix）以测试模型鲁棒性。
-3.  **与已有方法相比新在哪里**：MCIF是首个同时覆盖跨语言、多模态、长短上下文且完全对齐的人工标注指令跟随基准。其并行设计允许对模型能力进行系统性的消融研究。
-4.  **主要实验结果如何**：论文对23个模型（LLM、SpeechLLM、VideoLLM、MLLM）进行了广泛评估。关键发现包括：
-    *   **摘要生成是最难的任务**，部分模型表现甚至随机。
-    *   **长上下文处理是主要瓶颈**，尤其对SpeechLLM和VideoLLM，性能显著下降（例如，DeSTA2在长形式语音翻译中COMET分数下降约34点）。
-    *   **模态整合效果不佳**，联合语音与视频输入常无增益甚至有害（如图2所示，多数MLLM在多模态任务上，Speech+Video并未优于单模态）。
-    *   **提示词鲁棒性不足**，模型对指令的措辞变化敏感（例如，识别任务WER波动可达60以上）。
-    *   具体结果对比见表2。
-5.  **实际意义是什么**：为社区提供了一个全面、开放的“考试平台”，明确揭示了当前MLLM在跨语言多模态理解、长文本处理和指令遵循方面的系统性弱点，为未来模型优化指明了具体方向。
-6.  **主要局限性是什么**：评测局限于科学演讲领域，可能无法完全代表所有应用场景；部分语言（如中文）的评估可能受限于模型的多语言能力；基准本身不提供新的建模方法。
-
----
-
-### 6. [OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs](/audio-paper-digest-blog/posts/2026-05-03-omnivideobench-towards-audio-visual-understanding)
-
-✅ **7.5/10** | 前50% | #基准测试 | #多模态模型 | #音频理解 #问答任务
-
-👥 **作者与机构**
-
-- 第一作者：Caorui Li（南京大学、东南大学）
-- 通讯作者：Jiaheng Liu（南京大学）
-- 作者列表：
-    - Caorui Li（南京大学，东南大学）（同等贡献）
-    - Yu Chen（南京大学，东南大学）（同等贡献）
-    - Yiyan Ji（南京大学）（同等贡献）
-    - Jin Xu（阿里巴巴集团）
-    - Zhenyu Cui（东南大学）
-    - Shihao Li（南京大学）
-    - Yuanxing Zhang（快手科技）
-    - Zhenghao Song（M-A-P）
-    - Dingling Zhang（南京大学）
-    - Ying He（北京科技大学）
-    - Haoxiang Liu（北京科技大学）
-    - Yuxuan Wang（阿里巴巴集团）
-    - Qiufeng Wang（东南大学）
-    - Jiafu Tang（南京大学）
-    - Zhenhe Wu（M-A-P）
-    - Jiehui Luo（中央音乐学院）
-    - Zhiyu Pan（南京大学）
-    - Weihao Xie（华中科技大学）
-    - Chenchen Zhang（M-A-P）
-    - Zhaohui Wang（南京大学）
-    - Jiayi Tian（阿里巴巴集团）
-    - Yanghai Wang（南京大学）
-    - Zhe Cao（南京大学）
-    - Minxin Dai（南京大学）
-    - Ke Wang（M-A-P）
-    - Runzhe Wen（南京大学）
-    - Yinghao Ma（Queen Mary University of London）
-    - Yaning Pan（复旦大学）
-    - Sungkyun Chang（Queen Mary University of London）
-    - Termeh Taheri（Queen Mary University of London）
-    - Haiwen Xia（北京大学）
-    - Christos Plachouras（Queen Mary University of London）
-    - Emmanouil Benetos（Queen Mary University of London）
-    - Yizhi Li（Manchester大学）
-    - Ge Zhang（M-A-P）
-    - Jian Yang（M-A-P）
-    - Tianhao Peng（M-A-P）
-    - Zili Wang（M-A-P）
-    - Minghao Liu（2077AI）
-    - Junran Peng（北京科技大学）
-    - Zhaoxiang Zhang（中国科学院）
-    - Jiaheng Liu（南京大学）（通讯作者）
-
-💡 **毒舌点评**
-
-这篇论文作为一份“考卷”出得相当用心，其亮点在于对“音视频融合推理”这一核心能力的精准定义和严谨考察，特别是强制要求的、区分模态的“原子推理链”标注，为黑箱模型提供了难得的诊断窗口。然而，短板也显而易见：作为纯评测工作，它能清晰指出“学生”（现有模型）哪里不行，但并未给出“教学方法”（如何改进模型），对社区的价值更多停留在指明方向而非提供解决方案。
-
-🔗 **开源详情**
-
--   **代码**：论文中未提及代码链接。但在“Reproducibility Statement”中承诺“future release of experimental code for evaluation”。
--   **模型权重**：未提及。本工作评测现有模型，未提出新模型。
--   **数据集**：**OmniVideoBench**基准将开源。论文提供了GitHub仓库链接：`https://github.com/NJU-LINK/OmniVideoBench`。
--   **Demo**：未提及。
--   **复现材料**：提供了详细的视频收集原则（附录B）、完整的视频分类体系（表5）、评测Prompt（附录C），以及各实验的具体设置，复现细节较为充分。
--   **论文中引用的开源项目**：在模型评测中引用了Qwen系列、Baichuan-Omni、HumanOmni、MiniCPM-o、VideoLLaMA2、VITA等开源模型。在基准构建中使用了Voxtral-Mini-3B进行ASR，并使用DeepSeek-V3进行问题过滤。
-
-📌 **核心摘要**
-
-1.  **问题**：当前多模态大语言模型（MLLMs）缺乏专门针对音频和视频模态协同推理能力的全面评估。现有基准要么忽略音频，要么只是简单叠加，未能真正考察模型整合多模态信息并进行逻辑一致推理的能力。
-2.  **方法**：本文提出了**OmniVideoBench**，一个大规模的音视频理解评测基准。它包含628个真实世界视频（时长数秒至30分钟），并基于此构建了1000个高质量的多项选择问答对。每个问答对都附有手动标注的、明确区分模态（视觉或听觉）的步骤式推理链，涵盖13种复杂推理任务（如时序、因果、关系推理等）。
-3.  **与已有方法区别**：相比以往基准，OmniVideoBench的核心区别在于：**a)** 强调**模态互补性与逻辑一致性**，要求问题必须同时依赖音视频信息才能解答；**b)** 覆盖**更长的视频时间跨度**（最长30分钟）和**多样化的音频类型**（语音、环境音、音乐）；**c)** 提供了**精细的推理过程标注**，而非仅标注最终答案。
-4.  **实验结果**：对14个主流MLLMs（包括开源和闭源模型）的评估显示，当前模型表现与人类（82.69%准确率）存在显著差距。最佳模型Gemini-2.5-Pro准确率仅为**58.90%**。具体发现包括：
-    - 开源模型表现接近随机猜测（如Qwen2.5-Omni-7B为29.30%）。
-    - 所有模型在**音乐类音频**上表现最差（Gemini-2.5-Pro仅38.46%），显著低于语音（61.66%）和环境音（57.72%）。
-    - 模型在**背景与音乐理解**任务上表现最差（低于50%），而在**关系推理**和**总结**任务上表现较好（超过80%）。
-    - 消融实验表明，提供ASR文本能在一定程度上提升纯视觉模型性能，但无法替代真正的音频理解能力，尤其在音乐/环境音任务上无效。增加输入帧数能提升模型在长视频上的表现。
-
-    | 模型 | 平均准确率 (%) |
-    | :--- | :--- |
-    | Gemini-2.5-Pro | 58.90 |
-    | Gemini-3.0-Flash | 55.10 |
-    | Qwen3-Omni-30B-A3B | 38.40 |
-    | Qwen2.5-Omni-7B | 29.30 |
-    | (人类) | 82.69 |
-
-5.  **实际意义**：OmniVideoBench为评估和推动下一代具备真正音视频协同推理能力的多模态模型提供了标准化的工具和明确的挑战。它揭示了当前模型在跨模态对齐、长时推理、非语义音频理解等方面的关键缺陷，指明了未来的改进方向。
-6.  **主要局限性**：
-    - 作为一个**评测基准**，它本身不包含解决所发现问题的模型或算法。
-    - 视频虽然多样，但分辨率限制在480p-1080p，且全部为公开网络视频，可能无法完全代表所有真实场景（如监控、专业影视制作）。
-    - 问答对为人工构造的多项选择题，其形式与真实世界开放式问答可能存在差异（论文中也验证了开放式问答难度更大）。
-
----
-
-### 7. [EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark)
-
-✅ **7.5/10** | 前25% | #基准测试 | #模型评估 | #语音情感识别 #语音大模型
-
-👥 **作者与机构**
-
-- 第一作者：Li Zhou（香港中文大学（深圳））
-- 通讯作者：Benyou Wang（香港中文大学（深圳）、深圳大数据研究院、深圳环西丽湖国际科教城研究院）、Haizhou Li（香港中文大学（深圳）、深圳大数据研究院、深圳环西丽湖国际科教城研究院）
-- 作者列表：Li Zhou（香港中文大学（深圳））、Lutong Yu（香港中文大学（深圳））、You Lyu（香港中文大学（深圳））、Yihang Lin（香港中文大学（深圳））、Zefeng Zhao（香港中文大学（深圳））、Junyi Ao（香港中文大学（深圳））、Yuhao Zhang（香港中文大学（深圳））、Benyou Wang（香港中文大学（深圳）、深圳大数据研究院、深圳环西丽湖国际科教城研究院）、Haizhou Li（香港中文大学（深圳）、深圳大数据研究院、深圳环西丽湖国际科教城研究院）
-
-💡 **毒舌点评**
-
-这篇论文最亮眼的地方在于它用极其精细的控制变量实验（同一句话，配上“咳嗽”、“叹气”、“正常”等不同声音），犀利地捅破了一个行业窗户纸：所谓的“多模态”大模型，其实对语音里的情绪和状态线索大多“听而不闻、答不相关”。然而，其短板也很明显：尽管构建了精美的TTS数据，但合成语音与真实人类语音的韵律、情感细微差别仍有鸿沟（实验已部分验证），用这个基准得出的结论，在多大程度上能代表模型对真实人类情感的理解能力，需要打个问号。
-
-🔗 **开源详情**
-
-- **代码**：论文中未提及具体代码仓库链接，但明确承诺将发布所有必要代码和实验配置以供复现。
-- **模型权重**：未提及（本文为评估基准，不提供新模型权重）。
-- **数据集**：明确将公开EchoMind基准的全部音频文件、元数据和标注协议，并会发布人类录音版本（EchoMind-Human）。
-- **Demo**：未提及。
-- **复现材料**：承诺提供完整的数据、代码、实验配置。附录中详细描述了数据集构建流程、MCQ示例、人类录音细节、评估指标定义等，为复现提供了充分信息。
-- **引用的开源项目**：论文依赖并评估了多个开源SLM（如Audio Flamingo3， DeSTA2.5-Audio， VITA-Audio， LLaMA-Omni2等），并使用了GPT-4o， Gemini-2.5-Pro等商业模型进行评估。评估指标使用了NISQA， UTMOS， emotion2vec， Qwen3-Embedding-0.6B等开源工具或模型。
-
-📌 **核心摘要**
-
-1.  **要解决什么问题**：现有语音语言模型（SLM）的基准测试通常孤立地评估语言理解、声学识别、推理或对话能力，缺乏对整合这些技能以进行人类般情感智能对话能力的系统性评估。
-2.  **方法核心是什么**：提出EchoMind，首个用于评估SLM共情能力的多层次关联基准。其核心设计是模拟共情对话的认知过程（理解→推理→对话），所有任务共享语义中性且无显式情感线索的脚本，但通过控制同一脚本的语音风格变化（目标、替代、中性）来隔离和测试语音表达本身的影响。
-3.  **与已有方法相比新在哪里**：a) **任务关联**：首次将理解、推理、对话三级任务基于同一组音频实例进行关联评估，分析跨层级依赖。b) **控制变量**：使用精心设计的、语义中性的脚本，确保对语音线索的感知完全依赖于非语言声学特征。c) **全面的共情维度**：构建了一个包含3大类、12子类、39项具体语音属性的共情导向框架。
-4.  **主要实验结果如何**：对12个先进SLM的测试揭示：a) SLMs在理解语音内容上表现良好，但在感知和利用语音线索（如生理状态、非语言表达）方面存在显著差距。b) 即使是顶尖模型（如GPT-4o-Audio），在生成回应时也难以有效整合语音线索（CSpeechRel指标普遍低于4分）。c) 模型性能对提示策略敏感，且处理人类自然语音比处理合成语音更具挑战性。d) 在理想化条件下（提供完美语音线索识别），模型生成共情回应的能力有显著提升上限。关键实验数据汇总如下：
-
-| 模型 | 语音理解(ACC↑) | 推理(ACC↑) | 对话(文本-CSpeechRel↑) | 对话(音频-VES↑) |
-| :--- | :---: | :---: | :---: | :---: |
-| GPT-4o-Audio | 66.25 | 68.04 | 3.42 | 3.34 |
-| Step-Audio | 40.74 | 45.90 | 3.09 | 3.20 |
-| Qwen2.5-Omni-7B | 60.87 | 57.70 | 2.92 | 3.24 |
-| DeSTA2.5-Audio | 56.68 | 63.04 | 3.36 | - |
-
-![���文中的框架示例图](icassp-img://l5re5ppqrX/0.png)
-*图1：EchoMind框架与示例。(a) 多级认知过程模拟，从内容与声音理解，到整合推理，再到共情对话。(b) 同一脚本在不同控制语音风格下的回应示例。*
-![论文中的实验结果图](icassp-img://l5re5ppqrX/2.png)
-*图3：顶级模型在合成语音（TTS）和真实人类语音（Human）版本上的性能差异，显示真实语音更具挑战性。*
-![论文中的实验结果图](icassp-img://l5re5ppqrX/1.png)
-*图2：模型在语音线索感知、推理与共情回应质量之间的相关性分析。*
-
-5.  **实际意义是什么**：为评估和推动SLM的情感智能提供了首个系统、可控的基准，明确指出了当前SLM在“听懂弦外之音”和“做出有温度回应”方面的核心缺陷，为未来模型研发指明了方向。
-6.  **主要局限性是什么**：a) 基准数据主要依赖TTS合成语音，尽管有人类录音版本进行对比，但规模较小，可能无法完全覆盖真实对话中语音的细微变异性。b) 评估框架的某些维度（如共情回应的“质量”）依赖于LLM作为评判器或主观评分，可能存在偏差。
-
----
-
-### 8. [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning)
-
-✅ **7.0/10** | 前25% | #基准测试 | #多模态模型 | #视频理解 #数学推理
-
-👥 **作者与机构**
-
-- 第一作者：Hanoona Abdul Rasheed （MBZUAI）
-- 通讯作者：未说明（论文未明确指定）
-- 作者列表：Hanoona Abdul Rasheed（MBZUAI）， Abdelrahman M Shaker（MBZUAI）， Anqi Tang（MBZUAI）， Muhammad Maaz（MBZUAI）， Ming-Hsuan Yang（University of California Merced， Google Research）， Salman Khan（MBZUAI， Australian National University）， Fahad Shahbaz Khan（MBZUAI， Linköping University）
-
-💡 **毒舌点评**
-
-本文的亮点在于其严谨性：不仅构建了数据集，更设计了一套从视频选择、问题标注到步骤评估的完整质量控制流水线，使得“视频数学推理”这个笼统的挑战变得可操作、可衡量。然而，其短板也明显：420个样本的规模对于训练或微调现代大模型仍显不足，且模型在“拓扑”、“图论”等抽象领域的表现与人类差距巨大（如GPT-4o在拓扑上仅20%），暴露了当前模型“会算题但不会思考”的深层瓶颈。
-
-🔗 **开源详情**
-
-- **代码**：论文提供了项目主页链接（https://mbzuai-oryx.github.io/VideoMathQA），其中包含代码仓库链接。
-- **模型权重**：论文评估了众多模型，但并未贡献新的模型权重。所评估模型的权重来自其原始发布方。
-- **数据集**：是的，视频数据集是公开的（通过项目主页提供）。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：提供了详细的评估提示词（附录F）、评估框架（lmms-eval集成）和部分实现脚本。
-- **引用的开源项目**：论文依赖并集成了**lmms-eval**评估框架和**vllm**推理库，并使用了**Qwen3-4B**作为评估模型。
-
-📌 **核心摘要**
-
-1.  **问题**：现有数学推理基准多基于静态图像或文本，无法评估模型在动态、多模态（视觉、音频、文本）的视频环境中进行长时程、多步推理的能力。
-2.  **方法核心**：构建了一个名为VideoMathQA的基准数据集，包含420个来自真实教育视频的问答对，覆盖10个数学领域。每个样本附带专家标注的步骤级推理链，并设计了三类推理任务：直接求解、概念迁移、深度教学理解。
-3.  **创新点**：与已有基准相比，首次系统性地将数学推理置于视频场景中，强调对动态视觉信息（如逐步构建的图表）、音频讲解和长时序上下文的整合。提出了细粒度的步骤评估和错误分析框架。
-4.  **实验结果**：评估了30+个模型。最强模型GPT-o4-mini在CoT MBin评估下（含字幕）达到44.8%准确率，而人类为80.7%。模型在算术微积分（32%）上表现较好，但在拓扑、图论（~16%）上表现很差。增加字幕和帧数通常能提升性能。
-5.  **实际意义**：为评估和诊断多模态大模型的深度推理能力提供了新的、更具挑战性的标尺，揭示了当前模型在跨模态信息整合与长时推理上的不足。
-6.  **主要局限性**：数据集规模较小（420样本），标注成本极高（约115人天）。模型在部分复杂抽象领域的性能仍远低于人类。
-
----
-
-### 9. [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified)
-
-✅ **7.0/10** | 前25% | #基准测试 | #多任务学习 | #多模态模型 #语音情感识别
-
-👥 **作者与机构**
-
-- 第一作者：Keane Ong（MIT；National University of Singapore）
-- 通讯作者：未明确说明（论文中指出Keane Ong和Wei Dai为共同第一作者）
-- 作者列表：Keane Ong（MIT；National University of Singapore）、Wei Dai（MIT；National University of Singapore）、Carol Li（MIT）、Dewei Feng（MIT）、Hengzhi Li（MIT；Imperial College London）、Jingyao Wu（MIT）、Jiaee Cheong（Harvard University）、Rui Mao（Nanyang Technological University）、Gianmarco Mengaldo（National University of Singapore）、Erik Cambria（Nanyang Technological University）、Paul Pu Liang（MIT）
-
-💡 **毒舌点评**
-
-亮点在于它首次系统性地构建了一个涵盖情感、认知、病理、社交四大维度的统一多模态行为理解基准（Human Behavior Atlas），并通过BAM模块优雅地验证了“原始数据”与“手工特征”可以互补而非互斥。短板则是模型OMNISAPIENS-7B本质上是对现有Qwen2.5-Omni骨干的适配与微调，在架构创新上乏善可陈，其核心贡献更像是一项“工程与整合”而非“原理与突破”。
-
-🔗 **开源详情**
-
-- **代码**：论文提供了代码仓库链接：`https://github.com/MIT-MI/human_behavior_atlas`。
-- **模型权重**：论文承诺发布训练好的模型（OMNISAPIENS-7B SFT, BAM, RL）。
-- **数据集**：Human Behavior Atlas基准承诺发布。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：提供了详尽的附录，包括数据集划分（Table 7）、评估指标公式、LLM评判Prompt（App A.5）、模型架构细节（App B）、训练超参数（App C）等。
-- **引用的开源项目**：依赖的开源工具/模型包括：**Qwen2.5-Omni-7B**（骨干）、**MediaPipe**（视觉特征提取）、**OpenSMILE**（音频特征提���）、**Whisper v3 Large**（语音识别转录）、**GPT-5-nano**（LLM评判）。
-
-📌 **核心摘要**
-
-1. **问题**：当前对人类心理与社会行为（情感、认知、病理、社交）的AI理解存在任务分散、数据集异构、评估标准不一的问题，阻碍了可扩展、可迁移的基础模型发展。
-2. **方法**：构建了一个名为“Human Behavior Atlas”的统一基准，整合了13个公开多模态数据集，超过10万个样本。所有数据被标准化为统一的“提示-目标”格式，并定义了跨数据集的统一评估指标。此外，基于该基准训练了三个模型变体：OMNISAPIENS-7B SFT（监督微调）、BAM（带行为描述符适配器）和RL（强化学习）。
-3. **创新**：(1) 提出了首个大规模、多模态、跨任务的人类行为理解统一基准；(2) 设计了行为适配器模块（BAM），以残差方式将音频/视频的低级特征（如面部关键点、声学特征）融入冻结的基础模型；(3) 系统比较了SFT、BAM和RL三种训练范式在行为理解任务上的表现与特点。
-4. **实验结果**：在Human Behavior Atlas上训练的OMNISAPIENS-7B系列模型，在10项行为任务中的7-8项上持续优于现有的通用多模态大模型（如Qwen2.5-Omni-7B，见下表）。在迁移学习实验中，预训练模型在未见过的数据集（如MUStARD讽刺检测）上相比未经预训练的基线有显著提升（例如，SFT版本在MUStARD上加权F1从0.473提升至0.658）。BAM在部分任务（如NVC、SAR）上带来显著增益。
-
-**表：Human Behavior Atlas上多任务评估主要结果（部分）**
-| 模型 | EMO (MELD) | SEN (MOSEI) | HUM | SAR | SOC | INT | NVC |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Qwen 2.5-Omni-7B | 0.661 | 0.602 | 0.543 | 0.254 | 0.069 | 0.249 | 0.254 |
-| **OMNISAPIENS-7B SFT** | **0.709** | **0.744** | 0.532 | 0.256 | **0.121** | 0.249 | 0.257 |
-| **OMNISAPIENS-7B BAM** | **0.711** | **0.775** | **0.644** | **0.201** | **0.162** | 0.177 | **0.201** |
-| **OMNISAPIENS-7B RL** | 0.699 | 0.224 | 0.639 | 0.304 | 0.133 | **0.486** | **0.133** |
-*(注：数值为论文Table 4中对应数据集上的最优/次优得分，具体指标见论文3.3节说明)*
-
-![实验结果对比](icassp-img://ZKE23BBvlQ/7.png)
-*图：不同模型在10项行为任务上的平均性能热力图。经过Human Behavior Atlas训练的OMNISAPIENS-7B系列模型在大多数任务上优于通用基线模型。*
-
-5. **实际意义**：为构建“人类行为理解”这一重要AI方向提供了可复用的标准化基准、评估框架和基线模型，有助于推动更通用、鲁棒的行为分析系统研发。
-6. **局限性**：(1) 基准中的数据集虽多元，但总量（约10万样本）对于训练真正的大规模基础模型可能仍显不足；(2) 评估任务中部分数据集（如PTSD）样本量很小（仅634），结果的泛化性需谨慎看待；(3) BAM的有效性因任务而异，并非普适性增益。
+1.  要解决什么问题：现有的EEG基础模型（如LaBraM）在听觉解码任务上效果有限，因为它们仅从EEG信号中学习表征，缺乏与听觉刺激的深度耦合，导致跨任务泛化能力差。
+2.  方法核心是什么：提出MindMix，一个两阶段训练的多模态基础模型。第一阶段：在3500+小时EEG数据上从头预训练一个高容量EEG编码器。第二阶段：在100+小时配对EEG-音频数据上，通过新颖的跨注意力低秩对齐（CALRA） 模块，学习神经信号与音频特征的深度对齐表征，并采用对比学习目标优化。
+3.  与已有方法相比新在哪里：1）CALRA模块：相较于简单的投影对齐（如CLIP）或拼接融合，CALRA通过类型特定路由、双向交叉注意力交互和低秩双线性融合，实现了更细粒度、感知音频类型的跨模态深度交互。2）训练范式：首次将大规模单模态EEG预训练与大规模配对数据多模态对齐相结合，构建了针对听觉解码的基础模型框架。
+4.  主要实验结果如何：在语音听觉注意力解码（AAD）、语音情感识别和跨模态音乐检索三个任务的六个数据集上全面超越了现有SOTA方法（包括任务特定模型和EEG基础模型）。例如，在KUL数据集AAD任务上，MindMix的平衡准确率达到99.82%，远高于最强基线DARNet的94.81%；在HR-EEG4EMO情感识别上达到88.78%，超过基线约10个百分点。消融实验证明了CALRA模块及其各组件的有效性。
+5.  实际意义是什么：为构建鲁棒、通用的非侵入式听觉脑解码系统奠定了模型基础，推动了BCI从任务特定模型向基础模型的范式转变，有望提升听力辅助、神经康复和人机交互的应用水平。
+6.  主要局限性是什么：1）数据依赖：性能高度依赖大规模配对EEG-音频数据，而此类数据采集困难且稀缺，限制了模型的进一步扩展和验证。2）计算成本：模型参数量较大（约97M），预训练需要数百GPU小时。3）评估风险：在Speech AAD任务上使用标准的“Within-trial”划分可能存在数据泄露风险，尽管作者在附录中补充了更严格的“Between-trial”评估并展示了优势，但仍需警惕。
+
+#
 
 ---
 

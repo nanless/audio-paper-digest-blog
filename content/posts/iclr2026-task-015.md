@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 语音伪造检测 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 生物声学 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["语音伪造检测"]
+tags: ["生物声学"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 语音伪造检测 方向论文"
+description: "共 1 篇 ICLR 2026 生物声学 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音伪造检测
+# ICLR 2026 - 生物声学
 
 共 **1** 篇论文
 
@@ -18,51 +18,56 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-03-tell-me-habibi-is-it-real-or-fake) | 9.0分 | 前25% |
+| 🥇 | [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-04-avex-what-matters-for-animal-vocalization-encoding) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-03-tell-me-habibi-is-it-real-or-fake)
+### 🥇 [AVEX: What Matters for Animal Vocalization Encoding](/audio-paper-digest-blog/posts/2026-05-04-avex-what-matters-for-animal-vocalization-encoding)
 
-🔥 **9.0/10** | 前25% | #语音伪造检测 | #数据集 | #多语言 #音视频
+🔥 **8.5/10** | 前25% | #生物声学 | #预训练 | #自监督学习 #模型比较
 
 👥 **作者与机构**
 
-- 第一作者：Kartik Kuckreja (MBZUAI)
-- 通讯作者：未说明（但根据邮箱域名判断，作者分属MBZUAI和Monash University）
-- 作者列表：Kartik Kuckreja (MBZUAI), Parul Gupta (Monash University), Injy Hamed (MBZUAI), Thamar Solorio (MBZUAI), Muhammad Haris Khan (MBZUAI), Abhinav Dhall (Monash University)
+- 第一作者：Marius Miron（Earth Species Project）
+- 通讯作者：Marius Miron（Earth Species Project）， David Robinson（Earth Species Project）
+- 作者列表：Marius Miron（Earth Species Project）， David Robinson（Earth Species Project）， Milad Alizadeh（Earth Species Project）， Ellen Gilsenan-McMahon（Earth Species Project）， Gagan Narula（Earth Species Project）， Emmanuel Chemla（Earth Species Project）， Maddie Cusimano（Earth Species Project）， Felix Effenberger（Earth Species Project）， Masato Hagiwara（Earth Species Project）， Benjamin Hoffman（Earth Species Project）， Sara Keen（Earth Species Project）， Diane Kim（Earth Species Project）， Jane Lawton（Earth Species Project）， Jen-Yu Liu（Earth Species Project）， Aza Raskin（Earth Species Project）， Olivier Pietquin（Earth Species Project）， Matthieu Geist（Earth Species Project）
+（注：所有作者均隶属于Earth Species Project，论文中未进一步细分实验室或部门）
 
 💡 **毒舌点评**
 
-该研究精准地切中了深度伪造检测领域一个被长期忽视但极其重要的现实痛点——多语言代码切换场景，并通过构建大规模、高质量的专用数据集（ArEnAV）给出了有力回应，其数据生成管道和评估体系的工程完备性值得称道。然而，论文的创新高度主要体现在“造轮子”（数据集）上，而非提出新的检测理论或模型；且数据生成管道严重依赖商业API（GPT-4.1-mini）和现成模型，虽有效但原创技术深度有限。
+亮点：这篇论文是生物声学领域久违的“系统集成”之作，它不发明新轮子，而是把已知的零件（不同架构、数据、训练方法）在标准化的测试台上跑了一遍，最终给出了一份清晰、可复现的“组装说明书”，极大降低了领域内后续工作的试错成本。
+短板：本质上它更像一篇详尽的“优化报告”而非“创新研究”，结论（如“先SSL预训练再SL微调”）在NLP/CV领域已是常识，其新颖性主要体现在将其验证于生物声学这一特定垂直领域，因此理论贡献有限。
 
 🔗 **开源详情**
 
-- **代码**：论文中提到“The dataset is public.”以及“Data-generation code and evaluation scripts will be made public for various open-sourced models evaluated.”，但未提供具体代码仓库链接。
-- **模型权重**：未提及公开生成管道中使用的TTS和唇同步模型的特定微调权重。
-- **数据集**：已公开，获取需要遵守严格的学术非商业用途最终用户许可协议（EULA），并需要提供大学IRB批准编号（详见附录A.7）。
-- **Demo**：未提及。
-- **复现材料**：提供了详尽的数据生成管道说明（包括GPT-4.1-mini的提示文本）、数据集统计信息、评估协议、以及所有基准模型的配置（零样本、预训练、微调）。附录中包含大量补充细节（如扰动列表、修改示例、身份重叠分析）。
-- **论文中引用的开源项目**：VisPer (数据来源), Whisper (ASR), wav2vec2 (强制对齐), XTTS-v2, OpenVoice-v2, Fairseq, GPT-TTS (音频生成), Diff2Lip, LatentSync (视频生成), XLSR-Mamba, BA-TFD/BA-TFD+, Meso4, Xception, Video-LLaMA (评估基线)。
+- 代码：提供了开源代码仓库链接：`https://github.com/earthspecies/avex`。
+- 模型权重：明确承诺发布所有新训练的模型检查点（Table 2中所列）。
+- 数据集：论文中使用了多个公开数据集（AudioSet， Xeno-canto， iNaturalist等），但未明确说明是否提供了其整合后的训练集和评估数据集的下载链接。新提出的个体识别和叫声分类评估数据集来源于公开仓库，论文提供了引用链接。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了非常充分的复现材料，包括：详细的软件环境说明（B.5）、所有模型的完整训练超参数（Table 5）、评估指标的具体计算公式（B.2）、以及扩展的实验设置和结果（附录C）。
+- 论文中引用的开源项目：BEATs， EAT， EfficientNetB0（来自torchvision），以及对BirdNet和Perch的TensorFlow-Lite封装。
+
+论文中未提及开源计划：未提及是否将论文中编译和清洗后的大规模混合训练数据集本身进行开源托管。
 
 📌 **核心摘要**
 
-1.  **问题**：现有深度伪造检测研究和数据集主要关注单语内容，忽略了在全球范围内（尤其是阿拉伯语世界）普遍存在的“语码转换”现象，即同一句话中混合使用多种语言，这使得现有检测模型难以泛化。
-2.  **方法核心**：作者提出了ArEnAV，首个大规模的阿拉伯语-英语音视频深度伪造数据集，包含387k个视频，超过765小时。数据生成管道分为三步：a) 利用GPT-4.1-mini对原始转录本进行可控的语义和语言风格（含方言）修改；b) 使用四种TTS和说话人转换模型生成与修改后文本匹配的伪造音频；c) 使用Diff2Lip和LatentSync两种扩散模型生成与伪造音频同步的唇部视频。
-3.  **创新点**：a) **首创性**：首个针对阿拉伯语-英语语码转换的深度伪造数据集，涵盖了现代标准阿拉伯语、埃及、黎凡特和海湾方言；b) **管道创新**：结合大语言模型进行细粒度转录操控，并整合多种多语言TTS与唇同步模型；c) **评估全面**：不仅对比现有SOTA模型，还进行了详尽的人类评估，揭示了代码切换对检测造成的独特挑战。
-4.  **主要实验结果**：现有SOTA检测模型在ArEnAV上性能急剧下降。例如，BA-TFD+模型（在AV-1M上预训练）的AP@0.5从AV-1M上的44.42%降至ArEnAV上的3.74%（见表11a）。人类用户研究的平均准确率仅为60%，且当伪造发生在英语单词时，85%的人类参与者无法识别（见表5，表6）。这证明了任务的艰巨性和数据集的有效性。
+1.  要解决什么问题：生物声学领域需要能够处理多种物种、多种任务（如物种分类、个体识别、叫声分类）的通用音频编码器。然而，现有编码器通常局限于鸟类、单一架构或训练范式，且评估范围狭窄。
+2.  方法核心是什么：通过一项大规模实证研究，系统评估影响通用生物声学编码器性能的关键因素，包括：（1）模型架构（CNN vs Transformer）；（2）训练数据（多样性、是否包含通用音频）；（3）训练范式（监督学习、自监督学习、及其两阶段组合）。
+3.  与已有方法相比新在哪里：相比以往工作，本文在三个维度上扩展：（1）使用了比以往更广泛、更多样化的生物声学训练数据；（2）首次系统比较了CNN和Transformer架构，以及监督、自监督及两阶段训练范式；（3）极大地扩展了评估范围，新增了个体识别和叫声分类任务的公共基准数据集，并引入了检索和聚类指标。
+4.  主要实验结果如何：在涵盖26个数据集、4类任务的评估中，最佳模型是采用“自监督预训练+监督微调”两阶段范式，并在混合了生物声学和通用音频（AudioSet）的数据上训练的模型。例如，其提出的`sl-BEATs-all`模型在多项基准上取得SOTA（如表3所示）。关键发现包括：（a）在监督模型擅长的领域内任务（如BEANS分类）上表现强劲，而自监督模型在领域外任务（如BEANS检测）上泛化更好；（b）两阶段训练模型结合了两者优点，在分布内和分布外均表现优异。
 
-| 方法 (BA-TFD+) | 数据集 | AP@0.5 | AP@0.95 | AR@10 |
-| :--- | :--- | :--- | :--- | :--- |
-| 预训练于AV-1M | LAV-DF | 96.30 | 4.44 | 78.75 |
-| | AV-1M | 44.42 | 0.03 | 34.67 |
-| | ArEnAV | 3.74 | 0.04 | 3.05 |
+| 模型名称 (来自Table 3) | 训练范式 | BEANS 分类 (Probe Acc) | BEANS 分类 (R-AUC) | BEANS 检测 (Probe mAP) | BEANS 检测 (R-AUC) | BirdSet (Probe mAP) | BirdSet (R-AUC) | 个体 ID (R-AUC) | 叫声分类 (R-AUC) | 叫声分类 (NMI) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| sl-BEATS-all | SL-SSL | 0.832 | 0.813 | 0.604 | 0.408 | 0.726 | 0.294 | 0.732 | 0.511 | 0.690 |
+| EffNetB0-all | SL | 0.800 | 0.809 | 0.584 | 0.362 | 0.712 | 0.279 | 0.707 | 0.531 | 0.701 |
+| Perch | SL | 0.768 | 0.759 | 0.478 | 0.368 | 0.674 | 0.233 | 0.656 | 0.530 | 0.705 |
+| BEATS (pretrained) | SSL | 0.774 | 0.734 | 0.542 | 0.381 | 0.722 | 0.129 | 0.686 | 0.380 | 0.637 |
+| BirdNet | SL | 0.796 | 0.772 | 0.523 | 0.392 | N/A | N/A | N/A | 0.472 | 0.708 |
 
-*表11(a)关键结果：SOTA模型在ArEnAV上的性能崩溃*
-5.  **实际意义**：为构建能够应对真实世界多语言、多方言复杂场景的下一代深度伪造检测系统提供了关键的基准数据和评估工具，对于维护阿拉伯语社区的数字内容安全至关重要。
-6.  **主要局限性**：a) 数据集存在真实/伪造视频数量不平衡；b) 依赖的语音识别模型（Whisper-v2）对阿拉伯语识别能力有限，可能导致部分转录本噪声；c) GPT-4.1-mini在“意义+翻译”模式下有时遵循指令不完全，导致语义变化不足；d) 数据集目前仅限于阿拉伯语和英语两种语言。
+5.  实际意义是什么：为生物声学社区提供了一套经过验证的、可复用的最佳实践训练方案（数据混合+两阶段训练），以及一个包含多样化任务和评估指标的基准测试体系。开源模型和工具（AVEX）将直接加速下游应用和研究。
+6.  主要局限性是什么：（1）所有模型均在16kHz采样率下训练，可能丢失部分高频生物声学信息；（2）评估虽然广泛，但可能仍未完全覆盖所有现实世界生物声学任务的复杂性；（3）论文承认，更优的SSL骨干网络可能产生更好的微调结果，其结论受限于所选骨干（BEATs, EAT）的性能。
 
 ---
 

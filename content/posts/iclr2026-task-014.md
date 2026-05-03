@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 视频生成 论文列表"
-date: 2026-05-03
+title: "ICLR 2026 - 生成模型 论文列表"
+date: 2026-05-04
 draft: false
-tags: ["视频生成"]
+tags: ["生成模型"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 视频生成 方向论文"
+description: "共 3 篇 ICLR 2026 生成模型 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频生成
+# ICLR 2026 - 生成模型
 
-共 **2** 篇论文
+共 **3** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,96 +18,135 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Stable Video Infinity: Infinite-Length Video Generation with](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video) | 8.5分 | 前25% |
-| 🥈 | [Instilling an Active Mind in Avatars via Cognitive Simulatio](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via) | 7.5分 | 前25% |
+| 🥇 | [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-04-layersync-self-aligning-intermediate-layers) | 8.0分 | 前25% |
+| 🥈 | [A Hidden Semantic Bottleneck in Conditional Embeddings of Di](/audio-paper-digest-blog/posts/2026-05-04-a-hidden-semantic-bottleneck-in-conditional) | 7.0分 | 前25% |
+| 🥉 | [DiVeQ: Differentiable Vector Quantization Using the Reparame](/audio-paper-digest-blog/posts/2026-05-04-diveq-differentiable-vector-quantization-using) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video)
+### 🥇 [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-04-layersync-self-aligning-intermediate-layers)
 
-🔥 **8.5/10** | 前25% | #视频生成 | #扩散模型 | #生成模型 #流匹配
+🔥 **8.0/10** | 前25% | #生成模型 | #扩散模型 | #自监督学习 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Wuyang Li（VITA@EPFL）
-- 通讯作者：未说明（论文中未明确标注通讯作者）
-- 作者列表：Wuyang Li（VITA@EPFL）、Wentao Pan（VITA@EPFL）、Po-Chien Luan（VITA@EPFL）、Yang Gao（VITA@EPFL）、Alexandre Alahi（VITA@EPFL）
+- 第一作者：Yasaman Haghighi (Ecole Polytechnique Fédérale de Lausanne, EPFL)
+- 通讯作者：Alexandre Alahi (Ecole Polytechnique Fédérale de Lausanne, EPFL) （根据论文提供的邮箱后缀推断）
+- 作者列表：Yasaman Haghighi (EPFL)， Bastien van Delft (EPFL)， Mariam Hassan (EPFL)， Alexandre Alahi (EPFL)
 
 💡 **毒舌点评**
 
-亮点在于其深刻的洞察力和优雅的解决方案：论文一针见血地指出了长视频生成的核心瓶颈并非简单的误差累积，而是训练与推理之间的“假设鸿沟”，并提出了让模型“自我纠错”的闭环训练新范式，思想层次很高。短板是目前的实现规模有限，仅在小数据集上进行了LoRA微调，虽然效果已很好，但其宣称的“无限”能力在极端复杂或跨域场景下的鲁棒性，以及是否能在大规模训练后进一步释放潜力，仍有待验证。
+亮点在于其“内生式自监督”的思路极其优雅：用模型自身深层更强的语义特征来指导浅层学习，实现了无外部依赖的加速与提质，这种“左右互搏”的巧思在方法论上颇具美感。短板是该方法本质上是现有Transformer架构的一种正则化技巧，未能像更早的外部对齐方法那样从根本上改变训练范式，其上限可能受制于基础模型自身深层表征的质量天花板。
 
 🔗 **开源详情**
 
-- **代码**：论文中提供了项目主页链接（https://stable-video-infinity.github.io/homepage/）并承诺将公开完整代码库，但未直接给出GitHub链接。附录B.4声明LLM仅用于写作辅助，未涉及核心方法。
-- **模型权重**：论文明确提到将开源训练好的SVI模型（基于Wan 2.1）。
-- **数据集**：论文将开源其为评估构建的**通用、创意性和条件生成基准数据集**（包含短/长时长、一致性/创意性设置）。
-- **Demo**：项目主页可能包含演示视频，论文中未明确提及在线交互式Demo。
-- **复现材料**：提供了极其详尽的**训练超参数表（Table 12）**，包括优化器、学习率、LoRA配置、错误注入概率、记忆库参数等。附录中包含了关于误差银行大小、LoRA秩、在线错误注入等额外消融实验的细节。
-- **引用的开源项目**：论文基于**Wan 2.1**模型进行开发，并参考了**Hallo 3**（说话）、**UniAnimate-DiT**（跳舞）等工作的条件注入方式。使用了**MixKit**、**TikTok**等数据集。
+- 代码：论文提供了GitHub代码仓库链接：`https://github.com/vita-epfl/LayerSync.git`，并承诺在论文接收后开源完整代码库和所有实验配置。
+- 模型权重：论文中未提及会公开预训练模型权重。
+- 数据集：实验中使用的所有数据集（ImageNet， MTG-Jamendo， HumanML3D， CLEVRER， MixKit）均为公开数据集，论文未提供新数据集。
+- Demo：论文中未提及提供在线演示。
+- 复现材料：论文在附录L、M、Q等章节提供了详细的训练超参数设置、硬件环境、模型架构参数、评估指标细节，复现指导性较强。
+- 论文中引用的开源项目：论文依赖的基础模型和工具包括：SiT (Ma et al., 2024)、Stable Diffusion VAE (Rombach et al., 2022)、Stable Audio Open VAE (Evans et al., 2025)、MDM (Tevet et al., 2022)。评估工具包括CLAP (Zhao et al., 2023) 等。
 
 📌 **核心摘要**
 
-1. **要解决的问题**：长视频生成中因自回归推理导致的误差累积（漂移）问题，这使得生成的视频质量、一致性和动态性随长度增加而急剧下降，限制了生成长度（通常<1分钟）且场景单一。
-2. **方法核心**：提出**错误回收微调（Error-Recycling Fine-Tuning, ERFT）** 训练范式。通过在一个闭环中动态地向干净训练数据注入DiT模型自身生成的误差（包括视频潜变量误差、噪声误差和参考图像误差），模拟推理时的误差累积轨迹，从而训练模型学习“错误回收速度场”（Vrcy），使其能主动识别并纠正从错误状态指向干净数据的方向，无论当前状态是否正确。
-3. **与已有方法的创新点**：不同于现有方法（修改噪声调度器、帧锚定、抗漂移采样）仅“缓解”症状，SVI旨在“根治”病因。它构建了一个模拟误差的闭环学习环境（注入->计算->存入记忆库->重采样），让模型在训练时就学会处理自己可能产生的错误，从而桥接了训练（无误差）与推理（有误差）的根本矛盾。
-4. **主要实验结果**：在一致性和创意性长视频生成、以及音频/骨架条件生成等多个基准上达到SOTA水平。例如，在250秒的超长一致性视频生成中，SVI-Shot的“主体一致性”比最强基线FramePack高出**11.25%**，且仅下降0.63%（FramePack下降7.27%）。创意性生成中，SVI能支持提示流驱动的场景切换，而其他方法大多失败。
-   | 模型 (250秒一致性) | 主体一致性 | 背景质量 | 美学质量 |
-   | :--- | :--- | :--- | :--- |
-   | Wan 2.1 | 87.27% | 56.19% | 65.37% |
-   | FramePack | 86.64% | 55.66% | 57.61% |
-   | **SVI-Shot (Ours)** | **97.89%** | **65.75%** | **71.54%** |
-   *注：表格数据摘自论文Table 1 “Ultra-Long Consistent Video Generation”部分。*
-5. **实际意义**：使得生成任意长度（理论上无限）、包含丰富场景变化和动态、并支持多模态控制的高质量视频成为可能，为影视创作、游戏世界模拟、虚拟现实等应用奠定了基础。
-6. **主要局限性**：当前模型在小规模数据上训练，未进行大规模扩展，可能导致对训练分布外的风格产生误校正（如颜色偏移）；在创意性生成中缺乏显式的长期记忆机制，可能出现身份漂移；尚未实现实时流式生成。
+1.  问题：扩散模型训练计算成本高昂。此前通过与强大的外部预训练模型（如DINOv2， VLM）对齐中间表征来加速训练的方法有效，但引入了对外部模型、数据和额外计算的依赖，限制了其通用性和效率。
+2.  方法核心：提出LayerSync，一种自监督、无参数、即插即用的正则化方法。核心思想是利用扩散模型自身不同层表征质量的天然异质性（深层语义更丰富，浅层较弱），通过余弦相似度损失，强制让浅层（弱）表征向深层（强）表征对齐。
+3.  与已有方法相比新在哪里：与依赖外部模型的对齐方法（如REPA）相比，LayerSync是完全自包含的；与现有的自监督方法（如Dispersive Loss）相比，它提供了更直接、更有方向性的学习信号（“对齐”而非“分散”）。它实现了一种无需外部监督的“自我提升”循环。
+4.  主要实验结果：
+    *   图像生成 (ImageNet 256×256)：在SiT-XL模型上，LayerSync实现了8.75倍的训练加速（FID 8.29 @ 160 epochs vs 基线FID 8.99 @ 800 epochs）。800 epochs后达到FID 6.87，比基线（8.99）降低23.6%，创下纯自监督生成的新SOTA。与依赖外部表征的REPA结合使用时效果进一步提升（FID 7.01 vs REPA单独的7.88）。
+    *   音频生成 (MTG-Jamendo)：在SiT-XL模型上，FAD-10K指标从0.251改进至0.199，提升约20.7%，收敛速度也得到提升。
+    *   动作生成 (HumanML3D)：在MDM模型上，FID提升7.7%，R-Precision提升3.4%。
+    *   表示分析：经LayerSync训练的模型，其内部表征在分类和分割任务上的平均性能分别提升32.4%和63.3%，并与DINOv2特征的对齐度提升88.2%，证明了方法对内部表征质量的整体增强。
+5.  实际意义：提供了一种简单、高效且通用的工具，可无缝应用于不同模态的扩散模型训练，显著降低计算成本并提升生成质量，推动扩散模型向更实用、更普惠的方向发展。
+6.  主要局限性：方法的有效性依赖于模型自身已学习到足够强的深层表征，对于初始表征质量极差的模型可能效果有限。此外，论文未深入探讨层对齐可能引入的冗余性及其对模型长期可塑性或特定下游任务（如精细控制）的潜在影响。
 
 ---
 
-### 🥈 [Instilling an Active Mind in Avatars via Cognitive Simulation](/audio-paper-digest-blog/posts/2026-05-03-instilling-an-active-mind-in-avatars-via)
+### 🥈 [A Hidden Semantic Bottleneck in Conditional Embeddings of Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-04-a-hidden-semantic-bottleneck-in-conditional)
 
-✅ **7.5/10** | 前25% | #视频生成 | #扩散模型 | #多模态模型 #大语言模型
+✅ **7.0/10** | 前25% | #生成模型 | #扩散模型 | #模型评估 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Jianwen Jiang（字节跳动，论文中标注*†，为共同第一作者及通讯作者）
-- 通讯作者：Jianwen Jiang（字节跳动，邮箱：jianwen.alan@gmail.com）
-- 作者列表：
-  - Jianwen Jiang（字节跳动）
-  - Weihong Zeng（字节跳动）
-  - Zerong Zheng（字节跳动）
-  - Jiaqi Yang（字节跳动）
-  - Chao Liang（字节跳动）
-  - Wang Liao（字节跳动）
-  - Han Liang（字节跳动）
-  - Weifeng Chen（未说明具体部门）
-  - Xing Wang（未说明具体部门）
-  - Yuan Zhang（未说明具体部门）
-  - Mingyuan Gao（未说明具体部门）
+- 第一作者：Trung X. Pham (KAIST)
+- 通讯作者：Chang D. Yoo (KAIST)
+- 作者列表：Trung X. Pham (KAIST)、Kang Zhang (KAIST)、Ji Woo Hong (KAIST)、Chang D. Yoo (KAIST)
 
 💡 **毒舌点评**
 
-**亮点**：论文将“慢思考”（LLM推理）和“快思考”（扩散模型渲染）的认知框架引入头像生成，立意高远且技术实现闭环，伪最后帧的设计巧妙地解决了静态参考图与动态生成的冲突，实验评估全面且扎实。
-**短板**：整个“系统2”的推理过程（约20-30秒延迟）目前是作为预处理步骤外挂，且完全依赖闭源的API/大模型，这使得该方案在实时或端侧部署上缺乏可行性，也限制了学术社区对其核心推理能力的独立研究与优化。
+这篇论文最大的亮点在于其“发现”的价值——它像一位侦探，系统性地揭露了当前最强扩散Transformer模型中一个普遍存在却鲜为人知的“秘密”：条件向量极度冗余且信息集中。这为优化模型设计提供了清晰的方向。然而，短板也很明显，论文目前更像是一份详尽的“体检报告”，给出了诊断（高相似、稀疏性）和药方（剪枝），但对“病因”（为何模型会学出这样的表示）的理论解释仍停留在假设层面，缺乏更深入的机制剖析。
 
 🔗 **开源详情**
 
-- **代码**：论文中未提及代码仓库链接。明确说明“论文中未提及开源计划”。
-- **模型权重**：未提及公开任何预训练或微调后的模型权重。
-- **数据集**：训练数据集（15，000小时）是自建的，论文未公开或说明如何获取。
-- **Demo**：未提及提供在线演示。
-- **复现材料**：提供了**极其详细**的复现信息，包括：1) 核心架构设计；2) 完整的超参数设置（学习率、batch size、优化器、训练阶段及GPU-hours）；3) 详尽的数据筛选流水线（使用的工具如PySceneDetect， Q-align， Raft， SyncNet及过滤标准）；4) 评估所用的MLLM提示词和评估协议。这些信息对复现工作至关重要。
-- **论文中引用的开源项目**：论文方法或数据处理中引用了多个开源工具/模型：Whisper（用于音频特征提取）， PySceneDetect（视频分割）， PaddleOCR（字幕检测）， Q-align（质量评估）， Raft（光流计算）， SyncNet（唇音同步评估）， miniCPM-o， Seed-1.5-VL（MLLM代理）。
+*   代码：论文中未提及提供专门用于条件嵌入分析或剪枝实验的代码仓库链接。
+*   模型权重：论文明确使用了多个SOTA模型的公开预训练权重（来自GitHub），包括DiT, MDT, SiT, LightningDiT, MG, REPA (XL尺寸) 以及 X-MDPT (L-size), MDSGen (B-size)。这是复现其分析工作的关键。
+*   数据集：分析所用数据集（ImageNet-1K, DeepFashion, VGGSound）均为公开数据集。
+*   Demo：未提及。
+*   复现材料：论文附录提供了详细的实验设置（如生成样本数、评估代码来源）和更多可视化结果，有利于复现分析过程。
+*   论文中引用的开源项目：论文主要依赖并分析了上述提到的多个开源扩散Transformer模型项目。
 
 📌 **核心摘要**
 
-1. **要解决的问题**：当前视频头像生成模型（如基于DiT的方法）主要进行低层次的反应式映射（如音频到唇动），缺乏对情感、意图等高层语义的理解，导致生成的动作重复、缺乏语境一致性和表现力。
-2. **方法核心**：受认知科学双系统理论启发，提出一个新框架。**“系统2”（审慎思考）** 由一个多模态大语言模型（MLLM）代理实现，对输入（图像、音频、文本）进行多步推理，生成一个结构化的动作“调度表”。**“系统1”（反应思考）** 是一个特化的多模态扩散变换器（MMDiT），融合该文本调度表与音频等信号，生成最终视频。
-3. **与已有方法的新颖之处**：首次在视频头像生成中引入显式的“认知推理”阶段；设计了伪最后帧（Pseudo Last Frame）策略来解决参考图条件化导致的身份静态和动态限制问题；提出了对称的多模态注意力融合与模态预热（MM-Warmup）训练策略，以缓解不同模态间的冲突。
-4. **主要实验结果**：在自建的多场景、多人物测试集及标准基准（CelebV-HQ， CyberHost）上，该方法在唇形同步（Sync-C）、图像/视频质量（IQA， FID， FVD）、动作自然度（HKV）等多项指标上达到或超越SOTA（如OmniHuman-1）。用户研究显著偏好其生成结果（GSB得分优于基线），在运动自然度（MU）和图像失真（ID）等主观缺陷上大幅领先。例如，在全身生成任务上，其HKV（手势多样性）得分高达72.113，远高于对比方法。
-5. **实际意义**：为创建更智能、更具情境感知能力和表现力的数字人、虚拟助手、AI演员等提供了新的技术范式，推动视频头像从“形似”向“神似”迈进。
-6. **主要局限性**：LLM推理代理引入了约20-30秒的前置延迟；整个系统的性能和表现力上限依赖于所使用的闭源MLLM；在多人、非人类角色等复杂场景的泛化能力仍需进一步验证（论文仅展示了初步结果）。
+1.  要解决什么问题： 本文旨在系统性地研究和理解扩散Transformer（DiT）模型中条件嵌入向量（如类别标签、姿态、视频特征等）的内部结构与编码方式，填补该领域理论认知的空白。
+2.  方法核心是什么： 作者通过对多个SOTA扩散Transformer模型（DiT, SiT, MDT, REPA等）的预训练条件嵌入进行系统性的度量分析，核心方法包括计算嵌入间的余弦相似度、分析嵌入向量的幅度分布（稀疏性）、使用参与率（PR）量化有效维度，并通过有选择地剪枝嵌入维度来观察对生成质量的影响。
+3.  与已有方法相比新在哪里： 这是首次对扩散Transformer条件嵌入进行系统性实证研究。与以往关注模型架构或训练技巧的工作不同，本文聚焦于条件信号本身，揭示了两个关键的新发现：极高的余弦相似度（离散类别任务>99%，连续条件任务>99.9%）和极度的稀疏性（仅约1-2%的维度携带主要语义信息）。
+4.  主要实验结果如何：
+    *   高相似性：在ImageNet-1K上，6个模型的类别条件嵌入两两余弦相似度普遍超过90%（REPA达99.46%）；在DeepFashion姿态生成和VGGSound视频转音频任务上，相似度超过99.98%（图1，图3，图4c）。
+    *   高稀疏性：嵌入向量中，仅约5-20个维度的绝对值超过1，大部分维度接近零（图5，图6）。归一化参与率（nPR）在多数模型中低于2.5%（表1）。
+    *   剪枝实验：以REPA为例，在阈值τ=0.01下剪枝约38.94%的低幅度“尾部”维度，FID从7.17微增至7.16（甚至改善），CLIP分数从29.746提升至29.807；剪枝高达66.21%（τ=0.02）时，FID为9.22，生成质量仍保持可用（表2，图8）。
+    *   方差分析：语义信息集中在方差最高的15-20个“头部”维度，尾部维度方差极小（图9）。
+    *   t-SNE可视化：仅保留头部维度即可维持清晰的类别聚类，而仅保留尾部维度则聚类完全崩溃（图13）。
+5.  实际意义是什么： 揭示了当前扩散Transformer条件编码机制存在严重的参数冗余，表明模型学习到的是一个高度压缩且稀疏的语义表示。这为设计更高效（如压缩条件向量）、更可解释的条件机制提供了直接的经验证据和优化思路。
+6.  主要局限性是什么： 论文对观察到的现象（极端相似性和稀疏性）主要提供了经验性解释和假设（如稳定训练、AdaLN放大效应），缺乏更严格的理论分析来阐明其根本成因。此外，剪枝虽能保持性能，但如何将这种稀疏性设计进模型架构（而非事后剪枝）的路径尚未明确。
+
+---
+
+### 🥉 [DiVeQ: Differentiable Vector Quantization Using the Reparameterization Trick](/audio-paper-digest-blog/posts/2026-05-04-diveq-differentiable-vector-quantization-using)
+
+✅ **7.0/10** | 前25% | #生成模型 | #向量量化 | #语音合成 #图像压缩
+
+👥 **作者与机构**
+
+- 第一作者：Mohammad Hassan Vali (ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland)
+- 通讯作者：Arno Solin (ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland)
+- 作者列表：Mohammad Hassan Vali (ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland), Tom Bäckström (Department of Information and Communications Engineering, Aalto University, Finland), Arno Solin (ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland)
+
+💡 **毒舌点评**
+
+亮点在于，它像一位细致的工程师，不仅为“向量量化梯度断裂”这一老大难问题提供了两种解法，还顺手把同行们（如STE、EMA）的常见痛点（如码本坍缩、表征错位）也一并梳理和对比，实验做得扎实全面。短板则是，核心方法（DiVeQ）本质上是对NSVQ方向性偏差的“微调”，缺乏原理上的跃迁，更像是一次优秀的工程优化而非理论突破。
+
+🔗 **开源详情**
+
+- 代码：论文中提供了GitHub仓库链接：https://github.com/AaltoML/DiVeQ
+- 模型权重：未提及公开预训练模型权重。
+- 数据集：实验使用的是公开基准数据集（AFHQ, CELEBA-HQ, FFHQ, LSUN, VCTK），论文中给出了获取链接。
+- Demo：未提及在线演示。
+- 复现材料：附录A、B、C提供了极其详尽的实现细节，包括所有模型的架构表、超参数设置、训练策略、损失函数实现、其他方法（如ST-GS, RT）的复现要点、以及消融实验设置。复现材料非常充分。
+- 论文中引用的开源项目：引用了多个开源实现作为基线或基础，包括：
+    - `dome272/VQGAN-pytorch` (VQGAN实现)
+    - `zalandoresearch/pytorch-vq-vae` (VQ-VAE PyTorch实现)
+    - `karpathy/deep-vector-quantization` (ST-GS实现)
+    - `lucidrains/vector-quantize-pytorch` (RT实现)
+    - `GaParmar/clean-fid` (FID计算)
+    - `eagomez2/pikku-nac` (DAC语音编码模型)
+- 复现计划：论文明确说明“Upon acceptance of the paper, the reference implementation and examples will be made available via a GitHub repository.”
+
+📌 **核心摘要**
+
+1.  要解决的问题：深度学习中的向量量化（VQ）层因其最近邻分配的不可微性，会阻断梯度流，导致编码器无法通过VQ层进行端到端训练，即“梯度坍缩”问题。
+2.  方法核心：提出DiVeQ，将量化操作建模为在输入向量`z`上添加一个“模拟量化误差”向量。该误差向量的大小等于`z`与其最近码本向量`c_i`的距离，方向则通过重参数化技巧（加入小方差噪声`v`）指向`c_i`，从而在保持前向传播为硬分配的同时，允许梯度通过。进一步提出SF-DiVeQ，将量化点从离散的码本向量扩展到连接相邻码本向量的线段上，形成空间填充曲线。
+3.  与已有方法相比新在哪里：
+    - 对比STE/EMA/RT：无需引入额外的辅助损失（如承诺损失、码本损失）或复杂的超参数调谐，就能实现无偏的码本梯度更新。
+    - 对比NSVQ：NSVQ随机采样误差方向，导致量化误差常大于真实误差（高维时概率趋近1）。DiVeQ通过重参数化将方向对准最近码本，保证了量化误差的几何一致性。SF-DiVeQ进一步消除了码本与潜空间的表征错位问题，无需启发式的码本替换。
+4.  主要实验结果：
+    - 图像压缩 (VQ-VAE)：在AFHQ等数据集上，DiVeQ和SF-DiVeQ在SSIM、PSNR、LPIPS指标上均优于或持平于现有方法。例如在AFHQ上使用11bit码本，SF-DiVeQ的LPIPS最低（0.216 vs. STE的0.232）。
+    - 图像生成 (VQGAN)：在CELEBA-HQ数据集上，当使用更大的学习率和批量大小（HP2）时，DiVeQ和SF-DiVeQ未发生码本-表征错位（FID分别为8.01和6.66），而STE、EMA、RT等出现错位导致FID飙升（>300或>7）。
+    - 语音编码 (DAC)：在VCTK数据集上，两种方法在多个指标（LSD, MFCC, PESQ, STOI）上一致优于基线方法，且未发生训练失败（如ST-GS在部分设置下PESQ≈1.0，STOI≈0.4）。
+    - 表格对比：请见下方“实验结果”部分的表格。
+5.  实际意义：为需要使用VQ的深度生成模型（如VQ-VAE, VQGAN, DAC）提供了一种更稳定、无需辅助损失且性能更优的可微量化“即插即用”模块，简化了训练流程，提升了模型在图像和语音任务上的重建与生成质量。
+6.  主要局限性：DiVeQ的理论创新（基于重参数化）可视为对NSVQ的渐进式改进。SF-DiVeQ虽然解决了码本错位，但其训练需要初始化时跳过量化阶段，引入了新的训练策略。论文未详细讨论在更复杂的模型（如扩散模型中的量化）中的适用性。
 
 ---
 
