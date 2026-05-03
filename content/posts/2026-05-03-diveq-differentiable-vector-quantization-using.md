@@ -45,12 +45,12 @@ hiddenInHomeList: true
 
 论文的核心是改进VQ层的可微性，而非提出新的端到端网络架构。DiVeQ和SF-DiVeQ作为“即插即用”的模块，可以替换传统VQ-VAE等模型中的标准VQ层。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KRVnpTbx7R-0.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/KRVnpTbx7R-0.png)
 图1：传统VQ（左）与DiVeQ（右）的对比。 传统VQ通过 `argmin` 直接映射到最近码本向量，梯度无法反向传播。DiVeQ则通过添加一个可微的误差向量 `∥c_i^ - z∥_2 · (v_d / ∥v_d∥_2)` 来模拟量化，其中 `v_d = v + (c_i^ - z)`， `v` 为高斯噪声。这使得 `z_q` 成为 `z` 和 `c_i^*` 的可微函数，梯度得以流动。
 
 DiVeQ工作原理：对于输入潜在向量 `z`，先找到最近的码本向量 `c_i^`。然后，构造一个方向性噪声向量 `v_d`，其方向由噪声 `v` 和指向 `c_i^` 的向量 `d = c_i^ - z` 共同决定，大小为量化误差 `∥c_i^ - z∥_2`。量化输出 `z_q` 是原始 `z` 加上这个方向性误差。通过控制噪声方差 `σ²` 趋于0，`z_q` 的方向会精确指向 `c_i^*`。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KRVnpTbx7R-2.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/KRVnpTbx7R-2.png)
 图3：方差 `σ²` 对DiVeQ量化精度的影响。 随着 `σ²` 从10减小到0.01，由1000次采样得到的量化点 `z_q`（彩色点）从均匀分布在超球面上，逐渐收缩并精确收敛到目标码本向量 `c_i^*`（黑色点）附近，表明量化精度提高。
 
 SF-DiVeQ工作原理：这是DiVeQ的扩展。它不是将输入 `z` 映射到单一码本向量，而是映射到连接两个相邻码本向量 `c_i^` 和 `c_{i^+1}` 的线段上的一个随机点。该随机点由插值因子 `λ ~ U(0,1)` 决定。量化公式结合了DiVeQ对两个码本向量的方向性误差模拟，使得最终量化点位于连接两者的线段上。这种设计将离散码本转换为连续的“空间填充曲线”，从而减少了量化误差并自动确保了所有码本向量被充分利用，避免了码本坍塌问题。
@@ -104,13 +104,13 @@ SF-DiVeQ工作原理：这是DiVeQ的扩展。它不是将输入 `z` 映射到�
 - 代码书替换（图8-9）：论文提出的重要性采样替换策略比NSVQ的原始策略能更快达到高码本利用率，并略微提升重建质量。
 
 实验结果图表：
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KRVnpTbx7R-4.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/KRVnpTbx7R-4.png)
 图5：VQ-VAE图像压缩定性比较。 展示了在不同数据集上，使用11位码本时各方法的重建图像及LPIPS值。DiVeQ和SF-DiVeQ的重建结果在视觉质量和LPIPS分数上均优于其他方法。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KRVnpTbx7R-5.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/KRVnpTbx7R-5.png)
 图6：VQ-VAE图像压缩定量比较（AFHQ数据集）。 绘制了SSIM、PSNR、LPIPS随码本大小变化的曲线。DiVeQ（蓝色）和SF-DiVeQ（青色）的曲线在所有指标上均位于其他基线方法曲线的更优一侧。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KRVnpTbx7R-3.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/KRVnpTbx7R-3.png)
 图4：码本与潜在表示错位的t-SNE可视化。 展示了在发生错位的情况下，不同方法学到的码本（红色十字）与潜在表示（灰色点）的分布。SF-DiVeQ显示出最均匀、最匹配的分布，直观证明了其避免错位的能力。
 
 ### ⚖️ 评分理由

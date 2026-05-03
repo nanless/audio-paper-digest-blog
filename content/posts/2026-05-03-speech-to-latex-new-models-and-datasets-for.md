@@ -57,7 +57,7 @@ hiddenInHomeList: true
     *   流程：使用Audio-LLM架构（如SALMONN）。音频首先由一个或多个音频编码器（如Whisper编码器、BEATs）提取特征，然后通过一个适配器模块将音频特征映射为LLM可理解的令牌嵌入。这些音频令牌与一个文本提示（如“识别语音并将内容转换为文本，任何数学表达式应以LaTeX格式转录”）的令牌拼接，共同输入一个大型语言模型（如LLaMA），由其自回归地生成LaTeX字符串。
     *   组件：音频编码器 + 适配器 + LLM解码器。该架构避免了中间转写步骤，试图直接建模从语音到符号的映射。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/gk8WMxzIQP-0.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/gk8WMxzIQP-0.png)
 图1展示了两种方法的示意图：(a) 后校正方法，音频经Whisper转写后输入LLaMA进行校正；(b) 端到端方法，音频经Whisper和BEATs编码后，通过适配器与提示一起输入LLaMA生成LaTeX。
 
 ### 💡 核心创新点

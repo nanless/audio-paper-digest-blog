@@ -59,7 +59,7 @@ hiddenInHomeList: true
 | Flow2GAN (1步) | 2.904 | 4.300 | 4.46 ± 0.16 | 4.42 ± 0.22 |
 | Flow2GAN (4步) | 3.089 | 4.351 | 4.19 ± 0.12 | 4.38 ± 0.13 |
 
-![Flow2GAN示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-1.png)
+![Flow2GAN示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-1.png)
 （图2：不同模型生成波形的对比。改进的Flow Matching（e）在静音区域比标准版本（d）更干净，GAN微调（f）进一步恢复了细节。）
 5.  实际意义：提供了一种在质量和效率之间取得高度平衡的音频生成方案，特别适用于需要低延迟推理的实时应用（如TTS、语音交互）。
 6.  主要局限性：模型参数量较大；主要评估集中在波形生成（声码器）任务，对更复杂的端到端音频生成（如从文本直接生成）能力未深入探讨。
@@ -79,9 +79,9 @@ Flow2GAN采用两阶段训练，其骨干网络是多分支多分辨率架构。
     - 第一阶段（Flow Matching训练）：网络预测从噪声x0到目标数据x1的路径终点x1（或速度）。损失函数基于预测的x1与真实x1的差异，并进行了频谱能量加权。
     - 第二阶段（GAN微调）：将训练好的Flow Matching模型通过N步（1/2/4步）展开，构建为一个“N步生成器 `G_N^θ`”。这个生成器与判别器（MPD+MRD）进行对抗训练，损失函数包括HingeGAN对抗损失、特征匹配损失和多尺度Mel重建损失。
 
-![Flow2GAN多分辨率网络结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-2.png)
+![Flow2GAN多分辨率网络结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-2.png)
 （图3：多分辨率网络结构。模型包含三个分支，分别处理STFT1、STFT2、STFT3转换后的傅里叶系数，每个分支使用ConvNeXt处理并经ISTFT转换回波形，最后求和。）
-![Flow2GAN整体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-0.png)
+![Flow2GAN整体框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-0.png)
 （图1：Flow2GAN整体框架，展示了两阶段流程：Stage-1使用改进的Flow Matching训练预测终点x1的模型；Stage-2将其构建为few-step生成器并使用GAN进行微调。）
 
 ### 💡 核心创新点
@@ -121,27 +121,27 @@ Flow2GAN采用两阶段训练，其骨干网络是多分支多分辨率架构。
 论文在多个设置下进行了全面的实验。
 
 1. Mel频谱图条件生成（表1）
-![Mel条件对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-4.png)
+![Mel条件对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-4.png)
 （图5：Mel频谱图条件生成在LibriTTS测试集上的主要对比结果。Flow2GAN在1、2、4步上多数指标优于或媲美BigVGAN/Vocos/RFWave等。）
 Flow2GAN（1步）在PESQ和ViSQOL上显著优于WaveFM（1步）和Vocos（1步），接近BigVGAN-v2（在大得多的数据集上训练）。2步和4步版本在几乎所有指标上取得最佳或接近最佳成绩。
 
 2. EnCodec音频token条件生成（表2）
-![EnCodec token条件对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-5.png)
+![EnCodec token条件对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-5.png)
 （图6：EnCodec音频token条件生成在统一测试集上的对比结果。展示了在不同带宽下各模型的性能。）
 在1.5 kbps和3.0 kbps低带宽下，Flow2GAN在FSD等指标上大幅领先。在6.0 kbps和12.0 kbps下，虽然PeriodWave-Turbo在PESQ/ViSQOL上略有优势，但Flow2GAN在感知指标（SMOS, MOS）上持续更优。
 
 3. 消融实验（表3）
-![Flow Matching消融表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-6.png)
+![Flow Matching消融表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-6.png)
 （图7：改进Flow Matching的消融研究。从标准Flow Matching到端点预测，再到加入频谱能量损失，PESQ和ViSQOL在2步推理和GAN微调后均获得显著提升。）
 关键发现：端点预测重构（方程4）比标准Flow Matching（方程1）在2步时PESQ提升0.455；频谱能量损失（方程6）比逐帧损失缩放进一步大幅提升PESQ和ViSQOL。这些改进为后续GAN微调提供了更强的初始化。
 
 4. 与纯GAN训练的对比（表4）
-![GAN训练对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-3.png)
+![GAN训练对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-3.png)
 （图4：与纯GAN训练的对比。纯GAN需要大量迭代（如660k步）才能达到较好效果，而Flow2GAN通过两阶段策略，在更少的训练时间（总计约63小时 vs 156小时）内达到更优的性能。）
 证明了两阶段训练范式在效率和质量上的双重优势。
 
 5. 推理速度对比（表7）
-![推理速度对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5eTpRIULtb-8.jpg)
+![推理速度对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5eTpRIULtb-0.png)
 （图9：模型生成速度对比。Flow2GAN的1步模型在GPU上xRT高达851.67，远快于大多数基线模型，甚至接近Vocos。）
 除了Vocos，Flow2GAN各版本在CPU和GPU上均实现了比其他模型更快的推理，1步版本在CPU上也能实时运行。
 

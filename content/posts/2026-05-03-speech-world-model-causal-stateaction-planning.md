@@ -70,7 +70,7 @@ hiddenInHomeList: true
 
 SWM的整体流程是一个两阶段框架：因果图训练 与 指令微调。
 
-![SWM流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/YGUKPGO182-1.png)
+![SWM流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/YGUKPGO182-1.png)
 图2：SWM整体流程示意图。展示了从多模态输入到因果图推理，再到语言模型生成推理与回应的完整数据流。左半部分（Causal Graph Training）是图结构的训练过程，右半部分（Instruction Tuning）是利用图状态微调语言模型的过程。
 
 第一阶段：因果图训练
@@ -90,7 +90,7 @@ SWM的整体流程是一个两阶段框架：因果图训练 与 指令微调。
 *   语言模型版：使用LLaMA-3.1-8B，输入是文本化的图状态序列。
 *   多模态版：使用Qwen2-Audio，直接输入原始音频和图状态。
 
-![因果图结构对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/YGUKPGO182-3.png)
+![因果图结构对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/YGUKPGO182-3.png)
 图4：不同训练场景下的梯度流对比。A) 半监督因果图：未标注父节点的梯度从有标签子节点回传。B) 全监督因果图：所有节点有标签，梯度局部更新。C) 全监督随机图：无结构图导致冗余的梯度传播。本图清晰地展示了预定义因果结构如何优化训练。
 
 #
@@ -141,10 +141,10 @@ SWM的整体流程是一个两阶段框架：因果图训练 与 指令微调。
 *   情绪识别优势：在情绪提及率（EM）和��绪准确率（EA）上优势巨大，SWM-Llama的EA达66.26%，远高于基线。
 *   接近商业模型：整体得分接近GPT-4o（7.41），但在情绪准确率上更高。与Gemini 2.5 Pro（8.12）仍有差距，但训练成本极低。
 
-![ACE与ICS分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/YGUKPGO182-4.png)
+![ACE与ICS分布图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/YGUKPGO182-4.png)
 图5：不同监督设置下各条因果边的ACE和ICS值。此图展示了模型在完全监督和半监督（隐藏特定模块）场景下，学习到的模块间因果关系的强度和一致性。即使某些模块未标注，关键边（如ToM→SA）仍能保持一定的因果效应，验证了结构的鲁棒性。
 
-![随机图信息流分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/YGUKPGO182-5.png)
+![随机图信息流分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/YGUKPGO182-5.png)
 图6：随机图在不同教师强迫比例下的最强与最弱信息流。此表（Table 2的可视化）显示，随机图中信息流的方向随超参数剧烈变化，表明其学习到的依赖关系不稳定，可能是数据中的虚假相关性。
 
 #

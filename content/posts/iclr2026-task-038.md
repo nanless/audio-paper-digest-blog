@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频修复 论文列表"
+title: "ICLR 2026 - 音视频生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频修复"]
+tags: ["音视频生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频修复 方向论文"
+description: "共 1 篇 ICLR 2026 音视频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频修复
+# ICLR 2026 - 音视频生成
 
 共 **1** 篇论文
 
@@ -18,50 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete) | 7.5分 | 前25% |
+| 🥇 | [JavisDiT: Joint Audio-Video Diffusion Transformer with Hiera](/audio-paper-digest-blog/posts/2026-05-03-javisdit-joint-audio-video-diffusion-transformer) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete)
+### 🥇 [JavisDiT: Joint Audio-Video Diffusion Transformer with Hierarchical Spatio-Temporal Prior Synchronization](/audio-paper-digest-blog/posts/2026-05-03-javisdit-joint-audio-video-diffusion-transformer)
 
-✅ **7.5/10** | 前25% | #音频修复 | #离散扩散 | #预训练 #音乐处理
+✅ **7.5/10** | 前25% | #音视频生成 | #扩散模型 #多模态模型 | #音视频 #扩散模型
 
 👥 **作者与机构**
 
-- 第一作者：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）
-- 通讯作者：Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
-- 作者列表：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Moshe Buchris（Ben-Gurion University of the Negev，电气与计算机工程学院）、Oren Gal（University of Haifa）、Haim Permuter（Ben-Gurion University of the Negev，电气与计算机工程学院）、Gilad Katz（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
-
-#
+- 第一作者：Kai Liu（浙江大学，新加坡国立大学）
+- 通讯作者：Hao Fei（新加坡国立大学）
+- 作者列表：Kai Liu（浙江大学，新加坡国立大学）、Wei Li（中国科学技术大学）、Lai Chen（浙江大学）、Shengqiong Wu（新加坡国立大学）、Yanhao Zheng（浙江大学）、Jiayi Ji（新加坡国立大学）、Fan Zhou（浙江大学）、Jiebo Luo（罗切斯特大学）、Ziwei Liu（南洋理工大学）、Hao Fei（新加坡国立大学）、Tat-Seng Chua（新加坡国立大学）
 
 💡 **毒舌点评**
 
-这篇论文为音频修复这个“老”问题提供了“新”解法，巧妙地将离散扩散与预训练音频tokenizer结合，在长缺失段修复上展现了不错的潜力，且实验对比和消融做得非常扎实。然而，其性能上界似乎被WavTokenizer这类离散编解码器的质量所束缚，这或许暗示着“基于token”的范式在追求极致音频保真度时面临的共同天花板。
+论文的核心创新“分层时空先验”（HiST-Sypo）思想很优雅，试图用结构化的方式（“什么、哪里、何时”）引导音视频同步，比简单拼接或单向适配更有说服力；然而，其训练依赖规模有限的音视频三元组（约61万），且模型（3.14B参数）在单卡H100上生成4秒240P视频需30秒，训练数据规模和推理效率仍是实际落地的现实瓶颈。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了代码仓库链接：`https://github.com/iftachShoham/AIDD`。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：使用了公开的数据集MusicNet和MAESTRO，并说明了遵循各自的标准划分。未提供额外数据。
-- Demo：论文中未提及在线演示（Demo）链接。
-- 复现材料：论文在附录（Supplementary Material）中提供了详尽的复现说明，包括关键超参数表（Table 8）、训练环境（单卡A6000 GPU）和训练时长。
-- 论文中引用的开源项目：
-    1.  WavTokenizer（Ji et al., 2024）：用于音频分词与解码。
-    2.  Diffusion Transformer (DiT)（Peebles & Xie, 2023）：作为扩散模型的架构基础。
-    3.  离散扩散建模框架（Lou et al., 2024）：提供了DWDSE损失等核心理论。
-    4.  UniCodec（Jiang et al., 2025）：作为替代tokenizer进行对比实验。
-    5.  旋转位置编码 (RoPE)（Su et al., 2024）。
+- 代码：提供代码仓库链接（`https://javisverse.github.io/JavisDiT-page/`）。
+- 模型权重：论文明确表示将公开模型权重。
+- 数据集：JavisBench基准数据集将公开。训练数据来源已说明（MMTrail， TAVGBench）。
+- Demo：论文未提及在线演示链接。
+- 复现材料：提供了非常详细的复现说明，包括模型配置、三阶段训练策略（学习率、轮数等）、数据构造流程、损失函数设计、评估指标实现等，见附录。
+- 引用的开源项目：OpenSora (用于视频骨干和编解码器)、AudioLDM2 (用于音频编解码器和基线)、ImageBind (用于时空先验估计器)、FunASR (用于语音过滤)、Qwen系列模型 (用于数据标注)。
 
 📌 **核心摘要**
 
-1.  问题：音频修复旨在恢复音频信号中缺失或损坏的片段，特别是在缺失区域较大时，现有方法（如连续扩散模型）性能会下降，难以保持语义连贯性和时间平滑性。
-2.  核心方法：提出AIDD，首个将离散扩散模型应用于token化音乐表示的音频修复框架。它首先使用预训练的WavTokenizer将音频压缩为离散token序列，然后在离散空间中应用基于Transformer的扩散模型进行修复。
-3.  创新性：方法的新颖之处在于：1）首次在离散token空间执行音频修复的扩散过程；2）提出基于跨度的掩蔽策略，模拟从局部到全局的结构化损坏；3）引入基于导数的正则化损失，约束预测token序列的时间平滑性。
-4.  主要结果：在MusicNet和MAESTRO数据集上，对于150ms至750ms的缺失段，AIDD在FAD、LSD、ODG等客观指标和MOS主观评分上均优于或匹配多个强基线。例如，在MusicNet上300ms缺失段，AIDD的FAD比CQT-Diff+低约25%（3.549 vs. 4.652）；在MAESTRO上375ms缺失段，AIDD的ODG得分为-2.303，优于所有基线。消融实验证实了所提损失和策略的有效性。
-5.  实际意义：为音乐录音修复、数据丢失填补等场景提供了新方案，并证明了离散扩散模型在音频序列建模上的可行性，为token-based生成模型开辟了新方向。
-6.  主要局限性：修复效果受限于底层tokenizer（WavTokenizer）的质量和带宽（24kHz）；存在训练与推理时掩蔽顺序不匹配的问题；与基于波形或频谱图的方法进行跨域比较存在偏差。
+1.  问题：现有端到端联合音视频生成（JAVG）方法存在两大挑战：一是音视频单模态生成质量不足，二是音视频间的精细时空对齐（即“哪里”发生、“何时”发生）不充分，导致同步效果差。
+2.  方法核心：提出JavisDiT模型，基于强大的扩散Transformer（DiT）架构，包含音视频两个分支。核心创新是设计了“分层时空同步先验估计器”（HiST-Sypo Estimator），它从文本提示中提取全局语义先验和精细的时空先验（空间先验指明事件发生区域，时间先验指明事件起止时间），并注入到DiT的跨注意力层中，以精细指导音视频生成过程的对齐。
+3.  新在哪里：a) 在DiT架构中引入了专门针对时空对齐的精细条件注入机制（HiST-Sypo），超越了先前工作简单的参数共享或粗粒度对齐；b) 提出了一个更全面、更具挑战性的JAVG评估基准JavisBench（10,140个样本），包含多维度、多事件的复杂场景；c) 设计了更鲁棒的同步性评估指标JavisScore。
+4.  主要实验结果：在JavisBench和现有数据集（Landscape， AIST++）上，JavisDiT在视频/音频质量、语义一致性及音视频同步性等多项指标上均优于或持平现有最佳方法。例如，在JavisBench上，其JavisScore（0.154）超过了最强基线FoleyCrafter（0.151）；在Landscape数据集上，FVD（94.2）和FAD（8.5）均为最优。消融实验证实了DiT骨干、HiST-Sypo模块和双向交叉注意力（BiCA）的有效性。
+5.  实际意义：推动了高质量、高同步性音视频内容自动生成的边界，为视频制作、游戏开发等领域提供了新工具。提出的JavisBench和JavisScore为未来JAVG研究提供了更可靠的评测标尺。
+6.  主要局限性：训练数据规模（约61万三元组）相对有限；模型推理计算开销较大（30步采样需30秒/4秒视频）；在极端复杂的多事件同时发生的场景下，同步性仍有提升空间。
 
 ---
 

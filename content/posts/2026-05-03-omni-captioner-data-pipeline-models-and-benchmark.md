@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 论文的核心模型Omni-Captioner基于Qwen2.5-Omni-7B构建，并非提出全新架构，而是通过两阶段训练策略对其进行优化以提升细粒度描述能力。
 
-![图3：Omni-Detective数据生成流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Z091XLyVkJ-2.jpg)
+![图3：Omni-Detective数据生成流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Z091XLyVkJ-0.png)
 *   图3展示了Omni-Detective的工作流程，这是一个LLM代理（Detective Agent）与多种工具（MLLM， ASR， OCR等）和观察者（Observers）交互的迭代过程。代理根据当前信息，选择合适的工具提出问题，观察者利用工具分析音视频内容并返回丰富观察结果，此循环持续多轮，最终由代理整合所有观察结果生成详细描述。这种设计模拟了人类侦探的调查过程，旨在收集充分且交叉验证的细节。
 
 模型两阶段训练流程：
@@ -174,11 +174,11 @@ Omni-Cloze基准评估结果 (表4b， 部分)：
 *   结论：Omni-Captioner在Omni-Cloze上的总体准确率（56.4%）远超所有基线，且在音视频（AV）子集上表现尤为突出（62.1%）。
 
 消融分析 - Omni-Detective步数影响 (图6)：
-![图6：Omni-Detective步数与各项指标的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Z091XLyVkJ-5.jpg)
+![图6：Omni-Detective步数与各项指标的关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Z091XLyVkJ-1.png)
 *   结论：随着Omni-Detective迭代步数增加，细节率（Detail Rate）持续上升，说明能不断挖掘新信息。缺失率（Not Given Rate）和幻觉率（Hallucination Rate）均呈下降趋势，表明迭代过程有助于发现遗漏和纠正错误。幻觉率在5-6步左右趋于平稳，揭示了当前工具能力的极限。
 
 Omni-Cloze与人类偏好相关性分析 (图7)：
-![图7：Omni-Cloze准确率与人类Elo分数的相关性](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Z091XLyVkJ-6.jpg)
+![图7：Omni-Cloze准确率与人类Elo分数的相关性](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Z091XLyVkJ-2.png)
 *   结论：Omni-Cloze的自动评分（准确率）与人类评委给出的Elo偏好分数之间存在极强的正相关（皮尔逊相关系数 r = 0.91），高于VDC（0.86）和video-SALMONN 2（0.83），证明了其作为评估指标的有效性和与人类感知的高度一致性。
 
 ### ⚖️ 评分理由

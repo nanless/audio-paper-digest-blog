@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 DART的模型架构包含两个并行的编码器路径和一个双层优化目标，整体流程如下：
 
-![图1: DART框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cFhcd4WGjO-0.png)
+![图1: DART框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/cFhcd4WGjO-0.png)
 *   图1 展示了DART的整体框架。左侧为原始音频波形和文本数据，分别通过音频编码器（如ResNet）和文本编码器（如BERT）生成特征表示矩阵 Ub（音频）和 Vb（文本）。这两个矩阵的每一列被视为一个特征维度上的分布。
 
 模型的核心流程和组件包括：
@@ -159,10 +159,10 @@ DART的模型架构包含两个并行的编码器路径和一个双层优化目�
 2.  RAM有效性：移除RAM（使用均匀边际）会导致性能下降（表1）。进一步分析显示，单独的相关性统计可能不稳定，而方差和峰度统计提供了稳定的增益。
 3.  批量大小影���（表12）：DART在小批量（如k=8）下的提升尤为显著，R@1分别高出基线3.8和2.3个百分点，验证了理论分析。
 
-![图2: 噪声注入与OT成本关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cFhcd4WGjO-1.png)
+![图2: 噪声注入与OT成本关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/cFhcd4WGjO-1.png)
 *   图2 展示了在特征通道中注入高斯噪声后，最优传输成本单调增加，为“噪声通道成本高”的直觉提供了经验证据。
 
-![图3: 可靠性分数与标准化OT成本的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cFhcd4WGjO-2.png)
+![图3: 可靠性分数与标准化OT成本的关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/cFhcd4WGjO-2.png)
 *   图3 展示了RAM计算的可靠性分数 `r` 与实际传输成本（标准化后）呈负相关（ρ≈-0.379）。低可靠性（红色）通道位于高成本区，高可靠性（绿色）通道位于低成本区，验证了RAM能有效识别噪声通道。
 
 ### ⚖️ 评分理由

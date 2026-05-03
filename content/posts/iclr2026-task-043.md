@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频安全 论文列表"
+title: "ICLR 2026 - 音频到视频生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频安全"]
+tags: ["音频到视频生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频安全 方向论文"
+description: "共 1 篇 ICLR 2026 音频到视频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频安全
+# ICLR 2026 - 音频到视频生成
 
 共 **1** 篇论文
 
@@ -18,53 +18,52 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio L](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities) | 8.5分 | 前10% |
+| 🥇 | [Syncphony: Synchronized Audio-to-Video Generation with Diffu](/audio-paper-digest-blog/posts/2026-05-03-syncphony-synchronized-audio-to-video-generation) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities)
+### 🥇 [Syncphony: Synchronized Audio-to-Video Generation with Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-03-syncphony-synchronized-audio-to-video-generation)
 
-🔥 **8.5/10** | 前10% | #音频安全 | #基准测试 | #音频大模型 #对抗样本
+🔥 **8.0/10** | 前25% | #音频到视频生成 | #扩散模型 | #跨模态注意力 #CycleSync
 
 👥 **作者与机构**
 
-- 第一作者：Zifan Peng（香港科技大学（广州）；清华大学网络体系结构国家重点实验室）
-- 通讯作者：Wenhan Dong（香港科技大学（广州））、Xinlei He（香港科技大学（广州）；清华大学网络体系结构国家重点实验室）
-- 作者列表：Zifan Peng（香港科技大学（广州），清华大学网络体系结构国家重点实验室）， Yule Liu（香港科技大学（广州））， Zhen Sun（香港科技大学（广州））， Mingchen Li（北德克萨斯大学）， Zeren Luo（香港科技大学（广州））， Jingyi Zheng（香港科技大学（广州））， Wenhan Dong（香港科技大学（广州））， Xinlei He（香港科技大学（广州），清华大学网络体系结构国家重点实验室）， Xuechao Wang（香港科技大学（广州））， Yingjie Xue（中国科学技术大学）， Shengmin Xu（福建师范大学）， Xinyi Huang（南京航空航天大学）
+- 第一作者：Jibin Song（延世大学人工智能系，CineLingo）
+- 通讯作者：未明确说明（通常第一作者或末位作者，文中邮箱sjbpsh1@yonsei.ac.kr对应Jibin Song）
+- 作者列表：Jibin Song（延世大学人工智能系，CineLingo），Mingi Kwon（延世大学人工智能系，CineLingo），Jaeseok Jeong（延世大学人工智能系，CineLingo），Youngjung Uh（延世大学人工智能系）
 
 💡 **毒舌点评**
 
-本文最大的亮点在于系统性地填补了大型音频语言模型安全评估的空白，构建了一个规模空前（24万+音频样本）且设计模块化的基准框架，其严谨的多维度分析（模态、架构、效率）为后续研究设立了很高的基线。然而，其短板也同样明显：防御部分的探索略显初步和薄弱，更像是对现有视觉-语言模型防御策略的迁移性测试，而非针对音频模态特性的原生防御设计，削弱了论文在“解决问题”层面的深度。
+论文的亮点在于其系统性：将“对齐”问题拆解为训练时的监督（Motion-aware Loss）和推理时的引导（Audio Sync Guidance），并配合新的评估指标（CycleSync）形成闭环，技术方案完整且各部分动机清晰。短板在于，其核心的CycleSync指标高度依赖一个外部的视频到音频（V2A）模型，这使得评价标准本身成为一个“黑箱”，且论文承认该V2A模型可能引入数据集偏差（如青蛙叫声、保龄球背景音乐），这在一定程度上削弱了评估的绝对客观性。
 
 🔗 **开源详情**
 
-- 代码：论文提供了完整的代码仓库链接：https://github.com/sfofgalaxy/JALMBench。
-- 模型权重：论文评估的12个LALMs多为公开的开源模型（如SpeechGPT, SALMONN, Qwen2-Audio等）或商业API（GPT-4o-Audio, Gemini-2.0）。JALMBench本身不训练新模型。
-- 数据集：数据集已在HuggingFace上公开，可通过上述代码仓库链接获取。
-- Demo：论文中未提及在线演示链接。
-- 复现材料：提供了极其详细的复现材料，包括：所有实验的具体设置（攻击参数、评估提示、TTS配置等）、详细的附录（A-F章节）解释框架使用和实验细节、伦理声明、以及使用说明。
-- 论文中引用的开源项目：Google TTS, DeepL Translator, Coqui.ai TTS, CREMA-D dataset, F5-TTS, MMS-TTS, SpeechT5, 以及评估的各个LALM开源项目。
-- 开源计划：论文已完整开源代码和数据集，未提及后续额外开源计划。
+- 代码：论文声明将公开代码，项目主页已提供（https://jibin86.github.io/syncphony_project_page），但论文中未提供具体的代码仓库链接。
+- 模型权重：论文声明将发布训练好的模型，但未提供下载链接。
+- 数据集：使用的是公开数据集AVSync15和TheGreatestHits，论文未提及自己发布新数据集。
+- Demo：项目主页可能包含演示视频，但论文中未明确提供在线交互式Demo链接。
+- 复现材料：附录（A-J）提供了极其详细的训练细节、超参数、架构选择、评估设置和消融实验，复现信息非常充分。
+- 论文中引用的开源项目：依赖Pyramid Flow作为视频骨干、DenseAV作为音频编码器、CLIP/T5作为文本编码器、V-AURA作为V2A模型用于CycleSync评估，以及librosa进行峰值检测。
+- 开源计划：论文明确表示将公开以支持未来研究，但具体发布时间点未说明。
 
 📌 **核心摘要**
 
-1.  要解决什么问题：随着大型音频语言模型（LALMs）的部署，其面临越狱攻击的安全风险日益增长，但目前缺乏一个专门、统一的评估框架和大规模基准数据集来系统研究这一问题。
-2.  方法核心是什么：提出JALMBench，一个全面的基准框架。其核心是构建了一个包含24.5万条音频样本（超1000小时）的大规模数据集，并设计了一个模块化评估平台，可支持多种LALMs、攻击方法和防御策略的标准化测试与比较。
-3.  与已有方法相比新在哪里：这是首个针对LALM越狱漏洞的综合性基准。与此前工作相比，JALMBench在数据规模、攻击方法覆盖（首次综合评估文本迁移和音频原生两大类共8种攻击）、防御策略评估以及分析维度（效率、主题、语音多样性、模型架构）上均实现了显著超越。
-4.  主要实验结果如何：实验表明，音频模态的平均攻击成功率（21.5%）高于文本模态（17.0%）。最强攻击方法AdvWave的攻击成功率高达96.2%。分析发现，离散音频令牌化策略（如GLM-4-Voice）比连续特征提取（如LLaMA-Omni）能更好地保持跨模态安全一致性。在防御方面，现有方法（如LLaMA-Guard、AdaShield）仅能小幅降低平均攻击成功率（分别减少18.0和19.6个百分点），且提示级防御会带来明显的性能损失。
+1.  解决的问题：现有文本到视频（T2V）和图像到视频（I2V）生成模型难以精确控制动作时序，而音频天然包含丰富的时序线索，是理想的同步条件。但现有音频到视频（A2V）模型因间接条件机制或有限的时序建模能力，难以实现精细的音视频同步。
+2.  方法核心：提出Syncphony框架，基于预训练的视频骨干网络（Pyramid Flow），在Transformer的后部模块中插入音频交叉注意力层进行条件注入。核心技术创新包括：(1) Motion-aware Loss：在训练中，根据相邻帧潜变量差异（代表运动强度）加权损失，使模型更关注高动态区域，从而更准确地学习与音频事件对应的运动时机和幅度。(2) Audio Sync Guidance (ASG)：在推理时，构建一个跳过音频层的“off-sync”弱模型，通过对比完整模型与弱模型的输出差异来放大音频信号的引导作用，无需额外训练即可增强同步性。
+3.  与已有方法相比的新颖性：不同于以往将音频映射到文本空间或基于振幅调制的方法，Syncphony通过直接交叉注意力注入音频特征。其提出的ASG引导机制巧妙地利用了架构中音频路径的独立性，避免了传统分类器自由引导（CFG）对音频条件（包括“静音”）进行随机丢弃导致的训练不一致问题。同时，提出了首个支持高帧率并基于V2A重建循环的同步评估指标CycleSync。
+4.  主要实验结果：在AVSync15和TheGreatestHits数据集上，Syncphony在CycleSync指标和用户研究中均显著优于现有方法。例如，在TheGreatestHits数据集上，Syncphony的CycleSync得分为16.18±1.26，而基线AVSyncD为9.89±0.84，甚至略高于真实视频的15.99±1.5。在AVSync15的用户研究中，74%的参与者认为Syncphony的同步性更好，90%认为图像质量更好。
 
-| 防御方法 | 无防御 | LLaMA-Guard | Azure | JailbreakBench | FigStep | AdaShield |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 平均ASR (%) | 53.7 | 35.7 | 43.1 | 43.7 | 40.5 | 34.1 |
-表：不同防御方法下的平均攻击成功率（ASR）对比
+| 模型 | 输入 | FVD ↓ | CycleSync ↑ (AVSync15) |
+| :--- | :--- | :--- | :--- |
+| Pyramid Flow (fine-tuned) | I+T | 294.6 | 12.34±1.14 |
+| AVSyncD | I+T+A | 491.5 | 16.38±1.38 |
+| Syncphony (Ours) | I+T+A | 293.1 | 16.48±1.28 |
+| Groundtruth | - | - | 22.15±1.8 |
 
-![论文中的框架与总结图](icassp-img://DJkQ236C8B/0.png)
-图：JALMBench框架与相关工作对比总结。该图展示了基准的组成（有害查询、文本迁移攻击、音频原生攻击数据集）、支持的12个LALMs、8种攻击和5种防御，并与已有的Audio Jailbreak基准在数据规模、攻击全面性、防御评估等维度进行了对比。
-
-5.  实际意义是什么：为评估和提升音频大模型的安全性提供了首个权威、可扩展的基准工具。研究揭示了当前LALM安全性的关键弱点（如对音频原生攻击脆弱、跨模态安全对齐不足），并指明了未来防御研究应朝着“音频原生”防御方向发展的道路。
-6.  主要局限性是什么：论文承认未探索多轮对话越狱、更细粒度的语音特征（如情绪）影响以及模型量化等方向。防御策略部分主要基于现有方法的迁移，尚未提出专门针对音频模态的高效防御方案。
+5.  实际意义：为需要精确音视频同步的内容创作（如动画、游戏过场、音乐视频）提供了新的生成工具和技术路径。提出的Motion-aware Loss和ASG方法对其他需要时序对齐的跨模态生成任务也有借鉴意义。
+6.  主要局限性：1) 模型生成的视频分辨率（380×640）和时长（最长5秒）仍有限；2) 训练数据集（AVSync15, TheGreatestHits）规模较小且场景类型有限；3) CycleSync指标依赖外部V2A模型，其质量直接影响评估准确性；4) Motion-aware Loss基于帧间运动，可能无法完全区分与音频无关的运动（如相机移动、背景变化）。
 
 ---
 

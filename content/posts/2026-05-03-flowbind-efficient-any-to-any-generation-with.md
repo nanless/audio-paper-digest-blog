@@ -52,10 +52,10 @@ hiddenInHomeList: true
 | | OmniFlow | 31.52 | 27.71 | 24.23 | 45.08 | 71.71 | 59.22 |
 | | FlowBind | 28.35 | 29.74 | 29.08 | 36.70 | 82.89 | 78.17 |
 
-![论文中的流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/7DeARTwvwL-0.png)
+![论文中的流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/7DeARTwvwL-0.png)
 图1: FlowBind概述。(a)训练阶段，共享潜在空间和各模态的漂移网络被联合学习。(b)推理阶段，学习到的漂移网络通过求解每个模态的ODE来执行灵活的任何到任何生成。
 
-![论文中的实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/7DeARTwvwL-1.png)
+![论文中的实验结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/7DeARTwvwL-1.png)
 图2: 各种多对多生成任务的定性结果。展示了模型处理复杂输入并生成相应输出的能力。
 
 5. 实际意义：为高效、灵活、数据高效的多模态通用生成模型提供了一个有前景的框架。
@@ -71,7 +71,7 @@ FlowBind的整体架构旨在实现任何模态子集到任何模态子集的生
     - 训练：对于一个样本（包含某些模态），辅助编码器生成共享潜在z。对于该样本中存在的每个模态i，其数据点z_i与z之间进行线性插值（t从0到1）。对应的漂移网络v_θi被训练来预测从z到z_i的目标速度（z_i - z）。所有组件通过一个统一的损失函数（公式6）联合优化。
     - 推理：给定源模态i，通过对其漂移网络v_θi求解逆ODE（从t=1到t=0），将其映射到共享潜在空间估计值。若存在多个源模态，则分别映射后取平均。然后，通过求解目标模态j的漂移网络v_θj的正向ODE（从t=0到t=1），从共享潜在空间生成输出z_j。
 
-![论文中的流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/7DeARTwvwL-0.png)
+![论文中的流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/7DeARTwvwL-0.png)
 （此图已用于说明整体架构）
 
 ### 💡 核心创新点
@@ -109,7 +109,7 @@ FlowBind的整体架构旨在实现任何模态子集到任何模态子集的生
 | | OmniFlow | 31.52 | 27.71 | 24.23 | 45.08 | 71.71 | 59.22 |
 | | FlowBind | 28.35 | 29.74 | 29.08 | 36.70 | 82.89 | 78.17 |
 
-![论文中的实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/7DeARTwvwL-1.png)
+![论文中的实验结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/7DeARTwvwL-1.png)
 （此图展示了多对多生成的定性对比，FlowBind在复杂条件下能更好保留输入信息）
 
 主要定量结果（生成质量）：

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 MARS-Sep的整体架构是一个基于强化学习的声音分离闭环系统，如图1所示。
 
-![MARS-Sep的强化学习循环](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/AhvApZghHf-0.png)
+![MARS-Sep的强化学习循环](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/AhvApZghHf-0.png)
 
 1. 输入与基础分离网络（基础策略 πθ）：
    - 输入：混合音频的幅度谱图 `X` 和一个多模态查询 `Q`（可以是文本、图像或音频）。
@@ -78,7 +78,7 @@ MARS-Sep的整体架构是一个基于强化学习的声音分离闭环系统，
      - 阶段2：音频-音频判别，解冻音频投影头，结合InfoNCE、三元组和一致性损失。
      - 阶段3：音频-视觉对齐，解冻音频和视觉投影头，结合InfoNCE和三元组损失，并引入前两阶段部分数据防止遗忘。
 
-![渐进式对齐微调策略](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/AhvApZghHf-1.png)
+![渐进式对齐微调策略](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/AhvApZghHf-1.png)
 
 ### 💡 核心创新点
 
@@ -157,7 +157,7 @@ MARS-Sep的整体架构是一个基于强化学习的声音分离闭环系统，
 5.  解决语义歧义案例（表12，相关图未在提供的列表中，但论文描述了“tap dancing” vs “typewriting”实验）：��声学相似源分离中，MARS-Sep的SIR显著高于OmniSep（24.0055 vs 未直接给出，但描述其更高），CLAP分数也更高（0.4935 vs 0.4810），定性表明其更好地抑制了打字机干扰。
 6.  定性对比图（图3）：展示了分离“cattle bovinae cowbell”声的频谱图。基线（OmniSep）的分离结果在非目标区域存在明显的块状伪影，而MARS-Sep的结果更干净，更好地保留了目标声的谐波结构。
 
-![VGGSOUND-clean+数据集上不同查询模态的分离音频对数梅尔频谱图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/AhvApZghHf-2.png)
+![VGGSOUND-clean+数据集上不同查询模态的分离音频对数梅尔频谱图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/AhvApZghHf-2.png)
 
 ### ⚖️ 评分理由
 

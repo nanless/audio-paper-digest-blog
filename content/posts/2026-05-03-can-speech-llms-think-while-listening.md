@@ -80,7 +80,7 @@ hiddenInHomeList: true
 3.  “边听边想”推理：当需要提前开始推理时，将推理序列RT左移，使其与部分用户ASR token序列（QT）在时间上重叠。此时引入两个模式切换令牌：`<switch_cot>`（开始/恢复CoT生成）和`<switch_asr>`（开始/恢复ASR token生成），使模型能在同一文本流上交替生成ASR token和CoT token，如图1所示。
 
 模型架构与流交互示意图：
-![模型架构与流交互](https://d3i71xaburhd42.cloudfront.net/dFVenZdVbX/1f96f9f1c6a75f09e3a2327c8418896076f5968f/1-Figure1-1.png)
+![模型架构与流交互](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dFVenZdVbX-0.png)
 图1展示了训练时的token序列排列。在文本独白流上，红色为用户ASR token（QT），绿色为CoT token（RT），蓝色为系统响应文本token（AT）。在“边听边想”模式下，通过`<switch_cot>`和`<switch_asr>`实现生成模式的切换，使得推理（RT）可以在用户问题（由QT表示）结束前开始。
 
 #
@@ -129,7 +129,7 @@ hiddenInHomeList: true
 4.  DPO优化效果（表4）：在θ=0.75的SFT模型基础上进行长度偏好DPO训练，在所有任务上实现了约30 token（约2.4秒）的延迟降低，同时准确率保持或略有提升。例如，ARC-E延迟从49.2 token降至12.0 token。
 
 早期推理方法准确率-延迟权衡图：
-![准确率-延迟权衡曲线](https://d3i71xaburhd42.cloudfront.net/dFVenZdVbX/1f96f9f1c6a75f09e3a2327c8418896076f5968f/5-Figure5-1.png)
+![准确率-延迟权衡曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dFVenZdVbX-1.png)
 图5展示了不同方法在SRQA任务上的准确率-延迟（token数）权衡曲线。QC方法（基于不同θ的完整性阈值）相比基线WordShift（固定词数偏移）方法，在相同的延迟下通常能达到更高的准确率。DPO训练（Correct-DPO和Length-DPO）进一步优化了这条帕累托曲线。
 
 #

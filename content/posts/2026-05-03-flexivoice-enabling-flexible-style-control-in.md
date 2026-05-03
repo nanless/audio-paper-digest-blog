@@ -62,7 +62,7 @@ FlexiVoice的架构是一个典型的基于LLM的生成式TTS流水线，主要�
 
 整个架构的关键设计选择在于将风格和音色的控制解耦：风格主要由自然语言指令在LLM层面进行控制，而音色则通过参考语音的token在流匹配模块作为条件进行建模。预训练阶段只训练LLM核心，后训练阶段则主要针对LLM核心进行对齐优化。
 
-![FlexiVoice系统概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/F7GmbfyVg9-7.png)
+![FlexiVoice系统概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/F7GmbfyVg9-7.png)
 上图展示了FlexiVoice的系统概览，清晰地显示了其作为多模态输入（文本、指令、参考语音）的统一处理框架，以及预训练与渐进式后训练两个阶段。
 
 ### 💡 核心创新点
@@ -133,7 +133,7 @@ FlexiVoice的架构是一个典型的基于LLM的生成式TTS流水线，主要�
 | + S1→S2→S3 (PPT，本文) | 88.7 | 79.3 |
 结论：消融实验清晰地证明了：1）直接进行复杂指令训练效果差；2）训练顺序至关重要，反向训练会导致遗忘；3）联合训练因目标冲突不如渐进训练。本文的PPT路径在所有指标上最优。
 
-![消融实验结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/F7GmbfyVg9-3.png)
+![消融实验结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/F7GmbfyVg9-3.png)
 上图直观地展示了不同训练顺序（S3先、反向、联合）与本文PPT策略（S1->S2->S3）在解耦评估集TR-hard任务上指令遵循准确率（ACC-I）随训练轮次的变化，清晰地体现了PPT策略的优越性和稳定性。
 
 ### ⚖️ 评分理由

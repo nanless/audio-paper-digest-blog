@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 AC-Foley采用了一个基于多模态Transformer的架构，其核心是将视频、文本和参考音频三种模态的信息进行融合，以指导音频生成。
 
-![AC-Foley 总体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/URPXhnWdBF-1.png)
+![AC-Foley 总体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/URPXhnWdBF-1.png)
 图2：AC-Foley方法概述。 不同模态（视频、文本、音频）在多模态Transformer网络中进行联合交互。通过引入音频条件，注入了语义、时序和声学信息以实现更精确的控制。
 
 完整输入输出流程：
@@ -154,7 +154,7 @@ AC-Foley采用了一个基于多模态Transformer的架构，其核心是将视�
 | Ours | 56.00 | 37.1 | 0.465 | 11.37 |
 关键结论：移除任何模态（音频、同步特征）都会导致特定维度性能显著下降，证明多模态融合的必要性。
 
-![定性结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/URPXhnWdBF-3.png)
+![定性结果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/URPXhnWdBF-3.png)
 图4：音频条件下的Foley生成定性示例。 展示了两个视频分别与三种不同条件音频配对的结果。该图说明了模型在利用条件音频声学信息的同时，能够保持精确的时间对齐。
 
 人类研究（表3）：

@@ -68,7 +68,7 @@ hiddenInHomeList: true
     *   所有提示词均用目标语言撰写（如用中文提示词要求模型翻译英文内容到中文）。
 6.  平行设计：每个样本的输入内容在三种模态上对齐，且所有提示词和参考答案在四种语言上对齐，支持跨模态、跨语言的系统性对比分析。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/PtPYZYfa0h-6.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PtPYZYfa0h-6.png)
 图7（论文第1页）：该图以图标和文字形式概括了MCIF基准的核心特点，包括3种模态、4种语言、13个任务、2种上下文类型、双提示词变体、200+人工问题以及23个基线模型。
 
 ### 💡 核心创新点
@@ -138,10 +138,10 @@ hiddenInHomeList: true
 | | MLLM | Qwen2.5-Omni | 98.5 | 47.5 | 32.5 | 8.9 | |
 | | MLLM | Gemini 2.5 Flash | 11.9 | 76.4 | 46.1 | 24.1 | |
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/PtPYZYfa0h-1.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PtPYZYfa0h-1.png)
 图2（论文第9页）：此图展示了MLLM在不同输入模态（文本、语音、视频、语音+视频）下的性能对比，揭示了当前模型在融合多种模态时存在的困难，视频模态尤其未被充分利用。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/PtPYZYfa0h-2.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PtPYZYfa0h-2.png)
 图3（论文第9页）：此图分解了最佳模型在长文本问答任务上，针对不同类型问题（按所需模态：AV、A、V；按问题来源：通用、摘要、转录）的表现，显示模型在获取精细内容信息上能力有限。
 
 关键结论：

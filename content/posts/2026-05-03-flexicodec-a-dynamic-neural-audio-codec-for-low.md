@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 FlexiCodec采用端到端的编码器-量化器-解码器框架，其独特之处在于在编码路径插入了动态帧合并，在解码路径插入了动态帧解合并，整体流程如图1所示。
 
-![FlexiCodec 总体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/kYkfCs4ZAH-0.png)
+![FlexiCodec 总体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/kYkfCs4ZAH-0.png)
 
 图1：FlexiCodec 总体架构概览。 模型通过两个并行流处理语音：语义流（上）和声学流（下）。输入语音首先经过ASR编码器和编解码器编码器提取12.5Hz的特征。帧合并模块根据ASR特征的相似度，自适应地将两个流的特征合并为动态帧率序列。语义特征经过有限标量量化（FSQ）生成RVQ-1语义token。声学特征（波形特征减去ASR特征的残差）经过多层残差向量量化（RVQ）生成RVQ-rest声学token。解码时，帧解合并模块利用记录的帧长属性将动态序列恢复为12.5Hz固定序列，再经编解码器解码器重建波形。
 
@@ -73,7 +73,7 @@ FlexiCodec采用端到端的编码器-量化器-解码器框架，其独特之�
     *   同样包含一个带局部注意力的Transformer，对恢复的序列进行平滑和精炼，消除拼接处的跳变。
     *   最终输入与编码器对称的卷积解码器，重建波形。
 
-![帧合并与解合并模块详图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/kYkfCs4ZAH-1.jpg)
+![帧合并与解合并模块详图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/kYkfCs4ZAH-0.png)
 
 图2：帧合并模块（左）与帧解合并模块（右）的详细视图。 左图展示了如何根据ASR特征余弦相似度合并帧，并通过Transformer精炼；右图展示了如何利用帧长属性解合并帧，并通过Transformer平滑。
 
@@ -138,13 +138,13 @@ FlexiCodec采用端到端的编码器-量化器-解码器框架，其独特之�
 | FlexiCodec | 6.25 | 4.15 | 2.53 | 2.76 | 4.18 | 3.42 | 0.71 |
 结论：FlexiCodec在所有帧率下，尤其在低帧率下，显著优于重训练的基线，特别是在语义保持（WER）上优势巨大。
 
-![不同帧率下各系统的评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/kYkfCs4ZAH-2.jpg)
+![不同帧率下各系统的评估结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/kYkfCs4ZAH-1.png)
 
 图3：在三种极低帧率下的评估结果�� (a)和(b)显示，随着帧率降低，基线系统（DAC, DualCodec）的WER急剧上升，而FlexiCodec保持低位。 (c)-(f)显示声学指标差异相对较小，FlexiCodec略优。
 
 2. 动态帧率机制分析
 - 相关性：在TIMIT数据集上，FlexiCodec的输出帧率与输入语音的音素率呈强正相关（Pearson r = 0.775），证明其自适应性。
-![帧率与音素率相关性](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/kYkfCs4ZAH-3.jpg)
+![帧率与音素率相关性](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/kYkfCs4ZAH-2.png)
 图4：FlexiCodec帧率与语音音素率的相关性图。 每个点代表一个语音样本，显示出强线性相关。
 - 可控性：通过调整阈值 \( \tau \)，可在推理时控制帧率。
 

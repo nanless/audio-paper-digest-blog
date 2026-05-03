@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 自监督学习 论文列表"
+title: "ICLR 2026 - 统一音频模型 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["自监督学习"]
+tags: ["统一音频模型"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 自监督学习 方向论文"
+description: "共 1 篇 ICLR 2026 统一音频模型 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 自监督学习
+# ICLR 2026 - 统一音频模型
 
 共 **1** 篇论文
 
@@ -18,39 +18,40 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [DiffSDA: Unsupervised Diffusion Sequential Disentanglement A](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential) | 7.5分 | 前25% |
+| 🥇 | [UALM: Unified Audio Language Model for Understanding, Genera](/audio-paper-digest-blog/posts/2026-05-03-ualm-unified-audio-language-model-for) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [DiffSDA: Unsupervised Diffusion Sequential Disentanglement Across Modalities](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential)
+### 🥇 [UALM: Unified Audio Language Model for Understanding, Generation and Reasoning](/audio-paper-digest-blog/posts/2026-05-03-ualm-unified-audio-language-model-for)
 
-✅ **7.5/10** | 前25% | #自监督学习 | #扩散模型 | #跨模态 #音频生成
+✅ **7.0/10** | 前25% | #统一音频模型 | #自回归模型 | #音频大模型 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Hedi Zisling（Ben-Gurion University）
-- 通讯作者：Omri Azencot（azencot@bgu.ac.il， Ben-Gurion University）
-- 作者列表：Hedi Zisling（Ben-Gurion University）、Ilan Naiman（Ben-Gurion University）、Nimrod Berman（Ben-Gurion University）、Supasorn Suwajanakorn（VISTEC）、Omri Azencot（Ben-Gurion University）
+- 第一作者：Jinchuan Tian（卡内基梅隆大学，CMU；与NVIDIA合作）
+- 通讯作者：Wei Ping（NVIDIA）
+- 作者列表：Jinchuan Tian（CMU†），Sang-gil Lee（NVIDIA），Zhifeng Kong（NVIDIA），Sreyan Ghosh（NVIDIA†, UMD），Arushi Goel（NVIDIA），Chao-Han Huck Yang（NVIDIA），Wenliang Dai（NVIDIA），Zihan Liu（NVIDIA），Hanrong Ye（NVIDIA），Shinji Watanabe（CMU），Mohammad Shoeybi（NVIDIA），Bryan Catanzaro（NVIDIA），Rafael Valle（NVIDIA），Wei Ping（NVIDIA）。†表示工作在NVIDIA实习期间完成，*表示同等贡献。
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文为“序列解耦”这个经典难题提供了一个优雅且强大的新范式——用单一的扩散模型损失统一框架，不仅摆脱了复杂调参的噩梦，还在真实世界高分辨率视频、音频和时间序列上实现了SOTA级的高质量解耦与生成，说服力很强。
-短板：所谓的“零样本”实验本质上是特征交换，并未在真正的未见分布上验证模型的泛化能力；此外，将“静态-动态”二分法作为通用解耦的终极目标可能过于简化，现实世界的变化维度远比这复杂。
+亮点在于系统性地提出了一个“三位一体”的音频模型框架，并在统一训练上给出了有效的工程解决方案（数据比例、模态对齐），使得单一模型能在多项基准上达到或接近SOTA。短板是其“推理”能力目前更像是一种受控生成的引导机制，距离人类作曲家那种真正的多模态创造性反思还有很大距离，且作为统一模型，其处理未见过的复杂混合音频任务的能力有待验证。
 
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接：https://github.com/azencot-group/DiffSDA
-- 模型权重：论文中未提及公开预训练模型权重。
-- 数据集：使用的是公开数据集（MUG， TaiChi-HD， VoxCeleb， CelebV-HQ， TIMIT， LibriSpeech， PhysioNet， ETTh1， Air Quality），论文未涉及自有数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了详尽的训练超参数和网络架构配置（见附录Tab. 6-8），涵盖了所有使用到的数据集。给出了完整的算法描述（算法1、2）。但未提供完整的训练脚本或检查点。
-- 论文中引用的开源项目：引用了VQ-VAE（Rombach et al., 2022）作为高分辨率数据预处理组件；采样器基于EDM（Karras et al., 2022）；潜在空间模型使用了DDIM（Song et al., 2020）。评估指标中使用了VGG-FACE和LightFace进行人脸识别（AED），以及OpenPose进行关键点检测（AKD）。
+#
 
 📌 **核心摘要**
 
-本文针对无监督序列解耦问题，即在不依赖标签的情况下将序列数据分解为时不变的静态因子（如身份）和时变的动态因子（如动作），提出了一种基于扩散模型的新颖框架DiffSDA。其核心是构建了一个跨模态的概率模型，创新性地将静态和动态因子建模为相互依赖的联合分布，并使用单一的、标准的扩散损失函数进行优化，避免了以往方法中复杂的损失项调优。与先前基于VAE/GAN的方法相比，DiffSDA是一个模态无关的通用框架，只需对骨干网络做微小调整即可适配视频（U-Net）、音频（MLP）和时间序列数据。在多个真实世界基准测试上，DiffSDA在定性（如条件交换、零样本交换）和定量指标（如AED、AKD、FVD、EER）上均超越了当前最先进的方法（如SPYL， DBSE）。例如，在VoxCeleb视频交换任务中，其AKD误差比SPYL降低了约40%；在TIMIT音频解耦上，解耦差距（Dis. Gap）达到了42.29%，远超DBSE的31.11%。该工作的意义在于为序列数据的无监督表示学习提供了一个统一、高效且强大的生成模型新范式。其主要局限性在于计算效率有待进一步优化，且“零样本”任务的设计尚不能充分证明模型对全新域的泛化能力。
+1. 问题：当前音频语言模型将理解与生成任务分开处理，且生成任务以扩散模型为主流，自回归模型质量有差距。音频领域的多模态推理（超越纯文本推理）也未被充分探索。
+2. 方法核心：提出统一音频语言模型（UALM）。首先构建UALM-Gen，一个基于自回归LLM（初始化自Qwen2.5）的文本到音频生成模型，通过大规模数据（30M样本）、无分类器引导（CFG）和直接偏好优化（DPO）达到SOTA生成质量。然后，通过精心设计的数据混合（图2）和模态对齐训练，将音频理解、生成和文本推理统一到一个模型（UALM）。最后，提出UALM-Reason，通过引入“富文本描述（Rich Caption）”作为中间计划，并使用两阶段SFT-DPO训练，赋予模型多模态生成推理能力（丰富化、对话、自我反思）。
+3. 创新：①首次在一个自回归LLM框架内成功统一音频理解、生成和推理；②证明了通过适当的训练策略，自回归模型可以在音频生成上媲美扩散模型；③提出了面向生成任务的多模态推理范式（如自我反思），超越了现有仅限于理解任务的文本推理。
+4. 实验结果：在音频生成（表1）上，UALM-Gen和UALM在AudioCaps和SongDescriber数据集上的多项客观指标（FD, KL, CL, AES）和主观评分（OVL, REL）达到或超过ETTA、Stable Audio Open等扩散模型基线。在音频理解（表2）上，UALM在MMAU和MMAR基准上匹配或超越Audio Flamingo 3、Qwen2.5-Omni等专门模型。在文本能力（表3）上，UALM相比基座LLM（Qwen2.5-7B）仅有极小性能损失。多模态推理的主观评估（表4）显示，UALM-Reason在富化、对话、自我反思三种推理场景下均优于基线UALM。
+5. 实际意义：为构建通用音频AI提供了可行的技术路径，有望统一音频相关应用，提升模型在复杂创意任务（如音乐创作）中的可控性和智能性。
+6. 主要局限性：目前音频表示未完全统一（输入用连续编码器，输出用离散编解码器）；合成数据（尤其是富文本描述）存在质量瓶颈；缺乏能精确评估复杂生成音频和多模态推理链的评估指标。
+
+#
 
 ---
 

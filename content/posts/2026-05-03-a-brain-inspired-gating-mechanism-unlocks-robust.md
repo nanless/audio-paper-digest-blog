@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 DGN模型的核心是一个受生物启发的、具有动态电导门控的脉冲神经元单元。
 
-![DGN模型示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5h741EyfQM-0.png)
+![DGN模型示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5h741EyfQM-0.png)
 图1：标准LIF模型(a)与提出的DGN模型(b)的示意图。DGN通过引入与突触活动相关的动态电导因子 `Ci` 来调节膜电位的衰减率。
 
 - 输入输出流程：
@@ -64,7 +64,7 @@ DGN模型的核心是一个受生物启发的、具有动态电导门控的脉�
 - 与LIF的关键区别：LIF的衰减因子 `e^{-g_l \Delta t}` 是固定的。DGN的衰减因子 `ρ_t` 是输入依赖的，通过动态电导 `∑ C_i D_i` 实时调节，实现了选择性信息过滤和噪声抑制。
 - 循环DGN：在前馈DGN基础上，增加一个额外的、接收上一时刻输出脉冲 `z_{t-1}` 的循环通路（同样通过动态电流 `D_{i,rec}` 实现），增强了时序记忆能力。
 
-![LSTM与DGN的结构类比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5h741EyfQM-1.png)
+![LSTM与DGN的结构类比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5h741EyfQM-1.png)
 图2：LSTM与DGN的模型结构示意图。论文指出，DGN的自适应衰减系数在功能上类似于LSTM的遗忘门 `f`。
 
 ### 💡 核心创新点
@@ -142,10 +142,10 @@ DGN模型的核心是一个受生物启发的、具有动态电导门控的脉�
 | LIF | 97.80 | 73.23 | 89.60 | 67.68 | 26.55 | 61.79 | 60.70 |
 | DGN (本文) | 99.10 | 94.84 | 96.70 | 93.86 | 89.40 | 87.52 | 87.68 |
 
-![噪声样本可视化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5h741EyfQM-2.png)
+![噪声样本可视化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5h741EyfQM-2.png)
 图3：SHD数据集上的噪声样本可视化。从左到右依次为：原始样本、加性噪声、减性噪声、混合噪声、FGSM、PGD、BIM攻击样本。横轴为时间，纵轴为输入通道索引。
 
-![不同扰动强度下的性能图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5h741EyfQM-3.png)
+![不同扰动强度下的性能图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5h741EyfQM-3.png)
 图4：在TIDIGITS前馈网络中，不同扰动强度下各模型的准确率变化。DGN（橙色线）在所有类型和强度的扰动下均保持最高准确率。
 
 关键结论：

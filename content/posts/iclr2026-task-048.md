@@ -19,13 +19,13 @@ hiddenInHomeList: true
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
 | 🥇 | [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resolution](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi) | 8.5分 | 前25% |
-| 🥈 | [A Hidden Semantic Bottleneck in Conditional Embeddings of Di](/audio-paper-digest-blog/posts/2026-05-03-a-hidden-semantic-bottleneck-in-conditional) | 8.0分 | 前25% |
+| 🥈 | [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio) | 8.5分 | 前25% |
 | 🥉 | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensiona](/audio-paper-digest-blog/posts/2026-05-03-prismaudio-decomposed-chain-of-thought-and-multi) | 8.0分 | 前25% |
 | 4. | [AC-Foley: Reference-Audio-Guided Video-to-Audio Synthesis wi](/audio-paper-digest-blog/posts/2026-05-03-ac-foley-reference-audio-guided-video-to-audio) | 7.9分 | 前25% |
 | 5. | [Aurelius: Relation Aware Text-to-Audio Generation At Scale](/audio-paper-digest-blog/posts/2026-05-03-aurelius-relation-aware-text-to-audio-generation) | 7.5分 | 前25% |
-| 6. | [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio) | 7.5分 | 前25% |
-| 7. | [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers) | 7.0分 | 前25% |
-| 8. | [SCRAPL: Scattering Transform with Random Paths for Machine L](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for) | 7.0分 | 前25% |
+| 6. | [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers) | 7.0分 | 前25% |
+| 7. | [SCRAPL: Scattering Transform with Random Paths for Machine L](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for) | 7.0分 | 前25% |
+| 8. | [AUHead: Realistic Emotional Talking Head Generation via Acti](/audio-paper-digest-blog/posts/2026-05-03-auhead-realistic-emotional-talking-head) | 6.5分 | 前25% |
 | 9. | [TangoFlux: Super Fast and Faithful Text to Audio Generation ](/audio-paper-digest-blog/posts/2026-05-03-tangoflux-super-fast-and-faithful-text-to-audio) | 6.5分 | 前25% |
 
 ---
@@ -85,38 +85,43 @@ hiddenInHomeList: true
 
 ---
 
-### 🥈 [A Hidden Semantic Bottleneck in Conditional Embeddings of Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-03-a-hidden-semantic-bottleneck-in-conditional)
+### 🥈 [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio)
 
-🔥 **8.0/10** | 前25% | #音频生成 | #扩散模型 | #生成模型 #条件嵌入
+🔥 **8.5/10** | 前25% | #音频生成 | #扩散模型 | #音乐生成 #统一音频模型
 
 👥 **作者与机构**
 
-- 第一作者：Trung X. Pham (Korea Advanced Institute of Science and Technology, KAIST)
-- 通讯作者：Chang D. Yoo (Korea Advanced Institute of Science and Technology, KAIST)
-- 作者列表：Trung X. Pham (KAIST)、Kang Zhang (KAIST)、Ji Woo Hong (KAIST)、Chang D. Yoo (KAIST)
+- 第一作者：Zeyue Tian（香港科技大学）
+- 通讯作者：Wei Xue†（香港科技大学），Yike Guo†（香港科技大学）
+- 作者列表：Zeyue Tian (香港科技大学), Zhaoyang Liu (香港科技大学), Yizhu Jin (香港科技大学), Ruibin Yuan (香港科技大学), Liumeng Xue (香港科技大学), Xu Tan (独立研究者), Qifeng Chen (香港科技大学), Wei Xue† (香港科技大学), Yike Guo† (香港科技大学)
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文发现了扩散Transformer模型中一个被忽视的重要现象——条件嵌入存在极端的“语义瓶颈”，即所有类别的条件向量在角度上几乎完全一致（>99%相似），而语义信息却集中在仅1-2%的维度上，这一发现具有很强的启示性和系统性分析价值。
-短板：虽然现象描述详尽，但论文对于“为何这种极端的冗余和相似性不影响生成质量”这一核心问题的理论解释仍停留在假设层面，缺乏更深入的数学或机制性证明，使得结论的完备性稍显不足。
+亮点在于其“大一统”的野心与扎实的工程实现：通过设计轻量的MAF模块和构建超过700万样本的IF-caps数据集，成功将文本、视频、音频等多种控制信号整合到一个扩散Transformer框架中，实现了在多个音频生成任务上的SOTA表现。短板则在于“统一”模型的训练细节（如不同任务数据的混合比例、调度策略）阐述不够透明，以及作为“anything-to-audio”框架，其对非文本、视频的“音频条件”（如音频克隆、风格迁移）的探讨相对有限，离真正的“万物”仍有距离。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文中未明确提及针对本研究的开源代码仓库链接。但分析使用了多个模型的官方公开权重。
-- 模型权重：论文中明确使用了DiT、MDT、SiT、REPA、LightningDiT、MG、X-MDPT、MDSGen等模型的公开预训练权重（XL/L/B尺寸）。
-- 数据集：使用的是标准公开数据集（ImageNet-1K, DeepFashion, VGGSound）。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文在附录（A.1-A.6）中提供了较为详细的实验设置说明、更多可视化结果和分析，有助于复现其分析过程。
-- 论文中引用的开源项目：论文引用并使用了DiT, MDT, SiT, REPA, LightningDiT, MG, X-MDPT, MDSGen等项目的预训练模型。
+- 代码：论文中提及“The code and datasets will be available at https://zeyuet.github.io/AudioX/”，并承诺在发表后开源。
+- 模型权重：论文中承诺开源预训练模型检查点（“we will open-source our code, pretrained model checkpoints”），但未提供当前下载链接。
+- 数据集：论文中承诺开源完整的IF-caps数据集（“we will open-source... the complete IF-caps dataset”），并提供了部分数据集的统计信息和样例。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：论文提供了非常详细的复现材料，包括：完整的模型架构描述（第4.1节）、训练细节（第5.1节，包括优化器、学习率、batch size、硬件和训练时长）、所有评估指标的具体定义（附录A.2）、新基准T2A-bench的构成与评估流程（附录A.3），以及大量附录图表和定性结果。
+- 论文中引用的开源项目：主要依赖的开源项目/模型包括：CLIP-ViT-B/32、Synchformer、T5-base、音频Autoencoder（来自Stable Audio Open）、Gemini 2.5 Pro（用于标注）、Qwen2-Audio（用于数据增强）、AnimeGANv2（用于图像到音频实验）、以及多个基线模型（如AudioLDM, Stable Audio Open, MMAudio等）。
 
 📌 **核心摘要**
 
-1.  问题：本文旨在系统性地研究基于Transformer的扩散模型（Diffusion Transformers）中条件嵌入（Conditional Embeddings）的内部结构与编码机制，而此前这一关键组件的作用原理尚未被充分理解。
-2.  方法核心：通过对多个SOTA模型（DiT, SiT, MDT, REPA等）的预训练条件向量进行系统性分析，研究其成对余弦相似度、幅度分布、参与率（PR）等统计特性，并通过裁剪（Pruning）实验验证其冗余性。
-3.  创新点：首次发现并量化了条件嵌入中的两个核心“涌现”特性：(1) 不同类别的条件向量间存在极端的角相似性（类条件任务>99%，连续条件任务>99.9%）；(2) 语义信息高度集中在少数几个高幅值维度（“头部”维度），其余大部分维度（“尾部”）贡献极小，呈现极高的稀疏性。
-4.  主要实验结果：在ImageNet-1K上，多数SOTA模型的条件向量仅用其原始维度（d=1152）的1-2%（约10-20个维度）即可携带主要信号。裁剪实验表明，移除多达66%的低幅值“尾部”维度后，生成质量（FID, IS, CLIP）保持不变甚至略有提升；反之，移除少数“头部”维度则会显著破坏生成结果。
-5.  实际意义：揭示了当前扩散Transformer在条件编码上存在严重的过参数化，为设计更高效、轻量化的条件注入机制（如直接使用稀疏向量或低维子空间）提供了实证依据和新思路。
-6.  主要局限性：对所观察到的极端相似性如何仍能指导模型进行高质量生成的深层机制解释，主要基于假设和直观分析，尚缺乏严格的理论证明。此外，研究主要聚焦于分析已训练好的模型，对于如何在训练过程中直接引导或优化这种瓶颈结构探索有限。
+1.  问题：当前的音频/音乐生成模型多为单一任务、单一模态输入的专用模型，缺乏一个能够灵活接受文本、视频、音频等多种控制信号并统一生成高质量音频的通用框架。
+2.  方法核心：提出AudioX统一框架，基于扩散Transformer（DiT）构建。其核心是多模态自适应融合（MAF）模块，该模块通过门控机制和可学习查询的交叉注意力，自适应地加权与对齐来自不同模态（文本、视频、音频）的特征，再输入DiT进行去噪生成。
+3.  创新点：1）提出了支持任意模态组合输入的统一生成框架AudioX；2）设计了轻量级的MAF模块以有效融合多模态条件，减少模态间干扰；3）构建了首个大规模、高质量的多模态音频-音乐数据集IF-caps（超过700万样本），并设计了结构化标注与增强的数据处理流程。
+4.  主要实验：在文本到音频（T2A）、视频到音频（V2A）、文本/视频到音频（TV2A）、文本到音乐（T2M）、视频到音乐（V2M）等任务上进行了全面基准测试。例如，在AudioCaps T2A任务中，AudioX的Inception Score（IS）达到12.48（对比MMAudio的12.03），FAD降至1.59；在MusicCaps T2M任务中，IS达到3.55（对比TangoMusic的2.86），FAD为1.53（对比TangoMusic的1.88）。此外，论文还引入了新的T2A-bench基准，在指令跟随能力上大幅超越现有模型（如Ord-acc达到23.60，远高于Make-An-Audio2的19.80）。
+5.  实际意义：该工作推动了通用音频生成模型的发展，为多媒体内容创作（如视频配音、音乐生成）提供了一个更灵活、强大的工具，并为构建具备复杂指令理解能力的生成模型提供了新思路。
+6.  主要局限性：模型参数量较大（2.4B），训练资源要求高（约4k GPU小时）。此外，框架目前主要针对标准音频和音乐生成，对于语音合成、语音转换等更专门的音频任务未做探讨。
+
+#
 
 ---
 
@@ -237,47 +242,7 @@ hiddenInHomeList: true
 
 ---
 
-### 6. [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio)
-
-✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #统一模型 #多模态
-
-👥 **作者与机构**
-
-- 第一作者：Zeyue Tian（香港科技大学）
-- 通讯作者：Wei Xue（香港科技大学）， Yike Guo（香港科技大学）
-- 作者列表：Zeyue Tian（香港科技大学）， Zhaoyang Liu（香港科技大学）， Yizhu Jin（香港科技大学）， Ruibin Yuan（香港科技大学）， Liumeng Xue（香港科技大学）， Xu Tan（独立研究者）， Qifeng Chen（香港科技大学）， Wei Xue†（香港科技大学）， Yike Guo†（香港科技大学）
-
-#
-
-💡 **毒舌点评**
-
-亮点：论文的野心不小，不仅提出了一个统一的“万能”音频生成框架，还亲手打造了一个包含700多万样本的高质量多模态数据集IF-caps，这相当于为未来的“通用音频模型”铺了一条高质量的数据高速公路。短板：模型的统一性目前还停留在“支持多种模态组合输入”的层面，真正的跨模态泛化能力（例如，将视频中提取的视觉风格迁移到音乐生成中）并未深入探讨。此外，其庞大的数据集完全依赖自动标注（Gemini和Qwen），其中不可避免的噪声和偏差可能会在长期训练中积累并放大。
-
-#
-
-🔗 **开源详情**
-
-- 代码：论文中提及将开源代码，链接为：https://zeyuet.github.io/AudioX/。
-- 模型权重：论文中提及将开源预训练模型检查点。
-- 数据集：论文中提及将开源完整的IF-caps数据集（包含超过700万样本）。
-- Demo：论文提供的网站（https://zeyuet.github.io/AudioX/）很可能包含在线演示。
-- 复现材料：论文详细提供了训练细节（优化器、学习率、batch size、训练硬件、时长）、模型架构描述、评估指标定义、新基准T2A-bench的构建和评估流程，以及附录中的详细数据集和实验信息，为复现提供了充分材料。
-- 论文中引用的开源项目：CLIP-ViT-B/32, Synchformer, T5-base, Stable Audio Open (音频Autoencoder和DiT预训练模型), Qwen2-Audio, Gemini 2.5 Pro (用于数据标注), AnimeGANv2 (用于图像到音频的零样本实验)。
-
-📌 **核心摘要**
-
-1. 要解决的问题：当前音频/音乐生成模型多为专用模型，输入模态（如仅文本或仅视频）和输出域（如仅音效或仅音乐）受限，缺乏一个统一的、能处理任意模态组合输入并生成高质量音频的通用框架，同时面临训练数据稀缺的问题。
-2. 方法核心：提出AudioX统一框架，核心包括：1）基于Diffusion Transformer (DiT)的生成骨干网络；2）一个轻量级的多模态自适应融合模块，用于有效融合文本、视频、音频等多种条件信号，减少跨模态干扰；3）设计并构建了大规模、高质量的多模态数据集IF-caps。
-3. 与已有方法相比新在哪里：1）实现了首个支持文本、视频、音频任意组合输入，并统一生成音频和音乐的框架；2）MAF模块能自适应地加权和对齐不同模态的条件，增强了跨模态控制能力；3）构建了包含700多万样本的细粒度标注数据集IF-caps，并提出两阶段（高质量标注+大规模增强）的数据构建流水线。
-4. 主要实验结果：AudioX在文本到音频（T2A）、文本到音乐（T2M）、视频到音频（V2A）等多个任务和基准测试上达到或超过了当时的SOTA。特别在指令遵循能力上表现突出，在作者提出的T2A-bench和AudioTime基准上大幅领先所有基线。例如，在T2A-bench上，其类别准确率（34.2%）、排序准确率（23.6%）和时间戳准确率（28.2%）均显著最高。用户研究也显示其生成质量获得专家高分。
-5. 实际意义：为多媒体内容创作（影视、游戏、短视频等）提供了更灵活、强大的自动化音频生成工具，降低了专业门槛，同时为“通用音频基础模型”的研究提供了架构和数据方面的宝贵参考。
-6. 主要局限性：模型的统一性尚未在更复杂的跨模态推理任务（如图像风格指导音乐生成）上得到充分验证；数据集IF-caps虽规模庞大且标注精细，但完全由自动化模型生成，可能存在偏差和错误，且目前仅覆盖英文标注。
-
-#
-
----
-
-### 7. [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers)
+### 6. [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #自监督学习 | #扩散模型 #流匹配
 
@@ -324,7 +289,7 @@ hiddenInHomeList: true
 
 ---
 
-### 8. [SCRAPL: Scattering Transform with Random Paths for Machine Learning](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for)
+### 7. [SCRAPL: Scattering Transform with Random Paths for Machine Learning](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for)
 
 ✅ **7.0/10** | 前25% | #音频生成 | #时频分析 | #优化算法 #可微信号处理
 
@@ -362,6 +327,40 @@ hiddenInHomeList: true
 
 ## 核心摘要
 该论文旨在解决将多变量散射变换（如JTFS）作为不同可微损失函数时计算成本过高的问题。作者提出了SCRAPL算法，其核心是通过随机采样单个路径并利用路径自适应矩估计（P-Adam）、路径随机平均梯度（P-SAGA）和θ重要性采样（θ-IS）三种技术来稳定梯度估计。与计算所有路径的全树散射相比，SCRAPL在计算效率和内存占用上实现了数量级的提升，同时保持了接近的精度。在无监督颗粒合成器声音匹配任务中，SCRAPL的计算速度是JTFS的约2倍，误差仅为其约1.5倍，明显优于MSS等基线。在啁啾合成器任务中，θ-IS相比均匀采样显著提升了收敛速度和参数精度。该算法为在大规模训练中利用具有神经生理学依据的感知损失提供了实用工具，尤其适用于处理存在时频调制或未对齐的音频合成逆问题，但其性能受限于路径分布的稀疏性和初始化的启发式。
+
+---
+
+### 8. [AUHead: Realistic Emotional Talking Head Generation via Action Units Control](/audio-paper-digest-blog/posts/2026-05-03-auhead-realistic-emotional-talking-head)
+
+✅ **6.5/10** | 前25% | #音频生成 | #扩散模型 | #跨模态 #音频大模型
+
+👥 **作者与机构**
+
+- 第一作者：Jiayi Lyu（中国科学院大学）
+- 通讯作者：Jian Xue（中国科学院大学）
+- 作者列表：Jiayi Lyu（中国科学院大学）、Leigang Qu（新加坡国立大学）、Wenjing Zhang（中国科学院大学）、Hanyu Jiang（中国科学院大学）、Kai Liu（浙江大学）、Zhenglin Zhou（浙江大学）、Xiaobo Xia（新加坡国立大学）、Jian Xue（中国科学院大学，通讯作者）、Tat-Seng Chua（新加坡国立大学）
+
+💡 **毒舌点评**
+
+这篇论文的亮点在于其清晰的“两阶段”思路，巧妙地将“理解”（ALM生成AU）与“生成”（AU驱动扩散模型）解耦，提供了一个完整的情感可控方案。然而，其短板也比较明显：第二阶段生成框架的组件（如AU到2D表示映射、交叉注意力适配器）多是现有模块的组合，缺乏革命性设计；与最强基线MEMO相比，各项指标仅有微幅提升，情感准确率和FID的改善程度或许不足以在实际应用中产生肉眼可见的“质变”。
+
+🔗 **开源详情**
+
+- 代码：提供了代码仓库链接：https://github.com/laura990501/AUHead_ICLR。
+- 模型权重：未提及是否公开预训练或微调后的模型权重。
+- 数据集：使用了公开数据集MEAD和CREMA，并说明了获取和预处理方式。未提供新的数据集。
+- Demo：未提及在线演示。
+- 复现材料：提供了详细的训练细节（GPU型号、学习率、epoch等）、关键超参数设置、评估指标和代码，复现信息充分。
+- 论文中引用的开源项目：基于以下开源项目进行开发和对比：Qwen-Audio-Chat (ALM)、Hallo V1、MEMO、EchoMimic、AniPortrait等。
+
+📌 **核心摘要**
+
+1.  问题：现有音频驱动说话头生成方法在情感表达的自然性和细粒度控制上存在不足，通常忽略语音中深层的情感线索，导致生成的表情较为平淡或僵硬。
+2.  核心方法：提出AUHead两阶段框架。第一阶段，利用音频语言模型（ALM）通过“先情感后AU”的思维链（CoT）策略，从语音中解耦并生成细粒度的面部动作单元（AU）序列。第二阶段，设计一个AU驱动的扩散模型，将生成的AU序列映射为结构化2D面部表示，并通过上下文感知嵌入和交叉注意力机制，将其融入视频生成过程，以控制面部表情。
+3.  创新点：首次探索利用ALM从音频中直接生成AU序列；设计了完整的AU表示、嵌入和交互模块以驱动扩散模型；引入了推理时的AU解耦引导策略，以平衡控制力与生成质量。
+4.  实验结果：在MEAD和CREMA数据集上，AUHead在情感准确率、视觉质量（FID、PSNR、SSIM）和面部几何（M-LMD、F-LMD）等指标上优于或持平于多个SOTA方法。例如，在MEAD数据集上，基于MEMO的AUHead将FID从11.12降至10.96，情感准确率（ACCemo）从基准的67.01%（CoT生成）用于指导后，在用户研究中，64.63%的参与者认为其在情感表达上优于HalloV2。
+5.  实际意义：该方法为需要精细情感控制的虚拟角色、影视制作和交互系统提供了一个有效的技术框架，证明了AU作为可控中间表示的价值。
+6.  主要局限性：AU预测的精度受限于ALM的能力和训练数据，存在误差；2D AU表示可能丢失了部分3D深度信息；在复杂头姿态和多样背景下的泛化能力有待进一步验证（论文提及为未来工作）。
 
 ---
 

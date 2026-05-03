@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 VibeVoice的整体架构是一个以LLM为核心的条件生成系统，采用“文本输入-混合特征输入-LLM预测-扩散声学解码”的流程。
 
-![VibeVoice整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FihSkzyxdv-0.png)
+![VibeVoice整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FihSkzyxdv-0.png)
 图1（来自第2页）：VibeVoice可扩展且富有表现力的播客合成示意图。 用户输入包括声音提示（Voice Prompts）和文本脚本（Text Scripts）。模型处理混合上下文特征（包括声学和文本嵌入），其隐藏状态（h_i）作为条件输入到token级的扩散头（D）。扩散头预测声学VAE特征（z_{a,i}），随后由声学解码器（A）恢复为波形片段（y_i）。多个片段（y_0, y_1, ...）最终拼接形成长音频输出（Y）。
 
 主要组件及数据流如下：
@@ -68,7 +68,7 @@ VibeVoice的整体架构是一个以LLM为核心的条件生成系统，采用�
 *   混合表示输入：将语义特征引入LLM的条件输入，为生成过程提供更明确的语言学指导，减少内容错误。
 *   LLM+扩散混合范式：利用LLM强大的上下文建模能力处理对话逻辑和韵律规划，利用扩散模型的高保真生成能力确保音质，取长补短。
 
-![声学与语义分词器对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FihSkzyxdv-1.png)
+![声学与语义分词器对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FihSkzyxdv-1.png)
 图2（来自第15页）：声学分词器（上）与语义分词器（下）架构对比。 两者编码器结构相似。声学分词器采用σ-VAE，通过重参数化采样潜变量z用于波形重建；语义分词器则去除了VAE的随机性，其编码器输出直接用于预测文本转录（ASR任务）。
 
 #
@@ -158,7 +158,7 @@ VibeVoice的整体架构是一个以LLM为核心的条件生成系统，采用�
 结论：混合表示在内容可懂度（WER）和说话人相似度（SIM-O）上达到最佳平衡。
 
 4. CFG与DDPM步数消融
-![CFG与DDPM步数消融热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FihSkzyxdv-2.png)
+![CFG与DDPM步数消融热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FihSkzyxdv-2.png)
 图3（来自第3页）：CFG尺度与DDPM去噪步数对WER和SIM-O的影响。 (a) WER热图显示，在10步、CFG=1.25时WER最低（1.55）。(b) SIM-O热图显示，较少的步数（如5步）就能获得较高的说话人相似度，过多步数反而略有下降。
 
 结论：存在一个效率与质量的平衡点（如步数=10，CFG=1.3），并非步数越多越好。
@@ -173,10 +173,10 @@ VibeVoice的整体架构是一个以LLM为核心的条件生成系统，采用�
 
 结论：在极端压缩（7.5Hz）下，本文声学分词器在感知质量（PESQ, UTMOS）上取得了领先结果，证明了其在高保真与高压缩率间的优异权衡。
 
-![声学分词器重建频谱图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FihSkzyxdv-5.jpg)
+![声学分词器重建频谱图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FihSkzyxdv-5.jpg)
 图6（来自第22页）：扩散推理步数对频谱影响的可视化。 (a) 语音提示包含自然环境纹理。(c) 50步去噪过度清洁，丢失环境信息。(b) 10步去噪在清洁与保留参考环境“氛围”之间取得平衡，有助于获得更高的说话人相似度。
 
-![SEED测试集评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FihSkzyxdv-3.jpg)
+![SEED测试集评估结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FihSkzyxdv-0.png)
 论文中的实验结果图。在短句基准（SEED test sets）上，VibeVoice-1.5B（7.5Hz）也展现出强大的竞争力，在中文CER（1.16%）和英文SIM（0.689）上表现优异。
 
 #

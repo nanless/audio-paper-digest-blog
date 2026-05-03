@@ -53,10 +53,10 @@ hiddenInHomeList: true
 
 论文核心是提出一种新的知识蒸馏方法（EM-KTD），而非设计一个全新的学生模型架构。其架构体现在教师模型与学生模型的蒸馏框架中。
 
-![图1：论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/nspzrcvzcB-0.png)
+![图1：论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/nspzrcvzcB-0.png)
 图1（原论文图1）展示了传统潜层蒸馏（a）与本文提出的EM-KTD（b）的对比。传统方法需要投影模块来匹配教师与学生特征维度。而EM-KTD直接对学生和教师模型的潜层标记进行核化（计算Gram矩阵），并通过熵监控来自适应加权不同模态的蒸馏损失。
 
-![图2：论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/nspzrcvzcB-1.png)
+![图2：论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/nspzrcvzcB-1.png)
 图2（原论文图2）是EM-KTD的完整框架图。学生模型（左）和教师模型（右）分别对输入的RGB图像和音频梅尔谱图进行编码，得到各自模态（视觉、音频、融合）的标记序列。框架的核心是：1）对每个模态的标记序列，分别在教师和学生侧计算Gram矩阵（Kernelization）。2）为每个模态的教师编码器添加一个分类头（Entropy Monitor），计算该模态预测的熵。3）用熵值的负指数作为权重，加权求和各模态的Gram矩阵蒸馏损失（LHuber）。最终，学生模型同时被蒸馏损失和任务自身的交叉熵损失监督。
 
 组件与数据流：
@@ -147,7 +147,7 @@ hiddenInHomeList: true
 3.  熵监控器架构消融（VGGSound，表5）：使用单层线性层、2层MLP或3层MLP作为熵监控器，性能差异很小，表明该组件对架构不敏感。
 4.  滑动窗口核化消融（VGGSound，表6）：采用滑动窗口策略后，性能基本不变，验证了其在降低计算复杂度方面的有效性。
 5.  熵分析（附录C，图3）：
-![图3：论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/nspzrcvzcB-2.png)
+![图3：论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/nspzrcvzcB-2.png)
 图3（原论文图3）展示了熵监控的有效性。(a)显示了各模态预测熵的分布，融合模态熵普遍较低。(b)显示样本准确率随熵值增加而下降，证实熵与信息量负相关。橙点表示各模态蒸馏损失的权重（熵越低，权重越高）。
 
 6.  延迟分析（附录C）：在NVIDIA A10G GPU上，教师模型推理耗时9.5ms，学生模型仅需1.5ms，速度提升82%。

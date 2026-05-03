@@ -59,7 +59,7 @@ AlignSep的整体流程如图2所示。它是一个条件流匹配框架，旨�
     -   时间对齐向量场估计器：这是模型的核心，是一个前馈Transformer编码器（4层，隐藏维度576，8头注意力，参数量158.94M）。它接收融合了时间对齐信息的多模态输入。
     -   融合策略：采用拼接（Concatenation）方式。将视频特征 `e` 在时间维度上扩展，与音频潜在特征 `x_m` 进行拼接，并在序列末尾附加时间步编码 `t`。这种设计强制模型在每一时间步都直接处理对齐的音视频特征，强化时间一致性。
 
-    ![AlignSep框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/DVDkFcxU1D-1.png)
+    ![AlignSep框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DVDkFcxU1D-1.png)
     图2：AlignSep整体框架示意图。左侧显示输入（混合音频、视频、噪声），右侧显示生成的潜在表示经解码得到分离音频。核心是中间基于ODE求解器的向量场估计过程。
 
 3.  关键设计选择与动机：
@@ -105,7 +105,7 @@ AlignSep的整体流程如图2所示。它是一个条件流匹配框架，旨�
 | AlignSep (ours) | ✓ | 73.38 | 27.89 | 96.88 | 72.28 | 28.92 | 66.67 | 95.76 |
 表1：主要定量对比。AlignSep在几乎所有指标上，尤其是在时间对齐（TA-V）方面，取得了显著领先。在最困难的VGGSound-Hard上，TA-V领先次优方法超过19个百分点。
 
-![不同时间信息下的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/DVDkFcxU1D-2.jpg)
+![不同时间信息下的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DVDkFcxU1D-0.png)
 图3：在VGGSound-Hard上，不同视频帧率（FPS）下的分离性能（TA-V）。AlignSep的性能随FPS增加而显著提升并饱和，证明其有效利用了时间线索；而基于语义的方法（ClipSep, OmniSep）则对时间分辨率不敏感。
 
 主观MOS评估结果（表2）：
@@ -124,7 +124,7 @@ AlignSep的整体流程如图2所示。它是一个条件流匹配框架，旨�
 - 推理步数影响（表3）：随着步数增加（5->25->100），性能提升但速度下降。25步被确定为最佳折中点。
 - 传统加速方法失效：整流流（Rectified Flow）方法在VGGSound-Hard上性能远低于AlignSep（TA-V: 92.37 vs 95.76），佐证了论文对多条件生成特殊性的分析。
 
-![定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/DVDkFcxU1D-3.jpg)
+![定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DVDkFcxU1D-1.png)
 图4：定性结果对比。(a) 展示了时间错位问题：当鼓声动作已停止，OmniSep仍生成了鼓声（红色区域），而AlignSep正确停止。(b) 展示了谱洞问题：在信号重叠处，OmniSep产生伪影（红色区域），AlignSep则生成了连续的信号。
 
 ### ⚖️ 评分理由

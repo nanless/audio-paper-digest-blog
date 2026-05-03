@@ -68,10 +68,10 @@ TASTE模型包含两个主要阶段：TASTE语音标记器（用于生成文本�
 - 聚合器（Aggregator）：这是TASTE的核心创新。它接收文本转录v、h(L)和h(l)作为输入。其第一层注意力机制设计为：查询（Q）= 文本v，键（K）= 最后隐藏状态h(L)，值（V）= 浅层隐藏状态h(l)。这种设计使得注意力输出序列的长度自然地与文本v对齐（长度为N），实现了文本对齐。后续层的查询取自前一层输出。其功能是利用文本的软对齐信息，从编码器表示中聚合出与文本一一对应的、富含声学信息的表示z。
 - 量化器（Quantizer）：采用残差向量量化（RVQ）对聚合器输出的连续表示z进行离散化，生成多层码本序列q和离散化的嵌入表示̂z。̂z是各层码本向量的和。q和̂z的长度均为N，与文本对齐。
 
-![TASTE框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/6STb8DauN1-0.png)
+![TASTE框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/6STb8DauN1-0.png)
 （图1：TASTE概念对比。传统方法产生长度不匹配的标记，而TASTE通过双模态输入生成与文本对齐的标记，实现直接联合建模。）
 
-![TASTE详细架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/6STb8DauN1-1.png)
+![TASTE详细架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/6STb8DauN1-1.png)
 （图2：TASTE整体框架。左侧展示文本对齐标记̂z的获取流程（聚合器使用交叉注意力）；右侧展示基于文本和̂z的语音解码器重构流程。）
 
 2. TASTE语音解码器
@@ -90,7 +90,7 @@ TASTE模型包含两个主要阶段：TASTE语音标记器（用于生成文本�
 3.  极低比特率下的高效表示：由于与文本对齐且只编码副语言信息，TASTE实现了极低的比特率（~150 bps），远低于传统语音编解码器（通常数千bps），同时保持了高质量的重建和高说话人相似度。这展示了其信息编码的高效性。
 4.  启用了文本对齐的语音编辑：由于标记与文本单词一一对应且编码副语言特征，通过交换不同话语间对应单词的TASTE标记，可以自然地转移语速、音高等特征，实现精确的语音编辑（如图3所示）。这是对TASTE标记特性的有力验证。
 
-![TASTE用于文本对齐语音编辑](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/6STb8DauN1-2.png)
+![TASTE用于文本对齐语音编辑](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/6STb8DauN1-2.png)
 （图3：TASTE实现文本对齐语音编辑的流程示例。通过交换对应单词的TASTE标记，可以编辑语音的语速等特征。）
 
 ### 🔬 细节详述
@@ -144,10 +144,10 @@ TASTE在LibriSpeech test-clean上评估，与多个基线对比。
 - 口语问答（表3）：TASLM在少样本设定下，能保持基础LLM的文本问答性能，这是其他SLM未做到的。
 - 注意力可视化（图4，图5）：显示聚合器学习到了文本-语音对齐的注意力模式。
 
-![聚合器最后一层注意力可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/6STb8DauN1-3.png)
+![聚合器最后一层注意力可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/6STb8DauN1-3.png)
 （图4：聚合器最后一层注意力的可视化，清晰展示了文本-语音对齐行为。）
 
-![聚合器第一层注意力可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/6STb8DauN1-4.png)
+![聚合器第一层注意力可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/6STb8DauN1-4.png)
 （图5：聚合器第一层注意力的可视化，部分头展示了对齐，部分头关注了静音段。）
 
 ### ⚖️ 评分理由

@@ -63,7 +63,7 @@ MusicRFM并非一个独立生成模型，而是一个作用于预训练自回归
         - 将探针方向`q_ℓ,j`（调整形状以匹配激活维度）乘以控制强度后，加到原始隐藏状态上：`h'_t,ℓ = h_t,ℓ + η_ℓ(t)  q_ℓ,j*`。
     - 修改后的隐藏状态继续参与后续层的计算，最终引导模型采���出符合控制概念的音频标记。
 
-![MusicRFM 整体流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-0.png)
+![MusicRFM 整体流程示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-0.png)
 图示展示了MusicRFM的核心思想：通过轻量探针从冻结模型中提取概念方向，并在推理时注入激活空间以进行引导。
 
 1.  激活空间概念方向引导：不同于基于微调或推理时优化的控制方法，MusicRFM直接在预训练模型的激活空间中识别并注入与特定音乐概念（如音符）对齐的方向向量。这实现了不修改模型参数的“外科手术式”干预。
@@ -119,10 +119,10 @@ MusicRFM在平均池化下表现最佳，尤其在音符、音程、调式、进
 - 交叉淡化（图5）：音符n1的概率衰减，n2的概率上升，展示了概念间平滑过渡的能力。
 - 多方向控制（表6）：同时控制两个概念时，控制强度提升仍能提高准确率，但分布偏移和CLAP下降更明显。
 
-![实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-2.png)
+![实验结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-2.png)
 论文中的实验结果图，展示了不同调度下音符分类概率随时间步的变化，验证了时间控制的有效性。
 
-![交叉淡化实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-3.png)
+![交叉淡化实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-3.png)
 论文中的实验结果图，展示了两个音符在交叉淡化过程中，探针概率此消彼长的动态过程。
 
 5. 外部评估与听者测试（表3-4）
@@ -167,7 +167,7 @@ MusicRFM并非一个独立生成模型，而是一个作用于预训练自回归
         - 将探针方向`q_ℓ,j`（调整形状以匹配激活维度）乘以控制强度后，加到原始隐藏状态上：`h'_t,ℓ = h_t,ℓ + η_ℓ(t)  q_ℓ,j*`。
     - 修改后的隐藏状态继续参与后续层的计算，最终引导模型采���出符合控制概念的音频标记。
 
-![MusicRFM 整体流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-0.png)
+![MusicRFM 整体流程示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-0.png)
 图示展示了MusicRFM的核心思想：通过轻量探针从冻结模型中提取概念方向，并在推理时注入激活空间以进行引导。
 
 ### 💡 核心创新点
@@ -229,10 +229,10 @@ MusicRFM在平均池化下表现最佳，尤其在音符、音程、调式、进
 - 交叉淡化（图5）：音符n1的概率衰减，n2的概率上升，展示了概念间平滑过渡的能力。
 - 多方向控制（表6）：同时控制两个概念时，控制强度提升仍能提高准确率，但分布偏移和CLAP下降更明显。
 
-![实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-2.png)
+![实验结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-2.png)
 论文中的实验结果图，展示了不同调度下音符分类概率随时间步的变化，验证了时间控制的有效性。
 
-![交叉淡化实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/NaHzPMaCY9-3.png)
+![交叉淡化实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/NaHzPMaCY9-3.png)
 论文中的实验结果图，展示了两个音符在交叉淡化过程中，探针概率此消彼长的动态过程。
 
 5. 外部评估与听者测试（表3-4）

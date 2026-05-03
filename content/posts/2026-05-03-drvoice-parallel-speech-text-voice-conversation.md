@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 DrVoice的整体架构分为三个核心组件，如下图所示：
 
-![图1：DrVoice整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/h5AiVx0Aiv-0.png)
+![图1：DrVoice整体架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/h5AiVx0Aiv-0.png)
 图1：DrVoice模型架构概览。用户端的语音经编码器、适配器后输入MLLM；助手端的文本与语音并行生成，由共享LLM层、文本头和语音精炼头协同完成。生成的语音令牌再经解码器输出波形。
 
 1.  语音编码器与分词器：
@@ -119,7 +119,7 @@ DrVoice的整体架构分为三个核心组件，如下图所示：
 
 表2（简化）：主要基准性能对比。FR(In/Out)表示LLM的输入/输出语音帧率，τ表示每秒语音对应的平均文本令牌数。
 
-![图2：不同分组因子下的计算资源消耗](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/h5AiVx0Aiv-1.png)
+![图2：不同分组因子下的计算资源消耗](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/h5AiVx0Aiv-1.png)
 图2：在不同模型配置（1.5B/7B，有/无连续音频编码器）下，GPU小时数随分组因子（1,3,5,7）的变化。清晰地展示了增大分组因子能显著降低计算成本。
 
 计算效率与语音质量：DRVOICE的输入帧率（5Hz）是当前所有对比模型中最低的，这直接带来了计算效率优势（图2）。语音质量对比如下表：

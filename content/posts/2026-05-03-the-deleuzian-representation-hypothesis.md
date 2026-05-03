@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 3.  无损概念引导：由于概念向量是激活空间中的直接向量，对模型行为进行引导（Steering）变得简单且无损。对于一个输入样本的激活表示`x`，想要增强概念`c_i`的效果，只需计算`˜x = x + α * c_i`，其中α是控制强度的标量。这个过程没有投影损失，且完全可逆（加`+α`后再加`-α`即可还原）。
 
-![本文方法概述](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/10JEfJtiJM-1.png)
+![本文方法概述](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/10JEfJtiJM-1.png)
 图2（论文Figure 2）展示了方法的完整流程：从模型激活中采样差异向量，通过逆偏度加权的KMeans聚类得到概念向量。
 
 ### 💡 核心创新点
@@ -129,10 +129,10 @@ hiddenInHomeList: true
 - 文本引导：在BART中抑制一个对应“国家名称”的概念，会使模型将“Rio de Janeiro”替换为“February”，将“country”替换为“city”；增强该概念则会诱发对“United States”的提及，揭示了模型偏差（论文Figure 4）。
 - 音频引导：在Gemma3上引导“积极/消极”概念进行图像描述，展示了方法在音频相关模型上的可迁移性（论文Figure 8）。
 
-![概念引导示例图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/10JEfJtiJM-2.png)
+![概念引导示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/10JEfJtiJM-2.png)
 图3（论文Figure 3）展示了在CLIP中进行视觉概念引导的结果。通过调整“浪漫主义”和“抽象派”两个概念的强度，改变了输入绘画的最近邻表示。
 
-![概念引导示例图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/10JEfJtiJM-3.png)
+![概念引导示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/10JEfJtiJM-3.png)
 图4（论文Figure 4）展示了在BART中进行文本概念引导的结果。通过调节一个对应“国家”的概念强度，改变了模型生成的文本内容。
 
 ### ⚖️ 评分理由

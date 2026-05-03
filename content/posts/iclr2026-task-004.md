@@ -18,9 +18,9 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified) | 8.5分 | 前25% |
-| 🥈 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions) | 8.0分 | 前25% |
-| 🥉 | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation) | 8.0分 | 前25% |
+| 🥇 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions) | 8.0分 | 前25% |
+| 🥈 | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation) | 8.0分 | 前25% |
+| 🥉 | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning) | 8.0分 | 前25% |
 | 4. | [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecolog](/audio-paper-digest-blog/posts/2026-05-03-miam-modality-imbalance-aware-masking-for) | 7.5分 | 前25% |
 | 5. | [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR](/audio-paper-digest-blog/posts/2026-05-03-tiny-but-mighty-a-software-hardware-co-design) | 7.5分 | 前25% |
 
@@ -28,41 +28,7 @@ hiddenInHomeList: true
 
 ## 📋 论文详情
 
-### 🥇 [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified)
-
-🔥 **8.5/10** | 前25% | #多模态模型 | #预训练 | #强化学习 #音频问答
-
-👥 **作者与机构**
-
-- 第一作者：Keane Ong (MIT, National University of Singapore)、Wei Dai (MIT)（共同第一作者）
-- 通讯作者：未明确说明（Paul Pu Liang作为资深作者，可能为通讯作者）
-- 作者列表：Keane Ong（MIT, NUS）、Wei Dai（MIT）、Carol Li（MIT）、Dewei Feng（MIT）、Hengzhi Li（MIT, Imperial College London）、Jingyao Wu（MIT）、Jiaee Cheong（Harvard University）、Rui Mao（NTU）、Gianmarco Mengaldo（NUS）、Erik Cambria（NTU）、Paul Pu Liang（MIT）
-
-💡 **毒舌点评**
-
-这篇论文的核心亮点在于其系统性的整合与标准化工作，它将心理学和社会行为理解这个长期碎片化的研究领域，通过定义清晰的行为分类法和统一的数据格式，凝聚成了一个可训练单一基础模型的大型多模态基准，解决了领域内“各自为战”的核心痛点。然而，其短板在于单点技术创新的深度有限，无论是数据标准化、模型架构（在现有LLM上添加适配器）还是实验方法（SFT/RL），都更多是成熟的工程整合与应用，而非提出全新的理论或算法；此外，其定义的“行为理解”任务过于庞杂，导致模型更像是在多个独立任务上微调，而非真正习得统一的“行为认知”能力。
-
-🔗 **开源详情**
-
-- 代码：论文明确提供代码仓库链接：`https://github.com/MIT-MI/human_behavior_atlas`。
-- 模型权重：论文明确提到将发布训练好的OMNISAPIENS-7B模型权重。
-- 数据集：论文明确指出将发布整理好的HUMAN BEHAVIOR ATLAS基准数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文提供了极其充分的复现材料。包括：(1) 详细的超参数配置（学习率、批次大小、LoRA设置等）；(2) 每个数据集的确切训练/验证/测试样本数（Table 7）；(3) 评估指标的详细计算公式；(4) LLM评委使用的完整提示词模板；(5) 训练硬件信息（8x H200 GPU）。
-- 论文中引用的开源项目：Qwen2.5-Omni (Xu et al., 2025a), MediaPipe (Lugaresi et al., 2019), OpenSMILE (Eyben et al., 2010), Whisper (Radford et al., 2023), GRPO/DeepSeekMath (Shao et al., 2024)。
-
-📌 **核心摘要**
-
-1.  要解决什么问题：现有针对人类心理和社会行为（如情感、认知、病理、社交过程）的理解系统通常局限于单任务、特定数据集，导致模型碎片化、难以扩展、跨任务迁移能力弱，无法构建通用的行为理解基础模型。
-2.  方法核心是什么：本文构建了“Human Behavior Atlas”大规模统一基准，包含13个公开数据集、超过10万个多模态样本（文本、音频、视频）。其核心方法论包括：定义四维行为分类法、将所有样本标准化为统一的“prompt-target”格式、制定跨数据集的一致性评估指标。基于此，训练了三个名为“Omnisapiens-7B”的模型变体（SFT、BAM、RL）。
-3.  与已有方法相比新在哪里：与之前碎片化的工作相比，新在三个方面：(1) 系统性的统一：首次将情感、认知、病理、社交四大行为维度下的多种任务整合到一个标准化基准中；(2) 灵活的模型架构：提出了一个轻量级的残差式“行为适配器模块（BAM）”，可选择性、非侵入性地融合传统行为描述符（如面部关键点、韵律特征）到端到端模型中；(3) 全面的迁移能力验证：系统评估了在统一基准上预训练对下游新数据集和新任务（如讽刺检测）的零样本和微调迁移效果。
-4.  主要实验结果如何：实验表明，(1) 在统一基准上预训练的Omnisapiens-7B三个变体，在大多数行为任务（如情绪识别、抑郁检测）上持续优于现有的通用多模态大模型（如Qwen2.5-Omni, HumanOmniV2）。在Table 4的多任务结果中，Omnisapiens-7B SFT/BAM在8/10的任务上平均分最优；(2) 预训练带来了显著的迁移学习收益：在仅1个epoch的微调后，模型在未见过的数据集（如DAIC-WOZ抑郁检测）上比未预训练的基线高出29.4%（Table 5）；(3) BAM模块在特定依赖细微行为线索的任务（如非言语交流NVC、讽刺检测SAR）上带来最高33%的性能提升（Table 6）。
-5.  实际意义是什么：该工作为构建统一、可扩展的心理与社会行为AI系统提供了重要的基础设施（基准和方法论）。它降低了领域内研究重复造轮子的成本，证明了多任务预训练对提升模型通用性和迁移能力的有效性，并为未来在医疗健康（如抑郁症筛查）、人机交互、社会计算等场景下开发更鲁棒、更全面的行为感知模型奠定了基础。
-6.  主要局限性是什么：(1) 任务过于庞杂：试图用一个模型覆盖过多差异巨大的任务，可能导致对每个子任务的建模深度不足；(2) 数据集偏差：所用数据集主要来自特定文化、语言和媒体类型（如美剧），可能影响模型的跨文化泛化能力；(3) 评估标准争议：自由文本任务依赖LLM作为评委，其可靠性受评委模型自身偏见影响；(4) 计算与工程复杂度：训练和维护如此大规模的多模态统一模型需要巨大资源。
-
----
-
-### 🥈 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions)
+### 🥇 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions)
 
 🔥 **8.0/10** | 前25% | #多模态模型 | #自编码器 | #零样本 #音乐理解
 
@@ -104,7 +70,7 @@ hiddenInHomeList: true
 
 ---
 
-### 🥉 [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation)
+### 🥈 [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation)
 
 🔥 **8.0/10** | 前25% | #多模态模型 | #流匹配 | #音频生成 #跨模态
 
@@ -140,6 +106,40 @@ hiddenInHomeList: true
 6.  主要局限性：目前仅在7B参数规模和2T token上进行训练，其规模效应和潜力未完全释放。论文承认，构建统一模型可能在某些单一任务上带来性能权衡，未来需要更大规模实验验证其通用能力的上限。
 
 #
+
+---
+
+### 🥉 [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning)
+
+🔥 **8.0/10** | 前25% | #多模态模型 | #强化学习 | #情感推理 #偏好优化
+
+👥 **作者与机构**
+
+- 第一作者：Ashutosh Chaubey（南加州大学，信息通信技术研究所）
+- 通讯作者：Mohammad Soleymani（南加州大学，信息通信技术研究所）
+- 作者列表：Ashutosh Chaubey（南加州大学，信息通信技术研究所）、Jiacheng Pang（未说明）、Maksim Siniukov（未说明）、Mohammad Soleymani（南加州大学，信息通信技术研究所）
+
+💡 **毒舌点评**
+
+亮点：本文的系统性值得称赞，不仅提出了针对具体问题（情感推理错误）的优化方法（AVEm-DPO），还配套设计了专门的评测基准（EmoReAlM），形成了一个“发现问题-量化问题-解决问题-验证效果”的闭环，这在应用驱动的研究中显得格外扎实。短板：核心方法（AVEm-DPO）本质上是现有技术（DPO、LoRA）在特定任务上的组合与适配，缺乏类似网络架构层面的根本性创新。此外，情感本身的标注和评估主观性很强，虽然用了人工验证，但基准的“正确性”仍存在灰色地带。
+
+🔗 **开源详情**
+
+- 代码：论文中提到将开源代码，项目主页为 `avere-iclr.github.io`。
+- 模型权重：论文中提到将开源训练好的模型权重。
+- 数据集：EmoReAlM基准将开源（仅包含QA对，用户需自行获取原视频）。偏好优化数据未明确是否开源。
+- Demo：未提及在线演示。
+- 复现材料：论文附录提供了极其详尽的复现信息，包括所有数据创建提示（B.1）、人类验证细节（B.2）、基准统计（B.3）、实现细节（C.3）、评估指标（D.1）、参考模型构建（D.2）、基线实现（D.3, D.4）以及消融实验设置（D.5）。
+- 引用的开源项目：Whisper (Radford et al., 2023), LanguageBind (Zhu et al., 2024), GPT-4o (OpenAI et al., 2024), Gemini 2.5 (Gemini-Team et al., 2025), Qwen2.5 (Qwen-Team et al., 2025), LoRA (Hu et al., 2022), Sentence-BERT (Reimers & Gurevych, 2019), BERTScore (Zhang et al.) 等。
+
+📌 **核心摘要**
+
+1. 问题：多模态大语言模型在情感推理中存在两类关键错误：推理错误（将情感与无关视听线索错误关联）和感知错误（为解释情感而幻觉出不存在的视听线索，主要由语言模型的文本先验驱动）。
+2. 方法核心：提出AVEm-DPO偏好优化技术，包含三个关键组件：基于提示的模态偏好（PMP），强制模型对特定模态的查询基于正确模态输入生成响应；基于情感的响应偏好（ERP），构建针对虚假关联和幻觉的拒绝样本对；文本先验去偏（TPD），通过正则化惩罚仅基于文本先验生成的响应。同时，引入了包含4000个人工验证样本的EmoReAlM基准，用于系统评估上述问题。
+3. 与已有方法相比新在哪里：现有工作多关注通用多模态幻觉或情感识别，本文首次针对“情感推理”场景下的多模态特异性错误（跨模态诱导的幻觉、虚假线索关联）设计了专门的优化目标和评估体系。特别是TPD组件，明确针对语言模型骨干中的文本偏见。
+4. 主要实验结果：在EmoReAlM基准上，AVEm-DPO将参考基线模型的平均准确率提升了12.6%（相对）。在现有情感识别数据集（DFEW， RAVDESS）和推理数据集（EMER）的零样本评估中，也实现了显著提升（例如在DFEW上的UAR/WAR分别提升1.66%和4.10%）。消融实验显示，移除TPD会导致幻觉压力测试F1分数大幅下降。
+5. 实际意义：为构建更可靠、可解释的社交AI系统提供了方法论和评估工具。通过减少推理和感知错误，可以使模型的情感响应更真实地锚定在输入的多模态证据上。
+6. 主要局限性：基准和训练数据来源于现有数据集（如DFEW），可能存在文化偏差和时长限制（短视频）。模型对某些模糊情感（如厌恶）的识别仍有不足，且在缓解音频线索的虚假关联方面仍有提升空间。
 
 ---
 

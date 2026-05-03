@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音分离 论文列表"
+title: "ICLR 2026 - 语音伪造检测 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音分离"]
+tags: ["语音伪造检测"]
 categories: [iclr-2026]
-description: "共 4 篇 ICLR 2026 语音分离 方向论文"
+description: "共 1 篇 ICLR 2026 语音伪造检测 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音分离
+# ICLR 2026 - 语音伪造检测
 
-共 **4** 篇论文
+共 **1** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,150 +18,57 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound) | 9.0分 | 前25% |
-| 🥈 | [Efficient Audio-Visual Speech Separation with Discrete Lip S](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with) | 8.5分 | 前25% |
-| 🥉 | [Knowing When to Quit: Probabilistic Early Exits for Speech S](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits) | 8.0分 | 前25% |
-| 4. | [MAPSS: Manifold-based Assessment of Perceptual Source Separa](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual) | 8.0分 | 前25% |
+| 🥇 | [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-03-tell-me-habibi-is-it-real-or-fake) | 9.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound)
+### 🥇 [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-03-tell-me-habibi-is-it-real-or-fake)
 
-🔥 **9.0/10** | 前25% | #语音分离 | #强化学习 | #多模态模型 #音频事件检测
-
-👥 **作者与机构**
-
-- 第一作者：Zihan Zhang（浙江大学）
-- 通讯作者：Tao Jin（浙江大学）
-- 作者列表：Zihan Zhang（浙江大学），Xize Cheng（浙江大学），Zhennan Jiang（中国科学院自动化研究所），Dongjie Fu（浙江大学），Jingyuan Chen（浙江大学），Zhou Zhao（浙江大学），Tao Jin（浙江大学）
-
-💡 **毒舌点评**
-
-这篇论文最亮眼的地方在于，它跳出传统信号处理指标的“卷王”思维，将强化学习人类反馈（RLHF）的哲学引入声音分离，通过多模态奖励直接优化“语义一致性”，巧妙地解决了分离干净但语义污染的“指标困境”。然而，强化学习训练引入的额外计算成本和策略稳定性调参，以及对基础架构（OmniSep）的依赖，是其落地时需要掂量的短板。
-
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接：`https://github.com/mars-sep/MARS-Sep`。
-- 模型权重：论文中未明确提及是否公开预训练模型权重（特别是渐进式对齐后的ImageBind编码器权重）。
-- 数据集：使用公开的VGGSOUND和MUSIC数据集，并在其clean+版本上评估，数据获取方式未在文中详述，但属于公开数据集。
-- Demo：提供在线分离样本演示：`https://mars-sep.github.io/`。
-- 复现材料：在附录B、D、E中提供了详细的实验设置、训练细节（优化器、学习率、batch size、训练步数、超参数）、硬件配置、评估协议（包括SI-SDR的计算方式）和消融实验结果，复现指导性较强。
-- 引用的开源项目：论文依赖的关键开源项目/模型包括：OmniSep（基线）、ImageBind（多模态编码器）、CLAP（评估指标）、museval（评估工具）。
-
-📌 **核心摘要**
-
-1.  解决的问题：传统的通用声音分离模型通常优化信号级指标（如SDR），但这可能导致分离出的音频在感知上仍包含与查询语义不匹配的干扰源，产生“指标高但语义脏”的困境。
-2.  方法核心：将基于查询的声音分离任务重构为一个强化学习决策问题。提出MARS-Sep框架，其核心是：a）将掩码预测建模为一个在时间-频率bin上参数化的Beta分布策略；b）设计一个基于多模态编码器（经渐进式对齐微调）的奖励模型，该模型融合音频、文本、视觉查询信息，计算分离音频与多模态查询锚点之间的相似度作为奖励信号；c）采用一种稳定的、带有裁剪机制的信任域策略优化算法（类似PPO/GRPO）来更新分离器策略，以最大化奖励。
-3.  与已有方法的新颖性：与基于判别式损失（如BCE）的监督学习方法（如OmniSep、AudioSep）不同，MARS-Sep首次将分离过程形式化为随机决策，并利用强化学习直接优化语义对齐目标。其奖励模型通过多模态低秩双线性池化（MLBP）融合查询信息，而非简单比较单模态相似度，并引入渐进式对齐微调来增强奖励的判别性和稳定性，从而缓解奖励欺骗。
-4.  主要实验结果：在VGGSOUND-clean+和MUSIC-clean+两个基准测试的文本、音频、图像及组合查询设置上，MARS-Sep均取得了领先的性能。例如，在VGGSOUND-clean+的文本查询分离中，MARS-Sep的Mean SDR达到6.91 dB（优于OmniSep的6.70 dB），Mean CLAPt分数达到9.03%（优于OmniSep的8.98%）。定性分析和用户研究也证实其分离结果在语义一致性和非目标源抑制方面更优。
-5.  实际意义：该工作为语义感知的声音处理提供了新范式，使得分离结果更能匹配用户真实意图，有望提升依赖于分离的下游任务（如语音识别、场景分析）的性能，并推动多模态对齐技术在音频领域的应用。
-6.  主要局限性：a) 强化学习训练比标准监督学习更复杂，需要调优更多超参数（如κ, λH, λKL）并可能增加训练时间（实验显示训练速度约为OmniSep的50%）；b) 方法的有效性部分依赖于基础架构（OmniSep）和预训练的多模态编码器（ImageBind），其性能上界受这些组件影响；c) 奖励模型可能对特定分布的查询过拟合，其泛化能力有待更广泛验证。
-
----
-
-### 🥈 [Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with)
-
-🔥 **8.5/10** | 前25% | #语音分离 | #知识蒸馏 | #端到端 #实时处理
+🔥 **9.0/10** | 前25% | #语音伪造检测 | #数据集 | #多语言 #音视频
 
 👥 **作者与机构**
 
-- 第一作者：Kai Li（清华大学计算机系，IDG/McGovern脑研究院）
-- 通讯作者：Xiaolin Hu（清华大学计算机系，IDG/McGovern脑研究院）
-- 共同第一作者：Kejun Gao（清华大学计算机系）
-- 作者列表：Kai Li（清华大学计算机系，IDG/McGovern脑研究院）、Kejun Gao（清华大学计算机系）、Xiaolin Hu（清华大学计算机系，IDG/McGovern脑研究院，中国脑科学研究院）
+- 第一作者：Kartik Kuckreja (MBZUAI)
+- 通讯作者：未说明（但根据邮箱域名判断，作者分属MBZUAI和Monash University）
+- 作者列表：Kartik Kuckreja (MBZUAI), Parul Gupta (Monash University), Injy Hamed (MBZUAI), Thamar Solorio (MBZUAI), Muhammad Haris Khan (MBZUAI), Abhinav Dhall (Monash University)
+
+#
 
 💡 **毒舌点评**
 
-这篇论文在“既要性能又要效率”这个老生常谈的问题上给出了一个相当工程化且有效的回答，其双路径视觉编码器和单次迭代分离器的设计思路清晰，实验数据也非常扎实。但短板在于，它最终的高效仍然严重依赖于一个精心设计、需要预训练的复杂视觉编码器，且对输入视频质量和同步性要求较高，这可能会限制其在“野战”环境中的真正普及。
+该研究精准地切中了深度伪造检测领域一个被长期忽视但极其重要的现实痛点——多语言代码切换场景，并通过构建大规模、高质量的专用数据集（ArEnAV）给出了有力回应，其数据生成管道和评估体系的工程完备性值得称道。然而，论文的创新高度主要体现在“造轮子”（数据集）上，而非提出新的检测理论或模型；且数据生成管道严重依赖商业API（GPT-4.1-mini）和现成模型，虽有效但原创技术深度有限。
+
+#
 
 🔗 **开源详情**
 
-*   代码：论文承诺在GitHub开源，链接为 `https://cslikai.cn/Dolphin`。当前状态未说明。
-*   模型权重：未明确提及是否公开预训练权重。
-*   数据集：使用的是公开数据集（LRS2, LRS3, VoxCeleb2），但论文中未提供数据集链接，需按原始引用获取。
-*   Demo：提供了一个演示页面链接：`https://cslikai.cn/Dolphin`。
-*   复现材料：非常充分。包括：详细的模型架构描述（附录A.1, B, E）、所有损失函数定义（附录A.2, D）、训练超参数（附录E）、训练硬件和流程（Section 4, 附录A.3）、评估指标（附录D）。代码将包含完整配置和预训练视觉骨干权重。
-*   引用的开源项目：依赖PyTorch, PyTorch Lightning, 以及VQ库 `vector-quantize-pytorch`。
-
-📌 **核心摘要**
-
-1. 要解决什么问题：现有音视频语音分离（AVSS）方法虽性能好，但模型参数量大、计算成本高，难以作为预处理步骤部署在资源受限的实际场景中。同时，轻量级视觉编码器往往损失语义信息，导致性能下降。
-2. 方法核心是什么：提出名为Dolphin的高效AVSS模型。核心包括：（1）DP-LipCoder，一个双路径视频编码器，通过向量量化（VQ）将唇部运动离散化为与音频对齐的语义token，并通过知识蒸馏从AV-HuBERT学习；（2）一个轻量级单次迭代编码器-解码器分离器，其核心是全局-局部注意力（GLA）块，分别用粗粒度自注意力（GA）捕获长程依赖，用基于热扩散方程的HDA层（LA）高效建模局部细节。
-3. 与已有方法相比新在哪里：打破了“性能好则计算重”的困境。视觉编码器方面，首次将重建与语义学习在VQ框架下联合优化，实现轻量化且高语义密度的特征提取。分离器方面，摒弃了多迭代设计，通过在单次前馈中融合全局和局部注意力来补偿性能，效率更高。
-4. 主要实验结果如何：在LRS2， LRS3， VoxCeleb2三个基准数据集上，Dolphin在所有分离指标（SI-SNRi， SDRi， PESQ）上均超过了当时的SOTA模型（如IIANet）。例如在LRS2上，Dolphin的SI-SNRi为16.8 dB，高于IIANet的16.0 dB。同时，效率优势显著：相比SOTA，参数减少超过50%，计算量（MACs）降低超过2.4倍，GPU推理速度提升超过6倍。
-5. 实际意义是什么：为音视频语音分离技术在边缘设备或实时系统中的部署提供了切实可行的解决方案，推动了该技术从学术研究走向实用化。
-6. 主要局限性是什么：对输入视频的质量（如头部姿态、遮挡、光照）和音视频同步性有较高要求；尽管效率大幅提升，但部署在极度资源受限的设备上仍有挑战；将唇部运动离散化可能丢失精细的发音线索。
-
----
-
-### 🥉 [Knowing When to Quit: Probabilistic Early Exits for Speech Separation Networks](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits)
-
-🔥 **8.0/10** | 前25% | #语音分离 | #早退机制 | #概率模型 #端到端
-
-👥 **作者与机构**
-
-- 第一作者：Kenny Falkær Olsen（丹麦技术大学、WS Audiology）
-- 通讯作者：未说明
-- 作者列表：Kenny Falkær Olsen（丹麦技术大学、WS Audiology）、Mads Østergaard（WS Audiology）、Karl Ulbæk（WS Audiology）、Søren Føns Nielsen（WS Audiology）、Rasmus Malik Høegh Lindrup（WS Audiology）、Bjørn Sand Jensen（丹麦技术大学）、Morten Mørup（丹麦技术大学）
-
-💡 **毒舌点评**
-
-这篇论文最亮眼的是将概率早退与信噪比（SNR）条件优雅地结合，提供了比“固定损失权重”或“连续层差异”更具解释性的退出准则，实用价值明确。然而，它主要贡献的是一个“何时停止”的框架，而非一个“如何分离”的革命性新架构，整体技术组合（线性RNN+早期分割+概率退出）虽有效但显得相对保守，更像是一次扎实的工程优化而非原理突破。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及是否公开。
-- 数据集：论文中使用的所有数据集（WSJ0-2mix, Libri2Mix, WHAM!, WHAMR!, DNS2020）均为公开学术数据集，文中给出了获取方式或参考。
+- 代码：论文中提到“The dataset is public.”以及“Data-generation code and evaluation scripts will be made public for various open-sourced models evaluated.”，但未提供具体代码仓库链接。
+- 模型权重：未提及公开生成管道中使用的TTS和唇同步模型的特定微调权重。
+- 数据集：已公开，获取需要遵守严格的学术非商业用途最终用户许可协议（EULA），并需要提供大学IRB批准编号（详见附录A.7）。
 - Demo：未提及。
-- 复现材料：论文附录（E节）提供了非常详细的训练细节，包括优化器设置、学习率调度、训练步数、硬件类型等；附录C节详细描述了模型架构的所有组件（编码器、RNN块、逆Gamma块等）。这些信息足以支持复现。
-- 论文中引用的开源项目：引用了`pywsj0-mix`（WSJ0-2mix生成脚本）和`LipriMix`（LibriMix生成脚本）等相关数据集生成代码。
+- 复现材料：提供了详尽的数据生成管道说明（包括GPT-4.1-mini的提示文本）、数据集统计信息、评估协议、以及所有基准模型的配置（零样本、预训练、微调）。附录中包含大量补充细节（如扰动列表、修改示例、身份重叠分析）。
+- 论文中引用的开源项目：VisPer (数据来源), Whisper (ASR), wav2vec2 (强制对齐), XTTS-v2, OpenVoice-v2, Fairseq, GPT-TTS (音频生成), Diff2Lip, LatentSync (视频生成), XLSR-Mamba, BA-TFD/BA-TFD+, Meso4, Xception, Video-LLaMA (评估基线)。
 
 📌 **核心摘要**
 
-本文旨在解决单通道语音分离与增强神经网络计算量固定、无法根据输入复杂度动态调整的问题。核心方法是提出PRobabilistic Early-exit for Speech Separation (PRESS)框架，通过联合建模干净语音信号及其误差方差的概率分布（基于Student-t似然），推导出多种可解释的、基于SNR的早期退出条件（如式11、12）。与已有方法（通过损失函数权重或层间相似度隐式定义退出条件）不同，PRESS显式地量化了模型对达到目标SNR的置信度。为支持此框架，作者设计了PRESS-Net架构，其核心是采用线性RNN和早期说话人分割的编码器-解码器结构，并在解码器堆栈的多个位置设置退出点。实验在WSJ0-2mix、Libri2Mix、WHAM!、WHAMR!和DNS Challenge 2020数据集上进行。主要结果表明：1）PRESS模型（如PRESS-12 M）在全网络深度下的分离性能（WSJ0-2mix SI-SNRi: 24.28 dB）与SOTA的SepReformer等可比；2）通过概率早退条件，模型能以可预测的精度损失动态节省计算（如图3所示），且经过全长数据微调后，预测的方差分布校准良好（如图5）。实际意义在于为助听器、手机等异构设备提供了灵活部署语音分离模型的可能性。主要局限是架构创新性有限，且框架扩展至逐说话人退出、迭代模型等尚待探索。
+1.  问题：现有深度伪造检测研究和数据集主要关注单语内容，忽略了在全球范围内（尤其是阿拉伯语世界）普遍存在的“语码转换”现象，即同一句话中混合使用多种语言，这使得现有检测模型难以泛化。
+2.  方法核心：作者提出了ArEnAV，首个大规模的阿拉伯语-英语音视频深度伪造数据集，包含387k个视频，超过765小时。数据生成管道分为三步：a) 利用GPT-4.1-mini对原始转录本进行可控的语义和语言风格（含方言）修改；b) 使用四种TTS和说话人转换模型生成与修改后文本匹配的伪造音频；c) 使用Diff2Lip和LatentSync两种扩散模型生成与伪造音频同步的唇部视频。
+3.  创新点：a) 首创性：首个针对阿拉伯语-英语语码转换的深度伪造数据集，涵盖了现代标准阿拉伯语、埃及、黎凡特和海湾方言；b) 管道创新：结合大语言模型进行细粒度转录操控，并整合多种多语言TTS与唇同步模型；c) 评估全面：不仅对比现有SOTA模型，还进行了详尽的人类评估，揭示了代码切换对检测造成的独特挑战。
+4.  主要实验结果：现有SOTA检测模型在ArEnAV上性能急剧下降。例如，BA-TFD+模型（在AV-1M上预训练）的AP@0.5从AV-1M上的44.42%降至ArEnAV上的3.74%（见表11a）。人类用户研究的平均准确率仅为60%，且当伪造发生在英语单词时，85%的人类参与者无法识别（见表5，表6）。这证明了任务的艰巨性和数据集的有效性。
 
-主要实验结果表（WSJ0-2mix 测试集）
-| 模型 | SI-SNRi (dB) | SDRi (dB) | 参数量 (M) | 计算量 (GMAC/s) |
+| 方法 (BA-TFD+) | 数据集 | AP@0.5 | AP@0.95 | AR@10 |
 | :--- | :--- | :--- | :--- | :--- |
-| SepFormer (S) | 23.0 | 23.1 | 4.5 | 21.3 |
-| SepReformer (M) | 24.2 | 24.4 | 17.3 | 81.3 |
-| PRESS-12 @12 (M) | 24.28 | 24.46 | 22.4 | 79.7 |
-| PRESS-12 @8 (M) + FT | 24.18 | 24.40 | 15.6 | 54.4 |
-| PRESS-4 @4 (S) + FT | 23.41 | 23.56 | 3.4 | 11.3 |
-注：“@K”表示在第K个退出点评估；“+FT”表示在全长数据上微调。
+| 预训练于AV-1M | LAV-DF | 96.30 | 4.44 | 78.75 |
+| | AV-1M | 44.42 | 0.03 | 34.67 |
+| | ArEnAV | 3.74 | 0.04 | 3.05 |
 
-关键图表结论：
-- 图3：展示了PRESS模型在性能-计算量权衡上的优势。动态早退策略（曲线）比任何固定深度的静态模型（点）在相同计算量下获得更高性能，或在相同性能下消耗更少计算。
-- 图5：显示了在校准性上的关键发现。初始训练（在4秒片段上）后模型预测的方差分布未校准（CRPS=2.96）；经全长数据微调后，预测分布在训练集和测试集上均变得校准良好（CRPS降至1.43和2.80），这是早退条件可靠工作的基础。
+表11(a)关键结果：SOTA模型在ArEnAV上的性能崩溃
+5.  实际意义：为构建能够应对真实世界多语言、多方言复杂场景的下一代深度伪造检测系统提供了关键的基准数据和评估工具，对于维护阿拉伯语社区的数字内容安全至关重要。
+6.  主要局限性：a) 数据集存在真实/伪造视频数量不平衡；b) 依赖的语音识别模型（Whisper-v2）对阿拉伯语识别能力有限，可能导致部分转录本噪声；c) GPT-4.1-mini在“意义+翻译”模式下有时遵循指令不完全，导致语义变化不足；d) 数据集目前仅限于阿拉伯语和英语两种语言。
 
----
-
-### 4. [MAPSS: Manifold-based Assessment of Perceptual Source Separation](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual)
-
-🔥 **8.0/10** | 前25% | #语音分离 | #自监督学习 | #流形学习 #基准测试
-
-👥 **作者与机构**
-
-- 第一作者：Amir Ivry (Technion - Israel Institute of Technology, Electrical and Computer Engineering)
-- 通讯作者：未说明
-- 作者列表：Amir Ivry (Technion - Israel Institute of Technology), Samuele Cornell (Carnegie Mellon University, Language Technologies Institute), Shinji Watanabe (Carnegie Mellon University, Language Technologies Institute)
-
-💡 **毒舌点评**
-
-亮点：论文提出了首个能功能上解耦语音分离中“泄漏”和“目标失真”两个核心失败模式的客观评估指标（PM和PS），并通过扩散映射将它们统一在感知流形中，且提供了帧级的理论误差界限，这在评估方法的严谨性和可解释性上是一次有力的提升。
-短板：尽管在特定数据集（SEBASS）上表现优异，但该方法计算流程复杂（需为每个源生成大量人工失真、编码、构建扩散图），且对输入的时间对齐极其敏感（见图8），这严重限制了其在需要实时或异步处理的真实场景中的适用性。
-
-📌 **核心摘要**
-
-1.  问题：现有的音频源分离评估指标（如SDR、PESQ）无法有效区分“目标信号失真”和“来自其他说话者的泄漏干扰”，而人类听觉对这两类错误的感知是不同的。
-2.  方法核心：提出MAPSS框架，其核心是PM（感知匹配度）和PS（感知分离度）两个指标。PM通过衡量分离输出与其参考信号及其人工生成的“感知失真族”在流形上的距离来评估目标失真；PS则通过比较该距离与输出到其他源参考及其失真族的距离来评估泄漏程度。流形由预训练自监督模型（如wav2vec 2.0）的表征经扩散映射（Diffusion Maps）降维构建。
-3.  创新点：与现有方法相比，PM/PS是首个从设计上就解耦泄漏和失真、提供帧级粒度分析、并附带确定性误差半径和置信区间的评估指标。
-4.  主要实验结果：在SEBASS数据集（包含英、西班牙语及音乐混合信号）的实验中，与18个广泛使用的指标相比，PM和PS在与人类平均意见分（MOS）的线性相关（PCC）和秩相关（SRCC）上几乎总是排名第一或第二。例如，在英语语音上，PM的PCC达到86.36%，PS的SRCC达到84.12%，均显著优于SDR（PCC 73.13%）和PESQ（SRCC 85.56%）等基线。归一化互信息（NMI）分析显示PM和PS高度互补。
-5.  实际意义：PM和PS可作为诊断工具，帮助研究者定位分离系统的错误来源是目标损坏还是串扰，其可微性也为将其用作训练损失或课程触发器提供了可能。
-6.  主要局限性：计算复杂度高，需要为每个源生成大量人工失真并编码；对参考信号与输出信号的时间对齐非常敏感，超过20毫秒的延迟会导致性能显著下降；在音乐（尤其是带鼓点）场景下的相关性略低于语音场景。
+#
 
 ---
 

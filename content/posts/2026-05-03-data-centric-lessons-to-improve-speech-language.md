@@ -54,7 +54,7 @@ hiddenInHomeList: true
 | Qwen-Audio | 8.4B | 45.7 | 30.3 | 46.0 | 40.7 |
 | Qwen-2-Audio | 8.4B | 45.7 | 33.4 | 47.0 | 42.0 |
 
-![数据处理流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4amNkYCDqX-1.png)
+![数据处理流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/4amNkYCDqX-1.png)
 (图2: 论文展示了其研究的三个核心数据问题：(上)粗/细粒度交错策略；(中)合成数据集构建流程；(下)确定性/随机性模态采样方案。)
 
 5. 意义：论文强调了在SpeechLMs发展中，精心策划的数据与模型本身同等重要，其结论可指导未来更高效、高质量的语音-语言预训练数据构建。
@@ -70,7 +70,7 @@ hiddenInHomeList: true
 3.  整合方式：将语音token加入语言模型的词表中，新token的嵌入使用Xavier正态初始化。在预训练中，仅微调语言模型，语音分词器保持冻结。
 4.  数据流：输入为交替出现的语音和文本token序列。模型使用标准的next-token prediction目标，在语音和文本token上同时计算损失（在部分实验中，对语音token进行损失屏蔽）。
 
-![结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4amNkYCDqX-3.png)
+![结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/4amNkYCDqX-3.png)
 (论文中的结果图，展示了SpeLangy模型在参数量-性能权衡上的优势。)
 
 #
@@ -121,10 +121,10 @@ hiddenInHomeList: true
     - 模态采样：确定性采样（42.4%）比随机采样（41.4%）在SQA上提升1.0%。
     - 损失屏蔽：在理解专用模型设置中，应用所有数据干预后，损失屏蔽版本（51.8%）远优于不屏蔽版本（42.4%）。
 
-![分布对齐图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4amNkYCDqX-4.png)
+![分布对齐图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/4amNkYCDqX-4.png)
 (图5: 该图显示，细粒度交错（Fine）和加入合成数据（Fine+Syn）能减小文本条件与音频条件输出分布之间的反向KL散度，表明模态对齐得到改善。)
 
-![领域覆盖图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4amNkYCDqX-5.png)
+![领域覆盖图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/4amNkYCDqX-5.png)
 (图6: 该图对比了网络爬取数据、合成数据（Krist, Quest）与评估集在话题分布上的差异，表明合成数据有效补充了网络爬取数据在科学、健康、教育等领域的不足。)
 
 - 后训练验证：在经过SFT后，基于“细粒度+合成数据”预训练的模型，在文本响应和音频响应质量评估中均优于其他预训练检查点，证明数据预处理的收益可以迁移至下游任务。

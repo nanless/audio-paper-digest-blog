@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频到视频生成 论文列表"
+title: "ICLR 2026 - 音频分类 #音频生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频到视频生成"]
+tags: ["音频分类 #音频生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频到视频生成 方向论文"
+description: "共 1 篇 ICLR 2026 音频分类 #音频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频到视频生成
+# ICLR 2026 - 音频分类 #音频生成
 
 共 **1** 篇论文
 
@@ -18,52 +18,48 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Syncphony: Synchronized Audio-to-Video Generation with Diffu](/audio-paper-digest-blog/posts/2026-05-03-syncphony-synchronized-audio-to-video-generation) | 8.0分 | 前25% |
+| 🥇 | [Resp-Agent: An Agent-Based System for Multimodal Respiratory](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Syncphony: Synchronized Audio-to-Video Generation with Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-03-syncphony-synchronized-audio-to-video-generation)
+### 🥇 [Resp-Agent: An Agent-Based System for Multimodal Respiratory Sound Generation and Disease Diagnosis](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal)
 
-🔥 **8.0/10** | 前25% | #音频到视频生成 | #扩散模型 | #跨模态注意力 #CycleSync
+🔥 **8.0/10** | 前25% | #音频分类 #音频生成 | #多模态模型 #流匹配 | #音频分类 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Jibin Song（延世大学人工智能系，CineLingo）
-- 通讯作者：未明确说明（通常第一作者或末位作者，文中邮箱sjbpsh1@yonsei.ac.kr对应Jibin Song）
-- 作者列表：Jibin Song（延世大学人工智能系，CineLingo），Mingi Kwon（延世大学人工智能系，CineLingo），Jaeseok Jeong（延世大学人工智能系，CineLingo），Youngjung Uh（延世大学人工智能系）
+- 第一作者：Pengfei ZHANG（香港科技大学（广州））
+- 通讯作者：Li Liu（香港科技大学（广州））
+- 作者列表：Pengfei ZHANG（香港科技大学（广州））、Tianxin Xie（香港科技大学（广州））、Minghao Yang（香港科技大学（广州））、Li Liu（香港科技大学（广州））
 
 💡 **毒舌点评**
 
-论文的亮点在于其系统性：将“对齐”问题拆解为训练时的监督（Motion-aware Loss）和推理时的引导（Audio Sync Guidance），并配合新的评估指标（CycleSync）形成闭环，技术方案完整且各部分动机清晰。短板在于，其核心的CycleSync指标高度依赖一个外部的视频到音频（V2A）模型，这使得评价标准本身成为一个“黑箱”，且论文承认该V2A模型可能引入数据集偏差（如青蛙叫声、保龄球背景音乐），这在一定程度上削弱了评估的绝对客观性。
+亮点在于其构建的闭环智能体框架（Thinker-A2CA）和精心打造的大规模多模态数据集（Resp-229k），将数据生成与模型诊断能力紧密耦合，这种“自省式”的增强思路比盲目数据扩增高明得多；然而，其系统复杂度极高，多个组件（LLM规划器、流匹配生成器、长上下文诊断器）的性能高度依赖彼此，且评估完全建立在合成数据与跨域验证上，缺乏在真实、未知临床环境中的端到端部署验证，使得“临床实用性”这一最终目标的证明仍显遥远。
 
 🔗 **开源详情**
 
-- 代码：论文声明将公开代码，项目主页已提供（https://jibin86.github.io/syncphony_project_page），但论文中未提供具体的代码仓库链接。
-- 模型权重：论文声明将发布训练好的模型，但未提供下载链接。
-- 数据集：使用的是公开数据集AVSync15和TheGreatestHits，论文未提及自己发布新数据集。
-- Demo：项目主页可能包含演示视频，但论文中未明确提供在线交互式Demo链接。
-- 复现材料：附录（A-J）提供了极其详细的训练细节、超参数、架构选择、评估设置和消融实验，复现信息非常充分。
-- 论文中引用的开源项目：依赖Pyramid Flow作为视频骨干、DenseAV作为音频编码器、CLIP/T5作为文本编码器、V-AURA作为V2A模型用于CycleSync评估，以及librosa进行峰值检测。
-- 开源计划：论文明确表示将公开以支持未来研究，但具体发布时间点未说明。
+*   代码：论文明确提供代码仓库链接：`https://github.com/zpforlove/Resp-Agent`。
+*   模型权重：论文明确提供模型权重下载链接：`https://huggingface.co/AustinZhang/resp-agent-models`。
+*   数据集：论文明确提供 Resp-229k 数据集下载链接：`https://huggingface.co/datasets/AustinZhang/resp-agent-dataset`。
+*   Demo：论文中未提及在线演示（Demo）。
+*   复现材料：论文提供了详细的训练配置、超参数设置（如学习率、批次大小、优化器参数）、架构描述，并在附录中提供了完整的实验设置（附录C）、数据审计流程（附录E）等信息，复现材料非常充分。
+*   论文中引用的开源项目：引用了多个开源工具/模型，包括：
+    *   LLM骨干：Qwen3-0.6B-Base, DeepSeek-V3.2-Exp, DeepSeek-R1-Distill-Qwen-7B
+    *   音频模型：BEATs, Conformer, AST, PANNs, Whisper-Small, Vocos
+    *   文本模型：BERT, RoBERTa, Longformer
+    *   生成模型：c-WaveGAN, AudioLDM 2, StableAudio Open
+    *   框架/工具：DeepSpeed, ICLR Code of Ethics。
 
 📌 **核心摘要**
 
-1.  解决的问题：现有文本到视频（T2V）和图像到视频（I2V）生成模型难以精确控制动作时序，而音频天然包含丰富的时序线索，是理想的同步条件。但现有音频到视频（A2V）模型因间接条件机制或有限的时序建模能力，难以实现精细的音视频同步。
-2.  方法核心：提出Syncphony框架，基于预训练的视频骨干网络（Pyramid Flow），在Transformer的后部模块中插入音频交叉注意力层进行条件注入。核心技术创新包括：(1) Motion-aware Loss：在训练中，根据相邻帧潜变量差异（代表运动强度）加权损失，使模型更关注高动态区域，从而更准确地学习与音频事件对应的运动时机和幅度。(2) Audio Sync Guidance (ASG)：在推理时，构建一个跳过音频层的“off-sync”弱模型，通过对比完整模型与弱模型的输出差异来放大音频信号的引导作用，无需额外训练即可增强同步性。
-3.  与已有方法相比的新颖性：不同于以往将音频映射到文本空间或基于振幅调制的方法，Syncphony通过直接交叉注意力注入音频特征。其提出的ASG引导机制巧妙地利用了架构中音频路径的独立性，避免了传统分类器自由引导（CFG）对音频条件（包括“静音”）进行随机丢弃导致的训练不一致问题。同时，提出了首个支持高帧率并基于V2A重建循环的同步评估指标CycleSync。
-4.  主要实验结果：在AVSync15和TheGreatestHits数据集上，Syncphony在CycleSync指标和用户研究中均显著优于现有方法。例如，在TheGreatestHits数据集上，Syncphony的CycleSync得分为16.18±1.26，而基线AVSyncD为9.89±0.84，甚至略高于真实视频的15.99±1.5。在AVSync15的用户研究中，74%的参与者认为Syncphony的同步性更好，90%认为图像质量更好。
-
-| 模型 | 输入 | FVD ↓ | CycleSync ↑ (AVSync15) |
-| :--- | :--- | :--- | :--- |
-| Pyramid Flow (fine-tuned) | I+T | 294.6 | 12.34±1.14 |
-| AVSyncD | I+T+A | 491.5 | 16.38±1.38 |
-| Syncphony (Ours) | I+T+A | 293.1 | 16.48±1.28 |
-| Groundtruth | - | - | 22.15±1.8 |
-
-5.  实际意义：为需要精确音视频同步的内容创作（如动画、游戏过场、音乐视频）提供了新的生成工具和技术路径。提出的Motion-aware Loss和ASG方法对其他需要时序对齐的跨模态生成任务也有借鉴意义。
-6.  主要局限性：1) 模型生成的视频分辨率（380×640）和时长（最长5秒）仍有限；2) 训练数据集（AVSync15, TheGreatestHits）规模较小且场景类型有限；3) CycleSync指标依赖外部V2A模型，其质量直接影响评估准确性；4) Motion-aware Loss基于帧间运动，可能无法完全区分与音频无关的运动（如相机移动、背景变化）。
+1.  解决的问题：当前基于深度学习的呼吸音分析面临两大挑战：一是单模态表示（如仅用频谱图）造成的信息损失，无法同时捕捉瞬态声学事件和临床文本上下文；二是缺乏大规模、高质量且类别不平衡的多模态数据集。
+2.  方法核心：提出 Resp-Agent，一个由新颖的“主动对抗性课程智能体”（Thinker-A2CA）协调的闭环多模态系统。该系统包含一个可控的“生成器”和一个鲁棒的“诊断器”。生成器通过模态注入改造一个纯文本LLM，并利用流匹配解码器合成指定病理内容的呼吸音；诊断器则采用“模态编织”策略，将临床文本与音频token在输入层交织，并通过战略全局注意力（利用音频锚点）进行融合推理。
+3.  新意所在：不同于静态流水线，Thinker-A2CA 作为中央控制器，主动识别诊断弱点并调度针对性合成，形成“诊断-生成”闭环。首次构建了包含22.9万条记录、配有LLM生成临床叙述的 Resp-229k 大规模基准。设计了内容-风格解耦的可控生成器与基于音频锚点的多模态诊断器。
+4.  主要实验结果：在 ICBHI 四分类任务上，Resp-Agent 达到 72.7% 的分数（Sp=79.3%, Se=66.1%），显著超越此前最优音频模型。在 Resp-229k 的严格跨域测试集（Test-CD）上，完整系统在平衡数据后达到 0.8870 准确率和 0.5980 Macro-F1，远优于无合成基线（0.849/0.212）。消融实验验证了生成器内容-风格解耦能力（Style-Sim >0.9）以及诊断器中模态编织与音频锚点（≈80ms分辨率）的关键作用。
+5.  实际意义：为医疗音频领域（特别是呼吸音）提供了一个将可控生成与鲁棒诊断相统一的系统化框架，推动了从被动分析到主动生成-诊断协同设计的范式转变，对医学教育、数据增强和模型可解释性研究有潜在价值。
+6.  主要局限：系统依赖一个强大的中央LLM（DeepSeek-V3.2-Exp）进行规划，计算成本与可控性需权衡。评估严重依赖合成数据和严格的源离域协议，缺乏在真实、混杂临床场景中的前瞻性验证。生成器的质量依赖上游LLM生成的文本和风格参考，引入了额外的误差传播链。
 
 ---
 

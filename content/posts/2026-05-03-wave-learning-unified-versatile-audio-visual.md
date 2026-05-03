@@ -81,10 +81,10 @@ WAVE的整体架构是一个端到端的多模态嵌入模型，设计用于处�
 - 分层特征融合：动机是认识到LLM不同层捕获不同层次的信息（低级感知线索到高级语义推理）。通过融合所有层的信息，而非仅用最后一层，可以获得更全面、稳健的表示。
 - 交错输入策略：旨在让LLM能够自然地处理交织的、时序对齐的多模态信息。
 
-![WAVE模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/MiV3WXDYJb-3.jpg)
+![WAVE模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MiV3WXDYJb-0.png)
 （图1：WAVE模型架构示意图。展示了文本、视觉、语音、音频四种输入模态的处理路径。视觉、语音和音频输入经过各自的编码器后，与文本提示令牌一起，通过交错策略形成输入序列送入LLM。对于多模态输入，最终嵌入通过聚合所有LLM层的最后令牌并经过融合模块生成。）
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/MiV3WXDYJb-0.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MiV3WXDYJb-0.png)
 （论文中的图片，可能用于辅助说明架构或训练过程，具体细节需结合论文正文。）
 
 ### 💡 核心创新点
@@ -167,7 +167,7 @@ WAVE的整体架构是一个端到端的多模态嵌入模型，设计用于处�
     | Qwen2.5-Omni 7B | - | - | - | - | 71.5 | 56.7 |
     | WAVE 7B | 44.2 | 25.6 | 25.0 | 20.4 | 76.6 | 68.1 |
 
-![论文中的实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/MiV3WXDYJb-1.png)
+![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MiV3WXDYJb-1.png)
 （论文中的实验结果图，可能展示了prompt-aware嵌入的案例研究或性能对比，具体结论需结合论文正文分析。）
 
 - 关键消融研究：
@@ -190,7 +190,7 @@ WAVE的整体架构是一个端到端的多模态嵌入模型，设计用于处�
 - 提示感知嵌入分析：
     - 在视频QA任务中，使用具体问题作为提示（w/ separate questions）的平均准确率为72.5%，而使用通用提示（w/ a common prompt）时平均准确率骤降至51.8%。这强烈证明了提示感知能力的重要性，以及模型根据指令动态调整表示的能力。
 
-![论文中的对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/MiV3WXDYJb-2.png)
+![论文中的对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MiV3WXDYJb-2.png)
 （论文中的对比图，可能用于展示不同特征融合方法或编码器配置的效果对比，具体数字需参考表格。）
 
 ### ⚖️ 评分理由

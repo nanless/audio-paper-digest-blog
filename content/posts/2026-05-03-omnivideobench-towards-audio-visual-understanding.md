@@ -156,15 +156,15 @@ hiddenInHomeList: true
 | 人类 | - | 82.69 | - | - | - | - | - |
 
 任务类型性能分析（图5）：
-![图5](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-4.png)
+![图5](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ItRYEe8E61-4.png)
 该图展示了部分模型在13种任务上的准确率。关键结论：所有模型在Bac&Mu（背景与音乐理解）任务上表现最差，即使是最强的Gemini-2.5-Pro准确率也低于50%。而在Rela（关系推理）和Summ（总结）任务上��现最好，Gemini-2.5-Pro超过80%。
 
 消融实验与分析：
 1.  ASR文本的作用（图6）：
-    ![图6](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-5.jpg)
+    ![图6](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ItRYEe8E61-0.png)
     图6a显示，为纯视觉模型（如Qwen2.5-VL-7B）提供ASR文本能显著提升准确率（从约30%提升至40%以上）。但原生的多模态模型Qwen2.5-Omni-7B（同时处理音视频）的性能却低于参数量相当的纯视觉模型+ASR，说明其音视频融合能力不足。图6b显示，ASR对语音类视频帮助大，但对音乐和环境音类视频几乎无帮助，证明了直接音频理解的不可替代性。
 2.  输入帧数的影响（图7）：
-    ![图7](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ItRYEe8E61-6.jpg)
+    ![图7](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ItRYEe8E61-1.png)
     实验表明，增加输入视频的帧数（从32帧到256帧）能持续提升模型准确率，尤其在长视频上提升更明显，说明密集时序采样对音视频推理至关重要。
 3.  错误分析（表6，图8-13）：
     论文通过人工和自动化结合的方式，将模型的错误归类为六大类。下表总结了Gemini-2.0-Flash、Qwen2.5-Omni和Qwen3-Omni在各错误类别上的比例（%）：

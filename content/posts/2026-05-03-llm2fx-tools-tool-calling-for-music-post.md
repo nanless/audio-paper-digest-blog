@@ -43,7 +43,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 整体是一个基于LLM的多模态自回归生成框架，旨在将文本指令和音频输入映射为链式思维推理、工具调用序列和自然语言回复。
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OyIJvyyB3R-1.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/OyIJvyyB3R-1.png)
 图中展示了模型的整体架构。输入部分包含用户指令文本（`einstruction`）、分隔符文本（`eSEP`）以及由音频编码器和适配器处理后的干音（`edry`）和参考音（`eref`）嵌入。这些统一构成LLM的输入序列。LLM内部经LoRA微调，输出序列依次为链式思维（`xcot`）、工具调用（`C`）和回复（`xresponse`）。
 
 主要组件及数据流：
@@ -101,7 +101,7 @@ hiddenInHomeList: true
 
 关键结论：LLM2Fx-Tools在Fx-chain规划（模块选择和顺序）上显著优于所有基线，并在感知和语义相似度上达到最佳。消融实验证明，CoT、NTL和MST三个组件对性能提升均有贡献。主观MUSHRA听感测试（图4）中，LLM2Fx-Tools（62.8分）显著优于Gemini 2.5 Flash（56.5分）和DeepAFx-ST（54.8分）。
 
-![论文中的实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OyIJvyyB3R-3.png)
+![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/OyIJvyyB3R-3.png)
 图为MUSHRA听感测试结果。LLM2Fx-Tools得分最高（62.8），显著优于其他非参考方法。有趣的是，错误应用效果的Regression和MultiTask方法得分甚至低于不做处理（No Fx），表明错误的Fx-chain规划会严重损害音质。
 
 2. 音频效果风格迁移（跨数据集：MoisesDB参考音 -> MedleyDB输入音）

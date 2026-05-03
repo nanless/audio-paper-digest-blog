@@ -52,7 +52,7 @@ SiTok是一个基于扩散自编码器的语音分词器，其整体流程如下
 
 训练总损失为三部分之和：扩散重建损失 + CTC语义损失 + 向量量化损失。
 
-![SiTok架构图](https://sitok-demo.github.io/sitok_architecture.png)
+![SiTok架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/llMfmDtWka-0.png)
 图1：SiTok架构概览图。左侧为编码器，中间为向量量化（VQ）模块，右侧上方为用于生成的扩散解码器，下方为用于语义监督的CTC解码器。训练时，梅尔频谱图 `x` 经编码、量化后，其离散表示 `z_q` 同时用于指导扩散解码器（通过前向扩散和损失 `L_rec`）和CTC解码器（通过损失 `L_ctc`）。
 
 ### 💡 核心创新点

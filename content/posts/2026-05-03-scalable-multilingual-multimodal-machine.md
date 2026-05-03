@@ -35,7 +35,7 @@ hiddenInHomeList: true
 
 该论文提出的语音引导机器翻译（SMT）框架主要包含两个核心组件：一个多模态大语言模型（MLLM） 和一个文本到语音（TTS）模型。其整体架构与工作流程如下图所示：
 
-![SMT框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HQMVRQUEaM-1.png)
+![SMT框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/HQMVRQUEaM-1.png)
 
 整体输入输出流程：
 1.  输入：系统接收源语言文本。
@@ -58,7 +58,7 @@ MLLM预训练与SMT训练（三阶段课程学习）：
 3.  语音引导机器翻译（SMT）阶段：MLLM学习处理联合的文本-语音输入，利用多模态信息生成高质量翻译。
 
 自进化机制架构：
-![自进化机制细节](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HQMVRQUEaM-0.png)
+![自进化机制细节](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/HQMVRQUEaM-0.png)
 该机制是一个四阶段的迭代循环，旨在自主生成和优化训练数据：
 1.  经验获取：使用TTS模型为数据集中的文本合成语音。
 2.  经验精炼（质量标注）：MLLM分别在仅文本模式（MT）和文本-语音融合模式（SMT）下对每个样本进行翻译。通过比较两种模式下的翻译质量分数（使用COMET评分），将样本分为正样本（SMT得分 > MT得分，语音输入有益）和负样本（SMT得分 ≤ MT得分，语音输入无益或有害）。
@@ -156,15 +156,15 @@ MLLM预训练与SMT训练（三阶段课程学习）：
 图表分析：
 - 图3：展示了不同资源等级语言上的COMET结果分布。SMT-9B模型（红色）在低资源（Low）和中等资源（Medium）方向上相比基线（蓝色）和DeepSeek（灰色）有更明显的分数提升。
 
-![按资源等级划分的COMET结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HQMVRQUEaM-2.png)
+![按资源等级划分的COMET结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/HQMVRQUEaM-2.png)
 
 - 图4：展示了自进化轮次对低资源语言翻译性能（spBLEU和COMET）的影响。第一轮进化带来的提升最大，约在第三轮达到最佳并趋于稳定。
 
-![自进化轮次对低资源语言的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HQMVRQUEaM-3.png)
+![自进化轮次对低资源语言的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/HQMVRQUEaM-3.png)
 
 - 图5：通过案例研究说明了语音模态如何帮助减少“欠翻译”（under-translation）��误。经过语音预训练，MLLM能更好地对齐文本单词与语音信号，从而避免忽略输入文本的一部分。
 
-![欠翻译错误案例研究](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HQMVRQUEaM-4.png)
+![欠翻译错误案例研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/HQMVRQUEaM-4.png)
 
 ### ⚖️ 评分理由
 

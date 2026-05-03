@@ -76,13 +76,13 @@ SumRA本身不是一个独立的模型架构，而是一种用于适配（Fine-t
     -   低秩适配层：标准的LoRA层，但A矩阵已固定。训练时仅更新B。
 
 3.  架构图说明：
-    ![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/v23Pqcm6qp-0.png)
+    ![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/v23Pqcm6qp-0.png)
     图1：对比了全量微调、标准LoRA、PiSSA和SumRA。关键区别在于右下角：SumRA通过求和多个奇异向量来初始化A（橙色模块），并冻结A，仅训练B（橙色模块）。这直观展示了SumRA如何将更广的知识压缩到A中，并通过共享A节省存储。
 
-    ![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/v23Pqcm6qp-1.png)
+    ![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/v23Pqcm6qp-1.png)
     图2：详细解释了A矩阵的初始化策略。D)子图展示了SumRA的核心思想：将`Σ^(1/2)V⊤`的多行求和后赋给A的一行，使这一行能同时影响对应于多个奇异向量的知识概念，从而扩大影响范围。
 
-    ![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/v23Pqcm6qp-2.png)
+    ![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/v23Pqcm6qp-2.png)
     图3：展示了不同的求和策略。A)块求和会导致重要向量集中，产生干扰；B)交错求和和C)贪婪求和则旨在将重要向量均匀分配到A的不同行，以平衡负载（`L_j`），减少干扰。
 
 ### 💡 核心创新点
@@ -132,7 +132,7 @@ SumRA本身不是一个独立的模型架构，而是一种用于适配（Fine-t
 不同数据规模影响（表4）：
 在Esperanto语言上，随着训练数据从10h增加到100h，SumRA（冻结A）相对于LoRA的优势逐渐缩小（10h时相对提升11.2%，100h时接近持平），表明SumRA在低资源场景下优势最为明显。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/v23Pqcm6qp-3.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/v23Pqcm6qp-3.png)
 图4：内存成本对比。A)标准LoRA为每个任务存储独立的A和B；B)SumRA允许所有任务共享冻结的A，只需存储各自的B，从而大幅降低额外存储成本。这直观说明了SumRA的可扩展性优势。
 
 ### ⚖️ 评分理由

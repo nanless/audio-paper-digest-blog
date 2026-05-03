@@ -46,7 +46,7 @@ hiddenInHomeList: true
 
 UALM的核心是一个基于Qwen2.5-7B初始化的解码器专用Transformer大语言模型，其架构通过添加音频输入和输出模块进行扩展，如图2所示。
 
-![UALM架构概览与数据混合比例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TsdlOjcQNu-0.png)
+![UALM架构概览与数据混合比例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/TsdlOjcQNu-0.png)
 图2：UALM架构概览（左）和多模态预训练数据混合比例（右）。模型主体是一个初始化自Qwen2.5-7B的解码器专用Transformer。音频输入路径为：单声道16kHz音频 → 预训练并冻结的声学编码器（25Hz帧率） → 可训练的MLP适配器 → 输入到Transformer。音频输出路径为：Transformer预测离散音频编解码器令牌（使用X-Codec，50Hz帧率，8个RVQ层/帧，采用延迟模式） → 通过增强VAE将16kHz单声道输出波形升级为48kHz立体声波形。右图展示了预训练数据混合中，理解、生成（2倍上采样）和文本数据的比例。
 
 完整输入输出流程：
@@ -55,7 +55,7 @@ UALM的核心是一个基于Qwen2.5-7B初始化的解码器专用Transformer大�
 - 文本输出：Transformer自回归地生成文本令牌，用于理解任务的输出或推理过程中的文本思考。
 - 音频输出：Transformer预测离散的音频编解码器令牌。音频被X-Codec编码为50Hz帧率的8层RVQ令牌。为提高效率，采用延迟模式（图7），在序列的每个步骤并行预测8个不同层的令牌。生成16kHz单声道音频后，一个增强VAE（基于Vocos和Stable Audio Open架构的Encoder-Decoder）将其转换为48kHz立体声音频，以提高感知质量。
 
-![延迟模式说明](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TsdlOjcQNu-1.png)
+![延迟模式说明](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/TsdlOjcQNu-1.png)
 图7：RVQ音频令牌的延迟模式说明。An,k表示第n个RVQ层在第k帧的令牌。在序列步骤s，语言模型并行预测{n个令牌：A1,s, A2,s-1, ..., Anq,s-nq+1}，其中nq=8。这减少了自回归步骤数（从T8降至T+7）。*
 
 关键组件与设计动机：
@@ -99,7 +99,7 @@ UALM的核心是一个基于Qwen2.5-7B初始化的解码器专用Transformer大�
 表1：音频生成结果对比。UALM-Gen和UALM在多个指标上达到或超过领先的扩散模型基线（如ETTA、Stable Audio Open）。
 
 消融实验关键结论（图5和表8）：
-![音频生成消融分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TsdlOjcQNu-2.png)
+![音频生成消融分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/TsdlOjcQNu-2.png)
 图5：(a) CLAP分数(CL)与CFG权重λ的关系，λ=3.0时最优；(b) CL与训练数据量缩放的关系，表明LM生成需要大量数据；(c) 有无自适应的DPO损失曲线；(d) 有无CE正则化时与参考模型的发散程度。
 消融表明：①CFG对生成质量（尤其是CL）至关重要；②数据规模对自回归生成成功是关键；③DPO前进行自适应能稳定训练；④增强VAE显著降低FD并提升整体质量（表8）。
 
@@ -129,7 +129,7 @@ UALM的核心是一个基于Qwen2.5-7B初始化的解码器专用Transformer大�
 | UALM-Reason | 4.01 ± 0.10 | 4.02 ± 0.10 | 4.04 ± 0.09 |
 表4：多模态推理生成的5分制主观评分。UALM-Reason在所有推理模式下均优于基线UALM。
 
-![训练过程中能力变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TsdlOjcQNu-3.png)
+![训练过程中能力变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/TsdlOjcQNu-3.png)
 图6：(a) 音频理解（MMAU平均）和(b) 音频生成（CL分数）能力随训练步数的变化曲线。音频理解收敛更快，音频生成需要更多数据/步骤。
 
 ### ⚖️ 评分理由

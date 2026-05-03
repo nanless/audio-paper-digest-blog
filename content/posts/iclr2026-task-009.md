@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 模型合并 论文列表"
+title: "ICLR 2026 - 机器人操作 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["模型合并"]
+tags: ["机器人操作"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 模型合并 方向论文"
+description: "共 1 篇 ICLR 2026 机器人操作 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 模型合并
+# ICLR 2026 - 机器人操作
 
 共 **1** 篇论文
 
@@ -18,43 +18,60 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OptMerge: Unifying Multimodal LLM Capabilities and Modalitie](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and) | 8.0分 | 前25% |
+| 🥇 | [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni) | 8.0分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OptMerge: Unifying Multimodal LLM Capabilities and Modalities via Model Merging](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and)
+### 🥇 [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni)
 
-🔥 **8.0/10** | 前25% | #模型合并 | #模型合并 | #多模态模型 #基准测试
+🔥 **8.0/10** | 前10% | #机器人操作 | #多模态模型 | #端到端 #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Yongxian Wei（清华大学）
-- 通讯作者：Chun Yuan（清华大学，标注为*）
-- 作者列表：Yongxian Wei（清华大学）、Runxi Cheng（清华大学）、Weike Jin（华为诺亚方舟实验室）、Enneng Yang（中山大学）、Li Shen（中山大学）、Lu Hou（华为诺亚方舟实验室）、Sinan Du（清华大学）、Chun Yuan（清华大学）、Xiaochun Cao（中山大学）、Dacheng Tao（南洋理工大学）
+- 第一作者：Siyin Wang（复旦大学，上海创新研究院）
+- 通讯作者：Jinlan Fu（新加坡国立大学），Xipeng Qiu（复旦大学，上海创新研究院）
+- 作者列表：Siyin Wang（复旦大学，上海创新研究院），Jinlan Fu†（新加坡国立大学），Feihong Liu（复旦大学），Xinzhe He（复旦大学），Huangxuan Wu（复旦大学），Junhao Shi（复旦大学，上海创新研究院），Kexin Huang（复旦大学），Zhaoye Fei（复旦大学），Jingjing Gong（上海创新研究院），Zuxuan Wu（复旦大学，上海创新研究院），Yu-Gang Jiang（复旦大学），See-Kiong Ng（新加坡国立大学），Tat-Seng Chua（新加坡国立大学），Xipeng Qiu†（复旦大学，上海创新研究院）
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文为多模态大模型（MLLM）的模型合并领域填补了重要的空白，提出了首个细粒度的能力合并基准，并证明了数据免费的合并方法在性能上可以与甚至超越需要大量数据的混合训练，这对社区是实实在在的贡献。短板：虽然实验在InternVL2.5-1B和Qwen2-VL-7B上验证了方法，但更大规模（如32B以上）模型的合并效果和泛化性仍有待验证；此外，模态合并实验仅限于Vision-Audio-Video三种模态，离真正的“全模态”模型尚有距离。
+亮点：它敏锐地抓住了当前VLA模型“等指令”的呆板痛点，并构建了一整套从“新问题定义”到“新架构”再到“新数据集”的解决方案闭环，特别是将语音中的副语言特征（如情感、说话人身份）作为关键推理线索，而非丢弃给ASR，这是一次重要的认知升级。短板：目前的实验场景仍以相对简单的“单步/少步抓取放置”为主，在更复杂的多步骤、长序列任务中，其“主动推理”的准确率和稳定性如何，以及如何处理复杂对话中的误解与修正，论文未做深入探讨，距离真正的“管家式”智能仍有距离。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文明确表示将公开所有代码（“All code and checkpoints are publicly available here”）。
-- 模型权重：论文承诺公开所有训练得到的专家模型检查点（“we train expert models for each task and publicly release their weights”）。
-- 数据集：论文中收集和使用的数据集均为公开数据集（见表1和表11），并提供了获取方式或引用。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了极为详细的复现材料，包括：a) 详细的训练数据集列表和规模（表1，表11）；b) 完整的评估基准和评估工具（VLMEvalKit, LMMs-Eval）；c) 所有合并方法的超参数设置（如λ搜索范围、优化器、学习率、迭代次数）；d) OptMerge的关键设计细节（如秩k的取法）；e) 详细的硬件配置（8×V100）。
-- 论文中引用的开源项目：引用了MergeKit, LLaVA, Qwen2-VL, InternVL2.5, Vicuna, CLIP, BEATs, LanguageBind等多个开源模型和工具。
+- 代码：是。提供GitHub仓库链接：https://github.com/OpenMOSS/RoboOmni。
+- 模型权重：是。论文中提及将开源模型检查点。
+- 数据集：是。论文中明确表示将开源OmniAction数据集和OmniAction-LIBERO基准。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：非常充分。论文详细说明了训练配置（GPU数量、学习率、batch size、epoch等）、数据集构建三阶段流程、评估指标和设置，并在附录中提供了更多示例和细节。
+- 依赖的开源项目：论文依赖了多个开源模型和工具作为基线或组件，包括：OpenVLA, OpenVLA-OFT, π0, NORA, Qwen2.5-Omni, Whisper (for ASR baseline), DINOv2, SigLIP, PaliGemma, Llama-2等。此外，数据集构建使用了MOSS-TTS, CosyVoice等TTS引擎。
 
 📌 **核心摘要**
 
-1.  问题：现有的模型合并研究主要针对视觉分类模型或文本LLM，缺乏针对多模态大语言模型（MLLM）的标准化基准和系统研究，特别是如何通过无数据的模型合并来统一MLLM的多种能力（如VQA、OCR）或融合不同模态。
-2.  方法核心：本文提出名为OptMerge的模型合并方法。针对全参数微调模型，它先对任务向量去中心化并截断SVD，再基于去噪后的任务向量优化合并向量；针对LoRA微调模型，采用SGD优化器、均值初始化并直接进行低秩近似，以稳定优化过程。
-3.  与已有方法相比新在哪里：a) 建立了首个针对MLLM的细粒度合并基准，包含5类能力任务的专门模型与评测；b) OptMerge方法通过任务向量去噪和鲁棒优化，解决了直接优化合并向量时的噪声干扰和范数失控问题；c) 首次系统研究了“模态合并”，证明了合并不同模态模型能构建更优的统一模型。
-4.  主要实验结果：在能力合并上，OptMerge在InternVL2.5（全参数）和Qwen2-VL（LoRA）基准上平均性能分别比最强基线提升0.44%和4.65%（相比WUDI Merging）。合并后的模型性能在多个任务上可达到或超过专家模型和混合训练模型（如表2，Qwen2-VL OptMerge平均得分63.30，高于Qwen2-VL-Instruct的62.23）。在模态合并上，合并视觉、音频、视频模型后，在Audio-VQA任务（MUSIC-AVQA, AVQA）上平均得分67.00，超过任何单模态模型（表5）。与混合训练相比，OptMerge在计算资源和时间上具有显著优势（表7）。
-5.  实际意义：提供了一种无需训练数据、低成本、高效率的后训练方法，用于整合开源社区中分散的、针对不同任务或模态微调的模型，快速构建更强大的多模态统一模型，推动了去中心化的模型开发与部署。
-6.  主要局限性：实验评估的模型规模上限为7B和32B，更大规模模型的合并效果未知；模态合并实验仅涉及三种模态；收集的公开训练数据集可能存在质量问题；未能与所有最新的动态合并（如MoE-like）方法进行对比。
+1. 解决问题：针对现有视觉-语言-动作（VLA）模型依赖显式指令、无法主动从多模态上下文（语音、环境声、视觉）中推断用户潜在意图的局限性，提出了“跨模态上下文指令”这一新问题设置。
+2. 方法核心：提出RoboOmni，一个基于端到端全模态大语言模型的“感知器-思考器-对话器-执行器”（Perceiver-Thinker-Talker-Executor）统一框架。它直接处理语音波形和环境声音（而非ASR文本），融合视觉信号，进行意图推理、确认交互，并生成动作。
+3. 新贡献：相比仅处理文本或ASR文本的方法，RoboOmni能保留语音的副语言线索（情感、身份、语调），并具备主动对话能力。为解决数据匮乏，构建了包含14万集、覆盖6种上下文指令类型的大规模OmniAction数据集。
+4. 实验结果：在OmniAction-LIBERO仿真基准上，RoboOmni平均成功率（85.6%）显著超过最强文本基线NORA（25.9%）。在真实WidowX机械臂实验中，成功率（73.9%）超过最佳ASR+VLA基线（52.2%）。消融实验证实了音频、视觉和副语言线索的互补性至关重要（如移除音频，意图识别准确率从88.89%暴跌至11.11%）。具体实验结果对比如下表所示：
+
+| 模型/方法 | OmniAction-LIBERO-TTS 平均成功率 | OmniAction-LIBERO-Real 平均成功率 |
+| :--- | :--- | :--- |
+| OpenVLA (Ground-truth Text) | 2.6% | - |
+| NORA (Audio → ASR → Text) | 25.9% | 17.4% |
+| π0 (Ground-truth Text) | 4.4% | 73.8% |
+| RoboOmni (Ours) | 85.6% | 76.6% |
+
+![论文中的实验结果对比图](icassp-img://OJh7oBCYhL/4.png)
+图5内容：该图展示了在真实世界实验中，RoboOmni与ASR+VLA基线在六种上下文指令类型上的成功率对比，RoboOmni在所有类别上均显著领先。
+
+5. 实际意义：为创建更自然、主动、能“察言观色”的服务机器人提供了新的技术路径和基准，推动了机器人从被动执行向主动协作的范式转变。
+6. 主要局限性：实验验证的任务复杂度有限，多集中于单次抓取；“主动交互”的质量和效率评估指标尚显简单；模型对长对话历史和高噪声环境的鲁棒性有待进一步验证。
+
+#
 
 ---
 

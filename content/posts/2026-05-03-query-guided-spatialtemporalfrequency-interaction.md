@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 模型整体架构如图2（论文中的图片）所示，采用端到端训练流程。
 
-![Query-guided Spatial-Temporal-Frequency Interaction for Music Audio-Visual Question Answering 架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/8CnU2kchiw-1.png)
+![Query-guided Spatial-Temporal-Frequency Interaction for Music Audio-Visual Question Answering 架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/8CnU2kchiw-1.png)
 
 输入表示：将视频分割为T个1秒片段。视觉特征使用预训练CLIP提取帧级（`Fv`）和patch级（`Fp`，经Token Merging压缩）特征；音频特征使用预训练VGGish提取（`Fa`）；文本问题使用CLIP文本编码器提取句子级（`Fsentence`）和词级（`Fw`）特征。
 
@@ -117,7 +117,7 @@ Table 1: Comparison with existing methods on the MUSIC-AVQA test set (部分关�
 
 表2：主模块消融实验，表明各模块均有贡献，QGMC和TFI尤为重要。
 
-![论文中的实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/8CnU2kchiw-2.png)
+![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/8CnU2kchiw-2.png)
 图3（a）展示了QSTar在复杂多乐器场景下的预测优势，正确利用音频频率线索识别出视觉上不明显的大提琴。
 
 ### ⚖️ 评分理由

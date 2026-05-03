@@ -59,7 +59,7 @@ hiddenInHomeList: true
 论文主要聚焦于后训练策略（SFT和GRPO）和数据策略，其核心贡献并非提出新的模型架构。实验中使用的基座模型是 Qwen2.5-Omni。论文未提供该模型的具体架构细节图。整体流程为：使用AudioMCQ数据集，通过SFT（监督微调）和GRPO（群组相对策略优化）两阶段对Qwen2.5-Omni进行微调。GRPO的具体实现参考了DeepSeek的公式（公式13），其关键在于使用同一批次生成样本的平均奖励作为基线，而不需要单独的值网络。
 
 论文中提供的流程图为数据集构建流程：
-![图1：音频MCQ数据集构建流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sJ0jUO9Mxr-0.png)
+![图1：音频MCQ数据集构建流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sJ0jUO9Mxr-0.png)
 该图详细展示了从原始音频-文本对数据，经过问题生成、选项生成、结构化CoT生成、CoT简化、质量评估与过滤，最终形成AudioMCQ数据集的完整管线。
 
 ### 💡 核心创新点
@@ -96,10 +96,10 @@ hiddenInHomeList: true
 - 数据集中的音频贡献分布：表3显示，不同来源的数据集音频贡献特性差异巨大，例如CompA-R弱贡献样本占75.5%，而TACOS强贡献样本占73.3%。
 - 训练过程性能变化（图5）：详细展示了三种训练策略（弱到强、混合到强、混合到混合）在训练过程中于各基准及其强音频贡献子集上的性能曲线。关键发现是，使用强音频贡献数据进行GRPO训练能显著提升模型在强音频贡献子集上的表现，而使用混合数据进行GRPO则提升有限甚至可能下降。
 
-![图4：三种训练方法在MMAU-test-mini-4k上的性能与检查点选择](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sJ0jUO9Mxr-3.png)
+![图4：三种训练方法在MMAU-test-mini-4k上的性能与检查点选择](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sJ0jUO9Mxr-3.png)
 上图展示了最优检查点的选择过程。“弱到强”策略在SFT后性能更高，且后续GRPO提升显著；“混合到强”策略也优于“混合到混合”基线。
 
-![图5：三种训练方法在多个基准及其ACstrong子集上的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sJ0jUO9Mxr-4.png)
+![图5：三种训练方法在多个基准及其ACstrong子集上的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sJ0jUO9Mxr-4.png)
 上图直观显示，“弱到强”策略在MMAU系列上效果最佳，而“混合到强”策略在MMAR和MMSU上效果最佳，印证了SFT数据选择应匹配下游任务特性的结论。
 
 4. 与SOTA对比

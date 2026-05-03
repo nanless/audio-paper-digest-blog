@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 MVC的架构是一个条件扩散TTS系统，其创新集中在替换标准的基于Attention的条件建模路径，使其在推理时完全由SSM（Mamba）模块构成。
 
-![MVC架构概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/0oXyMbPMtP-0.png)
+![MVC架构概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/0oXyMbPMtP-0.png)
 图：MVC框架概览。该图展示了从音素化文本和参考音频输入，经过Bi-Mamba文本编码器、时间Bi-Mamba、表达性Mamba等SSM模块，最终生成用于驱动扩散解码器的条件特征的完整流程。训练时的轻量级对齐器（虚线框）在推理时被移除。
 
 完整输入输出流程：
@@ -179,13 +179,13 @@ MVC的架构是一个条件扩散TTS系统，其创新集中在替换标准的�
 结论：完整的“门控+AdaLN”设计显著优于其他变体，特别是比简单的拼接融合有巨大优势，证明了该设计对长文本稳定性的关键作用。
 
 5. 训练收敛与波形/频谱图分析
-![训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/0oXyMbPMtP-2.png)
+![训练收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/0oXyMbPMtP-2.png)
 图：验证MOS和F0 RMSE随训练轮次的变化曲线（来自论文Figure 3）。MVC比StyleTTS2收敛更快，在更少的epoch内达到相当的验证集性能。
 
-![波形对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/0oXyMbPMtP-1.png)
+![波形对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/0oXyMbPMtP-1.png)
 图：合成波形对比图（来自论文Figure 2）。MVC的波形在时序结构和振幅一致性上与真实波形最接近。
 
-![频谱图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/0oXyMbPMtP-3.png)
+![频谱图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/0oXyMbPMtP-3.png)
 图：合成频谱图对比（来自论文Figure 4）。MVC合成的频谱图在谐波连续性和共振峰过渡上更接近真实语音。
 
 ### ⚖️ 评分理由

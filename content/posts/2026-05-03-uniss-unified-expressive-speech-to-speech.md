@@ -50,7 +50,7 @@ UniSS 巧妙地利用预训练 LLM 作为“大脑”，并通过精心设计的
 | 2-Stage (级联) | 2.8B | 26.94 | 20.86 | 0.67 | 0.52 | 3.79 | 3.48 |
 | GPT-4o (MLLM) | 未公开 | 31.64 | 19.27 | 0.47 | 0.37 | 3.46 | 4.18 |
 
-![论文中的实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5o0ZvYzh6B-2.png)
+![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5o0ZvYzh6B-2.png)
 图3：UniST数据集构建流程概览、时长比分布及语音时长分布。
 
 5.  实际意义是什么：为构建下一代表达性 S2ST 系统提供了一种更简单、更有效的范式。通过合成数据流水线构建了大规模高质量数据集 UniST，为社区研究解决了数据瓶颈问题。
@@ -58,7 +58,7 @@ UniSS 巧妙地利用预训练 LLM 作为“大脑”，并通过精心设计的
 
 ### 🏗️ 模型架构
 
-![论文中的架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5o0ZvYzh6B-1.png)
+![论文中的架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5o0ZvYzh6B-1.png)
 图2：UniSS 总体架构、跨模态 CoT 提示及三阶段渐进式训练示意图。
 
 UniSS 是一个统一的自回归语言模型，核心流程为：

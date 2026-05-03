@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 论文中的核心模型是SpeechJudge-GRM（生成式奖励模型）。其整体架构基于一个现有的多模态大语言模型Qwen2.5-Omni-7B。
 
-![论文中的模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I9ED9VWZq6-3.png)
+![论文中的模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I9ED9VWZq6-3.png)
 
 图4说明：该图展示了SpeechJudge-GRM的训练流程，即其核心构建方法。
 1.  输入：对于一个语音判断样本 `(t, a1, a2)`，使用一个精心设计的Chain-of-Thought (CoT) 提示（包含任务描述、目标文本t和两个语音a1, a2）作为输入。
@@ -120,7 +120,7 @@ hiddenInHomeList: true
 
 3. 下游任务结果：使用GRM进行高质量样本选择
 
-![论文中的主观评估对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I9ED9VWZq6-2.png)
+![论文中的主观评估对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I9ED9VWZq6-2.png)
 图5说明：此图展示了使用不同奖励模型从TTS模型生成的100个样本中选出最佳1个，与随机选出的样本进行人类盲评的胜/负/平比例。SpeechJudge-GRM选出的样本相比随机样本，有更高的胜率（43.0%）和更低的负率（30.2%），优于SpeechJudge-BTRM。这证明GRM作为质量排序工具的有效性。
 
 4. 下游任务结果：使用GRM作为奖励函数进行TTS模型后训练
@@ -133,7 +133,7 @@ hiddenInHomeList: true
 | w/ SpeechJudge-GRM (offline) | 91.0% | 0.21 ±0.12 |
 | w/ SpeechJudge-GRM (online) | 90.0% | 0.25 ±0.09 |
 
-![论文中的后训练主观评估结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I9ED9VWZq6-0.png)
+![论文中的后训练主观评估结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I9ED9VWZq6-0.png)
 图6说明：(a)表显示了不同后训练方法对TTS模型文本准确率和自然度CMOS的影响。使用GRM（特别是online RL）的方法获得了最高的自然度CMOS提升（+0.25）。(b)图展示了后训练方法对说话人相似度的影响，所有方法均有提升，SpeechJudge-GRM方法与其他方法相比保持竞争力或略有优势。
 
 ### ⚖️ 评分理由

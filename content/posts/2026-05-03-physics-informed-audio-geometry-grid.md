@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![AGG-RL框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/bWXpJFesLS-0.png)
+![AGG-RL框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/bWXpJFesLS-0.png)
 （注：此图为论文中图2的复现链接，用于清晰展示框架。原图URL: icassp-img://bWXpJFesLS/1.png）
 框架整体分为两个并行分支和相似度计算部分：
 1.  输入：多通道音频信号、麦克风阵列几何坐标、候选DOA网格点。
@@ -69,11 +69,11 @@ hiddenInHomeList: true
     *   计算`A`和`G`的缩放点积，再通过sigmoid函数，得到概率空间谱`Ŝ`（公式16），表示每个候选DOA存在声源的概率。
 5.  训练与推理：训练时使用软标签（oracle空间谱）和加权二元交叉熵损失。推理时通过峰值检测从`Ŝ`中提取DOA估计。
 
-![AuGeonet架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/bWXpJFesLS-1.png)
+![AuGeonet架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/bWXpJFesLS-1.png)
 （注：此图为论文中图4的复现链接。原图URL: icassp-img://bWXpJFesLS/3.png）
 此图详细展示了AuGeonet内部结构，包括LNuDFT输入、GCC-PHAT计算、rMPE的注入位置（每个RCB块和CW-MHSA层）、以及最终的表示映射块（RMB）。
 
-![Gridnet架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/bWXpJFesLS-2.png)
+![Gridnet架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/bWXpJFesLS-2.png)
 （注：此图为论文中图5的复现链接。原图URL: icassp-img://bWXpJFesLS/4.png）
 此图展示了Gridnet由多个“线性层-ELU-层归一化”块组成的简单结构。
 
@@ -136,11 +136,11 @@ hiddenInHomeList: true
 -   D≥512后，性能趋于稳定，证明框架的网格灵活性。
 -   D过大（如>2048）时，在真实数据上性能略有下降，可能因过度敏感于训练与真实数据的细微声学不匹配。
 
-![环境条件影响分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/bWXpJFesLS-3.png)
+![环境条件影响分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/bWXpJFesLS-3.png)
 （注：此图为论文中图9的复现链接。原图URL: icassp-img://bWXpJFesLS/8.png）
 该图展示了方法在不同SNR和RT60条件下的MAE和ACC10，表明所提方法在各种声学环境下均优于基线（Unet with AGG-RL, Neural-SRP with AGG-RL），尤其在低SNR和高���响下优势明显。
 
-![空间谱可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/bWXpJFesLS-4.png)
+![空间谱可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/bWXpJFesLS-4.png)
 （注：此图为论文中图10的复现链接。原图URL: icassp-img://bWXpJFesLS/9.png）
 描述：此图对比了所提方法、Neural-SRP、Unet和oracle在包含两个说话人的NAO机器人数据集样本上的空间谱（平均投影到Mollweide图）。所提方法产生的谱峰清晰、尖锐且准确对准两个真实DOA，与oracle非常接近。而Neural-SRP的峰宽且模糊，Unet的峰不够清晰。
 

@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 3.  组件间交互：流式ASR和VLM是松散耦合的。ASR的输出（转录文本和时间戳）直接作为VLM的输入文本部分。VLM本身并不直接处理原始音频流（除非使用VideoLLaMA等原生支持音频的模型），在标准基线中，VLM主要处理视觉和文本。Stream-Qwen-Omni则实现了视听信息的同步流式输入。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I3dPEvbp8o-2.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I3dPEvbp8o-2.png)
 (图中展示了Stream-Qwen-Omni的结构对比：离线版本一次性接收所有多媒体数据并选择最佳响应时间；流式版本将多媒体数据按1秒分块输入，模型需要在流式过程中决定何时开始生成答案。这直观说明了流式处理的关键挑战——判断回答时机。)
 
 关键设计选择与动机：采用“流式ASR + 后接VLM”的松散组合架构，动机在于它最贴近当前多数多模态模型的实际使用方式（先转录文本，再联合处理），并能快速搭建一个评估基线。这种设计的局限性也显而易见：ASR的错误会传播，且未能实现视听信号在底层的深度交互融合。
@@ -111,10 +111,10 @@ hiddenInHomeList: true
 *   回答时机的影响（图3）：Stream-Qwen-Omni使用自身预测的时间戳（黄色柱）整体正确率约44%，使用ASR时间戳（蓝色柱）约39%，而使用真实时间戳（红色柱）可达约55%。这证明准确的“何时回答”判断对最终性能影响巨大。
 *   时序 vs. 静态任务（表C.3）：人类在两类任务上表现均衡（88.44% vs 86.46%），而最强模型（如Qwen3-VL）在静态任务67.06%，时序任务仅46.36%，差距达20.7个百分点。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I3dPEvbp8o-3.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I3dPEvbp8o-3.png)
 (此图对比了VideoLLaMA2.1-7B-AV模型在公开预训练、融合音频以及在QIVD上微调后的性能。红色（AV融合）与蓝色（仅视觉）对比显示音频对“音频视觉”、“主观”等类别有巨大提升；紫色（微调AV）与绿色（微调仅视觉）对比显示，微调后模型在多模态输入下表现最佳，但在某些仅视觉任务上性能略有下降。)
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/I3dPEvbp8o-4.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/I3dPEvbp8o-4.png)
 (此图展示了不同模型（包括人工基线）在QIVD各语义类别上的正确率。人类（灰色柱）在所有类别上遥遥领先，尤其在动作计数、音频视觉等类别优势明显。最强模型GPT-4o（绿色柱）和Qwen3-VL（浅蓝色柱）在这些类别上表现仍不理想。)
 
 3. 核心发现：

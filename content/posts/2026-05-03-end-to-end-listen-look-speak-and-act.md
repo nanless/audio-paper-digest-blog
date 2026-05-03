@@ -47,12 +47,12 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ELLSA的核心是实现流式全双工多输入多输出（MIMO）。它将连续的交互过程组织为一个个时间块（默认为1秒）。在每个时间块内，按固定顺序处理：输入语音、输入图像、输出文本、输出动作。语音输出则从文本输出的嵌入直接生成，不占用主序列位置。每个模态段由特定的开始/结束标记（如`<bos>`, `<eos>`）界定。架构如图1所示。
 
-![ELLSA总体框架及流式全双工MIMO设计](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LYyoRqf0Ij-0.png)
+![ELLSA总体框架及流式全双工MIMO设计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LYyoRqf0Ij-0.png)
 图1： (a) ELLSA总体框架，展示了不同模态由不同专家处理，并通过SA-MoE架构进行交互；(b) 通过交错的时序多模态序列实现流式全双工MIMO交互。
 
 ELLSA的核心组件是SA-MoE（自注意力混合专家） 架构，其工作机制如图2所示。
 
-![SA-MoE工作机制](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LYyoRqf0Ij-1.png)
+![SA-MoE工作机制](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LYyoRqf0Ij-1.png)
 图2：SA-MoE工作机制。每个模态被路由到其指定的专家，跨模态交互通过注意力机制实现。推理时，所有专家共享统一的KV缓存。
 
 1.  专家分工：模型包含两个主要专家：
@@ -127,7 +127,7 @@ ELLSA的核心组件是SA-MoE（自注意力混合专家） 架构，其工作�
 - 在LIBERO LONG任务中，模型需在执行过程中回答关于当前状态的问题（如“黑碗现在在哪？”）。
 - 平均准确率约为82.5%（人工标注）/ 83.3%（Gemini标注），表明模型能有效整合所有模态信息进行推理。
 
-![ELLSA高级能力示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LYyoRqf0Ij-3.png)
+![ELLSA高级能力示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LYyoRqf0Ij-3.png)
 图4：ELLSA高级能力示例，展示了从语音指令开始，执行动作、参与上下文VQA并支持动作中断的完整流程，体现了其多模态联合感知与并发生成的核心能力。
 
 ### ⚖️ 评分理由

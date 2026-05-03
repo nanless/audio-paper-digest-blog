@@ -79,10 +79,10 @@ hiddenInHomeList: true
 - 开源与闭源竞争：开源模型Qwen2.5-Omni-7B（60.57%）表现接近最佳闭源模型Gemini-1.5-Pro（60.68%）。
 - 噪声鲁棒性：图5(a)显示，在加入不同程度高斯噪声后，所有模型性能仅有小幅下降，表明模型确实在利用音频信号而非仅靠文本偏差。
 
-![图5(a)](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/yHzCDP1tXw-4.png)
+![图5(a)](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/yHzCDP1tXw-4.png)
 图5(a)：模型在不同噪声强度下的性能对比，显示了模型的鲁棒性。
 
-![图4](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/yHzCDP1tXw-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/yHzCDP1tXw-3.png)
 图4：六个代表性模型在47个感知和推理任务上的准确率分布，显示了不同任务的难度差异和模型间的优势领域不同。
 
 - 学术质量：5.5/7：本文作为一篇基准测试论文，其创新性和价值不在于提出新颖的模型架构，而在于构建了一个设计严谨、理论扎实、覆盖面广的评估体系。数据构建流程科学，包含专家设计、人工审核等环节，保证了基准的质量。对22个模型的评估实验充分，结果分析揭示了当前模型的共性短板（感知弱、音系学理解差），为社区提供了清晰的改进地图。扣分点在于，它本身不解决这些短板，且5000个样本的规模对于如此宏大的任务谱系来说，每个任务的样本量（平均约106个）可能稍显不足。
@@ -144,10 +144,10 @@ hiddenInHomeList: true
 - 开源与闭源竞争：开源模型Qwen2.5-Omni-7B（60.57%）表现接近最佳闭源模型Gemini-1.5-Pro（60.68%）。
 - 噪声鲁棒性：图5(a)显示，在加入不同程度高斯噪声后，所有模型性能仅有小幅下降，表明模型确实在利用音频信号而非仅靠文本偏差。
 
-![图5(a)](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/yHzCDP1tXw-4.png)
+![图5(a)](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/yHzCDP1tXw-4.png)
 图5(a)：模型在不同噪声强度下的性能对比，显示了模型的鲁棒性。
 
-![图4](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/yHzCDP1tXw-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/yHzCDP1tXw-3.png)
 图4：六个代表性模型在47个感知和推理任务上的准确率分布，显示了不同任务的难度差异和模型间的优势领域不同。
 
 ### ⚖️ 评分理由

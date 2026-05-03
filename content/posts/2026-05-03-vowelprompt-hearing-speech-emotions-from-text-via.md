@@ -74,7 +74,7 @@ VowelPrompt的整体框架如图1所示，其核心思想是将原始音频信�
 - 自然语言中间表示：将声学特征“翻译”成LLM能直接处理的文本，是实现文本LLM“听懂”情感的关键桥梁，也保证了极佳的可解释性。
 - 两阶段训练（SFT+GRPO）：SFT提供冷启动，RLVR通过显式奖励（正确性+格式）进一步优化推理质量和输出结构的鲁棒性。
 
-![VowelPrompt框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/PMbionN5cC-0.png)
+![VowelPrompt框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PMbionN5cC-0.png)
 （图注：展示了VowelPrompt框架的整体流程。从左至右，输入语音和文本，经过强制对齐提取元音，计算并转换为自然语言描述的韵律特征，与文本拼接后输入LLM，最终输出推理过程和情感标签。）
 
 ### 💡 核心创新点

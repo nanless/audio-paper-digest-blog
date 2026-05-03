@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文提出的整体框架InterActHuman基于预训练的DiT视频生成模型，主要包含三个核心部分：参考图像注入、掩码预测与局部音频注入。其流程如图2所示。
 
-![InterActHuman框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/rJilRU8D3c-1.png)
+![InterActHuman框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/rJilRU8D3c-1.png)
 图2：InterActHuman框架示意图，展示了如何通过预测掩码作为空间引导，在去噪过程中迭代地注入局部音频条件。
 
 1.  多概念参考图像注入：
@@ -140,7 +140,7 @@ hiddenInHomeList: true
 | 预��掩码（Ours） | 6.670 | 4.757 | 3.467 | 22.881 |
 *   关键结论：预测的动态掩码在Sync-D（唇形同步）和FVD（视频质量）上均取得最优，证明了其有效性。全局音频虽IQA（图像质量）高，但唇形同步差；固定掩码唇形同步尚可，但视频质量最差（FVD最高）。
 
-![消融研究定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/rJilRU8D3c-5.jpg)
+![消融研究定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/rJilRU8D3c-0.png)
 图6：音频注入策略的消融定性对比。 该图直观展示了不同策略的效果差异：“全局音频”驱动所有人一致性地动嘴，“ID嵌入”常将音频与身份错配，“固定掩码”在人物移动后失去对齐，而本文方法能为正确身份生成准确的唇形动作。
 
 多概念视频定制比较（表3略）： 论文也展示了其在保持多概念视觉外观上的优势，在CLIP-I、DINO-I等指标上优于Vidu、Pika、Kling等商业或开源模型。

@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频摘要 论文列表"
+title: "ICLR 2026 - 自监督学习 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["视频摘要"]
+tags: ["自监督学习"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频摘要 方向论文"
+description: "共 1 篇 ICLR 2026 自监督学习 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频摘要
+# ICLR 2026 - 自监督学习
 
 共 **1** 篇论文
 
@@ -18,43 +18,39 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TripleSumm: Adaptive Triple-Modality Fusion for Video Summar](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 7.5分 | 前25% |
+| 🥇 | [DiffSDA: Unsupervised Diffusion Sequential Disentanglement A](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
+### 🥇 [DiffSDA: Unsupervised Diffusion Sequential Disentanglement Across Modalities](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential)
 
-✅ **7.5/10** | 前25% | #视频摘要 | #多模态模型 | #音视频 #跨模态
+✅ **7.5/10** | 前25% | #自监督学习 | #扩散模型 | #跨模态 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Sumin Kim (首尔大学)
-- 通讯作者：Yoori Oh (首尔大学)， Joonseok Lee (首尔大学)
-- 作者列表：Sumin Kim（首尔大学）、Hyemin Jeong（首尔大学）、Mingu Kang（首尔大学）、Yejin Kim（首尔大学）、Yoori Oh（首尔大学）、Joonseok Lee（首尔大学）
+- 第一作者：Hedi Zisling（Ben-Gurion University）
+- 通讯作者：Omri Azencot（azencot@bgu.ac.il， Ben-Gurion University）
+- 作者列表：Hedi Zisling（Ben-Gurion University）、Ilan Naiman（Ben-Gurion University）、Nimrod Berman（Ben-Gurion University）、Supasorn Suwajanakorn（VISTEC）、Omri Azencot（Ben-Gurion University）
 
 💡 **毒舌点评**
 
-亮点是作者不仅提出了一个设计精巧、性能领先的融合模型（TripleSumm），还“顺手”解决了一个领域痛点——构建了第一个真正意义上大规模、三模态对齐的视频摘要基准数据集MoSu，这对后续研究是重大贡献。短板在于，其核心的“自适应”融合虽然有效且经过消融验证，但本质上仍是基于注意力权重的软选择，缺乏对模态间更深层次语义依赖关系的建模探索。
+亮点：论文为“序列解耦”这个经典难题提供了一个优雅且强大的新范式——用单一的扩散模型损失统一框架，不仅摆脱了复杂调参的噩梦，还在真实世界高分辨率视频、音频和时间序列上实现了SOTA级的高质量解耦与生成，说服力很强。
+短板：所谓的“零样本”实验本质上是特征交换，并未在真正的未见分布上验证模型的泛化能力；此外，将“静态-动态”二分法作为通用解耦的终极目标可能过于简化，现实世界的变化维度远比这复杂。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了代码仓库链接 `https://github.com/smkim37/TripleSumm`。
-- 模型权重：论文中未明确提及是否公开预训练模型权重。
-- 数据集：引入了新的大规模三模态数据集MoSu，并说明代码和数据集均已开源，获取方式指向上述GitHub仓库。
+- 代码：提供代码仓库链接：https://github.com/azencot-group/DiffSDA
+- 模型权重：论文中未提及公开预训练模型权重。
+- 数据集：使用的是公开数据集（MUG， TaiChi-HD， VoxCeleb， CelebV-HQ， TIMIT， LibriSpeech， PhysioNet， ETTh1， Air Quality），论文未涉及自有数据集。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文附录提供了极其详细的实现细节，包括完整的超参数表（表I）、数据预处理步骤、摘要生成流程、以及详细的消融实验设置，复现基础非常扎实。
-- 引用的开源项目/模型：论文使用了多个开源预训练模型进行特征提取，包括：视觉- CLIP (`openai/clip-vit-large-patch14`)、文本- RoBERTa (`FacebookAI/roberta-base`)、音频- AST (`MIT/ast-finetuned-audioset-10-10-0.4593`)、以及用于生成文本描述的VL模型 `Qwen/Qwen2-VL-7B-Instruct`。
+- 复现材料：提供了详尽的训练超参数和网络架构配置（见附录Tab. 6-8），涵盖了所有使用到的数据集。给出了完整的算法描述（算法1、2）。但未提供完整的训练脚本或检查点。
+- 论文中引用的开源项目：引用了VQ-VAE（Rombach et al., 2022）作为高分辨率数据预处理组件；采样器基于EDM（Karras et al., 2022）；潜在空间模型使用了DDIM（Song et al., 2020）。评估指标中使用了VGG-FACE和LightFace进行人脸识别（AED），以及OpenPose进行关键点检测（AKD）。
 
 📌 **核心摘要**
 
-1. 问题：现有视频摘要方法多采用静态或单一模态融合策略，无法动态捕捉视频内容中不同模态（视觉、文本、音频）重要性随时间变化的特点，且缺乏全面的三模态基准数据集。
-2. 方法核心：提出TripleSumm模型，其核心包含两个组件：多尺度时间模块（MST）和跨模态融合模块（CMF）。MST采用层级滑动窗口注意力捕获不同时间尺度的依赖关系；CMF则以一个中立的“融合token”作为查询，通过交叉注意力动态地对同一时间步的三种模态特征进行加权融合。
-3. 新意：与已有简单或静态的融合方法不同，TripleSumm实现了帧级别的自适应模态权重学习。此外，论文发布了首个大规模三模态视频摘要数据集MoSu（52,678个视频，涵盖视觉、文本、音频），解决了该领域长期的数据瓶颈。
-4. 主要结果：在包括MoSu在内的四个基准测试中取得SOTA性能。在MoSu上，其Kendall’s τ (0.351) 和 Spearman’s ρ (0.472) 显著超越最强基线CFSum (0.277, 0.374)。消融实验证实了自适应融合（Dynamic）优于静态（Static）和全局（Global）融合策略，以及多模态输入优于单/双模态。模型参数量（1.37M）远小于多数基线，计算效率高。
-5. 实际意义：为海量短视频内容的高效浏览、长视频快速理解提供了更优解决方案，尤其适用于音乐、教程、体育等音频或文本信息关键的场景。新数据集为多模态视频理解研究奠定了基础。
-6. 主要局限性：论文遵循传统的“帧重要性评分-分割-选择”流程，而非端到端生成摘要视频片段，这在一定程度上限制了摘要的连贯性和创造性。此外，模型的融合机制仍偏向于数据驱动的注意力加权，缺乏显式的、可解释的模态间逻辑推理。
+本文针对无监督序列解耦问题，即在不依赖标签的情况下将序列数据分解为时不变的静态因子（如身份）和时变的动态因子（如动作），提出了一种基于扩散模型的新颖框架DiffSDA。其核心是构建了一个跨模态的概率模型，创新性地将静态和动态因子建模为相互依赖的联合分布，并使用单一的、标准的扩散损失函数进行优化，避免了以往方法中复杂的损失项调优。与先前基于VAE/GAN的方法相比，DiffSDA是一个模态无关的通用框架，只需对骨干网络做微小调整即可适配视频（U-Net）、音频（MLP）和时间序列数据。在多个真实世界基准测试上，DiffSDA在定性（如条件交换、零样本交换）和定量指标（如AED、AKD、FVD、EER）上均超越了当前最先进的方法（如SPYL， DBSE）。例如，在VoxCeleb视频交换任务中，其AKD误差比SPYL降低了约40%；在TIMIT音频解耦上，解耦差距（Dis. Gap）达到了42.29%，远超DBSE的31.11%。该工作的意义在于为序列数据的无监督表示学习提供了一个统一、高效且强大的生成模型新范式。其主要局限性在于计算效率有待进一步优化，且“零样本”任务的设计尚不能充分证明模型对全新域的泛化能力。
 
 ---
 

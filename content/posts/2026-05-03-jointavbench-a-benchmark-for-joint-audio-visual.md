@@ -73,7 +73,7 @@ hiddenInHomeList: true
         *   干扰项生成：为通过检查的QA对生成三个具有迷惑性的错误选项。
     *   人工验证：最后由专业标注员对自动流程生成的3974个MCQ进行评级，最终保留2853个，确保最终数据集的高质量。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Zg1YH8R5GG-1.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Zg1YH8R5GG-1.png)
 （注：此为论文中的流程图，展示了从原始视频到最终QA对的三阶段生成流程，与上述描述一致。）
 
 #
@@ -116,10 +116,10 @@ hiddenInHomeList: true
 | Audio-LLMs | Kimi-Audio | 7B | 45.9 | SPER: 32.9, CSA: 38.0 |
 | | Qwen2-Audio | 7B | 40.0 | SPER: 34.6, CSA: 33.0 |
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Zg1YH8R5GG-4.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Zg1YH8R5GG-4.png)
 （注：此为论文中按音频类型分析模型性能的柱状图。显示所有模型在“声音事件”和“音乐”相关任务上表现较好，而在“人声特征”和“语音”相关任务上表现较差。）
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/Zg1YH8R5GG-3.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Zg1YH8R5GG-3.png)
 （注：此为论文中按场景类型分析模型性能的柱状图。显示模型在单场景和全文场景任务上表现相对较好，但在多场景（跨场景）任务上性能下降最明显。）
 
 关键发现：

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 论文的核心是GAPT训练框架，它作用于一个预训练的Transformer策略模型。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FXm5U16vxD-0.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FXm5U16vxD-0.png)
 （图1. GAPT框架示意图。左：无对抗训练的RL后训练导致多样性坍塌。右：GAPT引入判别器提供对抗性奖励，防止坍塌，保持多样性与协调性。）
 
 整体流程：
@@ -66,7 +66,7 @@ hiddenInHomeList: true
     - 阶段一（预热）：在前200个PPO更新步中，每5个PPO步更新一次判别器。
     - 阶段二（自适应）：计算最近3个PPO步对抗奖励的移动平均值 `R̄adv`。当 `R̄adv > τ`（阈值1.0）时，才更新判别器；否则冻结。这确保了判别器不会过快超越策略的学习能力。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FXm5U16vxD-1.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FXm5U16vxD-1.png)
 （图2. 训练示例对比。第一行：输入旋律。第二行：无对抗训练的基线模型产生单调重复的和弦。第三行：GAPT模型产生连贯、自然且多样的和弦伴奏。）
 
 ### 💡 核心创新点
@@ -109,7 +109,7 @@ hiddenInHomeList: true
 | GAPT | 0.497 | 26.645 | 0.470 | 11.295 |
 | Ground Truth | 0.727 | 27.922 | 0.784 | 10.962 |
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FXm5U16vxD-2.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FXm5U16vxD-2.png)
 （图4. 和谐度与多样性权衡。在测试集(a)和外部数据集(b)上，GAPT在保持高和谐度的同时，达到了更高的多样性。t-SNE图(c)显示GAPT生成的和弦在嵌入空间中覆盖范围更广。）
 
 表2：模型交互与用户研究评估
@@ -120,10 +120,10 @@ hiddenInHomeList: true
 | GAPT w/o Adv. | 0.540 | 5.658 | N/A | N/A |
 | GAPT | 0.648 | 12.914 | 0.467 | 11.794 |
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FXm5U16vxD-3.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FXm5U16vxD-3.png)
 （图5. 用户研究评分。GAPT在“适应速度”和“控制与主导权”上显著优于ReaLchords（p<0.05）。）
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/FXm5U16vxD-4.png)
+![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FXm5U16vxD-4.png)
 （图6. 在模型-模型交互(a)和用户交互(b)中，GAPT在和谐度与多样性的帕累托前沿上表现更优。）
 
 关键消融实验：

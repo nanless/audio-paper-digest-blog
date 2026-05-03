@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["基准测试"]
 categories: [iclr-2026]
-description: "共 8 篇 ICLR 2026 基准测试 方向论文"
+description: "共 9 篇 ICLR 2026 基准测试 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 基准测试
 
-共 **8** 篇论文
+共 **9** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -24,8 +24,9 @@ hiddenInHomeList: true
 | 4. | [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling w](/audio-paper-digest-blog/posts/2026-05-03-omni-reward-towards-generalist-omni-modal-reward) | 8.0分 | 前25% |
 | 5. | [MCIF: Multimodal Crosslingual Instruction-Following Benchmar](/audio-paper-digest-blog/posts/2026-05-03-mcif-multimodal-crosslingual-instruction) | 8.0分 | 前25% |
 | 6. | [OmniVideoBench: Towards Audio-Visual Understanding Evaluatio](/audio-paper-digest-blog/posts/2026-05-03-omnivideobench-towards-audio-visual-understanding) | 7.5分 | 前50% |
-| 7. | [VideoMathQA: Benchmarking Mathematical Reasoning via Multimo](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning) | 7.5分 | 前25% |
-| 8. | [EchoMind: An Interrelated Multi-level Benchmark for Evaluati](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark) | 7.5分 | 前25% |
+| 7. | [EchoMind: An Interrelated Multi-level Benchmark for Evaluati](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark) | 7.5分 | 前25% |
+| 8. | [VideoMathQA: Benchmarking Mathematical Reasoning via Multimo](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning) | 7.0分 | 前25% |
+| 9. | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified) | 7.0分 | 前25% |
 
 ---
 
@@ -85,35 +86,44 @@ hiddenInHomeList: true
 
 ### 🥈 [XModBench: Benchmarking Cross-Modal Capabilities and Consistency in Omni-Language Models](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities)
 
-🔥 **8.5/10** | 前25% | #基准测试 | #模型评估 | #多模态模型 #大语言模型
+🔥 **8.5/10** | 前25% | #基准测试 | #多模态模型 | #跨模态 #音频场景理解
 
 👥 **作者与机构**
 
-- 第一作者：Xingrui Wang (1, 2) （1: Advanced Micro Devices, 2: Johns Hopkins University）
-- 通讯作者：Jiang Liu (1B) （1: Advanced Micro Devices）
-- 作者列表：Xingrui Wang (Advanced Micro Devices; Johns Hopkins University), Jiang Liu (Advanced Micro Devices), Chao Huang (Advanced Micro Devices; University of Rochester), Xiaodong Yu (Advanced Micro Devices), Ze Wang (Advanced Micro Devices), Ximeng Sun (Advanced Micro Devices), Jialian Wu (Advanced Micro Devices), Alan Yuille (Johns Hopkins University), Emad Barsoum (Advanced Micro Devices), Zicheng Liu (Advanced Micro Devices)
+- 第一作者：Xingrui Wang (AMD, Johns Hopkins University)
+- 通讯作者：Jiang Liu (AMD)
+- 作者列表：Xingrui Wang (AMD, Johns Hopkins University), Jiang Liu (AMD), Chao Huang (AMD, University of Rochester), Xiaodong Yu (AMD), Ze Wang (AMD), Ximeng Sun (AMD), Jialian Wu (AMD), Alan Yuille (Johns Hopkins University), Emad Barsoum (AMD), Zicheng Liu (AMD)
 
 💡 **毒舌点评**
 
-亮点在于其“手术刀”般的诊断设计：通过系统置换上下文与候选模态（如V→T vs T→V），该基准无情地撕开了当前最强模型（如Gemini 2.5 Pro）在看似统一的框架下，实际上对不同模态的“厚此薄彼”和推理路径不对称，尤其是对音频的“二等公民”待遇。短板则是作为评测基准，它本身不解决任何能力短板，更像是给模型“做体检并出具详细报告”，但报告中揭示的“空间时间推理”等顽疾，需要模型架构和训练方法层面的根本性革新，而论文对此的处方仅限于建议增加交错数据和任务覆盖，略显宏观。
+亮点在于其系统性：首次提出了一个严格平衡、覆盖全部六种模态映射组合的跨模态一致性评估框架，填补了现有基准的重大空白，诊断指标（模态差异、方向不平衡）设计得颇为精妙。短板是其评估形式相对单一（仅限于多选题），且对于开源模型的深入技术剖析（如架构如何影响跨模态对齐）略显不足，更侧重于“发现问题”而非“解释原因”。
 
 🔗 **开源详情**
 
-- 代码：论文提供了GitHub仓库链接：https://github.com/XingruiWang/XModBench。论文中未提及代码的具体内容（如是否包含评估脚本、数据生成代码）。
-- 模型权重：未提及（因为是评测基准，不发布模型）。
-- 数据集：论文承诺将公开所有数据，可通过上述GitHub链接获取。
+- 代码：是，论文提供了代码仓库链接：https://github.com/XingruiWang/XModBench。
+- 模型权重：否，本文是评估基准，未提出新的模型权重。
+- 数据集：是，论文明确表示将公开XModBench数据集，并提供了数据集卡片链接。
 - Demo：未提及。
-- 复现材料：论文提到了附录（如Appendix F, G）中包含更详细的人类评估、数据来源和处理方法，但未在正文中说明是否提供完整的训练/评估配置文件、检查点等。
-- 引用的开源项目：论文在数据生成和质量控制中引用了FireRedTTS、GPT-5等工具，并在相关工作中引用了众多开源数据集和模型（如VGG-Sound, STARSS23, Qwen2.5-Omni等）。
+- 复现材料：提供了评估工具（evaluation tools）和详尽的附录（Appendix F关于人类评估， Appendix G关于数据来源）。训练/评估细节在论文中有描述，但如优化器等超参数未在主文给出。
+- 论文中引用的开源项目：FireRedTTS (用于生成语音)， CIPIC HRTF database (用于空间音频)， RenderedText (用于生成文本图像)等。
 
 📌 **核心摘要**
 
-1. 问题：当前全能语言模型（OLLM）声称能统一处理文本、视觉和音频，但其是否真正实现了与输入模态无关的推理，还是存在系统性的模态偏差，尚不清楚。
-2. 方法核心：提出XModBench，一个大规模的三模态多项选择问答基准。其核心是模态平衡设计：每个语义相同的“上下文-候选”问题，都会被系统地实例化为六种模态配置（如文本→视觉、音频→文本等），从而能精确测量模型在感知、空间推理等五个任务家族上的跨模态一致性。
-3. 与已有方法相比新在哪里：不同于现有基准多固定上下文或候选模态，XModBench是首个全面覆盖音频、视觉、文本所有六种跨模态方向，并专门引入“模态差异”和“方向不平衡”两个新指标来量化诊断跨模态一致性的基准。
-4. 主要实验结果：对15个OLLM的评估显示，即使是SOTA的Gemini 2.5 Pro（平均准确率70.6%），也存在显著问题：(a) 任务短板：空间和时空推理任务准确率低于60%，远低于感知和语言任务（~76%）；(b) 模态差异：当相同语义由音频而非文本传递时，性能大幅下降（例如，在文本→音频与文本→视觉配置中，差距可达49%）；(c) 方向不平衡：当视觉作为上下文、文本作为选项时，性能通常优于反向设置（文本上下文、视觉选项）。
-5. 实际意义：XModBench为评估和诊断OLLM的跨模态能力提供了一个强大、系统的工具，其揭示的普遍弱点为未来模型架构改进（如加强音频表征、提升空间推理）和训练策略（如增加交错数据）提供了明确方向。
-6. 主要局限性：基准本身是评估工具，其价值依赖于所测试模型的质量和多样性。论文中对模型弱点的诊断虽清晰，但提出的改进建议（如使用交错数据）较为宏观，缺乏具体的算法或训练方法层面的解决方案。
+1.  要解决什么问题：当前全能语言模型（OLLMs）的评估主要关注整体问答性能，而忽略了模型在处理相同语义内容但来自不同模态（音频、视觉、文本）输入时，是否能保持一致、稳定的推理和输出，即“跨模态一致性”问题。
+2.  方法核心是什么：提出了XModBench，一个大规模、三模态对齐的基准测试。其核心设计是通过系统性地置换问题（<context>）和选项（<candidates>）的模态（文本T、视觉V、音频A），为每个语义实例生成六种模态配置（如A→T, A→V, T→A等），从而在严格控制语义内容不变的情况下，评估模型的模态无关推理能力。
+3.  与已有方法相比新在哪里：与现有基准（主要评估跨模态问答能力）相比，XModBench的新颖性在于：1) 显式地以“跨模态一致性”为评估目标；2) 覆盖了音频、视觉、文本之间所有六种模态组合方向；3) 设计了三个诊断维度：任务能力（平均性能）、模态差异（不同模态表现差）、方向不平衡（交换上下文与选项的性能差）。
+4.  主要实验结果如何：实验评估了12个主流OLLMs。结果表明，即使是最强的模型（Gemini 2.5 Pro）也远未实现模态无关推理：其在空间和时序推理任务上的平均准确率低于60%；当信息通过音频而非文本传递时，性能显著下降（音频是最薄弱的模态）；且存在系统性的方向不平衡，当文本作为选项时表现通常优于视觉作为选项时。最强模型Gemini 2.5 Pro的全基准平均准确率为70.6%，人类基准为91.5%。
+
+| 模型 | 全基准平均准确率 (Avg.) | 模态配置标准差 (Std.) | 空间推理 | 时序推理 |
+| :--- | :--- | :--- | :--- | :--- |
+| Gemini 2.5 Pro | 70.6 | 11.7 | 50.1 | 60.8 |
+| Gemini 2.5 Flash | 63.7 | 14.2 | 48.0 | 48.6 |
+| Qwen2.5-Omni | 58.6 | 10.1 | 38.4 | 32.3 |
+| EchoInk-R1 | 59.2 | 11.3 | 36.6 | 37.1 |
+| Human | 91.5 | 3.0 | 89.7 | 88.9 |
+
+5.  实际意义是什么：XModBench为诊断和改进OLLMs的跨模态对齐能力提供了关键工具。其揭示的弱点（如音频处理不足、方向不平衡）为未来的模型训练（如需要更多交错数据、平衡任务覆盖）提供了明确的方向。
+6.  主要局限性是什么：评估形式限于多选题，可能无法完全捕捉开放式生成场景下的跨模态一致性；虽然覆盖了五类任务，但某些子任务的深度和复杂性有待扩展；论文主要报告了模型的性能差距，但对于导致这些差距的模型架构或训练细节的深入分析有限。
 
 ---
 
@@ -154,46 +164,44 @@ hiddenInHomeList: true
 
 ### 4. [Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form Preferences](/audio-paper-digest-blog/posts/2026-05-03-omni-reward-towards-generalist-omni-modal-reward)
 
-🔥 **8.0/10** | 前25% | #基准测试 | #强化学习 | #数据集 #大语言模型
+🔥 **8.0/10** | 前25% | #基准测试 | #多模态模型 | #强化学习 #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Zhuoran Jin（中国科学院大学人工智能学院，中国科学院自动化研究所）
-- 通讯作者：Jun Zhao（中国科学院大学人工智能学院，中国科学院自动化研究所）
-- 作者列表：
-    - Zhuoran Jin（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Hongbang Yuan（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Kejian Zhu（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Jiachun Li（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Pengfei Cao（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Yubo Chen（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Kang Liu（中国科学院大学人工智能学院，中国科学院自动化研究所）
-    - Jun Zhao（中国科学院大学人工智能学院，中国科学院自动化研究所）
+- 第一作者：Zhuoran Jin（中国科学院自动化研究所/中国科学院大学）
+- 通讯作者：Jun Zhao（中国科学院自动化研究所）
+- 作者列表：Zhuoran Jin（中国科学院自动化研究所/中国科学院大学）、Hongbang Yuan（中国科学院自动化研究所/中国科学院大学）、Kejian Zhu（中国科学院自动化研究所/中国科学院大学）、Jiachun Li（中国科学院自动化研究所/中国科学院大学）、Pengfei Cao（中国科学院自动化研究所/中国科学院大学）、Yubo Chen（中国科学院自动化研究所/中国科学院大学）、Kang Liu（中国科学院自动化研究所/中国科学院大学）、Jun Zhao（中国科学院自动化研究所）
 
 💡 **毒舌点评**
 
-这篇论文的框架搭得很完整，从基准、数据到模型，是一个“一站式解决方案”，对推动多模态奖励建模的公平评测和进一步研究很有价值。但核心的“Omni-RewardModel”本身（尤其是判别式版）在架构创新上显得比较常规，更像是一个性能优异的“集大成者”，而非一个方法论上的“开创者”。
+亮点在于系统性地提出了一个解决多模态奖励建模中“模态不平衡”和“偏好僵化”两大核心问题的完整框架（基准、数据集、模型），设计思路清晰且实验全面。短板是虽然提出了生成式奖励模型，但其训练仅用了3%的数据且基于GRPO的强化学习探索较为初步，模型在部分生成任务（如T2A）上的表现仍有明显提升空间。
 
 🔗 **开源详情**
 
-*   代码：提供了GitHub仓库链接：`https://github.com/HongbangYuan/OmniReward`
-*   模型权重：论文提到了训练得到的Omni-RewardModel-BT和Omni-RewardModel-R1，并提供了基准数据集的Hugging Face链接：`https://hf.co/datasets/HongbangYuan/OmniRewardBench`。代码仓库可能包含相关权重或训练脚本。
-*   数据集：论文明确开源了评测基准（Omni-RewardBench）和训练数据集（Omni-RewardData），并通过Hugging Face链接提供下载。
-*   Demo：论文中未提及在线演示链接。
-*   复现材料：论文详细描述了数据构建流程（附录D）、标注指南、模型训练基座（MiniCPM-o, Qwen2.5-VL）和评估设置。提供了评估的Prompt模板（附录K）。但部分具体的训练超参数（如学习率、批大小）需查看附录或代码仓库。
-*   依赖的开源项目/模型：主要依赖的开源基座模型包括MiniCPM-o-2.6、Qwen2.5-VL系列、InternVL系列、Gemma-3系列等多模态大语言模型。
+- 代码：提供GitHub仓库链接：https://github.com/HongbangYuan/OmniReward
+- 模型权重：论文中提及将发布Omni-RewardModel，但未提供直接下载链接（可能随代码仓库发布）。
+- 数据集：Omni-RewardBench 和 Omni-RewardData 均提供Hugging Face链接：
+    - 基准：https://hf.co/datasets/HongbangYuan/OmniRewardBench
+    - 数据集：https://hf.co/datasets/jinzhuoran/OmniRewardData
+- Demo：论文中未提及在线演示。
+- 复现材料：论文有专门的“Reproducibility Statement”，并在附录中详细说明了标注流程、质量控制等。但具体的训练超参数（学习率、batch size等）未在主文中提供，需查看附录。
+- 引用的开源项目：基座模型包括MiniCPM-o-2.6、Qwen2.5-VL-7B-Instruct等；数据集构建引用了Skywork-Reward-Preference, RLAIF-V, HPDv2, GenAI-Bench等多个现有开源数据集。
 
 📌 **核心摘要**
 
-1. 问题：当前奖励模型（RM）面临两大挑战：一是模态不平衡，主要关注文本和图像，对视频、音频、3D支持不足；二是偏好刚性，基于固定二元偏好对训练，无法捕捉个性化、多样的自由形式偏好。
-2. 方法：提出Omni-Reward框架，包含三部分：（1）评估：Omni-RewardBench，首个覆盖5种模态、9个任务且支持自由形式偏好的RM基准；（2）数据：Omni-RewardData，包含248K通用偏好对和69K用于理解自由形式偏好的指令微调数据；（3）模型：Omni-RewardModel，包括判别式（Omni-RewardModel-BT）和生成式（Omni-RewardModel-R1）两种RM。
-3. 创新点：核心创新在于首次构建了全模态、支持自由形式偏好的统一评估基准和训练数据集，并据此训练出性能优越的通用RM。生成式RM（R1）通过强化学习训练，能输出推理过程，提高了透明度。
-4. 主要实验结果：
-    - 在自建基准Omni-RewardBench上，Omni-RewardModel-BT以65.36%的准确率（w/ Ties设置）超过了最强的专有模型Claude 3.5 Sonnet (66.54%)和开源模型Gemma-3 27B (65.12%)，并在文本-音频、3D等任务上表现出色。
-    - 在公开基准VL-RewardBench上，Omni-RewardModel-BT达到76.3%准确率，超越了所有对比方法，达到SOTA。
-    - 消融实验证明了混合多模态数据训练和指令微调（用于理解自由偏好）对提升模型泛化能力至关重要。
-5. 实际意义：为多模态大模型的对齐（RLHF）提供了更全面、更灵活的奖励信号建模工具，有助于构建更符合多样化人类偏好的AI系统。
-6. 主要局限性：基准规模（3725对）相对有限；当前任务划分仍较粗粒度；偏好数据仅限于单轮交互；生成式RM的训练技术尚属初步探索。
+1. 问题：当前的奖励模型（RM）面临两大挑战：(1) 模态不平衡，主要关注文本和图像，对视频、音频、3D等模态支持不足；(2) 偏好僵化，基于固定二元偏好对训练，难以捕捉用户个性化、自由形式的偏好。
+2. 方法核心：提出 Omni-Reward 框架，包含三个部分：(1) Omni-RewardBench：首个覆盖五种模态（文本、图像、视频、音频、3D）九个任务、支持自由形式偏好的RM基准；(2) Omni-RewardData：包含248K通用偏好对和69K指令微调对的多模态偏好数据集；(3) Omni-RewardModel：包括判别式（BT）和生成式（R1）两种RM。
+3. 新意：与现有工作相比，其创新在于：首次在统一框架下处理全模态奖励建模；通过指令微调数据使RM能根据自由形式的文本标准动态调整评分；并探索了使用强化学习训练可解释的生成式RM。
+4. 主要实验结果：Omni-RewardModel-BT在自有基准Omni-RewardBench上达到73.68%（w/o Ties）和65.36%（w/ Ties）的准确率，比基座模型MiniCPM-o-2.6（46.67%）提升显著。在公开基准VL-RewardBench上，其准确率达到76.3%，超越了GPT-4o（65.8%）和UnifiedReward（66.1%）等模型，取得SOTA。消融实验证实了多模态混合数据和指令微调数据的重要性。
+
+![Omni-RewardBench任务示例](icassp-img://9C4gVbPqSy/0.png)
+图1展示了Omni-RewardBench涵盖的九个任务及其自由形式偏好标注示例。
+
+![模型架构概览](icassp-img://9C4gVbPqSy/1.png)
+图2展示了Omni-RewardModel的两种架构：(1) 使用Bradley-Terry损失的判别式模型；(2) 使用强化学习的生成式模型。
+
+5. 实际意义：为多模态AI系统的对齐提供了更全面的评估工具、数据资源和建模范式，推动了向能处理全模态且能适配个性化需求的通用奖励模型发展。
+6. 主要局限性：基准规模（3725对）相对有限；任务定义尚属粗粒度；偏好数据为单轮对话，未涉及多轮交互；生成式模型的强化学习训练是初步探索。
 
 ---
 
@@ -325,57 +333,7 @@ hiddenInHomeList: true
 
 ---
 
-### 7. [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning)
-
-✅ **7.5/10** | 前25% | #基准测试 | #多模态模型 | #数据集 #跨模态
-
-👥 **作者与机构**
-
-- 第一作者：Hanoona Abdul Rasheed（MBZUAI）
-- 通讯作者：未说明
-- 作者列表：Hanoona Abdul Rasheed（MBZUAI）、Abdelrahman M Shaker（MBZUAI）、Anqi Tang（MBZUAI）、Muhammad Maaz（MBZUAI）、Ming-Hsuan Yang（University of California Merced， Google Research）、Salman Khan（MBZUAI， Australian National University）、Fahad Shahbaz Khan（MBZUAI， Linköping University）
-
-💡 **毒舌点评**
-
-这篇论文最大的价值在于其“侦察兵”角色——它精准地定义了一个被忽视的核心挑战（视频中的多模态数学推理），并构建了一个高质量、标注详尽的“试炼场”来暴露当前模型的软肋。但它的局限也很明显：任务定义相对狭窄（仅限数学推理），并且它本身并未提出解决该问题的模型或算法，更多是一篇扎实的“测评集”工作，缺乏方法论层面的创新。
-
-🔗 **开源详情**
-
-- 代码：提供了评估代码，基于开源的`lmms-eval`框架，并承诺在提交中包含运行脚本。链接：https://mbzuai-oryx.github.io/VideoMathQA （论文中提及）。
-- 模型权重：未提及。本文是基准论文，不提供新模型。
-- 数据集：是。论文提供了项目主页，数据集可从此获取。
-- Demo：未提及。
-- 复现材料：提供了详细的提示词（附录F）、评估协议和硬件配置（8x A100-80GB GPU）。训练细节不适用。
-- 论文中引用的开源项目：`lmms-eval`（评估框架）， `vllm`（语言模型推理），以及所评估的多个开源模型（如Qwen2.5-VL， InternVL系列， LLaVA系列等）。
-
-📌 **核心摘要**
-
-1. 问题：现有的多模态模型在视频中进行数学推理的能力评估存在空白。视频数学推理需要整合动态视觉、音频（语音）和文本信息，并进行长时间跨度的多步逻辑推导，这与静态图像或文本推理有本质区别。
-2. 方法：本文提出了一个名为VideoMathQA的新基准，包含420个精心策划的视频-问题对，覆盖10个数学领域。问题分为三类：直接问题解决、概念迁移和深度教学理解。每个问题都附有由研究生水平专家标注的4-10个详细推理步骤（共2945步）。
-3. 新意：与现有基准（如MathQA， MathVista）主要关注静态图像不同，VideoMathQA专门针对视频，强调时间动态性、多模态信息整合（视觉、音频、文本）以及多层次推理。它提供了细粒度的推理步骤标注，不仅评估最终答案，还能诊断模型在推理过程中的具体错误。
-4. 实验：评估了30多个模型（包括开源和闭源）。最佳模型GPT-o4-mini在MCQ+Sub设置下准确率为61.4%，而人类评估者的准确率为80.7%。模型性能随规模提升，但小模型（<9B）表现普遍较弱。加入字幕对强推理模型有显著帮助，但对小模型帮助有限。错误分析显示“问题误解”是最主要的错误类型。
-   关键实验结果表格（表2摘录，CoT评估）：
-
-| 模型 | 规模 | MCQ+Sub | MBin+Sub |
-| :--- | :--- | :--- | :--- |
-| Random | - | 17.4 | 7.9 |
-| Human | - | - | 80.7 |
-| Qwen2.5-VL | 7B | 29.5 | 18.3 |
-| InternVL3 | 78B | 37.1 | 27.9 |
-| GPT-o4-mini | - | 61.4 | 44.8 |
-
-   ![论文中的对比图](icassp-img://VI4kGUfPio/5.png)
-   上图展示了模型在不同数学概念和视频时长上的表现差异。
-
-   ![论文中的错误分析图](icassp-img://VI4kGUfPio/6.png)
-   上图展示了模型在Chain-of-Thought推理中的主要错误类型分布。
-
-5. 意义：该基准为评估和诊断多模态大模型在复杂、真实场景下的深度推理能力提供了一个重要的标准化工具，揭示了当前模型在长期上下文理解、多模态信息对齐和复杂逻辑推演方面的不足，指明了未来改进方向。
-6. 局限：基准规模（420个样本）有限，构建过程耗时费力（约920人时）。任务仅限于数学推理，未涵盖其他需要类似推理能力的学科（如物理实验分析）。评估模型本身不包含提出新的模型架构。
-
----
-
-### 8. [EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark)
+### 7. [EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-echomind-an-interrelated-multi-level-benchmark)
 
 ✅ **7.5/10** | 前25% | #基准测试 | #模型评估 | #语音情感识别 #语音大模型
 
@@ -421,6 +379,93 @@ hiddenInHomeList: true
 
 5.  实际意义是什么：为评估和推动SLM的情感智能提供了首个系统、可控的基准，明确指出了当前SLM在“听懂弦外之音”和“做出有温度回应”方面的核心缺陷，为未来模型研发指明了方向。
 6.  主要局限性是什么：a) 基准数据主要依赖TTS合成语音，尽管有人类录音版本进行对比，但规模较小，可能无法完全覆盖真实对话中语音的细微变异性。b) 评估框架的某些维度（如共情回应的“质量”）依赖于LLM作为评判器或主观评分，可能存在偏差。
+
+---
+
+### 8. [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-03-videomathqa-benchmarking-mathematical-reasoning)
+
+✅ **7.0/10** | 前25% | #基准测试 | #多模态模型 | #视频理解 #数学推理
+
+👥 **作者与机构**
+
+- 第一作者：Hanoona Abdul Rasheed （MBZUAI）
+- 通讯作者：未说明（论文未明确指定）
+- 作者列表：Hanoona Abdul Rasheed（MBZUAI）， Abdelrahman M Shaker（MBZUAI）， Anqi Tang（MBZUAI）， Muhammad Maaz（MBZUAI）， Ming-Hsuan Yang（University of California Merced， Google Research）， Salman Khan（MBZUAI， Australian National University）， Fahad Shahbaz Khan（MBZUAI， Linköping University）
+
+#
+
+💡 **毒舌点评**
+
+本文的亮点在于其严谨性：不仅构建了数据集，更设计了一套从视频选择、问题标注到步骤评估的完整质量控制流水线，使得“视频数学推理”这个笼统的挑战变得可操作、可衡量。然而，其短板也明显：420个样本的规模对于训练或微调现代大模型仍显不足，且模型在“拓扑”、“图论”等抽象领域的表现与人类差距巨大（如GPT-4o在拓扑上仅20%），暴露了当前模型“会算题但不会思考”的深层瓶颈。
+
+#
+
+🔗 **开源详情**
+
+- 代码：论文提供了项目主页链接（https://mbzuai-oryx.github.io/VideoMathQA），其中包含代码仓库链接。
+- 模型权重：论文评估了众多模型，但并未贡献新的模型权重。所评估模型的权重来自其原始发布方。
+- 数据集：是的，视频数据集是公开的（通过项目主页提供）。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详细的评估提示词（附录F）、评估框架（lmms-eval集成）和部分实现脚本。
+- 引用的开源项目：论文依赖并集成了lmms-eval评估框架和vllm推理库，并使用了Qwen3-4B作为评估模型。
+
+📌 **核心摘要**
+
+1.  问题：现有数学推理基准多基于静态图像或文本，无法评估模型在动态、多模态（视觉、音频、文本）的视频环境中进行长时程、多步推理的能力。
+2.  方法核心：构建了一个名为VideoMathQA的基准数据集，包含420个来自真实教育视频的问答对，覆盖10个数学领域。每个样本附带专家标注的步骤级推理链，并设计了三类推理任务：直接求解、概念迁移、深度教学理解。
+3.  创新点：与已有基准相比，首次系统性地将数学推理置于视频场景中，强调对动态视觉信息（如逐步构建的图表）、音频讲解和长时序上下文的整合。提出了细粒度的步骤评估和错误分析框架。
+4.  实验结果：评估了30+个模型。最强模型GPT-o4-mini在CoT MBin评估下（含字幕）达到44.8%准确率，而人类为80.7%。模型在算术微积分（32%）上表现较好，但在拓扑、图论（~16%）上表现很差。增加字幕和帧数通常能提升性能。
+5.  实际意义：为评估和诊断多模态大模型的深度推理能力提供了新的、更具挑战性的标尺，揭示了当前模型在跨模态信息整合与长时推理上的不足。
+6.  主要局限性：数据集规模较小（420样本），标注成本极高（约115人天）。模型在部分复杂抽象领域的性能仍远低于人类。
+
+#
+
+---
+
+### 9. [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-03-human-behavior-atlas-benchmarking-unified)
+
+✅ **7.0/10** | 前25% | #基准测试 | #多任务学习 | #多模态模型 #语音情感识别
+
+👥 **作者与机构**
+
+- 第一作者：Keane Ong（MIT；National University of Singapore）
+- 通讯作者：未明确说明（论文中指出Keane Ong和Wei Dai为共同第一作者）
+- 作者列表：Keane Ong（MIT；National University of Singapore）、Wei Dai（MIT；National University of Singapore）、Carol Li（MIT）、Dewei Feng（MIT）、Hengzhi Li（MIT；Imperial College London）、Jingyao Wu（MIT）、Jiaee Cheong（Harvard University）、Rui Mao（Nanyang Technological University）、Gianmarco Mengaldo（National University of Singapore）、Erik Cambria（Nanyang Technological University）、Paul Pu Liang（MIT）
+
+💡 **毒舌点评**
+
+亮点在于它首次系统性地构建了一个涵盖情感、认知、病理、社交四大维度的统一多模态行为理解基准（Human Behavior Atlas），并通过BAM模块优雅地验证了“原始数据”与“手工特征”可以互补而非互斥。短板则是模型OMNISAPIENS-7B本质上是对现有Qwen2.5-Omni骨干的适配与微调，在架构创新上乏善可陈，其核心贡献更像是一项“工程与整合”而非“原理与突破”。
+
+🔗 **开源详情**
+
+- 代码：论文提供了代码仓库链接：`https://github.com/MIT-MI/human_behavior_atlas`。
+- 模型权重：论文承诺发布训练好的模型（OMNISAPIENS-7B SFT, BAM, RL）。
+- 数据集：Human Behavior Atlas基准承诺发布。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详尽的附录，包括数据集划分（Table 7）、评估指标公式、LLM评判Prompt（App A.5）、模型架构细节（App B）、训练超参数（App C）等。
+- 引用的开源项目：依赖的开源工具/模型包括：Qwen2.5-Omni-7B（骨干）、MediaPipe（视觉特征提取）、OpenSMILE（音频特征提���）、Whisper v3 Large（语音识别转录）、GPT-5-nano（LLM评判）。
+
+📌 **核心摘要**
+
+1. 问题：当前对人类心理与社会行为（情感、认知、病理、社交）的AI理解存在任务分散、数据集异构、评估标准不一的问题，阻碍了可扩展、可迁移的基础模型发展。
+2. 方法：构建了一个名为“Human Behavior Atlas”的统一基准，整合了13个公开多模态数据集，超过10万个样本。所有数据被标准化为统一的“提示-目标”格式，并定义了跨数据集的统一评估指标。此外，基于该基准训练了三个模型变体：OMNISAPIENS-7B SFT（监督微调）、BAM（带行为描述符适配器）和RL（强化学习）。
+3. 创新：(1) 提出了首个大规模、多模态、跨任务的人类行为理解统一基准；(2) 设计了行为适配器模块（BAM），以残差方式将音频/视频的低级特征（如面部关键点、声学特征）融入冻结的基础模型；(3) 系统比较了SFT、BAM和RL三种训练范式在行为理解任务上的表现与特点。
+4. 实验结果：在Human Behavior Atlas上训练的OMNISAPIENS-7B系列模型，在10项行为任务中的7-8项上持续优于现有的通用多模态大模型（如Qwen2.5-Omni-7B，见下表）。在迁移学习实验中，预训练模型在未见过的数据集（如MUStARD讽刺检测）上相比未经预训练的基线有显著提升（例如，SFT版本在MUStARD上加权F1从0.473提升至0.658）。BAM在部分任务（如NVC、SAR）上带来显著增益。
+
+表：Human Behavior Atlas上多任务评估主要结果（部分）
+| 模型 | EMO (MELD) | SEN (MOSEI) | HUM | SAR | SOC | INT | NVC |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Qwen 2.5-Omni-7B | 0.661 | 0.602 | 0.543 | 0.254 | 0.069 | 0.249 | 0.254 |
+| OMNISAPIENS-7B SFT | 0.709 | 0.744 | 0.532 | 0.256 | 0.121 | 0.249 | 0.257 |
+| OMNISAPIENS-7B BAM | 0.711 | 0.775 | 0.644 | 0.201 | 0.162 | 0.177 | 0.201 |
+| OMNISAPIENS-7B RL | 0.699 | 0.224 | 0.639 | 0.304 | 0.133 | 0.486 | 0.133 |
+(注：数值为论文Table 4中对应数据集上的最优/次优得分，具体指标见论文3.3节说明)
+
+![实验结果对比](icassp-img://ZKE23BBvlQ/7.png)
+图：不同模型在10项行为任务上的平均性能热力图。经过Human Behavior Atlas训练的OMNISAPIENS-7B系列模型在大多数任务上优于通用基线模型。
+
+5. 实际意义：为构建“人类行为理解”这一重要AI方向提供了可复用的标准化基准、评估框架和基线模型，有助于推动更通用、鲁棒的行为分析系统研发。
+6. 局限性：(1) 基准中的数据集虽多元，但总量（约10万样本）对于训练真正的大规模基础模型可能仍显不足；(2) 评估任务中部分数据集（如PTSD）样本量很小（仅634），结果的泛化性需谨慎看待；(3) BAM的有效性因任务而异，并非普适性增益。
 
 ---
 

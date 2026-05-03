@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 空间音频 论文列表"
+title: "ICLR 2026 - 神经网络架构 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["空间音频"]
+tags: ["神经网络架构"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 空间音频 方向论文"
+description: "共 1 篇 ICLR 2026 神经网络架构 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 空间音频
+# ICLR 2026 - 神经网络架构
 
 共 **1** 篇论文
 
@@ -18,50 +18,47 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OWL : Geometry-Aware Spatial Reasoning for Audio Large Langu](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio) | 7.0分 | 前25% |
+| 🥇 | [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured) | 8.5分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio)
+### 🥇 [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured)
 
-✅ **7.0/10** | 前25% | #空间音频 | #音频大模型 | #音频问答 #音频事件检测
+🔥 **8.5/10** | 前10% | #神经网络架构 | #神经网络架构 | #音频生成 #音频分类
 
 👥 **作者与机构**
 
-- 第一作者：Subrata Biswas（Worcester Polytechnic Institute，电气与计算机工程系）
-- 通讯作者：未明确说明。论文首页标注“Equal Contribution”，通讯作者信息未在摘要、正文或附录中明确指出。
-- 作者列表：Subrata Biswas（Worcester Polytechnic Institute，电气与计算机工程系）、Mohammad Nur Hossain Khan（Worcester Polytechnic Institute，电气与计算机工程系）、Bashima Islam（Worcester Polytechnic Institute，电气与计算机工程系）
+- 第一作者：Saanjali Maharaj（多伦多大学）
+- 通讯作者：Prasanth B. Nair（多伦多大学）
+- 作者列表：Saanjali Maharaj（多伦多大学，saanjali.maharaj@mail.utoronto.ca）、Prasanth B. Nair（多伦多大学，prasanth.nair@utoronto.ca）
 
 💡 **毒舌点评**
 
-本文最大的亮点是构建了首个大规模、包含几何监督的多模态空间音频问答数据集BiDepth，并系统性地提出了从几何感知编码器（SAGE）到带思维链推理的音频大模型（OWL）的完整解决方案，实验结果显示其在定位和推理任务上显著优于基线。但一个明显的短板是，所有核心训练数据和评估均基于模拟环境，尽管作者进行了真实世界实验，但模拟到现实的泛化能力仍是潜在疑点，且当前的推理任务（如左右、远近判断）相对于人类复杂的空间认知仍显简单。
+这篇论文最大的亮点在于将低秩张量分解的思想巧妙地转化为一种新型的神经网络架构，其“可学习乘积激活函数”的设计既优雅又强大，并在图像、音频、物理等多个领域展示了令人信服的SOTA结果和参数效率。然而，乘积结构不可避免地带来了反向传播时内存开销显著增大的挑战，论文虽讨论了优化策略，但在大规模高维任务上的实际可行性仍需观察；此外，其强大的理论保证依赖于目标函数具有“低阶交互”这一前提，对于交互关系极其复杂的数据，LRNN的优势可能会打折扣。
 
 🔗 **开源详情**
 
-- 代码：论文提供了GitHub仓库链接 `https://github.com/BASHLab/OWL`，承诺开源。
-- 模型权重：论文中未明确提及是否开源预训练好的SAGE和OWL模型权重，仅说明“code are available”。
-- 数据集：论文明确指出将公开BiDepth数据集，并附有详细描述和统计信息。
+- 代码：提供代码仓库链接：https://github.com/dacelab/lrnn
+- 模型权重：论文中未明确提及是否公开预训练模型权重。
+- 数据集：论文中使用的数据集（ImageNet, DIV2K, LibriSpeech等）为公开数据集，但未提供自有数据集。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文提供了非常充分的复现材料，包括：详细的模型架构描述、完整的训练超参数配置（学习率、batch size、优化器、epoch数、LoRA设置等）、各阶段训练数据组成、评估指标定义（附录F）、以及数据生成细节（附录A）。
-- 论文中引用的开源项目：SoundSpaces v2.0, Matterport3D, AudioSet, LLaMA-2-7B (通过LoRA微调), Q-Former (作为投影器架构)。
-- 开源计划：论文正文和摘要末尾均明确表示“dataset and code are available at”给定GitHub链接，表明有明确的开源计划。
+- 复现材料：提供了详细的超参数设置（见附录B-I）、消融研究、实现细节（如使用PyTorch，Adam优化器，LayerNorm等）。论文声称所有实验配置均可复现。
+- 论文中引用的开源项目：依赖PyTorch框架；基线模型如SIREN, SPDER, WIRE等的官方实现被用作对比。
 
 📌 **核心摘要**
 
-1. 要解决什么问题：现有的音频大语言模型（ALLMs）在处理空间音频时，缺乏对几何结构的显式理解，且推理过程多为单步直接映射，导致方向/距离估计不精确，且无法提供可解释的推理过程。
-2. 方法核心是什么：本文提出了OWL框架，包含两个核心组件：a) SAGE（几何感知空间音频编码器）：在训练时使用全景深度图和模拟房间脉冲响应（RIR）作为监督信号，学习对齐声学特征与3D空间结构，但推理时仅需音频。b) OWL模型：将SAGE与大语言模型（LLaMA-2-7B）通过投影器结合，并采用空间引导的思维链（CoT）进行推理。
-3. 与已有方法相比新在哪里：a) 数据：构建并公开了BiDepth数据集，首次将双耳音频、双耳RIR、全景深度图和超过110万条问答对四元组耦合，提供几何监督。b) 编码器：SAGE通过辅助的RIR重建任务（结合深度图）来正则化音频编码器，使其具备几何感知能力。c) 推理：引入了基于空间位置的思维链推理，将复杂问题分解为可解释的步骤。
-4. 主要实验结果如何：在BiDepth数据集上，OWL在空间推理任务上比最强基线BAT高出约25%（类型III和IV）。在SpatialSoundQA上，OWL的零样本方向估计准确率达到78.31%（BAT为75.54%），思维链推理平均准确率79.06%（BAT为76.89%）。SAGE编码器将平均角度误差（MAE）降低了11°，距离误差率（DER）降低了33.5%。关键对比数据见下表：
-
-| 方法 | BiDepth (类型II - DoA准确率) | BiDepth (类型IV - BA) | SpatialSoundQA (推理平均BA) |
-| :--- | :--- | :--- | :--- |
-| BAT | 71.59% (4-bin) | 61.29% | 76.89% |
-| OWL w CoT | 46.17% (12-bin), 77.21% (4-bin) | 76.53% | 79.06% |
-
-5. 实际意义是什么：该工作推动了音频大模型从单纯的感知（分类、识别）向具备空间推理能力的感知与认知结合发展，为构建能理解声学环境几何结构的智能体（如机器人、助听器）提供了技术基础。
-6. 主要局限性是什么：a) 核心数据集BiDepth基于模拟生成，其声学和几何多样性可能受限，与真实复杂环境存在差距。b) 评估的推理任务相对基础（如二元判断），尚未涵盖更复杂的空间关系推理。c) 模型依赖于高质量的双耳音频输入，对录音设备和场景有一定要求。
+1. 要解决的问题：现代神经网络受限于使用固定（如ReLU、Tanh）或手工设计的激活函数，难以自适应地学习针对任务特定的、复杂的特征交互，尤其是在需要捕获高阶乘积关系或宽频信号时表现不足。
+2. 方法核心：提出深度低秩分离神经网络（LRNN）。其核心创新是每个神经元使用一个“可学习乘积结构激活函数”，即该激活函数是多个独立可学习的单变量函数的乘积。这种结构天然地建模了输入特征间的乘积交互。
+3. 新在哪里：与MLP（特征加性组合，激活函数固定）和现有INR方法（如SIREN，激活函数固定但针对频域设计）不同，LRNN使每个神经元的非线性变换本身成为可学习的、且具有乘积形式的函数。这提供了更强的表达能力，能以更紧凑的模型捕获高阶交互和宽频谱。
+4. 主要实验结果：在多项基准测试中达到SOTA：
+    - 图像表示：在ImageNet 1000张图片上，以约20万参数训练的LRNN-SPDER在达到40dB PSNR的目标上成功率为100%，而SIREN和SPDER的成功率分别仅为1.8%和26.4%。
+    - 音频表示：在多个音频片段上，LRNN-SPDER的最终MSE比SIREN和SPDER低3-11倍。
+    - PDE求解：在高频泊松方程上，一个16k参数的LRNN误差可比一个132k参数的SIREN低一个数量级。
+    - 稀疏CT重建：在50-100个投影下，LRNN重建的PSNR（29.13 dB）和SSIM（0.7455）均为最高，且无伪影。
+5. 实际意义：LRNN提供了一种通用、高效的神经网络构建模块，其独特的归纳偏置使其在信号表示、科学计算和医学成像等需要高保真、紧凑建模的场景中具有重要应用价值，有望降低CT辐射剂量、加速PDE求解。
+6. 主要局限性：乘积结构增加了训练时的内存消耗；理论分析（如缓解维度灾难）依赖于目标函数具有低阶ANOVA结构这一假设；架构中单个神经元的参数量（多个单变量网络）比标准神经元多，训练计算量可能更高。
 
 ---
 
