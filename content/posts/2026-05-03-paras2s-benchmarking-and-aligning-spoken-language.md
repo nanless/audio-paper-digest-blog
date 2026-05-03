@@ -79,7 +79,7 @@ hiddenInHomeList: true
 本文的架构是一个整体的框架，主要包含数据构建、自动评判器（ParaS2SBench的一部分）和模型对齐（ParaS2SAlign）三个核心部分。
 
 整体框架图：
-![ParaS2S整体框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-0.png)
+![ParaS2S整体框架]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-0.png)
 
 1. 基准测试数据集构建（ParaS2SBench Data Pipeline）：
 - 输入： 设计规则（对比说话风格、场景控制）。
@@ -108,7 +108,7 @@ hiddenInHomeList: true
   - 过程： 对每个查询，让策略模型（即热启动SFT模型）生成一组（Group）回应，用奖励模型快速打分，计算组内相对优势。
   - 目标： 最大化奖励，同时通过KL散度惩罚防止策略偏离初始模型太远，以保留其原有能力。
 
-![图4展示了不同数据规模下，纯SFT与RL（本文方法）的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-3.png)
+![图4展示了不同数据规模下，纯SFT与RL（本文方法）的性能对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-3.png)
 图4显示，随着监督数据量从10小时增加到100小时，SFT性能持续提升。但本文的RL方法（GRPO）仅用10小时数据热启动，就能超越用100小时数据训练的纯SFT模型，体现了RL在数据效率上的优势。
 
 ### 💡 核心创新点
@@ -175,7 +175,7 @@ hiddenInHomeList: true
 结论：人类评估进一步证实，本文的GRPO模型（4.303）显著优于SFT（3.996）和所有现有模型。
 
 图2：RL在不同监督数据规模下的有效性及���力保持
-![图2](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-1.png)
+![图2]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/CcmDDh070o-1.png)
 (a)显示在不同规模的SFT热启动数据下，RL（GRPO）都能带来性能提升，且用20小时数据热启动+RL的效果超过了用100小时数据纯SFT的效果。(b)展示了各模型在原始能力（VoiceBench， 代表通用对话智能）和副语言感知能力（ParaS2SBench）上的表现。本文模型在两项能力上均取得顶尖水平，特别是GRPO模型在大幅提升副语言能力的同时，很好地保持了基座模型（Kimi-Audio）的通用智能。
 
 ### ⚖️ 评分理由

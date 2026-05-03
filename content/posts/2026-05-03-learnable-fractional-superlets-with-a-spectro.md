@@ -58,7 +58,7 @@ hiddenInHomeList: true
 整个系统（LFST+STEE）是一个端到端的流水线，从原始波形输入，输出情感类别。
 
 1. LFST前端（Learnable Fractional Superlet Transform）：
-![LFST前端架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-0.png)
+![LFST前端架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-0.png)
 图1：LFST前端示意图。展示了从可学习频率网格、softmax阶权重到生成幅度图S、相位一致性κ和有效阶o_eff的过程，LAHT作用于S。
 - 输入：原始波形x。
 - 可学习参数：对数频率网格增量δ_j、基础周期c1(f_i)、阶权重logits θ_{i,o}。
@@ -74,7 +74,7 @@ hiddenInHomeList: true
   7. 输出：双通道时频图S2 = [S; κ] ∈ ℝ^{B×2×F×T}，以及有效阶向量o_eff。
 
 2. STEE编码器（Spectro-Temporal Emotion Encoder）：
-![STEE编码器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-1.png)
+![STEE编码器架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-1.png)
 图2：STEE编码器架构图。展示了从输入S2到嵌入向量z和分类逻辑值y的流程，包含时间主干、频谱块、TF混合块、FiLM门控、注意力池化等模块。
 - 输入：双通道时频图S2。
 - 流程：
@@ -82,7 +82,7 @@ hiddenInHomeList: true
   2. 频谱残差块：应用沿频率维度的深度可分离卷积(k_f×1)，捕获短程跨频带相关性，并通过残差连接。
   3. TF混合残差块 + SE：并行应用频率分支(k_f×1)和时间分支(1×k_t)，相加后通过逐点卷积混合，再进行残差连接。随后通过通道注意力（Squeeze-and-Excitation）重新校准通道重要性。此结构重复两次，用于学习局部时频模式。
   4. 自适应FiLM频率门控：
-      ![FiLM门控示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-2.png)
+      ![FiLM门控示意图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-2.png)
       图3：自适应FiLM门控示意图。展示了如何从S和κ的时间统计量以及有效阶o_eff生成通道门控信号。
       - 为每个频率f，计算S和κ的时间均值和对数标准差，与o_eff融合，通过一个小型MLP生成每个通道的门控值g∈(0,1)^C。
       - 用g对编码器特征X进行逐通道缩放：X ← g ⊙ X。
@@ -152,7 +152,7 @@ hiddenInHomeList: true
 | NSPL-CRISE (5类) | Accuracy | 76.9% | 68.7% (Li et al.) | 74.9% (Fixed Superlet) |
 | | Macro F1 | 76.6% | 69.3% (Li et al.) | 74.7% (Fixed Superlet) |
 
-![NSPL-CRISE数据集上的混淆矩阵](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-3.png)
+![NSPL-CRISE数据集上的混淆矩阵]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-3.png)
 图4：三个数据集的混淆矩阵。(a) EMO-DB, (b) IEMOCAP, (c) NSPL-CRISE。显示了主要混淆对，如NSPL-CRISE中的FCW与Sad/Neutral。
 
 容量匹配消融实验（所有前端使用相同的STEE编码器）：
@@ -172,12 +172,12 @@ hiddenInHomeList: true
 | LFST (完整模型：κ + LAHT) | 76.9% | 76.6% |
 
 计算开销对比（1秒输入，16kHz）：
-![论文中的计算开销对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-5.png)
+![论文中的计算开销对比表]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-5.png)
 图6（对应论文表5）：不同前端+STEE配置的计算量（FLOPs）、峰值内存和延迟对比。LFST+STEE（201.5 GFLOPs，74.9ms）远高于STFT+STEE（0.36 GFLOPs，2.2ms）。
 
 关键结论：LFST+STEE在所有数据集和指标上均达到或超越SOTA。消融实验表明，相位一致性通道κ的贡献（+9.7% Acc）大于LAHT（+2.6% Acc），且两者互补。学习到的分数阶分布（图5）显示了频率自适应的分析策略：低频区有效阶较低以保留时间精度，中高频共���峰区域有效阶较高以增强频率选择性。
 
-![学习到的分数阶分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-4.png)
+![学习到的分数阶分布]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZGEEL20mU-4.png)
 图5：学习到的分数阶行为随频率的变化。上图为有效阶o_eff(f)，下图为阶权重分布热图。显示了低频区（F0附近）有效阶较低，中频共振峰区（F1-F3）有效阶较高。
 
 ### ⚖️ 评分理由

@@ -54,7 +54,7 @@ hiddenInHomeList: true
 6. 主要局限性：评估基于主观的人类判断，可能受评判者文化背景和熟悉度影响；所提出的AI评判器虽然性能优异，但其在更广泛、更真实世界场景下的泛化能力仍需持续验证。
 
 图5：细粒度人类相似性维度评分（1-5分）
-![图5](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-4.png)
+![图5]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-4.png)
 图5展示了18个人类相似性维度的众包评分结果。可以清晰地看到，S2S系统在“记忆一致性”、“逻辑连贯性”和“发音准确性”等维度上得分较高（接近4分），而在“节奏”、“语调”、“重音”、“文本情感”、“声学情感”和“谄媚行为”等维度上得分显著较低（约2-3分），这直观地揭示了当前系统的拟人性瓶颈。
 
 表2：不同AI模型在图灵测试数据上的分类准确率
@@ -81,7 +81,7 @@ hiddenInHomeList: true
 
 本文的核心模型是用于自动化人类相似性评估的“可解释AI评判器”。其架构基于一个两阶段微调框架，以Qwen2.5-Omni（一个音频-语言大模型）为骨干。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-0.png)
+![图1]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-0.png)
 
 图1展示了整体研究设计，包括数据收集、图灵测试、细粒度诊断和AI评判器开发流程。
 
@@ -125,7 +125,7 @@ hiddenInHomeList: true
 ### 📊 实验结果
 
 图灵测试主要结果（见图4a）：
-![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-3.png)
+![图4]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-3.png)
 图4a显示了所有系统在图灵测试中的成功率（被判断为人类的比例）。人类说话者成功率最高（英语0.87，中文0.70）。所有9个S2S系统的成功率均低于0.31，远未达到通过测试所需的0.5阈值。伪人类（TTS）对话的成功率介于S2S系统和真人之间。
 
 参与者识别准确率（见图4b）：
@@ -142,7 +142,7 @@ AI评判器性能对比（见表2，表3）：
 - OOD泛化评估（见表4）：在CosyVoice2、Fisher、MultiDialog三个分布外数据集上，准确率均超过95%，ROC-AUC为0.9881，证明模型泛化能力很强。
 - 案例分析（见图15）：通过分解分类器贡献值，直观展示了模型如何依据不同维度的分数做出判断，验证了其可解释性。
 
-![图15](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-1.png)
+![图15]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Pv5l6cvfno-1.png)
 图15的案例分析展示了AI评判器对两个机器生成对话的判断过程。左图为正确分类，模型聚合了多个“机器像”的信号（如谄媚行为、发音不稳定）；右图为误分类，因为对话在记忆一致性、发音准确性等维度上得分很高，提供了足够的“人类像”证据，导致模型误判。
 
 #

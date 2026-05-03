@@ -72,10 +72,10 @@ SyncTrack的核心是一个类U-Net的扩散去噪网络 `ε_θ`，其创新之�
     *   结构与数据流： 核心是可学习的乐器先验（Learnable Instrument Prior）。每个轨道有一个独热编码向量，经过位置编码和两层神经网络转换为一个嵌入向量。该嵌入向量与时间步嵌入相加后，被注入到模块的第一个残差块输出中。随后经过第二个残差块，得到最终的轨道特定表示。
     *   作用： 这个先验向量作为轨道的“身份证”，为模型提供关于当前生成的是何种乐器（如温暖的贝斯、明亮的钢琴）的强先验信息，使模型能更好地生成符合该乐器特性的声音。
 
-![SyncTrack整体流程与架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-1.png)
+![SyncTrack整体流程与架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-1.png)
 图2：（a）SyncTrack的整体训练与采样流程。（b）SyncTrack网络内部结构，由输入块、中间块和输出块组成，其中交替包含轨道共享模块和轨道特定模块。
 
-![模块与注意力机制细节](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-2.png)
+![模块与注意力机制细节]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-2.png)
 图3：（a）轨道共享模块和（b）轨道特定模块的详细结构。（c）展示了（i）全局跨轨注意力和（ii）时域特定跨轨注意力的具体操作方式。
 
 ### 💡 核心创新点
@@ -135,7 +135,7 @@ SyncTrack的核心是一个类U-Net的扩散去噪网络 `ε_θ`，其创新之�
 | CBD (std) | 0.1578 | 0.2131 | 0.2642 | 0.2217 |
 | CBD (median) | 0.2066 | 0.2258 | 0.3545 | 0.2811 |
 
-![主观评价与客观指标关联](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-3.png)
+![主观评价与客观指标关联]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Jf7i0a8dr0-3.png)
 图4：展示了所提三个客观指标（IRS， CBS， CBD）得分与人类主观评分之间的关联，验证了指标的有效性。
 
 消融实验（RQ3）

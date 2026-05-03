@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 DiffSDA的整体架构（如图1所示）是一个条件扩散自编码器，由三个主要组件构成：序列语义编码器、随机编码器和随机解码器。
 
-![模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/tooDJHBSvO-0.png)
+![模型架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/tooDJHBSvO-0.png)
 
 流程：
 1.  输入：一个干净的序列 `x_{1:V}^0`。
@@ -106,7 +106,7 @@ DiffSDA的整体架构（如图1所示）是一个条件扩散自编码器，由
 | | DBSE | 0.325 | 6.312 |
 | | Ours | 0.326 | 2.143 |
 
-![条件交换结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/tooDJHBSvO-1.png)
+![条件交换结果对比图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/tooDJHBSvO-1.png)
 
 结论：在绝大多数数据集和指标上，DiffSDA的AED和AKD误差最低，尤其在CelebV-HQ上AKD优势巨大（6.932 vs 28.69），表明其在保持身份的同时迁移动作的能力远超基线。
 

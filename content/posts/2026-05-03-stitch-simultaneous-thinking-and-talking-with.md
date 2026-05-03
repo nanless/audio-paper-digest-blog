@@ -66,10 +66,10 @@ STITCH方法未改变这一基础架构，而是修改了其生成流程（Gener
 3.  并行处理：第一个语音块的语音令牌被送到语音解码器合成为音频并播放给用户。在音频播放期间（时长约tchunk），模型利用这段空闲时间继续生成下一个推理块和下一个文本-语音交织块，为下一段语音播放做准备。
 4.  输出：交替出现的推理令牌（不发声）、文本令牌（可转录）和语音令牌（可播放）流。最终用户听到的是由语音令牌合成的连续语音。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-0.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-0.png)
 图1（论文中的Figure 1）：STITCH-R的时序图。展示了模型生成令牌（下方时间线）与用户接收音频（上方时间线）的并行关系。第一块音频播放时（tchunk），模型正在生成后续的推理和语音令牌。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-1.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-1.png)
 图2（论文中的Figure 2）：不同生成方法的令牌输出序列对比。（a）为原始GLM-4-Voice的纯交织模式；（b）为TBS（先完整推理后说话）；（c）为STITCH-R；（d）为STITCH-S。清晰展示了STITCH如何将推理令牌“缝合”到文本-语音令牌序列中。
 
 #
@@ -135,7 +135,7 @@ STITCH方法未改变这一基础架构，而是修改了其生成流程（Gener
 - 外部推理模型：使用更强的推理模型（如GLM-4-9B-Chat）为STITCH-R提供推理时，性能提升；使用弱模型（Llama-3.2-1B）则性能下降，证实模型确实利用了推理内容。
 - 人类评估：STITCH-S的响应性评分（1.687）高于TBS（1.164），STITCH-R（1.164）也高于TBS。STITCH-S与无推理基线响应性差异不显著（0.290）。
 
-![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-0.png)
+![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/5Z1eMhCeTb-0.png)
 图3（论文中的Figure 3）：(a)和(b)展示了STITCH-R和STITCH-S在不同`N'_reason`下的准确率变化。(c)展示了使用不同推理增强模型时STITCH-R在数学QA上的平均准确率。结果显示了性能随推理长度和推理模型强度的变化趋势。
 
 #

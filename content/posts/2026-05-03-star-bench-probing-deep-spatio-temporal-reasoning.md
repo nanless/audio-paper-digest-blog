@@ -49,7 +49,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 本文的核心贡献是提出STAR-Bench基准测试，而非一个新的模型。因此，本节将详细描述该基准的任务架构和数据构建框架。
-![STAR-Bench任务示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-1.png)
+![STAR-Bench任务示例]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-1.png)
 图2：STAR-Bench数据示例。上半部分展示基础感知任务，下半部分展示整体推理任务（时间推理与空间推理）。
 STAR-Bench的架构是分层任务体系，由两个互补的子任务构成：
 1.  基础声学感知任务：
@@ -64,9 +64,9 @@ STAR-Bench的架构是分层任务体系，由两个互补的子任务构成：
         *   离散事件序列：要求模型基于物理因果、功能流程或社会常识，对多个独立声音事件进行排序（如“拨号->响铃->说话”）。
     *   空间推理设计：分为三级复杂度：1) 单源静态定位；2) 多源空间关系判断；3) 动态轨迹追踪。为全面评估，采用“原生输入”（测试模型内禀空间处理能力）和“分声道输入”（作为消融，测试模型能否利用被保留的双耳信息）两种设置。
 数据构建流程：基础任务依赖参数化合成与物理模拟；整体推理任务采用四阶段流程：分类体系构建与数据搜集、AI辅助筛选、人工标注与质量控制、最终的人工表现验证。这确保了样本的高质量与公平性。
-![STAR-Bench数据分布与统计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-3.png)
+![STAR-Bench数据分布与统计]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-3.png)
 图4：(a) STAR-Bench在基础感知、时间推理和空间推理三个任务上的数据分布。(b) 数据统计信息，包括各类问题数量、平均音频长度等。
-![整体推理任务数据标注流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-4.png)
+![整体推理任务数据标注流程]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-4.png)
 图5：STAR-Bench整体推理任务数据标注的四阶段流程图。
 
 ### 💡 核心创新点
@@ -89,9 +89,9 @@ STAR-Bench的架构是分层任务体系，由两个互补的子任务构成：
 
 主要评估了19个模型（16个开源，3个闭源）在STAR-Bench上的表现。
 核心结果表（来自论文Table 2）：
-![模型在STAR-Bench上的主要评估结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-2.png)
+![模型在STAR-Bench上的主要评估结果]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-2.png)
 图1：人类与Gemini 2.5 Pro在不同基准上使用原始音频和音频描述时的性能对比。STAR-Bench导致性能大幅下降。
-![模型在时空任务上的误差分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-0.png)
+![模型在时空任务上的误差分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-0.png)
 图6：模型在时间和空间任务上的错误类型分布分析。
 
 | 模型 | 基础感知 (MA%) | 时间推理 (OA%) | 空间推理 (OA%) | 总体平均 (AA%) |
@@ -107,13 +107,13 @@ STAR-Bench的架构是分层任务体系，由两个互补的子任务构成：
 
 *   与最强基线/SOTA差距：最强的闭源模型Gemini 2.5 Pro的总体平均准确率（49.59%）仍远低于人类（79.11%），差距约30个百分点。在要求精细感知的时间推理任务上，其58.52%的准确率也仅略高于随机水平，显示巨大提升空间。
 *   关键消融实验（时间推理）：
-![时间推理任务的消融研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-1.png)
+![时间推理任务的消融研究]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-1.png)
 图9：在时间推理任务上的消融研究。添加全局描述（+global caption）和提供未剪切音频（+uncut audio）对模型性能的影响。
     *   提供全局描述（+ global caption）对闭源模型（如Gemini 2.5 Pro）提升明显（58.52% → 76.33%），但对开源模型提升甚微。
     *   提供完整未剪切音频（+ uncut audio）使Gemini 2.5 Pro准确率飙升至99%，而开源模型仍无显著改善，暴露其无法有效比较和整合多段音频信息的根本缺陷。
 *   关键消融实验（空间推理 - 输入方式）：分声道输入在多数情况下能提升模型的空间推理表现（如Gemini 2.5 Flash在空间任务上从28.35%提升到41.23%），证实了当前主流模型在“原生输入”时对多通道信息的处理存在严重缺陷。
 *   感知能力可视化：
-![模型与人类的感知范围及敏感度对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-7.jpg)
+![模型与人类的感知范围及敏感度对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Ts6j3GoZDE-7.jpg)
 图8：基础感知任务的范围与敏感度分析。上排为模型与人类在音高-响度空间上的覆盖范围（听力图）。下排为模型与人类在音高、响度、时长区分敏感度上的准确率随难度变化曲线。
     *   Gemini 2.5 Pro的“听力图”覆盖范围远超其他模型，但仍远不及人类。
     *   所有模型在细粒度响度区分上的表现随难度增加急剧下降，证实了细粒度感知是主要瓶颈。

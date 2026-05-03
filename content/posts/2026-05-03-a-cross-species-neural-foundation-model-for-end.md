@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 BIT框架的完整架构和流程如图1所示。
 
-![图1：BIT框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-0.png)
+![图1：BIT框架示意图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-0.png)
 
 完整输入输出流程：输入为来自Utah阵列的原始神经活动（阈值脉冲计数和脉冲带功率，20ms分箱并z-score标准化）。输出为英语句子文本。
 
@@ -146,17 +146,17 @@ Brain-to-Text ‘25 竞赛 (T15， 尝试语音， Hold-out Set)
 1.  编码器预训练的效果 (图2A, B)：
     - 尝试语音：预训练编码器（BIT-Human, BIT-All）在级联和端到端设置下均优于从头训练的Transformer（BIT-TFS）和RNN基线。
     - 想象语音（小数据任务）：SSL预训练带来的收益更大，BIT-Human和BIT-All比BIT-TFS的WER降低39-45%。且跨被试的SSL预训练（BIT-All）优于同被试的监督预训练（BIT-Cross-Task-Only）。
-    ![图2：尝试语音和想象语音解码结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-1.png)
+    ![图2：尝试语音和想象语音解码结果对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-1.png)
 2.  LLM解码器消融 (图3C, D)：
     - 在同等模型规模下，音频LLM（蓝色柱）普遍优于文本LLM（黄色柱）。其中，Aero1-Audio 1.5B表现最佳。
     - 将神经活动视为“神经模态”（直接投影到文本空间）略优于视为“音频模态”（额外经过音频多模态投影器）。
     - 使用对比学习（无斜线填充）能进一步提升性能。
-    ![图3：LLM解码器消融实验](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-2.png)
+    ![图3：LLM解码器消融实验]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-2.png)
 3.  跨任务对齐的可解释性分析 (图4)：
     - RSA分析 (图4A)：预训练编码器的神经嵌入与音频LLM文本嵌入的相似度，高于RNN和BIT-TFS的嵌入。
     - 表征空间可视化 (图4B, C)：原始神经活动的PCA空间中，尝试语音和想象语音的词嵌入明显分离。经BIT对齐后，两者的嵌入在语义空间中聚集，且相同词汇的嵌入距离更近（颜色更深）。
     - 注意力权重可视化 (图4D)：使用交叉注意力投影器时，神经-文本的时间对齐模式在尝试语音和想象语音任务间相似。
-    ![图4：跨任务神经嵌入对齐分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-3.png)
+    ![图4：跨任务神经嵌入对齐分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Lp1noMpMUG-3.png)
 
 ### ⚖️ 评分理由
 

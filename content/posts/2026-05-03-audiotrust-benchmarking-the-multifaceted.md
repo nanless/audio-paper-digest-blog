@@ -57,7 +57,7 @@ hiddenInHomeList: true
         | 鲁棒性 | 环境音理解准确度 | Gemini-2.5 Pro (8.68), SALMONN (6.42) (GPT-4o评估) |
         | 认证 | 身份验证绕过拒绝率 (IVB) | GPT-4o mini Audio (100), Kimi-Audio (74) (GPT-4o评估) |
     *   关键结果图表：论文中的概览与排行榜图显示了各模型在六个维度上的得分差异巨大。例如，图2(b)显示GPT-4o Audio在认证维度得分0.938，但在公平性维度仅0.600。
-    ![论文中的概览与排行榜图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/E823AY0taq-1.png)
+    ![论文中的概览与排行榜图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/E823AY0taq-1.png)
     *   图2：展示了AudioTrust的六大评估维度和初步模型排行榜。排行榜显示，没有模型在所有维度上都表现优异，GPT-4o Audio在认证上领先，而Kimi-Audio在安全上表现突出。
 5.  实际意义是什么：为ALLMs的研发、评估和安全部署提供了急需的标准化基准和工具集，明确了当前模型在真实高风险场景下的脆弱环节，为构建可信赖的音频AI系统指明了方向。
 6.  主要局限性是什么：评估框架的有效性高度依赖于其自动化评估管道（基于LLM的评估器）的准确性；数据集虽大，但可能无法覆盖所有长尾分布和方言；部分攻击场景设计相对理想化，可能与复杂多变的真实攻击存在差距。
@@ -102,7 +102,7 @@ AudioTrust 本身不是一个ALLM模型，而是一个用于评估ALLM可信度�
     - 认证（表6）：闭源模型（GPT-4o系列）在身份验证绕过（IVB）和混合欺骗（HS）上拒绝率接近100%。开源模型表现参差不齐，平均拒绝率约55%。声音克隆欺骗（VCS）对所有模型都是巨大挑战，Gemini系列在此项上得分较低（IRR < 34%）。加强系统提示的严格性可提升所有模型的抗欺骗能力。
 
 - 关键实验结果图表：
-    ![论文中的模型可信度雷达图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/E823AY0taq-0.png)
+    ![论文中的模型可信度雷达图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/E823AY0taq-0.png)
     *   图3：展示了各模型在六个可信度维度上的归一化得分雷达图。直观显示了没有模型能实现全面的可信度平衡，例如SALMONN在隐私上得分高但公平性和鲁棒性得分极低，Ultravox在安全上得分高但鲁棒性得分低。
 
 ### ⚖️ 评分理由

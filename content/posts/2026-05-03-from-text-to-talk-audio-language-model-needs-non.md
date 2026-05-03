@@ -74,7 +74,7 @@ hiddenInHomeList: true
 
 TtT是一个基于预训练大语言模型（如Qwen2.5）的端到端统一框架，旨在处理交错的文本和音频序列，并生成文本和音频响应。
 
-![论文中的框架概览与推理过程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/e3XLWHFrnr-1.png)
+![论文中的框架概览与推理过程图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/e3XLWHFrnr-1.png)
 图2：TtT框架概览（a）和扩散反向过程（b）。 (a)展示了模型如何在统一的MLLM中交替执行AR文本解码和NAR音频合成。模型根据控制令牌（`<SOA>`, `<EOA>`）动态切换模式。(b)展示了NAR音频生成的迭代去噪过程。
 
 1.  输入与词汇扩展：输入为交错的文本-音频序列。在预训练LLM的基础上，扩展了词汇表，加入了离散音频码本令牌（来自神经编解码器，如GLM-4-Voice）和特殊控制符号（`<SOA>`, `<EOA>`, `<EOS>`，以及掩码令牌`[M]`）。
@@ -84,7 +84,7 @@ TtT是一个基于预训练大语言模型（如Qwen2.5）的端到端统一框�
     - 音频令牌：采用混合注意力。在同一个音频跨度内，音频令牌可以双向地关注该跨度内的所有其他音频令牌，以捕捉音频令牌间的潜在依赖；同时，它们像文本令牌一样，因果地关注所有提示和先前的跨度。这种设计使得在训练时，整个音频跨度可以并行地进行扩散去噪。
     - 特殊令牌：`<SOA>`和`<EOA>`作为控制令牌，标记音频跨度的开始和结束，引导模型在AR和NAR模式间切换。
 
-![论文中的训练损失与注意力设计图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/e3XLWHFrnr-2.png)
+![论文中的训练损失与注意力设计图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/e3XLWHFrnr-2.png)
 图3：(a)训练损失计算。(b)注意力模式可视化。 (a)清晰地展示了文本跨度使用AR交叉熵损失，音频跨度使用NAR扩散损失。(b)可视化了上述的混合注意力模式。
 
 4.  生成范式：

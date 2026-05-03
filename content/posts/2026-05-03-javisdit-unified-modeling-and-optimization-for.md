@@ -123,7 +123,7 @@ JavisDiT++的整体架构旨在将Wan2.1-1.3B-T2V文本到视频模型统一扩�
 
 人工评估：在100个提示的对比中，本文模型分别以74.0%和74.7%的胜率优于JavisDiT和UniVerse-1。DPO模型以74.7%的胜率优于SFT模型。
 
-![论文中的对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/hRRWfFpKRp-5.png)
+![论文中的对比图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/hRRWfFpKRp-5.png)
 图6展示了本文模型与JavisDiT、UniVerse-1及Veo-3在两个案例上的生成结果对比，显示了本文模型在视觉质量和音视频同步性上的优势。
 
 ### ⚖️ 评分理由

@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 Skip-BART是一个基于BART的编码器-解码器模型，用于将音乐音频序列映射到灯光（色相Hue， 亮度Value）序列。
 
-![icassp-img://a4Got6azjF/0.png](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/a4Got6azjF-0.png)
+![icassp-img://a4Got6azjF/0.png]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/a4Got6azjF-0.png)
 图1：Skip-BART网络架构概览。左侧为使用OpenL3提取的音乐特征输入编码器；右侧为灯光序列输入解码器。中间的“Skip Connection”模块是核心创新。
 
 整体流程：
@@ -116,7 +116,7 @@ Skip-BART是一个基于BART的编码器-解码器模型，用于将音乐音频
 Skip-BART在跨域评估中依然显著优于规则基线（p<0.001），显示了其一定的泛化能力。
 
 可视化结果：
-![icassp-img://a4Got6azjF/4.png](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/a4Got6azjF-4.png)
+![icassp-img://a4Got6azjF/4.png]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/a4Got6azjF-4.png)
 图5（论文中图5）：生成灯光序列可视化。上排为输入梅尔频谱，下排为不同方法的预测。Skip-BART的预测（左下）在时间结构上比规则方法（右下）更贴近真实灯光（右上），尤其是在音乐转折点处。
 
 ### ⚖️ 评分理由

@@ -47,8 +47,8 @@ hiddenInHomeList: true
 3.  新意：1）首次在统一架构中同时处理交互和反应两种双人生成任务，实现无缝切换。2）提出首个针对双人动作的RAG框架，通过多维度文本分解和音乐特征进行检索。3）将对比学习引入Rectified Flow目标，并设计了针对双人协调的同步损失。
 4.  实验结果：在MDD、InterHuman-AS和DD100三个数据集上进行了广泛评估。DualFlow在多项指标上取得领先，例如在MDD反应任务中，DualFlow(Both)的R-Precision@3达到0.471（最佳），FID为0.686（最佳）；在InterHuman-AS交互任务中，R-Precision@3为0.681（显著优于InterGen的0.624）。推理速度比需要50步的InterGen快2.5倍（20步 vs 50步）。消融研究证明了RAG、对比损失和同步损失的有效性。
 
-![图1：DualFlow模型概念图，展示其统一处理交互与反应生成，并利用文本、音乐和检索样本进行条件生成。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-0.png)
-![图2：DualFlow的(a)整体架构与(b) Multi-Modal DualFlow Block的详细结构，展示了输入处理、掩码机制和多层注意力模块。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-1.png)
+![图1：DualFlow模型概念图，展示其统一处理交互与反应生成，并利用文本、音乐和检索样本进行条件生成。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-0.png)
+![图2：DualFlow的(a)整体架构与(b) Multi-Modal DualFlow Block的详细结构，展示了输入处理、掩码机制和多层注意力模块。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-1.png)
 
 5.  实际意义：为VR/AR伙伴、社交机器人和游戏AI提供生成协调、逼真、可响应的双人动作的新方法，提升虚拟角色交互的真实感和智能性。
 6.  主要局限性：1) RAG效果高度依赖检索样本的质量和相关性，对模糊或抽象的输入描述可能失效。2) 在反应设置中，近距离接触动作可能出现轻微的穿透现象，因缺乏显式物理约束。3) 长序列生成可能累积时间偏移，影响长期的结构一致性和节奏对齐。
@@ -84,7 +84,7 @@ DualFlow是一个端到端的Transformer网络，核心思想是通过掩码机�
     *   交互设置：网络输出双人动作速度`[v_θ,a; v_θ,b]`，通过Rectified Flow的ODE求解器积分得到去噪后的双人动作`[x_a, x_b]`。
     *   反应设置：网络仅输出反应者的速度`v_θ,b`，行动者部分的梯度被屏蔽（输出`0`）。最终积分得到反应者的动作`x_b`。
 
-![图2：论文中的架构图，详细展示了DualFlow Block的内部结构（b部分），特别是交互和反应设置下注意力模块的差异。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-1.png)
+![图2：论文中的架构图，详细展示了DualFlow Block的内部结构（b部分），特别是交互和反应设置下注意力模块的差异。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-1.png)
 
 ### 💡 核心创新点
 
@@ -148,12 +148,12 @@ DualFlow是一个端到端的Transformer网络，核心思想是通过掩码机�
 
 效率对比：如图4所示，DualFlow仅需20步推理即可达到甚至优于InterGen需要50步DDIM才能达到的FID水平，推理速度提升约2.5倍。
 
-![图4：DualFlow与InterGen在不同推理步数下的FID对比图，显示DualFlow在更少步数下达到更优FID。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-3.png)
+![图4：DualFlow与InterGen在不同推理步数下的FID对比图，显示DualFlow在更少步数下达到更优FID。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-3.png)
 
 定性评估：用户研究（图3）显示，参与者在文本对齐、音乐同步和整体质量上更倾向于DualFlow生成的结果。可视化对比（图5）显示DualFlow生成的动作在接触、姿态和流畅性上优于基线方法。
 
-![图3：用户研究结果柱状图，显示DualFlow在多数评估维度上优于基线方法。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-2.png)
-![图5：定性对比图，展示了DualFlow生成的动作在文本对齐和动作连贯性上优于InterGen和DuoLando。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-4.png)
+![图3：用户研究结果柱状图，显示DualFlow在多数评估维度上优于基线方法。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-2.png)
+![图5：定性对比图，展示了DualFlow生成的动作在文本对齐和动作连贯性上优于InterGen和DuoLando。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QaAgHKbJop-4.png)
 
 ### ⚖️ 评分理由
 

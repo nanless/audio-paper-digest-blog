@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 论文提出的方法并非一个端到端的神经网络模型，而是一个评估度量计算流程。其整体架构（Pipeline）如图1所示，包含四个主要阶段：
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-0.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-0.png)
 图1：MAPSS流程概览图。Stage 1：为每个参考源生成一组感知失真。Stage 2：将所有失真样本、参考和系统输出聚合，并通过自监督模型编码。Stage 3：通过扩散映射将这些表示嵌入到一个低维感知流形。Stage 4：在流形上计算PS和PM度量。
 
 完整流程与组件：
@@ -113,19 +113,19 @@ hiddenInHomeList: true
 - 消融实验：仅使用原始波形（Waveform）而不进行自监督编码的版本性能显著下降，证明了编码的关键作用（表1）。
 
 相关图表：
-- 图2（NMI分析）：![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-1.png) 该图展示了PS和PM之间的归一化互信息（NMI）。随着阈值收紧（仅保留低分帧），NMI趋近于0，表明两个度量捕捉了互补的信息，在系统表现差时互补性更强。
-- 图3（度量行为可视化）：![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-2.png) 该图展示了PS和PM的函数行为。左图为PS在`(Â, B̂)`平面上的等高线，显示了其将距离比映射到[0,1]分数的特性。右图为PM在`(â, k̂)`, `(θ̂, k̂)`, `(â, θ̂)`不同平面上的行为，展示了其如何基于Gamma分布的参数变化。
-- 图4（帧级分数分布）：![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-3.png) 该图显示了帧级PS和PM值的分布。PM值大量集中在0附近，而PS值大量集中在1附近，这与直观感知（轻微失真就可能严重降低PM，而分离通常做得较好）相符，但也引发了PS是否对泄漏不够敏感的讨论。
+- 图2（NMI分析）：![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-1.png) 该图展示了PS和PM之间的归一化互信息（NMI）。随着阈值收紧（仅保留低分帧），NMI趋近于0，表明两个度量捕捉了互补的信息，在系统表现差时互补性更强。
+- 图3（度量行为可视化）：![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-2.png) 该图展示了PS和PM的函数行为。左图为PS在`(Â, B̂)`平面上的等高线，显示了其将距离比映射到[0,1]分数的特性。右图为PM在`(â, k̂)`, `(θ̂, k̂)`, `(â, θ̂)`不同平面上的行为，展示了其如何基于Gamma分布的参数变化。
+- 图4（帧级分数分布）：![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-3.png) 该图显示了帧级PS和PM值的分布。PM值大量集中在0附近，而PS值大量集中在1附近，这与直观感知（轻微失真就可能严重降低PM，而分离通常做得较好）相符，但也引发了PS是否对泄漏不够敏感的讨论。
 
 其他重要实验（附录C）：
 - 模型层选择：测试了多种自监督模型（wav2vec2, HuBERT, WavLM）的不同层。发现浅层（第1-3层）性能最佳，深层性能下降，因为深层更抽象，损失了感知相关的声学细节（图6，图7）。
 - 时间错位敏感性：PM对参考与输出间的毫秒级时间偏移敏感，性能随偏移增大而下降（图8）。这与PESQ等内置对齐的指标不同。
 - 失真库扰动实验：测试了当失真库被故意修改（移除一类，增强另一类）时性能的稳定性。结果显示PS非常稳健，PM在移除关键失真类（如噪声）时性能下降稍明显，但整体仍保持高水平（表9）。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-4.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-4.png)
 图5（对应论文Fig.7）：不同自监督模型（wav2vec2 Large）的Transformer层深度对PS/PM性能（PCC/SRCC）的影响。横轴为层索引百分比。在英语和西班牙语场景中，早期层（约20%位置）表现最佳。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-5.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/uZ5KmXsJsB-5.png)
 图6（对应论文Fig.6）：不同自监督架构（wav2vec2, HuBERT, WavLM）及其大小（Large/Base）在英语场景中，不同Transformer层对PS/PM性能的影响。同样显示浅层性能更优且更稳定。
 
 ### ⚖️ 评分理由

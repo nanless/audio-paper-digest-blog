@@ -69,8 +69,8 @@ LRNN是对标准多层感知机（MLP）的泛化，其核心差异在于神经�
 - 参数共享：可选择在同一层内共享单变量函数 `g^{(k)}_j`（第5式），减少参数量，但在高保真任务中可能牺牲性能。
 
 架构图：
-论文中的图片（icassp-img://EB2Qgp5Vb0/9.png）展示了深层LRNN的架构示意图，清晰地描绘了从输入到输出的多层级结构，每一层都包含线性投影和乘积结构激活操作。
-![深层LRNN架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-9.png)
+论文中的图片](icassp-img://EB2Qgp5Vb0/9.png)展示了深层LRNN的架构示意图，清晰地描绘了从输入到输出的多层级结构，每一层都包含线性投影和乘积结构激活操作。
+![深层LRNN架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-9.png)
 （图10：深层LRNN架构。输入`x(0)`经过一系列LRNN层`ϕ^(k)`变换，每层包含乘积结构激活，最终通过输出矩阵`Sout`得到预测`ŷ`。）
 
 关键设计选择：
@@ -141,13 +141,13 @@ LRNN是对标准多层感知机（MLP）的泛化，其核心差异在于神经�
 
 - 大规模鲁棒性测试（1000张ImageNet图）：
 
-![ImageNet测试成功率与时间](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-3.png)
+![ImageNet测试成功率与时间]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-3.png)
 （图4：在1000张ImageNet图像上，达到指定PSNR目标的成功率和平均时间。LRNN在40dB目标上实现100%成功率，远超SIREN(1.8%)和SPDER(26.4%)。）
 
 - 定性对比：
-  ![定性重建对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-2.png)
+  ![定性重建对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-2.png)
   （图3：Camerman图像重建结果与PSNR收敛曲线。LRNN-SPDER的重建图像质量最高，收敛曲线显示其达到更高PSNR且持续上升。）
-  ![ImageNet定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-4.png)
+  ![ImageNet定性对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-4.png)
   （图5：ImageNet图像在epoch 250时的重建对比。LRNN重建最接近真值，SPDER有轻微退化，SIREN更模糊。）
 
 2. 音频表示：
@@ -162,12 +162,12 @@ LRNN是对标准多层感知机（MLP）的泛化，其核心差异在于神经�
 
 （MSE越低越好，ρAG越高越好）
 - 图表：
-  ![音频误差与收敛](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-6.png)
+  ![音频误差与收敛]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-6.png)
   （图7：bach音频的时频域绝对误差和训练损失收敛。LRNN-SPDER的误差最小，收敛最快。）
 
 3. PDE求解：
 - 关键结果：与SIREN, MLP, KANs对比。
-  ![PDE基准结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-7.png)
+  ![PDE基准结果]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-7.png)
   （图8：高频泊松方程MSE vs. 参数数量。LRNN用更少参数达到更低误差。例如，16k参数LRNN在n=2时误差显著低于132k参数的SIREN；在n=4时，57k参数LRNN误差比132k参数SIREN低近一个数量级。）
 
 4. 稀疏CT重建：
@@ -182,7 +182,7 @@ LRNN是对标准多层感知机（MLP）的泛化，其核心差异在于神经�
 | ReLU | 26.89 | 0.6341 |
 
 - 定性对比：
-  ![CT重建对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-8.png)
+  ![CT重建对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EB2Qgp5Vb0-8.png)
   （图9：胸部CT图像重建结果。LRNN重建最清晰，接近真值，且无伪影。）
 
 ### ⚖️ 评分理由

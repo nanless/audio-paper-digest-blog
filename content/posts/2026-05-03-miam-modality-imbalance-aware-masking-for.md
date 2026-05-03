@@ -65,7 +65,7 @@ MIAM本身是一个掩码生成策略，而非独立的预测模型。它被集�
 3.  融合与预测：所有token（包括原始token和`[MASK]`嵌入）被送入一个共享的Transformer编码器（论文中使用3层、8头的Transformer）。Transformer输出的token表示被平均池化，通过一个线性层产生最终预测 logits（在GeoPlant中是1783个物种的二分类logits）。
 4.  动态适应：MIAM的核心创新在于其分布参数κ(模态失衡系数)的动态调整。在每个训练epoch后，计算每个模态m的独立性能分数sm（如验证集AUC）及其绝对导数dm（反映学习速度）。根据公式(4)，计算归一化系数ρsm和ρdm，并代入公式(5)调整Beta分布的形状参数，从而在下一个epoch中改变掩码概率的分布，倾向于更多掩码性能稳定且好的模态。
 
-![MIAM概述图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-1.png)
+![MIAM概述图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-1.png)
 图2展示了MIAM的整体流程：(a)每个模态m的token以概率pm被掩码，pm从混合Beta乘积分布中采样；(b)分布参数通过ρsm和ρdm进行调制，其中ρsm基于性能sm，ρdm基于性能变化dm。模态性能稳定且高（ρsm/ρdm大）的模态会被更频繁地掩码。
 
 ### 💡 核心创新点
@@ -108,7 +108,7 @@ MIAM本身是一个掩码生成策略，而非独立的预测模型。它被集�
 
 表1（GeoPlant）关键子集结果摘录。MIAM在单模态评估上（尤其是受不平衡影响的卫星和时间序列）提升显著，并在平均性能上最优。
 
-![GeoPlant不同掩码策略验证性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-0.png)
+![GeoPlant不同掩码策略验证性能对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-0.png)
 图1直观展示了模态不平衡问题：在GeoPlant上，忽略不平衡的掩码方法在仅使用卫星影像评估时，性能甚至低于单模态模型（Oracle），而MIAM成功缩小了这一差距。
 
 2. 消融实验
@@ -120,11 +120,11 @@ MIAM本身是一个掩码生成策略，而非独立的预测模型。它被集�
 图4左侧消融结果。从均匀超立方体到Beta超立方体（加入角优先）再到MIAM（加入失衡感知），性能逐步提升，尤其对弱势模态（卫星图像）改进巨大。
 
 3. 动态调整可视化
-![MIAM超参数λ和κ的敏感性分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-3.png)
+![MIAM超参数λ和κ的敏感性分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-3.png)
 图4右侧展示了MIAM训练过程中失衡系数ρsm和ρdm的演化。ρdm的周期性波动与验证AUC的周期性变化相关，表明动态调整引导训练焦点在不同模态间转移，起到类似周期性学习率调度的效果。
 
 4. 贡献分析
-![卫星波段贡献分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-4.png)
+![卫星波段贡献分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oljjAkgZN4-4.png)
 图5(a)展示了通过MIAM进行细粒度贡献分析：Red和NIR波段的组合对预测最重要，这符合NDVI（归一化植被指数）的生态学知识。图5(b)表明包含2003年欧洲热浪事件的更长时间序列能提升性能，揭示了极端事件的重要性。
 
 ### ⚖️ 评分理由

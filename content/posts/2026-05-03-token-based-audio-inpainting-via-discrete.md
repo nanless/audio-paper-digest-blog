@@ -79,7 +79,7 @@ AIDD的整体架构（如图1所示）分为三个主要阶段，构成了一个
     *   处理细节：为确保拼接处平滑，仅用修复后的token解码出的波形段替换原始音频中的缺失段，并在边界处应用短时（10ms）交叉淡入淡出。
     *   输出：修复后的完整音频波形。
 
-![AIDD方法框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/9ZogqiyWXm-0.png)
+![AIDD方法框架概览]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/9ZogqiyWXm-0.png)
 图1（论文图1）：AIDD方法框架概览。上半部分（训练阶段）展示了token序列在随机时间步t被跨度掩蔽腐蚀，然后DiT模型被训练以预测真实分数（结合L_DWDSE和L_deriv损失）。下半部分（推理阶段）展示了包含缺失段的输入波形被token化，DiT进行迭代逆向扩散修复token序列，最后解码并拼接回原始音频。
 
 ### 💡 核心创新点

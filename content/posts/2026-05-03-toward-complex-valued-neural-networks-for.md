@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ComVo的整体架构是一个基于GAN的iSTFT声码器，其核心是所有关键组件都在复数值域进行运算。
 
-![论文中的架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U4GXPqm3Va-1.png)
+![论文中的架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U4GXPqm3Va-1.png)
 图2：ComVo架构概览。包括(a)生成器，(b)复数值ConvNeXt块，(c)复数值多分辨率鉴别器(cMRD)，(d)多周期鉴别器(MPD)。
 
 1. 生成器 (Generator)：
@@ -121,7 +121,7 @@ ComVo在所有客观指标上均取得最优，MOS与GT和其他最强基线持�
 消融实验：
 1. 判别器组件消融（表5）：仅用MPD、仅用MRD、仅用cMRD对比。cMRD-only在PESQ和MR-STFT上优于MRD-only，证明复数值鉴别器更有效。
 2. 生成器-鉴别器组合消融（表5）：对比GRDR（实值G，实值D）、GCDR（复值G，实值D）、GRDC（实值G，复值D）、GCDC（复值G，复值D）。结果：GCDC > GCDR > GRDC > GRDR。证明复数建模在两端都有贡献，且联合使用效果最好。
-    ![论文中的Grad-CAM对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U4GXPqm3Va-2.png)
+    ![论文中的Grad-CAM对比图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U4GXPqm3Va-2.png)
     图3：不同生成器-鉴别器组合下鉴别器的Grad-CAM可视化。配置GRDC和GCDC（使用复数值cMRD）的注意力图更聚焦于有结构的频谱模式。
 3. 相位量化消融（表6）：不使用量化（Nq=0）与使用不同量化级别对比。Nq=128在UTMOS和PESQ上取得最佳平衡。
 4. 计算方案消融（表7）：原生PyTorch复数实现 vs. 分块矩阵实现。两者MR-STFT几乎相同，但分块矩阵实现将训练时间从183小时降至138小时（减少约25%）。

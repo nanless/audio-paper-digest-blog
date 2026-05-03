@@ -74,13 +74,13 @@ hiddenInHomeList: true
 TVTSyn是一个端到端、全因果的流式语音转换/匿名化系统，包含四个主要模块，数据流如下：输入波形 -> 内容编码器 -> 特征嵌入 -> TVT处理块（结合全局说话人嵌入）+ F0/能量预测器 -> 波形解码器 -> 输出波形。
 
 1.  流式内容编码器：将16kHz波形转换为512维、帧率为50Hz（20ms步长）的内容嵌入。其结构为：一个轻量级因果1D CNN（SEANet），通过[8,5,4,2]的步长进行下采样，提取局部语音特征；随后接8层因果多头自注意力（MHSA）模块，具有2秒的回看窗口和最多4个未来帧（~80ms）的前向观察，以捕捉长程依赖。最终输出经过一个因子化向量量化（VQ）瓶颈：512维嵌入先投影到8维，用大小为4096的码本进行量化，再投影回512维。此瓶颈用于去除内容表示中残留的说话人信息。
-    论文中的架构图：![图1: TVTSyn的整体架构。(a) 内容编码器单独训练。(b) 整体系统，波形解码器以自监督方式训练。虚线部分在推理时禁用。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-0.png)
+    论文中的架构图：![图1: TVTSyn的整体架构。(a) 内容编码器单独训练。(b) 整体系统，波形解码器以自监督方式训练。虚线部分在推理时禁用。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-0.png)
 
 2.  说话人处理块（TVT表示生成）：
     - 全局音色记忆（GTM）：将输入的全局说话人嵌入（由X-vector和ECAPA-TDNN拼接而成）通过两个MLP分别生成K组键值对`{k_i, v_i}`。同时，每组键值对都加上一个可学习的先验参数`{k_prior, v_prior}`（所有说话人共享），作为通用音色原型（如气声、鼻音）。这使GTM成为音色片段的集合。
     - 内容关注：当前帧的内容嵌入`c_t`通过缩放点积注意力，关注所有GTM的键`k_i`，得到加权后的音色分量`v_t`。
     - 门控与插值：一个门控网络预测标量`α_t ∈ [0,1]`，控制当前帧的音色偏离全局向量的程度。最终时变音色嵌入`s_t`通过球面线性插值（Slerp）在全局向量`g`和检索到的分量`v_t`之间混合：`s_t = Slerp(g, v_t; α_t)`。Slerp在单位超球面上进行插值，能更好保持身份几何特性，避免线性插值可能产生的失真。
-    论文中的TVT架构图：![图2: (a) TVT处理块的架构细节。(b) 波形解码器的架构。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-1.png)
+    论文中的TVT架构图：![图2: (a) TVT处理块的架构细节。(b) 波形解码器的架构。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-1.png)
 
 3.  F0/能量预测器：两个轻量级2层因果CNN，用于预测帧级的基频（F0）和能量，为解码器提供显式的韵律控制。
 
@@ -151,10 +151,10 @@ TVTSyn是一个端到端、全因果的流式语音转换/匿名化系统，包�
 | TVTSyn | 131.76 / 1.196 | 78.51 / 0.308 | 186.16 / 0.862 | 119.77 / 0.198 |
 结论：TVTSyn在GPU上达到78.51ms延迟（60ms块），满足实时要求；相比SLT24延迟更低，RTF更优。
 
-图3: 内容嵌入的t-SNE可视化：![图3: 内容嵌入的t-SNE可视化。(a)连续嵌入，(b) logits，(c) 瓶颈嵌入，(d) VQ瓶颈嵌入。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-2.png)
+图3: 内容嵌入的t-SNE可视化：![图3: 内容嵌入的t-SNE可视化。(a)连续嵌入，(b) logits，(c) 瓶颈嵌入，(d) VQ瓶颈嵌入。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-2.png)
 结论：从(a)到(d)，说话人聚类变得越来越松散，证明因子化VQ瓶颈有效减少了内容表示中的说话人信息泄漏。
 
-图4: 时变音色表示的定性分析：![图4: 对一句话的时变音色表示的定性分析。(a) 内容->GTM注意力图，(b) Top-1 GTM token，(c) 音色轨迹PCA，(d) GTM值token的PCA投影，(e) token使用直方图。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-0.png)
+图4: 时变音色表示的定性分析：![图4: 对一句话的时变音色表示的定性分析。(a) 内容->GTM注意力图，(b) Top-1 GTM token，(c) 音色轨迹PCA，(d) GTM值token的PCA投影，(e) token使用直方图。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Tf4Lfw85lS-0.png)
 结论：注意力图显示音色片段被稀疏、内容相关地选择；PCA轨迹表明Slerp插值使最终音色`st`在全局向量`g`附近形成紧凑、平滑的管状轨迹，保持了身份几何。
 
 ### ⚖️ 评分理由

@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 本论文的核心贡献是数据集及其生成管道，而非一个端到端的检测模型。其生成管道架构如下：
 
-![图1：ArEnAV数据生成流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-0.png)
+![图1：ArEnAV数据生成流程图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-0.png)
 图1 描述：该图清晰地展示了ArEnAV数据集的生成流程。主要分为三个阶段：1) 输入分析与转录提取：从原始YouTube视频中提取音频、人脸和文本（通过ASR）。2) 基于LLM的转录操控：使用GPT-4.1-mini和少样本提示，根据定义的8种修改规则（如表2所示）对转录进行语义和语言风格的修改。3) 伪造内容生成：基于修改后的转录，分别使用多种TTS模型生成伪造音频，并使用扩散模型（Diff2Lip/LatentSync）生成与伪造音频同步的伪造唇部视频。最终，将伪造视频与原始背景环境结合。
 
 该管道的关键设计选择在于：
@@ -71,7 +71,7 @@ hiddenInHomeList: true
 *   模型集成：为克服现有TTS模型在多语言特别是代码切换方面的不足，集成了4种不同的语音生成策略，确保了音频的自然度和准确性。
 *   质量验证：在音频生成后，使用Whisper-Turbo进行转录验证，只保留与目标转录完全匹配的样本，保证了数据质量。
 
-![图2：数据集划分与语码转换分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-1.png)
+![图2：数据集划分与语码转换分布]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-1.png)
 图2 描述：该图展示了ArEnAV数据集在训练、验证和测试集上的详细分布。外层显示了不同TTS+唇同步模型组合（如LatentSync-XTTS, Diff2Lip-TTS等）的使用比例。中层区分了原始转录的语言（纯阿拉伯语AR或语码转换CSW）。内层显示了三种主要转录修改操作（仅改变意义、改变意义+方言、改变意义+翻译）的分布。这直观地体现了数据集在生成方法和语言内容上的多样性。
 
 #
@@ -132,13 +132,13 @@ hiddenInHomeList: true
 
 表11(b) 关键结果：跨数据集检测AUC对比
 
-![图3：转录质量评估](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-2.png)
+![图3：转录质量评估]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-2.png)
 图3 描述：该图评估了伪造转录的质量。左图(a)显示了在三种修改操作下，伪造转录与真实转录之间的双向蕴含分数分布，大部分样本分数低于0.5，证明语义被有效改变。右图(b)显示了真实与伪造转录的困惑度对比（使用Jais-3B和Qwen-2.5-7B模型），两者非常接近，表明伪造转录在语言模型视角下同样流畅自然。
 
-![图4：BA-TFD+模型在伪造样本上的输出案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-3.png)
+![图4：BA-TFD+模型在伪造样本上的输出案例]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-3.png)
 图4 描述：展示了BA-TFD+模型在ArEnAV伪造样本上的定性结果。绿色区域为真实伪造片段，红色区域为模型预测的伪造片段。展示了正确分类但定位不准(a,b)和完全错误分类(c,d)的案例。
 
-![图5：BA-TFD+模型在真实样本上的输出案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-4.png)
+![图5：BA-TFD+模型在真实样本上的输出案例]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/EbrPXZTVJ9-4.png)
 图5 描述：展示了BA-TFD+模型将真实代码转换视频误判为伪造的案例。模型倾向于将代码转换的区域（绿色）高亮为伪造区域（红色），表明模型将自然的语言转换误认为伪造痕迹。
 
 #

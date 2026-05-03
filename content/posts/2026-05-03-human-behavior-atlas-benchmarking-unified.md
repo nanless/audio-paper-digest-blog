@@ -52,7 +52,7 @@ hiddenInHomeList: true
 | OMNISAPIENS-7B RL | 0.699 | 0.224 | 0.639 | 0.304 | 0.133 | 0.486 | 0.133 |
 (注：数值为论文Table 4中对应数据集上的最优/次优得分，具体指标见论文3.3节说明)
 
-![实验结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-7.png)
+![实验结果对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-7.png)
 图：不同模型在10项行为任务上的平均性能热力图。经过Human Behavior Atlas训练的OMNISAPIENS-7B系列模型在大多数任务上优于通用基线模型。
 
 5. 实际意义：为构建“人类行为理解”这一重要AI方向提供了可复用的标准化基准、评估框架和基线模型，有助于推动更通用、鲁棒的行为分析系统研发。
@@ -72,7 +72,7 @@ hiddenInHomeList: true
     - 处理：对时间序列描述符进行均值和标准差池化，得到静态特征`f`，再经过归一化、Dropout和一个轻量级前馈网络，输出调整向量`z_f`。
     - 集成：以残差方式更新骨干网络的隐藏状态：`h_adapt = h_penult + α * z_f`，其中α是可学习的缩放因子。这确保了骨干表征不受影响，仅在需要时添加行为特征信息。
 
-![论文中的架构/流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-5.png)
+![论文中的架构/流程图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-5.png)
 图：论文中的流程图，展示了从数据集收集、标准化到模型训练与评估的整体框架。
 
 ### 💡 核心创新点
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 迁移学习结果（论文Table 5）
 在预训练时留出的数据集上进行微调（1个epoch）后，预训练过的OMNISAPIENS-7B SFT显著优于未经预训练的同架构基线（Qwen2.5-Omni-7B SFT）。例如，在MUStARD（讽刺检测，预训练时未见此任务）上，加权F1从0.473提升至0.658（+39.1%），表明预训练学习到了可迁移到新行为任务的通用表征。
 
-![迁移学习结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-8.png)
+![迁移学习结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZKE23BBvlQ-8.png)
 图：展示了在MUStARD数据集上，OMNISAPIENS-7B SFT（右）正确识别了钱德勒的讽刺言论，而未经行为预训练的Qwen2.5-Omni-7B（左）则给出了字面理解的错误预测。
 
 消融实验（论文Table 6 & 10）

@@ -47,7 +47,7 @@ hiddenInHomeList: true
 2.  视觉优化（Visual Optimization）：这是提升生成视觉质量的关键模块，灵感来自MAR。它接收AR生成器输出的“粗粒度”视觉token，通过一个空间Transformer（Spatial Transformer） 进行“逐集”（set-by-set）细化，生成更精细的“细粒度”视觉token。这些细粒度token作为条件，输入一个轻量级的扩散MLP（Diffusion MLP）（一个带自适应层归一化的3层MLP，而非DiT），进行去噪过程，生成最终的、高保真的视频潜在特征（latent feature）。这个特征可被3D VAE解码器直接解码为视频。
 3.  自回归循环与训练：在训练时，为缓解自回归生成的误差累积，会对视觉token引入随机噪声。视觉目标使用扩散损失优化，音频目标则使用交叉熵损失进行块预测。整体训练分为三个渐进阶段：视觉预训练（单说话人数据）、音视频联合训练、高质量双人对话微调。
 
-![模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U004uqALWl-3.png)
+![模型架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U004uqALWl-3.png)
 图4：论文提出的自回归音频-视频生成方法。左侧输入为发起者的音视频流和回应者的参考图像。核心是中间的“音频-视频生成器”（自回归Transformer）和“视觉优化器”（包含空间Transformer和扩散MLP）。输出为生成的回应者音视频。
 
 ### 💡 核心创新点
@@ -87,7 +87,7 @@ hiddenInHomeList: true
 2.  各组件消融有效：联合音频生成对FVD改善显著（如双人设置下FVD从47.23降至36.90）。空间Transformer大幅提升所有视觉指标（FID、FVD、PSNR、SSIM、ArcFace）。训练噪声注入进一步提升FID和FVD。
 3.  与级联方案对比：论文额外构建了两个级联基线（Qwen2.5-Omni + CosyVoice + Sonic/Hallo3），并在表4中对比。结果显示，本文方法在情感对齐（FIDEmotion更低：3.22 vs 4.15/3.73）、手部质量（HQ更高：0.49 vs 0.42/0.21）和推理速度（单帧推理时间更快：3.17s vs 45.82s/31.43s）上占优，但在纯粹的视频保真度指标（FID/FVD）上弱于使用更大模型（~10B）的Hallo3基线。
 
-![定性结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U004uqALWl-4.jpg)
+![定性结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/U004uqALWl-4.jpg)
 图5：双人生成模型的定性结果。从左到右依次为：发起者输入视频、回应者参考图像、模型生成的音视频回应。
 
 ### ⚖️ 评分理由

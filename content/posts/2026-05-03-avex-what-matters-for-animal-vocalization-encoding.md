@@ -63,7 +63,7 @@ hiddenInHomeList: true
     - EAT (可修改的Transformer)：一个高效、开源的自监督Transformer音频编码器。研究不仅对其进行监督后训练，还尝试修改其自监督预训练数据（仅生物声学、仅通用音频或混合）。
 3. 数据增强：在预训练和后训练中，以50%概率添加背景噪声（SNR从-10dB到20dB均匀采样）；在后训练中，以50%概率对批次内的音频片段进行线性混合（Mixup），标签取并集。
 4. 架构图：论文中的图1展示了整个实证研究的示意图，概括了评估的四个维度：模型、训练数据、训练范式和扩展的评估数据与方法。
-   ![论文中的实证研究示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-0.png)
+   ![论文中的实证研究示意图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-0.png)
 
 ### 💡 核心创新点
 
@@ -104,11 +104,11 @@ hiddenInHomeList: true
 关键消融与对比：
 1. SSL vs. SL：图2(b)直观显示，纯SSL模型（如预训练BEATs）在领域内任务（BEANS分类）弱于SL模型，但在领域外任务（BEANS检测）性能下降远小于SL模型。`sl-BEATs-all`结合了两者优点。
 2. 数据混合的影响：在EAT的自监督预训练中，加入AudioSet后模型性能显著提升（图2a）。对EffNet的监督训练，添加AudioSet同样带来跨任务的一致性增益（图4， 图5）。
-   ![自监督预训练中加入AudioSet的增益](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-1.png)
-   ![监督后训练中不同数据混合的迁移性对比（BEANS基准）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-3.png)
-   ![监督后训练中不同数据混合的迁移性对比（BirdSet等基准）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-4.png)
+   ![自监督预训练中加入AudioSet的增益]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-1.png)
+   ![监督后训练中不同数据混合的迁移性对比（BEANS基准）]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-3.png)
+   ![监督后训练中不同数据混合的迁移性对比（BirdSet等基准）]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-4.png)
 3. 后训练的增益：对所有SSL骨干（EAT， BEATs）进行监督后训练，都能带来稳定的性能提升（图3）。
-   ![监督后训练对SSL模型的增益](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-2.png)
+   ![监督后训练对SSL模型的增益]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/MFuM9KAEYc-2.png)
 
 ### ⚖️ 评分理由
 

@@ -123,12 +123,12 @@ hiddenInHomeList: true
 
 *   关键发现：在构建的数据集上微调或从头训练均能显著提升关系感知性能（例如TangoFlux微调后mAMSR从1.77%提升至5.58%）。微调策略在初期数据量（100小时）下效果更好，表明预训练的跨领域TTA知识可以被有效迁移。
 *   数据规模影响（图8）
-    ![关系感知性能(mAMSR)随训练数据规模(100/200/300小时)的变化曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-7.png)
+    ![关系感知性能(mAMSR)随训练数据规模(100/200/300小时)的变化曲线]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-7.png)
     *   描述：该图显示了“从头训练”和“微调”两种策略下，mAMSR随训练数据量增加的变化趋势。
     *   结论：微调（蓝色线）在100小时时性能较高，但随数据增加趋于饱和。从头训练（橙色线）的性能随数据量增加持续且显著提升，表明要实现强大的关系感知能力，大规模数据训练至关重要。
 *   细粒度分析（图6与图7）
-    ![零样本设置下，三种模型在6类主要关系和5种关系元数上的mAMSR热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-5.png)
-    ![微调设置下，三种模型在6类主要关系和5种关系元数上的mAMSR热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-6.png)
+    ![零样本设置下，三种模型在6类主要关系和5种关系元数上的mAMSR热力图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-5.png)
+    ![微调设置下，三种模型在6类主要关系和5种关系元数上的mAMSR热力图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LAYCYiIgZ1-6.png)
     *   描述：这两张热力图分别展示了零样本和微调后，AudioGen、Tango、TangoFlux三款模型在六种主要关系类别（如时序性、空间性、构成性等）和五种关系元数（一元到五元）上的mAMSR得分。
     *   结论：微调普遍提升了各类关系的性能。但所有模型在“嵌套组合”关系和“高元数”关系上表现极差，这指出了未来研究的核心挑战。
 

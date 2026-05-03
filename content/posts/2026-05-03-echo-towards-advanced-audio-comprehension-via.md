@@ -52,7 +52,7 @@ Echo的整体架构基于Qwen2.5-Omni (7B)基础模型，通过两阶段训练�
 
 这个过程的关键在于，模型在SFT阶段学会了何时以及如何输出`<seg>`标签，在RL阶段则学会了如何根据问题需要策略性地选择片段并生成正确的分析。基础模型的音频编码器和投影层负责将原始音频信号转换为LLM可处理的token。
 
-![Echo模型两阶段训练框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/xI6yOdOtga-1.png)
+![Echo模型两阶段训练框架概览]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/xI6yOdOtga-1.png)
 
 ### 💡 核心创新点
 

@@ -60,10 +60,10 @@ hiddenInHomeList: true
 6.  输出：优化后的策略模型π_θ，其生成的情感推理响应更准确地基于音视频线索，且减少幻觉。
 
 下图展示了EmoReAlM基准的创建流程，该流程用于生成评估所需的数据，同时也体现了模型需要应对的任务复杂性。
-![图3：EmoReAlM创建流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-2.png)
+![图3：EmoReAlM创建流程]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-2.png)
 
 下图展示了AVEm-DPO方法中构建的两类偏好对（基于模态和基于响应），这是理解其方法核心的关键。
-![图4：AVEm-DPO中的偏好对](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-3.png)
+![图4：AVEm-DPO中的偏好对]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-3.png)
 
 ### 💡 核心创新点
 
@@ -115,7 +115,7 @@ hiddenInHomeList: true
 | + Vista-DPO† | 72.4/87.8 | 86.7 | 52.1 | 73.6 |
 | + AVEm-DPO | 77.9/92.5 | 94.6 | 60.0 | 80.9 |
 
-![图5：AVEm-DPO效果分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-4.png)
+![图5：AVEm-DPO效果分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/td682AAuPr-4.png)
 上图（左）显示AVEm-DPO训练后，模型在进行模态相关推理任务时，对相关模态的注意力分配显著增加。上图（右）显示，AVEm-DPO训练后的模型，在对某一模态输入进行对抗性扰动时，其正确答案的对数似然分布几乎不发生偏移，证明了其鲁棒性的提升。
 
 消融实验（表5）：移除PMP、ERP或TPD任一组件，都会导致在压力测试（尤其是幻觉子任务）上的性能显著下降，验证了各组件的必要性。

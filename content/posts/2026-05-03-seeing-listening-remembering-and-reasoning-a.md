@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 M3-Agent的架构由两个主要并行组件构成，如图1所示：
 
-![M3-Agent 架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PMz29A7Muq-0.png)
+![M3-Agent 架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PMz29A7Muq-0.png)
 
 图1：M3-Agent架构概览。展示了记忆化（左）和控制（右）两个工作流。
 
@@ -139,7 +139,7 @@ M3-Agent的架构由两个主要并行组件构成，如图1所示：
 
 分问题类型结果：M3-Agent在人物理解（PU） 和跨模态推理（CM） 上优势尤为明显。例如，在M3-Bench-web上，人物理解得分59.3%，比最强基线高15.5%；跨模态推理得分44.3%，比最强基线高6.7%。
 
-![M3-Bench数据集统计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PMz29A7Muq-2.png)
+![M3-Bench数据集统计]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/PMz29A7Muq-2.png)
 （注：图3展示了M3-Bench的统计数据，包括拍摄地点、视频类别和问题类型分布，显示了数据集的多样性和对记忆推理能力的侧重。）
 
 ### ⚖️ 评分理由

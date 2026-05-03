@@ -67,7 +67,7 @@ SCRAPL并非一个神经网络模型，而是一个用于优化神经网络（�
 3.  数据流：`x` → ST → `Φx` (固定) → 与 `Φ˜x` 比较 → 计算单路径梯度 `g` → P-Adam → P-SAGA → 更新自编码器 `F` 的权重 `w`。
 
 图片引用：
-![SCRAPL 在计算成本和精度之间的权衡](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-0.png)
+![SCRAPL 在计算成本和精度之间的权衡]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-0.png)
 （图1）该图直观展示了SCRAPL在帕累托前沿上的位置：它比JTFS（左上方点）计算成本低得多，同时比MSS、PANNs等基线方法（右下方点）的参数误差小得多。
 
 ### 💡 核心创新点
@@ -145,13 +145,13 @@ SCRAPL并非一个神经网络模型，而是一个用于优化神经网络（�
 结论：JTFS在几乎所有指标上（特别是FAD和JTFS距离）都是最优的。SCRAPL提供了稳定的折中，在未对齐（Meso）设置下，其FAD值优于大多数MSS变体。
 
 图表引用：
-![JTFS与SCRAPL的训练时间对比及验证收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-1.png)
+![JTFS与SCRAPL的训练时间对比及验证收敛曲线]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-1.png)
 （图2）左图显示SCRAPL比JTFS训练快得多（横坐标为挂钟时间）。右图显示SCRAPL的验证误差下降速度与JTFS相当，但最终收敛值更高。
 
-![SCRAPL消融实验的验证收敛曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-3.png)
+![SCRAPL消融实验的验证收敛曲线]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-3.png)
 （图4）展示了表2中各消融版本的训练过程，清晰显示了加入P-Adam、P-SAGA和θ-IS后，收敛速度加快且最终误差降低。
 
-![啁啾合成器任务的验证收敛曲线（θ-IS vs 均匀采样）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-4.png)
+![啁啾合成器任务的验证收敛曲线（θ-IS vs 均匀采样）]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RuYwbd5xYa-4.png)
 （图5）展示了四种啁啾合成器配置下，使用θ-IS（蓝色）比均匀采样（黑色）收敛更快、误差更低。
 
 ### ⚖️ 评分理由

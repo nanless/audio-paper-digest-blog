@@ -50,20 +50,20 @@ hiddenInHomeList: true
 
 Dolphin的整体流程如图1所示，包含五个主要组件：
 
-![模型整体流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-0.png)
+![模型整体流程图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-0.png)
 
 1.  预训练视频编码器（DP-LipCoder）：将输入唇部视频`V`编码为两种视觉特征：
     *   重建特征`Vr`：保留时空结构信息，用于辅助解码。
     *   语义特征`Vs`：与音频高度对齐的离散语义token。
     DP-LipCoder是一个双路径自编码器，其编码器结构如图2所示。两条路径（重建路径和语义路径）共享相同的编码器架构（改编自MagVIT），但参数不独立。编码器由3D残差块和空间注意力块交替堆叠构成。关键设计在于语义路径末端引入了单步向量量化（VQ）模块，将连续特征离散化为语义token。训练时使用重构损失、来自AV-HuBERT的知识蒸馏损失和VQ的承诺损失。推理时，仅使用两个路径的编码器和VQ模块。
 
-![DP-LipCoder网络架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-1.png)
+![DP-LipCoder网络架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-1.png)
 
 2.  音频编码器：使用一个1D卷积层将混合音频`A`编码为音频特征`X`。
 3.  音视频融合（AVF）模块：将视觉特征`Vr`和`Vs`与音频特征`X`进行融合。它扩展了RTFSNet中的两种机制（视频引导门控融合和跨视觉空间注意力融合），并将其从时频域移至时域。
 4.  分离器：这是模型的核心。它是一个基于TDANet的轻量级编码器-解码器架构，但进行单次迭代。其关键创新是在每层引入全局-局部注意力（GLA）块。分离器架构如图3所示。
 
-![分离器架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-2.png)
+![分离器架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-2.png)
 
     *   编码器：由Q层组成，每层包含两个GLA块和一个下采样层。最顶层的GLA块使用其中的GA块。
     *   解码器：对称地由Q层组成，每层包含一个TDA块（用于上采样）和三个GLA块。
@@ -71,7 +71,7 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
         *   GA块：核心是粗粒度自注意力（CSA）层。它先将特征在时间维度上下采样，再应用多头自注意力（MHSA）捕获长程依赖，最后上采样回来，将复杂度从O(T²)降低。随后接一个FFN（前馈网络）进行特征细化。
         *   LA块：核心是热扩散注意力（HDA）层。它先通过离散余弦变换（DCT）将特征映射到频域，然后利用从热扩散方程推导出的可学习指数衰减函数（衰减系数`kc`按通道自适应）对不同频率分量进行平滑，最后通过逆DCT（IDCT）和门控机制映射回时域。这实现了基于物理先验的、高效的、细粒度的局部特征建模。
 
-![GLA块详细结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-3.png)
+![GLA块详细结构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-3.png)
 
 5.  音频解码器：使用一个1D转置卷积层，将分离器输出的特征`E`解码为时域信号`Š`。
 
@@ -131,10 +131,10 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
 
 结论：Dolphin在包含视觉编码器的总计算量上最低，参数量也远低于多数方法，同时保持了极具竞争力的推理速度和内存占用。
 
-![DP-LipCoder与其他视觉编码器在LRS2上的对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-7.png)
+![DP-LipCoder与其他视觉编码器在LRS2上的对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-7.png)
 图7：训练重构损失曲线。DP-LipCoder收敛误差比自编码器(AE)低约一个数量级。
 
-![不同视觉编码器重建结果可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-8.png)
+![不同视觉编码器重建结果可视化]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-8.png)
 图8：可视化显示DP-LipCoder在重建保真度和结构一致性上优于AE和无重建路径的LipCoder。
 
 消融实验结果（表5， 表6， 表13， 表14）：
@@ -143,7 +143,7 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
 *   直接映射 vs 掩码（表13）：直接回归目标特征（16.8）优于掩码方法（16.3），避免了掩码可能引入的信息损失。
 *   融合位置（表14）：在分离器编码器最早期（F0）进行音视频融合效果最好（SI-SNRi 16.8），越晚融合性能越差。
 
-![热扩散滤波与高斯卷积对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-4.png)
+![热扩散滤波与高斯卷积对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/LaIkPfPu9K-4.png)
 图5：对比显示热扩散滤波在抑制噪声的同时能更好地保持信号边缘。
 
 ### ⚖️ 评分理由

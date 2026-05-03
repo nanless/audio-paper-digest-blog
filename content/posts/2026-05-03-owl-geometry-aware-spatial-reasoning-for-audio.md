@@ -67,7 +67,7 @@ OWL (Spatial Audio LLM) 架构如图4右侧所示。它在SAGE基础上扩展了
 3.  语言解码器 (Π)：使用LLaMA-2-7B作为骨干网络，通过LoRA（秩为8，α=32）进行参数高效微调。它以投影后的音频特征（z_q）和文本问题（x_t）作为输入，自回归地生成包含感知结果和推理过程的答案序列（y）。
 数据流：双耳音频 → SAGE音频编码器 → 投影器(Q-Former) → LLaMA-2-7B(LoRA) → 输出文本答案。
 
-![OWL架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-3.png)
+![OWL架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-3.png)
 （图4：OWL和SAGE的架构图。左侧为SAGE，训练时使用深度和RIR监督；右侧为OWL流水线，将SAGE编码器与LLM通过投影器结合。）
 
 ### 💡 核心创新点
@@ -136,10 +136,10 @@ SAGE与SELDNet和Spatial-AST在两个数据集上对比。
 - 训练阶段消融（表6）：三阶段课程学习逐步带来性能提升。缺少阶段1的预训练会导致检测和定位性能大幅下降；缺少阶段2和3则会损害推理能力。
 
 相关图表：
-![BiDepth数据集中的方位角和仰角分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-2.png)
+![BiDepth数据集中的方位角和仰角分布]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-2.png)
 （图3：BiDepth数据集中声源的方位角和仰角分布，显示数据覆盖全面。）
 
-![BiDepth中问题类型的分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-5.png)
+![BiDepth中问题类型的分布]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/zPv46YKv3w-5.png)
 （图6：BiDepth中不同类型问题的数量分布，显示各类推理任务均衡。）
 
 ### ⚖️ 评分理由

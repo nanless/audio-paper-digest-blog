@@ -74,7 +74,7 @@ hiddenInHomeList: true
 - 核心研究点：论文聚焦于上述第3步得到的条件向量 c 本身的性质（相似性、稀疏性）以及它对第4、5步最终调制效果的影响。
 - 架构图：论文未提供一个独立的、概括所有模型的条件注入流程架构图。其分析基于多个模型的公开权重。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-1.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-1.png)
 图2：展示了基于Transformer的扩散模型将条件（如视频、姿态、类别）作为紧凑向量通过AdaLN注入的示意图。生成的输出包括图像或梅尔频谱图。
 
 ### 💡 核心创新点
@@ -101,12 +101,12 @@ hiddenInHomeList: true
 
 1.  条件嵌入相似度分析：
     - 在ImageNet-1K的1000个类别上，计算所有模型条件向量 c 两两之间的余弦相似度热力图。结果表明相似度普遍极高。
-    ![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-2.png)
+    ![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-2.png)
     图3：使用REPA-XL模型计算的1000个类别的条件向量余弦相似度热力图。左图为全局视图，右图为随机10类的放大视图，显示超过99%的相似度。
 
 2.  条件嵌入稀疏性分析：
     - 通过幅度直方图和方差分析，展示大部分维度值接近于零。
-    ![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-4.png)
+    ![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-4.png)
     图5：6个主流模型条件向量 c 各维度绝对值的频率分布直方图。显示绝大多数维度的幅度在0.01以下，仅少量维度具有主导性幅度。
 
     - 定量指标：如上文“核心摘要”中的表格所示，给出了所有模型的PR、nPR和平均相似度。
@@ -114,7 +114,7 @@ hiddenInHomeList: true
 
 3.  剪枝实验结果：
     - 核心发现：剪除低幅度维度（“尾部”）对性能影响小，剪除高幅度维度（“头部”）则严重损害性能。
-    ![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-7.png)
+    ![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/FetaeuGsEs-7.png)
     图8：使用REPA模型进行尾部维度剪枝的生成样本。随着剪枝比例从38.94%增加到99.80%，只要保留头部维度，图像质量保持高水准。
 
     - 定量结果：下表总结了REPA模型在不同剪枝策略下的性能。

@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 CESAR并非一个独立的新模型架构，而是一个基于现有Audio LLM（如Qwen2.5-Omni-7B）的强化学习训练框架。其核心在于通过多过程奖励函数来微调模型，以培养稳健的推理能力。
 
-![CESAR框架与现有方法对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-0.png)
+![CESAR框架与现有方法对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-0.png)
 图10：论文中的整体框架对比图。展示了监督微调（SFT）、基于结果奖励的强化学习（RLVR）以及本文提出的CESAR方法的区别。CESAR通过“推理过程奖励”直接塑造推理行为。
 
 - 整体流程：
@@ -115,11 +115,11 @@ CESAR并非一个独立的新模型架构，而是一个基于现有Audio LLM（
 关键结论：CESAR在所有模态上大幅超越基线，并且无论是否开启推理，性能都显著高于基座模型，证明了协同提升效应。
 
 2. 测试时缩放分析
-![测试时缩放分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-0.png)
+![测试时缩放分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-0.png)
 图3（左）：不同模型在MMAU Test-mini上的性能随最大推理长度变化的曲线。基座模型和Ke-Omni-R性能不稳定或下降，而CESAR（及其无过度思考惩罚版本）性能随长度增加稳步上升并达到峰值，证明了“推理最佳点”的存在。
 
 3. AI-as-Judge与人类评估
-![AI-as-Judge胜率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-1.png)
+![AI-as-Judge胜率]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/DUr48hxO2h-1.png)
 图3（右）：使用GPT-4o Audio作为裁判，CESAR的推理过程在与基座模型和Ke-Omni-R的对比中获得压倒性胜率，定量证明了其推理质量更高。
 
 4. MMSU 基准（感知与推理分离评估）

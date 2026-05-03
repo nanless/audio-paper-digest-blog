@@ -74,7 +74,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 Music Flamingo是一个以Audio Flamingo 3 (AF3) 为基座，并针对音乐理解进行增强和后训练的大音频-语言模型。其整体架构和训练流程如下图所示：
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-1.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-1.png)
 
 1. 基座模型改进 (Improved AF3 Backbone)
 *   输入：原始音频波形。
@@ -100,7 +100,7 @@ Music Flamingo是一个以Audio Flamingo 3 (AF3) 为基座，并针对音乐理�
         *   准确率奖励（用于QA任务）：直接匹配预测答案与真实答案。
         *   结构化思考奖励（用于字幕任务）：将生成的字幕与预定义的结构化元数据（如流派、BPM、调性、和弦、歌词主题等）进行字符串匹配，计算奖励分数。这鼓励生成字幕时覆盖关键技术属性。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-0.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-0.png)
 （注：根据内容描述，此图展示了MF-Skills和MF-Think数据集的示例，包括重新构想的丰富字幕、多维度问答和链式思考过程，是数据构建创新的直接体现。）
 
 ### 💡 核心创新点
@@ -145,7 +145,7 @@ Music Flamingo是一个以Audio Flamingo 3 (AF3) 为基座，并针对音乐理�
 3.  歌词转写飞跃：在歌词转写任务（Opencpop， MUSDB18）上，WER大幅降低，显示了对人声内容的强大解析能力。
 4.  丰富字幕质量：在自建的SongCaps基准上，由音乐专家和LLM评审的字幕在覆盖度、准确度和整体偏好上均显著优于基线模型，定性示例如图1所示。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-0.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/RS7T9S16Bl-0.png)
 （注：根据内容描述，此图是Music Flamingo与其他模型（Audio Flamingo 3, Qwen3-Omni）在生成完整歌曲字幕方面的对比，直观展示了其输出的多层细节、理论联系和叙事连贯性。）
 
 ### ⚖️ 评分理由

@@ -50,7 +50,7 @@ PACE是一个分阶段的音频持续学习框架，旨在逐步调整预训练�
     *   阶段2 (MSA)：对于第2到第T3个任务，采用自适应多会话子空间正交PEFT。为每个新任务添加新的、冻结旧任务的LoRA模块。关键创新是梯度投影：计算当前任务的梯度时，将其投影到由之前任务表征构成的“干扰自由子空间”的正交补空间中，从而在更新骨干时最小化对旧知识的破坏。同时，引入边界感知正则化损失，对容易混淆的边界样本进行增强学习。
     *   阶段3 (骨干固定)：当学习的任务数超过T3（由累计样本量 `N_stop` 控制）后，完全冻结骨干网络，仅更新分析分类器，以保证长期稳定性。
 
-![PACE框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-3.png)
+![PACE框架图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-3.png)
 (论文中的图片 - PACE框架概览图，展示了从预训练到FSA、子空间正交PEFT，再到骨干固定的三阶段流程，以及边界感知正则化的作用)
 
 核心组件设计：
@@ -107,19 +107,19 @@ PACE是一个分阶段的音频持续学习框架，旨在逐步调整预训练�
 结论：所有组件均不可或缺，其中梯度投影和FSA是基石。
 
 相关图表：
-![实验结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-1.png)
+![实验结果对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-1.png)
 (论文中的对比图，展示了不同方法在图像和音频基准上的性能模式差异，凸显音频CL的挑战)
 
-![表征饱和分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-2.png)
+![表征饱和分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-2.png)
 (论文中的分析图，展示了RanPAC在粗粒度数据集上存在表征饱和现象)
 
-![CKA分析与层敏感性](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-4.png)
+![CKA分析与层敏感性]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-4.png)
 (论文中的CKA可视化图，显示表征变化在深层更显著)
 
-![MSA会话数敏感性](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-6.png)
+![MSA会话数敏感性]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-6.png)
 (论文中的实验结果图，展示了MSA阶段数量对性能的影响及停止策略的有效性)
 
-![扰动效果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-7.png)
+![扰动效果对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/k5PgSlNc4E-7.png)
 (论文中的t-SNE可视化图，对比了不同扰动方式对数据流形的影响)
 
 ### ⚖️ 评分理由

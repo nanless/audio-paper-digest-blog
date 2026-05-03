@@ -54,7 +54,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 AudioX的整体架构如图4所示，其目标是根据给定的任意模态组合（文本X_t，视频X_v，音频X_a）生成目标音频/音乐A。
-![AudioX框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/qjJWxK3yWo-3.png)
+![AudioX框架图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/qjJWxK3yWo-3.png)
 
 完整输入输出流程：
 1.  模态编码：输入的视频、文本、音频分别通过各自的专用编码器（视觉编码器、文本编码器、音频编码器）处理。视频编码器结合CLIP-ViT和Synchformer提取特征；文本编码器使用T5-base；音频编码器为音频自编码器。
@@ -125,7 +125,7 @@ AudioX在多项任务上达到了SOTA或可比水平。
 
 4. 扩展任务与定性结果
 论文还展示了AudioX在音频修复、音乐续写、图像生成音频等任务上的能力，并提供了丰富的定性结果对比（见图A.4，A.5）。
-![定性结果图示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/qjJWxK3yWo-6.jpg)
+![定性结果图示例]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/qjJWxK3yWo-6.jpg)
 
 #
 

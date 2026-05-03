@@ -62,8 +62,8 @@ hiddenInHomeList: true
     2.  任务向量去噪：通过SVD分解，保留主要奇异值成分，去除噪声和冗余。
     3.  优化合并向量：基于去噪后的任务向量，通过梯度下降优化一个合并向量 `τ_m`，以最小化与各任务向量的干扰损失（公式3）。
     4.  将优化好的 `τ_m` 加到基础模型参数上，得到最终合并模型。
-       ![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-0.png) 此图可能展示了模型合并的概念框架，即如何将多个针对不同任务微调的MLLM合并成一个统一模型。*
-       ![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-1.png) 此图可能展示了OptMerge在优化过程中，合并向量范数的对比，说明了其方法如何避免范数爆炸。*
+       ![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-0.png) 此图可能展示了模型合并的概念框架，即如何将多个针对不同任务微调的MLLM合并成一个统一模型。*
+       ![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-1.png) 此图可能展示了OptMerge在优化过程中，合并向量范数的对比，说明了其方法如何避免范数爆炸。*
 
 ### 💡 核心创新点
 
@@ -125,8 +125,8 @@ hiddenInHomeList: true
 
 OptMerge合并后的模型平均得分（66.88）优于所有单模态模型（最高64.11），并与需要在线组合的DAMC（66.79）持平或略优，展示了模态互补性。
 
-   ![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-1.png) 此图展示了微调步数对合并性能的影响（在CLIP ViT合并基准上），证实了并非微调越久合并效果越好，为理论定理提供了经验支撑。*
-   ![论文中的对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-2.png) 此图可能展示了不同微调步数下，各种合并方法的平均精度变��曲线，进一步佐证了参数漂移对合并的影响。*
+   ![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-1.png) 此图展示了微调步数对合并性能的影响（在CLIP ViT合并基准上），证实了并非微调越久合并效果越好，为理论定理提供了经验支撑。*
+   ![论文中的对比图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/Me0n0iESJY-2.png) 此图可能展示了不同微调步数下，各种合并方法的平均精度变��曲线，进一步佐证了参数漂移对合并的影响。*
 
 ### ⚖️ 评分理由
 

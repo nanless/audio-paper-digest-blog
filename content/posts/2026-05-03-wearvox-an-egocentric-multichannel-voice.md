@@ -54,7 +54,7 @@ hiddenInHomeList: true
 - SC WearLlama (单通道WearLlama)：架构基于Llama-4-Scout-17B-16E解码器和一个1B参数的Conformer语音编码器。语音编码器以12.5Hz的采样率工作，将80ms的音频帧转换为一个音频嵌入。它处理经过波束成形（Beamforming）转换后的单通道音频信号（`c_x`）。文本提示和音频嵌入被投影后，输入解码器生成文本响应。
 - MC WearLlama (多通道WearLlama)：架构与SC版本共享相同的编码器和解码器。其核心区别在于输入：它同时处理两个通道的音频——通道0（`c_0`，通常是信噪比最高的通道）和波束成形通道（`c_x`）。这两个通道的音频分别通过同一个共享权重的Conformer编码器，生成的音频嵌入以交错（interleaved）方式与文本嵌入一起输入Llama-4-Scout解码器。这种设计旨在利用多通道的空间信息来增强模型的鲁棒性。
 
-![SC/MC WearLlama架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QpaNErg7ug-0.png)
+![SC/MC WearLlama架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QpaNErg7ug-0.png)
 图：SC WearLlama与MC WearLlama的推理过程对比。MC WearLlama同时处理通道0和波束成形通道，并将它们的嵌入交错输入解码器。
 
 #
@@ -106,7 +106,7 @@ hiddenInHomeList: true
 
 关键发现：多通道输入（MC）相比单通道（SC）在工具调用（+5.4%）和侧向对话拒绝（+8.5%）上带来显著提升，整体微平均提高4.5%。
 
-![性能随环境变化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QpaNErg7ug-2.png)
+![性能随环境变化图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/QpaNErg7ug-2.png)
 图：不同声学环境下的模型性能对比。左图显示室外环境（阴影）普遍导致性能下降，但MC WearLlama在室外的降幅小于SC。右图显示噪声（阴影）环境下的性能下降趋势，同样MC WearLlama表现更稳健。
 
 表3：Gemini 2.5 Flash 各任务的首Token延迟（TTFT，毫秒）

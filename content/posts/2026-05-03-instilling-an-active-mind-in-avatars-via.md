@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 整个框架（如图2所示）由两个核心系统组成，协同工作：
 
-![图2：双系统模拟框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/80JylHgQn1-1.png)
+![图2：双系统模拟框架]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/80JylHgQn1-1.png)
 
 整体流程：输入为参考图像、音频和可选文本提示。首先，系统2的LLM代理进行推理，输出一个文本“动作调度表”。然后，系统1的MMDiT模型接收该调度表文本、音频特征和参考图像（作为伪最后帧），通过多模态注意力融合，生成最终的视频序列。
 
@@ -179,7 +179,7 @@ hiddenInHomeList: true
 4. 最佳选择用户研究
 在“最佳选择”用户研究中（图5a），该方法在面对多个学术基线时，获得了33%的Top-1选择率，排名第一。
 
-![图5：主观用户偏好研究](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/80JylHgQn1-0.png)
+![图5：主观用户偏好研究]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/80JylHgQn1-0.png)
 （注：此图对应论文Figure 5，展示用户研究结果。左图为最佳选择任务，该方法以33%的得票率排名第一。）
 
 #

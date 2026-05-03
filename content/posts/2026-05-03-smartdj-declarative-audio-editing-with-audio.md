@@ -40,15 +40,15 @@ hiddenInHomeList: true
 
 本文提出了SmartDJ，一个声明式立体声音频编辑框架，旨在让用户通过自然语言描述期望的声音场景（如“让它听起来像一个阳光明媚的森林”），而非指定具体编辑步骤。核心方法是：1) 训练一个音频语言模型（ALM） 作为“规划器”，它同时理解原始音频和高级指令，并将其分解为一系列原子编辑操作（如“移除雨声”、“在右侧添加鸟鸣”）；2) 训练一个条件潜在扩散模型（LDM） 作为“编辑器”，按序执行这些原子操作。与已有方法相比，新在：1) 首次实现声明式编辑范式；2) 首次支持立体声音频的细粒度空间编辑；3) 设计了可扩展的数据合成管道，利用LLM（设计师）和信号处理（作曲家）生成训练所需的指令-操作-音频对。主要实验结果（Table 1）表明，在声明式编辑任务上，SmartDJ（FD=10.60， CLAP=0.21）在感知质量、语义对齐等指标上均显著优于所有基线方法（如Audit FD=28.56）。用户研究显示，其在音频质量和指令对齐上的胜率超过87%。实际意义在于为VR/AR、游戏和影视后期提供了更自然的音频创作与修改工具。主要局限性是当前依赖合成数据训练和评估，且系统为模块化设计，未实现端到端联合优化。
 
-![图1：SmartDJ框架核心概念图，展示了ALM规划器将高级指令分解为原子步骤，并由LDM编辑器逐步执行。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-0.png)
+![图1：SmartDJ框架核心概念图，展示了ALM规划器将高级指令分解为原子步骤，并由LDM编辑器逐步执行。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-0.png)
 
 ### 🏗️ 模型架构
 
 SmartDJ框架由两个独立训练的核心模块构成：音频语言模型（ALM） 和 潜在扩散模型（LDM）。
 
-![图2：SmartDJ框架概览。ALM接收原始音频和指令，输出原子编辑步骤序列；LDM依次执行这些步骤，生成中间及最终音频。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-1.png)
+![图2：SmartDJ框架概览。ALM接收原始音频和指令，输出原子编辑步骤序列；LDM依次执行这些步骤，生成中间及最终音频。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-1.png)
 
-![图3：详细架构图。ALM部分（上）使用CLAP编码器、Adapter和LLM生成编辑步骤。LDM部分（下）基于DiT架构，通过交叉注意力条件化文本步骤，执行去噪扩散过程。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-2.png)
+![图3：详细架构图。ALM部分（上）使用CLAP编码器、Adapter和LLM生成编辑步骤。LDM部分（下）基于DiT架构，通过交叉注意力条件化文本步骤，执行去噪扩散过程。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-2.png)
 
 1.  音频语言模型（ALM）作为规划器：
     *   功能：将用户的声明式编辑指令 `P` 和原始音频 `a0` 映射为一个结构化的原子编辑操作序列 `S = {s1, s2, ..., sn}`。
@@ -82,7 +82,7 @@ SmartDJ框架由两个独立训练的核心模块构成：音频语言模型（A
     *   如何起作用：LLM（设计师）根据声音事件标签，构思场景转换指令并分解为操作步骤；规则引擎（作曲家）根据步骤参数（如音量、方向）调整独立的声音事件，渲染出每步操作前后的音频。
     *   收益：为训练ALM和LDM提供了24万对复杂编辑数据和100万对单步编辑数据，解决了数据稀缺问题。
 
-![图4：数据合成管道示意图。展示了从声音库采样、LLM生成指令与步骤、到规则作曲家合成编辑轨迹的全过程。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-3.png)
+![图4：数据合成管道示意图。展示了从声音库采样、LLM生成指令与步骤、到规则作曲家合成编辑轨迹的全过程。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-3.png)
 
 ### 🔬 细节详述
 
@@ -132,9 +132,9 @@ SmartDJ框架由两个独立训练的核心模块构成：音频语言模型（A
 
 关键结论：在各项具体编辑操作（添加、移除、改变方向）上，SmartDJ在所有指标上全面超越基线方法，尤其在空间相关指标（GCC, CRW, FSAD）上优势巨大，证明其强大的立体声编辑能力。
 
-![图5：ALM生成的编辑步骤示例，展示了对不同指令的合理分解。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-4.png)
-![图6：不同编辑操作（移除、提取、改变方向）的定性结果对比，突出SmartDJ与Ground Truth的高度一致性。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-5.png)
-![图7：用户研究胜率统计图，SmartDJ在所有任务上显著优于所有基线。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-6.png)
+![图5：ALM生成的编辑步骤示例，展示了对不同指令的合理分解。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-4.png)
+![图6：不同编辑操作（移除、提取、改变方向）的定性结果对比，突出SmartDJ与Ground Truth的高度一致性。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-5.png)
+![图7：用户研究胜率统计图，SmartDJ在所有任务上显著优于所有基线。]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/eNmANCkefl-6.png)
 
 消融实验（Table 3）：
 1.  移除ALM：性能大幅下降（FD从14.7升至23.6，CLAP从0.238降至0.137），证明ALM的规划至关重要。

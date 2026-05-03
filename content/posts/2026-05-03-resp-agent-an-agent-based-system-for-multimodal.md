@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 Resp-Agent 是一个由中央控制器协调的闭环多智能体系统，包含三个核心组件：Thinker（思考者）、Generator（生成器）和 Diagnoser（诊断器），整体架构如下图所示：
 
-![图1：Resp-Agent 系统概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-0.png)
+![图1：Resp-Agent 系统概览]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-0.png)
 
 1.  Thinker-A2CA（智能体控制器）：
     *   功能：作为系统的“大脑”，负责语义意图解析和任务规划-执行-路由。它基于 DeepSeek-V3.2-Exp 大语言模型实现。
@@ -63,7 +63,7 @@ Resp-Agent 是一个由中央控制器协调的闭环多智能体系统，包含
 
 2.  Generator（可控呼吸音合成器）：
     *   目标：合成能精确控制病理内容（生什么病）和声学风格（什么录音设备/音色）的高保真呼吸音。它包含两个阶段，其核心组件 Resp-MLLM 架构如下图：
-    ![图2：Resp-MLLM（生成器第一阶段）详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-1.png)
+    ![图2：Resp-MLLM（生成器第一阶段）详细架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-1.png)
     *   第一阶段：风格条件化单元生成（Resp-MLLM）：
         *   模态注入：将一个纯文本LLM（Qwen3-0.6B-Base）改造为多模态生成器。对于输入，使用疾病语义（如 `[DIAGNOSIS] Pneumonia`）作为内容提示，同时插入K个音频占位符 `[AUDIO_0]...[AUDIO_K-1]`。
         *   风格投影：用预训练的 BEATs 编码器从参考音频提取特征，经时序池化后通过一个可训练的MLP（风格投影器）映射为K个风格嵌入向量，替换音频占位符的原始嵌入。
@@ -76,7 +76,7 @@ Resp-Agent 是一个由中央控制器协调的闭环多智能体系统，包含
 
 3.  Diagnoser（多模态呼吸音诊断器）：
     *   目标：融合临床文本（EHR摘要）和音频特征，对16类呼吸疾病进行分类。其核心架构如下图：
-    ![图3：Diagnoser架构：模态编织与战略全局注意力](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-2.png)
+    ![图3：Diagnoser架构：模态编织与战略全局注意力]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZkoojtEm3W-2.png)
     *   输入层模态编织：将EHR文本token化后，在序列中插入一个连续的、包含T=496个占位符的音频块。使用预训练BEATs提取音频特征，经对齐（裁剪/填充到T步）和一个可学习投影层W后，原地替换这些音频占位符。这样，文本和音频在第一个输入层就形成了一个单一的、token对齐的序列，实现原生跨模态交互。应用了轻度的token/帧dropout以增强鲁棒性。
     *   战略全局注意力：基于 Longformer 骨干网络。其注意力模式结合了高效的滑动窗口（局部）注意力和稀疏的全局注意力。全局注意力被分配给三类token：(i) 分类器 `[CLS]`；(ii) 临床描述 `[DESCRIPTION]`；(iii) 音频“锚点”。
        音频锚点机制：在T=496的音频块中，以步长s=4进行采样，形成全局音频锚点集合A。相邻锚点间距约为80.6ms（s  Δt，Δt≈20.16ms）。这些锚点与整个序列（包括文本）互相关注，充当跨模态枢纽。这使得远处的文本症状（如“夜间干咳”）能够直接查询瞬态的声学事件（如哮鸣音），在避免二次复杂度的同时，提供了约80ms的时间分辨率来定位瞬态事件。

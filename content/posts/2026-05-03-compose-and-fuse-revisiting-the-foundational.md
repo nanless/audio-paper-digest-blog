@@ -50,7 +50,7 @@ hiddenInHomeList: true
     *   评估模型：使用了四个开源MLLMs：Baichuan-Omni-1.5d (7B)， Qwen2.5-Omni (7B)， MiniCPM-o-2.6 (8B)， Phi-4 Multimodal (5.6B)。
 3.  关键设计选择：采用简化的单步逻辑推理任务，以最小化复杂度干扰，专注于模态交互本身；注入噪声事实以测试鲁棒性；统一提示格式以保证公平比较。
 
-论文中的图片并未提供清晰的评估框架流程图，但图1（`icassp-img://oIvIsK5AwB/0.png`）展示了逻辑推理示例和模态渲染方式。
+论文中的图片并未提供清晰的评估框架流程图，但图1![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oIvIsK5AwB-0.png)展示了逻辑推理示例和模态渲染方式。
 
 ### 💡 核心创新点
 
@@ -107,7 +107,7 @@ hiddenInHomeList: true
 | Phi4 | 80.0 | 82.2 | 99.6 | 79.1 |
 | 平均 | 73.2 | 82.4 | 94.6 | 52.0 |
 
-关键消融实验是两步提示和注意力温度调整，结果如图2b（`icassp-img://oIvIsK5AwB/1.png`）和图3c（`icassp-img://oIvIsK5AwB/2.jpg`）所示，证明了缓解任务组合瓶颈和融合瓶颈的有效性。论文在真实世界数据集IsoBench上验证了“等价”交互类型的发现（表9），模式与合成数据一致。
+关键消融实验是两步提示和注意力温度调整，结果如图2b![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oIvIsK5AwB-1.png)和图3c![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/oIvIsK5AwB-0.png)所示，证明了缓解任务组合瓶颈和融合瓶颈的有效性。论文在真实世界数据集IsoBench上验证了“等价”交互类型的发现（表9），模式与合成数据一致。
 
 ### ⚖️ 评分理由
 

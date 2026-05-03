@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 LatentFT是一个端到端的编码器-解码器框架，核心在于将潜在表示的傅里叶变换与扩散模型的去噪能力相结合。
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-1.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-1.png)
 图2：LatentFT方法示意图。上部为训练阶段（红色），下部为推理阶段（蓝色）。音频被编码为潜在时间序列z，计算其傅里叶变换得到潜在频谱Z。训练时，Z被随机掩码得到Zmasked，逆变换回zmasked，与带噪音频xτ一起输入解码器（扩散模型），目标是重构原始音频x0。推理时，用户指定掩码M，选择性保留参考音频的某些潜在频率分量。
 
 1.  编码器 (Encoder)：将输入音频（波形或梅尔频谱）映射为一个潜在时间序列 z ∈ R^(C' × T')。论文尝试了三种编码器：
@@ -145,16 +145,16 @@ LatentFT是一个端到端的编码器-解码器框架，核心在于将潜在�
 结论：移除任何一个核心组件（训练时频率掩码、频率-bin相关性、对数频率缩放、编码器）都会导致条件遵循度或音频质量显著下降。特别是“w/o Freq. Masking”导致FAD飙升至5.341，证实了训练时掩码的必要性。
 
 用户研究（Fig. 3）：
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-2.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-2.png)
 图3：用户研究结果（混合任务）。LatentFT在“音频质量”和“混合能力”两项指标上，与Cross Synthesis、ILVR和Masked Token Model (MTM)的头对头比较中，获得的“胜出”次数最多，且差异具有统计显著性（p值极低）。
 
 其他定性分析：
 *   潜在频率隔离（Fig. 4）：通过自混合技术，可以放大或孤立特定潜在频率范围的音乐模式，证明了潜在谱的局部可操作性。
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-3.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-3.png)
 图4：隔离电子音乐片段的潜在频率。第二频谱图平滑了快速节奏，第三频谱图突出了8 Hz附近的模式，同时抑制了低频贝斯。
 
 *   潜在谱解释（Fig. 5）：通过扫描条件化的潜在频率，发现不同音乐属性（流派、和弦、节拍、音高）在潜在谱上分布不同。流派是全局特征（接近0 Hz），和弦变化在低频（<1 Hz），节拍和音高在高频。
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-4.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ogMxCjdCCq-4.png)
 图5：摇滚乐和爵士乐歌曲的潜在谱解释曲线，显示不同属性在不同潜在频率范围的保留程度。
 
 ### ⚖️ 评分理由

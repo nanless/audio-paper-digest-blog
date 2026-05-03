@@ -50,11 +50,11 @@ hiddenInHomeList: true
 | Qwen2.5-Omni-7B | 60.87 | 57.70 | 2.92 | 3.24 |
 | DeSTA2.5-Audio | 56.68 | 63.04 | 3.36 | - |
 
-![���文中的框架示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-0.png)
+![���文中的框架示例图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-0.png)
 图1：EchoMind框架与示例。(a) 多级认知过程模拟，从内容与声音理解，到整合推理，再到共情对话。(b) 同一脚本在不同控制语音风格下的回应示例。
-![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-2.png)
+![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-2.png)
 图3：顶级模型在合成语音（TTS）和真实人类语音（Human）版本上的性能差异，显示真实语音更具挑战性。
-![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-1.png)
+![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-1.png)
 图2：模型在语音线索感知、推理与共情回应质量之间的相关性分析。
 
 5.  实际意义是什么：为评估和推动SLM的情感智能提供了首个系统、可控的基准，明确指出了当前SLM在“听懂弦外之音”和“做出有温度回应”方面的核心缺陷，为未来模型研发指明了方向。
@@ -72,7 +72,7 @@ hiddenInHomeList: true
         - 对话层：开放式对话生成，评估模型生成共情回应的能力。
     3.  多维评估模块：结合客观指标（WER，准确率，BLEU等）和主观指标（GPT-4o评分、Gemini评分、人类评分）对模型输出进行全面评估，尤其关注与声音线索相关的维度（如CSpeechRel， VES）。
 - 关键设计选择：a) 控制变量法：使用相同脚本、不同语音风格的音频，以隔离语音表达的影响。b) 层级认知模拟：任务设计模仿人类处理共情对话的认知顺序。c) 关联分析：不同层级任务共享输入，以便分析感知能力对推理和回应质量的影响。
-![论文中的框架示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-0.png)
+![论文中的框架示例图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-0.png)
 （图1重复引用，以覆盖“每张架构图都必须贴”的要求。此图清晰展示了EchoMind的层级任务设计和控制语音风格变化的核心理念。）
 
 ### 💡 核心创新点
@@ -103,9 +103,9 @@ hiddenInHomeList: true
 - 合成与真实语音差距：图3显示，在491条脚本的子集上，所有三个顶级模型（Qwen2.5-Omni-7B， Step-Audio， GPT-4o-Audio）在处理真人录音时，其理解、推理和对话（尤其是VES）的性能均低于处理合成语音，表明模型对真实语音的变异性鲁棒性不足。
 - 上限性能：表8显示，当在对话任务中直接提供完美的语音线索信息时，三个模型的CSpeechRel和VES分数显著提升（例如，GPT-4o-Audio的VES从3.34提升至4.42），证明了模型生成共情回应的潜力尚未被充分激发。
 
-![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-2.png)
+![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-2.png)
 （图3重复引用，用以说明“合成与真实语音差距”的结果。）
-![论文中的实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-1.png)
+![论文中的实验结果图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/l5re5ppqrX-1.png)
 （图2重复引用，用以说明“理解-推理-对话”任务间的相关性结果。）
 
 ### ⚖️ 评分理由

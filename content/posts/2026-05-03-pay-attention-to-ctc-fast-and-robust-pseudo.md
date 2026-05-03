@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 论文中的模型架构基于Transformer编码器-解码器，并针对多模态输入进行了扩展。以下是详细描述（结合图2）：
 
-![图2：伪标记流程对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sSbEEHNEsL-1.png)
+![图2：伪标记流程对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sSbEEHNEsL-1.png)
 图2说明：左图为原USR流程，中图为USR 2.0的CTC驱动模式，右图为USR 2.0的AR模式。
 
 1.  整体结构：共享的Transformer编码器接收来自音频、视频或音频视觉（AV）的特征。编码器输出连接到两个并行的输出头：一个CTC层和一个Transformer解码器（注意力分支）。
@@ -131,7 +131,7 @@ hiddenInHomeList: true
     结论：在极端噪声下，USR 2.0展现出明显优势。
 
 4.  训练效率（图5）：
-    ![图5：VSR WER与训练时间](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sSbEEHNEsL-0.png)
+    ![图5：VSR WER与训练时间]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/sSbEEHNEsL-0.png)
     图5说明：USR 2.0在相同WER目标下，训练时间约为USR的一半。
 
 关键消融实验（表4，AVSR）：

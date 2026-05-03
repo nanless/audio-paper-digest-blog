@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 论文提出了一个清晰的两阶段框架，如图2所示。
 
-![AUHead两阶段框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-1.png)
+![AUHead两阶段框架概览]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-1.png)
 图2：AUHead的两阶段框架概览。Stage 1使用ALM从音频生成AU序列；Stage 2使用AU驱动的扩散模型生成视频。
 
 第一阶段：音频到AU的解耦
@@ -123,12 +123,12 @@ hiddenInHomeList: true
     结论：使用2D表示（LMK, RoM）比直接使用1D AU序列在PSNR, SSIM, FID和LMD上均有提升，证明了空间先验的有效性。
 
 3.  引导尺度影响（图3）：
-![不同AU引导尺度的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-2.png)
+![不同AU引导尺度的影响]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-2.png)
 图3：不同AU引导尺度（AU CFG scale）对FID、情感准确率和AU回归误差（MAE）的影响。星号标记了最佳权衡点。
 结论：随着`sAU`增大，情感准确率上升，MAE下降（控制更强），但FID先降后升，最佳平衡点在3.5。
 
 定性对比
-![定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-3.png)
+![定性对比]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/dmzlAUkulz-3.png)
 图4：与SOTA方法在MEAD和CREMA上的定性对比。AUHead生成的表情更清晰、自然，而其他方法常出现模糊、扭曲或情感平淡的问题。
 
 用户研究（表4）

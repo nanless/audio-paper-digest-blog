@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 NExT-OMNI的整体架构旨在通过单一框架实现全模态的any-to-any理解与生成。其核心流程如下：
 
-![论文中的图片](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/odatOcBi61-1.png)
+![论文中的图片]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/odatOcBi61-1.png)
 图2（来自第2页页面渲染图）: icassp-img://odatOcBi61/1.png。这是论文的图2，展示了NExT-OMNI的整体流水线。输入可以是文本、图像、音频或其组合。首先，模态编码器（视觉编码器、音频编码器）和文本分词器将输入转换为离散的token序列。这些token经过码本嵌入（对于视觉/音频）或词嵌入（对于文本）后，输入到骨干网络（基于Qwen2.5的Transformer）中。骨干网络的每一层都包含多模态自注意力，实现跨模态的深度融合。训练目标是在离散流匹配范式下进行速度预测，同时优化重建损失和交叉熵损失。在推理时，模型从完全损坏的token（t=1）开始，通过多步迭代去噪，最终生成目标token序列（t=0）。模态头部（视觉头部、音频头部）负责将骨干网络的输出解码为具体的图像或音频内容。
 
 1.  模态编码器：

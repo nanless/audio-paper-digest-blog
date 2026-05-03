@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 关键设计动机：共享编码器/解码器、分组稀疏损失和跨模态掩码三者协同，共同约束SAE必须为来自不同模态但语义相同的内容找到一组共享的稀疏特征表示，从而对抗标准SAE倾向于为不同模态学习独立特征的“懒惰”优化倾向。
 
-![模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZJlVXZ5dmK-1.png)
+![模型架构图]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/ZJlVXZ5dmK-1.png)
 图2：掩码分组稀疏自编码器的训练流程图。展示了配对输入、共享编码器、跨模态掩码、TopK稀疏化、共享解码器以及包含重构损失和分组稀疏损失的联合优化过程。
 
 ### 💡 核心创新点
