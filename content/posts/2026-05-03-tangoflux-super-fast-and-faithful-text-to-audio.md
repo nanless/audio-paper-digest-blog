@@ -54,6 +54,7 @@ hiddenInHomeList: true
 TangoFlux是一个基于Transformer的rectified flow生成模型，其架构受FLUX图像生成模型启发。
 
 ![TangoFlux整体训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/qgNs5NmQB7-0.png)
+
 （注：根据论文Figure 1描述，此图展示TangoFlux的整体训练流程。流程包含两个阶段：1. **预训练**：在WavCaps/AudioCaps数据上，使用流匹配损失($\mathcal{L}_{FM}$)训练TangoFlux-base；2. **在线迭代对齐**：采用CRPO框架，包含采样（为提示词生成多个音频）、CLAP排序构建偏好对、使用$\mathcal{L}_{CRPO}$进行训练，形成一个自改进循环。）
 
 1.  **输入与编码**：
@@ -136,11 +137,15 @@ TangoFlux在AudioCaps测试集上与多个基线模型对比，在多项指标�
     *结论：使用CRPO数据进行一次对齐已优于静态数据集，多次迭代的CRPO效果最佳。*
 
 2.  **在线生成 vs 离线训练（Figure 2）**：
+
     ![在线与离线CRPO性能轨迹图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/qgNs5NmQB7-1.png)
+
     （注：图2展示了在线CRPO和离线CRPO（每次迭代使用相同静态数据）在5次迭代中的性能变化。在线CRPO的CLAPscore和IS持续上升，KLpasst下降；离线CRPO在第2次迭代后CLAPscore下降，KLpasst上升，IS也下降，表明性能饱和退化。）
 
 3.  **$\mathcal{L}_{CRPO}$ vs $\mathcal{L}_{DPO-FM}$（Figure 3 & 4）**：
+
     ![LCRPO与LDPO-FM性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/qgNs5NmQB7-2.png)
+
     （注：图3显示在多次迭代中，$\mathcal{L}_{CRPO}$（加正则化）在CLAPscore上持续优于$\mathcal{L}_{DPO-FM}$，同时FDopenl3和KLpasst相当或更好。图4显示两者都会导致优胜和落败样本的损失增加，但$\mathcal{L}_{CRPO}$的增长更平缓、更受控。）
 
 ### ⚖️ 评分理由

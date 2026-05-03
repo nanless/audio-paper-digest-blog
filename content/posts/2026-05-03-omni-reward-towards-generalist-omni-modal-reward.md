@@ -46,9 +46,11 @@ hiddenInHomeList: true
 4. **主要实验结果**：Omni-RewardModel-BT在自有基准Omni-RewardBench上达到73.68%（w/o Ties）和65.36%（w/ Ties）的准确率，比基座模型MiniCPM-o-2.6（46.67%）提升显著。在公开基准VL-RewardBench上，其准确率达到76.3%，超越了GPT-4o（65.8%）和UnifiedReward（66.1%）等模型，取得SOTA。消融实验证实了多模态混合数据和指令微调数据的重要性。
 
 ![Omni-RewardBench任务示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9C4gVbPqSy-0.png)
+
 图1展示了Omni-RewardBench涵盖的九个任务及其自由形式偏好标注示例。
 
 ![模型架构概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9C4gVbPqSy-1.png)
+
 图2展示了Omni-RewardModel的两种架构：(1) 使用Bradley-Terry损失的判别式模型；(2) 使用强化学习的生成式模型。
 
 5. **实际意义**：为多模态AI系统的对齐提供了更全面的评估工具、数据资源和建模范式，推动了向能处理全模态且能适配个性化需求的通用奖励模型发展。
@@ -62,6 +64,7 @@ Omni-RewardModel基于多模态大语言模型（MLLM）架构，具体采用Min
 - **生成式模型 (Omni-RewardModel-R1)**：如图2(2)所示，模型同样处理多模态输入，但目标不同。它被训练以先生成一个解释性的链式思考（CoT）文本e，然后基于该推理过程给出最终的偏好预测p'（如“Image 1”）。该模型通过基于GRPO的强化学习进行优化，奖励信号来自预测偏好p'与真实标签p的比较。
 
 ![任务间性能相关性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9C4gVbPqSy-2.png)
+
 图3展示了Omni-RewardBench中九个任务之间基于模型性能的Pearson相关系数，揭示了同类任务（如理解类、生成类）之间存在强相关性，暗示了跨模态泛化的可能性。
 
 ### 💡 核心创新点
@@ -118,6 +121,7 @@ Omni-RewardModel基于多模态大语言模型（MLLM）架构，具体采用Min
 表3的消融实验清晰地证明：(1) 混合多模态数据（Full）比单一模态数据训练效果更好；(2) 包含指令微调数据的完整数据集（Full）显著优于仅使用通用偏好数据（Preference-Only），验证了自由形式偏好建模的必要性。
 
 ![任务间性能相关性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9C4gVbPqSy-2.png)
+
 图3的热力图显示，文本理解、图像理解、视频理解任务之间具有很强的性能相关性（皮尔逊系数0.8-0.9），同样生成类任务之间也存在较强相关性，这表明模型在相似任务类别内具有一定的跨模态泛化能力。
 
 ### ⚖️ 评分理由

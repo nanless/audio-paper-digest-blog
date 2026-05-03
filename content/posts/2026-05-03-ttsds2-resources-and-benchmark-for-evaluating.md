@@ -115,7 +115,9 @@ hiddenInHomeList: true
 **关键结论**：TTSDS2在所有12项评估中均保持了较高的正相关性，而其他指标（如Audiobox Aesthetics, UTMOSv2）仅在部分领域（如CLEAN）表现良好，在KIDS等跨领域场景下相关性大幅下降甚至为负。
 
 **多语言基准结果（Ground Truth的TTSDS2分数）**
+
 ![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/uGai5lYHlV-0.png)
+
 *图3显示了在14种语言的Ground Truth数据上计算的TTSDS2分数。所有语言的Ground Truth分数集中在85-95分之间，显示出指标的稳定性。资源较少的语言分数略低，符合预期。*
 
 **因子贡献分析（与MOS的Pearson相关系数）**
@@ -130,7 +132,9 @@ hiddenInHomeList: true
 **结论**：不同因子在不同领域的贡献度不同。说话人相似度在干净/嘈杂朗读语音中至关重要，而通用性和可懂度在野外和儿童语音中更重要，韵律在评估儿童语音时作用凸显。
 
 **其他对比图**
+
 ![图2](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/uGai5lYHlV-1.png)
+
 *图2展示了三个代表性指标（TTSDS2、SQUIM MOS、X-Vector相似度）的分数与MOS的散点图。TTSDS2的拟合线在不同领域间更连续，而SQUIM和X-Vector表现出一定的聚类行为，可能暗示对特定系统的过拟合。*
 
 ### ⚖️ 评分理由

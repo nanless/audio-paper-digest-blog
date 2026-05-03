@@ -58,6 +58,7 @@ hiddenInHomeList: true
     *   **组件**：音频编码器 + 适配器 + LLM解码器。该架构避免了中间转写步骤，试图直接建模从语音到符号的映射。
 
 ![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/gk8WMxzIQP-0.png)
+
 *图1展示了两种方法的示意图：(a) 后校正方法，音频经Whisper转写后输入LLaMA进行校正；(b) 端到端方法，音频经Whisper和BEATs编码后，通过适配器与提示一起输入LLaMA生成LaTeX。*
 
 ### 💡 核心创新点

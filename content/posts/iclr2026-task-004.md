@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["多模态模型"]
 categories: [iclr-2026]
-description: "共 5 篇 ICLR 2026 多模态模型 方向论文"
+description: "共 7 篇 ICLR 2026 多模态模型 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 多模态模型
 
-共 **5** 篇论文
+共 **7** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,17 +18,96 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions) | 8.0分 | 前25% |
-| 🥈 | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation) | 8.0分 | 前25% |
-| 🥉 | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning) | 8.0分 | 前25% |
-| 4. | [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecolog](/audio-paper-digest-blog/posts/2026-05-03-miam-modality-imbalance-aware-masking-for) | 7.5分 | 前25% |
-| 5. | [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR](/audio-paper-digest-blog/posts/2026-05-03-tiny-but-mighty-a-software-hardware-co-design) | 7.5分 | 前25% |
+| 🥇 | [From Natural Alignment to Conditional Controllability in Mul](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional) | 8.5分 | 前25% |
+| 🥈 | [OptMerge: Unifying Multimodal LLM Capabilities and Modalitie](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and) | 8.3分 | 前25% |
+| 🥉 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions) | 8.0分 | 前25% |
+| 4. | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation) | 8.0分 | 前25% |
+| 5. | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning) | 8.0分 | 前25% |
+| 6. | [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecolog](/audio-paper-digest-blog/posts/2026-05-03-miam-modality-imbalance-aware-masking-for) | 7.5分 | 前25% |
+| 7. | [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR](/audio-paper-digest-blog/posts/2026-05-03-tiny-but-mighty-a-software-hardware-co-design) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions)
+### 🥇 [From Natural Alignment to Conditional Controllability in Multimodal Dialogue](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional)
+
+🔥 **8.5/10** | 前25% | #多模态模型 | #预训练 | #语音合成 #视频生成
+
+👥 **作者与机构**
+
+- 第一作者：Zeyu Jin (清华大学计算机科学与技术系)
+- 通讯作者：Xiaoyu Qin (清华大学计算机科学与技术系)，Jia Jia (清华大学计算机科学与技术系, BNRist)
+- 作者列表：Zeyu Jin (清华大学计算机科学与技术系)，Songtao Zhou (清华大学计算机科学与技术系)，Haoyu Wang (清华大学计算机科学与技术系)，Minghao Tian (Rice University)，Kaifeng Yun (清华大学深圳国际研究生院)，Zhuo Chen (ByteDance)，Xiaoyu Qin (清华大学计算机科学与技术系)，Jia Jia (清华大学计算机科学与技术系, BNRist)
+
+💡 **毒舌点评**
+
+**亮点**��这篇论文最大的贡献是提出了一个从“数据-任务-评估”全链路出发的系统性解决方案，其精心设计的MM-DIA数据集及其情感三元组/自由描述的标注范式，为“可控”和“富有表现力”的多模态对话生成提供了稀缺的基础设施。**短板**：论文更像是一个出色的“数据工程”和“基准构建”工作，而非模型架构的突破；其在三个下游任务上的实验主要验证了数据集的有效性，但并未提出新的端到端生成模型，对跨模态一致性这一核心难题的解决方案仍显不足，更多是暴露了问题。
+
+🔗 **开源详情**
+
+- **代码**：论文在摘要中提供了项目主页链接（https://github.com/jessyjinzy/MM-Dia），并在结论部分提到“实验代码和数据策展流水线将在论文被接收后公开”，表明**计划开源**。
+- **模型权重**：论文中未提及是否公开微调后的模型权重（如Higgs-Audio-V2-SFT）。
+- **数据集**：MM-DIA数据集**计划公开**。论文提供了详细统计信息，并说明将公开标注信息（如转录、情感三元组、对话描述、说话人身份、带活跃说话人的关键帧等），但不直接发布原始视频/音频片段。研究者需自行获取对应媒体内容并与提供的时间戳对齐。
+- **Demo**：论文提供了一个演示页面链接（https://mmdiaiclr26.github.io/mmdiaiclr26/），用于展示模型在Out-of-Domain场景下的控制效果。
+- **复现材料**：论文提供了详尽的附录，包含数据处理流水线的具体实现细节（如字幕校准、缓冲机制伪代码）、评估协议、指标解释以及部分实验结果的补充表格。这为复现提供了很好的指引，但关键模型训练的超参数未说明。
+- **论文中引用的开源项目**：引用了Higgs-Audio-V2, Dia, CosyVoice, UTMOS, InsightFace, Gemini等模型和工具作为基线或组件。
+- **总体开源计划**：论文中明确提及了在接收后开源数据集和代码的计划，因此属于“是”。
+
+📌 **核心摘要**
+
+1.  **问题**：现有的多模态对话生成研究侧重于单一模态的逼真性，忽略了跨模态交互风格的系统建模，导致生成内容表现力和可控性不足。主要瓶颈在于缺乏高质量、带细粒度交互标注的原生多模态对话数据集和系统性评估基准。
+2.  **方法核心**：提出了一套从电影/电视中自动提取并标注多模态对话的流程，构建了大规模数据集MM-DIA（360+小时，5.47万段对话）。创新性地定义了两种互补的对话表现力标注范式：“情感三元组”（结构化标签）和“自由描述”（自然语言描述）。基于此，将多模态对话生成（MDG）形式化为条件生成任务，并定义了风格可控对话语音合成（显式控制）、视觉条件对话语音合成和语音驱动对话视频生成（隐式控制）三个任务。
+3.  **创新点**：首次提出关注“对话级”跨模态表现力的多模态对话数据集构建框架；设计了两种灵活可控的标注范式以支持细粒度风格控制；建立了首个专注于评估跨模态风格一致性的基准MM-DIA-BENCH。
+4.  **实验结果**：在显式控制任务上，基于MM-DIA微调的模型（如Higgs-Audio-V2-SFT）在WER（从31.3降至4.5）和对话质量指标上显著提升。在隐式控制任务上，基准测试MM-DIA-BENCH揭示了当前模型在维持跨模态风格一致性（如音视频一致性）方面的明显不足（例如，视觉条件语音合成的指令遵循得分从显式控制的4.7降至隐式控制的3.5左右）。
+5.  **实际意义**：为可控的多模态内容生成（如影视制作、数字人交互）提供了关键数据与评估工具，推动了该领域向更自然、更可控的方向发展。
+6.  **主要局限性**：1）数据来源于电影电视，可能存在分布偏移，与日常对话有差异；2）当前评估主要依赖Gemini作为评判，人工评估规模有限；3）论文未提出新的端到端生成模型，主要验证数据效用，解决跨模态一致性挑战仍需进一步工作。
+
+---
+
+### 🥈 [OptMerge: Unifying Multimodal LLM Capabilities and Modalities via Model Merging](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and)
+
+🔥 **8.3/10** | 前25% | #多模态模型 | #模型合并 | #低秩适应 #基准测试
+
+👥 **作者与机构**
+
+- 第一作者：Yongxian Wei（清华大学）
+- 通讯作者：Chun Yuan（清华大学）
+- 作者列表：Yongxian Wei（清华大学），Runxi Cheng（清华大学），Weike Jin（华为诺亚方舟实验室），Enneng Yang（中山大学），Li Shen（中山大学），Lu Hou（华为诺亚方舟实验室），Sinan Du（清华大学），Chun Yuan（清华大学），Xiaochun Cao（中山大学），Dacheng Tao（南洋理工大学）
+
+💡 **毒舌点评**
+
+**亮点**：填补了多模态大语言模型（MLLM）领域缺乏标准化模型合并基准的空白，OptMerge方法通过针对性地优化任务向量交互，在能力和模态合并上均取得了稳定且具有竞争力的性能提升。  
+**短板**：整个工作（包括基准构建、方法设计、实验评估）高度偏向视觉-语言模态，与音频/语音领域的交叉点仅在于模态合并的概念层面，缺乏直接的音频任务验证，对本领域读者的即时启发性有限。
+
+🔗 **开源详情**
+
+- **代码**：论文明确声明“All code and checkpoints are publicly available here.”，表明计划开源代码仓库，但文中提供的链接为占位符，**未提供具体代码仓库链接**。
+- **模型权重**：论文提到会公开所有检查点（checkpoints），但**未提供具体的模型权重下载地址**。
+- **数据集**：论文中详细列出了用于训练和评估的各个公开数据集（如表1所示），并说明将公开其收集的训练数据。因此，**数据集是公开可获取的**。
+- **Demo**：**论文中未提及**提供在线演示。
+- **复现材料**：论文在附录和正文提供了非常详细的复现信息，包括：基准构建流程、数据预处理、所有训练和优化的超参数（学习率、优化器、迭代次数、warmup比例等）、硬件配置（8×V100）、评估工具（VLMEvalKit, LMMs-Eval）等。这构成了完整的复现指南。
+- **论文中引用的开源项目**：论文依赖并引用了多个开源项目作为基础，包括：基础模型（InternVL2.5, Qwen2-VL, Vicuna），评估工具（VLMEvalKit, LMMs-Eval），以及相关的模型合并研究（Task Arithmetic, TIES-Merging, DARE, WUDI Merging等）。
+
+📌 **核心摘要**
+
+1. **问题**：模型合并（Model Merging）作为一种无需额外训练数据即可整合多个专家模型能力的技术，在多模态大语言模型（MLLM）领域缺乏系统性的基准研究。现有MLLM合并方法（如AdaMMS, UQ-Merge）存在限制，例如只能合并两个模型、需要测试集、或对任务划分不够精细。
+2. **方法核心**：论文提出了OptMerge方法，旨在改进基于任务向量（Task Vector）的优化式合并。针对全量微调模型，OptMerge通过低秩近似去除任务向量中的噪声和冗余，然后优化一个基于任务向量交互（用SVD截断后的主成分表示输入子空间）的损失函数。针对LoRA微调模型，OptMerge采用SGD优化器（而非Adam）以避免梯度在零空间停滞，并用任务向量均值初始化合并向量，以控制其幅值增长。
+3. **新在哪里**：
+   * 提出了第一个专注于MLLM能力（VQA、几何、图表、OCR、定位）和模态（视觉-语言、音频-语言、视频-语言）合并的基准。
+   * 提出了OptMerge方法，其核心创新是通过任务向量去噪和针对LoRA特性的优化策略，提升了合并的稳定性和最终性能。
+   * 从理论上分析了微调的学习率和迭代次数如何通过跨任务干扰和曲率误差影响合并性能上限（定理3.1）。
+4. **主要实验结果**：
+   * **能力合并**：在InternVL2.5（全量微调）和Qwen2-VL（LoRA微调）基准上，OptMerge平均性能分别比最强基线高0.44%和4.65%，甚至接近或超过使用所有数据混合训练的模型（表2, 3）。
+   * **模态合并**：将视觉、音频、视频语言模型合并为Omni语言模型，在Audio-VQA任务上平均性能优于任何单模态模型（66.88 vs. 最高64.11），并优于在线组合方法（表5）。
+   * **通用任务**：合并后的模型在需要多种能力的通用多模态问答基准（如MMMU, DocVQA）上，平均性能比最好的单能力专家模型高10.85%（表10）。
+   * **效率**：与混合训练相比，OptMerge在计算时间（小时级 vs. 20+小时）和GPU内存占用（个位数GB vs. 200+GB）上具有巨大优势（表7）。
+5. **实际意义**：提供了一种高效、低成本、无需训练数据的后验方法，用于构建更强大的多模态大语言模型。它促进了开源社区去中心化开发的模型的整合，为构建全模态（Omni）模型提供了可行路径。
+6. **主要局限性**：实验主要限于7B参数级别的模型。收集的公开训练数据可能包含低质量样本。基准评估集中在视觉-语言任务，对其他模态（如本文涉及的音频、视频）的评估深度有限。
+
+---
+
+### 🥉 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-03-learning-multimodal-dictionary-decompositions)
 
 🔥 **8.0/10** | 前25% | #多模态模型 | #自编码器 | #零样本 #音乐理解
 
@@ -70,40 +149,41 @@ hiddenInHomeList: true
 
 ---
 
-### 🥈 [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation)
+### 4. [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-03-next-omni-towards-any-to-any-omnimodal-foundation)
 
-🔥 **8.0/10** | 前25% | #多模态模型 | #流匹配 | #音频生成 #跨模态
+🔥 **8.0/10** | 前25% | #多模态模型 | #流匹配 | #语音合成 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Run Luo（中国科学院深圳先进技术研究院，中国科学院大学；新加坡国立大学）
-- 通讯作者：Xiaobo Xia（新加坡国立大学，中国科学技术大学）、Min Yang（中国科学院深圳先进技术研究院，中国科学院大学，深圳大学先进技术研究院）
-- 作者列表：Run Luo（中国科学院深圳先进技术研究院，中国科学院大学，新加坡国立大学）、Xiaobo Xia（新加坡国立大学，中国科学技术大学）、Lu Wang（Rtizz-AI）、Longze Chen（中国科学院深圳先进技术研究院，中国科学院大学）、Renke Shan（Rtizz-AI）、Jing Luo（中国科学院深圳先进技术研究院，中国科学院大学）、Min Yang（中国科学院深圳先进技术研究院，中国科学院大学，深圳大学先进技术研究院）、Tat-Seng Chua（新加坡国立大学）
+- 第一作者：Run Luo（中国科学院深圳先进技术研究院，中国科学院大学）
+- 通讯作者：Xiaobo Xia（新加坡国立大学，中国科学技术大学），Min Yang（中国科学院深圳先进技术研究院，深圳大学高等研究院）
+- 作者列表：Run Luo（中国科学院深圳先进技术研究院，中国科学院大学）、Xiaobo Xia（新加坡国立大学，中国科学技术大学）、Lu Wang（Rtizz-AI）、Longze Chen（中国科学院深圳先进技术研究院，中国科学院大学）、Renke Shan（Rtizz-AI）、Jing Luo（中国科学院深圳先进技术研究院，中国科学院大学）、Min Yang（中国科学院深圳先进技术研究院，深圳大学高等研究院）、Tat-Seng Chua（新加坡国立大学）
 
 💡 **毒舌点评**
 
-亮点在于其架构的“极简主义”与“全能性”：抛弃了常见的混合或解耦架构，用一个基于离散流匹配的单一骨干网络统合理解、生成与检索，这在理念上很优雅且实验数据支撑了其有效性。短板则在于，尽管实验全面，但论文对模型在“理解”与“生成”任务间可能存在的根本性权衡（trade-off）探讨不够深入，消融实验（Table 5）中统一表征在理解任务上初期下滑的现象暗示了更深层的冲突，未来大规模模型是否真的能完美调和这一点仍需观察。
+**亮点**：这篇论文为多模态统一建模提供了一个异常干净且强大的新范式——用DFM彻底取代AR，并通过统一的编码器与轻量头设计，首次在开源模型中实现了在理解、生成、交互和检索上的全面高分，架构的简洁性本身就很有说服力。**短板**：尽管在7B规模上验证了有效性，但论文缺乏在更大模型规模（如70B+）上的探索，其DFM范式在超大规模下是否依然高效稳定，以及能否真正挑战顶级闭源多模态模型的绝对性能，尚未可知。
+
+🔗 **开源详情**
+
+*   **代码**：提供完整代码仓库链接：https://github.com/ritzz-ai/Next-OMNI。
+*   **模型权重**：论文中明确提到“fully open-source omnimodal foundation model”，表明模型权重已开源。
+*   **数据集**：论文详细描述了所使用的公开数据集（如LAION, LibriSpeech等）及其规模，并在附录E中提供了更完整的列表。部分专有数据未公开。
+*   **Demo**：论文中未提及在线演示链接。
+*   **复现材料**：提供了极为详尽的训练细节（三阶段策略、损失函数、超参数）、模型设计（编码器、头结构）、数据集构建流程（附录D, E, F），以及消融实验配置，复现指导性很强。
+*   **引用的开源项目**：依赖的主要开源项目包括：Qwen2.5系列（LLM基座）、CLIP-ViT（视觉编码器初始化）、Whisper-Turbo（音频编码器初始化）、VQ-VAE（量化工具）、FLUX（合成数据生成）等。
 
 📌 **核心摘要**
 
-1.  **要解决的问题**：现有统一多模态基础模型主要基于自回归（AR）架构，其顺序生成特性导致在处理需要全局理解的“理解”任务和需要并行去噪的“生成”任务时存在内在冲突。混合或解耦策略增加了模型复杂度，且难以支持需要深度融合的跨模态检索等任务。
-2.  **方法核心**：提出NExT-OMNI，首个完全基于**离散流匹配（DFM）**的开源全模态基础模型。它通过度量诱导的概率路径和动力学最优速度，实现从完全损坏的序列到目标序列的并行迭代去噪，从而天然支持any-to-any的跨模态生成与理解。架构采用**统一表征**，通过单编码器同时服务理解和生成，并利用深度双向注意力实现多模态特征的深度融合。
-3.  **与已有方法相比新在哪里**：
-    - **范式革新**：放弃了AR及其混合变体，全面拥抱DFM，实现了从“下一token预测”到“并行去噪”的范式转变。
-    - **架构统一**：不同于需要多个编码器或MoE/MoT解耦机制的方法，使用单一编码器产生统一表征，结构更简洁，更利于跨模态检索。
-    - **训练创新**：引入了**重建增强的统一表征**（在DFM训练中重用编码器的重建损失）和**动态长度生成策略**，分别用于保留细粒度信息和提升文本生成性能。
-4.  **主要实验结果**：
-    - **全模态理解**：在OmniBench、WorldSense、AV-Odyssey三个基准上平均得分39.7，超越之前最佳的OpenOmni（36.5）。
-    - **语音交互**：在Spoken QA基准上，语音到语音（S→S）平均分47.4，与Stream-Omni（46.3）、OpenOmni（48.1）性能相当或更优。
-    - **视觉交互**：在OpenING基准上，GPT评估平均分55.0，显著优于VILA-U（48.4）、SEED-X（50.2）等AR基线。
-    - **多模态检索**：在InfoSeek、OVEN等4个基准上平均准确率32.9，优于包括MMaDA（31.8）在内的所有对比模型。
-    - **消融实验**：证明了DFM范式、统一表征、动态生成策略和重建损失的引入，对提升生成、检索及综合性能有明确贡献。
-5.  **实际意义**：为构建下一代AGI核心组件——统一全模态基础模型——提供了一个有潜力且高效的范式。其架构简洁、推理快速（结合并行解码和缓存，比AR快1.2x）、能力强，有望在需要跨模态交互、创作与检索的复杂应用场景中发挥重要作用。
-6.  **主要局限性**：目前仅在7B参数规模和2T token上进行训练，其规模效应和潜力未完全释放。论文承认，构建统一模型可能在某些单一任务上带来性能权衡，未来需要更大规模实验验证其通用能力的上限。
+1. 本文旨在解决现有自回归（AR）范式在统一多模态理解与生成任务中面临的内在冲突与架构冗余问题。
+2. 方法核心是提出首个完全基于**离散流匹配（DFM）** 的全模态基础模型**NExT-OMNI**。它使用统一的模态编码器（支持理解与生成）和轻量级解码头，通过多层跨模态自注意力深度融合特征，并利用重建损失增强统一表示，最终在一个简洁的架构内支持任意模态间的理解与生成。
+3. 与已有方法相比，新在：a) 首次将DFM完整应用于全模态统一建模；b) 抛弃了AR或AR+扩散的混合架构，采用单一DFM范式；c) 设计了重建增强的统一表示，无需多个编码器或复杂的解耦模块（如MoE）。
+4. 主要实验结果（见表1、2、3、4）显示：在多模态理解（OmniBench, WorldSense, AV-Odyssey）上平均分39.7，超过SOTA模型OpenOmni的36.5；在语音交互（Spoken QA）、视觉交互（OpenING）和跨模态检索（InfoSeek, OVEN, FashionIQ, CIRR）任务上均达到或接近最优。消融实验（表5）证实了DFM、统一表示、动态生成策略和重建损失的关键作用。
+5. 实际意义：为构建下一代全模态、高效率、支持广泛跨模态任务（包括检索）的基础模型提供了一个有前景的新范式，并通过开源推动该领域发展。
+6. 主要局限性：模型规模受限于7B参数，未展示在更大规模下的性能；其多步去噪的推理延迟虽优于AR，但绝对速度是否满足实时交互需求需进一步验证。
 
 ---
 
-### 🥉 [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning)
+### 5. [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-03-avere-improving-audiovisual-emotion-reasoning)
 
 🔥 **8.0/10** | 前25% | #多模态模型 | #强化学习 | #情感推理 #偏好优化
 
@@ -137,7 +217,7 @@ hiddenInHomeList: true
 
 ---
 
-### 4. [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecological Applications](/audio-paper-digest-blog/posts/2026-05-03-miam-modality-imbalance-aware-masking-for)
+### 6. [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecological Applications](/audio-paper-digest-blog/posts/2026-05-03-miam-modality-imbalance-aware-masking-for)
 
 ✅ **7.5/10** | 前25% | #多模态模型 | #自监督学习 | #数据增强 #鲁棒性
 
@@ -183,7 +263,7 @@ MIAM显著缩小了与Oracle（每种输入子集单独训练的模型）的差�
 
 ---
 
-### 5. [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR EFFICIENT MULTIMODAL IN- FERENCE ON BATTERY-POWERED SMALL DEVICES](/audio-paper-digest-blog/posts/2026-05-03-tiny-but-mighty-a-software-hardware-co-design)
+### 7. [TINY BUT MIGHTY: A SOFTWARE-HARDWARE CO- DESIGN APPROACH FOR EFFICIENT MULTIMODAL IN- FERENCE ON BATTERY-POWERED SMALL DEVICES](/audio-paper-digest-blog/posts/2026-05-03-tiny-but-mighty-a-software-hardware-co-design)
 
 ✅ **7.5/10** | 前25% | #多模态模型 | #系统优化 | #边缘计算 #模型压缩
 

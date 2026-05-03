@@ -65,6 +65,7 @@ hiddenInHomeList: true
 该流水线的最终产出是一系列带有自动标签和质量分数的、可解释的音乐特征。论文还展示了将发现的特征用于**生成引导**：在MusicGen生成过程中，将选定特征的解码器权重向量按一定强度加到残差流激活上（公式3），从而影响生成结果（如图5所示）。
 
 ![本文的核心多阶段流水线示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/mGtEoLYr9j-0.png)
+
 *（图1：展示了从音乐语料库提取激活，训练稀疏自编码器发现与过滤特征，最后通过生成式和分类器方法进行自动标注的完整流程。）*
 
 ### 💡 核心创新点
@@ -115,9 +116,11 @@ hiddenInHomeList: true
 -   **不同Gemini模型对比（图8， 图9）**：令人惊讶的是，较旧的Gemini Flash 1.5在CLAP分数上整体表现最好，因此被选作主要标注模型。
 
 ![CLAP分数随模型层深度变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/mGtEoLYr9j-2.png)
+
 *（图3：展示了MGL和MGS模型不同层特征的平均CLAP分数。对于MGL，后期层的CLAP分数更高，表明特征更易解释。）*
 
 ![所有SAE最大CLAP分数分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/mGtEoLYr9j-3.png)
+
 *（图4：展示了所有SAE发现特征的最大CLAP分数累积分布。图中对比了Essentia标签和Gemini生成的不同粒度标签（Concepts, Name, Summary）的分数分布。）*
 
 **3. 特征引导生成效果（表2， 图5）**
@@ -136,6 +139,7 @@ hiddenInHomeList: true
 | MGL | 32 | 32 | 46 | 16/71 (22.5%) |
 
 ![引导生成示例对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/mGtEoLYr9j-4.png)
+
 *（图5：展示了基线生成、特征示例和引导生成的对比。每个子图对应一个特征（如“合成器波形”、“马林巴琴/打击乐”），引导生成（Steered）在声谱图和听感上更接近特征示例（Feature Examples）。）*
 
 -   **人类听测**：10名参与者对前50个最可引导特征进行了匹配测试，66/100次选择了SAE引导的音频，显著高于随机方向引导（17次）和基线（17次），证明引导效果清晰可感知。

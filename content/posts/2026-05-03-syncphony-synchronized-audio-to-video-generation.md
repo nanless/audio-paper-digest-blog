@@ -59,7 +59,9 @@ hiddenInHomeList: true
 Syncphony的整体架构建立在预训练的自回归扩散Transformer（DiT）视频骨干网络Pyramid Flow之上。其输入为初始图像帧、文本提示和音频波形，输出为同步的视频序列。
 
 **完整架构流程如下**（请结合图1理解）：
+
 ![Syncphony整体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sG8dGZMaub-0.png)
+
 *   **编码与输入处理**：
     *   初始图像帧通过VAE编码器编码为初始潜变量 `z0`。
     *   文本提示通过预训练的CLIP和T5文本编码器提取文本特征。
@@ -139,6 +141,7 @@ Syncphony的整体架构建立在预训练的自回归扩散Transformer（DiT）
 2.  在AVSync15用户研究中（图8），Syncphony在同步性（74%偏好）、图像质量（90%偏好）和帧一致性（94%偏好）上均大幅领先基线AVSyncD。
 
 ![用户研究偏好率](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sG8dGZMaub-0.png)
+
 *图8：用户研究结果显示，Syncphony在同步性、图像质量和帧一致性上均显著优于AVSyncD。*
 
 **消融实验**：
@@ -151,17 +154,20 @@ Syncphony的整体架构建立在预训练的自回归扩散Transformer（DiT）
 图5展示了生成视频帧的对比。Syncphony生成的运动（如青蛙鼓气、婴儿哭闹、机枪射击）更清晰、时序更一致，而AVSyncD常出现饱和伪影和减弱的运动。
 
 ![定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sG8dGZMaub-4.png)
+
 *图5：定性对比。Syncphony生成的运动更明确、时序更一致。*
 
 图6展示了Motion-aware Loss的消融效果。去除该损失后，模型无法在音频结束时正确停止运动，也无法在正确的音频起始点触发运动。
 
 ![Motion-aware Loss消融](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sG8dGZMaub-5.jpg)
+
 *图6：Motion-aware Loss消融。加入该损失后，模型能更准确地在音频开始和结束时启停运动。*
 
 **CycleSync指标有效性分析**：
 图7显示，在对视频施加不同时间延迟时，CycleSync分数下降最为陡峭和明显，能有效区分同步与不同步的情况，而其他指标（如AV-Align）则不够敏感。
 
 ![CycleSync敏感性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/sG8dGZMaub-1.png)
+
 *图7：不同同步度量对音频-视频延迟的敏感性。CycleSync对错位最敏感，分数下降最显著。*
 
 ### ⚖️ 评分理由

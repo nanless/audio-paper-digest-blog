@@ -59,6 +59,7 @@ hiddenInHomeList: true
 PRESS-Net的整体架构遵循编码器-分离器-解码器范式，核心设计目标是支持高质量的中间表征重建（用于早期退出）并保持计算高效。
 
 ![PRESS-Net整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/RKzBRfV6J8-1.png)
+
 *(对应论文Figure 2)*
 
 **完整流程与组件：**

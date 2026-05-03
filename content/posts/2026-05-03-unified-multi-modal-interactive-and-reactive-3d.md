@@ -44,6 +44,7 @@ hiddenInHomeList: true
 4.  **实验结果**：在MDD、InterHuman-AS和DD100三个数据集上进行了广泛评估。DualFlow在多项指标上取得领先，例如在MDD反应任务中，DualFlow(Both)的R-Precision@3达到0.471（最佳），FID为0.686（最佳）；在InterHuman-AS交互任务中，R-Precision@3为0.681（显著优于InterGen的0.624）。推理速度比需要50步的InterGen快2.5倍（20步 vs 50步）。消融研究证明了RAG、对比损失和同步损失的有效性。
 
 ![图1：DualFlow模型概念图，展示其统一处理交互与反应生成，并利用文本、音乐和检索样本进行条件生成。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/QaAgHKbJop-0.png)
+
 ![图2：DualFlow的(a)整体架构与(b) Multi-Modal DualFlow Block的详细结构，展示了输入处理、掩码机制和多层注意力模块。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/QaAgHKbJop-1.png)
 
 5.  **实际意义**：为VR/AR伙伴、社交机器人和游戏AI提供生成协调、逼真、可响应的双人动作的新方法，提升虚拟角色交互的真实感和智能性。
@@ -149,6 +150,7 @@ DualFlow是一个端到端的Transformer网络，核心思想是通过掩码机�
 **定性评估**：用户研究（图3）显示，参与者在文本对齐、音乐同步和整体质量上更倾向于DualFlow生成的结果。可视化对比（图5）显示DualFlow生成的动作在接触、姿态和流畅性上优于基线方法。
 
 ![图3：用户研究结果柱状图，显示DualFlow在多数评估维度上优于基线方法。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/QaAgHKbJop-2.png)
+
 ![图5：定性对比图，展示了DualFlow生成的动作在文本对齐和动作连贯性上优于InterGen和DuoLando。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/QaAgHKbJop-4.png)
 
 ### ⚖️ 评分理由

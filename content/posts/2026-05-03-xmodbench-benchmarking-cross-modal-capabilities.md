@@ -63,6 +63,7 @@ hiddenInHomeList: true
 *   **诊断指标**：定义了“模态差异”和“方向不平衡”的计算公式，用于量化分析模型的跨模态行为偏差。
 
 ![图1: XModBench概述](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HaL9EZovFg-0.png)
+
 *（图1展示了XModBench的整体设计：(a)数据基于对齐的三元组；(b)通过置换模态生成六种配置；(c)覆盖五个任务家族；(d)展示了平衡模态设置下的问题示例。）*
 
 ### 💡 核心创新点
@@ -96,16 +97,23 @@ hiddenInHomeList: true
 
 **关键结论**：
 1.  **模态差异**：音频是最薄弱的模态。图4显示，对于最强模型Gemini 2.5 Pro，音频与文本的差异（∆T vs. A）高达-49，音频与视觉的差异（∆V vs. A）为-33，而文本与视觉差异（∆T vs. V）仅-15。
+
 ![图4: 模态差异分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HaL9EZovFg-3.png)
+
 *（图4展示了不同模态对之间的性能差距。负值表示性能下降，音频与文本的差距最大。）*
 
 2.  **方向不平衡**：当文本作为选项（candidate）时，模型表现通常优于视觉作为选项时。图5显示，Gemini 2.5 Pro在V→T上比T→V高8.8个点，Qwen2.5-Omni的差距更达16.6个点。
+
 ![图5: 方向不平衡分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HaL9EZovFg-4.png)
+
 *（图5展示了交换上下文和选项模态后的准确率差距，揭示了方向不平衡现象，尤其在视觉-文本和音频-文本对中明显。）*
 
 3.  **失败案例分析**：图6展示了两个典型案例，揭示了模型在跨模态一致性上的具体缺陷：(a) Gemini 2.5 Pro能通过文本正确识别迪吉里杜管（didgeridoo），但无法将其与对应的图像匹配；(b) Qwen2.5-Omni在从音频转向文本描述车辆运动方向时，错误地判断了方向。
+
 ![图6: 失败案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HaL9EZovFg-5.jpg)
+
 ![图7: 失败案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/HaL9EZovFg-6.jpg)
+
 *（图6和图7展示了两个模型的失败案例，说明了在模态切换时出现的不一致推理。）*
 
 ### ⚖️ 评分理由

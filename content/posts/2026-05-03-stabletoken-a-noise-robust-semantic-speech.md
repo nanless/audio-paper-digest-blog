@@ -141,7 +141,9 @@ StableToken的整体架构是建立在端到端ASR模型框架之内的，其核
 在控制相同LLM骨干（Qwen2.5-3B）和微调范式下，集成不同分词器进行评估。
 
 *   **抗噪ASR (WER↓)**：
+
     ![ASR性能随信噪比变化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/17DNmdQ9aU-3.png)
+
     *结论：在合成、真实以及OOD真实噪声下，StableToken-based模型在所有SNR级别（尤其在低SNR）的WER均显著低于基线，且随着噪声增强，优势扩大。*
     在CHiME-4基准测试上的结果：
     | 模型 | 测试集(Real) WER↓ | 测试集(Sim) WER↓ |
@@ -151,7 +153,9 @@ StableToken的整体架构是建立在端到端ASR模型框架之内的，其核
     | **StableToken** | **35.90** | **30.61** |
 
 *   **抗噪语音情感识别 (Accuracy↑)**：
+
     ![SER性能随信噪比变化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/17DNmdQ9aU-4.png)
+
     *结论：在多种噪声条件下，StableToken-based模型的情感分类准确率下降最平缓，鲁棒性最强。*
 
 *   **语音合成 (TTS)**：

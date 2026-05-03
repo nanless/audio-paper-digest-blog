@@ -133,7 +133,9 @@ SmartDJ框架由两个独立训练的核心模块构成：**音频语言模型�
 **关键结论**：在各项具体编辑操作（添加、移除、改变方向）上，SmartDJ在所有指标上全面超越基线方法，尤其在空间相关指标（GCC, CRW, FSAD）上优势巨大，证明其强大的立体声编辑能力。
 
 ![图5：ALM生成的编辑步骤示例，展示了对不同指令的合理分解。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eNmANCkefl-4.png)
+
 ![图6：不同编辑操作（移除、提取、改变方向）的定性结果对比，突出SmartDJ与Ground Truth的高度一致性。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eNmANCkefl-5.png)
+
 ![图7：用户研究胜率统计图，SmartDJ在所有任务上显著优于所有基线。](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eNmANCkefl-6.png)
 
 **消融实验（Table 3）**：

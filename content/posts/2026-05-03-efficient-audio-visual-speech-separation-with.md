@@ -132,9 +132,11 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
 *结论：Dolphin在包含视觉编码器的总计算量上最低，参数量也远低于多数方法，同时保持了极具竞争力的推理速度和内存占用。*
 
 ![DP-LipCoder与其他视觉编码器在LRS2上的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LaIkPfPu9K-7.png)
+
 *图7：训练重构损失曲线。DP-LipCoder收敛误差比自编码器(AE)低约一个数量级。*
 
 ![不同视觉编码器重建结果可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LaIkPfPu9K-8.png)
+
 *图8：可视化显示DP-LipCoder在重建保真度和结构一致性上优于AE和无重建路径的LipCoder。*
 
 **消融实验结果（表5， 表6， 表13， 表14）：**
@@ -144,6 +146,7 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
 *   **融合位置（表14）**：在分离器编码器最早期（F0）进行音视频融合效果最好（SI-SNRi 16.8），越晚融合性能越差。
 
 ![热扩散滤波与高斯卷积对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/LaIkPfPu9K-4.png)
+
 *图5：对比显示热扩散滤波在抑制噪声的同时能更好地保持信号边缘。*
 
 ### ⚖️ 评分理由

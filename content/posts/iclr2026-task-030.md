@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音转换 论文列表"
+title: "ICLR 2026 - 音乐理解 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音转换"]
+tags: ["音乐理解"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 语音转换 方向论文"
+description: "共 3 篇 ICLR 2026 音乐理解 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音转换
+# ICLR 2026 - 音乐理解
 
-共 **1** 篇论文
+共 **3** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,67 +18,152 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TVTSyn: Content-Synchronous Time-Varying Timbre for Streamin](/audio-paper-digest-blog/posts/2026-05-03-tvtsyn-content-synchronous-time-varying-timbre) | 7.5分 | 前25% |
+| 🥇 | [LLM2Fx-Tools: Tool Calling for Music Post-Production](/audio-paper-digest-blog/posts/2026-05-03-llm2fx-tools-tool-calling-for-music-post) | 7.5分 | 前25% |
+| 🥈 | [Music Flamingo: Scaling Music Understanding in Audio Languag](/audio-paper-digest-blog/posts/2026-05-03-music-flamingo-scaling-music-understanding-in) | 7.5分 | 前25% |
+| 🥉 | [LadderSym: A Multimodal Interleaved Transformer for Music Pr](/audio-paper-digest-blog/posts/2026-05-03-laddersym-a-multimodal-interleaved-transformer) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TVTSyn: Content-Synchronous Time-Varying Timbre for Streaming Voice Conversion and Anonymization](/audio-paper-digest-blog/posts/2026-05-03-tvtsyn-content-synchronous-time-varying-timbre)
+### 🥇 [LLM2Fx-Tools: Tool Calling for Music Post-Production](/audio-paper-digest-blog/posts/2026-05-03-llm2fx-tools-tool-calling-for-music-post)
 
-✅ **7.5/10** | 前25% | #语音转换 | #流式处理 | #语音匿名化 #生成模型
+✅ **7.5/10** | 前25% | #音乐理解 | #多模态模型 | #预训练
 
 👥 **作者与机构**
 
-- 第一作者：Waris Quamer（Texas A&M University, Department of Computer Science and Engineering）
-- 通讯作者：未明确标注。根据投稿惯例，第一作者Waris Quamer或最后一位作者Ricardo Gutierrez-Osuna可能是通讯作者，但论文中未明确说明。
-- 作者列表：Waris Quamer（Texas A&M University, Department of Computer Science and Engineering）、Mu-Ruei Tseng（Texas A&M University, Department of Computer Science and Engineering）、Ghady Nasrallah（Texas A&M University, Department of Computer Science and Engineering）、Ricardo Gutierrez-Osuna（Texas A&M University, Department of Computer Science and Engineering）
+- 第一作者：SeungHeon Doh (KAIST, Sony AI)
+- 通讯作者：未说明
+- 作者列表：SeungHeon Doh (KAIST, Sony AI)、Junghyun Koo (Sony AI)、Marco A. Martínez-Ramírez (Sony AI)、Woosung Choi (Sony AI)、Wei-Hsiang Liao (Sony AI)、Qiyu Wu (Sony Group Corporation)、Juhan Nam (KAIST)、Yuki Mitsufuji (Sony AI, Sony Group Corporation)
 
 💡 **毒舌点评**
 
-这篇论文的亮点在于其对“静态说话人向量 vs 动态内容”这一根本矛盾的精准识别和系统性解决，提出的TVT/GTM架构设计巧妙，实验验证扎实，在保持低延迟的同时显著提升了语音自然度。短板在于其在说话人匿名化任务上的强度与VPC’24的离线最优系统（如T10-C3）相比仍有明显差距，且其“流式”优势是基于严格限制（仅4帧未来上下文）获得的，这种受限的流式设定可能无法完全反映现实世界中更复杂的异步场景。
+本文首次将LLM的“工具调用”范式系统化地移植到音频效果处理链生成中，实现了“可解释的自动化音乐制作”这一颇具吸引力的愿景，其框架设计和数据合成管线具有很好的启发性。然而，其实验验证几乎完全局限于单乐器源的“反向工程”和“风格迁移”，对于真实世界复杂混音场景下的泛化能力与实用价值，目前证据略显不足；且其所谓的“可解释性”高度依赖于F-Removal等预处理，本质上是一种“伪干音”上的解释，而非对原始混音意图的透彻理解。
 
 🔗 **开源详情**
 
-- **代码**：论文中未提及代码链接。
-- **模型权重**：未提及公开权重。
-- **数据集**：使用了公开数据集（LibriTTS, VoxCeleb, CMU ARCTIC, VCTK, EMIME, LibriSpeech），但论文未提供新的数据集或特殊处理说明。
-- **Demo**：论文提到提供了音频样本，托管在 https://anonymized0826.github.io/TVTSyn/。
-- **复现材料**：论文在附录中提供了详细的模型配置表（表5）和流式实现参数（表6），描述了训练损失函数及权重。这些信息对复现有重要帮助。
-- **论文中引用的开源项目/工具**：
-    - **HuBERT** (Facebook Research fairseq): 用于生成内容编码器的训练伪标签。
-    - **SpeechBrain**: 用于获取预训练的说话人编码器（X-vector, ECAPA-TDNN）。
-    - **VoicePrivacy Challenge 2024** 协议与评估脚本：用于匿名化任务的标准化评估。
+- **代码**：论文提供了代码仓库链接：https://seungheondoh.github.io/llm2fx-tools-demo/。
+- **模型权重**：未提及公开最终微调后的模型权重。框架基于Qwen3-4B，需使用LP-Fx数据集自行训练。
+- **数据集**：LP-Fx数据集已开源，论文中说明其包含10.1万对话样本。
+- **Demo**：提供了在线演示链接：https://seungheondoh.github.io/llm2fx-tools-demo/。
+- **复现材料**：论文附录（Appendix C, D, F, G）提供了数据生成、音频编码器消融、提示词设计和参数采样范围的详细信息，复现所需的关键技术细节基本齐全。
+- **论文中引用的开源项目**：
+    - 音频效果库：Pedalboard (https://github.com/spotify/pedalboard)
+    - 可微分音频效果：dasp-pytorch (https://github.com/csteinmetz1/dasp-pytorch)
+    - 音频编码器：Fx-Encoder++ (来源论文)
+    - 基础LLM：Qwen3 (https://arxiv.org/abs/2505.09388)
+    - 微调方法：LoRA (https://arxiv.org/abs/2106.09685)
 
 📌 **核心摘要**
 
-1.  **解决的问题**：当前实时语音转换（VC）和说话人匿名化（SA）系统存在一个核心表示不匹配问题：语音内容（如音素、韵律）是逐帧动态变化的，而说话人身份（音色）通常作为静态全局向量注入。这种“动态-静态”不匹配导致合成语音音色平滑、缺乏表现力，或在加强匿名化（内容高度说话人无关）时产生伪影。
-2.  **方法核心**：提出TVTSyn，一个端到端可流式处理的语音合成器。核心是**内容同步的时变音色（TVT）表示**，通过**全局音色记忆（GTM）**将全局说话人向量扩展为多个紧凑的“音色片段”；每一帧的内容向量通过注意力机制检索最相关的音色片段，并通过一个学习的门控网络控制变化幅度，最后使用球面线性插值（Slerp）平滑混合全局和局部音色，以保持身份几何特性。此外，使用**因子化向量量化（VQ）瓶颈**来正则化内容表示，以进一步减少残留的说话人信息。
-3.  **创新点**：与之前使用静态向量的方法相比，TVT表示使说话人条件与内容在时间粒度上对齐；与离线注意力方法（如GenVC）相比，本架构是完全因果的，实现了超低延迟流式处理。
-4.  **主要实验结果**：在VC任务上，TVTSyn在说话人相似度（Trg-SIM: 0.77）上达到真实语音水平，自然度（NISQA-MOS: 3.91）优于多数基线。在SA任务上（VPC‘24协议），实现了较好的隐私-效用平衡：WER 5.35%（效用好），懒惰攻击EER 47.55%（隐私强）。GPU延迟<80ms，CPU延迟≈132ms，满足实时要求。
-    **关键实验结果表（摘自论文）：**
+1.  **问题**：传统音频效果链（Fx-chain）估计方法存在局限：基于梯度的方法要求模块可微，回归类方法固定配置且缺乏动态选择与排序能力，且普遍缺乏用户可理解的决策解释。
+2.  **方法核心**：提出LLM2Fx-Tools框架，利用多模态大语言模型（基于Qwen3-4B），结合链式思维推理和工具调用机制，从参考音频和指令中生成可执行的音频效果模块序列（Fx-chain）及其参数。
+3.  **新在何处**：首次将LLM的工具调用能力应用于非可微的音频效果模块控制；设计了专门用于Fx-chain规划的思维链（CoT）推理过程；将任务扩展为包含自然语言指令的多模态指令遵循框架；并构建了首个相关的高质量对话数据集LP-Fx。
+4.  **主要结果**：在反向工程任务中，LLM2Fx-Tools在Fx-chain规划准确率（80%）、顺序相关性（0.56）和深度嵌入相似度（AFx-Rep: 0.68）上优于包括Gemini 2.5 Flash和DeepAFx-ST在内的基线。在更具挑战性的音频风格迁移任务中，也取得了最佳的DSP特征距离（7.41）和嵌入相似度。人类听音测试（MUSHRA）显示其生成结果显著优于基线。具体数据见下表：
 
-    **表2：人类听觉测试（N=20）**
-    | 模型 | MOS | 偏好目标说话人比例 | 平均置信度 |
-    | :--- | :--- | :--- | :--- |
-    | Source (源语音) | 3.84 ± 0.10 | - | - |
-    | SLT24 | 3.77 ± 0.09 | 68.00% | 5.06 |
-    | DarkStream (DS) | 3.49 ± 0.13 | 69.33% | 4.99 |
-    | GenVC-s | 3.63 ± 0.11 | 70.67% | 5.04 |
-    | **TVTSyn** | **3.82 ± 0.10** | **74.33%** | **5.02** |
+| 方法 | Fx-chain规划 (Acc.) | 排序相关性 | 参数MAE | 感知距离 (L/R MRS) | DSP距离 (AF) | 嵌入相似度 (AFx-Rep) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| No Fx | - | - | - | 13.11 | 14.82 | 0.50 |
+| Regression | 55% | -0.03 | 0.20 | 3.81 | 9.20 | 0.62 |
+| MultiTask | 61% | 0.00 | 0.23 | 3.17 | 8.39 | 0.63 |
+| DeepAFx-ST | - | - | - | 1.75* | 3.95 | 0.62 |
+| Gemini 2.5 Flash | 78% | 0.54 | 0.32 | 3.42 | 14.97 | 0.56 |
+| **LLM2Fx-Tools** | **80%** | **0.56** | **0.23** | **3.13** | **8.29** | **0.68** |
 
-    **表3：VPC‘24评估**
-    | 模型 | WER (↓) | EER (懒惰, ↑) | EER (半知情, ↑) | UAR (情感) |
-    | :--- | :--- | :--- | :--- | :--- |
-    | SLT24 | 5.70 | 31.40 | 10.12 | 57.00 |
-    | DarkStream (DS) | 10.80 | 49.09 | 20.83 | 34.49 |
-    | GenVC-s | 8.20 | 48.48 | 15.94 | 34.23 |
-    | VPC24最优离线系统(T10-C3) | 2.62 | - | 37.34 | 65.23 |
-    | **TVTSyn** | **5.35** | **47.55** | **14.57** | **37.32** |
-    注：UAR低表示情感抑制强，对匿名化有利。
+*(注：DeepAFx-ST的感知距离是其训练目标值)*
 
-5.  **实际意义**：为实时、隐私保护的语音处理（如安全通信、匿名会议、实时翻译）提供了一个高质量、低延迟的端到端解决方案，证明了流式系统也能在隐私与效用间取得良好平衡。
-6.  **主要局限性**：与离线顶尖系统相比，匿名化强度（EER）仍有差距；TVT机制增加了系统复杂度；评估主要基于标准数据集（LibriTTS），对噪声、混响等实际场景的鲁棒性未充分验证。
+5.  **实际意义**：为音乐后期制作提供了可解释、可对话的自动化工具链生成方案，降低了专业门槛，并有望扩展到更多可微分或不可微分的音频工具控制场景。
+6.  **主要局限**：可解释性建立在预处理后的“伪干音”基础上；验证场景仅限于单乐器，未涵盖复杂多轨混音；存在音频效果估计固有的“一对多”映射歧义问题。
+
+---
+
+### 🥈 [Music Flamingo: Scaling Music Understanding in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-music-flamingo-scaling-music-understanding-in)
+
+✅ **7.5/10** | 前25% | #音乐理解 | #强化学习 | #音频大模型 #数据集
+
+👥 **作者与机构**
+
+- 第一作者：Sreyan Ghosh（NVIDIA， 马里兰大学）， Arushi Goel（NVIDIA）
+- 通讯作者：sreyang@umd.edu, arushig@nvidia.com
+- 作者列表：Sreyan Ghosh（NVIDIA， 马里兰大学）， Arushi Goel（NVIDIA）， Lasha Koroshinadze（马里兰大学）， Sang-gil Lee（NVIDIA）， Zhifeng Kong（NVIDIA）， Joao Felipe Santos（NVIDIA）， Ramani Duraiswami（马里兰大学）， Dinesh Manocha（马里兰大学）， Wei Ping（NVIDIA）， Mohammad Shoeybi（NVIDIA）， Bryan Catanzaro（NVIDIA）
+
+💡 **毒舌点评**
+
+亮点：该工作不仅刷新了多个音乐理解基准，更重要的是它系统性地将音乐理解从“表面识别”提升到“多层次推理”，并通过精心设计的GRPO强化学习训练范式，让模型能够像受过训练的音乐家那样“思考”音乐。短板：尽管提出了庞大的数据集和训练流程，但对音频编码器本身的深入分析（如附录G所示）揭示了其可能存在的底层局限性（如对调性等低级特征的捕捉能力弱于专用编码器），而这一关键瓶颈并未在整体模型设计中得到根本性解决。
+
+🔗 **开源详情**
+
+- **代码**：论文中提到将发布代码，项目主页为 https://research.nvidia.com/labs/adlr/MF/。
+- **模型权重**：论文中提到将发布，但未说明具体平台和发布状态。
+- **数据集**：论文中明确将发布MF-Skills和MF-Think数据集。
+- **Demo**：论文中未提及在线演示。
+- **复现材料**：提供了详细的训练超参数（表3）、数据集详情（附录C）、评估基准和协议，以及附录中的专家分析，复现信息较为充分。
+- **论文中引用的开源项目**：madmom, essentia, Chordino, Parakeet (NVIDIA), Whisper, CLAP, Audio Flamingo 3, MERT等。
+- 论文中明确声明将开源，��合开放科学的趋势。
+
+📌 **核心摘要**
+
+1. **要解决什么问题**：现有音频语言模型在音乐理解方面表现不佳，主要受限于高质量音乐数据稀缺，导致模型只能生成简短、表面的描述，缺乏对音乐多层次结构（和声、曲式、歌词、文化语境）的深度推理能力。
+2. **方法核心是什么**：提出Music Flamingo，一个通过多阶段训练构建的音频语言模型。核心包括：(1) 构建大规模多文化音乐数据集MF-Skills（包含丰富多方面的标注）；(2) 在改进的Audio Flamingo 3骨干模型基础上，使用MF-Skills进行全量微调；(3) 引入基于音乐理论的链式思维数据集MF-Think进行推理冷启动；(4) 最后采用带自定义奖励的GRPO强化学习，以增强模型的分步推理能力。
+3. **与已有方法相比新在哪里**：区别于以往模型仅处理短片段或产出浅层描述，本工作系统性地将音乐理解任务重新定义为需要“推理”的任务，并为此设计了从数据（MF-Skills, MF-Think）、模型（骨干增强、时间感知表示）到训练（SFT + GRPO）的全套解决方案。
+4. **主要实验结果如何**：在12个基准测试上达到SOTA。关键结果包括：在MMAU-Pro-Music上达到65.6%准确率（优于Gemini-2.5 Flash的64.9%）；在MuChoMusic上达到74.58%（远超Qwen3-O的52.10%）；在歌词转录任务上，中文Opencpop WER为12.9%（大幅领先GPT-4o的53.7%）。详见下表：
+
+| 任务 | 数据集 | 模型 | 指标 | 结果 |
+|------|--------|------|------|------|
+| 音乐问答与推理 | MMAU (Music) | Music Flamingo | ACC ↑ | 76.83 |
+| | MMAU-Pro-Music | Music Flamingo | ACC ↑ | 65.60 |
+| | MuChoMusic | Music Flamingo | ACC ↑ | 74.58 |
+| | MMAR (Music) | Music Flamingo | ACC ↑ | 48.66 |
+| | Music Instruct | Music Flamingo | GPT5 ↑ | 97.1 |
+| | SongCaps (Ours) | Music Flamingo | Human Score ↑ | 8.3 |
+| 音乐信息检索 | NSynth (Instrument) | Music Flamingo | ACC ↑ | 80.76 |
+| | GTZAN (Genre) | Music Flamingo | ACC ↑ | 84.45 |
+| | Medley-Solos-DB (Instrument) | Music Flamingo | ACC ↑ | 90.86 |
+| 歌词转录 | Opencpop (Chinese) | Music Flamingo | WER ↓ | 12.9 |
+| | MUSDB18 (English) | Music Flamingo | WER ↓ | 19.6 |
+
+5. **实际意义是什么**：提升了AI对音乐的“听懂”能力，使其能像人类音乐家一样分析和描述音乐的复杂层次，有望推动音乐创作、推荐、教育、跨文化分析等应用的发展。
+6. **主要局限性是什么**：对代表性不足或分布偏斜的文化传统理解有限；在一些精细任务上（如特定乐器技巧识别）仍有差距；需要更广泛的音乐技能覆盖以实现更全面的理解。
+
+---
+
+### 🥉 [LadderSym: A Multimodal Interleaved Transformer for Music Practice Error Detection](/audio-paper-digest-blog/posts/2026-05-03-laddersym-a-multimodal-interleaved-transformer)
+
+✅ **7.0/10** | 前25% | #音乐理解 | #多模态模型 | #序列到序列学习 #模型评估
+
+👥 **作者与机构**
+
+- 第一作者：Benjamin Shiue-Hal Chou (Purdue University)
+- 通讯作者：未明确指定，但 Yung-Hsiang Lu 作为最后作者且提供邮箱，通常为资深作者/负责人。
+- 作者列表：Benjamin Shiue-Hal Chou (Purdue University)， Purvish Jajal (Purdue University)， Nicholas John Eliopoulos (Purdue University)， James C. Davis (Purdue University)， George K. Thiruvathukal (Loyola University Chicago)， Kristen Yeon-Ji Yun (Purdue University)， Yung-Hsiang Lu (Purdue University)
+
+💡 **毒舌点评**
+
+亮点在于其“Ladder”编码器设计非常巧妙，通过交替的跨注意力模块在特征提取过程中强制进行精细的跨模态对齐，这比单纯的晚期融合有效得多，且提供了可解释的注意力图作为证据。短板是，虽然构建了宝贵的真人初学者数据集，但规模仍较小（20首），且论文中承认“错误累积在片段边界附近”的问题并未得到根本性解决，未来工作可以更深入地探讨实时/流式处理的实用性。
+
+🔗 **开源详情**
+
+*   **代码**：提供了代码仓库链接：`https://github.com/ben2002chou/LadderSYM`。
+*   **模型权重**：论文中未提及是否公开预训练模型权重。
+*   **数据集**：
+    *   合成数据集 MAESTRO-E 和 CocoChorales-E 是公开可用的（论文引用 Chou et al., 2025）。
+    *   真实世界初学者数据集（20首）已描述创建过程，论文中未明确说明其公开获取方式，但作为验证集，有提及其可用性。
+*   **Demo**：论文提到提供了演示示例（“Demo examples... are available at: our demo page”），但具体链接在提供的文本中未显示。
+*   **复现材料**：提供了详细的训练超参数表（表7）、损失函数说明、数据增强方法、评估指标定义、硬件软件环境以及种子管理代码片段，复现细节较完备。
+*   **论文中引用的开源项目**：依赖于 EfficientTTMs（MIT License）和 Polytune（BSD 3-Clause, 非商业）的代码基础；使用 MT3 进行音频分词；使用 MIDI-DDSP 合成训练音频；评估使用 mir_eval；模型架构基于 Audio Spectrogram Transformer 和 T5。
+
+📌 **核心摘要**
+
+1.  **问题**：现有音乐练习错误检测方法存在两大局限：晚期融合设计限制了练习音频与参考乐谱之间的跨流对齐能力；仅用音频表示乐谱会在和弦等并发音符处引入频率歧义，影响漏音检测。
+2.  **方法核心**：提出 LadderSym 架构，包含两个核心创新：(1) **Ladder 编码器**，采用交替��跨注意力对齐模块，在每一层实现音轨流与练习流之间的迭代对齐和信息交换，同时保持流的非对称特征提取能力。(2) **符号乐谱提示**，将符号化的乐谱（MIDI）作为提示输入给 T5 解码器，为解码器提供明确、无歧义的参考信息。
+3.  **新在哪**：与之前的 SOTA（Polytune）相比，LadderSym 将对齐操作从编码器末端（晚期融合）移至每一层的交替模块，并引入了符号与音频的多模态策略，从架构和输入表征两个层面进行改进。
+4.  **主要实验结果**：
+    *   在合成数据集 MAESTRO-E 上，漏音（Missed）F1 从 26.8% 提升至 56.3%，多音（Extra）F1 从 72.0% 提升至 86.4%。
+    *   在合成数据集 CocoChorales-E 上，漏音 F1 从 51.3% 提升至 61.7%，多音 F1 从 46.8% 提升至 61.4%。
+    *   在新建的真实世界初学者钢琴数据集（20首）上，LadderSym 在漏音检测（78.5% vs 63.9% F1）和多音检测（81.6% vs 80.6% F1）上均优于 Polytune，展示了泛化能力。
+    *   模型参数量（172M）小于 Polytune（192M），且编码器延迟更低。
+5.  **实际意义**：该工具可帮助音乐学习者获得更精确的练习反馈，有望成为高质量数据集的人机协作标注工具，以突破该领域“鸡生蛋，蛋生鸡”的数据瓶颈。其架构思想对其他序列评估任务（如 RL 评估、技能评估）有借鉴意义。
+6.  **主要局限性**：(1) 漏音检测仍是挑战，尤其在密集和弦（MAESTRO-E）中。(2) 延音跨越片段边界时易产生错误标签。(3) 模型对全局节奏大幅偏差（如半速演奏）的处理能力有限，仅适用于局部节奏偏移。
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 数据集 论文列表"
+title: "ICLR 2026 - 机器人操作 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["数据集"]
+tags: ["机器人操作"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 数据集 方向论文"
+description: "共 1 篇 ICLR 2026 机器人操作 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 数据集
+# ICLR 2026 - 机器人操作
 
 共 **1** 篇论文
 
@@ -18,38 +18,54 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset) | 8.5分 | 前25% |
+| 🥇 | [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni) | 8.0分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset)
+### 🥇 [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-03-roboomni-proactive-robot-manipulation-in-omni)
 
-🔥 **8.5/10** | 前25% | #数据集 | #自回归模型 | #音视频 #端到端
+🔥 **8.0/10** | 前10% | #机器人操作 | #多模态模型 | #端到端 #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Youliang Zhang (清华大学，StepFun)
-- 通讯作者：Duomin Wang (StepFun), Xiu Li (清华大学深圳研究生院) [注：根据邮箱后缀†和‡标记推断]
-- 作者列表：Youliang Zhang（清华大学，StepFun）、Zhaoyang Li（StepFun）、Duomin Wang（StepFun）、Jiahe Zhang（未说明）、Deyu Zhou（StepFun，香港科技大学（广州））、Zixin Yin（StepFun，香港科技大学）、Xili Dai（香港科技大学）、Gang Yu（StepFun）、Xiu Li（清华大学深圳研究生院）
+- 第一作者：Siyin Wang（复旦大学，上海创新研究院）
+- 通讯作者：Jinlan Fu（新加坡国立大学），Xipeng Qiu（复旦大学，上海创新研究院）
+- 作者列表：Siyin Wang（复旦大学，上海创新研究院），Jinlan Fu†（新加坡国立大学），Feihong Liu（复旦大学），Xinzhe He（复旦大学），Huangxuan Wu（复旦大学），Junhao Shi（复旦大学，上海创新研究院），Kexin Huang（复旦大学），Zhaoye Fei（复旦大学），Jingjing Gong（上海创新研究院），Zuxuan Wu（复旦大学，上海创新研究院），Yu-Gang Jiang（复旦大学），See-Kiong Ng（新加坡国立大学），Tat-Seng Chua（新加坡国立大学），Xipeng Qiu†（复旦大学，上海创新研究院）
 
 💡 **毒舌点评**
 
-这篇论文在构建大规模交互式虚拟人数据集上做得非常扎实，从数据收集、处理到多维度质量过滤的全流程设计堪称典范，为学界解决了一个“无米之炊”的基础性问题。然而，其基线模型的视觉生成质量（如FID、FVD）与当前顶尖的大型级联扩散模型（如论文中提到的Hallo3）仍有差距，且数据集本身存在的显著人口统计学偏差（如82%英文、57%白人）可能限制了其训练模型的泛化能力。
+**亮点**：它敏锐地抓住了当前VLA模型“等指令”的呆板痛点，并构建了一整套从“新问题定义”到“新架构”再到“新数据集”的解决方案闭环，特别是将语音中的**副语言特征**（如情感、说话人身份）作为关键推理线索，而非丢弃给ASR，这是一次重要的认知升级。**短板**：目前的实验场景仍以相对简单的“单步/少步抓取放置”为主，在更复杂的多步骤、长序列任务中，其“主动推理”的准确率和稳定性如何，以及如何处理复杂对话中的误解与修正，论文未做深入探讨，距离真正的“管家式”智能仍有距离。
 
 🔗 **开源详情**
 
-- **代码**：论文明确承诺将公开“整个数据集，包括原始数据、标注和数据处理代码”，并提供了详细的实现细节（附录A.7-A.13）。但**论文中未提及具体的代码仓库链接**。
-- **模型权重**：**未提及**是否公开基线模型的权重。
-- **数据集**：承诺公开，包含视频URL列表和所有标注。数据集采用CC-BY-NC 4.0许可证，仅限非商业学术研究。获取需签署数据使用协议。
-- **Demo**：**未提及**在线演示。
-- **复现材料**：提供了极其详细的复现材料，包括：完整的数据处理流水线描述（Section 3）、模型架构细节（附录A.8）、生成过程详解（附录A.9）、训练超参数与硬件配置（附录A.7）、标注文件使用说明（附录A.11）、以及消融实验（表2，4）。这为复现提供了充分信息。
-- **论文中引用的开源项目**：论文明确使用了多个开源模型/工具，包括：SceneDetect（场景分割）、3D-Speaker（说话人分离）、YOLO（人脸检测）、SyncNet（唇同步）、ArcFace（人脸识别）、Qwen2.5-VL/Qwen3（标注）、Whisper（ASR）、DWpose（姿态估计）、DOVER（视频质量评估）、Qwen2.5-Omni（多模态理解）、CosyVoice2（音频分词器/声码器）、VAE（3D变分自编码器）、NOVA/DiT（用于空间Transformer和扩散MLP）。
+- **代码**：是。提供GitHub仓库链接：https://github.com/OpenMOSS/RoboOmni。
+- **模型权重**：是。论文中提及将开源模型检查点。
+- **数据集**：是。论文中明确表示将开源OmniAction数据集和OmniAction-LIBERO基准。
+- **Demo**：论文中未提及在线演示链接。
+- **复现材料**：非常充分。论文详细说明了训练配置（GPU数量、学习率、batch size、epoch等）、数据集构建三阶段流程、评估指标和设置，并在附录中提供了更多示例和细节。
+- **依赖的开源项目**：论文依赖了多个开源模型和工具作为基线或组件，包括：OpenVLA, OpenVLA-OFT, π0, NORA, Qwen2.5-Omni, Whisper (for ASR baseline), DINOv2, SigLIP, PaliGemma, Llama-2等。此外，数据集构建使用了MOSS-TTS, CosyVoice等TTS引擎。
 
 📌 **核心摘要**
 
-本文针对“音视频双人交互式虚拟人生成”这一新兴且缺乏公开数据的任务，提出了首个大规模高质量数据集SpeakerVid-5M。该数据集包含超过8700小时的视频（520多万个片段），其中特别设计了包含77万对对话的“对话分支”，并提供了丰富的多模态标注（如ASR文本、骨骼序列、模糊度分数等）。数据集构建遵循了严格的“收集-处理-标注-过滤”流水线，最终形成大规模预训练子集和高质量SFT子集。论文同时提供了一个基于自回归范式的端到端基线方法，并构建了VidChatBench基准测试集。实验表明，该基线方法在双人交互设置下比纯文本条件生成效果更好（例如FID从34.72降至32.35），且在情感对齐和手部质量等指标上优于某些级联方案，推理速度也显著更快。该工作的核心意义是填补了交互式虚拟人研究领域的数据空白，并提供了系统化的构建方法和评估标准。主要局限性在于数据集存在明显的地域和人口统计偏差，且基线模型的视觉保真度与当前SOTA仍有距离。
+1. **解决问题**：针对现有视觉-语言-动作（VLA）模型依赖显式指令、无法主动从多模态上下文（语音、环境声、视觉）中推断用户潜在意图的局限性，提出了“跨模态上下文指令”这一新问题设置。
+2. **方法核心**：提出RoboOmni，一个基于端到端全模态大语言模型的“感知器-思考器-对话器-执行器”（Perceiver-Thinker-Talker-Executor）统一框架。它直接处理语音波形和环境声音（而非ASR文本），融合视觉信号，进行意图推理、确认交互，并生成动作。
+3. **新贡献**：相比仅处理文本或ASR文本的方法，RoboOmni能保留语音的副语言线索（情感、身份、语调），并具备主动对话能力。为解决数据匮乏，构建了包含14万集、覆盖6种上下文指令类型的大规模OmniAction数据集。
+4. **实验结果**：在OmniAction-LIBERO仿真基准上，RoboOmni平均成功率（85.6%）显著超过最强文本基线NORA（25.9%）。在真实WidowX机械臂实验中，成功率（73.9%）超过最佳ASR+VLA基线（52.2%）。消融实验证实了音频、视觉和副语言线索的互补性至关重要（如移除音频，意图识别准确率从88.89%暴跌至11.11%）。具体实验结果对比如下表所示：
+
+| 模型/方法 | OmniAction-LIBERO-TTS 平均成功率 | OmniAction-LIBERO-Real 平均成功率 |
+| :--- | :--- | :--- |
+| OpenVLA (Ground-truth Text) | 2.6% | - |
+| NORA (Audio → ASR → Text) | 25.9% | 17.4% |
+| π0 (Ground-truth Text) | 4.4% | 73.8% |
+| **RoboOmni (Ours)** | **85.6%** | **76.6%** |
+
+![论文中的实验结果对比图](icassp-img://OJh7oBCYhL/4.png)
+*图5内容：该图展示了在真实世界实验中，RoboOmni与ASR+VLA基线在六种上下文指令类型上的成功率对比，RoboOmni在所有类别上均显著领先。*
+
+5. **实际意义**：为创建更自然、主动、能“察言观色”的服务机器人提供了新的技术路径和基准，推动了机器人从被动执行向主动协作的范式转变。
+6. **主要局限性**：实验验证的任务复杂度有限，多集中于单次抓取；“主动交互”的质量和效率评估指标尚显简单；模型对长对话历史和高噪声环境的鲁棒性有待进一步验证。
 
 ---
 

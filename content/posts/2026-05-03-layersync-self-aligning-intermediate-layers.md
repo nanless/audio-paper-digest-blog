@@ -53,6 +53,7 @@ hiddenInHomeList: true
 | **视频生成** | CLEVRER | SiT-XL (from scratch) | FVD↓ | 265.50 | 120.13 | 54.7% |
 
 ![LayerSync 对生成质量的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4itprlvbRQ-2.png)
+
 *图：LayerSync 与 Dispersive Loss 在相同设置下的生成结果对比，显示 LayerSync 能在不依赖外部表示的情况下提升生成质量。*
 
 5.  **实际意义**：为扩散模型训练提供了一种零额外成本、跨模态通用的效率提升方案，降低了获得高性能生成模型的门槛。
@@ -71,6 +72,7 @@ hiddenInHomeList: true
 6.  **层选择策略**：基于对扩散 Transformer 内部结构的研究，排除最后 20% 的解码层和最开始的几层作为“强”层（导师层），并保证对齐层与导师层之间有最小距离（如 SiT-XL 为 8 个块）。
 
 ![SiT-XL/2 模型块间相关性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4itprlvbRQ-1.png)
+
 *图：收敛时 SiT-XL/2 各 Transformer 块之间的相关性矩阵，显示出自然的三个功能组（局部特征、全局特征、解码），这为 LayerSync 的层选择提供了依据。*
 
 ### 💡 核心创新点
@@ -129,7 +131,9 @@ hiddenInHomeList: true
 | 改进 | | **7.7%** | **3.4%** |
 
 **4. 表征质量分析**
+
 ![LayerSync 对各层表征质量的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4itprlvbRQ-3.png)
+
 *图：线性探测评估中间层特征。LayerSync 使得模型各层的分类和分割平均精度更高（虚线），并且与 DINOv2 的对齐度更好。*
 
 **5. 消融与分析**
@@ -137,9 +141,11 @@ hiddenInHomeList: true
 - **与外部方法结合**：LayerSync 与 REPA 结合使用，性能优于单独使用 REPA。
 
 ![不同学习率与 LayerSync 的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4itprlvbRQ-6.png)
+
 *图：实验表明 LayerSync 的效果并非简单源于提高学习率。LayerSync 在默认学习率下产生的梯度范数更小，且性能远超全局或局部提高学习率的方案。*
 
 ![LayerSync 与 SRA (EMA方法) 的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/4itprlvbRQ-7.png)
+
 *图：与同样使用模型自身表示的 EMA 方法 SRA 相比，LayerSync 实现了更低的 FID，且计算量（FLOPs）和墙钟时间都显著更少。*
 
 ### ⚖️ 评分理由

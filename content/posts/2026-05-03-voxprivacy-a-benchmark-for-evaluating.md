@@ -56,9 +56,11 @@ hiddenInHomeList: true
 本文核心贡献是基准数据集和评估框架，而非提出新的语音模型架构。评测中使用了多种现有语音大模型（如Kimi-Audio, Gemini, Qwen2.5-Omni等）作为研究对象。微调实验基于Kimi-Audio模型，该模型采用端到端架构，包含Whisper-large-v3音频编码器、适配器模块和语言模型骨干。
 
 ![VoxPrivacy三级评估框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/GNo1qMqgPD-0.png)
+
 **图1**：展示了VoxPrivacy的三个难度层级。Tier 1测试对直接保密指令的服从；Tier 2测试利用说话人声音作为密钥进行条件信息访问（授权用户可访问，第三方被拒绝）；Tier 3测试在无指令时自主推断信息敏感性并保护隐私。
 
 ![基准构建与评估流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/GNo1qMqgPD-1.png)
+
 **图2**：展示了数据集的构建流程和评估方法。流程包括：LLM生成秘密陈述→预处理与清洗→结构化对话组装→语音合成。评估使用LLM作为裁判，同时结合人类评估。
 
 ### 💡 核心创新点
@@ -83,6 +85,7 @@ hiddenInHomeList: true
 实验在VoxPrivacy基准和Real-VoxPrivacy真人录制子集上进行，主要评估指标包括无效响应率（IRR）、准确率、精确率、召回率和F1分数。
 
 ![实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/GNo1qMqgPD-2.png)
+
 **图3**：论文中的示意图，用于说明三级任务的交互模式。
 
 **表2：Tier 1任务表现（EN/ZH）**
@@ -113,6 +116,7 @@ hiddenInHomeList: true
 5.  **真人数据验证**：在Real-VoxPrivacy数据集上的结果（表4）与合成数据结论一致，证实了问题的现实性。
 
 ![模型微调后通用能力保持情况](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/GNo1qMqgPD-4.png)
+
 **图5**：论文中的示意图，展示了不同任务（如ASR, SER, ASC, AQA, Voice-Chat）的数据统计和示例。
 
 ### ⚖️ 评分理由

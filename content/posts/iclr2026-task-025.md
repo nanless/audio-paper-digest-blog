@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音对话系统 论文列表"
+title: "ICLR 2026 - 语音识别 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音对话系统"]
+tags: ["语音识别"]
 categories: [iclr-2026]
-description: "共 11 篇 ICLR 2026 语音对话系统 方向论文"
+description: "共 8 篇 ICLR 2026 语音识别 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音对话系统
+# ICLR 2026 - 语音识别
 
-共 **11** 篇论文
+共 **8** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,506 +18,308 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Closing the Gap Between Text and Speech Understanding in LLM](/audio-paper-digest-blog/posts/2026-05-03-closing-the-gap-between-text-and-speech) | 10.0分 | 前10% |
-| 🥈 | [End-to-end Listen, Look, Speak and Act](/audio-paper-digest-blog/posts/2026-05-03-end-to-end-listen-look-speak-and-act) | 9.5分 | 前25% |
-| 🥉 | [From Text to Talk: Audio-Language Model Needs Non-Autoregres](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non) | 8.0分 | 前25% |
-| 4. | [DrVoice: Parallel Speech-Text Voice Conversation Model via D](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation) | 8.0分 | 前25% |
-| 5. | [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer) | 8.0分 | 前25% |
-| 6. | [STITCH: Simultaneous Thinking and Talking with Chunked Reaso](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with) | 7.5分 | 前25% |
-| 7. | [ParaS2S: Benchmarking and Aligning Spoken Language Models fo](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language) | 7.5分 | 前25% |
-| 8. | [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating) | 7.5分 | 前25% |
-| 9. | [WearVox: An Egocentric Multichannel Voice Assistant Benchmar](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice) | 7.5分 | 前25% |
-| 10. | [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text) | 7.5分 | 前25% |
-| 11. | [Human or Machine? A Preliminary Turing Test for Speech-to-Sp](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for) | 7.0分 | 前25% |
+| 🥇 | [CTC-DRO: Robust Optimization for Reducing Language Dispariti](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language) | 8.8分 | 前25% |
+| 🥈 | [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion) | 8.5分 | 前25% |
+| 🥉 | [A cross-species neural foundation model for end-to-end speec](/audio-paper-digest-blog/posts/2026-05-03-a-cross-species-neural-foundation-model-for-end) | 8.0分 | 前10% |
+| 4. | [Confident and Adaptive Generative Speech Recognition via Ris](/audio-paper-digest-blog/posts/2026-05-03-confident-and-adaptive-generative-speech) | 8.0分 | 前25% |
+| 5. | [Pay Attention to CTC: Fast and Robust Pseudo-Labelling for U](/audio-paper-digest-blog/posts/2026-05-03-pay-attention-to-ctc-fast-and-robust-pseudo) | 8.0分 | 前25% |
+| 6. | [A Brain-Inspired Gating Mechanism Unlocks Robust Computation](/audio-paper-digest-blog/posts/2026-05-03-a-brain-inspired-gating-mechanism-unlocks-robust) | 7.5分 | 前25% |
+| 7. | [Speech-to-LaTeX: New Models and Datasets for Converting Spok](/audio-paper-digest-blog/posts/2026-05-03-speech-to-latex-new-models-and-datasets-for) | 7.5分 | 前25% |
+| 8. | [SumRA: Parameter Efficient Fine-tuning with Singular Value D](/audio-paper-digest-blog/posts/2026-05-03-sumra-parameter-efficient-fine-tuning-with) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Closing the Gap Between Text and Speech Understanding in LLMs](/audio-paper-digest-blog/posts/2026-05-03-closing-the-gap-between-text-and-speech)
+### 🥇 [CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language)
 
-🔥 **10.0/10** | 前10% | #语音对话系统 | #知识蒸馏 | #跨模态 #数据高效
-
-👥 **作者与机构**
-
-- 第一作者：Santiago Cuervo（Université de Toulon, Aix Marseille Université, CNRS, LIS）
-- 通讯作者：未明确说明（第二作者 Skyler Seto 来自 Apple，可能是联系人）
-- 作者列表：Santiago Cuervo（Université de Toulon, Aix Marseille Université, CNRS, LIS）、Skyler Seto（Apple）、Maureen de Seyssel（Apple）、Richard He Bai（Apple）、Zijin Gu（Apple）、Tatiana Likhomanenko（Apple）、Navdeep Jaitly（Apple）、Zakaria Aldeneh（Apple）
-
-💡 **毒舌点评**
-
-亮点在于，本文没有陷入“用更多数据砸出性能”的惯性思维，而是先用定量工具手术刀般剖开了“差距”的病灶（遗忘与失对齐），然后精准用药（蒸馏+主动选择），用极低的数据成本就让一个3B/7B模型达到了媲美更大、更耗数据模型的水平。短板是，尽管是“端到端”模型，但当前工作仅完成了从语音到文本生成这一步，距离能自然输出语音的完整语音助手尚有距离，这更像是一个关键的中继站而非终点。
-
-🔗 **开源详情**
-
-- **代码**：论文中未提及代码链接。
-- **模型权重**：未提及公开权重计划。
-- **数据集**：使用了公开数据集LibriHeavy、Emilia和FineWeb-Edu。合成语音部分使用了Kokoro-TTS。
-- **Demo**：未提及在线演示。
-- **复现材料**：在附录（A.1-A.3， A.5）中提供了极其详细的模型描述、训练细节（优化器、学习率、调度、混合比例）、评估协议（模板、few-shot设置），可复现性极高。
-- **论文中引用的开源项目**：Kokoro-TTS, Mimi speech tokenizer, Qwen2.5 LLMs, Whisper (用于部分分析), BAAI/bge-large-en-v1.5 embeddings, SmolLM, Hugging Face transformers/datasets。
-
-📌 **核心摘要**
-
-1. **解决的问题**：现有的将文本大语言模型适配为能处理语音输入的模型（语音适配LLM）在语言理解任务上性能显著下降，始终落后于原始文本模型乃至级联系统。作者将此现象定义为“文本-语音理解差距”。
-2. **方法核心**：提出SALAD（Sample-efficient Alignment with Learning through Active selection and cross-modal Distillation）方法。该方法通过两阶段训练：第一阶段在自然语音数据上使用跨模态知识蒸馏（以文本LLM为教师）来对齐模态并缓解遗忘；第二阶段使用主动学习算法，优先选择那些模型自身跨模态失对齐程度最高的文本样本进行语音合成，以高效地填补领域空白。
-3. **与已有方法相比的新意**：首次系统量化并分析了“遗忘”和“跨模态失对齐”这两个因素如何分别影响文本和语音性能，并发现它们均可预测最终差距。不同于依赖海量合成数据或私有数据集的方法，SALAD在公开数据上实现了数据高效（训练数据量少一个数量级）且性能可比的解决方案。
-4. **主要实验结果**：在3B和7B模型上，SALAD显著缩小了理解差距。以7B模型为例，在六个广泛领域的知识推理基准测试中，SALAD-7B的语音文本差距平均为6.2%，明显优于大多数端到端基线（如DiVA的26.1%，GLM-4-Voice的20.1%），并接近最强闭源模型Qwen2.5-Omni（5.0%）。关键对比数据见下表：
-
-| 模型 | 平均语音理解准确率(%) | 平均文本-语音差距(%) | 备注 |
-| :--- | :--- | :--- | :--- |
-| ASR + Qwen2.5-7B (级联) | 79.4 | 2.2 | 强基线 |
-| Qwen2.5-Omni-7B | 76.7 | 5.0 | 最强闭源端到端模型 |
-| **SALAD-7B** | **75.4** | **6.2** | **本方法** |
-| GLM-4-Voice-9B | 63.4 | 20.1 | |
-| DiVA-Llama3.1-8B | 52.6 | 26.1 | |
-
-5. **实际意义**：证明了通过精细的问题分析和巧妙的训练目标设计，可以显著降低构建高性能语音语言模型对数据的需求，为资源受限的研究和应用开辟了更可行的路径。
-6. **主要局限性**：本研究聚焦于语音理解（生成文本），并未解决语音生成（输出语音）的问题，因此构建的模型尚非完整的语音交互助手。其有效性高度依赖于底层文本LLM（教师模型）的能力和公开语音数据的质量。
-
----
-
-### 🥈 [End-to-end Listen, Look, Speak and Act](/audio-paper-digest-blog/posts/2026-05-03-end-to-end-listen-look-speak-and-act)
-
-🔥 **9.5/10** | 前25% | #语音对话系统 | #多模态模型 | #全双工 #端到端
+🔥 **8.8/10** | 前25% | #语音识别 | #鲁棒优化 | #多语言 #低资源
 
 👥 **作者与机构**
 
-- 第一作者：Siyin Wang（清华大学）
-- 通讯作者：Chao Zhang（清华大学）
-- 作者列表：Siyin Wang（清华大学）、Wenyi Yu（清华大学）、Xianzhao Chen（字节跳动）、Xiaohai Tian（字节跳动）、Jun Zhang（字节跳动）、Lu Lu（字节跳动）、Yuxuan Wang（未说明）、Chao Zhang（清华大学）
+- 第一作者：Martijn Bartelds (斯坦福大学计算机系)
+- 通讯作者：Martijn Bartelds (bartelds@stanford.edu)
+- 作者列表：Martijn Bartelds（斯坦福大学计算机系）、Ananjan Nandi（斯坦福大学计算机系）、Moussa Koulako Bala Doumbouya（斯坦福大学计算机系）、Dan Jurafsky（斯坦福大学计算机系）、Tatsunori Hashimoto（斯坦福大学计算机系）、Karen Livescu（丰田芝加哥技术学院）
 
 💡 **毒舌点评**
 
-ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人类一样在说话的同时还能干活，这在当前以“分时处理”为主的多模态大模型中绝对是里程碑式的突破。但别高兴太早，论文里所有“干活”的部分都在LIBERO这种纯模拟器里完成，真到了真实厨房或工厂，机械臂会不会因为“一心二用”打翻酱油罐，还未经考验。
+亮点是精准诊断了Group DRO在CTC语音识别场景下的失效原因，并设计了两个精巧且原理清晰的组件（平滑目标、长度匹配）加以修复，理论与实验闭环完整。短板在于，该方法本质是针对“损失不可比”问题的优化技巧，并未从根本上改变模型架构或引入新的语音理解范式，且其计算开销虽声称最小，但长度匹配批采样器增加了实现复杂性。
 
 🔗 **开源详情**
 
-- **代码**：论文承诺将代码开源，GitHub仓库为 https://github.com/bytedance/SALMONN。
-- **模型权重**：论文承诺将提供模型检查点。
-- **数据集**：论文承诺将发布所有数据。训练数据细节见附录B表6，部分数据（如缺陷指令、上下文VQA标注）由模型生成，附录E提供了相关提示词。
+- **代码**：是，提供GitHub仓库链接：https://github.com/Bartelds/ctc-dro。
+- **模型权重**：论文未明确提及是否公开新训练的模型权重。
+- **数据集**：使用公开数据集**ML-SUPERB 2.0**，各语料库遵循Creative Commons等许可。
 - **Demo**：论文中未提及在线演示。
-- **复现材料**：提供了完整的模型规格（附录A）、训练细节（附录B）、评估细节（附录C）、任务定义（附录D）、实验用提示词（附录E）以及大量消融实验结果（附录F-I），复现材料非常充分。
-- **论文中引用的开源项目**：
-    - **模型/架构**：LLaMA-3.1-8B-Instruct, Emu3 (Emu3-Base, Emu3-VisionTokenizer), UniVLA, FAST, Mamba, CosyVoice2-0.5B, SPEAR。
-    - **数据集**：LibriSpeech, GigaSpeech, LIBERO, Alpaca-52k, Web Questions, TriviaQA, SQuAD, Natural Questions, VoiceAssistant-400k, UltraChat。
-    - **工具**：Whisper-medium-en/large-v3（用于数据过滤和评估）。
+- **复现材料**：提供了详细的算法伪代码（Algorithm 1）、实验设置（Section 4）、超参数搜索范围（Section 4.2）、数据集具体构成（Appendix D）和硬件信息（Appendix I），复现指引充分。
+- **引用的开源项目**：XLS-R（Babu et al., 2022）、MMS（Pratap et al., 2024）、ML-SUPERB 2.0（Shi et al., 2024）、ESPnet（致谢中提及）。
 
 📌 **核心摘要**
 
-这篇论文旨在解决当前AI模型无法像人类一样进行实时、多模态、全双工交互的问题。现有模型要么“能说会道”但无法行动（如语音大模型），要么“能干活”但无法说话（如VLA模型），且大多采用半双工、轮流发言的模式。为解决此问题，作者提出了ELLSA（End-to-end Listen, Look, Speak and Act）模型，这是首个在单一架构内统一处理视觉、语音、文本和动作的全双工端到端模型。其核心是创新的SA-MoE（自注意力混合专家）架构，将不同模态路由给专门的专家模块（语音专家处理语音/文本，动作专家处理视觉/动作），并通过统一的自注意力机制进行融合，从而在保持各专家性能的同时实现跨模态信息交互。实验结果表明，ELLSA不仅在语音交互和机器人操作基准测试上达到了与专用模型相当的性能（如在LIBERO基准上平均任务成功率达89.4%，超过π0-FAST的85.5%），更实现了前所未有的高级交互能力，包括边说边做（speaking-while-acting）、基于上下文的视觉问答、拒绝错误指令和动作中断。其实际意义在于为构建更自然、通用的人机交互智能体提供了可行的技术路径。主要局限性是目前仅在模拟环境中验证，尚未在真实物理世界进行部署和测试。
+1. **问题**：现代多语言自动语音识别模型存在严重的语言间性能差异，而常用的Group DRO优化方法在应用于CTC损失时会失效，因为CTC损失的值随输入长度和语言声学特性变化，导致不同语言组的损失值不可直接比较。
+2. **方法核心**：提出CTC-DRO优化算法，包含两个关键改进：(1) 长度匹配批处理：通过确保每个语言组的批处理总音频时长固定，来缓解CTC损失随长度缩放的问题；(2) 平滑最大化目标：修改了组权重更新规则（公式10），通过引入平滑参数α，防止权重过度集中在那些由于内在原因（如长序列）而始终具有高损失的语言组上。
+3. **新在哪里**：相比标准Group DRO，CTC-DRO明确承认并处理了CTC损失的不兼容性。平滑最大化目标从理论上被证明是原始目标的推广（公式12-17），并通过调整α在“均匀关注”和“完全聚焦高损失组”之间平滑切换。长度匹配是一种新颖的批采样策略，而非简单的损失归一化。
+4. **主要实验结果**：在ML-SUPERB 2.0基准的5个语言集上，CTC-DRO在XLS-R和MMS两个预训练模型上均优于基线和Group DRO。它将最差语言的字符错误率（CER）相对降低了**最高47.1%**，同时平均CER相对降低了**最高32.9%**。消融实验证明平滑最大化目标比长度匹配贡献更大。组权重分析显示CTC-DRO训练更稳定。
+5. **实际意义**：该方法以极小的计算开销（仅需跟踪每组一个标量权重）有效提升了多语言ASR的公平性和实用性，使更多语言获得可用的识别性能。其思想可推广至其他存在类似“损失不可比”问题的序列任务。
+6. **主要局限性**：该方法仍依赖于预定义的语言组标签，无法自动发现或处理组内差异。性能差距虽被缩小，但未被消除。对于某些语言组，平滑参数α的选择需要调优。
 
 ---
 
-### 🥉 [From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non)
+### 🥈 [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion)
 
-🔥 **8.0/10** | 前25% | #语音对话系统 | #扩散模型 | #自回归模型 #多模态模型
+🔥 **8.5/10** | 前25% | #语音识别 | #扩散模型 | #零样本 #语音大模型
 
 👥 **作者与机构**
 
-- 第一作者：Tianqiao Liu (Guangdong Institute of Smart Education, Jinan University; TAL Education Group)
-- 通讯作者：Xueyi Li (Guangdong Institute of Smart Education, Jinan University)
-- 作者列表：
-    - Tianqiao Liu (Guangdong Institute of Smart Education, Jinan University; TAL Education Group)
-    - Xueyi Li (Guangdong Institute of Smart Education, Jinan University)
-    - Hao Wang (Peking University)
-    - Haoxuan Li (Peking University)
-    - Zhichao Chen (Peking University)
-    - Weiqi Luo (Guangdong Institute of Smart Education, Jinan University)
-    - Zitao Liu (Guangdong Institute of Smart Education, Jinan University)
+- 第一作者：Yuancheng Wang（Meta Superintelligence Labs, The Chinese University of Hong Kong, Shenzhen）
+- 通讯作者：未明确说明（论文脚注说明实习期间完成，提供了联系邮箱 yuanchengwang@link.cuhk.edu.cn）
+- 作者列表：Yuancheng Wang（Meta Superintelligence Labs, The Chinese University of Hong Kong, Shenzhen）、Zhenyu Tang（Meta Superintelligence Labs）、Yun Wang（Meta Superintelligence Labs）、Arthur Hinsvark（Meta Superintelligence Labs）、Yingru Liu（Meta Superintelligence Labs）、Yinghao Aaron Li（Meta Superintelligence Labs）、Kainan Peng（Meta Superintelligence Labs）、Junyi Ao（Meta Superintelligence Labs, The Chinese University of Hong Kong, Shenzhen）、Mingbo Ma（Meta Superintelligence Labs）、Mike Seltzer（Meta Superintelligence Labs）、Qing He（Meta Superintelligence Labs）、Xubo Liu（Meta Superintelligence Labs）
 
 💡 **毒舌点评**
 
-**亮点**：论文精准地抓住了现有统一语音模型中“用单一自回归目标训练文本和音频”这一根本矛盾，并给出了一个理论上优美、实践中有效的混合解决方案（TtT），其训练策略（如SST）设计得非常工程化且有针对性。
-**短板**：虽然实验结果强劲，但模型的可扩展性尚未得到充分验证（仅测试了3B规模），且NAR扩散生成的200步迭代在推理效率上是否真能优于大型自回归模型，论文未提供直接的延迟数据对比，这使得其“高效”的实际落地优势有待商榷。
+亮点：在极低比特率（200 bps， 12.5 Hz）的苛刻设定下，SiTok通过端到端的扩散自编码器训练与语义正则化，在重建质量和下游理解任务上均取得了显著超越基线的性能，证明了该范式在统一压缩、重建与语义表示方面的巨大潜力。短板：论文承认在下游理解任务上，其离散表示性能仍落后于连续特征表示；此外，基于迭代采样的扩散解码器架构天然不利于流式生成，论文对此也无解决方案，这在实际应用（如实时语音交互）中可能成为瓶颈。
 
 🔗 **开源详情**
 
-- **代码**：论文提供了GitHub仓库链接：https://github.com/ai4ed/TtT。
-- **模型权重**：论文中提及“code and data are publicly available”，但未明确说明是否包含预训练或微调后的模型权重。
-- **数据集**：训练数据集为多个公开数据集的组合（详见表4），论文未提及会提供额外的合成或处理后的训练数据。评估数据集（表7）均为公开基准。
-- **Demo**：论文中未提及提供在线演示。
-- **复现材料**：论文在附录中提供了极其详细的训练数据格式、数据集构成、评估协议、超参数设置、算法伪代码以及硬件配置，为复现提供了充分信息。
-- **依赖的开源项目**：
-    - **模型骨架**：Qwen2.5-Base (1.5B/3B)。
-    - **音频编解码器**：沿用GLM-4-Voice的设计。
-    - **ASR模型**：Whisper-Large-v3 (英语), Paraformer-zh (中文) 用于评估。
-    - **评估模型**：Qwen3-30B-A3B 用作LLM-as-a-Judge。
-    - **训练框架**：DeepSpeed。
+- **代码**：论文中承诺“upon publication”将发布完整推理代码和预训练模型检查点，并提供了在线演示链接 `https://sitok-demo.github.io/`。当前PDF中未提供具体的代码仓库链接。
+- **模型权重**：**提及**将提供预训练模型权重。
+- **数据集**：**未提及**公开数据集。论文使用200万小时内部数据训练。
+- **Demo**：**提供**在线演示链接 `https://sitok-demo.github.io/`。
+- **复现材料**：提供了非常详细的附录（A-D），包括模型架构细节、伪代码、训练循环、数据预处理参数、超参数配置等，复现指引充分。
+- **论文中引用的开源项目**：提到了使用 **Llama风格Transformer**、**Vocos声码器**。
 
 📌 **核心摘要**
 
-1. **要解决什么问题**：现有的端到端语音对话模型（如Moshi, GLM-4-Voice）通常使用统一的自回归（AR）范式生成文本和音频令牌，但这忽略了文本生成（强目标-目标依赖）与音频生成（强源-目标依赖）在依赖结构上的根本不对称性，导致训练动态不佳和误差传播。
-2. **方法核心是什么**：提出Text-to-Talk (TtT)框架，在一个Transformer中集成AR生成用于文本和基于吸收离散扩散的非自回归（NAR）生成用于音频。关键设计包括：1）利用吸收扩散的任意顺序AR特性建立统一训练目标；2）设计模态感知注意力机制（文本用因果注意力，音频跨度内双向注意力）；3）引入三个训练策略（BANOM, PPM, SST）来弥合训练-测试差异。
-3. **与已有方法相比新在哪里**：不同于现有方法对两种模态采用相同的AR训练目标，TtT首次在统一的模型和目标中明确地为文本和音频分配了最适合其特性的生成范式（AR vs. NAR扩散），并提供了理论分析和专门的训练策略来解决由此产生的挑战。
-4. **主要实验结果如何**：
-    - **Audio-QA与ASR**：在1.5B和3B规模上，TtT一致性优于纯AR和纯NAR基线。例如，TtT-3B在AlpacaEval上得分17.46，而AR基线为14.42；在AISHELL-2 ASR上WER为12.53，AR基线为54.94。
-    - **与SOTA对比**：在≤3B模型组中，Pretrain+TtT在Audio-QA和ASR上达到最优，并在URO-Bench（一个综合S2S基准）上取得最佳表现（如基础任务总分：理解57.63，推理39.30，口语对话45.68）。
-    - **消融实验**：移除任何一个训练策略（BANOM, PPM, SST）都会导致性能下降，证实了每个策略的贡献。例如，移除SST后，LLaMAQuestions分数从34.68降至10.20。
-
-    | 模型 (3B) | Audio-QA (↑) | ASR (↓) | URO-Bench Basic (↑) |
-    | :--- | :--- | :--- | :--- |
-    | **数据集** | AE. LQ. TQA. WQ. | Fzh. A2. A1. WS m. WS n. Fen. | 理解 推理 口语 |
-    | Qwen2.5-3B (AR) | 14.42 10.00 0.60 0.70 | 90.32 54.94 72.01 80.01 73.64 74.47 | - - - |
-    | Qwen2.5-3B (NAR) | 11.31 0.67 1.21 0.70 | 68.94 212.27 160.58 89.22 111.29 83.51 | - - - |
-    | **TtT-3B** | **17.46 34.68 6.53 11.61** | **55.67 12.53 13.65 53.83 44.29 64.31** | - - - |
-    | Pretrain+TtT | 26.73 40.07 11.07 21.43 | 18.99 6.80 5.78 27.59 19.85 19.10 | **57.63 39.30 45.68** |
-
-5. **实际意义是什么**：为构建更高效、自然且延迟更低的端到端语音对话系统提供了一种新的架构范式。其混合生成思想可能对其他需要处理不同模态生成特性的多模态AI应用有启发。
-6. **主要局限性是什么**：1) 论文仅验证了1.5B和3B的规模，更大模型的性能和稳定性未知；2) NAR音频生成的推理步数（200步）可能带来实际延迟，与流式AR模型的对比分析不足；3) 音频生成质量（如URO-Bench中的NMOS/UTMOS分数）与最强模型相比仍有差距。
+这篇论文旨在解决现有语音分词器在压缩率、重建质量和语义丰富性之间难以兼顾的核心矛盾，尤其是在低令牌率下信息承载的瓶颈。论文提出了**SiTok**，一种基于**扩散自编码器**的语音分词器，其核心创新在于：1）采用**端到端**的联合训练框架，将向量量化与基于扩散模型的波形重建过程统一优化，避免了传统两阶段方法的次优性；2）引入**CTC语义正则化**，直接在离散潜在空间施加文本监督，强制令牌保留语义信息。SiTok被扩展到**1.6B参数**，并在**200万小时**语音数据上训练。实验表明，在极具挑战性的**12.5 Hz令牌率**和**200 bps比特率**下，SiTok在语音重建（WER 3.34， SIM 0.682）和多项下游理解任务（如ASR WER 4.95）上均显著优于多个强劲基线。此外，论文还探索了**快捷微调**等高效解码技术，将扩散步数减少至2-4步，极大提升了推理效率。SiTok的实际意义在于为语音大语言模型提供了一种高效、高质量的统一接口，既能支持高保真生成，也能服务于理解任务。主要局限性在于离散表示在理解任务上与连续表示仍有差距，且扩散解码器对流式应用不友好。
 
 ---
 
-### 4. [DrVoice: Parallel Speech-Text Voice Conversation Model via Dual-Resolution Speech Representations](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation)
+### 🥉 [A cross-species neural foundation model for end-to-end speech decoding](/audio-paper-digest-blog/posts/2026-05-03-a-cross-species-neural-foundation-model-for-end)
 
-🔥 **8.0/10** | 前25% | #语音对话系统 | #自回归模型 | #语音大模型 #端到端
+🔥 **8.0/10** | 前10% | #语音识别 | #预训练 | #对比学习 #端到端
 
 👥 **作者与机构**
 
-- 第一作者：Chao-Hong Tan (Tongyi Fun Team, Alibaba Group)
-- 通讯作者：论文中未明确指定唯一通讯作者，但列出了联系邮箱，作者列表首位为Chao-Hong Tan，机构为阿里巴巴通义听觉团队。
-- 作者列表：Chao-Hong Tan, Qian Chen, Wen Wang, Chong Deng, Qinglin Zhang, Luyao Cheng, Hai Yu, Xin Zhang, Xiang Lv, Tianyu Zhao, Chong Zhang, Yukun Ma, Yafeng Chen, Hui Wang, Jiaqing Liu, Xiangang Li, Jieping Ye（均来自 Tongyi Fun Team, Alibaba Group）
+- 第一作者：Yizi Zhang* (哥伦比亚大学)，Linyang He* (哥伦比亚大学) (共同第一作者)
+- 通讯作者：未明确指定，但提供了联系邮箱 {yz4123, lh3288}@columbia.edu，可推断来自哥伦比亚大学团队。
+- 作者列表：Yizi Zhang (哥伦比亚大学)，Linyang He (哥伦比亚大学)，Chaofei Fan (斯坦福大学)，Tingkai Liu (微软)，Han Yu (哥伦比亚大学)，Trung Le (华盛顿大学)，Jingyuan Li (亚马逊)，Scott Linderman (斯坦福大学)，Lea Duncker (哥伦比亚大学)，Francis R Willett (斯坦福大学)，Nima Mesgarani (哥伦比亚大学)，Liam Paninski (哥伦比亚大学)。
 
 💡 **毒舌点评**
 
-**亮点**：DrVoice的双分辨率机制（DRSR）是一个巧妙的工程创新，通过简单的分组策略将LLM的输入帧率从12.5Hz降至5Hz，不仅显著降低了计算成本（训练时间减少近50%），还缓解了语音与文本令牌频率不匹配的问题，实验结果全面SOTA，效率与性能兼得。  
-**短板**：论文在语音生成质量（ASR-WER）的对比上存在不足，虽然UTMOS得分有竞争力，但ASR-WER（8.36）落后于Qwen2.5-Omni（3.48），作者归因于架构设计，但这表明其语音与文本的对齐精度仍有提升空间。此外，所有实验均基于英文数据集，缺乏多语言或跨语言能力的验证。
+这篇论文的最大亮点在于它用一个优雅的“神经编码器+音频LLM”管道，将跨物种、跨任务的预训练范式成功引入神经语音解码领域，并在级联设置下刷新了竞赛SOTA，证明了大规模预训练对提升解码性能（尤其在想象语音这种小数据任务上）的关键作用。短板则相当明显：其引以为傲的“端到端”框架性能（10.22% WER）仍大幅落后于其自身的级联版本（5.10% WER），且推理速度慢了一个数量级，这使得其“端到端”宣言在实际部署层面打了折扣；此外，跨物种预训练带来的增益似乎远不如人类数据本身（见图8），这削弱了“跨物种”这一宣传点的必要性。
 
 🔗 **开源详情**
 
-- **代码**：提供代码仓库链接：`https://github.com/FunAudioLLM/Fun-Audio-Chat`。
-- **模型权重**：论文中明确表示将发布基于增强基座模型的所有源代码和模型检查点。
-- **数据集**：训练数据未公开，但论文说明了数据合成方法（使用CosyVoice）和筛选流程，并提供了复现所需的脚本和说明。
-- **Demo**：论文中未提及在线演示链接。
-- **复现材料**：提供了详尽的附录（A.实现细节），包括所有超参数（学习率、批量大小等）、训练配置、硬件规格（64x A800 GPU）和训练时长。
-- **论文中引用的开源项目**：Whisper-Large-v3（语音编码器）、CosyVoice（语音分词器/解码器/S3Tokenizer）、Qwen2.5（基础LLM）、HiFi-GAN（声码器）、DeepSpeed（训练框架）。
+- **代码**：论文中未提及代码仓库链接。
+- **模型权重**：未提及公开预训练或微调后的模型权重。
+- **数据集**：论文使用了多个公开数据集（如Brain-to-Text Benchmark， Kunz et al. inner speech dataset），并引用了它们在DRYAD, DANDI等平台上的来源。但BIT模型本身及其生成的资源（如预训练权重）的开源情况未说明。
+- **Demo**：未提供在线演示。
+- **复现材料**：提供了极其详细的超参数表（表10-13）、训练策略、数据预处理步骤、评估指标定义和附录中的大量技术细节，复现信息非常充分。
+- **论文中引用的开源项目**：引用了PyTorch实现的RNN基线（来自benchmark官方仓库）、Ray Tune用于超参数搜索、scikit-learn用于LDA分析。使用了Qwen2.5, Qwen3, Aero1-Audio, Qwen2-Audio等公开LLM作为解码器。
+- **总体开源情况**：论文中未提及针对BIT模型本身的开源计划。
 
 📌 **核心摘要**
 
-1.  **要解决的问题**：现有端到端语音-文本联合生成模型（如Kimi-Audio）面临两个挑战：一是使用12.5Hz的音频表示导致计算成本高昂；二是高帧率的语音令牌与低帧率（~3Hz）文本令牌之间存在频率不匹配，这削弱了LLM的语义处理能力。
-2.  **方法核心**：提出DrVoice，一个并行的语音-文本对话模型，其核心是双分辨率语音表示（DRSR）。在输入端，通过分组机制将25Hz的离散语音令牌压缩为5Hz的表示，送入LLM；在输出端，设计了一个语音精炼头（SRH），以自回归方式从LLM的隐藏状态中逐个生成原始25Hz的语音令牌，以恢复细节。
-3.  **与已有方法相比新在哪里**：相比采用固定12.5Hz输入/输出的Kimi-Audio等模型，DrVoice首次引入了输入低分辨率（5Hz）与输出高分辨率（25Hz）的双分辨率架构。这既保证了LLM处���效率，又通过SRH保障了生成语音的自然度。此外，论文还提出了CoM-Mixing（链式模态混合）和Core-Cocktail（核心鸡尾酒）两种新颖的训练策略。
-4.  **主要实验结果**：DrVoice-7B在多个权威基准上取得了SOTA性能。在OpenAudioBench（语音理解）上总体得分72.04（第二名69.08），在VoiceBench（语音助手）上得分80.17（第二名76.93），在UltraEval-Audio（语音理解与生成）上得分56.66（第二名50.46），在Big Bench Audio（推理与理解）上得分74.0（第二名55.2）。计算效率方面，由于将LLM输入帧率降至5Hz，训练GPU小时数减少了近50%。语音质量方面，其UTMOS得分（4.29）与最佳模型相当。
-5.  **实际意义**：DrVoice为构建高效、高质量的端到端语音对话系统提供了一个有力的开源基线模型。其双分辨率设计思路对其他多模态生成任务（如音视频）有启发意义，降低了在资源受限设备上部署复杂语音模型的门槛。
-6.  **主要局限性**：1) 语音生成质量的对齐指标（ASR-WER）并非最优；2) 论文未报告模型在多语言场景下的性能；3) 消融研究显示，移除连续语音编码器（CSE）或语音精炼头（SRH）会导致性能显著下降，表明模型对某些组件依赖较强。
+1.  **解决的问题**：现有的语音脑机接口（BCI）大多采用级联框架（先解码音素，再用语言模型组句），无法端到端联合优化，且性能受限。本文旨在开发一个端到端的神经活动到文本（Brain-to-Text）的解码框架。
+2.  **方法核心**：提出BIT框架，核心是一个**跨任务、跨物种预训练的Transformer神经编码器**，将Utah阵列记录的神经活动嵌入表示，再通过一个浅层MLP投影器连接到一个**音频大语言模型（LLM）解码器**，最终直接生成句子。训练采用对比学习进行跨模态对齐。
+3.  **与已有方法相比新在哪里**：首次在神经语音解码中结合了大规模的**跨物种（人类+猴子）、跨任务（语音+运动）自监督预训练**Transformer编码器；首次系统性地将**音频LLM**作为解码器引入，并证明其优于文本LLM；实现了从神经活动到句子的**完全端到端**可微分优化；通过表征分析证明了编码器能**对齐尝试语音和想象语音的神经嵌入**，实现跨任务泛化。
+4.  **主要实验结果**：在Brain-to-Text ’24基准测试中，BIT级联模型（使用5-gram LM）达到SOTA的6.35% WER（使用集成后为5.10%）。在端到端设置下，BIT（使用Aero1-Audio 1.5B）将先前端到端方法（Feng et al.）的24.69% WER大幅降低至10.22%（集成后）。消融实验证明，使用音频LLM（如Aero1-Audio 1.5B）优于同等大小的文本LLM，且对比学习能进一步提升性能。在低资源的想象语音任务上，预训练带来的收益尤为显著。
+
+| 模型/框架 | Brain-to-Text ‘24 WER (尝试语音) | Brain-to-Text ‘25 WER (尝试语音) | 备注 |
+| :--- | :--- | :--- | :--- |
+| **级联框架** | | | |
+| BIT Cascaded (BIT-All) | 6.35% | 4.06% | **SOTA (单模型)** |
+| BIT Cascaded + Ensemble | 5.10% | 1.76% | **SOTA (集成)** |
+| 先前最佳 (Feghhi et al., 2025) | 7.98% | - | |
+| 先前最佳 + Ensemble (Feghhi et al., 2025) | 5.68% | - | |
+| **端到端框架** | | | |
+| BIT End-to-End (Aero1-Audio 1.5B) | 15.67% | 11.06% | |
+| BIT End-to-End + Ensemble | 10.22% | 7.76% | |
+| 先前最佳 (Feng et al., 2024) | 24.69% | - | |
+
+5.  **实际意义**：该工作为瘫痪患者的高级通信恢复提供了新的技术路径。端到端的框架简化了系统优化流程，有望推动更自然、更准确的神经语音假体的发展。
+6.  **主要局限性**：端到端解码的实时性较差（平均0.95秒/句），且性能仍显著落后于级联方法。模型使用双向注意力，不适合在线解码。跨物种数据的增益有限，且严重依赖大规模无标签数据。
 
 ---
 
-### 5. [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer)
+### 4. [Confident and Adaptive Generative Speech Recognition via Risk Control](/audio-paper-digest-blog/posts/2026-05-03-confident-and-adaptive-generative-speech)
 
-🔥 **8.0/10** | 前25% | #语音对话系统 | #自回归模型 | #多模态模型 #预训练
+🔥 **8.0/10** | 前25% | #语音识别 | #大语言模型 | #零样本 #自适应选择
 
 👥 **作者与机构**
 
-- 第一作者：Yen-Ju Lu（约翰霍普金斯大学语言与语音处理中心；论文注明工作于Meta）
-- 通讯作者：Srinivasan Iyer, Duc Le（Meta超级智能实验室）
-- 作者列表：Yen-Ju Lu（约翰霍普金斯大学语言与语音处理中心, Meta超级智能实验室），Yashesh Gaur（Meta超级智能实验室），Wei Zhou（Meta超级智能实验室；论文注明工作于约翰霍普金斯大学），Benjamin Muller（Meta超级智能实验室），Jesus Villalba（约翰霍普金斯大学语言与语音处理中心），Najim Dehak（约翰霍普金斯大学语言与语音处理中心），Luke Zettlemoyer（Meta超级智能实验室），Gargi Ghosh（Meta超级智能实验室），Mike Lewis（Meta超级智能实验室），Srinivasan Iyer（Meta超级智能实验室），Duc Le（Meta超级智能实验室）
+- 第一作者：Amit Damri (特拉维夫大学电气与计算机工程学院)
+- 通讯作者：Bracha Laufer-Goldshtein (特拉维夫大学电气与计算机工程学院)
+- 作者列表：Amit Damri (特拉维夫大学电气与计算机工程学院)、Bracha Laufer-Goldshtein (特拉维夫大学电气与计算机工程学院)
 
 💡 **毒舌点评**
 
-亮点是“潜在补丁”机制优雅地解决了语音和文本在信息密度上的根本性失衡问题，让两种模态能在同一“粒度”下进行高效交互，这在多模态大模型构建中是个被忽视但至关重要的思路。短板在于其性能提升严重依赖于预训练阶段的强制对齐（或逐渐移除对齐的课程学习），这引入了额外的、可能出错的预处理步骤，且论文聚焦于半双工交互，离真正的实时对话系统还有距离。
+这篇论文的亮点在于将风险控制理论（特别是LTT框架）成功引入生成式语音识别错误校正（GER）任务，为动态选择假设集大小提供了坚实的理论保证和高效的计算节省，是理论与实际应用结合的典范。短板在于其主要贡献是框架层面的创新，核心实验依然依赖于已有的Whisper ASR模型和LLaMA-2 LLM，缺乏对更前沿或端到端ASR-LLM联合系统的影响评估，且实验仅在英文数据集上进行，跨语言能力有待验证。
 
 🔗 **开源详情**
 
-- **代码**：提供了代码仓库链接：https://github.com/facebookresearch/lst
-- **模型权重**：论文中未提及是否公开预训练模型权重。
-- **数据集**：使用了四个公开语音数据集（LibriLight, People’s Speech, MLS, Spotify），但论文未提供其整合处理脚本或直接下载链接。文本数据来自Llama 2子集，也未明确获取方式。
-- **Demo**：未提及在线演示。
-- **复现材料**：论文附录详细说明了模型架构、训练设置、数据处理流程（特别是交错数据构建）、超参数和稳定性分析，复现信息非常充分。
-- **引用的开源项目**：论文依赖或比较了多个开源工具/模型，包括：HuBERT, Wav2Vec2, Llama 2, SentencePiece, Kokoro TTS, HiFi-GAN, Whisper等。
+- **代码**：提供代码仓库链接：https://github.com/amitdamritau/adaptive-ger
+- **模型权重**：论文中未提及公开微调后的LLM或ASR模型权重。
+- **数据集**：实验基于公开的HyPoradise基准数据集（TedLium-3， CHiME-4， CommonVoice），但未提供处理后的特定数据格式。
+- **Demo**：未提供在线演示。
+- **复现材料**：论文在附录中提供了详细的LLM训练超参数（C.1节）、提示模板（C.2节）、计算需求（C.3节）以及风险控制框架的实现细节（A节）。
+- **引用的开源项目**：Whisper (ASR), LLaMA-2 (LLM), LoRA/PEFT (高效微调), HyPoradise (基准), GenTranslate (语音翻译扩展)。
 
 📌 **核心摘要**
 
-1. **要解决什么问题**：现有自回归语音-文本模型存在严重的模态不平衡问题。语音令牌序列比文本令牌序列长得多，导致预训练和推理的计算资源被过度分配给语音，阻碍了有效的跨模态对齐和模型性能的高效扩展。
-2. **方法核心是什么**：提出**潜在语音-文本变换器**。其核心是一个**潜在补丁机制**：通过一个轻量级的“补丁编码器”将一段连续的语音令牌聚合成一个更高层的、信息更密集的“语音补丁”。全局变换器在由文本令牌和这些语音补丁组成的混合序列上进行自回归建模。一个轻量级“补丁解码器”再将补丁预测还原为令牌级别的语音输出。
-3. **与已有方法相比新在哪里**：不同于将语音和文本令牌直接混合或简单下采样，LST首次将**动态分块补丁**的概念系统性地应用于语音-文本联合建模。它引入了**对齐补丁**（基于文本-语音对齐信息）和**课程补丁**（从对齐训练逐渐过渡到静态训练）策略，使补丁既能对齐文本单元，又能在推理时摆脱对齐工具的依赖。
-4. **主要实验结果如何**：在多个故事完成基准测试（如HellaSwag, StoryCloze）上，LST在计算控制和数据控制设置下均显著超越基线。例如，在计算控制设置下，LST在语音HellaSwag上获得最高**+6.5%**的绝对提升。在从420M到1.8B的扩展实验中，LST的优势随规模增长而扩大，并在7B参数、固定令牌预算下持续有效。下游任务显示，LST稳定了ASR适配过程，并将ASR和TTS推理时的有效自回归序列长度减少约**4倍**，降低了计算成本且不牺牲质量。
-5. **实际意义是什么**：该方法为构建更高效、可扩展的语音-文本基础模型提供了一条新路径。它通过统一建模粒度，显著降低了训练和推理成本，同时提升了两种模态的表现，有助于推动语音语言模型向更大规模和更广泛应用发展。
-6. **主要局限性是什么**：1) 部分高级补丁策略（对齐补丁、课程补丁）依赖于外部的强制对齐工具，增加了系统复杂性。2) 论文主要关注预训练阶段和半双工交互，未探索指令微调或全双工对话。3) 实验局限于语音和文本模态，尚未扩展到图像或视频。
+本文针对生成式语音识别错误校正（GER）中固定大小N-best假设集导致的计算冗余和性能不确定性问题，提出了一种基于“学习然后测试”（LTT）风险控制的自适应框架。该框架的核心是为每个输入音频动态计算所需的假设集大小，仅将置信度累积分数超过校准阈值的假设传递给LLM。与传统方法相比，新方法在三个具有不同声学难度的基准数据集（TedLium-3, CHiME-4, CommonVoice）上，不仅实现了高达52%的平均假设集大小缩减（计算节省），同时保持或提升了校正后的词错误率（WER），并提供了高概率的理论性能降级边界保证。实验结果表明，该方法通过难度感知的资源分配，在计算效率与识别准确性之间取得了优异的平衡，为部署在多样化声学条件下的实用ASR系统提供了可靠且高效的解决方案。其主要局限性在于框架需要针对特定数据集进行校准，且实验评估的LLM规模和语言范围有限。
 
 ---
 
-### 6. [STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with)
+### 5. [Pay Attention to CTC: Fast and Robust Pseudo-Labelling for Unified Speech Recognition](/audio-paper-digest-blog/posts/2026-05-03-pay-attention-to-ctc-fast-and-robust-pseudo)
 
-✅ **7.5/10** | 前25% | #语音对话系统 | #语音大模型 | #自回归模型 #流式处理
+🔥 **8.0/10** | 前25% | #语音识别 | #CTC | #注意力机制 #端到端
 
 👥 **作者与机构**
 
-- 第一作者：Cheng-Han Chiang（台湾大学，微软）
-- 通讯作者：Xiaofei Wang（微软）
-- 作者列表：Cheng-Han Chiang（台湾大学，微软），Xiaofei Wang（微软），Linjie Li（微软），Chung-Ching Lin（微软），Kevin Lin（微软），Shujie Liu（微软），Zhendong Wang（微软），Zhengyuan Yang（微软），Hung-yi Lee（台湾大学），Lijuan Wang（微软）
+- 第一作者：Alexandros Haliassos（NatWest AI Research; Imperial College London）
+- 通讯作者：未说明
+- 作者列表：Alexandros Haliassos（NatWest AI Research; Imperial College London）、Rodrigo Mira（NatWest AI Research; Imperial College London）、Stavros Petridis（NatWest AI Research; Imperial College London）
 
 💡 **毒舌点评**
 
-**亮点**：将“边想边说”这个人类自然交互特性工程化实现得非常精巧，利用了音频播放时的计算空闲窗口，STITCH-S变体在零额外延迟下仍能显著提升推理任务性能，设计思路令人拍案叫绝。
-**短板**：对推理链的长度和质量控制较为粗放（固定Nreason块长度），未深入探讨不同难度问题所需的推理量如何动态适配，实际部署时可能面临“想太少”或“想太慢”的新权衡。
+**亮点**：本文将CTC的“快速而稳健”与注意力的“高精度”在伪标记阶段巧妙地“各取所需”，用CTC输出硬“喂”给注意力解码器作为目标，既绕过了自回归解码的慢，又通过联合预测传递了CTC的鲁棒性，是“螺蛳壳里做道场”的典范。**短板**：CTC驱动的教师强制生成的注意力目标在序列级上缺乏全局连贯性（如附录图7所示），虽然不影响训练，但这也暗示了该方法依赖于“师生同源”的强假设，其泛化能力在更复杂的分布外任务中（如口型变化极大的WildVSR）是否完全可靠，仍需更严苛场景的检验。
+
+🔗 **开源详情**
+
+- **代码**：提供了完整的开源代码仓库链接：https://github.com/ahaliassos/usr2。
+- **模型权重**：论文中提到了使用先前工作的预训练检查点初始化，并训练了Huge模型，但未明确提及是否公开所有尺寸模型的最终权重。
+- **数据集**：使用了公开数据集（LRS3, LRS2, VoxCeleb2, AVSpeech, LibriSpeech, WildVSR），并提供了预处理和采样列表的详细说明。
+- **Demo**：论文中未提及在线演示。
+- **复现材料**：在附录和代码中提供了所有模型超参数（表5、表6）、训练配置、数据集准备和评估脚本，复现细节非常充分。
+- **引用的开源项目**：明确使用了ESPnet（用于解码）、SentencePiece（词汇表）、PyTorch等框架。基准模型使用了AV-HuBERT、BRAVEn和原USR的官方代码。
+
+📌 **核心摘要**
+
+本文针对统一语音识别（USR）框架中**自回归伪标记（PL）计算慢**和**CTC与注意力分支解耦监督导致分布外鲁棒性差**两大痛点，提出了**USR 2.0**。
+1. **要解决的问题**：原USR方法需要在每个训练步通过缓慢的自回归解码生成注意力PL，成为训练瓶颈；同时CTC和注意力PL分开监督学生模型，使得注意力分支在长语音、噪声等分布外（OOD）场景下易受教师错误级联影响，鲁棒性不足。
+2. **方法核心**：提出**CTC驱动的教师强制**（CTC-driven teacher forcing）：教师模型用CTC头快速贪心解码出伪标签，经合并去重后，直接作为输入“强迫”教师注意力解码器在单次前向中生成对应的注意力PL，彻底消除了自回归瓶颈。由于CTC和注意力PL长度对齐，学生解码器可在一个前向中同时预测两者。为缓解由此引入的训练-测试不匹配（暴露偏差），进一步采用**混合采样**策略，在训练中交替使用CTC驱动模式和标准自回归模式。
+3. **新意**：改变了传统自回归生成注意力PL的范式，利用CTC的稳健性为注意力解码器提供强引导目标，并在学生侧进行耦合监督。
+4. **主要实验结果**：
+   - **效率**：训练时间减少约50%（图5）。
+   - **鲁棒性**：在长语音（VoxCeleb2）、噪声（LRS3加噪）、OOD数据集（LibriSpeech, WildVSR, AVSpeech）上显著优于原USR及AV-HuBERT等自监督基线。例如，在LRS3测试集上，当输入长度>400帧时，USR 2.0的AVSR WER（贪婪解码）保持稳定，而USR急剧上升（图3a）；在-5dB噪声下，AVSR WER为14.1%，优于USR的15.4%（表1）。
+   - **性能**：在LRS3、LRS2、WildVSR多个任务上达到SOTA。例如，在LRS3低资源设置下，AVSR WER为2.9%，优于USR的3.0%（表2）；Huge模型在LRS3上AVSR WER达0.8%。
+5. **实际意义**：使得高效、鲁棒地训练统一多任务语音识别模型成为可能，降低了对大规模无标签数据和计算资源的需求。
+6. **主要局限性**：
+   - 对**ASR/AVSR**任务，由于其本身WER较低，通过增加无标签数据和伪标记带来的提升幅度有限，性能可能受伪标签质量而非数量制约。
+   - CTC驱动的教师强制主要用于**迭代自训练**场景，在非迭代的离线伪标记或实时推理中，自回归或束搜索解码仍是更合适的选择。
+
+---
+
+### 6. [A Brain-Inspired Gating Mechanism Unlocks Robust Computation in Spiking Neural Networks](/audio-paper-digest-blog/posts/2026-05-03-a-brain-inspired-gating-mechanism-unlocks-robust)
+
+✅ **7.5/10** | 前25% | #语音识别 | #脉冲神经网络 | #神经元模型 #鲁棒性
+
+👥 **作者与机构**
+
+- 第一作者：Qianyi Bai（天津大学智能与计算学院/人工智能学院）
+- 通讯作者：Qiang Yu（天津大学智能与计算学院/人工智能学院）
+- 作者列表：Qianyi Bai（天津大学智能与计算学院/人工智能学院， 天津大学计算机科学与技术学院）、Haiteng Wang（天津大学智能与计算学院/人工智能学院， 天津大学未来技术学院）、Qiang Yu（天津大学智能与计算学院/人工智能学院）
+
+💡 **毒舌点评**
+
+这篇论文巧妙地将生物神经元中“动态电导”这一看似复杂的生理特性，转化为神经网络模型中可计算的“动态门控”机制，理论推导和实验验证都做得相当扎实，其抗噪性能的提升令人信服。不过，作者声称“首次”建立生物启发门控与鲁棒计算的联系可能有些绝对，且实验主要局限于SNN内部对比，未能与当时更前沿的、同样强调时序建模的Transformer变体进行正面较量，显得格局稍小。
+
+🔗 **开源详情**
+
+- **代码**：论文中未提及代码仓库链接或任何开源计划。
+- **模型权重**：未提及是否公开预训练模型权重。
+- **数据集**：使用公开数据集（TI-46, TIDIGITS, SHD, SSC），但论文未提供获取链接（通常可通过数据联盟获取）。
+- **Demo**：未提供在线演示。
+- **复现材料**：提供了详细的超参数表（Tab. 5）、训练设置和伪代码（Algorithm 1），理论上可复现，但缺乏实际代码。
+- **引用的开源项目**：论文引用了SpikingJelly（Fang et al., 2023）作为SNN基础设施平台，但未说明是否基于其构建。
+
+📌 **核心摘要**
+
+1.  **问题**：现有的脉冲神经网络（SNN）模型（如LIF）过于简化，忽略了生物神经元中动态电导的调节作用，导致其在处理噪声和时序变化时鲁棒性不足，也未能利用生物神经元固有的动态优势。
+2.  **核心方法**：受生物神经元离子通道电导可被活动动态调节的启发，提出了**动态门控神经元（DGN）**。DGN的核心在于其膜电导会根据输入突触电流的动态累积而变化，从而形成一个**自适应的信息门控机制**，能够选择性过滤输入并自适应抑制噪声。
+3.  **新意**：与传统LIF模型（固定衰减）和现有GLIF模型（静态、通道级门控）不同，DGN的门控机制是**动态的、输入依赖的、且具有生物合理性**。论文从功能上建立了该机制与LSTM门控结构的类比，为SNN的门控设计提供了生物神经科学的理论基础。
+4.  **主要结果**：在TIDIGITS、SHD等语音/音频分类基准上，DGN（尤其是循环版本）在干净数据和添加各种噪声/对抗攻击的条件下，均显著优于LIF、ALIF、HeterLIF等主流SNN模型以及RNN、LSTM。例如，在TIDIGITS上，循环DGN在干净数据集达到**99.10%** 准确率；在加性噪声（p=0.006）下，前馈DGN准确率保持**95.34%**，而LIF降至46.83%。理论分析（通过SDE推导电压方差）表明DGN的动态电导能提供额外的噪声抑制。
+5.  **意义**：该工作为提升SNN的鲁棒性提供了一种新颖、有效且有生物理论支撑的神经元设计范式，有望推动更强大、更稳定的类脑计算模型发展。
+6.  **局限性**：实验主要与SNN和传统RNN/LSTM对比，未与当时更先进的SNN-Transformer混合架构对比。论文未开源代码，限制了可复现性和社区进一步验证与扩展。此外，DGN相比LIF引入了更多参数和计算（尽管效率仍远高于LSTM），其硬件部署的能效权衡需要更深入探讨。
+
+---
+
+### 7. [Speech-to-LaTeX: New Models and Datasets for Converting Spoken Equations and Sentences](/audio-paper-digest-blog/posts/2026-05-03-speech-to-latex-new-models-and-datasets-for)
+
+✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #基准测试 #多语言
+
+👥 **作者与机构**
+
+- 第一作者：Dmitrii Korzh (AXXX, Moscow, Russia; MTUCI, Moscow, Russia)
+- 通讯作者：未说明
+- 作者列表：Dmitrii Korzh (AXXX, MTUCI), Dmitrii Tarasov (FusionBrain Lab, HSE University), Artyom Iudin (AXXX, MTUCI), Elvir Karimov (MTUCI, Applied AI Institute), Matvey Skripkin (FusionBrain Lab, Applied AI Institute), Nikita Kuzmin (MTUCI, Applied AI Institute), Andrey Kuznetsov (FusionBrain Lab, Innopolis University), Oleg Y. Rogov (AXXX, MTUCI, Applied AI Institute), Ivan Oseledets (AXXX, Moscow State University)
+
+💡 **毒舌点评**
+
+**亮点**：首次大规模开源了涵盖方程和句子的双语（英/俄）语音到LaTeX数据集，并系统性地对比了后校正和端到端两种主流技术路线，建立了全面的基准。**短板**：模型在真实、嘈杂、带有复杂上下文的课堂等场景中的泛化能力未得到验证，错误分析停留在示例层面，对语言歧义的处理策略不够深入。
+
+🔗 **开源详情**
+
+-   **代码**：提供代码仓库链接 `https://github.com/dkorzh10/speech2latex`。
+-   **模型权重**：论文中未明确提及是否公开微调后的模型权重。
+-   **数据集**：公开，提供了Hugging Face数据集链接 `https://huggingface.co/datasets/marsianin500/Speech2Latex`。
+-   **Demo**：未提及。
+-   **复现材料**：提供了完整的训练细节（优化器、学习率、批量大小、LoRA配置等）、数据划分策略和评估指标定义（附录），支持复现。
+-   **引用的开源项目**：主要依赖Whisper、Qwen2.5、SALMONN、XTTSv2、KaTeX等开源模型和工具。
+
+📌 **核心摘要**
+
+1.  **问题**：将口语数学表达式（方程和句子）准确转换为结构化的LaTeX格式，是自动转录、教育技术等领域的一个挑战，存在发音歧义、缺乏数据集等问题。
+2.  **方法核心**：提出了首个大规模开源数据集S2L（含66k人工标注和571k合成音频），并系统评估了两种技术路线：**ASR后校正**（先用Whisper转写，再用LLM如Qwen2.5校正为LaTeX）和**端到端多模态模型**（如SALMONN，直接从音频生成LaTeX）。
+3.  **新在哪里**：相比先前工作（如MathSpeech），提供了首个公开的大规模、双语、包含句子和方程的数据集；首次引入并评估了端到端Audio-LLM方案；建立了更全面的评估基准。
+4.  **主要结果**：在自建的S2L-equations基准上，最佳后校正模型（Qwen2.5-1.5B）和端到端模型（SALMONN-13B）的CER分别为27.2%和17.5%，远优于MathSpeech模型的64.0%；在S2L-sentences基准上，方程部分的CER最低为39.7%（SALMONN）。在MathSpeech已有基准上，本文方法也达到了可比性能（CER 30.0% vs. 27.7%）。
+5.  **实际��义**：推动了语音驱动的数学内容理解技术，为教育辅助、科学笔记等应用提供了数据基础和方法参考。
+6.  **主要局限性**：数据集未完全覆盖真实课堂环境（如即兴讲解、视觉内容关联）；口语数学固有的歧义（如一式多解）使得CER指标无法完全反映语义正确性；合成数据与真实人声存在差距。
+
+---
+
+### 8. [SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis](/audio-paper-digest-blog/posts/2026-05-03-sumra-parameter-efficient-fine-tuning-with)
+
+✅ **7.0/10** | 前25% | #语音识别 | #迁移学习 | #多语言 #低资源
+
+👥 **作者与机构**
+
+- 第一作者：Chin Yuen Kwok（南洋理工大学数字信任中心，南洋理工大学计算与数据科学学院）
+- 通讯作者：Yongsen Zheng（南洋理工大学计算与数据科学学院）
+- 作者列表：Chin Yuen Kwok（南洋理工大学数字信任中心，南洋理工大学计算与数据科学学院）、Yongsen Zheng（南洋理工大学计算与数据科学学院）、Jia Qi Yip（南洋理工大学计算与数据科学学院）、Kwok-Yan Lam（南洋理工大学数字信任中心，南洋理工大学计算与数据科学学院）、Eng Siong Chng（南洋理工大学计算与数据科学学院）
+
+💡 **毒舌点评**
+
+**亮点**：论文提出了一个巧妙且理论上自洽的初始化策略（SumRA），通过将多个奇异向量求和来初始化A矩阵，从而在冻结A的情况下仍能影响更广的知识空间，显著提升了低资源多语言ASR的性能。**短板**：核心实验局限在多语言ASR任务，论文也承认该方法对局部适应（如特定术语添加）可能效果有限，这在一定程度上限制了其方法的普适性和影响力。
 
 🔗 **开源详情**
 
 - **代码**：论文中未提及代码链接。
-- **模型权重**：未提及公开的STITCH系列模型权重。实验基于GLM-4-Voice-9B微调。
-- **数据集**：训练数据集未公开。测试用的数学音频数据集发布在HuggingFace：`dcml0714/speech_math`。非推理测试集来自OpenAudioBench。
-- **Demo**：论文提供了项目页面链接 `https://d223302.github.io/STITCH`，包含一些动画和演示。
-- **复现材料**：附录提供了非常详细��训练配置YAML、数据集构建提示模板（Prompts）、人类评估指南和接口截图。
-- **引用的开源项目/工具**：GLM-4-Voice, CosyVoice, LlamaFactory, vLLM, Whisper-large-v3, Kimi-Audio-Evalkit。
+- **模型权重**：未提及公开权重。
+- **数据集**：使用的是公开的Common Voice MASR数据集（https://commonvoice.mozilla.org/en），论文说明了其选取的子集划分方式。
+- **Demo**：未提及。
+- **复现材料**：给出了主要的训练配置（优化器、调度器、LoRA位置、α设置、批大小、轮数），但缺乏具体学习率值、硬件环境、完整超参列表。附录提供了贪心求和算法的最优性证明。
+- **论文中引用的开源项目**：Whisper (Radford et al., 2023)、SpeechBrain (用于学习率调度器)。
+- **总结**：论文中未提及开源计划。
 
 📌 **核心摘要**
 
-1. **解决的问题**：当前语音语言模型（SLM）缺乏生成回答前进行内部无语音推理（Chain-of-Thought, CoT）的能力，而简单地先生成完整CoT再说话会引入不可控的延迟。
-2. **方法核心**：提出STITCH（分块推理的同步思考与说话）框架，让SLM交替生成“推理块”和“文本-语音交织块”。利用播放一个语音块（tchunk秒）所需时间远长于生成其对应语音令牌时间的特点，在语音播放期间继续生成下一段推理和语音。
-3. **新意**：与先完整思考后说话（TBS）的方法相比，STITCH实现了“边想边说”，大幅降低首包延迟；与不能推理的基线相比，它在保持相同延迟（STITCH-S变体）的前提下，通过引入推理显著提升性能。
-4. **实验结果**：在五个数学推理数据集上，STITCH-S（无额外延迟）平均准确率达78.04%，比无推理基线（62.98%）高出约15个百分点。在非推理任务上性能持平或略优。语音质量（UTMOSv2）和文本流畅度与基线相当。人类评估表明STITCH-S的响应性优于TBS，且与无推理基线相当。
-5. **实际意义**：为构建更智能（能进行复杂推理）、更自然（低延迟、边想边说）的实时语音对话系统提供了新颖且有效的技术方案。
-6. **主要局限性**：推理长度在训练时固定，推理时虽可调节但可能影响性能；方法性能部分依赖于训练数据中GPT-4o生成的推理链质量；未探索动态调整推理深度以适应不同问题复杂度。
-
----
-
-### 7. [ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language)
-
-✅ **7.5/10** | 前25% | #语音对话系统 | #强化学习 | #语音大模型 #基准测试
-
-👥 **作者与机构**
-
-- 第一作者：Shu-wen Yang (台湾大学电信工程研究所，与字节跳动Seed联合)
-- 通讯作者：Ming Tu， Lu Lu (字节跳动Seed)
-- 作者列表：Shu-wen Yang (台湾大学电信工程研究所)， Ming Tu (字节跳动Seed)， Andy T. Liu (字节跳动Seed)， Xinghua Qu (字节跳动Seed)， Hung-yi Lee (台湾大学电信工程研究所)， Lu Lu (字节跳动Seed)， Yuxuan Wang (字节跳动Seed)， Yonghui Wu (字节跳动Seed)
-
-💡 **毒舌点评**
-
-亮点在于定义了一个重要但被忽视的“副语言感知S2S对话”问题，并构建了首个直接在语音波形层面进行端到端评估的基准测试，其多阶段自动评判器设计有效解决了端到端大模型风格幻觉问题。短板在于论文将“情感”、“语气”、“性别”、“年龄”等不同维度的副语言信息笼统地归类并处理，可能简化了这些因素在真实交互中复杂的相互作用，且对“风格”本身的定义略显宽泛。
-
-🔗 **开源详情**
-
-- **代码：** 论文明确承诺将开源代码，但未提供具体链接（论文中未提及具体代码仓库链接）。
-- **模型权重：** 论文明确承诺将开源训练后的模型权重（SFT、GRPO、奖励模型）。
-- **数据集：** 论文明确承诺将开源ParaS2SBench数据集及训练数据（PolyTone数据、SFT数据、RL数据）。
-- **Demo：** 论文提供了项目主页和Demo链接：https://paras2sbench.github.io/。
-- **复现材料：** 在附录A中提供了详细的超参数设置（A.5）、人类评估方案（A.6）、所有数据生成与评分的Prompt（A.8），复现指导性较强。
-- **论文中引用的开源项目：** Whisper-V3, Emotion2vec, AudioReasoner, Qwen2.5-Omni, Kimi-Audio, YourTTS, CosyVoice等。
-
-📌 **核心摘要**
-
-本文针对当前语音到语音对话模型无法根据用户语音中的副语言线索（如情感、语气、说话人属性）做出恰当内容与风格回应的问题，提出了ParaS2S框架。其核心是通过强化学习（RL）而非大量监督微调（SFT）来对齐模型。该框架包含两个关键部分：1）ParaS2SBench基准测试，它首次在波形级别联合评估输入输出语音对的内容与说话风格匹配度，其测试用例设计要求模型必须“听”声音而非仅凭文本内容推断；2）ParaS2SAlign，一个基于自动评判器的RL对齐框架。为实现可靠的自动评估，论文提出了一种多阶段评判器，通过分离分析语言内容与副语言风格来避免端到端大语言模型的风格幻觉。实验表明，现有S2S模型在ParaS2SBench上表现不佳，往往生成“音盲”回应。而本文的RL方法（ParaS2SAlign）相比纯SFT，将回应内容和说话风格的恰当性提升了10%，并且仅需十分之一的监督数据即可达到与百小时SFT相当的效果。该工作强调了构建可扩展、准确的自动评估器对于发展副语言感知语音交互的重要性。
-
-主要实验结果如下：
-
-**表2：自动评判器与人类评分的相关性对比（Pearson相关系数）**
-
-| ID | 方法类型 | Input Age | Input Gender | Input Emotion | Input Sarcasm | Output Emotion | Output Tone | 平均 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| B1 | Audio LLMs (baseline) | - | - | - | - | - | - | 0.618 |
-| O1 | 多阶段评判器（无输出样式） | 0.851 | 0.705 | 0.742 | 0.731 | - | - | 0.757 |
-| O2 | 多阶段评判器（有语气描述） | 0.862 | 0.702 | 0.760 | 0.779 | - | ✓ | 0.776 |
-| O5 | 多阶段评判器（使用模型预测标签） | ✓ | ✓ | ✓ | ✓ | - | ✓ | 0.723 |
-
-*结论：多阶段自动评判器与人类评分的相关性显著优于端到端Audio LLM基线（约高出15%）。使用自然语言语气描述（O2）比使用离散情感标签（O3/O4）效果更好。PolyTone训练（O5）对情感和讽刺的预测质量提升明显。*
-
-**表4：ParaS2SBench评分对比（主观评测）**
-
-| 模型 | 合成语音 (年龄/情感/性别/讽刺/平均) | 真实语音 (IEMOCAP/MELD/平均) | 总平均 |
-| :--- | :--- | :--- | :--- |
-| **基线** | | | |
-| Whisper-GPT-TTS | 3.050 / 3.121 / 2.916 / 3.005 / 3.022 | 3.562 / 3.412 / 3.487 | 3.176 |
-| **闭源模型** | | | |
-| GPT-4o voice mode | 3.205 / 3.633 / 3.342 / 2.957 / 3.284 | 3.770 / 3.508 / 3.639 | 3.403 |
-| **开源模型** | | | |
-| Qwen2.5 Omni | 3.170 / 3.653 / 3.236 / 2.935 / 3.248 | 3.626 / 3.599 / 3.612 | 3.369 |
-| Kimi-Audio | 3.141 / 2.673 / 3.091 / 2.665 / 2.892 | 1.365 / 1.166 / 1.265 | 2.350 |
-| **本文方法** | | | |
-| Kimi-Audio SFT | 4.393 / 4.090 / 3.530 / 4.291 / 4.076 | 4.121 / 3.307 / 3.714 | 3.955 |
-| **Kimi-Audio GRPO** | **4.496 / 4.490 / 4.239 / 4.538 / 4.441** | **4.394 / 3.927 / 4.161** | **4.382** |
-| **上界** | | | |
-| GPT-TTS | 4.525 / 4.691 / 4.812 / 4.791 / 4.705 | 4.710 / 4.824 / 4.766 | 4.725 |
-
-*结论：1. 现有S2S模型（包括GPT-4o、Qwen2.5 Omni）表现与忽略风格的基线管道（Whisper-GPT-TTS）相近，说明它们无法根据副语言线索调整回应。2. 本文的SFT模型已大幅超越所有现有模型。3. 基于RL的GRPO模型在SFT基础上进一步提升，在合成与真实数据上平均分达到4.382，显著优于SFT（3.955）和最强开源模型Qwen2.5 Omni（3.369）。*
-
-实际意义：该研究为语音对话系统注入“情商”提供了系统化的基准与可行的训练方法，有望推动更自然、共情的人机语音交互发展。主要局限性在于：1) 自动评判器虽优于基线，但与人类评分的相关性（0.776）仍有提升空间，且其评估维度（情绪、语气等）的定义可能存在简化；2) RL训练依赖于一个经过监督微调的“热启动”模型，其效果可能受限于初始SFT数据的质量；3) 实验主要基于Kimi-Audio模型，结论的泛化性有待验证。
-
----
-
-### 8. [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating)
-
-✅ **7.5/10** | 前25% | #语音对话系统 | #基准测试 | #语音大模型 #隐私保护
-
-👥 **作者与机构**
-
-- 第一作者：Yuxiang Wang（香港中文大学（深圳））
-- 通讯作者：未说明
-- 作者列表：Yuxiang Wang（香港中文大学（深圳））、HongYu Liu（香港中文大学（深圳））、Dekun Chen（香港中文大学（深圳））、Xueyao Zhang（香港中文大学（深圳））、Zhizheng Wu（香港中文大学（深圳）、深圳湾区研究院、澳门城市大学、Amphion Technology Co., Ltd.）
-
-💡 **毒舌点评**
-
-亮点在于精准定义了“交互隐私”这一被忽视的语音AI安全维度，并设计了极具巧思的三级评估任务，从听从指令到自主推理，层层递进地暴露了当前模型“认声不认主”的短板。短板则是它本质是一个“找茬”基准，虽然诊断出了问题（开源模型在Tier 2/3接近50%随机猜），但提出的解决方案（特定数据微调）更像是示范而非通用解法，对于如何从根本上让模型理解“语境完整性”缺乏更深层的方法论创新。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码链接。
-- 模型权重：论文承诺发布微调后的模型（Ours: Kimi-Audio-sft），但未提及具体获取方式。
-- 数据集：论文承诺公开VoxPrivacy基准（32小时）、Real-VoxPrivacy真人录制子集以及4000小时训练集。Demo页面提供：https://myflashbarry.github.io/VoxPrivacy.github.io/。
-- Demo：提供在线演示页面（见上）。
-- 复现材料：论文提供了详细的附录，包含数据生成提示词、评估标准、训练配置、对抗攻击设计等。核心依赖的开源项目/模型包括：CosyVoice2（用于TTS）、Whisper-large-v3（用于ASR和音频编码）、Deepseek-V3和Gemini-2.5-Pro（作为LLM裁判）、以及多个被评测的语音大模型。
-
-📌 **核心摘要**
-
-1. **要解决什么问题**：在语音语言模型（SLM）从单用户设备走向多用户共享环境（如智能家居）时，模型必须能够区分不同说话人并管理信息流，防止将一个用户的私人信息泄露给另一个用户，即“交互隐私”。现有基准未能评估此能力。
-2. **方法核心是什么**：提出VoxPrivacy基准，包含三级递增难度的任务：Tier 1（遵循直接保密指令）、Tier 2（基于说话人声音验证的条件访问）、Tier 3（无指令时自主推断并保护隐私）。构建了包含7107个样本（32.86小时）的双语（中英）合成数据集，并提供了小规模真人录制验证集（Real-VoxPrivacy）。
-3. **与已有方法相比新在哪里**：这是首个专门针对语音语言模型交互隐私的评估基准。与现有基准相比，它不只测试对话能力或多说话人识别，而是评估模型在识别说话人后，是否能做出“上下文适当”的响应以保护隐私，填补了从“听懂”到“守密”的评估空白。
-4. **主要实验结果如何**：对9个模型（包括开源和闭源）的评估显示，大多数开源SLM在条件隐私决策（Tier 2/3）上表现接近随机（约50%准确率）。闭源Gemini系列模型表现较好，但仍远低于理论上限（用文本ID标签模拟的LLM上界）。微调后的模型（Ours: Kimi-Audio-sft）性能显著提升，与Gemini-2.5-pro相当。真人录制数据验证了合成数据上观察到的失败模式是真实的。关键结果如下表所示：
-   **表3：条件隐私任务表现（EN/ZH）**
-   | 模型 | Tier 2 准确率(EN) | Tier 2 F1(EN) | Tier 3 准确率(EN) | Tier 3 F1(EN) |
-   | :--- | :--- | :--- | :--- | :--- |
-   | LLM (上界) | 88.37% | 90.64% | 85.21% | 86.71% |
-   | Gemini-2.5-pro | 76.05% | 76.39% | 66.28% | 67.06% |
-   | Kimi-Audio | 49.61% | 59.14% | 50.13% | 55.39% |
-   | Ours: Kimi-Audio-sft | 83.93% | 82.65% | 77.57% | 77.83% |
-5. **实际意义**：为开发更安全、值得信赖的多用户语音助手提供了关键的评估工具和数据集，揭示了当前模型在隐私保护方面的严重缺陷，并指明了通过特定数据微调的改进路径。
-6. **主要局限性**：基准依赖合成语音，可能缺乏真实交互中的韵律和情感细微差别；隐私规范具有文化特异性，当前分类可能无法完全普适；解决方案依赖监督微调，未探索强化学习等更复杂的决策训练。
-
----
-
-### 9. [WearVox: An Egocentric Multichannel Voice Assistant Benchmark for Wearables](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice)
-
-✅ **7.5/10** | 前25% | #语音对话系统 | #基准测试 | #多通道 #鲁棒性
-
-👥 **作者与机构**
-
-- 第一作者：Zhaojiang Lin (Meta)，Yong Xu (Meta)，Kai Sun (Meta) （论文明确标注三人共同第一作者）
-- 通讯作者：未说明（论文未明确标注通讯作者，但提供了zhaoliang@meta.com等邮箱）
-- 作者列表：
-    - Zhaojiang Lin, Yong Xu, Kai Sun, Jing Zheng, Yin Huang, Surya Teja Appini, Krish Narang, Renjie Tao, Ishan Kapil Jain, Siddhant Arora†, Ruizhi Li, Yiteng Huang, Kaushik Patnaik, Wenfang Xu, Suwon Shon, Yue Liu, Ahmed A Aly, Anuj Kumar, Florian Metze, Xin Luna Dong （来自Meta）
-    - Siddhant Arora† （同时隶属于Carnegie Mellon University）
-
-💡 **毒舌点评**
-
-亮点在于填补了可穿戴语音助手评估的空白，构建了一个极具现实感的多任务、多环境、多角色评测基准，其“问题意识”和实验设计远超许多“为了用而用”的论文。短板则是基准的绝对规模仍然偏小（不到4K对话），且作为一篇提出基准的论文，其自身提出的“解决方案”（MC WearLlama）只是一个概念验证案例，并未展现出颠覆性的模型架构创新，略显保守。
-
-🔗 **开源详情**
-
-- **代码**：提供了数据集的GitHub仓库链接：https://github.com/facebookresearch/wearvox。该仓库预计包含数据下载、评测脚本等。
-- **模型权重**：未提及案例研究模型（MC/SC WearLlama）的权重是否开源。评测的其他SLLM（如GPT-4o, Gemini）为闭源API。
-- **数据集**：WearVox数据集通过上述GitHub链接公开。
-- **Demo**：未提及在线演示。
-- **复现材料**：在附录中详细给出了各任务的提示词（Listing 1-4）、LLM裁判的提示词（Listing 5-6）、数据收集流程（Figure 4-5）、噪声环境分布（Figure 6-7）以及模型架构细节（Section A.6），复现信息较为充分。
-- **引用的开源项目**：论文依赖了多个开源模型和工具，包括Whisper, Llama 3.3/4系列, Qwen2.5-Omni, Gemma 3n, Kimi-Audio, Phi-4 Multimodal等作为评测基线。
-
-📌 **核心摘要**
-
-这篇论文旨在解决可穿戴设备（如AI眼镜）语音助手缺乏专用评测基准的问题。现有基准忽略了第一视角音频、运动噪声、快速交互和区分设备定向语音等特有挑战。为此，作者构建了**WearVox**，首个专门用于评估可穿戴语音助手的基准，包含3842个多通道、第一视角音频录音，覆盖5类任务（搜索问答、闭书问答、侧向对话拒绝、工具调用、语音翻译）。与已有基准相比，其核心新意在于**首次系统性地聚焦于可穿戴场景的真实复杂性**，特别是多通道空间音频和动态对话环境。主要实验结果显示，当前主流实时语音大语言模型在WearVox上的准确率仅为29%-59%，且在噪声户外环境下性能显著下降，证明了该基准的挑战性和现实性。通过案例研究，论文证明了**多通道音频输入能显著提升模型抗噪性和区分设备定向/背景语音的能力**（例如侧向对话拒绝准确率从85.6%提升至93.9%）。该工作的实际意义是为可穿戴语音AI研究提供了一个全面的测试平台，明确了性能瓶颈和未来研究方向（如空间音频的重要性）。主要局限性是基准数据集规模相对有限，且提出的多通道模型仅为概念验证，未完全开源。
-
----
-
-### 10. [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text)
-
-✅ **7.5/10** | 前25% | #语音对话系统 | #预训练 | #语音大模型 #流匹配
-
-👥 **作者与机构**
-
-- 第一作者：Xingjian Zhao（复旦大学，上海创新研究院，MOSI.AI）*并列第一作者
-- 第一作者：Zhe Xu（复旦大学，上海创新研究院，MOSI.AI）*并列第一作者
-- 通讯作者：Xipeng Qiu（复旦大学，上海创新研究院，MOSI.AI）
-- 作者列表：
-    - Xingjian Zhao (复旦大学, 上海创新研究院, MOSI.AI)
-    - Zhe Xu (复旦大学, 上海创新研究院, MOSI.AI)
-    - Luozhijie Jin (复旦大学, 上海创新研究院, MOSI.AI)
-    - Yang Wang (复旦大学, MOSI.AI)
-    - Hanfu Chen (复旦大学, MOSI.AI)
-    - Yaozhou Jiang (复旦大学, MOSI.AI)
-    - Ke Chen (复旦大学, 上海创新研究院, MOSI.AI)
-    - Ruixiao Li (复旦大学, 上海创新研究院, MOSI.AI)
-    - Mingshu Chen (复旦大学, MOSI.AI)
-    - Ruiming Wang (复旦大学, MOSI.AI)
-    - Wenbo Zhang (复旦大学, 上海创新研究院, MOSI.AI)
-    - Qinyuan Cheng (复旦大学, MOSI.AI)
-    - Zhaoye Fei (复旦大学, MOSI.AI)
-    - Shimin Li (MOSI.AI)
-    - Xipeng Qiu (复旦大学, 上海创新研究院, MOSI.AI)
-
-💡 **毒舌点评**
-
-亮点在于，通过“模态层分割”和“冻结预训练”两个关键设计，系统性地解决了将文本LLM能力迁移到语音模态时，如何平衡性能与知识保持这个核心工程难题。但短板也同样明显：该模型高度依赖一个强大且已经预训练好的文本LLM骨干（Qwen-3-8B），其核心创新更多体现在适配与整合策略上，而非一个从零开始、具有独立生命力的语音原生基础模型。
-
-🔗 **开源详情**
-
-- **代码**：论文明确表示“我们将发布代码和模型以支持进一步研究”，但文中未提供具体的GitHub等代码仓库链接。
-- **模型权重**：论文表示将发布模型，但未提及具体的权重下载地址或发布平台。
-- **数据集**：预训练数据主要来自互联网收集和合成，未整体公开。监督微调数据基于多个开源数据集构建，论文列出了使用的数据集名称（见附录B表7），但最终构建的语音SFT数据集未提及公开。
-- **Demo**：论文中未提及提供在线演示。
-- **复现材料**：提供了详细的预训练和微调策略、数据处理流程（包括数据统计、VAD、对齐方法）、关键超参数、消融实验设置，以及分析工具（层相似度计算）的描述，复现信息较为充分。
-- **引用的开源项目**：Qwen3-8B（骨干）、CosyVoice 2（分词器解码器）、GLM-4-Voice Tokenizer（分词器编码器基础）、Seed-TTS（语音合成）、SenseVoice-Small（质量过滤）、pyannote（VAD）、FineWeb-Eu（数据）、Librispeech（评估）等。
-
-📌 **核心摘要**
-
-1. **问题**：传统的语音对话系统采用“ASR-LLM-TTS”级联架构，会丢失语音中的副语言信息（如情感、语气），且延迟较高。近期的端到端方法虽有改进，但仍依赖中间文本表示进行生成，形成信息瓶颈。
-2. **方法核心**：提出一种真正的语音到语音大模型架构。核心是**基于模态的层分割**（在Transformer深层将隐藏状态路由到文本和语音两个专用输出分支）和**冻结预训练**策略（第一阶段冻结文本骨干参数，仅训练语音相关组件）。语音分词器采用基于ASR训练的编码器（语义强）和流匹配解码器（高保真）。
-3. **创新点**：1) 架构上，通过层分割实现深层的模态融合与专用生成，避免了浅层适配带来的能力损失。2) 训练策略上，冻结预训练有效保持了文本LLM的知识和推理能力，同时让语音模块与之对齐。3) 实现了无需文本指导的、端到端的语音理解与生成，同时支持文本/语音混合输入输出。
-4. **主要实验结果**：在语音问答任务上（LlamaQA, TriviaQA, WebQA）达到或超过现有文本指导系统（如GLM-4-Voice）的性能。在文本能力保持上，MMLU（67.19）和CMMLU（69.53）分数远超同样具备语音能力的SpiritLM（MMLU 36.90）。消融实验证实，层分割和冻结预训练对性能与能力保持均有显著贡献。双盲人工评估显示，在处理停顿、填充词等非言语行为时，本模型（MOS 4.17-4.25）显著优于GPT-4o、Gemini等基线。
-    | 模型 | LlamaQA (S→S) | TriviaQA (S→S) | WebQA (S→S) | MMLU | CMMLU |
-    | :--- | :--- | :--- | :--- | :--- | :--- |
-    | GLM-4-Voice | 50.70 | 26.50 | 15.90 | 57.49 | 54.39 |
-    | **Ours** | **63.67** | 28.80 | **36.71** | **67.19** | **69.53** |
-    *表：关键性能对比（部分数据，Ours为本模型）*
-5. **实际意义**：推动了语音对话系统从“文本指导”向“真正端到端”的范式转变，为构建更自然、高效、富有表现力的语音交互AI奠定了基础。
-6. **主要局限性**：1) 模型能力严重依赖于所采用的文本LLM骨干，非语音原生架构。2) 高质量监督微调数据仍需大量合成，可能存在领域偏差。3) 对极端低资源或噪声环境下的鲁棒性未充分验证。
-
----
-
-### 11. [Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for)
-
-✅ **7.0/10** | 前25% | #语音对话系统 | #基准测试 | #模型评估 #多语言
-
-👥 **作者与机构**
-
-- 第一作者：Xiang Li (李翔)（北京邮电大学网络与交换技术国家重点实验室；深圳大数据研究院；香港中文大学（深圳）；深圳 loop 区研究院）
-- 通讯作者：Jiale Han（香港科技大学）
-- 作者列表：Xiang Li（同上）、Jiabao Gao（香港中文大学（深圳））、Sipei Lin（香港中文大学（深圳））、Xuan Zhou（香港中文大学（深圳））、Chi Zhang（香港中文大学（深圳））、Bo Cheng（北京邮电大学）、Jiale Han（香港科技大学）、Benyou Wang（王本友）（深圳大数据研究院；香港中文大学（深圳）；深圳 loop 区研究院）
-
-💡 **毒舌点评**
-
-**亮点**：论文首次系统性地对S2S对话系统进行了图灵测试级别的“拟人性”评估，构建的18维诊断分类法和发现“瓶颈在情感韵律而非语义”的结论，为该领域提供了清晰的改进地图，工程价值显著。
-**短板**：研究的本质是“评估”而非“构建”，虽然评估框架本身有创新，但容易给人“评测论文”的印象；其提出的AI评判器虽有效，但技术新颖度有限，主要依赖于对现有大模型的微调与投影层设计。
-
-🔗 **开源详情**
-
-- **代码**：提供代码仓库链接：`https://github.com/Carbohydrate1001/Turing-Test`。
-- **模型权重**：论文中提到公开了模型，但未明确链接。根据README，应通过上述代码仓库获取。
-- **数据集**：论文中描述已公开，可通过上述代码仓库获取。
-- **Demo**：论文中未提及在线演示链接。
-- **复现材料**：提供了极其详尽的复现材料，包括：完整的对话数据集构建过程（附录B）、图灵测试平台设计（附录C）、细粒度标注指南与流程（附录D）、AI评判器的完整训练细节、超参数设置、消融实验与敏感性分析（附录E）。
-- **论文中引用的开源项目**：Qwen2.5-Omni（骨干模型），用于对话合成的Nari Dia-1.6B和Spark-TTS。用于数据筛选的开源数据集：DailyTalk, IEMOCAP, MagicData。
-
-📌 **核心摘要**
-
-1. **问题**：随着语音对话系统（S2S）的发展，一个根本问题是：它们能否像人类一样对话？现有评估多侧重智能或理解能力，缺乏对“拟人性”的整体图灵测试。
-2. **方法核心**：本文构建了首个针对S2S系统的图灵测试框架。收集了人类-人类、人类-机器、伪人类（TTS合成）对话数据集。通过游戏化平台收集近3000个人类判断，评估9个S2S系统。进一步开发了18维人类相似性细粒度分类法，对对话进行标注以诊断失败原因。最后，提出一个可解释的AI评判模型，用于自动化拟人性评估。
-3. **新意**：是首个针对端到端S2S系统的图灵测试评估；超越了二元的“通过/失败”结果，提供了细粒度的诊断分析；发现现有AI模型作为评判者不可靠，并提出了一个性能更优且可解释的替代方案。
-4. **主要实验结果**：
-    - **图灵测试通过率**：没有一个S2S系统通过测试（成功率均远低于0.5）。人类-人类对话成功率最高（英语0.87，中文0.70）。伪人类对话成功率优于大多数S2S系统。
-    - **诊断分析（见下图）**：细粒度评分显示，当前S2S系统在**记忆一致性**、**逻辑连贯性**和**发音准确性**上接近人类水平，但在**韵律、语调**（如节奏、重音）、**情感表达**（文本情感、声学情感）以及**机械人格**（谄媚、书面化表达）上存在显著短板。
-    - **AI评判器性能（见下图）**：本文提出的可解释AI��判器总体分类准确率达**96.05%**，显著高于人类评判者的**72.84%**和原版Qwen2.5-Omni的**41.63%**。
-5. **实际意义**：为S2S系统的发展提供了明确的优化方向：应重点关注提升副语言特征、情感表达能力和对话人格，而不仅仅是语义理解。同时，提供了一个可自动、可诊断的评估工具。
-6. **主要局限性**：评估基于主观的人类判断，可能受评判者文化背景和熟悉度影响；所提出的AI评判器虽然性能优异，但其在更广泛、更真实世界场景下的泛化能力仍需持续验证。
-
-**图5：细粒度人类相似性维度评分（1-5分）**
-![图5](icassp-img://Pv5l6cvfno/4.png)
-图5展示了18个人类相似性维度的众包评分结果。可以清晰地看到，S2S系统在“记忆一致性”、“逻辑连贯性”和“发音准确性”等维度上得分较高（接近4分），而在“节奏”、“语调”、“重音”、“文本情感”、“声学情感”和“谄媚行为”等维度上得分显著较低（约2-3分），这直观地揭示了当前系统的拟人性瓶颈。
-
-**表2：不同AI模型在图灵测试数据上的分类准确率**
-| Model                     | ACC(H-H)↑ | ACC(H-M)↑ | ACC(PH)↑ | Overall↑ |
-|---------------------------|------------|------------|----------|----------|
-| Human Judgement           | 0.7028     | 0.8357     | 0.6384   | 0.7284   |
-| Gemini 2.5 pro            | 0.5775     | 0.7292     | 0.5764   | 0.6279   |
-| ... (其他8个模型，准确率均更低) |            |            |          |          |
-| **Average of Model Judgement** | **0.6238** | **0.4011** | **0.3130** | **0.4527** |
-此表显示，9个现有的多模态AI模型作为图灵测试评判者时，整体准确率平均仅为0.4527，远低于人类评判者（0.7284），且普遍存在分类偏差。
-
-**表3：二元分类准确率比较**
-| Data Type       | Qwen2.5-Omni | Qwen2.5-Omni(LoRA) | Human Judge | **Ours** |
-|-----------------|--------------|---------------------|-------------|----------|
-| Human-Human↑    | 0.7817       | 0.9230              | 0.7028      | **0.9507** |
-| Human-Machine↑  | 0.2361       | 0.6319              | 0.8357      | **0.9722** |
-| Pseudo Human ↑  | 0.2361       | 0.0972              | 0.6384      | **0.9306** |
-| **Overall ↑**   | **0.4163**   | **0.5744**          | **0.7284**  | **0.9605** |
-此表证明，本文提出的可解释AI评判器在各类数据上的分类准确率全面超越了基线模型和人类评判者，达到最先进的水平。
+1.  **问题**：大模型参数高效微调（PEFT）方法如LoRA在个性化或多语言部署时，存储大量适配器的开销巨大。现有方法如LoRA-FA通过冻结A矩阵来降低开销，但其随机初始化限制了模型的适应能力。
+2.  **核心方法**：提出SumRA，一种基于奇异值分解（SVD）的初始化策略。其核心是将预训练权重W0的SVD分解得到的所有奇异向量（经缩放后）求和，填充到低秩矩阵A的每一行中，并冻结A，仅更新B矩阵。
+3.  **创新点**：与仅使用前几个主导奇异向量（如PiSSA）不同，SumRA通过求和纳入了更多（包括次重要）的奇异向量，使得冻结的A能够影响更广的模型知识空间。同时，提出了“交错求和”与“贪心求和”两种策略，确保重要奇异向量在A的行间均匀分布，减少干扰。
+4.  **主要实验结果**：在Whisper模型上适配5种新语言的多语言ASR任务中，SumRA（冻结A）相比标准LoRA（更新A和B），在训练参数减少50%的情况下，词错率（WER）平均降低了约12%（例如，从14.42%降至12.41%），并且优于PiSSA、CorDA等强基线。关键结果见下表：
+
+| 方法 | 参数量 | 模型配置 | eo | ia | fy-NL | mhr | kmr |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| LoRA | 0.5M | whisper-small, r=2 | 28.76 | 19.99 | 50.81 | 53.75 | 60.10 |
+| PiSSA | 0.5M | whisper-small, r=2 | 29.20 | 19.23 | 49.72 | 51.29 | 58.68 |
+| **SumRA** | **0.4M** | whisper-small, r=2 | **26.29** | **17.23** | **44.92** | **48.49** | **54.32** |
+| LoRA | 34.3M | whisper-large-v2, r=32 | 14.42 | 8.67 | 24.75 | 32.39 | 37.72 |
+| **SumRA** | **17.6M** | whisper-large-v2, r=32 | **12.41** | **8.17** | **22.27** | **27.19** | **34.21** |
+
+5.  **实际意义**：提供了一种更高效、更易于规模化部署的PEFT方案，特别适合需要为海量用户或语言维护独立适配器的场景，能大幅降低存储和部署成本。
+6.  **主要局限性**：方法对需要局部、精细调整的任务（如GLUE基准）效果可能有限；实验仅在ASR任务上验证，未在更广泛的NLP或CV任务上测试其普适性。
 
 ---
 

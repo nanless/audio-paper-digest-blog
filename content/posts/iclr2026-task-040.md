@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频分离 论文列表"
+title: "ICLR 2026 - 音频安全 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频分离"]
+tags: ["音频安全"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频分离 方向论文"
+description: "共 1 篇 ICLR 2026 音频安全 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频分离
+# ICLR 2026 - 音频安全
 
 共 **1** 篇论文
 
@@ -18,42 +18,79 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [AlignSep: Temporally-Aligned Video-Queried Sound Separation ](/audio-paper-digest-blog/posts/2026-05-03-alignsep-temporally-aligned-video-queried-sound) | 7.5分 | 前25% |
+| 🥇 | [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio L](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [AlignSep: Temporally-Aligned Video-Queried Sound Separation with Flow Matching](/audio-paper-digest-blog/posts/2026-05-03-alignsep-temporally-aligned-video-queried-sound)
+### 🥇 [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities)
 
-✅ **7.5/10** | 前25% | #音频分离 | #流匹配 | #音视频 #基准测试
+✅ **7.5/10** | 前25% | #音频安全 | #基准测试 | #音频大模型 #鲁棒性
 
 👥 **作者与机构**
 
-- 第一作者：未明确说明（论文标题页显示Xize Cheng, Chenyuhao Wen, Tianhao Wang并列为第一作者，并标注“Equal Contribution”）
-- 通讯作者：未明确说明
-- 作者列表：Xize Cheng（浙江大学）、Chenyuhao Wen（浙江大学）、Tianhao Wang（独立作者）、Yongqi Wang（未说明机构）、Zehan Wang（未说明机构）、Rongjie Huang（未说明机构）、Tao Jin（未说明机构）、Zhou Zhao（未说明机构）
+第一作者：Zifan Peng（香港科技大学（广州）；清华大学网络空间安全实验室）
+通讯作者：Wenhan Dong（未说明具体单位，但论文中列为共同通讯作者）、Xinlei He（香港科技大学（广州）；清华大学网络空间安全实验室）
+作者列表：
+    - Zifan Peng（香港科技大学（广州）；清华大学网络空间安全实验室）
+    - Yule Liu（香港科技大学（广州））
+    - Zhen Sun（香港科技大学（广州））
+    - Mingchen Li（北德克萨斯大学）
+    - Zeren Luo（香港科技大学（广州））
+    - Jingyi Zheng（香港科技大学（广州））
+    - Wenhan Dong（共同通讯作者，未说明具体单位）
+    - Xinlei He（共同通讯作者，香港科技大学（广州）；清华大学网络空间安全实验室）
+    - Xuechao Wang（香港科技大学（广州））
+    - Yingjie Xue（中国科学技术大学）
+    - Shengmin Xu（福建师范大学）
+    - Xinyi Huang（南京航空航天大学）
 
 💡 **毒舌点评**
 
-论文将流匹配这一生成范式首次引入视频查询声音分离任务，并针对其多条件特性提出了时间对齐的向量场估计器，有效缓解了传统掩膜方法中的谱洞和时间错位问题。然而，其核心创新——拼接融合策略——在技术上相对直白，且论文声称的“首个生成式VQSS模型”的定位可能忽略了同期工作（如Davis-flow）的类似探索，实验部分虽全面，但新提出的VGGSound-Hard基准集规模（118个样本）稍显局限，可能影响结论的普适性。
+这篇论文的亮点在于其无可挑剔的系统性和工程量——构建了一个覆盖海量样本、多种攻击防御、多维度分析的“铁人三项”式基准，堪称音频模型安全评估的“全家桶”，为后续研究立好了标杆。但短板也同样明显：作为Benchmark工作，它更像是一个“质检报告”，在提出根本性的防御原理或攻击理论方面深度有限，且防御实验表明现有方法效果甚微，凸显了问题的艰巨性。
 
 🔗 **开源详情**
 
-- **代码**：论文在结论和复现声明中承诺将公开代码，但**论文中未提供代码仓库链接**。
-- **模型权重**：未提及是否公开��训练模型权重。
-- **数据集**：VGGSound-Hard基准将随论文发布，但**论文中未说明具体获取方式**。训练所用数据集（MUSIC, VGGSound）为公开数据集。
-- **Demo**：论文提供了项目主页链接 https://AlignSep.github.io ，可能包含演示示例，但**论文中未明确说明提供在线Demo**。
-- **复现材料**：提供了详细的实现细节（附录A，包括VAE和向量场估计器的超参数表格）、MOS评估协议（附录B）和主要实验代码的开源承诺，有利于复现。
-- **依赖的开源项目/模型**：论文中明确引用或使用的开源项目包括：
-    - **视觉编码器**：CAVP (来自 Luo et al., 2023)
-    - **声码器**：BigVGAN (Lee et al., 2022)
-    - **文本/音频嵌入**：CLAP, ImageBind (用于评估指标)
-    - **流匹配/生成模型**：基础框架参考 Lipman et al., 2022 (CFM)，并对比了 Rectified Flow (Lipman et al., 2022; Yuan et al., 2024)
+- **代码**：提供完整的GitHub仓库链接：[https://github.com/sfofgalaxy/JALMBench](https://github.com/sfofgalaxy/JALMBench)。
+- **模型权重**：论文中未提及提供本研究评估中使用的模型权重，这些模型均为第三方开源或商业模型。
+- **数据集**：数据集已公开在HuggingFace平台，可通过上述GitHub仓库链接获取。
+- **Demo**：论文中未提及提供在线演示。
+- **复现材料**：提供了极其详尽的复现材料，包括：完整的代码库（支持模块化扩展）；数据集生成与预处理脚本；所有攻击和防御方法的详细配置；评估脚本与评判模型提示；Docker镜像；附录中包含所有实验细节、参数设置和额外结果。
+- **引用的开源项目/模型**：论文中评估或依赖的开源项目/模型包括：SpeechGPT, Spirit LM, GLM-4-Voice, SALMONN, Qwen2-Audio, LLaMA-Omni, DiVA, Freeze-Omni, VITA-1.0/1.5, LLaMA-Guard, Whisper, HuBERT, GLM-4-Tokenizer等。商业模型包括GPT-4o-Audio和Gemini-2.0。
 
 📌 **核心摘要**
 
-本文针对视频查询声音分离（VQSS）任务中存在的同质干扰和重叠音轨难以分离的问题，提出了AlignSep——首个基于流匹配（Flow Matching）的生成式VQSS模型。其核心方法是构建一个条件流匹配框架，通过设计一个时间拼接融合的向量场估计器，并利用带有时间同步预训练的视觉编码器（CAVP），显式建模音视频的时间对齐关系，从而引导模型从混合音频的潜在表示中逐步去噪，生成与查询视频时间对齐的目标音频。与先前基于语义或掩膜的方法相比，AlignSep在生成过程中能更好地利用细粒度时间线索并避免谱洞伪影。为评估此类困难场景，作者构建了VGGSound-Hard基准，包含118个具有同质干扰且强依赖时间线索的样本。实验表明，在MUSIC-Clean、VGGSound-Clean和VGGSound-Hard三个基准上，AlignSep在语义一致性（SA-A, SA-V）和时间对齐（TA-V）指标上均达到最优。例如，在最具挑战性的VGGSound-Hard上，AlignSep的TA-V达到95.76%，远超基线OmniSep的76.27%；在主观MOS评估中，其总体得分（OA）也持续领先。该工作的实际意义在于为复杂音频场景的精准分离提供了新思路，但其局限性在于新基准规模较小，且模型效率（每秒处理帧数）随去噪步数增加而显著下降，25步设置为质量与速度的最佳折中。
+1.  **解决的问题**：当前大型音频语言模型（LALM）面临越狱攻击的安全风险，但缺乏统一的评估框架和大规模基准数据集，导致研究碎片化，难以公平比较不同攻击方法。
+2.  **方法核心**：提出了JALMBench，一个全面的基准测试框架。其核心是构建了一个包含245,355个音频样本和11,316个文本样本的大型数据集，并设计了模块化框架以支持对12种主流LALM进行8种攻击方法（4种文本迁移、4种音频原生）和5种防御策略的评估。
+3.  **与已有方法相比新在哪里**：与先前聚焦于特定攻击（如扰动、多语言）的有限基准不同，JALMBench首次系统整合了针对LLM和LALM的多种攻击类型，并进行了跨模态、多架构的统一评估，同时涵盖了防御策略的探索。
+4.  **主要实验结果**：
+    - **攻击成功率（ASR）**：在无防御的有害查询上，音频模态平均ASR（21.5%）高于文本模态（17.0%）。最强攻击AdvWave在所有模型上平均ASR高达**96.2%**。
+    - **攻击效率**：实现>60% ASR通常需要>100秒，但实现约40% ASR可能只需<10秒（如SSJ, AMSE）。
+    - **话题敏感性**：模型对显式“仇恨与骚扰”内容（平均ASR 41%）相对鲁棒，但对隐晦的“虚假信息”（如ASR 67%）更脆弱。
+    - **架构影响**：离散音频token化（如GLM-4-Voice）比连续特征提取（如LLaMA-Omni）在跨模态安全对齐上更优，后者存在严重的模态鸿沟。
+    - **防御效果**：最佳提示级防御（AdaShield）降低平均ASR 19.6个百分点，但带来6.3%的效用损失；最佳响应级防御（LLaMA-Guard）降低18.0个百分点，效用损失较小。
+    - 关键结果表格如下：
+    *表1：不同语音多样性下的平均攻击成功率（%）（部分数据）*
+    | 模型 | 基线(AHarm) | 英国口音 | 印度口音 | 男性 | 女性 |
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+    | SpeechGPT | 20.7 | 26.8 | 27.2 | 23.6 | 25.6 |
+    | GLM-4-Voice | 26.4 | 28.5 | 32.5 | 26.4 | 25.2 |
+    | Qwen2-Audio | 7.3 | 8.9 | 11.0 | 15.4 | 15.4 |
+    | LLaMA-Omni | 58.9 | 58.9 | 65.0 | 61.0 | 58.9 |
+    | GPT-4o-Audio | 3.3 | 3.3 | 3.7 | 3.3 | 3.3 |
+    | 平均 | 22.1 | 22.1 | 24.5 | 23.5 | 23.4 |
+    *表2：不同防御方法下的平均攻击成功率（%）*
+    | 防御方法 | 平均ASR | ASR降低 |
+    | :--- | :--- | :--- |
+    | 无防御 | 53.7 | - |
+    | LLaMA-Guard (响应级) | 35.7 | -18.0 |
+    | Azure (响应级) | 43.1 | -10.6 |
+    | JailbreakBench (提示级) | 43.7 | -10.0 |
+    | FigStep (提示级) | 40.5 | -13.2 |
+    | AdaShield (提示级) | 34.1 | -19.6 |
+5.  **实际意义**：为LALM的安全研究提供了标准化的评测平台和数据集，揭示了当前LALM在音频模态下的脆弱性，特别是对直接音频攻击的无力，以及现有通用防御方法的不足，呼吁开发专门针对音频模态的防御机制。
+6.  **主要局限性**：未充分探索多轮对话攻击；语音的情感、说话人身份等因素影响未被穷尽；未讨论模型量化、推理模式等的影响；某些攻击方法（如DAN）的音频样本量有限。
 
 ---
 

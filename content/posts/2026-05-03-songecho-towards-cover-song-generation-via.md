@@ -74,6 +74,7 @@ SongEcho基于预训练的文本到歌曲模型**ACE-Step**（一个Diffusion Tr
     *   训练时，仅训练**旋律编码器E**和**IA-EiLM模块**的参数，ACE-Step的主体参数保持冻结。
 
 ![SongEcho框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TEKOayiQg2-1.png)
+
 *图2：SongEcho框架架构图。展示了以ACE-Step的DiT为骨干，并在每个Transformer块中集成IA-EiLM模块（包含IACR和EiLM）用于旋律控制。*
 
 ### 💡 核心创新点
@@ -150,6 +151,7 @@ SongEcho基于预训练的文本到歌曲模型**ACE-Step**（一个Diffusion Tr
 *   **数据规模消融**：仅用1000个样本训练即可达到接近完整数据集的效果，体现了方法的**数据高效性**。
 
 ![消融实验相关可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/TEKOayiQg2-0.png)
+
 *图1：论文中对比了交叉注意力、逐元素相加与本文提出的EiLM在条件注入机制上的差异示意图。EiLM通过元素级乘加实现更灵活的调制。*
 
 ### ⚖️ 评分理由

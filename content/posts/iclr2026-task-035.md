@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 音乐生成 论文列表"
+title: "ICLR 2026 - 音频修复 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音乐生成"]
+tags: ["音频修复"]
 categories: [iclr-2026]
-description: "共 7 篇 ICLR 2026 音乐生成 方向论文"
+description: "共 1 篇 ICLR 2026 音频修复 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音乐生成
+# ICLR 2026 - 音频修复
 
-共 **7** 篇论文
+共 **1** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,292 +18,48 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [YuE: Scaling Open Foundation Models for Long-Form Music Gene](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form) | 8.5分 | 前25% |
-| 🥈 | [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform) | 8.5分 | 前25% |
-| 🥉 | [Generative Adversarial Post-Training Mitigates Reward Hackin](/audio-paper-digest-blog/posts/2026-05-03-generative-adversarial-post-training-mitigates) | 8.3分 | 前25% |
-| 4. | [SyncTrack: Rhythmic Stability and Synchronization in Multi-T](/audio-paper-digest-blog/posts/2026-05-03-synctrack-rhythmic-stability-and-synchronization) | 8.0分 | 前25% |
-| 5. | [SongEcho: Towards Cover Song Generation via Instance-Adaptiv](/audio-paper-digest-blog/posts/2026-05-03-songecho-towards-cover-song-generation-via) | 8.0分 | 前25% |
-| 6. | [Steering Autoregressive Music Generation with Recursive Feat](/audio-paper-digest-blog/posts/2026-05-03-steering-autoregressive-music-generation-with) | 7.5分 | 前25% |
-| 7. | [Discovering and Steering Interpretable Concepts in Large Gen](/audio-paper-digest-blog/posts/2026-05-03-discovering-and-steering-interpretable-concepts) | 6.5分 | 前50% |
+| 🥇 | [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [YuE: Scaling Open Foundation Models for Long-Form Music Generation](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form)
+### 🥇 [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete)
 
-🔥 **8.5/10** | 前25% | #音乐生成 | #自回归模型 | #预训练 #大语言模型
-
-👥 **作者与机构**
-
-第一作者：Ruibin Yuan (香港科技大学 HKUST， Multimodal Art Projection MAP)
-通讯作者：论文提供了多位通讯作者及其邮箱（Jiaheng Liu， Jian Yang， Wenhao Huang， Wei Xue， Xu Tan， Yike Guo），但未明确指定单一通讯作者。
-作者列表：论文作者众多（超过40位），主要机构包括 **Multimodal Art Projection (MAP)** 和 **香港科技大学 (HKUST)**，此外还有来自 **Moonshot.ai**、**University of Surrey**、**MBZUAI**、**University of Rochester**、**Queen Mary University of London** 等多个学术与工业机构的研究者参与。
-
-💡 **毒舌点评**
-
-**亮点**：作为首个开源的、可生成完整歌曲的歌词到歌曲基础模型，YuE在“从0到1”的意义上贡献巨大，其Dual-NTP和SPC技术有效解决了长程生成与歌词对齐的核心痛点。
-**短板**：论文坦承其在人声和伴奏的“声学质量”上与Suno V4等顶级闭源系统仍有差距，这提示其底层音频编解码器（X-Codec）的重建质量或解码策略仍是限制最终输出保真度的天花板。
-
-🔗 **开源详情**
-
-- **代码**：提供GitHub仓库链接：https://github.com/multimodal-art-projection/YuE
-- **模型权重**：提供HuggingFace模型集合链接：https://huggingface.co/collections/m-a-p/yue
-- **数据集**：论文中描述了数据来源（Creative Commons许可的音乐和语音）和规模，但未提及公开发布训练数据集。测试用例（15个英文提示词）在附录I中提供。
-- **Demo**：提供在线演示网站：https://map-yue.github.io/
-- **复现材料**：论文详细说明了模型架构（附录C， D）、训练策略（第3.1节）、评估协议（附录F）和关键超参数，复现信息充分。
-- **论文中引用的开源项目**：X-Codec (音频分词器)， Vocos (上采样器)， LLaMA2 (模型架构)， Whisper (用于WER评估)， Audioldm-eval (用于KL/FAD评估)， CLAP/CLaMP3 (用于对齐评估)。
-
-📌 **核心摘要**
-
-1.  **问题**：本文聚焦于歌词到歌曲生成这一高难度任务，旨在解决现有方法在生成长时程（分钟级）音乐时面临的歌词对齐困难、音乐结构松散以及人声与伴奏信号混合复杂等挑战。
-2.  **方法核心**：提出YuE模型家族，采用两阶段自回归语言模型框架。Stage-1 LM采用**轨道解耦下一token预测 (Dual-NTP)** 来独立建模人声与伴奏token，并利用**结构渐进条件化 (SPC)** 技术，通过交错歌词与音频片段来实现长程歌词跟随。同时，重新设计了**音乐上下文学习 (ICL)** 框架以支持风格克隆与双向生成。
-3.  **创新与对比**：与现有方法相比，Dual-NTP避免了单一token混合表示带来的信息损失，在低人声-伴奏比场景（如金属乐）下更鲁棒。SPC利用音乐结构先验，有效解决了传统文本前缀条件化在长序列下的失效问题。重设计的ICL避免了语音领域ICL的局限，支持更灵活的音乐创作。
-4.  **实验结果**：在人类评估中，YuE（7B）在整体偏好上与专有系统Tiangong和Udio持平，优于Hailuo，但略低于Suno V4。在音域表现上与顶级闭源系统相当。消融实验证明了Dual-NTP、SPC和模型缩放对性能的显著提升。具体对比如下表所示：
-
-| 指标 | Hailuo | SunoV4 | Tiangong | Udio | YuE |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| KL ↓ | 0.756 | 0.620 | 0.708 | 0.503 | **0.372** |
-| FAD ↓ | 2.080 | 1.544 | 2.547 | 1.222 | 1.624 |
-| CE ↑ | 7.350 | 7.474 | 7.421 | 7.112 | 7.115 |
-| CU ↑ | 7.737 | 7.813 | 7.766 | 7.520 | 7.543 |
-| PC ↑ | 6.793 | 6.601 | 6.060 | 6.626 | 6.280 |
-| PQ ↑ | 8.132 | 8.120 | 8.220 | 7.803 | 7.894 |
-| CLAP ↑ | 0.265 | 0.265 | 0.244 | 0.310 | 0.118 |
-| CLaMP 3 ↑ | 0.106 | 0.160 | 0.114 | 0.156 | **0.240** |
-
-![论文中的实验结果图](icassp-img://hZy6YG2Ij8/2.png)
-图3展示了YuE与四个专有系统在人类评估中的胜率比较。在整体偏好和音乐性方面，YuE与Tiangong和Udio表现接近。
-
-5.  **实际意义**：YuE为音乐生成领域提供了一个强大、透明且可复现的开源基座模型，极大降低了长歌曲生成研究与应用的门槛，有望推动该领域的创新与民主化。
-6.  **主要局限性**：如论文所指出，其在音频的声学保真度（人声与伴奏的音质）上与最先进闭源系统相比仍有不足，这主要受限于所使用的音频分词器的重建能力。此外，模型训练依赖大规模高质量数据，其收集与处理本身也是挑战。
-
----
-
-### 🥈 [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform)
-
-🔥 **8.5/10** | 前25% | #音乐生成 | #扩散模型 | #信号处理 #自监督学习
+✅ **7.5/10** | 前25% | #音频修复 | #离散扩散 | #预训练 #音乐处理
 
 👥 **作者与机构**
 
-- 第一作者：Mason L. Wang (CSAIL, Massachusetts Institute of Technology)
-- 通讯作者：未说明
-- 作者列表：Mason L. Wang (CSAIL, Massachusetts Institute of Technology)， Cheng-Zhi Anna Huang (CSAIL, Massachusetts Institute of Technology)
+- 第一作者：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）
+- 通讯作者：Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
+- 作者列表：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Moshe Buchris（Ben-Gurion University of the Negev，电气与计算机工程学院）、Oren Gal（University of Haifa）、Haim Permuter（Ben-Gurion University of the Negev，电气与计算机工程学院）、Gilad Katz（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
 
 💡 **毒舌点评**
 
-这篇论文巧妙地将信号处理中的“均衡器”概念从音频波形频域迁移到生成模型的潜在空间频域，为音乐生成提供了一个直观且连续的“时间尺度”控制轴，想法新颖且实现完整。然而，其主要价值局限于音乐生成这一垂直领域，对于更广泛的音频或语音生成任务的普适性尚未验证，且“潜在频率”的可解释性仍需更多音乐学理论的深入论证。
+这篇论文为音频修复这个“老”问题提供了“新”解法，巧妙地将离散扩散与预训练音频tokenizer结合，在长缺失段修复上展现了不错的潜力，且实验对比和消融做得非常扎实。然而，其性能上界似乎被WavTokenizer这类离散编解码器的质量所束缚，这或许暗示着“基于token”的范式在追求极致音频保真度时面临的共同天花板。
 
 🔗 **开源详情**
 
-*   **代码**：论文中提供了代码仓库链接：https://github.com/maswang32/latentfouriertransform/
-*   **模型权重**：**未提及**是否公开预训练模型权重。
-*   **数据集**：使用公开数据集 MTG-Jamendo 和 GTZAN，并描述了如何获取和使用（Appendix A.5）。
-*   **Demo**：提供了在线演示网站：https://masonlwang.com/latentfouriertransform/
-*   **复现材料**：提供了详细的训练细节（超参数、优化器、调度策略、硬件）、模型架构（编码器/解码器）、评估代码、消融实验代码、以及用于频率解释和隔离的脚本。复现信息非常充分。
-*   **论文中引用的开源项目**：
-    *   Descript Audio Codec (DAC): 用于音频编码前端。
-    *   BigVGAN: 用于梅尔频谱到音频的转换（声码器）。
-    *   Librosa, Essentia: 用于音频分析特征提取（节拍、音高、和声）。
-    *   PyTorch, Hugging Face Libraries: 作为基础框架。
-
-📌 **核心摘要**
-
-1.  **解决的问题**：现有音乐生成模型（如基于离散token或扩散模型）在控制特定时间尺度（如节奏、和弦进行）的音乐特征方面存在困难。它们通常只能通过文本或整体属性进行粗粒度控制，难以精确指定并保留来自参考音频的、特定时间尺度（快或慢）的模式。
-2.  **方法核心**：提出Latent Fourier Transform (LatentFT) 框架。它使用一个扩散自编码器将音频编码为潜在时间序列，然后对潜在序列进行傅里叶变换，得到“潜在频谱”。在训练阶段，随机掩蔽潜在频谱中的频率分量，迫使解码器从残缺的频谱中重建音频。在推理时，用户可以通过掩蔽潜在频谱来选择性地保留参考音频中特定潜在频率（对应特定时间尺度）的特征，从而生成变体或混合两段音频。
-3.  **与已有方法相比新在哪里**：与直接操作音频波形频谱（如Guidance, ILVR基线）或离散token层级（如Masked Token Model基线）不同，LatentFT直接在**潜在表示的频域**进行操作。其创新点在于：1）引入了潜在空间傅里叶变换，将音乐模式按时间尺度解耦；2）提出一种结构化的、相关的频率掩码训练策略，使模型能从任意频率掩蔽中恢复；3）提供了首个在潜在空间中像“均衡器”一样直观、连续的频率轴控制。
-4.  **主要实验结果**：在MTG-Jamendo数据集上的条件生成和混合任务中，LatentFT（尤其是U-Net编码器版本）在多项指标上显著优于基线方法。关键结果如下表所示（摘自论文Table 1）：
-
-| 任务 | 模型 | 响度↑ | 节奏↑ | 音色↓ | 和声↓ | FAD↓ |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **条件生成** | **LatentFT-UNet** | **0.834** | **0.966** | 0.391 | 0.079 | **0.348** |
-| | ILVR | 0.575 | 0.839 | 0.781 | 0.100 | 1.537 |
-| | Guidance | 0.529 | 0.813 | 1.430 | 0.099 | 1.061 |
-| **混合** | **LatentFT-UNet** | **0.686** | **0.878** | 1.118 | **0.109** | **1.357** |
-| | ILVR | 0.624 | 0.858 | **0.825** | 0.112 | 2.696 |
-| | Cross Synthesis | - | - | - | - | 2.447 |
-（注：音色(Mel-Cepstral Distortion)和和声(Tonnetz距离)指标已除以100。↑表示越高越好，↓表示越低越好）
-
-消融实验（Table 9）表明，移除训练时的频率掩码、忽略频率-bin的相关性、或不进行对数频率缩放，都会导致音频质量和条件遵循度的显著下降。用户研究（Fig. 3）证实LatentFT在音频质量和混合效果上显著优于基线。
-
-5.  **实际意义**：为音乐生成和编辑提供了一种新颖的交互范式，用户可以像使用音频均衡器一样，直观地通过选择潜在频率来混合或提取音乐的结构特征（如节奏、和弦、旋律）。这有望提升音乐创作和 remix 的可控性。
-6.  **主要局限性**：1）“潜在频率”与具体音乐属性（如流派、和弦、节拍）的对应关系是数据驱动的，缺乏先验音乐理论的严格解释（虽然论文尝试了解读）；2）模型的性能高度依赖编码器将音乐模式良好地映射到具有清晰频域结构的潜在空间；3）目前的实验集中于音乐，在更广泛的音频生成任务上的泛化能力有待验证。
-
----
-
-### 🥉 [Generative Adversarial Post-Training Mitigates Reward Hacking in Live Human-AI Music Interaction](/audio-paper-digest-blog/posts/2026-05-03-generative-adversarial-post-training-mitigates)
-
-🔥 **8.3/10** | 前25% | #音乐生成 | #强化学习 | #音乐交互 #对抗学习
-
-👥 **作者与机构**
-
-- 第一作者：Yusong Wu（Mila - Quebec Artificial Intelligence Institute, Université de Montréal）
-- 通讯作者：Natasha Jaques（University of Washington），Cheng-Zhi Anna Huang（Massachusetts Institute of Technology）
-- 作者列表：Yusong Wu（Mila, Université de Montréal），Stephen Brade（Massachusetts Institute of Technology），Aleksandra Teng Ma（Georgia Institute of Technology），Tia-Jane Fowler（University of Washington），Enning Yang（McGill University），Berker Banar（Independent Researcher），Aaron Courville（Mila, Université de Montréal， Canada CIFAR AI Chair），Natasha Jaques（University of Washington），Cheng-Zhi Anna Huang（Massachusetts Institute of Technology）
-
-💡 **毒舌点评**
-
-本文精准地瞄准了RL后训练在生成式模型中普遍存在的“奖励黑客”问题，并在一个极具挑战性的实时音乐交互场景中给出了优雅的解决方案和完整的验证闭环。其两阶段自适应判别器更新设计颇具工程巧思，但对抗训练的稳定性本质上仍是经典难题，论文对此的理论剖析稍显不足。最终，它证明了将稍显“过时”的对抗训练思想与现代RL结合，对于解决特定痛点依然有效。
-
-🔗 **开源详情**
-
-- **代码**：提供完整代码仓库链接 https://github.com/lukewys/realchords-pytorch。
-- **模型权重**：论文提到提供了“model checkpoints”，但未明确说明是否公开托管权重文件。
-- **数据集**：使用了多个公开音乐数据集（Hooktheory, POP909, Nottingham, Wikifonia），论文中说明了获取方式和预处理流程。
-- **Demo**：提供音频示例网站 https://realchords-GAPT.github.io。
-- **复现材料**：论文附录（C部分）极其详细，涵盖了模型架构、训练细节、超参数、奖励模型性能、消融实验等，复现指南充分。
-- **引用的开源项目**：基于ReaLchords代码库；使用LLaMA风格的Transformer架构；训练使用PyTorch、Adam优化器等通用框架。
-
-📌 **核心摘要**
-
-1.  **问题**：实时音乐交互（如即兴合奏）要求AI伴奏模型能快速适应并保持创造性多样性。使用强化学习后训练能提升模型的适应性，但常导致“奖励黑客”现象，即模型为最大化奖励而输出重复、单调、缺乏变化的简单和弦，破坏了协作流程。
-2.  **方法核心**：提出**生成对抗后训练（GAPT）**。在以一致性为核心奖励的RL后训练中，额外训练一个**判别器**，用于区分策略生成的轨迹和真实数据轨迹。判别器的输出作为**对抗性奖励**，激励策略生成更自然、更多样的伴奏。为稳定训练，设计了**两阶段自适应更新策略**：先固定间隔更新判别器预热，后根据策略性能自适应开启更新。
-3.  **与已有方法相比新在哪里**：与仅用KL散度约束的RL后训练相比，GAPT的对抗性奖励提供了更强的分布匹配信号，能更有效地防止多样性坍塌。与经典GAN或GAIL相比，其创新在于提出了针对序列生成和实时交互场景的两阶段稳定训练机制。
-4.  **主要实验结果**：在固定旋律测试集上，GAPT的和谐度（0.497）接近基线ReaLchords（0.484），但多样性（Vendi Score 26.645）显著高于后者（20.968）。在与学习型旋律代理交互中，GAPT同样保持了和谐度与多样性的平衡。在由12名专业音乐家参与的用户研究中，GAPT在“适应速度”和“控制与主导权”两项评分上显著优于基线（p<0.05），并获得了最高的综合评分。
-5.  **实际意义**：该方法能提升实时人机音乐协作工具的体验，使AI更像一个富有创造力的伙伴而非机械伴奏。其解决奖励黑客的思路对其他序列生成任务（如对话、文本生成）的RL对齐也有参考价值。
-6.  **主要局限性**：方法增加了额外的判别器训练开销。两阶段训练中的超参数（如阈值τ）需要针对任务调整。论文主要验证了单旋律到和弦的伴奏场景，对于更复杂的多声部即兴或结构化音乐生成，其有效性有待进一步研究。
-
----
-
-### 4. [SyncTrack: Rhythmic Stability and Synchronization in Multi-Track Music Generation](/audio-paper-digest-blog/posts/2026-05-03-synctrack-rhythmic-stability-and-synchronization)
-
-🔥 **8.0/10** | 前25% | #音乐生成 | #扩散模型 | #模型评估 #基准测试
-
-👥 **作者与机构**
-
-- 第一作者：Hongrui Wang（香港科技大学数学系）
-- 通讯作者：Can Yang（香港科技大学数学系、神经系统疾病国家重点实验室）& Yang Wang（香港大学）
-- 作者列表：Hongrui Wang（香港科技大学数学系）、Fan Zhang（香港科技大学数学系）、Zhiyuan Yu（浙江大学CAD&CG国家重点实验室）、Ziya Zhou（香港科技大学交叉学科学院）、Xi Chen（香港科技大学交叉学科学院）、Can Yang（香港科技大学数学系、神经系统疾病国家重点实验室）、Yang Wang（香港大学）
-
-💡 **毒舌点评**
-
-**亮点：** 论文精准抓住了现有方法“重差异、轻协同”的本质缺陷，提出的“共享节奏-特定音色”分离架构设计巧妙且动机明确，新提出的三个节奏评估指标（IRS， CBS， CBD）填补了该领域客观评价体系的空白，实验结果对比全面且增益显著。
-**短板：** 模型生成长度仅限10秒片段，对于实际音乐制作所需的长程连贯性未做验证；尽管在Slakh2100上效果显著，但该数据集MIDI驱动的特性使其与真实录音音乐存在差距，模型在更复杂、更自由的真实音乐数据上的泛化能力有待进一步考察。
-
-🔗 **开源详情**
-
-- **代码：** 论文提供了项目主页链接：`https://synctrack-v1.github.io`，其中包含代码。论文中明确声明“Source code for both the model and evaluation metrics are available on our demo page.”
-- **模型权重：** 未在论文正文中明确提及是否公开预训练权重，但根据项目主页的声明，通常会提供。
-- **数据集：** 使用Slakh2100数据集，这是一个公开的MIDI制作的多轨数据集。论文未提及自己发布新数据集。
-- **Demo：** 论文提供了项目主页，通常包含音频样本演示。
-- **复现材料：** 提供了极其详细的训练配置、模型架构参数表（附录表A3）、超参数设置、评估工具（madmom库）的具体参数和使用方法。
-- **论文中引用的开源项目：** 依赖madmom库进行节拍跟踪，使用MusicLDM作为预训练权重来源，使用HiFi-GAN作为声码器，基础框架为LDM/DDPM。
-
-📌 **核心摘要**
-
-1.  **解决的问题：** 现有模型在多轨音乐生成任务中，常常忽略“节奏稳定性”（单轨内）和“同步性”（多轨间）这两个音乐的核心属性，导致生成的各音轨在节奏上各自为政，听感不和谐。传统评估指标（如FAD）也无法有效衡量这些关键特质。
-2.  **方法核心：** 提出SyncTrack模型，其核心在于一种新颖的统一架构，将多轨信息分离处理。模型包含“轨道共享模块”和“轨道特定模块”。前者通过两种跨轨注意力机制（全局和时域特定）强制所有音轨学习共同的节奏框架与细粒度对齐；后者通过可学习的乐器先验向量捕捉各音轨独特的音色与音高特性。
-3.  **与已有方法的比较：** 已有方法（如MSDM， MSG-LD）将多轨生成视为多元时间序列建模，过度强调轨道间的差异。SyncTrack则明确区分了“共享的节奏信息”和“独立的音色信息”，并通过专用模块分别建模，从根本上匹配了音乐生成的固有特性。
-4.  **主要实验结果：** 在Slakh2100数据集上，SyncTrack全面超越基线。在反映整体质量的FAD指标上，混合音乐FAD从基线最优的1.31降至1.26（↓3.8%）；单轨FAD平均降幅约30%。在提出的节奏指标上，IRS（节奏稳定性）显著优于基线（例如鼓轨从0.040降至0.011）；CBS（同步性）提升34.8%，CBD（节拍离散度）降低27.8%，接近真实音乐水平。主观评价得分（3.42）也远高于基线（1.57）。
-5.  **实际意义：** 为专业音乐制作（如混音、重编）提供了更高质量、节奏可靠且各轨独立的生成模型。同时，提出的IRS、CBS、CBD三个新指标为多轨音乐生成的客观评估提供了更精确、更符合音乐学原理的工具。
-6.  **主要局限性：** 当前实验仅限于10秒长度的片段生成，尚未验证模型在长段落（如完整歌曲）中维持节奏一致性和音乐结构的能力。此外，评估指标依赖于节拍跟踪算法的准确性，可能受到算法自身偏差的影响。
-
----
-
-### 5. [SongEcho: Towards Cover Song Generation via Instance-Adaptive Element-wise Linear Modulation](/audio-paper-digest-blog/posts/2026-05-03-songecho-towards-cover-song-generation-via)
-
-🔥 **8.0/10** | 前25% | #音乐生成 | #扩散模型 | #条件生成 #歌唱语音合成
-
-👥 **作者与机构**
-
-- 第一作者：Sifei Li（中国科学院自动化研究所，中国科学院大学人工智能学院）
-- 通讯作者：Weiming Dong（中国科学院自动化研究所）
-- 作者列表：Sifei Li（中国科学院自动化研究所，中国科学院大学人工智能学院）、Yang Li（中国科学院自动化研究所，中国科学院大学人工智能学院）、Zizhou Wang（中国科学院软件研究所）、Yuxin Zhang（中国科学院自动化研究所，中国科学院大学人工智能学院）、Fuzhang Wu（中国科学院软件研究所）、Oliver Deussen（康斯坦茨大学）、Tong-Yee Lee（成功大学）、Weiming Dong（中国科学院自动化研究所）
-
-💡 **毒舌点评**
-
-这篇论文的亮点在于它精准地抓住了“翻唱生成”这个新兴且有趣的音乐AI子任务，并提出了一个轻量高效、基于调制的新颖控制框架（IA-EiLM），在多个指标上显著超越了现有的旋律控制基线。然而，其短板也显而易见：论文对“翻唱”的定义（排除局部风格再创作）略显保守，且对生成音频的审美评估部分依赖于自动化指标，缺乏更深入的人类主观评估对比，使得“高质量”的结论略显单薄。
-
-🔗 **开源详情**
-
-- **代码**：提供代码仓库链接：https://github.com/lsfhuihuiff/SongEcho_ICLR2026
-- **模型权重**：论文未明确提及是否公开预训练模型权重，但提供了可复现的训练流程。
-- **数据集**：公开了构建的**Suno70k**数据集（通过上述GitHub仓库获取）。
-- **Demo**：提供了在线演示页面链接：https://vvanonymousvv.github.io/SongEcho_updated/
-- **复现材料**：提供了完整的实现细节（第5.1节），包括学习率、优化器、batch size、训练步数、硬件配置等。附录中有更详细的基线设置和数据处理细节。
+- **代码**：论文中提供了代码仓库链接：`https://github.com/iftachShoham/AIDD`。
+- **模型权重**：论文中未提及是否公开预训练模型权重。
+- **数据集**：使用了公开的数据集MusicNet和MAESTRO，并说明了遵循各自的标准划分。未提供额外数据。
+- **Demo**：论文中未提及在线演示（Demo）链接。
+- **复现材料**：论文在附录（Supplementary Material）中提供了详尽的复现说明，包括关键超参数表（Table 8）、训练环境（单卡A6000 GPU）和训练时长。
 - **论文中引用的开源项目**：
-    - 基座模型：**ACE-Step** (Gong et al., 2025)
-    - 评估工具：**mir_eval** (Raffel et al., 2014), **SongEval** (Yao et al., 2025), **Whisper** (Radford et al., 2023), **Qwen2-audio** (Chu et al., 2024)
-    - 音高提取：**RVMPE** (Wei et al., 2023)
-    - 对齐工具：**Montreal Forced Aligner** (McAuliffe et al., 2017)
-    - 基线方法参考：**Stable Audio**, **MuseControlLite**, **ControlNet**
+    1.  **WavTokenizer**（Ji et al., 2024）：用于音频分词与解码。
+    2.  **Diffusion Transformer (DiT)**（Peebles & Xie, 2023）：作为扩散模型的架构基础。
+    3.  **离散扩散建模框架**（Lou et al., 2024）：提供了DWDSE损失等核心理论。
+    4.  **UniCodec**（Jiang et al., 2025）：作为替代tokenizer进行对比实验。
+    5.  **旋转位置编码 (RoPE)**（Su et al., 2024）。
 
 📌 **核心摘要**
 
-1.  **解决的问题**：现有文本到音乐生成模型缺乏对声乐旋律进行精确时间控制的能力，而专门的歌曲翻唱生成任务（在保留原旋律基础上重新生成人声与伴奏）尚未被充分研究。
-2.  **方法核心**：提出SongEcho框架，其核心是**实例自适应元素级线性调制（IA-EiLM）**。它由**元素级线性调制（EiLM）** 和 **实例自适应条件细化（IACR）** 组成。EiLM扩展了FiLM，为隐藏状态生成时间对齐的调制参数（γ, β）；IACR则让条件特征与生成模型的隐藏状态交互，进行动态适配，以解决静态条件注入的局限性。
-3.  **与已有方法的创新点**：相比基于交叉注意力（如MuseControlLite）或简单逐元素相加（如ControlNet）的方法，IA-EiLM提供了更灵活、时间对齐更精确的条件注入机制，并且通过实例自适应调整，使旋律条件能与生成模型的隐藏状态和谐融合，避免了特征冲突。
-4.  **主要实验结果**：在Suno70k和SongEval数据集上，SongEcho在旋律控制（RPA, RCA）和音频质量（FD, KL）指标上均显著优于基线方法。例如，在Suno70k测试集上，SongEcho的RPA为0.7080，远高于最强基线ACE-Step+SA ControlNet+LoRA的0.6214；FD（Fréchet Distance）从99.19降至42.06。同时，它仅需49.1M可训练参数，远少于基线的189M-1.6B。主观MOS评分也显示其在旋律保真度、文本一致性、音频质量和整体偏好上均获最高分。
-5.  **实际意义**：为音乐创作和文化再诠释提供了新的AI工具，降低了翻唱创作的技术门槛。同时，构建并开源了高质量的**Suno70k**数据集，缓解了歌曲生成领域数据稀缺和版权问题。
-6.  **主要局限性**：受限于基座模型ACE-Step的文本控制能力，无法对音色进行细粒度控制（如仅支持性别调整）。此外，当前模型排除了人类翻唱中常见的局部风格再创作（如颤音、音符过渡的个性化处理），生成的歌曲缺乏人类演唱的细腻表现力。
-
----
-
-### 6. [Steering Autoregressive Music Generation with Recursive Feature Machines](/audio-paper-digest-blog/posts/2026-05-03-steering-autoregressive-music-generation-with)
-
-✅ **7.5/10** | 前25% | #音乐生成 | #自回归模型 | #预训练 #音频大模型
-
-👥 **作者与机构**
-
-- 第一作者：Daniel Zhao（加州大学圣迭戈分校）
-- 通讯作者：未说明
-- 作者列表：Daniel Zhao（加州大学圣迭戈分校）、Daniel Beaglehole（加州大学圣迭戈分校）、Taylor Berg-Kirkpatrick（加州大学圣迭戈分校）、Julian McAuley（加州大学圣迭戈分校）、Zachary Novack（加州大学圣迭戈分校）
-
-💡 **毒舌点评**
-
-亮点在于其“激活空间干预”思路的优雅与完整：通过轻量级探针从冻结模型中提取可解释方向，再实时注入引导生成，避免了昂贵的微调，实现了控制与保真度的精细权衡。短板则源于方法论的根本局限——平均池化特征丢弃了关键的时序信息，导致对节奏、和弦进行等强时序依赖概念的控制效果不佳，暴露了RFM在处理动态序列数据时的潜在天花板。
-
-🔗 **开源详情**
-
-- **代码**：提供了GitHub代码仓库链接：https://github.com/astradzhao/music-rfm。
-- **模型权重**：未提及公开预训练的MusicGen或MusicRFM探针权重。
-- **数据集**：使用了公开的SYNTHEORY和MusicBench数据集，论文中提供了相关引用和描述。
-- **Demo**：提供了在线交互演示页面：https://musicrfm.github.io/controllable-music-rfm/。
-- **复现材料**：论文附录提供了详细的超参数搜索空间（表8）、控制调度公式（附录E）、RFM引导伪代码（附录F），以及详细的消融实验设置和结果，复现指导性强。
-- **依赖项目**：明确依赖MusicGen（Copet et al., 2024）、EnCodec（Défossez et al., 2022）、SYNTHEORY（Wei et al., 2024）、librosa、Essentia等开源项目。
-
-📌 **核心摘要**
-
-1.  **问题**：可控音乐生成面临挑战，现有方法常需模型重训练或引入可听伪影，难以实现对音符、和弦等细粒度音乐理论属性的精确、实时控制。
-2.  **方法核心**：提出MusicRFM框架，利用递归特征机（RFM）在预训练MusicGen模型的隐藏层激活空间中，为特定音乐概念（如音符、和弦）提取可解释的“概念方向”，并在推理时通过前向钩子将这些方向注入模型残差流，从而实时引导生成过程。
-3.  **创新点**：首次将RFM适配于自回归音乐生成控制；提出了基于探针性能的层级剪枝（Top-K和指数加权）和随机时间调度机制；支持多方向同步或交错控制，以平衡控制强度与生成质量。
-4.  **主要实验结果**：在SYNTHEORY数据集上的实验表明，音乐生成的音符控制准确率可通过调整控制系数η₀从0.23提升至0.82，同时文本提示保真度（CLAP分数）与无控制基线相比损失在0.02以内。消融实验证实了层级剪枝和随机注入概率对改善生成质量至关重要。
-5.  **实际意义**：提供了一个无需微调或推理时优化的高效框架，能对冻结的大型音乐生成模型进行细粒度、可解释的控制，为交互式音乐创作和编辑工具提供了新思路。
-6.  **主要局限性**：探针训练采用平均池化，丢弃了时序信息，限制了对具有强顺序依赖性概念（如和弦进行、节拍）的控制效果；控制效果与基线模型对相应概念的内在编码能力高度相关。
-
----
-
-### 7. [Discovering and Steering Interpretable Concepts in Large Generative Music Models](/audio-paper-digest-blog/posts/2026-05-03-discovering-and-steering-interpretable-concepts)
-
-✅ **6.5/10** | 前50% | #音乐生成 | #稀疏自编码器 | #音乐理解 #特征发现
-
-👥 **作者与机构**
-
-- 第一作者：Nikhil Singh (Dartmouth College)， Manuel Cherep (MIT) （论文明确标注为*Equal contribution， 即共同第一作者）
-- 通讯作者：未说明
-- 作者列表：Nikhil Singh (Dartmouth College)， Manuel Cherep (MIT)， Pattie Maes (MIT)
-
-💡 **毒舌点评**
-
-这篇论文将稀疏自编码器（SAE）首次应用于音频/音乐模型的可解释性研究，系统地构建了从特征发现到自动标注再到引导生成的全流程，展示了模型内部存在传统理论尚未很好描述的“涌现规律”，这一思路本身很有启发性。但作为一篇ICLR论文，其在关键领域的对比（如与其他可解释性方法的对比）和深入分析略显不足，例如仅用无条件音频进行分析而未能处理文本条件，并且未公开代码和模型权重，使得结论的复现和验证存在门槛。
-
-🔗 **开源详情**
-
--   **代码**：论文中未提及提供代码仓库链接或开源计划。
--   **模型权重**：未提及是否公开训练好的稀疏自编码器权重。
--   **数据集**：分析使用的激活数据集（从MusicSet提取并处理）未公开。论文中提及的基础数据集MusicSet是公开的。
--   **Demo**：未提供在线演示。
--   **复现材料**：论文提供了部分SAE超参数（扩展因子、k值）、特征过滤阈值、引导公式以及Gemini标注的提示词模板（附录H）和结构（附录H）。但关键的训练细节（优化器、学习率、批次大小、训练步数等）未在正文中详细说明。
--   **论文中引用的开源项目**：明确引用并依赖以下开源项目/工具：MusicGen模型（Copet et al., 2024）， Essentia音频分析库（Bogdanov et al., 2013）， CLAP模型（Wu et al., 2023）， 以及Gemini API。数据集引用了MusicSet（Wei et al., 2024b）， MTG-Jamendo， MusicCaps， MusicBench。
-
-📌 **核心摘要**
-
-这篇论文旨在解决大型自回归音乐生成模型（如MusicGen）内部表征的可解释性问题，即模型在统计学习中隐式学到了哪些音乐概念，这些概念是否与人类理论相符。
-1.  **方法核心**：提出一个多阶段流水线。首先，从大规模音乐数据集（MusicSet）中提取MusicGen模型多个层的残差流激活值。然后，训练稀疏自编码器（SAEs）从这些激活中重构并发现稀疏、可解释的潜在特征。最后，通过一个结合多模态大语言模型（Gemini）和预训练音频分类器（Essentia）的自动标注流水线，并利用CLAP模型进行对齐评估，对发现的特征进行命名和筛选。
-2.  **创新点**：该方法首次将稀疏自编码器应用于音频领域的可解释性分析，扩展了其在文本和视觉领域的应用。与传统的“探针”方法（检测已知概念）不同，该流水线旨在无监督地“发现”模型编码的所有概念。
-3.  **主要实验结果**：论文发现，大型模型（MusicGen-Large）比小型模型（MusicGen-Small）能提取出更多、更具区分性的可解释特征。后期层的特征在CLAP评估中显示出更高的可解释性（图3）。在发现的特征中，既包括“太鼓鼓声”、“巴洛克羽管键琴”等经典音乐概念（图2），也包括“电子哔哔声”、“单音持续”等缺乏明确理论定义的涌现规律。在引导生成实验中，约15%-35%的测试特征可以成功引导生成内容朝向目标概念（表2），人类听测也证实引导效果可被清晰感知。
-4.  **实际意义**：该流水线为理解神经网络如何“理解”音乐提供了一个实证工具，可能揭示传统分析方法遗漏的组织原则，并为可控音乐生成提供新思路。
-5.  **主要局限性**：分析仅基于无条件音乐，未处理文本条件对表征的影响。自动标注依赖CLAP分数作为代理指标，可能不完全反映人类判断。此外，论文未开源代码和模型权重，限制了结果的直接复现与验证。
+1.  **问题**：音频修复旨在恢复音频信号中缺失或损坏的片段，特别是在缺失区域较大时，现有方法（如连续扩散模型）性能会下降，难以保持语义连贯性和时间平滑性。
+2.  **核心方法**：提出AIDD，首个将离散扩散模型应用于token化音乐表示的音频修复框架。它首先使用预训练的WavTokenizer将音频压缩为离散token序列，然后在离散空间中应用基于Transformer的扩散模型进行修复。
+3.  **创新性**：方法的新颖之处在于：1）首次在离散token空间执行音频修复的扩散过程；2）提出基于跨度的掩蔽策略，模拟从局部到全局的结构化损坏；3）引入基于导数的正则化损失，约束预测token序列的时间平滑性。
+4.  **主要结果**：在MusicNet和MAESTRO数据集上，对于150ms至750ms的缺失段，AIDD在FAD、LSD、ODG等客观指标和MOS主观评分上均优于或匹配多个强基线。例如，在MusicNet上300ms缺失段，AIDD的FAD比CQT-Diff+低约25%（3.549 vs. 4.652）；在MAESTRO上375ms缺失段，AIDD的ODG得分为-2.303，优于所有基线。消融实验证实了所提损失和策略的有效性。
+5.  **实际意义**：为音乐录音修复、数据丢失填补等场景提供了新方案，并证明了离散扩散模型在音频序列建模上的可行性，为token-based生成模型开辟了新方向。
+6.  **主要局限性**：修复效果受限于底层tokenizer（WavTokenizer）的质量和带宽（24kHz）；存在训练与推理时掩蔽顺序不匹配的问题；与基于波形或频谱图的方法进行跨域比较存在偏差。
 
 ---
 

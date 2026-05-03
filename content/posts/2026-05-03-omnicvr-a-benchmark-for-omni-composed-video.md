@@ -111,6 +111,7 @@ hiddenInHomeList: true
 | **AudioVLM2Vec (Ours)** | Qwen2-Audio + Qwen2-VL | **66.98** | **77.84** | **80.86** | **84.40** |
 
 ![图1：OmniCVR 任务概览示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KxxR7emO5K-0.png)
+
 图1展示了 OmniCVR 的三类查询示例：集成查询（修改动作和对话）、视觉中心查询（修改画面内容）和音频中心查询（修改背景音乐）。说明了任务的复杂性和多模态性。
 
 **表5：音频中心检索性能对比 (Recall@K)**
@@ -134,6 +135,7 @@ hiddenInHomeList: true
 | OmniEmbed (修改) | Audio-as-Text (Ours) | **32.7** | **48.0** | **58.9** | **69.1** |
 
 ![图2：OmniCVR 与其他基准在任务重点上的对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KxxR7emO5K-1.png)
+
 图2展示了 OmniCVR 与 WebVid-CoVR、EgoCVR 等基准在修改指令上的对比，突出了 OmniCVR 指令涉及视觉、音频或二者同时修改的复杂性。
 
 **表10：视觉中心检索性能 (Recall@K)**
@@ -145,6 +147,7 @@ hiddenInHomeList: true
 | **AudioVLM2Vec (Ours)** | Qwen2-Audio + Qwen2-VL | **69.33** | **76.51** | **80.28** | **82.82** |
 
 ![图4：OmniCVR 基准构建流水线示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/KxxR7emO5K-3.png)
+
 图4详细展示了三阶段数据构建流水线：视频源选择与分割、全模态标注（使用Qwen并进行两阶段验证）、三元组挖掘（使用CLIP/CLAP分数和LLM生成修改文本）。说明了数据生成的系统性和自动化。
 
 **关键结论**：AudioVLM2Vec 在所有设置下均达到 SOTA，尤其在音频中心任务上优势巨大。实验充分证明了音频模态对组合检索的重要性以及“Audio-as-Text”策略的有效性。

@@ -118,6 +118,7 @@ hiddenInHomeList: true
 *表2：主模块消融实验，表明各模块均有贡献，QGMC和TFI尤为重要。*
 
 ![论文中的实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/8CnU2kchiw-2.png)
+
 *图3（a）展示了QSTar在复杂多乐器场景下的预测优势，正确利用音频频率线索识别出视觉上不明显的大提琴。*
 
 ### ⚖️ 评分理由

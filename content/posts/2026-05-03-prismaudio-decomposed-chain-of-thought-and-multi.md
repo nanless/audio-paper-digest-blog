@@ -51,6 +51,7 @@ hiddenInHomeList: true
 PrismAudio的整体架构分为三个主要阶段，构建在一个音频基础模型之上。整体流程如图1所示。
 
 ![图1：PrismAudio框架概述](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cIfDKEbAky-0.png)
+
 *图1（论文中的图片）: PrismAudio整体框架图。左侧面板展示了利用Gemini 2.5 Pro生成训练数据并微调VideoLLaMA2以生成分解式CoT的过程（Section 3.2）。右侧面板展示了Fast-GRPO多维度CoT-RL框架（Section 3.3），用于对音频基础模型（Section 3.1）进行后训练。*
 
 **1. CoT感知的音频基础模型 (Section 3.1)**
@@ -167,11 +168,15 @@ PrismAudio的整体架构分为三个主要阶段，构建在一个音频基础�
     结论：单维度优化导致严重的“目标纠缠”（如仅美学奖励使分布FD从1.90恶化到4.50）。只有多维度奖励能实现所有维度的平衡提升。
 
 - **Fast-GRPO训练效率 (图2)**：
+
 ![图2：Fast-GRPO与Flow-GRPO在语义奖励上的训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cIfDKEbAky-0.png)
+
 *图2（论文中的图片）: 训练收敛曲线，展示了在语义奖励（CLAP分数）上Fast-GRPO与Flow-GRPO的对比。Fast-GRPO在约200步时就超过了Flow-GRPO的最终性能（~0.47），并最终达到更高的奖励分数（~0.51），证明了其更快的收敛速度和更优的优化结果。*
 
 - **定性比较 (图3)**：
+
 ![图3：PrismAudio与基线模型的定性比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/cIfDKEbAky-1.png)
+
 *图3（论文中的图片）: 定性比较。左图（尤克里里场景）显示PrismAudio生成了清晰和谐的高频细节，而ThinkSound高频丢失，MMAudio生成模糊。右图（铁匠场景）显示PrismAudio准确渲染了锤击的尖锐瞬态，与GT同步良好，而其他模型存在时序模糊。*
 
 ### ⚖️ 评分理由

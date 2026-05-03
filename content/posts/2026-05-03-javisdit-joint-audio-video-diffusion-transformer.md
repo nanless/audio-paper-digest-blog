@@ -50,6 +50,7 @@ hiddenInHomeList: true
 JavisDiT是一个基于扩散Transformer（DiT）的端到端联合音视频生成模型，整体架构如下图所示。
 
 ![JavisDiT整体架构与核心模块](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-1.png)
+
 *（图2：JavisDiT整体架构与核心模块详图。左图为整体架构，包含视频分支、音频分支、HiST-Sypo估计器和MM-BiCrossAttn模块。右图展示了ST-SelfAttn、Fine-Grained ST-CrossAttn和MM-BiCrossAttn的内部结构。）*
 
 **完整输入输出流程**：输入为文本提示`s`。首先，T5编码器提取文本的粗粒度语义嵌入。同时，HiST-Sypo估计器从文本中提取精细的时空先验（空间先验`ps`和时间先验`pt`）。视频和音频分支的潜在表示（`Video Latent`， `Audio Latent`）在多个DiT块中迭代去噪，最终解码为生成的视频和音频（梅尔频谱图）。
@@ -60,7 +61,9 @@ JavisDiT是一个基于扩散Transformer（DiT）的端到端联合音视频生�
 3.  **Fine-Grained Spatio-Temporal Cross-Attention (ST-CrossAttn)**：这是实现精细对齐的核心。HiST-Sypo估计器输出的空间先验`ps`和时间先验`pt`作为条件，分别引导视频和音频分支在空间维度和时间维度上的跨注意力计算。
 4.  **Multi-Modality Bidirectional Cross-Attention (MM-BiCrossAttn)**：在融合了各自模态信息和先验后，视频和音频的潜在表示通过双向交叉注意力进行直接交互，进一步融合跨模态信息。
 5.  **HiST-Sypo Estimator**：如图3所示，该模块使用一个4层Transformer编码器-解码器。它以ImageBind文本编码器的输出为输入，通过可学习的`Ns=32`个空间查询token和`Nt=32`个时间查询token，从文本中提取出分布式的时空先验（输出为高斯分布的均值和方差，然后采样得到`ps`和`pt`）。该模块通过对比学习进行训练，以确保提取的先验能准确反映音视频的同步特性。
+
     ![HiST-Sypo估计器框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-2.png)
+
     *（图3：HiST-Sypo估计器框架。包含文本编码器、视频/音频编码器、VA-Fuser以及用于对比学习的架构。）*
 
 **关键设计选择与动机**：
@@ -111,6 +114,7 @@ JavisDiT是一个基于扩散Transformer（DiT）的端到端联合音视频生�
 *（表1：在JavisBench上的主要实验结果。JavisDiT在大多数指标上取得最佳或次佳，特别是在音视频一致性（CLAP， AVHScore）和同步性（JavisScore）上表现突出。）*
 
 ![JavisBench分类别同步性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-4.png)
+
 *（图5：JavisBench分类别同步性对比。显示FoleyCrafter和JavisDiT在“单主体/多主体/画外音”空间组合和“单事件/顺序/同时”时间组合上的JavisScore表现。结论：模型在多主体、同时事件等复杂场景下同步性能显著下降。）*
 
 **主要对比结果（现有基准）**：
@@ -135,12 +139,17 @@ JavisDiT是一个基于扩散Transformer（DiT）的端到端联合音视频生�
 *（表3：模型设计消融。STDiT骨干提升质量，HiST-Sypo显著提升一致性和同步性，BiCA提供额外增益，三者结合最优。）*
 
 ![跨注意力图可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-6.jpg)
+
 *（图7：跨注意力图可视化。展示了空间先验成功聚焦于发声主体（泡泡），时间先验在时间轴上分布均匀，对应持续的水泡声。这直观解释了HiST-Sypo如何引导同步生成。）*
 
 **生成示例与人类评估**：
+
 ![生成示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-5.png)
+
 *（图6：JavisDiT生成示例。模型能从复杂文本描述中生成语义一致且时空对齐较好的音视频。）*
+
 ![人类评估](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/y7HV7KT3Bd-7.png)
+
 *（图8：人类评估结果。在音频质量和音视频对齐方面，JavisDiT优于UniVerse-1，但视频质量略逊。）*
 
 ### ⚖️ 评分理由

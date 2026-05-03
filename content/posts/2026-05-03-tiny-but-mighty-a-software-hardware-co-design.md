@@ -56,6 +56,7 @@ NANOMIND并非一个新的神经网络模型，而是一个**系统级推理框�
 **整体流程**：多模态输入（图像+语音/文本）经过模块化解耦、跨加速器调度、高效数据传递，最终生成文本和语音输出。
 
 ![图3: NANOMIND架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ql30VWGyda-2.png)
+
 *   **软件栈 (SW)**：
     1.  **输入处理**：语音通过独立的Whisper模型（运行在CPU）转换为文本；图像通过MIPI CSI接口获取。
     2.  **模型分解与调度**：LMM（如LLaVA-OneVision）被分解为：
@@ -74,6 +75,7 @@ NANOMIND并非一个新的神经网络模型，而是一个**系统级推理框�
     *   **精简外设**：移除HDMI、Wi-Fi等非必要模块，通过USB-OTG连接音频和摄像头，最小化功耗。
 
 ![图4: 硬件设计框图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/ql30VWGyda-0.png)
+
 *   **数据流**：摄像头 -> NPU(ViT) -> [TABM环形缓冲区] -> GPU(LLM) -> CPU(TTS) -> 扬声器。
 
 ### 💡 核心创新点

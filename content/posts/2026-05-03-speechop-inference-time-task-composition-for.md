@@ -70,6 +70,7 @@ SpeechOp建立在潜在扩散框架上，整体架构如下：
 4.  **推理时任务组合（TC-CFG）**：当需要组合任务（如增强+文本引导）时，最终得分函数为：`s^{CFG}_{\theta}(z_t|y, w) ≈ s_{\theta}^{enh}(z_t|y) + γ * [ s_{\theta}^{tts}(z_t|w) - s_{\theta}^{tts}(z_t) ]`。其中第一项来自增强模型，第二项是TTS模型提供的判别式引导，通过分类器自由引导（CFG）实现。
 
 ![SpeechOp 架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eLsEjjFODE-2.png)
+
 *图：SpeechOp 架构概览。左侧为语音到语音路径（音频编码器 + 扩散Transformer），右侧为文本到语音路径（ByT5编码器 + 扩散Transformer）。任务嵌入条件化整个模型。*
 
 ### 💡 核心创新点
@@ -139,6 +140,7 @@ SpeechOp建立在潜在扩散框架上，整体架构如下：
 *表：SpeechOp-ITC管线将WER从无引导的8.1%大幅降至2.9%，优于所有基线。主观MOS与HiFi-GAN-2持平。*
 
 ![语音增强与分离训练曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eLsEjjFODE-1.png)
+
 *图：TTS初始化使增强和分离任务的训练收敛速度分别快4倍和8倍，并提升最终性能（右侧表格）。*
 
 **3. 任务组合消融实验**
@@ -152,6 +154,7 @@ SpeechOp建立在潜在扩散框架上，整体架构如下：
 *表：TC-CFG在内容保持（WER）和声学质量（PESQ, MCD）上均优于简单的得分平均（TC-Avg）。*
 
 ![1D高斯混合模型模拟对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/eLsEjjFODE-3.png)
+
 *图：模拟对比。得分平均(c)将样本“涂抹”开，偏离增强分布；而TC-CFG(d)通过判别引导将样本正确移向目标分布，同时保持分布形状。*
 
 **4. 说话人分离主观评估（MOS）**

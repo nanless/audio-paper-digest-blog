@@ -60,6 +60,7 @@ hiddenInHomeList: true
 MindMix采用双流架构，包含一个专门的EEG编码器、一个预训练的音频编码器和核心的CALRA对齐模块，通过端到端的对比学习进行训练。
 
 ![MindMix整体框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/1ifQzlETeG-0.png)
+
 **图1 (来自第3页): MindMix整体框架图**。图示了从输入EEG和音频信号，到经过各自编码器得到初始投影向量（E_proj, A_proj），再通过CALRA模块进行类型特定对齐、双向交叉注意力交互和低秩融合，最终得到对齐后的嵌入（E_aligned, A_aligned），并使用对比损失进行优化的完整流程。
 
 1.  **EEG编码器 (f_EEG)**：
@@ -165,12 +166,14 @@ MindMix采用双流架构，包含一个专门的EEG编码器、一个预训练�
 在HR-EEG4EMO数据集上，MindMix仅用50%的训练数据就能达到EEGNet用100%数据的效果，用75%数据能显著超越LaBraM的满数据性能，表明其强大的数据效率。
 
 ![模型性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/1ifQzlETeG-3.png)
+
 **图4 (来自第10页)**：对比了完整MindMix模型与其单模态EEG-only版本在多个任务上的性能，清晰展示了跨模态对齐带来的性能提升。
 
 **神经科学解释**：
 通过刺激重建实验，MindMix能从EEG嵌入中高保真重建音频梅尔频谱图（PCC达0.88-0.91），并展示出与听觉皮层处理语音时相符的左侧颞区激活模式，验证了其学习到的表示的生理可解释性。
 
 ![神经科学解释性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/1ifQzlETeG-4.png)
+
 **图5 (来自第3页)**：(a) 梅尔频谱图重建对比，显示MindMix重建结果更清晰。(b) EEG编码器的空间注意力拓扑图，显示出左侧颞区的强激活，与语音处理的脑区相符。
 
 ### ⚖️ 评分理由

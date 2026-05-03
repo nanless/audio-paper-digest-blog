@@ -56,6 +56,7 @@ hiddenInHomeList: true
 SVI的核心是在已有的视频DiT（如Wan 2.1）之上，通过**错误回收微调（ERFT）** 进行LoRA适配，使其具备错误纠正能力。整体架构是一个包含闭环的训练与推理流程。
 
 ![架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/X96Ei9n34a-2.png)
+
 *图：Stable Video Infinity 框架概览（对应论文Figure 3）。(a) 显示了错误注入模块，将计算出的误差注入到干净的视频潜变量（Xvid）、噪声（Xnoi）和参考图像（Ximg）中，形成带误差的输入。(b) 显示了双向误差计算，通过单步积分近似预测，并计算与“错误回收速度”指向的干净状态之间的残差。(c) 显示了误差记忆库，根据时间步动态存储和重采样误差，用于新的输入。整个形成一个闭合的循环（closed-loop cycling）。*
 
 **输入输出流程**：

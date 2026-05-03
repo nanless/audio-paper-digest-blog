@@ -51,6 +51,7 @@ PACE是一个分阶段的音频持续学习框架，旨在逐步调整预训练�
     *   **阶段3 (骨干固定)**：当学习的任务数超过T3（由累计样本量 `N_stop` 控制）后，**完全冻结骨干网络**，仅更新分析分类器，以保证长期稳定性。
 
 ![PACE框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-3.png)
+
 *(论文中的图片 - PACE框架概览图，展示了从预训练到FSA、子空间正交PEFT，再到骨干固定的三阶段流程，以及边界感知正则化的作用)*
 
 **核心组件设计**：
@@ -107,19 +108,25 @@ PACE是一个分阶段的音频持续学习框架，旨在逐步调整预训练�
 *结论：所有组件均不可或缺，其中梯度投影和FSA是基石。*
 
 **相关图表**：
+
 ![实验结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-1.png)
+
 *(论文中的对比图，展示了不同方法在图像和音频基准上的性能模式差异，凸显音频CL的挑战)*
 
 ![表征饱和分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-2.png)
+
 *(论文中的分析图，展示了RanPAC在粗粒度数据集上存在表征饱和现象)*
 
 ![CKA分析与层敏感性](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-4.png)
+
 *(论文中的CKA可视化图，显示表征变化在深层更显著)*
 
 ![MSA会话数敏感性](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-6.png)
+
 *(论文中的实验结果图，展示了MSA阶段数量对性能的影响及停止策略的有效性)*
 
 ![扰动效果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/k5PgSlNc4E-7.png)
+
 *(论文中的t-SNE可视化图，对比了不同扰动方式对数据流形的影响)*
 
 ### ⚖️ 评分理由

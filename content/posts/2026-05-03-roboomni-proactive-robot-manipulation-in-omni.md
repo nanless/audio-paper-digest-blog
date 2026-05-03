@@ -51,6 +51,7 @@ hiddenInHomeList: true
 | **RoboOmni (Ours)** | **85.6%** | **76.6%** |
 
 ![论文中的实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OJh7oBCYhL-4.png)
+
 *图5内容：该图展示了在真实世界实验中，RoboOmni与ASR+VLA基线在六种上下文指令类型上的成功率对比，RoboOmni在所有类别上均显著领先。*
 
 5. **实际意义**：为创建更自然、主动、能“察言观色”的服务机器人提供了新的技术路径和基准，推动了机器人从被动执行向主动协作的范式转变。
@@ -61,6 +62,7 @@ hiddenInHomeList: true
 RoboOmni是一个基于全模态大语言模型的端到端框架，其核心是将所有模态（文本、语音、音频、视觉、动作）统一到共享的token空间进行联合自回归生成。
 
 ![RoboOmni整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OJh7oBCYhL-3.png)
+
 *图4内容：RoboOmni的Perceiver-Thinker-Talker-Executor架构。视觉和音频信号经编码后，与文本token一同输入LLM核心（Thinker），后者生成文本token（用于对话）、离散动作token（经Executor解码为机器人控制指令）或语音token（经Talker合成语音波形）。*
 
 其架构主要包含四个组件：
@@ -121,6 +123,7 @@ RoboOmni是一个基于全模态大语言模型的端到端框架，其核心是
 *表1内容：RoboOmni在所有任务类型和所有上下文指令上均大幅领先基线。尤其在Goal和Object这类模糊性高的任务上优势更为明显。*
 
 ![论文中的实验结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OJh7oBCYhL-4.png)
+
 *图5内容：在真实世界实验中，RoboOmni（73.9%）对比ASR+NORA（52.2%）等基线的成功率，展示了其处理真实语音指令的鲁棒性优势。*
 
 **2. 真实世界评估（OmniAction-LIBERO-Real & WidowX 250S）**：
@@ -137,9 +140,11 @@ RoboOmni是一个基于全模态大语言模型的端到端框架，其核心是
 - **架构对比**：将RoboOmni与“Qwen2.5-Omni作为规划器 + 文本VLA作为控制器”的级联流水线对比，RoboOmni在所有上下文指令类型上均优于后者（见图9）。
 
 ![论文中的推理延迟对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OJh7oBCYhL-9.jpg)
+
 *图10内容：RoboOmni的单次推理延迟（0.49x）约为ASR+OpenVLA（1.00x）的一半，证明了端到端模型在效率上的优势。*
 
 ![论文中的失败分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/OJh7oBCYhL-0.png)
+
 *图11内容：真实世界实验的失败分析。42.6%的失败源于意图识别错误（如身份归属、情感线索误读），57.4%源于执行错误（如抓取失败、位姿漂移）。*
 
 ### ⚖️ 评分理由

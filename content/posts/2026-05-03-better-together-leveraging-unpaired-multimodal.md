@@ -55,6 +55,7 @@ hiddenInHomeList: true
 UML的核心是一个**模态无关的共享网络架构**，其设计旨在通过权重共享从不同模态的未配对数据中提取协同信息。
 
 ![UML模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5OIgg5YkC3-3.png)
+
 **图4：UML架构示意图。**(a)自监督设置：图像补丁嵌入和文本标记嵌入分别通过模态特定的线性层（fX， fY）投影到共享嵌入空间，然后输入共享的Transformer网络（h），再经模态特定的解码器（gX， gY）进行重建预测。(b)监督设置：嵌入经共享网络（h）处理后，输入共享的分类器（c）进行类别预测。
 
 **完整输入输出流程**：
@@ -116,9 +117,11 @@ UML的核心是一个**模态无关的共享网络架构**，其设计旨在通�
 *   **模态转换率（图8， 图9）**：在Oxford Pets上，1张图像的性能约等于228个词（CLIP编码器）或1034个词（DINOv2+OpenLLaMA编码器）。
 
 ![视觉鲁棒性测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5OIgg5YkC3-4.png)
+
 **图5：UML模型在四个ImageNet分布偏移测试集上的鲁棒性测试结果（16-shot线性探测）**。结果显示UML在所有偏移数据集上均显著优于单模态基线（Unimodal）。
 
 ![音频分类提升结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/5OIgg5YkC3-5.png)
+
 **图6：在ImageNet-ESC-19和-27数据集上，使用未配对图像和文本数据提升音频分类的结果**。左图显示ESC-19，右图显示ESC-27。UML（Ours）在两种设置下均优于单模态基线。
 
 **关���消融与分析**：

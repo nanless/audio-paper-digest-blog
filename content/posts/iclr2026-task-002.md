@@ -207,37 +207,40 @@ hiddenInHomeList: true
 
 ### 5. [MCIF: Multimodal Crosslingual Instruction-Following Benchmark from Scientific Talks](/audio-paper-digest-blog/posts/2026-05-03-mcif-multimodal-crosslingual-instruction)
 
-🔥 **8.0/10** | 前25% | #基准测试 | #多模态模型 | #多语言 #大语言模型
+🔥 **8.0/10** | 前25% | #基准测试 | #模型评估 | #多语言 #多模态
 
 👥 **作者与机构**
 
-- 第一作者：Sara Papi（Fondazione Bruno Kessler (FBK)）
-- 通讯作者：未说明
-- 作者列表：Sara Papi（Fondazione Bruno Kessler (FBK)）， Maike Züfle（Karlsruhe Institute of Technology (KIT)）， Marco Gaido（Fondazione Bruno Kessler (FBK)）， Beatrice Savoldi（Fondazione Bruno Kessler (FBK)）， Danni Liu（Karlsruhe Institute of Technology (KIT)）， Ioannis Douros（Translated (Italy)）， Luisa Bentivogli（Fondazione Bruno Kessler (FBK)）， Jan Niehues（Karlsruhe Institute of Technology (KIT)）
+- 第一作者：Sara Papi (Fondazione Bruno Kessler, Italy)
+- 通讯作者：未说明（论文未明确指定通讯作者，但提供了作者邮箱，可推测团队负责人可能为 Luisa Bentivogli 或 Jan Niehues）
+- 作者列表：Sara Papi (Fondazione Bruno Kessler), Maike Züfle (Karlsruhe Institute of Technology), Marco Gaido (Fondazione Bruno Kessler), Beatrice Savoldi (Fondazione Bruno Kessler), Danni Liu (Karlsruhe Institute of Technology), Ioannis Douros (Translated), Luisa Bentivogli (Fondazione Bruno Kessler), Jan Niehues (Karlsruhe Institute of Technology)
 
 💡 **毒舌点评**
 
-亮点在于MCIF填补了多模态、跨语言、长短文指令跟随评测的关键空白，且全部数据由人工标注，质量可信度高。不足是它本质上是一个评测基准而非提出新的建模方法，其结论（“模型在多模态融合和长文本上表现差”）虽有意义但并不出人意料，核心价值更偏向“系统性量化已知问题”。
+亮点：在“什么都需要评测”的AI时代，这篇论文提供了一套设计精巧、维度齐全（多模态、跨语言、长短句、多任务）且完全开源的“考卷”，直接戳中当前多模态模型“偏科严重”和“长文困难”的痛点。短板：本质上是“裁判员”的工作而非“运动员”，其深度体现在评测的广度与严谨性，而非提出新的建模思想；所有结论都依赖于评估的现有模型，其上限受限于当前模型的发展水平。
+
+🔗 **开源详情**
+
+- **代码**：提供代码仓库链接：[https://github.com/hlt-mt/mcif](https://github.com/hlt-mt/mcif)，包含推理和评估脚本，以及所有基线系统的输出。
+- **模型权重**：论文未提供新的模型权重，而是评测了现有的公开模型（如Gemma 3, Llama 3.1, Qwen2.5-Omni等）。
+- **数据集**：MCIF基准数据集已在HuggingFace上发布，遵循CC-BY 4.0许可：[https://hf.co/datasets/FBK-MT/MCIF](https://hf.co/datasets/FBK-MT/MCIF)。
+- **Demo**：论文中未提及在线演示。
+- **复现材料**：提供了极其详细的复现材料，包括：完整的标注指南（转录、翻译、问答）、所有使用的提示词列表（附录C）、所有评测模型的详细列表与生成设置（附录D）、以及每个模型的完整输出文件。
+- **论文中引用的开源项目**：使用了SHAS进行语音分割，使用jiWER计算WER，使用COMET评估翻译质量，使用BERTScore评估问答与摘要，使用MateDub/MateCat作为CAT工具（未公开代码）。
 
 📌 **核心摘要**
 
-1. **要解决的问题**：现有评测基准在评估多模态大语言模型（MLLM）的跨语言和多模态指令跟随能力时存在不足，常局限于英语、单一模态、短文本或缺乏人工标注。
-2. **方法核心**：提出MCIF基准，这是一个从科学演讲中构建的、人工标注的平行数据集，覆盖文本、语音、视频三种模态，英语、德语、意大利语、中文四种语言，以及识别、翻译、问答、摘要四大类任务，并设计了固定（MCIFfix）和多样化（MCIFmix）两套提示词以评估模型鲁棒性。
-3. **与已有方法相比新在哪里**：这是首个同时覆盖三模态、四语言、包含长短文本输入、并完全基于人工标注的跨语言多模态指令跟随评测基准，实现了模态、语言、任务长度的系统性平行对比。
-4. **主要实验结果**：对23个模型（7个LLM，5个SpeechLLM，5个VideoLLM，6个MLLM）的评测显示，**所有模型都面临挑战**。**摘要任务最难**，部分模型表现甚至低于随机水平；**问答任务**受益于语音/视频输入；**识别任务**对提示词变化敏感；**翻译任务**由LLM主导；**长文本输入普遍导致性能下降**，尤其影响SpeechLLM和MLLM；MLLM在**有效融合语音和视频模态方面仍然不足**。关键结果见下表。
-
-**表2 评测主要结果摘录（平均值）**
-
-| 上下文 | 输入模态 | 模型 | 识别(WER↓) | 翻译(COMET↑) | 问答(BERTS.↑) | 摘要(BERTS.↑) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **短** | SpeechLLM | Phi4-Multimodal | 6.8 | 80.2 | 37.1 | - |
-| **短** | MLLM | Gemini 2.5 Flash | 14.9 | 67.0 | 40.6 | × |
-| **长** | LLM | Qwen3 | 84.8 | 37.9 | 19.9 | 未提供 |
-| **长** | SpeechLLM | Phi4-Multimodal | 39.2 | 59.7 | 37.6 | 7.4 |
-| **长** | MLLM | Gemini 2.5 Flash | 11.9 | 76.4 | 46.1 | 24.1 |
-
-5. **实际意义**：为开发更强的多模态、跨语言、指令跟随系统提供了一个全面、可靠的评测框架和清晰的改进方向（如提升多模态融合能力、增强长上下文处理、改善提示词鲁棒性）。
-6. **主要局限性**：该工作是构建评测基准，而非提出解决所发现问题的模型或方法。其结论揭示了现有技术的普遍短板，但未提供解决方案。
+1.  **要解决什么问题**：当前多模态大语言模型（MLLM）的评估基准存在严重不足：大多局限于英语、单一模态、短文本输入，或缺乏高质量人工标注，无法系统性地评估模型在跨语言、多模态融合以及处理长上下文时的指令跟随能力。
+2.  **方法核心是什么**：论文提出了MCIF，一个从科学演讲中构建的人工标注基准。它包含三种模态（语音、视频、文本）、四种语言（英、德、意、中）、长短两种输入形式、13个具体任务（归入识别、翻译、问答、摘要4个宏任务），并设计了固定和随机两种提示词变体（MCIFfix/MCIFmix）以测试模型鲁棒性。
+3.  **与已有方法相比新在哪里**：MCIF是首个同时覆盖跨语言、多模态、长短上下文且完全对齐的人工标注指令跟随基准。其并行设计允许对模型能力进行系统性的消融研究。
+4.  **主要实验结果如何**：论文对23个模型（LLM、SpeechLLM、VideoLLM、MLLM）进行了广泛评估。关键发现包括：
+    *   **摘要生成是最难的任务**，部分模型表现甚至随机。
+    *   **长上下文处理是主要瓶颈**，尤其对SpeechLLM和VideoLLM，性能显著下降（例如，DeSTA2在长形式语音翻译中COMET分数下降约34点）。
+    *   **模态整合效果不佳**，联合语音与视频输入常无增益甚至有害（如图2所示，多数MLLM在多模态任务上，Speech+Video并未优于单模态）。
+    *   **提示词鲁棒性不足**，模型对指令的措辞变化敏感（例如，识别任务WER波动可达60以上）。
+    *   具体结果对比见表2。
+5.  **实际意义是什么**：为社区提供了一个全面、开放的“考试平台”，明确揭示了当前MLLM在跨语言多模态理解、长文本处理和指令遵循方面的系统性弱点，为未来模型优化指明了具体方向。
+6.  **主要局限性是什么**：评测局限于科学演讲领域，可能无法完全代表所有应用场景；部分语言（如中文）的评估可能受限于模型的多语言能力；基准本身不提供新的建模方法。
 
 ---
 
