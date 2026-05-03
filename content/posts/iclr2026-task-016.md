@@ -18,50 +18,16 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound) | 9.0分 | 前25% |
-| 🥈 | [Efficient Audio-Visual Speech Separation with Discrete Lip S](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with) | 8.5分 | 前25% |
-| 🥉 | [Knowing When to Quit: Probabilistic Early Exits for Speech S](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits) | 8.0分 | 前25% |
-| 4. | [MAPSS: Manifold-based Assessment of Perceptual Source Separa](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual) | 8.0分 | 前25% |
+| 🥇 | [Efficient Audio-Visual Speech Separation with Discrete Lip S](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with) | 8.5分 | 前25% |
+| 🥈 | [Knowing When to Quit: Probabilistic Early Exits for Speech S](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits) | 8.0分 | 前25% |
+| 🥉 | [MAPSS: Manifold-based Assessment of Perceptual Source Separa](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual) | 8.0分 | 前25% |
+| 4. | [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound)
-
-🔥 **9.0/10** | 前25% | #语音分离 | #强化学习 | #多模态模型 #音频事件检测
-
-👥 **作者与机构**
-
-- 第一作者：Zihan Zhang（浙江大学）
-- 通讯作者：Tao Jin（浙江大学）
-- 作者列表：Zihan Zhang（浙江大学），Xize Cheng（浙江大学），Zhennan Jiang（中国科学院自动化研究所），Dongjie Fu（浙江大学），Jingyuan Chen（浙江大学），Zhou Zhao（浙江大学），Tao Jin（浙江大学）
-
-💡 **毒舌点评**
-
-这篇论文最亮眼的地方在于，它跳出传统信号处理指标的“卷王”思维，将强化学习人类反馈（RLHF）的哲学引入声音分离，通过多模态奖励直接优化“语义一致性”，巧妙地解决了分离干净但语义污染的“指标困境”。然而，强化学习训练引入的额外计算成本和策略稳定性调参，以及对基础架构（OmniSep）的依赖，是其落地时需要掂量的短板。
-
-🔗 **开源详情**
-
-- **代码**：提供代码仓库链接：`https://github.com/mars-sep/MARS-Sep`。
-- **模型权重**：论文中未明确提及是否公开预训练模型权重（特别是渐进式对齐后的ImageBind编码器权重）。
-- **数据集**：使用公开的VGGSOUND和MUSIC数据集，并在其clean+版本上评估，数据获取方式未在文中详述，但属于公开数据集。
-- **Demo**：提供在线分离样本演示：`https://mars-sep.github.io/`。
-- **复现材料**：在附录B、D、E中提供了详细的实验设置、训练细节（优化器、学习率、batch size、训练步数、超参数）、硬件配置、评估协议（包括SI-SDR的计算方式）和消融实验结果，复现指导性较强。
-- **引用的开源项目**：论文依赖的关键开源项目/模型包括：OmniSep（基线）、ImageBind（多模态编码器）、CLAP（评估指标）、museval（评估工具）。
-
-📌 **核心摘要**
-
-1.  **解决的问题**：传统的通用声音分离模型通常优化信号级指标（如SDR），但这可能导致分离出的音频在感知上仍包含与查询语义不匹配的干扰源，产生“指标高但语义脏”的困境。
-2.  **方法核心**：将基于查询的声音分离任务重构为一个强化学习决策问题。提出MARS-Sep框架，其核心是：a）将掩码预测建模为一个在时间-频率bin上参数化的Beta分布策略；b）设计一个基于多模态编码器（经渐进式对齐微调）的奖励模型，该模型融合音频、文本、视觉查询信息，计算分离音频与多模态查询锚点之间的相似度作为奖励信号；c）采用一种稳定的、带有裁剪机制的信任域策略优化算法（类似PPO/GRPO）来更新分离器策略，以最大化奖励。
-3.  **与已有方法的新颖性**：与基于判别式损失（如BCE）的监督学习方法（如OmniSep、AudioSep）不同，MARS-Sep首次将分离过程形式化为随机决策，并利用强化学习直接优化语义对齐目标。其奖励模型通过多模态低秩双线性池化（MLBP）融合查询信息，而非简单比较单模态相似度，并引入渐进式对齐微调来增强奖励的判别性和稳定性，从而缓解奖励欺骗。
-4.  **主要实验结果**：在VGGSOUND-clean+和MUSIC-clean+两个基准测试的文本、音频、图像及组合查询设置上，MARS-Sep均取得了领先的性能。例如，在VGGSOUND-clean+的文本查询分离中，MARS-Sep的Mean SDR达到6.91 dB（优于OmniSep的6.70 dB），Mean CLAPt分数达到9.03%（优于OmniSep的8.98%）。定性分析和用户研究也证实其分离结果在语义一致性和非目标源抑制方面更优。
-5.  **实际意义**：该工作为语义感知的声音处理提供了新范式，使得分离结果更能匹配用户真实意图，有望提升依赖于分离的下游任务（如语音识别、场景分析）的性能，并推动多模态对齐技术在音频领域的应用。
-6.  **主要局限性**：a) 强化学习训练比标准监督学习更复杂，需要调优更多超参数（如κ, λH, λKL）并可能增加训练时间（实验显示训练速度约为OmniSep的50%）；b) 方法的有效性部分依赖于基础架构（OmniSep）和预训练的多模态编码器（ImageBind），其性能上界受这些组件影响；c) 奖励模型可能对特定分布的查询过拟合，其泛化能力有待更广泛验证。
-
----
-
-### 🥈 [Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with)
+### 🥇 [Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with)
 
 🔥 **8.5/10** | 前25% | #语音分离 | #知识蒸馏 | #端到端 #实时处理
 
@@ -96,7 +62,7 @@ hiddenInHomeList: true
 
 ---
 
-### 🥉 [Knowing When to Quit: Probabilistic Early Exits for Speech Separation Networks](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits)
+### 🥈 [Knowing When to Quit: Probabilistic Early Exits for Speech Separation Networks](/audio-paper-digest-blog/posts/2026-05-03-knowing-when-to-quit-probabilistic-early-exits)
 
 🔥 **8.0/10** | 前25% | #语音分离 | #早退机制 | #概率模型 #端到端
 
@@ -139,7 +105,7 @@ hiddenInHomeList: true
 
 ---
 
-### 4. [MAPSS: Manifold-based Assessment of Perceptual Source Separation](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual)
+### 🥉 [MAPSS: Manifold-based Assessment of Perceptual Source Separation](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual)
 
 🔥 **8.0/10** | 前25% | #语音分离 | #模型评估 | #自监督学习
 
@@ -173,6 +139,31 @@ hiddenInHomeList: true
 4.  **主要实验结果如何**：在SEBASS数据集（包含英/西班牙语及音乐混合）上，与18种主流指标相比，PS和PM在与人类MOS的线性（PCC）和秩相关（SRCC）上几乎总是排名第一或第二（具体数值见表1）。例如，在英语语音中，PS的SRCC为84.12%，PM的SRCC为84.69%。框架对预训练模型的选择进行了分析（图6），并验证了其互补性（图2）。
 5.  **实际意义是什么**：为源分离系统开发提供了更精细的诊断工具，可以明确区分是目标信号被破坏还是受到了其他源的干扰，有助于针对性地优化算法。其可微分特性也可能用于训练损失设计。
 6.  **主要局限性是什么**：对参考与输出之间的时间对齐敏感，当延迟超过约20ms时性能下降明显；其有效性依赖于预训练模型的表示质量和预设失真库的覆盖范围；评估性能最终仍依赖于在特定主观评分数据集上的相关性。
+
+---
+
+### 4. [MARS-Sep: Multimodal-Aligned Reinforced Sound Separation](/audio-paper-digest-blog/posts/2026-05-03-mars-sep-multimodal-aligned-reinforced-sound)
+
+✅ **7.5/10** | 前25% | #语音分离 | #强化学习 | #多模态模型 #对比学习
+
+👥 **作者与机构**
+
+- 第一作者：Zihan Zhang (Zhejiang University)
+- 通讯作者：Tao Jin (Zhejiang University)
+- 作者列表：Zihan Zhang (Zhejiang University), Xize Cheng (Zhejiang University), Zhennan Jiang (Institute of Automation, Chinese Academy of Sciences), Dongjie Fu (Zhejiang University), Jingyuan Chen (Zhejiang University), Zhou Zhao (Zhejiang University), Tao Jin (Zhejiang University)
+
+💡 **毒舌点评**
+
+MARS-Sep巧妙地将LLM对齐的RLHF思想“降维打击”应用到音频分离领域，用多模态奖励解决了传统分离模型“听觉指标高但语义不纯”的痛点，立意新颖且实验扎实。然而，这套涉及策略采样、奖励模型微调的强化学习pipeline，相比直接监督训练复杂度不低，其在工业级大规模部署中的工程代价与收益是否匹配，论文并未深入探讨。
+
+📌 **核心摘要**
+
+1.  要解决什么问题：传统的声音分离模型通常优化信号级失真指标（如SDR），导致分离结果可能存在语义污染，无法有效抑制与查询目标在声学上相似但语义不同的干扰源，即存在“度量困境”。
+2.  方法核心是什么：将查询条件声音分离重新定义为一个马尔可夫决策过程（MDP），采用强化学习（PPO/GRPO风格）进行优化。核心组件包括：(1) 基于分离器输出构建因子化Beta分布掩码策略；(2) 设计一个基于渐进式对齐的多模态奖励模型，用于衡量分离音频与查询（文本/音频/图像）的语义一致性；(3) 使用带裁剪、熵正则化和KL惩罚的信任域策略优化算法进行稳定训练。
+3.  与已有方法相比新在哪里：(1) 首次将强化学习引入多模态查询声音分离的优化过程，将掩码预测视为随机决策；(2) 提出一个多模态奖励模型，通过融合音频、文本、视觉特征直接优化语义对齐，而非仅依赖信号级监督；(3) 设计了渐进式微调策略（三阶段对比学习）来增强基础多模态编码器（ImageBind）的跨模态判别力，为RL提供更稳定的奖励信号。
+4.  主要实验结果如何：在VGGSound-clean+和MUSIC-clean+数据集上，MARS-Sep在文本、音频、图像及组合模态查询分离任务中，一致地优于OmniSep、AudioSep等基线。以文本查询在VGGSound-clean+为例，MARS-Sep的平均CLAPt分数为9.03±0.94%，优于OmniSep的8.98±0.89%；在MUSIC-clean+上为6.18±0.93%，显著高于OmniSep的5.41±0.98%。在信号指标（SDR, SIR等）上也常有优势。人类主观评估显示MARS-Sep在语义匹配度上优于OmniSep。
+5.  实际意义是什么：该方法提升了声音分离结果的语义保真度和感知质量，使其输出更符合用户查询的意图，对依赖高质量分离结果的下游任务（如语音识别、音频内容理解）有积极意义。其将对齐思想引入音频处理的框架，对相关多模态学习研究有启发价值。
+6.  主要局限性是什么：方法引入了强化学习的训练复杂性和计算开销（训练时间约为基线OmniSep的2倍）。奖励模型的性能上限影响了策略学习的天花板。虽然在所测基准上有效，但在更复杂、更少结构化的真实世界声学场景中的泛化能力和鲁棒性有待进一步验证。
 
 ---
 

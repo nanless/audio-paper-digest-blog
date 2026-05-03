@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音乐信息检索 论文列表"
+title: "ICLR 2026 - 跨模态 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音乐信息检索"]
+tags: ["跨模态"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 音乐信息检索 方向论文"
+description: "共 2 篇 ICLR 2026 跨模态 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音乐信息检索
+# ICLR 2026 - 跨模态
 
 共 **2** 篇论文
 
@@ -18,98 +18,89 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Bridging Piano Transcription and Rendering via Disentangled ](/audio-paper-digest-blog/posts/2026-05-03-bridging-piano-transcription-and-rendering-via) | 8.0分 | 前25% |
-| 🥈 | [Automatic Stage Lighting Control: Is it a Rule-Driven Proces](/audio-paper-digest-blog/posts/2026-05-03-automatic-stage-lighting-control-is-it-a-rule) | 8.0分 | 前25% |
+| 🥇 | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response ](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 8.5分 | 前10% |
+| 🥈 | [Better Together: Leveraging Unpaired Multimodal Data for Str](/audio-paper-digest-blog/posts/2026-05-03-better-together-leveraging-unpaired-multimodal) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Bridging Piano Transcription and Rendering via Disentangled Score Content and Style](/audio-paper-digest-blog/posts/2026-05-03-bridging-piano-transcription-and-rendering-via)
+### 🥇 [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
 
-🔥 **8.0/10** | 前25% | #音乐信息检索 | #扩散模型 | #解耦表示学习 #多任务学习
+🔥 **8.5/10** | 前10% | #跨模态 | #多模态模型 | #预训练 #音频事件检测
 
 👥 **作者与机构**
 
-- 第一作者：Wei Zeng (National University of Singapore, Integrative Sciences and Engineering Programme, NUS Graduate School & School of Computing)
-- 通讯作者：Ye Wang (National University of Singapore, School of Computing)
-- 作者列表：Wei Zeng (National University of Singapore, Integrative Sciences and Engineering Programme, NUS Graduate School & School of Computing), Junchuan Zhao (National University of Singapore, School of Computing), Ye Wang (National University of Singapore, School of Computing)
+- 第一作者：Stéphane d’Ascoli（Meta AI）
+- 通讯作者：未明确说明（所有作者均标注为Meta AI，通常按作者顺序第一作者或资深作者通讯，但文中未明确标注“通讯作者”）
+- 作者列表：Stéphane d’Ascoli（Meta AI）、Jérémy Rapin（Meta AI）、Yohann Benchetrit（Meta AI）、Hubert Banville（Meta AI）、Jean-Rémi King（Meta AI）
 
 💡 **毒舌点评**
 
-这篇论文在方法融合上做得很扎实，将两个看似对立的音乐任务统一到一个框架里，并引入扩散模型做风格推荐，思路清晰且实验充分。不过，其研究范围局限于古典钢琴，在流行音乐等更广泛、更商业化的场景下的潜力尚未被证明，可能限制了其影响力。
+**亮点**：该工作首次将文本、音频、视频三种模态的基础模型表示整合到一个端到端的深度编码框架中，统一预测全脑fMRI响应，这种“三管齐下”的设计在神经科学建模中具有里程碑意义，并在Algonauts 2025竞赛中证明了其有效性。**短板**：模型的性能天花板可能受限于其仅依赖4名被试的数据（Courtois NeuroMod子集），且预测目标被限定在1000个脑区图谱，牺牲了体素级的精细空间分辨率，这对理解大脑局部功能特异性是一个局限。
 
 🔗 **开源详情**
 
-- **代码**：论文承诺在论文接受后发布代码，并提供了GitHub项目页面链接：https://wei-zeng98.github.io/joint-apt-epr/。
-- **模型权重**：论文中未明确提及是否公开预训练模型权重。
-- **数据集**：使用了公共数据集ASAP和ATEPP，并描述了自建非配对数据集的构建过程，但未提及会公开这些自建数据。
-- **Demo**：提供了在线演示页面：https://wei-zeng98.github.io/joint-apt-epr/。
-- **复现材料**：提供了极为详尽的复现指南，包括数据处理规则（附录A）、模型架构细节（附录B）、训练配置（学习率、优化器、batch size、步数等）、超参数、硬件信息、主观测试细节（附录C）以及消融研究（附录D）。
-- **论文中引用的开源项目**：MidiTok库（用于性能MIDI的分词化）， Aria AMT模型（用于从YouTube视频转录MIDI）。
+- **代码**：提供了代码仓库链接：`https://github.com/facebookresearch/algonauts-2025`。
+- **模型权重**：论文中未提及公开TRIBE模型本身的权重。
+- **数据集**：训练数据基于**Courtois NeuroMod**数据集（CC0协议，可公开获取），竞赛评估数据来自**Algonauts 2025挑战赛**（需要申请）。
+- **Demo**：论文中未提及在线演示。
+- **复现材料**：提供了非常充分的复现细节，包括：完整的代码仓库、详尽的超参数表格（表3）、数据预处理流程、训练策略（优化器、学习率、早停、集成方法）以及使用的开源模型链接。
+- **论文中引用的开源项目**：依赖的主要开源项目包括：Llama-3.2-3B、Wav2Vec-Bert-2.0、Video-JEPA 2、x-transformers、nilearn、PyTorch。
 
 📌 **核心摘要**
 
-这篇论文旨在解决音乐信息检索（MIR）中两个基础但任务相反的问题：从乐谱生成具有表现力的演奏（EPR）和从演奏音频/谱面恢复原始乐谱（APT）。以往研究通常将二者独立处理，本文则提出一个统一的、基于Transformer的序列到序列（Seq2Seq）框架，通过分离**乐谱内容**（音高、节奏）和**演奏风格**（整体表现力）的潜在表示，实现了对EPR和APT的联合建模。该方法仅需序列级对齐数据，无需传统的音符级精细对齐，同时支持配对和非配对数据的训练。为了自动化风格选择，论文还引入了一个独立的、基于扩散模型的**演奏风格推荐（PSR）模块**，能够仅从乐谱内容生成合适的风格嵌入。实验表明，该联合模型在EPR和APT任务上均达到了与现有最先进方法相当的性能（例如，在ASAP数据集上的APT评估中，多数指标优于或媲美基线），同时验证了内容与风格的有效分离、可靠的内容跨风格迁移以及PSR模块生成合适风格的能力。
+1. **要解决什么问题**：传统神经科学研究与现有AI脑编码模型存在“碎片化”问题，即局限于单模态（如仅视觉或语言）、线性假设和个体特异性，无法模拟大脑在自然情境下对多模态信息的动态整合。
+2. **方法核心是什么**：TRIBE（TRImodal Brain Encoder）模型。它分别从视频、音频、文本中提取预训练基础模型（V-JEPA 2, Wav2Vec-Bert-2.0, Llama-3.2-3B）的中间层表示，通过模态特定的前馈网络进行对齐和压缩，然后馈入一个Transformer编码器以建模时间动态，最终通过一个“受试者条件层”输出对每个脑区的fMRI信号预测。
+3. **与已有方法相比新在哪里**：突破了现有编码模型的三大限制：（1）使用深度神经网络而非线性回归，实现**非线性**编码；（2）通过一个包含所有被试的统一模型进行**多被试**训练，利用了大脑间的共性；（3）同时融合文本、音频和视频**三模态**信息，并让模型学习它们之间的交互，尤其在联想皮层获益最大。
+4. **主要实验结果如何**：在Algonauts 2025竞赛中，以平均编码分数0.2146 ± 0.0312取得**第一名**（共267支队伍），显著领先第二名（0.2096）。消融实验表明，三模态模型（0.31）显著优于任何单模态（文本0.22，音频0.24，视频0.25）和双模态组合（最佳为文本+视频0.30）模型。模型还能泛化到分布外数据（如无声电影、动画片），并在全脑1000个脑区上均达到统计显著的预测（q(FDR) < 10⁻³）。
+    *   **关键数据表（竞赛排名）**：
+        | 排名 | 平均分数（±标准差） | Subject 1 | Subject 2 | Subject 3 | Subject 5 |
+        | :--- | :--- | :--- | :--- | :--- | :--- |
+        | **1 (Ours)** | **0.2146 ± 0.0312** | 0.2381 | 0.2105 | 0.2377 | 0.1720 |
+        | 2 | 0.2096 ± 0.0283 | 0.2353 | 0.2046 | 0.2268 | 0.1718 |
+        | 3 | 0.2094 ± 0.0215 | 0.2233 | 0.2072 | 0.2271 | 0.1798 |
+5. **实际意义是什么**：该研究推动了从“分割式”神经科学向“整合式”认知建模的范式转变，为构建能够预测大脑整体活动的计算模型奠定了基础。这种模型未来可用于**虚拟神经科学实验**、评估认知理论，或作为理解人类感知与理解过程的强大工具。
+6. **主要局限性是什么**：（1）数据规模：仅使用4名被试的数据训练，可能限制模型的泛化能力；（2）空间分辨率：预测目标为1000个脑区，而非单个体素，丢失了精细空间信息；（3）未建模内源性活动：模型只能从外部刺激预测响应，无法解释大脑在无刺激时的自发活动（如默认模式网络）；（4）确定性预测：无法捕捉大脑反应中的随机变异性。
 
 ---
 
-### 🥈 [Automatic Stage Lighting Control: Is it a Rule-Driven Process or Generative Task?](/audio-paper-digest-blog/posts/2026-05-03-automatic-stage-lighting-control-is-it-a-rule)
+### 🥈 [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-03-better-together-leveraging-unpaired-multimodal)
 
-🔥 **8.0/10** | 前25% | #音乐信息检索 | #自回归模型 | #生成模型 #迁移学习
+✅ **7.5/10** | 前25% | #跨模态 | #自监督学习 | #多模态模型 #音频分类
 
 👥 **作者与机构**
 
-- 第一作者：Zijian Zhao（The Hong Kong University of Science and Technology）
-- 通讯作者：Xiaoyu Zhang（City University of Hong Kong， xiaoyu.zhang@cityu.edu.hk）
-- 作者列表：Zijian Zhao（The Hong Kong University of Science and Technology）， Dian Jin（The Hong Kong Polytechnic University）， Zijing Zhou（The University of Hong Kong）， Xiaoyu Zhang（City University of Hong Kong）
+- 第一作者：Sharut Gupta（MIT CSAIL）
+- 通讯作者：未说明（论文未明确指定通讯作者，但通常最后一位作者Phillip Isola（MIT CSAIL）可能是通讯作者）
+- 作者列表：Sharut Gupta（MIT CSAIL）、Shobhita Sundaram（MIT CSAIL）、Chenyu Wang（MIT CSAIL）、Stefanie Jegelka（TU Munich, MIT CSAIL）、Phillip Isola（MIT CSAIL）
 
 💡 **毒舌点评**
 
-亮点：论文漂亮地完成了一次“范式转变”——将灯光控制从死板的“分类-映射”规则中解放出来，用生成模型去捕捉专业灯光师的艺术直觉，这个思路本身就很酷，且实验验证有力。
-短板：实验部分虽然全面，但对基线“规则方法”的复现细节（如具体映射规则）语焉不详，略显遗憾；另外，自建数据集虽填补了空白，但699个样本在深度学习时代仍显“袖珍”，泛化能力论证还可更强。
+这篇论文的亮点在于其理论分析与丰富实验的紧密结合，以严谨的方式论证了“未配对数据也能有用”这一直觉，实验覆盖面广且结果一致。短板则在于其方法的核心（权重共享）过于简单，更像是一个观察性发现而非一套完整的解决方案；并且论文承认未深入探讨梯度干扰等优化问题，这在实际应用中可能是致命的。
 
 🔗 **开源详情**
 
-*   **代码**：论文明确提供了代码仓库链接：https://github.com/RS2002/Skip-BART。
-*   **模型权重**：论文声明提供了“trained model parameters”（训练好的模型参数），应可从上述GitHub仓库获取。
-*   **数据集**：论文创建并提供了首个舞台灯光数据集**RPMC-L2**。为处理版权问题，提供的是约40GB的、已提取处理好的HDF5特征文件，而非原始视频。可通过GitHub链接获取。
-*   **Demo**：论文中未提及在线演示（Demo）。
-*   **复现材料**：附录提供了极其详细的复现信息，包括：
-    *   **模型配置**：参数数量、层数、维度、词汇表大小等。
-    *   **数据集构建**：详细的音频与灯光预处理流程、特征提取方法（如OpenL3, Mel频谱图）、数据增强、数据集划分标准。
-    *   **训练流程**：预训练与微调的完整步骤、损失函数细节、超参数设置（学习率、批量大小、epoch数等）。
-    *   **评估细节**：人类评估问卷设计、参与者信息、统计分析方法。
-*   **论文中引用的开源项目**：
-    *   **BART**：模型基础架构。
-    *   **OpenL3**：用于提取音频嵌入特征。
-    *   **PianoBART**：用于迁移学习的预训练模型骨干。
-    *   **DARE**：用于融合多任务微调参数的技巧。
-    *   **LoRA**：用于高效微调。
-    *   **PyTorch**：深度学习框架。
-    *   **Suno**：用于生成跨域评估所用的音乐。
+- **代码**：论文中未提及代码仓库链接。
+- **模型权重**：未提及。
+- **数据集**：使用的是公开数据集（MultiBench, ImageNet系列， ESC-50等），但论文未提供其处理后的数据版本。
+- **Demo**：未提及。
+- **复现材料**：附录提供了非常详细的实验协议、超参数搜索范围、数据构建方法（特别是文本模板生成）和部分算法伪代码（Algorithm 1， 2）。
+- **论文中引用的开源项目**：依赖预训练的视觉和语言模型，如DINOv2， CLIP， OpenLLaMA， BERT， GPT-2， AudioCLIP。
 
 📌 **核心摘要**
 
-1.  **问题**：现有的自动舞台灯光控制（ASLC）方法大多依赖将音乐映射到有限的预定义类别和固定灯光模式，导致生成结果公式化、单调且缺乏合理性，无法复现专业灯光师的艺术性创作。
-2.  **方法核心**：本文首次将ASLC重新定义为端到端的生成任务，而非分类任务。提出了Skip-BART模型，以音乐为输入，直接预测灯光的色相（Hue）和强度（Value）。模型基于BART架构，并引入了一个新颖的跳连接机制，以显式建模音乐帧与对应灯光帧之间的强关联。为解决数据匮乏问题，团队创建了首个ASLC数据集RPMC-L2，并采用了基于掩码语言建模的预训练和迁移学习策略。
-3.  **新意**：与以往的“分类-规则映射”范式不同，本文是**首次**尝试直接从专业灯光师的真实操作数据中学习，将ASLC建模为一个从音频到灯光序列的生成问题。
-4.  **主要实验结果**：在自建的RPMC-L2数据集上，Skip-BART在定量指标（RMSE， MAE， corr(|∆|)）上全面优于规则基线方法和消融版本（详见下表）。人类评估（38名参与者）显示，Skip-BART生成的灯光效果与专业灯光师的作品在整体得分上无显著差异（p=0.724），且显著优于规则方法（p<0.001）。
-
-**表1：定量实验结果（来自论文Table 1）**
-
-| 方法 | RMSE (Hue) ↓ | RMSE (Value) ↓ | MAE (Hue) ↓ | MAE (Value) ↓ | corr(|∆|) (Hue) ↑ | corr(|∆|) (Value) ↑ |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Rule-based | 48.67 | 93.39 | 43.43 | 86.55 | 0.50 | 0.58 |
-| **Skip-BART** | **36.13** | **60.74** | **28.72** | **51.27** | **0.88** | **2.94** |
-| w/o skip connection | 36.89 | 68.33 | 29.44 | 58.34 | 1.15 | 0.30 |
-| w/o light embedding | 51.04 | 67.25 | 41.50 | 54.87 | 0.80 | 0.70 |
-| train from scratch | 36.63 | 67.49 | 28.83 | 57.22 | 0.69 | 0.53 |
-| pre-train w/o random [MASK] | 49.97 | 64.45 | 42.07 | 52.63 | 0.54 | 1.11 |
-| pre-train w/o discriminator | 50.40 | 68.09 | 41.52 | 56.54 | 0.46 | 1.13 |
-
-5.  **实际意义**：为现场演出、直播等场景提供了一种更智能、更富艺术感的自动化灯光控制新思路，证明了生成式方法在该任务上的潜力和优越性。
-6.  **主要局限性**：研究聚焦于离线的、单主灯的生成场景，尚未解决实时控制和多灯协同的复杂问题。此外，模型偶尔会出现局部波动过强的情况，全局时间结构的建模仍有提升空间。
+1. **问题**：传统多模态学习依赖昂贵且有限的配对数据（如图像-文本对）来学习更好的表示。论文探索一个更基础的问题：能否利用大量易得但未配对的辅助模态数据（如独立的文本语料库）来直接提升目标模态（如图像）模型的性能？
+2. **方法核心**：提出UML（Unpaired Multimodal Learner），一个模态无关的训练范式。它使用一个共享网络处理来自不同模态的输入，参数通过权重共享在模态间传递信息，无需显式对齐或成对数据。训练可以是自监督（预测重建）或监督（共享分类器）模式。
+3. **创新点**：与依赖配对数据或显式对齐的先前工作不同，UML证明了仅通过权重共享，未配对数据就能带来严格的信息增益。论文在**线性假设下给出了理论证明**（基于Fisher信息量），表明未配对数据能减少共享参数的估计方差。
+4. **主要实验结果**：在多个基准测试上，UML consistently improves unimodal representations：
+    - **自监督设置**（MultiBench等数据集）：在5个数据集上，UML（图像+文本）相比纯图像模型平均提升约2.5个百分点（例如MUSTARD从59.66%提升至63.28%）。
+    - **监督设置**（9个视觉分类数据集）：在全量微调下平均准确率从81.54%提升至83.99%；在1-shot小样本学习下从45.52%提升至51.36%。
+    - **扩展至音频**：在ImageNet-ESC数据集上，使用未配对的图像和文本数据能提升音频分类性能。
+    - **迁移学习**：使用预训练BERT权重初始化视觉Transformer，在ImageNet上显著优于从头训练。
+    - **模态转换率**：量化了1张图像约等于228-1034个词（取决于编码器对齐程度）的性能等价关系。
+5. **实际意义**：为如何利用海量未配对数据提升模型性能提供了理论和实践框架，尤其适用于获取配对数据成本高的领域（如医疗、科学）。
+6. **主要局限性**：理论分析依赖线性数据生成假设；方法未明确处理梯度干扰、模态冲突等优化挑战；下游评估主要集中在分类任务；论文未提供代码或模型权重。
 
 ---
 

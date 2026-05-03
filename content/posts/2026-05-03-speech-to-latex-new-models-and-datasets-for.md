@@ -2,112 +2,119 @@
 title: "Speech-to-LaTeX: New Models and Datasets for Converting Spoken Equations and Sentences"
 date: 2026-05-03
 draft: false
-tags: [语音识别, 端到端, 基准测试, 多语言, 数据集]
+tags: [语音识别, 多模态模型, 数据集, 基准测试]
 categories: [iclr-2026]
-description: "语音识别 | 7.5/10"
+description: "语音识别 | 8.5/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Speech-to-LaTeX: New Models and Datasets for Converting Spoken Equations and Sentences
 
-#语音识别 #端到端 #基准测试 #多语言 #数据集
+#语音识别 #多模态模型 #数据集 #基准测试
 
-✅ **7.5/10** | 前25% | #语音识别 | #端到端 | #基准测试 #多语言
+🔥 **8.5/10** | 前25% | #语音识别 | #多模态模型 | #数据集 #基准测试
 
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
 
 
 ### 👥 作者与机构
 
-- 第一作者：Dmitrii Korzh (AXXX, Moscow, Russia; MTUCI, Moscow, Russia)
-- 通讯作者：未说明
-- 作者列表：Dmitrii Korzh (AXXX, MTUCI), Dmitrii Tarasov (FusionBrain Lab, HSE University), Artyom Iudin (AXXX, MTUCI), Elvir Karimov (MTUCI, Applied AI Institute), Matvey Skripkin (FusionBrain Lab, Applied AI Institute), Nikita Kuzmin (MTUCI, Applied AI Institute), Andrey Kuznetsov (FusionBrain Lab, Innopolis University), Oleg Y. Rogov (AXXX, MTUCI, Applied AI Institute), Ivan Oseledets (AXXX, Moscow State University)
+- 第一作者：Dmitrii Korzh (AXXX; MTUCI)
+- 通讯作者：未明确说明
+- 作者列表：Dmitrii Korzh (AXXX; MTUCI), Dmitrii Tarasov (FusionBrain Lab, AXXX; HSE University), Artyom Iudin (AXXX; MTUCI), Elvir Karimov (AXXX; MTUCI; Applied AI Institute), Matvey Skripkin (FusionBrain Lab, AXXX; Applied AI Institute), Nikita Kuzmin (AXXX; MTUCI; Applied AI Institute), Andrey Kuznetsov (FusionBrain Lab, AXXX; Innopolis University), Oleg Y. Rogov (AXXX; MTUCI; Applied AI Institute), Ivan Oseledets (AXXX; Moscow State University)
 
 ### 💡 毒舌点评
 
-**亮点**：首次大规模开源了涵盖方程和句子的双语（英/俄）语音到LaTeX数据集，并系统性地对比了后校正和端到端两种主流技术路线，建立了全面的基准。**短板**：模型在真实、嘈杂、带有复杂上下文的课堂等场景中的泛化能力未得到验证，错误分析停留在示例层面，对语言歧义的处理策略不够深入。
-
-### 🔗 开源详情
-
--   **代码**：提供代码仓库链接 `https://github.com/dkorzh10/speech2latex`。
--   **模型权重**：论文中未明确提及是否公开微调后的模型权重。
--   **数据集**：公开，提供了Hugging Face数据集链接 `https://huggingface.co/datasets/marsianin500/Speech2Latex`。
--   **Demo**：未提及。
--   **复现材料**：提供了完整的训练细节（优化器、学习率、批量大小、LoRA配置等）、数据划分策略和评估指标定义（附录），支持复现。
--   **引用的开源项目**：主要依赖Whisper、Qwen2.5、SALMONN、XTTSv2、KaTeX等开源模型和工具。
+本文最值得称赞的贡献是构建并开源了首个大规模、高质量的“语音转LaTeX”（S2L）数据集，并对多种技术路线（ASR后校正与端到端音频大模型）进行了全面、细致的评估与比较。然而，文中展示的端到端模型（如SALMONN）虽然在绝对性能上领先，但其与小参数量ASR后校正模型（如Qwen2.5-0.5B）在特定基准（如MathSpeech）上的性能差距并不显著，这削弱了其“端到端方案必然更优”的潜在论点，且论文对模型在真实复杂场景（如课堂录音）下的鲁棒性缺乏深入分析。
 
 ### 📌 核心摘要
 
-1.  **问题**：将口语数学表达式（方程和句子）准确转换为结构化的LaTeX格式，是自动转录、教育技术等领域的一个挑战，存在发音歧义、缺乏数据集等问题。
-2.  **方法核心**：提出了首个大规模开源数据集S2L（含66k人工标注和571k合成音频），并系统评估了两种技术路线：**ASR后校正**（先用Whisper转写，再用LLM如Qwen2.5校正为LaTeX）和**端到端多模态模型**（如SALMONN，直接从音频生成LaTeX）。
-3.  **新在哪里**：相比先前工作（如MathSpeech），提供了首个公开的大规模、双语、包含句子和方程的数据集；首次引入并评估了端到端Audio-LLM方案；建立了更全面的评估基准。
-4.  **主要结果**：在自建的S2L-equations基准上，最佳后校正模型（Qwen2.5-1.5B）和端到端模型（SALMONN-13B）的CER分别为27.2%和17.5%，远优于MathSpeech模型的64.0%；在S2L-sentences基准上，方程部分的CER最低为39.7%（SALMONN）。在MathSpeech已有基准上，本文方法也达到了可比性能（CER 30.0% vs. 27.7%）。
-5.  **实际��义**：推动了语音驱动的数学内容理解技术，为教育辅助、科学笔记等应用提供了数据基础和方法参考。
-6.  **主要局限性**：数据集未完全覆盖真实课堂环境（如即兴讲解、视觉内容关联）；口语数学固有的歧义（如一式多解）使得CER指标无法完全反映语义正确性；合成数据与真实人声存在差距。
+1. 要解决什么问题：将口语中的数学公式和句子准确转换为结构化的LaTeX格式，这是教育、科研领域自动记录的关键技术，但现有方法在多语言支持、上下文理解、数据集规模和模型泛化方面存在不足。
+2. 方法核心是什么：论文提出了两种主要技术路线：一是基于ASR后校正的流水线方法（先Whisper转录，再用Qwen2.5等LLM修正并转换为LaTeX）；二是端到端的多模态音频语言模型（如SALMONN），直接处理原始音频并生成LaTeX。
+3. 与已有方法相比新在哪里：首次构建并发布了大规模开源的S2L数据集（66k人声+571k合成音频，含英文和俄文），覆盖孤立公式和包含公式的句子。超越了仅依赖TTS合成数据、缺乏多语言和上下文支持的MathSpeech等先前工作。
+4. 主要实验结果如何：在自建的S2L-equations基准上，本文模型（如SALMONN-13B）的字符错误率（CER）为17.5%，显著优于MathSpeech模型在该基准上的64.0%。在MathSpeech基准上，两者性能相近（27.7% vs. 30.0%）。对于更复杂的S2L-sentences任务，最佳模型（SALMONN-13B）的句子CER为15.43%，公式CER为39.68%。
+5. 实际意义是什么：提供了首个大规模开源的语音数学数据集和基线模型，为后续研究（如课堂实时转录、多模态学术助手）奠定了基础。
+6. 主要局限性是什么：数据未完全模拟真实课堂环境（如讲者自由发挥、结合板书）；模型对复杂、嵌套公式的识别仍有挑战；公式CER数值本身受语言歧义影响，可能高估实际错误。
+
+#
 
 ### 🏗️ 模型架构
 
-本文未提出一个全新的统一模型架构，而是探索并对比了两种将口语数学转换为LaTeX的主流技术路线：
-1.  **ASR后校正流水线 (Post-Correction)**：
-    *   **输入**：原始音频波形。
-    *   **流程**：首先通过一个冻结的**ASR模型**（如Whisper-Large v3）将语音转写为自然语言文本。然后，将该文本输入一个**微调后的语言模型**（如Qwen2.5系列），由LLM负责将文本中的数学表达式识别并转换为准确的LaTeX代码。
-    *   **组件**：ASR模型（负责语音到文本）+ LLM（负责文本到LaTeX的转换与纠错）。这种分离式设计能利用现成强大的ASR和LLM，但性能受限于ASR转写质量。
-2.  **端到端多模态模型 (Audio-LLM)**：
-    *   **输入**：原始音频波形。
-    *   **流程**：使用**Audio-LLM**架构（如SALMONN）。音频首先由一个或多个**音频编码器**（如Whisper编码器、BEATs）提取特征，然后通过一个**适配器**模块将音频特征映射为LLM可理解的令牌嵌入。这些音频令牌与一个文本提示（如“识别语音并将内容转换为文本，任何数学表达式应以LaTeX格式转录”）的令牌拼接，共同输入一个大型语言模型（如LLaMA），由其自回归地生成LaTeX字符串。
-    *   **组件**：音频编码器 + 适配器 + LLM解码器。该架构避免了中间转写步骤，试图直接建模从语音到符号的映射。
+论文探讨了两大类方法，其架构如图1所示。
 
-![论文中的图片](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/gk8WMxzIQP-0.png)
+1. ASR后校正流水线
+- 输入：原始音频波形。
+- 流程：首先使用冻结的Whisper-Large v3 ASR模型将音频转录为自然语言文本（例如：“the field strength tensor...”）。然后，将该文本输入给一个微调过的LLM（如Qwen2.5系列）。LLM接收一个系统提示和包含转录文本的用户消息，其任务是将转录文本“纠正”并转换为正确的LaTeX代码。
+- 核心：这是一个串行流水线，依赖ASR转录质量。LLM作为后处理器，利用其强大的语言先验知识来纠正ASR的错误并完成格式转换。
 
-*图1展示了两种方法的示意图：(a) 后校正方法，音频经Whisper转写后输入LLaMA进行校正；(b) 端到端方法，音频经Whisper和BEATs编码后，通过适配器与提示一起输入LLaMA生成LaTeX。*
+2. 端到端多模态模型
+- 输入：原始音频波形。
+- 流程：如图1(b)所示（图中标识为SALMONN架构），音频首先通过两个并行的音频编码器（Whisper编码器和BEATs编码器）提取特征。这些特征通过一个适配器模块（Adapter）进行融合与对齐，转换为与LLM词嵌入维度匹配的音频token序列。这些音频token与一个文本提示（Prompt）的token序列拼接，共同输入到一个基于LLaMA的LLM解码器中。LLM通过自回归方式直接生成最终的LaTeX代码。
+- 核心：这是一个端到端模型，跳过了显式的语音转文本中间步骤，试图直接从声学信号理解语义并生成结构化输出。
+
+![S2L方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/gk8WMxzIQP-0.png)
+
+图1：S2L方法示意图。(a) ASR后校正流水线：音频经ASR模型转录，结果传给LLM进行LaTeX转换。(b) 多模态端到端方法（SALMONN）：原始音频经两个音频编码器和适配器处理，得到的音频与文本提示token一起输入LLaMA基LLM以生成LaTeX。
 
 ### 💡 核心创新点
 
-1.  **首个大规模开源S2L数据集**：创建了包含约66k人工标注（英/俄双语，33位标注者）和571k合成音频的S2L数据集，覆盖孤立方程和内嵌方程的句子两个子集，填补了该领域缺乏公开、多样化、大规模训练/评测数据的空白。
-2.  **系统性的多模型评估框架**：在统一数据集上，全面对比了从轻量级LLM后校正到大型端到端Audio-LLM的多种方案，量化了不同数据组合（人工、合成、混合）、不同训练策略（微调、少样本提示）的效果，建立了可靠的性能基线。
-3.  **引入数学句子识别基准**：定义并评估了**S2L-sentences**任务，即识别包含内嵌数学表达式的完整英语句子。相较于仅处理孤立方程，该任务更贴近实际应用（如讲义转录），并揭示了其更高的难度（最佳方程CER从17.5%升至39.7%）。
+1.  首个大规模开源S2L数据集：这是本文最核心的贡献。数据集包含超过66k个由33位人工标注者录制的音频样本和571k个TTS合成音频，覆盖英文和俄文的孤立公式（S2L-equations）及包含公式的句子（S2L-sentences）。数据来源多样（MathBridge, TextTeller, Proof-Pile），并经过严格的归一化处理，为社区提供了急需的研究资源。
+2.  对S2L任务的全面建模与评估：论文不仅提出了新的数据集和基准，还系统比较了ASR后校正（多种LLM规模）、少样本提示和端到端音频大模型（SALMONN, Flamingo等）等不同技术路线的性能，提供了详细的消融实验（如数据来源影响、多语言训练效果）。
+3.  揭示了“语音数学”任务的内在挑战：通过实验和讨论（如Table 3的预测示例），论文明确指出了该任务固有的歧义性（例如“kappa”可对应`\kappa`或`\varkappa`），并引入了语义等价但语法不同的评估难题，为此引入了专门的TeXBLEU指标和公式归一化预处理。
+4.  建立了首个数学句子识别基准（S2L-sentences）：将任务从孤立的公式识别扩展到更贴近实际应用的“自然语言中嵌入数学公式”的场景，实验表明此任务难度显著增加，并提供了初步的基线结果。
 
 ### 🔬 细节详述
 
-*   **训练数据**：核心为新构建的S2L数据集。方程部分（S2L-equations）：从MathBridge、TextTeller等收集并经启发式过滤和KaTeX编译检查，最终保留约10.7k唯一方程。句子部分（S2L-sentences）：从Proof-Pile-2的arXiv子集提取并清洗，得到约12k唯一句子。数据增强使用了XTTSv2等TTS模型进行大规模合成（571k样本）。
-*   **损失函数**：对于LLM微调，使用**交叉熵损失**（Cross-Entropy Loss）。
-*   **训练策略**：使用AdamW优化器，权重衰减0.01，学习率1e-4，线性学习率调度器。对于Qwen2.5-7B等大模型，使用**LoRA**（rank=8, alpha=32）进行高效微调，冻结主干，仅适配注意力投影层。SALMONN训练时冻结音频编码器和适配器，仅微调LLaMA部分。
-*   **关键超参数**：批量大小16，训练1个epoch。SALMONN训练使用2张H100 GPU，6个epoch，梯度累积3步，批大小12，学习率3e-5（含3000步warmup和余弦衰减）。
-*   **训练硬件**：主要使用NVIDIA A100 GPU进行LLM微调；SALMONN使用2张H100-80GB GPU训练。
-*   **推理细节**：论文未详细说明解码策略（如beam search size、温度等）。
-*   **正则化技巧**：在LoRA微调中应用了dropout（SALMONN设置为10%）。
+- 训练数据：
+    - S2L-equations：约10.7k个独立英文/俄文公式，由人工标注23k+（英文）和18k+（俄文）个音频；另外使用TTS（如XTTSv2）生成了超过450k（英文）和53k（俄文）个合成音频。数据来源包括经过筛选的MathBridge、TextTeller公式以及GPT-4生成的公式。
+    - S2L-sentences：约12k个来自Proof-Pile的数学句子，人工标注24k+个音频，TTS生成67k+个音频。
+    - 预处理：所有LaTeX公式均通过KaTeX编译器进行归一化处理（统一格式、去除多余空格、检查可编译性）。所有音频统一重采样至16kHz。
+- 损失函数：未明确说明，但对于LLM微调任务，通常使用标准的下一个token预测交叉熵损失。
+- 训练策略：
+    - Qwen模型（S2L-equations）：使用AdamW优化器，学习率1e-4，线性调度器，权重衰减0.01，batch size 16，在单张A100 GPU上训练1个epoch。
+    - Qwen模型（S2L-sentences）：超参数类似，但对于7B模型使用了LoRA（rank=8, alpha=32）进行高效微调。
+    - SALMONN：使用LoRA微调LLaMA部分（rank=8, alpha=32），冻结Whisper和BEATs编码器。在2张H100 GPU上训练6个epoch，学习率3e-5（含3000步warmup），使用混合精度（float16）。
+- 关键超参数：对比的LLM规模包括0.5B、1.5B、7B（Qwen系列）以及13B（SALMONN）。
+- 训练硬件：单卡A100（Qwen实验）、双卡H100（SALMONN实验）。
+- 推理细节：未详细说明解码策略（如beam search），但提及了5-shot和25-shot的少样本提示评估。
 
 ### 📊 实验结果
 
-**主要基准与指标**：在自建的S2L-equations（英文测试集）和S2L-sentences（英文测试集）上进行评估，主要指标为**CER**（字符错误率）和**TeXBLEU**。
+论文在两个主要基准上进行了评估：MathSpeech基准和自建的S2L-equations及S2L-sentences基准。
 
-**S2L-equations关键结果（表2/4，英文测试）**：
-| 模型 | 方法 | 训练语言 | 测试CER (%) | TeXBLEU | 与MathSpeech CER对比 (在S2L-eq上) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| MathSpeech (120M) | 后校正 | Eng | 64.04 | 83.71 | 基线 |
-| Qwen2.5-0.5B | 后校正 | Eng+Rus | 27.21 (Full Mix) | 90.20 | **-36.83** |
-| Qwen2.5-1.5B | 后校正 | Eng+Rus | 25.69 (Full Mix) | 90.70 | **-38.35** |
-| **SALMONN-13B** | **端到端** | Eng | **17.50** (Mix-full) | **93.68** | **-46.54** |
-| *在MathSpeech基准上* | | | *30.0 (Qwen)* | *~84* | *相当 (27.7 vs 30.0)* |
+表4：与MathSpeech在MathSpeech基准及S2L-equations（英文测试集）上的比较（指标：CER）
+| 模型 | MathSpeech基准 | S2L-equations基准 |
+| :--- | :--- | :--- |
+| MathSpeech | 27.7% | 64.0% |
+| Qwen (0.5B) | 30.0% | 27.2% |
+| SALMONN (13B) | 27.7% | 17.5% |
+关键结论：本文提出的模型在MathSpeech基准上与MathSpeech模型性能相当（CER约28-30%）。但在本文自建的S2L-equations基准上，本文模型（尤其是SALMONN）显著优于MathSpeech模型（17.5% vs. 64.0%），表明其对更具挑战性和多样性的数据有更好的泛化能力。
 
-**S2L-sentences关键结果（表5，英文测试）**：
-| 模型 | 方法 | 训练数据 | 测试CER (句子) | 测试CER (文本) | 测试CER (方程) | TeXBLEU (方程) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Qwen2.5-7B (LoRA) | 后校正 | Mix | **18.75** | **12.36** | 43.75 | 85.46 |
-| **SALMONN-13B** | **端到端** | Mix | 15.43 | 9.57 | **39.68** | 85.76 |
-| Qwen2.5-1.5B (25-shot) | 后校正 | H | 24.05 | 17.26 | 56.77 | 78.57 |
+表2（节选）：S2L-equations英文测试结果（Disjoint Split，指标：CER）
+| 模型 | 训练数据 | 测试: Mix | 测试: H | 测试: A |
+| :--- | :--- | :--- | :--- | :--- |
+| Qwen2.5-0.5B | Mix-full (英+俄) | 27.21 | 27.03 | 27.42 |
+| Qwen2.5-1.5B | Mix-full (英+俄) | 25.69 | 24.91 | 26.61 |
+| SALMONN-13B | Mix-full (英) | 17.50 | 18.17 | 16.70 |
+关键结论：端到端模型SALMONN-13B取得了最佳性能（CER 17.5%）。1.5B模型通常优于0.5B模型。添加更多TTS数据（Mix-full）对性能有显著提升。
 
-**关键发现**：
-1.  **端到端模型（SALMONN）在孤立方程上表现最佳**，CER远低于后校正方法。
-2.  **处理包含方程的句子时，性能显著下降**，最佳方程CER从17.5%升至39.7%，凸显了上下文带来的挑战。
-3.  **人工标注数据通常比纯合成数据训练的模型表现更好**，但混合数据能带来提升。
-4.  **少样本提示效果远差于微调**，即使是25-shot也难敌微调后的小模型。
+![S2L-equations完整结果表](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/gk8WMxzIQP-1.png)
+
+图5：S2L-equations英文测试集完整结果对比图。
+
+表5（节选）：S2L-sentences结果（Disjoint Split，指标：CER）
+| 模型 | 训练数据 | 测试: H (句子CER) | 测试: H (公式CER) |
+| :--- | :--- | :--- | :--- |
+| Qwen2.5-1.5B | H | 25.96 | 53.13 |
+| Qwen2.5-7B (LoRA) | Mix | 18.75 | 43.75 |
+| SALMONN-13B | Mix | 15.43 | 39.68 |
+关键结论：S2L-sentences任务更难，最佳模型（SALMONN）的公式CER仍接近40%。更大的模型（7B LoRA）在此任务上明显优于小模型。人工标注数据训练对性能提升显著。
 
 ### ⚖️ 评分理由
 
--   **学术质量：5.5/7**。论文在**数据集构建**和**系统性评估**方面做得扎实，提供了当前最全面的S2L任务数据和基线。创新性体现在首次定义并公开了双语、多粒度（方程/句子）的基准，并探索了Audio-LLM的应用。技术正确性良好，实验设计合理（如不重叠公式的测试集）。但模型架构层面的深度创新有限，更多是现有技术的整合与应用；对口语数学歧义的本质问题探讨不够深入。
--   **选题价值：1.5/2**。任务**垂直但实用**，针对教育、科研中的具体痛点。在“语音+结构化输出”的细分方向上具有前瞻性，为多模态AI理解专业领域内容提供了案例。与音频/语音读者的相关性在于展示了如何处理特定领域（数学）的语音理解难题。
--   **开源与复现加成：0.5/1**。论文明确提供了**数据集**（Hugging Face链接）和**代码**（GitHub链接）仓库，并详细列出了训练超参数。**权重未明确提及是否开源**（如“Model weights are available at...”），这是一个小扣分点。但整体复现友好度较高。
+- 学术质量：6.0/7。论文贡献清晰（新数据集、系统性评估），技术路线（ASR后校正、端到端模型）选择合理且实现扎实。实验设计全面，进行了多维度消融（数据类型、语言、模型规模）。但部分结论的支撑可以更有力，例如，端到端模型（SALMONN）虽表现最佳，但论文未能深入分析其相对于强大的小模型（Qwen-0.5B）的优越性具体源于何处，是架构本身还是更大的模型参数量。此外，对“歧义性”这一核心挑战的量化分析有待深入。
+- 选题价值：1.5/2。选题（语音转LaTeX）具有明确的应用场景（教育、科研），属于垂直但重要的细分领域。发布的数据集和基准为该特定任务的研究奠定了基础，对相关社区有直接价值。但其应用广度不及通用语音识别或对话系统。
+- 开源与复现加成：+1.0/1。论文在开源方面做得非常出色。提供了完整的数据集链接（HuggingFace）、代码仓库（GitHub），并在附录中详细列出了训练超参数、数据集统计、评估指标定义等复现所需信息。这极大地增强了论文的可信度和可复现性。
 
 ---
 

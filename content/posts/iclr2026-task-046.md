@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频编辑 论文列表"
+title: "ICLR 2026 - 音频生成 #语音合成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频编辑"]
+tags: ["音频生成 #语音合成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频编辑 方向论文"
+description: "共 1 篇 ICLR 2026 音频生成 #语音合成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频编辑
+# ICLR 2026 - 音频生成 #语音合成
 
 共 **1** 篇论文
 
@@ -18,40 +18,38 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [SmartDJ: Declarative Audio Editing with Audio Language Model](/audio-paper-digest-blog/posts/2026-05-03-smartdj-declarative-audio-editing-with-audio) | 8.0分 | 前25% |
+| 🥇 | [Continuous Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-continuous-audio-language-models) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [SmartDJ: Declarative Audio Editing with Audio Language Model](/audio-paper-digest-blog/posts/2026-05-03-smartdj-declarative-audio-editing-with-audio)
+### 🥇 [Continuous Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-continuous-audio-language-models)
 
-🔥 **8.0/10** | 前25% | #音频编辑 | #音频大模型 #扩散模型 | #音频大模型 #扩散模型
+✅ **7.5/10** | 前25% | #音频生成 #语音合成 | #自回归模型 #一致性模型 #流匹配 | #音频生成 #语音合成
 
 👥 **作者与机构**
 
-- 第一作者：Zitong Lan (宾夕法尼亚大学)
-- 通讯作者：未说明（论文中未明确标注通讯作者）
-- 作者列表：Zitong Lan (宾夕法尼亚大学), Yiduo Hao (宾夕法尼亚大学), Mingmin Zhao (宾夕法尼亚大学)
+- 第一作者：Simon Rouard（Kyutai, UMR STMS IRCAM-CNRS Sorbonne Univ.）
+- 通讯作者：未明确说明（论文中Alexandre Défossez提供了联系邮箱，且通常为通讯作者，但格式未严格标注）
+- 作者列表：Simon Rouard（Kyutai, UMR STMS IRCAM-CNRS Sorbonne Univ.）、Manu Orsini（Kyutai）、Axel Roebel（UMR STMS IRCAM-CNRS Sorbonne Univ.）、Neil Zeghidour（Kyutai）、Alexandre Défossez（Kyutai）
 
 💡 **毒舌点评**
 
-亮点：论文巧妙地将“声明式编辑”概念引入音频领域，并用一个LLM+扩散模型的“规划器-执行器”框架优雅实现，解决了长期困扰音频编辑的指令僵化问题，其配套的数据合成管道设计堪称“用魔法打败魔法”。短板：核心创新虽好，但整个系统对LLM和规则合成数据的依赖性极强，在真实、复杂且无“规则”的音频场景中，其规划的原子操作能否同样精准有效，目前仅靠合成数据评估，说服力打了折扣。
-
-🔗 **开源详情**
-
-- **代码**：论文中未提及代码链接，但承诺“upon acceptance to facilitate replication”。
-- **模型权重**：未提及具体公开权重链接。
-- **数据集**：合成的数据集将随代码开源。论文中提供了数据合成的详细流程和示例。
-- **Demo**：未提及。
-- **复现材料**：在附录（A.1-A.4， B.1-B.2）中提供了极其详细的实现细节，包括数据合成步骤、空间音频渲染公式、模型超参数、训练配置等，复现信息非常充分。
-- **论文中引用的开源项目**：Audio Flamingo 2 (ALM初始化), Qwen2.5-3B (LLM), CLAP (音频编码器), FLAN-T5 (LDM文本编码器), Stable-Audio-Open (基线), PyRoomAcoustics (空间音频模拟)。
+**亮点**：论文系统性地用“连续潜变量+一致性模型头”替代了困扰音频生成已久的“离散RVQ token+RQ-Transformer”范式，在语音和音乐任务上同时实现了质量与速度的双重提升，尤其是将采样头推理加速了12-19倍，非常实用。  
+**短板**：创新更多是架构和训练技巧的工程化组合（MAR+一致性模型+各种Tricks），理论突破有限；短上下文Transformer在语音任务上未带来增益（Tab. 2未提及该组件），说明其作用可能局限于音乐等高动态内容，通用性有待验证。
 
 📌 **核心摘要**
 
-本文提出了**SmartDJ**，一个**声明式立体声音频编辑框架**，旨在让用户通过自然语言描述期望的声音场景（如“让它听起来像一个阳光明媚的森林”），而非指定具体编辑步骤。**核心方法**是：1) 训练一个**音频语言模型（ALM）** 作为“规划器”，它同时理解原始音频和高级指令，并将其分解为一系列原子编辑操作（如“移除雨声”、“在右侧添加鸟鸣”）；2) 训练一个**条件潜在扩散模型（LDM）** 作为“编辑器”，按序执行这些原子操作。与已有方法相比，**新在**：1) 首次实现声明式编辑范式；2) 首次支持立体声音频的细粒度空间编辑；3) 设计了可扩展的**数据合成管道**，利用LLM（设计师）和信号处理（作曲家）生成训练所需的指令-操作-音频对。**主要实验结果**（Table 1）表明，在声明式编辑任务上，SmartDJ（FD=10.60， CLAP=0.21）在感知质量、语义对齐等指标上均显著优于所有基线方法（如Audit FD=28.56）。用户研究显示，其在音频质量和指令对齐上的胜率超过87%。**实际意义**在于为VR/AR、游戏和影视后期提供了更自然的音频创作与修改工具。**主要局限性**是当前依赖合成数据训练和评估，且系统为模块化设计，未实现端到端联合优化。
-
-![图1：SmartDJ框架核心概念图，展示了ALM规划器将高级指令分解为原子步骤，并由LDM编辑器逐步执行。](icassp-img://eNmANCkefl/0.png)
+1. **解决的问题**：传统音频语言模型依赖离散音频token（如RVQ），导致生成质量与计算成本之间存在难以调和的权衡：高质量需要更多token，从而增加计算负担。
+2. **方法核心**：提出**连续音频语言模型（CALM）**，直接在VAE的连续潜空间进行自回归建模。模型由三个核心组件构成：（1）带噪声注入的因果主干Transformer，用于建模长程依赖并抑制误差累积；（2）短上下文Transformer，为预测头提供干净的局部细节；（3）基于**一致性模型**的小型MLP头，负责从噪声中一步生成下一个连续潜变量。
+3. **与已有方法相比的新意**：完全绕过了离散量化，避免了有损压缩；用一步一致性模型采样取代了多步扩散采样或自回归解码RVQ层级，极大提升了推理效率；通过引入短上下文和噪声注入，解决了纯连续自回归模型在长序列生成上的稳定性问题。
+4. **主要实验结果**：
+    * **语音续写**：CALM（1步一致性）在自动指标（PPX: 23.8 vs. 26.8, VERT: 31.2 vs. 33.1）和人类评估（声学质量Elo: 2023 vs. 1870）上均优于32 RVQ的RQ-Transformer基线，采样头速度提升**12.3倍**。
+    * **文本转语音（TTS）**：CALM（1步LSD）在Librispeech test-clean上WER为1.81%，优于F5-TTS（2.42%）、DSM（1.95%）等强基线。经蒸馏后的**Pocket TTS（100M参数）** 可在CPU上实时运行。
+    * **音乐续写**：CALM（1步一致性）的FAD为0.83，优于32 RVQ基线的1.06，整体推理速度提升**2.2倍**，采样头速度提升**19.3倍**。人类评估的声学质量与享受度Elo均高于基线。
+5. **实际意义**：为高效、高质量的音频生成（特别是边缘设备部署）提供了新的技术路径，开源的Pocket TTS模型具有直接应用价值。
+6. **主要局限性**：短上下文Transformer在语音任务上的作用不明确；一致性模型在极少步（如1步）采样时的质量上界有待更深入探索；训练所用的大规模数据集未开源。
 
 ---
 

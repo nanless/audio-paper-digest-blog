@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["语音合成"]
 categories: [iclr-2026]
-description: "共 8 篇 ICLR 2026 语音合成 方向论文"
+description: "共 9 篇 ICLR 2026 语音合成 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 语音合成
 
-共 **8** 篇论文
+共 **9** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -22,10 +22,11 @@ hiddenInHomeList: true
 | 🥈 | [MambaVoiceCloning: Efficient and Expressive Text-to-Speech v](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text) | 8.5分 | 前25% |
 | 🥉 | [Gogo: Group-wise granularity-ordered codec for stable and ef](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for) | 8.5分 | 前25% |
 | 4. | [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Re](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi) | 8.5分 | 前25% |
-| 5. | [VibeVoice: Expressive Podcast Generation with Next-Token Dif](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next) | 7.5分 | 前25% |
-| 6. | [SpeechJudge: Towards Human-Level Judgment for Speech Natural](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for) | 7.5分 | 前25% |
-| 7. | [Toward Complex-Valued Neural Networks for Waveform Generatio](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for) | 7.5分 | 前25% |
-| 8. | [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low) | 7.5分 | 前25% |
+| 5. | [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion) | 8.0分 | 前25% |
+| 6. | [VibeVoice: Expressive Podcast Generation with Next-Token Dif](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next) | 7.5分 | 前25% |
+| 7. | [SpeechJudge: Towards Human-Level Judgment for Speech Natural](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for) | 7.5分 | 前25% |
+| 8. | [Toward Complex-Valued Neural Networks for Waveform Generatio](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for) | 7.5分 | 前25% |
+| 9. | [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low) | 7.5分 | 前25% |
 
 ---
 
@@ -202,7 +203,53 @@ hiddenInHomeList: true
 
 ---
 
-### 5. [VibeVoice: Expressive Podcast Generation with Next-Token Diffusion](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next)
+### 5. [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion)
+
+🔥 **8.0/10** | 前25% | #语音合成 | #扩散模型 | #自回归模型 #低资源
+
+👥 **作者与机构**
+
+-   第一作者：Yuancheng Wang（Meta Superintelligence Labs；香港中文大学（深圳））
+-   通讯作者：未说明
+-   作者列表：Yuancheng Wang（Meta Superintelligence Labs；香港中文大学（深圳）），Zhenyu Tang（Meta Superintelligence Labs），Yun Wang（Meta Superintelligence Labs），Arthur Hinsvark（Meta Superintelligence Labs），Yingru Liu（Meta Superintelligence Labs），Yinghao Aaron Li（Meta Superintelligence Labs），Kainan Peng（Meta Superintelligence Labs），Junyi Ao（Meta Superintelligence Labs；香港中文大学（深圳）），Mingbo Ma（Meta Superintelligence Labs），Mike Seltzer（Meta Superintelligence Labs），Qing He（Meta Superintelligence Labs），Xubo Liu（Meta Superintelligence Labs）
+
+💡 **毒舌点评**
+
+亮点在于SiTok将扩散自编码器成功应用于极低比特率语音分词，并通过直接的CTC语义监督，首次在12.5 Hz的极低令牌率下，同时实现了接近SOTA的重建质量和跨任务理解性能，有力挑战了“压缩、重建、语义三者不可兼得”的传统认知。短板是扩散模型固有的迭代解码效率问题，尽管文中提出了快捷微调等加速方案，但相比纯自回归或基于GAN的解码器，在实际流式应用中的延迟和计算开销仍是显著瓶颈。
+
+🔗 **开源详情**
+
+-   代码：论文承诺将在发表后发布推理代码和预训练模型检查点，但当前论文中未提供具体代码仓库链接。
+-   模型权重：论文明确表示将发布预训练模型检查点（在公共研究数据集上），但当前未提供下载链接。
+-   数据集：使用了200万小时的内部（in-house）数据，论文中未提及数据集的公开获取方式。
+-   Demo：提供了在线演示页面链接：https://sitok-demo.github.io/。
+-   复现材料：论文附录提供了极其详尽的信息，包括模型架构细节、训练循环伪代码、数据处理流程、超参数设置等，复现指引非常充分。
+-   论文中引用的开源项目：主要依赖了Llama架构、RoPE位置编码、Vocos声码器等公开的技术和组件。
+
+📌 **核心摘要**
+
+1.  要解决什么问题：现有语音分词器难以在极低比特率（低令牌率）下，同时平衡语义表征（用于理解）、高保真声学重建（用于生成）和高压缩率（用于语言建模）这三项核心目标。
+2.  方法核心是什么：提出SiTok，一个基于扩散自编码器的端到端框架。它使用一个编码器将梅尔谱图转换为连续潜变量，通过向量量化（VQ）得到离散令牌。解码器采用扩散模型（基于流匹配），通过迭代去噪过程，从离散令牌条件恢复出原始梅尔谱图。关键创新是引入了一个辅助的CTC解码器，对量化后的潜变量进行直接语义监督，以强制令牌包含语言学信息。
+3.  与已有方法相比新在哪里：与大多采用两阶段（先量化自监督特征，再扩散重建）或回归损失的方法不同，SiTok实现了端到端联合优化，让量化器直接为扩散重建服务。同时，它摒弃了间接的特征对齐，采用直接的CTC文本监督，更强制性地赋予离散令牌语义内容。此外，通过大规模模型和数据（1.6B参数，2M小时）进行扩展，探索了该范式的上限。
+4.  主要实验结果如何：SiTok在极端设置（12.5 Hz令牌率，0.2 kbps）下表现卓越。在重建任务上，其WER（3.34，带Token CFG）和SIM（0.682，带解码器微调）显著优于多个强基线。在理解任务上，基于SiTok令牌的LLM-ASR达到4.95 WER，远优于其他分词器。消融实验证实了语义正则化、扩散损失、码本大小/数量等关键设计选择的有效性。下表总结了关键重建结果对比：
+
+| 模型 | FPS/TPS | 码本数 | BR (kbps) | WER (↓) | SIM (↑) | UTMOS (↑) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Ground Truth | - | - | - | 2.14 | 0.730 | 3.53 |
+| DualCodec | 12.5/75 | 6 | 0.925 | 2.63 | 0.624 | 3.78 |
+| Mimi | 12.5/75 | 6 | 0.825 | 4.51 | 0.527 | 3.09 |
+| GLM4-Voice | 12.5/12.5 | 1 | 0.20 | - | - | - |
+| SiTok (CN=1) | 12.5/12.5 | 1 | 0.20 | 4.06 | 0.641 | 3.44 |
+| SiTok + Dec.FT | 12.5/12.5 | 1 | 0.20 | 3.79 | 0.682 | 3.48 |
+| SiTok + Token CFG | 12.5/12.5 | 1 | 0.20 | 3.34 | 0.635 | 3.60 |
+| SiTok (CN=4) | 12.5/50 | 4 | 0.70 | 2.80 | 0.660 | 3.46 |
+
+5.  实际意义是什么：SiTok提供了一种统一的语音表示方案，能在极高的压缩率下支持高质量的语音合成（如零样本TTS）和鲁棒的语音理解（如ASR、情感识别），有望成为下一代端到端语音-语言模型的关键组件，推动更高效、多模态的AI交互。
+6.  主要局限性是什么：1) 扩散解码器需要多步迭代，尽管有加速方案，但在实时性要求高的场景仍是挑战。2) 论文指出，其离散表征在下游理解任务上仍与连续特征（如wav2vec 2.0）存在性能差距。3) 模型训练依赖于大规模专有数据和算力。
+
+---
+
+### 6. [VibeVoice: Expressive Podcast Generation with Next-Token Diffusion](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #大语言模型 #零样本
 
@@ -232,7 +279,7 @@ hiddenInHomeList: true
 
 ---
 
-### 6. [SpeechJudge: Towards Human-Level Judgment for Speech Naturalness](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for)
+### 7. [SpeechJudge: Towards Human-Level Judgment for Speech Naturalness](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #强化学习 | #数据集 #基准测试
 
@@ -269,7 +316,7 @@ hiddenInHomeList: true
 
 ---
 
-### 7. [Toward Complex-Valued Neural Networks for Waveform Generation](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for)
+### 8. [Toward Complex-Valued Neural Networks for Waveform Generation](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #生成模型 | #信号处理 #波形生成
 
@@ -303,7 +350,7 @@ hiddenInHomeList: true
 
 ---
 
-### 8. [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low)
+### 9. [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low)
 
 ✅ **7.5/10** | 前25% | #语音合成 | #自回归模型 | #音频生成 #预训练
 

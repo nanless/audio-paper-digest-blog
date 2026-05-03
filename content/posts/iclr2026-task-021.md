@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["语音对话系统"]
 categories: [iclr-2026]
-description: "共 11 篇 ICLR 2026 语音对话系统 方向论文"
+description: "共 12 篇 ICLR 2026 语音对话系统 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 语音对话系统
 
-共 **11** 篇论文
+共 **12** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -20,15 +20,16 @@ hiddenInHomeList: true
 |------|------|------|------|
 | 🥇 | [Closing the Gap Between Text and Speech Understanding in LLM](/audio-paper-digest-blog/posts/2026-05-03-closing-the-gap-between-text-and-speech) | 10.0分 | 前10% |
 | 🥈 | [End-to-end Listen, Look, Speak and Act](/audio-paper-digest-blog/posts/2026-05-03-end-to-end-listen-look-speak-and-act) | 9.5分 | 前25% |
-| 🥉 | [From Text to Talk: Audio-Language Model Needs Non-Autoregres](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non) | 8.0分 | 前25% |
-| 4. | [DrVoice: Parallel Speech-Text Voice Conversation Model via D](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation) | 8.0分 | 前25% |
-| 5. | [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer) | 8.0分 | 前25% |
-| 6. | [STITCH: Simultaneous Thinking and Talking with Chunked Reaso](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with) | 7.5分 | 前25% |
-| 7. | [ParaS2S: Benchmarking and Aligning Spoken Language Models fo](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language) | 7.5分 | 前25% |
-| 8. | [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating) | 7.5分 | 前25% |
-| 9. | [WearVox: An Egocentric Multichannel Voice Assistant Benchmar](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice) | 7.5分 | 前25% |
-| 10. | [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text) | 7.5分 | 前25% |
-| 11. | [Human or Machine? A Preliminary Turing Test for Speech-to-Sp](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for) | 7.0分 | 前25% |
+| 🥉 | [Can Speech LLMs Think while Listening?](/audio-paper-digest-blog/posts/2026-05-03-can-speech-llms-think-while-listening) | 8.5分 | 前25% |
+| 4. | [From Text to Talk: Audio-Language Model Needs Non-Autoregres](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non) | 8.0分 | 前25% |
+| 5. | [DrVoice: Parallel Speech-Text Voice Conversation Model via D](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation) | 8.0分 | 前25% |
+| 6. | [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer) | 8.0分 | 前25% |
+| 7. | [STITCH: Simultaneous Thinking and Talking with Chunked Reaso](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with) | 7.5分 | 前25% |
+| 8. | [ParaS2S: Benchmarking and Aligning Spoken Language Models fo](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language) | 7.5分 | 前25% |
+| 9. | [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating) | 7.5分 | 前25% |
+| 10. | [WearVox: An Egocentric Multichannel Voice Assistant Benchmar](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice) | 7.5分 | 前25% |
+| 11. | [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text) | 7.5分 | 前25% |
+| 12. | [Human or Machine? A Preliminary Turing Test for Speech-to-Sp](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for) | 7.0分 | 前25% |
 
 ---
 
@@ -109,7 +110,62 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 🥉 [From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non)
+### 🥉 [Can Speech LLMs Think while Listening?](/audio-paper-digest-blog/posts/2026-05-03-can-speech-llms-think-while-listening)
+
+🔥 **8.5/10** | 前25% | #语音对话系统 | #偏好学习 | #语音大模型 #推理
+
+👥 **作者与机构**
+
+- 第一作者：Yi-Jen Shih (The University of Texas at Austin & Meta Superintelligence Labs)
+- 通讯作者：未明确说明。论文中Yi-Jen Shih、Desh Raj、Chunyang Wu、Wei Zhou均标注为“*”贡献相等，且提供个人邮箱。
+- 作者列表：
+    - Yi-Jen Shih（德克萨斯大学奥斯汀分校 & Meta超级智能实验室）
+    - Desh Raj（Meta超级智能实验室）
+    - Chunyang Wu（Meta超级智能实验室）
+    - Wei Zhou（Meta超级智能实验室）
+    - SK Bong（Meta超级智能实验室）
+    - Yashesh Gaur（Meta超级智能实验室）
+    - Jay Mahadeokar（Meta超级智能实验室）
+    - Ozlem Kalinli（Meta超级智能实验室）
+    - Michael L. Seltzer（Meta超级智能实验室）
+
+💡 **毒舌点评**
+
+亮点：论文提出的“边听边想”范式和“问题完整性”指标极具启发性，将人类认知过程巧妙地引入模型设计，并在多流架构上得到了有效的工程实现与验证，为解决语音交互的“思考-延迟”矛盾提供了优雅的新思路。短板：研究仅限于单轮、英语场景，且评测基准是基于文本基准转换而来，缺乏真实开放域对话场景和多轮交互的验证；另外，模型性能对“问题完整性”阈值θ敏感，实际部署时的鲁棒性存疑。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接。
+- 模型权重：论文中未提及开源训练后的模型权重，仅基于公开的Moshi模型进行微调。
+- 数据集：论文中提及使用的源数据集（CoT-Collection）是公开的，但经过其口语化改写和TTS转换后的训练集及SRQA评测集未提及是否公开。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详细的训练超参数（附录A.2）、评估基准的统计与示例（附录A.3）、系统提示模板（附录A.6），复现信息较充分。
+- 论文中引用的开源项目：主要依赖Moshi模型（作为基座和对比），并使用了Pyannote VAD、Whisper进行评估，以及LLaMA-3.1-405B作为LLM判官。
+- 开源计划：论文中未提及后续开源计划。
+
+📌 **核心摘要**
+
+1. 要解决什么问题：现有语音大模型在复杂推理任务上性能不足，且传统的“听完-思考-回答”流程会引入不可接受的响应延迟，影响交互自然性。
+2. 方法核心：基于多流架构（Moshi），在文本通道上引入链式思维（CoT）以提升推理准确率；为解决延迟，提出“边听边想”范式，通过一个新颖的基于KL散度的“问题完整性”指标（ζ）来动态判断何时可以开始思考，并利用直接偏好优化（DPO）进一步优化模型在早推理场景下的表现。
+3. 与已有方法相比新在哪里：相比仅在语音模态上做CoT或简单的固定时间偏移方法，本文创新在于：a) 首次在多流语音模型上探索文本CoT；b) 提出了语义感知的、可控的早推理触发点选择机制（问题完整性）；c) 通过DPO训练使模型能自适应地调整其推理过程（如更新或缩短CoT）。
+4. 主要实验结果如何：
+    - 准确率：在自建的SRQA基准上，文本CoT微调使Moshi基线在推理任务上的平均准确率提升2.4倍（例如ARC-E从30.2%提升至77.7%）。
+    - 延迟与权衡：基于“问题完整性”的早推理方法在相同延迟下，比启发式基线（固定单词偏移）在ARC-E上带来4%的准确率提升。结合长度偏好的DPO训练，实现了平均70%的延迟降低且不损失准确率（例如ARC-E延迟从49.2 token降至12.0 token，准确率从62.8%升至65.4%）。
+    关键实验数据见下表：
+    | 评估集 | 模型 | 准确率 (%) | 延迟 (# tokens) |
+    | :--- | :--- | :--- | :--- |
+    | ARC-E | Moshi (基线) | 30.2 | - |
+    | | Moshi + CoT (本文SFT) | 77.7 | ~78 |
+    | | QC (θ=0.75) + Correct-DPO | 65.4 | 12.0 |
+    | ARC-C | Moshi (基线) | 21.5 | - |
+    | | Moshi + CoT (本文SFT) | 59.8 | - |
+    | | QC (θ=0.75) + Correct-DPO | 46.0 | 13.2 |
+5. 实际意义：显著提升了语音交互系统处理复杂查询的能力，并极大地降低了“首包延迟”，使语音助手在回答复杂问题时更加智能和实时，推动了语音AI向更自然、高效的人机交互迈进。
+6. 主要局限性：评估基准全部由文本基准通过TTS转换而来，可能无法完全代表真实口语对话的噪声、歧义和语言多样性；仅研究了单轮问答，未涉及多轮对话场景；“问题完整性”指标依赖外部语言模型进行离线计算和监督，其在线实时计算的效率和准确性未探讨。
+
+---
+
+### 4. [From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training](/audio-paper-digest-blog/posts/2026-05-03-from-text-to-talk-audio-language-model-needs-non)
 
 🔥 **8.0/10** | 前25% | #语音对话系统 | #扩散模型 | #自回归模型 #多模态模型
 
@@ -168,7 +224,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 4. [DrVoice: Parallel Speech-Text Voice Conversation Model via Dual-Resolution Speech Representations](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation)
+### 5. [DrVoice: Parallel Speech-Text Voice Conversation Model via Dual-Resolution Speech Representations](/audio-paper-digest-blog/posts/2026-05-03-drvoice-parallel-speech-text-voice-conversation)
 
 🔥 **8.0/10** | 前25% | #语音对话系统 | #自回归模型 | #语音大模型 #端到端
 
@@ -203,7 +259,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 5. [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer)
+### 6. [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer)
 
 🔥 **8.0/10** | 前25% | #语音对话系统 | #自回归模型 | #多模态模型 #预训练
 
@@ -237,7 +293,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 6. [STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with)
+### 7. [STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models](/audio-paper-digest-blog/posts/2026-05-03-stitch-simultaneous-thinking-and-talking-with)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #生成模型 | #流式处理 #多模态模型
 
@@ -272,7 +328,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 7. [ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language)
+### 8. [ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-paras2s-benchmarking-and-aligning-spoken-language)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #强化学习 | #语音大模型 #基准测试
 
@@ -335,7 +391,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 8. [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating)
+### 9. [VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models](/audio-paper-digest-blog/posts/2026-05-03-voxprivacy-a-benchmark-for-evaluating)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #基准测试 | #语音大模型 #隐私保护
 
@@ -375,7 +431,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 9. [WearVox: An Egocentric Multichannel Voice Assistant Benchmark for Wearables](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice)
+### 10. [WearVox: An Egocentric Multichannel Voice Assistant Benchmark for Wearables](/audio-paper-digest-blog/posts/2026-05-03-wearvox-an-egocentric-multichannel-voice)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #基准测试 | #多通道 #鲁棒性
 
@@ -406,7 +462,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 10. [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text)
+### 11. [Towards True Speech-to-Speech Models Without Text Guidance](/audio-paper-digest-blog/posts/2026-05-03-towards-true-speech-to-speech-models-without-text)
 
 ✅ **7.5/10** | 前25% | #语音对话系统 | #预训练 | #语音大模型 #流匹配
 
@@ -461,7 +517,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 11. [Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for)
+### 12. [Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction](/audio-paper-digest-blog/posts/2026-05-03-human-or-machine-a-preliminary-turing-test-for)
 
 ✅ **7.0/10** | 前25% | #语音对话系统 | #基准测试 | #模型评估 #多语言
 
