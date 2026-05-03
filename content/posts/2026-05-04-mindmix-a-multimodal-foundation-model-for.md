@@ -55,14 +55,12 @@ hiddenInHomeList: true
 
 MindMix采用双流架构，其整体框架如图1所示。
 
-![MindMix整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-0.png)
+![MindMix整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-1.png)
 
 整体流程：给定一个配对的EEG片段（\(S_{EEG}\)）和音频片段（\(S_{Audio}\)，分别由模态特定编码器处理，得到初始投影向量\(E_{proj}\)和\(A_{proj}\)。这两个向量送入核心的CALRA模块进行深度交互和对齐，得到最终的对齐嵌入\(E_{aligned}\)和\(A_{aligned}\)。整个框架通过对比学习损失（\(L_{CL}\)）端到端优化，目标是拉近匹配的EEG-音频对在嵌入空间中的距离，推远不匹配的对。
 
 1. EEG编码器（\(f_{EEG}\)）
 这是一个从头预训练的高容量Transformer编码器，旨在学习��用的EEG特征表示。其架构如图2所示。
-
-![EEG编码器预训练架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-1.png)
 
 *   输入处理：采用通道无关的分块（Channel-Independent Patching） 策略处理不同通道数的EEG信号。每个通道的信号被独立分割成固定长度的时间块（Patch）。
 *   嵌入构建：每个块通过1D卷积得到初始嵌入\(\tilde{X}\)，然后通过向量量化（VQ） 转换为离散的神经令牌\(v \in V\)。最终的输入嵌入\(E_{patch}\)由离散令牌\(v\)、可学习的时间嵌入（T） （指示块在时间序列中的位置）和可学习的空间嵌入（E） （通过查找表将10-20系统电极名映射为向量，以处理异构的通道配置）相加得到。
@@ -76,8 +74,6 @@ MindMix采用双流架构，其整体框架如图1所示。
 
 3. 跨注意力低秩对齐模块（CALRA）
 这是实现深度神经-声学对齐的核心模块，其详细结构如图3所示。
-
-![CALRA模块详细结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-2.png)
 
 CALRA接收两个模态的初始投影向量\(E_{proj}\)和\(A_{proj}\)，并执行以下操作：
 *   类型特定对齐器（Type-specific Aligner）：根据音频类型标签（如语音、音乐），将输入投影通过一个可学习的变换\(f_k\)进行路由，得到\(E'_{proj}\)和\(A'_{proj}\)。这允许模型为不同类型的听觉刺激采用不同的对齐策略。
@@ -148,9 +144,11 @@ CALRA接收两个模态的初始投影向量\(E_{proj}\)和\(A_{proj}\)，并执
 *   编码器消融：将EEG编码器替换为LaBraM、EEGNet或CBraMod，或替换音频编码器为HuBERT或梅尔频谱，性能均有下降，说明了专用编码器和预训练音频表征的重要性。
 *   CALRA组件消融：移除双向交叉注意力（w/o Cross-Attention）导致性能下降最大（AAD准确率降5.58%），证明了其核心作用；移除共享低秩对齐（w/o Shared Low-Rank）也有显著影响。
 
-![MindMix与EEG-Only模型性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-3.png)
+MindMix与EEG-Only模型性能对比图]
 
 图4结论：该图对比了完整MindMix模型与其仅使用EEG编码器的版本（EEG-Only）。EEG-Only版本本身已优于LaBraM等基线，表明EEG编码器强劲。而MindMix在所有任务上均大幅超越EEG-Only版本，量化地证明了深度跨模态对齐带来的巨大性能增益。
+
+神经科学可解释性分析图]
 
 图5结论：(a) 展示了从EEG嵌入重建的梅尔谱图。MindMix的重建（左）清晰保留了谐波结构，而LaBraM变体和基线方法则较为模糊。(b) 展示了EEG编码器的空间注意力权重图，激活区域集中在左侧颞区，对应初级听觉皮层，符合语音处理的左半球偏侧化规律，证明模型学到了具有神经科学意义的表征。
 

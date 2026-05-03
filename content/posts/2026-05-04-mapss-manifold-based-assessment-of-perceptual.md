@@ -109,13 +109,13 @@ MAPSS并非一个生成或识别模型，而是一个评估度量计算框架，
 
 图2：PS和PM在不同阈值下的归一化互信息（NMI）。随着阈值收紧（选择质量更差的帧），NMI降低，表明两个指标的互补性增强。
 
-![不同自监督模型及其Transformer层对性能的影响图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-5.png)
+![不同自监督模型及其Transformer层对性能的影响图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-8.png)
 
 图6：在英语混合数据上，不同自监督模型（wav2vec2, HuBERT, WavLM的Large和Base版本）及其不同Transformer层对PS和PM的PCC/SRCC性能的影响。
 
-![PS和PM值的时间分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-8.png)
+![不同场景下Transformer层对PS和PM性能的影响图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-0.png)
 
-图9：PS和PM帧级值的概率分布直方图。PM值集中在0附近，PS值集中在1附近。
+图7：在不同场景（英语、西班牙语、含鼓点音乐、无鼓点音乐）下，各自预训练自监督模型的Transformer层对PS和PM的PCC/SRCC性能的影响。
 
 ### ⚖️ 评分理由
 

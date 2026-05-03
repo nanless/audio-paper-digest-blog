@@ -69,8 +69,6 @@ hiddenInHomeList: true
 
 ComVo是一个基于GAN的iSTFT声码器，其核心目标是预测复数频谱图，然后通过iSTFT变换为波形。其架构如图2所示，主要分为生成器和判别器两大部分。
 
-![ComVo整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U4GXPqm3Va-1.png)
-
 1. 生成器 (Generator)：如图2(a)所示，它以梅尔频谱图为输入（视为实部存在、虚部为零的复数特征），输出为复数STFT系数。
 - 输入处理：输入的100维梅尔频谱图首先被解释为复数（虚部初始化为0），并通过一个复值1D卷积层（Complex Conv1d）。
 - 相位量化层 (Phase Quantization Layer)：紧跟在第一个复值卷积之后。如公式(1)(2)所示，它对特征的相位角进行离散量化（Nq=128），并将量化后的相位与原幅度重新组合。这一步使用直通估计器（STE）保持可微性。其动机是作为归纳偏置，稳定早期训练阶段相位的形成。
@@ -158,9 +156,9 @@ ComVo是一个基于GAN的iSTFT声码器，其核心目标是预测复数频谱�
     - 同时使用CVNN生成器和cMRD判别器（GCDC）效果最佳。
     - Grad-CAM可视化（图3）显示，cMRD的注意力图更聚焦于语音相关的频谱结构。
 
-![Grad-CAM对比可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U4GXPqm3Va-2.png)
+![cMRD子判别器的PyTorch自动微分计算图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U4GXPqm3Va-12.png)
 
-图3：不同生成器-判别器配置下，cMRD三个子判别器的Grad-CAM激活图对比。可以看到，使用cMRD（右两列）的注意力图更结构化。
+图：cMRD子判别器的PyTorch自动微分（autograd）计算图，可见ComplexConv2dFunctionBackward等复值算子节点，用于说明复值反向传播的计算结构与节点规模。
 
 - 相位量化级别影响 (表6)：
     - 不使用相位量化（Nq=0）时MR-STFT最低（重建最准），但UTMOS/PESQ不是最高。

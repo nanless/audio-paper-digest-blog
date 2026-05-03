@@ -99,8 +99,6 @@ SongEcho基于预训练的文本到歌曲模型ACE-Step（一个Linear Diffusion
 6.  输出：扩散模型预测出的噪声残差，最终通过自编码器解码器（Deep Compression AutoEncoder Decoder）生成完整的歌曲音频（人声+伴奏）。
 7.  关键设计选择及动机：IA-EiLM被插入在Self-Attention层之后、FFN层之前。动机是Self-Attention执行全局信息交互，可能会稀释已注入的旋律信息；而FFN执行局部特征变换，能更好地保留和整合旋律条件。
 
-![不同条件注入机制对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-0.png)
-
 图1直观展示了EiLM相对于交叉注意力和元素加法的优势：它既利用了序列间的时序对应性（无需学习对齐），又通过仿射变换提供了比单纯加法更灵活的调制能力。
 
 ### 💡 核心创新点
@@ -158,9 +156,9 @@ SongEcho基于预训练的文本到歌曲模型ACE-Step（一个Linear Diffusion
 
 相关图表引用：
 
-![MuseControlLite在全音频条件下的注意力可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-4.png)
+![三种条件注入机制对比：Cross-Attention、Element-Wise Addition 与 EiLM](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-6.png)
 
-图5可视化了MuseControlLite在全音频条件下的注意力图，显示出清晰的对角线模式。这支持了论文的分析：当条件为目标全音频时，静态条件编码可通过退化的解（γ≈0，β≈目标）实现“复制”，形成近似单位矩阵的注意力，从而抑制隐藏状态。但这在仅提供旋律压缩信息的任务中不可行。
+图1对比了三种条件注入机制：(a) Cross-Attention 通过 K/V 注入条件 c，需要单独学习时间对齐；(b) Element-Wise Addition 将条件经线性投影后逐元素相加；(c) EiLM（本文方法）由条件 c 经线性层生成 γ 和 β，对隐藏状态 h 进行逐元素乘法和加法调制，提供比加法更灵活的调制能力，并免去额外的时间对齐学习。⊕ 表示逐元素加法，⊙ 表示逐元素乘法。
 
 ### ⚖️ 评分理由
 

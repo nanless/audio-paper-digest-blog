@@ -44,9 +44,9 @@ hiddenInHomeList: true
 
 AIDD（Audio Inpainting using Discrete Diffusion）的整体架构分为训练和推理两个阶段，其核心组件和流程如下图所示。
 
-![AIDD方法概述图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9ZogqiyWXm-0.png)
+![AIDD方法概述图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9ZogqiyWXm-6.png)
 
-图1：AIDD方法概述图。训练时，输入波形先由WavTokenizer编码为离散令牌序列，随后在随机时间步t应用区间掩码（Span Masking） 噪声，生成带掩码的令牌序列。扩散Transformer（DiT）接收该序列，预测每个位置上的具体分数（Concrete Score），并计算DWDSE损失和导数正则化损失进行优化。推理时，输入含间隙的波形同样由WavTokenizer编码，DiT通过反向扩散迭代预测被掩码的令牌，最后由WavTokenizer解码生成修复后的波形，并与原始未损坏区域拼接。
+图1：AIDD方法概述图（论文Figure 1）。上半部分展示训练流程：原始波形经WavTokenizer编码为离散令牌序列，对其施加区间掩码（Span Masking）后输入扩散Transformer（DiT），DiT在时间步t条件下预测各位置的具体分数（Concrete Score），并由DWDSE损失与导数正则化损失共同监督。下半部分展示推理流程：含间隙波形被编码为令牌后，DiT通过反向扩散迭代填充掩码位置，再由WavTokenizer解码还原为修复波形。
 
 1.  音频令牌化模块（WavTokenizer）：这是方法的起点和终点。WavTokenizer是一个预训练的音频压缩模型，其编码器将高维原始波形（如4秒音频）压缩为长度约300的紧凑离散令牌序列（词表大小约为4096）。解码器则将修复后的令牌序列还原为波形。选择WavTokenizer是因为其在极高压缩比下仍能保持较高的重建保真度和语义信息。
 2.  离散扩散模型（Discrete Diffusion Model）：这是生成修复的核心。它采用扩散Transformer（DiT） 架构，在标准的编码器Transformer中集成了时间步条件，并使用了旋转位置编码（RoPE）。模型的目标不是预测噪声，而是预测具体分数（Concrete Score），即通过式(3)的DWDSE（扩散加权去噪得分熵）目标函数训练，以学习令牌之间的转移比率。前向过程采用吸收设计，即令牌以一定概率被替换为统一的`[MASK]`令牌。
@@ -94,10 +94,6 @@ AIDD（Audio Inpainting using Discrete Diffusion）的整体架构分为训练�
 关键结论：AIDD在150ms间隙的FAD略逊于CQT-Diff+，但在所有更长间隙（200-300ms）上均取得最佳FAD。在表征频谱失真的LSD和表征感知质量的ODG指标上，AIDD在所有间隙长度上均取得最佳成绩，显著优于所有基线。
 
 在MAESTRO数据集上的性能对比（表2）
-
-![MAESTRO数据集ODG分数对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9ZogqiyWXm-3.png)
-
-图2：MAESTRO数据集不同间隙长度下的ODG（PEA-Q）分数对比。柱状图直观显示了AIDD在375ms和750ms两个更长间隙上，其ODG分数均显著高于GACELA、bin2bin和bin2bin-MIDI，表明其感知质量更优。
 
 | Method       | 375 ms (↑)     | 750 ms (↑)     |
 |--------------|----------------|----------------|

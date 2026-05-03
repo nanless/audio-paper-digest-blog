@@ -54,13 +54,13 @@ hiddenInHomeList: true
 
 该框架的核心创新在于将通用的DPO扩展到多模态场景，并设计了针对情感推理任务特有缺陷（模态混淆、线索虚假关联、幻觉）的偏好构造和去偏机制。
 
-![EmoReAlM 基准测试任务示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-1.png)
+![MLLM 情感推理缺陷示例：虚假线索关联与幻觉](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-0.png)
 
-图2展示了EmoReAlM基准中的不同任务类型，包括基本情感推理、模态一致性和压力测试（检测虚假关联与幻觉），清晰地定义了评估维度。
+图1对比了Ground Truth与模型Bad Output：模型在错误回答中既出现了"看到他从眼中擦泪"这样的AV线索幻觉（红色标记），也出现了"背景墙的方形图案"这样与情感无关的虚假关联（蓝色标记），清晰展示了现有MLLMs在情感推理中的两类典型缺陷。
 
-![AVEm-DPO中的偏好对构建](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-3.png)
+![AVEm-DPO 偏好数据样例（视频-提示-Chosen/Rejected 响应）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-3.png)
 
-图4详细说明了AVEm-DPO如何构建两类偏好对：上部为基于提示的模态偏好（针对不同模态输入），下部为基于情感的响应偏好（针对不同回答类型），这是该方法的核心数据构造逻辑。
+该表格展示了AVEm-DPO训练数据的具体样例：每行包含视频片段、提示问题、被选中的正确响应（Chosen Response），以及两类被拒绝的响应——视频相关但情感无关（video-relevant）和情感相关但视频无关即幻觉（emotion-relevant），体现了基于情感的响应偏好（ERP）的核心构造逻辑。
 
 ### 💡 核心创新点
 

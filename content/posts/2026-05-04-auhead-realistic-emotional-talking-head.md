@@ -155,9 +155,9 @@ AUHead与现有方法框架对比图。(a) 现有方法直接从音频和肖像�
 
 消融实验2：AU表示与引导尺度（图3， 表2）
 
-![不同AU引导尺度的影响图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-2.png)
+![AU引导尺度影响曲线与定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-2.png)
 
-不同AU引导尺度对视觉质量（FID）和情感表达（Emotion ACC, MAE）的影响图。星号（⋆）标记了最佳权衡点（尺度3.5）。
+左：不同AU引导尺度（2.0–5.0）对FID、Emotion ACC、MAE的影响曲线，星号（⋆）标记最佳权衡点（尺度3.5）；右：与基线方法的人脸生成定性对比，标注了"Teeth Abnormal""Blur"等典型伪影。
 - 图3结论：随着AU引导尺度增加，情感准确率提高，MAE降低（表达控制增强），FID先降后升。尺度3.5时取得最佳平衡。
 - 表2结论：相比1D AU序列（AU Seq），使用2D表示（LMK或RoM）能显著提升PSNR、SSIM、FID和LMD指标，验证了空间表示的有效性。但Sync分数在2D表示下略有下降。
 
@@ -167,13 +167,13 @@ AUHead与现有方法框架对比图。(a) 现有方法直接从音频和肖像�
 
 与SOTA方法在MEAD和CREMA上的定性结果对比图。标注了其他方法的常见伪影（牙齿异常、无牙齿、模糊、表情平淡）。
 
-![中性音频下使用ALM生成的AU进行面部动画对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-4.png)
+![FEAFA动作单元（AU）定义表与可视化界面](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-4.png)
 
-中性音频下使用ALM生成的AU进行面部动画对比图。展示了AUHead如何生成比MEMO基线更生动、情感更丰富的表情。
+FEAFA数据集的24个面部动作单元（AU1–AU24）定义列表，以及AU标注/可视化工具截图（左：AU强度数值面板；中：真实人脸；右：3D网格模型）。
 
-![生成帧与其对应AU二维表示图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-5.png)
+![各AU在不同强度下的面部局部变化示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-5.png)
 
-生成帧与其对应AU二维表示图。展示了生成的表情与输入的2D关键点（LMK）或网格（RoM）AU表示高度匹配。
+各动作单元（AU2、AU4、AU6、AU8、AU9、AU10、AU13、AU14、AU17–AU24）在不同强度（0–1）下对应的面部局部区域（眼睛、眉毛、嘴唇、下巴等）外观变化示例。
 
 ![跨风格、长序列生成可视化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-6.png)
 

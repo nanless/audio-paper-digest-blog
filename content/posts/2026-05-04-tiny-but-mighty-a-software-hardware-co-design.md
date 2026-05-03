@@ -98,21 +98,21 @@ NANOMIND本身并非一个单一的AI模型，而是一个支持在异构SoC上�
 1. 资源使用对比（图5）
 论文在不同硬件平台和框架下对比了运行不同VLM的内存占用。
 
-![图5：不同硬件平台与框架下，运行Llava-onevision-0.5B、Qwen2-VL-2B和SmolVLM-500M模型时的内存使用量（GB）对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-4.png)
+![图1：NANOMIND整体架构概览，左侧为软硬件分层（工作负载调度、量化、计算内核、驱动、OS与定制硬件），右侧为多模态推理流程（图像/语音输入经视觉编码器与Whisper后送入LLM并由TTS输出语音）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-4.png)
 
 关键结论：在所有平台上，NANOMIND（自身实现）和NanoVLM的内存使用均低于基于llama.cpp的部署，尤其是在高比特下。这归功于TABM的环形缓冲区对共享内存的优化。
 
 2. 吞吐量与延迟对比（图6）
 对比了Qwen2-VL-2B-Instruct（4-bit）在InfoVQA数据集上的性能。
 
-![图6：不同硬件平台上运行Qwen2-VL-2B-Instruct的吞吐量（tokens/s）与端到端延迟（s）对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-5.png)
+![图5与图6：上方为不同硬件平台与框架下Llava-onevision-0.5B、Qwen2-VL-2B、SmolVLM-500M在4-bit/8-bit量化下的内存使用量（GB）柱状图；下方为各平台运行Qwen2-VL-2B-Instruct的吞吐量（Tok/s，蓝色）与端到端延迟（s，橙色）对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-5.png)
 
 关键结论：尽管硬件（RK3566）弱于Orange Pi 5 Ultra（RK3588）和Jetson Nano，NANOMIND的吞吐量（35.7 tok/s）与Jetson Nano上的NanoVLM相当，且端到端延迟比Orange Pi 5 Ultra的rkllm实现低36.2%。
 
 3. 系统级性能分解（图7）
 从三个关键子系统验证设计有效性。
 
-![图7：系统分解性能图，包含(a)TABM与传统拷贝的内存与CPU使用对比，(b)视觉编码模型在NPU/CPU/GPU上的延迟对比，(c)自定义GEMM内核与多种框架的吞吐量对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-6.png)
+![图4：NANOMIND定制硬件原型，(a)以RK3566 SoC为核心的硬件框图，连接锂电池、PMU、MIPI CSI摄像头、扬声器/麦克风、eMMC与LPDDR4x内存以及USB接口；(b)PCB正面布局，可见RK3566 SoC与LDDR4x内存；(c)PCB背面布局，可见LDDR4x内存与eMMC](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-6.png)
 
 *   零拷贝TABM（图7a）：相比llama.cpp的传统拷贝与卸载方式，TABM实现了更低的内存占用和显著的CPU使用率降低。
 *   视觉编码加速（图7b）：对于SigLip和ArcFace模型，在NPU上的推理时间远低于CPU和GPU。
@@ -120,9 +120,9 @@ NANOMIND本身并非一个单一的AI模型，而是一个支持在异构SoC上�
 
 4. 功耗与续航（图8， 图9）
 
-![图8：三种功耗模式下的能效-延迟权衡曲线，展示了随电池电量下降系统性能的平滑降级](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-1.png)
+![图7a：零拷贝TABM与传统CPU拷贝方式的对比箱线图，左侧为内存占用（GB），TABM中位数约1.15 GB低于CPU Copy约1.35 GB；右侧为CPU利用率（%），TABM中位数约20%远低于CPU Copy约58%](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-1.png)
 
-![图9：在标准2000mAh电池下，NANOMIND的功耗（W）与预估运行时间（小时）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-8.png)
+![图8与图9：左侧为各平台与框架的功耗（W）柱状图，NANOMIND自身实现仅4.7W，按需级联推理模式低至0.375W，远低于Orange Pi/Jetson系列的13.5–26.2W；右侧为标准2000mAh电池下预估运行时间（小时），NANOMIND按需模式可达20.8小时](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-8.png)
 
 关键结论：在低功耗“按需级联推理”模式下，平均功耗为0.375 W。使用标准2000mAh电池，可支持20.8小时的低占空比工作。
 

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 论文提出了三个基于Qwen2.5-Omni-7B骨干网络的模型变体，用于心理和社会行为理解任务。
 
-![Human Behavior Atlas 总览图，展示了基准的构建流程、数据分布和任务分类](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-0.png)
+![定性分析示例：在 CH-SIMSv2 中，三帧视频的面部关键点检测显示出转瞬即逝的微笑等细微行为线索，OMNISAPIENS-7B SFT 未能捕捉到这些信息](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-0.png)
 
 1. OMNISAPIENS-7B SFT (监督微调模型)
 *   整体流程：接收文本（转录稿）、音频、视频三种模态输入。首先通过各自的编码器（E_text, E_aud, E_vis）提取特征，再通过投影层（P_aud, P_vis）将音频和视觉特征映射到与文本嵌入相同的共享空间H。融合后的多模态序列`z`输入到Transformer LLM骨干F中进行逐层处理。
@@ -69,9 +69,7 @@ hiddenInHomeList: true
     5.  下游任务：`h_adapt`被送入后续的分类头或解码头。
 *   动机与优势：残差设计确保了骨干网络表征不受破坏，模块可即插即用。它试图将特征工程的优势与端到端学习的优势结合，为特定任务提供定向增强。
 
-![OMNISAPIENS-7B BAM 模型架构图，展示了行为描述符如何通过残差适配器融入骨干网络](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-4.png)
-
-(注：此图标识为论文配图，根据内容描述为BAM架构)
+![Human Behavior Atlas 基准总览：包含任务分类（Taxonomy）、标注标准化（Annotation Standardization）、特征提取（Feature Extraction）、下游任务、各任务数据分布、数据模态占比、样本时长以及数据集来源的全球分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-4.png)
 
 3. OMNISAPIENS-7B RL (强化学习模型)
 *   架构变化：与SFT不同，RL模型不使用分类头，所有任务均通过单一的解码器头以自由文本形式生成输出。这保持了LLM生成架构的完整灵活性。
@@ -81,8 +79,6 @@ hiddenInHomeList: true
     2.  `r_format`：格式奖励（检查是否包含``和`\boxed{}`标签）。
     3.  `r_sim`：语义相似度奖励（预测与标准答案的余弦相似度），提供部分匹配的奖励。
 *   动机：探索在统一生成框架下，通过强化学习优化模型在复杂行为任务上的推理和生成能力。
-
-![OMNISAPIENS-7B 多任务实验结果热力图，对比不同模型在各任务上的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-6.png)
 
 (注：此图为Table 4的可视化，展示多任务结果)
 

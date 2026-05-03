@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 UniSS 的整体架构是一个基于预训练文本大语言模型（LLM）的统一序列到序列模型，旨在将源语音波形直接转换为目标语言、保持原说话人风格的语音波形。其流程如图2所示。
 
-![图2：UniSS整体架构及跨模态CoT提示框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-1.png)
+![图2：UniSS整体架构及跨模态CoT提示框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-4.png)
 
 1.  三重语音分词器：
     *   语言分词器：采用GLM-4的分词器，基于量化的Whisper编码器，将语音转换为可变长度的、侧重语言内容的token序列（Sling），速率为12.5 tokens/秒。其设计动机是自监督的语义token虽适合生成，但对内容理解并非最优，因此用此独立模块捕获语言内容。
@@ -78,8 +78,6 @@ UniSS 的整体架构是一个基于预训练文本大语言模型（LLM）的�
 4.  跨模态CoT提示：这是将LLM文本翻译能力迁移到语音的关键机制。
     *   质量模式：遵循完整的CoT路径：模型首先“听”（生成源文本转录Tsrc），然后“翻译”（生成目标文本Ttgt），最后“言”（生成目标语义token Ssem_tgt）。输出序列为 [Tsrc, Ttgt, Ssem_tgt]。此模式最大化翻译保真度。
     *   性能模式：压缩CoT路径，跳过转录步骤，直接生成翻译文本Ttgt和语义token Ssem_tgt。输出序列为 [Ttgt, Ssem_tgt]。此模式在速度和质量间取得平衡。
-
-![图1：UniSS方法概览与性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-0.png)
 
 ### 💡 核心创新点
 
@@ -157,7 +155,7 @@ UniSS 的整体架构是一个基于预训练文本大语言模型（LLM）的�
 - 移除GLM语言分词器，改用语义token进行理解，性能大幅下降。
 - 最关键的消融：直接S2ST（无CoT）导致性能毁灭性下降，这直接证明了跨模态CoT提示是迁移LLM翻译能力的关键。
 
-![图3：UniST数据集构建流程及分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-2.png)
+![图3：UniST数据集构建流程及分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-1.png)
 
 ### ⚖️ 评分理由
 

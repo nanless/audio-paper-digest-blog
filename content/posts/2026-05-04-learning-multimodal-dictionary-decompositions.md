@@ -95,16 +95,14 @@ hiddenInHomeList: true
 | MGSAE | - | - | - | - | CC3M |
 表格来源：论文图3的描述，具体数字未在文本中列出。但图3（见下文）的柱状图清晰显示，MGSAE的“Both”（两种模态均激活）柱状最高，“Neither”（死神经元）柱状最低。
 
-![图3：不同模型在CLIP和CLAP设置下神经元激活模态分布对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-2.png)
-
 （注：此图为论文图3，展示了标准SAE、GSAE、MGSAE在验证集上激活的神经元按模态分类的数量。左图为CC3M图像/文本数据，右图为MusicBench音频/文本数据。MGSAE（浅蓝色）在“Both”（共享）类别上数量显著最高，在“Neither”（死神经元）类别上数量最低。）
 
 2. 多模态单义性分数（MMS）
 MMS分数越高，表明特征越语义连贯且多模态。
 
-![图4：不同模型在CLIP和CLAP设置下的多模态单义性分数分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-3.png)
+![图2：MGSAE模型架构示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-1.png)
 
-（注：此图为论文图4，展示了各模型所有神经元按MMS分数降序排列的曲线。上排为CLIP（图像/文本）的MMS(image, text)，下排为CLAP（音频/文本）的MMS(audio, text)。灰色虚线为原始密集嵌入的基线。MGSAE（黄色）的曲线始终位于标准SAE（蓝色）上方，且更早达到高分数区间，表明其产生了更多高MMS分数的多模态特征。）
+（注：此图为论文图2，展示了MGSAE的整体架构。配对的训练样本（如音频与文本）经各自的预训练编码器得到对齐嵌入，再共享送入SAE编码器，经跨模态随机掩码（Random mask）和TopK后产生稀疏码，最后由线性SAE解码器重构嵌入。损失为重建损失加组稀疏正则项 L = L_reconstruction + λ · L_group-sparsity。）
 
 3. 零样本跨模态任务性能
 评估稀疏编码保留原始嵌入跨模态能力的程度。
@@ -130,7 +128,7 @@ MMS分数越高，表明特征越语义连贯且多模态。
 4. 案例研究：线性探针概念解释
 在CelebA数据集上，使用学习到的字典解释一个预测“金发”的线性分类器。
 
-![图5：使用标准SAE和MGSAE字典对CelebA线性探针的前7个贡献概念对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-4.png)
+![图5：使用标准SAE和MGSAE字典对CelebA线性探针的前7个贡献概念对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-5.png)
 
 （注：此图为论文图5，左列为SAE字典中对“金发”分类贡献最大的前7个命名概念（如“beautiful blonde”，“cactus”，“polar bear”等），右列为MGSAE字典对应的前7个概念（如“beautiful blonde”，“blond girl”，“britney spears”等）。MGSAE的概念列表更集中于“blonde”相关语义，并揭示了潜在的性别偏见（“girl”，“woman”），而SAE的概念列表混杂且不相关。）
 
@@ -138,8 +136,6 @@ MMS分数越高，表明特征越语义连贯且多模态。
 -   不同扩张因子和K值：在表3中，对CLIP设置进行了消融。结果表明，MGSAE在所有配置下均达到最高的零样本性能，且K值增大有助于提升性能。
 -   不同嵌入模型：在SIGLIP2和AIMv2嵌入上（表4-7），MGSAE同样实现了最低的死神经元数和最高的跨模态任务性能，证明了方法的通用性。
 -   不同数据集：在MS COCO数据集上（表8-9，图6）的实验，复现了CC3M上的主要发现，验证了方法的鲁棒性。
-
-![图6：在MS COCO数据集上训练的不同模型的MMS分数分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-5.png)
 
 （注：此图为论文图6，展示了在MS COCO数据上训练的模型在验证集上的MMS分数分布。曲线趋势与图4一致，MGSAE在MMS(image, text)和MMS(text, text)上表现优异。）
 

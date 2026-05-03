@@ -59,10 +59,9 @@ hiddenInHomeList: true
 
 图1展示了DualFlow的两大任务：(a) 交互式运动生成（双方同步生成），(b) 反应式运动生成（基于人物A的运动生成人物B的反应）。生成过程共同以文本、音乐和检索到的运动样本为条件。
 
-![图2：DualFlow模型架构图与DualFlow Block结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-1.png)
+![定量结果与用户研究汇总图：左上为MDD数据集Duet/Reactive任务R-Precision、FID、MMDist、Diverse、MModal对比表；右上为五组用户研究胜率柱状图（Music-Align/Text-Align/Motion-Quality）；左下为DD100数据集反应任务的Solo Metrics、Interactive Metrics、Rhythmic指标表；右下为DualFlow（Rectified Flow）与InterGen（DDIM）在不同推理步数下的FID曲线对比。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-1.png)
 
-图2(a)为整体框架图。系统接收文本（CLIP-L/14编码）、音乐（JukeBox编码器）和来自角色A（演员）和角色B（反应者）的运动序列作为输入。运动样本通过音乐特征和LLM分解的文本线索（空间关系、身体运动、节奏）进行检索。这些不同模态的潜在表征由级联的多模态DualFlow块处理，这些块建模交互动力学。输出可以是双方的运动（交互模式），或通过掩码机制仅输出反应者的运动（反应模式）。
-图2(b)为单个DualFlow Block的内部结构。在交互设置中，两个分支对称运行，通过运动交叉注意力协调联合运动；在反应设置中，演员分支被掩码，反应者分支采用带前瞻L的因果交叉注意力模块替代运动交叉注意力，以基于演员的运动进行条件生成。
+该图汇总了论文的核心定量与用户研究结果：(左上表) 在MDD数据集Duet和Reactive任务中DualFlow与InterGen、ReGenNet等基线在R-Precision、FID、MMDist、Diversity、MModal等指标上的对比；(右上柱状图) DualFlow与MDM、InterGen、Ground Truth、DuoLando的用户研究胜率，覆盖Music-Align、Text-Align、Motion-Quality三个维度；(左下表) DD100数据集反应任务的Solo/Interactive/Rhythmic指标对比；(右下曲线) DualFlow（红，Rectified Flow）相比InterGen（蓝，DDIM）在更少推理步数下取得更低FID，体现采样效率优势。
 
 DualFlow的整体架构可以概括为以下流程：
 
@@ -214,17 +213,13 @@ DualFlow的整体架构可以概括为以下流程：
 
 关键结论：消融实验证实了各核心组件的有效性。移除RAG或对比损失(L_triplet)导致语义对齐指标（R-Precision， MMDist）显著恶化。移除同步损失(L_sync)和因果前瞻注意力(CLA)也导致性能下降，尤其在反应任务中影响显著。
 
-![图3：用户研究结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-2.png)
-
 图3展示了用户研究的结果。DualFlow在文本对齐、音乐同步和整体质量三个维度上，与基线方法和真实数据的对比中均获得了较高的胜率，表明其生成的动作更受人类评审青睐。
-
-![图4：推理步数与FID关系对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-3.png)
 
 图4展示了DualFlow（20步Rectified Flow）与InterGen（50步DDIM）在FID指标上随推理步数变化的对比。DualFlow在更少的步数下达到了更低（更好）的FID值，验证了其采样效率。
 
-![图5：定性结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-4.png)
+![DualFlow整体架构与Multi-Modal DualFlow Block详细结构图：上半部分(a)展示总体流程，文本潜在z_d、检索潜在z_R、音乐潜在z_m与角色A/B的初始运动潜在共同输入N层级联Multi-Modal DualFlow块，输出双人运动并计算总损失；下半部分(b)展示单个DualFlow Block内部，分别为交互设置（蓝色虚线框）和反应设置（橙色虚线框），由Multi-Scale Conv1d、Self Attn、Music Cross Attn、Motion Cross Attn（反应设置中替换为带前瞻L的Causal Attn w/ LookAhead）、Retrieval Cross Attn、FFN组成，并示意Causal Attention Mask with Look-Ahead L。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-5.png)
 
-图5展示了在MDD数据集上，DualFlow与InterGen（交互任务）、DuoLando（反应任务）以及真实数据的定性对比。黑色圆圈标出了基线方法产生瑕疵（如手部翻转、距离过大、腿部启动错误）的区域，而DualFlow生成的动作更流畅、更符合文本描述且与真实动作更接近。
+该图展示了DualFlow的核心模型架构：(a) DualFlow Architecture——文本潜在z_d、聚合检索潜在z_R、音乐潜在z_m以及两个角色的初始运动潜在z_a^(0)、z_b^(0)经过N个级联Multi-Modal DualFlow块处理，输出去噪后的双人运动并由Loss function进行监督；(b) Multi-Modal DualFlow Block——交互设置下两个分支对称运行（蓝色虚线框），由Multi-Scale Conv1d、Self Attn、Music Cross Attn、Motion Cross Attn、Retrieval Cross Attn、FFN串联，配合Adaptive LayerNorm、GeLU、Temporal Gate；反应设置下（橙色虚线框）演员分支被Input Mask遮蔽，反应者分支以带前瞻L的Causal Attn w/ LookAhead替代Motion Cross Attn，右下角示意了对应的Causal Attention Mask。
 
 #
 

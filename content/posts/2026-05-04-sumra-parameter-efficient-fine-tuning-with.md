@@ -70,21 +70,17 @@ hiddenInHomeList: true
     - 适配：对于每个具体任务，只需训练并存储对应的B矩阵。
     - 前向计算：与标准LoRA相同，但A是固定的：`h = (W0 + BA)x`。
 
-![LoRA初始化策略对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-6.png)
+![SumRA方法整体架构对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-6.png)
 
-图示对比了标准LoRA（随机初始化A）、PiSSA（使用前r个主奇异向量初始化A）和SumRA（使用多个奇异向量之和初始化A）的方法。
+图示展示了四种方法的整体概念对比：A) 全量微调直接更新整个W0；B) LoRA以高斯分布随机初始化A、零初始化B；C) PiSSA用前r个主奇异向量初始化A和B（在残差W^res上叠加）；D) SumRA以`sum(Σ^(1/2)Vᵀ)`初始化A、零初始化B。
 
-![SumRA方法整体架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-7.png)
+![SumRA的A矩阵求和初始化与奇异向量语义解释](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-7.png)
 
-图示展示了SumRA方法的整体概念：A) 全量微调更新整个W0；B) LoRA训练A和两个低秩矩阵；C) PiSSA从奇异向量初始化A和B；D) SumRA增强了PiSSA的初始化方式（详见后续图）。
+图示对比了三种A矩阵初始化策略（A：标准LoRA高斯采样；B：PiSSA仅取前r个奇异向量；D：SumRA将多个奇异向量求和到r行），并通过右侧的SVD主轴示意（C）说明每条奇异轴可对应特定知识概念（如医学/艺术领域），SumRA通过多轴求和实现跨概念组的全局知识更新（如"haemoglobin"/"aesthetic"等拼写偏好）。
 
-![SumRA初始化与存储优势](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-3.png)
+![SumRA共享A矩阵在多任务场景下的存储优势](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-2.png)
 
-图示说明了SumRA通过冻结并共享A矩阵，在多任务场景下相比LoRA/PiSSA显著降低了额外存储开销。
-
-![求和策略示意](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-2.png)
-
-图示展示了如何将奇异向量矩阵`Σ^(1/2)Vᵀ`求和压缩为A矩阵的三种策略：块求和（A）、交错求和（B）和贪婪求和（C）。交错求和和贪婪求和旨在更均匀地分配重要奇异向量。
+图示对比LoRA/PiSSA/CorDA（每个任务都需独立存储A_i和B_i）与SumRA（A矩阵冻结共享、每个任务仅需存储B_i）的存储开销，并展示两个典型应用场景：服务器到终端的低带宽下发，以及百万用户×千任务的大规模LoRA适配。
 
 ### 💡 核心创新点
 
@@ -137,9 +133,9 @@ hiddenInHomeList: true
     | SumRA | large-v2 | rank=32 | 17.6M | 12.41 | 8.17 | 22.27 | 27.19 | 34.21 |
     | LoRA | large-v2 | rank=32 | 34.3M | 14.42 | 8.67 | 24.75 | 32.39 | 37.72 |
 
-![消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-9.png)
+![SumRA交错求和与模型平均的等价关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-9.png)
 
-图（对应论文Table 4）展示了在Esperanto语言上，不同训练数据规模（10h, 50h, 100h）下，SumRA（冻结A和训练A）与LoRA、全量微调的性能对比。SumRA在低资源（10h）时优势最大。
+图示揭示了SumRA交错求和方法与模型平均的内在联系：(A) 将`Σ^(1/2)Vᵀ`矩阵的多行按交错模式求和压缩为r行的A矩阵；(B) 等价地可视为将多个低秩LoRA权重A_1+A_2+A_3相加；(C) 每个A_i分别由不同的奇异向量子集组成，从而实现多版本LoRA权重的隐式聚合。
 
 - 关键消融实验：
     1.  求和策略消融（Table 3）：在Whisper-small (r=32) 上，交错求和和贪婪求和策略的WER显著优于块求和（例如在“eo”上：20.77/20.73 vs 21.68）。这验证了均匀分配重要奇异向量的必要性。

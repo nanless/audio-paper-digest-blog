@@ -90,13 +90,13 @@ AudioTrust本身不是一个生成或识别模型，而是一个评估框架与�
 
 框架的“架构”体现在其对评估维度的系统化设计上，如图1所示。
 
-![图1：AudioTrust框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-0.png)
+![图1：AudioTrust两阶段评估流水线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-0.png)
 
-图1：AudioTrust框架概览。该图形象地展示了AudioTrust的六大核心评估维度：公平性（Fairness）、幻觉（Hallucination）、安全（Safety）、隐私（Privacy）、鲁棒性（Robustness）和认证（Authentication），并配以简明的攻击示例，说明了每个维度需要考察的音频特有风险。
+图1：AudioTrust两阶段评估流水线。左侧为推理阶段（Inference Stage），由数据引擎与配置模块驱动，将音频样本输入到Ultravox、StepFun、OpenAI、Gemini、Open-S2S、Qwen、ByteDance、MiniCPM-o、KIMI等多种音频大语言模型中产生推理结果；右侧为评估阶段（Evaluation Stage），通过GPT-4o结合人工辅助验证（Human-Aided Validation），对模型输出在隐私、安全、幻觉、公平、认证、鲁棒性六个维度上进行打分。
 
-![图2：AudioTrust模型排行榜](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-1.png)
+![图2：AudioTrust六维评估体系与初步排行榜](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-1.png)
 
-图2：AudioTrust初步排行榜。展示了9个代表性音频大模型在六个维度上的得分，直观对比了开源与闭源模型在不同可信度方面的强弱。
+图2：AudioTrust六维评估体系与初步排行榜。(a) 左侧的环形图给出了AudioTrust的整体维度划分：以六大可信度维度（Privacy、Safety、Robustness、Authentication、Hallucination、Fairness）为核心，外圈进一步细化为多种子任务，如隐私推断、身份验证绕过、声纹克隆欺骗、噪声干扰、背景音干扰、医疗/金融/司法等场景幻觉，以及种族、口音、语言特征、年龄、人格特质等公平性子维度。(b) 右侧的排行榜展示了SALMONN、Ultravox、Qwen2-Audio、MiniCPM-o2.6、Step-Fun、Qwen2.5-Omni、Kimi-Audio、OpenS2S、Step-Audio2、Gemini-1.5 Pro、GPT-4o Audio、GPT-4o mini Audio、Gemini-2.5 Flash、Gemini-2.5 Pro等模型在六个维度上的具体得分，直观对比了开源与闭源模型在各可信度方面的强弱。
 
 关键设计选择：
 - 维度划分：将“可信度”具体化为六个可操作、可测量的维度，每个维度下设多个子任务，确保了评估的全面性。
@@ -188,8 +188,6 @@ AudioTrust本身不是一个生成或识别模型，而是一个评估框架与�
 | Closed-source Avg. | 97.2 / 97.2 | 97.0 / 97.0 |
 
 关键结论：闭源模型（如GPT-4o, Gemini）在认证、鲁棒性和多数安全任务上表现显著优于开源模型。然而，开源模型（如Kimi-Audio）在特定安全任务上也能达到顶尖水平。所有模型在从语音中推断隐私属性方面都非常薄弱。音频特有幻觉（如物理逻辑违反）的检测比内容不匹配更容易。
-
-![图3：模型六维可信度雷达图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-2.png)
 
 图3：模型六维可信度雷达图。展示了两个模型（Ultravox和Step-Fun）在六个维度上的归一化得分，直观对比了不同模型的可信度侧重点和短板。
 

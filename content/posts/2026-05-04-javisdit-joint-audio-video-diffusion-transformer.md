@@ -69,11 +69,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-JavisDiT是一个端到端的联合音视频扩散Transformer，整体架构如图2所示。其核心流程为：给定文本提示，同时生成视频和音频潜变量，通过HiST-Sypo估计器提取时空先验引导生成，并通过双向交叉注意力进行模态间信息交换。
-
-![JavisDiT整体架构与DiT模块详细结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-1.png)
-
-图2：JavisDiT整体架构与DiT模块详细结构。左侧为整体流程，包含视频分支、音频分支、HiST-Sypo估计器和多模态双向交叉注意力（MM-BiCrossAttn）模块。右侧为单个DiT块的详细结构，展示了ST-SelfAttn、细粒度ST-CrossAttn和MM-BiCrossAttn如何协同工作。
+JavisDiT是一个端到端的联合音视频扩散Transformer。其核心流程为：给定文本提示，同时生成视频和音频潜变量，通过HiST-Sypo估计器提取时空先验引导生成，并通过双向交叉注意力进行模态间信息交换。
 
 主要组件：
 1.  双分支DiT骨干：视频和音频生成共享相同的DiT块结构（共N=28层），每层包含：
@@ -84,9 +80,9 @@ JavisDiT是一个端到端的联合音视频扩散Transformer，整体架构如�
 
 2.  分层时空同步先验估计器（HiST-Sypo Estimator）（如图3所示）：这是一个独立的4层Transformer编码器-解码器。它接收ImageBind文本编码器的77个隐藏状态作为输入，通过一组可学习的空间查询token和时间查询token，输出采样自高斯分布的空间先验（ps）和时间先验（pt）。该模块通过对比学习进行训练，旨在从文本中提取可指导同步生成的细粒度条件。
 
-![HiST-Sypo估计器框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-2.png)
+![JavisDiT生成的发声视频示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-2.png)
 
-图3：HiST-Sypo估计器框架。展示了该模块如何从文本提取空间和时间先验，并利用对比学习进行优化。
+图：JavisDiT生成的发声视频示例。上方为"三只小鸟在树枝上鸣叫梳理羽毛"的视频帧序列与对应音频波形；下方为"末日废墟城市，碎石坠落与零星爆炸声"的视频帧序列与音频波形，文本中带下划线的关键短语对应空间/时间先验提取目标。
 
 设计动机与数据流：
 *   动机：解决已有方法仅进行粗粒度对齐的问题，实现“在何处”（空间）和“何时”（时间）的精确同步。
@@ -149,25 +145,21 @@ JavisDiT是一个端到端的联合音视频扩散Transformer，整体架构如�
 
 3. 消融实验（表3）：验证了各模块的有效性。
 
-![消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-3.png)
+![JavisBench主要实验结果汇总](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-8.png)
 
-图4（论文中为Figure 4）：JavisBench类别分布与对比。右侧柱状图展示了本方法在不同空间/时间组合子类别上的JavisScore表现，表明模型在多主体/多事件场景下仍有提升空间。
+表1/表2/图5：上方表1为JavisBench上各方法在AV-Quality、Text-Consistency、AV-Consistency与AV-Synchrony（JavisScore）四组指标上的全面比较，JavisDiT在大多数列上达到最佳；左下表2为Landscape与AIST++公开基准结果；右下图5为按JavisBench空间/时间分类划分的JavisScore柱状图，对比FoleyCrafter，本方法在Single/Multiple/Off-screen及Single/Sequential/Simultaneous各子类下均更高。
 
-![消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-8.png)
+4. 可视化分析（图7）：论文通过可视化最后一层DiT的时空交叉注意力，展示空间先验聚焦于发声物体（如气泡），时间先验在整个时间轴上保持稳定关注，从而实现细粒度同步。
 
-表3（论文中为Table 3）：模型设计消融实验。显示引入STDiT骨干、HiST-Sypo和双向注意力（BiCA）后，模型在质量、一致性和同步性上均有提升，且组合效果最佳。
+5. 时长鲁棒性与人类评估：
 
-4. 可视化分析（图7）：通过可视化交叉注意力图，展示了空间先验如何引导模型关注发声物体（如气泡），时间先验如何确保在整个时间线上保持均匀注意力，从而实现同步。
+![JavisBench类别分布与各基准对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-7.png)
 
-![交叉注意力可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-6.png)
+图4：JavisBench类别分布与各基准对比。左侧表对比AIST++、Landscape、TAVGBench与JavisBench在样本量、场景数量和类别层级上的差异，JavisBench达10,140样本且场景多样化、类别分层；右侧饼图展示Event Scenario、Visual Style、Sound Type、Spatial Composition、Temporal Composition五个维度的类别分布。
 
-图7：时空先验引导下的交叉注意力可视化。展示了空间先验（左）成功聚焦于发声的气泡，时间先验（右）在整个时间轴上保持稳定关注。
+![JavisDiT vs UniVerse-1人类评估及变长生成性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-6.png)
 
-5. 人类评估（图8）：与UniVerse-1相比，JavisDiT在音频质量和音视频对齐上获得显著优势（胜率分别为55.3%和56.0%），但在视频质量上略逊（胜率24.7%），论文解释这是因为UniVerse-1使用了更强大的视频生成骨干模型。
-
-![人类评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-7.png)
-
-图8：人类评估结果对比。显示JavisDiT在音频质量和音视频对齐上优于UniVerse-1。
+图：上方表为JavisDiT在4秒和10秒变长生成上的性能（FVD/FAD/CLIP/CLAP/AVHScore/JavisScore几乎不变，体现时长鲁棒性）；下方堆叠条形图为JavisDiT vs UniVerse-1的盲测胜/平/负比例——音频质量胜率55.3%、A-V对齐胜率38.6%（平局56.0%），视频质量略逊（胜率24.7%）。
 
 ### ⚖️ 评分理由
 

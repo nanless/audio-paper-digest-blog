@@ -54,11 +54,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-AudioX的框架整体如图所示，旨在将任意模态的条件输入统一转换为条件嵌入，以指导扩散模型生成音频。
-
-![AudioX框架架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-3.png)
-
-(图4：AudioX框架架构图。展示了完整的输入处理、条件融合与生成流程)
+AudioX的框架整体旨在将任意模态的条件输入统一转换为条件嵌入，以指导扩散模型生成音频。
 
 1. 输入与编码：
 - 输入：支持文本（Xt）、视频（Xv）、音频（Xa）三种模态的任意组合。缺失的模态用零填充；缺失文本时使用默认自然语言描述（如“Generate music for the video.”）。
@@ -155,10 +151,6 @@ AudioX的框架整体如图所示，旨在将任意模态的条件输入统一�
 
 4. 指令遵循评估（T2A-bench & AudioTime）
 
-![指令遵循性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-0.png)
-
-(图1：综合性能对比。左图(a)显示在各基准上AudioX的Inception Score领先；右图(b)显示在指令遵循基准上大幅领先。)
-
 | 方法 | Cat-acc↑ | Cnt-acc↑ | Ord-acc↑ | TS-acc↑ | Ordering↓ | Duration↓ | Frequency↓ | Timestamp↑ |
 |---|---|---|---|---|---|---|---|---|
 | Stable Audio Open | 31.20 | 9.80 | 6.00 | 21.80 | 0.98 | 3.07 | 1.46 | 0.53 |
@@ -189,7 +181,7 @@ AudioX的框架整体如图所示，旨在将任意模态的条件输入统一�
 相关图表：
 - 图3：展示了IF-caps数据集中通用音频和音乐标注的词云，体现了数据多样性。
 
-    ![IF-caps数据集词云](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-2.png)
+    ![IF-caps数据集词云](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-0.png)
 
     (图3：IF-caps数据集词云，展示通用音频（左）和音乐（右）域标注词汇的多样性。)
 - 定性结果：图A.4和A.5提供了丰富的生成样本对比，直观展示了AudioX在遵循复杂指令（如特定声音顺序、时间戳）方面的优势。

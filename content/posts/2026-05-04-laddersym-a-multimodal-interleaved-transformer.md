@@ -66,15 +66,15 @@ LadderSym模型整体为一个编码器-解码器架构，旨在将两段音频�
 2.  Ladder编码器（核心创新）：
     这是一个双流的Transformer编码器，包含12层。其独特之处在于，在每个标准Transformer块之前，都设有一个跨流对齐模块。该模块通过交叉注意力（Cross-Attention）和加性融合（Additive Fusion）实现两个流之间的信息交互与对齐。其前向传播过程如公式(1)(2)所示，每个流的输出不仅依赖于自身，也依赖于经过对齐的另一个流的信息。最终，两个流的最终状态被拼接起来，形成融合的潜在表示`H_fused`。
 
-![LadderSym整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-2.png)
-
-图3（LadderSym整体架构图）：展示了双流音频输入通过Ladder编码器，并拼接结果作为解码器上下文。同时，符号乐谱提示（MIDI Token）与序列起始符（SOS）一起作为解码器输入。T5解码器自回归生成错误标签序列。
-
 这种设计实现了“非对称分工”：一个流倾向于保留局部时序细节，另一个流则更多地整合来自另一流的全局信息（如表1的探测实验所示）。这使得模型既能进行精细的时间对齐，又能进行复杂的比较推理。
 
-![编码器块拓扑结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-4.png)
+![三种乐谱-音频对齐范式对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-4.png)
 
-图5（编码器块拓扑结构图）：详细展示了一个编码器块内部，跨流对齐模块如何交替地在两个流之间工作。信息先经过对齐模块（CA）从ref流向prac，然后被ViTprac处理；之后信息再经过对齐模块从prac（此时已是处理后的）流回ref，再被ViTref处理。
+图2（三种对齐范式对比）：(a) 显式对齐——先做乐谱-音频对齐与转录，再比较；(b) 潜空间对齐（SOTA Polytune）——合成参考音频与练习音频分别编码后用Joint Encoder融合；(c) LadderSym（本文）——双流编码器之间通过逐层Cross-Attention模块交替对齐，并将乐谱tokenize后作为提示直接输入解码器。
+
+![编码器块拓扑结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-9.png)
+
+图5（编码器块拓扑结构图）：详细展示了一个编码器块内部，跨流对齐模块（CA）如何交替地在两个流之间工作。信息先以Score流为KV、Practice流为Q经CA融合后输入Practice Encoder Block；随后再以Practice流为KV、Score流为Q经第二个CA后输入Score Encoder Block。
 
 3.  Sym提示与解码器：
     编码器输出的`H_fused`作为上下文（Context）输入到T5解码器。解码器的输入序列的开头是`[SOS]` token，紧接着是来自符号乐谱的token序列（即Sym提示）。这为解码器提供了直接、无歧义的参考信息。解码器采用自回归方式，逐个生成输出token，这些token表示时间、音高、播放状态以及错误标签（正确、漏弹、多弹）。
@@ -146,10 +146,6 @@ LadderSym在所有数据集和所有错误类别上均超越了先前SOTA（Poly
 
 模型效率（表3）：
 LadderSym（172M参数）比Polytune（192M参数）更小，且在编码器延迟和最坏情况token延迟上表现更优，说明其交替对齐设计在效率上也具有优势。
-
-![乐器级别详细结果表](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-9.png)
-
-表10（乐器级别详细结果）：展示了LadderSym、Polytune和基线模型在14种不同乐器上的详细F1分数。LadderSym在所有乐器上的平均性能均领先。
 
 ### ⚖️ 评分理由
 

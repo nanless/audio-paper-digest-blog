@@ -50,11 +50,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-本文的核心贡献并非提出一个新的端到端S2S模型架构，而是提出了一个用于训练和评估现有S2S模型（如Kimi-Audio）的框架。整体流程如图1所示。
-
-![ParaS2S整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/CcmDDh070o-0.png)
-
-该图展示了ParaS2S的两大组成部分：
+本文的核心贡献并非提出一个新的端到端S2S模型架构，而是提出了一个用于训练和评估现有S2S模型（如Kimi-Audio）的框架。整体流程包含以下两大组成部分：
 1.  ParaS2SBench（下半部分）：基准构建与自动评判器。
     *   数据构造：通过LLM生成文本查询（包含中性内容和两种对比风格），并使用多种TTS系统合成为语音查询（Synthetic Speech），或从现有数据集中筛选（Real Speech）。
     *   自动评判器：这是一个多阶段流水线，而非单一端到端模型。其核心创新是解耦分析：
@@ -109,8 +105,6 @@ hiddenInHomeList: true
 关键结论：现有S2S模型表现与忽略风格的流水线基线相当，证实了“tone-deaf”问题。本文的SFT和GRPO方法大幅提升性能，GRPO进一步比SFT提升超过10%。
 
 关键消融实验：
-
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/CcmDDh070o-3.png)
 
 该图显示了RL训练在不同规模SFT热身数据下的效果。横轴为SFT数据时长，纵轴为ParaS2SBench分数。结果显示，在10-100小时的SFT数据范围内，RL训练均能带来性能提升，且仅用20小时SFT数据进行热身再RL训练的模型，其性能已超过用100小时数据进行纯SFT训练的模型，证明了RL的数据效率。
 

@@ -61,11 +61,11 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-SpeechOp构建在潜在扩散框架之上，其核心架构包含两个主要路径和一个统一骨干网络，如图3所示。
+SpeechOp构建在潜在扩散框架之上，其核心架构包含两个主要路径和一个统一骨干网络。SpeechOp的整体训练与推理范式如图1所示。
 
-![SpeechOp模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-2.png)
+![SpeechOp多任务训练范式与推理时任务组合示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-2.png)
 
-图3：SpeechOp架构概览。可学习的任务嵌入通过自适应归一化层（AdaLN）同时调节音频编码器和扩散Transformer。
+图1：SpeechOp范式总览。上：多任务训练范式，统一处理TTS、语音克隆、增强、分离、说话人分离和声学匹配六类任务；中：推理时任务组合（如TTS+增强、语音克隆+增强、TTS+分离）；下：基于WhisperX转录的隐式任务组合（ITC）流程。
 
 1.  输入输出流程：
     *   文本到语音（TTS）路径：输入为文本转录。转录通过冻结的ByT5-base编码器得到文本表示，随后通过交叉注意力机制输入到扩散Transformer（DiT）中，指导从噪声潜变量中去噪生成音频潜变量，最终由解码器生成波形。
@@ -162,9 +162,9 @@ SpeechOp构建在潜在扩散框架之上，其核心架构包含两个主要路
     | SpeechOp (Gold Transcript) | 0.53 | 4.20 | .919 | 5.5 |
     结论：SpeechOp在主观感知质量（MOS）上全面超越SepFormer基线。然而，在信号保真度指标（SI-SDRi, MCD）上远低于SepFormer，这反映了生成式模型与判别式模型在优化目标上的根本差异。转录引导能显著改善内容保真度（WER从11.1%降至5.5%）。
 
-![说话人分离主观MOS对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-7.png)
+![TTS预训练加速增强与分离任务收敛的训练曲线及指标](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-0.png)
 
-图8：说话人分离任务的主观MOS评分对比，显示SpeechOp在多数数据集上优于SepFormer变体。
+图2：TTS预训练对增强与分离任务的影响。左：验证损失曲线显示TTS初始化使分离任务收敛快约8倍、增强任务快约4倍；右上：说话人分离任务（TTS vs 随机初始化）的SI-SDRi、MCD、SpBS、WER及验证MSE对比；右下：语音增强任务的同类指标对比，TTS初始化均优于随机初始化。
 
 5.  任务组合消融实验（使用金标转录）：
     | 模型 | PESQ↑ | MCD↓ | SpBS↑ | WER↓ |
@@ -176,9 +176,9 @@ SpeechOp构建在潜在扩散框架之上，其核心架构包含两个主要路
     | Δ(TC-CFG vs TC-Avg) | +.18 | -0.42 | +.022 | -1.3 |
     结论：TC-CFG方法在WER（内容保真度）上比分数平均（TC-Avg）低1.3个百分点（38%相对降低），同时在PESQ（声学质量）上高0.18，证明了其有效性。
 
-![合成模拟中不同任务组合方法的比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-3.png)
+![SpeechOp核心架构图：音频编码器、扩散Transformer与ByT5编码器](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-1.png)
 
-图4：合成模拟展示了分数平均（c）会破坏增强分布，而TC-CFG（d）能有效纠正内容错误而不影响增强分布。
+图3：SpeechOp架构概览。源音频潜变量经音频编码器后，通过帧级混合（⊕）注入扩散Transformer的扩散潜变量；文本转录经ByT5编码器后通过交叉注意力进入扩散Transformer；任务嵌入用于自适应归一化调节。
 
 ### ⚖️ 评分理由
 

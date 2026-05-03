@@ -150,14 +150,17 @@ Omni-Cloze基准测试：
 
 消融实验与分析图表：
 
+*   篮球视频描述对比示例：在同一段篮球比赛视频上，Qwen2.5-Omni 出现明显幻觉，Gemini 2.5 Pro 存在大量缺失细节，而 Omni-Captioner（Ours）能给出更完整、细节更准确的描述（如球员动作、解说员评论、场上品牌广告等）。
+
+    ![Omni-Captioner 与基线模型在同一篮球视频上的描述对比示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Z091XLyVkJ-1.png)
+
+*   Omni-Detective 多轮调查管道示意：Detective Agent 在 K 轮交互中，根据 Observer 反馈选择调用工具箱（MLLM/OCR/ASR）针对视频与音频提出更细粒度的查询，最终将多轮信息整合为 Detailed Caption。
+
+    ![Omni-Detective 多轮 Agent 调查与工具调用流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Z091XLyVkJ-2.png)
+
 *   Omni-Detective轮次分析（图6）：随着Omni-Detective调查步骤（Steps）从1增加到10，细节率（Detail Rate）持续上升，而缺失率（Not Given Rate）和幻觉率（Hallucination Rate）整体呈下降趋势。幻觉率在5-6步后趋于稳定（约3.4%-4.1%），表明现有工具有能力消除幻觉的天花板，而更多计算仍能挖掘新细节。
-
-    ![Omni-Detective轮次与各项率关系图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Z091XLyVkJ-5.png)
-
 *   Omni-Detective直接应用效果（表5）：将Omni-Detective管道应用于Gemini 2.5 Pro生成描述，再在下游QA中评估，可在MMAR（64.1->68.3）和Video-MME（75.0->76.1）上带来一致提升。
 *   Omni-Cloze与人类偏好相关性（图7）：Omni-Cloze的自动准确率与人类Elo评分之间皮尔逊相关系数为0.91，高于VDC（0.86）和video-SALMONN 2test的LLM-Judge（0.83），证明其评估更贴近人类偏好。
-
-    ![Omni-Cloze准确性与Elo分数相关性图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Z091XLyVkJ-6.png)
 
 ### ⚖️ 评分理由
 

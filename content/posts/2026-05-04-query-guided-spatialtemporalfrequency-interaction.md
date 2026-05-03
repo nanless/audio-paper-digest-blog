@@ -43,9 +43,9 @@ hiddenInHomeList: true
 
 QSTar模型的整体架构如图2所示，旨在实现从输入到答案预测的、全程由查询引导的多模态推理。其输入为视频片段、对应的音频以及自然语言问题，输出为预定义词汇表中的一个答案。
 
-![QSTar整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/8CnU2kchiw-1.png)
+![QSTar与QA-TIGER的定性对比及预测示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/8CnU2kchiw-0.png)
 
-图2：QSTar方法的整体框架图
+图3：(a) QSTar与QA-TIGER在乐器计数和节奏比较等问题上的预测对比及真值；(b) QSTar的预测示例及其问题相关发声区域和时间戳的可视化。
 
 模型架构主要包含以下组件和数据流：
 1.  输入表示：视频被分为T个1秒片段。视觉特征由预训练的CLIP-ViT提取帧级特征（Fv）和经过Token Merging压缩的补丁级特征（Fp）。音频特征由预训练的VGGish模型提取（Fa）。问题文本由CLIP文本编码器提取句子级特征（Fsentence）和词级特征（Fw）。

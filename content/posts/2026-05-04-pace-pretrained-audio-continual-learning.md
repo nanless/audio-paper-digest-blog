@@ -62,9 +62,9 @@ PACE是一个分阶段的音频持续学习框架，旨在对齐预训练音频�
     *   边界感知正则化：为每个输入生成时间-频率掩码扰动样本。通过一个临时模型识别容易产生边界混淆的样本。训练时，拉近样本与其类中心的距离，同时推离与边界点的距离，以增强表示的判别力。
     *   解析分类器：基于二阶统计量的递归更新分类器，无需存储历史样本，与稳定的表示空间兼容。
 
-![CKA分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-4.png)
+![FSA层选择与MSA敏感度分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-4.png)
 
-图5：中心核对齐（CKA）可视化，展示了FSA期间不同层表示的变化。
+图：(a)(b) 不同数据集下按层索引/冻结层的CKA与精度热图，用于自适应选择FSA微调起始层；(c)(d) MSA适应会话数对TIMIT-2与VocalSet性能的敏感度曲线，标注了FSA与MSA(Chosen)位置。
 
 ### 💡 核心创新点
 
@@ -118,17 +118,15 @@ PACE是一个分阶段的音频持续学习框架，旨在对齐预训练音频�
 | w/o Lreg | 89.21 (-1.91) | 93.73 (-0.34) | 66.78 (-3.33) |
 | w/o GP | 88.01 (-3.23) | 89.05 (-5.31) | 58.55 (-15.26) |
 
-![MSA会话数敏感度分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-6.png)
-
 图7：MSA适应会话数（任务数）的敏感度分析，显示了性能在较大范围内保持稳定。
 
-![t-SNE可视化对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-7.png)
+![音频与视觉域表示偏移t-SNE对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-2.png)
 
-图8：不同扰动方式（加性噪声 vs. 时频掩码）的t-SNE可视化对比，显示时频掩码能更好地保持数据流形结构。
+图：t-SNE可视化对比音频域（SpeechCommands V2）与视觉域（ImageNet-R）的表示偏移。音频域旧→新会话偏移高达21.029，远大于视觉域的0.053，揭示了音频CL更严峻的表示漂移问题。
 
-![跨会话准确率热图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-8.png)
+![受限头部学习层-任务表示热图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-8.png)
 
-图9：不同方法在VocalSet上跨会话的准确率热图。(a)PACE保持稳定；(c)去除梯度投影(GP)后出现严重遗忘。
+图：受限头部学习（Restricted Head Learning）下各层（0–11）在不同任务（0–10）上的表示相似度热图，说明非对称训练策略迫使骨干承担多数梯度更新。
 
 消融实验证明所有组件（FSA， MSA， Lreg， 梯度投影GP）对细粒度任务性能都至关重要。
 

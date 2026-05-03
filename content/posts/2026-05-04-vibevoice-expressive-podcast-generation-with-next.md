@@ -136,8 +136,6 @@ VIBEVOICE是一个端到端的多模态生成框架，旨在从文本脚本和�
 
 消融实验 - CFG与去噪步数（图3）：
 
-![CFG与DDPM去噪步数对WER和SIM-O的影响热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FihSkzyxdv-2.png)
-
 此热力图表明，WER在步数10、CFG 1.25时最优（1.55），而SIM-O在步数5时即可达到较高值（~0.6），增加步数反而略有下降。
 
 分词器重建质量（表3， LibriTTS）：VIBEVOICE的声学分词器（7.5Hz）在PESQ（3.068）和UTMOS（4.181）上达到了与更高帧率模型（如WavTokenizer 75Hz）可比甚至更优的感知质量，证明了其在极低比特率下的高保真能力。

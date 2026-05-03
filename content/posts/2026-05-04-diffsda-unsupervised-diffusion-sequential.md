@@ -73,11 +73,11 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-DiffSDA的整体架构如图1所示，包含三个主要组件：序列语义编码器、随机编码器和随机解码器。
+DiffSDA的整体架构包含三个主要组件：序列语义编码器、随机编码器和随机解码器。
 
-![DiffSDA模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-0.png)
+![DiffSDA交换与零样本迁移定性结果（论文Fig.2）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-0.png)
 
-图1：DiffSDA模型架构图。序列语义编码器（顶部）提取静态因子s0和动态因子d1:V。随机编码器（底部）对输入序列x1:V添加噪声得到x1:V_t。随机解码器（右侧）结合条件信息（s0, dτ0）对噪声潜变量xτ_t进行去噪，输出重建序列。
+图2（论文Fig.2）：DiffSDA的解纠缠定性结果。左：条件交换（real videos→swap），生成样本融合了第一行人物的静态身份与第二行人物的动态表情。中：零样本交换（real videos→zero-shot），在VoxCeleb上训练的模型直接迁移到未见过的数据集。右：对静态潜空间进行PCA遍历，沿主成分方向发现了性别（Male↔Female）等连续语义属性。
 
 1.  序列语义编码器：
     - 功能：从输入序列x1:V中提取静态因子s0（全局不变特征）和动态因子序列d1:V（逐帧时变特征）。
@@ -150,8 +150,6 @@ DiffSDA的整体架构如图1所示，包含三个主要组件：序列语义编
 | TaiChi-HD (64x64) | AED↓ (静态冻结) | 0.443 | 0.325 | 0.326 (第二) |
 | | AKD↓ (动态冻结) | 7.681 | 6.312 | 2.143 |
 
-![视频交换与重建结果定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-1.png)
-
 图2（论文Fig.2）：展示DiffSDA的交换结果。左：条件交换，生成样本（第三行）成功融合了第一行人的静态特征和第二行的动态。中：零样本交换，在VoxCeleb训练后在MUG上成功交换。右：对静态潜空间进行PCA遍历，发现了性别等属性的连续变化。
 
 音频任务：说话人解纠缠（TIMIT数据集）
@@ -178,17 +176,17 @@ DiffSDA的整体架构如图1所示，包含三个主要组件：序列语义编
 | DBSE | 1076.44 ± 2.22 |
 | DiffSDA (Ours) | 65.23 ± 0.81 |
 
-![生成质量FVD对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-2.png)
+![DiffSDA零样本动态迁移结果（论文Fig.4）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-6.png)
 
-图3（论文Fig.3）：在CelebV-HQ、VoxCeleb和TaiChi-HD上进行动态交换的定性对比。DiffSDA（第三行）在身份保持和运动转移上均明显优于SPYL（第四行）。
+图4（论文Fig.4）：零样本动态迁移定性结果。上方两行为不同来源的真实视频，最下方一行为DiffSDA的零样本生成结果——模型在某一数据集上训练后，可直接将动态特征迁移到未见过的视频上，重建出兼具源静态身份与目标动态的合理样本。
 
 消融实验（验证设计选择）
 1.  依赖vs.独立建模：在VoxCeleb上，依赖建模（本文方法）的FVD为65.23，优于独立建模的75.03（提升约13%）。
 2.  静态因子共享与动态因子维度：在VoxCeleb上（Tab.10），当静态因子共享且动态因子维度较低（16）时，验证准确率最高（64.36%），AED和AKD也最低，表明解纠缠效果最佳。增加动态因子维度或取消静态共享都会显著降低性能。
 
-![零样本交换对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-3.png)
+![DiffSDA动态交换定性对比（论文Fig.3）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-7.png)
 
-图4（论文Fig.4）：零样本交换结果。在VoxCeleb上训练的模型，成功将动态特征迁移到未见过的CelebV-HQ和MUG数据集上。
+图3（论文Fig.3）：在多个真实视频数据集上的动态交换定性对比。最上两行为real videos（提供静态身份与目标动态），中间一行为DiffSDA（Ours）的交换结果，最下一行为基线SPYL的结果。DiffSDA在身份保持与运动转移上明显优于SPYL。
 
 ### ⚖️ 评分理由
 

@@ -60,9 +60,9 @@ FlexiVoice的架构基于一个预训练的大语言模型（LLM）核心，整�
 
 关键设计选择与动机：使用LLM作为核心是为了利用其强大的序列建模和指令跟随能力。采用离散码元表示和流匹配解码器是当前高质量TTS系统的常见选择。引入可选的参考语音分支是为支持零样本音色克隆。整个架构支持指令、文本、参考语音的灵活组合。
 
-![FlexiVoice系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-7.png)
+![FlexiVoice-Instruct数据集构建流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-0.png)
 
-图3（论文中Figure 3）：FlexiVoice完整模型结构示意图。展示了从文本、指令、参考语音输入，经过LLM生成离散token，再通过流匹配和声码器生成最终语音的完整数据流。
+图（论文中Figure 2）：FlexiVoice-Instruct数据集的构建流程示意图。基于Emilia（含文本、源标题、源标签）与Game Voice Acting（含文本、角色名）等开源语料的元信息，通过LLM（Deepseek-V3）根据元数据和转写推断说话人风格/情境，自动生成自然多样的指令描述（如"Serene and informative documentary narration..."、"With an elegantly playful tone..."）。
 
 ### 💡 核心创新点
 
@@ -139,15 +139,13 @@ FlexiVoice的架构基于一个预训练的大语言模型（LLM）核心，整�
 
 表4（论文中Table 4）关键数据摘录：FlexiVoice在复杂指令任务上超越所有开源基线，非常接近闭源Gemini-Pro。
 
-![解耦GRPO中不同奖励信号的效果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-3.png)
+![FlexiVoice整体框架与渐进式后训练流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-2.png)
 
-图4（论文中Figure 4）：在解耦GRPO阶段，使用说话人验证（Speaker verification）作为奖励信号，相比使用说话人相似度（Speaker similarity），在TR-hard任务上能获得更大的性能提升，表明前者更适合解耦优化。
+图（论文中Figure 1）：FlexiVoice整体框架与渐进式后训练（Progressive Post-Training, PPT）流程示意图。上方展示模型接收文本、指令、参考语音三种输入并输出语音；下方展示训练流程：预训练阶段使用LLM辅助标注的指令-语音配对数据，随后经过S1（Multi-Modality DPO，使用情感正负样本）、S2（Decoupling GRPO，使用情感与说话人奖励r_ser/r_sv）、S3（Instruction GRPO，使用一致性奖励r_llm）三个阶段的逐步优化。
 
-![Kimi-Audio与Gemini判断一致性](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-4.png)
+![FlexiVoice模型结构示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-4.png)
 
-图5（论文中Table 7）：开源奖励模型Kimi-Audio-7B与金标准Gemini-2.5-Pro在InstructTTSEval上的判断一致性（Macro-F1），验证了其作为替代奖励模型的有效性。
-
-![主观评估CMOS结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-0.png)
+图（论文中Figure 3）：FlexiVoice完整模型结构示意图。文本与指令按照Phi-3.5-mini-instruct的对话模板拼接（system/user/assistant），参考语音经Speech Tokenizer离散化后拼接到序列前部；LLM自回归地生成语义码元，再由Flow Matching生成梅尔频谱图，最后通过Vocoder合成最终语音波形。
 
 图7（论文中Table 3）：主观评估比较平均意见分（CMOS）。FlexiVoice在多个任务上的CMOS为正数，表明人类评估者认为其生成的语音在情感表达上优于对比基线。
 

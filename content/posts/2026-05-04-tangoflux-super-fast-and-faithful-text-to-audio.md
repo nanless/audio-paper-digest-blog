@@ -129,22 +129,22 @@ TangoFlux与多个主流TTA模型在AudioCaps测试集（886样本）上的客�
 CRPO有效性消融（Table 3 & Figure 2）：
 Table 3对比了使用不同偏好数据集对齐后的性能。CRPO（迭代5次）在FDopenl3（75.1 vs 80.0-80.5）、CLAPscore（0.480 vs 0.437-0.448）以及主观Elo分数上均优于使用静态数据集（Alpaca， Baton）的方法。
 
-![在线与离线CRPO训练迭代过程中的指标变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-2.png)
-
 图2显示了在线（CRPO）与离线（CRPO-offline， 固定数据集）训练的对比。在线训练的CLAPscore持续提升至第4轮，而KLpasst稳步下降；离线训练的CLAPscore在第2轮后下降，KLpasst急剧上升，证明了动态数据生成的必要性。
 
-LCRPO vs L_DPO-FM 消融（Figure 3 & Figure 4）：
+主观评估界面（Human Evaluation Interface）：
 
+![主观评估打分界面：标注者听取同一文本提示下不同模型生成的音频，并对OVL（整体音频质量）和REL（文本相关性）两个维度进行打分](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-9.png)
+
+上图为论文中使用的主观评估界面截图。给定同一文本提示（如"A baby giggles uncontrollably, a stack of blocks crashes to the ground, and the faint hum of a lullaby toy plays in the background"），标注者依次播放四个模型生成的音频，并分别对OVL（整体质量）和REL（文本相关性）两个维度从0-100进行打分，最终用于Table 2中的z分数与Elo排名计算。
+
+LCRPO vs L_DPO-FM 消融（Figure 3 & Figure 4）：
 图3显示，LCRPO在CLAPscore上始终优于L_DPO-FM，同时在KLpasst和FDopenl3上保持竞争或更优。
 
-![两种损失函数下，获胜与失败样本的损失变化趋势](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-4.png)
-
+两种损失函数下，获胜与失败样本的损失变化趋势]
 图4揭示了“悖论”：两种损失下，获胜与失败样本的绝对损失值都在增加，但它们的差距（margin）也在增大，且模型性能依然提升。LCRPO的增长曲线更平缓，验证了其作为正则化器的作用。
 
 推理时间与性能权衡（Figure 6）：
-
-![不同模型在CLAPscore和FDopenl3上随推理时间变化的曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-5.png)
-
+不同模型在CLAPscore和FDopenl3上随推理时间变化的曲线]
 图6显示，TangoFlux在所有推理时间点上，其CLAPscore均高于其他模型，FDopenl3均低于其他模型，且所需时间最短，体现了其优越的效率。
 
 ### ⚖️ 评分理由

@@ -53,13 +53,13 @@ FlexiCodec采用端到端训练的编码器-量化器-解码器架构，其核�
 3.  量化：语义流采用FSQ（5维，每维8级，共32768个码本），声学流采用24层RVQ（每层4096码本，512维嵌入）。使用量化器dropout进行训练。
 
 架构图：
-FlexiCodec整体架构图，展示了双流编码、动态帧合并、量化及解码流程。
+FlexiCodec整体架构图，展示了ASR编码器与Codec编码器双流输入、帧合并模块在ASR特征引导下的动态压缩、FSQ与残差RVQ的双流量化、以及帧解合并模块恢复12.5Hz固定帧率后由Codec解码器重建波形的完整流程。
 
-![FlexiCodec整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-0.png)
+![FlexiCodec整体架构图，含双流编码、帧合并、FSQ/RVQ量化、帧解合并与解码](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-6.png)
 
-帧合并与帧解合并模块的详细结构图，展示了基于相似度的合并策略和Transformer精炼过程。
+下游TTS应用示意图：左侧AR阶段中Text-to-Semantic LM以音素与帧率指示符为条件预测动态帧率的RVQ-1语义令牌（带长度属性），右侧NAR阶段先按长度属性将动态帧率令牌重复展开为12.5Hz序列，再由条件流匹配NAR Transformer生成Mel频谱或FlexiCodec RVQ特征，最终通过声码器或FlexiCodec解码器合成语音。
 
-![帧合并与帧解合并模块详细结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-1.png)
+![FlexiCodec在TTS中的AR与NAR两阶段流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-2.png)
 
 ### 💡 核心创新点
 

@@ -68,9 +68,9 @@ hiddenInHomeList: true
     2. 量化输出 `z_q = z + ||c_i - z||  sg[(1-λ)v_{di} / ||v_{di}||] + ||c_{i+1} - z||  sg[λv_{di+1} / ||v_{di+1}||]`，其中 `λ` 是从均匀分布 `U(0,1)` 采样的插值因子，`v_{di}` 和 `v_{di+1}` 分别是对应方向的重参数化噪声向量。
 - 输出：可微的量化后潜在向量 `z_q`，可用于后续的解码器，并允许梯度通过它流回编码器。
 
-![DiVeQ与标准VQ操作对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-0.png)
+![不同VQ方法的码本与潜在表示分布对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-0.png)
 
-图1：标准VQ与DiVeQ操作对比。 左侧显示标准VQ通过 `argmin` 进行硬分配，阻断梯度流。右侧显示DiVeQ通过添加一个方向性重参数化误差向量来模拟量化，使得 `z_q` 成为 `z` 的可微函数，允许梯度 ∂z_q/∂z 和 ∂z_q/∂c_i* 流动。
+图：不同VQ方法（STE、EMA、RT、ST-GS、NSVQ、DiVeQ、SF-DiVeQ）训练后码本向量（红色）与潜在表示分布（灰色）的二维投影对比，每个子图左上角标注了平均量化误差。可以看出DiVeQ和SF-DiVeQ取得了显著更小的量化误差，且码本几乎完全嵌入潜在分布内部，体现了优秀的码本-潜在表示对齐与利用率。
 
 ### 💡 核心创新点
 
@@ -107,8 +107,6 @@ hiddenInHomeList: true
 论文在三个任务、多个数据集上进行了全面评估，关键结果如下：
 
 1. VQ-VAE图像压缩任务（以AFHQ数据集为例，平均指标）
-
-![不同VQ方法在AFHQ数据集上的图像压缩性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-5.png)
 
 图6：不同VQ优化方法在AFHQ数据集上的图像压缩性能对比。 该图显示，DiVeQ和SF-DiVeQ在所有码本大小（4-11 bit）和所有指标（SSIM↑, PSNR↑, LPIPS↓）上均优于其他方法，且随着码本增大，优势保持或扩大。
 

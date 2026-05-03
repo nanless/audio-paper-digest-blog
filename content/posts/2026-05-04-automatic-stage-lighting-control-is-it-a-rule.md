@@ -48,9 +48,9 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-论文提出的Skip-BART模型整体架构如图1所示。
+论文将舞台灯光按色温与强度划分为四种典型类别：常规暖色光、常规冷色光、极端暖色光与极端冷色光，对应不同的色相和亮度组合。
 
-![Skip-BART模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-1.png)
+![舞台灯光的四种典型类别示例：常规暖色、常规冷色、极端暖色、极端冷色](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-1.png)
 
 该模型是一个基于BART的编码器-解码器结构，专为音乐到灯光的生成任务设计：
 1.  输入处理：
@@ -122,7 +122,7 @@ hiddenInHomeList: true
 
 ![灯光序列生成定性可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-4.png)
 
-图5：不同方法生成的灯光序列可视化对比。上行为输入梅尔频谱图，中行为真实灯光序列（Ground Truth），下行为Skip-BART预测序列。颜色代表该时刻的灯光色相和亮度。红色框标出了Skip-BART成功捕捉到的段落过渡点，其灯光变化与真实序列对齐。
+图5：两个示例（Example 1/2）下，不同方法生成的灯光序列可视化对比。每个示例均展示Ground Truth、Skip-BART、Ablation Study与Rule Based四种方法的灯光时序条带，颜色表示该帧的色相与亮度。红色框标出Skip-BART成功捕捉到的段落过渡点，其灯光变化与真实序列对齐良好。
 
 消融研究结论（从Table 1和人类评估推断）：
 - 移除跳连接会略微降低性能（尤其在亮度相关指标和情感匹配上）。

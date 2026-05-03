@@ -41,11 +41,11 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-本论文的核心模型SpeechJudge-GRM是一个基于Qwen2.5-Omni-7B（Thinker）的生成式奖励模型。其架构与训练流程如下图所示：
+本论文的核心模型SpeechJudge-GRM是一个基于Qwen2.5-Omni-7B（Thinker）的生成式奖励模型。其在TTS后训练对齐中的效果如下图所示：
 
-![SpeechJudge-GRM训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I9ED9VWZq6-3.png)
+![使用SpeechJudge-GRM进行TTS后训练对齐的结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I9ED9VWZq6-4.png)
 
-图1：SpeechJudge-GRM的两阶段训练流程。第一阶段（SFT），使用教师模型生成思维链数据进行监督微调；第二阶段（RL），将人类偏好作为可验证奖励，使用GRPO算法进行强化学习训练。
+图1：使用SpeechJudge-GRM进行TTS后训练对齐的结果。(a) 文本准确率(T-ACC)与自然度CMOS(N-CMOS)指标对比，比较了基线Qwen2.5-0.5B-TTS与使用INTP、SpeechJudge-Data、SpeechJudge-GRM(offline/online)进行后训练的模型；(b) 后训练后说话人相似度的Win/Lose/Tie人类偏好统计。
 
 1.  输入：模型接收一个包含目标文本`t`和两个语音样本`a1`, `a2`的提示。具体使用思维链（CoT）提示（见论文Table 1），要求模型对两个语音的自然度进行详细分析（考虑韵律、节奏、清晰度等），并给出评分，最后输出偏好判断。
 2.  第一阶段：监督微调（SFT）：

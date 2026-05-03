@@ -82,7 +82,7 @@ Syncphony的整体架构基于一个预训练的自回归扩散Transformer（Pyr
     *   如何起作用：在推理时同时运行两个模型：完整模型（`ε_θ`）和不同步模型（`ε_off-sync_θ`， 其音频层被禁用）。最终预测为`ε_θ + w(ε_θ - ε_off-sync_θ)`。两者差异主要源于音频层的作用，因此这个差异项可以放大音频的影响，引导生成更同步的运动。
     *   收益：ASG在无需额外训练的情况下，显著提升了同步指标（CycleSync），同时保持甚至改善了视觉质量（FID/FVD）。
 
-![Audio Sync Guidance示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-2.png)
+![Audio Sync Guidance示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-8.png)
 
 图3(b)展示了Audio Sync Guidance的原理。完整模型和跳过音频层的不同步模型共享视觉主干，两者的输出差异被用来引导完整模型，以强化音频驱动的同步效果。
 
@@ -160,13 +160,11 @@ Table 3: 消融实验结果 (AVSync15)
 2.  消融实验：Motion-aware Loss（对比第一行和第二行）和ASG（对比第二行和第四行）都对CycleSync有显著提升。ASG的引导���度w需要平衡，w=2时在同步和视觉质量间取得最佳折衷。
 3.  指标对比：CycleSync对时间错位的敏感性远高于其他指标（见下图）。
 
-![同步指标在不同时间延迟下的敏感度对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-6.png)
-
 图7显示了随着音视频错位延迟增加，CycleSync分数下降最显著，而其他指标（如AV-Align）变化平缓甚至异常，证明了CycleSync的有效性。
 
 定性对比：图5显示，与AVSyncD和微调后的Pyramid Flow相比，Syncphony生成的动作更清晰、时序更一致，且避免了饱和伪影。
 
-![生成视频定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-4.png)
+![生成视频定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-2.png)
 
 图5对比了不同模型生成的视频帧。Syncphony（右）生成的动作（如青蛙鸣叫、婴儿哭泣、机枪射击）在时序和幅度上更准确、更稳定。
 

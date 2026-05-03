@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本论文的核心贡献是数据集与评估框架，而非提出一个新的检测模型。因此，论文未提供一个特定于本研究的检测模型架构。论文中详细描述的是 ArEnAV数据集的生成流程架构（见下图）。
 
-![ArEnAV数据生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EbrPXZTVJ9-0.png)
+![ArEnAV数据生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EbrPXZTVJ9-8.png)
 
 该流程分为三个主要阶段：
 1.  输入分析与预处理：从YouTube视频中提取音频、人脸和文本。使用场景检测分割视频，用Yolov5进行人脸检测和跟踪，使用Whisper-v2进行语音识别获取转录本，并使用多语言wav2vec2模型进行强制对齐以获得词级时间戳。
@@ -117,9 +117,9 @@ hiddenInHomeList: true
 
 来源：表11b。 该表清晰表明，在现有主流数据集上表现优异的模型，在ArEnAV上均失效（AUC≈50%）。
 
-![不同数据集时间定位性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EbrPXZTVJ9-8.png)
+![代码转换片段的检测定性示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EbrPXZTVJ9-0.png)
 
-上图展示了BA-TFD和BA-TFD+在不同数据集上的时间定位性能对比。可以看出，这两个模型在ArEnAV上的性能（最右列）相比LAV-DF和AV-1M出现了断崖式下跌，直观地证明了ArEnAV数据集的挑战性。
+上图展示了模型在ArEnAV代码转换样本上的4个定性检测示例：每帧上方绿色区域为代码转换短语（如"Facebook"、"I let it go"、"QSN"、"So"），红色区域为模型预测的伪造片段，下方黑色曲线为能量趋势，每个示例标注了最高得分（Max-Score 0.504–0.618）。该图直观展示了检测器在多语言代码转换场景下定位伪造区域的难度。
 
 用户研究结果
 - 检测准确率：60.00%

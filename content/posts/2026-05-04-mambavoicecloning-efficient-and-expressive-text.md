@@ -65,19 +65,19 @@ hiddenInHomeList: true
 - 若有多阶段或多模块，逐个解释
 - 若论文中有架构图（可能有多张），每张架构图都必须用 Markdown 图片语法 `
 
-![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-0.png)
+![MambaVoiceCloning系统流程图：输入阶段（音频→Mel谱+风格嵌入）、编码阶段（Bi-Mamba文本编码器/Expressive Mamba编码器/Temporal Bi-Mamba编码器）、语音动力学阶段（时长/表达/F0预测）、解码阶段（HiFi-GAN/iSTFTNet+扩散降噪），训练损失包含Alignment/Temporal/Adversarial/Mel](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-2.png)
 
 ` 贴到输出中，并结合图片内容详细说明各组件关系。
 - 图片格式严格规范：必须使用标准 Markdown 图片语法 `
 
-![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-1.png)
+![生成语音波形与MOSID(CI)对比：MVC、StyleTTS2、Jets三个模型在三段文本上的波形与Ground Truth对比，MVC在三段文本上MOSID分别为4.49/4.46/4.50，优于StyleTTS2(4.47/4.45/4.48)和Jets(3.94/4.25/4.11)](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-8.png)
 
 `。
   - 禁止用 `图X(url)`、`（url）`、`` `url` `` 等非标准格式
   - 每张图片必须单独占一行，前后各空一行，不要和正文文字混在同一行
   - 描述禁止写 raw URL（如 `
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-2.png)
+![Mel频谱图定性对比：Ground Truth、MVC、StyleTTS2、JETS四种模型在三段文本上生成语音的频谱可视化，绿框标出关键差异区域，显示MVC在高频谐波结构与共振峰上更接近真实音频](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-10.png)
 
 `）
 - 图片描述要求：根据你看到的图片内容，尽量给出有意义的描述。
@@ -122,32 +122,18 @@ hiddenInHomeList: true
 - 若拿不到具体数字，明确写“论文未给出具体数值”
 - 实验结果表格必须用标准 Markdown 表格完整列出（可能有多张对比表），每张表都要包含表头、模型/方法名称、数据集、指标和数值，不要省略任何行或列
 - 实验结果相关的每张图表都必须贴到输出中（用 Markdown 图片语法 `
-
-![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-3.png)
-
 `），并在每张图表下方用文字说明关键结论。
 - 图片格式严格规范：必须使用标准 Markdown 图片语法 `
-
-![描述](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-4.png)
-
 `。
   - 禁止用 `图X(url)`、`（url）`、`` `url` `` 等非标准格式
   - 每张图片必须单独占一行，前后各空一行，不要和正文文字混在同一行
-  - 描述禁止写 raw URL（如 `
-
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-5.png)
-
-`）
+  - 描述禁止写 raw URL（如 `icassp-img://...]`）
 - 图片描述要求：根据你看到的图片内容，尽量给出有意义的描述。
   - 如果图片显示的是性能对比表格/曲线，写 “XX任务性能对比图”、“不同模型XX指标对比”
   - 如果图片显示的是消融实验结果，写 “消融实验结果图”
   - 如果图片显示的是定性样本对比，写 “生成/识别样本定性对比”
   - 确实无法判断具体内容时，写 “论文配图”，不要写完全无信息的 “论文中的实验结果图”
-- 重要：你只能使用上文“论文中的图片及其URL”列表中提供的URL，禁止编造或猜测任何不存在的URL。如果该列表为空，任何部分都不得出现 `
-
-![...](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-6.png)
-
-` 形式的图片引用。
+- 重要：你只能使用上文“论文中的图片及其URL”列表中提供的URL，禁止编造或猜测任何不存在的URL。如果该列表为空，任何部分都不得出现 `...]` 形式的图片引用。
 
 ### ⚖️ 评分理由
 

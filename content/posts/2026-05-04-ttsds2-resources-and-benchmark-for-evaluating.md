@@ -148,16 +148,12 @@ TTSDS2不是一个生成模型，而是一个评估框架。其核心流程如�
 TTSDS2得分与TTS系统排名
 论文表2展示了20个系统在各领域的平均主观得分和TTSDS2得分。TTSDS2的排名与MOS排名大致一致，但在细节上有所区别。例如，E2-TTS的TTSDS2得分（91.73）与Ground Truth（93.21）非常接近，而其MOS（3.41）仍低于Ground Truth（3.70）。
 
-![TTSDS2与MOS的相关性可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-1.png)
-
-图2：三个代表性指标（TTSDS2、SQUIM、X-Vector）与人类MOS在不同领域数据上的相关性散点图。TTSDS2（左图）显示了最为连续的线性关系，而其他指标在某些领域存在聚类现象。
-
 多语言基准结果
 图3展示了14种语言下，地面真实语音的TTSDS2分数均处于一个较窄的高位区间（约85-95），且资源较少的语言分数略低，符合预期。
 
-![多语言TTSDS2得分](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-2.png)
+![14种语言下地面真实语音的TTSDS2得分分布箱线图，X标记表示Ground Truth](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-1.png)
 
-图3：14种语言下地面真实语音的TTSDS2得分分布。n表示该语言下评估的系统数量。
+图3：14种语言下地面真实语音的TTSDS2得分分布箱线图。横轴按语言（含每种语言评估的系统数 n）排列，纵轴为TTSDS2得分；X标记表示该语言Ground Truth的得分，均处于约90-93的窄区间。
 
 因子贡献分析
 论文表8（附录D）分析了四个因子各自与MOS的相关性。说话人因子（Speaker）在干净和嘈杂数据上相关性最高（0.84， 0.86），但在野生和儿童数据上，可懂度（Intelligibility）和通用因子（Generic）变得更为重要。

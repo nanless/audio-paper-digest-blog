@@ -129,8 +129,6 @@ Flow Matching模型：生成器同时作为Flow Matching的预测网络g_θ(x_t,
 
 推理速度对比：
 
-![推理速度对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-3.png)
-
 图4：不同模型在CPU和GPU上的推理速度对比（xRT，相对实时速度）。Flow2GAN的1/2/4步版本在GPU上均远超实时，且优于大多数基线。
 
 | 模型 | GPU xRT↑ |
@@ -145,9 +143,9 @@ Flow Matching模型：生成器同时作为Flow Matching的预测网络g_θ(x_t,
 
 零样本TTS性能：
 
-![零样本TTS结果可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-4.png)
+![Flow Matching与GAN微调生成结果的梅尔谱对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-6.png)
 
-图5：零样本TTS生成的音频波形和梅尔谱对比。Flow2GAN生成的波形更接近真实音频（Ground Truth）。
+图2：音频生成示例的梅尔谱可视化。上排：(a) 真实音频 x₁，(b) 噪声 x₀，(c) 速度场 v_t；下排：(d) 标准Flow Matching（2步），(e) 改进Flow Matching（2步），(f) GAN微调后的2步模型。改进版本与GAN微调显著提升了细节保真度。
 
 | 模型 | WER(%)↓ | SIM-o↑ | UTMOS↑ |
 | :--- | :--- | :--- | :--- |

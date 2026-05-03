@@ -81,13 +81,9 @@ SupCLAP框架建立在标准对称对比学习架构之上，核心是在原始I
 *   非对称SVR损失：SVR损失仅以文本支撑向量为锚点，对比音频。这是为了更直接地控制文本嵌入的更新方向。论文在分析中也指出，双向使用SVR（即同时为文本和音频构造支撑向量）效果更佳。
 *   语义半径R的作用：R控制了支撑向量t_sup偏离原始文本嵌入t+的程度，其核心作用是调节缩放因子(1 - R/||a+ - t+||)，该因子专门缩放导致漂移的垂直梯度分量。R通过无监督方式学习，使其能适应训练阶段和样本难度。
 
-![SupCLAP总体框架与SVR作用示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-1.png)
+![InfoNCE与SVR变体在训练过程中正样本对余弦相似度的变化曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-0.png)
 
-图2：说明全局与局部垂直分量。左图显示全局垂直分量导致系统性路径漂移；右图显示因mini-batch采样导致的局部垂直分量波动。SVR旨在控制这些分量。
-
-![语义半径R随训练轮次的变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-2.png)
-
-图3：在AudioCaps数据集上，bi-StaticSVR的参数化半径和bi-DynamicSVR的预测平均半径随训练轮次的变化曲线。两者均呈下降趋势，反映了对垂直分量控制强度的自适应调整。
+图：优化轨迹漂移分析。InfoNCE基线（蓝线）与加入SVR的变体（bi-Dynamic橙线、bi-Static绿线）在AudioCaps上训练过程中正样本对余弦相似度随epoch的变化。SVR变体在整个训练过程中均保持更高的相似度，体现了SVR能够缓解优化轨迹漂移问题。
 
 ### 💡 核心创新点
 
@@ -153,25 +149,23 @@ SupCLAP框架建立在标准对称对比学习架构之上，核心是在原始I
 | InfoNCE-bi-StaticSVR | 19.42 | 14.82 | 28.36 | 21.09 |
 | InfoNCE-bi-DynamicSVR | 20.19 | 14.93 | 29.62 | 21.37 |
 
-语义半径动态分析：
+正样本对相似度分布：
 
-![预训练权重与噪声设置下的语义半径变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-5.png)
+![InfoNCE与SVR变体在AudioCaps测试集上正样本对相似度的分布直方图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-7.png)
 
-图6：在正常预训练权重初始化和随机权重（噪声）初始化下，DynamicSVR预测的平均语义半径R的变化。噪声设置下R更大，表明其能自适应增强正则化以应对更大漂移风险。
-
-![不同难易负样本下的语义半径变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-6.png)
-
-图7：不同数量（K=6,12,18）硬负样本下，DynamicSVR预测的半径R的变化。硬负样本越多，预测的R越大，验证了半径预测器对优化难度的感知能力。
-
-![正样本对相似度分布对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-3.png)
-
-图4：InfoNCE与SVR变体模型在AudioCaps测试集上正样本对的相似度分布。SVR方法的分布明显右移，表明能将正样本对拉得更近。
+图4：InfoNCE与SVR变体模型在AudioCaps测试集上正样本对的余弦相似度分布。SVR方法（bi-StaticSVR绿线、bi-DynamicSVR橙线）相比InfoNCE基线（蓝线）分布明显右移，表明能将正样本对拉得更近。
 
 收敛速度对比：
 
-![InfoNCE基线与SVR变体模型在AudioCaps数据集上的收敛速度曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-4.png)
+![SigLIP及其SVR变体在AudioCaps上A2T R@1指标随训练轮次的变化曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-8.png)
 
-图5：不同模型在AudioCaps数据集上的A2T和T2A R@1指标随训练轮次的变化。SVR增强的模型收敛更快，且在早期即达到更高性能。
+图5(a)：SigLIP及其SVR变体在AudioCaps上A2T方向R@1随训练轮次的变化。SigLIP-bi-DynamicSVR（绿线）和SigLIP-bi-StaticSVR（橙线）相比SigLIP基线（蓝线）收敛更快，且在中后期持续保持更高的R@1。
+
+语义半径动态分析：
+
+![InfoNCE-bi-StaticSVR与bi-DynamicSVR在正常和噪声初始化下语义半径随轮次的变化曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-10.jpg)
+
+图6：bi-StaticSVR的参数化半径（蓝线）以及bi-DynamicSVR在正常预训练权重初始化（绿线）和随机权重噪声初始化（橙线）下预测的平均语义半径R随训练轮次的变化。三条曲线均呈下降趋势；噪声初始化下R系统性更大，表明DynamicSVR能自适应增强正则化以应对更大的漂移风险。
 
 开销分析：
 | 方案 | AudioCaps 时间开销(s) | AudioCaps GPU显存峰值(MB) | Clotho 时间开销(s) | Clotho GPU显存峰值(MB) |

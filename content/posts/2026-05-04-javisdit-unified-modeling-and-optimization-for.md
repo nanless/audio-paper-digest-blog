@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 JavisDiT++的整体架构旨在将一个强大的预训练文本到视频（T2V）模型（Wan2.1-1.3B-T2V）高效地扩展为联合音视频生成模型。
 
-![JavisDiT++模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-2.png)
+![JavisDiT++模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-0.png)
 
 （图3：JavisDiT++的架构示意图。视频和音频token首先被扁平化并拼接，通过共享的自注意力层进行跨模态信息交互。随后，token被分离，分别通过各自独立的模态特定前馈网络（MS-FFN）进行处理，以增强单模态的特征建模。TA-RoPE策略应用于注意力层，以确保音视频在时间维度上的对齐。）
 
@@ -116,13 +116,13 @@ JavisDiT++的整体架构旨在将一个强大的预训练文本到视频（T2V�
 3.  AV-DPO奖励策略消融（Table 4）：证明了模态感知（Modality-Micro/Macro）的奖励策略在提升生成质量、一致性和同步性上优于模态无关（Average-Micro/Macro）的策略。去除分数归一化或真实样本均导致性能下降。
 4.  人类评估（图8， 图9）：用户研究显示，JavisDiT++的输出在超过74% 的情况下被偏好优于JavisDiT和UniVerse-1。同时，AV-DPO策略使超过25% 的生成结果获得了人类偏好提升。
 
-![生成结果定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-5.png)
+![AV-DPO奖励评分流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-5.png)
 
-（图6：定性生成结果对比。与Veo-3、JavisDiT、UniVerse-1相比，JavisDiT++生成的音视频在视觉质量、语义一致性和声画同步性上更优，且推理延迟（1m4s）远低于JavisDiT（3m55s）。）
+（图：AV-DPO奖励评分流程示意。给定文本提示，参考模型生成多个<音频, 视频>样本，结合真实音视频，由多个奖励模型在音频、视频、音视频联合三个维度评分，进而构建winning-losing偏好对用于AV-DPO优化。）
 
-![人类评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-7.png)
+![LoRA配置消融对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-7.png)
 
-（图8：人类偏好评估结果。JavisDiT++在盲测中显著优于两个基线模型，获胜比例超过70%。）
+（图：LoRA配置消融实验。柱状图对比了不同LoRA策略（A-LoRA+AV-LoRA、A-noLoRA+AV-AttnLoRA、A-noLoRA+AV-LoRA及不同秩r=32/64/128）在FVD、FAD、TV-IB、TA-IB、AV-IB、JavisScore、DeSync七项指标上的表现。）
 
 ### ⚖️ 评分理由
 

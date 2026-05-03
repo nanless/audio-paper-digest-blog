@@ -61,9 +61,9 @@ hiddenInHomeList: true
 
 论文主要贡献是提出了评测基准WearVox，并在此基础上进行了案例研究，构建了两个语音大模型：SC WearLlama 和 MC WearLlama。其架构并非本文的核心创新点，但为研究多通道输入提供了基线。
 
-![SC WearLlama 和 MC WearLlama 推理流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-0.png)
+![WearVox 数据集录音地点类型分布饼图：约31%室内（含大房间37%、小房间25%、办公区11%、忙碌走廊6%等），69%户外（含公园27%、大区域16%、中等区域12%、施工区11%等）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-0.png)
 
-图8：SC WearLlama 和 MC WearLlama 推理流程对比图。SC WearLlama仅处理波束成形后的单通道音频（c_x），而MC WearLlama同时处理通道0（c_o，通常为最高信噪比通道）和波束成形通道，并将它们的编码交错输入给大语言模型解码器。
+图6：WearVox 数据集录音地点类型分布。左侧（室内31%）以"大房间/区域(37%)"和"小房间/区域(25%)"为主；右侧（户外69%）以"公园/自然区域(27%)"和"大区域(16%)"为主，覆盖了多样化的真实声学环境。
 
 *   整体流程：两个模型都采用“音频编码器-大语言模型解码器”的端到端架构。
 *   音频编码器：使用一个1B参数的Conformer模型，该编码器在BEST-RQ上进行了预训练。它以12.5Hz的采样率工作，将每80毫秒的音频转换为一个音频嵌入。
@@ -123,8 +123,6 @@ hiddenInHomeList: true
     关键结论：多通道输入主要提升了工具调用（+5.4%）和侧语拒绝（+8.5%）任务的性能，证明了空间音频线索在区分用户指令和背景干扰方面的价值。
 
 *   声学环境影响分析（Figure 3）：
-
-    ![不同声学环境下各模型性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-2.png)
 
     关键结论：大多数模型在户外和嘈杂环境下性能显著下降。而Gemini 2.5 Flash Thinking 和 MC WearLlama 表现出更强的噪声鲁棒性。
 

@@ -65,17 +65,17 @@ STEE编码器：
 6.  时间下采样与轴向自注意力：沿时间步长下采样，将特征在频率维度上平均后，应用沿时间轴的局部多头自注意力，建模长程依赖。
 7.  注意力统计池化与分类：再次在频率上平均，应用注意力统计池化（加权均值和标准差拼接）得到固定长度的嵌入 `z`，最后通过线性分类器输出情感类别。
 
-![LFST前端架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-9.png)
+![STEE编码器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-9.png)
 
-图1：LFST前端示意图，展示了可学习的对数频率网格、Softmax阶数权重生成有效阶数，以及幅度S和相位一致性κ的计算过程。
+*图1：STEE编码器整体数据流，从双通道TF输入S²[B,2,F,T]依次经过DW时间主干、频谱残差块、TF Hybrid、SE2D、Adaptive FiLM、时间下采样、轴向时序自注意力、频率均值与注意力统计池化，最终经投影与分类器输出logits。*
 
-![STEE编码器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-8.png)
+![自适应FiLM门控结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-8.png)
 
-图2：STEE编码器架构图，展示了从双通道TF图输入到最终分类输出的完整数据流，包括深度卷积主干、残差块、FiLM门控、自注意力等模块。
+*图2：自适应FiLM频率门控详细结构。输入特征x[B,C,F,T]分别计算S与κ在时间上的均值与logstd，与o_eff[F]按频拼接为[B,F,5]，经Linear(5→1)与Linear(F→C)+GELU+Linear(C→C)+Sigmoid生成门控g[B,C,1,1]，对x做逐元素乘性调制。*
 
-![FiLM门控详细结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-2.png)
+![三数据集混淆矩阵](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-2.png)
 
-图3：自适应FiLM频率门控的详细结构图，展示了如何从S和κ的统计量以及有效阶数`oeff`中生成通道调制信号。
+*图3：LFST+STEE在三个数据集上的混淆矩阵。(a) EMO-DB各类别识别率均较高（Anger 94.9%、Happiness 95.2%）；(b) IEMOCAP上Happy有17.7%被误判为Angry；(c) NSPL-CRISE在电话噪声下混淆更明显，FCW与Sad/Neutral之间存在易混情况。*
 
 ### 💡 核心创新点
 
@@ -139,15 +139,7 @@ STEE编码器：
 | | LEAF+STEE | 89.0 | 88.2 |
 | | LFST+STEE (ours) | 91.4 | 90.4 |
 
-混淆矩阵（图4）：
-
-![混淆矩阵](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-3.png)
-
-图4：三个数据集的混淆矩阵。图(a)为EMO-DB，各类别识别率高，Boredom和Neutral之间存在少量混淆。图(b)为IEMOCAP，Happy有17.7%被误判为Angry。图(c)为NSPL-CRISE，在电话噪声下混淆更明显，如FCW易与Sad/Neutral混淆。
-
 可学习阶数分布可视化（图5）：
-
-![可学习阶数分布可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-4.png)
 
 图5：LFST学习到的有效阶数`oeff(f)`和阶数权重分布热图。上图显示有效阶数在中高频段（共振峰区域）较高，在低频段（基频区域）较低。下图热图显示阶数权重随频率平滑变化，证明了分数阶混合的连续性。
 

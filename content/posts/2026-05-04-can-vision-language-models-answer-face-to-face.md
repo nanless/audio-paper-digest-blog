@@ -122,9 +122,9 @@ hiddenInHomeList: true
 
 关键结论：即使是最强的闭源模型GPT-4o，正确率也仅为58.76%，远低于人类水平（87.33%）。
 
-图2：消融实验（音视频影响与微调效果）
+图2：QIVD主要结果表与消融实验（音视频影响与微调效果）
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-1.png)
+![QIVD基准上各模型在ASR/Human问题与时间戳下的Correctness/BERT/METEOR/BLEU/ROUGE-L结果（上），以及VideoLLaMA2.1-7B在V/AV预训练与FT两种状态下分类别正确率柱状图（下）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-1.png)
 
 图2显示了VideoLLaMA2.1-7B在预训练（蓝色、红色）和微调（绿色、紫色）状态下，在仅使用视觉（V）和使用音视频（AV）两种模式下的性能。关键发现：
 1.  预训练模型加音视频可能性能下降（蓝色 vs 红色）。
@@ -132,7 +132,7 @@ hiddenInHomeList: true
 
 图3：时间戳来源的影响
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-2.png)
+![Qwen2.5-Omni在ASR Timestamps、GT Timestamps、Stream-Qwen-Omni、Qwen Timestamps四种时间戳来源下，跨13个任务类别的Accuracy(%)分组柱状图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-2.png)
 
 图3评估了Qwen2.5-Omni在不同时间戳来源下的表现：
 *   GT Timestamps（地面真值时间戳）：性能最高。
@@ -141,11 +141,11 @@ hiddenInHomeList: true
 *   Stream-Qwen-Omni（端到端流式模型）：性能介于ASR和GT之间。
 这证明了准确的时间戳对实时问答性能至关重要。
 
-图4：各类别详细正确率对比
+图4：定性示例对比（Action Attributes类别）
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-3.png)
+![Action Attributes类别定性样例：用户对镜头提问"Which way do I point?"，GPT-4o（错答left）、VideoLLaMA2-72B（含糊未答方向）、VideoLLaMA AV-FT（错答left）均答错，仅Human正确答出right](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-3.png)
 
-图4显示，人类在所有类别（尤其是动作计数、音频视觉、物体指代）上表现均衡且优秀（>75%），而所有模型在“动作计数”（Action Counting）类别上都表现极差（最佳模型约20%-30%），揭示了当前模型在时序推理上的根本缺陷。
+该定性示例展示了Action Attributes类别下一个典型的指代理解失败案例：用户面对镜头提问指向方向，主流模型（GPT-4o、VideoLLaMA2-72B、VideoLLaMA AV-FT）均给出错误答案，仅人类正确判断方向，凸显模型在第一人称视角空间指代上的根本缺陷。同时论文统计显示所有模型在“动作计数”（Action Counting）类别上都表现极差（最佳模型约20%-30%），而人类>75%，揭示当前模型在时序推理上的根本缺陷。
 
 流式设置性能：
 在流式设置中（使用Whisper-Streaming生成问题和时间戳），模型性能进一步下降。例如，GPT-4o的正确率降至约58.76%（离线）以下，VideoLLaMA3-7B从56.38%降至50.59%，说明ASR误差和时间戳误差会传播并影响最终答案。

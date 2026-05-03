@@ -78,13 +78,9 @@ hiddenInHomeList: true
     *   根据熵监控得到的权重，对每个模态的蒸馏损失进行加权求和，得到最终的KTD损失。
 6.  联合训练：学生模型的总损失通常为KTD损失与任务监督损失（如交叉熵）的加权和。
 
-![EM-KTD框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-0.png)
+![传统知识蒸馏与EM-KTD对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-2.png)
 
-图2：EM-KTD框架示意图。左侧为学生模型，右侧为教师模型。学生模型通过核化计算视觉、音频和融合token的Gram矩阵，并利用教师端各模态分类头预测的熵（H_V, H_A, H_F）作为权重，自适应地从教师模型的对应Gram矩阵中蒸馏知识。
-
-![传统知识蒸馏与EM-KTD对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-1.png)
-
-图1：传统潜在特征蒸馏（a）与本文提出的EM-KTD（b）的对比。(a)中需要使用投影模块匹配特征维度；(b)中通过核化token关系进行蒸馏，无需匹配架构，且能根据模态熵选择性蒸馏。
+图1：传统音视频知识蒸馏（a）与本文提出的熵监控核化Token蒸馏EM-KTD（b）的对比。(a)中需要使用投影模块（Projection Modules）匹配特征维度；(b)中通过核化（Kernelization）token关系进行蒸馏，无需匹配架构，并通过熵监控（Entropy Monitor）对各模态自适应加权，根据模态熵选择性蒸馏。
 
 ### 💡 核心创新点
 
@@ -136,8 +132,6 @@ hiddenInHomeList: true
 | VGGish (72.2M) | EM-KTD | 79.81 | 87.86 | 64.43 | 74.73 |
 | VGGish-S (18.3M) | EM-KTD | 78.23 | 86.33 | 58.63 | 69.13 |
 结论：EM-KTD的有效性在不同的教师音频编码器规模下均得到验证。
-
-![熵分析可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-2.png)
 
 图3：熵分析。(a)展示了各模态（视觉、音频、融合）的预测熵分布，融合模态熵普遍较低。(b)显示了在不同熵区间内模型预测准确率的变化，以及对应的蒸馏权重。熵越低，准确率越高，权重越大。这直观证明了熵监控策略的有效性。
 

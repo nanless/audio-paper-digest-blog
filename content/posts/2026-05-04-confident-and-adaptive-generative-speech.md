@@ -119,7 +119,7 @@ hiddenInHomeList: true
 性能-计算权衡：
 下图展示了不同固定假设集大小（N=1到5）下的WER曲线，以及本方法在不同α设置下的工作点（标记点）。
 
-![性能-计算权衡对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ck5T7QeiDh-1.png)
+![性能-计算权衡对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ck5T7QeiDh-2.png)
 
 （注：此为论文中Figure 2，展示了三个数据集上的WER vs. 假设集大小关系图。曲线代表固定大小N的WER，虚线为Oracle性能，彩色标记点为本文自适应方法在不同风险容忍度α下的工作点。图表显示，自适应方法的工作点普遍位于固定大小曲线的“左下方”，即更少的假设带来相当或更优的WER。）
 

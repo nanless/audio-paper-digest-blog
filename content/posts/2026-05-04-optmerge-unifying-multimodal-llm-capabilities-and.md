@@ -72,11 +72,11 @@ OptMerge算法针对从同一基础模型微调而来的多个任务专用模型
 2.  直接对原始任务向量 `τ_i,l`（而非中心化后的）进行截断SVD低秩近似，以降低范数。
 3.  用任务向量的均值来初始化合并向量 `τ_m,l`，避免优化过程中范数增长过快。
 
-下图直观展示了在LoRA模型合并优化过程中，不加约束的合并向量（如WUDI Merging）容易通过增大幅值来“取巧”实现正交，而OptMerge通过上述技巧能有效控制范数。
+下图展示了MLLM模型合并的整体场景：开发者基于开源基座（如Qwen-VL、LLaVA-o1、InternVL）使用私有数据微调出VQA、几何、图表、OCR、Grounding等领域专家，并在HuggingFace等社区发布；通过数据无关的模型合并方法可将这些专家整合为统一的多任务MLLM，乃至将视觉、音频、视频MLLM融合为Omni MLLM。
 
-![优化合并向量时范数增长对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Me0n0iESJY-7.png)
+![MLLM模型合并整体场景示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Me0n0iESJY-1.png)
 
-图示：在优化过程中，WUDI Merging（蓝线）的合并向量平均范数持续增长，而OptMerge（橙线）能保持相对稳定的范数，表明其优化更稳定。
+图示：左侧描述了基座模型经个人微调、发布检查点到多任务模型合并的流水线；右侧展示了视觉、视频、音频三类MLLM通过数据无关合并形成Omni MLLM的跨模态合并范式。
 
 #
 

@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 本文未提出新的模型架构，其核心贡献是设计了一个评估基准。因此，此部分不适用。论文重点在于如何系统性地构建和利用XModBench来测试现有的全语言模型（OLLMs）。
 
-![XModBench总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-0.png)
+![XModBench总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-1.png)
 
 图1：XModBench基准总览。展示了基准的构建逻辑：(a) 基于对齐的文本-图像-音频三元组构建实例；(b) 通过排列上下文与候选的模态，生成六种模态配置；(c) 覆盖五大任务族和17个子任务；(d) 展示了在不同模态设置下的多项选择题示例。
 
@@ -75,10 +75,6 @@ hiddenInHomeList: true
     *   之前方法的局限：许多现有AVQA或音频基准任务类型单一，无法全面评估模型的通用跨模态能力。
     *   如何起作用：广泛的任务覆盖能全面暴露模型在不同认知维度上的跨模态一致性短板。
     *   收益：使得评估结论更具普遍性和说服力，例如发现模型在空间/时间推理上的普遍弱点。
-
-![任务分类与分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-8.png)
-
-图2：XModBench的任务分类与数据分布。展示了五大任务族（感知、空间推理、时间推理、语言理解、外部知识）及其下属子任务的问题数量分布，体现了基准的广泛覆盖性。
 
 ### 🔬 细节详述
 
@@ -108,21 +104,19 @@ hiddenInHomeList: true
 关键发现：
 1.  任务能力：所有模型在空间和时间推理上表现最差（最强模型Gemini 2.5 Pro分别为50.1和60.8），而在感知和语言理解上表现较好（最高达75.9和76.8）。
 2.  模态差异：图4展示了不同模态对之间的差异。音频与文本之间的差异（ΔT vs. A）最大（-49 for Gemini 2.5 Pro），表明音频是当前模型最薄弱的模态。
-3.  方向不平衡：图5显示，在文本-视觉和文本-音频对中存在显著的不平衡。例如，对于Qwen2.5-Omni，在T→V配置下的准确率比V→T配置低16.6个百分点。
+3.  方向不平衡：在文本-视觉和文本-音频对中存在显著的不平衡。例如，对于Qwen2.5-Omni，在T→V配置下的准确率比V→T配置低16.6个百分点。
 
-![模态差异分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-3.png)
+![XModBench任务分类放射图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-3.png)
 
-图4：不同模型在各模态对之间的差异分析。负分表示性能差距，音频与文本之间的差距（ΔT vs. A）最为显著。
+图2：XModBench任务分类的放射状饼图，从内到外展示五大任务族（Perception、Spatial reasoning、Temporal reasoning、Linguistic、External knowledge）及17个子任务（Instruments、Activities、Singer、Movies等）的问题数量占比，文中文字部分介绍了任务分类的设计。
 
-![方向不平衡分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-4.png)
+![六大子任务QA示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-4.png)
 
-图5：各模型在不同模态对之间的方向不平衡分析。展示了交换上下文与选项模态后的准确率差距，揭示了文本-视觉和文本-音频对中的不对称性。
+图3：XModBench六个代表性子任务的多模态QA示例：(a) 乐器感知（识别小提琴/萨克斯）、(b) 3D空间运动方向、(c) 空间定位、(d) 时间推理（计数重复次数）、(e) 语言识别、(f) 外部知识（识别歌手Lady Gaga），每个示例展示了视觉上下文、音频与文本候选项、以及正确答案标注。
 
-失败案例分析：图6展示了两个典型失败案例。(a) Gemini 2.5 Pro能正确通过文本识别迪吉里杜管，但无法匹配其图像；(b) Qwen2.5-Omni在处理空间音频运动时，交换候选模态后得出了相反的方向结论。这些案例直观体现了跨模态推理的不一致性。
+![模态差异柱状图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-5.png)
 
-![失败案例分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HaL9EZovFg-5.png)
-
-图6：失败案例分析。(a) 模型无法将正确的文本概念与图像选项关联；(b) 模型在不同模态配置下对空间运动的理解出现矛盾。
+图4：模态差异ΔT vs. V、ΔV vs. A、ΔT vs. A柱状图（PandaGPT、Unified-IO 2系列、VITA、VideoLLaMA 2、Baichuan Omni 1.5、EchoInk-R1、Qwen2.5-Omni、Gemini系列），紫色柱代表音频↔文本差距，可见Gemini 2.5 Pro的ΔT vs. A达到约-49，是所有差异中最大者。
 
 ### ⚖️ 评分理由
 

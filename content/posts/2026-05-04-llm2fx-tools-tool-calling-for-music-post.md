@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 LLM2Fx-Tools是一个端到端的多模态自回归生成框架，其整体架构如图2所示。
 
-![LLM2Fx-Tools模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-1.png)
+![LLM2Fx-Tools模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-0.png)
 
 输入处理与模态对齐：
 1.  音频编码：使用预训练的Fx-Encoder++（一个专为音频效果设计的编码器）将输入的干声（xdry）和参考湿声（xref）分别编码为音频表示`haudio`。
@@ -122,7 +122,8 @@ LLM2Fx-Tools是一个端到端的多模态自回归生成框架，其整体架�
 
 图4：反向工程主观评估（MUSHRA）结果
 
-![反向工程主观评估MUSHRA测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-3.png)
+![反向工程主观评估MUSHRA测试结果（箱线图）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-7.png)
+*图4 各方法在MUSHRA听感评估上的得分分布箱线图，LLM2Fx-Tools中位数明显高于DeepAFx-ST与Gemini 2.5-Flash，仅次于参考真值。*
 
 关键结论：LLM2Fx-Tools（62.8分）在人类听感评估中显著优于DeepAFx-ST（54.8分）和Gemini 2.5 Flash（56.5分）。Regression和MultiTask基线得分甚至低于No Fx（39.1分），表明错误的效果器应用比不应用更糟。
 
@@ -156,17 +157,12 @@ LLM2Fx-Tools是一个端到端的多模态自回归生成框架，其整体架�
 - 选题价值：1.5/2：��对音乐制作这一具体垂直领域，解决了一个实际痛点（效果链估计的灵活性与可解释性），具有明确的应用价值。但领域相对狭窄，对更广泛的音频/语音研究社区的影响力有限。
 - 开源与复现加成：0.5/1：公开了详尽的Demo页面和LP-Fx数据集的构建方法及统计信息，为后续研究提供了基础。但核心模型代码和权重未开源，降低了完全复现的便利性。
 
-### 图5：LP-Fx数据集统计与效果器参数空间
+### 图5：LP-Fx数据集生成流程
 
-![LP-Fx数据集生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-2.png)
+![LP-Fx数据集三阶段生成流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-2.png)
+*图5 LP-Fx数据集的生成流程：先从多轨录音中采样Fx链生成干/湿音频对，再用Gemini 2.5 Flash-Lite/Flash分别生成指令跟随对话与CoT推理，最后由Gemini 2.5 Pro作为评判进行质量筛选。*
 
-图表说明：该图展示了LP-Fx数据集的四阶段生成流程，清晰说明了从原始音频到最终对话数据的构建过程，体现了数据合成方法的系统性。
-
-### 图6：模型架构中的音频编码器与适配器细节
-
-![音频编码器与适配器示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-7.png)
-
-图表说明：该图可能详细展示了Fx-Encoder++和音频-语言适配器的内部结构（如交叉注意力机制），但根据论文描述，其核心是图2所示的架构。具体组件交互需结合图2和正文描述理解。
+图表说明：该图展示了LP-Fx数据集的三阶段生成流程，清晰说明了从原始音频到最终对话数据的构建过程，体现了数据合成方法的系统性。
 
 ---
 

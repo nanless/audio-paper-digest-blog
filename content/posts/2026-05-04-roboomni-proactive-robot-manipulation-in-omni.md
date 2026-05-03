@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 RoboOmni采用一个统一的自回归模型架构，包含四个核心组件，形成一个闭环的感知-推理-对话-执行系统。
 
-![RoboOmni框架架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-3.png)
+![RoboOmni框架架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-0.png)
 
 图4: RoboOmni框架示意图，展示了Perceiver、Thinker、Talker、Executor四个模块及其数据流。
 
@@ -113,23 +113,23 @@ RoboOmni采用一个统一的自回归模型架构，包含四个核心组件，
 | RoboOmni | 89.0 | 71.6 | 75.1 | 75.0 | 76.6 |
 
 *   真实机器人实验：RoboOmni成功率73.9%，最佳ASR+VLA基线为52.2%。
-*   意图识别能力：
+*   真实机器人多场景成功率对比：
 
-![意图识别能力对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-6.png)
+![真实机器人各场景成功率柱状图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-1.png)
 
-图7(a): 意图识别能力对比。RoboOmni（88.89%）大幅领先其他模型。
+真实机器人实验各类场景成功率对比：在Sentiment、Non-Verbal、Identity、Overlapping、Dyadic、Triadic六类上下文场景上，RoboOmni（红）相比OpenVLA、NORA、π0全面领先，平均成功率达73.9%，远高于最佳基线52.2%。
 
-*   级联系统对比：
+*   OmniAction数据集构建流程：
 
-![级联与端到端模型对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-8.png)
+![OmniAction数据集构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-6.png)
 
-图9: 端到端RoboOmni在所有指令类型上均优于以Qwen2.5-Omni为规划器、VLA为控制器的级联管线。
+OmniAction数据集构建分两阶段：①文本脚本化（过滤、对话合成、交互扩展、GPT校验）；②听觉实现（语音合成、多说话人模拟、环境声/非语言事件插入、人工验证），覆盖情绪、重叠、非语言提示、身份、二元/三元对话等多种数据样本。
 
-*   推理效率对比：
+*   指令类型与来源分类：
 
-![推理延迟对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-9.png)
+![指令类型与上下文指令分类示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-8.png)
 
-图10: 相对推理延迟对比。RoboOmni（0.49x）比ASR级联基线（~1.0x）快约一半。
+指令分类示意：(1) 指令类型分为直接(Direct)、复杂(Complex)、推断(Inferential)三类；(2) 指令来源涵盖文本、语音转文本、纯语音三种形式；(3) 上下文指令场景下，机器人需结合音频（人声、环境声）、视觉信息进行语音确认并执行动作。
 
 关键消融实验：
 在意图识别任务上（表3）：

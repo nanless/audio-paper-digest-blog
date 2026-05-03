@@ -67,13 +67,13 @@ hiddenInHomeList: true
 
 论文中的关键架构图是图1，它清晰地展示了Aurelius框架的三个支柱：AudioEventSet（提供事件）、AudioRelSet（提供关系）以及两者结合生成`<text, audio>`对的过程。
 
-![Aurelius框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-0.png)
+![表3微调与从头训练对比及定性波形/频谱比较](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-1.png)
 
 图2则详细展示了AudioEventSet和AudioRelSet的树状分类结构以及关系“元数”的概念。
 
-![AudioEventSet和AudioRelSet语料库可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-1.png)
-
 图4展示了`<text, audio>`对生成的具体流程，从关系文本模板化到事件实例化，再到音频生成。
+
+![Aurelius三大支柱概览：AudioEventSet、AudioRelSet 与 <Text,Audio>](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-2.png)
 
 ### 💡 核心创新点
 
@@ -128,19 +128,15 @@ hiddenInHomeList: true
 
 定性结果与图表分析：
 
-![TangoFlux零样本与微调生成的定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-4.png)
+![文本-音频对生成流程：关系模板化与事件实例化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-5.png)
 
 图5：定性比较。左侧参考音频先远后近的掌声关系清晰；中间零样本TangoFlux生成的音频关系模糊；右侧微调后的TangoFlux生成的音频明显改善了从远到近的空间关系。
 
-![零样本设置下不同模型在各关系类别和元数上的性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-5.png)
-
 图6：零样本下，所有模型在“组合逻辑”和“嵌套组合”关系，以及元数>1时，mAMSR均极低，突显了短板。
 
-![微调设置下不同模型在各关系类别和元数上的性能](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-6.png)
+![嵌套组合关系示例及主关系/子关系按元数的覆盖统计](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-7.png)
 
 图7：微调后，TangoFlux在各项关系上的性能普遍提升，尤其是在“空间”、“时序”和低“元数”关系上，但在高阶关系上仍很弱。
-
-![mAMSR随训练数据量（100/200/300小时）的变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-7.png)
 
 图8：关键发现。微调策略在数据量少时收益高，但接近300小时时性能饱和；从头训练策略则随数据量增加持续��升，表明长期来看需要大规模数据从头训练。
 

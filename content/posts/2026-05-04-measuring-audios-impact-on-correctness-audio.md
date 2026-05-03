@@ -39,9 +39,7 @@ hiddenInHomeList: true
 1.  监督微调（SFT）：使用AudioMCQ数据集对Qwen2.5-Omni进行微调，模型学习以问答对形式（输入音频、问题、选项，输出答案和推理链）响应。
 2.  强化学习（GRPO）：在SFT模型基础上，使用分组相对策略优化（GRPO）进行进一步对齐。GRPO对同一问题采样一组输出，通过比较组内输出的奖励来优化策略，无需单独的价值网络。
 
-关键组件在于数据处理与训练策略的设计，而非模型结构本身。核心流程图如下：
-
-![数据集AudioMCQ构建流程概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sJ0jUO9Mxr-0.png)
+关键组件在于数据处理与训练策略的设计，而非模型结构本身。
 
 图1展示了AudioMCQ数据集的构建流程。首先从多个原始音频-文本数据集（如Clotho, AudioCaps等）收集数据，将其转换为统一的问题-答案格式。然后，使用Qwen3-235B生成新的、聚焦于音频依赖理解的多选题（包括问题、选项、正确答案和问题类型）。接着，生成两种形式的链式思维（CoT）标注：一种是结构化的三阶段CoT（问题类型分析、音频内容分析、答案选择），另一种是简化的非结构化CoT。最后，通过基于LLM的五维质量评估和过滤，得到最终的AudioMCQ数据集。
 
@@ -85,12 +83,9 @@ hiddenInHomeList: true
 - Mixed-to-Strong 范式在MMAR和MMSU上取得最佳性能（67.0%， 71.7%）。
 - 消融实验（图5）显示：在强化学习阶段使用“强音频贡献”数据至关重要，它能显著提升模型在各类基准及其“强音频贡献子集”上的表现；而SFT阶段的数据选择应与下游任务特性对齐（弱音频贡献任务如MMAU适用Weak-to-Strong， 强音频贡献任务如MMAR/MMSU适用Mixed-to-Strong）。
 
-![不同训练策略在MMAU-test-mini-4k上的性能曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sJ0jUO9Mxr-3.png)
-
 图4展示了Weak-to-Strong、Mixed-to-Strong和Mixed-to-Mixed三种训练策略在验证集MMAU-test-mini-4k上的性能随训练步数变化的曲线，用于选择最优检查点。Weak-to-Strong策略在SFT后接GRPO阶段获得了最高的最终分数。
 
-![不同训练策略在多个基准上的详细性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sJ0jUO9Mxr-4.png)
-
+不同训练策略在多个基准上的详细性能对比]
 图5详细比较了三种训练方法在四个基准（MMAU-test-mini， MMAR， MMSU）及其各自的强音频贡献子集（-ACstrong）上的性能随训练步数的变化。它清晰地显示了：1) 使用强音频贡献数据进行GRPO能带来普遍且显著的提升；2) SFT数据的选择会影响最终在不同类型基准上的表现。
 
 #### 05. 评分理由
@@ -125,6 +120,7 @@ hiddenInHomeList: true
 
 关键组件在于数据处理与训练策略的设计，而非模型结构本身。核心流程图如下：
 
+数据集AudioMCQ构建流程概览图]
 图1展示了AudioMCQ数据集的构建流程。首先从多个原始音频-文本数据集（如Clotho, AudioCaps等）收集数据，将其转换为统一的问题-答案格式。然后，使用Qwen3-235B生成新的、聚焦于音频依赖理解的多选题（包括问题、选项、正确答案和问题类型）。接着，生成两种形式的链式思维（CoT）标注：一种是结构化的三阶段CoT（问题类型分析、音频内容分析、答案选择），另一种是简化的非结构化CoT。最后，通过基于LLM的五维质量评估和过滤，得到最终的AudioMCQ数据集。
 
 #
@@ -176,8 +172,10 @@ hiddenInHomeList: true
 - Mixed-to-Strong 范式在MMAR和MMSU上取得最佳性能（67.0%， 71.7%）。
 - 消融实验（图5）显示：在强化学习阶段使用“强音频贡献”数据至关重要，它能显著提升模型在各类基准及其“强音频贡献子集”上的表现；而SFT阶段的数据选择应与下游任务特性对齐（弱音频贡献任务如MMAU适用Weak-to-Strong， 强音频贡献任务如MMAR/MMSU适用Mixed-to-Strong）。
 
+不同训练策略在MMAU-test-mini-4k上的性能曲线]
 图4展示了Weak-to-Strong、Mixed-to-Strong和Mixed-to-Mixed三种训练策略在验证集MMAU-test-mini-4k上的性能随训练步数变化的曲线，用于选择最优检查点。Weak-to-Strong策略在SFT后接GRPO阶段获得了最高的最终分数。
 
+不同训练策略在多个基准上的详细性能对比]
 图5详细比较了三种训练方法在四个基准（MMAU-test-mini， MMAR， MMSU）及其各自的强音频贡献子集（-ACstrong）上的性能随训练步数的变化。它清晰地显示了：1) 使用强音频贡献数据进行GRPO能带来普遍且显著的提升；2) SFT数据的选择会影响最终在不同类型基准上的表现。
 
 #

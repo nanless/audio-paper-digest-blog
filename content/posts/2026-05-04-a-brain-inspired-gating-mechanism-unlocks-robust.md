@@ -60,13 +60,9 @@ hiddenInHomeList: true
 - 动态电导 (\( C_i, D_i^t \)) 的引入：动机是模拟生物神经元离子通道电导的活动依赖性调节。这使得神经元的响应（即膜电位衰减率）能够根据近期的输入模式（由 \( D_i^t \) 表征）进行动态调整，从而实现选择性信息传递和噪声过滤。
 - 与LSTM的功能类比：论文明确指出，DGN中的动态衰减系数 \( \rho^t \) 在功能上类似于LSTM的遗忘门，而通过动态 \( D_i^t \) 累积电流的过程类似于输入门。这建立了生物启发机制与人工门控网络之间的理论联系。
 
-![LIF与DGN模型结构对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-0.png)
+![LIF与DGN模型结构对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-2.png)
 
 图1：标准LIF模型与提出的DGN模型的结构示意图。图(a)展示了LIF固定的泄漏电导（\( \rho_m = e^{-g_l \Delta t} \)），图(b)展示了DGN中随输入活动动态变化的泄漏因子（\( \rho^t \)），体现了其门控特性。
-
-![LSTM与DGN模型结构类比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-1.png)
-
-图2：LSTM与DGN模型结构示意图。该图直观地展示了DGN的动态电导衰减（f）和脉冲重置（⊕）机制，在功能上与LSTM的遗忘门、输入门和细胞状态更新具有相似性。
 
 ### 💡 核心创新点
 
@@ -148,11 +144,9 @@ hiddenInHomeList: true
 
 关键结论：DGN在各种扰动下展现出极强的鲁棒性。例如，在TIDIGITS的加性噪声下，前馈DGN保持95.34%准确率，而LIF降至46.83%；在SHD的PGD攻击下，循环DGN（66.13%）远优于LSTM（32.01%）和循环LIF（30.59%）。
 
-图4：不同扰动强度下模型的性能
+![不同扰动下输入脉冲样本可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-9.png)
 
-![不同扰动强度下TIDIGITS数据集（前馈网络）的性能曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-3.png)
-
-图4：在TIDIGITS数据集上，使用前馈网络时，不同模型在各类扰动（加性、减性、混合噪声，FGSM、PGD、BIM攻击）强度增加下的准确率变化曲线。Ours（DGN）曲线始终位于其他模型之上，表明其在更广泛的扰动强度下均保持最佳性能。
+图：在TIDIGITS数据集上，三个样本（Sample 0、1、2）在原始（Original）、加性（Additive）、减性（Subtractive）、混合噪声（Mixed）以及FGSM、PGD、BIM对抗攻击下的输入脉冲分布对比。攻击型扰动（FGSM/PGD/BIM）会在原本稀疏的脉冲图中引入大量噪声脉冲，直观展示了DGN需应对的输入扰动形态。
 
 消融实验：
 论文提出了简化版s-DGN（所有突触共享一个平衡电位E）。实验（表3）表明，即使参数量减半，s-DGN仍显著优于其他SNN基线，证明性能提升源于门控机制本身，而非单纯增加参数。

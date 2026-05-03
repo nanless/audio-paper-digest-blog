@@ -98,9 +98,9 @@ hiddenInHomeList: true
 | Gemini-2.0 | 4.1 | 77.6 | 5.7 | 83.7 |
 | 平均 | 17.0 | 86.3 | 21.5 | 90.4 |
 
-![文本迁移攻击成功率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-1.png)
+![JALMBench整体框架与数据集统计](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-0.png)
 
-图2：文本模态和文本迁移攻击的ASR（%）。显示PAP攻击在大多数模型上有效，且音频模态的ASR通常高于文本模态。
+图1：JALMBench总体框架。从有害文本/音频查询出发，构造4类文本迁移攻击（ICA/DAN/DI/PAP）和4类音频原生攻击（SSJ/AMSE/BoN/AdvWave），评估SALMONN、GLM-4-Voice、GPT-4o-Audio、DiVA、Qwen2-Audio、VITA等LALM在Prompt-Level/Response-Level防御下的安全性，并与AJailBench、MULTI-AUDIOJAIL、Jailbreak-AudioBench进行能力对比；数据集包含4,428条有害查询、11,070条文本迁移样本和229,857条音频原生样本。
 
 2. 音频原生攻击成功率（ASR%）
 （数据来源于论文Table 9和Figure 3）
@@ -131,21 +131,17 @@ hiddenInHomeList: true
 
 4. 攻击效率分析
 
-![攻击效率分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-3.png)
-
-图4：攻击效率图（攻击方法位于左上角更优）。实现>60% ASR通常需要>100秒（如AdvWave， PAP），而实现~40% ASR可在~10秒内完成（如SSJ， AMSE），表明低成本现实攻击的存在。
+实现>60% ASR通常需要>100秒（如AdvWave、PAP），而实现~40% ASR可在~10秒内完成（如SSJ、AMSE），表明低成本现实攻击的存在。
 
 5. 话题敏感性分析
 
-![话题敏感性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-4.png)
-
-图5：不同话题下的平均ASR（%）。模型对显式仇恨内容（Hate & Harassment， 41%）相对有效，但对错误信息（Misinformation， 67%）等隐性有害话题脆弱得多。
+不同话题下的平均ASR（%）显示：模型对显式仇恨内容（Hate & Harassment，41%）相对有效，但对错误信息（Misinformation，67%）等隐性有害话题脆弱得多。
 
 6. 架构对安全泛化的影响
 
-![架构影响可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-6.png)
+![不同架构LALM最后隐藏层的t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-3.png)
 
-图7：LLaMA-Omni（连续特征）、Qwen2-Audio（连续特征）、GLM-4-Voice（离散token）在良性、有害和对抗性查询上最后隐藏层的t-SNE可视化。清晰显示GLM-4-Voice的嵌入空间能更好地区分查询类型，支持其更安全的跨模态泛化。
+图7：LLaMA-Omni（连续特征）、Qwen2-Audio（连续特征）、GLM-4-Voice（离散token）在良性、有害和对抗性音频/文本查询上最后隐藏层的t-SNE可视化。GLM-4-Voice的嵌入空间能更清晰地区分查询类型，支持其更安全的跨模态泛化。
 
 ### ⚖️ 评分理由
 

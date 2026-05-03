@@ -74,9 +74,9 @@ AlignSep是一个基于条件流匹配的端到端生成模型，其目标是从
 -   时序对齐向量场估计器（核心）：这是模型的核心创新。架构为一个前馈Transformer编码器（4层，隐藏维度576）。其关键设计选择是采用拼接（Concat） 策略融合多模态特征，而非交叉注意力。具体来说，将视觉特征 `e` 在时间维度上扩展，与音频潜在特征 `xm` 在时间维度对齐后直接拼接，最后拼接时间步编码 `t`，作为一个整体序列输入Transformer。这种设计强制模型在每一层都显式地处理对齐的视觉与音频时序信息，旨在加强时序一致性约束，避免了交叉注意力可能带来的信息对齐松散问题。
 -   ODE求解器：用于在推理时数值求解训练好的向量场ODE。
 
-![AlignSep模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-1.png)
+![语义对齐vs时序对齐VQSS示意](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-1.png)
 
-图2：AlignSep的整体框架图。清晰地展示了从视频输入、音频输入（混合音频经加噪）、向量场估计器（接收拼接后的视觉、音频潜在表示和时间步t），到通过ODE求解器迭代去噪，最终解码生成分离音频的完整流程。
+示意图：左侧给出屏幕上/屏幕外声源（人、狗、车）及其混合音频波形；右侧上方为Semantically-Aligned VQSS，将屏幕外同类声源错误纳入分离结果，下方为Temporally-Aligned VQSS（本文），仅保留与画面动作时序匹配的声音。
 
 ### 💡 核心创新点
 
@@ -145,15 +145,13 @@ AlignSep在四个主观维度（噪声残留、音视频一致性、音频质量
 
 时序信息利用效率（图3）：
 
-![不同视频帧率下的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-4.png)
-
 图3：在VGGSound-Hard上，分离性能（TA-V）随输入视频帧率（FPS）变化的曲线。AlignSep的性能随FPS增加显著提升并饱和，而CLIPsep和OmniSep曲线平坦，表明它们无法有效利用时序信息。
 
 定性分析：
 
-![定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-5.png)
+![AlignSep模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-3.png)
 
-图4：定性结果对比。(a) 展示了时序不对齐问题：当视频中的敲鼓动作停止后，OmniSep仍生成鼓声（红色区域），而AlignSep正确停止（绿色区域）。(b) 展示了频谱空洞问题：掩模方法在重叠区域产生缺失（红色），而AlignSep生成完整（绿色）。
+架构图：上路混合音频与噪声音频经Audio VAE Encoder编码为xm，与高斯噪声x0在t0插值得到xt0；下路视频经Visual Encoder并做Length Regulation得到e；xt0与e拼接后送入ODE Solver求解dx=v(x,t|e,θ)dt，输出xc经Audio VAE Decoder与Vocoder生成分离音频。
 
 ### ⚖️ 评分理由
 

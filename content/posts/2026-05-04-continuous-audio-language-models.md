@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 CALM的整体架构如图1所示，包含一个离线的VAE和在线的生成模型两部分。
 
-![CALM模型概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-0.png)
+![CALM模型概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-1.png)
 
 CALM模型架构概览。在训练时，潜在向量x_s被加噪，以鼓励骨干Transformer关注粗结构。一致性头是一个基于一致性模型的MLP，其条件变量Z_s由骨干Transformer产生的长上下文潜变量z_s^{long}和短上下文Transformer计算的短上下文向量z_s^{short}相加得到。
 
@@ -74,9 +74,9 @@ CALM模型架构概览。在训练时，潜在向量x_s被加噪，以鼓励骨�
 3.  潜变量无分类器引导（Latent CFG）与潜变量蒸馏：为将CFG应用于一致性模型，创新性地将引导操作施加在骨干Transformer的输出`Z_s`上（而非采样轨迹）。进一步地，通过蒸馏将教师模型的CFG计算“烘焙”到学生模型中，在推理时无需双倍batch，且可蒸馏出更小的学生模型（如Pocket TTS）。
 4.  高斯温度采样启发式方法：为连续一致性模型提出了一种类比离散温度采样的方法，通过调节输入噪声的标准差（`√τ`）来平衡生成多样性与保真度，效果与离散设置下的温度调节类似（见图2）。
 
-![高斯温度采样效果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-5.png)
+![头批乘数消融：FAD随训练时间变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-8.png)
 
-不同温度下说话人相似度对比。随着温度升高，RQ-transformer（离散）和CALM（连续）生成的说话人相似度均下降，表明两者在调节多样性方面的行为相似。
+头批乘数消融实验。横轴为训练时间（天），纵轴为FAD（越低越好）。CALM一致性头的批乘数分别取2、4、8三种设置，结果显示批乘数越大（绿色=8）收敛越快、FAD越低，验证了头批乘数训练技巧的有效性。
 
 ### 🔬 细节详述
 
@@ -140,7 +140,9 @@ CALM模型架构概览。在训练时，潜在向量x_s被加噪，以鼓励骨�
 | CALM TRIGFLOW 100 STEPS | ×0.3 | ×0.2 | 86.6% | 0.64 ± 0.04 | 3.12 ± 0.07 | 1921 ± 29 | 1 |
 结论：CALM（1步一致性）在FAD和人类评分上优于32-RVQ基线，且推理速度快2.2倍。一致性头仅占6.6%的推理时间，而RQ-Transformer占57.7%。
 
-![不同步数下TrigFlow与一致性模型的推理效率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-9.png)
+![不同温度下说话人相似度对比（CALM vs RQ-Transformer）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-9.png)
+
+不同温度下说话人相似度对比。横轴为采样温度，纵轴为平均说话人相似度。随着温度升高，RQ-Transformer（离散）和CALM（连续）生成的说话人相似度均下降，趋势一致，表明高斯温度采样在连续模型中实现了与离散温度采样类似的多样性控制效果。
 
 表8：TrigFlow与一致性模型在不同推理步数下的效率（音乐延续）。在低于10步的流式应用区间内（RTF<1），仅有一致性模型能生成高质量音频。
 
@@ -153,8 +155,6 @@ CALM模型架构概览。在训练时，潜在向量x_s被加噪，以鼓励骨�
 | 无短上下文Transformer | 4.03 ± 0.16 |
 | 无上述任何一项（近似MAR） | 8.38 ± 0.17 |
 结论：每个组件（噪声增强、短上下文Transformer、头批乘数）都对性能有显著贡献，移除任何一个都会导致FAD恶化，全部移除则性能严重下降。
-
-![头批乘数对训练收敛速度的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-8.png)
 
 图3：头批乘数值对训练的影响。更高的乘数（N）能显著加速FAD指标的收敛。
 

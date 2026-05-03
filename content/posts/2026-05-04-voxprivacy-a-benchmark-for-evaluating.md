@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 VoxPrivacy的构建与评估流程可分为四个主要阶段，如图2所示。
 
-![图2：VoxPrivacy基准构建与评估流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/GNo1qMqgPD-1.png)
+![图2：VoxPrivacy基准构建与评估流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/GNo1qMqgPD-0.png)
 
 1.  Stage 1：LLM生成（文本数据生成）：使用多个LLM（Deepseek, Gemini, ChatGPT）并行生成覆盖8个隐私类别的秘密陈述语句。
 2.  Stage 2：数据预处理：使用difflib进行去重，使用Deepseek进行语言润色，最后进行人工审核，确保文本质量。

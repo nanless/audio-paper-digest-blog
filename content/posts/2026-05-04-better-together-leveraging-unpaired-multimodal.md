@@ -75,14 +75,6 @@ UML框架的核心设计是跨模态权重共享。其流程如下：
 
 动机：权重共享强制不同模态的信号更新同一组参数，使得模型能够从不同但相关的视角累积关于“共享现实”`Z*`的信息，即使这些视角之间没有一一对应关系。
 
-![UML模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-3.png)
-
-图：Unpaired Multimodal Learner (UML) 架构概览。展示了自监督设置(a)和监督设置(b)两种模式。不同模态的输入经过编码、共享网络处理，并根据设置连接不同的解码器或分类头。
-
-![学习范式对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-11.jpg)
-
-图：本文研究的学习范式对比。 (a)配对学习使用有对应关系的样本对；(b)有标签的未配对学习，模态内有标签但跨模态无对应；(c)完全未配对学习，无任何对应或标签。
-
 ### 💡 核心创新点
 
 1.  理论证明未配对数据的价值：在严格的线性数据生成模型假设下，通过Fisher信息分析，证明了即使没有样本配对，来自辅助模态Y的未配对数据也能严格增加共享潜在变量θ_c的Fisher信息，从而降低其估计方差。这为方法提供了坚实的理论基础。
@@ -117,9 +109,9 @@ UML框架的核心设计是跨模态权重共享。其流程如下：
 
 主要视觉分类结果（与未配对基线对比）：
 
-![不同数据集和设置下的性能对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-12.png)
+![视觉分类性能对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-3.png)
 
-图：论文表2，展示了在多个图像分类数据集上，UML方法在全微调和Few-shot线性探测（1/2/4-shot）设置下，均优于未配对单模态基线（Unimodal），尤其是在细粒度任务（如Stanford Cars）和少样本场景下。
+图：论文表2节选，展示了在多个图像分类数据集（Stanford Cars, SUN397, FGVC Aircraft, DTD, UCF101, Food101, Oxford Pets, Oxford Flowers, Caltech101）上，UML方法（Ours）在全微调（Full-finetuning）和Few-shot线性探测设置下，平均准确率均高于未配对单模态基线（Unimodal）。
 
 视觉鲁棒性测试结果：
 在ImageNet上训练的16-shot线性探针，在四个分布偏移测试集（V2, Sketch, A, R）上的准确率均高于未配对基线，表明UML学习的特征更鲁棒。
@@ -131,23 +123,23 @@ UML框架的核心设计是跨模态权重共享。其流程如下：
 音频分类结果：
 在ImageNet-ESC-19和27数据集上，使用未配对图像和文本数据增强音频表示，分类性能均得到提升，且使用CLIP对齐编码器时收益更大。
 
-![音频分类实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-5.png)
+![模态汇率等高线图（DINOv2+OpenLLaMA）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-5.png)
 
-图：在两个音频-视觉-文本数据集上，UML利用未配对图像和文本数据提升了音频分类的准确率。
+图：基于未对齐编码器（DINOv2+OpenLLaMA）的图像-文本汇率等高线图，横轴为每类图像数(n-shot)，纵轴为每类文本数(m-shot)，颜色表示测试准确率。等准确率曲线的斜率反映了图像与文本之间的边际替代率。
 
 模态间汇率量化结果：
 在Oxford-Pets数据集上，使用CLIP编码器时，达到相同性能所需的“1张图像 ≈ 228个单词”；使用未对齐的DINOv2+OpenLLaMA编码器时，比例约为“1张图像 ≈ 1034个单词”。
 
-![模态汇率量化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-7.png)
+![未配对数据降低重建误差曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-1.png)
 
-图：在Oxford-Pets数据集上，基于CLIP编码器的图像-文本汇率等高线图，显示了达到相同测试准确率所需的图像数量与单词数量的关系，斜率约为1/228。
+图：理论实验对比图。在线性数据生成模型上，使用未配对的(X+Y)双模态数据训练（青色）相比仅用X单模态数据（粉色）能将目标模态X的重建误差收敛至更低水平，验证了未配对数据带来Fisher信息增益的理论。
 
 迁移学习结果：
 使用BERT权重初始化ViT视觉模型，在ImageNet全微调（+42.7%相对提升）和冻结backbone（+1.4%绝对提升）场景下，均优于从零初始化的基线。
 
-![迁移学习结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-6.png)
+![模态汇率等高线图（CLIP编码器）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-6.png)
 
-图：使用BERT预训练权重初始化的图像分类器，在全微调和冻结backbone两种设置下，其测试准确率均显著高于从零开始训练的基线。
+图：基于CLIP对齐编码器的图像-文本汇率等高线图。横轴为每类图像数(n-shot)，纵轴为每类标题数(m-shot)，颜色表示测试准确率，等准确率曲线的斜率给出"1张图像 ≈ 若干个文本"的边际替代率。
 
 ### ⚖️ 评分理由
 

@@ -60,17 +60,13 @@ OmniVinci采用自回归架构，将视频、音频和文本统一编码后输�
 2.  全模态对齐机制：
     *   OmniAlignNet：核心对齐模块。它初始化一对可学习的查询向量（Qv， Qa），分别与视觉嵌入序列和音频嵌入序列进行跨注意力交互，生成固定大小的全模态视觉嵌入（V）和音频嵌入（A）。然后，在批量数据上对V和A进行L2归一化，并使用CLIP风格的对称交叉熵损失（公式1）进行对比学习，拉近同一视频内视觉和音频表示的距离，推远不同视频间的距离。其目标是学习一个语义对齐的共享空间。
 
-![OmniVinci系统架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-1.png)
+![OmniVinci系统架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-0.png)
 
 （图2， OmniVinci全模态理解基础模型架构图。展示了视觉、音频、文本的编码路径，以及OmniAlignNet、时序分组（TEG）和受限旋转时间编码（CRTE）如何将不同模态的嵌入对齐并统一输入LLM。）
 
     *   时序分组（TEG）：在OmniAlignNet之后，根据视觉和音频嵌入的时间戳，将它们划分到不同的时间组（G1v, G1a, G2v, G2a...）。然后按时间顺序交替拼接（如G1v， G1a， G2v， G2a），形成一个新的嵌入序列Egroup。这编码了模态间的相对时序关系。
 
     *   受限旋转时间编码（CRTE）：在TEG生成的序列上，为每个嵌入向量注入其绝对时间戳信息。通过三步实现：a) 基于最大时间尺度T_max生成基础频率ω；b) 用实际时间戳t调制频率得到Ω；c) 像RoPE一样，对嵌入向量的每一对维度应用基于Ω的旋转变换（公式5）。这使模型能感知绝对时间。
-
-![OmniAlignNet模块示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-2.png)
-
-（图3， OmniAlignNet模块示意图。展示了如何通过查询嵌入（Query Emb.）和跨注意力层（Cross-Attn Layer）将变长的视觉和音频Token序列分别压缩为固定大小的全模态嵌入，并在共享潜空间中通过对比损失进行对齐。）
 
     *   最终嵌入序列：经过TEG和CRTE处理后的全模态嵌入序列，与文本嵌入序列拼接，作为LLM的输入。
 
@@ -84,19 +80,15 @@ OmniVinci采用自回归架构，将视频、音频和文本统一编码后输�
 4.  高效率全模态训练配方：通过精心设计的架构和数据策略，OmniVinci仅使用0.2T训练token（相比Qwen2.5-Omni的1.2T减少了83%），就在多个关键基准上取得了显著更好的性能，展示了极高的训练效率。
 5.  跨模态协同效应的验证：实验不仅证明了音频对视频理解的增益，更通过强化学习实验证明了在推理（GRPO）阶段，联合音视频输入比单独视觉输入收敛更快、效果更好（如图6右所示），揭示了模态间的协同潜力。
 
-![全模态描述生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-3.png)
+![OmniVinci与Qwen2.5-Omni推理效率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-6.png)
 
-（图4， 全模态描述生成流程图。展示了如何先独立生成可能存在错误的视觉和音频描述，然后通过LLM进行跨模态纠正与融合，生成准确的联合描述，用于训练。）
+（图6， OmniVinci与Qwen2.5-Omni在不同输入帧数下的推理效率对比柱状图。左：Time-to-First-Token（ms），16帧时OmniVinci相比Qwen2.5-Omni快约1.78倍；右：Decode Latency（ms），16帧时快约2.72倍；Qwen2.5-Omni在32/64帧出现OOM。）
 
 ### 🔬 细节详述
 
 - 训练数据：
     - 规模与组成：共2400万对话，覆盖150+子数据集。分布如图5所示：图像36%，非语音声21%，语音17%，全模态（视频-音频）15%，视频11%。
     - 来源与增强：图像、视频、音频数据来自多个公开数据集。全模态数据分为两类：(i) 隐式学习数据：现有的视频QA数据集（视频天然带音频），用于隐式监督；(ii) 显式学习数据：通过上述“全模态数据引擎”合成的、带有明确跨模态标签的对话数据。为支持语音提示，使用Magpie TTS将文本问题转为语音。
-
-![训练数据分布饼图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-0.png)
-
-（图5， 整体训练数据分布饼图。显示了图像、非语音声、语音、全模态、视频等不同模态数据的比例。）
 
 - 损失函数：
     - OmniAlignNet损失：CLIP风格对称交叉熵对比损失（公式1），用于对齐视觉和音频嵌入。
@@ -131,9 +123,9 @@ OmniVinci采用自回归架构，将视频、音频和文本统一编码后输�
 
 表3： OmniVinci与主要基线在全模态理解基准上的性能对比。OmniVinci在平均分和Dailyomni上���得显著领先。
 
-![全模态基准性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-8.png)
+![训练数据分布饼图与示例QA](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-8.png)
 
-（图1， OmniVinci与其它模型在多个基准上的性能对比柱状图，突出了其在全模态（Dailyomni）、音频（MMAR）和视觉（Video-MME）任务上的优势。）
+（图5， 整体训练数据分布饼图，并在周围给出各模态QA样例。Image 36%，Sound 21%，Speech 17%，Omni 15%，Video 11%，含General/ASR/Audio QA/Video QA/Omni QA/Omni Caption等子类别比例。）
 
 2. 音频理解基准
 

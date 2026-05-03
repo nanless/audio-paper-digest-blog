@@ -133,12 +133,9 @@ PrismAudio的架构可分为三个主要阶段，建立在一个多模态扩散�
     *   奖励维度分析：单一维度优化（如仅语义、仅美学）会导致其他维度性能严重下降（目标纠缠），而多维度奖励能实现平衡提升。
     *   Fast-GRPO效率：Fast-GRPO收敛速度和最终奖励值均优于使用全轨迹SDE的Flow-GRPO。
 
-![Fast-GRPO与Flow-GRPO训练收敛曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cIfDKEbAky-1.png)
-
 图2：Fast-GRPO与Flow-GRPO在语义奖励（CLAP分数）上的训练收敛曲线对比。Fast-GRPO收敛更快且最终性能更高。
 
-![生成样本定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cIfDKEbAky-2.png)
-
+生成样本定性对比]
 图3：PrismAudio与MMAudio、ThinkSound在两个场景（弹奏尤克里里、铁匠打铁）上的生成音频频谱定性对比。PrismAudio在高频细节和时间瞬态响应上更接近真实音频。
 
 ### ⚖️ 评分理由

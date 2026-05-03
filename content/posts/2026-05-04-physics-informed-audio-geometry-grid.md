@@ -72,7 +72,7 @@ hiddenInHomeList: true
         *   网络结构：类似于GI-DOAEnet，包含初始卷积块、残差卷积块、通道级多头自注意力（用于捕获通道间空间关系）、帧级GRU（用于建模时序依赖）和表示映射块。
     *   输出：音频-几何表示（AGR）`A`，形状为 `O×G×L`，其中O是输出数量（对应不同波束宽度的软标签），G是表示维度，L是帧数。
 
-![图3：LNuDFT参数可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-2.png)
+![球面采样示意：(a) Fibonacci 球面采样，(b) 等角球面采样，用于生成候选 DOA 网格点](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-10.png)
 
 2.  网格表示网络（Gridnet）：
     *   输入：一组候选DOA网格点的坐标（通常通过Fibonacci球面采样生成，支持动态数量）。
@@ -86,7 +86,7 @@ hiddenInHomeList: true
     *   通过计算两者之间的缩放点积并应用Sigmoid函数，生成概率性空间谱 `Ŝ`，其中每个值表示对应候选DOA方向存在声源的可能性。
     *   该空间谱作为最终输出，可通过峰值检测算法提取估计的DOA。
 
-![图4：AuGeonet架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-3.png)
+![Eigenmike 球面麦克风阵列硬件实物图，作为评估时使用的未见过阵列几何之一](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-11.png)
 
 数据流总结：音频信号和阵列几何 -> AuGeonet -> AGR；候选DOA网格 -> Gridnet -> GR；AGR与GR对齐 -> 空间谱 -> DOA估计。这种设计使得模型在训练后，只需更改Gridnet的输入（即候选网格），即可在任意网格上推理，无需改变AuGeonet。
 
@@ -131,19 +131,11 @@ hiddenInHomeList: true
 
 网格灵活性分析（表4）：测试了不同候选网格数D的影响。当D>=512时性能稳定，证实了网格灵活性。D过大时（>2048），在真实数据集上性能略有下降，可能因对扰动更敏感。
 
-![图9：不同环境条件（SNR，RT60）下的MAE和ACC10对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-8.png)
-
 图9展示了在不同信噪比（SNR）和混响时间（RT60）条件下，所提方法与基线（Unet, Neural-SRP，均使用AGG-RL）的性能对比。所提方法在所有条件下均保持领先，表明其在不同声学环境下的鲁棒性。
 
 空间谱可视化：
 
-![图11：同一片段的帧级空间谱2D视图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-10.png)
-
 图10和图11展示了所提方法生成的定性结果。所提方法产生了清晰、尖锐的峰值，准确地对应两个真实DOA，且在时间上保持稳定，与Oracle谱非常接近。相比之下，Neural-SRP的峰值模糊，Unet则存在多个虚警峰。
-
-![图12：Eigenmike数据集上一个单说话人片段的平均空间谱](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-11.png)
-
-![图13：同一片段的帧级空间谱2D视图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-12.png)
 
 图12和图13进一步证实，即使在未见过的Eigenmike阵列上，所提方法也能产生准确、稳定的空间谱，而基线方法性能显著下降。
 

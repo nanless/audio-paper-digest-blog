@@ -58,9 +58,9 @@ TASTE的整体框架分为两个阶段：TASTE语音分词器训练和基于TAST
 - 训练目标：最小化语音重建的交叉熵损失（公式3）和RVQ的承诺损失（公式4）之和。
 - 架构图：
 
-![TASTE整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-1.png)
+![传统语音Tokenizer与TASTE的概念对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-1.png)
 
-图2展示了TASTE的整体架构。左侧展示了TASTE分词器如何从语音和文本中生成对齐的tokenization ̂z；右侧展示了语音解码器如何利用这些token和文本来重构语音。核心是中间的“Attention-Based Aggregator”。
+图1：左侧展示传统语音tokenizer输出的语音token序列与文本token长度不匹配（mismatch in lengths），导致联合建模困难（non-trivial）；右侧展示TASTE采用语音-文本双模态输入，输出在长度上与文本对齐的语音token ̂z₁, ̂z₂, ̂z₃，从而支持简单直接的Text-Aligned SLM联合建模。
 
 2. 基于TASTE的口语语言模型（TASLM）（见图1）：
 - 输入：对齐的文本token序列v和TASTE语音token序列q（或连续嵌入̂z）。
@@ -68,8 +68,6 @@ TASTE的整体框架分为两个阶段：TASTE语音分词器训练和基于TAST
     1.  TASLMtoken：在预训练的文本LLM（如LLaMA）上使用LoRA进行微调。在每个时间步，模型同时预测下一个文本token和对应的R层RVQ语音token（多头预测，公式6）。
     2.  TASLMemb：建模连续的TASTE嵌入̂z。参考MELLE，使用线性层预测潜在分布的参数（均值和方差），并引入KL散度损失和正则化损失（公式7，8）。
 - 概念对比图：
-
-![传统方法与TASTE概念对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-0.png)
 
 图1直观地展示了TASTE的优势。传统方法（上）的语音token与文本token长度不匹配，需要复杂处理；TASTE（下）生成对齐的token，使得联合建模变得直接。
 
@@ -149,7 +147,7 @@ TASTE的整体框架分为两个阶段：TASTE语音分词器训练和基于TAST
 
 结论：聚合器能大幅降低token频率（50Hz -> ~3Hz），且使用浅层编码器表示作为值（第6行）比使用深层表示（第5行）效果更好，验证了其设计选择。即使经过量化，性能仍远高于纯文本基线。
 
-![注意力聚合器可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-3.png)
+![注意力聚合器可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-4.png)
 
 图4展示了聚合器最后一层的交叉注意力地图，多个头表现出清晰的文本-语音对齐模式，验证了聚合器学习到了预期的软对齐关系。
 

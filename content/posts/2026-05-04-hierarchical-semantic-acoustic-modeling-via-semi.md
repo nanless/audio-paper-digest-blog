@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 VoxCPM是一个端到端的分层自回归模型，其整体架构如图所示。
 
-![VoxCPM整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-0.png)
+![VoxCPM整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-2.png)
 
 完整输入输出流程：
 1.  输入：文本 token 序列 `T`。
@@ -159,10 +159,6 @@ VoxCPM在CV3-EVAL的中文和英语WER/CER上表现最佳，在极具挑战性�
 | w/o RALM (TSLM→LocDiT) | 4.34 | 61.8 | 3.05 | 69.4 | 25.00 | 63.8 |
 移除FSQ或RALM导致性能显著下降，尤其在中文困难集上CER从18.19%飙升至25.00%，证实了半离散瓶颈和残差建模对鲁棒性的关键作用。最优FSQ维度为256。
 
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-1.png)
-
-该图展示了不同FSQ维度和模型配置下的关键性能指标（WER/CER和SIM），直观显示了半离散表示和残差建模的贡献。
-
 探测分析（Layer-wise Probing）：
 表12：内部隐藏状态的逐层探测结果
 
@@ -176,12 +172,9 @@ VoxCPM在CV3-EVAL的中文和英语WER/CER上表现最佳，在极具挑战性�
 
 可视化分析：
 
-![零样本克隆任务t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-2.png)
-
 该图（原文Figure 2）展示了在零样本语音克隆任务中，TSLM-FSQ输出（上图）呈现与说话人无关的语义-韵律结构，而RALM输出（下图）则按说话人身份聚类，直观证实了功能分离。
 
-![文本到语音任务t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-3.png)
-
+文本到语音任务t-SNE可视化]
 该图（原文Figure 3）展示了在无提示语音的文本到语音任务中，TSLM-FSQ输出（上图）按文本类型（新闻、诗歌等）聚类，表明其捕捉了语义和韵律；RALM输出（下图）则在同类别内呈现更丰富的变化，表明其添加了声学细节。
 
 ### ⚖️ 评分理由

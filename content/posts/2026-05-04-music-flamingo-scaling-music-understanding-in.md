@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 Music Flamingo是基于Audio Flamingo 3（AF3）骨干网络构建的大型音频语言模型，其架构与训练流程紧密耦合。整体是一个“编码器-解码器”范式的多模态模型。
 
-![Music Flamingo训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RS7T9S16Bl-1.png)
+![Music Flamingo训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RS7T9S16Bl-0.png)
 
 图2：Music Flamingo的整体训练流程图。展示了从数据标注到模型训练的全过程，包括改进AF3骨干、在MF-Skills上微调、以及使用MF-Think和GRPO进行推理增强的后训练阶段。
 
@@ -125,8 +125,6 @@ Music Flamingo是基于Audio Flamingo 3（AF3）骨干网络构建的大型音�
 3.  歌词转录性能（尤其是中文）达到了远超前作的水平。
 4.  消融实验（Table 1文字说明）表明，去掉GRPO后训练（即仅进行MF-Think SFT），在MuChoMusic和MMAU-Pro-Music上的准确率分别下降至69.5和63.9，证明了强化学习对复杂推理能力的显著提升。
 5.  定性评估（附录E, F）由音乐专家进行，详细对比了Music Flamingo与Qwen3-Omni, GPT-4o, Gemini 2.5 Pro在处理不同文化歌曲时的表现，总体结论是Music Flamingo在技术细节（如调性、节拍）的准确性和音乐理论推理的深度上表现最佳。
-
-![Music Flamingo与其他模型生成的音乐描述对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RS7T9S16Bl-0.png)
 
 图1：Music Flamingo与Audio Flamingo 3、Qwen3-Omni在生成英文（ABBA）和葡萄牙文歌曲描述时的对比。清晰展示了Music Flamingo生成的描述在细节层次、理论关联和叙事连贯性上的显著优势。
 

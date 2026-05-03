@@ -54,11 +54,9 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-LST是一个包含编码器-全局转换器-解码器的层级化架构。其整体流程如下图所示：
+LST是一个包含编码器-全局转换器-解码器的层级化架构。
 
-![LST模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-1.png)
-
-图2展示了Latent Speech-Text Transformer (LST)的整体架构。模型将BPE文本token和HuBERT语音token编码到一个共享的潜空间。一个块编码器将局部语音段压缩为块表示（Latent Representation），这些块表示与文本token一起被联合处理（由全局Transformer完成）。一个块解码器从潜表示中预测未来的语音token，从而实现跨模态的对齐和迁移。
+Latent Speech-Text Transformer (LST)的整体架构是：模型将BPE文本token和HuBERT语音token编码到一个共享的潜空间。一个块编码器将局部语音段压缩为块表示（Latent Representation），这些块表示与文本token一起被联合处理（由全局Transformer完成）。一个块解码器从潜表示中预测未来的语音token，从而实现跨模态的对齐和迁移。
 
 完整输入输出流程：
 1.  输入：原始语音波形和文本。
@@ -154,7 +152,7 @@ LST是一个包含编码器-全局转换器-解码器的层级化架构。其整
 
 模型缩放行为：
 
-![模型缩放行为对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-3.png)
+![模型缩放行为对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-2.png)
 
 图4展示了LST与基线模型在HellaSwag上的缩放行为。(a) 在420M到1.8B参数的计算最优缩放中，LST优于基线，且优势随规模增长。(b) 在7B模型的次优token预算（70B tokens）下，LST始终保持更高的准确率。
 

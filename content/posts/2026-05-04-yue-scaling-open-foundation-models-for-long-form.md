@@ -59,7 +59,9 @@ hiddenInHomeList: true
 
 YuE是一个基于自回归语言模型的两阶段生成框架，旨在将歌词转换为完整的歌曲。其整体架构如图所示：
 
-![图1：YuE两阶段歌词到歌曲生成框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-0.png)
+![Stage-2语言模型残差建模流程：输入第一阶段输出的codebook-0序列，自回归预测codebook 1-7的残差token以恢复声学细节](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-1.png)
+
+![Stage-1语言模型多任务训练框架：Lyrics2Song中文本token（白方块）与人声token（蓝）/伴奏token（橙）交错排列实现SPC，并展示Text2Speech、Uncond. Mix Music、Uncond. Demix Music等任务格式](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-7.png)
 
 组件与数据流：
 1.  音频分词器（Audio Tokenizer）：采用X-Codec，一种语义-声学融合编解码器。它将波形转换为离散token。关键设计是使用其底层语义丰富的codebook-0（来自Residual VQ-VAE的第一层）作为第一阶段模型的输入和输出。这保留了旋律和歌词内容信息，同时简化了建模任务。
@@ -67,8 +69,6 @@ YuE是一个基于自回归语言模型的两阶段生成框架，旨在将歌�
 3.  第一阶段语言模型（Stage-1 LM）：核心生成模块，参数规模为7B。它采用Track-Decoupled NTP策略（见图2），在每个时间步`t`输出两个token：一个人声token `vt` 和一个伴奏token `at`。建模为条件概率 `P(vt, at | v<t, a<t)`。它在文本token和codebook-0音频token上进行自回归训练。该阶段使用了Structural Progressive Conditioning，将长歌曲文本（歌词+结构标签）与对应的短音频片段（由结构分析工具分段）交错排列，形成训练序列（如图2中`Lyrics2Song`所示）。
 4.  第二阶段语言模型（Stage-2 LM）：一个更小的（2B参数）模型，负责残差建模。给定第一阶段输出的codebook-0序列，它预测所有K=8个codebook（0-7）的token。训练时，它先看到完整的codebook-0序列，然后对每帧预测8个codebook的token。推理时，codebook-0被第一阶段输出固定，仅自回归生成codebook 1-7，以细化音频质量，恢复声学细节。
 5.  后处理：包括token解重排和上采样模块，将模型生成的16kHz音频上采样至44.1kHz以提升感知质量。
-
-![图2：YuE第一阶段框架详细图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-1.png)
 
 图2详细展示了Stage-1 LM的工作流程。`Lyrics2Song`是主要的训练任务，文本条件（歌词、结构标签如`S`(主歌)、`E`(副歌)）与对应的短音频片段（人声token为蓝色，伴奏token为橙色）交错排列。虚线框标出了`Dual-NTP`的设计。`ICL Audio Tokens`（绿色）展示了重设计的音乐上下文学习格式，仅用一段参考音频（A_ref）作为前缀，无需文本转录。`Text2Speech`、`Uncond. Mix Music`等展示了多任务训练中的其他任务。
 
@@ -118,7 +118,7 @@ YuE是一个基于自回归语言模型的两阶段生成框架，旨在将歌�
 
 人类评估（图3）：在40名研究人员（含专家）进行的A/B测试中，YuE在整体偏好上与Tiangong（57%胜率）和Udio（53%胜率）相当，明显超越Hailuo（70%胜率），但落后于Suno V4（29%胜率）。
 
-![图3：YuE与四个闭源系统的人类评估对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-2.png)
+![图3：YuE与四个闭源系统的人类评估对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-3.png)
 
 自动评估（表1）：YuE在KL散度（0.372）上最优，在FAD（1.624）上优于Hailuo和Tiangong，略逊于Udio和Suno V4。在CLaMP 3得分（0.240）上最高。
 
@@ -137,9 +137,6 @@ YuE是一个基于自回归语言模型的两阶段生成框架，旨在将歌�
 
 歌曲时长与人声音域：YuE生成歌曲的时长中位数最长（图5），人声音域范围（中位数约27半音）与Suno V4等顶级系统相当（图4）。
 
-![图4：不同系统生成歌曲的人声音域分布对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-3.png)
-
-![图5：不同系统生成歌曲的时长分布对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-4.png)
 
 消融实验：
 - Dual-NTP有效性：在相同预算下，Dual-NTP的训练损失比标准NTP低约0.4（图7），且在低VAR场景下，混合音轨重建的WER增量（ΔWER）远高于解耦后的人声轨（图6）。
@@ -147,13 +144,10 @@ YuE是一个基于自回归语言模型的两阶段生成框架，旨在将歌�
 - 模型规模的影响：人类评估显示，从0.5B到7B，模型在音乐性和歌词跟随能力上均持续提升（图9a）。
 - 测试时技巧：ICL+CFG的组合在音乐性A/B测试中胜率最高（0.79），远优于单独使用SPC（0.21）（图9b）。
 
-![图6：混合音轨与人声轨在不同VAR下的WER对比图（含tokenizer重建）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-5.png)
-
 图6展示了Vocal-to-Accompaniment Ratio (VAR)与词错误率(WER)的关系。原始人声轨和混合音轨的WER相似，但混合音轨经tokenizer重建后WER大幅增加，尤其在低VAR时差距拉大。而人声轨重建后的WER增量小得多，证明了源分离先验的有效性。
 
-![图7：NTP与Dual-NTP训练损失曲线对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-6.png)
+![不同系统主观评估雷达图：YuE（红）与Udio、Suno V4、Hailuo、Tiangong在AccompQual、VocalQual、SongStruct、VocalAccompComp、MelodicAttrac、MusicArr六个维度上的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-6.png)
 
-![图8：不同长上下文条件建模方法下的WER随时间变化对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-7.png)
 
 ![图9：模型规模与测试时技巧对人类评估胜率的影响图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-8.png)
 

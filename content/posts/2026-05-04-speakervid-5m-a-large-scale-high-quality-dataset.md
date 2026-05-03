@@ -62,7 +62,9 @@ hiddenInHomeList: true
 
 1. SpeakerVid-5M 数据集构建流程（如图2所示）：
 
-![数据集构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-1.png)
+![数据集构建流程：音视频预处理与注释阶段](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-3.png)
+
+*图示数据集构建流程的第2、3阶段：音视频预处理（场景分割、说话人分离、人体检测、唇音同步校验、ID校正）与音视频注释（结构化文本描述、音频注释、骨骼序列、模糊度评分）。*
 
 该流程是四阶段的端到端管道：
 - 源数据收集：从YouTube手动收集15.3万个包含双人对话的视频，总时长6.4万小时。
@@ -82,7 +84,9 @@ hiddenInHomeList: true
 
 2. 基线：自回归音视频生成方法（如图4所示）：
 
-![自回归生成基线方法架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-3.png)
+![自回归音视频生成基线架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-4.png)
+
+*基线模型架构示意：以参考图与发起人音视频为输入，经Qwen2.5-Omni Thinker编码、AR音视频生成器、视觉优化模块（含VAE Encoder/Decoder、Visual Optimizer、CosyVoice Decoder）输出响应者音视频。*
 
 这是一个端到端的自回归（AR）框架，主要组件和流程如下：
 - 输入：发起人的视频、音频和响应者的参考图像。
@@ -146,15 +150,17 @@ hiddenInHomeList: true
 
 3. 定性结果（如图5、图6所示）：
 
-![定性生成结果展示](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-4.png)
+![响应者生成定性对比：Initiator-Ref-Generated Responder三栏对照](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-1.png)
 
-![定性生成结果展示](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-5.png)
+*定性结果：每行展示输入发起人（Initiator）、参考图（Ref image）以及模型生成的响应者（Generated Responder）视频帧，显示口型同步与表情连贯性。*
+
+![SpeakerVid-5M数据集概览：双人对话样本、多种身体构图与统计](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-5.png)
+
+*数据集概览：包含发起人/响应者双人对话样本、多种身体构图（头部特写Head、半身Portrait、全身Body、侧视图Side）以及8743小时、5218K片段、83756 IDs等规模统计与丰富注释字段（运动度、实体列表、相机运动、ASR等）。*
 
 定性结果展示了模型根据输入发起人的音视频，生成连贯的响应者音视频的能力，包括口型同步、面部表情和身体姿态的生成。
 
 4. 数据集统计与分析（如图3、图7及附录图所示）：
-
-![数据集多样性示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-2.png)
 
 图3展示了双人对话样本和数据集支持的多种身体构图（头部特写、半身、全身、侧视图）。附录中的统计图显示了数据集在模糊度、分辨率、DOVER质量分数、话题分布、年份分布、字幕词数分布等方面的统计信息，证明了其高质和多样性。
 

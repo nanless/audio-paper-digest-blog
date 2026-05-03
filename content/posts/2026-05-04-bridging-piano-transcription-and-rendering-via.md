@@ -52,9 +52,9 @@ hiddenInHomeList: true
 
 论文提出了一个由两个主要部分构成的统一框架：一个联合Transformer模型和一个独立的性能风格推荐（PSR）模块。
 
-![论文框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-0.png)
+![风格迁移主观评分柱状图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-0.png)
 
-图1：提出的统一框架概览。包括用于EPR和APT的联合Transformer模型，以及基于扩散模型的性能风格推荐（PSR）模块。联合模型通过四个任务训练：掩码乐谱重构、掩码性能重构、EPR和APT。内容表示（z_x, z_y）被鼓励对齐，而全局风格表示（z_s）作为解耦因子用于风格迁移。PSR模块独立训练，从乐谱内容生成z_s。
+图5：三个生成样本在不同风格设置（Original / Mean / Target）下的主观评分（Humanity 与 Quality），误差棒为标准误。Target 风格在多数样本上取得最高人性化与质量分数，验证了风格控制的有效性。
 
 1. 联合模型架构
 该模型由五个Transformer编码器-解码器组件构成，旨在联合学习EPR和APT任务。
@@ -142,9 +142,9 @@ PSR模块在联合模型训练完成后独立训练，目的是根据乐谱内�
 
 主观听测 (Figure 2):
 
-![EPR主观评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-1.png)
+![PSR扩散模块架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-1.png)
 
-图2：不同系统的EPR主观评估结果。(a) 整体评分；(b) 按作曲家分类的整体评分。
+图：性能风格推荐（PSR）模块架构。Transformer 编码器从乐谱属性（IOI、Hand、Pitch 等）中通过 [CLS] token 提取全局内容表示 e_g；扩散网络以 e_g、步嵌入 e_t 和带噪风格嵌入 z_s^t 为条件，由若干 FCN 层（含 LayerNorm、Linear、SiLU）预测注入噪声 ε，使用 MSE 损失训练。
 结论：本方法（Target Style）在动态、节奏、风格和整体人性化维度上均获得最高平均分。PSR版本紧随其后，且在所有维度上优于VirtuosoNet和DExter基线。
 
 3. 表示解耦验证 (ATEPP数据集)
@@ -155,8 +155,6 @@ PSR模块在联合模型训练完成后独立训练，目的是根据乐谱内�
 结论：使用全局风格嵌入 `z_s` 进行分类的准确率远高于使用内容嵌入 `z_c`。特别是作曲家分类（Style→Comp）达到77.46%的准确率，有力证明了风格表示有效捕捉了表演风格中包含的作曲家身份信息，且内容表示与风格表示成功解耦。
 
 4. 风格迁移评估 (Figure 5)
-
-![风格迁移主观评估](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-4.png)
 
 图5：三个生成样本在不同风格设置下的主观评分。
 结论：在风格相似度方面，“目标风格”条件得分最高，表明成功实现了风格迁移。且这种迁移并未牺牲整体质量，说明解耦后的风格空间结构良好，支持平滑插值。

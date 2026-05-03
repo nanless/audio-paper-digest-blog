@@ -58,7 +58,7 @@ AC-Foley巧妙地将“用一段参考音频当模板”这个直观想法工程
 
 AC-Foley的整体框架旨在根据静音视频V、参考音频Ac和文本提示T，合成时域对齐的音频At。其核心是一个多模态Transformer，通过自适应层归一化（adaLN）机制，将多模态条件信息注入到生成过程中。
 
-![AC-Foley系统总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-1.png)
+![AC-Foley系统总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-0.png)
 
 图2：AC-Foley系统架构图。不同模态（视频、文本、音频）在多模态Transformer网络中进行交互。通过音频条件注入语义、时域和声学信息，实现更精确的控制。
 
@@ -115,36 +115,30 @@ AC-Foley的整体框架旨在根据静音视频V、参考音频Ac和文本提示
 
 主要对比实验（表1）：
 
-![表1：视频到音频生成方法定量对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-5.png)
+![音色迁移定性频谱对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-4.png)
 
-表1：在VGGSound测试集上的定量比较。AC-Foley在有音频条件下，在几乎所有指标上（尤其是FDPaSST, KLPaSST, MCD）取得最佳。即使去掉音频条件，其性能也具有竞争力。
+定性示例：左侧为击剑视频，分别用枪声、球弹跳、剑击音频条件生成的频谱；右侧为跑步机视频，分别用木地板、碎石、雪地脚步条件生成，展示音色迁移与时序对齐能力。
 
 音色迁移实验（表2）：
 
-![表2：音色迁移定量对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-6.png)
+![用户主观评测界面截图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-6.png)
 
-表2：在Greatest Hits数据集上的音色迁移对比。AC-Foley（未在此数据集上训练）在MCD指标上显著优于专门训练的CondFoley。
+用户研究界面截图：参与者观看参考视频后，从两个候选视频中选择音频更相似或时序对齐更好的版本，包含三档评级。
 
 人类研究（表3）：
-
-![表3：人类研究对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-4.png)
 
 表3：用户研究结果。在声学保真度方面，AC-Foley的胜率高达83.5%；在时序对齐方面，由于两者表现都很好，多数用户认为难以区分，但AC-Foley仍有61.1%的胜率。
 
 消融实验：
 *   两阶段训练有效性（表4）：从“Overlap”切换到“Two-stage”，FDPaSST从80.07大幅降至56.00（↓30.1%），证明两阶段训练有效防止了简单复制，提升了分布匹配质量。微调进一步提升了语义一致性和时序同步。
 
-    ![表4：两阶段训练消融实验](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-8.png)
+    ![两阶段训练方案示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-8.png)
 
 *   多模态条件组件消融（表6）：移除音频或同步特征会导致性能在特定维度上显著下降（如DeSync飙升），证明了多模态条件的互补性和必要性。
 
 定性示例：
 
-![定性生成结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-0.png)
-
 图1：AC-Foley生成示例。展示了（a）细粒度声音合成：同一狗视频，用吉娃娃或大型犬叫声条件生成不同吠叫；（b）音色迁移：用绵羊或猫叫声条件为狮子视频配音；（c）零样本生成：用带消音器枪声音频条件生成对应效果，而文本提示无法做到。
-
-![更多定性生成结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-3.png)
 
 图4：更多带音频条件的Foley生成定性结果，展示了模型在适应不同声学特性时保持精确时序对齐的能力。
 

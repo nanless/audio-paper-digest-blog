@@ -105,7 +105,7 @@ hiddenInHomeList: true
 
 关键结论：文本CoT与语音CoT准确率相当，但文本CoT的序列长度（119.0 ± 54.4）远短于语音CoT（368.8 ± 190.3），证明了其令牌效率优势。
 
-![流式用户ASR延迟对准确率和用户WER的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-3.png)
+![表2与图4：模型在推理与事实性任务上的准确率对比，以及不同流式ASR延迟下的准确率与用户WER变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-3.png)
 
 图4展示了在不同延迟（令牌数）下训练的模型，其准确率和用户词错率（WER）的变化。随着延迟增加，准确率提升并接近“离线ASR”（完全转录后输入）的上限，WER下降。
 
@@ -121,11 +121,9 @@ hiddenInHomeList: true
 
 关键结论：经过长度偏好DPO微调后，模型在所有任务上的平均延迟从约50个令牌降低到约18个令牌（降低约70%），同时准确率保持不变或略有提升。
 
-![不同方法在SRQA任务上的准确性-延迟权衡曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-4.png)
-
 图5是核心结果图，展示了不同早期推理方法（WordShift启发式、本文的QC指标、Correct-DPO、Length-DPO）在多个评估集上的准确性-延迟帕累托前沿。QC方法相比WordShift基线提供了更平滑、更可控的权衡曲线。Correct-DPO（紫色曲线）在QC基础上进一步提升了准确率。
 
-![不同推理步骤数下的模型准确性](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-5.png)
+![图5与表4：WordShift、QC、Correct-DPO等早期推理方法在多个评估集上的准确率-延迟帕累托前沿，以及基于长度偏好的DPO训练效果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-1.png)
 
 图6显示，随着所需推理步骤数（问题复杂度）的增加，所有模型的准确性均下降。文本CoT和语音CoT模型在复杂问题上均优于基线，但文本CoT的优势更为明显。
 

@@ -47,9 +47,9 @@ hiddenInHomeList: true
 
 图2：PRESS-Net的详细架构。它由三部分组成：一个编码器、一个早期分离模块和一个具有提前重建能力的重建解码器。
 
-![PRESS-Net基础模块详解](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-11.png)
+![不同退出条件随时间的预测SNR分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-11.png)
 
-图8：论文中使用的各个模块的详细架构。(a)展示了整体块架构，其中块可以是(b)线性RNN或(c)说话人注意力块。(d)和(e)分别是音频编码器和解码器头，(f)是逆伽马参数化块。
+图：示例混合信号的频谱图（上两行）以及SNR、SNRi、Ref-SNR、Exit-SNR四种退出条件随时间的预测SNR分布，颜色深浅表示不同退出深度（0-3），红色虚线为目标SNR阈值。
 
 1.  编码器 (Encoder Head)：输入时域音频信号 `x ∈ R^T`，通过一个1D卷积（核大小16，步长4，编码维度256）下采样，然后经过GELU激活、RMSNorm和线性投影，映射到模型维度 `D`（64或128）。
 2.  分离器 (Separator)：一个深层的类Transformer堆栈，核心是线性RNN（基于minGRU/RG-LRU）和说话人注意力层。设计特点包括：无下采样，以保持时间分辨率支持早期高质量重建；早期分裂：前 `N_Enc` 层（纯线性RNN）处理混合信号后，通过`SpeakerSplit`模块投影到 `S` 个独立的源处理通道；残差连接与LayerScale：每个层输出 `x ← x + γ f(norm(x))`，`γ` 初始化为 `10^-5` 以实现稳定训练。
@@ -89,11 +89,11 @@ hiddenInHomeList: true
 
 结论：PRESS模型在参数量和计算量上通常更优，且性能与强大的静态基线（如SepReformer）相当甚至更好。微调（+FT）带来显著提升。
 
-图3：性能-计算曲线
+图：动态早退出示例
 
-![WSJ0-2mix上SI-SNRi与GMAC/s的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-0.png)
+![Exit-SNR分布与每帧动态退出点](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-0.png)
 
-图3：在WSJ0-2mix上的源分离性能（SI-SNRi）与计算量（GMAC/s）的关系图。PRESS模型的静态性能点及其动态性能曲线被绘制，表明PRESS在动态计算下能超越静态性能曲线。
+图：示例混合信号的频谱图、各深度（1-4）下Exit-SNR的预测分布以及在给定置信度下每帧选择的退出点（红色阶梯曲线），可见网络在容易段更早退出。
 
 结论：PRESS模型能够通过早退出，在推理时动态地在性能和计算量之间权衡，实现比静态模型更高效的资源利用。
 
@@ -108,12 +108,6 @@ hiddenInHomeList: true
 - 排列策略：出口间联合排列是稳定联合训练的关键。
 - 退出点数量：增加退出点（4→6→12）不会损害性能。
 - 校准微调：仅在4秒片段上微调不能提升性能，而全长度数据微调效果显著。
-
-图5：校准曲线
-
-![模型预测分布的校准曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-5.png)
-
-图5：PRESS-4(S)模型在WSJ0-2mix测试集上预测误差分布的校准曲线。(a,b)显示仅用4秒片段训练时未校准；(c,d)显示用全长度数据微调后，模型在训练和测试集上都变得校准。
 
 结论：全长度数据微调对于获得良好校准的概率预测至关重要。
 

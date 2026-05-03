@@ -49,8 +49,6 @@ hiddenInHomeList: true
 
 SiTok是一个基于扩散自编码器（Diffusion Autoencoder）的端到端语音分词器模型，其整体架构如图1所示。
 
-![SiTok模型架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/llMfmDtWka-0.png)
-
 完整输入输出流程：
 1.  输入：原始语音波形 -> 提取50Hz， 128维梅尔谱图 -> 时序下采样（堆叠4帧）得到12.5Hz梅尔谱图。
 2.  编码与量化：
@@ -138,8 +136,6 @@ SiTok是一个基于扩散自编码器（Diffusion Autoencoder）的端到端语
 结论：SiTok在理解任务上全面超越基线，其离散表征对下游任务非常有效。
 
 图2：快捷微调对不同解码步数的影响：
-
-![快捷微调对不同解码步数的性能影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/llMfmDtWka-5.png)
 
 结论：快捷微调能显著缓解因减少解码步数导致的性能下降，使模型在2-4步时仍保持高重建质量。
 

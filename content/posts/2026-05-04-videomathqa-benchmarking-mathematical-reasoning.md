@@ -57,9 +57,9 @@ hiddenInHomeList: true
 
 本文不提出新的模型架构，而是构建用于评估现有模型架构的基准数据集。其核心“架构”是数据集构建与评估框架。主要组件与流程如下：
 
-![VideoMathQA数据集标注流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-7.png)
+![VideoMathQA数学概念分布、视频时长分布与三阶段标注流程总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-0.png)
 
-图2c展示了VideoMathQA的三阶段标注流程。第一阶段是视频选择，通过YouTube API获取并人工筛选，确保问题无法仅通过静态帧或音频回答。第二阶段是问答标注，由专家研究生编写需要多模态推理的多项选择题。第三阶段是步骤推理标注，由另一标注员撰写4-10个推理步骤并标注时间戳。每个阶段都有质量保证，并在下一阶段进行交叉验证。
+图2总览：(a) 雷达图展示10类数学概念下问题的占比（如Chart 18%、Puzzles 13%、Arithmetic & Calculus 12%等）以及GPT-o4-mini、Gemini-2.0-Flash、Qwen2.5-VL-72B等代表模型在各概念上的准确率分布；(b) 视频时长分布柱状图，覆盖0–20秒到7分钟–1小时，构成短/中/长三档（11%、20%、18%、20%、15%、16%）；(c) 三阶段标注流程：视频选择（YouTube API + 选择规则）→ 问答标注（多模态多步推理QA）→ 步骤推理标注（4–10步带时间戳的CoT），每阶段均由专家研究生执行并附质量保证。
 
 评估框架（如表1、2所示）则是一个端到端的系统：
 1.  输入：视频帧序列（数量因模型而异）、可选字幕文本、数学问题及选项。
@@ -114,21 +114,19 @@ hiddenInHomeList: true
 关键图表结果：
 -
 
-![不同数学概念下模型性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-0.png)
-
 图2a展示了10个数学概念下问题的分布及模型平均准确率。模型在“算术与微积分”（Arth）上表现最好（平均约32%），在“图表阅读”、“拓扑”、“图论”等需要复杂视觉理解和抽象推理的概念上表现最差（平均低于20%）。
 
 -
 
-![模型错误类型分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-6.png)
+![Vision-blind对比、问题难度影响与CoT错误类型热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-6.png)
 
-图4c展示了CoT推理中的七类错误分布。“问题误解”是最主要的错误类型，表明模型常无法准确定位问题要求或忽略关键多模态线索。专有模型在概念应用和策略选择上错误较少，但在视觉解释上表现不佳。
+图4：(a) 折线图比较Qwen2.5-VL系列在Text-Only、Single-Image与Video三种输入下的MCQ/MBin准确率（含字幕），显示视频输入随模型规模放大收益最大；(b) 同心圆图展示GPT-o4-mini、GPT-4o、Claude-3.7-Sonnet、InternVL-3-78B、Qwen2.5-VL-72B、Gemini-2.0-Flash、LLaVA-Video-72B在Easy/Medium/Hard三档难度（13%/30%/57%）上的准确率；(c) 七类CoT错误热力图，问题误解（Problem Mis-Understand）在GPT-o4-mini与Gemini-2.0-Flash上分别高达39.8%与32.0%，是最主要的错误类型，其次是计算错误与概念应用错误。
 
 -
 
-![字幕影响及视频长度关系图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-8.png)
+![VideoMathQA三类推理样本示例图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-2.png)
 
-图3b显示，在CoT评估中，字幕的加入普遍提升了模型性能，尤其是较大和较强模型。图3a显示，模型在中等长度视频（2分钟-7分钟）上表现最佳，在长视频（7分钟-1小时）上性能显著下降，凸显了长期推理的挑战。
+图1样例对比：展示VideoMathQA三种推理类型的代表样本——左侧“Problem Focused”（问题聚焦，5分钟视频，图表阅读类，需从条形图读取美国医疗费用并与西班牙对比）；中间“Concept Transfer”（概念迁移，12分钟视频，计数类，需将示例中三角形计数方法迁移到新图）；右侧“Deep Comprehension”（深度理解，22分钟视频，微积分类，需理解讲师讲授的二重积分思路并补全后续推理）。每个样本都附带带时间戳的多步推理标注，体现了从直接应用到复杂情境推理的层级。
 
 ### ⚖️ 评分理由
 

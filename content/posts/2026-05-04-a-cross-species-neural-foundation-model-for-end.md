@@ -121,19 +121,15 @@ BIT框架整体分为预训练、音素微调和句子级微调三个阶段。�
 
 想象语音解码结果（验证集WER）
 
-![图2：BIT在尝试和想象语音解码中的基准测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-1.png)
-
 图2A/B显示，对于尝试和想象语音，预训练编码器（BIT-Human, BIT-All）在级联和端到端设置下均优于RNN和从头训练的Transformer（BIT-TFS）。预训练在数据更少的想象语音任务上收益更大。图2C显示，跨受试、无标签的SSL预训练（BIT-All）比同受试、跨任务的监督预训练（BIT-Cross-Task-Only）带来更大的迁移增益。
 
 LLM解码器消融实验（尝试语音解码验证集WER）
 
-![图3：LLM解码器消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-2.png)
+![尝试与想象语音解码WER对比与示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-3.png)
 
-图3C/D显示：1) 在可比规模下，音频LLM（蓝色）性能优于文本LLM（黄色）。2) 将神经活动视为神经模态（较深色）略优于视为音频模态。3) 使用对比学习（无斜线填充）能进一步提升性能。4) 较小模型（如1.5B）在有限数据下通常优于更大模型（如7B）。
+A/B为尝试语音和想象语音在T12/T15两套数据上的级联与端到端WER柱状图，BIT-Human/BIT-All均明显低于RNN与BIT-TFS；C为BIT-All相对BIT-Cross-Task-Only的WER散点对比，显示8%–20%的相对提升；D列出了部分尝试与想象语音的解码样例及其WER。
 
 跨任务嵌入对齐分析
-
-![图4：BIT对齐尝试与想象语音神经嵌入的可视化分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-3.png)
 
 图4A显示，预训练编码器的输出与音频LLM文本嵌入的RSA分数高于RNN和从头训练的Transformer，表明其学习到的表征更接近语言结构。图4B/C显示，在原始神经特征空间（PCA），尝试与想象任务的嵌入分离明显；而在BIT嵌入空间，这种分离大大减少，且同词汇在两个任务间的嵌入相似度更高。图4D通过跨注意力权重显示，神经-文本的时间对齐模式在两个任务间相似。
 

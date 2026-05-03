@@ -58,7 +58,7 @@ TtT是一个端到端的统一音频-文本多模态大模型，其核心是在�
     - 对于语音token：采用混合注意力。它们可以在当前语音span内进行双向注意力（即关注span内的所有其他token，无论左右），以建模span内的任何顺序依赖关系。同时，它们对提示和所有之前的span保持因果注意力。这种设计使得在训练时，整个语音span可以被并行处理（因为内部是双向的），同时又不会“看到”未来span的信息。
     - 对于提示（系统提示等）：使用标准因果注意力。
 
-![TtT框架与扩散逆过程概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-1.png)
+![TtT框架与扩散逆过程概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-2.png)
 
 图2：TtT框架与扩散逆过程概览。(a) TtT框架：一个统一的MLLM，交织了AR文本生成和NAR语音生成。模型根据控制标记在AR解码和NAR扩散合成之间切换。(b) 扩散逆过程：通过迭代去噪进行NAR语音生成。
 
@@ -159,11 +159,9 @@ TtT是一个端到端的统一音频-文本多模态大模型，其核心是在�
 4.  与SOTA对比：在高效模型（≤3B）中，Pretrain+TtT在Audio-QA和ASR上达到SOTA。其3B模型在部分任务上可与更大的7B模型（如SpeechGPT, Moshi）媲美甚至超越。在URO-Bench上，Pretrain+TtT在高效模型中表现最佳，但在所有任务上仍落后于9B的GLM-4-Voice。
 5.  感知质量：TtT模型的NMOS和UTMOS分数在3.89-4.25之间，表明合成语音质量良好，但低于某些基线（如Mini-Omni的4.15/4.42）。
 
-![论文中关于模型依赖结构差异的示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-0.png)
-
 图1：揭示了文本与音频依赖结构的差异，以及由此产生的可变长度语音片段。文本token强依赖于先前生成的文本token（目标-目标依赖），而音频token主要依赖于源文本（源-目标依赖）。由于token化速率不同，最后一个语音片段的大小与之前的片段不一致。
 
-![训练损失与注意力模式示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-2.png)
+![训练损失与注意力模式示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-1.png)
 
 图3：训练损失与注意力设计。(a) 训练流程：文本span使用AR交叉熵损失，语音span使用NAR扩散损失，共享一个Transformer主干。(b) 注意力模式：文本span遵循因果注意力，而语音span在span内使用双向注意力，跨span使用因果注意力。
 

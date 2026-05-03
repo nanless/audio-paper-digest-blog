@@ -63,9 +63,9 @@ hiddenInHomeList: true
 
 论文提出了两种奖励模型架构，如图2所示。
 
-![Omni-RewardModel 架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-1.png)
+![Omni-RewardModel 架构图：判别式与生成式两种范式](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-0.png)
 
-图2: Omni-RewardModel 架构概览，包含判别式（BT）和生成式（R1）两种建模范式。
+图2: Omni-RewardModel 架构概览。上方为基于Bradley-Terry损失的判别式奖励模型（BT），通过LM Decoder与Value Head输出标量分数；下方为基于强化学习的生成式奖励模型（R1），通过LM Head生成推理过程与最终偏好选择。
 
 1.  判别式奖励模型 (Omni-RewardModel-BT)：
     -   整体流程：输入包含用户指令`x`、可选的偏好标准`c`、以及两个候选响应`y1`和`y2`。模型输出一个标量奖励分数，用于计算二元偏好对的损失。
@@ -125,9 +125,9 @@ hiddenInHomeList: true
 | Ours | Omni-RewardModel-R1 | 71.22 | 56.06 | 63.88 | - | 61.69 | 58.22 | - | 63.91 | 46.29 | 60.18 |
 | Ours | Omni-RewardModel-BT | 75.30 | 60.23 | 68.85 | 70.59 | 58.35 | 64.08 | 63.99 | 67.88 | 58.95 | 65.36 |
 
-![Omni-RewardBench各任务性能差异](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-5.png)
+![不同模型在 w/ CoT 与 w/o CoT 设置下的平均准确率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-5.png)
 
-图6：不同模态任务在Omni-RewardBench (w/ Ties) 设置下的平均性能对比。结果显示了明显的模态不平衡，T2A、T23D等任务性能显著较低。
+图：不同模型在使用与不使用思维链 (CoT) 推理时在 Omni-RewardBench 上的平均准确率对比。多数模型（如 Gemma-3-4B-it、Phi-4、InternVL2.5）在加入CoT后性能明显提升，而部分强模型（如 Claude-3-5-Sonnet、GPT-4o-mini）提升有限甚至略有下降。
 
 表2：在VL-RewardBench上的评估结果
 | 模型 | General | Hallucination | Reasoning | Overall Acc | Macro Acc |
@@ -145,10 +145,6 @@ hiddenInHomeList: true
 | w/ T2I & T2V数据 | 52.28 | 45.83 | 51.47 | 59.38 | 58.93 | 64.84 | 56.93 | 67.55 | 60.26 | 57.50 |
 | w/ Full数据 | 75.30 | 60.23 | 68.85 | 70.59 | 58.35 | 64.08 | 63.99 | 67.88 | 58.95 | 65.36 |
 | w/ Preference-Only | 54.92 | 49.80 | 64.79 | 55.74 | 59.14 | 61.06 | 64.00 | 64.90 | 53.71 | 58.67 |
-
-![任务间性能相关性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-2.png)
-
-图3：不同任务上奖励模型性能的皮尔逊相关系数热力图。可见理解类任务（如T2T, TI2T, TV2T）之间，以及生成类任务（如T2I, T2V, T23D）之间存在较高的性能相关性。
 
 关键结论：
 1.  Omni-RewardModel-BT在Omni-RewardBench上显著超越所有基线模型，在VL-RewardBench上达到SOTA，证明了其有效性。

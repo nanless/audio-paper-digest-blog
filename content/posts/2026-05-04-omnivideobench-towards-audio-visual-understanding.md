@@ -123,13 +123,9 @@ hiddenInHomeList: true
   - 表6（错误分布）：显示不同模型的错误主因不同。例如，Gemini 2.0-Flash的错误61.03%源于多模态融合，而Qwen2.5-Omni的错误29.2%源于音频理解。
   - 表7、8：详细展示了错误类型随视频时长和音频类型的分布变化。
 
-![不同模型在13个任务上的准确率](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-4.png)
+![采样帧数对模型准确率的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-0.png)
 
-图5：展示了Gemini-2.5-Pro、Gemini-2.5-Flash、Gemini-2.0-Flash和Qwen3-Omni在13个推理任务上的准确率柱状图，清晰显示了任务间的难度差异和模型间的性能差距。
-
-![模型错误类型分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-11.jpg)
-
-图12：Gemini2.0-Flash、Qwen2.5-Omni和Qwen3-Omni三类模型的错误类型分布饼图，直观显示多模态融合、时序推理和音频理解是主要瓶颈。
+图7：(a) Qwen2.5-Omni-7B 与 Qwen3-Omni-30B-A3B 在不同采样帧数（32/64/128/256）下的准确率变化；(b) Qwen3-Omni-30B-A3B 在不同视频时长区间（0–1、1–5、5–10、10–30 分钟）随帧数变化的准确率，表明增加帧数可稳定提升性能，长视频受益更明显。
 
 #
 

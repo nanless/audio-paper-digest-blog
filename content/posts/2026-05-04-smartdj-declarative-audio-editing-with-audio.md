@@ -108,15 +108,15 @@ SmartDJ的整体架构是一个“规划-执行”流水线，如图2所示（`!
 - 消融实验（表3）表明，移除ALM后性能大幅下降（FD从14.7升至23.6），证实ALM推理的核心作用。使用不同ALM（如LTU）或替代管线（Caption+GPT-4o）均不如原SmartDJ ALM。
 - 多轮编辑稳定性实验（图8）显示，SmartDJ在重复“添加-移除”操作后，音频谱距离（LSD）增长最慢，表明其能最好地保留未编辑内容。
 
-![图8：多轮编辑下音频与原音频相似度变化图，SmartDJ的谱距离增长最缓慢，表明内容保持最好](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-7.png)
+![用户研究（左）与多轮编辑稳定性（右）：SmartDJ在复杂/单步编辑的质量与对齐上以高比例（最高95.52%）胜过Audit、AE、ZETA；右图显示其LSD随编辑轮次增长最缓慢](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-7.png)
 
 单步编辑实验（表2a-c）：SmartDJ在各类原子操作（添加、移除、提取、音量调整、方向改变等）上均全面超越基线。尤其在空间相关任务（如方向改变）的GCC、CRW、FSAD指标上优势明显，证明其立体声编辑能力。定性结果（图6）直观展示了编辑效果。
 
-![图6：不同编辑操作（移除、提取、增强、方向改变）的定性结果对比图，SmartDJ编辑后的音频与真实音频高度一致](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-5.png)
+![数据合成管线示意图：a) GPT-4o Designer根据高层指令生成原子编辑步骤序列，Composer执行并产出原始与编辑后音频；b) 数据集场景关键词云；c) 各类原子操作（Add、Volume、Extract、Remove、Direction等）的占比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-5.png)
 
 用户研究（图7）：在19人参与的A/B测试中，SmartDJ在音频质量和指令对齐方面均以显著优势（最高达95.5%）胜过所有基线。
 
-![图7：用户研究结果柱状图，显示SmartDJ在所有任务和指标上都获得了高比例的用户偏好](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-6.png)
+![SmartDJ整体框架图：ALM作为规划器，将高层声明式指令P与原始音频a0映射为原子编辑步骤序列S={s1,…,sn}；LDM作为执行器，依次执行每步并产出中间结果，最终得到编辑后音频an](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-6.png)
 
 ### ⚖️ 评分理由
 

@@ -64,12 +64,11 @@ hiddenInHomeList: true
 
 EmotionThinker是一个基于Qwen2.5-Omni-7B构建的三阶段语音大模型框架，旨在实现可解释的语音情感推理。其整体流程如图3所示。
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-2.png)
+![GRPO-PTR强化学习训练框架：策略模型生成多个候选输出，由参考模型、奖励模型与奖励函数（格式奖励Rf、结果奖励Ro、推理奖励Rt及信任权重τ）共同评估，经组归一化得到优势值](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-1.png)
+*图：GRPO-PTR训练流程，包含规则奖励（Rf, Ro）、推理奖励（Rt，含事实对齐、解释质量等4个维度）以及信任权重τ控制的渐进式稳定机制。*
 
 第一阶段：数据构建（EmotionCoT-35K）
 - 流程：如图2所示，从开源数据集（IEMOCAP, MELD等）收集音频，利用自动标注管道提取说话人特征（性别、年龄）和细粒度韵律特征（音高、能量、语速、语调轮廓、重音）。然后，将这些特征与转录文本一起作为提示，输入GPT-4o生成包含`...</think>`和`<answer>`标签的链式思维（CoT）推理数据。
-
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-1.png)
 
 第二阶段：韵律增强基础模型（EmotionThinker-Base）
 - 架构：基于Qwen2.5-Omni-7B（一个集成了音频编码器、适配器和LLM的多模态模型）。
@@ -115,7 +114,6 @@ EmotionThinker是一个基于Qwen2.5-Omni-7B构建的三阶段语音大模型框
 主任务（情感识别）：
 在四个基准测试上的准确率（%）对比如表2所示。EmotionThinker在所有数据集上均取得最佳或接近最佳的性能，平均准确率68.89%显著优于所有基线。
 
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-9.png)
 
 推理质量评估：
 同样如表2所示，EmotionThinker在四个推理维度（FA, IQ, CC, FS）上的平均分（3.98）远高于所有基线，表明其生成的推理过程更准确、完整、有说服力。
@@ -142,8 +140,6 @@ EmotionThinker是一个基于Qwen2.5-Omni-7B构建的三阶段语音大模型框
 
 案例研究：
 图4展示了一个“悲伤”情绪片段的推理对比。EmotionThinker（GRPO-PTR）生成了基于低音高、正常语速、重读“hour”等具体线索的推理，而Qwen2.5-Omni-7B的推理过于简短，GRPO变体则包含了与音频不符的幻觉解释。
-
-![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-3.png)
 
 ### ⚖️ 评分理由
 

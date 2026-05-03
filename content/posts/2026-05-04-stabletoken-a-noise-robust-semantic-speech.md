@@ -94,8 +94,6 @@ StableToken的整体架构建立在编码器-解码器框架内，其核心创�
 | S3 Tokenizer (最优基线) | 26.17 | - |
 | StableToken (本文) | 10.17 | 61.1% |
 
-![分词器鲁棒性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/17DNmdQ9aU-0.png)
-
 图1直观展示了StableToken在不同SNR的噪声下，与基线分词器相比，其输出token序列的一致性显著更高，UED值大幅降低。表1提供了详细的分噪声类型对比。
 
 2. 重建质量（保真度）
@@ -109,9 +107,9 @@ StableToken在保持高鲁棒性的同时，重建质量优异，在LibriSpeech�
 4. 消融实验
 表4的消融研究证实了每个组件（共识损失、噪声感知训练、多分支架构）的有效性。移除共识损失会导致UED显著上升。
 
-![下游任务性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/17DNmdQ9aU-2.png)
+![Token稳定性对比与UED指标图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/17DNmdQ9aU-2.png)
 
-图3展示了在不同噪声类型和强度下，ASR（WER）和SER（Accuracy）性能的对比，清晰地显示了StableToken的鲁棒性优势。
+图1左侧展示了在轻微扰动（SNR=35、SNR=25）下，基线语义分词器与StableToken的token输出对比：基线出现大量与原始token不一致的输出（橙色），而StableToken几乎全部保持一致（绿色）。右侧柱状图比较了CosyVoice2、GLM-4-Voice、S³-50Hz、S³-25Hz与StableToken的UED%指标，StableToken以10.17%显著低于其他方案。
 
 ### ⚖️ 评分理由
 
