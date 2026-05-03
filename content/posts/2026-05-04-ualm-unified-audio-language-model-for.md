@@ -142,7 +142,7 @@ UALM的整体架构是一个基于预训练解码器-only Transformer（初始�
 （表4：推理生成主观评分）
 结论：经过后训练的UALM-Reason在所有三种推理模式下的主观评分均显著高于基础UALM，证明了多模态推理训练的有效性。
 
-![模型训练过程中的能力变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TsdlOjcQNu-5.png)
+![模型训练过程中的能力变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TsdlOjcQNu-0.png)
 
 （图6：音频理解(a)和音频生成(b)能力随训练步数的变化图）
 关键结论：从图中可以清晰看出，音频理解能力的收敛速度远快于音频生成能力，这解释了为什么在数据混合中需要对生成数据进行上采样。

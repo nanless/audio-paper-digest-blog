@@ -136,7 +136,7 @@ SCRAPL 并非一个独立的神经网络模型，而是一个优化算法框架�
 
 关键结论：SCRAPL在参数误差上显著优于所有MSS和嵌入损失方法，并接近监督学习（P-loss）的性能，同时其计算成本仅为全JTFS损失的约1/8。
 
-![颗粒合成器任务性能-成本权衡图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RuYwbd5xYa-2.png)
+![颗粒合成器任务性能-成本权衡图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RuYwbd5xYa-0.png)
 
 图：不同损失函数在颗粒合成器任务上的准确性与计算成本权衡。SCRAPL位于JTFS和MSS之间，实现了更优的权衡。
 

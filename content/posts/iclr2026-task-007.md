@@ -4,13 +4,13 @@ date: 2026-05-04
 draft: false
 tags: ["多模态模型"]
 categories: [iclr-2026]
-description: "共 4 篇 ICLR 2026 多模态模型 方向论文"
+description: "共 6 篇 ICLR 2026 多模态模型 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 多模态模型
 
-共 **4** 篇论文
+共 **6** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,56 +18,18 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [FlowBind: Efficient Any-to-Any Generation with Bidirectional](/audio-paper-digest-blog/posts/2026-05-04-flowbind-efficient-any-to-any-generation-with) | 8.5分 | 前25% |
-| 🥈 | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-04-next-omni-towards-any-to-any-omnimodal-foundation) | 8.5分 | 前25% |
-| 🥉 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions) | 7.5分 | 前25% |
-| 4. | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-04-avere-improving-audiovisual-emotion-reasoning) | 7.5分 | 前25% |
+| 🥇 | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models wi](/audio-paper-digest-blog/posts/2026-05-04-next-omni-towards-any-to-any-omnimodal-foundation) | 8.5分 | 前25% |
+| 🥈 | [FlowBind: Efficient Any-to-Any Generation with Bidirectional](/audio-paper-digest-blog/posts/2026-05-04-flowbind-efficient-any-to-any-generation-with) | 8.0分 | 前25% |
+| 🥉 | [Seeing, Listening, Remembering, and Reasoning: A Multimodal ](/audio-paper-digest-blog/posts/2026-05-04-seeing-listening-remembering-and-reasoning-a) | 7.8分 | 前25% |
+| 4. | [Better Together: Leveraging Unpaired Multimodal Data for Str](/audio-paper-digest-blog/posts/2026-05-04-better-together-leveraging-unpaired-multimodal) | 7.5分 | 前25% |
+| 5. | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions) | 7.5分 | 前25% |
+| 6. | [AVERE: Improving Audiovisual Emotion Reasoning with Preferen](/audio-paper-digest-blog/posts/2026-05-04-avere-improving-audiovisual-emotion-reasoning) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [FlowBind: Efficient Any-to-Any Generation with Bidirectional Flows](/audio-paper-digest-blog/posts/2026-05-04-flowbind-efficient-any-to-any-generation-with)
-
-🔥 **8.5/10** | 前25% | #多模态模型 | #流匹配 | #音频生成 #图像生成
-
-👥 **作者与机构**
-
-- 第一作者：Yeonwoo Cha（KAIST）
-- 通讯作者：Seunghoon Hong（KAIST）
-- 作者列表：Yeonwoo Cha（KAIST）、Semin Kim（KAIST）、Jinhyeon Kwon（KAIST）、Seunghoon Hong（KAIST）
-
-💡 **毒舌点评**
-
-亮点在于其框架的简洁性——用一个可学习的共享潜在空间统一所有模态，避免了复杂的多阶段训练和模态对约束，实现了用极少数据和参数完成高质量的任意模态转换。短板则在于其“高效”的代价是完全依赖于冻结的、预训练的模态编码器-解码器，这牺牲了端到端的潜力，并可能限制其在新模态或特定领域（如高保真音频合成）上的表现上限，使其更像是一个灵活的“跨模态对齐器”而非全能的生成基座。
-
-🔗 **开源详情**
-
-- 代码：提供项目页面和代码仓库链接：https://yeonwoo378.github.io/official_flowbind。
-- 模型权重：论文中未明确提及是否公开预训练的FlowBind模型权重。
-- 数据集：论文中提及的训练数据集（LAION-COCO, Flickr-30k, AudioCaps v2, VGGSound）均为公开数据集，并给出了具体子集信息（Table 8）。
-- Demo：项目页面可能包含演示，但论文正文中未明确提及。
-- 复现材料：论文在附录C中详细说明了模型架构、训练数据集、训练配方（优化器、batch size、时间采样策略等）以及评估设置，复现信息较为充分。
-- 论文中引用的开源项目/模型：CLIP, Stable-UnCLIP, CLAP, EmbeddingGemma, Gemma3-1B, FLUX.1, AudioLDM等。
-
-📌 **核心摘要**
-
-本文旨在解决现有流式多模态生成模型在实现“任意到任意”生成时面临的效率低下、需要严格模态配对数据以及训练过程复杂等挑战。方法核心是提出FlowBind框架，它通过引入一个可学习的共享潜在空间来捕获跨模态共性，并为每种模态设计独立的可逆流（invertible flow）网络，将该模态连接到共享空间。所有组件在一个统一的流匹配（flow matching）目标下联合优化。推理时，通过模态特定的流网络对共享潜在空间进行编解码，即可实现任意模态间的直接翻译。与以往需要以文本为中心或建模复杂联合分布的方法不同，FlowBind通过因式分解交互，天然支持任意部分配对数据进行训练，并大幅降低了计算成本。实验表明，FlowBind在文本、图像和音频的多种生成任务上达到了与CoDi、OmniFlow等基线相当甚至更优的质量，同时所需参数减少6倍，训练速度提升10倍。该工作的实际意义在于为构建高效、灵活且数据需求低的通用多模态生成模型提供了一种简洁有效的范式。主要局限性是其生成能力上限受限于冻结的预训练模态编解码器，且共享潜在空间在处理语义冲突的输入条件时，其简单的平均聚合策略可能并非最优。
-
-| 模型 | 训练参数量 | GPU小时 | 训练数据量(#(T–I)/#(T–A)/#(I–A)) | 联合训练 |
-| :--- | :--- | :--- | :--- | :--- |
-| CoDi | 4.3B | - | 400M / 3.5M / 1.9M | NO |
-| OmniFlow | 3.2B | 480hr* | 28M / 2.4M / - | NO |
-| FlowBind | 568M | 48hr | 310K / 96K / 180K | YES |
-
-*注：OmniFlow训练时间仅为最终联合训练阶段。
-
-![FlowBind框架概览图](icassp-img://7DeARTwvwL/0.png)
-图1：FlowBind框架概览。 (a) 训练阶段：联合学习共享潜在空间和各模态的漂移网络。(b) 推理阶段：利用学习到的漂移网络，通过在时间上前向或后向求解各模态的常微分方程（ODE），实现灵活的任意到任意生成。
-
----
-
-### 🥈 [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-04-next-omni-towards-any-to-any-omnimodal-foundation)
+### 🥇 [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](/audio-paper-digest-blog/posts/2026-05-04-next-omni-towards-any-to-any-omnimodal-foundation)
 
 🔥 **8.5/10** | 前25% | #多模态模型 | #流匹配 | #预训练 #端到端
 
@@ -101,41 +63,153 @@ hiddenInHomeList: true
 
 ---
 
-### 🥉 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions)
+### 🥈 [FlowBind: Efficient Any-to-Any Generation with Bidirectional Flows](/audio-paper-digest-blog/posts/2026-05-04-flowbind-efficient-any-to-any-generation-with)
 
-✅ **7.5/10** | 前25% | #多模态模型 | #自编码器 | #音频检索 #跨模态
+🔥 **8.0/10** | 前25% | #多模态模型 | #流匹配 | #音频生成 #图像生成
+
+👥 **作者与机构**
+
+- 第一作者：Yeonwoo Cha（KAIST）（论文中与Semin Kim同为第一作者）
+- 通讯作者：未明确说明（通讯作者邮箱通常为机构邮箱，但论文未指定）
+- 作者列表：Yeonwoo Cha（KAIST）、Semin Kim（KAIST）、Jinhyeon Kwon（KAIST）、Seunghoon Hong（KAIST）
+
+💡 **毒舌点评**
+
+这篇论文用一个极其简洁优美的统一框架（共享潜空间 + 可逆流）巧妙解决了多模态生成中数据必须全配对或依赖文本锚点的顽疾，效率提升惊人（参数少6倍，训练快10倍）。然而，其“万能”的宣称主要在三个模态（文本、图像、音频）上得到验证，对于更复杂或动态的模态（如视频）其扩展能力仍需打个问号，且当前开源情况尚不明确。
+
+📌 **核心摘要**
+
+本文针对现有任意到任意多模态生成方法（如CoDi， OmniFlow）存在训练复杂、依赖全配对或文本锚定数据、计算开销大等问题，提出了一个名为FlowBind的高效统一框架。其核心创新在于引入一个可学习的共享潜空间作为跨模态信息的“锚点”，并为每个模态配备一个独立的可逆流网络，将其数据分布与共享潜空间连接起来。所有组件（共享潜空间编码器和各模态流网络）在单一的流匹配目标下联合训练，自然支持任意子集的模态数据进行部分配对训练。推理时，仅通过求解各模态的流ODE即可实现任意模态间的直接转换。
+
+与CoDi和OmniFlow相比，FlowBind的主要新意在于：
+1.  架构简化：用共享潜空间替代了文本中心锚或复杂联合速度场，实现了模态间的解耦与统一。
+2.  训练统一：采用单阶段联合优化，��免了多阶段训练的复杂性。
+3.  效率大幅提升：通过操作紧凑的语义表征（非高维像素/波形），模型参数量（568M）仅为OmniFlow（3.2B）的1/6，训练时间（48 GPU-hr）仅为OmniFlow（480hr）的1/10，且使用数据量不到CoDi的0.2%。
+
+主要实验结果（关键数据见表2、表3）显示，在文本、图像、音频的六种一对一生成任务中，FlowBind在多数质量指标（FID， FAD， CIDEr）和对齐指标（CLIP， CLAP， AIS）上取得最佳或相近成绩。特别是在图像-音频生成任务上表现突出（如图像生成AIS达26.60， 音频生成AIS达78.17）。在更复杂的一对多、多对一生成任务中，FlowBind也展现出优越的跨模态条件融合能力。其实际意义在于提供了一个数据高效、计算友好、易于训练的多模态生成基础框架。主要局限性是当前实验仅验证了文本、图像、音频三种模态，对于更多模态或视频等时序性更强的模态，其效果有待进一步探索。
+
+---
+
+### 🥉 [Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory](/audio-paper-digest-blog/posts/2026-05-04-seeing-listening-remembering-and-reasoning-a)
+
+✅ **7.8/10** | 前25% | #多模态模型 | #多模态模型 | #音频问答 #强化学习
+
+👥 **作者与机构**
+
+- 第一作者：Lin Long (浙江大学)
+- 通讯作者：Yuan Lin (字节跳动 Seed)
+- 作者列表：Lin Long (浙江大学)、Yichen He (字节跳动 Seed)、Wentao Ye (浙江大学)、Yiyuan Pan (卡内基梅隆大学机器人研究所)、Yuan Lin (字节跳动 Seed)、Hang Li (字节跳动 Seed)、Junbo Zhao (浙江大学)、Wei Li (字节跳动 Seed)
+
+💡 **毒舌点评**
+
+这篇论文的亮点在于提出了一套从记忆构建、管理到推理检索的完整智能体框架，并配套发布了高质量的评测基准M3-Bench，为“类人记忆”这一方向树立了一个扎实的工程化标杆。但其短板同样明显：所谓的“长期记忆”核心能力仍严重依赖于闭源前沿模型（Gemini，GPT-4o）来合成训练数据，且在控制阶段使用了参数量较大的开源模型（32B），使得整个框架的“自主性”打了折扣，更像一个精心设计的、用大模型模拟记忆的管道系统。
+
+🔗 **开源详情**
+
+- 代码：论文承诺开源，代码仓库链接为：https://github.com/ByteDance-Seed/m3-agent。
+- 模型权重：论文承诺将发布记忆化模型（memory-7b-sft）和控制模型（control-32b-rl）的检查点。
+- 数据集：论文承诺将完整发布M3-Bench基准，包含所有视频和问答标注。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详尽的训练细节、超参数、附录中的数据合成流程、提示模板等，复现材料非常充分。
+- 论文中引用的开源项目：InsightFace（用于人脸识别）、ERes2NetV2（用于说话人嵌入）、Qwen2.5-Omni、Qwen3、GPT-4o、Gemini-1.5-Pro（用于数据合成和评估）。
+
+📌 **核心摘要**
+
+1.  要解决的问题：现有长视频理解方法多为处理有限长度的离线视频，无法像人类一样持续感知、记忆并从无限长的在线视频流中构建世界知识，也缺乏评估智能体基于长期记忆进行推理的能力的基准。
+2.  方法核心：提出了M3-Agent，一个具备长期记忆的多模态智能体框架。其核心包括：a) 记忆化过程：以类似人脑的“情景记忆”（具体事件）和“语义记忆”（抽象知识）方式，增量构建并更新以实体为中心的多模态记忆图谱。b) 控制过程：采用强化学习训练，使智能体能基于当前指令，通过多轮推理自主检索记忆并回答问题。
+3.  与已有方法相比新在哪里：a) 记忆结构：提出了以实体（人、物）为中心、融合多模态信息（人脸、语音、文本）的长期记忆图谱，确保跨时间、跨模态的一致性。b) 推理范式：从单次检索增强生成（RAG）升级为基于强化学习的、可多轮交互的检索与推理过程。c) 评测基准：创建了首个专注于评估记忆有效性和基于记忆推理能力的长视频问答数据集M3-Bench。
+4.  主要实验结果：在M3-Bench-robot， M3-Bench-web和VideoMME-long三个基准上，M3-Agent均取得了最佳性能。以最强基线Gemini-GPT4o-Hybrid为例，M3-Agent在其上的准确率分别高出6.7%， 7.7%， 和5.3%。消融实验证明，语义记忆、实体ID一致性处理以及强化学习控制过程对性能至关重要。
+5.  实际意义：该工作为开发具备长期交互和记忆能力的具身智能体（如家庭服务机器人）提供了重要的框架设计思路和评测工具，推动了AI向更接近人类的“持续学习与记忆”范式迈进。
+6.  主要局限性：a) 框架高度依赖外部工具（人脸识别、说话人分离）和闭源大模型（用于合成训练数据），其独立性和鲁棒性有待验证。b) 记忆图谱的构建和检索效率在面对极长时间流或复杂场景时可能成为瓶颈。c) 当前评估场景仍相对结构化，与现实世界复杂、开放的交互环境存在差距。
+
+---
+
+### 4. [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-04-better-together-leveraging-unpaired-multimodal)
+
+✅ **7.5/10** | 前25% | #多模态模型 | #迁移学习 | #自监督学习 #音频分类
+
+👥 **作者与机构**
+
+- 第一作者：Sharut Gupta (MIT CSAIL)
+- 通讯作者：未明确说明（所有作者邮箱均为机构邮箱）
+- 作者列表：
+    - Sharut Gupta (MIT CSAIL)
+    - Shobhita Sundaram (MIT CSAIL)
+    - Chenyu Wang (MIT CSAIL)
+    - Stefanie Jegelka (TU Munich, MIT CSAIL)
+    - Phillip Isola (MIT CSAIL)
+
+💡 **毒舌点评**
+
+本文漂亮地证明了“他山之石，可以攻玉”在多模态学习中的有效性，理论分析严谨，实验设计全面，为解决数据配对瓶颈提供了优美的新视角。然而，它回避了权重共享在大规模、非线性模型中可能引发的优化冲突与模态坍缩问题，更像是一次理想的“存在性证明”，其工程鲁棒性有待更严峻的现实场景检验。
+
+🔗 **开源详情**
+
+- 代码：论文提供了项目主页链接 `https://unpaired-multimodal.github.io/`，并声明代码将在此发布（论文ID提及“本地PDF”，暗示代码可能已开源或即将开源）。
+- 模型权重：未提及公开预训练权重。
+- 数据集：使用公开数据集（MultiBench, ImageNet, Oxford Pets等），论文未创建新数据集。
+- Demo：未提及在线演示。
+- 复现材料：附录B和E提供了非常详尽的实验细节，包括超参数搜索范围、数据集划分、训练脚本伪代码、硬件配置等，复现信息充分。
+- 论文中引用的开源项目：CLIP, DINOv2, OpenLLaMA, AudioCLIP等预训练模型。
+
+📌 **核心摘要**
+
+1.  问题：传统多模态学习严重依赖成对数据（如图片-文本对），而高质量配对数据收集成本高昂，限制了模型规模和应用范围。
+2.  方法核心：提出UML（未配对多模态学习器），一个模态无关的训练范式。单一模型交替处理来自不同模态（如图像和文本）的输入并共享所有参数（权重共享），无需显式对齐或配对。
+3.  新意：与依赖配对数据或推断对齐关系的方法不同，UML直接在未配对数据上通过权重共享来累积梯度，隐式地学习跨模态结构。理论上，在线性假设下证明了未配对辅助数据能严格增加共享参数的Fisher信息，从而提升目标模态的表示质量。
+4.  主要实验结果：
+    - 在MultiBench（情感、幽默检测等）和多个标准视觉分类基准上，UML在自监督和监督设置下均稳定提升未配对图像表示的下游性能。例如，在Stanford Cars全微调设置下，准确率从79.45%提升至86.39%（见下表）。
+    - 在few-shot设置下收益尤为明显（如1-shot平均准确率从45.52%提升至51.36%）。
+    - 扩展至音频-视觉-文本任务，未配对的图像和文本数据能提升音频分类性能，且三种模态互补。
+    - 量化了模态间的“汇率”，例如使用CLIP编码器时，1张图像约等于228个单词的训练价值。
+
+| 数据集 | 设置 | 未配对基线 (Unimodal) | UML (Ours) |
+| :--- | :--- | :--- | :--- |
+| Stanford Cars | Full-finetuning | 79.45 | 86.39 ↑ |
+| FGVC Aircraft | Full-finetuning | 66.99 | 73.44 ↑ |
+| Oxford Pets | Full-finetuning | 90.67 | 91.72 ↑ |
+| Stanford Cars | 1-shot Linear Probing | 13.18 | 16.49 ↑ |
+| Oxford Pets | 1-shot Linear Probing | 63.51 | 73.59 ↑ |
+
+5.  实际意义：为利用互联网上海量的、未对齐的文本、图像、音频数据来增强特定模态（如视觉、音频）模型提供了简单有效的方法，有望降低对昂贵配对数据的依赖。
+6.  主要局限性：理论分析基于线性数据生成假设；实验主要评估分类任务；未深入探讨和解决在大规模非线性模型中可能出现的梯度干扰、模态冲突等优化难题。
+
+---
+
+### 5. [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions)
+
+✅ **7.5/10** | 前25% | #多模态模型 | #自监督学习 | #跨模态 #对比学习
 
 👥 **作者与机构**
 
 - 第一作者：Chiraag Kaushik（Georgia Institute of Technology, School of Electrical and Computer Engineering）
-- 通讯作者：未说明
-- 作者列表：Chiraag Kaushik（Georgia Institute of Technology）， Davis Barch（Dolby Laboratories）， Andrea Fanelli（Dolby Laboratories）
+- 通讯作者：Davis Barch（Dolby Laboratories），Andrea Fanelli（Dolby Laboratories）
+- 作者列表：Chiraag Kaushik（Georgia Institute of Technology）、Davis Barch（Dolby Laboratories）、Andrea Fanelli（Dolby Laboratories）
 
 💡 **毒舌点评**
 
-亮点：论文清晰定义了多模态SAE的“字典分裂”问题，并从理论（定理证明其可解）和实践（提出群稀疏+掩码方案）两个层面进行了系统性改进，实验覆盖了图像-文本和音乐-文本两大类多模态场景，评估指标设计新颖且具有说服力。短板：所提出的“跨模态随机掩码”技巧更像是一个工程Trick，缺乏更深层的理论动机或严谨的消融分析来证明其不可或缺性；此外，论文的贡献更侧重于分析工具的改进，对于最终提升多模态大模型性能的实际影响尚不明确。
+论文精准地诊断了多模态SAE的“分裂字典”顽疾，并给出了一套有理论铺垫、实验扎实的“组合疗法”（组稀疏损失+掩码），效果立竿见影，尤其是在音频文本任务上的首次尝试值得关注。然而，其核心创新（组稀疏正则）更多是经典稀疏学习方法的“场景迁移”，而非原理层面的突破，且完全依赖现成的CLIP/CLAP编码器，未能触及嵌入空间本身的质量问题。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：未提及公开预训练的GSAE/MGSAE模型权重。
-- 数据集：使用了公开数据集（CC3M， JamendoMaxCaps， MS COCO， MusicBench， CelebA等），论文中给出了数据集引用和预处理方法。
-- Demo：未提供在线演示。
-- 复现材料：提供了详实的实验设置（附录A.2），包括训练数据、超参数选择方法、关键参数值（λ, p, K, 扩展因子）、优化器、训练步数等，并进行了超参数敏感性分析（表3）。还提供了补充实验（表4-9）和更多案例。
-- 论文中引用的开源项目：提到了使用基于Marks et al. (2024)的SAE实现库，并引用了Bhalla et al. (2024a)的概念词汇表。
+-   代码：论文中未提及代码链接。
+-   模型权重：未提及。
+-   数据集：论文中使用的CC3M、JamendoMaxCaps、MusicBench、MS COCO等均为公开或可公开获取的数据集。
+-   Demo：未提及。
+-   复现材料：论文附录（A.2节）提供了非常详细的训练细节，包括超参数选择范围与具体值、优化器设置、字典大小、稀疏度K等，复现基础良好。
+-   引用的开源项目：论文中提到了用于SAE训练和字典学习的开源实现 `dictionary_learning` (Marks et al., 2024)。
+-   总体开源计划：论文中未提及具体的开源计划。
 
 📌 **核心摘要**
 
-1.  问题：标准的稀疏自编码器（SAE）在分解多模态对齐嵌入（如CLIP/CLAP）时，倾向于学习“分裂字典”，即大部分字典元素（概念）只对单一模态的输入激活，这损害了跨模态的概念对齐，限制了SAE在跨模态任务中的应用。
-2.  方法：作者提出了一种群稀疏自编码器（GSAE）及其掩码变体（MGSAE）。核心思想是利用成对的跨模态数据（如一对图文），在训练时引入群稀疏损失（L2,1范数），鼓励配对样本的稀疏编码具有相同的激活模式（共享支撑集）。此外，还引入了跨模态随机掩码技术，在编码前对嵌入施加共享的随机掩码，进一步迫使TopK操作从相同的潜在空间子集中选择，促进多模态概念的学习。
-3.  创新：与以往工作直接学习跨模态转换或后处理配对不同，该工作是从优化目标和训练流程上进行根本性改进，通过显式的正则化让SAE内部偏好多模态一致的稀疏表示。同时，提出了新的评估指标多模态单义性分数（MMS）来量化概念的跨模态语义一致性。
-4.  实验：在CLIP（图文）、CLAP（音乐/音频-文）、SIGLIP2和AIMv2等多种模型嵌入上进行实验。结果表明，MGSAE相比标准SAE：(a) 大幅增加了同时对两种模态激活的神经元数量，减少了死神经元（见图3）；(b) MMS分数显著提高（见图4）；(c) 在多项零样本跨模态分类与检索任务上性能提升明显，如在CLIP-ImageNet上准确率从0.303提升至0.373（见表1），在CLAP-GTZAN上从0.376提升至0.672（见表2）；(d) 在概念命名与线性探针解释案例中，能更准确地识别与任务相关的语义概念（见图5）。
-5.  意义：为理解和控制多模态表示空间提供了更优的解释工具。学习到的多模态字典使得通过操作特定概念向量来干预和引导跨模态任务（如检索）成为可能（见图7）。
-6.  局限：方法依赖于高质量的成对多模态数据进行训练；理论定理的证明基于较强的简化假设（如理想对齐、精确稀疏分解）；在零样本任务上的性能仍显著低于原始的稠密嵌入，表明稀疏分解过程仍存在信息损失。
+本文旨在解决将稀疏自编码器应用于多模态嵌入空间（如CLIP、CLAP）时出现的“分裂字典”问题，即学习到的特征大多只对单一模态激活，破坏了语义对齐。作者首先从理论上证明，在对齐的嵌入空间中，存在分裂字典意味着也存在对齐更好的非分裂字典。为此，他们提出一种基于组稀疏自编码器的新方法，核心是在训练中引入针对配对数据的组稀疏损失和跨模态随机掩码，以鼓励为不同模态的语义一致样本学习共享的稀疏表示。实验表明，与标准SAE相比，该方法（尤其是MGSAE变体）显著增加了多模态激活的神经元数量、减少了死神经元，并提升了特征的多模态单义性分数（MMS）。在CLIP图像/文本和CLAP音频/文本嵌入空间上的多项零样本跨模态任务（如分类、检索）中，其性能大幅超越标准SAE及其他变体（例如，在ImageNet零样本分类上，MGSAE比标准SAE高出7%）。论文还展示了该方法能更准确地识别线性探针中的概念贡献，并在检索任务中实现可控的概念操纵。其主要局限在于方法创新基于已有技术的组合，且评估主要限于重构和零样本任务，未深入探索对模型内在理解的影响。该工作首次将SAE分析扩展到音频文本联合空间，为理解与控制多模态表示提供了新工具。
+
+![图2：掩码组稀疏自编码器（MGSAE）训练流程图](icassp-img://ZJlVXZ5dmK/1.png)
+（注：此图为论文图2，展示了MGSAE的训练流程：从预训练编码器获取配对嵌入，通过共享的SAE编码器（含随机掩码）得到稀疏编码，再经解码器重构，损失包含重建损失和组稀疏损失。）
 
 ---
 
-### 4. [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-04-avere-improving-audiovisual-emotion-reasoning)
+### 6. [AVERE: Improving Audiovisual Emotion Reasoning with Preference Optimization](/audio-paper-digest-blog/posts/2026-05-04-avere-improving-audiovisual-emotion-reasoning)
 
 ✅ **7.5/10** | 前25% | #多模态模型 | #强化学习 | #语音情感识别 #基准测试
 

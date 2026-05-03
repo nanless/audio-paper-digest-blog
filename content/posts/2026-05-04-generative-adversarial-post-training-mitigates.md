@@ -74,8 +74,6 @@ hiddenInHomeList: true
 *   规则惩罚（Rrules）：包括无效输出、过度静音、提前结束、连续重复等规则的惩罚。
 *   对抗奖励（Radv）：定义为`-log(1 - Dψ(y))`，鼓励策略生成让判别器认为“真实”的和弦序列。
 
-![图2 定性结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-1.png)
-
 图2：定性结果对比。 在相同旋律输入下，仅用和谐性奖励训练的模型（第二行）产生重复、单调的和弦进行；而使用GAPT训练的模型（第三行）产生更自然、多样的和弦进行。
 
 ### 💡 核心创新点
@@ -129,7 +127,7 @@ hiddenInHomeList: true
 | GAPT w/o Adv. Training | 0.540 | 5.658 | N/A | N/A |
 | GAPT | 0.648 | 12.914 | 0.467 | 11.794 |
 
-![图4 多样性与和谐度的Pareto前沿](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-3.png)
+![图4 多样性与和谐度的Pareto前沿](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-2.png)
 
 图4：多样性与和谐度的权衡关系。 在测试集（a）和分布外数据集（b）上，GAPT在保持高和谐度的同时，显著提高了多样性，推进了两者的帕累托前沿。Online MLE多样性高但和谐度差，ReaLchords和谐度高但多样性差。图（c）的t-SNE可视化显示GAPT生成的和弦在嵌入空间中覆盖更广。
 
@@ -138,8 +136,6 @@ hiddenInHomeList: true
 *   对抗判别器输入消融：表9显示，判别器仅输入和弦`Dψ(y)`比输入旋律+和弦`Dψ(x, y)`效果更好，后者可能因记忆特定配对而削弱对抗信号。
 *   不同RL目标消融：表8显示，即使在使用GRPO（Group Relative Policy Optimization）替代PPO时，无对抗训练同样导致多样性崩溃，而加入对抗训练后多样性恢复，证明了GAPT框架的普适性。
 *   随机种子稳定性：表6显示，GAPT在不同随机种子下性能稳定，标准差小。
-
-![图3 用户研究评分](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-2.png)
 
 图3：用户研究评分。 GAPT在“适应性质量”、“适应速度”和“控制与能动性”三个问题上得分均最高。在“适应速度”和“控制与能动性”上显著优于ReaLchords（p < 0.05）。
 

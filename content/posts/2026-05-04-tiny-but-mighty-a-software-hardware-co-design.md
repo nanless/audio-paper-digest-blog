@@ -120,7 +120,7 @@ NANOMIND本身并非一个单一的AI模型，而是一个支持在异构SoC上�
 
 4. 功耗与续航（图8， 图9）
 
-![图8：三种功耗模式下的能效-延迟权衡曲线，展示了随电池电量下降系统性能的平滑降级](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-7.png)
+![图8：三种功耗模式下的能效-延迟权衡曲线，展示了随电池电量下降系统性能的平滑降级](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-1.png)
 
 ![图9：在标准2000mAh电池下，NANOMIND的功耗（W）与预估运行时间（小时）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ql30VWGyda-8.png)
 

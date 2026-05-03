@@ -134,23 +134,23 @@ LRNN的核心是构建了一种新的神经元，其激活函数是可学习的�
 
 结论：LRNN在PSNR和SSIM指标上均取得最佳，且定性重建图像（图9）更清晰、无伪影。
 
-![CT重建结果定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-8.png)
+![CT重建结果定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-0.png)
 
 （图9：CT重建结果定性对比。展示了LRNN重建结果更清晰，细节更接近真实图像，而其他方法（如SIREN, ReLU）结果较模糊。）
 
 图2：图像表示任务的缩放定律 (引用自论文)
 
-![图像表示任务的缩放定律](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-1.png)
+![图像表示任务的缩放定律](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-2.png)
 
 （图2：测试RMSE与参数量的关系。在合成乘积结构函数上，LRNN以更少参数达到更低测试误差，显示出优越的参数效率。）
 
-![ImageNet图像重建成功率与时间](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-3.png)
+![ImageNet图像重建成功率与时间](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-4.png)
 
 （图4：在1000张ImageNet图像上，达到不同PSNR目标的成功率和平均时间。LRNN在达到40dB高保真目标时成功率为100%，远高于SIREN和SPDER。）
 
 图8：PDE基准测试结果 (引用自论文)
 
-![PDE基准测试MSE对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-7.png)
+![PDE基准测试MSE对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-5.png)
 
 （图8：高频泊松PDE基准测试中，不同模型MSE与参数量的对比。LRNN在更低参数量下达到更低误差，显著优于SIREN，且比KAN误差低几个数量级。）
 
@@ -162,11 +162,7 @@ LRNN的核心是构建了一种新的神经元，其激活函数是可学习的�
 
 图像任务定性结果：
 
-![Cameraman图像重建结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-2.png)
-
 （图3：Cameraman图像重建定性结果对比。LRNN-SPDER重建图与真实图像几乎无差别，而其他模型（尤其是SIREN）重建较模糊。）
-
-![ImageNet图像定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-4.png)
 
 （图5：ImageNet图像定性对比。在250个epoch时，LRNN已能重建出非常清晰的图像，细节丰富，而基线模型仍较模糊。）
 

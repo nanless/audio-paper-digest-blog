@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频驱动动画 论文列表"
+title: "ICLR 2026 - 音频详细描述 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["音频驱动动画"]
+tags: ["音频详细描述"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频驱动动画 方向论文"
+description: "共 1 篇 ICLR 2026 音频详细描述 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频驱动动画
+# ICLR 2026 - 音频详细描述
 
 共 **1** 篇论文
 
@@ -18,45 +18,60 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [InterActHuman: Multi-Concept Human Animation with Layout-Ali](/audio-paper-digest-blog/posts/2026-05-04-interacthuman-multi-concept-human-animation-with) | 7.5分 | 前25% |
+| 🥇 | [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omn](/audio-paper-digest-blog/posts/2026-05-04-omni-captioner-data-pipeline-models-and-benchmark) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [InterActHuman: Multi-Concept Human Animation with Layout-Aligned Audio Conditions](/audio-paper-digest-blog/posts/2026-05-04-interacthuman-multi-concept-human-animation-with)
+### 🥇 [Omni-Captioner: Data Pipeline, Models, and Benchmark for Omni Detailed Perception](/audio-paper-digest-blog/posts/2026-05-04-omni-captioner-data-pipeline-models-and-benchmark)
 
-✅ **7.5/10** | 前25% | #音频驱动动画 | #扩散模型 #流匹配 | #扩散模型 #多模态模型
+🔥 **8.5/10** | 前25% | #音频详细描述 | #代理数据生成 | #音视频详细描述 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Zhenzhi Wang*（香港中文大学，字节跳动）
-- 通讯作者：论文中未明确标注
-- 作者列表：Zhenzhi Wang（香港中文大学，字节跳动）、Jiaqi Yang（字节跳动）、Jianwen Jiang*（字节跳动）、Chao Liang（字节跳动）、Gaojie Lin（字节跳动）、Zerong Zheng（字节跳动）、Ceyuan Yang（字节跳动）、Yuan Zhang（字节跳动）、Mingyuan Gao（字节跳动）、Dahua Lin（香港中文大学）
-  （*表示共同第一作者）
+- 第一作者：Ziyang Ma（上海交通大学，南洋理工大学）
+- 通讯作者：Xie Chen（上海交通大学，上海创新研究院）
+- 作者列表：Ziyang Ma（上海交通大学，南洋理工大学）、Ruiyang Xu（上海交通大学）、Zhenghao Xing（香港中文大学）、Yunfei Chu（阿里巴巴通义团队）、Yuxuan Wang（阿里巴巴通义团队）、Jinzheng He（阿里巴巴通义团队）、Jin Xu†（阿里巴巴通义团队）、Pheng-Ann Heng（香港中文大学）、Kai Yu（上海交通大学）、Junyang Lin（阿里巴巴通义团队）、Eng Siong Chng（南洋理工大学）、Xie Chen‡（上海交通大学，上海创新研究院）
+- 机构信息：上海交通大学、南洋理工大学、香港中文大学、上海创新研究院、阿里巴巴集团通义团队
 
 💡 **毒舌点评**
 
-这篇论文巧妙地将“鸡生蛋，蛋生鸡”的推理循环转化为一个迭代收敛的流程，用预测掩码来精准绑定多概念的音频条件，是解决多身份音视频生成难题一个务实且有效的工程创新。但模型严重依赖高质量、多身份的视频-掩码-音频配对数据，其数据构建流程本身可能就是主要门槛，且对“文本跟随能力较弱”的坦承，暴露了其作为人类动画专用模型在通用性上的短板。
+本文系统性地揭示了多模态语言模型在详细描述任务中“越详细，越幻觉”的“共增长”困境，并针对性地提出了从数据生成（Omni-Detective）到模型训练（两阶段课程学习）再到评估（Omni-Cloze）的完整解决方案，思路清晰且实验扎实。然而，其模型架构本身（基于Qwen2.5-Omni微调）创新有限，核心贡献更多在于系统设计和数据工程，而非提出突破性的模型架构。
 
 🔗 **开源详情**
 
-- 代码：论文提及提供了在公开视频扩散预训练模型Wan2.1上复现的代码，但未在文中给出具体代码仓库链接。
-- 模型权重：未提及公开预训练或微调后的模型权重。
-- 数据集：论文中描述了数据集构建流程，并提及基于OpenHumanVid等数据集，但未说明所构建的260万数据集是否公开及获取方式。
-- Demo：提供了在线视频演示链接：https://zhenzhiwang.github.io/interacthuman/
-- 复现材料��提供了详细的算法伪代码（Algorithm 1）、训练超参数（学习率、batch size、步数等）、硬件配置、损失函数细节以及消融实验设置。
-- 论文中引用的开源项目：提到了依赖Wan2.1 (Wang et al., 2025a) 作为基础模型，Qwen2.5-VL (Bai et al., 2025)，Grounding-SAM2 (Ren et al., 2024)，wav2vec 2.0 (Baevski et al., 2020)，Florence-2 (Xiao et al., 2024)，Q-align (Wu et al., 2023a)，RTMpose (Jiang et al., 2023)，Raft (Teed & Deng, 2020)，SyncNet (Chung & Zisserman, 2017) 等工具和模型。
-- 论文中未提及完整的开源代码库链接，但提供了复现所需的详细信息。
+- 代码：论文中提供了代码仓库链接：`https://github.com/ddlBoJack/Omni-Captioner`，并声明所有数据管道、模型和基准将开源。
+- 模型权重：未在论文正文中直接提及是否公开预训练权重，但鉴于开源承诺，推测将开放。
+- 数据集：
+    - 训练数据：基于VGGSound2和FineVideo，但使用Omni-Detective生成了新的标注数据集，将开源。
+    - Omni-Cloze基准：声明将开源。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了极为详尽的复现信息，包括：
+    1.  训练超参数：完整的表格（表6），包含GPU使用、批量大小、训练时长、学习率等。
+    2.  Omni-Detective详细提示词：提供了侦探代理、观察者、数据生成和填空生成的完整提示模板（附录A.1.2， B.3）。
+    3.  数据处理与评估细节：附录中详细说明了评估设置、数据策展流程。
+- 论文中引用的开源项目：
+    - 骨干模型：Qwen2.5-Omni
+    - 工具：Gemini系列模型， GPT-4o系列模型
+    - 数据集：VGGSound， FineVideo
+    - 评估基准：引用的多个基准（如MMAU， MMAR， VDC等）。
 
 📌 **核心摘要**
 
-1.  问题：现有音视频驱动的人类动画方法大多基于“单身份”假设，将所有条件（如文本、图像、音频）全局融合，无法处理视频中出现多个概念（多人、人与物）并需要精确控制各自外观和语音的场景。
-2.  方法核心：提出InterActHuman框架。其核心是在预训练的Diffusion Transformer (DiT) 中引入一个轻量级的掩码预测器模块，该模块能从参考图像和生成中的视频潜在特征中，预测出每个参考概念在视频中的时空布局（掩码）。然后，利用迭代去噪过程中上一步预测的掩码，将局部音频条件（如说话人的语音）只注入到对应概念的空间区域内，而非全局注入。
-3.  创新点：相比隐式学习（如特征融合、注意力）的现有方法，本文采用了显式的布局对齐策略，强制将不同模态的条件与其对应身份的时空足迹进行强绑定。通过迭代缓存掩码的策略，巧妙地解决了推理时“需要先有视频才能预测掩码，但需要掩码才能注入条件”的循环依赖问题。
-4.  实验结果：在多个基准上优于基线。在多概念对话视频生成测试集上，本方法（Ours）的唇音同步距离（Sync-D）为6.670，远优于全局音频条件（9.482）和固定掩码（7.068）等消融变体；视频质量分布距离（FVD）为22.881，也显著优于基线（33.895-40.239）。用户研究显示，其在音频驱动和多概念定制任务上均获得最高平均评分和首选率（表2）。
-5.  实际意义：该方法为生成包含多人对话、人与物体交互的高质量、可控人类中心视频提供了有效技术路径，是迈向更复杂、更真实的虚拟数字人生成的重要一步。
-6.  主要局限性：1) 训练数据域较窄（主要为人说话、唱歌视频），限制了对多样化文本提示的跟随能力；2) 训练数据以2-3个身份的视频为主，可能影响对超过3个身份输入的泛化。
+1.  问题：当前全模态语言模型在生成详细描述时，存在一个根本性矛盾：描述越详细，虽然捕获的正确细节增多，但同时产生的幻觉（事实错误）也显著增加，即“细节与幻觉共增长”。
+2.  方法核心：本文提出了一个三管齐下的解决方案：
+    *   数据管道：设计了“Omni-Detective”，一个模拟侦探工作的代理式数据生成框架，通过多轮工具调用（如OCR、ASR、MLLM）和观察者交互，自主生成高度详细且低幻觉的多模态标注数据。
+    *   模型训练：基于生成的高质量数据，采用两阶段课程学习策略训练了Audio-Captioner（音频详细描述）和Omni-Captioner（音视频详细描述）模型。第一阶段冻结视觉编码器，专注音频感知对齐；第二阶段解冻所有参数，联合优化音视频感知。
+    *   基准测试：提出了“Omni-Cloze”，首个覆盖纯音频、纯视觉和音视频场景的填空式详细描述评估基准，通过设计选择题（包含“未提及”选项）来稳定、高效地评估模型性能。
+3.  新意：与传统依赖人工提示或单次生成的数据构建方法相比，Omni-Detective实现了自动化、迭代式、基于证据的详细数据收集，旨在解耦细节增长与幻觉增长。Omni-Cloze则为这一任务提供了首个统一且可靠的自动评估范式。
+4.  实验结果：
+    *   直接评估：Omni-Captioner在VDC基准测试上达到新SOTA（准确率55.0%），在video-SALMONN 2测试集上实现了最佳的细节-幻觉权衡（缺失率17.8%，幻觉率10.9%）。
+    *   级联评估（生成描述后用于问答）：Audio-Captioner在音频问答基准MMAU（70.0%）和MMAR（59.8%）上超越所有开源模型，甚至优于Gemini 2.5 Flash。Omni-Captioner在多个音视频问答基准上均为开源模型最佳。
+    *   Omni-Cloze评估：Audio-Captioner（53.2%）和Omni-Captioner（56.4%）在各自类别中均取得最高准确率，且Omni-Cloze的自动评分与人类偏好（Elo评分）的相关系数（r=0.91）高于现有基准。
+    *   消融分析：增加Omni-Detective的调查轮次能持续提升细节率，并降低缺失率和幻觉率（幻觉率在5-6轮后趋于稳定）。将Omni-Detective直接应用于Gemini 2.5 Pro生成描述，可提升下游问答性能。
+5.  实际意义：本工作为构建可靠、细致的全模态感知系统提供了可复现的全套解决方案（数据、模型、评估），对需要精确事实描述的应用（如辅助AI、科学报告）具有价值。
+6.  主要局限：所提模型在架构上无本质创新，主要贡献在系统工程层面；Omni-Cloze基准虽好，但仍无法完全捕捉所有类型的幻觉（如完全无关内容的生成），这是未来工作的方向。
 
 ---
 

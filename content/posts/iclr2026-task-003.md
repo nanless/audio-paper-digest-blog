@@ -4,13 +4,13 @@ date: 2026-05-04
 draft: false
 tags: ["基准测试"]
 categories: [iclr-2026]
-description: "共 10 篇 ICLR 2026 基准测试 方向论文"
+description: "共 9 篇 ICLR 2026 基准测试 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 基准测试
 
-共 **10** 篇论文
+共 **9** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -24,10 +24,9 @@ hiddenInHomeList: true
 | 4. | [AudioTrust: Benchmarking The Multifaceted Trustworthiness of](/audio-paper-digest-blog/posts/2026-05-04-audiotrust-benchmarking-the-multifaceted) | 8.3分 | 前25% |
 | 5. | [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio ](/audio-paper-digest-blog/posts/2026-05-04-star-bench-probing-deep-spatio-temporal-reasoning) | 8.0分 | 前25% |
 | 6. | [XModBench: Benchmarking Cross-Modal Capabilities and Consist](/audio-paper-digest-blog/posts/2026-05-04-xmodbench-benchmarking-cross-modal-capabilities) | 7.5分 | 前25% |
-| 7. | [Seeing, Listening, Remembering, and Reasoning: A Multimodal ](/audio-paper-digest-blog/posts/2026-05-04-seeing-listening-remembering-and-reasoning-a) | 7.5分 | 前25% |
-| 8. | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-04-human-behavior-atlas-benchmarking-unified) | 7.5分 | 前10% |
-| 9. | [MMSU: A Massive Multi-task Spoken Language Understanding and](/audio-paper-digest-blog/posts/2026-05-04-mmsu-a-massive-multi-task-spoken-language) | 7.0分 | 前25% |
-| 10. | [EchoMind: An Interrelated Multi-level Benchmark for Evaluati](/audio-paper-digest-blog/posts/2026-05-04-echomind-an-interrelated-multi-level-benchmark) | 6.5分 | 前50% |
+| 7. | [Human Behavior Atlas: Benchmarking Unified Psychological And](/audio-paper-digest-blog/posts/2026-05-04-human-behavior-atlas-benchmarking-unified) | 7.5分 | 前10% |
+| 8. | [MMSU: A Massive Multi-task Spoken Language Understanding and](/audio-paper-digest-blog/posts/2026-05-04-mmsu-a-massive-multi-task-spoken-language) | 7.0分 | 前25% |
+| 9. | [EchoMind: An Interrelated Multi-level Benchmark for Evaluati](/audio-paper-digest-blog/posts/2026-05-04-echomind-an-interrelated-multi-level-benchmark) | 6.5分 | 前50% |
 
 ---
 
@@ -304,48 +303,7 @@ hiddenInHomeList: true
 
 ---
 
-### 7. [Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory](/audio-paper-digest-blog/posts/2026-05-04-seeing-listening-remembering-and-reasoning-a)
-
-✅ **7.5/10** | 前25% | #基准测试 | #多模态模型 | #数据集 #长期记忆
-
-👥 **作者与机构**
-
-- 第一作者：Lin Long (浙江大学)、Yichen He (字节跳动 Seed) （论文明确标注“Equal contribution”，两位共同第一）
-- 通讯作者：Yuan Lin (字节跳动 Seed) （论文明确标注“Corresponding author”）
-- 作者列表：Lin Long (浙江大学)、Yichen He (字节跳动 Seed)、Wentao Ye (浙江大学)、Yiyuan Pan (卡内基梅隆大学机器人研究所)、Yuan Lin (字节跳动 Seed)、Hang Li (字节跳动 Seed)、Junbo Zhao (浙江大学)、Wei Li (字节跳动 Seed)
-
-💡 **毒舌点评**
-
-亮点：该工作不仅提出一个完整的智能体记忆框架，更重要的是贡献了高质量的、针对长期记忆推理能力评测的基准数据集（M3-Bench），填补了现有长视频QA在“高阶认知能力”评估上的空白。
-短板：模型架构图展示了复杂的交互，但核心记忆机制（如实体中心图的更新与检索）的工程实现细节主要依赖附录中的工具描述，对于追求算法创新的研究者来说，其“新颖性”更多体现在系统设计而非一个可独立复用的核心模块。
-
-🔗 **开源详情**
-
-- 代码：论文提供了GitHub仓库链接：https://github.com/ByteDance-Seed/m3-agent ，承诺将公开代码。
-- 模型权重：论文明确表示将提供记忆模型（memory-7b-sft）和控制模型（control-32b-rl）的检查点。
-- 数据集：M3-Bench基准（包含视频和QA标注）将开源。训练用私有数据集未提及开源。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文提供了极其详细的附录，包括：所有算法的伪代码（Algorithm 1, 2）、所有工具的具体实现说明（Appendix E）、合成数据的详细流程与提示模板（Appendix F）、强化学习的超参数（Appendix H）、以及评估用的提示（Appendix M）。这些材料对复现至关重要。
-- 引用的开源项目/模型：InsightFace（面部识别）、Qwen系列模型（Qwen2.5-Omni, Qwen2.5-VL, Qwen3）、Gemini-1.5-Pro、GPT-4o、OpenAI text-embedding-3-large、ERes2NetV2（说话人验证）、DAPO/GRPO（强化学习算法）。
-
-📌 **核心摘要**
-
-1. 问题：现有长视频理解方法多关注有限长度视频的感知，而缺乏对在线、无限流式多模态输入的处理能力，也难以构建和利用类人的长期记忆来完成需要世界知识和跨模态推理的复杂任务。
-2. 方法核心：提出M3-Agent框架，其包含并行工作的记忆化与控制两大过程。记忆化过程持续处理视频流，生成情景记忆和语义记忆，并构建实体中心的长期记忆图；控制过程则根据指令，通过强化学习训练的多轮推理自主检索并利用记忆完成任务。
-3. 创新点：与已有方法相比，新在：(1) 模拟人类认知的双类型（情景/语义）记忆生成；(2) 以实体为中心组织记忆，保持身份一致性；(3) 通过强化学习训练多轮迭代检索与推理的控制策略。
-4. 实验结果：论文提出了M3-Bench基准（含机器人视角和网络视频子集）。M3-Agent在M3-Bench-robot、M3-Bench-web和VideoMME-long上，分别以6.7%、7.7%和5.3%的准确率优势超过了最强基线（Gemini-GPT4o-Hybrid）。关键结果如下表：
-
-| 方法 | M3-Bench-robot | M3-Bench-web | VideoMME-Long |
-| :--- | :---: | :---: | :---: |
-| Gemini-GPT4o-Hybrid (最强基线) | 24.0 | 41.2 | 56.5 |
-| M3-Agent | 30.7 | 48.9 | 61.8 |
-
-5. 实际意义：推动多模态智能体向具备长期记忆和推理能力的“类人”智能体发展，为家庭机器人、助手等实际应用场景提供了基础框架和评估标准。
-6. 主要局限性：记忆生成的质量依赖于底层多模态模型；训练数据为私有数据集；实验场景虽多样，但仍未完全覆盖所有真实世界复杂交互；强化学习训练成本较高。
-
----
-
-### 8. [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-04-human-behavior-atlas-benchmarking-unified)
+### 7. [Human Behavior Atlas: Benchmarking Unified Psychological And Social Behavior Understanding](/audio-paper-digest-blog/posts/2026-05-04-human-behavior-atlas-benchmarking-unified)
 
 ✅ **7.5/10** | 前10% | #基准测试 | #多任务学习 | #多模态模型 #强化学习
 
@@ -380,7 +338,7 @@ hiddenInHomeList: true
 
 ---
 
-### 9. [MMSU: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark](/audio-paper-digest-blog/posts/2026-05-04-mmsu-a-massive-multi-task-spoken-language)
+### 8. [MMSU: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark](/audio-paper-digest-blog/posts/2026-05-04-mmsu-a-massive-multi-task-spoken-language)
 
 ✅ **7.0/10** | 前25% | #基准测试 | #模型评估 | #语音大模型 #多任务学习
 
@@ -428,7 +386,7 @@ hiddenInHomeList: true
 
 ---
 
-### 10. [EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models](/audio-paper-digest-blog/posts/2026-05-04-echomind-an-interrelated-multi-level-benchmark)
+### 9. [EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models](/audio-paper-digest-blog/posts/2026-05-04-echomind-an-interrelated-multi-level-benchmark)
 
 ✅ **6.5/10** | 前50% | #基准测试 | #模型评估 | #语音对话系统
 

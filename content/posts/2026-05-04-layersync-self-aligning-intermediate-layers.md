@@ -64,11 +64,9 @@ LayerSync本身并非一个独立的生成模型，而是一个应用于现有�
 *   使用StopGrads：在计算相似度时，对深层（强）表征的梯度进行阻断。这使得损失信号只更新浅层（弱）表征，符合“用强指导弱”的单向引导思路。
 *   逐Patch相似度：在patch序列维度上计算并平均相似度，保持了空间结构信息。
 
-![图1：LayerSync通过内部表征对齐改善生成训练效率与质量的概念示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-0.png)
+![图1：LayerSync通过内部表征对齐改善生成训练效率与质量的概念示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-1.png)
 
 图1描述：展示了LayerSync的核心概念。左侧(a)图示表明LayerSync通过将浅层与语义更丰富的深层对齐来改善表征。中间(b)图显示了在ImageNet 256x256上训练的加速效果（8.75x）。右侧(c)图展示了在图像、音频和动作生成任务上的一致性质量提升。
-
-![图2：SiT-XL/2模型收敛时各块之间的相关性矩阵](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-1.png)
 
 图2描述：显示了训练收敛后，SiT-XL/2 Transformer内部28个块之间的相关性。这揭示了块会自然地分成三个功能组，为LayerSync的层选择策略提供了依据。
 
@@ -123,7 +121,7 @@ LayerSync本身并非一个独立的生成模型，而是一个应用于现有�
 
 表1关键结论：LayerSync在各种模型规模和训练时长下均显著优于基线，也优于之前的自监督方法Dispersive。在SDE采样设置下，仅需800个epoch即可达到基线1400个epoch的性能（FID 6.32 vs 8.3）。
 
-![图3：定性结果对比。在相同噪声、采样器下，比较了基线、Dispersive和LayerSync训练400K迭代后的生成样本](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-2.png)
+![图3：定性结果对比。在相同噪声、采样器下，比较了基线、Dispersive和LayerSync训练400K迭代后的生成样本](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-3.png)
 
 图3描述：展示了生成样本的定性对比。可以看到，使用LayerSync训练的模型生成的图像在细节、纹理和整体清晰度上优于Dispersive和基线模型，尽管三者训练迭代次数、噪声、采样器完全相同。
 
@@ -139,8 +137,6 @@ LayerSync本身并非一个独立的生成模型，而是一个应用于现有�
 | SiT-XL/2 + LayerSync* | 800 | 1.49 | 285.2 |
 
 表2关键结论：在有CFG的情况下，LayerSync（1.49 FID）的性能已接近依赖外部VLM的REPA（1.42 FID），并且显著优于自监督基线Dispersive（1.97 FID），确立了纯自监督生成的新SOTA。
-
-![图4：表示学习评估。在Tiny ImageNet分类、PASCAL VOC分割和DINOv2对齐度上，LayerSync模型在所有层上的平均性能均优于基线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-3.png)
 
 图4描述：三个子图分别展示了(a) Tiny ImageNet分类准确率，(b) PASCAL VOC分割mIoU，(c) 与DINOv2特征的CKA对齐度。虚线表示各层的平均值。结论：LayerSync不仅提高了平均性能，还使特征在深度上分布更均匀，并可能将最佳性能层“拉向”参考层。
 

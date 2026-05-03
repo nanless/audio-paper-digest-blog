@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 音视频 论文列表"
+title: "ICLR 2026 - 音乐生成 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["音视频"]
+tags: ["音乐生成"]
 categories: [iclr-2026]
-description: "共 7 篇 ICLR 2026 音视频 方向论文"
+description: "共 8 篇 ICLR 2026 音乐生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音视频
+# ICLR 2026 - 音乐生成
 
-共 **7** 篇论文
+共 **8** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,315 +18,347 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OmniCVR: A Benchmark for Omni-Composed Video Retrieval with ](/audio-paper-digest-blog/posts/2026-05-04-omnicvr-a-benchmark-for-omni-composed-video) | 8.5分 | 前25% |
-| 🥈 | [WorldSense: Evaluating Real-world Omnimodal Understanding fo](/audio-paper-digest-blog/posts/2026-05-04-worldsense-evaluating-real-world-omnimodal) | 8.0分 | 前50% |
-| 🥉 | [JavisDiT++: Unified Modeling and Optimization for Joint Audi](/audio-paper-digest-blog/posts/2026-05-04-javisdit-unified-modeling-and-optimization-for) | 8.0分 | 前25% |
-| 4. | [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal O](/audio-paper-digest-blog/posts/2026-05-04-avocado-an-audiovisual-video-captioner-driven-by) | 8.0分 | 前25% |
-| 5. | [JavisDiT: Joint Audio-Video Diffusion Transformer with Hiera](/audio-paper-digest-blog/posts/2026-05-04-javisdit-joint-audio-video-diffusion-transformer) | 8.0分 | 前25% |
-| 6. | [Instilling an Active Mind in Avatars via Cognitive Simulatio](/audio-paper-digest-blog/posts/2026-05-04-instilling-an-active-mind-in-avatars-via) | 7.5分 | 前10% |
-| 7. | [Entropy-Monitored Kernelized Token Distillation for Audio-Vi](/audio-paper-digest-blog/posts/2026-05-04-entropy-monitored-kernelized-token-distillation) | 7.5分 | 前25% |
+| 🥇 | [Generative Adversarial Post-Training Mitigates Reward Hackin](/audio-paper-digest-blog/posts/2026-05-04-generative-adversarial-post-training-mitigates) | 9.0分 | 前25% |
+| 🥈 | [SongEcho: Towards Cover Song Generation via Instance-Adaptiv](/audio-paper-digest-blog/posts/2026-05-04-songecho-towards-cover-song-generation-via) | 9.0分 | 前10% |
+| 🥉 | [Automatic Stage Lighting Control: Is it a Rule-Driven Proces](/audio-paper-digest-blog/posts/2026-05-04-automatic-stage-lighting-control-is-it-a-rule) | 8.5分 | 前25% |
+| 4. | [Steering Autoregressive Music Generation with Recursive Feat](/audio-paper-digest-blog/posts/2026-05-04-steering-autoregressive-music-generation-with) | 8.3分 | 前25% |
+| 5. | [Discovering and Steering Interpretable Concepts in Large Gen](/audio-paper-digest-blog/posts/2026-05-04-discovering-and-steering-interpretable-concepts) | 8.0分 | 前25% |
+| 6. | [YuE: Scaling Open Foundation Models for Long-Form Music Gene](/audio-paper-digest-blog/posts/2026-05-04-yue-scaling-open-foundation-models-for-long-form) | 7.5分 | 前25% |
+| 7. | [SyncTrack: Rhythmic Stability and Synchronization in Multi-T](/audio-paper-digest-blog/posts/2026-05-04-synctrack-rhythmic-stability-and-synchronization) | 7.0分 | 前25% |
+| 8. | [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-04-latent-fourier-transform) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OmniCVR: A Benchmark for Omni-Composed Video Retrieval with Vision, Audio, and Text](/audio-paper-digest-blog/posts/2026-05-04-omnicvr-a-benchmark-for-omni-composed-video)
+### 🥇 [Generative Adversarial Post-Training Mitigates Reward Hacking in Live Human-AI Music Interaction](/audio-paper-digest-blog/posts/2026-05-04-generative-adversarial-post-training-mitigates)
 
-🔥 **8.5/10** | 前25% | #音视频 | #对比学习 | #音频检索 #多模态模型
+🔥 **9.0/10** | 前25% | #音乐生成 | #强化学习 | #对抗训练 #实时处理
 
 👥 **作者与机构**
 
-- 第一作者：Junyang Ji（清华大学计算机系，快手技术，南方科技大学）
-- 通讯作者：Zhihai He（南方科技大学计算机系），Wenming Yang（清华大学深圳国际研究生院）
-- 作者列表：Junyang Ji（清华大学，快手技术，南方科技大学）、Shengjun Zhang（快手技术）、Da Li（中国科学院大学，快手技术）、Yuxiao Luo（北京大学，快手技术）、Yan Wang（快手技术）、Di Xu（快手技术）、Biao Yang（快手技术）、Wei Yuan（快手技术）、Fan Yang（快手技术）、Zhihai He（南方科技大学）、Wenming Yang（清华大学）
+- 第一作者：Yusong Wu (Mila, Quebec Artificial Intelligence Institute, Université de Montréal; Canada CIFAR AI Chair)
+- 通讯作者：Natasha Jaques (University of Washington)， Cheng-Zhi Anna Huang (Massachusetts Institute of Technology)
+- 作者列表：Yusong Wu (Mila, Université de Montréal), Stephen Brade (Massachusetts Institute of Technology), Aleksandra Teng Ma (Georgia Institute of Technology), Tia-Jane Fowler (University of Washington), Enning Yang (McGill University), Berker Banar (Independent Researcher), Aaron Courville (Mila, Université de Montréal; Canada CIFAR AI Chair), Natasha Jaques (University of Washington), Cheng-Zhi Anna Huang (Massachusetts Institute of Technology)
 
 💡 **毒舌点评**
 
-本文精准击中现有组合视频检索（CoVR）只重“眼”（视觉）不重“耳”（音频）的痛点，通过构建首个全模态基准并设计针对性模型，系统性地展示了音频缺失导致的性能崩塌，是多模态检索领域一份扎实且必要的“补全”工作；但基准构建高度依赖自动化流水线（Qwen-Omni标注+双阶段验证），其生成的“修改指令”与真实用户查询的自然度仍有差距，且模型改进本质是现有模块（Qwen2-Audio + VLM2Vec）的拼接，创新深度有限。
+亮点在于将经典的对抗训练思想巧妙地“复活”并应用于解决大模型时代棘手的奖励黑客问题，且针对实时交互这一高难度场景设计了稳定的两阶段训练策略，效果显著。短板是方法本身（对抗奖励+自适应更新）的创新粒度不算极大，且论文中提到的与GRPO的对比实验显示，其对抗训练框架的普适性仍有进一步探索的空间。
 
 🔗 **开源详情**
 
-- 代码：论文承诺发布完整代码库（数据生成脚本、训练代码、评估协议），但未提供具体链接。
-- 模型权重：承诺发布AudioVLM2Vec模型权重（基于开源的Qwen2-Audio和Qwen2-VL）。
-- 数据集：OmniCVR基准数据集（包括160k+片段，50k+三元组及测试集）将在Hugging Face上公开（地址：https://huggingface.co/datasets/Jun-Yang/OmniCVR）。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了极其详尽的复现材料，包括：
-    - 数据构建流水线的详细描述和图示（图4）。
-    - 用于注释、三元组挖掘和验证的完整提示词（附录G）。
-    - 训练和评估的详细协议描述。
-- 论文中引用的开源项目：依赖的主要开源项目/模型包括：PySceneDetect（用于视频分割）、CLIP、CLAP（用于相似度计算）、BLIP/BLIP2、ImageBind、Qwen2-VL、Qwen2.5-Omni、Qwen2-Audio、VLM2Vec、OmniEmbed-v0.1-multivent。
+- 代码：提供代码仓库链接 `https://github.com/lukewys/realchords-pytorch`。
+- 模型权重：论文中提到了发布“模型检查点”，但未在提供的文本中明确给出具体下载链接或平台。从“我们发布训练数据集、模型检查点和代码”的表述看，应已公开。
+- 数据集：论文明确提及发布训练数据集。使用了Hooktheory, Nottingham, POP909, Wikifonia等公开数据集。
+- Demo：提供在线音频示例链接 `https://realchords-GAPT.github.io`。
+- 复现材料：在附录（§B, §C）中提供了极其详细的训练细节、超参数配置、数据集划分、奖励模型性能数据以及额外的消融实验结果。
+- 论文中引用的开源项目：依赖的基础模型架构为LLaMA风格Transformer。未在提供的文本中明确引用其他特定开源工具库。
 
 📌 **核心摘要**
 
-本文针对现有组合视频检索（CoVR）基准普遍忽略音频模态的关键缺陷，提出了首个支持视觉、音频和文本全模态的组合视频检索基准OmniCVR。该基准通过自动化流水线从海量视频中挖掘视觉、音频及视听综合变化的源-目标视频对，并生成相应的自然语言修改指令，形成了一个包含约5万个三元组（源视频、修改指令、目标视频）的大规模数据集，其中视听综合修改指令占比超过57%。论文还提出AudioVLM2Vec模型，该模型利用Qwen2-Audio将音频转为详细文本描述，再与VLM2Vec结合，有效注入了音频语义。实验证明，现有强基线（如VLM2Vec）在音频中心检索任务上性能急剧下降（R@1仅12.4%），而AudioVLM2Vec在该任务上达到77.2%的R@1，整体性能也达到最优，揭示了当前多模态系统在音频推理上的根本局限。该工作为评估和推动真正的多模态组合推理提供了关键平台。
+1. 问题：在需要实时协调与自适应的AI音乐合奏（如旋律-和弦伴奏）任务中，使用强化学习（RL）后训练提升模型适应性时，常导致“奖励黑客”现象——模型为最大化和谐性奖励而输出单调、重复、缺乏创意的简单和弦，严重损害了交互的创造性与用户体验。
+2. 方法核心：提出“生成对抗后训练”（GAPT）。在策略模型（生成和弦）进行RL训练的同时，引入一个动态更新的判别器，其目标是区分真实数据中的和弦序列与策略模型当前生成的序列。策略模型除了优化和谐性奖励，还需优化由判别器提供的“真实感”奖励（即鼓励生成的序列更像真实数据）。为稳定训练，采用两阶段自适应更新判别器的策略。
+3. 新意：将生成对抗网络的对抗思想，以一种稳定、适配RL框架的方式，应用于序列生成模型的RL后训练中，作为缓解奖励黑客问题的新颖正则化手段。与传统的KL散度约束相比，对抗奖励能更有效地在学习适应性和保持输出真实性与多样性之间取得平衡。
+4. 主要实验结果：在固定旋律测试、模型间协作和真人音乐家用户研究三个层级上评估。定量上，GAPT在保持高和谐度（note-in-chord ratio）的同时，显著提升了输出多样性（Vendi Score）。例如，在测试集上，GAPT的和谐度为0.497（接近基线0.484），多样性为26.645（远高于基线的20.968）。用户研究表明，音乐家认为GAPT在“适应速度”和“控制与能动性”上显著优于基线模型（p < 0.05）。
+5. 实际意义：为构建更自然、更具创造力、用户体验更好的实时人机音乐交互系统提供了有效的训练方法。该方法思想可推广至其他需要RL后训练且易发生模式崩塌的序列生成任务。
+6. 主要局限性：当前工作聚焦于旋律-和弦伴奏这一特定任务。方法中的判别器和奖励模型仍需针对特定任务设计和训练。虽然用户研究包含专家音乐家，但样本量有限（12人），且实验均为受控环境。
 
 ---
 
-### 🥈 [WorldSense: Evaluating Real-world Omnimodal Understanding for Multimodal LLMs](/audio-paper-digest-blog/posts/2026-05-04-worldsense-evaluating-real-world-omnimodal)
+### 🥈 [SongEcho: Towards Cover Song Generation via Instance-Adaptive Element-wise Linear Modulation](/audio-paper-digest-blog/posts/2026-05-04-songecho-towards-cover-song-generation-via)
 
-🔥 **8.0/10** | 前50% | #音视频 | #基准测试 | #模型评估 #多模态模型
-
-👥 **作者与机构**
-
-- 第一作者：Jack Hong（Xiaohongshu Inc.）
-- 通讯作者：Weidi Xie（Shanghai Jiao Tong University）
-- 作者列表：Jack Hong（Xiaohongshu Inc.）、Shilin Yan（Xiaohongshu Inc.， 项目负责人）、Jiayin Cai（Xiaohongshu Inc.）、Xiaolong Jiang（Xiaohongshu Inc.）、Yao Hu（Xiaohongshu Inc.）、Weidi Xie（Shanghai Jiao Tong University）
-
-#
-
-💡 **毒舌点评**
-
-亮点：论文针对多模态评估领域“重视觉、轻听觉”的痛点，构建了一个强迫模型必须结合音频和视觉信息才能回答的高质量基准，其数据收集和质量控制流程（80名专家标注+MLLM验证）堪称严谨。短板：所有评估任务均为多选题格式，这在一定程度上限制了对模型开放式生成和复杂推理能力的考察，论文作者也在局限性部分承认了这一点。
-
-#
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码链接。项目主页（https://jaaackhongggg.github.io/WorldSense）可能后续会提供。
-- 模型权重：未提及（本文为基准测试，不发布新模型）。
-- 数据集：是。论文明确表示WorldSense数据集将以CC BY-NC-SA 4.0许可证公开发布。
-- Demo：未提及。
-- 复现材料：论文在附录中提供了详细的评估提示（Evaluation Prompt）模板，有助于复现评估设置。训练细节等不适用。
-- 论文中引用的开源项目：论文在评估中引用了多个开源模型，包括Unified-IO-2、OneLLM、VideoLLaMA2、Qwen2-VL、LLaVA-OneVision、InternVL2.5、LLaVA-Video等。
-
-📌 **核心摘要**
-
-1. 问题：现有的多模态大语言模型（MLLM）基准测试大多专注于视觉-语言理解，严重忽略了音频模态，导致无法全面评估模型在真实世界中处理多模态信息的能力。
-2. 方法核心：提出WorldSense，首个专注于评估MLLM在真实世界场景中全模态（视觉、音频、文本）视频理解能力的基准。其核心设计原则是：a) 强调音视频模态的强耦合（移除任一模态则无法正确回答）；b) 覆盖广泛的视频领域和任务；c) 提供高质量、多轮验证的人工标注问答对。
-3. 创新点：与现有基准（如侧重图像的OmniBench/AV-Odyssey，或任务单一的AVQA）相比，WorldSense首次为视频场景下的全模态理解提供了全面、严谨且大规模的评估平台。
-4. 主要实验结果：在WorldSense上，当前开源音视频MLLM表现不佳（最高仅50.9%），甚至低于一些纯视觉模型。最强的商业模型Gemini 2.5 Pro也仅达到65.1%的准确率，揭示了现有模型在全模态推理上的巨大差距。消融实验表明，视觉信息至关重要，而原始音频信号比字幕能提供更丰富的非语言线索（如语调、情感），带来额外性能提升。
-5. 实际意义：为评估和推动更真实、更全面的多模态AI感知与理解能力设立了新标准，明确指出了当前模型在音频理解、跨模态融合及复杂推理方面的短板，为未来研究指明了方向。
-6. 主要局限性：采用多选题格式，可能无法充分评估模型生成开放式回答和进行更复杂推理的能力。
-
----
-
-### 🥉 [JavisDiT++: Unified Modeling and Optimization for Joint Audio-Video Generation](/audio-paper-digest-blog/posts/2026-05-04-javisdit-unified-modeling-and-optimization-for)
-
-🔥 **8.0/10** | 前25% | #音视频 | #扩散模型 | #流匹配 #位置编码
+🔥 **9.0/10** | 前10% | #音乐生成 | #扩散模型 | #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Kai Liu（浙江大学）
-- 通讯作者：Hao Fei（新加坡国立大学）
-- 作者列表：Kai Liu（浙江大学）、Yanhao Zheng（浙江大学）、Kai Wang（多伦多大学）、Shengqiong Wu（新加坡国立大学）、Rongjunchen Zhang（HiThink Research）、Jiebo Luo（罗切斯特大学）、Dimitrios Hatzinakos（多伦多大学）、Ziwei Liu（南洋理工大学）、Hao Fei（新加坡国立大学）、Tat-Seng Chua（新加坡国立大学）
-
-💡 **毒舌点评**
-
-亮点：设计简洁高效，用仅约1M公开数据就在开源模型中卷出了新SOTA，特别是TA-RoPE和AV-DPO的设计直击联合生成的核心痛点——同步性和对齐性，且实现成本低。
-短板：训练数据规模（1M）和模型参数量（2.1B）与顶尖商业模型相比仍有差距，论文中未讨论模型在更长时长（>5秒）、更高分辨率（>480p）或更复杂语义场景下的表现，其泛化能力的上限尚不明确。
-
-🔗 **开源详情**
-
-- 代码：论文中提供了代码仓库链接：`https://JavisVerse.github.io/JavisDiT2-page`。
-- 模型权重：论文中提及将发布模型权重。
-- 数据集：论文中提及将发布处理后的数据集（包括SFT数据、DPO数据等）。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了详细的训练细节（三阶段流程、超参数、硬件时间估算）、模型配置、评估指标和基准测试集（JavisBench）说明。
-- 引用的开源项目：依赖的开源工具/模型包括：Wan2.1 (T2V模型、视频VAE、文本编码器), AudioLDM2 (音频VAE), OpenSora (数据处理), TAVGBench (数据与基准), ImageBind/SynchFormer/AudioBox/VideoAlign等 (评估), FunASR (数据过滤)。
-
-📌 **核心摘要**
-
-1.  要解决的问题：现有的开源联合音视频生成（JAVG）模型在生成质量、音视频时间同步性以及与人类偏好对齐方面，与Veo3等先进商业模型存在明显差距。
-2.  方法核心：提出JavisDiT++框架，基于Wan2.1-1.3B-T2V构建。包含三大核心组件：1）模态特定混合专家（MS-MoE）：使用共享的自注意力层促进音视频交互，再通过各自独立的FFN层增强单模态特征建模，以更简洁高效的方式取代了传统的双流或拼接架构。2）时间对齐旋转位置编码（TA-RoPE）：通过设计位置ID，使音频和视频token在时间维度上对齐，实现显式、帧级的精确同步，无需额外计算开销。3）音视频直接偏好优化（AV-DPO）：首次将偏好学习引入JAVG，利用多个奖励模型从质量、一致性、同步性多维度评估生成结果，构建偏好对数据，引导模型向更符合人类偏好的方向生成。
-3.  创新点：提出了更简洁统一的JAVG模型架构（MS-MoE）；提出了高效精确的跨模态时间对齐机制（TA-RoPE）；首次将直接偏好优化技术应用于联合音视频生成任务。
-4.  主要实验结果：在JavisBench基准测试上，JavisDiT++在所有11个评估指标上均显著超越了JavisDiT和UniVerse-1等开源SOTA方法。下表列出了与主要基线在生成240p4秒视频上的关键结果对比。
-
-| 模型 | FVD ↓ | FAD ↓ | TV-IB ↑ | TA-IB ↑ | CLIP ↑ | CLAP ↑ | AV-IB ↑ | AVHScore ↑ | JavisScore ↑ | DeSync ↓ |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| JavisDiT | 204.1 | 7.2 | 0.263 | 0.143 | 0.302 | 0.391 | 0.197 | 0.179 | 0.154 | 1.039 |
-| UniVerse-1 | 194.2 | 8.7 | 0.272 | 0.111 | 0.309 | 0.245 | 0.104 | 0.098 | 0.077 | 0.929 |
-| Ours | 141.5 | 5.5 | 0.282 | 0.164 | 0.316 | 0.424 | 0.198 | 0.184 | 0.159 | 0.832 |
-（注：FVD/FAD越低越好，其他越高越好。DeSync越低表示同步性越好。）
-
-5.  实际意义：为开源社区提供了一个高效、高质量的联合音视频生成解决方案，降低了高质量AIGC内容的创作门槛，推动了该领域的民主化发展。
-6.  主要局限性：模型训练依赖约1M规模的数据，可能限制了其在更多样化场景下的泛化能力；模型参数规模（2.1B）相对较小；论文实验集中在较短视频（2-5秒）和分辨率（240p-480p），对更长、更复杂内容的生成能力未被验证；当前框架专注于文本到音视频生成，未探讨其他跨模态任务（如音频到视频、视频到音频）。
-
----
-
-### 4. [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration](/audio-paper-digest-blog/posts/2026-05-04-avocado-an-audiovisual-video-captioner-driven-by)
-
-🔥 **8.0/10** | 前25% | #音视频 | #强化学习 | #预训练 #多模态模型
-
-👥 **作者与机构**
-
-- 第一作者：Xinlong Chen (Kuaishou Technology, NLPR/CASIA, UCAS)
-- 通讯作者：Qiang Liu (NLPR/CASIA, UCAS)
-- 作者列表：Xinlong Chen (Kuaishou Technology, NLPR/CASIA, UCAS)、Yue Ding (NLPR/CASIA, UCAS)、Weihong Lin (Kuaishou Technology)、Jingyun Hua (Kuaishou Technology)、Linli Yao (Peking University)、Yang Shi (Peking University)、Bozhou Li (Peking University)、Qiang Liu (NLPR/CASIA, UCAS)、Yuanxing Zhang (Kuaishou Technology)、Pengfei Wan (Kuaishou Technology)、Liang Wang (NLPR/CASIA, UCAS)
-
-💡 **毒舌点评**
-
-这篇论文的实验设计堪称“教科书级”严谨，通过在四个互补的基准测试上进行详尽对比，并精心设计消融实验，无可辩驳地证明了其两阶段后训练流程的有效性。不过，其奖励模型的构建（如Checklist和Dialogue reward）严重依赖于GPT-4o/4.1等强大闭源模型，这虽然保证了当前研究的效果，却也为方法的可复现性和公平性打上了一个问号——毕竟不是所有人都有同等的API访问权限和预算。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：论文中提到模型将会开源（“This model will be open-source”），但当前未提供具体下载地址。
-- 数据集：构建的107K SFT数据集未提及是否公开。论文中引用的训练数据来源（TikTok-10M, Shot2Story等）本身是公开的。
-- Demo：论文中未提及在线演示链接。提供了一个项目网页：`https://avocado-captioner.github.io/`。
-- 复现材料：训练细节（SFT/GRPO超参数、奖励函数阈值、Prompt模板）在论文正文和附录中提供了较为详细的说明。
-- 论文中引用的开源项目：主要依赖的开源模型为Qwen2.5-Omni。构建数据集和奖励函数时，使用了Gemini-2.5-Pro和GPT-4o/4.1等闭源模型的API。
-
-📌 **核心摘要**
-
-1.  要解决什么问题：现有的视频描述模型大多以视觉为中心，忽略了音频信息（如对话、背景音乐）对于全面理解视频内容的重要性。简单的音视频分别描述再拼接的方法无法建模两者之间细粒度的时间对齐和因果关联。
-2.  方法核心是什么：提出了AVoCaDO，一个基于Qwen2.5-Omni-7B的音视频描述模型。核心是设计了一个两阶段后训练流程：1）AVoCaDO SFT：在精心构建的10.7万条高质量、时间对齐的音视频描述数据集上进行监督微调；2）AVoCaDO GRPO：采用组相对策略优化算法，并设计了三个互补的奖励函数（Checklist、Dialogue、Length）来进一步提升模型的时间连贯性、对话准确性和输出稳定性。
-3.  与已有方法相比新在哪里：1）目标新：明确将“音视频时间对齐”作为描述生成的核心目标；2）流程新：设计了专门针对此目标的两阶段后训练流程，尤其是基于细粒度关键点分解和对话提取与比对的GRPO奖励设计，这比简单的通用奖励（如奖励模型打分）更具针对性和可解释性；3）数据新：构建了高质量、大规模的SFT数据集，并采用两阶段生成策略以确保音视频信息的完整性。
-4.  主要实验结果如何：AVoCaDO在四个音视频描述基准测试上显著超越所有开源模型。在video-SALMONN-2测试集上，其总错误率（Total）为37.3，低于最强基线video-SALMONN-2（38.8）和大规模模型Qwen3-Omni-Captioner（47.6）。在UGC-VideoCap上，其平均分（Avg.）达到73.2，甚至超过了商业模型Gemini-2.5-Pro（72.6）和Gemini-2.5-Flash（73.0）。在QA类基准Daily-Omni和WorldSense上，其准确率分别为50.1和25.7，大幅领先其他开源模型。在纯视觉基准VDC Detailed和DREAM-1K上也取得了有竞争力的性能。
-    | 模型 | 大小 | 模态 | video-SALMONN-2 测试集 (Total ↓) | UGC-VideoCap (Avg. ↑) | Daily-Omni (Acc ↑) | WorldSense (Acc ↑) |
-    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-    | Qwen2.5-Omni | 7B | A+V | 57.1 | 57.7 | 13.4 | 8.6 |
-    | video-SALMONN-2* | 7B | A+V | 38.8 | 67.2 | 29.9 | 18.2 |
-    | Qwen3-Omni-Captioner | 30B-A3B | A+V | 47.6 | 72.5 | 27.2 | 14.1 |
-    | AVoCaDO (Ours) | 7B | A+V | 37.3 | 73.2 | 50.1 | 25.7 |
-    注：`Total ↓`表示总错误率，`Avg. ↑`和`Acc ↑`表示分数/准确率，均为越高越好。
-5.  实际意义是什么：该工作为需要深度理解视频内容（尤其是依赖于对话、音效等听觉线索的场景）的下游任务（如视频检索、问答、生成）提供了更强大的基础描述能力。其承诺的开源将推动相关领域的研究。
-6.  主要局限性是什么：1）奖励模型（GPT-4o/4.1）本身可能引入偏见或错误，且计算成本高；2）论文未深入探讨生成描述中的幻觉（Hallucination）问题（尽管表1显示其幻觉率并非最低）；3）方法的通用性有待验证，目前主要在短、中时长视频上验证。
-
----
-
-### 5. [JavisDiT: Joint Audio-Video Diffusion Transformer with Hierarchical Spatio-Temporal Prior Synchronization](/audio-paper-digest-blog/posts/2026-05-04-javisdit-joint-audio-video-diffusion-transformer)
-
-🔥 **8.0/10** | 前25% | #音视频 | #扩散模型 | #音频生成 #视频生成
-
-👥 **作者与机构**
-
-- 第一作者：Kai Liu（浙江大学，新加坡国立大学访问期间）
-- 通讯作者：Hao Fei（新加坡国立大学）
+- 第一作者：Sifei Li（MAIS, Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences）
+- 通讯作者：Weiming Dong（MAIS, Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences）
 - 作者列表：
-    - Kai Liu（浙江大学，新加坡国立大学）
-    - Wei Li（中国科学技术大学）
-    - Lai Chen（浙江大学）
-    - Shengqiong Wu（新加坡国立大学）
-    - Yanhao Zheng（浙江大学）
-    - Jiayi Ji（新加坡国立大学）
-    - Fan Zhou（浙江大学）
-    - Jiebo Luo（罗切斯特大学）
-    - Ziwei Liu（南洋理工大学）
-    - Hao Fei（新加坡国立大学）
-    - Tat-Seng Chua（新加坡国立大学）
+    - Sifei Li (1,2)
+    - Yang Li (1,2)
+    - Zizhou Wang (2)
+    - Yuxin Zhang (1,2)
+    - Fuzhang Wu (3)
+    - Oliver Deussen (4)
+    - Tong-Yee Lee (5)
+    - Weiming Dong (1,2) ∗
+- 机构：
+    1. MAIS, Institute of Automation, Chinese Academy of Sciences
+    2. School of Artificial Intelligence, University of Chinese Academy of Sciences
+    3. ISRC, Institute of Software, Chinese Academy of Sciences
+    4. University of Konstanz
+    5. National Cheng-Kung University
+
+💡 **毒舌点评**
+
+论文最大的亮点是提出了一个设计精巧且高效的IA-EiLM条件调制机制，通过让条件特征与生成模型的隐藏状态交互（IACR），巧妙地解决了静态条件注入可能导致的“特征冲突”问题，实验也充分证明了其优越性。短板在于，当前框架受限于基座模型（ACE-Step）的文本控制能力，对歌声音色的细粒度控制（如情感、嗓音特质）依然不足，且未能纳入音乐家在翻唱中会做的局部节奏、转音等创造性改编，离“像人一样重新诠释”还有距离。
+
+🔗 **开源详情**
+
+- 代码：是，提供GitHub仓库链接：`https://github.com/lsfhuihuiff/SongEcho_ICLR2026`
+- 模型权重：论文中未明确提及是否公开训练好的模型权重，但提供了代码和数据集，因此推断可以训练得到。
+- 数据集：是，公开了构建的Suno70k数据集，可通过提供的GitHub仓库链接获取。
+- Demo：是，提供了在线演示页面（`https://vvanonymousvv.github.io/SongEcho_updated/`）。
+- 复现材料：非常充分。论文详细说明了训练数据处理流程（Section 4）、模型实现细节（超参数、硬件、训练步数等，Section 5.1）、评估指标和协议（Section 5.2）、以及与基线的公平对比设置（Appendix C.1）。
+- 论文中引用的开源项目：使用了ACE-Step作为基座模型，并依赖mir_eval库计算旋律指标，使用Whisper进行歌词转录，使用Qwen2-audio生成标签，使用SongEval进行美学评估和部分数据筛选。
+
+📌 **核心摘要**
+
+1.  问题：现有方法在实现精准的“翻唱歌曲生成”（即在保留原歌人声旋律轮廓的同时，根据文本提示生成新的歌声和伴奏）方面存在不足，主要挑战在于如何实现精确的时间对齐旋律控制，并让条件信息与生成模型协调工作。
+2.  方法核心：提出了SongEcho框架，其核心是IA-EiLM模块，包含两部分：（1）EiLM（Element-wise Linear Modulation）：将FiLM扩展为元素级别的调制，无需额外学习时间对齐即可实现精确的逐时序旋律注入。（2）IACR（Instance-Adaptive Condition Refinement）：通过门控机制让旋律条件特征与生成模型的隐藏状态交互，动态调整条件以适应当前生成实例。
+3.  创新点：相比已有使用交叉注意力（间接、计算冗余）或元素加法（调制不灵活）的方法，IA-EiLM同时改进了条件注入机制（EiLM）和条件表示（IACR），实现了更精准、更和谐的旋律控制。此外，构建了高质量的大规模AI歌曲数据集Suno70k。
+4.  主要实验结果：在Suno70k和SongEval数据集上，SongEcho在旋律控制指标（RPA, RCA, OA）、音频质量指标（FD, KL）和人类偏好（MOS）上均显著优于现有最优方法（SA ControlNet, MuseControlLite）。关键数据见下表。
+5.  实际意义：为音乐创作和文化再创作提供了一种高效、可控的AI工具，能帮助创作者快速生成不同风格的翻唱作品。
+6.  主要局限性：无法实现对歌声音色的细粒度控制（如性别之外的音色特征）；未建模音乐家在翻唱时进行的局部创造性改编（如颤音、时值变化）。
+
+实验结果对比表（主结果，数据来自Suno70k测试集）：
+
+| 方法 | RPA↑ | RCA↑ | OA↑ | CLAP↑ | FD↓ | KL↓ | PER↓ | 可训练参数 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ACE-Step (基座模型) | - | - | - | 0.2930 | 73.53 | 0.2670 | 0.4168 | - |
+| ACE-Step+SA ControlNet | 0.6209 | 0.6440 | 0.6858 | 0.2875 | 105.95 | 0.2019 | 0.3714 | 1.6B |
+| ACE-Step+SA ControlNet+LoRA | 0.6214 | 0.6431 | 0.6833 | 0.2892 | 99.19 | 0.1850 | 0.3734 | 331M |
+| ACE-Step+MuseControlLite | 0.5205 | 0.5346 | 0.5940 | 0.2977 | 72.04 | 0.2151 | 0.4194 | 189M |
+| SongEcho (Ours) | 0.7080 | 0.7339 | 0.6952 | 0.3243 | 42.06 | 0.1123 | 0.2951 | 49.1M |
+
+主观评估结果（MOS，1-5分）：
+
+| 方法 | 音乐背景组 | 无音乐背景组 |
+| :--- | :--- | :--- |
+| | MF↑ TA↑ AQ↑ OP↑ | MF↑ TA↑ AQ↑ OP↑ |
+| ACE-Step+SA ControlNet+LoRA | 3.056 3.285 3.085 3.104 | 3.133 3.636 3.182 3.160 |
+| ACE-Step+MuseControlLite | 2.630 3.026 2.581 2.622 | 2.689 3.333 2.591 2.622 |
+| SongEcho (Ours) | 3.644 3.800 3.756 3.819 | 3.884 4.160 3.916 3.942 |
+（MF: 旋律保真度, TA: 文本一致性, AQ: 音频质量, OP: 整体偏好）
+
+---
+
+### 🥉 [Automatic Stage Lighting Control: Is it a Rule-Driven Process or Generative Task?](/audio-paper-digest-blog/posts/2026-05-04-automatic-stage-lighting-control-is-it-a-rule)
+
+🔥 **8.5/10** | 前25% | #音乐生成 | #自回归模型 | #迁移学习 #预训练
+
+👥 **作者与机构**
+
+- 第一作者：Zijian Zhao（香港科技大学）
+- 通讯作者：Xiaoyu Zhang（香港城市大学），邮箱在摘要页脚明确标注。
+- 作者列表：Zijian Zhao（香港科技大学）、Dian Jin（香港理工大学）、Zijing Zhou（香港大学）、Xiaoyu Zhang（香港城市大学）。
+
+💡 **毒舌点评**
+
+亮点在于首次将“自动舞台灯光控制”这个看似简单的规则映射问题，重新思考并框架化为一个生成任务，并为此设计了有效的Skip-BART模型和首个公开数据集，为小众垂直领域的智能化提供了扎实范本。短板则在于其数据集虽然开创性，但699个样本的规模对于训练一个强大的生成模型仍显单薄，且评估主要局限于摇滚/金属等特定音乐风格，模型在更广泛音乐类型上的鲁棒性有待更大数据集验证。
+
+🔗 **开源详情**
+
+- 代码：提供完整代码仓库链接：https://github.com/RS2002/Skip-BART。
+- 模型权重：论文在摘要及正文末尾明确声明提供了“trained model parameters”。
+- 数据集：论文创建并开源了首个舞台灯光数据集“RPMC-L2”，可通过上述GitHub仓库获取。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了详尽的附录（A-E），包括预训练细节、完整的实验设置、数据集构建细节、可视化结果以及人类研究设计问卷和统计分析细节，复现信息极其充���。
+- 引用的开源项目：主要依赖PianoBART（用于迁移学习）和OpenL3（用于音频特征提取）。
+
+📌 **核心摘要**
+
+1.  问题：现有自动舞台灯光控制（ASLC）大多基于将音乐分类到有限类别再映射到预设灯光模式，导致结果公式化、单调，缺乏合理性。
+2.  方法核心：提出将ASLC视为生成任务而非分类问题。为此，设计了端到端模型Skip-BART，以音乐音频为输入，自回归生成灯光色相（Hue）和亮度（Value）。模型引入跳连接机制以直接增强音乐帧与灯光帧的对应关系，并利用迁移学习（从PianoBART）和掩码语言模型（MLM）预训练来应对数据稀缺问题。
+3.  新在哪里：首次概念化ASLC为生成任务；首个提出端到端的深度学习解决方案；创建了首个公开的舞台灯光数据集RPMC-L2（699个样本）。
+4.  主要实验结果：
+    - 定量分析（Table 1）：Skip-BART在所有评估指标（RMSE, MAE, corr(|Δ|)）上均显著优于消融研究变体和基于规则的基线方法。
+    - 人类评估（38名参与者）：Skip-BART的总体评分（M=4.35）与地面真值（M=4.51, p=0.724）无显著差异，但显著高于基于规则的方法（M=2.67, p<0.001）。在跨域（民谣、R&B、爵士）评估中也表现优异。
+5.  实际意义：为降低专业灯光设计门槛、实现更生动、人性化的舞台灯光自动化提供了可行的技术路径，证明了生成范式在该任务上的优越性。
+6.  主要局限：数据集规模中等，主要覆盖特定音乐风格；模型仅支持离线、单主灯光生成，未解决实时、多灯光控制的实际挑战。
+
+---
+
+### 4. [Steering Autoregressive Music Generation with Recursive Feature Machines](/audio-paper-digest-blog/posts/2026-05-04-steering-autoregressive-music-generation-with)
+
+🔥 **8.3/10** | 前25% | #音乐生成 | #可控生成 | #自回归模型 #特征分析
+
+👥 **作者与机构**
+
+- 第一作者：Daniel Zhao (University of California, San Diego)
+- 通讯作者：未明确说明（从作者列表顺序和通讯邮箱列表推测可能为 Taylor Berg-Kirkpatrick 或 Julian McAuley，但未明确标注）
+- 作者列表：Daniel Zhao (University of California, San Diego)、Daniel Beaglehole (University of California, San Diego)、Taylor Berg-Kirkpatrick (University of California, San Diego)、Julian McAuley (University of California, San Diego)、Zachary Novack (University of California, San Diego)
 
 #
 
 💡 **毒舌点评**
 
-亮点：论文不仅提出了一个为同步而生的新模块（HiST-Sypo），还“贴心”地为整个社区造了一个更难、更全面的新考场（JavisBench）和一把更准的尺子（JavisScore），这种“既做运动员又做裁判”的系统性贡献值得肯定。短板：模型的强大很大程度上依赖于精心设计的多阶段训练和强大的上游预训练模型（如OpenSora），其提出的HiST-Sypo模块本身在端到端联合训练中的泛化能力和轻量化潜力有待进一步验证。
+本文优雅地将“递归特征机”从理论分析工具转变为可控音乐生成的实战利器，实现了不修改原模型的精细控制，这种“四两拨千斤”的思路令人眼前一亮。然而，其方法严重依赖于均值池化来提取特征，对于音乐中至关重要的时序信息处理过于粗糙，这或许解释了其在音阶、和弦进行等时序概念上控制力较弱的短板。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文提供项目主页链接（https://javisverse.github.io/JavisDiT-page/），并明确表示代码将开源。
-- 模型权重：论文明确表示将开源预训练模型权重。
-- 数据集：论文明确表示将开源JavisBench数据集。
-- Demo：论文中未提及在线演示链接。
-- 复现材料：提供了详细的模型架构配置（附录C.1）、三阶段训练策略、超参数设置（表A2）、数据来源与处理流程、评估设置等，复现指南较为完善。
-- 论文中引用的开源项目：OpenSora (视频VAE/解码器， 骨干初始化), AudioLDM2 (音频VAE/解码器， 音频预训练), ImageBind (文本编码器， 用于先验估计器和JavisScore), T5 (文本编码器), Qwen系列模型 (数据标注与分类), RepViT-SAM, FunASR, AudioSep等。
+- 代码：提供代码仓库链接：https://github.com/astradzhao/music-rfm
+- 模型权重：未提及公开的MusicRFM探针权重或修改后的MusicGen模型。
+- 数据集：使用了公开的SYNTHEORY和MUSICBENCH数据集，并说明了获取方式。评估集从SONG-DESCRIBER采样。
+- Demo：提供在线演示页面：https://musicrfm.github.io/controllable-music-rfm/
+- 复现材料：论文详细给出了RFM探针训练的迭代次数、数据划分、超参数搜索空间（表8）、层剪枝和随机门控的消融设置（表9, 10, 11），以及控制调度的公式（附录E），复现信息充分。
+- 引用的开源项目：论文依赖 MUSICGEN (Meta)、EnCodec (Meta)、Essentia (音乐分析库)、librosa (音频处理库)、CLAP (音频-文本对齐评估) 等开源工具或模型。
 
 📌 **核心摘要**
 
-1. 问题：现有联合音视频生成（JAVG）方法在实现高质量、细粒度时空同步（即空间位置和时间事件上都对齐）方面存在不足。
-2. 方法核心：提出JavisDiT模型，基于扩散Transformer（DiT）架构，创新性地引入分层时空同步先验估计器（HiST-Sypo Estimator）。该估计器从文本中提取全局语义先验和细粒度的时空位置/时间先验，通过交叉注意力注入到音视频生成的各个阶段，指导同步生成。
-3. 新意：与先前简单参数共享或粗粒度对齐不同，HiST-Sypo提供了显式的、细粒度的时空条件引导，实现了更精确的音视频同步。
-4. 主要实验结果：在自建的大规模基准JavisBench（10,140个样本）上，JavisDiT在音视频质量、语义一致性和同步性指标上均显著超越现有方法。例如，在JavisScore（同步性）上达到0.154，优于最强基线FoleyCrafter（0.151）。在Landscape和AIST++数据集上，其FVD/FAD指标也达到SOTA。
-
-| 方法（类型） | FVD↓ | KVD↓ | FAD↓ | JavisScore↑ |
-| :--- | :--- | :--- | :--- | :--- |
-| TempoTkn (级联 T2A+A2V) | 539.8 | 7.2 | - | 0.103 |
-| See&Hear (级联 T2V+V2A) | - | - | 7.6 | 0.112 |
-| FoleyCrafter (级联 T2V+V2A) | - | - | 9.1 | 0.151 |
-| MM-Diff (端到端 JAVG) | 2311.9 | 12.2 | 27.5 | 0.070 |
-| UniVerse-1 (端到端 JAVG) | 194.2 | 0.5 | 8.7 | 0.077 |
-| JavisDiT (端到端 JAVG) | 204.1 | 1.4 | 7.2 | 0.154 |
-
-5. 实际意义：推动了联合音视频生成领域向更高质量和更精确同步发展，为相关应用（如影视、短视频创作）提供了更强大的工具。提出的JavisBench和JavisScore为后续研究提供了坚实的评估基础。
-6. 主要局限性：训练数据规模（0.6M三元组）相较于基础视频生成模型仍然有限；JavisScore指标的准确率（约75%）仍有提升空间；模型生成效率（例如，H100生成4秒视频需约30秒）较高。
+本文旨在解决大型自回归音乐生成模型中细粒度、可解释控制的难题。现有方法通常需要对模型进行微调或在推理时进行高成本优化，且容易引入音质损失。作者提出了 MusicRFM 框架，核心是利用递归特征机（RFM）分析冻结的 MusicGen 模型内部激活，从中发现对应于音符、和弦等音乐概念的、可解释的“概念方向”。在推理时，通过前向钩子将这些方向注入模型的残流，实时引导生成过程，无需任何训练或优化。该工作扩展了 RFM 的应用，引入了层剪枝（基于探针性能的 Top-K 或指数加权选择）、时间调度（确定性或随机门控）和多方向并行控制等机制。实验表明，在 SYNTHEORY 合成数据集和 MUSICBENCH 真实音乐数据集上，MusicRFM 能有效控制生成内容（例如将目标音符的分类准确率从 0.23 提升至 0.82），同时将文本提示的保真度（CLAP 分数）维持在基线附近（差异约 0.02）。其主要局限性在于使用均值池化会丢失时序信息，影响了对时间敏感概念的控制效果，且当前实验局限于 MusicGen 模型。
 
 ---
 
-### 6. [Instilling an Active Mind in Avatars via Cognitive Simulation](/audio-paper-digest-blog/posts/2026-05-04-instilling-an-active-mind-in-avatars-via)
+### 5. [Discovering and Steering Interpretable Concepts in Large Generative Music Models](/audio-paper-digest-blog/posts/2026-05-04-discovering-and-steering-interpretable-concepts)
 
-✅ **7.5/10** | 前10% | #音视频 | #多模态模型 | #生成模型 #音频生成
+🔥 **8.0/10** | 前25% | #音乐生成 | #自监督学习 | #可解释性 #音频大模型
 
 👥 **作者与机构**
 
-- 第一作者：Jianwen Jiang (字节跳动)
-- 通讯作者：Jianwen Jiang (字节跳动)
-- 作者列表：Jianwen Jiang (字节跳动)， Weihong Zeng (字节跳动)， Zerong Zheng (字节跳动)， Jiaqi Yang (字节跳动)， Chao Liang (字节跳动)， Wang Liao (字节跳动)， Han Liang (字节跳动)， Weifeng Chen (字节跳动)， Xing Wang (字节跳动)， Yuan Zhang (字节跳动)， Mingyuan Gao (字节跳动)。所有作者均隶属于ByteDance。
+- 第一作者：Nikhil Singh（Dartmouth College）
+- 通讯作者：未说明（论文标注为共同贡献，未明确通讯作者）
+- 作者列表：Nikhil Singh（Dartmouth College）、Manuel Cherep（MIT）、Pattie Maes（MIT）
 
 💡 **毒舌点评**
 
-本文巧妙地将认知科学中的“双系统理论”引入视频头像生成，提出用多模态大模型扮演“慢思考”的System 2来规划高级语义动作，再由扩散模型作为“快思考”的System 1执行渲染，这一概念框架极具启发性且实验验证充分，显著提升了动作的语境一致性和自然度。然而，其高昂的计算成本（包括MLLM推理和DiT生成）以及潜在的伦理滥用风险（如深度伪造）是走向大规模应用必须直面的“房间里的大象”，论文对此虽有提及但未提供实质性的解决方案。
+论文构建了一个逻辑严谨、工程化程度高的完整管道，首次将稀疏自编码器成功应用于音乐生成模型的可解释性研究，这是一个坚实的系统性工作。但其核心引导实验的“成功率”（15-35%）在数值上并不亮眼，且整个流程高度依赖特定模型（MusicGen）和预训练分类器，可泛化性存疑。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及。
-- 数据集：论文详细说明了其自建测试集和使用公开数据集（CelebV-HQ， CyberHost）的情况，并描述了训练数据策展流程，但未提及训练数据集的公开。
-- Demo：未提及。
-- 复现材料：提供了非常充分的复现材料，包括：完整的模型架构描述（Section 3）、详细的超参数设置和三阶段训练流程（Appendix B）、数据策展的具体工具（PySceneDetect， Q-align等）和步骤（Appendix B）、MLLM智能体的具体型号（miniCPM-o， Seed-1.5-VL）和提示示例（Appendix D）、全面的主客观评估指标定义与协议（Appendix C）。
-- 论文中引用的开源项目：提到了Whisper（用于音频特征提取）、PySceneDetect（视频分割）、Q-Align（质量评估）、RAFT（光流计算）、SyncNet（同步评估）等开源工具/模型。
-- 开源计划：论文中未提及开源计��。
+-   代码：论文中提供了项目主页链接 `musicdiscovery.media.mit.edu`，但未明确说明是否提供代码仓库（如GitHub链接）。论文中未提及开源计划。
+-   模型权重：论文使用了预训练的MusicGen模型，未提及是否公开其训练的稀疏自编码器（SAE）权重。
+-   数据集：使用了公开的MusicSet数据集。
+-   Demo：项目主页可能包含演示，但论文正文中未提及。
+-   复现材料：论文在附录中提供了Gemini标注的详细提示词（附录H）、Essentia使用的模型标签列表（附录D）、以及人工评估的指导说明（附录F）。然而，关于SAE训练的完整超参数配置、代码实现等关键复现信息未充分提供。
+-   引用的开源项目：明确依赖并引用了MusicGen（Copet et al., 2024）、Essentia（Bogdanov et al., 2013）和CLAP（Wu et al., 2023）等开源模型和工具。
 
 📌 **核心摘要**
 
-1. 要解决什么问题：现有的视频头像模型主要将动作生成视为从音频等低级信号到运动的直接映射，缺乏对高阶语义（如情绪、意图）的推理，导致生成的动作虽然唇形同步但简单重复，缺乏与内容和语境的深度一致性。
-2. 方法核心是什么：提出一个受双系统认知理论启发的框架。核心包括两部分：1）一个多模态大语言模型（MLLM）智能体作为“System 2”，对输入的音频、图像和文本进行推理，生成结构化的、包含表情与动作规划的高层级文本指导；2）一个专门设计的基于多模态扩散Transformer（MMDiT）的渲染模型作为“System 1”，融合上述文本指导与低级反应信号（如音频），并采用“伪最后帧”策略来保持身份一致性，最终生成视频。
-3. 与已有方法相比新在哪里：a) 新视角：首次从认知科学角度将问题建模为反应式与审议式双系统模拟；b) 新框架：引入了MLLM智能体进行主动的、语境感知的规划，突破了现有方法纯反应式映射的局限；c) 新设计：提出了“伪最后帧”策略解决参考图像条件化的难题，并设计了对称的模态融合架构及训练策略（MM-Warmup）来解决多模态信号冲突。
-4. 主要实验结果如何：论文在多个基准上进行了评估。消融实验表明，移除推理模块或关键架构设计（如伪最后帧、MM-Warmup）会导致运动自然度（HKV， MU）和语境一致性（GSB）显著下降。与SOTA方法（如OmniHuman-1, Wan2.2-S2V）的对比显示，本方法在用户研究的GSB偏好度、运动不自然度（MU）和语境连贯性等方面有明显优势。例如，在与Wan2.2-S2V的对比中，本方法的GSB得分为+0.71，而MU仅为0.08（vs. 0.60）。具体数据见下表。
-5. 实际意义是什么：该工作为创建更“可信”、更“智能”的数字人提供了新的技术范式，有望提升虚拟助手、数字演员、游戏NPC等应用的真实感和交互质量。
-6. 主要局限性是什么：a) 计算成本高：MLLM的推理引入了额外的“思考”延迟（约20-30秒），尽管作者认为这是可接受的权衡；b) 潜在伦理风险：高度逼真的生成能力可能被滥用于制造虚假信息或欺诈，论文虽在伦理声明中提出建议，但缺乏强制性的技术保障措施；c) 依赖MLLM的推理质量：生成动作的合理性高度依赖于MLLM智能体的分析与规划能力。
+1.  问题：大型自回归音乐生成模型（如MusicGen）虽然能生成高质量音乐，但其内部如何表示和组织音乐概念仍然是一个黑箱。现有可解释性方法多为有监督的“探测”，无法发现模型自身隐含的、可能超越人类现有理论框架的概念。
+2.  方法核心：提出一个多阶段、无监督的概念发现与引导管道。核心是使用稀疏自编码器（SAE） 从MusicGen模型的残差流中提取稀疏的、可解释的特征。随后通过激活过滤、自动化标注（结合Gemini多模态大模型和Essentia音频分类器）和CLAP对齐来大规模评估这些特征。
+3.  创新点：与已有方法相比，该工作首次将SAE应用于音频领域，实现完全无监督的“概念发现”而非有监督的“概念探测”。它构建了一个可扩展的自动化评估框架，并证明了发现的特征可用于模型生成引导。
+4.  主要实验结果：过滤后，从MusicGen-Large的单层中最多可发现2344个潜在特征（见表1）。自动标注的质量通过CLAP分数评估，Essentia标签的平均CLAP分数高于Gemini（见图4）。人类评估显示，Essentia标注的平均置信度（3.96/5）高于Gemini（3.19/5）。引导实验表明，在测试特征中，15%-35% 在CLAP对齐度上显示正向改善（见表2），且人类听辨实验能清晰感知引导效果（66/100选择正确）。
+5.  实际意义：该工作不仅提升了音乐生成模型的透明度，更重要的是提供了一个强大的经验工具，用于发现那些可能被传统音乐理论忽视、但对模型生成至关重要的隐含音乐规律和模式，为未来的AI辅助音乐分析与创作提供了新的可能性。
+6.  主要局限性：当前分析仅限于无条件音乐的激活，未探索文本条件如何影响概念表示。发现的特征概念质量高度依赖外部标注模型（Gemini/Essentia）和CLAP评估指标。引导的成功率（15-35%）表明，并非所有发现的特征都易于用于控制生成。
 
 ---
 
-### 7. [Entropy-Monitored Kernelized Token Distillation for Audio-Visual Compression](/audio-paper-digest-blog/posts/2026-05-04-entropy-monitored-kernelized-token-distillation)
+### 6. [YuE: Scaling Open Foundation Models for Long-Form Music Generation](/audio-paper-digest-blog/posts/2026-05-04-yue-scaling-open-foundation-models-for-long-form)
 
-✅ **7.5/10** | 前25% | #音视频 | #知识蒸馏 | #多模态模型 #模型评估
+✅ **7.5/10** | 前25% | #音乐生成 | #自回归模型 | #大语言模型 #预训练
 
 👥 **作者与机构**
 
-- 第一作者：Hyoungseob Park (Yale University, Amazon AGI)
-- 通讯作者：未明确说明（根据作者排序和贡献，Alex Wong 或 Sankar Venkataraman 可能承担指导角色）
+- 第一作者：未说明（论文标题下列出了多位作者，贡献部分将Ruibin Yuan列为“Lead”，但未明确第一作者身份）
+- 通讯作者：未说明（论文中提供了多位联系人的邮箱，但未明确标注通讯作者）
+- 作者列表：Ruibin Yuan (HKUST, Moonshot.ai, MAP), Hanfeng Lin (HKUST, MAP), Shuyue Guo (MAP), Ge Zhang (MAP, University of Michigan), Jiahao Pan (HKUST, MAP), Yongyi Zang (Independent), Haohe Liu (University of Surrey, MAP), Yiming Liang (MAP), Wenye Ma (MBZUAI, MAP), Xingjian Du (University of Rochester, MAP), Xeron Du (MAP), Zhen Ye (HKUST), Tianyu Zheng (MAP), Zhengxuan Jiang (MAP), Yinghao Ma (MAP, Queen Mary University of London), Minghao Liu (2077AI, MAP), Zeyue Tian (HKUST, MAP), Ziya Zhou (HKUST, MAP), Liumeng Xue (HKUST, MAP), Xingwei Qu (MAP), Yizhi Li (MAP, University of Manchester), Shangda Wu (Central Conservatory of Music, MAP), Tianhao Shen (MAP), Ziyang Ma (MAP, SJTU, NTU), Jun Zhan (Fudan University), Chunhui Wang (Geely), Yatian Wang (HKUST), Xiaowei Chi (HKUST), Xinyue Zhang (HKUST), Zhenzhu Yang (HKUST), Xiangzhou Wang (MAP), Shansong Liu (Meituan), Lingrui Mei (Meituan), Peng Li (HKUST), Junjie Wang (Tsinghua University), Jianwei Yu (Moonshot.ai), Guojian Pang (MAP), Xu Li (Xiaohongshu), Zihao Wang (Zhejiang University, Carnegie Mellon University)（注：机构信息根据论文“CONTRIBUTIONS AND ACKNOWLEDGMENTS”部分整理，MAP为Multimodal Art Projection的缩写）
+
+#
+
+💡 **毒舌点评**
+
+亮点在于其“系统工程”做得非常扎实：从tokenizer选择、两阶段生成框架到针对音乐特性的三大技术改进（Dual-NTP， SPC， ICL），环环相扣，最终构建了一个可扩展、效果好的开源基础模型，并对社区全面开放，这极大地推动了领域的民主化。短板则是在音频的绝对声学质量（FAD）和自动评估指标与人类感知的对齐上还有提升空间，目前更像是一个强大的“概念验证”和“研究平台”，距离生成完美无瑕的、可直接商用的音乐产品，在音色细节和动态表现上或许还需要进一步的“打磨”。
+
+#
+
+🔗 **开源详情**
+
+- 代码：提供GitHub仓库链接：https://github.com/multimodal-art-projection/YuE
+- 模型权重：提供HuggingFace集合链接：https://huggingface.co/collections/m-a-p/yue，包含不同规模的模型。
+- 数据集：训练数据为收集的网络数据，论文未提供数据集下载链接，但明确了许可（Creative Commons）和收集方法。
+- Demo：提供在线演示页面：https://map-yue.github.io/
+- 复现材料：论文附录C、D、F、I详细说明了tokenizer、模型架构、评估协议和测试用prompt。训练超参数、数据配比等在Section 3.1中给出。
+- 引用的开源项目：
+    - LLaMA2架构（Touvron et al., 2023b）
+    - X-Codec（Ye et al., 2024）作为音频tokenizer
+    - Vocos（Siuzdak, 2023）用于音频上采样
+    - Whisper（用于WER评估）
+    - audioldm-eval（用于KL、FAD评估）
+    - CLAP, CLaMP 3（用于对齐评估）
+    - RMVPE（用于音高估计）
+    - All-in-one（Kim & Nam, 2023）用于音乐结构分割
+    - ByteCover2（Du et al., 2022）用于记忆化测试
+    - PaSST（Koutini et al., 2021）作为自动评估的骨干网络
+
+📌 **核心摘要**
+
+该论文旨在解决长形式歌词到歌曲生成的挑战，即从歌词直接生成包含人声和伴奏的完整歌曲（最长5分钟）。其核心方法是构建名为YuE（乐）的开源基础模型家族，它基于LLaMA2架构，在数万亿token上进行训练。模型采用两阶段生成：第一阶段使用Track-Decoupled NTP（双token预测）来分别建模人声和伴奏轨道，并采用Structural Progressive Conditioning（结构化渐进条件）来处理长上下文下的歌词对齐；第二阶段使用更小的语言模型预测残差token以提升音质。此外，论文重新设计了适用于音乐的In-Context Learning，支持双向内容创作和风格克隆。与已有方法相比，新在：1）首个能生成完整歌曲的开源模型；2）通过Dual-NTP显式解耦人声/伴奏，提升了复杂音乐场景下的鲁棒性；3）SPC机制有效解决了长序列生成中歌词跟随失败的问题。主要实验结果（表1）显示，YuE在多个自动指标上具有竞争力（如CLaMP 3得分最高），人类评估（图3）表明其在整体偏好和音乐性上超越Hailuo，与Tiangong、Udio相当，并在生成时长（图5）和人声音域范围（图4）上表现突出。该工作的实际意义在于为音乐生成研究和应用提供了强大的开源基座。主要局限性在于：其音频保真度（FAD）并非最优，且自动评估指标（如CLAP）与人类感知的相关性有待提高，表明在声学细节建模上仍有改进空间。
+
+#
+
+---
+
+### 7. [SyncTrack: Rhythmic Stability and Synchronization in Multi-Track Music Generation](/audio-paper-digest-blog/posts/2026-05-04-synctrack-rhythmic-stability-and-synchronization)
+
+✅ **7.0/10** | 前25% | #音乐生成 | #扩散模型 | #模型评估 #节奏同步
+
+👥 **作者与机构**
+
+- 第一作者：Hongrui Wang (香港科技大学数学系)
+- 通讯作者：Can Yang (香港科技大学数学系/神经系统疾病国家重点实验室)，Yang Wang (香港大学)
 - 作者列表：
-    - Hyoungseob Park (Yale University, Amazon AGI)
-    - Lipeng Ke (Amazon AGI)
-    - Pritish Mohapatra (Amazon AGI)
-    - Huajun Ying (Amazon AGI)
-    - Sankar Venkataraman (Amazon AGI)
-    - Alex Wong (Yale University)
-说明：论文指出，Hyoungseob Park的工作是在Amazon AGI实习期间完成的。机构信息直接来源于论文标题页。
+    - Hongrui Wang (香港科技大学数学系)
+    - Fan Zhang (香港科技大学数学系)
+    - Zhiyuan Yu (浙江大学CAD&CG国家重点实验室)
+    - Ziya Zhou (香港科技大学交叉学科学院)
+    - Xi Chen (香港科技大学交叉学科学院)
+    - Can Yang (香港科技大学数学系/香港科技大学神经系统疾病国家重点实验室)
+    - Yang Wang (香港大学)
+
+#
 
 💡 **毒舌点评**
 
-这篇论文的亮点在于巧妙地将核方法引入知识蒸馏，通过蒸馏token间的关系矩阵而非特征本身，漂亮地绕开了教师-学生架构必须匹配的“紧箍咒”，并在实验上取得了显著的性能优势。但短板也同样明显：计算核矩阵的O(N²)复杂度是悬在头上的达摩克利斯之剑，虽然文中提及滑动窗口，但并未在主实验中全面采用，这可能限制其在超大分辨率或长序列上的应用；此外，那个看起来很“聪明”的熵监控器，本质上是为每个模态额外增加了一个训练好的辅助分类头，这无形中增加了蒸馏流程的复杂度和训练成本。
+亮点：直击现有音乐生成模型在节奏同步性上的短板，并为此提出了“共享模块+专属模块”的对症下药式架构，同时配套了三个细粒度的节奏评估指标，形成了从模型设计到评估的完整闭环，研究思路非常清晰且扎实。短板：模型本身创新（注意力机制的组合）不算颠覆性，更像是对已知组件的巧妙组合与工程化验证，且所有实验仅在单一数据集Slakh2100上进行，其泛化性有待观察。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文在“REPRODUCIBILITY STATEMENT”中承诺“we will release the code and the pretrained weights.”，但未在文中提供具体仓库链接。
-- 模型权重：如上所述，承诺发布预训练权重，未提供具体链接。
-- 数据集：使用公开数据集VGGSound和AVS-Bench，并给出了数据划分细节。
-- Demo：未提及。
-- 复现材料：提供了非常详尽的附录，包括所有基线的详细超参数设置、训练细节、评估指标、模型架构规格（表14）以及讨论（如熵计算的具体处理），复现信息极其充分。
-- 论文中引用的开源项目：引用了多个开源数据集和模型，如CAVMAE、UFE-AVS、AVSegFormer、PVTv2、VGGish等，并基于这些模型构建了教师-学生对。
-- 总结：论文提供了高水平的复现指南，但代码和权重的实际发布情况需待后续确认。
+*   代码：论文提供了开源代码仓库链接：`https://synctrack-v1.github.io`（指向GitHub）。
+*   模型权重：论文提到“音频样本以及用于模型和评估指标的源代码在我们的演示页面上”，推测模型权重可能随代码一同发布。
+*   数据集：论文使用Slakh2100数据集，但未提供该数据集的直接链接或说明，需要用户自行遵循原数据集协议获取。
+*   Demo：论文提供了演示页面`https://synctrack-v1.github.io`。
+*   复现材料：论文在附录A.5中提供了详细的训练配置（优化器、学习率、数据预处理参数）和模型架构表（表A3），复现所需的关键信息基本具备。
+*   引用的开源项目：论文依赖并提到了以下开源项目：MusicLDM（预训练权重）、madmom（用于节拍检测）、HiFi-GAN（声码器）、PyTorch等。
 
 📌 **核心摘要**
 
-本文旨在解决大型音视频模型向小型模型的知识蒸馏问题，现有方法在特征维度不匹配或模态信息量不均时表现不佳。核心方法是核化Token蒸馏，它不直接模仿教师的特征向量，而是计算并最小化师生模型token嵌入间成对关系的Gram矩阵差异，从而实现架构无关的蒸馏。进一步，提出熵监控策略，通过测量每个模态特征的熵（不确定性）来自适应调整蒸馏权重，让模型更关注信息量大的模态。在VGGSound（音频事件分类）和AVS-Bench（音频视觉分割）两个基准上，EM-KTD方法仅用教师模型6%的参数，就分别保留了教师96.9%和96.5%的性能，超越了多种现有蒸馏方法。该方法的意义在于为在资源受限的边缘设备上部署高性能音视频模型提供了有效压缩方案。主要局限性在于核矩阵计算复杂度高，且熵监控模块增加了训练的复杂度。
+1.  要解决的问题：现有的多轨音乐生成模型（如MSDM, MSG-LD）未能充分考虑音乐的核心属性——节奏的稳定性和多轨道间的同步性，导致生成的音乐在节奏上不协调、不同步，影响听感。
+2.  方法核心：提出SyncTrack模型，采用“轨道共享模块”和“轨道专属模块”的统一架构。共享模块通过全局跨轨注意力和时间特定跨轨注意力来确保所有轨道共享稳定且同步的节奏；专属模块通过可学习的乐器先验来捕捉不同轨道的音色等独特特征。
+3.  与已有方法的新颖之处：不同于将多轨音乐视为联合分布学习（如MSDM）或视频生成，SyncTrack显式地将“共同节奏信息”和“轨道特定信息”分离并针对性处理。同时，首次在多轨音乐生成评估中引入三个量化节奏一致性的新指标：轨道内节奏稳定性(IRS)、跨轨节拍同步率(CBS)、跨轨节拍离散度(CBD)。
+4.  主要实验结果：在Slakh2100数据集上，SyncTrack的混合音频FAD分数(1.26)相比MSG-LD(1.31)、MSDM(6.55)等基线显著降低。单轨FAD也有大幅提升，例如钢琴轨道FAD相比MSG-LD降低45.59%。在节奏指标上，SyncTrack的CBS(0.5206)高于MSG-LD(0.3861)，CBD(mean)(0.2681)低于MSG-LD(0.3714)，表明其生成的节奏更同步。主观听感评分(3.42)也显著优于MSG-LD(1.57)。
+5.  实际意义：提升了多轨音乐生成的实用性和专业性，使生成的伴奏轨道在节奏上更可靠，可用于音乐制作中的混音、编曲等下游任务。提出的评估指标为该领域提供了更全面、更符合音乐感知的评测标准。
+6.  主要局限性：研究聚焦于节奏维度，未深入探讨旋律、和声的跨轨一致性。模型和指标在更长片段（>10秒）、更多样乐器组合以及条件生成场景下的表现有待验证。
 
-关键实验结果表格：
+#
 
-表1: VGGSound数据集上的音频-视觉事件分类结果对比
-| 方法 | 学生模型参数 | 准确率(Acc) | 平均精度(mAP) | 平均AUC(mAUC) |
-| :--- | :--- | :--- | :--- | :--- |
-| 教师模型 (CAVMAE-ViT-Base) | 164M | 63.9 | 65.0 | 97.9 |
-| MTST + KD | 10M | 57.6 | 58.5 | 97.0 |
-| EM-KTD + KD (本文) | 10M | 62.0 | 63.4 | 97.9 |
-注：EM-KTD以仅6%的参数，达到了教师模型约97%的性能，显著优于基线MTST+KD。
+---
 
-表2: AVS-Bench数据集上的音频-视觉分割结果对比（以VGGish为音频编码器为例）
-| 方法 | 视觉编码器参数 | S4任务 MJ | S4任务 MF | MS3任务 MJ | MS3任务 MF |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 教师模型 (UFE-AVS) | 81.4M | 83.15 | 90.4 | 61.95 | 70.9 |
-| EM-KTD (本文) | 3.4M | 79.81 | 87.86 | 64.43 | 74.73 |
-注：学生视觉编码器仅为教师的4.2%，在多声源分割(MS3)任务上甚至超越了教师模型。
+### 8. [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-04-latent-fourier-transform)
+
+✅ **7.0/10** | 前25% | #音乐生成 | #扩散模型 | #傅里叶变换 #生成控制
+
+👥 **作者与机构**
+
+- 第一作者：Mason Long Wang (MIT CSAIL)
+- 通讯作者：未明确说明（通常导师为通讯作者，论文中未明确标注）
+- 作者列表：Mason Long Wang (MIT CSAIL), Cheng-Zhi Anna Huang (MIT CSAIL)
+
+💡 **毒舌点评**
+
+论文巧妙地将经典信号处理工具（傅里叶变换）“下沉”到生成模型的潜空间，为音乐生成提供了类似传统混音“均衡器”的直观控制维度，想法优雅且实验扎实。然而，其“潜频率”的物理意义与可解释性边界尚显模糊，不同音乐风格下潜频谱的泛化性也需更广泛验证，目前更像一个精巧的专用工具而非通用范式。
+
+🔗 **开源详情**
+
+- 代码：提供了公开的GitHub仓库链接：`https://github.com/maswang32/latentfouriertransform/`。仓库包含训练、生成、混合、可解释性实验及所有基线的代码。
+- 模型权重：论文中未明确提及公开预训练模型权重。
+- 数据集：使用了公开的MTG-Jamendo和GTZAN数据集，并提供了预处理代码。论文中未提及私有数据集。
+- Demo：论文未提供在线演示链接，但提及了展示定性结果的网站：`https://masonlwang.com/latentfouriertransform/`。
+- 复现材料：论文的附录（A）提供了极其详尽的复现信息，包括所有编码器（MLP, U-Net, DAC）、解码器的完整架构、训练超参数、数据集细节、实验设置（条件生成、混合的频段划分）以及用户研究细节。
+- 论文中引用的开源项目：依赖的主要开源工具/模型包括：DAC (Descript Audio Codec)、BigVGAN (声码器)、Librosa (音频分析)、Essentia (音高检测)、VGGish (特征提取) 以及框架如PyTorch。
+
+📌 **核心摘要**
+
+1. 问题：现有音乐生成模型难以精确控制生成音乐中不同“时间尺度”（如缓慢的和弦进行 vs 快速的颤音）的特征，现有控制手段（文本、音高曲线等）在语义上是混合的，无法独立指定。
+2. 方法核心：提出LATENTFT框架。首先，用扩散自编码器将音频编码为潜变量时间序列；然后，对该序列进行傅里叶变换得到“潜频谱”；训练时，对潜频谱进行随机频率掩码，让解码器学习从不完整的频率信息中重建音频。推理时，用户通过掩码选择性保留参考音乐的特定“潜频率”成分，作为条件生成变体或混合两段音乐。
+3. 新在何处：与已有方法（如在音频谱图或离散token上操作）相比，LATENTFT首次将傅里叶变换直接应用于深度生成模型的“潜空间”，并设计了专门的训练策略（频率掩码）使潜表示在频域可操作、可解释，从而将“时间尺度”作为一条连续、直观的控制轴暴露出来。
+4. 实验结果：在MTG-Jamendo数据集的条件生成和混合任务上，LATENTFT（尤其LATENTFT-UNet变体）在条件保持度（响度相关系数0.834，节奏相似度0.966）和音频质量（FAD 0.348）上均显著优于包括Guidance、ILVR、DAC、RAVE在内的多个基线。用户研究也证实了其在音频质量和融合效果上的优势。消融实验（表9，表10）表明，频率掩码、频率相关掩码和对数频率缩放等设计均对性能有显著贡献。
+5. 实际意义：为音乐创作者和制作人提供了一种新的、基于潜频率的交互式创作工具，可以像使用均衡器一样，精细地从参考素材中提取或融合特定节奏、和声或织体模式，促进了更可解释、更可控的生成式音乐AI发展。
+6. 主要局限性：1) “潜频率”与具体音乐元素的对应关系并非绝对，可解释性分析（图5）显示音乐属性分布有重叠；2) 框架目前主要针对固定时长的音乐片段，未讨论实时交互；3) 混合任务中存在条件保持与音频质量之间的权衡。
 
 ---
 

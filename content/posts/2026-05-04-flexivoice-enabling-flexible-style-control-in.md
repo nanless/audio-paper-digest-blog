@@ -147,7 +147,7 @@ FlexiVoice的架构基于一个预训练的大语言模型（LLM）核心，整�
 
 图5（论文中Table 7）：开源奖励模型Kimi-Audio-7B与金标准Gemini-2.5-Pro在InstructTTSEval上的判断一致性（Macro-F1），验证了其作为替代奖励模型的有效性。
 
-![主观评估CMOS结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-6.png)
+![主观评估CMOS结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-0.png)
 
 图7（论文中Table 3）：主观评估比较平均意见分（CMOS）。FlexiVoice在多个任务上的CMOS为正数，表明人类评估者认为其生成的语音在情感表达上优于对比基线。
 

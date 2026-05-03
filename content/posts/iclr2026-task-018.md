@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频问答 论文列表"
+title: "ICLR 2026 - 视频生成 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["视频问答"]
+tags: ["视频生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频问答 方向论文"
+description: "共 1 篇 ICLR 2026 视频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频问答
+# ICLR 2026 - 视频生成
 
 共 **1** 篇论文
 
@@ -18,49 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Can Vision-Language Models Answer Face to Face Questions in ](/audio-paper-digest-blog/posts/2026-05-04-can-vision-language-models-answer-face-to-face) | 7.5分 | 前25% |
+| 🥇 | [Stable Video Infinity: Infinite-Length Video Generation with](/audio-paper-digest-blog/posts/2026-05-04-stable-video-infinity-infinite-length-video) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Can Vision-Language Models Answer Face to Face Questions in the Real-World?](/audio-paper-digest-blog/posts/2026-05-04-can-vision-language-models-answer-face-to-face)
+### 🥇 [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-04-stable-video-infinity-infinite-length-video)
 
-✅ **7.5/10** | 前25% | #视频问答 | #多模态模型 | #音频问答 #基准测试
+🔥 **8.5/10** | 前25% | #视频生成 | #扩散模型 | #流匹配 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Reza Pourreza (Qualcomm AI Research)
-- 通讯作者：未明确说明（论文中注明作者1和作者2贡献相等）
-- 作者列表：Reza Pourreza（Qualcomm AI Research）、Rishit Dagli（多伦多大学，实习期间工作于Qualcomm AI Research）、Apratim Bhattacharyya（Qualcomm AI Research）、Sunny Panchal（Qualcomm AI Research）、Guillaume Berger（Qualcomm AI Research）、Roland Memisevic（Qualcomm AI Research）
-
-#
+- 第一作者：Wuyang Li (VITA@EPFL)
+- 通讯作者：未说明（论文中未明确指定）
+- 作者列表：Wuyang Li (VITA@EPFL), Wentao Pan (VITA@EPFL), Po-Chien Luan (VITA@EPFL), Yang Gao (VITA@EPFL), Alexandre Alahi (VITA@EPFL)
 
 💡 **毒舌点评**
 
-亮点：这篇论文做了一件“脏活累活”——收集并发布了一个高度真实、包含同步音频视频和时间戳注释的在线问答数据集（QIVD），为评估模型在真实世界交互能力上立了一个扎实的靶子，其“当回答时”的时间戳注释设计尤为精巧。短板：所提的流式处理基线（Whisper-Streaming + LMM）更像是一个工程组合而非优雅的端到端解决方案，且论文标题提出的问题“能否回答”最终答案更多是“目前不能，但可通过微调部分改善”，结论的突破性稍显不足。
-
-#
+这篇论文的亮点在于直击了长视频生成中“误差累积”问题的根本原因——训练与推理假设的差距，并提出了“以毒攻毒”的优雅解决方案，让模型学习纠正自己的错误，从而真正打破了视频长度限制。不过，尽管宣称“无限”，但论文中展示的超长视频案例（如15分钟）依然依赖于外部故事线生成引擎和分段条件注入，真正的端到端、连贯的“无限叙事”能力仍有待验证，且大规模模型训练的计算开销可能不容小觑。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及提供基线方法或Stream-Qwen-Omni的代码仓库链接。
-- 模型权重：未提及提供微调后模型的权重。
-- 数据集：QIVD数据集已公开。论文提供了获取链接：`https://www.qualcomm.com/developer/software/qualcomm-interactive-video-dataset-qivd`。
-- Demo：未提及。
-- 复现材料：在论文附录（Section D）中详细提供了VideoLLaMA和Stream-Qwen-Omni的微调超参数、训练设置、评估所用提示词（Table D.3, D.4），以及GPT-4o的输入提示词（Table D.5），这些信息对于复现评估实验是充分的。
-- 论文中引用的开源项目：列出了大量作为基线或组件的开源模型，包括InstructBLIP, Video-ChatGPT, VideoChat2, LLaVA-NeXT, LLaMA-VID, VideoLLaMA系列, Flash-VStream, Qwen2.5-VL, Qwen2.5-Omni, Qwen3-VL等，以及Whisper, BEATs, SigLIP等基础组件。
+- 代码：论文提供了项目主页 (https://stable-video-infinity.github.io/homepage/)，并明确表示“所有模型/源代码/基准数据集都将公开发布”。
+- 模型权重：论文中提及将开源基于Wan 2.1的模型权重。
+- 数据集：论文中承诺将公开所有基准测试数据集。
+- Demo：未在论文正文中提及在线演示链接，但项目主页可能包含。
+- 复现材料：提供了详细的训练超参数表（表12）、误差内存配置、LoRA设置以及多种变体（SVI-Shot/Film/Talk/Dance）的实现细节。附录包含大量消融实验。
+- 论文中引用的开源项目：主要依赖于Wan 2.1视频生成模型，以及Hallo3（音频说话）、UniAnimate-DiT（骨骼动画）等作为对比基线。
 
 📌 **核心摘要**
 
-1.  解决的问题：评估视觉语言模型（LMMs）能否在实时、面对面的场景中，基于持续输入的相机和麦克风数据，恰当地回答用户提出的开放式问题。这关乎AI助手与具身智能的实用性。
-2.  方法核心：引入了一个新的数据集和基准——高通交互式视频数据集（QIVD）。它包含2900个真实世界短视频，每个视频都包含用户在录制时提出的问题、对应的答案，以及关键的答案最佳时间戳（标记何时回答最合适）。同时，提出了一种基线流式方法：使用流式ASR检测问题结束时刻，将此时的视频和转录文本输入LMM生成答案。
-3.  与已有方法相比新在哪里：与以往视频问答数据集相比，QIVD是在线、交互式的（问题和视频同时生成），而非对预录视频的离线标注。其关键创新在于引入了时间维度（何时回答）的标注，这更贴近真实对话的动态性。评估从单纯的“答案正确性”扩展到了“时机把握”。
-4.  主要实验结果：现有顶尖模型表现远低于人类（如GPT-4o离线正确率58.76% vs. 人类87.33%）。主要失败模式包括：难以理解指代（如“这个”）、动作计数、时序推理和音视频整合。关键消融实验表明：1）提供准确答案时间戳能大幅提升性能；2）微调后的音视频多模态模型（VideoLLaMA2.1-7B-FT-AV）在大多数任务上优于仅用视觉的版本；3）但模型在动作计数等时序任务上即使微调后仍严重落后（29.91%）。
-5.  实际意义：为研究和开发真正能与人实时互动的AI系统提供了关键的评测标尺和数据基础，指明了当前模型在情境理解、时序推理和多模态融合方面的具体短板。
-6.  主要局限性：数据集规模相对较小（2900样本）；问题类型虽多样但均为单轮QA，不涉及多轮对话；场景多样性可能受限于众包录制环境。
-
-#
+1.  解决什么问题：现有长视频生成方法受限于自回归推理中的误差累积（漂移），导致视频长度有限、质量下降且内容重复。根本挑战在于训练时模型基于干净数据假设，而推理时却依赖自身生成的含噪输出。
+2.  方法核心是什么：提出稳定视频无限（SVI） 模型，其核心是误差回收微调（Error-Recycling Fine-Tuning, ERFT）。该方法通过闭环流程，将模型自身生成的误差收集并注入到干净的训练输入中，模拟推理时的误差累积环境，从而训练模型学习主动识别并纠正自己的错误（预测一个“误差回收”的速度场）。
+3.  新在哪里：不同于以往仅缓解误差的方法（如噪声调度、锚定帧），SVI旨在从根本上纠正误差。它系统地分析了训练-测试假设差距，并首次提出将模型自生成的误差作为监督信号进行微调，使模型具备了从自身错误中学习的能力。
+4.  主要实验结果：在三个基准（一致性、创意、条件生成）上，SVI全面超越现有方法。例如，在超长一致性视频生成中，SVI的场景一致性（97.50% vs 最佳基线79.37%）和美学质量（71.54% vs 57.61%）显著领先（见表1）。SVI还成功将能力扩展到音频驱动说话和骨骼动画（表2，表3），并生成了15分钟以上的非循环视频。
+5.  实际意义：SVI将视频生成时长从秒级拓展到理论上无限，支持多场景切换和多种模态控制，为端到端短视频创作、机器人世界模型模拟、游戏开发等应用开辟了新路径。
+6.  主要局限性：1) 模型训练未使用大规模数据，当测试图像风格与训练分布差异较大时，可能产生颜色偏移。2) 当前非实时生成，需依赖外部提示流生成引擎来创作长故事。3) 在创意生成中，当主体离开画面再重新进入时，身份一致性仍有提升空间。
 
 ---
 

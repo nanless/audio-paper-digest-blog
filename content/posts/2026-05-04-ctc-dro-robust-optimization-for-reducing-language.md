@@ -157,7 +157,7 @@ hiddenInHomeList: true
 
 组权重动态分析（图2）：
 
-![Group DRO与CTC-DRO的组权重变化对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yt40xuRBA9-1.png)
+![Group DRO与CTC-DRO的组权重变化对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yt40xuRBA9-0.png)
 
 图2：训练过程中组权重`q_g`的变化。（a）标准Group DRO的权重波动剧烈，经常将几乎全部权重分配给单一语言（如西班牙语）。（b）CTC-DRO的权重分布更均衡、稳定，最差语言（日语）的权重持续保持较高水平，符合预期。
 

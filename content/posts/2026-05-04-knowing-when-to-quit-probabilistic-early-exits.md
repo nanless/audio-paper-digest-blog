@@ -91,15 +91,13 @@ hiddenInHomeList: true
 
 图3：性能-计算曲线
 
-![WSJ0-2mix上SI-SNRi与GMAC/s的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-2.png)
+![WSJ0-2mix上SI-SNRi与GMAC/s的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-0.png)
 
 图3：在WSJ0-2mix上的源分离性能（SI-SNRi）与计算量（GMAC/s）的关系图。PRESS模型的静态性能点及其动态性能曲线被绘制，表明PRESS在动态计算下能超越静态性能曲线。
 
 结论：PRESS模型能够通过早退出，在推理时动态地在性能和计算量之间权衡，实现比静态模型更高效的资源利用。
 
 图4：退出条件性能评估
-
-![退出-SNR遗憾值分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-3.png)
 
 图4：不同早期退出策略下的单边退出-SNR遗憾值。概率退出策略（动态）在适当的置信度p下接近于神谕策略（oracle）。
 
@@ -113,7 +111,7 @@ hiddenInHomeList: true
 
 图5：校准曲线
 
-![模型预测分布的校准曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-4.png)
+![模型预测分布的校准曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-5.png)
 
 图5：PRESS-4(S)模型在WSJ0-2mix测试集上预测误差分布的校准曲线。(a,b)显示仅用4秒片段训练时未校准；(c,d)显示用全长度数据微调后，模型在训练和测试集上都变得校准。
 

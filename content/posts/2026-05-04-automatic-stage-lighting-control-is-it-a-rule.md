@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文提出的Skip-BART模型整体架构如图1所示。
 
-![Skip-BART模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-0.png)
+![Skip-BART模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-1.png)
 
 该模型是一个基于BART的编码器-解码器结构，专为音乐到灯光的生成任务设计：
 1.  输入处理：

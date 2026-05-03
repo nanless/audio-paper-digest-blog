@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音乐信息检索 论文列表"
+title: "ICLR 2026 - 跨模态理解 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["音乐信息检索"]
+tags: ["跨模态理解"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音乐信息检索 方向论文"
+description: "共 1 篇 ICLR 2026 跨模态理解 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音乐信息检索
+# ICLR 2026 - 跨模态理解
 
 共 **1** 篇论文
 
@@ -18,47 +18,44 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Bridging Piano Transcription and Rendering via Disentangled ](/audio-paper-digest-blog/posts/2026-05-04-bridging-piano-transcription-and-rendering-via) | 8.0分 | 前25% |
+| 🥇 | [OmniVinci: Enhancing Architecture and Data for Omni-Modal Un](/audio-paper-digest-blog/posts/2026-05-04-omnivinci-enhancing-architecture-and-data-for) | 8.5分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Bridging Piano Transcription and Rendering via Disentangled Score Content and Style](/audio-paper-digest-blog/posts/2026-05-04-bridging-piano-transcription-and-rendering-via)
+### 🥇 [OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM](/audio-paper-digest-blog/posts/2026-05-04-omnivinci-enhancing-architecture-and-data-for)
 
-🔥 **8.0/10** | 前25% | #音乐信息检索 | #解耦表示学习 | #扩散模型 #多任务学习
+🔥 **8.5/10** | 前10% | #跨模态理解 | #多模态模型 | #大语言模型 #强化学习
 
 👥 **作者与机构**
 
-- 第一作者：Wei Zeng（新加坡国立大学 NUS Graduate School Integrative Sciences and Engineering Programme；School of Computing）
-- 通讯作者：Ye Wang（新加坡国立大学 School of Computing；邮箱: dcswangy@nus.edu.sg）
-- 作者列表：Wei Zeng（新加坡国立大学）、Junchuan Zhao（新加坡国立大学 School of Computing）、Ye Wang（新加坡国立大学 School of Computing）
+- 第一作者：Hanrong Ye (论文标注*，表示核心贡献，机构为NVIDIA)
+- 通讯作者：Hongxu Yin† (NVIDIA), Pavlo Molchanov† (NVIDIA) (论文标注†，表示通讯作者)
+- 作者列表：Hanrong Ye, Chao-Han Huck Yang, Arushi Goel, Wei Huang, Ligeng Zhu, Yuanhang Su, Sean Lin, An-Chieh Cheng, Zhen Wan, Jinchuan Tian, Yuming Lou, Dong Yang (均为NVIDIA，表示核心贡献); Zhijian Liu, Yukang Chen, Ambrish Dantrey, Ehsan Jahangiri, Sreyan Ghosh, Daguang Xu, Ehsan Hosseini-Asl, Danial Mohseni Taheri, Vidya Murali, Sifei Liu, Yao Lu, Oluwatobi Olabiyi, Yu-Chiang Frank Wang, Rafael Valle, Bryan Catanzaro, Andrew Tao, Song Han, Jan Kautz, Hongxu Yin§†, Pavlo Molchanov§† (§Equal Advisory)。机构主要为NVIDIA，部分作者有学术单位背景（如Yu-Chiang Frank Wang为台湾大学教授），但论文主体机构为NVIDIA。
 
 💡 **毒舌点评**
 
-亮点：论文的框架设计颇具巧思，将本质上互逆的钢琴转录和表情渲染任务统一建模，并通过序列到序列的转换巧妙规避了对耗时费力的音符级对齐数据的依赖，这在该领域是一个显著的工程和方法学进步。短板：作为核心模块之一的风格推荐模型（PSR）的评估稍显间接，主要依赖于生成嵌入与真实嵌入在潜在空间的相似性，缺乏更直接的“生成风格是否匹配乐谱”的用户端评估，说服力略有不足。
+亮点：论文不仅提出了新颖的全模态对齐架构（OmniAlignNet），还设计了从数据合成到强化学习后训练的完整pipeline，且效率惊人（用6倍少的训练数据超越基线），展现了强大的系统工程能力。  
+短板：绝对时间编码（CRTE）严重依赖精确的时间戳对齐，在现实场景中（如异步音视频流）的鲁棒性存疑；合成数据的“全模态QA”虽巧妙，但其质量高度依赖上游模型，可能引入难以察觉的“模态幻觉”，论文对此风险讨论不足。
 
 🔗 **开源详情**
 
-- 代码：论文中提及“代码将在接受后发布”，但未提供具体链接或仓库地址。
-- 模型权重：未提及公开预训练权重。
-- 数据集：训练数据集ASAP和ATEPP为公开数据集。无配对数据集的构建方法已说明。
-- Demo：论文提供了演示页面链接：https://wei-zeng98.github.io/joint-apt-epr/。
-- 复现材料：在附录A、B、C中提供了极其详尽的数据处理、模型架构、训练设置、超参数、评估协议等信息，复现材料非常充分。
-- 论文中引用的开源项目：Partitura (Cancino-Chac´on et al., 2022), MidiTok (Fradet et al., 2021), Aria AMT (https://github.com/EleutherAI/aria-amt)。
+- 代码：论文中提及代码将开源（“Code”链接在标题下方），但未给出具体的GitHub仓库URL。
+- 模型权重：论文中提及模型将开源（“Model”链接在标题下方），但未给出具体的下载链接。
+- 数据集：论文提到生成了24M对话，但未明确说明此合成数据集是否会公开发布。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：论文提供了详细的模型架构（第2节）、训练策略（第3节）和超参数设置（附录D.4），以及全面的消融实验（第4.1节），复现信息较为充分。
+- 引用的开源项目：依赖的开源模型/工具包括：视觉编码器（未具体说明，可能基于ViT）、音频编码器（未具体说明）、LLM骨干（基于Qwen2.5架构？）、Magpie TTS（用于生成语音提示）、CLIP（用于对比损失参考）、ImageBind（对齐思想灵感）、Long-RL（用于强化学习训练）。
 
 📌 **核心摘要**
 
-1. 问题：音乐信息检索（MIR）中的表情性能渲染（EPR，从乐谱生成表演）和自动钢琴转录（APT，从表演恢复乐谱）是两个互逆的基础任务，但此前被独立研究，且大多数EPR方法依赖于难以获取的音符级对齐数据。
-2. 方法核心：提出一个统一的Transformer序列到序列框架，通过解耦“音符级乐谱内容表示”和“全局性能风格表示”来联合建模APT和EPR。该框架可使用配对数据和无配对数据（仅需序列级对齐）训练。此外，独立训练一个基于扩散模型的性能风格推荐（PSR）模块，能仅从乐谱内容生成合适的风格嵌入。
-3. 新意：与已有方法相比，其新意在于：(1) 任务的统一联合建模，利用互逆性进行互相监督；(2) 提出了一种无需音符级对齐的EPR的Seq2Seq表述；(3) 通过PSR模块实现了从乐谱到自动风格推荐的端到端流程。
-4. 主要实验结果：
-    * APT：在ASAP数据集上，与最先进的基于Seq2Seq的端到端模型Beyer & Dai (2024)相比，本方法在多个指标上取得更优结果，例如ScoreSimilarity的Eavg从14.10降至12.48，Eextra从11.29降至9.48（具体见Table 1）。
-    * EPR：在客观评估中（Table 2），本方法（Ours-Target）在时长和力度的KL散度、MAE上优于VirtuosoNet和DExter等基线。主观听测（Figure 2）显示，本方法（Target Style）在动态、节奏、风格和整体人性化方面获得最高评分。
-    * 解耦验证：使用风格嵌入进行演奏家/作曲家分类的准确率（如作曲家77.46%）远高于使用内容嵌入（29.99%），证明了解耦的有效性（Table 4）。风格迁移实验（Figure 5）也表明了控制的可行性。
-    * PSR有效性：通过t-SNE可视化（Figure 4），PSR生成的风格嵌入在音乐历史时期聚类上与从真实表演提取的嵌入高度相似。
-5. 实际意义：该工作为音乐AI应用（如自动伴奏、音乐教育、个性化演奏生成）提供了一个更灵活、数据需求更低的基础框架。它允许非专业用户通过简单的乐谱输入获得风格恰当的演奏，或从演奏中恢复乐谱。
-6. 主要局限性：目前主要在古典钢琴音乐上验证，向爵士、流行等更具即兴性和多样性的风格扩展是未来挑战（论文Section E）。此外，风格推荐模块的评估相对间接。
+1.  解决的问题：如何构建一个能同时理解视觉、音频（含语音和自然声）和文本的全模态大语言模型（Omni-modal LLM），并解决跨模态对齐、时序建模以及高质量全模态训练数据稀缺的核心挑战。
+2.  方法核心：提出OmniVinci架构，包含三大技术：(1) OmniAlignNet，通过对比学习将视觉和音频嵌入对齐到共享潜空间；(2) 时序分组（TEG），按时间戳对嵌入进行分组以捕捉相对时序；(3) 受限旋转时间编码（CRTE），通过旋转嵌入注入绝对时间信息。同时，设计了全模态数据合成引擎，生成带推理链的对话数据。
+3.  与已有方法相比新在哪里：相较于现有全模态模型（如Qwen2.5-Omni），OmniVinci的架构创新更系统（同时处理跨模态对齐和精细时序建模），数据策略更先进（结合隐式和显式全模态学习），训练效率极高（仅需0.2T token），并在多个基准上显著超越基线。
+4.  主要实验结果：在DailyOmni（跨模态理解）上达到66.50分（+19.05），在Worldsense（视频-音频）上48.23分（+2.83），在MMAR（音频）上58.4分（+1.7），在Video-MME（视频）上68.2分（+3.9）。模型仅用0.2T token训练，是Qwen2.5-Omni（1.2T token）的1/6。消融实验表明，各架构模块均带来稳定增益。强化学习后训练进一步提升了性能。
+5.  实际意义：推动了全模态AI的发展，使模型能更自然地像人一样同时感知视觉和听觉信息。在机器人导航、体育视频分析、跨语言语音翻译、医疗影像分析（结合医生语音解说）、工业质检等领域展示了应用潜力。
+6.  主要局限性：CRTE等时序编码依赖精确的时间戳信息；合成数据的质量受限于生成模型；论文虽声称开源，但核心代码和权重链接在发表时可能未就绪；与GPT-4o等闭源最强模型的对比尚不完全。
 
 ---
 

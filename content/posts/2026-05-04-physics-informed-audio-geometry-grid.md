@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 论文提出的AGG-RL框架整体架构如图2所示。该框架包含两个核心子网络，它们协同工作：
 
-![图2：AGG-RL框架概述图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-1.png)
+![图2：AGG-RL框架概述图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-0.png)
 
 1.  音频-几何表示网络（AuGeonet）：
     *   输入：多通道音频信号、麦克风阵列几何坐标。
@@ -87,8 +87,6 @@ hiddenInHomeList: true
     *   该空间谱作为最终输出，可通过峰值检测算法提取估计的DOA。
 
 ![图4：AuGeonet架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-3.png)
-
-![图5：Gridnet架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-4.png)
 
 数据流总结：音频信号和阵列几何 -> AuGeonet -> AGR；候选DOA网格 -> Gridnet -> GR；AGR与GR对齐 -> 空间谱 -> DOA估计。这种设计使得模型在训练后，只需更改Gridnet的输入（即候选网格），即可在任意网格上推理，无需改变AuGeonet。
 
@@ -138,8 +136,6 @@ hiddenInHomeList: true
 图9展示了在不同信噪比（SNR）和混响时间（RT60）条件下，所提方法与基线（Unet, Neural-SRP，均使用AGG-RL）的性能对比。所提方法在所有条件下均保持领先，表明其在不同声学环境下的鲁棒性。
 
 空间谱可视化：
-
-![图10：NAO机器人数据集上一个双说话人片段的平均空间谱（Mollweide投影）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-9.png)
 
 ![图11：同一片段的帧级空间谱2D视图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-10.png)
 

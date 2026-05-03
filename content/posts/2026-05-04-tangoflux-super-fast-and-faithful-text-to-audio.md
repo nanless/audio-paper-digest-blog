@@ -135,8 +135,6 @@ Table 3对比了使用不同偏好数据集对齐后的性能。CRPO（迭代5�
 
 LCRPO vs L_DPO-FM 消融（Figure 3 & Figure 4）：
 
-![LCRPO与L_DPO-FM在多个指标上的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-3.png)
-
 图3显示，LCRPO在CLAPscore上始终优于L_DPO-FM，同时在KLpasst和FDopenl3上保持竞争或更优。
 
 ![两种损失函数下，获胜与失败样本的损失变化趋势](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-4.png)

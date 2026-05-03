@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 多模态问答 论文列表"
+title: "ICLR 2026 - 数学推理 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["多模态问答"]
+tags: ["数学推理"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 多模态问答 方向论文"
+description: "共 1 篇 ICLR 2026 数学推理 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 多模态问答
+# ICLR 2026 - 数学推理
 
 共 **1** 篇论文
 
@@ -18,66 +18,52 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OptMerge: Unifying Multimodal LLM Capabilities and Modalitie](/audio-paper-digest-blog/posts/2026-05-04-optmerge-unifying-multimodal-llm-capabilities-and) | 8.0分 | 前25% |
+| 🥇 | [VideoMathQA: Benchmarking Mathematical Reasoning via Multimo](/audio-paper-digest-blog/posts/2026-05-04-videomathqa-benchmarking-mathematical-reasoning) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OptMerge: Unifying Multimodal LLM Capabilities and Modalities via Model Merging](/audio-paper-digest-blog/posts/2026-05-04-optmerge-unifying-multimodal-llm-capabilities-and)
+### 🥇 [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-04-videomathqa-benchmarking-mathematical-reasoning)
 
-🔥 **8.0/10** | 前25% | #多模态问答 | #模型合并 | #多模态模型 #跨模态
+✅ **7.5/10** | 前25% | #数学推理 | #基准测试 | #跨模态 #模型评估
 
 👥 **作者与机构**
 
-- 第一作者：Yongxian Wei (清华大学)
-- 通讯作者：Chun Yuan (清华大学)
+- 第一作者：Hanoona Abdul Rasheed (MBZUAI)
+- 通讯作者：未明确说明（论文作者列表未标注通讯作者，但通常最后一位Fahad Shahbaz Khan可能负责）
 - 作者列表：
-  - Yongxian Wei (清华大学)
-  - Runxi Cheng (清华大学)
-  - Weike Jin (华为诺亚方舟实验室)
-  - Enneng Yang (中山大学)
-  - Li Shen (中山大学，通讯作者)
-  - Lu Hou (华为诺亚方舟实验室)
-  - Sinan Du (清华大学)
-  - Chun Yuan (清华大学，通讯作者)
-  - Xiaochun Cao (中山大学)
-  - Dacheng Tao (南洋理工大学)
+  - Hanoona Rasheed, Abdelrahman Shaker, Anqi Tang, Muhammad Maaz (MBZUAI)
+  - Ming-Hsuan Yang (University of California Merced, Google Research)
+  - Salman Khan (Australian National University, MBZUAI)
+  - Fahad Shahbaz Khan (Linköping University, MBZUAI)
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文为多模态大模型合并领域建立了首个细粒度能力划分的系统性基准，并将“模态合并”（构建全模态模型）这一前瞻性任务纳入评估，为研究者提供了清晰的赛道和标尺。提出的OptMerge方法通过任务向量去噪和优化策略改进，在多个场景下取得了稳定的性能提升，证明了其有效性。
-短板：尽管OptMerge平均性能最优，但从实验表格看，在个别单项任务上（如InternVL2.5的Geometry），其性能并非总是最高，甚至偶尔输给简单的TIES或TIES w/ DARE，这表明“无损”合并所有能力仍是开放挑战。此外，理论分析部分（定理3.1）的假设较强，结论对实践的直接指导作用有限。
+亮点：这是一份“体检报告”，用极其精细的标注和多维度评估，把当前多模态大模型在视频数学推理上的“虚胖”和“短板”照得一清二楚，尤其是错误分析部分，为后续模型改进指明了具体方向。
+短板：作为一份“体检报告”本身，它无法开出“药方”——即提出新的、能在该基准上取得突破的模型或方法。模型们集体在“深度理解”上“挂科”（如图2a所示），也侧面反映出当前基于采样帧的范式可能已遇到瓶颈。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文明确表示“所有代码和检查点都将在此公开”，但未提供具体链接。通常意味着代码将在论文接收或会议召开时开源。
-- 模型权重：承诺开源，包括为基准训练的所有专家模型检查点。
-- 数据集：收集了涵盖五大任务的公开训练数据，未提及是否发布整合后的数据集，但指明了所有原始数据集的来源。
-- Demo：论文中未提及。
-- 复现材料：提供了极其详尽的实现细节，包括：数据集列表与规模、模型训练超参数（学习率、优化器、warmup比例、batch size隐含在硬件中）、合并算法的具体实施（k值选择、λ搜索范围、优化器设置）、评估库版本（VLMEvalKit, LMMs-Eval）、硬件配置（8×V100）。
-- 引用的开源项目：VLMEvalKit, LMMs-Eval, MergeKit, Hugging Face Transformers, 以及多个作为基座和微调对象的开源模型（InternVL2.5, Qwen2-VL, Vicuna, CLIP, BEATs, LanguageBind等）。
+- 代码：论文中提供了项目主页链接 (https://mbzuai-oryx.github.io/VideoMathQA)，并说明评估代码已集成到开源工具lmms-eval中，提供了运行评估的脚本。
+- 模型权重：未提及。本文是评估工作，不涉及新模型发布。
+- 数据集：论文明确了提供数据集，并可通过项目主页访问。未提及具体下载方式，但通常会附带指引。
+- Demo：未提及。
+- 复现材料：提供了详尽的复现信息：评估使用的具体模型列表及版本、各模型输入帧数、解码策略（贪心）、硬件（8xA100-80G）、评估工具（lmms-eval, vllm），以及所有评估提示词（CoT、后处理、步骤评估、错误分析、字幕处理等，详见附录F）。
+- 论文中引用的开源项目：主要依赖lmms-eval (Li et al., 2024a) 和 vllm (Kwon et al., 2023) 作为评估框架和推理引擎。被评估的模型均为已开源或公开API的模型。
 
 📌 **核心摘要**
 
-1.  问题：基础模型训练成本高昂，社区中存在大量针对特定任务或模态微调的专家模型。如何高效地将这些模型的能力或不同模态整合到一个统一模型中，且无需访问原始训练数据，是一个重要且未被充分解决的问题。现有模型合并研究在多模态大模型（MLLM）领域缺乏标准的评估基准。
-2.  方法核心：本文提出了OptMerge方法，旨在改进基于任务向量的优化式合并。其核心是：a) 去噪：通过SVD对任务向量进行低秩近似，去除冗余噪声；b) 鲁棒优化：针对全参数微调和LoRA微调的不同特性，设计了差异化的优化策略（如替换优化器为SGD，调整初始化方式），以稳定优化过程并避免合并向量范数异常增长。
-3.  创新点：a) 构建了首个针对MLLM能力（VQA、几何、图表、OCR、定位）和模态（视觉-语言、音频-语言、视频-语言）合并的基准；b) 提出了OptMerge方法，通过去噪和针对性优化改进合并效果；c) 通过理论和实验，证明了模型合并可以超越数据混合训练（Mixture Training），且是一种数据无关的高效方法。
-4.  主要实验结果：在InternVL2.5（全参数微调）和Qwen2-VL（LoRA微调）两个基准上，OptMerge在大多数任务上取得了最优平均性能。例如，在Qwen2-VL上，OptMerge的平均分（63.30）比次优的TIES w/ DARE（61.88）高出1.42分，比WUDI Merging（58.65）高出4.65分。在模态合并任务上，合并模型在音频-视频问答上的平均性能（66.88）也超越了单模态基线（视觉：63.16， 音频：37.75， 视频：64.11）。关键对比结果如下表所示：
-
-| 方法 | InternVL2.5平均分 | Qwen2-VL平均分 |
-| :--- | :--- | :--- |
-| Weight Average | 49.12 | 60.55 |
-| Task Arithmetic | 56.18 | 60.29 |
-| TIES Merging | 56.70 | 61.24 |
-| TIES w/ DARE | 56.76 | 61.88 |
-| TSV Merging | 54.37 | 60.63 |
-| WUDI Merging | 57.00 | 58.65 |
-| OptMerge (Ours) | 57.44 | 63.30 |
-| Mixture Training | 57.66 | N/A (使用Qwen2-VL-Instruct作为上界：62.23) |
-
-5.  实际意义：该工作为开发者提供了一种无需数据、计算成本低廉的方式来整合和提升MLLM的能力，促进了开源社区模型的模块化、去中心化开发与复用。为构建全模态大模型（Omni-LLM）提供了一条可行的技术路径。
-6.  局限性：a) 理论分析在简化假设下进行，与复杂深度学习场景有差距；b) 合并后的模型在部分任务上仍可能略逊于专家模型或数据混合训练模型；c) 实验主要基于1B-7B规模的模型，更大规模模型的合并效果有待验证；d) 合并系数λ仍需搜索。
+1. 问题：现有数学推理基准大多基于静态图像，无法评估模型处理真实世界教学视频中随时间动态展开、多模态（视觉图表、手写板书、语音讲解）交织的复杂数学问题的能力。
+2. 方法核心：提出VideoMathQA基准，包含420个专家标注的视频-问题对，覆盖10个数学领域，视频时长从10秒到1小时。每个问题设计为三种推理类型之一（直接求解、概念迁移、深度理解），并附有带时间戳的多步骤推理链标注，用于评估中间推理过程。
+3. 与已有方法相比新在哪里：首次将视频时长、多模态融合（视觉+音频字幕+文本）、以及分层级的推理能力（从直接应用到深度理解）整合到一个统一的数学推理评估框架中。标注粒度细（步骤级），并引入多二元评估（MBin）减少猜测因素。
+4. 主要实验结果：对30个模型（包括GPT-o4o, Gemini-2.0, Qwen2.5-VL等）进行评估。当前最强模型GPT-o4-mini在CoT MBin+字幕设置下准确率仅为44.8%，远低于人类的80.7%。模型在“深度理解”类问题和长视频上表现显著下降。字幕和更多视频帧采样对性能有提升，但小模型收益有限。主要错误源于问题误解和概念应用错误。
+5. 实际意义：为评估和推动多模态大模型的高阶推理能力提供了关键的测试平台，揭示了当前模型在动态多模态推理上的严重不足，指明了未来模型需要加强长期时序关注、精细视觉理解及跨模态信息整合能力。
+6. 主要局限性：数据集规模相对较小（420样本），构建成本高昂，限制了其扩展性。评估完全依赖现有的视频-语言模型框架，未探索如强化学习等新的训练范式以应对此挑战。
 
 ---
 

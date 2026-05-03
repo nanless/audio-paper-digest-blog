@@ -183,8 +183,6 @@ hiddenInHomeList: true
 
 4. 非语言行为主观评估（H.2, H.3）
 
-![非语言行为生成MOS评估结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zjaV5zmlkl-0.png)
-
 表格显示了不同模型在静默、语气词和回复风格三种非语言行为上的平均MOS评分。本文模型（Ours）在三项指标上均显著优于GLM-4-Voice、Kimi-Audio、GPT-4o等其他模型。
 
 结论：这是本工作最亮眼的实验证据之一，表明端到端直接生成的模型在处理静默、语气词等难以用文本表达的副语言信息时，具有巨大优势。

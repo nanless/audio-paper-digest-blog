@@ -75,8 +75,6 @@ hiddenInHomeList: true
 
 图4展示了`<text, audio>`对生成的具体流程，从关系文本模板化到事件实例化，再到音频生成。
 
-![`<text, audio>`对生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-3.png)
-
 ### 💡 核心创新点
 
 1.  首个大规模、系统化的关系感知TTA基准：构建了AudioEventSet（110类事件）和AudioRelSet（100种关系），其规模和系统性远超之前的小规模探索（如RiTTA的11种关系）。这为“关系感知TTA”这一新兴研究方向提供了可扩展的、标准的测试平台。

@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 论文主要贡献是提出了评测基准WearVox，并在此基础上进行了案例研究，构建了两个语音大模型：SC WearLlama 和 MC WearLlama。其架构并非本文的核心创新点，但为研究多通道输入提供了基线。
 
-![SC WearLlama 和 MC WearLlama 推理流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-7.png)
+![SC WearLlama 和 MC WearLlama 推理流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-0.png)
 
 图8：SC WearLlama 和 MC WearLlama 推理流程对比图。SC WearLlama仅处理波束成形后的单通道音频（c_x），而MC WearLlama同时处理通道0（c_o，通常为最高信噪比通道）和波束成形通道，并将它们的编码交错输入给大语言模型解码器。
 
