@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 0.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Lin Long (浙江大学)、Yichen He (字节跳动 Seed) （论文明确标注“Equal contribution”，两位共同第一）

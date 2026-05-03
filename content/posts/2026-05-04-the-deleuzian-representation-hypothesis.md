@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 5.0/7 | 选题价值 1.5/2 | 复现加成 1.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Clément Cornet（Université Paris-Saclay, CEA, List）

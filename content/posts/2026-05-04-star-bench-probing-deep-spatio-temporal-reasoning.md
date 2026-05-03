@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 🔗 开源详情
 
 - 代码：提供代码仓库链接 `https://github.com/InternLM/StarBench`。

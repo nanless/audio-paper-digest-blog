@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Jiajun Fan (伊利诺伊大学厄巴纳-香槟分校 Siebel 计算与数据科学学院 & Amazon)

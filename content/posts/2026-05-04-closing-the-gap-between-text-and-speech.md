@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 5.0/7 | 选题价值 2.0/2 | 复现加成 1.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Santiago Cuervo（Université de Toulon, Aix-Marseille Université, CNRS, LIS；论文注明实习期间在Apple完成工作）

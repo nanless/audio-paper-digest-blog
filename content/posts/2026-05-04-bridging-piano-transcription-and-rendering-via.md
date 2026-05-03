@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Wei Zeng（新加坡国立大学 NUS Graduate School Integrative Sciences and Engineering Programme；School of Computing）

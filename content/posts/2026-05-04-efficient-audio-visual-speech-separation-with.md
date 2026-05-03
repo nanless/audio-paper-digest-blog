@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Kai Li (清华大学计算机科学与技术系、IDG/McGovern Institute for Brain Research)， Kejun Gao (清华大学计算机科学与技术系)

@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.8/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Yuancheng Wang（Meta Superintelligence Labs, The Chinese University of Hong Kong, Shenzhen）

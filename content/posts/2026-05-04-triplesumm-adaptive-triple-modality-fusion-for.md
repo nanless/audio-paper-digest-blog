@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 5.8/7 | 选题价值 1.5/2 | 复现加成 0.7 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Sumin Kim, Hyemin Jeong, Mingu Kang（论文注明“Equal contribution”，即同等贡献）

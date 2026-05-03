@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Yizi Zhang (哥伦比亚大学), Linyang He (哥伦比亚大学) [论文中注明 *Equal contribution]

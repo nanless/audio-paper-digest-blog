@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 2.0/2 | 复现加成 0.0 | 置信度 高
 
-
 ### 👥 作者与机构
 
 -   第一作者：邢剑潇（复旦大学），论文中注明与第二作者Zhe Xu同等贡献（∗Equal contribution）

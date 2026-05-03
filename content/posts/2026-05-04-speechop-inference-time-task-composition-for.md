@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.5/7 | 选题价值 2.0/2 | 复现加成 0.3 | 置信度 高
 
-
 ### 👥 作者与机构
 
 - 第一作者：Justin Lovelace (Cornell University)

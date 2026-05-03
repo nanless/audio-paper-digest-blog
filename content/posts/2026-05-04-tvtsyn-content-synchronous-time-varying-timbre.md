@@ -16,7 +16,6 @@ hiddenInHomeList: true
 
 学术质量 6.2/7 | 选题价值 1.5/2 | 复现加成 -0.8 | 置信度 中
 
-
 ### 👥 作者与机构
 
 - 第一作者：Waris Quamer（Texas A&M University, Department of Computer Science and Engineering）
