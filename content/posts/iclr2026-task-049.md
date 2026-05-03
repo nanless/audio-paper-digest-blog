@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 鲁棒性 论文列表"
+title: "ICLR 2026 - 音频生成 #语音合成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["鲁棒性"]
+tags: ["音频生成 #语音合成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 鲁棒性 方向论文"
+description: "共 1 篇 ICLR 2026 音频生成 #语音合成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 鲁棒性
+# ICLR 2026 - 音频生成 #语音合成
 
 共 **1** 篇论文
 
@@ -18,49 +18,42 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [SNAP-UQ: Self-supervised Next-Activation Prediction for Sing](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation) | 8.0分 | 前25% |
+| 🥇 | [Continuous Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-continuous-audio-language-models) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation)
+### 🥇 [Continuous Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-continuous-audio-language-models)
 
-🔥 **8.0/10** | 前25% | #鲁棒性 | #自监督学习 | #TinyML #不确定性估计
+✅ **7.5/10** | 前25% | #音频生成 #语音合成 | #自回归模型 #一致性模型 #流匹配 | #音频生成 #语音合成
 
 👥 **作者与机构**
 
-- 第一作者：未说明
-- 通讯作者：未说明
-- 作者列表：Ismail Lamaakal（未说明）、Chaymae Yahyati（未说明）、Khalid El Makkaoui（未说明）、Ibrahim Ouahbi（未说明）、Yassine Maleh（未说明）
+- 第一作者：Simon Rouard（Kyutai, UMR STMS IRCAM-CNRS Sorbonne Univ.）
+- 通讯作者：未明确说明（论文中Alexandre Défossez提供了联系邮箱，且通常为通讯作者，但格式未严格标注）
+- 作者列表：Simon Rouard（Kyutai, UMR STMS IRCAM-CNRS Sorbonne Univ.）、Manu Orsini（Kyutai）、Axel Roebel（UMR STMS IRCAM-CNRS Sorbonne Univ.）、Neil Zeghidour（Kyutai）、Alexandre Défossez（Kyutai）
 
 #
 
 💡 **毒舌点评**
 
-亮点在于它巧妙地将“不确定性”从输出端的启发式猜测，下沉到了模型内部层与层之间的“预测误差”这一直观物理意义上，为TinyML监控提供了坚实又轻量的理论基础；短板则是论文摘要未披露训练细节与数据集，使得其方法在不同任务和架构上的普适性与具体性能上限仍需更多“黑盒”之外的信息来验证。
+亮点：论文系统性地用“连续潜变量+一致性模型头”替代了困扰音频生成已久的“离散RVQ token+RQ-Transformer”范式，在语音和音乐任务上同时实现了质量与速度的双重提升，尤其是将采样头推理加速了12-19倍，非常实用。  
+短板：创新更多是架构和训练技巧的工程化组合（MAR+一致性模型+各种Tricks），理论突破有限；短上下文Transformer在语音任务上未带来增益（Tab. 2未提及该组件），说明其作用可能局限于音乐等高动态内容，通用性有待验证。
 
 #
-
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接：https://github.com/Ism-ail11/SNAP-UQ。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：论文中未提及使用的具体数据集及其获取方式。
-- Demo：论文中未提及提供在线演示。
-- 复现材料：论文摘要未提供详细的训练细节、配置文件或检查点。需查阅代码仓库或论文附录获取。
-- 论文中引用的开源项目：摘要中未提及依赖的其他开源工具或模型。
 
 📌 **核心摘要**
 
-1.  要解决什么问题：在资源极度受限的TinyML设备（如微控制器）上，实现可靠的、单次前向传播的、无需额外标签的不确定性估计，以用于检测故障、分布偏移和性能下降，而现有方法（如集成、MC Dropout）因计算和存储开销过大而不适用。
-2.  方法核心是什么：提出SNAP-UQ方法。它从预训练骨干网络中选取少量层，使用微小的int8预测头，基于当前激活的低秩投影来预测下一层激活的均值和尺度。通过计算实际激活与预测之间的标准化误差（Surprisal），并将其跨层聚合后输入一个轻量单调校准器，最终输出不确定性分数。
-3.  与已有方法相比新在哪里：与需要多次推理（集成、MC Dropout）、额外模型分支（早退出）或状态缓冲（时序方法）的基线不同，SNAP-UQ实现了真正的单次通过、无状态推理。它将不确定性根植于层间动态关系，而非仅依赖最终输出的置信度，是一种全新的不确定性信号来源。
-4.  主要实验结果如何：在视觉和音频骨干网络上，SNAP-UQ相比早退出和深度集成基线，通常减少了40-60%的Flash占用，并快了25-35%。在损坏数据流上，它提升了准确性下降事件的检测（AUPRC提高了多个百分点），并在单次前向传播中保持了较高的故障检测能力（AUROC ≈ 0.9）。论文声称在相同精度下，多个竞争方法因内存占用过高而无法部署。
-5.  实际意义是什么：为毫瓦级边缘设备提供了一种实用、低成本的“健康监测”能力，使得TinyML模型能自我感知运行异常，从而提升系统可靠性和安全性，在物联网、可穿戴设备、工业传感等领域具有广阔应用前景。
-6.  主要局限性是什么：论文摘要未提供具体的训练数据集、模型架构细节、损失函数形式和训练策略。实验验证的具体数据集、骨干网络型号和完整的性能对比表格未在摘要中展示。其效果可能依赖于特定骨干网络的层间预测性，对于不同架构的泛化能力需进一步验证。
-
-#
+1. 解决的问题：传统音频语言模型依赖离散音频token（如RVQ），导致生成质量与计算成本之间存在难以调和的权衡：高质量需要更多token，从而增加计算负担。
+2. 方法核心：提出连续音频语言模型（CALM），直接在VAE的连续潜空间进行自回归建模。模型由三个核心组件构成：（1）带噪声注入的因果主干Transformer，用于建模长程依赖并抑制误差累积；（2）短上下文Transformer，为预测头提供干净的局部细节；（3）基于一致性模型的小型MLP头，负责从噪声中一步生成下一个连续潜变量。
+3. 与已有方法相比的新意：完全绕过了离散量化，避免了有损压缩；用一步一致性模型采样取代了多步扩散采样或自回归解码RVQ层级，极大提升了推理效率；通过引入短上下文和噪声注入，解决了纯连续自回归模型在长序列生成上的稳定性问题。
+4. 主要实验结果：
+    * 语音续写：CALM（1步一致性）在自动指标（PPX: 23.8 vs. 26.8, VERT: 31.2 vs. 33.1）和人类评估（声学质量Elo: 2023 vs. 1870）上均优于32 RVQ的RQ-Transformer基线，采样头速度提升12.3倍。
+    * 文本转语音（TTS）：CALM（1步LSD）在Librispeech test-clean上WER为1.81%，优于F5-TTS（2.42%）、DSM（1.95%）等强基线。经蒸馏后的Pocket TTS（100M参数） 可在CPU上实时运行。
+    * 音乐续写：CALM（1步一致性）的FAD为0.83，优于32 RVQ基线的1.06，整体推理速度提升2.2倍，采样头速度提升19.3倍。人类评估的声学质量与享受度Elo均高于基线。
+5. 实际意义：为高效、高质量的音频生成（特别是边缘设备部署）提供了新的技术路径，开源的Pocket TTS模型具有直接应用价值。
+6. 主要局限性：短上下文Transformer在语音任务上的作用不明确；一致性模型在极少步（如1步）采样时的质量上界有待更深入探索；训练所用的大规模数据集未开源。
 
 ---
 

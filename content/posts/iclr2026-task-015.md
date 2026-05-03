@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 脑成像分析 论文列表"
+title: "ICLR 2026 - 自监督学习 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["脑成像分析"]
+tags: ["自监督学习"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 脑成像分析 方向论文"
+description: "共 1 篇 ICLR 2026 自监督学习 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 脑成像分析
+# ICLR 2026 - 自监督学习
 
 共 **1** 篇论文
 
@@ -18,59 +18,39 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response ](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 8.5分 | 前10% |
+| 🥇 | [DiffSDA: Unsupervised Diffusion Sequential Disentanglement A](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
+### 🥇 [DiffSDA: Unsupervised Diffusion Sequential Disentanglement Across Modalities](/audio-paper-digest-blog/posts/2026-05-03-diffsda-unsupervised-diffusion-sequential)
 
-🔥 **8.5/10** | 前10% | #脑成像分析 | #多模态模型 | #预训练
+✅ **7.5/10** | 前25% | #自监督学习 | #扩散模型 | #跨模态 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Stéphane d’Ascoli (Meta AI)
-- 通讯作者：未明确标注（根据摘要中邮箱格式，可推断第一作者为联系人，但论文中未明确标注“通讯作者”字样）
-- 作者列表：Stéphane d’Ascoli（Meta AI），Jérémy Rapin（Meta AI），Yohann Benchetrit（Meta AI），Hubert Banville（Meta AI），Jean-Rémi King（Meta AI）
+- 第一作者：Hedi Zisling（Ben-Gurion University）
+- 通讯作者：Omri Azencot（azencot@bgu.ac.il， Ben-Gurion University）
+- 作者列表：Hedi Zisling（Ben-Gurion University）、Ilan Naiman（Ben-Gurion University）、Nimrod Berman（Ben-Gurion University）、Supasorn Suwajanakorn（VISTEC）、Omri Azencot（Ben-Gurion University）
 
 💡 **毒舌点评**
 
-亮点在于其设计了第一个端到端的、非线性的多模态多主体脑编码模型，并通过严谨的消融实验证明了多模态融合在高级认知皮层的不可替代性，这为理解大脑如何整合信息提供了强有力的计算工具。短板则在于训练仅依赖4个受试者（数据量虽大但个体多样性严重不足），这严重限制了其结论的普适性和模型向新受试者泛化的能力，离真正的“通用脑模型”还有很长的路要走。
+亮点：论文为“序列解耦”这个经典难题提供了一个优雅且强大的新范式——用单一的扩散模型损失统一框架，不仅摆脱了复杂调参的噩梦，还在真实世界高分辨率视频、音频和时间序列上实现了SOTA级的高质量解耦与生成，说服力很强。
+短板：所谓的“零样本”实验本质上是特征交换，并未在真正的未见分布上验证模型的泛化能力；此外，将“静态-动态”二分法作为通用解耦的终极目标可能过于简化，现实世界的变化维度远比这复杂。
 
 🔗 **开源详情**
 
-- 代码：提供完整代码仓库链接：https://github.com/facebookresearch/algonauts-2025
-- 模型权重：论文中未提及公开TRIBE模型本身的权重。
-- 数据集：依赖Courtois NeuroMod数据集，采用CC0协议，但具体获取方式需向数据集提供方申请，论文中未给出直接下载链接。
+- 代码：提供代码仓库链接：https://github.com/azencot-group/DiffSDA
+- 模型权重：论文中未提及公开预训练模型权重。
+- 数据集：使用的是公开数据集（MUG， TaiChi-HD， VoxCeleb， CelebV-HQ， TIMIT， LibriSpeech， PhysioNet， ETTh1， Air Quality），论文未涉及自有数据集。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文提供了详细的超参数表（表3）和训练配置描述，有助于复现。代码仓库应包含实现细节。
-- 论文中引用的开源项目：
-    *   模型/框架：x-transformers (MIT License)
-    *   特征提取基础模型：Llama-3.2-3B, Wav2Vec-Bert-2.0, V-JEPA 2 (均提及许可证)
-    *   工具：nilearn, PyTorch
+- 复现材料：提供了详尽的训练超参数和网络架构配置（见附录Tab. 6-8），涵盖了所有使用到的数据集。给出了完整的算法描述（算法1、2）。但未提供完整的训练脚本或检查点。
+- 论文中引用的开源项目：引用了VQ-VAE（Rombach et al., 2022）作为高分辨率数据预处理组件；采样器基于EDM（Karras et al., 2022）；潜在空间模型使用了DDIM（Song et al., 2020）。评估指标中使用了VGG-FACE和LightFace进行人脸识别（AED），以及OpenPose进行关键点检测（AKD）。
 
 📌 **核心摘要**
 
-1.  要解决的问题：传统脑编码模型通常局限于线性映射、单一模态或单一受试者，无法模拟大脑在处理自然、多模态刺激（如观看视频）时的动态、整合性响应，且模型预测能力受限。
-2.  方法核心：提出TRIBE模型，它利用预训练的文本（Llama-3.2）、音频（Wav2Vec-Bert）和视频（V-JEPA 2）基础模型的中间层表征作为输入，通过一个Transformer编码器来建模这些多模态特征的时间动态，并通过一个主体条件层来联合建模多个受试者的大脑响应，从而预测全脑1000个脑区的fMRI时间序列。
-3.  与已有方法相比新在哪里：TRIBE是首个同时实现非线性（使用Transformer）、多主体（一个模型预测所有受试者）和多模态（融合文本、音频、视频）的端到端深度学习脑编码模型，突破了以往方法在这些方面的限制。
-4.  主要实验结果：TRIBE在Algonauts 2025多模态脑编码竞赛中获得第一名（平均Pearson相关分数0.2146），显著优于第二名（0.2096）。消融实验证明，多模态模型（0.31）显著优于任何单模态（视频0.25，音频0.24，文本0.22）或双模态组合。模型在高度分布外的刺激（如动画片、默片）上仍能保持预测能力（例如《时代晚期的Tomorrow》为0.1924）。归一化噪声天花板分析显示，模型平均能解释可解释方差的54%（0.54 ± 0.1）。
-   *   表1：Algonauts 2025竞赛排名
-| 排名 | 平均分数（标准差） | 受试者1 | 受试者2 | 受试者3 | 受试者5 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 (Ours) | 0.2146 ± 0.0312 | 0.2381 | 0.2105 | 0.2377 | 0.1720 |
-| 2 | 0.2096 ± 0.0283 | 0.2353 | 0.2046 | 0.2268 | 0.1718 |
-| 3 | 0.2094 ± 0.0215 | 0.2233 | 0.2072 | 0.2271 | 0.1798 |
-   *   表2：在不同分布外电影上的表现（受试者1为例）
-| 电影 | 是否分布外 | 平均分数 | 受试者1 |
-| :--- | :--- | :--- | :--- |
-| Friends Season 7 | 否 | 0.3195 ± 0.0289 | 0.3419 |
-| Pulp Fiction | 是 | 0.2604 ± 0.0137 | 0.2765 |
-| Princess Mononoke | 是 | 0.2449 ± 0.0572 | 0.2816 |
-| Charlie Chaplin (默片) | 是 | 0.1686 ± 0.0551 | 0.2249 |
-5.  实际意义：该工作为构建一个能够统一解释人类感知与理解过程的大脑计算模型迈出了重要一步，为神经科学中的“计算机内实验”提供了新的可能，并推动了AI与脑科学在表征层面的深度融合。
-6.  主要局限性：模型预测基于脑区（1000个图谱），空间分辨率有限；仅使用了fMRI数据，缺乏对毫秒级神经活动的洞察；仅在4名受试者上进行训练，向新受试者的泛化能力是关键未解问题；模型无法解释无外部刺激时的大脑自发活动（如默认模式网络）。
+本文针对无监督序列解耦问题，即在不依赖标签的情况下将序列数据分解为时不变的静态因子（如身份）和时变的动态因子（如动作），提出了一种基于扩散模型的新颖框架DiffSDA。其核心是构建了一个跨模态的概率模型，创新性地将静态和动态因子建模为相互依赖的联合分布，并使用单一的、标准的扩散损失函数进行优化，避免了以往方法中复杂的损失项调优。与先前基于VAE/GAN的方法相比，DiffSDA是一个模态无关的通用框架，只需对骨干网络做微小调整即可适配视频（U-Net）、音频（MLP）和时间序列数据。在多个真实世界基准测试上，DiffSDA在定性（如条件交换、零样本交换）和定量指标（如AED、AKD、FVD、EER）上均超越了当前最先进的方法（如SPYL， DBSE）。例如，在VoxCeleb视频交换任务中，其AKD误差比SPYL降低了约40%；在TIMIT音频解耦上，解耦差距（Dis. Gap）达到了42.29%，远超DBSE的31.11%。该工作的意义在于为序列数据的无监督表示学习提供了一个统一、高效且强大的生成模型新范式。其主要局限性在于计算效率有待进一步优化，且“零样本”任务的设计尚不能充分证明模型对全新域的泛化能力。
 
 ---
 

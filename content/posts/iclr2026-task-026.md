@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 语音理解 论文列表"
+title: "ICLR 2026 - 语音翻译 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音理解"]
+tags: ["语音翻译"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 语音理解 方向论文"
+description: "共 2 篇 ICLR 2026 语音翻译 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音理解
+# ICLR 2026 - 语音翻译
 
-共 **1** 篇论文
+共 **2** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,65 +18,75 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Speech World Model: Causal State–Action Planning with Explic](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning) | 8.5分 | 前10% |
+| 🥇 | [UniSS: Unified Expressive Speech-to-Speech Translation with ](/audio-paper-digest-blog/posts/2026-05-03-uniss-unified-expressive-speech-to-speech) | 8.0分 | 前10% |
+| 🥈 | [Scalable Multilingual Multimodal Machine Translation with Sp](/audio-paper-digest-blog/posts/2026-05-03-scalable-multilingual-multimodal-machine) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Speech World Model: Causal State–Action Planning with Explicit Reasoning for Speech](/audio-paper-digest-blog/posts/2026-05-03-speech-world-model-causal-stateaction-planning)
+### 🥇 [UniSS: Unified Expressive Speech-to-Speech Translation with Your Voice](/audio-paper-digest-blog/posts/2026-05-03-uniss-unified-expressive-speech-to-speech)
 
-🔥 **8.5/10** | 前10% | #语音理解 | #因果图 | #显式推理 #世界模型
+🔥 **8.0/10** | 前10% | #语音翻译 | #语音大模型 | #端到端 #多语言
 
 👥 **作者与机构**
 
-- 第一作者：Xuanru Zhou（浙江大学）
-- 通讯作者：Gopala Anumanchipalli（UC Berkeley）
-- 作者列表：Xuanru Zhou（浙江大学）， Jiachen Lian（UC Berkeley）， Henry Hong（UC Berkeley）， Xinyi Yang（浙江大学）， Gopala Anumanchipalli（UC Berkeley）
-
-#
+- 第一作者：Sitong Cheng（香港科技大学）
+- 通讯作者：Yike Guo（香港科技大学）、Wei Xue（香港科技大学）
+- 作者列表：Sitong Cheng（香港科技大学），Weizhen Bian（香港科技大学），Xinsheng Wang（Soul AI Lab），Ruibin Yuan（香港科技大学），Jianyi Chen（香港科技大学），Shunshun Yin（Soul AI Lab），Yike Guo（香港科技大学），Wei Xue（香港科技大学）
 
 💡 **毒舌点评**
 
-这篇论文的亮点在于，它并非简单地将大模型应用于语音，而是从认知科学出发，为语音理解设计了一套可解释的“骨架”（因果图），并用它来引导大模型进行结构化推理，这比单纯堆数据或参数更“聪明”。然而，其短板在于，这套“骨架”的模块划分（WMA, ToM, SA, Prag）带有一定的人为预设性，其完备性和对更复杂、开放式对话的泛化能力有待进一步验证。
-
-#
+UniSS 巧妙地利用预训练 LLM 作为“大脑”，并通过精心设计的语音 token 和跨模态思维链提示，将复杂的语音翻译任务分解为可管理的步骤，其在翻译保真度和时长一致性上的表现确实令人印象深刻。不过，该框架依赖了三个来自不同模型的语音 tokenizer（GLM-4， BiCodec的说话人和语义tokenizer），这种“拼装”设计在提升性能的同时，也增加了系统复杂度和未来统一优化的难度。
 
 🔗 **开源详情**
 
-- 代码：论文承诺在 `https://github.com/eureka235/eureka235.github.io` 开源代码、训练和评估脚本，但当前链接可能为占位符。论文中未提供具体的可用代码仓库链接。
-- 模型权重：论文中未明确提及是否公开预训练好的因果图或指令微调后的模型权重。
-- 数据集：所用数据集（MELD, IEMOCAP, SLURP, VoxCeleb）均为公开数据集，论文未提及提供新的数据集。
-- Demo：图1中提供了一个音频演示链接 `http://bit.ly/4pBJuWP`。
-- 复现材料：提供了极其详细的实验设置（附录A.5）、模型架构（附录A.7）、评估指标计算方法（附录A.8）、数据生成提示词（附录A.4.2）等，复现指南完备。
-- 引用的开源项目/模型：主要依赖预训练模型，包括：文本编码器（distil-BERT）、声学编码器（WavLM）、指令微调基础模型（LLaMA-3.1-8B, Qwen2-Audio-7B-Instruct）、标签生成教师模型（Vicuna-13b-v1.5）、评估模型（GPT-4o）。
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及是否公开 UniSS 的模型权重。
+- 数据集：公开。构建了并发布了大规模 UniST 数据集（44.8k 小时），论文中提供了详细的数据构建流程、来源数据列表和质量分析。网站 `https://cmots.github.io/uniss-demo` 提供了演示。
+- Demo：提供在线音频示例演示，网站为 `https://cmots.github.io/uniss-demo`。
+- 复现材料：论文在附录 B 中提供了极为详细的训练配置（三阶段的超参数、学习率、batch size 等）、基线模型实施细节（表 B2）和评估指标说明，复现友好度高。
+- 论文中引用的开源项目：Whisper-large-v3 (ASR)， NLLB-200 (MT)， CosyVoice 2 (TTS)， SeamlessM4T-v2-Large (S2TT)， Qwen2.5-1.5B-Instruct (LLM主干)， BiCodec (语音 tokenizer)， GLM-4 Speech Tokenizer， SparkTTS (数据合成)， Paraformer (ASR过滤)， Silero VAD， webMUSHRA (评估)。
 
 📌 **核心摘要**
 
-1.  要解决的问题：当前的语音语言模型（SLM）将语音理解视为黑盒，在复杂推理（尤其是需要结合情感、意图、语境的深层理解）和稀疏监督下表现不佳，缺乏可解释的推理过程。
-2.  方法核心：提出Speech World Model（SWM），受认知科学启发，将语音理解因子化为四个模块（世界模型激活WMA、心智理论ToM、言语行为SA、语用意图Prag），并通过一个预定义的因果图建模它们之间的动态依赖关系。系统分两阶段训练：1）训练因果图以学习状态间的因果关系，形成结构化的认知状态搜索空间；2）将因果图的推理结果作为显式条件，对指令微调后的语言模型进行引导，生成结构化推理链和回应。
-3.  与已有方法相比新在哪里：
-    - 从黑盒到白盒：首次提出基于认知因果图的模块化语音模型，为推理提供了透明、可解释的“中间状态”。
-    - 从模式匹配到因果推理：利用因果图约束语言模型的搜索空间，使其推理过程更符合人类认知逻辑，而非单纯的统计关联。
-    - 高效的半监督学习：因果图结构允许在部分模块标签缺失时，通过梯度反向传播有效利用数据，提高训练效率。
-4.  主要实验结果：
-    - 训练效率：因果图训练收敛速度比无结构的随机图基线快约5倍（2.07小时 vs 10.39小时）。
-    - 推理能力：在指令微调后，SWM在推理指标（Model-as-Judge评分）上显著超越Qwen-Audio、Voxtral等开源模型，并在情绪识别准确率（EA）上甚至超过了GPT-4o（71.02% vs 45.16%）。
-    - 性能与效率平衡：整体M.J.得分略低于Gemini 2.5 Pro（7.59 vs 8.12），但训练成本极低（仅约20 GPU小时），证明了该范式的效率优势。
-    - 关键对比数据见下表：
+1.  要解决什么问题：现有语音到语音翻译（S2ST）系统面临三大挑战：缺乏保留表达风格的并行数据、多阶段架构复杂且误差累积、未能���效迁移大语言模型（LLM）的文本翻译能力。
+2.  方法核心是什么：提出 UniSS，一个单阶段自回归模型，直接基于预训练的文本 LLM（Qwen2.5-1.5B-Instruct）构建。核心包括：（1）设计说话人、语言、语义三类语音 token，分别建模全局风格、内容和生成；（2）引入跨模态思维链（CoT）提示，将 S2ST 分解为“听-译-说”步骤，显式转移 LLM 的文本翻译能力；（3）提出三阶段渐进式训练策略。
+3.  与已有方法相比新在哪里：不同于需要复杂架构或非自回归模型的先前工作，UniSS 在单个自回归模型内完成了语音翻译，架构更简洁。同时，它首次将 LLM 的预训练文本翻译能力显式且有效地迁移到了语音翻译任务中。
+4.  主要实验结果如何：在 CVSS-T 测试集上，UniSS (Q) 在英译中和中译英方向分别达到 32.20 和 24.28 的 Speech-BLEU，显著优于之前的端到端（如 Seamless-Ex）和级联系统。在时长一致性（SLC 0.2）上近乎完美（0.98/0.87）。主观评估中，其情感相似度 MOS 达 4.51，优于 Seamless-Ex 的 3.56。在 FLEURS 数据集上也表现出强大的鲁棒性。
 
-| 方法 | Prompt Style | Overall M.J. Score | Reasoning Score | Response Score | EM (%) | EA (%) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| SWM (Qwen2-Audio) | CoT | 7.59 | 7.26 | 8.08 | 91.80 | 71.02 |
-| Qwen2-Audio-CoT (调优基线) | CoT | 5.18 | 4.76 | 5.82 | 92.11 | 34.72 |
-| Voxtral | CoT | 2.92 | 2.52 | 3.52 | 10.89 | 5.56 |
-| GPT-4o | CoT | 7.41 | 6.98 | 8.06 | 68.20 | 45.16 |
-| Gemini 2.5 Pro | CoT | 8.12 | 8.02 | 8.28 | 82.47 | 51.29 |
+| 模型 (类别) | 参数规模 | Speech-BLEU (EN-ZH) | Speech-BLEU (ZH-EN) | SLC 0.2 (EN-ZH) | SLC 0.2 (ZH-EN) | UTMOS (EN-ZH) | UTMOS (ZH-EN) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| UniSS (Q) (本文) | 1.5B | 32.20 | 24.28 | 0.98 | 0.87 | 3.76 | 3.86 |
+| Seamless-Ex (E2E) | ~1.7B | 24.45 | 15.84 | 0.68 | 0.52 | 2.46 | 2.90 |
+| 2-Stage (级联) | 2.8B | 26.94 | 20.86 | 0.67 | 0.52 | 3.79 | 3.48 |
+| GPT-4o (MLLM) | 未公开 | 31.64 | 19.27 | 0.47 | 0.37 | 3.46 | 4.18 |
 
-5.  实际意义：为构建更可解释、可信、高效的语音交互系统提供了新范式，证明了结构化认知先验可以引导较小模型达到接近甚至超越超大模型的特定任务性能，对资源受限场景有重要价值。
-6.  主要局限性：1）当前模块数量有限（仅4个），可能无法捕捉所有语音动态；2）因果图结构是预定义的，缺乏对未知依赖关系的适应性；3）指令微调数据依赖于LLM生成，存在误差传播风险。
+![论文中的实验结果图](icassp-img://5o0ZvYzh6B/2.png)
+图3：UniST数据集构建流程概览、时长比分布及语音时长分布。
 
-#
+5.  实际意义是什么：为构建下一代表达性 S2ST 系统提供了一种更简单、更有效的范式。通过合成数据流水线构建了大规模高质量数据集 UniST，为社区研究解决了数据瓶颈问题。
+6.  主要局限性是什么：当前仅支持中英双语；语音表示依赖三个独立的 tokenizer，增加了词汇表大小和系统复杂度；性能仍受合成训练数据质量的限制。
+
+---
+
+### 🥈 [Scalable Multilingual Multimodal Machine Translation with Speech-Text Fusion](/audio-paper-digest-blog/posts/2026-05-03-scalable-multilingual-multimodal-machine)
+
+✅ **7.5/10** | 前25% | #语音翻译 | #多模态模型 | #多语言 #低资源
+
+👥 **作者与机构**
+
+- 第一作者：Yexing Du（Harbin Institute of Technology， Pengcheng Laboratory）
+- 通讯作者：Youcheng Pan（Pengcheng Laboratory）， Yang Xiang（Pengcheng Laboratory）， Ming Liu（Harbin Institute of Technology， Pengcheng Laboratory）
+- 作者列表：Yexing Du（Harbin Institute of Technology， Pengcheng Laboratory）， Youcheng Pan（Pengcheng Laboratory）， Zekun Wang（Harbin Institute of Technology）， Zheng Chu（Harbin Institute of Technology）， Yichong Huang（Harbin Institute of Technology）， Kaiyuan Liu（Harbin Institute of Technology， Pengcheng Laboratory）， Bo Yang（Pengcheng Laboratory）， Yang Xiang（Pengcheng Laboratory）， Ming Liu（Harbin Institute of Technology， Pengcheng Laboratory）， Bing Qin（Harbin Institute of Technology， Pengcheng Laboratory）
+
+💡 **毒舌点评**
+
+亮点是另辟蹊径，用语音的韵律信息作为多模态翻译的补充模态，巧妙地绕开了图像数据稀缺的瓶颈，并提出了一个能自主优化训练数据的自进化机制，对低资源翻译有实际帮助。短板在于对语音信号的理解比较浅层，主要依赖预训练语音编码器提取特征，自进化机制高度依赖COMET评分来筛选“正样本”，其本身可能存在偏差且缺乏理论保证。
+
+📌 **核心摘要**
+
+这篇论文旨在解决传统图像引导的多模态机器翻译（MMT）因多语言图像-文本对数据稀缺而导致的扩展性问题。为此，作者提出了一种语音引导的机器翻译（SMT）框架，核心是将语音与文本作为融合输入，利用多模态大语言模型（MLLM）生成更高质量的翻译。与已有方法相比，其新意在于：1）引入语音作为新模态，利用其丰富的韵律线索且数据更易获取；2）提出了一个自进化机制，利用TTS模型合成语音，通过MLLM自我评估筛选出对翻译有益的样本（正样本）进行迭代训练，以缓解对真实数据的依赖。实验结果表明，该框架在Multi30K多模态翻译基准上超越了所有现有方法，达到了新的SOTA。在通用机器翻译数据集FLORES-200上，其在108个翻译方向上取得了平均SOTA性能（平均spBLEU 31.1 / COMET 87.7），甚至优于规模大得多的纯文本模型。消融实验证实了合成语音与真实语音对翻译质量的影响可忽略不计，且自进化机制能有效提升低资源语言的翻译性能。该工作的实际意义在于为低资源语言翻译提供了一种利用丰富语音数据的可扩展新路径。其主要局限性在于框架的最终性能仍受限于TTS模型所支持的语言数量。
 
 ---
 

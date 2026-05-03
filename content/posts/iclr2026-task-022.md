@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 语音增强 论文列表"
+title: "ICLR 2026 - 语音大模型 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["语音增强"]
+tags: ["语音大模型"]
 categories: [iclr-2026]
-description: "共 2 篇 ICLR 2026 语音增强 方向论文"
+description: "共 2 篇 ICLR 2026 语音大模型 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 语音增强
+# ICLR 2026 - 语音大模型
 
 共 **2** 篇论文
 
@@ -18,72 +18,106 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Are Deep Speech Denoising Models Robust to Adversarial Noise](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to) | 7.5分 | 前25% |
-| 🥈 | [SpeechOp: Inference-Time Task Composition for Generative Spe](/audio-paper-digest-blog/posts/2026-05-03-speechop-inference-time-task-composition-for) | 7.0分 | 前25% |
+| 🥇 | [TASTE: Text-Aligned Speech Tokenization and Embedding for Sp](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and) | 7.5分 | 前25% |
+| 🥈 | [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Are Deep Speech Denoising Models Robust to Adversarial Noise?](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to)
+### 🥇 [TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling](/audio-paper-digest-blog/posts/2026-05-03-taste-text-aligned-speech-tokenization-and)
 
-✅ **7.5/10** | 前25% | #语音增强 | #对抗样本 | #鲁棒性 #模型评估
-
-👥 **作者与机构**
-
-- 第一作者：Will Schwarzer（University of Massachusetts）
-- 通讯作者：Will Schwarzer（wschwarzer@umass.edu）
-- 作者列表：Will Schwarzer（University of Massachusetts）、Philip S. Thomas（University of Massachusetts）、Andrea Fanelli（Dolby Laboratories）、Xiaoyu Liu（Meta）
-
-💡 **毒舌点评**
-
-亮点：论文对四个主流开源语音去噪模型进行了系统性的“黑客攻击”审计，实验设计严谨（覆盖多种声学环境，并引入真实人类专家进行主观评估），成功论证了即使是旨在消除噪声的模型，也可能被精心隐藏的噪声“毒害”而输出胡言乱语，这对安全关键应用敲响了警钟。
-短板：尽管攻击在客观指标上成功，但让模型输出“特定目标语句”的攻击（目标攻击）在人类听感上效果甚微，这使得论文描述的威胁（如恶意篡改语音内容）在实际中大打折扣；同时，所有有效攻击都依赖于攻击者对模型梯度的“白盒”访问，这在一定程度上限制了威胁的普遍性。
-
-📌 **核心摘要**
-
-这篇论文系统地研究了深度语音去噪（DNS）模型对不可感知对抗性扰动的脆弱性。核心问题是：旨在净化语音的DNS模型，其自身是否容易受到对抗性噪声的攻击而失效？作者采用基于心理声学掩蔽阈值的投影梯度下降（PGD）方法生成不可感知的扰动，并以短时客观可懂度（STOI）作为损失函数，使模型输出尽可能偏离干净语音。与此前研究相比，本文将攻击扩展到了更多先进的开源模型（Demucs, Full-SubNet+, FRCRN, MP-SENet），并在更广泛的条件（从极干净到嘈杂、有无混响、模拟空中传输）下进行了验证。主要实验结果表明：四个模型在所有测试环境下均可被成功攻击，使输出可懂度大幅降低（STOI增益从正变为显著负值），甚至变成无法理解的胡言乱语；人类专家转录研究证实了攻击后输出的不可懂性，而ABX测试表明攻击噪声总体上难以察觉。研究揭示了开源DNS模型在助听器、空管通信等安全关键领域部署的重大风险。其局限性包括：目标攻击的实际效果有限，且最有效的攻击依赖于模型梯度信息。
-
----
-
-### 🥈 [SpeechOp: Inference-Time Task Composition for Generative Speech Processing](/audio-paper-digest-blog/posts/2026-05-03-speechop-inference-time-task-composition-for)
-
-✅ **7.0/10** | 前25% | #语音增强 | #扩散模型 | #语音合成 #语音分离
+✅ **7.5/10** | 前25% | #语音大模型 | #端到端 | #语音合成 #生成模型
 
 👥 **作者与机构**
 
-- 第一作者：Justin Lovelace（Cornell University）
-- 通讯作者：未明确说明（从作者列表和邮箱推测，Adobe Research的Rithesh Kumar, Jiaqi Su, Ke Chen, Zeyu Jin可能为共同通讯作者，但论文未明确指定）
-- 作者列表：Justin Lovelace（Cornell University，实习于Adobe Research）、Rithesh Kumar（Adobe Research）、Jiaqi Su（Adobe Research）、Ke Chen（Adobe Research）、Kilian Q Weinberger（Cornell University）、Zeyu Jin（Adobe Research）
+- 第一作者：Liang-Hsuan Tseng（国立台湾大学通信工程研究所，MediaTek Research实习生）
+- 通讯作者：未说明（论文未明确指定）
+- 作者列表：
+    - Liang-Hsuan Tseng（国立台湾大学通信工程研究所，MediaTek Research实习生）
+    - Yi-Chang Chen（MediaTek Research，共同第一作者）
+    - Kuan-Yi Lee（国立台湾大学通信工程研究所，MediaTek Research实习生）
+    - Da-Shan Shiu（MediaTek Research）
+    - Hung-yi Lee（国立台湾大学人工智能卓越研究中心）
 
 💡 **毒舌点评**
 
-亮点在于它巧妙地将“知识富足”的TTS模型作为“导师”，通过一个优雅的推理时数学框架（TC-CFG）来指导“知识贫乏”的S2S任务，实现了灵活的任务组合和内容保真度的大幅提升，思路值得借鉴。短板是，当它试图成为“全能选手”时，在需要精细信号重建的说话人分离任务上，其生成模型的固有特性导致客观指标（如SI-SDRi）反而不敌专注于判别式优化的专用模型，暴露了“广度”与“深度”之间的权衡困境。
+这篇论文的亮点在于，它巧妙地将ASR的文本对齐能力“借用”过来，为语音标记创造了一个简洁的“文本对齐”解决方案，显著降低了语音语言模型联合建模的复杂度，并在极低比特率下实现了不错的重建质量。但其核心弱点在于，方法严重依赖外部ASR提供的文本转录，这在无文本或ASR错误传播的场景下可能成为瓶颈，且“文本对齐”的设计哲学可能限制了其捕获超越文本转录的更复杂声学信息（如环境声、非语言声音）的能力。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：未提及是否公开预训练或微调后的模型权重。
-- 数据集：使用了公开数据集（MLS, LibriTTS, LibriTTS-R等），但未提供新的数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了非常详细的复现材料，包括完整的模型架构参数（表8）、两阶段训练配置（学习率、优化器、批量大小、步数）、采样配置、多任务训练权重和提示概率（表9），以及源音频条件化消融（附录F）和任务组合推导（附录G）。
-- 论文中引用的开源项目：DAC音频编码器、ByT5文本编码器、Whisper/WhisperX ASR模型。
+- 代码：论文明确提供了代码仓库链接：https://mtkresearch.github.io/TASTE-SpokenLM.github.io。
+- 模型权重：论文提及提供模型（`Our demo, code, and models are available at...`），但未具体说明公开权重的托管平台和获取方式。
+- 数据集：未提及公开TASTE的特定数据集，但使用了公开的Emilia和LibriTTS进行训练。
+- Demo：提供在线演示（同上链接）。
+- 复现材料：在附录中提供了详细的训练细节、超参数配置、硬件信息以及算法描述（如算法1），复现信息充分。
+- 引用的开源项目：论文依赖并引用了多个开源工具和模型，包括：
+    - ASR/编码器：Whisper (OpenAI)
+    - 语音单元/声码器：S3 token (CosyVoice), HiFiGAN, Flow-based vocoder
+    - 基座LLM：LLaMA系列 (Meta)
+    - 训练工具：DeepSpeed, Liger Kernel
+    - 评估工具：HuBERT (用于WER评估), UTMOS, DNS-MOS, ViSQOL, Montreal Forced Aligner (MFA), GPT-4o
+    - 数据集：Emilia, LibriTTS, LibriSpeech
 
 📌 **核心摘要**
 
-1. 要解决什么问题：文本到语音（TTS）系统利用海量数据表现优异，但语音到语音（S2S）任务（如增强、分离）受限于配对数据稀缺，导致生成式方法容易失真并损害说话人身份与内容保真度。
-2. 方法核心是什么：提出SpeechOp，一个多任务潜扩散模型。它通过微调一个预训练的TTS模型来学习执行多种S2S任务。核心创新是推理时任务组合（ITC） 流水线和任务组合分类器自由引导（TC-CFG） 策略。TC-CFG通过分解贝叶斯公式，利用TTS模型作为判别器来引导内容生成，而不是简单平均得分函数。
-3. 与已有方法相比新在哪里：新在将TTS预训练模型系统性地适配为多任务处理器，并在推理时通过TC-CFG实现灵活的任务组合（如“转录引导增强”、“个性化增强”）。相比直接平均得分，TC-CFG能更好地结合增强任务的声学先验和TTS的内容判别能力，避免先验污染。
-4. 主要实验结果如何：
-    - TTS：SpeechOp在经过多任务微调后，零样本TTS的MOS各项指标（质量、自然度、语音相似度、风格相似度）均优于其TTS基线，且与更大模型竞争力相当。
-    - 语音增强：使用隐式任务组合（ITC，即Whisper转录引导），WER从无转录的8.1%大幅降至2.9%，相比强基线HiFi-GAN-2（5.4%）也有显著提升。主观MOS与HiFi-GAN-2相当。
-    - 说话人分离：在WSJ0-2Mix数据集上，使用金标准转录时WER为5.5%（无转录11.1%），但SI-SDRi仅为0.53，远低于SepFormer（11.86）。
-    - 任务组合消融：TC-CFG在所有指标（PESQ， MCD， SpBS， WER）上均优于得分平均（TC-Avg）方法。
-    ![SpeechOp的多任务训练与推理时组合能力概述](icassp-img://eLsEjjFODE/0.png)
-    图1展示了SpeechOp的多任务训练范式（顶部）、推理时任务组合能力（中部）以及隐式任务组合流水线（底部）。它支持TTS、增强、分离等多种核心任务，并能在推理时通过组合这些能力创建新任务，例如使用转录引导增强。
+1.  问题：现有用于联合文本-语音建模的语音标记存在两个主要问题：与文本内容冗余，以及与文本标记存在严重的长度不匹配，导致联合建模复杂。
+2.  方法核心：提出TASTE，一种端到端的文本对齐语音标记化与嵌入方法。其核心是一个基于交叉注意力的聚合器，以ASR生成的文本转录作为查询，以冻结的Whisper编码器输出作为键/值，生成与文本标记序列一一对应的语音表示，再经残差向量量化（RVQ）离散化。
+3.  创新点：1) 首次提出专为联合文本-语音建模设计的、端到端训练的文本对齐语音标记化方法。2) 该标记动态频率与文本对齐，序列极短（~3 tokens/秒，~150 bps）。3) 标记专注于编码副语言信息，允许简单的文本对齐语音编辑。
+4.  主要实验结果：
+    - 语音重建：在极低比特率（~150 bps）下，TASTE在质量（WER 4.4%，UTMOS 4.29）和相似性（说话人相似度0.80，MUSHRA 68.3）上与高比特率基线（如S3 token@600 bps）性能相当甚至更优。
+    - 语音语言建模：基于TASTE的1.3B SLM（TASLM）在语音续写任务上（GPT-4o评分3.16，人类MOS 4.16）显著优于其他7B预训练SLM；在SALMON和StoryCloze基准测试上取得最佳综合表现（68.7/67.2）；并展示了少样本口语问答能力（Web-Q 27.1， LLaMA-Q 57.6）。
+5.  实际意义：为构建更自然、高效的人机交互语音语言模型提供了新的标记化范式，通过简化联合建模流程，有望降低开发门槛。
+6.  主要局限性：1) 依赖外部ASR系统，其错误和延迟可能影响性能。2) 目前仅评估英语，多语言泛化能力待验证。3) 专注于单说话人语音，未处理多说话人、重叠语音或非语言声音。4) 未优化系统延迟，未适用于流式场景。
 
-5. 实际意义是什么：该工作弥合了数据丰富的TTS与数据稀缺的S2S任务之间的鸿沟，提供了一个统一、灵活的语音处理框架。它展示了如何通过迁移学习和推理时组合，利用现有大模型的“知识”来提升数据受限任务的性能，并为构建可组合的语音处理系统提供了新思路。
-6. 主要局限性是什么：尽管在感知质量（MOS）上表现良好，但SpeechOp在需要精确信号重建的说话人分离任务上，客观信号保真度指标（如SI-SDRi）显著落后于专用判别模型。此外，当前评估主要基于完全重叠的合成数据，对真实对话场景的适用性有待验证。
+---
+
+### 🥈 [Latent Speech-Text Transformer](/audio-paper-digest-blog/posts/2026-05-03-latent-speech-text-transformer)
+
+✅ **7.0/10** | 前25% | #语音大模型 | #自回归模型 | #自监督学习 #数据集
+
+👥 **作者与机构**
+
+- 第一作者：Yen-Ju Lu (Johns Hopkins University, Center for Language and Speech Processing)
+- 通讯作者：未明确说明。论文将Srinivasan Iyer和Duc Le标注为“Joint last author”，通常在学术中可能承担通讯职责，但未明确指明。
+- 作者列表：
+    - Yen-Ju Lu (Johns Hopkins University, Center for Language and Speech Processing)
+    - Yashesh Gaur (Meta Superintelligence Labs)
+    - Wei Zhou (Meta Superintelligence Labs)
+    - Benjamin Muller (Meta Superintelligence Labs)
+    - Jesus Villalba (Johns Hopkins University, Center for Language and Speech Processing)
+    - Najim Dehak (Johns Hopkins University, Center for Language and Speech Processing)
+    - Luke Zettlemoyer (Meta Superintelligence Labs)
+    - Gargi Ghosh (Meta Superintelligence Labs)
+    - Mike Lewis (Meta Superintelligence Labs)
+    - Srinivasan Iyer (Meta Superintelligence Labs)
+    - Duc Le (Meta Superintelligence Labs)
+
+💡 **毒舌点评**
+
+这篇论文巧妙地将字节级语言模型的“patching”思想移植到语音模态，直击了语音token序列过长导致的计算瓶颈，思路清晰且实验扎实。然而，其核心创新（静态patching）略显简单，且依赖外部对齐工具的课程策略增加了系统复杂度与不确定性，使其更像是一个稳健的工程优化而非概念性突破。
+
+🔗 **开源详情**
+
+- 代码：论文明确提供了代码仓库链接：https://github.com/facebookresearch/lst。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：论文使用的是公开数据集（LibriLight, People‘s Speech, Multilingual LibriSpeech, Spotify Podcast），并说明了各数据集的许可信息。用于生成评估集语音的Kokoro TTS模型也提供了引用链接。
+- Demo：论文中未提及提供在线演示。
+- 复现材料：论文在附录中提供了相当详细的复现信息，包括：模型架构配置（表7）、优化器设置、训练超参数（学习率、batch size）、硬件规格（H100数量）、训练时长。
+- 论文中引用的开源项目：HuBERT (语音分词器)、Llama 2 (文本分词器及数据)、Wav2Vec2+CTC (用于强制对齐)、Kokoro TTS (用于生成评估语音)、HiFi-GAN (论文提及但未直接使用)、Whisper (用于计算TTS的CER)。
+
+📌 **核心摘要**
+
+1.  问题：当前基于交错文本和离散语音token的自回归模型，在语音理解和生成上虽有潜力，但计算效率远低于纯文本大模型，主要原因是语音序列长度远超文本，导致计算资源分配严重失衡，阻碍了有效的跨模态对齐与性能扩展。
+2.  方法核心：提出Latent Speech-Text Transformer (LST)，其核心是引入一个语音Patch编码器，将一系列细粒度的语音token（如HuBERT token）动态聚合为更高层次、信息更密集的潜在语音patch。全局Transformer在这些patch和文本token上进行自回归建模，而一个轻量级的Patch解码器则负责将patch解码回语音token。
+3.  创新与比较：与直接对语音token使用BPE（效果不佳）或简单跳过某些token的方法不同，LST通过端到端学习的patch机制，有选择地聚合信息。相比基线模型，它在计算控制和数据控制设置下，同时提升了语音和文本任务的准确率。
+4.  主要实验结果：
+    *   在HellaSwag故事补全任务上，计算控制训练下，LST（课程patching）相比基线在语音（S→S）上获得+6.5%（39.0% → 45.5%）的绝对提升，文本（T→T）提升+5.2%（47.0% → 52.2%）。
+    *   在数据控制设置下，LST在减少约19.7%计算量的同时，仍获得显著提升（S→S：40.2% → 45.5%， T→T：49.6% → 52.2%）。
+    *   缩放分析表明，从420M到1.8B参数，LST的优势随模型规模增大而增长。
+    *   下游任务中，LST使ASR适应更快（1k步即达6.8%/10.4% WER），TTS推理步数减少约4倍且质量不降。
+5.  实际意义：LST通过统一语音和文本的建模粒度，有效提升了语音语言模型的计算效率和样本效率，为构建更高效、可扩展的语音-文本基础模型提供了实用路径。
+6.  主要局限性：1）研究仅限于半双工（轮流）语音-文本建模，未涉及全双工实时对话。2）分析集中在预训练阶段，未探索指令微调。3）对齐patching和课程学习策略依赖预训练时的强制对齐信息，增加了系统依赖性。
 
 ---
 

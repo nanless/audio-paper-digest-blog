@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 机器翻译 论文列表"
+title: "ICLR 2026 - 模型合并 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["机器翻译"]
+tags: ["模型合并"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 机器翻译 方向论文"
+description: "共 1 篇 ICLR 2026 模型合并 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 机器翻译
+# ICLR 2026 - 模型合并
 
 共 **1** 篇论文
 
@@ -18,38 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Scalable Multilingual Multimodal Machine Translation with Sp](/audio-paper-digest-blog/posts/2026-05-03-scalable-multilingual-multimodal-machine) | 9.0分 | 前10% |
+| 🥇 | [OptMerge: Unifying Multimodal LLM Capabilities and Modalitie](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Scalable Multilingual Multimodal Machine Translation with Speech-Text Fusion](/audio-paper-digest-blog/posts/2026-05-03-scalable-multilingual-multimodal-machine)
+### 🥇 [OptMerge: Unifying Multimodal LLM Capabilities and Modalities via Model Merging](/audio-paper-digest-blog/posts/2026-05-03-optmerge-unifying-multimodal-llm-capabilities-and)
 
-🔥 **9.0/10** | 前10% | #机器翻译 | #多模态模型 #语音合成 | #多模态模型 #语音合成
+🔥 **8.0/10** | 前25% | #模型合并 | #模型合并 | #多模态模型 #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Yexing Du（哈尔滨工业大学；鹏城实验室）
-- 通讯作者：Youcheng Pan（鹏城实验室，panych@pcl.ac.cn）、Yang Xiang（鹏城实验室，xiangy@pcl.ac.cn）、Ming Liu（哈尔滨工业大学，mliu@ir.hit.edu.cn）
-- 作者列表：Yexing Du（哈尔滨工业大学；鹏城实验室）、Youcheng Pan（鹏城实验室）、Zekun Wang（哈尔滨工业大学）、Zheng Chu（哈尔滨工业大学）、Yichong Huang（哈尔滨工业大学）、Kaiyuan Liu（哈尔滨工业大学；鹏城实验室）、Bo Yang（鹏城实验室）、Yang Xiang（鹏城实验室）、Ming Liu（哈尔滨工业大学；鹏城实验室）、Bing Qin（哈尔滨工业大学；鹏城实验室）
+- 第一作者：Yongxian Wei（清华大学）
+- 通讯作者：Chun Yuan（清华大学，标注为*）
+- 作者列表：Yongxian Wei（清华大学）、Runxi Cheng（清华大学）、Weike Jin（华为诺亚方舟实验室）、Enneng Yang（中山大学）、Li Shen（中山大学）、Lu Hou（华为诺亚方舟实验室）、Sinan Du（清华大学）、Chun Yuan（清华大学）、Xiaochun Cao（中山大学）、Dacheng Tao（南洋理工大学）
 
 💡 **毒舌点评**
 
-亮点在于用语音替代图像，巧妙解决了模态数据稀缺的瓶颈，并设计了自进化机制让模型“自己教自己”，减少了对人工标注的依赖。短板是论文声称模型对长文本合成语音的噪声有鲁棒性，但主要评估集中在较短文本（Multi30K平均59.3字符），对于真正长文本（如WMT24++中>200字符部分）的深入鲁棒性分析和应对策略讨论不足。
+亮点：论文为多模态大模型（MLLM）的模型合并领域填补了重要的空白，提出了首个细粒度的能力合并基准，并证明了数据免费的合并方法在性能上可以与甚至超越需要大量数据的混合训练，这对社区是实实在在的贡献。短板：虽然实验在InternVL2.5-1B和Qwen2-VL-7B上验证了方法，但更大规模（如32B以上）模型的合并效果和泛化性仍有待验证；此外，模态合并实验仅限于Vision-Audio-Video三种模态，离真正的“全模态”模型尚有距离。
 
 🔗 **开源详情**
 
-- 代码：论文明确提供了代码仓库链接：https://github.com/yxduir/LLM-SRT。
-- 模型权重：论文中提到“The code and models are released”，表明模型权重也已开源。
-- 数据集：实验使用的Multi30K， FLORES-200， WMT24++， CoVoST-2， FLEURS， Common Voice等均为公开数据集，论文提供了获取指引。
+- 代码：论文明确表示将公开所有代码（“All code and checkpoints are publicly available here”）。
+- 模型权重：论文承诺公开所有训练得到的专家模型检查点（“we train expert models for each task and publicly release their weights”）。
+- 数据集：论文中收集和使用的数据集均为公开数据集（见表1和表11），并提供了获取方式或引用。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文提供了训练细节（硬件、优化器、学习率策略）、模型参数量、关键超参数（如LoRA设置、Q-Former配置）以及消融研究细节，复现信息较充分。
-- 论文中引用的开源项目：主要依赖Whisper（语音编码器）， CosyVoice2（TTS模型）， GemmaX2-28-9B（LLM骨干）。
+- 复现材料：提供了极为详细的复现材料，包括：a) 详细的训练数据集列表和规模（表1，表11）；b) 完整的评估基准和评估工具（VLMEvalKit, LMMs-Eval）；c) 所有合并方法的超参数设置（如λ搜索范围、优化器、学习率、迭代次数）；d) OptMerge的关键设计细节（如秩k的取法）；e) 详细的硬件配置（8×V100）。
+- 论文中引用的开源项目：引用了MergeKit, LLaVA, Qwen2-VL, InternVL2.5, Vicuna, CLIP, BEATs, LanguageBind等多个开源模型和工具。
 
 📌 **核心摘要**
 
-这篇论文旨在解决现有图像引导的多模态机器翻译（MMT）方法面临的多语言数据稀缺的瓶颈问题。核心方法是提出一种语音引导机器翻译（SMT）框架，该框架将文本转语音（TTS）模型生成的合成语音与文本融合作为多模态大语言模型（MLLM）的输入，并设计了一套自进化机制，使模型能自主生成、筛选（基于翻译质量打分）并利用合成数据进行迭代优化。与传统图像方法相比，其新意在于利用语音作为辅助模态，语音具有与文本的天然对齐性和丰富的数据资源，从而支持更广泛的多语言覆盖。主要实验结果显示，该框架在Multi30K多模态机器翻译基准上取得了新的最佳成绩，平均BLEU分数达到52.0，超越了所有基于真实或合成图像的方法。在通用机器翻译基准FLORES-200上，其在108个翻译方向上也达到了最佳平均性能（如eng→xx方向平均spBLEU/COMET为40.4/89.5）。该工作的实际意义在于为低资源机器翻译提供了一种新颖的、数据可扩展的多模态增强方案，并证明了小参数模型通过多模态学习可媲美甚至超越大参数纯文本模型。主要局限性是该框架的多语言覆盖范围受限于现有开源TTS模型所支持的语言数量。
+1.  问题：现有的模型合并研究主要针对视觉分类模型或文本LLM，缺乏针对多模态大语言模型（MLLM）的标准化基准和系统研究，特别是如何通过无数据的模型合并来统一MLLM的多种能力（如VQA、OCR）或融合不同模态。
+2.  方法核心：本文提出名为OptMerge的模型合并方法。针对全参数微调模型，它先对任务向量去中心化并截断SVD，再基于去噪后的任务向量优化合并向量；针对LoRA微调模型，采用SGD优化器、均值初始化并直接进行低秩近似，以稳定优化过程。
+3.  与已有方法相比新在哪里：a) 建立了首个针对MLLM的细粒度合并基准，包含5类能力任务的专门模型与评测；b) OptMerge方法通过任务向量去噪和鲁棒优化，解决了直接优化合并向量时的噪声干扰和范数失控问题；c) 首次系统研究了“模态合并”，证明了合并不同模态模型能构建更优的统一模型。
+4.  主要实验结果：在能力合并上，OptMerge在InternVL2.5（全参数）和Qwen2-VL（LoRA）基准上平均性能分别比最强基线提升0.44%和4.65%（相比WUDI Merging）。合并后的模型性能在多个任务上可达到或超过专家模型和混合训练模型（如表2，Qwen2-VL OptMerge平均得分63.30，高于Qwen2-VL-Instruct的62.23）。在模态合并上，合并视觉、音频、视频模型后，在Audio-VQA任务（MUSIC-AVQA, AVQA）上平均得分67.00，超过任何单模态模型（表5）。与混合训练相比，OptMerge在计算资源和时间上具有显著优势（表7）。
+5.  实际意义：提供了一种无需训练数据、低成本、高效率的后训练方法，用于整合开源社区中分散的、针对不同任务或模态微调的模型，快速构建更强大的多模态统一模型，推动了去中心化的模型开发与部署。
+6.  主要局限性：实验评估的模型规模上限为7B和32B，更大规模模型的合并效果未知；模态合并实验仅涉及三种模态；收集的公开训练数据集可能存在质量问题；未能与所有最新的动态合并（如MoE-like）方法进行对比。
 
 ---
 

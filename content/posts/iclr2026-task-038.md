@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音视频问答 论文列表"
+title: "ICLR 2026 - 音频修复 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音视频问答"]
+tags: ["音频修复"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音视频问答 方向论文"
+description: "共 1 篇 ICLR 2026 音频修复 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音视频问答
+# ICLR 2026 - 音频修复
 
 共 **1** 篇论文
 
@@ -18,52 +18,50 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [WorldSense: Evaluating Real-world Omnimodal Understanding fo](/audio-paper-digest-blog/posts/2026-05-03-worldsense-evaluating-real-world-omnimodal) | 8.5分 | 前25% |
+| 🥇 | [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [WorldSense: Evaluating Real-world Omnimodal Understanding for Multimodal LLMs](/audio-paper-digest-blog/posts/2026-05-03-worldsense-evaluating-real-world-omnimodal)
+### 🥇 [Token-Based Audio Inpainting via Discrete Diffusion](/audio-paper-digest-blog/posts/2026-05-03-token-based-audio-inpainting-via-discrete)
 
-🔥 **8.5/10** | 前25% | #音视频问答 | #基准测试 | #多模态模型 #模型评估
+✅ **7.5/10** | 前25% | #音频修复 | #离散扩散 | #预训练 #音乐处理
 
 👥 **作者与机构**
 
-- 第一作者：Jack Hong (Xiaohongshu Inc.)
-- 通讯作者：Weidi Xie (Shanghai Jiao Tong University)
-- 作者列表：Jack Hong (Xiaohongshu Inc.)、Shilin Yan (Xiaohongshu Inc.)、Jiayin Cai (Xiaohongshu Inc.)、Xiaolong Jiang (Xiaohongshu Inc.)、Yao Hu (Xiaohongshu Inc.)、Weidi Xie (Shanghai Jiao Tong University)
+- 第一作者：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）
+- 通讯作者：Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
+- 作者列表：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Moshe Buchris（Ben-Gurion University of the Negev，电气与计算机工程学院）、Oren Gal（University of Haifa）、Haim Permuter（Ben-Gurion University of the Negev，电气与计算机工程学院）、Gilad Katz（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
+
+#
 
 💡 **毒舌点评**
 
-亮点在于其严谨、系统化的基准设计，首次强制要求音视频信息强耦合来评估MLLMs，从而揭示了当前模型在真实世界理解上的真实短板（最佳开源音频-视觉模型仅25%准确率）。短板则是评估框架局限于选择题，无法评估模型的生成能力和解释性，且论文并未提出新的模型架构来解决所揭示的问题，更多地是“诊断”而非“治疗”。
+这篇论文为音频修复这个“老”问题提供了“新”解法，巧妙地将离散扩散与预训练音频tokenizer结合，在长缺失段修复上展现了不错的潜力，且实验对比和消融做得非常扎实。然而，其性能上界似乎被WavTokenizer这类离散编解码器的质量所束缚，这或许暗示着“基于token”的范式在追求极致音频保真度时面临的共同天花板。
 
 🔗 **开源详情**
 
-- 代码：论文中未直接提供代码仓库链接，但提供了项目主页（https://jaaackhongggg.github.io/WorldSense），通常项目主页会包含GitHub链接。
-- 模型权重：论文评估的是现有模型，未提出新模型，因此未提及新权重。
-- 数据集：WorldSense数据集已公开，可通过项目主页获取。论文采用CC BY-NC-SA 4.0许可证。
-- Demo：未提及在线演示。
-- 复现材料：论文提供了详细的评估设置（附录A.3）、三种输入配置的评估提示模板（附录A.4）以及数据集构建流程，复现信息充分。
-- 论文中引用的开源项目：质量控制部分使用了Qwen2-VL、Video-LLaMA2、OneLLM等开源模型进行自动化验证。评估部分引用了大量作为基线的开源MLLMs。
+- 代码：论文中提供了代码仓库链接：`https://github.com/iftachShoham/AIDD`。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：使用了公开的数据集MusicNet和MAESTRO，并说明了遵循各自的标准划分。未提供额外数据。
+- Demo：论文中未提及在线演示（Demo）链接。
+- 复现材料：论文在附录（Supplementary Material）中提供了详尽的复现说明，包括关键超参数表（Table 8）、训练环境（单卡A6000 GPU）和训练时长。
+- 论文中引用的开源项目：
+    1.  WavTokenizer（Ji et al., 2024）：用于音频分词与解码。
+    2.  Diffusion Transformer (DiT)（Peebles & Xie, 2023）：作为扩散模型的架构基础。
+    3.  离散扩散建模框架（Lou et al., 2024）：提供了DWDSE损失等核心理论。
+    4.  UniCodec（Jiang et al., 2025）：作为替代tokenizer进行对比实验。
+    5.  旋转位置编码 (RoPE)（Su et al., 2024）。
 
 📌 **核心摘要**
 
-1.  问题：当前多模态大语言模型（MLLMs）的评估主要集中在视觉-语言任务上，忽略了音频这一关键模态，导致对模型真实世界多模态能力的评估不完整。已有的音频-视觉基准或任务单一、场景简单，或质量参差不齐。
-2.  方法核心：提出了WorldSense，第一个旨在评估MLLMs对真实世界全模态（视觉+音频+文本）视频理解能力的基准。其核心设计原则是强调音视频信息的强耦合，使得回答每个问题都必须同时利用视觉和听觉线索。
-3.  创新点：与已有基准相比，WorldSense的新颖之处在于：(1) 首次全面评估音视频耦合的实时视频理解；(2) 数据集包含多样化的1,662个音视频同步视频，覆盖8个领域、67个子类别，以及3,172个多选题，任务涵盖26类认知层次；(3) 所有QA对由80名专家标注员进行多轮人工标注和校正，并辅以MLLM自动化验证，确保高质量。
-4.  主要实验结果：对多种开源和专有MLLMs进行了广泛评估。结果显示，当前开源音频-视觉模型表现接近随机猜测（约25%准确率），远低于仅处理视觉的模型。最好的专有模型Gemini 2.5 Pro也仅达到65.1%的准确率，表明模型在真实世界全模态推理上存在显著差距。消融实验表明，原始音频信号比文本转录能提供额外性能增益。具体结果见下表。
-
-主要实验结果表（摘要）
-
-| 模型类别 | 代表模型 | 平均准确率（%） |
-| :--- | :--- | :--- |
-| 开源音频-视觉MLLMs | Qwen3-Omni (7B) | 54.0 |
-| 开源视频MLLMs | LLaVA-Video (7B) | 40.2 |
-| 专有MLLMs | Gemini 2.5 Pro | 65.1 |
-
-5.  实际意义：WorldSense为评估和推动MLLMs向更人类化的真实世界全模态理解发展提供了一个高质量的基准平台，其设计原则和评估结果为未来模型在多模态信息融合、音频理解等方面的改进提供了明确指引。
-6.  主要局限性：评估框架限于选择题，无法评估模型生成开放式回答或进行复杂推理链展示的能力；基准本身没有提出解决模型现有缺陷的新方法。
+1.  问题：音频修复旨在恢复音频信号中缺失或损坏的片段，特别是在缺失区域较大时，现有方法（如连续扩散模型）性能会下降，难以保持语义连贯性和时间平滑性。
+2.  核心方法：提出AIDD，首个将离散扩散模型应用于token化音乐表示的音频修复框架。它首先使用预训练的WavTokenizer将音频压缩为离散token序列，然后在离散空间中应用基于Transformer的扩散模型进行修复。
+3.  创新性：方法的新颖之处在于：1）首次在离散token空间执行音频修复的扩散过程；2）提出基于跨度的掩蔽策略，模拟从局部到全局的结构化损坏；3）引入基于导数的正则化损失，约束预测token序列的时间平滑性。
+4.  主要结果：在MusicNet和MAESTRO数据集上，对于150ms至750ms的缺失段，AIDD在FAD、LSD、ODG等客观指标和MOS主观评分上均优于或匹配多个强基线。例如，在MusicNet上300ms缺失段，AIDD的FAD比CQT-Diff+低约25%（3.549 vs. 4.652）；在MAESTRO上375ms缺失段，AIDD的ODG得分为-2.303，优于所有基线。消融实验证实了所提损失和策略的有效性。
+5.  实际意义：为音乐录音修复、数据丢失填补等场景提供了新方案，并证明了离散扩散模型在音频序列建模上的可行性，为token-based生成模型开辟了新方向。
+6.  主要局限性：修复效果受限于底层tokenizer（WavTokenizer）的质量和带宽（24kHz）；存在训练与推理时掩蔽顺序不匹配的问题；与基于波形或频谱图的方法进行跨域比较存在偏差。
 
 ---
 

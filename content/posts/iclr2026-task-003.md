@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 图像分类 论文列表"
+title: "ICLR 2026 - 声源定位 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["图像分类"]
+tags: ["声源定位"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 图像分类 方向论文"
+description: "共 1 篇 ICLR 2026 声源定位 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 图像分类
+# ICLR 2026 - 声源定位
 
 共 **1** 篇论文
 
@@ -18,38 +18,49 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Better Together: Leveraging Unpaired Multimodal Data for Str](/audio-paper-digest-blog/posts/2026-05-03-better-together-leveraging-unpaired-multimodal) | 7.5分 | 前25% |
+| 🥇 | [Physics-Informed Audio-Geometry-Grid Representation Learning](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](/audio-paper-digest-blog/posts/2026-05-03-better-together-leveraging-unpaired-multimodal)
+### 🥇 [Physics-Informed Audio-Geometry-Grid Representation Learning for Universal Sound Source Localization](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid)
 
-✅ **7.5/10** | 前25% | #图像分类 | #多模态模型 | #自监督学习 #音频分类
+🔥 **8.0/10** | 前25% | #声源定位 | #表示学习 | #麦克风阵列 #鲁棒性
 
 👥 **作者与机构**
 
--   第一作者：Sharut Gupta (MIT CSAIL)
--   通讯作者：未说明
--   作者列表：Sharut Gupta (MIT CSAIL)、Shobhita Sundaram (MIT CSAIL)、Chenyu Wang (MIT CSAIL)、Stefanie Jegelka (TU Munich, MIT CSAIL)、Phillip Isola (MIT CSAIL)
+-   第一作者：Min-Sang Baek（汉阳大学电子工程系）
+-   通讯作者：Joon-Hyuk Chang（汉阳大学电子工程系）
+-   作者列表：Min-Sang Baek（汉阳大学电子工程系）、Gyeong-Su Kim（汉阳大学电子工程系）、Donghyun Kim（汉阳大学电子工程系）、Joon-Hyuk Chang（汉阳大学电子工程系）
+
+#
 
 💡 **毒舌点评**
 
-这篇论文的最大亮点在于其理论视角和实验设计的完整性，成功论证了“不配对数据也能提升性能”这一直觉，并提供了一个极其简洁（权重共享）却有效的框架。然而，其明显短板是理论分析强依赖于线性假设，对于更复杂的深度非线性模型，其“Fisher信息累加”的直观解释能否直接迁移存在疑问；同时，尽管实验广泛，但文中承认未主动建模和控制“模态冲突”，这在实际复杂应用中可能是一个风险点。
+本文的亮点在于其系统性和完整性：它不是提出一个孤立的新模块，而是构建了一个完整的、旨在解决声源定位“通用化”难题的框架，并细致地从物理（LNuDFT, rMPE）和表示学习（AGG-RL）两个维度加以强化。然而，其短板在于“通用性”的实现部分依赖于动态变化的网格和几何输入，这虽然避免了重训练，但引入了额外的计算开销（Gridnet），并且论文并未充分探讨其在超大规模阵列或极端动态场景下的实时性瓶颈。
+
+#
+
+🔗 **开源详情**
+
+-   代码：提供官方GitHub仓库链接：https://github.com/BaekMS/Audio-Geometry-Grid_Representation-Learning
+-   模型权重：论文中未提及公开预训练模型权重。
+-   数据集：论文使用了公开的LOCATA（真实录音）、LibriSpeech、MS-SNSD、TIMIT、ESC-50等数据集，未提供自有的合成数据生成代码或数据（但详细描述了生成算法，算法3）。
+-   Demo：论文中未提及在线演示。
+-   复现材料：提供了极其详尽的复现材料，包括：完整的模型架构描述和示意图（附录A.3, A.4， 图4，5）、训练超参数设置（附录A.9，表6）、数据生成详细步骤和参数（附录A.10，算法3）、评估指标定义（附录A.11）以及损失函数和峰值检测算法（附录A.7, A.8）。
+-   引用的开源项目：论文中明确提到使用了开源工具`gpuRIR`进行房间脉冲响应模拟，并使用了`fvcore`库进行计算复杂度分析。
 
 📌 **核心摘要**
 
-1.  问题：传统多模态学习严重依赖昂贵且稀缺的配对数据（如图像-文本对）。论文旨在探究一个更根本的问题：即使没有配对关系，来自辅助模态（如文本）的独立数据能否直接增强目标模态（如图像）的表示学习？
-2.  方法核心：提出“不配对多模态学习器”（UML）。其核心思想是让一个模型以交替方式处理来自不同模态的输入（如图像、文本、音频），并强制共享所有网络参数。模型在每个模态上独立进行训练（自监督或监督），但由于共享权重，梯度会在参数上累积，从而隐式地利用不同模态间共享的语义结构，无需显式对齐。
-3.  创新与对比：新在利用了不配对数据，而非依赖配对数据或复杂的对齐目标（如对比学习、最优传输）。与仅使用单模态数据或需要配对的传统多模态方法相比，UML框架更通用，数据要求更低。
-4.  主要实验结果：
-    *   在多个图像分类基准（如Stanford Cars， Caltech101）和少样本设置下，使用不配对文本数据训练的UML持续优于仅用图像的基线。例如，在Stanford Cars数据集上，全量微调下UML从79.45%提升至86.39%（见Table 2）。
-    *   在音频分类任务（ImageNet-ESC）上，使用不配对的图像和文本数据也能提升性能（见图6）。
-    *   理论分析表明，在特定设置下，来自模态Y的一个样本对提升模态X表示的贡献，可能大于来自X自身的一个额外样本（见图3）。
-    *   定量分析了模态间的“交换率”，发现对于CLIP编码器，1张图像约等于228个单词（见图8）。
-5.  实际意义：为医疗影像、科学数据、机器人等领域提供了新思路——这些领域常有丰富的辅助模态数据（文本报告、音频日志）但缺乏配对。UML可以低成本地利用这些数据来增强核心单模态模型。
-6.  主要局限：理论分析基于线性数据生成假设；未深入研究和解决联合训练中可能出现的梯度干扰和模态崩溃问题；实验主要在分类任务上验证，生成任务的适用性未知；未开源代码。
+1.  问题：当前基于深度神经网络的声源定位（SSL）方法大多受限于固定的麦克风阵列几何和预定义的离散方向（DOA）网格，导致泛化能力和可扩展性不足。
+2.  方法：提出音频-几何-网格表示学习（AGG-RL）框架，包含音频-几何表示网络（AuGeonet）和网格表示网络（Gridnet），在共享潜在空间中对齐音频-几何特征与网格特征，从而支持任意几何和网格的定位。同时引入两个物理信息组件：可学习的非均匀离散傅里叶变换（LNuDFT），自适应聚焦于信息丰富的频率区间；以及相对麦克风位置编码（rMPE），以相对坐标形式编码阵列几何。
+3.  新意：该框架首次将表示学习思想系统地应用于SSL，联合建模音频、几何和网格三者的相互关系。LNuDFT和rMPE通过引入符合声学物理规律的归纳偏置，提升了特征的泛化能力和可解释性。
+4.  实验：在合成与真实数据集上的实验表明，AGG-RL在未见几何（如Eigenmike阵列）和动态配置下显著优于现有基线（如Unet, Neural-SRP, GI-DOAEnet）。例如，在未见条件的Eigenmike数据集上，所提方法MAE为11.24°（ACC10: 72.17%），而次优基线GI-DOAEnetFM的MAE高达93.61°。消融研究验证了每个组件的贡献。
+5.  意义：该工作为实现跨多样场景的通用空间音频感知提供了有前景的方向，推动了SSL从“专用”到“通用”的发展。
+6.  局限：Gridnet的引入增加了计算和参数开销；性能在训练数据分布外的极端场景下仍可能下降；论文未深入探讨在超实时或资源极度受限设备上的部署。
+
+#
 
 ---
 

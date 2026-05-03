@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 信号表示 论文列表"
+title: "ICLR 2026 - 人像动画 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["信号表示"]
+tags: ["人像动画"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 信号表示 方向论文"
+description: "共 1 篇 ICLR 2026 人像动画 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 信号表示
+# ICLR 2026 - 人像动画
 
 共 **1** 篇论文
 
@@ -18,53 +18,44 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured) | 8.5分 | 前25% |
+| 🥇 | [InterActHuman: Multi-Concept Human Animation with Layout-Ali](/audio-paper-digest-blog/posts/2026-05-03-interacthuman-multi-concept-human-animation-with) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured)
+### 🥇 [InterActHuman: Multi-Concept Human Animation with Layout-Aligned Audio Conditions](/audio-paper-digest-blog/posts/2026-05-03-interacthuman-multi-concept-human-animation-with)
 
-🔥 **8.5/10** | 前25% | #信号表示 | #神经网络架构 #低秩分解 | #神经网络架构 #低秩分解
+🔥 **8.0/10** | 前25% | #人像动画 | #多模态模型 | #扩散模型 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Saanjali Maharaj（多伦多大学）
-- 通讯作者：Prasanth B. Nair（多伦多大学）
-- 作者列表：Saanjali Maharaj（多伦多大学）、Prasanth B. Nair（多伦多大学）
+- 第一作者：Zhenzhi Wang (The Chinese University of Hong Kong)
+- 通讯作者：Jianwen Jiang (ByteDance)
+- 作者列表：Zhenzhi Wang1 (The Chinese University of Hong Kong), Jiaqi Yang2 (ByteDance), Jianwen Jiang2B (ByteDance), Chao Liang2 (ByteDance), Gaojie Lin2 (ByteDance), Zerong Zheng2 (ByteDance), Ceyuan Yang2 (ByteDance), Yuan Zhang2 (ByteDance), Mingyuan Gao2 (ByteDance), Dahua Lin1 (The Chinese University of Hong Kong) (注：表示同等贡献，B表示通讯作者)
 
 💡 **毒舌点评**
 
-亮点： 论文提出了极具巧思的LRNN架构，用“乘积结构激活”将低秩分解思想从压缩转向表达，并给出了扎实的理论分析（如缓解维度诅咒），在图像/音频/PDE等多个信号表示任务上实现了肉眼可见的、对SIREN等方法的全面碾压，复现代码已开源。
-短板： 论文在公平对比上略显“鸡贼”，主要与SIREN/SPDER对比，而未与同为可学习激活的KANs进行公平的参数量对比（仅引用了KANs论文的结果，且声称KANs参数未知），且理论定理成立的前提假设较强，对于不具备“低阶ANOVA分解”特性的函数，其优势可能不明显。此外，乘积结构带来的内存占用挑战虽被提及，但未在实验中充分量化和解决。
+亮点： 该研究精准地抓住了当前“多概念”音频驱动动画的痛点——全局条件注入导致的身份混淆，并为此设计了一套优雅的“显式布局预测+迭代式局部注入”的解决方案，思路清晰，实验证据链完整。
+短板： 论文的核心贡献高度依赖于一个强大的视频生成基座模型和精准的自动掩码标注流水线，这意味着其性能上限可能受限于基础模型能力与数据质量，而非方法本身，通用性存疑。
 
 🔗 **开源详情**
 
-- 代码：论文提供了完整的开源代码仓库链接：https://github.com/dacelab/lrnn。
-- 模型权重：论文中未提及公开预训练模型权重。
-- 数据集：实验中使用的数据集（如ImageNet, DIV2K, GTZAN, LibriSpeech, CT数据）为公开数据集，论文未提供新的数据集。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文提供了详尽的附录（B-I节），���含架构规格、所有实验的超参数、训练细节、消融研究设置，复现信息充分。
-- 引用的开源项目：论文实现基于PyTorch，并引用了Adam优化器。代码库可能依赖于其他开源工具，但论文正文未具体列出依赖项。
+- 代码：论文中提供了代码仓库链接：`https://zhenzhiwang.github.io/interacthuman/`。
+- 模型权重：未提及是否公开预训练权重。
+- 数据集：论文中提及构建了超过260万个三元组的数据集，但未说明是否公开或提供获取方式。
+- Demo：论文提供了在线视频演示页面（`https://zhenzhiwang.github.io/interacthuman/`）。
+- 复现材料：论文提供了详细的算法伪代码（Algorithm 1），并说明基于公开模型（Wan2.1）和框架（PyTorch + FSDP）实现。也提供了部分训练细节（如10,000步，32 A800 GPU，lr=3e-5）和数据集处理代码的指引。
+- 引用的开源项目：Wan2.1 (视频扩散预训练模型)、Qwen2.5-VL (视觉语言模型，用于重述和数据标注)、Grounding-SAM2 (用于生成掩码)、wav2vec 2.0 (音频特征提取)、Florence-2 (目标检测)、RTMpose (姿态估计)、PySceneDetect, PaddleOCR, Q-align, Raft, SyncNet (数据集构建工具)。
 
 📌 **核心摘要**
 
-1.  要解决什么问题：现代神经网络的固定激活函数（如ReLU、Tanh）限制了其自适应捕获高阶交互的能力，并存在谱偏差问题，难以高效表示复杂信号。
-2.  方法核心：提出深度低秩分离神经网络（LRNNs）。其核心是为每个神经元设计可学习的乘积结构激活函数。该函数由多个可学习的一维分量函数的乘积构成，能自动合成丰富的频率分量。
-3.  与已有方法相比新在哪里：相较于标准MLP（固定激活，加法合成频率）和专门设计的INR激活（如SIREN，固定但可调频率），LRNNs首次实现了激活函数本身的结构化、数据驱动学习。其乘积结构在表达高阶交互和合成复杂频谱方面具有内在效率。
-4.  主要实验结果：
-    *   图像表示：在1000张ImageNet图像上，LRNN-SPDER以~200k参数达到40dB PSNR的成功率为100%，而SIREN和SPDER分别仅为1.8%和26.4%。在摄像机图像上，LRNN-SPDER达到107.9 dB PSNR，远超SPDER的49.0 dB。
-    *   音频表示：在4个音频片段上，LRNN-SPDER的MSE比SIREN和SPDER低3-11倍，频率保真度更高（如下表）。
-        | 方法 | bach MSE (×10⁻⁴) | counting MSE (×10⁻⁴) | reggae MSE (×10⁻⁴) | reading MSE (×10⁻⁴) |
-        |---|---|---|---|---|
-        | SIREN | 1.21 | 2.77 | 21.5 | 9.98 |
-        | SPDER | 1.12 | 2.29 | 24.8 | 8.88 |
-        | LRNN-SPDER | 0.10 | 0.72 | 7.93 | 1.86 |
-    *   PDE求解：在高频泊松方程上，16k参数的LRNN比132k参数的SIREN误差更低（频率n=2时），并比KANs低100-1000倍。
-    *   CT重建：在稀疏视角CT重建任务中，LRNN以~180k参数达到最高PSNR（29.13 dB）和SSIM（0.7455），并生成无伪影的更清晰图像。
-5.  实际意义：为信号表示（图像、音频、PDE）提供了一种更强大、参数更高效的表征工具。在医学成像（减少CT辐射剂量）和科学计算（高效求解PDE）领域具有直接应用价值。
-6.  主要局限性：理论定理依赖于函数具有低秩/可分结构假设；乘积结构可能导致更高的内存占用和训练开销（尽管论文提出了优化思路）；在分类等非表示任务上的潜力尚未充分探索。
+1. 要解决什么问题？ 现有端到端音频驱动人体动画方法大多假设处理单一对象，并将文本、图像、音频等条件全局注入。这导致它们无法在生成包含多人或人-物交互的视频时，为每个身份精确、独立地绑定其对应的视觉参考和音频信号，从而引发身份混淆和音频错配。
+2. 方法核心是什么？ 论文提出了InterActHuman框架。其核心是引入一个轻量级的掩码预测器，在扩散模型的去噪过程中，从噪声潜在特征和多个参考图像特征中自动预测每个概念（如每个人）在视频帧中的时空布局（掩码）。在推理时，采用迭代缓存策略，即用第k步预测的掩码来指导第k+1步音频条件的局部注入（通过掩码加权的交叉注意力），从而打破“鸡生蛋蛋生鸡”的依赖，实现多模态条件与身份在空间上的精准对齐。
+3. 与已有方法相比新在哪里？ 与隐式学习身份-条件关系的多概念定制方法（如Phantom, ConceptMaster）和全局注入的动画方法（如OmniHuman）不同，本工作显式地建模并预测了每个概念的布局，并将此布局作为统一接口，同时约束了视觉参考图像的注入和音频条件的局部化匹配，实现了更精确、更可控的多身份动画生成。
+4. 主要实验结果如何？ 实验表明，该方法在多人音频驱动视频生成任务上显著优于基线。例如，在两人对话测试集上，其FVD（视频质量指标）从OmniHuman的33.895降至22.881，Sync-D（唇形同步距离）从9.482降至6.670（表1）。消融实验（表4）证明，动态预测掩码的策略在Sync-D和FVD上均优于全局音频注入、ID嵌入和固定掩码方案。用户研究（表2）也显示该方法在多概念定制任务中获得最高平均分和首选率。
+5. 实际意义是什么？ 该工作为多身份、多模态交互式视频生成提供了一个有效的框架和基线，有望推动更复杂的虚拟人对话、影视预演、个性化内容创作等应用的发展。
+6. 主要局限性是什么？ 论文指出，其训练数据主要来自2-3人的交互视频，可能限制了模型对更多人数（>3）或更罕见交互场景的泛化能力。此外，数据集的构建高度依赖于强大的视觉语言模型和自动标注工具链，其噪声和偏差可能影响模型性能。
 
 ---
 

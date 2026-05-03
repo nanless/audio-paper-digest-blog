@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视觉问答 论文列表"
+title: "ICLR 2026 - 视频摘要 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["视觉问答"]
+tags: ["视频摘要"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视觉问答 方向论文"
+description: "共 1 篇 ICLR 2026 视频摘要 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视觉问答
+# ICLR 2026 - 视频摘要
 
 共 **1** 篇论文
 
@@ -18,58 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Can Vision-Language Models Answer Face to Face Questions in ](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face) | 7.0分 | 前25% |
+| 🥇 | [TripleSumm: Adaptive Triple-Modality Fusion for Video Summar](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Can Vision-Language Models Answer Face to Face Questions in the Real-World?](/audio-paper-digest-blog/posts/2026-05-03-can-vision-language-models-answer-face-to-face)
+### 🥇 [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
 
-✅ **7.0/10** | 前25% | #视觉问答 | #微调 | #多模态模型 #数据集
+✅ **7.5/10** | 前25% | #视频摘要 | #多模态模型 | #音视频 #跨模态
 
 👥 **作者与机构**
 
-- 第一作者：Reza Pourreza (Qualcomm AI Research)
-- 通讯作者：未明确说明
-- 作者列表：Reza Pourreza (Qualcomm AI Research)、Rishit Dagli (University of Toronto，工作于Qualcomm AI Research实习期间完成)、Apratim Bhattacharyya (Qualcomm AI Research)、Sunny Panchal (Qualcomm AI Research)、Guillaume Berger (Qualcomm AI Research)、Roland Memisevic (Qualcomm AI Research)
+- 第一作者：Sumin Kim (首尔大学)
+- 通讯作者：Yoori Oh (首尔大学)， Joonseok Lee (首尔大学)
+- 作者列表：Sumin Kim（首尔大学）、Hyemin Jeong（首尔大学）、Mingu Kang（首尔大学）、Yejin Kim（首尔大学）、Yoori Oh（首尔大学）、Joonseok Lee（首尔大学）
 
 💡 **毒舌点评**
 
-本文最大的价值在于“撕下了华丽表象”，通过构建一个看似简单的实时问答基准（QIVD），无情地揭示了当前最强多模态模型在“动态世界交互”这一基本能力上的集体短板——它们仍像是盯着离线照片的“学者”，而非能应对生活场景的“伙伴”。然而，数据集本身规模有限（2900个样本），且评估高度依赖一个LLM裁判，这使得结论的普适性和绝对准确性存在一定疑问。
+亮点是作者不仅提出了一个设计精巧、性能领先的融合模型（TripleSumm），还“顺手”解决了一个领域痛点——构建了第一个真正意义上大规模、三模态对齐的视频摘要基准数据集MoSu，这对后续研究是重大贡献。短板在于，其核心的“自适应”融合虽然有效且经过消融验证，但本质上仍是基于注意力权重的软选择，缺乏对模态间更深层次语义依赖关系的建模探索。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：论文评估了多个公开模型（如Qwen, VideoLLaMA系列），但未提及自己微调后的模型权重是否公开。
-- 数据集：QIVD数据集已公开，可通过论文提供的链接（https://www.qualcomm.com/developer/software/qualcomm-interactive-video-dataset-qivd）获取。
+- 代码：论文中提供了代码仓库链接 `https://github.com/smkim37/TripleSumm`。
+- 模型权重：论文中未明确提及是否公开预训练模型权重。
+- 数据集：引入了新的大规模三模态数据集MoSu，并说明代码和数据集均已开源，获取方式指向上述GitHub仓库。
 - Demo：论文中未提及在线演示。
-- 复现材料：论文在附录D中提供了详细的实现细节、超参数设置（表D.2）、以及LLM评估用的提示词（表D.3, D.4），为复现评估流程提供了充分信息。
-- 论文中引用的开源项目：依赖Whisper、Whisper-Streaming、各种VideoLLaMA/Qwen模型、BEATs、SigLIP、DeepSpeed等开源项目和库。
+- 复现材料：论文附录提供了极其详细的实现细节，包括完整的超参数表（表I）、数据预处理步骤、摘要生成流程、以及详细的消融实验设置，复现基础非常扎实。
+- 引用的开源项目/模型：论文使用了多个开源预训练模型进行特征提取，包括：视觉- CLIP (`openai/clip-vit-large-patch14`)、文本- RoBERTa (`FacebookAI/roberta-base`)、音频- AST (`MIT/ast-finetuned-audioset-10-10-0.4593`)、以及用于生成文本描述的VL模型 `Qwen/Qwen2-VL-7B-Instruct`。
 
 📌 **核心摘要**
 
-1.  问题：当前的视觉语言模型（LMM）在离线分析静态图像或完整视频方面表现出色，但能否在真实世界中，通过实时摄像头和麦克风输入，进行自然的“面对面”问答交互？这是一个衡量AI助手和机器人实用性的关键但被忽视的能力。
-2.  方法核心：作者提出了Qualcomm Interactive Video Dataset (QIVD)，这是一个全新的在线问答基准数据集。视频由用户边录制边提问，系统需要实时回答。数据集标注了问题文本、答案文本以及最优回答时刻（时间戳），以评估模型的时序理解与交互时机把握能力。
-3.  创新点：与大多数离线视频问答数据集不同，QIVD是“在线”且“自我包含”的（问题嵌入音频），要求模型处理实时流、解决指代歧义（如“这个”）、并判断“何时作答”。论文通过详尽的实验，系统评估了多种闭源（GPT-4o, Gemini）和开源模型在此任务上的表现。
-4.  主要实验结果：
-    *   整体性能差距：即使在离线设置下提供完美问题和回答时刻，最强模型（GPT-4o: 58.76%， Qwen3-VL-8B: 60.07%）的正确率也远低于人类子集（87.33%）。
-    *   失败模式分析：模型在动作计数（Action Counting）和音频视觉（Audio-Visual）任务上表现尤其糟糕，表明其动态时序推理和跨模态融合能力存在严重不足。
-    *   微调效果：在QIVD上微调VideoLLaMA2.1-7B-AV模型，可大幅提升其在特定类别（如动作计数提升+16.96%，音频视觉提升+17.39%）的表现，证明了针对性数据的价值。
-    *   时机的重要性：实验（图3）表明，精确的“何时作答”时机对最终答案正确率有显著影响。
-
-| 模型 (离线设置) | 正确率 (Corr. ↑) | BERT ↑ | METEOR ↑ | BLEU ↑ | ROUGE-L ↑ |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 人类 (子集) | 87.33 | 93.01 | 53.21 | 17.40 | 49.76 |
-| GPT-4o | 58.76 | 89.36 | 51.18 | 15.72 | 42.55 |
-| Qwen3-VL-8B | 60.07 | 87.58 | 36.72 | 6.64 | 35.89 |
-| VideoLLaMA2-72B | 50.83 | 92.29 | 51.13 | 16.12 | 45.76 |
-| VideoLLaMA3-7B | 56.38 | 91.63 | 48.56 | 12.72 | 43.84 |
-| VideoLLaMA2.1-7B-FT (AV) | 未直接列出整体正确率 | - | - | - | - |
-表：部分关键模型在QIVD离线设置（使用GT问题与时间戳）下的性能对比。
-
-5.  实际意义：该工作为评估和推动能够进行实时、交互式、情境感知的多模态AI系统建立了重要基准。它指明了未来研究需要重点突破的瓶颈：动态时序推理、跨模态实时融合以及对话时机感知。
-6.  主要局限性：数据集规模（2900个视频）相对较小，可能限制了所训练模型的泛化能力。评估依赖于一个LLM裁判，虽然进行了人工比对，但其绝对准确性有待商榷。此外，论文未提出一种全新的、端到端训练的在线交互模型架构，而是更多地评估现有模型并组合现有模块。
+1. 问题：现有视频摘要方法多采用静态或单一模态融合策略，无法动态捕捉视频内容中不同模态（视觉、文本、音频）重要性随时间变化的特点，且缺乏全面的三模态基准数据集。
+2. 方法核心：提出TripleSumm模型，其核心包含两个组件：多尺度时间模块（MST）和跨模态融合模块（CMF）。MST采用层级滑动窗口注意力捕获不同时间尺度的依赖关系；CMF则以一个中立的“融合token”作为查询，通过交叉注意力动态地对同一时间步的三种模态特征进行加权融合。
+3. 新意：与已有简单或静态的融合方法不同，TripleSumm实现了帧级别的自适应模态权重学习。此外，论文发布了首个大规模三模态视频摘要数据集MoSu（52,678个视频，涵盖视觉、文本、音频），解决了该领域长期的数据瓶颈。
+4. 主要结果：在包括MoSu在内的四个基准测试中取得SOTA性能。在MoSu上，其Kendall’s τ (0.351) 和 Spearman’s ρ (0.472) 显著超越最强基线CFSum (0.277, 0.374)。消融实验证实了自适应融合（Dynamic）优于静态（Static）和全局（Global）融合策略，以及多模态输入优于单/双模态。模型参数量（1.37M）远小于多数基线，计算效率高。
+5. 实际意义：为海量短视频内容的高效浏览、长视频快速理解提供了更优解决方案，尤其适用于音乐、教程、体育等音频或文本信息关键的场景。新数据集为多模态视频理解研究奠定了基础。
+6. 主要局限性：论文遵循传统的“帧重要性评分-分割-选择”流程，而非端到端生成摘要视频片段，这在一定程度上限制了摘要的连贯性和创造性。此外，模型的融合机制仍偏向于数据驱动的注意力加权，缺乏显式的、可解释的模态间逻辑推理。
 
 ---
 

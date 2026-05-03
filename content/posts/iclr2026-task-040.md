@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["音频分类"]
 categories: [iclr-2026]
-description: "共 4 篇 ICLR 2026 音频分类 方向论文"
+description: "共 3 篇 ICLR 2026 音频分类 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 音频分类
 
-共 **4** 篇论文
+共 **3** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,153 +18,153 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [A Brain-Inspired Gating Mechanism Unlocks Robust Computation](/audio-paper-digest-blog/posts/2026-05-03-a-brain-inspired-gating-mechanism-unlocks-robust) | 8.5分 | 前25% |
-| 🥈 | [PACE: Pretrained Audio Continual Learning](/audio-paper-digest-blog/posts/2026-05-03-pace-pretrained-audio-continual-learning) | 8.0分 | 前25% |
-| 🥉 | [Unmute the Patch Tokens: Rethinking Probing in Multi-Label A](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in) | 7.5分 | 前25% |
-| 4. | [Resp-Agent: An Agent-Based System for Multimodal Respiratory](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal) | 7.5分 | 前25% |
+| 🥇 | [Unmute the Patch Tokens: Rethinking Probing in Multi-Label A](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in) | 8.5分 | 前25% |
+| 🥈 | [PACE: Pretrained Audio Continual Learning](/audio-paper-digest-blog/posts/2026-05-03-pace-pretrained-audio-continual-learning) | 8.5分 | 前10% |
+| 🥉 | [SNAP-UQ: Self-supervised Next-Activation Prediction for Sing](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [A Brain-Inspired Gating Mechanism Unlocks Robust Computation in Spiking Neural Networks](/audio-paper-digest-blog/posts/2026-05-03-a-brain-inspired-gating-mechanism-unlocks-robust)
+### 🥇 [Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in)
 
-🔥 **8.5/10** | 前25% | #音频分类 | #脉冲神经网络 | #鲁棒性 #神经形态计算
+🔥 **8.5/10** | 前25% | #音频分类 | #自监督学习 | #探针评估 #生物声学
 
 👥 **作者与机构**
 
-- 第一作者：Qianyi Bai（天津大学智能与计算学院；天津大学计算机科学与技术学院）
-- 通讯作者：Qiang Yu（天津大学智能与计算学院，认知计算与应用天津市重点实验室）
-- 作者列表：Qianyi Bai（天津大学智能与计算学院；天津大学计算机科学与技术学院）、Haiteng Wang（天津大学智能与计算学院；天津大学未来技术学院）、Qiang Yu（天津大学智能与计算学院，认知计算与应用天津市重点实验室）
+- 第一作者：Lukas Rauch（University of Kassel）
+- 通讯作者：未说明（论文未明确标注通讯作者，但Christoph Scholz承担了概念化、资助获取和写作编辑工作，可能是负责人）
+- 作者列表：
+    - Lukas Rauch（University of Kassel）
+    - René Heinrich（University of Kassel, Fraunhofer IEE）
+    - Houtan Ghaffari（Ghent University）
+    - Lukas Miklautz（ML and Systems Biology, MPI of Biochemistry）
+    - Ilyass Moummad（INRIA Montpellier）
+    - Bernhard Sick（University of Kassel，提供资金与资源）
+    - Christoph Scholz（University of Kassel, Fraunhofer IEE）
 
 💡 **毒舌点评**
 
-亮点：将生物神经元的动态电导机制形式化为功能性的“门控”，并建立了与LSTM的理论联系，为SNN的鲁棒性提供了生物可信的增强方案，实验设计（特别是未见噪声评估）严谨。  
-短板：核心创新偏向于模型改进，在任务广度（仅限音频分类）和硬件部署验证（仅理论能耗估算）上存在明显短板，离真正的“解锁”鲁棒计算和广泛实用性尚有距离。
+本文的亮点在于其系统性的基准测试和清晰的工程洞察，它用无可辩驳的实验数据揭示了标准线性探针在多标签音频SSL评估中的“虚假无能”，并提出了一个简洁有效的解决方案。但短板也很明显：提出的二值化原型探针虽有效，其性能上限仍未超越微调，这使得其“替代微调作为SOTA评估范式”的终极目标略显乏力；此外，对探针本身如何进一步逼近或揭示模型潜力上限的理论探讨相对有限。
 
 🔗 **开源详情**
 
-- 代码：论文中承诺公开代码仓库，但未在文中提供具体链接。
-- 模型权重：未提及公开具体权重。
-- 数据集：使用的是公开的基准数据集（TI46Alpha, TIDIGITS, SHD, SSC），论文未提供自有数据集。
-- Demo：未提及在线演示。
-- 复现材料：论文提供了极其详细的超参数设置表（表5）、网络结构、训练策略（优化器、学习率、轮数）以及基线模型的复现指导，附录中还包含了算法伪代码和梯度推导，复现信息非常充分。
-- 论文中引用的开源项目：论文中引用的开源工作包括GLIF, ALIF, Heterogeneous LIF, TC-LIF等模型的公开实现，以及SpikingJelly框架。
+-   代码：提供完整代码仓库链接：`https://github.com/lurauch/unmute-patch-tokens/`。
+-   模型权重：论文未提供作者训练的探针模型权重。但所有使用的预训练编码器（A-MAE, ASiT等）均为公开模型，论文假设使用它们的官方权重。
+-   数据集：提供了三个新构建数据集的Hugging Face Hub链接：`https://huggingface.co/datasets/lrauch/desed`, `https://huggingface.co/datasets/lrauch/spass`, `https://huggingface.co/datasets/lrauch/urban-sed`。
+-   Demo：未提及在线演示。
+-   复现材料：提供了极其详细的复现信息，包括：
+    -   完整的实验设置（编码器、数据集、池化方法）。
+    -   详尽的超参数搜索范围和协议。
+    -   训练配置（优化器、学习率调度、损失函数等）。
+    -   计算资源消耗的详细估算。
+    -   所有基准测试的完整结果表格（附录A）。
+-   引用的开源项目：论文依赖于其评估的6个预训练编码器的公开实现和权重。未明确列出其他依赖库。
 
 📌 **核心摘要**
 
-1. 问题：传统脉冲神经网络（SNN）采用简化的LIF神经元模型，缺乏生物神经元中动态的电导调节机制，导致其对噪声和时间变化的适应性及鲁棒性不足。
-2. 方法核心：提出动态门控神经元（DGN）模型。其核心是在神经元膜电位方程中引入一个由突触输入活动动态调制的电导项（C_i * D_i），该机制功能上等效于生物启发的“门控”，能自适应地调节膜电位衰减率和信息流。
-3. 新意：与传统静态门控（如GLIF）或简单阈值适应（如ALIF）不同，DGN的门控机制直接源于对生物神经元动态电导的重新建模，且从理论上证明了其在随机扰动下的稳定性优于LIF。论文首次将生物启发的动态门控确立为提升SNN鲁棒计算的关键机制。
-4. 主要实验：在音频分类数据集（TI46Alpha， TIDIGITS）和神经形态数据集（SHD， SSC）上进行评估。在干净数据上，DGN达到或超过了现有SOTA（例如在TIDIGITS上，前馈DGN准确率98.59%，循环DGN达99.10%）。在未见噪声和对抗攻击评估中，DGN表现出显著优势，例如在TIDIGITS数据集上，前馈DGN在加性噪声(p=0.006)下准确率仍保持95.34%，而LIF仅为46.83%；在FGSM攻击(ε=0.003)下，DGN准确率90.35%，LIF仅为39.53%。
-5. 实际意义：为设计更鲁棒、更适应动态环境的脉冲神经网络提供了新的神经元设计范式，桥接了生物机制与人工神经网络中的门控概念，有望提升神经形态芯片在噪声环境下的可靠性。
-6. 主要局限：实验主要集中在语音/音频分类任务，未在视觉等其他SNN主流领域验证泛化性；虽然提供了能耗估算，但缺乏在真实神经形态硬件上的部署和能效实测验证。
+这篇论文旨在解决音频自监督学习（SSL）模型评估中的一个核心矛盾：为何在计算机视觉中常用的轻量级探针评估范式，在音频SSL（特别是多标签分类任务）中却表现不佳，无法反映模型真实潜力并替代昂贵的微调？作者诊断该问题为“全局池化瓶颈”，即标准的[cls]-token或全局注意力等单向量描述符，无法有效聚合音频频谱图中分散、局部化的声音事件信息，导致信息丢失。
+
+其核心方法是提出一种名为“二值化原型探针”的新池化方法。该方法不再将所有令牌压缩为一个全局向量，而是使用一组可学习的、二值化的原型（-1或+1向量），计算每个原型与所有令牌的余弦相似度，并通过最大池化聚合每个原型的匹配分数，最终通过一个线性层将这些分数映射到类别标签。这实现了逐类、多向量的信息聚合。
+
+与已有方法相比，其新颖性在于：1）将原型方法从计算机视觉和生物声学适配到通用音频SSL评估；2）通过二值化（使用STE）实现32倍内存压缩；3）将原型从类别依赖解耦为类别无关，简化了设计。实验证明，该方法在13个数据集、6个编码器的全面基准测试中，系统性地超越了线性探针、注意力池化等所有单向量方法。
+
+主要结果：在核心的as20k多标签数据集上，二值化原型探针比线性探针平均提升14.41%的mAP（见表2）。它显著缩小了冻结模型探针与微调之间的性能差距，例如在as20k上缩小了63%的差距（见图2）。更重要的是，它纠正了线性探针对模型排名的严重扭曲，例如使SSLAM（微调SOTA）从线性探针下的中游跃升至第二名，而ASiT则从第二跌至末位（见图6）。
+
+该工作的实际意义在于，它为音频SSL领域建立了一个更可靠、高效且计算友好的模型评估基准，挑战了追求SOTA性能时对微调的过度依赖。其主要局限性是：1）所提出的探针方法性能仍低于微调，表明池化瓶颈虽被缓解但未完全消除；2）研究主要关注评估方法，对编码器本身如何改进以适应更好的探针探讨有限。
 
 ---
 
 ### 🥈 [PACE: Pretrained Audio Continual Learning](/audio-paper-digest-blog/posts/2026-05-03-pace-pretrained-audio-continual-learning)
 
-🔥 **8.0/10** | 前25% | #音频分类 | #持续学习 | #预训练 #参数高效微调
+🔥 **8.5/10** | 前10% | #音频分类 | #预训练 | #持续学习 #少样本
 
 👥 **作者与机构**
 
-- 第一作者：Chang Li（清华大学心理与认知科学系）
-- 通讯作者：Liyuan Wang（清华大学心理与认知科学系）
-- 作者列表：Chang Li（清华大学心理与认知科学系）、Kanglei Zhou（清华大学心理与认知科学系）、Liyuan Wang（清华大学心理与认知科学系）
+- 第一作者：Chang Li, Kanglei Zhou （共同第一作者）
+- 通讯作者：Liyuan Wang (liyuanwang@tsinghua.edu.cn)
+- 作者列表：Chang Li (清华大学心理与认知科学系), Kanglei Zhou (清华大学心理与认知科学系), Liyuan Wang (清华大学心理与认知科学系)
 
 💡 **毒舌点评**
 
-亮点： 论文没有简单地将视觉领域的持续学习方法套用到音频上，而是通过系统基准测试“诊断”出音频模型的特有病灶（如上游-下游表示失配导致的严重偏移和早期饱和），并据此设计了针对性的“药方”（如层感知适应和子空间投影），这种从问题分析到方法设计的闭环非常扎实。短板： 论文在技术细节上存在选择性模糊，例如，用于计算表示偏移的“未学习模型”的构建（LoRA减法）和梯度投影的SVD计算，其具体实现和计算复杂度对实际部署的影响讨论不足，使得方法的完整复现存在一个“黑箱”。
+亮点：这篇论文堪称“音频持续学习”的奠基性工作之一，首次将预训练模型、参数高效微调（PEFT）与音频的频谱特性结合起来系统研究，并敏锐地指出了直接套用视觉方法会“水土不服”的根本原因，提出的PACE方法在多个严苛的音频基准上取得了显著且稳健的性能提升。短板：提出的多阶段自适应策略（尤其是多会话适应MSA）相比简单的冻结骨干+分析分类器方法（RanPAC），引入了额外的计算和实现复杂度，在追求极致部署效率的场景下可能并非最优选择。
 
 🔗 **开源详情**
 
-- 代码： 论文在“Reproducibility statement”中表示将在接收后发布所有构建的基准、复现的基线以及我们的代码库（“we will release all constructed benchmarks and reproduced baselines along with our codebase”），但论文中未提供具体的代码仓库链接。
-- 模型权重： 论文使用EAT和SSLAM作为预训练骨干，但未提及公开的预训练权重具体获取链接。
-- 数据集： 使用的数据集（ESC-50, US8K, SC2, TIMIT, VocalSet）均为公开数据集，但论文构建的CL任务划分（会话划分）将在其代码库中发布。
-- Demo： 未提及。
-- 复现材料： 论文提供了详细的实验设置（硬件、超参数、数据集统计见Table 5），附录B给出了改进FSA的伪代码（Algorithm 1），有助于复现。
-- 论文中引用的开源项目： 论文代码依赖于或对比了多个开源方法，包括L2P、DualPrompt、S-Prompt++、RanPAC、LoRASub、HiDe-Prompt等持续学习方法，以及EAT、SSLAM等预训练音频模型。
-
-📌 **核心摘要**
-
-1.  问题： 预训练音频模型在面临数据分布持续变化的真实场景时，直接应用视觉领域的参数高效微调（PEFT）持续学习策略会导致性能严重下降。这是因为音频模型侧重低级频谱细节而非结构化语义，导致了严重的上游-下游表示失配。
-2.  方法核心： 提出PACE（Pretrained Audio Continual lEarning）框架。其核心是：1）改进首次会话适应（FSA），通过层感知LoRA和限制性头部学习来避免表示饱和；2）引入多会话适应（MSA），通过自适应子空间正交PEFT（利用LoRA减法和梯度投影）在多个会话中逐步对齐表示，同时约束对旧知识的干扰；3）设计基于频谱变换的边界感知扰动正则化，增强类内紧凑性和类间可分性。
-3.  创新点： a) 首次系统建立音频持续学习基准并揭示其与视觉领域的根本差异；b) 针对音频特性，提出了分阶段的适应策略：前期通过改进FSA精细调整骨干网络，中期通过子空间投影进行受控适应，后期冻结骨干网络；c) 将表示偏移的几何约束（子空间正交）与决策边界的优化（边界感知扰动）相结合。
-4.  主要实验结果： 在六个音频CL基准（3个粗粒度，3个细粒度）上，PACE大幅超越现有基线。例如，在细粒度任务TIMIT-2、TIMIT-3和VocalSet上，性能分别比最强基线提升至少5.3%、4.1%和6.3%，并将与联合训练上界的差距分别缩小至4.3%、1.2%和7.6%。关键消融实验证明每个核心组件（FSA， MSA， 梯度投影，边界感知损失）都带来了显著的性能增益。
-5.  实际意义： 为预训练音频模型在动态环境（如不断变化的语音指令、环境声音）中的持续适应提供了有效且可扩展的解决方案，有助于提升智能语音助手、环境监测等系统的长期鲁棒性。
-6.  主要局限性： 方法引入了额外的计算开销（尽管比其他PEFT方法小），且其性能（尤其是MSA阶段）可能对停止适应的阈值N_stop等超参数有一定敏感性。此外，依赖于二阶统计的解析分类器可能在任务类别数极大或分布极其复杂时面临挑战。
-
----
-
-### 🥉 [Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in)
-
-✅ **7.5/10** | 前25% | #音频分类 | #自监督学习 | #原型学习 #模型评估
-
-👥 **作者与机构**
-
-- 第一作者：Lukas Rauch（University of Kassel）
-- 通讯作者：未明确说明（从作者列表顺序和邮箱推测为第一作者 Lukas Rauch 或通讯作者 Bernhard Sick）
-- 作者列表：
-  - Lukas Rauch（University of Kassel）
-  - René Heinrich（University of Kassel, Fraunhofer IEE）
-  - Houtan Ghaffari（Ghent University）
-  - Lukas Miklautz（ML and Systems Biology, MPI of Biochemistry）
-  - Ilyass Moummad（INRIA Montpellier）
-  - Bernhard Sick（University of Kassel）
-  - Christoph Scholz（University of Kassel, Fraunhofer IEE）
-
-💡 **毒舌点评**
-
-亮点：论文用极其扎实的基准测试（13个数据集，6个模型）揭示了音频SSL领域一个长期被忽视但关键的问题——`[cls]`标记的全局池化瓶颈，并用简单有效的二值化原型探针（`protobin`）漂亮地解决了它，为社区提供了更可靠的模型评估范式。短板：虽然实验充分，但核心方法的理论新颖性有限，主要是对原型网络进行了架构简化（解耦类别、二值化），更像是一次出色的工程优化和系统验证，而非概念层面的突破。
-
-🔗 **开源详情**
-
-- 代码：提供代码仓库链接：`https://github.com/lurauch/unmute-patch-tokens/`
-- 模型权重：未提及提供预训练骨干模型或`protobin`探针的权重。实验使用的是公开可用的SSL骨干模型（如EAT, BEATs）的官方检查点。
-- 数据集：部分数据集（desed, spass, urban-sed）由作者上传至Hugging Face Hub，并提供了链接。
+- 代码：论文在“Reproducibility statement”中承诺“将发布我们所有的基准测试、复现的基线以及我们的代码库”，但当前提供的文本中未提供具体的代码仓库链接。
+- 模型权重：论文使用了EAT和SSLAM预训练模型，但未提及是否将发布PACE微调后的模型权重。
+- 数据集：论文构建了音频CL基准，所使用的原始数据集（ESC-50, US8K等）均为公开数据集。论文承诺将发布构建好的CL基准划分。
 - Demo：未提及。
-- 复现材料：非常充分。论文详细说明了训练设置（优化器、调度器、损失函数）、超参数搜索空间与策略、所有数据集划分细节，以及硬件使用情况。附录中提供了完整的结果表格和消融实验。
-- 引用的开源项目：论文依赖并评估了多个开源的音频SSL模型（A-MAE, BEATs, ASiT, EAT, SSLAM等），以及HEAR、BirdSet等基准测试工具和数据集。
+- 复现材料：论文提供了详细的实验设置（Sec D）、超参数敏感性分析（Sec E.6）、消融实验和额外结果（Sec E），复现信息较为充分。
+- 论文中引用的开源项目：主要依赖预训练模型EAT (Chen et al., 2024) 和 SSLAM (Alex et al., 2025)，以及各类持续学习基线方法的代码实现。
 
 📌 **核心摘要**
 
-1. 要解决的问题：在音频自监督学习（SSL）领域，使用冻结模型加轻量级探针（如线性探针）的评估范式，其性能远逊于全模型微调。作者认为根本原因是全局池化（尤其是使用`[cls]`标记）造成了信息瓶颈，无法有效利用音频表征中分散、局部化的声音事件信息，导致探针质量被低估。
-2. 方法核心：提出二值化原型探针（`protobin`）。它不将整个表征压缩为单个向量，而是学习一组类无关的、二值化的原型（`p_j ∈ {-1, +1}^D`），通过计算每个原型与所有补丁令牌（patch tokens）的余弦相似度，并进行最大池化聚合，生成一个类条件化的、多向量的描述符，最后接线性分类器。
-3. 与已有方法相比新在哪里：
-   - 对抗标准的单向量探针（线性、注意力池化）的信息瓶颈，实现按类、多向量的信息聚合。
-   - 相较于先前的类相关原型方法，进行了关键简化：原型与类别解耦（类无关）、移除了显式正交损失、并引入二值化以大幅减少内存占用（32倍）。简化后性能更鲁棒。
-4. 主要实验结果：在跨越5个通用多标签音频数据集、6个主流音频SSL编码器（及其监督+变体）的广泛基准测试中，`protobin`一致性地超越了所有其他10种探针方法。例如，在as20k数据集上，`protobin`平均比线性探针高出14.41% mAP。它显著缩小了与微调性能的差距，且模型评估排名与线性探针完全不同，揭示了`[cls]`标记作为评估指标的不可靠性。
-5. 实际意义：证明了轻量级探针可以可靠地评估SSL音频模型，挑战了追求AudioSet SOTA必须依赖昂贵微调的惯例，为社区提供了一个更高效、更公平的评估框架。
-6. 主要局限性：方法目前仅在音频分类的评估阶段进行验证；虽然证明了探针可接近微调性能，但探针本身不作为最终部署的模型；研究范围限于音频频谱图模型。
+本文针对预训练音频模型在持续学习（CL）中表现脆弱的问题进行了系统研究。作者首先建立了首个音频CL基准，发现直接将视觉CL方法（如基于PEFT的提示学习）应用于音频会导致严重性能退化，根源在于音频骨干网络更强调底层频谱细节，导致跨会话表征漂移严重。基于此，他们提出PACE方法：在首个任务通过改进的自适应微调（FSA）进行有选择的层适应；在后续任务中，引入自适应子空间正交PEFT，在适配新任务的同时约束对旧任务表征的影响；并设计了基于频谱的边界感知扰动来增强类间分离度。实验在6个音频CL基准上进行，结果显示，PACE显著优于所有现有方法（例如在TIMIT-2上比最强基线高+5.3%），并将与联合训练上限的差距大幅缩小（如在US8K上差距仅为0.6%）。该工作为利用预训练模型构建鲁棒的音频持续学习系统提供了首个完整框架和深刻见解。主要局限在于，其多阶段适应机制在早期会话引入了比基线更高的训练开销。
+
+| 方法         | ESC-50 | US8K  | SC2   | TIMIT-2 | TIMIT-3 | VocalSet |
+|--------------|--------|-------|-------|---------|---------|----------|
+| PACE (本文) | 95.75 | 97.49 | 91.87 | 90.95 | 94.05 | 69.08 |
+| RanPAC (w FSA) | 92.25  | 97.08 | 90.53 | 85.63   | 89.92   | 62.82    |
+| 联合训练上限   | 96.50  | 98.07 | 95.91 | 95.22   | 95.22   | 76.65    |
+
+表2摘选：PACER在六个音频CL基准上持续超越所有基线。
 
 ---
 
-### 4. [Resp-Agent: An Agent-Based System for Multimodal Respiratory Sound Generation and Disease Diagnosis](/audio-paper-digest-blog/posts/2026-05-03-resp-agent-an-agent-based-system-for-multimodal)
+### 🥉 [SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML](/audio-paper-digest-blog/posts/2026-05-03-snap-uq-self-supervised-next-activation)
 
-✅ **7.5/10** | 前25% | #音频分类 | #多模态模型 | #流匹配 #数据增强
+✅ **7.0/10** | 前25% | #音频分类 | #自监督学习 | #低资源 #鲁棒性
 
 👥 **作者与机构**
 
-- 第一作者：Pengfei ZHANG（香港科技大学（广州））
-- 通讯作者：Li Liu（香港科技大学（广州））
-- 作者列表：Pengfei ZHANG（香港科技大学（广州））、Tianxin XIE（未说明）、Minghao YANG（未说明）、Li LIU（香港科技大学（广州））
+- 第一作者：Ismail Lamaakal（Mohammed First University, Oujda, Morocco，Multidisciplinary Faculty of Nador）
+- 通讯作者：未明确说明（论文中所有作者邮箱均列出，但未指明通讯作者；按照惯例，可推测第一作者或多位作者共同负责）
+- 作者列表：
+    1. Ismail Lamaakal（Mohammed First University, Oujda, Morocco，Multidisciplinary Faculty of Nador）共同第一作者
+    2. Chaymae Yahyati（Mohammed First University, Oujda, Morocco，Multidisciplinary Faculty of Nador）共同第一作者
+    3. Khalid El Makkaoui（Mohammed First University, Oujda, Morocco，Multidisciplinary Faculty of Nador）
+    4. Ibrahim Ouahbi（Mohammed First University, Oujda, Morocco，Multidisciplinary Faculty of Nador）
+    5. Yassine Maleh（Sultan Moulay Slimane University, Khouribga, Morocco，Laboratory LaSTI, ENSAK）
 
 💡 **毒舌点评**
 
-这篇工作用LLM驱动的闭环代理系统将“诊断”与“生成”拧成一股绳，思路在医疗AI里很时髦；但任务垂直度高（呼吸音+罕见病），方法能否泛化到其他听觉病理场景尚存疑。
+亮点：论文精准击中了TinyML部署中“如何用毫瓦级功耗感知模型是否在胡说八道”这一痛点，提出的“层间惊讶度”概念既优雅又极具工程思维，所有设计（int8、LUT、单次前传）都死死咬住MCU的严苛约束，不像某些工作只是把云端方法强行压缩。短板：核心思想虽新，但依赖对中间层的访问可能在某些极端黑盒部署中受限；虽然在小MCU上完胜集合法，但在能跑通集合法的大MCU上，其性能优势并非颠覆性的，更像是一种“足够好且更便宜”的妥协方案。
 
 🔗 **开源详情**
 
-- 代码：提供，GitHub仓库：https://github.com/zpforlove/Resp-Agent
-- 模型权重：提供，托管于Hugging Face：https://huggingface.co/AustinZhang/resp-agent-models
-- 数据集：公开，Resp-229k数据集托管于Hugging Face：https://huggingface.co/datasets/AustinZhang/resp-agent-dataset
+- 代码：论文提供了代码仓库链接：https://github.com/Ism-ail11/SNAP-UQ。
+- 模型权重：论文中未提及公开的预训练模型权重。
+- 数据集：使用标准公开数据集（MNIST, CIFAR-10等），论文未提及自己发布新数据集。
 - Demo：论文中未提及在线演示。
-- 复现材料：提供了训练和推理脚本、配置文件以及附录中的详细超参数设置，足以支持复现主要结果。
-- 依赖的开源项目/模型：DeepSeek-V3.2-Exp, DeepSeek-R1-Distill-Qwen-7B, Qwen3-0.6B-Base, BEATs, Longformer, Conformer, Vocos, StableAudio Open, AudioLDM 2, c-WaveGAN等。
+- 复现材料：提供了非常详细的复现材料，包括：
+    - 完整的训练超参数（学习率、批次大小、优化器、损失权重λ_SS、调度策略）。
+    - 具体的骨干网络架构和SNAP-UQ配置（截取层、投影器秩rℓ）。
+    - MCU构建工具链和标志（-O3, CMSIS-NN）。
+    - 详细的评估协议（流构建、事件标记、阈值选择方法）。
+    - 附录包含大量消融实验和结果细节。
+- 引用的开源项目：论文依赖的开源工具/模型可能包括：
+    - CMSIS-NN（用于MCU上的高效神经网络推理）。
+    - TVM（编译器，可能用于构建）。
+    - TensorFlow Lite Micro（TinyML框架）。
+    - 标准数据集工具包（如torchvision, torchaudio）。
+- 总结：论文在开源方面做得很好，提供了可直接运行的代码和完备的复现指南，是其重要优势之一。
 
 📌 **核心摘要**
 
-本文旨在解决基于深度学习的呼吸音听诊面临的三个核心挑战：单模态信息丢失、数据稀缺与类别不平衡、分析与生成脱节。为此，作者提出了Resp-Agent，一个由新型主动对抗课程代理（Thinker-A2CA）协调的自主多模态系统。该系统包含三个关键组件：（1）Resp-229k，一个包含22.9万条录音并配有LLM蒸馏临床叙述的大规模基准数据集；（2）生成器（Generator），通过模态注入将文本大语言模型（Qwen3-0.6B）改造为多模态单元生成器，并结合条件流匹配解码器合成高保真可控的呼吸音；（3）诊断器（Diagnoser），采用模态编织（Modality Weaving）策略，在Longformer骨干网络中将临床文本与音频嵌入早期融合，并通过战略全局注意力（Strategic Global Attention）和稀疏音频锚点（Audio Anchors）捕捉长程上下文与毫秒级瞬态事件。实验表明，Resp-Agent在ICBHI四分类任务上达到了72.7的ICBHI分数，超越先前最优方法；在自建的Resp-229k跨域测试集上，完整系统在类别不平衡和数据稀缺场景下均显著优于基线，宏观F1分数在平衡后达到0.598。该框架为医疗音频领域提供了一个分析与生成协同设计的范例，提升了诊断的鲁棒性。其主要局限性可能在于系统复杂度较高，且依赖高质量配对的文本-音频数据。
+1. 问题：在微控制器（MCU）上部署的TinyML模型需要可靠且低开销的不确定性估计，以检测数据分布漂移或模型错误。然而，传统方法（如深度集成、MC Dropout）因需要多次前传、额外分支或状态存储，在毫瓦级硬件上难以实现。
+2. 方法核心：本文提出SNAP-UQ，一种基于自监督的逐层激活预测的单次前传不确定性估计方法。其核心是在网络骨干的少数层（如中间层、倒数第二层）附加轻量级头（int8量化），利用低秩投影从当前层激活预测下一层激活的统计量（均值和方差）。预测误差（标准化残差）形成“逐层惊讶度”信号，经聚合和单调映射后得到最终的不确定性分数。
+3. 创新点：
+    - 思路创新：将不确定性信号源从模型输出层或多次采样，转移到网络内部的层间动态转换上，认为分布偏移会先破坏层间特征流的平稳性。
+    - 实现创新：设计完全适配MCU约束，所有计算在一次前传中完成，无需状态缓冲；使用1x1卷积+全局平均池化的投影器、int8量化头、查找表（LUT）替代指数运算。
+    - 理论联系：证明了在特定假设下，其惊讶度分数等价于条件负对数似然和条件马氏距离，并具有对通道缩放的不变性。
+4. 主要实验结果：
+    - 部署效率：在Big-MCU上，SNAP-UQ相比早退集成和深度集成方法，Flash占用减少37-57%，延迟降低24-35%。在Small-MCU上，深度集成方法因内存溢出（OOM）无法运行，而SNAP-UQ仍能高效部署（如SpeechCommands上Flash 118KB，延迟113ms）。
+    - 监控性能：在损坏数据流监控任务中（如MNIST-C），SNAP-UQ的AUPRC达到0.66，优于基线（BASE: 0.54， 深度集成: 0.56），且检测延迟最短（24帧）。其AUPRC随损坏严重度增加而增长最快（见图2）。
+    - 故障检测：在ID正确与否检测（ID✓— ID×）上，SNAP-UQ在MNIST（AUROC 0.90）和SpeechCommands（0.94）上达到最优；在OOD检测（ID✓— OOD）上，在SpeechCommands（0.92）上与最佳基线持平，在CIFAR-10（0.94）上接近最佳（表3）。
+    - 校准：在ID校准上，SNAP-UQ降低了MNIST和SpeechCommands上的NLL和ECE（表4）。
+5. 实际意义：为TinyML设备提供了一种实用、轻量、单次前传的不确定性监控方案，使其能在资源严苛的条件下，实时感知自身预测的可信度，对安全可靠的边缘AI部署具有重要价值。
+6. 主要局限性：依赖对网络中间层激活的访问，可能不适用于完全黑盒模型；对层投影器的秩（rank）和层选择（tap placement）敏感；协方差建模简单（对角/低秩），可能无法捕捉复杂的跨通道依赖。
 
 ---
 

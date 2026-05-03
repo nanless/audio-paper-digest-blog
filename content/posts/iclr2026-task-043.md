@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频效果处理 论文列表"
+title: "ICLR 2026 - 音频安全 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频效果处理"]
+tags: ["音频安全"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频效果处理 方向论文"
+description: "共 1 篇 ICLR 2026 音频安全 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频效果处理
+# ICLR 2026 - 音频安全
 
 共 **1** 篇论文
 
@@ -18,61 +18,53 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [LLM2Fx-Tools: Tool Calling for Music Post-Production](/audio-paper-digest-blog/posts/2026-05-03-llm2fx-tools-tool-calling-for-music-post) | 7.5分 | 前25% |
+| 🥇 | [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio L](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities) | 8.5分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [LLM2Fx-Tools: Tool Calling for Music Post-Production](/audio-paper-digest-blog/posts/2026-05-03-llm2fx-tools-tool-calling-for-music-post)
+### 🥇 [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-jalmbench-benchmarking-jailbreak-vulnerabilities)
 
-✅ **7.5/10** | 前25% | #音频效果处理 | #大语言模型 #工具调用 | #音乐信息检索 #大语言模型
+🔥 **8.5/10** | 前10% | #音频安全 | #基准测试 | #音频大模型 #对抗样本
 
 👥 **作者与机构**
 
-- 第一作者：SeungHeon Doh（KAIST， Sony AI）
-- 通讯作者：未说明（论文中作者贡献部分标注两位共同一作为SeungHeon Doh和Junghyun Koo，无明确通讯作者信息）
-- 作者列表：SeungHeon Doh（KAIST， Sony AI）， Junghyun Koo（Sony AI）， Marco A. Martínez-Ramírez（Sony AI）， Woosung Choi（Sony AI）， Wei-Hsiang Liao（Sony AI）， Qiyu Wu（Sony Group Corporation）， Juhan Nam（KAIST）， Yuki Mitsufuji（Sony AI， Sony Group Corporation）
-
-#
+- 第一作者：Zifan Peng（香港科技大学（广州）；清华大学网络体系结构国家重点实验室）
+- 通讯作者：Wenhan Dong（香港科技大学（广州））、Xinlei He（香港科技大学（广州）；清华大学网络体系结构国家重点实验室）
+- 作者列表：Zifan Peng（香港科技大学（广州），清华大学网络体系结构国家重点实验室）， Yule Liu（香港科技大学（广州））， Zhen Sun（香港科技大学（广州））， Mingchen Li（北德克萨斯大学）， Zeren Luo（香港科技大学（广州））， Jingyi Zheng（香港科技大学（广州））， Wenhan Dong（香港科技大学（广州））， Xinlei He（香港科技大学（广州），清华大学网络体系结构国家重点实验室）， Xuechao Wang（香港科技大学（广州））， Yingjie Xue（中国科学技术大学）， Shengmin Xu（福建师范大学）， Xinyi Huang（南京航空航天大学）
 
 💡 **毒舌点评**
 
-亮点在于它成功地将LLM的“思考-规划-执行”（CoT+工具调用）范式引入了一个全新的、需要专业知识的音频处理任务，并构建了配套的大规模数据集LP-Fx，为后续研究奠定了基础；然而，其局限性在于实验验证仅限于单乐器、9种预定义效果器的场景，距离真实世界复杂多轨音乐制作的通用性和可扩展性还有相当距离，更像一个精心设计的“原型验证”。
-
-#
+本文最大的亮点在于系统性地填补了大型音频语言模型安全评估的空白，构建了一个规模空前（24万+音频样本）且设计模块化的基准框架，其严谨的多维度分析（模态、架构、效率）为后续研究设立了很高的基线。然而，其短板也同样明显：防御部分的探索略显初步和薄弱，更像是对现有视觉-语言模型防御策略的迁移性测试，而非针对音频模态特性的原生防御设计，削弱了论文在“解决问题”层面的深度。
 
 🔗 **开源详情**
 
--   代码：论文中未提及代码链接。提供了一个演示网站：https://seungheondoh.github.io/llm2fx-tools-demo/
--   模型权重：未提及是否公开模型权重。
--   数据集：论文中提出了LP-Fx数据集，但未提及公开获取方式。
--   Demo：提供了在线演示链接。
--   复现材料：论文详细描述了训练阶段、学习率、批大小、步数等部分超参数，但缺少硬件信息、完整配置文件和预训练检查点。附录中包含详细的提示词（Prompt）设计。
--   论文中引用的开源项目：依赖的开源项目包括：Pedalboard（音频效果库），Fx-Encoder++（音频编码器），Qwen3-4B（LLM骨干），以及dasp-pytorch（用于适配DeepAFx-ST基线）。
+- 代码：论文提供了完整的代码仓库链接：https://github.com/sfofgalaxy/JALMBench。
+- 模型权重：论文评估的12个LALMs多为公开的开源模型（如SpeechGPT, SALMONN, Qwen2-Audio等）或商业API（GPT-4o-Audio, Gemini-2.0）。JALMBench本身不训练新模型。
+- 数据集：数据集已在HuggingFace上公开，可通过上述代码仓库链接获取。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：提供了极其详细的复现材料，包括：所有实验的具体设置（攻击参数、评估提示、TTS配置等）、详细的附录（A-F章节）解释框架使用和实验细节、伦理声明、以及使用说明。
+- 论文中引用的开源项目：Google TTS, DeepL Translator, Coqui.ai TTS, CREMA-D dataset, F5-TTS, MMS-TTS, SpeechT5, 以及评估的各个LALM开源项目。
+- 开源计划：论文已完整开源代码和数据集，未提及后续额外开源计划。
 
 📌 **核心摘要**
 
-1.  问题：传统音频效果链（Fx-chain）估计方法存在灵活性差（需预定义配置）、缺乏可解释性（无法提供推理过程）以及难以遵循复杂自然语言指令等局限。
-2.  方法核心：提出LLM2Fx-Tools框架，利用一个经过多阶段训练的多模态LLM，通过链式思考（CoT）规划，理解音频输入和自然语言指令，然后生成结构化的工具调用序列（即Fx-chain及其参数），最终由外部音频效果模块执行。
-3.  新意：1) 首次将LLM工具调用应用于音频效果处理，实现了对非可微效果模块的灵活控制；2) 引入为Fx-chain生成设计的CoT机制，将复杂任务分解为效果选择、排序、参数估计等可解释步骤；3) 将任务扩展为多模态指令跟随，支持用户通过文本定制效果链。
-4.  主要实验结果：
-    -   逆向工程：在Fx-chain规划上显著优于基线（效果分类准确率80%，排序相关性0.56），在感知距离（L/R MRS: 3.13）和嵌入相似度（AFx-Rep: 0.68）上也表现最佳。
-    -   风格迁移：在跨数据集泛化上，DSP特征距离最低（7.41），嵌入相似度最高（AFx-Rep: 0.35）。
-    -   自然语言生成：在LLM-as-a-Judge评估中，指令跟随质量（3.50）和CoT质量（3.05）得分优于或持平于基线。
-    -   主观听测（图4）：LLM2Fx-Tools（62.8分）显著优于Gemini 2.5 Flash（56.5分）和DeepAFX-ST（54.8分）。
-    关键对比数据见下表。
+1.  要解决什么问题：随着大型音频语言模型（LALMs）的部署，其面临越狱攻击的安全风险日益增长，但目前缺乏一个专门、统一的评估框架和大规模基准数据集来系统研究这一问题。
+2.  方法核心是什么：提出JALMBench，一个全面的基准框架。其核心是构建了一个包含24.5万条音频样本（超1000小时）的大规模数据集，并设计了一个模块化评估平台，可支持多种LALMs、攻击方法和防御策略的标准化测试与比较。
+3.  与已有方法相比新在哪里：这是首个针对LALM越狱漏洞的综合性基准。与此前工作相比，JALMBench在数据规模、攻击方法覆盖（首次综合评估文本迁移和音频原生两大类共8种攻击）、防御策略评估以及分析维度（效率、主题、语音多样性、模型架构）上均实现了显著超越。
+4.  主要实验结果如何：实验表明，音频模态的平均攻击成功率（21.5%）高于文本模态（17.0%）。最强攻击方法AdvWave的攻击成功率高达96.2%。分析发现，离散音频令牌化策略（如GLM-4-Voice）比连续特征提取（如LLaMA-Omni）能更好地保持跨模态安全一致性。在防御方面，现有方法（如LLaMA-Guard、AdaShield）仅能小幅降低平均攻击成功率（分别减少18.0和19.6个百分点），且提示级防御会带来明显的性能损失。
 
-    | 方法 | 效果分类准确率 | 排序相关性 | 参数MAE | L/R MRS | DSP距离(AF) | 嵌入相似度(AFx-Rep) |
-    | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-    | MultiTask | 61% | 0.00 | 0.23 | 3.17 | 8.39 | 0.63 |
-    | DeepAFx-ST | - | - | - | 1.75* | 3.95 | 0.62 |
-    | Gemini 2.5 Flash | 78% | 0.54 | 0.32 | 3.42 | 14.97 | 0.56 |
-    | LLM2Fx-Tools | 80% | 0.56 | 0.23 | 3.13 | 8.29 | 0.68 |
-    (表2关键数据，DeepAFx-ST以感知距离为训练目标)*
+| 防御方法 | 无防御 | LLaMA-Guard | Azure | JailbreakBench | FigStep | AdaShield |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 平均ASR (%) | 53.7 | 35.7 | 43.1 | 43.7 | 40.5 | 34.1 |
+表：不同防御方法下的平均攻击成功率（ASR）对比
 
-5.  实际意义：为音乐后期制作提供了一种可解释、可控且能理解自然语言的新工具，降低了专业处理门槛，是LLM赋能垂直创意领域的重要实践。
-6.  主要局限性：1) 可解释性依赖于“伪干音”预处理；2) 存在一对多映射的模糊性问题；3) 实验仅验证了单乐器和有限的效果器模块，对复杂混音和未见过的效果器泛化能力未知。
+![论文中的框架与总结图](icassp-img://DJkQ236C8B/0.png)
+图：JALMBench框架与相关工作对比总结。该图展示了基准的组成（有害查询、文本迁移攻击、音频原生攻击数据集）、支持的12个LALMs、8种攻击和5种防御，并与已有的Audio Jailbreak基准在数据规模、攻击全面性、防御评估等维度进行了对比。
+
+5.  实际意义是什么：为评估和提升音频大模型的安全性提供了首个权威、可扩展的基准工具。研究揭示了当前LALM安全性的关键弱点（如对音频原生攻击脆弱、跨模态安全对齐不足），并指明了未来防御研究应朝着“音频原生”防御方向发展的道路。
+6.  主要局限性是什么：论文承认未探索多轮对话越狱、更细粒度的语音特征（如情绪）影响以及模型量化等方向。防御策略部分主要基于现有方法的迁移，尚未提出专门针对音频模态的高效防御方案。
 
 ---
 

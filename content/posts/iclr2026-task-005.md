@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 声源定位 论文列表"
+title: "ICLR 2026 - 多模态生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["声源定位"]
+tags: ["多模态生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 声源定位 方向论文"
+description: "共 1 篇 ICLR 2026 多模态生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 声源定位
+# ICLR 2026 - 多模态生成
 
 共 **1** 篇论文
 
@@ -18,49 +18,59 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Physics-Informed Audio-Geometry-Grid Representation Learning](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid) | 6.5分 | 前25% |
+| 🥇 | [FlowBind: Efficient Any-to-Any Generation with Bidirectional](/audio-paper-digest-blog/posts/2026-05-03-flowbind-efficient-any-to-any-generation-with) | 8.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Physics-Informed Audio-Geometry-Grid Representation Learning for Universal Sound Source Localization](/audio-paper-digest-blog/posts/2026-05-03-physics-informed-audio-geometry-grid)
+### 🥇 [FlowBind: Efficient Any-to-Any Generation with Bidirectional Flows](/audio-paper-digest-blog/posts/2026-05-03-flowbind-efficient-any-to-any-generation-with)
 
-✅ **6.5/10** | 前25% | #声源定位 | #麦克风阵列 | #时频分析 #信号处理
+🔥 **8.0/10** | 前25% | #多模态生成 | #流匹配 | #可逆流 #多模态模型
 
 👥 **作者与机构**
 
-- 第一作者：Min-Sang Baek（汉阳大学电子工程系）
-- 通讯作者：Joon-Hyuk Chang（汉阳大学电子工程系）
-- 作者列表：Min-Sang Baek（汉阳大学电子工程系），Gyeong-Su Kim（汉阳大学电子工程系），Donghyun Kim（汉阳大学电子工程系），Joon-Hyuk Chang（汉阳大学电子工程系）
-
-#
+- 第一作者：Yeonwoo Cha*（KAIST）
+- 通讯作者：未说明
+- 作者列表：Yeonwoo Cha（KAIST）、Semin Kim（KAIST）、Jinhyeon Kwon（KAIST）、Seunghoon Hong（KAIST）
 
 💡 **毒舌点评**
 
-亮点：论文将“表示学习”思想系统地引入声源定位领域，通过联合学习音频-几何表示和网格表示，并辅以两个精心设计的物理信息组件（LNuDFT和rMPE），有效缓解了方法对特定阵列几何和预定义网格的依赖，泛化能力提升明显。短板：方法框架本身（AuGeonet + Gridnet + 相似度计算）并非全新，核心创新更侧重于组件（LNuDFT、rMPE）的引入和整合；在未见阵列上的性能仍有提升空间，且论文对“物理信息”在深度网络中作用的理论分析略显不足，主要停留在实验验证。
-
-#
+亮点：论文提出的“共享潜在空间+模态专属可逆流”框架设计优雅，用单一的流匹配目标统一了对齐与生成，成功绕开了现有方法对完全配对数据或复杂多阶段训练的依赖，在效率和数据灵活性上实现了显著提升。短板：该框架的性能高度依赖于各模态预训练编码器（如CLIP、CLAP）的表示质量，相当于将“对齐”的重任部分转移给了这些冻结的编码器，对于流模型本身如何更独立地学习跨模态语义，探讨和验证不够深入。
 
 🔗 **开源详情**
 
-*   代码：论文提供了公开的代码仓库链接：`https://github.com/BaekMS/Audio-Geometry-Grid_Representation-Learning`。
-*   模型权重：未提及公开预训练模型权重。
-*   数据集：使用了公开的合成数据生成方法以及公开数据集（LibriSpeech, MS-SNSD, TIMIT, ESC-50, LOCATA, STARSS23）。未提及生成或发布新的专有数据集。
-*   Demo：未提供在线演示。
-*   复现材料：论文提供了非常详细的复现信息，包括：模型架构图（图4, 5）、训练策略（CGT, MSGL, DSCL）及其超参数（表6）、损失函数、优化器设置、数据生成算法（算法3）及参数范围（表1, 公式23）。附录（A.1-A.17）提供了大量技术细节、可视化结果和补充实验。
-*   引用的开源项目/工具：`gpuRIR`（用于RIR模拟），`py-webrtcvad`（用于生成VAD标签），`fvcore`（用于计算FLOPs），以及多个基线方法的开源实现（`Neural-SRP`, `GI-DOAEnet`）。
+- 代码：论文提供了项目主页链接 `https://yeonwoo378.github.io/official_flowbind`，并声称代码将在此发布。
+- 模型权重：未提及是否公开预训练模型权重。
+- 数据集：使用了公开数据集（LAION-COCO子集， Flickr-30K， AudioCaps v2， VGGSound），但论文本身未发布新数据集。
+- Demo：未提及在线演示。
+- 复现材料：论文附录提供了详细的实现细节（编码器/解码器选择、架构、训练配置）、算法伪代码和训练数据集总结，复现信息较充分。
+- 论文中引用的开源项目：CLIP， Stable-UnCLIP， CLAP， AudioLDM， EmbeddingGemma/Gemma3-1B， FLUX.1， Pix3D的PointFlow等。
+- 论文中未提及明确的后续开源计划时间表，但根据项目主页和声明，预计代码会开源。
 
 📌 **核心摘要**
 
-1.  问题：现有基于深度神经网络的声源定位（SSL）方法通常受限于固定的麦克风阵列几何形状和预定义的到达方向（DOA）网格，导致泛化性和可扩展性不足。
-2.  方法核心：提出音频-几何-网格表示学习（AGG-RL）框架，通过两个网络（AuGeonet和Gridnet）分别学习音频-几何表示（AGR）和网格表示（GR），并将两者映射到共享潜在空间，通过计算相似度生成概率空间谱，从而实现对任意阵列和网格的通用SSL。
-3.  创新点：在框架中引入两个物理信息组件：a) 可学习非均匀离散傅里叶变换（LNuDFT），优化频率bin的非均匀分配，以强调携带物理信息相位线索的频段；b) 相对麦克风位置编码（rMPE），按照通道间时间差的物理特性，以相对坐标方式编码麦克风位置。
-4.  实验结果：在合成和真实数据集（如LOCATA）上的实验表明，所提方法在已知和未知（特别是未见过的阵列几何和通道数）条件下均优于现有基线方法。例如，在动态未知通道数（Dynamic-U）数据集上，AGG-RL的MAE为14.12°，ACC10为63.17%，显著优于GI-DOAEnetFM（MAE 54.81°， ACC10 6.10%）和Unet（MAE 19.15°， ACC10 60.57%）。消融研究证实了每个组件的有效性。
-5.  实际意义：AGG-RL为实现跨多样场景的通用空间声学场景理解提供了一种有前景的解决方案，增强了SSL系统在实际多变环境中的部署能力。
-6.  主要局限性：a) 在未见条件下的性能与已见条件相比仍有差距；b) LNuDFT的初始化策略（logit映射）虽然有效，但其最优选择缺乏理论指导；c) 框架对动态网格的处理虽然灵活，但计算开销会随网格数量增加而线性增长。
+1. 问题：现有的基于流的任何到任何多模态生成模型存在效率瓶颈，需要大规模且严格配对的数据，计算成本高，且训练流程复杂（多阶段）。
+2. 核心方法：FlowBind提出一个可学习的共享潜在空间来捕获跨模态共性，并通过模态特定的可逆流（Invertible Flow）将每个模态与该潜在空间连接。所有组件在单一的流匹配目标下联合优化。推理时，通过求解源模态流的逆ODE映射到共享潜在空间，再通过目标模态的ODE解码生成输出。
+3. 创新之处：通过因子化多模态交互（解耦为每个模态与共享潜在空间的独立流），实现了使用任意子集模态数据进行训练；联合优化避免了多阶段训练；在紧凑的语义表示空间操作，降低了计算成本。
+4. 实验结果：在文本、图像、音频的跨模态生成任务上，FlowBind使用仅约568M参数和48 GPU小时（相比OmniFlow的3.2B参数和480 GPU小时）训练，实现了具有竞争力的生成质量和跨模态对齐性能。例如，在图像-音频生成任务上，其AIS分数显著优于基线（见下表）。在许多到一、一对多生成任务上，也展现出更均衡的条件利用能力。
 
-#
+关键实验结果表（对齐分数）：
+
+| 类别 | 模型 | 文本→图像 (CLIP↑) | 图像→文本 (CLIP↑) | 文本→音频 (CLAP↑) | 音频→文本 (CLAP↑) | 图像→音频 (AIS↑) | 音频→图像 (AIS↑) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 通用模型 | CoDi | 30.26 | 26.24 | 10.79 | 17.94 | 61.55 | 74.26 |
+| | OmniFlow | 31.52 | 27.71 | 24.23 | 45.08 | 71.71 | 59.22 |
+| | FlowBind | 28.35 | 29.74 | 29.08 | 36.70 | 82.89 | 78.17 |
+
+![论文中的流程图](icassp-img://7DeARTwvwL/0.png)
+图1: FlowBind概述。(a)训练阶段，共享潜在空间和各模态的漂移网络被联合学习。(b)推理阶段，学习到的漂移网络通过求解每个模态的ODE来执行灵活的任何到任何生成。
+
+![论文中的实验结果对比图](icassp-img://7DeARTwvwL/1.png)
+图2: 各种多对多生成任务的定性结果。展示了模型处理复杂输入并生成相应输出的能力。
+
+5. 实际意义：为高效、灵活、数据高效的多模态通用生成模型提供了一个有前景的框架。
+6. 主要局限：性能高度依赖预训练的模态特定编码器/解码器；对于更复杂的模态（如视频、3D）的扩展能力尚未充分验证；共享潜在空间的解释性和控制性有待进一步研究。
 
 ---
 

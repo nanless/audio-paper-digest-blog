@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 音频问答 论文列表"
+title: "ICLR 2026 - 音频生成 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["音频问答"]
+tags: ["音频生成"]
 categories: [iclr-2026]
-description: "共 5 篇 ICLR 2026 音频问答 方向论文"
+description: "共 9 篇 ICLR 2026 音频生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频问答
+# ICLR 2026 - 音频生成
 
-共 **5** 篇论文
+共 **9** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,213 +18,394 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Query-Guided Spatial–Temporal–Frequency Interaction for Musi](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction) | 8.0分 | 前25% |
-| 🥈 | [OmniVideoBench: Towards Audio-Visual Understanding Evaluatio](/audio-paper-digest-blog/posts/2026-05-03-omnivideobench-towards-audio-visual-understanding) | 7.5分 | 前25% |
-| 🥉 | [Measuring Audio's Impact on Correctness: Audio-Contribution-](/audio-paper-digest-blog/posts/2026-05-03-measuring-audios-impact-on-correctness-audio) | 7.5分 | 前25% |
-| 4. | [Incentivizing Consistent, Effective and Scalable Reasoning C](/audio-paper-digest-blog/posts/2026-05-03-incentivizing-consistent-effective-and-scalable) | 6.5分 | 前50% |
-| 5. | [Echo: Towards Advanced Audio Comprehension via Audio-Interle](/audio-paper-digest-blog/posts/2026-05-03-echo-towards-advanced-audio-comprehension-via) | 6.5分 | 前50% |
+| 🥇 | [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resolution](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi) | 8.5分 | 前25% |
+| 🥈 | [A Hidden Semantic Bottleneck in Conditional Embeddings of Di](/audio-paper-digest-blog/posts/2026-05-03-a-hidden-semantic-bottleneck-in-conditional) | 8.0分 | 前25% |
+| 🥉 | [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensiona](/audio-paper-digest-blog/posts/2026-05-03-prismaudio-decomposed-chain-of-thought-and-multi) | 8.0分 | 前25% |
+| 4. | [AC-Foley: Reference-Audio-Guided Video-to-Audio Synthesis wi](/audio-paper-digest-blog/posts/2026-05-03-ac-foley-reference-audio-guided-video-to-audio) | 7.9分 | 前25% |
+| 5. | [Aurelius: Relation Aware Text-to-Audio Generation At Scale](/audio-paper-digest-blog/posts/2026-05-03-aurelius-relation-aware-text-to-audio-generation) | 7.5分 | 前25% |
+| 6. | [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio) | 7.5分 | 前25% |
+| 7. | [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers) | 7.0分 | 前25% |
+| 8. | [SCRAPL: Scattering Transform with Random Paths for Machine L](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for) | 7.0分 | 前25% |
+| 9. | [TangoFlux: Super Fast and Faithful Text to Audio Generation ](/audio-paper-digest-blog/posts/2026-05-03-tangoflux-super-fast-and-faithful-text-to-audio) | 6.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Query-Guided Spatial–Temporal–Frequency Interaction for Music Audio–Visual Question Answering](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction)
+### 🥇 [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resolution Network for Few-step High-Fidelity Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi)
 
-🔥 **8.0/10** | 前25% | #音频问答 | #时频分析 | #音乐理解 #音视频
+🔥 **8.5/10** | 前25% | #音频生成 | #流匹配 | #对抗训练 #多分辨率
 
 👥 **作者与机构**
 
-- 第一作者：Kun Li（未说明）
-- 通讯作者：未说明
-- 作者列表：Kun Li（未说明）、Michael Ying Yang（未说明）、Sami Sebastian Brandt（未说明）
+- 第一作者：Zengwei Yao（Xiaomi Corp., Beijing, China）
+- 通讯作者：Daniel Povey（dpovey@xiaomi.com, Xiaomi Corp., Beijing, China）
+- 作者列表：Zengwei Yao（Xiaomi Corp.）、Wei Kang（Xiaomi Corp.）、Han Zhu（Xiaomi Corp.）、Liyong Guo（Xiaomi Corp.）、Lingxuan Ye（Xiaomi Corp.）、Fangjun Kuang（Xiaomi Corp.）、Weiji Zhuang（Xiaomi Corp.）、Zhaoqing Li（Xiaomi Corp.）、Zhifeng Han（Xiaomi Corp.）、Long Lin（Xiaomi Corp.）、Daniel Povey（Xiaomi Corp.）
 
 💡 **毒舌点评**
 
-亮点：该工作敏锐地指出现有AVQA方法中音频被弱化、问题引导不足的痛点，并创新性地引入音频信号的频率域特征（而非仅作为声学特征）与问题线索进行时空频多维度交互，这种“问题驱动+频率感知”的设计思路逻辑自洽且有一定新颖性。短板：摘要中仅定性描述“显著性能改进”，缺乏任何具体数字（如提升了多少个百分点）与直接对比的最强基线方法，这在一定程度上削弱了其“显著改进”主张的说服力，也使得评估其实际技术增量变得困难。
+这篇工作巧妙地将Flow Matching的稳定训练与GAN的细节增强能力“拧”在一起，用一个两阶段策略漂亮地解决了音频生成领域“要质量还是要速度”的经典取舍问题，多分辨率傅里叶系数的处理也颇有见地。不过，模型参数量高达78.9M，几乎是Vocos（13.5M）的六倍，这在追求轻量化部署的场景下可能是个明显的短板。
 
 🔗 **开源详情**
 
-- 代码：提供了代码仓库链接：https://github.com/lik1996/QSTar
+- 代码：提供完整代码仓库链接：https://github.com/k2-fsa/Flow2GAN。
+- 模型权重：论文中提到“the source code is released”，但未明确说明是否公开所有预训练模型权重的下载链接。从“Online demo samples are available”和代码仓库的存在推断，权重很可能已发布或即将发布。
+- 数据集：训练使用的数据集（LibriTTS, Common Voice等）均为公开数据集。论文中未提供针对本任务的私有数据集。
+- Demo：提供在线演示页面：https://flow2gan.github.io。
+- 复现材料：提供了详尽的训练细节（Section 5.1）、模型配置（Appendix Table 10）、消融实验设置，以及针对不同条件（Mel, EnCodec）的训练步数、GPU数量和时长信息，复现指导性强。
+- 论文中引用的开源项目：明确提到了Vocos、BigVGAN、HiFi-GAN、UnivNet、ConvNeXt、Encodec等开源模型和库作为基线或组件。
+
+📌 **核心摘要**
+
+1.  问题：现有的音频生成方法中，GAN训练不稳定且易收敛慢，而基于扩散/流匹配的方法需要多步推理，计算开销大。
+2.  方法：提出Flow2GAN两阶段框架。第一阶段：改进Flow Matching以适配音频特性，包括将目标重新表述为端点估计（避免静音区域的估计难题），并引入基于频谱能量的损失缩放以强调感知上更重要的安静区域。第二阶段：将训练好的Flow Matching模型转化为1/2/4步生成器，并使用精心设计的判别器（MPD, MRD）进行GAN微调，以提升细节质量并实现快速推理。
+3.  创新点：a) 针对音频特性的Flow Matching改进（端点估计+频谱能量损失）；b) 两阶段训练范式结合两者优势；c) 多分辨率多分支网络结构，处理不同时间频率分辨率的傅里叶系数。
+4.  实验结果：在Mel频谱图和EnCodec音频token条件生成上均取得了SOTA或接近SOTA的性能。关键结果如下表所示（数据摘自论文）：
+
+表1：Mel频谱图条件生成（LibriTTS测试集）对比
+| 模型 | 参数(M) | PESQ↑ | ViSQOL↑ | MOS↑ |
+| :--- | :--- | :--- | :--- | :--- |
+| BigVGAN | 112.4 | 4.241 | 4.964 | 4.33 ± 0.18 |
+| Vocos | 13.5 | 3.618 | 4.898 | 4.38 ± 0.16 |
+| WaveFM (1步) | 19.5 | 3.540 | 4.894 | 3.76 ± 0.18 |
+| Flow2GAN (1步) | 78.9 | 4.189 | 4.957 | 4.39 ± 0.15 |
+| Flow2GAN (2步) | 78.9 | 4.440 | 4.979 | 4.56 ± 0.11 |
+
+表2：EnCodec音频token条件生成（统一测试集）对比（带宽=6.0 kbps）
+| 模型 | PESQ↑ | ViSQOL↑ | SMOS↑ | MOS↑ |
+| :--- | :--- | :--- | :--- | :--- |
+| PeriodWave-Turbo (4步) | 3.229 | 4.424 | 4.00 ± 0.17 | 4.40 ± 0.21 |
+| Flow2GAN (1步) | 2.904 | 4.300 | 4.46 ± 0.16 | 4.42 ± 0.22 |
+| Flow2GAN (4步) | 3.089 | 4.351 | 4.19 ± 0.12 | 4.38 ± 0.13 |
+
+![Flow2GAN示例](icassp-img://5eTpRIULtb/1.png)
+（图2：不同模型生成波形的对比。改进的Flow Matching（e）在静音区域比标准版本（d）更干净，GAN微调（f）进一步恢复了细节。）
+5.  实际意义：提供了一种在质量和效率之间取得高度平衡的音频生成方案，特别适用于需要低延迟推理的实时应用（如TTS、语音交互）。
+6.  主要局限性：模型参数量较大；主要评估集中在波形生成（声码器）任务，对更复杂的端到端音频生成（如从文本直接生成）能力未深入探讨。
+
+---
+
+### 🥈 [A Hidden Semantic Bottleneck in Conditional Embeddings of Diffusion Transformers](/audio-paper-digest-blog/posts/2026-05-03-a-hidden-semantic-bottleneck-in-conditional)
+
+🔥 **8.0/10** | 前25% | #音频生成 | #扩散模型 | #生成模型 #条件嵌入
+
+👥 **作者与机构**
+
+- 第一作者：Trung X. Pham (Korea Advanced Institute of Science and Technology, KAIST)
+- 通讯作者：Chang D. Yoo (Korea Advanced Institute of Science and Technology, KAIST)
+- 作者列表：Trung X. Pham (KAIST)、Kang Zhang (KAIST)、Ji Woo Hong (KAIST)、Chang D. Yoo (KAIST)
+
+💡 **毒舌点评**
+
+亮点：论文发现了扩散Transformer模型中一个被忽视的重要现象——条件嵌入存在极端的“语义瓶颈”，即所有类别的条件向量在角度上几乎完全一致（>99%相似），而语义信息却集中在仅1-2%的维度上，这一发现具有很强的启示性和系统性分析价值。
+短板：虽然现象描述详尽，但论文对于“为何这种极端的冗余和相似性不影响生成质量”这一核心问题的理论解释仍停留在假设层面，缺乏更深入的数学或机制性证明，使得结论的完备性稍显不足。
+
+🔗 **开源详情**
+
+- 代码：论文中未明确提及针对本研究的开源代码仓库链接。但分析使用了多个模型的官方公开权重。
+- 模型权重：论文中明确使用了DiT、MDT、SiT、REPA、LightningDiT、MG、X-MDPT、MDSGen等模型的公开预训练权重（XL/L/B尺寸）。
+- 数据集：使用的是标准公开数据集（ImageNet-1K, DeepFashion, VGGSound）。
+- Demo：论文中未提及在线演示。
+- 复现材料：论文在附录（A.1-A.6）中提供了较为详细的实验设置说明、更多可视化结果和分析，有助于复现其分析过程。
+- 论文中引用的开源项目：论文引用并使用了DiT, MDT, SiT, REPA, LightningDiT, MG, X-MDPT, MDSGen等项目的预训练模型。
+
+📌 **核心摘要**
+
+1.  问题：本文旨在系统性地研究基于Transformer的扩散模型（Diffusion Transformers）中条件嵌入（Conditional Embeddings）的内部结构与编码机制，而此前这一关键组件的作用原理尚未被充分理解。
+2.  方法核心：通过对多个SOTA模型（DiT, SiT, MDT, REPA等）的预训练条件向量进行系统性分析，研究其成对余弦相似度、幅度分布、参与率（PR）等统计特性，并通过裁剪（Pruning）实验验证其冗余性。
+3.  创新点：首次发现并量化了条件嵌入中的两个核心“涌现”特性：(1) 不同类别的条件向量间存在极端的角相似性（类条件任务>99%，连续条件任务>99.9%）；(2) 语义信息高度集中在少数几个高幅值维度（“头部”维度），其余大部分维度（“尾部”）贡献极小，呈现极高的稀疏性。
+4.  主要实验结果：在ImageNet-1K上，多数SOTA模型的条件向量仅用其原始维度（d=1152）的1-2%（约10-20个维度）即可携带主要信号。裁剪实验表明，移除多达66%的低幅值“尾部”维度后，生成质量（FID, IS, CLIP）保持不变甚至略有提升；反之，移除少数“头部”维度则会显著破坏生成结果。
+5.  实际意义：揭示了当前扩散Transformer在条件编码上存在严重的过参数化，为设计更高效、轻量化的条件注入机制（如直接使用稀疏向量或低维子空间）提供了实证依据和新思路。
+6.  主要局限性：对所观察到的极端相似性如何仍能指导模型进行高质量生成的深层机制解释，主要基于假设和直观分析，尚缺乏严格的理论证明。此外，研究主要聚焦于分析已训练好的模型，对于如何在训练过程中直接引导或优化这种瓶颈结构探索有限。
+
+---
+
+### 🥉 [PrismAudio: Decomposed Chain-of-Thought and Multi-dimensional Rewards for Video-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-prismaudio-decomposed-chain-of-thought-and-multi)
+
+🔥 **8.0/10** | 前25% | #音频生成 | #强化学习 | #流匹配 #链式思维
+
+👥 **作者与机构**
+
+- 第一作者：Huadai Liu (香港科技大学, 阿里巴巴通义团队)
+- 通讯作者：Wei Xue (香港科技大学)
+- 作者列表：Huadai Liu (香港科技大学, 阿里巴巴通义团队), Kaicheng Luo (阿里巴巴通义团队), Wen Wang (阿里巴巴通义团队), Qian Chen (阿里巴巴通义团队), Peiwen Sun (香港中文大学), Rongjie Huang (香港中文大学), Xiangang Li (阿里巴巴通义团队), Jieping Ye (阿里巴巴通义团队), Wei Xue (香港科技大学)
+
+💡 **毒舌点评**
+
+亮点： 论文首次将“分解式链式思维推理”与“多维度强化学习奖励”在V2A生成中紧密结合，系统性解决了多目标优化难题，技术路线完整且有深度，新基准AudioCanvas设计严谨。
+短板： 整个框架堆叠了太多重型组件（VideoLLaMA2、Gemini 2.5 Pro生成数据、VideoPrism、T5-Gemma），工程复杂度和训练成本极高，这在一定程度上稀释了其作为通用解决方案的优雅性和可及性。
+
+🔗 **开源详情**
+
+- 代码：论文明确承诺将公开完整代码，包括训练脚本和配置文件。链接未提供，但承诺发布。
+- 模型权重：论文承诺将公开所有模型权重，包括音频基础模型、微调后的VideoLLaMA2等。
+- 数据集：论文承诺将公开新构建的AudioCanvas基准数据集，以及用于VideoLLaMA2微调的CoT训练数据。
+- Demo：论文未提及是否提供在线演示。项目主页地址为https://PrismAudio.github.io，可能包含演示。
+- 复现材料：论文提供了详细的训练细节、超参数配置（附录D），并承诺发布预训练检查点。GPU资源需求也被明确说明。
+- 论文中引用的开源项目：使用了多个开源模型和工具，包括：Gemini 2.5 Pro（用于数据生成）、VideoLLaMA2（CoT生成模型）、VideoPrism（视频编码器）、T5-Gemma（文本编码器）、MS-CLAP/Synchformer/Meta Audiobox Aesthetics/StereoCRW（奖励模型）、Stable Audio Tools（VAE基础）。
+
+📌 **核心摘要**
+
+1.  要解决的问题：现有视频到音频（V2A）生成方法面临两大核心挑战：一是语义一致性、时序同步、美学质量和空间准确性等多个感知目标在单一损失函数中相互纠缠，难以平衡；二是模型优化与真实人类偏好脱节，导致生成结果技术正确但听感不佳。
+2.  方法核心：提出PrismAudio框架，其核心是将V2A生成的推理过程分解为四个专门的链式思维（CoT）模块（语义、时序、美学、空间），并为每个模块设计对应的目标奖励函数，通过强化学习（GRPO）进行多维度联合优化。同时，提出Fast-GRPO算法，通过混合ODE-SDE采样策略大幅提升训练效率。
+3.  与已有方法的创新：1）首次在V2A任务中引入分解式CoT与多维度RL奖励对齐的框架，解决了目标纠缠问题。2）提出Fast-GRPO，首次在流匹配模型中通过随机窗口的混合采样实现了高效的RL训练。3）构建了更严格、更多样化的V2A评测基准AudioCanvas。
+4.  主要实验结果：PrismAudio在VGGSound测试集（域内）和AudioCanvas基准（域外）上，于语义、时序、美学、空间所有维度上均取得SOTA性能。例如，在AudioCanvas上，其语义对齐（CLAP: 0.52）和时序同步（DeSync: 0.36）均优于基线模型ThinkSound（0.48， 0.80）。消融实验证明，分解式CoT优于整体式CoT，多维度奖励优于单维度奖励。
+5.  实际意义：为可控、可解释、高质量的V2A生成提供了新的技术范式，其分解式推理和多目标优化思路可推广至其他多模态生成任务。新基准AudioCanvas为该领域提供了更严峻、更贴近现实的评测标准。
+6.  主要局限性：框架复杂度高，依赖多个大型预训练模型（Gemini、VideoLLaMA2、VideoPrism等），训练和数据构建成本高昂。奖励函数（如CLAP、Synchformer）作为人类感知的代理，其自身存在上限和偏差，可能导致奖励黑客问题（尽管使用了KL惩罚缓解）。
+
+---
+
+### 4. [AC-Foley: Reference-Audio-Guided Video-to-Audio Synthesis with Acoustic Transfer](/audio-paper-digest-blog/posts/2026-05-03-ac-foley-reference-audio-guided-video-to-audio)
+
+✅ **7.9/10** | 前25% | #音频生成 | #流匹配 | #音视频 #跨模态
+
+👥 **作者与机构**
+
+- 第一作者：Pengjun Fang（香港科技大学）
+- 通讯作者：未说明
+- 作者列表：Pengjun Fang（香港科技大学），Yingqing He（香港科技大学），Yazhou Xing（香港科技大学），Qifeng Chen（香港科技大学，B标注可能表示共同指导），Ser-Nam Lim（中佛罗里达大学，B标注），Harry Yang（香港科技大学，B标注）
+
+💡 **毒舌点评**
+
+亮点：论文核心思路非常直接且有效——绕过文本描述的模糊性，直接用参考音频的“声学指纹”来控制生成，这在细粒度合成和音色迁移上效果立竿见影，实验中MCD指标的大幅降低就是证明。短板：其“两阶段训练”中第二阶段利用视频内音频自相似性的假设，在现实场景中（如非重复性动作视频）可能不成立，论文对此的泛化性讨论不足；此外，论文声称“competitive”但未开源，其声称的复现便利性要打折扣。
+
+🔗 **开源详情**
+
+- 代码：论文中未提及代码链接或开源计划。
 - 模型权重：未提及。
-- 数据集：未提及数据集的具体获取方式。
+- 数据集：论文中明确列出了使用的公开数据集及其许可证：VGGSound (CC-BY 4.0), AudioCaps2.0 (MIT), WavCaps (CC-BY 4.0)。但未提供处理后的数据脚本。
 - Demo：未提及。
-- 复现材料：摘要中未提及训练细节、配置、检查点或附录说明。
-- 论文中引用的开源项目：摘要中未提及依赖的其他开源工具或模型。
+- 复现材料：提供了详细的训练细节（附录A）、网络结构细节（附录B）以及人类研究流程（附录C），这些对复现至关重要。
+- 论文中引用的开源项目：CLIP, Synchformer, BigVGAN, ImageBind, VGGish, PANNs, PaSST等。
 
 📌 **核心摘要**
 
-1.  要解决什么问题：现有音视频问答（AVQA）方法过度依赖视觉信息，将音频视为视频的补充，且文本问题仅在最后阶段参与推理，未能充分、早期地引导模型对音频-视觉内容的联合理解。
-2.  方法核心是什么：提出名为QSTar（Query-guided Spatial–Temporal–Frequency Interaction）的新方法，其核心是在问题（Query）的引导下，不仅利用传统的空间���时间特征，还显式地挖掘音频信号的频域特征，实现跨维度的交互。同时，引入受提示启发的查询上下文推理（QCR）模块，引导模型更精准地聚焦于语义相关的音视频特征。
-3.  与已有方法相比新在哪里：1) 将问题信息深度融入到音视频特征的交互过程中，而非仅在后期融合；2) 显式建模音频的频率域特性，将其作为空间、时间特征之外的第三个关键维度进行交互；3) 设计专门的QCR模块以增强问题引导下的上下文聚焦能力。
-4.  主要实验结果如何：论文中未给出具体数值，但声称在AVQA的两个基准测试上，该方法相比已有的音频问答、视觉问答、视频问答及AVQA方法均取得了显著的性能提升。
-5.  实际意义是什么：该方法有望提升机器对音乐等富含音频信息的视频内容的深度理解能力，推动多模态问答系统在音乐教育、内容检索、辅助创作等领域的应用。
-6.  主要局限性是什么：摘要中未说明；可能的局限包括引入频率域交互和额外模块带来的计算开销，以及在更广泛AVQA场景（非音乐类）下的泛化能力尚未在摘要中论证。
+1.  问题：现有的视频到音频（V2A）生成方法主要依赖文本提示进行控制，但面临两大瓶颈：训练数据语义粒度粗糙（如所有狗叫被统一标注），以及文本难以精确描述微小的声学特征（如金属撞击的瞬态和共振），导致难以实现精细的声音合成。
+2.  方法核心：提出AC-Foley，一个直接以参考音频作为控制信号的V2A模型。通过多模态Transformer联合建模视频、文本和参考音频，并利用条件流匹配目标进行生成。
+3.  与已有方法不同：不同于使用文本或CLAP等语义编码器进行控制，AC-Foley使用预训练VAE编码器直接提取参考音频的完整声学特征（音色、频谱），并提出两阶段训练策略（重叠与非重叠条件训练）来教会模型如何将参考音频的特征适应到视频的时间和内容上下文中。
+4.  主要实验结果：在VGGSound测试集上，AC-Foley在多个指标上达到SOTA。例如，在有音频条件下，相比最强基线（MMAudio + CLAP），Fréchet Distance (PaSST) 从70.80降至56.00，Mel Cepstral Distortion (MCD) 从14.63降至11.37。在无音频条件下（使用空嵌入），其性能也与顶尖方法（如MMAudio-L-V2）持平或更优（见表1）。在Greatest Hits数据集上的音色迁移任务中，也优于专为该任务训练的CondFoley（见表2）。
+5.  实际意义：为视频创作者提供了更灵活、精确的音频控制工具，能够生成具有特定材质感的脚步声、特定乐器音色的声音，甚至零样本生成训练集中未见的音效（如装消音器的枪声），极大地拓展了Foley制作的可能性。
+6.  主要局限性：1) 两阶段训练依赖视频内音频的自相似性，对非重复性视频场景的泛化能力可能受限；2) 论文指出，当视频和参考音频包含多个并发声源或时间模式严重不匹配时，模型性能会下降。
 
 ---
 
-### 🥈 [OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs](/audio-paper-digest-blog/posts/2026-05-03-omnivideobench-towards-audio-visual-understanding)
+### 5. [Aurelius: Relation Aware Text-to-Audio Generation At Scale](/audio-paper-digest-blog/posts/2026-05-03-aurelius-relation-aware-text-to-audio-generation)
 
-✅ **7.5/10** | 前25% | #音频问答 | #基准测试 | #多模态模型 #音视频
-
-👥 **作者与机构**
-
-- 第一作者：Caorui Li（东南大学，南京大学）
-- 通讯作者：Jiaheng Liu（南京大学）
-- 作者列表：Caorui Li（东南大学，南京大学），Yu Chen（东南大学，南京大学），Yiyan Ji（南京大学），Jin Xu（阿里巴巴集团），Zhenyu Cui（东南大学），Shihao Li（南京大学），Yuanxing Zhang（快手科技），Zhenghao Song（M-A-P），Dingling Zhang（南京大学），Ying He（北京科技大学），Haoxiang Liu（北京科技大学），Yuxuan Wang（阿里巴巴集团），Qiufeng Wang（东南大学），Jiafu Tang（南京大学），Zhenhe Wu（M-A-P），Jiehui Luo（中央音乐学院），Zhiyu Pan（南京大学），Weihao Xie（华中科技大学），Chenchen Zhang（M-A-P），Zhaohui Wang（南京大学），Jiayi Tian（阿里巴巴集团），Yanghai Wang（南京大学），Zhe Cao（南京大学），Minxin Dai（南京大学），Ke Wang（M-A-P），Runzhe Wen（南京大学），Yinghao Ma（Queen Mary University of London），Yaning Pan（复旦大学），Sungkyun Chang（Queen Mary University of London），Termeh Taheri（Queen Mary University of London），Haiwen Xia（北京大学），Christos Plachouras（Queen Mary University of London），Emmanouil Benetos（Queen Mary University of London），Yizhi Li（曼彻斯特大学），Ge Zhang（M-A-P），Jian Yang（M-A-P），Tianhao Peng（M-A-P），Zili Wang（M-A-P），Minghao Liu（2077AI），Junran Peng（北京科技大学），Zhaoxiang Zhang（中国科学院），Jiaheng Liu（南京大学）
-
-💡 **毒舌点评**
-
-这篇论文在“评估什么”这件事上做到了当前最细粒度和最严谨的实践之一，尤其是对音频模态（语音、音效、音乐）的区分和推理链标注，直指现有模型的软肋。然而，作为一个即将发布的“基准测试”，其说服力很大程度上依赖于后续社区的使用和认可，目前论文更像是一份详尽的“产品设计说明书”，模型能力差距的“诊断报告”虽然详细，但“药方”（如何改进模型）还留待后续研究。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码链接，但承诺“We will release OmniVideoBench to foster the development...”并在结论中表示“We promise to release the experimental code for evaluation in the future”。
-- 模型权重：未提及��本文是评测工作，不产出模型）。
-- 数据集：论文中承诺将发布OmniVideoBench数据集，但未提供具体下载链接或获取方式。
-- Demo：未提及。
-- 复现材料：论文在附录B详细说明了视频收集原则，附录C提供了评测所用的完整提示词（Prompt），为复现评测过程提供了关键信息。论文中引用的主要开源模型包括：Qwen2.5-Omni/XL，Qwen3-Omni，Baichuan-Omni-1.5，HumanOmni，MiniCPM-o，VideoLLaMA2，VITA-1.5，Qwen2.5-VL系列，DeepSeek-V3.1，Gemini系列（闭源），以及用于过滤的Gemini-2.0-Flash和DeepSeek-V3.1。
-
-📌 **核心摘要**
-
-1.  解决的问题：现有的多模态大语言模型（MLLM）评估基准无法全面评估模型在音视频协同推理方面的能力，往往忽略音频模态或未能逻辑一致地整合音视频信息。
-2.  方法核心：提出了一个大规模、设计严谨的基准测试集OmniVideoBench。其核心在于收集了628个涵盖多种类型和时长的真实视频，并构建了1000个高质量、多选题形式的问答对。每个问答对都附带有逐步的、明确标注模态（视觉/音频）和证据的推理链，强调模态互补和逻辑一致性。
-3.  与已有方法相比新在哪里：与现有音视频基准相比，OmniVideoBench在多个维度上进行了提升：（1）覆盖更广的视频时长（数秒到30分钟）和更丰富的现实场景（vlog、新闻、纪录片等）；（2）通过严格的三阶段过滤流程（单模态过滤、文本偏差过滤、人工修正）确保问题必须依赖音视频协同推理；（3）提供原子化的推理链标注，而不仅仅是最终答案，有助于分析模型推理过程。
-4.  主要实验结果：实验评估了多种开源和闭源模型，发现：（1）当前模型表现普遍不佳，最优模型Gemini-2.5-Pro准确率仅为58.90%，远低于人类表现的82.69%；（2）开源模型（除最新的Qwen3-Omni外）表现接近随机猜测；（3）模型对音乐类音频的理解能力最差；（4）在不同任务类型上性能差异巨大，背景音乐理解和计数任务较难，关系推理和总结较易。具体结果见下表：
-
-    | 模型 | 类型 | 平均准确率 |
-    | :--- | :--- | :--- |
-    | Gemini-2.5-Pro | 闭源 | 58.90% |
-    | Gemini-3.0-Flash | 闭源 | 55.10% |
-    | Qwen3-Omni-30B-A3B | 开源 | 38.40% |
-    | Qwen2.5-Omni-7B | 开源 | 29.30% |
-    | 人类表现 | - | 82.69% |
-
-5.  实际意义：OmniVideoBench为社区提供了一个标准化的、高难度的评估工具，能够更公平、更深入地诊断和推动MLLM在真实、复杂的音视频理解场景下的能力发展，特别是针对音频-视觉协同推理、长时间建模和抽象音频理解等核心挑战。
-6.  主要局限性：（1）作为评估基准，其自身不提出新的模型架构或训练方法；（2）问题类型虽多，但仍可能未覆盖所有现实世界的音视频推理场景；（3）依赖人工标注，规模（1000 QA对）相对有限，尽管质量很高。
-
----
-
-### 🥉 [Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models](/audio-paper-digest-blog/posts/2026-05-03-measuring-audios-impact-on-correctness-audio)
-
-✅ **7.5/10** | 前25% | #音频问答 | #强化学习 | #音频大模型 #数据集
+✅ **7.5/10** | 前25% | #音频生成 | #数据集 | #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Haolin He（香港中文大学，蚂蚁集团）
-- 通讯作者：Jian Liu（蚂蚁集团）， Qiuqiang Kong（香港中文大学）
-- 作者列表：Haolin He（香港中文大学，蚂蚁集团），Xingjian Du（罗切斯特大学），Renhe Sun（蚂蚁集团），Zheqi Dai（香港中文大学），Yujia Xiao（香港中文大学），Mingru Yang（蚂蚁集团），Jiayi Zhou（蚂蚁集团），Xiquan Li（上海交通大学），Zhengxi Liu（香港中文大学），Zining Liang（香港中文大学），Chunyat Wu（香港中文大学），Qianhua He（华南理工大学），Tan Lee（香港中文大学），Xie Chen（上海交通大学），Wei-Long Zheng（上海交通大学），Weiqiang Wang（蚂蚁集团），Mark Plumbley（伦敦国王学院），Jian Liu（蚂蚁集团），Qiuqiang Kong（香港中文大学）
-
-💡 **毒舌点评**
-
-亮点：论文敏锐地发现并系统量化了大型音频语言模型（LALMs）中普遍存在的“零音频贡献”现象，即模型主要依赖文本而非音频内容答题，并基于此提出了创新的“音频贡献感知”后训练范式（Weak-to-Strong和Mixed-to-Strong），有效提升了模型在真正依赖音频任务上的性能。
-短板：尽管构建了大规模数据集AudioMCQ，但其生成过程重度依赖LLM（Qwen3-235B），这可能将LLM的偏见或错误（如逻辑推理而非真实音频理解）引入数据集中，削弱了“音频贡献”定义的纯粹性；且论文对“强音频贡献”子集上的GRPO训练为何能带来提升的机制解释仍停留在现象层面，缺乏更深入的分析。
-
-🔗 **开源详情**
-
-*   代码：论文中未提及代码仓库链接。
-*   模型权重：未提及是否公开微调后的模型权重。
-*   数据集：论文中构建的AudioMCQ数据集已公开，并可通过指定链接申请获取（论文中提���了链接）。
-*   Demo：未提及在线演示。
-*   复现材料：提供了详细的超参数配置表（Table 6, Table 7）、数据划分比例、实验设置（如SFT/GRPO步数、数据隔离策略），以及用于评估的模型（A-Flamingo2, R1-AQA, Kimi-Audio）的提示词模板（Appendix B.6）。
-*   论文中引用的开源项目：
-    *   基座模型：Qwen2.5-Omni
-    *   数据生成与评估：Qwen3-235B
-    *   对比模型/方法：A-Flamingo2, R1-AQA, Kimi-Audio, Audio-Reasoner, SARI, Omni-R1, Audio-Thinker, GPT4o-Audio, Gemini-2.0-Flash。
-*   开源计划：论文中未提及代码开源计划。
-
-📌 **核心摘要**
-
-1.  解决的问题：现有针对大型音频语言模型（LALMs）的两阶段后训练（如SFT+RL）效果不理想，且缺乏大规模高质量数据集来研究如何在不同训练阶段有效分配数据。同时，论文发现LALMs存在严重的“零音频贡献”现象，即模型能不依赖音频内容仅通过文本信息得出正确答案。
-2.  方法核心：首先构建了一个包含57.1万个样本的高质量音频多项选择题数据集AudioMCQ。其次，提出“音频贡献过滤（ACF）”方法，通过将音频静音后用多个LALMs评估，将数据分为“弱音频贡献”和“强音频贡献”子集。最后，基于此提出两种新的后训练范式：Weak-to-Strong（在弱贡献数据上SFT，再在强贡献数据上GRPO）和Mixed-to-Strong（在混合数据上SFT，再在强贡献数据上GRPO）。
-3.  创新性：与已有工作相比，本文首次系统性地研究并量化了LALMs的“零音频贡献”问题，并创新性地将数据的“音频贡献度”作为后训练阶段数据分配的关键指标，提出了两个简单有效的新训练范式。
-4.  主要实验结果：使用Qwen2.5-Omni作为基座模型，Weak-to-Strong策略在MMAU-test-mini和MMAU上分别达到78.2%和75.6%，Mixed-to-Strong策略在MMAR和MMSU上分别达到67.0%和71.7%，均超越了此前的所有已知方法，建立了新的最佳水平（SOTA）。具体实验结果对比如下：
-
-| 方法 | MMAU-test-mini | MMAU | MMAR | MMSU |
-| :--- | :---: | :---: | :---: | :---: |
-| Audio-Thinker | 78.0 | 75.4 | 65.3 | - |
-| Omni-R1 | 77.0 | 75.0 | 63.4 | - |
-| All Data GRPO | 78.1 | 75.4 | 63.0 | 70.2 |
-| Weak AC SFT + Strong AC GRPO | 78.2 | 75.6 | 65.3 | 69.3 |
-| Mix AC SFT + Strong AC GRPO | 76.4 | 75.1 | 67.0 | 71.7 |
-
-    表格显示，提出的两种方法在不同基准测试上分别达到了最优性能。
-5.  实际意义：为LALMs的后训练提供了新的、高效的范式指导，明确了在不同训练阶段应选择何种数据（按音频贡献度划分）以最大化模型能力，对提升模型在真实音频理解任务上的性能有直接指导价值。
-6.  主要局限性：数据集构建流程对LLM的依赖可能引入偏见；所提出的ACF方法依赖于多个LALMs的性能，其本身可能受“零音频贡献”问题影响；论文未提供代码和模型权重，影响可复现性。
-
----
-
-### 4. [Incentivizing Consistent, Effective and Scalable Reasoning Capability in Audio LLMs via Reasoning Process Rewards](/audio-paper-digest-blog/posts/2026-05-03-incentivizing-consistent-effective-and-scalable)
-
-✅ **6.5/10** | 前50% | #音频问答 | #强化学习 | #音频场景理解 #音频大模型
-
-👥 **作者与机构**
-
-- 第一作者：Jiajun Fan（根据作者列表顺序推断，论文未明确标注“第一作者”字样）
-- 通讯作者：未说明
-- 作者列表：Jiajun Fan（未说明）、Roger Ren（未说明）、Jingyuan Li（未说明）、Rahul Pandey（未说明）、Prashanth Gurunath Shivakumar（未说明）、Ivan Bulyko（未说明）、Ankur Gandhe（未说明）、Ge Liu（未说明）、Yile Gu（未说明）
-注：作者具体所属机构信息在摘要中未提供。
-
-💡 **毒舌点评**
-
-亮点在于精准捕捉并命名“测试时逆缩放”现象，并跳出“只验证答案对错”的窠臼，用多维度的过程奖励来规训推理链，思路颇具启发性。短板则是作为一项声称“状态最先进”的工作，摘要中给出的关键实验对比数据（如在MMAU上的具体得分和与GPT-4o的差值）过于简略，且缺乏与同赛道推理优化方法的横向比较，说服力打了折扣。
-
-🔗 **开源详情**
-
-- 代码：论文中未提及代码链接。
-- 模型权重：未提及。
-- 数据集：未提及。
-- Demo：未提及。
-- 复现材料：未提及训练细节、配置、检查点或附录说明。
-- 引用的开源项目：摘要中未提及。
-- 总结：论文中未提及开源计划。
-
-📌 **核心摘要**
-
-1.  要解决什么问题：在音频大模型（Audio LLM）中引入推理过程往往会导致性能下降（测试时逆缩放），即更长的推理链会带来更差的结果。论文认为这源于训练不足，导致模型产生幻觉、不一致且错误累积的推理。
-2.  方法核心是什么：提出CESAR框架，采用在线强化学习，核心是过程奖励而非结果奖励。它使用Group Relative Policy Optimization（GRPO）和一套多方面奖励函数，激励推理过程的正确性、格式、一致性、结构化分析模式、因果推理、领域知识整合以及推理深度的校准。
-3.  与已有方法相比新在哪里：从传统的、只关注最终结果正确性的验证（outcome verification），转向对整个推理过程（reasoning process）进行精细化、多维度的奖励和优化。这是针对音频LLM推理不稳定问题的首创性训练框架。
-4.  主要实验结果如何：在MMAU Test-mini基准测试上取得了SOTA结果，大幅优于Gemini 2.5 Pro和GPT-4o Audio。在MMSU推理任务上达到了近人类水平。研究还揭示了模型存在特定的“推理甜点”，即在此处性能随推理深度增加而达到峰值。增强推理能力同时提升了模型的多模态推理和感知能力。
-   注：由于提供的摘要中未包含具体数值的表格，无法列出详细数据。
-5.  实际意义是什么：为开发稳健、可扩展的音频LLM推理能力提供了一种原则性的方法，有望推动音频AI从模式识别迈向更可靠的复杂推理与理解。
-6.  主要局限性是什么：论文摘要中未充分展示与其他先进推理方法（而不仅仅是商业黑盒模型）的对比；未说明CESAR框架对模型基础架构的改造程度；缺乏代码和训练细节，阻碍了复现与验证。
-
----
-
-### 5. [Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning](/audio-paper-digest-blog/posts/2026-05-03-echo-towards-advanced-audio-comprehension-via)
-
-✅ **6.5/10** | 前50% | #音频问答 | #强化学习 | #音频大模型 #预训练
-
-👥 **作者与机构**
-
-- 第一作者：未说明
-- 通讯作者：未说明
-- 作者列表：Daiqing Wu, Xuan Zhang, Dongbao Yang, Jiashu Yao, Longfei Chen, Qingsong Liu, Sicheng Zhao, Can Ma, Yangyang Kang, Yu ZHOU（所有作者所属机构均未说明）
+- 第一作者：Yuhang He（微软研究院；牛津大学计算机系）
+- 通讯作者：Yuhang He（yuhanghe@microsoft.com）
+- 作者列表：Yuhang He（微软研究院，牛津大学计算机系）、He Liang（未说明）、Yash Jain（微软研究院）、Andrew Markham（微软研究院）、Vibhav Vineet（微软研究院）
 
 #
 
 💡 **毒舌点评**
 
-亮点在于其“音频交错推理”的思路颇具想象力，试图让模型像人一样“回听”和“细听”，这是对当前主流“一锤子买卖”式音频理解范式的一次有趣挑战。但短板也同样明显，仅凭摘要中的“全面优于”和“综合分析证实”等定性描述，缺乏硬核数字和消融实验的支撑，让这项工作的实际效能打上了一个大大的问号。
+这篇论文的亮点在于其系统性：它不仅指出了当前文本到音频生成模型在理解复杂关系（如“如果A发生，则B发生，否则C发生”）上的无能，还亲手搭建了完整的“练兵场”——从定义关系（100种）到提供干净“弹药”（110种音频事件）再到制定考题和评分标准。然而，短板也相当明显：作为一篇发表于顶会的工作，其核心贡献“AudioRelGen框架”在论文中缺乏足够的架构细节和深度创新描述，更像一个概念性的解耦设计，而大量篇幅用于描述数据集和基准建设，使得方法的厚度略显不足。
 
 #
 
 🔗 **开源详情**
 
-- 代码：提供了项目页面和GitHub仓库链接（https://github.com/wdqqdw/Echo）。
-- 模型权重：论文摘要中未提及是否公开模型权重。
-- 数据集：论文摘要中未提及是否公开其使用的数据集或生成的数据。
-- Demo：论文摘要中未提及是否提供在线演示。
-- 复现材料：论文摘要中未详细说明是否提供训练配置、检查点或详细的复现说明。提到有“结构化数据生成管道”，但未说明其是否随代码开源。
-- 论文中引用的开源项目：论文摘要中未提及依赖的任何开源项目或工具。
+*   代码：提供了代码仓库链接：https://github.com/yuhanghe01/Aurelius。
+*   模型权重：论文中未提及公开预训练或微调后的模型权重。
+*   数据集：论文详细描述了`AudioEventSet`和`AudioRelSet`的构建过程和本体，但未直接提供其整合数据集的下载链接���文中提到音频素材来源于freesound.org和FSD50K数据集。
+*   Demo：提供了项目主页：https://yuhanghe01.github.io/Aurelius-Proj/，但未明确说明是否有在线交互式Demo。
+*   复现材料：论文附录详细列出了基线模型的推理设置（表III）和代理工作流的详细提示词，为复现评估提供了必要信息。训练超参数（如学习率）未在正文明确给出。
+*   引用的开源项目：评测了大量开源TTA模型（AudioLDM, AudioGen, Tango系列等），使用了开源音频事件检测模型PANNs，并利用LLM（Qwen系列）作为代理。
 
 📌 **核心摘要**
 
-1. 解决的问题：当前大型音频语言模型（LALMs）在处理复杂音频时，普遍采用一次性将整个音频编码为表征的方法，这造成了“信息瓶颈”，限制了模型对音频内容的深入、细致理解。
-2. 方法核心：提出“音频交错推理”范式，将音频视为推理过程中可主动、持续参与的组件。为此，设计了一个两阶段训练框架：第一阶段通过监督微调（SFT）教模型定位信息丰富的音频片段；第二阶段通过强化学习（RL）激励模型在需要时主动“回访”这些片段进行感知和分析。
-3. 与已有方法相比新在哪里：打破了将音频作为静态上下文进行一次性处理的惯例，转变为动态、按需的、迭代式的音频感知与推理过程，更接近人类认知。
-4. 主要实验结果：摘要中声明Echo在音频理解基准测试的专家级和通用任务上“全面优于”现有方法，但未提供任何具体数值。论文中未给出具体数值。
-5. 实际意义：为构建更强大的音频理解模型提供了新的范式，有望提升模型在语音对话、音频事件理解、音视频分析等复杂场景下的性能。
-6. 主要局限性：摘要未提及模型的具体性能指标、参数量、训练成本等关键信息，也未讨论该方法可能引入的额外计算开销或对音频时序敏感任务的潜在影响。其有效性与通用性仍需更全面的实验来验证。
+1.  问题：现有文本到音频（TTA）生成模型在处理需要关系推理的复杂文本提示时表现糟糕。模型往往只能生成孤立的音频事件，而无法准确理解并生成事件之间的时间、空间、逻辑等复杂关系。
+2.  方法核心：提出了“Aurelius”框架，其核心是将音频事件建模与关系建模解耦。为此，精心构建了两个大规模语料库：包含110类层次化音频事件的AudioEventSet，以及包含100种可嵌套组合关系的AudioRelSet。基于这两个语料库，设计了一种可扩展的`<文本，音频>`对生成策略，用于创建海量训练和测试数据。
+3.  创新点：相比之前的小规模、噪声多或关系简单的尝试，本工作提供了规模大（事件×关系）、质量高（经验证）、结构清晰（层次化本体）且可扩展的关系感知TTA研究资源与评估基准。
+4.  实验结果：在构建的基准上对9个主流TTA模型进行了零样本评估，结果表明所有模型在关系感知指标（如mAPre, mARel, mAPar）上表现极差，最高分（TangoFlux）的mAMSR仅为1.77%。然而，通过在构建的100小时数据上微调或从头训练，模型性能可显著提升（例如，TangoFlux微调后mAMSR提升至5.58%），验证了基准和数据的有效性。关键对比数据见下表：
+
+    | 模型 | 评估方式 | 通用指标 (FAD↓, KL↓) | 关系感知指标 (mAPre, mARel, mAPar, mAMSR↑%) |
+    | :--- | :--- | :--- | :--- |
+    | TangoFlux | 零样本 | 6.01, 26.73 | 12.38, 3.34, 7.28, 1.77 |
+    | TangoFlux | 微调 (100h) | 1.29, 9.68 | 28.57, 8.02, 20.84, 5.58 |
+    | TangoFlux | 从头训练 (100h) | 1.64, 17.82 | 16.68, 3.82, 12.01, 2.58 |
+    注：指标数值来源于论文中表2和表3。
+
+5.  实际意义：本工作为社区提供了第一个系统评估和推进“关系感知音频生成”任务的标准平台，其构建的语料库和基准有望催生更注重结构化理解的TTA新模型。
+6.  主要局限性：主要贡献集中于资源建设与基准评估，提出的具体生成框架（AudioRelGen）的技术细节和架构深度阐述不足。实验主要基于单一基础模型（TangoFlux）进行微调和比较，结论的普适性有待更广泛验证。
+
+#
+
+---
+
+### 6. [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio)
+
+✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #统一模型 #多模态
+
+👥 **作者与机构**
+
+- 第一作者：Zeyue Tian（香港科技大学）
+- 通讯作者：Wei Xue（香港科技大学）， Yike Guo（香港科技大学）
+- 作者列表：Zeyue Tian（香港科技大学）， Zhaoyang Liu（香港科技大学）， Yizhu Jin（香港科技大学）， Ruibin Yuan（香港科技大学）， Liumeng Xue（香港科技大学）， Xu Tan（独立研究者）， Qifeng Chen（香港科技大学）， Wei Xue†（香港科技大学）， Yike Guo†（香港科技大学）
+
+#
+
+💡 **毒舌点评**
+
+亮点：论文的野心不小，不仅提出了一个统一的“万能”音频生成框架，还亲手打造了一个包含700多万样本的高质量多模态数据集IF-caps，这相当于为未来的“通用音频模型”铺了一条高质量的数据高速公路。短板：模型的统一性目前还停留在“支持多种模态组合输入”的层面，真正的跨模态泛化能力（例如，将视频中提取的视觉风格迁移到音乐生成中）并未深入探讨。此外，其庞大的数据集完全依赖自动标注（Gemini和Qwen），其中不可避免的噪声和偏差可能会在长期训练中积累并放大。
+
+#
+
+🔗 **开源详情**
+
+- 代码：论文中提及将开源代码，链接为：https://zeyuet.github.io/AudioX/。
+- 模型权重：论文中提及将开源预训练模型检查点。
+- 数据集：论文中提及将开源完整的IF-caps数据集（包含超过700万样本）。
+- Demo：论文提供的网站（https://zeyuet.github.io/AudioX/）很可能包含在线演示。
+- 复现材料：论文详细提供了训练细节（优化器、学习率、batch size、训练硬件、时长）、模型架构描述、评估指标定义、新基准T2A-bench的构建和评估流程，以及附录中的详细数据集和实验信息，为复现提供了充分材料。
+- 论文中引用的开源项目：CLIP-ViT-B/32, Synchformer, T5-base, Stable Audio Open (音频Autoencoder和DiT预训练模型), Qwen2-Audio, Gemini 2.5 Pro (用于数据标注), AnimeGANv2 (用于图像到音频的零样本实验)。
+
+📌 **核心摘要**
+
+1. 要解决的问题：当前音频/音乐生成模型多为专用模型，输入模态（如仅文本或仅视频）和输出域（如仅音效或仅音乐）受限，缺乏一个统一的、能处理任意模态组合输入并生成高质量音频的通用框架，同时面临训练数据稀缺的问题。
+2. 方法核心：提出AudioX统一框架，核心包括：1）基于Diffusion Transformer (DiT)的生成骨干网络；2）一个轻量级的多模态自适应融合模块，用于有效融合文本、视频、音频等多种条件信号，减少跨模态干扰；3）设计并构建了大规模、高质量的多模态数据集IF-caps。
+3. 与已有方法相比新在哪里：1）实现了首个支持文本、视频、音频任意组合输入，并统一生成音频和音乐的框架；2）MAF模块能自适应地加权和对齐不同模态的条件，增强了跨模态控制能力；3）构建了包含700多万样本的细粒度标注数据集IF-caps，并提出两阶段（高质量标注+大规模增强）的数据构建流水线。
+4. 主要实验结果：AudioX在文本到音频（T2A）、文本到音乐（T2M）、视频到音频（V2A）等多个任务和基准测试上达到或超过了当时的SOTA。特别在指令遵循能力上表现突出，在作者提出的T2A-bench和AudioTime基准上大幅领先所有基线。例如，在T2A-bench上，其类别准确率（34.2%）、排序准确率（23.6%）和时间戳准确率（28.2%）均显著最高。用户研究也显示其生成质量获得专家高分。
+5. 实际意义：为多媒体内容创作（影视、游戏、短视频等）提供了更灵活、强大的自动化音频生成工具，降低了专业门槛，同时为“通用音频基础模型”的研究提供了架构和数据方面的宝贵参考。
+6. 主要局限性：模型的统一性尚未在更复杂的跨模态推理任务（如图像风格指导音乐生成）上得到充分验证；数据集IF-caps虽规模庞大且标注精细，但完全由自动化模型生成，可能存在偏差和错误，且目前仅覆盖英文标注。
+
+#
+
+---
+
+### 7. [LayerSync: Self-aligning Intermediate Layers](/audio-paper-digest-blog/posts/2026-05-03-layersync-self-aligning-intermediate-layers)
+
+✅ **7.0/10** | 前25% | #音频生成 | #自监督学习 | #扩散模型 #流匹配
+
+👥 **作者与机构**
+
+- 第一作者：Yasaman Haghighi (Ecole Polytechnique Fédérale de Lausanne, EPFL)
+- 通讯作者：未明确说明（但所有作者邮箱均指向 @epfl.ch）
+- 作者列表：Yasaman Haghighi (EPFL)， Bastien van Delft (EPFL)， Mariam Hassan (EPFL)， Alexandre Alahi (EPFL)
+
+💡 **毒舌点评**
+
+这篇工作最漂亮的地方在于“以己为师”的极简设计思想，用一个无参数、低开销的层间对齐损失，就撬动了跨模态的显著性能提升，真正做到了即插即用，这在目前依赖庞大外部模型提供监督信号的浪潮中是一股清流。不过，其理论解释深度稍显不足，仅仅指出“深层语义更丰富”就作为对齐依据稍显薄弱，对于“为何某些层更丰富”以及对齐引发的特征动力学变化缺乏更细致的剖析。
+
+🔗 **开源详情**
+
+- 代码：论文中提供了代码仓库链接：`https://github.com/vita-epfl/LayerSync.git`。
+- 模型权重：论文中未明确提及是否公开训练好的模型权重。
+- 数据集：实验使用公开数据集（ImageNet, MTG-Jamendo, HumanML3D, CLEVRER, MixKit），论文中未提及对数据集本身的特殊修改或分发。
+- Demo：未提及。
+- 复现材料：论文正文和附录提供了非常详细的实验设置，包括各任务的数据集处理、模型架构配置（表18-20）、训练超参数、硬件资源和评估指标定义，并提供了算法伪代码（算法1），复现指引清晰。
+- 引用的开源项目：主要依赖 SiT (Ma et al., 2024) 作为基础生成模型，使用 Stable Diffusion VAE、Stable Audio Open VAE 等组件。
+
+📌 **核心摘要**
+
+1.  问题：当前提升扩散模型训练效率和生成质量的主流方法严重依赖大型外部预训练模型（如 DINOv2, Qwen2-VL）提供的监督信号，这引入了额外的计算开销、数据依赖和跨模态泛化难题。
+2.  方法核心：提出 LayerSync，一种无参数、即插即用的正则化框架。核心思想是利用扩散模型自身深层语义更丰富的表示作为“内在导师”，通过最大化中间表示层（浅层）与深层表示间的相似性，来引导和增强浅层特征的学习，从而形成模型内部的自指导学习。
+3.  创新点：与依赖外部模型的主流方法（如 REPA）和依赖 EMA 模型的方法（如 SRA）相比，LayerSync 完全自包含，无需额外模型或数据，且训练时计算开销极小（仅增加一次前向传播和一次相似度计算）。
+4.  实验结果：该方法在图像、音频、视频和人体运动生成任务上均有效。关键结果包括：在 ImageNet 256x256 上，使 Flow Transformer (SiT-XL) 的训练加速超过 8.75 倍，FID 提升 23.6%；在音频生成（MTG-Jamendo）上 FAD 改进 21%；在人体运动生成（HumanML3D）上 FID 改进 7.7%。在 ImageNet 纯自监督生成中达到 SOTA（FID 1.89）。消融实验表明其性能对层选择不敏感，且超参数鲁棒性强。
+
+| 实验任务 | 数据集 | 基线模型 | 指标 | 基线值 | + LayerSync | 改进幅度 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 图像生成 | ImageNet 256x256 | SiT-XL/2 (1400 epochs) | FID↓ | 2.06 | 1.89 (800 epochs) | (无直接对比，但更快) |
+| | ImageNet 256x256 | SiT-XL/2 (800 epochs) | FID↓ | 8.99 | 6.87 | 23.6% |
+| | ImageNet 256x256 | SiT-XL/2 (800 epochs) | FID↓ (w/ SDE) | 8.3 | 6.32 | 23.9% |
+| 音频生成 | MTG-Jamendo | SiT-XL (650 epochs) | FAD (CLAP)↓ | 0.251 | 0.199 | 20.7% |
+| 人体运动生成 | HumanML3D | MDM (600K iter) | FID↓ | 0.5206 | 0.4801 | 7.7% |
+| 视频生成 | CLEVRER | SiT-XL (from scratch) | FVD↓ | 265.50 | 120.13 | 54.7% |
+
+![LayerSync 对生成质量的影响](icassp-img://4itprlvbRQ/2.png)
+图：LayerSync 与 Dispersive Loss 在相同设置下的生成结果对比，显示 LayerSync 能在不依赖外部表示的情况下提升生成质量。
+
+5.  实际意义：为扩散模型训练提供了一种零额外成本、跨模态通用的效率提升方案，降低了获得高性能生成模型的门槛。
+6.  局限性：论文指出层间高度相似是否会导致层冗余值得探讨，初步实验显示剪枝效果不佳；长期正则化效应需进一步研究；相似度函数（当前使用余弦相似度）对不同数据域的适应性是一个开放问题。
+
+---
+
+### 8. [SCRAPL: Scattering Transform with Random Paths for Machine Learning](/audio-paper-digest-blog/posts/2026-05-03-scrapl-scattering-transform-with-random-paths-for)
+
+✅ **7.0/10** | 前25% | #音频生成 | #时频分析 | #优化算法 #可微信号处理
+
+👥 **作者与机构**
+
+- 第一作者：Christopher Mitcheltree（Queen Mary University of London, Centre for Digital Music）
+- 通讯作者：未明确说明（根据邮箱推测，Christopher Mitcheltree和Emmanouil Benetos可能为共同通讯作者）
+- 作者列表：Christopher Mitcheltree（Queen Mary University of London, Centre for Digital Music）、Vincent Lostanlen（Nantes Université, École Centrale Nantes, CNRS, LS2N）、Emmanouil Benetos（Queen Mary University of London, Centre for Digital Music）、Mathieu Lagrange（Nantes Université, École Centrale Nantes, CNRS, LS2N）
+
+#
+
+💡 **毒舌点评**
+
+亮点：论文巧妙地将随机优化思想应用于经典散射变换，并设计了P-Adam和P-SAGA来应对路径分布非独立同分布的问题，同时提出的θ重要性采样启发式方法具有很强的实用性和可解释性。短板：虽然算法在多个合成器任务上验证有效，但其核心优势（相对于全树JTFS的加速）在更复杂的、真实的音频任务（如TR-808）上提升并不绝对显著，且实验主要局限在无监督声音匹配这一相对特定的范式内。
+
+#
+
+🔗 **开源详情**
+
+- 代码：提供开源Python包和代码仓库，链接为：https://christhetree.github.io/scrapl/
+- 模型权重：论文中未提及公开预训练模型权重。任务为从头训练的无监督声音匹配。
+- 数据集：TR-808数据集来自外部商业来源（Samples From Mars），论文中未提及自行公开数据。其他实验数据为合成生成，复现时可按代码生成。
+- Demo：论文提供了伴随网站（https://christhetree.github.io/scrapl/）展示音频样本。
+- 复现材料：极其充分。附录E包含了三个实验所有超参数的详细表格。论文明确承诺提供“代码、音频样本、配置文件、复现说明以及SCRAPL算法的Python包”。
+- 引用的开源项目：依赖的开源工具/模型包括：PyTorch、nnAudio（用于CQT）、PANNs、MS-CLAP、不同的可微DSP实现（如用于颗粒合成和TR-808）。
+
+📌 **核心摘要**
+
+1.  要解决什么问题：散射变换（ST）作为感知损失函数在训练神经网络时计算成本过高，因为需要遍历所有路径（paths），严重限制了其在大规模训练中的应用。
+2.  方法核心是什么：提出SCRAPL算法，通过随机采样单个路径来近似完整ST损失的梯度。核心是三个技术：1）路径均匀采样的随机近似；2）路径自适应矩估计（P-Adam）稳定梯度方差；3）路径随机平均梯度加速（P-SAGA）利用历史梯度信息。此外，针对可微数字信号处理（DDSP），提出了θ重要性采样（θ-IS）来初始化路径采样概率，使其更关注对合成器参数影响大的路径。
+3.  与已有方法相比新在哪里：相比于计算所有路径的全树散射变换（如JTFS），SCRAPL大幅降低了计算和内存开销。相比于直接随机采样路径，SCRAPL通过P-Adam、P-SAGA和θ-IS显著降低了梯度估计的方差，提高了收敛速度和最终精度。相比于其他感知损失（如MSS、预训练嵌入），SCRAPL（基于JTFS）能更好地处理时频调制模式和未对齐音频。
+4.  主要实验结果如何：在无监督颗粒合成器声音匹配任务中，SCRAPL相比全树JTFS，在精度上仅差约2倍，但计算速度快约2倍，内存占用低约5倍，达到了更好的帕累托前沿（图1）。与基线方法（如MSS, MS-CLAP）相比，SCRAPL的参数误差显著更低（表1）。消融实验（表2）表明每项技术（P-Adam, P-SAGA, θ-IS）都能带来统计显著的改进。在啁啾合成器上，θ-IS相比均匀采样可将收敛时间减少23-50%，参数误差降低14-80%（表3）。在TR-808鼓机匹配中，JTFS在多数指标上最优，SCRAPL则提供了稳定的折中方案，尤其在未对齐（meso）设置下优于大多数MSS变体（表4）。
+5.  实际意义是什么：使得在大规模神经网络训练中有效使用计算昂贵的、具有感知动机的散射变换损失成为可能，特别是对于需要处理时频调制模式或存在未对齐问题的音频/语音生成、增强等逆问题。
+6.  主要局限性是什么：方法的有效性高度依赖于所选散射变换路径的代表性，对于衰减部分（如鼓声）路径稀疏时可能效果不佳。θ-IS初始化启发式需要预计算。算法分析和收敛性证明仍有待深入。
+
+## 核心摘要
+该论文旨在解决将多变量散射变换（如JTFS）作为不同可微损失函数时计算成本过高的问题。作者提出了SCRAPL算法，其核心是通过随机采样单个路径并利用路径自适应矩估计（P-Adam）、路径随机平均梯度（P-SAGA）和θ重要性采样（θ-IS）三种技术来稳定梯度估计。与计算所有路径的全树散射相比，SCRAPL在计算效率和内存占用上实现了数量级的提升，同时保持了接近的精度。在无监督颗粒合成器声音匹配任务中，SCRAPL的计算速度是JTFS的约2倍，误差仅为其约1.5倍，明显优于MSS等基线。在啁啾合成器任务中，θ-IS相比均匀采样显著提升了收敛速度和参数精度。该算法为在大规模训练中利用具有神经生理学依据的感知损失提供了实用工具，尤其适用于处理存在时频调制或未对齐的音频合成逆问题，但其性能受限于路径分布的稀疏性和初始化的启发式。
+
+---
+
+### 9. [TangoFlux: Super Fast and Faithful Text to Audio Generation with Flow Matching and Clap-Ranked Preference Optimization](/audio-paper-digest-blog/posts/2026-05-03-tangoflux-super-fast-and-faithful-text-to-audio)
+
+✅ **6.5/10** | 前25% | #音频生成 | #流匹配 | #音频大模型 #模型评估
+
+👥 **作者与机构**
+
+- 第一作者：Chia-Yu Hung (南洋理工大学，chiayu001@e.ntu.edu.sg)
+- 通讯作者：论文未明确说明，但邮件列表中显示有来自NTU的Navonil Majumder (navonil.majumder@ntu.edu.sg) 和 Soujanya Poria (soujanya.poria@ntu.edu.sg)，可视为主要联系人。
+- 作者列表：
+  - Chia-Yu Hung (南洋理工大学)
+  - Navonil Majumder (南洋理工大学)
+  - Zhifeng Kong (NVIDIA)
+  - Ambuj Mehrish (威尼斯大学)
+  - Amir Ali Bagherzadeh (Lambda Labs)
+  - Chuan Li (Lambda Labs)
+  - Rafael Valle (NVIDIA)
+  - Bryan Catanzaro (NVIDIA)
+  - Soujanya Poria (南洋理工大学)
+
+#
+
+💡 **毒舌点评**
+
+亮点：CRPO框架很聪明地将CLAP作为“裁判”，通过模型自我生成、排序、学习的闭环，巧妙地绕开了TTA领域缺乏标准答案的对齐困境，实验证明其效果远超静态数据集。短板：最终性能高度依赖CLAP这个“裁判”自身的偏好和偏见，论文对此风险讨论不足，且最终模型的“对齐”究竟在多大程度上反映了真实的人类音频审美，仍是一个未完全解决的问题。
+
+#
+
+🔗 **开源详情**
+
+- 代码：论文中未提及具体代码仓库链接，但明确表示“将在接受后公开模型训练、推理和评估的实现”。
+- 模型权重：论文中明确表示“将在接受后公开模型权重”。
+- 数据集：使用并遵循了开源数据集WavCaps和AudioCaps的许可。CRPO中使用的提示词库来源于AudioCaps训练集。
+- Demo：提供了一个在线演示页面：https://tangoflux.github.io/ ，用于对比模型生成的音频样本。
+- 复现材料：在附录中提供了非常详尽的训练细节（超参数、优化器设置、硬件）、评估指标说明、人类评估协议和所有消融实验结果，复现支持充分。
+- 引用的开源项目：Stable Audio Open的VAE、FLAN-T5文本编码器、CLAP模型、diffusers库（用于流匹配）、AudioLDM评估工具包等。
+
+📌 **核心摘要**
+
+本文旨在解决文本到音频（TTA）生成中对齐困难的问题，即现有模型常遗漏细节或产生“幻觉”音频，而构建对齐所需的偏好数据对又缺乏标准。核心方法是提出CLAP-Ranked Preference Optimization（CRPO），这是一个迭代式自我改进框架：在每个训练迭代中，模型（TangoFlux）先为一批提示词生成多个音频，然后用CLAP模型根据与文本的相似度对音频进行排序，构造出“优胜”和“落败”的偏好对，最后通过优化一个新的损失函数LCRPO（结合DPO-FM损失和流匹配损失）来对模型进行微调。与已有方法相比，CRPO的新颖之处在于动态在线生成偏好数据，而非依赖固定的、可能已过时的人工标注或静态数据集。主要实验结果显示，TangoFlux（515M参数）在AudioCaps测试集上全面超越了Tango2、Stable Audio Open等基线模型，在多项客观指标（如CLAPscore 0.480， FDopenl3 75.1）和人类评估（OVL和REL的z-score及Elo评分）上达到最先进水平，同时仅需3.7秒即可生成30秒44.1kHz音频。该研究的实际意义在于提供了一个完全基于开源数据训练的高效、高质量TTA模型及其对齐方法，加速了音频内容创作。主要局限性在于对齐质量受制于CLAP作为代理奖励模型的准确性，且LCRPO方法在理论上如何缓解“奖励过度优化”问题的机制仍需更深入探讨。
+
+#
 
 ---
 

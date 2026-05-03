@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 空间音频 论文列表"
+title: "ICLR 2026 - 统一音频模型 论文列表"
 date: 2026-05-03
 draft: false
-tags: ["空间音频"]
+tags: ["统一音频模型"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 空间音频 方向论文"
+description: "共 1 篇 ICLR 2026 统一音频模型 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 空间音频
+# ICLR 2026 - 统一音频模型
 
 共 **1** 篇论文
 
@@ -18,43 +18,40 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [OWL : Geometry-Aware Spatial Reasoning for Audio Large Langu](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio) | 8.0分 | 前25% |
+| 🥇 | [UALM: Unified Audio Language Model for Understanding, Genera](/audio-paper-digest-blog/posts/2026-05-03-ualm-unified-audio-language-model-for) | 7.0分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [OWL : Geometry-Aware Spatial Reasoning for Audio Large Language Models](/audio-paper-digest-blog/posts/2026-05-03-owl-geometry-aware-spatial-reasoning-for-audio)
+### 🥇 [UALM: Unified Audio Language Model for Understanding, Generation and Reasoning](/audio-paper-digest-blog/posts/2026-05-03-ualm-unified-audio-language-model-for)
 
-🔥 **8.0/10** | 前25% | #空间音频 | #多任务学习 | #音频大模型 #数据集
+✅ **7.0/10** | 前25% | #统一音频模型 | #自回归模型 | #音频大模型 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Subrata Biswas（Worcester Polytechnic Institute, Department of Electrical & Computer Engineering）（表示共同第一作者）
-- 通讯作者：Bashima Islam（Worcester Polytechnic Institute, Department of Electrical & Computer Engineering）
-- 作者列表：Subrata Biswas（Worcester Polytechnic Institute, Department of Electrical & Computer Engineering）、Mohammad Nur Hossain Khan（Worcester Polytechnic Institute, Department of Electrical & Computer Engineering）、Bashima Islam（Worcester Polytechnic Institute, Department of Electrical & Computer Engineering）
+- 第一作者：Jinchuan Tian（卡内基梅隆大学，CMU；与NVIDIA合作）
+- 通讯作者：Wei Ping（NVIDIA）
+- 作者列表：Jinchuan Tian（CMU†），Sang-gil Lee（NVIDIA），Zhifeng Kong（NVIDIA），Sreyan Ghosh（NVIDIA†, UMD），Arushi Goel（NVIDIA），Chao-Han Huck Yang（NVIDIA），Wenliang Dai（NVIDIA），Zihan Liu（NVIDIA），Hanrong Ye（NVIDIA），Shinji Watanabe（CMU），Mohammad Shoeybi（NVIDIA），Bryan Catanzaro（NVIDIA），Rafael Valle（NVIDIA），Wei Ping（NVIDIA）。†表示工作在NVIDIA实习期间完成，*表示同等贡献。
+
+#
 
 💡 **毒舌点评**
 
-这篇论文将几何信息（深度图）作为特权信息用于训练一个音频编码器，其在推理时仅依赖音频的巧妙设计，展现了扎实的系统工程能力。然而，其核心创新“几何感知”严重依赖合成数据，在真实世界复杂声场（如强混响、动态障碍物）中的泛化能力尚未得到充分验证，且CoT监督可能引入对模板化答案的依赖而非真正的空间推理能力。
+亮点在于系统性地提出了一个“三位一体”的音频模型框架，并在统一训练上给出了有效的工程解决方案（数据比例、模态对齐），使得单一模型能在多项基准上达到或接近SOTA。短板是其“推理”能力目前更像是一种受控生成的引导机制，距离人类作曲家那种真正的多模态创造性反思还有很大距离，且作为统一模型，其处理未见过的复杂混合音频任务的能力有待验证。
 
-🔗 **开源详情**
-
--   代码：提供代码仓库链接：https://github.com/BASHLab/OWL。
--   模型权重：论文中提及“我们的模型和代码将公开”，但未明确给出权重文件的直接下载链接。承诺公开。
--   数据集：论文中明确表示将公开发布BiDepth数据集。
--   Demo：未提及在线演示。
--   复现材料：提供了详细的训练细节（包括超参数、学习率调度、硬件配置）、模型架构描述和附录，有利于复现。
--   引用的开源项目：SoundSpaces v2.0 (Chen et al., 2022), Matterport3D (Chang et al., 2017), AudioMAE (Huang et al., 2022), LLaMA-2 (Touvron et al., 2023), Q-Former (Li et al., 2023), LoRA (Hu et al., 2022), BAT (Zheng et al., 2024b)。
+#
 
 📌 **核心摘要**
 
-1.  问题：当前的音频大语言模型在空间推理任务上存在两大局限：缺乏对环境几何结构的显式感知，以及依赖单步推理，导致方向和距离估计不精确，且推理过程不可解释。
-2.  核心方法：提出OWL框架，其核心是空间-声学几何编码器（SAGE）。SAGE在训练时利用双耳房间脉冲响应和全景深度图像进行几何感知的监督学习，但在推理时仅需音频输入。OWL进一步将SAGE与基于链式思维的推理模块结合，实现从感知到多步推理的流程。
-3.  新在哪里：与先前工作（如BAT）相比，OWL/SAGE引入了显式的几何监督（深度图像、RIR），将空间定位精度从粗略的4个方向提升到精细的12个时钟方向；首次在音频大模型中引入几何感知的链式思维推理；并构建了迄今最大的空间音频问答数据集BiDepth（超过110万对QA）。
-4.  主要实验结果：在BiDepth和SpatialSoundQA两个基准上，OWL将平均方向角误差降低了11°，空间推理问答准确率最高提升了25%。具体数据见表2、3、4。例如，在BiDepth数据集上，OWL在12方向角DoA准确率（单源）达到46.17%，远超BAT的基准线；在链式思维推理（Type IV）的方向估计任务上达到86.76%的准确率。
-5.  实际意义：OWL推动了音频大模型从“感知”向“感知+推理”演进，其生成的带有推理过程的回答更具可解释性，对智能体、机器人听觉、辅助技术等需要理解声学环境的应用有潜在价值。
-6.  主要局限性：1）主要训练数据BiDepth是合成数据，其仿真环境（Matterport3D）与真实世界的声学差异可能影响泛化性；2）链式思维监督可能使模型学习到固定的推理模板，而非真正灵活的空间逻辑；3）当前仅支持单轮问答，未涉及交互式对话。
+1. 问题：当前音频语言模型将理解与生成任务分开处理，且生成任务以扩散模型为主流，自回归模型质量有差距。音频领域的多模态推理（超越纯文本推理）也未被充分探索。
+2. 方法核心：提出统一音频语言模型（UALM）。首先构建UALM-Gen，一个基于自回归LLM（初始化自Qwen2.5）的文本到音频生成模型，通过大规模数据（30M样本）、无分类器引导（CFG）和直接偏好优化（DPO）达到SOTA生成质量。然后，通过精心设计的数据混合（图2）和模态对齐训练，将音频理解、生成和文本推理统一到一个模型（UALM）。最后，提出UALM-Reason，通过引入“富文本描述（Rich Caption）”作为中间计划，并使用两阶段SFT-DPO训练，赋予模型多模态生成推理能力（丰富化、对话、自我反思）。
+3. 创新：①首次在一个自回归LLM框架内成功统一音频理解、生成和推理；②证明了通过适当的训练策略，自回归模型可以在音频生成上媲美扩散模型；③提出了面向生成任务的多模态推理范式（如自我反思），超越了现有仅限于理解任务的文本推理。
+4. 实验结果：在音频生成（表1）上，UALM-Gen和UALM在AudioCaps和SongDescriber数据集上的多项客观指标（FD, KL, CL, AES）和主观评分（OVL, REL）达到或超过ETTA、Stable Audio Open等扩散模型基线。在音频理解（表2）上，UALM在MMAU和MMAR基准上匹配或超越Audio Flamingo 3、Qwen2.5-Omni等专门模型。在文本能力（表3）上，UALM相比基座LLM（Qwen2.5-7B）仅有极小性能损失。多模态推理的主观评估（表4）显示，UALM-Reason在富化、对话、自我反思三种推理场景下均优于基线UALM。
+5. 实际意义：为构建通用音频AI提供了可行的技术路径，有望统一音频相关应用，提升模型在复杂创意任务（如音乐创作）中的可控性和智能性。
+6. 主要局限性：目前音频表示未完全统一（输入用连续编码器，输出用离散编解码器）；合成数据（尤其是富文本描述）存在质量瓶颈；缺乏能精确评估复杂生成音频和多模态推理链的评估指标。
+
+#
 
 ---
 

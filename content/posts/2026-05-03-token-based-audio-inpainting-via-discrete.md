@@ -2,127 +2,176 @@
 title: "Token-Based Audio Inpainting via Discrete Diffusion"
 date: 2026-05-03
 draft: false
-tags: [音频生成, 扩散模型, 预训练, 音频大模型]
+tags: [音频修复, 离散扩散, 预训练, 音乐处理]
 categories: [iclr-2026]
-description: "音频生成 | 7.5/10"
+description: "音频修复 | 7.5/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Token-Based Audio Inpainting via Discrete Diffusion
 
-#音频生成 #扩散模型 #预训练 #音频大模型
+#音频修复 #离散扩散 #预训练 #音乐处理
 
-✅ **7.5/10** | 前25% | #音频生成 | #扩散模型 | #预训练 #音频大模型
+✅ **7.5/10** | 前25% | #音频修复 | #离散扩散 | #预训练 #音乐处理
 
-学术质量 5.5/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 0.0 | 置信度 高
 
 
 ### 👥 作者与机构
 
-- 第一作者：Tali Dror (Ben-Gurion University of the Negev, School of Electrical and Computer Engineering)， Iftach Shoham (Ben-Gurion University of the Negev, Faculty of Computer and Information Science, Data Science Research Center)（论文注明两人贡献相等）
-- 通讯作者：Eliya Nachmani (Ben-Gurion University of the Negev, School of Electrical and Computer Engineering)
-- 作者列表：Tali Dror（Ben-Gurion University of the Negev, School of Electrical and Computer Engineering）、Iftach Shoham（Ben-Gurion University of the Negev, Faculty of Computer and Information Science, Data Science Research Center）、Moshe Buchris（Ben-Gurion University of the Negev, School of Electrical and Computer Engineering）、Oren Gal（University of Haifa）、Haim Permuter（Ben-Gurion University of the Negev, School of Electrical and Computer Engineering）、Gilad Katz（Ben-Gurion University of the Negev, Faculty of Computer and Information Science, Data Science Research Center）、Eliya Nachmani（Ben-Gurion University of the Negev, School of Electrical and Computer Engineering）
+- 第一作者：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）
+- 通讯作者：Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
+- 作者列表：Tali Dror（Ben-Gurion University of the Negev，电气与计算机工程学院）、Iftach Shoham（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Moshe Buchris（Ben-Gurion University of the Negev，电气与计算机工程学院）、Oren Gal（University of Haifa）、Haim Permuter（Ben-Gurion University of the Negev，电气与计算机工程学院）、Gilad Katz（Ben-Gurion University of the Negev，计算机与信息科学学院，数据科学研究中心）、Eliya Nachmani（Ben-Gurion University of the Negev，电气与计算机工程学院）
+
+#
 
 ### 💡 毒舌点评
 
-本文首次将离散扩散模型与预训练音频令牌化器结合用于修复任务，在长间隙（>=150ms）音频修复上展示了系统性优势，这是一个扎实的工程创新。但方法的天花板很大程度上受限于WavTokenizer的性能与24kHz带宽，且其“令牌空间生成-解码为波形”的路径，本质上回避了直接建模复杂音频波形或频谱相位这一更核心的难题，更像是为离散扩散找到了一个“好用”的应用场景，而非对扩散模型本身的突破。
+这篇论文为音频修复这个“老”问题提供了“新”解法，巧妙地将离散扩散与预训练音频tokenizer结合，在长缺失段修复上展现了不错的潜力，且实验对比和消融做得非常扎实。然而，其性能上界似乎被WavTokenizer这类离散编解码器的质量所束缚，这或许暗示着“基于token”的范式在追求极致音频保真度时面临的共同天花板。
 
 ### 🔗 开源详情
 
 - 代码：论文中提供了代码仓库链接：`https://github.com/iftachShoham/AIDD`。
-- 模型权重：未提及是否公开预训练模型权重。
-- 数据集：使用公开基准数据集MusicNet和MAESTRO，论文未提及提供新数据集。
-- Demo：未提及在线演示链接。
-- 复现材料：在附录B“REPRODUCIBILITY STATEMENT”中详细列出了所有关键超参数（见Table 8），并说明了训练硬件（单张NVIDIA A6000 GPU）和训练时间，提供了充分的复现信息。
-- 论文中引用的开源项目：主要依赖WavTokenizer (Ji et al., 2024) 和 UniCodec (Jiang et al., 2025) 作为音频令牌化器；使用DiT (Peebles & Xie, 2023) 作为扩散模型架构基础；评估指标参考了PEMO-Q和PEA-Q的实现。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：使用了公开的数据集MusicNet和MAESTRO，并说明了遵循各自的标准划分。未提供额外数据。
+- Demo：论文中未提及在线演示（Demo）链接。
+- 复现材料：论文在附录（Supplementary Material）中提供了详尽的复现说明，包括关键超参数表（Table 8）、训练环境（单卡A6000 GPU）和训练时长。
+- 论文中引用的开源项目：
+    1.  WavTokenizer（Ji et al., 2024）：用于音频分词与解码。
+    2.  Diffusion Transformer (DiT)（Peebles & Xie, 2023）：作为扩散模型的架构基础。
+    3.  离散扩散建模框架（Lou et al., 2024）：提供了DWDSE损失等核心理论。
+    4.  UniCodec（Jiang et al., 2025）：作为替代tokenizer进行对比实验。
+    5.  旋转位置编码 (RoPE)（Su et al., 2024）。
 
 ### 📌 核心摘要
 
-1.  问题：传统及基于连续扩散的音频修复方法在处理长音频间隙（如超过300ms）时，性能会因难以捕捉长程依赖和保持语义一致性而下降。
-2.  方法核心：提出AIDD，首次将离散扩散模型应用于由预训练音频令牌化器（WavTokenizer）转换得到的离散令牌序列上，将音频修复建模为序列补全任务。方法引入了两项关键技术：基于导数的正则化损失，以强制生成令牌在时间上平滑；以及基于跨度的吸收式掩蔽策略，在扩散前向过程中结构化损坏令牌。
-3.  与已有方法相比新在哪里：区别于在连续域（波形、频谱图）进行扩散的方法，AIDD在离散令牌空间中操作，避免了直接建模原始波形或处理相位问题的困难，并首次将离散扩散框架用于音频修复任务。
-4.  主要实验结果：在MusicNet和MAESTRO数据集上，针对150ms至750ms的间隙进行评估。对于大于150ms的间隙，AIDD在FAD、LSD和ODG指标上持续优于LPC、A-SPAIN-L、CQT-Diff+、GACELA和bin2bin等基线。例如，在MusicNet数据集上，针对300ms间隙，AIDD的FAD（3.549）相比强基线CQT-Diff+（4.652）降低了约24%。主观MOS测试也显示AIDD优于GACELA和CQT-Diff+。
-    *   表1（MusicNet数据集对比）
-    | 方法 | 150ms | 200ms | 250ms | 300ms |
-    |---|---|---|---|---|
-    | | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ | FAD↓ LSD↓ ODG↑ |
-    | CQT-Diff+ | 1.525 0.164 -3.559 | 2.619 0.218 -3.651 | 3.202 0.272 -3.891 | 4.652 0.324 -3.711 |
-    | AIDD | 1.866 0.162 -3.215 | 2.391 0.209 -3.250 | 2.438 0.260 -3.274 | 3.549 0.297 -3.284 |
-    *   表2（MAESTRO数据集对比，ODG-PEA-Q）
-    | 方法 | 375ms (↑) | 750ms (↑) |
-    |---|---|---|
-    | GACELA | -3.232 ± 0.232 | -3.318 ± 0.202 |
-    | bin2bin-MIDI | -2.800 ± 0.491 | -2.976 ± 0.456 |
-    | AIDD | -2.303 ± 0.692 | -2.596 ± 1.300 |
-5.  实际意义：推进了音乐和音频修复领域的研究，为利用离散表示进行音频生成提供了新范式，并可能扩展到语言等其他序列生成任务。
-6.  主要局限性：修复性能受限于所用音频令牌化器的质量与带宽上限（本文WavTokenizer为24kHz）。模型在训练时采用“先令牌化后掩蔽”，而推理时是“先掩蔽后令牌化”，存在训练-推理不匹配问题（尽管消融实验显示影响较小）。比较时存在连续域与离散域的跨域差异。
+1.  问题：音频修复旨在恢复音频信号中缺失或损坏的片段，特别是在缺失区域较大时，现有方法（如连续扩散模型）性能会下降，难以保持语义连贯性和时间平滑性。
+2.  核心方法：提出AIDD，首个将离散扩散模型应用于token化音乐表示的音频修复框架。它首先使用预训练的WavTokenizer将音频压缩为离散token序列，然后在离散空间中应用基于Transformer的扩散模型进行修复。
+3.  创新性：方法的新颖之处在于：1）首次在离散token空间执行音频修复的扩散过程；2）提出基于跨度的掩蔽策略，模拟从局部到全局的结构化损坏；3）引入基于导数的正则化损失，约束预测token序列的时间平滑性。
+4.  主要结果：在MusicNet和MAESTRO数据集上，对于150ms至750ms的缺失段，AIDD在FAD、LSD、ODG等客观指标和MOS主观评分上均优于或匹配多个强基线。例如，在MusicNet上300ms缺失段，AIDD的FAD比CQT-Diff+低约25%（3.549 vs. 4.652）；在MAESTRO上375ms缺失段，AIDD的ODG得分为-2.303，优于所有基线。消融实验证实了所提损失和策略的有效性。
+5.  实际意义：为音乐录音修复、数据丢失填补等场景提供了新方案，并证明了离散扩散模型在音频序列建模上的可行性，为token-based生成模型开辟了新方向。
+6.  主要局限性：修复效果受限于底层tokenizer（WavTokenizer）的质量和带宽（24kHz）；存在训练与推理时掩蔽顺序不匹配的问题；与基于波形或频谱图的方法进行跨域比较存在偏差。
 
 ### 🏗️ 模型架构
 
-![AIDD方法概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9ZogqiyWXm-0.png)
-图1：AIDD方法概览图。训练时，干净音频经WavTokenizer编码为令牌序列，在随机时间步t进行基于跨度的掩蔽损坏，然后由扩散Transformer（DiT）预测去噪分数，并使用DWDSE和导数损失进行优化。推理时，带间隙的音频被编码为带掩蔽令牌的序列，DiT通过反向扩散迭代填充掩蔽令牌，最后由WavTokenizer解码回波形。
+AIDD的整体架构（如图1所示）分为三个主要阶段，构成了一个完整的“波形-离散token-波形”的转换与修复流程：
 
-模型AIDD（Audio Inpainting via Discrete Diffusion）是一个三阶段框架，核心在于将音频修复转化为离散令牌序列的补全问题。
-1.  音频令牌化（Audio Tokenization）：使用预训练的WavTokenizer作为音频编解码器。编码器将高维原始音频波形压缩成紧凑的离散令牌序列（词汇量约4k）。解码器将生成的令牌序列还原为音频波形。这步将连续音频问题映射到了离散序列问题。
-2.  离散扩散模型（Discrete Diffusion Model）：核心是一个扩散Transformer（DiT） 架构。它集成时间条件到标准的编码器Transformer中，并使用旋转位置编码。该模型学习预测被掩蔽令牌的具体分数（concrete score），即不同令牌间的转移概率比率，以指导反向扩散过程。前向扩散过程使用基于跨度的吸收式掩蔽策略，逐步将令牌替换为`[MASK]`。反向过程则迭代地从最大噪声（全掩蔽）状态恢复原始令牌序列。
-3.  波形重建（Waveform Reconstruction）：将反向扩散生成的完整令牌序列输入WavTokenizer解码器，得到重建的音频波形。为确保输出平滑，在修复片段与原始音频边界处应用10毫秒的交叉淡入淡出。
+1.  音频分词化（Audio Tokenization）：
+    *   输入：包含缺失段（静音）的原始音频波形。
+    *   组件：预训练的WavTokenizer编码器。
+    *   功能：将高维连续音频信号压缩为紧凑的离散token序列。每个token代表音频的一个局部特征片段。
+    *   输出：离散token序列。缺失段在token化后通常表现为特定的掩码token（如[MASK]）或异常token。
+
+2.  离散扩散修复（Discrete Diffusion Inpainting）：
+    *   输入：上一步输出的、包含缺失信息的token序列。
+    *   核心组件：一个基于Transformer的扩散模型（Diffusion Transformer, DiT）。
+        *   结构：标准编码器Transformer，融入了时间步条件（timestep conditioning）和旋转位置编码（RoPE）。
+        *   训练目标：学习预测被掩蔽token的“具体分数”（concrete score），使用DWDSE损失函数进行优化。
+        *   前向过程：在训练时，采用基于跨度的掩蔽（Span-based Masking）策略对token序列进行腐蚀，根据时间步t计算掩蔽预算，并采样连续掩蔽片段。
+        *   逆向过程：在推理时，模型从全掩蔽或部分掩蔽的token序列开始，通过迭代预测，逐步恢复（去噪）出合理的token序列，填满缺失部分。
+    *   正则化：引入了基于导数的正则化损失（Derivative-based Regularization Loss）。该损失计算预测token嵌入向量的一阶或二阶差分与真实差分之间的L2距离，鼓励生成序列在时间上平滑变化，避免突兀的局部波动。
+    *   数据流：模型以掩蔽token序列和当前时间步t为输入，输出每个位置上token的概率分布（或具体分数），用于逆向扩散采样。
+
+3.  音频解码（Audio Decoding）：
+    *   输入：经扩散模型修复后的、完整的token序列。
+    *   组件：WavTokenizer解码器。
+    *   功能：将修复后的离crete token序列解码回原始波形域。
+    *   处理细节：为确保拼接处平滑，仅用修复后的token解码出的波形段替换原始音频中的缺失段，并在边界处应用短时（10ms）交叉淡入淡出。
+    *   输出：修复后的完整音频波形。
+
+![AIDD方法框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/9ZogqiyWXm-0.png)
+图1（论文图1）：AIDD方法框架概览。上半部分（训练阶段）展示了token序列在随机时间步t被跨度掩蔽腐蚀，然后DiT模型被训练以预测真实分数（结合L_DWDSE和L_deriv损失）。下半部分（推理阶段）展示了包含缺失段的输入波形被token化，DiT进行迭代逆向扩散修复token序列，最后解码并拼接回原始音频。
 
 ### 💡 核心创新点
 
-1.  首次将离散扩散模型应用于音频修复任务：开创性地在预训练音频令牌化器（WavTokenizer）产生的离散表示空间中，运用离散扩散模型解决音频修复问题。这避免了直接建模原始波形或处理频谱图相位问题的复杂性，使模型能更好地捕捉高层语义结构。
-2.  提出基于导数的正则化损失：针对离散扩散目标（DWDSE）不显式约束预测令牌嵌入时间平滑性的问题，引入了一项新损失。该损失对齐预测令牌嵌入与真实嵌入的一阶或二阶离散时间导数，惩罚预测序列中不规则的局部波动，从而鼓励生成时序上更自然、更平滑的令牌轨迹。
-3.  设计用于修复的基于跨度的掩蔽策略：不同于先前离散扩散框架独立掩蔽每个令牌，本文提出了结构化的掩蔽策略。它根据当前时间步的噪声水平，采样连续令牌跨度进行掩蔽。这模拟了从细粒度局部损坏到更广泛语义扰动的进程，使模型更好地学习处理修复任务中典型的连续缺失区域。
+1.  将离散扩散模型首次应用于token化音乐的修复任务：这是论文最核心的创新。以往音频修复方法大多在连续域（波形、频谱图）操作，而本文将问题转换为离散token序列的补全，利用离散扩散模型在类别空间建模的能力，以更好地捕获音频的高级语义结构，尤其是在长缺失段上。
+2.  基于跨度的掩蔽训练策略：针对离散扩散模型，设计了结构化的前向腐蚀过程。通过采样连续的token片段进行掩蔽，使得训练过程从细粒度的局部腐蚀渐进到更广泛的语义破坏，更好地模拟了音频修复任务中缺失段的连续性特点，优于独立掩蔽每个token的通用离散扩散训练方式。
+3.  基于导数的正则化损失：在标准的扩散损失（DWDSE）基础上，额外引入了一个鼓励时间平滑性的损失项。通过约束预测token嵌入向量的变化率（一阶/二阶差分）与真实序列一致，显式地引导模型生成在时间维度上连贯、自然的修复结果，提升了感知质量。
 
 ### 🔬 细节详述
 
-- 训练数据：在MusicNet（古典音乐）和MAESTRO（钢琴演奏）两个数据集上独立训练。使用官方预定义的训练/测试划分。音频被截断为固定长度（300个令牌，约4秒）的片段。
-- 损失函数：总损失为 `L_total = L_DWDSE + λ * L_deriv`。
-    - `L_DWDSE`：扩散加权去噪分数熵损失，用于训练模型估计令牌转移比率。
-    - `L_deriv`：导数正则化损失，计算掩蔽位置处预测与真实令牌嵌入的一阶或二阶离散导数之差的L2范数。λ是权重因子（实验中优选λ=500）。
-- 训练策略：
-    - 优化器：AdamW
-    - 学习率：1e-6
-    - 批大小：128
-    - 训练步数：MusicNet为400k步（基础模型），其他变体100k步；MAESTRO为150k步。
-    - EMA：指数移动平均，系数0.9999。
-- 关键超参数：
-    - 模型大小：DiT约90M参数。
-    - 令牌化器：WavTokenizer（词汇量约4k）或UniCodec（词汇量约16k）。
-    - 掩蔽参数：最大跨度长度 `ℓmax=30`；采样参数 `p0=0.8`，`α=0.5`。
-    - 扩散过程：吸收图类型；对数线性噪声调度；欧拉预测器；采样步数1024。
-- 训练硬件：单张NVIDIA A6000 GPU。基础模型在MusicNet上训练约2天，其他方法训练约1天。
-- 推理细节：在反向扩散过程中迭代1024步。修复片段与原始音频边界应用10ms交叉淡入淡出。由于方法是随机性的，评估时对每个片段生成10个样本并平均。
-- 正则化/稳定训练技巧：采用旋转位置编码；使用导数损失增强时序平滑性；通过EMA平滑训练过程。
+*   训练数据：
+    *   数据集：MusicNet（330段古典音乐）和 MAESTRO（200+小时钢琴演奏）。论文未说明具体使用了多少小时数据进行训练。
+    *   预处理：音频被token化并截断为固定长度（300个token，约4秒）的片段。在训练时，对这些完整token序列应用基于跨度的掩蔽腐蚀。
+    *   数据增强：未明确提及专门的数据增强手段。
+*   损失函数：
+    *   主损失：DWDSE（Diffusion Weighted Denoising Score Entropy）损失（公式3）。这是离散扩散模型的核心训练目标，用于学习逆转前向掩蔽过程的分数函数。
+    *   正则化损失：基于导数的正则化损失（L_deriv）。计算掩码位置附近token嵌入的一阶（Δ¹e）或二阶（Δ²e）差分的L2范数损失。
+       总损失：L_total = L_DWDSE + λ  L_deriv。λ为权重因子（消融实验中尝试了200，500，800）。
+*   训练策略：
+    *   优化器：AdamW，学习率为1e-6。
+    *   批量大小：128。
+    *   训练步数：在MusicNet上，基础模型训练400k步，其他变体训练100k步；在MAESTRO上训练150k步。
+    *   噪声调度：对数线性（loglinear）噪声调度。
+    *   采样步数：1024步逆向扩散（推理时）。
+    *   其他：使用EMA（指数移动平均，衰减率0.9999）稳定训练。
+*   关键超参数：
+    *   Tokenizer：WavTokenizer（码本大小约4k）或 UniCodec（码本大小约16k）作为对比。
+    *   模型：DiT架构，参数量约90M（使用WavTokenizer时为81M）。
+    *   扩散过程：采用吸收式（absorbing）掩蔽转移矩阵。跨度掩蔽参数：基础概率p0=0.8，缩放因子α=0.5，最大跨度长度ℓ_max=30。
+*   训练硬件：单块NVIDIA A6000 GPU。MusicNet基础模型训练约2天，MAESTRO模型训练约24小时。
+*   推理细节：
+    *   步骤：对掩蔽音频分词 -> DiT执行1024步逆向扩散采样预测完整token序列 -> 解码 -> 提取修复段并与原始音频拼接（带10ms交叉淡化）。
+    *   采样策略：论文未明确指定采样器类型，但提到了“预测器: Euler”，可能指在逆向扩散的常微分方程（ODE）求解中使用欧拉法。
+*   正则化或稳定训练技巧：采用了基于导数的损失以提升时间平滑性，以及跨度掩蔽以结构化腐蚀。训练中使用EMA。
 
 ### 📊 实验结果
 
-- 主要基准与数据集：MusicNet数据集（测试间隙150-300ms，每个片段四个间隙），MAESTRO数据集（测试间隙375ms和750ms，单个间隙）。
-- 客观指标：FAD（↓）、LSD（↓）、ODG（↑，使用PEMO-Q和PEA-Q两种实现）。
-- 与基线对比：
-    *   MusicNet (Table 1)：在所有>=200ms的间隙长度上，AIDD在FAD和ODG指标上均优于CQT-Diff+。例如300ms间隙FAD降低24%。在150ms短间隙上，CQT-Diff+的FAD略低，但AIDD的ODG和LSD更好。
-    *   MAESTRO (Table 2)：AIDD在375ms和750ms间隙上的ODG（PEA-Q）得分显著优于GACELA、bin2bin和bin2bin-MIDI。例如375ms间隙得分-2.303 vs 第二名-2.800。
-- 主观听觉测试 (Table 3)：
-    | 方法 | MOS (↑) |
-    |---|---|
-    | Original | 4.12 ± 0.96 |
-    | GACELA | 3.51 ± 1.33 |
-    | CQT-Diff+ | 3.51 ± 1.34 |
-    | AIDD | 3.64 ± 1.26 |
-    在MAESTRO数据集上，AIDD的MOS评分最高。
-- 消融实验 (Table 4)：
-    在MusicNet数据集上对比了基础模型（仅DWDSE损失）、仅跨度掩蔽变体、仅导数损失变体以及两者结合的模型。结论：结合方法（Combined methods）在大多数设置下性能最佳，验证了两项技术的有效性。例如200ms间隙，结合方法（λ=500, p0=0.8）的FAD为2.438，优于基础模型的2.802。
-- 令牌化器对比 (Table 5 & Table 7)：
-    在MAESTRO数据集上，使用WavTokenizer的AIDD在所有指标上优于使用UniCodec的AIDD。例如750ms间隙，WavTokenizer版FAD为0.055，UniCodec版为0.169。补充材料(Table 7)的信息损失分析表明，质量损失主要来源于令牌化过程本身，而非扩散修复过程。
-- 训练-推理不匹配分析 (Table 9)：
-    对比了“先掩蔽后令牌化”（推理时）和“先令牌化后掩蔽”（训练时）两种流程。结果显示性能差异可忽略不计（例如750ms间隙FAD：0.055 vs 0.056）。
-- 延迟分析 (Table 6)：
-    AIDD (WavTokenizer) 的平均推理时间为5.25秒，模型参数90M，训练时间1天；而基线CQT-Diff+推理时间为12.54秒，参数242M，训练时间4天。
+论文在MusicNet和MAESTRO两个数据集上进行了广泛的实验对比和消融研究。
+
+主要对比实验（MusicNet数据集）
+表1（论文表1）：不同缺失段长度下，各方法在MusicNet测试集上的FAD、LSD和ODG性能对比。
+| 方法 | 150 ms | | | 200 ms | | | 250 ms | | | 300 ms | | |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| | FAD ↓ | LSD ↓ | ODG ↑ | FAD ↓ | LSD ↓ | ODG ↑ | FAD ↓ | LSD ↓ | ODG ↑ | FAD ↓ | LSD ↓ | ODG ↑ |
+| Masked | 16.001 | 0.555 | -3.873 | 18.244 | 0.763 | -3.881 | 23.583 | 0.971 | -3.891 | 33.342 | 1.162 | -3.897 |
+| LPC | 3.172 | 0.184 | -3.351 | 4.883 | 0.258 | -3.467 | 7.934 | 0.336 | -3.512 | 11.907 | 0.415 | -3.550 |
+| A-SPAIN-L | 6.121 | 0.198 | -3.668 | 12.038 | 0.311 | -3.767 | 16.181 | 0.445 | -3.801 | 21.574 | 0.610 | -3.818 |
+| CQT-Diff+ | 1.525 | 0.164 | -3.559 | 2.619 | 0.218 | -3.651 | 3.202 | 0.272 | -3.891 | 4.652 | 0.324 | -3.711 |
+| AIDD | 1.866 | 0.162 | -3.215 | 2.391 | 0.209 | -3.250 | 2.438 | 0.260 | -3.274 | 3.549 | 0.297 | -3.284 |
+关键结论：在200-300ms的中长缺失段上，AIDD在所有指标上均取得最佳（FAD, LSD最低；ODG最高）。与最强基线CQT-Diff+相比，AIDD在300ms缺失段FAD降低约25%，ODG显著提升。在150ms短缺失段，CQT-Diff+在FAD上略优，但AIDD在ODG和LSD上更好。
+
+主要对比实验（MAESTRO数据集）
+表2（论文表2）：在MAESTRO测试集上，不同方法在375ms和750ms缺失段的ODG (PEA-Q) 得分对比。
+| 方法 | 375 ms (↑) | 750 ms (↑) |
+| :--- | :---: | :---: |
+| GACELA | -3.232 ± 0.232 | -3.318 ± 0.202 |
+| bin2bin | -2.892 ± 0.510 | -3.039 ± 0.495 |
+| bin2bin-MIDI | -2.800 ± 0.491 | -2.976 ± 0.456 |
+| AIDD | -2.303 ± 0.692 | -2.596 ± 1.300 |
+关键结论：AIDD在两种缺失长度上均获得���佳ODG得分，尤其是在375ms缺失段，明显优于所有GAN类基线。
+
+主观评估
+表3（论文表3）：在MAESTRO数据集上的平均主观评分（MOS）对比。
+| 方法 | MOS (↑) |
+| :--- | :---: |
+| Original | 4.12 ± 0.96 |
+| GACELA | 3.51 ± 1.33 |
+| CQT-Diff+ | 3.51 ± 1.34 |
+| AIDD (WavTokenizer 24kHz) | 3.64 ± 1.26 |
+关键结论：AIDD获得的MOS评分最高，尽管标准差也较大，表明其生成质量在主观上更接近原始音频。
+
+消融实验（MusicNet）
+表4（论文表4）：不同AIDD变体在MusicNet上的性能对比，验证了所提策略的有效性。
+关键结论：
+1.  基于跨度的掩蔽：相比基础DWDSE损失，采用跨度掩蔽（尤其是p0=0.6; α=0.5的设置）在200ms缺失段能进一步降低FAD。
+2.  基于导数的损失：使用一阶差分（Δ¹e）且λ=200时，在200ms缺失段也能取得与跨度掩蔽相当的改进。
+3.  组合方法：最佳性能来自组合了跨度掩蔽（p0=0.8; α=0.5）和基于导数损失（λ=500; Δ¹e）的模型，在200ms和300ms缺失段均取得最佳或接近最佳的FAD、LSD和ODG值。
+
+Tokenization影响实验（MAESTRO）
+表5（论文表5）：不同tokenizer对修复性能的影响。
+| 模型 | FAD(↓) | | LSD(↓) | | ODG (↑) | |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| | 375ms | 750ms | 375ms | 750ms | 375ms | 750ms |
+| AIDD (WavTokenizer 24kHz) | 0.042 | 0.055 | 0.044 | 0.085 | -2.303 | -2.596 |
+| AIDD (UniCodec 24kHz) | 0.12 | 0.169 | 0.049 | 0.094 | -2.753 | -3.289 |
+关键结论：尽管UniCodec有更大的码本，但在此任务中，使用WavTokenizer的AIDD在所有指标上均显著优于使用UniCodec的版本。
 
 ### ⚖️ 评分理由
 
-- 学术质量：5.5/7：论文在音频修复这一具体任务上提出了一个新颖且有效的框架（离散扩散+令牌化）。创新点明确（首次应用于音频修复、导数损失、跨度掩蔽），技术实现正确。实验设计全面，包含多数据集、多指标、消融研究和延迟分析，结果有说服力，证明了方法的有效性。扣分点在于核心算法组件（离散扩散、WavTokenizer）并非原创，创新更多是系统集成和针对性改进；且方法性能上限依赖于外部令牌化器。
-- 选题价值：1.5/2：音频修复是音频处理领域的经典且重要的问题，尤其长间隙修复具有实际应用价值（如修复历史录音、通信丢包）。本文提出的路径为解决此类问题提供了新的有效工具，对相关领域的研究者和工程师有参考价值。
-- 开源与复现加成：0.5/1：论文提供了公开的GitHub代码库链接，并在补充材料中详尽列出了超参数、训练环境、评估设置和复现说明，透明度高，可复现性好。但未提及公开预训练模型权重或专用数据集，扣0.5分。
+- 学术质量：6.5/7：论文创新性明确，首次将离散扩散用于音频修复。技术路线清晰（Tokenizer + DiT + 离散扩散训练），并引入了针对性的正则化（导数损失）和掩蔽策略（跨度掩蔽）。实验设计严谨，与多个强基线对比，包含详细的消融研究，数据和结论具有高可信度。主要扣分点在于，其核心是现有技术（离散扩散、预训练Tokenizer、Transformer）在特定任务上的成功整合与适配，原创的“原理性”突破相对有限。
+- 选题价值：1.0/2：音频修复是一个有实际需求（如档案修复、通信丢包）的基础性研究课题，尤其针对长缺失段。离散扩散作为一种新兴建模范式，在音频领域的应用探索具有启发性。但对于更广泛的音频/语音社区而言，该问题相对垂直和传统。
+- 开源与复现加成：0.0/1：论文提供了明确的代码链接（GitHub仓库），并在附录中详细列出了所有关键超参数（如学习率、批量、训练步数、损失权重、扩散参数等）、训练硬件环境（A6000 GPU）和训练时长。这为复现研究提供了充分的信息基础。
 
 ---
 

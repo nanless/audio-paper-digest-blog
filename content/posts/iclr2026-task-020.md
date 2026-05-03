@@ -4,13 +4,13 @@ date: 2026-05-03
 draft: false
 tags: ["语音合成"]
 categories: [iclr-2026]
-description: "共 9 篇 ICLR 2026 语音合成 方向论文"
+description: "共 11 篇 ICLR 2026 语音合成 方向论文"
 hiddenInHomeList: true
 ---
 
 # ICLR 2026 - 语音合成
 
-共 **9** 篇论文
+共 **11** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,389 +18,445 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion) | 9.0分 | 前10% |
-| 🥈 | [SpeechJudge: Towards Human-Level Judgment for Speech Natural](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for) | 8.5分 | 前10% |
-| 🥉 | [Toward Complex-Valued Neural Networks for Waveform Generatio](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for) | 8.5分 | 前25% |
-| 4. | [Gogo: Group-wise granularity-ordered codec for stable and ef](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for) | 8.0分 | 前25% |
-| 5. | [MambaVoiceCloning: Efficient and Expressive Text-to-Speech v](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text) | 7.5分 | 前25% |
-| 6. | [FlexiVoice: Enabling Flexible Style Control in Zero-Shot TTS](/audio-paper-digest-blog/posts/2026-05-03-flexivoice-enabling-flexible-style-control-in) | 7.5分 | 前25% |
+| 🥇 | [TTSDS2: Resources and Benchmark for Evaluating Human-Quality](/audio-paper-digest-blog/posts/2026-05-03-ttsds2-resources-and-benchmark-for-evaluating) | 9.1分 | 前10% |
+| 🥈 | [FlexiVoice: Enabling Flexible Style Control in Zero-Shot TTS](/audio-paper-digest-blog/posts/2026-05-03-flexivoice-enabling-flexible-style-control-in) | 9.0分 | 前10% |
+| 🥉 | [MambaVoiceCloning: Efficient and Expressive Text-to-Speech v](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text) | 8.5分 | 前25% |
+| 4. | [Gogo: Group-wise granularity-ordered codec for stable and ef](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for) | 8.5分 | 前25% |
+| 5. | [DiVeQ: Differentiable Vector Quantization Using the Reparame](/audio-paper-digest-blog/posts/2026-05-03-diveq-differentiable-vector-quantization-using) | 8.0分 | 前25% |
+| 6. | [From Natural Alignment to Conditional Controllability in Mul](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional) | 8.0分 | 前25% |
 | 7. | [VibeVoice: Expressive Podcast Generation with Next-Token Dif](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next) | 7.5分 | 前25% |
-| 8. | [From Natural Alignment to Conditional Controllability in Mul](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional) | 7.5分 | 前25% |
-| 9. | [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Re](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi) | 7.5分 | 前25% |
+| 8. | [SpeechJudge: Towards Human-Level Judgment for Speech Natural](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for) | 7.5分 | 前25% |
+| 9. | [Toward Complex-Valued Neural Networks for Waveform Generatio](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for) | 7.5分 | 前25% |
+| 10. | [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Re](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi) | 7.5分 | 前25% |
+| 11. | [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion)
+### 🥇 [TTSDS2: Resources and Benchmark for Evaluating Human-Quality Text to Speech Systems](/audio-paper-digest-blog/posts/2026-05-03-ttsds2-resources-and-benchmark-for-evaluating)
 
-🔥 **9.0/10** | 前10% | #语音合成 | #扩散模型 | #语音编码 #语音大模型
+🔥 **9.1/10** | 前10% | #语音合成 | #模型评估 | #多语言 #基准测试
 
 👥 **作者与机构**
 
-请基于当前提供的论文内容尽量完整提取作者与机构信息，要求：
-1. 明确标注第一作者（如论文可判断），否则写“未说明”
-2. 明确标注通讯作者（如论文可判断），否则写“未说明”
-3. 列出能确认的作者姓名及其所属机构（大学、实验室、公司）
-4. 机构信息尽量具体到实验室或部门；如果文本里没有，就写到能确认的层级
-5. 禁止猜测机构信息；无法确认时明确写“未说明”
-
-输出格式示例：
-- 第一作者：张三（清华大学计算机系）
-- 通讯作者：李四（Google DeepMind）
-- 作者列表：张三（清华大学计算机系）、李四（Google DeepMind）、王五（未说明）
-
-- 第一作者：Yuancheng Wang（香港中文大学（深圳）， Meta超级智能实验室）
-- 通讯作者：未说明
-- 作者列表：Yuancheng Wang（香港中文大学（深圳）， Meta超级智能实验室）、Zhenyu Tang（Meta超级智能实验室）、Yun Wang（Meta超级智能实验室）、Arthur Hinsvark（Meta超级智能实验室）、Yingru Liu（Meta超级智能实验室）、Yinghao Aaron Li（Meta超级智能实验室）、Kainan Peng（Meta超级智能实验室）、Junyi Ao（香港中文大学（深圳）， Meta超级智能实验室）、Mingbo Ma（Meta超级智能实验室）、Mike Seltzer（Meta超级智能实验室）、Qing He（Meta超级智能实验室）、Xubo Liu（Meta超级智能实验室）
+- 第一作者：Christoph Minixhofer（爱丁堡大学语音技术研究中心）
+- 通讯作者：Christoph Minixhofer（爱丁堡大学语音技术研究中心）
+- 作者列表：Christoph Minixhofer（爱丁堡大学语音技术研究中心）、Ondrej Klejch（爱丁堡大学语音技术研究中心）、Peter Bell（爱丁堡大学语音技术研究中心）
 
 💡 **毒舌点评**
 
-这篇论文提出了一个解决语音分词器根本矛盾的新范式，并通过1.6B模型和2M小时数据的大规模实验验证了其有效性，但对比基线选择略显陈旧，未与同期或稍晚的一些强基线（如CosyVoice 2的tokenizer）在相同设置下直接比较。
+这篇论文精准打击了当前TTS评估领域的“皇帝新衣”——许多系统号称超越人类，但缺乏客观、可复现、跨场景的可靠评估标尺。其亮点在于构建了一个从方法论（TTSDS2指标）到基础设施（多语言自动化流水线、主观数据集）的完整“评估生态系统”，堪称该领域的“评测标准制定者”。短板则在于，尽管TTSDS2表现优异，但其计算复杂度高于多数现有指标，且论文中也承认它无法完全替代主观评测，尤其在捕捉具体失败模式上仍有局限。
 
 🔗 **开源详情**
 
-- 代码：论文中明确提到“will release the full inference code”，并提供了演示网站链接（https://sitok-demo.github.io/）。代码仓库链接论文中未提及。
-- 模型权重：论文中明确提到会发布预训练模型检查点（在公开研究数据集上）。
-- 数据集：训练使用的是内部数据（200万小时），论文中未提及公开获取方式。评估使用了一些公开基准集（如SeedTTS test-en， LibriSpeech）。
-- Demo：提供了在线演示网站：https://sitok-demo.github.io/
-- 复现材料：非常充分。包括：1）详细的模型架构描述和伪代码；2）完整的训练循环伪代码；3）详尽的超参数（学习率、批处理策略、优化器设置等）；4）全面的消融实验设计。论文D节为可复现性声明。
-- 论文中引用的开源项目：Vocos声码器（Siuzdak, 2024）、LLaMA架构（Touvron et al., 2023）、RoPE位置编码（Su et al., 2024）等。
-- 整体开源计划：论文中提及将开源，但具体平台和时间点未说明。
+- 代码：论文中明确提供了多语言基准测试流水线的代码仓库链接：`github.com/ttsds/pipeline`。
+- 模型权重：论文不涉及自身模型权重，但评估了20个开源TTS系统的权重。
+- 数据集：
+    - 主观评分数据集：已公开发布，地址为 `hf.co/datasets/ttsds/listening_test`。
+    - 噪声参考数据集：已公开发布，地址为 `hf.co/datasets/ttsds/noise-reference`。
+    - 基准测试数据：通过上述流水线可重建，结果公布在 `ttsdsbenchmark.com`。
+- Demo：论文提供了一个基准测试网站 `ttsdsbenchmark.com`，可能包含在线演示或结果查看，但未明确说明。
+- 复现材料：论文在附录中详细提供了主观评测的问卷样例、伦理审批信息、以及各系统在各数据集上的详细分数表（表7）。
+- 引用的开源项目：论文依赖并评估了大量开源项目，包括：VErsa评估工具包、Whisper、HuBERT、WavLM、wav2vec 2.0、mHuBERT-147、XLSR-53、FastText、XNLI模型、Pyannote、Demucs等，详见参考文献列表。
 
 📌 **核心摘要**
 
-这篇论文旨在解决现有语音分词器在平衡语义理解、高保真重建和高压缩率方面的根本矛盾。核心方法是提出一种基于扩散自编码器的语音分词器（SiTok），通过端到端联合训练来建模量化不确定性，并引入CTC损失作为语义正则化，确保离散令牌富含语言学信息。相较于传统两阶段或仅依赖回归损失的方法，SiTok通过扩散模型实现了更鲁棒的重建，并通过语义监督直接塑造了潜在空间。实验在1.6B参数规模和200万小时数据��进行，在0.2 kbps的极低比特率下（12.5 Hz帧率），SiTok在语音重建（WER 3.34-4.06）、多项下游理解任务（ASR WER 4.95， ER 63.5%）以及零样本TTS任务上均优于强基线，验证了其统一表示的有效性。其实际意义在于为语音大模型提供了一种高质量、高效率的统一语音接口。主要局限在于，尽管表现优异，其重建和理解能力仍不及连续特征表示，且扩散解码器对流式生成构成挑战。
+1.  要解决什么问题：随着TTS技术达到可媲美真人的水平，传统的主观评估（MOS）成本高、不可比，而现有客观指标在跨领域、跨语言时与人类评分的相关性不足，亟需一个更鲁棒、通用的评估标准。
+2.  方法核心是什么：提出TTSDS2，一个基于分布度量的多因子客观评估指标。它计算合成语音在四个感知维度（通用、说话人、韵律、可懂度）上的特征分布与真实语音分布的2-Wasserstein距离，并将其归一化为0-100的分数。分数越高，表明合成语音分布越接近真实语音。
+3.  与已有方法相比新在哪里：(1) 相比原版TTSDS，TTSDS2通过更新特征集（如使用Whisper激活代替WER，加入WavLM特征）提升了跨领域鲁棒性；(2) 首次在20个最新TTS系统、4个不同领域（干净、噪声、野外、儿童语音）上进行了全面的相关性验证；(3) 提供了一个可自动重建的多语言（14种语言）基准测试流水线和开放的主观评分数据集。
+4.  主要实验结果如何：在16个对比指标中，TTSDS2是唯一在所有4个领域、所有3种主观评分（MOS, CMOS, SMOS）上Spearman相关系数均高于0.5的指标，平均相关系数达0.67。下表展示了核心相关性结果：
+
+| 指标 | Clean MOS | Noisy MOS | Wild MOS | Kids MOS | 平均相关系数 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| TTSDS2 (Ours) | 0.75 | 0.59 | 0.75 | 0.61 | 0.67 |
+| TTSDS (原版) | 0.60 | 0.49 | 0.67 | 0.70 | 0.57 |
+| SQUIM-MOS | 0.68 | 0.48 | 0.62 | 0.57 | 0.57 |
+| X-Vector (说话人相似度) | 0.46 | 0.40 | 0.82 | 0.70 | 0.60 |
+| UTMOSv2 | 0.39 | 0.34 | 0.16 | 0.05 | 0.24 |
+
+论文还发布了包含11,282条评分的主观评测数据集，并建立了覆盖14种语言的自动化基准测试（ttsdsbenchmark.com）。
+![论文中的实验结果图](icassp-img://uGai5lYHlV/2.png)
+图3展示了TTSDS2分数在14种语言上的分布情况。地面真实语音的TTSDS2分数普遍在90分以上，且不同语言间差异较小，表明该指标具有跨语言的稳定性。
+![论文中的对比图](icassp-img://uGai5lYHlV/1.png)
+图2展示了TTSDS2、SQUIM MOS和X-Vector三个代表性指标与人类MOS评分的散点图。TTSDS2的拟合线最为连续，而SQUIM和X-Vector存在明显的聚类行为，表明其可能过拟合于特定系统。
+5.  实际意义是什么：为TTS社区提供了一个统一、自动化、可复现的“排行榜”和评估工具，能可靠地追踪系统进步，尤其是在接近人类水平的高质量区间。有助于研究者快速评估新系统、识别短板，并促进跨研究、跨语言的公平比较。
+6.  主要局限性是什么：(1) 计算开销较大，比单样本预测指标耗时；(2) 永远无法达到与主观评分的完美相关（ρ < 0.8），说明主观评测中仍有客观指标难以捕捉的“噪声”或维度；(3) 对于个别灾难性失败（如转录内容不忠实）的识别能力有限；(4) 未评估长语音合成。
 
 ---
 
-### 🥈 [SpeechJudge: Towards Human-Level Judgment for Speech Naturalness](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for)
+### 🥈 [FlexiVoice: Enabling Flexible Style Control in Zero-Shot TTS with Natural Language Instructions](/audio-paper-digest-blog/posts/2026-05-03-flexivoice-enabling-flexible-style-control-in)
 
-🔥 **8.5/10** | 前10% | #语音合成 | #强化学习 | #模型评估 #数据集
+🔥 **9.0/10** | 前10% | #语音合成 | #强化学习 | #大语言模型 #多语言
 
 👥 **作者与机构**
 
-- 第一作者：Xueyao Zhang（香港中文大学（深圳））
-- 通讯作者：Zhizheng Wu（香港中文大学（深圳）、深圳湾区研究院、澳门城市大学、Amphion Technology Co., Ltd.）
-- 作者列表：Xueyao Zhang（香港中文大学（深圳））、Chaoren Wang（香港中文大学（深圳））、Huan Liao（香港中文大学（深圳））、Ziniu Li（香港中文大学（深圳））、Yuancheng Wang（香港中文大学（深圳））、Li Wang（香港中文大学（深圳））、Dongya Jia（字节跳动 Seed）、Yuanzhe Chen（字节跳动 Seed）、Xiulin Li（DataBaker Technology）、Zhuo Chen（字节跳动 Seed）、Zhizheng Wu（香港中文大学（深圳）、深圳湾区研究院、澳门城市大学、Amphion Technology Co., Ltd.）
+- 第一作者：Dekun Chen（香港中文大学（深圳）、Shenzhen Loop Area Institute）
+- 通讯作者：Zhizheng Wu（香港中文大学（深圳）、Shenzhen Loop Area Institute、澳门城市大学、Amphion Technology Co., Ltd.）
+- 作者列表：Dekun Chen（香港中文大学（深圳）、Shenzhen Loop Area Institute），Xueyao Zhang（香港中文大学（深圳）），Yuancheng Wang（香港中文大学（深圳）），Kenan Dai（华为技术有限公司），Li Ma（华为技术有限公司），Zhizheng Wu（香港中文大学（深圳）、Shenzhen Loop Area Institute、澳门城市大学、Amphion Technology Co., Ltd.）
 
 💡 **毒舌点评**
 
-论文亮点在于首次构建了一个专注于语音自然度的大规模人类偏好数据集，并提出了一个能输出可解释推理过程的生成式奖励模型（GRM），超越了传统Bradley-Terry模型和当前最强的闭源AudioLLM。但短板也很明显：数据集标注者以中文母语者为主，导致模型在英语和中英混合数据上的判断能力偏弱；且评估基准完全基于合成语音，其泛化能力到真实人声或商业TTS克隆场景尚未得到充分验证。
+亮点在于其“渐进式后训练”策略如同精准的外科手术，系统地解决了风格、音色、内容三者纠缠的顽疾，使得自然语言指令能真正“驯服”语音合成模型。短板是其在追求极致风格表达时，生成语音的字错率（WER）较基座模型略有上升，且对参考语音的依赖仍是一个需要平衡的点。
 
 🔗 **开源详情**
 
-- 代码：论文明确承诺将在GitHub（https://github.com/AmphionTeam/SpeechJudge）发布所有资源，包括模型训练和下游实验的源代码。
-- 模型权重：承诺发布SpeechJudge-GRM的训练模型检查点。
-- 数据集：承诺发布SpeechJudge-Data（语料库）和SpeechJudge-Eval（基准）。
-- Demo：提供了在线音频样例展示网站（https://speechjudge.github.io/）。
-- 复现材料：论文正文和附录提供了详细的数据构建流程、标注指南、评估协议、训练超参数（学习率、优化器、LoRA设置等）和实验设置，复现信息充分。
-- 论文中引用的开源项目：依赖或使用了Qwen2.5-Omni-7B（基座模型）、Gemini-2.5-Flash（教师模型）、ms-swift（RL训练工具包）、LoRA、多种TTS模型（CosyVoice2, F5-TTS等）、评估工具（DNSMOS, UTMOS, WER计算工具等）和音频处理库。
+- 代码：论文明确表示将公开训练和推理代码，但未提供具体仓库链接（可能在发表时放出）。
+- 模型权重：论文承诺发布模型检查点。
+- 数据集：将开源自建的FlexiVoice-Instruct数据集。
+- Demo：提供了在线示例页面：https://flexi-voice.github.io/。
+- 复现材料：附录A.10提供了详尽的训练超参数、硬件配置和训练时长；附录A.9说明了主观评价配置；全文详细描述了数据构建和评估流程。
+- 论文中引用的开源项目：Phi-3.5-mini-instruct (LLM), DualCodec (语音分词器), Vocos (声码器), Emotion2vec-Large (情感识别), CAM++ (说话人验证), Kimi-Audio-7B-Instruct (奖励模型)。
 
 📌 **核心摘要**
 
-1.  解决什么问题：语音合成领域缺乏大规模、专注于“自然度”这一核心主观指标的人类偏好数据集，导致现有评估指标和模型难以准确对齐人类感知。
-2.  方法核心：提出“SpeechJudge”套件，包括：(1) SpeechJudge-Data：一个包含99K语音对的人类反馈语料库，由多位标注者对可懂度和自然度进行评估。(2) SpeechJudge-Eval：一个包含1000个高一致性样本的基准测试集，用于评估自然度判断能力。(3) SpeechJudge-GRM：基于Qwen2.5-Omni-7B的生成式奖励模型，通过监督微调（SFT）和强化学习（RL）两阶段训练，以人类偏好为奖励信号。
-3.  新在哪里：(1) 首次构建了大规模、多模型、多语言、多风格的语音自然度偏好数据集。(2) 建立了首个专注于语音自然度判断的公开基准，揭示了当前最强AudioLLM（Gemini-2.5-Flash）的不足（<70%准确率）。(3) 提出了结合思维链（CoT）推理和强化学习的GRM，其性能（77.2%准确率）显著优于传统BTRM（72.7%）和零样本AudioLLM。
-4.  主要实验结果：
-    *   在SpeechJudge-Eval基准上，SpeechJudge-GRM（SFT+RL）的准确率达到77.2%，使用10次推理时投票（Voting@10）后提升至79.4%，优于最佳基线Gemini-2.5-Flash（69.1%）。
-    *   在用于高质量样本选择的任务中，由GRM筛选的最佳语音比随机选择的语音在人类听感对比中获胜率更高（43.0% 胜 vs. 32.5% 负）。
-    *   将SpeechJudge-GRM作为奖励函数用于零样本TTS模型（Qwen2.5-0.5B-TTS）的后训练，能有效提升其生成语音的自然度（图6）。
-5.  实际意义：为语音生成模型与人类偏好对齐提供了关键的基础设施（数据、基准、奖励模型），可直接用于改进TTS模型的后训练（如DPO、RLHF），并能作为自动化评估工具筛选高质量语音。
-6.  主要局限性：数据集和标注者偏向中文及中文-英文双语者，模型在纯英文和混合语言上的表现相对较弱；数据局限于合成语音，未包含真实对话语音；奖励模型的思维链能力源自闭源教师模型（Gemini），可能存在偏差。
+1.  问题：在零样本文本转语音（TTS）中，同时用自然语言指令控制说话风格和用参考语音克隆音色时，存在“风格-音色-内容冲突”，模型容易忽略指令，而受到参考语音或文本内容中固有风格的干扰。
+2.  方法核心：提出FlexiVoice，一个基于大语言模型（LLM）核心的零样本TTS系统。其创新点在于提出“渐进式后训练（PPT）”框架，分三步走：首先用多模态DPO让模型初步学会同时遵循指令和参考语音；然后用解耦GRPO，在冲突场景下强制模型分离风格与音色/内容；最后用指令GRPO，借助音频语言模型奖励，增强对复杂开放指令的泛化能力。
+3.  新在何处：不同于以往简单地将指令和参考语音作为输入条件，FlexiVoice通过PPT框架，显式地将“条件化”问题转化为一个主动的“解耦”过程，并构建了大规模、高质量的指令-语音数据集FlexiVoice-Instruct作为支撑。
+4.  主要实验结果：在自建的多模态解耦评估集上，FlexiVoice在英语/中文的“文本+参考语音”困难任务中，指令遵循准确率（ACC-I）分别达到78.2%/75.8%，远高于基线（如VoxInstruct为23.9%/18.7%）。在复杂指令基准InstructTTSEval上，平均准确率（英语79.3%，中文70.8%）超越所有开源基线，逼近Gemini-pro等闭源系统（80.3%/84.8%）。主观评价CMOS均为正，表明其表达力被人类评审认可。
+    | 模型 | InstructTTSEval (EN) Avg. | InstructTTSEval (ZH) Avg. |
+    | :--- | :---: | :---: |
+    | Ground-truth | 84.3 | 82.5 |
+    | Gemini-pro | 80.3 | 84.8 |
+    | MiMo-Audio-7B-Instruct | 72.6 | 70.5 |
+    | VoxInstruct | 50.4 | 47.5 |
+    | FlexiVoice | 79.3 | 70.8 |
+5.  实际意义：该系统为实现更自然、灵活的人机语音交互提供了有力工具，用户可通过自然语言描述所需情感、语速、语调等，并配合任意音色参考，生成定制化语音，在配音、虚拟助手、有声读物等领域有广阔应用前景。
+6.  局限性：推理阶段涉及LLM自回归生成和流匹配，速度可能受硬件限制。虽然解决了主要冲突，但在极端风格转换时仍可能对参考语音的音色相似度造成轻微影响（SV分数略有下降）。
 
 ---
 
-### 🥉 [Toward Complex-Valued Neural Networks for Waveform Generation](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for)
+### 🥉 [MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text)
 
-🔥 **8.5/10** | 前25% | #语音合成 | #生成模型 | #声码器 #复数值网络
+🔥 **8.5/10** | 前25% | #语音合成 | #扩散模型 #状态空间模型 | #语音克隆 #扩散模型
 
 👥 **作者与机构**
 
-- 第一作者：Hyung-Seok Oh (高丽大学人工智能系)
-- 通讯作者：Seong-Whan Lee (高丽大学人工智能系)
-- 作者列表：Hyung-Seok Oh, Deok-Hyeon Cho, Seung-Bin Kim, Seong-Whan Lee (均隶属于高丽大学人工智能系 Department of Artificial Intelligence, Korea University)
+- 第一作者：Sahil Kumar（叶史瓦大学数学系博士项目）
+- 通讯作者：Youshan Zhang（滁州学院人工智能学院）
+- 作者列表：
+    - Sahil Kumar（叶史瓦大学数学系博士项目）
+    - Namrataben Patel（叶史瓦大学数学系博士项目）
+    - Honggang Wang（叶史瓦大学计算机科学与工程系）
+    - Youshan Zhang（滁州学院人工智能学院）
 
 💡 **毒舌点评**
 
-ComVo 的核心亮点在于将复数值神经网络（CVNN）的优势——自然建模实部与虚部的耦合——系统性且完整地落地到iSTFT声码器的生成器和判别器中，形成了一个理论上自洽的复杂域对抗学习框架，这比仅仅把频谱当双通道实值输入要高级得多。然而，其计算复杂度的“优化”更多是来自减少自动微分计算图的冗余节点（图优化），而非算子本身的硬件加速，这导致其训练时内存占用（101MB vs ~51MB）和推理延迟仍显著高于实值基线，实用部署中“效率提升”的说法需要打个折扣。
+亮点：这篇论文像一个严谨的“外科手术”，精准地针对现有Mamba-TTS混合架构中的Attention“残留”进行切除，并用门控融合和AdaLN等“微创缝合”技术进行优化，证明了纯SSM推理路径的可行性，实现细节堪称教科书级别。短板：尽管在控制变量下取得了统计显著的提升，但性能增益的绝对值（如MOS +0.07）略显温吞，且扩散解码器依然是那个无法绕开的“延迟黑洞”，使得整个工作的工程吸引力打了折扣——好比用顶级发动机（SSM编码器）去拉一辆老旧的蒸汽火车（扩散解码器）。
 
 🔗 **开源详情**
 
-- 代码：提供代码仓库链接：https://hs-oh-prml.github.io/ComVo/
-- 模型权重：论文中未提及是否公开预训练模型权重。需要根据提供的代码自行训练。
-- 数据集：使用公开的LibriTTS语料库进行训练和评估。论文中未提及数据集是否随代码提供。
-- Demo：提供在线演示页面：https://hs-oh-prml.github.io/ComVo/
-- 复现材料：论文附录提供了极其详尽的训练细节，包括所有超参数、损失函数定义、评估指标的实现来源、硬件配置等，复现指导性强。
-- 论文中引用的开源项目：
-    - 基线模型实现：iSTFTNet, HiFi-GAN, BigVGAN, Vocos, APNet, APNet2, FreeV的官方或公开代码库。
-    - 评估工具：UTMOS, auraloss (MR-STFT), PESQ, cargan (Periodicity & V/UV F1)的代码库。
-    - 辅助库：complextorch (用于实现高斯乘法技巧作为对比)。
-- 论文中未提及：开源计划的具体时间表、模型权重的发布平台。
+- 代码：论文提供了代码仓库链接：`https://github.com/sahilkumar15/MVC`。
+- 模型权重：论文中未提及是否公开预训练模型权重。
+- 数据集：论文使用的是公开数据集（LJSpeech, LibriTTS, VCTK, CSS10），但未提供数据集获取方式或预处理脚本。
+- Demo：论文中未提及在线演示链接。
+- 复现材料：论文提供了非常充分的复现材料，包括：完整的训练算法（Algorithm 1）、详细的优化设置和超参数（附录C.2）、所有消融实验的配置细节（附录B.6, E.3）、基线模型的具体架构说明（表14）以及评估协议。
+- 论文中引用的开源项目：论文依赖 `phonemizer` 进行音素化，并对比了 `StyleTTS2`、`VITS`、`JETS` 等开源基线模型。声码器使用了 `HiFi-GAN` 和 `iSTFTNet`。
 
 📌 **核心摘要**
 
-1.  问题：现有的基于逆短时傅里叶变换（iSTFT）的神经声码器通常使用实值神经网络（RVNN）将复数频谱的实部和虚部作为独立通道处理，这破坏了二者之间的固有代数结构，限制了模型对相位和幅度的联合建模能力。
-2.  方法核心：提出ComVo，一个完全在复数域操作的神经声码器。其生成器和判别器均采用CVNN层，直接处理复数频谱系数。引入相位量化层作为归纳偏置来稳定训练，并设计分块矩阵计算方案以减少冗余操作，提高训练效率。
-3.  创新点：ComVo是首个在生成器和判别器中都采用CVNN的iSTFT声码器，建立了复杂域的对抗训练框架。相位量化层和分块矩阵方案是针对复数域的特定优化。该方法超越了简单地将复数视为双通道实值输入的做法。
-4.  主要结果：在LibriTTS和MUSDB18-HQ数据集上，ComVo在多个客观指标（如MR-STFT、PESQ、UTMOS）上优于HiFi-GAN、iSTFTNet、BigVGAN和Vocos等强基线。主观评估（MOS/CMOS）结果与最强基线相当或略优。消融实验表明，复数值生成器和判别器均能带来性能提升，且相位量化（Nq=128）在感知质量与重建精度间取得了最佳平衡。分块矩阵方案将训练时间减少了约25%。
-5.  实际意义：证明了复数值建模能有效提升iSTFT声码器的合成质量，为处理具有复数结构的音频数据提供了新的范式。分块矩阵优化为CVNN的高效实现提供了实用方案。
-6.  主要局限性：计算开销较大，内存占用约为实值模型的两倍，推理速度慢于最优的实值iSTFT声码器（如Vocos）。当前实现依赖于split-style设计（如分离的铰链损失、split GELU），可能不是最优的复数非线性处理。多GPU训练下的性能和稳定性有待进一步优化。
+1.  问题：传统基于Attention或RNN的TTS系统在推理阶段存在计算复杂度高、内存占用大、长序列处理不稳定以及流式部署困难等问题。现有Mamba-TTS混合系统虽引入SSM，但在推理时仍保留Attention模块，限制了其优势。
+2.  方法核心：提出MambaVoiceCloning（MVC），一个在推理阶段条件建模路径完全基于状态空间模型（Mamba）的TTS系统。其包含三个核心SSM模块：(1) 门控双向Mamba文本编码器，用于建模文本；(2) 时间Bi-Mamba，用于节奏/时长对齐（训练时辅以一个轻量对齐器，推理时移除）；(3) 带AdaLN调制的表达性Mamba，用于韵律建模。系统固定使用StyleTTS2的扩散解码器和声码器。
+3.  创新之处：与已往Mamba-TTS系统相比，MVC首次在推理时完全移除了注意力机制和显式RNN循环，实现了全SSM推理路径；引入了门控双向Mamba融合机制和AdaLN，提升了长文本韵律稳定性；进行了严格的容量匹配和协议控制实验，以隔离架构设计带来的影响。
+4.  主要实验结果：在LJSpeech数据集上，MVC的MOS自然度达到4.22（相比StyleTTS2的4.15），MCD为4.91（最优），PESQ为3.85（最优），RTF为0.0169（最优），编码器参数减少至21M，吞吐量提升1.6倍。在VCTK零样本说话人和CSS10跨语言（西/德/法）测试中，MVC表现与或优于基线。在2-6分钟的长文本Gutenberg测试集上，MVC的MOS从短句的4.22仅微降至4.16，而StyleTTS2则从4.15降至3.91，显示了更强的稳定性。
+
+| 模型 | MOS-N (↑) | MOS-S (↑) | F0 RMSE (↓) | MCD (↓) | WER (↓) | PESQ (↑) | RTF (↓) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| VITS | 3.69 | 3.54 | 0.667 | 4.97 | 7.23% | 3.64 | 0.0211 |
+| StyleTTS2 | 4.15 | 4.03 | 0.651 | 4.93 | 6.50% | 3.79 | 0.0174 |
+| MVC (ours) | 4.22 | 4.07 | 0.653 | 4.91 | 6.52% | 3.85 | 0.0169 |
+
+表：在LJSpeech数据集上的客观指标对比（来自论文Table 4）。
+
+5.  实际意义：证明了基于SSM的纯线性时间复杂度、有界激活的条件建模路径可以匹配甚至略微超越基于Attention的TTS质量，同时显著提升编码器效率和长文本处理稳定性，为构建高效、可部署、流式友好的TTS系统提供了新的架构选择。
+6.  主要局限性：性能提升幅度相对温和；系统的最终延迟和生成质量仍严重依赖于扩散解码器，SSM编码器的优化无法根本解决这一瓶颈；模型在精细情感控制和多语言（仅英文训练）上仍有提升空间。
 
 ---
 
 ### 4. [Gogo: Group-wise granularity-ordered codec for stable and efficient speech generation](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for)
 
-🔥 **8.0/10** | 前25% | #语音合成 | #流匹配 | #语音大模型 #零样本
+🔥 **8.5/10** | 前25% | #语音合成 | #流匹配 | #语音大模型 #低比特率
 
 👥 **作者与机构**
 
-- 第一作者：Weidong Chen（香港中文大学计算机系）
-- 通讯作者：Xixin Wu（香港中文大学计算机系）
-- 作者列表：Weidong Chen（香港中文大学计算机系）、Helen M. Meng（香港中文大学计算机系）、Xixin Wu（香港中文大学计算机系）
+- 第一作者：Weidong Chen (香港中文大学电子工程系)
+- 通讯作者：Xixin Wu (香港中文大学电子工程系)
+- 作者列表：Weidong Chen (香港中文大学电子工程系), Helen M. Meng (香港中文大学电子工程系), Xixin Wu (香港中文大学电子工程系)
 
 💡 **毒舌点评**
 
-论文巧妙地将编解码器的“分层量化”与大语言模型的“两阶段生成”理念结合，为语音生成任务提供了一个自洽且工程意义明确的框架；但作为一篇顶会论文，其核心架构（分组量化、两阶段生成）的原创性虽有，却非颠覆性，且在最关键、最能推动社区复现的代码和模型开源方面毫无作为，稍显遗憾。
+亮点在于其提出的“分组粒度排序”量化范式巧妙地解决了语音编解码器在自回归友好性与重建质量之间的根本矛盾，并通过两阶段生成框架显著提升了长序列生成的稳定性。短板是其模型规模（基于Llama-3.2-1B）和47Hz的token率，在追求极致压缩或超大规模模型扩展方面仍有探索空间。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及代码仓库链接。
-- 模型权重：未提及公开模型权重。
-- 数据集：使用了公开的Emilia、LibriTTS、Seed-TTS等数据集，但论文未提供其自有的数据处理脚本或额外数据。
-- Demo：论文提供了在线演示样例页面链接 (https://happycolor.github.io/gogo)。
-- 复现材料：论文在附录中提供了极其详细的模型配置、训练超参数、损失函数公式、评估指标定义以及消融实验设置，为复现提供了充分的文本指导。
-- 论文中引用的开源项目：Vocos (声码器)、LLaMA (GogoSpeech基础模型)、Llama-3.2-1B-Instruct (基座)。
-- 总结：论文在“复现指南”层面信息充分，但在最核心的“资源开放”层面（代码、权重）完全缺失，这在顶会论文中是一个明显的短板。
+- 代码：提供GitHub仓库链接：`https://github.com/HappyColor/gogo`。
+- 模型权重：论文未明确提及权重是否公开，但附录D和表格标题暗示训练细节和配置已给出，结合GitHub链接，大概率会开源。
+- 数据集：训练使用Emilia英文子集，论文未说明其是否公开或如何获取。评估使用的LibriTTS和Seed-TTS test-en为公开数据集。
+- Demo：提供在线演示页面：`https://happycolor.github.io/gogo`。
+- 复现材料：论文提供了详尽的实现细节（第4节）、模型配置（附录C）、训练与推理细节（附录D）、评估指标定义（附录G）以及所有依赖的开源基线模型链接（附录E/F）。
+- 论文中引用的开源项目：SoundStream, EnCodec, DAC, SpeechTokenizer, Mimi, SNAC, WavTokenizer, MagiCodec, X-codec2, TAAE, DualCodec, FireRedTTS-1S, F5-TTS, XTTS-v2, Llasa, CosyVoice 2, VoiceCraft, Vocos声码器, LLaMA, ConvNeXt V2等。
 
 📌 **核心摘要**
 
-1. 要解决什么问题：现有语音编解码器在支持语音大语言模型时，面临一个根本矛盾：既需要高层语义信息（用于稳定的自回归建模），也需要低层声学细节（用于保真合成）。传统逐帧量化方式因局部性偏差，难以有效学习高层信息，且固定码率无法适应语音信号非均匀的信息密度。
-2. 方法核心是什么：提出Gogo编解码器，采用“分组-分层”的量化方式：将语音分组，每组量化成多个从粗到细有序的token。粗token编码高层语义，细token恢复声学细节。基于此，构建GogoSpeech两阶段语音生成模型：第一阶段以极低token率生成粗粒度的“语音骨架”；第二阶段逐步填充细节。此外，设计了GRPO训练的token分配器，根据语音组的复杂度自适应分配第二阶段的token预算，提升效率。
-3. 与已有方法相比新在哪里：
-    - 编解码器设计：突破了传统逐帧量化范式，采用分组量化并强制token有序（粗→细），更好地满足了下游语言模型的需求。
-    - 生成框架：明确的两阶段设计，先稳定生成骨架（低token率），再高效填充细节（高token率），与Gogo的token结构完美契合。
-    - 自适应机制：将强化学习（GRPO）引入token分配，实现了端到端的、质量与效率权衡的动态分配。
-4. 主要实验结果如何：
-    - 重建性能：在LibriTTS测试集上，Gogo在约47Hz的token率下，在UTMOS、DNSMOS等主观指标上达到甚至超越SOTA，客观指标如SIM也极具竞争力。
-    - 生成性能：在零样本TTS任务（Seed-TTS测试集）中，GogoSpeech在SMOS和CMOS主观评估中获得最佳分数，尤其在长语音生成稳定性上表现突出。
-    - 效率提升：GRPO训练的token分配器可将平均token率从47Hz降至约36Hz，同时性能仅有微小下降。
-    关键对比如下（表3摘选）：
-
-| 模型 | SIM↑ | WER↓ | SMOS↑ | CMOS↑ | RTF |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Ground Truth | 0.734 | 2.143 | 4.752 | 0.000 | - |
-| CosyVoice 2 | 0.654 | 2.380 | 4.331 | +1.638 | 0.549 |
-| FireRedTTS-1S | 0.660 | 2.170 | 4.247 | +1.634 | 0.506 |
-| GogoSpeech (47 Hz) | 0.667 | 2.394 | 4.381 | +1.832 | 0.535 |
-| w/ Allocator (36 Hz) | 0.662 | 2.469 | 4.253 | +1.587 | 0.455 |
-
-    注：SIM为说话人相似度，WER为字错率，SMOS为相似性平均意见分，CMOS为比较平均意见分，RTF为实时因子（越低越快）。
-5. 实际意义是什么：该工作为构建高效、稳定的端到端语音生成系统提供了一个新的设计范式。其自适应分配机制对实时交互、流式传输等资源受限场景有重要价值。
-6. 主要局限性是什么：论文指出，1) flow-matching解码器中的placeholder token有时会引入伪影；2) 47Hz的token率仍高于一些低比特率编解码器（如25Hz）；3) 模型基于Llama-3.2-1B，其向更大模型的扩展性有待验证。
+1.  解决的问题：现有语音语言模型（SLM）所依赖的语音编解码器面临两难：帧级量化（如EnCodec）虽能高质量重建，但局部性强，不利于捕捉自回归建模所需的高层语义信息；语义增强的编解码器（如SpeechTokenizer）虽注入了高层信息，但帧级范式未变，且未考虑语音信息分布不均（如静音段），导致编码效率低下。
+2.  方法核心：提出了 Gogo 编解码器和 GogoSpeech 两阶段SLM。Gogo将连续帧分组，并为每个组生成从粗到细、信息粒度排序的tokens（粗粒度token编码高层抽象，细粒度token恢复声学细节）。GogoSpeech第一阶段以极低token率（~14 Hz）生成“语音骨干”（粗粒度token），第二阶段逐步补充细粒度token以丰富细节。此外，设计了一个基于群组相对策略优化（GRPO） 训练的Token分配器，根据组复杂度自适应分配token预算。
+3.  新在何处：(1) 打破了传统的帧级量化范式，提出“分组+粒度排序”的新量化单元与顺序；(2) 基于此特性设计了先“骨架”后“血肉”的两阶段生成架构，显著提升长序列稳定性；(3) 利用强化学习（GRPO）训练的分配器实现了对非均匀信息密度的自适应编码。
+4.  主要实验结果：
+    *   编解码器重建：在LibriTTS test-clean集上，Gogo（47 Hz）在多数指标（UTMOS、DNSMOS、SIM）上达到SOTA，甚至UTMOS（4.19）和DNSMOS（3.99）超过原始语音。
+    *   零样本TTS：在Seed-TTS test-en集上，GogoSpeech（47 Hz）的SMOS（4.381）和CMOS（+1.832）均为最佳，在长语音生成稳定性上（SIM 0.725， WER 1.788）同样领先。
+    *   效率提升：Token分配器将平均token率从47 Hz降至36 Hz，性能仅轻微下降（SMOS 4.253， CMOS +1.587）。
+    *   关键消融实验：移除粒度排序机制（嵌套丢弃或损失平衡器）或ASR模块，会导致GogoSpeech性能显著下降（表7）。
+5.  实际意义：该工作为构建高效、稳定且高质量的语音生成系统提供了新的技术路径。分组粒度排序的思路可能启发其他时序信号处理，GRPO训练的分配器为资源自适应分配提供了范例。
+6.  主要局限性：(1) 流匹配解码器中的占位符（placeholder）偶尔会引入伪影；(2) 47 Hz的token率高于部分低比特率编解码器（如25 Hz）；(3) 基于Llama-3.2-1B的模型，其向更大规模LLM扩展的能力有待验证。
 
 ---
 
-### 5. [MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text)
+### 5. [DiVeQ: Differentiable Vector Quantization Using the Reparameterization Trick](/audio-paper-digest-blog/posts/2026-05-03-diveq-differentiable-vector-quantization-using)
 
-✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #状态空间模型 #流式处理
+🔥 **8.0/10** | 前25% | #语音合成 | #信号处理 | #模型评估 #低资源
 
 👥 **作者与机构**
 
-- 第一作者：Sahil Kumar（耶什瓦大学数学博士项目）
-- 通讯作者：Youshan Zhang（滁州学院人工智能学院）
-- 作者列表：Sahil Kumar（耶什瓦大学数学博士项目）、Namrataben Patel（耶什瓦大学数学博士项目）、Honggang Wang（耶什瓦大学计算机科学与工程系）、Youshan Zhang（滁州学院人工智能学院）
+- 第一作者：Mohammad Hassan Vali（芬兰阿尔托大学计算机科学系 & ELLIS Institute Finland）
+- 通讯作者：未明确说明，三位作者邮箱均列为联系邮箱。
+- 作者列表：Mohammad Hassan Vali（芬兰阿尔托大学计算机科学系 & ELLIS Institute Finland）、Tom Bäckström（芬兰阿尔托大学信息与通信工程系）、Arno Solin（芬兰阿尔托大学计算机科学系 & ELLIS Institute Finland）
 
 💡 **毒舌点评**
 
-本文最漂亮的一步是把TTS条件路径里的注意力和循环层全部换成线性时间的Mamba，并用一个训练时的轻量级对齐器在推理时扔掉，实现了真正的SSM-only架构。不过，论文也坦率承认扩散解码器仍是主要延迟瓶颈，且绝对性能提升幅度不大，感觉是在为一个更高效但非更优的未来架构铺路。
+这篇论文的巧思在于将“量化误差”本身用可微的噪声进行模拟，既保留了硬分配的前向特性，又打通了反向梯度的通道，像是给量化操作装了一个“可控的模拟器”。但遗憾的是，它本质上是对VQ-VAE等现有框架中量化层的一个优化补充，而非架构层面的革新，对于推动生成模型整体能力上限的贡献有限。
 
 🔗 **开源详情**
 
-- 代码：提供代码仓库链接：https://github.com/sahilkumar15/MVC。
-- 模型权重：论文中未提及是否公开预训练模型权重。
-- 数据集：使用公开数据集（LJSpeech, LibriTTS, VCTK, CSS10, Gutenberg公共领域有声书），未提供自定义数据集。
+- 代码：论文明确提供了公开的GitHub代码仓库链接：https://github.com/AaltoML/DiVeQ。
+- 模型权重：论文中未提及公开的预训练模型权重。
+- 数据集：论文使用了公开的图像（AFHQ, CELEBA-HQ, FFHQ, LSUN）和语音（VCTK）数据集，并说明了获取方式（如Kaggle链接），但未提供独立的论文数据集。
 - Demo：论文中未提及在线演示。
-- 复现材料：提供了详细的训练算法（Algorithm 1）、优化策略、超参数设置、匹配的基线配置（表14）以及消融实验方案，复现信息非常充分。
-- 引用的开源项目：`phonemizer`（音素化工具）、`Phonemizer`。解码器和声码器复用了StyleTTS2的组件。
+- 复现材料：附录A提供了所有实验（图像压缩、图像生成、语音编码）的详细实现细节、模型架构、超参数配置；附录B提出了新的代码书替换算法；附录C包含大量额外结果和消融实验图表。复现信息非常充分。
+- 引用的开源项目：论文在实现中引用了多个开源项目，包括：DeepMind的VQ-VAE示例、zalandoresearch的PyTorch VQ-VAE、dome272和aa1234241的VQGAN实现、karpathy的deep-vector-quantization（用于ST-GS实现）、lucidrains的vector-quantize-pytorch（用于RT实现）、GaParmar的clean-fid（��于计算FID）。
+- 论文中未提及模型权重和独立数据集的开源计划，但提供了完整的代码和复现指南。
 
 📌 **核心摘要**
 
-1. 解决问题：传统基于扩散的文本到语音系统在推理时的条件路径（文本、节奏、韵律）依赖计算和内存开销较大的注意力机制或循环层，限制了部署效率、内存占用和流式处理稳定性。
-2. 方法核心：提出MambaVoiceCloning，将推理时的所有条件模块替换为选择性状态空间模型。包括：(1) 门控双向Mamba文本编码器；(2) 由训练时轻量级注意力教师监督、推理时丢弃的时间Bi-Mamba；(3) 带有AdaLN调制的表现力Mamba。解码器部分（StyleTTS2扩散模型与声码器）保持不变。
-3. 与已有方法区别：与之前的Mamba-TTS混合架构不同，本文首次实现了推理时完全SSM-only的条件路径，并引入了门控双向融合与AdaLN调制，以替代简单的拼接融合，提升了长程韵律稳定性。
-4. 主要实验结果：在LJSpeech/LibriTTS上训练，在VCTK/CSS10/Gutenberg上评估。相比StyleTTS2，MVC在MOS/CMOS上取得稳健但适度的提升，编码器参数减少至21M，吞吐量提升1.6倍。长文本（2-6分钟）合成质量保持稳定。关键数据见下表：
-
-| 模型 | MOS-N (↑) | MOS-S (↑) | F0 RMSE (Hz, ↓) | MCD (↓) | WER (↓) | PESQ (↑) | RTF (↓) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Ground Truth | 4.60 | 4.35 | - | - | - | - | - |
-| VITS | 3.69 | 3.54 | 0.667 | 4.97 | 7.23% | 3.64 | 0.0211 |
-| StyleTTS2 | 4.15 | 4.03 | 0.651 | 4.93 | 6.50% | 3.79 | 0.0174 |
-| MVC (ours) | 4.22 | 4.07 | 0.653 | 4.91 | 6.52% | 3.85 | 0.0169 |
-（表格数据来自论文表1、表4）
-
-5. 实际意义：为TTS系统的高效、低内存、流式部署提供了一种纯SSM架构解决方案，尤其适用于边缘设备和实时生成场景。
-6. 主要局限性：(1) 合成质量提升幅度有限；(2) 扩散解码器仍是主要延迟瓶颈；(3) 仅在英语数据上训练，缺乏对精细情感控制的支持。
+这篇论文主要解决深度学习中向量量化（VQ）层因不可微而导致的梯度阻断问题，使得VQ无法与编码器/解码器进行端到端联合优化。论文提出两种新方法：DiVeQ通过添加一个方向与最近码本向量对齐、大小等于量化误差的向量来模拟量化过程，从而实现可微；SF-DiVeQ进一步将量化点从离散码本扩展到连接相邻码本的连续线段上，以减少量化误差并确保码本被充分利用。与现有方法（如STE、EMA、NSVQ）相比，新方法无需辅助损失函数、复杂的温度调度或代码书重初始化策略。在VQ-VAE图像压缩、VQGAN图像生成和DAC语音编码等多个任务上的实验表明，DiVeQ和SF-DiVeQ在重建质量和生成样本质量上均优于基线方法。例如，在AFHQ数据集的VQ-VAE压缩任务中，使用11位码本时，DiVeQ的SSIM和PSNR分别达到约0.74和23.5（见图6）。该方法的主要意义是为VQ层提供了一个简单、有效的即插即用式改进方案，能提升多种基于VQ模型的性能。局限性在于，其核心贡献局限于对量化操作本身的优化，对模型整体架构没有改变，且SF-DiVeQ的初始化策略需要额外步骤。
 
 ---
 
-### 6. [FlexiVoice: Enabling Flexible Style Control in Zero-Shot TTS with Natural Language Instructions](/audio-paper-digest-blog/posts/2026-05-03-flexivoice-enabling-flexible-style-control-in)
+### 6. [From Natural Alignment to Conditional Controllability in Multimodal Dialogue](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional)
 
-✅ **7.5/10** | 前25% | #语音合成 | #强化学习 | #语音大模型 #多语言
+🔥 **8.0/10** | 前25% | #语音合成 | #多模态模型 | #视频生成 #数据集
 
 👥 **作者与机构**
 
-- 第一作者：Dekun Chen（香港中文大学（深圳））
-- 通讯作者：未说明（论文未明确标注）
-- 作者列表：Dekun Chen（香港中文大学（深圳））、Xueyao Zhang（香港中文大学（深圳））、Yuancheng Wang（香港中文大学（深圳））、Kenan Dai（华为技术有限公司）、Li Ma（华为技术有限公司）、Zhizheng Wu（香港中文大学（深圳）、深圳湾区研究院、澳门城市大学、Amphion Technology Co., Ltd.）
+- 第一作者：Zeyu Jin（清华大学计算机系）
+- 通讯作者：Xiaoyu Qin（清华大学计算机系），Jia Jia（清华大学计算机系，BNRist）
+- 作者列表：Zeyu Jin（清华大学计算机系），Songtao Zhou（清华大学计算机系），Haoyu Wang（清华大学计算机系），Minghao Tian（Rice University），Kaifeng Yun（清华大学深圳国际研究生院），Zhuo Chen（字节跳动），Xiaoyu Qin（清华大学计算机系，通讯作者），Jia Jia（清华大学计算机系，BNRist，通讯作者）
 
 💡 **毒舌点评**
 
-本文最大的亮点在于直面了零样本多模态TTS中的“三角冲突”（风格、音色、内容），并通过一个设计精巧的渐进式课程学习（PPT）框架从数据构建到训练策略系统性地解决这个问题，效果显著。短板在于其复杂指令遵循的奖励模型（Kimi-Audio-7B）并非最权威的（如Gemini），且最终模型在跨语言性能上仍与闭源顶尖系统（如Gemini-flash）存在差距，距离“终极方案”尚有改进空间。
+这篇论文最大的亮点在于其“基建”工作做得非常扎实：它不像很多论文仅关注算法创新，而是系统性地为“可控多模态对话”这个前沿任务搭建了从数据生产管线、大规模数据集（MM-DIA）到严格评测基准（MM-DIA-BENCH）的全套基础设施，这种“造轮子”的贡献对社区的长期价值很高。短板则在于，论文提出的生成模型本身（如基于Higgs-Audio的SFT和简单适配器）架构创新有限，更多是验证数据集有效性；同时，对视频生成这一最难任务的端到端解决方案仍显不足，目前评估的基线多为模块化拼接，距离真正的“可控对话视频生成”还有距离。
 
 🔗 **开源详情**
 
-- 代码：论文明确表示将开源训练和推理代码，但当前未提供具体仓库链接。
-- 模型权重：论文明确表示将开源模型检查点（checkpoints）。
-- 数据集：论文明确表示将开源构建的FlexiVoice-Instruct数据集。
-- Demo：提供了在线演示页面链接（https://flexi-voice.github.io/）。
-- 复现材料：提供了详细的可复现性声明，包括硬件配置（8xA800）、训练时间（各阶段）、超参数（学习率、β、组大小等）、数据构建流程等。
-- 引用的开源项目：Phi-3.5-mini-instruct (LLM核心), DualCodec (语音分词器), Vocos (声码器), Emotion2vec-Large (情感识别奖励模型), CAM++ (说话人验证), Kimi-Audio-7B-Instruct (复杂指令奖励模型), DeepSeek-V3 (数据标注)。
+- 代码：论文提供了一个GitHub仓库链接 `https://github.com/jessyjinzy/MM-Dia`，但页面提示将代码和数据集在论文接受后公开。
+- 模型权重：未提及公开微调后的模型（如Higgs-Audio-V2-SFT）权重。
+- 数据集：MM-DIA和MM-DIA-BENCH数据集将公开，但根据伦理声明，不直接发布原始视频/音频片段，而是提供标注信息（时间戳、转录、情感三元组、描述等）。研究者需自行获取对应影视内容并与标注对齐。
+- Demo：论文提到了一个Demo页面 `https://mmdiaiclr26.github.io/mmdiaiclr26/`，可能包含音频示例。
+- 复现材料：附录提供了数据流水线的关键细节（如字幕校准、缓冲机制伪代码、标注质量验证表格），以及评估指标的详细解释，有助于复现。
+- 论文中引用的开源项目：Higgs-Audio-V2 (`https://github.com/boson-ai/higgs-audio`)， Dia (`https://github.com/nari-labs/dia`)， Qwen2.5-VL-7B-Instruct， InsightFace工具包。
 
 📌 **核心摘要**
 
-这篇论文旨在解决零样本文本到语音（TTS）系统中，如何利用自然语言指令灵活控制说话风格（如情绪），同时保持参考语音音色不变的难题，即“风格-音色-内容冲突”问题。其方法核心是构建一个基于大语言模型（LLM）核心的TTS系统，并提出了一个创新的渐进式后训练（PPT）框架。该框架分三阶段：1）使用多模态DPO进行基础对齐；2）使用多目标GRPO和冲突场景数据，显式解耦风格与音色/内容；3）使用音频语言模型（ALM）作为奖励，通过指令GRPO泛化到复杂指令。此外，论文利用LLM构建了一个4316小时的高质量指令-语音数据集FlexiVoice-Instruct。实验表明，FlexiVoice在多模态控制任务（中英文情绪TTS）上，其指令遵循准确率（ACC-I）相比基线大幅提升（如中文TR-hard任务从38.0%提升至75.8%），同时保持了高音色相似度（SV>98%）。在复杂指令基准InstructTTSEval上，其平均准确率（英文79.3%，中文70.8%）超越所有开源基线，接近闭源商业模型。该工作的实际意义在于提供了一个可灵活组合风格与音色的TTS框架，并完全开源以促进研究。主要局限性是其复杂指令性能仍落后于最强的闭源系统，且评估集中于情绪和一些预设属性，对更开放、细粒度风格的泛化能力有待进一步验证。
+1.  要解决什么问题：现有对话生成系统虽能生成逼真的单模态内容（如语音、视频），但缺乏对对话交互层面“风格”（如情绪、关系、互动模式）的跨模态可控性，主要受限于高质量多模态对话数据匮乏和系统性评测标准的缺失。
+2.  方法核心是什么：构建了一个自动化的数据挖掘与细粒度标注流水线，从电影和电视剧中提取对话，并创新性地提出了“情感三元组”（关系、互动模式、情绪基调）和“自由描述”两种互补的表达性标注范式。基于此，推出了首个大规模、风格可控的多模态对话数据集MM-DIA（360+小时）和评测基准MM-DIA-BENCH（309段高表现力对话）。
+3.  与已有方法相比新在哪里：不同于以往数据集侧重于模态隔离的语义理解或简单标注，MM-DIA首次聚焦于对话级别的“跨模态交互风格”的可控生成，并提供了支持显式（自然语言提示）和隐式（视觉线索）条件控制的任务定义与评测协议。
+4.  主要实验结果如何：在风格可控对话语音合成任务上，基于MM-DIA微调的Higgs-Audio-V2-SFT模型在WER上从31.3大幅降至4.45，指令遵循等主观指标显著提升。在隐式控制的视觉条件语音合成任务上，级联VLM+语音合成的方案仍存在跨模态风格一致性下降的问题。在最具挑战性的语音驱动对话视频生成任务上，现有方法（无论是单图驱动还是文本生成）均难以同时保持对话级的语义、关系与情绪一致性，揭示了当前技术的根本局限。
+5.  实际意义是什么：为开发能进行更自然、更富情感和表现力交互的下一代多模态对话AI（如智能体、数字人）提供了关键的数据基础和评测工具，明确了未来技术需攻克的核心挑战。
+6.  主要局限性是什么：1) 模型架构创新有限，主要依赖现有大模型微调和简单适配器；2) 数据集源域为影视作品，与真实场景存在域差距；3) 视频生成任务的评估仍依赖模块化基线，缺乏端到端的解决方案和更深入的分析。
 
 ---
 
 ### 7. [VibeVoice: Expressive Podcast Generation with Next-Token Diffusion](/audio-paper-digest-blog/posts/2026-05-03-vibevoice-expressive-podcast-generation-with-next)
 
-✅ **7.5/10** | 前25% | #语音合成 | #语音大模型 | #扩散模型 #端到端
+✅ **7.5/10** | 前25% | #语音合成 | #扩散模型 | #大语言模型 #零样本
 
 👥 **作者与机构**
 
-- 第一作者：未说明（论文标注为“Core contributors”，未明确排序）
-- 通讯作者：Furu Wei (fuwei@microsoft.com)（微软研究院）
-- 作者列表：Zhiliang Peng, Jianwei Yu, Wenhui Wang, Yaoyao Chang, Yutao Sun, Li Dong, Yi Zhu, Weijiang Xu, Hangbo Bao, Zehua Wang, Shaohan Huang, Yan Xia, Furu Wei（以上作者均来自微软研究院 Microsoft Research）
+- 第一作者：Zhiliang Peng (Microsoft Research) （*号标注为Core contributor）
+- 通讯作者：Furu Wei (Microsoft Research) （菱形标注）
+- 作者列表：Zhiliang Peng (Microsoft Research), Jianwei Yu (Microsoft Research), Wenhui Wang (Microsoft Research), Yaoyao Chang (Microsoft Research), Yutao Sun (Microsoft Research), Li Dong (Microsoft Research), Yi Zhu (Microsoft Research), Weijiang Xu (Microsoft Research), Hangbo Bao (Microsoft Research), Zehua Wang (Microsoft Research), Shaohan Huang (Microsoft Research), Yan Xia (Microsoft Research), Furu Wei (Microsoft Research)。注：论文中所有作者单位均为Microsoft Research。
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文系统工程能力很强，将超低帧率连续分词器、LLM与扩散头进行有效集成，实现了在长序列（90分钟）和多说话人（4人）场景下的稳定高质量播客生成，这是当前多数开源模型难以做到的。短板：核心的模型架构创新（LLM+Diffusion）在先前工作（如LatentLM）中已有体现，本文更侧重于在播客生成这一垂直领域的工程化实现和数据流程构建；其构建的“VIBEVOICE-Eval”评估集和主观评估细节虽详尽，但缺乏更广泛、公认的基准测试支持。
+亮点在于其精巧的系统设计：用解耦的超低帧率声学/语义分词器“榨干”了长序列的计算预算，再用LLM+扩散头的混合范式优雅地平衡了语义连贯与声学保真。但论文所构建的“播客生成”闭环，其公开评估集（VIBEVOICE-Eval）与真实世界未清洗播客的质量和多样性差距，以及模型在面对更复杂的、非预设对话结构时的鲁棒性，仍是其宣称“表达性”和“自然感”需要经受实践检验的短板。
+
+#
 
 🔗 **开源详情**
 
-- 代码：提供GitHub仓库链接：https://github.com/microsoft/VibeVoice。
-- 模型权重：提供检查点链接（在代码仓库中）。
-- 数据集：训练数据为“内部伪标签播客音频”，未公开。评估数据集VIBEVOICE-Eval也未提及公开。
-- Demo：未提及。
-- 复现材料：论文提供了详细的训练超参数（附录F）、模型规格、训练时长与硬件、推理时间分析（附录E），以及数据处理流程（附录A）和评估集分布（附录G）。复现指南较为完善。
-- 引用的开源项目：Silero VAD, Whisper-large-v3-turbo, WeSpeaker, Qwen-Audio（用于WER计算）, seed-tts-eval（用于SIM-O计算）。详见附录A表4。
+-   代码：提供GitHub链接：https://github.com/microsoft/VibeVoice
+-   模型权重：论文中声明“Code and checkpoint are available at...”，表明提供检查点下载。
+-   数据集：论文提及构建了VibeVoice-Eval评估集（108个样本，约28.9小时），但未说明是否公开。训练数据为内部伪标注播客集合，未公开。
+-   Demo：论文中未提及在线演示链接。
+-   复现材料：提供极其详细的训练超参数表（表9）、数据处理流水线细节（附录A）、评估工具列表（表4），以及模型不同规模的训练配置说明。
+-   论文中引用的开源项目：Silero VAD、Whisper-large-v3-turbo、Nemo ASR、WeSpeaker、Qwen-Audio（评估工具）、Seed-TTS-eval（评估工具）。
+-   论文明确提供了开源代码和权重链接，并给出了充分的复现细节。
 
 📌 **核心摘要**
 
-1. 问题：传统TTS系统难以扩展到生成长篇幅（如播客）、多说话人、富有表现力的自然对话音频，面临说话人一致性、自然轮换和表现力保持等挑战。
-2. 方法核心：提出VIBEVOICE框架，采用两个独立的超低帧率（7.5 Hz）连续语音分词器（声学分词器保真度高，语义分词器基于ASR任务）提取混合特征，并通过一个以LLM（Qwen2.5）为核心、结合轻量级扩散头的端到端生成模型，直接在下一个声学token的扩散中进行合成。
-3. 与已有方法相比新在哪里：不同于传统拼接方法，VIBEVOICE是端到端生成；相比于同方向工作的MoonCast，它在生成长度（90分钟 vs 10分钟）、说话人数量（4人 vs 2人）和鲁棒性上均有显著提升；其连续、低帧率分词器设计相比离散或高帧率方法，极大提升了处理长序列的效率。
-4. 主要实验结果：
-   - 主观评估（8个样本，24名标注员）：VIBEVOICE-7B在“真实感”、“丰富度”和“偏好”三个维度均取得最高分（平均3.76），超越Google Gemini 2.5 Pro TTS（3.66）和ElevenLabs v3 alpha（3.40）。
-   - 客观评估（自建VIBEVOICE-Eval，108样本）：
-     ```
-     | 模型 | 整体WER-W↓ | 整体SIM-O↑ |
-     | :--- | :--- | :--- |
-     | Cosyvoice2 (拼接) | 4.27 | 0.73 |
-     | MoonCast | 10.4‡ | 0.55‡ |
-     | VIBEVOICE-1.5B | 1.22 | 0.60 |
-     | VIBEVOICE-7B | 0.66 | 0.75 |
-     ```
-   注：‡表示MoonCast在长音频/多说话人场景下频繁崩溃，仅统计成功案例。
-   - 说话人相似度(SIM-O)：VIBEVOICE-7B达到0.692，优于Seed-TTS的0.796吗？不，论文显示Seed-TTS为0.796（SEED测试集），但VIBEVOICE-7B在自家评估集SIM-O为0.75，在SEED测试集为0.689（见附录C表6），仍具竞争力。
-5. 实际意义：为自动化生成高质量、个性化的长篇播客、有声读物和对话内容提供了可行的技术方案，降低了内容创作门槛。
-6. 主要局限性：
-   - 训练依赖于内部未公开的伪标签播客数据集，数据获取和质量过滤流程是关键但未完全公开。
-   - 论文虽声称超越商业模型，但对比的是其特定版本和评估集，商业模型可能持续迭代。
-   - 主观评估样本规模有限（8个），且长音频评估耗时巨大，评估普适性有待验证。
-   - 扩散推理步数与说话人相似度的“反直觉”关系（步数越多，SIM-O可能越低）提示模型可能过度净化了自然环境声，这可能是其训练数据特征导致的偏差。
+本文针对传统TTS系统难以生成长篇、多说话人、自然对话音频（如播客）的问题，提出了VibeVoice框架。其核心方法是采用两个超低帧率（7.5Hz）的连续语音分词器（声学分词器基于σ-VAE，语义分词器通过ASR代理任务训练）来获得高效且信息丰富的混合表示，并将其输入基于LLM（Qwen2.5）的下一token扩散生成框架。与已有方法相比，VibeVoice的新颖之处在于：1）首次将语音表征压缩至7.5Hz仍保持高保真度；2）通过解耦的声学/语义表示显式支持长序列建模；3）开发了自动化数据标注流水线以利用原始播客数据训练。实验表明，在主观评估中VibeVoice-7B获得最高平均分（3.76），超越包括Google Gemini 2.5 Pro TTS在内的多个强基线；在客观评估的VibeVoice-Eval数据集上，其在长时长（12-30分钟）和多说话人（4人）场景下的词错率（WER-W: 1.24）和说话人相似度（SIM-O: 0.75）均显著优于对比模型。该工作标志着端到端生成式播客系统的重要进展。其主要局限性在于：评估依赖于其自建数据集，且模型性能仍受限于训练数据的规模和多样性。
+
+#
 
 ---
 
-### 8. [From Natural Alignment to Conditional Controllability in Multimodal Dialogue](/audio-paper-digest-blog/posts/2026-05-03-from-natural-alignment-to-conditional)
+### 8. [SpeechJudge: Towards Human-Level Judgment for Speech Naturalness](/audio-paper-digest-blog/posts/2026-05-03-speechjudge-towards-human-level-judgment-for)
 
-✅ **7.5/10** | 前25% | #语音合成 | #数据集 | #多模态模型 #基准测试
+✅ **7.5/10** | 前25% | #语音合成 | #强化学习 | #数据集 #基准测试
 
 👥 **作者与机构**
 
-- 第一作者：Zeyu Jin (清华大学计算机科学与技术系), Songtao Zhou (清华大学计算机科学与技术系) - 论文标注二人贡献均等。
-- 通讯作者：Xiaoyu Qin (清华大学计算机科学与技术系), Jia Jia (清华大学计算机科学与技术系， BNRist)
-- 作者列表：
-  - Zeyu Jin (清华大学计算机科学与技术系)
-  - Songtao Zhou (清华大学计算机科学与技术系)
-  - Haoyu Wang (清华大学计算机科学与技术系)
-  - Minghao Tian (Rice University)
-  - Kaifeng Yun (清华大学深圳国际研究生院)
-  - Zhuo Chen (字节跳动)
-  - Xiaoyu Qin (清华大学计算机科学与技术系)
-  - Jia Jia (清华大学计算机科学与技术系， BNRist)
+- 第一作者：Xueyao Zhang（香港中文大学（深圳））
+- 通讯作者：论文中标注为Zhizheng Wu（未明确标注“通讯作者”，但根据作者列表后的†符号判断）。
+- 作者列表：Xueyao Zhang（香港中文大学（深圳）），Chaoren Wang（香港中文大学（深圳）），Huan Liao（香港中文大学（深圳）），Ziniu Li（香港中文大学（深圳）），Yuancheng Wang（香港中文大学（深圳）），Li Wang（香港中文大学（深圳）），Dongya Jia（字节跳动 Seed），Yuanzhe Chen（字节跳动 Seed），Xiulin Li（DataBaker Technology），Zhuo Chen（字节跳动 Seed），Zhizheng Wu（香港中文大学（深圳）/深圳湾区实验室/澳门城市大学/Amphion Technology Co., Ltd）
 
 💡 **毒舌点评**
 
-这篇论文最大的亮点是“造轮子造得用心”：它没有去卷某个具体的生成模型，而是针对“可控多模态对话”这个任务，从头搭建了第一个像样的数据集（MM-DIA）和评测标准（MM-DIA-BENCH），填补了基础设施的空白。但短板也同样明显：在“怎么生成”这个更核心的算法层面，论文并没有提出新颖的模型架构，本质上只是证明了“在好的数据上微调现有模型有点用”，创新高度打了折扣。
+亮点：在语音合成领域，首次系统性地构建了大规模（99K对）且聚焦于“自然度”的人类偏好数据集，并配套提出了一个经SFT+RL训练的、支持CoT推理和测试时扩展的生成式奖励模型（GRM），填补了该方向从数据到评估工具的关键空白。短板：评估基准（SpeechJudge-Eval）与训练数据同源且经过筛选，其挑战性可能被高估；提出的GRM虽然优于BTRM，但在处理“干净但机械”与“略有噪声但生动”这类复杂权衡时仍存在已知失败案例。
 
 🔗 **开源详情**
 
-- 代码：论文在附录和引言中提及了GitHub仓库链接（`https://github.com/jessyjinzy/MM-Dia`），并承诺实验代码和数据流水线将在论文被接受后公开。当前状态为“论文中提及了计划，但具体链接有效性未知”。
-- 模型权重：未提及公开任何微调后的模型权重。
-- 数据集：论文核心贡献之一。MM-DIA数据集包含详细的标注（如文本、情感三元组、描述、说话人ID、关键帧等），但不包含原始的视频或音频文件。研究人员需要根据提供的时间戳和标识符自行从原始影视作品中获取相应片段。基准集MM-DIA-BENCH同理。
-- Demo：论文提供了演示页面链接（`https://mmdiaiclr26.github.io/mmdiaiclr26/`），其中可能包含音频样本等示例。
-- 复现材料：论文在附录中提供了部分技术细节，如字幕校准方法、缓冲机制的伪代码（算法1）、消融实验设置。但缺少关键的模型微调超参数、训练脚本、环境配置和完整的检查点说明。
-- 论文中引用的开源项目：提到了依赖的工具和模型，包括：
-  - 语音生成模型：Higgs-Audio-V2 (Boson AI), Dia-1.6B (Nari Labs)
-  - 人脸工具包：Insightface
-  - 视觉语言模型：Gemini 2.5-pro, GPT-5, Qwen2.5-VL-7B-Instruct
-  - 视频生成基线：FLOAT, MultiTalk, Sonic, Wan-2.2, HunyuanVideo
-- 复现计划：论文明确表示“Our experimental code and data curation pipeline will be made publicly available upon acceptance of the paper.”，即计划在论文被接收后开源。
+- 代码：论文中提供代码仓库链接：https://github.com/AmphionTeam/SpeechJudge
+- 模型权重：论文中提及将发布训练好的SpeechJudge-GRM模型检查点。
+- 数据集：论文中提及将发布SpeechJudge-Data语料库、SpeechJudge-Eval基准数据集。
+- Demo：论文中提供音频样本展示网站：https://speechjudge.github.io/
+- 复现材料：论文附录中提供了详细的数据构建协议、标注指南、实验设置（如LoRA配置、训练超参数），复现性信息充分。
+- 论文中引用的开源项目：SpeechJudge-GRM基于Qwen2.5-Omni-7B（Xu et al., 2025）。SFT阶段使用Gemini-2.5-Flash生成数据。RL训练使用ms-swift工具包。下游TTS实验基线模型基于Qwen2.5-0.5B。数据构建中使用了DeepSeek-V3进行文本校正与生成。
 
 📌 **核心摘要**
 
-1.  问题：当前多模态对话生成研究侧重于单模态（语音或视频）的真实性，忽视了跨模态交互风格（如情感、关系）的可控性与一致性，主要受限于缺乏高质量、细粒度标注的多模态对话数据集和系统性评测基准。
-2.  方法核心：本文核心工作是构建数据集和定义任务。作者提出了一套从电影/电视剧中自动提取、标注多模态对话的流水线，构建了首个大规模表达能力数据集MM-DIA（360+小时， 54,700段对话）。同时，提出“情感三元组”与“自由描述”两种表达能力建模范式，并形式化定义了多模态对话生成（MDG）任务及其三个子任务（风格可控语音合成、视觉条件语音合成、语音驱动视频生成）。最后，构建了高表达性的评测基准MM-DIA-BENCH。
-3.  创新点：与已有工作相比，新在：a) 首个专注于“对话表达能力”的大型多模态对话数据集；b) 系统性的对话表达能力标注范式；c) 首次将“可控多模态对话生成”形式化为一个独立的、包含显式/隐式控制的研究任务。
-4.  主要实验结果：实验表明，在MM-DIA上微调可显著提升模型的可控性。例如，Higgs-Audio-V2模型微调后，在风格可控对话语音合成任务上，词错率(WER)从31.25%降至4.45%，指令遵循分数大幅提升（表4）。然而，MM-DIA-BENCH评测揭示，现有模型在隐式跨模态控制任务上表现不佳，难以维持音频与视觉风格的一致性（表5， 表6）。
-5.  实际意义：为构建有情感、懂交互的下一代对话AI（如虚拟人、数字演员）提供了关键的数据基础和评测标尺，指明了当前技术的短板所在。
-6.  主要局限性：a) 论文的核心贡献在于数据集和任务定义，在生成模型架构上缺乏创新；b) 评估体系过度依赖Gemini-as-Judge等主观指标；c) 所定义的“多模态对话生成”任务对计算资源要求极高，目前尚无端到端的解决方案。
+1.  问题：语音合成领域缺乏大规模、聚焦于整体“自然度”的人类偏好反馈数据集，阻碍了与人类感知真正对齐的模型的发展与评估。
+2.  方法核心：提出SpeechJudge套件，包含三部分：a) SpeechJudge-Data：使用多种先进零样本TTS模型生成99K对语音，由人类标注清晰度和自然度偏好。b) SpeechJudge-Eval：基于高一致性样本构建的自然度判断基准。c) SpeechJudge-GRM：一个基于Qwen2.5-Omni-7B的生成式奖励模型，通过两阶段训练：SFT（使用教师模型Gemini-2.5-Flash生成的CoT数据）和RL（GRPO算法，以人类偏好为可验证奖励）。
+3.  创新点：1）构建了首个大规模、多语言、多风格的语音自然度人类偏好数据集。2）设计了专门的自然度判断评估基准，揭示了现有方法（包括强AudioLLM）的局限性。3）提出了经SFT+RL训练的GRM，它不仅能输出判断，还能提供CoT推理过程，并支持通过多数投票进行推理时性能扩展。
+4.  主要实验结果：
+    *   评估基准：在SpeechJudge-Eval上，最强闭源模型Gemini-2.5-Flash准确率<70%，凸显任务挑战性。
+    *   模型对比：SpeechJudge-GRM（SFT+RL）达到77.2%准确率，超过经典BTRM（72.7%）；通过多数投票（@10）可进一步提升至79.4%。
+    *   下游应用：将GRM用于高自然度样本选择和TTS模型后训练的奖励函数，均提升了主观自然度评价（详见图5、图6）。
+5.  实际意义：提供了可复用的数据、基准和模型，可用于客观评估语音合成系统的自然度，并能直接作为奖励函数指导TTS模型的偏好对齐训练，推动了语音生成领域的RLHF发展。
+6.  主要局限性：1）数据集和标注者主要反映中英文双语听众偏好，对其他语言覆盖不足。2）自然度标注为句子级，无法捕捉细粒度局部瑕疵。3）GRM的CoT能力部分继承自教师模型（Gemini），可能存在偏见，且未对中间推理过程进行大规模人工验证。
 
 ---
 
-### 9. [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi)
+### 9. [Toward Complex-Valued Neural Networks for Waveform Generation](/audio-paper-digest-blog/posts/2026-05-03-toward-complex-valued-neural-networks-for)
 
-✅ **7.5/10** | 前25% | #语音合成 | #语音大模型 | #自回归模型 #端到端
+✅ **7.5/10** | 前25% | #语音合成 | #生成模型 | #信号处理 #波形生成
+
+👥 **作者与机构**
+
+- 第一作者：Hyung-Seok Oh (高丽大学人工智能系)
+- 通讯作者：Seong-Whan Lee (高丽大学人工智能系)
+- 作者列表：Hyung-Seok Oh (高丽大学人工智能系)， Deok-Hyeon Cho (高丽大学人工智能系)， Seung-Bin Kim (高丽大学人工智能系)， Seong-Whan Lee (高丽大学人工智能系)
+
+💡 **毒舌点评**
+
+论文的最大亮点在于系统性地将复数值神经网络引入iSTFT声码器的生成器和鉴别器，提出了一个优雅且理论上更合理的技术框架，其分块矩阵优化方案也展现了良好的工程实践价值。主要短板在于，尽管实验充分，但论文对于“复数建模”为何优于“实数建模+增大参数”的解释仍停留在“能捕获实虚部相关性”的层面，缺乏更直观的分析或可视化证据来彻底说服持怀疑态度的读者，且复数值运算带来的显存与计算开销问题在实际部署中仍是需要权衡的现实挑战。
+
+🔗 **开源详情**
+
+- 代码：论文提供了官方代码仓库链接：`https://hs-oh-prml.github.io/ComVo/`。
+- 模型权重：论文中提及提供了代码，但未明确说明是否公开预训练的模型权重文件。
+- 数据集：使用公开的LibriTTS和MUSDB18-HQ数据集，论文中未提供自定义数据集。
+- Demo：论文提供了音频样本演示页面，链接在代码仓库主页。
+- 复现材料：论文在附录中提供了非常详尽的训练超参数表（表20）、评估指标的实现来源（表18）、所有对比基线的官方实现来源（表17），以及分块矩阵计算的详细数学证明（附录D）和速度对比实验（附录E, F, G）。复现信息非常充分。
+- 论文中引用的开源项目：HiFi-GAN, BigVGAN, Vocos, iSTFTNet的开源实现；`auraloss`（用于MR-STFT损失）；`complextorch`（用于对比高斯乘法技巧）；UTMOS, PESQ, CARGAN相关评估工具。
+
+📌 **核心摘要**
+
+1. 解决的问题：当前基于iSTFT的声码器（如Vocos）虽高效，但使用实数值神经网络处理复频谱图，将实部和虚部分开处理，这破坏了频谱系数固有的复数值结构，限制了模型对幅度和相位耦合关系的建模能力。
+2. 方法核心：提出ComVo，一个完全在复数值域工作的GAN声码器。其生成器和鉴别器（cMRD）均采用原生复数值卷积、归一化等操作。引入了相位量化层（Phase Quantization）作为归纳偏置来稳定训练，并设计了分块矩阵计算方案，将复数运算融合为单次矩阵乘法以提升训练效率。
+3. 创新之处：据称是首个将复数值网络同时应用于iSTFT声码器生成器与鉴别器的工作；提出了针对复数值的相位量化层；设计了能加速训练的分块矩阵计算方案。相比实数值基线，ComVo在模型参数量相近的情况下，通过更合理的复数域参数化取得了更好的效果。
+4. 主要实验结果：在LibriTTS和MUSDB18-HQ数据集上，ComVo在多项客观指标（UTMOS, MR-STFT, PESQ等）上超越了HiFi-GAN、iSTFTNet、BigVGAN、Vocos等强大基线。在端到端TTS测试中也表现最佳。消融实验表明，复数值生成器和鉴别器的组合（GCDC）带来最大提升，相位量化（Nq=128）能改善感知质量，分块矩阵方案将训练时间缩短25%。
+5. 实际意义：为高质量、低延迟的波形生成提供了一种新思路。ComVo可直接替换现有TTS系统中的声码器以提升合成语音质量，并且其复数域处理框架可能推广到其他需要处理复数信号的音频任务。
+6. 主要局限性：当前实现采用split设计（如对实虚部分别应用hinge loss），并非“完全”复数处理；复数值网络的内存占用约为实数值的两倍；多GPU分布式训练优化不足，论文仅报告了单GPU结果；部分创新（如相位量化）的有效性可能依赖于特定的网络架构。
+
+---
+
+### 10. [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi)
+
+✅ **7.5/10** | 前25% | #语音合成 | #端到端 | #自回归模型 #流匹配
 
 👥 **作者与机构**
 
 - 第一作者：Yixuan Zhou（清华大学深圳国际研究生院）
 - 通讯作者：Zhiyong Wu（清华大学深圳国际研究生院）
-- 作者列表：Yixuan Zhou（清华大学深圳国际研究生院）、Guoyang Zeng（ModelBest Inc）、Xin Liu（ModelBest Inc）、Xiang Li（清华大学深圳国际研究生院）、Renjie Yu（清华大学深圳国际研究生院）、Ziyang Wang（ModelBest Inc）、Runchuan Ye（清华大学深圳国际研究生院）、Weiyue Sun（ModelBest Inc）、Jiancheng Gui（ModelBest Inc）、Kehan Li（清华大学深圳国际研究生院）、Zhiyong Wu（清华大学深圳国际研究生院）、Zhiyuan Liu（清华大学计算机科学与技术系）
+- 作者列表：Yixuan Zhou（清华大学深圳国际研究生院），Guoyang Zeng（ModelBest Inc），Xin Liu（ModelBest Inc），Xiang Li（清华大学深圳国际研究生院），Renjie Yu（清华大学深圳国际研究生院），Ziyang Wang（ModelBest Inc），Runchuan Ye（清华大学深圳国际研究生院），Weiyue Sun（ModelBest Inc），Jiancheng Gui（ModelBest Inc），Kehan Li（清华大学深圳国际研究生院），Zhiyong Wu（清华大学深圳国际研究生院），Zhiyuan Liu（清华大学计算机科学与技术系）
+
+#
 
 💡 **毒舌点评**
 
-论文的架构设计相当精巧，通过将FSQ瓶颈作为内部正则化器，成功在单个端到端框架内实现了语义与声学的隐式分离，避免了对外部离散tokenizer的依赖，这是一个显著的工程和设计亮点。然而，其宣称的“SOTA”主要建立在“开源系统”限定词下，且最佳性能严重依赖其内部千万小时级别的独占数据，这使得其结论的普适性和在学术界广泛复现的可能性打上折扣。
+亮点在于其“半离散残差表示”的巧妙构思：用一个可微分的FSQ瓶颈作为“任务分离器”，在同一个端到端网络里，让语言模型专注于语义骨架，让残差模型专注于声学细节，从而绕开了对外部离散tokenizer的依赖并缓解了误差累积。短板是，尽管论文证明了其在稳定性（尤其长序列、难句）上的优势，但其在极致表现力上是否能超越精心设计的多阶段混合管线（如某些商业系统）仍存疑，且0.5B的模型规模对于追求SOTA的工业级应用可能仍显不足。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文中提供了推理代码链接：`codes.zip`。作者承诺将发布完整代码（“We will release code and models to support future research.”）。
-- 模型权重：论文中提及了模型名称VoxCPM-0.5B，并承诺开源模型权重。论文中提及的Demo页面为：https://voxcpm.github.io/VoxCPM-demopage/。
-- 数据集：最强性能依赖内部未公开的超大规模双语数据集（>1M小时）。消融研究使用的Emilia数据集（95K小时）是公开的。
-- Demo：提供了在线演示页面：https://voxcpm.github.io/VoxCPM-demopage/。
-- 复现材料：论文附录中提供了详尽的模型架构细节（表5）、训练配置（表6）、评估指标问卷（H部分）、以及所有消融实验的详细设置。这些信息对于在Emilia数据集上复现其研究版本（VoxCPM-Emilia）是充分的。
-- 论文中引用的开源项目/工具：论文依赖或对比的开源项目包括：MiniCPM-4（文本LLM骨干）， Megatron（训练框架）， 以及多个作为基线的开源TTS系统：CosyVoice系列， MaskGCT， F5-TTS， SparkTTS， FireRedTTS系列， IndexTTS2， HiggsAudio-v2， OpenAudio-s1-mini等。
+- 代码：论文中提到“We will release code and models to support future research”，但未提供具体代码仓库链接。
+- 模型权重：未提及具体公开权重链接。
+- 数据集：使用了公开的Emilia数据集，但主要模型训练依赖未公开的内部100万小时数据。
+- Demo：提供了在线演示页面：https://voxcpm.github.io/VoxCPM-demopage/
+- 复现材料：在论文附录（Section D, F, G）中提供了非常详细的模型架构参数、训练超参数（学习率、batch size、优化器）、训练阶段配置、消融实验设置以及评估指标详情，为复现提供了坚实的信息基础。
+- 引用的开源项目：依赖MiniCPM-4作为TSLM的初始化。音频VAE的设计灵感来自DAC。
 
 📌 **核心摘要**
 
-1.  问题：文本转语音（TTS）系统面临“表达性”与“稳定性”的根本权衡。基于离散token的方法稳定但损失声学细节；基于连续表示的方法保留细节但易因任务纠缠导致长序列误差累积。现有多阶段流水线则割裂了语义与声学建模。
-2.  方法核心：提出一个端到端的层次化语义-声学建模框架（VoxCPM）。其核心是引入一个可微分的有限标量量化（FSQ）瓶颈，该瓶颈作为内部正则化器，自然诱导模型进行功能分离：文本-语义语言模型（TSLM）负责生成稳定的语义韵律规划，残差声学模型（RALM）负责恢复量化丢失的细粒度声学细节。两者输出相加形成层次化表示，指导一个局部扩散Transformer解码器（LocDiT）生成高保真语音隐向量。整个模型在流匹配目标下进行端到端训练。
-3.  创新点：与已有方法相比，该工作首次将FSQ瓶颈作为内部归纳偏置而非预测目标，用于在连续数据流中实现隐式的语义-声学分离；实现了无需外部离散tokenizer的完全端到端训练；并通过残差连接将“规划”与“渲染”模块有机统一在一个自回归框架中。
-4.  主要实验结果：论文在超过100万小时的中英文数据上训练了0.5B参数的VoxCPM。在SEED-TTS-EVAL基准测试中，它在开源系统中取得了最佳性能：英语WER为1.85%，中文CER为0.93%，英语说话人相似度（SIM）为72.9%，中文SIM为77.2%。在更具挑战性的CV3-EVAL基准上，其在中文CER（3.40%）和英文WER（4.04%）上也表现优异。消融研究证实，去掉FSQ瓶颈或RALM模块会导致性能，尤其是在困难样本上的性能急剧下降。
-5.  实际意义：该工作为构建高表现力、高稳定性的端到端语音合成系统提供了一种新颖且有效的架构范式。它验证了通过结构化的内部表示学习（而非依赖外部离散化）来平衡生成质量与长程连贯性的可行性，对开发更自然、可控的TTS系统有重要参考价值。
-6.  主要局限性：模型的最佳性能高度依赖其专有的超大规模训练数据（>100万小时），这在学术界难以复现。此外，虽然声称端到端，但其训练仍依赖于预训练的音频VAE和文本LLM骨干网络（MiniCPM-4）。评估指标以客观度量为主，主观MOS评估中其自然度得分在某些场景下并非最高。
+1.  问题：现有语音合成面临“离散化精度损失”与“连续建模误差累积”的根本矛盾。多阶段管线依赖外部离散tokenizer，割裂了语义与声学；连续自回归模型则因任务纠缠导致长序列不稳定。
+2.  核心方法：提出VoxCPM，一个统一的端到端框架。其核心是分层语义-声学建模：通过一个可微分的有限标量量化（FSQ）瓶颈，自然诱导出分工：文本-语义语言模型（TSLM） 生成稳定的语义-韵律计划，残差声学模型（RALM） 恢复FSQ损失的细粒度声学细节（如音色、微韵律）。两者输出相加，指导一个局部扩散解码器（LocDiT）生成最终语音潜在表示。
+3.  创新点：a) 在统一框架内，利用量化瓶颈实现隐式、可训练的语义-声学解耦；b) 采用残差学习策略，使RALM专注于声学细节恢复；c) 整个系统端到端训练，消除了对预训练离散语音tokenizer的依赖。
+4.  主要实验结果：在超过100万小时双语数据上训练的0.5B参数VoxCPM，在开源系统中取得了SOTA的零样本TTS性能。在SEED-TTS-EVAL基准上，英语WER为1.85%，中文CER为0.93%，说话人相似度（SIM）分别为72.9%和77.2%。在更难的CV3-EVAL（模拟真实环境）上也表现稳健，英语WER为4.04%，中文CER为3.40%。消融实验定量证明了FSQ瓶颈（d256s9最优）和残差声学建模对性能的关键贡献。
+5.  实际意义：提供了一个开源、高效（RTF=0.17 on RTX 4090）、支持流式合成的TTS系统，推动了端到端语音大模型的发展，尤其适用于需要高保真和高稳定性的场景。
+6.  主要局限性：a) 模型规模（0.5B）相对于最新闭源模型（如CosyVoice3 1.5B）仍有差距，可能限制表达上限；b) 论文主要聚焦于英文和中文双语，多语言能力未充分验证；c) 完全依赖文本输入进行表达式生成，缺乏对细粒度情感或韵律的显式控制机制。
+
+#
+
+---
+
+### 11. [FlexiCodec: A Dynamic Neural Audio Codec for Low Frame Rates](/audio-paper-digest-blog/posts/2026-05-03-flexicodec-a-dynamic-neural-audio-codec-for-low)
+
+✅ **7.5/10** | 前25% | #语音合成 | #自回归模型 | #音频生成 #预训练
+
+👥 **作者与机构**
+
+- 第一作者：Jiaqi Li（香港中文大学（深圳）；Amphion Technology Co., Ltd.）
+- 通讯作者：未说明
+- 作者列表：Jiaqi Li（香港中文大学（深圳）; Amphion Technology Co., Ltd.）、Yao Qian（Microsoft, USA）、Yuxuan Hu（Microsoft, USA）、Leying Zhang（上海交通大学）、Xiaofei Wang（Microsoft, USA）、Heng Lu（Microsoft, USA）、Manthan Thakker（Microsoft, USA）、Jinyu Li（Microsoft, USA）、Sheng Zhao（Microsoft, USA）、Zhizheng Wu（香港中文大学（深圳）；深圳湾区实验室；澳门城市大学；Amphion Technology Co., Ltd.）
+
+💡 **毒舌点评**
+
+亮点： 动态帧率分配是个聪明的设计，它让编解码器能像人说话一样“看菜下饭”，在音素密集处多给点预算，在静音或长元音处节省点，这比一刀切的固定帧率更贴合语音信号的非平稳特性，在超低帧率（6.25Hz）下依然能保住不错的语义信息（WER 4.15%），这很不容易。短板： 虽然效果不错，但整体架构对预训练ASR模型（SenseVoice-Small）有强依赖，这相当于给你的编解码器请了个“语义顾问”，一旦离开这个顾问（比如换到其他语言或领域），模型的语义编码能力就可能打折扣，论文在多语言实验中的表现也印证了这一点。此外，动态帧率虽然灵活，但引入了额外的帧长属性存储和动态合并/解合并操作，增加了系统的复杂性和部署时的工程考量。
+
+🔗 **开源详情**
+
+- 代码：论文提供了代码仓库链接：`https://github.com/amphionteam/flexicodec`。
+- 模型权重：论文中未明确提及是否公开预训练模型权重链接。但根据GitHub仓库的常规做法，很可能随代码一同发布。
+- 数据集：训练使用的LibriLight-Large、评测使用的LibriSpeech和TIMIT均为公开标准数据集，论文提供了获取信息的引用。
+- Demo：提供了在线音频演示网站：`https://flexicodec.github.io`。
+- 复现材料：论文详细描述了训练数据、损失函数、优化器、学习率、批大小、训练步数、硬件环境等几乎所有关键复现细节，并在附录中提供了更多配置信息。
+- 论文中引用的开源项目：论文依赖或比较了多个开源项目，包括：
+    - 编解码器/模型：DAC, DualCodec, Encodec, SpeechTokenizer, Mimi, WavTokenizer, TS3-Codec, SNAC, TaDiCodec, XY-Tokenizer。
+    - SSL/ASR模型：HuBERT, WavLM, w2v-bert-2, SenseVoice-Small, Whisper。
+    - 语音生成/理解工具包：Amphion。
+    - 其他：Vocos (vocoder), E2TTS测试套件。
+
+📌 **核心摘要**
+
+1.  解决的问题： 现有神经音频编解码器在推向极低帧率（如6.25Hz、8.3Hz）时，会因语义-声学解耦不足和固定下采样丢失瞬态语音细节，导致语义信息严重损失。
+2.  方法核心： 提出FlexiCodec，一个动态帧率的神经音频编解码器。其核心是基于ASR特征引导的动态帧合并机制，能够自适应地将语义相似的帧合并，从而在信息稀疏区域使用更少的帧。同时，采用ASR特征辅助的双流编码架构（语义流使用预训练ASR编码器，声学流使用传统编解码器编码器）和Transformer瓶颈来增强表示与重构能力。
+3.  新在何处： 与之前工作的主要不同在于：(1) 首次在低于10Hz的平均帧率下探索高质量音频编解码；(2) 引入了内容自适应的动态帧率分配，而非固定帧率；(3) 使用任务导向更强的ASR特征而非通用SSL特征来指导语义编码和帧合并；(4) 单一模型支持推理时可控的连续帧率（3-12.5Hz）。
+4.  主要实验结果： 在LibriSpeech测试集上，FlexiCodec在6.25Hz、8.3Hz和12.5Hz平均帧率下，其语义信息保持（基于RVQ-1重建的WER）和音频重构质量均优于重训练的基线系统（DAC, DualCodec）。例如，在最具挑战性的6.25Hz下，FlexiCodec的RVQ-1 WER为4.15%，远低于最佳基线DualCodec的31.5%。动态帧率机制被证明有效：其帧率与输入语音的音素率呈强正相关（Pearson r=0.775）。在下游TTS任务中，FlexiCodec-TTS（AR阶段使用6.25Hz FlexiCodec）在保持竞争力的语音质量（NMOS 3.32, QMOS 3.40）同时，实现了相比CosyVoice AR阶段7.3倍的加速。
+5.  实际意义： 为构建高效、低延迟的语音大模型和TTS系统提供了新的基础组件。低帧率能显著缩短序列长度，降低自回归模型的计算成本；动态可控帧率则为资源自适应应用（如边缘设备、可变质量传输）提供了灵活性。
+6.  主要局限性： 模型性能对预训练的ASR模型（SenseVoice-Small）依赖性强，可能限制其在缺乏此类模型的语言或领域的泛化能力。动态帧率增加了系统复杂性。虽然在低帧率下语义保持较好，但全量RVQ（RVQ1:8）的声学指标（PESQ, SIM）相比12.5Hz基线有下降，表明声学细节在极低帧率下仍会受损。
 
 ---
 
