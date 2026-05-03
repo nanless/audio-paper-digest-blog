@@ -102,28 +102,28 @@ layout: "posts"
 | 6. | [FlexiVoice: Enabling Flexible Style Control in Zero-Sho](/audio-paper-digest-blog/posts/2026-05-03-flexivoice-enabling-flexible-style-control-in) | 9.0分 | 前10% | #语音合成 |
 | 7. | [WorldSense: Evaluating Real-world Omnimodal Understandi](/audio-paper-digest-blog/posts/2026-05-03-worldsense-evaluating-real-world-omnimodal) | 9.0分 | 前25% | #基准测试 |
 | 8. | [Omni-Captioner: Data Pipeline, Models, and Benchmark fo](/audio-paper-digest-blog/posts/2026-05-03-omni-captioner-data-pipeline-models-and-benchmark) | 9.0分 | 前25% | #音频理解 |
-| 9. | [MambaVoiceCloning: Efficient and Expressive Text-to-Spe](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text) | 8.5分 | 前25% | #语音合成 |
-| 10. | [MindMix: A Multimodal Foundation Model for Auditory Per](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for) | 8.5分 | 前25% | #音频检索 |
-| 11. | [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resol](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi) | 8.5分 | 前25% | #音频生成 |
-| 12. | [Query-Guided Spatial–Temporal–Frequency Interaction for](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction) | 8.5分 | 前25% | #音频问答 |
-| 13. | [Deep Learning with Learnable Product-Structured Activat](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured) | 8.5分 | 前10% | #神经网络架构 |
-| 14. | [Unmute the Patch Tokens: Rethinking Probing in Multi-La](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in) | 8.5分 | 前25% | #音频分类 |
-| 15. | [XModBench: Benchmarking Cross-Modal Capabilities and Co](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities) | 8.5分 | 前25% | #基准测试 |
-| 16. | [Gogo: Group-wise granularity-ordered codec for stable a](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for) | 8.5分 | 前25% | #语音合成 |
-| 17. | [Efficient Audio-Visual Speech Separation with Discrete ](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with) | 8.5分 | 前25% | #语音分离 |
-| 18. | [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as A](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning) | 8.5分 | 前25% | #基准测试 |
-| 19. | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for A](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset) | 8.5分 | 前25% | #数据集 |
-| 20. | [Are Deep Speech Denoising Models Robust to Adversarial ](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to) | 8.5分 | 前25% | #语音增强 |
-| 21. | [Stable Video Infinity: Infinite-Length Video Generation](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video) | 8.5分 | 前25% | #视频生成 |
-| 22. | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI resp](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 8.5分 | 前10% | #跨模态 |
-| 23. | [Hierarchical Semantic-Acoustic Modeling via Semi-Discre](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi) | 8.5分 | 前25% | #语音合成 |
-| 24. | [YuE: Scaling Open Foundation Models for Long-Form Music](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form) | 8.5分 | 前25% | #音乐生成 |
-| 25. | [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion) | 8.5分 | 前25% | #语音识别 |
-| 26. | [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform) | 8.5分 | 前25% | #音乐生成 |
-| 27. | [AudioX: A Unified Framework for Anything-to-Audio Gener](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio) | 8.5分 | 前25% | #音频生成 |
-| 28. | [MAPSS: Manifold-based Assessment of Perceptual Source S](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual) | 8.5分 | 前25% | #语音分离 |
-| 29. | [TripleSumm: Adaptive Triple-Modality Fusion for Video S](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 8.5分 | 前25% | #视频摘要 |
-| 30. | [CTC-DRO: Robust Optimization for Reducing Language Disp](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language) | 8.5分 | 前25% | #语音识别 |
+| 9. | [CTC-DRO: Robust Optimization for Reducing Language Disp](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language) | 8.8分 | 前25% | #语音识别 |
+| 10. | [MambaVoiceCloning: Efficient and Expressive Text-to-Spe](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text) | 8.5分 | 前25% | #语音合成 |
+| 11. | [MindMix: A Multimodal Foundation Model for Auditory Per](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for) | 8.5分 | 前25% | #音频检索 |
+| 12. | [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resol](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi) | 8.5分 | 前25% | #音频生成 |
+| 13. | [Query-Guided Spatial–Temporal–Frequency Interaction for](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction) | 8.5分 | 前25% | #音频问答 |
+| 14. | [Deep Learning with Learnable Product-Structured Activat](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured) | 8.5分 | 前10% | #神经网络架构 |
+| 15. | [Unmute the Patch Tokens: Rethinking Probing in Multi-La](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in) | 8.5分 | 前25% | #音频分类 |
+| 16. | [XModBench: Benchmarking Cross-Modal Capabilities and Co](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities) | 8.5分 | 前25% | #基准测试 |
+| 17. | [Gogo: Group-wise granularity-ordered codec for stable a](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for) | 8.5分 | 前25% | #语音合成 |
+| 18. | [Efficient Audio-Visual Speech Separation with Discrete ](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with) | 8.5分 | 前25% | #语音分离 |
+| 19. | [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as A](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning) | 8.5分 | 前25% | #基准测试 |
+| 20. | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for A](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset) | 8.5分 | 前25% | #数据集 |
+| 21. | [Are Deep Speech Denoising Models Robust to Adversarial ](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to) | 8.5分 | 前25% | #语音增强 |
+| 22. | [Stable Video Infinity: Infinite-Length Video Generation](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video) | 8.5分 | 前25% | #视频生成 |
+| 23. | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI resp](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 8.5分 | 前10% | #跨模态 |
+| 24. | [Hierarchical Semantic-Acoustic Modeling via Semi-Discre](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi) | 8.5分 | 前25% | #语音合成 |
+| 25. | [YuE: Scaling Open Foundation Models for Long-Form Music](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form) | 8.5分 | 前25% | #音乐生成 |
+| 26. | [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion) | 8.5分 | 前25% | #语音识别 |
+| 27. | [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform) | 8.5分 | 前25% | #音乐生成 |
+| 28. | [AudioX: A Unified Framework for Anything-to-Audio Gener](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio) | 8.5分 | 前25% | #音频生成 |
+| 29. | [MAPSS: Manifold-based Assessment of Perceptual Source S](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual) | 8.5分 | 前25% | #语音分离 |
+| 30. | [TripleSumm: Adaptive Triple-Modality Fusion for Video S](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for) | 8.5分 | 前25% | #视频摘要 |
 | 31. | [Generative Adversarial Post-Training Mitigates Reward H](/audio-paper-digest-blog/posts/2026-05-03-generative-adversarial-post-training-mitigates) | 8.3分 | 前25% | #音乐生成 |
 | 32. | [Bridging Piano Transcription and Rendering via Disentan](/audio-paper-digest-blog/posts/2026-05-03-bridging-piano-transcription-and-rendering-via) | 8.0分 | 前25% | #音乐信息检索 |
 | 33. | [StableToken: A Noise-Robust Semantic Speech Tokenizer f](/audio-paper-digest-blog/posts/2026-05-03-stabletoken-a-noise-robust-semantic-speech) | 8.0分 | 前10% | #语音增强 |
@@ -572,7 +572,41 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 9. [MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text)
+### 9. [CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language)
+
+🔥 **8.8/10** | 前25% | #语音识别 | #鲁棒优化 | #多语言 #低资源
+
+👥 **作者与机构**
+
+- 第一作者：Martijn Bartelds (斯坦福大学计算机系)
+- 通讯作者：Martijn Bartelds (bartelds@stanford.edu)
+- 作者列表：Martijn Bartelds（斯坦福大学计算机系）、Ananjan Nandi（斯坦福大学计算机系）、Moussa Koulako Bala Doumbouya（斯坦福大学计算机系）、Dan Jurafsky（斯坦福大学计算机系）、Tatsunori Hashimoto（斯坦福大学计算机系）、Karen Livescu（丰田芝加哥技术学院）
+
+💡 **毒舌点评**
+
+亮点是精准诊断了Group DRO在CTC语音识别场景下的失效原因，并设计了两个精巧且原理清晰的组件（平滑目标、长度匹配）加以修复，理论与实验闭环完整。短板在于，该方法本质是针对“损失不可比”问题的优化技巧，并未从根本上改变模型架构或引入新的语音理解范式，且其计算开销虽声称最小，但长度匹配批采样器增加了实现复杂性。
+
+🔗 **开源详情**
+
+- **代码**：是，提供GitHub仓库链接：https://github.com/Bartelds/ctc-dro。
+- **模型权重**：论文未明确提及是否公开新训练的模型权重。
+- **数据集**：使用公开数据集**ML-SUPERB 2.0**，各语料库遵循Creative Commons等许可。
+- **Demo**：论文中未提及在线演示。
+- **复现材料**：提供了详细的算法伪代码（Algorithm 1）、实验设置（Section 4）、超参数搜索范围（Section 4.2）、数据集具体构成（Appendix D）和硬件信息（Appendix I），复现指引充分。
+- **引用的开源项目**：XLS-R（Babu et al., 2022）、MMS（Pratap et al., 2024）、ML-SUPERB 2.0（Shi et al., 2024）、ESPnet（致谢中提及）。
+
+📌 **核心摘要**
+
+1. **问题**：现代多语言自动语音识别模型存在严重的语言间性能差异，而常用的Group DRO优化方法在应用于CTC损失时会失效，因为CTC损失的值随输入长度和语言声学特性变化，导致不同语言组的损失值不可直接比较。
+2. **方法核心**：提出CTC-DRO优化算法，包含两个关键改进：(1) 长度匹配批处理：通过确保每个语言组的批处理总音频时长固定，来缓解CTC损失随长度缩放的问题；(2) 平滑最大化目标：修改了组权重更新规则（公式10），通过引入平滑参数α，防止权重过度集中在那些由于内在原因（如长序列）而始终具有高损失的语言组上。
+3. **新在哪里**：相比标准Group DRO，CTC-DRO明确承认并处理了CTC损失的不兼容性。平滑最大化目标从理论上被证明是原始目标的推广（公式12-17），并通过调整α在“均匀关注”和“完全聚焦高损失组”之间平滑切换。长度匹配是一种新颖的批采样策略，而非简单的损失归一化。
+4. **主要实验结果**：在ML-SUPERB 2.0基准的5个语言集上，CTC-DRO在XLS-R和MMS两个预训练模型上均优于基线和Group DRO。它将最差语言的字符错误率（CER）相对降低了**最高47.1%**，同时平均CER相对降低了**最高32.9%**。消融实验证明平滑最大化目标比长度匹配贡献更大。组权重分析显示CTC-DRO训练更稳定。
+5. **实际意义**：该方法以极小的计算开销（仅需跟踪每组一个标量权重）有效提升了多语言ASR的公平性和实用性，使更多语言获得可用的识别性能。其思想可推广至其他存在类似“损失不可比”问题的序列任务。
+6. **主要局限性**：该方法仍依赖于预定义的语言组标签，无法自动发现或处理组内差异。性能差距虽被缩小，但未被消除。对于某些语言组，平滑参数α的选择需要调优。
+
+---
+
+### 10. [MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control](/audio-paper-digest-blog/posts/2026-05-03-mambavoicecloning-efficient-and-expressive-text)
 
 🔥 **8.5/10** | 前25% | #语音合成 | #扩散模型 #状态空间模型 | #语音克隆 #扩散模型
 
@@ -619,7 +653,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 10. [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for)
+### 11. [MindMix: A Multimodal Foundation Model for Auditory Perception Decoding via Deep Neural-Acoustic Alignment](/audio-paper-digest-blog/posts/2026-05-03-mindmix-a-multimodal-foundation-model-for)
 
 🔥 **8.5/10** | 前25% | #音频检索 | #对比学习 | #多模态模型 #预训练
 
@@ -663,7 +697,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 11. [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resolution Network for Few-step High-Fidelity Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi)
+### 12. [Flow2GAN: Hybrid Flow Matching and GAN with Multi-Resolution Network for Few-step High-Fidelity Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-flow2gan-hybrid-flow-matching-and-gan-with-multi)
 
 🔥 **8.5/10** | 前25% | #音频生成 | #流匹配 | #对抗训练 #多分辨率
 
@@ -716,7 +750,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 12. [Query-Guided Spatial–Temporal–Frequency Interaction for Music Audio–Visual Question Answering](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction)
+### 13. [Query-Guided Spatial–Temporal–Frequency Interaction for Music Audio–Visual Question Answering](/audio-paper-digest-blog/posts/2026-05-03-query-guided-spatialtemporalfrequency-interaction)
 
 🔥 **8.5/10** | 前25% | #音频问答 | #多模态模型 | #音乐理解 #时频分析
 
@@ -750,7 +784,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 13. [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured)
+### 14. [Deep Learning with Learnable Product-Structured Activations](/audio-paper-digest-blog/posts/2026-05-03-deep-learning-with-learnable-product-structured)
 
 🔥 **8.5/10** | 前10% | #神经网络架构 | #神经网络架构 | #音频生成 #音频分类
 
@@ -788,7 +822,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 14. [Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in)
+### 15. [Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification](/audio-paper-digest-blog/posts/2026-05-03-unmute-the-patch-tokens-rethinking-probing-in)
 
 🔥 **8.5/10** | 前25% | #音频分类 | #自监督学习 | #探针评估 #生物声学
 
@@ -837,7 +871,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 15. [XModBench: Benchmarking Cross-Modal Capabilities and Consistency in Omni-Language Models](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities)
+### 16. [XModBench: Benchmarking Cross-Modal Capabilities and Consistency in Omni-Language Models](/audio-paper-digest-blog/posts/2026-05-03-xmodbench-benchmarking-cross-modal-capabilities)
 
 🔥 **8.5/10** | 前25% | #基准测试 | #多模态模型 | #跨模态 #音频场景理解
 
@@ -880,7 +914,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 16. [Gogo: Group-wise granularity-ordered codec for stable and efficient speech generation](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for)
+### 17. [Gogo: Group-wise granularity-ordered codec for stable and efficient speech generation](/audio-paper-digest-blog/posts/2026-05-03-gogo-group-wise-granularity-ordered-codec-for)
 
 🔥 **8.5/10** | 前25% | #语音合成 | #流匹配 | #语音大模型 #低比特率
 
@@ -918,7 +952,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 17. [Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with)
+### 18. [Efficient Audio-Visual Speech Separation with Discrete Lip Semantics and Multi-Scale Global-Local Attention](/audio-paper-digest-blog/posts/2026-05-03-efficient-audio-visual-speech-separation-with)
 
 🔥 **8.5/10** | 前25% | #语音分离 | #知识蒸馏 | #端到端 #实时处理
 
@@ -953,7 +987,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 18. [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning)
+### 19. [STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence](/audio-paper-digest-blog/posts/2026-05-03-star-bench-probing-deep-spatio-temporal-reasoning)
 
 🔥 **8.5/10** | 前25% | #基准测试 | #模型评估 | #音频大模型 #空间音频
 
@@ -988,7 +1022,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 19. [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset)
+### 20. [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-03-speakervid-5m-a-large-scale-high-quality-dataset)
 
 🔥 **8.5/10** | 前25% | #数据集 | #自回归模型 | #音视频 #端到端
 
@@ -1017,7 +1051,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 20. [Are Deep Speech Denoising Models Robust to Adversarial Noise?](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to)
+### 21. [Are Deep Speech Denoising Models Robust to Adversarial Noise?](/audio-paper-digest-blog/posts/2026-05-03-are-deep-speech-denoising-models-robust-to)
 
 🔥 **8.5/10** | 前25% | #语音增强 | #对抗样本 | #心理声学模型 #鲁棒性
 
@@ -1055,7 +1089,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 21. [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video)
+### 22. [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-03-stable-video-infinity-infinite-length-video)
 
 🔥 **8.5/10** | 前25% | #视频生成 | #扩散模型 | #生成模型 #流匹配
 
@@ -1095,7 +1129,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 22. [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
+### 23. [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-03-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
 
 🔥 **8.5/10** | 前10% | #跨模态 | #多模态模型 | #预训练 #音频事件检测
 
@@ -1135,7 +1169,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 23. [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi)
+### 24. [Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis](/audio-paper-digest-blog/posts/2026-05-03-hierarchical-semantic-acoustic-modeling-via-semi)
 
 🔥 **8.5/10** | 前25% | #语音合成 | #流匹配 #分层建模 | #流匹配 #分层建模
 
@@ -1180,7 +1214,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 24. [YuE: Scaling Open Foundation Models for Long-Form Music Generation](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form)
+### 25. [YuE: Scaling Open Foundation Models for Long-Form Music Generation](/audio-paper-digest-blog/posts/2026-05-03-yue-scaling-open-foundation-models-for-long-form)
 
 🔥 **8.5/10** | 前25% | #音乐生成 | #自回归模型 | #预训练 #大语言模型
 
@@ -1230,7 +1264,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 25. [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion)
+### 26. [Scaling Speech Tokenizers with Diffusion Autoencoders](/audio-paper-digest-blog/posts/2026-05-03-scaling-speech-tokenizers-with-diffusion)
 
 🔥 **8.5/10** | 前25% | #语音识别 | #扩散模型 | #零样本 #语音大模型
 
@@ -1259,7 +1293,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 26. [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform)
+### 27. [Latent Fourier Transform](/audio-paper-digest-blog/posts/2026-05-03-latent-fourier-transform)
 
 🔥 **8.5/10** | 前25% | #音乐生成 | #扩散模型 | #信号处理 #自监督学习
 
@@ -1310,7 +1344,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 27. [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio)
+### 28. [AudioX: A Unified Framework for Anything-to-Audio Generation](/audio-paper-digest-blog/posts/2026-05-03-audiox-a-unified-framework-for-anything-to-audio)
 
 🔥 **8.5/10** | 前25% | #音频生成 | #扩散模型 | #音乐生成 #统一音频模型
 
@@ -1344,7 +1378,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 28. [MAPSS: Manifold-based Assessment of Perceptual Source Separation](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual)
+### 29. [MAPSS: Manifold-based Assessment of Perceptual Source Separation](/audio-paper-digest-blog/posts/2026-05-03-mapss-manifold-based-assessment-of-perceptual)
 
 🔥 **8.5/10** | 前25% | #语音分离 | #自监督学习 #流形学习 | #评估 #自监督学习
 
@@ -1384,7 +1418,7 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 
 ---
 
-### 29. [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
+### 30. [TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization](/audio-paper-digest-blog/posts/2026-05-03-triplesumm-adaptive-triple-modality-fusion-for)
 
 🔥 **8.5/10** | 前25% | #视频摘要 | #模态融合 | #多模态模型 #数据集
 
@@ -1415,46 +1449,6 @@ ELLSA真正做到了“听、看、说、做”四件事同时开工，像个人
 4.  **主要实验结果**：在MoSu、Mr. HiSum、SumMe和TVSum四个基准上均取得SOTA。在MoSu数据集上，TripleSumm在所有指标上显著超越现有方法，例如Kendall’s τ达到0.351（最强基线为0.277），且模型参数量仅1.37M，效率极高。消融实验验证了动态融合、多尺度窗口及每个组件的有效性。
 5.  **实际意义**：推动了多模态视频理解的发展，使模型能更智能地利用视频中的多种信息流（如音乐视频中的音频、教学视频中的文本）。新发布的MoSu数据集为后续研究提供了坚实的评测基础。
 6.  **主要局限性**：模型在音频模态上的特征表示和利用方式相对简单，未能充分挖掘音频的深层语义或声学特性。此外，最终的摘要生成仍依赖后处理的分割与选择，而非端到端的片段生成。
-
----
-
-### 30. [CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition](/audio-paper-digest-blog/posts/2026-05-03-ctc-dro-robust-optimization-for-reducing-language)
-
-🔥 **8.5/10** | 前25% | #语音识别 | #分布鲁棒优化 | #多语言 #公平性
-
-👥 **作者与机构**
-
-- 第一作者：Martijn Bartelds (斯坦福大学计算机系)， Ananjan Nandi (斯坦福大学计算机系) （论文注明共同第一作者）
-- 通讯作者：未明确说明（论文提供联系邮箱为bartelds@stanford.edu）
-- 作者列表：
-  - Martijn Bartelds（斯坦福大学计算机系）
-  - Ananjan Nandi（斯坦福大学计算机系）
-  - Moussa Koulako Bala Doumbouya（斯坦福大学计算机系）
-  - Dan Jurafsky（斯坦福大学计算机系）
-  - Tatsunori Hashimoto（斯坦福大学计算机系）
-  - Karen Livescu（丰田技术学院芝加哥分校）
-
-💡 **毒舌点评**
-
-**亮点**：本文对“标准工具”group DRO在语音CTC损失上为何失效进行了近乎病理学的细致剖析（损失不可比性），并提出了极其简洁优雅的两处“手术式”修改（长度匹配+权重平滑），最终取得了显著且稳定的收益，堪称问题驱动型研究的典范。**短板**：该方法深度绑定了CTC框架，对于当前基于注意力机制或解码器主导的端到端ASR（如Whisper范式）的公平性问题，其适用性未做任何探讨，这使得其影响力被限定在了一个特定的技术路线上。
-
-🔗 **开源详情**
-
-- **代码**：是，论文提供了公开的代码仓库链接：`https://github.com/Bartelds/ctc-dro`。
-- **模型权重**：是，论文声明“我们的代码和**新训练的模型**是公开可用的”，并提供了链接。
-- **数据集**：实验使用公开的ML-SUPERB 2.0基准数据集，论文未提供该数据集本身，但指明了其来源和获取方式（如链接`https://github.com/Bartelds/ctc-dro`中可能包含指引）。
-- **Demo**：论文中未提及在线演示。
-- **复现材料**：论文提供了极其充分的复现信息，包括详细的算法描述（算法1、2）、完整的实验设置（数据集划分、超参数范围、硬件、训练时间）、关键实验结果的完整表格（表1-3，表9-12）、以及多个附录（消融、归一化实验、缩放实验等）。
-- **引用的开源项目**：论文依赖并评估了基于XLS-R和MMS的预训练模型（如`https://github.com/facebookresearch/fairseq`），以及用于数据处理的ESPnet工具包（`https://github.com/espnet/espnet`）。
-
-📌 **核心摘要**
-
-1.  **解决的问题**：在多语言自动语音识别（ASR）中，广泛使用的群分布鲁棒优化（group DRO）方法旨在提升最差语言群体的性能，但直接应用于基于连接主义时序分类（CTC）损失的训练时会失效。这是因为CTC损失不仅与识别错误相关，还随输入语音长度、转录长度及语言的声学特性变化，导致不同语言间的损失值不可比，使得group DRO的权重更新机制失衡，反而可能损害整体性能。
-2.  **方法核心**：提出CTC-DRO算法。其核心是针对上述问题的两个关键修改：(1) **长度匹配批处理**：在计算每个语言群体的组损失时，确保每个批次包含大致相同总时长的音频，以缓解CTC损失随输入长度增长而增大的问题。(2) **平滑最大化目标**：在更新语言群体权重时，引入一个平滑参数α，修改了权重更新公式，防止某个因固有高损失（如长音频）而持续获得高权重的语言群体权重过大，从而稳定训练过程。
-3.  **新意所在**：与直接应用group DRO或简单归一化CTC损失不同，CTC-DRO从算法层面修正了group DRO的优化目标，使其更适用于CTC损失的特殊性。平滑化更新规则在理论上优化了一个更平衡的加权目标（∑log(q_g + α)L_g），在实践上防止了“赢者通吃”的权重分配，这是之前工作未针对CTC提出过的。
-4.  **主要实验结果**：在ML-SUPERB 2.0基准的五个语言集上，CTC-DRO一致优于基线模型和原始group DRO。具体地，它能将最差语言的错误率（CER）降低最高达47.1%，同时将平均错误率降低最高达32.9%。消融实验证明两个组件都必不可少，且组权重动态分析显示CTC-DRO训练更稳定。即使在扩展到18种语言时，该方法依然有效。
-5.  **实际意义**：该方法以极小的额外计算开销，显著提升了多语言ASR系统中表现最差语言群体的性能，有助于构建更公平、更具包容性的语音技术。其核心思想（针对不可比损失的鲁棒优化）为其他存在类似挑战的领域（如医疗AI、其他序列任务）提供了参考。
-6.  **主要局限性**：方法主要设计和验证于基于CTC的微调范式。对于其他类型的ASR解码器（如基于注意力的端到端模型），其适用性尚未探索。此外，该方法依赖于预定义的组（如语言），在缺乏可靠语言标签或需发现隐含子群体时无法直接应用。
 
 ---
 

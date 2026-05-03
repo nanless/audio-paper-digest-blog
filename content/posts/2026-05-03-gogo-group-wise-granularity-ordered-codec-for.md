@@ -52,7 +52,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 #### Gogo 编解码器架构
-![图2：Gogo架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-1.png)
+![图2：Gogo架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-1.png)
 Gogo 整体是一个基于流匹配（Flow Matching）的语音编解码器，其核心创新在于“分组-查询-粒度排序”的量化流程。
 1.  输入处理：输入波形 `w` 被转换为梅尔频谱图 `x`，然后沿时间轴分割成非重叠的组 `xi`（每组 `g=20` 帧）。
 2.  分组量化：每个组 `xi` 与 `nq=10` 个可学习的查询 `qi` 拼接，形成扩展序列 `zi`。`zi` 被送入Transformer编码器。编码后，丢弃原始帧 `xi` 部分，仅对查询位置 `qi` 应用有限标量量化（FSQ），生成离散的语音token索引 `si` 和对应的嵌入 `¯qi`。这一步骤实现了将一组帧压缩为一组固定数量的、具有语义层次的token。
@@ -63,13 +63,13 @@ Gogo 整体是一个基于流匹配（Flow Matching）的语音编解码器，�
 5.  辅助模块：训练时引入AR先验（预测组内下一个token的特征）和ASR模块（基于整个token序列预测文本），分别鼓励token捕捉时序依赖和语言信息。
 
 #### GogoSpeech 两阶段SLM架构
-![图3：GogoSpeech架构]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-2.png)
+![图3：GogoSpeech架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-2.png)
 GogoSpeech 利用Gogo产生的粒度排序token进行两阶段自回归生成。
 1.  第一阶段：语音骨干构建：输入文本 `y` 和语音提示的骨干token（`S:,1:b`， `b=3`），自回归模型逐组生成目标语音的骨干token `˜S:,1:b`。骨干token对应每组最粗粒度的token，编码高层信息。此阶段特征率极低（~14 Hz），增强了稳定性。
 2.  第二阶段：语音细节丰富：输入文本、提示语音的所有token、已生成组的所有token以及当前组的骨干token，自回归模型逐组生成剩余的细粒度token `˜Si,b+1:nq`，逐步恢复声学细节。
 
 #### Token 分配器架构
-![图4：Token分配器]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-3.png)
+![图4：Token分配器](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-3.png)
 Token分配器 是一个轻量级Transformer（2层），输入来自GogoSpeech第一阶段生成的组骨干token `˜Si,1:b`，输出一个整数预算 `ξi`，指定第二阶段应为该组生成多少个细粒度token（范围`0`到`nq-b`）。
    训练方法：采用修改的GRPO算法。对于每个组，枚举所有可能的token预算 `o_j`，用冻结的Gogo解码器重建语音，计算联合奖励 `R = λn  Rn + λd * Rd`（`Rn`惩罚token数量，`Rd`惩罚重建误差）。基于奖励计算优势函数，优化分配器策略。
 *   推理时：分配器根据骨干token预测预算，GogoSpeech第二阶段在生成该组时，一旦达到预算即停止，剩余token用掩码代替。
@@ -161,12 +161,12 @@ Token分配器 是一个轻量级Transformer（2层），输入来自GogoSpeech�
 关键结论：GogoSpeech（47 Hz）在SMOS、CMOS和长语音SIM/WER上均为最佳。加入分配器后，RTF（实时率）显著提升（从0.535降至0.455），性能仅轻微下降，实现了效率与质量的良好权衡。
 
 #### 04.4 Token信息编码分析
-![图5：粒度排序token的信息编码分析]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-4.png)
+![图5：粒度排序token的信息编码分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-4.png)
 关键结论：探测实验显示，token位置1-3（粗粒度）主要编码全局信息（时长、词数、语言特征），位置4-7（中等）编码韵律特征（语速、抖动），位置8-10（细粒度）编码详细声学特征（基频、能量、频谱）。这直观验证了Gogo实现了预期的“粗到细”信息组织。
 
 #### 04.5 Token分配效果可视化
-![图9：Token分配可视化示例1]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-0.png)
-![图10：Token分配可视化示例2]](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-03/JbLmIoWwDC-1.png)
+![图9：Token分配可视化示例1](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-0.png)
+![图10：Token分配可视化示例2](/audio-paper-digest-blog/images/iclr-2026/2026-05-03/JbLmIoWwDC-1.png)
 关键结论：图示表明，分配器在语音活跃、信息复杂的片段（如元音、辅音）分配更多token，而在静音或简单片段分配较少token，实现了对非均匀信息密度的自适应编码。
 
 ### ⚖️ 评分理由
