@@ -131,8 +131,6 @@ hiddenInHomeList: true
 
 关键结论：OMNISAPIENS-7B变体在多数任务上显著超越通用多模态大模型。SFT和BAM在结构化任务（HUM, ANX, DEP, NVC）上表现突出；RL在开放生成任务（INT, SOC）上更优。
 
-![多任务学习结果热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-6.png)
-
 图2：各模型在10个行为任务上的平均性能热力图。颜色越深表示性能越好。OMNISAPIENS-7B系列模型在大部分任务上呈现更深的颜色。
 
 2. 迁移学习结果

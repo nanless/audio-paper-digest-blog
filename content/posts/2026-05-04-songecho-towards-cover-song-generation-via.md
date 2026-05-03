@@ -50,8 +50,6 @@ hiddenInHomeList: true
 
 SongEcho的模型架构基于预训练的文到歌模型ACE-Step（一个扩散Transformer，DiT），并在每个Transformer块中集成了IA-EiLM模块以注入旋律控制。
 
-![图2：SongEcho整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-1.png)
-
 整体流程与组件：
 1.  输入：人声旋律F0序列（经RVMPE提取）、文本标签（Tags）、歌词（Lyrics）、扩散时间步（Timestep）。
 2.  编码与条件准备：
@@ -68,8 +66,6 @@ SongEcho的模型架构基于预训练的文到歌模型ACE-Step（一个扩散T
 - 在FFN前插入：动机是FFN执行局部特征变换，能更好地保留注入的旋律特征，而自注意力的全局特性可能会干扰旋律。
 - 零初始化`fi`：确保训练从原始预训练模型的状态开始，避免随机初始化引入的噪声调制。
 - 解耦流程：仅训练旋律编码器E和IA-EiLM模块，冻结预训练模型的其他所有参数，实现参数高效微调。
-
-![图1：条件注入机制对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-0.png)
 
 图1对比了不同的条件注入机制。(a) 交叉注意力机制需要额外学习时间对齐；(b) 逐元素加法虽然利用了时序对应关系，但调制灵活性有限（相当于固定缩放因子的仿射变换）；(c) 本文提出的EiLM可以一次性生成匹配目标维度的调制参数，实现逐元素的灵活调制，且无需单独学习时序对齐。
 
@@ -136,8 +132,6 @@ SongEcho的模型架构基于预训练的文到歌模型ACE-Step（一个扩散T
 5. 主观评估（MOS）：在旋律保真度（MF）、文本一致性（TA）、音频质量（AQ）和整体偏好（OP）四个维度上，SongEcho在音乐背景和无背景两组听众中均获得最高分（例如，无背景组OP：SongEcho 3.942 vs. SA ControlNet+LoRA 3.160）。
 
 6. 实验结果图表引用：
-
-![图5：MuseControlLite在完整音频条件下的注意力图可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-4.png)
 
 图5展示了MuseControlLite在完整音频条件下的注意力模式，呈现清晰的对角线模式，表明注意力矩阵近似单位矩阵。这解释了为什么静态条件注入在完整音频复制任务中有效（γ≈0），但在旋律控制任务中失败（γ≠0，导致条件不足）。
 

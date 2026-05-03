@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本文的核心贡献并非提出一个新的生成模型架构，而是定义任务、提供数据和基准。其验证部分使用的“模型”主要指现有模型的微调或级联组合。
 
-![图1](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-0.png)
+![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-0.png)
 
 （图1：多模态对话生成任务示例图）
 *   任务1：显式控制语音合成：输入为文本转录`T`和显式风格条件`Zexp`（情感三元组或自由描述），直接生成连续的对话语音流`A`。这跳过了传统TTS的逐句拼接，直接建模多说话人交替的完整音频流。
@@ -63,7 +63,7 @@ hiddenInHomeList: true
 *   对于任务2，基线方法包括：a) HarmoniVox（端到端模型，从单张图像推断状态并生成语音，然后拼接）；b) 级联方法（先用VLM如GPT-5/Gemini生成描述性风格提示，再用微调的Higgs-Audio生成语音）。
 *   对于任务3，评估了SI2V（说话人图像到视频）和T2V（文本到视频）两类方法。具体模型包括FLOAT、MultiTalk、Sonic、Wan-2.2、HunyuanVideo等。
 
-![图2](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-1.png)
+![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-1.png)
 
 （图2：多模态对话数据处理流程图）
 *   数据准备与字幕校准：从公开影视源获取原始视频、音频和多源字幕。通过ASR结果与字幕的锚点对齐（步骤1），校正字幕的时间戳和文本，生成高质量、时间准确的校准字幕。
@@ -87,13 +87,13 @@ hiddenInHomeList: true
 *   推理细节：对于任务1（语音合成），模型支持“单次生成连续的对话语音流”，无需显式边界标记，类似于Zero-Shot Dialogue Generation。未说明具体的解码温度、beam size等生成参数。
 *   正则化或稳定训练技巧：未说明。
 
-![图3](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-2.png)
+![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-2.png)
 
 （图3：MM-DIA数据集统计分布图）
 *   图3(a)：展示了MM-DIA中双人对话的性别分布（男性-男性占比最高34%，其次是女性-男性25.4%）。
 *   图3(b) 和 (c)：展示了“关系”与“互动模式”在不同子类别下的关联热力图。例如，在“职场”关系中，“命令”和“提问”是常见的互动模式；在“亲密”关系中，“情感释放”和“玩笑”更常见。这验证了数据集分布与现实社会互动的一致性。
 
-![图4](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-3.png)
+![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/fBagP6w6yE-3.png)
 
 （图4：字幕对齐校准案例图）
 *   展示了三组多源字幕与ASR结果的对齐情况。图的上方显示锚点起始时间差异，下方显示持续时间差异。通过选择差异较小的字幕源进行时间平移校准，可以显著提高字幕与语音的同步准确性（如表7所示，校准后WER从0.43降至0.03）。

@@ -69,8 +69,6 @@ hiddenInHomeList: true
 | 音乐描述 (SongCaps) | | Audio Flamingo 3 | 人工评分 (1-10) ↑ | 6.5 |
 | | | Music Flamingo | | 8.3 |
 
-![音频语言模型音乐描述对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RS7T9S16Bl-0.png)
-
 图1：Music Flamingo与Audio Flamingo 3、Qwen3-Omni对两首不同风格歌曲的描述对比。Music Flamingo的描述更详细、多层次，整合了理论分析。
 
 5. 实际意义是什么：推动了音频语言模型从通用音频理解向垂直、深度音乐理解迈进，展示了如何通过专门的数据构建和训练策略让模型产生更像人类音乐家的分析性输出，为音乐教育、推荐、创作辅助等应用提供了更强大的基础模型。

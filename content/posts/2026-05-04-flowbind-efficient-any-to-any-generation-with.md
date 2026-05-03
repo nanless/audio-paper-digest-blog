@@ -47,8 +47,6 @@ hiddenInHomeList: true
 
 *注：OmniFlow训练时间仅为最终联合训练阶段。
 
-![FlowBind框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/7DeARTwvwL-0.png)
-
 图1：FlowBind框架概览。 (a) 训练阶段：联合学习共享潜在空间和各模态的漂移网络。(b) 推理阶段：利用学习到的漂移网络，通过在时间上前向或后向求解各模态的常微分方程（ODE），实现灵活的任意到任意生成。
 
 ### 🏗️ 模型架构

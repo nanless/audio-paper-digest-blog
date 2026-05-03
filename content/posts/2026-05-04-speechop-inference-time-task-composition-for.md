@@ -52,11 +52,7 @@ hiddenInHomeList: true
 3. 新在何处：与传统方法不同，SpeechOp通过迁移TTS预训练来解决S2S的数据瓶颈。TC-CFG利用贝叶斯分解，将TTS模型作为判别式指导（判断内容是否匹配转录）而非混合其生成先验，从而在组合任务（如增强+转录引导）时避免质量下降。此外，提出了隐式任务组合（ITC）流程，利用Whisper转录引导增强。
 4. 主要结果：SpeechOp在多个任务上取得优异成绩。语音编辑在各项MOS指标上大幅超越VoiceCraft。语音增强中，ITC流程将词错误率（WER）从增强前的3.3%和无引导增强的8.1%降至2.9%，达到SOTA内容保真度。说话人分离在主观MOS上显著优于SepFormer基线。消融实验证明TTS预训练加速收敛4-8倍，且TC-CFG在组合任务时全面优于分数平均（TC-Avg）。
 
-![SpeechOp系统概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-0.png)
-
 图1：展示了SpeechOp的多任务训练范式（上）、推理时任务组合能力（中）和隐式任务组合流程（下）。
-
-![TTS预训练对收敛速度和性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-1.png)
 
 图2：TTS预训练使增强和分离任务的收敛速度分别快4倍和8倍，并提升了下游性能。
 
