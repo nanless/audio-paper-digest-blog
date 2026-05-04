@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音频安全 论文列表"
+title: "ICLR 2026 - 音视频深度伪造检测 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["音频安全"]
+tags: ["音视频深度伪造检测"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音频安全 方向论文"
+description: "共 1 篇 ICLR 2026 音视频深度伪造检测 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音频安全
+# ICLR 2026 - 音视频深度伪造检测
 
 共 **1** 篇论文
 
@@ -18,49 +18,44 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio L](/audio-paper-digest-blog/posts/2026-05-04-jalmbench-benchmarking-jailbreak-vulnerabilities) | 8.5分 | 前25% |
+| 🥇 | [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-04-tell-me-habibi-is-it-real-or-fake) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [JALMBench: Benchmarking Jailbreak Vulnerabilities in Audio Language Models](/audio-paper-digest-blog/posts/2026-05-04-jalmbench-benchmarking-jailbreak-vulnerabilities)
+### 🥇 [Tell me Habibi, is it Real or Fake?](/audio-paper-digest-blog/posts/2026-05-04-tell-me-habibi-is-it-real-or-fake)
 
-🔥 **8.5/10** | 前25% | #音频安全 | #基准测试 | #模型评估 #语音大模型
+🔥 **8.5/10** | 前25% | #音视频深度伪造检测 | #数据集 | #多语言 #零样本
 
 👥 **作者与机构**
 
-- 第一作者：Zifan Peng (香港科技大学（广州），清华大学互联网体系结构国家重点实验室)
-- 通讯作者：Wenhan Dong (香港科技大学（广州))，Xinlei He (香港科技大学（广州)，清华大学互联网体系结构国家重点实验室)
-- 作者列表：Zifan Peng (香港科技大学（广州)，清华大学互联网体系结构国家重点实验室)，Yule Liu (香港科技大学（广州))，Zhen Sun (香港科技大学（广州))，Mingchen Li (北德克萨斯大学)，Zeren Luo (香港科技大学（广州))，Jingyi Zheng (香港科技大学（广州))，Wenhan Dong (香港科技大学（广州))，Xinlei He (香港科技大学（广州)，清华大学互联网体系结构国家重点实验室)，Xuechao Wang (香港科技大学（广州))，Yingjie Xue (中国科学技术大学)，Shengmin Xu (福建师范大学)，Xinyi Huang (南京航空航天大学)
+- 第一作者：Kartik Kuckreja (MBZUAI)
+- 通讯作者：未明确标注，但通讯邮箱主要为 kartik.kuckreja@mbzuai.ac.ae 和 parul@monash.edu
+- 作者列表：Kartik Kuckreja (MBZUAI)、Parul Gupta (Monash University)、Injy Hamed (MBZUAI)、Thamar Solorio (MBZUAI)、Muhammad Haris Khan (MBZUAI)、Abhinav Dhall (Monash University)
+
+#
 
 💡 **毒舌点评**
 
-本文首次系统性地为音频大语言模型的安全性评估建立了一个全面的基准（JALMBench），其数据规模（>24.5万样本）和评估维度（12个模型、8种攻击、5种防御）在同类工作中堪称典范，为社区提供了亟需的标准化研究工具。然而，论文提出的防御策略（直接移植自视觉语言模型）效果平平，且对攻击者最具威胁的音频原生攻击（如AdvWave，ASR达96.2%）尚无有效应对之策，这暴露了当前防御研究的严重滞后和“治标不治本”的困境。
+亮点：该论文精准地击中了当前深度伪造检测领域的一个重大盲点——对多语言，尤其是像阿拉伯语这样广泛使用“代码切换”的语言场景的忽视，并为此构建了迄今规模最大、最复杂的专用数据集，为社区提供了极具价值的“练兵场”。短板：论文的重点在于“提出问题”和“提供工具”，而在于“解决问题”（即提出更先进的检测模型）方面着墨较少，其提出的检测方法仅为现有模型的基准测试。数据集生成依赖于GPT-4.1-mini等模型，其指令跟随的局限性可能导致部分“语义+翻译”模式的伪造文本语义变化不足，作者也承认了这一点。
+
+#
 
 🔗 **开源详情**
 
-- 代码：提供了完整的代码仓库链接（https://github.com/sfofgalaxy/JALMBench）。
-- 模型权重：论文中未提及公开被评估的12个LALM的权重。JALMBench本身是一个评估框架，不包含其自身训练的模型。
-- 数据集：已公开。数据集托管在HuggingFace平台，链接包含在代码仓库中。
-- Demo：论文中未提及在线演示。
-- 复现材料：提供了详细的论文附录，包含使用指南、实验设置、评估提示模板、攻击方法详细参数、消融实验结果等。此外，提供了Docker镜像以简化环境配置。
-- 论文中引用的开源项目：作为基准，JALMBench引用并集成了多种开源攻击方法（如ICA， PAP）和防御方法（如LLaMA-Guard， AdaShield）的代码或思路，并依赖于Google TTS， DeepL等API。其评估的LALM模型（如SpeechGPT， Qwen2-Audio等）也均为开源或公开可用的模型。
+- 代码：论文中未提及具体的代码仓库链接，但声明“Data-generation code and evaluation scripts will be made public”。
+- 模型权重：论文中未提及公开生成管道所用的TTS和唇形同步模型的具体权重链接，这些模型均为第三方已发表模型。
+- 数据集：论文明确声明“The dataset is public.”，并提供了访问需要签署的EULA协议图示。
+- Demo：未提及。
+- 复现材料：论文提供了生成管道的详细描述、文本篡改的提示示例（附录A.6）、数据分布图表、以及评估协议。但超参数、具体配置文件等未在文中给出。
+- 论文中引用的开源项目：XTTS-v2, OpenVoice-v2, Fairseq, Diff2Lip, LatentSync, Whisper, YOLO-v5, wav2vec2, Jais-3B, Qwen-2.5-7B等。
 
 📌 **核心摘要**
 
-1.  问题：大型音频语言模型（LALMs）在实际部署中面临越狱攻击的安全风险，但目前缺乏专门的、大规模的对抗性音频数据集和统一的评估框架来系统性地评估和比较针对LALM的越狱攻击。
-2.  方法核心：本文提出了JALMBench，一个模块化的基准框架。它包含11，316条文本样本和245，355条音频样本（>1000小时），评估了12个主流LALM、8种越狱攻击方法（4种文本迁移型、4种音频原生型）和5种防御策略。
-3.  创新之处：与现有工作相比，JALMBench首次实现了：1) 大规模、多样的对抗性音频数据集构建；2) 对多种攻击方法（包括从文本迁移和直接音频操作）的统一评估；3) 对LALM架构、攻击效率、话题敏感性等多维度的深入分析；4) 对防御策略（提示级和响应级）的初步探索。
-4.  主要实验结果：
-    *   在基线有害查询下，音频模态的平均攻击成功率（ASR）为21.5%，高于文本模态的17.0%。
-    *   最强攻击AdvWave（音频原生）的平均ASR高达96.2%，表明现有LALM普遍脆弱。
-    *   架构分析显示，采用离散音频token化并进行交错训练的模型（如GLM-4-Voice）能实现更安全的跨模态泛化，而使用连续特征提取的模型若无特殊设计则存在严重的模态错位。
-    *   防御评估中，最佳提示级防御（AdaShield）将平均ASR降低19.6个百分点，最佳响应级防御（LLaMA-Guard）降低18.0个百分点，但均导致一定效用损失或无法防御最强攻击。
-    *   攻击效率分析表明，实现60%+ ASR通常需要>100秒，但实现40% ASR可在10秒内完成，表明低成本、现实的攻击仍具威胁。
-    *   话题分析显示模型对显式仇恨内容（平均ASR 41%）相对鲁棒，但对隐性有害话题（如错误信息，平均ASR 67%）则脆弱得多。
-5.  实际意义：JALMBench为评估LALM安全性提供了标准化工具和大规模数据集，揭示了音频模态的特殊安全漏洞，并强调了开发专门针对音频模态的防御方法的紧迫性。
-6.  主要局限性：1) 防御策略主要移植自其他模态，缺乏针对音频特性的有效防御；2) 未深入探索多轮对话越狱攻击；3) 对更细粒度的语音特征（如情感、说话人身份）影响探索不足；4) 部分攻击方法（如DAN）的样本规模有限。
+这篇论文旨在解决深度伪造检测研究中对多语言，特别是阿拉伯语-英语“代码切换”（在同一次话语中混合使用两种语言）场景严重忽视的问题。为解决此问题，论文提出了一个全新的核心贡献：构建并开源了首个大规模的阿拉伯语-英语音视频深度伪造数据集 ArEnAV。该数据集包含约38.7万个视频（超过765小时），通过一个创新的生成管道创建，该管道整合了多个文本转语音（TTS）和唇形同步模型，并利用GPT-4.1-mini进行8种不同规则的文本篡改，以模拟真实世界的代码切换和方言变体。与现有的多语言数据集（如PolyGlotFake）相比，ArEnAV首次专注于并显式生成“句内代码切换”的伪造内容。实验表明，当前最先进的深度伪造检测模型在ArEnAV上的性能出现断崖式下跌（例如，BA-TFD+模型的AP@0.5从AV-1M上的44.42%降至3.74%），甚至人类参与者的检测准确率也仅为60%，这证明了该数据集的挑战性和新场景的真实性。该工作的实际意义在于为开发更鲁棒、适用于全球多语言环境的深度伪造检测系统提供了必需的基准资源。主要局限性包括：数据生成管线依赖现有ASR和LLM，可能导致转录噪声和语义变化不足；数据集目前仅覆盖阿拉伯语和英语两种语言。
+
+#
 
 ---
 

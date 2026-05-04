@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频问答 论文列表"
+title: "ICLR 2026 - 视频描述生成 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["视频问答"]
+tags: ["视频描述生成"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频问答 方向论文"
+description: "共 1 篇 ICLR 2026 视频描述生成 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频问答
+# ICLR 2026 - 视频描述生成
 
 共 **1** 篇论文
 
@@ -18,49 +18,52 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Can Vision-Language Models Answer Face to Face Questions in ](/audio-paper-digest-blog/posts/2026-05-04-can-vision-language-models-answer-face-to-face) | 7.5分 | 前25% |
+| 🥇 | [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal O](/audio-paper-digest-blog/posts/2026-05-04-avocado-an-audiovisual-video-captioner-driven-by) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Can Vision-Language Models Answer Face to Face Questions in the Real-World?](/audio-paper-digest-blog/posts/2026-05-04-can-vision-language-models-answer-face-to-face)
+### 🥇 [AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration](/audio-paper-digest-blog/posts/2026-05-04-avocado-an-audiovisual-video-captioner-driven-by)
 
-✅ **7.5/10** | 前25% | #视频问答 | #多模态模型 | #音频问答 #基准测试
+🔥 **8.5/10** | 前25% | #视频描述生成 | #强化学习 | #多模态模型 #音频视觉对齐
 
 👥 **作者与机构**
 
-- 第一作者：Reza Pourreza (Qualcomm AI Research)
-- 通讯作者：未明确说明（论文中注明作者1和作者2贡献相等）
-- 作者列表：Reza Pourreza（Qualcomm AI Research）、Rishit Dagli（多伦多大学，实习期间工作于Qualcomm AI Research）、Apratim Bhattacharyya（Qualcomm AI Research）、Sunny Panchal（Qualcomm AI Research）、Guillaume Berger（Qualcomm AI Research）、Roland Memisevic（Qualcomm AI Research）
-
-#
+- 第一作者：Xinlong Chen（快手技术 Kling 团队，中国科学院自动化研究所 NLPR，中国科学院大学）
+- 通讯作者：Qiang Liu（中国科学院自动化研究所 NLPR，中国科学院大学）
+- 作者列表：Xinlong Chen（快手技术 Kling 团队，中国科学院自动化研究所 NLPR，中国科学院大学）、Yue Ding（中国科学院自动化研究所 NLPR，中国科学院大学）、Weihong Lin（快手技术 Kling 团队）、Jingyun Hua（快手技术 Kling 团队）、Linli Yao（北京大学）、Yang Shi（北京大学）、Bozhou Li（北京大学）、Qiang Liu（中国科学院自动化研究所 NLPR，中国科学院大学）、Yuanxing Zhang（快手技术 Kling 团队）、Pengfei Wan（快手技术 Kling 团队）、Liang Wang（中国科学院自动化研究所 NLPR，中国科学院大学）
 
 💡 **毒舌点评**
 
-亮点：这篇论文做了一件“脏活累活”——收集并发布了一个高度真实、包含同步音频视频和时间戳注释的在线问答数据集（QIVD），为评估模型在真实世界交互能力上立了一个扎实的靶子，其“当回答时”的时间戳注释设计尤为精巧。短板：所提的流式处理基线（Whisper-Streaming + LMM）更像是一个工程组合而非优雅的端到端解决方案，且论文标题提出的问题“能否回答”最终答案更多是“目前不能，但可通过微调部分改善”，结论的突破性稍显不足。
-
-#
+亮点： 论文没有满足于简单的多模态拼接，而是通过精心设计的 checklist 和 dialogue 奖励函数，将“音视频事件在时间轴上对齐”这一核心需求显式地融入了强化学习目标，这种针对具体问题定制 RL 奖励的思路比通用 GRPO 应用更有价值。
+短板： 整个流程高度依赖强大的教师模型（如 Gemini-2.5-Pro）来构建 SFT 数据和评估奖励，这使得方法的泛用性和在资源受限场景下的可行性存疑，且可能隐含了将教师模型偏见传递给学生模型的风险。
 
 🔗 **开源详情**
 
-- 代码：论文中未提及提供基线方法或Stream-Qwen-Omni的代码仓库链接。
-- 模型权重：未提及提供微调后模型的权重。
-- 数据集：QIVD数据集已公开。论文提供了获取链接：`https://www.qualcomm.com/developer/software/qualcomm-interactive-video-dataset-qivd`。
-- Demo：未提及。
-- 复现材料：在论文附录（Section D）中详细提供了VideoLLaMA和Stream-Qwen-Omni的微调超参数、训练设置、评估所用提示词（Table D.3, D.4），以及GPT-4o的输入提示词（Table D.5），这些信息对于复现评估实验是充分的。
-- 论文中引用的开源项目：列出了大量作为基线或组件的开源模型，包括InstructBLIP, Video-ChatGPT, VideoChat2, LLaVA-NeXT, LLaMA-VID, VideoLLaMA系列, Flash-VStream, Qwen2.5-VL, Qwen2.5-Omni, Qwen3-VL等，以及Whisper, BEATs, SigLIP等基础组件。
+- 代码： 论文明确表示“AVoCaDO will be open-sourced”，并提供了项目主页链接 (`https://avocado-captioner.github.io/`)。论文中未直接提供代码仓库链接，但项目主页很可能包含后续链接。
+- 模型权重： 论文声明模型将开源，但未提供具体的权重下载链接或平台。
+- 数据集： 论文详细描述了数据集的构建方法、来源和规模（107K），但未提及是否公开发布原始数据集或经过处理的描述数据集。获取构建数据集所需的原始视频相对容易（来自公开数据集），但重新生成所有描述需要访问Gemini API。
+- Demo： 论文未提及是否提供在线演示。
+- 复现材料： 论文提供了丰富的复现细节：包括所有训练超参数（学习率、batch size等）、硬件配置、以及用于数据构建、关键点分解、奖励计算的所有Prompt（见附录图10-17）。这些信息对复现工作至关重要。
+- 论文中引用的开源项目： 依赖的开源项目主要是基础模型 `Qwen2.5-Omni-7B`，以及用于评估的基准测试集（如`Daily-Omni`, `WorldSense`）。构建数据时使用了`TikTok-10M`, `Shot2Story`, `FineVideo`等公开数据集。
 
 📌 **核心摘要**
 
-1.  解决的问题：评估视觉语言模型（LMMs）能否在实时、面对面的场景中，基于持续输入的相机和麦克风数据，恰当地回答用户提出的开放式问题。这关乎AI助手与具身智能的实用性。
-2.  方法核心：引入了一个新的数据集和基准——高通交互式视频数据集（QIVD）。它包含2900个真实世界短视频，每个视频都包含用户在录制时提出的问题、对应的答案，以及关键的答案最佳时间戳（标记何时回答最合适）。同时，提出了一种基线流式方法：使用流式ASR检测问题结束时刻，将此时的视频和转录文本输入LMM生成答案。
-3.  与已有方法相比新在哪里：与以往视频问答数据集相比，QIVD是在线、交互式的（问题和视频同时生成），而非对预录视频的离线标注。其关键创新在于引入了时间维度（何时回答）的标注，这更贴近真实对话的动态性。评估从单纯的“答案正确性”扩展到了“时机把握”。
-4.  主要实验结果：现有顶尖模型表现远低于人类（如GPT-4o离线正确率58.76% vs. 人类87.33%）。主要失败模式包括：难以理解指代（如“这个”）、动作计数、时序推理和音视频整合。关键消融实验表明：1）提供准确答案时间戳能大幅提升性能；2）微调后的音视频多模态模型（VideoLLaMA2.1-7B-FT-AV）在大多数任务上优于仅用视觉的版本；3）但模型在动作计数等时序任务上即使微调后仍严重落后（29.91%）。
-5.  实际意义：为研究和开发真正能与人实时互动的AI系统提供了关键的评测标尺和数据基础，指明了当前模型在情境理解、时序推理和多模态融合方面的具体短板。
-6.  主要局限性：数据集规模相对较小（2900样本）；问题类型虽多样但均为单轮QA，不涉及多轮对话；场景多样性可能受限于众包录制环境。
+1. 解决的问题： 现有视频描述生成方法大多以视觉为中心，忽略了音频信息，或者无法生成视觉和音频事件在时间上精确对齐的描述，这限制了模型对视频内容的全面理解。
+2. 方法核心： 提出了 AVoCaDO，一个由音视频时序协调驱动的描述生成模型。其核心是一个两阶段后训练流水线：第一阶段（SFT）在精心构建的 10.7 万条高质量、时序对齐的音视频描述数据集上进行监督微调；第二阶段（GRPO）利用三个专门设计的奖励函数（清单奖励、对话奖励、长度正则化奖励）进行强化学习，以进一步优化时序连贯性和描述准确性。
+3. 创新点： 相比已有方法，主要新在：1) 构建了大规模、高质量的音视频对齐描述数据集；2) 提出了针对音视频描述任务特性的组合式奖励函数设计，同时关注内容完整性、对话准确性和生成稳定性；3) 证明了在通用多模态模型上通过特定后训练即可显著提升音视频描述能力。
+4. 主要实验结果： 在四个音视频描述基准测试上，AVoCaDO (7B) 显著超越了所有现有开源模型，并在 UGC-VideoCap 上超越了商业模型 Gemini-2.5-Pro。关键结果如下表所示。
 
-#
+| 模型 | 视频-SALMONN-2测试集 (Total ↓) | UGC-VideoCap (Avg. ↑) | Daily-Omni (Avg. ↑) | WorldSense (Avg. ↑) |
+| :--- | :--- | :--- | :--- | :--- |
+| AVoCaDO (Ours) | 37.3 | 73.2 | 50.1 | 25.7 |
+| video-SALMONN-2* | 38.8 | 67.2 | 29.9 | 18.2 |
+| Qwen2.5-Omni | 57.1 | 57.7 | 13.4 | 8.6 |
+| Gemini-2.5-Pro | 31.3 | 72.6 | 60.2 | 33.8 |
+
+5. 实际意义： 提升了视频描述模型对包含对话、音乐、环境音等复杂音视频内容的理解和描述能力，为视频理解、检索和生成等下游任务提供了更高质量的文本表示，推动了多模态大模型向更全面的视听感知发展。
+6. 主要局限性： 模型性能高度依赖于大规模、高质量的监督数据构建（使用了强大的教师模型），这可能限制其在不同文化或低资源语言场景下的快速迁移。此外，奖励函数的设计虽然针对性强，但也引入了额外的计算开销和复杂度。
 
 ---
 

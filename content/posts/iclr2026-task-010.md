@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 机器人操作 论文列表"
+title: "ICLR 2026 - 模型可解释性 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["机器人操作"]
+tags: ["模型可解释性"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 机器人操作 方向论文"
+description: "共 1 篇 ICLR 2026 模型可解释性 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 机器人操作
+# ICLR 2026 - 模型可解释性
 
 共 **1** 篇论文
 
@@ -18,52 +18,50 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-04-roboomni-proactive-robot-manipulation-in-omni) | 8.0分 | 前25% |
+| 🥇 | [The Deleuzian Representation Hypothesis](/audio-paper-digest-blog/posts/2026-05-04-the-deleuzian-representation-hypothesis) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [RoboOmni: Proactive Robot Manipulation in Omni-modal Context](/audio-paper-digest-blog/posts/2026-05-04-roboomni-proactive-robot-manipulation-in-omni)
+### 🥇 [The Deleuzian Representation Hypothesis](/audio-paper-digest-blog/posts/2026-05-04-the-deleuzian-representation-hypothesis)
 
-🔥 **8.0/10** | 前25% | #机器人操作 | #多模态模型 | #数据集 #端到端
+🔥 **8.5/10** | 前25% | #模型可解释性 | #概念提取 | #对比学习 #自监督学习
 
 👥 **作者与机构**
 
-- 第一作者：Siyin Wang（复旦大学，上海创新研究院）
-- 通讯作者：Jinlan Fu（新加坡国立大学），Xipeng Qiu（复旦大学）
-- 作者列表：Siyin Wang（复旦大学，上海创新研究院），Jinlan Fu（新加坡国立大学），Feihong Liu（复旦大学），Xinzhe He（复旦大学），Huangxuan Wu（复旦大学），Junhao Shi（复旦大学，上海创新研究院），Kexin Huang（复旦大学），Zhaoye Fei（复旦大学），Jingjing Gong（上海创新研究院），Zuxuan Wu（复旦大学，上海创新研究院），Yu-Gang Jiang（复旦大学），See-Kiong Ng（新加坡国立大学），Tat-Seng Chua（新加坡国立大学），Xipeng Qiu（复旦大学）
+- 第一作者：Clément Cornet (Université Paris-Saclay, CEA, List)
+- 通讯作者：Clément Cornet (论文未明确标注通讯作者，根据单位信息推断)
+- 作者列表：Clément Cornet (Université Paris-Saclay, CEA, List)、Romaric Besançon (Université Paris-Saclay, CEA, List)、Hervé Le Borgne (Université Paris-Saclay, CEA, List)
 
 💡 **毒舌点评**
 
-这篇论文的核心亮点在于清晰定义了“主动意图推理”这一关键问题，并构建了迄今最大规模的、包含丰富副语言信息的机器人操作数据集（OmniAction），推动机器人从“指令执行者”向“对话合作者”演进。但其短板也明显：大规模数据集（140k episodes）主要通过TTS和模板合成，与真实世界复杂、嘈杂、充满即兴互动的家庭环境仍可能存在显著差距（domain gap），这使得在模拟（LIBERO）上的亮眼结果（85.6%）转换到真实场景（73.9%）时出现了不小的衰减，主动交互的鲁棒性尚需更多真实长期验证。
+这篇论文将哲学思想（德勒兹的差异论）包装成了一个工程上简洁、实验上有效的概念提取新范式，确实超越了现有稀疏自编码器方法。其核心创新——聚类激活差异而非重建激活——思路清晰且有启发性。但最大的短板在于其评估高度依赖现有的有标签数据集（用于计算探针损失），对于真正无监督的、超越已知属性的“新概念”发现能力缺乏评估框架，且对语音/音频任务本身的方法论贡献有限。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了代码仓库链接：`https://github.com/OpenMOSS/RoboOmni`。
-- 模型权重：论文中提及将开源模型权重，但未提供具体下载链接。
-- 数据集：OmniAction数据集承诺将公开，论文中未说明具体发布平台或获取方式。
-- Demo：论文中未提及在线演示。
-- 复现材料：论文在附录和正文中提供了非常详细的数据集构建流程（包括TTS引擎、声音库来源）、模型架构细节、训练超参数、硬件配置和评估设置，复现信息充分。
-- 论文中引用的开源项目：依赖了多个开源项目，包括：LIBERO基准（仿真环境）、Qwen2.5-Omni（多模态LLM骨干）、FAST+（动作分词器）、OpenVLA、NORA、π0（基线模型）、Whisper（ASR基线）、MOSS-TTSD、CosyVoice、Gemini-TTS（语音合成）、DINOv2、SigLIP（视觉编码器）等。
+- 代码：提供。论文明确给出了代码仓库链接：https://github.com/ClementCornet/Deleuzian-Hypothesis。
+- 模型权重：未提及。论文未公开其提取的概念向量词典或修改后的模型权重。
+- 数据集：论文使用的数据集（ImageNet, WikiArt, IMDB, CoNLL-2003, AudioSet）均为公开数据集，并在附录B中给出了获取信息。
+- Demo：未提及。
+- 复现材料：提供了详尽的复现信息，包括实现细节（附录A：所有基线方法的超参数设置）、实验设置细节（附录B：数据集描述、模型版本、数据划分）、以及方法核心代码。
+- 引用的开源项目：论文引用了多个开源项目/模型作为基线或工具，包括：scikit-learn (用于ICA)、ViT-Prisma (预训练SAE)、EleutherAI (预训练SAE)、OpenClip (CLIP实现)、PyTorch Hub (DinoV2)、HuggingFace上的多个模型（DeBERTa, BART, Pythia, AST）。
 
 📌 **核心摘要**
 
-1. 要解决什么问题：现有机器人操作模型大多依赖于明确的文本指令，缺乏从多模态上下文（语音对话、环境声音、视觉线索）中主动推断用户潜在意图并进行交互确认的能力。
-2. 方法核心是什么：提出RoboOmni，一个端到端的全模态大语言模型框架，采用“感知器-思考者-对话者-执行者”（Perceiver-Thinker-Talker-Executor）架构，统一处理视觉、音频和文本输入，直接生成文本回复（用于交互确认）和动作token（用于操作）。
-3. 与已有方法相比新在哪里：(1) 提出“跨模态上下文指令”新范式，强调从多模态线索主动推理意图。(2) 设计端到端框架，直接处理原始音频，保留副语言信息（语调、情感、说话人身份），避免了ASR流水线的误差和信息损失。(3) 构建了首个大规模（140k episodes）专注于主动意图推理的多模态数据集OmniAction。
-4. 主要实验结果如何：在OmniAction-LIBERO-TTS仿真基准上，RoboOmni平均成功率（85.6%）大幅超越最强基线（ASR+NORA，25.9%）。在真实人类语音指令下，平均成功率达76.6%，优于最强文本基线π0（73.8%）。在真实机器人（WidowX 250S）实验中，成功率为73.9%，显著高于ASR+VLA基线（52.2%）。消融实验证明了视觉、音频和副语言信息的重要性。
-
-   | 任务套件 | Ground-truth文本 (最佳基线) | ASR转文本 (最佳基线) | RoboOmni |
-   | :--- | :--- | :--- | :--- |
-   | Spatial | 49.8% (NORA) | 56.5% (NORA) | 93.0% |
-   | Goal | 12.5% (NORA) | 16.3% (NORA) | 85.8% |
-   | Object | 7.2% (OpenVLA) | 13.8% (NORA) | 84.0% |
-   | Long | 32.3% (NORA) | 51.0% (NORA) | 79.5% |
-   | Average | 16.3% | 25.9% | 85.6% |
-
-5. 实际意义是什么：为实现更自然、主动的人机协作机器人提供了关键的技术路径和评估基准。数据集OmniAction的发布将有力推动该领域的研究。
-6. 主要局限性是什么：数据集主要基于合成语音和模板对话构建，与真实世界的交互多样性存在差距；框架的推理效率虽然优于级联系统，但在实时性要求极高的场景下可能仍需优化；失败分析显示，意图理解错误和低层抓取失败是主要瓶颈。
+1.  问题：现有的稀疏自编码器（SAE）在提取神经网络内部可解释概念时面临训练困难、特征多义性以及依赖稀疏性作为可解释性代理等问题，需要一种更简单、更直接的概念提取方法。
+2.  方法核心：提出“德勒兹表征假说”，将概念定义为激活空间中数据样本之间的“差异”。具体方法是：随机采样激活差异向量，然后使用带有偏度逆权重（以促进多样性）的K-means聚类算法对这些差异进行聚类，聚类中心即为概念向量。
+3.  与已有方法的对比：与主流SAE方法（如重建+稀疏）不同，本方法不进行激活重建，而是直接识别和聚类“重复出现的差异”。它被形式化为一种无监督的判别分析，并在保持概念向量位于原始激活空间（便于无损引导）的同时，仅需一个可解释的超参数（概念数量k）。
+4.  主要实验结果：在涵盖视觉、语言、音频三个模态的五个模型和五个数据集上进行了广泛评估。结果显示，在探针损失（Probe Loss）指标上，该方法在13/20个任务中超越了所有SAE变体，其表现接近有监督的线性判别分析（LDA）基线。在跨运行一致性（MPPC）上也表现优异。关键实验数据对比如下表所示：
+    
+    | 方法 | CLIP (WikiArt Artist) | DinoV2 (WikiArt Artist) | DeBERTa (CoNLL-2003 NER) | BART (CoNLL-2003 POS) | AST (AudioSet) | 平均排名 ↓ |
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+    | Deleuzian (Ours) | 0.0119 | 0.0055 | 0.0665 | 0.2148 | 0.0164 | 1.65±0.85 |
+    | Tk-SAE | 0.0125 | 0.0096 | 0.0839 | 0.3478 | 0.0169 | 2.65±1.01 |
+    | A-SAE | 0.0130 | 0.0143 | 0.0775 | 0.3754 | 0.0169 | 3.20±1.72 |
+    | LDA (监督基线) | 0.0084 | 0.0044 | 0.0429 | 0.6326 | 0.0164 | - |
+5.  实际意义：提供了一种更简洁、可解释性更强的概念提取工具，可用于分析模型内部表征、进行概念引导（Steering）以可控地修改模型行为（如图像风格迁移、文本生成控制），为理解和调试大规模神经网络提供了新途径。
+6.  主要局限性：方法的评估依赖于带有语义标签的数据集，可能无法评估与已知标签无关的“新颖”概念。假设概念可在线性方向上表示，这一假设可能在某些模型中不成立。引导效果虽为定性展示，但系统性量化仍需更多研究。
 
 ---
 

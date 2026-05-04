@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 数学推理 论文列表"
+title: "ICLR 2026 - 数据集 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["数学推理"]
+tags: ["数据集"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 数学推理 方向论文"
+description: "共 1 篇 ICLR 2026 数据集 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 数学推理
+# ICLR 2026 - 数据集
 
 共 **1** 篇论文
 
@@ -18,52 +18,55 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [VideoMathQA: Benchmarking Mathematical Reasoning via Multimo](/audio-paper-digest-blog/posts/2026-05-04-videomathqa-benchmarking-mathematical-reasoning) | 7.5分 | 前25% |
+| 🥇 | [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-](/audio-paper-digest-blog/posts/2026-05-04-speakervid-5m-a-large-scale-high-quality-dataset) | 8.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [VideoMathQA: Benchmarking Mathematical Reasoning via Multimodal Understanding in Video](/audio-paper-digest-blog/posts/2026-05-04-videomathqa-benchmarking-mathematical-reasoning)
+### 🥇 [SpeakerVid-5M: A Large-Scale High-Quality Dataset for Audio-Visual Dyadic Interactive Human Generation](/audio-paper-digest-blog/posts/2026-05-04-speakervid-5m-a-large-scale-high-quality-dataset)
 
-✅ **7.5/10** | 前25% | #数学推理 | #基准测试 | #跨模态 #模型评估
+🔥 **8.5/10** | 前25% | #数据集 | #自回归模型 | #音视频 #音频生成
 
 👥 **作者与机构**
 
-- 第一作者：Hanoona Abdul Rasheed (MBZUAI)
-- 通讯作者：未明确说明（论文作者列表未标注通讯作者，但通常最后一位Fahad Shahbaz Khan可能负责）
+- 第一作者：Youliang Zhang（清华大学、StepFun）
+- 通讯作者：Xiu Li（清华大学深圳国际研究生院）
 - 作者列表：
-  - Hanoona Rasheed, Abdelrahman Shaker, Anqi Tang, Muhammad Maaz (MBZUAI)
-  - Ming-Hsuan Yang (University of California Merced, Google Research)
-  - Salman Khan (Australian National University, MBZUAI)
-  - Fahad Shahbaz Khan (Linköping University, MBZUAI)
-
-#
+  - Youliang Zhang（清华大学、StepFun）
+  - Zhaoyang Li（StepFun）
+  - Duomin Wang（StepFun，共同第一作者/责任作者†）
+  - Jiahe Zhang（未说明具体机构）
+  - Deyu Zhou（香港科技大学（广州）、StepFun）
+  - Zixin Yin（香港科技大学、StepFun）
+  - Xili Dai（StepFun）
+  - Gang Yu（StepFun）
+  - Xiu Li（清华大学深圳国际研究生院‡）
 
 💡 **毒舌点评**
 
-亮点：这是一份“体检报告”，用极其精细的标注和多维度评估，把当前多模态大模型在视频数学推理上的“虚胖”和“短板”照得一清二楚，尤其是错误分析部分，为后续模型改进指明了具体方向。
-短板：作为一份“体检报告”本身，它无法开出“药方”——即提出新的、能在该基准上取得突破的模型或方法。模型们集体在“深度理解”上“挂科”（如图2a所示），也侧面反映出当前基于采样帧的范式可能已遇到瓶颈。
-
-#
+亮点：论文构建数据集的工程严谨性堪称典范，从多源数据收集到基于多种信号（SyncNet、ArcFace、3D-Speaker）的交叉验证，再到涵盖画面质量、运动模糊、音频清晰度的多层级过滤，流程完整且考虑周全，为社区贡献了一个定义明确、质量可控的“交钥匙”式基准数据集。短板：基线模型虽然设计完整，但模型体量（0.8B）与当前主流的视频生成模型（动辄数十亿甚至百亿参数）差距明显，其在视频生成核心指标（FID、FVD）上虽自身消融提升显著，但与更大更强的级联模型（如HalLo3）相比仍处下风，一定程度上削弱了其作为“标准答案”的说服力，更像一个“可行性验证”。
 
 🔗 **开源详情**
 
-- 代码：论文中提供了项目主页链接 (https://mbzuai-oryx.github.io/VideoMathQA)，并说明评估代码已集成到开源工具lmms-eval中，提供了运行评估的脚本。
-- 模型权重：未提及。本文是评估工作，不涉及新模型发布。
-- 数据集：论文明确了提供数据集，并可通过项目主页访问。未提及具体下载方式，但通常会附带指引。
-- Demo：未提及。
-- 复现材料：提供了详尽的复现信息：评估使用的具体模型列表及版本、各模型输入帧数、解码策略（贪心）、硬件（8xA100-80G）、评估工具（lmms-eval, vllm），以及所有评估提示词（CoT、后处理、步骤评估、错误分析、字幕处理等，详见附录F）。
-- 论文中引用的开源项目：主要依赖lmms-eval (Li et al., 2024a) 和 vllm (Kwon et al., 2023) 作为评估框架和推理引擎。被评估的模型均为已开源或公开API的模型。
+- 代码：论文明确承诺将公开数据处理代码和基线模型代码，但未提供具体的代码仓库链接（如GitHub地址）。论文中写有“Both the dataset and the data processing code will be publicly released.”和“We will open-source the entire dataset, including the raw data, annotations, and data processing pipeline”。因此，判定为 有开源承诺，但具体链接未在文中给出。
+- 模型权重：论文中未提及公开预训练或微调后的基线模型权重。
+- 数据集：论文明确承诺完全开源数据集，并说明发布形式为YouTube视频ID/URL列表、时间戳和生成的标注，不托管原始视频/音频。开源方式清晰。
+- Demo：未提及在线演示。
+- 复现材料：提供了极其充分的复现材料，包括：详尽的数据收集、预处理、标注和过滤流程（第3节）；基线模型的架构细节、训练策略（三阶段）、超参数、硬件配置（附录A.7, A.8）；VidChatBench的构建方法和评估指标详细说明（第6.1节）；数据标注文件的具体格式和使用指南（附录A.11）；以及多处提示会开源代码。
+- 论文中引用的开源项目：
+  - 数据处理工具：SceneDetect, 3D-Speaker, YOLO, SyncNet, ArcFace, Qwen2.5-VL, Qwen-3, Whisper, DWpose, PaddleOCR。
+  - 模型/架构组件：Qwen2.5-Omni（理解模块）, CosyVoice2（音频分词器与声码器）, 3D-VAE（视频编解码）, NOVA（空间Transformer）。
+  - 评估工具：DOVER（视频质量评估）, Deep3DFaceRecon（表情特征提取）, CLIP（文本相似度计算）。
 
 📌 **核心摘要**
 
-1. 问题：现有数学推理基准大多基于静态图像，无法评估模型处理真实世界教学视频中随时间动态展开、多模态（视觉图表、手写板书、语音讲解）交织的复杂数学问题的能力。
-2. 方法核心：提出VideoMathQA基准，包含420个专家标注的视频-问题对，覆盖10个数学领域，视频时长从10秒到1小时。每个问题设计为三种推理类型之一（直接求解、概念迁移、深度理解），并附有带时间戳的多步骤推理链标注，用于评估中间推理过程。
-3. 与已有方法相比新在哪里：首次将视频时长、多模态融合（视觉+音频字幕+文本）、以及分层级的推理能力（从直接应用到深度理解）整合到一个统一的数学推理评估框架中。标注粒度细（步骤级），并引入多二元评估（MBin）减少猜测因素。
-4. 主要实验结果：对30个模型（包括GPT-o4o, Gemini-2.0, Qwen2.5-VL等）进行评估。当前最强模型GPT-o4-mini在CoT MBin+字幕设置下准确率仅为44.8%，远低于人类的80.7%。模型在“深度理解”类问题和长视频上表现显著下降。字幕和更多视频帧采样对性能有提升，但小模型收益有限。主要错误源于问题误解和概念应用错误。
-5. 实际意义：为评估和推动多模态大模型的高阶推理能力提供了关键的测试平台，揭示了当前模型在动态多模态推理上的严重不足，指明了未来模型需要加强长期时序关注、精细视觉理解及跨模态信息整合能力。
-6. 主要局限性：数据集规模相对较小（420样本），构建成本高昂，限制了其扩展性。评估完全依赖现有的视频-语言模型框架，未探索如强化学习等新的训练范式以应对此挑战。
+1. 问题：当前数字人研究正从单向驱动的“肖像生成”向双向交互的“虚拟人对话”迈进，但学术界严重缺乏为此类任务设计的大规模、高质量公开数据集。
+2. 方法：论文提出SpeakerVid-5M数据集，从YouTube收集视频，通过场景分割、说话人分离、人脸检测、唇音同步、身份矫正等步骤预处理，并利用多模态大模型（Qwen2.5-VL）和多种模型进行丰富标注（文本、骨骼、模糊度等），最后进行严格的质量过滤。同时，提供了一个基于自回归（AR）框架的音视频联合生成基线模型。
+3. 创新：① 首个针对“音频-视觉双人交互”任务的大规模数据集（5.2M片段，8.7K小时，其中双人对话770K对）。② 构建了多维度、分层级的数据质量控制与组织流程���对话分支、单人分支、聆听分支、多轮分支；预训练子集与SFT子集）。③ 定义并发布了VidChatBench评测基准。
+4. 实验：基线模型在VidChatBench上进行评测。消融实验表明，联合音视频生成、空间Transformer优化和训练噪声注入对提升视频质量（FVD从55.06降至28.82）、唇音同步（SyncNet得分从-升至2.698）和情感一致性（FIDEmotion从3.45降至3.22）有显著效果。与级联方案（Qwen+CosyVoice+Sonic/Hallo3）对比，本方法在情感和手势质量上占优，推理速度快一个数量级（3.17s/帧 vs 31-45s/帧）。
+5. 实际意义：该数据集填补了交互式虚拟人研究的数据空白，其丰富的标注也适用于人体动画、多模态对话等任务，将加速该领域的基础模型研究。
+6. 局限性：数据集来源存在人口统计偏差（偏英语、西方、男性）。基线模型规模较小，视频生成保真度与顶级扩散模型仍有差距，其主要价值在于验证数据集和AR框架的可行性。
 
 ---
 

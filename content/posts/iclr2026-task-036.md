@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 音乐信息检索 论文列表"
+title: "ICLR 2026 - 跨模态检索 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["音乐信息检索"]
+tags: ["跨模态检索"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 音乐信息检索 方向论文"
+description: "共 1 篇 ICLR 2026 跨模态检索 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 音乐信息检索
+# ICLR 2026 - 跨模态检索
 
 共 **1** 篇论文
 
@@ -18,47 +18,44 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Bridging Piano Transcription and Rendering via Disentangled ](/audio-paper-digest-blog/posts/2026-05-04-bridging-piano-transcription-and-rendering-via) | 8.0分 | 前25% |
+| 🥇 | [Learning multimodal dictionary decompositions with group-spa](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Bridging Piano Transcription and Rendering via Disentangled Score Content and Style](/audio-paper-digest-blog/posts/2026-05-04-bridging-piano-transcription-and-rendering-via)
+### 🥇 [Learning multimodal dictionary decompositions with group-sparse autoencoders](/audio-paper-digest-blog/posts/2026-05-04-learning-multimodal-dictionary-decompositions)
 
-🔥 **8.0/10** | 前25% | #音乐信息检索 | #解耦表示学习 | #扩散模型 #多任务学习
+✅ **7.5/10** | 前25% | #跨模态检索 | #自监督学习 | #多模态模型 #零样本
 
 👥 **作者与机构**
 
-- 第一作者：Wei Zeng（新加坡国立大学 NUS Graduate School Integrative Sciences and Engineering Programme；School of Computing）
-- 通讯作者：Ye Wang（新加坡国立大学 School of Computing；邮箱: dcswangy@nus.edu.sg）
-- 作者列表：Wei Zeng（新加坡国立大学）、Junchuan Zhao（新加坡国立大学 School of Computing）、Ye Wang（新加坡国立大学 School of Computing）
+- 第一作者：Chiraag Kaushik（Georgia Institute of Technology, School of Electrical and Computer Engineering）
+- 通讯作者：未说明（论文中未明确标注通讯作者）
+- 作者列表：Chiraag Kaushik（Georgia Institute of Technology）、Davis Barch（Dolby Laboratories）、Andrea Fanelli（Dolby Laboratories）
+
+#
 
 💡 **毒舌点评**
 
-亮点：论文的框架设计颇具巧思，将本质上互逆的钢琴转录和表情渲染任务统一建模，并通过序列到序列的转换巧妙规避了对耗时费力的音符级对齐数据的依赖，这在该领域是一个显著的工程和方法学进步。短板：作为核心模块之一的风格推荐模型（PSR）的评估稍显间接，主要依赖于生成嵌入与真实嵌入在潜在空间的相似性，缺乏更直接的“生成风格是否匹配乐谱”的用户端评估，说服力略有不足。
+这篇论文理论与实践结合得不错，Theorem 1为“分裂字典”问题提供了理论保证，而提出的组稀疏+掩码方案在CLIP/CLAP上也确实有效提升了多模态概念的数量和语义性。但最大的短板是实验上缺乏代码开源，对于一篇方法论论文来说，这大大削弱了其即时影响力和社区复现验证的价值，使得“方法有效性”部分打了折扣。
+
+#
 
 🔗 **开源详情**
 
-- 代码：论文中提及“代码将在接受后发布”，但未提供具体链接或仓库地址。
-- 模型权重：未提及公开预训练权重。
-- 数据集：训练数据集ASAP和ATEPP为公开数据集。无配对数据集的构建方法已说明。
-- Demo：论文提供了演示页面链接：https://wei-zeng98.github.io/joint-apt-epr/。
-- 复现材料：在附录A、B、C中提供了极其详尽的数据处理、模型架构、训练设置、超参数、评估协议等信息，复现材料非常充分。
-- 论文中引用的开源项目：Partitura (Cancino-Chac´on et al., 2022), MidiTok (Fradet et al., 2021), Aria AMT (https://github.com/EleutherAI/aria-amt)。
+- 代码：论文中未提及代码链接。
+- 模型权重：未提及公开训练好的SAE/GSAE/MGSAE模型权重。
+- 数据集：使用了公开数据集（CC3M, JamendoMaxCaps, MusicBench等），论文中未说明是否提供额外的处理脚本。
+- Demo：未提及在线演示。
+- 复现材料：论文在附录A.2中提供了较为详细的实验设置，包括数据集、超参数范围选择方法、训练步数等，有助于复现。
+- 论文中引用的开源项目：引用了`dictionary_learning`工具库（Marks et al., 2024）作为TopK SAE的实现基础。
 
 📌 **核心摘要**
 
-1. 问题：音乐信息检索（MIR）中的表情性能渲染（EPR，从乐谱生成表演）和自动钢琴转录（APT，从表演恢复乐谱）是两个互逆的基础任务，但此前被独立研究，且大多数EPR方法依赖于难以获取的音符级对齐数据。
-2. 方法核心：提出一个统一的Transformer序列到序列框架，通过解耦“音符级乐谱内容表示”和“全局性能风格表示”来联合建模APT和EPR。该框架可使用配对数据和无配对数据（仅需序列级对齐）训练。此外，独立训练一个基于扩散模型的性能风格推荐（PSR）模块，能仅从乐谱内容生成合适的风格嵌入。
-3. 新意：与已有方法相比，其新意在于：(1) 任务的统一联合建模，利用互逆性进行互相监督；(2) 提出了一种无需音符级对齐的EPR的Seq2Seq表述；(3) 通过PSR模块实现了从乐谱到自动风格推荐的端到端流程。
-4. 主要实验结果：
-    * APT：在ASAP数据集上，与最先进的基于Seq2Seq的端到端模型Beyer & Dai (2024)相比，本方法在多个指标上取得更优结果，例如ScoreSimilarity的Eavg从14.10降至12.48，Eextra从11.29降至9.48（具体见Table 1）。
-    * EPR：在客观评估中（Table 2），本方法（Ours-Target）在时长和力度的KL散度、MAE上优于VirtuosoNet和DExter等基线。主观听测（Figure 2）显示，本方法（Target Style）在动态、节奏、风格和整体人性化方面获得最高评分。
-    * 解耦验证：使用风格嵌入进行演奏家/作曲家分类的准确率（如作曲家77.46%）远高于使用内容嵌入（29.99%），证明了解耦的有效性（Table 4）。风格迁移实验（Figure 5）也表明了控制的可行性。
-    * PSR有效性：通过t-SNE可视化（Figure 4），PSR生成的风格嵌入在音乐历史时期聚类上与从真实表演提取的嵌入高度相似。
-5. 实际意义：该工作为音乐AI应用（如自动伴奏、音乐教育、个性化演奏生成）提供了一个更灵活、数据需求更低的基础框架。它允许非专业用户通过简单的乐谱输入获得风格恰当的演奏，或从演奏中恢复乐谱。
-6. 主要局限性：目前主要在古典钢琴音乐上验证，向爵士、流行等更具即兴性和多样性的风格扩展是未来挑战（论文Section E）。此外，风格推荐模块的评估相对间接。
+这篇论文旨在解决稀疏自编码器（SAE）应用于多模态对齐嵌入（如CLIP）时产生的“分裂字典”问题，即学习到的稀疏特征大多只对单一模态激活，损害了跨模态对齐。核心方法包括：理论上证明了在对齐嵌入空间上，存在比分裂字典对齐性更好的非分裂字典；提出组稀疏自编码器（GSAE）和掩码组稀疏自编码器（MGSAE），通过组稀疏损失（鼓励配对样本的稀疏码具有相同支撑集）和跨模态随机掩码来引导学习多模态字典。与标准SAE相比，该方法显著增加了跨模态激活的神经元数量，减少了“死神经元”，并提升了跨模态零样本任务的性能。例如，在CLIP图像/文本任务上，MGSAE在CIFAR-10上的零样本分类准确率达到84.2%，比标准TopK SAE高出18.5个百分点；在CLAP音频/文本任务上，MGSAE在NSynth乐器分类上达到35.4%，远超SAE的26.5%。该工作的实际意义在于为多模态模型的可解释性分析和可控生成提供了更好的分解工具，其主要局限是依赖配对的多模态数据进行训练，且未提供开源代码。
+
+#
 
 ---
 

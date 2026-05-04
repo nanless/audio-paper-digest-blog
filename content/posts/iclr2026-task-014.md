@@ -1,16 +1,16 @@
 ---
-title: "ICLR 2026 - 物种分布建模 论文列表"
+title: "ICLR 2026 - 生成模型 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["物种分布建模"]
+tags: ["生成模型"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 物种分布建模 方向论文"
+description: "共 2 篇 ICLR 2026 生成模型 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 物种分布建模
+# ICLR 2026 - 生成模型
 
-共 **1** 篇论文
+共 **2** 篇论文
 
 [← 返回 ICLR 2026 总览](/audio-paper-digest-blog/posts/iclr2026-summary/)
 
@@ -18,43 +18,101 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecolog](/audio-paper-digest-blog/posts/2026-05-04-miam-modality-imbalance-aware-masking-for) | 8.5分 | 前25% |
+| 🥇 | [DiVeQ: Differentiable Vector Quantization Using the Reparame](/audio-paper-digest-blog/posts/2026-05-04-diveq-differentiable-vector-quantization-using) | 8.0分 | 前25% |
+| 🥈 | [AUHead: Realistic Emotional Talking Head Generation via Acti](/audio-paper-digest-blog/posts/2026-05-04-auhead-realistic-emotional-talking-head) | 7.5分 | 前25% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [MIAM: Modality Imbalance-Aware Masking for Multimodal Ecological Applications](/audio-paper-digest-blog/posts/2026-05-04-miam-modality-imbalance-aware-masking-for)
+### 🥇 [DiVeQ: Differentiable Vector Quantization Using the Reparameterization Trick](/audio-paper-digest-blog/posts/2026-05-04-diveq-differentiable-vector-quantization-using)
 
-🔥 **8.5/10** | 前25% | #物种分布建模 | #掩码学习 | #多模态模型 #生态AI
+🔥 **8.0/10** | 前25% | #生成模型 | #向量量化 | #图像生成 #语音编码
 
 👥 **作者与机构**
 
-- 第一作者：Robin Zbinden（EPFL）
-- 通讯作者：Robin Zbinden（EPFL）
-- 作者列表：Robin Zbinden（EPFL）、Wesley Monteith-Finas（EPFL）、Gencer Sumbul（EPFL）、Nina van Tiel（EPFL）、Chiara Vanalli（EPFL）、Devis Tuia（EPFL）
+- 第一作者：Mohammad Hassan Vali（ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland）
+- 通讯作者：未明确说明（论文提供了三位作者的共同邮箱，未指定单独通讯作者）
+- 作者列表：Mohammad Hassan Vali（ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland）、Tom Bäckström（Department of Information and Communications Engineering, Aalto University, Finland）、Arno Solin（ELLIS Institute Finland & Department of Computer Science, Aalto University, Finland）
+
+#
 
 💡 **毒舌点评**
 
-MIAM 巧妙地将动态掩码与模态不平衡感知相结合，为多模态学习中的“强者恒强”问题提供了一个优雅的解决方案，并在生态学这一数据天然不完整的领域取得了显著效果；但其在更广泛的多模态社区（如视觉-语言任务）中的普适性和与 SOTA 大模型的结合潜力尚待验证，且生态建模这一垂直场景的复杂度可能让非本领域读者感到入门门槛较高。
+这篇论文精准地“修理”了向量量化在深度学习应用中那个著名的老毛病——梯度消失，提出的DiVeQ和SF-DiVeQ方法就像是给量化层装了一个“梯度导管”，既保持了推理时硬编码的离散性，又让训练信号能顺畅回流，实验部分更是“地毯式轰炸”，在多个任务和数据集上全面碾压了包括NSVQ、RT在内的现有花式方案。不足之处在于SF-DiVeQ的初始化有点“娇气”，需要先跑几个epoch“热身”，而且虽然解决了码本错位问题，但本质上仍是在“码本空间”内做文章，对于如何突破固定码本大小的表达能力瓶颈并未触及。
+
+#
 
 🔗 **开源详情**
 
-*   代码：提供公开代码仓库链接：`https://github.com/zbirobin/MIAM`。
-*   模型权重：提供公开的训练模型权重，托管在 HuggingFace：`https://huggingface.co/zbirobin/MIAM`。
-*   数据集：使用的 GeoPlant 和 TaxaBench 均为公开数据集。论文提供了数据划分的具体 Python 代码（见附录图7、图8）。
-*   Demo：论文中未提及在线演示。
-*   复现材料：提供了极其详细的复现信息，包括：完整的模型架构描述（Transformer 层数、维度）、训练全流程超参数（优化器、学习率、batch size、epoch数）、数据预处理与划分方法、评估指标计算细节、所有基线方法的实现细节（如 OPM 的超参数设置），以及 MIAM 算法本身的所有参数（`κ`, `λ`）和调整逻辑。
-*   引用的开源项目：论文依赖并提到了多个开源项目/代码库，如 `verde`（用于空间块划分）、`PyTorch`（隐含的深度学习框架）、预训练的图像/音频编码器（来自 TaxaBench 原始工作）。
+- 代码：论文承诺在GitHub（https://github.com/AaltoML/DiVeQ）开源代码，但截至审稿时尚未发布。论文中提供了完整的实现细节。
+- 模型权重：论文中未提及公开预训练模型权重。
+- 数据集：使用的是公开标准数据集（AFHQ, CELEBA-HQ, FFHQ, LSUN, VCTK），论文中未提及自己创建或发布新数据集。
+- Demo：论文中未提及在线演示。
+- 复现材料：附录A提供了非常详细的实现细节，包括VQ-VAE、VQGAN、DAC的模型架构表、所有超参数设置（学习率、batch size、优化器、训练轮数、码本替换策略、DiVeQ/SF-DiVeQ的σ²选择等）、以及其他方法的实现参考（如ST-GS、RT的代码库）。复现指南充分。
+- 论文中引用的开源项目：引用了DeepMind的VQ-VAE实现、zalandoresearch的PyTorch VQ-VAE、dome272的VQGAN实现、Karpathy的ST-GS实现、Lucidrains的RT实现、Pikku NAC（DAC变体）以及clean-fid评估工具。
 
 📌 **核心摘要**
 
-1. 要解决的问题：在生态学等多模态应用中，数据常因收集限制而不完整（缺失模态或模态内缺失），且不同模态间存在“不平衡”现象——主导模态会压制其他模态的学习，导致模型无法充分利用所有信息。
-2. 方法核心：提出了模态不平衡感知掩码（MIAM），这是一种动态的训练时数据掩码策略。它首先将掩码策略形式化为在单位超立方体上的概率分布，然后设计了两个核心组件：一个基于Beta分布混合的“角优先”掩码分布，以探索所有可能的输入组合并强调关键配置；以及一个动态调整机制，根据每个模态的实时性能（sₘ）和学习速度（dₘ）计算“不平衡系数”（ρₛₘ， ρₔₘ），并据此调整掩码概率，更频繁地掩码那些性能已高且稳定的主导模态。
-3. 与已有方法相比的新意：与传统的静态、均匀或基于简单模态丢弃的掩码策略不同，MIAM 是首个系统性地同时满足全支持（可处理任意输入子集）、角优先（强调全有/全无等极端情况） 和 不平衡感知（动态调整） 三个原则的掩码策略。它直接解决了现有方法（如 Dirichlet、OPM）未能充分探索输入组合空间且忽略学习动态的问题。
-4. 主要实验结果：在两个生态数据集（GeoPlant 和 TaxaBench）的多标签/多类分类任务中，MIAM 在大多数输入子集上均显著优于所有基线方法。例如，在 GeoPlant 数据集上，MIAM 的平均 AUC 达到 86.1%，比第二好的基线（均匀掩码）高出 2.9%，尤其在主导模态（卫星图像）缺失或部分缺失的困难场景下提升巨大（如仅卫星图像中心块时从83.3%提升至89.5%）。在 TaxaBench 上，MIAM 的平均 Top-1 准确率达到 38.7%，同样领先。
-5. 实际意义：该方法不仅提升了多模态生态模型在数据不完整情况下的预测准确性和鲁棒性，还使得通过掩码分析进行精细的贡献度归因成为可能（例如，识别出 NDVI（红光+近红外波段）和2003年欧洲热浪等关键生态信号），为生态学家提供了宝贵的洞见。
-6. 主要局限性：MIAM 依赖于验证集上的模态性能分数来动态调整，这在无监督学习（SSL）等没有标签的场景下难以直接应用（论文中进行了初步探索但未完全解决）。此外，其核心优势在模态数量较多（≥3）且模态内存在多个token的场景下最为明显，对于简单的二模态问题提升有限。
+1.  要解决什么问题：向量量化（VQ）层因其最近邻赋值操作的不可微性，阻碍了端到端梯度回传（梯度崩溃问题），使得依赖VQ的模型（如VQ-VAE）难以训练。
+2.  方法核心是什么：提出了两种基于重参数化技巧的可微向量量化方法：DiVeQ和SF-DiVeQ。DiVeQ 将量化误差建模为一个方向与最近码本向量对齐、大小等于输入-码本距离的误差向量（`z_q = z + ||c-z||_2  (v_d / ||v_d||_2)`, 其中 `v_d = v + (c*-z)`, `v~N(0, σ^2 I)`）。通过令噪声方差σ^2趋近于零，使 `z_q` 精确指向最近码本向量。SF-DiVeQ 将量化从离散码本点扩展到连接相邻码本向量的线段上，通过在训练中随机采样线段上的点进行量化，实现了连续空间填充。
+3.  与已有方法相比新在哪里：与STE、EMA、RT、ST-GS等需要辅助损失或存在训练-测试不匹配的方法不同，DiVeQ/SF-DiVeQ无需额外损失项或温度调度，实现了硬分配下的端到端可微训练。与NSVQ相比，DiVeQ通过方向性约束避免了随机方向导致的额外量化误差。SF-DiVeQ进一步避免了码本错位和坍塌问题，实现了码本的完全利用。
+4.  主要实验结果如何：在VQ-VAE图像压缩（AFHQ, CELEBA-HQ等数据集）、VQGAN图像生成（CELEBA-HQ等）和DAC语音编码（VCTK数据集）任务上，DiVeQ和SF-DiVeQ在各项指标上一致优于其他方法。例如，在AFHQ图像压缩（11位码本）中，DiVeQ的LPIPS（越低越好）为0.349，优于NSVQ的0.473和STE的0.373。在CELEBA-HQ生成任务（HP2设置，9位码本）中，SF-DiVeQ的FID（越低越好）为6.66，远优于ST-GS的41.1和NSVQ的70.1。详见论文中表2、图6等。
+5.  实际意义是什么：DiVeQ和SF-DiVeQ可作为标准VQ层的即插即用替代品，简化了涉及VQ的深度模型（如压缩、生成模型）的训练流程，提高了训练稳定性和最终性能。
+6.  主要局限性是什么：1）SF-DiVeQ需要特定的初始化策略（先训练几个epoch再引入量化），增加了使用复杂度；2）虽然解决了码本利用率问题，但模型性能仍受限于固定的码本大小；3）论文未探讨该方法在更复杂的VQ变体（如残差VQ的更多层）或更大规模模型中的表现。
+
+#
+
+---
+
+### 🥈 [AUHead: Realistic Emotional Talking Head Generation via Action Units Control](/audio-paper-digest-blog/posts/2026-05-04-auhead-realistic-emotional-talking-head)
+
+✅ **7.5/10** | 前25% | #生成模型 | #扩散模型 | #动作单元 #大语言模型
+
+👥 **作者与机构**
+
+- 第一作者：Jiayi Lyu (中国科学院大学)
+- 通讯作者：Jian Xue (中国科学院大学)
+- 作者列表：
+  - Jiayi Lyu (中国科学院大学)
+  - Leigang Qu (National University of Singapore)
+  - Wenjing Zhang (中国科学院大学)
+  - Hanyu Jiang (中国科学院大学)
+  - Kai Liu (Zhejiang University)
+  - Zhenglin Zhou (Zhejiang University)
+  - Xiaobo Xia (National University of Singapore)
+  - Jian Xue (中国科学院大学)
+  - Tat-Seng Chua (National University of Singapore)
+
+💡 **毒舌点评**
+
+亮点在于首次尝试将大型音频语言模型（ALM）作为“情感理解-表情生成”的推理引擎，将模糊的语音情感线索解耦为结构化、可解释的动作单元（AU）序列，这一思路为跨模态生成任务提供了新颖的中间表示范式。短板则是第一阶段的AU预测精度完全依赖ALM的“想象”能力，其生成的AU序列可能并不完全忠于原始音频的真实口型运动，导致第二阶段生成时唇音同步性可能妥协，消融实验也表明其Sync得分略有下降。
+
+🔗 **开源详情**
+
+*   代码：提供了代码仓库链接：https://github.com/laura990501/AUHead_ICLR。
+*   模型权重：论文中未明确说明是否公开训练好的模型权重检查点。
+*   数据集：实验使用公开数据集MEAD和CREMA，论文中未说明如何获取或预处理脚本。
+*   Demo：论文中未提供在线演示链接。
+*   复现材料：论文正文和附录（Appendix）详细描述了模型架构、训练目标（损失函数）、实现细节（学习率、硬件、GPU小时数）、评估设置，并提供了关键的超参数（如λ, γ, n, 引导尺度s）。附录还包含了使用的AU定义列表、数据验证工具说明、Prompt模板示例，以及额外的定性结果和视频链接。复现信息较为充分。
+*   论文中引用的开源项目：
+    *   Qwen-Audio-Chat：作为第一阶段的核心ALM。
+    *   Hallo V1 和 MEMO：作为第二阶段的基础扩散模型。
+    *   LoRA：用于第一阶段的微调。
+    *   SyncNet：用于评估音唇同步。
+    *   EAT：用于情感分类评估模型。
+
+📌 **核心摘要**
+
+1.  要解决什么问题：现有的音频驱动说话头像生成方法缺乏对细微、丰富情感表达的精细控制，往往生成中性或表情单一的视频。
+2.  方法核心是什么：提出一个两阶段框架AUHead。第一阶段，利用大型音频语言模型（ALM，如Qwen-Audio-Chat）通过“情感先于动作单元”的思维链（CoT）机制，从音频中生成细粒度的动作单元（AU）序列。第二阶段，将AU序列映射为2D面部表示（如关键点或网格渲染），并设计一个AU驱动的可控扩散模型，通过上下文感知的AU嵌入和跨注意力机制，合成情感丰富且身份一致的说话头像视频。
+3.  与已有方法相比新在哪里：首次探索利用ALM作为中间桥梁，将音频理解为可解释的AU序列来控制视频生成。与直接使用情感标签或潜在码的方法相比，AU序列提供了更细粒度、结构化的空间和时间控制信号。
+4.  主要实验结果如何：
+    *   在MEAD和CREMA数据集上，与多个基线（如HalloV1, MEMO, AniPortrait等）对比，在视觉质量（PSNR, SSIM, FID）、表情真实度（Emotion ACC）和面部结构保真度（M/F-LMD）上均取得竞争力甚至领先的性能。
+    *   关键消融实验显示：采用“先情感后AU”的CoT策略比直接预测AU的精度更高（AU精度0.58 vs 0.50）；使用2D AU表示（LMK/RoM）比1D AU序列显著提升了生成质量（例如MEAD上FID从11.11降至10.87）。
+    *   用户研究显示，在情感表达、视频质量和音唇同步方面，AUHead（64.63%， 63.63%， 71.00%）均显著优于强基线HalloV2。
+5.  实际意义是什么：为虚拟形象、影视制作和交互式系统提供了一种更可控、更具表现力的情感说话头像生成方案，增强了AI生成内容的真实感和情感交互能力。
+6.  主要局限性是什么：1) AU预测的准确性依赖于ALM的理解与生成能力，可能无法完美还原真实面部运动；2) 将1D AU序列上采样并映射为2D表示可能引入信息损失或模糊；3) 当前实验主要在受控数据集上进行，对复杂场景（如大角度头部运动、复杂背景）的泛化能力有待验证。
 
 ---
 

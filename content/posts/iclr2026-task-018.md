@@ -1,14 +1,14 @@
 ---
-title: "ICLR 2026 - 视频生成 论文列表"
+title: "ICLR 2026 - 脑编码 论文列表"
 date: 2026-05-04
 draft: false
-tags: ["视频生成"]
+tags: ["脑编码"]
 categories: [iclr-2026]
-description: "共 1 篇 ICLR 2026 视频生成 方向论文"
+description: "共 1 篇 ICLR 2026 脑编码 方向论文"
 hiddenInHomeList: true
 ---
 
-# ICLR 2026 - 视频生成
+# ICLR 2026 - 脑编码
 
 共 **1** 篇论文
 
@@ -18,43 +18,43 @@ hiddenInHomeList: true
 
 | 排名 | 论文 | 评分 | 分档 |
 |------|------|------|------|
-| 🥇 | [Stable Video Infinity: Infinite-Length Video Generation with](/audio-paper-digest-blog/posts/2026-05-04-stable-video-infinity-infinite-length-video) | 8.5分 | 前25% |
+| 🥇 | [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response ](/audio-paper-digest-blog/posts/2026-05-04-tribe-trimodal-brain-encoder-for-whole-brain-fmri) | 9.5分 | 前10% |
 
 ---
 
 ## 📋 论文详情
 
-### 🥇 [Stable Video Infinity: Infinite-Length Video Generation with Error Recycling](/audio-paper-digest-blog/posts/2026-05-04-stable-video-infinity-infinite-length-video)
+### 🥇 [TRIBE: TRImodal Brain Encoder for whole-brain fMRI response prediction](/audio-paper-digest-blog/posts/2026-05-04-tribe-trimodal-brain-encoder-for-whole-brain-fmri)
 
-🔥 **8.5/10** | 前25% | #视频生成 | #扩散模型 | #流匹配 #多模态模型
+🔥 **9.5/10** | 前10% | #脑编码 | #预训练 | #多模态模型 #Transformer
 
 👥 **作者与机构**
 
-- 第一作者：Wuyang Li (VITA@EPFL)
-- 通讯作者：未说明（论文中未明确指定）
-- 作者列表：Wuyang Li (VITA@EPFL), Wentao Pan (VITA@EPFL), Po-Chien Luan (VITA@EPFL), Yang Gao (VITA@EPFL), Alexandre Alahi (VITA@EPFL)
+- 第一作者：Stéphane d‘Ascoli（Meta AI）
+- 通讯作者：未说明
+- 作者列表：Stéphane d‘Ascoli（Meta AI）、Jérémy Rapin（Meta AI）、Yohann Benchetrit（Meta AI）、Hubert Banville（Meta AI）、Jean-Rémi King（Meta AI）
 
 💡 **毒舌点评**
 
-这篇论文的亮点在于直击了长视频生成中“误差累积”问题的根本原因——训练与推理假设的差距，并提出了“以毒攻毒”的优雅解决方案，让模型学习纠正自己的错误，从而真正打破了视频长度限制。不过，尽管宣称“无限”，但论文中展示的超长视频案例（如15分钟）依然依赖于外部故事线生成引擎和分段条件注入，真正的端到端、连贯的“无限叙事”能力仍有待验证，且大规模模型训练的计算开销可能不容小觑。
+亮点在于其工程与科学的完美结合：它不仅是竞赛刷榜利器，更通过严谨的消融实验证明了“多模态整合”在高级联合皮层的关键作用，为构建统一认知模型提供了方法论和实证支持。短板则是其对数据和算力的极度依赖（80小时/被试fMRI，128 GPU特征提取）以及仅在4名被试上验证的结论，这在一定程度上限制了其普适性的即时说服力。
 
 🔗 **开源详情**
 
-- 代码：论文提供了项目主页 (https://stable-video-infinity.github.io/homepage/)，并明确表示“所有模型/源代码/基准数据集都将公开发布”。
-- 模型权重：论文中提及将开源基于Wan 2.1的模型权重。
-- 数据集：论文中承诺将公开所有基准测试数据集。
-- Demo：未在论文正文中提及在线演示链接，但项目主页可能包含。
-- 复现材料：提供了详细的训练超参数表（表12）、误差内存配置、LoRA设置以及多种变体（SVI-Shot/Film/Talk/Dance）的实现细节。附录包含大量消融实验。
-- 论文中引用的开源项目：主要依赖于Wan 2.1视频生成模型，以及Hallo3（音频说话）、UniAnimate-DiT（骨骼动画）等作为对比基线。
+- 代码：提供了代码仓库链接：`https://github.com/facebookresearch/algonauts-2025`。
+- 模型权重：论文中未提及是否公开TRIBE模型或特征提取模型的权重。
+- 数据集：使用了公开的Courtois NeuroMod数据集（CC0许可），并说明为Algonauts 2025竞赛选择了4名被试的子集。
+- Demo：论文中未提及在线演示。
+- 复现材料：提供了极其详尽的复现信息，包括完整的超参数表（表3）、数据处理流程、评估指标定义、训练细节（优化器、学习率调度、SWA、模态丢弃等），以及硬件规格。
+- 论文中引用的开源项目：明确列出了使用的开源模型和工具，包括：Llama 3.2（Meta）、Wav2Vec-Bert 2.0（Hugging Face）、V-JEPA 2（Meta， Apache协议）、x-transformers包（MIT协议）、nilearn（BSD协议）、PyTorch。
 
 📌 **核心摘要**
 
-1.  解决什么问题：现有长视频生成方法受限于自回归推理中的误差累积（漂移），导致视频长度有限、质量下降且内容重复。根本挑战在于训练时模型基于干净数据假设，而推理时却依赖自身生成的含噪输出。
-2.  方法核心是什么：提出稳定视频无限（SVI） 模型，其核心是误差回收微调（Error-Recycling Fine-Tuning, ERFT）。该方法通过闭环流程，将模型自身生成的误差收集并注入到干净的训练输入中，模拟推理时的误差累积环境，从而训练模型学习主动识别并纠正自己的错误（预测一个“误差回收”的速度场）。
-3.  新在哪里：不同于以往仅缓解误差的方法（如噪声调度、锚定帧），SVI旨在从根本上纠正误差。它系统地分析了训练-测试假设差距，并首次提出将模型自生成的误差作为监督信号进行微调，使模型具备了从自身错误中学习的能力。
-4.  主要实验结果：在三个基准（一致性、创意、条件生成）上，SVI全面超越现有方法。例如，在超长一致性视频生成中，SVI的场景一致性（97.50% vs 最佳基线79.37%）和美学质量（71.54% vs 57.61%）显著领先（见表1）。SVI还成功将能力扩展到音频驱动说话和骨骼动画（表2，表3），并生成了15分钟以上的非循环视频。
-5.  实际意义：SVI将视频生成时长从秒级拓展到理论上无限，支持多场景切换和多种模态控制，为端到端短视频创作、机器人世界模型模拟、游戏开发等应用开辟了新路径。
-6.  主要局限性：1) 模型训练未使用大规模数据，当测试图像风格与训练分布差异较大时，可能产生颜色偏移。2) 当前非实时生成，需依赖外部提示流生成引擎来创作长故事。3) 在创意生成中，当主体离开画面再重新进入时，身份一致性仍有提升空间。
+1.  要解决的问题：传统神经科学研究局限于单模态、单脑区的碎片化模型，而现有的脑编码模型存在线性映射假设过强、仅支持单主体训练、且大多局限于单模态刺激输入三大限制，阻碍了构建统一的全脑认知模型。
+2.  方法核心：提出TRIBE，一种深度神经网络，它将文本（Llama 3.2）、音频（Wav2Vec-Bert）和视频（V-JEPA 2）基础模型的预训练表征作为输入，通过一个Transformer编码器来建模其时间动态和跨模态整合，最终预测全脑的fMRI反应。
+3.  新在哪里：与之前工作相比，TRIBE首次实现了同时是非线性的、多主体的、多模态的端到端脑编码。它超越了简单的线性映射，并允许在多个被试的数据上联合训练一个共享模型。
+4.  主要实验结果：TRIBE在Algonauts 2025脑编码竞赛中获得第一名（267个团队），平均Pearson相关系数为0.2146，显著领先第二名（见表1）。消融实验表明，多模态模型（0.31）显著优于最佳单模态模型（视频0.25），且这种优势在前额叶、顶叶等高级联合皮层最为明显（见图4）。模型能够预测所有1000个脑区，并在多种高度分布外的电影上展现出鲁棒性（见表2）。
+5.  实际意义：为神经科学提供了一个统一的建模框架，使得从多模态自然刺激预测全脑活动成为可能，有望推动对知觉、理解等认知过程的整体性研究，并为“计算机实验”提供新工具。
+6.  主要局限性：当前模型基于粗粒度的脑区分割（1000个区域），损失了精细的空间信息；仅使用了fMRI数据，无法捕捉快速的神经电活动；目前仅在4名被试上进行训练和验证。
 
 ---
 
