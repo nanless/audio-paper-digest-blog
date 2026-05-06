@@ -49,7 +49,6 @@ hiddenInHomeList: true
 
 EmotionThinker是一个三阶段框架，旨在赋予语音大语言模型可解释的情感推理能力。其整体架构如图3所示。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/wbttgzp7MT-2.jpg)
 
 1.  第一阶段：EmotionCoT-35K数据集构建
     *   输入：来自IEMOCAP、MELD等数据集的原始语音、转录文本和情感标签。
@@ -130,7 +129,6 @@ EmotionThinker是一个三阶段框架，旨在赋予语音大语言模型可解
 案例研究（图4）：
 对比了Qwen2.5-Omni-7B、EmotionThinker-Base + GRPO和EmotionThinker（GRPO-PTR）在一个“悲伤”情感样本上的推理输出。原始模型输出简短且理由薄弱；仅加GRPO的版本出现了与真实音频特征不符的幻觉解释；而EmotionThinker则生成了更准确、更详细��与声学和语义线索结合更紧密的推理过程。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/wbttgzp7MT-3.png)
 
 ### ⚖️ 评分理由
 

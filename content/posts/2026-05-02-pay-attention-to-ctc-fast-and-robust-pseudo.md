@@ -55,7 +55,6 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2: Pseudo-labelling in USR and USR 2.0](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sSbEEHNEsL-1.png)
 USR 2.0的整体架构与原始USR相同，是一个基于Transformer的编码器-解码器模型，并包��模态特定的特征提取器（ResNet-18）用于音频和视频。其核心改进在于伪标签生成与训练目标的耦合方式。
 
 主要组件与数据流（以CTC驱动模式为例，图2中间部分）：
@@ -148,13 +147,11 @@ USR 2.0的整体架构与原始USR相同，是一个基于Transformer的编码�
 结论：USR 2.0在所有分布外基准上显著优于所有基线，证明了其出色的泛化能力和鲁棒性。
 
 图3：对长语音的鲁棒性
-![图3](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sSbEEHNEsL-2.png)
 * 子图(a) 贪婪解码：USR 2.0的WER在输入长度增加时保持平稳，而USR等模型WER急剧上升。
 * 子图(b) 波束搜索：波束搜索改善了USR的鲁棒性，但USR 2.0仍更优。
 * 子图(c) WER vs. 波束大小：在小波束下，USR 2.0优势明显；增大波束可缩小差距，但代价高昂。
 
 图5：训练效率
-![图5](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sSbEEHNEsL-4.png)
 * 随着训练时间增加，USR 2.0的VSR WER下降更快，在更短时间内达到更低的WER，训练效率约为USR的2倍。
 
 表4（消融）：伪标签目标消融（AVSR WER %）
@@ -170,7 +167,6 @@ USR 2.0的整体架构与原始USR相同，是一个基于Transformer的编码�
 结论：在CTC驱动模式下，仅使用注意力伪标签监督解码器会严重损害OOD性能（35.1% vs 24.2%），证明了CTC伪标签监督的重要性。在AR模式下，OOD性能普遍更差。
 
 图4：混合采样概率的影响
-![图4](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/sSbEEHNEsL-3.png)
 * 随着AR模式概率增加，ID性能小幅提升，但OOD性能在概率接近1时急剧恶化，同时训练时间增加。概率0.5是较好的平衡点。
 
 ### ⚖️ 评分理由

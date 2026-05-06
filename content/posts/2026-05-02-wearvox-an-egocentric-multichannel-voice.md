@@ -129,7 +129,6 @@ hiddenInHomeList: true
 （列出了Construction Noise, Vehicles, Wind等13种噪音类型下各模型的表现）
 结���：风噪（Wind）对所有模型伤害最大。Gemini 2.5 Flash Thinking和MC WearLlama在Construction Noise等复杂噪音下表现出更强的鲁棒性。
 
-![图3: 声学环境对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/QpaNErg7ug-2.png)
 图3展示了大多数模型在室外和噪音环境下的性能下降。Gemini 2.5 Flash Thinking和MC WearLlama展现了更强的噪音鲁棒性，MC WearLlama在室外噪音环境下比SC WearLlama高出约5%。
 
 ### ⚖️ 评分理由

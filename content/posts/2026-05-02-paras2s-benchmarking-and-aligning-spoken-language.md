@@ -167,7 +167,6 @@ hiddenInHomeList: true
     *   图表显示，使用不同量的SFT数据进行热身后，RL（GRPO）都能带来持续提升。
     *   仅使用 20小时 SFT数据热身并经RL后训练，其ParaS2SBench得分（约4.2）已超过使用全部 100小时 SFT数据训练的模型得分（约4.0）。
 
-![图2：不同数据量下的效果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/CcmDDh070o-1.png)
 图2：(a) 在不同标注数据量下研究RL的有效性。横轴为SFT数据的小时数，纵轴为ParaS2SBench平均分。红线（GRPO）在所有数据量下均高于蓝线（SFT）。(b) 比较不同模型的原始能力（VoiceBench，横轴）与副语言感知能力（ParaS2SBench，纵轴）。本文模型（绿色点）在两者上均表现优异。
 
 4.  人类主观评估（表7，附录）：

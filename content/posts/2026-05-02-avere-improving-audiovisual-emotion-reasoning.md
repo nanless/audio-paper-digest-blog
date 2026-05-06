@@ -66,7 +66,6 @@ hiddenInHomeList: true
 *   Text-Prior Debiasing：直接抑制语言模型中固有的、与输入内容无关的“常识”偏见，这是情感推理中幻觉的主要来源之一。
 
 论文中的架构图（图4）清晰地展示了这两种偏好对的构建方式：
-![图4: AVEm-DPO中的偏好对](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/td682AAuPr-3.png)
 
 ### 💡 核心创新点
 

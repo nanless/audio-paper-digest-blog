@@ -62,10 +62,8 @@ hiddenInHomeList: true
 - 特殊标记符：使用 `[SOPR]`, `[EOPR]`, `[EOR]` 等标记推理块的开始、部分结束和整体结束，确保生成结构可控。
 
 架构图说明：
-![STITCH-R生成时序图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5Z1eMhCeTb-0.png)
 图1: STITCH-R的时序图。展示了模型如何在播放第一段语音音频（S1）的`tchunk`秒时间内，生成下一个推理块、文本块和语音块（S2）。关键在于生成所有token的时间`ttoken`小于音频播放时长`tchunk`。
 
-![不同生成方法示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-02/5Z1eMhCeTb-1.png)
 图2: 对比了不同生成方法。(a) GLM-4-Voice基线：文本与语音块交错。(b) TBS：先生成完整推理，再交错生成文本与语音。(c) STITCH-R：推理块、文本块、语音块交错。(d) STITCH-S：文本块、语音块、推理块交错。清晰展示了STITCH在生成顺序上的创新。
 
 ### 💡 核心创新点
