@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 本论文的核心是评估而非提出新模型。因此，未提出新的模型架构。论文评估了四个现有的语音语言模型（SLMs）：Audio Flamingo-3, DeSTA2, Qwen2-Audio, 和 SALMONN。这些模型的通用架构如论文引言和相关工作部分所述：它们通常将语音编码器（用于提取声学/韵律特征）与预训练的大语言模型（LLM）相结合，以实现指令跟随式的语音理解。评估流程如图1所示：首先用LLM生成情感丰富的句子，然后用TTS系统结合情感参考语音生成合成语音，最后将合成语音和指令提示输入SLM进行情感分类。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462441-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462441-0.jpg)
 图1：评估流程示意图。展示了从生成情感句子、TTS合成语音到SLM进行情感识别的完整流程。
 
 #
@@ -106,7 +106,7 @@ hiddenInHomeList: true
 
 表1：核心结果。SLMs的目标准确率（基于语音）普遍接近随机（25%），而代理准确率（基于文本）在明确/隐含语义类别下极高。基线SER则相反。
 
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462441-1.jpg)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462441-1.jpg)
 图2：混淆矩阵（归一化列百分比）。(a)一致条件：预测与语音情感高度对齐。(b)不一致条件：SLM预测混乱，强烈偏向“愤怒”和“快乐”，严重忽略“悲伤”和“中性”。
 
 关键发现：

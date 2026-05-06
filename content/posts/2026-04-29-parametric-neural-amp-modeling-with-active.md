@@ -70,7 +70,7 @@ hiddenInHomeList: true
           其中`∗`表示膨胀卷积，`V_`是1x1卷积核，`V'_`是将参数向量`g`映射到条件维度的线性层，`⊙`为逐元素乘法。
     *   动机：WaveNet架构在音频效果建模上通常表现出更高的保真度，因此被选作最终部署的模型架构。采用前馈模式避免了自回归生成中的累积误差问题，更适合实时音频处理。
 
-![图1：单个模型设置示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463635-0.png)
+![图1：单个模型设置示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463635-0.png)
 图1：展示了最终参数化放大器模型的设置。模型（Amp Model）接收DI吉他输入信号（Input Guitar Signal）和虚拟旋钮设置（Amp Settings），输出湿信号（Wet Signal）。
 
 #
@@ -109,7 +109,7 @@ hiddenInHomeList: true
     *   结果显示，使用75个主动学习样本训练的模型（Ours-75）与领先的非参数模型NAM在感知质量上没有显著差异，均接近参考信号水平。
     *   随着数据点从10增加到75，模型质量稳步提升。
 
-    ![图4：MUSHRA分数对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463635-0.png)
+    ![图4：MUSHRA分数对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463635-0.png)
     图4：主观听测评分对比。Ours-75（使用75个主动学习样本）与NAM分数相当，均接近参考信号。
 
 2.  消融实验1：主动学习 vs 随机/启发式采样（在相同数据预算75个点下）：

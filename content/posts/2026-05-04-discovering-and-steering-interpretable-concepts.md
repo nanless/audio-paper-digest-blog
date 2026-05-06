@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 本文的核心并非提出一个新的生成模型架构，而是提出了一个用于解释现有生成模型的分析流程。该流程的完整架构如图1所示。
 
-![音乐模型概念发现与引导的管道流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/mGtEoLYr9j-1.png)
+![音乐模型概念发现与引导的管道流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/mGtEoLYr9j-1.png)
 
 图1：在自回归音乐模型中发现和引导可解释概念的多阶段管道流程图。该图完整展示了从数据输入、特征提取、概念发现到最终引导生成的整个端到端流程。
 
@@ -89,11 +89,11 @@ hiddenInHomeList: true
 - 层间差异：对于MGL，更深层产生的特征平均CLAP分数更高（图3），表明其特征更容易与人类可解释的概念对齐。
 - 标注策略对比：图4展示了所有SAE中特征的最大CLAP分数分布。Essentia标签和Gemini概念的对齐分数分布有相当大的重叠，整体上没有单一策略完全占优。
 
-![音乐概念示例语谱图，展示已知和新兴概念](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/mGtEoLYr9j-2.png)
+![音乐概念示例语谱图，展示已知和新兴概念](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/mGtEoLYr9j-2.png)
 
 图3：不同层深和模型下，特征音频与自动生成标签的平均CLAP分数。图中显示，对于MGL，较深的层（相对深度较大）倾向于产生CLAP分数更高的特征。
 
-![不同层深和模型的CLAP分数柱状图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/mGtEoLYr9j-3.png)
+![不同层深和模型的CLAP分数柱状图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/mGtEoLYr9j-3.png)
 
 图4：跨所有SAE的最大CLAP分数分布（累积分布函数图）。图中显示Essentia标签在高分段（如>0.3）的累积占比略高于Gemini标签，反映了两种策略在置信度与覆盖范围上的权衡。
 

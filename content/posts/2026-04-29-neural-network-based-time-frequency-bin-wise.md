@@ -134,7 +134,7 @@ NN-TFLC-MPDR的整体架构如图1(a)所示。其工作流程为一个两阶段�
 2.  媲美甚至超越需要先验的MVDR方法：NN-TFLC-MPDR (w/ Full)在2I和3I场景下的SI-SDR与TFLC-MVDR相当（2I: 4.51 vs 4.52; 3I: 4.71 vs 4.54），且在3I场景下SI-SIR大幅领先（9.82 vs 7.87）。在4I场景下，其SI-SDR (2.65) 与TFLC-MVDR (3.37) 的差距小于1 dB，展现了在不使用干扰先验情况下的强大竞争力。
 3.  可扩展性：仅在2I数据上训练的“w/o Full”模型，在3I和4I测试集上仍能取得比传统MPDR基线更好的性能，证明了框架的泛化能力。
 
-![图2. 一个2I样本在TF平面的对数幅度谱和波束组合权重](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464475-1.png)
+![图2. 一个2I样本在TF平面的对数幅度谱和波束组合权重](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464475-1.png)
 图2分析：该图直观对比了TFLC-MPDR和NN-TFLC-MPDR。上方的频谱图显示，TFLC-MPDR的估计信号（中间）相比参考（左）有能量缺失（红色框内），而NN-TFLC-MPDR的估计信号（右）与参考更吻合。下方的组合权重图显示，TFLC-MPDR的权重（中）在时频上高度碎片化，而NN-TFLC-MPDR的权重（右）在时频上平滑连续，在目标主导区域（红框）倾向于混合波束，在干扰主导区域（蓝框）则做出更果断的选择，这解释了其性能提升的原因。
 
 ### ⚖️ 评分理由

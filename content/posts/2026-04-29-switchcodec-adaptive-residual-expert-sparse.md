@@ -54,7 +54,7 @@ hiddenInHomeList: true
 | DAC     | 2.67          | 0.87           | 1.89            | 2.31   | 3.61     | 86.3     |
 |         | 5.33          | 0.72           | 1.77            | 3.31   | 3.87     | 88.9     |
 
-![图3: Mel频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460918-2.jpg)
+![图3: Mel频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460918-2.jpg)
 图3：Mel频谱图对比。(a)原始音频；(b)SwitchCodec生成；(c)DAC生成；(d)EnCodec生成。SwitchCodec的输出在复杂区域（如高频谐波）模糊最少，与原始频谱最接近。
 
 5. 实际意义：该工作展示了动态、内容自适应的量化策略在音频编码中的巨大潜力，实现了“一个模型覆盖广泛比特率”的灵活性，有助于降低流媒体服务的带宽成本和存储需求。
@@ -64,7 +64,7 @@ hiddenInHomeList: true
 
 SwitchCodec整体遵循编码器-量化器-解码器的范式。
 
-![图1: SwitchCodec 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460918-0.jpg)
+![图1: SwitchCodec 架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460918-0.jpg)
 图1：SwitchCodec 架构。输入音频被分帧编码为潜表示`Ze`。量化采用双路径设计：共享量化器提供基础码字，REVQ选择性地路由一小部分专家来细化残差。它们的输出求和产生`Zq`。
 
 1.  编码器与解码器：采用与DAC相同的层次化卷积骨干网络。编码器由7×1前端卷积、四个下采样块（包含残差单元和膨胀卷积）以及一个3×1投影层组成，输出一个1024维的潜表示。解码器镜像编码器结构，使用转置卷积和一个带Tanh激活的7×1最终层来重建波形。该设计在保持较低复杂度的同时，提供了强大的多尺度特征提取能力。
@@ -133,7 +133,7 @@ SwitchCodec整体遵循编码器-量化器-解码器的范式。
 关键结论：SwitchCodec在2.67 kbps下已达到甚至超过DAC在5.33 kbps下的部分指标（如PESQ：2.87 vs 3.31， ViSQOL：4.04 vs 3.87），体现了极高的压缩效率。其MUSHRA分数超过90，表明听者认为其输出与原始音频几乎没有区别。
 
 2. Mel频谱图可视化
-![图3: Mel频谱图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460918-2.jpg)
+![图3: Mel频谱图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460918-2.jpg)
 图3直观展示了在相同音频上，SwitchCodec生成的Mel频谱图在高频谐波等复杂区域比DAC和EnCodec更清晰，模糊更少，与原始频谱(a)最为接近，这与客观指标结果一致。
 
 3. 量化器池大小消融实验
@@ -149,7 +149,7 @@ SwitchCodec整体遵循编码器-量化器-解码器的范式。
 关键结论：随着专家池扩大（`Nr`从5增至17），平均使用率从100%下降到16.6%，但质量（PESQ， ViSQOL）保持稳定甚至略有提升（`Nr=9`时达到峰值）。这证明了稀疏激活机制的有效性：路由器能够为不同音频段选择最相关的少数专家，避免了参数浪费。
 
 4. 固定 vs. 自适应量化解析（概念验证）
-![图2: 固定与自适应量化对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460918-1.jpg)
+![图2: 固定与自适应量化对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460918-1.jpg)
 图2展示了对同一个编码潜表示`Z`的重构。上半部分使用固定序列（前三个量化器），重构的`Zq`与原始`Z`分布差异较大。下半部分使用自适应策略（选择三个最合适的量化器），重构的`Zq`与原始分布吻合度显著提高。论文指出此实验证明了自适应方法比固定方法在重构精度上提升17.6%，是提出REVQ的直接动机。
 
 ### ⚖️ 评分理由

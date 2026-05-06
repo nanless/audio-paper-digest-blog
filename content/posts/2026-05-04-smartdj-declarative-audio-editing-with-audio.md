@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 SmartDJ的框架由两个独立训练的核心模块组成：音频语言模型（ALM）规划器和潜在扩散模型（LDM）编辑器。其整体数据流与交互如图1和图2所示。
 
-![SmartDJ框架概览图，展示了ALM作为规划器分解指令并指导LDM编辑器顺序执行编辑步骤的流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-0.png)
+![SmartDJ框架概览图，展示了ALM作为规划器分解指令并指导LDM编辑器顺序执行编辑步骤的流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eNmANCkefl-0.png)
 
 图1（原论文Figure 1）：展示了SmartDJ的整体工作流程。左侧是原始立体声音频（包含猫叫、下雨声），用户输入声明式指令“让这段音频听起来像阳光明媚的森林”。顶部的ALM规划器分析音频和指令后，输出一系列原子编辑步骤（如“移除下雨声”、“添加树叶沙沙声”）。底部的LDM编辑器根据这些步骤，逐步对音频进行编辑，最终输出目标音频。
 
@@ -71,7 +71,7 @@ SmartDJ的框架由两个独立训练的核心模块组成：音频语言模型�
     *   训练：LDM通过去噪损失 `L_LDM` 进行训练，学习在给定编辑指令和当前音频状态下，预测添加的噪声。推理时使用DDIM采样和分类器自由引导（CFG）。
     *   输出：经过编辑后的立体声音频潜在表示，最终解码为波形 `aₙ`。
 
-![SmartDJ模型架构详细图，展示了ALM内部的CLAP编码器、LLM（带LoRA）以及LDM内部的VAE和DiT结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-2.png)
+![SmartDJ模型架构详细图，展示了ALM内部的CLAP编码器、LLM（带LoRA）以及LDM内部的VAE和DiT结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eNmANCkefl-2.png)
 
 图3（原论文Figure 3）：详细展示了ALM和LDM的内部架构。上方ALM部分：原始音频经CLAP编码为特征，与指令嵌入一同输入带有LoRA的LLM，自回归生成编辑步骤文本。下方LDM部分：展示了基于DiT的扩散模型如何以前一步音频潜在表示和噪声潜在表示作为输入，经文本条件（步骤描述）引导，通过多步去噪生成编辑后的潜在表示。图中还用红色和蓝色区分了可训练参数和冻结参数。
 
@@ -148,11 +148,11 @@ SmartDJ的框架由两个独立训练的核心模块组成：音频语言模型�
 *   基线方法：SDEdit, DDIM Inversion, ZETA, AudioEditor, Audit。
 *   关键结果（表2）：展示了SmartDJ在Add（添加）、Remove/Extract（移除/提取）、Volume（音量调整）、Time（时间偏移）、Reverb（混响）、Timbre（音色调整）、Change Sound Direction（改变声源方向）等所有操作上，均显著优于基线，特别是在空间相关指标（GCC, CRW, FSAD）上优势明显。例如，在“改变声源方向”任务上，SmartDJ的GCC MSE为26.02，远低于次优基线ZETA的67.29。
 
-![用户研究结果对比图，展示了SmartDJ在声明式编辑和单步编辑任务中，在音频质量、与指令对齐度方面对各基线的胜率](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-6.png)
+![用户研究结果对比图，展示了SmartDJ在声明式编辑和单步编辑任务中，在音频质量、与指令对齐度方面对各基线的胜率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eNmANCkefl-6.png)
 
 图7（原论文Figure 7）：展示了用户研究结果。在“声明式编辑质量”和“复杂编辑对齐度”上，SmartDJ对ZETA、AE、Audit的胜率分别为80%、95.52%、90.41%和87%、91.04%、93.15%。在单步任务上也表现出类似的优势。这证实了SmartDJ在实际听感上更受用户青睐。
 
-![多轮编辑稳定性实验图，展示了SmartDJ在执行多轮“添加-移除”往返操作后，其输出与原始音频的Log Spec. Distance最低，表明其保持原始内容的能力最强](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eNmANCkefl-7.png)
+![多轮编辑稳定性实验图，展示了SmartDJ在执行多轮“添加-移除”往返操作后，其输出与原始音频的Log Spec. Distance最低，表明其保持原始内容的能力最强](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eNmANCkefl-7.png)
 
 图8（原论文Figure 8）：展示了“往返编辑”实验结果。对音频进行5轮“添加声音A”和“移除声音A”的操作后，SmartDJ的输出与原始音频的LSD始终最低且最稳定，表明其在多轮编辑中能最好地保持未修改的内容，漂移最小。
 

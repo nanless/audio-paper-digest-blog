@@ -87,7 +87,7 @@ hiddenInHomeList: true
 
 FDCNet采用经典的“前端特征提取 + 后端时序建模”两阶段架构。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461547-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461547-0.png)
 图1: FDCNet架构示意图。前端（左）负责时空特征提取，核心是嵌入在ResNet-18残差块中的FADC和SGCA模块；后端（右）使用DenseTCN进行时序建模，最终输出词类别概率。
 
 前端特征提取：

@@ -51,9 +51,9 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-本文的核心贡献并非提出一个新的模型架构，而是提出一套针对现有大型音频语言模型（如Qwen2.5-Omni）的后训练方法论与数据策略。因此，不存在一个全新的“模型架构图”。但论文中的 图1（![数据集构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sJ0jUO9Mxr-10.png)） 清晰地展示了其核心方法论框架——AudioMCQ数据集的构建流程。
+本文的核心贡献并非提出一个新的模型架构，而是提出一套针对现有大型音频语言模型（如Qwen2.5-Omni）的后训练方法论与数据策略。因此，不存在一个全新的“模型架构图”。但论文中的 图1（![数据集构建流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sJ0jUO9Mxr-10.png)） 清晰地展示了其核心方法论框架——AudioMCQ数据集的构建流程。
 
-![数据集构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sJ0jUO9Mxr-11.png)
+![数据集构建流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sJ0jUO9Mxr-11.png)
 
 该流程图详细说明了从原始音频-描述对数据出发，如何通过大语言模型（Qwen3-235B）生成多选题、构建结构化思维链、简化思维链，并经过多维度质量评分与过滤，最终形成AudioMCQ数据集的过程。这并非模型内部架构，而是数据工程与流水线架构，体现了论文在数据质量和多样性上的系统性工作。
 

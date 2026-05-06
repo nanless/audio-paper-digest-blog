@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 论文的核心架构贡献是AudioVLM2Vec，其设计旨在将音频语义显式地注入到基于视觉语言模型的嵌入框架中。该架构是一个针对音频检索任务的适配模型，而非一个端到端的多模态大模型。
 
-![AudioVLM2Vec模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KxxR7emO5K-4.png)
+![AudioVLM2Vec模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KxxR7emO5K-4.png)
 
 其完整流程和组件如下：
 1.  输入：一个源视频和一个文本形式的修改指令。
@@ -71,7 +71,7 @@ hiddenInHomeList: true
 *   音频转文本：动机在于，现有的视觉语言模型（VLM）本身不直接处理音频波形，且训练时未充分学习音频语义。直接使用音频token（如OmniEmbed）效果不佳。通过将音频信息转化为LLM熟悉的文本格式，可以“搭便车”利用LLM强大的文本理解能力，从而有效融合音频信息。
 *   基于VLM2Vec扩展：选择将强大的VLM（如Qwen2-VL）转化为嵌入模型作为基础，是因为其视觉-文本对齐能力已非常强大。AudioVLM2Vec只需专注于弥补其音频处理的短板，这是一种高效的研究路径。
 
-![OmniCVR基准构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KxxR7emO5K-2.png)
+![OmniCVR基准构建流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KxxR7emO5K-2.png)
 
 此外，论文还描述了OmniCVR基准的构建流程，这是一个包含三个阶段的自动化管线：
 1.  视频策展与分割：从多个公开数据集（如HowTo100M）收集长视频，使用PySceneDetect工具将其分割成5-15秒的语义连贯短片，并通过动作强度和场景丰富度过滤，保留信息密度高的片段。

@@ -59,7 +59,7 @@ FlowBind的整体架构旨在通过一个可学习的共享潜在空间将任意
 - 可学习的共享潜在空间而非固定锚点（如文本）：解除了对文本模态的强制依赖，允许模型直接从任意模态对中学习对齐，更灵活。
 - 单阶段联合优化：避免了CoDi和OmniFlow等方法中分离的对齐与生成训练阶段，简化了流程。
 
-![FlowBind框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/7DeARTwvwL-0.png)
+![FlowBind框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/7DeARTwvwL-0.png)
 
 图1展示了FlowBind的整体框架。(a) 训练阶段，共享潜在和各模态漂移网络在单一阶段内联合学习。(b) 推理阶段，利用学习到的各模态漂移网络通过正向/反向求解ODE实现灵活的任意到任意生成。
 
@@ -167,11 +167,11 @@ Many-to-Many生成定量结果：论文构建了合成三元组数据集进行�
 
 图2展示了FlowBind在多对一（a）和一对多（b）生成任务中的定性结果，显示了其忠实反映复杂输入条件的能力。
 
-![共享潜在空间插值可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/7DeARTwvwL-2.png)
+![共享潜在空间插值可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/7DeARTwvwL-2.png)
 
 图3展示了在FlowBind的共享潜在空间中插值并解码为文本和图像的结果，显示了语义内容的平滑过渡。
 
-![冲突条件下的生成结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/7DeARTwvwL-3.png)
+![冲突条件下的生成结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/7DeARTwvwL-3.png)
 
 图4展示了在文本与音频条件冲突时，FlowBind的生成结果，表明其鲁棒性。
 

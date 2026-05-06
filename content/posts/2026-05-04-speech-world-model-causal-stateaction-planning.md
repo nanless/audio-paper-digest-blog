@@ -63,7 +63,7 @@ SWM系统采用两阶段流水线架构，核心是因果图引导的显式推�
 
 整体流程：输入语音信号，经多模态编码与融合后，输入预先训练的因果图推理得到四个结构化状态（WMA, ToM, SA, Prag）。这些状态与原始语音/文本一起作为提示，输入经过指令微调的大语言模型，最终生成包含推理过程和回复的文本。
 
-![SWM系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YGUKPGO182-0.png)
+![SWM系统流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YGUKPGO182-0.png)
 
 图2：Speech World Model系统流水线图。展示了“因果图引导的显式推理”过程，包括因果图训练和指令微调两个阶段。
 
@@ -78,7 +78,7 @@ SWM系统采用两阶段流水线架构，核心是因果图引导的显式推�
 2.  因果图模块（核心创新）：
     因果图定义了四个模块间的因果关系：`WMA → SA`, `ToM → SA`, `WMA → Prag`, `ToM → Prag`, `SA → Prag`。每个模块是一个独立的神经网络分类器。
 
-    ![因果图与世界模型统一视角](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YGUKPGO182-2.png)
+    ![因果图与世界模型统一视角](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YGUKPGO182-2.png)
 
     图3：两种世界模型的统一视角。展示了生成式世界模型（左）、本文提出的因果图（中）和语言世界模型（右）都可视为前向动力学模型。因果图提供了对语音状态动力学的显式、结构化表述。
 
@@ -133,7 +133,7 @@ SWM系统采用两阶段流水线架构，核心是因果图引导的显式推�
 | | 半监督 (SA潜变量) | 69.3 | 77.0 | 34.4 | 82.5 | 21.65 | 29.3 |
 | 随机图 | 全监督 | 69.7 | 74.0 | 67.5 | 83.6 | - | - |
 
-![因果边在不同监督设置下的ACE与ICS](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YGUKPGO182-4.png)
+![因果边在不同监督设置下的ACE与ICS](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YGUKPGO182-4.png)
 
 图5：因果边在不同监督设置下的ACE与ICS。展示了在完全监督和半监督设置下，每条因果边的平均因果效应（ACE）和干预一致性分数（ICS）。半监督时，无标签模块连接的边（如ToM→SA）的ACE会下降，但其他边（如WMA→SA）保持稳定，证明了模块解耦。
 
@@ -168,7 +168,7 @@ SWM系统采用两阶段流水线架构，核心是因果图引导的显式推�
 
 图6：不同融合机制和教师强制概率下的因果边效果。展示了完全监督设置下，不同设计选择对每条因果边ACE和ICS的影响。
 
-![移除特定因果边后的效果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YGUKPGO182-7.png)
+![移除特定因果边后的效果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YGUKPGO182-7.png)
 
 图7：移除特定因果边后的效果。展示了在完全监督设置下，移除 `ToM→SA` 或 `WMA→SA` 边后，相关因果边的ACE和ICS变化，用于验证边的重要性。
 

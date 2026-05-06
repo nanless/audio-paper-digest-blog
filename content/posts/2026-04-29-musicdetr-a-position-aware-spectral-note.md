@@ -70,7 +70,7 @@ MusicDETR是一个端到端的音符检测模型，其整体流程如下：
 
 关键设计动机：传统DETR的目标位置关系是隐式学习的。论文通过统计分析发现，歌声频谱图中的音符对象位置相关性（MC≈0.8）远高于自然图像，且音符类别单一。因此，显式建模这种强位置关系先验能提供更强的监督信号，提升检测精度，尤其是在音高和时间边界上。
 
-![MusicDETR架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461697-1.png)
+![MusicDETR架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461697-1.png)
 图2：MusicDETR总体架构示意图。图中清晰展示了频谱图输入、CNN骨干网络、具有位置关系融合的解码器、以及最终输出的音符边界框和音高预测。
 
 ### 💡 核心创新点
@@ -129,9 +129,9 @@ MusicDETR是一个端到端的音符检测模型，其整体流程如下：
       | ✓ | ✓ | ✓ | 94.77 | 93.65 | 88.50 | 74.83 |
       结果表明：NRE主要提升精度（Precision），MTSM在进一步提升精度的同时略微影响召回率（Recall），QML则显著提升召回率，三者组合达到最佳F1分数。
 - 其他图表：
-    ![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461697-0.png)
+    ![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461697-0.png)
     图1：(a) 频谱图中音符位置关系示意图。(b) 不同AST数据集上宏观相关性(MC)的统计分布。MC值普遍接近0.8，证实了音符间存在强位置相关性。
-    ![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461697-2.png)
+    ![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461697-2.png)
     图3：(a) VFL损失函数可视化。(b) QML损失函数可视化。QML对“高置信度但低IoU”的样本施加更高惩罚。
 
 ### ⚖️ 评分理由

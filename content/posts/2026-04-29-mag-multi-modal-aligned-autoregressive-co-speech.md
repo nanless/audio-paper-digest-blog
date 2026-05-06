@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 MAG是一个两阶段的框架，其整体架构如图2所示。
 
-![MAG整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462575-1.png)
+![MAG整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462575-1.png)
 
 阶段一：多模态对齐变分自编码器（MTA-VAE）
 - 功能：学习一个将运动、文本、音频统一到连续潜在空间的编码器与解码器，并实现跨模态对齐。
@@ -68,8 +68,8 @@ MAG是一个两阶段的框架，其整体架构如图2所示。
     3.  掩码自回归与扩散过程：受MAR启发，MMAG将连续运动嵌入作为“token”。训练时，对已知运动序列M（分上肢、手、下肢）用MTA-VAE编码得到eM。扩散过程向其添加噪声得到eM,t。一个MLP去噪网络Eθ在条件c（由HGAT输出）和时间步t的引导下，预测原始的eM或噪声ε（公式5、6）。推理时，从噪声开始，由Eθ迭代去噪，生成运动嵌入，最后由运动VAE解码器Dm生成最终手势。
 - 数据流：推理时，噪声+条件c → MLP去噪网络迭代预测 → 生成运动嵌入 → 运动VAE解码器 → 输出手势序列。
 
-![推理流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462575-2.png)
-![HGAT结构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462575-3.jpg)
+![推理流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462575-2.png)
+![HGAT结构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462575-3.jpg)
 
 ### 💡 核心创新点
 
@@ -124,8 +124,8 @@ MAG是一个两阶段的框架，其整体架构如图2所示。
     - 多模态对齐：MTA-VAE相比不进行对齐的VAE，在下游生成任务中进一步降低了FGD（0.0174 vs 0.0194），并提升了BC。
     - 端到端效果：完整的MAG (MTA-VAE) 相比使用简单VAE的MAG (VAE)，在最终FGD上从4.835优化至4.565。
 
-![定性对比BEATv2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462575-5.jpg)
-![定性对比SHOW](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462575-4.jpg)
+![定性对比BEATv2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462575-5.jpg)
+![定性对比SHOW](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462575-4.jpg)
 结论：定性结果（图5、图6）显示，MAG生成的手势在动作幅度和与语音的同步性上更接近Ground Truth，尤其在强语义词汇处反应更明显。
 
 ### ⚖️ 评分理由

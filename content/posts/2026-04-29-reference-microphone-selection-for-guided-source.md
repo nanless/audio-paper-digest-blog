@@ -60,7 +60,7 @@ hiddenInHomeList: true
 本文研究对象并非一个端到端神经网络模型，而是一个经典的多阶段语音信号处理流程——基于GSS的语音增强前端。其核心是解决该流程中“参考麦克风选择”这一关键步骤的优化问题。
 
 整体架构流程如下图所示：
-![GSS-based speech enhancement](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463742-0.png)
+![GSS-based speech enhancement](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463742-0.png)
 
 1.  输入：M个空间分布式麦克风录制的混合语音信号 `Y`。
 2.  第一阶段 - 解混响：使用多输入多输出加权预测误差（MIMO WPE）方法，从混合信号 `Y` 中减去估计的晚期混响分量，输出为 `Y_WPE`。
@@ -98,14 +98,14 @@ hiddenInHomeList: true
 
 1. 模拟数据信号质量评估（Table 1）
 使用非侵入式指标（DNSMOS, NISQA, SCOREQ, NI-PESQ, NI-STOI）和信号统计量（输出SNR `ôSNR`， 输入ELR `iELR`）进行评估。
-![Table 1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463742-0.png) （注：原图包含Table 1a和1b）
+![Table 1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463742-0.png) （注：原图包含Table 1a和1b）
 - 在10 dB输入SNR下：仅使用归一化ℓp范数的方法在所有非侵入式指标上均优于仅使用SNR的基线。组合方法表现介于两者之间，但其选择的麦克风显示出比基线更高的输入ELR（9.56 dB vs 7.79 dB）和相近的输出SNR，体现了对混响的优化。
 - 在-10 dB输入SNR下：组合方法在非侵入式指标上略有优势。此时归一化ℓp范数单独使用时性能与基线接近，因为噪声严重影响了信号稀疏性，凸显了结合SNR的必要性。
 - 关键结论：输入ELR的趋势与信号质量指标更相关，说明混响对感知质量影响显著；而输出SNR不能完全反映最终信号质量。
 
 2. CHiME-8 ASR评估（Table 2 & Fig. 2）
 使用宏观平均tcpWER作为主要指标。
-![Fig. 2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463742-0.png)
+![Fig. 2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463742-0.png)
 - Fig. 2：展示了组合方法中 `α` 参数在开发集上的性能曲线，确定了 `α=0.5` 为较优选择。
 - Table 2：提供了评估集上的详细WER结果（已在“核心摘要”部分以表格形式列出）。
 - 关键结论：

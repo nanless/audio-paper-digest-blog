@@ -72,7 +72,7 @@ hiddenInHomeList: true
 *   III. 模型更新：仅使用正样本对MLLM进行持续微调。
 *   IV. 模型评估：在评估集上测试翻译性能，决定是否继续迭代。
 
-![SMT框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HQMVRQUEaM-10.jpg)
+![SMT框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/HQMVRQUEaM-10.jpg)
 
 图2：SMT框架概览。该图展示了框架的两大组成部分：MLLM预训练（左）和自进化机制（右）。左图展示了MLLM的架构（包含语音编码器、适配器和LLM）以及从ASR到SMT的训练流程。右图展示了自进化机制的四个迭代阶段，核心是使用COMET分数筛选正样本用于模型更新。
 
@@ -118,7 +118,7 @@ SMT-9B在所有测试集上大幅超越了所有基线，包括文本模型和�
 | 语音引导SMT | SMT-9B (本文) | 47.0 | 67.0 | 41.4 | 52.0 |
 | 本文基线 | Baseline (Text only) | 42.9 | 52.4 | 34.1 | - |
 
-![多模态翻译性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/HQMVRQUEaM-11.jpg)
+![多模态翻译性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/HQMVRQUEaM-11.jpg)
 
 图8：不同资源水平下的COMET得分对比。该图展示了SMT-9B模型与基线（Baseline）和DeepSeek模型在低、中、高资源翻译方向上的COMET分数分布，表明SMT模型在低分方向（通常对应低资源语言）有显著提升。
 

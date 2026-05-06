@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 PG-SE的整体架构是一个三阶段的流水线，如图1所示。以下是结合图示的详细描述：
 
-![图1: PG-SE框架整体流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462674-0.png)
+![图1: PG-SE框架整体流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462674-0.png)
 
 完整输入输出流程：
 -   输入：含噪语音信号 `y`。
@@ -147,7 +147,7 @@ PG-SE的整体架构是一个三阶段的流水线，如图1所示。以下是�
 
 不同条件下的结果：图2展示了在不同起始时间步 `tk` 下，SGMSE+（无先验）的性能变化。结果表明，`tk` 设为3（即从时间步t=0.03向前扩散3步到tk）是性能与效率的最佳平衡点，验证了论文提出的起始步选择策略的有效性。
 
-![图2: 不同起始时间步下的性能表现](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462674-1.jpg)
+![图2: 不同起始时间步下的性能表现](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462674-1.jpg)
 
 ### ⚖️ 评分理由
 

@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 本文提出的系统是一个两阶段的帧在线单通道语音去混响框架，如图1所示。
 
-![图1: 提出的帧在线去混响系统](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464163-0.png)
+![图1: 提出的帧在线去混响系统](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464163-0.png)
 
 第一阶段：直达声估计
 - 输入：带噪混响语音信号的STFT表示 `Y(t, f)` 及其幅度谱。
@@ -53,7 +53,7 @@ hiddenInHomeList: true
 - 内部流程：如图2所示，输入首先经过频带合并（BM）模块压缩高频信息；然后通过子带特征提取（SFE）模块重塑频率维度以捕捉跨频带关系；接着由编码器编码成紧凑的时频表征；随后通过两个分组双路径循环网络（G-DPRNN）模块分别对帧内和帧间依赖关系建模（其中帧间建模使用单向GRU以确保因果性）；最后解码器与频带分离（BS）操作预测出直达声分量 `Ŝnn(t, f)`。
 - 设计动机：在线、因果设计，确保处理当前帧时不依赖未来信息，适用于流式应用。
 
-![图2: 用于估计直达声分量的在线DNN架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464163-1.png)
+![图2: 用于估计直达声分量的在线DNN架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464163-1.png)
 
 第二阶段：基于KP-FCP的残余混响抑制
 - 输入：观测信号 `Y(t, f)` 和第一阶段估计的直达声 `Ŝnn(t, f)`。
@@ -105,7 +105,7 @@ hiddenInHomeList: true
 
 当 `K=81, K1=K2=9` 时，复杂度随P变化的曲线如图3所示。
 
-![图3: FCP (online) 和 KP-FCP 方法在 K=81, K1=9, K2=9 条件下的计算复杂度（MACs）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464163-2.png)
+![图3: FCP (online) 和 KP-FCP 方法在 K=81, K1=9, K2=9 条件下的计算复杂度（MACs）](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464163-2.png)
 结论：当P < 6时，KP-FCP的计算量明显低于传统FCP。
 
 性能对比（表2）：
@@ -127,7 +127,7 @@ hiddenInHomeList: true
 
 分段性能示例（图4）：
 
-![图4: FCP (online) 和 KP-FCP 方法在不同P值下的 ΔPESQ 和 ΔFWSNR](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464163-2.png)
+![图4: FCP (online) 和 KP-FCP 方法在不同P值下的 ΔPESQ 和 ΔFWSNR](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464163-2.png)
 (注：此处应引用原图，URL为pdf-image-page4-idx2，与图3相同，但描述内容不同。根据论文描述，图4是分段性能平滑曲线，显示KP-FCP在P=4,5时性能追上或超过FCP)
 结论：KP-FCP在P=4和P=5时，在整个时间轴上的性能增益（PESQ和FWSNR）与FCP (online)持平或更优。
 

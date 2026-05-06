@@ -76,7 +76,7 @@ DART是一个端到端的跨模态对齐框架，其核心在于联合优化两�
 
 关键设计动机：实例级对齐是粗粒度的，易被少数噪声维度主导。特征级对齐提供了细粒度的、维度级别的正则化，与实例级信息互补，共同提升表征质量。
 
-![DART框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cFhcd4WGjO-3.png)
+![DART框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cFhcd4WGjO-3.png)
 
 图1: DART框架概览图。展示了实例级（$\mathcal{L}_{IOT}$）和特征级（$\mathcal{L}_{UWD-R}$）双层优化路径。左侧为音频和文本表示，右侧显示通过UWD进行通道级对齐，RAM（可靠性感知边际）根据通道的可靠性（噪声/私有通道 vs. 语义相关通道）分配不同的质量。
 
@@ -110,7 +110,7 @@ DART是一个端到端的跨模态对齐框架，其核心在于联合优化两�
 | (Chen et al., 2023) | Beats+BERT | 54.2 | 66.9 | 36.7 | 25.9 |
 | DART w/ RAM | Beats+BERT | 56.9 | 72.1 | 37.5 | 27.9 |
 
-![不同噪声与半监督条件下AudioCaps数据集检索性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cFhcd4WGjO-5.png)
+![不同噪声与半监督条件下AudioCaps数据集检索性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cFhcd4WGjO-5.png)
 
 图2: 展示了在引入合成噪声后，OT成本与噪声水平σ的单调关系，为“噪声通道具有更高传输成本”的直觉提供了经验证据。
 表2：不同小批次大小下的鲁棒性测试（AudioCaps）

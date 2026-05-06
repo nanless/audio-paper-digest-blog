@@ -76,7 +76,7 @@ hiddenInHomeList: true
     - 流程：`阶段1（自监督预训练）`：在（生物声学+通用音频）混合数据上，对Transformer骨干（如BEATs, EAT）进行SSL训练。 -> `阶段2（监督后训练）`：在相同混合数据上，解冻整个模型进行监督微调（例如，预测物种标签）。
     - 动机：结合SSL强大的表示学习能力和监督学习对任务的针对性优化，实现在分布内（分类）和分布外（检测）任务上均取得最佳性能。
 
-    ![本文实证研究流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFuM9KAEYc-0.png)
+    ![本文实证研究流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MFuM9KAEYc-0.png)
 
     图1展示了本研究的整体框架：评估模型、训练数据、训练范式，并提出扩展的评估数据和方法。
 
@@ -135,7 +135,7 @@ hiddenInHomeList: true
 
 图2b：展示了监督（SL）和自监督（SSL）模型在BEANS分类（分布内，聚焦录音）和BEANS检测（分布外，声景录音）上的性能变化。SL模型在分布内更强，但SSL模型在分布外性能更稳定；而经过后训练的SSL模型（如NatureBEATs）结合了两者优势。
 
-![后训练相对原始SSL骨干的性能提升胜率](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFuM9KAEYc-3.png)
+![后训练相对原始SSL骨干的性能提升胜率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MFuM9KAEYc-3.png)
 
 图3：后训练模型与其原始SSL骨干模型在不同基准上的性能提升胜率（Win-rate）分析，表明后训练能带来一致的改进。
 

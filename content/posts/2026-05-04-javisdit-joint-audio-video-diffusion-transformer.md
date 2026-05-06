@@ -68,11 +68,11 @@ JavisDiT是一个基于扩散Transformer的端到端联合音视频生成模型�
 4.  多模态双向交叉注意力（MM-BiCrossAttn）：在经过时空先验对齐后，该模块允许视频和音频表示进行直接的跨模态信息交换，通过计算音频到视频和视频到音频的双向注意力，进一步融合双模态信息。
 5.  分层时空同步先验估计器（HiST-Sypo Estimator）：如图3所示，这是一个独立的模块，使用4层Transformer编码器-解码器结构。它以ImageBind文本编码器的输出为输入，通过可学习的空间查询和时间查询，估计出`Ns`个空间先验token和`Nt`个时间先验token。为建模同一文本对应的不同时空安排，估计器输出高斯分布的均值和方差，进行采样。该模块通过对比学习进行训练，目标是使估计的先验与同步的音视频对特征对齐，并与异步的负样本特征远离。
 
-![图2：JavisDiT整体架构与详细模块结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-1.png)
+![图2：JavisDiT整体架构与详细模块结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/y7HV7KT3Bd-1.png)
 
 图2展示了JavisDiT的整体架构（a）和各模块的详细结构（b）。左侧为包含视频分支、音频分支、HiST-Sypo估计器和MM-BiCrossAttn的总体流程。右侧展示了ST-SelfAttn、Fine-Grained ST-CrossAttn和MM-BiCrossAttn的具体设计，其中时空先验作为交叉注意力的键值对，有效引导生成过程。
 
-![图3：时空先验估计器框架](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-2.png)
+![图3：时空先验估计器框架](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/y7HV7KT3Bd-2.png)
 
 图3展示了HiST-Sypo Estimator的框架。它使用一个4层Transformer，通过空间和时间查询从文本嵌入中提取先验token，并采用对比学习进行优化，以学习从文本到时空先验的映射。
 
@@ -152,7 +152,7 @@ JavisDiT是一个基于扩散Transformer的端到端联合音视频生成模型�
 | 4s | 241.8 | 7.3 | 0.308 | 0.382 | 0.186 | 0.153 |
 | 10s | 233.8 | 7.1 | 0.307 | 0.385 | 0.183 | 0.154 |
 
-![图5：JavisBench分类上的同步性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/y7HV7KT3Bd-4.png)
+![图5：JavisBench分类上的同步性分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/y7HV7KT3Bd-4.png)
 
 图5展示了JavisDiT与FoleyCrafter在JavisBench不同子类别（空间构成、时间构成）上的JavisScore对比。它揭示了当前模型在处理多主体、同时发生的复杂事件时，同步性能仍有提升空间。
 

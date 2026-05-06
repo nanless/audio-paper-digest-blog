@@ -108,7 +108,7 @@ hiddenInHomeList: true
 结论：未经微调的`BV2-80`偏差最大。微调后，使用均匀分布数据（`Unif`, `Unif-PS`）的模型偏差显著降低，达到甚至优于`BV2-128`的水平。
 
 偏差分布可视化（Fig. 2 & Fig. 3）
-![图2: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460697-0.png)
+![图2: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460697-0.png)
 Fig. 2 显示了各模型在每个输入调音`τ`下的平均偏差`µτ(δcirc)`。`BV2-80`在`τ=-20`和`τ=+25`附近出现峰值偏差，显示出向标准调音`τ=0`的偏移倾向。微调后的模型（如`BV2-80-Unif`）的偏差曲线更平坦，且波动范围缩小至±5 cents以内，与`BV2-128`表现相近。
 
 Fig. 3 为调音散点图，显示了`τ`与`̂τ`的关系。`(a) BV2-80`的样本点明显偏离对角线（`τ=̂τ`），尤其在非标准调音区域。`(b) BV2-80-Unif`的样本点紧密围绕对角线分布，证明其调音保持能力大幅提升。

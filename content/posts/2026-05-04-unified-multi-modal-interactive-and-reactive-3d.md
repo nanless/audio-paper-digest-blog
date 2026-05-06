@@ -64,7 +64,7 @@ DualFlow是一个基于Transformer和矫正流匹配的统一生成框架，其�
     *   前馈网络与层归一化：文本潜在向量 `zd` 通过自适应层归一化注入每个块。
 4.  任务切换：通过输入掩码实现。交互模式下，两个分支均激活；反应模式下，引导者分支被屏蔽，仅反应者分支在因果注意力条件下生成。
 
-![DualFlow模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-1.png)
+![DualFlow模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/QaAgHKbJop-1.png)
 
 图2：DualFlow架构图。图(a)展示了整体流程，输入文本、音乐、双人动作，通过检索获取范例，经多个DualFlow块处理后输出动作。图(b)详细展示了单个DualFlow块的内部结构，包括多尺度卷积、自注意力、音乐交叉注意力、运动/因果交叉注意力和检索交叉注意力，并展示了交互和反应两种设置下的不同配置。
 
@@ -125,7 +125,7 @@ DualFlow是一个基于Transformer和矫正流匹配的统一生成框架，其�
 
 计算复杂度对比：图4展示了FID随采样步数的变化。InterGen需要50步才能达到较好FID，而DualFlow仅需20步即可达到更优值，体现了矫正流匹配的效率优势。
 
-![FID与采样步数关系图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-0.png)
+![FID与采样步数关系图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/QaAgHKbJop-0.png)
 
 图4：不同模型FID随采样步数变化的曲线。DualFlow(20步)的FID明显低于InterGen在同等或更多步数下的FID。
 
@@ -142,7 +142,7 @@ DualFlow是一个基于Transformer和矫正流匹配的统一生成框架，其�
 
 用户研究（图3）：
 
-![用户研究结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QaAgHKbJop-5.png)
+![用户研究结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/QaAgHKbJop-5.png)
 
 图3：用户研究结果。DualFlow在文本对齐度、节奏同步和整体质量三个维度上，均显著优于InterGen和DuoLando基线。
 

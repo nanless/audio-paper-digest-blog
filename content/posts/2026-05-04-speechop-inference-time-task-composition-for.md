@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 SpeechOp是一个基于潜在扩散的Transformer模型，旨在统一处理TTS和多种S2S任务。其整体架构和数据流如下图所示：
 
-![SpeechOp 架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-2.png)
+![SpeechOp 架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eLsEjjFODE-2.png)
 
 1. 完整输入输出流程
 - 输入：根据任务不同，输入可以是文本转录（TTS）、带噪语音（增强）、混合语音+说话人提示（分离）等。所有音频输入首先通过一个音频编码器压缩到潜在空间。
@@ -133,7 +133,7 @@ SpeechOp是一个基于潜在扩散的Transformer模型，旨在统一处理TTS�
 
 结论：SpeechOp的ITC管线在内容保留（WER）上取得了2.9%的最佳结果，相比HiFi-GAN-2（5.4%）相对降低46%。主观质量MOS与HiFi-GAN-2相当。
 
-![语音增强性能与说话人分离主观MOS对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-0.png)
+![语音增强性能与说话人分离主观MOS对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eLsEjjFODE-0.png)
 
 图6：不同说话人分离模型在多个数据集上的主观MOS评分对比。SpeechOp在所有数据集上均取得最高分。
 
@@ -147,7 +147,7 @@ SpeechOp是一个基于潜在扩散的Transformer模型，旨在统一处理TTS�
 
 结论：TC-CFG在所有指标上优于简单的分数平均（TC-Avg），尤其在WER上（2.1% vs 3.4%）和信号保真度上，证实了其理论优势。下图1D仿真直观展示了TC-CFG如何引导样本分布向目标模态集中，而不破坏增强模型的先验。
 
-![任务组合方法1D仿真对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/eLsEjjFODE-1.png)
+![任务组合方法1D仿真对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/eLsEjjFODE-1.png)
 
 图4：1D高斯混合模型仿真，对比了无引导(b)、分数平均(c)和TC-CFG(d)的效果。TC-CFG能准确将分布引导向目标模式（对应正确文本），而不像分数平均那样使分布“弥散”。
 

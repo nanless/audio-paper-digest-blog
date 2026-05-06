@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 TangoFlux的整体架构和训练流程可概括为“预训练-对齐”两阶段，并包含一个创新的在线迭代对齐循环。
 
-![TangoFlux整体训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-0.png)
+![TangoFlux整体训练流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qgNs5NmQB7-0.png)
 
 图1：TangoFlux的整体训练流程图。 该图清晰地展示了训练的两个主要阶段：1）预训练：使用WavCaps和AudioCaps数据集，通过流匹配损失（ℒFM）训练TangoFlux-base模型。2）在线迭代对齐（CRPO）：这是论文的核心。从基线模型π₀开始，迭代地进行三个步骤：a) 采样：从提示库中采样一批提示，用当前模型πk为每个提示生成多个音频样本。b) 训练数据构建：使用CLAP模型对生成的音频进行评分和排序，为每个提示构建赢家-输家偏好对，形成数据集𝒟k。c) 训练：使用该数据集，结合流匹配损失（ℒFM）和DPO损失（ℒCRPO）将模型πk优化为πk₊₁。这个循环迭代进行，使模型持续自我改进。
 
@@ -144,7 +144,7 @@ TangoFlux的整体架构和训练流程可概括为“预训练-对齐”两阶�
 
 - LCRPO vs LDPO-FM（图3，图4）：
 
-    ![LCRPO与LDPO-FM在不同迭代次数下的性能指标对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-3.png)
+    ![LCRPO与LDPO-FM在不同迭代次数下的性能指标对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qgNs5NmQB7-3.png)
 
     图3：LCRPO与LDPO-FM在不同迭代次数下的性能指标对比。 (a) CLAPscore：LCRPO持续提升且高于LDPO-FM。(b) FDopenl3：两者相近。(c) KLpasst：两者相近。表明LCRPO在提升对齐度（CLAPscore）的同时，能维持生成质量和多样性。
 
@@ -157,7 +157,7 @@ TangoFlux的整体架构和训练流程可概括为“预训练-对齐”两阶�
 - 求解器对比（表7）：Euler求解器（50步）略优于Heun求解器（100步），CLAPscore 0.480 vs 0.474。
 - 时长控制准确性（图5）：生成的音频实际时长与请求时长高度匹配。
 
-![不同模型CLAPscore与推理时间的对比曲线](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qgNs5NmQB7-9.png)
+![不同模型CLAPscore与推理时间的对比曲线](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qgNs5NmQB7-9.png)
 
 图6：不同模型CLAPscore与推理时间的对比曲线。 (a) CLAPscore vs Inference Time：TangoFlux在3.7秒（50步）时达到0.480，远超同时间点的其他模型。(b) FDopenl3 vs Inference Time：TangoFlux在3.7秒时FDopenl3为75.1，表现优异。这直观展示了其在效率-效果上的领先地位。
 

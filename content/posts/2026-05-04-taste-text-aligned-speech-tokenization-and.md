@@ -77,7 +77,7 @@ TASTE语音解码器：
     *   TASLMemb：预测连续语音嵌入的均值和方差，类似MELLE的潜在建模。
 *   关键设计：通过词级分组和对齐算法解决了ASR和LLM之间分词器不匹配的问题（附录A.4）。
 
-![TASTE整体概念图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-1.png)
+![TASTE整体概念图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/6STb8DauN1-1.png)
 
 图1：概念对比图。左图为传统方法，语音分词器独立工作，与文本token存在长度错位；右图为TASTE方法，通过双模态输入生成与文本对齐的语音分词，便于直接联合建模。
 
@@ -90,7 +90,7 @@ TASTE语音解码器：
 3.  面向联合建模的联合分词-嵌入优化：明确将“服务于下游联合语音语言模型”作为语音分词的目标，并通过重建损失进行端到端优化。这区别于仅优化重建质量的分词器（如EnCodec），强调其信息的“副语言”属性。
 4.  极低比特率下的高质量重建与信息保留：通过与文本共享信息（文本提供内容骨架），TASTE语音token专注于编码韵律、音色等副语言信息，实现了在极低比特率（~150 bps）下的高质量语音重建和信息保留（如图3所示的文本对齐编辑）。
 
-![TASTE文本对齐语音编辑示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-4.png)
+![TASTE文本对齐语音编辑示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/6STb8DauN1-4.png)
 
 图3：TASTE用于文本对齐语音编辑的示意图和结果。展示了交换特定词的TASTE token后，对应词的时长发生精确变化，而其他词保持不变。
 
@@ -132,7 +132,7 @@ TASTE语音解码器：
 | TASLM 1B (token) | 45M / 1.3B | 3.08 | 4.07 | 3.93 | 60.8 | 76.5 | 68.7 |
 | TASLM 1B (embed.) | 45M / 1.3B | 3.16 | 4.22 | 4.16 | 57.7 | 76.7 | 67.2 |
 
-![语音续写与似然评估结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/6STb8DauN1-7.png)
+![语音续写与似然评估结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/6STb8DauN1-7.png)
 
 图7（对应论文表2）：不同SLM在语音续写和似然基准上的性能对比。TASLM（基于1.3B参数）在语义（GPT-4o, StoryCloze）和声学（UTMOS）评估上均显著优于或持平于其他7B级预训练SLM。
 

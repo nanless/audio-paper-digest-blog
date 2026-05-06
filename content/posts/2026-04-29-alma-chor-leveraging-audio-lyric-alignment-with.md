@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 ALMA-Chor是一个端到端的多模态序列标注模型，旨在为一段音乐的每个时间步预测“副歌”或“非副歌”标签。整体架构如图1所示，主要包含以下组件和数据流：
 
-![图1：ALMA-Chor整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462248-0.jpg)
+![图1：ALMA-Chor整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462248-0.jpg)
 
 1.  音频编码器：
     *   功能：将原始音频波形转换为高维特征序列。
@@ -94,10 +94,10 @@ ALMA-Chor是一个端到端的多模态序列标注模型，旨在为一段音�
     *   后处理：采用平滑滑动窗口滤波（公式5），利用当前点及未来n个点的预测标签进行多数投票，以抑制异常的标签跳变，增强预测的时序一致性。
     *   数据流：Mamba2输出 -> 线性层 -> 原始二值输出 -> 平滑滤波 -> 最终输出。
 
-![图2：模型组件示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462248-1.jpg)
-![图3：细节示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462248-2.jpg)
-![图4：细节示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462248-3.jpg)
-![图5：细节示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462248-4.jpg)
+![图2：模型组件示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462248-1.jpg)
+![图3：细节示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462248-2.jpg)
+![图4：细节示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462248-3.jpg)
+![图5：细节示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462248-4.jpg)
 
 ### 💡 核心创新点
 

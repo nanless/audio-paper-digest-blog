@@ -56,7 +56,7 @@ VoxCPM是一个层次化、端到端的自回归语音生成模型，其核心�
 -   残差学习策略：RALM显式建模被FSQ过滤掉的“声学残差”，与TSLM形成分工协作，而非简单的级联或并行，这使模型能更 holistic 地捕捉语音的多层次信息。
 -   因果VAE：使用因果VAE将原始波形压缩到低帧率连续隐空间，既保证了信息保真度，又支持流式合成。
 
-![VoxCPM整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-2.png)
+![VoxCPM整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/h5KLpGoqzC-2.png)
 
 图1：VoxCPM的整体架构图。模型层次化地生成语音：首先通过LocEnc处理音频隐变量，然后通过TSLM和FSQ生成半离散语音骨架，接着由RALM细化声学细节，最后由LocDiT生成高保真隐输出。
 
@@ -118,7 +118,7 @@ VoxCPM是一个层次化、端到端的自回归语音生成模型，其核心�
 
 关键结论：VoxCPM在所有指标上均优于或持平于最强开源基线（如CosyVoice2， IndexTTS 2），特别是在困难测试集（Hard）上展现出显著的稳健性优势（CER更低， SIM更高）。
 
-![不同模型在SEED-TTS-EVAL基准上的性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5KLpGoqzC-6.png)
+![不同模型在SEED-TTS-EVAL基准上的性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/h5KLpGoqzC-6.png)
 
 图6（对应论文Table 1）：展示了VoxCPM与多个开源/闭源系统在SEED-TTS-EVAL基准上的性能对比，突出了VoxCPM在各项指标上的领先地位。
 

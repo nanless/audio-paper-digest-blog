@@ -62,7 +62,7 @@ hiddenInHomeList: true
 | SAViTDA w/o audio | 89.9 | 86.4 | 89.2 | 85.0 | 87.0 | 82.6 | 86.7 |
 | SAViTDA (Ours) | 91.0 | 88.6 | 91.8 | 89.6 | 90.5 | 86.4 | 89.6 |
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462310-0.png) 图1显示了SAViTDA及其变体在Daily-DA和Sports-DA上与已有方法的性能对比，直观展示了其优势。
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462310-0.png) 图1显示了SAViTDA及其变体在Daily-DA和Sports-DA上与已有方法的性能对比，直观展示了其优势。
 
 5.  实际意义：为视频动作识别模型在无源数据场景下的跨域部署提供了新的有效思路，强调了多模态信息融合（尤其是利用大型基础模型和稳定音频线索）在解决领域偏移问题上的潜力。
 6.  主要局限性：论文验证了有效性，但未深入分析音频模态具体贡献了哪些信息（如是环境声、语音还是其他）、在哪些类别的动作识别中帮助最大，以及框架对音频缺失或质量较差的视频的鲁棒性。此外，完全缺乏开源代码和模型，限制了方法的可验证性和快速复现。
@@ -73,7 +73,7 @@ hiddenInHomeList: true
 
 SAViTDA采用学生-教师知识蒸馏架构，整体流程如图2所示。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462310-1.jpg) 图2：统一知识蒸馏（UKD）阶段概览。教师模型（右）由VideoCLIP-XL的视觉与文本编码器、微调的Pengi音频编码器及两个BFA组成。学生模型（左）由CLIP-ResNet50视觉编码器（改进为TA-CLIP）、CLIP文本编码器、相同的微调音频编码器和一个BFA组成。
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462310-1.jpg) 图2：统一知识蒸馏（UKD）阶段概览。教师模型（右）由VideoCLIP-XL的视觉与文本编码器、微调的Pengi音频编码器及两个BFA组成。学生模型（左）由CLIP-ResNet50视觉编码器（改进为TA-CLIP）、CLIP文本编码器、相同的微调音频编码器和一个BFA组成。
 
 核心组件与数据流：
 1.  教师模型：

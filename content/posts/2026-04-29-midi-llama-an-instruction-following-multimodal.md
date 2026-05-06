@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464141-0.png)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464141-0.png)
 MIDI-LLaMA的架构遵循经典的“编码器-投影-LLM”多模态范式，核心流程如下：
 1.  输入：一段MIDI文件（符号音乐）和一段自然语言问题/指令。
 2.  MIDI编码：MIDI文件首先被转换为OctupleMIDI事件序列（包含音高、时长、力度、小节等8个维度的信息）。该序列被输入到冻结的MusicBERT编码器中，提取每个“音符事件”的隐藏状态。
@@ -105,7 +105,7 @@ MIDI-LLaMA的架构遵循经典的“编码器-投影-LLM”多模态范式，�
 *   音乐字幕生成任务：MIDI-LLaMA在所有四个指标上均大幅领先ABC-LLaMA，尤其BLEU-4（0.2566 vs. 0.1592）和ROUGE-L（0.4265 vs. 0.2607），显示出其生成的描述在内容覆盖和词汇匹配上都更优秀。
 消融实验：论文未进行传统意义上的消融（如去掉某个模块），但通过对比ABC-LLaMA和MIDI-LLaMA，实质上对“符号音乐的表示形式”这一关键变量进行了消融，证明了使用原始MIDI嵌入的优越性。
 人类评估：对100个片段进行盲测比较，结果如下图所示。MIDI-LLaMA在“音乐理解准确性”、“音乐情感理解”和“创造力”维度获得明显优势，而“文本流畅度”两者接近。
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464141-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464141-1.png)
 图2结论：人类评估表明，MIDI-LLaMA生成的音乐字幕在反映音乐内容、捕捉情感和创意方面更受青睐。
 
 ### ⚖️ 评分理由

@@ -56,7 +56,7 @@ hiddenInHomeList: true
 论文未提出全新的模型架构，而是将一种新的训练范式应用于现有的多模态大语言模型。其核心在于如何微调模型以完成新任务。
 
 整体流程如图2所示：
-![图2: 论文图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464577-1.jpg)
+![图2: 论文图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464577-1.jpg)
 1.  输入：一个固定的文本提示（Prompt）和两段音频。对于ACC任务，提示为“Tell me the similarities between the two audios.”；对于ADC任务，提示为“Tell me the difference between the second audio and the first one.”。
 2.  基座模型：采用Qwen2-Audio-7B作为多模态大语言模型。该模型本身整合了音频编码器和文本解码器，并支持多音频输入，为执行ACC/ADC任务提供了架构基础。
 3.  适配方法：采用LoRA（Low-Rank Adaptation） 进行参数高效微调。在训练时，只有LoRA添加的低秩适配矩阵被更新，而模型主干参数保持不变（图中“LoRA”模块所示）。
@@ -126,7 +126,7 @@ hiddenInHomeList: true
 - 单独使用ADC微调会导致性能严重下降。
 
 图3：案例分析
-![图3: 论文图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464577-2.jpg)
+![图3: 论文图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464577-2.jpg)
 该图对比了AC、ADC、ACC三种微调模型在具体音频上的描述输出。
 - AC微调：能描述主要事件，但会遗漏细节（如“减速”、“门打开”）。
 - ADC微调：描述退化、模糊或丢失信息（如“刮擦声”、“手机震动”），显示出灾难性遗忘。

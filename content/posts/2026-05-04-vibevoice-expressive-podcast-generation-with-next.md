@@ -66,7 +66,7 @@ LLM输出的隐藏状态（`hi`）被送入一个轻量级的扩散头（Diffusi
 声学解码：
 预测出的声学VAE特征（`za,i+1`）最终由声学解码器（Acoustic Decoder）转换为波形片段（`yi+1`）。所有片段按顺序拼接，形成最终的长音频流。
 
-![VibeVoice 系统概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FihSkzyxdv-0.png)
+![VibeVoice 系统概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FihSkzyxdv-0.png)
 
 图1：VibeVoice可扩展和富有表现力的播客合成流程图。用户输入语音提示和文本脚本。模型处理混合上下文特征，其隐藏状态用于条件扩散头（D），预测声学VAE片段，再由声学解码器（A）恢复波形。
 
@@ -146,14 +146,14 @@ LLM输出的隐藏状态（`hi`）被送入一个轻量级的扩散头（Diffusi
 
 推理步数与CFG消融：
 
-![CFG与DDPM步数消融实验图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FihSkzyxdv-4.png)
+![CFG与DDPM步数消融实验图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FihSkzyxdv-4.png)
 
 图3：分类器自由引导（CFG）比例和DDPM去噪步数对WER和SIM-O的消融实验热力图。
 结论：WER在10步、CFG=1.25时最优（1.55）。SIM-O在5步时即可达到高分（~0.6），步数增加会略有下降。
 
 分词器架构消融对比：
 
-![分词器架构对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FihSkzyxdv-7.png)
+![分词器架构对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FihSkzyxdv-7.png)
 
 图4：耦合分词器架构示意图。单一编码器产生共享潜在表示μ，用于语音重建（声学解码器）和ASR（语义解码器）。此设计与论文最终采用的解耦混合架构形成对比。
 

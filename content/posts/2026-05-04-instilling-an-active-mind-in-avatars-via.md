@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 该框架的整体流程如图2所示，可分为两个核心系统：审慎控制（System 2） 和 反应式渲染（System 1）。
 
-![图2：双系统模拟框架图。左侧展示了整体流程：MLLM代理的System 2对多模态输入进行推理，生成高层级“计划”，该计划引导System 1的MMDiT网络，通过专门的文本、音频和视频分支融合信息，最终合成视频。右侧展示了关键组件：(a) System 2的推理流水线，包含MLLM分析器（Analyzer）和规划器（Planner）；(b, c) 提出的模态分支预热（MM-Branch Warm-up）和伪最后帧（Pseudo Last Frame）策略，用于缓解模态冲突。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/80JylHgQn1-1.png)
+![图2：双系统模拟框架图。左侧展示了整体流程：MLLM代理的System 2对多模态输入进行推理，生成高层级“计划”，该计划引导System 1的MMDiT网络，通过专门的文本、音频和视频分支融合信息，最终合成视频。右侧展示了关键组件：(a) System 2的推理流水线，包含MLLM分析器（Analyzer）和规划器（Planner）；(b, c) 提出的模态分支预热（MM-Branch Warm-up）和伪最后帧（Pseudo Last Frame）策略，用于缓解模态冲突。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/80JylHgQn1-1.png)
 
 System 2: 智能体推理（Agentic Reasoning）
 此模块负责生成高层次的语义指导。
@@ -68,9 +68,9 @@ System 1: 反应式渲染（Reactive Rendering）
     - 推理时：将用户提供的参考图像放置在“末帧”的位置，创建一个“伪最后帧”。关键操作是调整其位置编码（RoPE），为其分配一个超出最终生成帧的固定时间距离的索引。这使伪帧像“诱饵”一样引导模型趋向目标身份，但不会被强制复制，从而在保持身份稳定的同时允许剧烈运动。
     - 效果如图8和图9所示，PLF有效避免了身份漂移和运动受限的问题。
 
-![图8：伪最后帧（PLF）有效性可视化。展示了在显著相机和角色运动下，有无PLF的生成结果对比。无PLF时，序列发生剧烈变化；有PLF时，能在保持视觉质量和角色一致性的同时容纳高动态运动。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/80JylHgQn1-7.jpg)
+![图8：伪最后帧（PLF）有效性可视化。展示了在显著相机和角色运动下，有无PLF的生成结果对比。无PLF时，序列发生剧烈变化；有PLF时，能在保持视觉质量和角色一致性的同时容纳高动态运动。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/80JylHgQn1-7.jpg)
 
-![图9：PLF与不同RoPE偏移的效果对比。比较了传统参考注意力（w/ Ref. Image）与PLF在不同rope偏移下的效果。传统方法逐渐“重置”回参考图像，而PLF能更好地平衡内容保持与运动动态。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/80JylHgQn1-8.jpg)
+![图9：PLF与不同RoPE偏移的效果对比。比较了传统参考注意力（w/ Ref. Image）与PLF在不同rope偏移下的效果。传统方法逐渐“重置”回参考图像，而PLF能更好地平衡内容保持与运动动态。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/80JylHgQn1-8.jpg)
 
 - 模态分支预热（MM-Warmup）策略：为解决对称融合中模型过度依赖密集音频信号的问题，采用两阶段训练：
     - 第一阶段：联合训练完整的三分支模型，迫使模型学习到模态间的最佳分工。
@@ -132,7 +132,7 @@ System 1: 反应式渲染（Reactive Rendering）
 
 主观用户研究：在针对OmniHuman-1的对比中（表2b），本方法在唇形不一致性（LSI）、运动不自然度（MU）和图像失真（ID）上均大幅领先。在与顶级学术模型的最佳选择对比中（图13），本方法以33%的Top-1选择率位居第一。
 
-![图13：主观用户偏好研究。左图为最佳选择任务，比较了本方法与多个学术基线，本方法以33%的得票率位居第一。右图为与领先商业模型的GSB（好/同/差）两两对比。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/80JylHgQn1-13.jpg)
+![图13：主观用户偏好研究。左图为最佳选择任务，比较了本方法与多个学术基线，本方法以33%的得票率位居第一。右图为与领先商业模型的GSB（好/同/差）两两对比。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/80JylHgQn1-13.jpg)
 
 ### ⚖️ 评分理由
 

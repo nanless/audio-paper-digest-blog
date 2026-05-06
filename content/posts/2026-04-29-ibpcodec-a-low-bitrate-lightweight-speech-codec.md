@@ -51,7 +51,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 IBPCodec采用“编码-量化-解码-预测”的端到端架构，工作在时频域。整体流程如图1所示：
-![IBPCodec架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462198-0.png)
+![IBPCodec架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462198-0.png)
 1.  输入预处理：输入语音波形x经STFT变换为频谱f。论文取其幅度、单位范数相位的实部和虚部，并截取低频部分（比例P）作为输入flow，维度为3×F‘×N。
 2.  编码器：由ConvEncoder（下采样卷积堆栈）和TAM（时间聚合模块）组成。ConvEncoder在每帧内进行特征提取，但缺乏帧间建模。因此，在量化器前后各加入一个TAM（基于因果FocalBlock），用于聚合不同时间尺度的依赖关系，增强时序建模能力。所有卷积均为因果卷积，以支持流式推理。
 3.  量化器：采用分组残差向量量化（GRVQ），组数G=2，通过调整层数控制比特率。将连续潜变量z量化为离散表示zq。
@@ -132,7 +132,7 @@ IBPCodec采用“编码-量化-解码-预测”的端到端架构，工作在时
 关键结论：移除IBPM导致性能下降；移除TAM导致性能急剧恶化，证明时序建模至关重要。
 
 主观评估（图2）：
-![主观评估结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462198-1.jpg)
+![主观评估结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462198-1.jpg)
 图2展示了MUSHRA主观评分。IBPCodec在所有比特率下得分最高。在3 kbps时，SpeechTokenizer的主观质量接近IBPCodec，但在比特率降至1 kbps时性能暴跌，而IBPCodec下降相对平缓。
 
 #

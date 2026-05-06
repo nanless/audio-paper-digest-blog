@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 ELLSA的整体架构旨在实现流式全双工多输入多输出（MIMO）交互。其核心是通过将多模态数据组织成交错的时序序列（如图1(b)所示）来处理：在每个1秒的时间块内，模型按固定顺序处理语音输入、图像输入，然后生成文本输出和动作输出。
 
-![ELLSA模型概览与流式全双工MIMO交互示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LYyoRqf0Ij-0.png)
+![ELLSA模型概览与流式全双工MIMO交互示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LYyoRqf0Ij-0.png)
 
 图1：(a) ELLSA概览图。在ELLSA中，不同模态由不同专家处理，专家们通过SA-MoE架构集成以进行模态交互。(b) 通过交错时序多模态序列实现的流式全双工MIMO交互。
 
@@ -60,7 +60,7 @@ SA-MoE的运作机制如图2所示：每个模态的token被路由到其对应�
 2.  阶段二：训练SA-MoE。将两个专家集成到SA-MoE框架中，并在从基础到高级的多样化任务上进行训练，使专家们学会通过注意力机制协同工作。
 3.  阶段三：连接语音合成器。将CosyVoice2-0.5B语音合成器以端到端方式与ELLSA连接，使模型能够生成语音，完成交互闭环。
 
-![ELLSA三阶段训练策略图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LYyoRqf0Ij-1.png)
+![ELLSA三阶段训练策略图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LYyoRqf0Ij-1.png)
 
 图3：ELLSA的训练策略。首先训练单个专家，然后通过集成这些专家构建SA-MoE骨干，最后连接语音合成器。在这些阶段中，训练任务和可训练参数根据模型不断增长的能力进行调整。
 
@@ -113,7 +113,7 @@ SA-MoE的运作机制如图2所示：每个模态的token被路由到其对应�
 
 高级全双工能力：
 
-![ELLSA高级能力示例图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LYyoRqf0Ij-6.png)
+![ELLSA高级能力示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LYyoRqf0Ij-6.png)
 
 图4：ELLSA高级能力示例：从语音指令开始，模型执行动作，参与上下文VQA，并支持动作被打断。此实例不仅展示了ELLSA的核心技能，还展示了其独特的能力：处理多模态输入输出的MIMO能力，以及管理复杂对话动态（如轮换、中断）的全双工能力。
 

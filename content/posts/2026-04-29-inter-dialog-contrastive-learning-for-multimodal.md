@@ -49,8 +49,8 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463029-0.png)
-![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463029-1.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463029-0.png)
+![图2: pdf-image-page3-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463029-1.png)
 
 该模型采用两阶段训练架构：对比预训练 + 监督微调。
 

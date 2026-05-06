@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 SongEcho整体架构基于一个预训练的文本到歌曲模型（ACE-Step），它是一个线性扩散Transformer（DiT）。核心是在每个Transformer块中插入一个IA-EiLM模块，该模块位于自注意力层之后、前馈网络层之前，用于注入旋律控制信号。
 
-![歌曲生成模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TEKOayiQg2-1.png)
+![歌曲生成模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/TEKOayiQg2-1.png)
 
 图2：SongEcho整体架构图。展示了以Linear DiT为骨干，通过IA-EiLM模块集成旋律控制信号的流程。
 

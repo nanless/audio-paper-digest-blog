@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 本文的模型架构遵循语音大模型的标准设计，包含三个主要组件，其数据流如下：语音波形 → 语音编码器 → 适配器 → 大语言模型 → 文本输出。
 
-![不同数据集在64个自动标注领域上的样本分布对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dDHnO3Vhyj-0.png)
+![不同数据集在64个自动标注领域上的样本分布对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dDHnO3Vhyj-0.png)
 
 图2展示了文本语料（FineWeb-Edu）与语音数据集（LibriHeavy， Emilia）在领域分布上的巨大差异。 文本数据覆盖了广泛的领域，而现有语音数据仅集中在少数几个领域。这直观地揭示了领域失配是导致模型性能下降的关键原因之一。
 
@@ -117,7 +117,7 @@ SALAD模型（3B和7B）在语音训练后，其文本输入下的性能与原�
 
 分析性结论（图3， 图4）
 
-![语音性能与跨模态失准（左）、文本性能与遗忘（右）的关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dDHnO3Vhyj-2.png)
+![语音性能与跨模态失准（左）、文本性能与遗忘（右）的关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dDHnO3Vhyj-2.png)
 
 图3显示，语音性能与失准度（对数尺度）强负相关（R²=0.75），文本性能与遗忘度强负相关（R²=0.74）。表1的偏R²分析表明，失准度是语音性能下降的主要独特解释因子，遗忘度是文本性能下降的主要独特解释因子。
 

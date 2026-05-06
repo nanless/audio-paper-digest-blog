@@ -65,7 +65,7 @@ hiddenInHomeList: true
     *   训练与推理：训练时使用MSE损失和v-目标。推理时使用DPM-Solver++采样器，100步，分类器自由引导尺度为7.0。为应对关键帧数量可变，采用了设置最大序列长度并进行掩码的策略。
 6.  输出：生成的音频潜在表示，通过解码器恢复为高质量立体声音频波形。
 
-![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462058-2.jpg)
+![模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462058-2.jpg)
 （图3：主模型架构图。展示了从输入视频到输出音频的完整流程，包括关键帧提取、并行特征提取（OpenCLIP、情绪、NeuFlow v2）、特征拼接与投影、以及DiT模型内部的交叉注意力条件注入过程。）
 
 ### 💡 核心创新点
@@ -130,7 +130,7 @@ hiddenInHomeList: true
 - 关键帧 vs 1FPS采样（Table 2）：关键帧采样（平均3-4帧）在PQ、ImageBind上与1FPS采样（20帧）持平或略优，KAD更低，且训练和推理时间显著减少，证明了其效率。
 - 特征组合对比（Table 3）：完整模型（CLIP+Emotion+OF）在PQ和ImageBind上表现最佳。加入光流特征对ImageBind提升明显（从0.132到0.142），加入情绪特征则对KAD改善较大（从23.865到21.971）。LSTM聚合全局特征的变体在ImageBind上略高，KAD最低，暗示了未来结合全局与局部特征的潜力。
 
-![消融实验图表](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462058-7.png)
+![消融实验图表](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462058-7.png)
 （图7：此图（对应Table 3的消融实验）展示了不同视频特征组合下的模型性能。横轴为不同模型变体，纵轴为PQ（蓝色）、ImageBind（绿色）分数和KAD（橙色）距离。直观显示了完整特征组合的优势，以及LSTM聚合特征变体的潜力。）
 
 ### ⚖️ 评分理由

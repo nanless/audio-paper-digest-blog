@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 概念引导：由于概念向量 `ci` 位于激活空间，对样本 `x` 进行引导只需线性操作：`x_steered = x + α * ci`。这避免了SAE方法中编码-解码带来的重建误差，实现了无损引导。
 
-![德勒兹概念提取方法流程概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/10JEfJtiJM-1.png)
+![德勒兹概念提取方法流程概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/10JEfJtiJM-1.png)
 
 图2：概念提取方法流程概览图。展示了从模型激活中随机采样差异向量，经过偏度加权后，通过K-means聚类得到最终概念向量的过程。
 
@@ -116,7 +116,7 @@ hiddenInHomeList: true
 - 聚类方法（K-means vs. SAE）：K-means在差异上聚类，比TopKSAE在差异上训练，能获得好得多的探针损失和更高的多样性。
 - 偏度加权（有 vs. 无）：启用偏度加权后，概念的有效秩（多样性）从5.65/17.9大幅提升至182.0/124.4，最大成对余弦（冗余度）显著下降，同时探针损失进一步改善。
 
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/10JEfJtiJM-15.png)
+![消融实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/10JEfJtiJM-15.png)
 
 图5：不同概念数量下的性能曲线。展示了在CLIP-WikiArt-任务上，随着提取概念数量k从0增加到6144，Deleuzian方法的性能（1-探针损失）变化。曲线表明，仅需约2000个概念，其性能就已超越所有比较的基线方法。
 

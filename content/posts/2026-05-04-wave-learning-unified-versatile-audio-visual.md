@@ -69,7 +69,7 @@ hiddenInHomeList: true
 
 WAVE的整体架构如图1所示，其核心是将多种模态的输入通过各自编码器转换为LLM可处理的token序列，再由LLM统一处理并生成统一的嵌入。
 
-![WAVE模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MiV3WXDYJb-0.png)
+![WAVE模型整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MiV3WXDYJb-0.png)
 
 完整输入输出流程：
 1.  输入：支持四种配置：纯文本、纯视觉（视频）、纯音频、音视频同步。
@@ -172,7 +172,7 @@ WAVE的整体架构如图1所示，其核心是将多种模态的输入通过各
 4. 消融实验
 - 联合训练 vs 分别训练：
 
-![联合训练与分别训练消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MiV3WXDYJb-6.png)
+![联合训练与分别训练消融实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MiV3WXDYJb-6.png)
 
 图：在不同模态任务上，联合训练模型与分别训练的专家模型的性能对比。联合训练在绝大多数任务上更优。
 

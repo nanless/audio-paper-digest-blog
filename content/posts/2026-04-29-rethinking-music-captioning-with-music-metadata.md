@@ -110,7 +110,7 @@ hiddenInHomeList: true
 
 架构图说明：
 论文中的图1展示了该方法与传统方法的对比。
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464125-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464125-0.png)
 - 右下角：本文提出的“Metadata MLLM”推理流程。输入音频和可选的部分元数据。模型首先输出完整的结构化元数据（可选）。然后，一个文本LLM（可选地）将元数据转换为所需风格的自然语言描述。这体现了两阶段解耦和灵活性。
 - 右上角：典型的端到端“Caption MLLM”流程。输入音频，模型直接生成描述。之后可选地用文本LLM从描述中提取元数据。
 - 左下角：展示了如何用文本LLM将已有的元数据合成为训练描述数据，这是传统端到端模型常见的训练数据构建方法。

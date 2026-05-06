@@ -71,7 +71,7 @@ hiddenInHomeList: true
 
 论文的整体架构清晰，包含三个主要阶段，如图1所示：
 
-![图1: 模型与实验架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461884-0.png)
+![图1: 模型与实验架构概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461884-0.png)
 
 1.  特征提取：输入原始音频波形，通过一个冻结权重的Wav2vec 2.0 Large-XLSR模型。该模型包含一个卷积编码器和24个Transformer编码器层，输出为24个形状为 (时间步数 T, 1024维) 的特征序列，每个时间步对应约20毫秒音频。
 2.  聚合与池化：这是本文研究的核心。根据实验设计（图1中(2)部分），特征会被处理为两种形式并分别进行池化：

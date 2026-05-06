@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 FED-PISA是一个基于联邦学习的语音克隆框架，其整体架构分为客户端和服务器两部分，核心思想是身份-风格解耦。
 
-![图1: FED-PISA框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461787-0.png)
+![图1: FED-PISA框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461787-0.png)
 （图1：FED-PISA框架概览。客户端持有私有ID-LoRA（捕捉音色）和可通信的Style-LoRA（捕捉风格）。服务器执行基于风格相似度的个性化聚合，为每个客户端生成定制化的Style-LoRA。）
 
 1.  骨干网络与适配器：
@@ -156,7 +156,7 @@ FED-PISA是一个基于联邦学习的语音克隆框架，其整体架构分为
 - 将个性化聚合替换为FedAvg后，所有指标均大幅下降，特别是风格表达性（SE: 0.476），证实了简单平均会抹杀风格多样性。
 
 训练步数分配分析（论文图2）：
-![图2: 说话人相似度与自然度随风格化步数占比的变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461787-1.png)
+![图2: 说话人相似度与自然度随风格化步数占比的变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461787-1.png)
 （图2：(a) 说话人相似度(SS)随风格化步数占比增加而单调下降；(b) 自然度(nMOS)在风格化步数占比为20%时达到峰值，之后下降。这验证了选择n=80, m=20的合理性。）
 
 ### ⚖️ 评分理由

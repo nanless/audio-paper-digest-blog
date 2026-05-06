@@ -67,11 +67,11 @@ EM-KTD框架包含教师模型和学生模型，两者均为多模态Transformer
 
 架构图：论文图1（Figure 1）和图2（Figure 2）直观展示了传统潜在蒸馏与KTD的区别，以及EM-KTD的完整流程。
 
-![传统潜在蒸馏（a）与EM-KTD（b）方法对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-2.png)
+![传统潜在蒸馏（a）与EM-KTD（b）方法对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/nspzrcvzcB-2.png)
 
 图1对比了传统潜在蒸馏（a）与本文提出的EM-KTD（b）。(a)展示传统方法需要投影模块来匹配维度。(b)展示本文方法通过核化计算关系矩阵（K），并通过熵监控自适应调节每个模态的蒸馏权重（虚线表示弱化，实线表示增强）。
 
-![EM-KTD系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-5.png)
+![EM-KTD系统流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/nspzrcvzcB-5.png)
 
 图2详细展示了EM-KTD的流程。左侧为学生模型，右侧为教师模型。输入图像和音频后，分别通过视觉和音频编码器。核心步骤包括：1）对每个模态的特征令牌计算核化关系矩阵（Kernelization）；2）使用熵监控模块（Entropy Monitor）计算每个模态的熵（Hv, Ha, HF）；3）熵值通过负指数转换为蒸馏权重（透明箭头），用于加权各模态的KTD损失。
 
@@ -165,7 +165,7 @@ EM-KTD框架包含教师模型和学生模型，两者均为多模态Transformer
 
 熵分析图：论文图3（Figure 3）展示了熵分布及其与准确率的关系。
 
-![各模态熵分布及准确率分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/nspzrcvzcB-8.png)
+![各模态熵分布及准确率分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/nspzrcvzcB-8.png)
 
 图3（对应文中Figure 3）显示了不同模态（融合、音频、视觉）的熵分布直方图（a）和不同熵值区间的样本准确率（b）。图(b)明确显示，随着熵增加（不确定性增加），所有模态的分类准确率均下降，证实了熵监控作为信息量指标的合理性。融合模态的低熵部分与高准确率强相关，是蒸馏的关键。
 

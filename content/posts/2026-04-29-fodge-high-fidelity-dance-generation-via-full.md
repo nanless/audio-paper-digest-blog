@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 FODGE的整体架构（见图1）是一个集成FRB和FOP的两阶段扩散模型框架。
 
-![图1: FODGE框架总览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463867-0.png)
+![图1: FODGE框架总览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463867-0.png)
 
 1.  整体流程：
     *   输入：音乐特征序列 m（由Librosa提取的35维特征）和舞蹈风格标签 g。
@@ -131,7 +131,7 @@ FODGE在运动质量（FIDk, FIDg）和音乐对齐（BAS）上均取得了最�
 - 移除FOP：FID和BAS略有下降，但Divg从6.08降至5.51，表明FOP在提升序列整体平滑度和多样性方面有辅助作用。
 
 定性结果（图2）：
-![图2: FineDance数据集上的可视化结果对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463867-1.png)
+![图2: FineDance数据集上的可视化结果对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463867-1.png)
 图2展示了不同方法生成的舞蹈帧对比。黑色框标出了基线方法的问题，如EDGE和LODGE存在的手臂穿透、脚部运动不足等。红色框突出了FODGE的优势，包括更自然的艺术性滑步（如太空步风格）和更协调的全身运动。
 
 ### ⚖️ 评分理由

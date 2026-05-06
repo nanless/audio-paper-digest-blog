@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 论文提出的模型称为Novel-view Visual-Acoustic Transformer (NVA-Former)。其整体流程如图1所示：
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462251-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462251-0.png)
 
 1. 输入：稀疏多视角的RGB图像 `v_1,...,v_N`、对应的相机位姿、以及每个视角对应的双耳音频 `a_1,...,a_N`。任务是为目标视角（第N+1个视角）合成双耳音频 `a_{N+1}`。
 
@@ -153,9 +153,9 @@ hiddenInHomeList: true
 
 图表分析：
 - 图2（波形对比）：直观展示了ViGAS生成的波形在左右声道过于平滑，与真实值差异大；而NVA-Former的预测波形在峰值和节奏上更接近真实值，说明其更好地捕捉了空间动态特性。
-  ![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462251-1.png)
+  ![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462251-1.png)
 - 图3（注意力可视化）：展示了目标视角声学特征对所有视觉特征的注意力分布。高注意力区域（红点）与说话人位置（蓝框）高度重合，直观证明了模型确实学到了视觉-声学的对应关系，无需显式标注。
-  ![图3: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462251-1.png)
+  ![图3: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462251-1.png)
 
 ### ⚖️ 评分理由
 

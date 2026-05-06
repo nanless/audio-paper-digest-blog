@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 OmniVinci的整体架构是一个基于自回归范式的全模态理解LLM。其核心流程是将来自不同模态（图像、视频帧、音频、文本）的输入，通过专用的编码器和对齐机制，统一转换为LLM可处理的嵌入序列。
 
-![OmniVinci模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-0.png)
+![OmniVinci模型整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DZeic3NpHy-0.png)
 
 图2（论文Figure 2）：展示了从多模态输入到统一嵌入序列再到LLM处理的完整流程。视频被分解为图像帧和音频流，分别经过视觉和音频编码器。核心是OmniAlignNet、时间嵌入分组（TEG）和约束旋转时间嵌入（CRTE）三个模块，它们将异构的视听嵌入对齐并组织成有序的序列输入LLM。输出可以是文本，也可连接TTS模块生成语音。
 
@@ -82,7 +82,7 @@ OmniVinci的整体架构是一个基于自回归范式的全模态理解LLM。�
 2.  全模态对齐机制：这是架构的核心创新点，旨在将视觉和音频嵌入整合到一个共享的潜在空间。
     *   OmniAlignNet：一个基于查询的交叉注意力模块。它初始化视觉查询`Qv`和音频查询`Qa`，分别与原始的视觉嵌入`Ev`和音频嵌入`Ea`进行交叉注意力操作，然后通过多层自注意力和L2归一化，得到视觉-全模态嵌入`V`和音频-全模态嵌入`A`。最终，使用CLIP风格的对比损失（`L_o-align`）来最小化同一视频内`V`和`A`的距离，最大化不同视频间的距离。
 
-    ![OmniAlignNet模块详细结构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-5.png)
+    ![OmniAlignNet模块详细结构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DZeic3NpHy-5.png)
 
     图3（论文Figure 3）：详细展示了OmniAlignNet的结构。使用查询嵌入通过交叉注意力从视觉/音频tokens中提取全局特征，再通过自注意力层和L2归一化得到统一的视觉-全模态和音频-全模态嵌入，最后使用CLIP对比损失进行对齐。
 
@@ -177,7 +177,7 @@ OmniVinci的整体架构是一个基于自回归范式的全模态理解LLM。�
 - 网球解说：在自制网球视频数据集上，OmniVinci在击球回合数预测等任务上大幅超越Qwen2.5-Omni（Table 11）。
 - 医疗AI：在CT解读视频QA任务上，OmniVinci平均准确率82% vs Qwen2.5-Omni的79%，在时序推理上优势明显（Table 13）。
 
-![全模态联合学习方法消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DZeic3NpHy-14.jpg)
+![全模态联合学习方法消融实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DZeic3NpHy-14.jpg)
 
 图6（论文Figure 6）：左图显示OmniVinci在GRPO训练中准确率奖励和格式奖励的收敛速度优于Qwen2.5-Omni。右图显示包含音频输入的OmniVinci在RL训练中收敛更好。
 

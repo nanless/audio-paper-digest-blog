@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 Flow2GAN是一个两阶段训练框架，其核心是一个多分辨率、多分支的卷积神经网络，在频域处理音频信号。
 
-![Flow2GAN整体框架流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-0.png)
+![Flow2GAN整体框架流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5eTpRIULtb-0.png)
 
 图1：Flow2GAN的整体框架流程图。展示了从第一阶段Flow Matching训练到第二阶段GAN微调的完整过程。
 
@@ -163,19 +163,19 @@ Flow2GAN是一个两阶段训练框架，其核心是一个多分辨率、多分
     | Flow Matching (2步) + GAN微调 (1步， 110k次) | 92k+110k = 202k | 50+26=76 | 4.303 | 4.942 |
     结论：Flow2GAN以更少的总训练时间和迭代次数，达到了比纯GAN训练好得多的效果，验证了两阶段范式的高效性。
 
-![生成样本定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-6.png)
+![生成样本定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5eTpRIULtb-6.png)
 
 图2：生成样本定性对比。展示了地面真值(a)、噪声(b)、速度场(c)、标准FM 2步生成(d)、改进FM 2步生成(e)和GAN微调2步生成(f)的波形与频谱图。可见改进FM在静音区域更干净，GAN微调进一步填补了细节。
 
-![模型性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-7.jpg)
+![模型性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5eTpRIULtb-7.jpg)
 
 图4：不同模型在Mel频谱图条件下的PESQ与推理速度（xRT）对比。Flow2GAN（特别是1步和2步）在质量和速度上均表现优异。
 
-![不同模型性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-8.jpg)
+![不同模型性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5eTpRIULtb-8.jpg)
 
 图5：不同模型在Mel频谱图条件下的ViSQOL与参数量对比。Flow2GAN以中等参数量达到了最高的ViSQOL分数。
 
-![推理速度对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5eTpRIULtb-9.jpg)
+![推理速度对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5eTpRIULtb-9.jpg)
 
 图6：不同模型在Mel频谱图条件下的CPU推理速度（xRT）对比。Flow2GAN（除1步略慢于Vocos外）在CPU上显著快于所有扩散模型，实现超实时推理。
 

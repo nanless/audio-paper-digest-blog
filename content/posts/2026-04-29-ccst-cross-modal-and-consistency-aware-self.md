@@ -61,7 +61,7 @@ CCST的亮点在于它对无源自训练范式进行了系统性的“微操”�
 
 CCST并非一个全新的端到端ASR模型，而是一个无源自训练（Source-Free Self-Training）框架，用于对预训练好的大型语音模型（如Whisper）进行微调。其整体流程如下图所示（论文图1）：
 
-![CCST框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461841-0.png)
+![CCST框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461841-0.png)
 
 图1：CCST整体框架。上半部分展示伪标签生成与加权过程，下半部分展示基于数据扰动和模型噪声的一致性过滤机制。
 

@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 UniSS是一个统一的自回归（AR）语言模型，用于表达式语音到语音翻译。其整体架构如图2所示。
 
-![UniSS模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-1.png)
+![UniSS模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5o0ZvYzh6B-1.png)
 
 整体输入输出流程：
 输入为源语音波形 \(X_{src}\)，经过三个分词器处理得到源说话人标记 \(S^{src}_{spk}\) 和源语言标记 \(S^{src}_{ling}\)。模型以这些标记加上任务控制标记（模式、目标语言、速度比）为提示，自回归地生成目标语义标记序列 \(S^{tgt}_{sem}\)。最后，目标语义标记与源说话人标记一起送入解码器，重构出目标波形 \(Y_{tgt}\)。
@@ -103,7 +103,7 @@ UniSS是一个统一的自回归（AR）语言模型，用于表达式语音到�
 
 其他结果：在FLEURS数据集上（表D3），UniSS同样表现出色，证明了其鲁棒性。此外，论文还展示了UniSS在S2TT、ASR和TTS任务上的能力（表D4）。
 
-![CVSS-T数据集上的主要性能对比表](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5o0ZvYzh6B-4.png)
+![CVSS-T数据集上的主要性能对比表](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5o0ZvYzh6B-4.png)
 
 此图显示了表1中的主要性能对比数据，直观展示了UniSS在各项指标上的优势。
 

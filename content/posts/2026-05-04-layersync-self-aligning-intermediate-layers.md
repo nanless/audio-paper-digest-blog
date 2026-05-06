@@ -54,7 +54,7 @@ LayerSync本身不是一个新模型，而是一个应用于现有扩散Transfor
 
 2.  LayerSync的集成：LayerSync作为一个额外的损失项，附加在标准的流匹配损失（公式1）之上，总损失为 `L = L_velocity + λ * L_LayerSync`（公式3）。它在训练时提取模型内部两个不同层（一个浅层`k`，一个深层`k'`）的特征表示 `f^k_θ(x)` 和 `f^{k'}_θ(x)`，并计算它们之间归一化后的相似度（如余弦相似度）的负均值作为损失。`stopgrad`操作确保只对浅层特征进行反向传播优化，而将深层特征视为固定目标。这个过程不增加任何额外的前向/反向传播开销，因为特征提取发生在标准的前向传播中。
 
-![图1：LayerSync通过将浅层特征与语义丰富的深层特征对齐来改进表示](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-0.png)
+![图1：LayerSync通过将浅层特征与语义丰富的深层特征对齐来改进表示](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4itprlvbRQ-0.png)
 
 3.  Transformer内部结构观察：论文通过分析发现，扩散Transformer在收敛后，其内部块（Transformer Block）会自然形成高相关的功能分组（图2）。这为LayerSync的层选择提供了依据。
 
@@ -86,7 +86,7 @@ LayerSync本身不是一个新模型，而是一个应用于现有扩散Transfor
 
 主要基准结果（图像生成，ImageNet 256x256）：
 
-![图4：LayerSync改善了中间特征的质量，提升了分类、分割准确率以及与DINOv2的对齐度](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-3.png)
+![图4：LayerSync改善了中间特征的质量，提升了分类、分割准确率以及与DINOv2的对齐度](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4itprlvbRQ-3.png)
 
 | 模型 | 训练轮数 | FID↓ | IS↑ | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -112,7 +112,7 @@ LayerSync本身不是一个新模型，而是一个应用于现有扩散Transfor
 1.  层选择鲁棒性：对SiT-XL进行随机层配对实验，FID的标准差仅为0.8，证明了方法对超参数不敏感。
 2.  表征质量分析：对比FID相似的基线模型（训练1400轮）和LayerSync模型（训练160轮），后者在分类（+32.4%）、分割（+63.3%）和DINOv2对齐（+88.2%）上表现更好，表明LayerSync从根本上优化了内部表征结构，而不仅仅是加速收敛。
 
-![图8：表征质量随训练的演化及不同层对齐目标的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4itprlvbRQ-7.png)
+![图8：表征质量随训练的演化及不同层对齐目标的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4itprlvbRQ-7.png)
 
 3.  跨模态结果：
     - 音频生成：在MTG-Jamendo数据集上，FAD从0.251降至0.199（改善20.7%）。

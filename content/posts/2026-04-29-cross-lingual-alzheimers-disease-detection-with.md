@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 论文采用的架构是典型的“音频编码器 + 适配器 + 大语言模型”多模态框架，如图1所示。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462438-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462438-0.jpg)
 
 完整流程：
 1.  输入：一段语音音频 `X` 和一个文本提示 `P`（如Contextual-CoT）。

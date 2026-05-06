@@ -53,7 +53,7 @@ SLAP在CLAP的“变长音频处理”和“单阶段多目标训练”两个痛
 
 ### 🏗️ 模型架构
 
-![SLAP训练框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464009-0.jpg)
+![SLAP训练框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464009-0.jpg)
 图1展示了SLAP的整体训练框架。模型主要由三部分组成：音频编码器、文本编码器/解码器和多目标训练管道。
 
 1.  音频编码器（Audio Encoder）：

@@ -79,7 +79,7 @@ hiddenInHomeList: true
 
 - 关键设计选择：PICSA的设计完全基于对自然语音中魅力感知的大规模实证研究（超50万个听众评分）。其核心假设是，驱动自然语音魅力的声学线索在一定程度上对合成语音同样适用。本次研究正是对这一假设的检验。
 
-![图1: PASCAL分数与人类魅力评分的相关性](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463280-0.png)
+![图1: PASCAL分数与人类魅力评分的相关性](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463280-0.png)
 图1：展示了12个TTS声音的PASCAL分数（X轴）与22名听众平均魅力评分（Y轴）的关系。斜线（x=y）表示理想情况下算法评分与人类评分完全一致。所有数据点均位于该线下方，表明PASCAL分数系统性地高估了TTS声音的魅力。但两者呈现出高度的正线性相关（虚线，r=.897）。
 
 #
@@ -126,7 +126,7 @@ hiddenInHomeList: true
 | 性别中性TTS魅力均值 | M | 10.0 (SD=12.0) | | 所有声音中最低，常被听众感知为女性 |
 | 听众评分信度 | ICC (2-way random) | 0.91 | | 优秀可靠性 |
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463280-1.jpg)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463280-1.jpg)
 图2：论文中提供的该图页面实际为一页文本，未包含实验结果相关图表。主要实验结果图表为图1。
 
 关键发现详述：

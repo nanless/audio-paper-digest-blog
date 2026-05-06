@@ -62,7 +62,7 @@ QSTar是一个端到端的音视频问答框架，整体流程如图2所示。�
     *   特征精炼：以Fqc为查询，分别通过CA对STFI输出的视觉（Fvi）和音频（Fai）特征进行精炼，得到最终的Ffv和Ffa。
     *   融合与预测：将Ffv和Ffa拼接后通过全连接层（FC）得到融合特征Fav。最终，用Fav与Fsentence做逐元素乘法，得到答案预测向量e，用于从预定义词表中分类预测答案。
 
-![QSTar方法整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/8CnU2kchiw-0.png)
+![QSTar方法整体框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/8CnU2kchiw-0.png)
 
 ### 💡 核心创新点
 

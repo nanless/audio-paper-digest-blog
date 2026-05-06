@@ -74,17 +74,17 @@ hiddenInHomeList: true
 | 仅微调分类层 | 50.25 | 38.66 |
 | 微调融合层+分类层 | 58.65 | 56.04 |
 
-![MCI-OTFusion框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462707-0.png)
+![MCI-OTFusion框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462707-0.png)
 图1 展示了MCI-OTFusion的整体框架。语音信号经Whisper编码器提取特征，文本转录经BERT模型提取特征。两者通过一个线性层投影到统一维度。核心模块分为两步：1) OT-based Alignment：基于余弦距离构建代价矩阵，通过Sinkhorn算法求解最优传输计划P*，用于对齐文本特征到语音特征空间。2) BiCA Fusion：在对齐后的特征上计算双向交叉注意力，同时更新语音和文本表示。最后，经过平均池化和通道拼接，送入MCI分类器或MMSE预测器。框架还展示了针对多个语言任务的跨任务聚合策略。
 
-![鲁棒性实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462707-1.jpg)
+![鲁棒性实验结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462707-1.jpg)
 图2 比较了MCI-OTFusion和CA-Fusion在模态信息部分缺失时的鲁棒性。在随机遮挡部分语音或文本特征后：(a) MCI分类任务上，MCI-OTFusion的性能（UAR）波动明显小于CA-Fusion，表明其更鲁棒。(b) MMSE预测任务上，MCI-OTFusion在多数遮挡比例下也更稳定，但对文本遮挡相对敏感。该图证明了MCI-OTFusion在信息不完整情况下的可靠性优于传统CA融合。
 
 #
 
 ### 🏗️ 模型架构
 
-![MCI-OTFusion框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462707-0.png)
+![MCI-OTFusion框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462707-0.png)
 MCI-OTFusion是一个端到端的多模态框架，其输入为语音信号和对应文本转录，输出为MCI/NC分类标签和MMSE认知分数预测。整体架构如图1所示，可分为四个阶段：
 1.  特征提取：使用预训练的Whisper-large-v3作为语音编码器，提取帧级语音嵌入 FS ∈ R^{Ts×d}。使用预训练的BERT-base-Chinese或BERT-base-uncased作为文本编码器，提取词级文本嵌入 FT ∈ R^{Tt×d}。两者通过一个后处理层（线性投影）将维度统一为 d=512。
 2.  OT-based Alignment（全局对齐）：这是第一个核心创新。该模块将语音和文本嵌入视为两个概率分布，并定义了一个基于余弦距离的代价矩阵C。通过求解正则化最优传输问题（使用Sinkhorn算法），得到一个最优传输计划矩阵P。该矩阵P用于通过矩阵乘法 (P* ⊗ FT) 对齐文本特征，得到与语音特征分布对齐的 ̂FT。这一步旨在捕获两种模态间的全局结构对应关系，对噪声和局部干扰更具鲁棒性。
@@ -127,7 +127,7 @@ MCI-OTFusion是一个端到端的多模态框架，其输入为语音信号和�
 
 MMSE驱动策略分析：如表2所示，利用训练好的MCI-OTFusion模型进行MMSE预测，然后将连续分数转换为离散标签（MMSE<=26为MCI），其分类性能（UAR 79.76%）远高于直接训练的分类模型（UAR 70.0%），说明连续认知分数包含更丰富的诊断信息。
 
-![鲁棒性实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462707-1.jpg)
+![鲁棒性实验结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462707-1.jpg)
 图2 直观展示了在随机遮挡不同比例（0.1-0.5）的语音或文本特征后，MCI-OTFusion和CA-Fusion在分类（UAR）和回归（RMSE）任务上的性能变化。MCI-OTFusion的曲线更平稳，证实了其设计的鲁棒性优势。
 
 #

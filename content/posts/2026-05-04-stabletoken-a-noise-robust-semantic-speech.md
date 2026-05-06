@@ -52,7 +52,7 @@ StableToken的整体架构建立在端到端ASR模型的基础之上，以Whispe
 
 设计选择动机：单路径架构在量化边界附近缺乏容错性，一个小扰动可能导致完全不同的输出token。多分支投票机制通过冗余和位级纠错，从根本上提升了架构的鲁棒性。而噪声感知训练则提供了直接的中间监督信号，解决了传统ASR损失对中间token稳定性不敏感的问题。
 
-![StableToken模型架构图，展示了从编码器到多分支投票量化模块的完整数据流，以及训练时的噪声感知共识机制](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/17DNmdQ9aU-1.png)
+![StableToken模型架构图，展示了从编码器到多分支投票量化模块的完整数据流，以及训练时的噪声感知共识机制](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/17DNmdQ9aU-1.png)
 
 ### 💡 核心创新点
 

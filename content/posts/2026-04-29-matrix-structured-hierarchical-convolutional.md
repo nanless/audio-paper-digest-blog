@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 M3C是一个用于多方面、多粒度发音评估与错音检测的层次化卷积框架。整体架构如图1所示。
 
-![M3C框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462089-0.png)
+![M3C框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462089-0.png)
 图1：M3C模型架构图
 
 输入与特征准备：

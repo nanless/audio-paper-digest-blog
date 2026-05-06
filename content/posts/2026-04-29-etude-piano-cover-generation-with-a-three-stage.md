@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 Etude的整体架构（如图1所示）是一个清晰的三阶段流水线，旨在解耦自动钢琴编曲的复杂性。
 
-![图1: Etude的整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460519-0.png)
+![图1: Etude的整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460519-0.png)
 
 1.  Extract Stage（提取阶段）：
     *   输入：原始音频。

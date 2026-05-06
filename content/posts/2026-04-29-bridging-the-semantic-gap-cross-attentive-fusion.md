@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 JASSQA的整体架构（如图1所示）分为并行特征提取、双向跨注意力融合和分数预测三个核心模块。
 
-![JASSQA模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460744-0.png)
+![JASSQA模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460744-0.png)
 图1：JASSQA模型架构。左侧为并行的双分支结构：上方是语义分支（Semantic Branch），处理由Whisper编码器输出的特征；下方是声学分支（Acoustic Branch），处理由DAC量化器输出的离散声学token。声学分支内部包含两条路径：一条是直接的码本查找（Direct Codebook Lookup），另一条是包含嵌入层和两层Transformer的编码器（Dedicated Code Encoder）。两条路径的输出拼接后通过一个全连接层（FC）和BiLSTM。两个分支的输出进入中间的“双向跨注意力融合（Bidirectional Cross-Attention Fusion）”模块，该模块由两个多头注意力层组成，分别以声学特征为查询、语义特征为键/值，和以语义特征为查询、声学特征为键/值。融合后的特征经过平均池化（Average Pooling）得到句级表示，再拼接后输入最终的多层感知机（MLP）进行MOS分数回归。
 
 组件详解：
@@ -152,9 +152,9 @@ JASSQA的整体架构（如图1所示）分为并行特征提取、双向跨注�
 关键结论：1) 移除第一阶段预训练（w/o training stage 1）导致MSE普遍上升。2) 移除跨注意力（w/o cross attention）在跨域数据（VMC 2023）上导致MSE从0.299急剧上升到0.485，影响巨大。3) 移除语义分支（w/o semantic branch）导致所有指标灾难性下降，表明Whisper的语义特征是模型性能的基石。4) 移除声学分支（w/o acoustic branch）导致性能中等程度下降，验证了声学特征的补充作用。
 
 双分支表征分析（图2）：
-![双分支表征分析图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460744-1.png)
+![双分支表征分析图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460744-1.png)
 图2 (a)：双分支表征的t-SNE可视化。左图显示声学表征按噪声类型（babble, street, pink, white）形成聚类；右图显示语义表征按MOS分数形成连续流形，而非按噪声类型聚类。这直观验证了两个分支的功能分离：声学分支捕捉噪声环境，语义分支编码内容与感知质量。
-![线性探测混淆矩阵图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460744-2.png)
+![线性探测混淆矩阵图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460744-2.png)
 图2 (b)：文本内容ID预测的线性探测混淆矩阵。语义表征的混淆矩阵（右）呈现强对角线，表明能准确识别文本内容；声学表征的混淆矩阵（左）杂乱，表明对文本内容不敏感。这定量证实了语义分支编码语言信息，声学分支编码非语言声学信息。
 
 ### ⚖️ 评分理由

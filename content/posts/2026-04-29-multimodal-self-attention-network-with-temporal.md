@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462815-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462815-0.png)
 如图1所示，整体框架是一个端到端的Transformer编码器，用于音视频情感分类。其完整流程如下：
 1.  特征提取：
     - 音频流：原始音频（16kHz）通过预训练的xlsr-Wav2Vec 2.0编码器，提取1024维帧级嵌入。由于内部320倍下采样，其有效帧率为ηa = 50 FPS。
@@ -134,7 +134,7 @@ CTM损失的作用：在Transformer编码器之前，音频和视频特征被投
 | ICA + ISA | - | 88.31 |
 | MSA + MSA (Ours) | 6.83M | 88.95 |
 
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462815-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462815-1.png)
 结论：图2直观展示了不同的融合策略。统一的多模态自注意力（MSA）方案（图2c）以更少的参数取得了最佳效果，证明了在共享编码器中联合建模模态内和模态间依赖的优越性。
 
 3. 位置编码与CTM损失消融研究（CREMA-D数据集）
@@ -146,7 +146,7 @@ CTM损失的作用：在Transformer编码器之前，音频和视频特征被投
 | RoPE | 87.76 | 89.00 |
 | TaRoPE | 88.95 | 89.49 |
 
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462815-2.png)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462815-2.png)
 结论：表3表明，TaRoPE作为位置编码基础时性能最优，且加入CTM损失后达到最高分。图3(a)展示了一个具体样本，加入CTM损失后，音频和视频特征幅值的曲线在时间轴上更加同步。图3(b)的导数符号一致性分布图则表明，CTM损失使测试集上更多样本的跨模态动态趋势保持一致。
 
 ### ⚖️ 评分理由

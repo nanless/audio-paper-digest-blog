@@ -44,7 +44,7 @@ hiddenInHomeList: true
     *   语音分支：由一个新引入的、并行的4层Transformer构成，负责预测语音token。
     这一设计基于论文中的一个关键发现（如图2所示）：在深层网络中，文本和语音的隐藏状态表示在经过中层融合后，会在顶层重新分化。模态分层设计正是为了适配这种特性，在共享层完成信息融合后，让不同模态在各自专用的输出层进行解码。
 
-    ![文本与语音跨模态表示在模型不同层的相似度可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zjaV5zmlkl-1.png)
+    ![文本与语音跨模态表示在模型不同层的相似度可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zjaV5zmlkl-1.png)
 
     图2：文本与语音跨模态表示在模型不同层的相似度可视化。(a)-(d)展示了在第0、10、24、27层的余弦相似度热力图，黄色点为DTW采样点。可见相似度对角线在中间层出现，在顶层消退。(e)展示了相似度分数随层深变化的趋势：先上升（第0-10层），中间波动（第10-24层），最后下降（第24-27层）。这为模态分层设计提供了实证依据。
 
@@ -138,7 +138,7 @@ hiddenInHomeList: true
 | NF–NoSplit | 0 | 77.12 | 55.80 | 88.72 | 67.02 | 60.97 | 63.73 |
 结论：1) 模态分层（对比NF与NF–NoSplit）对语音和文本能力均有提升；2) 冻结预训练（对比FP–Full与NF）带来巨大增益，特别是在文本能力（MMLU: 66.50 vs 62.11）上；3) 不同解冻策略（FP-Full, FP-Shared, FP-Layerwise）差异较小。
 
-![消融实验结果：不同预训练策略在语音和文本任务上的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zjaV5zmlkl-6.png)
+![消融实验结果：不同预训练策略在语音和文本任务上的表现](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zjaV5zmlkl-6.png)
 
 图5：消融实验结果可视化。图中对比了FP-Full、FP-Layerwise、FP-Shared、NF（不同分层数）和NF-NoSplit等多种配置在zh-sS.C.（中文语音续写）和CMMLU（中文文本理解）上的表现。可以清晰地看出，FP（冻结预训练）系列模型（图中上半部分点）在两项任务上普遍优于NF（无冻结）系列（下半部分点），直观验证了冻结预训练策略的有效性。
 

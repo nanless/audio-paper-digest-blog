@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 HERON的整体架构（见图1）包含三个预训练骨干网络和一个分层融合模块，最后接分类头。
 
-![HERON架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463488-0.jpg)
+![HERON架构概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463488-0.jpg)
 图1：HERON模型架构概览。文本、语音和非语言声音（NVV）分别通过各自的骨干网络提取特征。在第一阶段，语音和NVV特征对齐并拼接，形成统一的音频表征。在第二阶段，文本特征作为查询（Query），统一音频特征作为键（Key）和值（Value），通过多头注意力机制计算上下文音频残差，该残差经投影后与原始文本特征相加（残差连接），得到融合表征。最后通过注意力池化和MLP进行分类。
 
 1.  输入与骨干网络：

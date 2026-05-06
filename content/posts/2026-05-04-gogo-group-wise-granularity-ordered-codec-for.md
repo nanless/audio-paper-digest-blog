@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 Gogo 编解码器 是系统的核心，负责将语音信号转换为适合语言模型处理的离散token。其架构如图2所示。
 
-![Gogo编解码器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/JbLmIoWwDC-0.png)
+![Gogo编解码器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/JbLmIoWwDC-0.png)
 
 其工作流程分为量化和重建两个方向：
 1.  量化流程：输入波形 `w` 先提取梅尔频谱 `x`，然后沿时间轴划分为多个非重叠的组（每组 `g=20` 帧）。每个组与一组可学习的语音查询向量 `q_i`（`n_q=10` 个）拼接，送入Transformer编码器。编码后，丢弃原始梅尔谱部分，仅保留语音查询向量对应的位置，并通过有限标量量化（FSQ）将其离散化为token索引 `s_i` 和对应的嵌入 `¯q_i`。
@@ -57,14 +57,14 @@ Gogo 编解码器 是系统的核心，负责将语音信号转换为适合语�
 
 GogoSpeech 语音语言模型 是基于Gogo构建的两阶段生成模型，其架构如图3所示。
 
-![GogoSpeech模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/JbLmIoWwDC-4.png)
+![GogoSpeech模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/JbLmIoWwDC-4.png)
 
 1.  第一阶段（骨架构建）：给定文本 `y` 和语音提示的粗token骨架（`S:,1:b`，`b=3`），自回归地逐组生成目标语音的粗token骨架 `˜S:,1:b`。此阶段token率极低（~14Hz），旨在生成稳定的高层语义和结构指示。
 2.  第二阶段（细节丰富）：对于每一组，基于已生成的粗token骨架 `˜S_i,1:b`、之前所有组的完整token序列 `˜S_{1:i-1},:` 以及语音提示 `S`，自回归地生成剩余的细token `˜S_i,b+1:n_q`，从而逐步补充声学细节，恢复完整token序列。
 
 GRPO训练的Token分配器 如图4所示，旨在提升第二阶段的效率。
 
-![GRPO训练的token分配器图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/JbLmIoWwDC-7.png)
+![GRPO训练的token分配器图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/JbLmIoWwDC-7.png)
 
 它是一个轻量Transformer，输入为第一阶段生成的每组粗token骨架 `˜S_i,1:b`，输出一个预算 `ξ_i`（可选细token数量）。训练时，对所有可能的预算 `o_j`（从 `b` 到 `n_q`）进行枚举，分别通过Gogo重建语音，并计算两个奖励：R_n（惩罚token使用数量）和 R_d（惩罚重建失真）。结合两个奖励得到总奖励 `R`，计算组相对优势 `A_j`，并通过最大化期望优势来优化分配器策略 `π_ω`。训练过程中，Gogo编解码器保持冻结。
 
@@ -120,7 +120,7 @@ GRPO训练的Token分配器 如图4所示，旨在提升第二阶段的效率。
 （图5描述：堆叠面积图，展示了Gogo中不同位置token在多个声学、韵律和语言特征预测任务上的归一化损失。x轴为token位置（1最粗，10最细），y轴为相对最大损失的比例，值越高表示损失越大、预测性能越差。）  
 图5显示，前3个token主要编码全局信息（时长、词数等），中间token编码韵律，最后3个token编码声学细节，直观验证了粗细有序的设计。
 
-![保留不同数量token的重建性能变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/JbLmIoWwDC-9.jpg)
+![保留不同数量token的重建性能变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/JbLmIoWwDC-9.jpg)
 
 （图7描述：折线图，展示了在LibriTTS test-clean集上，每组保留前n个token（n从1到10）进行重建时，各项归一化指标（WER, PESQ, STOI, UT-MOS, DNS-MOS, SIM）的变化趋势。）  
 图7显示，WER在保留前几个token时急剧下降，说明粗token捕获了主要语言内容；PESQ等声学指标在保留超过4个token后才有显著提升。

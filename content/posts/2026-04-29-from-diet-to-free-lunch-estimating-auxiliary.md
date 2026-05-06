@@ -86,7 +86,7 @@ hiddenInHomeList: true
     - 本文的关键设计思想是，这些为“节能”而学习的剪枝策略，隐式地编码了对信号内容的理解。因此，`˜G` 被重新用作下游多个辅助任务（VAD、噪声分类、SNR估计等）的输入特征，通过简单的线性模型进行预测。
 
 4.  架构图：
-    ![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463996-0.png)
+    ![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463996-0.png)
     图1展示了整个系统框架。左侧是数据生成流程（从语音库和噪声库生成带噪、干净语音）；中间是核心的SE模型（Conv-FSENet with DynCP），它输出增强语音和剪枝掩码 `M(t)`；右侧展示了如何利用这些掩码 `˜G` 作为输入，训练多个简单的预测模型（Pred）来估计各种目标 `y(t)`（如VAD， F0， SQP指标等）。
 
 #
@@ -128,7 +128,7 @@ hiddenInHomeList: true
 
 1. 分类任务性能 (对应图3上半部分)
 
-![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463996-0.png)
+![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463996-0.png)
 图3. 不同输入特征（颜色）在每个任务上的表现。前3个子图展示分类任务。
 
 | 特征输入 | VAD (Accuracy) | 性别分类 (Accuracy) | 口音分类 (Accuracy) | 噪声分类 (Accuracy) |
@@ -163,19 +163,19 @@ hiddenInHomeList: true
 
 3. 说话人验证性能 (对应图6)
 
-![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463996-0.png)
+![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463996-0.png)
 图6. 不同注册语音数量（x轴）和特征集（颜色）下的SV性能（EER）。
 
 - 关键结论：二值掩码特征的EER（等错误率）普遍高于STFT基线，表明其说话人区分能力有限。然而，完整的原始分数 (`Raw scores`) 性能接近增强后的STFT基线 (`STFT (Enhanced)`)，且计算量减少21%。这可能意味着SE过程部分保留了说话人信息，而二值化导致了关键信息的丢失。
 
 4. 可视化分析
 
-![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463996-0.png)
+![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463996-0.png)
 图4. 使用t-SNE对剪枝掩码进行的低维可视化，不同子图按不同目标上色。
 
 - 关键结论：掩码在低维空间中形成了与语义信息一致的聚类：语音活动（有声/无声）被清晰分开，次级分离对应性别，SI-SDR和PESQ呈现连续梯度变化。噪声类别的聚类较分散，这与噪声标签描述的是环境而非具体噪声内容有关。
 
-![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463996-0.png)
+![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463996-0.png)
 图5. 使用Top-64二值特征训练的模型归一化系数热力图（红正蓝负）。
 
 - 关键结论：不同任务依赖于不同通道组合的特征。例如，男性识别和F0估计依赖相似的通道但系数符号相反。SNR、SI-SDR和PESQ回归任务共享大量特征，且多具有负系数，这表明当输入信号较差时，模型倾向于抑制更多通道（保守行为）。

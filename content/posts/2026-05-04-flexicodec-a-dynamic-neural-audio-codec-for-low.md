@@ -58,7 +58,7 @@ FlexiCodec在极低帧率（3-12.5Hz）下实现了高质量的语音重建和�
 
 FlexiCodec的整体架构如图1所示，其核心是双流特征提取与动态帧率处理。
 
-![FlexiCodec整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-2.png)
+![FlexiCodec整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/kYkfCs4ZAH-2.png)
 
 完整输入输出流程：输入16kHz语音波形 -> 双流编码（ASR编码器输出12.5Hz语义特征；卷积编码器输出12.5Hz波形特征）-> 动态帧合并模块（基于ASR特征的相似度，自适应合并两个流的特征）-> 语义量化（FSQ量化ASR特征为RVQ-1 tokens）与声学量化（RVQ量化残差特征为RVQ-rest tokens）-> 动态帧解合并模块（将动态序列恢复为12.5Hz固定帧率）-> 卷积解码器 -> 输出重建波形。
 
@@ -77,7 +77,7 @@ FlexiCodec的整体架构如图1所示，其核心是双流特征提取与动态
 *   Transformer瓶颈：动机是缓解因简单平均（合并）和重复（解合并）操作带来的序列不连续性，通过局部注意力机制平滑特征，提升重建自然度。
 *   双流架构与残差量化：实现语义与声学信息的显式解耦。RVQ-1专注语义，RVQ-rest补充声学细节，便于下游模型（如TTS的AR阶段）灵活使用。
 
-![帧合并与解合并模块详图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/kYkfCs4ZAH-6.png)
+![帧合并与解合并模块详图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/kYkfCs4ZAH-6.png)
 
 ### 💡 核心创新点
 

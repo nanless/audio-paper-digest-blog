@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 DDSC 本身并非一个独立的神经网络模型，而是一个轻量级、架构无关的训练调度框架，可以应用于任何现有的音频分类骨干网络。其核心架构与数据流如图2所示。
 
-![DDSC框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464774-1.png)
+![DDSC框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464774-1.png)
 图2：DDSC框架概览。
 - 输入：一批音频样本及其标签和设备ID。
 - 骨干网络：一个标准的分类网络（如CNN或Transformer），将音频输入映射为归一化的特征向量 `z_i`。

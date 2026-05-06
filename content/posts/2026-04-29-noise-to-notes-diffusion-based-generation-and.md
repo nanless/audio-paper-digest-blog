@@ -52,10 +52,10 @@ hiddenInHomeList: true
 
 N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数据流如图1（pdf-image-page1-idx0）和图2（pdf-image-page1-idx1）所示。
 
-![Noise-to-Notes框架概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-0.jpg)
+![Noise-to-Notes框架概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-0.jpg)
 图1：Noise-to-Notes框架概览。展示了N2N作为扩散模型的三种能力：条件生成（基于完整音频转录）、修复（基于部分音频转录）和无条件生成（无音频输入）。核心流程是学习从加噪的转录`x_t`和音频条件`ϕ_audio`中去噪恢复干净转录`x_0`。
 
-![Noise-to-Notes架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-1.png)
+![Noise-to-Notes架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-1.png)
 图2：Noise-to-Notes架构。这是一个基于Transformer的解码器架构，详细展示了各组件。
 
 1.  输入与条件编码：
@@ -140,10 +140,10 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 
 注：D=判别式，G=生成式，T=Transformer。最佳性能加粗。
 
-![各鼓组件起始F1分数](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-2.jpg)
+![各鼓组件起始F1分数](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-2.jpg)
 图3：各鼓组件的起始F1分数对比。在E-GMD上训练，在E-GMD、MDB、IDMT上评估。显示N2N在困难组件（如镲片）上相比OaF Drums有显著提升，且在域外数据（IDMT, MDB）上保持了稳定高性能。
 
-![速度-精度权衡](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-3.png)
+![速度-精度权衡](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-3.png)
 图4：速度-精度权衡。展示了N2N在不同采样步数（1-25）下的性能与推理时间。关键结论：从1步到5-10步有显著提升，之后趋于饱和。
 
 消融研究（表2）：
@@ -163,10 +163,10 @@ N2N是一个基于Transformer的音频条件扩散模型，其整体架构和数
 *   关键发现2（特征）：在域内数据（E-GMD）上，仅用MFM特征与用梅尔频谱图性能相近。但在域外数据（MDB, IDMT）上，MFM特征带来了巨大的性能跃升（MDB: 71.15->82.16, IDMT: 80.89->90.36）。两者结合性能最佳。
 
 特征可视化与修复示例：
-![梅尔频谱图与MFM特征的t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-4.jpg)
+![梅尔频谱图与MFM特征的t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-4.jpg)
 图5：t-SNE可视化。左图（梅尔频谱图特征）显示不同数据集的特征重叠较多。右图（MFM特征）显示特征更具可分性，解释了其提升泛化能力的原因。
 
-![修复示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463861-5.png)
+![修复示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463861-5.png)
 图6：音频修复示例。给定5秒音频，后3秒被屏蔽（替换为null嵌入），N2N利用前2秒的上下文生成了连贯的完整转录，展示了其生成能力。
 
 ### ⚖️ 评分理由

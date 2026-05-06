@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 FlexiVoice的整体架构（图3）采用两阶段设计：自回归LLM 和 流匹配解码器。
 
-![FlexiVoice模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-2.png)
+![FlexiVoice模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/F7GmbfyVg9-2.png)
 
 完整输入输出流程：
 1.  输入：自然语言文本、可选的风格指令（如“请用开心的语气朗读”）、可选的参考语音（用于提供音色）。
@@ -153,7 +153,7 @@ FlexiVoice的整体架构（图3）采用两阶段设计：自回归LLM 和 流�
 4. 消融实验（表5 & 图9）
 消融实验验证了PPT各阶段顺序和策略的有效性。
 
-![不同训练策略性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/F7GmbfyVg9-0.png)
+![不同训练策略性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/F7GmbfyVg9-0.png)
 
 不同训练策略在解耦任务和复杂指令任务上的性能对比。
 

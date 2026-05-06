@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 EEND-SAA的整体架构如图1所示，是一个端到端的流式处理框架。
 
-![图1: EEND-SAA with causal awareness](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462992-0.jpg)
+![图1: EEND-SAA with causal awareness](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462992-0.jpg)
 
 模型主要由三个模块串联组成：
 1.  EEND编码器：输入为对数梅尔频谱图。经过子采样和帧拼接后，送入一个四层Transformer编码器。与原始SA-EEND不同，本模型加入了正弦位置编码，这为模型提供了时序位置信息，对于捕捉主说话人语音的“连续性”这一关键特征至关重要。编码器输出一个大小为 `T x D` 的说话人感知嵌入序列。

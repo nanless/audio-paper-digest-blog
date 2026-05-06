@@ -57,7 +57,7 @@ hiddenInHomeList: true
 | 绒猴 | MarmAudio | USVexplorer | 0.997 | - | 0.996 | 0.998 |
 | 蝙蝠 | NABat | USVexplorer | 0.998 | - | 0.998 | 0.997 |
 
-![t-SNE特征可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463476-1.png)
+![t-SNE特征可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463476-1.png)
 图2：不同数据集上学习到特征的t-SNE可视化。图中显示了同物种内USV模式的清晰聚类以及不同物种间的明显分离，表明模型能够捕获物种不变的基本声学特征和物种特异性变异。
 
 5.  实际意义：为神经科学、行为生态学等领域的研究人员提供了一个更鲁棒、自动化且能跨物种使用的USV检测工具，并初步支持了声音与行为的多模态对齐分析，有助于更全面地理解动物交流。
@@ -69,7 +69,7 @@ USVexplorer是一个四阶段的端到端框架，处理流程如下：
 
 1.  输入与预处理：原始音频信号（重采样至250 kHz）被分割为220毫秒的片段，计算STFT频谱图（N_FFT=1024, hop=256, window=1024），得到形状为 [T, 513] 的幅度谱图，再进行频率轴归一化，最终输入张量X ∈ R^{T×513}。
 
-![USVexplorer检测架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463476-0.jpg)
+![USVexplorer检测架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463476-0.jpg)
 图1：USVexplorer的检测架构图。数据从左向右流动，依次经过四个主要模块。
 
 2.  BandGate模块（自适应频率加权）：

@@ -73,7 +73,7 @@ hiddenInHomeList: true
 
 架构图说明：论文中的 Figure 3 ![论文配图](icassp-img://FbY5Co2NWk/2.png) 直观展示了二值化原型池化的原理。
 
-![二值化原型池化示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FbY5Co2NWk-0.png)
+![二值化原型池化示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FbY5Co2NWk-0.png)
 
 图3展示了二值化原型池化（schematic）。输入是一个64×8的token map（D=768）。J个可学习原型被二值化，每个token与所有原型计算相似度，然后通过最大池化得到每个原型的全局分数，最终由线性层输出分类结果。
 
@@ -127,13 +127,13 @@ hiddenInHomeList: true
 
 模型排名变化：Figure 6 ![论文配图](icassp-img://FbY5Co2NWk/5.png) 展示了`linear`与`protobin`评估下编码器排名的巨大差异。
 
-![不同探针方法下的编码器排名对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FbY5Co2NWk-3.png)
+![不同探针方法下的编码器排名对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FbY5Co2NWk-3.png)
 
 图6显示，在`linear`探针下表现尚可的ASiT，在`protobin`评估下排名末位；而`linear`下中等的SSLAM，在`protobin`下跃居第二。这证明了线性探针无法可靠评估模型质量。
 
 探针方法间的性能差距：Figure 7 ![论文配图](icassp-img://FbY5Co2NWk/6.png) 显示了相对于`linear`探针，其他方法性能提升的幅度因编码器而异，证明了瓶颈的普遍性以及改进池化的收益。
 
-![不同探针方法相对linear探针的性能提升](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FbY5Co2NWk-6.png)
+![不同探针方法相对linear探针的性能提升](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FbY5Co2NWk-6.png)
 
 图7显示，对于所有编码器，token感知的池化方法（尤其是原型方法）都比`linear`有显著提升，但提升幅度不一致，表明探针性能不仅取决于方法，也与编码器本身的嵌入特性有关。
 

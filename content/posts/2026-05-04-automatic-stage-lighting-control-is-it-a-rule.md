@@ -66,7 +66,7 @@ Skip-BART是一个基于编码器-解码器（Encoder-Decoder）的序列到序�
     *   音频嵌入：使用预训练的OpenL3模型提取音频特征，再通过一个MLP映射到BART的嵌入维度（512维）。
     *   灯光嵌入：将灯光帧 `yt = [ht, vt]` 的色相和明度分别通过独立的嵌入层进行离散嵌入。这样设计是为了更好地处理色相（Hue）的循环特性（0°和180°相近）。两个嵌入向量被拼接后作为解码器的输入。
 
-    ![Skip-BART网络架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-0.png)
+    ![Skip-BART网络架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/a4Got6azjF-0.png)
 
     （图1：网络架构示意图。图中‘ice’代表冻结参数，‘fire’代表可训练参数。展示了从音频输入、经过OpenL3和MLP得到音频嵌入，到灯光数据处理后作为解码器输入的完整数据流。）
 
@@ -133,7 +133,7 @@ Skip-BART与规则基线方法及多个消融变体的对比如下表所示。Sk
 生成样本可视化：
 论文提供了生成序列的可视化图（图5），展示了Skip-BART能较好地跟随音乐的段落转换（如红框所示），但有时会出现局部过度波动，而规则方法则倾向于产生平缓、单调的过渡。
 
-![生成样本可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/a4Got6azjF-4.png)
+![生成样本可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/a4Got6azjF-4.png)
 
 （图5：不同方法生成灯光序列的可视化对比。上排为输入Mel频谱图，下排为Ground Truth、Skip-BART等方法生成的序列。红框标示了一个Skip-BART成功捕捉的音乐-灯光同步过渡片段。）
 

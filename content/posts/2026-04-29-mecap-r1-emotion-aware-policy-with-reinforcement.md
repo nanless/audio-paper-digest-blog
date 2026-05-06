@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 MECap-R1是一个两阶段训练的文本生成模型，用于根据语音和视频输入生成描述性文本。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462160-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462160-0.png)
 图1：MECap-R1整体框架图。展示了从多模态输入到文本输出的流程，包括SFT预训练阶段和Emo-GRPO强化学习微调阶段。
 
 完整输入输出流程：

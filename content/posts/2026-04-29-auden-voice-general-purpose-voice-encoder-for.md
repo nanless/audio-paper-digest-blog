@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463131-1.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463131-1.png)
 
 论文采用的骨干网络是Zipformer，其架构如图1左侧所示。整体流程如下：
 1.  输入：16kHz音频经预处理转为80维对数梅尔频谱图（100Hz）。

@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 本文提出的DiVeQ和SF-DiVeQ并非独立模型，而是作为可微分层插入到现有VQ-VAE、VQGAN等架构中，替代原始的不可微VQ层。其核心架构即替换过程如下：
 
-![传统VQ操作与DiVeQ操作的对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-0.png)
+![传统VQ操作与DiVeQ操作的对比示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KRVnpTbx7R-0.png)
 
 图1：传统VQ与DiVeQ操作对比。左图展示传统VQ（非可微），编码器E输出连续潜变量z，经过不可微的最近邻赋值 `argmin` 得到离散表示 `û`，解码器D重建 `x_r`，梯度`∂û/∂z` 无法计算。右图展示DiVeQ（可微），在连续潜变量 `z` 上添加一个方向性误差向量得到量化表示 `z_q`，`z_q` 是 `z` 和所选码本向量 `c` 的可微函数，允许梯度`∂z_q/∂z` 回传。`z_q` 的计算公式为 `z_q = z + ||c-z||_2  (v_d / ||v_d||_2)`，其中方向性噪声 `v_d = v + (c-z)`，`v` 为高斯噪声。
 
@@ -67,7 +67,7 @@ SF-DiVeQ进一步扩展，其量化点不再是固定的码本向量，而是位
 - 停止梯度操作：在计算方向 `v_d / ||v_d||_2` 时使用 `sg[·]`，是为了在保持几何一致性的同时，允许对误差大小 `||c*-z||_2` 进行梯度计算。
 - 空间填充（SF-DiVeQ）：动机是解决码本坍塌和码本-潜变量分布错位问题（如图4所示）。通过量化到线段上，确保所有码本及其连线都被拉入潜变量分布的支撑区域。
 
-![NSVQ量化误差示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-1.png)
+![NSVQ量化误差示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KRVnpTbx7R-1.png)
 
 图2：NSVQ量化过程图解。输入`z`被映射到以量化误差`||z-ĉ||_2`为半径的超球面上的随机点。由于方向随机，以约0.67的概率会产生比真实最近邻距离更大的量化误差，这在高维空间中更为严重。
 
@@ -155,11 +155,11 @@ SF-DiVeQ进一步扩展，其量化点不再是固定的码本向量，而是位
 
 表3：VCTK数据集语音编码定量结果（batch size=64）。
 
-![不同VQ方法在VQGAN生成任务上的定性样本对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-6.png)
+![不同VQ方法在VQGAN生成任务上的定性样本对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KRVnpTbx7R-6.png)
 
 图7：VQGAN生成任务定性对比（9-bit码本）。展示了不同方法生成的样本，DiVeQ和SF-DiVeQ生成的图像更清晰、细节更丰富。
 
-![码本-潜变量表示错位t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/KRVnpTbx7R-4.png)
+![码本-潜变量表示错位t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/KRVnpTbx7R-4.png)
 
 图4：码本-潜变量表示错位可视化。展示了各方法学习到的码本（红色叉）和潜变量分布（灰色点）的t-SNE图。STE、EMA、RT、ST-GS、NSVQ均存在不同程度的错位（码本未均匀覆盖潜变量分布），而DiVeQ错位轻微，SF-DiVeQ几乎无错位。
 

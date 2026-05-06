@@ -81,13 +81,13 @@ SumRA的创新点：
 
 下图直观对比了不同初始化策略：标准LoRA从正态分布初始化A；PiSSA从主导奇异向量初始化A；而SumRA将多个奇异向量求和后初始化A，从而让A能影响更广的知识子空间。
 
-![初始化策略对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-0.png)
+![初始化策略对比示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/v23Pqcm6qp-0.png)
 
 图2：展示了LoRA矩阵A的不同初始化策略。A) 从正态分布采样；B) PiSSA方法，取前`r`个奇异向量；C) 每个奇异向量对应一个概念子集，单一向量限制了行的影响范围；D) SumRA方法，将多个行（向量）求和到A的每一行，以覆盖更广的概念范围。
 
 求和策略细节：图3展示了如何将 `Σ^(1/2) V^⊤` 的行（奇异向量）分配到A的各行中。朴素的“分块求和”会将最大的奇异值聚集在一起，导致干扰。提出的“交错求和”和“贪心求和”能更均匀地分配重要向量。
 
-![求和策略对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-2.png)
+![求和策略对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/v23Pqcm6qp-2.png)
 
 图3：展示了三种将奇异向量压缩到矩阵A的策略。A) 分块求和（不理想）；B) 交错求和；C) 贪心求和。后两者能更均匀地分配重要的奇异向量。
 
@@ -97,7 +97,7 @@ SumRA的创新点：
 
 存储优势：由于矩阵A在所有任务间共享且冻结，每个新任务只需额外存储一个矩阵B。这与标准LoRA（存储A和B）或为每个任务存储全新A的LoRA-FA相比，存储开销显著降低。
 
-![存储成本对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/v23Pqcm6qp-6.png)
+![存储成本对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/v23Pqcm6qp-6.png)
 
 图4：对比了LoRA/PiSSA/Corda与SumRA在内存成本上的差异。SumRA允许在不同任务间共享冻结的A矩阵，从而降低了存储开销。
 

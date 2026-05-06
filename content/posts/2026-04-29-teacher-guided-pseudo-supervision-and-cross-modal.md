@@ -81,7 +81,7 @@ hiddenInHomeList: true
 
 本文提出的E-CMA框架建立在CoLeaF基线之上，整体架构如图2所示。
 
-![图2: E-CMA框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463157-1.png)
+![图2: E-CMA框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463157-1.png)
 
 整体输入输出流程：
 1.  输入：一段T秒的视频，被划分为T个不重叠的1秒片段。每个片段提取出音频特征 `xa_t` 和视觉特征 `xv_t`。

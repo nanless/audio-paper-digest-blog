@@ -67,7 +67,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 CALM是一个端到端的多任务学习框架，旨在联合处理目标说话人提取和上下文偏置。
-![CALM框架图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463102-0.png)
+![CALM框架图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463102-0.png)
 图1: CALM框架示意图
 
 1.  输入与特征提取：

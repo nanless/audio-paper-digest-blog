@@ -69,7 +69,7 @@ hiddenInHomeList: true
 
 BIT框架的完整架构如图1所示，其数据流与组件功能如下：
 
-![BIT框架总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-0.png)
+![BIT框架总览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Lp1noMpMUG-0.png)
 
 图1：BIT框架示意图。 (A)展示了整体流程：来自Utah阵列的神经活动经过预训练神经编码器，再由MLP投影器送入音频LLM解码器，生成文本。训练使用交叉熵损失和对比损失。(B)详细展示了神经编码器的预训练与微调阶段：输入神经活动经线性嵌入和分块后，进入Transformer编码器；预训练阶段使用掩码重建损失，微调阶段使用CTC损失进行音素解码。(C)展示了端到端解码器的细节：神经编码器输出经MLP投影后，被当作“神经模态”或“音频模态”输入LLM，并与文本嵌入进行对齐。
 
@@ -147,7 +147,7 @@ BIT框架的完整架构如图1所示，其数据流与组件功能如下：
 
 - 预训练的收益：在想象语音任务（数据极少）上，预训练的收益远大于尝试语音。例如，BIT-All比从头训练（BIT-TFS）在T12想象语音上WER降低了约40%（见图2B）。跨物种预训练（BIT-All）优于单任务有监督预训练（BIT-Cross-Task-Only）。
 
-![预训练收益对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-3.png)
+![预训练收益对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Lp1noMpMUG-3.png)
 
 图2：BIT与基线模型在尝试和想象语音解码上的性能对比。 (A)尝试语音，预训练编码器（BIT-Human, BIT-All）在级联和端到端设置中均优于RNN和从头训练的Transformer（BIT-TFS）。(B)想象语音（50词词汇），预训练带来巨大增益，BIT-All表现最佳。
 
@@ -155,7 +155,7 @@ BIT框架的完整架构如图1所示，其数据流与组件功能如下：
 - 表征相似性分析（RSA）：如图4A所示，预训练编码器的神经嵌入与音频LLM文本嵌入的相似性，高于RNN和从头训练的Transformer，表明预训练有助于学习更接近语言结构的表征。
 - 嵌入对齐：如图4B-C所示，原始神经活动在PCA空间中，尝试语音与想象语音明显分离。而经过BIT处理后，两种任务的嵌入在语义空间（通过PCA可视化）中更加重合，表明模型学到了跨任务共享的语义表征。图4D的注意力权重可视化进一步证实了这一点。
 
-![跨任务泛化分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Lp1noMpMUG-8.jpg)
+![跨任务泛化分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Lp1noMpMUG-8.jpg)
 
 图4：BIT对齐尝试与想象语音的神经嵌入以实现跨任务泛化。 (A) 神经与文本嵌入的RSA分数。(B) 原始神经活动的PCA可视化，尝试与想象任务分离。(C) BIT输出嵌入的PCA可视化，两种任务嵌入更接近。(D) 交叉注意力投影器的权重，显示神经-文本对齐模式在两种任务中相似。
 

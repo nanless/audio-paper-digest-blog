@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 论文的整体架构图见下图，清晰地展示了GAPT方法的核心组件和数据流。
 
-![图1：GAPT方法概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-1.png)
+![图1：GAPT方法概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FXm5U16vxD-1.png)
 
 图1：GAPT方法概览图。左图展示了未经对抗训练的策略因奖励黑客导致多样性崩溃；右图展示了GAPT通过引入判别器提供对抗奖励，约束策略产生自然、多样且连贯的伴奏。
 
@@ -73,7 +73,7 @@ hiddenInHomeList: true
     - 阶段1（预热）：前200步，判别器按固定间隔（每5次PPO更新后更新1次）进行更新。
     - 阶段2（自适应）：之后，判别器仅在最近3次PPO更新的对抗奖励移动平均值超过阈值τ=1.0时才进行更新，否则保持冻结。这避免了判别器过快更新导致的策略梯度消失或不稳定。
 
-![图7：算法伪代码](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-6.png)
+![图7：算法伪代码](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FXm5U16vxD-6.png)
 
 图7：生成对抗后训练的算法伪代码，详细说明了上述训练流程。
 
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 | Exclude Rules (α=1, β=0, γ=1) | N/A | N/A |
 | Exclude Rules + Invalid Penalty | 0.488 | 25.072 |
 
-![图4：Pareto前沿与t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-3.png)
+![图4：Pareto前沿与t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FXm5U16vxD-3.png)
 
 图4：和谐度与多样性的Pareto前沿对比（a,b）及生成和弦的t-SNE可视化（c）。GAPT在(a)测试集和(b)留外数据集上均推动了Pareto前沿，在(c)中覆盖了更广的生成空间。
 
@@ -144,7 +144,7 @@ hiddenInHomeList: true
 
 图6：在与学习的旋律智能体交互（a）和真人用户会话（b）中，GAPT均实现了和谐度与多样性的更佳平衡。
 
-![图8：GAPT训练动态](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/FXm5U16vxD-9.png)
+![图8：GAPT训练动态](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/FXm5U16vxD-9.png)
 
 图8：GAPT训练过程中的指标变化：(a)总奖励，(b)对抗奖励，(c)判别器准确率，(d)判别器损失。显示训练过程稳定。
 

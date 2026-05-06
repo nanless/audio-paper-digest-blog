@@ -58,11 +58,11 @@ EmotionThinker是一个三阶段框架，旨在赋予SpeechLLM可解释的语音
 
 下图展示了EmotionThinker的整体框架和GRPO-PTR的细节。
 
-![EmotionThinker整体框架与GRPO-PTR策略示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-0.png)
+![EmotionThinker整体框架与GRPO-PTR策略示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/wbttgzp7MT-0.png)
 
 下图展示了EmotionCoT-35K数据集的构建流程。
 
-![EmotionCoT-35K数据构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-1.png)
+![EmotionCoT-35K数据构建流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/wbttgzp7MT-1.png)
 
 下图展示了传统情感识别与EmotionThinker推理的对比示例。
 
@@ -119,7 +119,7 @@ EmotionThinker是一个三阶段框架，旨在赋予SpeechLLM可解释的语音
 3.  通过SFT构建的EmotionThinker-Base在韵律感知上远超原始骨干模型。
 4.  案例分析表明，EmotionThinker能生成更准确、更贴合声学线索的推理过程，而其他模型可能产生表面或错误的解释。
 
-![不同模型的情感推理结果对比案例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/wbttgzp7MT-3.png)
+![不同模型的情感推理结果对比案例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/wbttgzp7MT-3.png)
 
 ### ⚖️ 评分理由
 

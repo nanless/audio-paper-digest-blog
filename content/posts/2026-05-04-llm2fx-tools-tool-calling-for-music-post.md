@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 LLM2Fx-Tools是一个端到端的自回归多模态生成框架。其核心架构是：音频编码器 + 音频-语言适配器 + 大语言模型（LLM）。
 
-![LLM2Fx-Tools框架概览](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-0.png)
+![LLM2Fx-Tools框架概览](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OyIJvyyB3R-0.png)
 
 图1展示了LLM2Fx-Tools的整体框架流程。输入包含用户指令、可用工具列表、参考音频以及经过Fx-Removal和Fx-Normalization预处理得到的伪干音频。模型输出包括链式思维（CoT）、工具调用序列（即FX-chain）和自然语言回复。生成的工具调用随后与音频效果模块环境结合，用于处理新音频。
 
@@ -118,7 +118,7 @@ LLM2Fx-Tools是一个端到端的自回归多模态生成框架。其核心架�
 
 主观听感测试（图4）：
 
-![MUSHRA主观听感测试结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OyIJvyyB3R-2.png)
+![MUSHRA主观听感测试结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OyIJvyyB3R-2.png)
 
 图4展示了MUSHRA听觉测试结果。LLM2Fx-Tools获得最高平均分（62.8），显著高于Gemini 2.5 Flash（56.5）、DeepAFX-ST（54.8）和No Fx基线（39.1）。有趣的是，MultiTask和Regression基线得分甚至低于No Fx，说明错误的效果器应用比不加效果更糟。
 

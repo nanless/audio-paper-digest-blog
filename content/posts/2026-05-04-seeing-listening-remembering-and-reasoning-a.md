@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 M3-Agent的架构由核心多模态大语言模型（MLLM）和外部实体中心多模态长期记忆数据库组成，并驱动两个并行工作流：记忆化（Memorization）与控制（Control）。
 
-![M3-Agent架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PMz29A7Muq-0.png)
+![M3-Agent架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PMz29A7Muq-0.png)
 
 图1：M3-Agent整体架构示意图。展示了感知环境（视频/音频）后，记忆化过程（左侧）如何通过工具提取人脸、语音身份，并生成情景与语义记忆更新长期记忆图。控制过程（右侧）如何接收指令，并利用MLLM进行多轮推理，通过搜索工具检索相关记忆来生成最终回答。
 
@@ -128,7 +128,7 @@ M3-Agent的架构由核心多模态大语言模型（MLLM）和外部实体中�
 
 消融实验结果：
 
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PMz29A7Muq-7.png)
+![消融实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PMz29A7Muq-7.png)
 
 图5：消融实验结果示意图。该图直观展示了不同消融设置对模型性能的影响。
 

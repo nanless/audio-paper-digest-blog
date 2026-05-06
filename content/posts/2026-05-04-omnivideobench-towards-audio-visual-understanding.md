@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 其“系统架构”体现在数据集构建和评估流程上，详见下图。
 
-![图2展示了数据集构建的完整流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-1.png)
+![图2展示了数据集构建的完整流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ItRYEe8E61-1.png)
 
 图2：数据集构建与精炼流程。该流程包含收集与标注、过滤（使用VLM和LLM）、以及人工精修三个阶段，最终产出带有推理链的问答对。
 
@@ -105,15 +105,15 @@ hiddenInHomeList: true
 2.  音乐理解是普遍短板：所有模型在包含音乐的视频上准确率显著低于包含语音或环境音的视频。
 3.  长视频理解仍有挑战：多数模型在超过10分钟的视频上性能有明显下降。
 
-![图5对比了不同模型在13种任务类型上的表现](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-0.png)
+![图5对比了不同模型在13种任务类型上的表现](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ItRYEe8E61-0.png)
 
 图5：模型在13种任务类型上的准确率对比。显示“背景与音乐理解”任务最困难，“关系推理”和“总结”任务相对容易。
 
-![图6分析了ASR转录对模型性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-5.png)
+![图6分析了ASR转录对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ItRYEe8E61-5.png)
 
 图6：不同输入条件下模型准确率对比。(a)显示“视觉+ASR文本”输入普遍优于“仅视觉”输入，但“视觉+音频”的联合模态处理能力不足；(b)显示ASR对音乐/声音类型视频帮助有限。
 
-![图7展示了不同帧数输入对模型性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ItRYEe8E61-6.png)
+![图7展示了不同帧数输入对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ItRYEe8E61-6.png)
 
 图7：模型性能随输入帧数变化的分析。(a)显示增加帧数可提升两个模型的性能；(b)显示这种提升在长视频上尤为明显。
 

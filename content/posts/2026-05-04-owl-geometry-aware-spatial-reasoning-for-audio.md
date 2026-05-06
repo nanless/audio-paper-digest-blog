@@ -52,7 +52,7 @@ hiddenInHomeList: true
 
 OWL是一个完整的空间音频问答系统，其架构（如图4所示）由三个主要部分串联而成，旨在将原始双耳波形转化为带有空间推理的文本输出。
 
-![OWL与SAGE模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zPv46YKv3w-0.png)
+![OWL与SAGE模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zPv46YKv3w-0.png)
 
 1.  空间声学几何编码器 (SAGE)：这是系统的感知核心，负责从双耳音频中提取几何感知的声学特征。它包含两个在训练时联合优化、但在推理时分离的模块：
     *   双耳音频编码器 (ϕ_a)：输入双耳波形 `B_r(t)`。首先进行特征提取，得到4通道输入张量（左右耳梅尔谱、相位差正弦/余弦）。然后通过一个12层Transformer编码器处理，输出包含空间和语义线索的嵌入 `h_a`。该编码器同时支持事件分类、DoA估计和距离预测三个任务。
@@ -110,15 +110,15 @@ OWL是一个完整的空间音频问答系统，其架构（如图4所示）由�
 | BAT | SpatialSoundQA | QA | - | - | - | - | - | 推理平均准确率76.89% |
 | OWL w/ CoT | SpatialSoundQA | QA | - | - | - | - | - | 推理平均准确率79.06% |
 
-![BiDepth数据集上的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zPv46YKv3w-1.png)
+![BiDepth数据集上的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zPv46YKv3w-1.png)
 
 图9（图9）：在BiDepth数据集上，OWL生成CoT推理示例。两个声源（Music和Electric Piano）均被正确识别并定位在接收者左侧。
 
-![定性结果可视化（上-下推理）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zPv46YKv3w-9.png)
+![定性结果可视化（上-下推理）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zPv46YKv3w-9.png)
 
 图10（图10）：OWL进行“下方声源”空间推理的定性结果。模型正确推理出两个声源（十二点和一点钟方向）均不在接收者下方。
 
-![定性结果可视化（前-后推理）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/zPv46YKv3w-10.png)
+![定性结果可视化（前-后推理）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/zPv46YKv3w-10.png)
 
 图11（图11）：在高混响环境中进行前后推理的定性结果。尽管对Waterfall的定位略有误差，但最终推理结论（两个声源均在后方）正确。
 

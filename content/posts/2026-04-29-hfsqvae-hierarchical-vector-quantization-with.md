@@ -51,7 +51,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 HFSQVAE的整体架构是一个两阶段的层次化系统，旨在分别处理输入数据（X）的低频和高频成分。
-![图1: HFSQVAE概览图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464408-0.jpg)
+![图1: HFSQVAE概览图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464408-0.jpg)
 架构流程与组件详解：
 1.  第一阶段（低频编码）：
     *   组件：编码器 E_L、码本 C_L（标准向量量化，子空间数M=1）、解码器 D_L。三者构成网络 F_L。
@@ -137,7 +137,7 @@ HFSQVAE的整体架构是一个两阶段的层次化系统，旨在分别处理�
     3.  交替训练策略至关重要。联合训练即使使用大码本（K_s=256）也性能下降，而交替训练则大幅提升，证明了其稳定训练和增强性能的作用。
 
 定性结果图：
-![图2: ImageNet (上) 与 UrbanSound8K (下) 重建定性结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464408-1.png)
+![图2: ImageNet (上) 与 UrbanSound8K (下) 重建定性结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464408-1.png)
 *   图2说明：HFSQVAE在视觉上能保留更锐利的细节和纹理。例如，第一行中HFSQVAE清晰地重建了鸟的羽毛纹理，而基线方法结果较模糊。
 
 ### ⚖️ 评分理由

@@ -52,7 +52,7 @@ hiddenInHomeList: true
 - 训练方式： 仅微调视觉适配器、音频适配器和嵌入层，冻结其他大部分权重。
 这种方法试图让模型自身学会判断回答时机，而非依赖外部ASR系统，其时间戳预测误差（MAE 0.52秒）显著优于Whisper-Streaming（MAE 0.83秒）。
 
-![Stream-Qwen-Omni与离线Qwen-Omni的结构对比示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-1.png)
+![Stream-Qwen-Omni与离线Qwen-Omni的结构对比示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/I3dPEvbp8o-1.png)
 
 图D.1：Stream-Qwen-Omni与离线Qwen-Omni的结构对比示意图。左侧为离线模型，一次性处理所有数据；右侧为流式模型，以1秒为单位分块处理，并在合适的时机生成答案。
 
@@ -113,7 +113,7 @@ Stream-Qwen-Omni在“何时回答”的时间戳预测上显著优于Whisper-St
 - 巨大性能差距： 最强的模型（GPT-4o）与人类基线在正确率上相差近30个百分点。
 - 静态 vs. 时序任务鸿沟（图3， 表C.3）： 所有模型在静态对象任务上表现尚可，但在需要时序推理的任务（如动作计数）上性能断崖式下跌，而人类表现稳定。
 
-![模型在静态任务与时序任务上的正确率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I3dPEvbp8o-2.png)
+![模型在静态任务与时序任务上的正确率对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/I3dPEvbp8o-2.png)
 
 图3：模型在静态任务与时序任务上的正确率对比。人类在两类任务上表现接近，而所有模型在时序任务上性能显著下降。
 

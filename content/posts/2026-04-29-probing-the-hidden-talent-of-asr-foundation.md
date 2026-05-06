@@ -59,14 +59,14 @@ hiddenInHomeList: true
 
 本文提出的框架如图1所示，主要分为特征提取和分类器训练两个阶段。
 
-![图1: 模型整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463232-0.png)
+![图1: 模型整体框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463232-0.png)
 
 1.  特征提取阶段：
     *   分块（Segmentation）：输入长音频首先被切分为固定长度（30秒）、有重叠（5秒）的音频块，以克服Whisper的输入长度限制。
     *   声学特征提取（Encoder）：每个音频块经STFT转换为梅尔频谱图后，输入Whisper的编码器。编码器输出的最后隐藏状态经过时序平均池化，得到每个音频块的声学向量。所有音频块的声学向量再次进行平均池化，得到全局声学表征 `v_enc`。
     *   语言学特征提取（Decoder）：为避免自回归解码的开销，采用“伪教师强制”策略：将每个音频块对应的转录文本（由教师模型Distil-Whisper生成）与固定前缀拼接，作为解码器的输入。解码器结合编码器的输出，生成最后隐藏状态，同样经过两级平均池化，得到全局语言学表征 `v_dec`。
     *   辅助特征提取：如图2所示，计算文本提示与转录文本的语义文本相似性（STS）分数，以及图像与转录文本的图像-文本对比性（ITC）分数。
-        ![图2: 辅助特征提取示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463232-0.png)
+        ![图2: 辅助特征提取示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463232-0.png)
 
 2.  分类器训练阶段：
     *   特征融合：将 `v_enc` 和 `v_dec` 拼接后，通过一个投影层映射到瓶颈特征空间，得到 `v_bnf`。
@@ -102,10 +102,10 @@ hiddenInHomeList: true
 1. 核心性能对比（表3）：
 （已在“核心摘要”中列出）
 
-![图3: 声学和语言学嵌入的t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463232-2.png)
+![图3: 声学和语言学嵌入的t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463232-2.png)
 图3关键结论：(a) Whisper的声学嵌入比wav2vec 2.0表现出更清晰的等级排列，说明其更好地保留了与评估相关的韵律和流畅度线索。(b) Whisper的语言学嵌入不仅保持了BERT的语义聚类，还显示出与分数相关的梯度，这可能得益于其以音频为条件的特性。
 
-![图4: ITC和STS分数与人工评分的相关性](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11463232-3.png)
+![图4: ITC和STS分数与人工评分的相关性](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11463232-3.png)
 图4关键结论：STS分数与整体质量（分数）和提示连贯性（相关性分数）的相关性更强；ITC分数则对识别离题或低质量样本（分数=1）非常有效。
 
 2. 消融实验与分析（表1， 表2）：

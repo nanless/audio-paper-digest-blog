@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 1.  整体框架：基准采用分层任务结构，旨在全面评估“音频4D智能”。其核心架构逻辑如下图所示，将评估分为“基础”和“整体”两大模块。
 
-![STAR-Bench任务框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Ts6j3GoZDE-0.png)
+![STAR-Bench任务框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Ts6j3GoZDE-0.png)
 
 图2：STAR-Bench数据示例。上方为基础声学感知任务，下方为整体时空推理任务（左：时间推理，右：空间推理）。
 
@@ -66,7 +66,7 @@ hiddenInHomeList: true
 
 4.  数据构建流水线架构：整体推理任务的数据构建遵循一个严格的四阶段流程，如下图所示。
 
-![数据标注流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Ts6j3GoZDE-2.png)
+![数据标注流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Ts6j3GoZDE-2.png)
 
 图5：STAR-Bench整体推理任务的四阶段数据标注流程。
 
@@ -122,11 +122,11 @@ hiddenInHomeList: true
 4.  空间推理普遍薄弱且受架构限制：所有模型在空间任务上表现较差。消融实验（图3）表明，这是由于多数模型预处理时将多声道音频混合为单声道，丢失了关键空间线索。将左右声道分开输入（Channel-wise）有一定改善，但仍受限于模型缺乏原生多声道处理能力。
 5.  模型输出不稳定：平均准确率（AA）与全对率（ACR）差距巨大（如Gemini 2.5 Pro AA 49.59% vs. ACR ~24.58%），表明模型预测在轻微输入扰动下极不稳定。
 
-![模型输出稳定性分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Ts6j3GoZDE-8.png)
+![模型输出稳定性分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Ts6j3GoZDE-8.png)
 
 图9：时间推理任务消融研究。随着任务简化（+全局描述，+完整音频），Gemini 2.5 Pro性能显著提升，而开源模型几乎无改善，暴露其在比较和整合多音频信息方面的根本缺陷。
 
-![时间与空间任务错误类型分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Ts6j3GoZDE-6.png)
+![时间与空间任务错误类型分布图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Ts6j3GoZDE-6.png)
 
 图6：模型在时间任务和空间任务上的错误类型分布。揭示了从开源到闭源模型，主要瓶颈从“知识-感知-推理”综合缺陷，转移到“细粒度感知”这一高阶挑战。
 

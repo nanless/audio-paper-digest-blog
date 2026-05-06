@@ -57,7 +57,7 @@ DGN的动态由一组离散迭代方程描述（公式5-8）：
 
 架构对比图：
 
-![论文图1，展示了标准LIF模型与提出的DGN模型的示意图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-11.png)
+![论文图1，展示了标准LIF模型与提出的DGN模型的示意图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5h741EyfQM-11.png)
 
 图1(a)显示了标准LIF模型，其膜电位衰减因子为固定常数`e^(-g_l ∆t)`。图1(b)展示了DGN模型，其衰减因子`ρ^t`是动态的，由输入驱动的电导`Σ C_i D_i^t`调节，形成了“双通路”调控结构：一条是电流注入通路（`W_i D_i`），另一条是动态电导通路（`C_i D_i`），共同实现自适应信息流控制。
 
@@ -65,7 +65,7 @@ DGN的动态由一组离散迭代方程描述（公式5-8）：
 
 功能类比：
 
-![论文图2，LSTM与DGN的门控结构对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-2.png)
+![论文图2，LSTM与DGN的门控结构对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5h741EyfQM-2.png)
 
 论文图2将DGN与LSTM进行了类比。DGN的自适应衰减系数`ρ^t`在功能上类似于LSTM的遗忘门（`f^t`），控制历史信息的保留程度；通过动态突触电流累积输入的机制则类似于输入门（`I^t`）。这种类比将生物启发的机制与人工神经网络中成熟的门控设计联系起来，强调了“门控”作为一种通用信息调控原则的重要性。
 
@@ -136,7 +136,7 @@ SHD数据集抗噪性能（准确率 %）
 
 论文图4进一步展示了在TIDIGITS上，前馈模型性能随扰动强度增加的变化趋势。
 
-![论文图4，不同模型在TIDIGITS数据集前馈网络下，面对不同强度扰动的性能变化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5h741EyfQM-8.png)
+![论文图4，不同模型在TIDIGITS数据集前馈网络下，面对不同强度扰动的性能变化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5h741EyfQM-8.png)
 
 图中可以看到，DGN（橙线）在各种扰动强度下均保持最高的准确率和最平缓的性能下降曲线。
 

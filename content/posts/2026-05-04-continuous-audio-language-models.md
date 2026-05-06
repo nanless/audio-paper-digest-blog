@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 CALM的整体架构如图1所示，主要包含三个核心组件，数据流如下：输入音频序列被预训练的VAE编码器转换为连续隐向量序列。在训练阶段，骨干Transformer处理的是被噪声污染的隐向量历史序列，以增强鲁棒性。短上下文Transformer则处理最近的几个干净隐向量。两者的输出相加，形成条件信号。这个条件信号被送入一致性模型头部，该头部是一个小型MLP网络，负责在给定当前噪声样本和条件信号的情况下，预测下一个干净的隐向量。在推理时，头部仅需一步即可从随机噪声生成下一个隐向量，最后由VAE解码器重建音频。
 
-![CALM模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-1.png)
+![CALM模型整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MFrJ3NzA5H-1.png)
 
 图1：CALM模型架构概览。展示了训练阶段的数据流：隐向量经过噪声混合后输入“Causal backbone transformer”，同时最近的干净隐向量输入“Causal short context transformer”。两者输出相加，条件化“Consistency head”（一个MLP）。推理时，头部直接从噪声样本ε生成下一个隐向量。
 
@@ -148,11 +148,11 @@ CALM的整体架构如图1所示，主要包含三个核心组件，数据流如
 | 无上述任意组件 | 8.38 ± 0.17 |
 结论：每个组件（尤其是短上下文Transformer）对最终性能都至关重要。
 
-![Head Batch Multiplier对收敛速度的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-8.png)
+![Head Batch Multiplier对收敛速度的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MFrJ3NzA5H-8.png)
 
 图：不同Head Batch Multiplier值下，音乐CALM模型的FAD指标随训练步数变化的曲线。更高的批处理乘数（如8）能显著加速收敛。
 
-![不同短上下文Transformer窗口K值对FAD的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/MFrJ3NzA5H-9.png)
+![不同短上下文Transformer窗口K值对FAD的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/MFrJ3NzA5H-9.png)
 
 表：不同短上下文Transformer上下文长度K经过500K步训练后的FAD值。K=10和20表现较好，但差异不巨大。
 

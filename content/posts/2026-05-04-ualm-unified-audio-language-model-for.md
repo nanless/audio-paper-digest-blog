@@ -63,7 +63,7 @@ UALM的架构以解码器Transformer（初始化自Qwen2.5-7B文本LLM）为核�
 
 统一建模： LLM的词表被扩展以包含音频编解码器的离散令牌。在训练时，模型的损失函数仅计算在输出令牌（无论是文本还是音频）上。一个音频帧的重要性被等同于一个文本令牌，其损失按令牌数（8）进行了缩放。通过序列打包（Sequence Packing）技术处理不同长度和模态的样本，稳定训练过程。
 
-![UALM架构概览与多模态预训练数据混合比例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TsdlOjcQNu-1.png)
+![UALM架构概览与多模态预训练数据混合比例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/TsdlOjcQNu-1.png)
 
 图2：UALM架构概览图。展示了从文本LLM扩展出音频输入（编码器-适配器）和输出（Codec令牌预测+增强VAE）的流程，以及多任务预训练的数据混合比例。
 
@@ -134,7 +134,7 @@ UALM的架构以解码器Transformer（初始化自Qwen2.5-7B文本LLM）为核�
 
 消融实验与分析：
 
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TsdlOjcQNu-0.png)
+![消融实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/TsdlOjcQNu-0.png)
 
 图5：消融实验结果。a) CFG权重对CLAP分数的影响；b) 数据量缩减对CLAP分数的影响；c) DPO训练是否先适应合成数据对损失的影响；d) DPO中是否加入交叉熵正则项对模型偏移的影响。
 
@@ -142,7 +142,7 @@ UALM的架构以解码器Transformer（初始化自Qwen2.5-7B文本LLM）为核�
 - 数据缩放（图5b）： 数据量缩减至1/32时，CLAP分数大幅下降并出现过拟合，证明了大规模数据对自回归生成模型至关重要。
 - DPO训练技巧（图5c，5d）： 直接对合成数据进行DPO会导致损失飙升和性能下降。必须先进行一个适应阶段（用交叉熵微调获胜样本），并在DPO损失中加入获胜样本的交叉熵项，以稳定训练。
 
-![音频理解与生成能力随训练步数变化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/TsdlOjcQNu-5.png)
+![音频理解与生成能力随训练步数变化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/TsdlOjcQNu-5.png)
 
 图6：统一预训练过程中，音频理解（a）和生成（b）能力随训练步数的变化。图中显示理解能力收敛远快于生成能力。
 

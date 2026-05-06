@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 模型整体架构（如图1所示）是一个基于扩散的、条件生成的框架，主要包含三个部分：语音与预期编码器、条件融合模块、扩散手势生成器。
 
-![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462581-0.png)
+![模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462581-0.png)
 图1：整体框架概览。语音令牌和一个预期令牌被输入到语音基础模型中，其输出通过交叉注意力指导一个扩散生成器，该生成器以手势前缀和噪声序列作为条件。
 
 1.  输入：语音信号（波形）、已观测的短时手势/面部表情前缀（`x_prefix`，1秒）、以及一个二元标签（指示当前段是否即将引发观众反应）。
@@ -139,7 +139,7 @@ hiddenInHomeList: true
 主要对比实验（表1）：
 论文在TED Talks和The Daily Show两个数据集上，与多个单说话人（CaMN, TalkSHOW, DiffSHEG, EMAGE）和文本到动作（MDM, DiP）基线模型进行了比较。指标包括手势真实度（FGD↓）、同步性（BC↑）、多样性（Diversity↑）以及面部动作误差（MSE↓, LVD↓）。
 
-![表1对比实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462581-0.png)
+![表1对比实验结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462581-0.png)
 表1：在TED Talks和The Daily Show数据集上的定量评估。改进的FGD分数表明本文模型生成的手势与真实值保真度更高，验证了观众线索在手势合成中的效用。
 
 关键结论：
@@ -150,7 +150,7 @@ hiddenInHomeList: true
 消融实验（表2）：
 针对预期令牌的融合策略进行了消融研究，测试了早期（Early）、中期（Mid）、晚期（Late）及其组合。
 
-![表2消融实验结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462581-0.png)
+![表2消融实验结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462581-0.png)
 表2：在TED Talks和The Daily Show数据集上，对预期令牌融合策略的消融研究。早期融合调制语音特征，中期融合充当控制信号，晚期融合调整手势生成。
 
 关键结论：

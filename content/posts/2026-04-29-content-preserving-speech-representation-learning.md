@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 论文提出的框架整体如图1所示，基于BYOL（Bootstrap Your Own Latent）式的自蒸馏框架。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462234-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462234-0.png)
 图1：提出的自监督微调框架整体架构（左）和基于SE的教师网络聚类与分割示意图（右）。
 
 - 整体流程：
@@ -169,7 +169,7 @@ hiddenInHomeList: true
 *   关键发现：本文方法提升了HuBERT和WavLM的聚类纯度（ClsPur），在WavLM上实现了最佳的音素归一化互信息（PNMI），表明学习到的表示与音素内容的相关性更强。
 
 图2：基于SE的分割可视化。
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462234-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462234-1.png)
 图2：基于SE的HuBERT特征聚类（下）与MFA音素边界（上）的叠加可视化。 红色虚线是MFA音素边界，不同颜色代表SE聚类分配的不同簇。关键结论：SE聚类产生的边界比音素边界更细，但与音素边界对齐良好，表明该方法能在无监督情况下有效捕捉底层内容结构。
 
 ### ⚖️ 评分理由

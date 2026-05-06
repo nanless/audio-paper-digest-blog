@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 论文提出的系统整体架构如 图1 所示，包含一个核心的语音大语言模型（SLLM）和两个关键的构建阶段。
 
-![图1: U-Align架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462223-10.png)
+![图1: U-Align架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462223-10.png)
 
 整体架构与组件：
 1.  语音编码器 (XLSR-Thai)：输入原始语音波形，输出连续的语音表示序列 `H = {h_i}`。它基于XLSR模型在大量泰语无标签数据上继续预训练得到，旨在提取丰富的声学和语言学特征。
@@ -153,13 +153,13 @@ hiddenInHomeList: true
     4.  最佳性能：最佳配置 XLSR-Thai + U-Align (DTW) 在IC、NER和ASR上取得最优，在SR上取得次优。
 
 图4: CER性能与计算成本比较
-![图4: 计算成本与性能对比图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462300-9.png)
+![图4: 计算成本与性能对比图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462300-9.png)
 *   横轴：计算量（×10^7 TFLOPs）。纵轴：ASR CER (%)。
 *   曲线：显示了U-Align和ASR-Based Alignment两条曲线。
 *   结论：在达到相同CER时，U-Align所需的计算量更少；在相同计算量下，U-Align能达到更低的CER。这定量证明了U-Align比传统ASR-based Alignment更具计算效率。
 
 图3: t-SNE可视化
-![图3: 嵌入空间t-SNE可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462300-2.png)
+![图3: 嵌入空间t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462300-2.png)
 *   可视化对象：文本嵌入（蓝色）、ASR-based Alignment后的语音嵌入（红色）、U-Align后的语音嵌入（绿色）。
 *   结论：U-Align生成的语音嵌入（绿色）与文本嵌入（蓝色）在空间中重叠度更高、更紧密，而ASR-based的语音嵌入（红色）则更为分散。这直观地证明了U-Align能更有效地将语音表示对齐到文本表示空间。
 

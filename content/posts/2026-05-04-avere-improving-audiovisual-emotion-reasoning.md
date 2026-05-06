@@ -74,7 +74,7 @@ AVEm-DPO 不改变基础模型的架构，而是通过修改训练目标来优�
     3.  文本先验去偏 (TPD)：在计算响应概率时，减去一个由纯语言模型骨干 π_{text} 计算的“文本先验”项。这惩罚了那些即使没有音视频输入也容易生成的响应，从而减少模型对文本共现模式的依赖，缓解幻觉。
     4.  训练实施：在基础模型的LLM骨干上附加 LoRA 模块进行高效微调。梯度只通过模型策略 π_θ，不通过参考策略 π_{ref} 和文本先验模型 π_{text}。
 
-![图4：AVEm-DPO中的两种偏好对构建示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-3.png)
+![图4：AVEm-DPO中的两种偏好对构建示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/td682AAuPr-3.png)
 
 关键设计选择与动机：
 *   引入多模态输入偏好：动机是防止 DPO 仅在文本响应层面优化，而忽略了多模态输入的一致性，导致模型对输入模态不敏感。
@@ -127,7 +127,7 @@ AVEm-DPO 不改变基础模型的架构，而是通过修改训练目标来优�
 | + Vista-DPO† | 72.4% | 87.8% | 52.1% | 73.6% | 86.7% | 76.9% |
 | + AVEm-DPO | 77.9% | 92.5% | 60.0% | 80.9% | 94.6% | 83.3% |
 
-![图5：AVEm-DPO对模型注意力分布和对抗鲁棒性的影响分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/td682AAuPr-4.png)
+![图5：AVEm-DPO对模型注意力分布和对抗鲁棒性的影响分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/td682AAuPr-4.png)
 
 关键结论：
 *   AVEm-DPO将“我们的基线”模型在EmoReAlM上的平均准确率从65.1%提升至83.3%，相对提升28%。

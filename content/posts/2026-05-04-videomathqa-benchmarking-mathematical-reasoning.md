@@ -45,7 +45,7 @@ hiddenInHomeList: true
 
 本文主要贡献是提出了一个评估基准（Benchmark），而非一个具体的端到端新模型。因此，其核心“架构”体现在其评估框架的设计上。该框架旨在全面测试现有视频多模态大语言模型（Video MLLMs）的数学推理能力。
 
-![VideoMathQA数据集概览与标注流程](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-0.png)
+![VideoMathQA数据集概览与标注流程](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/VI4kGUfPio-0.png)
 
 图2：VideoMathQA数据集概览。(a) 问题在不同数学概念上的分布及模型表现；(b) 视频时长分布；(c) 三阶段标注流程图。
 
@@ -116,11 +116,11 @@ hiddenInHomeList: true
 2.  闭源 vs. 开源：闭源模型整体领先，尤其是支持CoT的GPT-o4-mini（44.8%）表现突出。但部分优化过的开源大模型（如Qwen2.5-VL-72B）已超越某些闭源模型（如GPT-4o, 24.5%）。
 3.  字幕的增益：字幕一致性地提升模型性能，尤其对推理能力强的模型增益明显。例如，GPT-o4-mini从仅视频的42.1%提升至44.8%，Qwen2.5-VL-72B从24.5%提升至28.6%。
 
-![字幕与帧数影响分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-6.png)
+![字幕与帧数影响分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/VI4kGUfPio-6.png)
 
 图3：实验分析。(a) 不同视频时长下的模型表现（CoT MBin + Sub）；(b) 字幕在CoT评估中的影响；(c) 输入帧数对模型性能的影响（以Qwen2.5-VL为例）。
 
-![错误分析与难度分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/VI4kGUfPio-9.png)
+![错误分析与难度分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/VI4kGUfPio-9.png)
 
 图4：进一步分析。(a) 纯文本、单帧图像与视频模型的对比；(b) 问题难度对模型性能的影响；(c) 基于CoT评估的错误类型分析。
 

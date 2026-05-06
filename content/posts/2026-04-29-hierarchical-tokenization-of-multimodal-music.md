@@ -47,7 +47,7 @@ hiddenInHomeList: true
 
 整个系统分为两个主要部分：多模态音乐token（3MToken）的生成和基于此的生成式音乐推荐（3MTokenRec）。
 
-![图1: 系统概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461319-0.png)
+![图1: 系统概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461319-0.png)
 
 1. 3MToken生成流程：
    - 输入： 音乐的多模态原始数据，被分为九个类别：艺术家合作(AC)、基础元数据(BM)、语义标签(ST)、声音特征(SC)、音乐特征(MC)、发布信息(RI)、歌曲事实(SF)、艺术家传记(AB)、曲目消费模式(TC)。
@@ -118,7 +118,7 @@ hiddenInHomeList: true
 
 结论： 3MToken在所有k值和数据集上均显著优于基线（K-means， VQ-VAE），在k=5时提升最大（超过20%）。同时，其性能远超所有单模态模型，证明了多模态融合的有效性。
 
-![图2: 文本到音乐检索（T2MR）任务的基线对比与消融实验](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461319-1.png)
+![图2: 文本到音乐检索（T2MR）任务的基线对比与消融实验](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461319-1.png)
 
 图2(a) 基线对比分析（T2MR）：
 - 3MTokenRec (本文): 在所有k值上表现最佳且稳定，平均Precision最高。

@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 论文以AVISM [1] 为基线架构，ACVIS提出了针对性改进。整体架构为两阶段：音频中心物体定位器 和 物体跟踪器。
 
-![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462582-1.png)
+![图2: pdf-image-page3-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462582-1.png)
 *   整体架构图 (a)：清晰展示了数据流。
     1.  输入：视频帧和对应的音频片段。
     2.  编码器：视觉编码器（如ResNet-50）提取视觉特征 `f_V_t`，音频编码器（如VGGish）提取音频特征 `f_A_t`。
@@ -147,7 +147,7 @@ hiddenInHomeList: true
 *   结论：`K_max=2` 性能最佳，更大的值会导致性能下降。这符合数据集中发声对象数量通常较少（1或2个）的特点。
 
 定性结果
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462582-2.jpg)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462582-2.jpg)
 *   图3说明：展示了在不同音频场景下的定性比较。左列为基线AVISM的结果，右列为ACVIS的结果。可以观察到，在多人场景（如第一行）中，AVISM错误地分割了两个静默的人，而ACVIS正确地只分割出那个发声（说话）的人。在多声源场景（如第二行的吉他和单簧管）中，ACVIS能更好地分离和跟踪不同的发声对象，掩码粘连和身份互换现象减少。
 
 ### ⚖️ 评分理由

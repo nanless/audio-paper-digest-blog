@@ -55,11 +55,11 @@ hiddenInHomeList: true
 
 架构图引用：
 
-![AudioEventSet与AudioRelSet本体可视化及关系元数概念图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-1.png)
+![AudioEventSet与AudioRelSet本体可视化及关系元数概念图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LAYCYiIgZ1-1.png)
 
 图2展示了AudioEventSet（左）和AudioRelSet（中）的树状层级结构，以及关系“元数”（arity）的概念示意图（右），该概念用于连接关系与音频事件以生成音频。
 
-![文本-音频对生成流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-3.png)
+![文本-音频对生成流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LAYCYiIgZ1-3.png)
 
 图4详细说明了文本-音频对生成过程：从AudioRelSet中选取关系（如蕴含、亲近性），从AudioEventSet中选取事件（如奶牛哞叫），通过文本模板（5种）和事件实例化生成文本提示，同时合成符合关系的音频。
 
@@ -123,13 +123,13 @@ hiddenInHomeList: true
 
 不同设置下的模型性能分析图
 
-![零样本设置下不同模型在各类关系和元数上的mAMSR对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-5.png)
+![零样本设置下不同模型在各类关系和元数上的mAMSR对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LAYCYiIgZ1-5.png)
 
 图6：在零样本设置下，AudioGen在时间性、计数和感知性关系上表现相对较好，但所有模型在组合性关系和高元数关系上均表现不佳。
 
 图7：微调后，TangoFlux在大多数关系类别上成为最佳模型，但其在嵌套组合和高元数关系上的性能仍显不足。
 
-![mAMSR随训练数据规模的变化趋势](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LAYCYiIgZ1-7.png)
+![mAMSR随训练数据规模的变化趋势](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LAYCYiIgZ1-7.png)
 
 图8：微调策略在数据量增加到300小时时性能趋于饱和，而从头训练策略的性能随数据量增加持续提升。
 

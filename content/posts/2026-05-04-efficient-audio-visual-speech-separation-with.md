@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 Dolphin的整体流程如图1所示，包含五个主要组件：
 
-![Dolphin整体流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LaIkPfPu9K-4.png)
+![Dolphin整体流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LaIkPfPu9K-4.png)
 
 图1：Dolphin的整体流程图。视觉流V通过预训练视频编码器得到重建特征Vr和语义特征Vs。音频流A通过音频编码器得到特征X。Vr、Vs与X一同输入AVF模块进行融合，得到特征F。F随后送入分离器处理，最终由音频解码器还原为目标说话者信号Ŝ。
 
@@ -59,7 +59,7 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
     *   语义路径：在编码器输出Ze后，引入一个单步VQ模块，将其量化为离散的语义token Vs。VQ模块通过承诺损失（Lcommit）训练，迫使编码器输出与码本条目对齐。
     *   训练：通过重建损失（Lrecon）、基于AV-HuBERT的蒸馏损失（Ldistill）和VQ的承诺损失（Lcommit）联合优化，确保输出特征既可重建视频又与音频语义对齐。推理时，仅使用两条路径的编码器和VQ模块。
 
-![DP-LipCoder网络架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LaIkPfPu9K-5.png)
+![DP-LipCoder网络架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LaIkPfPu9K-5.png)
 
 图2：DP-LipCoder的网络架构图。展示了重建路径和语义路径的编码器-解码器结构，以及语义路径中AV-HuBERT教师模型指导和VQ模块的集成。
 
@@ -73,11 +73,11 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
         *   全局注意力（GA）块：内含粗粒度自注意力（CSA）。CSA层首先对输入进行下采样以降低序列长度，在低分辨率空间上应用多头自注意力（MHSA）来捕捉全局长程依赖，然后再上采样回原长度。这大幅降低了注意力机制的计算复杂度。
         *   局部注意力（LA）块：内含热扩散注意力（HDA）层。HDA层先将特征通过离散余弦变换（DCT）投影到伪频域（公式3），然后应用一个可学习的、基于热扩散方程的衰减函数（公式4）进行自适应平滑滤波，最后通过逆DCT（IDCT）变换回时域。这种设计用物理先验（热扩散）约束了滤波器的形状，使其能高效、低参数地建模多尺度局部特征。
 
-![分离器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LaIkPfPu9K-7.png)
+![分离器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LaIkPfPu9K-7.png)
 
 图3：分离器的架构图。展示了编码器-解码器结构，其中编码器每层包含两个GLA块和一个下采样层，解码器每层包含一个TDA块和三个GLA块。
 
-![GLA块详细架构](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LaIkPfPu9K-8.png)
+![GLA块详细架构](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LaIkPfPu9K-8.png)
 
 图4：分离器中GLA块的详细架构。(a) GA块，包含CSA层和FFN；(b) LA块，包含HDA层和FFN。详细展示了CSA中的下采样-注意力-上采样流程，以及HDA中的DCT-热扩散-逆DCT流程。
 
@@ -155,7 +155,7 @@ Dolphin的整体流程如图1所示，包含五个主要组件：
 - 复杂噪声场景（表9）：在环境噪声、音乐噪声及两者混合且伴有多个干扰说话人的四种极端场景下，Dolphin均显著优于IIANet和AV-Mossformer2。
 - 真实重叠语音主观评估（表10）：在真实辩论视频重叠语音上，Dolphin获得最高MOS分（3.86），远高于IIANet（2.24）和AV-Mossformer2（2.85）。
 
-![定性结果可视化：不同视频编码器的重建效果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/LaIkPfPu9K-9.png)
+![定性结果可视化：不同视频编码器的重建效果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/LaIkPfPu9K-9.png)
 
 图7（论文中图7）：不同视频编码器在LRS2训练集上的重建损失曲线。DP-LipCoder收敛最快且最终误差最低。
 

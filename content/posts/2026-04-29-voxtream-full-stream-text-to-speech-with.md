@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 VoXtream的架构（见图1）旨在实现从文本流到音频流的端到端、低延迟转换。它由三个核心Transformer模块组成，数据流如下：
 
-![VoXtream架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464944-0.png)
+![VoXtream架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464944-0.png)
 图1：VoXtream架构概览。输入文本流被增量地送入Phoneme Transformer（PT）。PT结合有限的未来音素（Look-Ahead）进行编码。其输出被送入时间Transformer（TT），TT联合预测语义令牌（来自Mimi编码器的第一码本）和时长令牌（包含“停留/切换”标志及发音速度信息）。TT的输出和语义令牌被送入深度Transformer（DT），DT结合说话人嵌入，自回归地生成剩余的声学令牌（来自Mimi编码器的第2-12码本）。最后，Mimi解码器将每帧的语义和声学令牌转换为波形。
 
 组件详解：

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 本文并非提出一个分离模型，而是提出一个评估指标框架（MAPSS）。其整体流程如图1所示，分为四个主要阶段：
 
-![MAPSS系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-0.png)
+![MAPSS系统流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZ5KmXsJsB-0.png)
 
 1.  阶段1：感知失真生成。对于混合物中的每个参考源信号，独立应用一个包含约60-70种基础失真（如陷波滤波、颤音、混响、硬削波等）的“失真库”，生成一组失真版本。这些失真旨在覆盖参考信号周围的感知听觉场。
 2.  阶段2：自监督编码。将所有参考信号、其失真版本以及所有系统的输出信号，独立输入到一个预训练的自监督模型中进行编码。对于语音任务使用wav2vec 2.0，对于音乐使用MERT模型。该阶段将时域波形转换为高维特征向量序列（如每秒75帧）。
@@ -64,7 +64,7 @@ hiddenInHomeList: true
 *   使用马氏距离：考虑了感知簇内数据点的分布（均值与协方差），比欧氏距离更能反映点与簇的统计关联性。
 *   PM中使用Gamma分布拟合：验证了失真点到参考点的马氏距离平方近似服从Gamma分布，从而可以利用Gamma分布的尾部概率来定义PM分数，具有概率解释。
 
-![PS与PM度量行为示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-2.png)
+![PS与PM度量行为示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZ5KmXsJsB-2.png)
 
 ### 💡 核心创新点
 
@@ -108,7 +108,7 @@ hiddenInHomeList: true
 4.  互补性分析：图2的归一化互信息（NMI）分析表明，随着阈值收紧（质量变差），PS和PM的NMI趋近于0，表明它们越来越互补，共同报告是有意义的。
 5.  稳健性与局限：对时间错位敏感（图8），超过20ms延迟后性能下降；对失真库覆盖有要求（表9），但PS的稳健性优于PM。
 
-![PS与PM指标与人类评分相关性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZ5KmXsJsB-1.png)
+![PS与PM指标与人类评分相关性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZ5KmXsJsB-1.png)
 
 上图显示了在SEBASS数据集的英语、西班牙语及两种音乐混合物场景下，PS、PM及多个主流客观指标与人类MOS的SRCC和PCC值。关键结论是PS和PM（下划线标出）在大部分列中位于前两名。
 

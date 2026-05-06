@@ -77,7 +77,7 @@ hiddenInHomeList: true
 
 相关架构图：
 
-![自回归音视频生成方法流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-1.png)
+![自回归音视频生成方法流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/U004uqALWl-1.png)
 
 该图展示了基线方法的整体架构。左侧是输入（发起者音视频、响应者参考图）。中间是核心生成流程：Qwen2.5-Omni Thinker进行多模态理解，随后Audio-Visual Generator（AR Transformer）进行Next-Chunk Prediction，同时输出粗视觉Token和音频Token。右下方的Visual Optimizer模块接收粗视觉Token，通过Spatial Transformer和Diffusion MLP生成高保真视频潜在特征，最后由VAE Decoder解码为视频。音频Token则由CosyVoice Decoder解码。
 
@@ -137,7 +137,7 @@ hiddenInHomeList: true
 
 定性结果：
 
-![定性结果示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U004uqALWl-3.png)
+![定性结果示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/U004uqALWl-3.png)
 
 该图展示了双人生成模型的定性结果。从左至右依次为：发起者的输入视频、响应者的参考图像、模型生成的音视频响应。生成的响应在表情、手势和唇形上与输入对话情境保持了一致性。
 

@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 AIDD的整体架构是一个两阶段的流程：音频tokenization 和 基于离散扩散的修复。其核心是将音频修复问题转化为一个离散token序列的填充（inpainting）问题。
 
-![AIDD方法概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9ZogqiyWXm-4.png)
+![AIDD方法概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/9ZogqiyWXm-4.png)
 
 （图1：AIDD方法框架图。展示了训练和推理流程。）
 
@@ -142,7 +142,7 @@ AIDD的整体架构是一个两阶段的流程：音频tokenization 和 基于�
 | AIDD | -2.303 ± 0.692 | -2.596 ± 1.300 |
 （关键结论：在MAESTRO的长间隙修复任务上，AIDD的ODG分数显著高于（即优于）所有GAN基线。在375ms间隙，AIDD领先第二名bin2bin-MIDI约0.5个ODG点；在750ms间隙，领先约0.38个点，且标准差较大，表明性能有波动。）
 
-![主观评估MOS结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9ZogqiyWXm-6.png)
+![主观评估MOS结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/9ZogqiyWXm-6.png)
 
 （表3：MAESTRO数据集上的主观平均意见得分（MOS）对比。AIDD（使用WavTokenizer）得分为3.64 ± 1.26，略高于CQT-Diff+和GACELA的3.51分。）
 

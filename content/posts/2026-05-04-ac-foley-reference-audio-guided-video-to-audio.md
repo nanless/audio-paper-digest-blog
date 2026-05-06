@@ -57,7 +57,7 @@ AC-Foley是一个多模态条件生成框架，其输入为无声视频序列、
 3.  条件生成：使用条件流匹配（CFM）模型（基于Transformer）在潜空间进行去噪。条件向量 `c` 通过自适应层归一化（adaLN） 调制生成过程的每一层，将控制信号注入生成网络。
 4.  解码：生成的潜变量通过VAE解码器恢复为梅尔频谱图，再通过预训练的声码器（BigVGAN）转换为最终波形。
 
-![AC-Foley系统总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-0.png)
+![AC-Foley系统总览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/URPXhnWdBF-0.png)
 
 图2：AC-Foley方法概览图。展示了视频、文本、参考音频三种模态如何通过各自编码器（CLIP， Synchformer， VAE）提取特征，并在多模态Transformer中通过条件向量`c`融合，以指导音频潜变量的生成。
 
@@ -66,7 +66,7 @@ AC-Foley是一个多模态条件生成框架，其输入为无声视频序列、
 - 多模态Transformer：主体是一个基于Transformer的去噪网络。输入是潜在音频表示，通过多模态条件向量 `c` 进行调制。论文未详细说明内部block数量，但指出使用了混合的多模态和单模态block（见附录B）。
 - 两阶段训练策略：这是解决“如何将参考音频适应到不同视频上下文”这一关键挑战的方法（详见下图）。
 
-![两阶段训练示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-4.png)
+![两阶段训练示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/URPXhnWdBF-4.png)
 
 图3：两阶段训练过程示意图。(a) 第一阶段（重叠条件）：从目标音频中随机采样重叠片段作为条件，学习声学特征提取。(b) 第二阶段（非重叠条件）：使用同一视频中非重叠的音频片段作为条件，迫使模型利用视频的声学自相似性进行泛化，而非简单复制。
 
@@ -121,7 +121,7 @@ AC-Foley是一个多模态条件生成框架，其输入为无声视频序列、
 - 两阶段训练：仅用“重叠”训练，FDPaSST为80.07；切换至“非重叠”训练后，FDPaSST大幅降至60.82（↓30.1%），MCD也从12.84降至11.30，证明了非重叠条件对泛化和特征利用的关键作用。完整两阶段训练进一步优化了时序同步（DeSync）。
 - 条件组件消融（表6）：移除音频（w/o. audio）导致FDPaSST和MCD显著恶化；移除同步特征（w/o. sync）严重破坏时序对齐（DeSync飙升至1.240）。证明各模态条件互补且必要。
 
-![消融实验与用户研究结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/URPXhnWdBF-6.png)
+![消融实验与用户研究结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/URPXhnWdBF-6.png)
 
 图4：定性结果展示。左图显示同一视频在不同参考音频（吉娃娃、大狗）控制下生成不同音色的狗叫；右图显示音色迁移和零样本文本控制生成。证明了模型按参考音频声学特性进行控制的能力。
 

@@ -79,7 +79,7 @@ hiddenInHomeList: true
 
 表3：不同说话人嵌入与规则结合的效果（引自论文Table 3，仅展示部分数据）
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462045-0.jpg)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462045-0.jpg)
 图2：不同条件下，每个语句中被规则改变的音素数量的分布。应用规则后（“British Speaker Embedding with Rules”曲线）分布明显向左偏移，表明更少的音素需要被再次改变，即规则保留度更高。
 
 5.  实际意义：为TTS系统提供了一种结合语言学知识与数据驱动模型的口音控制思路，PSR指标可为评估模型解耦能力提供新工具。
@@ -91,7 +91,7 @@ hiddenInHomeList: true
 
 本文并非提出一个新的TTS模型架构，而是设计了一个分析框架和实验流程，以研究现有TTS模型中规则与嵌入的交互。其核心流程如图1所示：
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462045-0.jpg)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462045-0.jpg)
 图1：合成与评估流程图
 
 1.  输入：规范化的英文文本。

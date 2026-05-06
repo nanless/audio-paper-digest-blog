@@ -78,7 +78,7 @@ hiddenInHomeList: true
 
 Lingometer系统采用管道式架构，包含三个核心组件，如图1所示。
 
-![图1：Lingometer系统概述](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462907-0.jpg)
+![图1：Lingometer系统概述](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462907-0.jpg)
 图1说明：用户首先通过一段简短语音进行注册。对于输入的日常音频流，特征提取器为输入语音和注册语音提取特征。PVAD模块识别出注册用户的语音片段，WCE模块则对这些片段进行帧级新词起始概率估计，最终求和得到总词数。
 
 1.  特征提取器：将输入音频转换为24维的log-Mel频谱图（窗口长度25ms，帧移10ms）。这是后续模块的统一输入。
@@ -113,7 +113,7 @@ Lingometer系统采用管道式架构，包含三个核心组件，如图1所示
     *   如何起作用：本文WCE模型被训练来直接预测每一帧是否为一个新词的起始。通过在帧级别学习丰富的语言学信息（词边界），模型能更直接地建模词数生成过程。求和操作也使其天然适应不同长度的输入。
     *   收益：在三个数据集上，该模型在精度（ERR更低）、模型紧凑性（参数少6.2倍）和计算效率（FLOPs低6.7倍）上全面超越了基于音节的基线方法（ALICE）。如图2所示，其预测词数与真实词数具有极高的线性相关性（r≥0.97）。
 
-![图2：预测词数与真实词数的皮尔逊相关系数](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462907-1.jpg)
+![图2：预测词数与真实词数的皮尔逊相关系数](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462907-1.jpg)
 图2说明：本文WCE模型在所有三个数据集（LibriSpeech, AMI, CHiME）上均实现了0.97以上的皮尔逊相关系数，表明预测高度准确和稳定，显著优于ALICE和SylNet-word。
 
 #

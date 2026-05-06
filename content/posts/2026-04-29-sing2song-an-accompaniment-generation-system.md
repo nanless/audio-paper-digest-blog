@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 Sing2Song是一个混合系统，其架构如图1所示，主要包含三个模块，数据流从输入的清唱音频开始，经过分析、生成、合成，最终输出立体声音乐。
 
-![图1: Sing2Song系统概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463633-0.png)
+![图1: Sing2Song系统概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463633-0.png)
 
 1.  音乐信息检索 (MIR) 模块：
     *   输入：单声道清唱音频。
@@ -147,10 +147,10 @@ Sing2Song是一个混合系统，其架构如图1所示，主要包含三个模�
 | Ours with replaced SVT | 3.902 3.625 3.792 3.578 3.579 3.695 | 3.510 3.479 3.585 |
 | Ours with replaced Structure | 3.897 3.630 3.776 3.573 3.561 3.687 | 3.790 3.665 3.417 |
 
-![图2: 伴奏质量SongEval评估对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463633-1.jpg)
-![图3: 伴奏质量MOS评估对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463633-2.jpg)
-![图4: 消融实验SongEval评估](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463633-3.jpg)
-![图5: 消融实验MOS评估](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463633-4.jpg)
+![图2: 伴奏质量SongEval评估对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463633-1.jpg)
+![图3: 伴奏质量MOS评估对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463633-2.jpg)
+![图4: 消融实验SongEval评估](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463633-3.jpg)
+![图5: 消融实验MOS评估](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463633-4.jpg)
 
 关键结论：
 1.  整体性能：Sing2Song在客观（SongEval）和主观（MOS）评价上均显著优于SingSong和FastSAG基线。其平均SongEval分数(3.714)甚至超过了高质量音乐分离数据集MUSDB18-HQ(3.658)，接近原始商业音乐的GT分数(3.739)。

@@ -57,7 +57,7 @@ hiddenInHomeList: true
 5.  小批量与异步更新：为了扩展到大规模问题，论文引入了异步更新机制，对采样点的时间补偿EMA更新（公式12，13），以保证在随机采样和小批量训练下权重和统计量的无偏估计。
 6.  训练：使用Adam优化器最小化上述综合损失函数。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461595-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461595-0.jpg)
 图1 展示了用于亥姆霍兹问题的物理信息神经网络架构。输入空间坐标，通过全连接网络得到声压预测。损失函数由加权的PDE残差和边界残差组成，其中权重w和全局缩放因子s由自适应模块动态计算。
 
 ### 💡 核心创新点
@@ -94,10 +94,10 @@ hiddenInHomeList: true
 | 原始PINN | 5.70 × 10⁻³ | 100% |
 | 改进PINN（本文） | 7.85 × 10⁻⁴ | 47.3% |
 
-![图2: pdf-image-page3-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461595-1.jpg)
+![图2: pdf-image-page3-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461595-1.jpg)
 图2 展示了二维问题的精确解与改进PINN预测解，视觉上吻合良好。
 
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461595-2.jpg)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461595-2.jpg)
 图3 展示了二维问题的预测误差统计分析，表明改进PINN的误差在幅值和不确定性上均显著低于原始PINN。
 
 表2：三维亥姆霍兹方程求解性能对比
@@ -106,10 +106,10 @@ hiddenInHomeList: true
 | 原始PINN | 8.02 × 10⁻³ | 100% |
 | 改进PINN（本文） | 9.55 × 10⁻⁴ | 50.7% |
 
-![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461595-3.jpg)
+![图4: pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461595-3.jpg)
 图4 展示了三维问题的精确解与改进PINN预测解，同样显示出高一致性。
 
-![图5: pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461595-4.jpg)
+![图5: pdf-image-page4-idx4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461595-4.jpg)
 图5 展示了三维问题的预测误差统计分析，进一步证实了改进方法在降低误差幅度和方差方面的优势。
 
 主要结论：

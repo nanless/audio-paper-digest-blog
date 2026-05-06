@@ -132,7 +132,7 @@ hiddenInHomeList: true
 *   音频特异性攻击策略：每个维度都设计了利用音频特有属性的攻击方法（如利用口音/情绪的公平性测试、利用环境声的隐私推断、利用语音克隆的认证攻击），这是区别于文本评估的核心。
 *   大规模人机结合评估：结合自动化评估的规模和人类验证的可靠性，试图在效率与信度之间取得平衡。
 
-![图5：AudioTrust 概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-4.png)
+![图5：AudioTrust 概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/E823AY0taq-4.png)
 
 （注：此为论文中“图5”的标识，对应附录中描述的Benchmark概览。根据论文描述，该图应展示了AudioTrust框架的整体设计理念或评估维度。）
 
@@ -203,11 +203,11 @@ hiddenInHomeList: true
     *   开源模型差异明显：OpenS2S在IVB上IRR达97%，但Step-Audio2仅37%。开源模型平均IRR约55%。
     *   提示策略有效：采用更严格的系统提示可普遍提升对语音克隆攻击的防御能力。
 
-![图2：AudioTrust 维度概览与初步排行榜](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-1.png)
+![图2：AudioTrust 维度概览与初步排行榜](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/E823AY0taq-1.png)
 
 （注：此图为论文“图2”。左侧（a）展示了AudioTrust的六大评估维度及26个子类别。右侧（b）展示了部分模型在六个维度上的初步性能分数雷达图，直观对比了不同模型在公平性、幻觉等维度的表现。）
 
-![图3：14个代表性ALLMs的六维可信度雷达图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/E823AY0taq-0.png)
+![图3：14个代表性ALLMs的六维可信度雷达图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/E823AY0taq-0.png)
 
 （注：此图为论文“图3”。它以雷达图形式可视化了14个模型在公平性(F)、幻觉(H)、安全性(S)、隐私(P)、鲁棒性(R)、认证(A)六个维度上的归一化得分，面积越大表示可信度越全面。）
 

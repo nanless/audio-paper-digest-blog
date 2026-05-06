@@ -69,7 +69,7 @@ hiddenInHomeList: true
 - 解码与输出：经过多级增强后，通过解码器估计出增强后的幅度掩膜（Magnitude Mask Decoder）和相位（Phase Decoder）。最后，将掩膜作用于估计的幅度谱，并与估计的相位结合，通过逆短时傅里叶变换（iSTFT）恢复为增强后的时域波形。
 - 关键设计动机：LSFB模块旨在通过联合幅度-相位处理来解决相位建模的频带异质性问题；GMCTB旨在用更高效、多尺度的方式替代部分Transformer时序建模；BCAM则旨在替代全局通道注意力，对不同频带进行差异化的特征强调。
 
-![模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460678-0.png)
+![模型架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460678-0.png)
 图1展示了完整的模型架构（a）以及关键模块LSFB（b）、GMCTB（c）和BCAM（d）的内部结构。从a图可以看出输入经过LSFB后，进入由GMCTB、Transformer和BCAM组成的多个级联处理阶段，最后分别解码出幅度掩膜和相位。
 
 #

@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本文并非传统的神经网络架构，而是将神经网络作为优化器（深度优化）来求解控制滤波器。核心系统模型与数据流如下图所示：
 
-![汽车声场重放系统示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461391-0.png)
+![汽车声场重放系统示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461391-0.png)
 图1：声场重放系统示意图。展示了从虚拟源通过控制滤波器，经过声学信道（房间冲激响应），最终在麦克风处合成声场的信号流。
 
 - 输入：多个虚拟声源的目标信号（或冲激响应）`d_s`。
@@ -61,7 +61,7 @@ hiddenInHomeList: true
 - 核心组件3：多位置联合优化：为了将听音区从单点扩展到区域，对`K`个不同位置（`k=1,...,K`）的声场分别应用PWD约束，并最小化所有位置损失之和`L(θ)`。神经网络（参数为`θ`）被用来直接生成整个控制滤波器`h_s(θ)`，通过反向传播最小化`L(θ)`来训练网络。
 - 输出：训练好的神经网络，其输出即为一个鲁棒的控制滤波器`h_opt_s`，该滤波器能在目标区域内所有位置产生符合要求的声场。
 
-![实验汽车座舱布置图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461391-1.png)
+![实验汽车座舱布置图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461391-1.png)
 图2：实验用汽车座舱布置图。展示了11个扬声器（包括低音、中音、高音和环绕声道）和用于测量的球形麦克风阵列(SMA)的位置。
 
 ### 💡 核心创新点
@@ -119,17 +119,17 @@ Table 1：客观评估结果（音质与空间定位）
 - Proposed (PWD+MP)：结合两者优势，达到最佳综合性能。
 
 空间功率图可视化：
-![不同方法在各位置的PWD估计空间功率图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461391-2.png)
+![不同方法在各位置的PWD估计空间功率图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461391-2.png)
 图3：不同方法在五个位置(LL, L, O, R, RR)的PWD估计空间功率图。
 - 结论：所提方法在所有位置都呈现出清晰、明亮的主对角线，表示成功重建了水平面内的平面波声场。而SPMnet仅在中心位置(O)有较清晰的主对角线，在其他位置则模糊，说明其空间鲁棒性差。
 
 空间定位相关性与角度关系：
-![不同位置SPM相关系数随角度的变化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461391-12.png)
+![不同位置SPM相关系数随角度的变化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461391-12.png)
 图6：(a) Pos O和(b) Avg位置的SPM相关系数随声源角度的变化。黑点标记在统计显著性检验中表现最佳的方法。
 - 结论：平均相关系数(Avg Corr.)能更好地反映主观感受。SPMnet和+PWD在侧窗和后方头枕方向(30°-60°, 150°-210°)性能下降明显，而+MP和Proposed方法有效改善了这些区域的性能。
 
 主观实验结果：
-![主观评估小提琴图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461391-13.png)
+![主观评估小提琴图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461391-13.png)
 图4：主观评估结果小提琴图。(a) 音质，(b) 空间定位。
 - 结论：主观听测结果与客观指标一致。在音质和空间定位两项评分中，Proposed方法得分最高，其次是+MP，SPMnet和+PWD得分较低且相近，锚点(Anchor)得分最低。统计分析证实Proposed方法具有显著优势。
 

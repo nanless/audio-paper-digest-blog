@@ -89,11 +89,11 @@ NExT-OMNI是一个端到端的全模态统一模型，其核心思想是用离�
 
 架构图引用：
 
-![NExT-OMNI框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/odatOcBi61-0.png)
+![NExT-OMNI框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/odatOcBi61-0.png)
 
 描述：该图展示了NExT-OMNI的整体框架，体现了其作为统一全模态模型的能力，包括对文本、图像、音频的任意到任意理解、生成与检索任务，并通过统一表征和并行处理实现高效响应。
 
-![NExT-OMNI流水线图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/odatOcBi61-1.png)
+![NExT-OMNI流水线图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/odatOcBi61-1.png)
 
 描述：该图详细展示了NExT-OMNI的技术流水线。左侧显示了各模态编码器和分词器将输入转换为统一表征；中间是基于DFM的统一建模主干，通过多模态自注意力进行深度融合；右侧为生成（从`x_t`到`x_1`的流采样）和检索任务。训练使用了重建损失和交叉熵损失。
 

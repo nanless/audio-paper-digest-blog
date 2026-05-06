@@ -52,7 +52,7 @@ hiddenInHomeList: true
     *   输入：同时处理两个通道：通道0（c0，通常信噪比最高） 和波束成形后的单通道（cx）。
     *   流程：两个通道的音频分别通过共享权重的Conformer编码器和A->T投影层，产生两组音频嵌入。这两组嵌入以交错的方式与文本嵌入一起输入LLM解码器。这种设计使模型能够从原始多通道音频中捕获空间线索。
 
-    ![MC WearLlama与SC WearLlama推理流程对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-1.png)
+    ![MC WearLlama与SC WearLlama推理流程对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/QpaNErg7ug-1.png)
 
     图2（来自论文）：展示了SC WearLlama仅处理波束成形通道（cx），而MC WearLlama同时处理通道0（c0）和波束成形通道（cx）并交错输入LLM的架构区别。
 
@@ -103,7 +103,7 @@ hiddenInHomeList: true
 
 图3：声学环境对模型性能的影响（Turn-based任务）
 
-![声学环境对模型性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/QpaNErg7ug-0.png)
+![声学环境对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/QpaNErg7ug-0.png)
 
 图3（来自论文）：展示了不同模型在室内/室外、安静/嘈杂环境下的准确率对比。关键结论：1）大多数模型在户外和嘈杂环境下性能下降；2）Gemini 2.5 Flash Thinking表现出极强的噪声鲁棒性；3）MC WearLlama在户外嘈杂环境下的鲁棒性显著优于SC WearLlama。
 

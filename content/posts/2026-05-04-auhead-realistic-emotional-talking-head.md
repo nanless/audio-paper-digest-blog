@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 本论文提出了一个两阶段框架AUHead，旨在实现可控的、情感丰富的话者头部视频生成。其整体架构如图2所示。
 
-![AUHead两阶段框架总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-1.png)
+![AUHead两阶段框架总览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dmzlAUkulz-1.png)
 
 (图2：AUHead框架总览。Stage 1利用ALM从音频生成AU序列；Stage 2利用AU驱动的扩散模型合成视频。)
 
@@ -86,7 +86,7 @@ hiddenInHomeList: true
     3.  AU-视觉交互：在预训练扩散模型的UNet中插入由多个跨注意力层组成的AU适配器。在每个去噪步骤和空间分辨率上，视觉潜在变量`z_t`（Query）通过交叉注意力关注AU嵌入`c_{AU}`（Key/Value），从而实现AU条件对生成过程的精细化控制。
 *   推理时控制：引入了一种解耦引导策略，允许独立调节AU引导强度（`s_{AU}`）和其他条件（如音频、运动先验）的引导强度（`s_{H}`），以平衡情感表达控制与整体视频质量。
 
-![AU驱动可控生成阶段架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-6.png)
+![AU驱动可控生成阶段架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dmzlAUkulz-6.png)
 
 (图7：定性结果展示。展示了AUHead在不同视觉风格（素描、油画、真实人脸）下生成10秒长视频的时序一致性与泛化能力。)
 
@@ -141,13 +141,13 @@ hiddenInHomeList: true
 1.  Stage 1 CoT策略有效性（表1）：“先情感后AU”策略的AU预测精度（F1=0.69）和情感准确率（67.01%）显著优于其他组合。
 2.  Stage 2 AU表示形式（表2）：使用2D表示（LMK或RoM）比1D AU序列在几乎所有指标上都有提升，尤其是在FID和LMD上。
 
-![不同AU引导尺度下的消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-2.png)
+![不同AU引导尺度下的消融实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dmzlAUkulz-2.png)
 
 (图3：AU引导尺度消融实验。展示了FID、情感准确率（ACCemo）和MAE随`AU CFG scale`的变化趋势，星号标记了最佳平衡点。)
 
 定性比较：图4和图11展示了与AniPortrait, Echomimic, HalloV1, MEMO等方法的定性对比。AUHead生成的结果在表情生动性（如眉毛运动、眼神）和纹理清晰度上具有优势，减少了模糊和形变伪影。
 
-![定性结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dmzlAUkulz-3.png)
+![定性结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dmzlAUkulz-3.png)
 
 (图4：在MEAD和CREMA数据集上与SOTA方法的定性比较，标注了基线方法常见问题（牙齿异常、模糊、表情平淡）。)
 

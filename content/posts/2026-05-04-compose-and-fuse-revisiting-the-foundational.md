@@ -67,7 +67,7 @@ hiddenInHomeList: true
     -   规则始终为文本：确保推理规则本身不引入模态差异，只改变事实的分布。
     -   控制视觉和音频的复杂度：使用简单的图表和清晰的TTS，确保感知准确，使瓶颈更可能出现在整合阶段。
 
-![图1：论文中的多模态逻辑推理设置与评估流程示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oIvIsK5AwB-7.jpg)
+![图1：论文中的多模态逻辑推理设置与评估流程示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oIvIsK5AwB-7.jpg)
 
 图1展示了从逻辑推理示例（a）、三种模态渲染（b）到评估提示模式（c）的整体流程，清晰地呈现了该框架的控制变量设计思路。
 
@@ -147,11 +147,11 @@ hiddenInHomeList: true
 
 内部探针与干预实验结果：
 
-![图2：注意力探针与推理性能分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oIvIsK5AwB-1.png)
+![图2：注意力探针与推理性能分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oIvIsK5AwB-1.png)
 
 图2(a)显示模型注意力模式对“信息有用性”的识别准确率中等（60-80%），表明模型难以仅靠注意力区分相关事实。图2(b)显示，在“独立”设置下，模型在事实识别和文本推理上表现优异，但在联合多模态推理（MM）上性能骤降，证实了任务组合瓶颈。两步提示法（Two-Step Prompt）显著恢复了性能。
 
-![图3：基于注意力的模态探针与干预](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oIvIsK5AwB-0.png)
+![图3：基于注意力的模态探针与干预](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oIvIsK5AwB-0.png)
 
 图3(a)显示模型能近乎完美地通过注意力模式识别输入事实的模态（视觉、听觉、文本）。图3(b)的线性探针权重图（以Qwen为例）表明，模态信息主要编码在前四个解码层。图3(c)显示，仅调整这前四个层的注意力温度（从0.4到1.8）即可大幅提升推理准确率，而调整中后期层无效，证实了早期融合引入偏差的融合瓶颈。
 

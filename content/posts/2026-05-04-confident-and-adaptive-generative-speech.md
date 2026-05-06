@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 本文提出的不是一个端到端的新模型，而是一个插件式的自适应选择框架，它作用于现有“ASR -> N-best列表 -> LLM纠错”流程中的第二步。
 
-![方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ck5T7QeiDh-2.png)
+![方法示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ck5T7QeiDh-2.png)
 
 图1(b)：标准GER（固定5个假设）与本文自适应GER方法对比示意图。自适应方法根据风险控制动态选择不同大小的假设集。
 
@@ -111,7 +111,7 @@ hiddenInHomeList: true
 
 表1 (论文Table 1) 主要实验结果。本文方法在显著减少假设集使用量的同时，性能与固定5假设集的GER基线相当或略有提升。
 
-![性能-计算权衡图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ck5T7QeiDh-7.png)
+![性能-计算权衡图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ck5T7QeiDh-7.png)
 
 图2：不同数据集上WER与平均假设集大小的关系图。横线代表Oracle性能。本文方法的工作点（彩色标记）始终位于固定假设集大小曲线的左下方，表明更优的性能-计算权衡。
 

@@ -48,7 +48,7 @@ hiddenInHomeList: true
 4.  特征融合与输出：所有卷积头的输出在通道维度上拼接，然后通过一个融合模块（Mixup Conv）进行交互。该模块是一个带有残差连接的1D卷积（核大小为3），其作用是让不同尺度的特征能够相互融合，学习跨尺度的组合模式。最后，通过一个投影上采样层（Proj Up）将特征维度恢复回原始D。
 5.  整体数据流：`输入音频 -> SSL骨干特征提取 -> 在每个Transformer层的MHSA后并行插入MultiConvAdapter -> 最终特征送入AASIST分类器进行二分类判断`。
 
-![pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462905-0.png)
+![pdf-image-page1-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462905-0.png)
 
 图1展示了不同PEFT方法的“可训练参数 vs EER%”权衡曲线，突出显示了MultiConvAdapter在极低参数下取得最优EER的定位。
 图2（论文中提及但未提供URL）展示了MultiConvAdapter模块在Transformer块中的具体位置及其内部结构，包括并行的1D深度卷积、Mixup Conv融合层以及投影层。
@@ -133,7 +133,7 @@ hiddenInHomeList: true
 
 关键发现：Mixup Conv融合显著优于其他聚合策略；适配器放在MHSA之后效果最佳。
 
-![pdf-image-page1-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462905-0.png)
+![pdf-image-page1-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462905-0.png)
 此图（论文中的图1）直观展示了MultiConvAdapter在参数-EER权衡上的优势：它位于曲线的左下角区域，意味着在参数极少的条件下达到了最低的EER。
 
 ### ⚖️ 评分理由

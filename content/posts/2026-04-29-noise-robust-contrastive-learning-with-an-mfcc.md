@@ -75,7 +75,7 @@ hiddenInHomeList: true
     *   每个主要子层（FFN, MHSA, 卷积模块）前后都有层归一化（Pre-LN）和残差连接。在注意力和卷积子层前应用层归一化，在FFN路径中使用Dropout（比率0.2903）。
 5.  聚合与分类：最后一个Conformer块的输出经过自适应平均池化，得到一个固定长度的嵌入向量。该向量被送入一个浅层MLP分类器（一个隐藏层 + ReLU + Dropout）输出最终的CAD/正常预测概率。
 
-![模型架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462216-0.png)
+![模型架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462216-0.png)
 图1：展示了听诊器上的HM（上）和NM（下）信号示例，其中受噪声污染的段落（红色高亮）在所有通道的下游任务中被剔除。这直观说明了噪声段拒绝算法的工作效果。
 
 关键设计选择及���机：

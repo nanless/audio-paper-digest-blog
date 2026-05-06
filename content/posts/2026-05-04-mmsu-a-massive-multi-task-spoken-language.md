@@ -66,7 +66,7 @@ MMSU的评估框架采用三层级结构（如图1和图2所示）：
 
 评估流程是标准化的：每个实例由一段音频和一个问题组成，模型需要从四个选项（A-D）中选择一个答案。为避免位置偏差，选项顺序随机化。所有模型使用相同的优化指令提示进行评估。
 
-![MMSU基准概览：展示了其三个主要特征——精细的声学特征、专家指导的数据创建、涵盖47个感知与推理任务的综合多任务体系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yHzCDP1tXw-0.png)
+![MMSU基准概览：展示了其三个主要特征——精细的声学特征、专家指导的数据创建、涵盖47个感知与推理任务的综合多任务体系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yHzCDP1tXw-0.png)
 
 图1：MMSU基准概览图，展示了其三大特征及任务示例。
 
@@ -99,7 +99,7 @@ MMSU的评估框架采用三层级结构（如图1和图2所示）：
 
 任务特定性能分析（图4）：
 
-![六个代表性模型在47个任务上的准确率分布，分为(a)感知相关任务和(b)推理相关任务](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yHzCDP1tXw-8.png)
+![六个代表性模型在47个任务上的准确率分布，分为(a)感知相关任务和(b)推理相关任务](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yHzCDP1tXw-8.png)
 
 图4：不同模型在感知和推理各类任务上的准确率分布热力图，揭示了模型在不同任务上的能力差异。
 - 模型在诸如近音感知、辅元音感知、音节感知等语音学感知任务上普遍表现很差。
@@ -108,7 +108,7 @@ MMSU的评估框架采用三层级结构（如图1和图2所示）：
 
 噪声条件下的性能（图5a）：
 
-![在不同噪声强度下模型性能的对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yHzCDP1tXw-4.png)
+![在不同噪声强度下模型性能的对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yHzCDP1tXw-4.png)
 
 图5(a)：噪声实验对比图。向音频输入中添加高斯噪声，结果显示所有模型性能仅有小幅下降，表明模型确实在利用声学信号。
 - 在添加噪声后，模型性能下降幅度有限，证实模型并非仅依赖文本或统计偏差。
@@ -118,7 +118,7 @@ MMSU的评估框架采用三层级结构（如图1和图2所示）：
 
 数据分布（图6）：
 
-![47个任务的数据量分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yHzCDP1tXw-5.png)
+![47个任务的数据量分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yHzCDP1tXw-5.png)
 
 图6：MMSU数据集中每个任务的数据量分布柱状图，显示数据分布均衡。
 

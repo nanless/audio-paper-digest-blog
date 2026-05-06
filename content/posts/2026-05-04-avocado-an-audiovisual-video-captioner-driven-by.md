@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 AVoCaDO 的核心是在现有的音频视觉大语言模型 Qwen2.5-Omni-7B 基础上，通过一个精心设计的两阶段后训练流水线进行增强，使其专注于生成高质量的音视频描述。
 
-![AVoCaDO 音视频描述生成两阶段数据构建流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/vjEl1PuIDE-1.png)
+![AVoCaDO 音视频描述生成两阶段数据构建流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/vjEl1PuIDE-1.png)
 
 图2：高音质、时序对齐的音视频视频描述构建流程。此图清晰地展示了用于生成SFT训练数据的两阶段策略：首先使用Gemini分别生成视频帧描述和音频描述，然后将两者融合为时序连贯的多模态描述，最后通过质量检查器进行过滤。
 
@@ -133,7 +133,7 @@ AVoCaDO 的模型架构本身继承自 Qwen2.5-Omni，其核心创新在于后�
 在纯视觉设置下的竞争性表现：
 在 VDC Detailed 和 DREAM-1K 这两个评估纯视觉描述的基准上，AVoCaDO 也表现出色（表3），在 VDC Detailed 子集上准确率（Acc）达到 47.4%，DREAM-1K 上 F1 分数达到 35.9%，优于 Qwen2.5-Omni 等模型。
 
-![GRPO训练阶段三个奖励函数的变化曲线图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/vjEl1PuIDE-0.png)
+![GRPO训练阶段三个奖励函数的变化曲线图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/vjEl1PuIDE-0.png)
 
 图7：AVoCaDO-GRPO阶段训练过程中三个奖励函数的演变曲线。该图显示，清单奖励和对话奖励稳步上升并趋于收敛，长度奖励偶尔的急剧下降表明模型在处理难样本时的不稳定，但整体最小值在提升，表明生成稳定性在改善。
 

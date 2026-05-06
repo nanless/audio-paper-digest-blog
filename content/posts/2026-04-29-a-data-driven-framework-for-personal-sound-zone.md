@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 本文提出一个两阶段的端到端框架，整体架构如图1所示。
 
-![图1: 论文提出的两阶段数据驱动个人声区控制框架总体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460935-0.png)
+![图1: 论文提出的两阶段数据驱动个人声区控制框架总体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460935-0.png)
 
 第一阶段：系统辨识（训练前向模型）
 - 目标：学习一个能准确模拟真实物理声场的非线性前向模型 $\hat{\mathbf{H}}$。
@@ -136,9 +136,9 @@ hiddenInHomeList: true
 
 图表分析：
 - 图3（SPL对比）：展示了最佳控制器（Linear+WaveNet）与基线VAST的声压级对比。在暗区（DZ），该控制器在200-2000 Hz频段实现了显著的声压级降低，这正是小型扬声器非线性失真最严重的区域，验证了方法针对性。
-  ![图3: 测量SPL对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460935-2.jpg)
+  ![图3: 测量SPL对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460935-2.jpg)
 - 图4（驱动信号波形）：比较了Linear+WaveNet控制器与VAST为扬声器3生成的驱动信号。两者波形差异细微，表明非线性控制器产生的信号主体仍是线性分量，叠加了较小的非线性预失真分量以补偿扬声器失真。
-  ![图4: 扬声器3的驱动信号波形对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460935-3.jpg)
+  ![图4: 扬声器3的驱动信号波形对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460935-3.jpg)
 
 ### ⚖️ 评分理由
 

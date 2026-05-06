@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 PrismAudio的整体框架分为三个主要阶段，建立在一个基于流匹配的多模态扩散Transformer音频基础模型之上。
 
-![PrismAudio框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cIfDKEbAky-0.png)
+![PrismAudio框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cIfDKEbAky-0.png)
 
 图1：PrismAudio框架概览图。左侧面板展示了CoT训练数据的构建过程：使用Gemini 2.5 Pro为视频生成四维CoT描述，然后微调VideoLLaMA2以从静音视频生成这些CoT。右侧面板展示了Fast-GRPO多维CoT-RL训练框架：使用生成的候选音频计算四维奖励，通过组相对优势更新音频模型。
 

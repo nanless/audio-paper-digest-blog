@@ -73,7 +73,7 @@ hiddenInHomeList: true
 *   两阶段处理（先算LIR再重建3D）：动机是避免对超长TSP时域信号直接进行三维重建，因计算量过大。预先计算LIR将问题转化为对频域数据的处理，大大减少了需要重建的数据维度。
 *   球谐域重建：选择SH-AOT而非直接的层析反投影，是因为球谐函数是描述球面波传播的自然基函数，能更好地结合声场的物理模型（Helmholtz方程），理论上重建更准确、稳定。
 
-![图1: 实验装置示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463273-0.jpg)
+![图1: 实验装置示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463273-0.jpg)
 （图1展示了PPSI测量（a）和麦克风阵列测量（b）的实验装置。PPSI通过旋转声源实现多方向测量，麦克风阵列则进行扫描式测量，两者最终都用于获取声场信息。）
 
 ### 💡 核心创新点
@@ -102,16 +102,16 @@ hiddenInHomeList: true
 
 主要验证结果：
 1.  二维切片对比（定性验证）：图2展示了在x=0平面上，由PPSI重建的IR（a）与麦克风阵列测量的IR（b）对比。结论是两者显示出相似的声辐射模式，且PPSI由于像素间距更小（1.08 mm），波前表示更平滑。
-![图2: x=0切面IR对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463273-1.jpg)
+![图2: x=0切面IR对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463273-1.jpg)
 
 2.  单点定量对比：图3展示了坐标为(0, 0, 0.025)处的IR波形（a）和振幅谱（b）。
     *   波形：PPSI与麦克风测量的幅度接近，但PPSI波形在高频段更圆滑，缺少细节。
     *   频谱：PPSI在高频段（>~10kHz）幅度略有下降，在低频段（<~500Hz）幅度下降明显。
     *   结论：重建在主要频段成功，但高频受限于M阶截断，低频受限于PPSI光学测量原理。
-![图3: 单点IR及频谱对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463273-2.png)
+![图3: 单点IR及频谱对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463273-2.png)
 
 3.  三维可视化展示：图4展示了在t=3.45 ms时刻的三维IR重建结果（切片图a和点云图b）。清晰地显示了声波以平滑球壳状向外辐射。
-![图4: 三维IR可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463273-3.png)
+![图4: 三维IR可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463273-3.png)
 
 主要定量结果：论文未提供如均方误差、相关系数等定量评价指标的具体数值。验证主要基于视觉对比和波形/频谱的定性比较。
 

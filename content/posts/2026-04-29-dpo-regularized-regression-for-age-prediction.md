@@ -67,10 +67,10 @@ hiddenInHomeList: true
     - 训练阶段：前向传播得到连续年龄预测（ŷ）和桶logits（z）。计算MSE损失（L_MSE）用于回归头，以及DPO损失（L_DPO）和可选的交叉熵损失（L_CE）用于分类头。总损失为L_total = L_MSE + λ  L_DPO + γ  L_CE。反向传播更新共享编码器和两个头的参数。
     - 推理阶段：丢弃分类头，仅使用共享编码器和回归头，输出最终的连续年龄预测值。
 
-![图1: 模型训练架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464355-0.png)
+![图1: 模型训练架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464355-0.png)
 图1清晰地展示了该架构：特征提取器（虚线框内的“regression model”）的输出送入共享MLP，随后分支出回归头（预测年龄）和分类头（预测桶概率）。训练时，MSE损失作用于回归输出，DPO和CE损失作用于分类头的logits。分类头仅在训练时使用。
 
-![图2: 年龄桶划分策略](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464355-1.png)
+![图2: 年龄桶划分策略](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464355-1.png)
 图2展示了基于分位数的年龄范围划分策略。将总年龄范围（a_min, a_max）根据数据分布划分为N个桶，每个桶有一个代表值r(i)。这确保了每个桶在训练数据中有大致相等的样本量，尤其适用于年龄分布不平衡的数据集。
 
 ### 💡 核心创新点
@@ -125,7 +125,7 @@ hiddenInHomeList: true
 可以看出，DPO在年龄较大、预测难度更高的群体（50-60岁）上带来了最显著的MAE改善（降低0.534）和精确度提升（0.818 -> 0.909），这验证了作者关于DPO在误差方差较大区间更有效的假设。
 
 相关图表：
-![图3: MAE随桶数和偏好对数量变化趋势](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464355-2.png)
+![图3: MAE随桶数和偏好对数量变化趋势](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464355-2.png)
 图3(a)展示了RD配置下，MAE随桶数变化的趋势（在12桶时达到最优）。图3(b)展示了RCD配置下，MAE随偏好对数量增加而改善的趋势（至30对）。
 
 ### ⚖️ 评分理由

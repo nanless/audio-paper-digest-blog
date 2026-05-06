@@ -41,13 +41,13 @@ PicoAudio2旨在解决当前可控文本到音频（TTA）生成模型在音频�
 
 PicoAudio2的整体架构（如图2所示）基于扩散Transformer（DiT），旨在将文本语义和细粒度的时间控制信息融合，生成高质量的音频。
 
-![图2: PicoAudio2框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464472-1.png)
+![图2: PicoAudio2框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464472-1.png)
 
 完整输入输出流程：
 1.  训练阶段：输入为音频波形、时间粗描述（TCC，如“a dog barks and a man speaks”）和时间细描述（TDC，包含事件描述和时间戳，如“dog barking at 1-3s, man speaking at 5-7s”）。音频经VAE编码为潜变量`A`；TCC经冻结的Flan-T5文本编码器得到语义特征`C`；TDC经时间戳编码器得到时间戳矩阵`T`。三者输入扩散骨干网络进行训练。
 2.  推理阶段：用户可提供TCC或TDC。若只提供TCC，系统会通过一个外部的LLM将其转化为TDC（如图3所示）。之后流程与训练类似：`C`来自TCC，`T`来自TDC（若无TDC，则`T`使用一个固定的嵌入序列）。模型通过扩散过程从噪声生成音频潜变量`A`，再经VAE解码为波形。
 
-![图3: 推理示例](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464472-2.png)
+![图3: 推理示例](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464472-2.png)
 
 主要组件及数据流：
 *   VAE（变分自编码器）：采用冻结的EzAudio VAE。编码器将原始音频波形压缩为潜变量`A`；解码器在推理时将生成的`A`还原为波形。功能是降低扩散模型的计算维度。
@@ -129,7 +129,7 @@ PicoAudio2的整体架构（如图2所示）基于扩散Transformer（DiT），�
 | PicoAudio2 | 39.961 | 2.618 | 12.253 | 0.370 | 3.29 | 0.857 | 0.771 | 4.15 |
 | PicoAudio2 (w/o T) | 37.861 | 2.626 | 11.610 | 0.373 | 2.83 | 0.659 | 0.432 | 2.42 |
 
-![图4: 未提供](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464472-3.png)
+![图4: 未提供](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464472-3.png)
 (注：原论文中此位置可能为其他图表，但根据提供的描述“Fig. 3”已贴出，此处不再重复。上表已完整呈现核心对比数据)
 
 关键消融实验：

@@ -106,10 +106,10 @@ hiddenInHomeList: true
     - ANSE对比（图4(a)）：趋势与实验1相似。MGDFxLMS性能接近集中式。ACDMCANC收敛速度慢于其他方法，最终稳态性能略有差距（约5dB）。
     - 功率谱对比（图4(b)）：展示了各方法在稳态后的降噪效果。ACDMCANC在整个频段（特别是低频）仍有明显的降噪效果，但噪声残留略高于其他方法。
 
-![图3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463089-2.png)
+![图3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463089-2.png)
 图3说明：(a) 宽带噪声下各算法ANSE对比曲线。(b) ACDMCANC系统中Node 1和Node 2在前15秒的通信实例，On/Off表示通信请求/静默。
 
-![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463089-3.png)
+![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463089-3.png)
 图4说明：(a) 真实压缩机噪声下各算法ANSE对比曲线。(b) 稳态时各算法降噪效果的功率谱对比。
 
 ### ⚖️ 评分理由

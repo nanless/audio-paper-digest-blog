@@ -75,7 +75,7 @@ PRESS的整体流程遵循经典的编码器-分离器-解码器框架，并在�
 *   线性RNN：为在保持长时依赖建模能力的同时，避免因网络深度增加（用于早退点）带来的过高计算成本，选择了线性复杂度的RNN作为主要构建块。
 *   独立解码器头：每个早退点有自己的解码器头，允许网络从不同深度的表征中独立重建音频，避免了共享解码器可能带来的表示瓶颈。
 
-![PRESS-Net详细架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-1.png)
+![PRESS-Net详细架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/RKzBRfV6J8-1.png)
 
 （图2：PRESS-Net的详细架构图。展示了从编码器、早期分裂模块到带有多个早退点（Exit Point）的解码器堆栈的整体结构。）
 
@@ -140,11 +140,11 @@ PRESS的整体流程遵循经典的编码器-分离器-解码器框架，并在�
 *   (d, e)：增加退出点数量（从4到6或12）不会损害最终性能，为训练更大、更灵活的模型奠定了基础。
 *   校准实验 (图5)：初始训练后模型的误差方差预测不校准（图5a, b的PIT曲线偏离对角线，CRPS值高）。仅通过额外3%训练时间的微调（在全长度数据上），模型变得高度校准（图5c, d），且分离性能也大幅提升。
 
-![不同早退策略的单侧退出SNR遗憾对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-0.png)
+![不同早退策略的单侧退出SNR遗憾对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/RKzBRfV6J8-0.png)
 
 （图4：在WSJ0-2mix测试集上，不同早期退出策略的单侧“遗憾”（实际退出SNR与目标SNR的差距）对比。本文的概率退出策略（蓝色曲线）在适当的置信度p下，能紧密匹配“神谕”策略（红色虚线），而静态策略（绿色）和随机策略（灰色）表现较差。）
 
-![校准曲线图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RKzBRfV6J8-4.png)
+![校准曲线图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/RKzBRfV6J8-4.png)
 
 （图5：误差方差预测的校准曲线（PIT）。(a)(b)显示仅用4秒片段训练后，模型在训练集和测试集上均不校准。(c)(d)显示在全长度数据上微调后，校准性显著改善。CRPS分数从1.61/2.96降至1.43/2.80。）
 

@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 SpeechCT-CLIP是一个双塔对比学习模型，其架构如图1所示。
 
-![图1: SpeechCT-CLIP架构示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460675-0.jpg)
+![图1: SpeechCT-CLIP架构示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460675-0.jpg)
 图1说明：该图展示了模型的整体训练框架。左下部分显示了语音编码器（Audio Encoder）和文本编码器（Text Encoder）都接收来自TTS合成的同一段语音报告。中间上方是冻结的、预训练的CT编码器（3D CT Encoder）。训练过程中，损失函数包含两部分：对比损失（L_con）和蒸馏损失（L_distill）。对比损失使得配对的语音嵌入(A_i)和CT嵌入(V_i)靠近，同时使不配对的远离。蒸馏损失则鼓励语音嵌入(A_i)去匹配由冻结的文本编码器生成的文本嵌入(T_i)。
 
 组件与数据流详解：
@@ -115,7 +115,7 @@ SpeechCT-CLIP是一个双塔对比学习模型，其架构如图1所示。
 
 关键结论：蒸馏同样显著提升了检索性能，R@100从0.291提升至0.377，进一步验证了蒸馏的有效性。
 
-![图2: 评估任务示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11460675-1.jpg)
+![图2: 评估任务示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11460675-1.jpg)
 图2说明：(a)展示了零样本分类的推理流程：使用预定义的文本提示（如“某病理存在”），将其与语音报告编码后的特征进行匹配，同时与CT特征匹配，选择相似度更高的类别。(b)展示了病例检索：用语音报告特征去检索库中特征最相似的CT病例。
 
 表3：语音编码器选择实验

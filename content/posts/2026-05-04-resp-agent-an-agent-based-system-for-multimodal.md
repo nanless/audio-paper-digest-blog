@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 Resp-Agent是一个由中央控制器协调的多智能体系统，包含三个核心模块：Thinker（规划者）、Generator（生成器） 和 Diagnoser（诊断器），形成一个“诊断->发现问题->指导合成->改进诊断”的闭环。
 
-![Resp-Agent系统框架总览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZkoojtEm3W-0.png)
+![Resp-Agent系统框架总览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZkoojtEm3W-0.png)
 
 图1：Resp-Agent系统框架总览图（论文中Figure 1）。展示了三个模块如何交互：(a) Thinker (Thinker-A2CA) 作为中央规划器，解析语义意图并路由任务，其基于回收的错误档案和校准置信度指导后续行动；(b) Generator (Resp-MLLM) 利用模态注入，将文本诊断和参考音频风格作为条件，生成离散音频单元，再通过条件流匹配解码器重建波形；(c) Diagnoser 采用模态编织，在网络早期融合EHR文本和音频特征，并利用稀疏全局注意力进行跨模态推理。
 
@@ -81,7 +81,7 @@ Resp-Agent是一个由中央控制器协调的多智能体系统，包含三个�
 3. Diagnoser (诊断器)：
 诊断器旨在鲁棒地融合文本与音频信息进行疾病分类。
 
-![Diagnoser架构与模态编织机制图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZkoojtEm3W-6.png)
+![Diagnoser架构与模态编织机制图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZkoojtEm3W-6.png)
 
 图3：诊断器架构：模态编织与战略全局注意力（论文中Figure 3）。详细展示了三个核心机制：(1) 输入层模态编织，将文本token和投影的音频嵌入融合成单一流；(2) 战略全局注意力，使用Longformer骨架，结合滑动窗口注意力和稀疏的全局token（[CLS]， [DESCRIPTION] 和音频锚点）；(3) 音频锚点机制，作为跨模态枢纽，允许文本症状直接查询瞬态声学事件。
 

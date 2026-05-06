@@ -76,11 +76,11 @@ TtT是一个基于预训练大语言模型（LLM，如Qwen2.5）初始化的统�
     -   音频标记（Am）：在段内使用双向注意力，同时对提示和所有更早的段使用因果注意力。这使得同一音频段内的所有标记可以在一次前向传播中并行训练，且防止了跨段干扰。
 4.  块级扩散解码器（NAR推理核心）：在推理时实现NAR音频生成。它将音频生成分解为固定长度（如B=32）的块，每个块通过T步（如200步）迭代去噪生成。在每一步，模型预测块内所有被掩码位置的标记，然后基于置信度或随机采样选择部分预测进行“提交”（解掩码），其余位置重新掩码以继续去噪。此过程支持早期终止（当块内出现`<EOA>`时）。
 
-![TtT框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-1.png)
+![TtT框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/e3XLWHFrnr-1.png)
 
 图2：(a) TtT框架概览。一个统一的MLLM在AR文本解码和NAR音频合成之间交替。(b) 扩散反向过程。通过迭代去噪实现NAR音频生成。
 
-![训练损失与注意力设计示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/e3XLWHFrnr-2.png)
+![训练损失与注意力设计示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/e3XLWHFrnr-2.png)
 
 图3：(a) 训练流程示意图。从预训练LLM出发，扩展词汇表，文本段使用AR损失，音频段使用NAR扩散损失。(b) 注意力模式示意图。文本段使用因果注意力，音频段在段内使用双向注意力，在跨段时使用因果注意力。
 

@@ -77,7 +77,7 @@ MLLM生成：
 - SRH：弥补分组过程可能丢失的声学细节，通过自回归方式生成高质量的、时间对齐的语音token。
 - 并行结构：允许文本和语音生成相互感知，实现真正的多模态联合建模。
 
-![DrVoice模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5AiVx0Aiv-0.png)
+![DrVoice模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/h5AiVx0Aiv-0.png)
 
 图1展示了DrVoice的整体架构。用户语音经编码后与助手端生成的语音token分组后一起输入MLLM。MLLM的共享层输出同时馈送至文本头和语音精炼头（SRH），SRH通过解分组并自回归生成多个语音token。
 
@@ -145,7 +145,7 @@ MLLM生成：
 | Qwen2.5-Omni | 25/τ | 50.46 | 53.9 | 4.28 | 3.48 |
 | DrVoice | 5/5 | 56.66 | 74.0 | 4.29 | 8.36 |
 
-![不同分组因子下的GPU小时消耗对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/h5AiVx0Aiv-5.png)
+![不同分组因子下的GPU小时消耗对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/h5AiVx0Aiv-5.png)
 
 图6展示了不同分组因子（1, 3, 5, 7）下训练所需GPU小时的对比，显示分组因子为5时效率提升显著，近似减半。
 

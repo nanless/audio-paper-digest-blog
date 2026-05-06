@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 流水线架构图
 
-![三阶段流水线架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Zg1YH8R5GG-0.png)
+![三阶段流水线架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Zg1YH8R5GG-0.png)
 
 该图展示了三阶段流水线：(a) 全模态描述生成，包括场景分割、视频描述、四类音频描述生成与优化；(b) 问答对创建，根据场景类型（单、多、全）和任务需求，从模态选择到干扰项生成的流程；(c) 质量控制，涵盖通用检查和任务特定检查。
 
@@ -117,13 +117,13 @@ hiddenInHomeList: true
 
 不同音频类型下的模型表现
 
-![不同音频类型下模型准确率对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Zg1YH8R5GG-3.png)
+![不同音频类型下模型准确率对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Zg1YH8R5GG-3.png)
 
 该图展示了多个模型在四种音频类型（声纹特征、语音、音乐、声音事件）上的平均准确率对比。清晰地显示所有模型在声纹特征和语音任务上的性能显著低于音乐和声音事件任务。
 
 不同场景类型下的模型表现
 
-![不同场景类型下模型准确率对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Zg1YH8R5GG-4.png)
+![不同场景类型下模型准确率对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Zg1YH8R5GG-4.png)
 
 该图展示了多个模型在单场景、多场景和全场景任务上的平均准确率。多场景任务的准确率普遍低于单场景和全场景任务，印证了跨场景推理的挑战性。
 

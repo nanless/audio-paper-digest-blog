@@ -72,7 +72,7 @@ hiddenInHomeList: true
     *   索引：将音频库分割为固定长度（1s）重叠片段。对每个片段提取连续表示Z，量化得到离散标记序列。构建TF-IDF表示，并使用IVF-PQ进行快速索引。
     *   渐进检索：给定查询，生成其TF-IDF表示。第一阶段从索引中检索候选集`P1`；第二阶段用Jaccard相似度过滤得到`P2`；第三阶段用基于编辑距离的时序过滤得到最终结果`P3`。
 
-![图1: 本文提出的用于鲁棒语音分词的自监督学习框架示意图。图中展示了从输入MFCC特征，经双向Mamba编码器得到嵌入，利用DTW对齐构建锚点-正样本对，再通过VQ和OT正则化进行分词训练的过程。](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-0.jpg)
+![图1: 本文提出的用于鲁棒语音分词的自监督学习框架示意图。图中展示了从输入MFCC特征，经双向Mamba编码器得到嵌入，利用DTW对齐构建锚点-正样本对，再通过VQ和OT正则化进行分词训练的过程。](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-0.jpg)
 
 #
 
@@ -163,8 +163,8 @@ hiddenInHomeList: true
 
 5. 编码器消融：表1和表2显示，在相同框架下，BiMamba编码器（BEST-STD 2.0）在所有指标上均优于Transformer编码器（Ours-Transformer），证明了BiMamba在抗噪时序建模上的优势。
 
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-1.jpg)
-![图3: pdf-image-page2-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462743-2.jpg)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-1.jpg)
+![图3: pdf-image-page2-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462743-2.jpg)
 
 #
 

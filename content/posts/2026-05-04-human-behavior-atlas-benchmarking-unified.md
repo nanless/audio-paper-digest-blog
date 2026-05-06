@@ -67,7 +67,7 @@ hiddenInHomeList: true
 *   OMNISAPIENS-7B BAM：在SFT模型冻结的基础上，引入一个残差式行为适配器模块（BAM）。该模块接收经过时序池化（均值和标准差）和归一化的行为描述符（来自MediaPipe和OpenSMILE），通过一个轻量级的前馈网络（隐藏维度256）生成残差更新 `Δhf`，并将其加到固定的`h_penult`上，形成适应后的表示 `h_adapt = h_penult + Δhf`。适配后的表示再送入原有的分类器或解码器头部。BAM的设计旨在以即插即用的方式增强模型，而不改变骨干网络表示。
 *   OMNISAPIENS-7B RL：与SFT架构类似，但摒弃了所有分类器头部，所有任务均统一使用单个解码器头部以自由文本形式生成答案。模型使用组相对策略优化（GRPO） 进行强化学习训练，奖励函数结合了准确性奖励、格式奖励和语义相似度奖励。
 
-![HUMAN BEHAVIOR ATLAS 总览图，展示了基准的构建流程、数据集分布和任务分类](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-0.png)
+![HUMAN BEHAVIOR ATLAS 总览图，展示了基准的构建流程、数据集分布和任务分类](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZKE23BBvlQ-0.png)
 
 图1：HUMAN BEHAVIOR ATLAS基准的总览图，展示了从行为分类体系定义、数据集收集、格式标准化到评估框架建立的完整流程。
 
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 
 消融实验（表6 & 10）：BAM的增益对依赖细微行为线索的任务（如面部表情、韵律）明显，但对纯文本推理任务（SOC, INT）可能无益甚至有害。移除原始音视频特征的BAM消融（表10）显示行为描述符是补充而非替代原始信号。
 
-![BAM在CH-SIMSv2数据集上的定性分析示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZKE23BBvlQ-4.png)
+![BAM在CH-SIMSv2数据集上的定性分析示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZKE23BBvlQ-4.png)
 
 图4：BAM定性分析示例。BAM帮助模型捕捉到了SFT模型忽略的转瞬即逝的微笑，从而正确预测了积极情感。
 

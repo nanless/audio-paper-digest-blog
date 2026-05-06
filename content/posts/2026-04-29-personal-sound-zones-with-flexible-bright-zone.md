@@ -39,8 +39,8 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图2. 提议的Neural PSZ流程图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461700-1.png)
-![图3. 提议的Neural PSZ网络配置（左）与残差块（右）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461700-2.png)
+![图2. 提议的Neural PSZ流程图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461700-1.png)
+![图3. 提议的Neural PSZ网络配置（左）与残差块（右）](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461700-2.png)
 
 该模型是一个端到端的监督学习系统，核心任务是将目标声学传递函数（ATF）映射为扬声器阵列的预滤波器。其完整架构与数据流如下：
 
@@ -93,7 +93,7 @@ hiddenInHomeList: true
 主要对比实验（与PM基线）：
 图4和表1展示了在不同控制网格下，所提Neural PSZ方法与传统PM方法在REB、RED和AC指标上的对比。
 
-![图4. PM与Neural PSZ的REB和AC对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461700-3.png)
+![图4. PM与Neural PSZ的REB和AC对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461700-3.png)
 
 关键结论：
 1.  网格稀疏性影响：随着控制网格变稀疏（从Grid-12到Grid-1），PM方法的性能（REB增大，AC减小）显著恶化。而Neural PSZ方法的性能保持稳定，仅在极端稀疏的Grid-1（单点输入）时性能才明显下降。
@@ -113,7 +113,7 @@ hiddenInHomeList: true
 消融实验（灵活网格训练 vs 固定网格训练）：
 表2展示了Neural PSZ网络在不同训练策略下的性能。
 
-![表2. 灵活网格训练与固定网格训练的Neural PSZ网络对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461700-3.png) （注：表2内容已整合入下方表格）
+![表2. 灵活网格训练与固定网格训练的Neural PSZ网络对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461700-3.png) （注：表2内容已整合入下方表格）
 
 | 训练策略 | 网格模式 | REB↓ (dB) | RED↓ (dB) | AC↑ (dB) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -131,7 +131,7 @@ hiddenInHomeList: true
 分析：灵活网格训练（一个模型适配所有网格）相比为每个网格单独训练的固定网格模型，在REB上有约0.5-1.3 dB的轻微损失。这表明为获得灵活性，存在一个可接受的性能折衷。
 
 定性结果：
-![图5. BZ重构ATF（实部）对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461700-4.png)
+![图5. BZ重构ATF（实部）对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461700-4.png)
 图5展示了在875 Hz频率下，对于一个位于(1.2, 1.8)的虚拟声源，在Grid-3#1输入下，PM方法（中）与Neural PSZ方法（右）重构的BZ声场（实部）与Ground Truth（左）的对比。Neural PSZ的重建结果在空间连续性和平滑度上明显更接近真实值。
 
 ### ⚖️ 评分理由

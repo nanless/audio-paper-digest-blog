@@ -56,7 +56,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 ReCoM采用两阶段流程（如图1、图2）：
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464361-1.jpg)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464361-1.jpg)
 
 第一阶段：动作码本（VQ-VAE）训练
 - 输入：身体动作序列 `Mb ∈ RT×63`，手部动作序列 `Mh ∈ RT×90`。
@@ -66,7 +66,7 @@ ReCoM采用两阶段流程（如图1、图2）：
 
 第二阶段：手势生成器（基于RET）
 这是核心模块，输入语音和说话人ID，输出动作索引序列。
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464361-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464361-0.jpg)
 
 1.  输入处理：
     *   语音特征：使用预训练模型（如Wav2vec2.0）提取音频 `A1:T` 的MFCC特征，经编码器和下采样得到特征 `a1:t`。

@@ -63,7 +63,7 @@ TripleSumm是一个用于视频摘要的端到端多模态模型，其整体架�
 - 中性融合令牌：作为跨模态融合的查询，其初始状态是三种模态的简单平均，避免了以某一特定模态（如视觉）为中心查询可能引入的偏差。
 - 参数共享：多尺度时间块在所有模态间共享参数，这不仅显著减少了参数量（约3倍），还让模型能从更多样的数据中学习通用的时序模式。
 
-![TripleSumm模型整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/x74NsHGywD-0.png)
+![TripleSumm模型整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/x74NsHGywD-0.png)
 
 ### 💡 核心创新点
 
@@ -139,7 +139,7 @@ TripleSumm是一个用于视频摘要的端到端多模态模型，其整体架�
 
 3. 消融实验（表4）
 
-![消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/x74NsHGywD-2.png)
+![消融实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/x74NsHGywD-2.png)
 
 - 模态组合（表4a）：全三模态组合（V+T+A）性能最优（τ=0.351），证实了三模态的协同效应。音频模态单独使用略优于文本。
 - 窗口策略（表4b）：“由窄到宽”的Local-to-Global策略（w: 5,15,45,N）性能最佳，优于固定窗口或其他渐变策略。

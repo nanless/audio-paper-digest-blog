@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文提出了一个名为MDATNet（Multimodal and Dynamic Attention Target Net）的端到端神经网络框架，整体架构见图1。
 
-![图1: MDATNet整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461469-0.png)
+![图1: MDATNet整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461469-0.png)
 
 该框架由五个核心模块组成，处理流程如下：
 
@@ -121,7 +121,7 @@ hiddenInHomeList: true
 
 关键结论：加入眼动（ET）模块和动态更新（DU）单元均能带来性能提升，且动态更新单元的增益更大。两者结合（完整模型）达到最佳性能，证明了这两个组件的有效性及其互补性。论文指出所有提升均具有统计显著性（p-value < 0.001）。
 
-![图2：眼动和动态更新模块对SDR和SI-SDR的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461469-1.png)
+![图2：眼动和动态更新模块对SDR和SI-SDR的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461469-1.png)
 图表结论：此图以柱状图形式直观展示了消融实验在SDR和SI-SDR指标上的结果，与表2的结论一致，显示完整模型性能最佳，且两个模块的贡献均显著。
 
 ### ⚖️ 评分理由

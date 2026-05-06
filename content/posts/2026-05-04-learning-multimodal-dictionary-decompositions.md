@@ -64,7 +64,7 @@ hiddenInHomeList: true
 
 该架构图在论文中由Figure 2展示：
 
-![图2：掩码组稀疏自编码器用于多模态概念提取的架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-1.png)
+![图2：掩码组稀疏自编码器用于多模态概念提取的架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZJlVXZ5dmK-1.png)
 
 图2清晰地展示了MGSAE的训练流程：配对的多模态嵌入经过共享编码器，通过相同的随机掩码，经TopK稀疏化后，由共享解码器重建。损失函数包含重建项和组稀疏项。
 
@@ -117,7 +117,7 @@ hiddenInHomeList: true
 | MGSAE (ours) | 0.672 | 0.354 | 0.061 |
 | LAION CLAP (原始) | 0.710 | 0.339 | 0.075 |
 
-![图3：不同模型训练后，各模态激活神经元数量的统计对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-0.png)
+![图3：不同模型训练后，各模态激活神经元数量的统计对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZJlVXZ5dmK-0.png)
 
 图3显示，与标准SAE相比，GSAE和MGSAE显著增加了同时激活两种模态的神经元数量，并减少了从未激活的“死神经元”。MGSAE在两种数据集上效果最佳。
 
@@ -127,7 +127,7 @@ hiddenInHomeList: true
 - 超参数影响：附录表3展示了在不同扩展因子和K值下，MGSAE在ImageNet零样本任务上始终优于GSAE和SAE。K值增大有助于提升性能。
 - 案例研究（CelebA）：图5（原文）展示了使用MGSAE字典解释“金发”分类器时，能更准确地识别出“金发女孩”、“布兰妮·斯皮尔斯”等与性别相关的虚假相关性，而标准SAE提取的概念（如“仙人掌”、“北极熊”）则毫不相关。
 
-![图5：使用标准SAE（左）和MGSAE（右）字典解释CelebA数据集上“金发”分类器概念的对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ZJlVXZ5dmK-5.png)
+![图5：使用标准SAE（左）和MGSAE（右）字典解释CelebA数据集上“金发”分类器概念的对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ZJlVXZ5dmK-5.png)
 
 图5是概念命名的定性结果。MGSAE提取的概念（右）与“金发”高度相关且能揭示潜在的性别偏差，而SAE提取的概念（左）则混杂了大量无关信息。
 

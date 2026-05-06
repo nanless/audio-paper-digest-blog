@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 本文提出的“双重策略增强的ConBiMamba说话人日志系统”遵循Pyannote流水线，其核心是替换其中的局部EEND（端到端神经迪亚化）模块。整体架构如图1所示。
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461708-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461708-0.png)
 图1：基于ConBiMamba的局部EEND整体框架
 
 系统主要由以下组件构成：

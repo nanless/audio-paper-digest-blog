@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 关键设计选择：框架的模块化和抽象类设计使其高度可扩展。用户可以通过简单实现抽象类来添加新的LALM、攻击、防御方法或评测器。这解决了现有研究中代码不统一、难以公平比较的问题。
 
-![JALMBench框架概览与数据集统计](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-0.png)
+![JALMBench框架概览与数据集统计](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DJkQ236C8B-0.png)
 
 图1展示了JALMBench的整体框架、数据集构成（有害查询、文本迁移攻击、音频原生攻击）以及与其它基准的对比。框架接收有害文本/音频查询，通过TTS和攻击方法生成样本，输入不同的LALM进行测试，并使用提示级和响应级防御方法进行缓解。
 
@@ -106,13 +106,13 @@ hiddenInHomeList: true
 
 2. 攻击效率分析
 
-![不同攻击方法的效率-成功率权衡](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-3.png)
+![不同攻击方法的效率-成功率权衡](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DJkQ236C8B-3.png)
 
 图4展示了攻击方法的时间成本与成功率关系。实现60%以上ASR通常需要超过100秒（如AdvWave, PAP），而实现约40%的ASR可能只需10秒左右（如SSJ, AMSE），表明低成本、实战化的越狱尝试是现实威胁。
 
 3. 不同话题的攻击成功率
 
-![不同有害话题下的平均攻击成功率](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DJkQ236C8B-4.png)
+![不同有害话题下的平均攻击成功率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DJkQ236C8B-4.png)
 
 图5显示了不同话题的脆弱性。模型对显性的“仇恨与骚扰”内容相对鲁棒（平均ASR 41%），但对更隐蔽的“虚假信息”话题非常脆弱（平均ASR 67%）。
 

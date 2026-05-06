@@ -81,7 +81,7 @@ SNAP-UQ的核心是为一个已固定的深度-D主干网络附加一个轻量�
 - int8与LUT：确保所有算术在MCU上高效、可预测地执行，避免浮点运算。
 - 对角协方差：简化计算，闭式评分，且通过归一化实现对缩放的不变性。
 
-![SNAP-UQ方法流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YdK1ZRhrKi-1.png)
+![SNAP-UQ方法流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YdK1ZRhrKi-1.png)
 
 图1（来自第4页）：SNAP-UQ流程图。此图清晰展示了方法的完整架构：主干网络 f₁...f_D 产生激活 a₁...a_D。在选定的层（a₁, a₂, a_{D-1}）进行“tap”，每个tap使用投影器 Pℓ 和预测头 gℓ 输出统计量 (μℓ, log σ²ℓ)。计算每层惊讶度 eℓ，并聚合为 S(x)=Σwℓ eℓ。最后通过可选地与分类器置信度 (Cφ, mmg) 混合，经逻辑斯蒂映射得到最终不确定性 U(x)。虚线框内的训练步骤（offline训练gℓ）在推理时是不执行的。
 

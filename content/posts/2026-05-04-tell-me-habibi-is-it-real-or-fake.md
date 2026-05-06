@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 1.  数据收集与预处理：基于YouTube视频，进行场景分割、人脸检测与跟踪，并使用Whisper-v2进行语音识别获得转录文本，再用多语言wav2vec2模型进行强制对齐，获取词级时间戳。
 
-![ArEnAV数据生成管道示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EbrPXZTVJ9-0.png)
+![ArEnAV数据生成管道示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/EbrPXZTVJ9-0.png)
 
 图1：ArEnAV数据集生成管道示意图。a) 展示了从原始视频提取音视频、文本，到使用GPT-4.1-mini进行代码切换文本篡改，再到语音合成和人脸唇形同步生成的全流程。
 

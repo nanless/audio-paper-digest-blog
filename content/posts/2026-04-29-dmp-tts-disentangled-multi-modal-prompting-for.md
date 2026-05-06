@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 DMP-TTS是一个基于潜在扩散Transformer（DiT）的端到端TTS系统，其整体架构如图1(a)所示。
 
-![DMP-TTS整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462428-0.jpg)
+![DMP-TTS整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462428-0.jpg)
 图1：DMP-TTS整体架构。(a) 显示了训练和推理的数据流。(b) 展示了统一的多模态风格编码器。
 
 系统主要由以下几个核心组件构成，其输入输出流程与数据流如下：
@@ -169,7 +169,7 @@ DMP-TTS是一个基于潜在扩散Transformer（DiT）的端到端TTS系统，�
 2.  移除REPA后，WER显著恶化（0.038→0.046），而风格指标变化不大，表明其主要贡献在于提升语言保真度和训练稳定性。
 
 指导强度影响（图2）：
-![指导强度影响图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462428-1.jpg)
+![指导强度影响图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462428-1.jpg)
 图2：引导强度对（a）说话人相似度和（b）情绪准确率的影响。
 图中显示，随着音色引导尺度 (`s_spk`) 或风格引导尺度 (`s_style`) 从6.0增加到21.0，对应的属性控制指标（说话人相似度、情绪准确率）通常呈上升趋势。这验证了cCFG允许通过调节引导强度来独立增强目标属性的效果。但过高的引导尺度可能导致过度条件化，降低自然度。
 

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 整体流程为：用户输入语音被编码为语音token，输入到SLM骨干网络（一个Transformer模型）。SLM以自回归方式生成三种token：不发声的推理token（用于内部思考）、发声的文本token（作为语音内容的转写）以及语音token（由语音解码器合成为音频波形播放给用户）。
 
-![STITCH-R生成时序图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5Z1eMhCeTb-1.png)
+![STITCH-R生成时序图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5Z1eMhCeTb-1.png)
 
 图1展示了STITCH-R的生成时序。模型首先生成第一块推理、文本和语音token。语音token被送入语音解码器，合成持续tchunk秒的音频并开始播放。在播放期间，SLM利用空闲时间生成下一个推理块，随后继续生成下一个文本-语音块。只要生成一轮token的时间（ttoken）小于音频播放时间（tchunk），音频就能无缝衔接播放。
 
@@ -100,7 +100,7 @@ hiddenInHomeList: true
 
 语音质量与人类评估：自动评估（UTMOSv2）和GPT-4o流畅度打分显示，STITCH生成的语音质量和文本流畅度与基线相当。人类评估表明，在响应速度感知上，STITCH-S > STITCH-R > TBS ≈ No Reasoning。
 
-![推理块长度与性能关系](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5Z1eMhCeTb-3.png)
+![推理块长度与性能关系](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5Z1eMhCeTb-3.png)
 
 图3展示了两个关键消融实验：(a, b) 推理时调整每次生成的推理token数量（N'_token）对性能的影响，表明当N'_token ≥ 80时性能可恢复到N_reason=100时的90%以上；(c) 使用不同外部模型（如Llama系列）为STITCH-R生成推理链，显示更强的推理模型能带来更好的最终回答准确率，证明STITCH确实利用了推理内容。
 

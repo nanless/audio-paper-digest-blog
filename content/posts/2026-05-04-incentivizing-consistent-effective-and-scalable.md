@@ -57,7 +57,7 @@ hiddenInHomeList: true
 推理阶段：
 模型在提示下生成结构化的输出：`</think>ti</think><answer>ŷi</answer>`。通过调节提示中``标签内的最大思考长度 `L_max_think`，可以实现“测试时缩放”，从而找到模型性能最优的“推理甜点”。
 
-![论文框架对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DUr48hxO2h-1.png)
+![论文框架对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DUr48hxO2h-1.png)
 
 （图1：框架对比图，展示了从监督微调到仅结果奖励的RL（如Ke-Omni-R），再到本文提出的CESAR（过程奖励）的演进，以及不同方法在测试时缩放下的性能变化趋势。）
 
@@ -116,7 +116,7 @@ hiddenInHomeList: true
 - 消融研究：逐步去除过程奖励组件会导致性能下降，证明了每个组件的贡献（表6）。例如，��除一致性奖励（即退化为Ke-Omni-R）后，总体准确率从77.10%降至74.60%。
 - 推理质量评估：AI-as-Judge（图3右）和人类评估（表4）均显示，CESAR的推理过程远优于基线模型（如对基线Qwen2.5-Omni-7B有88.60%的胜率）。
 
-![测试时缩放与AI评判结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DUr48hxO2h-2.png)
+![测试时缩放与AI评判结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DUr48hxO2h-2.png)
 
 （图3：左侧显示了MMAU Test-mini上不同方法随最大思考长度变化的性能曲线，CESAR展现出可扩展性和“推理甜点”；右侧为AI-as-Judge评估结果，显示CESAR的推理过程在头对头比较中占优。）
 

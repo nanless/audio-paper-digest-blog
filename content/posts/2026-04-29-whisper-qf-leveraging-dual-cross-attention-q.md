@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 Whisper-QF的整体架构如图1所示，主要由三个部分组成：原始的Whisper模型、双交叉注意力Q-Former（DualCA-QF）以及不确定性加权的多任务学习框架。
 
-![图1: Whisper-QF模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461467-0.png)
+![图1: Whisper-QF模型架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461467-0.png)
 
 1.  Whisper基础模型：采用预训练的Whisper编码器-解码器。编码器将原始语音波形通过卷积层和GeLU激活转换为高级声学特征向量序列 x(h)。解码器利用语言标记、任务标记和时间戳标记（见表1），结合编码器输出，通过自回归方式生成语义状态序列 y(h)，其中包含了丰富的语义信息。
 
@@ -134,7 +134,7 @@ Whisper-QF的整体架构如图1所示，主要由三个部分组成：原始的
     - 移除不确定性加权（E10 vs E1）：性能下降，证明自适应任务权重的重要性。
 - 可视化分析：图2展示了有无Decoder-CA模块的混淆矩阵。加入Decoder-CA后，“中性（Neutral）”情绪的误分类数量减少了23%（从241个降至214个，相对于总中性样本数），直观证明了语义信息在区分“中性”这种不易捕捉的情绪时的关键作用。
 
-![图2: 有无Decoder-CA模块的混淆矩阵对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461467-1.png)
+![图2: 有无Decoder-CA模块的混淆矩阵对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461467-1.png)
 图2说明：左图（a）为不含Decoder-CA的模型结果，右图（b）为包含Decoder-CA的模型结果。横轴为真实标签，纵轴为预测标签。可以看到，(b)图中对角线上的数值（正确分类）普遍更高，特别是“Neutral”类别从1134提升至1266，而“Neutral”被误判为“Happy”的数量从241降至214，误判为“Angry”的数量从126降至108。
 
 ### ⚖️ 评分理由

@@ -71,7 +71,7 @@ MIAM本身并非一个完整的预测模型，而是一种应用于多模态Tran
     - 角落权重：为优先采样全存在(0,...,0)和全缺失(1,...,1)的角落，设置了非均匀的混合权重w_c，将一半的概率质量分配给这两个角落。
 3.  设计动机与交互：MIAM的设计直接回应了其提出的三大原则：a) 全支持：通过乘积Beta分布支持[0,1]^M上的连续采样；b) 角落优先：通过混合分布和非均匀权重w_c实现；c) 不平衡感知：通过动态调整κ_eff实现。这使得模型在训练中能暴露于多样且关键的输入子集，特别是迫使模型学习在主导模态缺失时利用其他模态。
 
-![MIAM方法概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oljjAkgZN4-2.png)
+![MIAM方法概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oljjAkgZN4-2.png)
 
 图2：MIAM方法概览图。(a) 展示了每个模态的Token如何根据从混合乘积Beta分布中采样的概率p_m进行掩码。(b) 展示了分布参数如何由模态性能s_m和其绝对变化率d_m导出的不平衡系数ρ_sm和ρ_dm调制，使得相对强势（高s_m，低d_m）的模态被更频繁地掩码。
 
@@ -133,7 +133,7 @@ MIAM本身并非一个完整的预测模型，而是一种应用于多模态Tran
 
 消融实验与动态分析：
 
-![GeoPlant上的消融实验与MIAM动态系数变化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oljjAkgZN4-3.png)
+![GeoPlant上的消融实验与MIAM动态系数变化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oljjAkgZN4-3.png)
 
 图4：左侧展示了GeoPlant验证集AUC在训练过程中的变化，对比了均匀掩码、Beta超立方体和MIAM。可以看出，每增加一个设计原则（全支持->角落优先->不平衡感知），在卫星影像等弱势模态上的性能都有提升。MIAM的训练曲线呈现周期性波动，与右侧展示的其动态系数ρ_dm的变化相关，这可能有助于模型跳出局部最优。右侧图展示了MIAM的模态不平衡系数ρ_sm（相对性能）和ρ_dm（相对学习速度）随训练轮次的变化，证实了动态调整的存在。
 
@@ -141,7 +141,7 @@ MIAM本身并非一个完整的预测模型，而是一种应用于多模态Tran
 
 图5a：展示了使用不同卫星影像光谱波段组合进行评估时的测试AUC。结论是，同时包含红光(Red)和近红外(NIR)波段的组合（用于计算NDVI植被指数）性能最佳。
 
-![贡献分析图b - 时间序列长度](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/oljjAkgZN4-6.png)
+![贡献分析图b - 时间序列长度](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/oljjAkgZN4-6.png)
 
 图5b：展示了使用不同长度历史气候时间序列进行评估时的测试AUC。结论是，当时间序列包含2003年欧洲热浪事件时，性能有显著提升，说明捕捉极端气候事件对物种分布预测很重要。
 

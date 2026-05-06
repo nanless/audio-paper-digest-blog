@@ -44,7 +44,7 @@ hiddenInHomeList: true
 
 JavisDiT++的核心是一个统一的扩散Transformer（DiT）骨干，用于处理联合的文本、视频和音频token。其整体架构如下所示：
 
-![JavisDiT++模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-0.png)
+![JavisDiT++模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hRRWfFpKRp-0.png)
 
 该架构的工作流程如下：
 1.  输入处理：输入文本提示经由冻结的文本编码器（umT5-xxl）得到文本token。视频片段通过冻结的视频VAE编码为视频token，音频片段（梅尔频谱图）通过冻结的音频VAE编码为音频token。
@@ -53,7 +53,7 @@ JavisDiT++的核心是一个统一的扩散Transformer（DiT）骨干，用于�
 4.  位置编码与时间对齐：模型使用旋转位置编码（RoPE）。视频token使用标准的3D RoPE (t, h, w)。音频token采用时间对齐RoPE（TA-RoPE），其位置ID定义为 `([t·Tv/Ta], t+H, m+W)`。这确保了在时间维度（第0维）上，对应同一时间窗口的音频和视频token拥有相同的时间ID，实现了显式的帧级对齐，同时通过偏移H和W避免了ID重叠。
 5.  预测与解码：DiT预测速度场（对于流匹配），输出经过去噪的音频和视频token，最后分别通过各自的VAE解码器重建为最终的视频和音频。
 
-![音频与视频token的时间对齐位置ID示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-1.png)
+![音频与视频token的时间对齐位置ID示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hRRWfFpKRp-1.png)
 
 该架构的关键设计动机在于简洁性与效率的平衡。相比于JavisDiT的双流架构和复杂的时空先验，或UniVerse-1的预训练模型拼接，本架构用一个统一骨干加模态特定FFN实现了类似或更优的效果，且推理速度更快。
 
@@ -127,7 +127,7 @@ JavisDiT++的核心是一个统一的扩散Transformer（DiT）骨干，用于�
 - 同步机制（表3）：TA-RoPE（DeSync 0.807，1m4s）在性能和效率上均优于ST-Prior（0.863，1m10s）和帧级注意力（0.850，1m22s）。
 - AV-DPO奖励策略（表4）：采用“模态感知”策略（Modality-Micro）在质量（FVD 198.5）、一致性（AV-IB 0.201）和同步性（DeSync 0.776）上均取得最佳效果，显著优于模态无关策略。
 
-![不同模型生成样本的定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hRRWfFpKRp-5.png)
+![不同模型生成样本的定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hRRWfFpKRp-5.png)
 
 ### ⚖️ 评分理由
 

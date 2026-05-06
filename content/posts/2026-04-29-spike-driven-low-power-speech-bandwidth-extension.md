@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 SpikeBWE采用经典的U-Net编码器-解码器架构，但其内部所有组件均被改造为在脉冲域（Spike Domain）运行，以处理离散事件。
 
-![图1: SpikeBWE架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462977-0.png)
+![图1: SpikeBWE架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462977-0.png)
 图1：SpikeBWE的网络架构示意图。展示了其U型结构，以及关键模块Spiking Convolutional (SConv) 和 Efficient Spiking Neuron (ESN) Block的位置。
 
 - 输入/输出：输入是8kHz采样的带限语音波形，输出是恢复的16kHz高分辨率语音波形。

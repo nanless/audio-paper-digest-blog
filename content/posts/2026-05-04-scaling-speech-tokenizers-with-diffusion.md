@@ -43,7 +43,7 @@ hiddenInHomeList: true
 
 SiTok的整体架构是一个基于扩散自编码器的语音标记化器，其完整流程如下图所示。
 
-![图1：SiTok模型架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/llMfmDtWka-5.png)
+![图1：SiTok模型架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/llMfmDtWka-5.png)
 
 1.  输入：50 Hz, 128-bin的梅尔频谱图（通过堆叠连续4帧降至12.5 Hz）。
 2.  编码器 (Encoder)：由16层因果Llama Transformer块组成，将下采样后的梅尔频谱图映射为连续潜在特征序列`z`。

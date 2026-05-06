@@ -52,7 +52,7 @@ WSM模块（图1b）的内部结构与原始SummaryMixing（图1a）类似，但
 
 这种设计使得每个输出向量既包含了全局信息，又融入了精细的局部邻域信息，在线性复杂度下提升了时序建模能力。
 
-![图1: SummaryMixing (a) 与 Windowed SummaryMixing (b) 模块对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464133-0.png)
+![图1: SummaryMixing (a) 与 Windowed SummaryMixing (b) 模块对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464133-0.png)
 图1展示了两种模块的数据流。WSM (b) 相较于SM (a)，为每个时间步增加了一个基于窗口的摘要 \(s^w_t\)，与全局摘要 \(s_g\) 和当前帧特征一同送入最终的前馈网络。
 
 ### 💡 核心创新点
@@ -121,7 +121,7 @@ WSM模块（图1b）的内部结构与原始SummaryMixing（图1a）类似，但
 效率分析：
 - 内存：SM和WSM变体微调时仅需约30-32GB VRAM，而基于注意力的基线（Att-PT/Att-Scratch）需要约50GB，内存节省约40%。
 - 速度：图2分析了wav2vec 2.0不同变体的推理时间。
-![图2：不同注意力变体的推理时间随音频长度变化曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464133-1.png)
+![图2：不同注意力变体的推理时间随音频长度变化曲线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464133-1.png)
 图2显示，对于短音频（<10秒），各方法速度相近。但随着音频变长，WSM（SM Window）的优势显现，在100秒时，其推理速度比注意力基线快约25%，体现了线性复杂度的优势。
 
 ### ⚖️ 评分理由

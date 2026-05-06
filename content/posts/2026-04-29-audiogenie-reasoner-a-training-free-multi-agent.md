@@ -88,7 +88,7 @@ hiddenInHomeList: true
 
 关键设计选择：核心动机在于，直接训练端到端的音频推理模型面临数据稀缺和能力耦合的挑战。因此，选择将感知（ALLM负责生成文本）与认知（LLM智能体负责推理）解耦，并利用LLM强大的文本推理能力来处理后续的证据搜寻和整合任务。
 
-![图2: AUDIOGENIE-REASONER的多智能体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463631-1.png)
+![图2: AUDIOGENIE-REASONER的多智能体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463631-1.png)
 
 ### 💡 核心创新点
 
@@ -157,11 +157,11 @@ hiddenInHomeList: true
 - 迭代循环：移除主动迭代文档优化循环，仅用ALLM生成一次文档后直接问答，性能大幅下降。例如，在MMAR上，使用MiDashengLM-7B作为ALLM时，准确率从58.85%降至约41-42%，证明了循环的关键作用。
 
 3. 迭代轮数影响 (Table 4)
-![图4: 迭代轮数对性能的影响](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463631-3.png)
+![图4: 迭代轮数对性能的影响](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463631-3.png)
 
 关键结论：在MMAU-mini上，性能在第2轮迭代时达到峰值（73.80%）；在MMAR上，性能在第3轮迭代时达到峰值（57.24%）。这验证了框架的“由粗到细”设计，并表明更复杂的MMAR需要更深入的探索。超过峰值后性能略有下降，可能是额外迭代引入了噪声。
 
-![图1: AudioGenie-Reasoner与其它音频推理模型的性能对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463631-0.png)
+![图1: AudioGenie-Reasoner与其它音频推理模型的性能对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463631-0.png)
 
 ### ⚖️ 评分理由
 

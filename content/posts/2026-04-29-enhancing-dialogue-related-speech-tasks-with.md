@@ -87,7 +87,7 @@ hiddenInHomeList: true
 
 本文的“模型”是一个三阶段的流水线（Pipeline），如图1所示：
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461980-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461980-0.png)
 
 1.  对话语音生成（SLIDE模型）：输入为文本对话内容（音素序列），输出为双通道（对应两个说话人）的合成语音波形。SLIDE模型通过预测每个音素的持续时间，并将音素token重复相应次数，来控制语速和停顿，从而生成语音。此步骤保证了生成语音与输入文本的一致性。
 2.  精确时间戳推导：这是本文的关键创新模块（图中绿色框）。SLIDE模型在生成时会预测每个音素的持续时长 `d_i`。该模块利用这些时长信息，将原始音素序列 `Φ` 扩展为一个包含重复音素token和静音token的序列 `P`。然后，通过分组连续的非静音token，推导出每个语音片段 `(t_s, t_e)` 的精确起止时间。这为下游任务提供了无需人工标注的、精确的片段级监督信号。

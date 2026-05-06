@@ -58,7 +58,7 @@ hiddenInHomeList: true
 
 Omni-RewardModel包含两个变体，其整体架构如下图所示。核心是基于一个多模态大语言模型（如MiniCPM-o-2.6或Qwen2.5-VL）作为骨干网络，处理来自文本、图像、视频、音频等模态的输入。
 
-![Omni-RewardModel架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-1.png)
+![Omni-RewardModel架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/9C4gVbPqSy-1.png)
 
 图2：Omni-RewardModel架构概览。左侧(1)为判别式模型，右侧(2)为生成式模型。
 
@@ -128,7 +128,7 @@ Omni-RewardModel包含两个变体，其整体架构如下图所示。核心是�
 
 结论：混合多模态数据训练（Full）效果最好。移除指令微调数据后性能明显下降（65.36 -> 58.67），证明了自由格式偏好数据的重要性。
 
-![不同任务间性能相关性热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/9C4gVbPqSy-0.png)
+![不同任务间性能相关性热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/9C4gVbPqSy-0.png)
 
 图3：Omni-RewardBench上各任务间性能的皮尔逊相关系数热力图。可见理解任务（如T2T, TI2T, TV2T）之间、生成任务（如T2V, T23D, TI2I）之间存在较强相关性，说明RM在这些任务类别内能捕捉到共通的模式。
 

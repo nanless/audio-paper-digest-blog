@@ -131,10 +131,10 @@ hiddenInHomeList: true
 - 跨域Delta嵌入分析（表4）：在LibriSpeech（成人语音）上微调得到的Delta嵌入，在MyST（儿童语音）上效果虽不如域内Delta，但仍优于纯WavLM基线。
 - MoE分析（表5）：门控网络为微调嵌入和Delta嵌入分配了显著权重，证实了两者共同价值。WavLM+∆W2V2组合中微调嵌入的权重（0.65）低于WavLM+∆HuBERT（0.72），与更好的WER相关，表明W2V2的互补性更强。
 
-![图1: 不同层预训练与微调表示的CCA相似度](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462835-0.png)
+![图1: 不同层预训练与微调表示的CCA相似度](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462835-0.png)
 图1说明：对于HuBERT和Wav2Vec2.0，微调后的表示与其预训练版本的相似度（CCA）随着Transformer层加深而降低，证实微调主要影响上层表示。W2V2的下降更陡峭。
 
-![图2: 不同层微调表示与Delta嵌入的CCA相似度](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462835-1.png)
+![图2: 不同层微调表示与Delta嵌入的CCA相似度](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462835-1.png)
 图2说明：Delta嵌入与微调表示的相似度在中间层保持稳定，在最后一层下降，表明Delta嵌入主要捕获了集中在高层的任务特定偏移。∆W2V2的下降更剧烈，对应其更强的互补性。
 
 #

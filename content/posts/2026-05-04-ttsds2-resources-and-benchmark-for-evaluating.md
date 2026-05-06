@@ -92,7 +92,7 @@ TTSDS2本身不是一个生成模型，而是一个评估指标。其“架构�
 *   噪声作为负样本锚点：使用多种类型的噪声（均匀噪声、高斯噪声等）作为分数下界（0分），确保分数有意义。
 *   无权重平均：消融实验表明，简单的平均比学习到的权重在跨域泛化上更稳定，避免了过拟合。
 
-![图表展示了三个代表性指标（TTSDS2, SQUIM, X-Vector）的MOS相关性。TTSDS2（上图）的散点图更贴近连续尺度，而SQUIM和X-Vector显示出一定的聚类行为。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-1.png)
+![图表展示了三个代表性指标（TTSDS2, SQUIM, X-Vector）的MOS相关性。TTSDS2（上图）的散点图更贴近连续尺度，而SQUIM和X-Vector显示出一定的聚类行为。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uGai5lYHlV-1.png)
 
 图2：三个代表性客观指标与MOS相关性的散点图对比。TTSDS2显示出更均匀的连续预测能力。
 
@@ -135,11 +135,11 @@ TTSDS2本身不是一个生成模型，而是一个评估指标。其“架构�
 多语言验证
 TTSDS2分数（作为距离）与Uriel+语言学距离的Spearman相关系数：原版TTSDS为-0.39，多语言TTSDS2为-0.51（均p<0.05），表明多语言版本更好捕获了语言差异。
 
-![图表展示了14种语言上真实语音的TTSDS2分数箱线图。各语言分数集中在85-95之间，低资源语言分数略低，显示了基准的稳定性。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-3.png)
+![图表展示了14种语言上真实语音的TTSDS2分数箱线图。各语言分数集中在85-95之间，低资源语言分数略低，显示了基准的稳定性。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uGai5lYHlV-3.png)
 
 图3：14种语言真实语音的TTSDS2分数分布，显示基准的跨语言一致性。
 
-![图表为多维尺度分析图，将TTSDS2分数解释的距离与语言学距离进行可视化对比。多语言TTSDS2版本更好地保持了语言间的拓扑关系。](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uGai5lYHlV-7.png)
+![图表为多维尺度分析图，将TTSDS2分数解释的距离与语言学距离进行可视化对比。多语言TTSDS2版本更好地保持了语言间的拓扑关系。](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uGai5lYHlV-7.png)
 
 图8：语言距离的多维尺度可视化，对比语言学距离、原版TTSDS2距离和多语言TTSDS2距离。
 

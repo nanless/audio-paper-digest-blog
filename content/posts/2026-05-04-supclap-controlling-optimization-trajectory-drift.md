@@ -134,7 +134,7 @@ SupCLAP的架构建立在标准的CLAP对称对比学习框架之上，主要包
 | - bi-StaticSVR | 42.54 | 55.25 | 16.21 | 21.26 |
 | - bi-DynamicSVR | 43.09 | 56.30 | 17.51 | 22.71 |
 
-![单语检索性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-7.png)
+![单语检索性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/S1CW6PLsqS-7.png)
 
 图说明：展示了InfoNCE基线与其添加SVR变体（StaticSVR， DynamicSVR）在AudioCaps和Clotho数据集上，文本到音频（T2A）和音频到文本（A2T）检索的R@1和R@10性能对比。表明SVR变体一致地提升了基线性能。
 
@@ -158,7 +158,7 @@ SupCLAP的架构建立在标准的CLAP对称对比学习框架之上，主要包
 | - bi-DynamicSVR (w/o constraints) | 44.01 | 59.24 |
 | - bi-DynamicSVR | 44.16 | 59.66 |
 
-![消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-8.png)
+![消融实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/S1CW6PLsqS-8.png)
 
 图说明：消融实验对比了SVR的不同变体（单向/双向，静态/动态，有/无约束）在AudioCaps上的检索性能。表明双向、带约束的动态SVR效果最佳。
 
@@ -175,7 +175,7 @@ SupCLAP的架构建立在标准的CLAP对称对比学习框架之上，主要包
 
 优化轨迹漂移分析：
 
-![优化轨迹漂移分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-0.png)
+![优化轨迹漂移分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/S1CW6PLsqS-0.png)
 
 图说明：通过计算更新向量与“拉力”向量之间的余弦相似度来衡量漂移。SVR方法（绿色曲线）的余弦相似度始终高于InfoNCE基线（蓝色曲线），证明SVR有效缓解了优化轨迹漂移。
 
@@ -185,7 +185,7 @@ SupCLAP的架构建立在标准的CLAP对称对比学习框架之上，主要包
 
 正样本相似度分布：
 
-![正样本相似度分布图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/S1CW6PLsqS-5.png)
+![正样本相似度分布图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/S1CW6PLsqS-5.png)
 
 图说明：在AudioCaps测试集上，SVR方法（绿、橙线）的正对相似度分布相比基线（蓝线）明显右移，表明SVR能拉近更多正样本对，提升对齐质量。
 

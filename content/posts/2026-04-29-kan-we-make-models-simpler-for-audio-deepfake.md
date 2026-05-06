@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 关键设计选择与动机：该架构的核心创新在于避免了对SSL特征进行降维。作者认为传统的降维投影层（将维度从D降到d，d << D）可能会丢失对检测任务有用的判别信息。因此，他们提出直接利用完整的高维XLS-R特征，并用一个极度轻量化的后端进行分类，以验证“强大的特征+简单的分类器”这一范式的有效性。
 
-![图1: 模型整体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460320-0.png)
+![图1: 模型整体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460320-0.png)
 图1展示了论文提出的模型整体流程。左侧为XLS-R特征提取器，右侧为简单的分类器（FC或KAN）。输入为原始音频波形，经过XLS-R处理得到固定维度的嵌入向量，再直接送入分类器输出结果。该图直观地体现了架构的简洁性。
 
 ### 💡 核心创新点
@@ -109,7 +109,7 @@ hiddenInHomeList: true
 | XLS-R+KAN (22.54K) | 0.11 | 1.07 | 1.35 | 3.89 | 4.68 | 1.51 | 7.41 | 6.43 | 4.45 |
 结论：在参数量极少的情况下，XLS-R+KAN在21LA, 21DF, ITW, LibSeVoc, DFADD等多个数据集上取得了最佳或接近最佳的性能，证明了其竞争力和泛化能力。
 
-![图2: MLAAD数据集上FC与KAN的EER雷达图对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460320-1.png)
+![图2: MLAAD数据集上FC与KAN的EER雷达图对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460320-1.png)
 图2的雷达图展示了在MLAAD多语言数据集上，KAN（蓝色）相对于FC（橙色）在大多数语言（尤其是英语、意大利语）上的EER优势，直观地体现了KAN在跨语言泛化上的潜力。
 
 ### ⚖️ 评分理由

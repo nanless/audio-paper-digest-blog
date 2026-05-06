@@ -117,7 +117,7 @@ hiddenInHomeList: true
 | + 无偏训练 | 0.30 | 9.15 | 17.32 | 80.34 | 20.28 |
 结论：每一项改进都逐步带来了EWER的降低和Recall的提升。最终系统相比原始版本，EWER下降了6.35个点，Recall提升了6.34个点。
 
-![召回率与虚警率关系图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463267-0.png)
+![召回率与虚警率关系图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463267-0.png)
 图1描述：该图展示了不同偏差系统在调整`dynvoc`权重时，召回率（Recall）与虚警率（FA）的权衡曲线。曲线越靠右下角，表示在相同虚警率下召回率越高，或相同召回率下虚警率越低，性能越好。图中“DynVoc (Ours)”的曲线明显位于“DynVoc Vanilla”和“FST”基线的右下方，直观地证明了本文所提技术对召回-虚警权衡曲线的显著改善。
 
 #

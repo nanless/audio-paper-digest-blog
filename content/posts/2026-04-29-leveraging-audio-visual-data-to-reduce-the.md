@@ -65,7 +65,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460798-0.png)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460798-0.png)
 本研究的核心架构基于FaST-VGS+，并在音频编码器部分进行了调整。整体为一个多任务学习框架，包含音频编码和视觉对齐两个分支。
 
 1.  音频分支（Audio Branch）：
@@ -155,7 +155,7 @@ hiddenInHomeList: true
 4.  鲁棒性观察：在第二阶段加入ML-COCO数据（含合成语音）后，纯音频SSLA模型性能普遍下降，而VGS+模型性能提升，表明视觉grounding使表征对领域偏移更鲁棒。
 5.  语言判别结果：在语言判别任务中，SSLA模型错误率（39.93%）高于基线SSL（36.66%），而VGS+模型错误率最低（33.69%），进一步证明视觉grounding增强了语言区分能力。
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460798-0.png)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460798-0.png)
 图1说明：本文的核心概念示意图。用于定义和比较两个关键量：(1) 音频模型中的单语-双语性能差距（gap = y）与视觉grounding模型中的差距（gap = w），以检验 y > w（差距是否缩小）；(2) 视觉grounding对单语模型的增益（gain = x）与对双语模型的增益（gain = z），以检验 z > x（是否差异性增益）。实验结果定量验证了这两种关系。
 
 ### ⚖️ 评分理由

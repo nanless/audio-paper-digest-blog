@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page3-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462775-0.jpg)
+![图1: pdf-image-page3-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462775-0.jpg)
 
 模型MM-VLN的整体架构如图1所示，主要包含以下几个核心组件：
 

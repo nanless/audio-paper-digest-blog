@@ -62,7 +62,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 MeanVC采用经典的“识别-合成”框架，整体架构如图1所示，包含以下组件及流程：
-![MeanVC架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462227-0.png)
+![MeanVC架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462227-0.png)
 图1: MeanVC整体架构图。图片展示了从源波形到转换波形的完整流程，包括各个模块及其连接方式。
 
 1.  输入：源语音波形（Source Wav）和目标说话人参考波形（Reference Wav）。

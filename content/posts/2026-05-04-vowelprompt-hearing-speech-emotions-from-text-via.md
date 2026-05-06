@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 VowelPrompt是一个将精细粒度语音韵律信息与文本大语言模型相结合的框架，用于增强语音情感识别。
 
-![VowelPrompt整体框架示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PMbionN5cC-3.png)
+![VowelPrompt整体框架示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PMbionN5cC-3.png)
 
 完整输入输出流程：系统的输入是语音波形、其正交转录文本以及可选的对话上下文。输出是情感类别标签（如“frustrated”）以及一段解释性推理过程。流程主要分为两个阶段：元音级声学特征提取和LLM微调与推理。
 

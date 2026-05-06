@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 ECHO的整体架构如图1所示，是一个端到端的处理流程，包含四个核心组件：
 
-![图1: ECHO框架的特征提取流水线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462725-0.png)
+![图1: ECHO框架的特征提取流水线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462725-0.png)
 
 1.  频谱图提取 (Spectrogram Extraction)：输入是任意采样率（fs）的原始波形。使用短时傅里叶变换（STFT）将其转换为幅度谱图。关键设计是窗长（twin）和跳长（thop）以秒为单位定义，因此对于相同持续时间的信号，无论采样率如何，生成的时频帧数是固定的。
 2.  频率感知子带分割与位置编码 (Frequency-Aware Sub-band Splitting with PE)：将STFT得到的频谱图 S 在频率轴上均匀分割成 N 个无重叠的子带（N与采样率fs成正比）。对于第k个子带，其中心频率 fc 和归一化位置 p 被计算出来，并用于生成一个固定的正弦位置编码 PE(p, j)。这个设计是本文的核心创新之一：它确保来自不同采样率、但处于相对频率位置相同的子带，拥有相同的位置编码，从而使模型能处理任意采样率输入。

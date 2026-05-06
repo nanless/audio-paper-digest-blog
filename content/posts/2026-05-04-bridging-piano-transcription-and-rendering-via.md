@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 论文提出的统一框架如图1所示，包含一个联合Transformer模型和一个独立的PSR模块。
 
-![论文整体框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-0.png)
+![论文整体框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/173Pq3F31r-0.png)
 
 联合模型架构（图1）：
 - 输入编码：
@@ -77,7 +77,7 @@ hiddenInHomeList: true
 
 性能风格推荐（PSR）模块（图6）：
 
-![PSR模块架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-5.png)
+![PSR模块架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/173Pq3F31r-5.png)
 
 - 目的：仅从乐谱`x`生成风格嵌入`ẑs`，用于条件化EPR解码器。
 - 架构：
@@ -168,7 +168,7 @@ EPR任务结果：
 | Ours (PSR) | 92.27ᵃ | 3.77ᶜ | 3.96ᵃ |
 关键结论：Ours (PSR) 在对齐率和插入率上表现最佳，显示了其无对齐Seq2Seq公式的有效性。
 
-![EPR主观评价结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-1.png)
+![EPR主观评价结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/173Pq3F31r-1.png)
 
 关键结论（图2）：主观听觉测试表明，Ours (Target) 在动态、节奏、风格和整体拟人性所有维度上评分最高，Ours (PSR) 紧随其后且优于基线。分作曲家来看，模型在巴赫和斯克里亚宾作品上表现尤其突出。
 
@@ -182,13 +182,13 @@ EPR任务结果：
 | Cont → Comp | 3.03 | 4.66 | 3.75 | 29.99 |
 关键结论：使用风格表示`zs`的分类器在识别演奏者和作曲家方面远优于使用内容表示`zc`的分类器，这强力证明了内容与风格的成功解耦。`zs`编码了更多关于演奏者个性和作曲家风格的信息。
 
-![风格表示可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-2.png)
+![风格表示可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/173Pq3F31r-2.png)
 
 关键结论（图3）：真实演奏的风格嵌入在二维投影中形成了清晰的作曲家和演奏者聚类，进一步直观证明了解耦的有效性。
 
 PSR有效性评估：
 
-![PSR生成风格与真实风格可视化对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/173Pq3F31r-3.png)
+![PSR生成风格与真实风格可视化对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/173Pq3F31r-3.png)
 
 关键结论（图4）：PSR模型从乐谱生成的风格嵌入（右图）与从真实表演提取的风格嵌入（左图）在按音乐史时期（巴洛克、古典、浪漫、现代）的聚类结构上高度相似，表明PSR能生成具有音乐意义且风格适配的嵌入。
 

@@ -77,9 +77,9 @@ AGG-RL框架（如图2所示）是一个端到端的系统，接受多通道音�
 
 关键设计动机：将表示解耦为与音频几何相关的`A`和与几何无关的`G`，通过相似度匹配，使得模型在推理时只需计算`A`，而`G`可以预计算缓存，且`G`的输入（网格点）可以任意更换，从而实现了网格灵活性。相对编码（rMPE）和自适应频率分析（LNuDFT）则旨在提供更符合声学物理规律、泛化性更强的特征表示，实现几何不变性。
 
-![AGG-RL框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-0.png)
+![AGG-RL框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-0.png)
 
-![AuGeonet详细架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-4.png)
+![AuGeonet详细架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-4.png)
 
 ### 💡 核心创新点
 
@@ -133,15 +133,15 @@ AGG-RL框架（如图2所示）是一个端到端的系统，接受多通道音�
 
 不同环境条件下的鲁棒性：图9显示，所提方法在各种SNR和RT60条件下均优于基线（Unet with AGG-RL, Neural-SRP with AGG-RL），展示了在噪声和混响环境中的稳健性。
 
-![不同D值下的性能变化图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-9.png)
+![不同D值下的性能变化图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-9.png)
 
-![不同SNR/RT60条件下的性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-10.png)
+![不同SNR/RT60条件下的性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-10.png)
 
 定性结果可视化：图10-13展示了空间谱。与基线方法相比，所提方法生成的谱峰值更尖锐、更稳定，与真实声源位置（Oracle）高度吻合，尤其在处理多声源和未见阵列时，表现出更好的分辨能力和鲁棒性。
 
-![NAO机器人数据集上两声源空间谱Mollweide投影对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-11.png)
+![NAO机器人数据集上两声源空间谱Mollweide投影对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-11.png)
 
-![Eigenmike数据集上单声源空间谱Mollweide投影对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/bWXpJFesLS-15.png)
+![Eigenmike数据集上单声源空间谱Mollweide投影对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/bWXpJFesLS-15.png)
 
 ### ⚖️ 评分理由
 

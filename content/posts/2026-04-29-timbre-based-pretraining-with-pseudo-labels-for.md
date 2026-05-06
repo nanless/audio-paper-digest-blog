@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 该框架整体分为三个阶段（见图2）：
 
-![整个预训练框架流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464219-8.png)
+![整个预训练框架流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464219-8.png)
 
 1.  阶段一：基于VAE的音色表示学习：
     *   输入：NSynth数据集中的单声道one-shot音频。
@@ -112,7 +112,7 @@ hiddenInHomeList: true
 2.  k值影响：聚类数k=39和90的效果普遍优于k=10，与图3的UMAP可视化一致，即更细粒度的音色划分能带来更好的预训练效果。
 3.  单乐器场景：在MAESTRO（钢琴）上，方法表现与基线持平或略优。但在GuitarSet（吉他）上，方法有时甚至低于从头训练，表明在缺乏音色多样性的单乐器任务中，该预训练策略可能引入不必要的方差。
 
-![潜在音色空间的UMAP可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464219-13.jpg)
+![潜在音色空间的UMAP可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464219-13.jpg)
 图3展示了不同聚类粒度下的音色空间。原始乐器标签存在重叠（如不同乐器族共享谐波结构），而基于音色的聚类（k=39， k=90）能更精细地区分音色相似和差异的样本，这解释了模型在均衡性指标上的提升。
 
 - 学术质量：6.5/7。创新性明确，将音色表示与乐器标签解耦用于AMT预训练是一个新颖且合理的思路。技术路线清晰，VAE、伪标签生成、预训练-微调的各环节实现正确。实验设计全面，对比了多个强基线（包括Sato等人的最新工作），使用了多种评估指标和聚合方案来突出“均衡性”这一核心贡献，并通过消融实验（不同k值）验证了关键设计选择。结果令人信服。主要扣分点在于合成音频的真实性质疑（domain gap）未在实验中被充分探讨和解决。
@@ -131,7 +131,7 @@ hiddenInHomeList: true
 
 该框架整体分为三个阶段（见图2）：
 
-![整个预训练框架流程](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464219-8.png)
+![整个预训练框架流程](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464219-8.png)
 
 1.  阶段一：基于VAE的音色表示学习：
     *   输入：NSynth数据集中的单声道one-shot音频。
@@ -201,7 +201,7 @@ hiddenInHomeList: true
 2.  k值影响：聚类数k=39和90的效果普遍优于k=10，与图3的UMAP可视化一致，即更细粒度的音色划分能带来更好的预训练效果。
 3.  单乐器场景：在MAESTRO（钢琴）上，方法表现与基线持平或略优。但在GuitarSet（吉他）上，方法有时甚至低于从头训练，表明在缺乏音色多样性的单乐器任务中，该预训练策略可能引入不必要的方差。
 
-![潜在音色空间的UMAP可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464219-13.jpg)
+![潜在音色空间的UMAP可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464219-13.jpg)
 图3展示了不同聚类粒度下的音色空间。原始乐器标签存在重叠（如不同乐器族共享谐波结构），而基于音色的聚类（k=39， k=90）能更精细地区分音色相似和差异的样本，这解释了模型在均衡性指标上的提升。
 
 ### ⚖️ 评分理由

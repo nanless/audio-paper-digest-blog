@@ -143,7 +143,7 @@ hiddenInHomeList: true
     - 主观评价：MOS（5位评估者打分）。
 
 主要对比结果：
-![Table 1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11461916-4.png)
+![Table 1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11461916-4.png)
 （注：图3即论文中的表1）
 如表1所示，本文提出的方法在各项指标上均超越或达到了报告的对比方法：
 - 相比离散token基线VALL-E，WER从6.11%大幅降低至1.95%，说话人相似度从0.47提升至0.54。

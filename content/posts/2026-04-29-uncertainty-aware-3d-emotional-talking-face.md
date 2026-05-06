@@ -54,9 +54,9 @@ hiddenInHomeList: true
 
 消融研究（在MEAD情感数据集）显示，各模块均带来性能提升：完整模型（w/ P,E,U）相比基线，在E-FID上从0.356降至0.145，Sync-C从4.886提升至5.152。
 
-![图1：UA-3DTalk整体框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462961-0.jpg)
-![图2：基于不确定性的变形模块](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462961-1.jpg)
-![图3：定性对比结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462961-2.png)
+![图1：UA-3DTalk整体框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462961-0.jpg)
+![图2：基于不确定性的变形模块](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462961-1.jpg)
+![图3：定性对比结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462961-2.png)
 
 5. 实际意义：推动了更自然、可控的情感数字人生成技术发展，可应用于虚拟助手、影视特效、在线教育等场景。
 6. 局限性：未提供代码和完整训练细节，复现难度高；不确定性建模的计算开销和实际收益的权衡分析不足；情感蒸馏模块对不同音频的鲁棒性有待更广泛验证。

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![论文中图1示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461402-0.png)
+![论文中图1示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461402-0.png)
 本文提出的可控音乐带宽扩展系统架构如上图所示。其核心是一个基于FLOWHIGH的条件流匹配（CFM）模型，主要组件和数据流如下：
 
 1.  输入：
@@ -140,7 +140,7 @@ hiddenInHomeList: true
 控制信号操控实验：
 通过缩放真实干净音频的DSC来测试模型的可控范围。
 
-![论文中图3示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461402-2.png)
+![论文中图3示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461402-2.png)
 图3展示了将DSC分别乘以系数2.0、1.0（原始）、0.8、0.5后，指导模型恢复4kHz退化音频的效果。绿色曲线是恢复音频的DSC。可以看到，模型能较好地遵循较低的DSC目标（0.5， 0.8），但当目标DSC（2.0）远超自然范围时，恢复的DSC（绿色）会靠近奈奎斯特频率，导致伪影。
 
 下表（对应论文表3）给出了具体数值：

@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 本论文未提出新的生成模型架构，而是提出了一个推理时优化框架，应用于现有的自回归MIDI生成模型（以Text2midi为例）。整体流程如图1所示。
 
-![图1: Text2midi-InferAlign推理时对齐框架](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462995-0.png)
+![图1: Text2midi-InferAlign推理时对齐框架](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462995-0.png)
 
 核心流程与组件：
 1.  输入：一个文本标题 `x`。

@@ -49,7 +49,7 @@ hiddenInHomeList: true
 
 PACE是一个分阶段、混合式的持续学习框架，其设计旨在分别解决音频CL在初始适应和后续会话中的核心挑战。整体流程如图4所示。
 
-![PACE框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-3.png)
+![PACE框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/k5PgSlNc4E-3.png)
 
 图4：PACE框架概览图。展示了从Stage 0（预训练）到Stage 3（骨干网络冻结）的完整流程。Stage 1执行改进的第一会话自适应（LoRA + 解析分类器）；Stage 2引入子空间正交PEFT（通过LoRA减法和梯度投影实现）和边界感知正则化；Stage 3冻结骨干网络以进行长期稳定推理。
 
@@ -135,7 +135,7 @@ PACE是一个分阶段、混合式的持续学习框架，其设计旨在分别�
 *   图1：直观展示了音频域（SpeechCommands V2）与视觉域（ImageNet-R）在CL中表征偏移的巨大差异，支撑了论文的核心动机。
 *   图9：热力图清晰显示，没有MSA和梯度投影的模型在后期会话后，对早期会话类别的准确率崩溃式下降（如Session 1从100%降至7.9%），而完整PACE保持了稳定的高准确率，证明了方法防止遗忘的有效性。
 
-![不同模型在各会话间的准确率热力图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/k5PgSlNc4E-8.png)
+![不同模型在各会话间的准确率热力图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/k5PgSlNc4E-8.png)
 
 图9：不同模型在各会话间的准确率热力图。(a)完整PACE (b)无MSA (c)无梯度投影。清晰展示了MSA和梯度投影对于维持早期会话性能、防止灾难性遗忘的关键作用。
 

@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 数据流与交互：输入序列（APP令牌 + 对话式音频-文本序列）一次性送入Phi-4骨干。骨干内部的自注意力机制在处理序列时，会同时看到代表整体声学能力的APP令牌、各个部分的文本提示和对应的音频嵌入。这样，模型在生成最终隐藏状态 `h_T` 时，已经融合了语篇上下文、声学线索和任务指令的所有信息。最后，`h_T` 通过线性头被解码为所有目标分数。
 
-![架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461430-1.png)
+![架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461430-1.png)
 图2：会话级多模态评估器的整体架构。清晰展示了左侧的Phi-4多模态骨干处理对话序列，以及右侧并行的Whisper分支生成APP前缀令牌并注入主序列的过程。
 
 ### 💡 核心创新点
@@ -121,7 +121,7 @@ hiddenInHomeList: true
 - MTL vs. CTG：表1和表2证明了会话级多目标学习框架的有效性，它通过跨话语推理显著提升了性能。
 - APP的作用：对比Phi-4-MTL和Phi-4-MTL-APP，APP提供了稳定、微小的提升。图3的散点图显示，单独由Whisper预测的总体分数与Phi-4-MTL-APP预测的总体分数有很高的相关性，证明APP作为声学先验与主模型协同工作良好。
 
-![散点图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461430-2.png)
+![散点图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461430-2.png)
 图3：APP (Whisper) 预测值与Phi-4预测值在总体分数上的回归散点图。图中点紧密分布在对角线附近，表明两者预测高度一致，APP有效地提供了声学校准信号。
 
 ### ⚖️ 评分理由

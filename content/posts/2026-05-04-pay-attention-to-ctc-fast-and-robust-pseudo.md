@@ -86,7 +86,7 @@ hiddenInHomeList: true
 - CTC驱动的Teacher Forcing：动机是消除自回归解码这一训练瓶颈，并将CTC的鲁棒性（单调对齐、条件独立）转移到注意力分支。虽然生成的注意力序列可能不连贯，但在自训练场景下，学生和教师基于相同的CTC前缀进行条件预测，保证了知识的有效传递。
 - 混合采样：动机是缓解因教师使用CTC输入、而学生在推理时需自回归所导致的“暴露偏差”。通过随机切换到标准AR模式（使用真实或自回归解码的伪标签），让解码器在训练时也接触其自身可能生成的输入模式。
 
-![USR与USR 2.0伪标签生成与监督策略对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sSbEEHNEsL-5.png)
+![USR与USR 2.0伪标签生成与监督策略对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sSbEEHNEsL-5.png)
 
 图2：展示了原始USR（左）与USR 2.0的两种模式（中：CTC驱动模式，右：AR模式）在伪标签生成与学生模型监督方式上的核心区别。
 

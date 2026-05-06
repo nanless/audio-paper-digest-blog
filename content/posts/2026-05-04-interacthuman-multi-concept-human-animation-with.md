@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 InterActHuman是一个基于扩散变换器（DiT）的视频扩散框架，旨在实现多概念、多模态条件的人体动画生成。
 
-![模型框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/rJilRU8D3c-1.png)
+![模型框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/rJilRU8D3c-1.png)
 
 图2：InterActHuman框架示意图。展示了掩码预测与局部条件注入的迭代过程。
 
@@ -159,7 +159,7 @@ InterActHuman是一个基于扩散变换器（DiT）的视频扩散框架，旨�
 
 关键结论：预测动态掩码的方案在唇音同步（Sync-D）和视频保真度（FVD）上全面优于全局音频、ID嵌入和固定掩码的变体，验证了显式、自适应布局控制的有效性。
 
-![消融实验定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/rJilRU8D3c-5.png)
+![消融实验定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/rJilRU8D3c-5.png)
 
 图6：音频注入策略消融实验定性结果。展示了固定掩码、ID嵌入、全局音频和本方法（Ours）在多人场景下的生成对比。
 

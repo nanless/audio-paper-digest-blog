@@ -61,7 +61,7 @@ hiddenInHomeList: true
 4.  第三阶段（Whisper二次转录）：将第二阶段生成的提示句子，通过Whisper的`initial_prompt`参数，在解码过程中注入到模型。Whisper会利用该提示对解码进行上下文偏置，从而在重新处理原始音频时，更倾向于输出提示中包含的正确拼写和术语，最终生成改进后的转录文本。
 5.  输出：上下文感知的增强转录稿。
 
-![图1：多智能体管道示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461641-0.png)
+![图1：多智能体管道示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461641-0.png)
 图1展示了完整的处理流程：Whisper首次转录输出被送入多个GPT-4o代理（话题、人名、术语），经过滤后生成提示句，再次输入Whisper的解码器，得到最终转录。
 
 #

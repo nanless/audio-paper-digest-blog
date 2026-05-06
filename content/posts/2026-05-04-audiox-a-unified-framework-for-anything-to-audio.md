@@ -38,7 +38,7 @@ AudioX是一个端到端的扩散生成模型，其核心设计是统一处理�
 
 整体架构：如论文图4所示，该框架由三个主要部分组成：多模态编码器、多模态自适应融合（MAF）模块和扩散Transformer（DiT）骨干网络。
 
-![AudioX框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-3.png)
+![AudioX框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qjJWxK3yWo-3.png)
 
 图4：AudioX整体架构图。左侧展示了从视频、文本、音频三种模态输入到生成音频的完整流程。右侧详细展开了核心的多模态自适应融合（MAF）模块的内部结构。
 
@@ -145,7 +145,7 @@ AudioX是一个端到端的扩散生成模型，其核心设计是统一处理�
 
 结论：AudioX在需要精细控制的指令跟随评测中全面碾压所有基线。其在T2A-bench的所有指标（类别、计数、排序、时间戳准确率）上均取得最高分，在AudioTime上所有误差指标均最低，证明了其卓越的指令跟随能力。
 
-![综合性能对比与指令跟随评测结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-0.png)
+![综合性能对比与指令跟随评测结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qjJWxK3yWo-0.png)
 
 图1：综合性能对比。(a) 展示了AudioX与多个基线在多个基准上的Inception Score (IS) 对比，AudioX在多数任务上领先。(b) 展示了在指令跟随基准上的详细结果，AudioX优势明显。
 
@@ -331,7 +331,7 @@ AudioX是一个端到端的扩散生成模型，其核心设计是统一处理�
 1.  数据消融（表3）：使用完整流水线（GeminiCap-aug）训练的模型在几乎所有任务和指标上都优于其他数据源。例如，在T2A任务中，其IS为10.93，FAD为2.91，优于仅用原始标签（IS 7.59, FAD 6.02）。这验证了高质量、细粒度数据的重要性以及跨模态正则化效应（V2A任务性能也随之提升）。
 2.  MAF模块消融（表4）：完整的MAF模块（包含门控和查询）在KL、IS、FAD以及AudioTime的各项误差指标上均达到最佳。移除任一组件都会导致性能下降，证明了两个组件的必要性。
 
-![数据消融实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/qjJWxK3yWo-1.png)
+![数据消融实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/qjJWxK3yWo-1.png)
 
 图7：数据消融实验结果。展示了使用不同文本监督方法训练模型的性能对比，GeminiCap-aug（本文方法）在各项指标上均表现最佳。
 

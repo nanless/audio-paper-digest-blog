@@ -68,7 +68,7 @@ hiddenInHomeList: true
 
 RoboOmni是一个端到端的多模态大语言模型框架，其整体架构如图4所示。其设计旨在将感知、推理、交互和执行统一在一个自回归生成模型中。
 
-![RoboOmni模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-0.png)
+![RoboOmni模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OJh7oBCYhL-0.png)
 
 图4：RoboOmni的Perceiver-Thinker-Talker-Executor架构概览。模型接收视觉、音频和文本对话历史，通过统一的token空间进行处理，最终输出语音交互和机器人动作。
 
@@ -158,7 +158,7 @@ RoboOmni是一个端到端的多模态大语言模型框架，其整体架构如
 意图识别能力评估：
 在专门的意图识别任务上（图7a），RoboOmni准确率达88.89%，显著高于ASR+GPT-4o（55.56%）和Qwen2.5-Omni-7B（50.00%）。
 
-![意图识别能力对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-6.png)
+![意图识别能力对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OJh7oBCYhL-6.png)
 
 图7a：不同模型在意图识别任务上的准确率对比。RoboOmni展现了最强的跨模态意图推理能力。
 
@@ -176,13 +176,13 @@ RoboOmni是一个端到端的多模态大语言模型框架，其整体架构如
 训练效率分析（图8）：
 比较了在OmniAction上预训练后再微调与从零开始训练的收敛速度。预训练模型在约2k步内即可达到接近90%的准确率，而从零训练模型在20k步后仅达到约30%且不稳定。
 
-![训练效率对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-7.png)
+![训练效率对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OJh7oBCYhL-7.png)
 
 图8：预训练+微调与从零开始训练在不同指令类型上的收敛曲线对比。预训练提供了强大的泛化先验，显著加速和稳定了下游任务适应。
 
 推理效率分析（图10）：
 
-![推理延迟对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/OJh7oBCYhL-1.png)
+![推理延迟对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/OJh7oBCYhL-1.png)
 
 图10：不同级联管线与RoboOmni的单次推理延迟对比。RoboOmni将延迟降低至ASR+OpenVLA基线的一半（0.49倍）。
 

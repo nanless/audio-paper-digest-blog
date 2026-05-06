@@ -80,7 +80,7 @@ ComVo是一个基于GAN的iSTFT波形生成器，其核心是使生成器和判�
 
 架构图：
 
-![ComVo系统架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U4GXPqm3Va-0.png)
+![ComVo系统架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/U4GXPqm3Va-0.png)
 
 图2：ComVo架构概览。 (a)生成器：输入梅尔频谱，经过初始复数卷积、相位量化层、多个复数ConvNeXt块，最终输出复数频谱，经iSTFT得到波形。(b)复数ConvNeXt块内部结构。(c)复数多分辨率判别器(cMRD)：由多个子判别器处理不同分辨率的复数频谱。(d)多周期判别器(MPD)：处理波形段。
 
@@ -136,7 +136,7 @@ ComVo是一个基于GAN的iSTFT波形生成器，其核心是使生成器和判�
     2.  相位量化影响：表6显示，与无量化（Nq=0）相比，Nq=128的量化在保持较低MR-STFT误差的同时，显著提升了UTMOS和PESQ，降低了周期性伪影。
     3.  Grad-CAM可视化：图3对比了不同生成器-判别器配置下，判别器的注意力热图。实值MRD的注意力分散，而复数cMRD的注意力能更集中地对齐语音相关的频谱结构。
 
-![不同生成器-判别器配置下的Grad-CAM注意力热图对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/U4GXPqm3Va-8.png)
+![不同生成器-判别器配置下的Grad-CAM注意力热图对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/U4GXPqm3Va-8.png)
 
 图3：Grad-CAM可视化对比。 每行对应一个cMRD子判别器，每列对应不同的生成器(GR/GC)-判别器(DR/DC)配置。可以观察到，使用复数判别器(GRDC, GCDC)时，注意力区域与语音频谱结构对齐更准确。
 *   计算效率分析：

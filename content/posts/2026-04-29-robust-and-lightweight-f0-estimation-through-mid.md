@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 本文提出的MLF（Mid-Level Fusion）模型架构如图2所示，其完整流程如下：
 
-![图2：MLF方法架构示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463185-1.png)
+![图2：MLF方法架构示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463185-1.png)
 
 1.  输入与特征提取：输入为单声道音频信号（16kHz采样）。首先提取四种中层特征，形成一个形状为 `[4, K, M]` 的特征张量 `X`：
     *   通道1 (dYIN logits)：来自可微分YIN算法（dYIN）的原始对数分数，强调F0和次谐波。
@@ -124,7 +124,7 @@ hiddenInHomeList: true
 
 （表中加粗为MLF在相同SNR下取得的最佳或次佳性能之一，注意MLF-SV在极端噪声下表现更优）
 
-![图3：MIR-1K测试集上不同SNR下的RPA曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463185-2.png)
+![图3：MIR-1K测试集上不同SNR下的RPA曲线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463185-2.png)
 
 关键结论（来自表1和图3）：
 1.  MLF的有效性：MLF在所有SNR条件下都显著优于其各个单特征基线（dYIN, dSWIPE, Cepstrum, VQT），证明了特征融合的成功。例如，在Vocadito 0dB SNR下，MLF RPA (0.867) 大幅超过最好的单特征dSWIPE (0.620)。

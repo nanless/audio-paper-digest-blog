@@ -66,7 +66,7 @@ VPC’24 匿名化任务关键指标对比（部分）：
 
 TVTSyn的整体架构如图1所示，是一个模块化的端到端流式系统，包含四个核心组件：
 
-![TVTSyn系统整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Tf4Lfw85lS-0.png)
+![TVTSyn系统整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Tf4Lfw85lS-0.png)
 
 （图1：论文中的系统整体架构图。左侧(a)展示了内容编码器的训练流程，右侧(b)展示了完整的训练与推理数据流，包括内容编码器、说话人处理块、韵律预测器和波形解码器。）
 
@@ -130,7 +130,7 @@ TVTSyn的整体架构如图1所示，是一个模块化的端到端流式系统�
 语音转换任务：
 如图5所示，TVTSyn（P）在目标说话人相似度（Trg-SIM=0.77）和源说话人相似度（Src-SIM=0.48）上取得了最佳平衡，表明它能有效转移目标音色同时淡化源音色。其NISQA MOS（4.01）仅次于SLT24（3.91，注：论文原文此处数值与描述有矛盾，根据图表应为4.01 vs 3.91，TVTSyn更高），但显著高于DarkStream（3.42）和GenVC变体。消融实验显示，移除TVT或VQ会显著降低NISQA分数（降至3.42/3.44），但对说话人相似度影响较小。人类听觉测试（表2）证实TVTSyn在感知质量MOS（3.82）和说话人可验证率（74.33%）上表现最优。
 
-![语音转换任务客观评估结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Tf4Lfw85lS-4.png)
+![语音转换任务客观评估结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Tf4Lfw85lS-4.png)
 
 （图5：语音转换任务的客观评估结果散点图，展示了不同模型（包括消融变体）在Trg-SIM（↑）与Src-SIM（↓）以及Trg-SIM（↑）与NISQA（↑）两个维度上的权衡关系。）
 
@@ -148,17 +148,17 @@ TVT处理块内部消融实验（表1）：
 
 （图3：内容嵌入的t-SNE可视化，展示了在不同表示阶段（连续嵌入、logits、瓶颈、VQ瓶颈）说话人信息的逐步消除过程。）
 
-![时变音色表示的定性分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Tf4Lfw85lS-6.png)
+![时变音色表示的定性分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Tf4Lfw85lS-6.png)
 
 （图4：时变音色表示的定性分析。(a)内容到GTM的注意力热图，显示稀疏的、与内容相关的音色侧面选择。(b) Top-1 GTM token随时间的变化，显示在音素/韵律转换时的离散切换。(c) PCA轨迹，展示了Slerp插值如何使最终音色嵌入（st）平滑地围绕全局嵌入（g）波动。(d)和(e)显示了GTM token的使用情况，表明模型学到了多样化的、非坍缩的音色侧面。）
 
-![VPC‘24评估结果表格（部分）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Tf4Lfw85lS-8.jpg)
+![VPC‘24评估结果表格（部分）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Tf4Lfw85lS-8.jpg)
 
 （图6：论文中呈现VPC‘24评估结果的表格截图，对应表3。）
 
 （图7：论文中呈现人类听觉测试结果的表格截图，对应表2。）
 
-![实时性能对比表格](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Tf4Lfw85lS-9.jpg)
+![实时性能对比表格](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Tf4Lfw85lS-9.jpg)
 
 （图8：论文中呈现延迟与RTF对比的表格截图，对应表4。）
 

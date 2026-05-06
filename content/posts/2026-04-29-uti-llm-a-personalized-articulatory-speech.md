@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![UTI-LLM Architecture](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461943-1.jpg)
+![UTI-LLM Architecture](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461943-1.jpg)
 模型架构（对应图2）：UTI-LLM是一个基于大语言模型（LLM）的多模态系统，其核心目标是将超声舌成像（UTI）的视觉信息和语音的声学信息融合，以理解并分析发音运动。
 1.  整体输入输出流程：系统接收两个主要输入：(1) 用户的语音信号`Speech`；(2) 与之同步的超声舌成像视频`UTI`。同时接收用户的文本查询`User Query`（如“我的舌部运动与标准发音有何不同？”）。系统输出为LLM生成的自然语言回复，内容包含对舌部运动的描述、分析及康复建议。
 2.  主要组件：
@@ -152,7 +152,7 @@ hiddenInHomeList: true
 结论：三位人类专家在盲测中也给予UTI-LLM最高的评价，特别是在“正确性”上达到4.16/5.0，验证了其输出的临床实用性和���信度。
 
 图3. 不同模块配置的消融实验结果
-![Ablation Study](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461943-2.jpg)
+![Ablation Study](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461943-2.jpg)
 结论：消融实验证明了多模态融合的必要性。仅使用语音（Speech）或UTI（UTI）进行评估时，准确率和F1值均低于使用两者融合（Speech+UTI）的版本。完整模型（Speech+UTI）在准确率（0.9098）和F1值（0.9058）上达到最高。
 
 #

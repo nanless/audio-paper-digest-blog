@@ -54,7 +54,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![SynthCloner模型架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461838-1.png)
+![SynthCloner模型架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461838-1.png)
 图2：SynthCloner模型架构示意图（摘自论文）。
 
 SynthCloner是一个因子分解编解码器模型，其核心思想是将输入音频`x`通过三条独立的处理路径解耦为三个潜在表示，并在重建时组合它们。

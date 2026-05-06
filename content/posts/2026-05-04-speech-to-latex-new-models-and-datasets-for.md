@@ -57,7 +57,7 @@ hiddenInHomeList: true
     *   语言模型解码：将音频标记与文本提示标记拼接，输入到基于LLaMA的大语言模型中，进行自回归生成，直接输出LaTeX序列。
     *   关键设计：端到端地联合处理音频和文本，避免了ASR中间转录可能带来的信息损失和歧义放大。论文对SALMONN的LLaMA部分使用LoRA进行微调，同时冻结了音频编码器和适配器。
 
-![S2L方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/gk8WMxzIQP-0.png)
+![S2L方法示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/gk8WMxzIQP-0.png)
 
 （图1：论文中的图1，展示了S2L的两种主要方法示意图。左侧(a)是后校正方法，流程为“输入波形 -> ASR模型 -> 文本转录 -> 后校正LLM -> 输出LaTeX”。右侧(b)是多模态端到端方法（以SALMONN为例），流程为“输入波形 -> 双音频编码器(Whisper, BEATs) -> 适配器 -> 音频与文本提示标记 -> LLaMA LLM -> 下一token预测”。）
 
@@ -117,7 +117,7 @@ S2L-Sentences 结果示例（英语人类标注测试集）
 | Qwen2.5-7B (LoRA) | Mix | 18.75 | 12.36 | 43.75 | 85.46 |
 | SALMONN-13B | Mix | 15.43 | 9.57 | 39.68 | 85.76 |
 
-![S2L-sentences实验结果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/gk8WMxzIQP-4.png)
+![S2L-sentences实验结果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/gk8WMxzIQP-4.png)
 
 （论文中的图6/表格，展示了S2L-sentences上的主要结果，对比了不同模型在句子、文本、公式各部分上的性能。）
 

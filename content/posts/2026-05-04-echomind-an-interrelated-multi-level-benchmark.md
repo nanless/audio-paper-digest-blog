@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 本文提出的EchoMind并非一个AI模型，而是一个评估基准框架。其核心是设计一个模拟人类共情对话认知过程的评估流水线。
 
-![EchoMind基准框架与示例图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/l5re5ppqrX-0.png)
+![EchoMind基准框架与示例图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/l5re5ppqrX-0.png)
 
 *   整体输入输出流程：整个评估流程以统一的音频输入开始，该音频基于同一份语义中性脚本生成。音频经过三个层级的任务处理：
     1.  理解层：输入音频，输出内容转写（ASR任务）和声学线索识别（选择题）。
@@ -93,9 +93,9 @@ hiddenInHomeList: true
 关键发现：
 1.  能力断层：模型在内容理解（WER低， SemSim高）上表现普遍较好，但在声学线索理解（准确率最高约66%）和整合推理（准确率最高约68%）上表现差距明显。
 2.  共情响应短板：即使最好的模型（GPT-4o-Audio），在专门评估声学线索利用的“语音信息相关性”（CSpeechRel）和“声乐共情得分”（VES）上得分也仅在3.4左右（5分制），说明生成“声情并茂”响应的能力普遍不足。
-3.  任务相关性分析：论文通过Figure 2（![声学线索相关任务间的性能关联图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/l5re5ppqrX-0.png)）展示了模型在声学理解、推理和生成相关指标上呈现正相关，但存在异常值（如GLM-4-voice和VITA-Audio生成质量不错但理解和推理得分低），暗示其可能依赖指令遵循能力的差异。
+3.  任务相关性分析：论文通过Figure 2（![声学线索相关任务间的性能关联图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/l5re5ppqrX-0.png)）展示了模型在声学理解、推理和生成相关指标上呈现正相关，但存在异常值（如GLM-4-voice和VITA-Audio生成质量不错但理解和推理得分低），暗示其可能依赖指令遵循能力的差异。
 4.  人工评估验证：论文对三个模型进行了人工评估（Table 5），显示自动评估指标与人类判断在多数维度上趋势一致，但在“响应自然性”（CRespNat）和“声乐共情得分”（VES）上，人类对GPT-4o-Audio的评分显著低于模型评委，主要因为其响应过于正式冗长。
-5.  声源影响：论文比较了同一模型在TTS合成音频和人工录制音频（EchoMind-Human）上的表现（![人工录制与TTS合成音频性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/l5re5ppqrX-3.png)），结果显示模型在人工录制音频上表现更差，表明其对自然语音变体的鲁棒性有待加强。
+5.  声源影响：论文比较了同一模型在TTS合成音频和人工录制音频（EchoMind-Human）上的表现（![人工录制与TTS合成音频性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/l5re5ppqrX-3.png)），结果显示模型在人工录制音频上表现更差，表明其对自然语音变体的鲁棒性有待加强。
 6.  理想上界探索：论文模拟了理想情况（为模型提供完美的声学线索信息），结果显示模型的共情响应质量有显著提升（Table 8），证明了当前瓶颈主要在于声学线索的感知与整合能力。
 
 ### ⚖️ 评分理由

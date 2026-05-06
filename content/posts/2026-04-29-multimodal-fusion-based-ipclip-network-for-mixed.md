@@ -114,10 +114,10 @@ IPCLIP的整体框架（图2）由双模态编码器（DME）、多模态特征�
 | 图像文本联合退化1 | + | + | 89.32 | 89.09 | 89.88 | 88.57 |
 | 图像文本联合退化2 | ++ | ++ | 83.54 | 82.08 | 84.73 | 81.05 |
 
-![图6: 准确率与FLOPs、推理时间、FPS的关系](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462313-5.png)
+![图6: 准确率与FLOPs、推理时间、FPS的关系](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462313-5.png)
 图6显示，Lightweight 5配置（第3层裁剪50%）在准确率略有提升的同时，FLOPs和推理时间相比原始模型有所降低，验证了轻量化策略的有效性。
 
-![图7: 类别混淆矩阵](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462313-6.png)
+![图7: 类别混淆矩阵](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462313-6.png)
 图7的混淆矩阵显示模型在所有7个手势类别上都具有较高的识别准确率，错误主要发生在少数类别间。
 
 ### ⚖️ 评分理由

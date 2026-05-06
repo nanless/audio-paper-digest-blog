@@ -51,7 +51,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461535-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461535-0.png)
 整体框架如图1所示，包含两个并行模块：MoE-Adapter模块和RA-TID模块。
 1.  特征提取骨干：输入水声信号经过预处理为对数梅尔频谱图，送入固定的预训练音频编码器（文中提到使用SSAST）提取特征。该骨干网络参数被冻结，以保留其通用声学表示能力。
 2.  MoE-Adapter模块：

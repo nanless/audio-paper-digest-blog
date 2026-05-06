@@ -52,7 +52,7 @@ hiddenInHomeList: true
 6.  联合优化：训练的目标是同时最小化任务损失和剪枝正则化损失（见公式1）。剪枝正则化项（公式2）鼓励门控变量趋向于0（即稀疏），并通过增广拉格朗日乘子法强制模型达到预设的稀疏度目标。
 7.  推理时的确定性剪枝：训练完成后，所有随机门控被确定为0或1。所有对应门控为0的结构组件被永久移除，得到一个更小、更快的确定性模型用于推理。
 
-![pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464156-0.png)
+![pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464156-0.png)
 图1清晰地展示了HP框架（a）与先前方法（b, c）的对比。它强调了HP的单阶段特性，即同时使用下游后端（如说话人提取器后端）进行联合优化，并直接学习到一个剪枝后的架构。图中中心细节图也明确指出，HP不需要知识蒸馏中常见的教师-学生架构。
 
 ### 💡 核心创新点
@@ -120,18 +120,18 @@ hiddenInHomeList: true
 关键发现：在VoxCeleb上，HP方法能在大幅减少参数和提升推理速度的同时，保持极高的准确率。在70%稀疏度时，参数减少近2/3，EER仅有轻微上升（例如Vox1-H从1.40%到1.61%）。
 
 剪枝模式分析（图2，图3）：
-![pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464156-1.png)
+![pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464156-1.png)
 图2显示，在ASVspoof5数据集上剪枝至50%时，HP方法学习到的剪枝模式与基线方法（均匀剪枝）显著不同，表现为非均匀的、任务特定的结构。
 
-![pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464156-2.png)
+![pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464156-2.png)
 图3进一步揭示了这种特异性：(a) 对于反欺骗任务，模型更倾向于保留较低层的MHSA模块以检测细微声学伪影；而对于说话人验证任务，则更多保留中上层模块以捕获说话人身份信息。(b) 对于同一SV任务，在不同数据域（VoxCeleb vs. 更多样化的CN-Celeb）上训练，剪枝模式也不同，训练数据更多样化时，上层被剪枝得更激进。
 
 正则化效应（图4）：
-![pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464156-3.png)
+![pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464156-3.png)
 图4展示了在CN-Celeb和SpoofCeleb两个数据集上，模型性能随稀疏度变化呈“U型”曲线，表明中等程度的剪枝能起到正则化作用，提升模型泛化能力。
 
 跨模型规模分析（图5）：
-![pdf-image-page4-idx4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464156-4.png)
+![pdf-image-page4-idx4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464156-4.png)
 图5对比了在Vox1-H测试集上，剪枝WavLM Base+和WavLM Large模型的结果。令人惊讶的是，经过剪枝的Base模型在相同参数量级下性能优于剪枝后的Large模型，这表明选择合适的基础模型进行精细剪枝可能比直接压缩最大的模型更有效。
 
 ### ⚖️ 评分理由

@@ -48,7 +48,7 @@ hiddenInHomeList: true
 
 TRIBE的整体架构旨在将三种模态的刺激信息融合，并预测全脑的BOLD响应。其流程可概括为：特征提取 -> 多模态融合 -> 时序建模 -> 全脑预测。
 
-![TRIBE方法概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/biegtqdqmg-1.png)
+![TRIBE方法概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/biegtqdqmg-1.png)
 
 如图2所示，该模型架构图展示了从多模态输入到预测输出的完整流程。
 
@@ -132,7 +132,7 @@ TRIBE的评估主要在Algonauts 2025竞赛的两个阶段进行，并进行了�
 
 模型组件消融实验
 
-![模型消融实验结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/biegtqdqmg-5.png)
+![模型消融实验结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/biegtqdqmg-5.png)
 
 图6a的消融实验结果图展示了：移除“多主体训练”或“Transformer”组件都会导致模型性能下降，其中移除Transformer的影响尤为巨大（从0.31降至0.23），证实了非线性时序建模和跨主体学习的关键作用。
 

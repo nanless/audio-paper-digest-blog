@@ -60,7 +60,7 @@ Music Flamingo 是一个基于 Audio Flamingo 3 构建的大型音频语言模�
     - 准确性奖励：针对问答任务，直接匹配预测答案与真实答案。
     - 结构化思考奖励：针对开放式的描述任务，将生成的描述与预先提取的结构化元数据（如体裁、速度、调性、结构、乐器等）进行逐类别词匹配，计算归一化得分。
 
-![Music Flamingo训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/RS7T9S16Bl-0.png)
+![Music Flamingo训练流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/RS7T9S16Bl-0.png)
 
 图2展示了数据标注流程和模型训练流程。上图（I）为从多样音乐片段构建MF-Skills和MF-Think数据集的多阶段流程。下图（II）展示了Music Flamingo的训练流程：首先改进Audio Flamingo 3基线，然后在MF-Skills等数据集上进行全量微调得到音乐基础模型，最后通过MF-Think数据集进行推理冷启动训练，并通过带有自定义奖励的GRPO进行微调以启用分步推理。
 

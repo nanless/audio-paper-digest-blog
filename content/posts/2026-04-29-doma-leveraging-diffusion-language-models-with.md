@@ -51,14 +51,14 @@ hiddenInHomeList: true
 | SpokenCSE [6] | Oracle+ASR | | 85.51 / 74.39 | 97.58 / 90.02 | 98.17 / 97.80 |
 | DOMA+SpokenCSE [6] | Oracle+ASR | | 88.26 / 76.82 | 98.15 / 90.65 | 98.61 / 98.11 |
 
-![图1: ICSF Workflow with DOMA](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462605-0.jpg)
+![图1: ICSF Workflow with DOMA](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462605-0.jpg)
 图1展示了DOMA嵌入整个ICSF工作流的示意图。DOMA位于ASR输出和ICSF模型之间，负责文本精细化。
 
 ### 🏗️ 模型架构
 
 DOMA的完整架构和工作流程如图2所示，可分为两个主要部分：ASR精细化（Refinement）模块和下游ICSF模型。
 
-![图2: Overview of DOMA](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462605-1.jpg)
+![图2: Overview of DOMA](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462605-1.jpg)
 整体流程：
 1.  输入：接收来自ASR系统的1-best转录文本`z`。
 2.  N-best假设生成（第一阶段）：将`z`和特定提示`y1`输入DLM（LLaDA），生成`N`个候选假设`[zj]_{j=0}^{N}`。
@@ -112,7 +112,7 @@ DOMA的完整架构和工作流程如图2所示，可分为两个主要部分：
 | SpokenCSE [6] | Oracle+ASR | 85.51 / 74.39 | 97.58 / 90.02 | 98.17 / 97.80 |
 | DOMA+SpokenCSE [6] | Oracle+ASR | 88.26 (+2.75) / 76.82 (+2.43) | 98.15 (+0.57) / 90.65 (+0.63) | 98.61 (+0.44) / 98.11 (+0.31) |
 
-![图3: Case study](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462605-2.jpg)
+![图3: Case study](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462605-2.jpg)
 图3的案例研究显示，无AP的精细化会将“meeting”误改为“team”，导致ICSF预测出错误的槽值“event name = canada team”。而DOMA利用AP保留了“meeting”，实现了更准确的修正和ICSF预测。
 
 消融实验（Ablation Study）： 如下表所示，在RoBERTa骨干上验证了ASR精细化和AP模块的有效性。AP模块的加入显著降低了WER并提升了SLU-F1。
@@ -136,7 +136,7 @@ DOMA的完整架构和工作流程如图2所示，可分为两个主要部分：
 | DOMA | 0.43 | 15.84 | 84.77 | 74.23 |
 
 跨ASR系统泛化性： 如图4所示，在未见过的ASR系统（WSL, Con-FS, Con-SSL+FT）生成的转录上评估，DOMA能有效提升ICSF性能，证明了其泛化能力。
-![图4: Performance across different ASR systems](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11462605-3.jpg)
+![图4: Performance across different ASR systems](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11462605-3.jpg)
 图4显示，在不同WER（从低到高）的ASR系统输出上，应用DOMA后（蓝线）的ICSF性能（SLU-F1）均显著高于使用原始转录（红线）。
 
 ### ⚖️ 评分理由

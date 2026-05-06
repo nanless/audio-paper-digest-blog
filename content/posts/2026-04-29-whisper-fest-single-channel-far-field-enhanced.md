@@ -72,7 +72,7 @@ hiddenInHomeList: true
 5.  输出层：最后一个3x3卷积将64通道特征图映射回1通道，输出增强后的梅尔谱图。
 6.  输出：增强后的梅尔谱图，直接作为输入送入后续的Whisper S2T模型。
 
-![图1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461038-0.png)
+![图1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461038-0.png)
 图1展示了TU-Net的完整架构流程，包括编码器、带Conformer和自注意力的瓶颈、以及带注意力跳跃连接的解码器。同时提供了VOiCES数据集中远场/干净谱图和AMI数据集中SDM/IHM谱图的可视化示例，直观展示了增强任务面临的声学挑战。
 
 #
@@ -124,7 +124,7 @@ hiddenInHomeList: true
 | 远场 (FF) | 噪声 (N) | 46.2 / 26.6 | 38.8 / 22.3 |
 关键结论：随着TU-Net模型增大（参数从12M到43M），远场性能持续提升。最佳模型（Model-C）在远场干净条件下实现了64.7%的相对WER降低（24.6% → 8.6%），在远场噪声条件下实现了16.0%的相对降低（46.2% → 38.8%）。同时，近场性能保持稳定或略有提升，验证了模块化前端不会损害原有近场识别能力。
 
-![图2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461038-1.png)
+![图2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461038-1.png)
 图2展示了在不同信噪比（SNRs）下，使用DNS数据集评估的近场S2T性能。曲线表明，所提模型在从高SNR到低SNR的各种噪声条件下，均能保持稳定或略优于基线Whisper的近场识别准确率，进一步证实了该方法在增强远场信号的同时，对近场性能的“无害性”。
 
 2. AMI数据集结果（表3）：

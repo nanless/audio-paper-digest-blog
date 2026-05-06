@@ -68,7 +68,7 @@ LST的整体架构旨在将离散的语音token和文本token统一建模，但�
 4.  分块解码：全局Transformer的输出被送入分块解码器（Patch Decoder）。解码器是一个轻量级Transformer，其每一层包含因果自注意力（关注过去512个token）和交叉注意力。交叉注意力以当前token的隐状态为查询（Query），以之前生成的语音块表示和文本token表示为键值（Key/Value），从而将高层块信息与底层的token预测结合起来。
 5.  输出：解码器最终预测下一个语音token的概率分布，用于自回归生成语音token序列。
 
-![Latent Speech-Text Transformer (LST) 架构示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-0.png)
+![Latent Speech-Text Transformer (LST) 架构示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/krGpQzo8Mz-0.png)
 
 图2：LST模型架构图。显示了BPE文本token和HuBERT语音token如何被编码到共享的潜在空间。分块编码器将局部语音片段压缩为块表示，这些块与文本token一起被全局Transformer处理。分块解码器从潜在表示中预测未来的语音token，实现了跨模态的对齐与迁移。
 
@@ -77,7 +77,7 @@ LST的整体架构旨在将离散的语音token和文本token统一建模，但�
 -   对齐分块：利用Wav2Vec2+CTC模型获得文本词/BPE边界对应的时间戳。将每个词（或BPE）对应的语音帧划分为一个块，独立的静音段也各自成块。这能产生语义对齐更精确的块，但推理时需要辅助对齐模型。
 -   课程分块：这是关键创新。在训练过程中，动态地、逐步地从对齐分块过渡到静态分块。训练早期（概率P=1）完全使用对齐分块；训练中期，以递减的概率使用对齐分块；训练后期（概率P=0）完全使用静态分块。这使得模型在训练初期能受益于对齐信息带来的良好初始化，而在推理时可以完全使用简单快速的静态分块，摆脱对齐工具的依赖。
 
-![分块与对齐方法示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-2.png)
+![分块与对齐方法示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/krGpQzo8Mz-2.png)
 
 图3：对齐与分块方法示意图。(a)展示了静态分块（固定长度）与对齐分块（使用Wav2Vec2+CTC边界）的对比。(b)展示了如何通过对齐将音频信号与对应的文本对齐。
 
@@ -161,7 +161,7 @@ LST的整体架构旨在将离散的语音token和文本token统一建模，但�
 -   分块策略对比（表6）：在相近平均块大小下，课程分块（sil sep.）在HellaSwag S→S上达到41.3%，优于静态分块(40.5%)和对齐分块(39.9%)。
 -   块嵌入可视化（图5）：对齐分块产生的块嵌入能形成清晰的词级别聚类，表明其成功捕捉了语义信息。
 
-![词级语音块嵌入的t-SNE可视化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/krGpQzo8Mz-4.png)
+![词级语音块嵌入的t-SNE可视化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/krGpQzo8Mz-4.png)
 
 图5：从对齐分块LST模型中提取的词级语音块嵌入的t-SNE可视化图。同一词的嵌入形成紧密的簇，不同词的簇分离良好，证实了块表示的语义一致性。
 

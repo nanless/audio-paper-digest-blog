@@ -55,7 +55,7 @@ hiddenInHomeList: true
 
 Syncphony的模型架构基于一个预训练的自回归扩散Transformer（DiT）视频骨干——Pyramid Flow。其整体输入为初始图像帧、文本提示和音频波形，输出为生成的高帧率（24fps）、高分辨率（380×640）视频序列。
 
-![Syncphony 模型架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-0.png)
+![Syncphony 模型架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sG8dGZMaub-0.png)
 
 架构的核心流程与组件如下（结合图1）：
 1.  输入编码：初始帧通过VAE编码器编码为潜在表示`z0`。文本提示通过预训练编码器（如CLIP）提取文本特征。音频波形通过预训练DenseAV编码器提取音频特征序列`{ai}`。
@@ -121,7 +121,7 @@ Syncphony的模型架构基于一个预训练的自回归扩散Transformer（DiT
 | Ours (Syncphony) | I+T+A | 6.7 | 166.2 | 13.83 | 19.64 | 16.18±1.26 |
 | 真值 | - | - | - | 14.68 | 19.47 | 15.99±1.50 |
 
-![不同模型在TheGreatestHits数据集上关键指标对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-4.png)
+![不同模型在TheGreatestHits数据集上关键指标对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sG8dGZMaub-4.png)
 
 关键结论：
 1.  同步性：Syncphony在两个数据集上均取得了最高的CycleSync分数，显著优于所有基线方法。在TheGreatestHits上甚至超过了真值分数，表明生成视频的动作与音频事件的对应关系可能比真实视频更清晰。
@@ -148,7 +148,7 @@ CycleSync指标对比：
 用户研究：
 在AVSync15的150个视频上，Syncphony在同步性（74%偏好）、图像质量（90%偏好） 和帧间一致性（94%偏好） 三个维度上均显著优于AVSyncD基线。
 
-![用户研究对Syncphony三个维度的偏好率](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/sG8dGZMaub-7.png)
+![用户研究对Syncphony三个维度的偏好率](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/sG8dGZMaub-7.png)
 
 ### ⚖️ 评分理由
 

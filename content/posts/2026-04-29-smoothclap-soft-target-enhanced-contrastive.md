@@ -70,7 +70,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 SmoothCLAP的整体架构（见图1）在推理阶段与标准CLAP完全一致，创新集中在训练过程。
-![SmoothCLAP 架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462634-0.jpg)
+![SmoothCLAP 架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462634-0.jpg)
 图1：SmoothCLAP 架构图。该图展示了模型的训练流程。音频和文本分别通过各自的编码器（`Audio Enc`, `Text Enc`）和投影层（`proj`）映射到共享嵌入空间。关键区别在于损失计算部分：
 1.  跨模态相似性（Cross-modal similarity）：计算音频嵌入 `Ai` 与文本嵌入 `Tj` 之间的点积 `sij`，并转换为预测分布 `pa2t` 和 `pt2a`。
 2.  模态内相似性（Intra-modal similarity）：
@@ -123,13 +123,13 @@ SmoothCLAP的整体架构（见图1）在推理阶段与标准CLAP完全一致�
 结论：没有单一提取器在所有数据集上最优，其选择对性能有显著影响。Wav2Vec2.0-Emo在IEMOCAP和CREMA-D上最佳，而HuBERT-L在RAVDESS和TESS上更优。
 
 消融实验2：超参数γ和β的影响（图3）。
-![Mix Gamma 和 Fusion Factor 的性能曲线](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462634-2.jpg)
+![Mix Gamma 和 Fusion Factor 的性能曲线](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462634-2.jpg)
 图3：Mix Gamma γ和Fusion Factor β对性能的影响。横轴为参数值，纵轴为UAR（在IEMOCAP上测试）。
 - (a) Mix Gamma γ：曲线波动，无明显单调趋势。
 - (b) Fusion Factor β：关键结论：随着β增大（即更多依赖软目标，更少依赖硬标签），性能整体呈下降趋势。这表明过大的平滑因子（偏离独热标签）对系统性能有害，软监督应保持较低幅度。
 
 错误模式分析（图2）。
-![IEMOCAP上的混淆矩阵对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462634-1.jpg)
+![IEMOCAP上的混淆矩阵对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462634-1.jpg)
 图2：ParaCLAP与SmoothCLAP在IEMOCAP上的混淆矩阵。图中可见，SmoothCLAP相比ParaCLAP，有更多的样本被错误分类为中性（Neu），尤其是快乐（Hap）、愤怒（Ang）和悲伤（Sad）样本。这反映了软标签训练带来的“保守”预测倾向。
 
 #

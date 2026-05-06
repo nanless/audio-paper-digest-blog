@@ -66,7 +66,7 @@ LadderSym的整体架构是一个多模态的编码器-解码器模型，旨在�
     *   通过交替进行上述步骤，两个流在每一层都相互对齐并交换信息，同时各自保留独立的ViT块进行特征提取。这种设计允许一个流专注于局部特征（如练习音频），另一个流专注于全局或跨流对应特征，实现“不对称分工”。
     *   所有层处理完毕后，两个流的最终表示被拼接（`Hfused = Concat(P(final)_ref, P(final)_prac)`）作为编码器输出。
 
-![LadderSym整体架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-2.png)
+![LadderSym整体架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cizuvfyQXs-2.png)
 
 （图3：LadderSym的整体架构。展示了双流音频输入经过Ladder编码器进行对齐，以及符号乐谱作为提示与编码器输出一同送入T5解码器，生成错误标签序列。）
 
@@ -79,7 +79,7 @@ LadderSym的整体架构是一个多模态的编码器-解码器模型，旨在�
 *   交错对齐 vs. 后期融合：为克服前作（Polytune）在最后一层才融合两流的限制，LadderSym在每层都进行对齐，旨在实现更频繁、更细粒度的交互。实验（Table 4）和注意力可视化（图4，图8）证实了这种设计能学习到类似动态时间规整（DTW）的对齐模式，且性能优于仅使用少量联合层或完全共享参数的早期融合。
 *   符号提示：为解决音频表示乐谱在同时演奏多个音符时的频谱歧义，直接将无歧义的符号序列作为上下文提示，为解码器提供“标准答案”的参考。消融实验（Table 5）显示，结合音频与符号输入（Prompt + Audio）能显著提升性能，尤其是在更复杂的MAESTRO-E数据集上。
 
-![LadderSym编码器内部结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-4.png)
+![LadderSym编码器内部结构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cizuvfyQXs-4.png)
 
 （图5：编码器块内部结构。展示了交叉注意力对齐模块如何交替在参考流和练习流之间工作，以及加性融合和后续的ViT处理块。）
 
@@ -155,7 +155,7 @@ LadderSym的整体架构是一个多模态的编码器-解码器模型，旨在�
 真实世界数据集评估：
 在未微调的情况下，LadderSym在真实初学者数据上仍优于Polytune，尤其在Missed Note检测上（78.5% vs 63.9% F1）。具体每首曲子的结果见Table 9。
 
-![真实世界数据集上每首曲子的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/cizuvfyQXs-10.png)
+![真实世界数据集上每首曲子的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/cizuvfyQXs-10.png)
 
 （图10：真实世界数据集上，LadderSym与Polytune在每首曲子上的Extra和Missed Note F1对比。显示了LadderSym在更困难的Missed Note检测上的普遍优势。）
 

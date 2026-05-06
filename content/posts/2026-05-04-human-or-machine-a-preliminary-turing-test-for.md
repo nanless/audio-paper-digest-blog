@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 架构图：
 
-![可解释的AI评委模型两阶段训练框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Pv5l6cvfno-14.jpg)
+![可解释的AI评委模型两阶段训练框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Pv5l6cvfno-14.jpg)
 
 ### 💡 核心创新点
 
@@ -115,7 +115,7 @@ hiddenInHomeList: true
 | Nari-TTS (伪人) | 0.378 | 0.000 |
 | 人类说话者 | 0.867 | 0.700 |
 
-![不同S2S系统及人类说话者在图灵测试中的成功率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Pv5l6cvfno-0.png)
+![不同S2S系统及人类说话者在图灵测试中的成功率对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Pv5l6cvfno-0.png)
 
 结论：所有S2S系统的成功率均远低于0.5的随机阈值，最高仅为0.31（Kimi-K1.5英文），而人类说话者成功率高达0.87（英文）和0.70（中文）。这证实了没有现有系统通过测试。
 
@@ -132,7 +132,7 @@ hiddenInHomeList: true
 | 伪人 ↑ | 0.2361 | 0.0972 | 0.6384 | 0.9306 |
 | 整体准确率 ↑ | 0.4163 | 0.5744 | 0.7284 | 0.9605 |
 
-![本文提出的可解释AI评委模型与基线模型及人类评委的二分类准确率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Pv5l6cvfno-2.png)
+![本文提出的可解释AI评委模型与基线模型及人类评委的二分类准确率对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Pv5l6cvfno-2.png)
 
 结论：本文提出的模型整体准确率达到96.05%，显著高于人类评委（72.84%）和最佳微调基线（57.44%），展示了其卓越的判别能力和泛化性（在伪人对话上准确率93.06%）。
 

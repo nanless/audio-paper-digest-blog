@@ -64,7 +64,7 @@ STEN的整体架构如图1所示。其处理流程可分为四个主要阶段：
     - 增强时序Spikeformer（ETS）：这是一个改进的脉冲自注意力模块。它首先对输入进行脉冲层和线性投影得到Q, K, V。然后用1D卷积层分别处理Q, K, V，以自适应整合相邻时间步的信息。之后调整计算顺序为先计算K和V的关系，再与Q交互，并用脉冲神经元替换Softmax，最终输出。
 4.  最终融合与投影阶段：将前两个阶段得到的Fts_a, Fts_v和ETS融合的音频-视觉时序特征S_av输入一个跨模态Transformer，生成最终的音视频联合表示Ots_av。最后，通过投影层和重构层将该表示映射到与文本特征对齐的语义空间。
 
-![图1: STEN架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-28/11464107-0.png)
+![图1: STEN架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-28/11464107-0.png)
 图1：STEN架构示意图。图中显示了特征提取、STFE、STFM（橙色模块）和ETS（蓝色模块）的流程，以及最终跨模态Transformer的整合。关键创新在于蓝色模块中ETS的计算顺序调整（先KV后Q）和STFM的联合时空建模。
 
 ### 💡 核心创新点

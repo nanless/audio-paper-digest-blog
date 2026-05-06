@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 LATENTFT是一个端到端的编码器-解码器框架，其核心是在潜空间引入频域操作以实现控制。
 
-![LATENTFT框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ogMxCjdCCq-0.png)
+![LATENTFT框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ogMxCjdCCq-0.png)
 
 图2：LATENTFT框架概览。训练过程（红色）：编码器将音频编码为潜序列，计算其DFT得到潜频谱并随机掩码，掩码后的潜序列与加噪音频一起送入扩散解码器进行重构。推理过程（蓝色）：用户指定一个潜频谱掩码，从参考音频获取掩码后的潜序列，用其条件化扩散过程生成新音频。
 
@@ -128,7 +128,7 @@ LATENTFT是一个端到端的编码器-解码器框架，其核心是在潜空�
 
 关键结果对比表（同上表1）显示，LATENTFT的各变体（MLP, UNet, DAC编码器）在条件生成和融合任务上的FAD（音频质量）和各项Adherence指标上全面优于所有基线，包括生成基线（Guidance, ILVR）和表示后处理基线（DAC, RAVE, Spectrogram）。
 
-![用户研究结果图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/ogMxCjdCCq-2.png)
+![用户研究结果图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/ogMxCjdCCq-2.png)
 
 图3：用户研究胜率统计。左图显示在“音频质量”上，LATENTFT（Ours）的头对头胜场数最高；右图显示在“融合能力”上，LATENTFT同样胜场最多。
 

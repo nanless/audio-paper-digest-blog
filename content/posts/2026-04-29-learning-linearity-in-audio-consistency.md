@@ -62,7 +62,7 @@ hiddenInHomeList: true
     - 条件注入方式：潜向量在U-Net的多个层级注入，确保了条件信息的充分融合，这对于在去噪过程中维持线性特性至关重要。
     - 隐式线性化训练：核心创新不在架构，而在训练时的数据增强策略，旨在诱导上述架构学习出具有特定代数性质的映射。
 
-![图2: Music2Latent CAE架构及所提隐式正则化训练示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462184-1.png)
+![图2: Music2Latent CAE架构及所提隐式正则化训练示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462184-1.png)
 图2说明：(a)展示了基础的Music2Latent CAE架构，编码器压缩音频，解码器是一个以潜向量为条件的U-Net去噪器。(b)和(c)分别详细说明了为诱导齐次性和可加性而设计的两种数据增强训练流程。(d)展示了创建训练批次中人工混合数据的方法。
 
 ### 💡 核心创新点
@@ -112,7 +112,7 @@ hiddenInHomeList: true
 
 关键结论：Lin-CAE在可加性和源分离任务上全面且大幅领先所有基线。其解码器可加性MSS（0.99）远低于基线（>5）。在Oracle分离任务中，其SI-SDR接近其自身重建性能，表明潜空间算术非常有效。消融实验显示，同时包含齐次性和可加性技巧效果最佳。
 
-![图3: 通过潜向量算术进行Oracle音源分离示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462184-2.png)
+![图3: 通过潜向量算术进行Oracle音源分离示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462184-2.png)
 图3说明：展示了如何通过从完整混合音的潜向量中减去伴奏的潜向量，再经解码器重建，来实现目标声源的估计。
 
 ### ⚖️ 评分理由

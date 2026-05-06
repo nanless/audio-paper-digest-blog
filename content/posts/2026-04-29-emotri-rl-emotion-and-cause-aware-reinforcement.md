@@ -48,10 +48,10 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![图1: 问题与动机示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461889-0.png)
+![图1: 问题与动机示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461889-0.png)
 图1 阐述了本工作的核心动机：仅用文本模态（Text-only Modality）可能误判情感（如将悲伤误解为感激）；即使加入多模态线索（MultiModal），若不进行情感原因推理，生成的回复仍可能肤浅。本文的EmoTri-RL旨在通过多模态融合与原因感知来生成高质量、可解释的共情回复。
 
-![图2: EmoTri-RL总体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461889-1.jpg)
+![图2: EmoTri-RL总体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461889-1.jpg)
 图2 展示了EmoTri-RL的完整架构，主要包含三个模块：
 1.  多模态特征提取 (Multi-Modalities Feature Extraction)：使用三个预训练的骨干网络分别处理三种输入模态：BART 编码器处理文本，Wave2Vec 2.0 处理语音，ViT (Vision Transformer) 处理视频帧的视觉特征。这些模态特定的表示（Htext, Hspeech, Hvision）被送入下一个模块。
 2.  文本中心的多模态融合：该模块使用一个以文本为中心的融合策略。它通过交叉注意力机制，将语音和视觉特征投影并整合到文本特征的表示空间中，生成一个统一的多模态隐藏状态序列H。这种设计保留了文本的序列结构，同时为每个文本token注入了跨模态线索。

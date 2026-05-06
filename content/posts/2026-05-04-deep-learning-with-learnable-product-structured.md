@@ -78,7 +78,7 @@ LRNN（Low-Rank Separated Neural Network）是一种对多层感知机（MLP）�
 
 架构图：
 
-![深度LRNN架构示意图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-1.png)
+![深度LRNN架构示意图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/EB2Qgp5Vb0-1.png)
 
 图10：深度LRNN架构图。展示了从输入x开始，依次经过多个LRNN隐藏层（每个层由多个具有乘积结构激活函数的神经元构成），最终通过线性层输出y的完整数据流。
 
@@ -127,7 +127,7 @@ LRNN（Low-Rank Separated Neural Network）是一种对多层感知机（MLP）�
     </tbody>
     </table>
 
-    ![ImageNet图像表示成功率对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-7.png)
+    ![ImageNet图像表示成功率对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/EB2Qgp5Vb0-7.png)
 
     图4：在1000张ImageNet图像上，达到不同PSNR目标的成功率对比。LRNN在最具挑战性的40dB目标上达到100%成功率，而基线方法失败率很高。
 
@@ -159,7 +159,7 @@ LRNN（Low-Rank Separated Neural Network）是一种对多层感知机（MLP）�
     </table>
     LRNN在PSNR和SSIM上均取得最佳，且定性结果显示其重建图像更清晰、无伪影。
 
-    ![CT重建结果定性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/EB2Qgp5Vb0-8.png)
+    ![CT重建结果定性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/EB2Qgp5Vb0-8.png)
 
     图9：CT重建结果对比。LRNN的输出最接近真实图像（Ground Truth），而SIREN和ReLU+PE的输出较模糊。
 

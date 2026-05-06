@@ -50,7 +50,7 @@ hiddenInHomeList: true
 
 论文中并未提供一个整体的模型架构图，但描述了其评估和标注的流水线，其流程图如下：
 
-![论文中描述的数据收集与质量控制流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YxsfxAvJv4-2.png)
+![论文中描述的数据收集与质量控制流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YxsfxAvJv4-2.png)
 
 图3：该图展示了WorldSense基准测试的数据收集与QA标注质量控制流水线。左侧是视频数据收集与筛选过程，从源视频库中经过领域筛选、音视频相关性及动态内容评估，最终得到1662个片段。右侧是问答对标注与质控流程，包括专家标注、语言清晰性、多模态必要性、难度评审以及使用MLLM进行自动验证的闭环过程。
 
@@ -90,7 +90,7 @@ hiddenInHomeList: true
 
 细分任务与音频类型分析：图4展示了模型在不同任务类型上的性能，揭示出模型在音频相关任务、空间推理、计数和情感理解任务上普遍表现不佳。图5显示不同模型在语音、环境音、音乐三类音频上的性能不一致。
 
-![模型在不同任务类别上的细粒度性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YxsfxAvJv4-3.png)
+![模型在不同任务类别上的细粒度性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YxsfxAvJv4-3.png)
 
 图4：不同模型在26种任务类别上的性能细分。可以观察到，所有模型在“音频识别”、“音频计数”等音频相关任务上性能普遍较低，且在“情感”、“空间推理”等需要复杂多模态推理的任务上也面临挑战。
 
@@ -98,17 +98,17 @@ hiddenInHomeList: true
 
 消融实验 - 音频信息的影响（Table 4）：对于支持全模态的模型，原始音频信号比文本字幕更能提升性能。例如，Gemini 1.5 Pro在语音类问题上，从纯视频34.4%提升至加字幕39.3%，再提升至加原始音频48.0%，凸显了声学特征（如语调、情感）的价值。对于纯视频模型，添加字幕也能显著提升性能（Table 5）。
 
-![不同输入模态配置对模型性能的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YxsfxAvJv4-0.png)
+![不同输入模态配置对模型性能的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YxsfxAvJv4-0.png)
 
 图5：现有模型在不同音频信号类型上的性能差异。图中显示，即便是最强的模型（如Gemini 1.5 Pro），在处理环境音事件相关问题时，其准确率也明显低于处理语音或音乐问题。
 
 错误分析（Figure 6, 7）：对Gemini 1.5 Pro的错误样本分析显示，主要错误类型为音频理解错误和推理错误，其次为视觉理解错误。案例展示了模型在读取视觉细节（时钟时间）和理解音乐情绪变化上的失败。
 
-![模型主要错误类型分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YxsfxAvJv4-5.png)
+![模型主要错误类型分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YxsfxAvJv4-5.png)
 
 图6：采样自每个任务的5个错误案例的错误类型分布。大部分错误源自“音频理解错误”和“推理错误”。
 
-![两个失败案例示例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/YxsfxAvJv4-1.png)
+![两个失败案例示例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/YxsfxAvJv4-1.png)
 
 图7：两个失败案例。左图显示模型因错误识别钟表时间（视觉理解错误）导致回答错误。右图显示模型误解了古筝乐曲的节奏情绪变化（从“激昂”到“舒缓”误判为“舒缓”到“激烈”），属于音频理解错误。
 

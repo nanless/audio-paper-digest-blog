@@ -62,7 +62,7 @@ hiddenInHomeList: true
 
 论文提出的混合多项式神经网络（HPNN）架构如图1所示，其设计紧密贴合所研究的四扬声器（LSK1-LSK4）智能手机物理系统。
 
-![图1: 基于物理信息的混合多项式神经网络（HPNN）架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463905-0.png)
+![图1: 基于物理信息的混合多项式神经网络（HPNN）架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463905-0.png)
 
 - 输入：每个扬声器的驱动信号 `x[n]`。
 - 输出：多个麦克风（MIC 1 至 MIC M）处的声压预测值。
@@ -127,10 +127,10 @@ hiddenInHomeList: true
 
 论文同时给出了分扬声器和分频段的详细误差数据（Table 2）。关键结论是：HPNN在整体性能（-11.35 dB）上与庞大的WaveNet基线（-11.28 dB）几乎持平，但参数量、内存和计算成本分别只有WaveNet的约1/9、1/35和1/8。而VNN和线性FIR模型性能明显较差。
 
-![图3: HPNN预测与真实输出在频率域的幅度与周期图差异](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463905-2.png)
+![图3: HPNN预测与真实输出在频率域的幅度与周期图差异](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463905-2.png)
 图3展示了LSK1（前两行）和LSK3（后两行）在语音激励下的频率域预测误差。颜色越接近白色表示误差越小。图中可见LSK1在低频区域误差较大，可能与电源噪声有关；而LSK2、LSK3在高频区域的误差被有效抑制，表明多项式层起了作用。
 
-![图4: 时域模型输出对比：语音活跃与静默段](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463905-3.png)
+![图4: 时域模型输出对比：语音活跃与静默段](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463905-3.png)
 图4显示了在语音活跃期和静默期，不同模型（HPNN， WaveNet， VNN， FIR）对LSK1和LSK3的预测输出波形（红色）与真实波形（蓝色）的对比。它直观地展示了HPNN能紧密跟踪真实波形，且在静默段不过拟合噪声。
 
 消融与分析：

@@ -70,11 +70,11 @@ hiddenInHomeList: true
     2.  大语言模型：初始化自一个预训练的2.8B参数稠密语言模型，上下文长度16，384个标记。词汇表被扩展以包含语音标记，新嵌入使用Xavier正态初始化。
 -   数据处理流程架构：这是本文的核心。下图详细展示了如何将原始网页爬取音频转换为可训练的交错数据。
 
-![数据处理流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4amNkYCDqX-0.png)
+![数据处理流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4amNkYCDqX-0.png)
 
 图9（论文中标记为图9）展示了完整的预处理流程：从原始音频开始，经过说话人日志、语言识别、使用ROVER进行转录本集成与过滤，最终进行交错分块。
 
-![合成数据构建与训练采样策略](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4amNkYCDqX-2.png)
+![合成数据构建与训练采样策略](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4amNkYCDqX-2.png)
 
 图2（论文中标记为图2）展示了三个研究问题的具体方法：(A)粗粒度与细粒度交错策略；(B)从文本数据集构建合成语音数据集Krist和Quest的流程；(C)交错训练中的随机与确定性模态采样方案。
 
@@ -136,19 +136,19 @@ hiddenInHomeList: true
 
 模态对齐分析：下图显示了不同数据策略下，文本条件与音频条件输出分布之间的Reverse KL散度。
 
-![模态分布间隙分析](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4amNkYCDqX-7.png)
+![模态分布间隙分析](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4amNkYCDqX-7.png)
 
 图5（论文中标记为图5）显示，细粒度交错和合成数据的引入显著降低了文本与语音模态输出分布之间的KL散度（从3.20降至1.47），表明模态对齐得到改善。
 
 数据集主题分析：下图对比了网络爬取数据和合成数据在不同主题领域的分布。
 
-![主题分布对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4amNkYCDqX-10.png)
+![主题分布对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4amNkYCDqX-10.png)
 
 图6（论文中标记为图6）表明，网络爬取数据在娱乐、体育等领域偏斜严重，而合成数据（Krist, Quest）在科学、健康、教育、金融等知识密集型领域提供了更好的覆盖，从而缩小了训练数据与评估数据集之间的分布差距。
 
 测试集污染分析：下图展示了污染检测结果及其对性能的统计影响。
 
-![污染比例](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/4amNkYCDqX-11.png)
+![污染比例](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/4amNkYCDqX-11.png)
 
 图7（论文中标记为图7）显示，合成数据集造成的测试集污染比例较低（SWQ 0.4%， STQ 2.5%， SLQ 7.7%）。
 

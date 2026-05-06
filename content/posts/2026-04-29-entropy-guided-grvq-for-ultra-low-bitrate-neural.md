@@ -61,7 +61,7 @@ hiddenInHomeList: true
 
 模型整体架构（如图1所示）沿用了Mimi的编解码器框架，采用因果、低延迟设计，适用于实时通信。
 
-![图1: 模型整体架构](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462567-0.png)
+![图1: 模型整体架构](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462567-0.png)
 
 1.  编码器：输入为24kHz波形，依次经过4个残差卷积块和1个1D卷积层。这些层逐步降低时间分辨率、增加通道维度，最终得到512维、12.5帧/秒的潜在表示。随后，通过Transformer块捕获长程依赖，增强表示的紧凑性。
 2.  双分支量化：编码器的输出被复制到两个分支：
@@ -73,7 +73,7 @@ hiddenInHomeList: true
     - 每组内部使用独立的残差矢量量化（RVQ）结构。具体地，第一组用Codebook 1和3进行两级残差量化，第二组用Codebook 2和4进行两级残差量化。
     - 这种设计使得总共有4个码本用于声学分支的量化，与基线使用4个码本的RVQ（如图2(a)）和GRVQ（如图2(b)）在码本总数上保持一致，便于公平比较。
 
-![图2: 三种量化器结构配置](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462567-1.png)
+![图2: 三种量化器结构配置](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462567-1.png)
 
 ### 💡 核心创新点
 
@@ -103,12 +103,12 @@ hiddenInHomeList: true
     2.  分组数量对比（表3）：在固定4个声学码本的前提下，比较了1×4（RVQ）、4×1、2×2（GRVQ）三种分组方式。2×2结构（GRVQ和EG-GRVQ）在PESQ和STOI上显著优于其他配置，证实了分组但深度量化的有效性。
     3.  码本利用率分析（图3）：EG-GRVQ在所有四个声学码本上均保持了高且均衡的利用率（约85%），而RVQ在深层码本（3， 4）利用率显著下降。Mimi(GRVQ)虽有所改善但仍存在层间不平衡。
 
-![图3: 声学分支码本利用率](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462567-2.png)
+![图3: 声学分支码本利用率](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462567-2.png)
 
 - 主观评估（MUSHRA）：如图4和图5所示，EG-GRVQ的MUSHRA平均分比官方Mimi高出约21分，比Mimi(GRVQ)高出约11分，且其95%置信区间不与零线重叠，表明主观感知质量的提升具有统计显著性。
 
-![图4: MUSHRA分数分布](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462567-3.png)
-![图5: MUSHRA均值差异与置信区间](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462567-4.jpg)
+![图4: MUSHRA分数分布](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462567-3.png)
+![图5: MUSHRA均值差异与置信区间](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462567-4.jpg)
 
 ### ⚖️ 评分理由
 

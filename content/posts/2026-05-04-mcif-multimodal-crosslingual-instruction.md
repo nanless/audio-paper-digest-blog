@@ -121,16 +121,16 @@ MCIF基准的构建与组成如下：
 
 1.  任务难度：摘要（SUM）是最具挑战性的任务，许多模型得分很低甚至为负（如MiniCPM-o-2的长文本摘要得分-39.7）。问答（QA）受益于多模态输入，翻译（TRANS）由纯文本LLM主导（Qwen3最高）。
 2.  长上下文挑战：多数模型在长上下文输入下性能显著下降，尤其在识别和翻译任务。例如，SpeechLLM的DeSTA2在长文本翻译COMET上比短文本低约33分。
-3.  多模态融合问题：如图2![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PtPYZYfa0h-4.png)所示，对于MLLMs，简单地结合语音和视频（Speech+Video）在识别、翻译、问答任务上常常没有带来收益，甚至比单模态更差。视频模态通常表现最弱，表明当前模型未能有效利用视觉信息。
+3.  多模态融合问题：如图2![论文配图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PtPYZYfa0h-4.png)所示，对于MLLMs，简单地结合语音和视频（Speech+Video）在识别、翻译、问答任务上常常没有带来收益，甚至比单模态更差。视频模态通常表现最弱，表明当前模型未能有效利用视觉信息。
 
-    ![MLLMs在不同模态输入下的性能对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PtPYZYfa0h-4.png)
+    ![MLLMs在不同模态输入下的性能对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PtPYZYfa0h-4.png)
 
 4.  提示鲁棒性：对比MCIFfix和MCIFmix，许多模型对提示词的微小变化敏感，特别是在识别任务中，WER波动可超过60点（如DeSTA2）。
-5.  问答任务细粒度分析：如图3![论文配图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PtPYZYfa0h-5.png)所示，对于长上下文问答：
+5.  问答任务细粒度分析：如图3![论文配图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PtPYZYfa0h-5.png)所示，对于长上下文问答：
     *   问题来源：通用问题（General）得分最高（~49），基于转录的问题（Transcript）次之（~35），基于摘要的问题（Abstract）最难（~25）。这表明模型擅长获取通用信息，但难以检索细粒度内容。
     *   模态匹配：SpeechLLM在音频相关问题上表现好，VideoLLM在视频相关问题上表现好，但MLLM在两类问题上均未超越单模态专家模型。
 
-    ![长上下文问答任务性能细分](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/PtPYZYfa0h-5.png)
+    ![长上下文问答任务性能细分](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/PtPYZYfa0h-5.png)
 
 ### ⚖️ 评分理由
 

@@ -81,7 +81,7 @@ hiddenInHomeList: true
 本文的工作建立在DiariZen系统（一个EEND-VC管线）之上，并对其进行了多通道扩展。整体架构分为两个阶段：
 
 第一阶段：多通道端到端神经分离（Multi-channel EEND）
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463023-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463023-0.png)
 1.  输入：C个麦克风通道的音频。
 2.  前端特征提取（多通道WavLM）：
     *   选择WavLM模型的前几层（论文中为前4层）在每个通道上并行运行，参数共享。
@@ -141,13 +141,13 @@ hiddenInHomeList: true
     *   推理效率（图2）：显示了各阶段（EEND、嵌入提取、聚类）的耗时。嵌入提取是主要瓶颈。DOVER-Lap需对所有通道重复整个流程，而“attentive argmax”方法通过仅从一个通道提取嵌入，大幅减少了总时间。
     *   注意力权重可视化（图3）：展示了CHiME-6一个音频块上，不同WavLM层（第2层和第4层）的通道注意力权重模式，证明模型学习到了依赖于输入的空间线索。
 
-![图2: pdf-image-page4-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463023-1.png)
+![图2: pdf-image-page4-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463023-1.png)
 图2: 各种方法在不同阶段的推理时间比较。CA代表ChannelAttention。结果表明，所提方法（尤其是attentive argmax）显著比DOVER-Lap高效。
 
-![图3: pdf-image-page4-idx2](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463023-2.png)
+![图3: pdf-image-page4-idx2](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463023-2.png)
 图3: 在CHiME-6数据集上，通道注意力权重在帧和头维度上平均后的层间分布。不同层表现出不同的行为模式，表明模型在利用空间线索。
 
-![图4: pdf-image-page4-idx3](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463023-3.png)
+![图4: pdf-image-page4-idx3](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463023-3.png)
 图4: 单麦克风依赖（Mic-dependent）性能、单通道系统、DOVER-Lap和ChAtt(attentive weighted fusion)的DER对比。AliMeeting和CHiME-6上各通道性能方差大，解释了多通道方法的增益来源。
 
 ### ⚖️ 评分理由

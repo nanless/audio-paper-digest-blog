@@ -71,7 +71,7 @@ hiddenInHomeList: true
 
 DiffSDA的整体架构如图1所示，是一个自编码器框架，包含三个核心组件：顺序语义编码器、随机编码器和随机解码器。
 
-![DiffSDA系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-0.png)
+![DiffSDA系统流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/tooDJHBSvO-0.png)
 
 1. 顺序语文编码器（Sequential Semantic Encoder）
 - 功能：从输入序列 `x1:V_0` 中提取静态因子 `s0` 和动态因子 `d1:V_0`。
@@ -215,7 +215,7 @@ DiffSDA的整体架构如图1所示，是一个自编码器框架，包含三个
 
 图2展示了DiffSDA在真实视频数据上的强大能力：左侧为条件交换，成功将第二行的动态转移到第一行的静态身份上；中间为零样本交换，在VoxCeleb上训练的模型成功应用于MUG数据集；右侧为通过PCA遍历静态潜空间发现的多因子解耦（性别变化）。
 
-![条件交换结果对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/tooDJHBSvO-6.png)
+![条件交换结果对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/tooDJHBSvO-6.png)
 
 图3在多个高分辨率数据集上对比了DiffSDA（第三行）与SPYL（第四行）的交换结果，DiffSDA在身份保持和动态迁移上质量明显更高。
 

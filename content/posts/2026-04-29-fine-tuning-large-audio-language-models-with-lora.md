@@ -83,7 +83,7 @@ hiddenInHomeList: true
 *   使用LoRA/QLoRA进行微调：动机是计算效率和隐私保护。QLoRA（量化+LoRA）允许在资源有限的设备（如笔记本电脑甚至手机）上运行微调后的模型，使得敏感的患者数据无需离开本地环境。
 
 架构图：
-![Overview of our fidelity-aligned modeling pipeline. A task-specific prompt guides QLoRA fine-tuning on Qwen2 Audio using 30-120s audio-transcript windows randomly sampled around annotated start/stop points. The model is trained to predict normalized temporal offsets using clinically validated or synthetic labels.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461247-1.png)
+![Overview of our fidelity-aligned modeling pipeline. A task-specific prompt guides QLoRA fine-tuning on Qwen2 Audio using 30-120s audio-transcript windows randomly sampled around annotated start/stop points. The model is trained to predict normalized temporal offsets using clinically validated or synthetic labels.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461247-1.png)
 
 图2清晰地展示了流水线：左侧是输入（音频、转录、提示），中间是经过QLoRA微调的Qwen2-Audio模型（蓝色框内含LoRA适配器），右侧是回归头输出归一化偏移量。下方的流程说明了训练数据（音频-转录窗口）的构造方式，即围绕已知的标注边界点随机采样。
 
@@ -153,7 +153,7 @@ hiddenInHomeList: true
 | | LoRA (r=4) | 20.7 ± 1.8 | 21.4 ± 2.1 | 19.9 ± 2.1 | 18.8 ± 2.1 | 18.3 ± 3.7 | 19.2 ± 1.9 | 21.0 ± 1.2 | 20.3 ± 2.4 | 21.7 ± 0.5 |
 | | LoRA (r=8) | 20.1 ± 1.4 | 20.3 ± 1.2 | 19.8 ± 1.8 | 20.7 ± 1.9 | 21.7 ± 2.3 | 19.6 ± 1.5 | 22.3 ± 1.3 | 23.5 ± 3.5 | 21.2 ± 1.7 |
 
-![Timeline of a 70-minute PE therapy session showing typical segments for three fidelity metrics: P1 (orientation to imaginal exposure), P2 (imaginal exposure), and P3 (processing). Durations vary across sessions; this structure represents a common clinical pattern. All durations are in minutes.](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11461247-0.png)
+![Timeline of a 70-minute PE therapy session showing typical segments for three fidelity metrics: P1 (orientation to imaginal exposure), P2 (imaginal exposure), and P3 (processing). Durations vary across sessions; this structure represents a common clinical pattern. All durations are in minutes.](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11461247-0.png)
 图1直观展示了典型PE会谈的阶段时间分布，说明了任务的背景和时间跨度。
 
 关键结论：

@@ -61,10 +61,10 @@ hiddenInHomeList: true
 | MFCC | +51.55% |
 
 实验图表：
-![图2：不同输入时长下基线模型的平均EER变化趋势](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463587-1.png)
+![图2：不同输入时长下基线模型的平均EER变化趋势](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463587-1.png)
 图2展示了所有基线模型在输入时长从4秒缩短至0.5秒时，平均EER普遍出现显著上升，凸显了现有方法在超短音频上的性能脆弱性，为本文工作的必要性提供了佐证。
 
-![图3：效率对比雷达图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11463587-2.png)
+![图3：效率对比雷达图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11463587-2.png)
 图3通过雷达图对比了S-MGAA（绿色区域）与主要基线模型在参数量、计算量、实时因子和训练时间等效率指标上的表现，直观表明S-MGAA在保持高性能的同时，具有更优的计算效率和部署友好性。
 
 #

@@ -133,13 +133,13 @@ hiddenInHomeList: true
 消融实验（Set 5， 平衡数据，表3）：
 移除任一组件都会导致性能暴跌。例如，对于MMS，移除平滑目标（-SMOOTH）使最差CER从57.5%飙升至102.1%；移除长度匹配（-DUR）也使最差CER升至84.6%。
 
-![组权重训练过程对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yt40xuRBA9-2.png)
+![组权重训练过程对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yt40xuRBA9-2.png)
 
 图2：XLS-R模型在Set 5上训练时各语言组权重变化。左为Group DRO，权重波动剧烈并趋向单一语言；右为CTC-DRO，权重分布更均衡、稳定。
 
 图3：MMS模型在Set 5上训练时各语言组权重变化，同样展示了CTC-DRO的稳定性。
 
-![组权重训练过程对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/yt40xuRBA9-3.png)
+![组权重训练过程对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/yt40xuRBA9-3.png)
 
 图4：MMS模型在Set 2上训练时各语言组权重变化，结论一致。
 

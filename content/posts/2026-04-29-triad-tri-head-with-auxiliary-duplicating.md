@@ -53,7 +53,7 @@ hiddenInHomeList: true
 
 ### 🏗️ 模型架构
 
-![TriAD架构概览](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462845-0.png)
+![TriAD架构概览](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462845-0.png)
 图1：TriAD架构概览
 
 整体框架如图1所示，是一个端到端的深度学习系统，主要包含两个部分：特征提取骨干网络和TriAD三头输出模块。

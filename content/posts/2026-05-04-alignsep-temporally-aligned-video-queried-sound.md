@@ -61,7 +61,7 @@ AlignSep的架构是一个基于条件流匹配的生成框架，整体流程如
 *   CAVP视觉编码器：选择此编码器是因为它内置了时序同步监督，能更好地捕捉视频中的动态时序线索，这对于区分同类但时序模式不同的声源至关重要。
 *   生成式范式：针对传统掩码方法在处理重叠信号时易产生“频谱空洞”的问题，生成式模型通过迭代精炼能更自然地重建完整频谱，生成连续、完整的音频。
 
-![AlignSep模型架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-1.png)
+![AlignSep模型架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DVDkFcxU1D-1.png)
 
 图2：AlignSep模型架构示意图。 展示了从混合音频和视频输入，经过编码、拼接、向量场估计器（ODE求解器）进行迭代去噪，最终解码生成分离音频的完整流程。
 
@@ -121,7 +121,7 @@ AlignSep的架构是一个基于条件流匹配的生成框架，整体流程如
 
 定性结果（图4）：
 
-![定性结果对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/DVDkFcxU1D-3.png)
+![定性结果对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/DVDkFcxU1D-3.png)
 
 图4：定性结果对比，展示了AlignSep解决传统方法两大痛点的案例。 (a) 时间错位案例：传统方法在视频动作停止后仍产生声音（红色区域），AlignSep严格按节奏生成（绿色区域）。(b) 频谱空洞案例：传统方法在重叠处产生不���续的频谱（红色区域），AlignSep生成更完整连续的谱图。
 

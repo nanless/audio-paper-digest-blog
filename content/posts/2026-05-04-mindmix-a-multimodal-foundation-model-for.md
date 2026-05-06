@@ -37,7 +37,7 @@ hiddenInHomeList: true
 #### 01.模型架构
 MindMix采用双流架构，通过对比学习目标在共享嵌入空间中对齐EEG和音频表征。整体流程如图1所示：输入一对EEG片段（\(S_{EEG}\)）和音频片段（\(S_{Audio}\)），分别通过各自的编码器生成初始嵌入（\(E_{proj}, A_{proj}\)），然后输入核心的CALRA模块进行深度交互和对齐，输出最终对齐嵌入（\(E_{aligned}, A_{aligned}\)），用于对比损失计算。
 
-![MindMix框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-1.png)
+![MindMix框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/1ifQzlETeG-1.png)
 
 图1：MindMix整体框架图。展示了从输入EEG-音频对，经过双流编码器、CALRA模块，到对比学习输出的完整流程。
 
@@ -65,7 +65,7 @@ MindMix采用双流架构，通过对比学习目标在共享嵌入空间中对�
     - 共享低秩对齐：将跨注意力输出的表征投影到一个共享的低维瓶颈空间，并进行元素级乘积（\(\odot\)），以强制执行双线性交互，捕捉复杂的非线性跨模态依赖关系。最终通过残差连接和层归一化得到对齐后的嵌入。
 - 设计动机：CALRA旨在超越简单的线性投影或早期融合（如拼接），通过全局精炼和深度双线性交互，捕捉EEG-Audio之间细粒度的、乘法依赖的映射关系。
 
-![CALRA模块结构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-4.png)
+![CALRA模块结构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/1ifQzlETeG-4.png)
 
 图3：CALRA模块结构图。清晰地展示了类型特定对齐、双向跨注意力和共享低秩对齐三个组件的串联流程。
 
@@ -127,7 +127,7 @@ MindMix采用双流架构，通过对比学习目标在共享嵌入空间中对�
 - EEG编码器选择：将自定义EEG编码器替换为LaBraM或CBraMod骨干，性能也出现明显下降（AAD降至97.44%和96.37%）。
 - CALRA组件拆解：移除双向跨注意力（w/o Cross-Attention）导致性能下降最大（AAD降至94.35%），证明其是CALRA最关键的组件。
 
-![MindMix与其单模态变体的性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/1ifQzlETeG-7.png)
+![MindMix与其单模态变体的性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/1ifQzlETeG-7.png)
 
 图4：MindMix全模型与其单模态（EEG-Only）变体的性能对比。直观展示了跨模态对齐带来的巨大性能增益。
 

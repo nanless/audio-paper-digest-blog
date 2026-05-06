@@ -70,13 +70,13 @@ hiddenInHomeList: true
 
 SyncTrack是一个基于潜在扩散模型（LDM）的多轨音乐生成系统。其整体流程如下图所示：音频数据首先通过STFT和Mel滤波器组转换为梅尔谱，然后由一个预训练的变分自编码器（VAE）编码为潜在表示。扩散过程在该潜在空间中进行，模型训练以预测添加的噪声。生成时，从噪声开始迭代去噪，得到多轨潜在表示，最后经由VAE解码器和HiFi-GAN声码器重建为音频波形。
 
-![SyncTrack整体流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Jf7i0a8dr0-1.png)
+![SyncTrack整体流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Jf7i0a8dr0-1.png)
 
 （图2：SyncTrack的训练与采样整体流程，以及核心网络U-Net的宏观结构，包含输入、中间和输出块，内部由Track-specific和Track-shared模块组成。）
 
 模型的核心创新在于其U-Net去噪网络内部的设计，它明确区分了处理共性节奏信息和个性音色信息的模块（如下图所示）：
 
-![SyncTrack架构细节对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Jf7i0a8dr0-0.png)
+![SyncTrack架构细节对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Jf7i0a8dr0-0.png)
 
 （图1：(a) 之前的统一模型架构。(b) 本文提出的SyncTrack架构，明确包含了Track-shared和Track-specific模块。）
 
@@ -163,7 +163,7 @@ SyncTrack在IRS（越小越稳定）和CBS（越大越同步）、CBD（越小�
 主观评估：
 在5分制（混合）和3分制（单轨）主观评分中，Ground Truth得分最高（混合平均4.48），SyncTrack（混合平均3.42） 显著高于MSG-LD（混合平均1.57），验证了其生成质量更符合人类听感。
 
-![主观评估与客观指标相关性分析图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/Jf7i0a8dr0-3.png)
+![主观评估与客观指标相关性分析图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/Jf7i0a8dr0-3.png)
 
 （图4：主观评分与客观节奏指标（IRS, CBS, CBD）的散点图对比，显示指标与人类感知有明确对应关系。）
 

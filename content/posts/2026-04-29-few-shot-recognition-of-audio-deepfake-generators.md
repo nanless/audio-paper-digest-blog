@@ -56,7 +56,7 @@ hiddenInHomeList: true
 
 模型架构图如图2所示。
 
-![图2：GPA框架概览（以3-way 3-shot任务为例）](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464006-1.png)
+![图2：GPA框架概览（以3-way 3-shot任务为例）](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464006-1.png)
 
 整体流程：对于一个N-way K-shot任务，输入是包含N×K个有标签样本的支持集S和N×M个无标签样本的查询集Q。所有音频样本首先通过预训练的CLAP音频编码器转换为d维嵌入向量。这些嵌入（支持集和查询集）被组织成一个联合图，其中节点是单个样本，边表示样本间的相似性。该图输入到图适应模块中进行处理。经过GAM精炼后，从属于各类的支持节点嵌入中计算出类原型（各类嵌入的均值）。最后，每个查询节点根据其与各类原型的欧氏距离进行分类。
 
@@ -131,7 +131,7 @@ hiddenInHomeList: true
 结论：GPA在所有设置下均取得最高准确率。在ASV2019LA上，相比最强基线DGPN，提升幅度为3.17% (5-shot) 至 8.28% (20-shot)。在MLAAD上，优势同样显著。
 
 跨数据集评估（对应图3）：
-![图3：跨数据集准确率](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464006-2.png)
+![图3：跨数据集准确率](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464006-2.png)
 左图：模型在MLAAD训练集上训练，在ASV2019LA测试集上评估。GPA达到79.11%，优于所有基线。
 右图：模型在ASV2019LA训练集上训练，在MLAAD测试集上评估。GPA达到85.70%，同样领先。
 结论：尽管因分布差异导致绝对精度下降，但GPA通过利用查询样本结构信息校准原型，表现出更强的跨域泛化能力。

@@ -119,13 +119,13 @@ hiddenInHomeList: true
 
 表Ⅱ：计算复杂度对比（基于C=8， J=256， J₁=8， J₂=32）
 
-![图1：M×C次级路径建模示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464800-0.jpg)
+![图1：M×C次级路径建模示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464800-0.jpg)
 图1说明：展示了传统次级路径建模的结构，C个控制源通过各自的次级路径影响M个误差麦克风。这是本文提出的同步KPD建模方法所作用的基础系统模型。
 
-![图3：1秒建模信号下的结果](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464800-0.jpg)
+![图3：1秒建模信号下的结果](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464800-0.jpg)
 图3说明：(a) NME对比图，显示在1秒短数据下，Wiener同步方法误差高（-8.5 dB），而KPD方法随着P值增加误差显著降低（-19.7 dB至-27.1 dB）。(b) 次级路径估计波形图，显示KPD方法（P=5）的估计与真实路径接近，而Wiener方法偏差明显。
 
-![图5：降噪性能对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11464800-0.jpg)
+![图5：降噪性能对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11464800-0.jpg)
 图5说明：(a) 收敛曲线，显示KPD(1s, P=5)方法的收敛曲线与Wiener(5s)方法几乎重合，而Wiener(1s)方法降噪效果差。(b) 频谱图，验证KPD方法在全频带上的降噪性能与理想情况一致。
 
 ### ⚖️ 评分理由

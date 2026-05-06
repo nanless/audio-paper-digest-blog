@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 SpeechJudge-GRM 的核心是一个在预训练AudioLLM基础上进行后训练的生成式奖励模型（Generative Reward Model, GRM）。其训练流程分为两个关键阶段，整体架构与训练数据流如图4所示。
 
-![SpeechJudge-GRM的两阶段训练流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/I9ED9VWZq6-4.png)
+![SpeechJudge-GRM的两阶段训练流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/I9ED9VWZq6-4.png)
 
 1.  监督微调（SFT）阶段（冷启动）：
     *   输入：从SpeechJudge-Data中筛选出的、教师模型（Gemini-2.5-Flash）判断与人类偏好一致的样本（约25K对）。输入格式为“思维链提示（Table 1的CoT prompt）+ 教师生成的推理输出”。

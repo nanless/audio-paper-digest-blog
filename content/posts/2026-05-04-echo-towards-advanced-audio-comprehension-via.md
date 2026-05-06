@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 Echo是一个基于Qwen2.5-Omni (7B)构建的大音频语言模型（LALM），其核心创新在于赋予了模型“音频交错推理”的能力。模型整体架构和训练流程如图2所示。
 
-![Echo模型训练框架图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/xI6yOdOtga-1.png)
+![Echo模型训练框架图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/xI6yOdOtga-1.png)
 
 图2展示了Echo从基础模型到最终形态的完整训练框架。
 1.  基础模型（图2a）：标准的LALM架构，包含音频编码器、投影层、tokenizer和大语言模型（LLM）。输入为音频和文本提示，输出为文本响应。
@@ -124,15 +124,15 @@ Echo是一个基于Qwen2.5-Omni (7B)构建的大音频语言模型（LALM），�
 
 分析实验与可视化：
 
-![不同推理格式下的注意力分配对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/xI6yOdOtga-0.png)
+![不同推理格式下的注意力分配对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/xI6yOdOtga-0.png)
 
 图1直观对比了音频条件文本推理（a）与音频交错推理（b）在推理过程中模型对音频令牌的注意力分配。后者能维持对音频的持续关注。
 
-![Echo在10项代表性技能上的性能进化](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/xI6yOdOtga-6.png)
+![Echo在10项代表性技能上的性能进化](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/xI6yOdOtga-6.png)
 
 图5展示了从基座模型到冷启动模型再到Echo，在MMAR-mini的10项代表性技能上的准确率进步，尤其在“多说话人角色映射”（+37.0%）和“事件推理”等需要精细时序分析的任务上提升显著。
 
-![Echo响应中引用片段的分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/xI6yOdOtga-5.png)
+![Echo响应中引用片段的分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/xI6yOdOtga-5.png)
 
 图6显示了在MMAR任务中，Echo的响应引用音频片段��分布情况。99.4%的响应包含至少一个片段引用，且覆盖了音频的各个时间区域。
 

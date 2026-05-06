@@ -57,7 +57,7 @@ hiddenInHomeList: true
 
 LAMB的整体架构是一个端到端的系统，由音频编码器、双流适配器、跨模态对齐器和基于LLM的解码器四个核心部分组成。
 
-![图1：LAMB框架总体架构图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462125-0.jpg)
+![图1：LAMB框架总体架构图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462125-0.jpg)
 图1 展示了LAMB的总体架构。输入音频经过音频编码器（Consistent Ensemble Distillation）提取原始嵌入`ha`，然后通过双流适配器（Two-Stream Adapter） 进行处理。双流适配器包含两个并行的分支：语义模块 使用可学习查询`Qs`通过多头自注意力从`ha`中提取语义特征`ˆhs`；时序模块 则使用卷积、双向GRU和可学习查询`Qt`从`ha`中提取时序依赖特征`ˆht`。两个模块的输出被拼接，再由一组全局查询`Qg`通过交叉注意力进行融合，并投影到LLM的文本嵌入维度，得到对齐后的音频嵌入`za`。
 跨模态对齐器（Cross-Modal Aligner） 在训练阶段生效，利用`za`和文本标题的嵌入`zt`来计算损失。它包含全局级和令牌级的柯西-散度损失以及InfoNCE损失，旨在拉近音频和文本的分布距离。在推理阶段，`za`与指令提示嵌入`zp`拼接后，送入LLM解码器（LLaMA 2， 使用LoRA微调）生成文本。生成的每个令牌的logits还会被令牌引导（Token Guide） 模块修正，该模块计算`za`与LLM词表中所有令牌嵌入的L2距离（Guide Scores），并将其作为偏置项加到原始logits上，从而在解码过程中引导模型选择与音频语义更相关的词汇。
 
@@ -94,11 +94,11 @@ LAMB的整体架构是一个端到端的系统，由音频编码器、双流适�
 2.  引导度量消融（表3）：在令牌引导中，使用L2距离（平方）作为Guide Scores的效果最佳（SD: 55.4），优于L1距离和余弦相似度。
 3.  组件消融（表4）：移除任何模块（双流适配器TSA、CS散度损失、跨模态对齐器CMA整体、令牌引导TG）都会导致性能下降，其中移除CMA或TG的下降尤为明显，证实了各组件的贡献。
 
-![图2：嵌入对齐可视化](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462125-1.png)
+![图2：嵌入对齐可视化](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462125-1.png)
 图2 展示了使用跨模态对齐器（CMA）前后，音频嵌入与文本嵌入在二维空间的分布情况。可以清晰地看到，应用CMA后（蓝色点簇），音频嵌入与文本嵌入（绿色点簇）的分布从几乎完全分离变得紧密重合，直观验证了对齐效果。
 
-![图3与图4：定性结果与对比](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462125-2.jpg)
-![图4](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462125-3.jpg)
+![图3与图4：定性结果与对比](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462125-2.jpg)
+![图4](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462125-3.jpg)
 图3和图4（应为表5的对应可视化）展示了使用与不使用令牌引导（TG）生成的描述对比。使用TG后，模型能捕捉到更细微的声音线索（如“hard surface”， “a group of people talk in the background”），生成的描述在细节和准确性上均有所提升。
 
 ### ⚖️ 评分理由

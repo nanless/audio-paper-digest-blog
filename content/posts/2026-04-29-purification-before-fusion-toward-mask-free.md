@@ -63,7 +63,7 @@ hiddenInHomeList: true
 
 论文提出的噪声鲁棒AVSR框架整体架构如图1所示。它以视频（唇部RoI序列）和噪声音频（梅尔频谱）为输入，输出文本转录，无需生成显式的噪声掩码。模型主要分为四个阶段：
 
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460922-0.jpg)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460922-0.jpg)
 
 1.  前端特征提取：
     *   视觉前端：使用3D卷积（5x7x7核）+ ResNet18提取时空特征，再通过一个3层Conformer编码器，输出视觉特征 `hv ∈ R^(Nv×d)`。
@@ -129,7 +129,7 @@ hiddenInHomeList: true
 结论：结合`Lrecon`和`Lpercep`能带来最佳性能。使用预训练Whisper作为`Lpercep`的特征提取器效果更好（7.9% vs 8.5%），但考虑到计算开销，论文最终选择了音频前端。
 
 图2：不同瓶颈token数量对性能的影响（-5dB人声噪声）
-![图2: pdf-image-page2-idx1](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460922-1.jpg)
+![图2: pdf-image-page2-idx1](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460922-1.jpg)
 结论：瓶颈token数量为4时模型性能最好（WER最低）。token太少信息交换不足，太多则可能引入冗余，降低模型聚焦关键信息的能力。
 
 表3：不同输入条件下的WER（%）比较

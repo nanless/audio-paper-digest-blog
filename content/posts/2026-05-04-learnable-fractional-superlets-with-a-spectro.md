@@ -56,7 +56,7 @@ LFST接收原始波形x，输出S∈R^{B×F×T}， κ∈[0,1]^{B×F×T}。其核
 
 最后，应用可学习非对称硬阈值（LAHT）对幅度S进行稀疏化去噪。
 
-![LFST前端架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-2.png)
+![LFST前端架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZGEEL20mU-2.png)
 
 图1（原文图1）展示了LFST前端流程：原始波形输入，通过可学习的对数频率网格、softmax阶数权重和频率依赖周期，产生各阶Morlet小波响应。其幅度经加权几何平均得到S，加权单位相量得到相位一致性κ。长度掩码作用于输出，LAHT仅作用于S。最终S和κ被拼接为两通道输出。
 
@@ -69,7 +69,7 @@ STEE接收LFST输出的两通道图[S; κ]∈R^{B×2×F×T}。其主要组件按
 5.  时间下采样与轴向自注意力：沿时间轴进行固定步长下采样，然后对平均池化后的时序特征应用局部多头自注意力，捕获长程依赖。
 6.  注意力统计池化与分类头：将特征沿频率轴平均，再通过注意力加权统计（均值和标准差）得到一个固定长度的嵌入向量，最后通过线性层分类。
 
-![STEE编码器架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-3.png)
+![STEE编码器架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZGEEL20mU-3.png)
 
 图2（原文图2）展示了STEE编码器的整体结构：从左到右依次为DW/PW卷积主干、频谱残差块、两个带SE的TF混合块、自适应FiLM门控、时间下采样与轴向注意力、注意力统计池化，最后是线性分类器。
 
@@ -169,7 +169,7 @@ STEE接收LFST输出的两通道图[S; κ]∈R^{B×2×F×T}。其主要组件按
 
 定性可视化
 
-![学习到的分数阶阶数分布](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/uZGEEL20mU-7.png)
+![学习到的分数阶阶数分布](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/uZGEEL20mU-7.png)
 
 图5（原文图5）展示了LFST学习到的有效阶数oeff(f)随频率的变化（上图），以及完整的阶数权重分布热力图（下图）。结果显示，阶数在频谱上非均匀分配：在基频（F0）区域较低（强调时间精度），在共振峰（F1-F3）区域较高（强调频率分辨率），且权重平滑地分布在多个阶数上，验证了分数阶混合的学习能力。
 

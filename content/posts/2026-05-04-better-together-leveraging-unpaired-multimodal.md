@@ -59,11 +59,11 @@ UML的核心是一个模态无关的共享权重网络。其整体流程如下�
 
 关键设计选择的动机是：假设不同模态共享一个底层的现实表示，通过共享权重强制模型学习对所有模态都有用的通用特征，从而实现无需配对的跨模态知识迁移。
 
-![UML概念图：展示未配对文本如何为图像分类提供补充信息](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-1.png)
+![UML概念图：展示未配对文本如何为图像分类提供补充信息](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-1.png)
 
 (图1：展示了未配对多模态表示学习的概念，即文本即使不与图像直接配对，也能提供互补信息。UML通过跨模态共享权重来提取协同效应。)
 
-![UML的两种训练设置架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-3.png)
+![UML的两种训练设置架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-3.png)
 
 (图4：详细展示了UML在自监督(a)和监督(b)设置下的具体架构。左图显示不同模态的输入被token化并嵌入；右图展示了两种设置下数据流经共享网络和模态特定模块的过程。)
 
@@ -134,23 +134,23 @@ Table 2: 监督设置下的性能对比（使用DINOv2和OpenLLaMA）
 4.  迁移学习有效：用预训练的语言模型（BERT）权重初始化视觉模型（ViT），能显著提升性能（图7），表明语义知识可跨模态迁移。
 5.  模态转换比率：在Oxford Pets上，使用对齐的CLIP编码器时，1张图像约等于228个词；使用未对齐的DINOv2+OpenLLaMA时，1张图像约等于1034个词（图8，9）。
 
-![UML模型在分布偏移下的鲁棒性对比](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-4.png)
+![UML模型在分布偏移下的鲁棒性对比](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-4.png)
 
 (图5：展示了UML方法在四个ImageNet分布偏移测试集上，相比无配对基线具有更高的测试准确率，表明其学习到了更鲁棒的特征。)
 
-![UML在音频分类任务上的性能提升](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-5.png)
+![UML在音频分类任务上的性能提升](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-5.png)
 
 (图6：展示了在ImageNet-ESC音频分类任务上，使用UML结合无配对的图像和文本数据，能够显著提升仅基于音频的分类性能。)
 
-![从语言模型权重迁移到视觉任务的效果](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-6.png)
+![从语言模型权重迁移到视觉任务的效果](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-6.png)
 
 (图7：展示了用BERT预训练权重初始化ViT的图像分类器，无论主干是否冻结，性能都优于从头训练的模型。)
 
-![图像-文本模态转换比率可视化（CLIP编码器）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-2.png)
+![图像-文本模态转换比率可视化（CLIP编码器）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-2.png)
 
 (图8：显示了使用CLIP编码器时，在Oxford Pets数据集上达到相同性能所需的图像和文本样本数量关系，计算得出1张图像约等于228个词。)
 
-![图像-文本模态转换比率可视化（DINOv2+OpenLLaMA编码器）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/5OIgg5YkC3-8.png)
+![图像-文本模态转换比率可视化（DINOv2+OpenLLaMA编码器）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/5OIgg5YkC3-8.png)
 
 (图9：显示了使用未对齐的DINOv2和OpenLLaMA编码器时，1张图像约等于1034个词，效率低于CLIP。)
 

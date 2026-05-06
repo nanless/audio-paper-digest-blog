@@ -67,7 +67,7 @@ hiddenInHomeList: true
 
 训练Token序列安排图：
 
-![图1：训练token序列安排](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-0.png)
+![图1：训练token序列安排](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dFVenZdVbX-0.png)
 
 图1展示了如何在文本单声道通道上交错排列流式ASR令牌、CoT令牌和响应文本令牌，并使用特殊切换令牌进行模式切换，从而在用户语音输入的同时允许模型进行推理。
 
@@ -136,7 +136,7 @@ hiddenInHomeList: true
 
 流式ASR效果消融（图4）：
 
-![流式ASR延迟对准确率的影响](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/dFVenZdVbX-3.png)
+![流式ASR延迟对准确率的影响](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/dFVenZdVbX-3.png)
 
 图4显示，随着流式ASR延迟（look-ahead）令牌数从2增加到6，所有SRQA任务的准确率持续提升并接近“离线ASR”上界，同时用户词错率（WER）下降。证明了流式ASR对推理至关重要。
 

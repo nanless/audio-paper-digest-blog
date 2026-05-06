@@ -59,7 +59,7 @@ hiddenInHomeList: true
 
 所有系统最终输出一个分数s = 0.5(lspoof - lbonafide)，用于判断音频真伪。
 
-![图2: 模型架构示意图](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11460707-1.jpg)
+![图2: 模型架构示意图](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11460707-1.jpg)
 （图2）左图展示了logmel-ResNet-CoT的整体结构，包括四个Res-CoT阶段、适配器、注意力统计池化层。右图详细说明了残差块（Res-CoT block）的两种内部结构变体。
 
 #

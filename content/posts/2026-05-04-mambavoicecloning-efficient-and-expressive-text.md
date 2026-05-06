@@ -45,7 +45,7 @@ MVC是一个基于扩散解码器的TTS系统，其核心创新在于将推理�
 
 完整流程：输入为音素化文本和参考音频波形。参考音频被转换为Mel谱图，用于提取全局风格嵌入`e`。文本和`e`共同输入到三个并行的Mamba编码器中，分别处理文本特征、韵律（表达性）和节奏（时间）信息。这三个编码器的输出经过融合后，通过一个“语音动态”阶段生成最终的条件序列`hD`，该序列驱动固定的扩散解码器生成Mel谱图，最后由声码器转换为波形。
 
-![MVC系统架构概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-2.png)
+![MVC系统架构概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/0oXyMbPMtP-2.png)
 
 图1：MVC系统架构概览图。显示了Bi-Mamba文本编码器、临时Bi-Mamba和表达性Mamba的流程，以及它们如何共同驱动扩散解码器。
 
@@ -103,15 +103,15 @@ MVC取得了最佳的MCD和PESQ，以及最低的RTF。F0 RMSE和WER与StyleTTS2
     - 仅拼接（无门控，无AdaLN）: 3.64 ± 0.09
     表明门控融合和AdaLN两者对长程稳定性都至关重要。
 
-![训练收敛与性能对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-8.png)
+![训练收敛与性能对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/0oXyMbPMtP-8.png)
 
 图2：在LJSpeech上的波形对比和MOS评估。MVC的波形与真值对齐更紧密。
 
-![频谱图定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-9.png)
+![频谱图定性对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/0oXyMbPMtP-9.png)
 
 图4：频谱图对比。MVC更好地保持了谐波连续性和共振峰结构。
 
-![模块运行时间分解图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/0oXyMbPMtP-10.png)
+![模块运行时间分解图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/0oXyMbPMtP-10.png)
 
 图6：模块运行时间分解。显示扩散解码器是主要延迟来源。
 

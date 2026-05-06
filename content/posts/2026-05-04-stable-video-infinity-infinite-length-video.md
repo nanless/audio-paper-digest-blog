@@ -52,7 +52,7 @@ SVI的整体框架基于一个视频扩散Transformer (DiT)，其核心创新在
 
 整个训练目标是让模型在接收到带误差的输入~X_t时，预测出指向干净视频latent X_vid的“错误回收速度”，而非原始的无误差速度。这本质上是在训练模型在遇到分布外（含误差）输入时，仍能收敛到正确解。模型整体基于Wan 2.1的14B DiT，仅通过LoRA进行微调。
 
-![Stable Video Infinity 系统流程图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/X96Ei9n34a-2.png)
+![Stable Video Infinity 系统流程图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/X96Ei9n34a-2.png)
 
 图3（论文中的Figure 3）展示了SVI的闭环训练流程：(a) 向干净输入中注入错误，(b) 通过单步双向积分近似预测并计算误差，(c) 将误差存入动态记忆库并重采样，形成循环。
 
@@ -117,7 +117,7 @@ SVI的整体框架基于一个视频扩散Transformer (DiT)，其核心创新在
 2.  稳定性分析：论文图5显示，随着视频长度增加，SVI的一致性和质量保持稳定，而其他方法性能下降明显。
 3.  误差可视化：论文图6对比了原始DiT（Wan 2.1）和SVI对注入误差的反应，表明原始模型对自身错误敏感导致预测恶化，而SVI学会了鲁棒地纠正它们。
 
-![稳定性对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/X96Ei9n34a-0.png)
+![稳定性对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/X96Ei9n34a-0.png)
 
 图5（论文中的Figure 5）显示了不同方法生成视频长度增加时的性能稳定性。SVI（红线）的性能曲线基本保持平稳，而其他方法则呈现下降趋势，证明了其无限长度生成的潜力。
 

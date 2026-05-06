@@ -53,7 +53,7 @@ hiddenInHomeList: true
 ### 🏗️ 模型架构
 
 模型的核心是nnPBFDAF模块，其整体流程和内部结构如下图所示：
-![图1: pdf-image-page2-idx0](http://teb0hdrpn.hd-bkt.clouddn.com/icassp-2026/2026-04-29/11462524-0.png)
+![图1: pdf-image-page2-idx0](https://nanless.github.io/audio-paper-digest-images/icassp-2026/2026-04-29/11462524-0.png)
 
 - 输入输出：输入为参考信号 `x(n)` 和麦克风信号 `d(n)`。输出为估计的回声 `e(m)`。
 - PBFDAF基础：信号被分块并变换到频域。滤波器权重 `H(m)` 在频域被分割成 `B` 个块。回声估计通过对所有块的频域乘积求和并变换回时域得到（公式6）。

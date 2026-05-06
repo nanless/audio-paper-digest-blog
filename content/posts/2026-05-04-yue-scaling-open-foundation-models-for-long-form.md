@@ -60,7 +60,7 @@ hiddenInHomeList: true
 
 YuE采用两阶段、基于自回归语言模型的框架，专为“歌词到歌曲”任务设计。其整体流程如下图所示。
 
-![图1：YuE两阶段歌词到歌曲生成框架概览图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-1.png)
+![图1：YuE两阶段歌词到歌曲生成框架概览图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-1.png)
 
 *   整体架构：如图1所示，系统包含文本分词器、音频分词器（带轻量上采样器）以及两个语言模型（LM）。文本分词器处理指令、风格和歌词。音频分词器（X-Codec）将波形转换为离散token，其codebook-0富含语义信息。
 *   第一阶段（Stage-1 LM）：这是核心生成模型，采用LLaMA2架构，参数规模达7B。它接收文本token和来自codebook-0的音频token，以自回归的“下一token预测”（NTP）方式生成歌词和粗粒度的音频token序列。其关键创新是双轨解耦预测（Dual-NTP）（见图2），在每个时间步同时预测人声token (v_t) 和伴奏token (a_t)，联合建模两者。
@@ -68,7 +68,7 @@ YuE采用两阶段、基于自回归语言模型的框架，专为“歌词到�
 *   文本条件控制：结构化渐进式条件（SPC） 被嵌入到Stage-1 LM中。它首先利用“all-in-one”模型对歌曲进行结构分段，然后在训练和推理时，将歌词和结构标签（如[verse]、[chorus]）与对应的音频段落交错排列，形成如下序列：`<指令> <歌词> <结构标签1> <音频片段1> <结构标签2> <音频片段2> ...`。这解决了长上下文下文本条件衰减的问题。
 *   音乐ICL：在训练数据的末尾阶段，随机采样一段30秒的参考音频token序列，拼接到SPC数据之前，形成`Dicl = Aref ◦ Dspc`，使模型能够执行风格克隆、内容创作等任务。
 
-![图11：第二阶段（Stage-2）残差建模架构图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-3.png)
+![图11：第二阶段（Stage-2）残差建模架构图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-3.png)
 
 ### 💡 核心创新点
 
@@ -125,15 +125,15 @@ YuE采用两阶段、基于自回归语言模型的框架，专为“歌词到�
     - 整体偏好（图3左）：与四个商业系统（Suno V4, Udio, Hailuo, Tiangong）对比。YuE在“总体”上对Tiangong、Udio的胜率约为50%，对Hailuo胜率超70%，但对Suno V4胜率约30%。
     - 音乐性（图3右， 图14左）：在六项音乐性维度（声学质量、伴奏质量、歌曲结构等）上，YuE在歌曲结构和编曲复杂度上表现突出，但在人声和伴奏的声学质量上弱于顶级系统。归一化后（以Suno V4为基准），YuE在音乐结构维度得分最高。
 
-![图3：YuE与四个商业系统的主观评估胜率对比图（左：总体偏好；右：音乐性）](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-5.png)
+![图3：YuE与四个商业系统的主观评估胜率对比图（左：总体偏好；右：音乐性）](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-5.png)
 
-![图14：不同系统在音乐维度（左）和可控性维度（右）上的归一化胜率雷达图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-8.png)
+![图14：不同系统在音乐维度（左）和可控性维度（右）上的归一化胜率雷达图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-8.png)
 
 - 人声敏捷度（图4）：通过分析歌曲中人声的音域范围（半音数）分布。YuE的中位数约27半音，接近Suno V4，显著优于Hailuo和Tiangong（中位数约20半音）。
 
 - 生成时长（图5）：YuE生成的歌曲时长最长，且分布范围最广（最高超过400秒），Suno V4和Tiangong次之，Hailuo最短。
 
-![图5：不同系统生成歌曲的时长分布对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-6.png)
+![图5：不同系统生成歌曲的时长分布对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-6.png)
 
 - 客观指标对比（表1）：
     | Metric (方向) | Hailuo | SunoV4 | Tiangong | Udio | YuE |
@@ -153,7 +153,7 @@ YuE采用两阶段、基于自回归语言模型的框架，专为“歌词到�
     1.  双轨预测 vs 标准NTP（图7）：在相同的0.5B模型和20B token预算下，Dual-NTP的训练损失始终低于标准NTP约0.4，收敛更快。
     2.  歌词跟随能力 vs 长度（图8）：比较了不同长条件方法。随着生成时长增加（30s -> 150s），Vanilla（前缀条件）和Curriculum方法的WER急剧上升（>70%），而SPC方法保持了较低的WER。将模型从0.5B扩展到7B，WER从约70%大幅下降到约20%。
 
-![图8：不同长条件方法下，歌词错误率（WER）随生成时长变化的对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-7.png)
+![图8：不同长条件方法下，歌词错误率（WER）随生成时长变化的对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-7.png)
 
     3.  模型扩展效果（图9a）：比较0.5B、2B、7B模型。在成对A/B测试中，音乐性和歌词跟随能力的胜率随模型规模增大和训练token增多（0.5B/2B用500B token， 7B用1.75T token）而显著提升。
 
@@ -161,13 +161,13 @@ YuE采用两阶段、基于自回归语言模型的框架，专为“歌词到�
 
 - 记忆化测试（图10）：通过计算训练集参考音频与ICL生成音频之间的ByteCover2余弦相似度，发现Ref-Gen相似度远低于已知翻唱集（Covers80），与不同歌曲集（GTZAN）相当，表明模型主要重组模式而非复制记忆。
 
-![图10：训练参考音频与生成音频的余弦相似度分布对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-9.png)
+![图10：训练参考音频与生成音频的余弦相似度分布对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-9.png)
 
 - 语言学信息损失分析（图12， 图6）：
     - 图12显示，在混合音频中，重金属（Metal）流派的WER最高，其次是流行（Pop）和嘻哈（Hip-Hop），表明其“语言学信息损失”最大。人声轨道的WER始终远低于混合音频。
     - 图6展示了WER与人声-伴奏比（VAR）的关系。对于混合音频重建，当VAR降低（伴奏增强）时，WER显著上升（ΔWER变大）。而人声轨道的WER受VAR影响小，ΔWER小，证明了双轨解耦对抵抗伴奏干扰的有效性。
 
-![图12：不同音乐流派下，混合音频与人声轨道的WER对比图](/audio-paper-digest-blog/images/iclr-2026/2026-05-04/hZy6YG2Ij8-11.png)
+![图12：不同音乐流派下，混合音频与人声轨道的WER对比图](https://nanless.github.io/audio-paper-digest-images/iclr-2026/2026-05-04/hZy6YG2Ij8-11.png)
 
 ### ⚖️ 评分理由
 
