@@ -12,6 +12,10 @@ hiddenInHomeList: true
 
 #数据集 #预训练 #多模态模型 #领域适应 #基准测试
 
+✅ **7.0/10** | 前25% | #数据集 | #预训练 | #多模态模型 #领域适应 | [arxiv](https://arxiv.org/abs/2605.00877v2)
+
+学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 1.0 | 置信度 高
+
 
 ### 👥 作者与机构
 
@@ -32,18 +36,6 @@ hiddenInHomeList: true
 - Demo：论文中未提及
 - 复现材料：论文中未提及
 - 论文中引用的开源项目：论文中未明确提及具体项目名和链接（仅提到使用了“PDF-to-markdown conversion tools [41]”等工具，但未提供具体名称与链接）
-
-## 补充信息
-
-- [细节详述] 补充：在数据预处理流程中，论文明确指出利用“large language models for intelligent filtering and semantic deduplication”（大语言模型进行智能过滤和语义去重）。分析中虽提及“利用LLM进行智能去重和语义过滤”，但未明确指出此步骤所使用的工具是LLM，这是一个关键的技术细节。
-
-- [实验结果] 补充：论文在“Model Performance Improvement”小节中，除列出具体数值外，得出了一个关键结论：“The consistent improvements across all evaluated subdomains demonstrate that OceanInstruct effectively bridges the domain adaptation gap for foundation models in marine science.”（在所有评估子领域中一致性的性能提升表明，OceanInstruct有效地弥合了基础模型在海洋科学领域的领域适应鸿沟。）此结论在分析中未明确提炼。
-
-- [模型架构/评分理由] 补充：论文在“Background & Summary”部分明确指出了当前海洋AI面临的根本性数据瓶颈（data bottleneck）的具体内涵：“ocean data are highly fragmented across disparate sources and inherently exhibit multi-modal, high-noise, and weakly labeled characteristics, lacking unified schemas and semantic alignment.”（海洋数据高度碎片化、本质上呈现多模态、高噪声和弱标签的特性，缺乏统一的模式和语义对齐。）分析中虽提到了问题，但未完整复现原文对此瓶颈的精准描述。
-
-- [模型架构/细节详述] 补充：论文在介绍其数据处理流水线（pipeline）时，强调了其“Domain-adapted processing pipeline”的特性，即“develop specialized data processing techniques that preserve the scientific integrity and contextual richness of oceanographic information”（开发专门的数据处理技术，以保持海洋信息的科学完整性和上下文丰富性）。分析中只提到了“数据预处理流水线”，未突出其“领域适应性”这一设计动机。
-
-- [开源详情] 补充：论文在“Code Availability”部分提供了一个项目主页链接：“For more information, please visit our homepage: http://data.oceangpt.blue/en/”。分析中遗漏了此补充信息入口。
 
 ### 📌 核心摘要
 
@@ -146,11 +138,17 @@ hiddenInHomeList: true
 - 开源与复现加成：1.0/1
     - 论文提供了完整的HuggingFace数据集链接、GitHub代码仓库、项目主页。数据集、构建代码、评测基准乃至微调后的模型均已公开，开源极其彻底，复现门槛非常低。
 
----
+### 📎 补充信息
 
-✅ **7.0/10** | 前25% | #数据集 | #预训练 | #多模态模型 #领域适应 | [arxiv](https://arxiv.org/abs/2605.00877v2)
+- [细节详述] 补充：在数据预处理流程中，论文明确指出利用“large language models for intelligent filtering and semantic deduplication”（大语言模型进行智能过滤和语义去重）。分析中虽提及“利用LLM进行智能去重和语义过滤”，但未明确指出此步骤所使用的工具是LLM，这是一个关键的技术细节。
 
-学术质量 6.5/7 | 选题价值 1.0/2 | 复现加成 1.0 | 置信度 高
+- [实验结果] 补充：论文在“Model Performance Improvement”小节中，除列出具体数值外，得出了一个关键结论：“The consistent improvements across all evaluated subdomains demonstrate that OceanInstruct effectively bridges the domain adaptation gap for foundation models in marine science.”（在所有评估子领域中一致性的性能提升表明，OceanInstruct有效地弥合了基础模型在海洋科学领域的领域适应鸿沟。）此结论在分析中未明确提炼。
+
+- [模型架构/评分理由] 补充：论文在“Background & Summary”部分明确指出了当前海洋AI面临的根本性数据瓶颈（data bottleneck）的具体内涵：“ocean data are highly fragmented across disparate sources and inherently exhibit multi-modal, high-noise, and weakly labeled characteristics, lacking unified schemas and semantic alignment.”（海洋数据高度碎片化、本质上呈现多模态、高噪声和弱标签的特性，缺乏统一的模式和语义对齐。）分析中虽提到了问题，但未完整复现原文对此瓶颈的精准描述。
+
+- [模型架构/细节详述] 补充：论文在介绍其数据处理流水线（pipeline）时，强调了其“Domain-adapted processing pipeline”的特性，即“develop specialized data processing techniques that preserve the scientific integrity and contextual richness of oceanographic information”（开发专门的数据处理技术，以保持海洋信息的科学完整性和上下文丰富性）。分析中只提到了“数据预处理流水线”，未突出其“领域适应性”这一设计动机。
+
+- [开源详情] 补充：论文在“Code Availability”部分提供了一个项目主页链接：“For more information, please visit our homepage: http://data.oceangpt.blue/en/”。分析中遗漏了此补充信息入口。
 
 ---
 

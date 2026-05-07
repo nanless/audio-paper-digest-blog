@@ -12,6 +12,10 @@ hiddenInHomeList: true
 
 #语音增强 #麦克风阵列 #生成模型 #多通道 #波束成形
 
+🔥 **8.0/10** | 前25% | #语音增强 | #麦克风阵列 | #生成模型 #多通道 | [arxiv](https://arxiv.org/abs/2605.04749v1)
+
+学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
+
 
 ### 👥 作者与机构
 
@@ -42,14 +46,6 @@ hiddenInHomeList: true
     2. SpatialNet：作为基线MC-SE模型被引用。其代码通常与论文“SpatialNet: Spatially Enhanced Feature Learning for Multichannel Speech Enhancement”相关，开源仓库链接为：https://github.com/Liang-Hong-ER/spatialnet
     3. Conformer-based MetricGAN (CMGAN)：其判别器被用作Spatial-Magnifier的判别器。GitHub: https://github.com/romi014/CMGAN
     4. HiFi-GAN：其损失函数被用于GAN训练。GitHub: https://github.com/jik876/hifi-gan
-
-## 补充信息
-
-- [核心摘要] 补充：论文在摘要中明确自我评价：“The proposed method nearly recovers the oracle performance achieved when all microphones are available.”（所提方法几乎恢复了所有麦克风可用时的Oracle性能）。这一表述是对其实验结果（如表1、表3所示）的一个关键总结性陈述，强调了其方法的有效性。
-- [模型架构] 补充：在模型架构的设计动机中，原文明确指出：“Previously, up-blocks and down-blocks utilized simple addition and subtraction, applying identical operations across all channels, which limited their flexibility.”（此前，上、下采样块使用了简单的加法和减法，对所有通道应用相同的操作，这限制了其灵活性）。这直接解释了引入选择模块（Selection Module）的具体原因。
-- [细节详述] 补充：论文第1节（Introduction）中明确指出了其要解决的具体研究空白：“Notably, there has been no comprehensive study on how to condition downstream speech tasks optimally on interpolated VM signals.”（值得注意的是，目前还没有关于如何将下游语音任务最优地条件化于插值虚拟麦克风信号的综合研究）。这构成了本文研究动机的一部分。
-- [实验结果] 补充：论文在结论中总结其性能优势时明确表示：“The Spatial-Magnifier model and SARL framework achieve superior beamforming and speech extraction performance compared to conventional Neural-VME baselines. Furthermore, these performance gains are achieved with lower computational costs compared to existing Neural-VME baselines.”（Spatial-Magnifier模型和SARL框架在波束成形和语音提取性能上优于传统的Neural-VME基线。此外，与现有Neural-VME基线相比，这些性能提升是以更低的计算成本实现的）。这概括了其两个核心优势。
-- [实验结果] 补充：关于与SOTA（Oracle）的差距，具体数值可更明确量化。例如，从表1可知，在2ch-RM/4ch-VM配置下，其最佳VM-BF性能（SARL-F，SI-SDR 6.10 dB）与6ch-RM的Oracle性能（8.35 dB）仍有约2.25 dB的差距。表3中，SARL-S在2ch-RM/4ch-VM下的VM-BF SI-SDR（8.37 dB）已接近物理3ch阵列的Oracle（6.65 dB），但仍未达到6ch-Oracle（11.78 dB）的水平。
 
 ### 📌 核心摘要
 
@@ -153,11 +149,13 @@ Spatial-Magnifier生成器的整体架构（图1）是一个为多通道音频�
 - 选题价值：1.5/2。选题前沿且具有明确的应用价值（AR/VR、助听器等）。空间上采样是一个小众但重要的细分方向，对追求边缘端高性能语音处理的读者有较高相关性。
 - 开源与复现加成：0.0/1。论文未提及代码、模型权重或预训练模型的开源计划。尽管描述了训练细节，但缺乏代码和具体配置的公开将严重影响复现性。
 
----
+### 📎 补充信息
 
-🔥 **8.0/10** | 前25% | #语音增强 | #麦克风阵列 | #生成模型 #多通道 | [arxiv](https://arxiv.org/abs/2605.04749v1)
-
-学术质量 6.5/7 | 选题价值 1.5/2 | 复现加成 0.0 | 置信度 高
+- [核心摘要] 补充：论文在摘要中明确自我评价：“The proposed method nearly recovers the oracle performance achieved when all microphones are available.”（所提方法几乎恢复了所有麦克风可用时的Oracle性能）。这一表述是对其实验结果（如表1、表3所示）的一个关键总结性陈述，强调了其方法的有效性。
+- [模型架构] 补充：在模型架构的设计动机中，原文明确指出：“Previously, up-blocks and down-blocks utilized simple addition and subtraction, applying identical operations across all channels, which limited their flexibility.”（此前，上、下采样块使用了简单的加法和减法，对所有通道应用相同的操作，这限制了其灵活性）。这直接解释了引入选择模块（Selection Module）的具体原因。
+- [细节详述] 补充：论文第1节（Introduction）中明确指出了其要解决的具体研究空白：“Notably, there has been no comprehensive study on how to condition downstream speech tasks optimally on interpolated VM signals.”（值得注意的是，目前还没有关于如何将下游语音任务最优地条件化于插值虚拟麦克风信号的综合研究）。这构成了本文研究动机的一部分。
+- [实验结果] 补充：论文在结论中总结其性能优势时明确表示：“The Spatial-Magnifier model and SARL framework achieve superior beamforming and speech extraction performance compared to conventional Neural-VME baselines. Furthermore, these performance gains are achieved with lower computational costs compared to existing Neural-VME baselines.”（Spatial-Magnifier模型和SARL框架在波束成形和语音提取性能上优于传统的Neural-VME基线。此外，与现有Neural-VME基线相比，这些性能提升是以更低的计算成本实现的）。这概括了其两个核心优势。
+- [实验结果] 补充：关于与SOTA（Oracle）的差距，具体数值可更明确量化。例如，从表1可知，在2ch-RM/4ch-VM配置下，其最佳VM-BF性能（SARL-F，SI-SDR 6.10 dB）与6ch-RM的Oracle性能（8.35 dB）仍有约2.25 dB的差距。表3中，SARL-S在2ch-RM/4ch-VM下的VM-BF SI-SDR（8.37 dB）已接近物理3ch阵列的Oracle（6.65 dB），但仍未达到6ch-Oracle（11.78 dB）的水平。
 
 ---
 

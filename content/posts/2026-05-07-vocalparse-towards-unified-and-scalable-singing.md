@@ -12,6 +12,10 @@ hiddenInHomeList: true
 
 #歌唱语音合成 #语音大模型 #端到端 #数据增强 #模型评估
 
+✅ **7.5/10** | 前25% | #歌唱语音合成 | #语音大模型 | #端到端 #数据增强 | [arxiv](https://arxiv.org/abs/2605.04613v1)
+
+学术质量 7.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+
 
 ### 👥 作者与机构
 
@@ -45,17 +49,6 @@ hiddenInHomeList: true
     - MusicYOLO (旋律转录模型)：论文中未提及具体链接。
     - ROSVOT (旋律转录模型)：论文中未提及具体链接。
     - Qwen3-ASR / Qwen3-Omni (作为基础的大音频语言模型)：论文中未提供具体的模型权重获取链接，可能为内部或特定版本模型。
-
-## 补充信息
-
-- [模型架构] 补充：论文明确指出，VocalParse构建在Qwen3-ASR之上，而该模型本身继承了来自Qwen3-Omni的“基础音乐理解能力”（原文3.1节：“inherited from ASR-oriented finetuning, while also retaining basic music understanding from Qwen3-Omni”）。这一信息有助于理解模型的基础能力构成。
-- [创新点] 补充：论文在引言中明确列出的三项贡献（Contributions）为：1) 开发可扩展的SingCrawl数据管道；2) 提出基于LALM的统一SVT模型VocalParse；3) 引入针对SVT的CoT式提示策略。分析中虽涵盖了这些内容，但可更明确地对应论文自身的贡献表述。
-- [细节详述] 补充：训练配置的详细参数（见附录C）为：使用Qwen3-ASR的1.7B参数检查点进行全参数微调；采用分布式数据并行（DDP） 训练；优化器为AdamW（虽未明确写，但基于标准实践及余弦调度可推断）；采用动态批处理，每GPU最大18,000 tokens，每批次最多64个样本；余弦学习率调度，峰值2e-5，12k步warmup；总训练步数120k，总时长约17小时（在2张NVIDIA H100 GPU上）。
-- [实验结果] 补充1：关于AMT结果，论文特别指出，在Opencpop上，VocalParse（音频-歌词模式）的性能不仅达到了SOTA，而且超越了其训练数据标注所用的“教师”流水线（SOFA+ROSVOT）（原文5.2节：“Notably, VocalParse also surpasses the SOFA+ROSVOT pipeline that serves as the pseudo-label annotator... This result suggests that VocalParse is not merely imitating the teacher pipeline, but can distill and smooth noisy pseudo labels”）。这一发现凸显了模型从噪声标签中学习并优化的能力。
-- [实验结果] 补充2：下游SVS实验的定量结论（表5和图6）显示，使用SingCrawl伪标签数据（ScaleM, ScaleL）训练，相比仅用学术数据（Ac1），能显著提升节奏相似性（BER从0.50降至0.47，IOU从0.46升至0.59）和旋律相似性（RPA从0.39升至0.74），同时合成美学质量（SingMOS, CE, PQ）保持稳定。主观AB测试也确认ScaleL（2000h）更受青睐。
-- [核心摘要] 补充：论文自我声明的局限性（第6节）完整列表为：1）BPM估计假设全局固定速度，不适用于速度自由的演绎（rubato, ritardando等）；2）解码过程中，纯歌词前缀与后续交错序列中的歌词可能出现不一致；3）性能上限受限于自动标注“教师”模型的质量；4）实验仅在中文数据上进行，框架扩展到其他语言可能需要调整。
-- [细节详述] 补充：SingCrawl管道处理的数据规模具体为：爬取约65k首原始歌曲，对应约5k小时音频；经过完整处理和过滤后，最终获得约170万段歌唱片段和约2k小时可用的训练数据（附录A）。
-- [实验结果] 补充：在评估指标定义中，MAE_note和MAE_dur是在对数空间（log2）计算的，这衡量的是相对误差或经过BPM归一化后的绝对时间误差，而非线性空间误差。这种定义符合音乐领域对音符值和时值感知的相对性。
 
 ### 📌 核心摘要
 
@@ -139,11 +132,16 @@ VocalParse的架构是一个统一的自回归序列生成模型，其核心思�
 -   选题价值：1.5/2。解决歌唱合成领域的关键数据瓶颈问题，实用价值明确。可扩展的数据构建思路对类似低资源任务有启发性。但任务领域相对垂直，影响范围受限。
 -   开源与复现加成：+0.5/1。提供了完整的代码仓库（VocalParse和SingCrawl）、预训练模型权重、详尽的训练配置和附录说明，开源程度非常高，极大促进了学术研究与复现。因未开放原始数据集，加成未达最高。
 
----
+### 📎 补充信息
 
-✅ **7.5/10** | 前25% | #歌唱语音合成 | #语音大模型 | #端到端 #数据增强 | [arxiv](https://arxiv.org/abs/2605.04613v1)
-
-学术质量 7.0/7 | 选题价值 1.5/2 | 复现加成 0.5 | 置信度 高
+- [模型架构] 补充：论文明确指出，VocalParse构建在Qwen3-ASR之上，而该模型本身继承了来自Qwen3-Omni的“基础音乐理解能力”（原文3.1节：“inherited from ASR-oriented finetuning, while also retaining basic music understanding from Qwen3-Omni”）。这一信息有助于理解模型的基础能力构成。
+- [创新点] 补充：论文在引言中明确列出的三项贡献（Contributions）为：1) 开发可扩展的SingCrawl数据管道；2) 提出基于LALM的统一SVT模型VocalParse；3) 引入针对SVT的CoT式提示策略。分析中虽涵盖了这些内容，但可更明确地对应论文自身的贡献表述。
+- [细节详述] 补充：训练配置的详细参数（见附录C）为：使用Qwen3-ASR的1.7B参数检查点进行全参数微调；采用分布式数据并行（DDP） 训练；优化器为AdamW（虽未明确写，但基于标准实践及余弦调度可推断）；采用动态批处理，每GPU最大18,000 tokens，每批次最多64个样本；余弦学习率调度，峰值2e-5，12k步warmup；总训练步数120k，总时长约17小时（在2张NVIDIA H100 GPU上）。
+- [实验结果] 补充1：关于AMT结果，论文特别指出，在Opencpop上，VocalParse（音频-歌词模式）的性能不仅达到了SOTA，而且超越了其训练数据标注所用的“教师”流水线（SOFA+ROSVOT）（原文5.2节：“Notably, VocalParse also surpasses the SOFA+ROSVOT pipeline that serves as the pseudo-label annotator... This result suggests that VocalParse is not merely imitating the teacher pipeline, but can distill and smooth noisy pseudo labels”）。这一发现凸显了模型从噪声标签中学习并优化的能力。
+- [实验结果] 补充2：下游SVS实验的定量结论（表5和图6）显示，使用SingCrawl伪标签数据（ScaleM, ScaleL）训练，相比仅用学术数据（Ac1），能显著提升节奏相似性（BER从0.50降至0.47，IOU从0.46升至0.59）和旋律相似性（RPA从0.39升至0.74），同时合成美学质量（SingMOS, CE, PQ）保持稳定。主观AB测试也确认ScaleL（2000h）更受青睐。
+- [核心摘要] 补充：论文自我声明的局限性（第6节）完整列表为：1）BPM估计假设全局固定速度，不适用于速度自由的演绎（rubato, ritardando等）；2）解码过程中，纯歌词前缀与后续交错序列中的歌词可能出现不一致；3）性能上限受限于自动标注“教师”模型的质量；4）实验仅在中文数据上进行，框架扩展到其他语言可能需要调整。
+- [细节详述] 补充：SingCrawl管道处理的数据规模具体为：爬取约65k首原始歌曲，对应约5k小时音频；经过完整处理和过滤后，最终获得约170万段歌唱片段和约2k小时可用的训练数据（附录A）。
+- [实验结果] 补充：在评估指标定义中，MAE_note和MAE_dur是在对数空间（log2）计算的，这衡量的是相对误差或经过BPM归一化后的绝对时间误差，而非线性空间误差。这种定义符合音乐领域对音符值和时值感知的相对性。
 
 ---
 
