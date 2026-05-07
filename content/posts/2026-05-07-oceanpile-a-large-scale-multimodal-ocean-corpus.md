@@ -28,15 +28,6 @@ hiddenInHomeList: true
 亮点：它首次系统性地为海洋科学这一关键但数据贫瘠的领域，构建了一个涵盖声学、图像、文本的多模态“粮仓”，并设计了知识图谱引导的指令生成流水线，解决了从无到有的根本问题，对推动海洋AI研究具有实实在在的奠基作用。  
 短板：本质上是一篇“数据论文”，技术方法偏重数据收集、清洗和流水线工程，缺乏核心模型架构或算法上的创新。对于追求方法新颖性的读者来说，其吸引力可能有限。
 
-### 🔗 开源详情
-
-- 代码：https://github.com/OceanGPT/OceanPile
-- 模型权重：论文中未提及
-- 数据集：OceanPile（包含 OceanCorpus、OceanInstruction、OceanBenchmark），可通过以下链接获取：https://huggingface.co/collections/zjunlp/oceanpile
-- Demo：论文中未提及
-- 复现材料：论文中未提及
-- 论文中引用的开源项目：论文中未明确提及具体项目名和链接（仅提到使用了“PDF-to-markdown conversion tools [41]”等工具，但未提供具体名称与链接）
-
 ### 📌 核心摘要
 
 1. 要解决什么问题：海洋科学领域AI应用受限于一个根本性瓶颈：数据高度碎片化、多模态、高噪声、弱标签，缺乏统一的数据结构和语义对齐，导致多模态大语言模型（MLLM）无法有效训练。
@@ -57,6 +48,15 @@ hiddenInHomeList: true
 微调后的Qwen3-VL-8B在多模态总体得分（32.59%）上甚至超越了Gemini-3-Flash（31.21%）和GPT-5（9.67%）。
 5. 实际意义是什么：为海洋人工智能研究提供了至关重要的数据基础，有望加速开发能真正理解声呐、图像和文本的海洋专用基础模型，推动海洋科学发现与应用。
 6. 主要局限性是什么：1）数据和评估高度垂直于海洋领域，对更广泛AI社区的普适性创新贡献有限；2）指令数据生成依赖GPT-4o，存在潜在偏差和成本；3）多模态对齐主要依赖文本描述，对于声呐等非视觉模态的深度表征学习支持可能不足。
+
+### 🔗 开源详情
+
+- 代码：https://github.com/OceanGPT/OceanPile
+- 模型权重：论文中未提及
+- 数据集：OceanPile（包含 OceanCorpus、OceanInstruction、OceanBenchmark），可通过以下链接获取：https://huggingface.co/collections/zjunlp/oceanpile
+- Demo：论文中未提及
+- 复现材料：论文中未提及
+- 论文中引用的开源项目：论文中未明确提及具体项目名和链接（仅提到使用了“PDF-to-markdown conversion tools [41]”等工具，但未提供具体名称与链接）
 
 ### 🏗️ 模型架构
 
