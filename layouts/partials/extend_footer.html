@@ -1,0 +1,10 @@
+{{- /* GoatCounter analytics - 去 https://goatcounter.com 注册后替换下面的 code */ -}}
+{{- if site.Params.goatcounter }}
+<script data-goatcounter="https://{{ site.Params.goatcounter }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{- end }}
+
+{{- /* Umami analytics - 自建 Umami 后取消注释 */ -}}
+{{- if site.Params.umami }}
+<script async src="{{ site.Params.umami.scriptUrl }}" data-website-id="{{ site.Params.umami.websiteId }}"></script>
+{{- end }}

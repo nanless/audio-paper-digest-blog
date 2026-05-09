@@ -14,6 +14,9 @@ minify:
 
 menu:
   main:
+    - name: "搜索"
+      url: "/search/"
+      weight: 0
     - name: "归档"
       url: "/archives/"
       weight: 1
@@ -45,6 +48,15 @@ params:
   TocOpen: false
   comments: true
 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
   homeInfoParams:
     Title: "📄 语音/音频论文速递"
     Content: "每日自动抓取 arxiv/huggingface 最新语音/音频AI 论文，AI 深度分析后发布"
@@ -59,6 +71,12 @@ params:
 
   label:
     text: "语音/音频论文速递"
+
+  # 统计配置（去 https://goatcounter.com 注册后填入）
+  # goatcounter: your-code
+  # umami:
+  #   scriptUrl: https://your-umami.com/script.js
+  #   websiteId: your-website-id
 
   footer:
     Content: "由 AI 自动生成 · Paper Digest"

@@ -1,0 +1,88 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- $arxivUrl := "" }}
+  {{- $pdfUrl := "" }}
+  {{- with .Content }}
+    {{- $arxivMatch := findRESubmatch `https?://arxiv\.org/abs/(\d+\.\d+)` . 1 }}
+    {{- if $arxivMatch }}
+      {{- $arxivUrl = index (index $arxivMatch 0) 0 }}
+      {{- $arxivId := index (index $arxivMatch 0) 1 }}
+      {{- $pdfUrl = printf "https://arxiv.org/pdf/%s.pdf" $arxivId }}
+    {{- end }}
+  {{- end }}
+  {{- if $pdfUrl }}
+  <div class="post-pdf-link" style="margin: 1.5rem 0; padding: 0.75rem 1rem; background: var(--code-bg); border-radius: var(--radius); border-left: 4px solid var(--primary);">
+    <span style="font-size: 0.9em;">
+      <strong>📄 原文链接：</strong>
+      {{- if $arxivUrl }}<a href="{{ $arxivUrl }}" target="_blank" rel="noopener noreferrer">arXiv 页面</a>{{ end }}
+      {{- if and $arxivUrl $pdfUrl }}<span style="margin: 0 0.5em; color: var(--secondary);">|</span>{{ end }}
+      {{- if $pdfUrl }}<a href="{{ $pdfUrl }}" target="_blank" rel="noopener noreferrer">PDF 下载 ↓</a>{{ end }}
+    </span>
+  </div>
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- $translations := site.Data.tag_translations }}
+      {{- range ($.GetTerms $tags) }}
+      {{- $en := index $translations .LinkTitle }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}{{ if $en }}<span style="opacity:0.5;font-size:0.75em;margin-left:0.25em;">· {{ $en }}</span>{{ end }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}
