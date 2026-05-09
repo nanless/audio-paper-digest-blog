@@ -43,6 +43,7 @@ params:
   ShowWordCount: false
   ShowToc: true
   TocOpen: false
+  comments: true
 
   homeInfoParams:
     Title: "📄 语音/音频论文速递"
