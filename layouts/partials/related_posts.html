@@ -1,0 +1,34 @@
+{{- $current := . }}
+{{- $tags := .Params.tags }}
+{{- if $tags }}
+  {{- $related := slice }}
+  {{- range .Site.RegularPages }}
+    {{- if ne .Permalink $current.Permalink }}
+      {{- $shared := 0 }}
+      {{- range .Params.tags }}
+        {{- if in $tags . }}
+          {{- $shared = add $shared 1 }}
+        {{- end }}
+      {{- end }}
+      {{- if gt $shared 0 }}
+        {{- $related = $related | append (dict "page" . "shared" $shared) }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- $related = sort $related "shared" "desc" }}
+  {{- if gt (len $related) 0 }}
+  <div class="related-posts" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+    <h3 style="margin-bottom: 1rem;">📎 相关论文</h3>
+    <div style="display: grid; gap: 0.75rem;">
+      {{- range first 3 $related }}
+      <a href="{{ .page.Permalink }}" style="display: block; padding: 0.75rem 1rem; background: var(--code-bg); border-radius: var(--radius); text-decoration: none; color: var(--primary); transition: background 0.2s;">
+        <div style="font-weight: 600;">{{ .page.Title }}</div>
+        {{- if .page.Description }}
+        <div style="font-size: 0.85em; color: var(--secondary); margin-top: 0.25rem;">{{ .page.Description }}</div>
+        {{- end }}
+      </a>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+{{- end }}

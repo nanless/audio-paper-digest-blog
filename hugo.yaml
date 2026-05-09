@@ -38,12 +38,12 @@ params:
   DateFormat: "2006-01-02"
 
   defaultTheme: "auto"
-  ShowReadingTime: false
-  ShowShareButtons: false
+  ShowReadingTime: true
+  ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
-  ShowWordCount: false
+  ShowWordCount: true
   ShowToc: true
   TocOpen: false
   comments: true
