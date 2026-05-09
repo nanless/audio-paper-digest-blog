@@ -6,6 +6,7 @@ tags: [3D音频, 3D高斯溅射, CLAP, CNN-LSTM, CTC, Conformer, DPO, DiT, HRTF,
 categories: [icassp-2026]
 description: "共分析 898 篇 ICASSP 2026 论文"
 layout: "posts"
+weight: -1
 ---
 
 # ICASSP 2026 语音/音频论文详细分析
