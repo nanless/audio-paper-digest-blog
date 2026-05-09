@@ -55,7 +55,7 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
+    keys: ["title", "permalink", "summary"]
 
   homeInfoParams:
     Title: "📄 语音/音频论文速递"
