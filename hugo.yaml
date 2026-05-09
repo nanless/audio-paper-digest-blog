@@ -26,8 +26,8 @@ menu:
     - name: "分类"
       url: "/categories/"
       weight: 3
-    - name: "ICASSP 2026"
-      url: "/categories/icassp-2026/"
+    - name: "会议论文集"
+      url: "/conferences/"
       weight: 4
 
 params:
