@@ -47,7 +47,7 @@ params:
 
   homeInfoParams:
     Title: "📄 语音/音频论文速递"
-    Content: "每日自动抓取 arxiv 最新语音/AI 论文，AI 深度分析后发布"
+    Content: "每日自动抓取 arxiv/huggingface 最新语音/音频AI 论文，AI 深度分析后发布"
 
   assets:
     disableFingerprinting: true
