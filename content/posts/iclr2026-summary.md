@@ -1,6 +1,6 @@
 ---
 title: "ICLR 2026 语音/音频论文详细分析"
-date: 2026-05-08
+date: 2026-05-01
 draft: false
 tags: [CTC, GAN, Transformer, 一致性模型, 不确定性量化, 主动学习, 任务规划, 优化算法, 低资源, 信号处理]
 categories: [iclr-2026]

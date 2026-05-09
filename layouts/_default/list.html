@@ -43,6 +43,7 @@
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = sort $pages "Date" "desc" }}
 {{- end }}
 
 {{- if not .IsHome }}
