@@ -58,7 +58,7 @@ params:
     hiddenInPage: false
 
   label:
-    text: "论文速递"
+    text: "语音/音频论文速递"
 
   footer:
     Content: "由 AI 自动生成 · Paper Digest"
