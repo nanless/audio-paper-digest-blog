@@ -1,6 +1,6 @@
 ---
 title: "ICASSP 2026 语音/音频论文详细分析"
-date: 2099-12-31
+date: 2026-05-08
 draft: false
 tags: [3D音频, 3D高斯溅射, CLAP, CNN-LSTM, CTC, Conformer, DPO, DiT, HRTF, Hebbian学习]
 categories: [icassp-2026]
