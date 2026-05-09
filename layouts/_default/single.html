@@ -34,27 +34,6 @@
   {{- partial "toc.html" . }}
   {{- end }}
 
-  {{- $arxivUrl := "" }}
-  {{- $pdfUrl := "" }}
-  {{- with .Content }}
-    {{- $arxivMatch := findRESubmatch `https?://arxiv\.org/abs/(\d+\.\d+)` . 1 }}
-    {{- if $arxivMatch }}
-      {{- $arxivUrl = index (index $arxivMatch 0) 0 }}
-      {{- $arxivId := index (index $arxivMatch 0) 1 }}
-      {{- $pdfUrl = printf "https://arxiv.org/pdf/%s.pdf" $arxivId }}
-    {{- end }}
-  {{- end }}
-  {{- if $pdfUrl }}
-  <div class="post-pdf-link" style="margin: 1.5rem 0; padding: 0.75rem 1rem; background: var(--code-bg); border-radius: var(--radius); border-left: 4px solid var(--primary);">
-    <span style="font-size: 0.9em;">
-      <strong>📄 原文链接：</strong>
-      {{- if $arxivUrl }}<a href="{{ $arxivUrl }}" target="_blank" rel="noopener noreferrer">arXiv 页面</a>{{ end }}
-      {{- if and $arxivUrl $pdfUrl }}<span style="margin: 0 0.5em; color: var(--secondary);">|</span>{{ end }}
-      {{- if $pdfUrl }}<a href="{{ $pdfUrl }}" target="_blank" rel="noopener noreferrer">PDF 下载 ↓</a>{{ end }}
-    </span>
-  </div>
-  {{- end }}
-
   {{- if .Content }}
   <div class="post-content md-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
