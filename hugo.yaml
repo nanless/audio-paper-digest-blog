@@ -39,6 +39,9 @@ menu:
 params:
   env: production
   title: "语音/音频论文速递"
+  analytics:
+    google:
+      SiteVerificationTag: "SndYtZUZX0x7oCnlQPrNzYeB6Z6zeytsVL9BBargMwI"
   description: "每日 AI 自动生成的语音/AI 领域论文深度分析"
   keywords: [语音, 音频, AI, 论文, arxiv, speech, audio]
   DateFormat: "2006-01-02"
