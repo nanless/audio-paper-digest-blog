@@ -138,5 +138,88 @@ document.addEventListener('DOMContentLoaded', function() {
   .post-single .toc li a:hover {
     color: var(--primary);
   }
+  .post-single .toc li a.active {
+    color: var(--primary);
+    font-weight: 600;
+  }
 }
 </style>
+
+{{- /* TOC scroll spy: highlight current heading */ -}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toc = document.querySelector('.post-single .toc');
+  if (!toc) return;
+  var links = toc.querySelectorAll('a[href^="#"]');
+  var headings = [];
+  links.forEach(function(link) {
+    var id = link.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (el) headings.push({link: link, el: el});
+  });
+  if (!headings.length) return;
+  var offset = 120;
+  function onScroll() {
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+    var current = headings[0];
+    for (var i = 0; i < headings.length; i++) {
+      if (headings[i].el.offsetTop - offset <= scrollY) {
+        current = headings[i];
+      }
+    }
+    headings.forEach(function(h) { h.link.classList.remove('active'); });
+    current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+});
+</script>
+
+{{- /* Lightbox for images */ -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css">
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  mediumZoom('.post-content img', {
+    margin: 24,
+    background: 'rgba(0,0,0,0.85)',
+    scrollOffset: 0,
+  });
+});
+</script>
+
+{{- /* Code block language label */ -}}
+<style>
+.highlight {
+  position: relative;
+}
+.highlight::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--secondary);
+  background: var(--code-bg);
+  border-bottom-left-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.highlight').forEach(function(block) {
+    var code = block.querySelector('pre code[class^="language-"]');
+    if (code) {
+      var cls = code.className;
+      var match = cls.match(/language-(\w+)/);
+      if (match) {
+        block.setAttribute('data-lang', match[1]);
+      }
+    }
+  });
+});
+</script>

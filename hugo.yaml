@@ -4,6 +4,7 @@ title: "语音/音频论文速递"
 theme: "PaperMod"
 
 paginate: 20
+enableGitInfo: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: true
@@ -53,6 +54,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: true
+  ShowLastMod: true
   ShowToc: true
   TocOpen: false
   comments: true
