@@ -17,3 +17,106 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('{{ "sw.js" | absURL }}').catch(() => {});
 }
 </script>
+
+{{- /* Reading progress bar */ -}}
+<style>
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--primary);
+  z-index: 100;
+  transition: width 0.1s;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--theme);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 99;
+  font-size: 1.2rem;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover {
+  opacity: 0.85;
+}
+@media print {
+  .reading-progress, .back-to-top, .share-buttons, .post-rating, .post-subscribe, .related-posts, #giscus-container, .post-copyright { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .post-single { max-width: 100% !important; margin: 0 !important; }
+  a { text-decoration: underline !important; color: #000 !important; }
+}
+</style>
+<div class="reading-progress" id="reading-progress"></div>
+<button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<script>
+(function(){
+  var bar = document.getElementById('reading-progress');
+  var btn = document.getElementById('back-to-top');
+  function update() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+    btn.classList.toggle('visible', scrollTop > 400);
+  }
+  window.addEventListener('scroll', update, {passive: true});
+  update();
+})();
+</script>
+
+{{- /* Analytics placeholder - uncomment and fill in after registering at umami.is or goatcounter.com */ -}}
+{{- /*
+<script async src="https://your-umami-domain.com/script.js" data-website-id="YOUR_WEBSITE_ID"></script>
+*/ -}}
+
+{{- /* TOC sticky sidebar on wide screens */ -}}
+<style>
+@media screen and (min-width: 1280px) {
+  .post-single .toc {
+    position: fixed;
+    top: 100px;
+    right: calc((100vw - 800px) / 2 - 260px);
+    width: 240px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: 1px solid var(--border);
+    font-size: 0.85em;
+    z-index: 10;
+  }
+  .post-single .toc details summary {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .post-single .toc li a {
+    display: block;
+    padding: 0.15rem 0;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-single .toc li a:hover {
+    color: var(--primary);
+  }
+}
+</style>

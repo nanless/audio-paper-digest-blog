@@ -1,0 +1,9 @@
+{{- if not .Params.noSubscribe }}
+<div class="post-subscribe" style="margin-top:1.5rem;padding:1.25rem;background:var(--code-bg);border-radius:var(--radius);text-align:center;">
+  <div style="font-weight:600;color:var(--primary);margin-bottom:0.5rem;">订阅论文速递</div>
+  <div style="font-size:0.9em;color:var(--secondary);margin-bottom:0.75rem;">每日获取最新语音/音频 AI 论文分析</div>
+  <a href="{{ "index.xml" | absURL }}" target="_blank" style="display:inline-block;padding:0.5rem 1.25rem;background:var(--primary);color:var(--theme);border-radius:var(--radius);text-decoration:none;font-size:0.9em;transition:opacity 0.2s;">
+    通过 RSS 订阅
+  </a>
+</div>
+{{- end }}

@@ -1,0 +1,7 @@
+{{- if not .Params.noCopyright }}
+<div class="post-copyright" style="margin-top:2rem;padding:1rem 1.25rem;background:var(--code-bg);border-radius:var(--radius);border-left:4px solid var(--primary);font-size:0.9em;color:var(--secondary);">
+  <div style="font-weight:600;color:var(--primary);margin-bottom:0.5rem;">版权声明</div>
+  <div>本文由 AI 自动生成，内容基于 arXiv / HuggingFace 公开论文。</div>
+  <div style="margin-top:0.4rem;">转载请注明出处：<a href="{{ .Permalink }}" style="color:var(--primary);text-decoration:underline;">{{ .Permalink }}</a></div>
+</div>
+{{- end }}

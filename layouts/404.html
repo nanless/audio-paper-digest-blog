@@ -1,0 +1,11 @@
+{{- define "main" }}
+<div style="text-align:center;padding:4rem 1rem;">
+  <div style="font-size:6rem;font-weight:700;color:var(--primary);margin-bottom:1rem;">404</div>
+  <h1 style="margin-bottom:1rem;">页面未找到</h1>
+  <p style="color:var(--secondary);margin-bottom:2rem;">抱歉，您访问的页面不存在或已被移除。</p>
+  <a href="{{ "" | absURL }}" style="display:inline-block;padding:0.75rem 1.5rem;background:var(--primary);color:var(--theme);border-radius:var(--radius);text-decoration:none;font-weight:600;transition:opacity 0.2s;">返回首页</a>
+  <div style="margin-top:2rem;">
+    <a href="{{ "search/" | absURL }}" style="color:var(--primary);text-decoration:underline;">尝试搜索</a>
+  </div>
+</div>
+{{- end }}
