@@ -29,6 +29,12 @@ menu:
     - name: "会议论文集"
       url: "/conferences/"
       weight: 4
+    - name: "关于"
+      url: "/about/"
+      weight: 5
+    - name: "友链"
+      url: "/links/"
+      weight: 6
 
 params:
   env: production
@@ -42,7 +48,7 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowToc: true
   TocOpen: false

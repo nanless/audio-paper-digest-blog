@@ -86,6 +86,27 @@ if ('serviceWorker' in navigator) {
 <script data-goatcounter="https://nanless.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+{{- /* Auto open external links in new tab */ -}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(a) {
+    if (a.hostname !== location.hostname) {
+      a.target = '_blank';
+      a.rel = a.rel ? a.rel + ' noopener noreferrer' : 'noopener noreferrer';
+    }
+  });
+});
+</script>
+
+{{- /* Image lazy loading */ -}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('img:not([loading])').forEach(function(img) {
+    img.loading = 'lazy';
+  });
+});
+</script>
+
 {{- /* TOC sticky sidebar on wide screens */ -}}
 <style>
 @media screen and (min-width: 1280px) {
