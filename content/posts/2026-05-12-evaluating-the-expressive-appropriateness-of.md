@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音质量评估, 语音大模型, 强化学习, 知识蒸馏, 基准测试]
 categories: [论文速递]
-description: "Evaluating the Expressive Appropriateness of Speech in Rich Contexts"
+description: "语音质量评估 | 7.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音质量评估 #语音大模型 #强化学习 #知识蒸馏 #基准测试
 
-✅ **7.0/10** | #语音质量评估 #语音大模型 | [arxiv](https://arxiv.org/abs/2605.09413v1)
+✅ **7.0/10** | 前25% | #语音质量评估 | #强化学习 | #语音大模型 #知识蒸馏 | [arxiv](https://arxiv.org/abs/2605.09413v1)
+
+学术质量 7.2/8 | 影响力 1.6/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

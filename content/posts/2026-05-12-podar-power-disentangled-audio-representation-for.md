@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音合成, 自监督学习, 音频编码, 表示解耦, 生成模型]
 categories: [论文速递]
-description: "PoDAR: Power-Disentangled Audio Representation for Generative Modeling"
+description: "语音合成 | 7.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音合成 #自监督学习 #音频编码 #表示解耦 #生成模型
 
-✅ **7.3/10** | #语音合成 #自监督学习 | [arxiv](https://arxiv.org/abs/2605.10084v1)
+✅ **7.3/10** | #语音合成 | #自监督学习 #表示学习 #扩散模型 | #自监督学习 #音频编码 | [arxiv](https://arxiv.org/abs/2605.10084v1)
+
+置信度 高
 
 
 ### 👥 作者与机构

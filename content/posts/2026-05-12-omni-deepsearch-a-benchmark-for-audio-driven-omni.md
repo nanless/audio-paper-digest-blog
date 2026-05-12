@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [基准测试, 模型评估, 跨模态, 音频问答, 多模态代理]
 categories: [论文速递]
-description: "Omni-DeepSearch: A Benchmark for Audio-Driven Omni-Modal Deep Search"
+description: "基准测试 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #基准测试 #模型评估 #跨模态 #音频问答 #多模态代理
 
-✅ **6.0/10** | #基准测试 #模型评估 | [arxiv](https://arxiv.org/abs/2605.08762v1)
+✅ **6.0/10** | 前25% | #基准测试 | #模型评估 | #跨模态 #音频问答 | [arxiv](https://arxiv.org/abs/2605.08762v1)
+
+学术质量 6.0/8 | 影响力 1.8/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

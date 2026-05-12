@@ -10,7 +10,9 @@ hiddenInHomeList: true
 
 # 📄 Multi-layer attentive probing improves transfer of audio representations for bioacoustics
 
-[arxiv](https://arxiv.org/abs/2605.10494v1)
+中等偏上 | #生物声学 #音频分类 | #迁移学习 #自监督学习 #探针学习 | [arxiv](https://arxiv.org/abs/2605.10494v1)
+
+学术质量 4.0/8 | 影响力 1.5/2 | 可复现性 0.5/1 | 置信度 中
 
 
 ### 👥 作者与机构

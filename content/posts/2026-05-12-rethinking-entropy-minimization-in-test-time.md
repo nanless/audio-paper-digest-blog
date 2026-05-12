@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音识别, 领域适应, 自回归模型, 多语言]
 categories: [论文速递]
-description: "Rethinking Entropy Minimization in Test-Time Adaptation for Autoregressive Models"
+description: "语音识别 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音识别 #领域适应 #自回归模型 #多语言
 
-✅ **6.0/10** | #语音识别 #领域适应 | [arxiv](https://arxiv.org/abs/2605.08186v1)
+✅ **6.0/10** | 前40% | #语音识别 | #领域适应 | #自回归模型 #多语言 | [arxiv](https://arxiv.org/abs/2605.08186v1)
+
+学术质量 6.0/8 | 影响力 1.5/2 | 可复现性 0.5/1 | 置信度 高
 
 
 ### 👥 作者与机构

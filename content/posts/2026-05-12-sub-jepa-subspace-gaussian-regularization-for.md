@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [世界模型, 自监督学习, 连续控制]
 categories: [论文速递]
-description: "Sub-JEPA: Subspace Gaussian Regularization for Stable End-to-End World Models"
+description: "世界模型 | 5.6/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #世界模型 #自监督学习 #连续控制
 
-📝 **5.6/10** | #世界模型 #自监督学习 | [arxiv](https://arxiv.org/abs/2605.09241)
+📝 **5.6/10** | 前50% | #世界模型 | #自监督学习 | #连续控制 | [arxiv](https://arxiv.org/abs/2605.09241)
+
+学术质量 5.0/8 | 影响力 0.8/2 | 可复现性 0.8/1 | 置信度 中
 
 
 ### 👥 作者与机构

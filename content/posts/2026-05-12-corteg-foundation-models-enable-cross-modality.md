@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [脑机接口, 迁移学习, 预训练, 跨模态, 数据集]
 categories: [论文速递]
-description: "CORTEG: Foundation Models Enable Cross-Modality Representation Transfer from Scalp to Intracranial Brain Recordings"
+description: "脑机接口 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #脑机接口 #迁移学习 #预训练 #跨模态 #数据集
 
-✅ **6.5/10** | #脑机接口 #迁移学习 | [arxiv](https://arxiv.org/abs/2605.10337v1)
+✅ **6.5/10** | 前25% | #脑机接口 | #迁移学习 | #预训练 #跨模态 | [arxiv](https://arxiv.org/abs/2605.10337v1)
+
+学术质量 6.5/8 | 影响力 0.5/2 | 可复现性 1.0/1 | 置信度 高
 
 
 ### 👥 作者与机构

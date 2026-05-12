@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频深度伪造检测, 公平性, 语音伪造检测, 模型评估, 偏差诊断, 缓解策略]
 categories: [论文速递]
-description: "Towards Trustworthy Audio Deepfake Detection: A Systematic Framework for Diagnosing and Mitigating Gender Bias"
+description: "音频深度伪造检测 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频深度伪造检测 #公平性 #语音伪造检测 #模型评估 #偏差诊断 #缓解策略
 
-✅ **6.5/10** | #音频深度伪造检测 #公平性 | [arxiv](https://arxiv.org/abs/2605.09087v1)
+✅ **6.5/10** | 前25% | #音频深度伪造检测 | #公平性 | #语音伪造检测 #模型评估 | [arxiv](https://arxiv.org/abs/2605.09087v1)
+
+学术质量 6.5/8 | 影响力 1.8/2 | 可复现性 0.4/1 | 置信度 高
 
 
 ### 👥 作者与机构

@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [声源定位, 说话人分离, 信号处理, 混响, 单麦克风]
 categories: [论文速递]
-description: "Single-Microphone Audio Point Source Discriminative Localization From Reverberation Late Tail Estimation"
+description: "说话人分离 | 5.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #声源定位 #说话人分离 #信号处理 #混响 #单麦克风
 
-📝 **5.5/10** | #声源定位 #说话人分离 | [arxiv](https://arxiv.org/abs/2605.09627v1)
+📝 **5.5/10** | 前50% | #说话人分离 | #信号处理 | #声源定位 #混响 | [arxiv](https://arxiv.org/abs/2605.09627v1)
+
+学术质量 5.0/8 | 影响力 1.0/2 | 可复现性 0.5/1 | 置信度 高
 
 
 ### 👥 作者与机构

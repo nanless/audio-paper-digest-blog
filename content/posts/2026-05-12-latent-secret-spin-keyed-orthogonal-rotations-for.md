@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频水印, 主成分分析, 潜在空间操作, 神经编解码器, 鲁棒性]
 categories: [论文速递]
-description: "Latent Secret Spin: Keyed Orthogonal Rotations for Blind Speech Watermarking in Anisotropic Latent Spaces"
+description: "音频水印 | 6.8/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频水印 #主成分分析 #潜在空间操作 #神经编解码器 #鲁棒性
 
-✅ **6.8/10** | #音频水印 #主成分分析 | [arxiv](https://arxiv.org/abs/2605.08431v1)
+✅ **6.8/10** | 前50% | #音频水印 | #主成分分析 | #潜在空间操作 #神经编解码器 | [arxiv](https://arxiv.org/abs/2605.08431v1)
+
+学术质量 5.5/8 | 影响力 0.5/2 | 可复现性 0.4/1 | 置信度 高
 
 
 ### 👥 作者与机构

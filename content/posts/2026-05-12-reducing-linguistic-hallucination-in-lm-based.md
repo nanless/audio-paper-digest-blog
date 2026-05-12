@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音增强, 语音编解码器, 知识蒸馏, 自监督学习, 语言模型]
 categories: [论文速递]
-description: "Reducing Linguistic Hallucination in LM-Based Speech Enhancement via Noise-Invariant Acoustic-Semantic Distillation"
+description: "语音增强 | 7.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音增强 #语音编解码器 #知识蒸馏 #自监督学习 #语言模型
 
-✅ **7.2/10** | #语音增强 #语音编解码器 | [arxiv](https://arxiv.org/abs/2605.08608v1)
+✅ **7.2/10** | 前25% | #语音增强 | #语音编解码器 | #知识蒸馏 #自监督学习 | [arxiv](https://arxiv.org/abs/2605.08608v1)
+
+学术质量 7.2/8 | 影响力 0.8/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

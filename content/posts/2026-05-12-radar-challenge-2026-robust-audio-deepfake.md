@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频深度伪造检测, 基准测试, 多语言, 鲁棒性]
 categories: [论文速递]
-description: "RADAR Challenge 2026: Robust Audio Deepfake Recognition under Media Transformations"
+description: "音频深度伪造检测 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频深度伪造检测 #基准测试 #多语言 #鲁棒性
 
-✅ **6.5/10** | #音频深度伪造检测 #基准测试 | [arxiv](https://arxiv.org/abs/2605.09568v1)
+✅ **6.5/10** | 前50% | #音频深度伪造检测 | #基准测试 | #多语言 #鲁棒性 | [arxiv](https://arxiv.org/abs/2605.09568v1)
+
+学术质量 6.0/8 | 影响力 0.7/2 | 可复现性 0.4/1 | 置信度 高
 
 
 ### 👥 作者与机构

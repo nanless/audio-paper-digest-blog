@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音色迁移, 扩散模型, 音频生成, 音乐信息检索, 音乐源分离]
 categories: [论文速递]
-description: "Remix the Timbre: Diffusion-Based Style Transfer Across Polyphonic Stems"
+description: "音色迁移 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音色迁移 #扩散模型 #音频生成 #音乐信息检索 #音乐源分离
 
-✅ **6.5/10** | #音色迁移 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.09259v1)
+✅ **6.5/10** | 前30% | #音色迁移 | #扩散模型 | #音频生成 #音乐信息检索 | [arxiv](https://arxiv.org/abs/2605.09259v1)
+
+学术质量 5.5   （创新性+技术严谨性+实验充分性+清晰度的加权得分）/8 | 影响力 1.3     （影响力与重要性：领域推动价值、后续工作潜力、与读者相关性）/2 | 可复现性 0.7  （可复现性：开源完整度、训练细节、超参数充分度）/1 | 置信度 中
 
 
 ### 👥 作者与机构

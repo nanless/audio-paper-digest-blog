@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音增强, 扩散模型, 回声消除, 语音质量评估, 单步扩散]
 categories: [论文速递]
-description: "DiffVQE: Hybrid Diffusion Voice Quality Enhancement Under Acoustic Echo and Noise"
+description: "语音增强 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音增强 #扩散模型 #回声消除 #语音质量评估 #单步扩散
 
-✅ **6.5/10** | #语音增强 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.08189v1)
+✅ **6.5/10** | 前30% | #语音增强 | #扩散模型 | #回声消除 #语音质量评估 | [arxiv](https://arxiv.org/abs/2605.08189v1)
+
+学术质量 6.2/8 | 影响力 0.9/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

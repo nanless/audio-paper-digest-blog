@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音乐生成, 扩散模型, 注意力机制, 零样本, 音乐源分离, 音频编辑]
 categories: [论文速递]
-description: "Polyphonia: Zero-Shot Timbre Transfer in Polyphonic Music with Acoustic-Informed Attention Calibration"
+description: "音乐生成 | 7.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音乐生成 #扩散模型 #注意力机制 #零样本 #音乐源分离 #音频编辑
 
-✅ **7.5/10** | #音乐生成 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.10203v1)
+✅ **7.5/10** | 前30% | #音乐生成 | #扩散模型 | #注意力机制 #零样本 | [arxiv](https://arxiv.org/abs/2605.10203v1)
+
+学术质量 7.5/8 | 影响力 0.4/2 | 可复现性 0.1/1 | 置信度 高
 
 
 ### 👥 作者与机构

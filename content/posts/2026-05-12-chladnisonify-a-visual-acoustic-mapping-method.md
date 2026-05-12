@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频生成, 图像分类, 实时系统, 物理建模, 注意力机制, 数据增强]
 categories: [论文速递]
-description: "ChladniSonify: A Visual-Acoustic Mapping Method for Chladni Patterns in New Media Art Creation"
+description: "音频生成 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频生成 #图像分类 #实时系统 #物理建模 #注意力机制 #数据增强
 
-✅ **6.0/10** | #音频生成 #图像分类 | [arxiv](https://arxiv.org/abs/2605.09846v1)
+✅ **6.0/10** | 前50% | #音频生成 | #图像分类 | #实时系统 #物理建模 | [arxiv](https://arxiv.org/abs/2605.09846v1)
+
+学术质量 6.0   （综合学术质量：创新性+技术严谨性+实验充分性+清晰度的加权得分，范围0-8）/8 | 影响力 1.0     （影响力与重要性：领域推动价值、后续工作潜力、与读者相关性，范围0-2）/2 | 可复现性 0.6  （可复现性：开源完整度、训练细节、超参数充分度，范围0-1）/1 | 置信度 中
 
 
 ### 👥 作者与机构

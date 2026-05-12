@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [声源定位, 波束成形, 麦克风阵列, 流式处理, 实时处理]
 categories: [论文速递]
-description: "Online Segmented Beamforming via Dynamic Programming"
+description: "声源定位 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #声源定位 #波束成形 #麦克风阵列 #流式处理 #实时处理
 
-✅ **6.0/10** | #声源定位 #波束成形 | [arxiv](https://arxiv.org/abs/2605.08554v1)
+✅ **6.0/10** | 前25% | #声源定位 | #波束成形 | #麦克风阵列 #流式处理 | [arxiv](https://arxiv.org/abs/2605.08554v1)
+
+学术质量 6.0/8 | 影响力 1.0/2 | 可复现性 0.5/1 | 置信度 高
 
 
 ### 👥 作者与机构

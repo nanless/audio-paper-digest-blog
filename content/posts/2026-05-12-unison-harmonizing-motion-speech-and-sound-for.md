@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [多模态生成, 音视频同步, 语音-音效协调, 流匹配, 扩散模型]
 categories: [论文速递]
-description: "Unison: Harmonizing Motion, Speech, and Sound for Human-Centric Audio-Video Generation"
+description: "音视频生成 | 6.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #多模态生成 #音视频同步 #语音-音效协调 #流匹配 #扩散模型
 
-✅ **6.2/10** | #多模态生成 #音视频同步 | [arxiv](https://arxiv.org/abs/2605.08729v1)
+✅ **6.2/10** | 前30% | #音视频生成 | #流匹配 | #多模态生成 #音视频同步 | [arxiv](https://arxiv.org/abs/2605.08729v1)
+
+学术质量 6.5/8 | 影响力 0.7/2 | 可复现性 0.5/1 | 置信度 高
 
 
 ### 👥 作者与机构

@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音乐生成, 生成模型, 音频编码]
 categories: [论文速递]
-description: "Drum Synthesis from Expressive Drum Grids via Neural Audio Codecs"
+description: "音乐生成 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音乐生成 #生成模型 #音频编码
 
-✅ **6.0/10** | #音乐生成 #生成模型 | [arxiv](https://arxiv.org/abs/2605.10281v1)
+✅ **6.0/10** | 前50% | #音乐生成 | #生成模型 | #音频编码 | [arxiv](https://arxiv.org/abs/2605.10281v1)
+
+学术质量 4.0/8 | 影响力 0.6/2 | 可复现性 0.8/1 | 置信度 中
 
 
 ### 👥 作者与机构

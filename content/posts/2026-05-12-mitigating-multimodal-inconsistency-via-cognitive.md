@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [意图识别, 多模态模型, 对比学习, 鲁棒性, 特征解耦]
 categories: [论文速递]
-description: "Mitigating Multimodal Inconsistency via Cognitive Dual-Pathway Reasoning for Intent Recognition"
+description: "意图识别 | 7.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #意图识别 #多模态模型 #对比学习 #鲁棒性 #特征解耦
 
-✅ **7.0/10** | #意图识别 #多模态模型 | [arxiv](https://arxiv.org/abs/2605.09468v1)
+✅ **7.0/10** | 前50% | #意图识别 | #多模态模型 #对比学习 | #多模态模型 #对比学习 | [arxiv](https://arxiv.org/abs/2605.09468v1)
+
+学术质量 7.0 （综合学术质量：创新性+技术严谨性+实验充分性+清晰度的加权得分，范围0-8）/8 | 影响力 0.5 （影响力与重要性：领域推动价值、后续工作潜力、与读者相关性，范围0-2）/2 | 可复现性 0.7 （可复现性：开源完整度、训练细节、超参数充分度，范围0-1）/1 | 置信度 中
 
 
 ### 👥 作者与机构

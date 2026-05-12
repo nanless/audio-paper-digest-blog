@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音识别, 端到端, 多语言, 低资源, 数据增强]
 categories: [论文速递]
-description: "Dolphin-CN-Dialect: Where Chinese Dialects Matter"
+description: "语音识别 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音识别 #端到端 #多语言 #低资源 #数据增强
 
-✅ **6.0/10** | #语音识别 #端到端 | [arxiv](https://arxiv.org/abs/2605.08961v1)
+✅ **6.0/10** | 前50% | #语音识别 | #端到端 | #多语言 #低资源 | [arxiv](https://arxiv.org/abs/2605.08961v1)
+
+学术质量 5.5/8 | 影响力 1.5/2 | 可复现性 0.5/1 | 置信度 中
 
 
 ### 👥 作者与机构

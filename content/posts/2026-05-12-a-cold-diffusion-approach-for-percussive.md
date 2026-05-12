@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频修复, 扩散模型, 音频增强, 打击乐]
 categories: [论文速递]
-description: "A Cold Diffusion Approach for Percussive Dereverberation"
+description: "音频修复 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频修复 #扩散模型 #音频增强 #打击乐
 
-✅ **6.5/10** | #音频修复 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.10256v1)
+✅ **6.5/10** | 前35% | #音频修复 | #扩散模型 | #音频增强 #打击乐 | [arxiv](https://arxiv.org/abs/2605.10256v1)
+
+学术质量 6.2/8 | 影响力 0.7/2 | 可复现性 0.6/1 | 置信度 高
 
 
 ### 👥 作者与机构

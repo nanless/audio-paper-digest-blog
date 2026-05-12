@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音生物标志物, 预训练, 端到端]
 categories: [论文速递]
-description: "Voice Biomarkers for Depression and Anxiety"
+description: "语音生物标志物 | 5.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音生物标志物 #预训练 #端到端
 
-📝 **5.5/10** | #语音生物标志物 #预训练 | [arxiv](https://arxiv.org/abs/2605.09908v1)
+📝 **5.5/10** | 后50% | #语音生物标志物 | #预训练 #端到端 | #预训练 #端到端 | [arxiv](https://arxiv.org/abs/2605.09908v1)
+
+学术质量 1.0/8 | 影响力 0.5/2 | 可复现性 0.5/1 | 置信度 中
 
 
 ### 👥 作者与机构

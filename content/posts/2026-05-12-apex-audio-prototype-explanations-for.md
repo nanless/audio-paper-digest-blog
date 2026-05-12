@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频分类, 原型学习, 可解释性AI, 后验解释, 特征解耦]
 categories: [论文速递]
-description: "APEX: Audio Prototype EXplanations for Classification Tasks"
+description: "音频分类 | 14.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频分类 #原型学习 #可解释性AI #后验解释 #特征解耦
 
-🔥 **14.2/10** | #音频分类 #原型学习 | [arxiv](https://arxiv.org/abs/2605.10153v1)
+🔥 **14.2/10** | 前25% | #音频分类 | #原型学习 | #可解释性AI #后验解释 | [arxiv](https://arxiv.org/abs/2605.10153v1)
+
+学术质量 6.2/8 | 影响力 0.8/2 | 可复现性 0.5/1 | 置信度 高
 
 
 ### 👥 作者与机构

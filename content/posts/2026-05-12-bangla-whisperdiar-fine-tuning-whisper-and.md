@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音识别, 说话人日志, 低资源, 数据增强, 迁移学习]
 categories: [论文速递]
-description: "Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization"
+description: "语音识别 说话人日志 | 6.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音识别 #说话人日志 #低资源 #数据增强 #迁移学习
 
-✅ **6.5/10** | #语音识别 #说话人日志 | [arxiv](https://arxiv.org/abs/2605.08214v1)
+✅ **6.5/10** | 前50% | #语音识别 #说话人日志 | #迁移学习 #数据增强 | #语音识别 #说话人日志 | [arxiv](https://arxiv.org/abs/2605.08214v1)
+
+学术质量 5.5/8 | 影响力 0.8/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

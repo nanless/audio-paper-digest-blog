@@ -10,7 +10,9 @@ hiddenInHomeList: true
 
 # 📄 Kinetic-Optimal Scheduling with Moment Correction for Metric-Induced Discrete Flow Matching in Zero-Shot Text-to-Speech
 
-[arxiv](https://arxiv.org/abs/2605.09386v1)
+与MaskGCT等代表性基线在控制设置下进行公平对比的系统 | #语音合成 | #离散流匹配, #马尔可夫链蒙特卡洛, #信息几何 | [arxiv](https://arxiv.org/abs/2605.09386v1)
+
+学术质量 5.5 (在控制实验中展示了算法组件的有效性，并在说话人相似度上达到SOTA)/8 | 影响力 1.0 (为MI-DFM在零样本TTS中的应用提供了有效的算法改进和首个系统性基线)/2 | 可复现性 0.5 (提供了详尽的算法描述、伪代码和实验设置，但未开源代码或模型)/1 | 置信度 高
 
 
 ### 👥 作者与机构

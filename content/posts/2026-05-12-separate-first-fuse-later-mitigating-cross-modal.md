@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音视频问答, 多模态模型, 跨模态推理, 幻觉缓解, 强化学习, 链式思维]
 categories: [论文速递]
-description: "Separate First, Fuse Later: Mitigating Cross-Modal Interference in Audio-Visual LLMs Reasoning with Modality-Specific Chain-of-Thought"
+description: "音视频问答 | 6.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音视频问答 #多模态模型 #跨模态推理 #幻觉缓解 #强化学习 #链式思维
 
-✅ **6.0/10** | #音视频问答 #多模态模型 | [arxiv](https://arxiv.org/abs/2605.09906v1)
+✅ **6.0/10** | 前50% | #音视频问答 | #结构化推理 | #多模态模型 #跨模态推理 | [arxiv](https://arxiv.org/abs/2605.09906v1)
+
+学术质量 6.0/8 | 影响力 0.4/2 | 可复现性 0.3/1 | 置信度 高
 
 
 ### 👥 作者与机构

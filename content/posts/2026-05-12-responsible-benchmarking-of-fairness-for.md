@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音识别, 基准测试, 公平性, 模型评估, 方法论]
 categories: [论文速递]
-description: "Responsible Benchmarking of Fairness for Automatic Speech Recognition"
+description: "语音识别 | 5.0/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音识别 #基准测试 #公平性 #模型评估 #方法论
 
-📝 **5.0/10** | #语音识别 #基准测试 | [arxiv](https://arxiv.org/abs/2605.10615v1)
+📝 **5.0/10** | 前50% | #语音识别 | #基准测试 | #公平性 #模型评估 | [arxiv](https://arxiv.org/abs/2605.10615v1)
+
+学术质量 5.0/8 | 影响力 0.6/2 | 可复现性 0.3/1 | 置信度 高
 
 
 ### 👥 作者与机构

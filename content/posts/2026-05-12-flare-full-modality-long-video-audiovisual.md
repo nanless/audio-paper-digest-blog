@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [音频检索, 基准测试, 数据集, 音视频, 跨模态]
 categories: [论文速递]
-description: "FLARE: Full-Modality Long-Video Audiovisual Retrieval Benchmark with User-Simulated Queries"
+description: "音频检索 | 5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频检索 #基准测试 #数据集 #音视频 #跨模态
 
-📝 **5/10** | #音频检索 #基准测试 | [arxiv](https://arxiv.org/abs/2605.10228v1)
+📝 **5/10** | 前25% | #音频检索 | #数据集 | #基准测试 #音视频 | [arxiv](https://arxiv.org/abs/2605.10228v1)
+
+学术质量 6.0/8 | 影响力 1.5/2 | 可复现性 0.8/1 | 置信度 高
 
 
 ### 👥 作者与机构

@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [声场重建]
 categories: [论文速递]
-description: "SF-Flow: Sound field magnitude estimation via flow matching guided by sparse measurements"
+description: "空间音频 | 820/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #声场重建
 
-🔥 **820/10** | #声场重建 | [arxiv](https://arxiv.org/abs/2605.10398v1)
+🔥 **820/10** | 前25% | #空间音频 | #流匹配 | #声场重建 | [arxiv](https://arxiv.org/abs/2605.10398v1)
 
 
 ### 👥 作者与机构

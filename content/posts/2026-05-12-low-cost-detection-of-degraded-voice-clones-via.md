@@ -4,7 +4,7 @@ date: 2026-05-12
 draft: false
 tags: [语音伪造检测, 语音质量评估, 信号处理, 医疗音频]
 categories: [论文速递]
-description: "Low-Cost Detection of Degraded Voice Clones via Source-Output Acoustic Consistency"
+description: "语音伪造检测 | 88/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #语音伪造检测 #语音质量评估 #信号处理 #医疗音频
 
-🔥 **88/10** | #语音伪造检测 #语音质量评估 | [arxiv](https://arxiv.org/abs/2605.08165v1)
+🔥 **88/10** | 前50% | #语音伪造检测 | #信号处理 | #语音质量评估 #医疗音频 | [arxiv](https://arxiv.org/abs/2605.08165v1)
+
+学术质量 5.3/8 | 影响力 0.4/2 | 可复现性 0.3/1 | 置信度 高
 
 
 ### 👥 作者与机构
