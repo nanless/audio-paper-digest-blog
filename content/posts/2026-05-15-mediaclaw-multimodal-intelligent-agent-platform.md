@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [多模态模型, 开源工具, 大语言模型, 工作流编排]
 categories: [论文速递]
-description: "多模态模型 | 3.5/10"
+description: "多模态模型 | 3.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #多模态模型 #开源工具 #大语言模型 #工作流编排
 
-📝 **3.5/10** | 后50% | #多模态模型 | #开源工具 | #大语言模型 #工作流编排 | [arxiv](https://arxiv.org/abs/2605.14771v1)
+📝 **3.3/10** | 后50% | #多模态模型 | #开源工具 | #大语言模型 #工作流编排 | [arxiv](https://arxiv.org/abs/2605.14771v1)
 
 学术质量 2.5/8 | 影响力 0.5/1 | 可复现性 0.3/1 | 置信度 中
 

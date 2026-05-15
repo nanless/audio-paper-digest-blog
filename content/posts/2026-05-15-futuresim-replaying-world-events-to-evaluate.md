@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [基准测试, 大语言模型, 自适应代理, 测试时适应]
 categories: [论文速递]
-description: "基准测试 | 7.5/10"
+description: "基准测试 | 7.6/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #基准测试 #大语言模型 #自适应代理 #测试时适应
 
-✅ **7.5/10** | 前25% | #基准测试 | #大语言模型 | #自适应代理 #测试时适应 | [arxiv](https://arxiv.org/abs/2605.15188v1)
+✅ **7.6/10** | 前25% | #基准测试 | #大语言模型 | #自适应代理 #测试时适应 | [arxiv](https://arxiv.org/abs/2605.15188v1)
 
 学术质量 6.1/8 | 影响力 0.8/1 | 可复现性 0.7/1 | 置信度 高
 

@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [音频分类, 音频事件检测, 自监督学习, 对比学习, 预训练]
 categories: [论文速递]
-description: "音频分类 | 7.5/10"
+description: "音频分类 | 7.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #音频分类 #音频事件检测 #自监督学习 #对比学习 #预训练
 
-✅ **7.5/10** | 前50% | #音频分类 | #自监督学习 | #音频事件检测 #对比学习 | [arxiv](https://arxiv.org/abs/2605.14231v1)
+✅ **7.3/10** | 前50% | #音频分类 | #自监督学习 | #音频事件检测 #对比学习 | [arxiv](https://arxiv.org/abs/2605.14231v1)
 
 学术质量 5.9/8 | 影响力 0.6/1 | 可复现性 0.8/1 | 置信度 高
 

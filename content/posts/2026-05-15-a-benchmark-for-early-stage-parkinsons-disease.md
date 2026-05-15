@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [语音生物标志物, 基准测试, 医疗音频, 模型评估]
 categories: [论文速递]
-description: "语音生物标志物 | 7/10"
+description: "语音生物标志物 | 7.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音生物标志物 #基准测试 #医疗音频 #模型评估
 
-✅ **7/10** | 前30% | #语音生物标志物 | #基准测试 | #医疗音频 #模型评估 | [arxiv](https://arxiv.org/abs/2605.14066v1)
+✅ **7.2/10** | 前30% | #语音生物标志物 | #基准测试 | #医疗音频 #模型评估 | [arxiv](https://arxiv.org/abs/2605.14066v1)
 
 学术质量 5.6/8 | 影响力 0.7/1 | 可复现性 0.9/1 | 置信度 高
 

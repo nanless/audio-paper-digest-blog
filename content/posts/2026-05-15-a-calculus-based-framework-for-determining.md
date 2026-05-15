@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [语音识别, 端到端, 超参数优化, 词表选择]
 categories: [论文速递]
-description: "语音识别 | 4/10"
+description: "语音识别 | 3.9/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音识别 #端到端 #超参数优化 #词表选择
 
-📝 **4/10** | 后50% | #语音识别 | #端到端 | #超参数优化 #词表选择 | [arxiv](https://arxiv.org/abs/2605.14427v1)
+📝 **3.9/10** | 后50% | #语音识别 | #端到端 | #超参数优化 #词表选择 | [arxiv](https://arxiv.org/abs/2605.14427v1)
 
 学术质量 3.1/8 | 影响力 0.3/1 | 可复现性 0.5/1 | 置信度 高
 

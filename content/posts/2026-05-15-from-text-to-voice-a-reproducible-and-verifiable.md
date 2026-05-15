@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [语音对话系统, 模型评估, 语音大模型, 基准测试]
 categories: [论文速递]
-description: "模型评估 | 6.5/10"
+description: "模型评估 | 6.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音对话系统 #模型评估 #语音大模型 #基准测试
 
-✅ **6.5/10** | 前50% | #模型评估 | #基准测试 | #语音对话系统 #语音大模型 | [arxiv](https://arxiv.org/abs/2605.15104v1)
+✅ **6.3/10** | 前50% | #模型评估 | #基准测试 | #语音对话系统 #语音大模型 | [arxiv](https://arxiv.org/abs/2605.15104v1)
 
 学术质量 5.3/8 | 影响力 0.5/1 | 可复现性 0.5/1 | 置信度 中高
 

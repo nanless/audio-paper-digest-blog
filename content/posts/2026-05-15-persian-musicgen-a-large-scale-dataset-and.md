@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [音乐生成, 迁移学习, 数据集构建, 文化特异性, 波斯音乐]
 categories: [论文速递]
-description: "音乐生成 | 6.5/10"
+description: "音乐生成 | 6.7/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #音乐生成 #迁移学习 #数据集构建 #文化特异性 #波斯音乐
 
-✅ **6.5/10** | 前50% | #音乐生成 | #迁移学习 | #数据集构建 #文化特异性 | [arxiv](https://arxiv.org/abs/2605.14765v1)
+✅ **6.7/10** | 前50% | #音乐生成 | #迁移学习 | #数据集构建 #文化特异性 | [arxiv](https://arxiv.org/abs/2605.14765v1)
 
 学术质量 5.3/8 | 影响力 0.7/1 | 可复现性 0.7/1 | 置信度 中
 

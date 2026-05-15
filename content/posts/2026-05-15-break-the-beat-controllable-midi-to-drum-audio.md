@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [音频生成, 音乐生成, 扩散模型, 迁移学习, MIDI]
 categories: [论文速递]
-description: "音频生成 | 7/10"
+description: "音频生成 | 6.8/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #音频生成 #音乐生成 #扩散模型 #迁移学习 #MIDI
 
-✅ **7/10** | 前50% | #音频生成 | #扩散模型 | #音乐生成 #迁移学习 | [arxiv](https://arxiv.org/abs/2605.14555v1)
+✅ **6.8/10** | 前50% | #音频生成 | #扩散模型 | #音乐生成 #迁移学习 | [arxiv](https://arxiv.org/abs/2605.14555v1)
 
 学术质量 5.8/8 | 影响力 0.6/1 | 可复现性 0.4/1 | 置信度 中
 

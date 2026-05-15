@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [水声通信, 波束成形, 信号处理, 多通道, 接收均衡]
 categories: [论文速递]
-description: "水声通信 | 5.5/10"
+description: "水声通信 | 5.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #水声通信 #波束成形 #信号处理 #多通道 #接收均衡
 
-📝 **5.5/10** | 前50%-75% | #水声通信 | #波束成形 | #信号处理 #多通道 | [arxiv](https://arxiv.org/abs/2605.14919v1)
+📝 **5.3/10** | 前50%-75% | #水声通信 | #波束成形 | #信号处理 #多通道 | [arxiv](https://arxiv.org/abs/2605.14919v1)
 
 学术质量 4.1/8 | 影响力 0.7/1 | 可复现性 0.5/1 | 置信度 中
 

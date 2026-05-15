@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [语音翻译, 自回归模型, 流式处理, 多语言, 实时处理]
 categories: [论文速递]
-description: "语音翻译 | 7/10"
+description: "语音翻译 | 6.8/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音翻译 #自回归模型 #流式处理 #多语言 #实时处理
 
-✅ **7/10** | 前25% | #语音翻译 | #自回归模型 | #流式处理 #多语言 | [arxiv](https://arxiv.org/abs/2605.14766v1)
+✅ **6.8/10** | 前25% | #语音翻译 | #自回归模型 | #流式处理 #多语言 | [arxiv](https://arxiv.org/abs/2605.14766v1)
 
 学术质量 5.9/8 | 影响力 0.7/1 | 可复现性 0.2/1 | 置信度 高
 

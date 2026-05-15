@@ -4,7 +4,7 @@ date: 2026-05-15
 draft: false
 tags: [基础模型, 自监督学习, 遥感基础模型, 水文智能]
 categories: [论文速递]
-description: "基础模型 | 7/10"
+description: "基础模型 | 6.8/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #基础模型 #自监督学习 #遥感基础模型 #水文智能
 
-✅ **7/10** | 前50% | #基础模型 | #自监督学习 | #遥感基础模型 #水文智能 | [arxiv](https://arxiv.org/abs/2605.14120v1)
+✅ **6.8/10** | 前50% | #基础模型 | #自监督学习 | #遥感基础模型 #水文智能 | [arxiv](https://arxiv.org/abs/2605.14120v1)
 
 学术质量 5.4/8 | 影响力 0.6/1 | 可复现性 0.8/1 | 置信度 高
 
