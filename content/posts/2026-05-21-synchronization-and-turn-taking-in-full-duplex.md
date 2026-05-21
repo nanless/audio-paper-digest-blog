@@ -2,7 +2,7 @@
 title: "Synchronization and Turn-Taking in Full-Duplex Speech Dialogue Models"
 date: 2026-05-21
 draft: false
-tags: [语音对话系统,, 探针分析,, 同步性,, 轮次转换,, 全双工对话,, Moshi,, 计算建模]
+tags: [语音对话系统, 探针分析, 同步性, 轮次转换, 全双工对话, Moshi, 计算建模]
 categories: [论文速递]
 description: "语音对话系统 | 6.8/10"
 hiddenInHomeList: true

@@ -2,7 +2,7 @@
 title: "PlanRAG-Audio: Planning and Retrieval Augmented Generation for Long-form Audio Understanding"
 date: 2026-05-21
 draft: false
-tags: [检索增强生成,, 长音频理解,, 多模态推理,, 规划,, 零样本]
+tags: [检索增强生成, 长音频理解, 多模态推理, 规划, 零样本]
 categories: [论文速递]
 description: "音频问答 | 6.2/10"
 hiddenInHomeList: true
@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 PlanRAG-Audio: Planning and Retrieval Augmented Generation for Long-form Audio Understanding
 
-#检索增强生成, #长音频理解, #多模态推理, #规划, #零样本
+`#检索增强生成, #长音频理解, #多模态推理, #规划, #零样本`'。
 
 ✅ **6.2/10** | 前60% | #音频问答 | #检索增强生成 | #检索增强生成, #长音频理解, | [arxiv](https://arxiv.org/abs/2605.20414v1)
 
