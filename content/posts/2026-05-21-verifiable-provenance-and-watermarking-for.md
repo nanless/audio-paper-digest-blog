@@ -2,15 +2,17 @@
 title: "Verifiable Provenance and Watermarking for Generative AI: An Evidentiary Framework for International Operational Law and Domestic Courts"
 date: 2026-05-21
 draft: false
-tags: []
+tags: [多媒体取证, 合成媒体与深度伪造检测, 数字水印与数据隐藏, 认证与出处, 证据法, 国际人道法, 人工智能法规]
 categories: [论文速递]
-description: "Verifiable Provenance and Watermarking for Generative AI: An Evidentiary Framework for International Operational Law and Domestic Courts"
+description: "多媒体取证 | 8.6/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Verifiable Provenance and Watermarking for Generative AI: An Evidentiary Framework for International Operational Law and Domestic Courts
 
-🔥 **8.6/10** | 前25% | [arxiv](https://arxiv.org/abs/2605.21002v1)
+#多媒体取证 #合成媒体与深度伪造检测 #数字水印与数据隐藏 #认证与出处 #证据法 #国际人道法 #人工智能法规
+
+🔥 **8.6/10** | 前25% | #多媒体取证 | #合成媒体与深度伪造检测 | #数字水印与数据隐藏 #认证与出处 | [arxiv](https://arxiv.org/abs/2605.21002v1)
 
 学术质量 6.5/7 | 影响力 0.5/2 | 可复现性 1.6/2
 

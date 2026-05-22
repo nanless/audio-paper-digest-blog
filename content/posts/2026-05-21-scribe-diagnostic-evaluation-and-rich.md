@@ -2,15 +2,17 @@
 title: "SCRIBE: Diagnostic Evaluation and Rich Transcription Models for Indic ASR"
 date: 2026-05-21
 draft: false
-tags: []
+tags: [语音识别, 评估指标, 沙地对齐, 印地语, 马拉雅拉姆语, 卡纳达语, 富文本转录, 开源基准, 诊断分析]
 categories: [论文速递]
-description: "SCRIBE: Diagnostic Evaluation and Rich Transcription Models for Indic ASR"
+description: "语音识别 | 8.3/10"
 hiddenInHomeList: true
 ---
 
 # 📄 SCRIBE: Diagnostic Evaluation and Rich Transcription Models for Indic ASR
 
-🔥 **8.3/10** | 前25% | [arxiv](https://arxiv.org/abs/2605.20712v1)
+#语音识别 #评估指标 #沙地对齐 #印地语 #马拉雅拉姆语 #卡纳达语 #富文本转录 #开源基准 #诊断分析
+
+🔥 **8.3/10** | 前25% | #语音识别 | #评估指标 | #沙地对齐 #印地语 | [arxiv](https://arxiv.org/abs/2605.20712v1)
 
 学术质量 5.8/7 | 影响力 1.5/2 | 可复现性 1.0/2
 

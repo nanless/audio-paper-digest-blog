@@ -2,15 +2,17 @@
 title: "π-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows"
 date: 2026-05-21
 draft: false
-tags: []
+tags: [长期助手, 代理基准测试, 主动AI, 多轮交互, 评估方法, LLM评估]
 categories: [论文速递]
-description: "π-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows"
+description: "长期助手 | 5.2/10"
 hiddenInHomeList: true
 ---
 
 # 📄 π-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows
 
-📝 **5.2/10** | 后50% | [arxiv](https://arxiv.org/abs/2605.14678)
+#长期助手 #代理基准测试 #主动AI #多轮交互 #评估方法 #LLM评估
+
+📝 **5.2/10** | 后50% | #长期助手 | #代理基准测试 | #主动AI #多轮交互 | [arxiv](https://arxiv.org/abs/2605.14678)
 
 学术质量 3.8/7 | 影响力 0.3/2 | 可复现性 1.1/2
 

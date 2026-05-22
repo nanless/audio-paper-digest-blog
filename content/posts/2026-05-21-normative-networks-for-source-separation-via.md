@@ -2,15 +2,17 @@
 title: "Normative Networks for Source Separation via Local Plasticity and Dendritic Computation"
 date: 2026-05-21
 draft: false
-tags: []
+tags: [盲源分离, 神经网络, 在线学习, 生物可塑性, 树突计算, 局部学习规则, 行列式最大化, 熵最大化]
 categories: [论文速递]
-description: "Normative Networks for Source Separation via Local Plasticity and Dendritic Computation"
+description: "盲源分离 | 8.9/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Normative Networks for Source Separation via Local Plasticity and Dendritic Computation
 
-🔥 **8.9/10** | 前25% | [arxiv](https://arxiv.org/abs/2605.19965v1)
+#盲源分离 #神经网络 #在线学习 #生物可塑性 #树突计算 #局部学习规则 #行列式最大化 #熵最大化
+
+🔥 **8.9/10** | 前25% | #盲源分离 | #神经网络 | #在线学习 #生物可塑性 | [arxiv](https://arxiv.org/abs/2605.19965v1)
 
 学术质量 6.4/7 | 影响力 0.5/2 | 可复现性 2.0/2
 
