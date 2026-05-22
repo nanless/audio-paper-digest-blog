@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #text-to-speech #zero-shot-tts #flow-matching #contrastive-learning #alignment-robustness #data-augmentation #speech-generation
 
-#text-to-speech | #zero-shot-tts | #flow-matching #contrastive-learning | [arxiv](https://arxiv.org/abs/2605.22083v1)
+#语音合成 | #zero-shot-tts | #text-to-speech #flow-matching | [arxiv](https://arxiv.org/abs/2605.22083v1)
 
 
 ### 👥 作者与机构

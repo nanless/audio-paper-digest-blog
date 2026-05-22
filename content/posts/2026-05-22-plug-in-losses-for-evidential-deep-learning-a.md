@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [证据深度学习, 不确定性估计, 插件损失, Softmax分类器, 语音命令识别, 选择性预测]
 categories: [论文速递]
-description: "uncertainty_estimation | 9.4/10"
+description: "音频分类 | 9.4/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #证据深度学习 #不确定性估计 #插件损失 #Softmax分类器 #语音命令识别 #选择性预测
 
-🔥 **9.4/10** | 前10% | uncertainty_estimation | evidential_deep_learning | #证据深度学习 #不确定性估计 | [arxiv](https://arxiv.org/abs/2605.22746v1)
+🔥 **9.4/10** | 前10% | #音频分类 | evidential_deep_learning | #证据深度学习 #不确定性估计 | [arxiv](https://arxiv.org/abs/2605.22746v1)
 
 学术质量 6.3/7 | 影响力 1.5/2 | 可复现性 1.6/2 | 置信度 high
 

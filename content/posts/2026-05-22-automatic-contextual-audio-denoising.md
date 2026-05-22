@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [音频降噪, 上下文感知, 声学场景分类, 条件生成, 数据集]
 categories: [论文速递]
-description: "音频降噪 | 5.4/10"
+description: "语音增强 | 5.4/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #音频降噪 #上下文感知 #声学场景分类 #条件生成 #数据集
 
-📝 **5.4/10** | 后50% | #音频降噪 | #上下文感知 | #声学场景分类 #条件生成 | [arxiv](https://arxiv.org/abs/2605.22262v1)
+📝 **5.4/10** | 后50% | #语音增强 | #上下文感知 | #音频降噪 #声学场景分类 | [arxiv](https://arxiv.org/abs/2605.22262v1)
 
 学术质量 2.9/7 | 影响力 1/2 | 可复现性 1.5/2
 

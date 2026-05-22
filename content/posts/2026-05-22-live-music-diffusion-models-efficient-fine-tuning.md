@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [音频生成, 扩散模型, 流式生成, 交互式音乐, KV缓存, 对抗训练, 实时性能]
 categories: [论文速递]
-description: "Audio Generation | 7.5/10"
+description: "音乐生成 | 7.5/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #音频生成 #扩散模型 #流式生成 #交互式音乐 #KV缓存 #对抗训练 #实时性能
 
-✅ **7.5/10** | 前25% | Audio Generation | Diffusion Models | #音频生成 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.22717v1)
+✅ **7.5/10** | 前25% | #音乐生成 | Diffusion Models | #音频生成 #扩散模型 | [arxiv](https://arxiv.org/abs/2605.22717v1)
 
 学术质量 5.5/7 | 影响力 1.5/2 | 可复现性 0.5/2 | 置信度 High
 

@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #personal #sound #zones #neural #filter #generation #localization #uncertainty #robustness #regularization #split-band #system #head #tracking #acoustic #signal #processing
 
-Sound Zone Control, Robust Audio Rendering | Neural Network Regularization, Consistency Training | #personal #sound | [arxiv](https://arxiv.org/abs/2605.21891v1)
+#空间音频 | Neural Network Regularization, Consistency Training | #personal #sound | [arxiv](https://arxiv.org/abs/2605.21891v1)
 
 学术质量 7.5/7 | 影响力 8.0/2 | 可复现性 0.0/2 | 置信度 High
 

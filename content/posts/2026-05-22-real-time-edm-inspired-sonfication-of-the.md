@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [声音化, 实时监控, 超算, 电子舞曲, 数据驱动音乐, Slurm, 系统实现]
 categories: [论文速递]
-description: "系统描述 | 6.7/10"
+description: "音频生成 | 6.7/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #声音化 #实时监控 #超算 #电子舞曲 #数据驱动音乐 #Slurm #系统实现
 
-✅ **6.7/10** | 前50% | 系统描述 | 声音化 | #声音化 #实时监控 | [arxiv](https://arxiv.org/abs/2605.21874v1)
+✅ **6.7/10** | 前50% | #音频生成 | 声音化 | #声音化 #实时监控 | [arxiv](https://arxiv.org/abs/2605.21874v1)
 
 学术质量 4.3/7 | 影响力 1/2 | 可复现性 1.4/2 | 置信度 高
 

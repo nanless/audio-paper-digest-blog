@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [Benchmark, Multimodal, Proactive, Streaming, Video, Understanding, Evaluation, Audio-Visual]
 categories: [论文速递]
-description: "Benchmark | 10/10"
+description: "多模态模型 | 10/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #Benchmark #Multimodal #Proactive #Streaming #Video #Understanding #Evaluation #Audio-Visual
 
-🔥 **10/10** | 前10% | #Benchmark | #Multimodal | #Proactive #Streaming | [arxiv](https://arxiv.org/abs/2605.18577)
+🔥 **10/10** | 前10% | #多模态模型 | #Multimodal | #Benchmark #Proactive | [arxiv](https://arxiv.org/abs/2605.18577)
 
 学术质量 7/7 | 影响力 1.5/2 | 可复现性 2/2
 

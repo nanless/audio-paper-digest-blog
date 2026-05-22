@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [论文类型:, 综述与理论分析]
 categories: [论文速递]
-description: "Theory | 4.2/10"
+description: "信号处理 | 4.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #论文类型: #综述与理论分析
 
-📝 **4.2/10** | 后50% | Theory | Statistical Estimation | #论文类型: #综述与理论分析 | [arxiv](https://arxiv.org/abs/2605.22354v1)
+📝 **4.2/10** | 后50% | #信号处理 | Statistical Estimation | #论文类型: #综述与理论分析 | [arxiv](https://arxiv.org/abs/2605.22354v1)
 
 学术质量 3.2/7 | 影响力 0.5/2 | 可复现性 0.5/2 | 置信度 4/5
 

@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [cs.CL, 多模态学习, 语音处理, 可解释性, 机械可解释性]
 categories: [论文速递]
-description: "cs.CL | 6.8/10"
+description: "多模态模型 | 6.8/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #cs.CL #多模态学习 #语音处理 #可解释性 #机械可解释性
 
-✅ **6.8/10** | 前50% | #cs.CL | #多模态学习 | #语音处理 #可解释性 | [arxiv](https://arxiv.org/abs/2605.22170v1)
+✅ **6.8/10** | 前50% | #多模态模型 | #多模态学习 | #cs.CL #语音处理 | [arxiv](https://arxiv.org/abs/2605.22170v1)
 
 学术质量 4.9/7 | 影响力 1.5/2 | 可复现性 0.4/2
 

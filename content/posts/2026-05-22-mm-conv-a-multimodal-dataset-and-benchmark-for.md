@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [多模态, 数据集, 基准测试, 指代消解, 视觉定位, 人机交互, 具身AI, VR, 语音]
 categories: [论文速递]
-description: "多模态 | 8.3/10"
+description: "语音对话系统 | 8.3/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #多模态 #数据集 #基准测试 #指代消解 #视觉定位 #人机交互 #具身AI #VR #语音
 
-🔥 **8.3/10** | 前25% | #多模态 | #数据集 | #基准测试 #指代消解 | [arxiv](https://arxiv.org/abs/2605.21796v1)
+🔥 **8.3/10** | 前25% | #语音对话系统 | #数据集 | #多模态 #基准测试 | [arxiv](https://arxiv.org/abs/2605.21796v1)
 
 学术质量 5.4/7 | 影响力 1.5/2 | 可复现性 1.4/2
 

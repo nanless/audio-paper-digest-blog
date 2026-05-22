@@ -4,7 +4,7 @@ date: 2026-05-22
 draft: false
 tags: [语音情感识别（SER）, 政治传播分析, Pathos分析, 大语言模型（LLM）, 多模态分析, EMO-DB, Russell环状模型, 案例研究]
 categories: [论文速递]
-description: "语音情感识别；政治演讲分析 | 5.2/10"
+description: "语音情感识别 | 5.2/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音情感识别（SER） #政治传播分析 #Pathos分析 #大语言模型（LLM） #多模态分析 #EMO-DB #Russell环状模型 #案例研究
 
-📝 **5.2/10** | 后50% | 语音情感识别；政治演讲分析 | 多模态LLM分析；声学情感识别（SER）；多智能体评分 | #语音情感识别（SER） #政治传播分析 | [arxiv](https://arxiv.org/abs/2605.22732v1)
+📝 **5.2/10** | 后50% | #语音情感识别 | 多模态LLM分析；声学情感识别（SER）；多智能体评分 | #语音情感识别（SER） #政治传播分析 | [arxiv](https://arxiv.org/abs/2605.22732v1)
 
 学术质量 4.2/7 | 影响力 0.8/2 | 可复现性 0.2/2 | 置信度 0.8
 

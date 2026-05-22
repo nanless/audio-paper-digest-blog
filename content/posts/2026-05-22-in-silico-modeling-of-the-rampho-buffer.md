@@ -12,7 +12,7 @@ hiddenInHomeList: true
 
 #语音掩蔽 #信息掩蔽 #能量掩蔽 #深度神经网络 #认知负荷 #自监督学习 #wav2vec #2.0 #香农熵
 
-Speech Processing | Self-Supervised Learning | #语音掩蔽 #信息掩蔽 | [arxiv](https://arxiv.org/abs/2605.22465v1)
+#语音增强 | Self-Supervised Learning | #语音掩蔽 #信息掩蔽 | [arxiv](https://arxiv.org/abs/2605.22465v1)
 
 学术质量 5/7 | 影响力 5/2 | 可复现性 0/2 | 置信度 0.8
 
