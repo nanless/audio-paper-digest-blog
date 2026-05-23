@@ -1,6 +1,6 @@
 baseURL: "https://nanless.github.io/audio-paper-digest-blog/"
 languageCode: "zh-cn"
-title: "语音/音频论文速递"
+title: "语音/音乐/音频论文速递"
 theme: "PaperMod"
 
 paginate: 20
@@ -39,7 +39,7 @@ menu:
 
 params:
   env: production
-  title: "语音/音频论文速递"
+  title: "语音/音乐/音频论文速递"
   analytics:
     google:
       SiteVerificationTag: "SndYtZUZX0x7oCnlQPrNzYeB6Z6zeytsVL9BBargMwI"
@@ -69,8 +69,8 @@ params:
     keys: ["title", "permalink", "summary"]
 
   homeInfoParams:
-    Title: "📄 语音/音频论文速递"
-    Content: "每日自动抓取 arxiv/huggingface 最新语音/音频AI 论文，AI 深度分析后发布"
+    Title: "📄 语音/音乐/音频论文速递"
+    Content: "每日自动抓取 arxiv/huggingface 最新语音/音乐/音频AI 论文，AI 深度分析后发布"
 
   assets:
     disableFingerprinting: true
@@ -81,7 +81,7 @@ params:
     hiddenInPage: false
 
   label:
-    text: "语音/音频论文速递"
+    text: "语音/音乐/音频论文速递"
 
   # 统计配置（去 https://goatcounter.com 注册后填入）
   # goatcounter: your-code
