@@ -186,4 +186,4 @@ Hal-Live的整体架构（如图2所示）是一个基于双流扩散Transformer
 
 ---
 
-[← 返回 2026-04-28 论文速递](/audio-paper-digest-blog/posts/2026-04-28/)
+[← 返回 2026-04-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-28/)

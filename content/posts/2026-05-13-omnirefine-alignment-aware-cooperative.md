@@ -237,4 +237,4 @@ CPCR的输出（对齐分块）是MACC的输入单元。在MACC内部，视频�
 
 ---
 
-[← 返回 2026-05-13 论文速递](/audio-paper-digest-blog/posts/2026-05-13/)
+[← 返回 2026-05-13 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-13/)

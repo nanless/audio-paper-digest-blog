@@ -120,4 +120,4 @@ ClariCodec的整体架构遵循经典的自动编码器范式，但其核心创�
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

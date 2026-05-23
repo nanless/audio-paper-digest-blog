@@ -254,4 +254,4 @@ WavCube是一个旨在统一语音理解与生成的连续表示学习框架，�
 
 ---
 
-[← 返回 2026-05-08 论文速递](/audio-paper-digest-blog/posts/2026-05-08/)
+[← 返回 2026-05-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-08/)

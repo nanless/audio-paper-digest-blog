@@ -126,4 +126,4 @@ Audio-Cogito 并非从零设计新架构，而是对现有模型 **Qwen3-Omni-Th
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

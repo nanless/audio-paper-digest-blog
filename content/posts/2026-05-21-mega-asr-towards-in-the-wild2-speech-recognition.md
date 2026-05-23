@@ -228,4 +228,4 @@ Mega-ASR在LLM-as-judge评估中，显著降低了遗漏内容(Miss)和幻觉(Ha
 
 ---
 
-[← 返回 2026-05-21 论文速递](/audio-paper-digest-blog/posts/2026-05-21/)
+[← 返回 2026-05-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-21/)

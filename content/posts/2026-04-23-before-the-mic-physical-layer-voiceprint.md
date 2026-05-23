@@ -120,4 +120,4 @@ EchoMask是一个物理系统，而非传统的计算模型。其“架构”由
 
 ---
 
-[← 返回 2026-04-23 论文速递](/audio-paper-digest-blog/posts/2026-04-23/)
+[← 返回 2026-04-23 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-23/)

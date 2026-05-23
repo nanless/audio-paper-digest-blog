@@ -278,4 +278,4 @@ Sinkhorn正则化扫描： 正则化参数 ε_reg 在 [0.05, 0.10] 范围内效�
 
 ---
 
-[← 返回 2026-05-08 论文速递](/audio-paper-digest-blog/posts/2026-05-08/)
+[← 返回 2026-05-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-08/)

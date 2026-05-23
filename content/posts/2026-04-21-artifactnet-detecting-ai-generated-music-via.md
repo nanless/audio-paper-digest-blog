@@ -145,4 +145,4 @@ ArtifactNet是一个三阶段的端到端流水线，总参数量仅4.0M，处�
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

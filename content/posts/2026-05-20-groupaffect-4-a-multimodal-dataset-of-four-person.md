@@ -217,4 +217,4 @@ T2协商任务引发了最显著的效价下降（Cohen‘s d = 1.06， p=2.4e-9
 
 ---
 
-[← 返回 2026-05-20 论文速递](/audio-paper-digest-blog/posts/2026-05-20/)
+[← 返回 2026-05-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-20/)

@@ -122,4 +122,4 @@ FastTurn是一个为低延迟轮次检测设计的统一框架，其架构如图
 
 ---
 
-[← 返回 2026-04-23 论文速递](/audio-paper-digest-blog/posts/2026-04-23/)
+[← 返回 2026-04-23 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-23/)

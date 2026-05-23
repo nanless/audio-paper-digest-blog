@@ -175,4 +175,4 @@ MiniCPM-o 4.5是一个端到端的多模态大语言模型，整体架构如图4
 
 ---
 
-[← 返回 2026-05-01 论文速递](/audio-paper-digest-blog/posts/2026-05-01/)
+[← 返回 2026-05-01 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-01/)

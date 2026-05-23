@@ -107,4 +107,4 @@ Step-Audio-R1.5的架构是一个典型的“音频编码器-适配器-语言模
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 2026-04-29 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-29/)

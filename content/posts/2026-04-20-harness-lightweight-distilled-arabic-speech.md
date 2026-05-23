@@ -223,4 +223,4 @@ CNN 输出的帧特征被送入 Transformer 编码器。模型家族包含三种
 
 ---
 
-[← 返回 2026-04-20 论文速递](/audio-paper-digest-blog/posts/2026-04-20/)
+[← 返回 2026-04-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-20/)

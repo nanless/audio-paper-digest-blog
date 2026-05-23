@@ -242,4 +242,4 @@ e) 三阶段训练与音频增强
 
 ---
 
-[← 返回 2026-05-15 论文速递](/audio-paper-digest-blog/posts/2026-05-15/)
+[← 返回 2026-05-15 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-15/)

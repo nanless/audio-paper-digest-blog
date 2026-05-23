@@ -162,4 +162,4 @@ CRONA是一个基于中心化训练去中心化执行（CTDE）范式的多智�
 
 ---
 
-[← 返回 2026-05-08 论文速递](/audio-paper-digest-blog/posts/2026-05-08/)
+[← 返回 2026-05-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-08/)

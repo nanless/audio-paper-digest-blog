@@ -164,4 +164,4 @@ MAGIC-TTS建立在非自回归的零样本TTS骨干网络（F5-TTS）之上，�
 
 ---
 
-[← 返回 2026-04-28 论文速递](/audio-paper-digest-blog/posts/2026-04-28/)
+[← 返回 2026-04-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-28/)

@@ -427,4 +427,4 @@ MiniMind-O 是一个端到端的全模态模型，其核心架构遵循“思考
 
 ---
 
-[← 返回 2026-05-06 论文速递](/audio-paper-digest-blog/posts/2026-05-06/)
+[← 返回 2026-05-06 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-06/)

@@ -156,4 +156,4 @@ Sub-JEPA是一个端到端的联合嵌入预测框架，用于学习世界模型
 
 ---
 
-[← 返回 2026-05-12 论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
+[← 返回 2026-05-12 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-12/)

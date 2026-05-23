@@ -219,4 +219,4 @@ AudioMosaic为音频对比学习提供了一个有效的实用方案，其提高
 
 ---
 
-[← 返回 2026-05-15 论文速递](/audio-paper-digest-blog/posts/2026-05-15/)
+[← 返回 2026-05-15 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-15/)

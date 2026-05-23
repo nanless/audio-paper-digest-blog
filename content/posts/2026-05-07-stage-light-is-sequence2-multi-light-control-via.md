@@ -161,4 +161,4 @@ Table 2: Human Evaluation Scores
 
 ---
 
-[← 返回 2026-05-07 论文速递](/audio-paper-digest-blog/posts/2026-05-07/)
+[← 返回 2026-05-07 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-07/)

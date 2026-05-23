@@ -245,4 +245,4 @@ Dolphin-CN-Dialect是一个端到端的自动语音识别（ASR）系统，采�
 
 ---
 
-[← 返回 2026-05-12 论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
+[← 返回 2026-05-12 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-12/)

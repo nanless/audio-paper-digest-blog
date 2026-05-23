@@ -140,4 +140,4 @@ HILBERT是一个四阶段的层次化框架，专为处理长序列音频-文本
 
 ---
 
-[← 返回 2026-04-20 论文速递](/audio-paper-digest-blog/posts/2026-04-20/)
+[← 返回 2026-04-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-20/)

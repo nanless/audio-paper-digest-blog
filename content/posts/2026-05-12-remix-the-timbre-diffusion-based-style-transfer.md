@@ -202,4 +202,4 @@ MixtureTT是一个端到端的条件生成系统，其输入是一个多声部�
 
 ---
 
-[← 返回 2026-05-12 论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
+[← 返回 2026-05-12 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-12/)

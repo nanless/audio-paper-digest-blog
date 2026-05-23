@@ -192,4 +192,4 @@ ControlFoley的整体架构基于多模态扩散Transformer（MMDiT）。其完�
 
 ---
 
-[← 返回 2026-04-19 论文速递](/audio-paper-digest-blog/posts/2026-04-19/)
+[← 返回 2026-04-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-19/)

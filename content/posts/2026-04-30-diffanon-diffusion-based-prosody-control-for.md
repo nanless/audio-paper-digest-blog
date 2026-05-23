@@ -127,4 +127,4 @@ DiffAnon的整体流程是一个条件扩散去噪过程，旨在从带噪的语
 
 ---
 
-[← 返回 2026-04-30 论文速递](/audio-paper-digest-blog/posts/2026-04-30/)
+[← 返回 2026-04-30 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-30/)

@@ -179,4 +179,4 @@ FormalASR是一个端到端系统，目标是直接将中文语音波形映射�
 
 ---
 
-[← 返回 2026-05-20 论文速递](/audio-paper-digest-blog/posts/2026-05-20/)
+[← 返回 2026-05-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-20/)

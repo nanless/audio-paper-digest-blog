@@ -291,4 +291,4 @@ VoxMind是一个基于StepAudio2微分的端到端语音智能体，其系统状
 
 ---
 
-[← 返回 2026-04-20 论文速递](/audio-paper-digest-blog/posts/2026-04-20/)
+[← 返回 2026-04-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-20/)

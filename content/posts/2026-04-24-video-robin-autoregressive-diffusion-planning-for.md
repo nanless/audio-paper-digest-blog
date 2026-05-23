@@ -163,4 +163,4 @@ Video-Robin是一个文本和视频双条件音乐生成模型，其核心是将
 
 ---
 
-[← 返回 2026-04-24 论文速递](/audio-paper-digest-blog/posts/2026-04-24/)
+[← 返回 2026-04-24 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-24/)

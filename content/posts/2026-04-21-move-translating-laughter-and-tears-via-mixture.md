@@ -156,4 +156,4 @@ MoVE架构建立在预训练的音频大模型Kimi-Audio之上，其核心流程
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

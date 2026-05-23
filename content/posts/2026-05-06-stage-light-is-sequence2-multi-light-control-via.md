@@ -218,4 +218,4 @@ SeqLight是一个两阶段分层框架，整体流程如图1所示。
 
 ---
 
-[← 返回 2026-05-06 论文速递](/audio-paper-digest-blog/posts/2026-05-06/)
+[← 返回 2026-05-06 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-06/)

@@ -322,4 +322,4 @@ LiVeAction是一个端到端的神经压缩编解码器，其核心流程为：�
 
 ---
 
-[← 返回 2026-05-08 论文速递](/audio-paper-digest-blog/posts/2026-05-08/)
+[← 返回 2026-05-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-08/)

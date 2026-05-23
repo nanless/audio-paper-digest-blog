@@ -164,4 +164,4 @@ ProSDD的整体架构基于一个预训练的**XLS-R**（wav2vec 2.0的多语言
 
 ---
 
-[← 返回 2026-04-19 论文速递](/audio-paper-digest-blog/posts/2026-04-19/)
+[← 返回 2026-04-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-19/)

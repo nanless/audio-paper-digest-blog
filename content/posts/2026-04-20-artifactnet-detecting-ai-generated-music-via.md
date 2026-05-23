@@ -150,4 +150,4 @@ ArtifactNet的整体流程是一个两阶段的“特征提取-分类”管道�
 
 ---
 
-[← 返回 2026-04-20 论文速递](/audio-paper-digest-blog/posts/2026-04-20/)
+[← 返回 2026-04-20 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-20/)

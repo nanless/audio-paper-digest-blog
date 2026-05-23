@@ -167,4 +167,4 @@ LIME的作用点在于LLM主干的内部。在每一步自回归解码时，LIME
 
 ---
 
-[← 返回 2026-05-05 论文速递](/audio-paper-digest-blog/posts/2026-05-05/)
+[← 返回 2026-05-05 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-05/)

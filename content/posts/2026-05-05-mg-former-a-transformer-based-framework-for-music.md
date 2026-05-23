@@ -150,4 +150,4 @@ MG-Former的完整流程如图3所示。给定一段音乐的音频特征序列 
 
 ---
 
-[← 返回 2026-05-05 论文速递](/audio-paper-digest-blog/posts/2026-05-05/)
+[← 返回 2026-05-05 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-05/)

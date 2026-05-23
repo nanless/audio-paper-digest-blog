@@ -231,4 +231,4 @@ OmniNFT是一个针对联合音视频生成任务的模态感知在线扩散强�
 
 ---
 
-[← 返回 2026-05-13 论文速递](/audio-paper-digest-blog/posts/2026-05-13/)
+[← 返回 2026-05-13 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-13/)

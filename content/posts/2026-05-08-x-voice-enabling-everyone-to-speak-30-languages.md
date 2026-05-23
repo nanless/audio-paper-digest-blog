@@ -221,4 +221,4 @@ X-Voice是一个端到端的、基于流匹配（Flow-Matching）的非自回归
 
 ---
 
-[← 返回 2026-05-08 论文速递](/audio-paper-digest-blog/posts/2026-05-08/)
+[← 返回 2026-05-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-08/)

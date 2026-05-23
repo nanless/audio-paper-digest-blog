@@ -172,4 +172,4 @@ Sonalyzer-Moz是一个端到端的深度学习框架，旨在从音频（梅尔�
 
 ---
 
-[← 返回 2026-05-19 论文速递](/audio-paper-digest-blog/posts/2026-05-19/)
+[← 返回 2026-05-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-19/)

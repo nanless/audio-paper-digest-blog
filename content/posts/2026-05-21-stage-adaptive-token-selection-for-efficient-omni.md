@@ -218,4 +218,4 @@ SEATS是一个针对全模态大语言模型（om-LLM）推理阶段的、训练
 
 ---
 
-[← 返回 2026-05-21 论文速递](/audio-paper-digest-blog/posts/2026-05-21/)
+[← 返回 2026-05-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-21/)

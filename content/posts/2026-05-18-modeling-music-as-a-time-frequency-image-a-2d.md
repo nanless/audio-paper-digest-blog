@@ -253,4 +253,4 @@ BandTok是一个端到端的音频分词与生成系统，分为两个阶段：�
 
 ---
 
-[← 返回 2026-05-18 论文速递](/audio-paper-digest-blog/posts/2026-05-18/)
+[← 返回 2026-05-18 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-18/)

@@ -207,4 +207,4 @@ e) 数据生成与预处理
 
 ---
 
-[← 返回 2026-05-18 论文速递](/audio-paper-digest-blog/posts/2026-05-18/)
+[← 返回 2026-05-18 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-18/)

@@ -189,4 +189,4 @@ PresentAgent-2是一个多阶段、模块化的智能体系统，旨在完成从
 
 ---
 
-[← 返回 2026-05-14 论文速递](/audio-paper-digest-blog/posts/2026-05-14/)
+[← 返回 2026-05-14 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-14/)

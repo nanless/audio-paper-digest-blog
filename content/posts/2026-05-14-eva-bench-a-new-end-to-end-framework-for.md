@@ -216,4 +216,4 @@ EVA-Bench的创新在于其**系统集成与框架设计**，而非单一算法�
 
 ---
 
-[← 返回 2026-05-14 论文速递](/audio-paper-digest-blog/posts/2026-05-14/)
+[← 返回 2026-05-14 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-14/)

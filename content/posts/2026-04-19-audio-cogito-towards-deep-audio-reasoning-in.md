@@ -141,4 +141,4 @@ Audio-Cogito的模型架构并非全新设计，而是基于现有的强大基�
 
 ---
 
-[← 返回 2026-04-19 论文速递](/audio-paper-digest-blog/posts/2026-04-19/)
+[← 返回 2026-04-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-19/)

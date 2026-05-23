@@ -129,4 +129,4 @@ GaMMA的整体架构继承自LLaVA，是一个典型的“视觉（音频）编�
 
 ---
 
-[← 返回 2026-05-04 论文速递](/audio-paper-digest-blog/posts/2026-05-04/)
+[← 返回 2026-05-04 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-04/)

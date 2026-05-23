@@ -141,4 +141,4 @@ MoVE架构建立在一个预训练的AudioLLM（Kimi-Audio）之上，整体流�
 
 ---
 
-[← 返回 2026-04-23 论文速递](/audio-paper-digest-blog/posts/2026-04-23/)
+[← 返回 2026-04-23 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-23/)

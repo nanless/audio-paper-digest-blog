@@ -180,4 +180,4 @@ MimicLM是一个基于自回归Transformer的端到端语音到语音转换模�
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

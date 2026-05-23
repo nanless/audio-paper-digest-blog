@@ -165,4 +165,4 @@ Video-Robin的整体流程是：输入一个视频V（t帧）和一个文本提�
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

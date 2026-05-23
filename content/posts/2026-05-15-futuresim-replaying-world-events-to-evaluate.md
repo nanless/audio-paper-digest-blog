@@ -215,4 +215,4 @@ FutureSim是一个事件驱动的交互式仿真环境。其核心流程为：�
 
 ---
 
-[← 返回 2026-05-15 论文速递](/audio-paper-digest-blog/posts/2026-05-15/)
+[← 返回 2026-05-15 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-15/)

@@ -145,4 +145,4 @@ LAT-Audio的整体框架如下图所示，其核心是“渐进式全局到局�
 
 ---
 
-[← 返回 2026-04-27 论文速递](/audio-paper-digest-blog/posts/2026-04-27/)
+[← 返回 2026-04-27 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-27/)

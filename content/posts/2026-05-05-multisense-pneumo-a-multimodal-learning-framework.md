@@ -189,4 +189,4 @@ MultiSense-Pneumo 的整体架构如图1所示，是一个并行处理、后期�
 
 ---
 
-[← 返回 2026-05-05 论文速递](/audio-paper-digest-blog/posts/2026-05-05/)
+[← 返回 2026-05-05 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-05/)

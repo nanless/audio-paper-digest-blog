@@ -281,4 +281,4 @@ VocalParse是一个基于Qwen3-ASR（1.7B参数）的自回归模型，旨在将
 
 ---
 
-[← 返回 2026-05-07 论文速递](/audio-paper-digest-blog/posts/2026-05-07/)
+[← 返回 2026-05-07 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-07/)

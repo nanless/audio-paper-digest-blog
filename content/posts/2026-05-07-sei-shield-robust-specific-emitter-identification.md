@@ -186,4 +186,4 @@ SEI-SHIELD训练时间约为CE的12倍，但推理开销相同（因为最终推
 
 ---
 
-[← 返回 2026-05-07 论文速递](/audio-paper-digest-blog/posts/2026-05-07/)
+[← 返回 2026-05-07 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-07/)

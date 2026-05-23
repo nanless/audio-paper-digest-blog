@@ -167,4 +167,4 @@ MANN是一个迭代式的加法模型，整体架构如下：
 
 ---
 
-[← 返回 2026-04-30 论文速递](/audio-paper-digest-blog/posts/2026-04-30/)
+[← 返回 2026-04-30 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-30/)

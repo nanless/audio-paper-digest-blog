@@ -183,4 +183,4 @@ Qwen3.5-Omni采用**Thinker-Talker**双模块架构，实现从多模态输入�
 
 ---
 
-[← 返回 2026-04-22 论文速递](/audio-paper-digest-blog/posts/2026-04-22/)
+[← 返回 2026-04-22 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-22/)

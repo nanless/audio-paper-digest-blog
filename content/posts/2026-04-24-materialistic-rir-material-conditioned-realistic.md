@@ -168,4 +168,4 @@ MatRIR模型采用模块化设计，核心思想是将空间和材料因素对RI
 
 ---
 
-[← 返回 2026-04-24 论文速递](/audio-paper-digest-blog/posts/2026-04-24/)
+[← 返回 2026-04-24 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-24/)

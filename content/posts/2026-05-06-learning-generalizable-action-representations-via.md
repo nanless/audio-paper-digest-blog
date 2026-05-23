@@ -163,4 +163,4 @@ AEMG是一个用于EMG信号自监督预训练的框架，整体流程可分为�
 
 ---
 
-[← 返回 2026-05-06 论文速递](/audio-paper-digest-blog/posts/2026-05-06/)
+[← 返回 2026-05-06 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-06/)

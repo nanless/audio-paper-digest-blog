@@ -204,4 +204,4 @@ NOVA-ARC是一个端到端的几何感知框架，其完整流程如下：
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

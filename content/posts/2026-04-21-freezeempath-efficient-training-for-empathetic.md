@@ -193,4 +193,4 @@ FreezeEmpath的整体架构由三部分组成：**语音理解模块**、**基�
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

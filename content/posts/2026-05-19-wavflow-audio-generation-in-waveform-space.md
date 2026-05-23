@@ -237,4 +237,4 @@ WavFlow提出了一个清晰且具有挑战性的目标——在原始波形空�
 
 ---
 
-[← 返回 2026-05-19 论文速递](/audio-paper-digest-blog/posts/2026-05-19/)
+[← 返回 2026-05-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-19/)

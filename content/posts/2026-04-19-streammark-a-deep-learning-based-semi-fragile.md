@@ -157,4 +157,4 @@ StreamMark采用端到端的**编码器-失真层-解码器**三阶段架构，�
 
 ---
 
-[← 返回 2026-04-19 论文速递](/audio-paper-digest-blog/posts/2026-04-19/)
+[← 返回 2026-04-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-19/)

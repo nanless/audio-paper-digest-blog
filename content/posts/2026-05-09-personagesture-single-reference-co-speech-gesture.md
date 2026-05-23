@@ -199,4 +199,4 @@ PersonaGesture是一个为基于扩散模型的协同语音手势生成器设计
 
 ---
 
-[← 返回 2026-05-09 论文速递](/audio-paper-digest-blog/posts/2026-05-09/)
+[← 返回 2026-05-09 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-09/)

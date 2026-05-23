@@ -188,4 +188,4 @@ SIREM是一个端到端的多模态框架，输入为同步的语音片段（a_t
 
 ---
 
-[← 返回 2026-05-19 论文速递](/audio-paper-digest-blog/posts/2026-05-19/)
+[← 返回 2026-05-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-19/)

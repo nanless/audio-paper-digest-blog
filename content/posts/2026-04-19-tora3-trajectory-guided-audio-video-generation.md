@@ -185,4 +185,4 @@ Tora3基于一个**双流扩散Transformer（DiT）架构**（继承自Ovi），
 
 ---
 
-[← 返回 2026-04-19 论文速递](/audio-paper-digest-blog/posts/2026-04-19/)
+[← 返回 2026-04-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-19/)

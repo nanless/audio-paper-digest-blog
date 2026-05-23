@@ -175,4 +175,4 @@ FedQual是一个用于联邦标签分布学习（Fed-LDL）的框架，旨在解
 
 ---
 
-[← 返回 2026-05-07 论文速递](/audio-paper-digest-blog/posts/2026-05-07/)
+[← 返回 2026-05-07 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-07/)

@@ -167,4 +167,4 @@ PB方法的数学描述（Equations 1-4）清晰。但实验部分的严谨性�
 
 ---
 
-[← 返回 2026-05-18 论文速递](/audio-paper-digest-blog/posts/2026-05-18/)
+[← 返回 2026-05-18 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-18/)

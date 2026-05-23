@@ -179,4 +179,4 @@ MAGIC-TTS建立在一个基于条件流匹配（Conditional Flow Matching）的�
 
 ---
 
-[← 返回 2026-04-24 论文速递](/audio-paper-digest-blog/posts/2026-04-24/)
+[← 返回 2026-04-24 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-24/)

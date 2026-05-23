@@ -161,4 +161,4 @@ LAT-Audio的整体架构是一个“全局-局部”渐进推理框架，基于Q
 
 ---
 
-[← 返回 2026-04-28 论文速递](/audio-paper-digest-blog/posts/2026-04-28/)
+[← 返回 2026-04-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-28/)

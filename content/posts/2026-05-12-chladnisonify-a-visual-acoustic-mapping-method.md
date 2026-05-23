@@ -206,4 +206,4 @@ ChladniSonify是一个面向新媒体艺术创作的端到端实时视觉-声学
 
 ---
 
-[← 返回 2026-05-12 论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
+[← 返回 2026-05-12 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-12/)

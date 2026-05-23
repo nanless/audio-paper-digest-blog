@@ -237,4 +237,4 @@ AudioDEAR的整体架构基于掩码自回归（MAR）连续采样框架，分�
 
 ---
 
-[← 返回 2026-05-04 论文速递](/audio-paper-digest-blog/posts/2026-05-04/)
+[← 返回 2026-05-04 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-04/)

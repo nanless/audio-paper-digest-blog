@@ -124,4 +124,4 @@ CRNN DoA预测性能：论文给出了在不同测试房间和信噪比下的分
 
 ---
 
-[← 返回 2026-04-28 论文速递](/audio-paper-digest-blog/posts/2026-04-28/)
+[← 返回 2026-04-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-28/)

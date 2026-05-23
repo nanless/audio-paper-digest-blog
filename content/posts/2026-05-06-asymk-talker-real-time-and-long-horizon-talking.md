@@ -211,4 +211,4 @@ AsymK-Talker的整体架构旨在实现实时、长时程、高保真的音频�
 
 ---
 
-[← 返回 2026-05-06 论文速递](/audio-paper-digest-blog/posts/2026-05-06/)
+[← 返回 2026-05-06 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-06/)

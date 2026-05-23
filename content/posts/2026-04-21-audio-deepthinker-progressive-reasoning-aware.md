@@ -179,4 +179,4 @@ Audio-DeepThinker并非设计一个新模型，而是提出一个**训练框架*
 
 ---
 
-[← 返回 2026-04-21 论文速递](/audio-paper-digest-blog/posts/2026-04-21/)
+[← 返回 2026-04-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-21/)

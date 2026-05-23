@@ -185,4 +185,4 @@ MSAVBench是一个由**数据集**和**自适应评估框架**构成的综合系
 
 ---
 
-[← 返回 2026-05-21 论文速递](/audio-paper-digest-blog/posts/2026-05-21/)
+[← 返回 2026-05-21 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-21/)

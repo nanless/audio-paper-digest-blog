@@ -212,4 +212,4 @@ SemaVoice是一个端到端的文本到语音合成系统，其整体流程可�
 
 ---
 
-[← 返回 2026-05-19 论文速递](/audio-paper-digest-blog/posts/2026-05-19/)
+[← 返回 2026-05-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-19/)

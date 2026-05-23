@@ -183,4 +183,4 @@ CUCI-Net是一个三阶段、多分支的框架，旨在显式建模并利用上
 
 ---
 
-[← 返回 2026-04-29 论文速递](/audio-paper-digest-blog/posts/2026-04-29/)
+[← 返回 2026-04-29 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-29/)

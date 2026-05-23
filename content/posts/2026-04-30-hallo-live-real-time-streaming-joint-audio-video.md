@@ -166,4 +166,4 @@ Hallo-Live基于一个预训练的文本条件双流扩散Transformer（DiT）�
 
 ---
 
-[← 返回 2026-04-30 论文速递](/audio-paper-digest-blog/posts/2026-04-30/)
+[← 返回 2026-04-30 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-30/)

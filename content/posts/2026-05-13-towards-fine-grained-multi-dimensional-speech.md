@@ -188,4 +188,4 @@ FM-Speech基于Qwen3-Omni-30B-A3B-Instruct（一个30B参数MoE架构模型，�
 
 ---
 
-[← 返回 2026-05-13 论文速递](/audio-paper-digest-blog/posts/2026-05-13/)
+[← 返回 2026-05-13 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-13/)

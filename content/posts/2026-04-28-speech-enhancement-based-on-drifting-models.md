@@ -159,4 +159,4 @@ DriftSE的整体架构如图1所示，核心是训练一个映射函数 $f_\thet
 
 ---
 
-[← 返回 2026-04-28 论文速递](/audio-paper-digest-blog/posts/2026-04-28/)
+[← 返回 2026-04-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-04-28/)

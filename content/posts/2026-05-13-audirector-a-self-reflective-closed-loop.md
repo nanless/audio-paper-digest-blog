@@ -199,4 +199,4 @@ AuDirector在MOS-M（4.00）和MOS-Emo（4.17）上显著优于基线，表明�
 
 ---
 
-[← 返回 2026-05-13 论文速递](/audio-paper-digest-blog/posts/2026-05-13/)
+[← 返回 2026-05-13 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-13/)

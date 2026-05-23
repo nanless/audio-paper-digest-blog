@@ -241,4 +241,4 @@ Text2Score在几乎所有关键指标上都显著优于最强基线。与最具�
 
 ---
 
-[← 返回 2026-05-14 论文速递](/audio-paper-digest-blog/posts/2026-05-14/)
+[← 返回 2026-05-14 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-14/)

@@ -193,4 +193,4 @@ Omni-Customizer是一个基于预训练双流Diffusion Transformer (DiT) 骨干�
 
 ---
 
-[← 返回 2026-05-19 论文速递](/audio-paper-digest-blog/posts/2026-05-19/)
+[← 返回 2026-05-19 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-19/)

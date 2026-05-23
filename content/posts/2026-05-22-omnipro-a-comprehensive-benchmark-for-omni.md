@@ -147,4 +147,4 @@ OmniPro的构建和评估方法可分为两个核心部分：基准数据集构�
 
 ---
 
-[← 返回 2026-05-22 论文速递](/audio-paper-digest-blog/posts/2026-05-22/)
+[← 返回 2026-05-22 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-22/)

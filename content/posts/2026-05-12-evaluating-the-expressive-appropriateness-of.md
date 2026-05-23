@@ -223,4 +223,4 @@ CEAEval-M在所有上下文长度（CTS）设置下都显著优于所有基线�
 
 ---
 
-[← 返回 2026-05-12 论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
+[← 返回 2026-05-12 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-12/)
