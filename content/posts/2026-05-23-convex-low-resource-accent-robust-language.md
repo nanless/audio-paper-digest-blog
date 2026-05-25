@@ -2,7 +2,7 @@
 title: "Convex Low-resource Accent-Robust Language Detection in Speech Recognition"
 date: 2026-05-23
 draft: false
-tags: [**, 凸优化, 语音识别, 语言检测, 低资源, 口音鲁棒性, ADMM]
+tags: [凸优化, 语音识别, 语言检测, 低资源, 口音鲁棒性, ADMM]
 categories: [论文速递]
 description: "** | 7.5/10"
 hiddenInHomeList: true

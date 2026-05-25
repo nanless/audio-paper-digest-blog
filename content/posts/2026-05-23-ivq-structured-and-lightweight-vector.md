@@ -1,14 +1,14 @@
 ---
-title: "IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by \(\\textit{{IChing}}\)"
+title: "IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by IChing"
 date: 2026-05-23
 draft: false
 tags: []
 categories: [论文速递]
-description: "IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by \(\\textit{{IChing}}\)"
+description: "IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by IChing"
 hiddenInHomeList: true
 ---
 
-# 📄 IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by \(\textit{IChing}\)
+# 📄 IVQ: Structured and Lightweight Vector Quantization via Binary Hierarchical Composition Inspired by IChing
 
 📝 **3.2/10** | 后50% | [arxiv](https://icml.cc/virtual/2026/poster/63329)
 
