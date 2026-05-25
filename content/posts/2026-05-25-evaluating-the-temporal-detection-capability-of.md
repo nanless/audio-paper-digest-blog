@@ -4,7 +4,7 @@ date: 2026-05-25
 draft: false
 tags: [音频可解释性]
 categories: [论文速递]
-description: "Evaluating the Temporal Detection Capability of Integrated Gradients Applied on Sound Classifier"
+description: "声音事件检测 | 10/10"
 hiddenInHomeList: true
 ---
 
@@ -12,7 +12,9 @@ hiddenInHomeList: true
 
 #音频可解释性
 
-#声音事件检测 | #集成梯度 | #音频可解释性 | [arxiv](https://arxiv.org/abs/2605.23293v1)
+🔥 **10/10** | 前10% | #声音事件检测 | #集成梯度 | #音频可解释性 | [arxiv](https://arxiv.org/abs/2605.23293v1)
+
+学术质量 7/7 | 影响力 2/2 | 可复现性 2/2
 
 
 ### 👥 作者与机构

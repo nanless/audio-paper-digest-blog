@@ -4,7 +4,7 @@ date: 2026-05-25
 draft: false
 tags: [Weak, Phoneme, GOPT, Active]
 categories: [论文速递]
-description: "A study on weakly-supervised training approaches for phoneme-level pronunciation scoring"
+description: "计算机辅助发音训练 | 9.7/10"
 hiddenInHomeList: true
 ---
 
@@ -12,9 +12,9 @@ hiddenInHomeList: true
 
 #Weak #Phoneme #GOPT #Active
 
-#计算机辅助发音训练 | #弱监督学习 | #Weak #Phoneme | [arxiv](https://arxiv.org/abs/2605.23593v1)
+🔥 **9.7/10** | 前10% | #计算机辅助发音训练 | #弱监督学习 | #Weak #Phoneme | [arxiv](https://arxiv.org/abs/2605.23593v1)
 
-学术质量 3.5/7 | 影响力 4.0/2 | 可复现性 1.0/2 | 置信度 High
+学术质量 6.2/7 | 影响力 1.6/2 | 可复现性 1.9/2 | 置信度 High
 
 
 ### 👥 作者与机构
