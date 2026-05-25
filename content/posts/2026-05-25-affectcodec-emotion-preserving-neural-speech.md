@@ -2,17 +2,17 @@
 title: "AffectCodec: Emotion-Preserving Neural Speech Codec with Block-Diagonal Residual FSQ"
 date: 2026-05-25
 draft: false
-tags: [情感保持, 神经语音编解码, 低比特率音频压缩, 量化器设计]
+tags: [语音编码]
 categories: [论文速递]
-description: "神经语音编解码 | 10/10"
+description: "语音编码 | 10/10"
 hiddenInHomeList: true
 ---
 
 # 📄 AffectCodec: Emotion-Preserving Neural Speech Codec with Block-Diagonal Residual FSQ
 
-#情感保持 #神经语音编解码 #低比特率音频压缩 #量化器设计
+#语音编码
 
-🔥 **10/10** | 前10% | #神经语音编解码 | #块对角残差有限标量量化 (BD-RFSQ) | #情感保持 #低比特率音频压缩 | [arxiv](https://arxiv.org/abs/2605.23373v1)
+🔥 **10/10** | 前10% | #语音编码 | #有限标量量化 #块对角投影 | [arxiv](https://arxiv.org/abs/2605.23373v1)
 
 学术质量 6.6/7 | 影响力 1.8/2 | 可复现性 1.7/2 | 置信度 0.9
 

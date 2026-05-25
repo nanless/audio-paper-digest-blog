@@ -2,7 +2,7 @@
 title: "Natural Yet Challenging to Detect: Robust In-the-Wild TTS through EMA and Dual-Scoring Prompt Selection -- Submission for WildSpoof 2026 TTS Track"
 date: 2026-05-25
 draft: false
-tags: [语音合成, 反欺骗, 模型微调, 数据筛选, 鲁棒性]
+tags: [语音合成, 语音伪造检测, 迁移学习, 数据清洗, 鲁棒性]
 categories: [论文速递]
 description: "语音合成 | 5.2/10"
 hiddenInHomeList: true
@@ -10,9 +10,9 @@ hiddenInHomeList: true
 
 # 📄 Natural Yet Challenging to Detect: Robust In-the-Wild TTS through EMA and Dual-Scoring Prompt Selection -- Submission for WildSpoof 2026 TTS Track
 
-#语音合成 #反欺骗 #模型微调 #数据筛选 #鲁棒性
+#语音合成 #语音伪造检测 #迁移学习 #数据清洗 #鲁棒性
 
-📝 **5.2/10** | 后50% | #语音合成 | #模型微调 | #反欺骗 #数据筛选 | [arxiv](https://arxiv.org/abs/2605.23859v1)
+📝 **5.2/10** | 后50% | #语音合成 | #迁移学习 | #语音伪造检测 #数据清洗 | [arxiv](https://arxiv.org/abs/2605.23859v1)
 
 学术质量 3.7/7 | 影响力 0.8/2 | 可复现性 0.7/2 | 置信度 0.8
 

@@ -2,17 +2,17 @@
 title: "MixFake: Benchmarking and Enhancing Audio Deepfake Detection in Diverse Real-world Mixed Audio"
 date: 2026-05-25
 draft: false
-tags: [音频深度伪造检测, 混合音频, 自监督学习, 提示调优, 基准数据集]
+tags: [音频深度伪造检测, 自监督学习, 提示学习, 数据集]
 categories: [论文速递]
-description: "混合音频伪造检测 | 10/10"
+description: "音频深度伪造检测 | 10/10"
 hiddenInHomeList: true
 ---
 
 # 📄 MixFake: Benchmarking and Enhancing Audio Deepfake Detection in Diverse Real-world Mixed Audio
 
-#音频深度伪造检测 #混合音频 #自监督学习 #提示调优 #基准数据集
+#音频深度伪造检测 #自监督学习 #提示学习 #数据集
 
-🔥 **10/10** | 前10% | #混合音频伪造检测 | #多流提示调优 | #音频深度伪造检测 #混合音频 | [arxiv](https://arxiv.org/abs/2605.23201v1)
+🔥 **10/10** | 前10% | #音频深度伪造检测 | #多流提示调优 | #自监督学习 #提示学习 | [arxiv](https://arxiv.org/abs/2605.23201v1)
 
 学术质量 6.9/7 | 影响力 2/2 | 可复现性 2/2 | 置信度 high
 

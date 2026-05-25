@@ -2,17 +2,17 @@
 title: "Broad learning system with robust adaptive kernel"
 date: 2026-05-25
 draft: false
-tags: [宽学习系统, 鲁棒回归, 自适应损失函数, M-estimator, 非高斯噪声]
+tags: [信号处理]
 categories: [论文速递]
-description: "回归任务 | 8.7/10"
+description: "信号处理 | 8.7/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Broad learning system with robust adaptive kernel
 
-#宽学习系统 #鲁棒回归 #自适应损失函数 #M-estimator #非高斯噪声
+#信号处理
 
-🔥 **8.7/10** | 前25% | #回归任务 | #鲁棒自适应核 | #宽学习系统 #鲁棒回归 | [arxiv](https://arxiv.org/abs/2605.23495v1)
+🔥 **8.7/10** | 前25% | #信号处理 | #信号处理 | [arxiv](https://arxiv.org/abs/2605.23495v1)
 
 学术质量 6.7/7 | 影响力 1.2/2 | 可复现性 0.8/2
 

@@ -2,17 +2,17 @@
 title: "Articulatory strategy as a source of variation in acoustic vowel dynamics"
 date: 2026-05-25
 draft: false
-tags: [语音学, 发音策略, 超声舌成像, 元音动态, 个体差异, 统计建模]
+tags: [语音识别]
 categories: [论文速递]
-description: "语音分析 | 8.5/10"
+description: "语音识别 | 8.5/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Articulatory strategy as a source of variation in acoustic vowel dynamics
 
-#语音学 #发音策略 #超声舌成像 #元音动态 #个体差异 #统计建模
+#语音识别
 
-🔥 **8.5/10** | 前25% | #语音分析 | #发音-声学建模 | #语音学 #发音策略 | [arxiv](https://arxiv.org/abs/2605.23416v1)
+🔥 **8.5/10** | 前25% | #语音识别 | #发音-声学建模 | [arxiv](https://arxiv.org/abs/2605.23416v1)
 
 学术质量 5/7 | 影响力 1.5/2 | 可复现性 2/2 | 置信度 高
 

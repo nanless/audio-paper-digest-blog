@@ -2,17 +2,17 @@
 title: "Copula-Induced Correntropy for Robust Conjugate Gradient Learning"
 date: 2026-05-25
 draft: false
-tags: [鲁棒学习, 相关性建模, 信息论学习, 共轭梯度优化, Copula理论]
+tags: [信号处理]
 categories: [论文速递]
-description: "鲁棒自适应滤波 | 7/10"
+description: "信号处理 | 7/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Copula-Induced Correntropy for Robust Conjugate Gradient Learning
 
-#鲁棒学习 #相关性建模 #信息论学习 #共轭梯度优化 #Copula理论
+#信号处理
 
-✅ **7/10** | 前50% | #鲁棒自适应滤波 | #Copula诱导的Correntropy准则 | #鲁棒学习 #相关性建模 | [arxiv](https://arxiv.org/abs/2605.23044v1)
+✅ **7/10** | 前50% | #信号处理 | #信号处理 | [arxiv](https://arxiv.org/abs/2605.23044v1)
 
 学术质量 6/7 | 影响力 0.8/2 | 可复现性 0.2/2
 

@@ -2,17 +2,17 @@
 title: "A study on weakly-supervised training approaches for phoneme-level pronunciation scoring"
 date: 2026-05-25
 draft: false
-tags: [Weak, Phoneme, GOPT, Active]
+tags: [语音识别]
 categories: [论文速递]
-description: "计算机辅助发音训练 | 9.7/10"
+description: "语音识别 | 9.7/10"
 hiddenInHomeList: true
 ---
 
 # 📄 A study on weakly-supervised training approaches for phoneme-level pronunciation scoring
 
-#Weak #Phoneme #GOPT #Active
+#语音识别
 
-🔥 **9.7/10** | 前10% | #计算机辅助发音训练 | #弱监督学习 | #Weak #Phoneme | [arxiv](https://arxiv.org/abs/2605.23593v1)
+🔥 **9.7/10** | 前10% | #语音识别 | #Weakly Supervised Learning | [arxiv](https://arxiv.org/abs/2605.23593v1)
 
 学术质量 6.2/7 | 影响力 1.6/2 | 可复现性 1.9/2 | 置信度 High
 

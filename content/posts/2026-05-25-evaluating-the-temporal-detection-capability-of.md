@@ -2,17 +2,17 @@
 title: "Evaluating the Temporal Detection Capability of Integrated Gradients Applied on Sound Classifier"
 date: 2026-05-25
 draft: false
-tags: [音频可解释性]
+tags: [音频分类]
 categories: [论文速递]
-description: "声音事件检测 | 10/10"
+description: "音频分类 | 10/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Evaluating the Temporal Detection Capability of Integrated Gradients Applied on Sound Classifier
 
-#音频可解释性
+#音频分类
 
-🔥 **10/10** | 前10% | #声音事件检测 | #集成梯度 | #音频可解释性 | [arxiv](https://arxiv.org/abs/2605.23293v1)
+🔥 **10/10** | 前10% | #音频分类 | #音频分类 | [arxiv](https://arxiv.org/abs/2605.23293v1)
 
 学术质量 7/7 | 影响力 2/2 | 可复现性 2/2
 

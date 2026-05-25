@@ -2,7 +2,7 @@
 title: "UniSRM: A Unified Speech Reward Model for Reasoning-Based Fine-grained Assessment"
 date: 2026-05-25
 draft: false
-tags: [语音评估, 奖励模型, 强化学习, 多任务学习, 推理一致性]
+tags: [语音质量评估, 强化学习, 多任务学习, 模型评估]
 categories: [论文速递]
 description: "语音质量评估 | 10/10"
 hiddenInHomeList: true
@@ -10,9 +10,9 @@ hiddenInHomeList: true
 
 # 📄 UniSRM: A Unified Speech Reward Model for Reasoning-Based Fine-grained Assessment
 
-#语音评估 #奖励模型 #强化学习 #多任务学习 #推理一致性
+#语音质量评估 #强化学习 #多任务学习 #模型评估
 
-🔥 **10/10** | 前10% | #语音质量评估 | #基于推理的统一奖励模型 | #语音评估 #奖励模型 | [arxiv](https://arxiv.org/abs/2605.23261v1)
+🔥 **10/10** | 前10% | #语音质量评估 | #统一多任务强化学习 | #强化学习 #多任务学习 | [arxiv](https://arxiv.org/abs/2605.23261v1)
 
 学术质量 7/7 | 影响力 1.5/2 | 可复现性 2/2 | 置信度 0.8
 

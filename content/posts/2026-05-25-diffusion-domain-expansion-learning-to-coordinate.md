@@ -2,17 +2,17 @@
 title: "Diffusion Domain Expansion: Learning to Coordinate Pre-trained Diffusion Models"
 date: 2026-05-25
 draft: false
-tags: [扩散模型, 生成模型, 模型协调, 预训练模型复用]
+tags: [扩散模型, 生成模型, 模型融合, 迁移学习]
 categories: [论文速递]
-description: "多条件图像生成 | 7.4/10"
+description: "扩散模型 | 7.4/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Diffusion Domain Expansion: Learning to Coordinate Pre-trained Diffusion Models
 
-#扩散模型 #生成模型 #模型协调 #预训练模型复用
+#扩散模型 #生成模型 #模型融合 #迁移学习
 
-✅ **7.4/10** | 前50% | #多条件图像生成 | #可训练协调器 | #扩散模型 #生成模型 | [arxiv](https://arxiv.org/abs/2605.23275v1)
+✅ **7.4/10** | 前50% | #扩散模型 | #生成模型 | #模型融合 #迁移学习 | [arxiv](https://arxiv.org/abs/2605.23275v1)
 
 学术质量 5.4/7 | 影响力 1.2/2 | 可复现性 0.8/2
 

@@ -2,17 +2,17 @@
 title: "Frame-Aligned Fusion of Canary and WavLM for Non-Intrusive Intelligibility Prediction of Hearing-Aid-Processed Speech"
 date: 2026-05-25
 draft: false
-tags: [语音处理, 可懂度预测, 多模态融合, 预训练模型]
+tags: [语音质量评估, 多模态模型, 预训练]
 categories: [论文速递]
-description: "非侵入式语音可懂度预测 | 10/10"
+description: "语音质量评估 | 10/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Frame-Aligned Fusion of Canary and WavLM for Non-Intrusive Intelligibility Prediction of Hearing-Aid-Processed Speech
 
-#语音处理 #可懂度预测 #多模态融合 #预训练模型
+#语音质量评估 #多模态模型 #预训练
 
-🔥 **10/10** | 前10% | #非侵入式语音可懂度预测 | #帧对齐融合 #预训练编码器融合 | #语音处理 #可懂度预测 | [arxiv](https://arxiv.org/abs/2605.23619v1)
+🔥 **10/10** | 前10% | #语音质量评估 | #帧对齐融合 | #多模态模型 #预训练 | [arxiv](https://arxiv.org/abs/2605.23619v1)
 
 学术质量 7/7 | 影响力 2/2 | 可复现性 2/2 | 置信度 0.9
 

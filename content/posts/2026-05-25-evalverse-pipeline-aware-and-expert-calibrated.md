@@ -2,17 +2,17 @@
 title: "EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation"
 date: 2026-05-25
 draft: false
-tags: [视频生成, 评估基准, 人类对齐, 视觉语言模型, 电影制作流程]
+tags: [音视频, 基准测试, 模型评估, 多模态模型]
 categories: [论文速递]
-description: "视频生成评估 | 7.1/10"
+description: "音视频 | 7.1/10"
 hiddenInHomeList: true
 ---
 
 # 📄 EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation
 
-#视频生成 #评估基准 #人类对齐 #视觉语言模型 #电影制作流程
+#音视频 #基准测试 #模型评估 #多模态模型
 
-✅ **7.1/10** | 前50% | #视频生成评估 | #专家校准VLM评分 | #视频生成 #评估基准 | [arxiv](https://arxiv.org/abs/2605.23271v1)
+✅ **7.1/10** | 前50% | #音视频 | #专家校准VLM评分 | #基准测试 #模型评估 | [arxiv](https://arxiv.org/abs/2605.23271v1)
 
 学术质量 5.9/7 | 影响力 1/2 | 可复现性 0.2/2 | 置信度 High
 

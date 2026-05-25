@@ -2,17 +2,17 @@
 title: "Convex Low-resource Accent-Robust Language Detection in Speech Recognition"
 date: 2026-05-25
 draft: false
-tags: [凸优化, 语音识别, 低资源学习, 鲁棒性]
+tags: [语音识别, 低资源, 鲁棒性]
 categories: [论文速递]
-description: "语音语言检测 | 7.5/10"
+description: "语音识别 | 7.5/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Convex Low-resource Accent-Robust Language Detection in Speech Recognition
 
-#凸优化 #语音识别 #低资源学习 #鲁棒性
+#语音识别 #低资源 #鲁棒性
 
-✅ **7.5/10** | 前25% | #语音语言检测 | #凸神经网络 #ADMM优化 | #凸优化 #语音识别 | [arxiv](https://arxiv.org/abs/2605.23235v1)
+✅ **7.5/10** | 前25% | #语音识别 | #凸优化 | #低资源 #鲁棒性 | [arxiv](https://arxiv.org/abs/2605.23235v1)
 
 学术质量 4.8/7 | 影响力 1.2/2 | 可复现性 1.5/2 | 置信度 8.5
 

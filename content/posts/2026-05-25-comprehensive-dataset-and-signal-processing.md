@@ -2,17 +2,17 @@
 title: "Comprehensive Dataset and Signal Processing Framework for Phonocardiogram-Based Heart Rate and Blood Pressure Estimation"
 date: 2026-05-25
 draft: false
-tags: [心音图, 心率估计, 血压估计, 低成本设备, 生物医学信号处理]
+tags: [医疗音频, 工业应用]
 categories: [论文速递]
-description: "非侵入式生理参数估计 | 8/10"
+description: "医疗音频 | 8/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Comprehensive Dataset and Signal Processing Framework for Phonocardiogram-Based Heart Rate and Blood Pressure Estimation
 
-#心音图 #心率估计 #血压估计 #低成本设备 #生物医学信号处理
+#医疗音频 #工业应用
 
-🔥 **8/10** | 前25% | #非侵入式生理参数估计 | #信号包络检测 #多元回归 | #心音图 #心率估计 | [arxiv](https://arxiv.org/abs/2605.23516v1)
+🔥 **8/10** | 前25% | #医疗音频 | #工业应用 | [arxiv](https://arxiv.org/abs/2605.23516v1)
 
 学术质量 5.4/7 | 影响力 1.5/2 | 可复现性 1.1/2
 

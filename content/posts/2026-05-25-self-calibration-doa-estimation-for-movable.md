@@ -2,17 +2,17 @@
 title: "Self-Calibration DOA Estimation for Movable Antenna Systems with Antenna Position Errors"
 date: 2026-05-25
 draft: false
-tags: [阵列信号处理, 波达方向估计, 可移动天线, 位置误差, 自校准]
+tags: [信号处理, 声源定位]
 categories: [论文速递]
-description: "波达方向估计 | 4/10"
+description: "声源定位 | 4/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Self-Calibration DOA Estimation for Movable Antenna Systems with Antenna Position Errors
 
-#阵列信号处理 #波达方向估计 #可移动天线 #位置误差 #自校准
+#信号处理 #声源定位
 
-📝 **4/10** | 后50% | #波达方向估计 | #交替优化 | #阵列信号处理 #可移动天线 | [arxiv](https://arxiv.org/abs/2605.23140v1)
+📝 **4/10** | 后50% | #声源定位 | #信号处理 | [arxiv](https://arxiv.org/abs/2605.23140v1)
 
 学术质量 3.5/7 | 影响力 0.2/2 | 可复现性 0.3/2 | 置信度 0.5
 

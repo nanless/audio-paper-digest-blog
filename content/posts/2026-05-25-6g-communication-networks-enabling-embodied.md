@@ -2,17 +2,17 @@
 title: "6G Communication Networks Enabling Embodied Agents: Architecture and Prototype"
 date: 2026-05-25
 draft: false
-tags: [通信网络, 具身智能体, 6G, O-RAN, 原型验证, 机器人控制, 人机交互]
+tags: [信号处理, 工业应用, 智能座舱]
 categories: [论文速递]
-description: "通信系统架构设计 | 2.7/10"
+description: "信号处理 | 2.7/10"
 hiddenInHomeList: true
 ---
 
 # 📄 6G Communication Networks Enabling Embodied Agents: Architecture and Prototype
 
-#通信网络 #具身智能体 #6G #O-RAN #原型验证 #机器人控制 #人机交互
+#信号处理 #工业应用 #智能座舱
 
-📝 **2.7/10** | 后50% | #通信系统架构设计 | #系统原型验证 | #通信网络 #具身智能体 | [arxiv](https://arxiv.org/abs/2605.23263v1)
+📝 **2.7/10** | 后50% | #信号处理 | #工业应用 | #智能座舱 | [arxiv](https://arxiv.org/abs/2605.23263v1)
 
 学术质量 2/7 | 影响力 0.2/2 | 可复现性 0.5/2
 

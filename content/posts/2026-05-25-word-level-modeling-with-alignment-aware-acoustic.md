@@ -2,17 +2,17 @@
 title: "Word-Level Modeling with Alignment-Aware Acoustic Fusion for Text-Assisted Intelligibility Prediction in Listeners with Hearing Loss"
 date: 2026-05-25
 draft: false
-tags: [听障语音可懂度预测, 文本辅助预测, 词级建模, 声学融合, Whisper, 对齐感知]
+tags: [语音质量评估, 语音识别, 信号处理, 注意力机制]
 categories: [论文速递]
-description: "听障语音可懂度预测 | 7.7/10"
+description: "语音质量评估 | 7.7/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Word-Level Modeling with Alignment-Aware Acoustic Fusion for Text-Assisted Intelligibility Prediction in Listeners with Hearing Loss
 
-#听障语音可懂度预测 #文本辅助预测 #词级建模 #声学融合 #Whisper #对齐感知
+#语音质量评估 #语音识别 #信号处理 #注意力机制
 
-✅ **7.7/10** | 前25% | #听障语音可懂度预测 | #参考条件化词级正确性建模 | #文本辅助预测 #词级建模 | [arxiv](https://arxiv.org/abs/2605.23604v1)
+✅ **7.7/10** | 前25% | #语音质量评估 | #词级正确性建模与声学融合 | #语音识别 #信号处理 | [arxiv](https://arxiv.org/abs/2605.23604v1)
 
 学术质量 5.8/7 | 影响力 1.2/2 | 可复现性 0.7/2 | 置信度 0.9
 

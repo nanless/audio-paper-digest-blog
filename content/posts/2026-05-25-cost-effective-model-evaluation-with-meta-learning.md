@@ -2,17 +2,17 @@
 title: "Cost-Effective Model Evaluation with Meta-Learning"
 date: 2026-05-25
 draft: false
-tags: [元学习, 模型评估, 分布偏移, 成本效益, 数据集构建]
+tags: [迁移学习, 模型评估, 领域适应, 数据集]
 categories: [论文速递]
-description: "模型性能预测 | 5.4/10"
+description: "迁移学习 | 5.4/10"
 hiddenInHomeList: true
 ---
 
 # 📄 Cost-Effective Model Evaluation with Meta-Learning
 
-#元学习 #模型评估 #分布偏移 #成本效益 #数据集构建
+#迁移学习 #模型评估 #领域适应 #数据集
 
-📝 **5.4/10** | 后50% | #模型性能预测 | #元学习框架 | #元学习 #模型评估 | [arxiv](https://arxiv.org/abs/2605.23595v1)
+📝 **5.4/10** | 后50% | #迁移学习 | #meta_learning | #模型评估 #领域适应 | [arxiv](https://arxiv.org/abs/2605.23595v1)
 
 学术质量 4.8/7 | 影响力 0.3/2 | 可复现性 0.3/2 | 置信度 0.7
 
