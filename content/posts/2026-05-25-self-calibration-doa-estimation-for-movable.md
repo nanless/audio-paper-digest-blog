@@ -50,6 +50,10 @@ hiddenInHomeList: true
 系统模型与问题形成：
 考虑一个包含\(M\)个可移动天线的阵列，其中\(M_c\)个为已校准（位置已知，无误差），其余天线位置存在未知误差\(\Delta \bm{P} = [\Delta \bm{x}, \Delta \bm{y}]\)。\(K\)个不相关的窄带信号源入射。接收信号\(\bm{Z} = \bm{A}(\bm{\theta}, \bm{P})\bm{S} + \bm{N}\)，其协方差矩阵为\(\bm{R}_Z\)。通过对\(\bm{R}_Z\)进行特征分解，得到噪声子空间\(\bm{E}_N\)。基于噪声子空间与信号导向矢量的正交性\(\|\bm{E}_N^H \bm{a}(\theta_k, \bm{P})\|_F^2 = 0\)，将问题形式化为优化问题（P1）：\(\min_{\theta_k, \bm{P}} \bm{a}(\theta_k, \bm{P})^H \bm{E}_N \bm{E}_N^H \bm{a}(\theta_k, \bm{P})\)，并满足校准天线的APE为零的约束。
 
+
+![图1](https://arxiv.org/html/2605.23140v1/x1.png)
+
+
 核心算法：交替优化（AO）自校准：
 算法在每次迭代中交替执行两个阶段：
 1.  阶段一：DOA估计（固定APE）
@@ -67,12 +71,23 @@ hiddenInHomeList: true
     *   输入：噪声子空间\(\bm{E}_N\)，DOA估计\(\hat{\bm{\theta}}^{(l)}\)，标称位置\(\bm{\tilde{P}}\)，扰动参数\(\varepsilon\)。
     *   输出：APE估计\(\Delta \hat{\bm{P}}^{(l)}\)，随后更新位置估计\(\hat{\bm{P}}^{(l)} = \Delta \hat{\bm{P}}^{(l)} + \bm{\tilde{P}}\)。
 
+
+![图2](https://arxiv.org/html/2605.23140v1/x2.png)
+
+
 收敛与迭代：两个阶段交替执行，直到DOA估计的变化量\(\|\hat{\bm{\theta}}^{(l)} - \hat{\bm{\theta}}^{(l-1)}\|_F^2\)小于预设阈值\(\delta\)，或达到最大迭代次数\(L\)。算法初始化使用基于原始（含误差）数据估计的噪声子空间进行MUSIC搜索得到的DOA。
 
 数据流：接收信号 \(\to\) 计算协方差矩阵 \(\to\) 特征分解得 \(\bm{E}_N\) \(\to\) 进入迭代循环：
 1.  （\(\bm{E}_N\), \(\hat{\bm{P}}\)）\(\to\) 阶段一（MUSIC）\(\to\) 新\(\hat{\bm{\theta}}\)
 2.  （\(\bm{E}_N\), \(\hat{\bm{\theta}}\), \(\bm{\tilde{P}}\), \(\varepsilon\)）\(\to\) 阶段二（扰动+拉格朗日+最小二乘）\(\to\) 新\(\Delta \hat{\bm{P}}\) \(\to\) 更新\(\hat{\bm{P}}\)
 3.  检查收敛条件，决定是否返回步骤1。
+
+
+![图3](https://arxiv.org/html/2605.23140v1/x3.png)
+
+
+
+![图4](https://arxiv.org/html/2605.23140v1/x4.png)
 
 ### 💡 核心创新点
 
@@ -115,17 +130,6 @@ hiddenInHomeList: true
 3.  模型与假设局限性：1) 假设信号为窄带、不相干。未讨论宽带或相干信号（如多径环境）下的性能。2) 噪声为均匀白高斯噪声，未考虑色噪声或干扰。3) APE模型假设误差在\(x\)和\(y\)轴独立同分布，这是仿真设置，实际系统中的误差分布可能更复杂。
 4.  实验设计不足：1) 对比基线缺乏竞争力，无法证明方法相对于现有校准技术的优势。2) 未评估APE的估计误差，这是验证自校准效果的直接指标。3) 仿真参数固定，未探究算法性能对阵元数\(M\)、校准比例\(M_c\)、移动区域\(H\)、信源相关性等因素的敏感性。4) 成功率判据（误差\(\leq 0.5^\circ\)）较宽松，且未给出统计置信区间。
 5.  结论表述：论文结论中“significantly outperforms conventional approaches”和“achieving robust and accurate DOA estimation”的表述可能过于强硬。鉴于实验对比的局限性和理论分析的缺乏，其“优越性”和“鲁棒性”声明需要更全面的验证。
-
-### 📷 论文图片
-
-![图1](https://arxiv.org/html/2605.23140v1/x1.png)
-
-![图2](https://arxiv.org/html/2605.23140v1/x2.png)
-
-![图3](https://arxiv.org/html/2605.23140v1/x3.png)
-
-![图4](https://arxiv.org/html/2605.23140v1/x4.png)
-
 
 ---
 

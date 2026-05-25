@@ -45,6 +45,10 @@ hiddenInHomeList: true
 1. 问题定义与符号表示
 考虑一个非线性回归模型 \(\mathbf{y}_n = f(\mathbf{x}_n; \mathbf{w})\)，其中 \(\mathbf{x}_n\) 为输入，\(\mathbf{w}\) 为参数，\(\mathbf{d}_n\) 为期望输出。残差向量为 \(\mathbf{e}_n = \mathbf{d}_n - \mathbf{y}_n \in \mathbb{R}^p\)。论文关注的是当残差分量\(\{e_{n,i}\}_{i=1}^p\)既存在重尾分布又相互依赖时的参数\(\mathbf{w}\)估计问题。
 
+
+![图1](https://arxiv.org/html/2605.23044v1/x1.png)
+
+
 2. 核心组件：Copula变换与依赖度量
 这是方法最关键的一步，目的是从残差中分离出依赖结构信息。
 - 边际累积分布函数(CDF)估计：对于每个残差分量\(e_{n,i}\)，使用核密度估计(KDE)方法获得其平滑的边际PDF \(\widehat{f}_i(\cdot)\) 和 CDF \(\widehat{F}_i(\cdot)\)。这保证了变换的可微性，是后续梯度计算的基础。
@@ -59,6 +63,10 @@ hiddenInHomeList: true
 - 依赖惩罚项：\(\psi_{\rm dep}(\mathbf{u}_n) = (\rho_n + \delta)^{\alpha/2}\)。这里\(\rho_n\)来自copula空间，\(\alpha \in (0,2]\)控制尾部鲁棒性（值越小越鲁棒），\(\delta > 0\)是一个小的平滑常数，用于避免\(\alpha<2\)时\(\rho_n=0\)处的导数奇异性。该项惩罚了依赖模式与中心\(\mathbf{u}_0\)的偏离。
 - 整体解读：指数核内的混合项赋予了每个样本一个权重\(\kappa_n\)。权重不仅取决于残差的绝对大小（通过\(\psi_{\rm marg}\)），还取决于残差在依赖空间中是否异常（通过\(\psi_{\rm dep}\)）。因此，一个样本如果残差大或者依赖模式异常，其权重就会降低，从而抑制其对参数更新的影响，实现了对相关重尾噪声的鲁棒性。
 
+
+![图2](https://arxiv.org/html/2605.23044v1/x2.png)
+
+
 4. 优化算法：CIC-CG
 算法采用非线性共轭梯度法(NLCG)最小化\(J_{\gamma}(\mathbf{w})\)。
 - 梯度计算：基于链式法则推导出式(30)的梯度表达式。梯度包含两项：一项来自边际项，依赖于雅可比矩阵\(\mathbf{J}_n\)和残差\(\mathbf{e}_n\)；另一项来自依赖项，依赖于\(\mathbf{J}_n\)、copula变换的雅可比\(\mathbf{D}_n\)（对角矩阵，元素为\(\widehat{f}_i(e_{n,i})\)）以及依赖方向\(\Sigma^{-1}\mathbf{s}_n\)（\(\mathbf{s}_n = \mathbf{u}_n - \mathbf{u}_0\)）。
@@ -68,6 +76,17 @@ hiddenInHomeList: true
 
 5. 收敛性分析
 分析针对“固定估计器子问题”。在假设模型映射光滑（雅可比有界Lipschitz）、边际CDF估计器固定且光滑（\(\widehat{f}_i\)有界Lipschitz）、依赖矩阵\(\Sigma\)固定正定、以及正则化参数\(\delta>0\)（当\(\alpha<2\)）的条件下，证明了梯度的Lipschitz连续性（Lemma 2）、PRP+方向结合重启的充分下降性（Lemma 3），并最终在方向有界假设（Assumption 6）下，通过强Wolfe线搜索和Zoutendijk定理，证明了固定目标下梯度序列的极限为零（Theorem 1）。此结论仅适用于每个估计器固定的CG优化块，不保证包含估计器刷新的整个非平稳序列的收敛性。
+
+
+![图3](https://arxiv.org/html/2605.23044v1/x3.png)
+
+
+
+![图4](https://arxiv.org/html/2605.23044v1/x4.png)
+
+
+
+![图5](https://arxiv.org/html/2605.23044v1/x5.png)
 
 ### 💡 核心创新点
 
@@ -114,19 +133,6 @@ hiddenInHomeList: true
 4.  实验场景单一：所有实验在精心构造的合成数据上进行，噪声模型为Student’s-t copula，这恰好是方法设计所假设的场景。缺乏在真实世界数据（如图像、传感器信号、生物医学数据等）上的验证，这些数据中的噪声和依赖结构可能远比模型假设的复杂。此外，模型仅限于简单的MLP，未验证在更复杂模型（如深度网络、循环网络）上的有效性。
 5.  与SOTA方法的比较深度不足：虽然与MSE、Huber、Student’s-t和MCC进行了比较，但缺乏与近年来其他先进的鲁棒学习或copula方法的对比。例如，在鲁棒优化领域，是否有考虑相关性的损失函数？在copula学习中，是否有更灵活的依赖建模方法用于参数估计？比较的基准相对经典，可能高估了方法的相对优势。
 6.  评估指标未提供数值：实验结果全部以曲线图形式呈现（图1-5），虽然直观，但缺乏精确的数值表格（如各方法在特定\(\rho\)和\(\nu\)下的RMSE、Q95均值和标准差）。这使得难以量化性能提升的具体幅度，也不利于不同工作之间的精确比较。
-
-### 📷 论文图片
-
-![图1](https://arxiv.org/html/2605.23044v1/x1.png)
-
-![图2](https://arxiv.org/html/2605.23044v1/x2.png)
-
-![图3](https://arxiv.org/html/2605.23044v1/x3.png)
-
-![图4](https://arxiv.org/html/2605.23044v1/x4.png)
-
-![图5](https://arxiv.org/html/2605.23044v1/x5.png)
-
 
 ---
 

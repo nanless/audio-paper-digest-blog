@@ -51,6 +51,25 @@ StepAudio 2.5的核心架构是一个共享的音频-语言骨干，采用非对
 2.  TTS（文本到音频）：文本和控制指令条件化解码器生成音频词元或中间音频表示。其特化完全移除了编码器-适配器模块，将语音合成为一个纯下一词元预测（NTP）任务。训练流程包括：a) SFT：采用两阶段方法，先进行大规模全局指令监督的零样本TTS训练，再使用包含全局和行内指令的高质量录制语音数据进行细粒度控制训练。b) RLHF：引入生成奖励模型（GRM）\(r_{\phi}\)，其对候选响应\(y\)与参考响应\(y^{}\)进行成对质量评估，并生成奖励分数\(r_{hf}(x,y,y^{})=s\!\left(r_{\phi}(x,y,y^{*})\right)\)，用于策略优化，以提升模型对复杂指令的遵循度和生成语音的自然度与表现力。
 3.  Realtime（音频到音频交互）：模型在严格的轮级延迟约束下耦合音频理解和响应生成，同时维护对话状态、角色一致性和上下文适当性。其特化无需修改骨干架构，而是通过一个渐进式训练流水线实现：a) 音频中心化中训练：继承自基础模型，提供感知和推理基础。b) 渐进式SFT：分三个维度注入交互能力——对话对齐（训练多轮连续性、处理口语现象）、角色与风格控制（基于百万级人设矩阵训练条件生成）、副语言敏感性（训练识别和响应犹豫、笑声等线索）。整个阶段采用动态复述计划，交错训练交互数据和通用数据以防止遗忘。c) RLHF：采用带KL正则化的PPO风格目标，使用生成奖励模型和明确的交互评分标准来优化对话连贯性、角色忠实度等难以通过单一示范优化的属性。
 
+
+![图1](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-unified-foundation-architecture.png)
+
+
+
+![图2](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-asr-mtp-architecture.png)
+
+
+
+![图3](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-asr-data-pipeline.png)
+
+
+
+![图4](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-tts-arena.png)
+
+
+
+![图5](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-realtime-evaluation.png)
+
 ### 💡 核心创新点
 
 1.  统一的操作机制视角：��确提出并实践了“任务特化源于操作机制（数据、优化目标、解码约束）而非架构差异”的建模理念，将ASR、TTS和实时交互视为对同一多模态记忆的三种方向性查询。
@@ -131,19 +150,6 @@ TTS数据：SFT数据包括两类：1）模型合成数据：使用Step-Audio-Ed
 4.  可复现性障碍：未开源模型、代码和完整训练数据，使得独立验证和后续研究几乎不可能，严重影响了工作的可复现性。
 5.  未讨论潜在风险：论文未讨论该统一架构在极端噪声、方言或对抗性输入下的鲁棒性，也未明确分析任务间可能的性能冲突或负迁移现象。
 6.  TTS胜率表述：原文明确为“67.6% overall win rate”，已有分析误写为“69.1%”，此处已修正。
-
-### 📷 论文图片
-
-![图1](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-unified-foundation-architecture.png)
-
-![图2](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-asr-mtp-architecture.png)
-
-![图3](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-asr-data-pipeline.png)
-
-![图4](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-tts-arena.png)
-
-![图5](https://arxiv.org/html/2605.23463v1/figures/stepaudio25-realtime-evaluation.png)
-
 
 ---
 

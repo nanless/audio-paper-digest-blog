@@ -87,6 +87,10 @@ MetaEvaluator的方法流程分为两大阶段：元数据集构建与元学习�
 - Text2SQL领域：从真实数据库表（如TabLib, KaggleDBQA）出发，经过获取、精炼和合成步骤，构建多样化的数据库。利用SQL生成器（如SQLForge, PARSQL）和语义保持改写，生成覆盖简单投影到复杂嵌套分析的SQL查询。同时，通过模仿真实场景（如正式、口语、模糊等）和注入噪声（来自KaggleDBQA, BIRD），为每个SQL生成多个自然语言问句。整个过程旨在模拟真实的模式演进、SQL结构变化和语言偏移。
 - 图像分类领域：构建了一个多阶段、保持标签的图像生成流程。首先，为每个类别收集多样种子图像，并使用CLIP进行筛选以移除模糊样本。然后，借鉴EvolveDirector和指令引导的图像编辑方法，由一个视觉-语言控制器提议编辑，再由文本条件扩散模型执行。定义了五类偏移族：光照、材质/表面属性、相机扰动、背景重定位和上下文变化（如天气、遮挡）。偏移的严重度通过激活不同数量和组合的偏移族来控制（轻度、中度、强烈）。最后，再次使用CLIP对齐检查，确保编辑后图像语义标签的一致性，防止标签漂移。
 
+
+![图1](https://arxiv.org/html/2605.23595v1/motivation.png)
+
+
 2. MetaEvaluator元学习框架
 该框架旨在学习一个可适应的评估器函数，其输入是训练数据与测试数据之间的“偏移描述符”（Shift Descriptor, SD），输出是对模型在测试数据上性能\(M^\star\)的估计。
 - 偏移描述符 (SD)：论文指出，SD是模型训练集与目标数据之间差异的摘要，由三部分拼接而成：(1) Gaussian Fréchet项 \(SD_F\)，捕获嵌入统计量的全局变化；(2) Mahalanobis项 \(SD_M\)，强调罕见或低密度样本的影响；(3) Sliced Wasserstein项 \(SD_{SW}\)，建模由系统性变化引起的定向几何偏移。这三者共同提供了跨模态的、紧凑的训练-测试失配摘要。但论文未给出这三个分量的具体数学定义或计算过程，这是关键的缺失。
@@ -101,7 +105,22 @@ MetaEvaluator的方法流程分为两大阶段：元数据集构建与元学习�
 - 适应步骤：使用这个（来源未明的）元集\(\mathcal{S}_{train}\)，固定全局参数\(\theta^\star\)，仅通过几步梯度下降更新\(ctx_{new}\)，使得\(g_{\theta^\star}(SD_i, ctx_{new})\)能更好地拟合元集中的真实性能\(M_i^\star\)。
 - 预测：计算模型\(m_{new}\)在目标数据\(\mathcal{D}_T\)与其训练集之间的偏移描述符\(SD^T\)，然后将\(SD^T\)和适应后的\(ctx_{new}\)输入评估器，得到最终的性能估计：\(\widehat{M} = g_{\theta^\star}(SD^T, ctx_{new})\)。
 
+
+![图2](https://arxiv.org/html/2605.23595v1/training_pipeline.png)
+
+
 该架构通过将模型特定信息编码到上下文向量\(ctx\)中，并仅通过快速调整\(ctx\)来适应新模型，避免了评估器整体参数的更新，实现了高效的适应。
+
+
+![图3](https://arxiv.org/html/2605.23595v1/tsne.png)
+
+
+
+![图4](https://arxiv.org/html/2605.23595v1/tsne_image.png)
+
+
+
+![图5](https://arxiv.org/html/2605.23595v1/pred_vs_gt_6panels_multitask.png)
 
 ### 💡 核心创新点
 
@@ -157,19 +176,6 @@ MetaEvaluator的方法流程分为两大阶段：元数据集构建与元学习�
     - 消融实验中，图8显示的“30K”元集大小的最佳点选择缺乏理论或详细的实证支撑，更多是观察到的饱和点。
     - 对于校准分析（图4），论文声称“最接近GT”，但未使用校准误差（如ECE）等定量指标进行评估。
 7.  对自身局限性的讨论缺失：论文结论部分完全没有提及任何方法或实验的局限性，缺乏批判性自我分析，这不符合顶会论文的常见要求。
-
-### 📷 论文图片
-
-![图1](https://arxiv.org/html/2605.23595v1/motivation.png)
-
-![图2](https://arxiv.org/html/2605.23595v1/training_pipeline.png)
-
-![图3](https://arxiv.org/html/2605.23595v1/tsne.png)
-
-![图4](https://arxiv.org/html/2605.23595v1/tsne_image.png)
-
-![图5](https://arxiv.org/html/2605.23595v1/pred_vs_gt_6panels_multitask.png)
-
 
 ---
 

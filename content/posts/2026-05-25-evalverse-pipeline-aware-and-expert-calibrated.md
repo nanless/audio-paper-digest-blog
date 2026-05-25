@@ -59,6 +59,10 @@ EvalVerse的评估框架是一个从知识定义、数据构建到模型对齐�
     *   采样：采用比例采样策略，确保基准在九个核心电影维度上分布均衡。
     *   构建：为不同任务生成多模态输入。使用Gemini 3.1 Pro合成专业文本提示；对基于参考的任务，从源视频提取关键帧并用Nano Banana Pro生成参考图像；深度参考则使用ControlNet微调模型生成。
 
+
+![图1](https://arxiv.org/html/2605.23271v1/x1.png)
+
+
 3.  模型评估流水线（Machine Evaluation Suite）：旨在计算一个多维评分向量 \(\mathbf{S} \approx \mathcal{H}(V, A, p, r)\) 以逼近专家判断 \(\mathcal{H}\)。
     *   专业操作符提取（Professional Operator Extraction）：为解决VLM在细粒度时序和低级感知上的不足，首先部署一组专用操作符 \(\Phi = \{\phi_1, \dots, \phi_K\}\)（包括DINO/InsightFace用于身份跟踪，YOLO用于语义锚定，SyncNet用于声画同步，Whisper用于语音情感识别）提取客观证据 \(E_{\text{prof}}\)。公式：\(E_{\text{prof}} = \bigcup_{k=1}^{K} \phi_k(V, A, p, r)\)。
        专家引导的CoT推理与评分：微调后的VLM \(\mathcal{M}_{\theta^}\) 接收综合上下文 \(X = (A, p, r, E_{\text{prof}}, \mathcal{Q})\)（\(\mathcal{Q}\) 为针对特定维度设计的专家多问题），生成详细的链式思考。推理中包含两个关键机制：
@@ -69,7 +73,22 @@ EvalVerse的评估框架是一个从知识定义、数据构建到模型对齐�
     *   偏好对齐（Preference Alignment）：在大规模成对比较数据集 \(\mathcal{D}_{\text{pref}} = \{(V_w, V_l, X)\}\) 上，最小化Bradley-Terry排序损失 \(\mathcal{L}_{\text{pref}}\)，使模型学习相对的电影美学偏好。
     *   分数校准（Score Calibration）：在点状数据集 \(\mathcal{D}_{\text{score}} = \{(V_i, X_i, Z_i, y_{d,i})}\) 上（\(Z_i\) 为专家CoT，\(y_{d,i}\) 为专家绝对分数），通过最小化交叉熵损失 \(\mathcal{L}_{\text{CE}}\)，训练模型自回归地生成推理过程 \(Z\) 和最终评分 \(y_d\)，从而注入绝对的、可解释的评分能力。
 
+
+![图2](https://arxiv.org/html/2605.23271v1/x2.png)
+
+
 5.  人机校准（Human-Machine Calibration）：提出一个三级校准机制以弥合专家标准与VLM感知能力之间的差距：i) 提示级（用更易感知的描述替换过于抽象的维度和问题）；ii) 融合级（通过轻量级MLP学习不同成分的权重，如操作符证据、VLM感知结果）；iii) 参数级（通过上述两阶段SFT注入专业知识）。
+
+
+![图3](https://arxiv.org/html/2605.23271v1/x3.png)
+
+
+
+![图4](https://arxiv.org/html/2605.23271v1/x4.png)
+
+
+
+![图5](https://arxiv.org/html/2605.23271v1/x5.png)
 
 ### 💡 核心创新点
 
@@ -136,19 +155,6 @@ EvalVerse的评估框架是一个从知识定义、数据构建到模型对齐�
 5.  音频评估的深度不足：尽管框架包含了“声音设计”评估，但相较于视觉部分极为详细的维度定义，���频部分的描述相对简略。且实验中，声音设计维度（人声、环境声）的对齐结果仅在4个模型上得出，样本量远小于视觉维度，其结论的稳健性较弱。
 6.  性能对比的缺失：为了证明EvalVerse是更“好”的基准，应将其评估结果（如对模型的排序）与现有公认基准（如VBench）的结果进行对比分析，说明EvalVerse是否提供了更稳定或更符合人类感知的信号。
 7.  计算效率未知：作为一个旨在提供“基础设施”的框架，其运行成本（包括专业操作符推理和VLM推理）完全未提及。这对于实际应用和大规模部署是关键考量。
-
-### 📷 论文图片
-
-![图1](https://arxiv.org/html/2605.23271v1/x1.png)
-
-![图2](https://arxiv.org/html/2605.23271v1/x2.png)
-
-![图3](https://arxiv.org/html/2605.23271v1/x3.png)
-
-![图4](https://arxiv.org/html/2605.23271v1/x4.png)
-
-![图5](https://arxiv.org/html/2605.23271v1/x5.png)
-
 
 ---
 
