@@ -1,5 +1,5 @@
 ---
-title: "cSTMM: A Unified Complex Spherical Student's \(t\) Mixture Model for Directional Statistics in Mask-Based Blind Speech Separation"
+title: "cSTMM: A Unified Complex Spherical Student's  Mixture Model for Directional Statistics in Mask-Based Blind Speech Separation"
 date: 2026-05-26
 draft: false
 tags: [概率模型, 方向统计, 语音分离, 复球面分布, 混合模型]
