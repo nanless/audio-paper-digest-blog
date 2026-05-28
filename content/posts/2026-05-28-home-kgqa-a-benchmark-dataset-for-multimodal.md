@@ -76,9 +76,8 @@ HOME-KGQA的构建与评估方法涵盖三个核心阶段：情景知识图谱�
 
 表5：在i.i.d.泛化数据集上的实验结果
 
-| Approach      | Model         | Strategy   | HOME-KGQA (ours) | KQAPro | WebQSP | CWQ  | MetaQA |
-|---------------|---------------|------------|------------------|--------|--------|------|--------|
-|               |               |            | Raw              | Paraphrased |        |      |        |        |
+| Approach      | Model         | Strategy   | Raw | Paraphrased | KQAPro | WebQSP | CWQ  | MetaQA |
+|---------------|---------------|------------|-----|-------------|--------|--------|------|--------|
 | Text-to-SPARQL | GPT-4o-mini   | Zero-shot  | 0.000            | 0.000  | 0.026  | 0.000| 0.000  | 0.000  |
 |               |               | 5-shot     | 0.117            | 0.056  | 0.115  | 0.050| 0.095  | 0.059  |
 |               |               | Fine-tuning| 0.462            | 0.148  | 0.628  | 0.283| 0.200  | 0.244  |
@@ -89,9 +88,8 @@ HOME-KGQA的构建与评估方法涵盖三个核心阶段：情景知识图谱�
 
 表6：在组合泛化数据集上的实验结果
 
-| Approach      | Model         | Strategy   | I.I.D. generalization | Compositional generalization |
-|---------------|---------------|------------|-----------------------|------------------------------|
-|               |               |            | Raw   | Paraphrased | Raw   | Paraphrased |
+| Approach      | Model         | Strategy   | IID Raw | IID Paraphrased | Comp Raw | Comp Paraphrased |
+|---------------|---------------|------------|---------|-----------------|----------|------------------|
 | Text-to-SPARQL | GPT-4o-mini   | Zero-shot  | 0.000 | 0.000 | 0.003 | 0.003 |
 |               |               | 5-shot     | 0.117 | 0.056 | 0.066 | 0.043 |
 |               |               | Fine-tuning| 0.462 | 0.148 | 0.521 | 0.444 |
