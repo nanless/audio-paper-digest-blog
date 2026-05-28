@@ -154,4 +154,4 @@ Gemini Embedding 2是Google提出的原生多模态嵌入模型，能将视频�
 
 ---
 
-[← 返回 2026-05-28 语音/音乐/音频论文速递](/your-blog-base-path/posts/2026-05-28/)
+[← 返回 2026-05-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-28/)

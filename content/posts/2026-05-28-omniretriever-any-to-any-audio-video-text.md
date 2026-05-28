@@ -142,4 +142,4 @@ OmniRetriever的核心是一个统一的AVT嵌入器\)f_\\theta\(，它能够分
 
 ---
 
-[← 返回 2026-05-28 语音/音乐/音频论文速递](/your-blog-base-path/posts/2026-05-28/)
+[← 返回 2026-05-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-28/)

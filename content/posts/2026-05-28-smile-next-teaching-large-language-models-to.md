@@ -145,4 +145,4 @@ Lee Jung-Mok, Kim Sung-Bin, Joohyun Chang, Lee Hyun, Tae-Hyun Oh (通讯作者)�
 
 ---
 
-[← 返回 2026-05-28 语音/音乐/音频论文速递](/your-blog-base-path/posts/2026-05-28/)
+[← 返回 2026-05-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-28/)

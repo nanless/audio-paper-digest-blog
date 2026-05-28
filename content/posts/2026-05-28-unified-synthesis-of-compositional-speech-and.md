@@ -163,4 +163,4 @@ PlanAudio在WER和UTMOS上均优于VoiceLDM统一基线，且WER接近专业TTS�
 
 ---
 
-[← 返回 2026-05-28 语音/音乐/音频论文速递](/your-blog-base-path/posts/2026-05-28/)
+[← 返回 2026-05-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-28/)

@@ -179,4 +179,4 @@ SwanBench-Speech的构建是一个系统化、多阶段的工程，其核心架�
 
 ---
 
-[← 返回 2026-05-28 语音/音乐/音频论文速递](/your-blog-base-path/posts/2026-05-28/)
+[← 返回 2026-05-28 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-28/)
