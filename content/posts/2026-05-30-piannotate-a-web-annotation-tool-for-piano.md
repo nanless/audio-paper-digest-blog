@@ -1,0 +1,134 @@
+---
+title: "PiAnnotate: A Web Annotation Tool for Piano Fingering, with a Diagnostic Probe"
+date: 2026-05-30
+draft: false
+tags: []
+categories: [论文速递]
+description: "PiAnnotate: A Web Annotation Tool for Piano Fingering, with a Diagnostic Probe"
+hiddenInHomeList: true
+---
+
+# 📄 PiAnnotate: A Web Annotation Tool for Piano Fingering, with a Diagnostic Probe
+
+✅ **6.0/10** | 前50% | [arxiv](https://arxiv.org/abs/2605.23982)
+
+学术质量 6.0/7 | 影响力 5.5/2 | 可复现性 1.0/2 | 置信度 高
+
+
+### 👥 作者与机构
+
+未在提供的文本中明确提及作者与所属机构。论文标题为“PiAnnotate: A Web Annotation Tool for Piano Fingering, with a Diagnostic Probe”。
+
+### 💡 毒舌点评
+
+这篇论文更像是一个精心设计的“工具+工作流”的技术报告，而非一篇理论创新的机器学习研究。它解决的痛点真实存在（钢琴指法标注成本高昂），提出的方案（Web工具+规则/人工双轨+诊断探针）也务实。但作为一篇投递顶级机器学习会议的工作，其核心贡献——那个“诊断探针”——显得过于“小”了。它本质上是在一个特定数据集上训练并微调了一个标准的、小型的Transformer编码器，用来学习规则与人工标注之间的差异。实验部分花了大量篇幅论证这个探针“安全”（低误改率）且能带来微小的精度提升（+2.83 pp），但这更像是对工具实用性的验证，而非提出新的学习范式或解决根本性难题。最大的创新点在于“成对轨道”这一数据组织形式，但这属于数据工程范畴。论文自我定位为“诊断”和“审计”工具是诚实的，但也限制了其在追求突破性算法贡献的会议中的潜力。它更适合作为一份优秀的系统描述发表在专注于工具、数据集或应用的场合。
+
+### 📌 核心摘要
+
+本文介绍了PiAnnotate，一个用于为钢琴演奏数据集添加专家指法标注的Web流水线工具。该工具集成了钢琴卷帘视图、原始视频和3D MANO手部网格，使标注者能结合音乐和物理上下文进行审查。其核心设计特点是保留成对的规则标注（\(f_{\text{rule}}\)）和人工编辑标注（\(f_{\text{edited}}\)）轨道，使标注历史可审计。作为诊断探针，作者训练了一个小型Transformer编码器模型，利用上述成对轨道数据学习规则错误中的可学习结构。该探针在留出的乐曲上表现出保守的改进（精度提升，极低误改率），并揭示了时间戳相关的标注伪影。
+
+### 🔗 开源详情
+
+*   代码：https://github.com/joonhyungbae/PiAnnotate
+*   模型权重：论文中未提及模型权重下载链接。
+*   数据集：论文中发布的是标注工具和流程，而非完整的标注数据集。人工编辑的指法标签（\(f_{\text{edited}}\)）未随代码发布。论文指出，标注语料基于 FürElise 数据集，但该原始数据集需用户自行获取，论文未提供具体下载链接。发布的代码包含探针训练代码和分析脚本，但需要配合自有或重新标注的数据运行。
+*   Demo：论文中未提及在线演示链接。
+*   复现材料：代码仓库包含工具代码、探针训练与评估脚本以及可能用于生成论文中分析结果的代码。但复现完整实验仍需获取未公开的编辑后标签和外部的FürElise数据集。
+*   论文中引用的开源项目：
+    *   Praat：语音分析软件。论文中作为时间对齐工具示例提及。官网链接：https://www.fon.hum.uva.nl/praat/
+    *   ELAN：多模态注释工具。论文中作为时间对齐工具示例提及。官网链接：https://archive.mpi.nl/tla/elan
+    *   Sonic Visualiser：音频可视化与注释工具。论文中作为时间对齐工具示例提及。官网链接：https://www.sonicvisualiser.org/
+    *   MANO：手部模型。论文中用于渲染3D手部网格。论文中引用为[15]，官方页面通常为：http://mano.is.tue.mpg.de/
+    *   Vite / React：用于构建前端。论文中提及为工具技术栈。官方链接分别为：https://vitejs.dev/ 和 https://react.dev/
+    *   Flask：用于构建后端。论文中提及为工具技术栈。官方链接：https://flask.palletsprojects.com/
+    *   Gradient-Boosted Decision Trees (GBDT)：作为对比的非序列基线模型。论文中引用为[6]，未指定具体实现库。该算法有多种开源实现（如 scikit-learn, XGBoost）。
+
+### 🏗️ 方法概述和架构
+
+PiAnnotate是一个旨在支持专家对钢琴指法进行高质量标注的半自动工作流系统，其架构可分为三个核心阶段：基于规则的初始标注、Web工具辅助的人工审校与编辑、以及用于诊断和质量控制的模型训练。
+
+1.  基于规则的初始标注器 (Rule-based Annotator)：该模块是整个流水线的起点。它利用来自FürElise数据集的逐帧3D手部网格（MANO模型）数据，为MIDI音符事件分配初始指法规则。具体流程是：对于每个在MIDI中记录的音符起始时刻，标注器扫描左右手共10个MANO指尖的3D坐标。它选择那些落在对应琴键音高和前后边界内、且靠近琴键表面的指尖。最终选择基于一个由“表面高度距离”和“归一化前后距离”组合的最小分数。如果没有任何指尖通过测试，则该音符的规则标签标记为缺失（代码0）。生成的规则标签 \(f_{\text{rule}}\) 会沿音符的持续时间（offset）进行传播。这一几何规则的设计意图是提供一个无需人工即可快速生成的、基于物理运动的初始指法假设。
+
+2.  PiAnnotate Web标注工具：这是一个基于Vite/React前端和Flask后端的浏览器应用，是人工干预的核心界面。它提供三个同步更新的视图：(a) 带有彩色指法标签的俯视钢琴卷帘；(b) 原始演奏视频；(c) 当前帧的3D MANO手部网格渲染。这种多视图呈现使标注者能直观判断指法分配在音乐上下文（哪些音被按下）和物理上下文（手部姿态是否可行）中是否合理。工具支持键盘快捷键驱动的快速编辑（如数字键1-5分配手指）。关键设计是成对轨道存储：对于每个乐曲，系统同时保存规则生成的 \(f_{\text{rule}}\) 和人工编辑后的 \(f_{\text{edited}}\)。此外，每个乐件都关联一个JSON状态文件，跟踪三个审查阶段（\(R_1\), \(R_2\), \(R_3\)）及其时间戳。只有通过\(R_1\)审查的乐件才被纳入后续探针模型的训练。
+
+3.  诊断探针 (Diagnostic Probe)：这是一个小型的因果Transformer编码器模型，其目的是诊断成对的 \((f_{\text{rule}}, f_{\text{edited}})\) 轨道中是否包含可泛化的、超越孤立修正的结构。模型输入是每个音符的77维特征向量，包括：5个键盘几何特征、60个指尖几何特征（10个指尖的xyz偏移等）、以及12个规则标签描述符（手/手指的one-hot、缺失/匹配标志等）。规则标签 \(f_{\text{rule}}\) 被嵌入后加到音符表示上。模型采用双任务头联合训练：一个11分类的指法预测头和一个二分类的修正预测头（判断规则标签是否被人工修改）。其损失函数为：\(\mathcal{L} = \mathrm{CE}(f^{\text{cls}}_{i}, f^{\star}_{i}) + \mathrm{BCE}(c_{i}, c^{\star}_{i})\)，其中 \(c^{\star}_{i} = \mathbf{1}[f^{\text{rule}}_{i} \neq f^{\star}_{i}]\)。模型的推理门设计体现了其“诊断”而非“重标注”的保守定位：仅当探针预测与规则标签不同、且探针自身置信度（\(p^{\text{cls}}_i > 0.9\)）远高于对规则标签的置信度（\(p^{\text{cls}}_i / p^{\text{rule}}_i > 2\)）时，才建议覆盖原规则标签。
+
+该系统将规则、人工标注、审查状态和诊断模型输出整合在同一个流水线中，形成一个可审计、可迭代的标注框架。
+
+![图1](data:image/svg+xml;base64,PHN2ZyBpZD0iUzIuRjEucGljMSIgY2xhc3M9Imx0eF9waWN0dXJlIGx0eF9jZW50ZXJpbmciIGhlaWdodD0iMTE1LjUyIiBvdmVyZmxvdz0idmlzaWJsZSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNjU0LjEgMTE1LjUyIiB3aWR0aD0iNjU0LjEiPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDExNS41MikgbWF0cml4KDEgMCAwIC0xIDAgMCkgdHJhbnNsYXRlKDM5LjY1LDApIHRyYW5zbGF0ZSgwLDc4Ljg3KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48ZyBzdHJva2Utd2lkdGg9IjAuNHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIC0zOS4zNyAtMTMuMjYgQyAtMzkuMzcgLTE4LjI4IC0yMS43NCAtMjIuMzUgMCAtMjIuMzUgQyAyMS43NCAtMjIuMzUgMzkuMzcgLTE4LjI4IDM5LjM3IC0xMy4yNiBMIDM5LjM3IDI3LjI4IEMgMzkuMzcgMzIuMyAyMS43NCAzNi4zNyAwIDM2LjM3IEMgLTIxLjc0IDM2LjM3IC0zOS4zNyAzMi4zIC0zOS4zNyAyNy4yOCBaIE0gLTM5LjM3IDI3LjI4IEMgLTM5LjM3IDIyLjI2IC0yMS43NCAxOC4xOSAwIDE4LjE5IEMgMjEuNzQgMTguMTkgMzkuMzcgMjIuMjYgMzkuMzcgMjcuMjgiPjwvcGF0aD48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIC0zMC44MyAtOS42OSkiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDIyLjA2KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDkuNjkpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSA0LjA2IDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5Gw7xyRWxpc2U8L3RleHQ+PC9nPjwvZz48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgMjIuMDYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5yZWNvcmRpbmdzPC90ZXh0PjwvZz48L2c+PC9nPjwvZz48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDE1My4zMyAxOS42OSBMIDc1LjAyIDE5LjY5IEMgNzIuNzIgMTkuNjkgNzAuODcgMTcuODMgNzAuODcgMTUuNTMgTCA3MC44NyAtMTUuNTMgQyA3MC44NyAtMTcuODMgNzIuNzIgLTE5LjY5IDc1LjAyIC0xOS42OSBMIDE1My4zMyAtMTkuNjkgQyAxNTUuNjIgLTE5LjY5IDE1Ny40OCAtMTcuODMgMTU3LjQ4IC0xNS41MyBMIDE1Ny40OCAxNS41MyBDIDE1Ny40OCAxNy44MyAxNTUuNjIgMTkuNjkgMTUzLjMzIDE5LjY5IFogTSA3MC44NyAtMTkuNjkiPjwvcGF0aD48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDgwLjk4IC05LjA2KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXgiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMTguMTIpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgOS42MSkiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9jb2wgbHR4X25vcGFkX2wgbHR4X25vcGFkX3IiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPlJ1bGUtYmFzZWQ8L3RleHQ+PC9nPjwvZz48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgMTguMTIpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAzLjU3IDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5hbm5vdGF0b3I8L3RleHQ+PC9nPjwvZz48L2c+PC9nPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gMTg4Ljk4IC0xMy4wNiBDIDE4OC45OCAtMTUuNzIgMjA2LjYgLTE3Ljg4IDIyOC4zNSAtMTcuODggQyAyNTAuMDkgLTE3Ljg4IDI2Ny43MiAtMTUuNzIgMjY3LjcyIC0xMy4wNiBMIDI2Ny43MiAyMC42MiBDIDI2Ny43MiAyMy4yNyAyNTAuMDkgMjUuNDMgMjI4LjM1IDI1LjQzIEMgMjA2LjYgMjUuNDMgMTg4Ljk4IDIzLjI3IDE4OC45OCAyMC42MiBaIE0gMTg4Ljk4IDIwLjYyIEMgMTg4Ljk4IDE3Ljk2IDIwNi42IDE1LjggMjI4LjM1IDE1LjggQyAyNTAuMDkgMTUuOCAyNjcuNzIgMTcuOTYgMjY3LjcyIDIwLjYyIj48L3BhdGg+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAyMTQuNjIgLTMuNDYpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjxmb3JlaWduT2JqZWN0IHN0eWxlPSItLWx0eC1mby13aWR0aDoxLjk4ZW07LS1sdHgtZm8taGVpZ2h0OjAuNjllbTstLWx0eC1mby1kZXB0aDowLjE5ZW07IiB3aWR0aD0iMjcuNDQiIGhlaWdodD0iMTIuMyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCA5LjYxKSIgb3ZlcmZsb3c9InZpc2libGUiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250YWluZXIiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250ZW50Ij48bWF0aCBpZD0iUzIuRjEucGljMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLm0xIiBjbGFzcz0ibHR4X01hdGgiIGFsdHRleHQ9ImZfe1x0ZXh0e3J1bGV9fSIgZGlzcGxheT0iaW5saW5lIiBpbnRlbnQ9IjpsaXRlcmFsIj48c2VtYW50aWNzPjxtc3ViPjxtaT5mPC9taT48bXRleHQ+cnVsZTwvbXRleHQ+PC9tc3ViPjxhbm5vdGF0aW9uIGVuY29kaW5nPSJhcHBsaWNhdGlvbi94LXRleCI+Zl97XHRleHR7cnVsZX19PC9hbm5vdGF0aW9uPjwvc2VtYW50aWNzPjwvbWF0aD48L3NwYW4+PC9zcGFuPjwvZm9yZWlnbk9iamVjdD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0VCRUJGRjsiIGZpbGw9IiNFQkVCRkYiPjxwYXRoIGQ9Ik0gMzgxLjY4IDE5LjY5IEwgMzAzLjM2IDE5LjY5IEMgMzAxLjA3IDE5LjY5IDI5OS4yMSAxNy44MyAyOTkuMjEgMTUuNTMgTCAyOTkuMjEgLTE1LjUzIEMgMjk5LjIxIC0xNy44MyAzMDEuMDcgLTE5LjY5IDMwMy4zNiAtMTkuNjkgTCAzODEuNjggLTE5LjY5IEMgMzgzLjk3IC0xOS42OSAzODUuODMgLTE3LjgzIDM4NS44MyAtMTUuNTMgTCAzODUuODMgMTUuNTMgQyAzODUuODMgMTcuODMgMzgzLjk3IDE5LjY5IDM4MS42OCAxOS42OSBaIE0gMjk5LjIxIC0xOS42OSI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDMwNy42NCAtOS41MykiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDE5LjA2KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDkuNDYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5QaUFubm90YXRlPC90ZXh0PjwvZz48L2c+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDE5LjA3KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X2NvbCBsdHhfbm9wYWRfbCBsdHhfbm9wYWRfciIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgNS42NyAwKSI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+V2ViIFRvb2w8L3RleHQ+PC9nPjwvZz48L2c+PC9nPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gNDE3LjMyIC0xNS40NCBDIDQxNy4zMiAtMTguODYgNDM0Ljk1IC0yMS42MyA0NTYuNjkgLTIxLjYzIEMgNDc4LjQ0IC0yMS42MyA0OTYuMDYgLTE4Ljg2IDQ5Ni4wNiAtMTUuNDQgTCA0OTYuMDYgMjUuMDcgQyA0OTYuMDYgMjguNDkgNDc4LjQ0IDMxLjI3IDQ1Ni42OSAzMS4yNyBDIDQzNC45NSAzMS4yNyA0MTcuMzIgMjguNDkgNDE3LjMyIDI1LjA3IFogTSA0MTcuMzIgMjUuMDcgQyA0MTcuMzIgMjEuNjUgNDM0Ljk1IDE4Ljg4IDQ1Ni42OSAxOC44OCBDIDQ3OC40NCAxOC44OCA0OTYuMDYgMjEuNjUgNDk2LjA2IDI1LjA3Ij48L3BhdGg+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCA0MzcuNDYgLTkuNjEpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeCIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAyMi42OCkiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9yb3ciIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMCA5LjYxKSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X2NvbCBsdHhfbm9wYWRfbCBsdHhfbm9wYWRfciIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Ii0tbHR4LWZvLXdpZHRoOjIuNzhlbTstLWx0eC1mby1oZWlnaHQ6MC42OWVtOy0tbHR4LWZvLWRlcHRoOjAuMTllbTsiIHdpZHRoPSIzOC40NyIgaGVpZ2h0PSIxMi4zIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDkuNjEpIiBvdmVyZmxvdz0idmlzaWJsZSI+PHNwYW4gY2xhc3M9Imx0eF9mb3JlaWdub2JqZWN0X2NvbnRhaW5lciI+PHNwYW4gY2xhc3M9Imx0eF9mb3JlaWdub2JqZWN0X2NvbnRlbnQiPjxtYXRoIGlkPSJTMi5GMS5waWMxLjIuMi4yLjIuMi4yLjIuMi4yLjIuMi4yLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS5tMSIgY2xhc3M9Imx0eF9NYXRoIiBhbHR0ZXh0PSJmX3tcdGV4dHtlZGl0ZWR9fSIgZGlzcGxheT0iaW5saW5lIiBpbnRlbnQ9IjpsaXRlcmFsIj48c2VtYW50aWNzPjxtc3ViPjxtaT5mPC9taT48bXRleHQ+ZWRpdGVkPC9tdGV4dD48L21zdWI+PGFubm90YXRpb24gZW5jb2Rpbmc9ImFwcGxpY2F0aW9uL3gtdGV4Ij5mX3tcdGV4dHtlZGl0ZWR9fTwvYW5ub3RhdGlvbj48L3NlbWFudGljcz48L21hdGg+PC9zcGFuPjwvc3Bhbj48L2ZvcmVpZ25PYmplY3Q+PC9nPjwvZz48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgMjIuNjgpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSA1LjQ1IDApIj48Zm9yZWlnbk9iamVjdCBzdHlsZT0iLS1sdHgtZm8td2lkdGg6MS45OWVtOy0tbHR4LWZvLWhlaWdodDowLjc1ZW07LS1sdHgtZm8tZGVwdGg6MC4yNWVtOyIgd2lkdGg9IjI3LjU4IiBoZWlnaHQ9IjEzLjg0IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDEwLjM4KSIgb3ZlcmZsb3c9InZpc2libGUiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250YWluZXIiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250ZW50Ij4oPG1hdGggaWQ9IlMyLkYxLnBpYzEuMy4zLjMuMy4zLjMuMy4zLjMuMy4zLjMuMi4yLjIuMi4yLjIuMi4yLjIuMi4yLjEuMS4xLm0xIiBjbGFzcz0ibHR4X01hdGgiIGFsdHRleHQ9IlJfezF9IiBkaXNwbGF5PSJpbmxpbmUiIGludGVudD0iOmxpdGVyYWwiPjxzZW1hbnRpY3M+PG1zdWI+PG1pPlI8L21pPjxtbj4xPC9tbj48L21zdWI+PGFubm90YXRpb24gZW5jb2Rpbmc9ImFwcGxpY2F0aW9uL3gtdGV4Ij5SX3sxfTwvYW5ub3RhdGlvbj48L3NlbWFudGljcz48L21hdGg+KTwvc3Bhbj48L3NwYW4+PC9mb3JlaWduT2JqZWN0PjwvZz48L2c+PC9nPjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRjBGMEYwOyIgZmlsbD0iI0YwRjBGMCI+PHBhdGggZD0iTSA2MTAuMDIgMTkuNjkgTCA1MzEuNzEgMTkuNjkgQyA1MjkuNDIgMTkuNjkgNTI3LjU2IDE3LjgzIDUyNy41NiAxNS41MyBMIDUyNy41NiAtMTUuNTMgQyA1MjcuNTYgLTE3LjgzIDUyOS40MiAtMTkuNjkgNTMxLjcxIC0xOS42OSBMIDYxMC4wMiAtMTkuNjkgQyA2MTIuMzEgLTE5LjY5IDYxNC4xNyAtMTcuODMgNjE0LjE3IC0xNS41MyBMIDYxNC4xNyAxNS41MyBDIDYxNC4xNyAxNy44MyA2MTIuMzEgMTkuNjkgNjEwLjAyIDE5LjY5IFogTSA1MjcuNTYgLTE5LjY5Ij48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgNTM5LjAyIC0xMC44OCkiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDIxLjc1KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDkuNDYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5EaWFnbm9zdGljPC90ZXh0PjwvZz48L2c+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDIxLjc2KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X2NvbCBsdHhfbm9wYWRfbCBsdHhfbm9wYWRfciIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMTMuODYgMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPlByb2JlPC90ZXh0PjwvZz48L2c+PC9nPjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjZwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSAzOS42NSAwIEwgNjQuMSAwIj48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDYwLjc1IDApIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gOC43NCAwIEwgMS4zNCAyLjc2IEwgMy41NiAwIEwgMS4zNCAtMi43NiBaIj48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMzkuNzEgNS4wMykiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDE5LjA2KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X3JvdyIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDkuNDYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSA2LjY3IDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj4zRDwvdGV4dD48L2c+PC9nPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9yb3ciIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMCAxOS4wNykiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9jb2wgbHR4X25vcGFkX2wgbHR4X25vcGFkX3IiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPm1lc2g8L3RleHQ+PC9nPjwvZz48L2c+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuNnB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDE1Ny43NiAwIEwgMTgyLjIxIDAiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMTc4Ljg2IDApIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gOC43NCAwIEwgMS4zNCAyLjc2IEwgMy41NiAwIEwgMS4zNCAtMi43NiBaIj48L3BhdGg+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuNnB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDI2Ny45OSAwIEwgMjkyLjQ0IDAiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMjg5LjA5IDApIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gOC43NCAwIEwgMS4zNCAyLjc2IEwgMy41NiAwIEwgMS4zNCAtMi43NiBaIj48L3BhdGg+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuNnB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDM4Ni4xIDAgTCA0MTAuNTUgMCI+PC9wYXRoPjxnIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCA0MDcuMiAwKSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDguNzQgMCBMIDEuMzQgMi43NiBMIDMuNTYgMCBMIDEuMzQgLTIuNzYgWiI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDM4Mi4xNSA1LjAzKSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48Zm9yZWlnbk9iamVjdCBzdHlsZT0iLS1sdHgtZm8td2lkdGg6Mi44MWVtOy0tbHR4LWZvLWhlaWdodDowLjY3ZW07LS1sdHgtZm8tZGVwdGg6MGVtOyIgd2lkdGg9IjM4Ljg2IiBoZWlnaHQ9IjkuMjQiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgOS4yNCkiIG92ZXJmbG93PSJ2aXNpYmxlIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGFpbmVyIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGVudCI+PHNwYW4gaWQ9IlMyLkYxLnBpYzEuNi42LjYuMS4xLjEiIGNsYXNzPSJsdHhfdGV4dCI+cmV2aWV3PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9mb3JlaWduT2JqZWN0PjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjZwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSA0OTYuMzQgMCBMIDUyMC43OSAwIj48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDUxNy40NCAwKSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDguNzQgMCBMIDEuMzQgMi43NiBMIDMuNTYgMCBMIDEuMzQgLTIuNzYgWiI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDQ5Ny4xOSA1LjAzKSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48Zm9yZWlnbk9iamVjdCBzdHlsZT0iLS1sdHgtZm8td2lkdGg6Mi4xMWVtOy0tbHR4LWZvLWhlaWdodDowLjY3ZW07LS1sdHgtZm8tZGVwdGg6MGVtOyIgd2lkdGg9IjI5LjI1IiBoZWlnaHQ9IjkuMjQiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgOS4yNCkiIG92ZXJmbG93PSJ2aXNpYmxlIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGFpbmVyIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGVudCI+PHNwYW4gaWQ9IlMyLkYxLnBpYzEuNy43LjcuMS4xLjEiIGNsYXNzPSJsdHhfdGV4dCI+dHJhaW48L3NwYW4+PC9zcGFuPjwvc3Bhbj48L2ZvcmVpZ25PYmplY3Q+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuNnB0IiBzdHJva2UtZGFzaGFycmF5PSIzLjBwdCwzLjBwdCIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDU3MC44NyAtMTkuOTYgTCA1NzAuODcgLTU1LjM5IEwgMzQyLjUyIC01NS4zOSBMIDM0Mi41MiAtMjYuNDUiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjAgMS4wIC0xLjAgMC4wIDM0Mi41MiAtMjkuOCkiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA4Ljc0IDAgTCAxLjM0IDIuNzYgTCAzLjU2IDAgTCAxLjM0IC0yLjc2IFoiPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCA0MDkuMDggLTcwLjgpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjxmb3JlaWduT2JqZWN0IHN0eWxlPSItLWx0eC1mby13aWR0aDo2LjkxZW07LS1sdHgtZm8taGVpZ2h0OjAuNzVlbTstLWx0eC1mby1kZXB0aDowLjI1ZW07IiB3aWR0aD0iOTUuNiIgaGVpZ2h0PSIxMy44NCIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAxMC4zOCkiIG92ZXJmbG93PSJ2aXNpYmxlIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGFpbmVyIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGVudCI+PG1hdGggaWQ9IlMyLkYxLnBpYzEuNC40LjQuNC40LjQuNC40LjQuNC40LjQuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEubTEiIGNsYXNzPSJsdHhfTWF0aCIgYWx0dGV4dD0iUl97Mn0iIGRpc3BsYXk9ImlubGluZSIgaW50ZW50PSI6bGl0ZXJhbCI+PHNlbWFudGljcz48bXN1Yj48bWk+UjwvbWk+PG1uPjI8L21uPjwvbXN1Yj48YW5ub3RhdGlvbiBlbmNvZGluZz0iYXBwbGljYXRpb24veC10ZXgiPlJfezJ9PC9hbm5vdGF0aW9uPjwvc2VtYW50aWNzPjwvbWF0aD48c3BhbiBpZD0iUzIuRjEucGljMS41LjUuNS41LjUuNS41LjUuNS41LjUuNS4yLjIuMi4yLjIuMi4yLjIuMi4yLjIuMi4xIiBjbGFzcz0ibHR4X3RleHQiPi88bWF0aCBpZD0iUzIuRjEucGljMS41LjUuNS41LjUuNS41LjUuNS41LjUuNS4yLjIuMi4yLjIuMi4yLjIuMi4yLjIuMi4xLm0xIiBjbGFzcz0ibHR4X01hdGgiIGFsdHRleHQ9IlJfezN9IiBkaXNwbGF5PSJpbmxpbmUiIGludGVudD0iOmxpdGVyYWwiPjxzZW1hbnRpY3M+PG1zdWI+PG1pPlI8L21pPjxtbj4zPC9tbj48L21zdWI+PGFubm90YXRpb24gZW5jb2Rpbmc9ImFwcGxpY2F0aW9uL3gtdGV4Ij5SX3szfTwvYW5ub3RhdGlvbj48L3NlbWFudGljcz48L21hdGg+IHJlLXZlcmlmeTwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvZm9yZWlnbk9iamVjdD48L2c+PC9nPjwvZz48L3N2Zz4=)
+
+![图2](https://arxiv.org/html/2605.23982v1/annotation_tool.png)
+
+
+### 💡 核心创新点
+
+1.  成对轨道与可审计标注历史：核心数据结构创新在于为每个音符同时保存规则预测 \(f_{\text{rule}}\) 和人工最终接受 \(f_{\text{edited}}\) 的标签，使规则错误群体成为一等对象，便于模型训练和审计。
+2.  保守的诊断探针：训练了一个小型Transformer作为诊断工具，其设计（包括推理门的置信度阈值）明确以高精度、低误改率（break rate）为首要目标，旨在辅助标注者进行优先审查，而非替代人工。
+3.  整合的Web工作流与3D可视化：将针对钢琴指法特化的多模态（MIDI、视频、3D手模）可视化、键盘快捷键编辑、多阶段审查状态管理集成于一个专用Web工具中，提升了专家标注的效率和一致性。
+
+### 📊 实验结果
+
+实验旨在验证诊断探针的有效性和保守性，所有结果均基于论文中提供的完整实验数据。
+
+1. 基线与整体数据统计 (Table 2)
+*   语料包含153首FürElise乐曲，总计约530万条人工编辑音符标签。
+*   所有乐曲完成\(R_1\)审查；62首完成\(R_2\)；91首完成\(R_3\)。
+*   规则与人工标注的整体一致性为91.82%，对应的规则错误率（包括错误分配和完全漏标）为8.18%（433,410条）。
+
+2. 探针诊断性能 (Table 3)
+| 设置 | Flag P/R | Break Rate | Rule Acc. | Probe Acc. |
+| :--- | :---: | :---: | :---: | :---: |
+| Train-fit, 单种子 (全部153首训练) | | | | |
+| 全部 \(R_1\) (153首) | 79.7/28.0 | 0.29% | 91.82 | 89.98 |
+| \(R_3\) 子集 (91首) | 81.8/33.3 | 0.28% | 92.39 | 93.57 |
+| \(R_2\) 子集 (62首) | 76.9/22.9 | 0.30% | 91.39 | 86.17 |
+| Held-out, 5-seed (排除62首\(R_2\)乐件) | | | | |
+| 主模型 (1L, d=64, 无规则嵌入) | 88.4/42.6 | 0.19% | 91.39 | 94.22 |
+| 消融: 4层, d=256 | 81.5/43.1 | 0.58% | 91.39 | 93.54 |
+| 消融: 加入规则嵌入 | 78.6/43.1 | 0.85% | 91.39 | 93.49 |
+| Held-out, 5-seed (随机91/62划分, 4L) | | | | |
+| 随机划分 | 85.8/52.2 | 0.47% | 91.28 | 94.37 |
+| 非序列基线 (GBDT, 1种子, \(R_2\)划分) | | | | |
+| GBDT 77-d特征 | 12.9/79.8 | 26.5% | 91.39 | 70.41 |
+
+*   Finding 1 (精准筛查)：在全语料训练测试中，探针通过推理门标记了1.91%的音符为可疑。其中79.7%确实是规则错误（相比8.18%的基线概率提升约10倍），但召回率仅为28.0%。
+*   Finding 2 (极低误改率)：探针在全语料中仅覆盖了4,867,897条原本正确的规则标签中的14,011条（0.29%）。这证明了其作为筛查工具的保守性。
+*   留出泛化性：主模型在留出的62首\(R_2\)乐件上，平均精度提升 \(\Delta = +2.83\) pp（95% CI: [+2.63, +3.03]），召回率42.6±2.1%，精度88.4±5.4%，误改率0.19±0.33%。这表明探针学到了可泛化的修正信号。
+*   鲁棒性分析：
+    *   容量消融：扩大模型（4层，d=256）带来相同的平均提升（+2.14 pp），但方差增大，说明额外容量只增加噪声。
+    *   规则标签嵌入消融：在更大模型中显式嵌入规则标签，平均提升无变化但误改率上升，排除了“规则输入捷径”的可能性。
+    *   划分敏感性：使用随机划分（而非按\(R_2\)状态划分）得到更高的提升（+3.10 pp），表明\(R_2\)子集并非异常简单。
+    *   架构对比：梯度提升决策树（GBDT）作为非序列基线，在留出集上的表现远差于Transformer（\(\Delta = -2.94\) pp），证明了序列上下文和序列模型的必要性。
+*   标签“年代”分析：训练集拟合中，探针在\(R_3\)子集上准确率提升（+1.18 pp），但在\(R_2\)子集上反而下降（-5.22 pp）。审计发现，这是因为\(R_2\)子集的部分乐件，其探针训练时使用的标签早于\(R_2\)审查完成的时间戳，即训练数据与评估数据存在版本不匹配。
+
+### 🔬 细节详述
+
+*   规则标注器细节：规则并非简单的最近距离匹配。它综合考虑了指尖的音高匹配、琴键前后位置匹配以及与琴键表面的距离。当多个指尖满足条件时，使用一个结合了“表面高度距离”和“归一化前后距离”的复合分数进行选择。如果无指尖通过测试，规则标签置为0（缺失）。该规则输出 \(f_{\text{rule}}\) 会沿音符持续时间传播。
+*   探针模型输入特征：77维特征向量详细构成为：5个键盘几何特征（归一化键索引、黑键标志、键中心x/y坐标、表面高度）；60个指尖几何特征（10个指尖的x/y/z坐标相对于当前键的偏移、绝对高度、两个是否在范围内的标志）；12个规则标签描述符（手和手指的one-hot编码，以及是否缺失、是否与最终标签匹配的标志）。
+*   模型训练与推理细节：主配置为1层Transformer编码器，嵌入维度\(d=64\)。规则标签嵌入在训练时被冻结且置零，但固定的规则描述符仍保留在77维特征向量和推理门中。模型使用两个头联合训练。推理时的覆盖条件严格：\((\hat{f}^{\text{cls}}_{i} \neq f^{\text{rule}}_{i}) \wedge (p^{\text{cls}}_{i} > 0.9) \wedge (p^{\text{cls}}_{i} / p^{\text{rule}}_{i} > 2)\)。论文通过敏感性分析证明，默认阈值0.9处于性能平台期。
+*   标注语料构建与审查流程：语料基于公开的FürElise数据集（153首录音，同步音频、视频、MIDI和3D手部运动）。PiAnnotate添加的层包括：(1) 几何规则生成的指法轨道；(2) 通过PiAnnotate工具生成的人工编辑轨道（\(R_1\)由研究助理完成，\(R_2\)/\(R_3\)由两位独立的音乐专家完成，分歧通过协商解决）。语料发布时，不包含人工编辑的标签本身，仅发布标注工具、探针代码和分析脚本。
+*   时间戳伪影发现：在分析探针在训练拟合阶段于不同审查阶段子集上的表现差异时，发现了一个操作性伪影：对于\(R_2\)阶段的50/59首乐件，探针的预测输出时间早于该乐件\(R_2\)审查完成的时间戳。这意味着在训练探针时，用于评估的“标准答案”（即\(R_2\)版标签）当时尚未产生。这揭示了在动态标注项目中追踪标签版本的重要性。
+
+### ⚖️ 评分理由
+
+*   创新性/3：1.5/3。主要贡献在于提出并实现了一个成对轨道（paired tracks） 的标注数据组织形式，并将其用于训练一个保守的诊断探针。这是一个实用的数据工程和工作流设计创新。但核心的机器学习组件（小型Transformer）本身是标准模型的直接应用，没有提出新的网络结构或学习范式。诊断探针的动机和设计思路清晰，但技术新颖性有限。
+*   技术严谨性/1.5：1.0/1.5。实验设计考虑了多种鲁棒性检验（容量、输入、划分、架构族），并敏锐地发现了训练/评估数据时间戳不匹配的问题，这体现了严谨性。然而，诊断探针的实验是在全量数据（所有153首）上训练后，在子集（\(R_2\)或随机划分）上评估，缺乏真正意义上的完全留出测试集（未见过的乐曲或演奏者）。所有结果均基于单一数据集（FürElise）和特定规则，泛化性论证较弱。没有报告正式的标注者间一致性系数。
+*   实验充分性/1.5：1.2/1.5。提供了详实的实验数据（Table 2, 3），包括不同审查阶段子集的表现、消融研究、与非序列基线的对比。对诊断探针的“保守性”和“增益”进行了充分论证。不足之处在于：(1) 所有实验局限于单一数据集；(2) 评估指标主要关注与现有（可能不完美）的\(R_2\)/\(R_3\)标签的对比，缺乏外部真值验证；(3) 未评估工具对标注者效率或最终标签质量的实际影响。
+*   清晰度/1：0.8/1。论文结构清晰，图1、图2有效地展示了流水线和工具界面。方法描述和实验报告相对详细。但部分关键细节分散在不同章节（如规则标注器的细节在Pipeline Overview和Method中），需要仔细阅读。诊断探针的输入特征描述在正文和补充描述间略有出入。
+*   影响力/2：0.7/2。该工作主要贡献于特定领域（钢琴指法） 的标注工具和数据集构建。其提出的“成对轨道”和“保守诊断探针”思想可能对其他需要专家标注且存在启发式基线的多模态任务有参考价值。然而，核心成果是针对一个相对小众问题的实用工具，缺乏对机器学习核心问题的普适性方法论突破。对于关注语音/音乐信息检索算法研究的读者，直接启发有限。因此，在面向该领域读者的评估中影响力受限。
+*   开源/1.5：1.0/1.5。代码仓库已开源（MIT许可证），包含标注工具、探针代码和分析脚本。但关键资产人工编辑的指法标签（\(f_{\text{edited}}\)）并未随代码发布，用户需自行基于工具和源数据集进行标注。这大大降低了结果的可直接复现性和作为数据集的易用性。论文中提及的FürElise原始数据集也需用户自行获取。
+*   可复现性/0.5：0.4/0.5。工具代码和实验脚本已提供，主要实验细节（模型超参、特征工程、评估协议）描述清晰。但由于核心数据集（编辑后的标签）未公开，且依赖特定的外部数据集（FürElise），完全复现论文中的探针训练和评估结果存在障碍。因此，可复现性评分为0.4。
+
+### 🚨 局限与问题
+
+*   数据集与泛化性局限：所有实验均在单一的FürElise数据集上进行。该数据集具有特定的录制条件（一种设备、15位演奏者）。工具和探针在其他数据集（不同钢琴型号、不同演奏风格、不同动作捕捉技术）上的有效性完全未知。论文未进行任何跨数据集评估。
+*   评估框架的局限：诊断探针的性能评估是相对于当前版本的人工标注（\(R_2\)/\(R_3\)） 进行的，而这些标注本身可能存在错误（论文未报告标注者间一致性）。因此，所报告的“增益”或“错误”是相对于一个可能不完美的基准。缺乏基于更可靠基准（如多轮独立标注的一致意见）的评估。
+*   “诊断”定义的模糊性与实际效用未验证：论文声称探针用于“诊断”，但实际评估的是其作为“预过滤器”（标记可疑音符）的性能。未评估该诊断工具对标注者工作流程的实际影响：使用该工具后，标注效率是否提升？最终标签质量是否改善？还是增加了额外的认知负担？这些关键的人机交互效果缺失。
+*   规则依赖性：探针的输入和设计严重依赖于初始的特定几何规则。规则的任何缺陷（如在某些手势下系统性失败）都会直接传递给探针。论文未分析探针性能对规则质量的敏感性。
+*   模型能力上限不明：探针被设计为非常保守（低误改率），但这可能也限制了其召回率（仅28-42%）。论文未探索在可接受误改率提升下，探针性能的上限。同时，仅与非序列基线（GBDT）对比，缺乏与其他序列模型（如LSTM、更简单的前馈网络）的对比。
+*   结论表述的强度：论文结论称“编辑后的标签包含可学习的结构”，这一结论基于在特定数据集、特定规则、特定评估协议下的实验。将其推广为一般性陈述需要更广泛的验证。文中发现的“时间戳伪影”虽然是一个重要的操作教训，但也暴露了实验设计在数据版本管理上的疏漏，可能影响部分结论的可靠性。
+*   发布内容的严重局限：不发布编辑后的标签（\(f_{\text{edited}}\)） 是最大的实践局限。这使得该工作更像一个方法/工具展示，而非一个可供社区直接使用的数据集贡献。其他研究者无法直接利用其标注成果进行下游任务开发或基准测试。
+
+---
+
+[← 返回 2026-05-30 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-05-30/)
