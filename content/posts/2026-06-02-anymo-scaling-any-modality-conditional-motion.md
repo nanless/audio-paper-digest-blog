@@ -102,7 +102,7 @@ AnyMo框架旨在实现从任意模态组合条件生成3D人体运动序列。�
 1. 运动重建性能（MPJPE，mm）
 | 方法 | 训练数据集 | 测试数据集 | 评测数据集MPJPE |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| | | | HumanML3D | MotionMillion | OmniHuMo |
+
 | ScaMo (FSQ) | MotionUnion | MotionUnion | 63.3 | 88.9 | - |
 | GoToZero | MotionMillion | MotionMillion | 41.9 | 45.5 | 36.1 |
 | AnyMo (R-FSQ) | OmniHuMo | OmniHuMo | 27.9 | 21.5 | 13.2 |
