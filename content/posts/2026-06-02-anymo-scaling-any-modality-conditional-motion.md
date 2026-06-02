@@ -45,9 +45,6 @@ hiddenInHomeList: true
     - 详细的评估指标（MPJPE， FID， R-Precision， BAS， Div， MMDist）定义在附录C.2。
 - 论文中引用的开源项目：（与已有分析基本一致，已核对论文原文引用）PySceneDetect, TransNetV2, YOLOv11 (Ultralytics), MOTRv2, RTMW (RTMPose), GVHMR, Demucs, 3D-Speaker, SyncNet, Whisper, Qwen3-VL (链接指向Qwen2.5-VL仓库), LLaMA, T5-XL, WavTokenizer, SnapMoGen, DROID-SLAM, SAM2, RF-DETR。
 
-- 补充链接（自动提取）：
-  - 代码仓库：https://github.com/Breakthrough/PySceneDetect
-
 ### 🏗️ 方法概述和架构
 
 AnyMo框架旨在实现从任意模态组合条件生成3D人体运动序列。其核心方法包含两个主要组件：一个基于残差有限标量量化（R-FSQ）的运动分词器，以及一个基于LLaMA的可扩展并行掩码Transformer。整体架构如论文图6所示。
@@ -102,7 +99,7 @@ AnyMo框架旨在实现从任意模态组合条件生成3D人体运动序列。�
 1. 运动重建性能（MPJPE，mm）
 | 方法 | 训练数据集 | 测试数据集 | 评测数据集MPJPE |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| | | | HumanML3D | MotionMillion | OmniHuMo |
 | ScaMo (FSQ) | MotionUnion | MotionUnion | 63.3 | 88.9 | - |
 | GoToZero | MotionMillion | MotionMillion | 41.9 | 45.5 | 36.1 |
 | AnyMo (R-FSQ) | OmniHuMo | OmniHuMo | 27.9 | 21.5 | 13.2 |
