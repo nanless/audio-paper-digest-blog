@@ -4,15 +4,15 @@ date: 2026-06-02
 draft: false
 tags: []
 categories: [论文速递]
-description: "音频分类 | 6.1/10"
+description: "音频分类 | 7.1/10"
 hiddenInHomeList: true
 ---
 
 # 📄 When Tabular Foundation Models Transfer Across Modalities: A Systematic Evaluation Across 95 Datasets, 7 Modalities, and Two Regimes
 
-✅ **6.1/10** | 前50% | #音频分类 | [arxiv](https://arxiv.org/abs/2606.02106)
+**7.1/10** | 创新 1.2/2 | 严谨 1.2/1.5 | 实验 1.3/1.5 | 清晰 0.9/1 | 影响 0.5/1.5 | 开源 1.5/1.5 | 复现 0.5/0.5 | 工程 0/1.5
 
-学术质量 7.0/7 | 影响力 6.5/2 | 可复现性 1.5/2 | 置信度 高
+✅ **7.1/10** | 前50% | #音频分类 | [arxiv](https://arxiv.org/abs/2606.02106)
 
 
 ### 👥 作者与机构

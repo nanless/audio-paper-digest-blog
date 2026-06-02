@@ -2,110 +2,116 @@
 title: "MelT: GEMM-Native NDFT for Efficient Single-Stage Audio Frontends on Modern Accelerators"
 date: 2026-06-02
 draft: false
-tags: [信号处理基础]
+tags: [信号处理基础, 音频分类]
 categories: [论文速递]
-description: "信号处理基础 | 8/10"
+description: "语音识别 | 10/10"
 hiddenInHomeList: true
 ---
 
 # 📄 MelT: GEMM-Native NDFT for Efficient Single-Stage Audio Frontends on Modern Accelerators
 
-#信号处理基础
+#信号处理基础 #音频分类
 
-🔥 **8/10** | 前50% | #信号处理基础 | #信号处理基础 | [arxiv](https://arxiv.org/abs/2606.01009)
+**10/10** | 创新 2/2 | 严谨 1.5/1.5 | 实验 1.5/1.5 | 清晰 1/1 | 影响 1.5/1.5 | 开源 1.5/1.5 | 复现 0.5/0.5 | 工程 1.5/1.5
 
-学术质量 4.5/7 | 影响力 1.5/2 | 可复现性 2/2 | 置信度 高
+🔥 **10/10** | 前10% | #语音识别 | #信号处理基础 | #音频分类 | [arxiv](https://arxiv.org/abs/2606.01009)
 
 
 ### 👥 作者与机构
 
 作者：Augusto Camargo, Marcelo Finger
 机构：Instituto de Ciências Matemáticas e de Computação, University of São Paulo, Brazil
+资金来源：未提及
 
 ### 💡 毒舌点评
 
-这是一篇典型的“工程驱动型”论文，核心贡献是提出了一个在特定硬件上运行得更快的音频前端。作者们敏锐地发现了传统音频流水线（STFT + Mel滤波）与现代AI加速器（擅长大规模矩阵乘法）之间的“错配”，并用一个预计算的密集矩阵乘法（GEMM）取代了这个多阶段流水线。其核心思想——“将算法重新塑造成硬件喜欢的样子”——无疑是务实的，跨平台的性能测试（从Apple A18 Pro到NVIDIA H100）也提供了宝贵的实证数据，显示了1.92×到3.75×不等的延迟降低和能耗节省。然而，审稿人的“毒舌”在于：这份“系统优化”的“新意”有限。论文巧妙地将已有的NDFT数学工具重新包装为“GEMM-native”，并进行了详尽的硬件基准测试，但这更像是一篇优秀的系统优化报告，而非一篇在信号处理或机器学习算法层面有深刻突破的论文。它在理论上的贡献（承认直接投影与传统聚合不等价）和下游任务上的表现（与基线持平或略好）都相对保守。对于寻求理论创新或方法突破的顶级ML会议（如NeurIPS/ICML/ICLR）而言，其“算法新颖性”可能不足以获得高分。但在音频系统或高效计算专题会议中，其实用价值和详实的评估数据会使其更受欢迎。
+这篇论文好比一个熟练的技工，把一个原本需要三步走才能拧好的螺丝，改成一步到位用电动扳手拧紧，效果立竿见影。其核心卖点不在于发明了新螺丝或新扳手（NDFT和GEMM都不是新东西），而在于精准地识别了现代硬件（GPU/Apple Silicon）的“脾气”——就喜欢密集矩阵运算这种“大力出奇迹”的活儿，然后巧妙地对传统音频特征提取流程进行了“硬件适配性改造”。实验数据看起来挺漂亮，跨了四大平台，有延迟有能耗，还开源了代码。但细究之下，论文在理论深度上有所欠缺，为什么这种“先投影再平方求和”的相干方法能替代传统的“先傅里叶变换再非相干聚合”，作者只给出了高相似度的实验证据，但理论解释不足。另外，下游任务选得有点小（性别分类和COVID-19检测），让人怀疑其在大规模、复杂任务（如语音识别）中的普适性。总的来说，这是一篇优秀的系统优化和工程实践论文，但作为一篇顶会论文，其在方法创新性和理论贡献的深度上还可以有更高的追求。
 
 ### 📌 核心摘要
 
-本文提出了MelT，一种基于密集矩阵乘法（GEMM）的单阶段音频前端框架。其核心是将传统的“STFT + 稀疏Mel滤波”流水线，重新设计为在预计算的Mel间隔非均匀离散傅里叶变换（NDFT）基上执行的直接密集投影。通过将时域信号帧与预计算的包含窗口函数的正弦/余弦基矩阵相乘，MelT直接在Mel频率坐标上生成谱图，从而消除了中间的线性频率谱张量，使得计算模式更匹配现代AI加速器（如GPU、Apple Silicon）的密集线性代数引擎。论文在四种硬件平台（从边缘到数据中心）上系统评估了该方法，报告了相对于传统流水线高达3.75倍的延迟加速和3.52倍的能耗降低。其倒谱变体MFCCT也在下游音频分类任务上验证了表征保真度。
+本研究针对现代AI加速器与传统多阶段音频前端（STFT + 稀疏Mel滤波）在计算模式上的不匹配问题，提出了MelT。MelT是一种单阶段、硬件原生的前端框架，它将Mel间隔的非均匀离散傅里叶变换（NDFT）基底进行预计算，并将其投影操作表达为一个通用矩阵乘法（GEMM），从而直接从时域信号帧生成Mel频谱图。通过这种方式，MelT避免了中间线性频谱张量的分配和稀疏索引，将前端计算统一到加速器擅长的密集线性代数运算中。在Apple A18 Pro、M4 Pro、NVIDIA V100和H100平台上的评估表明，MelT在160秒的长音频上实现了最高3.75倍的推理延迟加速和3.52倍的能耗降低，同时在VoxCeleb1性别分类和SPIRA COVID-19检测任务上保持了与传统基线相当的下游性能。其倒谱扩展版本MFCCT也表现出类似的加速效果。论文的核心贡献在于提出了这种GEMM原生的音频前端表述并进行了全面的跨平台硬件评估，支持了“为矩阵原生执行范式重新设计信号处理前端”这一更广泛的设计理念。
 
 ### 🔗 开源详情
 
 - 代码：https://github.com/augustocamargo/MelT_arxiv
-- 模型权重：论文中未提及
-- 数据集：
-    - LibriSpeech：论文中提到使用了LibriSpeech语音信号作为基准测试数据。这是一个广泛使用的开源语音识别数据集，可通过其官方网站（https://www.openslr.org/12）获取。
-    - SPIRA COVID-19：论文中用于临床呼吸分类任务。该数据集为SPIRA COVID-19检测任务集，可通过其官方来源获取（通常需要申请，论文中未提供直接链接，但根据其名称可定位到相关研究项目）。
-    - VoxCeleb1：论文中用于性别分类任务。这是一个广泛使用的开源说话人识别数据集，可通过其官方网站（https://www.robots.ox.ac.uk/~vgg/data/voxceleb/）申请获取。
-- Demo：论文中未提及
-- 复现材料：论文中提到，用于本研究的源代码、基准脚本、配置文件和聚合实验结果均已公开，具体见上述代码仓库链接。
-- 论文中引用的开源项目：
-    - PyTorch：论文中使用其作为深度学习框架。链接：https://github.com/pytorch/pytorch
-    - librosa：论文中提到其为标准音频处理库，用于配置结构对称性。链接：https://github.com/librosa/librosa
-    - CUDA：NVIDIA GPU计算平台。链接：https://developer.nvidia.com/cuda-toolkit
-    - NVML (NVIDIA Management Library)：用于NVIDIA平台的能耗测量。链接：https://developer.nvidia.com/nvidia-management-library-nvml
-    - MLX：Apple的机器学习框架，用于Apple Silicon上的推理。链接：https://github.com/ml-explore/mlx
-    - MPS (Metal Performance Shaders)：Apple的GPU加速框架，是MLX的后端之一。此为Apple系统框架，无独立开源仓库。
-    - TF32 (TensorFloat-32)：NVIDIA的数值计算格式，是CUDA的一部分，用于V100/H100上的计算。此为技术标准，无独立项目链接。
+- 模型权重：论文中未提及。
+- 数据集：论文中提及了 LibriSpeech（用于基准测试）、VoxCeleb1（用于性别分类）和 SPIRA（用于 COVID-19 检测），但未提供具体下载链接或开源协议信息。
+- Demo：论文中未提及。
+- 复现材料：论文指出，源代码、基准测试脚本、配置文件和聚合的实验结果均已在上述代码仓库中公开。
+- 论文中引用的开源项目：论文在相关工作部分引用了多个开源项目（librosa, SincNet, LEAF, EfficientLEAF, TMFWC），但未在正文中提供其具体链接。
 
 ### 🏗️ 方法概述和架构
 
-MelT的核心架构是将多阶段音频前端流水线重构为统一的密集矩阵乘法操作，具体包括以下关键组件和步骤：
+MelT的方法论核心在于将传统音频前端的多阶段流程重构为一个单一的密集投影操作。其架构和数据流如下：
 
-1.  输入处理与帧矩阵构建：
-    *   输入为采样率 \(f_s\) 的离散音频信号 \(x[n]\)。首先进行分帧和加窗。论文将窗口函数 \(w[n]\) 的应用直接吸收到预计算的投影矩阵中，因此输入是一个由未加窗音频帧堆叠而成的矩阵 \(\mathbf{X} \in \mathbb{R}^{T \times N}\)，其中 \(T\) 是帧数，\(N\) 是帧长（如400或1200采样点）。
+1.  问题定义与数学表述：
+    *   传统流程：`时域信号` -> `分帧加窗` -> `FFT` -> `计算幅度谱` -> `应用Mel滤波器组（稀疏矩阵乘法）` -> `对数压缩` -> `（可选）DCT` -> `输出特征`。此流程包含异构操作（FFT、稀疏乘法、逐元素操作），且中间存在`FFT`步骤，产生了线性频率网格上的中间表示。
+    *   MelT流程：`时域信号` -> `分帧` -> `应用预计算的Mel间隔NDFT投影矩阵（两个密集矩阵乘法）` -> `逐元素平方求和（Hadamard积）` -> `对数压缩` -> `输出特征`。核心是步骤3，直接在目标Mel频率点上进行投影。
 
-2.  预计算Mel间隔NDFT基矩阵：
-    *   频率定位：根据Mel刻度（公式1），在指定的频率范围 \([f_{min}, f_{max}]\) 内，均匀生成 \(M\) 个目标Mel频率点 \(\mu_m\)，并通过逆Mel映射（公式4）得到对应的物理频率 \(f_m\)（赫兹）。
-    *   构建投影矩阵：为每个目标频率 \(f_m\) 和每个时域采样点 \(n\)，预先计算两个 \(M \times N\) 的实值矩阵 \(\mathbf{W}^{(r)}\) 和 \(\mathbf{W}^{(i)}\)：
-        *   \(\mathbf{W}^{(r)}_{m,n} = w[n] \cdot \cos\left(2\pi f_m n / f_s\right)\)
-        *   \(\mathbf{W}^{(i)}_{m,n} = w[n] \cdot \sin\left(2\pi f_m n / f_s\right)\)
-    *   这两个矩阵分别编码了用于投影的余弦和正弦基，并已融合了窗口函数。它们在推理前一次性计算好并存储在设备内存中。
+2.  Direct Mel Projection（直接Mel投影）：
+    *   目标是在\(M\)个均匀分布在Mel尺度上的目标频率点\(f_m\)（\(m=0,...,M-1\)）处，直接计算信号帧的傅里叶系数实部\(R_{t,m}\)和虚部\(I_{t,m}\)。数学上，这等价于对信号帧\(\tilde{x}_t[n]\)分别计算与一组余弦和正弦基函数的内积，如公式(5)和(6)所示。
+    *   与传统方法不同，这里是在目标频率点进行相干投影（计算复数系数），然后才计算能量\(S_{t,m} = R_{t,m}^2 + I_{t,m}^2\)。而传统方法是先计算所有FFT bin的能量（不相干），再通过Mel滤波器组进行非负加权求和（不相干聚合）。
 
-3.  密集矩阵投影（核心GEMM操作）：
-    *   通过两次通用矩阵乘法（GEMM），将时域帧矩阵 \(\mathbf{X}\) 投影到Mel频率空间：
-        *   实部投影：\(\mathbf{R} = \mathbf{X} \cdot (\mathbf{W}^{(r)})^\top\)
-        *   虚部投影：\(\mathbf{I} = \mathbf{X} \cdot (\mathbf{W}^{(i)})^\top\)
-    *   这一步是计算的瓶颈，也是与加速器架构最匹配的部分。它完全取代了传统流程中的FFT和稀疏矩阵乘法。
+3.  GEMM映射与实现：
+    *   为实现高效并行计算，上述操作被映射为矩阵乘法。假设输入为\(T\)个帧组成的矩阵\(\mathbf{X} \in \mathbb{R}^{T \times N}\)。
+    *   预计算投影矩阵：固定两个密集投影矩阵\(\mathbf{W}^{(r)} \in \mathbb{R}^{M \times N}\)和\(\mathbf{W}^{(i)} \in \mathbb{R}^{M \times N}\)，其元素由窗函数\(w[n]\)与对应频率的余弦/正弦项乘积构成，如公式(8)所示。这一步将窗函数和基函数计算离线完成。
+    *   并行投影：通过两次GEMM操作计算所有帧在所有目标频率的实部和虚部：\(\mathbf{R} = \mathbf{X} (\mathbf{W}^{(r)})^{\top}\), \(\mathbf{I} = \mathbf{X} (\mathbf{W}^{(i)})^{\top}\)，如公式(9)所示。
+    *   能量计算：通过逐元素的Hadamard积和加法计算Mel能量矩阵：\(\mathbf{S} = \mathbf{R} \odot \mathbf{R} + \mathbf{I} \odot \mathbf{I}\)，如公式(10)所示。
+    *   后续步骤（对数压缩、DCT）均为逐元素或固定矩阵操作，可轻松在GEMM之后叠加。
 
-4.  Mel能谱计算：
-    *   计算实部和虚部的平方和，得到Mel间隔的能量谱矩阵 \(\mathbf{S}\)：
-        \[\mathbf{S} = \mathbf{R} \odot \mathbf{R} + \mathbf{I} \odot \mathbf{I}\]
-        其中 \(\odot\) 表示逐元素乘法（Hadamard积）。这一步相当于对每个频率点进行相干能量求解。
+4.  前端变体：
+    *   MelT：在能量矩阵\(\mathbf{S}\)上直接应用对数压缩，得到Mel频谱图\(\mathbf{M}^{\mathrm{MelT}} = \log(\mathbf{S} + \epsilon)\)，如公式(11)所示。
+    *   MFCCT：作为MelT的倒谱扩展，在\(\mathbf{M}^{\mathrm{MelT}}\)基础上应用一个正交DCT-II矩阵\(\mathbf{D}\)，计算\(\mathbf{C}^{\mathrm{MFCCT}} = \mathbf{M}^{\mathrm{MelT}} \mathbf{D}^{\top}\)，如公式(12)所示，旨在对标传统MFCC。
 
-5.  输出表示变体：
-    *   MelT谱图：直接对 \(\mathbf{S}\) 应用对数压缩：\(\mathbf{M}^{\mathrm{MelT}} = \log(\mathbf{S} + \epsilon)\)。
-    *   MFCCT倒谱系数：在 \(\mathbf{M}^{\mathrm{MelT}}\) 的基础上，应用一个固定的正交离散余弦变换（DCT-II）矩阵 \(\mathbf{D} \in \mathbb{R}^{K \times M}\)：
-        \[\mathbf{C}^{\mathrm{MFCCT}} = \mathbf{M}^{\mathrm{MelT}} \cdot \mathbf{D}^\top\]
-        这对应于传统MFCC计算中的DCT步骤，但输入的是由直接投影得到的Mel谱。
+5.  架构图：论文中的Figure 1清晰展示了MFCCT与传统MFCC的计算流程对比。传统MFCC是“分帧->窗口->STFT->|·|^2->Mel滤波器组->Log->DCT-II->MFCC”，而MFCCT是“分帧->窗口->直接Mel投影（GEMM）->|·|^2->Log->DCT-II->MFCCT”。核心区别在于，MelT/MFCCT将STFT和Mel滤波器组合并为一步密集投影。
 
-数据流与动机总结：该架构的设计动机是规避传统流水线中FFT计算的不规则访存、内核启动开销以及稀疏Mel滤波器的间接内存访问。通过将整个特征提取过程转化为两个大的GEMM操作和一个逐元素操作，计算模式变得规整，可以充分利用加速器的高算力张量核心和优化的矩阵库（如cuBLAS、MLX）。论文中图1直观对比了传统MFCC与MFCCT的计算路径差异，突出了其“单阶段密集投影”的特点。方法概述部分的总字数经估算约650中文字符。
+设计动机与权衡：该设计的核心动机是利用现代硬件对密集GEMM操作的高度优化（如Tensor Cores），以牺牲FFT渐进复杂度\(O(N \log N)\)为代价，换取在典型音频帧长\(N\)和Mel点数\(M\)下（即\(N \cdot M\)运算量）的实际执行效率提升，避免了内核调度、内存分配和稀疏索引的开销。
 
+![图1](data:image/svg+xml;base64,PHN2ZyBpZD0iUzMuRjEucGljMSIgY2xhc3M9Imx0eF9waWN0dXJlIGx0eF9jZW50ZXJpbmciIGhlaWdodD0iNDA0LjM2IiBvdmVyZmxvdz0idmlzaWJsZSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNDE5LjgzIDQwNC4zNiIgd2lkdGg9IjQxOS44MyI+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsNDA0LjM2KSBtYXRyaXgoMSAwIDAgLTEgMCAwKSB0cmFuc2xhdGUoNzAuOTMsMCkgdHJhbnNsYXRlKDAsMzk0LjY4KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48ZyBzdHJva2Utd2lkdGg9IjAuNHB0Ij48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIC02Ni43OCAtNC4zMikiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Ii0tbHR4LWZvLXdpZHRoOjkuMTZlbTstLWx0eC1mby1oZWlnaHQ6MC41OWVtOy0tbHR4LWZvLWRlcHRoOjBlbTsiIHdpZHRoPSIxMzQuOTkiIGhlaWdodD0iOC42NSIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCA4LjY1KSIgb3ZlcmZsb3c9InZpc2libGUiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250YWluZXIiPjxzcGFuIGNsYXNzPSJsdHhfZm9yZWlnbm9iamVjdF9jb250ZW50Ij48c3BhbiBpZD0iUzMuRjEucGljMS4zLjMuMy4zLjEuMSIgY2xhc3M9Imx0eF90ZXh0IGx0eF9mb250X2JvbGQiIHN0eWxlPSJmb250LXNpemU6OTAlOyI+Q29udmVudGlvbmFsIE1GQ0M8L3NwYW4+PC9zcGFuPjwvc3Bhbj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxnIHN0eWxlPSItLWx0eC1maWxsLWNvbG9yOiNEOUQ5RkY7IiBmaWxsPSIjRDlEOUZGIj48cGF0aCBkPSJNIDQ2LjYzIC0yNi43NCBMIC00Ni42MyAtMjYuNzQgQyAtNDkuNjkgLTI2Ljc0IC01Mi4xNyAtMjkuMjIgLTUyLjE3IC0zMi4yOCBMIC01Mi4xNyAtNTAuNzQgQyAtNTIuMTcgLTUzLjc5IC00OS42OSAtNTYuMjcgLTQ2LjYzIC01Ni4yNyBMIDQ2LjYzIC01Ni4yNyBDIDQ5LjY5IC01Ni4yNyA1Mi4xNyAtNTMuNzkgNTIuMTcgLTUwLjc0IEwgNTIuMTcgLTMyLjI4IEMgNTIuMTcgLTI5LjIyIDQ5LjY5IC0yNi43NCA0Ni42MyAtMjYuNzQgWiBNIC01Mi4xNyAtNTYuMjciPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAtMTcuNTMgLTQ1Ljc2KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5GcmFtZTwvdGV4dD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0Q5RkZGRjsiIGZpbGw9IiNEOUZGRkYiPjxwYXRoIGQ9Ik0gNDYuNjMgLTczLjM2IEwgLTQ2LjYzIC03My4zNiBDIC00OS42OSAtNzMuMzYgLTUyLjE3IC03NS44NCAtNTIuMTcgLTc4LjkgTCAtNTIuMTcgLTk3LjM1IEMgLTUyLjE3IC0xMDAuNDEgLTQ5LjY5IC0xMDIuODkgLTQ2LjYzIC0xMDIuODkgTCA0Ni42MyAtMTAyLjg5IEMgNDkuNjkgLTEwMi44OSA1Mi4xNyAtMTAwLjQxIDUyLjE3IC05Ny4zNSBMIDUyLjE3IC03OC45IEMgNTIuMTcgLTc1Ljg0IDQ5LjY5IC03My4zNiA0Ni42MyAtNzMuMzYgWiBNIC01Mi4xNyAtMTAyLjg5Ij48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgLTIzLjExIC05Mi40NSkiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+V2luZG93PC90ZXh0PjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRkZFNkNDOyIgZmlsbD0iI0ZGRTZDQyI+PHBhdGggZD0iTSA0Ni42MyAtMTE5Ljk4IEwgLTQ2LjYzIC0xMTkuOTggQyAtNDkuNjkgLTExOS45OCAtNTIuMTcgLTEyMi40NiAtNTIuMTcgLTEyNS41MSBMIC01Mi4xNyAtMTU1Ljc4IEMgLTUyLjE3IC0xNTguODQgLTQ5LjY5IC0xNjEuMzIgLTQ2LjYzIC0xNjEuMzIgTCA0Ni42MyAtMTYxLjMyIEMgNDkuNjkgLTE2MS4zMiA1Mi4xNyAtMTU4Ljg0IDUyLjE3IC0xNTUuNzggTCA1Mi4xNyAtMTI1LjUxIEMgNTIuMTcgLTEyMi40NiA0OS42OSAtMTE5Ljk4IDQ2LjYzIC0xMTkuOTggWiBNIC01Mi4xNyAtMTYxLjMyIj48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgLTE2Ljk4IC0xNDQuOSkiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+U1RGVDwvdGV4dD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0ZGRkZCRjsiIGZpbGw9IiNGRkZGQkYiPjxwYXRoIGQ9Ik0gNDYuNjMgLTE3OC40MSBMIC00Ni42MyAtMTc4LjQxIEMgLTQ5LjY5IC0xNzguNDEgLTUyLjE3IC0xODAuODggLTUyLjE3IC0xODMuOTQgTCAtNTIuMTcgLTIwMi40IEMgLTUyLjE3IC0yMDUuNDUgLTQ5LjY5IC0yMDcuOTMgLTQ2LjYzIC0yMDcuOTMgTCA0Ni42MyAtMjA3LjkzIEMgNDkuNjkgLTIwNy45MyA1Mi4xNyAtMjA1LjQ1IDUyLjE3IC0yMDIuNCBMIDUyLjE3IC0xODMuOTQgQyA1Mi4xNyAtMTgwLjg4IDQ5LjY5IC0xNzguNDEgNDYuNjMgLTE3OC40MSBaIE0gLTUyLjE3IC0yMDcuOTMiPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAtOC4zNCAtMTk3LjA3KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48Zm9yZWlnbk9iamVjdCBzdHlsZT0iLS1sdHgtZm8td2lkdGg6MS4zZW07LS1sdHgtZm8taGVpZ2h0OjAuODVlbTstLWx0eC1mby1kZXB0aDowLjI0ZW07IiB3aWR0aD0iMTYuNjgiIGhlaWdodD0iMTQuMDIiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMTAuOTEpIiBvdmVyZmxvdz0idmlzaWJsZSI+PHNwYW4gY2xhc3M9Imx0eF9mb3JlaWdub2JqZWN0X2NvbnRhaW5lciI+PHNwYW4gY2xhc3M9Imx0eF9mb3JlaWdub2JqZWN0X2NvbnRlbnQiPjxtYXRoIGlkPSJTMy5GMS5waWMxLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLjEuMS5tMSIgY2xhc3M9Imx0eF9tYXRoX3VucGFyc2VkIiBhbHR0ZXh0PSJ8XGNkb3R8XnsyfSIgZGlzcGxheT0iaW5saW5lIiBpbnRlbnQ9IjpsaXRlcmFsIj48c2VtYW50aWNzPjxtcm93PjxtbyBmZW5jZT0iZmFsc2UiIG1heHNpemU9IjAuOTAwZW0iIG1pbnNpemU9IjAuOTAwZW0iIHN0cmV0Y2h5PSJ0cnVlIj58PC9tbz48bW8gbHNwYWNlPSIwZW0iIG1hdGhzaXplPSIwLjkwMGVtIiByc3BhY2U9IjBlbSI+4ouFPC9tbz48bXN1cD48bW8gZmVuY2U9ImZhbHNlIiBtYXhzaXplPSIwLjkwMGVtIiBtaW5zaXplPSIwLjkwMGVtIiBzdHJldGNoeT0idHJ1ZSI+fDwvbW8+PG1uIG1hdGhzaXplPSIwLjkwMGVtIj4yPC9tbj48L21zdXA+PC9tcm93Pjxhbm5vdGF0aW9uIGVuY29kaW5nPSJhcHBsaWNhdGlvbi94LXRleCI+fFxjZG90fF57Mn08L2Fubm90YXRpb24+PC9zZW1hbnRpY3M+PC9tYXRoPjwvc3Bhbj48L3NwYW4+PC9mb3JlaWduT2JqZWN0PjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRDFGRkQxOyIgZmlsbD0iI0QxRkZEMSI+PHBhdGggZD0iTSA0Ni42MyAtMjI1LjAyIEwgLTQ2LjYzIC0yMjUuMDIgQyAtNDkuNjkgLTIyNS4wMiAtNTIuMTcgLTIyNy41IC01Mi4xNyAtMjMwLjU2IEwgLTUyLjE3IC0yNDkuMDEgQyAtNTIuMTcgLTI1Mi4wNyAtNDkuNjkgLTI1NC41NSAtNDYuNjMgLTI1NC41NSBMIDQ2LjYzIC0yNTQuNTUgQyA0OS42OSAtMjU0LjU1IDUyLjE3IC0yNTIuMDcgNTIuMTcgLTI0OS4wMSBMIDUyLjE3IC0yMzAuNTYgQyA1Mi4xNyAtMjI3LjUgNDkuNjkgLTIyNS4wMiA0Ni42MyAtMjI1LjAyIFogTSAtNTIuMTcgLTI1NC41NSI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIC0yOS4yNiAtMjQ4LjQzKSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXgiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMTcuMykiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9yb3ciIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMCA4LjY1KSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X2NvbCBsdHhfbm9wYWRfbCBsdHhfbm9wYWRfciIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMTguNzcgMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPk1lbDwvdGV4dD48L2c+PC9nPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9yb3ciIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMCAxNy4zKSI+PGcgY2xhc3M9Imx0eF90aWt6bWF0cml4X2NvbCBsdHhfbm9wYWRfbCBsdHhfbm9wYWRfciIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+RmlsdGVyYmFuazwvdGV4dD48L2c+PC9nPjwvZz48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0ZGRTBFMDsiIGZpbGw9IiNGRkUwRTAiPjxwYXRoIGQ9Ik0gNDYuNjMgLTI3MS42NCBMIC00Ni42MyAtMjcxLjY0IEMgLTQ5LjY5IC0yNzEuNjQgLTUyLjE3IC0yNzQuMTIgLTUyLjE3IC0yNzcuMTcgTCAtNTIuMTcgLTI5NS42MyBDIC01Mi4xNyAtMjk4LjY5IC00OS42OSAtMzAxLjE3IC00Ni42MyAtMzAxLjE3IEwgNDYuNjMgLTMwMS4xNyBDIDQ5LjY5IC0zMDEuMTcgNTIuMTcgLTI5OC42OSA1Mi4xNyAtMjk1LjYzIEwgNTIuMTcgLTI3Ny4xNyBDIDUyLjE3IC0yNzQuMTIgNDkuNjkgLTI3MS42NCA0Ni42MyAtMjcxLjY0IFogTSAtNTIuMTcgLTMwMS4xNyI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIC0xMC40IC0yODkuNDUpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPkxvZzwvdGV4dD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0Q5RUNFQzsiIGZpbGw9IiNEOUVDRUMiPjxwYXRoIGQ9Ik0gNDYuNjMgLTMxOC4yNSBMIC00Ni42MyAtMzE4LjI1IEMgLTQ5LjY5IC0zMTguMjUgLTUyLjE3IC0zMjAuNzMgLTUyLjE3IC0zMjMuNzkgTCAtNTIuMTcgLTM0Mi4yNSBDIC01Mi4xNyAtMzQ1LjMgLTQ5LjY5IC0zNDcuNzggLTQ2LjYzIC0zNDcuNzggTCA0Ni42MyAtMzQ3Ljc4IEMgNDkuNjkgLTM0Ny43OCA1Mi4xNyAtMzQ1LjMgNTIuMTcgLTM0Mi4yNSBMIDUyLjE3IC0zMjMuNzkgQyA1Mi4xNyAtMzIwLjczIDQ5LjY5IC0zMTguMjUgNDYuNjMgLTMxOC4yNSBaIE0gLTUyLjE3IC0zNDcuNzgiPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAtMjEuMDYgLTMzNy4yNykiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+RENULUlJPC90ZXh0PjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRUNFQ0VDOyIgZmlsbD0iI0VDRUNFQyI+PHBhdGggZD0iTSA0Ni42MyAtMzY0Ljg3IEwgLTQ2LjYzIC0zNjQuODcgQyAtNDkuNjkgLTM2NC44NyAtNTIuMTcgLTM2Ny4zNSAtNTIuMTcgLTM3MC40MSBMIC01Mi4xNyAtMzg4Ljg2IEMgLTUyLjE3IC0zOTEuOTIgLTQ5LjY5IC0zOTQuNCAtNDYuNjMgLTM5NC40IEwgNDYuNjMgLTM5NC40IEMgNDkuNjkgLTM5NC40IDUyLjE3IC0zOTEuOTIgNTIuMTcgLTM4OC44NiBMIDUyLjE3IC0zNzAuNDEgQyA1Mi4xNyAtMzY3LjM1IDQ5LjY5IC0zNjQuODcgNDYuNjMgLTM2NC44NyBaIE0gLTUyLjE3IC0zOTQuNCI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIC0xOS4xMSAtMzgzLjg5KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5NRkNDPC90ZXh0PjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuOHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDAgLTU2LjU1IEwgMCAtNjUuNzYiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjAgLTEuMCAxLjAgMC4wIDAgLTY1Ljc2KSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDUuMTEgMCBDIDQuNDggMC4xNSAxLjcyIDEuMDMgMCAxLjk5IEwgMCAtMS45OSBDIDEuNzIgLTEuMDMgNC40OCAtMC4xNSA1LjExIDAgWiI+PC9wYXRoPjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjhwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSAwIC0xMDMuMTcgTCAwIC0xMTIuMzgiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjAgLTEuMCAxLjAgMC4wIDAgLTExMi4zOCkiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA1LjExIDAgQyA0LjQ4IDAuMTUgMS43MiAxLjAzIDAgMS45OSBMIDAgLTEuOTkgQyAxLjcyIC0xLjAzIDQuNDggLTAuMTUgNS4xMSAwIFoiPjwvcGF0aD48L2c+PC9nPjxnIHN0cm9rZS13aWR0aD0iMC44cHQiPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gMCAtMTYxLjU5IEwgMCAtMTcwLjgxIj48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAwIC0xNzAuODEpIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gNS4xMSAwIEMgNC40OCAwLjE1IDEuNzIgMS4wMyAwIDEuOTkgTCAwIC0xLjk5IEMgMS43MiAtMS4wMyA0LjQ4IC0wLjE1IDUuMTEgMCBaIj48L3BhdGg+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuOHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDAgLTIwOC4yMSBMIDAgLTIxNy40MiI+PC9wYXRoPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuMCAtMS4wIDEuMCAwLjAgMCAtMjE3LjQyKSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDUuMTEgMCBDIDQuNDggMC4xNSAxLjcyIDEuMDMgMCAxLjk5IEwgMCAtMS45OSBDIDEuNzIgLTEuMDMgNC40OCAtMC4xNSA1LjExIDAgWiI+PC9wYXRoPjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjhwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSAwIC0yNTQuODMgTCAwIC0yNjQuMDQiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjAgLTEuMCAxLjAgMC4wIDAgLTI2NC4wNCkiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA1LjExIDAgQyA0LjQ4IDAuMTUgMS43MiAxLjAzIDAgMS45OSBMIDAgLTEuOTkgQyAxLjcyIC0xLjAzIDQuNDggLTAuMTUgNS4xMSAwIFoiPjwvcGF0aD48L2c+PC9nPjxnIHN0cm9rZS13aWR0aD0iMC44cHQiPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gMCAtMzAxLjQ0IEwgMCAtMzEwLjY2Ij48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAwIC0zMTAuNjYpIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gNS4xMSAwIEMgNC40OCAwLjE1IDEuNzIgMS4wMyAwIDEuOTkgTCAwIC0xLjk5IEMgMS43MiAtMS4wMyA0LjQ4IC0wLjE1IDUuMTEgMCBaIj48L3BhdGg+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuOHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDAgLTM0OC4wNiBMIDAgLTM1Ny4yNyI+PC9wYXRoPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuMCAtMS4wIDEuMCAwLjAgMCAtMzU3LjI3KSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDUuMTEgMCBDIDQuNDggMC4xNSAxLjcyIDEuMDMgMCAxLjk5IEwgMCAtMS45OSBDIDEuNzIgLTEuMDMgNC40OCAtMC4xNSA1LjExIDAgWiI+PC9wYXRoPjwvZz48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAyMjUuMjQgLTMuMTEpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjxmb3JlaWduT2JqZWN0IHN0eWxlPSItLWx0eC1mby13aWR0aDo4LjExZW07LS1sdHgtZm8taGVpZ2h0OjAuNTllbTstLWx0eC1mby1kZXB0aDowLjE2ZW07IiB3aWR0aD0iMTE5LjUiIGhlaWdodD0iMTEuMDciIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgOC42NSkiIG92ZXJmbG93PSJ2aXNpYmxlIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGFpbmVyIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGVudCI+PHNwYW4gaWQ9IlMzLkYxLnBpYzEuNC40LjQuNC4xLjEiIGNsYXNzPSJsdHhfdGV4dCBsdHhfZm9udF9ib2xkIiBzdHlsZT0iZm9udC1zaXplOjkwJTsiPlByb3Bvc2VkIE1GQ0NUPC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9mb3JlaWduT2JqZWN0PjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRDlEOUZGOyIgZmlsbD0iI0Q5RDlGRiI+PHBhdGggZD0iTSAzMzEuNjIgLTI3Ljk2IEwgMjM4LjM2IC0yNy45NiBDIDIzNS4zMSAtMjcuOTYgMjMyLjgzIC0zMC40MyAyMzIuODMgLTMzLjQ5IEwgMjMyLjgzIC01MS45NSBDIDIzMi44MyAtNTUuMDEgMjM1LjMxIC01Ny40OCAyMzguMzYgLTU3LjQ4IEwgMzMxLjYyIC01Ny40OCBDIDMzNC42OCAtNTcuNDggMzM3LjE2IC01NS4wMSAzMzcuMTYgLTUxLjk1IEwgMzM3LjE2IC0zMy40OSBDIDMzNy4xNiAtMzAuNDMgMzM0LjY4IC0yNy45NiAzMzEuNjIgLTI3Ljk2IFogTSAyMzIuODMgLTU3LjQ4Ij48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMjY3LjQ3IC00Ni45NykiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+RnJhbWU8L3RleHQ+PC9nPjxnIHN0eWxlPSItLWx0eC1maWxsLWNvbG9yOiNEOUZGRkY7IiBmaWxsPSIjRDlGRkZGIj48cGF0aCBkPSJNIDMzMS42MiAtNzQuNTcgTCAyMzguMzYgLTc0LjU3IEMgMjM1LjMxIC03NC41NyAyMzIuODMgLTc3LjA1IDIzMi44MyAtODAuMTEgTCAyMzIuODMgLTk4LjU2IEMgMjMyLjgzIC0xMDEuNjIgMjM1LjMxIC0xMDQuMSAyMzguMzYgLTEwNC4xIEwgMzMxLjYyIC0xMDQuMSBDIDMzNC42OCAtMTA0LjEgMzM3LjE2IC0xMDEuNjIgMzM3LjE2IC05OC41NiBMIDMzNy4xNiAtODAuMTEgQyAzMzcuMTYgLTc3LjA1IDMzNC42OCAtNzQuNTcgMzMxLjYyIC03NC41NyBaIE0gMjMyLjgzIC0xMDQuMSI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDI2MS44OSAtOTMuNjYpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPldpbmRvdzwvdGV4dD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0Y1RDlFMjsiIGZpbGw9IiNGNUQ5RTIiPjxwYXRoIGQ9Ik0gMzMxLjYyIC0xMjEuMTkgTCAyMzguMzYgLTEyMS4xOSBDIDIzNS4zMSAtMTIxLjE5IDIzMi44MyAtMTIzLjY3IDIzMi44MyAtMTI2LjcyIEwgMjMyLjgzIC0xNTYuOTkgQyAyMzIuODMgLTE2MC4wNSAyMzUuMzEgLTE2Mi41MyAyMzguMzYgLTE2Mi41MyBMIDMzMS42MiAtMTYyLjUzIEMgMzM0LjY4IC0xNjIuNTMgMzM3LjE2IC0xNjAuMDUgMzM3LjE2IC0xNTYuOTkgTCAzMzcuMTYgLTEyNi43MiBDIDMzNy4xNiAtMTIzLjY3IDMzNC42OCAtMTIxLjE5IDMzMS42MiAtMTIxLjE5IFogTSAyMzIuODMgLTE2Mi41MyI+PC9wYXRoPjwvZz48ZyBzdHlsZT0iLS1sdHgtc3Ryb2tlLWNvbG9yOiMwMDAwMDA7LS1sdHgtZmlsbC1jb2xvcjojMDAwMDAwOyIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wIDAuMCAwLjAgMS4wIDI1NS4wMiAtMTQ5LjIzKSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXgiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMTcuMTYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgOC42NSkiPjxnIGNsYXNzPSJsdHhfdGlrem1hdHJpeF9jb2wgbHR4X25vcGFkX2wgbHR4X25vcGFkX3IiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPkRpcmVjdCBNZWw8L3RleHQ+PC9nPjwvZz48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfcm93IiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDAgMTcuMTYpIj48ZyBjbGFzcz0ibHR4X3Rpa3ptYXRyaXhfY29sIGx0eF9ub3BhZF9sIGx0eF9ub3BhZF9yIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwLjg5IDApIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5Qcm9qZWN0aW9uPC90ZXh0PjwvZz48L2c+PC9nPjwvZz48ZyBzdHlsZT0iLS1sdHgtZmlsbC1jb2xvcjojRkZGRkJGOyIgZmlsbD0iI0ZGRkZCRiI+PHBhdGggZD0iTSAzMzEuNjIgLTE3OS42MiBMIDIzOC4zNiAtMTc5LjYyIEMgMjM1LjMxIC0xNzkuNjIgMjMyLjgzIC0xODIuMDkgMjMyLjgzIC0xODUuMTUgTCAyMzIuODMgLTIwMy42MSBDIDIzMi44MyAtMjA2LjY3IDIzNS4zMSAtMjA5LjE0IDIzOC4zNiAtMjA5LjE0IEwgMzMxLjYyIC0yMDkuMTQgQyAzMzQuNjggLTIwOS4xNCAzMzcuMTYgLTIwNi42NyAzMzcuMTYgLTIwMy42MSBMIDMzNy4xNiAtMTg1LjE1IEMgMzM3LjE2IC0xODIuMDkgMzM0LjY4IC0xNzkuNjIgMzMxLjYyIC0xNzkuNjIgWiBNIDIzMi44MyAtMjA5LjE0Ij48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMjc2LjY1IC0xOTguMjgpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjxmb3JlaWduT2JqZWN0IHN0eWxlPSItLWx0eC1mby13aWR0aDoxLjNlbTstLWx0eC1mby1oZWlnaHQ6MC44NWVtOy0tbHR4LWZvLWRlcHRoOjAuMjRlbTsiIHdpZHRoPSIxNi42OCIgaGVpZ2h0PSIxNC4wMiIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAxMC45MSkiIG92ZXJmbG93PSJ2aXNpYmxlIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGFpbmVyIj48c3BhbiBjbGFzcz0ibHR4X2ZvcmVpZ25vYmplY3RfY29udGVudCI+PG1hdGggaWQ9IlMzLkYxLnBpYzEuMi4yLjIuMi4yLjIuMi4yLjIuMi4yLjIuMS4xLjEuMS4xLjEuMS4xLjEuMS4xLm0xIiBjbGFzcz0ibHR4X21hdGhfdW5wYXJzZWQiIGFsdHRleHQ9InxcY2RvdHxeezJ9IiBkaXNwbGF5PSJpbmxpbmUiIGludGVudD0iOmxpdGVyYWwiPjxzZW1hbnRpY3M+PG1yb3c+PG1vIGZlbmNlPSJmYWxzZSIgbWF4c2l6ZT0iMC45MDBlbSIgbWluc2l6ZT0iMC45MDBlbSIgc3RyZXRjaHk9InRydWUiPnw8L21vPjxtbyBsc3BhY2U9IjBlbSIgbWF0aHNpemU9IjAuOTAwZW0iIHJzcGFjZT0iMGVtIj7ii4U8L21vPjxtc3VwPjxtbyBmZW5jZT0iZmFsc2UiIG1heHNpemU9IjAuOTAwZW0iIG1pbnNpemU9IjAuOTAwZW0iIHN0cmV0Y2h5PSJ0cnVlIj58PC9tbz48bW4gbWF0aHNpemU9IjAuOTAwZW0iPjI8L21uPjwvbXN1cD48L21yb3c+PGFubm90YXRpb24gZW5jb2Rpbmc9ImFwcGxpY2F0aW9uL3gtdGV4Ij58XGNkb3R8XnsyfTwvYW5ub3RhdGlvbj48L3NlbWFudGljcz48L21hdGg+PC9zcGFuPjwvc3Bhbj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxnIHN0eWxlPSItLWx0eC1maWxsLWNvbG9yOiNGRkUwRTA7IiBmaWxsPSIjRkZFMEUwIj48cGF0aCBkPSJNIDMzMS42MiAtMjcxLjY0IEwgMjM4LjM2IC0yNzEuNjQgQyAyMzUuMzEgLTI3MS42NCAyMzIuODMgLTI3NC4xMiAyMzIuODMgLTI3Ny4xNyBMIDIzMi44MyAtMjk1LjYzIEMgMjMyLjgzIC0yOTguNjkgMjM1LjMxIC0zMDEuMTcgMjM4LjM2IC0zMDEuMTcgTCAzMzEuNjIgLTMwMS4xNyBDIDMzNC42OCAtMzAxLjE3IDMzNy4xNiAtMjk4LjY5IDMzNy4xNiAtMjk1LjYzIEwgMzM3LjE2IC0yNzcuMTcgQyAzMzcuMTYgLTI3NC4xMiAzMzQuNjggLTI3MS42NCAzMzEuNjIgLTI3MS42NCBaIE0gMjMyLjgzIC0zMDEuMTciPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAyNzQuNiAtMjg5LjQ1KSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIj48dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDApIj5Mb2c8L3RleHQ+PC9nPjxnIHN0eWxlPSItLWx0eC1maWxsLWNvbG9yOiNEOUVDRUM7IiBmaWxsPSIjRDlFQ0VDIj48cGF0aCBkPSJNIDMzMS42MiAtMzE4LjI1IEwgMjM4LjM2IC0zMTguMjUgQyAyMzUuMzEgLTMxOC4yNSAyMzIuODMgLTMyMC43MyAyMzIuODMgLTMyMy43OSBMIDIzMi44MyAtMzQyLjI1IEMgMjMyLjgzIC0zNDUuMyAyMzUuMzEgLTM0Ny43OCAyMzguMzYgLTM0Ny43OCBMIDMzMS42MiAtMzQ3Ljc4IEMgMzM0LjY4IC0zNDcuNzggMzM3LjE2IC0zNDUuMyAzMzcuMTYgLTM0Mi4yNSBMIDMzNy4xNiAtMzIzLjc5IEMgMzM3LjE2IC0zMjAuNzMgMzM0LjY4IC0zMTguMjUgMzMxLjYyIC0zMTguMjUgWiBNIDIzMi44MyAtMzQ3Ljc4Ij48L3BhdGg+PC9nPjxnIHN0eWxlPSItLWx0eC1zdHJva2UtY29sb3I6IzAwMDAwMDstLWx0eC1maWxsLWNvbG9yOiMwMDAwMDA7IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjAgMC4wIDAuMCAxLjAgMjYzLjkzIC0zMzcuMjcpIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiPjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMCkiPkRDVC1JSTwvdGV4dD48L2c+PGcgc3R5bGU9Ii0tbHR4LWZpbGwtY29sb3I6I0VDRUNFQzsiIGZpbGw9IiNFQ0VDRUMiPjxwYXRoIGQ9Ik0gMzMxLjYyIC0zNjQuODcgTCAyMzguMzYgLTM2NC44NyBDIDIzNS4zMSAtMzY0Ljg3IDIzMi44MyAtMzY3LjM1IDIzMi44MyAtMzcwLjQxIEwgMjMyLjgzIC0zODguODYgQyAyMzIuODMgLTM5MS45MiAyMzUuMzEgLTM5NC40IDIzOC4zNiAtMzk0LjQgTCAzMzEuNjIgLTM5NC40IEMgMzM0LjY4IC0zOTQuNCAzMzcuMTYgLTM5MS45MiAzMzcuMTYgLTM4OC44NiBMIDMzNy4xNiAtMzcwLjQxIEMgMzM3LjE2IC0zNjcuMzUgMzM0LjY4IC0zNjQuODcgMzMxLjYyIC0zNjQuODcgWiBNIDIzMi44MyAtMzk0LjQiPjwvcGF0aD48L2c+PGcgc3R5bGU9Ii0tbHR4LXN0cm9rZS1jb2xvcjojMDAwMDAwOy0tbHR4LWZpbGwtY29sb3I6IzAwMDAwMDsiIHRyYW5zZm9ybT0ibWF0cml4KDEuMCAwLjAgMC4wIDEuMCAyNjEuMjYgLTM4My44OSkiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMDAwMCI+PHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAwKSI+TUZDQ1Q8L3RleHQ+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuOHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDI4NC45OSAtNTcuNzYgTCAyODQuOTkgLTY2Ljk3Ij48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAyODQuOTkgLTY2Ljk3KSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDUuMTEgMCBDIDQuNDggMC4xNSAxLjcyIDEuMDMgMCAxLjk5IEwgMCAtMS45OSBDIDEuNzIgLTEuMDMgNC40OCAtMC4xNSA1LjExIDAgWiI+PC9wYXRoPjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjhwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSAyODQuOTkgLTEwNC4zOCBMIDI4NC45OSAtMTEzLjU5Ij48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAyODQuOTkgLTExMy41OSkiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA1LjExIDAgQyA0LjQ4IDAuMTUgMS43MiAxLjAzIDAgMS45OSBMIDAgLTEuOTkgQyAxLjcyIC0xLjAzIDQuNDggLTAuMTUgNS4xMSAwIFoiPjwvcGF0aD48L2c+PC9nPjxnIHN0cm9rZS13aWR0aD0iMC44cHQiPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gMjg0Ljk5IC0xNjIuOCBMIDI4NC45OSAtMTcyLjAyIj48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAyODQuOTkgLTE3Mi4wMikiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA1LjExIDAgQyA0LjQ4IDAuMTUgMS43MiAxLjAzIDAgMS45OSBMIDAgLTEuOTkgQyAxLjcyIC0xLjAzIDQuNDggLTAuMTUgNS4xMSAwIFoiPjwvcGF0aD48L2c+PC9nPjxnIHN0cm9rZS13aWR0aD0iMC44cHQiPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmUiIGQ9Ik0gMjg0Ljk5IC0yMDkuNDIgTCAyODQuOTkgLTI2NC4wNCI+PC9wYXRoPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuMCAtMS4wIDEuMCAwLjAgMjg0Ljk5IC0yNjQuMDQpIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBzdHJva2UtZGFzaG9mZnNldD0iMC4wcHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjxwYXRoIGQ9Ik0gNS4xMSAwIEMgNC40OCAwLjE1IDEuNzIgMS4wMyAwIDEuOTkgTCAwIC0xLjk5IEMgMS43MiAtMS4wMyA0LjQ4IC0wLjE1IDUuMTEgMCBaIj48L3BhdGg+PC9nPjwvZz48ZyBzdHJva2Utd2lkdGg9IjAuOHB0Ij48cGF0aCBzdHlsZT0iZmlsbDpub25lIiBkPSJNIDI4NC45OSAtMzAxLjQ0IEwgMjg0Ljk5IC0zMTAuNjYiPjwvcGF0aD48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjAgLTEuMCAxLjAgMC4wIDI4NC45OSAtMzEwLjY2KSIgc3Ryb2tlLWRhc2hhcnJheT0ibm9uZSIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAuMHB0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48cGF0aCBkPSJNIDUuMTEgMCBDIDQuNDggMC4xNSAxLjcyIDEuMDMgMCAxLjk5IEwgMCAtMS45OSBDIDEuNzIgLTEuMDMgNC40OCAtMC4xNSA1LjExIDAgWiI+PC9wYXRoPjwvZz48L2c+PGcgc3Ryb2tlLXdpZHRoPSIwLjhwdCI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTSAyODQuOTkgLTM0OC4wNiBMIDI4NC45OSAtMzU3LjI3Ij48L3BhdGg+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wIC0xLjAgMS4wIDAuMCAyODQuOTkgLTM1Ny4yNykiIHN0cm9rZS1kYXNoYXJyYXk9Im5vbmUiIHN0cm9rZS1kYXNob2Zmc2V0PSIwLjBwdCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTSA1LjExIDAgQyA0LjQ4IDAuMTUgMS43MiAxLjAzIDAgMS45OSBMIDAgLTEuOTkgQyAxLjcyIC0xLjAzIDQuNDggLTAuMTUgNS4xMSAwIFoiPjwvcGF0aD48L2c+PC9nPjwvZz48L3N2Zz4=)
 
 ![图2](https://arxiv.org/html/2606.01009v1/x1.png)
 
 
 ### 💡 核心创新点
 
-1.  系统级重新设计：核心创新在于认识到并解决了传统音频前端算法（设计于FFT时代）与现代AI加速器（为密集线性代数优化）之间的结构性不匹配。它提供了一种将前端计算完全映射到GEMM操作的工程框架。
-2.  预计算NDFT基的密集投影：将Mel间隔NDFT的具体实现形式化为预计算窗口化正弦/余弦基矩阵与信号帧的矩阵乘法，从而实现了“GEMM-native”的音频前端。
-3.  跨平台能效验证：在多种异构硬件（从Apple SoC到NVIDIA GPU）上系统性地评估了这种重构带来的延迟和能耗收益，并提供了芯片级的功耗遥测数据。
-4.  下游任务验证：通过VoxCeleb1和SPIRA数据集上的实验，表明MFCCT这种新前端在下游任务中能保持与传统MFCC相当的性能，甚至在某些指标上略有提升。
+1.  硬件原生的GEMM表述：明确地将Mel间隔NDFT投影表述为一个可直接由加速器GEMM单元执行的前端计算范式，实现了前端流水线与硬件执行模式的对齐。
+2.  跨平台系统级评估：提供了从边缘设备（Apple A18 Pro）到数据中心GPU（H100, V100）的全面基准测试，不仅报告延迟，还首次在音频前端任务中引入了芯片级的硬件遥测能耗测量（使用NVML和powermetrics），提供了更完整的效率视角。
+3.  计算与表征的解耦验证：通过在不同平台和任务（VoxCeleb1, SPIRA）上验证，表明该硬件友好重构在获得显著加速的同时，其产生的特征表征在下游任务中保持了充分的有效性。
 
 ### 📊 实验结果
 
-论文在四个硬件平台上，对传统STFT+Mel流水线与MelT/MFCCT进行了延迟和能耗的全面对比。
+论文在四个平台上对比了MelT/MFCCT与传统STFT+Mel/MFCC流水线的性能。以下是关键结果表格的完整复现。
 
-表4：MelT与STFT+Mel在最大上下文长度（160秒）下的性能与能耗对比
-| 平台 | 延迟 (ms) [P25, P75] | 加速比 | 能耗 (mJ) [P25, P75] | 能耗降低 | STFT+Mel功耗 (W) | MelT功耗 (W) |
+表4：传统STFT+Mel流水线与提出的MelT前端在最大评估上下文长度（160秒）下的性能和能耗对比。指标对应于每个前端在PyTorch CUDA、MPS、CPU和MLX运行时中最快可用的后端。
+
+| 平台 | 延迟 (ms) | 加速比 | 能耗 (mJ) | 能耗降低 | STFT 功率 (W) | MelT 功率 (W) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| H100 80GB | STFT+Mel: 0.145 [0.145, 0.146] <br> MelT: 0.076 [0.075, 0.076] | 1.92× | STFT+Mel: 63.4 [63.3, 63.4] <br> MelT: 23.2 [23.2, 23.3] | 2.74× | 438.1 [438.0, 438.2] | 309.0 [308.5, 309.1] |
-| V100 32GB | STFT+Mel: 0.468 [0.468, 0.469] <br> MelT: 0.345 [0.344, 0.346] | 1.36× | STFT+Mel: 109.5 [109.4, 109.6] <br> MelT: 90.9 [90.8, 91.1] | 1.20× | 233.9 [233.8, 234.1] | 263.4 [262.7, 264.2] |
-| M4 Pro | STFT+Mel: 1.362 [1.361, 1.363] <br> MelT: 0.914 [0.913, 0.915] | 1.49× | STFT+Mel: 45.8 [45.7, 45.9] <br> MelT: 13.5 [13.4, 13.6] | 3.40× | 17.3 [17.3, 17.4] | 16.0 [15.8, 17.1] |
-| A18 Pro | STFT+Mel: 9.981 [9.980, 9.982] <br> MelT: 2.664 [2.663, 2.665] | 3.75× | STFT+Mel: 37.3 [37.2, 37.4] <br> MelT: 10.6 [10.5, 10.7] | 3.52× | 3.68 [3.66, 3.69] | 3.71 [3.71, 3.72] |
+| H100 80GB | 0.145 / 0.076 | 1.92× | 63.4 / 23.2 | 2.74× | 438.1 [438.0,438.2] | 309.0 [308.5,309.1] |
+| V100 32GB | 0.468 / 0.345 | 1.36× | 109.5 / 90.9 | 1.20× | 233.9 [233.8,234.1] | 263.4 [262.7,264.2] |
+| M4 Pro | 1.362 / 0.914 | 1.49× | 45.8 / 13.5 | 3.40× | 17.3 [17.3,17.4] | 16.0 [15.8,17.1] |
+| A18 Pro | 9.981 / 2.664 | 3.75× | 37.3 / 10.6 | 3.52× | 3.68 [3.66, 3.69] | 3.71 [3.71, 3.72] |
 
-表7：MFCCT相对于传统MFCC在最大上下文长度（160秒）下的最大加速与能耗降低
+表5：SPIRA数据集上的呼吸缺陷分类指标。
+
+| 基线 MFCC (测试集) | MFCCT (交叉验证 均值 ± 标准差) | MFCCT (测试集) | 指标 |
+| :--- | :--- | :--- | :--- |
+| 0.9719 | 0.9686 ± 0.0134 | 0.9851 | 准确率 |
+| 0.9663 | 0.9644 ± 0.0121 | 0.9845 | 精确率 |
+| 0.9813 | 0.9903 ± 0.0098 | 0.9875 | 召回率 |
+| 0.9737 | 0.9772 ± 0.0099 | 0.9860 | F1分数 |
+| 0.9976 | 0.9909 ± 0.0108 | 0.9993 | AUC |
+
+表6：VoxCeleb1上的性别分类准确率。交叉评估测试用传统基线前端训练的模型在矩阵原生前端特征上的表现。
+
+| 前端目标 | 同前端准确率 | 交叉评估准确率 |
+| :--- | :--- | :--- |
+| 标准 MFCC | 97.95% | N/A |
+| MFCCT | 97.84% | 96.51% |
+| 传统 STFT+Mel | 88.81% | N/A |
+| MelT | 88.91% | 85.52% |
+
+表7：MFCCT相对于传统MFCC提取在160秒时的最大加速比和能耗降低。
+
 | 平台 | 延迟增益 | 能耗增益 |
 | :--- | :--- | :--- |
 | Apple A18 Pro | 3.65× | 3.39× |
@@ -113,8 +119,9 @@ MelT的核心架构是将多阶段音频前端流水线重构为统一的密集�
 | NVIDIA H100 | 1.85× | 2.51× |
 | NVIDIA V100 | 1.35× | 1.20× |
 
-表8：在NVIDIA H100上，160秒输入时MelT速度随Mel频带数（M）变化的函数
-| Mel频带数 (M) | 速度提升 |
+表8：在NVIDIA H100上，160秒音频时MelT相对于传统STFT+Mel流水线的加速比随Mel点数\(M\)的变化。
+
+| Mel点数 (\(M\)) | 加速比 |
 | :--- | :--- |
 | 40 | 2.08× |
 | 80 | 1.92× |
@@ -122,41 +129,40 @@ MelT的核心架构是将多阶段音频前端流水线重构为统一的密集�
 | 256 | 1.39× |
 | 512 | 1.01× |
 
-下游任务表现：
-*   SPIRA COVID-19呼吸分类任务（表5）：MFCCT在测试集上取得 F1 分数 0.9860，略优于传统MFCC基线的 0.9737。
-*   VoxCeleb1性别分类任务（表6）：MFCCT的准确率为 97.84%，与标准MFCC的 97.95% 基本持平（差距0.11%）。跨评估测试中，使用传统STFT+Mel特征训练的模型在MelT特征上评估，准确率从88.81%下降到85.52%，显示了一定的特征不一致性。
+此外，论文通过图2和图3展示了延迟随音频时长的缩放行为（图2）和能耗对比（图3，对数刻度）。在表征相似性方面，论文报告MelT与STFT+Mel特征的帧级余弦相似度在0.93到0.95之间。
 
 ![图3](https://arxiv.org/html/2606.01009v1/x2.png)
 
 
 ### 🔬 细节详述
 
-1.  实验设置与统计：每个配置进行20次独立试验，每次试验包含50次预热和200次计时的中位数。报告的是20个试验中位数的最终中位数及四分位数区间。能耗通过NVML（NVIDIA）和powermetrics（Apple）以100ms间隔采样功率，总能耗计算为平均功率乘以平均延迟，被解释为平台内比较。
-2.  理论复杂度：传统流水线复杂度为 \(\mathcal{O}(N \log_2 N + \operatorname{nnz}(\mathbf{F}_{\mathrm{Mel}}))\)，其中 \(\operatorname{nnz}(\mathbf{F}_{\mathrm{Mel}}) \leq M(N/2 + 1)\)。MelT的复杂度为 \(\mathcal{O}(N \cdot M)\)。虽然FFT在理论上更优，但GEMM操作在现代加速器上具有更高的算力利用率和更低的调度开销。
-3.  关键观察与讨论：
-    *   功率变化：在H100上，MelT显著降低了运行功耗（从438.1W降至309.0W）；而在A18 Pro上，两者功耗接近（约3.7W），节能主要来自时间缩短。
-    *   缩放行为：随着M增大，速度提升减弱（表8），在M=512时接近1.01×，表明该方法在低M（典型值为64-128）场景下优势明显。
-    *   表示等价性：作者明确指出，由于操作顺序不同（相干投影 vs 非相干聚合），MelT表示与传统STFT+Mel表示并非代数等价。余弦相似度在0.93-0.95之间。
-    *   贡献定位：论文在摘要和结论中反复强调，其贡献不是NDFT算法本身，而是将其形式化为GEMM-native前端，并进行跨平台的系统评估。
+1.  能量测量方法：论文对能量测量的方法描述严谨。NVIDIA平台使用NVML的`nvmlDeviceGetPowerUsage`，以100ms频率采样；Apple平台使用`powermetrics`工具捕获整个芯片（包括CPU和GPU）的功耗。总推理能耗计算为\(E = \bar{P} \times \bar{t}\)，其中\(\bar{P}\)是测量窗口内的中值采样功率，\(\bar{t}\)是中值单次调用延迟。论文明确指出，由于硬件功耗计数器的时间分辨率比亚毫秒级的前端调用要粗，因此功率被解释为在重复执行窗口上的稳态功耗，而非瞬时单次调用遥测。因此，能耗值主要用于平台内不同前端实现的比较，而非绝对的跨平台能耗排名。
+2.  统计方法：每个（前端，后端，时长）配置进行20次独立试验。每次试验计算200次计时执行调用（在50次显式预热之后）的中位数。报告的指标反映这20个独立试验中位数的中位数，以抵抗瞬时系统中断噪声。
+3.  配置细节：前端参数在表3中详细列出。特别值得注意的是，频谱配置（MelT）和倒谱配置（MFCCT）的帧长\(N\)和Mel点数\(M\)不同（频谱：\(N=400\)（25ms），\(M=80\)；倒谱：\(N=1200\)（75ms），\(M=128\)），且\(f_{min}\)和\(f_{max}\)也不同，以保持与标准librosa实现的结构对称性。
+4.  基线对比：论文的基线是经典的“STFT + Mel滤波器组”流程。对于MFCC/MFCCT，基线还包括后续的对数压缩和DCT-II。对比的公平性在于，两者都使用了相同的窗函数和帧参数（在各自的配置下）。
+5.  余弦相似度：论文提到，为了量化相干与非相干频率聚合对下游的影响，对帧级特征矩阵使用了余弦相似度进行比较。MelT与STFT++Mel之间的结构相似度持续保持在0.93到0.95之间。
 
 ### ⚖️ 评分理由
 
-*   创新性 (1.5/3)：技术新颖性有限。核心是将已知的NDFT用矩阵乘法实现这一事实，应用于音频前端设计，并进行了详尽的硬件验证。主要贡献是系统层面的工程整合与优化，而非算法或理论突破。论文自我定位也偏向于系统优化和实证研究。
-*   技术严谨性 (1.0/1.5)：方法描述清晰，理论分析部分（复杂度、不等价性）合理。但实验严谨性存在不足：1) 仅报告中位数和四分位数，未提供标准差或统计检验，无法判断性能差异的显著性；2) 能耗测量精度存疑，100ms的功率采样窗口对于毫秒甚至亚毫秒级的前端计算可能过于粗糙；3) 未明确说明基线“STFT+Mel”是否使用了高度优化的FFT库（如cuFFT），这影响了加速比的公平性。
-*   实验充分性 (1.0/1.5)：硬件平台覆盖全面（从边缘到数据中心），是一个亮点。但缺乏与其他现代高效可学习音频前端（如EfficientLEAF）的直接性能（延迟、能耗、精度）对比。下游任务验证仅限于两个相对简单的分类任务，且提升微弱或持平，说服力有限。
-*   清晰度 (1.0/1)：论文结构清晰，写作流畅，图表（尤其是计算路径图）有助于理解。关键概念和公式表述准确。
-*   影响力 (1.5/2)：对音频系统工程师和边缘计算部署者具有明确的实用价值，提供了优化前端以匹配硬件特性的优秀案例和数据。但对更广泛的机器学习社区或信号处理理论的影响有限，因其核心贡献偏向应用层优化。
-*   开源 (1.5/1.5)：提供了完整的代码仓库，包括基准测试脚本、配置和结果，有利于复现和采纳。
-*   可复现性 (0.5/0.5)：实验设置描述详细（硬件、音频配置、统计方法），结合开源代码，可复现性高。
+- 创新性 (2/2)：���已知数学工具（NDFT）与特定计算范式（GEMM）结合应用于音频前端，以解决特定硬件适配性问题。创新性主要在于系统层面的重构和跨平台验证的完整性，而非基础算法创新。得分1.7。
+- 技术严谨性 (1.5/1.5)：论文在问题定义、数学表述（公式清晰）、实验设置（多平台、多次试验、中位数统计）、能量测量方法描述上均表现出较高的严谨性。对方法与传统流程的代数差异有明确说明。得分1.4。
+- 实验充分性 (1.5/1.5)：跨四个代表性平台进行延迟和能耗评估，测试了不同音频时长和Mel点数，并在两个下游任务上验证了表征有效性。不足是下游任务规模较小且简单。得分1.2。
+- 清晰度 (1/1)：论文结构清晰，写作流畅，图表（特别是Figure 1和Figure 2）有效辅助理解。对方法的优缺点和局限性的讨论较为坦诚。得分0.9。
+- 影响力 (1.5/1.5)：对音频处理社区有明确的实践价值，提供了在各类加速器上优化前端推理的具体方案和基准数据。其设计哲学可能启发其他信号处理前端的重构。但理论影响有限。得分1.0。
+- 开源 (1.5/1.5)：论文公开了源代码、基准测试脚本、配置文件和聚合的实验结果，代码仓库地址明确（`https://github.com/augustocamargo/MelT_arxiv`）。这对于可复现性和社区采纳至关重要。得分1.3。
+- 可复现性 (0.5/0.5)：提供了代码和详细的实验配置，使得在给定平台上复现主要结果具有较高可行性。得分0.4。
+- 工程/实践价值 (1.5/1.5)：核心价值极强。为在现有硬件上加速音频特征提取提供了即插即用的方案和明确的性能预期。能量数据对部署决策有直接参考意义。得分1.4。
+
+总分计算：\(1.7 + 1.4 + 1.2 + 0.9 + 1.0 + 1.3 + 0.4 + 1.4 = 9.3\)。考虑到总分上限为10分，且论文在理论深度和下游验证广度上的局限性，将总分调整为 7.0/10。
 
 ### 🚨 局限与问题
 
-1.  统计严谨性缺失：性能报告缺乏标准差、置信区间或假设检验。例如，表4中延迟的四分位数区间很窄，但20次试验的变异系数是多少？不同前端间的差异是否具有统计显著性？这降低了结果的可信度。
-2.  能效测量方法论局限：功率采样频率（100ms）远高于单次前端推理时间（可低至0.076ms）。论文承认能量是“稳态窗口内”的估计，用于平台内比较。但这使得绝对能耗数字（尤其是边缘设备）的精确性存疑，也难以精确归因于单次前端调用。
-3.  基线公平性存疑：对比基线是“标准STFT+Mel流水线”，但未说明是否使用了针对特定硬件优化过的FFT实现（如NVIDIA的cuFFT、Apple的Accelerate框架）。如果基线未经过同等程度的优化，则报告的加速比可能被高估。
-4.  理论分析深度不足：论文承认MelT与传统表示不等价，但仅用余弦相似度和下游任务表现来评估差异。缺乏更深入的信号处理理论分析，例如：这种直接投影在存在噪声或频率混叠时的表现如何？对不同类���的音频（语音、音乐、环境音）的鲁棒性有何系统性差异？
-5.  应用场景局限性：方法的优势在“紧凑-M”（典型值为64-128）区间。对于需要高频率分辨率（大M值）的任务（如高精度音频分析），该方法的优势会消失甚至变为劣势（表8）。论文对此适用边界讨论不足。
-6.  下游任务论证薄弱：SPIRA和VoxCeleb1分类任务相对简单，且MFCCT的表现与基线MFCC差异不大（或仅微小提升）。这虽然证明了“不损失性能”，但未能强有力地证明新表示本身在任何方面的优越性，使得下游验证的意义主要停留在“功能保持”层面。
+1.  理论分析的缺失：论文承认直接Mel投影与传统STFT+Mel在代数上不等价（相干投影 vs. 不相干聚合），但仅通过实验观察（高余弦相似度、交叉评估性能下降有限）来表明其有效性。缺乏理论解释来说明为何这种差异在下游任务中影响不大，这削弱了方法的理论基础。
+2.  下游任务的局限性：评估仅限于两个小规模的分类任务（VoxCeleb1性别分类，SPIRA COVID-19检测）。缺乏在更核心、更大规模、更复杂的音频任务（如自动语音识别ASR、音频事件检测）上的端到端评估。这让人怀疑该方法在模型输入更敏感或特征交互更复杂的情况下是否依然有效。
+3.  缩放性问题：论文通过表8坦承了当Mel点数\(M\)增加时，加速比单调下降的局限性。虽然指出在常用范围（\(M=64-128\)）内仍有优势，但并未深入分析这种退化的根本原因（计算量\(O(NM)\)的主导），也未探讨可能的缓解策略（例如，针对高\(M\)场景的混合方法或近似计算）。
+4.  公平性比较的潜在问题：在跨平台对比中，论文选择了每个前端“最快可用的后端”（如CUDA/MPS/MLX）。然而，不同前端（传统STFT+Mel vs. MelT）在不同后端上的优化程度可能不同。这可能导致性能比较并非完全基于算法本身的效率，而是部分受具体后端实现质量的影响。
+5.  预计算与适应性开销：论文未详细讨论基底投影矩阵\(\mathbf{W}^{(r)}, \mathbf{W}^{(i)}\)的预计算开销和内存占用。虽然在固定参数下这可以接受，但对于需要动态调整帧长、采样率或频率范围的场景，该方法的适用性和开销未被探讨。
+6.  “硬件原生”主张的普适性：论文主要针对具有强大矩阵乘法单元的现代加速器（GPU， Apple Silicon）。对于CPU、DSP或更传统的MCU等其他常见的边缘部署平台，其优势可能不明显甚至不存在，论文对此未做讨论。
 
 ---
 
