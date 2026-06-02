@@ -53,7 +53,7 @@ hiddenInHomeList: true
 3.  脉冲 SpeechMamba (S-SpeechMamba)：
     *   核心组件：用脉冲神经元（LIF）层替代E-SpeechMamba中的FATReLU激活。具体而言，它采用了SpikMamba中的脉冲Mamba块和Spikformer中的脉冲注意力设计。
         *   脉冲Mamba块：使用LIF神经元替代传统激活。
-        *   脉冲自注意力：输入特征经线性投影为Q、K、V后，通过归一化和LIF层生成二进制脉冲序列（1或0）。注意力计算使用缩放点积（`\(\frac{Q K^T}{\sqrt{d}}\)`。），但不使用Softmax，并将结果应用于脉冲V进行信息聚合。
+        *   脉冲自注意力：输入特征经线性投影为Q、K、V后，通过归一化和LIF层生成二进制脉冲序列（1或0）。注意力计算使用缩放点积（`\( \frac{Q K^T}{\sqrt{d}} \)`），但不使用Softmax，并将结果应用于脉冲V进行信息聚合。
     *   训练与正则化：引入由`\)L_{\text{quiet}}\(`和`\)L_{\text{burst}}\(`组成的脉冲率正则化损失。`\)L_{\text{quiet}} = \frac{1}{L} \sum_{l=1}^{L} \max(0, r_{\min} - \bar{r}^{(l)})\(` 惩罚过低的脉冲率以防神经元死亡；`\)L_{\text{burst}} = \frac{1}{L} \sum_{l=1}^{L} \max(0, \bar{r}^{(l)} - r_{\max})\(` 惩罚过高的脉冲率以增加稀疏性。其中`\)\bar{r}^{(l)}\(`是第l层脉冲层的平均脉冲率。
     *   数据流：与E-SpeechMamba类似，但所有激活均为二进制脉冲（0/1）。在事件驱动仿真中，乘以0的操作可被跳过，乘以1的操作直接传播权重值，避免了乘法运算。
 
