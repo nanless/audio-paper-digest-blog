@@ -4,7 +4,7 @@ date: 2026-06-26
 draft: false
 tags: [Transformer, 多任务学习, 多模态模型]
 categories: [论文速递]
-description: "Transformer | 7.7/10"
+description: "音频分离 | 7.7/10"
 hiddenInHomeList: true
 ---
 
@@ -14,7 +14,7 @@ hiddenInHomeList: true
 
 **7.7/10** | 创新 1.5/2 | 严谨 1.2/1.5 | 实验 1.3/1.5 | 清晰 1/1 | 影响 0.9/1.5 | 开源 0/1.5 | 复现 0.5/0.5 | 工程 1.3/1.5
 
-✅ **7.7/10** | 前25% | #Transformer | #Transformer | #多任务学习 #多模态模型 | [arxiv](https://arxiv.org/abs/2509.11717)
+✅ **7.7/10** | 前25% | 音频分离 | #Transformer | #多任务学习 #多模态模型 | [arxiv](https://arxiv.org/abs/2509.11717)
 
 
 ### 👥 作者与机构

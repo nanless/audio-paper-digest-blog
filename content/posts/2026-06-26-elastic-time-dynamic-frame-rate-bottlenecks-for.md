@@ -4,7 +4,7 @@ date: 2026-06-26
 draft: false
 tags: [预训练]
 categories: [论文速递]
-description: "预训练 | 8.3/10"
+description: "音频编解码 | 8.3/10"
 hiddenInHomeList: true
 ---
 
@@ -14,7 +14,7 @@ hiddenInHomeList: true
 
 **8.3/10** | 创新 1.4/2 | 严谨 1.2/1.5 | 实验 1.4/1.5 | 清晰 1/1 | 影响 0.5/1.5 | 开源 1.5/1.5 | 复现 0.5/0.5 | 工程 0.8/1.5
 
-🔥 **8.3/10** | 前50% | #预训练 | #预训练 | [arxiv](https://arxiv.org/abs/2606.27320)
+🔥 **8.3/10** | 前50% | 音频编解码 | #预训练 | [arxiv](https://arxiv.org/abs/2606.27320)
 
 
 ### 👥 作者与机构
