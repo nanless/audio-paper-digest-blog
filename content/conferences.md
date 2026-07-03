@@ -11,6 +11,10 @@ layout: "single"
 
 IEEE International Conference on Acoustics, Speech and Signal Processing
 
+## [ICML 2026](../categories/icml-2026/)
+
+International Conference on Machine Learning
+
 ## [ICLR 2026](../categories/iclr-2026/)
 
 International Conference on Learning Representations
