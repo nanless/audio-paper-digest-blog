@@ -130,4 +130,4 @@ OWM是整个架构的核心，被形式化为一个64×64的二维循环网络�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

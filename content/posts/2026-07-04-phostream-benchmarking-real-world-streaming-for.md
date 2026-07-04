@@ -173,4 +173,4 @@ PhoStream 是一个以 基准构建管道 + 在线推理评估协议 为核心�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

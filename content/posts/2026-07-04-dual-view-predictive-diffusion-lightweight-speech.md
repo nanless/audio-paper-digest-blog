@@ -278,4 +278,4 @@ TLB对StoRM（+0.06 PESQ）和PGUSE U-Net变体（+0.20 PESQ）均有正向迁�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

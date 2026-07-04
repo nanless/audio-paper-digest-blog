@@ -155,4 +155,4 @@ Sync-RoPE 旨在解决 token 稀疏化后采样间隔增大导致的高频相位
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

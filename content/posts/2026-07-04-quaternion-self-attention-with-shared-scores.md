@@ -187,4 +187,4 @@ Top-1一致性3.83%（随机基线0.63%），Top-5一致性7.29%（随机基线3
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

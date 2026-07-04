@@ -146,4 +146,4 @@ Per-challenge分析显示，AVTracker在所有八个挑战子集上均保持领�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

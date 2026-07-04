@@ -150,4 +150,4 @@ SPEECHCOMBINE的核心思想是通过在参数空间进行线性组合来生成�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

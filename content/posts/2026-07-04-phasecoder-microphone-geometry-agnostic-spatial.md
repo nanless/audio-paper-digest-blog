@@ -173,4 +173,4 @@ PhaseCoder虽然在FLOPs上高于GI-DOAEnet，但由于纯Transformer架构的�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

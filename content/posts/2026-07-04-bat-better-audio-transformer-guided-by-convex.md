@@ -197,4 +197,4 @@ BAT（Better Audio Transformer）。 BAT 对 D2V2 音频 SSL 流水线进行了�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

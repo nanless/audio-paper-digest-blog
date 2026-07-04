@@ -174,4 +174,4 @@ FLAIR（Full-duplex LAtent and Internal Reasoning）的目标是让一个全双�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

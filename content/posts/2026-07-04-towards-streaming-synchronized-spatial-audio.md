@@ -148,4 +148,4 @@ Multi-objective ODPO（图2右下）在后训练阶段，对每个输入生成8�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

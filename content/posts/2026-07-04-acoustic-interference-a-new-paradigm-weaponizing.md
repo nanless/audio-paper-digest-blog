@@ -166,4 +166,4 @@ AIA在多个模型上超越了实例级优化方法和通用越狱方法。注�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

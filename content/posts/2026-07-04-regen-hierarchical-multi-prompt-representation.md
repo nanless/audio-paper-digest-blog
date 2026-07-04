@@ -174,4 +174,4 @@ ReGenVoice 则进一步将上述预训练的ReGenVAE作为解码基础，将其1
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

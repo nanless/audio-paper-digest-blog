@@ -517,7 +517,7 @@ SAM AUDIO以统一架构首次整合文本、视觉和时间跨度提示，在�
 - 复现材料：未提及
 - 论文中引用的开源项目：未提及
 
-## 标签
+### 标签
 #音频理解 #基准数据集 #评估指标 #音频描述 #听觉问答
 主任务标签：#音频理解
 主方法标签：#多模态模型
@@ -2445,7 +2445,7 @@ SONAR巧妙地将低频语义与高频残差的一致性作为深度伪造检测
 - 复现材料：附录提供完整编解码算法（Algorithm 1/2）、模型架构表（Table 7）、训练超参数表（Table 8）、数据预处理细节、归纳偏置实验设置（附录 J）、OOD 实验细节（附录 G）等
 - 论文引用并使用的开源项目：MidiTok、MusPy、Anticipatory Music Transformer（含 released models）、LLaMA、POP909 数据集、CLaMP2（用于 FMD）、SongDriver
 
-## 标签
+### 标签
 #音乐生成 #自回归模型 #实时处理 #多任务学习
 主任务标签：#音乐生成
 主方法标签：#自回归模型
@@ -3323,7 +3323,7 @@ ProactiveLLM的核心方法是通过掩码流式语言建模（MSLM）和同步�
   - Whisper (Radford et al., 2023): https://github.com/openai/whisper
   - VITS (Hayashi et al., 2020): https://huggingface.co/espnet/kan-bayashi_ljspeech_vits
 
-## 标签
+### 标签
 #语音对话 #检索增强生成 #端到端模型 #流式处理
 主任务标签：#语音对话
 主方法标签：#检索增强生成
@@ -3623,7 +3623,7 @@ TAC 把 ConvNet、预训练编码器、语义蒸馏这些被社区用了好几�
   - EmoVoice: https://github.com/yanghaha0908/EmoVoice
   - CosyVoice: https://github.com/FunAudioLLM/CosyVoice
 
-## 标签
+### 标签
 #语音合成 #语音情感识别 #大语言模型 #可解释性 #零样本
 主任务标签：#语音合成
 主方法标签：#大语言模型
@@ -5954,7 +5954,7 @@ NeuroCLUS的核心创新是一个两阶段预训练框架：第一阶段通过�
 - 复现材料：未提供
 - 论文中引用的开源项目名称：BioGPT、PubMedBERT、Med-PaLM、LLaVA-Med、TabLLM（仅作为相关工作提及，未提供具体开源链接）
 
-## 标签
+### 标签
 #语音属性识别 #大语言模型 #少样本 #医疗音频 #理论分析
 主任务标签：#语音属性识别
 主方法标签：#大语言模型

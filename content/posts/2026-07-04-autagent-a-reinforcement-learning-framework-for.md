@@ -142,4 +142,4 @@ AuTAgent在所有设置下均取得最佳。在迁移性实验中，将为Qwen2-
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

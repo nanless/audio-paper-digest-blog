@@ -199,4 +199,4 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

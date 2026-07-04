@@ -150,4 +150,4 @@ CoCoEmo的核心是一个推理时、无需额外训练的框架，用于操控�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

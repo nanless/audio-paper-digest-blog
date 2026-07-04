@@ -213,4 +213,4 @@ TTT-video相比Mamba-2性能更优，TTT_MEM在此基础上进一步提1-2%（�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -169,4 +169,4 @@ MoST在多个SQA基准上表现出强劲性能。在Llama Q上，S→T得分为7
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

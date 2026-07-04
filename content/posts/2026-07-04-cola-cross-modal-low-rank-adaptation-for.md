@@ -204,4 +204,4 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

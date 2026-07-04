@@ -190,4 +190,4 @@ SAM AUDIO‑JUDGE 与人类评分的皮尔逊相关系数在语音、音乐、�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

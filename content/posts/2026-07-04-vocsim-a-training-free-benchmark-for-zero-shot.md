@@ -142,4 +142,4 @@ VOCSIM 不是新模型，而是一套固定的评估框架，用于测量冻结�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

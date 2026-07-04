@@ -147,4 +147,4 @@ Fokker-Planck Dynamics（FPD）模块：视频上，将每帧视觉编码器输�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

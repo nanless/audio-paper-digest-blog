@@ -143,4 +143,4 @@ V 值越大，表明缺失模态对预测的潜在改变越大。
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

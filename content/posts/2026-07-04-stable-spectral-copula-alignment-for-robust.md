@@ -161,4 +161,4 @@ SSCA是一个针对冻结特征协议设计的部署端协议，其核心思想�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

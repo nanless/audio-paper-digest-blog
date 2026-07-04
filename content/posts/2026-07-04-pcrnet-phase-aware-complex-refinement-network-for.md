@@ -143,4 +143,4 @@ PCRNet是一个端到端的神经网络，旨在从EEG信号中解码听觉注�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

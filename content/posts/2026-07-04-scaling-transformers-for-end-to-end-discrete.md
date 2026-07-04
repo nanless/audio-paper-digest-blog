@@ -155,4 +155,4 @@ AudioCaps 上 TAC 生成 FAD (8.77) 远优于 Mimi (13.08) 和 MiMo (13.19)。Mu
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -179,4 +179,4 @@ MCLP 是本方法的核心。其原理是：一个在大规模带转录语音上
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

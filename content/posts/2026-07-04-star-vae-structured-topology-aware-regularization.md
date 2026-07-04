@@ -262,4 +262,4 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

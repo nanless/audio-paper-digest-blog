@@ -164,4 +164,4 @@ CLD 在 MMS-1B 上实现最大提升：准确率提升44.78%（67.01%→97.02%�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -229,4 +229,4 @@ MURGAT是一个评估框架和基准，而非一个训练好的模型，其核�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

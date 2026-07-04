@@ -152,4 +152,4 @@ USAD 对比（表 26）：在公平设置下（相同教师 WavLM Base+/ATST-Fra
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

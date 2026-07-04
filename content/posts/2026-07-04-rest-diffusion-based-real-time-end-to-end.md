@@ -240,4 +240,4 @@ REST在HDTF上FID达到14.597（最优），FVD达到219.870（次优，仅次�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

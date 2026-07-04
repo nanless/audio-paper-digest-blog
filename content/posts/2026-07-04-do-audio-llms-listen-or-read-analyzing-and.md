@@ -177,4 +177,4 @@ PCLM 带来约 43-54% 的绝对提升，叠加 DPO 再有 4-5% 提升，同时 A
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

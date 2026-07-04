@@ -180,4 +180,4 @@ Lin-SDA： 通过一阶泰勒展开将SDS近似为仿射形式 \(SDS_{Lin}(q, k)
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

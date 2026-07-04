@@ -123,4 +123,4 @@ TTS 主实验（SEED test-en, 约 1000 句）：全面对比了 FSQ-original, FS
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

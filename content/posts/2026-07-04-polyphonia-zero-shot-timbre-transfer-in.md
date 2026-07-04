@@ -174,4 +174,4 @@ Polyphonia是一个基于预训练AudioLDM 2扩散模型的双路径零样本编
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

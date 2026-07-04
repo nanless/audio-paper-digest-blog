@@ -172,4 +172,4 @@ DiscoForcing是一个面向部署的端到端流式音频驱动角色控制系�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -213,4 +213,4 @@ OmniSIFT 是一个两阶段、端到端可微的 token 压缩 pipeline，处理�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

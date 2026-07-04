@@ -181,4 +181,4 @@ RoPE 仅高频使用少数低频通道，并抑制高频通道的范数，呈现
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

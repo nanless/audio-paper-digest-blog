@@ -172,4 +172,4 @@ INFER是一个端到端的频域神经渲染框架，目标是学习一个连续
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

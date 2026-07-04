@@ -194,4 +194,4 @@ Cauchy-DBIM 采样（高斯尺度混合重参数化）：该阶段的巧妙之�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -128,4 +128,4 @@ OmniChecker框架采用了“分解-验证-解释”的代理工作流。其核�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -176,4 +176,4 @@ WaveSSM在ListOps、Text、Retrieval和Image任务上超越了S4基线，但所�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

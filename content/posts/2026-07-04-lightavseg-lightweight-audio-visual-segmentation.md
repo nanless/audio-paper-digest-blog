@@ -175,4 +175,4 @@ Ours在轻量级配置下达到30.6 mIoU，约为AVSegFormer-Sea的两倍，甚�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

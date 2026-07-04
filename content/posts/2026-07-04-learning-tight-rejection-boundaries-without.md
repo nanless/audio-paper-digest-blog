@@ -158,4 +158,4 @@ MLAAD 跨语言基准（表2）：CA-SOADD (w/o \(\mathcal{L}_{\text{binv}}\)) �
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

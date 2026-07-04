@@ -181,4 +181,4 @@ AgentSteerTTS 是为复合指令TTS设计的多智能体闭环框架。系统接
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

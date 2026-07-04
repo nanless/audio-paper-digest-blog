@@ -226,4 +226,4 @@ ADEPT严格分离感知与证据，其核心组件由四类工具构成，每类
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

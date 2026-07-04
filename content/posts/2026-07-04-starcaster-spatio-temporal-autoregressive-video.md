@@ -190,4 +190,4 @@ STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -157,4 +157,4 @@ MEP-Bench 结果：在诊断基准上，OPPO显著提升了多模态感知能力
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

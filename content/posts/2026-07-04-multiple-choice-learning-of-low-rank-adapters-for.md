@@ -152,4 +152,4 @@ LoRA-MCL 将 Multiple Choice Learning (MCL) 与低秩适配（LoRA）相结合�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

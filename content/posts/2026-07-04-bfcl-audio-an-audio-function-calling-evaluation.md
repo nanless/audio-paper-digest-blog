@@ -154,4 +154,4 @@ BFCL Audio的核心是一套面向音频function calling的可控合成与评估
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

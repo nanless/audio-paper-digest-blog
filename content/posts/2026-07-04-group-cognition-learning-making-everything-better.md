@@ -175,4 +175,4 @@ GCL 是一个两阶段治理化多模态学习框架。输入为三种模态的�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

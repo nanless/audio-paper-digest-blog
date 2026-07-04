@@ -199,4 +199,4 @@ Pianist Transformer在总计8个指标中的6个取得最佳，且两个综合�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

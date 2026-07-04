@@ -287,4 +287,4 @@ FCP在所有任务上均优于MSP和COH，在Du-IN上尤其显著（FCP 65.92% v
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

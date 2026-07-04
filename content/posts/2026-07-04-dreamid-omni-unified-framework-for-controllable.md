@@ -243,4 +243,4 @@ OnlyIR仅用In-pair重建导致严重的复制-粘贴问题（高ID-Sim.但极�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

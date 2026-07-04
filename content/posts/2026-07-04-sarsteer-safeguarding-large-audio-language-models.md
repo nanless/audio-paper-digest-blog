@@ -169,4 +169,4 @@ SARSteer是一个纯推理时的安全对齐框架，输入为音频信号与文
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

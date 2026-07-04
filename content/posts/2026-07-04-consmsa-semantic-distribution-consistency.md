@@ -113,4 +113,4 @@ Token压缩与信号鲁棒性实验是最亮眼的部分：在MOSI上，ConsMSA�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

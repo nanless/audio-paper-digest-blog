@@ -133,4 +133,4 @@ OmniAgent在10个基准上进行了详尽的评估，覆盖通用视频理解、
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

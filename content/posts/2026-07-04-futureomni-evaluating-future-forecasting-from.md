@@ -160,4 +160,4 @@ OFF 训练结果（Table 4）：Qwen2.5-Omni 在 Speech 类别提升近 10% 至 
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

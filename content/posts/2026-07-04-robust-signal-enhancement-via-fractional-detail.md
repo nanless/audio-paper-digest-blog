@@ -171,4 +171,4 @@ EM信号增强 (Rydberg 4-bins, -20dB输入)：FracKGMF平均SNR提升34.77dB，
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

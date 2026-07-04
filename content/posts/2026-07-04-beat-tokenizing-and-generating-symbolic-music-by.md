@@ -144,4 +144,4 @@ BPE 压缩率（Figure 4）：20 次合并时 BEAT 压缩率 64.83%，远低于 
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

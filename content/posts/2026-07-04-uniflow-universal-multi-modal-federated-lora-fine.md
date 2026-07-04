@@ -181,4 +181,4 @@ GLUE基准上的文本性能对比（Table 4，部分核心结果）：
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

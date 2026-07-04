@@ -203,4 +203,4 @@ SURF 是一个多阶段、迭代式的无监督生成式源分离框架，其核
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

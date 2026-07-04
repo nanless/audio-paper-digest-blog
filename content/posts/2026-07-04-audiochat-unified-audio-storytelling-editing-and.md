@@ -217,4 +217,4 @@ SCT架构在编辑任务上全面优于MoT和Dense架构，尤其在保持原音
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

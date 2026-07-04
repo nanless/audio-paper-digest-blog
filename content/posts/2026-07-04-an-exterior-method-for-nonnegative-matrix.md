@@ -166,4 +166,4 @@ eNMF的核心思想是将传统的约束优化问题分解为三个解耦的阶�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

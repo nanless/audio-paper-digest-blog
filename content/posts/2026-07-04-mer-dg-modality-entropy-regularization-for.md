@@ -132,4 +132,4 @@ MER-DG采用“即插即用”的正则化器设计，不改变主体多模态�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

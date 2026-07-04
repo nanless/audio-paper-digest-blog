@@ -223,4 +223,4 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -217,4 +217,4 @@ SPA 在 CirCor 上普遍将 ECE 压缩约 50%，且配合 M2D 取得了最优 W_
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

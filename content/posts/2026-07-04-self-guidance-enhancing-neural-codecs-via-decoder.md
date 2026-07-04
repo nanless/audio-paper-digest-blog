@@ -133,4 +133,4 @@ AB主观偏好测试：SG相比无SG基线获得38.7%偏好 vs. 15.4%，差异�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

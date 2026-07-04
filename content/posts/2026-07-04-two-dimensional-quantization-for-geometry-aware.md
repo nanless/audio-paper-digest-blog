@@ -137,4 +137,4 @@ Q2D2 是一个用于神经音频编解码器的离散量化模块，其核心思
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

@@ -188,4 +188,4 @@ LLM能力消融：将攻击者LLM替换为GPT-4o（一种非推理型LLM）后�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

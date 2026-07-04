@@ -173,4 +173,4 @@ SALSA‑V 在 DeSync 和人类同步 MOS 上显著领先，ImageBind 语义对�
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)

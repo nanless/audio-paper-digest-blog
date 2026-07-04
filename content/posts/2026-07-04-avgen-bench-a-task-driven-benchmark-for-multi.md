@@ -174,4 +174,4 @@ AVGen‑Bench 是一个不参与生成、仅做评估的基准与框架，整体
 
 ---
 
-[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/2026-07-04/)
+[← 返回 ICML 2026 论文速递](/audio-paper-digest-blog/posts/icml2026-summary/)
