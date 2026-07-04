@@ -113,7 +113,6 @@ Transformer有 \(L\) 层，每层包含多头自注意力和前馈网络，使�
 
 1. Next-Token Diffusion：将扩散模型作为因果Transformer的逐token生成头，实现了连续数据的自回归扩散生成。之前的MAR使用扩散头但依赖双向注意力（不兼容因果LLM的KV cache，且论文明确指出MAR的因果基线效果不佳），GIVT使用高斯混合模型直接预测连续向量（表达力弱于扩散）。本工作在保持因果自回归范式的前提下引入了扩散的表达力，且扩散头轻量（3-6层MLP），推理效率高。在图13中，3.68B参数下LatentLM吞吐量是DiT的2.47倍。
 
-![图2架构总览](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PnTXyTR2VG-p3-ve763b4ab.jpg)
 
 2. σ-VAE与方差崩塌的系统性解决：首次系统性地分析并解决了VAE在自回归生成中的方差崩塌问题。通过图5的对比（LatentLM使用MAR的VAE时FID=9.64，使用σ-VAE时FID=4.10），有力地证明大方差是因果连续自回归生成真正work的关键。论文还发现训练时使用Gaussian方差采样优于固定方差（附录B，1000k步FID: 11.91 vs 13.74），提供了进一步改进的路径。
 

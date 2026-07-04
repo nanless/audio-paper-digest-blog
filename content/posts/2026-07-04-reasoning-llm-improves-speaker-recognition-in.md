@@ -62,11 +62,9 @@ hiddenInHomeList: true
 1.  `voice_sim`（声纹相似度矩阵K）：对每条台词 \(n\) 和角色 \(p\)，计算台词声纹与角色种子集 \(V_p\) 的top-\(L\)余弦相似度均值，生成相似度矩阵 \(K \in \mathbb{R}^{N \times P}\)。这是模型的“第一道证据”，其不确定性会驱动模型调用其他工具。
 2.  `video_cap`（层级视频描述）：采用自适应合并算法将视频切分为10-15秒的片段。底层使用Qwen3-VL-32B对多帧关键帧生成约300词的密集描述，并叠加人脸检测框和角色名以增强视觉锚定；上层使用Qwen3-32B将连续约10个底层描述合成为段落级摘要，提炼核心情节和人物互动。
 
-    ![图25](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p6-e2c2d8ef7.jpg)
 
 3.  `char_relation`（角色关系图谱X）：使用Qwen3-32B从对话文本中抽取角色三元组 \((p_1, p_2, \text{relation})\)，并按剧集时间戳记录关系的动态演化。此工具为解析对话中的称谓（如“爸爸”、“亲爱的”）和角色立场提供社会学推理基础。
 
-    ![图26](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p6-r20bdaa98.jpg)
 
 LRM训练与推理机制：
 1.  数据治理：使用闭源模型Gemini-3-Pro作为教师，在一部中文训练剧集（《人世间》，50K台词）上生成SFT轨迹。数据采样策略聚焦于三类“困难”样本：基线传播错误的样本、声纹相似度top-1与top-2之差小于0.035的边缘样本、以及随机抽样的正确样本（约占总数20%）。为增强纠错鲁棒性，50%的边缘样本的声纹相似度被人为扰动（降低top-1，提高top-2）。
@@ -74,7 +72,6 @@ LRM训练与推理机制：
     *   SFT：在治理后的数据集上微调Qwen3-8B，使其学会调用工具、生成结构化推理链和输出最终答案。
     *   RL (GRPO)：在第二部中文剧集（《甄嬛传》）上使用Group Relative Policy Optimization。奖励函数由准确率奖励 \(r_{acc}\)（匹配真值则+1，否则0）和格式奖励 \(r_{fmt}\) 组成。关键参数为组大小 \(G=8\)，KL散度惩罚系数 \(\beta=0.0001\)。训练曲线和收敛情况如图2所示。
 
-    ![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p14-v35ed4c12.jpg)
 
 3.  置信度采样（Confidence Sampling）：为规避LLM在“简单”样本上产生幻觉的风险，仅在声纹相似度top-1与top-2的差值小于阈值 \(\rho\) 时调用LRM。主实验中 \(\rho=0.10\)，可降低80%的计算开销。
 4.  迭代推理：推理时，LRM更新标签后，可动态重新计算 `voice_sim` 和 `char_relation`，进行多轮自精炼（主实验报告单轮增益，二轮可带来额外+0.25%提升）。
