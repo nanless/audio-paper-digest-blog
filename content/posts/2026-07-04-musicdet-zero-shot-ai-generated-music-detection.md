@@ -64,11 +64,9 @@ hiddenInHomeList: true
 
 ### 🏗️ 方法概述和架构
 
-![图1](https://nanless.github.io/audio-paper-digest-images/undefined2026-07-04/GiYWL2NVKs-p1-ee108731a.jpg)
 
 MusicDET的整体架构是一个基于Normalizing Flows的单类（真实音乐）密度估计器，其核心流程如下：
 
-![图2](https://nanless.github.io/audio-paper-digest-images/undefined2026-07-04/GiYWL2NVKs-p1-ee8cc9319.jpg)
 
 1.  特征提取：输入4秒的16kHz单声道音频，计算短时傅里叶变换（STFT）得到能量谱（n_fft=512, hop_length=160, win_length=512）。随后通过卷积层处理该能量谱，以提取具有时间帧和频率维度的时频特征 \(X \in \mathbb{R}^{B \times C \times T \times F}\)，其中 \(B\) 为批大小，\(C\) 为通道数，\(T\) 为时间帧数，\(F\) 为频率维度的尺寸。
 
@@ -97,7 +95,6 @@ MusicDET的整体架构是一个基于Normalizing Flows的单类（真实音乐�
 
 ### 📊 实验结果
 
-![图3](https://nanless.github.io/audio-paper-digest-images/undefined2026-07-04/GiYWL2NVKs-p1-vebd74a76.jpg)
 
 论文在FakeMusicCaps和SONICS两个基准上进行了跨生成器评估，采用平均EER（%）作为指标。主要结果如下表所示：
 
@@ -118,7 +115,6 @@ FakeMusicCaps 跨生成器平均EER（%）
 | MusicDET (ours) | ✓ | 5.64 | 6.55 | 2.36 | 3.82 | 4.18 | 4.51 |
 | Class-Conditional MusicDET (ours) | ✗ | 1.67 | 0.15 | 0.22 | 2.40 | 0.04 | 0.89 |
 
-![图4](https://nanless.github.io/audio-paper-digest-images/undefined2026-07-04/GiYWL2NVKs-p13-e91d74251.jpg)
 
 SONICS 跨生成器平均EER（%）
 | 方法 | 零样本 | Suno V2 | Suno V3 | Suno V3.5 | Udio 32 | Udio 130 | Avg. |
@@ -137,7 +133,6 @@ SONICS 跨生成器平均EER（%）
 | MusicDET (ours) | ✓ | 2.80 | 3.20 | 2.93 | 2.73 | 2.80 | 2.89 |
 | Class-Conditional MusicDET (ours) | ✗ | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
 
-![图5](https://nanless.github.io/audio-paper-digest-images/undefined2026-07-04/GiYWL2NVKs-p13-ec515a44f.jpg)
 
 消融实验与分析：
 -   频率子带数量与流步数 \(K\) 的影响：使用多个（≥2）频率子带相比单子带，EER有显著降低。默认配置采用两个频率子带和每带 \(K=2\) 个流步骤，在性能和计算成本间取得平衡。

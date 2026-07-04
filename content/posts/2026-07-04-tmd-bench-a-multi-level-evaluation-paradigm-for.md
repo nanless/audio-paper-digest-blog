@@ -38,14 +38,12 @@ hiddenInHomeList: true
 
 TMD-Bench 是一个面向 text-driven music–dance co-generation 的多级评测范式，其核心是将评估解耦为三个轴：音频生成质量与指令遵循、视频生成质量与指令遵循、以及音视频节奏对齐。每个轴均采用“低层可计算物理指标 + 高层 MLLM 感知判决”的双轨架构。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p13-v11cb8e39.jpg)
 
 1. 音频评估
 *   物理层：沿用 Production Quality (PQ)、Production Complexity (PC)、Content Enjoyment (CE)、Content Usefulness (CU) 等维度评估音频质量，并引入 CLAP 相似度衡量文本-音频语义一致性。
 *   高层（MLLM-as-a-Judge）：使用 MLLM 进行 MOS 模拟，输出上述四个质量维度的感知分数。
 *   细粒度指令遵循：为超越单一的 CLAP 分数，论文基于 Qwen-Omni 微调了一个 Music Captioner，该模型能将音频按六个维度（核心乐器、节奏与律动、速度、流派、氛围与情感、功能场景）生成结构化描述（图3）。评估时，将 Captioner 的输出与提示文本进行维度级比对，得到可解释的语义遵循分数。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p6-e90511c2c.jpg)
 
 2. 视频评估
 *   物理层：采用 VBench 风格的指标，包括 Subject Consistency、Background Consistency、Imaging Quality、Aesthetic Quality、Dynamic Degree、Motion Smoothness，并加入 ViCLIP 计算视频与文本的语义相似度。
@@ -61,7 +59,6 @@ TMD-Bench 是一个面向 text-driven music–dance co-generation 的多级评�
     *   整体物理对齐得分为 VBCS 和 ABHS 的算术平均。
 *   高层（MLLM-as-a-Judge）：MLLM 评估整体的节奏连贯性，输出 1–5 的对齐分数，以捕捉物理事件匹配无法感知的高层韵律张力。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p6-ea0d90b0e.jpg)
 
 4. RhyJAM 统一生成模型
 RhyJAM 是作为基准验证的单阶段流匹配扩散模型，用于文本到音乐-舞蹈的联合生成（图4）。
@@ -70,7 +67,6 @@ RhyJAM 是作为基准验证的单阶段流匹配扩散模型，用于文本到�
 *   核心架构（Fusion Block）：堆叠的 Fusion Block 负责逐步融合信息。单个 Block 内部流程为：先进行 Self-Attention 捕获模态内上下文，再利用 Cross-Attention 注入文本条件 `hc`，最后通过两模态间的 Cross-Attention 交换跨模态信息，显式实现韵律对齐。
 *   预测头与训练：经融合后的潜变量分别送入模态特定的预测头，输出各自的速度场 `v^a` 和 `v^v`。训练目标是最小化两个分支速度场与解析目标之间的流匹配损失之和。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p6-ea8cbdac9.jpg)
 
 ### 💡 核心创新点
 
@@ -106,10 +102,8 @@ Table 4: 音视频节奏对齐
 
 结果图示分析：
 图5（雷达图）直观展示了各模型在 VBCS、ABHS、MLLM Align. 等核心对齐指标上的表现，清晰地印证了 RhyJAM（红色）在物理指标上领先或持平，但在感知对齐分上不及 Sora 2（蓝色）的结论。
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p8-ea2f6f320.jpg)
 
 图6（条形图）详细对比了音频指令遵循六个维度的得分，突出了 RhyJAM 在“节奏（Rhy.）”和“速度（Tempo）”维度的相对优势，以及在“流派（Genre）”、“氛围（Amb.）”和“功能（Func.）”等维度的显著短板。
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FcklDFAnzF-p8-ve13fbbbf.jpg)
 
 ### 🔬 细节详述
 

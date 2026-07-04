@@ -46,32 +46,26 @@ hiddenInHomeList: true
 
 整体流程：Omni-Diffusion是一个端到端的any-to-any多模态系统，输入可以是文本、图像、语音的任意组合，输出也可以是任意模态。系统首先将原始模态数据通过各自的专用tokenizer转换为离散token序列，所有模态的token序列在各自模态的特殊起始/结束token（如 `<|BoI|>`、`<|EoI|>`）包裹后拼接，送入统一的mask-based discrete diffusion模型进行联合建模。模型通过迭代式mask-prediction过程生成输出token序列，最后将预测的离散token通过对应的detokenizer还原为原始模态数据。该架构的核心优势在于：通过直接建模多模态离散token的联合分布，避免了现有方案（如NExT-GPT）中"LLM处理文本 + 外部扩散模型生成其他模态"造成的模态间语义鸿沟和架构不对称性。
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e17a653ba.jpg)
 
 图像tokenization：使用预训练的MAGViT-v2作为图像tokenizer。MAGViT-v2首先通过下采样因子 \(f = 16\) 的视觉编码器将图像压缩为紧凑表示，再通过codebook大小为8192的quantizer将压缩表示转换为离散图像token。这些离散token同时服务于视觉理解和生成任务——即模型不仅从图像token中理解内容，也学习生成符合语义的图像token序列。图像序列前后分别插入 `<|BoI|>` 和 `<|EoI|>` 作为模态标识。
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e19c626da.jpg)
 
 语音编码：采用SenseVoiceSmall作为语音编码器，提取富含语义的语音连续表示。SenseVoiceSmall底层使用memory-equipped self-attention网络。这些连续表示通过一个轻量级的MLP adapter投影到扩散模型backbone的隐藏维度，实现与文本、图像token的语义对齐。语音编码器在训练中保持冻结，仅训练adapter。
 
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e322ad2fb.jpg)
 
 语音解码：使用GLM-4-Voice decoder进行语音合成。该解码器先将语音以12.5Hz的token rate通过finite scalar quantization（codebook size=16384）转换为离散token。Omni-Diffusion模型预测输出的语音token序列后，交由GLM-4-Voice decoder重建为波形。语音解码器同样训练保持冻结。
 
 核心Backbone：基于Dream-7B，一个预训练的mask-based discrete diffusion语言模型。为支持多模态处理，模型vocabulary扩展了16384个speech tokens和8192个image tokens，相应地扩展了embedding层和output层的参数。其余Transformer架构保持不变。
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e3e4919a7.jpg)
 
 训练过程（三阶段渐进式训练pipeline）：
 - Stage 1（Visual-Language Pre-Alignment）：仅使用text-to-image和image captioning数据，将视觉模态对齐到预训练语言模型的语义空间。数据包括Laion-2B（10M图像-文本对）、JourneyDB（4M）、LLaVA-OneVision（820K）等。
 - Stage 2（Speech–Vision–Language Joint Alignment）：引入ASR和TTS数据（LibriSpeech、GigaSpeech、LibriTTS、Emilia等总计约6000+小时），与Stage 1的图文数据联合训练，建立语音-文本的双向对齐。
 - Stage 3（Speech-Driven Visual Interaction Capability Improvement）：在自建的SDVI数据集（30K spoken VQA + 30K speech-to-image样本）上微调，增强语音与视觉的跨模态交互能力。同时保留SQA和VQA数据以维持已有能力。
 
-![图15](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e6d8dc25d.jpg)
 
 Attenuated Tail-Pad Masking：为支持变长生成，训练时在每个样本尾部追加随机数量的pad token。对所有token（含pad）实施随机masking，但对pad token的mask ratio乘以衰减因子 \(\gamma\)（\(\gamma < 1\)，本文设为0.6）。这确保梯度更新的主导驱动力来自语义token，避免模型过拟合pad token，防止推理时生成过量的pad token。
 
-![图16](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e6e8349bb.jpg)
 
 推理策略：
 - Entropy-based Decoding：每步计算各位置token概率的熵 \(H^i_t = -\sum_{v=1}^V p_t^{i,v} \cdot \log(p_t^{i,v})\)，取熵最低（置信度最高）的top-k tokens在当前步解码，其余保持 `[MASK]`。迭代重复直至所有token被解码。可结合repetition penalty和classifier-free guidance提升生成质量。
@@ -79,15 +73,10 @@ Attenuated Tail-Pad Masking：为支持变长生成，训练时在每个样本�
 - Special Token Pre-Infilling：利用扩散模型可自由修改初始mask序列的特性，在初始mask序列25%位置处插入 `<|begin-of-speech|>` 特殊token。这指导模型在前25%位置生成文本响应，后75%位置生成对应语音，使语音合成过程显式attend到已生成的文本语义，提升spoken对话的逻辑性和连贯性。
 - Adaptive Token Length Assignment：利用语音时长与文本长度的强相关性，TTS任务初始mask token长度设为文本token数的3.5倍，ASR任务设为语音token数的0.2倍。该策略在减少无效解码、提升效率的同时也改善了生成质量。
 
-![图17](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-e7ba8e505.jpg)
 
-![图18](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-eab07ba1f.jpg)
 
-![图19](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-ef6067cc9.jpg)
 
-![图20](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-ef7a33074.jpg)
 
-![图21](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EulXRTtFCd-p4-v48f932b4.jpg)
 
 ### 💡 核心创新点
 

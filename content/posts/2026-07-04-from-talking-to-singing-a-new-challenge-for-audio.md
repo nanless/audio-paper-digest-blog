@@ -62,9 +62,7 @@ T-AVFD是一个仅使用真实说话视频训练的无监督音视频深度伪�
 
 训练目标：总损失 `L` 由两部分组成，`L = L_av + L_ft`。`L_av` 是音视频对齐损失，旨在最大化时间上同步的音视频对的匹配度，并惩罚非对齐帧对。整个训练过程完全在说话场景的真实视频上进行，无需接触任何伪造视频，遵循异常检测范式。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/eZAos1ZGdz-p1-e1b0553da.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/eZAos1ZGdz-p1-e468d8a49.jpg)
 
 
 ### 💡 核心创新点
@@ -89,9 +87,7 @@ T-AVFD在三个说话测试集（AVLips、FakeAVCeleb FKAV、TalkingHeadBench TH
 
 在唱歌数据集SHDF上，所有基线方法的AUC均接近50%的随机水平，而T-AVFD取得了85.7% AP和80.2% AUC，证明了其有效应对了域迁移。跨训练数据分布的实验（表3）表明，不论是用说话还是唱歌数据训练，T-AVFD均能在另一域上保持较强性能（如用唱歌数据训练后在AVLips上AUC达77.3%），而AVH-Align则表现出严重的性能崩溃（AUC降至52.6%）。消融实验证实：完全移除文本提示使SHDF上的AUC从80.2%骤降至62.0%；移除面部特征后SHDF AUC降至45.1%。鲁棒性测试中，在6种图像扰动下，T-AVFD在唱歌和说话域上的平均AUC分别为75.0%和84.6%，远高于基线。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/eZAos1ZGdz-p1-eeedacfdb.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/eZAos1ZGdz-p1-r0743e378.jpg)
 
 
 ### 🔬 细节详述
@@ -130,7 +126,6 @@ T-AVFD在三个说话测试集（AVLips、FakeAVCeleb FKAV、TalkingHeadBench TH
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/eZAos1ZGdz-p1-r3ce52a00.jpg)
 
 
 ---

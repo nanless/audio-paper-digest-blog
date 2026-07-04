@@ -55,9 +55,7 @@ KGMF融合：首先从带噪STFT估计Wiener启发的可恢复性图\(R[f,t]=\ha
 
 训练目标：\(L=0.1·L_{ri}+0.9·L_{mag}+0.2·L_{wav}\)，分别对应实虚部MSE、幅度MSE和时域L1损失。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/iIWMjdBZ20-p21-v6a9a615f.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/iIWMjdBZ20-p24-e07e6e5c1.jpg)
 
 
 ### 💡 核心创新点
@@ -109,9 +107,7 @@ EM信号增强 (Rydberg 4-bins, -20dB输入)：FracKGMF平均SNR提升34.77dB，
 
 跨领域泛化：EARS-WHAM!训练→VoiceBank+DEMAND直接评估，FracKGMF在效率-性能Pareto前沿上位于最优区域（60.73G MACs vs FlowSE 266.6G MACs但聚合评分更低）。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/iIWMjdBZ20-p24-e5b688789.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/iIWMjdBZ20-p24-e62c5a9e3.jpg)
 
 
 ### 🔬 细节详述
@@ -166,7 +162,6 @@ EM信号增强 (Rydberg 4-bins, -20dB输入)：FracKGMF平均SNR提升34.77dB，
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/iIWMjdBZ20-p24-e8f8395d9.jpg)
 
 
 ---

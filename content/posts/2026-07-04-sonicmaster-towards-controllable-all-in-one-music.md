@@ -57,7 +57,6 @@ SonicMaster在"All-in-One"音乐修复上的尝试是勇敢且及时的，用一
 
 SonicMaster的整体架构采用了一个混合的多模态流匹配框架。系统输入一段带有音质退化问题的立体声音频（44.1kHz），以及一段描述所需修复效果的自然语言指令（如“减少空洞的房间声”），输出为处理后的高质量立体声音频。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T0HjpdCPxU-p8-v397a0b47.jpg)
 
 其主要组件和流程如下：
 

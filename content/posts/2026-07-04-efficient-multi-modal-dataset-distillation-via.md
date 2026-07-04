@@ -45,7 +45,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p3-re363da9d.jpg)
 
 
 
@@ -68,7 +67,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p8-vefd7fe8d.jpg)
 
 
 
@@ -110,7 +108,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p6-vc6f9e4af.jpg)
 
 
 
@@ -120,7 +117,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p8-r0611987b.jpg)
 
 
 
@@ -130,7 +126,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p8-r14e79dd5.jpg)
 
 
 
@@ -140,7 +135,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p8-r36834040.jpg)
 
 
 
@@ -162,7 +156,6 @@ APM 整体分为“离线预计算”和“在线蒸馏”两个阶段，核心�
 
 
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Yh4dMR5mJ0-p8-rad8ef119.jpg)
 
 
 

@@ -32,19 +32,16 @@ hiddenInHomeList: true
 1.  问题：现有多模态大语言模型在多步推理和长文本生成中存在幻觉问题，但现有的多模态归因评估方法局限于简化场景（如直接观察）、单一模态（主要为视觉），无法评估复杂推理中跨模态（视频+音频+图表）的事实级归因质量。
 2.  方法核心：提出MURGAT基准和MURGAT-SCORE自动化评估框架。评估分三步：（1）可验证声明识别——过滤掉推理性句子，只保留需要证据支撑的可验证句子；（2）原子事实分解——将句子拆分为最小可验证的原子事实并传播引用；（3）归因质量评估——评判每个原子事实是否被引用的多模态片段所蕴含（Recall）且每个引用片段是否必要（Precision）。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-r1144fd14.jpg)
 
 
 3.  创新点：首次在多模态复杂推理场景下引入"事实级"归因评估，显式区分可验证声明与推理步骤，并将时间戳+模态的双重引用要求纳入评估指标。这是将文本域FActScore/Gao et al.的引用评估体系系统性地迁移到多模态视频理解的早期工作之一。
 4.  主要实验结果：
     *   人类评估（Table 1）：Gemini-2.5-Flash在WorldSense上MURGAT-S为59.9，但在Video-MMMU上仅21.8；所有模型的归因质量均远低于问答准确率。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rb2d2d1ab.jpg)
 
 
     *   自动化评估（Table 5）：最强的Gemini-3-Flash在WorldSense上MURGAT-S为69.2，Video-MMMU为56.9。Post-hoc归因方法在WorldSense上能提升归因质量，但在Video-MMMU上则显著损害精确度（Gemini-3-Flash的归因F1从64.5降至47.2）。
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rbdc4e5c7.jpg)
 
 
     *   [图像补充] 图2清晰展示了推理投入缩放效应：Gemini-3-Flash的MURGAT-S随推理级别增加（Minimal→Low→High）而单调下降，而Gemini-3-Pro则上升。
@@ -80,7 +77,6 @@ MURGAT是一个评估框架和基准，而非一个训练好的模型，其核�
 *   功能：将每个可验证句子拆分为最小独立声明的集合，同时保持引用传播，以实现更细粒度的评估。
 *   实现：采用两阶段设计——先做Decontextualization（代词消解、上下文补全，使每个句子独立可读），再做Atomic Fact Decomposition（使用Gemini-3-Flash + 句子级生成 + 显式消解上下文）。
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rdcfeed43.jpg)
 
 
 *   引用传播规则：若原句子有引用集 \(C_i\)，则所有从该句拆分出的原子事实自动继承 \(C_i\)；若为内联引用（如"A (visual,1:00) hits B (visual,2:00)"），则分别分配给对应事实。
@@ -113,7 +109,6 @@ MURGAT是一个评估框架和基准，而非一个训练好的模型，其核�
 3.  归因质量的两维精细化（Recall+Precision）：借鉴文本引用评估工作（Liu et al., 2023a; Gao et al., 2023b）并迁移到多模态场景，既检查"给的证据够不够"，也检查"有没有多余引用"。这种对待"引用堆砌"行为的惩罚机制使得MURGAT-SCORE比简单的"引用覆盖率"更有区分度。[图15]
 4.  揭示推理-归因能力解耦现象：通过大规模的MLLM实验，论文系统性地展示了多个反直觉发现：（a）强推理能力不意味着强归因能力（Gemini-3-Pro问答准但归因差）；（b）引用生成对简单识别任务是"推理税"，但可能为复杂推理任务提供脚手架（Qwen3-VL-Thinking加入引用后准确率从51%升至60%）；（c）增加推理投入对归因的影响在强弱模型间呈相反趋势。这些发现为后续研究提供了明确的方向。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-r152e1b04.jpg)
 
 5.  评估框架的自动化验证：通过20视频/80回答的人类标注数据，论文系统验证了级联LLM评估器与人类判断的高相关性（Pearson r=0.84），并对比了Disentangled (sent-level) 等方法 (r=0.58)，为多模态归因评估提供了一套可扩展的自动化方案——这比手工评审方式有实质进步。[图6, 图11]
 
@@ -121,7 +116,6 @@ MURGAT是一个评估框架和基准，而非一个训练好的模型，其核�
 
 基于20个视频、80条模型回答、580条句子级标注、635个原子事实的人评结果：
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rb451f7cd.jpg)
 
 | 模型 | WorldSense MURGAT-S | WorldSense Acc(%) | Video-MMMU MURGAT-S | Video-MMMU Acc(%) |
 |------|---------------------|-------------------|----------------------|-------------------|
@@ -178,7 +172,6 @@ MURGAT是一个评估框架和基准，而非一个训练好的模型，其核�
 *   训练数据：不涉及训练，为纯评估工作
 *   人类标注数据：从WorldSense和Video-MMMU各选10个视频，收集4个MLLM（Gemini-2.5-Flash、Gemini-3-Pro、Qwen3-Omni-Instruct、Qwen3-Omni-Thinking）的生成回答共80条，共标注580条句子级数据、635个原子事实、917个蕴含判定样本。标注由2名标注者完成，verifiability分类使用Union策略（OR-gate），attribution判定达86.1%一致率。
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rc30fea02.jpg)
 
 *   评估器配置：Verifiability用Gemini-3-Pro JSON模式（BAcc=84.2），Decomposition用Gemini-3-Flash（F1=81.4，Citation Accuracy=85.3%），Entailment用Gemini-2.5-Flash Simple模式（F1=72.9）。自动评估MURGAT-SCORE与人类标注分数的Pearson r=0.86，Spearman ρ=0.84。[图3, 图4, 图5, 图6, Table 4]
 *   评估数据集：WorldSense和Video-MMMU各100样本用于大规模自动评估，与人类标注的10+10样本不重叠

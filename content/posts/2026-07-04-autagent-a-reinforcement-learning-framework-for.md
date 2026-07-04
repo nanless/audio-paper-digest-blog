@@ -64,9 +64,7 @@ AuTAgent框架将系统解耦为两个核心组件：一个可训练的音频工
        差分奖励：为量化工具带来的净增益，对每个样本，先计算基线预测 \(y_{base}\)，然后从策略中采样 \(G=6\) 个工具选择候选 \(z_i\)。每个候选的奖励由公式 \(r_i = \mathbb{I}(\hat{y}_i = y^) - \mathbb{I}(y_{base} = y^*)\) 计算，得到三元奖励 \(\{-1, 0, 1\}\)。这迫使代理仅在工具能纠正基线错误时获正奖励，在简单问题上调用工具则被视为零收益，引入误导信息则受惩罚。
     *   策略更新：基于组内奖励计算相对优势 \(\hat{A}_i\)，并通过一个包含裁剪机制（\(\epsilon=0.2\)）和KL散度惩罚（\(\beta\)）的PPO目标函数来更新策略参数 \(\theta\)。这种设计使得工具选择策略不依赖于特定推理骨干的内部表征，实现了代理与推理器的解耦，是后续跨模型迁移的基础。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QfRtFf9Q3X-p1-v71efd9a8.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QfRtFf9Q3X-p11-v59c4bcf9.jpg)
 
 
 ### 💡 核心创新点
@@ -96,9 +94,7 @@ AuTAgent框架将系统解耦为两个核心组件：一个可训练的音频工
 
 AuTAgent在所有设置下均取得最佳。在迁移性实验中，将为Qwen2-Audio骨干训练的AuTAgent作为Plugin直接应用于GPT-4o Audio，在MMAU上达到66.80%，在MMAR上达到62.80%，与在GPT-4o Audio上专门训练的策略性能（SOTA分别为67.20%和63.00%）差距在0.2%~0.8%以内，验证了策略的强迁移性。消融实验证实，差分奖励机制（54.20%/41.30%）全面优于二元奖励（51.40%/39.00%），且前者平均工具调用次数更低。工具调用分布分析显示，RL训练使代理的策略从描述驱动的随机分布，转向聚焦于高收益工具（如T4 Tempo），并抑制了低效工具（如T2 Emotion）。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QfRtFf9Q3X-p12-v3d89ce8c.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QfRtFf9Q3X-p13-v08380b8d.jpg)
 
 
 ### 🔬 细节详述
@@ -137,7 +133,6 @@ AuTAgent在所有设置下均取得最佳。在迁移性实验中，将为Qwen2-
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QfRtFf9Q3X-p14-v6acf8e37.jpg)
 
 
 ---

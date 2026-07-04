@@ -51,7 +51,6 @@ CLD 是一个两阶段框架：离线训练凸语言检测头；在线推理时�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/LezLGW8UFX-p17-e29872495.jpg)
 
 
 
@@ -76,7 +75,6 @@ ADMM 求解与多 GPU 加速：凸规划通过交替方向乘子法（ADMM）求
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/LezLGW8UFX-p4-e1e3de2f4.jpg)
 
 
 
@@ -110,7 +108,6 @@ CLD 在 MMS-1B 上实现最大提升：准确率提升44.78%（67.01%→97.02%�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/LezLGW8UFX-p17-ef31b9d80.jpg)
 
 
 

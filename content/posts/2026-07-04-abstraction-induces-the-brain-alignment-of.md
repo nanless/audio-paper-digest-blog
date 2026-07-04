@@ -79,9 +79,7 @@ hiddenInHomeList: true
 *   脑调优因果干预：严格遵循 Vattikonda et al. (2025) 的实验设计，将 WavLM-base-plus 模型的第 9 层（脑预测最佳层）直接在 fMRI 体素响应上微调，同时将输入的上下文窗口从 2 秒扩展到 4 秒。通过对比微调前后模型的编码性能、语义探针性能和 \(I_d\) 的变化，建立从脑对齐到语义丰富度和几何复杂度的因果链条。
 *   随机傅里叶特征控制实验：通过构造一组具有不同外在维度（128, 256, 512, 1024, 2048）的随机傅里叶特征，人为创造出不具有语言结构的“高维”表征空间，并与真实模型层的 \(I_d\) 和编码性能进行对比，检验高维是否足以驱动脑对齐。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/n5Ds4qbtjM-p16-v7e33627f.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/n5Ds4qbtjM-p17-va25fb774.jpg)
 
 
 ### 💡 核心创新点
@@ -120,9 +118,7 @@ hiddenInHomeList: true
 
 随机傅里叶控制：随机高维特征在 \(I_d\) 增大到约 150 后，其 fMRI 编码性能很快饱和于 \(R\approx0.04\)，而真实模型层可以在较低的 \(I_d\) 下取得超过 0.1 的性能。这表明只有从语言中学来的结构化高维表征才能有效预测大脑。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/n5Ds4qbtjM-p17-va349bcfe.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/n5Ds4qbtjM-p19-e48c6721b.jpg)
 
 
 ### 🔬 细节详述
@@ -168,7 +164,6 @@ hiddenInHomeList: true
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/n5Ds4qbtjM-p21-v37fedcc3.jpg)
 
 
 ---

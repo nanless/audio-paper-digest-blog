@@ -83,9 +83,7 @@ IVQ的核心是将《易经》的“二进制层次组合”和“几何对称�
     -   视觉: 编码器/解码器采用ViT架构（12层残差注意力，hidden_dim=768），输入图像（256x256）被分割为16x16的patch，压缩为64个token后由Bottom-Up IVQ量化为64个卦象码。
     -   视频到音乐生成 (IVQV2M): 视觉编码器输出经IVQ量化为卦象索引，这些索引直接在共享的音乐IVQ码本中反量化为音乐token序列，输入到一个仅解码器的前馈Transformer生成音乐token，再经音乐解码器还原音频，完全避免了模态适配层。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Y3cUZ8fNnu-p12-r098fb265.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Y3cUZ8fNnu-p12-r15b1ad92.jpg)
 
 
 ### 💡 核心创新点
@@ -151,9 +149,7 @@ IVQ的核心是将《易经》的“二进制层次组合”和“几何对称�
 
 - 扩展性验证（Table 7）：通过调整每条卦象的爻数（lines），IVQ可灵活扩展。12-line IVQ能以4×2的极小码本取得远超无结构小码本的性能，甚至接近4×4096的大码本RVQ，显示出极高的结构效率和可扩展性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Y3cUZ8fNnu-p12-r2dc5bd6d.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Y3cUZ8fNnu-p12-ra59ca376.jpg)
 
 
 ### 🔬 细节详述
@@ -200,7 +196,6 @@ IVQ的核心是将《易经》的“二进制层次组合”和“几何对称�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Y3cUZ8fNnu-p12-rc6e02ad5.jpg)
 
 
 ---

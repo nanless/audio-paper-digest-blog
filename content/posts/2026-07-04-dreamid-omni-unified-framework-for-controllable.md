@@ -31,7 +31,6 @@ hiddenInHomeList: true
 
 本文旨在解决可控人像音视频生成领域三个核心任务——基于参考的身份-音频生成（R2AV）、视频编辑（RV2AV）和音频驱动视频动画（RA2V）——彼此孤立、缺乏统一框架的问题。DreamID-Omni构建在一个双流扩散变换器架构上，核心思想是将三个任务归约到同一个条件概率模型下：通过选择性提供文本、参考图像、参考音频、源视频和驱动音频五种条件，模型可在任务间无缝切换。针对多人物场景下致命的身份-音色绑定失败与说话人混淆，论文引入了“双层级解耦”策略：在信号层，利用同步旋转位置嵌入（Syn-RoPE）将不同身份投射到互不重叠的RoPE Margin区间，强制注意力空间内的刚性隔离；在语义层，用结构化字幕（Structured Caption）为每个身份分配专属锚点标记`<sub_k>`，显式建立属性-主体的映射关系。训练采用三阶段渐进课程：In-pair重建→Cross-pair解耦→全任务微调（R2AV:RV2AV:RA2V=4:3:3），让弱约束生成任务上学到的先验去正则化强约束的编辑和动画任务。自建IDBench-Omni基准（200条多场景样本）上的实验表明，多人物场景下说话人混淆率降至0.08，显著优于Wan2.6的0.38。该工作的工业价值在于首次提供了面向可控人像音视频生成的统一工业化方案，但主要局限是视频长度受限于10秒、推理需三次CFG前向导致效率偏低，且未开源核心资产。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r19862c61.jpg)
 
 ### 🔗 开源详情
 
@@ -59,7 +58,6 @@ hiddenInHomeList: true
 
 DreamID-Omni构建在一个双流扩散变换器（DiT）架构上，视频流和音频流通过双向交叉注意力层实现细粒度的跨模态同步与语义对齐。其核心设计可分解为三个相互依存的子系统。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r1bf46942.jpg)
 
 对称条件注入（Symmetric Conditional DiT）：这是实现任务统一的关键结构。对于视频流，输入序列被构造为 `[z_v; E_v(I)] + [E_v(V_src); 0]`；对于音频流则为 `[z_a; E_a(A)] + [E_a(A_dri); 0]`，其中 `z_v, z_a` 为目标视频和音频的带噪潜变量，`E_v, E_a` 为VAE编码器，`0` 表示与对应张量形状相同的零张量。参考图像和音频特征通过序列维度的拼接注入DiT块，让模型自主提取高层身份与音色先验；而源视频和驱动音频这类强结构约束则通过逐元素加法注入，相当于把结构画布直接叠加到噪声潜变量上。这种“拼接-加法”双轨设计的关键优势在于：当某类条件（如V_src或A_dri）不存在时，对应的加性项自动归零，无需改变网络结构即可在R2AV、RV2AV和RA2V三个任务间无缝切换。
 
@@ -69,7 +67,6 @@ DreamID-Omni构建在一个双流扩散变换器（DiT）架构上，视频流�
 
 多任务渐进训练（Multi-Task Progressive Training）：三个阶段构建了从易到难的课程体系。第一阶段（In-pair Reconstruction, 10k步）：模型只用R2AV任务训练，参考身份和音色从训练样本自身提取，引入掩码损失——对参考特征对应的时空区域外的预测误差进行惩罚，迫使模型真正的条件合成而非简单拷贝。第二阶段（Cross-pair Disentanglement, 20k步）：身份和音色从一个不同的视频片段抽取，掩码被取消（`M_v=0, M_a=0`），计算全序列损失，强制模型基于抽象的身份和音色概念完成合成，实现真正的解耦表征。第三阶段（Omni-Task Fine-tuning, 20k步）：将R2AV、RV2AV和RA2V样本按4:3:3比例混合微调，让在弱约束R2AV任务上建立起来的多样性生成先验去正则化强约束的编辑和动画任务，避免模型在强约束任务上走捷径导致过拟合。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r40791ed2.jpg)
 
 推理管道：采用多条件无分类器引导（CFG）的链式策略。核心公式为 `ϵ̂_final = ϵ̂_θ(z_t,∅,∅) + w_T · (ϵ̂_θ(z_t,T,∅) − ϵ̂_θ(z_t,∅,∅)) + w_S · (ϵ̂_θ(z_t,T,S) − ϵ̂_θ(z_t,T,∅))`，其中视频流的条件 `S = I`（参考身份），音频流的条件 `S = A`（参考音频），`w_T` 和 `w_S` 分别为文本和任务条件的引导尺度。这种解耦的引导方式确保身份和音色引导在文本对齐的基础上生效，避免了不同模态条件在推理时的相互干扰。
 
@@ -87,17 +84,11 @@ DreamID-Omni构建在一个双流扩散变换器（DiT）架构上，视频流�
 
 论文在自建的IDBench-Omni基准上进行评估，包含100个R2AV样本、50个RV2AV样本和50个RA2V样本，覆盖多人对话、野外录音等复杂场景。
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p12-v3c94fead.jpg)
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p13-v80e6e368.jpg)
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p13-vee14a25b.jpg)
 
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p14-v14a0dd3d.jpg)
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p15-v71d05ea7.jpg)
 
-![图15](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p16-v664cfd48.jpg)
 
 R2AV任务对比
 
@@ -135,11 +126,8 @@ Ours在视频质量和文本跟随上显著领先（ViCLIP 16.618 vs Humo 14.859
 
 关键消融实验（R2AV多人物场景）
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r93d83904.jpg)
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-rb820680b.jpg)
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-rfdf1ad18.jpg)
 
 | 方法 | ViCLIP↑ | T-Sim.↑ | Sync-C↑ | Sync-D↓ | Spk-Conf.↓ |
 |------|---------|---------|---------|---------|-----------|
@@ -151,9 +139,7 @@ Ours在视频质量和文本跟随上显著领先（ViCLIP 16.618 vs Humo 14.859
 
 消融实验（训练策略）
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r7059cc3b.jpg)
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r7b8df32c.jpg)
 
 | 方法 | ViCLIP↑ | ID-Sim.↑ | AQ↑ | T-Sim.↑ | CLAP↑ |
 |------|---------|----------|------|---------|-------|
@@ -167,11 +153,8 @@ OnlyIR仅用In-pair重建导致严重的复制-粘贴问题（高ID-Sim.但极�
 用户研究：
 30名专业视频创作者的7维度1-5分盲评显示，Ours在Text-Video Alignment、ID-Sim.、Video Quality、Text-Audio Alignment、Timbre-Sim.、Audio Quality和Lip-sync上分别得到3.86、3.95、3.68、4.75、3.50、4.23、4.50，全面领先。
 
-![图16](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p17-vc1dec322.jpg)
 
-![图17](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p18-v5d1f521b.jpg)
 
-![图18](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p18-v71d1e2ef.jpg)
 
 ### 🔬 细节详述
 
@@ -183,29 +166,17 @@ OnlyIR仅用In-pair重建导致严重的复制-粘贴问题（高ID-Sim.但极�
 - 推理细节：多条件CFG，视频流条件 `S=I`，音频流条件 `S=A`，`w_T` 和 `w_S` 分别为文本和条件的引导尺度（具体数值未报道）。视频最长支持10秒（潜变量长度不超过Margin `M=150`）。推理采用序列并行和CFG并行进行加速。
 - 评估细节：视频质量（AES美学评分、ViCLIP文本-视频相似度、ArcFace身份相似度ID-Sim.）、音频质量（PQ音频质量分、CLAP语义一致性、WER词错误率、WavLM音色相似度T-Sim.）、音视频一致性（SyncNet Sync-C置信度/Sync-D距离、Gemini-2.5-Pro判断的Spk-Conf说话人混淆率）。IDBench-Omni包含200条多场景测试样本（100 R2AV + 50 RV2AV + 50 RA2V）。说话人混淆检测使用MLLM专用系统提示（见附录图8）。
 
-![图19](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p4-v3500647f.jpg)
 
-![图20](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-r1c3639a7.jpg)
 
-![图21](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-r4d7ba37f.jpg)
 
-![图22](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-rbfa18f75.jpg)
 
-![图23](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-rdaea4957.jpg)
 
-![图24](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-rf0c4367d.jpg)
 
-![图25](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p5-v7177c447.jpg)
 
-![图26](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p8-r7a8b15c5.jpg)
 
-![图27](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p8-r7bb918e9.jpg)
 
-![图28](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p8-rbcd135d7.jpg)
 
-![图29](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p8-rf729f803.jpg)
 
-![图30](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p8-v65fa6706.jpg)
 
 ### ⚖️ 评分理由
 

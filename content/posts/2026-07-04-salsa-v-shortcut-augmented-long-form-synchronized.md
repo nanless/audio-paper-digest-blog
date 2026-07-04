@@ -65,7 +65,6 @@ SALSA‑V 采用潜空间流匹配框架，整体流程分为视觉编码、音�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/akfapJ7Uuf-p13-r58a674f3.jpg)
 
 
 
@@ -73,7 +72,6 @@ SALSA‑V 采用潜空间流匹配框架，整体流程分为视觉编码、音�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/akfapJ7Uuf-p13-radc1c0d4.jpg)
 
 
 
@@ -100,7 +98,6 @@ Shortcut 损失：在标准流匹配目标外，随机选取 25% 样本施加自
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/akfapJ7Uuf-p14-v3e15d648.jpg)
 
 
 

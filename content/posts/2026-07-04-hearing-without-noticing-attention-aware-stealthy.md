@@ -73,9 +73,7 @@ HWN是一个两阶段的黑盒对抗音频生成流水线，旨在生成“听�
 
 设计选择上，论文强调在频谱域而非波形域优化的原因有两点：一是STFT丢弃相位信息后损失地形更易优化，二是保留了音乐本身的谐波相位，避免了直接扰动波形可能造成的相位不一致和听觉劣化。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YTk3CL8qA7-p17-v7e82dc70.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YTk3CL8qA7-p3-e2c49a466.jpg)
 
 
 ### 💡 核心创新点
@@ -120,9 +118,7 @@ HWN是一个两阶段的黑盒对抗音频生成流水线，旨在生成“听�
 
 攻击效率：单个数字域对抗样本生成约50分钟，CMA-ES后精炼平均耗时778秒，需707次查询，花费0.43美元。物理域攻击则为零查询。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YTk3CL8qA7-p3-e6b523ef7.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YTk3CL8qA7-p3-e84b544d9.jpg)
 
 
 ### 🔬 细节详述
@@ -164,7 +160,6 @@ HWN是一个两阶段的黑盒对抗音频生成流水线，旨在生成“听�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YTk3CL8qA7-p3-e8daebaf1.jpg)
 
 
 ---

@@ -56,9 +56,7 @@ DiscoForcing是一个面向部署的端到端流式音频驱动角色控制系�
 
 实时交互系统：生成的运动数据通过ROS2异步传输至两个前端：（1）Unity可视化平台，通过SMPL参数实现虚拟角色实时渲染；（2）物理人形机器人平台（Unitree G1），经在线运动重定向和插值对齐后，由基于PD关节阻抗的全身控制器执行。系统流水线延迟（26.26ms/帧）满足30FPS（33.3ms）的硬实时要求。[图像补充]：从图1可以更清晰地看到，执行平台明确分为“Unity (Character)” 和 “Physical (Humanoid Robot)” 两个并行路径，同时在图2中详细展示了从因果音乐编码到两个应用端（可视化与控制）的完整数据流与ROS2通信结构。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2I7eG7zUQb-p27-ea91a431e.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2I7eG7zUQb-p7-e07567a8c.jpg)
 
 
 ### 💡 核心创新点

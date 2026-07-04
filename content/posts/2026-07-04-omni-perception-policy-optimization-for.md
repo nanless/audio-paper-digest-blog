@@ -66,9 +66,7 @@ OPPO在标准的两阶段训练流程（监督微调SFT + GRPO强化学习）基
 4. 协同效应的理论解释（附录A）
 论文在附录A中利用信息论对`J_omni`和`R_omni`的协同效应进行了解释。它将`J_omni`建模为条件互信息`I_θ(T_m; m|X^{m~})`的一个变分上界，并提出一个信息瓶颈原理：生成证据与真值线索间的互信息`I_θ(T_m; C_m|X^{m~})`受限于`I_θ(T_m; m|X^{m~})`。因此，最大化`J_omni`相当于拓宽了忠实信息的通道容量，为后续`R_omni`的有效优化提供了必要的上限和稳定的梯度信号。图3的实验结果（`β`足够大时奖励才显著提升）验证了这一理论。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4dwe2wlxx5-p16-r06671ede.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4dwe2wlxx5-p16-r4eac8b44.jpg)
 
 
 ### 💡 核心创新点
@@ -112,9 +110,7 @@ MEP-Bench 结果：在诊断基准上，OPPO显著提升了多模态感知能力
 
 超参数分析实验详细分析了`α, β, ρ, δ`等关键超参数，并展示了权重`β`在足够大时，会显著提升奖励信号的收敛值，从实验上验证了全感知奖励与损失之间的协同效应。同时，论文也指出`α=0.6`时会引发格式崩溃，揭示了奖励权重的敏感区间。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4dwe2wlxx5-p16-r914613f7.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4dwe2wlxx5-p19-v8796cd5c.jpg)
 
 
 ### 🔬 细节详述
@@ -152,7 +148,6 @@ MEP-Bench 结果：在诊断基准上，OPPO显著提升了多模态感知能力
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4dwe2wlxx5-p2-e5895c51a.jpg)
 
 
 ---

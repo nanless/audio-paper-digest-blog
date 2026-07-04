@@ -43,9 +43,7 @@ hiddenInHomeList: true
 
 ConsMSA的端到端训练框架将多模态token的评估域从特征空间迁移至语义分布空间。整体架构分为语义投影、一致性评分（I2CS）、Token优化和最终预测四个阶段（参见原文图2）。多模态输入经各自编码器得到token级特征\(h\)，之后所有模态共享一个语义投影器将\(h\)映射为C维的类别预测分布\(p\)。在此基础上，Consensus模块计算模态内一致性（IntraCS）和模态间一致性（InterCS），并通过加权求和得到统一的I2CS分数。同时，模块还输出每个token的预测置信度Rel（即\(p_i\)的最大值）。这两个信号被合成为一致性感知的重要性信号`Signal = Rel - I2CS`，奖励既有高语义确信度又与全局共识一致的token。该信号以三种方式被复用到整个训练与推理中：(i) 作为正则化损失的核心项`L_I2CS`，强制拉近高置信度token间的语义分布；(ii) 转换为软掩码，通过Sigmoid门控实现对特征的连续性重加权；(iii) 作为硬Top-K选择的依据，在推理时剪枝冗余或冲突token。最终，优化后的多模态token被拼接送入融合与预测模块，并联合多模态回归损失`L_task`和单模态辅助损失`L_MS`进行端到端训练。该框架将“语义分布对齐”这一核心思想同时用于训练正则和推理加速，通过一个统一的信号桥接了两类需求，具有良好的设计整体性。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/rWTqAgyZcd-p1-e93ea673a.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/rWTqAgyZcd-p3-v7f92602c.jpg)
 
 
 ### 💡 核心创新点
@@ -75,9 +73,7 @@ Token压缩与信号鲁棒性实验是最亮眼的部分：在MOSI上，ConsMSA�
 
 局限性体现在MOSI混淆矩阵（原文图5）上：Highly Positive（仅20个样本）和 Highly Negative（仅46个样本）两个极度不均衡类别的准确率远低于中间情感（HP准确率甚至接近于0），严重拖累了整体7分类准确率。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/rWTqAgyZcd-p9-r141551ab.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/rWTqAgyZcd-p9-r60a20b41.jpg)
 
 
 ### 🔬 细节详述

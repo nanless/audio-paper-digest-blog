@@ -31,11 +31,9 @@ hiddenInHomeList: true
 
 1.  要解决的问题：现有情感语音合成（TTS）模型在处理如“高兴但略带傲慢”这类复合指令时，存在系统性偏差——目标情感维度被抑制（表达不足），非目标情感维度出现泄漏（表达过强），同时说话人音色与情感韵律耦合导致身份漂移。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p12-v01e66a89.jpg)
 
 2.  方法核心：提出AgentSteerTTS，一个多智能体闭环框架，包含三大组件：(a) 对抗解耦模块（ADM）——利用梯度反转层和交叉协方差正则化，将说话人身份与情感韵律分离。(b) 双流锚定控制器（DAC）——从大规模高表现力声学原型库中检索与目标指令匹配的“锚点”音频，并将文本意图与声学锚点融合为连续控制向量。(c) 快-慢反馈代理——通过可微分的隐层梯度校正（快代理）在线校准强度，并利用外部多模态大模型（MLLM，慢代理）对合成语音进行感知评估和类别纠错。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p1-vd1b7b269.jpg)
 
 3.  方法新颖性：区别于将复合指令视为单一标签或纯文本条件的范式，该工作首次在多智能体框架下，系统性地结合“对抗解耦、检索增强的声学锚定和双层（隐层+波形层）闭环反馈”，显式解决语义-声学错位问题，实现了更精细和鲁棒的复合情感控制。
 4.  主要实验结果：
@@ -46,7 +44,6 @@ hiddenInHomeList: true
 | IndexTTS2 | 0.823 | 1.81 | 0.864 | 4.15±0.10 |
 | AgentSteerTTS (Gemini3) | 0.841 | 1.34 | 0.955 | 4.38±0.07 |
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p15-efab10ef8.jpg)
 
     *   ESD公开数据集：在情感平均意见分（ESMOS, 4.42）、语音自然度（SNMOS, 4.52）和说话人相似度（SSMOS, 4.31）上均取得最佳结果。
     *   消融实验：去除对抗解耦使\(\Delta\)S-SIM升至0.048，非目标泄漏增至0.22。去除原型检索使复合成功率（CSR）和E-SIM分别降至0.49和0.910，证明了核心模块的有效性。
@@ -74,7 +71,6 @@ hiddenInHomeList: true
 
 AgentSteerTTS 是为复合指令TTS设计的多智能体闭环框架。系统接收一段文本指令（如“高兴但略带傲慢”）和参考说话人音频作为输入，通过“解耦-锚定-反馈”流水线生成符合指令的语音波形。其架构由三个核心组件构成：
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p13-vc1e83bfa.jpg)
 
 1.  对抗解耦智能体 (Adversarial Disentanglement Module, ADM)：该组件旨在解决说话人身份和情感韵律在声学空间中耦合的问题。它以参考音频的梅尔谱（Mel-spectrogram）为输入，使用两个多层Transformer编码器（`E_id` 和 `E_emo`）分别提取说话人身份隐变量 `z_id` 和情感隐变量 `z_emo`。为防止信息泄漏，模块采用了两个关键策略：
     *   交叉协方差正则化 (Cross-Covariance Regularization)：通过最小化一个批次内 `z_id` 和 `z_emo` 交叉协方差矩阵的Frobenius范数 \(L_{orth}\)，直接鼓励两个隐空间在统计层面去相关。
@@ -123,7 +119,6 @@ AgentSteerTTS 是为复合指令TTS设计的多智能体闭环框架。系统接
 | UMETTS (FastSpeech) | Prompt | 7.35 | 3.07 | 6.703 | 0.896 | 4.37 (±0.07) | 4.29 (±0.06) | 4.13 (±0.07) |
 | AgentSteerTTS (Qwen3) | Prompt | 7.12 | 3.08 | 5.815 | 0.861 | 4.42 (±0.05) | 4.52 (±0.06) | 4.31 (±0.07) |
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p15-vf8056ef1.jpg)
 
 *   消融实验 (Table 3):
     *   去除对抗解耦 (w/o Adv. Disentanglement): S-SIM降至0.807，\(\Delta\)S-SIM上升至0.048，非目标泄漏率增至0.22，复合成功率（CSR）降至0.61。证实了解耦对身份保真和纯化情绪控制的作用。
@@ -136,7 +131,6 @@ AgentSteerTTS 是为复合指令TTS设计的多智能体闭环框架。系统接
 | w/o Adv. Disentanglement | 0.807↓0.034 | 0.048↑0.027 | 0.948 | 0.61↓0.17 | 0.22↑0.08 | 1.36 | 4.30±0.08 |
 | w/o Prototype Retrieval (text-only) | 0.836 | 0.025 | 0.910↓0.045 | 0.49↓0.29 | 0.18 | 1.35 | 4.31±0.07 |
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p16-e5296fec6.jpg)
 
 定性分析：
 论文通过频谱对比（Fig. 8）和F0/能量轮廓分析，验证了复合输出（如“高兴但略带傲慢”）并非单一情感的简单平均，而是融合了“高兴”的高频能量和“傲慢”的特定共振结构，实现了组合式声学控制。

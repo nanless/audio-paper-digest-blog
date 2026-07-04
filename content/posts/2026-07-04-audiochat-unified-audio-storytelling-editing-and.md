@@ -82,9 +82,7 @@ SCT是AudioChat模型的主干，旨在高效地将文本理解能力和音频�
 4. 训练数据生成：AudioCopilot
 由于缺乏细粒度的声源级标注数据，论文设计了一个名为AudioCopilot的LLM代理来自动化合成训练数据。该代理（基于Gemma 3 27B）被赋予内部强大的文本到语音（TTS）和文本到音频（T2A）工具，通过模拟用户和AI音效设计师之间的多轮对话，从一个随机文本种子（来自LibriSpeech或Common Voice）出发，生成结构化的JSON对话记录。这些JSON详细描述了每个声源的参数（如文本、起止时间、响度、声像、情绪等），用于合成最终的混合音频片段。论文合成了600万轮对话数据，并实施了严格的逻辑一致性验证（如检查元素ID的增删改是否一致），过滤了大量低质量样本，最终保留约10万高质量样本用于微调。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/0VXbYwtvR8-p2-vc1e2b279.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/0VXbYwtvR8-p4-vb8c20f16.jpg)
 
 
 ### 💡 核心创新点
@@ -153,9 +151,7 @@ SCT架构在编辑任务上全面优于MoT和Dense架构，尤其在保持原音
 真实世界编辑泛化 (Table 6):
 将模型应用于AudioCaps真实音频时，editFLAM从18.6降至15.5，表明存在域外泛化问题，但作者认为考虑到训练数据域的巨大差异，这一下降相对较小。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/0VXbYwtvR8-p5-r0d3baa0c.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/0VXbYwtvR8-p5-r1192ab48.jpg)
 
 
 ### 🔬 细节详述
@@ -212,7 +208,6 @@ SCT架构在编辑任务上全面优于MoT和Dense架构，尤其在保持原音
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/0VXbYwtvR8-p5-r18c2dd4a.jpg)
 
 
 ---

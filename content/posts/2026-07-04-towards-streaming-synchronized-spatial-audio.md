@@ -65,9 +65,7 @@ Multi-objective ODPO（图2右下）在后训练阶段，对每个输入生成8�
 
 训练采用课程学习策略：先用约100万条非空间音频转为伪FOA格式（W通道为左右声道之和，X/Y/Z中随机选一个为差，其余置零）预训练LocDiT，再在16.5万条空间音频数据上微调整个模型。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QlKWT5s4Wy-p15-v953b7dc2.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QlKWT5s4Wy-p2-r41edd46a.jpg)
 
 
 ### 💡 核心创新点
@@ -104,9 +102,7 @@ Multi-objective ODPO（图2右下）在后训练阶段，对每个输入生成8�
 
 文本到空间音频任务上，SwanSphere的FD从OmniAudio(text)的174.13降至142.80，KL从1.83降至1.43。独立SELD评估的加权余弦相似度（wCS）从OmniAudio的0.41提升至0.63。OOD泛化性测试（YT360-Test集）上的FD从OmniAudio的186.42降至145.83。在视频基础上添加文本条件，FD可进一步从120.28降低至118.31，角度误差从1.03降低至0.96。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QlKWT5s4Wy-p2-v010831ca.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QlKWT5s4Wy-p4-e45791004.jpg)
 
 
 ### 🔬 细节详述
@@ -143,7 +139,6 @@ Multi-objective ODPO（图2右下）在后训练阶段，对每个输入生成8�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QlKWT5s4Wy-p4-e75fc18a9.jpg)
 
 
 ---

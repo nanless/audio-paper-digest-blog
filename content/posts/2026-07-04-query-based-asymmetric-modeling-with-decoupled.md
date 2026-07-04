@@ -56,7 +56,6 @@ TF-Decoder with extension queries（扩展解码器） 负责合成完整输出�
 1. 预训练阶段：使用感知损失（WavLM 特征间的 MSE，仅16kHz有效）和提出的缩放 log-谱损失（s-log1p）。s-log1p 定义为 \(w_{tf} \log(1+|Y-S|/w_{tf})\)，其梯度在误差小于 \(w_{tf}\) 时接近1，大于时衰减，从而抑制粗糙区域的不稳定梯度并保留精细结构。\(w_{tf}\) 设为该频率 bin 的目标幅度时间平均值 \(E_t[S_{m,tf}]\)，利用频谱误差与源幅度的强相关性平衡不同频带的梯度。
 2. 对抗训练阶段：引入多尺度 SFI-STFT 判别器（窗长度为 20-100 ms），使用 LS-GAN 损失和特征匹配损失，并附有可微分 PESQ/UTMOS 的人类反馈损失。判别器采用与编码器相同的 SFI-STFT 参数化，因此可用一个判别器处理多种输出采样率的信号，避免为每种速率训练独立判别器。流式推理通过将时间自注意力模块替换为两个 Mamba 块实现，总延时约 80ms。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nzE9Ck5oLe-p5-v6074ba3c.jpg)
 
 ### 💡 核心创新点
 
@@ -138,7 +137,6 @@ VCTK 超分辨率（多速率）
 
 [图像补充] 下图（图1）提供了部分消融实验的详细定量结果，展示了非对称架构、频率投影、解码器注意力机制等设计选择对模型性能的影响。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nzE9Ck5oLe-p23-vd9cc6c3a.jpg)
 
 ### 🔬 细节详述
 

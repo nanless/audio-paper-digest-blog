@@ -60,7 +60,6 @@ video-SALMONN S的整体架构是一个流式处理系统，基于Qwen3-VL 8B构
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-e08bb4dea.jpg)
 
 
 
@@ -68,7 +67,6 @@ TTT_MEM层是整个方法的核心。它包含一个以快速权重 \(W_t\) 参�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-e8a8db84c.jpg)
 
 
 
@@ -143,7 +141,6 @@ TTT-video相比Mamba-2性能更优，TTT_MEM在此基础上进一步提1-2%（�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-ea477b7cf.jpg)
 
 
 
@@ -151,7 +148,6 @@ TTT-video相比Mamba-2性能更优，TTT_MEM在此基础上进一步提1-2%（�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-ec575bf3a.jpg)
 
 
 
@@ -163,7 +159,6 @@ TTT-video相比Mamba-2性能更优，TTT_MEM在此基础上进一步提1-2%（�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-ee16b4f4a.jpg)
 
 
 
@@ -173,7 +168,6 @@ TTT-video相比Mamba-2性能更优，TTT_MEM在此基础上进一步提1-2%（�
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tJP3FxzSPs-p14-v153694d3.jpg)
 
 
 

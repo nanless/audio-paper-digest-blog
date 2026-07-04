@@ -54,7 +54,6 @@ MoST是一个统一的语音-文本多模态基础模型，基于混合专家（
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/32jYxFTcNX-p3-e840f13b3.jpg)
 
 
 
@@ -72,7 +71,6 @@ MoST是一个统一的语音-文本多模态基础模型，基于混合专家（
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/32jYxFTcNX-p3-ebf359202.jpg)
 
 
 
@@ -84,7 +82,6 @@ MoST是一个统一的语音-文本多模态基础模型，基于混合专家（
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/32jYxFTcNX-p3-va87998f0.jpg)
 
 
 
@@ -123,7 +120,6 @@ MoST在多个SQA基准上表现出强劲性能。在Llama Q上，S→T得分为7
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/32jYxFTcNX-p4-vdc16ea5d.jpg)
 
 
 

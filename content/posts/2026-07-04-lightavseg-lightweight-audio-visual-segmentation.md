@@ -65,7 +65,6 @@ hiddenInHomeList: true
 
 整体流程概述：LightAVSeg是一个双流（音频流、视觉流）端到端架构，输入为同步的音视频序列（视频帧和原始音频波形），输出为逐像素的分割掩码。核心流程为：视觉骨干（SeaFormer）提取多尺度特征 → 音频骨干（MobileNetV2，冻结）生成全局音频状态 → Reciprocal Audio-Visual Encoder进行层级双向交互：视觉特征经空间最大池化后引导音频状态精炼，精炼后的音频状态再以通道偏置形式注入视觉特征 → Cross-Modal Fusion Decoder自顶向下逐步上采样，同时维持递归音频状态并注入视觉特征，以保持跨层语义一致性 → 最终分割头输出预测掩码。训练时，除主分割损失外，还引入一个仅在训练时存在的Multi-Scale Audio-Visual Alignment Loss，强制跨模态对齐，推理时该分支被完全丢弃。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Xl7cAV0jdc-p15-v2e48ea53.jpg)
 
 视觉流：采用SeaFormer-Large（卷积+Transformer混合结构）。输入为 \(T \times 3 \times 224 \times 224\) 的视频帧，经过一系列包含卷积和squeeze-enhanced轴向注意力的模块，输出 \(N=4\) 个尺度的特征图 \(V_i \in \mathbb{R}^{B \times C_i \times H_i \times W_i}\)，步长分别为4, 8, 16, 32。SeaFormer利用轴向注意力在对角线方向高效建模全局依赖，适合移动端部署。
 
@@ -104,7 +103,6 @@ Multi-Scale Audio-Visual Alignment Loss：为缓解轻量网络学习虚假相�
 
 移动端推理效率：移动端总延迟163.4ms，为AVSegFormer-R50（1271.4ms）的7.8倍加速。组件延迟分布：视觉骨干占85.3%（139.4ms）、音频骨干3.9%（6.3ms）、分割头4.6%（7.6ms）、Reciprocal Encoder 3.7%（6.1ms）、Fusion Decoder 2.5%（4.1ms）。交互模块合计仅贡献6.2%延迟，有效验证了线性复杂度的设计。
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Xl7cAV0jdc-p6-r08db2beb.jpg)
 
 AVSS语义分割基准：
 
@@ -129,7 +127,6 @@ Ours在轻量级配置下达到30.6 mIoU，约为AVSegFormer-Sea的两倍，甚�
 - 多声源鲁棒性：在2声源场景下Ours（45/58）优于AVSegFormer（34/45），3+声源下Ours（44/65）优于AVSegFormer（32/49）。
 - 对齐损失的可迁移性：将单尺度适配版L_msa应用于外部R50架构，带来有限但正向的提升：AVSBench-R50（47.9→47.9，无提升）、AVSegFormer-R50（49.5→49.8，+0.3）、SelM-R50（54.5→55.0，+0.5）。这表明多尺度深度监督需与层级化音频状态设计协同才能发挥最大作用。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Xl7cAV0jdc-p16-v7349c7b3.jpg)
 
 [图像补充] 图3展示了不同配置下，最后三个解码阶段特征激活图的可视化对比。AVSBench基线在所有阶段都分散在背景噪声上，AVSegFormer能聚焦目标但缺乏清晰边界，而LightAVSeg表现出从粗到细的演变过程：早期阶段捕获全局上下文，深层阶段逐步抑制背景，实现对发声物体的精准对齐。这从视觉上证实了多尺度对齐损失驱动了从全局到局部的语义演进。
 
@@ -169,7 +166,6 @@ Ours在轻量级配置下达到30.6 mIoU，约为AVSegFormer-Sea的两倍，甚�
 5. 冻结音频骨干的代价：MobileNetV2在AudioSet上预训练，但AVSBench的声学场景（多声源、复杂环境）与AudioSet有较大差异。冻结骨干可能导致音频特征无法充分适应下游任务，论文也未与微调音频骨干的方案进行对比，缺乏选择此策略的充分理由。
 6. 结论的措辞可能过强：“surpassing even the heavy AVSegFormer-R50”的声明主要建立在MS3的 \(M_J\) 指标上（50.4 vs. 49.5），但在S4的 \(M_F\) 指标上（86.2 vs. 85.9）提升微乎其微，结论应更严谨，避免造成全面超越的错觉。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Xl7cAV0jdc-p3-rb0c9d86c.jpg)
 
 [图像补充] 图5展示了本工作的失败案例。顶行“Semantic Inconsistency”中，模型在多个相似物体拥挤的场景下出现语义混淆。中行“Incomplete Segmentation”显示，模型对大目标（如马）分割不完整。底行“Missed Detection”表明，在视觉线索不明显或被遮挡时，模型可能漏检。这些直观印证了作者提出的轻量骨干能力有限和全局音频状态在多声源场景下的局限性。
 

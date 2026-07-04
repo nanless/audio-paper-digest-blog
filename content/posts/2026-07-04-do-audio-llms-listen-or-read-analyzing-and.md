@@ -68,9 +68,7 @@ PCLM 替代了仅将最终编码器层输入 LLM 的标准做法，改为从选�
 基于 DPO 的策略优化
 在 PCLM SFT 完成后，固定音频编码器、投影器和 PCLM 网络，仅用 DPO 更新 LLM 参数，使用标准 pairwise logistic loss（公式 5，\(\beta = 0.1\)），学习率 5e-7。偏好对通过从副语言 MCQ 数据中构造正确选项 vs 随机错误选项（不含 VoxParadox）来训练，以增大声学支撑选项相对于语言误导选项的边际，从而进一步降低文本捷径效应。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/v7rYbRR9Zw-p16-e349adda8.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/v7rYbRR9Zw-p16-e6370633b.jpg)
 
 
 ### 💡 核心创新点
@@ -121,9 +119,7 @@ PCLM 带来约 43-54% 的绝对提升，叠加 DPO 再有 4-5% 提升，同时 A
 消融与中间层实验
 仅将中间层特征（层 5 和 15）拼接在最终层之后，VoxParadox GT 准确率从 17.40% 提升至 19.75%；对层 5 施加 10 倍注意力权重后进一步升至 20.80%，验证了中间层信息的价值。VoxCeleb2 探测结果和多种编码器/探头深度的实验均确认了所得瓶颈的普适性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/v7rYbRR9Zw-p16-e6a7a31dc.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/v7rYbRR9Zw-p16-e9b11592f.jpg)
 
 
 ### 🔬 细节详述
@@ -172,7 +168,6 @@ PCLM 带来约 43-54% 的绝对提升，叠加 DPO 再有 4-5% 提升，同时 A
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/v7rYbRR9Zw-p16-eafde34b2.jpg)
 
 
 ---

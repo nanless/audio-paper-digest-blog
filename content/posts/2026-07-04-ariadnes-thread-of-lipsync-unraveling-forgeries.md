@@ -85,9 +85,7 @@ Stage II（跨模态时序建模）在 Stage I 训练完毕后冻结其编码器
 
 推理时，两个分类器同时工作，输出真/假标签以及对应的生成器族类标签。该框架以唇-姿生理不一致为检测线索，以时序和视听同步指纹为归因依据，联合解决两个任务。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/xmKNNOElLM-p1-r38ce8c26.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/xmKNNOElLM-p1-r3e5479b1.jpg)
 
 
 ### 💡 核心创新点
@@ -123,9 +121,7 @@ Stage II（跨模态时序建模）在 Stage I 训练完毕后冻结其编码器
 
 此外，论文还补充了细粒度 15-way 模型级归因实验（附录 Table 13），LipDA 在 15 类上取得 82.67% ACC 和 82.04% 宏平均 F1。跨生成器归因测试中，对 LatentSync 正确归因到扩散族准确率 97.5%。数据集中部分音频驱动生成器的 AU 分析和不同架构族生成视频的 t-SNE 可视化分别在图 3 和图 4、图 8 中展示，直观支持了方法设计的有效性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/xmKNNOElLM-p1-r753a9046.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/xmKNNOElLM-p18-r0376bb9f.jpg)
 
 
 ### 🔬 细节详述
@@ -174,7 +170,6 @@ Stage II（跨模态时序建模）在 Stage I 训练完毕后冻结其编码器
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/xmKNNOElLM-p18-r34c917ce.jpg)
 
 
 ---

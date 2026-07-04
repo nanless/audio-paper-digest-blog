@@ -61,9 +61,7 @@ LoRA-MCL 将 Multiple Choice Learning (MCL) 与低秩适配（LoRA）相结合�
 5. 梯度反传：损失仅通过被选中的假设（在松弛策略中是所有假设，但梯度强度由 \(q_k\) 控制）进行反向传播，更新其对应的LoRA适配器参数，而基座模型始终保持冻结。
 6. 推理：在推理时，\(K\) 个假设各自独立进行束搜索（Beam Search），生成 \(K\) 条候选序列。为了保证计算预算公平，LoRA-MCL 的每个假设使用 B'/K 的束宽，而基线方法使用束宽 B'。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/CCO35e4DCO-p19-e6906acc7.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/CCO35e4DCO-p8-e04b1d13f.jpg)
 
 
 ### 💡 核心创新点
@@ -110,9 +108,7 @@ LoRA-MCL 将 Multiple Choice Learning (MCL) 与低秩适配（LoRA）相结合�
 
 机器翻译（图 5）：在 EN→DE 任务上，K=3 的 LoRA-MCL 在 Leave-One-Out BLEU 和 Pairwise-BLEU 构成的二维平面上，位置优于所有对比的 MLE 和 DBS 配置，实现了翻译质量与多样性更好的平衡点。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/CCO35e4DCO-p8-e10456653.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/CCO35e4DCO-p8-e96425038.jpg)
 
 
 ### 🔬 细节详述

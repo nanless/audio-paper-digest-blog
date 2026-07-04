@@ -60,11 +60,9 @@ hiddenInHomeList: true
 
 FoeGlass将ADD红队问题形式化为从TTS输入空间U中采样，使生成音频的检测器得分高于阈值τ的输入。整体框架是一个迭代的LLM驱动的搜索流程。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p12-v1d7f5cf1.jpg)
 
 每轮迭代包含四个核心步骤：
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p13-vd34c62b2.jpg)
 
 1.  上下文设计器（Context Designer）：根据历史记录动态构建LLM的输入上下文。上下文由三部分组成：(a) 固定的指令提示（instruction prompt），描述TTS输入格式（如JSON）、生成参数（转录文本、速度、温度、风格、语音）及多样性策略，并可根据冷启动或热启动场景决定是否包含少量成功攻击示例；(b) 最近ℓ/2个失败攻击的链式思维（CoT）解释、真实度评分与多样性反馈；(c) 最近ℓ/2个成功攻击（最高真实度评分）的CoT、评分与多样性反馈。通过维持成功和失败案例的平衡历史，LLM能够从过往的推理路径中学习模式。初始时历史为空（冷启动）或包含少量示例（热启动，如两个假阴性样本和一个真阳性样本）。
 
@@ -76,7 +74,6 @@ FoeGlass将ADD红队问题形式化为从TTS输入空间U中采样，使生成�
 
 迭代过程最多进行T次（论文中设为500次），最终收集所有真实度评分≥τ的音频作为假阴性（FN）样本。该方法无需访问ADD或TTS的内部参数，仅需黑盒查询，且整个pipeline不涉及任何模型微调或强化学习，完全依赖上下文中的评分与多样性信号引导LLM的探索方向。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p2-e0c1f5a91.jpg)
 
 ### 💡 核心创新点
 
@@ -122,32 +119,24 @@ FoeGlass将ADD红队问题形式化为从TTS输入空间U中采样，使生成�
 
 微调增益：用FoeGlass攻击RawNetLite生成的数据微调后，RawNetLite准确率从49.6%降至8.2%（即提升41%以上的假音频检出能力），AASIST准确率从15.2%降至0.2%，且AASIST未参与攻击，显示攻击迁移性与数据增效。
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p21-vee207ccd.jpg)
 
 攻击迁移性热力图（图3与图7）表明，针对源ADD生成的样本在其他目标ADD上普遍获得高于基线的FNR，冷启动和热启动下均呈现良好迁移性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p17-v885afede.jpg)
 
 多样性消融：去除多样性反馈后，在xTTS-v2上部分ADD的FNR出现下降或标准差增大，PCA聚类可视化（图5与6）显示发现的失败模式明显减少，直观证明了多样性反馈的有效性。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p18-vc30ac438.jpg)
 
 收敛性分析：图5展示了FNR随迭代次数的变化曲线，表明在多数设置下，FNR在200-300次迭代后趋于平稳，说明500次的迭代预算对于本实验是相对充分的。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p19-vf94ebb43.jpg)
 
 附加ADD模型评估：在直接处理波形的检测器（RawNet2, RawNetLite, AASIST, DF_Arena系列）上，FoeGlass相比无条件采样的攻击成功率提升最高达42%（RawNetLite）和27%（AASIST），进一步验证了方法的通用性。
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p20-v5a83e612.jpg)
 LLM能力消融：将攻击者LLM替换为GPT-4o（一种非推理型LLM）后，攻击成功率显著下降，支持了论文关于“推理型LLM的CoT能力对于有效搜索TTS空间至关重要”的论点。
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p22-v97dc8fd3.jpg)
 嵌入模型鲁棒性：使用CLAP、BEATs等替换WavLM进行多样性反馈，性能相当，表明该机制对嵌入模型的选择具有一定鲁棒性。
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p6-va0655d19.jpg) ![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p7-e175ce5d4.jpg)
 训练集影响分析：对比在不同训练集（ASVspoof5 vs. VoxCelebSpoof）上训练的ADD，FoeGlass生成的攻击性存在差异，提示训练数据的分布会影响攻击方法的有效性。
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/J6amahDTKV-p7-e7b9e2e34.jpg)
 成功攻击文本示例：展示了FoeGlass生成的成功攻击文本转录，语义连贯，并非随机乱码。
 
 ### 🔬 细节详述

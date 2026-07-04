@@ -47,7 +47,6 @@ hiddenInHomeList: true
 
 本论文提出DramaSR-LRM，这是一个基于大推理模型的多阶段说话人识别Agent系统。其整体流程分为两个宏观阶段：初始化阶段（标签传播）和迭代精炼阶段（LRM推理）。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p13-v4b6cc5d1.jpg)
 
 阶段一：标签传播（Label Propagation）
 此阶段的目标是利用轻量级方法生成逐句的初始说话人标注，为后续LRM提供起点。
@@ -104,7 +103,6 @@ LRM训练与推理机制：
 | DramaSR-LRM (SFT+RL) | 86.93% | 84.94% | 88.91% | 87.45% | 87.77% | 84.12% | 76.95% |
 | DramaSR-LRM w/ conf. | 87.79% | 85.22% | 90.37% | 87.62% | 88.92% | 85.70% | 76.65% |
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p16-v77a8e65a.jpg)
 
 工具消融实验:
 结果显示 `voice_sim` 是最核心的工具，移除后准确率大幅低于LP基线。`video_cap` 和 `char_relation` 在提升总体性能的同时，对短台词场景尤为重要。
@@ -117,24 +115,12 @@ LRM训练与推理机制：
 | −char_rela | 87.55% | 87.41% | 88.68% | 85.33% | 75.66% |
 | 全工具 (Full Set) | 87.79% | 87.62% | 88.92% | 85.70% | 76.65% |
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p17-vbb579823.jpg)
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p18-v3b8fe016.jpg)
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p18-vbdb91146.jpg)
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p19-v9a6c39b7.jpg)
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p20-v02ded701.jpg)
 
 其它关键实验:
 *   环境复杂度细分：在候选人数为1-2, 3-4, 5+的子集中，DramaSR-LRM相比LP基线分别提升3.07%, 1.82%, 0.61%，显示出在所有难度级别上的一致性增益。
 *   视觉缺失案例（约9.6K条屏幕外台词）：LP基线仅成功识别13.4%，而DramaSR-LRM达到52.4%，证明Agent式推理能有效利用听觉和上下文线索弥补视觉缺失。
 *   下游QA任务影响（18399对QA）：使用DramaSR-LRM标签时，下游Qwen3-VL-32B的QA准确率从70.3%（LP标签）提升至72.0%，但仍远低于使用真实标签的80.8%，揭示了SR性能仍是下游任务的瓶颈。图12展示了这一正相关关系。
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p22-r2f6848a9.jpg)
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p20-vd7e30cd2.jpg)
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p21-ve848fa25.jpg)
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p22-r26ac5bba.jpg)
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p22-r3762a8ee.jpg)
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p22-rdf473043.jpg)
-![图15](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/h3TLVeukMA-p22-v8cd5e074.jpg)
 
 ### 🔬 细节详述
 

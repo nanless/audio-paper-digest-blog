@@ -59,9 +59,7 @@ hiddenInHomeList: true
 - 最终解码分布：在log-probability空间进行加权组合：
   \(\log P(y_t|x, y_{<t}) = \gamma_t \log P_{cali}(y_t|x, y_{<t}) + (1-\gamma_t) \log P_{orig}(y_t|x, y_{<t})\)
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nxKRwB1J63-p1-e5c70bc2f.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nxKRwB1J63-p1-ed8406527.jpg)
 
 
 ### 💡 核心创新点
@@ -115,9 +113,7 @@ hiddenInHomeList: true
 
 此外，消融实验表明ASD对超参数 \(\alpha\) 在0.2-0.8的广阔范围内表现鲁棒。附录中的定性结果和与AVCD、FMD等AVLLM专用解码方法的对比进一步证明了ASD的SOTA性能。一个反事实实验（reverse ASD）证实了抑制跨模态sink、增强单模态sink会恶化性能，验证了ASD逻辑的正确性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nxKRwB1J63-p19-vbc1234e4.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nxKRwB1J63-p19-vf977f26c.jpg)
 
 
 ### 🔬 细节详述
@@ -163,7 +159,6 @@ hiddenInHomeList: true
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nxKRwB1J63-p24-r0c9b8aef.jpg)
 
 
 ---

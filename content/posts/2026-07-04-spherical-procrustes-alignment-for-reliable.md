@@ -55,7 +55,6 @@ SPA 是一种面向预训练音频骨干网络（如 BEATs, AST, M2D）的双分
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p15-r799621dc.jpg)
 
 
 
@@ -108,7 +107,6 @@ SPA 在几乎不增加推理延迟的前提下（4.2 ms vs 4.1 ms）达到了最
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p2-recdeabf6.jpg)
 
 
 
@@ -131,7 +129,6 @@ SPA 在 CirCor 上普遍将 ECE 压缩约 50%，且配合 M2D 取得了最优 W_
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p8-r3b45062f.jpg)
 
 
 
@@ -139,7 +136,6 @@ SPA 在 CirCor 上普遍将 ECE 压缩约 50%，且配合 M2D 取得了最优 W_
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p4-r748b70a1.jpg)
 
 
 
@@ -163,7 +159,6 @@ SPA 在 CirCor 上普遍将 ECE 压缩约 50%，且配合 M2D 取得了最优 W_
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p14-rb4ee29f3.jpg)
 
 
 
@@ -175,7 +170,6 @@ SPA 在 CirCor 上普遍将 ECE 压缩约 50%，且配合 M2D 取得了最优 W_
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/czRY4Qj153-p9-rc256e9f5.jpg)
 
 
 

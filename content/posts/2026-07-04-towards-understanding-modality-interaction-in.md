@@ -46,7 +46,6 @@ hiddenInHomeList: true
 
 ### 🏗️ 方法概述和架构
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/z7ivDFlnSC-p2-r07be9aea.jpg)
 
 
 
@@ -56,7 +55,6 @@ hiddenInHomeList: true
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/z7ivDFlnSC-p2-v947b95ff.jpg)
 
 
 

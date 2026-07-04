@@ -44,17 +44,14 @@ hiddenInHomeList: true
 
 PhaseCoder系统采用两阶段设计：第一阶段独立训练一个麦克风几何无关的空间音频编码器（PhaseCoder encoder），第二阶段将该编码器产出的空间令牌作为额外模态注入冻结的Gemma 3n LLM，通过参数高效微调使其获得空间理解与推理能力。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p15-va5ab88a6.jpg)
 
 PhaseCoder空间音频编码器：输入为多通道（\(C\)个）原始音频。首先对每个通道分别计算短时傅里叶变换（STFT），采用256点Hann窗（16kHz采样率下共16ms），以50%重叠率滑动，产生33帧×129频点的幅度谱与相位谱。拼接幅度与相位，构成258维初始特征，再经线性投影降为256维的patch嵌入。每个麦克风通道在每个时间帧形成一个patch，所有通道与时序帧被平铺成长度为 \(L = F \times C\) 的序列。为了使Transformer能感知时序与空间结构，系统叠加三类固定的正弦/余弦位置编码：1）序列位置编码：标准的一维正弦位置嵌入，标记每个patch在展平序列中的序号；2）帧位置编码：基于帧索引的嵌入，同一帧内所有通道共享相同嵌入，帮助模型对齐时间信息；3）麦克风位置编码：借鉴GI-DOAEnet的相位调制嵌入，先将麦克风阵列中的每个麦克风坐标以其几何中心为原点转换为球坐标（半径 \(r_i\)、俯仰角 \(\theta_i\)、方位角 \(\phi_i\)），再通过公式 \(P_i = \alpha r_i [\cos(2\pi\beta v + \theta_i), \sin(2\pi\beta v + \theta_i), \cos(2\pi\beta v + \phi_i), \sin(2\pi\beta v + \phi_i)]^\top\) 映射为256维向量（其中 \(\alpha=7.0\), \(\beta=4.0\)，\(v\) 为均匀采样的基向量），从而使编码器能够感知阵列的物理几何。序列前额外添加一个可学习的 `[CLS]` token。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p16-v3ae1af7e.jpg)
 
 Transformer骨干由5层标准Transformer编码器堆叠而成，嵌入维度256，使用4头自注意力，前馈网络（FFN）维度保持256（1倍扩展以减少参数量），总参数量约6M。处理后的 `[CLS]` token最终隐藏状态经一个2层MLP（每层维度256，GELU激活）得到最终的空间音频嵌入向量，同时并行连接三个单层MLP预测头，分别对离散化后的方位角（38类，10°分辨率）、俯仰角（18类，10°分辨率）和距离（13类，0.5米分辨率）进行分类。训练目标为三个交叉熵损失的加权和，权重分别为 \(\lambda_{\text{方位}}=1.0\), \(\lambda_{\text{俯仰}}=1.0\), \(\lambda_{\text{距离}}=0.5\)。采用两阶段课程训练策略：第一阶段仅使用干净语音训练670k步（峰值学习率 \(1\times10^{-4}\) 余弦衰减至 \(1\times10^{-5}\)），第二阶段额外引入噪声和干扰音源训练30k步（峰值学习率 \(1\times10^{-5}\) 衰减至 \(9\times10^{-6}\)），以稳定收敛。训练数据完全为合成数据：语音来自LibriSpeech，房间冲激响应（RIR）由图像源方法生成（150万个独特RIR，随机3-8个麦克风、阵列直径7-18厘米、随机13种墙壁材料），非语音干扰来自Freesound，以-5dB至15dB的SNR混合。
 
 LLM空间微调：选用Gemma 3n 4B（指令微调版）作为多模态骨干。PhaseCoder产生的256维空间嵌入通过一个可训练的2层MLP投影层（\(256 \rightarrow 2048 \rightarrow 2048\)）映射为LLM隐藏空间维度（2048维），形成空间软令牌。由于Gemma 3n自带音频编码器每约160ms产生一个音频令牌，PhaseCoder也以相同的160ms间隔独立地为每个250ms的非重叠音频帧生成一个空间令牌（约6.25令牌/秒），实现时序对齐。这些空间令牌被包装在一对专用令牌 `` <BSA> `` 和 `` <ESA> `` 内，作为独立段落置于对应时段的音频令牌序列之前，以避免干扰Gemma 3n原有的音频控制令牌结构。微调时，冻结PhaseCoder编码器与Gemma LLM的主体参数，仅训练空间投影层，并对Gemma的所有线性层添加LoRA适配器（rank=8, \(\alpha\)=16，dropout=0.1）。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p17-v9544a146.jpg)
 
 微调数据为合成的空间问答对，覆盖四个难度递增的任务：Task 1声源定位、Task 2空间推理（是/否判断）、Task 3空间转录（同时转写文本并定位）、Task 4定向转录（根据空间线索转录特定说话人）。采用五阶段课程训练策略（每阶段2k-3k步），从简单任务开始逐渐引入复杂任务，每个阶段重置学习率为 \(4\times10^{-5}\) 并线性衰减至零，以防止灾难性遗忘。
 
@@ -77,7 +74,6 @@ LLM空间微调：选用Gemma 3n 4B（指令微调版）作为多模态骨干。
 
 PhaseCoder-6M在LOCATA数据集上两项指标均优于GI-DOAEnet，作者推测是因为训练中使用了多样化的噪声增强（Freesound），在真实环境噪声下泛化性更强。在RSL2019测试集上表现略逊，原因是PhaseCoder采用10°分辨率的分类设计，而GI-DOAEnet针对方位角做1°分辨率分类，在精细指标上占优。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p19-ve0f045ab.jpg)
 
 动态声源测试：在LOCATA Task 3（移动说话人）上，PhaseCoder取得了9.85°的方位角MAE，略高于静态场景的7.44°，展示了其对动态场景的一定处理能力。
 
@@ -115,15 +111,11 @@ PhaseCoder虽然在FLOPs上高于GI-DOAEnet，但由于纯Transformer架构的�
 
 微调后的Gemma在所有任务上均显著优于基线，基线模型的表现接近随机。值得注意的是，引入空间令牌后虽带来一定定位精度损失（对比PhaseCoder单独使用），但换取了LLM执行复杂空间推理和定向转录的能力。Task 2按问题类型拆解显示，距离类推理准确率（63%-80%）明显低于方位类推理（72%-85%），作者推测这源于距离估计本身的模糊性。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p2-efaf2bef2.jpg)
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p20-vaa1afe0e.jpg)
 
 编码器嵌入的UMAP可视化显示，不同方位角的嵌入呈现出清晰且有序的聚类分布，证明了空间信息被有效编码在空间令牌中。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p2-e903ebdc4.jpg)
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p22-v5e800307.jpg)
 
 ### 🔬 细节详述
 
@@ -139,11 +131,8 @@ PhaseCoder虽然在FLOPs上高于GI-DOAEnet，但由于纯Transformer架构的�
 
 正则化/稳定技巧：编码器训练中对语音源和干扰源各5%概率置零；LLM微调的五阶段课程训练策略，每个阶段重新设置学习率以防灾难性遗忘。
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p23-vc063c32b.jpg)
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p24-vb17ae972.jpg)
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tU3raVqvYe-p25-va855f1fe.jpg)
 
 ### ⚖️ 评分理由
 

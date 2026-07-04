@@ -73,9 +73,7 @@ AVTracker是一个三阶段、完全基于预训练模型的模块化流水线�
 
 第三阶段为全局窗口处理：收集所有语块产生的关键帧 \(F_{key} = \{I^{f^{key}_k}\}^K_{k=1}\) 及其文字上下文。全局推理器（Global Reasoner，同样基于Qwen3-VL）对这些关键帧进行跨帧身份关联，判断哪些帧属于同一个人，最终输出身份到帧索引的映射 \(G: p \mapsto \{k_1, k_2, ...\}\)。最后，根据此映射收集属于同一身份 \(p\) 的所有局部轨迹，合并为全局轨迹 \(T_p = \bigcup_{k \in G(p)} T^{local}_k\)，对于没有观测到的帧，则插入空掩码以维持时间连续性。整个流程训练无关，所有组件均可灵活替换升级。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Aa4DlW8PV2-p14-v6aaca433.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Aa4DlW8PV2-p4-e75c9b86c.jpg)
 
 
 ### 💡 核心创新点
@@ -95,9 +93,7 @@ Per-challenge分析显示，AVTracker在所有八个挑战子集上均保持领�
 
 消融实验（表3）揭示：1) 缩小语音处理器（Whisper-small）或VLM（Qwen3-VL-4B）规模均导致性能明显下降（如HOTA从28.85降至24.01）；2) 使用人脸识别特征替代VLM全局推理时，HOTA再降约5.23点，证明了VLM语义推理在全局身份关联中的重要性；3) 放弃动态窗口或局部语块压缩导致严重性能下跌（HOTA从28.85降至27.45或16.88）。集成高质量的语音分离器（MossFormer2）能带来正向收益（HOTA 28.85 -> 29.08），但使用性能不佳的分离器反而会损害性能，说明分离质量对下游任务至关重要。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Aa4DlW8PV2-p4-rf4ccc494.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Aa4DlW8PV2-p5-e3a6b5ada.jpg)
 
 
 ### 🔬 细节详述
@@ -141,7 +137,6 @@ Per-challenge分析显示，AVTracker在所有八个挑战子集上均保持领�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Aa4DlW8PV2-p5-e5849f38c.jpg)
 
 
 ---

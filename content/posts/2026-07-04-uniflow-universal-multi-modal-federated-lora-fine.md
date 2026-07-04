@@ -68,8 +68,6 @@ UniFLoW采用经典的客户端-服务器联邦学习架构，其设计核心是
 
 处理一个输入样本（模态数据 \(M_{n_k}^m\)，问题 \(Q_{n_k}\)，答案 \(A_{n_k}\)）时，流程如下：原始数据进入编码器得到特征 \(Z_{n_k}^m\)，经池化和投影层后得到特征 \(X_{n_k}^m\)。\(X_{n_k}^m\) 与问题文本 \(Q_{n_k}\) 及特殊标记（如 `e_BOS`，`P_before`，`P_gap`，`P_after`，附录D有详细说明）拼接成prompt \(X_{n_k}\) 输入LLM。LLM处理prompt并输出隐状态 \(H_{n_k}\)，最后通过一个投影头 \(w_o\) 和softmax操作获得词表上的概率分布 \(p_t\)，与真实答案 \(y_t\) 计算交叉熵损失进行优化。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r300f59bf.jpg)
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r4518b9ae.jpg)
 图5清晰展示了客户端的详细架构，包括ImageBind编码器内部的视觉/音频Tokenizer和可训练的LoRA适配器、投影层P以及带有LoRA的LLM。图6则通过"Stage I: Modality-Aware Pre-training"和"Stage II: General Learning"两个子图，直观阐释了二阶段训练策略中参数冻结与更新的动态过程。
 
 二阶段训练策略：
@@ -80,7 +78,6 @@ UniFLoW采用经典的客户端-服务器联邦学习架构，其设计核心是
 服务器端聚合与FedA2-LoRA：
 这是方法的核心。传统联邦LoRA直接平均A和B矩阵会导致聚合不一致（\(\Delta_W \neq \Delta_W^*\)）。FedA2-LoRA借鉴了FedSA-LoRA平均A矩阵的思路，并基于附录C中的梯度分析，认为A矩阵倾向于捕捉更全局和稳定的方向，而B矩阵对客户端数据更敏感。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r1872e7a1.jpg)
 图4展示了FedA2-LoRA的数学推导过程，包括聚合不一致性问题、优化目标以及通过岭回归得到的闭式解。
 
 服务器端聚合过程如下：
@@ -105,7 +102,6 @@ UniFLoW采用经典的客户端-服务器联邦学习架构，其设计核心是
 
 论文在两个多模态QA数据集（HeySQuAD, PandaGPT）和一个纯文本NLU基准（GLUE）上进行了评估。多模态实验将客户端分为图像或音频单模态，分别拥有2000个训练样本（200个测试），共10个客户端，进行10轮通信。纯文本实验使用3个客户端，进行1000轮通信。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p18-e4e71c087.jpg)
 图2提供了多模态QA任务在不同设置下的完整性能对比，包括仅图像客户端、仅音频客户端和混合客户端参与训练的结果。
 
 多模态QA实验结果（图像与音频客户端共同训练，Table 3）：
@@ -134,9 +130,6 @@ GLUE基准上的文本性能对比（Table 4，部分核心结果）：
 -   架构可替换性（Appendix E.7）：将编码器替换为UniBind，LLM替换为LLaMA-1B后，FedA2-LoRA (II stage) 仍取得最佳性能（如Image Acc 66.67, Audio F_BERT 85.00），证明框架是模型无关的。
 -   客户数量\(N_C\)（Figure 3c）：随着客户端数量从5增加到25，性能稳定提升但边际效益递减。
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r53739e5c.jpg)
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r5cc671f6.jpg)
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/21J9OI6mhc-p2-r6aa9b179.jpg)
 这三张图为消融实验提供了可视化结果。图7展示了性能随二阶段切换阈值τ变化的趋势，峰值在τ=0.25附近。图8和图9分别展示了图像和音频模态的性能随客户端数量（\(N_C\)）增加的变化曲线，验证了框架的可扩展性。
 
 ### 🔬 细节详述

@@ -52,11 +52,9 @@ hiddenInHomeList: true
 
 AVGen‑Bench 是一个不参与生成、仅做评估的基准与框架，整体流程分为“任务驱动提示构造”与“多粒度混合评估”两阶段。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-e26eab323.jpg)
 
 提示构造：先定义覆盖专业媒体制作（商业广告、电影预告）、创作者经济（ASMR、烹饪、游戏、乐器教学）及世界模拟（物理、化学、运动、动物）三大领域的 11 个子类别。采用 GPT‑5.2 根据场景定义批量生成候选提示，再经人工审核保证复杂性、清晰度与多样性，最终得到 235 条高难度提示（平均 88.5 个 token）。其中“物理/化学”类别故意采用“欠指定提示”——只描述实验装置而不交代结果，迫使模型依赖内在世界知识正确生成物理现象。值得注意的是，提示的构造完全独立于评估指标，确保了基准的用户导向性和可扩展性。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-e107c3b42.jpg)
  展示了提示的分类示例。
 
 评估套件采用“轻量专家模型 + 多模态大模型”的混合架构，分为两大类模块：
@@ -70,27 +68,21 @@ AVGen‑Bench 是一个不参与生成、仅做评估的基准与框架，整体
 2.  细粒度评估模块（采用“检测‑聚合‑验证”或“提取‑推理”管道）
     -   场景文本渲染：采用“检测-聚合-验证”管道。首先用 PaddleOCR 逐帧提取文字及其边界框，接着通过时空聚类将相近区域内连续出现的文本合并为文本序列，最后将序列送入 Gemini 3 Flash 进行双重验证——一是检查显式提示文字是否准确生成，二是判断偶然文字是否语义连贯。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-e2dab4ef7.jpg)
  展示了该模块的具体流程。
     -   面部一致性：采用“检测-跟踪-聚类”管道。首先用 InsightFace 提取每帧人脸嵌入与边界框，随后基于交并比（IoU）与余弦相似度构建短时跟踪片段（tracklet），最后应用 DBSCAN 聚类得出独立身份。该指标由“身份计数准确度”和“身份稳定性”两部分加权（40%和60%）构成，前者与 Gemini 从提示中预测的角色数进行比较。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-eb01a4b2e.jpg)
  详细说明了此过程。
     -   音高准确度：采用“符号-神经验证”管道。先用 Gemini 从提示中提取结构化的音乐理论约束（如和弦、音阶）并过滤掉模糊提示，随后使用 Basic‑Pitch 将音频转为 MIDI 音符事件，最后再由 Gemini 对 MIDI 符号序列进行严格的理论符合性验证。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-efd8f40d1.jpg)
  描绘了评估管道。
     -   语音可懂度与连贯性：采用“ASR-推理”管道。使用 Whisper‑large‑v3 结合 VAD 转录音频，随后由 Gemini 在两种自适应模式下进行审计：“逐字模式”（当提示给出具体台词时，强制进行严格的字词匹配）或“语境模式”（当提示暗示有语音但无确切内容时，判断语义是否与上下文合理）。
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p2-ec6d44332.jpg)
  展示了两种模式的流程。
     -   物理合理性：采用“双流评估”。低层运动合理性由 VideoPhy‑2 AutoEval 对视频进行运动平滑度和轨迹真实性打分；高层因果推理则采用两阶段语义验证，先由 Gemini 从提示中提取可观察期望，再对照视频证据进行逐项判定。
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p2-r293e166d.jpg)
  对此进行了可视化说明。
     -   整体语义对齐：采用“分解-验证”管道。由 Gemini 作为多模态审计员，将提示分解为叙事节拍、视觉属性、音频事件和摄影手法四维约束，然后逐维扫描视频/音频证据进行评分，输出一个超越简单语义相似度的整体对齐分数。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p1-e2a5d6bf0.jpg)
  展示了整体框架与评估流程的概览。
 
 该框架的设计动机是“提示驱动而非指标驱动”，提示来源于真实用户意图，评估面向失败模式，专家模型保证信号层面精确性，MLLM 负责高层次语义比对，从而避免单一粗粒度嵌入分数。
@@ -101,22 +93,17 @@ AVGen‑Bench 是一个不参与生成、仅做评估的基准与框架，整体
 2.  多粒度混合评估框架：将评价细粒化为基础质量、跨模态同步和六项具体语义控制能力，并通过专家模型（OCR、ASR、AMT、人脸识别、物理检查器）与 MLLM 的管道式组合，在信号层与语义层同时获得高精度和高解释性。
 3.  系统诊断 T2AV 失败模式：大规模实验系统揭示出音高控制全局崩溃（所有模型<12/100）、偶然文字普遍乱码、脸部在切换镜头时身份漂移，以及声画同步仍显著落后等定量弱点，为改进方向提供了清晰依据。
 
-![图15](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p3-r1f14d57e.jpg)
  到
-![图21](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p3-v15ef0a3a.jpg)
  提供了这些失败模式的直观案例。
 4.  用户研究与稳定性验证作为方法学背书：开展了包含10名专家对85个任务的用户研究，证明自动指标在五个维度上 Pearson 相关 >0.82，并通过重复运行与子集重采样验证了 MLLM 辅助评分和基准规模的稳定性，提升了评估的可信度。
 
-![图22](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p4-e4f746e3c.jpg)
  和
-![图23](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p4-e64a3d8b1.jpg)
  展示了相关性分析和稳定性验证的结果。
 
 ### 📊 实验结果
 
 主要结果见 Table 2，汇总了 13 个 T2AV 系统在 AVGen‑Bench 各维度的得分（AV Sync 和 Lip Sync 数值越低越好，其余越高越好，Total 按方案加权：\(Total = 0.2S_{basic} + 0.2S_{cross} + 0.6S_{fine}\)，其中 \(S_{basic} = mean(Vis \times 100, Aud(PQ) \times 10)\)，\(S_{cross} = mean(100 \cdot max(0, 1-AV/0.5), 100 \cdot max(0, 1-Lip/8))\)，\(S_{fine} = mean(Text, Face, Music, Speech, Lo-Phy \times 20, Hi-Phy, Holistic)\)）。
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aJdgt8xDMy-p3-r1a636478.jpg)
  为该结果表的截图。以下表格根据论文 Table 2 还原：
 
 | Model | Vis↑ | Aud(PQ)↑ | AV↓ | Lip↓ | Text↑ | Face↑ | Music↑ | Speech↑ | Lo-Phy↑ | Hi-Phy↑ | Holistic↑ | Total↑ |

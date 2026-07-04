@@ -31,7 +31,6 @@ hiddenInHomeList: true
 
 该论文揭示了预训练Video LLM中的一个关键现象：视觉Token并非映射到词汇嵌入空间，而是形成了一个与LLM兼容的连续几何流形，称为“Token Interface”。基于此洞察，提出V-LynX框架，通过冻结视觉编码器并引入轻量级LoRA支路，以无配对单模态数据将新模态（音频、3D、高帧率视频、多视角视频）的注意力响应和Token分布对齐到该接口，实现极高效的模态扩展。其核心优势在于摒弃了专用编码器和跨模态配对监督，通过共享视频路径和分布正则化，确保新模态表征符合LLM的预期输入规范。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p1-e20307e8f.jpg)
 
 关键实验结果如下：
 
@@ -63,7 +62,6 @@ hiddenInHomeList: true
 
 多视角视频理解 (Ego-Exo4D DPE) 上，V-LynX-0.5B/7B分别取得38.6%/46.9%准确率，显著优于PAVE。
 
-![图24](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p9-e16ae7975.jpg)
 
 该方法以极低的额外参数成本实现了新模态的即插即用，为多模态LLM的扩展提供了高效范式。局限在于，其对视觉Token接口的强依赖导致其无法处理纯音频推理任务（如无视觉线索的乐器识别）；此外，模态到视觉的强制性预处理会造成细粒度信息损失。
 
@@ -81,11 +79,9 @@ hiddenInHomeList: true
 
 V-LynX的核心思想是揭示并利用Video LLM内部一个名为“Token Interface”的现象。如图2所示，预训练后的Video LLM（以LLaVA-OV为例）的视觉Token嵌入与词汇嵌入在高维空间中是高度正交、几何分离的连续流形。这个流形是LLM处理连续视觉信号的“特区”，论文将其定义为Token Interface。基于此，扩展新模态无需重训编码器，只需将新输入对齐到此接口。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p1-e64dd139e.jpg)
 
 框架包含三个阶段：接口引导提取、无配对单模态接口对齐、指令微调。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p1-v9c4024c9.jpg)
 
 1. 共享视频路径与LoRA适配器
 V-LynX不引入新编码器，而是重用冻结的视觉编码器 \(g_\psi\) 和投影器 \(p_\theta\)。通过在编码器的自注意力层插入低秩适配模块（LoRA），形成可学习参数 \(\Delta\psi\)。视频数据走冻结原路径，新模态数据则激活 \(\Delta\psi\)，避免灾难性遗忘。
@@ -98,11 +94,8 @@ V-LynX不引入新编码器，而是重用冻结的视觉编码器 \(g_\psi\) �
 3. 注意力响应对齐
 给定新模态数据 \(X_m\)，编码器在 \(\psi+\Delta\psi\) 下产生 \(Q_m^{(l)}, K_m^{(l)}, V_m^{(l)}\)。目标注意力响应为 \(O_m^{(l)} = \text{Attn}(Q_m^{(l)}, K_m^{(l)}, V_m^{(l)})\)。同时，构造参考响应 \(\tilde{O}_m^{(l)} = \text{Attn}(Q_m^{(l)}, \bar{K}_v^{(l)}, \bar{V}_v^{(l)})\)，即强制新模态的Query去查询视频的平均Key-Value对。损失函数为 \(L_{\text{attn}} = \sum_l ||O_m^{(l)} - \tilde{O}_m^{(l)}||_1\)。这促使新模态在编码器内部形成与视频一致的功能性注意力聚合模式。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p1-ec85d7510.jpg)
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p2-r1636e97e.jpg)
 
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p2-r3e51b673.jpg)
 
 4. 分布正则化
 仅有注意力对齐不足以保证投影器输出的统计分布符合LLM要求。因此计算新模态投影Token \(Z_m\) 的均值 \(\mu_m\) 和方差 \(\sigma^2_m\)，与参考视频分布求MSE损失：\(L_{\text{stat}} = ||\mu_m - \mu_v||_2 + ||\sigma^2_m - \sigma^2_v||_2\)。最终接口对齐目标为 \(L_{\text{V-LynX}} = L_{\text{attn}} + \beta \cdot L_{\text{stat}}\)，其中 \(\beta=0.01\)。

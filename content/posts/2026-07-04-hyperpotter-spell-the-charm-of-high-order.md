@@ -53,25 +53,21 @@ hiddenInHomeList: true
 
 HyperPotter将音频深伪检测形式化为图级分类任务。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p18-v5aa708be.jpg)
 
 整体流程为：原始波形 → XLS‑R与RawNet2联合编码并构建频谱/时间节点图 → 多层异构超图注意力层（HAGNN）→ 图读出 → 真伪分类。其核心在于用HAGNN取代了AASIST中原有的成对图注意力层。HAGNN层的运作可分解为以下三个阶段：
 
 1. 原型引导的FCM超边构建：维护一个存储了正、负、全局三类原型的记忆库 \(P = [P^{(+)}, P^{(-)}, P^{(g)}]\)。在批次处理时，通过相似门控筛选与全局原型对齐的样本，并利用类感知选择与外部质心注入，构造FCM聚类的初始质心。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p18-vcfb2ad50.jpg)
 
 随后执行FCM算法，交替更新隶属度矩阵 \(U \in \mathbb{R}^{N \times K}\) 和聚类中心 \(C \in \mathbb{R}^{K \times D}\) (式1、式2)。这种软聚类使每个节点能以隶属度 \(u_{ik}\) 同时归属于多个超边，避免了硬分配造成的信息损失，旨在捕捉分布式协同伪造痕迹。图2直观展示了原型库初始化至FCM聚类生成软超边的三个子过程。
 
 2. 关系伪影放大模块：在节点特征\(X'\)基础上，先通过FCM构建超边中心并执行残差回传。而后构造一个非对称“放大算子” \(A\)，它由两部分融合而成：超图拓扑结构项 \(U U^\top\)（节点共超边关系）和节点特征项 \(X' X'^\top / \sqrt{D}\)。对 \(A\) 逐行softmax归一化后，执行“聚合‑重加权‑反投”三步操作：\(Z = A X'\) 聚合证据，\(\alpha = \text{softmax}(Z w_\alpha)\) 生成节点级注意力权重，并用 \((1+\alpha)\) 重加权 \(Z\) 以选择性地强化微弱线索，最后通过 \(A^\top Z'\) 将增强的证据沿超图拓扑反投回节点空间。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p23-eb629b1f1.jpg)
 
 图3详细展示了该模块的结构与数据流。
 
 3. 两阶段原型学习：原型库通过EMA进行动态更新。早期训练阶段采用“软对齐”，通过贪心匹配对齐批次内与跨批次的聚类中心，以保证初期不稳定性下的一致性。训练后期切换至“槽对齐”，将所有批次中心扁平化，并按相似度加权融合到对应的每个原型槽中，实现更精确的更新。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p23-v8d10d99d.jpg)
 
 图4对比了软对齐与槽对齐的工作流程。整个框架在原始AASIST的频谱-时间异构图中嵌入四个HAGNN层，在保留自监督前端强大特征提取能力的同时，将高阶协同关系显式引入ADD推理过程。
 
@@ -79,7 +75,6 @@ HyperPotter将音频深伪检测形式化为图级分类任务。
 
 1. 基于O-信息的分析范式：首次利用O-信息分析ADD特征交互中的冗余-协同模式，以理论化视角指出成对建模偏向冗余依赖，而可泛化的伪造痕迹常表现为协同交互，为超图引入提供了优于纯工程替换的形式化动机。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p23-va4dbd9fa.jpg)
 
 2. 原型导向的超边构建与长程记忆：引入跨批次类感知原型库（正/负/全局），并设计相似度门控与外部注入机制来初始化FCM中心，使得超边构建不再“从零开始”，而是继承了全局结构先验，显著提升了聚类稳定性和收敛效率。
 3. 结构‑特征联合的伪影放大算子：设计了一种同时融合超图拓扑和节点特征相似度的非对称放大器，并通过重加权与反投机制，选择性地强化并重新分配微弱的协同伪造证据，增强了模型对细微伪造的感知能力。
@@ -97,11 +92,9 @@ HyperPotter将音频深伪检测形式化为图级分类任务。
 
 HyperPotter在11个测试集上EER优于基线，平均相对EER降低12.68%，改善的11集上高达22.15%。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p23-vfdee0de8.jpg)
 
 图6直观对比了基线与HyperPotter在所有13个测试集上的EER。在F1-score上，模型同样大幅提升，例如In‑the‑Wild从93.9%升至95.4%，LibriVoc从79.3%升至91.6%。
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p5-v157bab6b.jpg)
 
 图7重点对比了关键数据集上的F1-score。性能退化集中在ASVspoof2021 LA（2.48%→3.94%）和ASVspoof5（13.38%→16.04%），两者均含有显著的编解码/信道失真。
 
@@ -113,13 +106,11 @@ HyperPotter在11个测试集上EER优于基线，平均相对EER降低12.68%，�
 | 无原型库 | 6.49 | 2.80 | 1.88 | 15.42 | 4.59 |
 | 无软对齐算法 | 7.45 | 3.25 | 2.05 | 19.42 | 4.02 |
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p8-e00bdc20c.jpg)
 
 图8显示去除任一模块均导致大部分场景性能下降，验证了其必要性。但值得注意的是，在ASVspoof5这种强失真数据集上，去除放大模块或原型库反而带来性能提升（14.46%, 15.42% vs 16.04%），直接证实了协同建模在失真环境下会引入噪声。
 
 超参数敏感性 (正文 Table 3): 实验表明，适中的超边数量K（25%‑50%节点数）和无显式基数约束可获得最佳折衷。强制低基数（R=2）使超图退化为成对图，导致EER显著恶化，有力支撑了高阶交互的价值。
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p8-e0d2ade80.jpg)
 
 图9展示了K和R对性能的影响。图10补充了更多数据集上的趋势。
 
@@ -131,7 +122,6 @@ HyperPotter在11个测试集上EER优于基线，平均相对EER降低12.68%，�
 - 关键超参数：FCM模糊度m=2，最大迭代5次；融合因子β1=0.9, β2=0.6；超边数K≈0.3N；前端XLS‑R 300M冻结；每音频截取/填充至4秒。
 - 训练硬件：2×NVIDIA H800 GPU；推理延迟约73ms/样本（A6000），训练迭代约264ms/样本。
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vIXuPi8zUM-p8-e3237d27a.jpg)
 
 图11展示了数据增强组合的影响。
 

@@ -60,7 +60,6 @@ hiddenInHomeList: true
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p12-e31c00fe4.jpg)
 
 图1（统一音频生成框架）展示了完整的系统架构。上方是两阶段流水线：自回归LLM预测token，然后DiT基于这些token生成mel谱，此部分不属于本文核心贡献。下方则是DiT训练过程的放大，其中嵌入了AG-REPA机制，这是文章的核心。
 
@@ -70,7 +69,6 @@ hiddenInHomeList: true
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p5-e96b78b48.jpg)
 
 图2（诊断表示存储）直观展示了BiT-C（图2a）和LASP（图2b）的工作原理。BiT-C在输入接口建立双模态（语义、声学）对齐基线；LASP则通过共享投影头，公平地比较各层的“知识”含量。
 
@@ -78,7 +76,6 @@ hiddenInHomeList: true
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p6-ed300d8e1.jpg)
 
 图3（从因果归因到优化）通过简明的示意图，解释了FoG-A如何通过门控干预测量各层贡献（图3a），以及AG-REPA如何利用这些信息，仅对高贡献层施加对齐监督（图3b）。
 
@@ -86,7 +83,6 @@ hiddenInHomeList: true
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p12-va6edfc64.jpg)
 
 图4（AG-REPA训练流程）清晰地展示了“诊断-干预”两阶段工作流。在诊断阶段确定因果层后，干预阶段仅对选中的高贡献层（如图中高亮部分）施加代理对齐损失，未被选中的层（包括存储丰富但贡献低的深层）则不参与对齐。
 
@@ -101,7 +97,6 @@ hiddenInHomeList: true
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p3-e5b33eb8e.jpg)
 
 图5（SCD现象的时空解剖）是核心贡献的有力证据。图5a (LASP) 显示深层是语义“存储库”，而图5b (FoG-A) 显示浅层是因果“驱动器”，中间层在特定去噪阶段（t≈0.5）出现动态转移。两者的峰值区域明显不一致。
 
@@ -133,7 +128,6 @@ hiddenInHomeList: true
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/93Yh3Mvg37-p5-e1f8fef23.jpg)
 
 图8（收敛曲线对比图）是重要的补充。它直观地展示了AG-REPA（红色）相比固定层REPA（如Layer 8的绿色线）不仅最终FAD更低，而且收敛速度更快，验证了论文“加速收敛”的论断。
 

@@ -104,9 +104,7 @@ hiddenInHomeList: true
     *   MG-GRPO核心：混合多粒度奖励，\(G(x) = \frac{1}{3}[S(x) + R3(x) + R5(x)]\)。此设计的核心动机在于：\(R5\)和\(R3\)为早期不完美的探索提供了平滑、非零的反馈信号，防止模型陷入“零奖励平原”；而\(S(x)\)则在接近满分时制造了一个显著的奖励跃升（从\(x=0.75\)到\(x=1\)），形成强大的非线性激励，迫使模型追求专家级的精确推理。
     *   最终奖励与优化：总奖励由答案得分和推理轨迹得分加权组合，并包含格式惩罚项：\(R = 0.8 \cdot G(x_a) + 0.2 \cdot G(x_t) + R_{fmt}\)。基于此计算组内标准化优势，更新策略网络。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IhhgzNZNGW-p15-r1993e977.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IhhgzNZNGW-p15-r708c8d5c.jpg)
 
 
 ### 💡 核心创新点
@@ -165,9 +163,7 @@ hiddenInHomeList: true
 
 *   视觉模态是性能的基础（Video > ASR），但完全整合ASR文本后（Video+ASR），所有模型在所有指标上均有显著跃升。这直接证明了E-VAds作为多模态密集推理基准的有效性，即其任务必须联合视觉和语言（语音文本）才能更好地完成。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IhhgzNZNGW-p15-r78c5bdee.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IhhgzNZNGW-p15-r8fd6fbe2.jpg)
 
 
 ### 🔬 细节详述
@@ -224,7 +220,6 @@ hiddenInHomeList: true
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IhhgzNZNGW-p15-ra28746ba.jpg)
 
 
 ---

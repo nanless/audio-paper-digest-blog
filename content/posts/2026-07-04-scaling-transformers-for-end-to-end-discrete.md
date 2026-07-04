@@ -69,9 +69,7 @@ RVQ 量化器：使用 32 层残差矢量量化，每层码本大小 1024，采�
 
 此设计的核心在于通过同构且简单的架构，使音频分词器的性能可以像语言模型一样，随计算量、数据量和模型大小的增加而可预测地提升，同时原生支持流式与自回归。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/icMRkTnuU7-p4-e122371bd.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/icMRkTnuU7-p4-e4518b9ae.jpg)
 
 
 ### 💡 核心创新点

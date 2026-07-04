@@ -59,7 +59,6 @@ OmniAgent框架的核心是将被动的“观看”转变为主动的“探索�
 1.  Agentic SFT（冷启动）：使用教师模型在环境中进行Best-of-N探索，生成成功的交互轨迹。这些轨迹经过“答案正确性验证”和“推理连贯性审核（使用GPT-4o打分）”双阶段质控后，构成58K条高质量冷启动数据，让基础模型学会基本的动作执行、错误恢复和信息蒸馏。
 2.  Agentic RL with TAURA（精细优化）：在SFT的基础上，针对困难样本（SFT中失败的样本）进行强化学习优化。论文指出了标准GRPO算法在多轮agentic轨迹中存在优势同质化问题——单轨迹标量的奖励/惩罚无法区分关键决策步（如决定“去哪里看”）和常规信息检索步。为此，提出了TAURA算法，其使用每轮生成token的平均熵作为该轮不确定性的代理，对GRPO中的优势函数进行重新缩放：高熵轮次的优势被放大，使其在策略优化中获得更强的学习信号。此设计有效地将信用分配集中到了信息密度更高的“探索”步。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3dLPVNhFZh-p15-vb5fd9044.jpg)
 
 [图像补充] 图1（原文figure 1）直观展示了OmniAgent的完整框架。左侧为“Agentic Training Pipeline”，明确勾勒了从Best-of-N轨迹合成到双阶段质控的Agentic SFT阶段，以及基于TAURA算法的Agentic RL阶段。右侧为“Native Active Perception (POMDP)”主循环，清晰描绘了智能体（Policy）与环境（Environment）之间的严格分工：智能体负责所有语义感知和决策，环境仅负责原始的媒体提取。图中强调了将高维“Transient Percept”蒸馏为“Text Observation”并存入“Persistent Memory”的关键解耦步骤，以及在每个OTA循环后清除原始媒体数据的机制。
 
@@ -97,7 +96,6 @@ OmniAgent在10个基准上进行了详尽的评估，覆盖通用视频理解、
 | + Vanilla GRPO | 59.4 | 49.8 | 69.9 | 35.3 | 62.2↓ |
 | + TAURA | 59.6 | 50.5 | 71.1 | 37.1 | 64.8 |
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3dLPVNhFZh-p17-ea9cad872.jpg)
 
 [图像补充] 图2（原文figure 2）展示了测试时扩展（Test-time Scaling）曲线。在VideoMME-Long基准上，随着最大交互轮次`K`从6扩展到52，模型准确率从53.4%单调递增至59.6%，呈现出显著的正向扩展特性。曲线同时显示，平均有效推理轮次在`K=52`时也仅达到约11.7，表明模型并非盲目扩展，而是根据查询需要动态调整探索深度。
 

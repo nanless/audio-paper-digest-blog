@@ -81,7 +81,6 @@ Speech-Speech Overlap (SSO) 利用听觉场景分析中的流融合原理，制�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p12-e3cfa2321.jpg)
 
 
 
@@ -91,7 +90,6 @@ Multi-Speaker Dialogue (MSD) 则专门利用文本与音频模态之间的语义
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p12-e50e61322.jpg)
 
 
 
@@ -99,7 +97,6 @@ SALMONN-Guard 是一个基于 Qwen2.5-Omni-7B 的专用守卫模型，接受语�
 
 
 
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p4-e1bb33f44.jpg)
 
 ### 💡 核心创新点
 
@@ -114,13 +111,11 @@ SALMONN-Guard 是一个基于 Qwen2.5-Omni-7B 的专用守卫模型，接受语�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p2-e0b0676e2.jpg)
 
 
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p2-e26a6d4a0.jpg)
 
 
 
@@ -139,7 +134,6 @@ SSO 声学参数消融实验：
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p2-e26b6d1d2.jpg)
 
 
 
@@ -177,7 +171,6 @@ MSD 模态消融实验：
 
 
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p2-e56904cd1.jpg)
 
 
 
@@ -186,13 +179,11 @@ MSD 模态消融实验：
 
 
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p4-e3b6d763d.jpg)
 
 
 
 
 
-![图15](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p4-ed68e4c23.jpg)
 
 
 
@@ -201,13 +192,11 @@ MSD 模态消融实验：
 
 
 
-![图16](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p4-rceeda8a0.jpg)
 
 
 
 
 
-![图17](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KM2J8XFz5A-p4-vd0b06912.jpg)
 
 
 

@@ -61,7 +61,6 @@ REST整体框架为"非流式教师预训练→流式学生预训练→异步流
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/npOsvPRB0i-p2-v70af9e2d.jpg)
 
 
 
@@ -85,7 +84,6 @@ REST整体框架为"非流式教师预训练→流式学生预训练→异步流
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/npOsvPRB0i-p26-v7aed9705.jpg)
 
 
 

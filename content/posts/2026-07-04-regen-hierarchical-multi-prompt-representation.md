@@ -71,9 +71,7 @@ Wave-DiT 基于StreamFlow的Scale-DiT架构，但做了关键修改：为迪特�
 
 ReGenVoice 则进一步将上述预训练的ReGenVAE作为解码基础，将其12.5Hz的潜在变量缩放后作为扩散目标，在6.25Hz的更低维潜在空间中进行LDM扩散；文本由因果Transformer编码并通过平均下采样对齐。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T8Y9elIrXa-p12-va2a14c5d.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T8Y9elIrXa-p13-v8e43ba97.jpg)
 
 
 ### 💡 核心创新点
@@ -111,9 +109,7 @@ ReGenVoice 则进一步将上述预训练的ReGenVAE作为解码基础，将其1
 - GFM消融：在ReGen-H基础上加入\(\lambda_{neg}=0.01\)的GFM后，M-STFT从1.886降至1.795，PESQ从1.452升至1.500，SPK-SIM从0.54升至0.59，证明了速度场排斥项对提升波形细节和缓解过平滑的有效性。
 - 对抗后训练：使ReGenTokenizer的WER从12.59最终降至4.43，UTMOS从3.268升至3.955，突显了当前纯扩散模型在波形生成锐度上的局限性，必须依赖GAN进行最终保真度提升。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T8Y9elIrXa-p3-e31d55470.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T8Y9elIrXa-p3-e660a02f9.jpg)
 
 
 ### 🔬 细节详述
@@ -169,7 +165,6 @@ ReGenVoice 则进一步将上述预训练的ReGenVAE作为解码基础，将其1
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/T8Y9elIrXa-p5-v2e6be541.jpg)
 
 
 ---

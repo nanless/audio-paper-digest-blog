@@ -59,9 +59,7 @@ Stage II：无掩码视频编辑配音器
 
 推理时，唇部专家在时间步 \([0.4, 0.8]\) 激活，纹理专家在 \([0.0, 0.3]\) 激活，以此解耦并优化不同目标。[图像补充] 图10直观地展示了时间步自适应多阶段学习的具体策略，清晰地描绘了不同噪声区间对应不同训练目标和损失函数的分配方式。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PfhSH42cCy-p1-r059f076e.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PfhSH42cCy-p1-r0e767c5b.jpg)
 
 
 ### 💡 核心创新点
@@ -111,9 +109,7 @@ X-DubBench 数据集结果
 
 消融实验验证了各核心设计的有效性：将帧级别的 Token 拼接替换为通道拼接导致 Sync-C 下降 12.5%；去除唇部微调阶段使 Sync-C 下降 10.3%；去除纹理微调阶段使 CSIM 下降 4.1% 且 LPIPS 上升；采用均匀时间步采样导致训练发散（FID 升至 18.52，Sync-C 骤降至 3.85）。另一关键消融表明，多阶段学习是编辑范式的“使能器（enabler）”，将其应用于掩码修复模型（\(G^*_{mask}\)）提升甚微，而用于编辑模型（\(G_{free}\)）则是稳定训练的必要条件。此外，实验证明 \(G_{free}\) 的性能超越了其训练所用的伪配对数据（Stu dent超越Teacher），体现了自举范式的有效性。用户研究 MOS 评分中，本文方法在真实性、唇形同步、身份保持和整体质量上均显著优于对比方法。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PfhSH42cCy-p1-r28ad5852.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PfhSH42cCy-p1-r29ee7f3e.jpg)
 
 
 ### 🔬 细节详述
@@ -156,7 +152,6 @@ X-DubBench 数据集结果
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PfhSH42cCy-p1-r6e1fc680.jpg)
 
 
 ---

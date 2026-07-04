@@ -68,9 +68,7 @@ VIBE 采用多阶段结构化推理框架，输入包含视频流、音频流、
 
 训练目标是分层标签平滑交叉熵（\(L_{HCE}\)）、KL 散度、正交约束和语义对齐损失的加权和。\(L_{HCE}\) 通过序数感知的语义转移矩阵 \(A\)（公式16）进行标签平滑，并在潜在空间进行混合比 \(\beta(0.2,0.2)\) 的 Manifold Mixup，以缓解标签噪声和类间模糊。总损失函数为 \(L_{total} = L_{HCE} + L_{KL} + \lambda_{ortho} L_{ortho} + \lambda_{sat} L_{sat}\)（公式14），其中 \(\lambda_{ortho}=0.1\)、\(\lambda_{sat}=0.5\)。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hf8AxmTInT-p13-rabd31450.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hf8AxmTInT-p4-rbb49f966.jpg)
 
 
 ### 💡 核心创新点
@@ -113,7 +111,6 @@ VIBE 采用多阶段结构化推理框架，输入包含视频流、音频流、
 
 解耦验证：Pearson 相关系数接近于 0（VGAF：-0.0174，GECV：0.0054），HSIC 达 0.0015，线性探针和潜在互换实验均显示环境信息被成功剥离。原文图4 的 t-SNE 可视化展示了全配置下类簇分离明显优于消融版本。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hf8AxmTInT-p7-v5bd8d219.jpg)
 
 
 ### 🔬 细节详述

@@ -62,9 +62,7 @@ PCRNet是一个端到端的神经网络，旨在从EEG信号中解码听觉注�
 4. 后处理与分类：\(F\) 依次通过一个核大小为 \(1 \times 2\) 的时序卷积层、一个核大小为 \(C \times 1\) 的空间卷积层、自适应平均池化层，最后展平送入全连接层，输出二分类的概率。
 架构设计的核心动机是利用双分支分别侧重局部瞬态事件和全局相位信息，以实现互补特征融合。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/89MeH5Ax8r-p12-rf9e540e5.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/89MeH5Ax8r-p14-rfc3c830e.jpg)
 
 
 ### 💡 核心创新点
@@ -97,9 +95,7 @@ PCRNet是一个端到端的神经网络，旨在从EEG信号中解码听觉注�
 参数与计算量分析显示，PCRNet的参数量仅为0.03 M（30.86k），计算量为95.05 MFLOPs（1s窗），与基线模型相比具有显著的轻量化优势。
 注意力图可视化和头部地形图（Figure 2, 4）分别展示了模型的时序依赖模式和空间权重分布，但地形图被说明为反映原始EEG信号特征，不应作为模型学习的直接证据。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/89MeH5Ax8r-p15-rc8762078.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/89MeH5Ax8r-p3-racf63854.jpg)
 
 
 ### 🔬 细节详述
@@ -138,7 +134,6 @@ PCRNet是一个端到端的神经网络，旨在从EEG信号中解码听觉注�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/89MeH5Ax8r-p8-r30a065a0.jpg)
 
 
 ---

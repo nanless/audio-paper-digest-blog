@@ -66,9 +66,7 @@ OmniSIFT 是一个两阶段、端到端可微的 token 压缩 pipeline，处理�
 2.  轻量模块 vs. 深度压缩：仅用单层交叉注意力而非多层 LLM 解码器（如 EchoingPixels 的 4 层额外层），保证推理延迟甚至低于训练免费的 OmniZip（2.86s vs. 2.89s），实现可学习压缩的实用化。
 3.  Chunk 级 vs. 全局压缩：仅在 2 秒 chunk 内操作，避免平方级复杂度，但牺牲了对跨 chunk 长程时序依赖的建模。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aPnQpmwHW7-p1-e1403acea.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aPnQpmwHW7-p15-e2b030f5c.jpg)
 
 
 ### 💡 核心创新点
@@ -154,9 +152,7 @@ OmniSIFT 是一个两阶段、端到端可微的 token 压缩 pipeline，处理�
 
 与 FASTAV 对比（附录 D.5）：在同等 token 预算下，OmniSIFT 远优于 FASTAV（DailyOmni 73.2 vs. 59.4，WorldSense 50.0 vs. 43.3），凸显了可学习压缩的优势。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aPnQpmwHW7-p15-e80d062fa.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aPnQpmwHW7-p15-ed3f91881.jpg)
 
 
 ### 🔬 细节详述
@@ -208,7 +204,6 @@ OmniSIFT 是一个两阶段、端到端可微的 token 压缩 pipeline，处理�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aPnQpmwHW7-p15-vc8193eba.jpg)
 
 
 ---

@@ -44,7 +44,6 @@ SPEAR 旨在解决语音和通用音频表示学习中长期存在的领域割�
 
 ### 🏗️ 方法概述和架构
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vHaaDCLF0M-p18-v2224eaa7.jpg)
 
 SPEAR 是一个基于多教师知识蒸馏的自监督表示学习框架，其整体流程与可视化架构如图1所示。框架的核心思想是将领域专用教师模型的连续表示量化为离散 token，然后通过掩码预测任务训练一个学生模型，使其同时学习两个域的知识。训练分为单域和双域两种模式，双域时采用非对称损失，并在部分样本上应用 token mixing 构建混合目标。
 
@@ -97,7 +96,6 @@ USAD 对比（表 26）：在公平设置下（相同教师 WavLM Base+/ATST-Fra
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vHaaDCLF0M-p3-eff8fbbc3.jpg)
 
 图2直观展示了 SPEARs+a 系列模型在 HEAR 基准所有子类别（环境、音乐、语音）上均取得最高分，印证了其作为通用音频前端的强大实力。
 

@@ -53,13 +53,9 @@ Sync-RoPE 旨在解决 token 稀疏化后采样间隔增大导致的高频相位
 设计动机与推理
 选择双向注意力是为了解决因果注意力无法让后续 token 为前置 token 提供上下文的问题；使用提取式（extractive）而非抽象式（如 Q-Former）是为保留精确位置信息，为 Sync-RoPE 的谱域滤波奠定结构基础。论文还在附录中对比了与 Qwen3-VL 的交错式频率变体 TMRoPE-I，结果表明 Sync-RoPE 更优，因为后者保守地只修改理论上出问题的时序通道，与预训练权重的兼容性更好。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/e8JTAKZYt6-p16-r53e2f577.jpg)
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/e8JTAKZYt6-p16-r6d890332.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/e8JTAKZYt6-p16-r7755038c.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/e8JTAKZYt6-p16-r5f65a2f0.jpg)
 
 ### 💡 核心创新点
 

@@ -54,7 +54,6 @@ hiddenInHomeList: true
 
 论文提出的R4T框架是一个多阶段训练流程，其核心思想是“为训练而检索”，将强化学习发现的优化行为蒸馏到高效推理模型中。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4P9cEcinYP-p15-v12e8c99d.jpg)
 
 整体流程概述：给定一个宽泛的用户查询 \(q\)，系统需从一个固定的数据库 \(D\) 中返回一个结果集合。如图1所示，R4T通过三个阶段实现此目标：第一阶段，使用强化学习调优一个语言模型生成多个子查询，以优化集合级奖励；第二阶段，利用该模型为训练集合成高质量的子查询-目标对；第三阶段，训练一个扩散模型直接从查询嵌入一次性生成多个检索嵌入，并映射回数据库条目。
 
@@ -63,18 +62,15 @@ hiddenInHomeList: true
 2.  任务特定奖励函数: 这是“目标转换”的关键，定义了集合级属性。论文设计了两种任务的奖励：
     -   开放抽象检索 (OAR): 无真值集合，奖励 \(R_{abs}\) 由三部分组成：\(r_{ground}\)（子查询嵌入与数据库最近邻距离的均值，保证接地性）、\(r_{div}\)（检索结果代表的 Vendi Score，保证多样性）、\(r_{align}\)（子查询嵌入与原始查询嵌入的余弦相似度，保证对齐性），如公式 \(R_{abs}(q,Q) = \lambda_g r_{ground}(Q) + \lambda_d r_{div}(Q) + \lambda_a r_{align}(q,Q)\) 所示。
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4P9cEcinYP-p3-re1e22576.jpg)
 
     [图像补充] 图8直观展示了Vendi Score的计算过程。该分数基于检索结果嵌入之间的成对相似度矩阵，通过计算其有效秩来量化多样性，值越高表示嵌入越多样、越正交。
     -   弱监督组合检索 (WSCR): 存在一个参考集合 \(Y\)。奖励 \(R_{set}\) 是检索结果 \(R(Q)\) 与参考集 \(Y\) 的交集覆盖率，即 \(R_{set}(q,Q;Y) = |Y \cap R(Q)| / |Y|\)。
 3.  Soft-GRPO优化: 采用群组相对策略优化(GRPO)训练FOLM，并引入Soft-PPO正则化，增加了策略与旧策略之间的前向和反向KL散度惩罚（由\(\beta_1\)和\(\beta_2\)控制），以稳定开放域生成。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4P9cEcinYP-p15-v3bd36e50.jpg)
 
 [图像补充] 图2提供了Soft-GRPO算法的伪代码，清晰地展示了其核心步骤：通过组内相对优势估计（GRPO）结合Soft-PPO的双向KL散度约束来更新策略。最终优化目标为 \(J(\theta) = E [ L_{GRPO} - \beta_1 D_{KL}(\pi_\theta || \pi_{old}) - \beta_2 D_{KL}(\pi_{old} || \pi_\theta) ]\)。
 4.  扩散检索器 (Diffusion Retriever): 一个基于Transformer的去噪器（类似于DiT架构），输入是加噪的目标嵌入 \(Z_t\)，以查询嵌入 \(z_q\) 为条件通过交叉注意力注入。它被训练来恢复由FOLM合成的“干净”嵌入目标 \(Z_{target}\)。
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4P9cEcinYP-p19-vc761544c.jpg)
 
 [图像补充] 图7详细展示了扩散检索器的架构。它是一个6层的Diffusion Transformer (DiT)，核心是使用交叉注意力将查询嵌入 \(z_q\) 注入到去噪过程中。训练时使用EDM框架下的加权MSE损失 \(L_{diff} = E[\lambda(\sigma) \cdot ||D_\phi(Z_t; \sigma, z_q) - Z_{target}||^2]\)。
     在OAR任务中，目标是检索到的内容嵌入；在WSCR任务中，目标是生成的子查询嵌入。
@@ -85,7 +81,6 @@ hiddenInHomeList: true
 
 目标张量构建细节：图9详细说明了\(Z_{target}\)的构建。
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4P9cEcinYP-p3-v0a9114f0.jpg)
 
 [图像补充] 图9展示了在OAR任务中目标张量 \(Z_{target}\) 的构建方式。对于一个查询，其“干净”的目标嵌入是FOLM生成的每个子查询所检索到的最相关结果（Top-1 item）的嵌入，并按子查询顺序堆叠而成，形成一个形状为 \((L, d)\) 的矩阵（\(L=12\)为目标嵌入序列长度，\(d=128\)为嵌入维度）。为了确保检索的顺序无关性，训练时此矩阵的行会被随机排列。
 

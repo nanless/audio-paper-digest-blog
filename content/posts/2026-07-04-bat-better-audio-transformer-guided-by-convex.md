@@ -90,9 +90,7 @@ Table 6：LibriSpeech 100h 探测 ASR 结果（WER/CER，测试集）
 | PB | BAT-S | 40.19 | 32.26 | 32.63 | 29.27 |
 | LP | BAT-S | 25.40 | 12.97 | 21.26 | 11.45 |
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/9DfsHAFE5l-p15-v5ad1bf9d.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/9DfsHAFE5l-p6-e0bff2cb5.jpg)
 
 
 ### 🔗 开源详情
@@ -120,9 +118,7 @@ BAT（Better Audio Transformer）。 BAT 对 D2V2 音频 SSL 流水线进行了�
 
 训练方面，BAT 使用逆块掩码策略（inverse block masking），每个样本 16 个掩码视图以复用目标表示。与 EAT/SSLAM 不同，BAT 移除了 D2V2 中 \(8\times 10^4\) 的全局 loss 启发式缩放因子，采用等权求和 \(\ell = \ell_{\text{global}} + \ell_{\text{local}}\)，提升训练稳定性。使用 bfloat16 混合精度。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/9DfsHAFE5l-p1-v82c0fea7.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/9DfsHAFE5l-p13-vcade7962.jpg)
 
 
 ### 💡 核心创新点
@@ -192,7 +188,6 @@ BAT（Better Audio Transformer）。 BAT 对 D2V2 音频 SSL 流水线进行了�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/9DfsHAFE5l-p6-e76978c91.jpg)
 
 
 ---

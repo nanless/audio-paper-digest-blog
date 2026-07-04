@@ -79,11 +79,9 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 
 在双编码器逐层前向过程中，CoLA 采用渐进式跨模态传播（Algorithm 1）：
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p1-e3e5ace85.jpg)
 
 在每个 Transformer 层内，两个编码器的输入先各自通过自注意力层（QKV 投影以跨模态特征为条件），生成各自的注意力输出，同时产出给对方编码器的交叉模态特征。该交叉特征随后传递给输出投影层和 FFN 层的 CoLA 组件，每个阶段均利用上一阶段更新的交叉特征。此递推更新机制使后续组件能利用更精炼的跨模态上下文。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p1-e54f2a7d8.jpg)
 
 消融实验比较了三种传播策略：Uniform（同一交叉特征用于本层所有组件）、Module-wise（同一模块内共享，模块间交换）和 Progressive。Progressive 在 RefCOCOg 上平均 76.5% 显著优于其余两种（均为 76.1%），验证了逐阶段细化交叉特征的有效性。
 
@@ -112,7 +110,6 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 
 视觉‑语言任务与现有 PEFT/FT 方法的对比
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p15-vb534669f.jpg)
 
 | 方法 | 更新比例 | RefCOCO val/testA/testB | RefCOCO+ val/testA/testB | RefCOCOg val/test | Avg REC | Avg RES |
 |------|----------|------------------------|--------------------------|-------------------|---------|---------|
@@ -137,7 +134,6 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 
 音频‑视觉与现有 PEFT 方法的对比
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p15-vd188213e.jpg)
 
 | 方法 | 视觉/音频骨干 | AVE Acc | AVS mIoU |
 |------|--------------|---------|----------|
@@ -151,7 +147,6 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 
 关键消融
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p3-v39f8dd2e.jpg)
 
 - 路径矩阵共享策略：完全非共享设计在 RefCOCOg 上 REC 平均 81.7、RES 平均 71.3，优于完全共享的 81.2/70.4，验证了双路径解耦的必要性。
 - 交叉模态传播：渐进式传播在 RefCOCOg 上达到 81.7/71.3（Avg 76.5），优于均匀（76.1）和模块级（76.1）。
@@ -173,7 +168,6 @@ CoLA 的 \(\Delta W_L\) 和 \(\Delta W_C\) 路径的矩阵 \(A\)、\(B\) 完全�
 - 推理细节：模态内路径 \(\Delta W_L\) 可合并至预训练权重；模态间路径 \(\Delta W_C\) 需在线计算交叉特征和超网络前向，不可合并，带来额外延迟和显存占用（图 6：显存从 12,948 MB 升至 16,960 MB，推理速度从 9.13 降至 7.99 samples/s）。未提及解码策略细节（如 beam search、top-k 等）。
 - 正则化与初始化：A 矩阵 Kaiming 均匀初始化，B 矩阵零初始化，保证训练起点从预训练知识开始。衰减权重 1e-4（Vision-Language）。未提及 dropout 或其他正则化。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8CBWgJY7n9-p9-v3dbedf1b.jpg)
 
 ### ⚖️ 评分理由
 

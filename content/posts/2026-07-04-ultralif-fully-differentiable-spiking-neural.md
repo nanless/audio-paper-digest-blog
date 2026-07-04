@@ -69,9 +69,7 @@ hiddenInHomeList: true
 
 优化方面，网络通过标准的反向传播（BPTT）进行训练，损失函数为交叉熵。输出采用平均脉冲率编码。论文提供了包括收敛性、梯度有界性和前向-反向一致性在内的严格理论分析。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QdDli9UoLK-p12-v0bb41597.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QdDli9UoLK-p2-v72242766.jpg)
 
 
 ### 💡 核心创新点
@@ -130,9 +128,7 @@ hiddenInHomeList: true
 - SigmaLIF消融：使用标准LIF膜电位加sigmoid脉冲的SigmaLIF在SHD、DVS、MNIST上均差于最佳Ultra模型（+4.37pp, +1.14pp, +1.07pp），证实了超离散化膜电位更新的独立价值。
 - 解耦脉冲尺度：将脉冲锐度 \(\beta\) 与膜电位温度 \(\varepsilon\) 解耦后，在卷积架构上观察到 \(\beta\) 可学习到较大值（如CIFAR-10上约8-15），但性能差距依然存在，表明性能限制主要源于膜动态而非脉冲锐度约束。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QdDli9UoLK-p21-vc19ac020.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/QdDli9UoLK-p22-vad0b46b6.jpg)
 
 
 ### 🔬 细节详述

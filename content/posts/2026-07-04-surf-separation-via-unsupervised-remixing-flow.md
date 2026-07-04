@@ -65,7 +65,6 @@ SURF 是一个多阶段、迭代式的无监督生成式源分离框架，其核
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Fy2HkFMYH6-p21-ve3996f66.jpg)
 
 
 
@@ -153,7 +152,6 @@ SURF 是一个多阶段、迭代式的无监督生成式源分离框架，其核
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Fy2HkFMYH6-p22-vbc198d64.jpg)
 
 ### 🔬 细节详述
 

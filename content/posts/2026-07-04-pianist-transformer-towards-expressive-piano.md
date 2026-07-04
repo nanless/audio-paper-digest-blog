@@ -51,7 +51,6 @@ hiddenInHomeList: true
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-eb03b16a7.jpg)
 
 
 
@@ -60,7 +59,6 @@ hiddenInHomeList: true
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-eef710213.jpg)
 
 
 
@@ -76,13 +74,11 @@ hiddenInHomeList: true
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-e1adc1548.jpg)
 
 
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p3-vdc6fea18.jpg)
 
 ### 💡 核心创新点
 
@@ -114,7 +110,6 @@ Pianist Transformer在总计8个指标中的6个取得最佳，且两个综合�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-r080ef8c0.jpg)
 
 
 
@@ -122,7 +117,6 @@ Pianist Transformer在总计8个指标中的6个取得最佳，且两个综合�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-r61b1230b.jpg)
 
 
 
@@ -134,7 +128,6 @@ Pianist Transformer在总计8个指标中的6个取得最佳，且两个综合�
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p1-rb487aeb7.jpg)
 
 
 
@@ -142,7 +135,6 @@ Pianist Transformer在总计8个指标中的6个取得最佳，且两个综合�
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/p6Ar2d4Cwr-p13-e2947de5c.jpg)
 
 
 

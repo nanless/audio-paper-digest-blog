@@ -40,7 +40,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-ecd2ef303.jpg)
 
 
 
@@ -51,7 +50,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-ed0d1edb5.jpg)
 
 
 
@@ -63,7 +61,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-r2a63382d.jpg)
 
 
 
@@ -81,13 +78,11 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-r15517703.jpg)
 
 
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-r266e00b9.jpg)
 
 
 
@@ -101,7 +96,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-r4bb5bef0.jpg)
 
 
 
@@ -121,7 +115,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-r864f43ff.jpg)
 
 
 
@@ -131,7 +124,6 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-rbafaf6fb.jpg)
 
 
 
@@ -178,13 +170,11 @@ JAEGER 是一个将 3D 视觉和空间音频信息融入大语言模型的端到
 
 
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-re93b339e.jpg)
 
 
 
 
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qOd7ft1FSQ-p3-vcb4fcc15.jpg)
 
 
 

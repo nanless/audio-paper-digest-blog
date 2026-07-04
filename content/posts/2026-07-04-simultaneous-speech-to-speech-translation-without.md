@@ -59,9 +59,7 @@ Hibiki-Zero是一个端到端的、同时生成语音和文本翻译的解码器
 4. RL延迟优化：引入基于GRPO的单BLEU过程奖励机制。对于生成过程中的每个评估帧 \(t\)，将模型已生成的文本与已完成源句对应的参考译文计算局部BLEU，并与整句BLEU通过 \(\alpha\) 加权得到过程奖励。以每 \(n_w\) 个源词为单位计算并标准化奖励，累加后续时间的标准化奖励作为优势值，使用PPO-style的剪辑目标（\(\epsilon=0.2\)）更新策略。该方法仅依赖BLEU指导模型学习“何时开口”。
 5. 蒸馏与轻量化：在监督训练和RL阶段后，通过权重共享蒸馏减小模型尺寸，使得最终版本适合部署。推理时，模型以流式方式接收输入token，并在强制输入`<EOS>`（End-of-Sentence）后自回归生成，直至产生文本`<EOS>`。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76XSBLdBdg-p15-v627c1496.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76XSBLdBdg-p16-v754a4261.jpg)
 
 
 ### 💡 核心创新点
@@ -94,9 +92,7 @@ Hibiki-Zero是一个端到端的、同时生成语音和文本翻译的解码器
 - 粗对齐阶段若句子间延迟等于完整句子时长（\(\delta_i = d_i\)），RL完全无法有效降低延迟，证明训练数据中必须存在早期翻译的信号（\(\delta < 1\)）。
 - 不在句子间插入句内停顿（\(\mu=0\)）也会导致更高的延迟。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76XSBLdBdg-p3-ee4f8bb11.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76XSBLdBdg-p5-vfa3a1092.jpg)
 
 
 ### 🔬 细节详述
@@ -136,7 +132,6 @@ Hibiki-Zero是一个端到端的、同时生成语音和文本翻译的解码器
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76XSBLdBdg-p8-e1dd9554d.jpg)
 
 
 ---

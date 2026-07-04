@@ -87,9 +87,7 @@ TAL（Text-Aware Latent Space）：
 
 统一pipeline：DM在TAL空间中学习去噪，推理时从随机噪声开始，使用DPM-Solver++以100步、CFG \(\omega=7.0\)进行采样，同时在每一步通过PADS对文本条件的padding位置加噪。两者协同：TAL提供geometry层面的genre约束，PADS提供dynamics层面的受控扰动。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/c0iisI5tJj-p22-e66f18818.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/c0iisI5tJj-p22-v4c2d05de.jpg)
 
 
 ### 💡 核心创新点
@@ -126,9 +124,7 @@ TAL空间genre结构分析（Fig. 5, Table 9, Table 10）：TAL空间中同genre
 
 生成示例：论文提供了多个生成音频的频谱图示例（Fig. 22-29），展示了模型在不同文本提示下的生成能力。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/c0iisI5tJj-p28-v70bd9a7d.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/c0iisI5tJj-p29-e88d30a67.jpg)
 
 
 ### 🔬 细节详述
@@ -181,7 +177,6 @@ TAL空间genre结构分析（Fig. 5, Table 9, Table 10）：TAL空间中同genre
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/c0iisI5tJj-p29-efc752e15.jpg)
 
 
 ---

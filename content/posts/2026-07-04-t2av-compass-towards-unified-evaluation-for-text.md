@@ -73,7 +73,6 @@ hiddenInHomeList: true
 
 T2AV-Compass 本质上是一个系统化的基准评测框架，而非生成模型。其整体流程分为三大阶段：数据构建、客观评测、主观评测。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8V2Qf6mNx3-p4-rc53a7e67.jpg)
 
 1. 数据构建阶段 采用三流并行的prompt生成管道。
 
@@ -82,7 +81,6 @@ T2AV-Compass 本质上是一个系统化的基准评测框架，而非生成模�
 *   流三：真实视频反演。 为平衡纯文本生成可能带来的幻觉并确保物理合理性，从YouTube精选100个4-10秒的高保真视频片段。利用 Gemini-2.5-Pro 为这些片段生成密集的时序描述，再通过人在回路验证，修正生成描述与原始画面的偏差。此流确保100条prompt锚定在真实世界动态上，为评估提供了“真实性上限”参考。
 *   最终合并与QA Checklist生成。 流二和流三共构成500条prompt的最终基准套件。每条prompt随后被自动派生两类QA checklist：一类用于指令遵循（Instruction Following），通过槽位提取和维度映射将抽象指令转化为可判定的二值问题；另一类用于感知真实感（Perceptual Realism），专注检测时序连贯性、对象完整性、材质-音色一致性等内部失真。
 
-![图25](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8V2Qf6mNx3-p4-v1971ea62.jpg)
 
 2. 客观评测层级 将系统性能解耦为三个独立支柱。
 
@@ -102,11 +100,9 @@ T2AV-Compass 本质上是一个系统化的基准评测框架，而非生成模�
 
 2. 双层级评估框架的有机结合：将客观信号指标与基于QA checklist的MLLM-as-a-Judge诊断统一到同一框架内，既能给出可量化的信号级对比，又能提供细粒度的语义错误归因（如指出声画不同步的具体声源、动态行为执行失败的具体动作），大幅提升了评估的可解释性。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8V2Qf6mNx3-p27-v3ce6a87d.jpg)
 
 3. 系统化的“音频真实感瓶颈”与“动力学瓶颈”发现：通过大规模对比实验首次量化了当前T2AV系统普遍存在的“视频强、音频弱”的非对称能力分布，并揭示出视频指令遵循中的“Dynamics（动力学）”维度是最具挑战性和区分度的短板。结合材质-音色一致性（MTC）、声学伪影（AAS）等新指标，为后续研究指明了具体的攻关方向。
 
-![图13](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8V2Qf6mNx3-p32-vb5fb9884.jpg)
 
 4. 多维难度切片与边际效应分析：设计了沿视觉主体数量、事件时序结构等轴的复杂度阶梯，揭示了长时叙述（4+事件）场景下失败率的急剧攀升（达63-80%），为T2AV模型的时序组合泛化能力提供了清晰的诊断工具。
 

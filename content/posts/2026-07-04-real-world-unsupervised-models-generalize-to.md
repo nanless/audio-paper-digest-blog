@@ -109,9 +109,7 @@ hiddenInHomeList: true
 *   多层级评估：同时采用编码模型和RSA，前者侧重体素级超调预测，后者捕捉表征几何结构，互为补充，并进一步通过CKA和MkNN分解全局与局部对齐。
 *   数据多样性量化：对WenetSpeech与LibriSpeech进行了详尽的声学质量（DNSMOS）、信噪比、重叠语音率等统计分析（图9, 10），明确了“真实世界数据”的高动态范围和噪声特性。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/H1HHss5Zj4-p14-r744c92c6.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/H1HHss5Zj4-p14-rf609239b.jpg)
 
 
 ### 💡 核心创新点
@@ -166,9 +164,7 @@ Bracci 数据集对比 (`ant-VTC`)：
 
 即便使用更老、更小的架构（ResNeXt-50）和OOD评估，bababy-vision系列模型在Bracci数据集上也达到了与大规模ID评估的DINOv2/v3（ViT架构）相当的性能。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/H1HHss5Zj4-p14-v0eb3b994.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/H1HHss5Zj4-p15-r502e82f1.jpg)
 
 
 ### 🔬 细节详述
@@ -213,7 +209,6 @@ Bracci 数据集对比 (`ant-VTC`)：
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/H1HHss5Zj4-p16-v76d9192e.jpg)
 
 
 ---

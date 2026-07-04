@@ -69,7 +69,6 @@ PoPE 的核心思想是彻底重塑 RoPE 中键和查询的复数表示，强制
 
 整体上看，PoPE 仅修改了 Transformer 注意力得分的计算逻辑，可作为一种即插即用的模块替换任何已使用 RoPE 的模型。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/I3Z9za1EkO-p15-v77c0c10b.jpg)
 
 
 ### 💡 核心创新点

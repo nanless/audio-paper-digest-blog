@@ -33,7 +33,6 @@ hiddenInHomeList: true
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p14-e6bf2f4f0.jpg)
 
 
 
@@ -41,7 +40,6 @@ hiddenInHomeList: true
 
 
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p2-ebb187014.jpg)
 
 
 
@@ -98,7 +96,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p14-ec4a4489b.jpg)
 
 
 
@@ -114,7 +111,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p15-r09425240.jpg)
 
 
 
@@ -168,7 +164,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p15-r540128ee.jpg)
 
 
 
@@ -179,7 +174,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p14-ee010cc39.jpg)
 
 
 
@@ -193,7 +187,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p15-ra6723eb5.jpg)
 
 ### 🔬 细节详述
 
@@ -214,7 +207,6 @@ STAR-VAE 是一个双阶段训练、编码器-解码器结构的连续音频变�
 
 
 
-![图16](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p4-e355d66a1.jpg)
 
 
 

@@ -69,9 +69,7 @@ CA-SOADD 严格遵循单类学习协议，训练全程只使用真实语音，�
 
 多域扩展 处理跨语言或跨域的异构真实语音：共享特征提取器，为每个域 \(\ell\) 维持独立的质心 \(c_\ell\) 和层选择参数 \(s_\ell\)。训练时 \(\mathcal{L}_{\text{cpt}}\) 使用样本对应域的质心，\(\mathcal{L}_{\text{cabs}}\) 的间隔约束针对最近质心，防止探针进入任何真实区域。推理时由已知域标签选择对应质心打分。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/ZuzygE5nsT-p3-v886a377e.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/ZuzygE5nsT-p8-e133ef3c1.jpg)
 
 
 ### 💡 核心创新点
@@ -109,9 +107,7 @@ MLAAD 跨语言基准（表2）：CA-SOADD (w/o \(\mathcal{L}_{\text{binv}}\)) �
 - 探针按机制族移除（附录表7）：移除单类机制导致 EER 退化最高约 4%，但无单类机制主导增益。
 - 权值敏感性与间隔敏感性（附录 F.1 / F.2）：方法在合理超参范围内稳定。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/ZuzygE5nsT-p8-e1a42f231.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/ZuzygE5nsT-p8-e2f497436.jpg)
 
 
 ### 🔬 细节详述
@@ -153,7 +149,6 @@ MLAAD 跨语言基准（表2）：CA-SOADD (w/o \(\mathcal{L}_{\text{binv}}\)) �
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/ZuzygE5nsT-p8-e34a7408f.jpg)
 
 
 ---

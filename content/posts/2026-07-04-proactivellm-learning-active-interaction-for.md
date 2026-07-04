@@ -86,7 +86,6 @@ ProactiveLLM采用"内生能力训练-外部决策解耦"的两阶段范式。�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/sr1qgowJQ1-p17-v01b77bb4.jpg)
 
 
 
@@ -159,7 +158,6 @@ ProactiveLLM采用"内生能力训练-外部决策解耦"的两阶段范式。�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/sr1qgowJQ1-p18-v73293425.jpg)
 
 
 

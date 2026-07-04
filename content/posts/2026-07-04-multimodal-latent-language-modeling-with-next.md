@@ -78,7 +78,6 @@ LatentLM整体是一个因果自回归框架，通过单个Transformer同时处�
 1. 输入表示与token化
 对于离散数据（如文本），使用标准lookup table获得向量表示。对于连续数据（图像、音频等），使用变分自编码器（σ-VAE）将其压缩为连续潜在向量序列。这些向量作为“连续token”与离散token的embedding拼接，构成输入序列 \(X_0 \in \mathbb{R}^{N \times d}\)，其中 \(N\) 是序列长度，\(d\) 是隐藏维度。输入序列被打包后送入一个标准的因果Transformer（基于LLaMA架构增强，使用因果注意力掩码）。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PnTXyTR2VG-p17-edacdb46d.jpg)
 
 2. 骨干网络：因果Transformer
 Transformer有 \(L\) 层，每层包含多头自注意力和前馈网络，使用RMSNorm归一化和SwiGLU激活。因果掩码确保每个位置的预测只能依赖之前的历史token。输入 \(X_0\) 经 \(L\) 层解码后得到输出 \(X_L\)，再经RMSNorm得到隐状态序列 \([h_1, ..., h_N]\)，这些隐状态将用于解码下一个token。
@@ -107,7 +106,6 @@ Transformer有 \(L\) 层，每层包含多头自注意力和前馈网络，使�
 - 训练目标：最小化 \(||\hat{x} - x||^2 + \beta ||\mu||^2\)。第一项是重建误差，第二项是KL正则化的简化形式，控制 \(\mu\) 的尺度以符合先验。论文明确指出这与 \(\beta\)-VAE的动机和实现不同——\(\beta\)-VAE旨在学习解耦表示，而\(\sigma\)-VAE旨在固定方差以解决自回归生成中的方差崩塌问题。
 - 效果：强制潜在空间保持一个较大的、可控的方差。实验中 \(C_\sigma = 0.75\) 或固定 \(\sigma = 0.75\) 效果最佳。关键洞察是令 \(\sigma < \sigma_{\text{gen}}\) 在大多数token上成立，从而将out-of-distribution问题转化为in-distribution问题，显著提升长序列生成的稳定性。附录B消融显示，Gaussian方差采样在1000k步时将FID从13.74进一步降至11.91。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/PnTXyTR2VG-p17-ee79cbb4f.jpg)
 
 【图像补充】 图2直观地展示了σ-VAE如何解决传统VAE与自回归生成结合时面临的“暴露偏差”问题。左图表明，标准VAE（方差小，\(\sigma^2\) 小）的潜在空间非常紧凑，当自回归模型生成时，误差会累积，导致生成样本偏离训练时的紧凑分布。右图展示了σ-VAE通过强制方差（\(\sigma^2\)）变大，使得潜在空间的分布更宽，从而将推理时的生成误差包裹在训练分布内部，使生成过程更稳定。
 

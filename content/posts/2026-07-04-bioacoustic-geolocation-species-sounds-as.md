@@ -49,9 +49,7 @@ hiddenInHomeList: true
 
 总损失函数为对比损失与 BCE 损失的加权和，权重为 0.01（平衡两个损失的尺度）。在推理阶段，对于一个未知位置的录音，AG-CLIP 首先生成其音频表示，通过位置解码器投影为查询嵌入，然后在预先由训练集坐标构建的"位置画廊"（约 13.7 万个候选位置嵌入）中进行余弦相似度检索，返回最相似位置作为预测。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/okWAqiCEQD-p1-rb69e4153.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/okWAqiCEQD-p1-rd94019ef.jpg)
 
 
 ### 💡 核心创新点
@@ -100,9 +98,7 @@ XCDC 与物种多样性 (Table 3)
 定性分析与误差可视化
 定性结果展示了多个 AG-CLIP 成功定位的案例，如将厄瓜多尔安第斯山脉附近的录音精确定位。误差分布热力图则直观揭示了模型性能与训练数据地理分布的强关联性：在非洲中部、亚洲内陆等训练数据稀疏区域，预测误差显著高于北美和欧洲等数据密集区。此外，消融实验确认了在 iNatSounds 上进行物种分类预训练、GeoCLIP 位置编码器、平均池化策略以及辅助清单损失等组件的有效性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/okWAqiCEQD-p1-rd9ca6d05.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/okWAqiCEQD-p1-rfcf792eb.jpg)
 
 
 ### 🔬 细节详述
@@ -146,7 +142,6 @@ XCDC 与物种多样性 (Table 3)
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/okWAqiCEQD-p20-r3d5f2133.jpg)
 
 
 ---

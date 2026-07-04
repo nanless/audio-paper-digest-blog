@@ -68,9 +68,7 @@ SSCA是一个针对冻结特征协议设计的部署端协议，其核心思想�
     *   校准：在“健康”的无标签数据批次上，通过分位数回归拟合四个诊断代理量（`\epsilon_{rank}, \epsilon_{cpl}, \epsilon_{samp}, \epsilon_{num}`）与子空间误差上界的线性关系，获得部署本地化的非负系数 `c`。
     *   门控决策：部署时，计算批次的代理风险值 `(\sum c_i \epsilon_i) / (\hat{\gamma} + 10^{-8})`。如果该值超过校准阈值`\tau_{gate}`或特征间隙`\hat{\gamma}`过低，则门控关闭（Gate=0），系统执行“无更新回退”（Fallback Mode），并可根据主导误差源执行预算受限的修复循环（如增加切片方向数、调整软排序温度等）；否则为稳定模式（Gate=1），允许正常的对齐更新。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UNvRSrguIW-p12-rcf25dad8.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UNvRSrguIW-p3-rfa45cbc2.jpg)
 
 
 ### 💡 核心创新点
@@ -121,9 +119,7 @@ SSCA是一个针对冻结特征协议设计的部署端协议，其核心思想�
 
 5.  门控有效性：在合成数据上，校准后的代理风险与真实子空间误差的Pearson相关系数达0.967，95%包络覆盖率95.0%（附录Figure 2）。在真实漂移测试中，门控保持81-88%的“稳定模式”激活率，同时保持较低的不安全接受率（论文Table 6）。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UNvRSrguIW-p30-r8a108338.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UNvRSrguIW-p30-re516a2e8.jpg)
 
 
 ### 🔬 细节详述

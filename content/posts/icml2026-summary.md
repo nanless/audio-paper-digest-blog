@@ -1752,7 +1752,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 本文旨在解决可控人像音视频生成领域三个核心任务——基于参考的身份-音频生成（R2AV）、视频编辑（RV2AV）和音频驱动视频动画（RA2V）——彼此孤立、缺乏统一框架的问题。DreamID-Omni构建在一个双流扩散变换器架构上，核心思想是将三个任务归约到同一个条件概率模型下：通过选择性提供文本、参考图像、参考音频、源视频和驱动音频五种条件，模型可在任务间无缝切换。针对多人物场景下致命的身份-音色绑定失败与说话人混淆，论文引入了“双层级解耦”策略：在信号层，利用同步旋转位置嵌入（Syn-RoPE）将不同身份投射到互不重叠的RoPE Margin区间，强制注意力空间内的刚性隔离；在语义层，用结构化字幕（Structured Caption）为每个身份分配专属锚点标记`<sub_k>`，显式建立属性-主体的映射关系。训练采用三阶段渐进课程：In-pair重建→Cross-pair解耦→全任务微调（R2AV:RV2AV:RA2V=4:3:3），让弱约束生成任务上学到的先验去正则化强约束的编辑和动画任务。自建IDBench-Omni基准（200条多场景样本）上的实验表明，多人物场景下说话人混淆率降至0.08，显著优于Wan2.6的0.38。该工作的工业价值在于首次提供了面向可控人像音视频生成的统一工业化方案，但主要局限是视频长度受限于10秒、推理需三次CFG前向导致效率偏低，且未开源核心资产。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bZjSinGaUo-p1-r19862c61.jpg)
 
 🔗 **开源详情**
 
@@ -1798,11 +1797,9 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 1.  要解决的问题：现有情感语音合成（TTS）模型在处理如“高兴但略带傲慢”这类复合指令时，存在系统性偏差——目标情感维度被抑制（表达不足），非目标情感维度出现泄漏（表达过强），同时说话人音色与情感韵律耦合导致身份漂移。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p12-v01e66a89.jpg)
 
 2.  方法核心：提出AgentSteerTTS，一个多智能体闭环框架，包含三大组件：(a) 对抗解耦模块（ADM）——利用梯度反转层和交叉协方差正则化，将说话人身份与情感韵律分离。(b) 双流锚定控制器（DAC）——从大规模高表现力声学原型库中检索与目标指令匹配的“锚点”音频，并将文本意图与声学锚点融合为连续控制向量。(c) 快-慢反馈代理——通过可微分的隐层梯度校正（快代理）在线校准强度，并利用外部多模态大模型（MLLM，慢代理）对合成语音进行感知评估和类别纠错。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p1-vd1b7b269.jpg)
 
 3.  方法新颖性：区别于将复合指令视为单一标签或纯文本条件的范式，该工作首次在多智能体框架下，系统性地结合“对抗解耦、检索增强的声学锚定和双层（隐层+波形层）闭环反馈”，显式解决语义-声学错位问题，实现了更精细和鲁棒的复合情感控制。
 4.  主要实验结果：
@@ -1813,7 +1810,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 | IndexTTS2 | 0.823 | 1.81 | 0.864 | 4.15±0.10 |
 | AgentSteerTTS (Gemini3) | 0.841 | 1.34 | 0.955 | 4.38±0.07 |
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/hgKQemfVbS-p15-efab10ef8.jpg)
 
     *   ESD公开数据集：在情感平均意见分（ESMOS, 4.42）、语音自然度（SNMOS, 4.52）和说话人相似度（SSMOS, 4.31）上均取得最佳结果。
     *   消融实验：去除对抗解耦使$\Delta$S-SIM升至0.048，非目标泄漏增至0.22。去除原型检索使复合成功率（CSR）和E-SIM分别降至0.49和0.910，证明了核心模块的有效性。
@@ -1861,7 +1857,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p14-e6bf2f4f0.jpg)
 
 
 
@@ -1869,7 +1864,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDWG5xr20c-p2-ebb187014.jpg)
 
 
 
@@ -2081,7 +2075,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 该论文揭示了预训练Video LLM中的一个关键现象：视觉Token并非映射到词汇嵌入空间，而是形成了一个与LLM兼容的连续几何流形，称为“Token Interface”。基于此洞察，提出V-LynX框架，通过冻结视觉编码器并引入轻量级LoRA支路，以无配对单模态数据将新模态（音频、3D、高帧率视频、多视角视频）的注意力响应和Token分布对齐到该接口，实现极高效的模态扩展。其核心优势在于摒弃了专用编码器和跨模态配对监督，通过共享视频路径和分布正则化，确保新模态表征符合LLM的预期输入规范。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p1-e20307e8f.jpg)
 
 关键实验结果如下：
 
@@ -2113,7 +2106,6 @@ FutureOmni 精准地抓住了当前多模态 LLM 评估中“回顾性理解”�
 
 多视角视频理解 (Ego-Exo4D DPE) 上，V-LynX-0.5B/7B分别取得38.6%/46.9%准确率，显著优于PAVE。
 
-![图24](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/nV8GEDzrSn-p9-e16ae7975.jpg)
 
 该方法以极低的额外参数成本实现了新模态的即插即用，为多模态LLM的扩展提供了高效范式。局限在于，其对视觉Token接口的强依赖导致其无法处理纯音频推理任务（如无视觉线索的乐器识别）；此外，模态到视觉的强制性预处理会造成细粒度信息损失。
 
@@ -2889,7 +2881,6 @@ SONAR巧妙地将低频语义与高频残差的一致性作为深度伪造检测
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/EYAfw6czcC-p1-rce721285.jpg)
 
 
 
@@ -3156,12 +3147,10 @@ SONAR巧妙地将低频语义与高频残差的一致性作为深度伪造检测
 1. 论文旨在解决当前多模态大模型在真实移动端流式场景中缺乏有效评估基准的问题，特别是模型“何时回答”而非“回答什么”的能力评估。
 2. 提出了 PhoStream 基准，包含 578 个视频、5,572 个开放式 QA 对，涵盖 YouTube Vlog、Phone Tutorial、Phone Record、EgoBlind 四种移动场景，将问答分为 Backward、Instant、Forward 三类，重点考察模型的时间推理能力。该基准平均视频时长 13.3 分钟，远超现有流式基准。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p1-r5678294a.jpg)
 
 3. 与现有流式基准相比，PhoStream 首次统一屏幕内和屏幕外移动场景，使用开放式 QA 替代多选，引入严格的时间截断机制和在线推理管道来真实模拟流式助手行为。
 4. 主要实验结果显示，当前最强模型存在严重的时间不对称性：Gemini 3 Pro 在 Instant 和 Backward 任务上得分超过 80，但 Forward 任务仅 16.40；Qwen3-Omni 的 Forward 得分甚至只有 1.26，早期响应率高达 97.89%。Doubao-Seed-1.6 以 44.26 的 Forward 得分成为该任务最优模型。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p1-rdd5ad56a.jpg)
 
 | 模型 | Param | Instant | Backward | Forward | Overall |
 |------|-------|---------|----------|---------|---------|
@@ -4835,19 +4824,16 @@ SwanSphere要解决的是从全景视频或文本描述生成高保真、流式�
 1.  问题：现有多模态大语言模型在多步推理和长文本生成中存在幻觉问题，但现有的多模态归因评估方法局限于简化场景（如直接观察）、单一模态（主要为视觉），无法评估复杂推理中跨模态（视频+音频+图表）的事实级归因质量。
 2.  方法核心：提出MURGAT基准和MURGAT-SCORE自动化评估框架。评估分三步：（1）可验证声明识别——过滤掉推理性句子，只保留需要证据支撑的可验证句子；（2）原子事实分解——将句子拆分为最小可验证的原子事实并传播引用；（3）归因质量评估——评判每个原子事实是否被引用的多模态片段所蕴含（Recall）且每个引用片段是否必要（Precision）。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-r1144fd14.jpg)
 
 
 3.  创新点：首次在多模态复杂推理场景下引入"事实级"归因评估，显式区分可验证声明与推理步骤，并将时间戳+模态的双重引用要求纳入评估指标。这是将文本域FActScore/Gao et al.的引用评估体系系统性地迁移到多模态视频理解的早期工作之一。
 4.  主要实验结果：
     *   人类评估（Table 1）：Gemini-2.5-Flash在WorldSense上MURGAT-S为59.9，但在Video-MMMU上仅21.8；所有模型的归因质量均远低于问答准确率。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rb2d2d1ab.jpg)
 
 
     *   自动化评估（Table 5）：最强的Gemini-3-Flash在WorldSense上MURGAT-S为69.2，Video-MMMU为56.9。Post-hoc归因方法在WorldSense上能提升归因质量，但在Video-MMMU上则显著损害精确度（Gemini-3-Flash的归因F1从64.5降至47.2）。
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IEDC7yFpLe-p2-rbdc4e5c7.jpg)
 
 
     *   [图像补充] 图2清晰展示了推理投入缩放效应：Gemini-3-Flash的MURGAT-S随推理级别增加（Minimal→Low→High）而单调下降，而Gemini-3-Pro则上升。
@@ -5907,7 +5893,6 @@ NeuroCLUS的核心创新是一个两阶段预训练框架：第一阶段通过�
 
 这篇论文旨在解决长音频理解中，Transformer类Audio Language Models (ALMs) 因注意力稀释而丢失罕见显著事件的问题。作者提出NAACA架构，核心是一个免训练的Oscillatory Working Memory (OWM) 组件。OWM模拟生物工作记忆，维持稳定的类吸引子状态，仅当检测到表征感知显著性的能量波动时才触发ALM进行高层推理。方法新颖之处在于将显著性驱动的注意力门控转化为受驱动的阻尼波动方程系统，并通过Bragg共振原理设计波速场的条纹拓扑结构以最大化对感知变化的敏感性。在XD-Violence数据集上，NAACA将AudioQwen的平均精度从53.50%提升至70.60%，同时减少了约40%的ALM处理时长。在Urban Soundscapes of the World (USoW) 数据集上的定性实验展示了其对短暂停顿的鲁棒性和对亚类别转换的敏感性。论文声称达到了SOTA，但对比的是音频模态基线，与视频多模态方法仍有较大差距。主要局限在于其检测能力受限于上游固定编码器的表征质量，以及硬门控机制可能丢失语义边界上下文。
 
-![图16](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/zOWrIO6oKT-p7-e4d02bcac.jpg)
 
 上图（图16）展示了USoW数据集上的一个定性案例。左图的压力场`p`在背景声（公园）中保持稳定纹理，当短暂“说话声”事件发生时，压力场出现剧烈扰动，对应OWM检测到显著性并触发ALM。这验证了OWM对短暂停顿事件的敏感性。
 
@@ -6151,7 +6136,6 @@ NeuroCLUS的核心创新是一个两阶段预训练框架：第一阶段通过�
 
 本文针对基于HiPPO框架的状态空间模型（SSM，如S4）因依赖全局支持的正交多项式基，而无法高效处理局部瞬态、非平稳信号的问题，提出了WaveSSM。该方法利用SaFARi框架，从多种小波（如Morlet、Daubechies）帧的投影运算中直接导出SSM的动态矩阵A和B，从而赋予隐藏状态各坐标不同的时间局部化感受野。理论上，作者论证了小波帧在逼近具有间断的分片光滑函数时，其 N 项非线性逼近的衰减率（$O(N^{-s})$）优于全局多项式（$\gtrsim N^{-1/2}$）。实证上，WaveSSM在合成“连续窗口复制”任务上显著优于S4和Mamba，展示了其地址able记忆能力。在实际数据上，WaveSSM在PTB-XL心电数据和部分时序预测、语音分类及LRA短程任务上取得了微弱优势。然而，论文的核心局限在于：1）实际性能提升幅度极小，缺乏统计显著性；2）在LRA的极长程任务（PathX, Pathfinder）上表现不佳甚至不可行；3) 频移鲁棒性差；4）无代码开源，可复现性极低。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8f5JVzcFvA-p1-e2c5ed3d1.jpg)
 
 图1是论文的摘要图，直观展示了WaveSSM的核心思想：将标准SSM（左）的全局状态更新，转变为由小波框架驱动的多尺度、时间局部化的状态更新（右），从而能够对信号中的瞬态事件进行“可寻址”的存储与检索。
 

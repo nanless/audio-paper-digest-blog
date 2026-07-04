@@ -53,7 +53,6 @@ hiddenInHomeList: true
 
 论文构建了一个全自动的、面向查询式通用声音分离的高质量数据清洗与合成流水线，整体分为三个紧密耦合的阶段：本体重构与数据预处理、单事件语义-声学对齐、以及超分辨率标准化。在此源库基础上，设计了语义一致的混合策略生成最终的训练/验证/测试混合物。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p16-r3a197b99.jpg)
 
 第一，本体重构与数据预处理。 论文以 AudioSet 本体（474 个叶节点）为起点进行系统性精简：(1) 合并同义词（如“Applause”与“Clapping”统一为“Clapping”）; (2) 将声学区分度低的细粒度子类向上聚合到父节点（如“Acoustic guitar”归入“Guitar”）; (3) 显式移除描述声学环境（如“indoor”）、格式标签（如“MP4”）、抽象属性（如“Reverberation”）等不适合作为可分离前景事件的概念。此过程由五位专业音频从业者交叉验证，最终形成面向分离的 283 个叶节点本体。随后，对所有原始音频应用 10 秒滑窗（5 秒重叠），丢弃均方根值低于 \(5 \times 10^{-4}\) 的静音段，并丢弃不足 10 秒的尾部片段，避免补零伪影。
 
@@ -90,7 +89,6 @@ Hive 测试集零样本结果（2-5 源平均）：
 | SAM-Audio | ~1M h | – | – | 5.21 | 1.03 | 0.16 | 62.6 | 2.90 |
 | FlowSep (Hive) | 2.4k h | – | – | 4.25 | 0.84 | 0.19 | 61.8 | 3.05 |
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p17-r20c750a6.jpg)
 
 第三方测试集结果（关键指标）：
 
@@ -106,7 +104,6 @@ Hive 测试集零样本结果（2-5 源平均）：
 | VGGClean eval | AudioSep (Hive) | 7.61 | 0.69 | 0.22 | 3.44 |
 | VGGClean eval | SAM-Audio | – | 4.27 | 0.21 | 3.14 |
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p18-rec566bde.jpg)
 
 语义一致性消融（同一源库、175k 混合物）：
 
@@ -115,7 +112,6 @@ Hive 测试集零样本结果（2-5 源平均）：
 | 一致性引导 | 4.12 | 4.10 | 4.24 | 2.79 |
 | 随机混合 | 3.12 | 4.19 | 4.35 | 2.64 |
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p19-v8319dd4f.jpg)
 
 受控捷径分析（SDR 差距）：
 
@@ -124,11 +120,9 @@ Hive 测试集零样本结果（2-5 源平均）：
 | AudioSep (原版) | 1.65 | 3.06 | -1.41 |
 | AudioSep (Hive) | 5.48 | 5.87 | -0.39 |
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p20-e3704338d.jpg)
 
 数据扩增曲线：AudioSep 训练数据量从 175k 增至 17.5M 样本，SDR 从约 4.12 持续提升至 5.67 dB，FAD、CLAP 等指标也呈现稳健增益，未见饱和。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/vCc2NAe0OS-p20-e88ccf70e.jpg)
 
 ### 🔬 细节详述
 

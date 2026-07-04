@@ -85,9 +85,7 @@ SPEECHCOMBINE的核心思想是通过在参数空间进行线性组合来生成�
 
 5. 长思维链激活: 通过修改推理模板，在 `Assistant` 后直接插入 `<think>[text]</think>` 段，并强制首个生成Token为 `<think>`。为使模型更稳定地进入思考模式，会在 `<think>` 后追加"Okay"。思考过程中禁止生成韵律Token，并在达到最短长度（160 Token）前禁止生成 `</think>`。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDFeVV01xR-p9-e3adcb827.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDFeVV01xR-p9-e5469ef72.jpg)
 
 
 ### 💡 核心创新点
@@ -118,7 +116,6 @@ SPEECHCOMBINE的核心思想是通过在参数空间进行线性组合来生成�
 *   长思维链: 关闭长思维链后，OpenBookQA从86.59%降至64.83，GenEmo从45.42降至36.37，Emph Detection F1从60.84降至53.14，证明长思维模式对浅层和深层组合任务均有显著增益。
 *   格式强制: 去除格式强制（并关闭思维链），Emph Detection F1从53.14降至27.73，输出稳定性显著恶化，但文本导向任务和语音生成任务影响不大。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SDFeVV01xR-p9-eaf15f7f4.jpg)
 
 
 ### 🔬 细节详述

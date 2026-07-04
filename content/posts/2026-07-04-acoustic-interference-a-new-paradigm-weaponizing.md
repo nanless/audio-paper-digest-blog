@@ -42,7 +42,6 @@ hiddenInHomeList: true
 
 本研究提出了一种名为"声学干扰攻击（Acoustic Interference Attack, AIA）"的新范式，其核心思想是颠覆将音频作为恶意内容载体的传统观念，转而利用音频本身固有的、无内容的声学特征作为"干扰器"，诱导LALM安全对齐失效。整个方法框架分为离线构建与在线攻击两大阶段，流程清晰、层级分明。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/FygaF16KNo-p1-ec9bbefde.jpg)
 
 #### 阶段一：声学潜在语义（ALS）库的离线构建
 该阶段的目标是建立一个可解释、高多样性的"干扰音频"库，并赋予其有意义的索引，这是整个攻击的基石，具体分为五个子步骤：

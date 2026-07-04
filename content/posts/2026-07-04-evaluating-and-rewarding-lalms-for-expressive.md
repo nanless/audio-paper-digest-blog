@@ -87,9 +87,7 @@ MCLP 是本方法的核心。其原理是：一个在大规模带转录语音上
     - 门控机制 (Gating)：总奖励 `R(z) = 0`，若 `CER(w^, w) > 0.2`；否则 `R(z) = R_style - R_content`。该设计强制模型在保证内容可懂度满足阈值后才优化风格，避免产生“有情感的胡言乱语”。
 - 优化：遵循 GRPO 目标函数 `J_GRPO(θ)`，其中包含基于组内归一化的 Advantage `A^_i`、PPO-style Clipping 以及一个与 SFT 参考模型间的 KL 惩罚 `-β D_KL`，以稳定训练。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YZIqbdw6zi-p2-r39a7c2ed.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YZIqbdw6zi-p2-v7b85c48f.jpg)
 
 
 ### 💡 核心创新点
@@ -131,9 +129,7 @@ MCLP 是本方法的核心。其原理是：一个在大规模带转录语音上
 4. 进一步的详细实验结果
 论文还在附录中提供了按场景类别、对话轮数、说话人数量的细分评估，证明本文方法在不同戏剧类型（军事、古装、悬疑等）、不同对话长度（2-10轮）和不同说话人数量（2-5人）的场景下均一致地取得最佳 MCLP 分数。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YZIqbdw6zi-p3-e45cbab76.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YZIqbdw6zi-p3-eab5c5b3a.jpg)
 
 
 ### 🔬 细节详述
@@ -174,7 +170,6 @@ MCLP 是本方法的核心。其原理是：一个在大规模带转录语音上
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/YZIqbdw6zi-p3-eedcd8aba.jpg)
 
 
 ---

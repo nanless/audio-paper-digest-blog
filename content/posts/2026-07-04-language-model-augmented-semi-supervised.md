@@ -62,7 +62,6 @@ LASS框架旨在将LLM的预测能力以统计严谨的方式融入半监督推�
 
 6. 协变量偏移扩展（原文附录F）：论文还将LASS推广到标记与未标记数据间存在协变量偏移的情况，采用估计标记机制π(x)的双重稳健伪标签来保证一致性。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/bFy2cGMR2S-p14-r45ff88cb.jpg)
 
 
 ### 💡 核心创新点

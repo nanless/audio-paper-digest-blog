@@ -52,7 +52,6 @@ hiddenInHomeList: true
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aComqAqP6j-p4-r93a6d1c2.jpg)
 
 
 
@@ -112,7 +111,6 @@ Stage 3：波形重建与三阶段训练策略
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aComqAqP6j-p4-va23e69fd.jpg)
 
 
 
@@ -131,7 +129,6 @@ Stage 3：波形重建与三阶段训练策略
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aComqAqP6j-p8-vedacf4a7.jpg)
 
 
 
@@ -151,7 +148,6 @@ Stage 3：波形重建与三阶段训练策略
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/aComqAqP6j-p9-va9e53bbc.jpg)
 
 
 

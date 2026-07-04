@@ -68,9 +68,7 @@ TAGO是一种基于稀疏梯度优化的白盒音频越狱攻击方法，旨在�
 4.  模型兼容的目标前缀与早停抑制：
     为解决不同ALM回复风格差异导致攻击泛化性差的问题，TAGO首先从少量良性交互样本中提取出模型的原生回复风格，构造一个带占位符的模板 `Prefix(q)`，并动态填入恶意查询 `q` 生成优化目标前缀 `r_{1:m}`。损失函数采用前缀条件交叉熵。同时，为了压制模型在生成完目标前缀后就立刻输出 `<|im_end|>` 等结束符的拒绝捷径，TAGO引入了额外的早停惩罚项 `λ_eos·L_eos`，强制模型在匹配前缀后继续生成内容。优化过程还配备了一个基于前缀置信度的早停机制，当目标前缀的交叉熵损失低于预设阈值 `τ(ρ)` 时即停止迭代，以节省计算开销。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/BLnxPR2QB2-p14-v5e12e62f.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/BLnxPR2QB2-p18-e4e276d36.jpg)
 
 
 ### 💡 核心创新点
@@ -102,9 +100,7 @@ TAGO是一种基于稀疏梯度优化的白盒音频越狱攻击方法，旨在�
 - 攻击不可感知性：在ζ=0.25的设置下，TAGO生成的对抗性音频在所有模型上信噪比(SNR)均高于20dB，保证了听觉上的不易察觉。
 - 敏感性分析：TAGO的性能对早停阈值ρ和token保留率ζ的变化表现稳健，在ζ=0.1的极端稀疏设置下仍能保持非平凡的攻击性能。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/BLnxPR2QB2-p18-e62a15838.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/BLnxPR2QB2-p18-e96c75164.jpg)
 
 
 ### ⚖️ 评分理由
@@ -128,7 +124,6 @@ TAGO是一种基于稀疏梯度优化的白盒音频越狱攻击方法，旨在�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/BLnxPR2QB2-p18-eb3474149.jpg)
 
 
 ---

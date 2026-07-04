@@ -65,9 +65,7 @@ BFCL Audio的核心是一套面向音频function calling的可控合成与评估
 
 设计动机：管线化的生成方式支持对单一语音特征或声学条件的细粒度消融和因果归因。多ASR转录克服了单一引擎的评估偏差。基于AST的工具调用匹配比基于文本相似度的评估更能精确衡量任务正确性，且整个自动评分流程避免了当前LLM裁判的不稳定性。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/pgwHOpKkOp-p12-e399405fe.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/pgwHOpKkOp-p12-ee0328b7e.jpg)
 
 
 ### 💡 核心创新点
@@ -107,9 +105,7 @@ BFCL Audio的核心是一套面向音频function calling的可控合成与评估
 
 消融研究核心发现：在BFCL Text Audio中，话语结构改动的特征（如自我修正、省略/代指、句子重组）是下游失败的主要原因；而表面不流畅（填充词、重复）影响较小。在BFCL True Audio中，文件路径的口语化表达（如将斜杠、点号和字母数字混合念出）是唯一显著增加错误率的特征。在噪声消融中，竞争性语音对意图的破坏最为严重（意图保留率仅为42.4%），其次是混响回声（48.8%）和网络中断（50.6%），而设备摩擦噪声等影响极小（意图保留率约98.8%）。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/pgwHOpKkOp-p13-e4c193de5.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/pgwHOpKkOp-p13-v63184056.jpg)
 
 
 ### 🔬 细节详述
@@ -149,7 +145,6 @@ BFCL Audio的核心是一套面向音频function calling的可控合成与评估
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/pgwHOpKkOp-p14-vb40ea3bd.jpg)
 
 
 ---

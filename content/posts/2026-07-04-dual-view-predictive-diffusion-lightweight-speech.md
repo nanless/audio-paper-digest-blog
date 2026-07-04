@@ -102,9 +102,7 @@ TLB策略（Training-free Lossless Boost）：推理阶段免训练的特征图�
 
 推理流程：预测分支生成确定性幅度谱\(\bar{X}^p_m\)和相位\(\Phi^p\)。扩散分支从缩减时间\(T_{rs}=0.12\)开始，以\(X_{T_{rs}} = \mu(\bar{X}^p_m, Y_m, T_{rs}) + \sigma(T_{rs})z\)初始化，经过\(N=3\)步Euler-Maruyama逆扩散（BBED SDE，\(k=2.6, c=0.51, T=0.999\)），配合TLB在前两个U-Net层级的编码器跳跃连接和解码器主干分别按高低频调制特征图，生成扩散幅度谱\(\hat{X}^d_m\)。最终幅度谱\(\hat{X}_m = \alpha\bar{X}^p_m + (1-\alpha)\hat{X}^d_m\)（\(\alpha=0.4\)），结合\(\Phi^p\)经ISTFT重建波形。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3qX5RS8kpJ-p15-r60e51a6e.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3qX5RS8kpJ-p15-raed0092f.jpg)
 
 
 ### 💡 核心创新点
@@ -137,9 +135,7 @@ TLB策略（Training-free Lossless Boost）：推理阶段免训练的特征图�
 | DVPD (ours) (w/o TLB) | 1.9M | 10.2G | D+P | 2.99±0.88 | 0.91±0.12 | 4.06±0.71 | 2.93±0.57 | 3.43±0.87 | 4.16±0.25 |
 | DVPD (ours) (w/ TLB) | 1.9M | 10.2G | D+P | 3.15±0.79 | 0.92±0.05 | 4.21±0.37 | 3.01±0.47 | 3.51±0.99 | 4.27±0.31 |
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3qX5RS8kpJ-p20-e46305aea.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3qX5RS8kpJ-p20-e4a2e9f9e.jpg)
 
 
 ### 跨数据集泛化（零样本迁移，仅WSJ0-UNI训练）（图5）
@@ -273,7 +269,6 @@ TLB对StoRM（+0.06 PESQ）和PGUSE U-Net变体（+0.20 PESQ）均有正向迁�
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/3qX5RS8kpJ-p20-ee834639f.jpg)
 
 
 ---

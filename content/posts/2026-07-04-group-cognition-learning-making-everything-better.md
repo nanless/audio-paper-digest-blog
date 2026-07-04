@@ -49,7 +49,6 @@ hiddenInHomeList: true
 
 GCL 是一个两阶段治理化多模态学习框架。输入为三种模态的语言 (l)、声学 (a)、视觉 (v) 经过模态特定编码器得到的独立特征，输出为最终预测。整个流程由四个功能显式定义、协同工作的代理执行，不依赖隐式融合。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/t9aUiZsQgg-p6-v4ed0a0e7.jpg)
 
 [图像补充] 图1直观展示了GCL框架的整体数据流和组件。图中明确标注了“Inter-Modal Consensus Factor”（模态间共识因子）和“Private Channel Feature”（私有通道特征），强化了阶段二中双层共识结构的描述。整个流程清晰地分为两阶段，并展示了四个代理（Routing Agent, Auditing Agent, Public-Factor Agent, Aggregation Agent）的协同工作。
 
@@ -108,7 +107,6 @@ GCL 是一个两阶段治理化多模态学习框架。输入为三种模态的�
 
 ### 消融实验（MOSI | MOSEI | MIntRec）
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/t9aUiZsQgg-p8-e0900befe.jpg)
 
 [图像补充] 图2以柱状图形式直观展示了在MOSI数据集上，移除或替换GCL关键组件（如完整移除路由代理、移除审计代理、强制全交换、去掉公共因子代理）时，MAE和Acc-7指标的变化。该图清晰地量化了各组件的重要性，与主模型文字描述一致，并进一步强调了移除审计代理或强制全交换带来的性能显著下降。
 - 完整移除路由代理（w/o R.-Agent）：MOSI MAE 上升至0.694，Acc-7 降至48.55。
@@ -119,7 +117,6 @@ GCL 是一个两阶段治理化多模态学习框架。输入为三种模态的�
 
 ### 鲁棒性分析
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/t9aUiZsQgg-p8-edad2f880.jpg)
 
 [图像补充] 图3以折线图展示了在CMU-MOSI测试集上，随着输入特征添加的高斯噪声强度增加（横轴），不同模型MAE（左图）和Acc-7（右图）的变化趋势。图中清晰地显示，GCL（红色线）的性能衰减曲线明显比TSDA、EMOE等基线方法（蓝色、紫色线）更平缓，直观验证了主模型关于GCL在噪声环境下鲁棒性更强的结论，并量化了其优势幅度。
 加性高斯噪声强度0→20下，GCL 的 MAE 和 Acc-7 衰减远小于 EMOE、TSDA 等基线，噪声抑制归因于审计代理封锁劣质信号。
@@ -134,7 +131,6 @@ GCL 是一个两阶段治理化多模态学习框架。输入为三种模态的�
 - 训练策略：Adam 优化器，batch size 128，权重衰减 \(1\times 10^{-4}\)，早停耐心 6，5 个随机种子。每个实验报告5次运行的平均测试性能。其他如学习率、warmup、调度未说明。
 - 关键超参数：\(\lambda_{pub}\)、\(\lambda_{gain}\)、\(\lambda_{red}\)、\(\kappa\)（门温度），敏感性分析显示各系数在较宽范围内稳定，例如 \(\lambda_{gain} \in \{0.1,0.5,1.0,1.5,2.0\}\) 时性能波动小。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/t9aUiZsQgg-p9-e6779515c.jpg)
 
 [图像补充] 图4是一个热力图，展示了在CMU-MOSI验证集上，同时变化 \(\lambda_{gain}\) 和 \(\lambda_{red}\) 两个超参数时，模型Acc-7指标的表现。图中颜色越亮表示性能越好。该图直观地验证了主模型关于“敏感性分析显示各系数在较宽范围内稳定”的结论，表明在所测试的参数组合区间内，GCL的性能保持相对稳定，这对实际调参有指导意义。
 - 训练硬件：NVIDIA A100 32GB。

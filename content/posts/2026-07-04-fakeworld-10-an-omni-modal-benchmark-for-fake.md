@@ -45,7 +45,6 @@ FakeWorld基准的构造流程分为四步：数据池构建、可解释性模�
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UXbNXAJRCo-p1-r653fda03.jpg)
 
 
 
@@ -53,7 +52,6 @@ OmniChecker框架采用了“分解-验证-解释”的代理工作流。其核�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UXbNXAJRCo-p1-r20198557.jpg)
 
 ### 💡 核心创新点
 
@@ -61,7 +59,6 @@ OmniChecker框架采用了“分解-验证-解释”的代理工作流。其核�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/UXbNXAJRCo-p1-r12a22e10.jpg)
 
 
 

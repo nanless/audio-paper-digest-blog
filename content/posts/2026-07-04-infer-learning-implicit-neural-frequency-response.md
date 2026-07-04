@@ -61,9 +61,7 @@ INFER是一个端到端的频域神经渲染框架，目标是学习一个连续
 
 设计动机：选择频域直接参数化的理由有三：(1) 直接监督下游任务所需的物理量，能捕获时域方法易模糊的尖锐频谱特征；(2) 支持频率选择性监督，可灵活地根据心理声学和硬件特性调整各频段的优化权重；(3) 频域中能自然且优雅地施加如KK关系等因果性物理正则化。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2tsdSKz3Yi-p14-e5a4c86cc.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2tsdSKz3Yi-p19-v82c80a3b.jpg)
 
 
 ### 💡 核心创新点
@@ -112,9 +110,7 @@ INFER是一个端到端的频域神经渲染框架，目标是学习一个连续
 
 表征与损失函数的贡献分析（Table 12）：将INFER的目标表征替换为时域（保持损失设计不变），新模型INFER-TD的幅度误差升至0.379，相位误差升至1.504。这有力地证明了性能提升的关键在于频域表征本身，而不仅仅是损失函数设计。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2tsdSKz3Yi-p6-r3b6685d2.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2tsdSKz3Yi-p6-r4339f7cf.jpg)
 
 
 ### 🔬 细节详述
@@ -167,7 +163,6 @@ INFER是一个端到端的频域神经渲染框架，目标是学习一个连续
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/2tsdSKz3Yi-p6-r73543999.jpg)
 
 
 ---

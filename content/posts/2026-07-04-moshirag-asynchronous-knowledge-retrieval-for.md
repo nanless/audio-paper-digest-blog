@@ -68,9 +68,7 @@ Moshi模型扩展：基于7B原始Moshi（RQ-Transformer，包含12.5Hz时序Tra
 
 训练策略：基于原始Moshi初始化，所有参数可训练，学习率2e-6，batch size 32，训练10万步。参考文本嵌入dropout概率0.2，丢弃时用可学习向量替代。音频以-65dBFS阈值、80ms窗口进行静音切除。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4aI2vOyyHH-p2-e93d279f6.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/4aI2vOyyHH-p7-vcd9c32d5.jpg)
 
 
 ### 💡 核心创新点

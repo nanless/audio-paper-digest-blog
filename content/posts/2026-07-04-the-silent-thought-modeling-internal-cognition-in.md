@@ -57,7 +57,6 @@ FLAIR（Full-duplex LAtent and Internal Reasoning）的目标是让一个全双�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/jzUCodmd4C-p1-e53a62062.jpg)
 
 
 
@@ -72,7 +71,6 @@ FLAIR（Full-duplex LAtent and Internal Reasoning）的目标是让一个全双�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/jzUCodmd4C-p16-v931ff00d.jpg)
 
 
 
@@ -129,7 +127,6 @@ FLAIR（Full-duplex LAtent and Internal Reasoning）的目标是让一个全双�
 
 
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/jzUCodmd4C-p8-e7cbd7bac.jpg)
 
 
 
@@ -138,11 +135,9 @@ FLAIR（Full-duplex LAtent and Internal Reasoning）的目标是让一个全双�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/jzUCodmd4C-p5-e16eb02f3.jpg)
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/jzUCodmd4C-p5-e49adcc36.jpg)
 
 
 

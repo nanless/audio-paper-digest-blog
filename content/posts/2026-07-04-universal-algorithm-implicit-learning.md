@@ -59,7 +59,6 @@ hiddenInHomeList: true
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tAcVihAkb3-p15-v7ed2b714.jpg)
 
 
 
@@ -97,7 +96,6 @@ hiddenInHomeList: true
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/tAcVihAkb3-p6-r08785cf5.jpg)
 
 
 

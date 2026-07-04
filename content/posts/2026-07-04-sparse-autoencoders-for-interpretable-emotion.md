@@ -82,9 +82,7 @@ hiddenInHomeList: true
 
 在线推理时，SAE首先将当前残差流编码为稀疏激活 \(z\)。随后，情感控制通过一个简洁的干预公式实现：对选定的m个情感相关特征 \(j \in F_e\) 的激活值统一施加一个标量缩放因子 \(\alpha_e\) ，其余特征保持不变。这一操作经解码器重构 \(\hat{x}^{\text{new}}\) 后，可以等价地表达为在残差流上沿解码器方向的稀疏移动： \(x_{\text{new}} \approx x + \sum_{j \in F_e} \alpha_e d_j\) 。修正后的残差表示随后传递至下游条件流匹配（CFM）声学模块和声码器，合成带有所需情感色彩的语音，整个过程不需计算梯度或修改任何骨干参数。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Hbt2ryJgz2-p3-e06799ff7.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Hbt2ryJgz2-p3-vee212070.jpg)
 
 
 ### 💡 核心创新点
@@ -117,9 +115,7 @@ hiddenInHomeList: true
 - 特征预算消融揭示，开心只需1个特征即可有效控制，而愤怒和悲伤在激活更多特征（至6个）时效果持续提升。
 - 跨骨架探索（附录 I）在 LLaSA 上初步验证了该分析框架的可迁移性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Hbt2ryJgz2-p7-e10c660de.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Hbt2ryJgz2-p7-ed8c5473a.jpg)
 
 
 ### 🔬 细节详述
@@ -164,7 +160,6 @@ hiddenInHomeList: true
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Hbt2ryJgz2-p7-ef481d74f.jpg)
 
 
 ---

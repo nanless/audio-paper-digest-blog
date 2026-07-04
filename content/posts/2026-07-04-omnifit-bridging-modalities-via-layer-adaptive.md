@@ -60,7 +60,6 @@ OmniFit是一个“离线剖析、在线执行”的token压缩框架，在不�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p14-v6a6650b2.jpg)
 
 
 
@@ -70,7 +69,6 @@ OmniFit是一个“离线剖析、在线执行”的token压缩框架，在不�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p15-va1a06402.jpg)
 
 
 
@@ -83,7 +81,6 @@ OmniFit是一个“离线剖析、在线执行”的token压缩框架，在不�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p20-v0b30616a.jpg)
 
 
 
@@ -107,7 +104,6 @@ OmniFit是一个“离线剖析、在线执行”的token压缩框架，在不�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p5-e5846a5e6.jpg)
 
 
 
@@ -126,7 +122,6 @@ OmniFit平均性能保留98.68%，比全量模型下降仅1.32%。显著优于Om
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p5-e67cd2ff4.jpg)
 
 
 
@@ -137,7 +132,6 @@ OmniFit平均性能保留98.68%，比全量模型下降仅1.32%。显著优于Om
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p5-ef8f04276.jpg)
 
 
 
@@ -147,13 +141,11 @@ OmniFit的校准时间极短（Qwen2.5-Omni-7B在8×H800上不到半小时，30B
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p5-eff223fe0.jpg)
 
 
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p6-v6346550c.jpg)
 
 
 
@@ -163,7 +155,6 @@ OmniFit的校准时间极短（Qwen2.5-Omni-7B在8×H800上不到半小时，30B
 
 
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8RY20mLzup-p9-ee3de5976.jpg)
 
 ### 🔬 细节详述
 

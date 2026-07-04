@@ -68,9 +68,7 @@ SCFAE模块内部（四个映射阶段）：
 
 优化目标：统一损失 \(\Phi = L_{task} + \lambda L_{recon}\)（\(\lambda=1.0\) 默认）。任务损失主要作用于共享子空间，重建损失约束特定子空间必须保留可恢复的模态信息。关键的设计动机是：重建损失不对特征分布施加先验（区别于对比损失强迫对齐），而是仅要求“信息总量守恒”，让语义分配完全由 \(L_{task}\) 驱动。循环共享路径避免了对特定模态对的偏好，实验表明任意排列的ACC波动≤0.2%。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KDJf0EyawI-p16-v5bd09c72.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KDJf0EyawI-p16-veacc4c72.jpg)
 
 
 ### 💡 核心创新点
@@ -131,9 +129,7 @@ SFAE在全部三组骨干上的单模态性能下降最小（交叉注意力：-
 
 参数敏感性：n≥2且b≈0.5时性能波动≤0.5%；λ在0.5-2.0时稳定，在0.1或5.0极端值时性能轻度退化。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KDJf0EyawI-p2-v69e6b0ad.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KDJf0EyawI-p5-v2ecdbc8c.jpg)
 
 
 ### 🔬 细节详述
@@ -194,7 +190,6 @@ SFAE在全部三组骨干上的单模态性能下降最小（交叉注意力：-
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/KDJf0EyawI-p9-vf895b7da.jpg)
 
 
 ---

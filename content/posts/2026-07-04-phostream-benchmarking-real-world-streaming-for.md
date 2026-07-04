@@ -32,12 +32,10 @@ hiddenInHomeList: true
 1. 论文旨在解决当前多模态大模型在真实移动端流式场景中缺乏有效评估基准的问题，特别是模型“何时回答”而非“回答什么”的能力评估。
 2. 提出了 PhoStream 基准，包含 578 个视频、5,572 个开放式 QA 对，涵盖 YouTube Vlog、Phone Tutorial、Phone Record、EgoBlind 四种移动场景，将问答分为 Backward、Instant、Forward 三类，重点考察模型的时间推理能力。该基准平均视频时长 13.3 分钟，远超现有流式基准。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p1-r5678294a.jpg)
 
 3. 与现有流式基准相比，PhoStream 首次统一屏幕内和屏幕外移动场景，使用开放式 QA 替代多选，引入严格的时间截断机制和在线推理管道来真实模拟流式助手行为。
 4. 主要实验结果显示，当前最强模型存在严重的时间不对称性：Gemini 3 Pro 在 Instant 和 Backward 任务上得分超过 80，但 Forward 任务仅 16.40；Qwen3-Omni 的 Forward 得分甚至只有 1.26，早期响应率高达 97.89%。Doubao-Seed-1.6 以 44.26 的 Forward 得分成为该任务最优模型。
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p1-rdd5ad56a.jpg)
 
 | 模型 | Param | Instant | Backward | Forward | Overall |
 |------|-------|---------|----------|---------|---------|
@@ -82,14 +80,12 @@ PhoStream 是一个以 基准构建管道 + 在线推理评估协议 为核心�
 3. 场景总结与脚本生成：针对每个视频片段，调用 Gemini 3 Pro 生成场景摘要和粗粒度的场景步骤说明脚本。
 4. 候选 QA 生成：基于生成的脚本和对应视频片段，使用预设的提示模板（包含问题示例，覆盖UI 导航、动作识别、音视频整合、细粒度视觉感知等类别）生成候选 QA 对，每个 QA 对包含问题、答案、任务类型（Backward / Instant / Forward）和相关时间戳。任务类型中，Backward 问题使用过去上下文（包括回顾特定早期事件的回顾性问题，和整合从视频开始到提问时刻更长跨度的综合性问题），Instant 问题聚焦于当前 1-2 秒窗口，Forward 问题在所需证据出现之前提出。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p1-r7888e447.jpg)
 
 5. 自动化 QA 验证：这是流水线的核心质量关卡。自动检查器对每个 QA 进行二次验证，通过仅提供截断时间戳之前的视频内容和对话历史给 Gemini 3 Pro，重新判断答案的成立性。对于 Backward/Instant 问题，截断点为提问时间戳（Timestamp Question）；对于 Forward 问题，截断点为最早可回答时间戳（Timestamp Proactive）。检查器接受仍然正确的 QA、修正仍可成立的 QA，丢弃违反时间约束或无法被视频证据支撑的 QA，从而确保无未来信息泄露。最终仅保留通过验证的 QA，并将其映射回源视频片段。
 
 第二阶段：在线推理管道与 LLM-as-a-Judge 评估
 1. 在线推理管道：模拟真实移动使用场景，模型以每 1 秒为间隔接收视频和音频流。模型仅能访问最近 60 秒的滑动窗口视频帧，以降低内存开销，但完整的文本对话历史始终可用。每个问题仅在提问时间戳向模型发送一次。此后模型持续监控流式输入，在每个更新步决定输出严格指定的 `` `Silent` `` 以保持静默，或输出回答。这种设计统一处理 Backward（应立刻答）、Instant（应立刻答）和 Forward（应等待至证据出现再答）三类问题，避免了现有基准中重复查询的低效协议。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/cCMbxJcDmH-p12-e146c8b63.jpg)
 
 2. 响应窗口判定：Backward/Instant 问题的有效响应必须精确位于提问时间戳；Forward 问题的有效响应窗口为最早可回答时间戳起 2 秒内。任何在有效窗口之前的非静默/非占位符输出均被标记为 Early Response（ER），得分为 0。窗口内无任何有效输出则标记为 No Response（NR），得分也为 0。占位符响应（如"收到，我会留意的"等）被过滤为非信息性输出，不影响 ER/NR 判定。仅窗口内的有效响应进入 LLM 评判。
 3. LLM-as-a-Judge 评分：使用 Qwen3-235B-A22B-Instruct 作为评判模型，依据固定的评分准则对有效响应打分。准则强调因果推理的正确性、事实支撑和与问题的相关性，而非与参考答案的字面重叠。得分 0-5 分（后乘以 20 转换为 0-100 标度），5 分为完全准确完整的解释，4 分为核心因果逻辑存在但省略次要细节，3 分为部分相关但错失部分核心因果链，2 分为推测性且缺乏扎实依据，1 分为事实错误，0 分为未尝试回答或完全离题。

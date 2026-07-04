@@ -62,7 +62,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p20-ve73e3c85.jpg)
 
 
 
@@ -70,7 +69,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p22-vc6c398bf.jpg)
 
 
 
@@ -80,25 +78,21 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p27-v8d053bcc.jpg)
 
 
 
 
 
-![图9](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p28-v3567e796.jpg)
 
 
 
 
 
-![图10](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p33-v9248a64b.jpg)
 
 
 
 
 
-![图11](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p34-ve66b6a26.jpg)
 
 
 
@@ -115,7 +109,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p23-v1f517aa5.jpg)
 
 
 
@@ -123,7 +116,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图12](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p35-v40834c35.jpg)
 
 ### 📊 实验结果
 
@@ -131,7 +123,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p21-vaa011f2d.jpg)
 
 
 
@@ -143,7 +134,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p24-veda7df57.jpg)
 
 
 
@@ -151,7 +141,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p25-v308fb9ce.jpg)
 
 
 
@@ -159,7 +148,6 @@ MedMosaic本质上是一个大规模医学音频问答对生成与评测框架�
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OMdQJQwp26-p26-v176d09a0.jpg)
 
 ### 🔬 细节详述
 

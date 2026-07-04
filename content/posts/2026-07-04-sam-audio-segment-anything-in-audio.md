@@ -83,7 +83,6 @@ SAM AUDIO 是一个基于流匹配的生成式音频源分离模型，能够根�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Q4Cca8N7na-p14-ed5362f87.jpg)
 
 
 
@@ -103,7 +102,6 @@ SAM AUDIO 是一个基于流匹配的生成式音频源分离模型，能够根�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Q4Cca8N7na-p17-v84f4ceba.jpg)
 
 
 

@@ -60,9 +60,7 @@ hiddenInHomeList: true
 5.  元数据兼容的Mixup：当多个音频样本混合时，对元数据标签采用 “naive多热合并” 策略，即混合所有来源中存在的元数据标签。即使某个元数据只在部分被混合的录音中存在，也依然进行混合，以提供更丰富的监督信号。
 6.  对抗训练选项：为防止模型学习到虚假相关的元数据（如日夜、音频质量），系统可选择性地在编码器与特定元数据头之间插入梯度反转层，鼓励编码器学习对该元数据具有不变性的特征，而非预测它们。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qPhgIY8x81-p1-r06c5476f.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qPhgIY8x81-p1-r220f22a6.jpg)
 
 
 ### 💡 核心创新点
@@ -117,9 +115,7 @@ WABAD 生物群落分析（Proto ROC-AUC，METAPERCH vs. BioBaseline）：
 -   低资源场景（1-2 shot）：在 Xeno-Canto held-out 和 PAM soundscape 数据集上，METAPERCH均优于BioBaseline。
 -   高资源场景（8-16 shot）：在 Xeno-Canto held-out 集上，METAPERCH的优势消失甚至反被基线超越，作者认为这反映了该设定下元数据的潜在缺陷，但其更看重能代表真实部署条件的 PAM soundscape 上的持续增益。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qPhgIY8x81-p1-r31c47050.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qPhgIY8x81-p1-r54154daf.jpg)
 
 
 ### 🔬 细节详述
@@ -154,7 +150,6 @@ WABAD 生物群落分析（Proto ROC-AUC，METAPERCH vs. BioBaseline）：
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/qPhgIY8x81-p1-r6c08c060.jpg)
 
 
 ---

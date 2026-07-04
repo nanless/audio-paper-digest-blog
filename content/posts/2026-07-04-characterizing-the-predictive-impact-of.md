@@ -72,7 +72,6 @@ PRIMO 的核心是一个监督式潜变量模型，旨在处理两个模态（\(
 
 整体流程概述：训练时，无论 \(x_m\) 是否缺失，都引入连续潜变量 \(z\) 并优化变分下界（ELBO）来最大化条件似然 \(\log p(y|x_o)\) 或 \(\log p(y|x_o,x_m)\)。推理时，对给定 \(x_o\)，从条件先验 \(p(z|x_o)\) 采样多个 \(z\)，送入预测器 \(p(y|x_o,z)\) 取平均得到边际预测；若 \(x_m\) 也存在，则用 \(p(z|x_o,x_m)\)。同时，用这些样本的预测方差 V 来衡量缺失模态对预测结果的影响。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Ls4SgE9gRd-p5-e5e2b8ab9.jpg)
 
 主要组件详解：
 1.  条件先验 \(p_\omega(z|\cdot)\)：建模 \(z\) 的分布。在 \(x_m\) 缺失时使用 \(p_\omega(z|x_o)\)，完整时使用 \(p_\omega(z|x_o,x_m)\)。两者均被参数化为对角高斯分布，其均值和标准差由共享的摊销网络（Amortized Networks）输出。为了解决共享先验的平移不变性问题（对称性问题），引入正则项 R，强制 \(p_\omega(z|x_o)\) 接近标准正态分布 \(N(0,I)\)，并约束 \(p_\omega(z|x_o,x_m)\) 接近 \(p_\omega(z|x_o)\)。
@@ -82,7 +81,6 @@ PRIMO 的核心是一个监督式潜变量模型，旨在处理两个模态（\(
 
 [图像补充] 主模型对组件详解的描述准确。根据图片（如图1, 图2），论文中的公式（2）-（4）精确地定义了 \(L_{ELBO_{complete}}\)， \(L_{ELBO_{missing}}\) 和总损失 \(J(\theta, \phi, \omega)\)，其中正则项 R 为公式（4）的两项KL散度。图1清晰地展示了训练和推理阶段的数据流。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/Ls4SgE9gRd-p14-e0d35b0ed.jpg)
 
 模态影响度量 V：推理时，从条件先验中多次采样 \(z\)，计算预测分布 \(p(y|x_o,z)\) 与这些样本预测分布的平均值 \(\bar{p}(y|x_o)\) 之间的平均总变分距离（TVD），记为 \(V_{missing}\) 或 \(V_{complete}\)。
 \[V = \mathbb{E}_{z \sim p_\omega(z|x_o)} [TVD(p(\cdot|x_o, z), \bar{p}(\cdot|x_o))]\]

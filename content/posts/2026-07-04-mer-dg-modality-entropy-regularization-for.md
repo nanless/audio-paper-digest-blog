@@ -48,9 +48,7 @@ MER-DG采用“即插即用”的正则化器设计，不改变主体多模态�
 
 两个损失线性组合：\(\mathcal{L}_{\text{MER}}(Z) = \alpha_{\text{marg}} \mathcal{L}_{\text{marg}}(Z) + \alpha_{\text{spec}} \mathcal{L}_{\text{spec}}(Z)\)，作为正则化项加权累加到原框架的损失上：\(\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{base}} + \lambda \sum_{m=1}^{M} \mathcal{L}_{\text{MER}}(Z^{(m)})\)。所有损失项仅作用于编码器输出，不影响融合模块。论文通过谱分析（RankMe指标）和域分类实验验证了该正则化能恢复特征有效秩，降低域特异性，并使单模态独立预测能力回升至接近独立训练水平。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IOUmfPYShr-p14-vc72b6155.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IOUmfPYShr-p5-r690cb2eb.jpg)
 
 
 ### 💡 核心创新点
@@ -94,7 +92,6 @@ MER-DG采用“即插即用”的正则化器设计，不改变主体多模态�
 -   与基础正则化对比（Dropout, Noise, Weight Decay, Label Smoothing）：MER-DG提升远高于其他方法。
 -   鲁棒性分析（附录）：在测试时注入噪声或丢弃模态，MER-DG性能下降幅度均小于Fusion基线，显示出更好的鲁棒性。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/IOUmfPYShr-p7-v1741b82f.jpg)
 
 
 ### 🔬 细节详述

@@ -85,7 +85,6 @@ AudioMosaic 是针对通用音频理解的对比式自监督预训练框架，�
 
 数据增强与谱图生成：输入原始波形 \(r\)，首先通过一系列时域和声学增强（见表 9 中的极性反转、时间拉伸、高斯噪声、增益、高通/带阻滤波、音高偏移等）生成两个不同的增强视图 \(r_1\) 和 \(r_2\)。此步骤至关重要，用以防止两视图包含完全相同或高度相似的 patch，从而避免模型学到平凡解。每个视图随后经 log‑Mel 变换 \(T_{\text{mel}}(\cdot)\) 转换为尺寸为 \(t \times f\) 的谱图（\(t\) 为时间帧数，\(f\) 为梅尔频点数），并分割成 \(p_t \times p_f\) 的 patch（论文采用 16×16），投影后形成 \(N\) 个 patch 嵌入序列 \(\mathbf{h} \in \mathbb{R}^{N \times d}\)。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OXJ7KqVOoT-p15-v3d77cf6c.jpg)
 
 结构化掩码正样本构建：这是 AudioMosaic 区别于其他方法的关键模块。对两个增强视图产生的 patch 序列 \(\mathbf{h}_1\) 和 \(\mathbf{h}_2\)，分别独立施行两种掩码：
 - 时间掩码 \(M_t(\cdot)\)：在时间轴上随机丢弃若干连续时间段的 patch 块，由掩码比 \(\rho_t\) 控制丢弃比例。
@@ -111,11 +110,9 @@ AudioMosaic 是针对通用音频理解的对比式自监督预训练框架，�
 
 线性探测与跨层分析：表 2 和图 3 的核心发现是，AudioMosaic 的线性可分性远超生成式预训练方法。其性能在网络深层最佳，而对比方法如 BEATs 和 EAT 在中层达到峰值后急剧下降，表明 AudioMosaic 学到了更通用、更深层的语义特征。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OXJ7KqVOoT-p2-e26271e93.jpg)
 
 消融实验（全文在 AS‑20K 进行微调）：
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OXJ7KqVOoT-p2-e2db6fea5.jpg)
 
 - 掩码策略（图 4a）：对比了时间+频率、仅时间、仅频率及无结构掩码在不同掩码比下的表现。结果表明，时间+频率的结构化掩码全面优于其他策略，验证了双维度独立掩码的必要性。
 - 掩码比（图 4b）：细粒度扫描显示，时间掩码比 0.6 结合频率掩码比 0.4 时性能最优。过高的频率掩码会损害关键判别信息（如音色、音高），导致性能下降。
@@ -123,7 +120,6 @@ AudioMosaic 是针对通用音频理解的对比式自监督预训练框架，�
 - 增强策略（表 9）：证明了数据增强是必要的，仅靠掩码不足以构建充分不同的视图。逐步添加各类增强均能带来增益。
 - 内存效率（表 5）：相比 EAT，AudioMosaic 在同等 batch size 下显存消耗极低，128 batch 时仅需约 6.3GB，而 EAT 已显存溢出。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/OXJ7KqVOoT-p2-e19300112.jpg)
 
 - 有效秩分析（图 2）：对比预训练下的结构化掩码在推理时，不论采用何种掩码，都取得了最高的有效秩，证明其表示空间更丰富，维度崩塌风险更低。
 

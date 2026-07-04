@@ -71,9 +71,7 @@ hiddenInHomeList: true
 
 Self-Flow整体框架在标准流匹配（Rectified Flow）基础上引入自监督表征对齐，流程为：给定干净输入 \(x_0\)，采样两个时间步 \(t\) 和 \(s\)，按概率 \(R_M\) 对部分token分配较低的噪声时间步 \(\min(t,s)\)，其余token分配较高的时间步，构造异质噪声向量 \(\tau\)，再通过公式 \(x_\tau = \text{diag}(1-\tau)x_0 + \text{diag}(\tau)x_1\) 生成噪声输入 \(x_\tau\)。随后进行两次前向传播：一次处理异质噪声输入 \(x_\tau\) 的“学生”网络 \(f_\theta\)，另一次处理全部token取较清洁时间步 \(\tau_{\min} = \min(t,s)\) 的版本 \(x_{\tau_{\min}}\)，其中教师网络 \(f_{\theta'}\) 为学生网络的EMA副本。生成损失 \(\mathcal{L}_{gen}\) 为标准的流速度场回归 \(\|f_\theta(x_\tau, \tau) - (x_1 - x_0)\|^2\)；表征损失 \(\mathcal{L}_{rep}\) 要求学生网络某一中间层（深度 \(l=0.3D\)）的投影特征尽量接近教师网络对应层（深度 \(k=0.7D\)）的特征，使用余弦相似度度量。总损失为 \(\mathcal{L} = \mathcal{L}_{gen} + \gamma \cdot \mathcal{L}_{rep}\)，其中 \(\gamma=0.8\)。该架构不依赖任何外部模型，DTS实现了天然的信息不对称（如图3、图8所示），既保持了推理时的均匀噪声边际，又迫使模型通过清洁上下文推断缺失信息，从而学会强语义表征。选择DTS而非全掩码或独立时间步是因为后者会产生训练-推理失配，导致生成质量崩塌（如图2b所示）。论文在附录A中证明，DTS损失的最小点同样最小化标准条件流匹配（CFM）损失，保证了理论基础。该方法可无缝应用于图像、视频、音频及多模态混合训练，只需为各模态配备独立的输入/输出投影层，其余Transformer权重共享。模型扩展时间步条件从单标量 \(t \in \mathbb{R}^1\) 到向量形式 \(t \in \mathbb{R}^N\)，使得每个token以其对应的噪声时间步作为条件。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/HoThWhfxiK-p25-v9cf9fbcb.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/HoThWhfxiK-p26-vdd989cf9.jpg)
 
 
 ### 💡 核心创新点
@@ -128,9 +126,7 @@ ImageNet 256×256 类条件生成
 
 多模态联合训练消融（图8a、表6）显示，在极端偏置某模态的权重设置下，Self-Flow在所有模态上均一致提升性能。机器人控制迁移实验（图7、图8b）表明，Self-Flow学到的表征在复杂多步推理任务（Move Near、Open and Place）上表现出显著优势。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/HoThWhfxiK-p27-vf85fd8c6.jpg)
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/HoThWhfxiK-p28-v334cb427.jpg)
 
 
 ### 🔬 细节详述
@@ -167,7 +163,6 @@ ImageNet 256×256 类条件生成
 
 ### 📷 论文图片
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/HoThWhfxiK-p29-ve8fbb240.jpg)
 
 
 ---

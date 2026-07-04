@@ -53,7 +53,6 @@ OmniVideo-R1的核心是一个基于强化学习的两阶段后训练框架，�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/he06cvibXv-p14-rd2f71243.jpg)
 
 
 
@@ -70,7 +69,6 @@ OmniVideo-R1的核心是一个基于强化学习的两阶段后训练框架，�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/he06cvibXv-p8-rca34b9df.jpg)
 
 
 
@@ -83,7 +81,6 @@ OmniVideo-R1的核心是一个基于强化学习的两阶段后训练框架，�
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/he06cvibXv-p4-r60f150eb.jpg)
 
 
 
@@ -115,7 +112,6 @@ OmniVideoBench按音频类型与视频时长细分
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/he06cvibXv-p18-r6b0ad5b6.jpg)
 
 
 

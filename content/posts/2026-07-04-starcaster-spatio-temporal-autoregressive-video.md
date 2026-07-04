@@ -53,13 +53,11 @@ STARCaster 提出了一个统一的时空自回归视频扩散模型，旨在将
 
 STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通过网络膨胀（network inflation）将其 2D UNet 扩展为能处理 4D 潜在张量 \(z \in \mathbb{R}^{f \times h \times w \times c}\) 的时空视频扩散模型，并在三个递进的训练阶段中逐步集成音频驱动运动、自强迫自回归生成和视角控制能力。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p1-ea38b721f.jpg)
 
 1. 基础架构扩展：
 - 时间 Transformer 模块：在原始 UNet 的每个空间注意力块之后插入时间自注意力层。其将空间维度 \((h,w)\) 合并到批次维度，沿时间轴 \(f\) 执行自注意力，实现在保持空间细节的同时进行跨帧的全局时序信息交换。原始 2D UNet 权重冻结，仅训练新增的时间层，以保留 Arc2Face 的身份保真度。
 - 解耦多源交叉注意力（Decoupled Multi-Source Cross-Attention）：替代 Arc2Face 的单流身份交叉注意力，引入三个并行的交叉注意力流，分别处理身份特征 \(c_{id}\)、音频特征 \(c_a\) 和相机特征 \(c_c\)。三路注意力使用共享的查询 \(Q\)，但各自拥有独立的、可训练的关键/值投影矩阵。最终注意力输出为三路结果的加权和：\(z_{out} = \text{Attention}_{id}(Q, K_{id}, V_{id}) + \lambda_a \cdot \text{Attention}_a(Q, K_a, V_a) + \lambda_c \cdot \text{Attention}_c(Q, K_c, V_c)\)，其中比例因子 \(\lambda_a, \lambda_c \in [0,1]\) 为超参数。训练时，根据所处阶段将非活跃模态的 \(\lambda\) 设为0，实现解耦学习。
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p1-r131a431a.jpg)
 
 - 参考网络与扩展自注意力（Reference Network & Extended Self-Attention）：维持一个冻结的 Arc2Face UNet 副本作为参考编码器。其从参考图像中提取的各层空间特征 \(z_{ref}\) 与当前生成帧的潜在特征 \(z\) 在空间维度拼接，形成扩展的键和值 \(K, V = \text{concat}(z, z_{ref})W\)，而查询 \(Q\) 仅来自视频潜在特征。此外，在去噪 UNet 的自注意力投影层中引入低秩适应（LoRA，秩=64），以在不显著增加参数量的前提下增强模型融合参考特征的能力。
 
@@ -69,7 +67,6 @@ STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通�
 
 3. 三阶段递进训练：
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p1-r5efff053.jpg)
 
 - 阶段一：音频驱动运动学习。仅激活身份和音频交叉注意力（\(\lambda_a=1, \lambda_c=0\)），冻结参考网络。在大规模“in-the-wild”谈话视频数据集上训练，使模型从静态 ID 先验过渡到自然的语音驱动面部动态。此阶段后期（100K 迭代后）激活唇读感知损失，以增强唇音同步。
 - 阶段二：自强迫自回归训练。启用参考网络，采用自强迫（Self-Forcing）策略取代传统的教师强迫（Teacher Forcing）。具体而言，对于递归深度 \(F=2\) 的序列，首个视频片段用真值上下文初始化，后续片段的上下文则来自模型自身在前一片段上的去噪估计 \(x_0\)（通过一步去噪公式从预测噪声 \(\epsilon\) 快速获得，虽不如多步采样精确，但已足够提供有效的上下文帧）。这使得模型在训练时就暴露于自身的预测误差，有效缓解曝光偏差，同时显著增加了有效的时序上下文长度，减少因强参考帧条件导致的“复制粘贴”效应。
@@ -102,13 +99,11 @@ STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通�
 | STARCaster (Ours) | 24.89 | 16.86 | 185.24 | 145.35 | 5.493 | 6.292 | 8.724 | 8.540 | 4.896 | 4.760 |
 | STARCaster (ID-Driven*) | - | - | - | - | 5.627 | 6.397 | 8.695 | 8.468 | 4.905 | 4.750 |
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p1-r9e8938fe.jpg)
 
 - 关键结果：STARCaster 在视觉质量（FID, FVD）上全面领先，超越参数量达5B的 DiT 模型 Hallo3。在唇形同步（LSE-C, LSE-D）和头部姿态多样性（Pose Std）上也达到顶级水平。ID-Driven 模式在无参考图情况下甚至获得了最高的 LSE-C（6.397）和最低的 LSE-D（8.468），证明强身份先验的有效性。
 - 用户研究：35名参与者对头部运动自然度投票，STARCaster 获32%的最高票数，超过 EchoMimic (27%)、Hallo3 (22%) 和 FLOAT (19%)。
 - 推理效率：STARCaster 的 UNet 架构生成5秒视频仅需 2.2 分钟（A100），比 DiT 架构的 Hallo3（21.4 分钟）快近10倍。
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p1-rf80a04b3.jpg)
 
 2. 3D感知说话肖像生成：
 在 NeRSemble 多视角数据集上评估。
@@ -122,7 +117,6 @@ STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通�
 
 - 关键结果：STARCaster 在所有指标上均超越基线，尤其在视角准确性（PSNR 14.219, LPIPS 0.477）和唇同步（LSE-C 3.957）上提升显著。
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p17-e1a971625.jpg)
 
 3. 消融实验：
 在 TH-1KH 和 Hallo3 数据集上验证各组件贡献。
@@ -136,7 +130,6 @@ STARCaster 以预训练的 ID 感知条件扩散模型 Arc2Face 为骨干，通�
 
 - 结论：所有组件均对性能有正向贡献。移除自强迫训练导致姿态多样性下降最明显（Pose Std 从4.760降至4.161），验证了其对于增强运动自然度的关键作用。
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/8wOASkNLzQ-p17-e8155227f.jpg)
 
 ### 🔬 细节详述
 

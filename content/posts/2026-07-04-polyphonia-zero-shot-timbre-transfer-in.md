@@ -86,9 +86,7 @@ Polyphonia是一个基于预训练AudioLDM 2扩散模型的双路径零样本编
 
 组件间数据流：\(G_{X_0}\) 作为全局标量图，根据T-UNet每层的特征图分辨率进行降采样，输入到所有下采样层的源插值和声学调制模块中。整个去噪编辑过程采用100步DDIM，分类器自由引导（CFG）尺度设为3.5，调制强度 \(\lambda\) 设为2.5（恒定），所有校准操作仅应用于下采样层。
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/L8VRGNACqH-p17-vad29335b.jpg)
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/L8VRGNACqH-p20-v11a3fd8f.jpg)
 
 
 ### 💡 核心创新点
@@ -136,7 +134,6 @@ Polyphonia是一个基于预训练AudioLDM 2扩散模型的双路径零样本编
    - 稀疏提示鲁棒性：即使使用缺乏细节形容词的稀疏提示，Polyphonia的CLAP（0.322）仍高于使用完整提示的Melodia（0.296）。
    - 混合复杂度影响：性能在4音轨以内非常稳定，在5音轨以上的极端情况下出现轻微但非灾难性的性能下降。
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/L8VRGNACqH-p7-vd76e3f2e.jpg)
 
 
 ### 🔬 细节详述

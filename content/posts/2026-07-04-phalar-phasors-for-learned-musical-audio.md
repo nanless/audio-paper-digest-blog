@@ -101,7 +101,6 @@ PHALAR 是一个端到端的对比学习框架，专为音乐相干性建模设�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/7sYtYeiJan-p1-e40be4e13.jpg)
 
 
 
@@ -109,7 +108,6 @@ PHALAR 是一个端到端的对比学习框架，专为音乐相干性建模设�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/7sYtYeiJan-p16-r131e1443.jpg)
 
 
 

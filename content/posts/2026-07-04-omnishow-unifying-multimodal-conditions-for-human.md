@@ -97,7 +97,6 @@ OMNISHOW 是一个端到端的多模态条件视频生成框架，基于 12B 的
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/uNWexq8gQB-p1-r0598f301.jpg)
 
 
 
@@ -107,7 +106,6 @@ OMNISHOW 是一个端到端的多模态条件视频生成框架，基于 12B 的
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/uNWexq8gQB-p1-r0715c906.jpg)
 
 
 
@@ -119,7 +117,6 @@ OMNISHOW 是一个端到端的多模态条件视频生成框架，基于 12B 的
 
 
 
-![图4](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/uNWexq8gQB-p1-r15971563.jpg)
 
 
 
@@ -130,7 +127,6 @@ OMNISHOW 是一个端到端的多模态条件视频生成框架，基于 12B 的
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/uNWexq8gQB-p1-r1c7813b2.jpg)
 
 
 
@@ -155,7 +151,6 @@ RAP2V 级联基线对比：OMNISHOW 在12个指标上全面超越 VACE+LatentSyn
 
 
 
-![图28](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/uNWexq8gQB-p8-r1ca58cf5.jpg)
 
 消融实验关键发现：
 - 统一通道注入：通道拼接相比令牌拼接 FaceSim 提升 0.106（0.601→0.707）；去除伪帧重建损失使 FaceSim 降至 0.678。

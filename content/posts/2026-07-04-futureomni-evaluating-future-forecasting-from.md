@@ -61,7 +61,6 @@ FutureOmni 的核心方法包括基准构建流水线、评估框架设计和 OF
 
 一、基准构建流水线（三阶段）
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76zKCPBKXP-p15-vebb72a72.jpg)
 
 阶段1：音频协调的视频筛选 （Audio-Coordinated Video Selection）
 - 初始收集：从 YouTube 收集约 18K 视频，时长从 30 秒到 20 分钟不等。
@@ -102,7 +101,6 @@ FutureOmni 的核心方法包括基准构建流水线、评估框架设计和 OF
 
 主实验结果（Table 2）：Gemini 3 Flash 以 64.8% 的总体准确率遥遥领先，而最优开源模型 Qwen3-Omni 为 53.05%。视频专用模型表现系统性低于同等级 Omni 模型，例如 GPT-4o 仅 49.70%，这验证了在未来预测中音频信息的不可或缺性。
 
-![图14](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/76zKCPBKXP-p20-v7cdcd371.jpg)
 
 领域差异（Table 2 细分）：Cartoon 和 Game 领域表现较好，而 Documentary 和 Emergency 领域表现最差（例如，AVicuna 在 Doc 上仅为 20.83%），表明对叙述性语音的理解与混乱场景下的推理仍是重大挑战。
 

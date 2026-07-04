@@ -68,7 +68,6 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图1](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p1-rebbcf13f.jpg)
 
 
 
@@ -99,7 +98,6 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图2](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-e5e6ac106.jpg)
 
 
 
@@ -120,7 +118,6 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图5](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-e850f1609.jpg)
 
 
 
@@ -138,13 +135,11 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图6](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-e9ee89d01.jpg)
 
 
 
 
 
-![图7](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-eb8257fe1.jpg)
 
 
 
@@ -153,7 +148,6 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图3](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-e748b5590.jpg)
 
 
 
@@ -164,7 +158,6 @@ TextME 框架的核心思想是将多个异构的、预训练的对比编码器�
 
 
 
-![图8](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/SIZYrEf1a7-p20-ebc6581cb.jpg)
 
 
 
