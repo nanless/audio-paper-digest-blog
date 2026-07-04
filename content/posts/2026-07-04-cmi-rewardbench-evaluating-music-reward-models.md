@@ -59,7 +59,6 @@ CMI-RM以组合式指令（可选文本描述、歌词、参考音频）和待�
 3. Joint Transformer（可训练）：单层自注意力Transformer，拼接提示表征与评价音频表征，显式建模“用户意图”与“生成结果”之间的交互，进而判决指令遵循度和审美契合度。
 4. 预测头（可训练）：对Joint Transformer中评价音频部分的隐状态作时间池化，经轻量MLP后线性投影为两个独立标量（Alignment与Musicality），构成双头输出。
 
-![架构图](https://nanless.github.io/audio-paper-digest-images/icml-2026/2026-07-04/k9DhP16RZt-p9-ee37b9be5.jpg)
 
 训练策略
 - 第一阶段（伪标签预训练）：利用Qwen3-Omni对约11万对生成音频进行双向一致性过滤，获得110k组偏好对；采用Bradley-Terry偏好损失，并引入0.2的标签平滑以抑制伪标签的过拟合和分布偏移。
