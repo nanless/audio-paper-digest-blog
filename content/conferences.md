@@ -11,7 +11,9 @@ layout: "single"
 
 IEEE International Conference on Acoustics, Speech and Signal Processing
 
-## [ICML 2026](../categories/icml-2026/)
+## [ICML 2026](../posts/icml2026-summary/)
+
+International Conference on Machine Learning · 137 篇深度分析
 
 International Conference on Machine Learning
 
