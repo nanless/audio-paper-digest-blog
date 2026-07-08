@@ -141,7 +141,7 @@ HuBERT、WavLM、UniSpeech 的曲率相关系数超过 0.96，几乎共享同一
 
 
 
-![(a) Compression (entropy)](https://arxiv.org/html/2607.06392v1/figures/size/0_.png)
+![规模对比：(a) Compression entropy](https://arxiv.org/html/2607.06392v1/figures/size/0_.png)
 
 
 
@@ -149,13 +149,13 @@ HuBERT、WavLM、UniSpeech 的曲率相关系数超过 0.96，几乎共享同一
 
 
 
-![(b) Geometry (curvature)](https://arxiv.org/html/2607.06392v1/figures/size/1_.png)
+![规模对比：(b) Geometry curvature](https://arxiv.org/html/2607.06392v1/figures/size/1_.png)
 
 
 
 
 
-![(c) Robustness (InfoNCE)](https://arxiv.org/html/2607.06392v1/figures/size/2_.png)
+![规模对比：(c) Robustness InfoNCE](https://arxiv.org/html/2607.06392v1/figures/size/2_.png)
 
 
 
@@ -163,19 +163,19 @@ HuBERT、WavLM、UniSpeech 的曲率相关系数超过 0.96，几乎共享同一
 
 
 
-![(a) Compression (entropy)](https://arxiv.org/html/2607.06392v1/figures/finetune/0.png)
+![微调数据量：(a) Compression entropy](https://arxiv.org/html/2607.06392v1/figures/finetune/0.png)
 
 
 
 
 
-![(b) Geometry (curvature)](https://arxiv.org/html/2607.06392v1/figures/finetune/1.png)
+![微调数据量：(b) Geometry curvature](https://arxiv.org/html/2607.06392v1/figures/finetune/1.png)
 
 
 
 
 
-![(c) Robustness (InfoNCE)](https://arxiv.org/html/2607.06392v1/figures/finetune/2.png)
+![微调数据量：(c) Robustness InfoNCE](https://arxiv.org/html/2607.06392v1/figures/finetune/2.png)
 
 
 
