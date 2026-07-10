@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 MulTTiPop: A Multitrack Transcription Dataset for Pop Music
 
-#音乐转录 #数据集
+标签：#音乐转录 #数据集
 
 **7.5/10** | 创新 1/2 | 严谨 1.1/1.5 | 实验 0.8/1.5 | 清晰 0.7/1 | 影响 1.1/1.5 | 开源 1.2/1.5 | 复现 0.5/0.5 | 工程 1.1/1.5
 

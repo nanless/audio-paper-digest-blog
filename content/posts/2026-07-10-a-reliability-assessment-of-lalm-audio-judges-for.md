@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents
 
-#语音质量评估 #语音大模型
+标签：#语音质量评估 #语音大模型
 
 **7.8/10** | 创新 0.8/2 | 严谨 1.1/1.5 | 实验 0.9/1.5 | 清晰 1/1 | 影响 0.6/1.5 | 开源 1.5/1.5 | 复现 0.4/0.5 | 工程 1.5/1.5
 

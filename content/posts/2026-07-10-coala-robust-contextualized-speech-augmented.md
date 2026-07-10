@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 COALA: Robust Contextualized Speech-augmented Language Modeling for ASR via Contrastive Regularizer and Biasing Score Estimation
 
-#语音识别 #对比学习 #参数高效微调 #鲁棒性
+标签：#语音识别 #对比学习 #参数高效微调 #鲁棒性
 
 **6.4/10** | 创新 1/2 | 严谨 1.2/1.5 | 实验 0.8/1.5 | 清晰 0.7/1 | 影响 0.6/1.5 | 开源 1/1.5 | 复现 0.3/0.5 | 工程 0.8/1.5
 

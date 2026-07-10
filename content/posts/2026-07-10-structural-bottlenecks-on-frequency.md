@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 Structural Bottlenecks on Frequency Representation in End-to-End Audio Models
 
-#可解释性 #音频生成 #模型评估 #CNN
+标签：#可解释性 #音频生成 #模型评估 #CNN
 
 **8.1/10** | 创新 1.5/2 | 严谨 1.3/1.5 | 实验 0.8/1.5 | 清晰 1/1 | 影响 0.8/1.5 | 开源 1.2/1.5 | 复现 0.5/0.5 | 工程 1/1.5
 

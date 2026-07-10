@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 PS4: Proxy-Supervised Joint Training for Real Target Speaker Extraction
 
-#语音分离 #多任务学习 #基准测试 #自监督学习 #说话人日志
+标签：#语音分离 #多任务学习 #基准测试 #自监督学习 #说话人日志
 
 **6.5/10** | 创新 0.8/2 | 严谨 0.8/1.5 | 实验 0.8/1.5 | 清晰 0.7/1 | 影响 1/1.5 | 开源 1/1.5 | 复现 0.3/0.5 | 工程 1.1/1.5
 

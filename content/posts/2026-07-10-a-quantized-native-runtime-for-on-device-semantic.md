@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 A Quantized Native Runtime for On-Device Semantic Audio Generation
 
-#音乐生成 #模型压缩 #高效推理 #扩散模型 #低资源
+标签：#音乐生成 #模型压缩 #高效推理 #扩散模型 #低资源
 
 **8.1/10** | 创新 1/2 | 严谨 1.2/1.5 | 实验 1/1.5 | 清晰 0.8/1 | 影响 1/1.5 | 开源 1.2/1.5 | 复现 0.4/0.5 | 工程 1.5/1.5
 

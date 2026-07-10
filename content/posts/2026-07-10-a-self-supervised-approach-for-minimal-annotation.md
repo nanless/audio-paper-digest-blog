@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 A Self-Supervised Approach for Minimal-Annotation Hydroacoustic Data Exploration
 
-#自监督学习 #音频事件检测 #低资源 #预训练 #迁移学习
+标签：#自监督学习 #音频事件检测 #低资源 #预训练 #迁移学习
 
 **6.5/10** | 创新 1/2 | 严谨 0.9/1.5 | 实验 0.8/1.5 | 清晰 0.8/1 | 影响 0.5/1.5 | 开源 1.2/1.5 | 复现 0.3/0.5 | 工程 1/1.5
 

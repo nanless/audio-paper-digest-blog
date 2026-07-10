@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 SHAP-Weighted Cross-Modal Expert Fusion for Emotion and Sentiment Recognition: Evidence and Limits
 
-#模型融合 #语音情感识别 #基准测试
+标签：#模型融合 #语音情感识别 #基准测试
 
 **6.2/10** | 创新 1/2 | 严谨 1.2/1.5 | 实验 1.1/1.5 | 清晰 0.8/1 | 影响 0.8/1.5 | 开源 0.2/1.5 | 复现 0.3/0.5 | 工程 0.8/1.5
 

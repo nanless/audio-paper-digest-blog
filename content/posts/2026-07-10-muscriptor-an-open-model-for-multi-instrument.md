@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 MuScriptor: An Open Model for Multi-Instrument Music Transcription
 
-#音乐转录 #预训练 #强化学习 #自回归模型 #数据集
+标签：#音乐转录 #预训练 #强化学习 #自回归模型 #数据集
 
 **8.4/10** | 创新 1.3/2 | 严谨 1.2/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.3/1.5 | 开源 1/1.5 | 复现 0.3/0.5 | 工程 1.2/1.5
 

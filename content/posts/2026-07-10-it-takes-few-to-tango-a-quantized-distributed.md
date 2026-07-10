@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 It Takes Few to TANGO: A Quantized Distributed Model for Binaural Speech Enhancement
 
-#语音增强 #模型压缩 #知识蒸馏 #多通道 #助听器
+标签：#语音增强 #模型压缩 #知识蒸馏 #多通道 #助听器
 
 **7/10** | 创新 1.1/2 | 严谨 1.2/1.5 | 实验 1.1/1.5 | 清晰 0.8/1 | 影响 0.8/1.5 | 开源 0.2/1.5 | 复现 0.4/0.5 | 工程 1.4/1.5
 

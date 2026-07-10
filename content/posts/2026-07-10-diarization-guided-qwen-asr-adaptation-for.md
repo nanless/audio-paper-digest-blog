@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech
 
-#说话人日志 #语音识别 #多语言 #强化学习 #参数高效微调
+标签：#说话人日志 #语音识别 #多语言 #强化学习 #参数高效微调
 
 **5.8/10** | 创新 0.8/2 | 严谨 0.9/1.5 | 实验 0.9/1.5 | 清晰 0.5/1 | 影响 0.5/1.5 | 开源 0.5/1.5 | 复现 0.5/0.5 | 工程 1.2/1.5
 

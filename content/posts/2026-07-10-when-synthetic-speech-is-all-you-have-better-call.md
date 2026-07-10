@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 When Synthetic Speech Is All You Have: Better Call GRPO
 
-#语音识别 #强化学习 #领域适应 #参数高效微调 #语音大模型
+标签：#语音识别 #强化学习 #领域适应 #参数高效微调 #语音大模型
 
 **5.9/10** | 创新 0.8/2 | 严谨 1/1.5 | 实验 1.1/1.5 | 清晰 1/1 | 影响 0.7/1.5 | 开源 0.3/1.5 | 复现 0.3/0.5 | 工程 0.7/1.5
 
@@ -65,7 +65,7 @@ hiddenInHomeList: true
 1. 语音编码器（WavLM-Large）：完全冻结，负责将输入的波形 \(x\) 转化为帧级的声学表示序列。
 2. 语音投影器：由两层线性变换和中间的ReLU激活函数组成。它接收声学表示，执行5倍下采样，使序列长度与后续LLM的token序列更为匹配，起着模态对齐和长度压缩的作用。该模块在训练中是可更新的。
 3. 语言模型（LLaMA-3.2-1B-Instruct）：作为解码器的主体，参数冻结。为了进行轻量化适配，在其内部插入了 LoRA 适配器，这是模型在训练中可更新的主要部分之一。
-4. SFT 阶段：采用标准的教师强制（teacher forcing）方法，通过最小化每个时间步的参考 token \(y^*_t\) 的交叉熵损失 \(\mathcal{L}_{\mathrm{SFT}}(\theta)=-\mathbb{E}_{(x,y^{\star})}\left[\sum_{t=1}^{T}\log\pi_{\theta}\left(y^{\star}_{t} \mid x,y^{\star}_{<t}\right)\right]\) 来让模型逐token地模仿参考文本。
+4. SFT 阶段：采用标准的教师强制（teacher forcing）方法，通过最小化每个时间步的参考 token \(y^*_t\) 的交叉熵损失 \(\mathcal{L}_{\mathrm{SFT}}(\theta)=-\mathbb{E}_{(x,y^{\star})}\left[\sum_{t=1}^{T}\log\pi_{\theta}\left(y^{\star}_{t} \mid x,y^{\star}_{(t)}\right)\right]\) 来让模型逐token地模仿参考文本。
 5. GRPO 阶段：一个无需价值函数的在线策略强化学习方法。对每个输入 \(x\)，从旧策略中采样一组 \(G=4\) 个输出假设 \(\{o_1,...,o_G\}\)。每条假设根据其与参考文本 \(y^\) 的WER计算奖励 \(r_i=1-WER(o_i, y^)\)。然后计算组内标准化优势 \(A_i = \frac{r_i - mean(\{r_1,...,r_G\})}{std(\{r_1,...,r_G\})+\epsilon_{std}}\)。策略更新采用PPO风格的裁剪替代目标 \(\mathcal{J}(\theta)=\mathbb{E}\left[\frac{1}{G}\sum_{i=1}^{G}\frac{1}{|o_i|}\sum_{t}\min(\rho_{i,t}A_i, \operatorname{clip}(\rho_{i,t},1{-}\epsilon,1{+}\epsilon)A_i)\right]-\beta\mathrm{KL}\!\left[\pi_{\theta}\|\pi_{\text{ref}}\right]\)，其中 \(\rho_{i,t}\) 是重要性权重，\(\epsilon\) 是裁剪范围，\(\beta\) 是与固定参考策略（SFT检查点）的KL散度惩罚系数。这使模型强化高奖励的序列，抑制低奖励的序列，同时防止模型崩塌。
 
 关键设计选择与动机：选择GRPO而非其他RL方法，是因为它无需额外训练一个价值函数，可直接用任务指标作为奖励，对于希望优化序列级指标（WER）的场景非常直接。保持编码器和LLM主体冻结，仅更新投影器和少量LoRA参数，是以最小可变参数量来隔离并研究“训练目标（SFT vs. GRPO）”对域适应效果的影响，避免了大规模预训练带来的混杂因素。

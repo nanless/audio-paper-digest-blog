@@ -1,5 +1,5 @@
 ---
-title: "Best-of- TTS Evaluation is Confounded by ASR Family Alignment"
+title: "Best-of-N TTS Evaluation is Confounded by ASR Family Alignment"
 date: 2026-07-10
 draft: false
 tags: [语音合成, 语音识别, 自监督学习, 鲁棒性]
@@ -8,9 +8,9 @@ description: "语音合成 | 7.8/10"
 hiddenInHomeList: true
 ---
 
-# 📄 Best-of-\(N\) TTS Evaluation is Confounded by ASR Family Alignment
+# 📄 Best-of-N TTS Evaluation is Confounded by ASR Family Alignment
 
-#语音合成 #语音识别 #自监督学习 #鲁棒性
+标签：#语音合成 #语音识别 #自监督学习 #鲁棒性
 
 **7.8/10** | 创新 1.5/2 | 严谨 1/1.5 | 实验 0.8/1.5 | 清晰 0.8/1 | 影响 1.2/1.5 | 开源 1.2/1.5 | 复现 0.4/0.5 | 工程 0.9/1.5
 

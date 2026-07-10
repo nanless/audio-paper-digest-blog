@@ -10,7 +10,7 @@ hiddenInHomeList: true
 
 # 📄 On the Role of Conversational Timing in Synthetic Training Data for ASR
 
-#语音识别 #低资源
+标签：#语音识别 #低资源
 
 **7.1/10** | 创新 1.4/2 | 严谨 0.9/1.5 | 实验 0.9/1.5 | 清晰 1/1 | 影响 0.7/1.5 | 开源 1.2/1.5 | 复现 0.3/0.5 | 工程 0.7/1.5
 
