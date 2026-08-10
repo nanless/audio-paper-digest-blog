@@ -4,17 +4,19 @@ date: 2026-07-10
 draft: false
 tags: [语音识别, 说话人日志, 多语言, 参数高效微调, 强化学习, 语音大模型, 低资源]
 categories: [论文速递]
-description: "语音识别 | 7/10"
+description: "语音识别 | 7.0/10"
 hiddenInHomeList: true
+paper_digest_page_type: paper
+paper_digest_arxiv_id: "2607.08208"
 ---
 
 # 📄 Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech
 
 标签：#语音识别 #说话人日志 #多语言 #参数高效微调 #强化学习 #语音大模型 #低资源
 
-**7/10** | 创新 1.2/2 | 严谨 1.2/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 1.2/1.5
+**7.0/10** | 创新 1.2/2 | 严谨 1.2/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 1.2/1.5
 
-✅ **7/10** | 前50% | 文档类型：系统技术报告 | 评分置信度：高 | #语音识别 | #语音大模型 | #说话人日志 #多语言 | [arxiv](https://arxiv.org/abs/2607.08208)
+✅ **7.0/10** | 前50% | 文档类型：系统技术报告 | 评分置信度：高 | #语音识别 | #语音大模型 | #说话人日志 #多语言 | [arxiv](https://arxiv.org/abs/2607.08208)
 
 
 ### 👥 作者与机构

@@ -6,6 +6,8 @@ tags: [多任务学习]
 categories: [论文速递]
 description: "多任务学习 | 7.7/10"
 hiddenInHomeList: true
+paper_digest_page_type: paper
+paper_digest_arxiv_id: "2607.08360"
 ---
 
 # 📄 Inverse-designed meta processing units for multi-task near-field photonic computing
@@ -14,7 +16,7 @@ hiddenInHomeList: true
 
 **7.7/10** | 创新 1.3/2 | 严谨 1.4/1.5 | 实验 1/1.5 | 清晰 0.9/1 | 影响 0.5/1.5 | 开源 1/1.5 | 复现 0.3/0.5 | 工程 1.3/1.5
 
-✅ **7.7/10** | 前25% | 文档类型：系统技术报告 | 评分置信度：高 | #多任务学习 | #多任务学习 | [arxiv](https://arxiv.org/abs/2607.08360)
+✅ **7.7/10** | 前25% | 文档类型：系统技术报告 | 评分置信度：高 | #多任务学习 | [arxiv](https://arxiv.org/abs/2607.08360)
 
 
 ### 👥 作者与机构

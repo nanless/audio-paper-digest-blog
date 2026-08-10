@@ -6,6 +6,8 @@ tags: [多模态模型, 基准测试, 数据集]
 categories: [论文速递]
 description: "多模态模型 | 6.3/10"
 hiddenInHomeList: true
+paper_digest_page_type: paper
+paper_digest_arxiv_id: "2607.07907"
 ---
 
 # 📄 Multimodal Unlearning Across Vision, Language, Video, and Audio: Survey of Methods, Datasets, and Benchmarks
@@ -14,7 +16,7 @@ hiddenInHomeList: true
 
 **6.3/10** | 创新 1.5/2 | 严谨 1.2/1.5 | 实验 0.8/1.5 | 清晰 0.8/1 | 影响 0.5/1.5 | 开源 0.2/1.5 | 复现 0.3/0.5 | 工程 1/1.5
 
-✅ **6.3/10** | 前50% | 文档类型：综述 | 评分置信度：高 | #多模态模型 | #多模态模型 | #基准测试 #数据集 | [arxiv](https://arxiv.org/abs/2607.07907)
+✅ **6.3/10** | 前50% | 文档类型：综述 | 评分置信度：高 | #多模态模型 | #基准测试 #数据集 | [arxiv](https://arxiv.org/abs/2607.07907)
 
 
 ### 👥 作者与机构
