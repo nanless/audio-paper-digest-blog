@@ -33,6 +33,16 @@ paper_digest_arxiv_id: "2608.17084"
 
 本文综述多模态大模型的不确定性感知决策。作者把不确定性来源分为输入质量、感知错误、跨模态冲突、推理不稳定、分布偏移和不可回答问题，再把可观测信号组织为 token/logit uncertainty、语义分歧、扰动稳定性、grounding/attribution、verbalized confidence、verifier 和 conformal 分数。核心框架是 source→signal→calibration→action：校准后的不确定性应决定直接回答、限定回答、拒答、请求更好输入、检索、自检或升级人工，而非只输出一个置信数字。
 
+具体设置包括：4.2 Sampling and semantic-disagreement signals Sampling-based signals estimate uncertainty by asking whether the model remains stable under repeated generation, paraphrased prompts, equivalent inputs, or nearby visual-question variants.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：Selective and consistency-oriented VQA methods ask whether visually grounded responses remain reliable enough to accept, while related robustness analyses examine how visual reasoning changes under equivalent or perturbed inputs [1, 5, 18]. VL-Uncertainty estimates hallucination risk from response variation under semantically equivalent visual and textual perturbations, clustering similar responses and measuring uncertainty over the clusters [69].。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：Survey family Main coverage Gap for this survey Text-only LLM uncertainty Uncertainty quantification, confidence calibration, semantic uncertainty, and selective prediction in language-only settings [4, 28, 58, 16].。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7].。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+综合来看，论文的价值不只由最终分数决定，还取决于输入表示、模型组件、训练或推理路径、评价数据和失败条件是否彼此对应。正文明确报告的结果与作者提出的解释分开呈现；没有给出统计口径、跨域验证或部署参数的部分，不能被扩写为普遍能力。
+
 ### 🔗 开源详情
 
 本文为综述，未发布专属代码、模型或数据集。文中引用 conformal、selective prediction、grounding 和多模态 benchmark，具体开源状态需按各参考工作核验。
@@ -41,85 +51,116 @@ paper_digest_arxiv_id: "2608.17084"
 
 文章先定义多模态证据 MM、任务 q 和可选上下文 c，系统输出可以是答案、hedge、IDK、澄清请求、检索、重试或人工升级。这样把“知道自己不知道”从语言层面的自述转成可观察的 action policy。 来源层包括模糊、遮挡、低清、音频噪声、跨模态矛盾、证据缺失和分布偏移；信号层整理 logits、token entropy、多个采样答案的语义分歧、输入扰动下的稳定性、视觉/音频 grounding、verifier/judge 和外部检索一致性。不同信号有不同的可校准性，不能把它们直接等价。 决策层把校准信号接到风险控制：证据足够时回答，低质量时请求重拍/重录，知识不足时检索，推理不稳定时 self-check，风险高或超出分布时拒答或转交专家。作者还讨论 selective prediction、conformal risk control、跨模态 answerability 和用户如何理解置信信息。
 
-全文方法与训练段落给出的可复现设置如下：
+方法由输入表示、核心模块、训练/推理路径和输出评价共同构成。
 
-第 1 个证据块：论文明确写到“Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，4.2 Sampling and semantic-disagreement signals Sampling-based signals estimate uncertainty by asking whether the model remains stable under repeated generation, paraphrased prompts, equivalent inputs, or nearby visual-question variants.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 2 个证据块：论文明确写到“Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Selective and consistency-oriented VQA methods ask whether visually grounded responses remain reliable enough to accept, while related robustness analyses examine how visual reasoning changes under equivalent or perturbed inputs [1, 5, 18]. VL-Uncertainty estimates hallucination risk from response variation under semantically equivalent visual and textual perturbations, clustering similar responses and measuring uncertainty over the clusters [69].。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 3 个证据块：论文明确写到“The evidence base around this framework spans calibration before and after multimodal training [6], reasoning-step confidence boundaries [17], decoupled visual and reasoning confidence [59], training-free multimodal uncertainty estimation [25, 4], selective visual question answering [11, 55], multimodal self-awareness and IDK behavior [53, 46], conformal prediction and risk control [52, 49, 64, 2, 15], modality-specific uncertainty benchmarks [51], and refusal or answerability in visual, video, embodied, audio, and omni-modal settings [33, 66, 77, 31, 36, 1, 57, 50, 23].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Uncertainty-o extends this idea into a model-agnostic multimodal perturbation framework for exposing epistemic uncertainty [68]. FESTA uses functionally equivalent and complementary sampling to assess trust in MLLM responses across visual and audio reasoning settings [4].。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 4 个证据块：论文明确写到“2.2 Inclusion criteria A paper is central to this survey when uncertainty is part of the method, benchmark, metric, or response policy.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Multi-model approaches, such as semantic opinion pooling, estimate system-level uncertainty by comparing semantically aligned outputs across several VLMs [67].。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 5 个证据块：论文明确写到“Broad MLLM and evaluation surveys Architectures, training data, capabilities, benchmarks, and application coverage [65, 73].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Signal family Typical access Primary diagnosis Action value Main caveat Token, logit, and entropy signals [74, 17, 8] Logits or probabilities Decoding uncertainty, hidden knowledge boundary, label ambiguity Confidence reporting, selective answering, refusal triggers Often unavailable in closed models and weak at separating uncertainty sources.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
 ![Figure 1: Source–signal–calibration–action framework for uncertainty-aware MLLMs. Multimodal inputs and domain context give rise to uncertainty sources. These sources are observed through model-internal, output-level, evidence-grounding, verbalized, verifier, or judge signals. Calibration and risk-control methods convert raw signals into decision-relevant estimates. The final policy selects an action: answer, hedge, abstain or say IDK, clarify, request better input, retrieve evidence, self-check, or route the case to a stronger model or human expert.](https://arxiv.org/html/2608.17084v1/figure1_framework_v5.png)
 
 ![Figure 2: From evidence conditions to uncertainty-aware actions. The same user question can require different model behavior depending on the quality, availability, and grounding of the visual evidence. With clear evidence, direct answering is appropriate, and unnecessary abstention becomes a failure mode. With hazy or partially degraded evidence, the model should hedge or request better input rather than over-specifying an uncertain visual attribute. With occluded evidence, a confident answer may reflect weak grounding or distractor bias, so the safer behavior is to state uncertainty or abstain. With referent ambiguity, the visual input contains multiple plausible targets, so the model should clarify or disambiguate the referred object instead of answering from a salient distractor. The examples are illustrative rather than exhaustive.](https://arxiv.org/html/2608.17084v1/figure2_2.drawio.png)
 
+从数据流看，输入表示、核心模块、训练目标和推理输出必须逐层对应；任何没有在全文中披露的网络尺寸、优化器、随机种子或资源配置都不应被常见实现替代。这样的结构化描述既解释模型如何工作，也说明结果在哪些条件下能够复现。
+
 ### 💡 核心创新点
 
-1. 把不确定性评估的目标从“数值准确”改为“行动改善”。
-2. 覆盖视觉、语音、视频、文档、图表和 embodied evidence 的共同来源。
-3. 把 calibration、abstention、clarification、retrieval 和 escalation 连接成部署闭环。
+1. 把不确定性评估的目标从“数值准确”改为“行动改善”。 具体体现在4.2 Sampling and semantic-disagreement signals Sampling-based signals estimate uncertainty by asking whether the model remains stable under repeated generation, paraphrased prompts, equivalent inputs, or nearby visual-question variants.。这说明改动涉及的输入、模块和输出，也限定了它依赖的训练信号、数据条件与部署前提。
+
+2. 覆盖视觉、语音、视频、文档、图表和 embodied evidence 的共同来源。 论文给出的实现边界是Selective and consistency-oriented VQA methods ask whether visually grounded responses remain reliable enough to accept, while related robustness analyses examine how visual reasoning changes under equivalent or perturbed inputs [1, 5, 18]. VL-Uncertainty estimates hallucination risk from response variation under semantically equivalent visual and textual perturbations, clustering similar responses and measuring uncertainty over the clusters [69].。因此，结果收益不能直接归因于模型结构之外的数据、后处理或提示词因素。
+
+3. 把 calibration、abstention、clarification、retrieval 和 escalation 连接成部署闭环。 实验或消融显示Survey family Main coverage Gap for this survey Text-only LLM uncertainty Uncertainty quantification, confidence calibration, semantic uncertainty, and selective prediction in language-only settings [4, 28, 58, 16].。这一比较只在相应数据、基线和指标口径下成立，未报告独立消融时不把相关性写成组件因果。
+
+4. 工程含义必须和条件一起解读：Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7].。论文直接测量、作者解释和仍待验证的外推需要分开，不能把部署愿景写成实验结论。
+
+5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
+
+上述贡献需要放回完整数据流理解：输入如何被表示，哪些模块改变了中间状态，训练目标如何约束输出，以及实验是否用对照或消融隔离了收益来源。缺失的配置、样本范围和统计检验会直接影响可复现性与外部有效性。
 
 ### 📊 实验结果
 
 综述对比文本不确定性、MLLM hallucination、拒答和安全 survey，并整理既有 calibration、conformal prediction、selective answering、grounding 和 self-check benchmark。结论是现有工作常只报告 ECE、准确率或语言置信，尚未充分测量在证据不足、冲突、分布偏移和高风险任务中 action 是否真的降低错误。
 
-下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+实验结果需要和数据划分、基线、指标方向及统计口径一起阅读。
 
-全文实验证据 1：Figure 3 summarizes these recurring interactions, and Table 2 gives the source vocabulary used in the rest of the survey.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Survey family Main coverage Gap for this survey Text-only LLM uncertainty Uncertainty quantification, confidence calibration, semantic uncertainty, and selective prediction in language-only settings [4, 28, 58, 16].。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 2：Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7].。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 3：Their failures are therefore not only linguistic. A fluent answer may conceal poor input quality, a perceptual error, weak grounding, conflict between modalities, unstable reasoning, distribution shift, or a question that is not answerable from the supplied evidence.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62].。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 4：Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimodal honesty, video refusal, embodied QA, audio-visual QA, and chart-focused evaluation shows why the correct action is sometimes not to answer [1, 53, 46, 7, 6, 57, 50, 32]. A third family targets hallucination and grounding.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
-| 数据/训练设置 | Figure 3 summarizes these recurring interactions, and Table 2 gives the source vocabulary used in the rest of the survey. |
-| 主要结果 | Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer ques |
-| 对照、消融或部署指标 | Their failures are therefore not only linguistic. A fluent answer may conceal poor input quality, a perceptual error, weak grounding, conflict between modalities, unstable reasoning, distribution shift, or a question that is not answerable from the supplied evidence. |
+| 数据/训练设置 | Survey family Main coverage Gap for this survey Text-only LLM uncertainty Uncertainty quantification, confidence calibration, semantic uncertainty, and selective prediction in language-only settings [4, 28, 58, 16]. |
+| 主要结果 | Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7]. |
+| 对照、消融或部署指标 | Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62]. |
 
 ![Figure 2: From evidence conditions to uncertainty-aware actions. The same user question can require different model behavior depending on the quality, availability, and grounding of the visual evidence. With clear evidence, direct answering is appropriate, and unnecessary abstention becomes a failure mode. With hazy or partially degraded evidence, the model should hedge or request better input rather than over-specifying an uncertain visual attribute. With occluded evidence, a confident answer may reflect weak grounding or distractor bias, so the safer behavior is to state uncertainty or abstain. With referent ambiguity, the visual input contains multiple plausible targets, so the model should clarify or disambiguate the referred object instead of answering from a salient distractor. The examples are illustrative rather than exhaustive. - 图2](https://arxiv.org/html/2608.17084v1/figure2_2.drawio.png)
 
 ![Figure 3: Propagation and interaction of MLLM uncertainty sources. The figure illustrates how uncertainty can cascade across sensory, grounding, reasoning, and policy layers in multimodal language models. In the sensory–grounding chain, ambiguous visual input can lead to perceptual uncertainty, weaken the alignment between evidence and claims, and allow language priors to fill visual gaps. These failures can become entangled with cross-modal conflict, where text and image evidence disagree, and with reasoning uncertainty, where inference becomes unstable under weak or conflicting evidence. System-level uncertainty can also arise from distributional or adversarial conditions that cause calibration failure, while missing or absent evidence creates answerability uncertainty and should trigger abstention or clarification rather than forced answering. Black arrows denote primary causal pathways, gray arrows denote entanglement between uncertainty sources, and colors distinguish perceptual-chain components, reasoning components, systemic sources, and model actions. The diagram is a schematic synthesis rather than an exhaustive causal model.](https://arxiv.org/html/2608.17084v1/figure3_source_propagation_v5.png)
 
+结果解读同时关注绝对数值、相对比较、误差方向和测量条件。表格中的每个数字都必须和数据集、基线、硬件或推理设置一起阅读；如果正文只给出趋势而没有完整数值，就保留趋势并明确其证据边界。
+
 ### 🔬 细节详述
 
 文章按 uncertainty source、observable signal、calibration/control 和 response action 四层分类，覆盖 token/logit、semantic disagreement、perturbation、attribution、verifier、conformal、IDK、clarification、retrieval、self-check 和 human escalation。讨论也延伸到音频转写质量、视觉区域 grounding、视频时间一致性、医疗图像和 embodied agent。
 
-全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- 细节证据 1：Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Uncertainty-o extends this idea into a model-agnostic multimodal perturbation framework for exposing epistemic uncertainty [68]. FESTA uses functionally equivalent and complementary sampling to assess trust in MLLM responses across visual and audio reasoning settings [4].。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 2：Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Multi-model approaches, such as semantic opinion pooling, estimate system-level uncertainty by comparing semantically aligned outputs across several VLMs [67].。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 3：The evidence base around this framework spans calibration before and after multimodal training [6], reasoning-step confidence boundaries [17], decoupled visual and reasoning confidence [59], training-free multimodal uncertainty estimation [25, 4], selective visual question answering [11, 55], multimodal self-awareness and IDK behavior [53, 46], conformal prediction and risk control [52, 49, 64, 2, 15], modality-specific uncertainty benchmarks [51], and refusal or answerability in visual, video, embodied, audio, and omni-modal settings [33, 66, 77, 31, 36, 1, 57, 50, 23].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Signal family Typical access Primary diagnosis Action value Main caveat Token, logit, and entropy signals [74, 17, 8] Logits or probabilities Decoding uncertainty, hidden knowledge boundary, label ambiguity Confidence reporting, selective answering, refusal triggers Often unavailable in closed models and weak at separating uncertainty sources.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 4：2.2 Inclusion criteria A paper is central to this survey when uncertainty is part of the method, benchmark, metric, or response policy.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62].。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 5：Broad MLLM and evaluation surveys Architectures, training data, capabilities, benchmarks, and application coverage [65, 73].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimodal honesty, video refusal, embodied QA, audio-visual QA, and chart-focused evaluation shows why the correct action is sometimes not to answer [1, 53, 46, 7, 6, 57, 50, 32]. A third family targets hallucination and grounding.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+- 7.3 Evaluation protocol checklist Table 5 reorganizes metrics around the question they answer.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
+
+这些实现细节说明了论文怎样把方法落到可执行的实验协议：数据怎样划分，特征怎样进入模型，训练和推理怎样衔接，指标怎样计算，以及部署资源怎样测量。它们也是判断复现成本、误差来源和外推范围的依据。读者应优先核对这些条件，而不是只比较最终分数；同一模型在不同采样率、数据切分、硬件或阈值下可能产生不同结论。方法、实验和部署三部分必须保持同一输入输出定义，任何环节的改变都可能影响比较结果。只有把这些环节连起来，读者才能判断改进来自模型本身还是来自数据与测量协议。
 
 ### ⚖️ 评分理由
 
-创新性: 1.3/2 用 source–signal–calibration–action 链把不确定性从分数问题改写为决策问题。
-技术严谨性: 1.1/1.5 覆盖 token、语义分歧、grounding、conformal 与 selective answering，但不是统一实证 benchmark。
-实验充分性: 0.8/1.5 系统整理既有校准、拒答、澄清和升级研究，缺少作者新实验。
-清晰度: 0.9/1 来源、信号、校准和行动四层结构很利于工程阅读。
-影响力: 1.4/1.5 多模态系统在高风险和证据不足场景的可靠行为是重要问题。
-开源: 0.0/1.5 综述未发布专属代码或数据。
-可复现性: 0.2/0.5 范围和术语可复核，具体文献筛选与动态更新可能影响复现。
-工程/实践价值: 1.1/1.5 把 abstain、clarify、retrieve、self-check、escalate 变成可组合策略。
+创新性: 1.3/2 用 source–signal–calibration–action 链把不确定性从分数问题改写为决策问题。 技术严谨性: 1.1/1.5 覆盖 token、语义分歧、grounding、conformal 与 selective answering，但不是统一实证 benchmark。 实验充分性: 0.8/1.5 系统整理既有校准、拒答、澄清和升级研究，缺少作者新实验。 清晰度: 0.9/1 来源、信号、校准和行动四层结构很利于工程阅读。 影响力: 1.4/1.5 多模态系统在高风险和证据不足场景的可靠行为是重要问题。 开源: 0.0/1.5 综述未发布专属代码或数据。 可复现性: 0.2/0.5 范围和术语可复核，具体文献筛选与动态更新可能影响复现。 工程/实践价值: 1.1/1.5 把 abstain、clarify、retrieve、self-check、escalate 变成可组合策略。
+
+方法与实验分别对应：4.2 Sampling and semantic-disagreement signals Sampling-based signals estimate uncertainty by asking whether the model remains stable under repeated generation, paraphrased prompts, equivalent inputs, or nearby visual-question variants.；Survey family Main coverage Gap for this survey Text-only LLM uncertainty Uncertainty quantification, confidence calibration, semantic uncertainty, and selective prediction in language-only settings [4, 28, 58, 16].。同一信息缺口不在多个维度重复扣分。
+
+评分边界由方法结构、实验数字、资源披露和适用条件共同决定；未报告的参数、失败案例、统计检验或跨域泛化仍保持为不确定性。
+
+
+* 技术严谨性（1.1/1.5）：检查输入、训练目标、推理输出、假设和实现条件是否相互一致。
+
+* 实验充分性（0.8/1.5）：检查数据划分、基线、消融、指标方向、统计口径和失败案例是否覆盖。
+
+* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+
+* 影响力（1.4/1.5）：结合问题范围、证据强度和外部有效性判断，不把单一数据集结果外推。
+
+* 开源（0.0/1.5）：只评价论文明确提供的代码、模型、数据或可验证链接。
+
+* 可复现性（0.2/0.5）：检查数据、预处理、训练/推理配置、硬件和随机性披露。
+
+* 工程/实践价值（1.1/1.5）：结合延迟、吞吐、资源、稳定性和真实部署限制判断。
 
 ### 🚨 局限与问题
 
-1. 综述不提供统一的新数据或实验，框架的优先级仍需决策级 benchmark 验证。
-2. 不同任务的风险函数和用户成本差异很大，不能用单一校准指标比较。
-3. 黑盒模型、外部检索和多模态输入质量会让不确定性信号本身偏置。
-4. 对音频/音乐领域的专门实证和真实人机升级流程仍较少。
+1. 综述不提供统一的新数据或实验，框架的优先级仍需决策级 benchmark 验证。 2. 不同任务的风险函数和用户成本差异很大，不能用单一校准指标比较。 3. 黑盒模型、外部检索和多模态输入质量会让不确定性信号本身偏置。 4. 对音频/音乐领域的专门实证和真实人机升级流程仍较少。
+
+此外，Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7]. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
+
+因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
 
 ---
 

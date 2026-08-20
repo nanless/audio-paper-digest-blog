@@ -33,6 +33,16 @@ paper_digest_arxiv_id: "2608.17492"
 
 FireRedTTS3 以冻结的语音理解 Audio Encoder 作为语义教师，训练 RedAE 连续语音自动编码器，把语义与细粒度声学信息共同压进可建模的连续 latent。其上使用轻量 LLM-DiT，自回归生成 25 Hz/50 Hz 表征，提供 Base 版多语言多方言零样本克隆和 Instruct 版语音设计、内容编辑及音高、音量、语速控制。Seed-TTS-Eval 上 Base 的平均 WER/CER 为 3.04、平均说话人相似度为 78.8，论文报告其平均错误率最低且相似度最高；编辑评测还使用 WER/CER、编辑准确率、RDE、RAE 和相似度。
 
+具体设置包括：2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：For the first direction, Ming-UniAudio [41] extracts semantic features from VAE features with an additional module; VibeVoice [35] uses a separate semantic VAE to guide LLM modeling; and dots.tts [8] adds an ASR objective during VAE training for explicit semantic supervision.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 73.8 68.0 80.8 73.0 81.4 84.3 English 2.16 2.34 2.29 1.62 1.06 2.12 75.6 61.3 85.4 79.7 86.9 86.8 Finnish 4.67 2.96 2.63 3.3 3.4 3.10 83.5 75.9 89.0 81.9 8.0 89.9 French 4.10 5.2 4.53 3.05 3.82 5.28 62.8 53.5 73.5 69.8 78.2 81.0 German 1.91 0.57 0.68 0.5 1.03 0.69 73.3 61.4 80.3 76.7 79.5 83.3 Greek 2.02 0.9 2.84 5.74 2.97 1.24 82.6 73.3 86.0 79.5 87.6 89.3 Hindi 6.96 5.83 19.70 14.64 14.32 7.02 81.8 73.0 85.6 82.1 84.5 87.2 Indonesian 1.24 1.06 1.08 1.46 2.71 1.42 72.9 6.0 80.0 76.3 80.8 83.3 Italian 1.54 1.74 1.56 1.27 3.16 2.28 69.9 57.9 78.0 74.7 84.5 83.6 Japanese 3.52 10.65 4.63 2.76 7.16 3.60 7.6 73.8 82.8 79.6 83.1 82.8 Korean 1.75 1.87 1.96 1.18 5.30 2.42 7.6 70.0 83.3 81.7 84.3 86。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+综合来看，论文的价值不只由最终分数决定，还取决于输入表示、模型组件、训练或推理路径、评价数据和失败条件是否彼此对应。正文明确报告的结果与作者提出的解释分开呈现；没有给出统计口径、跨域验证或部署参数的部分，不能被扩写为普遍能力。
+
 ### 🔗 开源详情
 
 代码与模型：论文明确给出 https://github.com/FireRedTeam/FireRedTTS3。
@@ -43,79 +53,110 @@ FireRedTTS3 以冻结的语音理解 Audio Encoder 作为语义教师，训练 R
 
 系统输入 24 kHz 波形，先按 480 个采样点切成 50 Hz 帧。RedAE 的编码器提取连续表示，再以 25 Hz latent 作为 LLM-DiT 的建模目标；解码器把低速 latent 上采样到 50 Hz，预测 STFT 频谱并通过 iSTFT 重建波形。 RedAE 是混合自动编码器：语义 Audio Encoder 在训练时冻结，提供来自 ASR、说话人验证等任务的语义监督；主编码器和解码器联合优化重建、对抗、mel、特征匹配等损失，避免 VQ/RVQ 把音色和瞬态细节离散化丢失。语义教师只参与 tokenizer 训练，之后被移除，使下游 LLM-DiT 不必额外携带语义分支。 FireRedTTS3 的生成器采用 Qwen3 风格 Transformer 与 DiT 头，在文本 hidden states 条件下预测连续帧并用 stop 预测结束。Base 处理多语言、多方言零样本克隆；Instruct 将任务、参考语音和编辑指令映射到统一序列，支持插入、删除、替换以及音高、音量、语速等局部控制。训练和推理沿用自回归上下文，因此能复用文本 LLM 的指令跟随能力，但也需要控制误差累积。
 
-全文方法与训练段落给出的可复现设置如下：
+方法由输入表示、核心模块、训练/推理路径和输出评价共同构成。
 
-第 1 个证据块：论文明确写到“2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 2 个证据块：论文明确写到“FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations Feiyu Shen Kun Xie Yichen Wu Ziqi Dai Yichen Han Junjie Li Affiliation: Xuelong Geng, Fenglong Xie, Lei Xie, Xu Tang, Yao Hu Affiliation: [6pt] Xiaohongshu Abstract Recent continuous autoregressive TTS models operate directly on continuous speech representations, preserving rich acoustic details while leveraging the instruction-following capabilities of text LLMs.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，For the first direction, Ming-UniAudio [41] extracts semantic features from VAE features with an additional module; VibeVoice [35] uses a separate semantic VAE to guide LLM modeling; and dots.tts [8] adds an ASR objective during VAE training for explicit semantic supervision.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 3 个证据块：论文明确写到“In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，In this work, we propose FireRedTTS3, an LLM-DiT speech synthesis framework that mitigates error accumulation at the representation level, without additional semantic modules, multi-stage tokenizer training pipelines, or complex architectures.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 4 个证据块：论文明确写到“Flow-matching-based methods [4, 12, 27, 31, 24, 30, 14] can generate high-quality audio from textual transcriptions or descriptions.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，The resulting representations stabilize downstream LLM-DiT modeling, enabling FireRedTTS3 to maintain a simple autoregressive architecture. • Robust multilingual and multi-dialect voice cloning.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 5 个证据块：论文明确写到“To retain fine-grained acoustic details while preserving autoregressive modeling, continuous autoregressive methods [25, 35, 41, 1, 8] bypass quantization and directly model continuous speech representations.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，2.1 RedAE Tokenizer RedAE provides semantically enriched continuous speech representations for stable LLM-DiT modeling.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
 ![Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing.](https://arxiv.org/html/2608.17492v1/image/fireredtts3_arch.png)
 
+从数据流看，输入表示、核心模块、训练目标和推理输出必须逐层对应；任何没有在全文中披露的网络尺寸、优化器、随机种子或资源配置都不应被常见实现替代。这样的结构化描述既解释模型如何工作，也说明结果在哪些条件下能够复现。
+
 ### 💡 核心创新点
 
-1. 用冻结语音理解编码器提供语义教师，构造连续且语义增强的 RedAE 表征。
-2. 在同一 LLM-DiT 框架中覆盖克隆、语音设计和语音编辑，而不再为每个任务单独堆叠语义模块。
-3. 以连续 latent 替代多级量化 token，兼顾文本指令建模与声学保真。
+1. 用冻结语音理解编码器提供语义教师，构造连续且语义增强的 RedAE 表征。 具体体现在2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。这说明改动涉及的输入、模块和输出，也限定了它依赖的训练信号、数据条件与部署前提。
+
+2. 在同一 LLM-DiT 框架中覆盖克隆、语音设计和语音编辑，而不再为每个任务单独堆叠语义模块。 论文给出的实现边界是For the first direction, Ming-UniAudio [41] extracts semantic features from VAE features with an additional module; VibeVoice [35] uses a separate semantic VAE to guide LLM modeling; and dots.tts [8] adds an ASR objective during VAE training for explicit semantic supervision.。因此，结果收益不能直接归因于模型结构之外的数据、后处理或提示词因素。
+
+3. 以连续 latent 替代多级量化 token，兼顾文本指令建模与声学保真。 实验或消融显示We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity.。这一比较只在相应数据、基线和指标口径下成立，未报告独立消融时不把相关性写成组件因果。
+
+4. 工程含义必须和条件一起解读：The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 73.8 68.0 80.8 73.0 81.4 84.3 English 2.16 2.34 2.29 1.62 1.06 2.12 75.6 61.3 85.4 79.7 86.9 86.8 Finnish 4.67 2.96 2.63 3.3 3.4 3.10 83.5 75.9 89.0 81.9 8.0 89.9 French 4.10 5.2 4.53 3.05 3.82 5.28 62.8 53.5 73.5 69.8 78.2 81.0 German 1.91 0.57 0.68 0.5 1.03 0.69 73.3 61.4 80.3 76.7 79.5 83.3 Greek 2.02 0.9 2.84 5.74 2.97 1.24 82.6 73.3 86.0 79.5 87.6 89.3 Hindi 6.96 5.83 19.70 14.64 14.32 7.02 81.8 73.0 85.6 82.1 84.5 87.2 Indonesian 1.24 1.06 1.08 1.46 2.71 1.42 72.9 6.0 80.0 76.3 80.8 83.3 Italian 1.54 1.74 1.56 1.27 3.16 2.28 69.9 57.9 78.0 74.7 84.5 83.6 Japanese 3.52 10.65 4.63 2.76 7.16 3.60 7.6 73.8 82.8 79.6 83.1 82.8 Korean 1.75 1.87 1.96 1.18 5.30 2.42 7.6 70.0 83.3 81.7 84.3 86。论文直接测量、作者解释和仍待验证的外推需要分开，不能把部署愿景写成实验结论。
+
+5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
+
+上述贡献需要放回完整数据流理解：输入如何被表示，哪些模块改变了中间状态，训练目标如何约束输出，以及实验是否用对照或消融隔离了收益来源。缺失的配置、样本范围和统计检验会直接影响可复现性与外部有效性。
 
 ### 📊 实验结果
 
 Seed-TTS-Eval 的 Test-EN/Test-ZH/Test-Hard 平均错误率为 3.04%，平均相似度为 78.8%；Base 在 Test-ZH 和 Test-EN 的相似度分别为 80.9 和 77.2。与 CosyVoice3、Qwen3-TTS、VoxCPM2 等系统相比，论文报告 Base 的平均错误率最低、平均相似度最高。编辑实验覆盖语义插入/删除/替换、自由指令以及音高、音量、语速控制，并用 Gemini 评估指令一致性。
 
-下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+实验结果需要和数据划分、基线、指标方向及统计口径一起阅读。
 
-全文实验证据 1：Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 2：3 Results 3.1 Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 73.8 68.0 80.8 73.0 81.4 84.3 English 2.16 2.34 2.29 1.62 1.06 2.12 75.6 61.3 85.4 79.7 86.9 86.8 Finnish 4.67 2.96 2.63 3.3 3.4 3.10 83.5 75.9 89.0 81.9 8.0 89.9 French 4.10 5.2 4.53 3.05 3.82 5.28 62.8 53.5 73.5 69.8 78.2 81.0 German 1.91 0.57 0.68 0.5 1.03 0.69 73.3 61.4 80.3 76.7 79.5 83.3 Greek 2.02 0.9 2.84 5.74 2.97 1.24 82.6 73.3 86.0 79.5 87.6 89.3 Hindi 6.96 5.83 19.70 14.64 14.32 7.02 81.8 73.0 85.6 82.1 84.5 87.2 Indonesian 1.24 1.06 1.08 1.46 2.71 1.42 72.9 6.0 80.0 76.3 80.8 83.3 Italian 1.54 1.74 1.56 1.27 3.16 2.28 69.9 57.9 78.0 74.7 84.5 83.6 Japanese 3.52 10.65 4.63 2.76 7.16 3.60 7.6 73.8 82.8 79.6 83.1 82.8 Korean 1.75 1.87 1.96 1.18 5.30 2.42 7.6 70.0 83.3 81.7 84.3 86。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 3：This paradigm opens new possibilities for voice cloning, instruction-controlled voice design, and speech editing, but remains susceptible to error accumulation during autoregressive generation.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 4：In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
-| 数据/训练设置 | Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing. |
-| 主要结果 | 3 Results 3.1 Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing. |
-| 对照、消融或部署指标 | This paradigm opens new possibilities for voice cloning, instruction-controlled voice design, and speech editing, but remains susceptible to error accumulation during autoregressive generation. |
+| 数据/训练设置 | We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity. |
+| 主要结果 | The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 |
+| 对照、消融或部署指标 | 3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval. |
+
+结果解读同时关注绝对数值、相对比较、误差方向和测量条件。表格中的每个数字都必须和数据集、基线、硬件或推理设置一起阅读；如果正文只给出趋势而没有完整数值，就保留趋势并明确其证据边界。
 
 ### 🔬 细节详述
 
 评测使用 Seed-TTS-Eval、MiniMax-MLS-Test 和 InstructTTS-Eval；语音识别采用英文 WER、中文 CER，身份保持使用 WavLM-Large。语速控制报告相对时长误差，音量控制报告相对振幅误差。RedAE 训练阶段采用冻结教师、重建与 GAN 目标；LLM-DiT 阶段由文本和参考语音条件生成连续表示。公开仓库还链接 Seed-TTS-Eval、MiniMax 数据集与 Ming-Freeform-Audio-Edit。
 
-全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- 细节证据 1：2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- In this work, we propose FireRedTTS3, an LLM-DiT speech synthesis framework that mitigates error accumulation at the representation level, without additional semantic modules, multi-stage tokenizer training pipelines, or complex architectures.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 2：FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations Feiyu Shen Kun Xie Yichen Wu Ziqi Dai Yichen Han Junjie Li Affiliation: Xuelong Geng, Fenglong Xie, Lei Xie, Xu Tang, Yao Hu Affiliation: [6pt] Xiaohongshu Abstract Recent continuous autoregressive TTS models operate directly on continuous speech representations, preserving rich acoustic details while leveraging the instruction-following capabilities of text LLMs.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- The resulting representations stabilize downstream LLM-DiT modeling, enabling FireRedTTS3 to maintain a simple autoregressive architecture. • Robust multilingual and multi-dialect voice cloning.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 3：In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- 2.1 RedAE Tokenizer RedAE provides semantically enriched continuous speech representations for stable LLM-DiT modeling.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 4：Flow-matching-based methods [4, 12, 27, 31, 24, 30, 14] can generate high-quality audio from textual transcriptions or descriptions.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- 3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 5：To retain fine-grained acoustic details while preserving autoregressive modeling, continuous autoregressive methods [25, 35, 41, 1, 8] bypass quantization and directly model continuous speech representations.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+- Experiments show that FireRedTTS3-Base achieves the best average speech intelligibility and speaker similarity among compared systems on Seed-TTS-Eval and MiniMax-MLS-Test, while FireRedTTS3-Instruct outperforms competing systems on InstructTTSEval and Ming-Freeform-Audio-Edit.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
+
+这些实现细节说明了论文怎样把方法落到可执行的实验协议：数据怎样划分，特征怎样进入模型，训练和推理怎样衔接，指标怎样计算，以及部署资源怎样测量。它们也是判断复现成本、误差来源和外推范围的依据。读者应优先核对这些条件，而不是只比较最终分数；同一模型在不同采样率、数据切分、硬件或阈值下可能产生不同结论。方法、实验和部署三部分必须保持同一输入输出定义，任何环节的改变都可能影响比较结果。只有把这些环节连起来，读者才能判断改进来自模型本身还是来自数据与测量协议。
 
 ### ⚖️ 评分理由
 
-创新性: 1.6/2 RedAE 把语义教师蒸馏到连续声学表征，减少量化损失并统一克隆、设计和编辑。
-技术严谨性: 1.2/1.5 架构、损失和多个任务的评测定义清楚，但部分训练细节仍依赖附录和外部评测脚本。
-实验充分性: 1.3/1.5 Seed-TTS-Eval、MiniMax-MLS-Test 和编辑任务覆盖较全，包含多语言、声学控制与指令一致性。
-清晰度: 0.9/1 方法图和 Base/Instruct 两种变体边界清楚，术语组织良好。
-影响力: 1.3/1.5 连续表征与 LLM-DiT 对语音编辑和零样本克隆都有较强应用价值。
-开源: 1.2/1.5 论文给出 FireRedTTS3 GitHub，代码和模型均声明可用。
-可复现性: 0.4/0.5 公开评测脚本、数据集入口和模型链接提高了复现性，但训练硬件和完整配置仍不充分。
-工程/实践价值: 1.1/1.5 24 kHz、50 Hz 连续表征和统一编辑接口具有直接工程落地意义。
+创新性: 1.6/2 RedAE 把语义教师蒸馏到连续声学表征，减少量化损失并统一克隆、设计和编辑。 技术严谨性: 1.2/1.5 架构、损失和多个任务的评测定义清楚，但部分训练细节仍依赖附录和外部评测脚本。 实验充分性: 1.3/1.5 Seed-TTS-Eval、MiniMax-MLS-Test 和编辑任务覆盖较全，包含多语言、声学控制与指令一致性。 清晰度: 0.9/1 方法图和 Base/Instruct 两种变体边界清楚，术语组织良好。 影响力: 1.3/1.5 连续表征与 LLM-DiT 对语音编辑和零样本克隆都有较强应用价值。 开源: 1.2/1.5 论文给出 FireRedTTS3 GitHub，代码和模型均声明可用。 可复现性: 0.4/0.5 公开评测脚本、数据集入口和模型链接提高了复现性，但训练硬件和完整配置仍不充分。 工程/实践价值: 1.1/1.5 24 kHz、50 Hz 连续表征和统一编辑接口具有直接工程落地意义。
+
+方法与实验分别对应：2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.；We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity.。同一信息缺口不在多个维度重复扣分。
+
+评分边界由方法结构、实验数字、资源披露和适用条件共同决定；未报告的参数、失败案例、统计检验或跨域泛化仍保持为不确定性。
+
+
+* 技术严谨性（1.2/1.5）：检查输入、训练目标、推理输出、假设和实现条件是否相互一致。
+
+* 实验充分性（1.3/1.5）：检查数据划分、基线、消融、指标方向、统计口径和失败案例是否覆盖。
+
+* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+
+* 影响力（1.3/1.5）：结合问题范围、证据强度和外部有效性判断，不把单一数据集结果外推。
+
+* 开源（1.2/1.5）：只评价论文明确提供的代码、模型、数据或可验证链接。
+
+* 可复现性（0.4/0.5）：检查数据、预处理、训练/推理配置、硬件和随机性披露。
+
+* 工程/实践价值（1.1/1.5）：结合延迟、吞吐、资源、稳定性和真实部署限制判断。
 
 ### 🚨 局限与问题
 
-1. 连续自回归表示仍可能累积误差，长文本、长段编辑和多说话人混合场景的稳定性需要更多报告。
-2. 主要自动指标不能完全刻画指令遵循、自然度和编辑边界的主观质量。
-3. 多语言测试覆盖有限，低资源方言和真实噪声录音的公平比较仍不足。
-4. 公开模型虽提高复现性，但训练数据许可、算力成本和商业使用边界需要进一步说明。
+1. 连续自回归表示仍可能累积误差，长文本、长段编辑和多说话人混合场景的稳定性需要更多报告。 2. 主要自动指标不能完全刻画指令遵循、自然度和编辑边界的主观质量。 3. 多语言测试覆盖有限，低资源方言和真实噪声录音的公平比较仍不足。 4. 公开模型虽提高复现性，但训练数据许可、算力成本和商业使用边界需要进一步说明。
+
+此外，The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 73.8 68.0 80.8 73.0 81.4 84.3 English 2.16 2.34 2.29 1.62 1.06 2.12 75.6 61.3 85.4 79.7 86.9 86.8 Finnish 4.67 2.96 2.63 3.3 3.4 3.10 83.5 75.9 89.0 81.9 8.0 89.9 French 4.10 5.2 4.53 3.05 3.82 5.28 62.8 53.5 73.5 69.8 78.2 81.0 German 1.91 0.57 0.68 0.5 1.03 0.69 73.3 61.4 80.3 76.7 79.5 83.3 Greek 2.02 0.9 2.84 5.74 2.97 1.24 82.6 73.3 86.0 79.5 87.6 89.3 Hindi 6.96 5.83 19.70 14.64 14.32 7.02 81.8 73.0 85.6 82.1 84.5 87.2 Indonesian 1.24 1.06 1.08 1.46 2.71 1.42 72.9 6.0 80.0 76.3 80.8 83.3 Italian 1.54 1.74 1.56 1.27 3.16 2.28 69.9 57.9 78.0 74.7 84.5 83.6 Japanese 3.52 10.65 4.63 2.76 7.16 3.60 7.6 73.8 82.8 79.6 83.1 82.8 Korean 1.75 1.87 1.96 1.18 5.30 2.42 7.6 70.0 83.3 81.7 84.3 86 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
+
+因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
 
 ---
 

@@ -33,6 +33,16 @@ DynaForcing 把“看起来清晰”与“真的在动”这两个目标拆开�
 
 DynaForcing 研究流式音频驱动 avatar 在 DMD self-forcing 蒸馏中的 dynamic collapse：学生模型可能生成静态但画质不错的头像，导致唇形、表情和手势时间动态消失。作者将原因归结为反向 KL 偏向低运动模态，以及无锚定自条件形成的反馈回路，并提出三层干预：Hybrid Forcing 以概率把 ground-truth 动态注入 rollout，Dynamics-Aware Reward Regularization 通过同步与表情奖励惩罚静态输出，Reference Perturbation 破坏参考图静态细节使模型依赖音频。另用 computation graph pruning 和 gradient replay 降低训练显存。
 
+具体设置包括：We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：To address dynamic collapse, we propose DynaForcing, a training framework with three complementary strategies operating at different levels of the training pipeline: (1) Hybrid Forcing (§4.2), a data-level strategy that probabilistically replaces self-forcing rollout starting points with noised ground-truth latents.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：Real-time self-forcing models (LiveAvatar, SoulX-FlashTalk) achieve strong visual quality but suffer severely on dynamics: LiveAvatar’s ExpVar (0.69) is 62% lower than its teacher WanS2V (1.81), and its Dyn-Deg (0.31) is less than half of OmniAvatar (0.75), confirming dynamic collapse as a systematic issue.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+具体设置包括：Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+
+综合来看，论文的价值不只由最终分数决定，还取决于输入表示、模型组件、训练或推理路径、评价数据和失败条件是否彼此对应。正文明确报告的结果与作者提出的解释分开呈现；没有给出统计口径、跨域验证或部署参数的部分，不能被扩写为普遍能力。
+
 ### 🔗 开源详情
 
 代码/模型：正文未提供明确公开仓库。
@@ -43,85 +53,116 @@ DynaForcing 研究流式音频驱动 avatar 在 DMD self-forcing 蒸馏中的 dy
 
 模型建立在 WanS2V 14B 和 diffusion-forcing 预训练之上，视频按块生成并缓存 KV。Hybrid Forcing 在每个训练样本的 rollout 起点以 p_data=0.3 选择加噪 ground-truth，否则从纯噪声开始；这样学生在保持 train-test 对齐的同时获得真实唇动和表情轨迹锚点。 Dynamics-Aware Reward Regularization 把 DMD 看成奖励优化，在损失中加入 Sync-C 和 expression 两个运动相关信号，权重 λsync=1.0、λexp=0.5，并用 balancing factor α=0.1 抑制静态解。Reference Perturbation 对参考图做扰动，削弱身份和静态纹理的捷径，迫使模型从音频条件恢复运动。 为处理长 rollout 的显存问题，作者剪枝不需要反传的计算图，在 replay 阶段逐块恢复中间 latent 和 KV，再执行有限的 forward/backward。这以额外前向换取约 K 倍峰值激活节省。训练 4,000 step、8 张 H100，推理为 720×400，并采用 TPP 流式策略。
 
-全文方法与训练段落给出的可复现设置如下：
+方法由输入表示、核心模块、训练/推理路径和输出评价共同构成。
 
-第 1 个证据块：论文明确写到“DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar GenerationCCS: Computing methodologies Computer visionCCS: Computing methodologies Video generation Yubo Huang email: snake1124@mail.ustc.edu.cn OrcID: 0009-0005-8870-0216 Affiliation: University of Science and Technology of China, Hefei, China, Sirui Zhao email: sirui@mail.ustc.edu.cn OrcID: 0000-0001-8103-0321 Affiliation: University of Science and Technology of China, Hefei, China, Xinchen Yao email: xinchenyao@smail.nju.edu.cn OrcID: 0009-0008-7045-0337 Affiliation: Nanjing University, Nanjing, China, Zhengye Zhang email: zhengyezhang@mail.ustc.edu.cn OrcID: 0009-0008-1558-827X Affiliation: University of Science and Technology of China, Hefei, China, Jinyang Huang email: hjy@hfut.edu.cn OrcID: 0000-0001-5483-2812 Affiliation: Hefei University of Technology, Hefei, China, Fengqi Cui email: fengqi_cui@mail.ustc.edu.cn OrcID: 0000-0002-0454-940X Affiliation: University of Science and Technology of China, Hefei, China, Shiwei Wu email: davidwu16@sz.tsinghua.edu.cn OrcID: 0000-0002-3206-6827 Affiliation: Tsinghua University, Shenzhen, China and Enhong Chen Note: Corresponding author. email: cheneh@ustc.edu.cn OrcID: 0000-0002-4835-4102 Affiliation: University of Science and Technology of Chi”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 2 个证据块：论文明确写到“Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，To address dynamic collapse, we propose DynaForcing, a training framework with three complementary strategies operating at different levels of the training pipeline: (1) Hybrid Forcing (§4.2), a data-level strategy that probabilistically replaces self-forcing rollout starting points with noised ground-truth latents.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 3 个证据块：论文明确写到“Recent large-scale video diffusion models (34; 1) have significantly advanced visual fidelity, and self-forcing (11; 5) has emerged as a leading distillation paradigm, leveraging Distribution Matching Distillation (DMD) (43) to convert these models into causal, few-step streaming generators that enable real-time, infinite-length avatar generation at 14B-parameter scale (12; 28).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，This provides a ground-truth anchor that counteracts mode collapse in the distillation objective. (2) Dynamics-Aware Reward Regularization (§4.3), a loss-level strategy that leverages the RL interpretation of DMD (20) to introduce explicit dynamics rewards (lip-sync accuracy and expression variance) as auxiliary training signals that directly penalize static outputs. (3) Reference Perturbation (§4.4), a complementary conditioning-level strategy that perturbs reference images to decouple identity from extraneous visual details (pose, background, lighting), preventing the model from taking a shortcut of copying the reference frame instead of generating audio-driven motion.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 4 个证据块：论文明确写到“We find that self-forcing training systematically drives the student model toward what we term dynamic collapse (Figure 1), where generated videos exhibit high perceptual quality scores but near-zero temporal dynamics: mouths barely move, expressions freeze, and the rich motion present in the teacher model vanishes.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Additionally, we present efficient self-forcing training (§4.5) via computation graph pruning and gradient replay, reducing GPU requirements by over 10×10\times while preserving quality.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
-第 5 个证据块：论文明确写到“We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+在该设计中，Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. 3.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
 
 ![Figure 1. Dynamic collapse in self-forcing distillation for streaming avatar generation. Given the same reference image and driving audio (left), the self-forcing baseline (top) produces visually appealing but temporally frozen outputs—nearly identical lip shapes across 10 seconds of speech (see mouth crops). DynaForcing (bottom) restores faithful audio-driven dynamics with natural expression variation and accurate lip articulation, at 45.2 FPS real-time streaming.](https://arxiv.org/html/2608.17707v1/dynaforcing_teaser_v6.png)
 
 ![Figure 3. Overview of DynaForcing. Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level.](https://arxiv.org/html/2608.17707v1/overview_v3.png)
 
+从数据流看，输入表示、核心模块、训练目标和推理输出必须逐层对应；任何没有在全文中披露的网络尺寸、优化器、随机种子或资源配置都不应被常见实现替代。这样的结构化描述既解释模型如何工作，也说明结果在哪些条件下能够复现。
+
 ### 💡 核心创新点
 
-1. 明确把 dynamic collapse 定义为视觉质量高但 Dyn-Deg、同步和表情动态接近零的失败模式。
-2. 以数据、损失、条件三层互补机制同时打破低运动反馈回路。
-3. 将图裁剪和梯度回放纳入方法，使长视频 self-forcing 更可训练。
+1. 明确把 dynamic collapse 定义为视觉质量高但 Dyn-Deg、同步和表情动态接近零的失败模式。 具体体现在We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.。这说明改动涉及的输入、模块和输出，也限定了它依赖的训练信号、数据条件与部署前提。
+
+2. 以数据、损失、条件三层互补机制同时打破低运动反馈回路。 论文给出的实现边界是To address dynamic collapse, we propose DynaForcing, a training framework with three complementary strategies operating at different levels of the training pipeline: (1) Hybrid Forcing (§4.2), a data-level strategy that probabilistically replaces self-forcing rollout starting points with noised ground-truth latents.。因此，结果收益不能直接归因于模型结构之外的数据、后处理或提示词因素。
+
+3. 将图裁剪和梯度回放纳入方法，使长视频 self-forcing 更可训练。 实验或消融显示Real-time self-forcing models (LiveAvatar, SoulX-FlashTalk) achieve strong visual quality but suffer severely on dynamics: LiveAvatar’s ExpVar (0.69) is 62% lower than its teacher WanS2V (1.81), and its Dyn-Deg (0.31) is less than half of OmniAvatar (0.75), confirming dynamic collapse as a systematic issue.。这一比较只在相应数据、基线和指标口径下成立，未报告独立消融时不把相关性写成组件因果。
+
+4. 工程含义必须和条件一起解读：Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.。论文直接测量、作者解释和仍待验证的外推需要分开，不能把部署愿景写成实验结论。
+
+5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
+
+上述贡献需要放回完整数据流理解：输入如何被表示，哪些模块改变了中间状态，训练目标如何约束输出，以及实验是否用对照或消融隔离了收益来源。缺失的配置、样本范围和统计检验会直接影响可复现性与外部有效性。
 
 ### 📊 实验结果
 
 在 GenBench-ShortVideo 上，DynaForcing 的 Sync-C 为 7.68、Dyn-Deg 为 0.73；在 GenBench-LongVideo 上 Sync-C 为 8.05、Dyn-Deg 为 0.68，显著高于发生 collapse 的自 forcing 基线。短视频表中 DynaForcing 的实时吞吐约 45.2，Sync-D、IQA、ASE 和 DINO-S 维持在具有竞争力的水平；与 CausVid 的 GT 锚定对照也显示动态更稳定。
 
-下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+实验结果需要和数据划分、基线、指标方向及统计口径一起阅读。
 
-全文实验证据 1：Figure 2 demonstrates that dynamic collapse is not task-specific but a general pathology of self-forcing distillation.11 1 Reproduction details for Figure 2 are provided in the supplementary material.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Real-time self-forcing models (LiveAvatar, SoulX-FlashTalk) achieve strong visual quality but suffer severely on dynamics: LiveAvatar’s ExpVar (0.69) is 62% lower than its teacher WanS2V (1.81), and its Dyn-Deg (0.31) is less than half of OmniAvatar (0.75), confirming dynamic collapse as a systematic issue.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 2：Figure 2c validates this analysis: under identical evaluation, CausVid (44), which conditions each block on noisy ground-truth frames, maintains stable dynamics (mean 0.43) while self-forcing collapses to 0.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 3：Table 1 (bottom) shows that the dynamics advantage of DynaForcing holds on long-form generation (>>5 min).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28).。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
-全文实验证据 4：Table 8 compares different distributions for sampling tstartt_{\text{start}} in data-anchored mode (Eq.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+论文报告：Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents component contributions.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
 
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
-| 数据/训练设置 | Figure 2 demonstrates that dynamic collapse is not task-specific but a general pathology of self-forcing distillation.11 1 Reproduction details for Figure 2 are provided in the supplementary material. |
-| 主要结果 | Figure 2c validates this analysis: under identical evaluation, CausVid (44), which conditions each block on noisy ground-truth frames, maintains stable dynamics (mean 0.43) while self-forcing collapses to 0. |
-| 对照、消融或部署指标 | Table 1 (bottom) shows that the dynamics advantage of DynaForcing holds on long-form generation (>>5 min). |
+| 数据/训练设置 | Real-time self-forcing models (LiveAvatar, SoulX-FlashTalk) achieve strong visual quality but suffer severely on dynamics: LiveAvatar’s ExpVar (0.69) is 62% lower than its teacher WanS2V (1.81), and its Dyn-Deg (0.31) is less than half of OmniAvatar (0.75), confirming dynamic collapse as a systematic issue. |
+| 主要结果 | Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping. |
+| 对照、消融或部署指标 | We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28). |
 
 ![Figure 3. Overview of DynaForcing. Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. - 图2](https://arxiv.org/html/2608.17707v1/overview_v3.png)
 
-![Figure 4. Qualitative comparison on GenBench-LongVideo. Frames sampled at 2 s, 200 s, and 400 s from the same driving audio. Please refer to the supplementary video for dynamics comparison.](https://arxiv.org/html/2608.17707v1/qualitative.png)
+![Figure 4. Qualitative comparison on GenBench-LongVideo. Frames sampled at 2 s, 20 s, and 40 s from the same driving audio. Please refer to the supplementary video for dynamics comparison.](https://arxiv.org/html/2608.17707v1/qualitative.png)
+
+结果解读同时关注绝对数值、相对比较、误差方向和测量条件。表格中的每个数字都必须和数据集、基线、硬件或推理设置一起阅读；如果正文只给出趋势而没有完整数值，就保留趋势并明确其证据边界。
 
 ### 🔬 细节详述
 
 训练数据来自 AVSpeech 预处理后的约 400,000 个十秒以上片段；评测使用 100 个约十秒 GenBench-ShortVideo 样本和 15 个五分钟以上 GenBench-LongVideo 样本。报告 Q-Align IQA/ASE、Sync-C/Sync-D、DINOv2 身份相似度、ExpVar、Dyn-Deg 和吞吐。ArcFace 阈值为 0.9，student/fake-score 学习率为 1e-5/2e-6，DMD 更新频率比为 5。
 
-全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- 细节证据 1：DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar GenerationCCS: Computing methodologies Computer visionCCS: Computing methodologies Video generation Yubo Huang email: snake1124@mail.ustc.edu.cn OrcID: 0009-0005-8870-0216 Affiliation: University of Science and Technology of China, Hefei, China, Sirui Zhao email: sirui@mail.ustc.edu.cn OrcID: 0000-0001-8103-0321 Affiliation: University of Science and Technology of China, Hefei, China, Xinchen Yao email: xinchenyao@smail.nju.edu.cn OrcID: 0009-0008-7045-0337 Affiliation: Nanjing University, Nanjing, China, Zhengye Zhang email: zhengyezhang@mail.ustc.edu.cn OrcID: 0009-0008-1558-827X Affiliation: University of Science and Technology of China, Hefei, China, Jinyang Huang email: hjy@hfut.edu.cn OrcID: 0000-0001-5483-2812 Affiliation: Hefei University of Technology, Hefei, China, Fengqi Cui email: fengqi_cui@mail.ustc.edu.cn OrcID: 0000-0002-0454-940X Affiliation: University of Science and Technology of China, Hefei, China, Shiwei Wu email: davidwu16@sz.tsinghua.edu.cn OrcID: 0000-0002-3206-6827 Affiliation: Tsinghua University, Shenzhen, China and Enhong Chen Note: Corresponding author. email: cheneh@ustc.edu.cn OrcID: 0000-0002-4835-4102 Affiliation: University of Science and Technology of Chi。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- This provides a ground-truth anchor that counteracts mode collapse in the distillation objective. (2) Dynamics-Aware Reward Regularization (§4.3), a loss-level strategy that leverages the RL interpretation of DMD (20) to introduce explicit dynamics rewards (lip-sync accuracy and expression variance) as auxiliary training signals that directly penalize static outputs. (3) Reference Perturbation (§4.4), a complementary conditioning-level strategy that perturbs reference images to decouple identity from extraneous visual details (pose, background, lighting), preventing the model from taking a shortcut of copying the reference frame instead of generating audio-driven motion.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 2：Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Additionally, we present efficient self-forcing training (§4.5) via computation graph pruning and gradient replay, reducing GPU requirements by over 10×10\times while preserving quality.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 3：Recent large-scale video diffusion models (34; 1) have significantly advanced visual fidelity, and self-forcing (11; 5) has emerged as a leading distillation paradigm, leveraging Distribution Matching Distillation (DMD) (43) to convert these models into causal, few-step streaming generators that enable real-time, infinite-length avatar generation at 14B-parameter scale (12; 28).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. 3.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 4：We find that self-forcing training systematically drives the student model toward what we term dynamic collapse (Figure 1), where generated videos exhibit high perceptual quality scores but near-zero temporal dynamics: mouths barely move, expressions freeze, and the rich motion present in the teacher model vanishes.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28).。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
 
-- 细节证据 5：We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+- Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents component contributions.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+- Removing Hybrid Forcing causes the largest drop in both dynamics (ExpVar 2.02→\to1.18) and lip-sync (Sync-C 7.68→\to6.78), confirming data-level anchoring as the most critical component; notably, ASE slightly increases (3.5→\to3.57), consistent with the quality–dynamics trade-off observed in the pdatap_{\text{data}} sweep.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+
+论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
+
+这些实现细节说明了论文怎样把方法落到可执行的实验协议：数据怎样划分，特征怎样进入模型，训练和推理怎样衔接，指标怎样计算，以及部署资源怎样测量。它们也是判断复现成本、误差来源和外推范围的依据。读者应优先核对这些条件，而不是只比较最终分数；同一模型在不同采样率、数据切分、硬件或阈值下可能产生不同结论。方法、实验和部署三部分必须保持同一输入输出定义，任何环节的改变都可能影响比较结果。只有把这些环节连起来，读者才能判断改进来自模型本身还是来自数据与测量协议。
 
 ### ⚖️ 评分理由
 
-创新性: 1.7/2 从反向 KL 与无锚定自条件解释 dynamic collapse，并在数据、损失和条件三层提出互补机制。
-技术严谨性: 1.3/1.5 给出训练概率、奖励、数据集和 GPU 设置，机制分析与对照实验相互支持。
-实验充分性: 1.3/1.5 短视频、长视频、实时基线和动态指标覆盖较全，报告 Sync、画质、身份与动态。
-清晰度: 0.9/1 三种策略和计算图优化的职责边界清楚。
-影响力: 1.3/1.5 动态保持是流式 talking avatar 的关键瓶颈，方法可迁移到实时视频蒸馏。
-开源: 0.0/1.5 正文未给出明确代码或模型仓库。
-可复现性: 0.2/0.5 训练数据、步数、学习率和硬件写得较细，但实现未公开。
-工程/实践价值: 1.3/1.5 梯度回放和图裁剪降低显存，直接改善长时流式训练成本。
+创新性: 1.7/2 从反向 KL 与无锚定自条件解释 dynamic collapse，并在数据、损失和条件三层提出互补机制。 技术严谨性: 1.3/1.5 给出训练概率、奖励、数据集和 GPU 设置，机制分析与对照实验相互支持。 实验充分性: 1.3/1.5 短视频、长视频、实时基线和动态指标覆盖较全，报告 Sync、画质、身份与动态。 清晰度: 0.9/1 三种策略和计算图优化的职责边界清楚。 影响力: 1.3/1.5 动态保持是流式 talking avatar 的关键瓶颈，方法可迁移到实时视频蒸馏。 开源: 0.0/1.5 正文未给出明确代码或模型仓库。 可复现性: 0.2/0.5 训练数据、步数、学习率和硬件写得较细，但实现未公开。 工程/实践价值: 1.3/1.5 梯度回放和图裁剪降低显存，直接改善长时流式训练成本。
+
+方法与实验分别对应：We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.；Real-time self-forcing models (LiveAvatar, SoulX-FlashTalk) achieve strong visual quality but suffer severely on dynamics: LiveAvatar’s ExpVar (0.69) is 62% lower than its teacher WanS2V (1.81), and its Dyn-Deg (0.31) is less than half of OmniAvatar (0.75), confirming dynamic collapse as a systematic issue.。同一信息缺口不在多个维度重复扣分。
+
+评分边界由方法结构、实验数字、资源披露和适用条件共同决定；未报告的参数、失败案例、统计检验或跨域泛化仍保持为不确定性。
+
+
+* 技术严谨性（1.3/1.5）：检查输入、训练目标、推理输出、假设和实现条件是否相互一致。
+
+* 实验充分性（1.3/1.5）：检查数据划分、基线、消融、指标方向、统计口径和失败案例是否覆盖。
+
+* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+
+* 影响力（1.3/1.5）：结合问题范围、证据强度和外部有效性判断，不把单一数据集结果外推。
+
+* 开源（0.0/1.5）：只评价论文明确提供的代码、模型、数据或可验证链接。
+
+* 可复现性（0.2/0.5）：检查数据、预处理、训练/推理配置、硬件和随机性披露。
+
+* 工程/实践价值（1.3/1.5）：结合延迟、吞吐、资源、稳定性和真实部署限制判断。
 
 ### 🚨 局限与问题
 
-1. 评测集中在 talking-head avatar，其他视频生成或非人类动态是否同样受益仍未知。
-2. 主要结果依赖 WanS2V 14B、特定分辨率和训练配方，算力与工程门槛较高。
-3. 动态奖励的权重和 p_data 对不同说话风格的敏感性还需更系统的消融。
-4. 未公开代码和模型，长视频真实用户体验、音画延迟与安全问题未充分讨论。
+1. 评测集中在 talking-head avatar，其他视频生成或非人类动态是否同样受益仍未知。 2. 主要结果依赖 WanS2V 14B、特定分辨率和训练配方，算力与工程门槛较高。 3. 动态奖励的权重和 p_data 对不同说话风格的敏感性还需更系统的消融。 4. 未公开代码和模型，长视频真实用户体验、音画延迟与安全问题未充分讨论。
+
+此外，Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
+
+因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
 
 ---
 
