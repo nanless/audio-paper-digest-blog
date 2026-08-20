@@ -65,30 +65,23 @@ paper_digest_arxiv_id: "2608.17852"
 
 ### 🏗️ 方法概述和架构
 
-UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体的可复现方案，整体流程可分为两条严格隔离的数据线：左侧是评测基准 UniVerseBench 的构建，右侧是训练集 UniVerseSet 的构建，二者数据源互不重叠；随后在后训练阶段，基于 UniVerseSet 对 LALMs 实施多种多模态不平衡学习干预。
+UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体的可复现方案，整体流程可分为两条严格隔离的数据线：左侧是评测基准 UniVerseBench 的构建，右侧是训练集 UniVerseSet 的构建，二者数据源互不重叠；随后在后训练阶段，基于 UniVerseSet 对 LALMs 实施多种多模态不平衡学习干预。 ### 1. UniVerseBench 构建管线 **内容筛选与多模态标注。** 首先由民族音乐学专家组依据权威教材和流媒体趋势筛选曲目，并引入地方政府数字平台与文化机构的高质量田野录音，以保留“活态遗产”。每段曲目由表演/作曲专家人工转写为 ABC 记谱，再由专家提供基于学术参考的初始文本描述，并用 Gemini 3 Pro 增强语言丰富度。随后，CantoCore 这一计算民族音乐学框架被应用于 ABC 记谱，提取旋律轮廓、音域等结构化特征，形成可与音频对齐的多模态证据。 **指令设计与 QA 生成。** 每个 QA 对定义为七元组 (Q, O, X, K, Ans, τ, λ, δ)，其中 Q 为问题，O 为选项，X 为音频片段，K 为元数据/先验知识，τ 为任务类型（如节奏分析、文化分类），λ 为子任务标签，δ∈{0,1} 为 text-dependency 标签：δ=0 表示仅凭声学即可回答，δ=1 表示需要外部文本。该设计允许研究者显式区分模型的“真实听觉理解”与“文本线索依赖”。 **QA 优化与混合验证。** 对 Gemini 输出与专家参考不一致的题目进行迭代优化，以提升高阶音乐推理难度；同时用纯文本 LLM 计算 Perceptual Index（PI），剔除无需听音频即可猜对的题目，并重新生成音乐上合理但仅凭文本无法确定的干扰项。最终采用随机化的人机共识协议：至少两名专家达成一致方可接受；否则由第三名专家在 Gemini 协助下复核，仍不一致则丢弃。 ### 2. UniVerseSet 自动构建管线 **数据收集。** 通过全球音乐流媒体服务的 770 个传统/地区流派标签获取曲目元数据，利用 SoundCharts 平台将 title-artist 对映射到 YouTube ID，再下载原始音频并丢弃超过 10 分钟的片段。 **自动特征标注。** 采用内部版 SheetSage 将旋律与和弦转写为 ABC 记谱；使用 Qwen3-ASR 转录歌词并预测语言；使用 Qwen3-Omni-Captioner 生成关于音色、乐器等细粒度声学属性的描述。随后用 Qwen3-Next-80B-A3B-Instruct 进行跨模态一致性校验，排除乐谱与声学字幕在调号/拍号等方面冲突、或字幕引用了歌词中完全不存在的文本等“致命不一致”样本。 **多轮对话合成。** 为每段曲目构建结构化用户画像（ demographic、语言、 expertise），并约束用户与助手均为“盲听者”。对话长度在 1–9 轮之间随机，任务从 10 类意图中采样，包括事实询问、结构分析、主观欣赏、民族音乐学比较、选择题、填空题等。用户查询严格禁止泄露答案的提示性形容词或歌词引用；助手输出必须引用标注中的原文子串作为依据，并以“直接聆听体验”的方式展开逐步推理。 ### 3. 后训练策略 **语言加权 SFT。** 针对训练数据的长尾语言分布，对每门语言 ℓ 计算平滑逆频权重 w~ℓ = min((N/nℓ)^α, wmax)，再归一化得到样本权重 wi，用于放大低资源语言在 cross-entropy 中的梯度贡献。 **文本塔与音频塔 DPO。** 在 SFT 后分别进行偏好优化：Text DPO 固定音频，通过优选/劣选回答让模型生成更贴合音频文化的答案，同时更新 LLM 与音频塔；Audio DPO 则固定回答，将正确音频与难负样本（如静音）交换，仅更新音频塔，并加入 chosen-side NLL 锚点防止崩溃。实验发现 Audio DPO 在 MoE 上无法稳定，因此仅用于 dense 模型。 **REPA 驱动的隐式推理。** 对 dense 模型 Qwen2.5-Omni-7B，在 decoder 中插入 K 个可学习的 `<latent_slot>`，将其最终层状态与音频编码器经过 K 段平均池化后的教师特征进行 REPA 余弦对齐；Phase b 进一步引入循环隐态，以前一 slot 的隐藏状态作为下一 slot 的输入嵌入，实现多轮 latent 演化。对 MoE 模型 Qwen3-Omni-30B-A3B，为避免破坏单 forward 推理，将监督转移到音频条件路径：冻结 MoE decoder，仅更新音频塔与 router gate，使用 encoder-side K 步池化特征进行 REPA 对齐，并通过一个冻结探针计算音频效用差距来加权样本。 关键设计取舍在于：dense 模型允许 decoder 内部 latent reasoning 与多轮解码，而 MoE 模型为了保持 vLLM 等 serving 效率，选择在 encoder 侧做表示对齐，不引入额外推理 token。
 
+全文方法与训练段落给出的可复现设置如下：
 
-**内容筛选与多模态标注。** 首先由民族音乐学专家组依据权威教材和流媒体趋势筛选曲目，并引入地方政府数字平台与文化机构的高质量田野录音，以保留“活态遗产”。每段曲目由表演/作曲专家人工转写为 ABC 记谱，再由专家提供基于学术参考的初始文本描述，并用 Gemini 3 Pro 增强语言丰富度。随后，CantoCore 这一计算民族音乐学框架被应用于 ABC 记谱，提取旋律轮廓、音域等结构化特征，形成可与音频对齐的多模态证据。
+第 1 个证据块：论文明确写到“Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-**指令设计与 QA 生成。** 每个 QA 对定义为七元组 (Q, O, X, K, Ans, τ, λ, δ)，其中 Q 为问题，O 为选项，X 为音频片段，K 为元数据/先验知识，τ 为任务类型（如节奏分析、文化分类），λ 为子任务标签，δ∈{0,1} 为 text-dependency 标签：δ=0 表示仅凭声学即可回答，δ=1 表示需要外部文本。该设计允许研究者显式区分模型的“真实听觉理解”与“文本线索依赖”。
+第 2 个证据块：论文明确写到“3 Methodology Figure 1 illustrates the pipeline for constructing UniVerseBench alongside the training schema applied to UniVerseSet.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-**QA 优化与混合验证。** 对 Gemini 输出与专家参考不一致的题目进行迭代优化，以提升高阶音乐推理难度；同时用纯文本 LLM 计算 Perceptual Index（PI），剔除无需听音频即可猜对的题目，并重新生成音乐上合理但仅凭文本无法确定的干扰项。最终采用随机化的人机共识协议：至少两名专家达成一致方可接受；否则由第三名专家在 Gemini 协助下复核，仍不一致则丢弃。
+第 3 个证据块：论文明确写到“Table 3: Correlation between post-training utterance count and per-language adversarial accuracy (N=25N{=}25; n≥10n\geq 10). LR. represents Latent Reasoning. REPA++ represents REPA+Δ\DeltaCE+gates.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
+第 4 个证据块：论文明确写到“Table 4: Best post-training performance vs. original performance of Qwen2.5-Omni and Qwen3-Omni on the Chinese regional subset (sorted by mean trained accuracy).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-**数据收集。** 通过全球音乐流媒体服务的 770 个传统/地区流派标签获取曲目元数据，利用 SoundCharts 平台将 title-artist 对映射到 YouTube ID，再下载原始音频并丢弃超过 10 分钟的片段。
+第 5 个证据块：论文明确写到“Shangda Wu11footnotemark: 1 Affiliation: Independent Researcher Shenyang Xu Affiliation: Independent Researcher Yutong Zheng Affiliation: Independent Researcher Dafang Liang Affiliation: Independent Researcher Suin Chung Affiliation: Sogang University, Seoul, Korea Danbinaerin Han Affiliation: KAIST, Daejeon, Korea Junyan Jiang Affiliation: NYU Shanghai, China Yongyi Zang Affiliation: Independent Researcher Ruibin Yuan Rongxiu Zhong Affiliation: JIUTIAN Research, China Mobile, Beijing, China Affiliation: The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China Shilei Zhang Affiliation: JIUTIAN Research, China Mobile, Beijing, China Affiliation: The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China Junlan Feng Affiliation: JIUTIAN Research, China Mobile, Beijing, China Jinglei Liu Affiliation: China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, Chinazzchoup@connect.ust.hk, {weixue, yikeguo}@ust.hk Haotian Zhou Affiliation: Central Conservatory of Music, Beijing, China Zijin Li Affiliation: Central Conservatory of Music, Beijing, China Dasaem Jeong Affiliation: Sogang University, Seoul, Korea Wei Xue Yike Guo [8pt] HKUST Hong Kong SAR China Abstract Recent advances in large audio-l”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-**自动特征标注。** 采用内部版 SheetSage 将旋律与和弦转写为 ABC 记谱；使用 Qwen3-ASR 转录歌词并预测语言；使用 Qwen3-Omni-Captioner 生成关于音色、乐器等细粒度声学属性的描述。随后用 Qwen3-Next-80B-A3B-Instruct 进行跨模态一致性校验，排除乐谱与声学字幕在调号/拍号等方面冲突、或字幕引用了歌词中完全不存在的文本等“致命不一致”样本。
+![Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.](https://arxiv.org/html/2608.17852v1/main_overview.png)
 
-**多轮对话合成。** 为每段曲目构建结构化用户画像（ demographic、语言、 expertise），并约束用户与助手均为“盲听者”。对话长度在 1–9 轮之间随机，任务从 10 类意图中采样，包括事实询问、结构分析、主观欣赏、民族音乐学比较、选择题、填空题等。用户查询严格禁止泄露答案的提示性形容词或歌词引用；助手输出必须引用标注中的原文子串作为依据，并以“直接聆听体验”的方式展开逐步推理。
-
-
-**语言加权 SFT。** 针对训练数据的长尾语言分布，对每门语言 ℓ 计算平滑逆频权重 w~ℓ = min((N/nℓ)^α, wmax)，再归一化得到样本权重 wi，用于放大低资源语言在 cross-entropy 中的梯度贡献。
-
-**文本塔与音频塔 DPO。** 在 SFT 后分别进行偏好优化：Text DPO 固定音频，通过优选/劣选回答让模型生成更贴合音频文化的答案，同时更新 LLM 与音频塔；Audio DPO 则固定回答，将正确音频与难负样本（如静音）交换，仅更新音频塔，并加入 chosen-side NLL 锚点防止崩溃。实验发现 Audio DPO 在 MoE 上无法稳定，因此仅用于 dense 模型。
-
-**REPA 驱动的隐式推理。** 对 dense 模型 Qwen2.5-Omni-7B，在 decoder 中插入 K 个可学习的 `<latent_slot>`，将其最终层状态与音频编码器经过 K 段平均池化后的教师特征进行 REPA 余弦对齐；Phase b 进一步引入循环隐态，以前一 slot 的隐藏状态作为下一 slot 的输入嵌入，实现多轮 latent 演化。对 MoE 模型 Qwen3-Omni-30B-A3B，为避免破坏单 forward 推理，将监督转移到音频条件路径：冻结 MoE decoder，仅更新音频塔与 router gate，使用 encoder-side K 步池化特征进行 REPA 对齐，并通过一个冻结探针计算音频效用差距来加权样本。
-
-关键设计取舍在于：dense 模型允许 decoder 内部 latent reasoning 与多轮解码，而 MoE 模型为了保持 vLLM 等 serving 效率，选择在 encoder 侧做表示对齐，不引入额外推理 token。
+![(b) Centroid cosine distance matrix of the centroid cosine distance.](https://arxiv.org/html/2608.17852v1/fig3_omni_family_centroid_distance.png)
 
 ### 💡 核心创新点
 
@@ -104,10 +97,7 @@ UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体�
 
 ### 📊 实验结果
 
-主要 benchmark 为 UniVerseBench，指标为 strict parseable accuracy（要求 thinking 模型同时给出有效推理链与正确答案）。基线包括商业模型 Gemini 3 Flash、Qwen3.5-Omni-Plus 与开源模型 Kimi-audio、MidashengLM、Music Flamingo，以及 Qwen2.5-Omni-7B 与 Qwen3-Omni-30B-A3B 的后训练版本。
-
-表中保留主方法、最强基线与关键技能列（为符合列数限制，省略 CA 列；CA 结果在正文中说明）。
-
+主要 benchmark 为 UniVerseBench，指标为 strict parseable accuracy（要求 thinking 模型同时给出有效推理链与正确答案）。基线包括商业模型 Gemini 3 Flash、Qwen3.5-Omni-Plus 与开源模型 Kimi-audio、MidashengLM、Music Flamingo，以及 Qwen2.5-Omni-7B 与 Qwen3-Omni-30B-A3B 的后训练版本。 表中保留主方法、最强基线与关键技能列（为符合列数限制，省略 CA 列；CA 结果在正文中说明）。
 | Model | Overall | LoC | ko | L-oth | FE | CR | PR | ED |
 |---|---|---|---|---|---|---|---|---|
 | Kimi-audio | 46.5 | 37.8 | 57.8 | 46.2 | 44.2 | 47.7 | 47.3 | 50.0 |
@@ -119,9 +109,7 @@ UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体�
 | Qwen2.5-Omni-7B-Instruct (Post-trained) | 48.8 | 44.4 | 57.6 | 47.8 | 47.4 | 52.4 | 54.4 | 48.6 |
 | Qwen3-Omni-30B-A3B | 47.5 | 44.3 | 52.6 | 47.3 | 44.9 | 58.3 | 51.4 | 51.4 |
 | Qwen3-Omni-30B-A3B (Post-trained) | 53.4 | 46.4 | 62.6 | 53.5 | 50.8 | 61.4 | 55.1 | 65.7 |
-
 关键消融结果如下：
-
 | Method | Qwen2.5 | Qwen3 |
 |---|---|---|
 | SFT (w/ think) | 40.6 | 53.4 |
@@ -130,7 +118,6 @@ UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体�
 | Audio DPO / Enc.-side REPA | 45.7 | 52.9 |
 | LR. + REPA (Phase a) | 42.9 | — |
 | LR. + REPA (Phase b) / Route-ΔCE | 48.8 | 52.9 |
-
 主要结论：
 - Qwen3.5-Omni-Plus 以 74.4% 取得最高整体准确率，是本文的上界参考。
 - 在相同 thinking 评估协议下，后训练使 Qwen2.5-Omni 提升 14.9 个百分点（33.9% → 48.8%），Qwen3-Omni 提升 5.9 个百分点（47.5% → 53.4%）。
@@ -139,33 +126,51 @@ UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体�
 - Pearson / Spearman 相关分析显示，后训练语料量与 per-language 准确率无显著正相关（多数 p>0.05），说明 benchmark 测的是文化深度理解而非语言频次记忆。
 - 跨文化迁移具有明显分层：dense 模型的 latent reasoning 对弱语言/区域提升显著（如罗马尼亚 12.2% → 58.1%，丹麦 25.3% → 50.7%），但 MoE 模型在部分高资源语言上反而退化（希腊 68.3% → 56.7%，塞尔维亚 54.9% → 43.7%）。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：3 Methodology Figure 1 illustrates the pipeline for constructing UniVerseBench alongside the training schema applied to UniVerseSet.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Figure 3: Acoustic structure of the benchmark audio excerpts in Qwen2.5-Omni embedding space.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：4 Experiments 4.1 Experimental Settings We implement all experiments using ms-swift and Megatron-LM (35) on eight 80GB NVIDIA GPUs.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+![(b) Centroid cosine distance matrix of the centroid cosine distance. - 图2](https://arxiv.org/html/2608.17852v1/fig3_omni_family_centroid_distance.png)
+
+![Figure 4: Overview of the three post-training strategies. Lang. Loss SFT reweights the supervised loss by language frequency to boost low-resource traditions. Text / Audio DPO applies complementary preference stages post-SFT, optimizing text responses under fixed audio and audio inputs under fixed responses. Latent Reasoning + REPA provides architecture-specific alignment: latent reasoning with REPA on dense Qwen2.5-Omni-7B (Qwen2.5-Omni), and encoder-side REPA with a frozen decoder on MoE Qwen3-Omni-30B-A3B-Instruct (Qwen3-Omni).](https://arxiv.org/html/2608.17852v1/training_strategies.png)
+
 ### 🔬 细节详述
 
 **训练数据**
 - 评测集：UniVerseBench，5,042 条 QA，372 段音频，覆盖 38 个以上语言/文化实体；包含 ABC 乐谱、CantoCore 特征、对齐字幕。
 - 训练集：UniVerseSet，113,023 段多轮对话，510,078 条 QA，平均 4.51 轮，覆盖 36 种语言；来源为全球音乐流媒体元数据→SoundCharts→YouTube。
-- 数据增强/清洗：SheetSage 转谱、Qwen3-ASR 歌词、Qwen3-Omni-Captioner 声学字幕；Qwen3-Next-80B 进行跨模态一致性过滤。
-
-**损失函数**
+- 数据增强/清洗：SheetSage 转谱、Qwen3-ASR 歌词、Qwen3-Omni-Captioner 声学字幕；Qwen3-Next-80B 进行跨模态一致性过滤。 **损失函数**
 - 语言加权交叉熵：按语言频次给予逆频权重，再归一化保证期望权重为 1。
 - Text DPO：固定音频，对比优选/劣选文本回答，更新 LLM 与音频塔。
 - Audio DPO：固定回答，对比正确音频与难负音频，仅更新音频塔，并加入 chosen-side NLL 锚点。
-- REPA：将 decoder latent slot 或 encoder 池化特征与音频编码器教师特征做 ℓ2 归一化余弦对齐。
-
-**训练策略与超参数**
+- REPA：将 decoder latent slot 或 encoder 池化特征与音频编码器教师特征做 ℓ2 归一化余弦对齐。 **训练策略与超参数**
 - 框架：ms-swift + Megatron-LM；8×80GB NVIDIA GPUs；bf16；FlashAttention；activation recomputation；最大序列长度 16,384；训练 1 epoch；1% 验证集。
 - Qwen2.5-Omni-7B：dense，tensor parallel=4（Phase b 关闭 sequence parallel）。SFT lr=1e-5，audio tower lr=1e-6，warmup 0.05，min_lr=1e-6。Latent Reasoning Phase a：K=6，λ=0.5；Phase b 从 Phase a 继续。Text DPO lr=1e-7，audio tower lr=5e-7，β=0.03。Audio DPO lr=1e-6，β=0.03。
 - Qwen3-Omni-30B-A3B：MoE，tensor parallel=8，expert parallel=8，MoE auxiliary loss 1e-6，capacity factor 2.0，CPU optimizer offload 0.5。Encoder-side REPA 冻结 MoE decoder，audio tower lr=1e-5，K=6，λ_REPA=0.1；REPA++ 额外更新 router gate。Text DPO 配置与 dense 类似。
-- 视觉塔始终冻结；训练时禁用音频生成。
-
-**推理细节**
+- 视觉塔始终冻结；训练时禁用音频生成。 **推理细节**
 - Qwen 模型在 thinking 模式下评估，要求输出有效推理链与最终答案；商业模型通过直接选项生成评估。
-- 温度、beam size、流式设置等未在正文中详细说明。
-
-**正则化/稳定技巧**
+- 温度、beam size、流式设置等未在正文中详细说明。 **正则化/稳定技巧**
 - 语言加权使用平滑因子 α 与上限 wmax 防止极端权重。
 - Audio DPO 使用 RPO 风格的 chosen-side NLL 锚点。
 - MoE REPA 冻结 decoder 与 layer-wise routing index，防止 expert drift。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：3 Methodology Figure 1 illustrates the pipeline for constructing UniVerseBench alongside the training schema applied to UniVerseSet.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：Table 3: Correlation between post-training utterance count and per-language adversarial accuracy (N=25N{=}25; n≥10n\geq 10). LR. represents Latent Reasoning. REPA++ represents REPA+Δ\DeltaCE+gates.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Table 4: Best post-training performance vs. original performance of Qwen2.5-Omni and Qwen3-Omni on the Chinese regional subset (sorted by mean trained accuracy).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：Shangda Wu11footnotemark: 1 Affiliation: Independent Researcher Shenyang Xu Affiliation: Independent Researcher Yutong Zheng Affiliation: Independent Researcher Dafang Liang Affiliation: Independent Researcher Suin Chung Affiliation: Sogang University, Seoul, Korea Danbinaerin Han Affiliation: KAIST, Daejeon, Korea Junyan Jiang Affiliation: NYU Shanghai, China Yongyi Zang Affiliation: Independent Researcher Ruibin Yuan Rongxiu Zhong Affiliation: JIUTIAN Research, China Mobile, Beijing, China Affiliation: The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China Shilei Zhang Affiliation: JIUTIAN Research, China Mobile, Beijing, China Affiliation: The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China Junlan Feng Affiliation: JIUTIAN Research, China Mobile, Beijing, China Jinglei Liu Affiliation: China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, Chinazzchoup@connect.ust.hk, {weixue, yikeguo}@ust.hk Haotian Zhou Affiliation: Central Conservatory of Music, Beijing, China Zijin Li Affiliation: Central Conservatory of Music, Beijing, China Dasaem Jeong Affiliation: Sogang University, Seoul, Korea Wei Xue Yike Guo [8pt] HKUST Hong Kong SAR China Abstract Recent advances in large audio-l。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

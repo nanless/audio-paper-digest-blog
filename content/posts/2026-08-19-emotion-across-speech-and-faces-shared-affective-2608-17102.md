@@ -96,7 +96,6 @@ P_{l,n}^{(1)}(q)-P_{l,n}^{(2)}(q), & e=e_{l,n}^{(1)}(q),\\
 
 对角线单元格的 JSC 值高于非对角线，反映相同情感的跨模态神经元集合存在更高的重叠，但绝对重叠值仍然较小。
 
-
 3. **展示跨模态双向因果迁移。** A-ESN 干预会影响 FER，V-ESN 干预也会影响 SER，并且匹配情感上的效应明显强于随机掩码；这为“共享情感功能单元”提供了超越相关性的因果证据。
 
 4. **提出可复用的跨模态可解释性流程。** 将 ConAct 选择、零参数去激活/引导与多选情感评测结合，形成一套无需训练即可定位并操控 MFM 内部情感组件的方法。
@@ -112,7 +111,6 @@ P_{l,n}^{(1)}(q)-P_{l,n}^{(2)}(q), & e=e_{l,n}^{(1)}(q),\\
 ![(a) Deactivation, Gemma-4-12B-it](https://arxiv.org/html/2608.17102v1/figures/mono/FER_AffectNet_to_AffectNet_gemma4_CAM_100_top0.005_ablate_Accuracy.png)
 
 主对角线上的情感类别出现显著负向变化，而随机掩码行接近零，说明 V-ESN 对对应面部情感具有较强的选择性因果效应。
-
 
 **表1：同模态 ESN 干预的 Self-Cross Gap（单位：UAR 百分点）**
 
@@ -132,7 +130,6 @@ P_{l,n}^{(1)}(q)-P_{l,n}^{(2)}(q), & e=e_{l,n}^{(1)}(q),\\
 ![(a) Deactivation, A-ESN on FER](https://arxiv.org/html/2608.17102v1/figures/cross/FER_MSP-PODCAST-Publish-1.12_to_AffectNet_mini_CAM_100_top0.005_ablate_Accuracy.png)
 
 图中匹配情感位置的变化幅度整体大于随机掩码及非匹配情感，说明声学 ESN 的干预能够部分影响面部情感判断。
-
 
 **表2：跨模态 ESN 干预的 Self-Cross Gap（单位：UAR 百分点）**
 

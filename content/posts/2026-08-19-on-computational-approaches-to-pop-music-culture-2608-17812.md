@@ -38,15 +38,23 @@ paper_digest_arxiv_id: "2608.17812"
 
 ### 🏗️ 方法概述和架构
 
-文章采用计算音乐学和数字人文的综述方法，将 Pop 理论、distant reading、distant listening 与 multimodal MIR 连接起来。音频侧回顾大规模歌曲语料中的音高、和声、音色、节奏和情感特征；文本侧整理歌词、音乐评论、杂志、书籍、社交媒体和知识图谱；视觉侧讨论专辑封面、音乐视频和图像符号。
+文章采用计算音乐学和数字人文的综述方法，将 Pop 理论、distant reading、distant listening 与 multimodal MIR 连接起来。音频侧回顾大规模歌曲语料中的音高、和声、音色、节奏和情感特征；文本侧整理歌词、音乐评论、杂志、书籍、社交媒体和知识图谱；视觉侧讨论专辑封面、音乐视频和图像符号。 核心方法论不是把不同模态简单拼接，而是先明确研究问题需要哪一种证据。例如歌词主题可以通过 NLP 与元数据做大规模主题图，封面图像需要视觉分类和历史语境结合，音乐年代研究则要同时考虑录音技术、传播渠道和流派语义。每个模态都可能存在版权、标注、缺失和文化解释问题。 作者用 distant reading 的尺度观念组织未来 pipeline：从大语料抽取结构化元数据，再将音频特征、图像元素、文本主题、艺术家关系和时间线连接成可查询的多模态图。分析阶段必须检验采样是否代表目标文化，不能把排行榜或英语网络资料默认成 Pop 的全部。
 
-核心方法论不是把不同模态简单拼接，而是先明确研究问题需要哪一种证据。例如歌词主题可以通过 NLP 与元数据做大规模主题图，封面图像需要视觉分类和历史语境结合，音乐年代研究则要同时考虑录音技术、传播渠道和流派语义。每个模态都可能存在版权、标注、缺失和文化解释问题。
+全文方法与训练段落给出的可复现设置如下：
 
-作者用 distant reading 的尺度观念组织未来 pipeline：从大语料抽取结构化元数据，再将音频特征、图像元素、文本主题、艺术家关系和时间线连接成可查询的多模态图。分析阶段必须检验采样是否代表目标文化，不能把排行榜或英语网络资料默认成 Pop 的全部。
+第 1 个证据块：论文明确写到“In trying to overcome these shortcomings we sketch three exemplary avenues for future research on Pop music culture: charting the topic universe of music lyrics, providing an iconography of album cover art, tracking retro cycles in music’s timeline. keywords Pop music; computational musicology; computational humanities; multi-modal analysis ††affiliation: Institute for Computational Perception, Johannes Kepler University Linz, Austria 1 Introduction It is the goal of this survey article to present an overview of the application of music information retrieval (MIR) methods to the study of Pop music culture in all its multi-modal facets at large scale. MIR is the interdisciplinary science of retrieving information from music, using a multitude of methods from signal processing, statistics, machine learning, artificial intelligence, etc (see 82 for a recent overview).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Other interesting overview articles on multi-modal MIR not necessarily centering on Pop music culture include an advocation for multi-modal and user-centered strategies (56), a report about a week long seminar on multi-modal music processing (72), and appraisals and guidelines concerning multi-modal music datasets (17; 38).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17812v1/leeperry.jpg)
+第 3 个证据块：论文明确写到“More recent strands of ”new musicology” (50) emphasize the intimate relationship between music and society and how music participates in social formation of individuals, thereby employing methods from anthropology, sociology, cultural studies, gender studies and feminism.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“2.2 Distant reading in digital humanities The accessibility of vast amounts of text in digital form has enabled humanities to add ”distant reading” of thousands of books via computational analysis as a new research tool to its repertoire of methods.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“The methods and the overall intention of distant reading are sometimes discussed controversially in the humanities, with some fearing that it might replace close reading altogether (7), or others pointing out that the capabilities of the algorithmic tools might dictate what hypotheses can be formulated and proven (30), or that researchers might be tempted to formulate conjectures after looking at the data, thereby preventing usage of that data to test validity of these post hoc theories (47).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![(a)](https://arxiv.org/html/2608.17812v1/leeperry.jpg)
+
+![(b)](https://arxiv.org/html/2608.17812v1/wutang.jpg)
 
 ### 💡 核心创新点
 
@@ -58,9 +66,39 @@ paper_digest_arxiv_id: "2608.17812"
 
 综述的证据来自歌词主题、音乐评论情感、464,411 首西方流行歌曲的音高/和声研究、Billboard 语料、封面与视频分析等。作者发现目前大规模工作常只覆盖单一模态，真正跨音频、视觉、文本和文化语境的研究稀少；因此给出的主要成果是研究谱系和问题框架，而不是一个可比较的模型分数。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Take the two classic Pop music albums shown in Figure 1: ”Kung Fu Meets the Dragon” (1975) by Lee Perry and ”Enter the Wu-Tang (36 Chambers)” (1993) by the Wu-Tang Clan.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：The album itself is inspired by the wave of martial arts movies that were popular at the time of recording, both concerning the cover artwork and the use of Chinese sound effects citing Lalo Schifrin’s 1973 movie soundtrack ”Enter The Dragon”.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：The Hip-Hop album by the Wu-Tang Clan refers to this kind of Buddhist philosophy taken from Kung Fu movies, it uses many of the production tricks pioneered by Lee Perry and even the album artwork connects to its predecessor with its use of faux Chinese typography. (a) (b) Figure 1: Two classic Pop music albums by Lee Perry (left) and the Wu-Tang Clan (right).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：The remainder of this article is divided into two parts: • providing a substantial review of already existing work on computational analysis of Pop music at scale in section 2 • identifying open issues and drafting exemplary research questions concerning Pop music culture that could be approached in a data driven manner in section 3 This article therefore discusses to what extent MIR is able to provide empirical results and evidence concerning Pop music culture, thereby adding to existing theories from humanities concerned with Pop music.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Take the two classic Pop music albums shown in Figure 1: ”Kung Fu Meets the Dragon” (1975) by Lee Perry and ”Enter the Wu-Tang (36 Chambers)” (1993) by the Wu-Tang Clan. |
+| 主要结果 | The album itself is inspired by the wave of martial arts movies that were popular at the time of recording, both concerning the cover artwork and the use of Chinese sound effects citing Lalo Schifrin’s 1973 movie soundtrack ”Enter The Dragon”. |
+| 对照、消融或部署指标 | The Hip-Hop album by the Wu-Tang Clan refers to this kind of Buddhist philosophy taken from Kung Fu movies, it uses many of the production tricks pioneered by Lee Perry and even the album artwork connects to its predecessor with its use of faux Chinese typography. (a) (b) Figure 1: Two classic Pop music albums by Lee Perry (left) and the Wu-Tang Clan (right). |
+
+![(b) - 图2](https://arxiv.org/html/2608.17812v1/wutang.jpg)
+
 ### 🔬 细节详述
 
 文章讨论 Pop 理论、NLP4MUSA、音乐知识发现、distant listening 的 corpus studies，以及通过图像元数据、歌词、媒体档案与知识图谱形成结构化语料。三个示例方向分别对应主题宇宙、封面图像志和 retro cycles；每个方向都需要从大规模来源抽取特征，再与历史和社会语境做解释性关联。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：In trying to overcome these shortcomings we sketch three exemplary avenues for future research on Pop music culture: charting the topic universe of music lyrics, providing an iconography of album cover art, tracking retro cycles in music’s timeline. keywords Pop music; computational musicology; computational humanities; multi-modal analysis ††affiliation: Institute for Computational Perception, Johannes Kepler University Linz, Austria 1 Introduction It is the goal of this survey article to present an overview of the application of music information retrieval (MIR) methods to the study of Pop music culture in all its multi-modal facets at large scale. MIR is the interdisciplinary science of retrieving information from music, using a multitude of methods from signal processing, statistics, machine learning, artificial intelligence, etc (see 82 for a recent overview).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Other interesting overview articles on multi-modal MIR not necessarily centering on Pop music culture include an advocation for multi-modal and user-centered strategies (56), a report about a week long seminar on multi-modal music processing (72), and appraisals and guidelines concerning multi-modal music datasets (17; 38).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：More recent strands of ”new musicology” (50) emphasize the intimate relationship between music and society and how music participates in social formation of individuals, thereby employing methods from anthropology, sociology, cultural studies, gender studies and feminism.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：2.2 Distant reading in digital humanities The accessibility of vast amounts of text in digital form has enabled humanities to add ”distant reading” of thousands of books via computational analysis as a new research tool to its repertoire of methods.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：The methods and the overall intention of distant reading are sometimes discussed controversially in the humanities, with some fearing that it might replace close reading altogether (7), or others pointing out that the capabilities of the algorithmic tools might dictate what hypotheses can be formulated and proven (30), or that researchers might be tempted to formulate conjectures after looking at the data, thereby preventing usage of that data to test validity of these post hoc theories (47).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

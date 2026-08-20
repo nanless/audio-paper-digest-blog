@@ -62,41 +62,23 @@ paper_digest_arxiv_id: "2608.17585"
 
 ### 🏗️ 方法概述和架构
 
-本文本质上是一份系统化的工业-学术经验报告，而非一篇提出新网络架构的论文。不过，作者仍披露了他们最终部署的检测器骨架，以及围绕该检测器构建的训练、评估与交付流程，可以概括为“自监督语音表征 + attentive pooling + 分块推理 + 最大聚合 + LLR 校准”的流水线。
-
-整体流程概述：输入是一段任意长度的音频（可能是长录音、电话录音或部分伪造的片段）；系统以固定长度的 chunk 为单位提取 SSL 表征，每个 chunk 经过前端和聚合模块输出一个伪造 vs 真实的分数；最终对整段录音的多个 chunk 分数取最大值，得到录音级别的 calibrated log-likelihood ratio（LLR），并可映射为某种操作阈值下的判定。
-
-主要组件/模块详解：
-
-自监督（SSL）语音前端
-   - 功能：将原始波形或声学特征转换为对语音内容、说话人和信道相对鲁棒的高层表征。作者强调，由于 deepfake 检测本质上是“在训练时未见过的合成器上进行 out-of-distribution 泛化”，使用在大规模无标注语音上预训练过的 SSL 表征比从头训练更有优势。
-   - 内部结构/实现：论文未指明具体使用哪一种 SSL 模型（如 wav2vec 2.0、HuBERT、WavLM 等），仅引用相关文献并描述为“pretrained SSL front-ends”。可推断为基于 Transformer 或 CNN 的自监督预训练编码器。
-   - 输入输出：输入为音频 chunk；输出为高维帧级或段级表征。
-
-Attentive Pooling 聚合模块
-   - 功能：将帧级 SSL 特征聚合为段级嵌入，并进一步输入分类器。Attentive pooling 通过对帧级特征加权求和，使模型自动关注对伪造检测最有判别性的时间区域，例如局部伪影或共振峰异常。
-   - 内部结构/实现：论文未给出具体实现细节，通常由注意力子网络计算每帧权重，再对特征进行加权平均；随后接线性投影得到原始分类分数，再经校准输出 LLR。
-   - 输入输出：输入为帧级特征序列；输出为段级分数或嵌入。
-
-分块推理与最大聚合
-   - 功能：处理长音频和“部分伪造”场景。forensic 用户关心的是“一段长录音中只有几秒是合成的”，因此系统不能只对整段录音做单一判定。
-   - 内部结构/实现：推理时将录音切成多个 chunk，分别计算每个 chunk 的分数，然后取所有 chunk 分数的最大值作为整段录音的分数。这样可以保证只要某一段是伪造的，整段录音就会被标记。
-   - 输入输出：输入为完整录音；输出为录音级 LLR 分数，以及潜在的 chunk 级分数（论文未明确是否向用户暴露 chunk 级结果）。
-
-校准与评分输出
-   - 功能：将原始分类分数转化为具有概率意义的 log-likelihood ratio，便于客户设定操作点。
-   - 内部结构/实现：论文未给出具体校准算法（如 Platt scaling、isotonic regression、温度缩放等），只说明由于客户缺乏标注数据，最终“shipped a default calibration”。
-   - 输入输出：输入为分类器输出；输出为 calibrated LLR。
-
-组件间的数据流与交互：原始音频 → 分块 → SSL 前端 → attentive pooling → 分类器 → 每 chunk 分数 → 取 max → calibrated LLR → 阈值判定/输出给客户。训练阶段的数据流类似，但增加了数据增强（telephony、codec、背景噪声）和来自多个合成器的正负样本。
-
-关键设计选择及动机：
+本文本质上是一份系统化的工业-学术经验报告，而非一篇提出新网络架构的论文。不过，作者仍披露了他们最终部署的检测器骨架，以及围绕该检测器构建的训练、评估与交付流程，可以概括为“自监督语音表征 + attentive pooling + 分块推理 + 最大聚合 + LLR 校准”的流水线。 整体流程概述：输入是一段任意长度的音频（可能是长录音、电话录音或部分伪造的片段）；系统以固定长度的 chunk 为单位提取 SSL 表征，每个 chunk 经过前端和聚合模块输出一个伪造 vs 真实的分数；最终对整段录音的多个 chunk 分数取最大值，得到录音级别的 calibrated log-likelihood ratio（LLR），并可映射为某种操作阈值下的判定。 主要组件/模块详解： 1. **自监督（SSL）语音前端** - 功能：将原始波形或声学特征转换为对语音内容、说话人和信道相对鲁棒的高层表征。作者强调，由于 deepfake 检测本质上是“在训练时未见过的合成器上进行 out-of-distribution 泛化”，使用在大规模无标注语音上预训练过的 SSL 表征比从头训练更有优势。 - 内部结构/实现：论文未指明具体使用哪一种 SSL 模型（如 wav2vec 2.0、HuBERT、WavLM 等），仅引用相关文献并描述为“pretrained SSL front-ends”。可推断为基于 Transformer 或 CNN 的自监督预训练编码器。 - 输入输出：输入为音频 chunk；输出为高维帧级或段级表征。 2. **Attentive Pooling 聚合模块** - 功能：将帧级 SSL 特征聚合为段级嵌入，并进一步输入分类器。Attentive pooling 通过对帧级特征加权求和，使模型自动关注对伪造检测最有判别性的时间区域，例如局部伪影或共振峰异常。 - 内部结构/实现：论文未给出具体实现细节，通常由注意力子网络计算每帧权重，再对特征进行加权平均；随后接线性投影得到原始分类分数，再经校准输出 LLR。 - 输入输出：输入为帧级特征序列；输出为段级分数或嵌入。 3. **分块推理与最大聚合** - 功能：处理长音频和“部分伪造”场景。forensic 用户关心的是“一段长录音中只有几秒是合成的”，因此系统不能只对整段录音做单一判定。 - 内部结构/实现：推理时将录音切成多个 chunk，分别计算每个 chunk 的分数，然后取所有 chunk 分数的最大值作为整段录音的分数。这样可以保证只要某一段是伪造的，整段录音就会被标记。 - 输入输出：输入为完整录音；输出为录音级 LLR 分数，以及潜在的 chunk 级分数（论文未明确是否向用户暴露 chunk 级结果）。 4. **校准与评分输出** - 功能：将原始分类分数转化为具有概率意义的 log-likelihood ratio，便于客户设定操作点。 - 内部结构/实现：论文未给出具体校准算法（如 Platt scaling、isotonic regression、温度缩放等），只说明由于客户缺乏标注数据，最终“shipped a default calibration”。 - 输入输出：输入为分类器输出；输出为 calibrated LLR。 组件间的数据流与交互：原始音频 → 分块 → SSL 前端 → attentive pooling → 分类器 → 每 chunk 分数 → 取 max → calibrated LLR → 阈值判定/输出给客户。训练阶段的数据流类似，但增加了数据增强（telephony、codec、背景噪声）和来自多个合成器的正负样本。 关键设计选择及动机：
 - 选择 SSL 前端而非 raw-waveform end-to-end 或纯 CNN：作者先从若干开源架构出发，随后大学团队贡献了两代自有模型，公司在自有数据上重新训练并优化部署；最终选择 SSL 是因为其在大规模无标注语音上预训练提供了更好的声学先验，有利于跨合成器泛化。
 - 选择 chunk-level max 聚合而非全局单一输出：因为真实场景中存在 partial spoof，且 forensic 客户常常需要定位伪造片段。
 - 重视 codec/telephony 增强：作者将其视为最重要的数据选择之一，因为未增强模型在真实信道下性能崩溃。
-- 输出 LLR 而非硬判定：因为硬判定会将法律责任转移给厂商，但 LLR 又难以被非专家理解，这是论文重点讨论的 tension。
+- 输出 LLR 而非硬判定：因为硬判定会将法律责任转移给厂商，但 LLR 又难以被非专家理解，这是论文重点讨论的 tension。 该论文也用了较大篇幅描述评估框架（deployment-oriented evaluation），包括构建跨合成器、跨语言、跨 codec 的测试集，使用加权指标，以及讨论 EER/DCF 与真实操作点之间的脱节。评估流程本身也是方法的一部分：作者主张借鉴 ISO/IEC 19795，在多个操作点下报告错误率，而不是依赖单一 EER。
 
-该论文也用了较大篇幅描述评估框架（deployment-oriented evaluation），包括构建跨合成器、跨语言、跨 codec 的测试集，使用加权指标，以及讨论 EER/DCF 与真实操作点之间的脱节。评估流程本身也是方法的一部分：作者主张借鉴 ISO/IEC 19795，在多个操作点下报告错误率，而不是依赖单一 EER。
+全文方法与训练段落给出的可复现设置如下：
+
+第 1 个证据块：论文明确写到“Those same systems, however, degrade sharply on data drawn from outside their training distribution [34].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 2 个证据块：论文明确写到“Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 3 个证据块：论文明确写到“Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [44].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 1000% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“Diffusion-based speech illustrates this moving target: its detectability varies across detector architectures, even when its overall detectability is comparable to that of non-diffusion speech [14]. A particularly visible example in 2026 is ElevenLabs.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
 ### 💡 核心创新点
 
@@ -124,29 +106,28 @@ Attentive Pooling 聚合模块
 
 ### 📊 实验结果
 
-论文中的实验证据主要是回顾性、内部、不可完全复现的案例，作者明确说明这些数字仅用于“说明问题”，而非作为 benchmark 结果或性能声明。关键证据包括：
-
-名义 seen/unseen 划分的误导性（Table 1）
-   - 两个旧版 Phonexia 检测器（v2、v3）在“已见攻击”和“未见攻击”上的检测准确率和平衡准确率几乎相当，甚至“未见”略高。
-   - 但作者检查后发现，“未见”集合大多来自训练语料的 dev 部分，只是同一攻击类型的新录音，并非真正的新攻击类型。这说明没有统一标签和来源追踪的“unseen attack”测试不可信。
-
+论文中的实验证据主要是回顾性、内部、不可完全复现的案例，作者明确说明这些数字仅用于“说明问题”，而非作为 benchmark 结果或性能声明。关键证据包括： 1. **名义 seen/unseen 划分的误导性（Table 1）** - 两个旧版 Phonexia 检测器（v2、v3）在“已见攻击”和“未见攻击”上的检测准确率和平衡准确率几乎相当，甚至“未见”略高。 - 但作者检查后发现，“未见”集合大多来自训练语料的 dev 部分，只是同一攻击类型的新录音，并非真正的新攻击类型。这说明没有统一标签和来源追踪的“unseen attack”测试不可信。
 | System | Detection accuracy (seen) | Detection accuracy (unseen) | Balanced accuracy (seen) | Balanced accuracy (unseen) |
 |---|---|---|---|---|
 | Phonexia v2 | 0.9135 | 0.9381 | 0.9383 | 0.9509 |
 | Phonexia v3 | 0.9723 | 0.9760 | 0.9721 | 0.9745 |
+注：表中保留论文给出的主方法和关键案例；论文说明这些数值为内部回顾数据，样本数、阈值、权重、置信区间均未公开，不能作为可复现 benchmark。 2. **信道/编解码器敏感性的内部观察** - 未经过 codec 增强的检测器在一次“非激进”的编解码处理后，miss rate 从约 4% 升至约 60%；codec-specific 增强可以关闭大部分差距，而通用增强几乎无效。 - 在窄带电话场景下，false alarm 从约 5% 升至约 70%；EER 在 AMR-NB 和 G.711 处理下分别达到约 16% 和约 25%。加入电话/codec 代表性数据和增强后，性能明显改善（具体改善幅度论文未给出精确数字）。 - 攻击系统的训练数据 provenance 同样影响可检测性：语言特定变体表现不一致，而基于 Common Voice 或 FLEURS 的攻击系统则更稳定。 3. **合成器版本漂移与数据时效性** - 作者观察到将 ElevenLabs 视为单一目标会误导评估：v1/v2/v3 及中间更新在质量和遗留伪影上不同，旧检测器无法保证对新版本有效。 - 作者尝试用 YouTube 数据评估，但可用的素材约八年前的编解码特性与当前 YouTube 音频差异巨大，导致实验“几乎无意义”。 论文未给出传统意义上的跨基准 SOTA 对比、消融实验或统计显著性检验。
 
-注：表中保留论文给出的主方法和关键案例；论文说明这些数值为内部回顾数据，样本数、阈值、权重、置信区间均未公开，不能作为可复现 benchmark。
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
 
-信道/编解码器敏感性的内部观察
-   - 未经过 codec 增强的检测器在一次“非激进”的编解码处理后，miss rate 从约 4% 升至约 60%；codec-specific 增强可以关闭大部分差距，而通用增强几乎无效。
-   - 在窄带电话场景下，false alarm 从约 5% 升至约 70%；EER 在 AMR-NB 和 G.711 处理下分别达到约 16% 和约 25%。加入电话/codec 代表性数据和增强后，性能明显改善（具体改善幅度论文未给出精确数字）。
-   - 攻击系统的训练数据 provenance 同样影响可检测性：语言特定变体表现不一致，而基于 Common Voice 或 FLEURS 的攻击系统则更稳定。
+全文实验证据 1：Table 1 reports retrospective results from two older [Company] detector versions on attacks labeled as seen and unseen.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
 
-合成器版本漂移与数据时效性
-   - 作者观察到将 ElevenLabs 视为单一目标会误导评估：v1/v2/v3 及中间更新在质量和遗留伪影上不同，旧检测器无法保证对新版本有效。
-   - 作者尝试用 YouTube 数据评估，但可用的素材约八年前的编解码特性与当前 YouTube 音频差异巨大，导致实验“几乎无意义”。
+全文实验证据 2：Table 2 separates the observations from our project from the broader questions they motivate and maps each question to a proposed action.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
 
-论文未给出传统意义上的跨基准 SOTA 对比、消融实验或统计显著性检验。
+全文实验证据 3：Firc Malinka Staněk Hlaváček Bartoň The Last Mile of Deepfake Speech Detection: An Industry–Academia Experience Report Anton Kamil Vojtěch Miroslav Marek Abstract Synthetic speech detection benchmarks now report sub-1% error rates on some in-domain evaluations, yet performance degrades under unseen attacks, channel mismatch, and distribution shift.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：These observations come from one project and should be tested in other settings. keywordsdeepfake speech detection, commercial deployment, experience report, anti-spoofing, productionization ††address: 1 Security@FIT, Brno University of Technology, Czech Republic 2 Phonexia, Brno, Czech Republic ††email: ifirc@fit.vut.cz, malinka@fit.vut.cz, istanek@fit.vut.cz 1 Introduction and Position By standard benchmark measures, deepfake speech detection appears close to saturation.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Table 1 reports retrospective results from two older [Company] detector versions on attacks labeled as seen and unseen. |
+| 主要结果 | Table 2 separates the observations from our project from the broader questions they motivate and maps each question to a proposed action. |
+| 对照、消融或部署指标 | Firc Malinka Staněk Hlaváček Bartoň The Last Mile of Deepfake Speech Detection: An Industry–Academia Experience Report Anton Kamil Vojtěch Miroslav Marek Abstract Synthetic speech detection benchmarks now report sub-1% error rates on some in-domain evaluations, yet performance degrades under unseen attacks, channel mismatch, and distribution shift. |
 
 ### 🔬 细节详述
 
@@ -160,6 +141,18 @@ Attentive Pooling 聚合模块
 - **推理细节**：分块处理，每 chunk 输出分数，最终取最大值；是否流式、batch size、延迟/吞吐未说明。
 - **正则化或稳定训练技巧**：未说明。
 - **生成式 AI 与利益冲突**：论文明确声明使用 Google Gemini、ChatGPT、Grammarly 进行语言润色，并声明 Phonexia 为商业厂商，作者为其员工。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Those same systems, however, degrade sharply on data drawn from outside their training distribution [34].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [44].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 1000% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：Diffusion-based speech illustrates this moving target: its detectability varies across detector architectures, even when its overall detectability is comparable to that of non-diffusion speech [14]. A particularly visible example in 2026 is ElevenLabs.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

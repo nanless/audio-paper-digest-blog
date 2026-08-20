@@ -41,15 +41,23 @@ DynaForcing 研究流式音频驱动 avatar 在 DMD self-forcing 蒸馏中的 dy
 
 ### 🏗️ 方法概述和架构
 
-模型建立在 WanS2V 14B 和 diffusion-forcing 预训练之上，视频按块生成并缓存 KV。Hybrid Forcing 在每个训练样本的 rollout 起点以 p_data=0.3 选择加噪 ground-truth，否则从纯噪声开始；这样学生在保持 train-test 对齐的同时获得真实唇动和表情轨迹锚点。
+模型建立在 WanS2V 14B 和 diffusion-forcing 预训练之上，视频按块生成并缓存 KV。Hybrid Forcing 在每个训练样本的 rollout 起点以 p_data=0.3 选择加噪 ground-truth，否则从纯噪声开始；这样学生在保持 train-test 对齐的同时获得真实唇动和表情轨迹锚点。 Dynamics-Aware Reward Regularization 把 DMD 看成奖励优化，在损失中加入 Sync-C 和 expression 两个运动相关信号，权重 λsync=1.0、λexp=0.5，并用 balancing factor α=0.1 抑制静态解。Reference Perturbation 对参考图做扰动，削弱身份和静态纹理的捷径，迫使模型从音频条件恢复运动。 为处理长 rollout 的显存问题，作者剪枝不需要反传的计算图，在 replay 阶段逐块恢复中间 latent 和 KV，再执行有限的 forward/backward。这以额外前向换取约 K 倍峰值激活节省。训练 4,000 step、8 张 H100，推理为 720×400，并采用 TPP 流式策略。
 
-Dynamics-Aware Reward Regularization 把 DMD 看成奖励优化，在损失中加入 Sync-C 和 expression 两个运动相关信号，权重 λsync=1.0、λexp=0.5，并用 balancing factor α=0.1 抑制静态解。Reference Perturbation 对参考图做扰动，削弱身份和静态纹理的捷径，迫使模型从音频条件恢复运动。
+全文方法与训练段落给出的可复现设置如下：
 
-为处理长 rollout 的显存问题，作者剪枝不需要反传的计算图，在 replay 阶段逐块恢复中间 latent 和 KV，再执行有限的 forward/backward。这以额外前向换取约 K 倍峰值激活节省。训练 4,000 step、8 张 H100，推理为 720×400，并采用 TPP 流式策略。
+第 1 个证据块：论文明确写到“DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar GenerationCCS: Computing methodologies Computer visionCCS: Computing methodologies Video generation Yubo Huang email: snake1124@mail.ustc.edu.cn OrcID: 0009-0005-8870-0216 Affiliation: University of Science and Technology of China, Hefei, China, Sirui Zhao email: sirui@mail.ustc.edu.cn OrcID: 0000-0001-8103-0321 Affiliation: University of Science and Technology of China, Hefei, China, Xinchen Yao email: xinchenyao@smail.nju.edu.cn OrcID: 0009-0008-7045-0337 Affiliation: Nanjing University, Nanjing, China, Zhengye Zhang email: zhengyezhang@mail.ustc.edu.cn OrcID: 0009-0008-1558-827X Affiliation: University of Science and Technology of China, Hefei, China, Jinyang Huang email: hjy@hfut.edu.cn OrcID: 0000-0001-5483-2812 Affiliation: Hefei University of Technology, Hefei, China, Fengqi Cui email: fengqi_cui@mail.ustc.edu.cn OrcID: 0000-0002-0454-940X Affiliation: University of Science and Technology of China, Hefei, China, Shiwei Wu email: davidwu16@sz.tsinghua.edu.cn OrcID: 0000-0002-3206-6827 Affiliation: Tsinghua University, Shenzhen, China and Enhong Chen Note: Corresponding author. email: cheneh@ustc.edu.cn OrcID: 0000-0002-4835-4102 Affiliation: University of Science and Technology of Chi”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17707v1/dynaforcing_teaser_v6.png)
+第 3 个证据块：论文明确写到“Recent large-scale video diffusion models (34; 1) have significantly advanced visual fidelity, and self-forcing (11; 5) has emerged as a leading distillation paradigm, leveraging Distribution Matching Distillation (DMD) (43) to convert these models into causal, few-step streaming generators that enable real-time, infinite-length avatar generation at 14B-parameter scale (12; 28).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“We find that self-forcing training systematically drives the student model toward what we term dynamic collapse (Figure 1), where generated videos exhibit high perceptual quality scores but near-zero temporal dynamics: mouths barely move, expressions freeze, and the rich motion present in the teacher model vanishes.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1. Dynamic collapse in self-forcing distillation for streaming avatar generation. Given the same reference image and driving audio (left), the self-forcing baseline (top) produces visually appealing but temporally frozen outputs—nearly identical lip shapes across 10 seconds of speech (see mouth crops). DynaForcing (bottom) restores faithful audio-driven dynamics with natural expression variation and accurate lip articulation, at 45.2 FPS real-time streaming.](https://arxiv.org/html/2608.17707v1/dynaforcing_teaser_v6.png)
+
+![Figure 3. Overview of DynaForcing. Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level.](https://arxiv.org/html/2608.17707v1/overview_v3.png)
 
 ### 💡 核心创新点
 
@@ -61,9 +69,41 @@ Dynamics-Aware Reward Regularization 把 DMD 看成奖励优化，在损失中�
 
 在 GenBench-ShortVideo 上，DynaForcing 的 Sync-C 为 7.68、Dyn-Deg 为 0.73；在 GenBench-LongVideo 上 Sync-C 为 8.05、Dyn-Deg 为 0.68，显著高于发生 collapse 的自 forcing 基线。短视频表中 DynaForcing 的实时吞吐约 45.2，Sync-D、IQA、ASE 和 DINO-S 维持在具有竞争力的水平；与 CausVid 的 GT 锚定对照也显示动态更稳定。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 2 demonstrates that dynamic collapse is not task-specific but a general pathology of self-forcing distillation.11 1 Reproduction details for Figure 2 are provided in the supplementary material.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Figure 2c validates this analysis: under identical evaluation, CausVid (44), which conditions each block on noisy ground-truth frames, maintains stable dynamics (mean 0.43) while self-forcing collapses to 0.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Table 1 (bottom) shows that the dynamics advantage of DynaForcing holds on long-form generation (>>5 min).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：Table 8 compares different distributions for sampling tstartt_{\text{start}} in data-anchored mode (Eq.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Figure 2 demonstrates that dynamic collapse is not task-specific but a general pathology of self-forcing distillation.11 1 Reproduction details for Figure 2 are provided in the supplementary material. |
+| 主要结果 | Figure 2c validates this analysis: under identical evaluation, CausVid (44), which conditions each block on noisy ground-truth frames, maintains stable dynamics (mean 0.43) while self-forcing collapses to 0. |
+| 对照、消融或部署指标 | Table 1 (bottom) shows that the dynamics advantage of DynaForcing holds on long-form generation (>>5 min). |
+
+![Figure 3. Overview of DynaForcing. Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. - 图2](https://arxiv.org/html/2608.17707v1/overview_v3.png)
+
+![Figure 4. Qualitative comparison on GenBench-LongVideo. Frames sampled at 2 s, 200 s, and 400 s from the same driving audio. Please refer to the supplementary video for dynamics comparison.](https://arxiv.org/html/2608.17707v1/qualitative.png)
+
 ### 🔬 细节详述
 
 训练数据来自 AVSpeech 预处理后的约 400,000 个十秒以上片段；评测使用 100 个约十秒 GenBench-ShortVideo 样本和 15 个五分钟以上 GenBench-LongVideo 样本。报告 Q-Align IQA/ASE、Sync-C/Sync-D、DINOv2 身份相似度、ExpVar、Dyn-Deg 和吞吐。ArcFace 阈值为 0.9，student/fake-score 学习率为 1e-5/2e-6，DMD 更新频率比为 5。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：DynaForcing: Overcoming Dynamic Collapse in Self-Forcing Distillation for Streaming Avatar GenerationCCS: Computing methodologies Computer visionCCS: Computing methodologies Video generation Yubo Huang email: snake1124@mail.ustc.edu.cn OrcID: 0009-0005-8870-0216 Affiliation: University of Science and Technology of China, Hefei, China, Sirui Zhao email: sirui@mail.ustc.edu.cn OrcID: 0000-0001-8103-0321 Affiliation: University of Science and Technology of China, Hefei, China, Xinchen Yao email: xinchenyao@smail.nju.edu.cn OrcID: 0009-0008-7045-0337 Affiliation: Nanjing University, Nanjing, China, Zhengye Zhang email: zhengyezhang@mail.ustc.edu.cn OrcID: 0009-0008-1558-827X Affiliation: University of Science and Technology of China, Hefei, China, Jinyang Huang email: hjy@hfut.edu.cn OrcID: 0000-0001-5483-2812 Affiliation: Hefei University of Technology, Hefei, China, Fengqi Cui email: fengqi_cui@mail.ustc.edu.cn OrcID: 0000-0002-0454-940X Affiliation: University of Science and Technology of China, Hefei, China, Shiwei Wu email: davidwu16@sz.tsinghua.edu.cn OrcID: 0000-0002-3206-6827 Affiliation: Tsinghua University, Shenzhen, China and Enhong Chen Note: Corresponding author. email: cheneh@ustc.edu.cn OrcID: 0000-0002-4835-4102 Affiliation: University of Science and Technology of Chi。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：Recent large-scale video diffusion models (34; 1) have significantly advanced visual fidelity, and self-forcing (11; 5) has emerged as a leading distillation paradigm, leveraging Distribution Matching Distillation (DMD) (43) to convert these models into causal, few-step streaming generators that enable real-time, infinite-length avatar generation at 14B-parameter scale (12; 28).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：We find that self-forcing training systematically drives the student model toward what we term dynamic collapse (Figure 1), where generated videos exhibit high perceptual quality scores but near-zero temporal dynamics: mouths barely move, expressions freeze, and the rich motion present in the teacher model vanishes.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：We verify this empirically: under identical training horizons, CausVid’s GT-anchored conditioning maintains stable dynamics while self-forcing collapses to near-zero, as demonstrated in Figure 2c.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

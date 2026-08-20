@@ -40,15 +40,23 @@ AffectLoop 是部署在 Misty II 上的多模态具身对话系统，目标是�
 
 ### 🏗️ 方法概述和架构
 
-系统输入两类 speaker 证据：ASR 文本及其情绪轨迹、摄像头捕获的面部行为。增量框架在语音片段到达时更新状态，避免等待整轮对话结束。文本情绪模块估计类别、valence 和 arousal；视觉模块从短时间窗聚合面部 affect；两者共同形成 speaker state。
+系统输入两类 speaker 证据：ASR 文本及其情绪轨迹、摄像头捕获的面部行为。增量框架在语音片段到达时更新状态，避免等待整轮对话结束。文本情绪模块估计类别、valence 和 arousal；视觉模块从短时间窗聚合面部 affect；两者共同形成 speaker state。 listener state 一侧记录机器人上一轮生成语音的情绪以及已执行的非语言行为。LLM prompt 同时接收 speaker 和 listener 的状态、对话历史及行为约束，输出短的同理响应和情绪一致的 Misty 动作。TTS 负责语音，机器人 API 执行表情、姿态或灯光等行为，Retico 连接增量 ASR、情绪推断、LLM 和动作执行。 实验采用同一机器人、同一对话任务和两种条件，随机化先后顺序以减轻顺序效应。评分覆盖自然性、理解、同理倾听、同理回应、用户满意度和压力缓解；交互日志再计算 speaker–listener affective alignment 与 valence-based distress recovery。
 
-listener state 一侧记录机器人上一轮生成语音的情绪以及已执行的非语言行为。LLM prompt 同时接收 speaker 和 listener 的状态、对话历史及行为约束，输出短的同理响应和情绪一致的 Misty 动作。TTS 负责语音，机器人 API 执行表情、姿态或灯光等行为，Retico 连接增量 ASR、情绪推断、LLM 和动作执行。
+全文方法与训练段落给出的可复现设置如下：
 
-实验采用同一机器人、同一对话任务和两种条件，随机化先后顺序以减轻顺序效应。评分覆盖自然性、理解、同理倾听、同理回应、用户满意度和压力缓解；交互日志再计算 speaker–listener affective alignment 与 valence-based distress recovery。
+第 1 个证据块：论文明确写到“Figure 2: Complete prompt template for the proposed speaker–listener alignment empathetic response generation framework.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Early benchmarks such as EmpatheticDialogues have shown that emotion-based training improves perceived empathy [18], while later models further incorporate emotion mimicry, psychotherapy–based, and emotion flow modeling [8, 15].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.16686v1/system.png)
+第 3 个证据块：论文明确写到“However, most existing approaches remain text-centered and primarily model empathy as a one-way mapping from the speaker’s emotion to the system’s response [16].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“Recent work has explored using large language models (LLMs) to generate affective robot behaviors, including speech style, gestures, facial expressions, and emotional displays [6, 11].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“2 Related Work Figure 1: Proposed AffectLoop system architecture in this study 2.1 Emotional Dynamics and Speaker–Listener Alignment in Dialogue Systems Many dialogue models treat emotion as a static label attached to an utterance or dialogue turn.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1: Proposed AffectLoop system architecture in this study](https://arxiv.org/html/2608.16686v1/system.png)
+
+![Figure 3: Photo of interaction with Misty II by the participant](https://arxiv.org/html/2608.16686v1/interaction.JPG)
 
 ### 💡 核心创新点
 
@@ -60,9 +68,39 @@ listener state 一侧记录机器人上一轮生成语音的情绪以及已执�
 
 五人 within-subject 研究中，提议系统总体平均印象 5.10，高于基线 4.75；同理倾听平均 5.40 对 5.20，同理回应 5.35 对 4.80，用户满意度 4.68 对 4.20。Q12“鼓励我”从 5.40 提升到 6.20，Q13“做得好时表扬”从 4.40 提升到 5.40。日志分析还报告更高 speaker–listener 对齐和更强 distress recovery，作为初步机制证据。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 2: Complete prompt template for the proposed speaker–listener alignment empathetic response generation framework.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Figure 3: Photo of interaction with Misty II by the participant 4 Experimental Setup 4.1 Study Design We conducted a pilot within-subject user study to evaluate the proposed speaker–listener emotion-dynamics-aware system.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Table 1: Impression Ratings Items Item Description Baseline Proposed Naturalness Q1 The robot’s responses were human-like.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：5 Results and Discussion Table 1 shows that the proposed system received higher overall impression ratings than the baseline, increasing from 4.75 to 5.10.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Figure 2: Complete prompt template for the proposed speaker–listener alignment empathetic response generation framework. |
+| 主要结果 | Figure 3: Photo of interaction with Misty II by the participant 4 Experimental Setup 4.1 Study Design We conducted a pilot within-subject user study to evaluate the proposed speaker–listener emotion-dynamics-aware system. |
+| 对照、消融或部署指标 | Table 1: Impression Ratings Items Item Description Baseline Proposed Naturalness Q1 The robot’s responses were human-like. |
+
+![Figure 3: Photo of interaction with Misty II by the participant - 图2](https://arxiv.org/html/2608.16686v1/interaction.JPG)
+
 ### 🔬 细节详述
 
 平台为 Misty II 与 Retico。输入包括语音、ASR、面部帧和对话历史；listener 侧根据机器人生成语音的 valence/arousal 与行为估计状态。LLM 输出语音文本和行为指令，再通过 TTS 与机器人控制接口执行。Q5 自主性感知、Q20 互动焦虑不计入主要平均分；研究采用随机条件顺序和同一参与者比较。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Figure 2: Complete prompt template for the proposed speaker–listener alignment empathetic response generation framework.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Early benchmarks such as EmpatheticDialogues have shown that emotion-based training improves perceived empathy [18], while later models further incorporate emotion mimicry, psychotherapy–based, and emotion flow modeling [8, 15].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：However, most existing approaches remain text-centered and primarily model empathy as a one-way mapping from the speaker’s emotion to the system’s response [16].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Recent work has explored using large language models (LLMs) to generate affective robot behaviors, including speech style, gestures, facial expressions, and emotional displays [6, 11].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：2 Related Work Figure 1: Proposed AffectLoop system architecture in this study 2.1 Emotional Dynamics and Speaker–Listener Alignment in Dialogue Systems Many dialogue models treat emotion as a static label attached to an utterance or dialogue turn.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

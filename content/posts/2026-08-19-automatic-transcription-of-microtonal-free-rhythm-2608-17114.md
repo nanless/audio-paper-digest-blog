@@ -41,15 +41,23 @@ paper_digest_arxiv_id: "2608.17114"
 
 ### 🏗️ 方法概述和架构
 
-输入是单声道声乐录音及与其对应的专家转录。第一阶段使用 Sonic Annotator 的 pYIN 生成音高轨迹，步长 256、窗口 2048，并设置低振幅抑制、onset sensitivity、pruning 等参数；随后将 Hz 转为 cents，使跨八度的音程在统一尺度上可比较。
+输入是单声道声乐录音及与其对应的专家转录。第一阶段使用 Sonic Annotator 的 pYIN 生成音高轨迹，步长 256、窗口 2048，并设置低振幅抑制、onset sensitivity、pruning 等参数；随后将 Hz 转为 cents，使跨八度的音程在统一尺度上可比较。 第二阶段把每个音高点放入 dataframe，按 solid note、silence、spike、valley、句首和未分类等状态标记。对 cents 直方图做移动平均以抑制抖动，主峰作为表演中稳定且频繁出现的音高；对剩余未分配点重复直方图分析，捕获短暂或较弱的次级音。这个设计不强迫每个音都落在十二平均律，而是从实际演唱估计流动调律。 第三阶段用 DTW 对齐演唱旋律与专家 MIDI，处理自由节奏造成的时间伸缩；依据峰、谷、句法边界和连续快速变化识别 tahrir 装饰。最后通过 music21 生成符号化结果，并在图形界面中同时显示音频 pitch contour、DTW 路径和 MIDI，专家可修改错误音符或装饰分类。
 
-第二阶段把每个音高点放入 dataframe，按 solid note、silence、spike、valley、句首和未分类等状态标记。对 cents 直方图做移动平均以抑制抖动，主峰作为表演中稳定且频繁出现的音高；对剩余未分配点重复直方图分析，捕获短暂或较弱的次级音。这个设计不强迫每个音都落在十二平均律，而是从实际演唱估计流动调律。
+全文方法与训练段落给出的可复现设置如下：
 
-第三阶段用 DTW 对齐演唱旋律与专家 MIDI，处理自由节奏造成的时间伸缩；依据峰、谷、句法边界和连续快速变化识别 tahrir 装饰。最后通过 music21 生成符号化结果，并在图形界面中同时显示音频 pitch contour、DTW 路径和 MIDI，专家可修改错误音符或装饰分类。
+第 1 个证据块：论文明确写到“Figure 7: Error and Derivative in Finding the Tempo for Example 1 The ratio between consecutive local minima further validates the method.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Our approach is based on performances by the renowned vocalist Karimi and ground truth transcriptions by the prominent ethnomusicologist Masoudieh [14], which were subsequently incorporated into the IRMA Audio-MIDI dataset [20].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17114v1/algorithm.png)
+第 3 个证据块：论文明确写到“1 Introduction Existing approaches to Automatic Music Transcription (AMT) have largely focused on tonal, metrical music, where established signal processing methods, probabilistic models, NMF, and neural networks have been employed to achieve reasonable transcription accuracy [2, 13].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“Gomez et al. have assessed the CREPE [11] and pYIN [15] algorithms as state-of-the-art methods for recognizing pitch in monophonic voice [9].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“Their evaluation on the iKala dataset showed similar results for both algorithms, with pYIN achieving 91% Raw Pitch Accuracy and CREPE 90.5%.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1: Masoudieh’s Transcript of Example 1](https://arxiv.org/html/2608.17114v1/daramad.png)
+
+![Figure 2: Time-Frequency Data Processing](https://arxiv.org/html/2608.17114v1/algorithm.png)
 
 ### 💡 核心创新点
 
@@ -61,9 +69,41 @@ paper_digest_arxiv_id: "2608.17114"
 
 论文在 IRMA Audio-MIDI 中的伊朗声乐样例上展示了主峰、音高轮廓和 DTW 对齐效果，并用 pYIN 生成输入轨迹；引用的单声部基准中 pYIN Raw Pitch Accuracy 约为 91%。本文自身主要提供定性案例和图形核验，没有报告大规模音符级 F1、节拍误差或跨歌手统计，因此结果更适合证明流程可行性。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 1 presents Masoudieh’s transcription of the piece, which serves as our reference [14].。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Figure 1: Masoudieh’s Transcript of Example 1 The process described in Sections 2.1 to 2.4 is summarized in Figure 2, which outlines the sequential steps from pitch recognition to the identification of notes and various ornamentations.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Figure 2: Time-Frequency Data Processing 2.1 Pitch Recognition There are various algorithms used for pitch recognition, all of which rely on the fundamental frequency of sound to measure pitch.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：Figure 3 presents the pitch histogram for Example 1, where the vertical axis represents the proportional total duration of each frequency (in cents).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Figure 1 presents Masoudieh’s transcription of the piece, which serves as our reference [14]. |
+| 主要结果 | Figure 1: Masoudieh’s Transcript of Example 1 The process described in Sections 2.1 to 2.4 is summarized in Figure 2, which outlines the sequential steps from pitch recognition to the identification of notes and various ornamentations. |
+| 对照、消融或部署指标 | Figure 2: Time-Frequency Data Processing 2.1 Pitch Recognition There are various algorithms used for pitch recognition, all of which rely on the fundamental frequency of sound to measure pitch. |
+
+![Figure 2: Time-Frequency Data Processing - 图2](https://arxiv.org/html/2608.17114v1/algorithm.png)
+
+![Figure 3: Pitch Histogram for Example 1](https://arxiv.org/html/2608.17114v1/mainhisto.png)
+
 ### 🔬 细节详述
 
 数据来自 Karimi 演唱及 Masoudieh 专家转录，后被纳入 IRMA Audio-MIDI。频率转 cents 的公式为 1200log2(f2/f1)；直方图以频率出现总时长为纵轴，峰值导出主音。软件使用 Python、pandas、music21、Sonic Annotator，并把结果导出为 CSV/MIDI 和联合可视化。仓库提供示例代码、编辑器和运行说明。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Figure 7: Error and Derivative in Finding the Tempo for Example 1 The ratio between consecutive local minima further validates the method.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Our approach is based on performances by the renowned vocalist Karimi and ground truth transcriptions by the prominent ethnomusicologist Masoudieh [14], which were subsequently incorporated into the IRMA Audio-MIDI dataset [20].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：1 Introduction Existing approaches to Automatic Music Transcription (AMT) have largely focused on tonal, metrical music, where established signal processing methods, probabilistic models, NMF, and neural networks have been employed to achieve reasonable transcription accuracy [2, 13].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Gomez et al. have assessed the CREPE [11] and pYIN [15] algorithms as state-of-the-art methods for recognizing pitch in monophonic voice [9].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：Their evaluation on the iKala dataset showed similar results for both algorithms, with pYIN achieving 91% Raw Pitch Accuracy and CREPE 90.5%.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

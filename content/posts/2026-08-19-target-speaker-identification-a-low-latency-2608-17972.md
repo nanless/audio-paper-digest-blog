@@ -46,17 +46,23 @@ paper_digest_arxiv_id: "2608.17972"
 
 ### 🏗️ 方法概述和架构
 
-整体输入为连续单声道音频流，输出为指示目标说话人是否活跃的布尔控制信号；整个系统是一个“流式日志 + 说话人验证”的两阶段模块化流水线，而非端到端训练的新模型。
+整体输入为连续单声道音频流，输出为指示目标说话人是否活跃的布尔控制信号；整个系统是一个“流式日志 + 说话人验证”的两阶段模块化流水线，而非端到端训练的新模型。 第一阶段：离线基线选择与模型确定。作者先用 Pyannote 2.1.1 和 LIUM 对《This American Life》单集音频做离线说话人日志，以 DER（Diarization Error Rate）为指标。Pyannote 在该集上 DER=0.201，LIUM DER=0.976，且 Pyannote 与后续流式系统 Diart 兼容，因此被选为日志模块；说话人验证则在 Pyannote 和 NVIDIA NeMo 的 TitaNet-Large 之间比较。 第二阶段：流式说话人日志。采用 Diart 0.8.0，它基于 Pyannote 的嵌入与聚类机制，通过 ReactiveX（RxPY）把音频流切为 500 ms 的块进行实时处理。Diart 的在线聚类由若干关键超参数控制：delta_new（新建说话人簇的阈值）、rho_update（簇中心更新率）、tau_active（活动说话人超时）。作者在一集数据上做网格搜索，得到 delta_new=0.895、rho_update=0.1、tau_active=0.5，使该集 DER 从默认配置的 0.563 降至 0.310（降幅 44.9%）。Diart 每 500 ms 输出带说话人标签的语音片段，为后续验证提供候选。 第三阶段：说话人验证。对 Diart 输出的每个说话人片段，使用预训练的说话人嵌入模型生成固定维度嵌入；同时从预先录制的约 57 秒目标说话人语音中生成目标嵌入。两者余弦距离定义为 1 − 余弦相似度，通过与阈值比较判断是否为目标说话人。作者在 23 集上绘制 ROC 曲线，发现 Pyannote 与 TitaNet 的“拐点”大致均在 FPR≈0.05、TPR≈0.6 附近；由于性能接近且与 Diart 生态兼容，最终选用 Pyannote 作为验证模型。 第四阶段：系统级集成与延迟控制。Diart 本身以 500 ms 为最小单元输出，但说话人验证需要更长上下文。作者通过网格搜索确定将 2 个 500 ms 块拼接后送入验证模块，即验证侧延迟约 1 秒；结合日志 500 ms 的固有延迟，端到端目标说话人识别延迟约为 1 秒。该识别信号并不进入音频播放链路，仅作为门控/指向信号驱动下游低延迟放大算法（如文献 [29] 的 4 ms 放大器），因此满足助听器对音频路径 <10 ms 的严格要求。 评估阶段：将预测和真实目标说话人说话时段离散化为 100 ms 的二值掩码向量，计算准确率、精确率、召回率、F1 和特异度；另测试了“Liberal”“More Liberal”两种对齐方式，通过向预测窗前后分别扩展 0.5 s 和 1.0 s 来容忍日志时间戳偏差。
 
-第一阶段：离线基线选择与模型确定。作者先用 Pyannote 2.1.1 和 LIUM 对《This American Life》单集音频做离线说话人日志，以 DER（Diarization Error Rate）为指标。Pyannote 在该集上 DER=0.201，LIUM DER=0.976，且 Pyannote 与后续流式系统 Diart 兼容，因此被选为日志模块；说话人验证则在 Pyannote 和 NVIDIA NeMo 的 TitaNet-Large 之间比较。
+全文方法与训练段落给出的可复现设置如下：
 
-第二阶段：流式说话人日志。采用 Diart 0.8.0，它基于 Pyannote 的嵌入与聚类机制，通过 ReactiveX（RxPY）把音频流切为 500 ms 的块进行实时处理。Diart 的在线聚类由若干关键超参数控制：delta_new（新建说话人簇的阈值）、rho_update（簇中心更新率）、tau_active（活动说话人超时）。作者在一集数据上做网格搜索，得到 delta_new=0.895、rho_update=0.1、tau_active=0.5，使该集 DER 从默认配置的 0.563 降至 0.310（降幅 44.9%）。Diart 每 500 ms 输出带说话人标签的语音片段，为后续验证提供候选。
+第 1 个证据块：论文明确写到“Figure 1: Speaker verification is completed by using a speaker verification model to create a vector embedding of an audio segment and a target speaker’s speech segment.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-第三阶段：说话人验证。对 Diart 输出的每个说话人片段，使用预训练的说话人嵌入模型生成固定维度嵌入；同时从预先录制的约 57 秒目标说话人语音中生成目标嵌入。两者余弦距离定义为 1 − 余弦相似度，通过与阈值比较判断是否为目标说话人。作者在 23 集上绘制 ROC 曲线，发现 Pyannote 与 TitaNet 的“拐点”大致均在 FPR≈0.05、TPR≈0.6 附近；由于性能接近且与 Diart 生态兼容，最终选用 Pyannote 作为验证模型。
+第 2 个证据块：论文明确写到“3 Results We developed a real-time pipeline for speaker identification that utilized two distinct stages—speech diarization and speaker verification.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-第四阶段：系统级集成与延迟控制。Diart 本身以 500 ms 为最小单元输出，但说话人验证需要更长上下文。作者通过网格搜索确定将 2 个 500 ms 块拼接后送入验证模块，即验证侧延迟约 1 秒；结合日志 500 ms 的固有延迟，端到端目标说话人识别延迟约为 1 秒。该识别信号并不进入音频播放链路，仅作为门控/指向信号驱动下游低延迟放大算法（如文献 [29] 的 4 ms 放大器），因此满足助听器对音频路径 <10 ms 的严格要求。
+第 3 个证据块：论文明确写到“Burke Affiliation: Children’s National Hospital Affiliation: Washington, DC Email: Pburke2@cnmc.org Satyam Raj Affiliation: Arizona State University Affiliation: Tempe, AZ Email: sraj17@asu.edu Sean Kinahan Affiliation: Arizona State University Affiliation: Tempe, AZ Email: skinahan@asu.edu Abstract We present a real-time pipeline of open source, pretrained models for streaming identification of a target speaker, motivated by hearing-aid applications where latency as low as 10 ms can be perceptible.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-评估阶段：将预测和真实目标说话人说话时段离散化为 100 ms 的二值掩码向量，计算准确率、精确率、召回率、F1 和特异度；另测试了“Liberal”“More Liberal”两种对齐方式，通过向预测窗前后分别扩展 0.5 s 和 1.0 s 来容忍日志时间戳偏差。
+第 4 个证据块：论文明确写到“Evaluating the system on a long-form conversational podcast dataset in a streaming manner, we achieved greater than 90% accuracy in identifying speech segments of the target speaker.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“2 Materials and Methods To emulate conversational speech while minimizing overlapping speakers, we selected the This American Life Podcast Transcripts dataset [16, 25].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1: Speaker verification is completed by using a speaker verification model to create a vector embedding of an audio segment and a target speaker’s speech segment. The cosine distance is calculated between these embeddings and compared to a threshold value.](https://arxiv.org/html/2608.17972v1/media/fig1.png)
+
+![Figure 2: Two boolean vectors are created such that each value represents 0.1 seconds of the podcast. True values in each vector, respectively, represent times when the target speaker spoke according to the ground truth, or when the system predicted target speaker speech. These two vectors were then compared to calculate the system’s metrics.](https://arxiv.org/html/2608.17972v1/media/fig2.png)
 
 ### 💡 核心创新点
 
@@ -68,36 +74,45 @@ paper_digest_arxiv_id: "2608.17972"
 
 ### 📊 实验结果
 
-离线基线：Pyannote DER=0.201，LIUM DER=0.976；Diart 默认配置 DER=0.563，调参后 DER=0.310。说话人验证 ROC 显示 Pyannote 与 TitaNet 拐点大致位于 FPR≈0.05、TPR≈0.6。
-
-下表保留了目标注册时长与 AUC 的关键消融结果（表中保留主方法、最强基线与关键消融项）：
-
-| 注册时长 (s) | AUC  |
+离线基线：Pyannote DER=0.201，LIUM DER=0.976；Diart 默认配置 DER=0.563，调参后 DER=0.310。说话人验证 ROC 显示 Pyannote 与 TitaNet 拐点大致位于 FPR≈0.05、TPR≈0.6。 下表保留了目标注册时长与 AUC 的关键消融结果（表中保留主方法、最强基线与关键消融项）：
+| 注册时长 (s) | AUC |
 |-------------|------|
-| 13          | 0.324|
-| 26          | 0.394|
-| 38          | 0.410|
-| 50          | 0.423|
-| 57          | 0.449|
-| 66          | 0.451|
-| 93          | 0.445|
-| 105         | 0.442|
-| 123         | 0.446|
-
+| 13 | 0.324|
+| 26 | 0.394|
+| 38 | 0.410|
+| 50 | 0.423|
+| 57 | 0.449|
+| 66 | 0.451|
+| 93 | 0.445|
+| 105 | 0.442|
+| 123 | 0.446|
 下表为完整流水线在 17 集上的系统级指标（表中保留主方法、最强基线与关键消融项）：
-
-| 阈值 | 指标   | 中位数 | 均值 | 标准差 |
+| 阈值 | 指标 | 中位数 | 均值 | 标准差 |
 |------|--------|--------|------|--------|
 | 0.70 | Accuracy | 0.93 | 0.91 | 0.05 |
-| 0.70 | F1       | 0.68 | 0.66 | 0.12 |
+| 0.70 | F1 | 0.68 | 0.66 | 0.12 |
 | 0.70 | Precision| 0.91 | 0.86 | 0.14 |
-| 0.70 | Recall   | 0.56 | 0.55 | 0.12 |
+| 0.70 | Recall | 0.56 | 0.55 | 0.12 |
 | 0.70 | Specificity| 0.99 | 0.98 | 0.02 |
 | 0.75 | Accuracy | 0.91 | 0.90 | 0.05 |
-| 0.75 | F1       | 0.70 | 0.68 | 0.13 |
+| 0.75 | F1 | 0.70 | 0.68 | 0.13 |
 | 0.75 | Precision| 0.78 | 0.73 | 0.18 |
-| 0.75 | Recall   | 0.68 | 0.65 | 0.10 |
+| 0.75 | Recall | 0.68 | 0.65 | 0.10 |
 | 0.75 | Specificity| 0.96 | 0.95 | 0.05 |
+
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 1: Speaker verification is completed by using a speaker verification model to create a vector embedding of an audio segment and a target speaker’s speech segment.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Figure 2: Two boolean vectors are created such that each value represents 0.1 seconds of the podcast.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：3 Results We developed a real-time pipeline for speaker identification that utilized two distinct stages—speech diarization and speaker verification.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：Table 1: Various target speaker audio segment lengths were created by concatenating known utterances of the target speaker.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+![Figure 2: Two boolean vectors are created such that each value represents 0.1 seconds of the podcast. True values in each vector, respectively, represent times when the target speaker spoke according to the ground truth, or when the system predicted target speaker speech. These two vectors were then compared to calculate the system’s metrics. - 图2](https://arxiv.org/html/2608.17972v1/media/fig2.png)
+
+![(a) Pyannote](https://arxiv.org/html/2608.17972v1/media/fig3_pyannote.png)
 
 ### 🔬 细节详述
 
@@ -108,6 +123,18 @@ paper_digest_arxiv_id: "2608.17972"
 - 训练硬件：未说明。
 - 推理细节：Diart 通过 RxPY 以 500 ms 块流式读取音频；验证模块对拼接后的 1 s 音频提取嵌入并计算与目标嵌入的余弦距离；输出控制信号。
 - 正则化或稳定训练技巧：未说明。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Figure 1: Speaker verification is completed by using a speaker verification model to create a vector embedding of an audio segment and a target speaker’s speech segment.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：3 Results We developed a real-time pipeline for speaker identification that utilized two distinct stages—speech diarization and speaker verification.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：Burke Affiliation: Children’s National Hospital Affiliation: Washington, DC Email: Pburke2@cnmc.org Satyam Raj Affiliation: Arizona State University Affiliation: Tempe, AZ Email: sraj17@asu.edu Sean Kinahan Affiliation: Arizona State University Affiliation: Tempe, AZ Email: skinahan@asu.edu Abstract We present a real-time pipeline of open source, pretrained models for streaming identification of a target speaker, motivated by hearing-aid applications where latency as low as 10 ms can be perceptible.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Evaluating the system on a long-form conversational podcast dataset in a streaming manner, we achieved greater than 90% accuracy in identifying speech segments of the target speaker.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：2 Materials and Methods To emulate conversational speech while minimizing overlapping speakers, we selected the This American Life Podcast Transcripts dataset [16, 25].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

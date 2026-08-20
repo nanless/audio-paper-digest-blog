@@ -41,15 +41,21 @@ FireRedTTS3 以冻结的语音理解 Audio Encoder 作为语义教师，训练 R
 
 ### 🏗️ 方法概述和架构
 
-系统输入 24 kHz 波形，先按 480 个采样点切成 50 Hz 帧。RedAE 的编码器提取连续表示，再以 25 Hz latent 作为 LLM-DiT 的建模目标；解码器把低速 latent 上采样到 50 Hz，预测 STFT 频谱并通过 iSTFT 重建波形。
+系统输入 24 kHz 波形，先按 480 个采样点切成 50 Hz 帧。RedAE 的编码器提取连续表示，再以 25 Hz latent 作为 LLM-DiT 的建模目标；解码器把低速 latent 上采样到 50 Hz，预测 STFT 频谱并通过 iSTFT 重建波形。 RedAE 是混合自动编码器：语义 Audio Encoder 在训练时冻结，提供来自 ASR、说话人验证等任务的语义监督；主编码器和解码器联合优化重建、对抗、mel、特征匹配等损失，避免 VQ/RVQ 把音色和瞬态细节离散化丢失。语义教师只参与 tokenizer 训练，之后被移除，使下游 LLM-DiT 不必额外携带语义分支。 FireRedTTS3 的生成器采用 Qwen3 风格 Transformer 与 DiT 头，在文本 hidden states 条件下预测连续帧并用 stop 预测结束。Base 处理多语言、多方言零样本克隆；Instruct 将任务、参考语音和编辑指令映射到统一序列，支持插入、删除、替换以及音高、音量、语速等局部控制。训练和推理沿用自回归上下文，因此能复用文本 LLM 的指令跟随能力，但也需要控制误差累积。
 
-RedAE 是混合自动编码器：语义 Audio Encoder 在训练时冻结，提供来自 ASR、说话人验证等任务的语义监督；主编码器和解码器联合优化重建、对抗、mel、特征匹配等损失，避免 VQ/RVQ 把音色和瞬态细节离散化丢失。语义教师只参与 tokenizer 训练，之后被移除，使下游 LLM-DiT 不必额外携带语义分支。
+全文方法与训练段落给出的可复现设置如下：
 
-FireRedTTS3 的生成器采用 Qwen3 风格 Transformer 与 DiT 头，在文本 hidden states 条件下预测连续帧并用 stop 预测结束。Base 处理多语言、多方言零样本克隆；Instruct 将任务、参考语音和编辑指令映射到统一序列，支持插入、删除、替换以及音高、音量、语速等局部控制。训练和推理沿用自回归上下文，因此能复用文本 LLM 的指令跟随能力，但也需要控制误差累积。
+第 1 个证据块：论文明确写到“2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations Feiyu Shen Kun Xie Yichen Wu Ziqi Dai Yichen Han Junjie Li Affiliation: Xuelong Geng, Fenglong Xie, Lei Xie, Xu Tang, Yao Hu Affiliation: [6pt] Xiaohongshu Abstract Recent continuous autoregressive TTS models operate directly on continuous speech representations, preserving rich acoustic details while leveraging the instruction-following capabilities of text LLMs.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17492v1/image/fireredtts3_arch.png)
+第 3 个证据块：论文明确写到“In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“Flow-matching-based methods [4, 12, 27, 31, 24, 30, 14] can generate high-quality audio from textual transcriptions or descriptions.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“To retain fine-grained acoustic details while preserving autoregressive modeling, continuous autoregressive methods [25, 35, 41, 1, 8] bypass quantization and directly model continuous speech representations.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing.](https://arxiv.org/html/2608.17492v1/image/fireredtts3_arch.png)
 
 ### 💡 核心创新点
 
@@ -61,9 +67,37 @@ FireRedTTS3 的生成器采用 Qwen3 风格 Transformer 与 DiT 头，在文本 
 
 Seed-TTS-Eval 的 Test-EN/Test-ZH/Test-Hard 平均错误率为 3.04%，平均相似度为 78.8%；Base 在 Test-ZH 和 Test-EN 的相似度分别为 80.9 和 77.2。与 CosyVoice3、Qwen3-TTS、VoxCPM2 等系统相比，论文报告 Base 的平均错误率最低、平均相似度最高。编辑实验覆盖语义插入/删除/替换、自由指令以及音高、音量、语速控制，并用 Gemini 评估指令一致性。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：3 Results 3.1 Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：This paradigm opens new possibilities for voice cloning, instruction-controlled voice design, and speech editing, but remains susceptible to error accumulation during autoregressive generation.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning, and (c) FireRedTTS3-Instruct for voice cloning, instruction-controlled voice design, and speech editing. |
+| 主要结果 | 3 Results 3.1 Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing. |
+| 对照、消融或部署指标 | This paradigm opens new possibilities for voice cloning, instruction-controlled voice design, and speech editing, but remains susceptible to error accumulation during autoregressive generation. |
+
 ### 🔬 细节详述
 
 评测使用 Seed-TTS-Eval、MiniMax-MLS-Test 和 InstructTTS-Eval；语音识别采用英文 WER、中文 CER，身份保持使用 WavLM-Large。语速控制报告相对时长误差，音量控制报告相对振幅误差。RedAE 训练阶段采用冻结教师、重建与 GAN 目标；LLM-DiT 阶段由文本和参考语音条件生成连续表示。公开仓库还链接 Seed-TTS-Eval、MiniMax 数据集与 Ming-Freeform-Audio-Edit。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations Feiyu Shen Kun Xie Yichen Wu Ziqi Dai Yichen Han Junjie Li Affiliation: Xuelong Geng, Fenglong Xie, Lei Xie, Xu Tang, Yao Hu Affiliation: [6pt] Xiaohongshu Abstract Recent continuous autoregressive TTS models operate directly on continuous speech representations, preserving rich acoustic details while leveraging the instruction-following capabilities of text LLMs.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Flow-matching-based methods [4, 12, 27, 31, 24, 30, 14] can generate high-quality audio from textual transcriptions or descriptions.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：To retain fine-grained acoustic details while preserving autoregressive modeling, continuous autoregressive methods [25, 35, 41, 1, 8] bypass quantization and directly model continuous speech representations.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

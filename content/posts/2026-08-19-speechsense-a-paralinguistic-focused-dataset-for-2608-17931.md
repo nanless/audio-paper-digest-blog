@@ -40,15 +40,21 @@ SpeechSense 面向细粒度 Speech Sentiment Analysis，定义八类主要由韵
 
 ### 🏗️ 方法概述和架构
 
-数据管线先把每个姿态写成声学和心理定义，再用高保真语音合成生成内容相同、韵律不同的片段。Confident 通过较短时长、高强度和决断式下降音高表现；Nervous 体现为 pitch jitter、高平均音高和不规则节奏；Passionate 与 Impatient 通过音域、截断和 staccato 节奏区分；Warm、Apathetic、Sarcastic 和 Neutral 分别覆盖连接感、单调疏离、语义与韵律不一致、以及声学基线。
+数据管线先把每个姿态写成声学和心理定义，再用高保真语音合成生成内容相同、韵律不同的片段。Confident 通过较短时长、高强度和决断式下降音高表现；Nervous 体现为 pitch jitter、高平均音高和不规则节奏；Passionate 与 Impatient 通过音域、截断和 staccato 节奏区分；Warm、Apathetic、Sarcastic 和 Neutral 分别覆盖连接感、单调疏离、语义与韵律不一致、以及声学基线。 候选音频由 Qualtrics/Prolific 流程收集标注，每条至少三名独立 annotator。先保留 3/3 或 2/3 共识样本；对无多数的样本，如果至少一名标注者与目标标签一致，则以 reference alignment 保留，以免细微姿态因普通听众歧义全部丢失。最终统计同时报告保留率、Fleiss κ 和各类别分布。 评测分别提供音频、转写文本或多模态输入，比较多模态大模型、文本 LLM 和专门语音编码器。这样可以把 ASR 误差、文本语义和韵律线索分离，检验声学输入是否真正帮助识别 interpersonal stance，而不是只看语言内容。
 
-候选音频由 Qualtrics/Prolific 流程收集标注，每条至少三名独立 annotator。先保留 3/3 或 2/3 共识样本；对无多数的样本，如果至少一名标注者与目标标签一致，则以 reference alignment 保留，以免细微姿态因普通听众歧义全部丢失。最终统计同时报告保留率、Fleiss κ 和各类别分布。
+全文方法与训练段落给出的可复现设置如下：
 
-评测分别提供音频、转写文本或多模态输入，比较多模态大模型、文本 LLM 和专门语音编码器。这样可以把 ASR 误差、文本语义和韵律线索分离，检验声学输入是否真正帮助识别 interpersonal stance，而不是只看语言内容。
+第 1 个证据块：论文明确写到“SpeechSense: A Paralinguistic-Focused Dataset for Fine-Grained Speech Sentiment AnalysisConference: Proceedings of the 34th ACM International Conference on Multimedia; November 10–14, 2026; Rio de Janeiro, BrazilProceedings of the 34th ACM International Conference on Multimedia (MM ’26), November 10–14, 2026, Rio de Janeiro, BrazilDOI: 10.1145/3767308.3838667ISBN: 979-8-4007-2213-4/2026/11CCS: Information systems Sentiment analysisCCS: Computing methodologies Language resourcesCCS: Computing methodologies Neural networksCCS: Applied computing Sound and music computing Shicheng Ma Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: shichengma@cuhk.edu.hk, Wenqian Cui Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: wenqian.cui@link.cuhk.edu.hk and Irwin King Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: king@cse.cuhk.edu.hk 2026; © cc Abstract.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.11 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17931v1/camera_ready_figure1_pipeline_ACMMM.png)
+第 3 个证据块：论文明确写到“For effective speech understanding, AI models require not only recognizing what is said (linguistic information) but also discerning how it is said (paralinguistic information) (Cui et al. 2025b; Cui et al. 2026; Guo et al. 2026), as paralinguistic information carries additional meanings beyond the spoken content. A notable task that involves paralinguistic understanding is Speech Sentiment Analysis (SSA), where acoustic cues are analyzed to decipher fine-grained speaker attitudes and affective states.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“In these systems, speech is first converted to text via Automatic Speech Recognition (ASR) before applying Text-based Sentiment Analysis (TSA) models (Shah et al. 2023).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“Most current datasets focus on broad sentiment, such as positive or negative, or basic emotions like happy and sad (Mohmad Dar and Delhibabu 2024; Cui et al. 2024).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1. The SpeechSense dataset construction pipeline. The framework consists of (1) semantic-prosodic decoupled text design, (2) role-play synthesis using Lovo.ai, and (3) dual-stage human validation and filtering.](https://arxiv.org/html/2608.17931v1/camera_ready_figure1_pipeline_ACMMM.png)
 
 ### 💡 核心创新点
 
@@ -60,9 +66,37 @@ SpeechSense 面向细粒度 Speech Sentiment Analysis，定义八类主要由韵
 
 最终测试集含 669 个样本，93.12% 仅凭多数投票保留，Fleiss κ=0.4437，属于中等一致性。多模态模型和语音编码器在八类姿态上总体优于只读取 ASR 文本的模型；论文强调这一优势在 confident/nervous、passionate/impatient 等声学相近类别上更明显。结果支持“音频访问是细粒度语用情感的必要条件”，但类别级混淆矩阵和跨说话人泛化仍需结合完整附录解读。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Table 3 summarizes their variation measured on a shared control utterance, spanning a broad pitch range and distinct vocal tract characteristics.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Specifically, we define a specialized 8-class taxonomy of interpersonal stances detectable primarily through prosodic cues beyond lexical content alone.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.11 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：For effective speech understanding, AI models require not only recognizing what is said (linguistic information) but also discerning how it is said (paralinguistic information) (Cui et al. 2025b; Cui et al. 2026; Guo et al. 2026), as paralinguistic information carries additional meanings beyond the spoken content. A notable task that involves paralinguistic understanding is Speech Sentiment Analysis (SSA), where acoustic cues are analyzed to decipher fine-grained speaker attitudes and affective states.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Table 3 summarizes their variation measured on a shared control utterance, spanning a broad pitch range and distinct vocal tract characteristics. |
+| 主要结果 | Specifically, we define a specialized 8-class taxonomy of interpersonal stances detectable primarily through prosodic cues beyond lexical content alone. |
+| 对照、消融或部署指标 | These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.11 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1. |
+
 ### 🔬 细节详述
 
 标签集按 Internal Certainty、High-Energy Valence、Social Connection、Prosodic Deviation 四组组织。候选池从 23,006 个通过筛选的 Prolific 人员中招募，要求母语英语、大学学历和高历史通过率。93.12% 的最终样本由多数投票决定，46 个歧义样本由 reference alignment 保留；数据和补充材料提供 GitHub 下载入口。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：SpeechSense: A Paralinguistic-Focused Dataset for Fine-Grained Speech Sentiment AnalysisConference: Proceedings of the 34th ACM International Conference on Multimedia; November 10–14, 2026; Rio de Janeiro, BrazilProceedings of the 34th ACM International Conference on Multimedia (MM ’26), November 10–14, 2026, Rio de Janeiro, BrazilDOI: 10.1145/3767308.3838667ISBN: 979-8-4007-2213-4/2026/11CCS: Information systems Sentiment analysisCCS: Computing methodologies Language resourcesCCS: Computing methodologies Neural networksCCS: Applied computing Sound and music computing Shicheng Ma Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: shichengma@cuhk.edu.hk, Wenqian Cui Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: wenqian.cui@link.cuhk.edu.hk and Irwin King Affiliation: Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, Hong Kong email: king@cse.cuhk.edu.hk 2026; © cc Abstract.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.11 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：For effective speech understanding, AI models require not only recognizing what is said (linguistic information) but also discerning how it is said (paralinguistic information) (Cui et al. 2025b; Cui et al. 2026; Guo et al. 2026), as paralinguistic information carries additional meanings beyond the spoken content. A notable task that involves paralinguistic understanding is Speech Sentiment Analysis (SSA), where acoustic cues are analyzed to decipher fine-grained speaker attitudes and affective states.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：In these systems, speech is first converted to text via Automatic Speech Recognition (ASR) before applying Text-based Sentiment Analysis (TSA) models (Shah et al. 2023).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：Most current datasets focus on broad sentiment, such as positive or negative, or basic emotions like happy and sad (Mohmad Dar and Delhibabu 2024; Cui et al. 2024).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

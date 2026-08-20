@@ -39,15 +39,23 @@ paper_digest_arxiv_id: "2608.18025"
 
 ### 🏗️ 方法概述和架构
 
-框架把观测实例 x 映射为坐标序列 z，并把完整压缩流程拆成坐标构造、状态形成和模型预测三部分。坐标构造可以改变粒度、词表和序列长度，但必须保留足够信息；状态形成是依赖上下文且通常不可逆的计算，不能被误认为 token 本身。
+框架把观测实例 x 映射为坐标序列 z，并把完整压缩流程拆成坐标构造、状态形成和模型预测三部分。坐标构造可以改变粒度、词表和序列长度，但必须保留足够信息；状态形成是依赖上下文且通常不可逆的计算，不能被误认为 token 本身。 Fact–Token Boundary 讨论哪些事实适合成为可复用 token。若把本来独立的音高、节奏或局部事件过早捆绑，模型会失去条件分布中的解耦结构；若拆分得过细，又会增加序列长度。因此作者用 decoupling、denesting 和 coordinate-aware note 把可预测的事实接口显式化。 Token–State Boundary 讨论哪些关系必须在模型状态中计算。和声功能、长程依赖、跨声部约束与上下文选择往往不是局部可逆对象，把它们固化为 token 会制造脆弱的关系投影。实验通过不同 token 粒度、关系是否固定和模型预测损失比较这两条边界，检验压缩率、预测性与关系恢复之间的权衡。
 
-Fact–Token Boundary 讨论哪些事实适合成为可复用 token。若把本来独立的音高、节奏或局部事件过早捆绑，模型会失去条件分布中的解耦结构；若拆分得过细，又会增加序列长度。因此作者用 decoupling、denesting 和 coordinate-aware note 把可预测的事实接口显式化。
+全文方法与训练段落给出的可复现设置如下：
 
-Token–State Boundary 讨论哪些关系必须在模型状态中计算。和声功能、长程依赖、跨声部约束与上下文选择往往不是局部可逆对象，把它们固化为 token 会制造脆弱的关系投影。实验通过不同 token 粒度、关系是否固定和模型预测损失比较这两条边界，检验压缩率、预测性与关系恢复之间的权衡。
+第 1 个证据块：论文明确写到“5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Why GPT-Style Models Do Not Directly Transfer to Symbolic Music: Compression in the Wrong Coordinate System Yi Wang Affiliation: Department of Electronic Engineering, Tsinghua University Email: yiwang24@mails.tsinghua.edu.cn Abstract GPT-style models achieve strong performance by representing language with finite vocabularies of reusable discrete tokens.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.18025v1/figures/case07_generated.png)
+第 3 个证据块：论文明确写到“1 Introduction 1.1 From Language Tokens to Musical Structure GPT-style models have achieved remarkable success in large part by representing language with a finite vocabulary of reusable discrete tokens 20; 1.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“The Relational Losslessness Principle establishes the Token–State Boundary: contextual relations whose meanings depend on surrounding context remain for model-state computation rather than being fixed by the tokenizer. 3.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“2 The Effectiveness–Losslessness Framework 2.1 Tokenization as Effective and Lossless Coordinate Construction Let x∈𝒳x\in\mathcal{X} be an observable instance and let R(x)=z1:T∈𝒵∗R(x)=z_{1:T}\in\mathcal{Z}^{*} be its coordinate representation.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 6: Case A model continuation. The upper system is the shared four-bar prefix; the lower system is generated. Red boxes and blue labels are manual musical annotations, not model inputs.](https://arxiv.org/html/2608.18025v1/figures/case07_generated.png)
+
+![Figure 7: Case A source continuation for exact visual comparison.](https://arxiv.org/html/2608.18025v1/figures/case07_reference.png)
 
 ### 💡 核心创新点
 
@@ -59,9 +67,41 @@ Token–State Boundary 讨论哪些关系必须在模型状态中计算。和声
 
 受控符号音乐实验表明，解耦和去嵌套后的坐标在相同模型条件下具有更稳定的条件分布和更好的预测压缩；把上下文关系提前固定的表示在关系变化和组合外推时退化。论文的结果支持两条边界的方向性预测，但没有把框架扩展到大规模 MIDI、音频 token 或多种现代音乐生成器，因此不能据此声称普适优于既有 tokenizer。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.00%14.00\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Figure 4: Generated continuation from a shared prefix, showing recurring local patterns, variation, chordal texture, and longer-range recurrence.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：We reveal a missing principle in direct GPT transfer: tokenization gains predictive advantage not from reusable combinations alone, but from constructing coordinates in which observable regularities become predictable. 2.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | 5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface. |
+| 主要结果 | Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.00%14.00\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a). |
+| 对照、消融或部署指标 | Figure 4: Generated continuation from a shared prefix, showing recurring local patterns, variation, chordal texture, and longer-range recurrence. |
+
+![Figure 7: Case A source continuation for exact visual comparison. - 图2](https://arxiv.org/html/2608.18025v1/figures/case07_reference.png)
+
+![Figure 8: Case B source continuation for exact visual comparison.](https://arxiv.org/html/2608.18025v1/figures/case05_reference.png)
+
 ### 🔬 细节详述
 
 理论部分使用表示 R(x)=z1:T、模型状态和条件概率刻画压缩；实验围绕可预测性、损失无损性、关系恢复和组合泛化设置对照。核心变量是坐标接口、token 粒度与是否预先计算关系。论文强调 token 化和 state formation 应分开设计，这也解释了语言模型经验不能未经修改迁移到和声、节拍和多声部关系。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Why GPT-Style Models Do Not Directly Transfer to Symbolic Music: Compression in the Wrong Coordinate System Yi Wang Affiliation: Department of Electronic Engineering, Tsinghua University Email: yiwang24@mails.tsinghua.edu.cn Abstract GPT-style models achieve strong performance by representing language with finite vocabularies of reusable discrete tokens.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：1 Introduction 1.1 From Language Tokens to Musical Structure GPT-style models have achieved remarkable success in large part by representing language with a finite vocabulary of reusable discrete tokens 20; 1.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：The Relational Losslessness Principle establishes the Token–State Boundary: contextual relations whose meanings depend on surrounding context remain for model-state computation rather than being fixed by the tokenizer. 3.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：2 The Effectiveness–Losslessness Framework 2.1 Tokenization as Effective and Lossless Coordinate Construction Let x∈𝒳x\in\mathcal{X} be an observable instance and let R(x)=z1:T∈𝒵∗R(x)=z_{1:T}\in\mathcal{Z}^{*} be its coordinate representation.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

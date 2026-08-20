@@ -39,13 +39,19 @@ paper_digest_arxiv_id: "2608.17605"
 
 ### 🏗️ 方法概述和架构
 
-综述首先定义多轮会话不是独立问答，而是由用户话语、系统响应、会话上下文、模态状态和外部知识共同组成的序列。每一轮都可能澄清目标、修订约束、引入新证据或打断上一轮，因此模型需要记忆与更新，而不是只把历史拼接进 prompt。
+综述首先定义多轮会话不是独立问答，而是由用户话语、系统响应、会话上下文、模态状态和外部知识共同组成的序列。每一轮都可能澄清目标、修订约束、引入新证据或打断上一轮，因此模型需要记忆与更新，而不是只把历史拼接进 prompt。 文献被分成文本对话、AudioLLM/语音原生系统、多模态和 omni-modal 系统、工具增强 agent 四层。对每层分别整理数据集与 benchmark、上下文窗口和外部记忆、训练/后训练、检索和工具调用、响应延迟、全双工及说话人/文化适配。语音系统特别关注 ASR 错误传播、重叠语音、turn-taking、barge-in、声学 grounding 与语音输出。 评测被分成 turn-level correctness、session-level coherence、memory/grounding、task success、safety/uncertainty 和用户体验。作者指出单轮准确率不能替代会话级指标，未来应报告跨轮事实保持、修订后的目标满足、无法回答时的澄清/拒答、工具执行轨迹，以及模态缺失和分布偏移下的鲁棒性。
 
-文献被分成文本对话、AudioLLM/语音原生系统、多模态和 omni-modal 系统、工具增强 agent 四层。对每层分别整理数据集与 benchmark、上下文窗口和外部记忆、训练/后训练、检索和工具调用、响应延迟、全双工及说话人/文化适配。语音系统特别关注 ASR 错误传播、重叠语音、turn-taking、barge-in、声学 grounding 与语音输出。
+全文方法与训练段落给出的可复现设置如下：
 
-评测被分成 turn-level correctness、session-level coherence、memory/grounding、task success、safety/uncertainty 和用户体验。作者指出单轮准确率不能替代会话级指标，未来应报告跨轮事实保持、修订后的目标满足、无法回答时的澄清/拒答、工具执行轨迹，以及模态缺失和分布偏移下的鲁棒性。
+第 1 个证据块：论文明确写到“Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“We conclude with a research agenda for systems that can remember, revise, ground, speak, listen, act, and adapt across turns, modalities, and cultures.1 1 Introduction Conversational AI is becoming a primary interface through which users interact with large language models (LLMs).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 3 个证据块：论文明确写到“We use session- level multi-turn interaction to refer to a complete 1multiturn-conversational-resources Figure 1: Three-axis view of conversational AI cov- ering modality complexity, interaction depth, and cultural-linguistic diversity. conversation with more than one exchange, where later turns may depend on earlier requests, re- sponses, evidence, actions, or state. A capable model must therefore do more than answer the cur- rent query.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“Multi-turn dialogue is thus a distinct modeling and evaluation problem, not merely a longer version of single- turn question answering (Deshpande et al., 2025).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“More recent omni-modal models jointly handle text, speech, vision, and often video within unified architectures (Hurst et al., 2024; Xu et al., 2025b; Fu et al., 2026; Chen et al., 2025c; Tong et al., 2025).”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
 ### 💡 核心创新点
 
@@ -57,9 +63,37 @@ paper_digest_arxiv_id: "2608.17605"
 
 综述对比了多类 survey、数据集和 benchmark，反复发现多数资源仍只测单轮或短上下文；音频和视觉能力增强并未同步带来持久记忆、跨轮证据绑定或可靠的全双工。作者整理的文献证据支持多轮一致性、记忆更新、文化适应和会话级评测是共同缺口，但本文不提供新的数值 benchmark。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Table 7 further compares these different families in terms of their mecha- nisms, suitable settings, strengths, limitations, and modality coverage.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：We use session- level multi-turn interaction to refer to a complete 1multiturn-conversational-resources Figure 1: Three-axis view of conversational AI cov- ering modality complexity, interaction depth, and cultural-linguistic diversity. conversation with more than one exchange, where later turns may depend on earlier requests, re- sponses, evidence, actions, or state. A capable model must therefore do more than answer the cur- rent query.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：Multi-turn dialogue is thus a distinct modeling and evaluation problem, not merely a longer version of single- turn question answering (Deshpande et al., 2025).。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets. |
+| 主要结果 | Table 7 further compares these different families in terms of their mecha- nisms, suitable settings, strengths, limitations, and modality coverage. |
+| 对照、消融或部署指标 | We use session- level multi-turn interaction to refer to a complete 1multiturn-conversational-resources Figure 1: Three-axis view of conversational AI cov- ering modality complexity, interaction depth, and cultural-linguistic diversity. conversation with more than one exchange, where later turns may depend on earlier requests, re- sponses, evidence, actions, or state. A capable model must therefore do more than answer the cur- rent query. |
+
 ### 🔬 细节详述
 
 检索范围覆盖 Google Scholar、Semantic Scholar，以及 NeurIPS、ICLR、ICML、Interspeech、SIGDIAL、CVPR、ICCV、AAAI 等会议。分类表涉及文本/语音/视觉/三模态、对话类型、上下文管理、训练策略、检索工具、评测和安全。对 AudioLLM，文章特别讨论 speech-native 输入、连续听觉流、语音活动检测、延迟和 full-duplex turn-taking。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：We conclude with a research agenda for systems that can remember, revise, ground, speak, listen, act, and adapt across turns, modalities, and cultures.1 1 Introduction Conversational AI is becoming a primary interface through which users interact with large language models (LLMs).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：We use session- level multi-turn interaction to refer to a complete 1multiturn-conversational-resources Figure 1: Three-axis view of conversational AI cov- ering modality complexity, interaction depth, and cultural-linguistic diversity. conversation with more than one exchange, where later turns may depend on earlier requests, re- sponses, evidence, actions, or state. A capable model must therefore do more than answer the cur- rent query.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：Multi-turn dialogue is thus a distinct modeling and evaluation problem, not merely a longer version of single- turn question answering (Deshpande et al., 2025).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：More recent omni-modal models jointly handle text, speech, vision, and often video within unified architectures (Hurst et al., 2024; Xu et al., 2025b; Fu et al., 2026; Chen et al., 2025c; Tong et al., 2025).。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 

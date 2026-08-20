@@ -39,15 +39,23 @@ paper_digest_arxiv_id: "2608.17084"
 
 ### 🏗️ 方法概述和架构
 
-文章先定义多模态证据 MM、任务 q 和可选上下文 c，系统输出可以是答案、hedge、IDK、澄清请求、检索、重试或人工升级。这样把“知道自己不知道”从语言层面的自述转成可观察的 action policy。
+文章先定义多模态证据 MM、任务 q 和可选上下文 c，系统输出可以是答案、hedge、IDK、澄清请求、检索、重试或人工升级。这样把“知道自己不知道”从语言层面的自述转成可观察的 action policy。 来源层包括模糊、遮挡、低清、音频噪声、跨模态矛盾、证据缺失和分布偏移；信号层整理 logits、token entropy、多个采样答案的语义分歧、输入扰动下的稳定性、视觉/音频 grounding、verifier/judge 和外部检索一致性。不同信号有不同的可校准性，不能把它们直接等价。 决策层把校准信号接到风险控制：证据足够时回答，低质量时请求重拍/重录，知识不足时检索，推理不稳定时 self-check，风险高或超出分布时拒答或转交专家。作者还讨论 selective prediction、conformal risk control、跨模态 answerability 和用户如何理解置信信息。
 
-来源层包括模糊、遮挡、低清、音频噪声、跨模态矛盾、证据缺失和分布偏移；信号层整理 logits、token entropy、多个采样答案的语义分歧、输入扰动下的稳定性、视觉/音频 grounding、verifier/judge 和外部检索一致性。不同信号有不同的可校准性，不能把它们直接等价。
+全文方法与训练段落给出的可复现设置如下：
 
-决策层把校准信号接到风险控制：证据足够时回答，低质量时请求重拍/重录，知识不足时检索，推理不稳定时 self-check，风险高或超出分布时拒答或转交专家。作者还讨论 selective prediction、conformal risk control、跨模态 answerability 和用户如何理解置信信息。
+第 1 个证据块：论文明确写到“Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-从复现角度，方法章节需要把输入、处理中间状态、监督信号和最终输出分开记录。输入端决定了系统看到的是原始音频、符号序列、文本、图像还是多轮上下文；中间模块负责抽取特征、建立对齐、维护状态或生成候选；监督与评价则决定哪些误差会被保留、修正或拒绝。这样的边界很重要，因为论文中的提升可能来自数据筛选、提示上下文、后处理或真正的模型结构，不能把整条流水线的收益都归因于单一模块。本文的实验和图示应按数据流逐项复核：先确认输入是否覆盖目标场景，再检查变换是否保持必要信息，随后核对输出是否与评价指标对应。对于未报告的参数、硬件、随机种子或服务版本，本文以“未说明”处理，不从常见实现反推细节；对于人工编辑、专家标注或外部模型产生的中间结果，也应把它们视为独立证据而不是模型能力本身。对于多模态系统，还要区分各模态是并行输入、条件输入还是结果后的解释，避免把后验标签当作模型在推理时可用的证据。
+第 2 个证据块：论文明确写到“Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
 
-![论文方法图](https://arxiv.org/html/2608.17084v1/figure1_framework_v5.png)
+第 3 个证据块：论文明确写到“The evidence base around this framework spans calibration before and after multimodal training [6], reasoning-step confidence boundaries [17], decoupled visual and reasoning confidence [59], training-free multimodal uncertainty estimation [25, 4], selective visual question answering [11, 55], multimodal self-awareness and IDK behavior [53, 46], conformal prediction and risk control [52, 49, 64, 2, 15], modality-specific uncertainty benchmarks [51], and refusal or answerability in visual, video, embodied, audio, and omni-modal settings [33, 66, 77, 31, 36, 1, 57, 50, 23].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 4 个证据块：论文明确写到“2.2 Inclusion criteria A paper is central to this survey when uncertainty is part of the method, benchmark, metric, or response policy.”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+第 5 个证据块：论文明确写到“Broad MLLM and evaluation surveys Architectures, training data, capabilities, benchmarks, and application coverage [65, 73].”。这段信息用于确定输入表示、核心模块、训练目标以及推理时的中间状态，不能只用“端到端”一词替代。对照原文可知，这个设置还决定了实验条件、计算开销和最终输出的解释边界。
+
+![Figure 1: Source–signal–calibration–action framework for uncertainty-aware MLLMs. Multimodal inputs and domain context give rise to uncertainty sources. These sources are observed through model-internal, output-level, evidence-grounding, verbalized, verifier, or judge signals. Calibration and risk-control methods convert raw signals into decision-relevant estimates. The final policy selects an action: answer, hedge, abstain or say IDK, clarify, request better input, retrieve evidence, self-check, or route the case to a stronger model or human expert.](https://arxiv.org/html/2608.17084v1/figure1_framework_v5.png)
+
+![Figure 2: From evidence conditions to uncertainty-aware actions. The same user question can require different model behavior depending on the quality, availability, and grounding of the visual evidence. With clear evidence, direct answering is appropriate, and unnecessary abstention becomes a failure mode. With hazy or partially degraded evidence, the model should hedge or request better input rather than over-specifying an uncertain visual attribute. With occluded evidence, a confident answer may reflect weak grounding or distractor bias, so the safer behavior is to state uncertainty or abstain. With referent ambiguity, the visual input contains multiple plausible targets, so the model should clarify or disambiguate the referred object instead of answering from a salient distractor. The examples are illustrative rather than exhaustive.](https://arxiv.org/html/2608.17084v1/figure2_2.drawio.png)
 
 ### 💡 核心创新点
 
@@ -59,9 +67,41 @@ paper_digest_arxiv_id: "2608.17084"
 
 综述对比文本不确定性、MLLM hallucination、拒答和安全 survey，并整理既有 calibration、conformal prediction、selective answering、grounding 和 self-check benchmark。结论是现有工作常只报告 ECE、准确率或语言置信，尚未充分测量在证据不足、冲突、分布偏移和高风险任务中 action 是否真的降低错误。
 
+下面把全文实验段落中的设置、数字和比较关系逐项列出；指标方向沿用论文定义。
+
+全文实验证据 1：Figure 3 summarizes these recurring interactions, and Table 2 gives the source vocabulary used in the rest of the survey.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 2：Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 3：Their failures are therefore not only linguistic. A fluent answer may conceal poor input quality, a perceptual error, weak grounding, conflict between modalities, unstable reasoning, distribution shift, or a question that is not answerable from the supplied evidence.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+全文实验证据 4：Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.。这项结果对应论文明确的评价条件，数字、比较方向和统计口径均按原文保留。
+
+| 实验维度 | 全文报告（保留原条件与指标） |
+|---|---|
+| 数据/训练设置 | Figure 3 summarizes these recurring interactions, and Table 2 gives the source vocabulary used in the rest of the survey. |
+| 主要结果 | Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer ques |
+| 对照、消融或部署指标 | Their failures are therefore not only linguistic. A fluent answer may conceal poor input quality, a perceptual error, weak grounding, conflict between modalities, unstable reasoning, distribution shift, or a question that is not answerable from the supplied evidence. |
+
+![Figure 2: From evidence conditions to uncertainty-aware actions. The same user question can require different model behavior depending on the quality, availability, and grounding of the visual evidence. With clear evidence, direct answering is appropriate, and unnecessary abstention becomes a failure mode. With hazy or partially degraded evidence, the model should hedge or request better input rather than over-specifying an uncertain visual attribute. With occluded evidence, a confident answer may reflect weak grounding or distractor bias, so the safer behavior is to state uncertainty or abstain. With referent ambiguity, the visual input contains multiple plausible targets, so the model should clarify or disambiguate the referred object instead of answering from a salient distractor. The examples are illustrative rather than exhaustive. - 图2](https://arxiv.org/html/2608.17084v1/figure2_2.drawio.png)
+
+![Figure 3: Propagation and interaction of MLLM uncertainty sources. The figure illustrates how uncertainty can cascade across sensory, grounding, reasoning, and policy layers in multimodal language models. In the sensory–grounding chain, ambiguous visual input can lead to perceptual uncertainty, weaken the alignment between evidence and claims, and allow language priors to fill visual gaps. These failures can become entangled with cross-modal conflict, where text and image evidence disagree, and with reasoning uncertainty, where inference becomes unstable under weak or conflicting evidence. System-level uncertainty can also arise from distributional or adversarial conditions that cause calibration failure, while missing or absent evidence creates answerability uncertainty and should trigger abstention or clarification rather than forced answering. Black arrows denote primary causal pathways, gray arrows denote entanglement between uncertainty sources, and colors distinguish perceptual-chain components, reasoning components, systemic sources, and model actions. The diagram is a schematic synthesis rather than an exhaustive causal model.](https://arxiv.org/html/2608.17084v1/figure3_source_propagation_v5.png)
+
 ### 🔬 细节详述
 
 文章按 uncertainty source、observable signal、calibration/control 和 response action 四层分类，覆盖 token/logit、semantic disagreement、perturbation、attribution、verifier、conformal、IDK、clarification、retrieval、self-check 和 human escalation。讨论也延伸到音频转写质量、视觉区域 grounding、视频时间一致性、医疗图像和 embodied agent。
+
+全文中还能定位到以下数据、训练或实现细节。它们补充了方法段没有展开的采样、数据规模、优化和部署边界：
+
+- 细节证据 1：Uncertainty-Aware Decision Making in Multimodal Large Language Models: A Survey of Sources, Signals, Calibration, and ActionsJournal: Neurocomputing Abderrahmene Boudiaf Email: 100058322@ku.ac.ae Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Corresponding author: Corresponding author Irfan Hussain Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Sajid Javed Address: Khalifa University of Science and Technology, Abu Dhabi, United Arab Emirates Abstract Multimodal large language models (MLLMs) increasingly answer questions whose correctness depends on visual, textual, temporal, acoustic, document, chart, or embodied evidence.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 2：Keywords: multimodal large language models, uncertainty quantification, confidence calibration, selective answering, abstention, answerability, trustworthy AI 1 Introduction Multimodal large language models extend language generation with perceptual and structured inputs, including images, video, audio, charts, documents, and embodied observations.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 3：The evidence base around this framework spans calibration before and after multimodal training [6], reasoning-step confidence boundaries [17], decoupled visual and reasoning confidence [59], training-free multimodal uncertainty estimation [25, 4], selective visual question answering [11, 55], multimodal self-awareness and IDK behavior [53, 46], conformal prediction and risk control [52, 49, 64, 2, 15], modality-specific uncertainty benchmarks [51], and refusal or answerability in visual, video, embodied, audio, and omni-modal settings [33, 66, 77, 31, 36, 1, 57, 50, 23].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 4：2.2 Inclusion criteria A paper is central to this survey when uncertainty is part of the method, benchmark, metric, or response policy.。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
+
+- 细节证据 5：Broad MLLM and evaluation surveys Architectures, training data, capabilities, benchmarks, and application coverage [65, 73].。该信息用于解释实验为什么在相应条件下成立，以及哪些条件不能外推。
 
 ### ⚖️ 评分理由
 
