@@ -32,15 +32,15 @@ paper_digest_arxiv_id: "2608.18025"
 
 论文解释 GPT 式模型为何不能直接沿用语言 tokenization 处理符号音乐。作者认为 token 的关键不是可复用组合本身，而是能否把规律放入条件分布稳定、可预测的坐标系。为此提出 Effectiveness–Losslessness Framework：Predictive Effectiveness Principle 定义 Fact–Token Boundary，要求通过解耦和去嵌套暴露可预测事实；Relational Losslessness Principle 定义 Token–State Boundary，要求把依赖上下文的关系留给模型状态计算，而不是在 token 中过早固定。受控符号音乐实验显示，坐标构造提高预测压缩，固定关系投影则损害泛化。
 
-具体设置包括：3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.。
 
-具体设置包括：Item Frozen value Dataset popk_clean_v1; lineage-aware train/validation/test manifests Rows 303,767 train; 1,024 validation; 1,024 sealed held-out test Carrier and target exact Note/REST event stream with a separate termination target; Type→\rightarrowTime→\rightarrowPitch→\rightarrowDuration Backbone 16 Transformer layers, width 64, 4 heads, FFN 128, dropout 0 Parameter envelope 817,107 parameters in the shared implementation envelope; inactive representation paths remain instantiated but frozen, so effective trainable parameter counts may differ slightly across interfaces Context complete manifest song, capped at 32 bars / 2,048 note tokens; no random note or bar crop Seeds 20260814, 20260815, 20260816 Budget five target-equivalent epochs; 106,803,35 exact-event exposures Optimization AdamW; 3×10−43\times 10^{-4} to 3×10−53\times 10^{-5} cosine schedule with warmup; batch size 128 songs Selection minimum micro validation bits per exact event; ties resolved in favor of the earliest exposure Test firewall test data disabled and unloaded during training and checkpoint selection; one evaluation after checkpoint lock The A–E, F–G, and H–I families each have frozen protocol, source-tree, and manifest hashes in the repository receipts.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+Item Frozen value Dataset popk_clean_v1; lineage-aware train/validation/test manifests Rows 303,767 train; 1,024 validation; 1,024 sealed held-out test Carrier and target exact Note/REST event stream with a separate termination target; Type→\rightarrowTime→\rightarrowPitch→\rightarrowDuration Backbone 16 Transformer layers, width 64, 4 heads, FFN 128, dropout 0 Parameter envelope 817,107 parameters in the shared implementation envelope; inactive representation paths remain instantiated but frozen, so effective trainable parameter counts may differ slightly across interfaces Context complete manifest song, capped at 32 bars / 2,048 note tokens; no random note or bar crop Seeds 20260814, 20260815, 20260816 Budget five target-equivalent epochs; 106,803,35 exact-event exposures Optimization AdamW; 3×10−43\times 10^{-4} to 3×10−53\times 10^{-5} cosine schedule with warmup; batch size 128 songs Selection minimum micro validation bits per exact event; ties resolved in favor of the earliest exposure Test firewall test data disabled and unloaded during training and checkpoint selection; one evaluation after checkpoint lock The A–E, F–G, and H–I families each have frozen protocol, source-tree, and manifest hashes in the repository receipts.。
 
-具体设置包括：Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。
 
-具体设置包括：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。
 
-综合来看，论文的价值不只由最终分数决定，还取决于输入表示、模型组件、训练或推理路径、评价数据和失败条件是否彼此对应。正文明确报告的结果与作者提出的解释分开呈现；没有给出统计口径、跨域验证或部署参数的部分，不能被扩写为普遍能力。
+因此，结论应限定在论文实际报告的数据、模型与评价协议内。
 
 ### 🔗 开源详情
 
@@ -51,63 +51,52 @@ paper_digest_arxiv_id: "2608.18025"
 
 框架把观测实例 x 映射为坐标序列 z，并把完整压缩流程拆成坐标构造、状态形成和模型预测三部分。坐标构造可以改变粒度、词表和序列长度，但必须保留足够信息；状态形成是依赖上下文且通常不可逆的计算，不能被误认为 token 本身。 Fact–Token Boundary 讨论哪些事实适合成为可复用 token。若把本来独立的音高、节奏或局部事件过早捆绑，模型会失去条件分布中的解耦结构；若拆分得过细，又会增加序列长度。因此作者用 decoupling、denesting 和 coordinate-aware note 把可预测的事实接口显式化。 Token–State Boundary 讨论哪些关系必须在模型状态中计算。和声功能、长程依赖、跨声部约束与上下文选择往往不是局部可逆对象，把它们固化为 token 会制造脆弱的关系投影。实验通过不同 token 粒度、关系是否固定和模型预测损失比较这两条边界，检验压缩率、预测性与关系恢复之间的权衡。
 
-方法由输入表示、核心模块、训练/推理路径和输出评价共同构成。
+The resulting musical token is therefore a coordinate-aware note that effectively encodes declared musical coordinates while leaving higher-order organization to the model state.。
 
-在该设计中，3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
+The decoder predicts the next exact event through the chain-rule order Type→\rightarrowTime→\rightarrowPitch →\rightarrowDuration.。
 
-在该设计中，Item Frozen value Dataset popk_clean_v1; lineage-aware train/validation/test manifests Rows 303,767 train; 1,024 validation; 1,024 sealed held-out test Carrier and target exact Note/REST event stream with a separate termination target; Type→\rightarrowTime→\rightarrowPitch→\rightarrowDuration Backbone 16 Transformer layers, width 64, 4 heads, FFN 128, dropout 0 Parameter envelope 817,107 parameters in the shared implementation envelope; inactive representation paths remain instantiated but frozen, so effective trainable parameter counts may differ slightly across interfaces Context complete manifest song, capped at 32 bars / 2,048 note tokens; no random note or bar crop Seeds 20260814, 20260815, 20260816 Budget five target-equivalent epochs; 106,803,35 exact-event exposures Optimization AdamW; 3×10−43\times 10^{-4} to 3×10−53\times 10^{-5} cosine schedule with warmup; batch size 128 songs Selection minimum micro validation bits per exact event; ties resolved in favor of the earliest exposure Test firewall test data disabled and unloaded during training and checkpoint selection; one evaluation after checkpoint lock The A–E, F–G, and H–I families each have frozen protocol, source-tree, and manifest hashes in the repository receipts.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，The resulting musical token is therefore a coordinate-aware note that effectively encodes declared musical coordinates while leaving higher-order organization to the model state.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，The decoder predicts the next exact event through the chain-rule order Type→\rightarrowTime→\rightarrowPitch →\rightarrowDuration.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，Test data were unavailable to training and checkpoint selection; held-out results were computed once after checkpoint lock.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
+Test data were unavailable to training and checkpoint selection; held-out results were computed once after checkpoint lock.。
 
 ![Figure 6: Case A model continuation. The upper system is the shared four-bar prefix; the lower system is generated. Red boxes and blue labels are manual musical annotations, not model inputs.](https://arxiv.org/html/2608.18025v1/figures/case07_generated.png)
 
 ![Figure 7: Case A source continuation for exact visual comparison.](https://arxiv.org/html/2608.18025v1/figures/case07_reference.png)
 
-从数据流看，输入表示、核心模块、训练目标和推理输出必须逐层对应；任何没有在全文中披露的网络尺寸、优化器、随机种子或资源配置都不应被常见实现替代。这样的结构化描述既解释模型如何工作，也说明结果在哪些条件下能够复现。
+从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
 
 ### 💡 核心创新点
 
-1. 把音乐 tokenization 从“寻找大块重复模式”提升为“寻找预测有效的坐标系”。 具体体现在3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.。这说明改动涉及的输入、模块和输出，也限定了它依赖的训练信号、数据条件与部署前提。
+1. 把音乐 tokenization 从“寻找大块重复模式”提升为“寻找预测有效的坐标系”。 具体体现在3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.。该贡献同时限定了训练信号、数据条件与部署前提。
 
-2. 用 Fact–Token Boundary 与 Token–State Boundary 区分可编码事实和应留给状态计算的关系。 论文给出的实现边界是Item Frozen value Dataset popk_clean_v1; lineage-aware train/validation/test manifests Rows 303,767 train; 1,024 validation; 1,024 sealed held-out test Carrier and target exact Note/REST event stream with a separate termination target; Type→\rightarrowTime→\rightarrowPitch→\rightarrowDuration Backbone 16 Transformer layers, width 64, 4 heads, FFN 128, dropout 0 Parameter envelope 817,107 parameters in the shared implementation envelope; inactive representation paths remain instantiated but frozen, so effective trainable parameter counts may differ slightly across interfaces Context complete manifest song, capped at 32 bars / 2,048 note tokens; no random note or bar crop Seeds 20260814, 20260815, 20260816 Budget five target-equivalent epochs; 106,803,35 exact-event exposures Optimization AdamW; 3×10−43\times 10^{-4} to 3×10−53\times 10^{-5} cosine schedule with warmup; batch size 128 songs Selection minimum micro validation bits per exact event; ties resolved in favor of the earliest exposure Test firewall test data disabled and unloaded during training and checkpoint selection; one evaluation after checkpoint lock The A–E, F–G, and H–I families each have frozen protocol, source-tree, and manifest hashes in the repository receipts.。因此，结果收益不能直接归因于模型结构之外的数据、后处理或提示词因素。
+2. 用 Fact–Token Boundary 与 Token–State Boundary 区分可编码事实和应留给状态计算的关系。 论文给出的实现边界是Item Frozen value Dataset popk_clean_v1; lineage-aware train/validation/test manifests Rows 303,767 train; 1,024 validation; 1,024 sealed held-out test Carrier and target exact Note/REST event stream with a separate termination target; Type→\rightarrowTime→\rightarrowPitch→\rightarrowDuration Backbone 16 Transformer layers, width 64, 4 heads, FFN 128, dropout 0 Parameter envelope 817,107 parameters in the shared implementation envelope; inactive representation paths remain instantiated but frozen, so effective trainable parameter counts may differ slightly across interfaces Context complete manifest song, capped at 32 bars / 2,048 note tokens; no random note or bar crop Seeds 20260814, 20260815, 20260816 Budget five target-equivalent epochs; 106,803,35 exact-event exposures Optimization AdamW; 3×10−43\times 10^{-4} to 3×10−53\times 10^{-5} cosine schedule with warmup; batch size 128 songs Selection minimum micro validation bits per exact event; ties resolved in favor of the earliest exposure Test firewall test data disabled and unloaded during training and checkpoint selection; one evaluation after checkpoint lock The A–E, F–G, and H–I families each have frozen protocol, source-tree, and manifest hashes in the repository receipts.。收益来源仍需在相同数据、后处理和评价协议下验证。
 
-3. 将压缩、可预测性和关系无损放到同一分析框架，而不是只比较序列长度。 实验或消融显示Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。这一比较只在相应数据、基线和指标口径下成立，未报告独立消融时不把相关性写成组件因果。
+3. 将压缩、可预测性和关系无损放到同一分析框架，而不是只比较序列长度。 实验或消融显示Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。比较结果仅适用于相应数据、基线和指标口径；未报告独立消融时不作组件因果归因。
 
-4. 工程含义必须和条件一起解读：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。论文直接测量、作者解释和仍待验证的外推需要分开，不能把部署愿景写成实验结论。
+4. 工程含义必须和条件一起解读：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。测量结果与作者解释仍需和未覆盖的部署条件区分。
 
 5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
 
-上述贡献需要放回完整数据流理解：输入如何被表示，哪些模块改变了中间状态，训练目标如何约束输出，以及实验是否用对照或消融隔离了收益来源。缺失的配置、样本范围和统计检验会直接影响可复现性与外部有效性。
+因此，缺失的配置、样本范围和统计检验会影响复现性与外部有效性。
 
 ### 📊 实验结果
 
 受控符号音乐实验表明，解耦和去嵌套后的坐标在相同模型条件下具有更稳定的条件分布和更好的预测压缩；把上下文关系提前固定的表示在关系变化和组合外推时退化。论文的结果支持两条边界的方向性预测，但没有把框架扩展到大规模 MIDI、音频 token 或多种现代音乐生成器，因此不能据此声称普适优于既有 tokenizer。
 
-实验结果需要和数据划分、基线、指标方向及统计口径一起阅读。
+实验结果与数据划分、基线、指标方向及统计口径一并报告。
 
-论文报告：Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
+Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。
 
-论文报告：5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
-论文报告：Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
-论文报告：In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
+In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
 | 数据/训练设置 | Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a). |
-| 主要结果 | 5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface. |
+主要结果 | 5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface. |
 | 对照、消融或部署指标 | Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b). |
 
 ![Figure 7: Case A source continuation for exact visual comparison. - 图2](https://arxiv.org/html/2608.18025v1/figures/case07_reference.png)
 
 ![Figure 8: Case B source continuation for exact visual comparison.](https://arxiv.org/html/2608.18025v1/figures/case05_reference.png)
 
-结果解读同时关注绝对数值、相对比较、误差方向和测量条件。表格中的每个数字都必须和数据集、基线、硬件或推理设置一起阅读；如果正文只给出趋势而没有完整数值，就保留趋势并明确其证据边界。
+上述结果应结合数据集、基线、指标方向和测量条件理解。
 
 ### 🔬 细节详述
 
@@ -115,30 +104,27 @@ paper_digest_arxiv_id: "2608.18025"
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- The resulting musical token is therefore a coordinate-aware note that effectively encodes declared musical coordinates while leaving higher-order organization to the model state.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- The resulting musical token is therefore a coordinate-aware note that effectively encodes declared musical coordinates while leaving higher-order organization to the model state.。
 
-- The decoder predicts the next exact event through the chain-rule order Type→\rightarrowTime→\rightarrowPitch →\rightarrowDuration.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- The decoder predicts the next exact event through the chain-rule order Type→\rightarrowTime→\rightarrowPitch →\rightarrowDuration.。
 
-- Test data were unavailable to training and checkpoint selection; held-out results were computed once after checkpoint lock.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Test data were unavailable to training and checkpoint selection; held-out results were computed once after checkpoint lock.。
 
-- Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。
 
-- In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。
 
-- Case A Case B Song ID popk_304614 popk_30540 Checkpoint epoch 4.00 epoch 4.00 Prefix / generated 4 / 4 bars 4 / 4 bars Generated notes 49 46 Generated onsets 28 32 Polyphonic onset rate 17.9% 43.8% Maximum notes/onset 7 2 Event Jaccard vs. source 25.8% 50.8% Sampling temperature 0.85, top-pp 0.92, top-kk 24 Figure 6: Case A model continuation.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Case A Case B Song ID popk_304614 popk_30540 Checkpoint epoch 4.00 epoch 4.00 Prefix / generated 4 / 4 bars 4 / 4 bars Generated notes 49 46 Generated onsets 28 32 Polyphonic onset rate 17.9% 43.8% Maximum notes/onset 7 2 Event Jaccard vs. source 25.8% 50.8% Sampling temperature 0.85, top-pp 0.92, top-kk 24 Figure 6: Case A model continuation.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
 
-这些实现细节说明了论文怎样把方法落到可执行的实验协议：数据怎样划分，特征怎样进入模型，训练和推理怎样衔接，指标怎样计算，以及部署资源怎样测量。它们也是判断复现成本、误差来源和外推范围的依据。读者应优先核对这些条件，而不是只比较最终分数；同一模型在不同采样率、数据切分、硬件或阈值下可能产生不同结论。方法、实验和部署三部分必须保持同一输入输出定义，任何环节的改变都可能影响比较结果。只有把这些环节连起来，读者才能判断改进来自模型本身还是来自数据与测量协议。
+上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
 创新性: 1.6/2 将 tokenization 重新定义为预测有效且关系无损的坐标构造，提出 Fact–Token 与 Token–State 两条边界。 技术严谨性: 1.2/1.5 框架有形式化定义并由受控实验支持，但尚未覆盖广泛音乐表示和模型规模。 实验充分性: 0.9/1.5 有坐标构造与关系投影的对照实验，规模和任务数量相对有限。 清晰度: 0.8/1 核心概念有清楚的符号化表述，但对非理论读者需要较多背景。 影响力: 1.2/1.5 为音乐 token 设计和 GPT 迁移失败提供了可检验的解释。 开源: 0.0/1.5 正文未给出明确代码或数据仓库，按保守规则开源分为 0。 可复现性: 0.2/0.5 实验原则可复述，但实现、数据和超参数不完整。 工程/实践价值: 0.8/1.5 可指导音乐序列预处理和模型接口设计，但尚未形成工具。
 
-方法与实验分别对应：3.4 Coordinate-Aware Architecture and Exact-Event Prediction The two boundaries determine the musical token from complementary directions.；Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%71.07\% yet requires 14.0%14.0\% more predictive bits, whereas D reduces code length by 25.15%25.15\% relative to J (figure 3a).。同一信息缺口不在多个维度重复扣分。
-
-评分边界由方法结构、实验数字、资源披露和适用条件共同决定；未报告的参数、失败案例、统计检验或跨域泛化仍保持为不确定性。
-
+评分依据方法结构、实验数字、资源披露和适用条件。
 
 * 技术严谨性（1.2/1.5）：检查输入、训练目标、推理输出、假设和实现条件是否相互一致。
 

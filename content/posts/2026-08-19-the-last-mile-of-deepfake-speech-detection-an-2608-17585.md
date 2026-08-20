@@ -41,15 +41,15 @@ paper_digest_arxiv_id: "2608.17585"
 
 这篇论文报告了 Brno University of Technology 与商业声纹识别厂商 Phonexia 在三年期间将深度伪造语音检测器产品化的经验，Czech Police 作为最终用户组织参与定义需求。项目资助为捷克内政部 SECTECH 项目 VB02000060。核心问题不是如何提升 in-domain 的 EER，而是揭示并结构化 benchmark 性能与真实部署之间的鸿沟：训练数据的商业许可缺失、现实输入是长音频且经过编解码退化、客户没有标注数据来校准系统、以及校准后的 log-likelihood ratio（LLR）对非专家不可解释。作者没有提出新的检测模型，而是基于自监督语音前端（SSL）加 attentive pooling 的检测器，记录其在数据、架构、评估、评分沟通、部署集成和客户接受度方面的障碍。 论文把观察映射为一张“经验 → 开放问题 → 行动”的路线图（Table 2），并将行动分为三类：研究挑战（CR）、需要开发与共同采纳的方法（CM）、以及需要集体协调的治理行动（CO）。具体包括：有原则的训练数据选择（CR1）、可验证的训练数据溯源（CR2）、统一标签与可验证的泛化测试（CM1）、面向真实世界的评估标准化（CM2）、可解释且可决策的分数输出（CM3）、对真实语音数据同等严格（CO1）、制定可部署语料标准（CO2）、建立隐私保护的共享攻击数据池（CO3）、以及为高风险用途定义“fit for purpose”准则（CO4）。此外，论文对欧盟 AI Act 和 GDPR 做了操作性解读，指出独立 deepfake 检测器是否属于高风险并不明确，外部法规本身无法替代社区协调。 论文给出一些内部回顾性数字作为案例：旧版检测器在名义“未见攻击”上的准确率甚至高于“已见攻击”，原因是“未见”集合实际上来自训练语料的 dev 部分；未经过编解码增强的检测器在一次非激进编码后 miss rate 从约 4% 升至 60%，电话窄带场景下 false alarm 从约 5% 升至 70%，AMR-NB 和 G.711 下 EER 分别约为 16% 和 25%。实际意义在于呼吁社区建立可商业使用的数据集、真实部署评估协议和可操作的评分沟通标准。主要局限性是证据来自单一项目、单一厂商和单一用户组织，关键实验细节和可复现材料未公开。
 
-具体设置包括：Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。
 
-具体设置包括：Architecture selection is therefore a question of which trade-off to accept, not which model is best outright [41, 42, 17].。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+Architecture selection is therefore a question of which trade-off to accept, not which model is best outright [41, 42, 17].。
 
-具体设置包括：3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。
 
-具体设置包括：Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4].。这些设置限定了输入、处理链和评价条件；结论不能脱离原文数据与指标口径外推。
+Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4].。
 
-综合来看，论文的价值不只由最终分数决定，还取决于输入表示、模型组件、训练或推理路径、评价数据和失败条件是否彼此对应。正文明确报告的结果与作者提出的解释分开呈现；没有给出统计口径、跨域验证或部署参数的部分，不能被扩写为普遍能力。
+因此，结论应限定在论文实际报告的数据、模型与评价协议内。
 
 ### 🔗 开源详情
 
@@ -71,33 +71,25 @@ paper_digest_arxiv_id: "2608.17585"
 本文本质上是一份系统化的工业-学术经验报告，而非一篇提出新网络架构的论文。不过，作者仍披露了他们最终部署的检测器骨架，以及围绕该检测器构建的训练、评估与交付流程，可以概括为“自监督语音表征 + attentive pooling + 分块推理 + 最大聚合 + LLR 校准”的流水线。 整体流程概述：输入是一段任意长度的音频（可能是长录音、电话录音或部分伪造的片段）；系统以固定长度的 chunk 为单位提取 SSL 表征，每个 chunk 经过前端和聚合模块输出一个伪造 vs 真实的分数；最终对整段录音的多个 chunk 分数取最大值，得到录音级别的 calibrated log-likelihood ratio（LLR），并可映射为某种操作阈值下的判定。 主要组件/模块详解： 1. **自监督（SSL）语音前端** - 功能：将原始波形或声学特征转换为对语音内容、说话人和信道相对鲁棒的高层表征。作者强调，由于 deepfake 检测本质上是“在训练时未见过的合成器上进行 out-of-distribution 泛化”，使用在大规模无标注语音上预训练过的 SSL 表征比从头训练更有优势。 - 内部结构/实现：论文未指明具体使用哪一种 SSL 模型（如 wav2vec 2.0、HuBERT、WavLM 等），仅引用相关文献并描述为“pretrained SSL front-ends”。可推断为基于 Transformer 或 CNN 的自监督预训练编码器。 - 输入输出：输入为音频 chunk；输出为高维帧级或段级表征。 2. **Attentive Pooling 聚合模块** - 功能：将帧级 SSL 特征聚合为段级嵌入，并进一步输入分类器。Attentive pooling 通过对帧级特征加权求和，使模型自动关注对伪造检测最有判别性的时间区域，例如局部伪影或共振峰异常。 - 内部结构/实现：论文未给出具体实现细节，通常由注意力子网络计算每帧权重，再对特征进行加权平均；随后接线性投影得到原始分类分数，再经校准输出 LLR。 - 输入输出：输入为帧级特征序列；输出为段级分数或嵌入。 3. **分块推理与最大聚合** - 功能：处理长音频和“部分伪造”场景。forensic 用户关心的是“一段长录音中只有几秒是合成的”，因此系统不能只对整段录音做单一判定。 - 内部结构/实现：推理时将录音切成多个 chunk，分别计算每个 chunk 的分数，然后取所有 chunk 分数的最大值作为整段录音的分数。这样可以保证只要某一段是伪造的，整段录音就会被标记。 - 输入输出：输入为完整录音；输出为录音级 LLR 分数，以及潜在的 chunk 级分数（论文未明确是否向用户暴露 chunk 级结果）。 4. **校准与评分输出** - 功能：将原始分类分数转化为具有概率意义的 log-likelihood ratio，便于客户设定操作点。 - 内部结构/实现：论文未给出具体校准算法（如 Platt scaling、isotonic regression、温度缩放等），只说明由于客户缺乏标注数据，最终“shipped a default calibration”。 - 输入输出：输入为分类器输出；输出为 calibrated LLR。 组件间的数据流与交互：原始音频 → 分块 → SSL 前端 → attentive pooling → 分类器 → 每 chunk 分数 → 取 max → calibrated LLR → 阈值判定/输出给客户。训练阶段的数据流类似，但增加了数据增强（telephony、codec、背景噪声）和来自多个合成器的正负样本。 关键设计选择及动机：
 - 选择 SSL 前端而非 raw-waveform end-to-end 或纯 CNN：作者先从若干开源架构出发，随后大学团队贡献了两代自有模型，公司在自有数据上重新训练并优化部署；最终选择 SSL 是因为其在大规模无标注语音上预训练提供了更好的声学先验，有利于跨合成器泛化。 - 选择 chunk-level max 聚合而非全局单一输出：因为真实场景中存在 partial spoof，且 forensic 客户常常需要定位伪造片段。 - 重视 codec/telephony 增强：作者将其视为最重要的数据选择之一，因为未增强模型在真实信道下性能崩溃。 - 输出 LLR 而非硬判定：因为硬判定会将法律责任转移给厂商，但 LLR 又难以被非专家理解，这是论文重点讨论的 tension。 该论文也用了较大篇幅描述评估框架（deployment-oriented evaluation），包括构建跨合成器、跨语言、跨 codec 的测试集，使用加权指标，以及讨论 EER/DCF 与真实操作点之间的脱节。评估流程本身也是方法的一部分：作者主张借鉴 ISO/IEC 19795，在多个操作点下报告错误率，而不是依赖单一 EER。
 
-方法由输入表示、核心模块、训练/推理路径和输出评价共同构成。
+Across variants, we settled on pretrained SSL front-ends with attentive pooling [39]. SSL representations are learned from large amounts of unlabeled speech, which gives the detector a better starting point for generalizing to audio and synthesizers it has not seen during training, the property that mattered most to us given the out-of-distribution nature of the problem (Section 3.1).。
 
-在该设计中，Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
+The default today is to ingest everything; we would rather weigh data by importance and prune what does not help. A framework that assesses coverage gaps and re-weighs or filters redundant data, and that copes with the fact that sources drift over time, e.g., when a commercial synthesizer or a video platform’s codecs change between versions, would all turn dataset assembly from guesswork into engineering. • CR2 – Verifiable training-data provenance. A deployed model does not reveal which data were used to train it, so external parties cannot readily evaluate data-sourcing claims.。
 
-在该设计中，Architecture selection is therefore a question of which trade-off to accept, not which model is best outright [41, 42, 17].。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，Across variants, we settled on pretrained SSL front-ends with attentive pooling [39]. SSL representations are learned from large amounts of unlabeled speech, which gives the detector a better starting point for generalizing to audio and synthesizers it has not seen during training, the property that mattered most to us given the out-of-distribution nature of the problem (Section 3.1).。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，The default today is to ingest everything; we would rather weigh data by importance and prune what does not help. A framework that assesses coverage gaps and re-weighs or filters redundant data, and that copes with the fact that sources drift over time, e.g., when a commercial synthesizer or a video platform’s codecs change between versions, would all turn dataset assembly from guesswork into engineering. • CR2 – Verifiable training-data provenance. A deployed model does not reveal which data were used to train it, so external parties cannot readily evaluate data-sourcing claims.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-在该设计中，Over the course of a three-year project to bring a commercial detector to market, the recurring difficulties extended beyond the model architecture.。这说明输入如何进入模块、模块如何产生中间表示，以及输出如何用于训练或推理；来源没有写出的配置保持为未说明。
-
-从数据流看，输入表示、核心模块、训练目标和推理输出必须逐层对应；任何没有在全文中披露的网络尺寸、优化器、随机种子或资源配置都不应被常见实现替代。这样的结构化描述既解释模型如何工作，也说明结果在哪些条件下能够复现。
+Over the course of a three-year project to bring a commercial detector to market, the recurring difficulties extended beyond the model architecture.。
 
 ### 💡 核心创新点
 
-1. **系统化揭示“最后一公里”障碍并映射到研究/协调议程** - 之前方法/基准大多聚焦于提升 in-domain EER，较少有文献从厂商内部视角系统记录数据许可、校准、客户接受度和治理问题。本文将零散障碍归纳为数据、架构、评估、评分、部署、治理六大主题，并给出具体研究挑战（CR1–CR2）、方法开发与采纳（CM1–CM3）和协调行动（CO1–CO4）。 - 收益：为后续研究者和工业界提供了一个可对照的 checklist，也解释了为什么 benchmark 饱和不等于产品可用。 具体体现在Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。这说明改动涉及的输入、模块和输出，也限定了它依赖的训练信号、数据条件与部署前提。
+1. **系统化揭示“最后一公里”障碍并映射到研究/协调议程** - 之前方法/基准大多聚焦于提升 in-domain EER，较少有文献从厂商内部视角系统记录数据许可、校准、客户接受度和治理问题。本文将零散障碍归纳为数据、架构、评估、评分、部署、治理六大主题，并给出具体研究挑战（CR1–CR2）、方法开发与采纳（CM1–CM3）和协调行动（CO1–CO4）。 - 收益：为后续研究者和工业界提供了一个可对照的 checklist，也解释了为什么 benchmark 饱和不等于产品可用。 具体体现在Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.。该贡献同时限定了训练信号、数据条件与部署前提。
 
-2. **提出并命名“label pollution”问题** - 之前跨数据集泛化测试假设不同数据集中的攻击标签是可区分的。本文指出同一合成系统可能在多个数据集中以不同名称出现（如 XTTS、system_2、A12），导致“seen/unseen”划分并不可靠。 - 创新作用：将攻击来源追踪和统一标签体系提升为社区必须解决的前提问题，而不仅仅是检测器优化问题；文中提到 STOPA 作为 source tracing 的切入点。 - 收益：通过内部回顾案例说明名义上的“unseen”准确率可能高于“seen”，正是因为划分被污染。 论文给出的实现边界是Architecture selection is therefore a question of which trade-off to accept, not which model is best outright [41, 42, 17].。因此，结果收益不能直接归因于模型结构之外的数据、后处理或提示词因素。
+2. **提出并命名“label pollution”问题** - 之前跨数据集泛化测试假设不同数据集中的攻击标签是可区分的。本文指出同一合成系统可能在多个数据集中以不同名称出现（如 XTTS、system_2、A12），导致“seen/unseen”划分并不可靠。 - 创新作用：将攻击来源追踪和统一标签体系提升为社区必须解决的前提问题，而不仅仅是检测器优化问题；文中提到 STOPA 作为 source tracing 的切入点。 - 收益：通过内部回顾案例说明名义上的“unseen”准确率可能高于“seen”，正是因为划分被污染。 论文给出的实现边界是Architecture selection is therefore a question of which trade-off to accept, not which model is best outright [41, 42, 17].。收益来源仍需在相同数据、后处理和评价协议下验证。
 
-3. **指出并分析信道/编解码器敏感性是部署鲁棒性的主导因素** - 之前文献更多关注攻击多样性，本文强调 codec、telephony、压缩、平台版本漂移等通道因素会导致性能断崖式下降；并且这种敏感性是双向的，既造成漏检也造成误报。 - 收益：提出 codec 增强和电话频带训练是最具回报的数据选择；用内部案例展示 miss rate 从约 4% 飙升至 60%、false alarm 从约 5% 升至 70%；并指出攻击系统本身训练数据的 provenance 也会影响可检测性。 实验或消融显示3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。这一比较只在相应数据、基线和指标口径下成立，未报告独立消融时不把相关性写成组件因果。
+3. **指出并分析信道/编解码器敏感性是部署鲁棒性的主导因素** - 之前文献更多关注攻击多样性，本文强调 codec、telephony、压缩、平台版本漂移等通道因素会导致性能断崖式下降；并且这种敏感性是双向的，既造成漏检也造成误报。 - 收益：提出 codec 增强和电话频带训练是最具回报的数据选择；用内部案例展示 miss rate 从约 4% 飙升至 60%、false alarm 从约 5% 升至 70%；并指出攻击系统本身训练数据的 provenance 也会影响可检测性。 实验或消融显示3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。比较结果仅适用于相应数据、基线和指标口径；未报告独立消融时不作组件因果归因。
 
-4. 工程含义必须和条件一起解读：Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4].。论文直接测量、作者解释和仍待验证的外推需要分开，不能把部署愿景写成实验结论。
+4. 工程含义必须和条件一起解读：Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4].。测量结果与作者解释仍需和未覆盖的部署条件区分。
 
 5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
 
-上述贡献需要放回完整数据流理解：输入如何被表示，哪些模块改变了中间状态，训练目标如何约束输出，以及实验是否用对照或消融隔离了收益来源。缺失的配置、样本范围和统计检验会直接影响可复现性与外部有效性。
+因此，缺失的配置、样本范围和统计检验会影响复现性与外部有效性。
 
 ### 📊 实验结果
 
@@ -108,23 +100,18 @@ paper_digest_arxiv_id: "2608.17585"
 | Phonexia v3 | 0.9723 | 0.9760 | 0.9721 | 0.9745 |
 注：表中保留论文给出的主方法和关键案例；论文说明这些数值为内部回顾数据，样本数、阈值、权重、置信区间均未公开，不能作为可复现 benchmark。 2. **信道/编解码器敏感性的内部观察** - 未经过 codec 增强的检测器在一次“非激进”的编解码处理后，miss rate 从约 4% 升至约 60%；codec-specific 增强可以关闭大部分差距，而通用增强几乎无效。 - 在窄带电话场景下，false alarm 从约 5% 升至约 70%；EER 在 AMR-NB 和 G.711 处理下分别达到约 16% 和约 25%。加入电话/codec 代表性数据和增强后，性能明显改善（具体改善幅度论文未给出精确数字）。 - 攻击系统的训练数据 provenance 同样影响可检测性：语言特定变体表现不一致，而基于 Common Voice 或 FLEURS 的攻击系统则更稳定。 3. **合成器版本漂移与数据时效性** - 作者观察到将 ElevenLabs 视为单一目标会误导评估：v1/v2/v3 及中间更新在质量和遗留伪影上不同，旧检测器无法保证对新版本有效。 - 作者尝试用 YouTube 数据评估，但可用的素材约八年前的编解码特性与当前 YouTube 音频差异巨大，导致实验“几乎无意义”。 论文未给出传统意义上的跨基准 SOTA 对比、消融实验或统计显著性检验。
 
-实验结果需要和数据划分、基线、指标方向及统计口径一起阅读。
+实验结果与数据划分、基线、指标方向及统计口径一并报告。
 
-论文报告：3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
+3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。
 
-论文报告：Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4].。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
-论文报告：3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
-论文报告：Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。该结果对应明确的数据、基线和指标口径，不能脱离这些条件解释为普遍提升。
-
+Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
 | 数据/训练设置 | 3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets. |
-| 主要结果 | Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4]. |
+主要结果 | Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4]. |
 | 对照、消融或部署指标 | 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset. |
 
-结果解读同时关注绝对数值、相对比较、误差方向和测量条件。表格中的每个数字都必须和数据集、基线、硬件或推理设置一起阅读；如果正文只给出趋势而没有完整数值，就保留趋势并明确其证据边界。
+上述结果应结合数据集、基线、指标方向和测量条件理解。
 
 ### 🔬 细节详述
 
@@ -132,43 +119,41 @@ paper_digest_arxiv_id: "2608.17585"
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Across variants, we settled on pretrained SSL front-ends with attentive pooling [39]. SSL representations are learned from large amounts of unlabeled speech, which gives the detector a better starting point for generalizing to audio and synthesizers it has not seen during training, the property that mattered most to us given the out-of-distribution nature of the problem (Section 3.1).。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Across variants, we settled on pretrained SSL front-ends with attentive pooling [39]. SSL representations are learned from large amounts of unlabeled speech, which gives the detector a better starting point for generalizing to audio and synthesizers it has not seen during training, the property that mattered most to us given the out-of-distribution nature of the problem (Section 3.1).。
 
-- The default today is to ingest everything; we would rather weigh data by importance and prune what does not help. A framework that assesses coverage gaps and re-weighs or filters redundant data, and that copes with the fact that sources drift over time, e.g., when a commercial synthesizer or a video platform’s codecs change between versions, would all turn dataset assembly from guesswork into engineering. • CR2 – Verifiable training-data provenance. A deployed model does not reveal which data were used to train it, so external parties cannot readily evaluate data-sourcing claims.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- The default today is to ingest everything; we would rather weigh data by importance and prune what does not help. A framework that assesses coverage gaps and re-weighs or filters redundant data, and that copes with the fact that sources drift over time, e.g., when a commercial synthesizer or a video platform’s codecs change between versions, would all turn dataset assembly from guesswork into engineering. • CR2 – Verifiable training-data provenance. A deployed model does not reveal which data were used to train it, so external parties cannot readily evaluate data-sourcing claims.。
 
-- Over the course of a three-year project to bring a commercial detector to market, the recurring difficulties extended beyond the model architecture.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Over the course of a three-year project to bring a commercial detector to market, the recurring difficulties extended beyond the model architecture.。
 
-- 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。
 
-- Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。
 
-- Four difficulties recurred: 1. building an evaluation dataset that resembles what a customer will actually encounter, 2. choosing metrics that mean something at the operating point a customer runs, 3. establishing whether the system genuinely generalizes to unseen attacks, and 4. understanding how sensitive the system is to channel and processing conditions.。这一设置限定了数据、训练、推理或测量边界，并决定读者能否在相同条件下复现实验。
+- Four difficulties recurred: 1. building an evaluation dataset that resembles what a customer will actually encounter, 2. choosing metrics that mean something at the operating point a customer runs, 3. establishing whether the system genuinely generalizes to unseen attacks, and 4. understanding how sensitive the system is to channel and processing conditions.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
 
-这些实现细节说明了论文怎样把方法落到可执行的实验协议：数据怎样划分，特征怎样进入模型，训练和推理怎样衔接，指标怎样计算，以及部署资源怎样测量。它们也是判断复现成本、误差来源和外推范围的依据。读者应优先核对这些条件，而不是只比较最终分数；同一模型在不同采样率、数据切分、硬件或阈值下可能产生不同结论。方法、实验和部署三部分必须保持同一输入输出定义，任何环节的改变都可能影响比较结果。只有把这些环节连起来，读者才能判断改进来自模型本身还是来自数据与测量协议。
+上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：论文没有提出新的检测网络，但其贡献在于首次系统地从厂商内部视角梳理了 deepfake 语音检测产品化的全流程障碍，提出“label pollution”、评分可解释性、社区协调等此前未充分讨论的问题。insight 具有新颖性，属于“组合已有观察并形成新的问题框架”型创新。扣分点在于：提出的解决方案多为方向性呼吁，尚未形成可验证的方法或协议，且 CM/CO 的具体实现与治理主体缺失。 * 技术严谨性 (1.0/1.5)：论证逻辑总体合理，作者对法律/监管问题持谨慎态度（如欧盟 AI Act 分类的不确定性），对内部数字的局限性做了充分免责声明。没有明显的推导错误或算法漏洞，但也没有新的数学/算法内容可供检验。扣分是因为对许多主张缺乏定量支撑，例如“SSL 前端更好”和“codec-specific 增强更有效”的论断基于项目经验与文献引用，而非本文内部的系统对照实验。 * 实验充分性 (0.6/1.5)：作为系统技术报告，论文提供了真实部署中的失败案例和内部数字，具有一定证据价值。但关键实验不可复现：样本数、阈值、超参数、置信区间均未公开；Table 1 被作者自己标注为“不可作为 benchmark”。没有看到跨方法对比、消融、统计显著性检验或端到端系统指标（延迟、吞吐、成本）。因此证据不足以支撑“这些障碍具有普遍性”的隐含主张。 * 清晰度 (0.9/1)：结构清晰，章节划分合理，从经验报告到问题映射再到行动呼吁层层递进。Table 2 的“经验 → 问题 → 行动”映射非常实用。专业术语有解释，写作质量高。扣 0.1 是因为第 4 节的监管分析略显冗长，且部分关键数字的描述分散在正文中，需要读者自行拼凑。 * 影响力 (1.3/1.5)：对语音/音频领域的 deepfake 检测方向有较高推动作用。论文直面“benchmark 与实际部署脱节”的长期痛点，提出的数据溯源、真实评估、评分解释等问题都是该领域亟需的。作为产学合作报告，对工业界和学术研究都有参考价值。扣分是因为影响力主要停留在问题 framing 和倡议层面，尚未产生可直接使用的工具、数据集或协议。 * 开源 (0.0/1.5)：论文未提供任何代码仓库、模型权重、数据集或 demo 链接。核心产物（检测器、训练数据、评估集）均为 Phonexia 商业产品的一部分，没有开源计划或承诺。 * 可复现性 (0.1/0.5)：除开源缺失外，训练细节（学习率、batch size、优化器、调度策略）、超参数、硬件环境、复现步骤几乎全部未说明。唯一可复现的是概念层面的流程描述和 Table 1 的数值，但这些数值本身被作者声明不可复现。0.1 分给清晰的行文结构和问题描述。 * 工程/实践价值 (1.3/1.5)：工程价值较高。论文详细记录了真实产品化中的数据选择、codec 增强、分块推理、校准困境和客户接受度问题，对工业界部署有直接参考意义。作为经验报告，其对“最后一公里”的拆解具有很强的可复用性。扣分是因为缺少可落地的具体工程指标、接口设计、成本/延迟分析，以及与说话人识别系统集成的实际方案。
+* 创新性 (1.4/2)：论文没有提出新的检测网络，但其贡献在于首次系统地从厂商内部视角梳理了 deepfake 语音检测产品化的全流程障碍，提出“label pollution”、评分可解释性、社区协调等此前未充分讨论的问题。insight 具有新颖性，属于“组合已有观察并形成新的问题框架”型创新。扣分点在于：提出的解决方案多为方向性呼吁，尚未形成可验证的方法或协议，且 CM/CO 的具体实现与治理主体缺失。
 
-方法与实验分别对应：Several of the most persistent problems concerned the systems and processes around the model: [topsep=0pt, itemsep=0pt] • training data we were legally permitted to use, • evaluation that says something about the conditions a customer actually meets rather than a leaderboard, • calibration for deployments without labeled data, • scores a non-expert can turn into a decision, • and integration into systems we never see.；3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets.。同一信息缺口不在多个维度重复扣分。
+* 技术严谨性 (1.0/1.5)：论证逻辑总体合理，作者对法律/监管问题持谨慎态度（如欧盟 AI Act 分类的不确定性），对内部数字的局限性做了充分免责声明。没有明显的推导错误或算法漏洞，但也没有新的数学/算法内容可供检验。扣分是因为对许多主张缺乏定量支撑，例如“SSL 前端更好”和“codec-specific 增强更有效”的论断基于项目经验与文献引用，而非本文内部的系统对照实验。
 
-评分边界由方法结构、实验数字、资源披露和适用条件共同决定；未报告的参数、失败案例、统计检验或跨域泛化仍保持为不确定性。
+* 实验充分性 (0.6/1.5)：作为系统技术报告，论文提供了真实部署中的失败案例和内部数字，具有一定证据价值。但关键实验不可复现：样本数、阈值、超参数、置信区间均未公开；Table 1 被作者自己标注为“不可作为 benchmark”。没有看到跨方法对比、消融、统计显著性检验或端到端系统指标（延迟、吞吐、成本）。因此证据不足以支撑“这些障碍具有普遍性”的隐含主张。
 
-* 技术严谨性（1.0/1.5）：检查输入、训练目标、推理输出、假设和实现条件是否相互一致。
+* 清晰度 (0.9/1)：结构清晰，章节划分合理，从经验报告到问题映射再到行动呼吁层层递进。Table 2 的“经验 → 问题 → 行动”映射非常实用。专业术语有解释，写作质量高。扣 0.1 是因为第 4 节的监管分析略显冗长，且部分关键数字的描述分散在正文中，需要读者自行拼凑。
 
-* 实验充分性（0.6/1.5）：检查数据划分、基线、消融、指标方向、统计口径和失败案例是否覆盖。
+* 影响力 (1.3/1.5)：对语音/音频领域的 deepfake 检测方向有较高推动作用。论文直面“benchmark 与实际部署脱节”的长期痛点，提出的数据溯源、真实评估、评分解释等问题都是该领域亟需的。作为产学合作报告，对工业界和学术研究都有参考价值。扣分是因为影响力主要停留在问题 framing 和倡议层面，尚未产生可直接使用的工具、数据集或协议。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 开源 (0.0/1.5)：论文未提供任何代码仓库、模型权重、数据集或 demo 链接。核心产物（检测器、训练数据、评估集）均为 Phonexia 商业产品的一部分，没有开源计划或承诺。
 
-* 影响力（1.3/1.5）：结合问题范围、证据强度和外部有效性判断，不把单一数据集结果外推。
+* 可复现性 (0.1/0.5)：除开源缺失外，训练细节（学习率、batch size、优化器、调度策略）、超参数、硬件环境、复现步骤几乎全部未说明。唯一可复现的是概念层面的流程描述和 Table 1 的数值，但这些数值本身被作者声明不可复现。0.1 分给清晰的行文结构和问题描述。
 
-* 开源（0.0/1.5）：只评价论文明确提供的代码、模型、数据或可验证链接。
+* 工程/实践价值 (1.3/1.5)：工程价值较高。论文详细记录了真实产品化中的数据选择、codec 增强、分块推理、校准困境和客户接受度问题，对工业界部署有直接参考意义。作为经验报告，其对“最后一公里”的拆解具有很强的可复用性。扣分是因为缺少可落地的具体工程指标、接口设计、成本/延迟分析，以及与说话人识别系统集成的实际方案。
 
-* 可复现性（0.1/0.5）：检查数据、预处理、训练/推理配置、硬件和随机性披露。
-
-* 工程/实践价值（1.3/1.5）：结合延迟、吞吐、资源、稳定性和真实部署限制判断。
+评分依据方法结构、实验数字、资源披露和适用条件。
 
 ### 🚨 局限与问题
 
