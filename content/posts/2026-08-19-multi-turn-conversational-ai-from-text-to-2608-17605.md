@@ -77,8 +77,6 @@ Aqulia-med llm: pioneering full-process open- source medical language models. ar
 
 综述对比了多类 survey、数据集和 benchmark，反复发现多数资源仍只测单轮或短上下文；音频和视觉能力增强并未同步带来持久记忆、跨轮证据绑定或可靠的全双工。作者整理的文献证据支持多轮一致性、记忆更新、文化适应和会话级评测是共同缺口，但本文不提供新的数值 benchmark。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 It combines real images, text questions, spoken questions, and image-grounded answers, but its current task format is single- turn rather than conversational. M2CQA (Mousi et al., 2026) provides a single-turn multimodal QA benchmark spanning 17 MENA countries in MSA and multiple Arabic dialects, and intro- duces the Cultural Hallucination and Factual Re- call metric for measuring culturally grounded cor- rectness.。
 
 ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (Alwajih et al., 2024) focuses on dialect-aware Arabic multi- modal modeling, MLQA (Lewis et al., 20) pro- vides a cross-lingual extractive QA baseline, and mSTEB (Beyene et al., 2025) extends multilingual evaluation to speech and text tasks.。

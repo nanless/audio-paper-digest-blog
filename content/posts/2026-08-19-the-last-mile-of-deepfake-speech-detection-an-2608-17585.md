@@ -100,8 +100,6 @@ Over the course of a three-year project to bring a commercial detector to market
 | Phonexia v3 | 0.9723 | 0.9760 | 0.9721 | 0.9745 |
 注：表中保留论文给出的主方法和关键案例；论文说明这些数值为内部回顾数据，样本数、阈值、权重、置信区间均未公开，不能作为可复现 benchmark。 2. **信道/编解码器敏感性的内部观察** - 未经过 codec 增强的检测器在一次“非激进”的编解码处理后，miss rate 从约 4% 升至约 60%；codec-specific 增强可以关闭大部分差距，而通用增强几乎无效。 - 在窄带电话场景下，false alarm 从约 5% 升至约 70%；EER 在 AMR-NB 和 G.711 处理下分别达到约 16% 和约 25%。加入电话/codec 代表性数据和增强后，性能明显改善（具体改善幅度论文未给出精确数字）。 - 攻击系统的训练数据 provenance 同样影响可检测性：语言特定变体表现不一致，而基于 Common Voice 或 FLEURS 的攻击系统则更稳定。 3. **合成器版本漂移与数据时效性** - 作者观察到将 ElevenLabs 视为单一目标会误导评估：v1/v2/v3 及中间更新在质量和遗留伪影上不同，旧检测器无法保证对新版本有效。 - 作者尝试用 YouTube 数据评估，但可用的素材约八年前的编解码特性与当前 YouTube 音频差异巨大，导致实验“几乎无意义”。 论文未给出传统意义上的跨基准 SOTA 对比、消融实验或统计显著性检验。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。
 
 Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。
@@ -155,7 +153,7 @@ Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 
 
 ### 🚨 局限与问题
 
-1. **论文明确承认的局限**： - 证据仅来自单一项目、单一大学、单一厂商（Phonexia）和单一用户组织（Czech Police），不能泛化到其他厂商或部署场景。 - 关键内部数字（Table 1、codec 敏感性、电话场景 false alarm 等）不可公开复现，样本数、阈值、置信区间等均未提供。 - 第 4 节的监管分析是“operational reading”而非法律判定，具体合规要求取决于用途、司法管辖区和个案评估。 - 对评分沟通的“相对参考总体”方案仅处于设想阶段，未给出实现细节或用户验证。 - 论文没有解决检测器与说话人识别系统的集成问题，将其列为未来工作。 - 客户接受度部分的证据多为回顾性观察，缺乏系统化记录。 2. **审稿人发现的潜在问题**： - 虽然作者批判 EER/DCF leaderboard 指标，但本文自身也主要依赖 EER、accuracy、balanced accuracy 等常见指标，没有提出并验证更好的替代指标，形成“批判—替代”闭环。 - 对自监督前端优越性的论断主要基于文献引用和项目经验，缺少本文内部在同一数据上与传统 CNN/raw-waveform 模型的严格对照。 - 提出的社区协调行动（如共享攻击数据池、统一标签体系）非常有价值，但缺乏可行路线图、治理主体选择和激励机制分析，可能停留在理想层面。 - 作者与 Phonexia 存在商业利益关系（Conflict of interest 已声明），但文中几乎所有关键证据都来自该公司内部未公开系统，外部读者无法独立验证。 - 论文对“客户没有标注数据”的校准困境讨论较多，但对如何解决（如迁移校准、领域自适应、半监督/主动学习）着墨较少，技术深度有限。 - “fit for purpose”准则的提出重要，但论文未给出可操作的技术指标或验证方法，难以直接落地。
+1. **主要局限包括：**： - 证据仅来自单一项目、单一大学、单一厂商（Phonexia）和单一用户组织（Czech Police），不能泛化到其他厂商或部署场景。 - 关键内部数字（Table 1、codec 敏感性、电话场景 false alarm 等）不可公开复现，样本数、阈值、置信区间等均未提供。 - 第 4 节的监管分析是“operational reading”而非法律判定，具体合规要求取决于用途、司法管辖区和个案评估。 - 对评分沟通的“相对参考总体”方案仅处于设想阶段，未给出实现细节或用户验证。 - 论文没有解决检测器与说话人识别系统的集成问题，将其列为未来工作。 - 客户接受度部分的证据多为回顾性观察，缺乏系统化记录。 2. **审稿人发现的潜在问题**： - 虽然作者批判 EER/DCF leaderboard 指标，但本文自身也主要依赖 EER、accuracy、balanced accuracy 等常见指标，没有提出并验证更好的替代指标，形成“批判—替代”闭环。 - 对自监督前端优越性的论断主要基于文献引用和项目经验，缺少本文内部在同一数据上与传统 CNN/raw-waveform 模型的严格对照。 - 提出的社区协调行动（如共享攻击数据池、统一标签体系）非常有价值，但缺乏可行路线图、治理主体选择和激励机制分析，可能停留在理想层面。 - 作者与 Phonexia 存在商业利益关系（Conflict of interest 已声明），但文中几乎所有关键证据都来自该公司内部未公开系统，外部读者无法独立验证。 - 论文对“客户没有标注数据”的校准困境讨论较多，但对如何解决（如迁移校准、领域自适应、半监督/主动学习）着墨较少，技术深度有限。 - “fit for purpose”准则的提出重要，但论文未给出可操作的技术指标或验证方法，难以直接落地。
 
 此外，Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4]. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
 

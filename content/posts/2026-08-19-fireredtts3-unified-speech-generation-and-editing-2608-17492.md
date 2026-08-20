@@ -81,8 +81,6 @@ The resulting representations stabilize downstream LLM-DiT modeling, enabling Fi
 
 Seed-TTS-Eval 的 Test-EN/Test-ZH/Test-Hard 平均错误率为 3.04%，平均相似度为 78.8%；Base 在 Test-ZH 和 Test-EN 的相似度分别为 80.9 和 77.2。与 CosyVoice3、Qwen3-TTS、VoxCPM2 等系统相比，论文报告 Base 的平均错误率最低、平均相似度最高。编辑实验覆盖语义插入/删除/替换、自由指令以及音高、音量、语速控制，并用 Gemini 评估指令一致性。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval.。
 
 Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。

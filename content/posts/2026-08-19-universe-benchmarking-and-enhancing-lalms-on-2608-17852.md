@@ -127,8 +127,6 @@ The dataset balances expert-curated instances with automated retrievals via a we
 主要结论：
 - Qwen3.5-Omni-Plus 以 74.4% 取得最高整体准确率，是本文的上界参考。 - 在相同 thinking 评估协议下，后训练使 Qwen2.5-Omni 提升 14.9 个百分点（33.9% → 48.8%），Qwen3-Omni 提升 5.9 个百分点（47.5% → 53.4%）。 - 对 dense 模型，循环隐式推理（Phase b）最优（48.8%），显著优于语言加权（41.8%）和 Text DPO（42.6%）。 - 对 MoE 模型，默认 thinking SFT 反而最高（53.4%），语言加权和 Text DPO 均造成性能下降，encoder-side REPA 可稳定保持 52.9%。 - Pearson / Spearman 相关分析显示，后训练语料量与 per-language 准确率无显著正相关（多数 p>0.05），说明 benchmark 测的是文化深度理解而非语言频次记忆。 - 跨文化迁移具有明显分层：dense 模型的 latent reasoning 对弱语言/区域提升显著（如罗马尼亚 12.2% → 58.1%，丹麦 25.3% → 50.7%），但 MoE 模型在部分高资源语言上反而退化（希腊 68.3% → 56.7%，塞尔维亚 54.9% → 43.7%）。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 To maintain the targeted benchmark scale of 1,873 items, unusable pairs trigger a rejection-replacement process where the expert reviews alternative candidate QA pairs generated from the same audio clip that were not initially selected, aiming in the worst-case scenario to find an alternative pair that can be rendered usable through minor modifications.。
 
 Once the track titles and corresponding artist names were extracted, we utilized the SoundCharts platform3 3 https://soundcharts.com/ to bridge the textual metadata with raw audio.。
@@ -186,7 +184,7 @@ Once the track titles and corresponding artist names were extracted, we utilized
 
 ### 🚨 局限与问题
 
-**论文明确承认的局限**
+**主要局限包括：**
 - LLM 驱动的生成难以完全满足专家约束，高质量评测仍离不开严格的人机验证。 - 模型在细粒度声学特征（如微分音阶、异质录音环境、复杂节奏型）上仍然薄弱，存在“表层对齐”与“深层音乐理解”之间的鸿沟。 - Audio DPO 在 MoE 架构上无法稳定，只能退回到监督损失，限制了偏好优化方法的普适性。 - 全局后训练并非严格 Pareto 改进：MoE 模型在部分原本表现良好的语言/区域上会出现性能退化。 **审稿人发现的潜在问题**
 - Benchmark 中旋律轮廓题存在显著答案标签集中（93% 正确答案含 “Undulating”），虽然作者做了 case study，但仍可能让模型通过标签先验而非声学判断得分。 - 评估协议不一致：商业模型直接生成选项，而 Qwen 模型要求输出 reasoning chain，二者的严格度不同，导致表 1 的横向对比说服力下降。 - 仅使用 Qwen 系列 backbone，方法泛化性未得到充分验证。 - 统计显著性检验缺失，无法确认 5.9% 或 14.9% 的绝对提升是否稳健。 - 训练集 UniVerseSet 的音频来源与 benchmark 严格隔离的声明尚未提供可验证证据（如共享 ID 排除表），存在潜在泄漏风险。 - CantoCore 自动解析器的 operationalization 与人类感知之间可能存在偏差，影响部分 QA 的效度。
 

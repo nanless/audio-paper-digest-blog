@@ -80,8 +80,6 @@ This information from collections, anthologies, compilations, biographies, revie
 
 综述的证据来自歌词主题、音乐评论情感、464,411 首西方流行歌曲的音高/和声研究、Billboard 语料、封面与视频分析等。作者发现目前大规模工作常只覆盖单一模态，真正跨音频、视觉、文本和文化语境的研究稀少；因此给出的主要成果是研究谱系和问题框架，而不是一个可比较的模型分数。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 In a sentiment analysis of 263,525 Pop music reviews, results show more positive sentiments in reviews around 208, especially for genres from more diverse communities like Jazz and Latin music, but not for Country music.。
 
 2.4 Distant listening in MIR The concept most related to a distant listening approach in MIR are corpus studies, i.e. analysis of large music corpora made possible through recent advances in MIR (see 80 for an overview).。

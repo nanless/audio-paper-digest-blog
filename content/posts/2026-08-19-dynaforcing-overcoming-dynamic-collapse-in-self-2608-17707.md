@@ -83,8 +83,6 @@ Three strategies intervene at different levels of the self-forcing training pipe
 
 在 GenBench-ShortVideo 上，DynaForcing 的 Sync-C 为 7.68、Dyn-Deg 为 0.73；在 GenBench-LongVideo 上 Sync-C 为 8.05、Dyn-Deg 为 0.68，显著高于发生 collapse 的自 forcing 基线。短视频表中 DynaForcing 的实时吞吐约 45.2，Sync-D、IQA、ASE 和 DINO-S 维持在具有竞争力的水平；与 CausVid 的 GT 锚定对照也显示动态更稳定。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28).。
 
 Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents component contributions.。

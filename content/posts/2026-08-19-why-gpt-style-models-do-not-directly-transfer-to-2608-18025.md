@@ -81,8 +81,6 @@ Test data were unavailable to training and checkpoint selection; held-out result
 
 受控符号音乐实验表明，解耦和去嵌套后的坐标在相同模型条件下具有更稳定的条件分布和更好的预测压缩；把上下文关系提前固定的表示在关系变化和组合外推时退化。论文的结果支持两条边界的方向性预测，但没有把框架扩展到大规模 MIDI、音频 token 或多种现代音乐生成器，因此不能据此声称普适优于既有 tokenizer。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。
 
 In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。

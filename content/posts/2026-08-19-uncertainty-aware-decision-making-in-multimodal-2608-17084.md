@@ -81,8 +81,6 @@ Signal family Typical access Primary diagnosis Action value Main caveat Token, l
 
 综述对比文本不确定性、MLLM hallucination、拒答和安全 survey，并整理既有 calibration、conformal prediction、selective answering、grounding 和 self-check benchmark。结论是现有工作常只报告 ECE、准确率或语言置信，尚未充分测量在证据不足、冲突、分布偏移和高风险任务中 action 是否真的降低错误。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62].。
 
 Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimodal honesty, video refusal, embodied QA, audio-visual QA, and chart-focused evaluation shows why the correct action is sometimes not to answer [1, 53, 46, 7, 6, 57, 50, 32]. A third family targets hallucination and grounding.。

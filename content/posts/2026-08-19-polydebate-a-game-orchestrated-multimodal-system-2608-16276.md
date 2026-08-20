@@ -81,8 +81,6 @@ After text generation, the response is synthesized with Edge-TTS (a Microsoft ne
 
 AI 对手下一轮回应质量采用 1–5 分：Generic LLM overall 3.1，stage-only 3.6，PolyDebate 4.0；其中 skill usage 从 2.1/2.9 提升到 3.9，说明阶段和 skill card 让策略更可见。与 Debatrix、InspireScore 等框架比较时，PolyDebate 覆盖文本、音频、视频和 learner-facing feedback，而其他系统通常集中在文本论证。论文还报告 AI judge feedback 的具体性、覆盖度和用户感知研究。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 Figure 4: User-perception results for the Unity 3D and web platform versions of PolyDebate.。
 
 Coverage and weakness F1 are percentages; specificity, actionability, and groundedness use a 1–5 scale.。

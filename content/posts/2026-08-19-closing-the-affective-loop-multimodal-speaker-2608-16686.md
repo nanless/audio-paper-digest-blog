@@ -82,8 +82,6 @@ Retico follows the Incremental Unit (IU) model [21], where each module processes
 
 五人 within-subject 研究中，提议系统总体平均印象 5.10，高于基线 4.75；同理倾听平均 5.40 对 5.20，同理回应 5.35 对 4.80，用户满意度 4.68 对 4.20。Q12“鼓励我”从 5.40 提升到 6.20，Q13“做得好时表扬”从 4.40 提升到 5.40。日志分析还报告更高 speaker–listener 对齐和更强 distress recovery，作为初步机制证据。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 Figure 3: Photo of interaction with Misty II by the participant 4 Experimental Setup 4.1 Study Design We conducted a pilot within-subject user study to evaluate the proposed speaker–listener emotion-dynamics-aware system.。
 
 4.60 5.0 Q19 After the conversation, I felt better (my stress/negative emotions were reduced).。

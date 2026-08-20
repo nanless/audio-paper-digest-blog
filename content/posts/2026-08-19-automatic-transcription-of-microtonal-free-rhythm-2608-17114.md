@@ -83,8 +83,6 @@ Because the subsequent transcription stages operate on pitch data in.csv format,
 
 论文在 IRMA Audio-MIDI 中的伊朗声乐样例上展示了主峰、音高轮廓和 DTW 对齐效果，并用 pYIN 生成输入轨迹；引用的单声部基准中 pYIN Raw Pitch Accuracy 约为 91%。本文自身主要提供定性案例和图形核验，没有报告大规模音符级 F1、节拍误差或跨歌手统计，因此结果更适合证明流程可行性。
 
-实验结果与数据划分、基线、指标方向及统计口径一并报告。
-
 For note naming, we follow the music21 convention: uppercase letters for lower octaves, lowercase letters for upper octaves, and lowercase letters with an apostrophe for even higher octaves.。
 
 It can also be a sequence of secondary notes featuring both higher and lower pitches and is an aspect of tahrir [23].。
