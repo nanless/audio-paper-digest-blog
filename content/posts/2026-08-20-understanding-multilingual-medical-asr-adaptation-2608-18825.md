@@ -32,82 +32,117 @@ paper_digest_arxiv_id: "2608.18825"
 
 ### 📌 核心摘要
 
-Understanding Multilingual Medical ASR Adaptation Through Layer-Wise Analysis 面向医疗、多语言适配后 ASR 模型的层级行为和错误来源是什么。。一是把医疗 ASR 领域适配从结果指标推进到层级行为分析；二是同时覆盖术语、语言和有限标注约束；三是提供面向实际临床转写的错误诊断视角。 论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前摘要没有给出每种语言、模型和错误类型的完整数值表，故正文未列出的数值保持未知。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：医疗语音隐私、专业术语覆盖和跨医院设备偏移都可能造成外部失效；逐层相关性分析不能自动证明某层是错误根因。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. 这项工作不只比较 Whisper 医疗微调后的 WER，还追踪 12 层 encoder 在英语医疗适配、再加入德语继续训练后如何改变。核心结论是：第一次英语医疗微调承担主要表征重组，后续 EN→EN+DE 继续训练大体保留已适配空间。 2. 模型大小并不单调决定结果。英语单语最佳是 Whisper-Medium 的 7.72% WER；直接 EN+DE 训练的整体最佳也是 Medium，英语 7.81%、德语 46.72%、合并 26.30%。两阶段路线中 Whisper-Small 合并 WER 最低，为 31.33%。 3. 德语单语 Whisper-Large-v3 达到 44.96% WER，但训练只有 86 条、来自单一医生/单一手术过程，测试也是同一小语料内部的文件切分，因此只能视为域内诊断，不能当作跨说话人德语医疗 ASR 能力。 4. Whisper-Small 的层级漂移显示，Pretrained→EN-FT 的 cosine/CKA 最低分别到 0.906/0.946，而 EN-FT→ML-FT 最低仍有 0.989/0.988；最大的变化集中在上层 L8–L12。 5. 领域和语言信息在各层几乎都能被线性分类器恢复，最低 macro-F1 也分别不低于 0.984 和 0.990。但英语/德语来自不同语料，近封顶语言探针也混入说话人、录音和场景差异，不能解释为纯语言表征。 6. 随着同一 100 段英语音频的 decoder WER 从 19.87% 降至 13.61%、12.48%，高低错误样本的最佳线性探针 F1 反而从 0.721 降至 0.619、0.556。适配后的错误更少，也更难从冻结 encoder 的简单线性边界提前识别。
+
+医疗、多语言适配后 ASR 模型的层级行为和错误来源是什么。
+
+论文对 Whisper 等预训练 ASR 做医疗和多语言适配，并把分析粒度从单一 WER 扩展到层级表示、词汇、语言和术语行为。输入是临床语音，模型编码声学序列并输出转写；适配阶段利用有限标注和医疗术语分布，比较不同层的表示变化。
+
+论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前
+
+医疗语音隐私、专业术语覆盖和跨医院设备偏移都可能造成外部失效；逐层相关性分析不能自动证明某层是错误根因。
 
 ### 🔗 开源详情
 
-论文中未提及新代码、模型权重或医疗语音数据的公开方式；预训练 Whisper 属外部依赖但不等于本文开源。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及新代码、模型权重或医疗语音数据的公开方式；预训练 Whisper 属外部依赖但不等于本文开源。
 
 ### 🏗️ 方法概述和架构
 
-论文对 Whisper 等预训练 ASR 做医疗和多语言适配，并把分析粒度从单一 WER 扩展到层级表示、词汇、语言和术语行为。输入是临床语音，模型编码声学序列并输出转写；适配阶段利用有限标注和医疗术语分布，比较不同层的表示变化。
+实验覆盖 Whisper Base、Small、Medium 和 Large-v3 的五种状态：零样本、英语单语微调、德语单语诊断、英语微调后在 EN+DE 上继续训练、以及从预训练权重直接在 EN+DE 上训练。所有 Whisper 使用 Seq2SeqTrainer、交叉熵、greedy decoding、最大 225 token、有效 batch 32、混合精度、gradient checkpointing，并按 validation WER 早停；不同语言用对应 forced decoder identifiers。评价包括未做额外大小写/标点归一化的 WER、CER 和基于多语句向量余弦的 SemScore。
+
+表征部分只分析两阶段 Whisper-Small。该 encoder 有 12 个 Transformer block，加输入 embedding 共取 L0–L12 十三层；每层 `T×384` hidden state 沿时间均值池化为 384 维向量。研究对同一批音频比较 Pretrained、EN-FT 和 ML-FT checkpoint，用平均向量 cosine 看方向一致性，用 Linear CKA 看样本间几何结构。
+
+探针有三类。领域探针比较英语医疗语音与 100 段 LibriSpeech test-clean；语言探针比较英语与德语医疗语音；错误探针按单句 WER 排名，只取最低和最高三分之一各 33 段。每层冻结表征都分别训练 Logistic Regression、Linear SVC 和单隐层 MLP，以三模型 panel-mean macro-F1 为主指标。预处理在每个 5 折训练折内单独拟合 MinMax 和 50 维 PCA，避免验证泄漏；漂移和探针均用 5 个 bootstrap seed 重复，并做 Kruskal–Wallis、Bonferroni 和 FDR-BH 校正。
+
+英语 Kaggle 医疗语音约八点五小时，按说话人互斥切成九百九十七条训练、百三十六条验证和百零四条测试；德语 PoCaP 仅用 OP-001 的八十六条训练，OP-002 再文件互斥切成三十七条验证、三十八条测试。合并训练集是一千零八十三条，英德比例约十一点六比一。音频统一为十六千赫兹单声道，不做去噪、语音活动检测、增强或文本规范化；按验证 WER 早停五次无改善，Small、Medium、Large-v3 选中的 checkpoint 分别在四百、八百和四百步。结果中，英语单语最佳是 Medium 的 7.72%，直接英德联合训练的 Medium 达到英语 7.81%、德语 46.72%、合并 26.30%；德语单语 Large-v3 的 44.96% 只代表八十六条单说话人训练下的域内诊断。层级结论也只来自两阶段 Small：预训练到英语微调的上层漂移最大，而继续加入德语后的 cosine 与 CKA 最低仍为 0.989 和 0.988。错误探针同时显示，同一百段英语的解码 WER 从 19.87% 降至 13.61% 和 12.48% 时，最佳线性分类 F1 反而从 0.721 降至 0.619 和 0.556。因而该流程适合比较小样本适配轨迹，不能据此断言大型 Whisper、直接联合训练或跨医院德语都具有相同层级行为。
 
 分析流程包括基线转写、领域适配、逐层探针/表示比较、错误分类和多语言评估。这样的架构不是只追求最终 WER，而是把“为什么适配后变好或变坏”拆成声学、语言和术语层。论文若未提供某个语言的样本规模或训练配置，本文明确标为未说明。
 
 选择层级分析是为了避免把医疗 ASR 的全部问题归结为数据量；多语言设置可检验适配是否牺牲低资源语言。风险是探针关联不等于因果解释，层级差异还需要受控干预验证。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
-
-![Figure 1：多语言医疗 ASR 适配、WER 评价与 Whisper 表征分析流程。](https://arxiv.org/html/2608.18825v1/overview_v3.png)
+![Fig. 1: Overview of the multilingual MedASR adaptation and analysis pipeline. English and German medical speech are used for monolingual fine-tuning, two-stage EN→EN+DE continuation, and direct EN+DE fine-tuning. Adapted models are evaluated with WER, and Whisper-Small encoder representations are analysed through drift and probing tasks.](https://arxiv.org/html/2608.18825v1/overview_v3.png)
 
 ### 💡 核心创新点
 
-1. 一是把医疗 ASR 领域适配从结果指标推进到层级行为分析，回应了既有方法或系统的具体瓶颈。
-2. 二是同时覆盖术语、语言和有限标注约束，并由论文的实验或系统设计支撑。
-3. 三是提供面向实际临床转写的错误诊断视角。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. **把适配策略比较与层级表征追踪结合**：不仅问哪种微调 WER 最低，还问英语医疗域和新增语言分别在 encoder 的哪些深度、以多大幅度改变几何空间。 2. **区分两次适配的作用**：Pretrained→EN-FT 与 EN-FT→ML-FT 直接配对，显示医疗域首次适配是主变化，德语继续训练更像在已有表征上的增量调整。 3. **同时使用 cosine 与 Linear CKA**：ML-FT 英德表征的均值方向高度一致，cosine 0.980–0.994，但几何 CKA 只有 0.040–0.107；只看单一相似度会漏掉这种中心对齐、内部结构仍分语言的现象。 4. **从错误可预测性补充 WER**：低/高 WER 探针显示适配后 decoder 更准，但 encoder 中能被简单线性模型利用的失败信号更弱，为难度采样和错误预警研究提供了新观察。 5. **谨慎限定德语结果**：将 86 条单说话人训练得到的德语最佳 WER明确界定为 within-corpus diagnostic，而不是用漂亮数字包装成稳健泛化。
+
+论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前
 
 ### 📊 实验结果
 
-论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前摘要没有给出每种语言、模型和错误类型的完整数值表，故正文未列出的数值保持未知。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：3、1、2、7.72%、26.30%、44.96%。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | 论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前摘要没有给出每种语言、模型和错误类型的完整数值表，故正文未列出的数值保持未知。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+英语 Kaggle 医疗语音约 8.5 小时，按说话人分成 997/136/104 条训练、验证、测试，对应 23/3/3 名互斥说话人。德语 PoCaP 用 OP-001 的 86 条训练，OP-002 文件互斥切成 37 条验证和 38 条测试。合并后为 1,083/173/142 条，其中测试含 104 条英语和 38 条德语。
+
+| 适配目标 | 最佳模型 | 英语 WER | 德语 WER | 合并 WER |
+|---|---|---:|---:|---:|
+| 零样本 | Whisper-Large-v3 | 16.50% | 56.51% | 35.52% |
+| 英语单语 | Whisper-Medium | 7.72% | 45.94% 跨域观察 | — |
+| 德语单语诊断 | Whisper-Large-v3 | 14.37% 跨域观察 | 44.96% | — |
+| 两阶段 EN→EN+DE | Whisper-Small | 10.91% | 53.87% | 31.33% |
+| 直接 EN+DE | Whisper-Medium | 7.81% | 46.72% | 26.30% |
+
+两阶段 Small 的具体医疗词错误也随适配修正，例如英语 `bloating` 和 `concussion` 从 zero-shot 的 `rotting`、`competition` 恢复正确；德语 `Röntgenthorax`、`Klavikula`、`Terumo-Nadel` 仍较难，德语单语 Large-v3 的对应输出更接近参考。
+
+| Whisper-Small checkpoint | 漂移/探针关键结果 | 同 100 段英语 decoder WER |
+|---|---|---:|
+| Pretrained | 最佳错误探针 0.721±0.028（L2） | 19.87% |
+| EN-FT | 相对预训练上层漂移最大；错误探针 0.619±0.039（L6） | 13.61% |
+| ML-FT | 相对 EN-FT cosine/CKA 均≥0.988；错误探针 0.556±0.033（L11） | 12.48% |
+
+错误探针的层间差异只有预训练 checkpoint 在多重校正后仍显著，Bonferroni q=0.0132；EN-FT 的 p=0.051、ML-FT 的 p=0.213 均不显著。适配后不仅 F1 下降，错误信号也不再稳定集中于特定深度。
+
+论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前
+
+使用 Whisper 类预训练 ASR、医疗语音和多语言适配；具体语料规模、采样率、训练步数、学习率、探针结构、硬件和解码设置未完整公开。
 
 ### 🔬 细节详述
 
-使用 Whisper 类预训练 ASR、医疗语音和多语言适配；具体语料规模、采样率、训练步数、学习率、探针结构、硬件和解码设置未完整公开。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**文本与音频处理**：所有音频转为 16 kHz 单声道。Base/Small/Medium 使用 80-bin log-Mel，Large-v3 使用 128-bin；转录保留原始大小写与标点，不做去噪、VAD、数据增强或文本规范化。因此绝对 WER 也会受到格式错误影响。
 
-### 全文事实摘录
-**原文段落 1**
+**checkpoint 选择**：Small、Medium、Large-v3 在共享训练设置下分别选 step 400、800、400；用于层级分析的 Small EN-FT 是 step 400，英语 WER 11.98%；继续训练后的 ML-FT 是 step 1,400，英语/德语 WER 为 10.91%/53.87%。
 
-> Automatic speech recognition (ASR) systems [10, 8, 25] have made substantial gains in recent years, through Transformer-based architectures and large-scale pretraining. Models such as Whisper [21] and Wav2Vec2 [5] achieve strong performance on general-purpose benchmarks like LibriSpeech [16] and CommonVoice [3]. However, adapting these systems to domain-specific applications-particularly healthcare-presents distinct challenges. Medical speech contains rare and specialised terminology, recorded under varied speaker and acoustic conditions, and high accuracy demands where a single transcription error can carry clinical consequences. Generic ASR models trained on general speech corpora perform poorly in these settings, which motivates targeted domain adaptation.
+**漂移含义**：Pretrained→EN-FT 的 layer-wise cosine 范围 0.906–1.000、CKA 0.946–1.000；EN-FT→ML-FT 分别为 0.989–1.000 和 0.988–1.000。前者的上层重排说明医疗词汇与解码需求主要影响抽象表征，后者则显示新增德语没有大幅抹去英语适配空间。
 
-**原文段落 2**
+**跨语几何**：同一个 ML-FT checkpoint 中英语和德语均值向量 cosine 高达 0.980–0.994，但 CKA 只有 0.040–0.107。这并不矛盾：两个语种的整体方向可以接近，样本相对关系仍完全不同。
 
-> Fig. 1 provides a visual overview of the study design. It summarises the data and adaptation pipeline, the main ASR results, and the layer-wise analyses used to interpret the adapted encoder representations.
+**探针边界**：领域探针用同为英语的 LibriSpeech 降低语言混淆，但仍可能识别口音、麦克风、说话人和背景条件；语言探针的两类又来自不同医疗语料，这些混杂尤其严重。接近 1.0 的 F1 更适合说明信息可恢复，而不能用于锁定某个唯一最佳层。
 
-**原文段落 3**
+**开放计划**：英语 split manifest、预处理、评价代码和配置将公开；德国 PoCaP 受患者隐私限制，不能重新分发，只能公开 split ID 与评测脚本。
 
-> Large-scale pretrained ASR models are strong starting points for domain adaptation, but their WER performance depends heavily on the target domain. Whisper [21] is an encoder–decoder Transformer trained on large-scale weakly supervised multilingual audio, giving it strong zero-shot and cross-lingual ASR capabilities. Wav2Vec2 [5] uses self-supervised contrastive pretraining and achieves low WER on standard benchmarks after supervised fine-tuning. However, strong general-domain performance does not necessarily transfer to medical speech, where specialised terminology and variable acoustic conditions require targeted adaptation [1, 14].
-
-**原文段落 4**
-
-> Fine-tuning pretrained ASR models on clinical corpora has consistently improved medical transcription performance [1, 13]. Adedeji et al. [1] showed that domain-specific fine-tuning, combined with large language model post-processing, improves medical ASR accuracy. The MultiMed project [13] introduced multilingual medical ASR across five languages, demonstrating the feasibility of adapting general ASR models to clinical speech. Its results are not directly comparable to ours because the datasets, languages, clinical scenarios, train/test splits, and decoding setup differ from the English Kaggle and German PoCaP evaluation used here. We therefore restrict direct empirical comparisons to models evaluated on the same test utterances under the same decoding and metric pipeline. Our work builds on this line by studying English–German medical adaptation across multiple Whisper fine-tuning stra
-
-**原文段落 5**
-
-> Belinkov and Glass [6] surveyed probing methods for analysing neural language models, establishing the use of lightweight classifiers on frozen representations. Pasad et al. [17] applied layer-wise analysis to self-supervised speech models, showing that different encoder depths encode different phonological and linguistic properties. Prasad and Jyothi [20] probed accent information in end-to-end ASR systems. Wiepert et al. [23] examined layer selection for pathological speech feature prediction. To our knowledge, no prior work has jointly examined two-stage multilingual medical ASR adaptation and layer-wise probing of domain, language, and error-predictability signals in a fine-tuned encoder–decoder ASR model.
+论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.2/2)：一是把医疗 ASR 领域适配从结果指标推进到层级行为分析；二是同时覆盖术语、语言和有限标注约束；三是提供面向实际临床转写的错误诊断视角。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.1/1.5)：方法链和适用边界基本自洽；医疗语音隐私、专业术语覆盖和跨医院设备偏移都可能造成外部失效；逐层相关性分析不能自动证明某层是错误根因 使部分边界仍待验证。
-* 实验充分性 (1.2/1.5)：论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前摘要没有给出每种语言、模型和错误类型的完整数值表，故正文未列出的数值保持未知。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.9/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (1.0/1.5)：该工作对语音/音乐/音频读者的直接价值来自医疗、多语言适配后 ASR 模型的层级行为和错误来源是什么。；影响范围受医疗语音隐私、专业术语覆盖和跨医院设备偏移都可能造成外部失效限制。
-* 开源 (0.5/1.5)：论文中未提及新代码、模型权重或医疗语音数据的公开方式；预训练 Whisper 属外部依赖但不等于本文开源。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：具体语料规模、采样率、训练步数、学习率、探针结构、硬件和解码设置未完整公开。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.0/1.5)：把临床 ASR 的“层级诊断”做实用化是亮点；不过在隐私和外部验证不足时，不能把 WER 改善直接等同于临床可靠。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.2/2)：不是新的 ASR 架构，而是对多语医疗微调过程的诊断性研究；两阶段表征漂移与错误探针组合具有清晰的新意。
+
+* 技术严谨性 (1.1/1.5)：说话人互斥英语切分、fold 内 PCA/缩放、五 seed bootstrap、多重检验和对探针混杂因素的主动限定都体现较好规范。
+
+* 实验充分性 (1.2/1.5)：四种 Whisper 规模和多种适配路线覆盖面不错，但层级结论只来自两阶段 Small；德语与探针样本量都很小。
+
+* 清晰度 (0.9/1)：将 ASR 排名、漂移、领域/语言探针和错误探针分层呈现，且没有把高 probe F1 或德语域内数字过度包装。
+
+* 影响力 (1.0/1.5)：医疗 ASR 需要在小数据和高风险场景下理解适配行为，这类诊断能指导选择性微调、跨语共享和困难样本选择，但尚未直接带来临床可部署精度。
+
+* 开源 (0.5/1.5)：论文中未提及新代码、模型权重或医疗语音数据的公开方式；预训练 Whisper 属外部依赖但不等于本文开源。
+
+* 可复现性 (0.3/0.5)：**文本与音频处理**：所有音频转为 16 kHz 单声道。Base/Small/Medium 使用 80-bin log-Mel，Large-v3 使用 128-bin；转录保留原始大小写与标点，不做去噪、VAD、数据增强或文本规范化。因此绝对 WER 也会受到格式错误影响。
+
+**checkpoint 选择**：Small、Medium、Large-v3 在共享训练设置下分别选 step 400、800、400；用于层级分析的 Small EN-FT 是 step 400，英语 WER 11.98%；继续训练后的 ML-FT 是 step 1,400，英语/德语 WER 为 10.91%/53.87%。
+
+**漂移含义**：Pretrained→EN-FT 的 layer-wise cosine 范围 0.906–1.000、CKA 0.946–1.000；EN-FT→ML-FT 分别为 0.989–1.000 和 0.988–1.000。前者的上层重排说明医疗词汇与解码需求主要影响抽象表征，后者则显示新增德语没有大幅抹去英语适配空间。
+
+**跨语几何**：同一个 ML-FT checkpoint 中英语和德语均值向量 cosine 高达 0.980–0.994，但 CKA 只有 0.040–0.107。这并不矛盾：两个语种的整体方向可以接近，样本相对关系仍完全不同。
+
+**探针边界**：领域探针用同为英语的 LibriSpeech 降低语言混淆，但仍可能识别口音、麦克风、说话人和背景条件；语言探针的两类又来自不同医疗语料，这些混杂尤其严重。接近 1.0 的 F1 更适合说明信息可恢复，而不能用于锁定某个唯一最佳层。
+
+**开放计划**：英语 split manifest、预处理、评价代码和配置将公开；德国 PoCaP 受患者隐私限制，不能重新分发，只能公开 split ID 与评测脚本。
+
+论文报告多语言医疗适配后的层级分析与 WER 对比，并讨论术语和泛化行为；当前
+
+* 工程/实践价值 (1.0/1.5)：把临床 ASR 的“层级诊断”做实用化是亮点；不过在隐私和外部验证不足时，不能把 WER 改善直接等同于临床可靠。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：医疗语音隐私、专业术语覆盖和跨医院设备偏移都可能造成外部失效；逐层相关性分析不能自动证明某层是错误根因。
-2. 需要继续验证的边界：逐层相关性分析不能自动证明某层是错误根因。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. 德语只有 86 条训练、37 条验证、38 条测试，且来自单一医生/手术过程；44.96% WER 是小型域内诊断，无法支撑跨说话人、跨医院或通用德语医疗泛化。 2. 英德训练极不平衡，为 997 对 86 条；直接 EN+DE 优于两阶段可能受采样比例和训练动态影响，尚未通过重采样或损失平衡实验分离原因。 3. 层级分析只覆盖 Whisper-Small 的两阶段轨迹，不能直接推广到最佳 direct EN+DE Medium、German-only Large-v3 或其他模型规模。 4. 漂移只用 100 段英语音频，探针每项约 100–138 段，错误探针更只有每类 33 段；即使 bootstrap 和交叉验证也无法替代更大独立样本。 5. 领域探针混有语料、口音、设备与背景差异，语言探针同时混有语料和说话人差异；近封顶 F1 不能被解释为纯领域或纯语言因果表征。 6. 时间均值池化会丢失局部音素和医学术语片段的时序结构，线性探针变弱既可能表示错误线索减少，也可能表示线索变得非线性或局部化。 7. 只有单次主训练结果，没有不同训练 seed 的 WER 方差；模型间小差异未必稳定。 8. 评测保留大小写和标点且不做文本规范化，绝对 WER 同时包含格式差异；临床术语错误也没有按严重性加权。 9. German PoCaP 不能公开，完整端到端复现与独立核验受到客观限制；更大多语临床语料和真实跨机构测试仍是必要下一步。
 
 ---
 

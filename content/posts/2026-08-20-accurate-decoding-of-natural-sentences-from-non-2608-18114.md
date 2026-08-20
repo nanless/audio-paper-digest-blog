@@ -32,84 +32,125 @@ paper_digest_arxiv_id: "2608.18114"
 
 ### 📌 核心摘要
 
-Accurate Decoding of Natural Sentences from Non-Invasive Brain Recordings 面向能否仅凭实时 MEG 无创解码自然句子的产生。。一是无创 MEG 解码自然句子而非受控词表；二是联合字符、词和句子表示；三是用数据规模和 agent 辅助迭代展示无创 BCI 的可扩展路径。 平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：受试者数量少且采集成本高；语言先验可能掩盖脑信号错误，跨人群、真实失语者和长期使用效果尚未证明。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. Brain2Qwerty v2 尝试从连续、非侵入式 MEG 脑磁信号中恢复人正在键入的自然英语句子。9 名健康参与者各录制约 10 小时，覆盖 90 次 session、约 22,000 句，数据规模比前代每人约 1 小时的设置大一个数量级。
+
+2. 模型分三层理解脑信号：CTC 编码器在连续时间轴上找出字符序列，Aligner 把 MEG 片段对齐到词嵌入，LoRA 微调的 Qwen3-4B 同时读取 CTC 文本和神经词 token，生成完整句子。平均 WER 达到 39%，最佳参与者为 22%。
+
+3. 相对只用 CTC 编码器的 55% WER，以及 CTC+6-gram 的 43% WER，完整模型在词级和语义级显著更好；但 CER 反而从 N-gram 的 26% 升到 31%，暴露出语言模型会把低质量脑信号润色成流畅却错误句子的风险。
+
+4. 数据量与多样性都重要：异步编码 CER 随记录时长呈明显对数线性下降，r=-0.99、R²=0.98；在句数相同的条件下，256 个不重复句子的 CER 为 0.45，而 128 句各重复两次为 0.65。
+
+5. 三级模型的平均 WER/SemER 为 0.39±0.04/0.059±0.005，均显著优于 CTC 和 N-gram；最佳参与者约一半句子最多错一个词。MEG token 消融会让 WER 变差 16%，说明模型并非只靠 CTC 字符和语言统计补全，但低质量信号下仍会产生整句级流畅幻觉。
+
+6. 自动研究 agent 在固定管线内发现 label smoothing、模态 dropout、beam search 与句级对比损失，跨 9 人测试 WER 最好为 0.42，优于 Optuna 的 0.493。不过实验对象是健康人真实打字，当前模型又要等整句结束，306 传感器低温 MEG 也难部署。它证明规模化非侵入信号可支持自然句解码，尚未证明失语患者能实时使用。
 
 ### 🔗 开源详情
 
-论文中未提及 MEG 数据、模型权重或训练代码的公开链接。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及 MEG 数据、模型权重或训练代码的公开链接。
 
 ### 🏗️ 方法概述和架构
 
-Brain2Qwerty v2 从实时 magnetoencephalography 记录预测自然句子。输入是受试者打字时的 MEG 序列，深度模型同时使用字符、词和句子级表示，逐步把脑信号映射到文字序列，输出是可读句子而不是孤立字母。数据采集包含 9 名受试者、每人约 10 小时和 22,000 句。
+**采集、预处理与防泄漏。** 9 名健康参与者各完成 10 次 session，每次 256 句：先听句子、等待 1.5 秒，再在不显示文字且不能退格的条件下打字。原始 MEG 做 0.5—45 Hz 带通、50 Hz 陷波、降采样到 100 Hz，以每次 recording 的中位数和四分位距归一化，并裁剪超过 5 个稳健标准差的值。划分按句子文本哈希固定为 80/10/10；同一句跨参与者和 session 的所有事件只能落在同一集合，避免语言内容泄漏。训练再加入时间抖动、通道偏置、最长 50 帧时间遮挡、最长 400 通道遮挡和 0.8—1.2 倍时间伸缩。
 
-方法链包含事件检测替代、脑信号编码、字符/词/句子层级预测和语言模型语义表示。论文还使用大语言模型提取语义表示，并让 AI agent 迭代改进解码 pipeline；这使模型同时利用低层时间信号和高层语言约束。评价以 WER 和句子级低错误比例衡量，避免只报 token accuracy。
+**连续 MEG 到字符。** 空间融合用 2,048 维 Fourier 坐标特征把不同 session 的传感器映射成 270 个虚拟通道，并以受试者仿射层吸收个体几何。随后是隐藏维 1,500 的四层扩张卷积、stride 4 时间降采样和四层 1,024 维 Conformer，以 CTC 在无需按键时刻的条件下预测 26 个字母、空格与 blank。辅助 CTC 头放在卷积阶段，以权重 0.7 提供早期梯度；异步路径由整段连续信号自行学习字符与时间的单调对齐。
 
-选择层级表示是为了处理脑信号到自然语言之间的长距离映射；用深度学习替代手工事件检测降低了 pipeline 假设。关键取舍是语言先验带来的可读性与潜在语言偏置之间的平衡，跨受试者和隐私边界仍需谨慎。
+**字符到神经词 token。** 系统以 CTC 贪心路径中的空格位置切分 Conformer 序列，每个片段经两层 MLP 和均值池化形成一个 MEG 词向量。由于预测词数与真值词数可能不同，DTW 在神经 token 和 Qwen 真值词嵌入的余弦代价矩阵上寻找单调路径，再从一对一匹配计算 SigLIP 损失；相同词在跨参与者重复出现时按 0.999 相似阈值标成同类，避免被批内对比当成假负例。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+**神经条件语言模型。** Qwen3-4B 同时读取 CTC 解码文本与 MEG 词 token，字段只保留 CTC、MEG、Output 三个极简标记。训练时分别以 0.1 概率随机遮掉两路 token，并用 0.02 label smoothing，迫使 LLM 在字符噪声和神经语义之间互相补充。每名参与者单独训练 LoRA rank 128、alpha 256 的 adapter，再均匀平均最佳权重成 model soup；推理用 beam size 16、最长 60 token、长度惩罚 0.2。
 
-![Figure 1：EnglishBCBL 采集协议、同步与异步脑到文本解码及数据规模比较。](https://arxiv.org/html/2608.18114v1/x1.png)
+**三阶段训练与基线。** 前 150 epoch 只学 CTC，随后 75 epoch 加入权重 0.1 的对比对齐，最后 50 epoch 再加权重 0.01 的语言模型交叉熵；另一条更轻的最佳路线冻结编码器和词投影，只用单卡微调 LoRA 30 epoch。完整训练采用 AdamW、学习率 8×10^-4、权重衰减 10^-3、有效 batch 1024，在 8 张 A100 80GB 上约 19.5 小时。基线一条是 CTC 贪心，另一条用 WikiText-103 的 6-gram 字符 LM、beam 50 校正。
 
-![Figure 2：Brain2Qwerty v2 的编码器、对齐器与语言模型解码架构。](https://arxiv.org/html/2608.18114v1/figs/fig-arch2-small.png)
+**多层评价与自动搜索。** CER 检查逐字符忠实，WER 检查可用词序列，RoBERTa SemER 检查句意，三者共同揭示语言模型纠错与幻觉的取舍。三名独立 agent 各做 10 轮、每轮严格 50 个单 V100 作业，只看一名受试者的验证集，最终配置再一次性跨 9 人测试；Optuna 在相同 500 次预算下只搜索最初四个超参数，从而比较‘改变代码策略’与‘在固定空间调参’。
+
+![Figure 1: Asynchronous MEG decoding is unlocked by recording scale and variety. A. Experimental protocol. Left. We recorded healthy volunteers for 10 hours each using Magnetoencephalography (MEG) while they typed natural sentences they heard a few seconds prior. Right. Average MEG source reconstruction at the time of key press suggest that MEG primarily picks neural activity in the motor cortex. B. Approaches for brain-to-text decoding. Synchronous decoding consists in classifying the character from windows time-locked to each keystroke (e.g. levy2025brain). Asynchronous decoding consists in decoding text from a continuous brain signal, and can thus be applied in real-time, although with some potential delays (e.g. feghhi2025time). C. Quantity (hours per participant) and diversity (number of unique sentences) of our dataset (EnglishBCBL) as compared to levy2025brain (SpanishBCBL). D. Character-error-rate (CER) for the synchronous encoder of levy2025brain. Each coloured dot is one subject; the bar plots the across-subject mean. E. Same as D for our asynchronous encoder. F. Scaling of the asynchronous encoder CER as a function of the amount of training data (log scale), expressed as total recording hours per subject (test set fixed across all points). The blue curve is the across-subject mean on our EnglishBCBL dataset. The orange diamond places SpanishBCBL on the same axis after training our asynchronous encoder on it. G. Impact of sentence-list variety on asynchronous encoder CER at matched total sentence count: 128 unique sentences ×\times 2 repetitions (SpanishBCBL protocol, orange) versus 256 unique sentences (EnglishBCBL protocol, blue). Two-sided Mann-Whitney UU test across the n=9n{=}9 subjects per condition: (***) denotes p < 0.01. Across all panels, CER is computed per sentence, then averaged within each subject, and finally averaged across subjects.](https://arxiv.org/html/2608.18114v1/x1.png)
+
+![Figure 2: Brain2Qwerty v2 architecture. Our pipeline is solely input with the continuous MEG recording corresponding to an entire typed sentence and outputs the decoded sentence thanks to three jointly-optimized modules. First, the Encoder is trained with a CTC loss (graves206connectionist) to extract character-level representations from brain activity, and outputs both MEG Embeddings and a sequence of characters. Second, the Aligner learns, with a SigLIP loss (zhai2023sigmoid), to group and align the MEG embeddings with the true Word Embeddings. Finally, a Large Language Model (LLM) is input with both the MEG tokens and the Encoder’s text to generate the correct sentence autoregressively and with LoRA finetuning (huLoRALowRankAdaptation2021).](https://arxiv.org/html/2608.18114v1/figs/fig-arch2-small.png)
 
 ### 💡 核心创新点
 
-1. 一是无创 MEG 解码自然句子而非受控词表，回应了既有方法或系统的具体瓶颈。
-2. 二是联合字符、词和句子表示，并由论文的实验或系统设计支撑。
-3. 三是用数据规模和 agent 辅助迭代展示无创 BCI 的可扩展路径。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. 用 CTC 取代依赖真实按键时刻的同步分类，使连续 MEG 可以异步解码完整字符序列；在 90 小时级数据上，异步 CER 已从小数据的 0.59 降到 0.25，接近同步的 0.23。
+
+2. 在字符层与句子层之间加入神经词 token：通过 CTC 空格切分、DTW 单调匹配和 SigLIP，把连续脑信号对齐到语言模型词空间，同时保留字符与语义两条条件。
+
+3. 用 per-subject LoRA + model soup 兼顾个体差异和跨人共享。每人独立适配减少有限句库上的联合过拟合，权重平均又让 0.6B→1.7B→4B 的 LLM 容量提升持续转化为 WER 收益。
+
+4. 把采集规模和句子多样性分开实验：固定句数时，256 个独特句比 128 句重复两次的 CER 低 0.20，说明脑解码数据质量不能只用总 trial 数衡量。
+
+5. 同时报 CER、WER 与 SemER，把流畅幻觉作为明确的评价冲突暴露出来：完整模型 WER/SemER 最好，CER 却落后 N-gram，提醒临床接口必须按密码输入、自由对话等任务选择不同损失。
+
+6. Auto Research 不是只调四个数值，而发现 label smoothing、模态 dropout、beam search、句级对比损失和极简输入格式；跨 9 人复测又把单人验证偶然收益与真正泛化改进分开。
+
+7. 文本级哈希划分把同一句跨受试者的全部 trial 锁在同一集合，配合每人只见一次的大句库，使数据规模实验测到的是神经泛化而不是语言句子记忆；这一点对加入大语言模型后的脑解码尤其关键。
+
+选择层级表示是为了处理脑信号到自然语言之间的长距离映射；用深度学习替代手工事件检测降低了 pipeline 假设。关键取舍是语言先验带来的可读性与潜在语言偏置之间的平衡，跨受试者和隐私边界仍需谨慎。
+
+平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。
+
+方法链包含事件检测替代、脑信号编码、字符/词/句子层级预测和语言模型语义表示。论文还使用大语言模型提取语义表示，并让 AI agent 迭代改进解码 pipeline；这使模型同时利用低层时间信号和高层语言约束。评价以 WER 和句子级低错误比例衡量，避免只报 token accuracy。
 
 ### 📊 实验结果
 
-平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：1、2、3、4、9193、59000。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | 平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+| 解码器 | CER ↓ | WER ↓ | SemER ↓ |
+|---|---:|---:|---:|
+| CTC Encoder | **0.28±0.03** | 0.55±0.04 | 0.096±0.003 |
+| Encoder + 6-gram | **0.26±0.03** | 0.43±0.04 | 0.085±0.004 |
+| Brain2Qwerty v2 | 0.31±0.03 | **0.39±0.04** | **0.059±0.005** |
+
+完整模型在 WER 与 SemER 上均显著优于两个基线（n=9 配对比较，p=0.0039），但字符级更差，说明它更擅长恢复句意与句法，不保证逐字符忠实。最佳参与者 WER 为 22%，约一半句子最多错 1 个词。
+
+规模实验中，异步编码器从小数据的 CER 0.59±0.02 降到 EnglishBCBL 的 0.25±0.03，接近同步编码器 0.23±0.03；记录时长与 CER 的对数关系为 r=-0.99、p=1.1×10^-3、R²=0.98。
+
+Auto Research 的三名独立 agent 在固定预算下把单人验证 WER 从 0.45 降到 0.38/0.36/0.37；最终跨 9 人测试为 0.42/0.45/0.43，而 Optuna 为 0.493、相对默认配置无显著改善。
+
+平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。
+
+数据采集规模和 MEG 来源明确；训练优化器、学习率、模型参数、语言模型版本、硬件和在线解码延迟未完整说明。评价包含平均 WER、最佳参与者和数据量曲线。
 
 ### 🔬 细节详述
 
-数据采集规模和 MEG 来源明确；训练优化器、学习率、模型参数、语言模型版本、硬件和在线解码延迟未完整说明。评价包含平均 WER、最佳参与者和数据量曲线。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**采集协议。** 参与者先听一句话，等待 1.5 秒提示，再在没有文字显示、不能退格的条件下打字。每次 session 有 16 个 block、每块 16 句；每人 10 次 session。划分按句子文本哈希执行 80/10/10，确保同一句即使跨参与者出现也不会泄漏到不同集合。
 
-### 全文事实摘录
-**原文段落 1**
+**编码器规模。** 传感器坐标用 2,048 维 Fourier 特征表示；卷积隐藏维 1,500、kernel 5，Conformer 维度 1,024、4 头、4 层。字符词表共 28 类。训练使用 AdamW、学习率 8×10^-4、权重衰减 10^-3，8 张 A100 80GB 跑 275 epoch，约 19.5 小时。
 
-> Figure 1: Asynchronous MEG decoding is unlocked by recording scale and variety.
+**为什么 model soup 有效。** 小 rank 的联合 LoRA 在 r=2 达到 WER 0.43，但 rank 增大后开始记住有限句库；每人单独适配只见约十分之一数据，反而能随 rank 平滑改善，r=128 的权重平均达到 WER 0.43，并在 LLM 从 0.6B 扩到 4B 时继续获益。
 
-**原文段落 2**
+**临床含义要谨慎。** 当前解码的是健康人真实打字时的运动与语言活动，按键信号在训练中可见；失语或瘫痪患者既没有实际按键，也可能有不同神经分布，因此这更像高质量实验室概念验证，而不是现成沟通设备。
 
-> A. Experimental protocol. Left. We recorded healthy volunteers for 10 hours each using Magnetoencephalography (MEG) while they typed natural sentences they heard a few seconds prior. Right. Average MEG source reconstruction at the time of key press suggest that MEG primarily picks neural activity in the motor cortex. B. Approaches for brain-to-text decoding. Synchronous decoding consists in classifying the character from windows time-locked to each keystroke (e.g. levy2025brain). Asynchronous decoding consists in decoding text from a continuous brain signal, and can thus be applied in real-time, although with some potential delays (e.g. feghhi2025time). C. Quantity (hours per participant) and diversity (number of unique sentences) of our dataset (EnglishBCBL) as compared to levy2025brain (SpanishBCBL). D. Character-error-rate (CER) for the synchronous encoder of levy2025brain. Each colou
-
-**原文段落 3**
-
-> To address these three challenges, we introduce Brain2Qwerty v2, a deep learning framework designed to decode a 22,000-sentence corpus from non-invasive magnetoencephalographic (MEG) recordings. We trained the model on a delayed-typing task performed by nine healthy volunteers across 90 total recording sessions. In each trial, participants listened to a sentence via headphones, waited through a forced delay, and then typed the corresponding text. Our decoding study focuses on the neural activity during the language production phase. This new dataset presents 10 times more data per subject than levy2025brain and spans a much larger diversity of sentences (Figure 1C).
-
-**原文段落 4**
-
-> To inspect subjects’ brain activity, we first perform a source reconstruction analysis at keystroke onset. The results reveal a bilateral activation of the primary motor cortex (M1) and supplementary motor area (SMA). Notably, the activation is more spatially extended in the right hemisphere (Figure 1A), a pattern consistent with the contralateral organization of M1 in a right-handed cohort and with the established role of SMA in bimanual motor coordination (Swinnen2004). Additional residual activity surrounding keystrokes can be detected in the left dorso-lateral and infero-frontal gyri and temporo-parietal junction (Figure S1), consistent with the language network (ojemann1991cortical; fedorenko2024language).
-
-**原文段落 5**
-
-> To remove the constraint of needing keystroke timings in the synchronous approach in prior work (levy2025brain), here, we implement asynchronous decoding, which outputs a sequence of predictions from a continuous window of response (Figure 1B).
+平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.5/2)：一是无创 MEG 解码自然句子而非受控词表；二是联合字符、词和句子表示；三是用数据规模和 agent 辅助迭代展示无创 BCI 的可扩展路径。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.2/1.5)：方法链和适用边界基本自洽；受试者数量少且采集成本高；语言先验可能掩盖脑信号错误，跨人群、真实失语者和长期使用效果尚未证明 使部分边界仍待验证。
-* 实验充分性 (1.2/1.5)：平均 WER 为 39%；最佳受试者约一半句子达到至多一个词错误。准确率随数据量对数线性提升，数据为 9 人、22,000 句、每人 10 小时。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (1.0/1.5)：该工作对语音/音乐/音频读者的直接价值来自能否仅凭实时 MEG 无创解码自然句子的产生。；影响范围受受试者数量少且采集成本高限制。
-* 开源 (0.5/1.5)：论文中未提及 MEG 数据、模型权重或训练代码的公开链接。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：训练优化器、学习率、模型参数、语言模型版本、硬件和在线解码延迟未完整说明。评价包含平均 WER、最佳参与者和数据量曲线。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.0/1.5)：数字和任务难度都很有说服力，展示了无创语音 BCI 的进展；但小样本与受试者依赖性使临床外推必须保守。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.5/2)：字符—词—句三级神经解码、DTW/SigLIP 神经词 token 与 model soup 的组合有明显方法增量。
+
+* 技术严谨性 (1.2/1.5)：文本级防泄漏划分、多个误差层级和显著性检验扎实；语言先验造成的流畅错误仍是核心安全问题。
+
+* 实验充分性 (1.2/1.5)：覆盖 90 小时级 MEG、9 人、数据缩放、句子多样性和模型消融；患者与真正无按键场景缺席。
+
+* 清晰度 (0.8/1)：三级架构和每级损失解释完整，复杂训练流程需要一定脑机接口背景。
+
+* 影响力 (1.0/1.5)：若扩展到患者与可穿戴 MEG，影响巨大；目前 306 传感器实验室设备限制现实触达。
+
+* 开源 (0.5/1.5)：依赖与训练设置披露充分，但数据、权重和端到端训练资产的开放状态不足以支撑一键复现。
+
+* 可复现性 (0.3/0.5)：预处理、网络、损失、优化和算力细节丰富；90 小时 MEG 采集门槛极高。
+
+* 工程/实践价值 (1.0/1.5)：39% 平均 WER 是显著进展，但整句非因果解码、重设备和个体差异离临床产品仍远。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：受试者数量少且采集成本高；语言先验可能掩盖脑信号错误，跨人群、真实失语者和长期使用效果尚未证明。
-2. 需要继续验证的边界：语言先验可能掩盖脑信号错误，跨人群、真实失语者和长期使用效果尚未证明。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. 只有 9 名健康参与者，且个体差异明显；N-gram CER 在受试者间从 17.1% 到 41.0%，上游编码质量直接限制最终句子。
+
+2. 任务记录真实键盘输入，模型可能大量利用运动皮层信号；目标患者在训练和推理时都未必能产生按键动作。
+
+3. 当前架构读取完整句子而非严格因果流，用户无法在句子结束前看到逐词输出，实时沟通延迟仍高。
+
+4. Qwen 语言先验会在神经证据不足时生成语法流畅但内容错误的句子，因此较低 WER 不能替代逐字符忠实度和置信度校准。
+
+5. 306 传感器低温 MEG 对成本、空间和姿态要求高；即使 25%—50% 传感器仍可工作，也尚未形成可穿戴临床方案。
+
+6. 与侵入式系统仍有显著差距：后者打字 WER 已低于 2%，而 90 小时聚合数据上的缩放趋势尚未证明能持续外推。
+
+7. 自动 agent 只在研究者固定的数据管线、架构和运行预算内成功；开放式修改常导致作业崩溃，不能替代人工研究设计。
 
 ---
 

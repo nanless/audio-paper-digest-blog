@@ -32,82 +32,125 @@ paper_digest_arxiv_id: "2608.18689"
 
 ### 📌 核心摘要
 
-Aslema at NADI 2026: Augmentation through Fewshot for SLU 面向低资源突尼斯方言 SLU 是否能通过少样本增强和合成语音改善。。一是面向 Tunisian Derja 的 LLM+voice cloning 增强；二是把 intent/slot 的 omni 模型微调和合成语音统一；三是在官方测试上同时报告 CoER、WER、意图准确率与排名。 devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoER 为 59.5，意图识别准确率 66.1%，在 8 队中分别排名第 1 和第 4。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：合成语音可能放大方言发音偏差；榜单数据和单一方言不能代表所有低资源语言，正式测试上的意图与槽位差距也提示任务不均衡。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. Aslema 面向 NADI 2026 的突尼斯 Derja 端到端口语理解：系统既要识别意图，也要转写语音并在文本中标出槽位。困难不只是语料只有约 2.8 小时，还包括训练阶段只见到 23 个意图标签、盲测却采用完整 60 标签空间的开放意图落差。
+
+2. 四个 omni 音频大模型的零样本表现并不理想；在少量真实语音上做 LoRA 微调后，意图准确率集中提升到 80.4%—82.9%，CoER 降到 47.7—57.0。换言之，对低资源方言来说，任务适配比单纯扩大模型更重要。
+
+3. 数据增强先让 Gemini 生成文化和方言相关的 Derja 句子，再经过规则与三模型投票筛选，最后用 VoxCPM 克隆语音。将 2,677 条真实语音与 22,940 条合成语音混合训练 Qwen3-Omni-30B，dev-test 意图准确率达到 86.8%，CoER 为 36.9，WER 为 34.7。
+
+4. 正式测试中，系统以 CoER 59.5 获得槽位填充第 1 名；意图识别通过把泛化过度的 general_quirky 映射为 unknown，准确率从 30.4% 提升到 66.1%，最终排 8 队第 4。这个结果也揭示了增强数据无法自动解决未知意图问题。
+
+5. 增强链的关键不是多造句，而是分三次控制污染：20,937 条文本候选经规则与 LLM 投票剩 12,138 条，克隆成 23,300 条语音后再按时长、削波、活跃度和语速筛到 22,940 条。纯合成训练只有 75.6% 意图准确率和 62.2 CoER，明显不如真实+合成混合，说明低资源场景仍需要真实方言语音作为分布锚点。
+
+6. 盲测约 40% 样本属于训练标签之外，最终 66.1% 包含规则拒识带来的 35.7 个百分点增益。因此槽位第 1 名是扎实的端到端结果，意图第 4 名则更应理解为领域微调与开放集规则共同组成的系统成绩，而不是模型已掌握全部 60 个意图。
 
 ### 🔗 开源详情
 
-论文声明会发布实验脚本，并将很快分享合成数据；当前文本未给出可验证 URL，因此代码是部分承诺、数据尚未确认。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文声明会发布实验脚本，并将很快分享合成数据；当前文本未给出可验证 URL，因此代码是部分承诺、数据尚未确认。
 
 ### 🏗️ 方法概述和架构
 
-Aslema 面向 NADI 2026 SLU 任务，包含 intent recognition 与 slot filling 两个子任务。系统比较四个 omni LLM 的零样本能力，再对最佳路线做微调；数据增强阶段先用 LLM 生成文化相关的 Tunisian Derja utterances，再通过 voice cloning 生成合成语音，最后把原始与合成样本混合训练 Qwen3-Omni-30B。
+**少样本文本生成。** 系统按训练集中各意图的稀缺程度分配合成数量。Gemini 3.1 Pro 负责最稀缺意图，Gemini 3.6 Flash 处理其余意图，每次只使用训练集中的 6 个 few-shot 示例。生成分三类：全新命令、现有表达改写、以及保留意图但去除槽值的困难样本；三类分别贡献 16,387、1,510、3,040 条候选，避免增强只复制一种表达模式。
 
-数据流是文本/语音输入、意图与槽位联合预测、合成样本扩充和评测排名。语音克隆把新增文本变成可听训练信号，模型同时处理语言内容和声学形式；训练结果用 intent accuracy、WER 与 CoER 等任务指标衡量。该 pipeline 把低资源语言覆盖、合成数据和 omni 模型能力放在一个可复用系统中。
+**两级文本质量筛选。** 20,937 条原始候选先去除重复、格式错误和明显方言不一致，剩 13,876 条；随后 3 个 LLM 分别判断 Derja 自然度、意图一致性与槽位正确性，至少 2 个同意才保留，得到 12,138 条文本。槽位采用内联标记，因此规则还能检查标签边界、值缺失和格式是否能被官方工具读取。
 
-选择文化相关生成而不是简单回译，意在补足方言语料的语用分布；voice cloning 让增强样本拥有语音形态，但可能引入合成伪影和说话人偏差。作者同时报告零样本、微调和正式榜单，便于区分模型能力与数据增强收益。
+**语音合成与过滤。** VoxCPM 基座版和在 SLURP-TN 约 2.8 小时真实语音上做 LoRA 的版本共同生成语音。克隆参考来自 2,330 个 2.5—10 秒训练片段中经 ASR 检查筛出的 152 条零 WER 样本。23,300 条合成语音按时长、电平、削波、有声帧活跃度与语速过滤后保留 22,940 条；其中基座生成 11,946 条、方言适配版生成 11,354 条，最终与 2,677 条真实训练语音组成 25,617 条混合集。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+**联合 SLU 微调。** 四个 omni 模型分别为 Qwen2.5-Omni-3B/7B、Qwen3-Omni-30B-A3B 与 Gemma-4-E4B-it。微调时音频编码器和音频—文本对齐器冻结，同一个 LoRA adapter 联合学习意图与槽位，沿用零样本 prompt 和输出格式以控制比较变量，所有模型训练 2 epoch、使用最终 checkpoint、贪心解码。Whisper-small 则作为小型完整微调基线。
 
-![Figure 1：NADI 2026 SLU 的少样本数据增强流程。](https://arxiv.org/html/2608.18689v1/figures/pipeline_handmade_v3.png)
+**基线与正式提交。** 模型统一由 ms-swift/vLLM 在单张 H200 上服务。意图用 accuracy、weighted-F1、macro-F1；槽位用 CoER/CVER，同时去除标记后报告 WER/CER，从而分开检查语言转写和语义标注。真实语音微调、纯合成、真实+合成三组直接比较，确认混合训练的增益不是仅由训练步数增加造成。正式提交先在 23 标签 dev-test 选定 Qwen3 混合方案，再在 60 标签盲测中加入 general_quirky→unknown 的确定性映射；这一层只改变开放意图输出，不改槽位或 ASR。
+
+**类别不平衡的处理边界。** 训练实际出现 21 个意图，其中 6 类少于 10 条，系统据频次向稀缺类倾斜生成，但并没有为盲测新增的 37 类编造标签数据。因而增强解决的是已知低频类覆盖和方言声学不足，unknown 映射解决的是未见类拒识，两者在架构和评价中保持分离。正式榜单也把意图和槽位分别计分、分别排名，使开放标签失配不会遮蔽模型对已知槽位边界与值的处理能力。
+
+![Figure 1: Overview of the data augmentation pipeline.](https://arxiv.org/html/2608.18689v1/figures/pipeline_handmade_v3.png)
 
 ### 💡 核心创新点
 
-1. 一是面向 Tunisian Derja 的 LLM+voice cloning 增强，回应了既有方法或系统的具体瓶颈。
-2. 二是把 intent/slot 的 omni 模型微调和合成语音统一，并由论文的实验或系统设计支撑。
-3. 三是在官方测试上同时报告 CoER、WER、意图准确率与排名。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. 为低资源 Tunisian Derja 构造了从少样本文本生成、三模型筛选到方言语音克隆的完整增强链路，而非只做文本改写。
+
+2. 用同一 omni 模型和同一 LoRA 适配器联合覆盖意图与槽位任务，并系统比较零样本、真实语音微调、纯合成与真实+合成四种条件。
+
+3. 将模型大小与领域适配分离验证：3B—30B 模型微调后的意图差距从 23.9 个百分点收窄到 2.5 个百分点。
+
+4. 对盲测 60 标签开放集失败做了可解释的 unknown 映射，使拒识成为显式系统行为。
+
+5. 数据增强按‘文本语义正确—方言自然—语音声学合格’三层门禁逐步收窄：20,937 条候选经规则和投票剩 12,138 条文本，23,300 条克隆语音再筛成 22,940 条，便于定位污染发生在哪一层。
+
+6. 使用同一批 152 条零 WER 参考语音比较 VoxCPM 基座与方言 LoRA 版，把克隆参考差异固定下来，使增强收益更能归因于真实/合成混合而非任意说话人选择。
+
+7. 同时报告 CoER/CVER 与去标记后的 WER/CER，揭示‘Derja 转写正确但槽位标签错误’和‘槽位结构正确但词形错误’是两种不同失败，避免用单一榜单分数掩盖。
+
+8. 把已知低频意图增强与未知意图拒识拆成两个独立问题：前者通过频次倾斜生成补样本，后者只在正式测试输出层映射 unknown。这种拆分避免把规则带来的 35.7 点增益误算成训练模型的开放集学习能力。
+
+选择文化相关生成而不是简单回译，意在补足方言语料的语用分布；voice cloning 让增强样本拥有语音形态，但可能引入合成伪影和说话人偏差。作者同时报告零样本、微调和正式榜单，便于区分模型能力与数据增强收益。
+
+devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoER 为 59.5，意图识别准确率 66.1%，在 8 队中分别排名第 1 和第 4。
+
+数据流是文本/语音输入、意图与槽位联合预测、合成样本扩充和评测排名。语音克隆把新增文本变成可听训练信号，模型同时处理语言内容和声学形式；训练结果用 intent accuracy、WER 与 CoER 等任务指标衡量。该 pipeline 把低资源语言覆盖、合成数据和 omni 模型能力放在一个可复用系统中。
 
 ### 📊 实验结果
 
-devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoER 为 59.5，意图识别准确率 66.1%，在 8 队中分别排名第 1 和第 4。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：2026、0945、5、30B、86.8%、34.7。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoER 为 59.5，意图识别准确率 66.1%，在 8 队中分别排名第 1 和第 4。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+| 训练条件 | Dev-test 意图准确率 ↑ | Dev-test CoER ↓ |
+|---|---:|---:|
+| Qwen3-Omni-30B 零样本 | 52.5 | 131.0 |
+| Qwen3-Omni-30B 真实语音 LoRA | 82.9 | 47.7 |
+| Qwen3-Omni-30B 纯合成语音 | 75.6 | 62.2 |
+| Qwen3-Omni-30B 真实+合成 | **86.8** | **36.9** |
+
+混合数据相对真实语音微调，意图准确率提升 3.9 个百分点，CoER 降低 10.8 点；纯合成虽优于零样本，却明显落后于真实语音微调，说明合成数据更适合补充真实分布，而不是替代真实分布。
+
+| 正式盲测指标 | 结果 | 排名 |
+|---|---:|---:|
+| 意图准确率 | 66.1% | 4/8 |
+| 意图 weighted-F1 | 66.9 | — |
+| 槽位 CoER | 59.5 | 1 |
+| 槽位 CVER | 94.2 | — |
+
+约 40% 盲测语音属于训练阶段未出现的意图；模型在盲测中把 56.8% 样本预测为 general_quirky，而 dev-test 只有 20.8%。把该类映射成 accepted unknown 后，意图准确率增加 35.7 个百分点。
+
+使用 Qwen3-Omni-30B、原始与合成数据，任务为 NADI Shared Task 5；合成数据规模、voice cloning 模型、学习率、batch size、训练步数、GPU 和解码设置未完整说明。
 
 ### 🔬 细节详述
 
-使用 Qwen3-Omni-30B、原始与合成数据，任务为 NADI Shared Task 5；合成数据规模、voice cloning 模型、学习率、batch size、训练步数、GPU 和解码设置未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**数据有多稀缺。** SLURP-TN 训练集为 2,677 条、2.78 小时；dev 为 595 条、0.74 小时；dev-test 为 893 条、1.06 小时；test 为 989 条、1.17 小时。训练中只有 21 个实际出现的意图，其中 6 类少于 10 条，且 3 类在 dev-test 完全缺席。
 
-### 全文事实摘录
-**原文段落 1**
+**为什么零样本大模型输给小模型。** 四个 omni 模型零样本意图准确率只有 29.2%—53.1%，CoER 为 97.5—150.1；完整微调的 Whisper-small 已达到 67.4% 和 81.4。任务格式、方言声学和槽位边界都需要领域适配，通用模型规模无法自动补足。
 
-> We present Aslema, our system for NADI 2026 Shared Task 5, which consists of two subtasks: intent recognition and slot filling. We evaluate four omni LLMs in a zero-shot setting and compare them with fine-tuned models. Our results show that fine-tuning consistently outperforms zero-shot inference. We further explore synthetic data augmentation by using an LLM to generate culturally grounded Tunisian Derja utterances, followed by voice cloning to generate synthetic speech. Incorporating this synthetic data improves performance on both tasks. Our final submitted system, based on Qwen3-Omni-30B and trained with a mixture of original and synthetic data, achieves 86.8% intent accuracy and 34.7 WER on the devtest split. On the official test set it ranks 1st in slot filling (59.5 CoER) and 4th among 8 teams in intent recognition (66.1% accuracy). We release our experimental scripts11
+**合成质量控制。** 文本筛选和语音筛选分开进行，避免一句语言上自然的 Derja 因克隆失真直接污染训练；同样，语音听起来清楚也不代表意图与槽位正确。两级过滤是这条链路比普通 TTS 扩增更可信的关键。
 
-**原文段落 2**
-
-> Spoken dialogue interfaces are increasingly driven by large language models (LLMs), with recent audio LLMs processing speech directly and combining speech recognition with language understanding 11; 28; 32. However, their effectiveness for dialectal Arabic remains limited 1; 4; 8. Tunisian Dialect (Derja) is low-resource, heavily code-switched with French and English, and substantially different from the Modern Standard Arabic (MSA) that dominates Arabic training corpora 26.
-
-**原文段落 3**
-
-> We participate in both subtasks and study the effectiveness of audio LLMs for dialectal SLU under different levels of supervision. Our experiments cover four instruction-tuned audio LLMs (3B–30B parameters), LoRA-based fine-tuning 16, and a fully fine-tuned Whisper-small 22 baseline. We also investigate the effect of training data size and synthetic augmentation using an LLM++TTS pipeline.
-
-**原文段落 4**
-
-> Findings. Our results show that zero-shot audio LLMs perform poorly on both subtasks, while LoRA fine-tuning with ∼\sim3 hours of supervised speech substantially improves performance. Synthetic data alone also provides clear gains over zero-shot inference, while combining real and synthetic data achieves the strongest overall results.
-
-**原文段落 5**
-
-> SLU maps speech to structured semantics representations. Historically, early SLU systems followed a cascaded design in which an automatic speech recognition (ASR) module produced a transcript that was then processed by a text-based NLU model, in comparison to recent and increasing adoptions to end-to-end architectures 29; 15; 18. This development has been closely accompanied by the release of increasingly challenging benchmarks 3. SLURP 6 introduced a single-turn spoken assistant benchmark, while MASSIVE 13 and Speech-MASSIVE 19 extended intent and slot annotation to multiple languages. SLURP-TN 12 further adapts this, re-recording SLURP prompts in Tunisian Derja, complementing existing resources such as TARIC-SLU 20 and TEDxTN 9.
+**开放意图是另一个任务。** dev-test 只覆盖已知的 23 标签空间，正式测试却扩展到 60 标签。general_quirky→unknown 是务实的赛制适配，但它依赖标签设计，不能视作模型已学会真正的开放集意图发现。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：一是面向 Tunisian Derja 的 LLM+voice cloning 增强；二是把 intent/slot 的 omni 模型微调和合成语音统一；三是在官方测试上同时报告 CoER、WER、意图准确率与排名。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.1/1.5)：方法链和适用边界基本自洽；合成语音可能放大方言发音偏差；榜单数据和单一方言不能代表所有低资源语言，正式测试上的意图与槽位差距也提示任务不均衡 使部分边界仍待验证。
-* 实验充分性 (1.2/1.5)：devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoER 为 59.5，意图识别准确率 66.1%，在 8 队中分别排名第 1 和第 4。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (1.0/1.5)：该工作对语音/音乐/音频读者的直接价值来自低资源突尼斯方言 SLU 是否能通过少样本增强和合成语音改善。；影响范围受合成语音可能放大方言发音偏差限制。
-* 开源 (1.0/1.5)：论文声明会发布实验脚本，并将很快分享合成数据；当前文本未给出可验证 URL，因此代码是部分承诺、数据尚未确认。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：合成数据规模、voice cloning 模型、学习率、batch size、训练步数、GPU 和解码设置未完整说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.2/1.5)：这是本批最完整的低资源语音系统之一，数字和榜单证据清楚；但合成语音质量与数据开放时间仍是关键不确定性。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.4/2)：少样本生成、方言语音克隆和端到端 SLU 组合完整，单个组件并非全新，但针对 Derja 的工程闭环有明显增量。
+
+* 技术严谨性 (1.1/1.5)：真实、合成、混合与零样本对照清楚；合成语音仍缺少人工方言质量评估。
+
+* 实验充分性 (1.2/1.5)：报告 dev-test、正式榜单、多模型与数据消融，主要不足是增强实验只落在最大模型上。
+
+* 清晰度 (0.8/1)：数据流和指标定义完整，开放标签映射需要读者特别留意，避免误读 66.1% 的来源。
+
+* 影响力 (1.0/1.5)：对低资源阿拉伯方言和语音大模型适配有较强示范性，跨方言泛化尚未建立。
+
+* 开源 (1.0/1.5)：实验脚本已提供，合成数据承诺后续发布；核心材料接近可用但未全部到位。
+
+* 可复现性 (0.3/0.5)：模型、硬件、轮次、生成数量与筛选规则披露充分，商业生成模型版本和合成数据状态带来漂移。
+
+* 工程/实践价值 (1.2/1.5)：正式槽位任务第 1 名且链路可拆解复用，unknown 规则与合成成本仍需场景化评估。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：合成语音可能放大方言发音偏差；榜单数据和单一方言不能代表所有低资源语言，正式测试上的意图与槽位差距也提示任务不均衡。
-2. 需要继续验证的边界：榜单数据和单一方言不能代表所有低资源语言，正式测试上的意图与槽位差距也提示任务不均衡。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. 主要消融集中在 dev-test，正式盲测只评估最终配置，无法确认每个增强环节在 60 标签开放集上的独立贡献。
+
+2. 训练和 dev-test 只有 23 个标签，而盲测采用 60 标签；这使已知类准确率与开放意图拒识混在同一分数中。
+
+3. 合成增强只在 Qwen3-Omni-30B 上完整验证，尚不清楚 3B/7B 小模型能否获得同等收益。
+
+4. 三模型投票能过滤明显文本问题，但没有母语者逐条听审；方言自然度、口音覆盖与克隆说话人偏差仍可能进入训练。
+
+5. 数据只覆盖 Tunisian Derja 的助手命令，不能直接外推到自由对话、其他阿拉伯方言或长语音。
+
+6. general_quirky 到 unknown 的确定性映射利用了赛制标签结构，真实产品还需要置信度校准和更细的拒识策略。
 
 ---
 

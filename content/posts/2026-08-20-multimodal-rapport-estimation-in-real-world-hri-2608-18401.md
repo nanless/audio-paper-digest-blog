@@ -32,84 +32,122 @@ paper_digest_arxiv_id: "2608.18401"
 
 ### 📌 核心摘要
 
-Multimodal Rapport Estimation in Real-World HRI 面向真实多人 HRI 中能否从音频、视觉和文本可靠估计第三方 rapport。。一是把 rapport 估计带到真实多人 HRI；二是系统比较 LLM、HuBERT、V-JEPA 的互补性；三是用条件分层揭示真实场景的上下文变化。 Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总体最好；论文还发现效果随互动时长和群体规模变化。摘要未提供完整相关系数、误差和置信区间。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：单地点、单文化和 62 会话限制外部效度；第三方 rapport 本身含主观性，真实多人参与还可能导致说话人归因错误。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. 这项工作把人机 rapport 估计从可控实验室带到真实日本药店。顾客可以随时靠近或离开，一人对话也会自然变成多人参与；最终保留 62 个 session、97 名可分析参与者，并由 3 位第三方标注者使用 CCR-8 打分。
+
+2. 文本大模型在小数据真实场景中表现很强。Gemini 2.5 Flash 仅看文本时 CCC 为 0.580、PCC 0.665；直接输入文本+音频+视频后 CCC 为 0.618。冻结 embedding 模型中，HuBERT 音频最好，CCC 为 0.460。
+
+3. 最佳结果不是把所有原始模态一次塞给大模型，而是把 Gemini 文本预测与 HuBERT 音频、V-JEPA 视频预测做预测级融合：MAE 0.471、PCC 0.717、CCC 0.656，优于最强单模型。Gemini 占一半权重，两个非文本分支各占四分之一。
+
+4. 真实场景的上下文差异不可忽略。Gemini 在长短会话中的 CCC 只差 0.012，并在 3 人交互中达到 0.721；V-JEPA 则从 1 人的 0.503 降到 3 人的 0.043。模型总体分数相同，不代表在群体规模和互动时长变化下同样可靠。
+
+5. 标签本身经过可靠性检查：个体 rapport 均值 3.72±0.80，三评审 ICC(2,3)=0.85、Cronbach’s α=0.95。音视频分支相对 Gemini 文本的 partial correlation 为 0.359、增量 R² 为 0.072，说明融合收益来自文本看不到的线索，而不是简单复制预测。
+
+6. 数据仍只有 97 个个体，3 人条件仅 13 个；目标是第三方从行为看到的 rapport，不是用户自我体验。机器人又由真人远程操控，模型比较也存在 API 单次零样本与 30 折监督训练的条件差异。因此最佳融合是一个真实场景 baseline，不是跨文化自主机器人通用评价器。
 
 ### 🔗 开源详情
 
-论文中未提及代码、模型权重或会话数据的公开方式。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及代码、模型权重或会话数据的公开方式。
 
 ### 🏗️ 方法概述和架构
 
-论文使用日本药店 62 次真实交互会话，目标是估计第三方评分的 rapport。系统分别运行 zero-shot LLM、预训练文本模型、HuBERT 音频模型和 V-JEPA 视觉模型，再做 prediction-level fusion。输入是自然发生的多人、多时长多模态记录，输出是连续 rapport 估计。
+**现场采集与过滤。** 高约 0.3 米的 Sota 在日本药店入口以 Wizard-of-Oz 方式运行 6 天、共 32 小时，真人远程控制语音、手势和注视，录得 131 个 session。研究排除 4 人以上、含约 6 岁以下儿童、全程少于 2 句用户发言的互动，剩 62 个 session、101 人；4 人无可用语音，最终 97 个个体进入估计。这样的过滤让 rapport 可标，却也排除了极早离开和几乎不说话的低参与案例。
 
-处理链包括会话切分、文本/音频/视觉编码、单模型预测与融合；相较受控实验室，真实场景允许用户退出、多人同时参与，因此模型需要处理时长和群体规模条件。融合层不强制把所有模态拼成一个表示，而是先保留各模型决策，再比较互补信息。
+**CCR-8 标签。** 3 位日语标注者先学习量表定义和示例行为，再分别对四项 Connection、四项 Coordination 做 1—5 分评价，个人真值取三人平均。34 个多人 session 另有群体分数，但模型只预测个人 rapport。研究先算各子量表与总分的 Cronbach’s α，再用双向绝对一致 ICC(2,3) 检查平均评分可靠性；总分 α=0.95、个人 ICC=0.85，支持把三人均值当连续回归目标。
 
-采用真实药店场景的动机是检验实验室 rapport 指标能否外部迁移；prediction-level fusion 易于替换组件，但可能忽略跨模态时间对齐。作者还按互动时长和群体大小分层分析，避免只报总体平均。
+**参与者级多模态对齐。** DEIMv2/DETR 逐帧检测人框，Whisper-large 自动转录并切出带时间戳的发言，人工补 speaker ID 后，将每段文本、对应音频波形与同一参与者的视频框绑定。文本用 Sentence-T5-large 取 utterance 表示，音频用 HuBERT，视频 clip 用 V-JEPA；每个冻结表示接一个预测头，以 1-CCC 为损失。CCC 同时惩罚相关性不足、均值偏移和方差失配，最终另报 MAE/PCC 以区分绝对误差和线性趋势。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+**零样本 LLM 条件。** GPT-5.4、Claude Sonnet 4.6 与 Gemini 2.5 Flash 读取带 speaker ID 的 transcript 后直接给分；Gemini 还测试追加 wav 的 T+A，以及追加每人 bounding box 视频的 T+A+V。Gemini 使用 API 默认 thinking，Claude 不开 extended thinking，GPT-5.4 reasoning effort 为 none，均在 2026 年 4 月各运行一次。这样能衡量即用型模型，却无法估计多次调用波动。
 
-![Figure 1：真实 HRI 语料中的单人、双人与三人交互视角。](https://arxiv.org/html/2608.18401v1/figures/robot_view_examples_top.png)
+**监督划分与融合。** embedding 模型用预定义的 30 折 session 级 train/val/test；同一 session 中的所有参与者必须同折，测试折不参与早停或模型选择。随机基线从训练分数分布有放回采样，重复 100 个种子。基础 late fusion 对预测无参数平均；加权平均未见明显增益，因此保持简单。
 
-![Figure 4：不同参与人数下各模型 CCC 的变化趋势。](https://arxiv.org/html/2608.18401v1/figures/party_size_ccc_trends.png)
+**互补性筛选与情境分层。** 研究先以相关真值为 utility、相关 Gemini 文本预测为 redundancy 画图，再计算 HuBERT+V-JEPA 在控制 Gemini 后的 partial correlation 与增量 R²。最终给 Gemini 文本 1/2、HuBERT 和 V-JEPA 各 1/4。97 个个体再按时长中位数 40 秒分短/长，并按 session 全部参与人数分成 1/2/3 人；即使某人无可用语音，也计入群体规模。该分层把总体融合结果与自由退出、多人加入这两个现场因素联系起来。报告连接与协调两个子量表时也单独计算 CCC，例如 Gemini 文本的 Connection/Coordination 为 0.614/0.473，帮助判断总体 rapport 增益来自关系温暖还是互动协调。
+
+![Figure 1. Robot-view examples from the real-world HRI corpus: (a) a single-participant interaction, (b) a two-participant interaction, and (c) a three-participant interaction.Three robot-view example frames from the real-world HRI corpus: (a) a single-participant interaction, (b) a two-participant interaction, and (c) a three-participant interaction.](https://arxiv.org/html/2608.18401v1/figures/robot_view_examples_top.png)
+
+![Figure 4. CCC trends across one-, two-, and three-participant interactions for each prediction model.Line plot showing CCC values for each prediction model across one-, two-, and three-person interactions. Gemini 2.5 Flash (T) shows relatively high CCC values across the analyzed group-size conditions, whereas V-JEPA (V) declines as the number of participants increases.](https://arxiv.org/html/2608.18401v1/figures/party_size_ccc_trends.png)
 
 ### 💡 核心创新点
 
-1. 一是把 rapport 估计带到真实多人 HRI，回应了既有方法或系统的具体瓶颈。
-2. 二是系统比较 LLM、HuBERT、V-JEPA 的互补性，并由论文的实验或系统设计支撑。
-3. 三是用条件分层揭示真实场景的上下文变化。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. 建立真实零售场景中的第三方 rapport 多模态基准，包含自由退出、12—227 秒不等的短长会话与自然多人加入，而不是把参与人数和对话长度预先固定。
+
+2. 标签流程同时检查量表内部一致性与评审间一致性：个人 CCR-8 的 α=0.95、ICC(2,3)=0.85，使后续误差能相对一个稳定的第三方观察目标解释。
+
+3. 系统比较零样本 LLM、冻结文本/音频/视觉表示与预测级融合，而不是只在单一建模范式内选模型；文本 LLM 强、HuBERT 单流较强、V-JEPA 在多人中退化，各自对应不同信息与数据需求。
+
+4. 用 partial correlation=0.359 和增量 R²=0.072 量化 HuBERT+V-JEPA 相对 Gemini 文本预测的互补信息，再据此选择融合组件，而不是穷举后只报告最高分。
+
+5. 最终融合只做无参数平均，Gemini/HuBERT/V-JEPA 权重为 1/2、1/4、1/4；它在 97 个样本的小数据条件下避免另训复杂融合器，同时把每个分支保留为可独立替换的模块。
+
+6. 按会话时长和参与人数拆解 CCC，显示真实 HRI 模型的失效条件会被总体平均掩盖：Gemini 对长短会话稳定，而 V-JEPA 随参与者从 1 人增到 3 人出现明显下降。
+
+7. 把参与者级对齐与 session 级防泄漏同时写进评价：人工 speaker ID 保证音频、文字、画面属于同一个人，30 折划分又保证同场多人的信息不会跨训练和测试，为真实多人互动建立了比随机个体切分更严格的 baseline。
+
+采用真实药店场景的动机是检验实验室 rapport 指标能否外部迁移；prediction-level fusion 易于替换组件，但可能忽略跨模态时间对齐。作者还按互动时长和群体大小分层分析，避免只报总体平均。
+
+Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总体最好；论文还发现效果随互动时长和群体规模变化。摘要未提供完整相关系数、误差和置信区间。
+
+处理链包括会话切分、文本/音频/视觉编码、单模型预测与融合；相较受控实验室，真实场景允许用户退出、多人同时参与，因此模型需要处理时长和群体规模条件。融合层不强制把所有模态拼成一个表示，而是先保留各模型决策，再比较互补信息。
 
 ### 📊 实验结果
 
-Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总体最好；论文还发现效果随互动时长和群体规模变化。摘要未提供完整相关系数、误差和置信区间。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：05、09、2026、26、10.1145、3776574.3831184。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总体最好；论文还发现效果随互动时长和群体规模变化。摘要未提供完整相关系数、误差和置信区间。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+| 模型 | 模态 | MAE ↓ | PCC ↑ | CCC ↑ |
+|---|---|---:|---:|---:|
+| Gemini 2.5 Flash | T | 0.634 | 0.665 | 0.580 |
+| Gemini 2.5 Flash | T+A+V | 0.549 | 0.625 | 0.618 |
+| ST5 | T | 0.633 | 0.327 | 0.281 |
+| HuBERT | A | 0.616 | 0.464 | 0.460 |
+| V-JEPA | V | 0.666 | 0.331 | 0.310 |
+| Gemini(T)+HuBERT+V-JEPA | T+A+V | **0.471** | **0.717** | **0.656** |
+
+数据标签质量较好：个体 rapport 均值 3.72±0.80，三标注者 ICC(2,3)=0.85，整体 Cronbach’s α=0.95。62 个 session 中 28 个单人、34 个多人；平均 session 时长 54.23±42.42 秒、平均 11.85±9.08 句。
+
+时长分层中，Gemini 文本短/长会话 CCC 为 0.563/0.551，ST5 为 0.168/0.411。人数分层中，Gemini 在 3 人条件达到 0.721；V-JEPA 从 1 人 0.503、2 人 0.286 降到 3 人 0.043，但 3 人样本仅 13 个，结论应视为探索性。
+
+数据为日本药店 62 sessions，模型含 Gemini、HuBERT、V-JEPA，输出为第三方 rapport 分数；标注协议、音频采样、时间对齐、融合权重和训练/验证划分未完整说明。
 
 ### 🔬 细节详述
 
-数据为日本药店 62 sessions，模型含 Gemini、HuBERT、V-JEPA，输出为第三方 rapport 分数；标注协议、音频采样、时间对齐、融合权重和训练/验证划分未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**标签不是用户自评。** CCR-8 由第三方观看视频后评分，测量可观察到的连接与协调。个人分数范围 1.38—4.88；高分常伴随主动提问和持续笑声，低分包括忽视提示或机器人说话中途离开。
 
-### 全文事实摘录
-**原文段落 1**
+**为什么文本 LLM 胜过 ST5。** 平均互动只有约 54 秒，冻结文本 embedding 在少量训练样本上很难学到复杂语用线索；零样本 LLM 可利用既有对话知识。音频和视觉虽然单独较弱，却与语言预测不完全重复，因此融合后继续增益。
 
-> Social robots are increasingly being deployed in real-world environments such as commercial facilities and public spaces (e.g., (Kanda et al. 2010; Niemelä et al. 2019)). In such settings, spontaneous interactions arise in which passersby initiate engagement with a robot without prior preparation or instruction (Nielsen et al. 2023). In these interactions, users are free to leave at any time and the timing of conversation onset and termination is unconstrained. Furthermore, multiple participants may naturally join the conversation. This uncontrolled nature creates conditions fundamentally different from laboratory settings, where experimenters can regulate participant behavior and conversational flow, and introduces unique challenges for evaluating interaction quality (Jung and Hinds 2018).
+**比较并非完全同条件。** embedding 模型通过 30 折 session 级训练，LLM 则调用 2026 年 4 月的公开 API、每条件只运行一次；输入格式、推理成本和随机性均不同。这里的数表是实用 baseline，不是模型家族优劣的严格因果比较。
 
-**原文段落 2**
-
-> Evaluating and modeling interaction quality in such real-world settings is therefore an important research challenge. If interaction quality can be reliably estimated, the resulting estimates can inform improvements to dialogue strategies and, ultimately, enable robots to autonomously adapt their behavior. However, much prior work on interaction-quality modeling and evaluation has been developed and studied under controlled laboratory conditions, and it remains unclear whether such findings generalize to real-world deployments where user disengagement is unconstrained (Jung and Hinds 2018).
-
-**原文段落 3**
-
-> Rapport refers to the quality of the relationship that emerges between interaction partners during an interaction. Tickle-Degnen and Rosenthal (Tickle-Degnen and Rosenthal 1990) conceptualized rapport as a dynamic structure consisting of three components: mutual attentiveness, positivity, and coordination. Rather than a stable individual personality trait, rapport is understood as a dyadic property that emerges through interaction.
-
-**原文段落 4**
-
-> Rapport is important because it is not merely an impression-based judgment, but is closely tied to successful relationship building and interaction. In interpersonal interaction research, rapport has been linked to outcomes such as improved learning in educational settings and successful negotiation (e.g., (Nadler 2004; Sinha and Cassell 2015)). However, previous rapport scales have primarily relied on first-person evaluation (Gratch et al. 2007; Gratch et al. 2015; Nomura and Kanda 2016).
-
-**原文段落 5**
-
-> Lin et al. (Lin et al. 2025) proposed the Connection-Coordination Rapport (CCR) Scale for HRI, which enables rapport assessment from a third-person perspective. In HRI data, the CCR Scale exhibits a two-factor structure in which items related to mutual attentiveness and coordination cluster under the Coordination factor, whereas items related to interpersonal warmth, including positivity, cluster under the Connection factor. Furthermore, Lin et al. (Lin et al. 2026) proposed an eight-item reduced-length CCR Scale to reduce response burden and administration time and demonstrated its reliability and validity for third-party video-based assessment. In this study, we use the reduced-length CCR Scale, which is suitable for third-party annotation, to measure the relational quality of interaction in real-world HRI.
+**多人场景的难点。** 视觉框、说话人 ID 与音频片段要绑定到具体参与者。当前 bounding box 自动检测、speaker ID 人工修正，说明核心估计还依赖人工预处理；完全自动化后可能出现身份串线。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.1/2)：一是把 rapport 估计带到真实多人 HRI；二是系统比较 LLM、HuBERT、V-JEPA 的互补性；三是用条件分层揭示真实场景的上下文变化。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.1/1.5)：方法链和适用边界基本自洽；单地点、单文化和 62 会话限制外部效度；第三方 rapport 本身含主观性，真实多人参与还可能导致说话人归因错误 使部分边界仍待验证。
-* 实验充分性 (1.2/1.5)：Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总体最好；论文还发现效果随互动时长和群体规模变化。摘要未提供完整相关系数、误差和置信区间。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.9/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (0.9/1.5)：该工作对语音/音乐/音频读者的直接价值来自真实多人 HRI 中能否从音频、视觉和文本可靠估计第三方 rapport。；影响范围受单地点、单文化和 62 会话限制外部效度限制。
-* 开源 (0.5/1.5)：论文中未提及代码、模型权重或会话数据的公开方式。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：标注协议、音频采样、时间对齐、融合权重和训练/验证划分未完整说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.0/1.5)：真实场景和模态互补分析是亮点；但数据规模与标注主观性让结果更像可靠起点而非通用 rapport 模型。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.1/2)：真实药店、多人数与自由退出场景有价值，建模主要采用成熟 backbone 和简单后融合。
+
+* 技术严谨性 (1.1/1.5)：session 级防泄漏、30 折与标签可靠性较扎实；LLM/embedding 不同评测条件限制公平比较。
+
+* 实验充分性 (1.2/1.5)：多模型、多模态、互补性和条件分层较全面，97 个个体仍是小样本。
+
+* 清晰度 (0.9/1)：数据过滤、标签、模态和融合权重都可追踪，结论没有把第三方 rapport 等同于内心体验。
+
+* 影响力 (0.9/1.5)：对真实公共空间 HRI 评价有启发，跨文化与自主机器人外推仍受限。
+
+* 开源 (0.5/1.5)：模型依赖公开，但现场音视频受隐私限制，数据和完整代码开放方式不明确。
+
+* 可复现性 (0.3/0.5)：划分和指标清楚；闭源 API 版本、人工说话人校正和现场数据不可得会阻碍复现。
+
+* 工程/实践价值 (1.0/1.5)：简单预测融合取得最好总体结果，适合模块化系统；预处理自动化与成本仍未解决。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：单地点、单文化和 62 会话限制外部效度；第三方 rapport 本身含主观性，真实多人参与还可能导致说话人归因错误。
-2. 需要继续验证的边界：第三方 rapport 本身含主观性，真实多人参与还可能导致说话人归因错误。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. 数据只来自日本一家药店、单一机器人形态和日语文化环境，且机器人由真人远程操控；结果不能直接代表自主 HRI。
+
+2. 仅 97 个个体样本，时长和人数分层后更小，尤其 3 人条件 n=13，趋势可能受少数 session 驱动。
+
+3. 目标是第三方观察到的 rapport，不是参与者自评的亲近感、满意度或享受；算法不应被当作读取内心状态。
+
+4. 低语音、极早退出和学龄前儿童被过滤，恰恰排除了真实部署中最难、最可能低 rapport 的互动。
+
+5. LLM 与 embedding 模型的输入、训练和推理框架不同，且 API 只单次运行；不能据此宣称 LLM 天生优于监督模型。
+
+6. 自动 person detection 后仍需人工标记说话人，尚未验证完全自动多人跟踪时的身份错误。
+
+7. 模型版本、提示格式与 API 行为会变化，现场部署还需隐私告知、数据最小化和防止以 rapport 分数单独评价个人。
 
 ---
 

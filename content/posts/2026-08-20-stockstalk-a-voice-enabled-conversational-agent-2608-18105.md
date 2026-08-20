@@ -32,82 +32,114 @@ paper_digest_arxiv_id: "2608.18105"
 
 ### 📌 核心摘要
 
-StocksTalk: A Voice-Enabled Conversational Agent for Structured Query Generation over Web Data 面向如何把带噪 spoken financial requests 转成可检查、可执行的结构化查询。。一是将 streaming ASR、约束抽取、SQL 生成和验证串成透明语音查询管线；二是暴露中间推理产物供用户修订；三是用真实输入噪声评估语音到结构化查询的稳定性。 150 条 spoken financial prompts 构成评测集；论文报告检索 grounding、受限生成和交互验证提升约束抽取准确率、SQL 可执行性、逻辑一致性和多轮稳定性，但摘要未列具体百分比。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：金融领域 schema 迁移、方言/口音、数字识别错误和用户过度信任仍是风险；150 条提示规模也不足以覆盖复杂投资语义。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. StocksTalk 把一句带口音、停顿和数字阈值的金融语音，变成可检查、可修改、最终可执行的筛选查询。它没有让大模型直接从音频吐出 SQL，而是拆成流式 ASR、金融知识检索、约束抽取、受限 SQL 生成、规则验证和人工确认六步。
+
+2. 评测集 FinScreenBench 包含 150 条金融筛选指令，覆盖成长、分红、价值三类策略，每条含 2—5 个约束、共涉及 28 个金融指标；6 名说话者分别在安静与 55—65 dB 噪声条件下录制，形成 300 条音频。
+
+3. 在干净输入上，完整系统达到约束抽取 91.2%、SQL 可执行率 97.5%、逻辑一致率 93.8%、多轮稳定性 88.6%，相对纯 GPT-4o 的逻辑一致性提升 39.1 个百分点，多轮稳定性提升 37.4 个百分点。
+
+4. 噪声仍是主要瓶颈：约束抽取从 91.2% 降到 78.4%，多轮稳定性从 88.6% 降到 74.3%。这说明金融语音查询的安全性不能只靠 SQL 校验，数字、单位和指标名在 ASR 阶段就需要领域化保护。
+
+5. 消融把每层职责量化得很清楚：去掉 RAG，约束抽取下降 16.9 个百分点；去掉受限解码，可执行率下降 18.3 个百分点；去掉验证，逻辑一致率下降 22.4 个百分点。人工确认对组合最复杂的价值型查询帮助最大，可执行率从 88.3% 提至 96.8%，并把第一轮错误持续到第三轮的比例从 34% 降到 9%。
+
+6. 代价是延迟由直接 GPT-4o 的 1.5±0.1 秒增加到 3.1±0.4 秒，噪声下为 3.6±0.7 秒。97.5% 可执行和 93.8% 逻辑一致仍不是投资正确率；固定 Screener.in schema、150 条指令和单一模型也不足以覆盖真实市场。因此它更适合作为可审计的语音数据查询界面，而不是自动选股或交易代理。
 
 ### 🔗 开源详情
 
-论文中未提及代码、模型权重、数据集或在线 demo 链接。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及代码、模型权重、数据集或在线 demo 链接。
 
 ### 🏗️ 方法概述和架构
 
-StocksTalk 是一条语音驱动的数据查询流水线：用户说出金融筛选条件，streaming speech recognition 先转写，检索增强约束抽取把自然语言变成规范化指标与操作符，schema-grounded LLM 生成 SQL，规则验证器检查可执行性，人工在 dashboard 中确认。
+**第一层：语音与对话状态。** ElevenLabs 流式 STT 把开放式语音转为文本片段，并保留多轮状态和地区化对话线索。每一轮既保存原始转录，也更新规范化约束槽位，让后续的‘把市盈率改成 20’可以修改已有条件而不是重建整条查询。原始话语与规范槽位并存，使用户能追查数字或指标名是在 ASR 还是语义抽取阶段发生变化。
 
-系统输出不仅是最终 SQL，还保留中间约束、指标归一化、操作符 grounding 和验证结果。语音识别、检索、生成、规则校验和 human-in-the-loop 形成串联闭环；任何阶段出错都可以回到约束或查询编辑，而不是把不可解释的字符串直接执行。150 条 spoken prompts 覆盖多种投资策略与输入噪声。
+**第二层：金融知识约束。** GPT-4o 结合 Screener.in schema 的知识库做 RAG，检索指标定义、操作符约定和行业分类，再抽取估值阈值、板块偏好、增长条件和时间限定。每个约束表示为 metric/operator/threshold 三元组，并保留单位与时间语义；约束以可编辑槽位存在，不直接藏在模型输出里。检索只提供当前 schema 可用的字段和口径，减少模型凭通用金融知识创造不存在列名的机会。
 
-选择 schema grounding 和规则校验是为了降低金融查询的语义与执行风险；人工确认牺牲全自动化换取可审计性。系统的关键边界是金融数据库 schema 与语音识别质量，LLM 本身不是唯一决定因素。
+**第三层：受限查询生成。** 系统把约束映射成 SQL-like 查询，并分别执行金融逻辑检查、操作符 grounding、查询模式检查和 schema 校验。任何矛盾、单位错配或非法字段都会在执行前暴露。规则层检查‘能否运行’与‘金融口径是否自洽’，受限解码则防止生成 schema 外字段；校验失败回到约束或查询编辑，不直接带着错误访问市场数据。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+**第四层：实时数据与人工确认。** 验证后的查询访问 Screener.in 实时市场数据，并在 Flask/SSE 仪表板中同步展示 ASR 文本、SQL、校验状态、排序结果与高亮约束。用户可以在执行前修改中间约束，形成 human-in-the-loop 闭环。后端由 Node.js/Express 接收语音会话，Python 模块完成查询归纳，SSE 把 Speech、Query、Results、Reasoning 四个视图保持同步；接口限流时另有回退访问策略。
 
-![Figure 1：StocksTalk 从语音金融查询到 SQL、市场数据与人工核验的架构。](https://arxiv.org/html/2608.18105v1/stockstalk.jpeg)
+**基线递进与逐级评价。** 对照从 GPT-4o+schema 直接生成开始，依次加入 RAG、Validation，再加入人工确认，骨干保持相同，使收益能归因到管线结构。FinScreenBench 为每条语音准备真值三元组与 SQL，因此 CEA 对应 RAG/约束抽取，EX 对应受限解码，LCR 对应规则验证，QED 对应完整查询偏差，三轮 MTS 对应状态保持；延迟从语音结束量到结果展示。
+
+**数据采集与错误定位。** 3 名金融背景标注者为成长、分红、价值策略各写 50 条指令，并独立构造、交叉核验 SQL，κ=0.87。每条含 2—5 个条件，覆盖 28 个指标、基数/序数/约数与时间限定；6 名说话者在安静房间和 55—65 dB 咖啡馆噪声各录一次。相同语义的成对音频使 CEA、QED 和 MTS 的下降可以主要归到语音入口，而不是测试问题本身变化。
+
+![Figure 1: Overview of the StocksTalk architecture. The system transforms spoken financial queries into validated SQL queries, retrieves real-time market data, and enables human-in-the-loop verification through an interactive dashboard.](https://arxiv.org/html/2608.18105v1/stockstalk.jpeg)
 
 ### 💡 核心创新点
 
-1. 一是将 streaming ASR、约束抽取、SQL 生成和验证串成透明语音查询管线，回应了既有方法或系统的具体瓶颈。
-2. 二是暴露中间推理产物供用户修订，并由论文的实验或系统设计支撑。
-3. 三是用真实输入噪声评估语音到结构化查询的稳定性。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. 将语音金融筛选拆成透明的中间约束与可审计 SQL，而不是端到端黑箱执行。metric/operator/threshold 三元组既是系统内部接口，也是用户可以逐项纠正的交互对象。
+
+2. 把 RAG、受限生成、规则验证和人工修订的边际贡献分别量化，说明不同组件处理的是不同错误类型：RAG 主要补指标含义，受限解码保障 schema，验证层拦单位和逻辑矛盾。
+
+3. 构建同时包含投资策略、数字表达、多轮修订和真实环境噪声的 FinScreenBench。150 条语义由 3 名金融背景标注者交叉构造 SQL，再由 6 人在两种声学条件录成 300 条音频。
+
+4. 用中间确认阻断错误传播：第一轮误识别的约束若不修正，会持续污染后续三轮对话；人工确认把这种持续错误从 34% 降到 9%。
+
+5. 评价不以 SQL 可执行率一项代替正确性，而并列报告 CEA、EX、LCR、QED 和 MTS；这种分解可以区分‘转写错但 SQL 合法’、‘语义对但 schema 非法’与‘单轮正确但多轮漂移’。
+
+6. 干净/55—65 dB 咖啡馆噪声使用同一批语义，使完整管线的改进与 ASR 瓶颈同时可见：验证能挽回部分结构错误，却无法凭空恢复听错的数值阈值。
+
+7. 四视图仪表板把转录、规范约束、SQL 校验和市场结果同步呈现，使人工确认发生在错误传播前，而不是执行后只给一个撤销按钮；系统透明性由可编辑中间状态实现，不依赖展示不可核验的模型思维过程。
+
+选择 schema grounding 和规则校验是为了降低金融查询的语义与执行风险；人工确认牺牲全自动化换取可审计性。系统的关键边界是金融数据库 schema 与语音识别质量，LLM 本身不是唯一决定因素。
+
+150 条 spoken financial prompts 构成评测集；论文报告检索 grounding、受限生成和交互验证提升约束抽取准确率、SQL 可执行性、逻辑一致性和多轮稳定性，但摘要未列具体百分比。
+
+系统输出不仅是最终 SQL，还保留中间约束、指标归一化、操作符 grounding 和验证结果。语音识别、检索、生成、规则校验和 human-in-the-loop 形成串联闭环；任何阶段出错都可以回到约束或查询编辑，而不是把不可解释的字符串直接执行。150 条 spoken prompts 覆盖多种投资策略与输入噪声。
 
 ### 📊 实验结果
 
-150 条 spoken financial prompts 构成评测集；论文报告检索 grounding、受限生成和交互验证提升约束抽取准确率、SQL 可执行性、逻辑一致性和多轮稳定性，但摘要未列具体百分比。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：2050、1、2570、4108、4100、2。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | 150 条 spoken financial prompts 构成评测集；论文报告检索 grounding、受限生成和交互验证提升约束抽取准确率、SQL 可执行性、逻辑一致性和多轮稳定性，但摘要未列具体百分比。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+| 系统（干净输入） | CEA ↑ | SQL 可执行率 ↑ | 逻辑一致率 ↑ | QED ↓ | 多轮稳定性 ↑ | 延迟 |
+|---|---:|---:|---:|---:|---:|---:|
+| GPT-4o 直接生成 | 63.4% | 81.2% | 54.7% | 8.3 | 51.2% | 1.5±0.1 s |
+| GPT-4o + RAG | 79.8% | 88.6% | 67.3% | 5.1 | 68.4% | 2.1±0.2 s |
+| + Validation | 88.3% | 96.9% | 91.2% | 2.8 | 82.7% | 2.3±0.2 s |
+| StocksTalk 完整系统 | **91.2%** | **97.5%** | **93.8%** | **2.1** | **88.6%** | 3.1±0.4 s |
+
+消融结果显示，去掉 RAG 后约束抽取下降 16.9 个百分点；去掉受限解码后 SQL 可执行率下降 18.3 个百分点；去掉验证层后逻辑一致率下降 22.4 个百分点；去掉人工确认后逻辑一致率下降 13.2 个百分点。
+
+噪声条件下，CEA/可执行率/逻辑一致率/多轮稳定性分别为 78.4%/89.3%/82.1%/74.3%，平均延迟增至 3.6±0.7 秒。人工确认对价值型组合查询帮助最大，可执行率从 88.3% 提至 96.8%，提升 8.5 个百分点。
 
 ### 🔬 细节详述
 
-组件包括 streaming ASR、RAG 约束抽取、schema-grounded LLM、规则校验和 dashboard；数据库规模、ASR 模型、提示词、延迟、硬件和人工复核时间未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**数据构成。** 150 条文本指令由 3 名金融背景标注者编写，成长、分红、价值各 50 条；真值 SQL 独立构造并交叉核验，Cohen’s κ=0.87。每条指令在干净和咖啡馆噪声两种条件录制，因此同一语义可以直接比较 ASR 环境差异。
 
-### 全文事实摘录
-**原文段落 1**
+**指标为何分开。** CEA 要求指标、操作符、阈值三元组全部正确；EX 只关心 SQL 能否执行；LCR 关注金融逻辑与单位；QED 衡量相对真值 SQL 的 token 编辑距离；MTS 检查三轮对话中约束是否正确保留或更新。单看可执行率会掩盖‘能运行但语义错’。
 
-> We evaluate the system on a manually curated benchmark of 150 spoken financial prompts spanning three investment strategy categories and two input noise conditions, and report metrics on SQL executability, constraint extraction accuracy, query edit distance, multi-turn stability, and latency. Results demonstrate that constrained decoding and intermediate verification significantly reduce malformed or semantically inconsistent queries compared to both unconstrained generation and a plain GPT-4o baseline without RAG or validation. The benchmark will be publicly released to support further research in voice-driven text-to-SQL systems.
+**人工在环不是最后点确认。** 仪表板把约束抽取结果和 SQL 同时展示，用户可以在错误进入查询前修正。价值型策略包含更多组合条件，因此获益最大。
 
-**原文段落 2**
-
-> Mapping natural language into executable structured queries is a long-standing challenge in machine learning and database research (Liu et al., 2026). In high-stakes domains such as finance, this challenge is amplified by noisy user input, domain-specific terminology, temporal qualifiers, and multi-attribute constraints. Spoken interaction introduces additional uncertainty due to transcription errors and ambiguity.
-
-**原文段落 3**
-
-> We frame this problem as interactive structured prediction under uncertainty: given a spoken utterance describing financial screening constraints, the system must infer a valid, executable SQL query aligned with a predefined financial schema, while preserving semantic intent and ensuring logical consistency. The rapid adoption of AI-driven tools across business domains (Bialkova, 2024) underscores the demand for reliable, interpretable interfaces that can mediate between unconstrained human intent and structured data systems.
-
-**原文段落 4**
-
-> Our primary contributions are: (1) a modular pipeline for voice-driven financial query induction with full intermediate transparency; (2) a curated benchmark of 150 spoken financial screening prompts across clean and noisy conditions, to be publicly released; and (3) an empirical evaluation demonstrating that constrained decoding, RAG grounding, and interactive verification each address distinct, non-overlapping failure modes.
-
-**原文段落 5**
-
-> Work on natural language interfaces to databases (NLIDB) and text-to-SQL generation has shown substantial progress in mapping unstructured language into executable query structures (Liu et al., 2026, 2025b). Song et al. (2024) specifically target the financial domain, benchmarking LLM-based text-to-SQL and proposing tree-based edit distance as a reliable evaluation metric. Visual query systems such as OptiqueVQS (Soylu et al., 2016) demonstrate that multi-paradigm interfaces with exposed intermediate representations improve end-user accuracy—a principle we directly adopt. However, these systems assume clean textual input and do not handle spoken interaction or real-time Web data sources.
+**工程实现。** 演示整合 ElevenLabs STT/TTS、GPT-4o、Screener.in API、Node.js/Express、Python 查询模块和 SSE 前端。增加检索、校验与人工确认使延迟从 1.5 秒升到 3.1 秒，但换来显著更高的逻辑可靠性。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.2/2)：一是将 streaming ASR、约束抽取、SQL 生成和验证串成透明语音查询管线；二是暴露中间推理产物供用户修订；三是用真实输入噪声评估语音到结构化查询的稳定性。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.0/1.5)：方法链和适用边界基本自洽；金融领域 schema 迁移、方言/口音、数字识别错误和用户过度信任仍是风险；150 条提示规模也不足以覆盖复杂投资语义 使部分边界仍待验证。
-* 实验充分性 (1.1/1.5)：150 条 spoken financial prompts 构成评测集；论文报告检索 grounding、受限生成和交互验证提升约束抽取准确率、SQL 可执行性、逻辑一致性和多轮稳定性，但摘要未列具体百分比。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (0.6/1.5)：该工作对语音/音乐/音频读者的直接价值来自如何把带噪 spoken financial requests 转成可检查、可执行的结构化查询。；影响范围受金融领域 schema 迁移、方言/口音、数字识别错误和用户过度信任仍是风险限制。
-* 开源 (0.5/1.5)：论文中未提及代码、模型权重、数据集或在线 demo 链接。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：数据库规模、ASR 模型、提示词、延迟、硬件和人工复核时间未完整说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.2/1.5)：系统链路和审计思路很实用，但金融安全需要更强的错误成本、攻击和真实用户证据。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.2/2)：组件本身成熟，创新主要在语音金融查询的透明串联、错误分层与人工确认。
+
+* 技术严谨性 (1.0/1.5)：指标拆分和逐组件消融合理，但固定 schema 与单一 GPT-4o 骨干简化了开放金融问答难度。
+
+* 实验充分性 (1.1/1.5)：干净/噪声、三类策略、多轮和消融均覆盖；150 条指令仍不足以代表真实投资表达。
+
+* 清晰度 (0.8/1)：架构、中间状态和评价指标对应明确，读者能看出每层解决哪类错误。
+
+* 影响力 (0.6/1.5)：对金融数据查询和企业语音 BI 有实践意义，场景边界较窄且涉及高风险决策。
+
+* 开源 (0.5/1.5)：基准承诺在项目仓库公开，但核心系统、真实 API 配置与部署代码的完整开放程度有限。
+
+* 可复现性 (0.3/0.5)：数据构造、噪声范围、指标和数表详细；商业 ASR/LLM 与实时市场接口会随时间漂移。
+
+* 工程/实践价值 (1.2/1.5)：97.5% 可执行率与可修订界面显示较强产品潜力，但不应把查询正确等同于投资建议正确。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：金融领域 schema 迁移、方言/口音、数字识别错误和用户过度信任仍是风险；150 条提示规模也不足以覆盖复杂投资语义。
-2. 需要继续验证的边界：150 条提示规模也不足以覆盖复杂投资语义。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. FinScreenBench 只有 150 条语义指令和 6 名说话者，口音、方言、多人打断与复杂财务术语覆盖有限。
+
+2. 所有比较使用 GPT-4o 和固定 Screener.in schema，结论主要说明管线组件有效，不能证明对其他 LLM、数据库或国际市场同样成立。
+
+3. 噪声使数字阈值与指标名错误明显增加；若 ASR 在最前端写错，后续 SQL 规则可能只能保证语法正确，无法恢复用户原意。
+
+4. 97.5% 可执行仍意味着存在失败查询，而逻辑一致也不保证数据及时、财务口径正确或筛选策略适合投资。
+
+5. 人工确认提高可靠性，但增加约 0.8 秒以上延迟和认知负担；长期使用中用户可能形成自动确认习惯。
+
+6. 实时市场 API 的限流、schema 变更、数据缺失和监管要求没有经过长期压力测试，系统不应直接承担自动交易决策。
 
 ---
 

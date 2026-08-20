@@ -32,84 +32,126 @@ paper_digest_arxiv_id: "2608.18090"
 
 ### 📌 核心摘要
 
-Nine Emotion Centroids: A Label-Free Valence Axis That Transfers Across Four Modalities 面向少量情绪名称和文本故事能否学习跨文本、图像、音频与脑信号的 valence 方向。。一是用 9 个情绪中心和 PCA 得到跨模态 V-axis；二是文本标签训练到音频/图像/脑信号零目标标签迁移；三是通过消融和分类概念反例限定适用边界。 SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50 音频 AUC 0.906；EEG AUC 0.720±0.055；文本训练的两参数分类器迁移到图像 AUC 0.961、音频 0.764、脑记录 0.828。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：连续情绪属性的跨模态几何不代表离散概念；结果受编码器和英文情绪锚点影响，跨文化、跨语言和更复杂音乐情绪仍未验证。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+1. 这项工作提出一条一维的 V-axis，用来表示从负面到正面的连续情绪价度。构造过程只需 9 个情绪类别、每类约 50 段短故事：先在冻结编码器中求 9 个情绪中心，再对中心矩阵做 PCA，第一主成分就是价度轴。
+
+2. 同一配方被分别应用到文本、图像、音频和 EEG 编码器。文本 SST-2 的 AUC 为 0.772，达到全监督线性探针 0.828 的 93%；音频 ESC-50 AUC 为 0.906；图像 EmoSet 与人工价度评分相关系数为 0.636；EEG AUC 为 0.720±0.055。
+
+3. 一条只用文本标签训练、仅含斜率与截距两个参数的逻辑回归头，可以直接读取其他模态各自的 V-axis：图像 AUC 0.961、音频 0.764、EEG 0.828。相比之下，16 维通用共享子空间只有 0.525，说明任务相关的一维方向可能比高维通用对齐更有效。
+
+4. 这不是‘所有概念都能压成一维’。七组离散概念测试接近随机，EEG 轴本身使用了监督价度标签，生成时可操控性也只在 Llama/Mistral 家族成立。工作最大的优点，是在展示强结果的同时把适用边界写得很窄。
+
+5. 定向消融进一步区分‘能读出’与‘参与模型行为’：从 Llama-3-8B、Qwen3-1.7B、Qwen3-8B 每层隐状态移除 V-axis，SST-2 准确率分别下降 5.50、15.83、37.16 个百分点；同范数随机方向最多只有 0.88 个百分点平均下降，效应至少高出随机波动 12 个标准差。
+
+6. 价度轴也有清晰失败模式。9 个单独情绪词构轴只有 0.50 AUC，每类约 20 段以上故事才开始有效；EEG 的无监督第一主成分更像唤醒度，必须改用监督 LDA；Qwen/Gemma 能探测却不能稳定 steering。因而这是一条低标签、任务相关的连续属性配方，不是无监督万能概念轴。
 
 ### 🔗 开源详情
 
-论文中未提及 V-axis 代码、模型或所用数据处理脚本的公开链接。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及 V-axis 代码、模型或所用数据处理脚本的公开链接。
 
 ### 🏗️ 方法概述和架构
 
-论文从 9 个情绪类别名称和每类 50 个短故事构造情绪锚点，在冻结编码器的嵌入空间中对每类求平均，再取九个中心的第一主成分作为 V-axis。新输入投影到该轴得到连续正负情绪值，不需要为每个目标模态重新标注情绪。
+**九个情绪中心与监督预算。** 锚点包括 anger、disgust、fear、sadness、amusement、joy、inspiration、tenderness 和 neutral。每类约写 50 段不少于 15 token 的情境故事，经冻结编码器前向后，取固定层最后一个 token 表示并按类平均。类别内先平均，可降低单一故事主题、句式和实体对方向的影响。显式监督是 9 个类别名与 9 个写作任务，共 18 次事件；约 450 段故事无需正负二元标签。
 
-方法把文本锚点、冻结编码器、PCA 和跨模态投影连成无监督流程；在音频分支中使用 ESC-50，图像分支使用 EmoSet，脑信号分支使用 EEG。一个只在文本标签上训练的两参数分类器被迁移到图像、音频和脑记录，检验轴是否捕捉连续 valence 而非特定模态的表面模式。
+**一维 PCA 方向与层选择。** 将 9 个中心堆成 9×d 矩阵、按行中心化、做 SVD，取最大奇异值对应的右奇异向量。新样本只需与该向量做点积，就得到连续价度分数。单独使用 9 个情绪词会退化到 AUC 0.50，约每类 20 段以上的文本才开始形成非平凡方向。Llama/Mistral/标准 Qwen 在约半深层搜索最佳轴；推理蒸馏模型中层接近随机，却在最后一层附近恢复，因此层搜索属于配方的一部分。
 
-选择少量锚点的动机是降低监督标注成本；冻结表示让跨模态比较更干净，但也把结果限制在已有编码器的几何空间。作者还用七个分类概念测试近 chance，说明方法宣称的是连续属性而非任意概念迁移。
+**跨模态各自构轴。** 文本用 Llama/Qwen 隐状态，图像用 CLIP-image 的约 450 张情绪相关图，音频用 CLAP-audio 的约 450 个 ESC-50 相关片段，EEG 用 CBraMod 的 FACED 视频诱发信号。前三类都按 9 中心取 PC1；EEG 的 PC1 把 joy/fear 一起放到高值，更像 arousal，最终改用 FACED 二元价度标签训练 Fisher LDA。每个模态都在自己的表示空间内构造轴，并非把原始特征强行投进共同坐标系。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+**两参数跨模态分类头。** 每个样本先投影成一维分数，再只在源模态拟合斜率和截距。SVD 的正负号本来任意，系统用源模态正类均值固定一次方向，之后直接把同一头用于其他模态，不针对 12 个跨模态单元格调符号或阈值。对角线用五折自身交叉验证，非对角线禁止目标标签参与头拟合；16 维通用共享子空间、随机子空间和原始 CLIP 特征作为桥接基线。
 
-![Figure 1：V-axis 消融与随机方向对照的情感识别准确率变化。](https://arxiv.org/html/2608.18090v1/x1.png)
+**定向消融。** 在 LLM 每层、每个 token 位置，将隐状态在单位 V-axis 上的投影减掉，再用未改模型上训练的逻辑头读取 SST-2。操作对轴正负号不敏感；每个模型预先采 3 条同范数随机方向，用相同方式删除，比较准确率下降与随机标准差。该实验检验方向删除是否改变读出，不宣称定位唯一神经回路。
 
-![Figure 2：四种模态之间的跨模态 valence AUC 迁移。](https://arxiv.org/html/2608.18090v1/x2.png)
+**模态统计与负结果。** 图像在 11,811 张 EmoSet 上算人工价度 Pearson 相关，并以 1,000 随机方向建立 |r| 上界；音频按 50 个 ESC-50 类别做配对置换；EEG 在 123 人上做五折受试者分层。另把同一配方应用到词对、长尾检索、CIFAR-100、AxBench 500 概念等七组离散任务，确认类别概念接近随机。最后再独立测试沿轴加回隐藏状态能否改变生成，得到 Llama/Mistral 成功、Qwen/Gemma 失败的家族边界。
+
+![Figure 1: V-axis ablation degrades sentiment readout in three LLMs; matched-norm random-direction ablation does not. Bars: drop in SST-2 dev accuracy (pp) from inference-time projection out of the residual stream of the V-axis (dark) vs. K=3K{=}3 matched-norm random directions (light, error bar = std). Annotation: drop in pp. zz is |V-drop|/σrandom|\text{V-drop}|/\sigma_{\text{random}}. Each panel uses the model’s sentiment-optimal block; Qwen3-8B uses block 23 (depth 0.86), consistent with the reasoning-distillation depth shift (§7).](https://arxiv.org/html/2608.18090v1/x1.png)
+
+![Figure 2: All 12/12/12 cross-modal cells transfer at AUC ≥0.70\geq 0.70. Rows: source modality on which the 2-parameter logistic head was fitted (binary valence labels). Columns: target modality evaluated. Diagonal: 5-fold self-CV (ntext=8,872n_{\text{text}}{=}8{,}872; nimage=5,905n_{\text{image}}{=}5{,}905; naudio=1,040n_{\text{audio}}{=}1{,}040; nEEG=1,725n_{\text{EEG}}{=}1{,}725). Off-diagonal: cross-modal, nsource∈{728,1034,413,800}n_{\text{source}}{\in}\{728,1034,413,800\}, no target labels at the head-fitting stage. See §5.](https://arxiv.org/html/2608.18090v1/x2.png)
 
 ### 💡 核心创新点
 
-1. 一是用 9 个情绪中心和 PCA 得到跨模态 V-axis，回应了既有方法或系统的具体瓶颈。
-2. 二是文本标签训练到音频/图像/脑信号零目标标签迁移，并由论文的实验或系统设计支撑。
-3. 三是通过消融和分类概念反例限定适用边界。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+1. 用 9 个情绪中心的第一主成分取代大规模正负标签分类器，以约 18 次显式监督事件和约 450 段生成故事构造连续价度方向；监督发生在情绪类别和写作任务，而不是每个下游样本。
+
+2. 在四个没有统一训练目标的编码器中分别找到可用的一维价度轴，再共享极小的两参数分类头。跨模态迁移的是‘轴上刻度如何转成概率’，不是原始高维表示。
+
+3. 不只报告相关性，还通过定向消融比较 V-axis 与 3 条同范数随机方向。Qwen3-8B 移除该轴下降 37.16 pp，随机方向只下降 0.08±0.19 pp，使探针结果与功能后果形成对应。
+
+4. 用 16 维通用共享子空间的 0.525 AUC 作为负基线，显示跨编码器共有信息不等于任务所需信息；一条情感特定方向反而在文本→图像上达到 0.961。
+
+5. 用离散概念失败、EEG 监督例外、模型家族可操控性和推理蒸馏层位偏移，主动限定‘通用’与‘因果’的含义。七类类别概念接近随机，阻止读者把配方泛化成任意概念发现器。
+
+6. 将探测与生成 steering 分开：Llama/Mistral 可沿轴改变输出，Qwen/Gemma 虽可读出价度却无法稳定 steering，证明‘表示存在’和‘可控使用’需要各自实验。
+
+7. 单独公开 EEG 的监督例外：无监督九中心 PC1 只得到 0.512 AUC，改用 FACED 价度 LDA 后才形成可迁移轴。把这项失败放进核心框架，避免‘文本头不看 EEG 标签’被误写成整个脑信号路线无监督。
+
+选择少量锚点的动机是降低监督标注成本；冻结表示让跨模态比较更干净，但也把结果限制在已有编码器的几何空间。作者还用七个分类概念测试近 chance，说明方法宣称的是连续属性而非任意概念迁移。
+
+SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50 音频 AUC 0.906；EEG AUC 0.720±0.055；文本训练的两参数分类器迁移到图像 AUC 0.961、音频 0.764、脑记录 0.828。
+
+方法把文本锚点、冻结编码器、PCA 和跨模态投影连成无监督流程；在音频分支中使用 ESC-50，图像分支使用 EmoSet，脑信号分支使用 EEG。一个只在文本标签上训练的两参数分类器被迁移到图像、音频和脑记录，检验轴是否捕捉连续 valence 而非特定模态的表面模式。
 
 ### 📊 实验结果
 
-SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50 音频 AUC 0.906；EEG AUC 0.720±0.055；文本训练的两参数分类器迁移到图像 AUC 0.961、音频 0.764、脑记录 0.828。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：99、50、1、500×、500、93%。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50 音频 AUC 0.906；EEG AUC 0.720±0.055；文本训练的两参数分类器迁移到图像 AUC 0.961、音频 0.764、脑记录 0.828。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+| 模态 | 编码器/数据集 | V-axis 结果 | 监督对照 |
+|---|---|---:|---:|
+| 文本 | Llama-3-8B / SST-2 | AUC **0.772** | 0.828 |
+| 图像 | CLIP / EmoSet 11,811 图 | Pearson **0.636** | 0.81 |
+| 音频 | CLAP / ESC-50 | AUC **0.906** | 0.94 |
+| EEG | CBraMod / FACED 123 人 | AUC **0.720±0.055** | 0.83 |
+
+文本训练的两参数分类头迁移到图像、音频、EEG 的 AUC 分别为 0.961、0.764、0.828，4×4 矩阵中的 12 个跨模态单元全部不低于 0.70。
+
+| 定向消融模型 | 原准确率 | 移除 V-axis 后 | 下降 | 随机方向下降 |
+|---|---:|---:|---:|---:|
+| Llama-3-8B-Instruct | 87.96% | 82.45% | 5.50 pp | 0.15±0.05 pp |
+| Qwen3-1.7B | 84.40% | 68.58% | 15.83 pp | 0.88±1.24 pp |
+| Qwen3-8B | 87.61% | 50.46% | 37.16 pp | 0.08±0.19 pp |
+
+音频结果的配对置换 p=2.2×10^-15；EEG 的五折受试者分层结果 p=3.65×10^-8。
+
+每个情绪 50 个短故事、9 类锚点；使用冻结编码器、中心平均和第一主成分，七个离散概念测试接近 chance。具体编码器层数、随机种子、训练硬件和音频预处理未完整说明。
 
 ### 🔬 细节详述
 
-每个情绪 50 个短故事、9 类锚点；使用冻结编码器、中心平均和第一主成分，七个离散概念测试接近 chance。具体编码器层数、随机种子、训练硬件和音频预处理未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+**为什么选 9 类而非正负两类。** 正负对比会把价度与唤醒度混在一起，并人为固定方向；9 个情绪中心让最大变化方向由数据决定。在这些情绪故事中，价度恰好成为第一主成分。
 
-### 全文事实摘录
-**原文段落 1**
+**音频为什么表现强。** CLAP 通过文本—音频对比学习，情绪相关文本概念更容易在环境声音表示中被读出；50 个 ESC-50 类别上的平均 AUC 达 0.906。不过 ESC-50 是环境声音，不等同于复杂音乐情绪。
 
-> The textbook way to build a continuous-attribute axis inside a foundation model is supervised: take thousands of labelled examples (positive sentences, negative sentences), run them through the model, and fit a linear classifier on the hidden state. The weight vector of that classifier is the “axis.” Our recipe takes a different path. It requires no polarity labels and only 1818 supervision events total: 99 emotion category names (anger, joy, fear, …) and 99 writing prompts. From those we author ∼50\sim\!50 short emotion-evocative paragraphs per emotion, embed each one through a frozen encoder, average within emotion to get 99 emotion centroids in hidden-state space, and take the top principal component (PC1) of the resulting 9×d9{\times}d matrix. That single direction – the V-axis (valence axis) – is the only quantity used downstream. The label-cost ratio versus a supervised SST-2 probe
+**EEG 是特殊分支。** 直接对 9 类 FACED 中心做 PCA 得到的更像唤醒轴，自身 AUC 只有 0.512。最终 EEG 轴改用二元价度标签训练的 Fisher LDA，因此‘文本分类头不看 EEG 标签’只适用于分类头，不能描述轴本身。
 
-**原文段落 2**
-
-> The construction is PC1 of K=9K{=}9 category centroids, not a discriminant between two contrastive labels: Park–Choe–Veitch (Park et al., 2024) directions live in a pair-discriminant geometry, and the V-axis is orthogonal to those directions on identical concepts (mean |cos|=0.038|\cos|{=}0.038). The directional-ablation intervention of Arditi et al. (2024) is here applied to a recipe-derived direction, not to a discriminant fit to refusal/sentiment labels, so the causal claim tests the recipe itself rather than reading off supervision. And the four-encoder cross-modal transfer matrix, to our knowledge, has no precedent in the LRH–AxBench–steering line, which is text-only. The paper is organised as a probe→\tomechanism→\tocausal triad: probe (§3), mechanism (§7), causal (§4).
-
-**原文段落 3**
-
-> A predictive direction may merely be correlated with the attribute; it does not necessarily produce the model’s sentiment behaviour. To distinguish the two we use directional ablation (Arditi et al., 2024): at every layer and token position during a forward pass, replace the hidden state hh with h−(⟨h,v⟩)​vh-(\langle h,v\rangle)v, where vv is the unit V-axis. In words, we orthogonally project the V-axis out of the running representation – the model is forced to think without it being available – and read off SST-2 accuracy. Across three independent LLMs the V-axis ablation drops accuracy by 5.55.5 pp (Llama-3-8B-Inst), 15.815.8 pp (Qwen3-1.7B), and 37.237.2 pp (Qwen3-8B at block 2323), while three matched-magnitude random directions per model cost at most 0.880.88 pp under the identical protocol. The signal is ≥12\geq 12 standard deviations above the random null in every model and 196​σ1
-
-**原文段落 4**
-
-> A V-axis exists separately in each encoder, but the sentiment classifier on top of one V-axis does not need re-training when moved to another modality. We fit a 22-parameter logistic regression on SST-2 text scores against text labels, then evaluate it on each other modality’s V-axis projections – with no target-modality labels at the head-fitting stage. All 12/1212/12 off-diagonal cells of the resulting 4×44{\times}4 matrix exceed AUC 0.700.70; text-trained reaches 0.9610.961 on EmoSet, 0.7640.764 on ESC-50, 0.8280.828 on EEG. A natural baseline – the generic top-1616 shared subspace between the same encoders, computed without reference to sentiment – is at chance (0.5250.525). One task-relevant dimension beats sixteen generic dimensions by 0.180.18–0.440.44 AUC.
-
-**原文段落 5**
-
-> The recipe is an empirical regularity, not an analytical theorem. It is bounded to continuous concepts: seven independent tests on categorical concepts (Park–Choe–Veitch word pairs (Park et al., 2024); long-tail retrieval; multi-concept probes; AxBench Concept-500 (Wu et al., 2025); vision CIFAR-100; categorical concepts at all five depth slices; depth-shift specificity) return at-or-near chance. The EEG V-axis itself is built from a supervised linear discriminant on FACED valence labels; the “label-free” part of the EEG result is the head, not the axis. The text–image–audio V-axes are unsupervised. “Universal” in the cross-modal-classifier claim is scoped to the four encoders we tested–CLIP-text (Radford et al., 2021), CLIP-image, CLAP-audio (Elizalde et al., 2023), CBraMod-EEG (Chen et al., 2024)–not to encoders not yet tested. Directional ablation is sign-insensitive, so no sign-flip
+**可操控性并不统一。** 加回 V-axis 能在 Llama/Mistral 生成中稳定改变情绪，Spearman ρ 约 0.32—0.45；Qwen/Gemma 的 |ρ|<0.05。推理蒸馏模型的价度方向还从中层移到接近末层，说明线性方向的位置受训练范式影响。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.6/2)：一是用 9 个情绪中心和 PCA 得到跨模态 V-axis；二是文本标签训练到音频/图像/脑信号零目标标签迁移；三是通过消融和分类概念反例限定适用边界。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.2/1.5)：方法链和适用边界基本自洽；连续情绪属性的跨模态几何不代表离散概念；结果受编码器和英文情绪锚点影响，跨文化、跨语言和更复杂音乐情绪仍未验证 使部分边界仍待验证。
-* 实验充分性 (1.2/1.5)：SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50 音频 AUC 0.906；EEG AUC 0.720±0.055；文本训练的两参数分类器迁移到图像 AUC 0.961、音频 0.764、脑记录 0.828。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (1.0/1.5)：该工作对语音/音乐/音频读者的直接价值来自少量情绪名称和文本故事能否学习跨文本、图像、音频与脑信号的 valence 方向。；影响范围受连续情绪属性的跨模态几何不代表离散概念限制。
-* 开源 (0.5/1.5)：论文中未提及 V-axis 代码、模型或所用数据处理脚本的公开链接。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：使用冻结编码器、中心平均和第一主成分，七个离散概念测试接近 chance。具体编码器层数、随机种子、训练硬件和音频预处理未完整说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (0.9/1.5)：音频 AUC 和跨模态迁移数字很强，且作者主动给出边界反例；但冻结编码器和小锚点集合的依赖需要更广泛复现。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.6/2)：低标签一维轴、四模态迁移与方向消融形成鲜明贡献，且不是普通二分类探针换名。
+
+* 技术严谨性 (1.2/1.5)：随机方向对照、显著性、负结果和术语边界充分；EEG 监督例外削弱了完全统一配方。
+
+* 实验充分性 (1.2/1.5)：文本、图像、音频、EEG、干预和七类失败测试覆盖广，但每个模态的编码器与数据集数量仍有限。
+
+* 清晰度 (0.8/1)：三步配方非常易懂，复杂处主要在不同模态监督强度并不相同。
+
+* 影响力 (1.0/1.5)：对表示分析、低资源情感识别与跨模态迁移有潜在影响，‘通用’尚不足以跨语言、文化和更多编码器。
+
+* 开源 (0.5/1.5)：实验路径和复现口径披露细，但当前材料没有清晰的一站式代码/模型发布入口。
+
+* 可复现性 (0.3/0.5)：算法、层搜索、样本量、随机对照与算力说明充分，故事生成和模型版本仍会带来漂移。
+
+* 工程/实践价值 (0.9/1.5)：两参数跨模态头极轻量，但轴需按编码器重建，且探针有效不代表可稳定操控生成。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：连续情绪属性的跨模态几何不代表离散概念；结果受编码器和英文情绪锚点影响，跨文化、跨语言和更复杂音乐情绪仍未验证。
-2. 需要继续验证的边界：结果受编码器和英文情绪锚点影响，跨文化、跨语言和更复杂音乐情绪仍未验证。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+1. 配方是一条经验规律，不是关于表示几何的理论定理；更换模型、语言或文化后未必仍由价度主导第一主成分。
+
+2. 方法只在连续属性上成立，七组离散类别测试接近随机，不能推广成通用概念发现算法。
+
+3. EEG 轴使用 FACED 二元价度标签监督，只有跨模态分类头不使用目标标签；将整个 EEG 结果称为无标签会造成误解。
+
+4. ‘通用’只覆盖 CLIP-text/image、CLAP-audio 和 CBraMod-EEG 等已测编码器，且文本—图像部分存在 CLIP 家族共享预训练关系。
+
+5. 定向消融是推理时删除表示方向，不是对神经回路的反事实干预；它说明该方向有功能作用，不说明它是唯一原因。
+
+6. 生成操控具有家族差异：Llama/Mistral 可用，Qwen/Gemma 失败，探针准确率不能作为 steering 可用性的代理。
+
+7. 音频验证来自 ESC-50 环境声音类别，尚未覆盖细粒度音乐情绪、自然语音韵律或跨文化听觉价度。
 
 ---
 

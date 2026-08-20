@@ -32,80 +32,124 @@ paper_digest_arxiv_id: "2608.18341"
 
 ### 📌 核心摘要
 
-Low-Power, Neuromorphic, Acoustic Anomaly Detection for Persistent Machine Monitoring 面向如何在极低功耗和低延迟约束下持续发现机器声学异常。。一是把自编码器声学异常检测落到 Loihi 2 的持续监测场景；二是将清洁/噪声条件纳入同一部署评估；三是把能耗、时延和异常质量作为联合工程约束，而不是只报分类准确率。 在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。摘要没有给出完整的 AUC、误报率或所有基线数字，因此这些数值正文未列出的数值保持未知。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：作者承认持续监测仍受功耗、延迟和部署复杂度约束。审稿人进一步指出，缺少公开故障类别划分、误报/漏报曲线和跨机器迁移实验，会限制现场可靠性判断。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+这项工作瞄准的是一种很具体的工业约束：机器故障很少发生，但麦克风和检测器必须常年在线。作者没有再做一个普通的故障分类器，而是只用正常声音训练自编码器，让重构误差承担未知故障的异常分数。
+
+系统把 log-mel 前端留在芯片外，将 Z-score 归一化、定点自编码器、L1 重构分数和阈值判断全部部署到 Intel Loihi 2。这样既保留了无监督异常检测对未知故障的开放性，也能测量真实硬件上的延迟与能耗。
+
+干净的 ToyADMOS ToyCar 上，模型得到 pooled AUC 0.9959、标准化 pAUC 0.9785；带噪且存在源域/目标域偏移的 DCASE 2026 ToyCar 上，source AUC、target AUC、pAUC 分别为 0.7990、0.6466、0.6426，三项都超过同一任务基线。
+
+工程结果比单一精度数字更有价值：Loihi 2 的动态能耗为 0.0406–0.0426 mJ/样本，相比 Xeon CPU 的 20.156 mJ 和 Tesla V100S GPU 的 5.350 mJ 低两个数量级；即使计入以太网 I/O，281.0 微秒/样本也远快于一秒音频窗口的实时需求。
+
+结论应限定在当前两套 ToyCar 数据与芯片外特征提取条件内。DCASE 配置使用了带标签开发集调参，尚不是未知 challenge test；16 芯片 VPX 的高静态功耗也不能直接代表单芯片端侧部署。若用于产线，还需把麦克风采集、log-mel 计算、通信和告警阈值校准纳入整机评估，当前数字主要说明定点自编码器内核具有持续低延迟推理潜力。
 
 ### 🔗 开源详情
 
-论文中未提及代码仓库、模型权重或可下载数据；只说明了 Loihi 2 实验平台和声学特征流程。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文中未提及代码仓库、模型权重或可下载数据；只说明了 Loihi 2 实验平台和声学特征流程。
 
 ### 🏗️ 方法概述和架构
 
-系统把传感器采集的机器声音转换为 log-mel 特征，再送入自编码器式异常检测器；推理主体部署在 Intel Loihi 2 神经形态处理器，特征归一化在芯片外完成。编码器学习正常声学模式的紧致表示，解码器重构输入，重构误差作为异常分数，因此不要求为每一种故障穷举标签。清洁与噪声条件通过统一的窗口化、归一化和阈值流程进入同一检测路径。
+系统从麦克风录音出发，但把特征前端与持续推理明确拆开。输入端按数据集采用两套 log-mel 配置：48 kHz ToyADMOS 使用 2048 点 FFT、512 hop、400 个 mel bin，从中间截取约一秒的 93 帧并做时间平均，得到 400 维向量；16 kHz DCASE 使用中间一秒、1024 点 FFT、512 hop、416 个 mel bin，得到 416 维向量，而且只使用近场麦克风，不借助远场噪声参考。输出因此是每条录音中心窗口的固定维向量，而不是随时间滚动的完整谱图。
 
-论文的关键交互是“特征提取—神经形态推理—异常分数”三级数据流：前端负责频谱表示，Loihi 2 负责低功耗事件驱动计算，后端根据重构误差和阈值输出告警。作者同时比较清洁和含噪输入，观察功耗、延迟与检测质量之间的变化。由于正文没有把每层神经元参数、阈值学习过程和完整部署脚本全部列出，本文能确认的是系统边界和数据流，正文未列出的内容保持未知未说明的硬件配置。
+进入学习部分后，先用正常训练集逐维计算 Z-score 均值与方差，再把归一化向量送入 x→256→128→64→b→64→128→256→x̂ 的密集自编码器。干净模型瓶颈为 32，带噪模型瓶颈为 12；隐藏层使用 leaky-ReLU，输出层为线性层。训练仅使用正常样本，异常不参与参数学习，损失为均方重构误差加 1e-4 倍瓶颈绝对激活，Adam 学习率 1e-3、batch size 16、训练 280 epoch。较小瓶颈迫使网络保存正常机器声的稳定结构，异常则因无法重构而产生更大的残差。
 
-采用自编码重构而不是监督分类的动机是工业现场故障类型不断变化，正常数据更容易持续获得；神经形态处理器则针对“始终在线”场景压低能耗。这个组合的实际取舍是把一部分 log-mel 计算留在芯片外，以换取可部署性和较低片上负担，同时接受异常阈值与噪声分布仍需现场校准。
+浮点模型随后被映射为 Loihi 2 定点运算：权重为有符号 8 bit，累加器、偏置和激活限制在有符号 24 bit。每层选择能避免 24 bit 溢出的最小算术右移量。输入和重构并不假定拥有同一 scale，而是分别乘整数缩放因子并右移，转换到公共精度后再做逐维绝对差求和。这个 L1 分数可以从芯片输出给上位机，也能直接与部署阈值比较，在芯片上产生二元异常决定。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
+评价阶段不固定某个阈值，而用连续 L1 scores 计算 AUC 和最大 FPR 0.1 下的标准化 pAUC。ToyADMOS 把四个麦克风位置汇总，检验位置变化；DCASE 则分别以 source 正常和 target 正常对全部异常计算 AUC，检验负载、速度、温度、噪声和信噪比变化。较大的分数始终表示更偏离正常分布。
+
+硬件评测把 log-mel 特征提取排除在外，只比较相同量化自编码器的推理。Loihi 2 同时测量含 Ethernet I/O 和预载输入两种路径；CPU 使用 Xeon E5-2660 v3 与 RAPL，GPU 使用 Tesla V100S、CUDA events 和 200 ms 功耗采样，三者均以 batch size 1 运行。每项先预热 100 万次，再测量 100 万次推理，报告延迟、总功耗、总能耗和扣除静态平台功耗后的动态能耗。部署时还要把这组芯片内收益与前端特征提取、网络传输和平台静态功耗分开核算；当前比较回答的是量化网络核上的单样本持续推理效率，而不是一套端到端传感器的总能耗。
 
 ### 💡 核心创新点
 
-1. 一是把自编码器声学异常检测落到 Loihi 2 的持续监测场景，回应了既有方法或系统的具体瓶颈。
-2. 二是将清洁/噪声条件纳入同一部署评估，并由论文的实验或系统设计支撑。
-3. 三是把能耗、时延和异常质量作为联合工程约束，而不是只报分类准确率。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+把严格的一类声学异常检测完整落到 Loihi 2：不仅是自编码器前向，还包括归一化、重构误差与阈值决策。训练集只含正常机器声，异常录音仅用于评测，因此系统面对未预先枚举的故障时仍能输出连续偏离分数，而不是局限于已知故障类别。
+
+在干净、跨麦克风位置的 ToyADMOS 与带噪、跨域的 DCASE ToyCar 上使用同一方法框架，避免只在理想数据上证明低功耗。DCASE 只取近场通道，不借用远场噪声参考，更贴近单麦克风持续部署；source、target 与低误报区间 pAUC 的并列报告也把域偏移暴露出来。
+
+定点化不是简单导出模型：权重压到有符号 8 bit，偏置、累加器和激活限制在 24 bit，输入与重构先按各自尺度用整数乘法和算术右移对齐，再在芯片上计算 L1 分数。这条路径把量化误差、缩放和最终告警放入同一可执行实现。
+
+把检测质量、延迟、总功耗、总能耗、动态能耗、核心占用和事件活动放在同一评估中，使持续监测的工程收益可以被直接审视。CPU、GPU 与 Loihi 2 执行同一量化自编码器、batch size 都为 1，并采用一百万次预热和一百万次实测；同时把含 Ethernet 与预载输入拆开，读者可以区分通信代价和芯片计算代价。
+
+模型只占 74 个 neuromorphic cores，单芯片内存占用估算为 20.36%，说明当前网络在容量上有机会迁移到 128 核单芯片平台。低动态能耗还留下多模型、传感器融合或未来片上 log-mel 前端的容量空间，不过单芯片路由和总能耗仍需实测。
 
 ### 📊 实验结果
 
-在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。摘要没有给出完整的 AUC、误报率或所有基线数字，因此这些数值正文未列出的数值保持未知。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：2、0.9959、0.9785、0.1、2026、0.7990。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | 在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。摘要没有给出完整的 AUC、误报率或所有基线数字，因此这些数值正文未列出的数值保持未知。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+ToyADMOS 的 AUC 0.9959、pAUC 0.9785，说明量化后重构分数在干净条件和麦克风位置变化下仍能清楚区分正常与异常。DCASE 上最明显的提升来自 target AUC：0.5317→0.6466；source AUC 为 0.7728→0.7990，pAUC 为 0.5825→0.6426。
+
+含 Ethernet I/O 的 Loihi 2 延迟为 281.0 微秒，预载输入时为 48.3 微秒；后者快于 CPU 的 420.3 微秒和 GPU 的 163.5 微秒。动态能耗方面，含通信的 0.0426 mJ 相比 CPU 低约 474 倍、相比 GPU 低约 126 倍；预载输入的 0.0406 mJ 对应约 496 倍和 132 倍。
+
+总能耗不能与动态能耗混为一谈。16 芯片 VPX 的静态功耗约 16.05 W，因此含通信的总能耗仍是 4.554 mJ/样本，预载输入为 0.816 mJ/样本。作者对单芯片平台给出的 0.54/0.13 mJ 只是基于静态功耗缩放的一阶投影，不是实测值。
+
+**异常检测质量**
+
+| 条件 | Source/Pooled AUC↑ | Target AUC↑ | pAUC↑ |
+| --- | --- | --- | --- |
+| ToyADMOS ToyCar, Loihi 2 | 0.9959 | — | 0.9785 |
+| DCASE ToyCar, Loihi 2 | 0.7990 | 0.6466 | 0.6426 |
+| DCASE ToyCar, baseline | 0.7728 | 0.5317 | 0.5825 |
+
+**推理与能耗（不含 log-mel 前端）**
+
+| 硬件 | 延迟 μs/样本↓ | 总能耗 mJ/样本↓ | 动态能耗 mJ/样本↓ |
+| --- | --- | --- | --- |
+| Loihi 2 VPX + Ethernet | 281.0 | 4.554 | 0.0426 |
+| Loihi 2 VPX + 预载输入 | 48.3 | 0.816 | 0.0406 |
+| Xeon E5-2660 v3 | 420.3 | 32.769 | 20.156 |
+| Tesla V100S | 163.5 | 9.540 | 5.350 |
+
+在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。
+
+论文的关键交互是“特征提取—神经形态推理—异常分数”三级数据流：前端负责频谱表示，Loihi 2 负责低功耗事件驱动计算，后端根据重构误差和阈值输出告警。作者同时比较清洁和含噪输入，观察功耗、延迟与检测质量之间的变化。由于正文没有把每层神经元参数、阈值学习过程和完整部署脚本全部列出，本文能确认的是系统边界和数据流，正文未报告未说明的硬件配置。
+
+训练数据、异常比例、窗口长度、优化器、学习率、Loihi 2 资源配置和阈值选择在当前正文中未完整给出；可确认使用 log-mel 特征、自编码重构和清洁/噪声两类条件。推理是持续在线的片段级检测，具体告警平滑和校准步骤未说明。
+
+采用自编码重构而不是监督分类的动机是工业现场故障类型不断变化，正常数据更容易持续获得；神经形态处理器则针对“始终在线”场景压低能耗。这个组合的实际取舍是把一部分 log-mel 计算留在芯片外，以换取可部署性和较低片上负担，同时接受异常阈值与噪声分布仍需现场校准。
 
 ### 🔬 细节详述
 
-训练数据、异常比例、窗口长度、优化器、学习率、Loihi 2 资源配置和阈值选择在当前正文中未完整给出；可确认使用 log-mel 特征、自编码重构和清洁/噪声两类条件。推理是持续在线的片段级检测，具体告警平滑和校准步骤未说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+ToyADMOS 训练集含 17,280 条正常录音，测试集含 4,320 条正常和 4,236 条异常录音；划分避免同步的不同麦克风录音跨越训练/测试。DCASE 训练集只有 source 域 990 条正常与 target 域 10 条正常，测试两域各 50 正常、50 异常，target 域同时改变速度、负载、黏度、温度、噪声类型与 SNR。
 
-### 全文事实摘录
-**原文段落 1**
+两套前端针对采样率分别配置。ToyADMOS 的 48 kHz 录音使用 2048 点 FFT、512 hop、400 个 mel bins，从中间取 93 帧后沿时间平均成 400 维；DCASE 的 16 kHz 录音取中心一秒，使用 1024 点 FFT、512 hop、416 个 mel bins，取自然对数后平均成 416 维。所有检测分数都只代表中心一秒，不能直接说明整段 10–12 秒录音的时序覆盖。
 
-> Persistent acoustic monitoring can detect machine faults without physical contact, but always-on inference is constrained by power, latency, and deployment complexity. We demonstrate autoencoder-based acoustic anomaly detection on an Intel Loihi 2 neuromorphic processor under clean and noisy conditions. Log-mel features are computed off chip; normalization, autoencoder inference, L1 reconstruction scoring, and thresholding run on chip. In a clean, microphone-position-invariant ToyADMOS ToyCar benchmark, the on-chip model achieves 0.9959 AUC and 0.9785 standardized pAUC at maximum false-positive rate 0.1. In the DCASE 2026 Task 2 ToyCar noisy benchmark, the model achieves source AUC 0.7990, target AUC 0.6466, and pAUC 0.6426, exceeding reported baseline metrics. Power profiling on a 16-chip Loihi 2 VPX system shows real-time throughput with 0.0406–0.0426 mJ dynamic energy per sample, two
+自编码器公共骨架为输入→256→128→64→瓶颈→64→128→256→重构，干净模型瓶颈 32、带噪模型瓶颈 12。隐藏层使用 leaky-ReLU，输出层线性；目标为 MSE 加 1e-4 倍瓶颈平均绝对激活，Adam 学习率 1e-3、batch 16、训练 280 epoch。模型没有 validation split、early stopping、dropout 或 batch normalization；随机种子固定为 1031。这个设置简洁，但 DCASE 标签参与模型配置，因此 DCASE 分数属于开发集性能。
 
-**原文段落 2**
+低误报场景用最大 FPR 0.1 下的标准化 pAUC，且较大 L1 分数表示更异常。ToyADMOS 跨四个麦克风位置汇总；DCASE 分别比较 source 正常、target 正常与全部异常，使 0.6466 的 target AUC 不会被 0.7990 的 source AUC 掩盖。实际告警阈值取决于现场误报成本，表中 AUC 并未替部署者给出固定阈值。
 
-> Anomaly detection has been studied across statistics, data mining, machine learning, and signal processing, with applications including fraud, cybersecurity, medicine, industrial inspection, and spacecraft health monitoring [5, 29, 24]. The literature includes supervised, semi-supervised, and one-class formulations. Supervised fault classifiers learn from labeled normal and anomalous examples, whereas one-class methods learn nominal behavior and score deviations without requiring anomalous training samples. Classical approaches include one-class support vector machines, support vector data description, local outlier factor, and isolation forests [32, 37, 4, 17]. Deep approaches include reconstruction-based autoencoders, deep one-class objectives, latent density models, recurrent probabilistic models, adversarial autoencoders, and attention-based time-series detectors [31, 30, 39, 35, 3,
+74 核映射每次推理约触发 3.0×10^5 次突触操作、1.0×10^4 次神经元更新、各约 2.0×10^4 个输入与输出 spike events。动态能耗 0.0406–0.0426 mJ 很低，但 16 芯片 VPX 的静态功耗约 16.05 W，导致总能耗显著高于动态部分。作者按 Oheo Gulch 静态功耗推算的单芯片 0.54/0.13 mJ 不是测量结果；容量上放得下也不等于路由、峰值资源和功耗已经验证。
 
-**原文段落 3**
-
-> Machine-condition monitoring is particularly suited to one-class detection because failures are rare, heterogeneous, and expensive to collect. ToyADMOS, MIMII, and the DCASE anomalous sound detection tasks established public benchmarks in which models are trained primarily or exclusively on normal machine sounds [15, 27, 23]. Prior acoustic work has investigated reconstruction, density-estimation, interpolation, and compact edge-deployable autoencoders [1, 26, 36]. Related time-series work includes NASA/JPL spacecraft-telemetry detection using LSTM forecasting and dynamic thresholds [11]. These methods produce continuous deviation scores rather than requiring a separate output class for every possible fault.
-
-**原文段落 4**
-
-> This study performs one-class anomaly detection in the strict sense: both autoencoders are trained exclusively on normal machine sounds, and anomalous recordings are used only for evaluation. Log-mel features are streamed to a Loihi 2 dense autoencoder, while normalization, reconstruction, L1 scoring, and thresholding are performed on chip. Our contributions are: (i) neuromorphic on-chip autoencoder inference and anomaly decisions; (ii) evaluation on clean ToyADMOS and noisy DCASE 2026 ToyCar datasets; (iii) comparison with the DCASE baseline using AUC and standardized pAUC; and (iv) latency, power, energy, memory, and activity profiling against server-grade CPU and GPU implementations.
-
-**原文段落 5**
-
-> Figure 1: Persistent-monitoring pipeline. Log-mel extraction is off chip; normalization, autoencoder inference, L1 scoring, and thresholding run on Loihi 2.
+在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：一是把自编码器声学异常检测落到 Loihi 2 的持续监测场景；二是将清洁/噪声条件纳入同一部署评估；三是把能耗、时延和异常质量作为联合工程约束，而不是只报分类准确率。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.2/1.5)：方法链和适用边界基本自洽；作者承认持续监测仍受功耗、延迟和部署复杂度约束 使部分边界仍待验证。
-* 实验充分性 (1.1/1.5)：在清洁和噪声条件下，论文报告了 log-mel 前端与 Loihi 2 部署的异常检测实验，并讨论功耗、延迟和检测质量。摘要没有给出完整的 AUC、误报率或所有基线数字，因此这些数值正文未列出的数值保持未知。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (0.8/1.5)：该工作对语音/音乐/音频读者的直接价值来自如何在极低功耗和低延迟约束下持续发现机器声学异常。；影响范围受作者承认持续监测仍受功耗、延迟和部署复杂度约束。审稿人进一步指出，缺少公开故障类别划分、误报/漏报曲线和跨机器迁移实验，会限制现场可靠性判断。限制。
-* 开源 (0.5/1.5)：论文中未提及代码仓库、模型权重或可下载数据；只说明了 Loihi 2 实验平台和声学特征流程。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：可确认使用 log-mel 特征、自编码重构和清洁/噪声两类条件。推理是持续在线的片段级检测，具体告警平滑和校准步骤未说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.2/1.5)：问题直接对应工业声学监测，方法与部署协同有价值，但公开实验数字和复现材料不足。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.4/2)：创新主要来自完整的 neuromorphic anomaly-decision pipeline，而非新的异常检测算法；把 L1 决策和定点缩放都搬上芯片具有明确工程新意。
+
+* 技术严谨性 (1.2/1.5)：一类训练定义、量化路径、跨域指标和硬件测量口径交代清楚；但 DCASE 使用开发集调参，单芯片结果仍是推算。
+
+* 实验充分性 (1.1/1.5)：同时覆盖干净/带噪质量和 CPU/GPU/Loihi 能耗，但只验证 ToyCar，缺少其他机器类别、现场长时数据和不同阈值下的告警代价。
+
+* 清晰度 (0.8/1)：数据流、数值方向和动态/总能耗区分明确。
+
+* 影响力 (0.8/1.5)：对常年在线的工业设备监测价值直接，但影响范围依赖未来能否把 log-mel 前端也移到低功耗平台。
+
+* 开源 (0.5/1.5)：使用公开数据集，但正文没有给出该实现的代码、权重或可复用部署包。
+
+* 可复现性 (0.3/0.5)：网络、量化、训练和测量参数较完整；阈值校准和单芯片部署仍缺实证。
+
+* 工程/实践价值 (1.2/1.5)：问题直接对应工业声学监测，方法与部署协同有价值，但公开实验数字和复现材料不足。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：作者承认持续监测仍受功耗、延迟和部署复杂度约束。审稿人进一步指出，缺少公开故障类别划分、误报/漏报曲线和跨机器迁移实验，会限制现场可靠性判断。
-2. 需要继续验证的边界：未发现超出作者讨论范围的确定性错误；仍应补做跨数据、跨设备和失败案例验证。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+log-mel 提取仍在芯片外，当前能耗数字不是完整传感器到告警的端到端系统能耗。
+
+16 芯片 VPX 的静态功耗主导总能耗；单芯片 Oheo Gulch 的功耗只是缩放估计，尚未直接测量。
+
+只覆盖 ToyCar；泵、风扇、阀门等其他机器，以及真实工厂噪声、传感器老化和长期漂移尚未验证。
+
+DCASE 结果使用带标签开发数据辅助配置，不能等同于对未知 challenge test 的泛化。
+
+仅用中心一秒做判别，尚未评估故障持续时间变化、连续告警平滑、在线阈值调整和低频误报累积。
+
+论文中未提及代码仓库、模型权重或可下载数据；只说明了 Loihi 2 实验平台和声学特征流程。
+
+问题直接对应工业声学监测，方法与部署协同有价值，但公开实验数字和复现材料不足。
 
 ---
 

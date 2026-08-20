@@ -32,80 +32,123 @@ paper_digest_arxiv_id: "2608.19174"
 
 ### 📌 核心摘要
 
-Finetuning Strategies for Querying Sounds by Vocal Imitation 面向如何用人声模仿查询目标音效并在音效库中检索。。一是把 vocal imitation 作为声音检索查询而非传统文本标签；二是比较冻结 CED 与联合 triplet 训练两种互补策略；三是以挑战赛完整系统为工程验证载体。 报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；摘要没有给出 Recall@K、mAP 或各路线的完整数值，不能扩写成具体 SOTA 差距。 论文把方法、评价指标和适用条件放在同一条任务链中讨论；主要局限包括：挑战赛设置可能不能覆盖口音、模仿风格和真实录音设备的变化；报告若缺少失败案例，也无法判断相似音色与相似事件之间的混淆。 结论只适用于论文报告的数据、模型和评价协议，换用输入分布、基线或部署环境时不能直接外推。对读者而言，最重要的是同时理解输入是什么、模型改变了哪一层表示、输出怎样被测量，以及实验没有覆盖哪些条件；这些边界决定了结果能否迁移到新的设备、语言、曲风或任务。 方法贡献、实验收益和应用边界需要放在同一个证据链中理解：输入分布决定模型面对的样本，评价协议决定数字的含义，部署资源决定理论收益能否转化为实际延迟、吞吐和稳定性。论文没有覆盖的语言、曲风、设备或长时场景仍属于开放问题。
+这份技术报告讨论的是 Query by Vocal Imitation：用户不用描述‘玻璃碎裂’或‘引擎启动’，只需用嘴模仿声音，系统就从音效库里检索对应参考音频。难点在于人声模仿与真实声源之间存在很大的模态鸿沟，而且不同人会用完全不同的方式模仿同一事件。
+
+作者提交了两条路线。Submission #1 冻结 AudioSet 预训练的 CED-base，只训练 768→256 的投影头，用 VimSketch 配对数据做 supervised contrastive learning；Submission #2 共享并微调 MobileNetV3，在对比损失之外加入来自 VocalSketch 排除集的 semi-hard triplet negatives。
+
+qvim-dev 上，Submission #1 的 MRR/NDCG 为 0.2876/0.6600，Submission #2 为 0.2932/0.6468。后者 MRR 最高并成为 AES AIMLA 2025 Challenge 获胜提交，但它的 NDCG 低于 Submission #1；两种路线体现的是 pair ranking 与类别级排序之间的不同取舍。
+
+训练链还包含两支独立采样的波形及时频增强、VimSketch 配对正例，以及按共享 AudioSet ontology 挖掘的困难负例；部署时可预计算 gallery，只对新模仿编码并做余弦排序。最值得肯定的是报告给出了这些执行细节，而不是只写‘获胜’。最需要克制的是：两条 submission 同时改变 encoder、采样率、是否冻结、embedding 维度、数据和 loss，因而现有对比不能单独证明 triplet regularization 是提升来源。正文也未给最终 challenge test 的完整客观、主观数字，以及真实 gallery 规模、在线延迟和跨模仿者错误分析；适用边界仍是受控开发集上的音效检索。
+
+如何用人声模仿查询目标音效并在音效库中检索。
+
+该技术报告针对 AES AIMLA 2025 音效查询挑战，输入是一段人声模仿，输出是与其声学语义相近的音效检索结果。第一条路线冻结预训练 CED 音频编码器，通过对比学习把 vocal imitation 与目标音效拉近；第二条路线用 MobileNetV3 编码器联合 contrastive-triplet loss，并用 semi-hard negatives 增强难例区分。
+
+报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；
+
+挑战赛设置可能不能覆盖口音、模仿风格和真实录音设备的变化；报告若缺少失败案例，也无法判断相似音色与相似事件之间的混淆。
 
 ### 🔗 开源详情
 
-论文文本未提供代码仓库、模型权重或数据下载链接；挑战赛后补充细节不等于完整开源。 论文引用的预训练模型或外部工具仅作为依赖记录，不能视为本文核心产物已开源。
+论文文本未提供代码仓库、模型权重或数据下载链接；挑战赛后补充细节不等于完整开源。
 
 ### 🏗️ 方法概述和架构
 
-该技术报告针对 AES AIMLA 2025 音效查询挑战，输入是一段人声模仿，输出是与其声学语义相近的音效检索结果。第一条路线冻结预训练 CED 音频编码器，通过对比学习把 vocal imitation 与目标音效拉近；第二条路线用 MobileNetV3 编码器联合 contrastive-triplet loss，并用 semi-hard negatives 增强难例区分。
+任务输入是一段人声模仿 query 和一个参考音效 gallery，输出不是封闭类别，而是按 embedding cosine similarity 排序的候选列表。两条 submission 都让 query imitation 与 reference sound 进入共享参数空间，正样本来自 VimSketch 中已知 correspondence 的配对；差异在于是否冻结 encoder、如何使用无配对数据以及损失结构。
+
+共同的在线增强独立作用在 query/reference 两侧，每个样本至多随机选择一种变换：时间偏移 ±30%、增益 -10 到 +10 dB、音高 ±3 semitones、速度 0.8–1.2、Gaussian noise 0.001–0.015，以及帧复制、静音、删除或时频 masking。两端不共享同一随机变换，迫使模型把配对关系与具体录音扰动分开，而不是记住波形级相似性。
+
+triplet anchor 与 positive 来自已知配对，negative 优先从共享 AudioSet ontology label 中选择，使负例声学相关却不是真正 reference；找不到同类时退回随机采样。semi-hard mining 选择比 easy negative 更接近 anchor、但仍比 positive 更远的样本。有效 semi-hard triplets 数量会动态缩放 triplet loss 权重，避免少数偶然难例破坏 contrastive 主目标。
+
+第二条路线联合微调 MobileNetV3，使用 AdamW、cosine schedule 和一轮 warmup，最大 LR 2e-4、最小 5e-5、batch 64、训练 30 epochs，contrastive temperature 0.07、triplet margin 0.6。部署时两条路线都预计算 reference gallery embeddings；新 query 只需编码、归一化并做 cosine ranking。评测用 qvim-dev 的 pair-level MRR 与 class-level NDCG，分别观察首个正确 reference 和同类候选整体排序。第一条路线以较低可训练参数量换取稳定迁移，第二条路线则让 encoder 适应模仿声音，并把无配对的 rejected recordings 转成结构化负例；两者不是只差一个损失项。开发集比较因此同时混合了 16/32 kHz 前端、CED/MobileNetV3 容量、冻结/微调、256/960 维表示和额外数据来源。实际选型应分别看首个配对命中的 MRR 与类别排序的 NDCG，不能仅凭 Submission #2 的最高 MRR 判定所有检索目标都更好。上线前还需在目标 gallery 规模下测量索引内存、编码延迟和检索吞吐，并用不同模仿者与录音设备检查同类难负例是否引入系统性偏差。
 
 两条路线都把查询和候选音效映射到共享嵌入空间，再按相似度排序；冻结 CED 路线强调利用通用音频表示，MobileNetV3 路线则允许任务适配。triplet 约束让正例距离小于难负例，半难负样本避免训练只看容易区分的声音。报告还记录了挑战赛后补充的细节，但未把全部数据处理和检索库规模写入摘要。
 
 方法取舍是预训练表示稳定性与任务专用适应性的对照，而非盲目追求更大模型。报告型工作最大的工程价值在于给出可落地的训练和检索组合，最大的风险是挑战赛数据与真实声音库之间存在域差。
 
-输入先经过论文明确的表示或预处理，再进入核心模型或分析框架，最后产生任务指标、检索结果、生成序列或风险分数。若存在训练与推理两条路径，训练负责学习参数或评价规则，推理按固定的音频片段、语音 token、符号旋律或多模态会话顺序执行。论文没有直接给出网络尺寸、数据划分、优化器、随机种子、硬件、阈值、采样率或延迟的部分，保留为未说明；“显著提升”“可泛化”等方向性表述也不扩写成未经来源支持的数字。多模态或临床任务还需要交代各流如何同步、谁产生最终决策以及人工监督在哪里介入。训练信号、冻结参数、更新参数和停止条件应与推理顺序区分；实时任务还受窗口长度、上下文、吞吐和延迟约束。若方法包含多个分支，最终输出应能追溯到各分支的输入和中间表示，实验数字则需对应具体数据划分、比较对象与指标方向。对于音频输入，还要区分采样率、帧移、通道和归一化；对于多模态输入，还要区分同步方式、缺失模态处理与最终决策。模型大小、训练轮数、提示模板、阈值或硬件只在正文有明确出处时列出，不能用通用实现补齐。
-
 ### 💡 核心创新点
 
-1. 一是把 vocal imitation 作为声音检索查询而非传统文本标签，回应了既有方法或系统的具体瓶颈。
-2. 二是比较冻结 CED 与联合 triplet 训练两种互补策略，并由论文的实验或系统设计支撑。
-3. 三是以挑战赛完整系统为工程验证载体。，但其外部泛化仍需按局限继续验证。
-4. 贡献还包括把输入表示、核心处理、输出指标和适用条件放在同一技术链中，避免只凭摘要中的单一分数概括方法；实验中的数据、基线和消融共同决定收益是否来自提出的组件。
-5. 该方法的实际意义取决于训练信号、推理资源和失败条件能否在目标场景重现；未报告的配置、跨域测试和统计不确定性不能被默认补齐。
-6. 从系统层面看，方法并非只有一个模型名称或一个最终分数，而是由数据准备、表示学习、核心变换、输出解码和评价环节共同组成；任一环节改变，都可能影响误差、鲁棒性、延迟和资源消耗，因此论文的结论应保留这些条件。这样的链路也决定了不同基线之间的比较必须保持相同数据和指标口径，不能将局部优势等同于所有场景的普遍优势。
+用大规模 AudioSet 预训练表示桥接人声模仿与真实音效，而不是依赖手工声学特征。Submission #1 复用冻结的 ViT-based CED-base，把时序表示平均池化为 768 维，只训练 768→256 的投影；这验证了强预训练 encoder 在很少可训练参数下已经能形成可用的跨模态检索空间。
+
+Submission #2 不再使用双塔，而让 query imitation 与 reference sound 共享同一个 MobileNetV3 encoder，并对 960 维输出做 L2 normalization，使训练损失与部署时 cosine retrieval 完全同口径。32 kHz、10 秒、128-band log-mel 前端保持 AudioSet 习惯，也便于继承预训练表示。
+
+把未进入配对训练集的 practice/rejected imitations 转化为结构化 negatives，利用原本会被丢弃的数据。VimSketch 继续提供准确的 positive pairs；VocalSketch 排除集只有 class label，因此只承担 triplet negative，不被错误当作具有 reference correspondence 的正监督。
+
+negative mining 优先从相同 AudioSet ontology 类中选择 semi-hard 样本，迫使模型区分声学上相近却并非同一 reference 的候选；无同类时才回退随机负例。triplet margin 固定为 0.6，并按 batch 内 active semi-hard triplets 数动态缩放辅助 loss，避免有效负例太少时不稳定梯度压过 supervised contrastive objective。
+
+增强在 query/reference 两支独立采样，覆盖时间偏移、增益、音高、速度、Gaussian noise、帧复制/静音/删除和时频遮挡。独立增强要求共享空间保留事件身份而忽略两端不一致的录音与模仿扰动，比对一对样本施加同一变换更接近真实查询。
+
+两套系统展示冻结强 encoder 的轻量路线与联合微调的高适配路线。qvim-dev 上 Submission #2 的 MRR 0.2932 高于 #1 的 0.2876，但 NDCG 0.6468 低于 #1 的 0.6600，说明改进集中在首个正确结果的位置，而非整个类别排序都变好；这一指标分歧也是方法取舍的重要组成。
+
+报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；
 
 ### 📊 实验结果
 
-报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；摘要没有给出 Recall@K、mAP 或各路线的完整数值，不能扩写成具体 SOTA 差距。 结果解释范围由测试数据、比较对象、指标定义和实验协议共同限定。相同模型在不同采样率、数据划分、提示条件、硬件或解码策略下可能产生不同数字；论文没有报告的基线、消融、置信区间、显著性检验和失败案例均保持未知。若结果只展示平均值或单一数据集，外部有效性仍受样本覆盖和分布变化限制；若系统具有实时或多模态路径，还需同时关注延迟、资源、同步和缺失输入条件。上述约束与表格中的具体数字一起构成实验结论的边界。结果中的提升方向还必须和指标定义一致，例如错误率下降与相似度上升不能互换，平均性能也不能代替最差条件下的稳定性。原文可核对数字索引：2025、6、7、4、2、11。
-| 结果项目 | 论文报告 |
-| --- | --- |
-| 主要比较 | 报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；摘要没有给出 Recall@K、mAP 或各路线的完整数值，不能扩写成具体 SOTA 差距。 |
-| 指标与条件 | 数值、数据划分和评价协议以全文对应表格与实验段落为准 |
-没有列出的基线、消融或统计检验不写成论文已经报告的结果。
+随机排序 MRR 0.0444、NDCG 0.337；2DFT 为 0.1262/0.4793；Greif et al. 基线为 0.2726/0.6463。两项 submission 都提高 MRR。
+
+Submission #1 相比 Greif MRR 提高 0.0150，NDCG 提高 0.0137；Submission #2 MRR 再提高到 0.2932，但 NDCG 0.6468 仅略高于 Greif、低于 Submission #1 的 0.6600。
+
+获胜结论来自 challenge 最终评测，但报告正文只在 qvim-dev 表中给出上述数值；最终 objective/subjective test 细节需要到 challenge 页面查阅。因此可直接比较的证据是 dev ranking，而非完整 test 优势幅度。
+
+**QVIM 2025 qvim-dev**
+
+| 系统 | MRR_ex↑ | NDCG_cat↑ |
+| --- | --- | --- |
+| Random | 0.0444 | 0.3370 |
+| 2DFT | 0.1262 | 0.4793 |
+| Greif et al. | 0.2726 | 0.6463 |
+| Submission #1: frozen CED | 0.2876 | 0.6600 |
+| Submission #2: MobileNetV3 + contrastive/triplet | 0.2932 | 0.6468 |
+
+报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；
+
+已知组件为 CED、MobileNetV3、对比损失、triplet 损失和半难负样本；训练轮数、学习率、候选库规模、音频裁剪和硬件未在摘要中完整说明。推理阶段是嵌入计算加近邻排序。
 
 ### 🔬 细节详述
 
-已知组件为 CED、MobileNetV3、对比损失、triplet 损失和半难负样本；训练轮数、学习率、候选库规模、音频裁剪和硬件未在摘要中完整说明。推理阶段是嵌入计算加近邻排序。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
+VimSketch 提供有 correspondence 的 reference/imitation pairs；VocalSketch 排除集只有 sound-class 标签，没有匹配 reference。Submission #2 因此把它用于 triplet negatives，而不把它伪装成 positive supervision。相同 ontology 类中的 rejected imitation 是难负例来源，但也可能携带练习录音质量或人工筛除规则，需要额外失败分析确认模型学到的是声音差异。
 
-### 全文事实摘录
-**原文段落 1**
+共享增强池包含波形时间偏移 ±30%、增益 -10 到 +10 dB、音高 ±3 semitones、time stretch 0.8–1.2、幅度 0.001–0.015 的 Gaussian noise，以及 frame duplication、silencing、removal 与时频 masking。每个样本至多随机采用一种变换，并在 query/reference 两支独立抽取；它主要覆盖录音和发声变化，没有模拟口音、年龄或模仿策略等更高层的人群差异。
 
-> Early approaches to QbVI focused on latent bottleneck features from autoencoders [6] or semi-Siamese convolutional architectures trained with contrastive loss [7]. These methods typically relied on hand-crafted or moderately learned features, combined with traditional classifiers or similarity measures such as dynamic time warping or cosine distance.
+Submission #2 输入为 32 kHz 的 10 秒音频，window 800、hop 320、FFT 1024，得到 128-band log-mel。MobileNetV3 classifier head 被丢弃，encoder 参与微调；AdamW 配一轮 warmup 和 cosine schedule，学习率在 5e-5 到 2e-4 间变化，batch 64、30 epochs，contrastive temperature 0.07、triplet margin 0.6。它容量更强，但与 #1 同时改变了 encoder、采样率、训练数据、embedding 维度和 loss，当前比较无法隔离单个组件贡献。
 
-**原文段落 2**
+官方 qvim-dev 用 MRR 衡量已知 query-reference pair 的首个正确排序，用 NDCG_cat 衡量类别相关结果的整体排序。Random 为 0.0444/0.3370，2DFT 为 0.1262/0.4793，Greif 为 0.2726/0.6463，两个 submission 分别为 0.2876/0.6600 和 0.2932/0.6468。获胜结论来自 challenge test，但完整客观与主观 test 数字只在外部 challenge 页面，正文表格不足以量化最终领先幅度。Submission #2 已部署在 thatsoundslike.me，可展示检索行为；代码、权重、gallery 规模和在线延迟则未在正文给出，工程可用性与完整可复现性应分开判断。尤其应补充按声音类别、模仿者与录音条件拆分的错误分析，才能判断难负例收益是否稳定覆盖真实用户差异。
 
-> More recently, Greif et al. [4] demonstrated the effectiveness of contrastive learning with neural audio embeddings pre-trained on large-scale datasets like AudioSet. Their system employed a dual-tower MobileNetV3 architecture, fine-tuned using SimCLR-style contrastive objectives and an extensive augmentation pipeline. This approach set a strong baseline for neural QbVI systems.
-
-**原文段落 3**
-
-> In this work, we focus specifically on neural network-based representations for QbVI and explore two complementary submission strategies for the AES-AIMLA 2025 Challenge. Our first submission involves contrastive fine-tuning of a frozen Consistent Ensemble Distillation (CED) encoder [2], which was originally trained for audio tagging via knowledge distillation. Our second submission builds upon the MobileNetV3 architecture and the setup of Greif et al., but integrates a triplet-based regularization objective. The motivation is to improve generalization by leveraging hard or semi-hard negatives sampled from a curated unpaired set of vocal imitations.11
-
-**原文段落 4**
-
-> For our validation dataset, we use the official qvim-dev set provided as part of the QVIM 2025 Challenge. Evaluation is performed using the Mean Reciprocal Rank (MRR) and Normalized Discounted Cumulative Gain (NDCG) metrics.
-
-**原文段落 5**
-
-> In this submission, we freeze the pretrained CED-base encoder (768-dimensional output) and train a lightweight MLP projection head to map embeddings to a 256-dimensional space suitable for retrieval. The encoder is shared across both the query and reference branches. Audio is resampled to 16 kHz and processed using the pretrained CED feature extractor. We extract the final encoder hidden representation, average-pool it over the sequence dimension to obtain a 768-dimensional embedding, and keep the CED encoder frozen during training.
+报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.3/2)：一是把 vocal imitation 作为声音检索查询而非传统文本标签；二是比较冻结 CED 与联合 triplet 训练两种互补策略；三是以挑战赛完整系统为工程验证载体。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
-* 技术严谨性 (1.0/1.5)：方法链和适用边界基本自洽；挑战赛设置可能不能覆盖口音、模仿风格和真实录音设备的变化；报告若缺少失败案例，也无法判断相似音色与相似事件之间的混淆 使部分边界仍待验证。
-* 实验充分性 (1.1/1.5)：报告称该系统获得 AES AIMLA 2025 Challenge 的获胜提交，并比较两条微调路线；摘要没有给出 Recall@K、mAP 或各路线的完整数值，不能扩写成具体 SOTA 差距。；未披露的数字、基线或细分实验保持未知。
-* 清晰度 (0.8/1)：正文能区分输入、模块、输出和任务目标，核心限制也有明确标注；仍有少量实现细节需要读者回看原文。
-* 影响力 (0.7/1.5)：该工作对语音/音乐/音频读者的直接价值来自如何用人声模仿查询目标音效并在音效库中检索。；影响范围受挑战赛设置可能不能覆盖口音、模仿风格和真实录音设备的变化限制。
-* 开源 (1.0/1.5)：论文文本未提供代码仓库、模型权重或数据下载链接；挑战赛后补充细节不等于完整开源。 开源维度只按论文当前提供的核心材料状态评分。
-* 可复现性 (0.3/0.5)：训练轮数、学习率、候选库规模、音频裁剪和硬件未在摘要中完整说明。推理阶段是嵌入计算加近邻排序。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
-* 工程/实践价值 (1.1/1.5)：任务清楚、路线有对照且工程味足；但“获胜”缺少可核验指标，读者不能仅凭摘要判断领先幅度。 真实部署、成本和失败案例仍需补充。
+* 创新性 (1.3/2)：semi-hard class-aware negatives 与动态 loss weighting 是扎实的任务适配，但主要组件沿用成熟对比/三元组学习。
+
+* 技术严谨性 (1.0/1.5)：训练配置披露具体；两条 submission 改动因素过多，无法从当前表格做严格组件归因。
+
+* 实验充分性 (1.1/1.5)：有官方 dev 指标和强基线，但缺随机种子方差、受试者/模仿风格细分、独立 loss ablation 与正文中的完整 test 表。
+
+* 清晰度 (0.8/1)：数据角色、两条路线与指标定义清楚。
+
+* 影响力 (0.7/1.5)：QbVI 对音效搜索和无障碍交互有明确应用，但任务仍较专门。
+
+* 开源 (1.0/1.5)：提供在线部署页面与 challenge 链接；正文没有给出代码仓库、模型权重或训练产物下载。
+
+* 可复现性 (0.3/0.5)：增强、输入特征、优化器和 loss 参数较完整，数据可得性与最终评测细节仍依赖外部站点。
+
+* 工程/实践价值 (1.1/1.5)：任务清楚、路线有对照且工程味足；但“获胜”缺少可核验指标，读者不能仅凭摘要判断领先幅度。
 
 ### 🚨 局限与问题
 
-1. 论文明确承认的局限：挑战赛设置可能不能覆盖口音、模仿风格和真实录音设备的变化；报告若缺少失败案例，也无法判断相似音色与相似事件之间的混淆。
-2. 需要继续验证的边界：报告若缺少失败案例，也无法判断相似音色与相似事件之间的混淆。 未覆盖的分布变化、资源限制、统计不确定性、极端输入和长期稳定性，都可能使结果与论文报告的平均值产生差异。若评价只在单一数据集或单一设备上完成，还需要观察跨域迁移、噪声变化、长时运行、少数类别和最差样本；若论文没有提供这些结果，结论应保留为条件性判断，而不是部署保证。
+两条 submission 同时改变 encoder、输入采样率、训练数据、冻结策略和 loss，不能把 MRR 差异单独归因于 triplet learning。
+
+qvim-dev 上 Submission #2 的 MRR 只比 #1 高 0.0056，NDCG 反而低 0.0132；缺少多次运行方差，差异稳定性未知。
+
+正文未列 challenge 最终 test 的 objective/subjective 数字，只给出获胜结论与外部链接。
+
+VocalSketch negatives 包含 practice/rejected recordings，模型可能学习录制质量或人工筛除痕迹，而非真正的细粒度声学差异。
+
+尚缺不同口音、年龄、模仿能力、录音设备和候选库规模下的失败分析与检索延迟。
+
+论文文本未提供代码仓库、模型权重或数据下载链接；挑战赛后补充细节不等于完整开源。
+
+任务清楚、路线有对照且工程味足；但“获胜”缺少可核验指标，读者不能仅凭摘要判断领先幅度。
 
 ---
 
