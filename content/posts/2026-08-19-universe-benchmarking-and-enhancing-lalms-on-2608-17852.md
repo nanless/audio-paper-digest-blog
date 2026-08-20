@@ -184,8 +184,6 @@ Once the track titles and corresponding artist names were extracted, we utilized
 
 * 工程/实践价值 (1.2/1.5)：作为 benchmark/系统型论文，工程价值较高。从元数据检索、YouTube 对齐、多模态自动标注、跨模态校验到多轮对话合成，形成了一条可复用的工业化数据生产线；后训练策略也针对 dense/MoE 给出了可落地的实现路径。扣分点在于开源不充分和部分组件（如内部 SheetSage）尚未开放，限制了直接工业复用。
 
-评分依据方法结构、实验数字、资源披露和适用条件。
-
 ### 🚨 局限与问题
 
 **论文明确承认的局限**
