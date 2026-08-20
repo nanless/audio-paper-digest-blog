@@ -74,7 +74,7 @@ Sounds Uncertain: Exploring the Affective Aspects of Sonification for Uncertaint
 
 实验结果与数据划分、基线、指标方向及统计口径一并报告。
 
-原文实验段还出现可核对数值 0、66580、35、39、48、27、3、37；这些数字的指标名称、数据集和比较方向以原文表格为准，本文不替换其含义。
+原文实验段还出现可核对指标—数值 precision=40、parameters=1、parameter=11、accuracy=2、parameters=03、0、66580、35；这些数字的完整指标定义、数据集和比较方向以原文表格为准，本文不替换其含义。
 
 | 实验维度 | 全文报告（保留原条件与指标） |
 |---|---|
@@ -120,8 +120,6 @@ Sounds Uncertain: Exploring the Affective Aspects of Sonification for Uncertaint
 * 可复现性 (0.3/0.5)：样本量、统计检验、音频参数和重复实验设置未在摘要完整说明。；这影响独立复现，但不把材料缺失重复扣到技术严谨性。
 
 * 工程/实践价值 (1.0/1.5)：问题有新意且对听觉可视化设计有启发；但证据偏质性，工程落地需要可重复的听测和跨文化验证。 真实部署、成本和失败案例仍需补充。
-
-评分依据方法结构、实验数字、资源披露和适用条件。
 
 ### 🚨 局限与问题
 
