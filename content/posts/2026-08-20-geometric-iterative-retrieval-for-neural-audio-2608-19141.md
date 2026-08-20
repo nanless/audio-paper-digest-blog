@@ -70,6 +70,27 @@ Geometric Iterative Retrieval for Neural Audio Codec Resynthesis 面向粗粒度
 
 已知使用 RVQ、codebook 几何检索、残差细化与 codec decoder；训练数据、迭代预算、距离度量、采样率、硬件和主观听测协议未在摘要完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Neural audio codecs based on Residual Vector Quantization [12, 26, 7, 17] have become a key component of modern audio generation. Systems for speech synthesis [23], music generation [5], and general audio modeling [3] all transform audio into sequences of discrete tokens via RVQ, then generate these tokens with language-model-style architectures. RVQ encodes information at decreasing granularity, where the first codebook captures coarse structure and subsequent layers add progressively finer detail. Most work tackles the problem of RVQ generation by having a large model generate the first layer, and a separate, smaller model generate higher layers from the first.
+
+**原文段落 2**
+
+> Table 1: Codec resynthesis methods organized along two axes, the
+
+**原文段落 3**
+
+> We observe that the design space is not a spectrum from token prediction to regression but a two-dimensional grid (Table 1), spanning two axes: whether the prediction space is discrete or continuous, and whether refinement is single-step or iterative. The bottom-right cell, iterative prediction in continuous space, is what we explore in this paper. Diffusion methods occupy this cell with a noise-schedule iteration that is independent of the codec structure. We show that the RVQ hierarchy itself provides a natural, semantically meaningful decomposition that offers an alternative to diffusion’s denoising schedule, where each step corresponds to one level of refinement aligned with the codec’s own structure.
+
+**原文段落 4**
+
+> passes, each refinement remaining a prediction over discrete codebooks. They therefore occupy the same discrete-iterative cell of Table 1 as our token-prediction, which is why we do not compare against them.
+
+**原文段落 5**
+
+> 2.3 Diffusion and Flow-Based Methods (Continuous, Iterative, Codec-Agnostic)
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.6/2)：一是把 codec 重合成建模为几何迭代检索；二是针对粗 token 的残差细节恢复；三是把表示空间结构而非单一神经网络容量作为音质提升来源。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

@@ -74,6 +74,27 @@ Sounds Uncertain: Exploring the Affective Aspects of Sonification for Uncertaint
 
 参与者、可视化任务、声音制作工具和编码流程是主要实验材料；样本量、统计检验、音频参数和重复实验设置未在摘要完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> from precision and accuracy of the collected data [40], to missing data or a lack of information [52], to risk or probabilities [53], to uncertainty data resulting from predictions.
+
+**原文段落 2**
+
+> We included modulation and white noise beyond the auditory channels studied by Vriend et al. [59] (loudness, tempo, and pitch). The limitation to a few channels avoided overloading participants with choices and was complemented by our co-design methodology, which allowed participants to talk about auditory parameters unavailable to them in the study tool.
+
+**原文段落 3**
+
+> Figure 1: The study tool consists of seven main parts: 1.) The visualization showing the yearly average German temperatures since 1881, including predicted temperatures up to 2100.
+
+**原文段落 4**
+
+> Co‑design approaches encompass methods aimed at democratizing the design process and often involve inviting users to create the artifacts of which they are the target audience [54, 57].
+
+**原文段落 5**
+
+> Figure 2: The study procedure started with a tutorial of the tool, and continued with the creation of an uncertain and neutral sonification. This was followed up with filling in two questionnaires.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.2/2)：一是将不确定性 sonification 从数值映射扩展到情绪维度；二是用共创研究抽取声音品质与情感的联系；三是提出可用于可视化设计的 wavy/ominous 与 clear/relaxing 对照。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

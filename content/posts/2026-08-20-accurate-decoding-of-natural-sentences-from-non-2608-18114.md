@@ -74,6 +74,27 @@ Brain2Qwerty v2 从实时 magnetoencephalography 记录预测自然句子。输�
 
 数据采集规模和 MEG 来源明确；训练优化器、学习率、模型参数、语言模型版本、硬件和在线解码延迟未完整说明。评价包含平均 WER、最佳参与者和数据量曲线。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Figure 1: Asynchronous MEG decoding is unlocked by recording scale and variety.
+
+**原文段落 2**
+
+> A. Experimental protocol. Left. We recorded healthy volunteers for 10 hours each using Magnetoencephalography (MEG) while they typed natural sentences they heard a few seconds prior. Right. Average MEG source reconstruction at the time of key press suggest that MEG primarily picks neural activity in the motor cortex. B. Approaches for brain-to-text decoding. Synchronous decoding consists in classifying the character from windows time-locked to each keystroke (e.g. levy2025brain). Asynchronous decoding consists in decoding text from a continuous brain signal, and can thus be applied in real-time, although with some potential delays (e.g. feghhi2025time). C. Quantity (hours per participant) and diversity (number of unique sentences) of our dataset (EnglishBCBL) as compared to levy2025brain (SpanishBCBL). D. Character-error-rate (CER) for the synchronous encoder of levy2025brain. Each colou
+
+**原文段落 3**
+
+> To address these three challenges, we introduce Brain2Qwerty v2, a deep learning framework designed to decode a 22,000-sentence corpus from non-invasive magnetoencephalographic (MEG) recordings. We trained the model on a delayed-typing task performed by nine healthy volunteers across 90 total recording sessions. In each trial, participants listened to a sentence via headphones, waited through a forced delay, and then typed the corresponding text. Our decoding study focuses on the neural activity during the language production phase. This new dataset presents 10 times more data per subject than levy2025brain and spans a much larger diversity of sentences (Figure 1C).
+
+**原文段落 4**
+
+> To inspect subjects’ brain activity, we first perform a source reconstruction analysis at keystroke onset. The results reveal a bilateral activation of the primary motor cortex (M1) and supplementary motor area (SMA). Notably, the activation is more spatially extended in the right hemisphere (Figure 1A), a pattern consistent with the contralateral organization of M1 in a right-handed cohort and with the established role of SMA in bimanual motor coordination (Swinnen2004). Additional residual activity surrounding keystrokes can be detected in the left dorso-lateral and infero-frontal gyri and temporo-parietal junction (Figure S1), consistent with the language network (ojemann1991cortical; fedorenko2024language).
+
+**原文段落 5**
+
+> To remove the constraint of needing keystroke timings in the synchronous approach in prior work (levy2025brain), here, we implement asynchronous decoding, which outputs a sequence of predictions from a continuous window of response (Figure 1B).
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.5/2)：一是无创 MEG 解码自然句子而非受控词表；二是联合字符、词和句子表示；三是用数据规模和 agent 辅助迭代展示无创 BCI 的可扩展路径。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

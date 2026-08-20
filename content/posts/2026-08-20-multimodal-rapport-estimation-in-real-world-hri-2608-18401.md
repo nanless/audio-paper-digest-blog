@@ -74,6 +74,27 @@ Gemini 2.5 Flash 单模型表现强，文本 Gemini 与 HuBERT/V-JEPA 融合总�
 
 数据为日本药店 62 sessions，模型含 Gemini、HuBERT、V-JEPA，输出为第三方 rapport 分数；标注协议、音频采样、时间对齐、融合权重和训练/验证划分未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Social robots are increasingly being deployed in real-world environments such as commercial facilities and public spaces (e.g., (Kanda et al. 2010; Niemelä et al. 2019)). In such settings, spontaneous interactions arise in which passersby initiate engagement with a robot without prior preparation or instruction (Nielsen et al. 2023). In these interactions, users are free to leave at any time and the timing of conversation onset and termination is unconstrained. Furthermore, multiple participants may naturally join the conversation. This uncontrolled nature creates conditions fundamentally different from laboratory settings, where experimenters can regulate participant behavior and conversational flow, and introduces unique challenges for evaluating interaction quality (Jung and Hinds 2018).
+
+**原文段落 2**
+
+> Evaluating and modeling interaction quality in such real-world settings is therefore an important research challenge. If interaction quality can be reliably estimated, the resulting estimates can inform improvements to dialogue strategies and, ultimately, enable robots to autonomously adapt their behavior. However, much prior work on interaction-quality modeling and evaluation has been developed and studied under controlled laboratory conditions, and it remains unclear whether such findings generalize to real-world deployments where user disengagement is unconstrained (Jung and Hinds 2018).
+
+**原文段落 3**
+
+> Rapport refers to the quality of the relationship that emerges between interaction partners during an interaction. Tickle-Degnen and Rosenthal (Tickle-Degnen and Rosenthal 1990) conceptualized rapport as a dynamic structure consisting of three components: mutual attentiveness, positivity, and coordination. Rather than a stable individual personality trait, rapport is understood as a dyadic property that emerges through interaction.
+
+**原文段落 4**
+
+> Rapport is important because it is not merely an impression-based judgment, but is closely tied to successful relationship building and interaction. In interpersonal interaction research, rapport has been linked to outcomes such as improved learning in educational settings and successful negotiation (e.g., (Nadler 2004; Sinha and Cassell 2015)). However, previous rapport scales have primarily relied on first-person evaluation (Gratch et al. 2007; Gratch et al. 2015; Nomura and Kanda 2016).
+
+**原文段落 5**
+
+> Lin et al. (Lin et al. 2025) proposed the Connection-Coordination Rapport (CCR) Scale for HRI, which enables rapport assessment from a third-person perspective. In HRI data, the CCR Scale exhibits a two-factor structure in which items related to mutual attentiveness and coordination cluster under the Coordination factor, whereas items related to interpersonal warmth, including positivity, cluster under the Connection factor. Furthermore, Lin et al. (Lin et al. 2026) proposed an eight-item reduced-length CCR Scale to reduce response burden and administration time and demonstrated its reliability and validity for third-party video-based assessment. In this study, we use the reduced-length CCR Scale, which is suitable for third-party annotation, to measure the relational quality of interaction in real-world HRI.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.1/2)：一是把 rapport 估计带到真实多人 HRI；二是系统比较 LLM、HuBERT、V-JEPA 的互补性；三是用条件分层揭示真实场景的上下文变化。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

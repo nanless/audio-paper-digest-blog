@@ -70,6 +70,27 @@ Finetuning Strategies for Querying Sounds by Vocal Imitation 面向如何用人�
 
 已知组件为 CED、MobileNetV3、对比损失、triplet 损失和半难负样本；训练轮数、学习率、候选库规模、音频裁剪和硬件未在摘要中完整说明。推理阶段是嵌入计算加近邻排序。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Early approaches to QbVI focused on latent bottleneck features from autoencoders [6] or semi-Siamese convolutional architectures trained with contrastive loss [7]. These methods typically relied on hand-crafted or moderately learned features, combined with traditional classifiers or similarity measures such as dynamic time warping or cosine distance.
+
+**原文段落 2**
+
+> More recently, Greif et al. [4] demonstrated the effectiveness of contrastive learning with neural audio embeddings pre-trained on large-scale datasets like AudioSet. Their system employed a dual-tower MobileNetV3 architecture, fine-tuned using SimCLR-style contrastive objectives and an extensive augmentation pipeline. This approach set a strong baseline for neural QbVI systems.
+
+**原文段落 3**
+
+> In this work, we focus specifically on neural network-based representations for QbVI and explore two complementary submission strategies for the AES-AIMLA 2025 Challenge. Our first submission involves contrastive fine-tuning of a frozen Consistent Ensemble Distillation (CED) encoder [2], which was originally trained for audio tagging via knowledge distillation. Our second submission builds upon the MobileNetV3 architecture and the setup of Greif et al., but integrates a triplet-based regularization objective. The motivation is to improve generalization by leveraging hard or semi-hard negatives sampled from a curated unpaired set of vocal imitations.11
+
+**原文段落 4**
+
+> For our validation dataset, we use the official qvim-dev set provided as part of the QVIM 2025 Challenge. Evaluation is performed using the Mean Reciprocal Rank (MRR) and Normalized Discounted Cumulative Gain (NDCG) metrics.
+
+**原文段落 5**
+
+> In this submission, we freeze the pretrained CED-base encoder (768-dimensional output) and train a lightweight MLP projection head to map embeddings to a 256-dimensional space suitable for retrieval. The encoder is shared across both the query and reference branches. Audio is resampled to 16 kHz and processed using the pretrained CED feature extractor. We extract the final encoder hidden representation, average-pool it over the sequence dimension to obtain a 768-dimensional embedding, and keep the CED encoder frozen during training.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.3/2)：一是把 vocal imitation 作为声音检索查询而非传统文本标签；二是比较冻结 CED 与联合 triplet 训练两种互补策略；三是以挑战赛完整系统为工程验证载体。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

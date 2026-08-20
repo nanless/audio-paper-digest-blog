@@ -72,6 +72,27 @@ Pedagogical AI in Mental Health: A Tri-Stream Fine-Tuned LLM Framework for Autom
 
 使用 DAIC-WOZ 106 会话、Mistral-7B-instruct、视觉/声学/语言三流、Bayesian priors 和时间戳同步；训练和融合的更多超参数、受试者划分、临床标注者协议未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Clinical supervision in mental health is structurally delayed. In most training clinics and big clinical organizations, supervisors review cases in weekly meetings, which means that urgent situations—suicidality disclosures, trauma revelations, therapeutic ruptures—may sit for 72 hours before a senior clinician looks at them bernard2018fundamentals. The supervisor-to-trainee ratio in training programs often exceeds 1:12 bernard2018fundamentals. Separately, the World Health Organization has documented the scale of the mental health workforce shortage globally who2022mental—a supply gap that makes adequate supervision ratios even harder to maintain in practice.
+
+**原文段落 2**
+
+> The system we built treats the LLM as an automated supervisor-in-the-loop—not a chatbot, not a documentation tool. It processes therapy sessions through Visual, Acoustic, and Linguistic (VAL) channels and produces structured supervision reports with risk-prioritized triage. Earlier work from our group shaped this system. That work was not therapy-specific—it addressed explainability for clinical AI decisions jiang2019explainable and identity and access management for AI systems in healthcare settings sharman2025iam—but the methodological principles carry over directly: reasoning transparency for clinicians and secure data governance matter just as much in therapy supervision as anywhere else in clinical AI.
+
+**原文段落 3**
+
+> The system has three moving parts. A tri-stream VAL architecture processes each session across audio (100Hz COVAREP), video (30fps OpenFace), and transcript simultaneously gratch2014distress—the alignment problem between those three sampling rates is non-trivial and handled by snapping to utterance boundaries. The D-CUI is the routing mechanism: four inputs go in (risk probability, symptom severity, therapist experience inverted so inexperience amplifies urgency, and session-level sentiment volatility) and one decision comes out—immediate escalation or routine queue. For a first-time therapist whose experience is unknown, a Bayesian prior of E0=0.3E_{0}=0.3 stands in until data says otherwise. The LLM backbone is Mistral-7B fine-tuned with QLoRA at 4-bit quantization dettmers2023qlora, achieving 95% technique identification accuracy on hardware accessible to training clinics (Section 4.1
+
+**原文段落 4**
+
+> Two patterns are consistent across this literature. First, every system listed above operates on the patient side of the therapeutic interaction—screening patients, talking to patients, monitoring patient-generated content, or documenting patient encounters. Second, none of them address the supervisory layer where clinical quality is actually governed. Abd-Alrazaq et al. abd2022perceptions reviewed technical metrics for health chatbots and found evaluation centered on user satisfaction and symptom reduction, with no published framework evaluating supervision quality, technique adherence, or supervisory triage. That heavy investment in patient-facing AI and near-zero investment in supervision-facing AI is the Supervisory Gap this work addresses.
+
+**原文段落 5**
+
+> Figure 1: Tri-Stream VAL Supervisor-in-the-Loop Architecture. Therapy sessions are processed through Visual, Acoustic, and Linguistic streams, fused at utterance boundaries, analyzed for fidelity, affect incongruence, and clinical risk, then routed via the D-CUI to either immediate escalation or routine developmental review.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.2/2)：一是把 VAL 三流与监督分诊合并；二是定义 D-CUI 并引入时间同步；三是把多模态模型嵌入“监督者在环”而非无审查自动决策。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

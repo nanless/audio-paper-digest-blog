@@ -74,6 +74,27 @@ Mitigating Spectral Bias in Neural Operators for Underwater Transmission Loss Pr
 
 已知数据为水下声学传播损失场，模型含全局频谱传播器和空间局部细化器；优化器、网格尺寸、训练步数、硬件和完整边界条件未在摘要说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Predicting underwater acoustic transmission loss rapidly and accurately is crucial for real-time ocean acoustic applications. While Fourier Neural Operators (FNO) have emerged as powerful surrogate models due to their global receptive fields, they suffer from spectral bias. The frequency truncation mechanism in FNO filters out high-frequency components, resulting in over-smoothed predictions that fail to capture fine-grained interference patterns. To overcome this limitation, this paper proposes a Spectral-Spatial Residual Learning (S2RL) framework. S2RL decomposes the prediction task into a coarse-to-fine process: a spectral Global Propagator first generates a globally consistent prediction, and a spatial Local Refiner subsequently recovers the high-frequency residuals. Experimental results on a South China Sea dataset show that the proposed method significantly outperforms FNO baseline
+
+**原文段落 2**
+
+> Predicting underwater acoustic transmission loss (TL) is critical for underwater tasks like sensor placement optimization and vehicle path planning[1, 2]. Traditional approaches typically rely on numerical solvers (e.g., range-dependent acoustic model, RAM[3]) to compute TL from environmental data, offering reliable results at the cost of significant computational overhead[4]. For real-time or large-scale inference, such methods are too computationally expensive for practical use.
+
+**原文段落 3**
+
+> Despite their advantages in capturing global trends, FNO-based methods face a critical limitation known as spectral bias[13, 14]. The standard FNO architecture relies on a frequency truncation mechanism, where only the lowest kk frequency modes are retained to compute global correlations. While efficient, this operation effectively acts as a low-pass filter. As a result, vanilla FNO models tend to produce over-smoothed predictions, capturing the global propagation trend while failing to resolve fine-grained details.
+
+**原文段落 4**
+
+> We propose a two-stage Spectral-Spatial Residual Learning (S2RL) framework to reconcile the trade-off between global consistency and local detail based on implementation[12]. Our method decomposes the TL prediction task into a coarse-to-fine process[15, 16]. In stage I, a standard FNO acts as a global propagator to rapidly generate a coarse prediction of the acoustic field. This stage captures the dominant propagation patterns and the overall interference structure. In stage II, a U-Net serves as a local refiner, trained to learn the residual difference between the FNO output and the ground truth[17, 18]. By leveraging the multi-scale feature extraction capabilities of the U-Net, this stage focuses on recovering fine-grained details and correcting high-frequency discrepancies.
+
+**原文段落 5**
+
+> Figure 1: The architecture of the proposed S2RL framework, handling environmental inputs through cascaded stages.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.4/2)：一是将谱全局传播与空间局部残差明确解耦；二是直接针对 FNO 高频过平滑缺陷；三是在声学传播任务中同时追求预测质量和毫秒级速度。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

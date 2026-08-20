@@ -74,6 +74,27 @@ ChiroEcho 面向被动声学监测，把夜间录音切成蝙蝠 echolocation ca
 
 正文可确认使用蝙蝠声学片段、预训练声学编码器和分类适配；数据规模、采样率、增强、优化器、学习率和硬件未完整说明。跨环境测试的具体划分需要依论文表格核对，当前分析不把未给出的配置写成事实。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Deep learning has substantially improved automated acoustic species recognition [52, 37]. However, much of this progress has relied on relatively small, curated datasets suited to controlled comparisons of architectures and training strategies [4, 18, 1]. This focus has accelerated methodological development but often deprioritized taxonomic breadth, limiting the applicability of classifiers for continental-scale monitoring. For bats, broader coverage requires more than acoustic modeling: experts routinely combine acoustic evidence with contextual ecological knowledge [43] during manual identification. Improving automated bat classification need not rely solely on increasingly sophisticated neural architectures; incorporating ecological information at inference offers a complementary path toward greater practical utility.
+
+**原文段落 2**
+
+> To demonstrate this principle, we present a framework for automated classification of European bat vocalisations with species- and genus-level classification heads. At inference, each genus prediction is combined with regional species distributions; when only one species of that genus occurs at the recording location, the prediction is resolved unambiguously to that species (Figure 1). This enables identification of geographically restricted taxa, including species absent from training, thereby extending the framework’s operational taxonomy. To our knowledge, this represents a novel reframing of geographic information in bioacoustic classification: it extends the classifier’s effective taxonomy rather than constraining predictions within a fixed one. More generally, this resolve-when-unambiguous strategy is not tied to acoustic data or geography: any hierarchical classifier could uniquel
+
+**原文段落 3**
+
+> The EUROBATS Agreement currently lists 55 bat species, of which 48 occur within the territory covered by the latest EU Action Plan for bats [56]. See Table S1..
+
+**原文段落 4**
+
+> Figure 1: Illustration of inference-stage geographic resolution using the example of Plecotus kolombatovici. (a, c) Echolocation call sequences of P. austriacus and P. kolombatovici, respectively. (b) Approximate Southern European distribution ranges of P. austriacus (orange) and P. kolombatovici (blue), with overlap shown by orange–blue hatching (ranges based on Dietz et al. [13]). Owing to insufficient acoustic recordings, P. kolombatovici is not included in the learned taxonomy. The species head may therefore assign such a recording to an acoustically similar congener class, illustrated here by P. austriacus. For a recording from Cyprus, a genus-level Plecotus prediction above the confidence threshold activates the geographic lookup (Table 1), which resolves the recording to P. kolombatovici because it is the sole regional representative of the genus.
+
+**原文段落 5**
+
+> Automated bioacoustic classification has undergone a rapid transition from pipelines based on handcrafted acoustic features to deep learning approaches, most commonly operating on time–frequency representations such as spectrograms [23, 27, 52, 49]. Convolutional and transformer-based architectures now enable large-scale analysis across diverse taxa and recording conditions [53, 27, 24, 6, 38]. Building on this, transfer learning from large audio corpora has become a key strategy for improving performance in low-resource settings [15, 33, 21], allowing models to generalize across domains and taxa with limited labelled data [40, 22, 30, 25]. Despite these advances, most existing systems remain inherently closed-set, restricting predictions to a predefined taxonomy determined during training [52, 28]. This assumption limits their applicability in real-world monitoring, where novel or previ
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.4/2)：一是把自动蝙蝠声分类从封闭 taxonomy 推向开放生态变化；二是显式处理叫声随行为和环境改变的问题；三是将算法评估与保护监测的可用性连接起来。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

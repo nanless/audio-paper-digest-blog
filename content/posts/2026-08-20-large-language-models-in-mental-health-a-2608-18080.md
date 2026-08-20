@@ -70,6 +70,27 @@ Large Language Models in Mental Health: A Systematic Review of Applications, Inn
 
 文献来源、纳入范围、分类维度和伦理讨论是主要方法材料；检索数据库、时间范围、偏倚评估和重复筛选流程未在摘要说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> health research. Section 3 describes the research methodology, details the PRISMA-
+
+**原文段落 2**
+
+> evaluation. Section 4 reviews the main applications of generative AI and LLMs in
+
+**原文段落 3**
+
+> Section 6 discusses methodological advances, practical implications, and unresolved
+
+**原文段落 4**
+
+> Transformer-based architectures with billions of parameters (Guo et al. 2024c), LLMs
+
+**原文段落 5**
+
+> training datasets with synthetic examples (Bucur 2024), integrate medical knowledge to
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.0/2)：一是把 LLM 应用按心理健康任务和多模态证据流整理；二是同时讨论 speech/sensor 融合与伦理风险；三是把可解释、可监管部署作为研究议程而非附录。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

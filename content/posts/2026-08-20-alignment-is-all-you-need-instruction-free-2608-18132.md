@@ -74,6 +74,27 @@ Alignment Is All You Need: Instruction-Free Training for General Audio-Language 
 
 可确认训练包含音频编码、跨模态对齐和语言模型生成；监督样本规模、优化器、学习率、batch size、硬件、音频采样设置及评测任务清单在摘要中未说明，需以正文实验章节逐项复核。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Figure 1: Overview of the pipeline. Left: Self-Generated Data Construction. The dashed line separates two views: on the left, the real listening process, where a human hears audio xx and responds; on the right, our generation surrogate. Instead of collecting human responses, we feed the paired caption cc into the frozen LLM without any instruction to obtain r=g​(c)r=g(c). The caption thus serves as a semantic surrogate for the audio, and rr becomes the training target.
+
+**原文段落 2**
+
+> Modern multimodal large language models (MLLMs) extend this capability to non-text modalities using a common architecture: a pretrained modality encoder, a learnable projector, and a pretrained LLM [1, 48, 53].
+
+**原文段落 3**
+
+> Training typically consists of three stages: (1) cross-modal alignment, (2) supervised fine-tuning (SFT), and (3) preference optimization [63, 11, 68].
+
+**原文段落 4**
+
+> However, these later stages improve task performance by adapting the LLM toward the post-training instruction distribution. As the model becomes increasingly specialized to task-specific supervision, its original universal decoding behavior can gradually erode [44, 58].
+
+**原文段落 5**
+
+> Following the Instruction-Free paradigm of Shao et al. [72], we remove task instructions entirely during training, forcing the projector to align audio representations directly to the LLM’s latent semantic space.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.7/2)：一是提出无需指令数据的音频语言模型训练路线；二是重新审视“跨模态适配必须三阶段”的假设；三是把语言模型已有推理能力作为音频任务迁移的可复用资源。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

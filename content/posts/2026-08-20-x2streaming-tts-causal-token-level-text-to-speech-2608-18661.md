@@ -74,6 +74,27 @@ X2Streaming-TTS 把文本流的每个 token 作为不确定前缀，持续生成
 
 已知输入是 streaming text，核心机制是 causal token-level synthesis 与状态继承；模型层数、声学 token 化、训练语料、优化器、硬件和拼接策略未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> We develop an end-to-end causal TTS system that integrates these two mechanisms to perform strict token-level synthesis without access to future text. Experimental results demonstrate synthesis quality comparable to that of the evaluated offline baselines. Median time to first audio token (TTFT) is 15.8 ms for a single request and 260.8 ms at 128 concurrent requests.
+
+**原文段落 2**
+
+> Figure 1: Left: Streaming pipeline under token-level arrival. The frontend releases only TTS-ready text (PAD when nothing is ready; ambiguous spans such as 3 in He finished 3 are held until pronunciation is resolved), the Talker emits acoustic tokens, and Code2Wav streams waveform for immediate playback. Right: Three challenges and the corresponding mechanisms—(1) first-audio latency via token-level rather than chunk-level start; (2) irreversible early commitment via uncertainty-aware buffering; (3) cross-segment discontinuity via speech-state inheritance.
+
+**原文段落 3**
+
+> These methods begin synthesis after a complete sentence becomes available and reduce output latency through autoregressive acoustic generation, causal or chunk-aware decoding, and streaming vocoders (8; 10; 9; 29; 18; 26). They build on discrete audio codecs (34; 6) and language-model-based zero-shot TTS architectures (27; 35; 32; 3). Although they enable concurrent audio generation and playback, waiting for a complete sentence introduces input-side latency and does not address pronunciation or segmentation under uncertain text prefixes.
+
+**原文段落 4**
+
+> Its Talker emits countable discrete acoustic tokens, its Code2Wav module
+
+**原文段落 5**
+
+> Figure 2: Speech-state inheritance across a segment boundary. After a
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.6/2)：一是定义真正 token-level 而非句级伪流式 TTS；二是用 speech-state inheritance 维持跨窗口连续性；三是把无限文本流的有界上下文和低延迟同时纳入设计。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

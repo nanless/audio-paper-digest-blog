@@ -74,6 +74,27 @@ FM Synthesizer Audio-Parameter Shared Embeddings 面向如何表示合成器信�
 
 可确认输入包含目标声音、参数值和路由结构，输出是候选合成器 preset；数据规模、采样率、合成器种类、训练配置、硬件与推理候选数未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> When every topology is seen during training, the DX7-GNN and two baselines achieve strong audio-to-preset retrieval.
+
+**原文段落 2**
+
+> To aid in this task, automatic synthesizer programming [24] methods rely on supervised regression [36], gradient-based optimization [34], evolutionary search [20], or reinforcement learning [25].
+
+**原文段落 3**
+
+> However, few methods learn reusable parameter representations [10, 17, 14], and most ignore the computational structure that defines how parameters interact to produce sound.
+
+**原文段落 4**
+
+> We introduce DX7-GNN, a graph neural network parameter encoder. Its message passing architecture imitates FM signal processing and generalizes to synthesizer topologies never seen during training, a capability flat parameter encoders lack.
+
+**原文段落 5**
+
+> When all 32 DX7 algorithms appear during training, all three encoders achieve strong retrieval performance.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.5/2)：一是把合成器 signal routing 纳入参数表示；二是用共享嵌入连接目标音频和 preset 结构；三是面向声音设计把“找到可解释控制配置”置于单纯音色相似度之前。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

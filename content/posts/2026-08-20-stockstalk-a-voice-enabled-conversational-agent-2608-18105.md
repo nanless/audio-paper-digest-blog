@@ -72,6 +72,27 @@ StocksTalk 是一条语音驱动的数据查询流水线：用户说出金融筛
 
 组件包括 streaming ASR、RAG 约束抽取、schema-grounded LLM、规则校验和 dashboard；数据库规模、ASR 模型、提示词、延迟、硬件和人工复核时间未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> We evaluate the system on a manually curated benchmark of 150 spoken financial prompts spanning three investment strategy categories and two input noise conditions, and report metrics on SQL executability, constraint extraction accuracy, query edit distance, multi-turn stability, and latency. Results demonstrate that constrained decoding and intermediate verification significantly reduce malformed or semantically inconsistent queries compared to both unconstrained generation and a plain GPT-4o baseline without RAG or validation. The benchmark will be publicly released to support further research in voice-driven text-to-SQL systems.
+
+**原文段落 2**
+
+> Mapping natural language into executable structured queries is a long-standing challenge in machine learning and database research (Liu et al., 2026). In high-stakes domains such as finance, this challenge is amplified by noisy user input, domain-specific terminology, temporal qualifiers, and multi-attribute constraints. Spoken interaction introduces additional uncertainty due to transcription errors and ambiguity.
+
+**原文段落 3**
+
+> We frame this problem as interactive structured prediction under uncertainty: given a spoken utterance describing financial screening constraints, the system must infer a valid, executable SQL query aligned with a predefined financial schema, while preserving semantic intent and ensuring logical consistency. The rapid adoption of AI-driven tools across business domains (Bialkova, 2024) underscores the demand for reliable, interpretable interfaces that can mediate between unconstrained human intent and structured data systems.
+
+**原文段落 4**
+
+> Our primary contributions are: (1) a modular pipeline for voice-driven financial query induction with full intermediate transparency; (2) a curated benchmark of 150 spoken financial screening prompts across clean and noisy conditions, to be publicly released; and (3) an empirical evaluation demonstrating that constrained decoding, RAG grounding, and interactive verification each address distinct, non-overlapping failure modes.
+
+**原文段落 5**
+
+> Work on natural language interfaces to databases (NLIDB) and text-to-SQL generation has shown substantial progress in mapping unstructured language into executable query structures (Liu et al., 2026, 2025b). Song et al. (2024) specifically target the financial domain, benchmarking LLM-based text-to-SQL and proposing tree-based edit distance as a reliable evaluation metric. Visual query systems such as OptiqueVQS (Soylu et al., 2016) demonstrate that multi-paradigm interfaces with exposed intermediate representations improve end-user accuracy—a principle we directly adopt. However, these systems assume clean textual input and do not handle spoken interaction or real-time Web data sources.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.2/2)：一是将 streaming ASR、约束抽取、SQL 生成和验证串成透明语音查询管线；二是暴露中间推理产物供用户修订；三是用真实输入噪声评估语音到结构化查询的稳定性。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

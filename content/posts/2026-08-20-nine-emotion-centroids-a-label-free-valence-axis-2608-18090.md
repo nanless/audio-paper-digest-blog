@@ -74,6 +74,27 @@ SST-2 上 AUC 0.772（监督 0.828）；EmoSet 图像相关系数 0.636；ESC-50
 
 每个情绪 50 个短故事、9 类锚点；使用冻结编码器、中心平均和第一主成分，七个离散概念测试接近 chance。具体编码器层数、随机种子、训练硬件和音频预处理未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> The textbook way to build a continuous-attribute axis inside a foundation model is supervised: take thousands of labelled examples (positive sentences, negative sentences), run them through the model, and fit a linear classifier on the hidden state. The weight vector of that classifier is the “axis.” Our recipe takes a different path. It requires no polarity labels and only 1818 supervision events total: 99 emotion category names (anger, joy, fear, …) and 99 writing prompts. From those we author ∼50\sim\!50 short emotion-evocative paragraphs per emotion, embed each one through a frozen encoder, average within emotion to get 99 emotion centroids in hidden-state space, and take the top principal component (PC1) of the resulting 9×d9{\times}d matrix. That single direction – the V-axis (valence axis) – is the only quantity used downstream. The label-cost ratio versus a supervised SST-2 probe
+
+**原文段落 2**
+
+> The construction is PC1 of K=9K{=}9 category centroids, not a discriminant between two contrastive labels: Park–Choe–Veitch (Park et al., 2024) directions live in a pair-discriminant geometry, and the V-axis is orthogonal to those directions on identical concepts (mean |cos|=0.038|\cos|{=}0.038). The directional-ablation intervention of Arditi et al. (2024) is here applied to a recipe-derived direction, not to a discriminant fit to refusal/sentiment labels, so the causal claim tests the recipe itself rather than reading off supervision. And the four-encoder cross-modal transfer matrix, to our knowledge, has no precedent in the LRH–AxBench–steering line, which is text-only. The paper is organised as a probe→\tomechanism→\tocausal triad: probe (§3), mechanism (§7), causal (§4).
+
+**原文段落 3**
+
+> A predictive direction may merely be correlated with the attribute; it does not necessarily produce the model’s sentiment behaviour. To distinguish the two we use directional ablation (Arditi et al., 2024): at every layer and token position during a forward pass, replace the hidden state hh with h−(⟨h,v⟩)​vh-(\langle h,v\rangle)v, where vv is the unit V-axis. In words, we orthogonally project the V-axis out of the running representation – the model is forced to think without it being available – and read off SST-2 accuracy. Across three independent LLMs the V-axis ablation drops accuracy by 5.55.5 pp (Llama-3-8B-Inst), 15.815.8 pp (Qwen3-1.7B), and 37.237.2 pp (Qwen3-8B at block 2323), while three matched-magnitude random directions per model cost at most 0.880.88 pp under the identical protocol. The signal is ≥12\geq 12 standard deviations above the random null in every model and 196​σ1
+
+**原文段落 4**
+
+> A V-axis exists separately in each encoder, but the sentiment classifier on top of one V-axis does not need re-training when moved to another modality. We fit a 22-parameter logistic regression on SST-2 text scores against text labels, then evaluate it on each other modality’s V-axis projections – with no target-modality labels at the head-fitting stage. All 12/1212/12 off-diagonal cells of the resulting 4×44{\times}4 matrix exceed AUC 0.700.70; text-trained reaches 0.9610.961 on EmoSet, 0.7640.764 on ESC-50, 0.8280.828 on EEG. A natural baseline – the generic top-1616 shared subspace between the same encoders, computed without reference to sentiment – is at chance (0.5250.525). One task-relevant dimension beats sixteen generic dimensions by 0.180.18–0.440.44 AUC.
+
+**原文段落 5**
+
+> The recipe is an empirical regularity, not an analytical theorem. It is bounded to continuous concepts: seven independent tests on categorical concepts (Park–Choe–Veitch word pairs (Park et al., 2024); long-tail retrieval; multi-concept probes; AxBench Concept-500 (Wu et al., 2025); vision CIFAR-100; categorical concepts at all five depth slices; depth-shift specificity) return at-or-near chance. The EEG V-axis itself is built from a supervised linear discriminant on FACED valence labels; the “label-free” part of the EEG result is the head, not the axis. The text–image–audio V-axes are unsupervised. “Universal” in the cross-modal-classifier claim is scoped to the four encoders we tested–CLIP-text (Radford et al., 2021), CLIP-image, CLAP-audio (Elizalde et al., 2023), CBraMod-EEG (Chen et al., 2024)–not to encoders not yet tested. Directional ablation is sign-insensitive, so no sign-flip
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.6/2)：一是用 9 个情绪中心和 PCA 得到跨模态 V-axis；二是文本标签训练到音频/图像/脑信号零目标标签迁移；三是通过消融和分类概念反例限定适用边界。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

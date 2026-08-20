@@ -72,6 +72,27 @@ Understanding Multilingual Medical ASR Adaptation Through Layer-Wise Analysis �
 
 使用 Whisper 类预训练 ASR、医疗语音和多语言适配；具体语料规模、采样率、训练步数、学习率、探针结构、硬件和解码设置未完整公开。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> Automatic speech recognition (ASR) systems [10, 8, 25] have made substantial gains in recent years, through Transformer-based architectures and large-scale pretraining. Models such as Whisper [21] and Wav2Vec2 [5] achieve strong performance on general-purpose benchmarks like LibriSpeech [16] and CommonVoice [3]. However, adapting these systems to domain-specific applications-particularly healthcare-presents distinct challenges. Medical speech contains rare and specialised terminology, recorded under varied speaker and acoustic conditions, and high accuracy demands where a single transcription error can carry clinical consequences. Generic ASR models trained on general speech corpora perform poorly in these settings, which motivates targeted domain adaptation.
+
+**原文段落 2**
+
+> Fig. 1 provides a visual overview of the study design. It summarises the data and adaptation pipeline, the main ASR results, and the layer-wise analyses used to interpret the adapted encoder representations.
+
+**原文段落 3**
+
+> Large-scale pretrained ASR models are strong starting points for domain adaptation, but their WER performance depends heavily on the target domain. Whisper [21] is an encoder–decoder Transformer trained on large-scale weakly supervised multilingual audio, giving it strong zero-shot and cross-lingual ASR capabilities. Wav2Vec2 [5] uses self-supervised contrastive pretraining and achieves low WER on standard benchmarks after supervised fine-tuning. However, strong general-domain performance does not necessarily transfer to medical speech, where specialised terminology and variable acoustic conditions require targeted adaptation [1, 14].
+
+**原文段落 4**
+
+> Fine-tuning pretrained ASR models on clinical corpora has consistently improved medical transcription performance [1, 13]. Adedeji et al. [1] showed that domain-specific fine-tuning, combined with large language model post-processing, improves medical ASR accuracy. The MultiMed project [13] introduced multilingual medical ASR across five languages, demonstrating the feasibility of adapting general ASR models to clinical speech. Its results are not directly comparable to ours because the datasets, languages, clinical scenarios, train/test splits, and decoding setup differ from the English Kaggle and German PoCaP evaluation used here. We therefore restrict direct empirical comparisons to models evaluated on the same test utterances under the same decoding and metric pipeline. Our work builds on this line by studying English–German medical adaptation across multiple Whisper fine-tuning stra
+
+**原文段落 5**
+
+> Belinkov and Glass [6] surveyed probing methods for analysing neural language models, establishing the use of lightweight classifiers on frozen representations. Pasad et al. [17] applied layer-wise analysis to self-supervised speech models, showing that different encoder depths encode different phonological and linguistic properties. Prasad and Jyothi [20] probed accent information in end-to-end ASR systems. Wiepert et al. [23] examined layer selection for pathological speech feature prediction. To our knowledge, no prior work has jointly examined two-stage multilingual medical ASR adaptation and layer-wise probing of domain, language, and error-predictability signals in a fine-tuned encoder–decoder ASR model.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.2/2)：一是把医疗 ASR 领域适配从结果指标推进到层级行为分析；二是同时覆盖术语、语言和有限标注约束；三是提供面向实际临床转写的错误诊断视角。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。

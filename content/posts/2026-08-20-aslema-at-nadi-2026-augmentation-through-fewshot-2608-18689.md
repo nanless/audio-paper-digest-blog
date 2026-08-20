@@ -72,6 +72,27 @@ devtest intent accuracy 为 86.8%，WER 为 34.7；官方测试 slot filling CoE
 
 使用 Qwen3-Omni-30B、原始与合成数据，任务为 NADI Shared Task 5；合成数据规模、voice cloning 模型、学习率、batch size、训练步数、GPU 和解码设置未完整说明。 模型名、数据集、输入输出和部署限制以全文可定位段落为准；论文没有直接说明的配置保持为未说明，外部工具或作者机构不自动视为本文开源。数据准备需要区分原始音频、特征、标签和训练/验证/测试划分；模型部分需要区分可训练参数、冻结参数、条件输入和最终输出；训练部分需要区分目标函数、优化器、学习率、批量、轮数和停止规则；推理部分需要区分窗口、上下文、采样或解码、阈值和后处理。若论文使用多模态或多阶段系统，还要记录各模态的时间对齐、缺失输入处理、分支融合位置和最终决策来源。若部署涉及实时处理，还要把显存、内存、计算量、吞吐、功耗和端到端延迟与质量指标放在同一条件下比较。正文没有给出的硬件、随机种子、数据规模、筛选规则、阈值或统计检验均保持未知，不能从常见开源实现推断；这些缺口会影响复现实验、跨数据集迁移和失败案例解释。数据和配置的缺口还会影响不同实现之间的公平比较，尤其是预处理、增强、解码和后处理差异可能改变最终指标；因此细节记录同时服务于复现、审计和部署评估。
 
+### 全文事实摘录
+**原文段落 1**
+
+> We present Aslema, our system for NADI 2026 Shared Task 5, which consists of two subtasks: intent recognition and slot filling. We evaluate four omni LLMs in a zero-shot setting and compare them with fine-tuned models. Our results show that fine-tuning consistently outperforms zero-shot inference. We further explore synthetic data augmentation by using an LLM to generate culturally grounded Tunisian Derja utterances, followed by voice cloning to generate synthetic speech. Incorporating this synthetic data improves performance on both tasks. Our final submitted system, based on Qwen3-Omni-30B and trained with a mixture of original and synthetic data, achieves 86.8% intent accuracy and 34.7 WER on the devtest split. On the official test set it ranks 1st in slot filling (59.5 CoER) and 4th among 8 teams in intent recognition (66.1% accuracy). We release our experimental scripts11
+
+**原文段落 2**
+
+> Spoken dialogue interfaces are increasingly driven by large language models (LLMs), with recent audio LLMs processing speech directly and combining speech recognition with language understanding 11; 28; 32. However, their effectiveness for dialectal Arabic remains limited 1; 4; 8. Tunisian Dialect (Derja) is low-resource, heavily code-switched with French and English, and substantially different from the Modern Standard Arabic (MSA) that dominates Arabic training corpora 26.
+
+**原文段落 3**
+
+> We participate in both subtasks and study the effectiveness of audio LLMs for dialectal SLU under different levels of supervision. Our experiments cover four instruction-tuned audio LLMs (3B–30B parameters), LoRA-based fine-tuning 16, and a fully fine-tuned Whisper-small 22 baseline. We also investigate the effect of training data size and synthetic augmentation using an LLM++TTS pipeline.
+
+**原文段落 4**
+
+> Findings. Our results show that zero-shot audio LLMs perform poorly on both subtasks, while LoRA fine-tuning with ∼\sim3 hours of supervised speech substantially improves performance. Synthetic data alone also provides clear gains over zero-shot inference, while combining real and synthetic data achieves the strongest overall results.
+
+**原文段落 5**
+
+> SLU maps speech to structured semantics representations. Historically, early SLU systems followed a cascaded design in which an automatic speech recognition (ASR) module produced a transcript that was then processed by a text-based NLU model, in comparison to recent and increasing adoptions to end-to-end architectures 29; 15; 18. This development has been closely accompanied by the release of increasingly challenging benchmarks 3. SLURP 6 introduced a single-turn spoken assistant benchmark, while MASSIVE 13 and Speech-MASSIVE 19 extended intent and slot annotation to multiple languages. SLURP-TN 12 further adapts this, re-recording SLURP prompts in Tunisian Derja, complementing existing resources such as TARIC-SLU 20 and TEDxTN 9.
+
 ### ⚖️ 评分理由
 
 * 创新性 (1.4/2)：一是面向 Tunisian Derja 的 LLM+voice cloning 增强；二是把 intent/slot 的 omni 模型微调和合成语音统一；三是在官方测试上同时报告 CoER、WER、意图准确率与排名。 新增点清楚，但仍需更多跨条件证据判断是否形成范式突破。
