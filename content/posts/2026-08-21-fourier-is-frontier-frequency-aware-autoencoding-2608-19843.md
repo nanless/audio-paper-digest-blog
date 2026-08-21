@@ -49,7 +49,7 @@ Kangdi Wang 与 Jin Xu（通信作者）来自阿里巴巴 Qwen 团队，Yusheng
 
 下图是 ear-VAE2 的完整架构图。
 
-![Figure 1: Architecture of ε\varepsilonar-VAE2. Stereo audio is transformed via STFT into a complex spectrogram;](https://arxiv.org/html/2608.19843v1/ear-vae2.png)
+![Figure 1: Architecture of ε-VAE2. Stereo audio is transformed via STFT into a complex spectrogram; a Spec Encoder compresses it to a 25 Hz continuous latent and a Spec](https://arxiv.org/html/2608.19843v1/ear-vae2.png)
 
 立体声经 STFT 变为复数谱后由谱编码器压缩为 25Hz 连续隐变量，谱解码器重建粗复数谱；奈奎斯特 bin 被刻意移除以便频率下采样，再由 Duplex-Aware Refiner 施加分带复数修正后恢复，最后经 iSTFT 重构波形——修正模块作用于冻结解码输出的设计在图中清晰可见。
 
@@ -69,7 +69,7 @@ Duplex-Aware Refiner 工作在冻结的编解码输出上，按人耳低频依�
 
 下图展示了匹配预算表示研究中各范式的重建频谱对比。
 
-![Figure 4: Reconstruction spectrograms from the matched-budget representation study (48 kHz, nfft=2048n_{\text{fft}}{=}2048, hop=128{=}128). (A) complex STFT; (B) waveform patch; (C](https://arxiv.org/html/2608.19843v1/input_repr_spectrogram_6panel.png)
+![Figure 4: Reconstruction spectrograms from the matched-budget representation study (48 kHz, nfft=2048n_fft=2048, hop=128=128). (A) complex STFT; (B) waveform patch; (C](https://arxiv.org/html/2608.19843v1/input_repr_spectrogram_6panel.png)
 
 48kHz 采样率下的频谱图直观呈现了不同输入表示的高频保留差异：复数 STFT 在高频谐波与瞬态细节上明显更完整，而波形补丁在低频能量上占优——这正是论文选择谱域路线时给出的视觉证据。
 
@@ -91,13 +91,13 @@ Duplex-Aware Refiner 工作在冻结的编解码输出上，按人耳低频依�
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：[A_METHOD] 频率轴参数化与心理声学分带修正都是针对明确失败模式的结构创新，受控表示研究本身也构成方法学贡献；扣分在于 VAE-GAN 骨架、损失体系与判别器配置大量继承 SpectroStream、ear-VAE 与 SAME 的既有组件。
+* 创新性 (1.4/2)：[A_METHOD] 频率轴参数化与心理声学分带修正都是针对明确失败模式的结构创新，受控表示研究本身也构成方法学贡献；扣分在于 VAE-GAN 骨架、损失体系与判别器配置大量继承 SpectroStream、ear-VAE 与 SAME 的既有组件。受控表示研究的方法论贡献不亚于架构组件本身。
 * 技术严谨性 (1.3/1.5)：[A_RESULTS] 受控消融的变量隔离干净（初始化、参数轴、通道共享逐一拆解），float64 复数计算与诊断性观察的谨慎标注体现纪律；扣分在于跨系统对比使用原生配置，数据与容量不对齐削弱了主表的可比性。
 * 实验充分性 (1.3/1.5)：[A_RESULTS] 重建、消融、空间线索、专家评分与下游生成五类证据互相支撑，双语歌曲生成评测覆盖面广；不足是专家听音的人数与统计检验未披露，且核心结果建立在不可获得的专有数据上。
 * 清晰度 (0.8/1)：[A_CLARITY] 动机-研究-设计-验证的叙事线清楚，附录协议完整；符号系统较重（C/F 双重含义需反复提醒），正文对三阶段训练的步数安排语焉不详。
 * 影响力 (1.1/1.5)：[A_IMPACT] 自编码器是潜扩散音乐生成的质量上限所在，频率轴设计与分带修正对后续编解码器研发有直接借鉴价值；不开源会显著压缩实际影响半径。
 * 开源 (0.2/1.5)：[A_OPEN] 论文提供了可访问的演示页面 https://eps-acoustic-revolution-lab.github.io/EAR_VAE2/ ，但代码与权重均未提及发布计划，按锚点规则记 Demo 档 0.2。
-* 可复现性 (0.2/0.5)：[A_REPRO] 协议披露详尽但一万小时专有音乐与内部质量流水线不可获得，第三方只能在小规模公开数据上近似复现设计结论。
+* 可复现性 (0.2/0.5)：[A_REPRO] 协议披露详尽但一万小时专有音乐与内部质量流水线不可获得，第三方只能在小规模公开数据上近似复现设计结论。专有一万小时音乐数据使外部只能在小规模公开数据上近似验证设计结论。
 * 工程/实践价值 (1.2/1.5)：[A_ENGINEERING] 45% 的残差维度节省与 19.4% 的 Mel 距离下降对生产管线的成本与质量都有直接意义，25Hz/128 维的隐规格便于对接现有生成器；扣分在于未报告推理延迟与算力开销。
 
 ### 🚨 局限与问题
