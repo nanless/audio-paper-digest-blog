@@ -91,8 +91,7 @@ Figure 3: Photo of interaction with Misty II by the participant 4 Experimental S
 主要结果 | Table 1: Impression Ratings Items Item Description Baseline Proposed Naturalness Q1 The robot’s responses were human-like. |
 | 对照、消融或部署指标 | Figure 3: Photo of interaction with Misty II by the participant 4 Experimental Setup 4.1 Study Design We conducted a pilot within-subject user study to evaluate the proposed speaker–listener emotion-dynamics-aware system. |
 
-![Figure 3: Photo of interaction with Misty II by the participant - 图2](https://arxiv.org/html/2608.16686v1/interaction.JPG)
-
+!
 上述结果应结合数据集、基线、指标方向和测量条件理解。
 
 ### 🔬 细节详述
@@ -100,16 +99,6 @@ Figure 3: Photo of interaction with Misty II by the participant 4 Experimental S
 平台为 Misty II 与 Retico。输入包括语音、ASR、面部帧和对话历史；listener 侧根据机器人生成语音的 valence/arousal 与行为估计状态。LLM 输出语音文本和行为指令，再通过 TTS 与机器人控制接口执行。Q5 自主性感知、Q20 互动焦虑不计入主要平均分；研究采用随机条件顺序和同一参与者比较。
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- 3 Proposed System In this section, we describe the architecture of our proposed system, as shown in Fig. 1.。
-
-- The system is built as an incremental multimodal spoken dialogue pipeline on Retico, a Python framework for incremental spoken dialogue systems [10].。
-
-- Retico follows the Incremental Unit (IU) model [21], where each module processes and passes small units of information, such as audio frames, ASR hypotheses, images, or dialogue-state updates.。
-
-- Figure 3: Photo of interaction with Misty II by the participant 4 Experimental Setup 4.1 Study Design We conducted a pilot within-subject user study to evaluate the proposed speaker–listener emotion-dynamics-aware system.。
-
-- 4.60 5.0 Q19 After the conversation, I felt better (my stress/negative emotions were reduced).。
 
 - 3.0 2.80 Average 4.20 4.68 Overall Average 4.75 5.10 • Note: Q5 and Q20 were excluded from the average calculation, as Q5 serves as a perceived-autonomy check and Q20 measures interaction anxiety rather than user satisfaction.。
 
@@ -119,21 +108,21 @@ Figure 3: Photo of interaction with Misty II by the participant 4 Experimental S
 
 ### ⚖️ 评分理由
 
-创新性: 1.4/2 同时建模 speaker 的语音/面部情绪和 robot listener 的语言/行为情绪，形成闭环而非单向响应。 技术严谨性: 1.0/1.5 系统模块和 within-subject 对照清楚，但参与者仅 5 人，统计证据初步。 实验充分性: 0.8/1.5 印象评分与交互日志提供多角度证据，但规模小且尚无长期使用。 清晰度: 0.9/1 Retico、Misty II、 affect state 和 prompt 条件关系清晰。 影响力: 1.1/1.5 对具身语音助手和情绪支持机器人有直接启发。 开源: 0.0/1.5 未见本工作代码或模型公开链接。 可复现性: 0.2/0.5 系统组件和评分项目披露较好，内部情绪估计器和 prompt 细节不完整。 工程/实践价值: 1.1/1.5 可在 Misty II 上实时闭环，体现了从感知到行为执行的工程整合。
+创新性: 1.4/2  [A_METHOD] 同时建模 speaker 的语音/面部情绪和 robot listener 的语言/行为情绪，形成闭环而非单向响应。 技术严谨性: 1.0/1.5 系统模块和 within-subject 对照清楚，但参与者仅 5 人，统计证据初步。 实验充分性: 0.8/1.5 印象评分与交互日志提供多角度证据，但规模小且尚无长期使用。 清晰度: 0.9/1 Retico、Misty II、 affect state 和 prompt 条件关系清晰。 影响力: 1.1/1.5 对具身语音助手和情绪支持机器人有直接启发。 开源: 0.0/1.5 未见本工作代码或模型公开链接。 可复现性: 0.2/0.5 系统组件和评分项目披露较好，内部情绪估计器和 prompt 细节不完整。 工程/实践价值: 1.1/1.5 可在 Misty II 上实时闭环，体现了从感知到行为执行的工程整合。
 
-* 技术严谨性（1.0/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.0/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.8/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.8/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.1/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.1/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.1/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.1/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

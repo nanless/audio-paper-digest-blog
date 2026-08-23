@@ -92,8 +92,7 @@ It can also be a sequence of secondary notes featuring both higher and lower pit
 主要结果 | Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 1 Figure 10: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 2 4.1 Expert-in-the-Loop Transcription Correction Figure 1 summarizes the expert-in-the-loop correction workflow, which uses two separate programs. |
 | 对照、消融或部署指标 | For note naming, we follow the music21 convention: uppercase letters for lower octaves, lowercase letters for upper octaves, and lowercase letters with an apostrophe for even higher octaves. |
 
-![Figure 2: Time-Frequency Data Processing - 图2](https://arxiv.org/html/2608.17114v1/algorithm.png)
-
+!
 ![Figure 3: Pitch Histogram for Example 1](https://arxiv.org/html/2608.17114v1/mainhisto.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -104,16 +103,6 @@ It can also be a sequence of secondary notes featuring both higher and lower pit
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- The framework is also adaptable for use in related musical traditions, particularly in free-rhythm and modal performances.。
-
-- This approach not only advances the field of automatic music transcription (AMT) but also highlights the importance of tailoring transcription models to specific musical and cultural contexts.。
-
-- Because the subsequent transcription stages operate on pitch data in.csv format, pYIN could be replaced with another pitch-estimation method in future experiments.。
-
-- For note naming, we follow the music21 convention: uppercase letters for lower octaves, lowercase letters for upper octaves, and lowercase letters with an apostrophe for even higher octaves.。
-
-- It can also be a sequence of secondary notes featuring both higher and lower pitches and is an aspect of tahrir [23].。
-
 - Moteghayyer: (literally alterable or variable) Describes a pitch that may be replaced by another, either a quartertone or semitone higher or lower, within the gushe [26].。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -122,21 +111,21 @@ It can also be a sequence of secondary notes featuring both higher and lower pit
 
 ### ⚖️ 评分理由
 
-创新性: 1.2/2 把 pitch histogram、DTW 与伊朗声乐 ornamentation 结合，针对非西方微分音和自由节奏做领域化设计。 技术严谨性: 1.0/1.5 算法步骤和参数写得具体，但主要是案例验证，缺少大规模误差统计。 实验充分性: 0.8/1.5 展示多个样例、音高轮廓和人工校正流程，却没有统一的音符级准确率或跨歌手测试。 清晰度: 0.9/1 从音高识别到 MIDI、可视化和编辑器的流程容易复核。 影响力: 1.0/1.5 对计算民族音乐学和濒危音乐档案有价值，但领域范围较窄。 开源: 1.2/1.5 作者公开 microtonal-music-autotranscriber 仓库。 可复现性: 0.4/0.5 给出了 pYIN、窗口和阈值参数，且使用 music21/Sonic Annotator。 工程/实践价值: 1.0/1.5 可视化编辑器和专家在环修正让系统更接近实际档案工作流。
+创新性: 1.2/2  [A_METHOD] 把 pitch histogram、DTW 与伊朗声乐 ornamentation 结合，针对非西方微分音和自由节奏做领域化设计。 技术严谨性: 1.0/1.5 算法步骤和参数写得具体，但主要是案例验证，缺少大规模误差统计。 实验充分性: 0.8/1.5 展示多个样例、音高轮廓和人工校正流程，却没有统一的音符级准确率或跨歌手测试。 清晰度: 0.9/1 从音高识别到 MIDI、可视化和编辑器的流程容易复核。 影响力: 1.0/1.5 对计算民族音乐学和濒危音乐档案有价值，但领域范围较窄。 开源: 1.2/1.5 作者公开 microtonal-music-autotranscriber 仓库。 可复现性: 0.4/0.5 给出了 pYIN、窗口和阈值参数，且使用 music21/Sonic Annotator。 工程/实践价值: 1.0/1.5 可视化编辑器和专家在环修正让系统更接近实际档案工作流。
 
-* 技术严谨性（1.0/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.0/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.8/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.8/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.0/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.0/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（1.2/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（1.2/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.4/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.4/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.0/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.0/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

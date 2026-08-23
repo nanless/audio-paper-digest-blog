@@ -114,8 +114,7 @@ The Area Under the Curve (AUC) was calculated from ROC curves for each target le
 
 Duration (s) 13 26 38 50 57 6 93 105 123 AUC 0.324 0.394 0.410 0.423 0.49 0.451 0.45 0.42 0.46 Lastly, we finalized and evaluated the full system pipeline based on the audio chunk handling described in [8].。
 
-![Figure 2: Two boolean vectors are created such that each value represents 0.1 seconds of the podcast. True values in each vector, respectively, represent times when the target speaker spoke according to the ground truth, or when the system predicted target speaker speech. These two vectors were then compared to calculate the system’s metrics. - 图2](https://arxiv.org/html/2608.17972v1/media/fig2.png)
-
+!
 ![(a) Pyannote](https://arxiv.org/html/2608.17972v1/media/fig3_pyannote.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -126,16 +125,6 @@ Duration (s) 13 26 38 50 57 6 93 105 123 AUC 0.324 0.394 0.410 0.423 0.49 0.451 
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Of the available episodes in the dataset, the latest episodes (those numbered 670–702 and recorded in 2019–20) were utilized throughout this project.。
-
-- We tested each model with the This American Life dataset and compared them using the diarization error rate (DER) as calculated by the Pyannote metrics library [2].。
-
-- With Diart’s 50 ms minimum and speaker verification’s need for multi-chunk aggregation, the total latency achieved by our system was approximately 1 second to identify both the start and end of a target speaker’s utterance, which provided excellent performance in the This American Life dataset.。
-
-- The Area Under the Curve (AUC) was calculated from ROC curves for each target length compared to the same 23 episodes, using Pyannote for verification and a conservative alignment, which is summarized in Table 1.。
-
-- Duration (s) 13 26 38 50 57 6 93 105 123 AUC 0.324 0.394 0.410 0.423 0.49 0.451 0.45 0.42 0.46 Lastly, we finalized and evaluated the full system pipeline based on the audio chunk handling described in [8].。
-
 - We used a grid search to determine the minimum chunk size and number of chunks that needed to be concatenated to achieve adequate downstream speaker verification and found that 2 audio chunks of length 50 ms provided excellent results with an overall latency of 1 second.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -144,21 +133,21 @@ Duration (s) 13 26 38 50 57 6 93 105 123 AUC 0.324 0.394 0.410 0.423 0.49 0.451 
 
 ### ⚖️ 评分理由
 
-* 创新性 (0.9/2)：问题面向助听器多说话人场景具有实际意义，信号路径解耦是一个有价值的系统设计洞察；但方法本质是 Pyannote、Diart、TitaNet 等现成组件的组合，没有提出新的模型架构或算法，创新主要停留在工程集成层面。
+* 创新性 (0.9/2)：[A_METHOD] 问题面向助听器多说话人场景具有实际意义，信号路径解耦是一个有价值的系统设计洞察；但方法本质是 Pyannote、Diart、TitaNet 等现成组件的组合，没有提出新的模型架构或算法，创新主要停留在工程集成层面。
 
-* 技术严谨性 (0.9/1.5)：组件选择与参数调优逻辑自洽，DER 与 ROC 评估流程清晰；但“拐点”定义较随意，最终阈值 0.7–0.75 与文中标注的 ROC 拐点（约 0.65/0.6）并不完全一致，且未讨论重叠语音、快速说话人切换等边界条件。
+* 技术严谨性 (0.9/1.5)：[A_RIGOR] 组件选择与参数调优逻辑自洽，DER 与 ROC 评估流程清晰；但“拐点”定义较随意，最终阈值 0.7–0.75 与文中标注的 ROC 拐点（约 0.65/0.6）并不完全一致，且未讨论重叠语音、快速说话人切换等边界条件。
 
-* 实验充分性 (0.8/1.5)：提供了端到端系统指标、离线/流式 DER、ROC 与注册时长消融，有一定完整性；但仅评估单一目标说话人，基线比较和 Diart 调参均只使用一集，无重复运行和统计显著性检验，也未与 TS-VAD、目标语音分离等替代方案做对比。
+* 实验充分性 (0.8/1.5)：[A_RESULTS] 提供了端到端系统指标、离线/流式 DER、ROC 与注册时长消融，有一定完整性；但仅评估单一目标说话人，基线比较和 Diart 调参均只使用一集，无重复运行和统计显著性检验，也未与 TS-VAD、目标语音分离等替代方案做对比。
 
-* 清晰度 (0.8/1)：论文结构清楚，图 1–4 与表格直观解释了验证流程、掩码对齐、ROC 与系统指标；术语使用一致，容易理解。
+* 清晰度 (0.8/1)：[A_CLARITY] 论文结构清楚，图 1–4 与表格直观解释了验证流程、掩码对齐、ROC 与系统指标；术语使用一致，容易理解。
 
-* 影响力 (0.7/1.5)：助听器选择性放大是重要的垂直应用，对医疗音频/辅助设备领域有参考价值；但作为语音领域研究，其技术贡献是现有工具的组合，数据集和场景较窄，难以产生广泛的领域推动作用。
+* 影响力 (0.7/1.5)：[A_IMPACT] 助听器选择性放大是重要的垂直应用，对医疗音频/辅助设备领域有参考价值；但作为语音领域研究，其技术贡献是现有工具的组合，数据集和场景较窄，难以产生广泛的领域推动作用。
 
-* 开源 (0.0/1.5)：论文未提供公开代码仓库，仅声明“repository is available from the authors upon reasonable request”；核心流水线未公开，依赖的 Pyannote、TitaNet 等预训练模型本身虽为开源，但不等于本工作开源。
+* 开源 (0.0/1.5)：[A_OPEN] 论文未提供公开代码仓库，仅声明“repository is available from the authors upon reasonable request”；核心流水线未公开，依赖的 Pyannote、TitaNet 等预训练模型本身虽为开源，但不等于本工作开源。
 
-* 可复现性 (0.3/0.5)：评估数据集公开，模型版本、Diart 超参数、对齐方式、阈值等关键配置已给出；但缺少完整复现脚本、硬件环境、随机种子、RxPY 流水线具体配置以及重复运行协议。
+* 可复现性 (0.3/0.5)：[A_REPRO] 评估数据集公开，模型版本、Diart 超参数、对齐方式、阈值等关键配置已给出；但缺少完整复现脚本、硬件环境、随机种子、RxPY 流水线具体配置以及重复运行协议。
 
-* 工程/实践价值 (1.2/1.5)：构建了一个可运行的流式目标说话人识别 pipeline，给出了延迟分解与块大小调优，控制信号设计对助听器落地有直接参考意义；但缺少真实麦克风闭环测试、CPU/内存/功耗、噪声与重叠场景下的鲁棒性分析以及生产部署约束讨论。
+* 工程/实践价值 (1.2/1.5)：[A_ENGINEERING] 构建了一个可运行的流式目标说话人识别 pipeline，给出了延迟分解与块大小调优，控制信号设计对助听器落地有直接参考意义；但缺少真实麦克风闭环测试、CPU/内存/功耗、噪声与重叠场景下的鲁棒性分析以及生产部署约束讨论。
 
 ### 🚨 局限与问题
 

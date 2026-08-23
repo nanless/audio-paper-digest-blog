@@ -92,8 +92,7 @@ Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents co
 主要结果 | Experiments show that DynaForcing recovers dynamics to teacher-comparable levels (Dyn-Deg: 0.31→\to0.73, Sync-C: 7.03→\to7.68) while improving visual quality, resolving the quality–dynamics trade-off throughout training without early stopping. |
 | 对照、消融或部署指标 | We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28). |
 
-![Figure 3. Overview of DynaForcing. Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. - 图2](https://arxiv.org/html/2608.17707v1/overview_v3.png)
-
+!
 ![Figure 4. Qualitative comparison on GenBench-LongVideo. Frames sampled at 2 s, 20 s, and 40 s from the same driving audio. Please refer to the supplementary video for dynamics comparison.](https://arxiv.org/html/2608.17707v1/qualitative.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -104,16 +103,6 @@ Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents co
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- This provides a ground-truth anchor that counteracts mode collapse in the distillation objective. (2) Dynamics-Aware Reward Regularization (§4.3), a loss-level strategy that leverages the RL interpretation of DMD (20) to introduce explicit dynamics rewards (lip-sync accuracy and expression variance) as auxiliary training signals that directly penalize static outputs. (3) Reference Perturbation (§4.4), a complementary conditioning-level strategy that perturbs reference images to decouple identity from extraneous visual details (pose, background, lighting), preventing the model from taking a shortcut of copying the reference frame instead of generating audio-driven motion.。
-
-- Additionally, we present efficient self-forcing training (§4.5) via computation graph pruning and gradient replay, reducing GPU requirements by over 10×10\times while preserving quality.。
-
-- Three strategies intervene at different levels of the self-forcing training pipeline: (a) Hybrid Forcing at the input level, (b) dynamics-aware reward regularization at the loss level, and (c) reference perturbation at the conditioning level. 3.。
-
-- We compare with methods spanning two paradigms: (1) Non-real-time multi-step diffusion models: WanS2V (10) (teacher), OmniAvatar (9), Hallo3 (4), StableAvatar (3), EchoMimic-V2 (2); (2) Real-time streaming models: Ditto (16), LiveAvatar (12), SoulX-FlashTalk (28).。
-
-- Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents component contributions.。
-
 - Removing Hybrid Forcing causes the largest drop in both dynamics (ExpVar 2.02→\to1.18) and lip-sync (Sync-C 7.68→\to6.78), confirming data-level anchoring as the most critical component; notably, ASE slightly increases (3.5→\to3.57), consistent with the quality–dynamics trade-off observed in the pdatap_{\text{data}} sweep.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -122,21 +111,21 @@ Perturbation 3.52 7.58 1.92 DynaForcing (full) 3.5 7.68 2.02 Table 3 presents co
 
 ### ⚖️ 评分理由
 
-创新性: 1.7/2 从反向 KL 与无锚定自条件解释 dynamic collapse，并在数据、损失和条件三层提出互补机制。 技术严谨性: 1.3/1.5 给出训练概率、奖励、数据集和 GPU 设置，机制分析与对照实验相互支持。 实验充分性: 1.3/1.5 短视频、长视频、实时基线和动态指标覆盖较全，报告 Sync、画质、身份与动态。 清晰度: 0.9/1 三种策略和计算图优化的职责边界清楚。 影响力: 1.3/1.5 动态保持是流式 talking avatar 的关键瓶颈，方法可迁移到实时视频蒸馏。 开源: 0.0/1.5 正文未给出明确代码或模型仓库。 可复现性: 0.2/0.5 训练数据、步数、学习率和硬件写得较细，但实现未公开。 工程/实践价值: 1.3/1.5 梯度回放和图裁剪降低显存，直接改善长时流式训练成本。
+创新性: 1.7/2  [A_METHOD] 从反向 KL 与无锚定自条件解释 dynamic collapse，并在数据、损失和条件三层提出互补机制。 技术严谨性: 1.3/1.5 给出训练概率、奖励、数据集和 GPU 设置，机制分析与对照实验相互支持。 实验充分性: 1.3/1.5 短视频、长视频、实时基线和动态指标覆盖较全，报告 Sync、画质、身份与动态。 清晰度: 0.9/1 三种策略和计算图优化的职责边界清楚。 影响力: 1.3/1.5 动态保持是流式 talking avatar 的关键瓶颈，方法可迁移到实时视频蒸馏。 开源: 0.0/1.5 正文未给出明确代码或模型仓库。 可复现性: 0.2/0.5 训练数据、步数、学习率和硬件写得较细，但实现未公开。 工程/实践价值: 1.3/1.5 梯度回放和图裁剪降低显存，直接改善长时流式训练成本。
 
-* 技术严谨性（1.3/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.3/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（1.3/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（1.3/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.3/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.3/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.3/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.3/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

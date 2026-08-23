@@ -89,8 +89,7 @@ In a sentiment analysis of 263,525 Pop music reviews, results show more positive
 主要结果 | These models have been used for automatic music tagging and cross-modal retrieval (46), automatic lyrics interpretation (10), music understanding and reasoning (36), captioning and question answering (58; 24). |
 | 对照、消融或部署指标 | In a sentiment analysis of 263,525 Pop music reviews, results show more positive sentiments in reviews around 208, especially for genres from more diverse communities like Jazz and Latin music, but not for Country music. |
 
-![(b) - 图2](https://arxiv.org/html/2608.17812v1/wutang.jpg)
-
+!
 上述结果应结合数据集、基线、指标方向和测量条件理解。
 
 ### 🔬 细节详述
@@ -98,16 +97,6 @@ In a sentiment analysis of 263,525 Pop music reviews, results show more positive
 文章讨论 Pop 理论、NLP4MUSA、音乐知识发现、distant listening 的 corpus studies，以及通过图像元数据、歌词、媒体档案与知识图谱形成结构化语料。三个示例方向分别对应主题宇宙、封面图像志和 retro cycles；每个方向都需要从大规模来源抽取特征，再与历史和社会语境做解释性关联。
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- 2.2 Distant reading in digital humanities The accessibility of vast amounts of text in digital form has enabled humanities to add ”distant reading” of thousands of books via computational analysis as a new research tool to its repertoire of methods.。
-
-- The methods and the overall intention of distant reading are sometimes discussed controversially in the humanities, with some fearing that it might replace close reading altogether (7), or others pointing out that the capabilities of the algorithmic tools might dictate what hypotheses can be formulated and proven (30), or that researchers might be tempted to formulate conjectures after looking at the data, thereby preventing usage of that data to test validity of these post hoc theories (47).。
-
-- This information from collections, anthologies, compilations, biographies, reviews, journals, etc is today often available in digitized formats, enabling usage of methods from natural language processing (NLP) for music knowledge discovery (78).。
-
-- In a sentiment analysis of 263,525 Pop music reviews, results show more positive sentiments in reviews around 208, especially for genres from more diverse communities like Jazz and Latin music, but not for Country music.。
-
-- 2.4 Distant listening in MIR The concept most related to a distant listening approach in MIR are corpus studies, i.e. analysis of large music corpora made possible through recent advances in MIR (see 80 for an overview).。
 
 - Another notable examples identified musical phrases based on repetition in MIDI representations of 909 Chinese Pop songs (2), and compared chord progressions in expert harmonic annotations of classical music and 921 Pop songs (94).。
 
@@ -117,21 +106,21 @@ In a sentiment analysis of 263,525 Pop music reviews, results show more positive
 
 ### ⚖️ 评分理由
 
-创新性: 1.2/2 把 Pop music 视为音频、封面、视频、歌词、媒体文本和文化关系的多模态社会现象。 技术严谨性: 1.0/1.5 有大规模 MIR 与数字人文文献支撑，但本文本身不是新实验。 实验充分性: 0.7/1.5 总结了大量 distant listening/reading/viewing 工作，缺乏统一再现性比较。 清晰度: 0.9/1 以案例、研究谱系和三个未来方向组织内容，阅读路径清晰。 影响力: 1.2/1.5 对文化音乐信息检索和计算音乐学的研究问题定义有影响。 开源: 0.0/1.5 综述没有专属代码或数据发布。 可复现性: 0.2/0.5 引用研究大多公开，但跨语料外部效度和采样偏差限制复核。 工程/实践价值: 0.9/1.5 为歌词主题、封面图像志和音乐时间线追踪提供可操作方向。
+创新性: 1.2/2  [A_METHOD] 把 Pop music 视为音频、封面、视频、歌词、媒体文本和文化关系的多模态社会现象。 技术严谨性: 1.0/1.5 有大规模 MIR 与数字人文文献支撑，但本文本身不是新实验。 实验充分性: 0.7/1.5 总结了大量 distant listening/reading/viewing 工作，缺乏统一再现性比较。 清晰度: 0.9/1 以案例、研究谱系和三个未来方向组织内容，阅读路径清晰。 影响力: 1.2/1.5 对文化音乐信息检索和计算音乐学的研究问题定义有影响。 开源: 0.0/1.5 综述没有专属代码或数据发布。 可复现性: 0.2/0.5 引用研究大多公开，但跨语料外部效度和采样偏差限制复核。 工程/实践价值: 0.9/1.5 为歌词主题、封面图像志和音乐时间线追踪提供可操作方向。
 
-* 技术严谨性（1.0/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.0/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.7/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.7/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.2/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.2/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（0.9/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（0.9/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

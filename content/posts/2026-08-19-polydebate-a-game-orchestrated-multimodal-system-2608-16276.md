@@ -90,8 +90,7 @@ Coverage and weakness F1 are percentages; specificity, actionability, and ground
 主要结果 | Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version. |
 | 对照、消融或部署指标 | Figure 4: User-perception results for the Unity 3D and web platform versions of PolyDebate. |
 
-![Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version. - 图2](https://arxiv.org/html/2608.16276v1/demonstration_unity.png)
-
+!
 ![Figure 3: Representative key interfaces of the PolyDebate web platform version.](https://arxiv.org/html/2608.16276v1/demonstration_web.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -102,16 +101,6 @@ Coverage and weakness F1 are percentages; specificity, actionability, and ground
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Table 2: Comparison of representative debate and debate-context assessment frameworks in terms of modality, assessed aspects, and learner-facing feedback output.。
-
-- 3 PolyDebate 3.1 Overview and Workflow PolyDebate combines staged oral debate, AI opponent interaction, rubric-aligned evaluation, and lightweight game mechanics in a single practice round, summarized in Fig. 1, and runs as a Unity 3D game version for immersive practice and a web platform version for browser access.。
-
-- After text generation, the response is synthesized with Edge-TTS (a Microsoft neural English voice) and passed to the LiveTalking digital-human module, where a Wav2Lip-based lip-synchronization model [8] drives the avatar’s mouth movements.。
-
-- Figure 4: User-perception results for the Unity 3D and web platform versions of PolyDebate.。
-
-- Coverage and weakness F1 are percentages; specificity, actionability, and groundedness use a 1–5 scale.。
-
 - Generic LLM feedback judge 46.7 80.6 4.0 4.1 4.1 Full w/o rubrics 51.3 64.3 4.4 4.5 4.7 Full w/o skill card 81.7 59.6 4.4 4.4 4.6 Full w/o multimodal evidence 71.7 32.2 4.2 4.2 4.1 Full w/o feedback schema 76.2 74.8 4.8 4.8 4.8 Full PolyDebate judge 9.2 85.9 4.9 4.9 4.9 W.Cov.=weighted rubric coverage; W.F1=weakness-label F1; Spec.=specificity; Act.=actionability; Grd.=groundedness.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -120,21 +109,21 @@ Coverage and weakness F1 are percentages; specificity, actionability, and ground
 
 ### ⚖️ 评分理由
 
-创新性: 1.3/2 把阶段式辩论、skill cards、游戏奖励、语音/视频证据和 rubric feedback 组成完整学习闭环。 技术严谨性: 1.0/1.5 四项研究分别测 AI 对手、覆盖率、评委质量和用户感知，评价维度较清楚。 实验充分性: 1.0/1.5 报告 1–5 分对手质量和多项覆盖/反馈指标，但用户规模与对照细节有限。 清晰度: 0.9/1 Unity 与 Web 版本、四阶段流程和 ELC2012 rubric 易理解。 影响力: 1.1/1.5 为英语口语、辩论教学和形成性反馈提供可落地范式。 开源: 0.0/1.5 未见明确代码仓库或可下载平台。 可复现性: 0.3/0.5 流程、权重和服务组件有披露，但云端 LLM、Edge-TTS 与视频服务依赖较强。 工程/实践价值: 1.2/1.5 实时语音、WebRTC、LiveTalking 和分阶段状态机体现较强系统工程价值。
+创新性: 1.3/2  [A_METHOD] 把阶段式辩论、skill cards、游戏奖励、语音/视频证据和 rubric feedback 组成完整学习闭环。 技术严谨性: 1.0/1.5 四项研究分别测 AI 对手、覆盖率、评委质量和用户感知，评价维度较清楚。 实验充分性: 1.0/1.5 报告 1–5 分对手质量和多项覆盖/反馈指标，但用户规模与对照细节有限。 清晰度: 0.9/1 Unity 与 Web 版本、四阶段流程和 ELC2012 rubric 易理解。 影响力: 1.1/1.5 为英语口语、辩论教学和形成性反馈提供可落地范式。 开源: 0.0/1.5 未见明确代码仓库或可下载平台。 可复现性: 0.3/0.5 流程、权重和服务组件有披露，但云端 LLM、Edge-TTS 与视频服务依赖较强。 工程/实践价值: 1.2/1.5 实时语音、WebRTC、LiveTalking 和分阶段状态机体现较强系统工程价值。
 
-* 技术严谨性（1.0/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.0/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（1.0/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（1.0/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.1/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.1/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.3/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.3/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.2/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.2/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

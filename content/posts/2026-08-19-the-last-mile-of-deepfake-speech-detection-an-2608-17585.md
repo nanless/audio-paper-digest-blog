@@ -117,16 +117,6 @@ Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Across variants, we settled on pretrained SSL front-ends with attentive pooling [39]. SSL representations are learned from large amounts of unlabeled speech, which gives the detector a better starting point for generalizing to audio and synthesizers it has not seen during training, the property that mattered most to us given the out-of-distribution nature of the problem (Section 3.1).。
-
-- The default today is to ingest everything; we would rather weigh data by importance and prune what does not help. A framework that assesses coverage gaps and re-weighs or filters redundant data, and that copes with the fact that sources drift over time, e.g., when a commercial synthesizer or a video platform’s codecs change between versions, would all turn dataset assembly from guesswork into engineering. • CR2 – Verifiable training-data provenance. A deployed model does not reveal which data were used to train it, so external parties cannot readily evaluate data-sourcing claims.。
-
-- Over the course of a three-year project to bring a commercial detector to market, the recurring difficulties extended beyond the model architecture.。
-
-- 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset.。
-
-- Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 [48], and multilingual in-the-wild conditions [28].。
-
 - Four difficulties recurred: 1. building an evaluation dataset that resembles what a customer will actually encounter, 2. choosing metrics that mean something at the operating point a customer runs, 3. establishing whether the system genuinely generalizes to unseen attacks, and 4. understanding how sensitive the system is to channel and processing conditions.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -135,21 +125,21 @@ Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：论文没有提出新的检测网络，但其贡献在于首次系统地从厂商内部视角梳理了 deepfake 语音检测产品化的全流程障碍，提出“label pollution”、评分可解释性、社区协调等此前未充分讨论的问题。insight 具有新颖性，属于“组合已有观察并形成新的问题框架”型创新。扣分点在于：提出的解决方案多为方向性呼吁，尚未形成可验证的方法或协议，且 CM/CO 的具体实现与治理主体缺失。
+* 创新性 (1.4/2)：[A_METHOD] 论文没有提出新的检测网络，但其贡献在于首次系统地从厂商内部视角梳理了 deepfake 语音检测产品化的全流程障碍，提出“label pollution”、评分可解释性、社区协调等此前未充分讨论的问题。insight 具有新颖性，属于“组合已有观察并形成新的问题框架”型创新。扣分点在于：提出的解决方案多为方向性呼吁，尚未形成可验证的方法或协议，且 CM/CO 的具体实现与治理主体缺失。
 
-* 技术严谨性 (1.0/1.5)：论证逻辑总体合理，作者对法律/监管问题持谨慎态度（如欧盟 AI Act 分类的不确定性），对内部数字的局限性做了充分免责声明。没有明显的推导错误或算法漏洞，但也没有新的数学/算法内容可供检验。扣分是因为对许多主张缺乏定量支撑，例如“SSL 前端更好”和“codec-specific 增强更有效”的论断基于项目经验与文献引用，而非本文内部的系统对照实验。
+* 技术严谨性 (1.0/1.5)：[A_RIGOR] 论证逻辑总体合理，作者对法律/监管问题持谨慎态度（如欧盟 AI Act 分类的不确定性），对内部数字的局限性做了充分免责声明。没有明显的推导错误或算法漏洞，但也没有新的数学/算法内容可供检验。扣分是因为对许多主张缺乏定量支撑，例如“SSL 前端更好”和“codec-specific 增强更有效”的论断基于项目经验与文献引用，而非本文内部的系统对照实验。
 
-* 实验充分性 (0.6/1.5)：作为系统技术报告，论文提供了真实部署中的失败案例和内部数字，具有一定证据价值。但关键实验不可复现：样本数、阈值、超参数、置信区间均未公开；Table 1 被作者自己标注为“不可作为 benchmark”。没有看到跨方法对比、消融、统计显著性检验或端到端系统指标（延迟、吞吐、成本）。因此证据不足以支撑“这些障碍具有普遍性”的隐含主张。
+* 实验充分性 (0.6/1.5)：[A_RESULTS] 作为系统技术报告，论文提供了真实部署中的失败案例和内部数字，具有一定证据价值。但关键实验不可复现：样本数、阈值、超参数、置信区间均未公开；Table 1 被作者自己标注为“不可作为 benchmark”。没有看到跨方法对比、消融、统计显著性检验或端到端系统指标（延迟、吞吐、成本）。因此证据不足以支撑“这些障碍具有普遍性”的隐含主张。
 
-* 清晰度 (0.9/1)：结构清晰，章节划分合理，从经验报告到问题映射再到行动呼吁层层递进。Table 2 的“经验 → 问题 → 行动”映射非常实用。专业术语有解释，写作质量高。扣 0.1 是因为第 4 节的监管分析略显冗长，且部分关键数字的描述分散在正文中，需要读者自行拼凑。
+* 清晰度 (0.9/1)：[A_CLARITY] 结构清晰，章节划分合理，从经验报告到问题映射再到行动呼吁层层递进。Table 2 的“经验 → 问题 → 行动”映射非常实用。专业术语有解释，写作质量高。扣 0.1 是因为第 4 节的监管分析略显冗长，且部分关键数字的描述分散在正文中，需要读者自行拼凑。
 
-* 影响力 (1.3/1.5)：对语音/音频领域的 deepfake 检测方向有较高推动作用。论文直面“benchmark 与实际部署脱节”的长期痛点，提出的数据溯源、真实评估、评分解释等问题都是该领域亟需的。作为产学合作报告，对工业界和学术研究都有参考价值。扣分是因为影响力主要停留在问题 framing 和倡议层面，尚未产生可直接使用的工具、数据集或协议。
+* 影响力 (1.3/1.5)：[A_IMPACT] 对语音/音频领域的 deepfake 检测方向有较高推动作用。论文直面“benchmark 与实际部署脱节”的长期痛点，提出的数据溯源、真实评估、评分解释等问题都是该领域亟需的。作为产学合作报告，对工业界和学术研究都有参考价值。扣分是因为影响力主要停留在问题 framing 和倡议层面，尚未产生可直接使用的工具、数据集或协议。
 
-* 开源 (0.0/1.5)：论文未提供任何代码仓库、模型权重、数据集或 demo 链接。核心产物（检测器、训练数据、评估集）均为 Phonexia 商业产品的一部分，没有开源计划或承诺。
+* 开源 (0.0/1.5)：[A_OPEN] 论文未提供任何代码仓库、模型权重、数据集或 demo 链接。核心产物（检测器、训练数据、评估集）均为 Phonexia 商业产品的一部分，没有开源计划或承诺。
 
-* 可复现性 (0.1/0.5)：除开源缺失外，训练细节（学习率、batch size、优化器、调度策略）、超参数、硬件环境、复现步骤几乎全部未说明。唯一可复现的是概念层面的流程描述和 Table 1 的数值，但这些数值本身被作者声明不可复现。0.1 分给清晰的行文结构和问题描述。
+* 可复现性 (0.1/0.5)：[A_REPRO] 除开源缺失外，训练细节（学习率、batch size、优化器、调度策略）、超参数、硬件环境、复现步骤几乎全部未说明。唯一可复现的是概念层面的流程描述和 Table 1 的数值，但这些数值本身被作者声明不可复现。0.1 分给清晰的行文结构和问题描述。
 
-* 工程/实践价值 (1.3/1.5)：工程价值较高。论文详细记录了真实产品化中的数据选择、codec 增强、分块推理、校准困境和客户接受度问题，对工业界部署有直接参考意义。作为经验报告，其对“最后一公里”的拆解具有很强的可复用性。扣分是因为缺少可落地的具体工程指标、接口设计、成本/延迟分析，以及与说话人识别系统集成的实际方案。
+* 工程/实践价值 (1.3/1.5)：[A_ENGINEERING] 工程价值较高。论文详细记录了真实产品化中的数据选择、codec 增强、分块推理、校准困境和客户接受度问题，对工业界部署有直接参考意义。作为经验报告，其对“最后一公里”的拆解具有很强的可复用性。扣分是因为缺少可落地的具体工程指标、接口设计、成本/延迟分析，以及与说话人识别系统集成的实际方案。
 
 ### 🚨 局限与问题
 

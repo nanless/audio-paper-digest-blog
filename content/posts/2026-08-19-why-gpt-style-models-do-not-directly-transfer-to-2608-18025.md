@@ -90,8 +90,7 @@ In H/I, the initial process opened the manifest once and constructed an immutabl
 主要结果 | 5 Experiments and Discussion 5.1 Protocol and Evaluation All matched comparisons preserve the learner, observable event space, and within-family training budget while changing only the representation interface. |
 | 对照、消融或部署指标 | Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b). |
 
-![Figure 7: Case A source continuation for exact visual comparison. - 图2](https://arxiv.org/html/2608.18025v1/figures/case07_reference.png)
-
+!
 ![Figure 8: Case B source continuation for exact visual comparison.](https://arxiv.org/html/2608.18025v1/figures/case05_reference.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -102,16 +101,6 @@ In H/I, the initial process opened the manifest once and constructed an immutabl
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- The resulting musical token is therefore a coordinate-aware note that effectively encodes declared musical coordinates while leaving higher-order organization to the model state.。
-
-- The decoder predicts the next exact event through the chain-rule order Type→\rightarrowTime→\rightarrowPitch →\rightarrowDuration.。
-
-- Test data were unavailable to training and checkpoint selection; held-out results were computed once after checkpoint lock.。
-
-- Removing either context increases code length by about 0.27 bits/event, while shuffling identical content increases it by 0.669 bits/event (figure 3b).。
-
-- In H/I, the initial process opened the manifest once and constructed an immutable 1,024-song / 70,981-token tensor cache, then failed while loading a frozen D/E comparison dependency.。
-
 - Case A Case B Song ID popk_304614 popk_30540 Checkpoint epoch 4.00 epoch 4.00 Prefix / generated 4 / 4 bars 4 / 4 bars Generated notes 49 46 Generated onsets 28 32 Polyphonic onset rate 17.9% 43.8% Maximum notes/onset 7 2 Event Jaccard vs. source 25.8% 50.8% Sampling temperature 0.85, top-pp 0.92, top-kk 24 Figure 6: Case A model continuation.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -120,21 +109,21 @@ In H/I, the initial process opened the manifest once and constructed an immutabl
 
 ### ⚖️ 评分理由
 
-创新性: 1.6/2 将 tokenization 重新定义为预测有效且关系无损的坐标构造，提出 Fact–Token 与 Token–State 两条边界。 技术严谨性: 1.2/1.5 框架有形式化定义并由受控实验支持，但尚未覆盖广泛音乐表示和模型规模。 实验充分性: 0.9/1.5 有坐标构造与关系投影的对照实验，规模和任务数量相对有限。 清晰度: 0.8/1 核心概念有清楚的符号化表述，但对非理论读者需要较多背景。 影响力: 1.2/1.5 为音乐 token 设计和 GPT 迁移失败提供了可检验的解释。 开源: 0.0/1.5 正文未给出明确代码或数据仓库，按保守规则开源分为 0。 可复现性: 0.2/0.5 实验原则可复述，但实现、数据和超参数不完整。 工程/实践价值: 0.8/1.5 可指导音乐序列预处理和模型接口设计，但尚未形成工具。
+创新性: 1.6/2  [A_METHOD] 将 tokenization 重新定义为预测有效且关系无损的坐标构造，提出 Fact–Token 与 Token–State 两条边界。 技术严谨性: 1.2/1.5 框架有形式化定义并由受控实验支持，但尚未覆盖广泛音乐表示和模型规模。 实验充分性: 0.9/1.5 有坐标构造与关系投影的对照实验，规模和任务数量相对有限。 清晰度: 0.8/1 核心概念有清楚的符号化表述，但对非理论读者需要较多背景。 影响力: 1.2/1.5 为音乐 token 设计和 GPT 迁移失败提供了可检验的解释。 开源: 0.0/1.5 正文未给出明确代码或数据仓库，按保守规则开源分为 0。 可复现性: 0.2/0.5 实验原则可复述，但实现、数据和超参数不完整。 工程/实践价值: 0.8/1.5 可指导音乐序列预处理和模型接口设计，但尚未形成工具。
 
-* 技术严谨性（1.2/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.2/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.9/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.9/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.8/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.8/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.2/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.2/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（0.8/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（0.8/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

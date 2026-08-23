@@ -90,8 +90,7 @@ Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimoda
 主要结果 | Hallucination studies often capture the failure symptom, while uncertainty-aware methods ask whether the system can detect the weak support before committing to an answer [3, 26, 7]. |
 | 对照、消融或部署指标 | Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62]. |
 
-![Figure 2: From evidence conditions to uncertainty-aware actions. The same user question can require different model behavior depending on the quality, availability, and grounding of the visual evidence. With clear evidence, direct answering is appropriate, and unnecessary abstention becomes a failure mode. With hazy or partially degraded evidence, the model should hedge or request better input rather than over-specifying an uncertain visual attribute. With occluded evidence, a confident answer may reflect weak grounding or distractor bias, so the safer behavior is to state uncertainty or abstain. With referent ambiguity, the visual input contains multiple plausible targets, so the model should clarify or disambiguate the referred object instead of answering from a salient distractor. The examples are illustrative rather than exhaustive. - 图2](https://arxiv.org/html/2608.17084v1/figure2_2.drawio.png)
-
+!
 ![Figure 3: Propagation and interaction of MLLM uncertainty sources. The figure illustrates how uncertainty can cascade across sensory, grounding, reasoning, and policy layers in multimodal language models. In the sensory–grounding chain, ambiguous visual input can lead to perceptual uncertainty, weaken the alignment between evidence and claims, and allow language priors to fill visual gaps. These failures can become entangled with cross-modal conflict, where text and image evidence disagree, and with reasoning uncertainty, where inference becomes unstable under weak or conflicting evidence. System-level uncertainty can also arise from distributional or adversarial conditions that cause calibration failure, while missing or absent evidence creates answerability uncertainty and should trigger abstention or clarification rather than forced answering. Black arrows denote primary causal pathways, gray arrows denote entanglement between uncertainty sources, and colors distinguish perceptual-chain components, reasoning components, systemic sources, and model actions. The diagram is a schematic synthesis rather than an exhaustive causal model.](https://arxiv.org/html/2608.17084v1/figure3_source_propagation_v5.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
@@ -102,16 +101,6 @@ Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimoda
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Uncertainty-o extends this idea into a model-agnostic multimodal perturbation framework for exposing epistemic uncertainty [68]. FESTA uses functionally equivalent and complementary sampling to assess trust in MLLM responses across visual and audio reasoning settings [4].。
-
-- Multi-model approaches, such as semantic opinion pooling, estimate system-level uncertainty by comparing semantically aligned outputs across several VLMs [67].。
-
-- Signal family Typical access Primary diagnosis Action value Main caveat Token, logit, and entropy signals [74, 17, 8] Logits or probabilities Decoding uncertainty, hidden knowledge boundary, label ambiguity Confidence reporting, selective answering, refusal triggers Often unavailable in closed models and weak at separating uncertainty sources.。
-
-- Affective visual reasoning work studies confidence verbalization and calibration in emotion understanding [56]. MLLM-as-judge settings also require calibration because the judge’s score may vary across visual domains and prompt conditions [45]; related evaluator work shows that vision-language judges and implausibility evaluators should themselves be treated as uncertain systems [62].。
-
-- Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimodal honesty, video refusal, embodied QA, audio-visual QA, and chart-focused evaluation shows why the correct action is sometimes not to answer [1, 53, 46, 7, 6, 57, 50, 32]. A third family targets hallucination and grounding.。
-
 - 7.3 Evaluation protocol checklist Table 5 reorganizes metrics around the question they answer.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -120,21 +109,21 @@ Work on selective VQA, multimodal self-awareness, visual IDK behavior, multimoda
 
 ### ⚖️ 评分理由
 
-创新性: 1.3/2 用 source–signal–calibration–action 链把不确定性从分数问题改写为决策问题。 技术严谨性: 1.1/1.5 覆盖 token、语义分歧、grounding、conformal 与 selective answering，但不是统一实证 benchmark。 实验充分性: 0.8/1.5 系统整理既有校准、拒答、澄清和升级研究，缺少作者新实验。 清晰度: 0.9/1 来源、信号、校准和行动四层结构很利于工程阅读。 影响力: 1.4/1.5 多模态系统在高风险和证据不足场景的可靠行为是重要问题。 开源: 0.0/1.5 综述未发布专属代码或数据。 可复现性: 0.2/0.5 范围和术语可复核，具体文献筛选与动态更新可能影响复现。 工程/实践价值: 1.1/1.5 把 abstain、clarify、retrieve、self-check、escalate 变成可组合策略。
+创新性: 1.3/2  [A_METHOD] 用 source–signal–calibration–action 链把不确定性从分数问题改写为决策问题。 技术严谨性: 1.1/1.5 覆盖 token、语义分歧、grounding、conformal 与 selective answering，但不是统一实证 benchmark。 实验充分性: 0.8/1.5 系统整理既有校准、拒答、澄清和升级研究，缺少作者新实验。 清晰度: 0.9/1 来源、信号、校准和行动四层结构很利于工程阅读。 影响力: 1.4/1.5 多模态系统在高风险和证据不足场景的可靠行为是重要问题。 开源: 0.0/1.5 综述未发布专属代码或数据。 可复现性: 0.2/0.5 范围和术语可复核，具体文献筛选与动态更新可能影响复现。 工程/实践价值: 1.1/1.5 把 abstain、clarify、retrieve、self-check、escalate 变成可组合策略。
 
-* 技术严谨性（1.1/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.1/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.8/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.8/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.4/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.4/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.1/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.1/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

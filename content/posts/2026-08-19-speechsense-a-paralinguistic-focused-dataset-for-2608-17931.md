@@ -97,16 +97,6 @@ These results empirically validate the primacy of acoustic cues in detecting sub
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- Method Clips Spkrs Training Set Gemini 3 Pro Weakly-Sup. 1,52 30 Test Set Qwen3-Max Human-Val.。
-
-- As text-only baselines, we include Qwen2.5-Instruct (3B and 7B), which share the same language backbone but lack an audio encoder.。
-
-- As speech encoders, we evaluate Whisper-large-v3 (Radford et al. 2023), HuBERT-large (Hsu et al. 2021), and Wav2Vec2-large (Baevski et al. 20), each paired with attention pooling and a linear classification head.。
-
-- After supervised training, Qwen2.5-Omni text models saturate at 20–2% F1, and Qwen2.5-Instruct text models perform even worse—as low as 4.60% F1 for the 3B variant, which is lower than its own zero-shot baseline (6.63%), indicating that training induces mode collapse in the absence of acoustic signal.。
-
-- These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.1 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1.。
-
 - Based on the widely accepted interpretation guidelines established by Landis and Koch (Landis and Koch 197), this score signifies moderate agreement (defined as the 0.41–0.60 interval).。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -115,21 +105,21 @@ These results empirically validate the primacy of acoustic cues in detecting sub
 
 ### ⚖️ 评分理由
 
-创新性: 1.5/2 用 confident、nervous、passionate、impatient、warm、apathetic、sarcastic、neutral 八类人际姿态替代粗粒度情绪。 技术严谨性: 1.1/1.5 三人标注、93.12% 多数投票保留和 Fleiss κ=0.4437 提供了质量证据。 实验充分性: 1.2/1.5 比较多模态 LLM、文本 LLM 和语音编码器，直接验证声学输入的贡献。 清晰度: 0.9/1 数据构建、标签声学定义和实验分组清楚。 影响力: 1.2/1.5 细粒度语用情感对客服、招聘和交互式语音系统有现实意义。 开源: 1.2/1.5 公开 SpeechSense 数据集和补充材料仓库。 可复现性: 0.4/0.5 数据、标签定义和筛选统计公开，但合成语音生成参数仍需补充。 工程/实践价值: 1.0/1.5 面向可部署的 prosody-aware sentiment pipeline，能作为模型评估基准。
+创新性: 1.5/2  [A_METHOD] 用 confident、nervous、passionate、impatient、warm、apathetic、sarcastic、neutral 八类人际姿态替代粗粒度情绪。 技术严谨性: 1.1/1.5 三人标注、93.12% 多数投票保留和 Fleiss κ=0.4437 提供了质量证据。 实验充分性: 1.2/1.5 比较多模态 LLM、文本 LLM 和语音编码器，直接验证声学输入的贡献。 清晰度: 0.9/1 数据构建、标签声学定义和实验分组清楚。 影响力: 1.2/1.5 细粒度语用情感对客服、招聘和交互式语音系统有现实意义。 开源: 1.2/1.5 公开 SpeechSense 数据集和补充材料仓库。 可复现性: 0.4/0.5 数据、标签定义和筛选统计公开，但合成语音生成参数仍需补充。 工程/实践价值: 1.0/1.5 面向可部署的 prosody-aware sentiment pipeline，能作为模型评估基准。
 
-* 技术严谨性（1.1/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.1/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（1.2/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（1.2/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.2/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.2/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（1.2/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（1.2/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.4/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.4/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.0/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.0/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

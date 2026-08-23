@@ -98,16 +98,6 @@ Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- In this work, we propose FireRedTTS3, an LLM-DiT speech synthesis framework that mitigates error accumulation at the representation level, without additional semantic modules, multi-stage tokenizer training pipelines, or complex architectures.。
-
-- The resulting representations stabilize downstream LLM-DiT modeling, enabling FireRedTTS3 to maintain a simple autoregressive architecture. • Robust multilingual and multi-dialect voice cloning.。
-
-- 2.1 RedAE Tokenizer RedAE provides semantically enriched continuous speech representations for stable LLM-DiT modeling.。
-
-- 3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval.。
-
-- Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four benchmarks covering multilingual voice cloning, instruction-controlled voice design, and speech editing.。
-
 - Experiments show that FireRedTTS3-Base achieves the best average speech intelligibility and speaker similarity among compared systems on Seed-TTS-Eval and MiniMax-MLS-Test, while FireRedTTS3-Instruct outperforms competing systems on InstructTTSEval and Ming-Freeform-Audio-Edit.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -116,21 +106,21 @@ Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four
 
 ### ⚖️ 评分理由
 
-创新性: 1.6/2 RedAE 把语义教师蒸馏到连续声学表征，减少量化损失并统一克隆、设计和编辑。 技术严谨性: 1.2/1.5 架构、损失和多个任务的评测定义清楚，但部分训练细节仍依赖附录和外部评测脚本。 实验充分性: 1.3/1.5 Seed-TTS-Eval、MiniMax-MLS-Test 和编辑任务覆盖较全，包含多语言、声学控制与指令一致性。 清晰度: 0.9/1 方法图和 Base/Instruct 两种变体边界清楚，术语组织良好。 影响力: 1.3/1.5 连续表征与 LLM-DiT 对语音编辑和零样本克隆都有较强应用价值。 开源: 1.2/1.5 论文给出 FireRedTTS3 GitHub，代码和模型均声明可用。 可复现性: 0.4/0.5 公开评测脚本、数据集入口和模型链接提高了复现性，但训练硬件和完整配置仍不充分。 工程/实践价值: 1.1/1.5 24 kHz、50 Hz 连续表征和统一编辑接口具有直接工程落地意义。
+创新性: 1.6/2  [A_METHOD] RedAE 把语义教师蒸馏到连续声学表征，减少量化损失并统一克隆、设计和编辑。 技术严谨性: 1.2/1.5 架构、损失和多个任务的评测定义清楚，但部分训练细节仍依赖附录和外部评测脚本。 实验充分性: 1.3/1.5 Seed-TTS-Eval、MiniMax-MLS-Test 和编辑任务覆盖较全，包含多语言、声学控制与指令一致性。 清晰度: 0.9/1 方法图和 Base/Instruct 两种变体边界清楚，术语组织良好。 影响力: 1.3/1.5 连续表征与 LLM-DiT 对语音编辑和零样本克隆都有较强应用价值。 开源: 1.2/1.5 论文给出 FireRedTTS3 GitHub，代码和模型均声明可用。 可复现性: 0.4/0.5 公开评测脚本、数据集入口和模型链接提高了复现性，但训练硬件和完整配置仍不充分。 工程/实践价值: 1.1/1.5 24 kHz、50 Hz 连续表征和统一编辑接口具有直接工程落地意义。
 
-* 技术严谨性（1.2/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.2/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（1.3/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（1.3/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.3/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.3/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（1.2/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（1.2/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.4/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.4/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.1/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.1/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 

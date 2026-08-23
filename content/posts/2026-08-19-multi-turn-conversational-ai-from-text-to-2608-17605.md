@@ -94,16 +94,6 @@ ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (
 
 数据、训练、实现和部署条件共同决定结果的可复现范围。
 
-- To translate this comparison into practice, in Table 8, we map common deployment goals to the training strategy.。
-
-- Videollama 2: Advanc- ing spatial-temporal modeling and audio un- derstanding in video-llms. arXiv preprint arXiv:2406.07476.。
-
-- Aqulia-med llm: pioneering full-process open- source medical language models. arXiv preprint arXiv:2406.12182.。
-
-- It combines real images, text questions, spoken questions, and image-grounded answers, but its current task format is single- turn rather than conversational. M2CQA (Mousi et al., 2026) provides a single-turn multimodal QA benchmark spanning 17 MENA countries in MSA and multiple Arabic dialects, and intro- duces the Cultural Hallucination and Factual Re- call metric for measuring culturally grounded cor- rectness.。
-
-- ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (Alwajih et al., 2024) focuses on dialect-aware Arabic multi- modal modeling, MLQA (Lewis et al., 20) pro- vides a cross-lingual extractive QA baseline, and mSTEB (Beyene et al., 2025) extends multilingual evaluation to speech and text tasks.。
-
 - Broader cultural multimodal resources. SEA- VQA (Urailertprasert et al., 2024) evaluates cul- tural visual question answering across South- east Asian settings. CVQA (Mogrovejo et al., 2024), CulturalGround (Nyandwi et al., 2025), and MMA-ASIA (Weihua et al., 2025) extend culturally focused multimodal evaluation across broader language and regional settings.。
 
 论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
@@ -112,21 +102,21 @@ ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (
 
 ### ⚖️ 评分理由
 
-创新性: 1.2/2 把多轮对话的记忆、跨模态 grounding、工具调用、全双工和文化对齐放进统一研究坐标。 技术严谨性: 1.1/1.5 给出范围、检索来源和分类维度，但综述结论依赖文献覆盖质量。 实验充分性: 0.8/1.5 以数据集/benchmark 对照和 gap 汇总为证据，非新模型实验。 清晰度: 0.9/1 从文本、多模态、AudioLLM 到 agent 的组织路线清楚。 影响力: 1.3/1.5 多轮语音和 omni-modal 交互是当前应用系统的核心瓶颈。 开源: 0.0/1.5 综述未提供代码或数据集仓库，开源分保守记为 0。 可复现性: 0.2/0.5 检索策略和分类表可复核，但动态文献更新会影响结果。 工程/实践价值: 1.0/1.5 对 memory、turn-level evaluation、full-duplex 和 escalation 的工程拆解实用。
+创新性: 1.2/2  [A_METHOD] 把多轮对话的记忆、跨模态 grounding、工具调用、全双工和文化对齐放进统一研究坐标。 技术严谨性: 1.1/1.5 给出范围、检索来源和分类维度，但综述结论依赖文献覆盖质量。 实验充分性: 0.8/1.5 以数据集/benchmark 对照和 gap 汇总为证据，非新模型实验。 清晰度: 0.9/1 从文本、多模态、AudioLLM 到 agent 的组织路线清楚。 影响力: 1.3/1.5 多轮语音和 omni-modal 交互是当前应用系统的核心瓶颈。 开源: 0.0/1.5 综述未提供代码或数据集仓库，开源分保守记为 0。 可复现性: 0.2/0.5 检索策略和分类表可复核，但动态文献更新会影响结果。 工程/实践价值: 1.0/1.5 对 memory、turn-level evaluation、full-duplex 和 escalation 的工程拆解实用。
 
-* 技术严谨性（1.1/1.5）： 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
+* 技术严谨性（1.1/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
 
-* 实验充分性（0.8/1.5）： 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
+* 实验充分性（0.8/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
 
-* 清晰度（0.9/1）：检查读者能否沿数据流复述输入、模块、中间表示和输出。
+* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
 
-* 影响力（1.3/1.5）： 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
+* 影响力（1.3/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
 
-* 开源（0.0/1.5）： 只依据论文明确提供的代码、模型、数据或可验证链接评分。
+* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
 
-* 可复现性（0.2/0.5）： 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
+* 可复现性（0.2/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
 
-* 工程/实践价值（1.0/1.5）： 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 工程/实践价值（1.0/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
 
 ### 🚨 局限与问题
 
