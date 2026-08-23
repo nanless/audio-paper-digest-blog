@@ -27,7 +27,7 @@ paper_digest_arxiv_id: "2608.17492"
 
 ### 💡 毒舌点评
 
-这项工作抓住了连续语音表征的关键矛盾：既想保留声学细节，又想借助文本 LLM 的指令能力。RedAE 的语义教师设计确实漂亮，公开模型和多任务评测也很完整；但“简单”并不等于没有工程代价，训练 tokenizer、LLM-DiT 和多种编辑评测的成本很高，开放域音色、长文本和极端方言仍需要独立验证。
+这项工作抓住了连续语音表征的关键矛盾：既想保留声学细节，又想借助文本 LLM 的指令能力。RedAE 的语义教师设计确实漂亮，公开模型和多任务评测也很完整；但“简单”并不等于没有工程代价，训练 tokenizer、LLM-DiT 和多种编辑评测的成本很高，开放域音色、长文本和极端方言仍需要独立验证。此外还有几处需要追问：连续自回归表示在长文本与多说话人混合场景下的误差累积没有系统报告；多语言覆盖有限，粤语的高字符错误率被归因于 Whisper-large-v3 的识别能力上限而非方法本身；训练数据许可与商业使用边界也语焉不详——这些对想落地的团队都是关键信息。
 
 ### 📌 核心摘要
 
@@ -63,6 +63,10 @@ The resulting representations stabilize downstream LLM-DiT modeling, enabling Fi
 
 从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
 
+下图来自论文原文。
+
+![Figure 1: An overview of FireRedTTS3, including (a) the RedAE Tokenizer with semantic supervision, (b) FireRedTTS3-Base for multilingual and multi-dialect voice cloning,](https://arxiv.org/html/2608.17492/2608.17492v1/image/fireredtts3_arch.png)
+
 ### 💡 核心创新点
 
 1. 用冻结语音理解编码器提供语义教师，构造连续且语义增强的 RedAE 表征。 具体体现在2 Method FireRedTTS3 consists of two key components: the RedAE Tokenizer, a semantically enriched speech tokenizer, and a lightweight LLM-DiT generation framework.。该贡献同时限定了训练信号、数据条件与部署前提。
@@ -89,6 +93,10 @@ Experimental Setup We evaluate FireRedTTS3-Base and FireRedTTS3-Instruct on four
 | 数据/训练设置 | We use Whisper-large-v3 [36] for English WER, Paraformer-ZH [13] for Chinese CER, and WavLM-Large for speaker similarity. |
 主要结果 | The high Cantonese CER is attributed to the limited recognition capability of Whisper-large-v3. CER/WER(%)↓\downarrow Speaker Similarity(%)↑\uparrow Language MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 MiniMax ElevenLabs VoxCPM2 FishAudioS2 dots.tts(Pre.) FireRedTTS3 Arabic 1.67 1.67 13.05 3.50 37.91 1.75 73.6 70.6 79.1 75.0 7.5 78.9 Cantonese 34.1 51.51 38.58 30.67 37.91 40.32 7.8 67.0 83.5 80.5 84.7 83.9 Chinese 2.25 16.03 1.14 0.73 1.08 0.91 78.0 67.7 82.5 81.6 82.3 84.2 Czech 3.8 2.1 24.13 2.84 5.05 3.17 79.6 68.5 78.3 79.8 83.8 86.1 Dutch 1.14 0.80 0.91 0.9 1.20 1.15 |
 | 对照、消融或部署指标 | 3.4 Instruction-Controlled Voice Design Table 3: Instruction-following accuracy on InstructTTSEval. |
+
+下图来自论文原文。
+
+![Table 1: Zero-shot voice cloning results on Seed-TTS-Eval. Bold and underline denote the best and second-best results, respectively. All results are obtained using the of](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
 

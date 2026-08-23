@@ -26,7 +26,7 @@ paper_digest_arxiv_id: "2608.17931"
 
 ### 💡 毒舌点评
 
-SpeechSense 把“说了什么”和“怎么说”拆开，标签设计比 happy/sad 更贴近真实交互；93.12% 测试样本来自多数投票也让数据质量有了底气。不过，数据由高保真合成语音起步，剩下的最大问题恰恰是自然对话中的混合姿态、方言和文化差异，单一英文标注协议还不能代表真实世界。
+SpeechSense 把“说了什么”和“怎么说”拆开，标签设计比 happy/sad 更贴近真实交互；93.12% 测试样本来自多数投票也让数据质量有了底气。不过，数据由高保真合成语音起步，剩下的最大问题恰恰是自然对话中的混合姿态、方言和文化差异，单一英文标注协议还不能代表真实世界。细看还有三处折扣：合成语音起步的语料难免带生成器风格偏差，真实自然对话的验证不足；Fleiss κ 只达中等水平，讽刺、温暖这类依赖语境的类别主观性明显；基准规模适合研究原型，但距离生产级长对话与开放集意图识别仍有明显差距。八类姿态、单一英语的覆盖也让跨文化推广存疑。
 
 ### 📌 核心摘要
 
@@ -62,6 +62,10 @@ As speech encoders, we evaluate Whisper-large-v3 (Radford et al. 2023), HuBERT-l
 
 从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
 
+下图来自论文原文。
+
+![Figure 1. The SpeechSense dataset construction pipeline. The framework consists of (1) semantic-prosodic decoupled text design, (2) role-play synthesis using Lovo.ai, and](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
+
 ### 💡 核心创新点
 
 1. 把情感识别从基本情绪扩展到可行动的人际姿态。 具体体现在However, few studies have specifically optimized these architectures for the fine-grained sentiment detection proposed in this work. 2.3.。该贡献同时限定了训练信号、数据条件与部署前提。
@@ -88,6 +92,10 @@ These results empirically validate the primacy of acoustic cues in detecting sub
 | 数据/训练设置 | Experimental Setup We design our experimental protocol to answer two core questions: (1) whether acoustic cues are the dominant signal for fine-grained sentiment detection, and (2) whether the learned representations generalize across model architectures. |
 主要结果 | Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal LLMs Qwen2.5-Omni-3B Text 8.2% 3.79% 25.26% 19.71% Qwen2.5-Omni-3B Audio 3.74% 1.31% 54.86% 53.38% Qwen2.5-Omni-7B Text 1.36% 6.20% 26.76% 2.27% Qwen2.5-Omni-7B Audio 1.96% 2.96% 56.95% 56.76% Text-only LLMs Qwen2.5-Instruct-3B Text 15.84% 6.63% 14.20% 4.60% Qwen2.5-Instruct-7B Text 1.36% 4.3% 25.26% 15.97% Speech Encoders Whisper-large-v3 Audio 13.30% 5.03% 45.4% 45.06% HuBERT-large Audio 10.16% 3.87% 4.39% 43.79% Wav2Vec2-large Audio 12.56% 3.17% 4.54% 42.45% First, the results underscore the critical necessity  |
 | 对照、消融或部署指标 | After supervised training, Qwen2.5-Omni text models saturate at 20–2% F1, and Qwen2.5-Instruct text models perform even worse—as low as 4.60% F1 for the 3B variant, which is lower than its own zero-shot baseline (6.63%), indicating that training induces mode collapse in the absence of acoustic signal. |
+
+下图来自论文原文。
+
+![Table 1. The SpeechSense Label Set. The labels are categorized into four attribute groups based on shared acoustic and interactional characteristics to capture fine-grain](https://arxiv.org/html/2608.17931/2608.17931v1/camera_ready_figure1_pipeline_ACMMM.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
 

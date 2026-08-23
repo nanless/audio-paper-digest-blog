@@ -27,7 +27,7 @@ paper_digest_arxiv_id: "2608.17707"
 
 ### 💡 毒舌点评
 
-DynaForcing 把“看起来清晰”与“真的在动”这两个目标拆开，是 talking avatar 领域很实用的诊断。它的三件套并不神秘：给 rollout 一个真实动态锚点、给损失补 motion reward、给参考图加扰动；真正的贡献在于把这三层作用和 collapse 的反馈回路对上。遗憾是训练仍依赖 14B WanS2V 和八张 H100，普通团队复现门槛不低。
+DynaForcing 把“看起来清晰”与“真的在动”这两个目标拆开，是 talking avatar 领域很实用的诊断。它的三件套并不神秘：给 rollout 一个真实动态锚点、给损失补 motion reward、给参考图加扰动；真正的贡献在于把这三层作用和 collapse 的反馈回路对上。遗憾是训练仍依赖 14B WanS2V 和八张 H100，普通团队复现门槛不低。补充两点边界：评测全部集中在 talking-head avatar 上，其他视频生成任务是否同样受益未知；结果绑定 WanS2V 14B 与特定训练配方，动态奖励权重和 p_data 对说话人风格的敏感性消融也不成体系。加上未公开代码模型，复现门槛实际相当高。
 
 ### 📌 核心摘要
 
@@ -48,6 +48,11 @@ Experiments show that DynaForcing recovers dynamics to teacher-comparable levels
 代码/模型：正文未提供明确公开仓库。
 数据：使用 AVSpeech、GenBench-ShortVideo 和 GenBench-LongVideo 等已有资源；本文没有发布新数据。
 复现状态：训练超参数和评价指标较完整，但缺少实现、权重和完整数据处理脚本。
+
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
 
 ### 🏗️ 方法概述和架构
 

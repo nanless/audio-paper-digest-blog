@@ -27,7 +27,7 @@ paper_digest_arxiv_id: "2608.17084"
 
 ### 💡 毒舌点评
 
-这篇综述最值得保留的一句话是：置信度不是最终产品，行为才是。模型看不清图、模态冲突或问题本来不可回答时，继续输出流畅答案并不叫 uncertainty-aware。框架完整，但它把许多方向放进同一张图后，仍需要 benchmark 证明哪一种信号真的改善了决策，而不是只让系统更会说“我不确定”。
+这篇综述最值得保留的一句话是：置信度不是最终产品，行为才是。模型看不清图、模态冲突或问题本来不可回答时，继续输出流畅答案并不叫 uncertainty-aware。框架完整，但它把许多方向放进同一张图后，仍需要 benchmark 证明哪一种信号真的改善了决策，而不是只让系统更会说“我不确定”。框架层面的批评同样成立：综述不提供新的统一实验，各维度的优先级仍待决策级 benchmark 验证；不同任务的风险函数与用户成本差异巨大，单一校准指标不可比；黑盒模型与多模态输入质量还会让不确定性信号本身带偏。音频音乐领域的专门实证更是稀少。
 
 ### 📌 核心摘要
 
@@ -46,6 +46,11 @@ Hallucination studies often capture the failure symptom, while uncertainty-aware
 ### 🔗 开源详情
 
 本文为综述，未发布专属代码、模型或数据集。文中引用 conformal、selective prediction、grounding 和多模态 benchmark，具体开源状态需按各参考工作核验。
+
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
 
 ### 🏗️ 方法概述和架构
 

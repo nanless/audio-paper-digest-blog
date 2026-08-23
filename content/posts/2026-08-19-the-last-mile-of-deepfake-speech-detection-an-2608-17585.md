@@ -66,6 +66,11 @@ Most of the literature advances detection methods, surveyed in [29] and driven b
   - SSL 语音表征、raw-waveform 端到端模型、基于频谱图的卷积网络：论文未给出具体项目名称或链接
   - ISO/IEC 19795（标准）：论文未提供链接
 
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
+
 ### 🏗️ 方法概述和架构
 
 本文本质上是一份系统化的工业-学术经验报告，而非一篇提出新网络架构的论文。不过，作者仍披露了他们最终部署的检测器骨架，以及围绕该检测器构建的训练、评估与交付流程，可以概括为“自监督语音表征 + attentive pooling + 分块推理 + 最大聚合 + LLR 校准”的流水线。 整体流程概述：输入是一段任意长度的音频（可能是长录音、电话录音或部分伪造的片段）；系统以固定长度的 chunk 为单位提取 SSL 表征，每个 chunk 经过前端和聚合模块输出一个伪造 vs 真实的分数；最终对整段录音的多个 chunk 分数取最大值，得到录音级别的 calibrated log-likelihood ratio（LLR），并可映射为某种操作阈值下的判定。 主要组件/模块详解： 1. **自监督（SSL）语音前端** - 功能：将原始波形或声学特征转换为对语音内容、说话人和信道相对鲁棒的高层表征。作者强调，由于 deepfake 检测本质上是“在训练时未见过的合成器上进行 out-of-distribution 泛化”，使用在大规模无标注语音上预训练过的 SSL 表征比从头训练更有优势。 - 内部结构/实现：论文未指明具体使用哪一种 SSL 模型（如 wav2vec 2.0、HuBERT、WavLM 等），仅引用相关文献并描述为“pretrained SSL front-ends”。可推断为基于 Transformer 或 CNN 的自监督预训练编码器。 - 输入输出：输入为音频 chunk；输出为高维帧级或段级表征。 2. **Attentive Pooling 聚合模块** - 功能：将帧级 SSL 特征聚合为段级嵌入，并进一步输入分类器。Attentive pooling 通过对帧级特征加权求和，使模型自动关注对伪造检测最有判别性的时间区域，例如局部伪影或共振峰异常。 - 内部结构/实现：论文未给出具体实现细节，通常由注意力子网络计算每帧权重，再对特征进行加权平均；随后接线性投影得到原始分类分数，再经校准输出 LLR。 - 输入输出：输入为帧级特征序列；输出为段级分数或嵌入。 3. **分块推理与最大聚合** - 功能：处理长音频和“部分伪造”场景。forensic 用户关心的是“一段长录音中只有几秒是合成的”，因此系统不能只对整段录音做单一判定。 - 内部结构/实现：推理时将录音切成多个 chunk，分别计算每个 chunk 的分数，然后取所有 chunk 分数的最大值作为整段录音的分数。这样可以保证只要某一段是伪造的，整段录音就会被标记。 - 输入输出：输入为完整录音；输出为录音级 LLR 分数，以及潜在的 chunk 级分数（论文未明确是否向用户暴露 chunk 级结果）。 4. **校准与评分输出** - 功能：将原始分类分数转化为具有概率意义的 log-likelihood ratio，便于客户设定操作点。 - 内部结构/实现：论文未给出具体校准算法（如 Platt scaling、isotonic regression、温度缩放等），只说明由于客户缺乏标注数据，最终“shipped a default calibration”。 - 输入输出：输入为分类器输出；输出为 calibrated LLR。 组件间的数据流与交互：原始音频 → 分块 → SSL 前端 → attentive pooling → 分类器 → 每 chunk 分数 → 取 max → calibrated LLR → 阈值判定/输出给客户。训练阶段的数据流类似，但增加了数据增强（telephony、codec、背景噪声）和来自多个合成器的正负样本。 关键设计选择及动机：
@@ -108,6 +113,14 @@ Subsequent benchmarks confirm the pattern across ASVspoof 2021 [52], ASVspoof 5 
 | 数据/训练设置 | 3.3.3 Testing generalization to unseen attacks A deeper problem is that we cannot be certain we are testing generalization at all. A real deployment must cover a far wider range of attacks than any single benchmark provides, and the obvious response is to combine several datasets. |
 主要结果 | Most of the literature advances detection methods, surveyed in [29] and driven by the ASVspoof challenge series [52]. A second strand documents the generalization gap, showing that detectors that excel on a benchmark falter on unseen attacks and on genuinely in-the-wild material [28], which in turn has motivated larger and more diverse corpora spanning many languages and synthesizers [35, 26]. A third examines the ethical and licensing limits of the data on which the field depends [4]. |
 | 对照、消融或部署指标 | 3.1 The Data Problem The literature has repeatedly documented that competitive detectors trained on the canonical benchmarks degrade catastrophically when evaluated on synthesized audio they have not seen during training. Müller et al. [34] reported equal-error-rate degradations of up to 100% between in-domain ASVspoof 2019 evaluation and a curated in-the-wild celebrity deepfake dataset. |
+
+下图来自论文原文。
+
+![Table 2: From experience to roadmap. Each project observation (left) motivates a question for broader investigation (centre), which we map to proposed actions in Section](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
+
+下图来自论文原文。
+
+![Figure](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation-international.png)
 
 上述结果应结合数据集、基线、指标方向和测量条件理解。
 

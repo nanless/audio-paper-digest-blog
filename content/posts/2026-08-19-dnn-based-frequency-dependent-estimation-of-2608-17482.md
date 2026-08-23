@@ -54,6 +54,12 @@ paper_digest_arxiv_id: "2608.17482"
   - PyTorch（论文未提供链接）
   - SileroVAD（论文未提供链接）
 
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/snakers4/silero-vad
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
+
 ### 🏗️ 方法概述和架构
 
 **1. 目标表示与功率分解**
@@ -115,6 +121,10 @@ softmax 输出与输入混合功率按元素相乘，得到每类功率谱估计
 - 功率域估计避免相位建模与完整波形反变换；
 - 因果单向 GRU 满足实时低延迟要求。
 
+下图来自论文原文。
+
+![Fig. 1 : Architecture of the proposed causal CRNN for estimating time-varying speech, music, and noise power spectra. x ⁡ ( t ) x(t) denotes the time-domain mixture.](https://arxiv.org/html/2608.17482/2608.17482v1/online_example_levels.png)
+
 ### 💡 核心创新点
 
 1. **统一可解释的声学场景表示**：将助听器常用的场景分析任务统一为“语音/音乐/噪声”三类时频功率分解，替代多个独立估计器，并可通过简单后处理导出多个下游估计。
@@ -146,6 +156,10 @@ softmax 输出与输入混合功率按元素相乘，得到每类功率谱估计
 | SileroVAD | 0.848 | 未说明 | 未说明 |
 
 按声源组合细分的对数误差显示：噪声单源场景误差最低；语音+噪声和音乐+语音优于音乐+噪声；三类同时存在时误差最大。这说明语音的频谱结构更易区分，而音乐与噪声之间重叠更易混淆。
+
+下图来自论文原文。
+
+![Fig. 2 : Qualitative example from the unseen evaluation dataset for speech mixed with InVehicle noise. The left column shows the mixture, while the first and second rows](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
 
 ### 🔬 细节详述
 

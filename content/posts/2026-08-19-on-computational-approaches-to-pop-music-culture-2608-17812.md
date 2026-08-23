@@ -26,7 +26,7 @@ paper_digest_arxiv_id: "2608.17812"
 
 ### 💡 毒舌点评
 
-本文最重要的提醒是：只听音频会把 Pop 文化削成波形特征，封面、歌词、音乐视频和传播语境同样是证据。它对“distant reading”迁移到音乐的解释很有启发，但综述提出的多模态愿景仍受数据偏斜、授权和文化语义不可比的现实约束，工程上远比做一个跨模态 embedding 困难。
+本文最重要的提醒是：只听音频会把 Pop 文化削成波形特征，封面、歌词、音乐视频和传播语境同样是证据。它对“distant reading”迁移到音乐的解释很有启发，但综述提出的多模态愿景仍受数据偏斜、授权和文化语义不可比的现实约束，工程上远比做一个跨模态 embedding 困难。落到证据层面：综述依赖公开英语资源，非英语地区与小众文化的代表性不足；不同语料的版权、采样机制与元数据质量差异会实质影响结论；三个未来方向既缺统一数据标准也没有可复现基线，多模态因果解释更是明确需要文化研究者参与而非自动模型单打独斗。
 
 ### 📌 核心摘要
 
@@ -45,6 +45,11 @@ These models have been used for automatic music tagging and cross-modal retrieva
 ### 🔗 开源详情
 
 本文未发布专属代码或数据集。文中提到 NLP4MUSA、ISMIR、AllMusic、TRECVID 等公开资源和项目，但需遵守各自许可，不能视为本文产物开源。
+
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
 
 ### 🏗️ 方法概述和架构
 
@@ -88,6 +93,10 @@ In a sentiment analysis of 263,525 Pop music reviews, results show more positive
 | 数据/训练设置 | Other critique concerns specific methodological problems, e.g. casting doubt (104) on how periods of stylistic revolutions have been discovered in previous studies (62). |
 主要结果 | These models have been used for automatic music tagging and cross-modal retrieval (46), automatic lyrics interpretation (10), music understanding and reasoning (36), captioning and question answering (58; 24). |
 | 对照、消融或部署指标 | In a sentiment analysis of 263,525 Pop music reviews, results show more positive sentiments in reviews around 208, especially for genres from more diverse communities like Jazz and Latin music, but not for Country music. |
+
+下图来自论文原文。
+
+![(a) - 图2](https://arxiv.org/html/2608.17812/2608.17812v1/leeperry.jpg)
 
 !
 上述结果应结合数据集、基线、指标方向和测量条件理解。

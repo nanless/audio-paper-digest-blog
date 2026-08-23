@@ -27,7 +27,7 @@ paper_digest_arxiv_id: "2608.16686"
 
 ### 💡 毒舌点评
 
-AffectLoop 的亮点是承认机器人也有“listener state”，而不是把用户情绪塞进一次性 prompt；5.10 对 4.75 的总体印象提升也很诱人。但五名参与者的 pilot 更像可行性信号，不是疗效结论，尤其情绪识别误差、LLM 延迟和 Misty 的行为表达是否稳定，远未被这项研究解决。
+AffectLoop 的亮点是承认机器人也有“listener state”，而不是把用户情绪塞进一次性 prompt；5.10 对 4.75 的总体印象提升也很诱人。但五名参与者的 pilot 更像可行性信号，不是疗效结论，尤其情绪识别误差、LLM 延迟和 Misty 的行为表达是否稳定，远未被这项研究解决。把话说透：五人 pilot 的统计功效不足以支撑任何疗效性结论，情绪识别与 listener-state 估计的误差没有单独消融，总体印象的提升可能来自系统的整体差异而非同理机制本身；Misty II 的动作表达幅度、语音延迟与摄像头环境也限制了结论的外部效度。
 
 ### 📌 核心摘要
 
@@ -48,6 +48,11 @@ Table 1: Impression Ratings Items Item Description Baseline Proposed Naturalness
 论文未明确给出本系统的代码、模型权重或数据集仓库。
 公开组件：Misty II 平台、Retico 等可获得，但 AffectLoop 的 prompt、情绪模型和实验日志未完整发布。
 
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
+
 ### 🏗️ 方法概述和架构
 
 系统输入两类 speaker 证据：ASR 文本及其情绪轨迹、摄像头捕获的面部行为。增量框架在语音片段到达时更新状态，避免等待整轮对话结束。文本情绪模块估计类别、valence 和 arousal；视觉模块从短时间窗聚合面部 affect；两者共同形成 speaker state。 listener state 一侧记录机器人上一轮生成语音的情绪以及已执行的非语言行为。LLM prompt 同时接收 speaker 和 listener 的状态、对话历史及行为约束，输出短的同理响应和情绪一致的 Misty 动作。TTS 负责语音，机器人 API 执行表情、姿态或灯光等行为，Retico 连接增量 ASR、情绪推断、LLM 和动作执行。 实验采用同一机器人、同一对话任务和两种条件，随机化先后顺序以减轻顺序效应。评分覆盖自然性、理解、同理倾听、同理回应、用户满意度和压力缓解；交互日志再计算 speaker–listener affective alignment 与 valence-based distress recovery。
@@ -63,6 +68,10 @@ Retico follows the Incremental Unit (IU) model [21], where each module processes
 ![Figure 3: Photo of interaction with Misty II by the participant](https://arxiv.org/html/2608.16686v1/interaction.JPG)
 
 从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+
+下图来自论文原文。
+
+![Figure 1: Proposed AffectLoop system architecture in this study - 图2](https://arxiv.org/html/2608.16686v1/2608.16686v1/system.png)
 
 ### 💡 核心创新点
 

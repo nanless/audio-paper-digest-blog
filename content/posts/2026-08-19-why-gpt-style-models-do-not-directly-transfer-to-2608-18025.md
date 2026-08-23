@@ -26,7 +26,7 @@ paper_digest_arxiv_id: "2608.18025"
 
 ### 💡 毒舌点评
 
-这篇论文指出“把更大的音乐片段当 token”并不等于压缩得更好，观点很有穿透力；但理论框架容易被读成一套漂亮的设计原则，真正决定它是否成为方法的，是跨表示、跨数据集和跨模型的验证。目前受控实验支持方向性结论，距离替代主流音乐 tokenization 还很远。
+这篇论文指出“把更大的音乐片段当 token”并不等于压缩得更好，观点很有穿透力；但理论框架容易被读成一套漂亮的设计原则，真正决定它是否成为方法的，是跨表示、跨数据集和跨模型的验证。目前受控实验支持方向性结论，距离替代主流音乐 tokenization 还很远。落到验证层面：实验主要是受控符号数据，真实音乐的演奏法、噪声与风格变化未覆盖；框架给出了判据却没有自动搜索最优坐标系的算法；与现有 MIDI tokenizer 和音频 codec 的系统对比不足；代码、数据与完整超参数均未公开，公平复核成本很高。
 
 ### 📌 核心摘要
 
@@ -46,6 +46,11 @@ Figure 3: Carrier and context controls. K shortens J’s serialization by 71.07%
 
 代码、模型和数据：正文未提供明确仓库或可下载实现。
 可复现性：论文中的定义和受控实验原则可复述，但完整实验脚本、数据生成细节和训练配置未公开。
+
+- 论文页面中出现的仓库/资源链接（含引用项目，未经逐项核实归属）：
+  - https://github.com/arXiv/html_feedback/issues
+  - https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+  - https://github.com/brucemiller/LaTeXML/issues
 
 ### 🏗️ 方法概述和架构
 
