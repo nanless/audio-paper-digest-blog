@@ -32,16 +32,6 @@ paper_digest_arxiv_id: "2608.17605"
 
 本文综述多轮对话从文本向语音、多模态、全模态和工具增强交互的发展。作者把会话表示为随轮次更新的用户输入、系统输出、上下文、模态和外部状态，围绕数据集、模型范式、训练策略和评测设置组织文献。核心结论是感知和生成模态扩展快于跨轮一致性：当前系统仍在持久记忆、跨轮证据绑定、打断与全双工、跨语言文化适应、工具轨迹和风险感知评估上存在缺口，并提出 remember、revise、ground、speak、listen、act、adapt 的研究议程。
 
-5 Training Strategies Multi-turn dialogue training must account for de- pendencies across turns, delayed rewards, chang- ing user intent, and context-sensitive response quality.。
-
-In Appendix Table 5, we summarize modeling paradigms, while Table 6 presents the main training strategies.。
-
-Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets.。
-
-AlignMMBench (Wu et al., 2025d) evalu- ates cultural alignment and factual consistency in single- and multi-turn Chinese and bilingual multi- modal dialogues. SVBench (Yang et al., 2025) in- troduces temporal multi-turn dialogue over stream- ing video, where later questions depend on both earlier answers and specific video segments. A.1.4 Cultural and Linguistic Resources Arabic and dialectal multi-turn resources.。
-
-因此，结论应限定在论文实际报告的数据、模型与评价协议内。
-
 ### 🔗 开源详情
 
 代码/数据：本文为综述，未提供专属代码仓库或新数据集。
@@ -51,13 +41,9 @@ AlignMMBench (Wu et al., 2025d) evalu- ates cultural alignment and factual consi
 
 综述首先定义多轮会话不是独立问答，而是由用户话语、系统响应、会话上下文、模态状态和外部知识共同组成的序列。每一轮都可能澄清目标、修订约束、引入新证据或打断上一轮，因此模型需要记忆与更新，而不是只把历史拼接进 prompt。 文献被分成文本对话、AudioLLM/语音原生系统、多模态和 omni-modal 系统、工具增强 agent 四层。对每层分别整理数据集与 benchmark、上下文窗口和外部记忆、训练/后训练、检索和工具调用、响应延迟、全双工及说话人/文化适配。语音系统特别关注 ASR 错误传播、重叠语音、turn-taking、barge-in、声学 grounding 与语音输出。 评测被分成 turn-level correctness、session-level coherence、memory/grounding、task success、safety/uncertainty 和用户体验。作者指出单轮准确率不能替代会话级指标，未来应报告跨轮事实保持、修订后的目标满足、无法回答时的澄清/拒答、工具执行轨迹，以及模态缺失和分布偏移下的鲁棒性。
 
-To translate this comparison into practice, in Table 8, we map common deployment goals to the training strategy.。
+训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
 
-Videollama 2: Advanc- ing spatial-temporal modeling and audio un- derstanding in video-llms. arXiv preprint arXiv:2406.07476.。
-
-Aqulia-med llm: pioneering full-process open- source medical language models. arXiv preprint arXiv:2406.12182.。
-
-从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+综述的组织框架按能力递进排列：从单轮理解到跨轮记忆保持再到主动工具调用。这种分层使读者能定位关心的能力层级并找到对应评测，但任何单层结论都依赖上层能力的成熟度。各层级的评测成熟度差异很大，早期层级的结论相对稳固而后期层级更多停留在提案阶段。综述对评测协议碎片化问题的诊断尤其值得基准建设者关注。
 
 ### 💡 核心创新点
 
@@ -77,28 +63,9 @@ Aqulia-med llm: pioneering full-process open- source medical language models. ar
 
 综述对比了多类 survey、数据集和 benchmark，反复发现多数资源仍只测单轮或短上下文；音频和视觉能力增强并未同步带来持久记忆、跨轮证据绑定或可靠的全双工。作者整理的文献证据支持多轮一致性、记忆更新、文化适应和会话级评测是共同缺口，但本文不提供新的数值 benchmark。
 
-It combines real images, text questions, spoken questions, and image-grounded answers, but its current task format is single- turn rather than conversational. M2CQA (Mousi et al., 2026) provides a single-turn multimodal QA benchmark spanning 17 MENA countries in MSA and multiple Arabic dialects, and intro- duces the Cultural Hallucination and Factual Re- call metric for measuring culturally grounded cor- rectness.。
-
-ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (Alwajih et al., 2024) focuses on dialect-aware Arabic multi- modal modeling, MLQA (Lewis et al., 20) pro- vides a cross-lingual extractive QA baseline, and mSTEB (Beyene et al., 2025) extends multilingual evaluation to speech and text tasks.。
-| 实验维度 | 全文报告（保留原条件与指标） |
-|---|---|
-| 数据/训练设置 | Table 2 lists 18 text- image resources, however, only 8 spoken and 6 video-oriented datasets. |
-主要结果 | AlignMMBench (Wu et al., 2025d) evalu- ates cultural alignment and factual consistency in single- and multi-turn Chinese and bilingual multi- modal dialogues. SVBench (Yang et al., 2025) in- troduces temporal multi-turn dialogue over stream- ing video, where later questions depend on both earlier answers and specific video segments. A.1.4 Cultural and Linguistic Resources Arabic and dialectal multi-turn resources. |
-| 对照、消融或部署指标 | It combines real images, text questions, spoken questions, and image-grounded answers, but its current task format is single- turn rather than conversational. M2CQA (Mousi et al., 2026) provides a single-turn multimodal QA benchmark spanning 17 MENA countries in MSA and multiple Arabic dialects, and intro- duces the Cultural Hallucination and Factual Re- call metric for measuring culturally grounded cor- rectness. |
-
-上述结果应结合数据集、基线、指标方向和测量条件理解。
-
 ### 🔬 细节详述
 
 检索范围覆盖 Google Scholar、Semantic Scholar，以及 NeurIPS、ICLR、ICML、Interspeech、SIGDIAL、CVPR、ICCV、AAAI 等会议。分类表涉及文本/语音/视觉/三模态、对话类型、上下文管理、训练策略、检索工具、评测和安全。对 AudioLLM，文章特别讨论 speech-native 输入、连续听觉流、语音活动检测、延迟和 full-duplex turn-taking。
-
-数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- Broader cultural multimodal resources. SEA- VQA (Urailertprasert et al., 2024) evaluates cul- tural visual question answering across South- east Asian settings. CVQA (Mogrovejo et al., 2024), CulturalGround (Nyandwi et al., 2025), and MMA-ASIA (Weihua et al., 2025) extend culturally focused multimodal evaluation across broader language and regional settings.。
-
-论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
-
-上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
@@ -122,9 +89,7 @@ ArabicaQA (Abdallah et al., 2024) sup- ports Arabic question answering, Dallah (
 
 1. 综述范围很大，模型、数据集与评测的覆盖会随发表速度快速变化。 2. 不同论文的“多轮”定义和指标不一致，横向比较不可避免地带有主观归类。 3. 对真实部署成本、延迟、隐私和跨文化用户研究的量化仍有限。 4. 研究议程提出了问题，但没有统一可执行 benchmark 或代码基线。
 
-此外，AlignMMBench (Wu et al., 2025d) evalu- ates cultural alignment and factual consistency in single- and multi-turn Chinese and bilingual multi- modal dialogues. SVBench (Yang et al., 2025) in- troduces temporal multi-turn dialogue over stream- ing video, where later questions depend on both earlier answers and specific video segments. A.1.4 Cultural and Linguistic Resources Arabic and dialectal multi-turn resources. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
-
-因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
+此外，AlignMMBench (Wu et al., 2025d) evalu- ates cultural alignment and factual consistency in single- and multi-turn Chinese and bilingual multi- modal dialogues. SVBench (Yang et al., 2025) in- troduces temporal multi-turn dialogue over stream- ing video, where later questions depend on both earlier answers and specific video segments. A.1.4 Cultural and Linguistic Resources Arabic and dialectal multi-turn resources.
 
 ---
 

@@ -33,16 +33,6 @@ paper_digest_arxiv_id: "2608.17114"
 
 本文面向伊朗古典声乐的微分音、自由节奏和 tahrir 装饰，提出一个可视化、可编辑的自动转录工作流。系统以 pYIN 从音频提取音高轨迹，将频率换算为 cents，使用多层 pitch histogram 找到稳定音高峰，再用 DTW 对齐演唱轨迹与 Masoudieh 的 MIDI/记谱 ground truth，识别句首、静音、spike、valley 和 tahrir 片段。输出既包括 music21 可处理的符号表示，也包括叠加音频音高轮廓和 MIDI 的检查图，专家可以在 companion visual editor 中修正结果。
 
-Their evaluation on the iKala dataset showed similar results for both algorithms, with pYIN achieving 91% Raw Pitch Accuracy and CREPE 90.5%.。
-
-Developed in collaboration with musicians, the proposed framework consists of two complementary programs.。
-
-Figures 9 and 10 illustrate the final sequence matching results for Sentences 1 and 2 of Example 1, respectively.。
-
-Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 1 Figure 10: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 2 4.1 Expert-in-the-Loop Transcription Correction Figure 1 summarizes the expert-in-the-loop correction workflow, which uses two separate programs.。
-
-因此，结论应限定在论文实际报告的数据、模型与评价协议内。
-
 ### 🔗 开源详情
 
 代码：公开仓库 https://github.com/SepiSha/microtonal-music-autotranscriber。
@@ -53,17 +43,13 @@ Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence
 
 输入是单声道声乐录音及与其对应的专家转录。第一阶段使用 Sonic Annotator 的 pYIN 生成音高轨迹，步长 256、窗口 2048，并设置低振幅抑制、onset sensitivity、pruning 等参数；随后将 Hz 转为 cents，使跨八度的音程在统一尺度上可比较。 第二阶段把每个音高点放入 dataframe，按 solid note、silence、spike、valley、句首和未分类等状态标记。对 cents 直方图做移动平均以抑制抖动，主峰作为表演中稳定且频繁出现的音高；对剩余未分配点重复直方图分析，捕获短暂或较弱的次级音。这个设计不强迫每个音都落在十二平均律，而是从实际演唱估计流动调律。 第三阶段用 DTW 对齐演唱旋律与专家 MIDI，处理自由节奏造成的时间伸缩；依据峰、谷、句法边界和连续快速变化识别 tahrir 装饰。最后通过 music21 生成符号化结果，并在图形界面中同时显示音频 pitch contour、DTW 路径和 MIDI，专家可修改错误音符或装饰分类。
 
-The framework is also adaptable for use in related musical traditions, particularly in free-rhythm and modal performances.。
-
-This approach not only advances the field of automatic music transcription (AMT) but also highlights the importance of tailoring transcription models to specific musical and cultural contexts.。
-
-Because the subsequent transcription stages operate on pitch data in.csv format, pYIN could be replaced with another pitch-estimation method in future experiments.。
-
 ![Figure 1: Masoudieh’s Transcript of Example 1](https://arxiv.org/html/2608.17114v1/daramad.png)
 
 ![Figure 2: Time-Frequency Data Processing](https://arxiv.org/html/2608.17114v1/algorithm.png)
 
-从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+
+技术路线的选择反映了伊朗古典声乐的特殊性：自由节奏与微分音使西方十二平均律的 MIDI 转录天然失真，音高直方图加动态时间规整的组合绕过了离散化步骤。专家在环的标注流程让装饰边界由音乐学知识而非纯算法判定，这是对文化遗产场景约束的务实回应。后续若能引入跨流派对照与统一的音符级标注，将大幅提升该工具的科学价值。
 
 ### 💡 核心创新点
 
@@ -83,31 +69,9 @@ Because the subsequent transcription stages operate on pitch data in.csv format,
 
 论文在 IRMA Audio-MIDI 中的伊朗声乐样例上展示了主峰、音高轮廓和 DTW 对齐效果，并用 pYIN 生成输入轨迹；引用的单声部基准中 pYIN Raw Pitch Accuracy 约为 91%。本文自身主要提供定性案例和图形核验，没有报告大规模音符级 F1、节拍误差或跨歌手统计，因此结果更适合证明流程可行性。
 
-For note naming, we follow the music21 convention: uppercase letters for lower octaves, lowercase letters for upper octaves, and lowercase letters with an apostrophe for even higher octaves.。
-
-It can also be a sequence of secondary notes featuring both higher and lower pitches and is an aspect of tahrir [23].。
-| 实验维度 | 全文报告（保留原条件与指标） |
-|---|---|
-| 数据/训练设置 | Figures 9 and 10 illustrate the final sequence matching results for Sentences 1 and 2 of Example 1, respectively. |
-主要结果 | Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 1 Figure 10: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 2 4.1 Expert-in-the-Loop Transcription Correction Figure 1 summarizes the expert-in-the-loop correction workflow, which uses two separate programs. |
-| 对照、消融或部署指标 | For note naming, we follow the music21 convention: uppercase letters for lower octaves, lowercase letters for upper octaves, and lowercase letters with an apostrophe for even higher octaves. |
-
-!
-![Figure 3: Pitch Histogram for Example 1](https://arxiv.org/html/2608.17114v1/mainhisto.png)
-
-上述结果应结合数据集、基线、指标方向和测量条件理解。
-
 ### 🔬 细节详述
 
 数据来自 Karimi 演唱及 Masoudieh 专家转录，后被纳入 IRMA Audio-MIDI。频率转 cents 的公式为 1200log2(f2/f1)；直方图以频率出现总时长为纵轴，峰值导出主音。软件使用 Python、pandas、music21、Sonic Annotator，并把结果导出为 CSV/MIDI 和联合可视化。仓库提供示例代码、编辑器和运行说明。
-
-数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- Moteghayyer: (literally alterable or variable) Describes a pitch that may be replaced by another, either a quartertone or semitone higher or lower, within the gushe [26].。
-
-论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
-
-上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
@@ -131,9 +95,7 @@ It can also be a sequence of secondary notes featuring both higher and lower pit
 
 1. 论文是案例研究，样本和歌手数量有限，不能代表整个伊朗声乐传统。 2. pYIN 的八度错误、噪声和弱伴奏会传递到后续峰检测与 DTW。 3. tahrir 的边界与音乐语义仍需要专家判断，自动规则可能漏掉非典型装饰。 4. 缺少统一的音符级 ground-truth 评测、跨流派对照和用户研究。
 
-此外，Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 1 Figure 10: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 2 4.1 Expert-in-the-Loop Transcription Correction Figure 1 summarizes the expert-in-the-loop correction workflow, which uses two separate programs. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
-
-因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
+此外，Figure 9: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 1 Figure 10: Visualizing the Pitch and Generated Transcription, Example 1, Sentence 2 4.1 Expert-in-the-Loop Transcription Correction Figure 1 summarizes the expert-in-the-loop correction workflow, which uses two separate programs.
 
 ---
 

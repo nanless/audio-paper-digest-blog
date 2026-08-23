@@ -32,15 +32,7 @@ SpeechSense 把“说了什么”和“怎么说”拆开，标签设计比 happ
 
 SpeechSense 面向细粒度 Speech Sentiment Analysis，定义八类主要由韵律和音质承载的人际姿态：Confident、Nervous、Passionate、Impatient、Warm、Apathetic、Sarcastic 和 Neutral。数据构建从高保真 TTS 生成 960 个候选片段，经至少三名 Prolific 标注者评审、两阶段多数投票与 reference alignment，得到 669 个测试样本；最终 93.12% 通过多数投票保留，Fleiss κ=0.4437。实验覆盖多模态 LLM、文本模型和语音编码器，结果显示保留音频的模型在所有架构上优于纯文本级联。
 
-However, few studies have specifically optimized these architectures for the fine-grained sentiment detection proposed in this work. 2.3.。
-
-We construct the dataset using a rigorous three-stage pipeline designed to minimize artifacts and maximize attitudinal distinctiveness (illustrated in Fig. 1). 1) Stage 1: Semantic-Prosodic Decoupled Text Design.。
-
-Experimental Setup We design our experimental protocol to answer two core questions: (1) whether acoustic cues are the dominant signal for fine-grained sentiment detection, and (2) whether the learned representations generalize across model architectures.。
-
 Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal LLMs Qwen2.5-Omni-3B Text 8.2% 3.79% 25.26% 19.71% Qwen2.5-Omni-3B Audio 3.74% 1.31% 54.86% 53.38% Qwen2.5-Omni-7B Text 1.36% 6.20% 26.76% 2.27% Qwen2.5-Omni-7B Audio 1.96% 2.96% 56.95% 56.76% Text-only LLMs Qwen2.5-Instruct-3B Text 15.84% 6.63% 14.20% 4.60% Qwen2.5-Instruct-7B Text 1.36% 4.3% 25.26% 15.97% Speech Encoders Whisper-large-v3 Audio 13.30% 5.03% 45.4% 45.06% HuBERT-large Audio 10.16% 3.87% 4.39% 43.79% Wav2Vec2-large Audio 12.56% 3.17% 4.54% 42.45% First, the results underscore the critical necessity of specific prosodic training.。
-
-因此，结论应限定在论文实际报告的数据、模型与评价协议内。
 
 ### 🔗 开源详情
 
@@ -52,19 +44,15 @@ Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal
 
 数据管线先把每个姿态写成声学和心理定义，再用高保真语音合成生成内容相同、韵律不同的片段。Confident 通过较短时长、高强度和决断式下降音高表现；Nervous 体现为 pitch jitter、高平均音高和不规则节奏；Passionate 与 Impatient 通过音域、截断和 staccato 节奏区分；Warm、Apathetic、Sarcastic 和 Neutral 分别覆盖连接感、单调疏离、语义与韵律不一致、以及声学基线。 候选音频由 Qualtrics/Prolific 流程收集标注，每条至少三名独立 annotator。先保留 3/3 或 2/3 共识样本；对无多数的样本，如果至少一名标注者与目标标签一致，则以 reference alignment 保留，以免细微姿态因普通听众歧义全部丢失。最终统计同时报告保留率、Fleiss κ 和各类别分布。 评测分别提供音频、转写文本或多模态输入，比较多模态大模型、文本 LLM 和专门语音编码器。这样可以把 ASR 误差、文本语义和韵律线索分离，检验声学输入是否真正帮助识别 interpersonal stance，而不是只看语言内容。
 
-Method Clips Spkrs Training Set Gemini 3 Pro Weakly-Sup. 1,52 30 Test Set Qwen3-Max Human-Val.。
-
-As text-only baselines, we include Qwen2.5-Instruct (3B and 7B), which share the same language backbone but lack an audio encoder.。
-
-As speech encoders, we evaluate Whisper-large-v3 (Radford et al. 2023), HuBERT-large (Hsu et al. 2021), and Wav2Vec2-large (Baevski et al. 20), each paired with attention pooling and a linear classification head.。
-
 ![Figure 1. The SpeechSense dataset construction pipeline. The framework consists of (1) semantic-prosodic decoupled text design, (2) role-play synthesis using Lovo.ai, and (3) dual-stage human validation and filtering.](https://arxiv.org/html/2608.17931v1/camera_ready_figure1_pipeline_ACMMM.png)
 
-从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
 
 下图来自论文原文。
 
 ![Figure 1. The SpeechSense dataset construction pipeline. The framework consists of (1) semantic-prosodic decoupled text design, (2) role-play synthesis using Lovo.ai, and](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
+
+数据构建的两阶段策略：先以八类语用姿态合成种子语音保证标签一致性，再经多成员投票过滤噪声样本。标签按「说了什么」与「怎么说」二分的设计为下游多任务学习提供结构化接口。未来扩展应优先覆盖多姿态混合、方言差异与文化语境，以缩小合成与自然对话之间的域差距。
 
 ### 💡 核心创新点
 
@@ -84,32 +72,13 @@ As speech encoders, we evaluate Whisper-large-v3 (Radford et al. 2023), HuBERT-l
 
 最终测试集含 669 个样本，93.12% 仅凭多数投票保留，Fleiss κ=0.4437，属于中等一致性。多模态模型和语音编码器在八类姿态上总体优于只读取 ASR 文本的模型；论文强调这一优势在 confident/nervous、passionate/impatient 等声学相近类别上更明显。结果支持“音频访问是细粒度语用情感的必要条件”，但类别级混淆矩阵和跨说话人泛化仍需结合完整附录解读。
 
-After supervised training, Qwen2.5-Omni text models saturate at 20–2% F1, and Qwen2.5-Instruct text models perform even worse—as low as 4.60% F1 for the 3B variant, which is lower than its own zero-shot baseline (6.63%), indicating that training induces mode collapse in the absence of acoustic signal.。
-
-These results empirically validate the primacy of acoustic cues in detecting subtle speaker attitudes, highlighting the necessity of SpeechSense.1 1 Dataset and supplementary materials: https://github.com/Sher13cked/SpeechSense Keywords: Speech Sentiment Analysis, Paralinguistics, Multi-modal Large Language Models, Synthetic Data ††cc-license: by 1.。
-| 实验维度 | 全文报告（保留原条件与指标） |
-|---|---|
-| 数据/训练设置 | Experimental Setup We design our experimental protocol to answer two core questions: (1) whether acoustic cues are the dominant signal for fine-grained sentiment detection, and (2) whether the learned representations generalize across model architectures. |
-主要结果 | Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal LLMs Qwen2.5-Omni-3B Text 8.2% 3.79% 25.26% 19.71% Qwen2.5-Omni-3B Audio 3.74% 1.31% 54.86% 53.38% Qwen2.5-Omni-7B Text 1.36% 6.20% 26.76% 2.27% Qwen2.5-Omni-7B Audio 1.96% 2.96% 56.95% 56.76% Text-only LLMs Qwen2.5-Instruct-3B Text 15.84% 6.63% 14.20% 4.60% Qwen2.5-Instruct-7B Text 1.36% 4.3% 25.26% 15.97% Speech Encoders Whisper-large-v3 Audio 13.30% 5.03% 45.4% 45.06% HuBERT-large Audio 10.16% 3.87% 4.39% 43.79% Wav2Vec2-large Audio 12.56% 3.17% 4.54% 42.45% First, the results underscore the critical necessity  |
-| 对照、消融或部署指标 | After supervised training, Qwen2.5-Omni text models saturate at 20–2% F1, and Qwen2.5-Instruct text models perform even worse—as low as 4.60% F1 for the 3B variant, which is lower than its own zero-shot baseline (6.63%), indicating that training induces mode collapse in the absence of acoustic signal. |
-
 下图来自论文原文。
 
 ![Table 1. The SpeechSense Label Set. The labels are categorized into four attribute groups based on shared acoustic and interactional characteristics to capture fine-grain](https://arxiv.org/html/2608.17931/2608.17931v1/camera_ready_figure1_pipeline_ACMMM.png)
 
-上述结果应结合数据集、基线、指标方向和测量条件理解。
-
 ### 🔬 细节详述
 
 标签集按 Internal Certainty、High-Energy Valence、Social Connection、Prosodic Deviation 四组组织。候选池从 23,006 个通过筛选的 Prolific 人员中招募，要求母语英语、大学学历和高历史通过率。93.12% 的最终样本由多数投票决定，46 个歧义样本由 reference alignment 保留；数据和补充材料提供 GitHub 下载入口。
-
-数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- Based on the widely accepted interpretation guidelines established by Landis and Koch (Landis and Koch 197), this score signifies moderate agreement (defined as the 0.41–0.60 interval).。
-
-论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
-
-上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
@@ -133,9 +102,7 @@ These results empirically validate the primacy of acoustic cues in detecting sub
 
 1. 合成语音和目标标签可能带来生成器风格偏差，真实自然语料验证不足。 2. 仅覆盖英语和八类姿态，文化、方言、年龄与多姿态混合表达仍需扩展。 3. Fleiss κ 中等，尤其讽刺、温暖等需要语境的类别可能存在主观性。 4. 基准规模适合研究原型，但距离生产级长对话和开放集识别还有差距。
 
-此外，Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal LLMs Qwen2.5-Omni-3B Text 8.2% 3.79% 25.26% 19.71% Qwen2.5-Omni-3B Audio 3.74% 1.31% 54.86% 53.38% Qwen2.5-Omni-7B Text 1.36% 6.20% 26.76% 2.27% Qwen2.5-Omni-7B Audio 1.96% 2.96% 56.95% 56.76% Text-only LLMs Qwen2.5-Instruct-3B Text 15.84% 6.63% 14.20% 4.60% Qwen2.5-Instruct-7B Text 1.36% 4.3% 25.26% 15.97% Speech Encoders Whisper-large-v3 Audio 13.30% 5.03% 45.4% 45.06% HuBERT-large Audio 10.16% 3.87% 4.39% 43.79% Wav2Vec2-large Audio 12.56% 3.17% 4.54% 42.45% First, the results underscore the critical necessity of specific prosodic training. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
-
-因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
+此外，Model Modality Zero-shot Supervised (Ours) Acc Macro F1 Acc Macro F1 Multi-modal LLMs Qwen2.5-Omni-3B Text 8.2% 3.79% 25.26% 19.71% Qwen2.5-Omni-3B Audio 3.74% 1.31% 54.86% 53.38% Qwen2.5-Omni-7B Text 1.36% 6.20% 26.76% 2.27% Qwen2.5-Omni-7B Audio 1.96% 2.96% 56.95% 56.76% Text-only LLMs Qwen2.5-Instruct-3B Text 15.84% 6.63% 14.20% 4.60% Qwen2.5-Instruct-7B Text 1.36% 4.3% 25.26% 15.97% Speech Encoders Whisper-large-v3 Audio 13.30% 5.03% 45.4% 45.06% HuBERT-large Audio 10.16% 3.87% 4.39% 43.79% Wav2Vec2-large Audio 12.56% 3.17% 4.54% 42.45% First, the results underscore the critical necessity of specific prosodic training.
 
 ---
 

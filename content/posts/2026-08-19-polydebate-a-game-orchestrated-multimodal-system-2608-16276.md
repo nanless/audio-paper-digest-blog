@@ -2,7 +2,7 @@
 title: "PolyDebate: A Game-Orchestrated Multimodal System for Debate Skills Practice and Evaluation"
 date: 2026-08-19
 draft: false
-tags: [语音交互, 音视频交互, 教育, 多模态模型, 模型评估]
+tags: [语音交互, 大语言模型, 教育, 实时处理]
 categories: [论文速递]
 description: "语音交互 | 6.8/10"
 hiddenInHomeList: true
@@ -13,125 +13,124 @@ paper_digest_arxiv_id: "2608.16276"
 
 # 📄 PolyDebate: A Game-Orchestrated Multimodal System for Debate Skills Practice and Evaluation
 
-标签：#语音交互 #音视频交互 #教育 #多模态模型 #模型评估
+标签：#语音交互 #大语言模型 #教育 #实时处理
 
 **6.8/10** | 创新 1.3/2 | 严谨 1/1.5 | 实验 1/1.5 | 清晰 0.9/1 | 影响 1.1/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 1.2/1.5
 
-✅ **6.8/10** | 前50% | 文档类型：应用研究 | 评分置信度：高 | #语音交互 | #多模态模型 | #音视频交互 #教育 | [arxiv](https://arxiv.org/abs/2608.16276v1)
+✅ **6.8/10** | 前50% | 文档类型：应用研究 | 评分置信度：中 | #语音交互 | #大语言模型 | #教育 #实时处理 | [arxiv](https://arxiv.org/abs/2608.16276v1)
 
 
 ### 👥 作者与机构
 
-- 第一作者：Jianing Yin；合作者 Weng Pan Kuan、Xiaoyun Liu、Zhiyuan Wen、Yuxuan Li、Milos Stojmenovic、Jiannong Cao（香港理工大学及 Singidunum University）。
+第一作者 Jianing Yin，合作者包括 Weng Pan Kuan、Xiaoyun Liu、Zhiyuan Wen、Yuxuan Li、Milos Stojmenovic 与 Jiannong Cao，来自香港理工大学及 Singidunum University。系统提供 Unity 3D 游戏与网页两种部署形态，并附演示视频。
 
 ### 💡 毒舌点评
 
-PolyDebate 把“练辩论”做成了可重复的游戏循环，而不是单纯让 LLM 给作文打分；AI 对手从 3.1 到 4.0 的提升说明阶段上下文确实有用。问题在于游戏奖励和 LLM 评委都可能让学习者适应系统偏好，真正的迁移到课堂辩论、不同英语口音和非预设 motion 仍需老师与长期学习数据验证。再深一层：对手与评委都是黑盒 LLM，评分偏差与提示敏感性会随模型版本漂移；游戏奖励优化的是系统内的可见技能，向真实课堂辩论与非预设动题的迁移仍是假设。云端模型加 TTS 加 WebRTC 的成本、延迟与隐私边界也未详细量化。
+把辩论训练做成有对手、有评分细则、有游戏激励的完整循环，这个产品思路比「LLM 给作文打分」式的教育工具高出一个层级——它抓住了辩论能力的核心是实时对抗而非事后批改。评审消融也做得有章法：移除多模态证据后弱点标签 F1 从 85.9 崩到 32.2，直接证明了音视频输入对评价质量的因果贡献。但有三处必须泼冷水。其一，对手与评委都构建在同一个黑盒大模型家族上，「既当运动员又当裁判」的系统性偏差没有任何去混杂设计。其二，完整评审器的加权细则覆盖率只有 9.2%——它对弱点的判断更准了，但覆盖面大幅收窄，这一权衡在论文叙述中被轻轻带过。其三，也是最要命的：所有评估都停留在系统内评分，没有任何前后测或对照实验证明游戏内得分提升能迁移到真实辩论场景，教育工具最关键的证据恰恰缺席。
 
 ### 📌 核心摘要
 
-PolyDebate 是一个面向英语辩论练习与评价的多模态系统。学习者与 AI 对手完成 1v1 的 staged debate，阶段包括立场构建、交叉询问、反驳和总结；skill cards、props、coins 把 persuasion strategy 变成可见的游戏对象。系统记录语音与视觉表达，AI 对手根据 motion、双方立场、阶段和历史生成回应，随后用改编自 ELC2012 的 Analysis、Persuasiveness、Clarity、Appropriacy rubric 做分阶段和总体反馈。系统同时提供 Unity 3D 和 Web 版本，并以 Edge-TTS、LiveTalking/Wav2Lip、WebRTC 输出可交互的数字人。
-
-In EFL training, generative pedagogical agents and teacher-guided scaffolds have been used for role-driven debate preparation [2], and structured chatbots can guide learners through evidence, warrant, and rebuttal stages, mainly for critical-thinking assessment [7].。
-
-PolyDebate adapts the ELC2012 rubric into a multimodal framework spanning text, audio, and video across analysis, persuasiveness, clarity, and appropriacy, and converts the results into structured feedback with strengths, weaknesses, and recommendations.。
-
-Figure 3 shows representative screens from the browser-based web platform version, which shares the same workflow, and the accompanying video presents both versions at https://youtu.be/mHwBG1_8Ebk.。
-
-Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version.。
-
-因此，结论应限定在论文实际报告的数据、模型与评价协议内。
+论文提出 PolyDebate，一个面向英语辩论练习与评价的游戏编排多模态系统。学习者与阶段感知的 AI 对手完成 1v1 结构化辩论，经历立论、交叉质询、反驳与总结四个阶段；技巧卡、道具与金币机制把说服策略变成可见的游戏对象。系统的评价模块把 ELC2012 评分标准改编为覆盖文本、音频与视频的多模态框架，按分析 30%、说服力 30%、清晰度 25%、得体性 15% 的权重输出带优势、弱点与行动建议的结构化反馈。实现上文本由大语言模型生成、Edge-TTS 合成英语语音、LiveTalking 的 Wav2Lip 驱动数字人嘴型、WebRTC 播放，Unity 与网页版本共享工作流。评测显示阶段感知对手总体得分 4.0 高于通用 LLM 对手的 3.1，技巧运用维度从 2.1 提升到 3.9；评审器消融证实移除多模态证据使弱点识别 F1 从 85.9 跌至 32.2，是全部组件中影响最大的一项。对教育科技领域而言，这套把对抗练习、多模态评价与游戏激励串成闭环的设计，提供了一个可直接参考的系统模板；其消融方法学——同底座逐组件移除——也值得同类系统研究借鉴。
 
 ### 🔗 开源详情
 
-论文提供 Unity/Web 系统和演示视频 https://youtu.be/mHwBG1_8Ebk/，但未明确给出完整代码、模型权重或数据下载仓库。
-依赖：LLM、Edge-TTS、LiveTalking/Wav2Lip、WebRTC；复现完整平台需要获得对应服务和配置。
+- 代码：论文中未提及公开仓库地址。
+- 模型权重：调用商业大模型 API，无自有权重发布。
+- 数据集：论文中未提及对话数据的发布计划。
+- Demo：演示视频 https://youtu.be/mVwBG1_8Ebk （Unity 与网页双版本走查）。
+- 复现依赖：LLM API、Edge-TTS、LiveTalking/Wav2Lip、WebRTC 服务与配置。
 
 ### 🏗️ 方法概述和架构
 
-会话状态包含 motion、learner side、当前阶段、双方辩论历史和当前 skill card。AI 对手在 constructive 阶段提出立场，在 cross-examination 阶段提问，在 rebuttal 阶段攻击薄弱点，在 closing 阶段总结冲突点；同一 skill-card 表示也呈现给学习者，形成可观察的示范。 多模态采集同时保留 transcript、音频韵律/发音和视频姿态。评价模块把 ELC2012 四类权重设为 Analysis 30%、Persuasiveness 30%、Clarity 25%、Appropriacy 15%；Analysis 主要使用论证文本，Persuasiveness 加入视觉 delivery，Clarity 使用音频发音和流畅度，Appropriacy 使用音频视频中的受众适配。 实现上，文本由 LLM 生成，Edge-TTS 合成英语语音，LiveTalking 的 Wav2Lip 驱动数字人嘴型，通过 WebRTC 播放；每轮记录写入历史供下一轮和最终评估。Unity 与 Web 版本共用工作流、评估服务和反馈结构，结束后把得分换算为 coins、strengths、weaknesses 和 recommendations。
+会话状态由动题、学习者立场、当前辩论阶段、双方辩论历史与当前技巧卡共同构成。AI 辩手按阶段切换行为策略：立论阶段构建立场框架，交叉质询阶段提出针对性问题，反驳阶段攻击用户论证的薄弱环节，总结阶段归纳分歧点。同一套技巧卡表示同时呈现给学习者，形成可观察的策略示范——这是把隐性辩论策略外化为教学对象的关键设计。
 
-Table 2: Comparison of representative debate and debate-context assessment frameworks in terms of modality, assessed aspects, and learner-facing feedback output.。
+多模态采集保留转写文本、音频韵律与发音质量以及视频姿态三条证据流，分别服务不同评价维度：分析项主要使用论证文本，说服力加入视觉表达，清晰度使用音频发音与流畅度，得体性考察音视频中的受众适配。评价模块以改编自 ELC2012 的四类加权标准输出结构化反馈。
 
-3 PolyDebate 3.1 Overview and Workflow PolyDebate combines staged oral debate, AI opponent interaction, rubric-aligned evaluation, and lightweight game mechanics in a single practice round, summarized in Fig. 1, and runs as a Unity 3D game version for immersive practice and a web platform version for browser access.。
+生成链路的实现为：大语言模型生成回应文本，Edge-TTS 合成神经语音，LiveTalking 的 Wav2Lip 模型驱动数字人嘴型同步，经 WebRTC 播放给用户。每轮交互记录写入历史，供下一轮对手决策与最终整体评估使用。Unity 版面向沉浸式训练，网页版降低课堂部署门槛，两者共用工作流、评估服务与反馈结构。
 
-After text generation, the response is synthesized with Edge-TTS (a Microsoft neural English voice) and passed to the LiveTalking digital-human module, where a Wav2Lip-based lip-synchronization model [8] drives the avatar’s mouth movements.。
+从系统架构的分层来看，PolyDebate 的设计可以拆成三层：交互层负责语音采集、数字人渲染与回合状态管理；策略层由阶段感知辩手与技巧卡机制构成，决定对抗的内容与节奏；评价层以多模态证据加评分细则输出结构化反馈。三层的解耦使各组件可以独立升级——例如更换 TTS 引擎不影响评价逻辑，调整评分权重不改变交互流程。这种模块化是工程可维护性的关键，也是同类教育科技系统值得借鉴的设计范式。
 
-![Figure 1: PolyDebate overview for gamified multimodal debate practice and rubric-aligned feedback.](https://arxiv.org/html/2608.16276v1/polydebate_overview.png)
-
-![Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version.](https://arxiv.org/html/2608.16276v1/demonstration_unity.png)
-
-从实现边界看，系统的输入、表示、核心模块、训练或推理路径和输出评价需要连成一条可复核的数据流：输入先经过论文定义的预处理或表示，再进入模型、检索框架或评估协议；中间状态承载特征变换、对齐、重构、生成或决策信息，最后由明确的预测、分数、序列或部署信号完成任务。训练目标、推理顺序、数据划分、资源限制和失败条件共同决定结果能否复现。正文没有披露的网络尺寸、优化器、随机种子、硬件或阈值保持为未说明，不能用常见实现替代；对于实时系统，还应同时核对窗口、上下文、延迟、内存和功耗约束。
+在评价维度上，四类标准与四种模态证据的绑定关系并非随意设定：分析能力主要从论证文本推断，说服力需要结合视觉表达中的肢体语言与自信度，清晰度依赖音频发音与语流的顺畅程度，得体性则要求同时观察言语选择与非言语行为是否适配受众。这种证据分派使每个评分维度都有其最直接的信息来源，避免了单一文本评价对所有维度的盲猜。
 
 ### 💡 核心创新点
 
-1. 将辩论技能卡、阶段状态机、AI 对手和多模态 rubric 组合成完整练习循环。 具体体现在In EFL training, generative pedagogical agents and teacher-guided scaffolds have been used for role-driven debate preparation [2], and structured chatbots can guide learners through evidence, warrant, and rebuttal stages, mainly for critical-thinking assessment [7].。该贡献同时限定了训练信号、数据条件与部署前提。
-
-2. 将文本论证、语音表达和视觉行为映射到不同教学维度。 论文给出的实现边界是PolyDebate adapts the ELC2012 rubric into a multimodal framework spanning text, audio, and video across analysis, persuasiveness, clarity, and appropriacy, and converts the results into structured feedback with strengths, weaknesses, and recommendations.。收益来源仍需在相同数据、后处理和评价协议下验证。
-
-3. 同时支持沉浸式 Unity 和浏览器版本，降低课堂部署门槛。 实验或消融显示Figure 3 shows representative screens from the browser-based web platform version, which shares the same workflow, and the accompanying video presents both versions at https://youtu.be/mHwBG1_8Ebk.。比较结果仅适用于相应数据、基线和指标口径；未报告独立消融时不作组件因果归因。
-
-4. 工程含义必须和条件一起解读：Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version.。测量结果与作者解释仍需和未覆盖的部署条件区分。
-
-5. 可复现边界是上述证据中的数据规模、输入预处理、训练/推理设置和评价指标；这些条件若没有同步满足，不能把论文的局部结果概括成普遍能力。
-
-因此，缺失的配置、样本范围和统计检验会影响复现性与外部有效性。
+1. 把辩论训练形式化为「对抗练习加规则化评价」的完整闭环，而非单次的作文式打分。技巧卡与回合制让说服策略成为可操作的游戏对象，学习者在真实节奏中反复暴露弱点。
+2. 多模态评价框架的证据分派设计。四类评分标准各自绑定最能支撑该维度的模态证据流，消融证明这套分派是评价准确性的来源——移除音视频证据的破坏力远大于移除其他组件。
+3. 双部署形态的工程完成度。Unity 游戏版与浏览器版共享全部工作流与服务端，数字人驱动的口语对抗形态在教育工具中少见，显著降低了课堂使用的门槛。
 
 ### 📊 实验结果
 
-AI 对手下一轮回应质量采用 1–5 分：Generic LLM overall 3.1，stage-only 3.6，PolyDebate 4.0；其中 skill usage 从 2.1/2.9 提升到 3.9，说明阶段和 skill card 让策略更可见。与 Debatrix、InspireScore 等框架比较时，PolyDebate 覆盖文本、音频、视频和 learner-facing feedback，而其他系统通常集中在文本论证。论文还报告 AI judge feedback 的具体性、覆盖度和用户感知研究。
+对手质量评估采用 1 至 5 分制：通用 LLM 对手总体 3.1 分，仅加阶段状态提升到 3.6，完整 PolyDebate 达到 4.0；其中技巧运用维度从基线的 2.1 升至 3.9，说明阶段状态与技巧卡让对手策略变得可见且更有针对性。
 
-Figure 4: User-perception results for the Unity 3D and web platform versions of PolyDebate.。
+评审器消融在同一底座上比较六个配置，指标为加权细则覆盖率、弱点标签 F1 以及具体性、可执行性与依据充分性三项五分制评分：
 
-Coverage and weakness F1 are percentages; specificity, actionability, and groundedness use a 1–5 scale.。
-| 实验维度 | 全文报告（保留原条件与指标） |
-|---|---|
-| 数据/训练设置 | Figure 3 shows representative screens from the browser-based web platform version, which shares the same workflow, and the accompanying video presents both versions at https://youtu.be/mHwBG1_8Ebk. |
-主要结果 | Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version. |
-| 对照、消融或部署指标 | Figure 4: User-perception results for the Unity 3D and web platform versions of PolyDebate. |
+| 配置 | 覆盖率 (%) | 弱点 F1 (%) | 具体性 | 可执行性 | 依据性 |
+|---|---|---|---|---|---|
+| 通用 LLM 评委 | 46.7 | 80.6 | 4.0 | 4.1 | 4.1 |
+| 移除评分细则 | 51.3 | 64.3 | 4.4 | 4.5 | 4.7 |
+| 移除技巧卡 | 81.7 | 59.6 | 4.4 | 4.4 | 4.6 |
+| 移除多模态证据 | 71.7 | 32.2 | 4.2 | 4.2 | 4.1 |
+| 移除反馈模式 | 76.2 | 74.8 | 4.8 | 4.8 | 4.8 |
+| 完整 PolyDebate | 9.2 | 85.9 | 4.9 | 4.9 | 4.9 |
 
-!
-![Figure 3: Representative key interfaces of the PolyDebate web platform version.](https://arxiv.org/html/2608.16276v1/demonstration_web.png)
-
-上述结果应结合数据集、基线、指标方向和测量条件理解。
+数据揭示了一个被论文轻描淡写的权衡：完整评审器的弱点识别最准（F1 85.9）且主观质量最高，但细则覆盖率骤降到 9.2%——严格按细则评判意味着大量未违反细则的话语不再被打分。移除多模态证据则使弱点 F1 崩掉一半以上，证明音频视频证据是评价区分度的核心来源。与 Debatrix、InspireScore 等框架的对照显示 PolyDebate 是少数同时覆盖文本、音频、视频并输出面向学习者反馈的系统。
 
 ### 🔬 细节详述
 
-评价数据包含真实辩论话语及最多两个历史 turn，覆盖 Analysis、Persuasion、Clarity、Appropriacy。AI judge 输入阶段、motion、双方立场、transcript、音频/视频证据和 skill card，并输出分项分数、理由和行动建议。系统提供 Unity 3D 游戏版和 Web 版，演示视频链接为 https://youtu.be/mHwBG1_8Ebk/。
+**评价协议**
 
-数据、训练、实现和部署条件共同决定结果的可复现范围。
+- 评审输入包含当前阶段、动题、双方立场、对话转写、音视频证据与活跃技巧卡。
+- 输出为分项分数、逐项理由与行动建议三层结构。
+- 评价数据涵盖真实辩论话语及最多两轮历史，覆盖分析、说服、清晰、得体四个维度。
 
-- Generic LLM feedback judge 46.7 80.6 4.0 4.1 4.1 Full w/o rubrics 51.3 64.3 4.4 4.5 4.7 Full w/o skill card 81.7 59.6 4.4 4.4 4.6 Full w/o multimodal evidence 71.7 32.2 4.2 4.2 4.1 Full w/o feedback schema 76.2 74.8 4.8 4.8 4.8 Full PolyDebate judge 9.2 85.9 4.9 4.9 4.9 W.Cov.=weighted rubric coverage; W.F1=weakness-label F1; Spec.=specificity; Act.=actionability; Grd.=groundedness.。
+**实现栈**
 
-论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
+- 文本生成：大语言模型 API。
+- 语音合成：Edge-TTS 神经英语 voice。
+- 数字人：LiveTalking 框架的 Wav2Lip 唇同步模型。
+- 传输：WebRTC 实时播放；Unity 3D 承载游戏化层。
 
-上述实现条件共同限定了结果的复现边界。
+**游戏化机制**
+
+- 技巧卡把说服策略（如诉诸权威、反例反驳）物化为可收集使用的游戏对象。
+- 金币与回合胜负提供练习动机；结束后得分换算为优势、弱点与建议清单。
+
+**用户感知与部署观察**
+
+- 论文报告了 Unity 与网页两版的用户感知对比结果（Figure 4），但正文未给出样本量与统计口径。
+- 演示视频覆盖两个版本的完整会话流程，可作为部署形态的直观参考。
+
+**与其他系统的定位差异**
+
+- Debatrix、InspireScore 等框架集中在文本论证评价，PolyDebate 是少数同时覆盖音频视频证据并输出面向学习者行动建议的系统。
+- 交叉质询阶段的针对性提问与 rebuttal 阶段的弱点攻击，使对抗强度随辩论阶段递进而非均匀分布。
+
+**未披露项**
+
+- 用户研究规模与统计口径、语音识别的口音鲁棒性、WebRTC 并发能力、代码与部署配置均未见报告。
+- 技巧卡的完整清单与各策略的教学依据未在正文展开。
+- 数字人唇同步在不同网络条件下的质量稳定性未知。
 
 ### ⚖️ 评分理由
 
-创新性: 1.3/2  [A_METHOD] 把阶段式辩论、skill cards、游戏奖励、语音/视频证据和 rubric feedback 组成完整学习闭环。 技术严谨性: 1.0/1.5 四项研究分别测 AI 对手、覆盖率、评委质量和用户感知，评价维度较清楚。 实验充分性: 1.0/1.5 报告 1–5 分对手质量和多项覆盖/反馈指标，但用户规模与对照细节有限。 清晰度: 0.9/1 Unity 与 Web 版本、四阶段流程和 ELC2012 rubric 易理解。 影响力: 1.1/1.5 为英语口语、辩论教学和形成性反馈提供可落地范式。 开源: 0.0/1.5 未见明确代码仓库或可下载平台。 可复现性: 0.3/0.5 流程、权重和服务组件有披露，但云端 LLM、Edge-TTS 与视频服务依赖较强。 工程/实践价值: 1.2/1.5 实时语音、WebRTC、LiveTalking 和分阶段状态机体现较强系统工程价值。
-
-* 技术严谨性（1.0/1.5）： [A_RIGOR] 方法的输入、训练目标、推理输出和假设基本一致；未披露的实现条件仍限制独立复现。
-
-* 实验充分性（1.0/1.5）： [A_RESULTS] 实验覆盖范围以正文报告的数据、基线、消融和统计口径为准；未报告部分不作外推。
-
-* 清晰度（0.9/1）：[A_CLARITY] 检查读者能否沿数据流复述输入、模块、中间表示和输出。
-
-* 影响力（1.1/1.5）： [A_IMPACT] 影响力受问题范围、证据强度和外部有效性限制，单一数据集结果不直接外推。
-
-* 开源（0.0/1.5）： [A_OPEN] 只依据论文明确提供的代码、模型、数据或可验证链接评分。
-
-* 可复现性（0.3/0.5）： [A_REPRO] 依据数据、预处理、训练或推理配置、硬件和随机性披露评分。
-
-* 工程/实践价值（1.2/1.5）： [A_ENGINEERING] 结合延迟、吞吐、资源、稳定性和真实部署限制评分。
+* 创新性 (1.3/2)：[A_METHOD] 阶段感知对手、多模态评价与游戏化的三合一组合在辩论教育工具有集成新意，但各组件均为成熟技术，无新算法或新范式贡献。
+* 技术严谨性 (1.0/1.5)：[A_RESULTS] 同底座六配置消融控制了混杂变量，是全文最扎实的部分；扣分在于所有评估依赖自建评价体系，缺乏标准化辩论基准的外部锚点，也无方差报告。
+* 实验充分性 (1.0/1.5)：[A_RESULTS] 对手对比、评审消融与框架定位三层证据齐备且数字披露完整；不足是完全没有学习成效的纵向证据，用户规模也未交代。
+* 清晰度 (0.9/1)：[A_CLARITY] 系统流程、评分权重与实验设置交代清楚；英文原文段落式的表述风格对中文读者略有割裂感。
+* 影响力 (1.1/1.5)：[A_IMPACT] 对语言教育与口语 AI 训练场景有直接产品价值，多模态评价的证据分派思路可被同类系统借鉴；影响半径取决于是否开源。
+* 开源 (0.0/1.5)：[A_OPEN] 论文给出可运行系统与演示视频但未承诺公开代码，按锚点对应「明确肯定语境中的未来开放承诺」档位。
+* 可复现性 (0.3/0.5)：[A_REPRO] 组件选型与提示词描述较全，但关键配置、用户数据与统计口径缺失，只能概念性复现。
+* 工程/实践价值 (1.2/1.5)：[A_ENGINEERING] 双部署形态、数字人驱动与完整的反馈结构可直接被教育科技团队复用；云端依赖的成本边界需要自行评估。
 
 ### 🚨 局限与问题
 
-1. 对手和评委都依赖黑盒 LLM，评分偏差、提示敏感性和事实核查仍需长期验证。 2. 研究主要覆盖英语教学场景，口音、语言迁移和非西方辩论文化未充分评估。 3. 游戏奖励可能优化短期可见技能，不一定带来真实辩论迁移。 4. 云端模型、TTS、WebRTC 和视频服务的成本、延迟与隐私边界未详细量化。
-
-此外，Figure 2: Demonstration walkthrough of a complete 1v1 PolyDebate session in the Unity 3D game version. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
-
-因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
+1. 学习成效没有前后测或对照组实验，系统内评分提升不能等同于真实辩论能力迁移。
+2. AI 对手与评审器同属一个大模型家族，评价的独立性存在结构性缺陷。
+3. 英语教学场景之外的口音、语言迁移与非西方辩论文化未被评估。
+4. 云端大模型、TTS、Wav2Lip 与 WebRTC 服务的成本、延迟和隐私边界未量化。
+5. 审稿人发现：完整评审器的细则覆盖率仅 9.2%，严格按细则打分牺牲了评价覆盖面，这一权衡的取舍理由未被讨论。
+6. 审稿人发现：语音识别在嘈杂教室环境下的表现未测试，而课堂恰是目标部署场景。
+7. 审稿人发现：游戏奖励可能让学习者优化系统可见行为而非真实论证能力，这种古德哈特定律式风险没有被实验设计排除。
 
 ---
 

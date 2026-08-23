@@ -53,16 +53,6 @@ paper_digest_arxiv_id: "2608.17852"
 
 本文针对大型音频语言模型（LALMs）在低资源民间音乐、跨文化传统理解上的系统性偏见，提出了 UniVerse 方案。它包含一个 5,042 条 QA 的评测基准 UniVerseBench（覆盖 38 个以上语言/文化实体、372 段音频），以及一个 113,023 段多轮对话、510,078 条 QA 的训练集 UniVerseSet。与已有方法相比，UniVerseBench 强调文化包容性与声学证据解耦（引入 text-dependency 标签），并通过专家验证的自动化 pipeline 实现可复用性；UniVerseSet 则通过流媒体元数据→YouTube 音频→自动乐谱/歌词/声学字幕的链路构建。实验上，后训练使 Qwen2.5-Omni-7B 在 UniVerseBench 上从 33.9% 提升到 48.8%，Qwen3-Omni-30B-A3B 从 47.5% 提升到 53.4%，但商业模型 Qwen3.5-Omni-Plus 仍达 74.4%。实际意义在于为文化包容性音乐理解提供了首个大规模、可复现的评测与训练基础设施；主要局限是模型对细粒度声学特征仍显薄弱，且部分题目存在标签集中导致的 shortcut 风险。
 
-3 Methodology Figure 1 illustrates the pipeline for constructing UniVerseBench alongside the training schema applied to UniVerseSet.。
-
-Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.。
-
-Table 8: Qwen2.5-Omni and Qwen3-Omni results on 178 Undulating-positive questions. "Valid" denotes valid response count (N=178N=178).。
-
-The training pipeline utilizes bf16 precision, FlashAttention, activation recomputation, and a 16,384-token sequence limit.。
-
-因此，结论应限定在论文实际报告的数据、模型与评价协议内。
-
 ### 🔗 开源详情
 
 - **代码**：论文中未提供代码仓库链接。
@@ -83,12 +73,6 @@ The training pipeline utilizes bf16 precision, FlashAttention, activation recomp
 ### 🏗️ 方法概述和架构
 
 UniVerse 是一个“benchmark + 训练数据 + 后训练策略”三位一体的可复现方案，整体流程可分为两条严格隔离的数据线：左侧是评测基准 UniVerseBench 的构建，右侧是训练集 UniVerseSet 的构建，二者数据源互不重叠；随后在后训练阶段，基于 UniVerseSet 对 LALMs 实施多种多模态不平衡学习干预。 ### 1. UniVerseBench 构建管线 **内容筛选与多模态标注。** 首先由民族音乐学专家组依据权威教材和流媒体趋势筛选曲目，并引入地方政府数字平台与文化机构的高质量田野录音，以保留“活态遗产”。每段曲目由表演/作曲专家人工转写为 ABC 记谱，再由专家提供基于学术参考的初始文本描述，并用 Gemini 3 Pro 增强语言丰富度。随后，CantoCore 这一计算民族音乐学框架被应用于 ABC 记谱，提取旋律轮廓、音域等结构化特征，形成可与音频对齐的多模态证据。 **指令设计与 QA 生成。** 每个 QA 对定义为七元组 (Q, O, X, K, Ans, τ, λ, δ)，其中 Q 为问题，O 为选项，X 为音频片段，K 为元数据/先验知识，τ 为任务类型（如节奏分析、文化分类），λ 为子任务标签，δ∈{0,1} 为 text-dependency 标签：δ=0 表示仅凭声学即可回答，δ=1 表示需要外部文本。该设计允许研究者显式区分模型的“真实听觉理解”与“文本线索依赖”。 **QA 优化与混合验证。** 对 Gemini 输出与专家参考不一致的题目进行迭代优化，以提升高阶音乐推理难度；同时用纯文本 LLM 计算 Perceptual Index（PI），剔除无需听音频即可猜对的题目，并重新生成音乐上合理但仅凭文本无法确定的干扰项。最终采用随机化的人机共识协议：至少两名专家达成一致方可接受；否则由第三名专家在 Gemini 协助下复核，仍不一致则丢弃。 ### 2. UniVerseSet 自动构建管线 **数据收集。** 通过全球音乐流媒体服务的 770 个传统/地区流派标签获取曲目元数据，利用 SoundCharts 平台将 title-artist 对映射到 YouTube ID，再下载原始音频并丢弃超过 10 分钟的片段。 **自动特征标注。** 采用内部版 SheetSage 将旋律与和弦转写为 ABC 记谱；使用 Qwen3-ASR 转录歌词并预测语言；使用 Qwen3-Omni-Captioner 生成关于音色、乐器等细粒度声学属性的描述。随后用 Qwen3-Next-80B-A3B-Instruct 进行跨模态一致性校验，排除乐谱与声学字幕在调号/拍号等方面冲突、或字幕引用了歌词中完全不存在的文本等“致命不一致”样本。 **多轮对话合成。** 为每段曲目构建结构化用户画像（ demographic、语言、 expertise），并约束用户与助手均为“盲听者”。对话长度在 1–9 轮之间随机，任务从 10 类意图中采样，包括事实询问、结构分析、主观欣赏、民族音乐学比较、选择题、填空题等。用户查询严格禁止泄露答案的提示性形容词或歌词引用；助手输出必须引用标注中的原文子串作为依据，并以“直接聆听体验”的方式展开逐步推理。 ### 3. 后训练策略 **语言加权 SFT。** 针对训练数据的长尾语言分布，对每门语言 ℓ 计算平滑逆频权重 w~ℓ = min((N/nℓ)^α, wmax)，再归一化得到样本权重 wi，用于放大低资源语言在 cross-entropy 中的梯度贡献。 **文本塔与音频塔 DPO。** 在 SFT 后分别进行偏好优化：Text DPO 固定音频，通过优选/劣选回答让模型生成更贴合音频文化的答案，同时更新 LLM 与音频塔；Audio DPO 则固定回答，将正确音频与难负样本（如静音）交换，仅更新音频塔，并加入 chosen-side NLL 锚点防止崩溃。实验发现 Audio DPO 在 MoE 上无法稳定，因此仅用于 dense 模型。 **REPA 驱动的隐式推理。** 对 dense 模型 Qwen2.5-Omni-7B，在 decoder 中插入 K 个可学习的 `<latent_slot>`，将其最终层状态与音频编码器经过 K 段平均池化后的教师特征进行 REPA 余弦对齐；Phase b 进一步引入循环隐态，以前一 slot 的隐藏状态作为下一 slot 的输入嵌入，实现多轮 latent 演化。对 MoE 模型 Qwen3-Omni-30B-A3B，为避免破坏单 forward 推理，将监督转移到音频条件路径：冻结 MoE decoder，仅更新音频塔与 router gate，使用 encoder-side K 步池化特征进行 REPA 对齐，并通过一个冻结探针计算音频效用差距来加权样本。 关键设计取舍在于：dense 模型允许 decoder 内部 latent reasoning 与多轮解码，而 MoE 模型为了保持 vLLM 等 serving 效率，选择在 encoder 侧做表示对齐，不引入额外推理 token。
-
-Table 3: Correlation between post-training utterance count and per-language adversarial accuracy (N=25N{=}25; n≥10n\geq 10). LR. represents Latent Reasoning. REPA++ represents REPA+Δ\DeltaCE+gates.。
-
-Table 4: Best post-training performance vs. original performance of Qwen2.5-Omni and Qwen3-Omni on the Chinese regional subset (sorted by mean trained accuracy).。
-
-The dataset balances expert-curated instances with automated retrievals via a web-accessible Gemini 3 Pro. • Human-AI Collaborative Production for Cultural and Musical Diversity: We propose a reproducible, human-AI collaborative pipeline that integrates diverse cultural elements to balance professional rigor with task viability while preserving authenticity.。
 
 ![Figure 1: The pipeline of UniVerseBench construction and LALMs training schema on UniVerSet.](https://arxiv.org/html/2608.17852v1/main_overview.png)
 
@@ -134,15 +118,6 @@ The dataset balances expert-curated instances with automated retrievals via a we
 主要结论：
 - Qwen3.5-Omni-Plus 以 74.4% 取得最高整体准确率，是本文的上界参考。 - 在相同 thinking 评估协议下，后训练使 Qwen2.5-Omni 提升 14.9 个百分点（33.9% → 48.8%），Qwen3-Omni 提升 5.9 个百分点（47.5% → 53.4%）。 - 对 dense 模型，循环隐式推理（Phase b）最优（48.8%），显著优于语言加权（41.8%）和 Text DPO（42.6%）。 - 对 MoE 模型，默认 thinking SFT 反而最高（53.4%），语言加权和 Text DPO 均造成性能下降，encoder-side REPA 可稳定保持 52.9%。 - Pearson / Spearman 相关分析显示，后训练语料量与 per-language 准确率无显著正相关（多数 p>0.05），说明 benchmark 测的是文化深度理解而非语言频次记忆。 - 跨文化迁移具有明显分层：dense 模型的 latent reasoning 对弱语言/区域提升显著（如罗马尼亚 12.2% → 58.1%，丹麦 25.3% → 50.7%），但 MoE 模型在部分高资源语言上反而退化（希腊 68.3% → 56.7%，塞尔维亚 54.9% → 43.7%）。
 
-To maintain the targeted benchmark scale of 1,873 items, unusable pairs trigger a rejection-replacement process where the expert reviews alternative candidate QA pairs generated from the same audio clip that were not initially selected, aiming in the worst-case scenario to find an alternative pair that can be rendered usable through minor modifications.。
-
-Once the track titles and corresponding artist names were extracted, we utilized the SoundCharts platform3 3 https://soundcharts.com/ to bridge the textual metadata with raw audio.。
-
-!
-![Figure 4: Overview of the three post-training strategies. Lang. Loss SFT reweights the supervised loss by language frequency to boost low-resource traditions. Text / Audio DPO applies complementary preference stages post-SFT, optimizing text responses under fixed audio and audio inputs under fixed responses. Latent Reasoning + REPA provides architecture-specific alignment: latent reasoning with REPA on dense Qwen2.5-Omni-7B (Qwen2.5-Omni), and encoder-side REPA with a frozen decoder on MoE Qwen3-Omni-30B-A3B-Instruct (Qwen3-Omni).](https://arxiv.org/html/2608.17852v1/training_strategies.png)
-
-上述结果应结合数据集、基线、指标方向和测量条件理解。
-
 ### 🔬 细节详述
 
 **训练数据**
@@ -151,14 +126,6 @@ Once the track titles and corresponding artist names were extracted, we utilized
 - 框架：ms-swift + Megatron-LM；8×80GB NVIDIA GPUs；bf16；FlashAttention；activation recomputation；最大序列长度 16,384；训练 1 epoch；1% 验证集。 - Qwen2.5-Omni-7B：dense，tensor parallel=4（Phase b 关闭 sequence parallel）。SFT lr=1e-5，audio tower lr=1e-6，warmup 0.05，min_lr=1e-6。Latent Reasoning Phase a：K=6，λ=0.5；Phase b 从 Phase a 继续。Text DPO lr=1e-7，audio tower lr=5e-7，β=0.03。Audio DPO lr=1e-6，β=0.03。 - Qwen3-Omni-30B-A3B：MoE，tensor parallel=8，expert parallel=8，MoE auxiliary loss 1e-6，capacity factor 2.0，CPU optimizer offload 0.5。Encoder-side REPA 冻结 MoE decoder，audio tower lr=1e-5，K=6，λ_REPA=0.1；REPA++ 额外更新 router gate。Text DPO 配置与 dense 类似。 - 视觉塔始终冻结；训练时禁用音频生成。 **推理细节**
 - Qwen 模型在 thinking 模式下评估，要求输出有效推理链与最终答案；商业模型通过直接选项生成评估。 - 温度、beam size、流式设置等未在正文中详细说明。 **正则化/稳定技巧**
 - 语言加权使用平滑因子 α 与上限 wmax 防止极端权重。 - Audio DPO 使用 RPO 风格的 chosen-side NLL 锚点。 - MoE REPA 冻结 decoder 与 layer-wise routing index，防止 expert drift。
-
-数据、训练、实现和部署条件共同决定结果的可复现范围。
-
-- By querying these title-artist pairs via SoundCharts, we located their linked YouTube identifiers, which were subsequently used to download raw audio. A.2 Cross-Validation Heuristics Since the feature annotations (scores, lyrics, captions) are generated by independent models, we employed Qwen3-Next-80B-A3B-Instruct to conduct rigorous cross-modal verification. A track is excluded from the final training corpus if the LLM identifies any of the following fatal inconsistencies: • Symbolic-Acoustic Mismatch: Conflicts in musical attributes, such as key signatures or time signatures, between the ABC notation (from SheetSage) and the acoustic captions (from Qwen3-Omni-Captioner). • Linguistic Hallucination: Instances where the caption explicitly quotes or references specific lyrics that are entirely absent from the Qwen3-ASR transcription. A.3 Dialogue Synthesis Rules and Constraints To simulate realistic, multi-turn listening sessions while preventing data leakage, we enforced a strict set of rule-based constraints during the LLM dialogue generation. A.3.1 User Profile and Task Sampling Before generating a dialogue, a structured user profile is instantiated for each track: • Language Alignment: The conversation language is dynamically matched to the lyric metadata.。
-
-论文未报告的参数、硬件、随机种子和失败案例仍是复现与外推的不确定性。
-
-上述实现条件共同限定了结果的复现边界。
 
 ### ⚖️ 评分理由
 
@@ -184,9 +151,7 @@ Once the track titles and corresponding artist names were extracted, we utilized
 - LLM 驱动的生成难以完全满足专家约束，高质量评测仍离不开严格的人机验证。 - 模型在细粒度声学特征（如微分音阶、异质录音环境、复杂节奏型）上仍然薄弱，存在“表层对齐”与“深层音乐理解”之间的鸿沟。 - Audio DPO 在 MoE 架构上无法稳定，只能退回到监督损失，限制了偏好优化方法的普适性。 - 全局后训练并非严格 Pareto 改进：MoE 模型在部分原本表现良好的语言/区域上会出现性能退化。 **审稿人发现的潜在问题**
 - Benchmark 中旋律轮廓题存在显著答案标签集中（93% 正确答案含 “Undulating”），虽然作者做了 case study，但仍可能让模型通过标签先验而非声学判断得分。 - 评估协议不一致：商业模型直接生成选项，而 Qwen 模型要求输出 reasoning chain，二者的严格度不同，导致表 1 的横向对比说服力下降。 - 仅使用 Qwen 系列 backbone，方法泛化性未得到充分验证。 - 统计显著性检验缺失，无法确认 5.9% 或 14.9% 的绝对提升是否稳健。 - 训练集 UniVerseSet 的音频来源与 benchmark 严格隔离的声明尚未提供可验证证据（如共享 ID 排除表），存在潜在泄漏风险。 - CantoCore 自动解析器的 operationalization 与人类感知之间可能存在偏差，影响部分 QA 的效度。
 
-此外，The training pipeline utilizes bf16 precision, FlashAttention, activation recomputation, and a 16,384-token sequence limit. 当前结果只在论文报告的数据、模型、硬件和评价协议下成立。
-
-因此，局限不仅包括作者明确承认的缺口，也包括样本规模、数据分布、基线选择、统计不确定性、资源消耗和真实场景迁移尚未被实验覆盖的部分。对于未报告的失败样例、显著性检验、跨设备测试和长期稳定性，读者只能把它们视为待验证问题，不能从单一数据集的结果推导出普遍部署保证。还需要区分作者没有测量的因素与已经证明不存在的问题，避免把沉默误读成正面结论。
+此外，The training pipeline utilizes bf16 precision, FlashAttention, activation recomputation, and a 16,384-token sequence limit.
 
 ---
 
