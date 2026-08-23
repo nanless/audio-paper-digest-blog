@@ -28,7 +28,7 @@ paper_digest_arxiv_id: "2608.19141"
 
 ### 💡 毒舌点评
 
-抓住了生成音频的表示瓶颈，方法问题意识强；但没有完整数字和跨 codec 证据时，不能把几何检索视作普适解决方案。 亮点是一是把 codec 重合成建模为几何迭代检索；二是针对粗 token 的残差细节恢复；三是把表示空间结构而非单一神经网络容量作为音质提升来源；短板是几何结构可能依赖特定 codec 的 codebook；在跨 codec、极端压缩、音乐与语音混合场景下的稳健性仍需验证。
+几何迭代检索的想法有新意，但证据链的每个环节都偏窄：全部实验限于 44.1kHz 的单一编解码器，输入用真值首层 token 回避了上游生成错误的叠加效应。最尴尬的是 K=9 在所有客观指标上都差于 K=3、人评却更好——这暴露了现有指标无法指导部署选型，而论文对此只有承认。人评规模（19 名听者、9 个片段）也不足以支撑感知结论，且每篇八次顺序检索的开销让相对传统重合成的效率优势变得模糊。
 
 ### 📌 核心摘要
 
@@ -44,14 +44,17 @@ Geometric Iterative Retrieval 占据第三条路线：每一步在当前 RVQ lay
 
 ### 🔗 开源详情
 
-论文中未提及代码、预训练 codec、模型权重或数据集开放情况。
-
-- 补充链接（自动提取）：
-  - 代码仓库：https://github.com/ETH-DISCO/codec-resynthesis
+根据论文全文提取的开源资源链接：
+- 代码仓库：https://github.com/ETH-DISCO/codec-resynthesis
+- 模型权重与数据集：论文中未提及额外发布渠道。
 
 ### 🏗️ 方法概述和架构
 
 任务输入是 DAC 第一层离散 token x1，目标是补齐第二到第九层的 residual code vectors。DAC 的第一层捕获粗谱结构，后续层逐渐添加细节；与直接预测完整 pre-quantized latent 不同，模型把每个下一层 code vector 当作独立连续目标，使一次 refinement 与 codec 自身的一层严格对应。DAC encoder、quantizer 与 decoder 在整个实验中冻结。
+
+下图为Simons Foundation来自论文原文。
+
+![Simons Foundation](https://arxiv.org/static/base/1.0.1/images/funders/simons-foundation.png)
 
 每个 RVQ layer 拥有单独的 token embedding table。同一时间位置已经可见的各层 embeddings 先进入 4-head self-attention aggregator，得到一个能够非均匀权衡不同 residual layers 的 hidden state；12-layer、hidden 1536 的 bidirectional DeBERTa-v3 再沿时间建模，单一 output matrix 投影到 DAC 的 8 维 lookup space。attention 只用于条件聚合，最终解码仍遵守 DAC 原有的 per-layer projection 和求和。
 
@@ -126,21 +129,21 @@ layer progression 逐步解码 K=1…9：LSD 从 10.81 改善到 K=3 的 10.20�
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.6/2)：连续几何+RVQ 原生迭代的定位清楚，区别于 CE、one-step regression 与 diffusion；每层 retrieval 是实质性方法贡献。
+* 创新性 (1.6/2)：[A_METHOD] 连续几何+RVQ 原生迭代的定位清楚，区别于 CE、one-step regression 与 diffusion；每层 retrieval 是实质性方法贡献。
 
-* 技术严谨性 (1.2/1.5)：同容量/同训练预算基线、层数曲线和结构消融较完整；客观与主观矛盾被诚实呈现。
+* 技术严谨性 (1.2/1.5)：[A_RIGOR] 同容量/同训练预算基线、层数曲线和结构消融较完整；客观与主观矛盾被诚实呈现。
 
-* 实验充分性 (1.2/1.5)：覆盖语音和音乐、1,500 clips 与 paired 人评，但只有 DAC、真实 coarse token 和 9 个听测 clips。
+* 实验充分性 (1.2/1.5)：[A_RESULTS] 覆盖语音和音乐、1,500 clips 与 paired 人评，但只有 DAC、真实 coarse token 和 9 个听测 clips。
 
-* 清晰度 (0.8/1)：prediction-space/refinement 二维框架和训练/推理差异解释清楚。
+* 清晰度 (0.8/1)：[A_CLARITY] prediction-space/refinement 二维框架和训练/推理差异解释清楚。
 
-* 影响力 (1.0/1.5)：codec resynthesis 是 token-based audio generation 的基础瓶颈；跨 codec 与真实生成 coarse token 的效果决定其普适性。
+* 影响力 (1.0/1.5)：[A_IMPACT] codec resynthesis 是 token-based audio generation 的基础瓶颈；跨 codec 与真实生成 coarse token 的效果决定其普适性。
 
-* 开源 (0.5/1.5)：正文给出代码仓库；模型权重和处理后的 token 数据开放状态未在正文展开。
+* 开源 (0.5/1.5)：[A_OPEN] 正文给出代码仓库；模型权重和处理后的 token 数据开放状态未在正文展开；按锚点规则对应「明确肯定语境中的未来开放承诺」。。
 
-* 可复现性 (0.3/0.5)：codec、数据、架构、训练预算、基线和听测统计披露充分。
+* 可复现性 (0.3/0.5)：[A_REPRO] codec、数据、架构、训练预算、基线和听测统计披露充分。
 
-* 工程/实践价值 (1.0/1.5)：抓住了生成音频的表示瓶颈，方法问题意识强；但没有完整数字和跨 codec 证据时，不能把几何检索视作普适解决方案。
+* 工程/实践价值 (1.0/1.5)：[A_ENGINEERING] 抓住了生成音频的表示瓶颈，方法问题意识强；但没有完整数字和跨 codec 证据时，不能把几何检索视作普适解决方案。
 
 ### 🚨 局限与问题
 
@@ -157,8 +160,6 @@ layer progression 逐步解码 K=1…9：LSD 从 10.81 改善到 K=3 的 10.20�
 扩展到生成任务与其他 codec 仍是结论后的设想，不能从 restoration validation 直接外推。
 
 论文中未提及代码、预训练 codec、模型权重或数据集开放情况。
-
-抓住了生成音频的表示瓶颈，方法问题意识强；但没有完整数字和跨 codec 证据时，不能把几何检索视作普适解决方案。
 
 ---
 

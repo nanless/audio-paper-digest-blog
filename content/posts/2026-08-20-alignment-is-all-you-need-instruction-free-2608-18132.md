@@ -28,7 +28,7 @@ paper_digest_arxiv_id: "2608.18132"
 
 ### 💡 毒舌点评
 
-这是本批最直接的音频大模型工作，问题和路线都重要；但无完整数值与材料时不能把“通用”当成已证实。 亮点是一是提出无需指令数据的音频语言模型训练路线；二是重新审视“跨模态适配必须三阶段”的假设；三是把语言模型已有推理能力作为音频任务迁移的可复用资源；短板是instruction-free 路线可能牺牲任务边界控制和细粒度声学定位；若只在常见音频描述任务上验证，不能推出对音乐结构、长音频和罕见事件同样有效。
+免指令对齐的训练思路有理论吸引力，但结论的适用范围被实验设计明显收窄：只验证了音频域和 7B/8B 规模，性能上限又被冻结编码器与冻结语言模型双重锁死——projector 既无法找回编码器丢失的声学细节，也不能赋予 LLM 本来没有的能力。监督信号偏语义的取向意味着韵律、说话人等超语义信息可能仍需专门监督。语音任务明显弱于专门后训练模型这一点尤其值得玩味：定向 SFT 能补语音，但作者已经观察到声音与音乐能力的同步退化，「通用」的代价被轻描淡写了。
 
 ### 📌 核心摘要
 
@@ -50,11 +50,18 @@ instruction-free 路线可能牺牲任务边界控制和细粒度声学定位；
 
 ### 🔗 开源详情
 
-当前文本未提供代码、权重、训练数据或 demo 链接；开源状态未说明。
+根据论文全文提取的开源资源链接：
+- 代码仓库：https://github.com/rorizzz/IFAO-lalm
+- 代码仓库：https://huggingface.co/collections/eureka1500/ifao-lalm
+- 模型权重与数据集：论文中未提及额外发布渠道。
 
 ### 🏗️ 方法概述和架构
 
 系统由 frozen audio encoder E、两层 MLP projector P 和 frozen autoregressive LLM 组成。E 把原始音频变成 T×dE 的时序特征，P 逐位置合并相邻帧并映射到 LLM 的 dL embedding space；LLM 将这串连续 audio prefix 当作普通上下文，自回归生成 response。projector downsampling rate 按 encoder 帧率设为 2–8，使进入 LLM 的 audio token rate 保持在 6.25–12.5 Hz。默认 Whisper+Qwen2.5 配置只更新约 31.2M projector 参数。
+
+下图为Figure 1来自论文原文。
+
+![Figure 1: Overview of the pipeline. Left: Self-Generated Data Construction. The dashed line separates two views: on the left, the real listening process, where a human he](https://arxiv.org/html/2608.18132v1/x1.png)
 
 Self-Generated Data Construction 分两步。caption source 先为每条音频提供语义代理 c：既可以使用 CaptionStew 等开放数据的原始 caption，也可以采用 Qwen3-Omni-Captioner 生成的更稠密描述；speech corpora 则把 transcript、speaker attributes 与 emotion labels 视作 caption surrogate。随后 expander LLM 把 c 扩展为自由响应 r，形成 audio-response pairs。这样监督不围绕 ASR、分类、音乐问答等有限任务列表组织。
 
@@ -89,6 +96,14 @@ matched-generator 消融说明跨代迁移并非随便换 LLM。Qwen3-8B 使用�
 ### 📊 实验结果
 
 AudioSet-Zipformer 版本在 MMAU Sound test-mini/test 为 80.8/77.4，Music 69.8/68.6，Speech 54.1/52.8，average 68.2/66.3；MMAR 54.3、MMSU 47.0、MMAU-Pro IF/Open-ended/Avg 为 62.9/50.8/52.8。其训练数据只有 Audio-Flamingo 3 的约 1/46 样本、1/34 音频小时，但 MMAU test average 仍低 6.1。
+
+下图为Figure 2来自论文原文。
+
+![Figure 2: (a) Scaling behavior of four audio encoders across increasing dataset sizes on four benchmarks. (b) Effect of caption source: comparison between ground-truth an](https://arxiv.org/html/2608.18132v1/x2.png)
+
+下图为Figure 1来自论文原文。
+
+![Figure 1: Overview of the pipeline. Left: Self-Generated Data Construction. The dashed line separates two views: on the left, the real listening process, where a human he - 图2](https://arxiv.org/html/2608.18132v1/x1.png)
 
 Whisper 版本在 speech-heavy 任务更强：MMAU Speech 60.4/60.1、MMSU 50.6、MMAU-Pro IF 72.6、open-ended 55.4；但 ALARM 的 MMAU Speech 达 77.2/73.7，Qwen2.5-Omni 为 70.6/68.9，差距仍有 10–17 点。
 
@@ -129,21 +144,21 @@ projector 是两层 MLP，按 encoder 原始帧率选择 downsampling rate 2–8
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.7/2)：projector-only、无任务指令的 general-audio 对齐路线简洁且有清晰反命题，matched-generator 与 encoder-bound 分析提升了方法价值。
+* 创新性 (1.7/2)：[A_METHOD] projector-only、无任务指令的 general-audio 对齐路线简洁且有清晰反命题，matched-generator 与 encoder-bound 分析提升了方法价值。
 
-* 技术严谨性 (1.2/1.5)：主要组件保持冻结，消融能隔离 encoder、LLM、数据规模与 caption source；‘只需 alignment’仍受基座能力和评测范围限制。
+* 技术严谨性 (1.2/1.5)：[A_RIGOR] 主要组件保持冻结，消融能隔离 encoder、LLM、数据规模与 caption source；‘只需 alignment’仍受基座能力和评测范围限制。
 
-* 实验充分性 (1.2/1.5)：四个 benchmark、多 encoder/LLM/规模消融较完整，也诚实呈现 speech 短板；缺少更大模型、跨模态与长音频测试。
+* 实验充分性 (1.2/1.5)：[A_RESULTS] 四个 benchmark、多 encoder/LLM/规模消融较完整，也诚实呈现 speech 短板；缺少更大模型、跨模态与长音频测试。
 
-* 清晰度 (0.8/1)：训练目标、冻结边界与 matched-generator 条件说明充分。
+* 清晰度 (0.8/1)：[A_CLARITY] 训练目标、冻结边界与 matched-generator 条件说明充分。
 
-* 影响力 (1.2/1.5)：若结论在更多规模成立，可显著降低每代 LLM 的音频适配成本。
+* 影响力 (1.2/1.5)：[A_IMPACT] 若结论在更多规模成立，可显著降低每代 LLM 的音频适配成本。
 
-* 开源 (0.5/1.5)：正文提供 GitHub 与 Hugging Face collection，并声明代码、数据和模型权重已经发布。
+* 开源 (0.5/1.5)：[A_OPEN] 正文提供 GitHub 与 Hugging Face collection，并声明代码、数据和模型权重已经发布；按锚点规则对应「明确肯定语境中的未来开放承诺」。。
 
-* 可复现性 (0.3/0.5)：数据组成、projector、训练步数、硬件、生成与评测配置均有较完整附录。
+* 可复现性 (0.3/0.5)：[A_REPRO] 数据组成、projector、训练步数、硬件、生成与评测配置均有较完整附录。
 
-* 工程/实践价值 (1.1/1.5)：这是本批最直接的音频大模型工作，问题和路线都重要；但无完整数值与材料时不能把“通用”当成已证实。
+* 工程/实践价值 (1.1/1.5)：[A_ENGINEERING] 这是本批最直接的音频大模型工作，问题和路线都重要；但无完整数值与材料时不能把“通用”当成已证实。
 
 ### 🚨 局限与问题
 
@@ -160,8 +175,6 @@ MMAU-Pro 只评测一分钟以内样本，不能支撑长音频通用能力。
 response generation 仍依赖特定 LLM 和短 system framing；跨代迁移需要为新 LLM 重新生成匹配目标，并非一次生成永久复用。
 
 当前文本未提供代码、权重、训练数据或 demo 链接；开源状态未说明。
-
-这是本批最直接的音频大模型工作，问题和路线都重要；但无完整数值与材料时不能把“通用”当成已证实。
 
 ---
 

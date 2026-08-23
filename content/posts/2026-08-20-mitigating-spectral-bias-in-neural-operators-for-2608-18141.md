@@ -28,7 +28,7 @@ paper_digest_arxiv_id: "2608.18141"
 
 ### 💡 毒舌点评
 
-这是音频/声学读者会关心的谱-空分解，工程目标清晰；但单海域证据和细节缺失限制了泛化结论。 亮点是一是将谱全局传播与空间局部残差明确解耦；二是直接针对 FNO 高频过平滑缺陷；三是在声学传播任务中同时追求预测质量和毫秒级速度；短板是实验区域单一可能限制海域迁移；传播模型误差、环境参数缺失和高频噪声会影响残差学习，毫秒级速度也需要在不同硬件上复核。
+两阶段神经运营商的水声传输损失恢复在固定设定内做得干净，但泛化声明需要打折：真值全部来自同一南海数据集、固定 200Hz 频率与固定网格区域，跨频率、跨季节、跨海底参数的表现一概未知。对照实验也只有 FNO 与 Hankel-FNO 加不加精修两种组合，缺少 U-Net 等直接竞争者和端到端联合训练的参照，两阶段设计的各部分贡献因此难以量化。第二阶段精修器不再接收原始声速与地形输入的设计选择也未做消融。
 
 ### 📌 核心摘要
 
@@ -42,6 +42,10 @@ paper_digest_arxiv_id: "2608.18141"
 
 输入是随距离与深度变化的环境场，目标是在固定网格上预测水下声传输损失。Stage I 的 Global Propagator 使用 FNO：逐点 lifting 将低维环境输入映射到隐空间，多层 Fourier layer 同时执行局部线性变换和频域卷积，最后投影回 TL 场。由于频域卷积只保留最低的若干模态，这个阶段被解释为对真实解算子的低通投影。
 
+下图为Figure 1来自论文原文。
+
+![Figure 1: The architecture of the proposed S2RL framework, handling environmental inputs through cascaded stages.](https://arxiv.org/html/2608.18141v1/x1.png)
+
 Global Propagator 有两种实现。Vanilla FNO 只接收原始声速场；Hankel-FNO 增加两类物理先验：一是沿深度广播、随距离按远场 Hankel 渐近规律衰减的传播编码，二是把海底地形以下区域替换为沉积层声速的 bathymetry-aware 表示。后者改善粗预测，但并不改变 FNO 截频的本质。
 
 Stage II 的 Local Refiner 只接收粗 TL 场，以 U-Net 编码器—解码器估计残差。局部卷积负责边缘、梯度和干涉纹理，多尺度下采样获取上下文，跳连把高分辨率信息直接送入解码器。最终输出为粗场与残差之和。
@@ -54,7 +58,7 @@ Stage II 的 Local Refiner 只接收粗 TL 场，以 U-Net 编码器—解码器
 
 关键选择是频谱与空间分工而不是简单增加网络宽度；全局分支保留物理场一致性，局部分支恢复干涉纹理。风险是训练分布和海域条件绑定，跨海域、跨频段和极端传播条件需要额外验证。
 
-![Figure 1: The architecture of the proposed S2RL framework, handling environmental inputs through cascaded stages.](https://arxiv.org/html/2608.18141v1/x1.png)
+![Figure 1: The architecture of the proposed S2RL framework, handling environmental inputs through cascaded stages. - 图2](https://arxiv.org/html/2608.18141v1/x1.png)
 
 ![Figure 2: Visual quality comparison using vanilla FNO backbone. Top: Ground truth, coarse and refined predictions. Bottom: Mask and corresponding errors.](https://arxiv.org/html/2608.18141v1/x2.png)
 
@@ -65,6 +69,14 @@ Stage II 的 Local Refiner 只接收粗 TL 场，以 U-Net 编码器—解码器
 ### 📊 实验结果
 
 数据由南海三维环境构建，温盐来自 FVCOM、地形来自 ETOPO1，RAM 在固定 200 Hz 下生成 TL 真值。共 3,456 个样本，其中 2,765 个训练、691 个测试；空间范围为 10 km 距离、1.5 km 深度。评价只在海水 mask 内计算 RMSE。
+
+下图为Figure 3来自论文原文。
+
+![Figure 3: Radially averaged Power Spectral Density (PSD) comparison. The shaded areas represent ±2 2 standard deviations.](https://arxiv.org/html/2608.18141v1/x3.png)
+
+下图为Figure 2来自论文原文。
+
+![Figure 2: Visual quality comparison using vanilla FNO backbone. Top: Ground truth, coarse and refined predictions. Bottom: Mask and corresponding errors. - 图2](https://arxiv.org/html/2608.18141v1/x2.png)
 
 | 方法 | RMSE（dB）↓ | 推理时间（ms）↓ | 相对对应骨干 RMSE 降幅 |
 |---|---:|---:|---:|
@@ -92,29 +104,21 @@ Vanilla FNO 经精修后绝对下降 1.37 dB，Hankel-FNO 下降 0.41 dB。前�
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：架构组件 FNO、U-Net 和残差学习都成熟，创新主要在面向水声 TL 的频谱偏置解释及明确分工，属于逻辑清楚的组合创新。
+* 创新性 (1.4/2)：[A_METHOD] 架构组件 FNO、U-Net 和残差学习都成熟，创新主要在面向水声 TL 的频谱偏置解释及明确分工，属于逻辑清楚的组合创新。
 
-* 技术严谨性 (1.2/1.5)：使用两个质量不同的 FNO 骨干，并用 PSD 验证所针对的高频机制，比只报告 RMSE 更可信；阶段冻结和海水 mask 也有明确动机。
+* 技术严谨性 (1.2/1.5)：[A_RIGOR] 使用两个质量不同的 FNO 骨干，并用 PSD 验证所针对的高频机制，比只报告 RMSE 更可信；阶段冻结和海水 mask 也有明确动机。
 
-* 实验充分性 (1.1/1.5)：691 个测试样本上收益稳定且延迟透明，但只有一个海域、一个 200 Hz 设置和一种 RMSE 指标，没有关键结构消融或跨分布测试。
+* 实验充分性 (1.1/1.5)：[A_RESULTS] 691 个测试样本上收益稳定且延迟透明，但只有一个海域、一个 200 Hz 设置和一种 RMSE 指标，没有关键结构消融或跨分布测试。
 
-* 清晰度 (0.8/1)：低频全局场加高频残差的叙事直观，公式、训练阶段和物理输入编码易于复现理解。
+* 清晰度 (0.8/1)：[A_CLARITY] 低频全局场加高频残差的叙事直观，公式、训练阶段和物理输入编码易于复现理解。
 
-* 影响力 (0.8/1.5)：10.42 ms 以内的预测对实时海洋声学应用有吸引力，框架也可能迁移到其他具有频谱偏置的波场代理模型。
+* 影响力 (0.8/1.5)：[A_IMPACT] 10.42 ms 以内的预测对实时海洋声学应用有吸引力，框架也可能迁移到其他具有频谱偏置的波场代理模型。
 
-* 开源 (0.5/1.5)：数据来源和样本规模给出，但模型宽度、保留模态数、U-Net配置、训练超参数及代码开放信息缺失，完整复现证据偏弱。
+* 开源 (0.5/1.5)：[A_OPEN] 数据来源和样本规模给出，但模型宽度、保留模态数、U-Net配置、训练超参数及代码开放信息缺失，完整复现证据偏弱；按锚点规则对应「明确肯定语境中的未来开放承诺」。。
 
-* 可复现性 (0.3/0.5)：**任务物理背景**：声压由轴对称、恒密度假设下的 Helmholtz 方程决定，TL 再由声压幅值相对参考声压的对数计算。RAM 能可靠求解，但 333.32 ms 的单次成本不适合大规模或实时调用。
+* 可复现性 (0.3/0.5)：[A_REPRO] **任务物理背景**：声压由轴对称、恒密度假设下的 Helmholtz 方程决定，TL 再由声压幅值相对参考声压的对数计算。
 
-**Hankel 先验**：远场编码显式提供柱面传播随距离衰减的趋势；bathymetry-aware 输入以沉积层声速填充海底以下网格，让 FNO 看见地形边界和反射条件。它把粗模型 RMSE 从 vanilla 的 2.93 dB 改善到 1.95 dB。
-
-**mask 的作用**：训练与评估都把沉积层置零，只要求网络在实际海水声场中准确。这避免海底区域占据损失，但也意味着报告数值不是整个矩形网格的无条件 RMSE。
-
-**为何不单纯增加 Fourier modes**：更多模态会提高成本，而且已有经验表明收益递减。S2RL 保持全局骨干相对紧凑，把高频重建交给更适合局部纹理的空间网络。
-
-**频谱证据**：二维 TL 场先做空间 Fourier 变换，再将平方幅度沿径向空间频率平均。低频一致、高频分离的形态与低通解释相符；精修后高频能量回升，也与误差图中条纹边缘变清晰相互印证。
-
-* 工程/实践价值 (1.2/1.5)：10.42 ms 以内的预测对实时海洋声学应用有吸引力，框架也可能迁移到其他具有频谱偏置的波场代理模型。
+* 工程/实践价值 (1.2/1.5)：[A_ENGINEERING] 10.42 ms 以内的预测对实时海洋声学应用有吸引力，框架也可能迁移到其他具有频谱偏置的波场代理模型。
 
 ### 🚨 局限与问题
 

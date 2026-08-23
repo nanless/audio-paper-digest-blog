@@ -28,7 +28,7 @@ paper_digest_arxiv_id: "2608.18191"
 
 ### 💡 毒舌点评
 
-生态声学问题很重要且迁移方向合理，但证据与配置披露有限，影响力主要集中在生物声学。 亮点是一是把自动蝙蝠声分类从封闭 taxonomy 推向开放生态变化；二是显式处理叫声随行为和环境改变的问题；三是将算法评估与保护监测的可用性连接起来；短板是作者指出叫声会随行为和环境变化且不同物种可能重叠。
+把蝙蝠声学分类从封闭数据集推向生态监测场景的动机很好，执行却有几处软肋。地理解析规则只在「一个地区内某属一物种」时可靠，遇到同域同属多物种就失效，而依赖位置元数据又引入了分布表准确性和定位误差的双重风险——P. kuhlii 干脆用的是人工指定的假想位置。稀有物种每类只有一到九个测试片段，宏观平均掩盖了恰恰是保护价值最高的那些物种的不确定性。训练与测试都来自整理过的录音库，真实声景中的重叠叫声与环境噪声仍是未验证的域偏移。
 
 ### 📌 核心摘要
 
@@ -52,7 +52,9 @@ ChiroEcho 面向被动声学监测，把夜间录音切成蝙蝠 echolocation ca
 
 ### 🔗 开源详情
 
-论文中未提及代码、模型权重或数据下载地址，也未说明数据许可。
+根据论文全文提取的开源资源链接：
+- 代码仓库：https://github.com/bghani/chiroecho
+- 模型权重与数据集：论文中未提及额外发布渠道。
 
 ### 🏗️ 方法概述和架构
 
@@ -90,6 +92,10 @@ resolve-when-unambiguous 规则完全透明且可更新：属置信度达到用�
 
 两种初始化整体接近：Perch 版本的 species/genus F1 分别为 0.845/0.886，略高于 ImageNet 的 0.836/0.880；ImageNet 版本则在 species mAP/AUROC（0.694/0.990）与 genus mAP/AUROC（0.923/0.992）领先。
 
+下图为Figure 1来自论文原文。
+
+![Figure 1: Illustration of inference-stage geographic resolution using the example of Plecotus kolombatovici. (a, c) Echolocation call sequences of P. austriacus and P. ko](https://arxiv.org/html/2608.18191v1/species_distribution.png)
+
 稀有物种结果极不稳定。M. davidii 在仅 1 个 test segment 上 AP=1.000，不能据此认为可靠；M. emarginatus 从 test AP 0.004 变成 val+test 0.335，M. capaccinii 从 0.501 变成 0.817，P. austriacus 反而从 0.825 降到 0.374。
 
 species 与 genus 两头在 97.74% 的测试录音上一致；一致时 top-1 species accuracy 为 91.53%，不一致时骤降至 32.81%，Fisher exact odds ratio 22.1、p=1.2×10^-29。两头不一致因此是很强的错误预警信号。
@@ -126,21 +132,21 @@ ChiroEchoIN 从 ImageNet-1k 初始化；ChiroEchoPerch 将 JAX/Flax 权重逐层
 
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：创新点是把层级预测与外部知识组合成可扩展 taxonomy 的规则；网络本身是标准 EfficientNet 多任务分类。
+* 创新性 (1.4/2)：[A_METHOD] 创新点是把层级预测与外部知识组合成可扩展 taxonomy 的规则；网络本身是标准 EfficientNet 多任务分类。
 
-* 技术严谨性 (1.2/1.5)：训练、划分、阈值逻辑和 held-out label-space 设计较严谨；P. kuhlii 使用人为位置使 proof-of-principle 与真实地理验证必须分开解读。
+* 技术严谨性 (1.2/1.5)：[A_RIGOR] 训练、划分、阈值逻辑和 held-out label-space 设计较严谨；P. kuhlii 使用人为位置使 proof-of-principle 与真实地理验证必须分开解读。
 
-* 实验充分性 (1.1/1.5)：闭集、稀有类、head disagreement 与 held-out 新类均有实验，但真实开放声景和更多 region–genus 对尚未覆盖。
+* 实验充分性 (1.1/1.5)：[A_RESULTS] 闭集、稀有类、head disagreement 与 held-out 新类均有实验，但真实开放声景和更多 region–genus 对尚未覆盖。
 
-* 清晰度 (0.8/1)：神经预测与规则推理边界清楚，失败条件可追踪。
+* 清晰度 (0.8/1)：[A_CLARITY] 神经预测与规则推理边界清楚，失败条件可追踪。
 
-* 影响力 (0.6/1.5)：对欧洲蝙蝠被动监测直接有用，也能推广到其他层级物种识别；覆盖受地理唯一性强约束。
+* 影响力 (0.6/1.5)：[A_IMPACT] 对欧洲蝙蝠被动监测直接有用，也能推广到其他层级物种识别；覆盖受地理唯一性强约束。
 
-* 开源 (0.5/1.5)：正文给出 ChiroEcho GitHub 与 ChirosetEurope Zenodo，可获得代码和核心数据；训练权重开放状态仍需从仓库确认。
+* 开源 (0.5/1.5)：[A_OPEN] 正文给出 ChiroEcho GitHub 与 ChirosetEurope Zenodo，可获得代码和核心数据；训练权重开放状态仍需从仓库确认；按锚点规则对应「明确肯定语境中的未来开放承诺」。。
 
-* 可复现性 (0.3/0.5)：前端、训练、初始化转换、划分和地理规则披露充分。
+* 可复现性 (0.3/0.5)：[A_REPRO] 前端、训练、初始化转换、划分和地理规则披露充分。
 
-* 工程/实践价值 (0.8/1.5)：生态声学问题很重要且迁移方向合理，但证据与配置披露有限，影响力主要集中在生物声学。
+* 工程/实践价值 (0.8/1.5)：[A_ENGINEERING] 生态声学问题很重要且迁移方向合理，但证据与配置披露有限，影响力主要集中在生物声学。
 
 ### 🚨 局限与问题
 
@@ -155,8 +161,6 @@ P. kuhlii 使用人工赋予 Pantelleria 的位置，尚缺真实当地录音验
 训练与测试主要来自整理过的 repository recordings，真实长期声景中的重叠叫声、环境噪声和设备伪影仍构成明显域偏移。
 
 论文中未提及代码、模型权重或数据下载地址，也未说明数据许可。
-
-生态声学问题很重要且迁移方向合理，但证据与配置披露有限，影响力主要集中在生物声学。
 
 ---
 
