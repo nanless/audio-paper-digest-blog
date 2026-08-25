@@ -36,7 +36,7 @@ Theo Lebryk（通信作者）、David Ayllon、Alice Baird、Jakub Piotr Cłapa�
 
 ### 🔗 开源详情
 
-- 代码：探针与审计流水线已公开：github.com/HumeAI/asr-benchmark-optimization 。
+- 代码：探针与审计流水线已公开：https://github.com/HumeAI/asr-benchmark-optimization 。
 - 模型权重：论文自身不发布模型；被评测的十一个 ASR 模型均为社区公开权重。
 - 数据集：使用公开的 VoxPopuli、LibriSpeech 及其留出变体 libri-fresh、ep-fresh；论文未自行发布新标注数据集。
 - Demo：论文中未提及在线演示。
@@ -63,17 +63,17 @@ Theo Lebryk（通信作者）、David Ayllon、Alice Baird、Jakub Piotr Cłapa�
 
 ### 📊 实验结果
 
-跨模型审计的核心发现是 WER 排名与 accept-ref 的强对应：VoxPopuli 词错率最低的六个模型（5.4% 至 5.8%）恰是参考分歧 accept-ref 最高的六个（0.18 至 0.30），而所有 6.5% 以上的模型都不超过 0.10；该结果在人工标注编辑集与音频提升度指标上得到印证。掩码探针显示同一批模型在公开基准（VoxPopuli、LibriSpeech）上的接受率约 0.40，高于留出集 libri-fresh 与 ep-fresh，音频提升度的对比强化了这一格局。正字法探针中，尊称切换有十一分之六模型显著超过 0.5 基线，古旧分词有八分之一超过，说明模型不仅能区分数据集还能区分同一数据集内的子群体乃至单个样本。VoxPopuli 官方测试集中 40% 说话人混入训练分布，但泄漏说话人与未泄漏说话人的 accept-ref 无显著差异（合并高敏感模型 0.22 对 0.26），排除了简单的说话人重叠解释。
+跨模型审计的核心发现是 WER 排名与 accept-ref 的强对应：VoxPopuli 词错率最低的六个模型（5.4% 至 5.8%）恰是参考分歧 accept-ref 最高的六个（0.18 至 0.30），而所有 6.5% 以上的模型都不超过 0.10；该结果在人工标注编辑集与音频提升度指标上得到印证。掩码探针显示同一批模型在公开基准（VoxPopuli、LibriSpeech）上的接受率约 0.40，高于留出集 libri-fresh 与 ep-fresh，音频提升度的对比强化了这一格局。正字法探针中，尊称切换有十一分之六模型显著超过 0.5 基线，古旧分词有十一分之八超过，说明模型不仅能区分数据集还能区分同一数据集内的子群体乃至单个样本。VoxPopuli 官方测试集中 40% 说话人混入训练分布，但泄漏说话人与未泄漏说话人的 accept-ref 无显著差异（合并高敏感模型 0.22 对 0.26），排除了简单的说话人重叠解释。
 
 下图展示了全部十一个模型在尊称切换探针上的切换率，虚线标出 0.5 的机会基线。
 
-![Figure 8: Honorific switch rate (Mr/Mister), all 11 models. A rate above 0.50.5 (dashed) means the model tracks each corpus’s convention at rates above chance.](https://arxiv.org/html/2608.19936v1/figures/pair_mister.png)
+![Figure 8: Honorific switch rate (Mr/Mister), all 11 models. A rate above 0.5 (dashed) means the model tracks each corpus’s convention at rates above chance.](https://arxiv.org/html/2608.19936v1/figures/pair_mister.png)
 
 超过虚线的模型意味着它在相同声学内容下会依据语料惯例在 Mr 与 Mister 之间摇摆，这种行为对人类听者完全不可感知，却直接转化为基准分数的差异，是基准优化最隐蔽的形态。
 
 下图是跨模型审计的核心散点图：横轴为各模型在 VoxPopuli 上的词错率，纵轴为参考分歧接受率。
 
-![Figure 2: Cross-model audit on VoxPopuli. WER (%) is the VoxPopuli-test score from the June 2026 Open ASR Leaderboard [38]. Kimi Audio is not on the leaderboard, and its score is c](https://arxiv.org/html/2608.19936v1/figures/wer_vs_badref.png)
+![Figure 2: Cross-model audit on VoxPopuli. WER (%) is the VoxPopuli-test score from the June 2026 Open ASR Leaderboard. Kimi Audio is not on the leaderboard, and its score is computed using the leaderboard's scoring. Consensus-panel members are scored against edits flagged unanimously by the remaining three members.](https://arxiv.org/html/2608.19936v1/figures/wer_vs_badref.png)
 
 图中可以直观看到两个群体的分化：左上区域的高分模型（低 WER、高 accept-ref）正是基准优化行为最重的群体，而右下区域的模型两项指标都处于「忠实但平庸」的区间。这种相关性本身就是论文最重要的证据——如果高分完全来自通用转写能力，accept-ref 不应与 WER 排名呈现如此清晰的对应。
 
@@ -90,7 +90,7 @@ Theo Lebryk（通信作者）、David Ayllon、Alice Baird、Jakub Piotr Cłapa�
 
 下图量化了说话人克隆对掩码数字恢复行为的影响：正值表示测试集说话人克隆比留出集新说话人克隆恢复更多被掩码的数字。
 
-![Figure 4: Difference in masked-number recovery between LibriSpeech test-set narrator clones and held-out libri-fresh narrator clones reading identical…](https://arxiv.org/html/2608.19936v1/figures/libnum_voice_gap.png)
+![Figure 4: Difference in masked-number recovery between LibriSpeech test-set narrator clones and held-out libri-fresh narrator clones reading identical sentences (test-set minus held-out; positive values indicate greater recovery for test-set narrator clones). Sentence-clustered bootstrap 95% confidence intervals.](https://arxiv.org/html/2608.19936v1/figures/libnum_voice_gap.png)
 
 几乎所有敏感模型的置信区间都不跨越零线，说明「听到熟悉的声音就复现参考」并非偶然波动而是系统性行为；同时同域新说话人的克隆接近通用声音水平，把触发线索的归属范围收窄到了具体录音的声学特征而非域风格。
 
@@ -98,28 +98,26 @@ Theo Lebryk（通信作者）、David Ayllon、Alice Baird、Jakub Piotr Cłapa�
 
 评测对象为公开排行榜上的十一个开源 ASR 模型，VoxPopuli 分数取自 2026 年 6 月 Open ASR Leaderboard，Kimi Audio 不在榜上故按榜单评分规则自行计算。音频提升度的定义为教师强制下参考跨度对数似然减去静音波形下的同项再除以字符数，跨分词器可比。一致面板程序让四个成员模型互评，仅取三人以上一致标记的编辑作为共识编辑，该程序与人工标注对齐并可规模化用于改善 VoxPopuli 的参考质量。数据规模观察：accept-ref 最高的 Phi-4、Cohere-Transcribe、Granite 与 Canary 按公开信息训练数据不足一百万小时，而行为最温和的 Qwen3 使用了四千万小时弱监督数据，Whisper 同样表现温和；Qwen3 偶尔也会触发礼貌语但频率远低于其他模型。合成交叉验证方面，基准评测集说话人音色克隆下行为保持，而对合成增强基准的扰动测试见附录。建议部分明确反对独立同分布测试切分，主张时间或元数据分层，理想状态是完全保密的非公开评测集。未披露的信息包括：各模型推理解码配置是否统一、机制分析的层数与方向学习细节、以及代码仓库对全部十一个模型的接口支持程度。补充几处实验口径：参考分歧探针的编辑位置由一致面板程序产生，四名成员模型互评且至少三人一致标记才进入共识集，该程序与人工标注的对齐结果支撑了探针位置的可靠性；音频提升度按字符数归一化以跨分词器可比；合成语音交叉验证使用基准评测集说话人的音色克隆朗读相同转写，附录还报告了模型行为在合成增强型新基准上的持续性，这对当前流行的数据增强式评测是直接警告。开场礼貌语案例研究是一个具体的定性锚点：多数高分模型会在音频只有 Thank you 的位置补出完整的 thank you, Mr President，与 VoxPopuli 参考转写的系统性遗漏精确吻合。
 
-一致面板程序的运作方式值得展开：四个成员模型分别对 VoxPopuli 测试集转写，凡至少三人一致标记的参考位置进入共识编辑集，该程序与人工标注的对齐结果验证了其可靠性，也提供了一条可规模化的数据集净化路径——作者建议用它改善 VoxPopuli 长期存在的参考质量问题。另一个实用细节是开场礼貌语案例：多数高分模型会在音频只说 Thank you 的位置补出完整的 thank you, Mr President，与议会语料参考转写的系统性遗漏精确吻合，这是「模型在复现参考而非听话」最具体的例证。
-
 ### ⚖️ 评分理由
 
-* 创新性 (1.4/2)：[A_METHOD] 把 LLM 社区的 benchmark 追问首次系统化为 ASR 可执行的度量框架，三探针设计各有明确的失效面且相互独立，触发电池与干预实验超出纯行为审计的层次；扣分在于探针思想借鉴了语言模型污染检测的既有范式。把 benchmark 追问从轶事升级为可测量对象是核心贡献。
-* 技术严谨性 (1.3/1.5)：[A_RESULTS] 静音先验对照、句子聚类自助区间、一致面板校验与泄漏说话人排除构成了多层防混淆体系，对「高 accept-ref 是否必然作弊」的替代解释有正面回应；扣分在于因果归因最终依赖不可验证的训练数据透明度。
-* 实验充分性 (1.3/1.5)：[A_RESULTS] 十一个模型、两个主基准加两个留出集、三类探针加克隆电池加三种干预的矩阵相当完整，案例研究（开场礼貌语）增加了具体性；不足是基准覆盖限于议会演讲与有声书两域，对话与远场场景缺席。
-* 清晰度 (0.8/1)：[A_CLARITY] 探针示例表与触发电池图解清晰，三条实践建议落地明确；正文记号（r/a/x∅/λ）需要适应，部分机制细节推到附录后主线略有跳跃。
-* 影响力 (1.2/1.5)：[A_IMPACT] 对整个语音评测生态的可信度提出了结构性质疑，三条建议（数据透明、分层切分、保密评测集）若被采纳将改变榜单文化；对强化学习奖励劫持的预警也有前瞻价值。
-* 开源 (1.2/1.5)：[A_OPEN] 探针流水线与分析代码已在 GitHub 公开（github.com/HumeAI/asr-benchmark-optimization），方法论可复用；但未发布自建数据资产或模型产物，按锚点给 1.2。探针流水线完全开放使方法论可被立即复用与扩展。
-* 可复现性 (0.4/0.5)：[A_REPRO] 探针构造、评分口径与统计流程披露完整且有代码背书，主要门槛是被评模型的推理环境复刻与语音克隆系统的选择。
-* 工程/实践价值 (0.9/1.5)：[A_ENGINEERING] 探针可作为训练前后的一致性检查直接嵌入开发流程，共识参考编辑程序对改善 VoxPopuli 数据质量有即时价值；但对企业私有评测集的适配需要额外开发。
+* 创新性 (1.4/2)：把 LLM 社区的 benchmark 追问首次系统化为 ASR 可执行的度量框架，三探针设计各有明确的失效面且相互独立，触发电池与干预实验超出纯行为审计的层次；扣分在于探针思想借鉴了语言模型污染检测的既有范式。
+* 技术严谨性 (1.3/1.5)：静音先验对照、句子聚类自助区间、一致面板校验与泄漏说话人排除构成了多层防混淆体系，对「高 accept-ref 是否必然作弊」的替代解释有正面回应；扣分在于因果归因最终依赖不可验证的训练数据透明度。
+* 实验充分性 (1.3/1.5)：十一个模型、两个主基准加两个留出集、三类探针加克隆电池加三种干预的矩阵相当完整，案例研究（开场礼貌语）增加了具体性；不足是基准覆盖限于议会演讲与有声书两域，对话与远场场景缺席。
+* 清晰度 (0.8/1)：探针示例表与触发电池图解清晰，三条实践建议落地明确；正文记号（r/a/x∅/λ）需要适应，部分机制细节推到附录后主线略有跳跃。
+* 影响力 (1.2/1.5)：对整个语音评测生态的可信度提出了结构性质疑，三条建议（数据透明、分层切分、保密评测集）若被采纳将改变榜单文化；对强化学习奖励劫持的预警也有前瞻价值。
+* 开源 (1.2/1.5)：探针流水线与分析代码已在 GitHub 公开（https://github.com/HumeAI/asr-benchmark-optimization），方法论可被立即复用与扩展；但未发布自建数据资产或模型产物，因此未给满分。
+* 可复现性 (0.4/0.5)：探针构造、评分口径与统计流程披露完整且有代码背书，主要门槛是被评模型的推理环境复刻与语音克隆系统的选择。
+* 工程/实践价值 (0.9/1.5)：探针可作为训练前后的一致性检查直接嵌入开发流程，共识参考编辑程序对改善 VoxPopuli 数据质量有即时价值；但对企业私有评测集的适配需要额外开发。
 
 ### 🚨 局限与问题
 
 1. 作者承认尚未理解基准优化行为在训练中如何产生，无法区分基准引导的模型选择、数据泄漏、记忆或其他机制。
 2. 作者承认使用周围声学语境本身并非不当——韵律、说话人与录音环境可以合法影响转写，探针只针对那些不能为偏好参考提供正当性的情形。
-3. 审稿人发现：结论基于 VoxPopuli 与 LibriSpeech 两域，对话式语音、多说话人重叠与远场条件下的基准优化行为未被检验。
-4. 审稿人发现：高 accept-ref 与小训练数据的关联是观察性相关，数据规模之外的数据质量、清洗与模型选择策略均为混杂因素。
-5. 审稿人发现：语音克隆实验依赖克隆系统的保真度，克隆伪影本身可能构成模型可检测的特征，触发条件的精确边界因此难以完全锁定。
-6. 审稿人发现：正字法切换的部分变体（如古旧分词）在实际部署中的危害有限，其对通用转写能力的侵蚀程度缺乏量化。
-7. 审稿人发现：机制分析集中于单层语域方向的投影，未能排除多层分布式表征参与基准策略的可能。
+3. 结论基于 VoxPopuli 与 LibriSpeech 两域，对话式语音、多说话人重叠与远场条件下的基准优化行为未被检验。
+4. 高 accept-ref 与小训练数据的关联是观察性相关，数据规模之外的数据质量、清洗与模型选择策略均为混杂因素。
+5. 语音克隆实验依赖克隆系统的保真度，克隆伪影本身可能构成模型可检测的特征，触发条件的精确边界因此难以完全锁定。
+6. 正字法切换的部分变体（如古旧分词）在实际部署中的危害有限，其对通用转写能力的侵蚀程度缺乏量化。
+7. 机制分析集中于单层语域方向的投影，未能排除多层分布式表征参与基准策略的可能。
 
 ---
 
