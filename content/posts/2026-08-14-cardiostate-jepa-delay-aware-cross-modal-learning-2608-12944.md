@@ -102,7 +102,7 @@ CardioState-JEPA 是一个两阶段训练的统一心脏基础模型，总体流
 
 下图显示了模型在PPG信号上的注意力热图。
 
-![Figure 7: Attention visualizations from CardioState-JEPA on representative ECG, PPG, and PCG signals. The ECG map highlights sharp electrical events such as QRS complexes, the PPG map emphasizes pulse morphology including the upstroke and s](https://arxiv.org/html/2608.12944v1/attn_ppg_01.png)
+![Figure 7: Attention visualizations from CardioState-JEPA on representative ECG, PPG, and PCG signals.](https://arxiv.org/html/2608.12944v1/attn_ppg_01.png)
 
 注意力关注脉搏波的上冲和收缩峰，显示模型学习了PPG的生理特征。
 
@@ -157,21 +157,21 @@ Stage I后模态分离明显（silhouette +0.12），Stage II后模态高度对�
 
 ### ⚖️ 评分理由
 
-*   创新性 (1.5/2)：[A_METHOD] 提出 delay-aware cross-modal JEPA，将 ECG/PPG/PCG 映射到共享心脏码，并用可学习延迟对齐、生理 anchor 监督及两阶段课程解决跨模态时移与数据不对称，具有明确新颖性；[A_SUMMARY] 显示其不是简单重建或对比学习，而是潜在状态预测。
+*   创新性 (1.5/2)：提出 delay-aware cross-modal JEPA，将 ECG/PPG/PCG 映射到共享心脏码，并用可学习延迟对齐、生理 anchor 监督及两阶段课程解决跨模态时移与数据不对称，具有明确新颖性；显示其不是简单重建或对比学习，而是潜在状态预测。
 
-*   技术严谨性 (1.2/1.5)：[A_METHOD] 方法以潜在心脏状态形式化三种传感观测，delay-aware soft gather 与熵加权给出可微对齐，动量编码器和 LayerNorm 目标设计有稳定性依据；[A_LIMITS] 中对 delay aligner 依赖可检测 beat 的假设有边界说明，未发现明显推导错误或不合理假设。
+*   技术严谨性 (1.2/1.5)：方法以潜在心脏状态形式化三种传感观测，delay-aware soft gather 与熵加权给出可微对齐，动量编码器和 LayerNorm 目标设计有稳定性依据；中对 delay aligner 依赖可检测 beat 的假设有边界说明，未发现明显推导错误或不合理假设。
 
-*   实验充分性 (1.2/1.5)：[A_RESULTS] 提供 25 个下游任务、三类模态的强基线比较和消融，跨数据集泛化证据较丰富；但 [A_LIMITS] 指出 ECG/PPG 主要结果缺少多次运行方差和统计显著性，患者分离细节未披露，PCG 基线协议可比性受限，延迟对齐缺少定量误差或命中率，削弱结论的确定性。
+*   实验充分性 (1.2/1.5)：提供 25 个下游任务、三类模态的强基线比较和消融，跨数据集泛化证据较丰富；但 指出 ECG/PPG 主要结果缺少多次运行方差和统计显著性，患者分离细节未披露，PCG 基线协议可比性受限，延迟对齐缺少定量误差或命中率，削弱结论的确定性。
 
-*   清晰度 (0.8/1)：[A_SUMMARY] 总体结构从问题、方法、实验到局限清晰连贯，公式与流程描述完整；但 [A_LIMITS] 指出 phase 任务的具体定义不够清晰，辅助损失机制理解受影响。
+*   清晰度 (0.8/1)：总体结构从问题、方法、实验到局限清晰连贯，公式与流程描述完整；但 指出 phase 任务的具体定义不够清晰，辅助损失机制理解受影响。
 
-*   影响力 (1.2/1.5)：[A_SUMMARY] 统一 ECG/PPG/PCG 表征并在 25 个下游任务取得明显提升，尤其 PCG 心音任务从 AudioMAE 79.1 到 97.9，对医疗音频与可穿戴信号社区有较强参考价值；[A_RESULTS] 表明跨模态监督能反哺声学任务。
+*   影响力 (1.2/1.5)：统一 ECG/PPG/PCG 表征并在 25 个下游任务取得明显提升，尤其 PCG 心音任务从 AudioMAE 79.1 到 97.9，对医疗音频与可穿戴信号社区有较强参考价值；表明跨模态监督能反哺声学任务。
 
-*   开源 (0.0/1.5)：[A_OPEN] 论文未发布核心代码、模型权重或数据资源，也未给出明确的后续开源承诺。
+*   开源 (0.0/1.5)：论文未发布核心代码、模型权重或数据资源，也未给出明确的后续开源承诺。
 
-*   可复现性 (0.1/0.5)：[A_METHOD] 附录给出了主要训练步骤、优化器和部分超参数，但 tokenizer 具体 stride、掩码比例/长度、τmax/σ、predictor 与 delay head 结构、配对采样概率 p 及 λintra/λphase 等关键配置未披露，属于关键配置大量缺失，因此给 0.1。
+*   可复现性 (0.1/0.5)：附录给出了主要训练步骤、优化器和部分超参数，但 tokenizer 具体 stride、掩码比例/长度、τmax/σ、predictor 与 delay head 结构、配对采样概率 p 及 λintra/λphase 等关键配置未披露，属于关键配置大量缺失，因此给 0.1。
 
-*   工程/实践价值 (1.2/1.5)：[A_METHOD] 共享 ViT-B 编码器和冻结后线性探测降低多模态部署与适配成本，[A_RESULTS] 显示单卡 H100 能训练并在 PPG/PCG 上取得实用级别提升，说明工程可行性与实际价值较充分。
+*   工程/实践价值 (1.2/1.5)：共享 ViT-B 编码器和冻结后线性探测降低多模态部署与适配成本，显示单卡 H100 能训练并在 PPG/PCG 上取得实用级别提升，说明工程可行性与实际价值较充分。
 
 ### 🚨 局限与问题
 

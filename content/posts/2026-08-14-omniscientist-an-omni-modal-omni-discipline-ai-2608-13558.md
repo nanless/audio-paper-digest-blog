@@ -28,7 +28,7 @@ paper_digest_arxiv_id: "2608.13558"
 
 ### 💡 毒舌点评
 
-This work is a complete engineering system with real code-enforced audit. But the "perception is decisive" claim is based on 5 blind pairs plus 1 vision-off pair, and individual cells show negative gains (e.g., Cardiology MM-grounding -1.7); the abstract's "improves all 7 evaluation dimensions" is a macro-average statement, not per-case evidence. LLM judges score LLM-written papers; no human expert validation. It's more a scalable demo than a sober scientific validation.
+这是一套完成度较高、由代码强制审计的工程系统，但“感知具有决定性作用”的主张只建立在 5 组 blind 配对和 1 组 vision-off 配对上，个别单元甚至出现负增益（如 Cardiology 的多模态 grounding 为 -1.7）。摘要所谓“七个评估维度均提升”指宏平均，而非每个案例都改善；同时，LLM 生成的论文仍由 LLM 裁判评分，缺少人类领域专家验证。它更像可扩展的系统演示，而非已经充分验证的科学结论。
 
 ### 📌 核心摘要
 
@@ -131,21 +131,21 @@ OmniScientist 在 36 个真实数据案例、5 个学科家族、4 类科学证�
 
 ### ⚖️ 评分理由
 
-*   创新性 (1.2/2)：[A_METHOD] 提出感知层与 ideation/experiment/writeup 三智能体流水线，并通过代码层 idea/rigour/claim 检查约束阶段转换，属于有证据支持的系统级新能力，而非纯产品宣传。
+*   创新性 (1.2/2)：提出感知层与 ideation/experiment/writeup 三智能体流水线，并通过代码层 idea/rigour/claim 检查约束阶段转换，属于有证据支持的系统级新能力，而非纯产品宣传。
 
-*   技术严谨性 (1.2/1.5)：[A_METHOD] 阶段转换由退出谓词 g 控制，rigour check 强制多重比较校正、防止 HARKing，并要求 headline 来自 supported 分析集合，公开方法中未见明显逻辑漏洞。
+*   技术严谨性 (1.2/1.5)：阶段转换由退出谓词 g 控制，rigour check 强制多重比较校正、防止 HARKing，并要求 headline 来自 supported 分析集合，公开方法中未见明显逻辑漏洞。
 
-*   实验充分性 (1.2/1.5)：[A_RESULTS] 在36个真实案例、5个学科家族和多骨干上完成端到端评测，并给出感知消融维度增益；但[A_LIMITS]显示消融样本仅6配对且出现负增益，评测依赖LLM裁判而缺少人类专家验证，证据强度受一定限制。
+*   实验充分性 (1.2/1.5)：在36个真实案例、5个学科家族和多骨干上完成端到端评测，并给出感知消融维度增益；但显示消融样本仅6配对且出现负增益，评测依赖LLM裁判而缺少人类专家验证，证据强度受一定限制。
 
-*   清晰度 (0.8/1)：[A_LIMITS] 摘要中“在所有7个评价维度上提升”的表述实为宏观平均，容易被误解为逐案例证明，存在措辞过于绝对的问题；其余部分有结构化模板和 execution trace 支撑，整体表达仍较清楚。
+*   清晰度 (0.8/1)：摘要中“在所有7个评价维度上提升”的表述实为宏观平均，容易被误解为逐案例证明，存在措辞过于绝对的问题；其余部分有结构化模板和 execution trace 支撑，整体表达仍较清楚。
 
-*   影响力 (0.5/1.5)：[A_SUMMARY] 本速递面向语音/音乐/音频读者，但该系统中的音频/语音仅作为多模态证据之一，并非核心应用对象，按领域相关性约束影响力不超过0.5。
+*   影响力 (0.5/1.5)：本速递面向语音/音乐/音频读者，但该系统中的音频/语音仅作为多模态证据之一，并非核心应用对象，按领域相关性约束影响力不超过0.5。
 
-*   开源 (1.2/1.5)：[A_OPEN] 代码与技能仓库已开源，has_code=是；但模型权重与自有数据集未发布，作为系统技术报告核心代码已开放但配套资产和文档完整性有限，按固定锚点给1.2。
+*   开源 (1.2/1.5)：代码与技能仓库已开源，has_code=是；但模型权重与自有数据集未发布，作为系统技术报告核心代码已开放但配套资产和文档完整性有限，按固定锚点给1.2。
 
-*   可复现性 (0.3/0.5)：[A_LIMITS] 论文披露了架构、阶段预算和 execution trace，但服务部署与完整可复现协议仍未完整披露，关键复现配置存在缺口，按固定锚点给0.3。
+*   可复现性 (0.3/0.5)：论文披露了架构、阶段预算和 execution trace，但服务部署与完整可复现协议仍未完整披露，关键复现配置存在缺口，按固定锚点给0.3。
 
-*   工程/实践价值 (1.2/1.5)：[A_METHOD] 新增学科只需编写一个 specification 文件而无需修改引擎；[A_RESULTS] 显示36/36案例端到端生成论文，且 execution trace 有利于审计，工程实践价值明确。
+*   工程/实践价值 (1.2/1.5)：新增学科只需编写一个 specification 文件而无需修改引擎；显示36/36案例端到端生成论文，且 execution trace 有利于审计，工程实践价值明确。
 
 ### 🚨 局限与问题
 

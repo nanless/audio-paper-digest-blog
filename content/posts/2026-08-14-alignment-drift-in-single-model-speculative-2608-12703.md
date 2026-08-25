@@ -111,21 +111,21 @@ paper_digest_arxiv_id: "2608.12703"
 
 ### ⚖️ 评分理由
 
-*   创新性 (1.5/2)：[A_SUMMARY][A_METHOD] 识别并测量ASR单模型投机解码中的alignment drift机制，用restart/continuation分解、固定宽度窗口干预和AnchorDraft形成因果证据链，创新点明确且非包装。
+*   创新性 (1.5/2)：识别并测量ASR单模型投机解码中的alignment drift机制，用restart/continuation分解、固定宽度窗口干预和AnchorDraft形成因果证据链，创新点明确且非包装。
 
-*   技术严谨性 (1.2/1.5)：[A_METHOD][A_RESULTS][A_LIMITS] 提供匹配对照、95% bootstrap区间、成本条件推导和低精度一致性分析；但低精度bfloat16 speculative loop并非逐token与target-greedy完全一致，argmax flip rate 0.14–0.31%，削弱严格无损声称。
+*   技术严谨性 (1.2/1.5)：提供匹配对照、95% bootstrap区间、成本条件推导和低精度一致性分析；但低精度bfloat16 speculative loop并非逐token与target-greedy完全一致，argmax flip rate 0.14–0.31%，削弱严格无损声称。
 
-*   实验充分性 (1.2/1.5)：[A_RESULTS][A_LIMITS] 覆盖LibriSpeech clean/other、TED-LIUM、GigaSpeech、FLEURS及Whisper跨架构，包含消融、统计检验和batch/duration压力测试；但runtime correction仅在两个Qwen scale低batch短音频充分测试，clean净收益含零，且核心因果干预依赖离线MMS-FA oracle，限制泛化证据。
+*   实验充分性 (1.2/1.5)：覆盖LibriSpeech clean/other、TED-LIUM、GigaSpeech、FLEURS及Whisper跨架构，包含消融、统计检验和batch/duration压力测试；但runtime correction仅在两个Qwen scale低batch短音频充分测试，clean净收益含零，且核心因果干预依赖离线MMS-FA oracle，限制泛化证据。
 
-*   清晰度 (0.8/1)：[A_SUMMARY][A_METHOD] 机制叙述从restart/continuation到窗口干预、AnchorDraft和成本条件层次清楚，符号和度量定义明确；但offline/chained/real loop等测量协议需读者仔细区分。
+*   清晰度 (0.8/1)：机制叙述从restart/continuation到窗口干预、AnchorDraft和成本条件层次清楚，符号和度量定义明确；但offline/chained/real loop等测量协议需读者仔细区分。
 
-*   影响力 (1.0/1.5)：[A_SUMMARY] 面向语音识别推理加速，提出音频位置跟踪是单模型投机解码的关键因素，并给出可复用的成本筛选思路，对ASR高效推理有领域内启发，但非SOTA且部署范围有限。
+*   影响力 (1.0/1.5)：面向语音识别推理加速，提出音频位置跟踪是单模型投机解码的关键因素，并给出可复用的成本筛选思路，对ASR高效推理有领域内启发，但非SOTA且部署范围有限。
 
-*   开源 (0.0/1.5)：[A_OPEN] 论文未发布核心代码、模型权重或数据资源，也未给出明确的后续开源承诺。
+*   开源 (0.0/1.5)：论文未发布核心代码、模型权重或数据资源，也未给出明确的后续开源承诺。
 
-*   可复现性 (0.5/0.5)：[A_METHOD][A_OPEN] 论文披露了draft架构、训练目标与损失权重、优化器、batch size、epoch、数据混合、模型尺寸、A100-80GB bfloat16 timing协议及可提取评测配置，论文层面复现步骤充分。
+*   可复现性 (0.5/0.5)：论文披露了draft架构、训练目标与损失权重、优化器、batch size、epoch、数据混合、模型尺寸、A100-80GB bfloat16 timing协议及可提取评测配置，论文层面复现步骤充分。
 
-*   工程/实践价值 (1.1/1.5)：[A_METHOD][A_RESULTS] 给出runtime correction成本条件并从既有key/cache读位置、AnchorDraft不改变推理图，在0.6B和1.7B上获得+6.8%和+4.5%端到端速度增益，工程组合有实际价值。
+*   工程/实践价值 (1.1/1.5)：给出runtime correction成本条件并从既有key/cache读位置、AnchorDraft不改变推理图，在0.6B和1.7B上获得+6.8%和+4.5%端到端速度增益，工程组合有实际价值。
 
 ### 🚨 局限与问题
 
