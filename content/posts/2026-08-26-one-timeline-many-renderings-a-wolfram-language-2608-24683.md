@@ -29,84 +29,78 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 ### 📌 核心摘要
 
-混合计算机音乐作品常同时需要合成 score、engraved notation、实时控制和排练 click；若分别编辑，速度或拍号修改会在 seconds、divisions、milliseconds 与 samples 之间制造难以追踪的时间漂移。
+混合作品若要同时交付 Csound 合成、MusicXML 谱面、OSC 控制和排练 click，真正难题不是多导出几种文件，而是同一音符在不同时间单位中会被各自编辑。谱面需要保留第几小节、第几拍和连音；控制系统需要毫秒；合成和 click 需要秒、采样与频率。把这些时间线分别保存，后续 tempo 或 meter 编辑便会制造彼此矛盾的落点。
 
-Temporal System 不把某个导出文件当作母版，而是让作者只维护带类型音乐实体、显式 meter 和 tempo specification，从源头消除多份时间线的编辑分叉。系统把作者编辑的音乐事实集中在同一条 rational beat timeline，再把异构输出视为带约束的投影。
+本文的可证伪判断是：Temporal System 以不可变的 rational-beat store 为唯一时间权威，能让现有 4 个 renderer 在各自不等价的语义中同步，而不是把所有输出伪装成无损副本。store 保存 note、rest、trigger、curve、state、marker 与 annotation；作者写入的 meter 和 stepwise tempo 也在这里关联。直到 renderer 需要 seconds、milliseconds、samples 或 hertz，单位才被换算。
 
-不可变 typed entity store 保存 note、curve、state 与 marker 等语义，tempo map 只在 renderer 请求物理单位时完成换算；因此 tempo 与 tuning 的变化能够重建物理时间和频率，却不改写谱面中的 beat-space duration。Csound、MusicXML、OSC 与 click 读取相同 onset 和 meter，但分别采用 p-field signal、measure/tie、sampled message 与强弱拍事件，差异由 backend contract 和 fallback policy 显式承担。
+数据流因而清楚：同一 store 与 compiled tempo map 经 `renderTo` 分别进入 Csound、MusicXML、OSC 和 click。Csound 把事件写为 score/orchestra primitive；MusicXML 把拍空间事件放入小节与 ties；OSC 把控制曲线采样成毫秒 JSON；click 只由 meter 与 tempo 推出强弱拍。共享的是 onset、duration、meter 与 tempo，分工的是各 backend 的 serializer、可表达范围与 fallback。
 
-论文用 Csound fixture、Dorico round-trip、OSC ramp、click 导出和 tempo edit 演示支持功能同步，而非声称传统 benchmark 优势。对计算机音乐研究者而言，最值得借鉴的是共享表示与异构 serializer 之间的责任切分，而不是 Wolfram Language 独占的 exact arithmetic。
+论文的证据也必须按这个主张理解：Csound fixture 编译并试听，MusicXML 在 Dorico round-trip 中核对 tie、meter 与 part separation，OSC 与 tempo-edit fixture 提供具体事件时间。这些材料支持特定 contract 的功能同步，并不等价于大谱面性能、实时网络调度或任意新 backend 的成本证明。
 
-真正限制采用的是核心 paclet 尚未发布、MusicXML 仍处 beta，以及 MIDI、continuous tempo、性能测量与开放 authoring core 的缺席；这些缺口使当前证据只能支撑设计可行性和特定 fixture 的功能正确性，尚不能证明复杂作品中的规模稳定性或跨环境维护成本。
+对计算机音乐研究者最有价值的不是 Wolfram Language 独占 exact arithmetic，而是“共享时间事实、后端独自负责解释”的责任边界。核心 paclet 尚未发布，MusicXML 仍为 beta，且没有 MIDI、continuous tempo、规模 benchmark 或部署测量；它现在是一份有可检查导出物的架构论证，不是已被开放生态验证的通用工具链。
 
 ### 🏗️ 方法概述和架构
 
-输入不是音频波形或 symbolic score 文件，而是带类型的 musical entities。note、rest、trigger、curve、state、marker 和 annotation 以 id 分桶写入 immutable store，onset 与 duration 使用 exact Rational beat；meter 作为 state 由作者显式给出，避免 renderer 猜小节。tempo 列表以 beat-BPM control points 表达 stepwise 速度，编译后形成可解析反演的 piecewise-linear beat-seconds map。统一 timeline 承载 authored entities 的时间与语义，异构差异只在目标 contract 中展开，共享层始终保留可追踪的输入来源。
+作者的输入不是音频波形，也不是特定 renderer 的中间文件，而是带类型的音乐实体。note、rest、trigger、curve、state、marker 和 annotation 按 `stemData[type][id]` 写入不可变 store；onset 与 duration 保持 exact Rational beat。meter 是作者写入的 state，而非导出器猜测的小节；tempo 是有序的 `{beat, BPM}` 点列，每段 BPM 保持到后续点，编译为可正反查询的 beat-seconds map。这样，修改 tempo 会重新计算物理时钟，却不会重写谱面里的拍值。
 
-架构可分成 temporal、semantic 与 rendering-contract 3 层。temporal layer 负责 beat、meter、tempo 与迟绑定换算；semantic layer 负责 entity shape、typed access 和 backend-keyed rendering payload；contract layer 声明对应 backend 能发出哪些 primitive、怎样 serialize，以及遇到不可表示实体时如何 fallback。shared constructor 只验证公共 shape，Csound payload 的错误留在 Csound contract 内，避免某个输出格式的约束污染全部音乐对象。
+temporal、semantic 与 rendering-contract 层把这个决定拆开。temporal layer 管 beat、meter、tempo 与换算；semantic layer 管实体形状、typed access 和附在实体上的 rendering payload；rendering-contract layer 才声明特定 backend 能生成哪些 primitive、如何 serializer、遇到不可表示对象怎样 fallback。公共 constructor 只校验共享形状，Csound payload 的错误留给 Csound contract，MusicXML 的拼写要求也不会污染 OSC 或频率表示。
 
-调用端通过 renderTo[stemData, tempo, backend, config, registry] 进入统一 dispatcher。数据流先读取同一个 store 与 compiled tempo map，再按 backend id 解释 entity payload，生成 score/orchestra primitive、MusicXML measure、JSON event 或 click event，最后交给对应 serializer。秒、采样、毫秒和频率只在具体 renderer 中绑定，所以 tempo 或 tuning 修改会重建物理时间与 pitch，而 authored beats 不被来回量化。
+统一入口是 `renderTo[stemData, tempo, backend, config, registry]`。它先读取同一 store 和 compiled tempo map，再按 backend id 解释 payload，最终分成 4 条数据流：Csound 生成 score 与 orchestra primitive，MusicXML 生成 measures，OSC 生成 schedule-ready JSON event，click 生成 rehearsal event。这里没有“通用秒表”：每条流只在 serializer 处绑定它所需的秒、毫秒、Hz 或 notation divisions。
 
-每个 entity 的公共字段与 backend payload 在此保持分离。constructor 只拒绝破坏共享 shape 的输入，具体 contract 再检查自己允许的键、primitive coverage 和 fallback；因此 notation 对 spelling 的要求不会迫使 Csound note 丢掉 frequency 表达，Csound 的 p-field 约定也不会渗入 OSC event。这个分工让同一 store 保持宽松，同时把失败定位到真正负责解释该 payload 的 renderer，避免跨格式修复演变为全局数据迁移。meter 与 tempo 仍由共享层维护，故局部 payload 报错不会改变其他 entity 的 onset；修正完成后，各 serializer 会从相同时间状态重新生成自己的 artifact。
+Csound 是最完整的音频路径。note 和 trigger 变成 `i` statement，marker 变成按 onset 排序的 comment，curve 变成 global k-rate signal。外部 `.orc` 文件的 filename 同时是稳定 instrument id；session 的 curve binding 把曲线接到指定 p-field，并定义 `multiply` 是缩放原 base value、`replace` 是改用曲线值。被影响的 instrument 会从源 `.orc` 复制成 bound copy，只改写 p-field use-site，原来的 envelope、clamp、oscillator 与 `pcount()` guard 仍保留。serializer 再把 globals、generated instruments 和 `#include` 汇为 `.csd`，可选地编译 `.wav`。
 
-Csound audio path 从 named .orc registry 开始。note 与 trigger 生成 i statement，marker 变成按 onset 排序的 score comment，curve 生成 global k-rate signal；session contract 把 curve 连接到指定 p-field，并选择 multiply 或 replace。受影响的 instr body 会被复制为 generated bound copy，renderer 只改写 p-field use-sites，原始 envelope、clamp、oscillator 和 pcount guard 保持不动。serializer 把 globals、generated instruments 与 #include 汇总成 .csd，并可调用 Csound 生成 .wav。
+其余 3 条流故意不复制 Csound 的语义。MusicXML 根据 meter state 建小节，把跨 barline note 拆成 tied fragments，并检查 measure capacity、part coverage、tie 与 chord integrity；它要求 authored spelling，不能接受 bare MIDI float 或 frequency。OSC 在 session control rate 上采样同一条 beat-space curve，发出以 milliseconds 排序的 address/args JSON。click 只读 meter grid 与 tempo，产生 downbeat/beat 事件，然后复用 `serializeCSnd` 和普通 click instrument。
 
-其余输出并非 Csound 的表面换皮。OSC 在 configurable control rate 下采样 beat-space curve，输出以 milliseconds 排序的 schedule-ready JSON，供 patcher 或 Csound OSC opcodes 消费。MusicXML 依据 meter state 建 measure，将跨 barline 的 note 拆成 tied fragments，检查 measure capacity、part coverage、tie 和 chord integrity；无法直接记谱的 curve 退化为 textual direction。click 只读 meter 与 tempo，生成 downbeat/beat events，再复用 serializeCSnd 和普通 click instrument。
+加入 renderer 不需要重写前述共享层：新 backend 只要声明 id、primitive types、renderer、serializer 和 fallback policy。相反，实体缺少所需 payload 或违反专属 contract 时，应在该 projection 报错或给出 fallback，而不是回头改变 store 中其他 backend 仍可使用的音乐事实。这个局部失败模型让作者能够定位“何种解释失败”，再从未改动的同一 beat-space source 重新渲染；所有事件的共同时间来源因此保持可追踪。
 
-设计取舍是允许 projection unequal，但要求时间来源一致。named p-field adapter 兼容 legacy score-style instruments，却依赖 rewrite-parsing 和声明准确的 p-field；MusicXML 的 authored spelling 约束避免隐藏 enharmonic choice，却拒绝 bare MIDI float 或 frequency。OSC sampling 保留实时控制调度，notation 则留在 beat space。新增 backend 理论上只增加 Layer III contract，但论文只用 click backend 展示单次复用，尚未测量任意 serializer 的实现成本。
+这套设计的代价也在数据流里可见。MusicXML 连续 curve 没有直接等价物，只能带 warning 地降为 textual direction；Csound 的 legacy p-field adapter 虽保持 score-style orchestra 的可读性，却依赖正确声明 p-field 和 rewrite-parsing instrument body。也就是说，系统承诺的是共同来源与显式损失，不是所有实体在 4 个目标中同样丰富。
 
 ### 💡 核心创新点
 
-1. 许多工具已经具备 exact offset 或 MusicXML/MIDI/Lilypond 输出，单独使用 rational arithmetic 也不是新事物；本文把缺口界定为同一 composition 同时跨 notation、offline synthesis、OSC 与 rehearsal audio。不可变 store 和 late conversion 让 tempo、meter、tuning 只保留唯一 authoring source，tempo-edit fixture 则证明后续 onset 会共同移动。边界是当前 backend 集合有限，尚无 continuous tempo 与 MIDI exporter。
+1. 改变是把“统一”放在 beat-space source of truth，而不放在单一通用输出格式。已有工具可以给 exact offset，或分别导出 MusicXML、MIDI、Lilypond；本文让 immutable store、authored meter 与 late unit conversion 同时约束 Csound、notation、OSC 和 click。tempo-edit fixture 的共同落点构成这项同步机制的直接验证证据，但现有目标只有 4 个，MIDI 与 continuous tempo 仍未实现。
 
-2. 传统 score abstraction 往往假定 entity 能在目标格式中等价表达，遇到 curve 容易出现隐式丢失。这里把 primitive coverage 与 fallback policy 写进 backend contract：Csound 用 k-rate signal，OSC 用 sampled message，MusicXML 明示 textual direction。Dorico round-trip 与 serializer excerpts 支持这些路径确实产出可检查 artifact，但没有外部 corpus 证明 coverage 已足够广。
+2. 改变是把不等价写成 contract。backend association 明确含 id、renderer、serializer、primitive types 与 fallback policy：该 curve 在 Csound 是 k-rate control signal，在 OSC 是控制率采样的 message，在 MusicXML 则是文本方向。这样的 coverage profile 避免静默丢失；Dorico round-trip 和 serializer excerpt 只能说明给定 fixture 的路径可检查，不能证明所有音乐符号和连续控制都已覆盖。
 
-3. Csound legacy orchestra 常依赖 p-field 位置和 numeric instrument id，扩展时容易因手工重编号或复制代码而漂移。
+3. 改变落在 Csound 的继承与生成之间。传统 score-style orchestra 容易把 numeric instrument id、手工复制和局部曲线改动绑在一起。这里用 `.orc` filename 作为 stable named instrument，并在每次 render 根据 multiply/replace binding 生成 bound copy；源文件不被手改，受影响 note 自动改指向副本。Csound suite 编译和试听说明该路径可工作，但全文也承认 rewrite-parsing 整个 instrument body 的脆弱性，named software channel adapter 仍未实现。
 
-4. Temporal System 用 filename/stable named instrument 做 registry id，并从 source .orc 自动生成 bound copy，让 curve binding 的 multiply/replace 语义在每次 render 重建。实际输出与 audition 支撑此机制可工作；rewrite-parsing 整个 instr body 仍是脆弱点，named software channel adapter 尚未实现。
-
-5. 排练 click 通常在 DAW 中另做，meter 或 tempo 一改便要人工同步。click backend 从 shared meter grid 和 tempo map 派生强弱拍，并复用 Csound serializer，展示轻量 contract 也能继承 include 与 audio compilation。这个案例支持架构复用，却不是 arbitrary backend effort 的普遍估计，也没有报告开发者研究或维护成本。
-
-6. 异构 renderer 的常见缺口不是缺少导出器，而是 notation、synthesis、control 与 rehearsal artifact 各自维护时间语义。本文用统一 tempo/meter source 配合 backend-specific contract，把同步责任放进 compilation；tempo edit 示例显示 time-domain outputs 共同更新而 written duration 保持在 beat space。这个机制仍只在作者 fixture 中核验，未量化复杂 tempo map、大谱面或长期版本演进下的漂移风险。
+4. 改变是把 click 当作共享时间线的渲染，不再把排练音频留在 DAW 中手工重建。click backend 从 shared meter grid 与 tempo map 推导强弱拍，复用 Csound serializer 的 include 和可选音频编译。这个案例说明轻量 contract 能继承基础设施；约 140 行实现只是局部案例，不能据此断言新的 notation、控制或音频 backend 都有同样成本。它真正展示的是共享 serializer 的复用边界，而非跨后端性能的代理指标。
 
 ### 📊 实验结果
 
-本文属于系统技术报告，验证问题不是某个模型是否在公开数据集超过 SOTA，而是同一 store 能否在异构 contract 下产出可检查且同步的 artifact。作者报告全部 Csound suite fixtures 均编译通过并被试听，MusicXML beta exporter 通过 Dorico round-trip 检查 tie、meter 与 part separation；同时提供 OSC、click 与 tempo-edit excerpts。历史工作已经分别展示结构与声音分离、exact offset 或 score projection；本文差异在跨 backend contract 的组合。
+这不是公开数据集上的模型排名，而是系统报告：需要验证的是同一 store 是否真的把异构 artifact 锁到同一作者时间线上。作者报告 Csound suite 的每个 fixture 都能编译并被试听；MusicXML beta export 经 Dorico round-trip 检查 tie、meter 和 part separation；另有 OSC ramp、click 输出与 tempo-edit synchrony demonstration。
 
-下面的证据表要回答当前 renderer 覆盖了哪些可核对契约，以及 MusicXML 的格式和 pitch fixture 是否给出明确观测量。
+下表把可核对的 fixture 放回各自的 contract，而不是伪装成总分。
 
-| 验证设置 | 方法 | 可核对量 | 观测值 |
+| 验证组 | 方法与比较对象 | 指标（方向） | 论文中的可核对观测 |
 |---|---|---|---|
-| curve projection | MusicXML beta exporter | format version | 4.0 |
-| pitch contract | midiToSpelling | integer MIDI input | 58 |
-| backend coverage | renderTo dispatcher | implemented contracts | 4 |
-| notation round-trip | measure builder + Dorico | format version | 4.0 |
+| curve projection | Temporal System beta exporter vs. MusicXML 4.0 standard semantics | format version（描述性） | 4.0，partwise；curve 降为 textual direction |
+| pitch contract | midiToSpelling vs. authored spelling requirement | documented sharp spelling（描述性） | integer MIDI 58 → A#3 |
+| backend coverage | generic renderTo dispatcher vs. one shared entity store | implemented backend count（描述性） | 4 个 contract：Csound、click、MusicXML、OSC |
+| notation round-trip | Temporal System measure builder vs. Dorico importer | MusicXML format version（描述性） | 4.0；检查 tie、meter、part separation |
 
-表中差异显示数字只承担 contract identity 与 fixture input 的角色，而不是准确率总分；相比模型 benchmark，这些观测能确认接口路径，却没有延迟、吞吐、统计泛化或任意作品覆盖的证据，外推边界必须保留。
+在 MusicXML contract 组的 continuous curve projection 中，Temporal System beta exporter 对照 MusicXML 4.0 standard semantics，记录 format version 4.0 unitless，方向为描述性。它输出 partwise MusicXML，但 curve 会 reduce to a textual direction，并用 warning 明示 lossy fallback；这支持 contract 能执行，不支持“连续控制已被无损记谱”的结论。
 
-在 MusicXML contract 组中，Temporal System beta exporter 面向 continuous curve，比较基准是 MusicXML 4.0 standard semantics；核验指标是 format version，观测值为 4.0 unitless，方向为 descriptive reduction。exporter 输出 partwise 文档，但 curve 会 reduce to textual direction，并以 warning 明示 lossy fallback；这支持格式契约可执行，不代表 notation 已覆盖全部 continuous control。
+在 MusicXML pitch contract 组的 integer MIDI input 中，midiToSpelling 对照 authored spelling requirement，记录 documented sharp spelling 的输入值 58 unitless，方向为描述性。论文给出的 sharp spelling 是 A#3；bare MIDI float 或 frequency 会被拒绝，因而 enharmonic choice 需要作者显式承担。这个例子没有覆盖所有 diatonic synchrony 情形。
 
-在 MusicXML pitch contract 组中，integer MIDI input 交给 midiToSpelling，比较基准是 authored spelling requirement；核验指标为 documented sharp spelling，示例值 58 unitless，方向为 descriptive reduction。它得到 A#3，而 bare MIDI float 或 frequency 会被拒绝，因此 enharmonic choice 不被后台悄悄猜测；该 fixture 没有测试 diatonic synchrony policy 的所有分支。
+在 implemented renderer set 的 current paclet release scope 中，generic renderTo dispatcher 对照 one shared entity store，记录 implemented backend count 为 4 个，方向为描述性。4 个 contract 分别生成 Csound primitives、click events、MusicXML measures 与 OSC JSON；这个数量描述当前实现面，不能证明每种 entity 均可无损跨格式。
 
-在 implemented renderer set 中，current paclet release scope 由 generic renderTo dispatcher 面向 one shared entity store；核验指标是 implemented backend count，观测值为 4 个，方向为 descriptive reduction。4 个 contract 分别产生 Csound primitives、click events、MusicXML measures 与 OSC JSON，数量只描述当前覆盖，不表示所有 entity 都能无损跨格式转换。
+在 MusicXML round-trip fixture 的 beta partwise export 中，Temporal System measure builder 对照 Dorico importer，记录 MusicXML format version 4.0 unitless，方向为描述性。round-trip 检查 tie、meter 与 part separation fidelity；exporter 仍是 beta，continuous curve 仍会被降为 textual direction。
 
-在 MusicXML round-trip fixture 中，beta partwise export 由 Temporal System measure builder 生成，并以 Dorico importer 为比较基准；核验指标是 MusicXML format version，观测值为 4.0 unitless，方向为 descriptive reduction。round-trip 检查 tie、meter 与 part separation fidelity，但 exporter 仍处 beta，且 continuous curve 会降为 textual direction。
+同步柱比格式柱更直接回答中心问题。2 段 4/4 后接 3/4、先 120 BPM 后 90 BPM 的 fixture 中，第 3 小节 downbeat 同时是 Csound `p2=4.0 s`、OSC `time_ms=4000`、strong click `4.0 s`，MusicXML 则写作 bar 3 beat 1。把第 2 段改为 60 BPM 后，beat 9/4 的 note 从 `4.667 s` 移到 `5.0 s`，而 notation 只改第二个 tempo mark、书写时值不变。OSC ramp 也给出控制率采样的边界：最后 message 在 `1900 ms`，而不是把 half-open 序列误报成 `2000 ms`。
 
-OSC ramp excerpt 记录 half-open sampling 的最后事件为 1900 ms，而 tempo-edit synchrony fixture 把第 2 个 tempo segment 从 90 BPM 改为 60 BPM 后让 time-domain outputs 共同移动。这组证据没有 direct ablation，也没有 random seeds、统计区间、吞吐、CPU/GPU 资源或 large-score benchmark；click backend 的短实现只说明单个 reuse case，无法估计任意新 backend 的工程量。
+负结果同样重要：没有 direct ablation、外部作品 corpus、large-score benchmark、统计听测、latency/throughput/resource measurement 或 independent user study。因而这些 fixture 能说明“共享 source + contract”在所示路径没有漂移，不能说明任意复杂作品、任意实时网络或任意新 backend 的稳定性与成本。
 
 ### 🔬 细节详述
 
-复现时先在 Wolfram Language 15.0 中构造 immutable stemData、authored meter entities、tempo points 与 session config，再把 backend association 和 orchestra registry 传给 renderTo。实现由 14 modules、80 public functions 与 core/rendering/util 3 个 module groups 组成；store 按 stemData[type][id] 提供 O(1) typed access，per-event render pass 为 O(n)，但正文没有提交 large-score timing。作者也以 symbolic notebook 与 computational vision 解释 Wolfram Language 选择，但该动机不构成功能验证。
+复现应从输入语义开始，而非从导出文件反推。作者使用 Wolfram Language 15.0，先构造 immutable `stemData`、authored meter entities、tempo points、session config、backend association 和 orchestra registry，再调用 `renderTo`。实现称有 14 个 modules、80 个 public functions，分 core、rendering、util 3 组；store 的 typed access 是 O(1)，每事件 rendering pass 是 O(n)，但论文没有报告 large-score timing。
 
-这不是训练式音乐模型，而是 pure-function compiler；没有 dataset split、loss、optimizer、epoch、gradient 或 learned checkpoint。复现变量集中在 musical/session semantics：tempo 为 stepwise beat-BPM points，meter 必须 authored，tuningA4 默认 440 Hz 并可改写，OSC control rate 由 session 设置。continuous accelerando/ritardando 尚不支持，硬件、操作系统、自动测试环境和性能采样方法未说明。
+这是 pure-function compiler，不包含 dataset split、loss、optimizer、epoch、gradient 或 learned checkpoint。可复核的关键配置是 stepwise beat-BPM tempo、显式 meter、默认可改的 `tuningA4=440 Hz` 与 OSC control rate。continuous accelerando/ritardando 不支持；硬件、操作系统、自动测试 runner、异常输入集合和性能采样方案均未说明。
 
-Csound 默认将 p1 解释为 instrument、p2/p3 解释为 onset/duration seconds、p4 解释为 frequency Hz、p5 解释为 [0,1] amplitude，后续 p-fields 来自 entity payload。session contract 可重映射 amplitude 和中间默认值；curve binding 的 multiply 保留 base value 后缩放，replace 则丢弃 base value。orchestra 文件名、instr definition 与 entity payload 共用 stable id，generated bound copy 每次 render 重建。
+要复核 Csound，需检查 `.orc` registry filename 与 `instr` name 是否一致、默认 p1–p5 是否分别承载 instrument、onset seconds、duration seconds、frequency Hz、`[0,1]` amplitude，以及 bound copy 是否只重写已声明 p-field 的 use-site。要复核 MusicXML，需检查 authored spelling、跨小节拆分、ties、measure capacity 与 part coverage；要复核 OSC，需检查 control rate、address、args 与 timestamp。click 则应从同一 meter/tempo 推出 beat unit、duration、strong/weak frequency、amplitude 与 pan，而不是另录 DAW 时间线。
 
-pitch 可写 spelling+cents、MIDI float 或 frequency，render time 再按 session tuning 转成 hertz。MusicXML 只接受 authored spelling，integer MIDI 需要作者显式调用 midiToSpelling；这个约束换来可审计的 enharmonic decision。notation backend 还会拆分 barline-spanning notes、建立 ties，并验证 measure、part、tie 与 chord integrity。
+具体核验顺序应先固定含 note、curve、marker 与 meter state 的 store，再保存各 backend 的原始 artifact。Csound 侧应确认 score statement 依 onset 排序、curve globals 和 generated bound instruments 写在 registry `#include` 旁；MusicXML 侧应确认 curve 的 warning 与文本 fallback 被保留；OSC 侧应确认该 beat-space ramp 的首尾时间戳没有因采样闭区间处理而多出事件。最后才做 tempo edit，并逐一比较改变前后同一 authored onset 在声、控、click 与谱面中的表示。这样能把共享时间、backend contract 和 serializer 的错误分别定位。若输出不同，还应先检查 session 的 tempo、meter、tuning 与 control-rate 配置，再判断问题是否真在 serializer，而不是以手工编辑后的导出物覆盖原始证据，便于回溯和比对。
 
-click instrument 是普通外部 .orc，beat unit、click duration、strong/weak frequency、amplitude 和 pan 来自 session。OSC backend 输出 milliseconds JSON，curve 在 control rate 上采样。作者归档 generating notebook、Csound/OSC/MusicXML/click outputs、audio 和 tempo-edit demonstration，因此当前可重现的是 artifact inspection；缺少 paclet source 意味着 constructor validation、dispatcher 与 serializer 代码仍无法独立重跑。
-
-实际核查应先确认 meter 与 tempo 输入，再分别检查 renderer contract 的接受键和 fallback，最后比较导出物是否仍指向同一 authored onset。Csound 侧还要核对 registry 文件名与 instr name、生成副本中的 p-field use-site，以及 serializer 写出的 include、global signal 和 score ordering；MusicXML 侧应检查跨小节拆分、tie 与 part coverage；OSC 侧则要检查采样率、message address 和时间戳。论文没有给出自动化命令、fixture 目录结构或测试 runner，所以这些步骤只能从叙述和 supplement artifact 反向核验，无法形成一键复现流程，也无法评估异常输入处理与长期回归稳定性。
+作者归档了 generating notebook、Csound/OSC/MusicXML/click outputs、audio 和 tempo-edit demonstration。因此读者可以比对导出物、serializer 的结果和同步示例；但 paclet source 尚未发布，constructor validation、dispatcher、instrument rewrite 和完整 regression suite 仍不能独立重跑。
 
 ### 🚨 局限与问题
 
@@ -114,42 +108,44 @@ click instrument 是普通外部 .orc，beat unit、click duration、strong/weak
 
 ### 进一步审视
 
-系统边界首先是输出覆盖：paclet 尚未发布，MusicXML exporter 仍为 beta，MIDI output 与 continuous tempo 尚未实现。Csound curve path 需要预先声明 p-field contract，并靠 rewrite-parsing 复制 instrument body；复杂 orchestra 中的宏、动态语法或 voice addressing 是否稳定，正文没有压力测试。OSC 只给 schedule-ready events，不等于网络 dispatch、jitter 或实时 deadline 已被测量。
+论文直接支持的边界很明确：paclet 尚未发布，MusicXML exporter 仍为 beta，MIDI output 与 continuous-tempo support 不存在。Csound curve adapter 需要预先声明 p-field contract，并通过 rewrite-parsing 复制 instrument body；named-channel adapter 仍属未来工作。OSC 只产生 schedule-ready events，不能据此声称网络 dispatch、jitter 或实时 deadline 已被测量。
 
-证据边界同样具体。作者没有 large-score benchmark、direct ablation、听测、外部作品 corpus、latency/throughput/resource measurement 或 independent user study；Csound audition 和 Dorico round-trip 能检查特定 artifact，却不能给出统计泛化。MusicXML fallback 是显式 lossy projection，click 的复用案例也不能推断其他 backend 都能用相近工作量实现。
+验证范围也有限。Csound audition、Dorico round-trip、OSC ramp 与 tempo-edit fixture 证明的是给定 artifact 的功能一致性；它们没有分离 immutable store、late conversion、contract fallback、registry rewrite 各自的作用，因此没有 direct ablation。没有 large-score benchmark、外部作品 corpus、用户研究或资源测量，也就没有证据表明系统在复杂 orchestra、长作品或多人工作流中仍具有同样的维护性。
 
-进一步看，authoring 必须依赖 proprietary Wolfram environment，free Engine 的许可范围仍限制开发与商业使用。虽然 .csd/.orc、MusicXML 和 JSON 是开放文本，核心 store serialization 与 Python/Julia port 仍是 intended path。仓库 URL 没有出现在受控全文，读者目前难以验证 release process、issue history 和跨版本兼容性。
+进一步的采用风险来自 authoring 环境。Wolfram Language 是 proprietary 环境，free Engine 的许可仍限制开发与商业使用；`.csd/.orc`、MusicXML 与 JSON 虽是开放文本，却不能替代 authoring source。language-neutral store serialization、Python/Julia core 与核心 release 都只是计划，受控全文也没有给出可核验 repository URL，因此跨版本兼容与维护历史目前无从审计。
 
 ### 🔗 开源与复现资源
 
-目前能审计的是 archived supplement，而不是完整实现。正文称该档案含 generating notebook、Csound/OSC/MusicXML/click outputs、audio 和 tempo-edit synchrony demonstration，可用于检查论文给出的 serializer 行为；受控全文未暴露其 HTTPS 地址，因此本记录不附猜测链接。
+现有可检查资源是 archived supplement：论文称其中保存 generating notebook、Csound/OSC/MusicXML/click outputs、audio 与 tempo-edit synchrony demonstration。受控全文没有列出 HTTPS 地址，补充档案也不能被当作完整代码发布。
 
-Temporal System paclet 仍 pending release，language-neutral store serialization 与 Python/Julia core 也被明确列为 future work。开放的 .csd/.orc、MusicXML 与 JSON 降低运行时锁定，却不能替代 authoring source；据此将资源状态定为 promise，hasCode、hasModel 与 hasDataset 均为否。
+Temporal System paclet 仍 pending release；language-neutral store serialization 与 Python/Julia core 被列为 future work。开放的输出格式有利于拿走已生成的 `.csd/.orc`、MusicXML 和 JSON，但作者侧的 store、dispatcher 与 contracts 尚不能审计或再构建。因此 hasCode、hasModel、hasDataset 均为否，开源状态只能是有导出 artifact 的明确承诺。
 
 ### 💡 研究者判断
 
-这篇报告最强的地方，是承认不同 renderer 本来就不等价，却仍要求它们对同一 musical time 负责。Csound 的 named registry、MusicXML 的显式 fallback、OSC 的采样事件和 click 的 meter derivation 组成了比“多格式导出”更扎实的 contract story。可惜核心 paclet 尚未发布，读者只能检查导出物，无法审计 constructor、instrument rewrite 或 dispatcher 的实现；再加上没有 MIDI、continuous tempo 和规模测量，眼下它是值得借鉴的计算机音乐架构，而不是可立即迁移的成熟开放工具链。
+这篇系统报告最成熟的判断，是承认不同渲染并不应该被强行做成同一种对象：谱面保留拍与拼写，Csound 绑定 p-field，OSC 发送采样消息，click 只关心排练网格；它们只需对同一 rational-beat source 负责。这个边界比“支持多格式导出”更能指导音乐工具的架构。
 
-`<details>`
-`<summary>`⚖️ 评分理由（展开查看）`</summary>`
+但还不能把架构的整洁当成工程规模的证据。核心 paclet 未发布，MusicXML 是 beta，Csound 的 bound-instrument rewrite 还缺压力测试；fixture 显示同步，没有显示大量作品、连续变速、MIDI、网络实时性或外部用户如何失败。结论因此应回到开头的矛盾：论文给出了让多种 renderings 共享共同时间线的可信办法，也清楚地付出了专有 authoring、backend-specific loss 和尚未验证的可扩展性代价。
 
-* 创新性 (1.4/2)：不可变 rational-beat store、晚绑定单位换算与 backend contract 的组合针对异构音乐输出给出清楚边界，但 exact Rational 和多输出各自已有先例，因此创新性取中上而非满分。
+<details>
+<summary>⚖️ 评分理由（展开查看）</summary>
 
-* 技术严谨性 (1.1/1.5)：全文逐层说明 temporal、semantic、rendering-contract 数据流，并具体交代 Csound p-field 重写、MusicXML fallback 与 OSC sampling；缺少大谱面压力测试和形式化 contract proof 限制严谨性。
+* 创新性 (1.4/2)：[E01,E02] 将不可变 rational-beat store、晚绑定单位换算与 backend contract 合成统一的多输出时间语义链，确有系统级新组合；但 exact rational timeline 与单个输出投影已有先例，创新性取 1.4/2。
 
-* 实验充分性 (0.8/1.5)：同步、OSC ramp、click、Csound audition 与 Dorico round-trip 提供多个功能夹具，但没有传统基线实验、直接消融、统计听测或规模数据，实验充分性只能保守评价。
+* 技术严谨性 (1.1/1.5)：[E02,E03] 论文具体给出 3 层架构、14 个模块/80 个公开函数、stepwise tempo 编译和局部 payload contract，机制叙述自洽；当前没有形式化 contract proof，技术严谨性取 1.1/1.5。
 
-* 清晰度 (0.9/1)：章节从 paclet anatomy 过渡到 backend 与 synchrony，API 名称和实际 serializer excerpt 便于追踪；HTML 抽取中的公式重复不属于论文论证本身，整体表达仍较清楚。
+* 实验充分性 (0.8/1.5)：[E04,E05,E08] Csound 编译/试听、Dorico round-trip、tempo-edit synchrony 与 OSC serializer excerpt 共同覆盖功能夹具；它们不是基线比较、消融、统计听测或规模压力测试，实验充分性取 0.8/1.5。
 
-* 影响力 (1.1/1.5)：统一作曲时间线能直接服务 mixed music、electroacoustic rendering 与 rehearsal workflow，也给新 backend 留出 contract 入口；影响力仍受 Wolfram authoring 门槛和未发布状态约束。
+* 清晰度 (0.9/1)：[E02,E03] 从 paclet anatomy、tempo/store 到 renderer contract 的层次清楚，并给出 dispatcher 与 serializer 的可追踪接口；公式抽取噪声不改变原文组织，清晰度取 0.9/1.0。
 
-* 开源 (0.5/1.5)：Zenodo supplement 被声明为已归档，但受控全文没有显式 URL，核心 paclet、language-neutral serialization 与 Python/Julia port 均未发布，所以只能按明确开放承诺计 0.5。
+* 影响力 (1.1/1.5)：[E01,E05] 同一时间线投影到 Csound、记谱、OSC 与 click，直接对应 algorithmic composition、electroacoustic rendering 和排练工作流；适用范围仍是这些作者工具链，影响力取 1.1/1.5。
 
-* 可复现性 (0.3/0.5)：generating notebook、导出文件、audio 与 tempo-edit demonstration 能支撑局部核查，Wolfram Language 15.0 和关键 session 语义也有说明；缺少 paclet 本体使完整端到端复现尚不可行。
+* 开源 (0.5/1.5)：[E07] Zenodo supplement 仅归档 notebook、导出物、音频和演示，核心 paclet 仍待发布；按明确未来开放锚点，开源取 0.5/1.5。
 
-* 工程/实践价值 (0.9/1.5)：named instrument registry、共享 serializer 和一处 tempo edit 驱动多输出具有直接工程价值；未报告真实 latency、throughput、resource usage 或 large-score benchmark，按门禁不超过 1.0。
+* 可复现性 (0.3/0.5)：[E06,E07] 生成 notebook、输出物和 Wolfram Language 15.0 线索支持局部复核，但未发布 paclet，且 MIDI、continuous tempo 与部分 adapter 尚缺，无法完整端到端重跑，可复现性取 0.3/0.5。
 
-`</details>`
+* 工程/实践价值 (0.9/1.5)：[E05,E06,E08] 共享 serializer、named-instrument contract 和 tempo edit 同步多个输出具有明确工程用途；全文未报告实际 latency、throughput、resource usage 或 large-score benchmark，工程价值受 1.0 上限约束，取 0.9/1.5。
+
+</details>
 
 ---
 

@@ -29,53 +29,59 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 ### 📌 核心摘要
 
-水下可见度下降时，RGB 的颜色、纹理和边界迅速丢失，成像声呐仍保留轮廓、距离与方位，却同时带来散斑、混响和声影。真正的问题不是增加一幅声呐图，而是建立能被语言模型使用的声学表示，并让双传感器随观测质量改变分工。SonarLLM 为此保留光学塔，另建带 Sonar Stem 和极坐标位置适配的声呐塔，再以模态专属 VFE、AGFM 与双流 DeepStack 连接共享语言模型，训练则把声呐域适配、类别语义、跨模态对应和语言指令拆成连续阶段，使表征增益与融合增益能够分开追踪。SonarBench 覆盖识别、计数、视觉问答与描述，但 fusion 只在前 3 个准确率任务上报告。
+SonarLLM 的可证伪判断是：水下异质融合的关键不是多加额外图像，而是先让语言模型分别理解光学外观与声呐距离—方位结构，再随观测质量改变两者影响力。RGB 在清晰水体里携带颜色、纹理和对象语义，却会被散射迅速吞没；成像声呐仍能给出距离、方位和轮廓，却伴随混响、声影与距离衰减。若把它们在视觉入口就压成同一序列，模型既难保留声呐几何，也难判断其中哪路正在变得不可信。
 
-主结果中，声呐单模态 macro accuracy 达 72.0%，融合达 68.7%，分别显著领先最强基线。配对退化还显示，光学越不可靠，声呐带来的识别与计数增益越大。论文的证据足以支持受控退化下的异质传感器互补，并用真实推理测量揭示双塔的延迟与显存代价，却尚不能证明自然海况或跨海域泛化。通用视觉语言模型只作为失配起点，不展开其连接器谱系。
+论文选择冻结 Qwen3-VL-8B 的光学塔，另用从其权重初始化的 PSVT 学习声呐，并把双路特征修正、质量重加权和语言注入拆开。训练也严格分为声呐域适配、声学类别语义、同步对齐与门控、指令跟随 4 步。SonarBench 在固定场景、问题和声呐观测的前提下只退化 RGB，因此可以把“融合减光学”的变化解释为同一声呐证据在低可见度下的增益。其声呐 macro accuracy 为 72.0%，fusion macro accuracy 为 68.7%，但 fusion 只测试识别、计数和 VQA；自然海况、声呐故障、跨设备与融合 captioning 仍没有证据。它证明的是受控条件下的角色分工，不是所有海况都成立的通用融合定律。
 
 ### 🏗️ 方法概述和架构
 
-输入由文本指令、RGB 图像和成像声呐观测组成。Stage III 成对退化训练固定场景与声呐观测，只改变配对 RGB 的退化；对应 benchmark probe 进一步固定场景、问题与声呐观测。这使 fusion-minus-optical 能被解释为同场景下增加声呐后的配对收益，而不是样本差异。
+先看输入为何必须分流。文本提示直接进入 Qwen3-VL-8B Decoder；RGB 图像进入预训练且冻结的光学视觉塔；成像声呐不是复制成 RGB 后共用该塔，而是先由 Sonar Stem 提取不同感受野的回波、边界和声影，再叠加物理距离与方位位置编码，送入独立的 Polar-aware Sonar Vision Transformer（PSVT）。Sonar Stem 的残差系数从零初始化，意图是在保留迁移视觉先验时逐渐放入声呐特有结构。
 
-观察下图时可沿 Clear、Turbid、Heavy 追踪 RGB 证据消失，并核对右侧成像声呐的扇形距离—方位结构。
+两座塔各输出最终特征和视觉块 8、16、24 的中间特征。最终特征才接受模态专属的 Visual Feature Enhancement（VFE）：Optical-VFE 用可学习散射查询并借助冻结 DINOv2-L 的结构参考处理光学退化；Acoustic-VFE 用声学查询抑制混响相关成分，并对每个 token 按物理距离施加学习到的补偿。这里的 VFE 是特征空间修正，并非从单幅图像反演真实水体或声学传播。
+
+双塔把表示、修正、重加权和语言注入分成了 4 个接口。最终 RGB 与声呐特征经各自 VFE、投影和 AGFM-0 后共同构成初始多模态上下文；中间特征绕过 VFE，在 AGFM-1、AGFM-2、AGFM-3 之后分别通过模态专属 DeepStack merger 注入语言层 8、16、24。这个绕行很重要：它让浅中层声呐结构不必先被高层光学修正模块滤掉。
+
+Adaptive Gated Fusion Module（AGFM）不合并双流 token 序列。每单层先给模态内 token 打质量分，再汇总为 RGB 与声呐的全局权重；随后以均值保持的局部调制重新分配每路内部 token 的重要性。全局门控回答“当前更应信哪某个传感器”，局部调制回答“该传感器内哪些区域更可靠”，DeepStack 则负责把双流仍分离的序列写入语言模型。单模态输入时 AGFM 是恒等映射，避免为缺失传感器虚造融合行为。
+
+4 阶段训练对应这条数据流的 4 个学习难题。Stage I 在未标注声呐图上用加权 MAE 适配 PSVT，重建 decoder 随后丢弃；Stage II 用 23 类对象标注训练 PSVT、Sonar Stem 和 classifier，使回波结构有类别组织。此时光学塔、语言模型与融合模块保持冻结。
+
+Stage III 才使用 RGBS50 同步声呐—光学对。它联合 InfoNCE、3 个中间层的余弦对齐、门控 BCE 与熵正则，并以 0.7 概率施加光学退化。语言模型与光学塔仍冻结，优化对象是声呐路径、双 VFE 与 AGFM；BCE 目标会随退化强度把权重从均衡推向声呐，因此门控是已知退化轴上的受监督校准。Stage IV 最后用 sonar-only、optical-only 与 paired 指令，以 answer-only 目标训练 LoRA 和多模态接口，将前 3 阶段得到的表示接到识别、计数、VQA 与描述输出。
+
+完整图中的潜水员在 Clear、Turbid、Heavy RGB 面板中逐步淡出，右侧却保留扇形声呐量程线和 target echo。
+
+请在下图沿 Clear、Turbid、Heavy 光学序列观察潜水员外观如何消失，再看右侧成像声呐的扇形量程线和 target echo。
 
 [![Paired sonar–optical observations under controlled optical degradation. Optical evidence weakens with turbidity, whereas sonar preserves structural cues for the same scene.](https://arxiv.org/html/2608.24325v1/sonarbench_teaser_compact_v5.png)](https://arxiv.org/html/2608.24325v1/sonarbench_teaser_compact_v5.png)
 
-图中同一潜水员样例在清晰、浑浊和重度浑浊 RGB 面板中逐渐淡出，声呐面板仍显示扇形量程线和目标回波；这支持同场景增加声呐后的配对收益，但只限受控光学退化，未覆盖声呐自身被混响或颗粒噪声破坏的条件。
+完整图从左到右把同一潜水员的 RGB 轮廓由清晰变暗直至几乎不可见，右侧仍有扇形回波、量程弧线与红色 target echo 箭头。它说明 SonarBench 的对照保留了声呐几何证据，但只展示人为控制的光学退化，难以代表声呐本身受混响破坏。
 
 
-声呐观测先通过 Sonar Stem 的多尺度卷积与残差支路，再在 patch token 上叠加距离、方位位置编码。PSVT 从 Qwen3-VL 视觉塔权重初始化，却作为独立支路渐进解冻；零初始化残差系数让声呐结构在不破坏迁移先验的情况下逐步进入表示。
+因此配对基准只改变 RGB 的退化，保留同一场景和同一声呐观测；它可隔离低可见度时增加声呐的条件化收益，却难以模拟声呐混响、失效或时间不同步。
 
-双视觉路径随后执行不同的特征修正。Optical-VFE 用散射查询削弱浑浊相关成分，并从冻结 DINOv2-L 引入结构参考；Acoustic-VFE 用混响查询和随物理距离变化的增益修正声呐 token。成像方程在这里承担设计动机，而不是物理反演声明。
+上方 RGB tower 与下方 sonar tower 平行，前者接 Optical-VFE，后者接 Sonar Stem、Polar Position Adapter 与 Acoustic-VFE，紫色 AGFM-0 至 AGFM-3 位于双流 token 和 Decoder 之间。
 
-阅读下图可追踪双视觉路径如何经 Sonar Stem、Polar Position Adapter、双 VFE 与 4 级 AGFM 完成特征修正。
+请在下图从 RGB tower 与 sonar tower 追踪双流输入，再核对蓝色 Optical-VFE、绿色 Acoustic-VFE、紫色 AGFM-0 至 AGFM-3 如何通向 Qwen3-VL-8B Decoder。
 
 [![Overall architecture of SonarLLM, comprising sonar-native representation, modality-specific feature enhancement, reliability-aware hierarchical fusion, and progressive training.](https://arxiv.org/html/2608.24325v1/arch4.png)](https://arxiv.org/html/2608.24325v1/arch4.png)
 
-流程图左侧把 RGB 与声呐送入独立视觉塔，中部蓝色 Optical-VFE 与绿色 Acoustic-VFE 分开处理，紫色 AGFM 在多个层级重加权后把两色 token 注入解码器；这把先形成表示、再校准对应、最后接入语言任务的顺序画成可见流程，但仍需结合训练表确认各阶段冻结范围。
+图中 RGB tower 与 sonar tower 平行，后者额外拥有 Sonar Stem 和 Polar Position Adapter；双类 VFE 颜色分开，AGFM cell 先做 token quality scoring、global gate 和 local modulation，再将双模态 token 送入解码器。完整总览支持“双流后注入”的数据流，证据仅限数据流本身而非每个模块的任务收益。
 
 
-AGFM 只重加权而不拼接压缩双模态序列，最终层形成初始多模态上下文，中间层则保留双流。它在每个层级先估计 token quality，再汇总为光学与声呐的全局权重，并用均值保持的局部调制重新分配模态内 token；单模态时退化为恒等映射。
-
-层级交互由 DeepStack 完成。视觉块 8、16、24 的中间特征绕过 VFE，分别经过 AGFM 和模态专属 merger 后注入语言层 8、16、24；最终特征则经 VFE、投影和 AGFM-0 进入初始上下文。分开保存声呐与光学 token，可避免异质表示在进入语言模型前被过早压缩。
-
-训练分为 4 阶段，目的是避免有限配对数据同时承担域迁移、声学语义、传感器对应、门控校准与指令学习。Stage I 训练 PSVT 与重建 decoder，并在阶段结束后丢弃 decoder；Stage II 训练 PSVT、Sonar Stem 和 classifier。Stage III 在冻结语言模型与光学视觉塔的前提下训练 sonar path、双 VFE 和 AGFM，Stage IV 才以 answer-only 目标训练 LoRA 与多模态接口。
-
-输出覆盖识别、计数、VQA 与 captioning。Stage III 的 gate target 随合成光学退化强度从均衡向声呐移动，因此 AGFM 学到的是已定义退化轴上的受监督代理，不是任意声呐故障或任意问题类型上的最优传感器选择器。这种先形成表示、再校准对应、最后接入语言任务的顺序，是论文能够区分声呐能力与多模态能力的关键。
+分工的关键是让 AGFM 改变影响力而不是把异质 token 过早合并；不过图本身不证明各模块收益，训练阶段和消融才负责验证这一点。
 
 ### 💡 核心创新点
 
-1. 既有 MLLM 往往把声呐送进自然图像塔，无法表达扇形成像中的距离—方位关系。SonarLLM 改用独立 PSVT、Sonar Stem 和极坐标位置适配；去掉 Polar PE 与 Sonar Stem 的直接消融带来最大的声呐和融合退化，支持几何适配的必要性，也解释了模型规模无法补偿声呐域几何失配，但该结论还没有跨设备或跨频段验证。
+1. 首项变化是把声呐视为原生感知模态，而不是自然图像塔的灰度输入。既有通用 MLLM 的问题不只是参数量，而是没有编码扇形成像中的距离—方位几何。本文用多尺度 Sonar Stem 与 Polar PE 把这双类信息写入独立 PSVT；结构消融中移除 Polar PE 使 fusion 由 82.1% 降到 68.6%、Sonar macro 由 65.8% 降到 55.7%，支持几何适配的重要性。该变体需要重训前端，且没有跨频段或跨设备测试，所以它说明当前设置中的必要性，不是普适声呐理论。
 
-2. 统一增强模块会混淆光学散射与声学混响、距离衰减。论文将 Optical-VFE 与 Acoustic-VFE 分开，并让中间 DeepStack 特征绕过它们；分别移除双路 VFE 时，主要损失落在对应模态，说明分治不是简单增加参数，不过当前修正仍停留在特征空间。
+2. 另一项变化是把光学散射与声学混响、距离衰减分给不同的 VFE，而非用某个共享修复器混合处理。Optical-VFE 借 DINOv2-L 的结构参考处理光学特征，Acoustic-VFE 保留 range-dependent gain；中间层通过 DeepStack 绕开它们。去掉 Optical-VFE 时 optical accuracy 从 72.5% 降到 68.8%，去掉 Acoustic-VFE 时 Sonar macro 从 65.8% 降到 62.0%，证据符合分工预期，但仍难以证明这些特征修正等价于真实物理去噪。
 
-3. 固定平均融合无法应对传感器质量变化。AGFM 同时建模全局模态权重与局部 token 质量，并在多层视觉语义上保持双流；重度浑浊下它比同 checkpoint 等权融合更稳，但 Clear 条件的收益为零，且门控受退化标签直接监督。
+3. 再一项变化是将质量感知拆成传感器级全局门控与 token 级局部调制，并在 4 个视觉深度保持双流。与平均融合相比，AGFM 在 Clear 没有额外优势，而在 Heavy 条件高 2.7 pp；它的价值是压住正在恶化的 RGB，而非对每个问题找到最佳传感器。由于 Stage III 把合成退化强度直接写进 gate loss，这是该类可验证的受监督退化响应，而不是无监督的通用可靠性估计。
 
-4. 普通评测难以区分声呐表征提升与跨模态互补。SonarBench 固定场景、问题和声呐观测，只改变 RGB 退化，并配合同 Stage-IV 数据的 LoRA 基线、表征分析和结构消融形成归因链；训练与测试使用同一退化生成器，使它更接近受控压力测试而非自然海况泛化。
+4. 最后一项变化是 SonarBench 的成对干预协议。它固定场景、问题与声呐观测，只改变 RGB 质量，使表征收益、光学退化和融合互补可被分开测量；同 Stage-IV 指令数据的 Qwen3-VL-8B+LoRA 对照、表征图和组件消融共同强化归因。但训练与 benchmark 共享退化生成器，故这更像受控压力测试，而不是自然浑浊海域的外部泛化。
 
 ### 📊 实验结果
 
-先看原生声呐和融合是否真正超过强基线。下表保留 3 种输入设置的 macro accuracy，指标均为越高越好；caption GOOD 不进入这些平均数。
+先回答原生声呐路径是否真的胜过强基线。下表保留 SonarBench 的 3 种输入 macro accuracy，所有指标均为越高越好；caption GOOD rate 不参与这 3 个平均数。
 
 | 方法 | SonarBench 输入 | Sonar macro accuracy ↑ | Optical macro accuracy ↑ | Fusion macro accuracy ↑ |
 |---|---|---:|---:|---:|
@@ -84,77 +90,83 @@ AGFM 只重加权而不拼接压缩双模态序列，最终层形成初始多模
 | Qwen3.8-27B | sonar / optical / fusion | 29.1% | 34.4% | 43.7% |
 | SonarLLM | sonar / optical / fusion | 72.0% | 50.9% | 68.7% |
 
-在 SonarBench 的声呐单模态设置中，SonarLLM 相比最强外部基线的 macro accuracy（越高越好）为 72.0%，领先 34.4 points。在 SonarBench 的融合输入设置中，SonarLLM 相比最强外部基线的 macro accuracy（越高越好）为 68.7%，领先 25.1 points。更大模型没有弥合差距，同训练指令的 Qwen3-VL-8B+LoRA 也远低于原生声呐路径。
+在 SonarBench 的 sonar-only 设置，方法是 SonarLLM、基线是 strongest baseline，macro accuracy 为 72.0%，方向是越高越好。它比最强基线高 34.4 points；27B 和 35B 通用 MLLM 也没有接近这一结果，支持“声呐表示失配”比单纯扩大模型更关键。在同一 SonarBench 的 fusion input，SonarLLM 对 strongest baseline 的 macro accuracy 为 68.7%，方向仍是越高越好，比最佳基线高 25.1 points。这个主结果只涵盖识别、计数、VQA，难以替代双传感器 captioning 结论。
 
-SonarBench 的关键控制是固定场景、问题与声呐观测，只修改配对 RGB 的退化程度。在 SonarBench 成对退化中，重度浑浊的识别与计数使用 fusion 输入相比 optical 输入，fusion-over-optical gain（越高越好）达到 36.0 points；Clear 条件下为 6.0 points。跨模态输入本身可能失败：Qwen3-VL-8B+LoRA 从 optical 36.9% 降到 fusion 32.3%，Qwen3.6-35B-A3B 从 36.4% 降到 28.9%。
+再问声呐在何时真正互补。SonarBench paired degradation 固定场景与声呐观测；在 heavy turbidity 的 recognition and counting，方法是 fusion input、基线是 optical input，fusion-over-optical gain 为 36.0 points，方向是越高越好，而 Clear 为 6.0 points。识别的 gain 从 6.0、13.4 到 36.0 points，计数从 6.0、33.4 到 36.0 points；fusion 的 clear-to-heavy 变化远小于 optical，说明同一声呐证据在 RGB 变坏后更有价值。反例也必须保留：Qwen3-VL-8B+LoRA 的 fusion average 是 32.3%，低于它的 optical 36.9%，第二传感器若没有异质表示与交互设计可以伤害表现。
 
-门控是否真的随观测质量变化，可以由同 checkpoint 分析回答。在 150 个 held-out 场景的 5 级退化探针上，global sonar weight 从 0.491 增至 0.795，且在 Heavy 条件下 AGFM 比 Mean Fusion 高 2.7 pp；Clear 时两者同为 70.0%。在结构消融的 clear-to-heavy 条件下，质量感知加权的 SonarLLM 相比 Mean Fusion 和 w/o gate loss，将 fusion decline（越低越好）保持在 1.3 points，而双基线分别增至 3.8 和 3.0 points。这些结果说明 AGFM 更像退化缓冲器而非逐问题 oracle。
+同一 checkpoint 下，AGFM 是否只是在重度浑浊时缓冲了失真的 RGB？150 个 held-out 场景的 5 级 probe 中，global sonar weight 从 0.491、0.637、0.717、0.769 升至 0.795；右图 Clear 时双流曲线重合，Heavy 时 AGFM 比 Mean Fusion 高 2.7 pp。
 
-比较下图两块曲线时，应核对 AGFM 门控的 global sonar weight 是否随观测质量下降而上升，以及它相对 Mean Fusion 的差距。
+请在下图读取左侧 global sonar weight 的 5 个数值，并在右侧比较 AGFM 与 Mean Fusion 从 Clear 到 Heavy 的曲线间距。
 
 [![Reliability-aware fusion analysis on 150 held-out scenes. (a) Sonar weight increases with optical degradation. (b) Under the same checkpoint, AGFM’s advantage over equal weighting grows from 0.0 to 2.7 points.](https://arxiv.org/html/2608.24325v1/agfm_analysis2.png)](https://arxiv.org/html/2608.24325v1/agfm_analysis2.png)
 
-左侧曲线从 0.491 单调升到 0.795，右侧蓝线与红线在 Clear 重合、在 Heavy 拉开 2.7 pp；这支持 AGFM 更像退化缓冲器而非逐问题 oracle，但图中趋势仅对应 Stage III 显式监督的光学退化范围。
+左图的 global sonar weight 从 0.491 递增到 0.795；右图双流曲线在 Clear 重合，Heavy 时蓝色 AGFM 线高于红色 Mean Fusion 线 2.7 pp。它直接支持门控对给定退化轴的缓冲作用，证据仅限 Stage III 受退化强度监督的条件。
 
 
-再看组件是否真的分别承担声呐表示、模态修正和层级交互。下表使用与主表不同的 rule-scored validation split，绝对数值不能跨表直接比较，所有 accuracy 越高越好、Drop 越低越好。
+这把 AGFM 定位为退化缓冲器，而不是能逐题挑选最佳传感器的 oracle。它的权重趋势验证了被训练目标要求的响应；同 checkpoint 等权替换提供了额外的性能对照，但难以把该相关性写成对自然传感器故障的发现。
 
-| 变体 | rule-scored validation split | Fusion ↑ | Drop ↓ | Optical ↑ | Sonar macro ↑ |
+组件证据来自独立的 rule-scored validation split，因此绝对值难以与主表直接并列比较。所有 accuracy 越高越好，Drop 是 clear-to-heavy fusion decline，越低越好。
+
+| 变体 | 设置 | Fusion ↑ | Drop ↓ | Optical ↑ | Sonar macro ↑ |
 |---|---|---:|---:|---:|---:|
 | SonarLLM | 完整模型 | 82.1% | 1.3 points | 72.5% | 65.8% |
 | Mean Fusion | 等权重重训 | 80.8% | 3.8 points | 72.3% | 65.6% |
 | w/o gate loss | 无门控监督 | 81.2% | 3.0 points | 72.7% | 64.9% |
 | w/o both VFE | 去掉双路 VFE | 79.8% | 3.1 points | 67.2% | 61.4% |
 | w/o DeepStack | 去掉层级注入 | 78.9% | 2.8 points | 71.8% | 59.6% |
-| w/o Sonar Stem | 重训声呐前端 | 73.9% | 5.3 points | 71.6% | 58.3% |
 | w/o Polar PE | 重训声呐前端 | 68.6% | 7.1 points | 71.4% | 55.7% |
 
-在结构消融中，去掉 Polar PE 的 SonarLLM w/o Polar PE 相比完整 SonarLLM，fusion accuracy loss（越低越好）为 13.5 points，sonar-macro accuracy 同时下降 10.1 points。声呐前端适配验证中，Stage-I MAE 与 r=128 的 MAE-r128 相比 Transplant no MAE，把 R/C average（越高越好）提高到 74.7%，但 counting 下降 2.0 points。表征分析把声呐类别形成与跨模态对齐拆开：silhouette 从 -0.18 升至 0.16 后，matched 与 mismatched 的 margin 仍仅为 0.001；Stage III 才升至 0.660，Stage IV 后保留 0.423。这说明 Stage I-II 学到的是声呐域内结构，Stage III 才建立同场景跨模态对应。
+在 rule-scored validation split 的 clear-to-heavy 条件，方法 Mean Fusion 相比质量感知 SonarLLM 的 fusion decline 为 3.8 points，方向是越低越好；完整模型为 1.3 points。该差异补足静态 fusion 的小损失，表明 gate loss 主要保护退化鲁棒性。在同一 split 的 without Polar PE 条件，方法 w/o Polar PE、基线 SonarLLM 的 Fusion accuracy 为 68.6%，方向是越高越好，较完整模型少 13.5 points。它把最大损失指向声呐几何，而不是单纯增加融合参数。
 
-查看下图的表征分析可先比较声呐类别散点的 silhouette，再追踪 matched 与 mismatched 分布在 Stage III、Stage IV 的间隔变化。
+训练课程也有非单调信号：在 sonar front-end adaptation validation，Stage-I MAE-r128 相比 Transplant no MAE 的 R/C average 为 74.7%，方向是越高越好，基线是 Transplant no MAE；识别改善但 counting 下降 2.0 points。训练阶段的表征图把声呐类别形成与同场景跨模态对应分开了：silhouette 从 -0.18 提到 +0.16，Stages I-II 的 alignment margin 仅 0.001，Stage III 为 0.660，Stage IV 为 0.423。
+
+请在下图上方比较 pretrained tower 与 Stages I-II 的 silhouette，并在下方依次追踪 matched 橙色与 mismatched 灰色分布的 alignment margin。
 
 [![Progressive representation formation.](https://arxiv.org/html/2608.24325v1/representation_alignment_2.png)](https://arxiv.org/html/2608.24325v1/representation_alignment_2.png)
 
-上方散点从混杂的 -0.18 silhouette 变为按类别分离的 0.16，下方橙色 matched 分布在 Stage III 明显右移并与灰色 mismatched 拉开，Stage IV 的间隔有所回落；这些像素事实支持逐阶段表征形成，但只限 RGBS50 clear 配对。
+上方散点的 silhouette 由 -0.18 变为 +0.16；下方在 Stages I-II 的 margin 仅 0.001，Stage III 达 0.660，Stage IV 仍为 0.423。完整图证实课程学习把域内类别结构和跨模态对应分开建立，但这些密度图只来自 RGBS50 的 clear 配对。
+
+
+所以 Stage I-II 的类别分离难以代替 Stage III 的成对对齐；而 Stage IV 后 margin 回落也提示指令学习放松了严格特征相似度。最后看工程代价：同一 A100-80GB、BF16、batch size 1、两幅 448×448 图、512 visual tokens 和 128 generated tokens 下，SonarLLM 为 21.6 GB、137.5±1.1 ms prefill、21.1±1.2 tokens/s decode，Qwen3-VL-8B 为 17.7 GB、77.2±0.2 ms、38.4±0.1 tokens/s。双塔有实测成本，仍缺载具闭环延迟、功耗和采集链证据。
 
 ### 🔬 细节详述
 
-数据方面，Stage I 汇集 RGBS50、UATD、SCTD、DeeperSense、FLC+FLS 与海洋指令来源的约 98K 候选声呐图，经空帧、异常值、字节去重与亮度平衡后保留 40K。Stage II 使用汇总后的 23 类对象标注；Stage III 只用 RGBS50 同步对；Stage IV 的 635K 指令混合含 533K 声呐相关样本和 102K 光学样本。既有水下资源的名称只用于定位任务空白。
+数据与课程的边界要分开看。Stage I 从 RGBS50、UATD、SCTD、DeeperSense、FLC+FLS 等来源收集约 98K 候选声呐图，经过空帧、异常值、字节去重和亮度平衡后保留 40K；Stage II 汇总 23 类对象标注；Stage III 只使用 RGBS50 同步对；Stage IV 的 635K 指令中有 533K 声呐相关样本和 102K 光学样本。论文说明了这些规模，但没有可执行的过滤规则与序列清单。
 
-Stage I 的 mask ratio 为 0.60，并按局部变化给 masked patch 加权。Stage II 训练 PSVT 与 Sonar Stem，learning rate 为 5×10^-5。Stage III 以 0.7 概率退化光学输入，退化 severity 在无量纲闭区间 [0.1, 1.0] 采样，InfoNCE temperature 为 0.07，联合损失权重依次为 1.0、0.5、0.2、0.1，learning rate 为 10^-4。
+Stage I 的 mask ratio 是 0.60，并按局部变化给 masked patch 加权。Stage II 训练 PSVT 与 Sonar Stem，learning rate 为 5×10^-5。Stage III 以 0.7 概率退化光学输入，severity 从 [0.1, 1.0] 采样，InfoNCE temperature 是 0.07，4 项损失权重为 1.0、0.5、0.2、0.1，learning rate 为 10^-4。
 
-Stage IV 采用 LoRA，配置为 r=128、alpha=256、learning rate 10^-4，仅训练语言适配器和多模态接口。输入分辨率为 448×448，answer-only objective 只在答案 token 上计算。论文未说明优化器、各阶段 epoch 或 step、学习率调度、随机种子、训练硬件和完整数据清洗脚本。
+Stage IV 用 LoRA r=128、alpha=256、learning rate 10^-4，只训练语言适配器和多模态接口；输入为 448×448，answer-only objective 只对答案 token 计算损失。未说明优化器、各阶段 epoch 或 step、学习率调度、随机种子、训练硬件与完整清洗实现，这些是复现实验时最需要补齐的变量。
 
-SonarBench 共含 25 个 subset，每个 subset 有 150 个 QA 实例；source sequence 在全部训练阶段之前完成划分，并审计为零重叠。Recognition 与 VQA 用 Qwen3.8-Max 判断语义正确性，counting 采用整数 exact match，captioning 同时报 GOOD rate 与 METEOR。另用 Kimi-K3 复核 300 个分层抽样输出，judge agreement 为 94.3%，Cohen's kappa 为 0.87；这能检查评分器一致性，却没有替代逐样本人工金标，仍需公开判分提示。
+SonarBench 有 25 个 subset，每个 150 个 QA 实例，source sequence 在训练前划分并审计为零重叠。Recognition 与 VQA 由 Qwen3.8-Max 进行语义判定，counting 使用整数 exact match，captioning 报 GOOD rate 和 METEOR；Kimi-K3 对 300 个分层样本的复核给出 94.3% judge agreement 与 Cohen's kappa 0.87。评分器复核可说明一致性，但难以替代逐样本人类金标，也未提供 judge prompt。
 
-模型总参数从含冻结 DINOv2-L 的 Qwen3-VL backbone 8.77B 增至 10.3B，架构新增 882.4M，Stage-IV adapters 新增 349.2M。作者指出声呐塔 736.9M 与 DINOv2-L 0.30B 多为继承容量，随机初始化的非 LoRA 适配与融合参数为 25.1M。
-
-效率在单张 A100-80GB、BF16、FlashAttention-2、batch size 1、两幅 448×448 图、512 visual tokens 和 128 generated tokens 下测得。SonarLLM 的 peak memory 为 21.6 GB，prefill latency 为 137.5±1.1 ms，decode throughput 为 21.1±1.2 tokens/s；Qwen3-VL-8B 分别为 17.7 GB、77.2±0.2 ms 和 38.4±0.1 tokens/s。这里有实际推理成本，但没有端到端载具控制时延、功耗或声呐采集链测量。
+模型从含冻结 DINOv2-L 的 Qwen3-VL backbone 8.77B 增至 10.3B，其中声呐塔 736.9M 与 DINOv2-L 0.30B 多为继承容量，随机初始化的非 LoRA 适配与融合参数为 25.1M。效率测量的硬件和解码条件已报告，但结论只能说双塔的单卡推理成本被量化，难以推出水下机器人实时闭环可行。复现者还应把同步误差、声呐量程、波束宽度、输入归一化和提示词模板作为独立配置记录；这些条件一旦改变，门控与对齐的解释也可能改变。
 
 ### 🚨 局限与问题
 
-受控退化由与训练相同的生成器制造，尚未覆盖自然海域中的非均匀散射、动态悬浮颗粒、声呐专属失效或声呐—光学时间错位。评测样本来自 held-out RGBS50 与 UMOD 视频序列，虽按序列排除了训练重叠，却没有跨海域、跨设备或跨声呐频段的外部测试。融合对 captioning 未做双模态评测；Stage III 的门控目标直接由退化强度构造，因此权重趋势不能证明模型自行发现了普适可靠性。结果置信区间只覆盖测试集抽样误差，没有独立训练重复。
+受控退化由与训练相同的生成器制造，尚未覆盖自然海域中的非均匀散射、动态悬浮颗粒、声呐专属失效或声呐—光学时间错位。评测样本来自 held-out RGBS50 与 UMOD 视频序列，虽按序列排除了训练重叠，却没有跨海域、跨设备或跨声呐频段的外部测试。融合对 captioning 未做双模态评测；Stage III 的门控目标直接由退化强度构造，因此权重趋势难以证明模型自行发现了普适可靠性。结果置信区间只覆盖测试集抽样误差，没有独立训练重复。
 
 ### 进一步审视
 
-受控协议没有覆盖非均匀散射、动态悬浮颗粒、声呐自身故障或跨传感器时间错位。Clear、Turbid 与 Heavy 由同一个生成器构造，训练和 benchmark renderings 也共用该生成器，因此只能验证已知退化轴上的响应，不能替代自然海域配对观测。
+论文证据直接支持的边界首先是退化分布。Clear、Turbid、Heavy 均由同一生成器构造，训练和 benchmark rendering 也共享该生成器；它能检验已知光学退化轴上的响应，却没有覆盖非均匀散射、动态悬浮颗粒、自然海水颜色变化、声呐混响失效或声呐—光学时间错位。
 
-评测使用 held-out RGBS50 与 UMOD 视频序列，并在训练前按 source sequence 划分，能够排除同序列帧泄漏。它没有报告跨海区、跨季节、跨声呐设备、跨频率或跨视场的外部评测；所谓 public data source 也不等于 public generalization。
+第二个边界是外部泛化。held-out RGBS50 和 UMOD 视频序列的 source-sequence 划分能减少同序列帧泄漏，但没有跨海区、跨季节、跨声呐设备、跨频段或跨视场测试。公开数据来源并非公开泛化；训练与测试共享退化机制时，强结果仍只能被解释为受控条件下的鲁棒互补。
 
-任务层面，fusion 只评测识别、计数与 VQA，captioning 没有双传感器结果。声呐几何占主导的问题上，融合未必超过 sonar-only；Stage-I MAE 也让 counting 出现退化，说明统一表征改进不保证每个下游任务同步受益。
+第三个边界是任务和归因。fusion 只评估识别、计数和 VQA，captioning 没有 paired 结果；几何主导的问题中 fusion 不必优于 sonar-only，Stage-I MAE 也让 counting 下降。AGFM 的 sonar weight 与 severity 同向，是因为 gate BCE 直接使用 severity 目标，所以它显示校准成功，不证明模型会识别任意未知传感器故障。
 
-AGFM 的 sonar weight 与退化 severity 相关，但 Stage III 直接用 severity 构造 BCE target，这更接近受监督校准。测试集 bootstrap 给出抽样区间，却不包含独立训练 run 的方差；真实海上部署还需要传感器失效、时间同步、算力预算和任务级路由压力测试。
+进一步审视，10,000 次 scene-clustered bootstrap 仅量化测试样本抽样误差，未报告独立训练 run 方差。要把系统推进到海上部署，仍需自然配对数据、多平台声呐、失效与同步压力测试、功耗和端到端任务时延，并公开退化器、判分提示、清洗和训练脚本。
 
 ### 🔗 开源与复现资源
 
-论文未提供 SonarLLM 的 HTTPS 代码仓库、可下载模型权重、SonarBench 数据包或在线 Demo。正文给出数据来源、阶段损失、主要训练超参数和 A100 推理设置，但空帧过滤、异常值规则、退化生成器、语义 judge prompt 与序列清单没有可执行产物可核验。作者只把真实配对数据、task-aware routing 和 temporal sonar–optical reasoning 列为未来工作，不能据此认定资源已开放。
+论文没有提供 SonarLLM 的 HTTPS 代码仓库、模型权重、SonarBench 下载包或可访问 Demo。数据来源、阶段目标、主要超参数和 A100 推理条件足以理解设计，却难以复现空帧过滤、异常值规则、退化生成器、序列划分或语义 judge。真实配对数据、task-aware routing 和 temporal sonar–optical reasoning 只被列为未来工作，难以当作已交付资源。
 
 ### 💡 研究者判断
 
-漂亮之处在于，作者没有用“多模态更强”掩盖声呐表示问题，而是把声呐类别形成、跨模态对应和可靠性分配逐层拆开。Polar PE 的大幅消融、同数据 LoRA 对照与同 checkpoint 门控替换，使贡献归因比常见水下 MLLM 更可信。短板也很硬：训练与测试共享退化生成器，海域和设备外推没有证据，开放式描述未进入 fusion 评测，所有核心资源又未发布。若下一步不能在自然配对、多声呐平台和真实算力闭环中复现，这套模型仍可能只是设计严谨、实验受控的实验室原型。
+这篇工作的价值在于把“多模态是否更强”改写成更硬的问题：当 RGB 外观与声呐几何各自可靠性变化时，语言模型应保存什么、修正什么、何时减弱其中哪个传感器。独立声呐塔、VFE 分工、AGFM 与 DeepStack 的职责被数据流和消融较完整地连起来；成对退化、同数据 LoRA 和同 checkpoint 等权替换也比只报单张主表更能支撑归因。
 
-`<details>`
-`<summary>`⚖️ 评分理由（展开查看）`</summary>`
+但它仍是设计严谨的受控原型。门控学习的是合成退化标签，训练和测试依赖同一生成器，captioning 没有融合评测，代码、模型和基准均未公开。最有价值的下一步不是再堆某个大模型，而是在自然配对、多频段声呐、不同载体与真实算力约束中，检查这套“表示与分配分离”的结论还是否成立。
+
+<details>
+<summary>⚖️ 评分理由（展开查看）</summary>
 
 * 创新性 (1.7/2)：独立声呐塔、距离—方位位置适配、物理差异化 VFE 与层级可靠性门控形成完整新机制，且直接回应把声呐当普通图像的已知失配。
 
@@ -166,13 +178,13 @@ AGFM 的 sonar weight 与退化 severity 相关，但 Stage III 直接用 severi
 
 * 影响力 (1.1/1.5)：首次把开放式声呐—光学语言理解、成对退化评测和可靠性分配合并，适合推进水下机器人研究，但当前证据仍局限于少量数据源与合成退化。
 
-* 开源 (0.0/1.5)：正文没有直接交付代码、模型、数据下载或 Demo，数据来源名称和未来工作说明不能视为已经开放的核心产物。
+* 开源 (0.0/1.5)：正文没有直接交付代码、模型、数据下载或 Demo，数据来源名称和未来工作说明难以视为已经开放的核心产物。
 
 * 可复现性 (0.4/0.5)：分辨率、数据规模、阶段损失、学习率、LoRA 和推理设置较完整；优化器、训练轮数、随机种子、训练硬件及清洗实现未说明。
 
 * 工程/实践价值 (1.1/1.5)：论文测量显存、prefill 与 decode 吞吐并量化额外开销，体现工程意识；延迟明显上升且没有真实载具、实时闭环或声呐故障压力测试。
 
-`</details>`
+</details>
 
 ---
 

@@ -16,7 +16,7 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 标签：#语音伪造检测 #图神经网络 #模型融合 #模型评估
 
-**6.4/10** | 创新 1.3/2 | 严谨 1.1/1.5 | 实验 1.2/1.5 | 清晰 0.8/1 | 影响 1/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 0.7/1.5
+**6.4/10** | 创新 1.2/2 | 严谨 1.1/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 0.7/1.5
 
 ✅ **6.4/10** | 前50% | 文档类型：方法研究 | 评分置信度：中 | #语音伪造检测 | #图神经网络 | #模型融合 #模型评估 | [arxiv](https://arxiv.org/abs/2608.24639)
 
@@ -29,88 +29,87 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 ### 📌 核心摘要
 
-真正的问题不是更换检测骨干，而是定位哪些发声区域携带可迁移的伪造痕迹，并检验人类常说的擦音异常能否转化为稳定检测线索。研究先用 speech activity detection 排除 non-speech silence，再以 pYIN 周期性判断构造 voiced 与 unvoiced masks，由此比较 full-audio、speech-only 和 2 类发声成分。4 条输入路径分别训练却共享 AASIST 架构与优化配方，所以性能变化主要指向输入中被保留的时间区域，而不是模型容量或预训练差异。MLAAD 上 unvoiced-only 达到 6.62% EER，优于 full-audio，voiced 与 unvoiced 经 score-level fusion 后又达到 5.82% EER，说明单路优势与双路互补可以同时成立。逐攻击结果却没有统一改善：Tortoise-TTS 仍是困难条件，频谱图中它与 bonafide 的重叠也比 Capacitron 更强，因此高频分离只能解释总体趋势。
+本文聚焦固定检测器究竟依赖哪类发声区域：完整 waveform 虽保留全部线索，却把静音、周期性 voiced 段和无周期 unvoiced 段混在一起。作者先用 WebRTC SAD 去除 non-speech silence，再由 pYIN 的 voiced flag 将同一 speech signal 分为 voiced 与 unvoiced，并让 full-audio、speech-only、voiced、unvoiced 4 条输入各自训练同构 AASIST。比较重点是保留什么时间区域并重新适配该输入后，检测怎样变化。
 
-这项区分对取证有现实意义，因为深伪系统若只给真假分数，无法告诉分析者应复核哪类声学区域，而显式分区至少给出了可回听、可画谱、可继续做跨模型验证的假设。现有结论仍受单一数据集、单一检测主干、固定 pYIN/SAD 前处理与缺少部署测量限制，最合理的后续工作是检验跨库稳定性，而不是直接把 unvoiced 当成通用伪造签名。
+MLAAD eval 的同表对照给出清晰但受限的排序：full-audio、speech-only、voiced-only 和 unvoiced-only 的 pooled EER 分别为 11.40%、10.10%、12.26% 和 6.62%，只有 unvoiced 路显著优于 full-audio；随后把 voiced 与 unvoiced 的 development scores 归一化后做 linear logistic regression，fusion 为 5.82%。这支持 2 点：无周期区域在该协议中更有判别力，而 voiced 路仍携带可补充的错误信息。证据范围限于 MLAAD：Tortoise-TTS 的 unvoiced FAR 仍为 29.30%，且其谱形更接近 bonafide。高频谱分离是与结果一致的解释线索，尚待频带消融进一步确认。
+
+对音频研究者，最有价值的产出是 1 个可复验的区域假设与反例：先检查生成器是否在 unvoiced 高频段留下差异，再检查这种差异是否能跨语料、分区器和检测骨干保留。论文在 MLAAD、pYIN/SAD 前处理和单一 AASIST 下给出单次点估计，资源与部署测量仍待补充；它适合指导下 1 轮跨模型验证，并为跨模型实验提供明确假设。
 
 ### 🏗️ 方法概述和架构
 
-原始 waveform 先与 WebRTC speech activity detection（SAD）的 binary mask 相乘，得到只保留 speech activity 的信号。SAD 在这里不是检测特征，而是前置边界：它先删除 non-speech silence，再让后续 voiced/unvoiced 比较只发生在发声区间，避免句首句尾静音成为数据集捷径。论文采用 severity parameter 2，但没有讨论更换该参数会怎样改变区域长度。
+这篇论文的输入控制有 2 层。第 1 层是边界：对原始 waveform \(x\)，WebRTC speech activity detection（SAD）以 severity parameter 2 产生 speech/non-speech binary mask，并计算 \(x_{speech}=SAD(x)*x\)。SAD 首先排除 non-speech silence，区域结论由发声区间的比较产生。
 
-pYIN 负责在每个 speech frame 上估计 pitch、voicing probability 与 binary voicing flag。它以周期性作为有声判断依据，因此 voiced 对应较稳定的声带振动区域，unvoiced 则覆盖不具有这类周期性的擦音、塞音等成分。作者选择 Librosa 实现，意味着分区不是网络内部学习的 attention，而是训练前就固定下来的信号处理决定。
+第 2 层是 voiced/unvoiced 分工。Librosa 的 probabilistic YIN（pYIN）为 speech frames 估计 pitch、voicing probability 和 binary voicing flag；平滑后的 flag 与 \(x_{speech}\) 相乘得到 voiced component，互补 flag 则得到 unvoiced component。Hamming window smoothing 减轻硬切换造成的突发不连续，但也让 2 个 masks 在 transition regions 轻微重叠。这里的分区是训练前固定的信号处理，而不是 AASIST 学到的 attention；论文没有测试 SAD 参数、pYIN 阈值或 smoothing 关闭后会怎样。
 
-二值 flags 还要经过 Hamming window 平滑，以减少切换点造成的突发不连续。平滑后的 voiced flag 与 speech signal 逐点相乘，形成 voiced component；其互补 flag 与同一 speech signal 相乘，形成 unvoiced component。边界处的 2 个 masks 可以轻微重叠，让 transition regions 同时保留在相邻成分中；这能减小硬切割伪影，也使区域并非严格互斥。
-
-原始 waveform 先与 WebRTC SAD 的 binary mask 相乘，得到只保留 speech activity 的信号。沿着这条数据流，论文得到 full-audio、speech-only、voiced 与 unvoiced 这 4 种输入。它们没有改变标签、训练目标或检测主干，差别只在送入 detector 前保留哪些时间样本，因此 pooled EER 的变化可以较集中地解释为输入区域贡献。
-
-请从下图追踪 WebRTC SAD、voiced flag 与 unvoiced flag 如何在同一 waveform 时间轴切换。
+请在下图沿同一时间轴核对 waveform 经过 SAD 后，voiced flag 与 unvoiced flag 怎样把 speech activity 分给 2 条输入。
 
 [![Spectrogram of an example utterance from the MLAAD train set.](https://arxiv.org/html/2608.24639v1/voiced_unvoiced_flags.png)](https://arxiv.org/html/2608.24639v1/voiced_unvoiced_flags.png)
 
-图中上半部波形叠加 SAD 虚线、橙色 voiced flag 和绿色 unvoiced flag，下半部语谱图在静音段留下空白；边界旗标有短暂重叠，只说明本篇平滑掩码的时间结构，未测量分区器敏感性。
+图中上半图可见蓝色 waveform、SAD 虚线、橙色 voiced flag 与绿色 unvoiced flag；下半图在中段静音处呈现能量空白，若干边界的 flags 有短暂交叠。它直接说明本文的平滑掩码怎样保留 transition regions；其适用范围取决于 VAD 与 pYIN 参数。
 
 
-AASIST 的 RawNet2 encoder 直接接收 masked raw waveform，并用 70 个 sinc filters 与 6 个 residual blocks 提取谱时表示。前者形成可学习的带通滤波器组，后者逐层组织 spectral 与 temporal representations；论文没有引入新的前端或大型 pretrained speech encoder，重点也不是追逐 state of the art。
+该图的研究含义在于把区域划分从检测器内部表征中剥离：后续若替换 VAD、voicing estimator 或平滑规则，EER 的变化应先作为上游分区敏感性来评估，再考察检测器的贡献。图示限定为既定掩码的构造核对；其在其他语料或参数下的稳健性需要独立敏感性检验。
 
-encoder 输出进入 heterogeneous graph attention layers，随后由 max graph operations 聚合局部 spectro-temporal dependency。readout operation 把图表示汇成 utterance-level representation，linear output layer 再给出 bonafide/synthetic 分数。该层数据流保持 AASIST 原设计，因而本文新增之处主要位于输入分区与后端分数组合。
+同一份 voiced/unvoiced 分区还连接了检测结果与谱学解释：作者在各区域内分别汇总 bonafide 和 synthetic 的平均频谱，再按生成器查看谱形。Fig. 3 的上下两块面板因此是对已分区样本的统计读出；它用于比较 voiced 与 unvoiced 中蓝、红平均曲线的距离。随后 Fig. 4 以 Capacitron 和 Tortoise-TTS 为例检查该统计与 attack-wise FAR 的对应关系：前者的 unvoiced 谱分离更清楚，后者更接近 bonafide。这个链条把输出解释为“当前生成器条件下的区域差异”，并把频谱作为结果的支持性观察，而不是把均值曲线直接当作检测器内部决策。
 
-这套构造让 full-audio、speech-only、voiced 与 unvoiced 成为可控输入变量。4 个 AASIST 分别独立训练，却共享架构和 training recipe；输入 segment 约 4 秒，优化使用 Adam 与固定 learning rate，checkpoint 由 development set 最低 EER 选择。独立训练允许每个模型适应对应掩码分布，但也意味着比较同时包含模型重新拟合后的效果。
+由此得到 4 个输入条件：未掩码的 full-audio、只含活动语音的 speech-only、周期性 voiced、无周期 unvoiced。它们进入相同的 AASIST 检测数据流。RawNet2 encoder 从 masked raw waveform 开始，以 70 个 sinc filters 和 6 个 residual blocks 提取谱时表示；heterogeneous graph attention layers 与 max graph operations 建模局部谱时依赖，readout operation 和 linear output layer 生成 bonafide/synthetic 分数。RawNet2、图注意力与 readout 都是继承组件，本文新增的是把区域分割变成输入变量。
 
-推理时，每个单路模型直接输出 detection score。互补性实验只取 voiced 与 unvoiced 的 development scores，分别做 mean/std normalization，再用 scikit-learn linear logistic regression 学习组合权重；evaluation 使用固定后的 fusion。由此得到的改善属于 score-level fusion，而不是额外 end-to-end encoder，也没有让 pYIN/SAD 分区参与反向传播。
+实验也不是用固定权重反复遮挡输入。作者为 full-audio、speech-only、voiced 和 unvoiced 分别训练 1 个 AASIST，并保持架构和 training recipe 一致：约 4 秒的 segments，Adam，mini-batch size 16，fixed learning rate 0.0001，训练 30 epochs，以 development set 的最低 EER 选模。这个设计控制了主干与训练预算，却允许每个模型重新适应自己的 masked waveform；因此它给出强的区域对照，不是冻结权重意义上的纯因果干预。
+
+最后，fusion 不回传到分区器或 encoder。它先取得 voiced/unvoiced 单路模型的 development scores，对每个输入分数做 mean/std normalization，再训练 scikit-learn linear logistic regression；evaluation 固定该变换与权重后输出 fused score。故 5.82% EER 的改善应读作 score-level complementarity，而不是新训练出 1 个能端到端发现区域的模型。输入、分区、判别与融合至此形成闭环。
 
 ### 💡 核心创新点
 
-1. 既有解释工作多用 attribution 在训练完成后定位敏感区域，却没有在同一 detector 下直接检验保留 voiced 或 unvoiced 会怎样改变判别。本文把 4 种输入送入同构 AASIST，令标签、主干和优化配方保持一致；6.62% EER 和 voiced-only 退化共同支持区域级因果线索。不过模型会针对各自 masked waveform 重新拟合，所以该实验仍不是冻结权重下的纯输入干预，归因也依赖 pYIN/SAD masks 与当前主干。
+1. 区域对照的贡献，是把“模型关注哪里”的解释问题改写成可比较的输入实验。以往 attribution 往往在训练结束后标出敏感位置；这里固定 AASIST 主干、标签和训练配方，只改变 waveform 中被保留的区域。full-audio 的 11.40% EER、voiced-only 的 12.26% 与 unvoiced-only 的 6.62% 形成同表正负对照：有价值的信号不能被概括为“只要去静音就更好”。边界也很明确：4 个条件各自训练，结论依赖 pYIN/SAD 分区与当前检测器，未证明冻结网络下的区域因果性。
 
-2. SAD 先删除 non-speech，再由 pYIN 构造互补 masks，解决 ASVspoof 类协议中静音片段可能主导检测的问题。unvoiced-only 优于 speech-only 表明有效线索不只是去掉静音，而更可能来自无周期发声区域本身。代价是平滑后的 2 个 flags 在 transition regions 有重叠，论文也没有替换 voicing estimator、扫描分区阈值或关闭 smoothing，因而尚未分离每个前处理选择的贡献。
+2. 数据路径的贡献，是把静音排除和 voiced/unvoiced 分解拆成明确步骤。SAD 先限定 speech activity，pYIN 再按周期性构造 flags，Hamming smoothing 使切换处可保留 transition regions。这个设计让复现者能检查掩码是否合理，也避免把 ASVspoof 风格协议中的静音捷径误当声学机制。相应的代价是，论文没有改变 voicing estimator、扫描 SAD severity 或关闭 smoothing；因此各前处理环节的单独贡献仍不可分离。
 
-3. 单路优胜不意味着其余路径无用，本文用 normalized voiced/unvoiced scores 和 linear logistic regression 明确检验互补性。fusion 达到 5.82% EER，而且 Tortoise-TTS FAR 也低于 full-audio，支持 2 路错误并不完全重合；Bark FAR 却比 unvoiced-only 更高，说明 fusion 不是逐攻击单调改善。这个结论只在 MLAAD development 拟合和 evaluation 测试配置成立，尚未证明换域后仍能稳定组合。
+3. 互补检验的贡献，是把“2 个区域都重要”的口头判断变成后端分数比较。作者只在 development scores 上做 mean/std normalization 和 linear logistic regression，随后固定到 evaluation，得到 5.82% EER。它表明 voiced 路即使单独不占优，也含有 unvoiced 路未完全覆盖的信息。它不表示 fusion 对所有攻击单调更好：Bark 的 fusion FAR 高于 unvoiced-only，而且权重没有在其他语料或生成器族上校准。
 
-4. 论文把高频平均频谱与 attack-wise FAR 对齐，补上了 pooled EER 无法提供的声学解释。Capacitron 的 unvoiced 高频分离与 Tortoise-TTS 的大幅重叠分别形成正反例，使读者能把模型成败映射回可见频谱，而非只接受黑箱分数。频谱均值与标准差仍是描述性相关，未通过频带遮挡、滤波消融或受控重合度实验验证，因此不能把高频差异当成已经确立的生成器指纹。
+4. 谱学解释的贡献，是给 pooled EER 加上可观察、可推翻的机制线索。Fig. 3 中 voiced 的 bonafide/synthetic 平均虚线较接近，unvoiced 面板在较高频率更易分开；Fig. 4 的 Capacitron 与 Tortoise-TTS 对照进一步展示为何后者困难。二者只构成描述性相关：没有频带遮挡、滤波消融或对谱距的定量检验，不能从平均谱直接推出某个高频伪迹就是生成机制。
 
 ### 📊 实验结果
 
-MLAAD 协议将 train、dev、eval 划为互斥分区。train/dev 由 9 种 attacks 构成，eval 改用 Bark、Capacitron、FastPitch、Overflow 与 Tortoise-TTS 这 5 种 unseen attacks；对应 bonafide/synthetic 样本量为 33,225/54,867、3,656/6,133 和 4,438/5,000。
+MLAAD 的 train、development、evaluation 彼此分离。train/dev 使用 9 种 synthetic attacks，eval 使用 Bark、Capacitron、FastPitch、Overflow、Tortoise-TTS 5 种训练阶段未见 attacks；bonafide/synthetic 数量依次为 33,225/54,867、3,656/6,133、4,438/5,000。这里的 unseen 指 MLAAD 内攻击系统划分，跨数据集泛化需要独立实验。
 
-下面同时比较总体排序与攻击异质性。所有百分比均越低越好，FAR 使用 pooled EER 对应阈值。
+下表保留论文 Table II 的区域分工证据。EER 与 pooled EER 阈值下的 attack-wise FAR 均为越低越好；同一张表同时展示总体排序与各生成器差异。
 
-| 输入 / 融合方法 | 数据集 / split | 比较基线 | Pooled EER↓ | Bark FAR↓ | Tortoise-TTS FAR↓ |
+| 输入或融合 | MLAAD eval 条件 | 相同主干对照 | Pooled EER ↓ | Bark FAR ↓ | Tortoise-TTS FAR ↓ |
 |---|---|---|---:|---:|---:|
-| full-audio | MLAAD eval / 5 unseen attacks | baseline full-audio | 11.40% | 10.90% | 39.80% |
-| speech-only | MLAAD eval / 5 unseen attacks | baseline full-audio | 10.10% | 15.70% | 18.60% |
-| voiced-only | MLAAD eval / voiced input condition | baseline full-audio | 12.26% | 30.10% | 16.90% |
-| unvoiced-only | MLAAD eval / full evaluation set | baseline full-audio | 6.62% | 2.10% | 29.30% |
-| voiced+unvoiced combined system | MLAAD eval / score-level fusion | baseline full-audio | 5.82% | 7.80% | 18.10% |
+| full-audio | 5 unseen attacks | full-audio | 11.40% | 10.90% | 39.80% |
+| speech-only | 5 unseen attacks | full-audio | 10.10% | 15.70% | 18.60% |
+| voiced-only | 5 unseen attacks | full-audio | 12.26% | 30.10% | 16.90% |
+| unvoiced-only | 5 unseen attacks | full-audio | 6.62% | 2.10% | 29.30% |
+| voiced+unvoiced fusion | 5 unseen attacks | full-audio | 5.82% | 7.80% | 18.10% |
 
-在 MLAAD evaluation set 的 full evaluation set 上，unvoiced-only system 相对 baseline full-audio 以越低越好的 EER 从 11.40% 降到 6.62%。speech-only 为 10.10%，而 voiced-only system 在 voiced input condition 得到 12.26% EER，比 baseline full-audio 更差；受控对照把优势定位到 unvoiced，而非笼统 speech activity。
+总体排序把区域贡献拆开：speech-only 为 10.10%，full-audio 为 11.40%，voiced-only 为 12.26%，unvoiced-only 在 MLAAD eval full evaluation set 为 6.62% pooled EER。这个梯度更具体地将当前优势定位到 unvoiced。
 
-逐攻击 FAR 揭示 pooled EER 掩盖的异质性。在 MLAAD evaluation set 的 tortoise tts attack 上，unvoiced-only system 相对 bark attack condition 的越低越好 FAR at EER threshold 分别为 29.30% FAR 和 2.10% FAR。FastPitch 与 Overflow 在各系统上接近 0%，Tortoise-TTS 则是最直接的反例。
+对于 unvoiced-only，Bark FAR 是 2.10%，而同一 pooled EER 阈值下 Tortoise-TTS FAR 是 29.30%；FastPitch 与 Overflow 在所有系统中均接近 0%。这组 FAR 展示生成器差异：Tortoise-TTS 在 unvoiced 单路总体领先时仍保留大量 false accepts。
 
-score-level fusion 检验互补性：voiced+unvoiced combined system 在 MLAAD evaluation set 相对 baseline full-audio 达到越低越好的 5.82% EER，作者报告相对 full-audio 的 EER 减少 49%。fusion 把 Tortoise-TTS FAR 从 39.80% 降到 18.10%，但 Bark FAR 高于 unvoiced-only，显示融合不是逐攻击单调获益。
+融合检验的是错误互补。voiced+unvoiced fusion 在 MLAAD eval 的 pooled EER 从 full-audio 的 11.40% 到 5.82%，作者报告 49% reduction；Tortoise-TTS FAR 也从 39.80% 到 18.10%。Bark 上 fusion 的 FAR 为 7.80%，unvoiced-only 为 2.10%，所以 pooled 改善与逐攻击表现需要分开阅读。
 
-平均频谱提供与检测结果一致的线索：voiced 中 bonafide 与 synthetic 更重叠，unvoiced 在较高频率处分离更清楚。unvoiced 平均只占 audio duration 的 27%，却承担更强 pooled 判别力；这种频谱差异解释了总体趋势，却还不足以覆盖所有生成器。Capacitron 分离明显，而 Tortoise-TTS 更接近 bonafide。
+Fig. 3 为这个不对称结果提供可视证据。voiced 面板的 bonafide 蓝虚线与 synthetic 红虚线在大部分频率接近；unvoiced 面板在较高频率显示更明显的曲线分散。unvoiced 平均只占 utterance duration 的 27%，却在 pooled EER 上领先。该谱差与当前排序一致；Capacitron 的清晰分离和 Tortoise-TTS 的接近 bonafide 同时表明，平均高频差异仍需逐生成器检验。
 
-请在下图比较 voiced 与 unvoiced 平均频谱中 bonafide 蓝色虚线和 synthetic 红色虚线的分离位置。
+请在下图核对这个不对称结果：把上下完整面板并排比较 bonafide 蓝虚线、synthetic 红虚线和各攻击曲线在 voiced 与 unvoiced 频段的距离。
 
 [![Average spectrum of the voiced and unvoiced segments for bonafide and synthetic utterances from the MLAAD dataset.](https://arxiv.org/html/2608.24639v1/average_spectrum_all.png)](https://arxiv.org/html/2608.24639v1/average_spectrum_all.png)
 
-图中 voiced 频谱的 2 条虚线大范围重叠，而 unvoiced 面板在较高频率处拉开；多条攻击曲线离散程度不同。这种频谱差异只解释 MLAAD 总体趋势，生成器间仍有异质性。
+图中上方 voiced 面板的蓝、红平均虚线在多数频率更接近；下方 unvoiced 面板在高频处拉开，且各攻击曲线分散。这些频谱差异描述当前 MLAAD 评测集合的相关现象，不等于生成器产生伪迹的因果机制，仍需逐生成器与跨架构测量。
+
+
+这构成解释边界：跨 TTS 模型出现的共同趋势描述的是当前 MLAAD 评测集合中的相关现象，不等于生成器产生伪迹的因果机制。本文采用单一 AASIST 主干和当前分区流程，更多检测架构、跨库条件与真实部署检测性能仍待单独测量；这些范围需要额外证据支撑。
 
 ### 🔬 细节详述
 
-数据方面，train、dev 和 eval 被划成互不重叠的协议。前 2 个分区共享同组 synthetic attacks，eval 改用训练阶段未出现的生成系统，以便检查对新攻击的迁移。bonafide 来自 multilingual M-AILABS，synthetic 来自 MLAAD；作者根据可得 metadata 人工标注 acoustic models 与 vocoders，但没有报告说话人重叠检查、语言分层统计或每种攻击的训练样本分布。
+数据协议以 attack split 为核心。bonafide 来自 multilingual M-AILABS，synthetic 来自 MLAAD；train/dev 共享 9 种攻击，eval 换成 5 种训练未见攻击。作者依据 metadata 手工标注 acoustic model 与 vocoder。说话人重叠、语言分层和攻击训练样本分布处于论文信息空缺，样本结构的影响仍待检查。
 
-前处理依赖 Librosa pYIN 与 WebRTC VAD。SAD severity parameter 为 2，它产生 speech/non-speech binary mask；pYIN 输出 pitch、voicing probability 和 voicing flag，后者再用 Hamming window 平滑。HTML 抽取中的 frame-length 与 hop-length 数字发生粘连，因此成稿不把该记法当作可靠复现参数；论文也没有给出分区错误率、阈值选择过程或不同语种上的 voiced/unvoiced 比例。
+前处理需要完整保存。WebRTC VAD 的 severity parameter 为 2，产生 speech/non-speech mask；Librosa pYIN 输出 pitch、voicing probability 与 voicing flag，flags 再经 Hamming window 平滑。由此先得到 \(x_{speech}\)，再乘 voiced flag 或其互补 flag；分区后的 waveform 才进入单路 AASIST。HTML 抽取的 frame-length/hop-length 数字相互粘连，难以作为可靠复现参数。pYIN 错误率、阈值选择依据和不同语言的 voiced/unvoiced 占比同样处于信息空缺。
 
-4 个 AASIST 模型分别在 full-audio、speech-only、voiced 与 unvoiced 上独立训练。输入 segment 约 4 秒，每种条件都使用相同检测架构，因此复现实验时应分别保存数据掩码和对应 checkpoint，不能拿 full-audio 权重直接推断其他条件。论文没有说明较短 utterance 的 padding、较长 utterance 的裁剪位置，也没有交代训练时是否动态重采样。
+训练时，4 个输入条件各自使用约 4 秒、64,600 samples 的 segments。作者报告 Adam、mini-batch size 16、fixed learning rate 0.0001、30 epochs，并按 development EER 选择最佳 checkpoint，同时沿用 AASIST repository 的 recipe。每个 checkpoint 输出 utterance-level bonafide/synthetic score，复现者应把每类掩码数据和 checkpoint 分开管理；full-audio 权重不能替代另 3 路。短 utterance 的 padding、长 utterance 的截取位置和动态重采样均未说明。
 
-已披露的优化设置是 Adam optimiser、mini-batch size 16、固定 learning rate 0.0001 与 30 epochs。模型选择以 development set 最低 EER 为准，并沿用既有 AASIST repository 的 training recipe。loss function、RawNet2 与 graph attention 的实现可由上游配置追溯，但本文没有逐项冻结依赖版本，Librosa、WebRTC VAD 与 scikit-learn 的具体版本也未列出。
+融合阶段只用 voiced/unvoiced development scores 做 mean/std normalization 与 linear logistic regression，evaluation 冻结之后报告 fused EER/FAR。2 路 scores 先各自标准化，再由线性模型输出组合分数；这一步只学习分数权重，不改变 RawNet2、graph attention 或 pYIN/SAD 的前端。regularization、class weight、calibration error、独立 fusion validation split、随机种子、early stopping、class sampling、augmentation、gradient clipping、重复运行方差、置信区间与显著性检验均处于信息空缺，表格差异应视作单次点估计。
 
-训练稳定性信息明显不足。正文没有说明随机种子、early stopping、class sampling、augmentation、gradient clipping 或重复运行方差，也没有给置信区间和显著性检验。因此表中差异是单次实验点估计，尤其接近的 attack-wise FAR 不能据此判断是否具有统计稳定优势。
-
-融合读取 voiced 与 unvoiced 单路模型的 development scores，分别做 mean/std normalization 后拟合 linear logistic regression。evaluation 阶段冻结这套变换并输出 fused score，再计算 pooled EER 和 EER threshold 下的 attack-wise FAR。论文没有报告 regression regularization、class weight、calibration error 或独立 fusion validation split，复现者只能遵循 scikit-learn 默认实现和正文流程。
-
-推理侧还缺少实际部署参数。硬件型号、训练时长、显存、模型参数量、单路与双路 latency、throughput、memory 和流式处理方式均未说明；4 模型独立训练与 2 路融合的资源代价也没有量化。读者可以复建从 waveform masks 到 scores 的算法路径，却无法估算电话取证或实时反欺诈场景的生产成本。
+硬件、训练时间、显存、参数量、latency、throughput、memory 与流式处理信息处于论文信息空缺。区域假设可以复建，4 路独立训练和 2 路 fusion 的资源代价尚无量化估算。资源侧缺口使研究者难以比较单路与融合系统的训练预算，也难以据此制定实时服务的吞吐和内存计划。
 
 ### 🚨 局限与问题
 
@@ -118,44 +117,42 @@ score-level fusion 检验互补性：voiced+unvoiced combined system 在 MLAAD e
 
 ### 进一步审视
 
-作者结果直接支持的边界是 MLAAD 与当前 pYIN/SAD/AASIST 组合。unvoiced 对 Bark、Capacitron、FastPitch 与 Overflow 较有效，但 Tortoise-TTS 频谱接近 bonafide，并出现 29.30% FAR；高频差异不是每个生成器都稳定暴露的签名。
+论文证据直接支持的范围很窄：MLAAD 的当前 train/dev/eval protocol、pYIN/SAD 分区和 1 个 AASIST 主干。unvoiced 在 Bark、Capacitron、FastPitch、Overflow 上表现强，但 Tortoise-TTS 的谱更接近 bonafide，unvoiced FAR 为 29.30%。因此“无周期区域更有判别力”只能描述这组攻击与这个评分阈值，不能外推为所有合成器都有稳定高频指纹。
 
-输入条件比较属于受控区域实验，但不是完整消融。论文没有替换 voicing detector、扫描 SAD 参数、关闭 boundary smoothing 或测试 noisy/reverberant speech；作者也指出该分区更适合 non-speech noise 较少的 clean datasets。
+方法上的未分离因素同样重要。作者未替换 voicing detector、扫描 SAD 参数、关闭 boundary smoothing，也未在 noisy 或 reverberant speech 测试；论文明确将该做法置于 non-speech noise 较少的 clean datasets。因为 masks 可在边界重叠，observed gain 不能拆分为纯声学区域贡献与前处理选择贡献。
 
-进一步审视时，关键缺口是外部泛化与统计稳定性。只有 MLAAD、单一 AASIST 主干和单次点估计，没有 ASVspoof 或 in-the-wild 跨库验证，也没有置信区间、多随机种子或显著性检验。
-
-工程层面缺少真实量测。4 路独立训练和 2 路 inference fusion 会增加维护与推理成本，但论文未给 latency、throughput、memory 或设备结果；未来 single end-to-end attention system 仍只是方向。
+进一步审视，外部泛化与统计稳健性仍为空白：没有 ASVspoof 或 in-the-wild 跨库试验，没有多随机种子、置信区间和显著性检验。fusion 的线性权重也只在 MLAAD development 拟合。最后，4 路独立训练及 2 路 inference 会有维护和运行代价，但论文没有 latency、throughput、memory 或设备量测；single end-to-end attention system 是未来方向，不是本文验证完成的替代方案。
 
 ### 🔗 开源与复现资源
 
-正文引用的 Librosa pYIN、WebRTC VAD、MLAAD 和 AASIST repository 都是第三方依赖。可核对的具体链接包括 pYIN 文档 https://librosa.org/doc/main/generated/librosa.pyin.html、WebRTC VAD 实现 https://github.com/wiseman/py-webrtcvad，以及作者沿用训练 recipe 的 AASIST 仓库 https://github.com/clovaai/aasist/tree/main。
+可追溯的外部组件包括 Librosa pYIN 文档 https://librosa.org/doc/main/generated/librosa.pyin.html、WebRTC VAD 实现 https://github.com/wiseman/py-webrtcvad，以及被沿用的 AASIST recipe https://github.com/clovaai/aasist/tree/main；MLAAD 也是公开数据来源。这些链接服务于部分流水线复建，资源归属为第三方依赖。
 
-论文没有给出作者直接发布的实现仓库、checkpoint、处理后数据或在线 Demo，因此本文资源状态记为 code 否、model 否、dataset 否。复现者可从引用组件自行搭建流程，但这不等于获得作者运行本实验的配置快照。
+作者直接发布的 implementation repository、checkpoint、处理后 masks、数据副本或在线 Demo 均处于论文信息空缺。因此 code、model、dataset 均记为否。复现实验需要自行实现分区、补齐版本和训练细节，并重新确认本文的表格结果。
 
 ### 💡 研究者判断
 
-最值得保留的结论是：只占较短时长的 unvoiced 区域能改变深伪检测排序，而且 Tortoise-TTS 提醒我们别把高频伪影神化成万能钥匙。论文把好问题做成干净的同主干对照，却在跨库验证、统计稳健性和成本测量上停得太早；它更像可继续验证的研究假设，而非可直接部署的最终方案。
+这篇论文最好的地方，是把“模型似乎在听擦音”从直觉变成同主干、同表、可被反例推翻的区域实验。unvoiced 的 6.62% EER 与 fusion 的 5.82% EER 值得继续追踪，但它们必须和 voiced-only 的 12.26% EER、Tortoise-TTS 的 29.30% FAR 一起阅读。结论应当是：区域分工是有前景的诊断假设；高频机制、跨生成器迁移与部署收益仍需要跨库、跨前处理和跨检测器的实验证据。
 
-`<details>`
-`<summary>`⚖️ 评分理由（展开查看）`</summary>`
+<details>
+<summary>⚖️ 评分理由（展开查看）</summary>
 
-* 创新性 (1.3/2)：把 voiced/unvoiced 分区从解释性观察变成同主干受控输入实验，并用频谱与失败攻击回扣机制，但分区器和检测器均为既有组件。
+* 创新性 (1.2/2)：贡献在于把 voiced/unvoiced 的解释性假设落实为同一 AASIST 下的受控输入比较，并以分数融合检验互补性；pYIN、SAD、AASIST 和 logistic regression 均为既有组件，因此属于有价值但增量的实验洞察。
 
-* 技术严谨性 (1.1/1.5)：pYIN、SAD、AASIST 与 score fusion 数据流完整，4 个输入条件保持主干一致；边界平滑误差、阈值敏感性和统计不确定性未量化。
+* 技术严谨性 (1.1/1.5)：SAD→pYIN 掩码→独立 AASIST→分数融合的数据流、公式和训练/评测口径彼此一致；但 4 个条件均重新训练，不能当作冻结检测器下的纯区域因果干预，且 smoothing overlap 与分区器敏感性尚未检验。
 
-* 实验充分性 (1.2/1.5)：MLAAD 规模、5 种 unseen attacks、pooled EER 和 attack-wise FAR 均有报告，且包含融合与负结果；缺少跨数据集、重复运行和组件消融。
+* 实验充分性 (1.2/1.5)：MLAAD 的样本量与 9 个训练攻击、5 个未见 eval 攻击划分明确；Table II 同时给出 full/speech/voiced/unvoiced/fusion、pooled EER 和逐攻击 FAR，且含 Tortoise-TTS 反例。证据仍限于单一数据集、单一骨干，缺少跨库、分区器/频带消融及重复运行不确定性。
 
-* 清晰度 (0.8/1)：问题、公式、数据划分和表格组织清楚，图 1 至图 4 连接分区、频谱与失败案例；部分实现参数在 HTML 文本中发生粘连。
+* 清晰度 (0.9/1)：研究问题、掩码公式、4 种输入条件和融合步骤叙述连贯，Table I/II 与 Fig. 1–4 使读者能沿数据流核查主张；个别符号排版与参数单位在受控 HTML 全文中不够清晰，但不妨碍整体理解。
 
-* 影响力 (1.0/1.5)：unvoiced 高频伪影为音频深伪检测和可解释取证提供可操作假设；单一主干与单一数据集限制外部影响。
+* 影响力 (1.0/1.5)：unvoiced 高频线索及其与 voiced 分数的互补性，为音频深伪检测和可解释取证提供可直接复验的研究假设；该假设尚只由 MLAAD 和 AASIST 支持，外部推动力中等。
 
 * 开源 (0.0/1.5)：论文没有交付作者自有代码、模型、数据或 Demo，AASIST、Librosa、WebRTC VAD 与 MLAAD 均为第三方资源，因此开源计 0 分。
 
-* 可复现性 (0.3/0.5)：训练划分、片段长度、优化器、batch size、learning rate 和 epochs 可查，但硬件、随机种子与统计复现信息不足。
+* 可复现性 (0.3/0.5)：数据划分、掩码公式、AASIST 配置来源、约 4 秒片段、Adam、batch size、learning rate、epochs 与选模准则均可查；随机种子、硬件、精确前处理参数与 fusion regularization 等关键复现实务未交代。
 
-* 工程/实践价值 (0.7/1.5)：现有 AASIST 可增加确定性掩码和轻量分数融合，工程路径直观；论文没有延迟、吞吐、内存、噪声鲁棒性或线上测试。
+* 工程/实践价值 (0.7/1.5)：在现有 AASIST 前端加确定性区域掩码、分别训练并做线性分数融合的实现路径明确；不过未报告延迟、吞吐、内存、噪声/混响鲁棒性或线上评测，工程证据只能给中低分。
 
-`</details>`
+</details>
 
 ---
 

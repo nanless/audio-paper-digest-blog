@@ -4,7 +4,7 @@ date: 2026-08-26
 draft: false
 tags: [音视频理解, LoRA, 多任务学习, 多模态模型]
 categories: [论文速递]
-description: "音视频理解 | 7.9/10"
+description: "音视频理解 | 7.4/10"
 hiddenInHomeList: true
 paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
@@ -16,9 +16,9 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 标签：#音视频理解 #LoRA #多任务学习 #多模态模型
 
-**7.9/10** | 创新 1.8/2 | 严谨 1.3/1.5 | 实验 1.4/1.5 | 清晰 0.9/1 | 影响 1.3/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 0.9/1.5
+**7.4/10** | 创新 1.7/2 | 严谨 1.2/1.5 | 实验 1.3/1.5 | 清晰 0.9/1 | 影响 1.2/1.5 | 开源 0/1.5 | 复现 0.3/0.5 | 工程 0.8/1.5
 
-✅ **7.9/10** | 前25% | 文档类型：方法研究 | 评分置信度：高 | #音视频理解 | #LoRA | #多任务学习 #多模态模型 | [arxiv](https://arxiv.org/abs/2608.24209)
+✅ **7.4/10** | 前50% | 文档类型：方法研究 | 评分置信度：高 | #音视频理解 | #LoRA | #多任务学习 #多模态模型 | [arxiv](https://arxiv.org/abs/2608.24209)
 
 
 ### 👥 作者与机构
@@ -29,110 +29,110 @@ paper_digest_manual_depth: "full-text-evidence-v5"
 
 ### 📌 核心摘要
 
-核心问题是：同一个音视频大模型能否在共享参数效率的同时，为定位、分割与问答保留互不混淆的更新方向？现有音视频方法大多逐任务构建，统一模型 Crab 则以 HydraLoRA 做参数高效适配。HydraLoRA 让全部任务进入同一个低秩子空间，并主要依靠输入内容路由专家，因此不同目标的表示仍会缠结。本文在共享矩阵 A 与协作专家 B_i 之间加入按任务索引的调制矩阵 Λ_t，再用任务自适应权重组合专家，把共享、专用和迁移知识分到不同路径。
+这篇工作的可证伪判断是：在既定的 6 类音视频多模态任务中，把更新写成 A→Λ_t→B_i 能缓解共享低秩适配器的任务干扰，却没有消除它。矛盾来自两端的真实需求：定位、问答和分割都想复用共同的音频—视觉—语言主干与参数预算，但它们的监督、输出和有用更新方向并不相同。Crab 的 HydraLoRA 已让共享矩阵 A 与多个专家头服务多任务，但所有任务仍进入相同的低秩空间，且专家路由主要随输入变化；作者因此让每个已知任务先经过自己的 Λ_t，再按任务自适应权重汇入共享 B_i。
 
-它覆盖 AVEL、AVVP、ARIG、AVS、RAVS 与 AVQA，横跨时序定位、空间定位、像素级理解和时空推理。在统一接口中，音频与视觉先分别对齐到语言空间，文本任务沿自回归头输出，而 AVS、RAVS 通过 MASK token embedding 调用 mask decoder 输出像素掩码，使异构任务共享主干但保留输出分支。统一模型在 RAVS unseen、AVVP 与 ARIG 上取得显著收益，直接消融也显示 Λ 和各专家头均有贡献。与此同时，AVQA 对 Crab 略有退化，且增加专家数会改变不同任务的赢家，说明任务解耦缓解了负迁移，但没有把它彻底消除。
+这不是把所有输出伪装成文字。波形与视频帧先分别对齐到 LLaMA-2-7B-Chat 的语言空间，文本类任务由语言头解码；AVS 与 RAVS 则从生成的 MASK token 取末层 embedding，连同视觉特征交给 SAM mask decoder 生成掩码。跨任务主表中，Ours 在 AVE、AVVP、ARIG、AVS 和 RAVS 均超过同主干 Crab，最有辨识度的是 Ref-AVS unseen 的 mIoU 从 45.6% 升至 52.1%。
+
+反例同样决定结论边界：MUSIC-AVQA 没有超过同主干 Crab；从 3 个专家改为 4 个专家后，AVQA 与 AVS MS3 更好，但 RAVS mIoU 从 46.7 降至 39.0。因而该方法的价值在于把“何处共享、何处隔离、何处再协作”落实成可检查的参数路径，而不是证明专家越多或统一训练必然优于单任务。
 
 ### 🏗️ 方法概述和架构
 
-输入包括被划分为 T 个连续、互不重叠片段的音视频序列，以及任务专用文本指令。视觉侧用 CLIP-ViT-L/14 提取逐片段 patch embedding；音频侧用 BEATs 形成逐片段 audio embedding。音频支路先由 BEATs 生成逐片段 embedding，再经音频 Q-Former 与 MLP 投入共享语言空间。视觉支路也经过独立的 Q-Former 与 MLP，因此音频与视觉模态先各自对齐到 LLaMA-2-7B-Chat 的语言嵌入维度，而不是在编码器输出上直接相加。
+每个样本由连续音视频片段和任务专用文字指令构成。视觉分支把均匀采样的视频帧送入 CLIP-ViT-L/14，音频分支把波形送入 BEATs；2 路特征各自经过 Q-Former 与 MLP，投影到 LLaMA-2-7B-Chat 的隐藏空间。文字指令则经 tokenizer 和词嵌入层得到文本 token。系统不在 encoder 输出处粗暴相加，而是将指令中的音频、视觉特殊 token 替换为相应对齐表示，再插入并串接为 \(H=g(H_v,H_a,H_{txt})\)。这一步的职责是统一输入协议：音频路径负责把声学证据译为语言主干可读的 token，视觉路径提供画面证据，文字路径保留任务与查询语义。
 
-请在下图追踪 waveform、视频帧和 task-specific textual instruction 如何经过 Q-Former 与 MLP，再进入 Multi-modal LLM 与 Task-disentangled LoRA。
+请在下图沿 waveform、video frames 与 task-specific textual instruction 3 条支路，追踪 Q-Former、MLP 和特殊 token 替换怎样构成统一输入。
 
 [![Overview of our proposed unified framework for versatile AVMML tasks.](https://arxiv.org/html/2608.24209v1/figures/2.png)](https://arxiv.org/html/2608.24209v1/figures/2.png)
 
-图中音频和视觉 encoder 位于并行分支，分别接到对齐模块；文本经 tokenizer 与 word embedding 后汇入同一主干，右侧列出 AVEL、AVVP、ARIG、AVS、RAVS、AVQA。图只展示统一接口，没有展开 MASK decoder 的内部计算。
+图中 audio 与 visual encoder 分列两侧，各自接 language alignment module；文字经 Tokenizer 与 Word Embedding 后合流，右端列出 AVEL、AVVP、ARIG、AVS、RAVS、AVQA。可见的并行输入路径解释了统一输入主干，但图本身未展示 MASK token 到 mask decoder 的像素输出接口。
 
 
-任务说明与查询先由 tokenizer 和 word embedding 变为文本 token。系统把指令中的音频、视觉特殊 token 替换为对应的对齐 embedding，并按序插入、拼接，得到统一序列 H。这样，不同任务共享同一种输入接口，但任务身份仍保留在指令和后续适配器选择中；定位标签、问答文本和分割提示可以沿同一 LLM 主干传播。
+这张总览图说明统一的是输入主干，而不是所有任务共用同一种输出头；输出接口的分叉将在下文展开。
 
-普通 HydraLoRA 先以共享 A 把 H 压到 rank-r 子空间，再让输入路由多个 B_i；问题在于所有任务看到同一个低维基，且路由没有显式 task id。本文把低秩更新改写为 \(\Delta W_t=\sum_i p_{t,i}B_i\Lambda_tA\)。共享矩阵 A 学习通用低秩基，任务专用 Λ_t 改写该基，专家 B_i 再把可迁移更新送回全维输出。权重 \(p_{t,i}\) 由任务自适应门控和温度 \(\tau\) 的 softmax 产生，因此同一专家可以服务多个任务，却不会抹掉任务专用变换。
+共享主干中的关键更新不是普通 LoRA 的 \(BAH\)，而是 \(\Delta W_t=\sum_i p_{t,i}B_i\Lambda_tAH_t\)。A 先把任务 \(t\) 的输入压进所有任务共用的 rank-\(r\) 低秩基，承担可迁移的音视频知识；\(Λ_t\in\mathbb{R}^{r\times r}\) 再以 task id 选中，对这份共享表示做任务专用变换；最后多个 \(B_i\) 把变换后的表示映回输出维度，task-adaptive router 以温度 \(\tau\) 的 softmax 权重 \(p_{t,i}\) 混合这些跨任务专家。相邻模块不能互相替代：只保留 A 会让任务落在同一子空间；只做每任务私有 LoRA 会失去专家复用；只让输入决定专家又无法显式区分任务身份。
 
-请在下图沿低秩更新从共享 A 向下追踪 task id 选择 Λ_t、router 混合 B_i，再检查专家输出如何与 pretrained weights 相加。
+请在下图从共享主干的关键更新 A 开始追踪 task id 选中的 Λ_t，再观察 router 如何混合 B_i 并与 pretrained weights 的直通路径相加。
 
 [![Architecture of the proposed task-disentangled LoRA, where A, 𝚲t\\mathbf{\\Lambda}_{t}, and Bi\\textbf{{B}}_{i} denote task-general low-rank matrix, task-specific modulation matrices, and cross-task collaboration expert heads, respectively.](https://arxiv.org/html/2608.24209v1/figures/3.png)](https://arxiv.org/html/2608.24209v1/figures/3.png)
 
-图中 A 先连接一排 Λ_1…Λ_T，选中的 Λ_t 再连接多个 B_i；彩色 router 权重在乘法节点作用于专家并经求和回到输出。火焰与雪花分别标出 trainable 和 frozen 路径，也仍只表明该结构依赖已知 task id。
+图中 A 连到 Λ_1…Λ_T 的任务专用分支，选中的 Λ_t 再送入多个 B_i；彩色 router 权重在专家输出后汇合，雪花和火焰标记 frozen 与 trainable 路径。它显示相邻模块不能互相替代的共享、调制和协作职责，但仍依赖已知 task id。
 
 
-每个 Λ_t 以单位矩阵初始化，初始时保持原低秩乘积不变，训练后再逐渐偏离单位变换。这个选择让新增任务参数不会在训练开端突然扰动主干，同时每个任务的 Λ_t 接收独立梯度。几何论证的核心是：不同 Λ_t 为任务子空间增加独立变换自由度，使它们不必像标准 LoRA 那样共线。
+\(Λ_t\) 从单位矩阵开始初始化，所以训练起点保持原有低秩乘法；随后每个任务的 Λ_t 接收独立梯度，可逐渐转向各自模式。论文的几何论证只说明不同 Λ_t 有机会让任务子空间不再共线，而非保证任何两任务都会自然分离；真正需要看的是后文的表示图和消融。
 
-训练目标把全部任务的自回归文本损失与分割支路的 BCE、Dice 辅助损失联合起来。对于 AVS 与 RAVS，词表加入多组 MASK token；模型生成这些 token 后，取其末层 embedding 作为 prompt，并与视觉特征一起送入 SAM mask decoder。输出因此分成 2 条：普通任务沿语言头产生结构化文本，像素任务额外生成时序语义 mask，而共享 LLM 和任务解耦 LoRA 仍是共同计算骨架。
+普通时序定位、事件解析、声源定位和问答沿语言头生成结构化文本。AVS、RAVS 的分割接口则扩展词表：模型生成多组 MASK token，取这些 token 的末层 embedding 作为 prompt，与视觉特征共同输入 SAM mask decoder，输出 \(\widehat M\in\mathbb{R}^{T\times C\times H\times W}\)。因此 LLM 负责共享理解与生成提示，mask decoder 负责像素空间的解码，后者并非语言头直接吐出掩码。
 
-这一设计的取舍是用少量按任务增长的 r×r 矩阵换取显式隔离，同时保留共享 A 和共享专家以迁移知识。它比每任务独立 LoRA 更节省重复参数，也比完全共享 HydraLoRA 更能保留任务边界；代价则是推理前必须知道 task id，并且专家数、任务采样与温度都会影响共享容量如何分配。
+训练时，所有任务共享自回归交叉熵 \(\mathcal L_{txt}\)；有分割监督的任务额外使用 \(\mathcal L_{seg}\)，其中包含 BCE 与 Dice，两者组成 \(\mathcal L=\lambda_{txt}\mathcal L_{txt}+\lambda_{seg}\mathcal L_{seg}\)。这个接口把统一主干和异构监督接起来，但也意味着分割分支不是零成本附属组件。
 
 ### 💡 核心创新点
 
-1. 既有 HydraLoRA 把全部任务投到共享低秩空间，输入路由又缺少显式 task id，因而特征可分性不足。本文在共享 A 后加入每任务独立的 Λ_t，让专用变换先分开梯度方向，再进入共享 B_i。t-SNE 中本文方法的任务簇比 HydraLoRA 更紧、更分离，Λ 置零也让全部目标退化；不过该证据只覆盖既定任务身份，不能说明未知任务能自动获得合适 Λ_t。
+1. HydraLoRA 的共享 A 与输入依赖路由能够节省参数，却让不同任务先进入相同的低维坐标，再由没有显式 task id 的分支竞争专家。本文新增的 Λ_t 把任务身份放在共享 A 之后：共享基仍可吸收通用音视频规律，任务变换却可保存不同的梯度方向。Fig. 1 的 t-SNE 中，HydraLoRA 的 Low Rank Space 有大量多色重叠，而本文方法的同色点簇更紧、更分开；这与“已知任务的表征更可分”一致，但不证明未见任务会自动选到合适的 Λ_t。
 
-请在下图比较上排 HydraLoRA 与下排 task-disentangled LoRA，并重点观察 Low Rank Space 中不同任务颜色是否仍相互穿插。
+请在下图比较上排 HydraLoRA 与下排 task-disentangled LoRA：观察 Low Rank Space 中多种任务颜色是否仍明显混叠。
 
-![T-SNE visualization of task-specific features extracted from the output linear layer of the final block in LLaMA-2-7B \[5\], comparing HydraLoRA \[6\] and the proposed LoRA after fine-tuning on six AVMML tasks.](https://arxiv.org/html/2608.24209v1/figures/T-sne.png)
+[![T-SNE visualization of task-specific features extracted from the output linear layer of the final block in LLaMA-2-7B \[5\], comparing HydraLoRA \[6\] and the proposed LoRA after fine-tuning on six AVMML tasks.](https://arxiv.org/html/2608.24209v1/figures/T-sne.png)](https://arxiv.org/html/2608.24209v1/figures/T-sne.png)
 
-图中 HydraLoRA 的低秩空间含大量多色重叠点，而本文方法形成更紧的分色簇；Full Rank Space 也呈现类似分离。这个像素事实支持 Λ_t 提升已知任务可分性，但图内没有未知任务样本。
+图由 2×2 个散点面板组成，上排是 HydraLoRA、下排是 task-disentangled LoRA，左右分别标为 Low Rank Space 与 Full Rank Space；下排的同色簇更集中。它直观支持 Λ_t 在固定任务集合中提高表示可分性，但图中未见任务样本，尚未验证新任务会自动获得合适变换。
 
 
-2. 每任务独立 LoRA 会阻断共享，而完全共享专家又容易负迁移。本文让 B_i 保持跨任务共享，仅把专家混合权重改为 task-adaptive router，从而把“哪些变换专用”和“哪些专家可复用”拆开。专家热图显示 AVQA 主要依赖 B2、RAVS 更偏 B3、ARIG 同时使用 B1 与 B2；但这张图来自末端 decoder block 的 o_proj，尚不足以代表全层因果分工。
+2. 每个任务并未独占完整的 B_i 集合，而是保留跨任务专家并用 task-adaptive router 分配权重。这层设计试图避免 2 种极端：全私有 LoRA 会把可迁移知识重复存多份，而无任务条件的专家会把冲突隐藏在输入路由里。最后 decoder block 的 o_proj 热图给出不同偏好：AVQA 对 B2 的权重为 0.56，RAVS 对 B3 为 0.42，ARIG 同时偏向 B1 的 0.42 与 B2 的 0.40。
 
-请在下图读取 B1、B2、B3 的 3 行权重，比较 AVQA、RAVS 与 ARIG 是否选择了不同的 task-adaptive expert 路径。
+请在下图读取 B1、B2、B3 在 AVQA、ARIG、RAVS 三列的权重，判断 task-adaptive router 是否为不同任务选择不同专家组合。
 
 [![Visualization of task-specific expert preferences across diverse AVMML tasks.](https://arxiv.org/html/2608.24209v1/figures/headmap.png)](https://arxiv.org/html/2608.24209v1/figures/headmap.png)
 
-热图中 AVQA 对 B2 的权重为 0.56，RAVS 对 B3 为 0.42；ARIG 在 B1 与 B2 上分别为 0.42 和 0.40。列间偏好确实不同，但仍不能代表全层因果分工；数值仅限于最后 decoder block 的 o_proj。
+热图是 3 行 7 列，单列 3 个权重约和为 1；AVQA 的 B2 为 0.56、RAVS 的 B3 为 0.42，ARIG 对 B1/B2 分别为 0.42/0.40。这些颜色差异支持 task-adaptive expert preference，但尚未证明全层专家的因果分工，因为证据来自末端 o_proj 层。
 
 
-3. 多模态 LLM 原生只能生成文本，难以统一像素级任务。作者以 MASK token 的末层 embedding 充当 mask prompt，并连接视觉特征与 SAM decoder，使 AVS、RAVS 和文本式定位、问答共用同一指令主干。RAVS unseen 的明显提升支持这一接口在未见概念上的价值；边界是分割分支仍需额外 decoder 和训练阶段，并非单一语言头包办所有输出。
+3. MASK token 把语言主干的末层表示变成 mask prompt，使 AVS、RAVS 能同定位和问答共用输入、主干与 LoRA。这个贡献不是“文本 LLM 已统一输出一切”，而是明确增加视觉特征与 SAM mask decoder 的接口。Ref-AVS unseen 的收益使这条桥接有实际价值，但掩码监督、额外训练阶段和 decoder 也保留了像素任务的专用成本。
 
-4. 多任务架构常只给平均分，难以判断冲突是否真的被解除。本文同时提供单位矩阵初始化、任务感知梯度解释、子空间几何分析、专家偏好和推理时置零消融，形成从机制到结果的证据链。完整配置在 AVEL 上显著优于去除 Λ 的版本，去掉任一 B_i 后下降更大；但没有多随机种子方差，仍无法量化这些差异的统计稳定性。
+4. 表示分离和热图只能说明相关性，Table X 才直接测试已训练模型依赖哪些部分：把 Λ 或任一 B_i 在推理时置零，所有列都会下降，B1 移除最严重。该实验与参数路径相符，却仍不是从头移除模块并重训的消融；它回答“此模型现在靠什么”，没有量化“换结构后训练能否仍达到同一最优点”。
 
 ### 📊 实验结果
 
-先看统一训练是否在不同目标域都优于同主干 Crab，以及哪里仍出现负迁移。下表保留每个任务最能反映其核心输出的一项指标；除 RAVS 使用 unseen 子集外，其余按论文主表设置，所有指标均越高越好。
+先看同一统一主干是否真的覆盖了不同输出形态。Table II 将 Crab 和 Ours 放在 AVE、LLP、AVSBench、MUSIC-AVQA、Ref-AVS 的对应任务上比较；下表只保留每一能力域最便于横向阅读的一项指标，所有列均为越高越好。
 
-| 任务 / 数据集设置 | 指标 ↑ | Crab | Ours |
-|---|---:|---:|---:|
-| AVEL / AVE | accuracy | 74.0 | 77.8 |
-| AVVP / LLP | segment-level F1 | 55.9 | 60.1 |
-| ARIG / AVSBench | cIoU | 39.4 | 41.1 |
-| AVQA / MUSIC-AVQA | overall accuracy | 76.4 | 76.1 |
-| AVS MS3 / AVSBench | mIoU | 58.2 | 59.6 |
-| RAVS unseen / Ref-AVS | mIoU | 45.6 | 52.1 |
-
-这组结果显示统一模型并非只在单一输出上获益：时序、空间与像素任务都改善，RAVS unseen 的增幅最醒目；AVQA 则从 76.4 降到 76.1，出现退化并构成明确的负面结果。论文正文写 76.11%，而主表按 1 位小数列为 76.1；这里把表格口径用于横向比较，不把二者混成额外测量。
-
-在 AVE dataset 的 general-purpose unified comparison 条件下，Ours 对比 Crab [52] 的 accuracy 达到 77.8%，并改善 +3.73 accuracy score，越高越好；这说明统一训练没有牺牲该目标域的时序定位上限。
-
-在 LLP dataset 的 AVVP segment-level 条件下，our method 相对 Crab [52] 的 F1 改善 +4.20 F1 score，越高越好；event-level F1 同时改善 +4.22 score，收益不只来自单一时间粒度。
-
-在 AVSBench 的 ARIG 条件下，Ours 对比 Crab [52] 的 cIoU 达到 41.1 unitless，越高越好；对应 AUC 为 41.7，同样超过 Crab 的 40.1，空间声源定位的增益与统一表一致。
-
-在 Ref-AVS 的 RAVS unseen subset 上，Ours 对比 Crab [52] 的 mIoU 达到 52.1%，单位为 %，越高越好；基线为 45.6%，因此这条 public generalization 证据直接针对未见概念，而非训练内类别。
-
-组件表要回答的是：收益来自 task id 控制的 Λ，还是仅仅来自多放几个专家。各变体在同一训练模型上把对应权重于推理时置零，因此是同主干直接消融。
-
-| 推理配置 | AVEL fully acc. ↑ | AVVP Seg. type ↑ | ARIG cIoU ↑ | AVQA acc. ↑ |
+| 能力域与设置 | 指标 ↑ | Crab | Ours | 差异 |
 |---|---:|---:|---:|---:|
-| 置零 Λ | 75.0 | 57.4 | 40.9 | 75.3 |
-| 置零 B1 | 64.7 | 54.8 | 37.1 | 73.6 |
-| 置零 B2 | 67.1 | 54.3 | 36.3 | 73.1 |
-| 置零 B3 | 67.2 | 55.0 | 37.1 | 73.1 |
+| AVEL / AVE | accuracy | 74.0 | 77.8 | +3.8 |
+| AVVP / LLP | segment-level event F1 | 55.9 | 60.1 | +4.2 |
+| ARIG / AVSBench | cIoU | 39.4 | 41.1 | +1.7 |
+| AVQA / MUSIC-AVQA | accuracy | 76.4 | 76.1 | -0.3 |
+| AVS MS3 / AVSBench | mIoU | 58.2 | 59.6 | +1.4 |
+| RAVS unseen / Ref-AVS | mIoU | 45.6 | 52.1 | +6.5 |
+
+在 AVE dataset 的 general-purpose unified comparison 中，Ours 相对 Crab [52] 的 accuracy 为 77.8，报告改善 +3.73 accuracy score，越高越好。它表明统一适配并未压低该时序定位任务，但这条结果的适用范围限于时序定位。
+
+在 LLP dataset 的 AVVP segment-level 设置中，our method 相对 Crab [52] 的 F1 scores 报告改善 +4.20 F1 score，越高越好；同表的 event-level event F1 从 49.0 到 53.2，说明收益并非只出现在单一时间粒度。
+
+在 AVSBench dataset 的 ARIG task，proposed method 对 Crab [52] 的 cIoU 为 41.1 cIoU，越高越好，AUC 也由 40.1 升至 41.7。空间声源定位因此支持统一接口可服务结构化空间输出。相反，MUSIC-AVQA 的 accuracy 为 76.1，低于 Crab 的 76.4，出现退化；这正是主表不宜概括成“6 任务全面提升”的原因。
+
+在 Ref-AVS dataset 的 RAVS unseen subset，Ours 相对 Crab [52] 的 mIoU 为 52.1%，单位为 %，越高越好；Crab 为 45.6%，F1 也从 63.0% 升到 69.5%。这条证据更有价值，因为比较对象相同且测试对象是 unseen 子集；但它仍在 Ref-AVS 的既定任务与标注体系内，结论范围限于论文的任务身份与数据域。
+
+Table X 的比较条件很关键：它不重新训练变体，而是在同一训练完成的模型推理时把 Λ 或某个 B_i 权重置零。因此表回答的是完整模型当前依赖哪些路径，而不是新结构从头优化后是否同样更好。
+
+| 推理时保留的组件 | AVEL fully acc. ↑ | AVVP Seg.-level type ↑ | ARIG cIoU ↑ | AVQA acc. ↑ |
+|---|---:|---:|---:|---:|
+| 无 Λ，保留 B1/B2/B3 | 75.0 | 57.4 | 40.9 | 75.3 |
+| 无 B1，保留 Λ/B2/B3 | 64.7 | 54.8 | 37.1 | 73.6 |
+| 无 B2，保留 Λ/B1/B3 | 67.1 | 54.3 | 36.3 | 73.1 |
+| 无 B3，保留 Λ/B1/B2 | 67.2 | 55.0 | 37.1 | 73.1 |
 | 完整 Λ+B1+B2+B3 | 77.8 | 58.2 | 41.1 | 76.1 |
 
-在 AVEL 上，置零 Λ 后，task-disentangled LoRA without Λ 的 fully accuracy 为 75.0 points；完整配置为 77.8，指标越高越好，说明 task-specific modulation 的作用可以和共享专家区分开。去掉 B1 的下降最剧烈，但 B2、B3 也不是冗余头；与此同时，在 RAVS Mix 的专家数比较中，3 experts 的 mIoU 为 46.7 unitless，4 experts 为 39.0 unitless，越高越好；增加到 4 experts 虽把 AVQA accuracy 从 76.1% 提到 76.4%、AVS MS3 mIoU 从 59.6 unitless 提到 60.8 unitless，却使 RAVS 明显退化，揭示容量增加仍会重排任务收益。
+Λ 的置零将 AVEL fully accuracy 从 77.8 降到 75.0，而去掉任一专家下降更大，尤其 B1；这与“Λ_t 负责任务变换、B_i 负责可共享协作”的分工一致。Table IX 又给出反向提醒：在 Ref-AVS RAVS 的 expert number comparison，three-expert method 对 four-expert variant 的 Mix mIoU 为 46.7 unitless，越高越好，后者是 39.0；但四专家的 AVQA accuracy 为 76.4、三专家为 76.1，AVS MS3 mIoU 也为 60.8 对 59.6。增加容量改变的是任务间资源分配，不是稳定的全局增益。
 
 ### 🔬 细节详述
 
-完整数据集由 AVE、LLP、MUSIC-AVQA、AVSBench 和 Ref-AVS 构成，训练集总计 66,802、测试集总计 17,003。AV-UIE 作为 instruction tuning 语料，由这些数据通过显式推理增强构建。任务指标各自保留原定义：分类或问答用 accuracy，AVVP 用 segment/event F1，ARIG 用 cIoU 与 AUC，AVS/RAVS 用 mIoU 与 F1，RAVS 另报告越低越好的 null score。
+训练与测试覆盖 5 个公开来源：AVE（AVEL）、LLP（AVVP）、MUSIC-AVQA（AVQA）、AVSBench（ARIG、AVS S4/MS3）和 Ref-AVS（RAVS），合计 66,802 个训练样本、17,003 个测试样本。instruction tuning 使用由这些数据经显式推理增强得到的 AV-UIE。指标保持各任务原定义：AVEL/AVQA 为 accuracy，AVVP 为 segment/event F1，ARIG 为 cIoU/AUC，AVS 与 RAVS 为 mIoU/F1；RAVS 还报告越低越好的 null score。
 
-每个视频均匀采样 10 帧，并将各帧缩放到 224×224。音频统一重采样为 16 kHz，并提取 128 维 log-mel filterbank；Povey 窗长 25 ms、帧移 10 ms。CLIP-ViT-L/14 与 BEATs 分别作视觉和音频 encoder；两侧 Q-Former 各使用 32 个 learnable query token，再由 MLP 投影到 LLaMA-2-7B-Chat 的隐藏维。
+每段视频均匀采样 10 帧、每帧缩放到 224×224。音频波形重采样到 16 kHz，随后用 25 ms Povey window、10 ms frame shift 计算 128 维 log-mel filterbank。视觉与音频的 Q-Former 各有 32 个 learnable query token，之后才经 MLP 接到语言空间；这些数值定义了音频与视觉 token 的实际前端，而非只给出 encoder 名称。
 
-LoRA 放入所有 linear layer，rank 为 8。Λ_t 以单位矩阵初始化，专家采用 3 个头；任务自适应 router 经 softmax 产生组合权重。论文没有给出温度 \(\tau\) 的具体值，也未说明 LoRA alpha、dropout、哪些 LLM 层是否另行解冻、任务 batch 混合比例和梯度裁剪。
+LLaMA-2-7B-Chat 是底座，task-guided LoRA 放在所有 linear layers，rank 为 8；每个 Λ_t 从单位矩阵开始，默认使用 3 个专家。第 1 阶段采用 AdamW，学习率 \(1\times10^{-4}\)，训练 5 epochs，per-device batch size 为 8、gradient accumulation 为 8，运行在 4 张 NVIDIA A40 上。
 
-第一阶段用 AdamW，学习率 1×10^-4，训练 5 epochs；per-device batch size 为 8，gradient accumulation 为 8，硬件是 4 张 NVIDIA A40。论文未给出 AdamW 的 weight decay、\(\beta\) 参数、学习率调度、warmup、随机种子和训练时长，因此复现实验仍需从作者实现确认这些项。
+分割接口另使用 2 组 MASK token，分别对应视觉 encoder 的第 14 层和倒数第 2 层特征，每组 3 个 token；分割分支再训练 30 epochs，per-device batch size 为 8。\(\lambda_{txt}\)、\(\lambda_{seg}\)、\(\lambda_{bce}\)、\(\lambda_{dice}\) 分别为 1.0、0.5、1.0、0.5。推理时先确定 task id，文本任务经语言头完成，分割任务还要执行 mask decoder。
 
-分割支路使用 2 组 MASK token，对应视觉 encoder 第 14 层与倒数第 2 层的 2 种尺度，每组 3 个 token。该支路额外训练 30 epochs，batch size 为 8。\(\lambda_{txt},\lambda_{seg},\lambda_{bce},\lambda_{dice}\) 依次设为 1.0、0.5、1.0、0.5；论文没有说明推理分辨率之外的 mask 后处理、阈值和内存占用。
+温度 \(\tau\) 的值、LoRA alpha 与 dropout、任务 batch 混合比例、哪些底座层额外解冻、AdamW 的 weight decay/\(\beta\)、调度与 warmup、随机种子、训练时长、mask 阈值均未说明。可训练参数量、FLOPs、显存峰值、latency 与 throughput 也未报告；复现者不宜以“低秩”直接推断真实部署成本。
 
-推理时必须先确定任务类型，才能选择 Λ_t 并产生对应专家权重；文本任务经语言头输出，分割任务还要调用 mask decoder。作者没有报告 latency、throughput、可训练参数总量、FLOPs 或显存峰值，所以“参数高效”和实际部署成本之间仍缺少测量闭环。
+训练与评测的接口也要按任务核对：文本类任务复用自回归目标，AVS 与 RAVS 在生成 MASK token 后才以末层 embedding 提示 SAM mask decoder。因而复现实验应分别记录主干微调和分割分支的样本批次、损失权重、特征层选择及推理后处理；论文已给出了 2 个视觉层、每组 3 个 token 和 30 epochs，却没有给出 mask 阈值、解码分辨率与内存占用。
 
 ### 🚨 局限与问题
 
@@ -140,46 +140,42 @@ LoRA 放入所有 linear layer，rank 为 8。Λ_t 以单位矩阵初始化，�
 
 ### 进一步审视
 
-### 由论文实验直接显示的边界
+统一训练不是每项任务都赢：Table II 中 AVQA 未超过 Crab，Table IX 中 4 个专家又在 AVQA 和 AVS MS3 领先。3 个专家在 RAVS 的优势和 4 个专家在其他局部任务的优势共同说明，共享专家的容量分配仍会制造取舍；任务解耦降低了干扰，并未把它归零。
 
-收益并非单调：AVQA 仍是未获益任务，4-expert 版本在 AVQA 与 AVS MS3 保有局部优势。3-expert 版本在多数任务更平衡，尤其 RAVS 明显更强，但这说明专家容量不是简单的越多越好；任务之间仍会通过共享专家竞争。消融主要在推理时把 Λ 或 B_i 置零，能证明组件对已训练模型的重要性，却没有替代从头训练的结构移除实验。
+\(Λ\) 与 B_i 的支持来自推理时置零。它可以确认已训练网络会使用这些组件，却无法代替删除模块后从头训练的结构性因果对照。RAVS unseen 的提升是公开泛化证据，但所有任务仍来自固定的 5 个数据来源，系统依赖已知 task id，未评测任务标签错误、新任务冷启动、任务持续增加或跨域噪声。
 
-RAVS unseen 的提升支持公开泛化，但全部任务仍来自固定的 5 个数据来源和 AV-UIE 指令语料。框架依赖已知 task id 来选择 Λ_t，正文没有评测新任务冷启动、任务身份错误、跨数据域噪声或任务持续增加时的扩展行为，因此“versatile”应理解为对既定任务集合的统一适配。
+论文没有多随机种子均值、方差或显著性检验，因而无法判断 AVQA 的 -0.3 或其他小幅差异是否稳定。未披露的温度、任务采样、LoRA 配方与优化细节也可能改变 router 的偏好和负迁移程度。
 
-### 从复现与部署角度仍需追问
-
-论文没有多随机种子均值、方差或显著性检验，部分小幅收益可能受训练波动影响。温度 \(\tau\)、任务采样比例、LoRA alpha 与 dropout、优化器完整配置和解冻策略也未说明，这些变量都可能改变专家塌缩和负迁移程度。
-
-系统没有给出可训练参数量、训练时间、显存、latency 或 throughput，因而只能确认结构上使用低秩更新，不能据此推断真实成本。分割输出另接 SAM mask decoder 且多训练 30 epochs，部署者还需测量它相对纯文本任务增加的资源占用。
+更重要的是，没有真实资源或时延测量。分割路径额外调用 SAM mask decoder 并训练 30 epochs，实际成本可能显著高于纯文本任务；在报告参数、吞吐、显存和延迟前，“参数高效”只能说明更新结构，不足以说明部署效率。
 
 ### 🔗 开源与复现资源
 
-本文没有给出自有代码、checkpoint、新数据集或在线 Demo 的 HTTPS 地址。正文逐项列出的是第三方数据资源：AVE 为 https://github.com/YapengTian/AVE-ECCV18，LLP 为 https://github.com/YapengTian/AVVP-ECCV20，MUSIC-AVQA 为 https://github.com/GeWu-Lab/MUSIC-AVQA，AVSBench 为 https://github.com/OpenNLPLab/AVSBench，Ref-AVS 为 https://github.com/GeWu-Lab/Ref-AVS；AV-UIE 也来自 Crab [52]。这些链接能帮助取得评测数据，却不能作为本文 task-disentangled LoRA 已开源的证据。复现者目前只能依据论文中的模型、数据和训练配置重建，未说明项仍需等待作者实现或补充材料。
+本文未给出自有代码、checkpoint、新数据集或 HTTPS Demo。全文列出的公开评测数据链接为：AVE https://github.com/YapengTian/AVE-ECCV18，LLP https://github.com/YapengTian/AVVP-ECCV20，MUSIC-AVQA https://github.com/GeWu-Lab/MUSIC-AVQA，AVSBench https://github.com/OpenNLPLab/AVSBench，Ref-AVS https://github.com/GeWu-Lab/Ref-AVS；这些 GitHub 链接对应的是公开评测数据，AV-UIE 也继承自 Crab；它们能帮助取得数据，不能证明 task-disentangled LoRA 已可直接复现。现阶段复现只能按论文重建前端、A→Λ_t→B_i、主干与分割训练与 mask decoder 接口，并自行补全未披露的优化和部署配置。
 
 ### 💡 研究者判断
 
-真正有价值的是把“共享什么、隔离什么、怎样再协作”落实为 A→Λ_t→B_i 的参数路径，并用 RAVS 未见类收益和置零消融证明这不是纯命名。遗憾也很具体：AVQA 没有获益，专家数改变任务间输赢，且没有随机种子统计和成本测量。它值得复现为多任务适配器，而不是已经证明可无限扩展的通用音视频系统。
+如果你的研究问题是“1 个适配器能否让音视频任务共享而不互相踩踏”，这篇论文给出了比平均分更有用的答案：A 保存公共低秩基，Λ_t 把任务身份落实为可学习的局部变换，B_i 再选择可复用的协作路径。RAVS unseen 与置零消融让这条设计有证据支撑；AVQA 退化、4 专家对 3 专家的任务反转、以及没有成本和方差报告，则提醒我们把它当作 1 个值得复现的多任务适配器，而不是已经解决开放式多任务扩展的通用配方。
 
-`<details>`
-`<summary>`⚖️ 评分理由（展开查看）`</summary>`
+<details>
+<summary>⚖️ 评分理由（展开查看）</summary>
 
-* 创新性 (1.8/2)：A→Λ_t→B_i 把共享低秩基、任务专用变换和跨任务专家明确分责，并针对 HydraLoRA 的任务耦合提出实质结构改动，给 1.8/2。
+* 创新性 (1.7/2)：在 HydraLoRA 的共享低秩基与多专家头之间加入按已知 task id 选择的 Λ_t，把通用基、任务变换和专家协作拆开，且统一覆盖 6 类 AVMML 输出；但核心仍是对既有 LoRA/MoE 路径的组合式改造，给 1.7/2。
 
-* 技术严谨性 (1.3/1.5)：公式、单位矩阵初始化、梯度方向与几何解释形成较完整技术链，但几何上界较弱且没有更严格的冲突度量，给 1.3/1.5。
+* 技术严谨性 (1.2/1.5)：论文给出 A→Λ_t→B_i 的更新式、Λ_t 的单位矩阵初始化和梯度/几何解释，并明确温度 τ 控制专家权重；这些论证没有量化任务冲突或给出理论保证，给 1.2/1.5。
 
-* 实验充分性 (1.4/1.5)：实验覆盖 6 个公开任务、统一和任务专用基线、专家数及组件置零消融；缺少多随机种子统计与从头移除组件，给 1.4/1.5。
+* 实验充分性 (1.3/1.5)：6 个公开任务的主比较同时覆盖统一模型 Crab 与多类任务专用方法，RAVS unseen mIoU 为 45.6%→52.1%，并比较 3/4 专家和 Λ、B_i 的置零；不过组件表是在推理时把权重设零，未给从头重训、随机种子方差或算力对照，给 1.3/1.5。
 
 * 清晰度 (0.9/1)：架构、公式、主表和消融表组织清楚，个别符号 T 同时用于片段与任务、正文数字口径 76.11/76.1 略显不统一，给 0.9/1。
 
-* 影响力 (1.3/1.5)：统一处理时序、空间、像素与问答任务，并在 RAVS unseen 上有明显收益；AVQA 轻微退化限制了普遍性，给 1.3/1.5。
+* 影响力 (1.2/1.5)：统一处理时序定位、空间定位、像素分割与问答，并在 Ref-AVS unseen 上从 45.6% mIoU 提至 52.1%；但 AVQA overall accuracy 为 76.1，低于 Crab 的 76.4，且 4 专家在 AVQA、AVS MS3 更好，给 1.2/1.5。
 
 * 开源 (0.0/1.5)：正文只有第三方数据集链接，没有本文代码、权重、新数据或 Demo 的发布证据，按 none 锚点给 0/1.5。
 
 * 可复现性 (0.3/0.5)：论文给出主要预处理、rank、学习率、epoch、batch、损失权重和 A40 配置，但缺温度、采样、随机种子和优化器细节，给 0.3/0.5。
 
-* 工程/实践价值 (0.9/1.5)：方法具有参数高效多任务适配潜力，却未报告可训练参数、训练成本、latency、throughput 或显存测量，工程分受上限约束为 0.9/1.5。
+* 工程/实践价值 (0.8/1.5)：LoRA 覆盖全部线性层且 rank 为 8，显示参数高效适配的工程意图；但未报告可训练参数量、训练时长、latency、throughput、显存或同等精度成本，给 0.8/1.5。
 
-`</details>`
+</details>
 
 ---
 
