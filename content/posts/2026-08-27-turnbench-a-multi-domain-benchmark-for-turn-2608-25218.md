@@ -2,9 +2,9 @@
 title: "TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue"
 date: 2026-08-27
 draft: false
-tags: [语音交互, 基准测试, 数据集, 模型评估]
+tags: [语音交互, 数据集, 基准测试, 模型评估]
 categories: [论文速递]
-description: "语音交互 | 9.6/10"
+description: "语音交互 | 8.5/10"
 hiddenInHomeList: true
 paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
@@ -12,90 +12,111 @@ paper_digest_arxiv_id: "2608.25218"
 paper_digest_manual_depth: "full-text-evidence-v5"
 ---
 
-# 📄 别再拿静音冒充礼貌：TurnBench 把抢话评测拉回可审计的对话现场
+# 📄 把“该不该开口”拆成可追责时间表：TurnBench 逼出的轮次交接难题
 
 > 英文题目：*[TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue](https://arxiv.org/abs/2608.25218)*
 >
-> 一句话：**TurnBench 把实时交接的速度、误报与延迟纳入共享账本：系统要及时让出或进入话轮，同时避开把中途停顿、礼貌附和和无内容发声认作交接的误判。**
+> 一句话：**TurnBench 的关键贡献在于把抢话、附和语与中途停顿放进同一套因果时间窗：它证明当前系统必须在更早开口和更少误报之间付出可量化代价。**
 
-> 标签：#语音交互 #基准测试 #数据集 #模型评估
+> 标签：#语音交互 #数据集 #基准测试 #模型评估
 >
-> 评分：**9.6/10** | 创新 1.7/2 | 严谨 1.4/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.4/1.5 | 开源 1.5/1.5 | 复现 0.5/0.5 | 工程 1/1.5
+> 评分：**8.5/10** | 创新 1.5/2 | 严谨 1.3/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.3/1.5 | 开源 1/1.5 | 复现 0.5/0.5 | 工程 0.8/1.5
 
 
 ### 💬 毒舌点评
 
-TurnBench 最扎实的优点，是它没有把 turn-taking 简化成“静音多久”或“对方有没有开口”，而是把 EOT 的 turn view、INT 的 label view 与排除区间做成同一套可复算协议。30 h 的三重标注和按互动类型拆开的评测，终于能让系统在 Backchannel 密集场景里为自己的误报付账；这对全双工语音交互是很实际的公共基础设施。
+TurnBench 最扎实的地方，是没有把“模型开口了”偷换成“模型理解了轮次”：mid-turn pause、backchannel 和抢占打断都被摆进同一条时间轴，Casual 这类 backchannel 密集场景也不再被总体均分遮住。VAP 在这张更严的账本上仍达 EOT 0.845 recall、0.055 FPR，说明它能识别真实的系统差异。
 
-但这篇论文离“替真人管理话轮”还很远：数据仍是英文棚录双人谈话，多数共识还会把最棘手的分歧事件丢出计分，而全双工模型甚至没有 INT 轨道。VAP 的 994 ms interruption latency 与人类无抢话转移的 −151 ms 参照相差悬殊，且 INT FPR 0.107 高过其 dev 预算；排行榜解决了可比性，却没有替模型解决及时又克制地开口的难题。
+但账本同样照出尴尬：最佳 VAP 的 INT 要 994 ms 才提交，人类平滑交接却在 turn 结束前中位 151 ms 开始说话；快的 Server VAD 大量误报 backchannel，SmartTurn v3 则漏掉绝大多数抢话。英语录音棚双人语料外的噪声、多人和跨语言条件仍未验证，排行榜不能被误读为语音助手已经学会自然接话。
 
 ### 📌 核心摘要
 
-#### 先把交接定义成可反驳的事件
+#### 不是谁先说话，而是谁在何时有资格说话
 
-TurnBench 把实时交接的速度、误报与延迟纳入共享账本：系统要及时让出或进入话轮，同时避开把中途停顿、礼貌附和和无内容发声认作交接的误判。它以语言学金标、因果提交格式以及正窗、负窗和排除区间，要求规则、预测器与对话代理为提交时机负责。它把每次让话或抢话都变成带时间戳的承诺，使响应速度必须和误报代价在同一账本上核算。EOT、INT、Backchannel 与中途停顿由此不再被平均分揉成一团，而能沿不同互动类型追查具体失败。
+TurnBench 的关键贡献在于把抢话、附和语与中途停顿放进同一套因果时间窗：它证明当前系统必须在更早开口和更少误报之间付出可量化代价。TurnBench 用 30 小时、154 段、6 类互动风格的三标注双人语料，把 EOT 与 INT 放进同一套会话分析 gold。TurnBench 把中途停顿、附和语和抢占打断放在同一条可评分的时间轴上。因而同一段先行语音不能被简单缩成“静音够久就轮到我说”。
 
-召回率必须与误报和延迟一起解读：过早提交会吞进附和声，等待更多证据又会拖慢响应。基准按互动类型拆开报告，使研究者能定位系统的错误来自哪类互动机制。提交格式还把工作点留在系统侧，使性能差异能回溯到具体互动和实际承诺，也方便研究复核和追溯。它为可复算比较提供严格标尺；英文、棚录、双人对话和全双工 interruption 评测空白限定了覆盖范围，部署场景仍需面对多人、噪声、跨文化语用和网络时延带来的额外验证。
+系统提交因果时间戳，按 recall、FPR、延迟共同记账；每项输出必须在正例、负 span 或 excluded interval 的规则下解释。作者发布约 104 小时训练集、dev、排行榜和 viewer；论文声称评分代码在 GitHub，但给出的仓库链接当前不可访问。研究者可以复跑协议、换表示或策略，但 test 标签仍被保留以避免污染。
+
+VAP 的 EOT 为 0.845 recall、0.055 FPR、368 ms，INT 为 0.945、0.107、994 ms；但 Casual 的附和语使每个模型的 INT FPR 都高于 Argumentative。人类平滑交接可提前 151 ms，当前系统仍无法在不过度误报时做到同等表现。
+
+对入门研究者，真正要学的是把任务、数据、在线提交和误报成本同时写清：总体冠军点只说明特定 scorer 下的检测行为，不足以替代用户觉得自然、端到端延迟足够低或跨语言可部署的结论。
 
 ### 🔗 开源与复现资源
 
-论文明确称 GitHub 仓库包含代码、gold construction 与 scoring code，但该仓库链接在本次发布核验时不可达；当前可验证的公开入口包括 https://turnbench.sesame.com、带标签 dev、audio-only test 与约 104 h 训练集。注意自定义非商业许可证禁止 voice cloning，复现实验不等于可以任意挪用语音素材。
+论文明确发布 corpus、约 104 小时 training set、dev、leaderboard 与 viewer，test 标签保留以防污染。当前可核对入口为 https://turnbench.sesame.com 、https://huggingface.co/datasets/otoearth/otoSpeech-full-duplex-turn-104h 与 https://huggingface.co/datasets/mundo-ai/turn-benchmark-dev 。论文声称评分代码位于 GitHub，但给出的具体仓库链接当前不可访问；因此网页评分入口可用于核对协议，不能替代可取得的源码。
 
 ### 🧭 深度解读
 
-#### 先把交接定义成可反驳的事件
+#### 不是谁先说话，而是谁在何时有资格说话
 
-EOT（End-of-Turn）和 INT（Interruption）不是给同一个端点任务换了两个名字。前者问当前说话者何时真正失去话轮，后者问听者何时在非转换点进入并夺取话轮；同一条对话注释因而必须分别回答“该不该让话”和“这次发声是不是抢话”。只凭静音让话会把中途停顿误作结束，一听见对方发声就回应又会把礼貌附和误作夺取话轮。
+TurnBench 的关键贡献在于把抢话、附和语与中途停顿放进同一套因果时间窗：它证明当前系统必须在更早开口和更少误报之间付出可量化代价。TurnBench 把中途停顿、附和语和抢占打断放在同一条可评分的时间轴上。同一段先行语音既可能预示交接，也可能只是还没说完；听者的一个短促嗯声既可能是 backchannel，也可能是抢走话轮的开端。
 
-论文把这两个任务放进同一套基准，不是为了多出两个分数，而是为了让交接与抢话使用同一份可审计的时序账本。系统要为因果提交的时机及其误报代价负责。检测器发出过信号并不等于正确，关键在于该信号在局部对话结构中是否有资格被称为一次交接或抢话的承诺。它把 EOT、INT、Backchannel 与中途停顿放进可复算的正窗、负窗和排除区间，并以多互动类型揭露平均指标看不见的失败形态。
+这就是它和普通端点榜单的分野。越早提交，越像反应敏捷的搭档；越晚提交，越能从后续证据判清停顿、附和还是打断。Table I 的关键不是资源数量，而是此前资源通常只覆盖一种 register 或缺少统一评测。
 
-#### 两种视图如何给错误分账
+|情形|提交的风险|TurnBench 处理|
+|---|---|---|
+|真正换人|漏检 EOT|正例窗口|
+|同一人续说前暂停|过早打断|EOT 负 span|
+|附和语|误抢 floor|INT 负 span|
+|未成功抢占|起点仍模糊|excluded|
 
-真正值得细看的是它如何处理“不知道”。TurnBench 从双人对话的 conversation analysis 出发，把原始细粒度标注归并为 7 个规范事件；它同时提供 EOT 的 turn view 与 INT 的 label view。对于 EOT，评分器只需知道当前说话者的 turn 是否结束；对于 INT，它保留更细的标签视图，因为必须区分真正夺取地板的声音、附和声和非语言声。这是一个很朴素但重要的分工：同一段语音可以在不同问题中拥有不同的可判定性。
+共识不是把分歧涂平，而是把无法可靠判定的区间显式从奖惩中移走。
 
-提交的是每位说话者的因果时间戳，评分器用固定正窗、负窗和排除区间计算召回、FPR 与带符号延迟，而非事后扫阈值挑最好点。对 EOT，负例从片段末尾开始，并在出现第一项相反证据时截断；也就是说，说话者停一下又继续说并不等于发生了失败转移。对 INT，最终没有夺取话轮的尝试不被硬算为负例，因为在当下它确实可能与真正中断难以区分。这个设计让评价不必假装标注者拥有未来信息，也让模型不能靠在模糊区间乱开火赚便宜。
+#### 把会话风格当作变量，而不是噪声来源
 
-#### 把互动风格变成压力测试
+输入是分说话人双通道录音，而不是混成单一波形。30 小时 benchmark 含 154 段、106 位配音演员和 53 对搭档，以 48 kHz/32-bit 在录音棚分 booth 录制；Casual、Task-Oriented、Instructional、Collaborative、Argumentative、Narrative 在录制阶段就被设为变量。Table III 显示 Argumentative 有 377 个共识 INT，Casual/Collaborative 交换快、overlap 高，Instructional/Narrative 的 turn 长、INT 少。
 
-如果只看一个汇总分，TurnBench 仍可能沦为更大一点的数据集。作者的有效选择是把互动类型在录制时设为实验变量：Casual 的玩笑和附和、Instructional 的确认、Collaborative 的协同重叠、Argumentative 的竞争性打断，对系统构成不同压力。6 类互动在语料中大致均衡，每类占 13%–21%；系统因而不能把单一电话语域当作全部人类对话的替身。
+17 个细标签被保留在发布数据中，但评分先使用可对齐的 canonical 类别。三人独立标注后，至少两人同类且端点都在 ±200 ms 内才形成 gold。帧级 Fleiss κ=0.78，85.8% 事件进入共识。可训练的系统拿到与 benchmark 说话人隔离、同协议标注的约 104 小时对话；benchmark 再按类型平衡分为 38 段 dev 和 116 段 test。
 
-按会话类型分解的报告进一步把平均分背后的失败形态暴露出来。论文发现 EOT recall 跨类型相对稳定，真正剧烈变化的是 INT 的假阳性，尤其在 Backchannel 密集互动里。这个结果具有诊断意义：一个系统在总体上看似敏锐，可能只是把高频的非夺取发声当成抢话。对于开发语音代理的人，这比再多 0.01 的平均 recall 更可行动，因为它指出了错误属于哪种互动机制。
+#### 2 条轨道共用一份金标，却不共用错误定义
 
-三重标注也没有被粉饰成绝对真理。2-of-3 的多数一致与 ±200 ms 端点规则产生共识金标；没有多数的片段进入排除区间。这样做会损失一部分可计分样本，却比把标注分歧偷塞进负例更诚实。它还留下了一个研究入口：未来模型能否预测“人类也会犹豫”的边界，而不是只拟合被清洗后的确定事件。
+两条轨道共享共识事件，却分别从 turn view 和 label view 读取它。EOT 的正例是真正换人的 segment-end，mid-turn pause 是负 span；INT 的正例是 floor-taking interruption onset，Backchannel 和 NonContent 是负 span。无法仅凭起点判别的未成功抢占被排除。
 
-#### 延迟与误报不是可以各取所需的数字
+系统提交的是因果 commit timestamp，并在事件发生时作出 commit。每个 gold 在 \([t-0.25\,\mathrm{s},t+3.0\,\mathrm{s}]\) 内认领最早未占用预测，报告 \(recall=TP/(TP+FN)\)、\(FPR=FP/(FP+TN)\) 和 \(\Delta t=t_{pred}-t_{gold}\)。这份榜单把 recall、FPR 和带符号延迟并列。
 
-在 116 段测试对话上，受 dev FPR 预算约束的 VAP 给出最强工作点：EOT recall 0.845、FPR 0.055、median latency 368 ms；INT recall 0.945、FPR 0.107、median latency 994 ms。在该 FPR 预算下，没有系统接近人类参照：人类的交接启动中位数比当前话轮结束早 151 ms。因而最不该被单独截取的正是高召回：模型在 INT 上必须等待近 1 s，才得到对附和声更克制的判断。
+请看下图并核对系统提交的因果 commit timestamp 怎样在 S1、S2 波形上落入 mid-turn pause、backchannel、End-of-turn 与 Interruption 的不同窗口。
 
-在 116 段测试对话的 dev FPR 预算约束下，VAP 的 EOT recall 为 0.845，高于其它基线；更高的召回是在固定工作点与该基准交接定义下获得的，而不是可脱离误报代价理解的万能排名。它说明 VAP 的未来语音活动预测在 EOT 上相当有效，却不能推出任意产品都该复制它的提交阈值；那个阈值的意义来自本论文明确规定的正窗、负窗与发言结构。
+[![Fig. 1: The turn-taking events TurnBench scores, for two speakers (S1, S2). Dotted lines are human-labeled gold events. Solid lines are model-emitted events, which are true positives (green) inside the solid scoring windows and false positives (red) inside the dashed scoring windows. There are two successful detections, as well as two false positives during a mid-turn pause and on a backchannel.](https://arxiv.org/html/2608.25218v1/figs/scoring-schematic.png)](https://arxiv.org/html/2608.25218v1/figs/scoring-schematic.png)
 
-在 116 段测试对话的 dev FPR 预算约束下，VAP 的 INT recall 为 0.945，高于其它基线；更高的数值同时伴随 0.107 FPR 与 994 ms latency，因而不能被读成即时且无代价的抢话能力。论文自己把 dev 预算设为 0.1，这使 0.107 成为需要盯住的细节：即便最强工作点也没有消除“开口是否过早”的代价，只是把代价暴露得更清楚。
+图中 2 条灰色波形对应 S1、S2；绿色实框包住可认领的 gold event，红色虚框覆盖 mid-turn pause 或 backchannel 的 false positive。它使单次误触发不会靠连续多次预测无限放大，但模型也不能在模糊区间里靠碰运气刷分；图只解释受控评分窗口，不能外推跨语言或多人误报。
 
-更快的 onset 驱动系统会在 Backchannel 上误报，说明“听见对方说话”并不等于“可判定其夺取话轮”。
+作者只在 dev 上分别扫 EOT/INT 阈值，取 FPR≤0.1 时 recall 最高的点后冻结到 test，并以 2 s refractory 使每次 rising edge 只提交一次。因此，一次误触发不会靠连续多次预测无限放大，但模型也不能在模糊区间里靠碰运气刷分。
 
-在 Backchannel 的 onset 驱动条件下，OpenAI Server VAD 的 FPR 为 0.458，低于这一误报水平才会更好；更低的误报显然更好，SmartTurn 的 INT recall 只有 0.107；VAP 的另一处 0.107 则是 INT FPR，这组相同数值分别属于不同模型与指标，速度会把附和声与真正抢话一起卷进错误账本。面对 speech onset，VAP 以延后判别方式相对 Mimi-EP 取得 0.945 recall，高于 Mimi-EP 的 0.899 recall；更高的召回来自等待未来证据，其 994 ms latency 说明这一结果不是即时反应，而是用时间换取选择性。这里没有免费的赢家，只有不同系统把风险放在速度、漏检或错报的哪个账户。
+#### 六种对话把平均分隐藏的麻烦翻了出来
 
-#### 开放的不是万能外推权
+14 个系统覆盖规则 VAD、语义端点、监督预测、VAP、codec endpointer 和全双工模型。全双工模型只能测 EOT，因为模型未必在 INT 金标出现时发声。Casual 的附和语密度让统一阈值的抢话误报暴露得最彻底。Table IV 中 VAP 的 INT FPR 在 Casual 为 0.13、Argumentative 为 0.09，且每个模型都有 Casual 更高的关系。Table III 也显示 Casual 的 BC 为 5.20/min、Argumentative 为 3.09/min，后者 INT 为 2.48/min、高于前者的 2.05/min。
 
-论文称该 GitHub 仓库已发布评分代码、提交格式和 gold construction，但本次发布核验无法确认其可达。当前可确认的公开入口包括带标签的 dev、audio-only test、约 104 h 训练集、排行榜和带音频回放的数据查看器。test 标签仍被保留，这有助于降低按测试集反向调阈值的风险；不过资源声称本身不能替代对链接可达性和复现实操的核验。
+这使研究者可固定 scorer，替换音频表示或在线策略，并观察变化发生在 EOT、INT 还是负 span 的错误类别。提交格式、gold 构建和网页评分入口被论文描述为已交付；评分代码链接当前不可访问。
 
-但公开资源不自动颁发外推许可证。证据边界很明确：所有对话都是英文、棚录、双人互动；多数共识会丢弃分歧事件；作者也尚无针对全双工模型的 interruption 评测办法。多人会议、噪声环境、跨文化附和策略和真实网络延迟都可能让现有规则遭遇新型模糊区。TurnBench 更适合作为一把严格的标尺，而不是声称已经包办自然对话中所有礼貌、时机与社会语用判断的终局答案。
+#### 快与准目前还不能同时拿走
+
+最快的抢话判断和最干净的抢话判断目前仍为 2 种不同的系统行为。在 TurnBench test 的 EOT 轨道上，VAP 在 dev 集 FPR 不超过 0.1 后冻结工作点，取得 0.845 recall、0.055 FPR 和 368 ms 中位延迟；它优于 Kyutai SVAD 的 0.773、0.059、1007 ms；该比较仅刻画协议内的事件检测，不涵盖主观对话自然度。
+
+INT 上 VAP 为 0.945、0.107、994 ms，Kyutai SVAD 为 0.898、0.081、559 ms。人类在排除 floor-taking interruption 的平滑交接中，会在 turn 结束前中位 151 ms 开始说话；无预算内系统接近这个参考。
+
+SmartTurn v3 以 159 ms 提交却只召回 0.107；Server VAD 在 backchannel 上达 0.458 FPR。抢话起点本身信息不足，不能靠更早触发同时保住检出和选择性。RMS VAD 的 EOT recall 为 0.718、FPR 为 0.632、延迟 −117 ms；Moshi 虽在 FPR 预算内，EOT recall 仅 0.233，长会话会逐渐沉默。
+
+#### 可以复跑的账本，不等于已经覆盖真实世界
+
+TurnBench 发布 corpus、约 104 小时训练集、leaderboard、dev 自助评分与 viewer；论文声称评分代码在 GitHub，但给出的仓库链接当前不可访问。test 只发音频以防污染。这个数据集严谨地定义了受控条件，却没有声称这些条件就是现实世界。英语录音棚双人对话以外的噪声、多人和跨语言条件，仍不在这份证据的覆盖范围内。
+
+多数共识会丢弃分歧事件，而全双工模型如何公平评 INT 也尚未解决。论文未报告端侧算力、吞吐或跨语言鲁棒性。因此它更像一张可追责的诊断账本：让研究者知道系统在哪些负例上犯错、错误会否被 Casual 放大、改善 recall 是否拖慢 commit，而不是一个能替代真实场景验收的万能分数。
 
 <details>
 <summary>📎 论文与评分元数据</summary>
 
-标签：#语音交互 #基准测试 #数据集 #模型评估
+标签：#语音交互 #数据集 #基准测试 #模型评估
 
-**9.6/10** | 创新 1.7/2 | 严谨 1.4/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.4/1.5 | 开源 1.5/1.5 | 复现 0.5/0.5 | 工程 1/1.5
+**8.5/10** | 创新 1.5/2 | 严谨 1.3/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.3/1.5 | 开源 1/1.5 | 复现 0.5/0.5 | 工程 0.8/1.5
 
-🔥 **9.6/10** | 前10% | 文档类型：数据集与基准 | 评分置信度：高 | #语音交互 | #基准测试 | #数据集 #模型评估 | [arxiv](https://arxiv.org/abs/2608.25218)
+🔥 **8.5/10** | 前25% | 文档类型：数据集与基准 | 评分置信度：中 | #语音交互 | #数据集 | #基准测试 #模型评估 | [arxiv](https://arxiv.org/abs/2608.25218)
 
 
 ### 👥 作者与机构
 
 第一作者：Freeman Jiang（Sesame AI）
-通讯作者：正文未明确标注
-作者列表：Freeman Jiang、Ramon Sanabria、Soham Deshmukh、Bandhav Veluri、Simon Michael Vuch Williams、Elliott K. Suen、Garreth Lee、Kevin Yoonho Choi、Takuya Umeki、Riku Kubo、Sathvik Udupa、Chien-yu Huang、Shih-Yun Shan Kuan、Zhuoyan Tao、Satyapriya Krishna、Sefik Emre Eskimez、Yu Tsao、Hung-yi Lee、Shinji Watanabe（机构：Sesame AI、Mundo AI、Carnegie Mellon University、National Taiwan University、Academia Sinica、Oto、Brno University of Technology）
+通讯作者：未说明
+作者列表：Freeman Jiang、Ramon Sanabria、Soham Deshmukh、Bandhav Veluri、Simon Michael Vuch Williams、Elliott K. Suen、Garreth Lee、Kevin Yoonho Choi、Takuya Umeki、Riku Kubo、Sathvik Udupa、Chien-yu Huang、Shih-Yun Shan Kuan、Zhuoyan Tao、Satyapriya Krishna、Sefik Emre Eskimez、Yu Tsao、Hung-yi Lee、Shinji Watanabe（机构：Sesame AI；Mundo AI；Carnegie Mellon University；National Taiwan University；Academia Sinica；Oto；Brno University of Technology）
 
 </details>
 
@@ -104,21 +125,21 @@ EOT（End-of-Turn）和 INT（Interruption）不是给同一个端点任务换�
 <details>
 <summary>逐维得分、全文证据与扣分边界</summary>
 
-* 创新性 (1.7/2)：把 EOT 与 INT 纳入同一语言学金标和因果协议，创新在评测接口与跨系统可比性，而不是提出新的预测器。
+* 创新性 (1.5/2)：把 EOT、INT、backchannel、mid-turn pause 与不可判定抢占统一进同一份 conversation-analysis gold，并把 interaction type 设为实验变量，是对轮次交接评测边界的实质推进；但核心创新是严格的基准与协议整合，不是新的端到端模型机制（E01、E02、E05）。
 
-* 技术严谨性 (1.4/1.5)：3 人独立标注、2-of-3 共识与 ±200 ms 端点规则将分歧显式编码为排除区间，技术定义可复查。
+* 技术严谨性 (1.3/1.5)：30 小时双通道语料、3 人标注、canonical 折叠、turn/label 双视图、正负窗口与因果 commit 形成可追踪的方法链；不过多数共识会丢弃分歧事件，全双工模型的 INT 仍缺少评测方法（E01、E02、E06）。
 
-* 实验充分性 (1.2/1.5)：覆盖 14 个异构系统、6 类互动风格与 EOT/INT 双轨，但没有直接消融，因此实验充分性只给 1.2。
+* 实验充分性 (1.2/1.5)：154 段、6 类对话、14 个异构系统、总体与逐类型的 recall/FPR/延迟以及明确速度—选择性负对照提供充分的 benchmark 证据；但没有噪声、多人、跨语言或真实部署测量，泛化应限制在受控英语双人对话（E01、E03、E04、E05、E06）。
 
-* 清晰度 (0.9/1)：任务、正负例、排除区间、匹配窗口、延迟和 FPR 均有精确定义，读者可据此复算提交的语义。
+* 清晰度 (0.9/1)：论文通过 taxonomy、双视图和 Fig. 1 的时间窗将评分语义说清，读者能追到每项数值的错误类别；EOT/INT、canonical 标签和多种系统缩写仍要求读者反复对照协议，首次阅读门槛不低（E01、E02、E03）。
 
-* 影响力 (1.4/1.5)：全双工对话系统普遍缺少统一 turn-taking 评测；公开排行榜让不同架构的失败模式首次可横向审计。
+* 影响力 (1.3/1.5)：轮次交接是语音代理与全双工交互的基础能力，按 conversation type 暴露 backchannel 误报具有直接诊断价值；但榜单尚不能替代自然用户体验、端侧响应或跨语言产品决策（E05、E06）。
 
-* 开源 (1.5/1.5)：GitHub、dev/test、104 h 训练数据和数据查看器均已发布，核心资源不是口头承诺。
+* 开源 (1.0/1.5)：当前可访问的站点、训练集与 dev 数据集支持数据和网页评测入口；但论文给出的 GitHub scorer 链接不可访问，故不把源码交付计入开源分，公开资源仍以数据和平台为主（E07）。
 
-* 可复现性 (0.5/0.5)：固定 JSON 提交、确定性金标重建、speaker-disjoint split 与公开 scorer 使外部复现实验路径完整。
+* 可复现性 (0.5/0.5)：共享语料、说话人隔离训练集、提交格式与网页入口可支持部分数据和协议核对；评分代码链接当前不可访问，且全文未给出端侧部署配方或全双工 INT 的通用评测，故是数据基准可复查、独立系统复现受限（E01、E06、E07）。
 
-* 工程/实践价值 (1.0/1.5)：论文报告的是评测延迟而非真实部署成本；工程价值高，但不把 benchmark 分数误当作端侧系统性能。
+* 工程/实践价值 (0.8/1.5)：基准把 dev 阈值冻结、2 秒 refractory、因果 timestamp 与公开 scorer 设计为可执行的工程接口，且用 14 个系统揭示运行策略的不同失败模式；论文没有报告吞吐、算力、延迟预算外的端到端成本或线上稳定性（E02、E03、E04、E06）。
 
 </details>
 

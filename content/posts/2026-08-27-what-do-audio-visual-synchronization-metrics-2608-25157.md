@@ -2,9 +2,9 @@
 title: "What Do Audio-Visual Synchronization Metrics Actually Measure?"
 date: 2026-08-27
 draft: false
-tags: [音视频理解, 模型评估, 模型比较, 鲁棒性]
+tags: [音视频理解, 多模态模型, 模型评估, 基准测试]
 categories: [论文速递]
-description: "音视频理解 | 8.7/10"
+description: "音视频理解 | 8.8/10"
 hiddenInHomeList: true
 paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
@@ -12,91 +12,124 @@ paper_digest_arxiv_id: "2608.25157"
 paper_digest_manual_depth: "full-text-evidence-v5"
 ---
 
-# 📄 别再让一个同步分数替整个音视频评测背书
+# 📄 别再把同步分数当裁判：先问它量的是偏移、内容，还是感知代理
 
 > 英文题目：*[What Do Audio-Visual Synchronization Metrics Actually Measure?](https://arxiv.org/abs/2608.25157)*
 >
-> 一句话：**这篇审计表明，AV 同步指标并不在同一条质量刻度上竞争：Synchformer 擅长追踪时间错位，嵌入指标更会响应内容破坏或 PEAVS 代理；把它们压成单一裸分数会掩盖排序不确定性。**
+> 一句话：**结果不是统一领先者：Synchformer/DeSync 最会追踪全局时间偏移，ImageBind 与 JavisScore 在内容中断和 PEAVS proxy 上更敏感，AV-Align 单独表现最弱。**
 
-> 标签：#音视频理解 #模型评估 #模型比较 #鲁棒性
+> 标签：#音视频理解 #多模态模型 #模型评估 #基准测试
 >
-> 评分：**8.7/10** | 创新 1.7/2 | 严谨 1.3/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.2/1.5 | 开源 1/1.5 | 复现 0.4/0.5 | 工程 1/1.5
+> 评分：**8.8/10** | 创新 1.6/2 | 严谨 1.4/1.5 | 实验 1.3/1.5 | 清晰 1/1 | 影响 1.3/1.5 | 开源 1.2/1.5 | 复现 0.4/0.5 | 工程 0.6/1.5
 
 
 ### 💬 毒舌点评
 
-它最扎实的优点，是把“同步分数”从排行榜装饰品拉回测量学问题：把同步拆成时间偏移、内容连续性和 PEAVS 自动感知代理 3 条轴，再用可证伪的 Reliability Card 报告排序分辨率。尤其 Synchformer 的时间错位 Kendall τ=0.84 与内容扰动上的弱响应并置，确实让轴特异性不再只是口号。
+这篇论文最扎实的地方，是把 Synchformer/DeSync、ImageBind、JavisScore 和 AV-Align 从排行榜上的 4 个数字还原成不同量具：受控失配、裁剪敏感性、rank-flip 和跨指标一致性放进同一协议后，temporal-oracle 与 PEAVS-proxy 的分叉不再只是口号。尤其 close MMAudio checkpoint 上 0.08 对 0.33–0.35 的 flip probability，迫使读者先问榜单有没有分辨率，再谈谁高谁低。
 
-但这张卡仍缺关键一环：PEAVS 可能与嵌入指标共享表征偏差，作者也没有新增人工标注来排除它。45 个 MMAudio 输出只够说明相近检查点之间的噪声风险，不足以替代完整生成基准；因此它更像部署前的压力测试规范，而不是可以直接裁定“谁的同步更好”的终审判决。
+但最该泼冷水的地方正是感知轴：PEAVS 只是 human-aligned proxy，作者承认其可能与 embedding 指标共享表征偏置，ImageBind/JavisScore 的 τ=0.20 不宜升级成更符合人感的因果结论。Reliability Card 诚实地把 direct human calibration 留作空位，却没有补上新的人类偏好实验；它是强测量审计，不是 AV 同步的最终感知裁判。
 
 ### 📌 核心摘要
 
-#### 把同步分数当仪器，而不是裁判
+同步分数一旦被用于排榜或优化，可靠性本身就是系统的一部分。本文不是替生成器颁奖，而是针对既有量具的黑箱体检。它从同一批真实且已同步的 clip 出发，按强度施加 temporal shift、audio speed、fragment shuffle 与 intermittent mute，检查 4 个常用分数是否会把失配更大稳定地排得更差。结果不是统一领先者：Synchformer/DeSync 最会追踪全局时间偏移，ImageBind 与 JavisScore 在内容中断和 PEAVS proxy 上更敏感，AV-Align 单独表现最弱。论文还把 crop/截断的 CV、相邻失配的 rank-flip、跨指标 α 和 close checkpoint 压力测试纳入同一协议。指标相关性与感知因果需区分，因为 PEAVS 仍是 learned proxy；因此应以带 CI 与分辨率的 Reliability Card 报告 AV-sync，而非裸分数。
 
-这篇审计表明，AV 同步指标并不在同一条质量刻度上竞争：Synchformer 擅长追踪时间错位，嵌入指标更会响应内容破坏或 PEAVS 代理；把它们压成单一裸分数会掩盖排序不确定性。同步分数首先是测量仪器，而不是已经被证明正确的排行榜真值。作者因此建议用按指标族拆分、附置信区间与排名分辨率的 Reliability Card 取代单一同步分。
-
-作者把同步指标当作测量仪器，分别追问它是否追踪已知时间错位、是否对变速、打乱和间歇静音等内容破坏敏感，以及在预处理变化后能否稳定排序。时间偏移、内容连续性和 PEAVS 自动感知代理属于不同轴：4 个部署指标的交叉 Krippendorff α=0.066，说明它们对同一批片段几乎不给出共同排序。对相近检查点，bootstrap 翻转概率提示均值分差未必足以做榜单判断；Synchformer 在不同偏移后验缩约下的结论保持。Reliability Card 因而适合作为选择训练奖励和报告基准的最小审计单；其适用范围仍受 PEAVS 自动代理、受控失真与 45 个 MMAudio 输出压力测试所限。这一协议把排行榜的分数选择转成可复用的测量流程，便于后续指标审计和训练奖励设计采用。
+对刚入门的研究者，最重要的读法不是记住哪个数最大，而是先问这张分数卡的横轴是什么。若任务是检查音频整体提前或滞后，应看 temporal oracle；若担心静音、片段重排等内容中断，应另外看 content/distortion oracle；若榜单中的相近检查点只差一点，则必须再看 flip probability 是否允许稳定排序。论文把这些问题拆开，避免单一同步分数同时承担训练 reward、模型排名和感知结论 3 种职责。它给出的实际建议是 Reliability Card：同时呈现指标族、置信区间、预处理稳定性和排序不确定性，并把 PEAVS 的 proxy agreement 与尚未补齐的直接人类校准分开。
 
 ### 🔗 开源与复现资源
 
-项目页：https://jaishrm07.github.io/avsync-reliability-card/。全文声明结果可由 committed code、seeds 和 SLURM scripts 复现，故记为已发布代码型资源；但摘录没有给出仓库地址、权重或数据发布清单，复现者仍需从项目页核实具体入口。
+项目页：https://jaishrm07.github.io/avsync-reliability-card/。正文声明可复现物包括 committed code、seeds 与 SLURM scripts。模型权重、数据镜像、许可、硬件和完整运行命令未在受控全文中逐项披露，应由独立资源核验。
 
 ### 🧭 深度解读
 
-#### 把同步分数当仪器，而不是裁判
+#### 量具并不共用一条尺
 
-单一同步分数首先是测量仪器，而不是已经被证明正确的排行榜真值。对做音视频生成的人来说，这并不只是措辞变化：当评测基准用某种同步分数给模型排名、偏好优化又把它当奖励时，若指标把语义相关、运动巧合和真正的时间对齐混为一谈，训练出来的会是更擅长讨好测量器的系统，而不一定是更同步的系统。
+同步分数一旦被用于排榜或优化，可靠性本身就是系统的一部分。音视频生成里最危险的偷懒，是把一个高分读成同步更好，再把它反过来当 reward；可这个数可能在测全局 offset、运动与起音峰值、跨模态语义，或与另一个 learned proxy 的相似性。本文不是替生成器颁奖，而是一次针对既有量具的黑箱体检。
 
-这篇论文的判断尖锐，却没有粗暴宣布某个指标“错了”。作者逐项追问：已知错误出现时，分数会不会单调响应；无关的裁剪会不会令它漂移；不同仪器会不会给同一批片段相同排序；它与 PEAVS 自动感知代理又有什么关系。排行榜所追求的简洁，正与测量所要求的诚实形成张力：一个数字很方便，却可能把不同能力伪装成同一种质量。
+这篇审计表明，AV 同步没有可由单个分数概括的冠军：Synchformer 擅长追踪时间偏移，embedding 指标更响应内容中断或 PEAVS 代理，而可靠报告必须把这两条轴及其不确定性并列。榜单需要可比较的一个数，研究者却需要知道这个数在什么任务上真单调、在什么条件下只是抖动；压成一列，正是训练目标可能被测量误差带偏的起点。
 
-#### 用可控失真拆开同步的含义
-
-作者从真实的高同步片段出发，施加强度已知的时间平移、音频变速、片段打乱和间歇静音。一个可靠分数至少应随着这些扰动变重而下降。这个可控参照不需要逐条人工判分，因为“更坏”的顺序由实验者亲自施加；但它也不是人类感知的替身，只检验指标能否尊重已知的失真方向。
-
-AV-Align、ImageBind AV-relevance、JavisScore 与 Synchformer/DeSync 被置于同一套审计协议，并不意味着它们天生在测同一件事。AV-Align依赖光流运动峰和音频起音峰的匹配；Synchformer 预测偏移；两种嵌入指标更倾向跨模态语义配对。它们的归纳偏置不同，因而可能分别对毫秒级错位、内容连续性或语义关系敏感。论文要证明的不是谁拿到一座总冠军，而是每个分数到底对哪条轴负责。
+相关工作只留下一个结论：此前验证多半服务于单个新指标，而非共同审计部署中的指标族。共同协议的价值是把 AV-Align、Synchformer/DeSync、ImageBind 与 JavisScore 放到同一问卷：它们对已知失配是否按顺序响应，预处理是否让它们改口，彼此是否真的在给同一对象打分。
 
 #### 时间轴、内容轴与排行榜分辨率
 
-在 AVSync15 的 temporal-shift 条件下，Synchformer/DeSync 的 Kendall τ 为 0.84，高于其余 3 项指标的 0.16–0.39；该指标无量纲且更高更好，说明它更擅长追踪纯时间偏移，但不能据此外推到内容破坏。片段打乱时 ImageBind 为 0.38，高于 Synchformer 的 0.27；间歇静音则由 JavisScore 的 0.73 领先 Synchformer 的 0.59，进一步说明不同失真族不共享一个全局冠军。
+输入是相同真实、已同步的 clip，输出是每个量具在已知失配顺序、裁剪扰动和榜单差距前的可靠性画像。AVSync15 的真实高同步材料先经过 temporal shift、audio speed、fragment shuffle、intermittent mute 的递增网格；ground truth 来自人为加得越重就越失配的构造。音频路径被四类可控失配逐级改写，视频主体保持为同一段真实 clip。
 
-下图把时间错位试验中的 Shift、Speed、Shuffle、Mute 4 类失真各排成 1 组；每组的红、蓝、绿、紫 4 根柱依次对应 AV-Align、ImageBind-rel.、JavisScore 与 Synchformer，可比较 Synchformer 的 Kendall τ 与其余指标在不同失真族上的变化。
+4 个黑箱并非同一种网络的换皮：用于对齐峰值、用于预测 offset、2 个读取跨模态 embedding。AV-Align 匹配 optical-flow motion peaks 与 audio-onset peaks 的 IoU；Synchformer/DeSync 预测音视频 offset；ImageBind 计算语义 cosine；JavisScore 则在 ImageBind 空间做窗口化相似度。它们不同意，既可能是失败，也可能是目标函数本来就不同；这正是审计不能省略的前提。
 
-[![图 1：4 类受控失真下的 Kendall τ 与置信区间；Synchformer 在时间错位和变速追踪领先](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_tau.png)](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_tau.png)
+实验把单调性、稳定性、榜单分辨率、指标间一致性、代理一致性和融合逐项拆开。随机 crop 与长度截断先测 CV，bootstrap 再估相邻失配是否排反；随后 z-score 后算 Kendall τ 与 Krippendorff α。融合实验只读 4 个现有分数，并用 5-fold、leave-one-out 与 conformal interval 防止泄漏。统计量在这里的职责是给单调性、稳定性和不确定性分配可核对的读数。
 
-4 组柱状条及其误差条显示 Synchformer 只在 Shift 和 Speed 的时间跟踪上最高；Shuffle 与 Mute 的最高柱分别属于 ImageBind-rel. 和 JavisScore。这说明时间跟踪不能外推到内容破坏；横图在手机上不应依赖图例小字或精确柱值，结论只取自颜色、分组与相对柱高所呈现的分轴趋势。
+主审计固定在 AVSync15 的 15 类、75 条 clip，并以 150 条 replication 检查排序结构能否重现。Synchformer 统一到 25 fps / 256 px / 16 kHz、固定至少 5 s；其余指标保留 native preprocessing。这个差异不应藏在分数背后，而应连同 CV 和窗口条件一起公开。
 
-排行榜风险把这种轴分裂推到更实际的层面。在 generated outputs 的 Close model gap 条件下，Synchformer/DeSync 的 paired clip-bootstrap flip probability 为 0.08，低于 AV-Align 的 0.35；该 probability 越低越好，说明相近检查点的排序更不易被重采样噪声推翻。45 个 MMAudio 输出不是完整基准，却足以提醒读者：均值略高并不自动等于榜单可判别。
+#### 复现实验时该抄什么，哪些信息未披露
 
-在 clean clips 上把 4 个部署指标作为评分者时，4 个指标的 Krippendorff α 为 0.066，低于 PEAVS 人工标注一致性的约 0.71；该统计量无量纲，说明这些指标给出的排序缺乏共同尺度。请观察下图 clean clips 上 4 个部署指标的 4×4 交叉 Kendall τ 热图；结合正文给出的 Krippendorff α=0.066，可判断平均同步分数为何不能掩盖指标间的排序分歧。
+这项审计把时间偏移、内容破坏、相近模型排序和公开域复验拆成独立比较，避免用单一均值掩盖指标的测量对象。核心问题是：同一同步分数能否既追踪已知失真，又稳定区分相近检查点，并在换域后保持同一方向？时间 offset 的强项与内容中断的强项落在不同指标上，因此单列第一名不是一个可解释的结论。Table 1 显示 Synchformer/DeSync 的 temporal-shift/audio-speed τ 为 0.84/0.76，JavisScore 的 mute τ 为 0.73，ImageBind 的 shuffle τ 为 0.38，AV-Align 多项偏低。读法应是某项用途由谁量得更单调，而不是勾一个总冠军。
 
-[![图 2：4 个同步指标的 4×4 交叉 Kendall τ 热图](https://arxiv.org/html/2608.25157v1/figures/fig_crossmetric.png)](https://arxiv.org/html/2608.25157v1/figures/fig_crossmetric.png)
+在 AVSync15 主审计的 75 条真实高同步 clip 的 temporal shift 上，Synchformer/DeSync 相对其他 3 个指标以 temporal-shift Kendall τ=0.84 取得更高、更好的排序单调性；这说明它更会追踪全局偏移，并不自动推出它对所有同步破坏都更可靠。
 
-热图的对角线为 1.00，非对角项大多接近零或为负；唯一显著的正相关是 ImageBind-rel. 与 JavisScore 的 0.78。正文的整体 Krippendorff α=0.066 因而远低于 PEAVS 所代表的人类标注一致性；它并非图中另有的散点或双轴面板，且共享 ImageBind backbone 使这对 0.78 不能被当作独立测量共识。
+在 AVSync15 主审计的 intermittent mute 扰动族中，JavisScore 相对 Synchformer/DeSync 以 mute Kendall τ=0.73 对 0.59 更高、更好；这支持 embedding 路线对内容中断更敏感，却不能把它当作全局时间偏移的替代量具。
 
-在 VGGSound 的 temporal 复验中，Synchformer 的 Kendall τ 为 0.63，高于其余指标的不超过 0.27；该指标无量纲且更高更好，支持时间跟踪优势并非只对 AVSync15 的偶然拟合。但这仍只强化了轴分裂的结构性，不能把两个数据域的绝对分数直接横比。
+先看 Figure 1 的 4 组带 95% CI 的柱状比较：它把 temporal shift、audio speed、shuffle 与 intermittent mute 并排，直接检验同一指标是否会在不同失配族换位。
 
-#### 融合没有替你消除测量冲突
+如下图，请比较 Figure 1 的 temporal、audio-speed、shuffle 与 intermittent-mute 分组，核对 Synchformer/DeSync 是否只在时间相关列占优。
 
-作者也检验了一个看似自然的补救：把多个分数融合。在线性 ridge、简单 k-NN、5 折、留一与分割保形区间的严格留出设置中，ridge 在 PEAVS 上的 Kendall τ 至多为 0.12，未超过最佳单项的 0.20；非线性 k-NN 同样没有改善。这个负结果很重要：多看几个指标不等于已经获得人类校准，更不能把训练集上的漂亮拟合当成感知结论。
+[![Figure 1: 受控失配的 Kendall τ 与 95% CI](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_tau.png)](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_tau.png)
 
-因此，低 α 不要求研究者马上在这些指标中选边，而要求先写清任务条件。若目标是检测全局音画偏移，Synchformer 的证据较强；若关心静音、打乱等内容破坏，嵌入指标表现出不同敏感性；若要声称感知更好，则仍需直接人评，不能把 PEAVS 代理包装成终局真值。
+图中 4 组柱状结果带有 95% CI：Synchformer/DeSync 在 temporal 与 speed 列更高，embedding 路线在内容扰动列换位；这只支撑受控失配上的职责分工，不能外推为感知质量或全局同步赢家。
 
-#### 把 Reliability Card 用在该用的地方
+4 个分数之间的 Krippendorff α=0.066，已足以否定它们在 clean clips 上只是同尺度的重复测量。Table 6 的 clean/controlled/generated α 为 0.07/0.21/0.11：同步信号更强时共同变化会增加，却仍不足以收成一把尺。
 
-Reliability Card 最适合进入评价协议：同时报告时间与内容的可控参照、变异系数、相邻等级翻转概率、PEAVS 代理、一致性统计和置信区间，让读者知道一个优势属于哪条轴，以及它能否稳定地区分相近系统。它不是又一张更花哨的排行榜，而是一份要求报告者交代测量边界的检查单。
+Figure 2 左侧的 cross-metric 面板应被当作量具间一致性检查：先核对相关矩阵中 ImageBind-rel. 与 JavisScore 的 0.78，以及其余非对角关系接近零；α=0.066 是正文与 Table 6 报告的总体一致性读数，不能当作图内标注。
 
-边界也很明确：PEAVS 可能与嵌入指标共享表征偏差，因此这里只能讨论代理一致性；受控失真只是方向已知的人造错误，不能覆盖生成伪影的全部复杂性；45 个 MMAudio 视频也只是相近检查点的压力测试。论文给出的不是“最终同步真值”，而是未来指标在被用于比较、奖励或训练前应先接受的一套审计。
+如下图，请查看 Figure 2 左侧 clean clips 的指标配对面板，辨认 ImageBind-rel. 与 JavisScore 的 0.78，并比较其余非对角关系是否接近零；正文报告的 Krippendorff α=0.066 不应误读成图内标注。
 
-对实践者而言，最可操作的收获不是照单全收某个冠军，而是在每次换指标、设定奖励或阅读排行榜前问 3 个问题：它对哪种失真单调？它能否稳定地区分相近系统？它的代理一致性是否由直接人评校准？如果答案只剩一个裸分数，这篇论文已经说明，通常还不够。
+[![Figure 2 左：跨指标一致性](https://arxiv.org/html/2608.25157v1/figures/fig_crossmetric.png)](https://arxiv.org/html/2608.25157v1/figures/fig_crossmetric.png)
+
+图中相关矩阵显示 ImageBind-rel. 与 JavisScore 的共享-backbone 配对为 0.78，其余非对角关系接近零。正文与 Table 6 报告的 α=0.066 是总体一致性读数，并非图内标注；这些事实只说明 clean clips 上缺乏共同排序尺度，不能据此选出更接近人类的指标。
+
+#### 代理一致性不是感知因果
+
+实验材料来自真实且高同步的 AVSync15 clip，主审计、裁剪敏感性和生成配对并不是多组互不相干的数据。close checkpoint 的排序先要过 flip probability 这一关，否则小数点后的领先没有证据重量。Table 2 用 45 个视频与 3 个 MMAudio checkpoint 压测：far pair 对所有指标都容易，large-44k 与 large-44k-v2 的 close pair 则让相似度路线落进噪声。
+
+在 MMAudio 生成音频配对的 large-44k 与 large-44k-v2 close model gap 中，Synchformer/DeSync 相对 ImageBind-rel. 与 JavisScore、AV-Align 的 paired clip-bootstrap flip probability 为 0.08，方向是越低越好；相似度指标的 0.33–0.35 落在噪声区间，故该压力测试说明榜单分辨率而非完整生成质量排名。小数点后的均值领先不能直接给模型贴上胜者标签，先问它是否稳定分开相邻系统。
+
+Table 4 的 3 种 reduction 仍保留 temporal/PEAVS 分裂；Table 5 的 official 与复现 AV-Align 均弱跟踪且高变异。最有价值的负结果是：简单线性或 k-NN 融合没有把 4 个不一致的分数炼成更好的 PEAVS 对齐器。ridge held-out τ 至多 0.12，未超过最佳单项 0.20；这否定的是现成分数的简单融合，不是否定未来直接标注监督的校准。
+
+Table 8 是公开泛化检查：在 VGGSound 第二域复验的 in-the-wild clips 的 temporal shift 中，Synchformer 相对其余 3 个指标以 oracle Kendall τ=0.63 对至多 0.27 更高、更好；第二域保住时间轴排序，不证明所有生成伪影或所有感知条件都已被覆盖。ImageBind/JavisScore 在 fragment 或 mute 仍可到 0.36/0.59，AV-Align 依旧较弱。
+
+代理一致性为何不能变成感知因果
+
+PEAVS agreement 是学习式代理的一致性，不是新鲜人类偏好的因果裁决。ImageBind/JavisScore 的 τ=0.20 高于 Synchformer 0.07，说明它们在这条 proxy 轴的排序更相像；PEAVS 自身可能与 embedding 指标共享表征偏置，因此相关不能升级为哪一个更会感受同步。
+
+再看 Figure 2 右侧的 oracle–PEAVS 散点：横轴是受控失配追踪，纵轴只是与 PEAVS proxy 的 rank agreement，不能把两轴偷换为同一个感知坐标。
+
+如下图，请观察 Figure 2 右侧散点的 oracle tracking 横轴与 PEAVS agreement 纵轴，核对是否存在共同右上角的指标。
+
+[![Figure 2 右：oracle tracking 与 PEAVS agreement](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_vs_human.png)](https://arxiv.org/html/2608.25157v1/figures/fig_oracle_vs_human.png)
+
+图中散点没有共同右上角赢家：Synchformer 偏向较高 oracle，ImageBind/JavisScore 相对偏向 PEAVS 轴；这只支持分轴报告，PEAVS 仍是代理，不能替代直接人类校准。
+
+散点把 Synchformer 放在较高 oracle、较低 PEAVS agreement 的位置，而 ImageBind/JavisScore 相对更高于纵轴，点云没有共同右上角赢家。像素上的横纵分离支撑轴近乎正交的报告选择；它不能证明 PEAVS 与人类偏好存在因果对应，更不能替代直接标注。
+
+Reliability Card 因而要求报告 temporal oracle、content/distortion oracle、CV、flip probability、PEAVS proxy、cross-metric τ/α 与 direct human calibration。Table 3 给出简版，Table 7 解释每一列测什么；前 6 项是本文读数，最后一项仍为空位。受控失配也不是生成伪影全集，45 条 MMAudio 只是压力测试。真正可操作的结论是先在自己的数据域、生成分布和目标人群上填卡，再决定哪条轴可以进入比较或优化。
+
+为便于复核，下面把关键读数按其各自的测量任务重述，而不把它们压成总分。在 AVSync15 的 temporal-shift 条件下，Synchformer/DeSync 的 Kendall τ 为 0.84，高于其余 3 项指标的 0.16–0.39；该指标无量纲且更高更好，说明它更擅长追踪纯时间偏移，但不宜据此外推到内容破坏。
+
+在 generated outputs 的 Close model gap 条件下，Synchformer/DeSync 的 paired clip-bootstrap flip probability 为 0.08，低于 AV-Align 的 0.35；该 probability 越低越好，说明相近检查点的排序更不易被重采样噪声推翻。
+
+在 clean clips 上把 4 个部署指标作为评分者时，4 个指标的 Krippendorff α 为 0.066，低于 PEAVS 人工标注一致性的约 0.71；该统计量无量纲，说明这些指标给出的排序缺乏共同尺度。
+
+在 VGGSound 的 temporal 复验中，Synchformer 的 Kendall τ 为 0.63，高于其余指标的不超过 0.27；该指标无量纲且更高更好，支持时间跟踪优势并非只对 AVSync15 的偶然拟合。
+
+
+负面证据同样关键：ridge 融合在 held-out PEAVS 上至多达到 Kendall τ 0.12，没有超过最佳单项的 0.20，简单 k-NN 也未改善。缩约消融把 Synchformer 的 temporal-shift Kendall τ 从 0.84 改为 0.81，时间轴结论仍保持。因而论文支持的是分轴选择与不确定性报告，不是把某项指标封为全局同步真值。
 
 <details>
 <summary>📎 论文与评分元数据</summary>
 
-标签：#音视频理解 #模型评估 #模型比较 #鲁棒性
+标签：#音视频理解 #多模态模型 #模型评估 #基准测试
 
-**8.7/10** | 创新 1.7/2 | 严谨 1.3/1.5 | 实验 1.2/1.5 | 清晰 0.9/1 | 影响 1.2/1.5 | 开源 1/1.5 | 复现 0.4/0.5 | 工程 1/1.5
+**8.8/10** | 创新 1.6/2 | 严谨 1.4/1.5 | 实验 1.3/1.5 | 清晰 1/1 | 影响 1.3/1.5 | 开源 1.2/1.5 | 复现 0.4/0.5 | 工程 0.6/1.5
 
-🔥 **8.7/10** | 前25% | 文档类型：方法研究 | 评分置信度：中 | #音视频理解 | #模型评估 | #模型比较 #鲁棒性 | [arxiv](https://arxiv.org/abs/2608.25157)
+🔥 **8.8/10** | 前25% | 文档类型：方法研究 | 评分置信度：中 | #音视频理解 | #多模态模型 | #模型评估 #基准测试 | [arxiv](https://arxiv.org/abs/2608.25157)
 
 
 ### 👥 作者与机构
@@ -112,21 +145,21 @@ Reliability Card 最适合进入评价协议：同时报告时间与内容的可
 <details>
 <summary>逐维得分、全文证据与扣分边界</summary>
 
-* 创新性 (1.7/2)：可靠性协议把单调性、稳定性和跨指标一致性放到同一审计框架，问题定义清晰且对现有排行榜有直接纠偏价值。
+* 创新性 (1.6/2)：把 4 类已部署量具放进同一受控失配、稳定性与不确定性协议，并把 Reliability Card 作为报告对象；但并未提出新的同步指标或新的感知真值。
 
-* 技术严谨性 (1.3/1.5)：受控失真、bootstrap、交叉一致性与 out-of-fold 融合形成闭环，但 PEAVS 仍是代理而非新增人评。
+* 技术严谨性 (1.4/1.5)：4 种扰动的构造排序、bootstrap、crop/截断 CV、cross-metric α 与 out-of-fold 融合彼此补位；不足是 PEAVS 仍为 learned proxy，无法完成直接人类校准。
 
-* 实验充分性 (1.2/1.5)：75 片段主审计、150 片段复制、45 个生成输出压力测试与 VGGSound 复验覆盖多组证据，但没有完整人工偏好实验。
+* 实验充分性 (1.3/1.5)：75 条主审计、150 条复验、MMAudio close-pair 压测、reduction、实现复现及 VGGSound 第二域覆盖了多种反证；但 45 条生成样本与受控伪影不能代表全部生成失配。
 
-* 清晰度 (0.9/1)：正文明确区分 temporal oracle 与 PEAVS proxy，表格的方向标记、统计量和失败情形均交代到位。
+* 清晰度 (1.0/1)：问题、黑箱输入、2 层稳定性闸门、结果轴和边界均被明确区分，8 张表各自承担的验证职责也有说明。
 
-* 影响力 (1.2/1.5)：结论直接影响 AV 生成模型的排序、训练奖励和 benchmark 报告方式，尤其适合正在选择评价信号的研究者。
+* 影响力 (1.3/1.5)：同步分数会进入生成器榜单与优化信号，因此揭露量具失配具有直接方法论价值；但结论目前局限于审计的 4 个指标与所选音视频分布。
 
-* 开源 (1.0/1.5)：项目页与 committed code、seeds、SLURM scripts 的复现声明支持有限开放分；全文未给出仓库链接或权重清单。
+* 开源 (1.2/1.5)：全文给出 HTTPS 项目页，并明确声明 committed code、seeds 与 SLURM scripts；受控文本未逐项给出权重、数据镜像、许可或可执行安装说明，故不按满分计。
 
-* 可复现性 (0.4/0.5)：指标实现、原生预处理、统计方式和 Synchformer 缩约规则写得具体，但固定 checkpoint 与完整环境锁定仍未逐项列出。
+* 可复现性 (0.4/0.5)：代码、随机种子与调度脚本的声明有助于重做实验协议，但硬件、完整命令和数据获取细节未在受控全文闭环。
 
-* 工程/实践价值 (1.0/1.5)：论文提出的是评测与报告工具，未提供真实部署延迟或吞吐测量，工程价值应限于研究流程与排行榜治理。
+* 工程/实践价值 (0.6/1.5)：Reliability Card、CV 与 flip probability 能直接改善评测和榜单解释；论文没有报告真实部署延迟、吞吐、成本或在线集成数据，因此工程分保持克制。
 
 </details>
 
