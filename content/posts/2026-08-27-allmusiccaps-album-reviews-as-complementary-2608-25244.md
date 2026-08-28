@@ -10,7 +10,7 @@ paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
 paper_digest_arxiv_id: "2608.25244"
 paper_digest_manual_depth: "graduate-researcher-tutorial-v1"
-paper_digest_tutorial_contract: "graduate-researcher-tutorial-quality-v1"
+paper_digest_tutorial_contract: "graduate-researcher-tutorial-quality-v2"
 ---
 
 # AllMusicCaps：用专辑评论补足音乐 CLAP 的复杂查询语言
@@ -20,7 +20,9 @@ paper_digest_tutorial_contract: "graduate-researcher-tutorial-quality-v1"
 
 **标签：** #音乐检索 #音频检索 #数据集 #模型评估
 
-**评分：** 9.1/10
+**评分：** **9.1/10**
+
+**八维分项：** 创新 1.6/2 ｜ 技术严谨 1.3/1.5 ｜ 实验充分 1.3/1.5 ｜ 清晰度 0.9/1 ｜ 影响力 1.3/1.5 ｜ 开源 1.5/1.5 ｜ 可复现 0.4/0.5 ｜ 工程/实践 0.8/1.5
 
 **作者与机构：** Pablo Alonso-Jiménez；Xavier Lizarraga-Seijas；Xavier Serra；Dmitry Bogdanov
 
@@ -46,7 +48,7 @@ AllMusicCaps 从 94,041 条 AllMusic 专辑评论出发，经 Discogs 与 YouTub
 
 设想读者输入“沙哑男声压在忧郁钢琴和渐强鼓点上，副歌略带不协和的失真吉他”。这不是一串可枚举的流派标签：它同时要求模型理解人声质感、配器、情绪、段落运动和审美判断。常见音乐文本—音频对比学习（CLAP）有两条成熟路线。第一条从标签、歌单或网页元数据出发，再让语言模型把标签改写成句子；它覆盖广、术语稳定，却常把音乐压扁为“rock、fast、guitar”这样的属性清单。第二条从网页搜索补足背景和说明；它能增加事实，但仍未必保留评论者描述“听起来像什么、如何展开、为何刺耳或温暖”的语言。两者都可能准确，却未必教会模型处理复杂的自然语言音乐请求。
 
-AllMusicCaps 的可证伪判断很具体：**若专家专辑评论被谨慎地蒸馏为曲目级 caption，并作为既有多语料训练的补充，而非替代品，那么它应主要提高带叙事、评价和场景线索的文本到音乐检索；若收益同样平均地出现在标签式查询、通用分类和所有外部数据集上，或评论语料单独就胜过宽覆盖混合语料，这个“语域互补”解释便站不住。**论文的结果恰好既给出支持也给出限制：Song Describer 的收益明显，MusicCaps 基本不动，评论单独训练又全面落后。
+AllMusicCaps 的可证伪判断很具体：**若专家专辑评论被谨慎地蒸馏为曲目级 caption，并作为既有多语料训练的补充，而非替代品，那么它应主要提高带叙事、评价和场景线索的文本到音乐检索；若收益同样平均地出现在标签式查询、通用分类和所有外部数据集上，或评论语料单独就胜过宽覆盖混合语料，这个“语域互补”解释便站不住。** 论文的结果恰好既给出支持也给出限制：Song Describer 的收益明显，MusicCaps 基本不动，评论单独训练又全面落后。
 
 先把后文术语放进同一张心智地图。这里的“caption”是送入文本塔、与一段音频配对的文字监督；“语域”指文字习惯表达什么以及怎么表达；“两塔”指音频与文本各自编码、最后在同一向量空间比较；“检索”问一条文字能否排在正确音频前面；“probe”则冻结音频表征，再用小分类器测它是否保留可用音乐属性。
 
@@ -63,7 +65,7 @@ AllMusicCaps 的可证伪判断很具体：**若专家专辑评论被谨慎地�
 
 数据构造有两种互补的风险取向。AMCQuotes 宁可少说，也尽量不编；AMCStruct 宁可属性齐全，也接受更高的推断风险。两者都经过“非空且 YAML 可解析”的输出检查，失败生成被丢弃；最终保留同一批 245,346 条曲目，使比较不被曲目集合差异混淆。这个共同子集只说明两条管线在同一音乐上被比较，不说明所有原始评论都成功转化，也不量化剩余文字的事实错误率。
 
-### 图 1 怎样读：左边把评论缩窄，右边把评论填满
+### 两种蒸馏策略怎样在保真与覆盖间取舍？
 
 读图任务是识别两条 caption 管线各在何处减少噪声、又在何处引入生成假设。下图是论文给出的 “Big Sur” 例子；它不是装饰图，而是后续数据比较的因果起点。
 
@@ -93,22 +95,22 @@ caption 阶段不能按原始大小抽样，否则 1.02M 的 PSE 会吞没 245k 
 
 基础目标是对称 InfoNCE：
 
-$$\mathcal{L}_{\mathrm{InfoNCE}}=\tfrac12(\mathcal{L}_{a\to t}+\mathcal{L}_{t\to a})\tag{1}$$
-$$\mathcal{L}_{a\to t}=-\frac1N\sum_{i=1}^N\log\frac{e^{\mathbf a_i^\top\mathbf t_i/\tau}}{\sum_{j=1}^N e^{\mathbf a_i^\top\mathbf t_j/\tau}}.\tag{2}$$
+\[\mathcal{L}_{\mathrm{InfoNCE}}=\tfrac12(\mathcal{L}_{a\to t}+\mathcal{L}_{t\to a})\tag{1}\]
+\[\mathcal{L}_{a\to t}=-\frac1N\sum_{i=1}^N\log\frac{e^{\mathbf a_i^\top\mathbf t_i/\tau}}{\sum_{j=1}^N e^{\mathbf a_i^\top\mathbf t_j/\tau}}.\tag{2}\]
 
-白话说，$\mathbf a_i$ 和 $\mathbf t_i$ 是第 $i$ 个配对且已 $\ell_2$ 归一化的音频、文本向量，$N$ 是 batch 大小，$\tau>0$ 是温度。式 (2) 令正确文本在同 batch 所有文本中最像该音频；反方向也做一次，再平均。它的关键训练语义是“同 batch 的其他样本是负例”，因此 batch 大小时负例更多。预训练跑 400k steps，8 张 Nvidia H100 64GB，每卡 batch 64 个 24kHz、10 秒片段；负例按设备抽取、不跨 GPU 汇聚。优化器为 AdamW，峰值学习率 $1\times10^{-4}$、余弦退火、20k warm-up。
+白话说，\(\mathbf a_i\) 和 \(\mathbf t_i\) 是第 \(i\) 个配对且已 \(\ell_2\) 归一化的音频、文本向量，\(N\) 是 batch 大小，\(\tau>0\) 是温度。式 (2) 令正确文本在同 batch 所有文本中最像该音频；反方向也做一次，再平均。它的关键训练语义是“同 batch 的其他样本是负例”，因此 batch 大小时负例更多。预训练跑 400k steps，8 张 Nvidia H100 64GB，每卡 batch 64 个 24kHz、10 秒片段；负例按设备抽取、不跨 GPU 汇聚。优化器为 AdamW，峰值学习率 \(1\times10^{-4}\)、余弦退火、20k warm-up。
 
-第二阶段从该 checkpoint 初始化，换为上述 caption 混合，训练 150k steps。仍是 8 张 H100 64GB，effective batch 3,072 个 24kHz、10 秒片段；AdamW 峰值学习率 $5\times10^{-5}$、余弦退火、15k warm-up，每模型约 36 小时。除说明的比较轴外，后续表格都取最终 150k-step checkpoint。论文没有披露随机种子、梯度累计和数据读取吞吐，因而“36 小时”不能直接等价为另一集群上的墙钟预算。
+第二阶段从该 checkpoint 初始化，换为上述 caption 混合，训练 150k steps。仍是 8 张 H100 64GB，effective batch 3,072 个 24kHz、10 秒片段；AdamW 峰值学习率 \(5\times10^{-5}\)、余弦退火、15k warm-up，每模型约 36 小时。除说明的比较轴外，后续表格都取最终 150k-step checkpoint。论文没有披露随机种子、梯度累计和数据读取吞吐，因而“36 小时”不能直接等价为另一集群上的墙钟预算。
 
 ### 五种能力各在测什么：不要把 MRR、准确率和 probe 混成一张成绩单
 
 检索用 MRR（mean reciprocal rank，正确音频排名的倒数再取平均，越高越好）。MusicCaps 是官方 test 的 2,858 个自由文字—AudioSet 音频对；Song Describer 是官方 validation 的 746 个众包专家描述—音频对。前者来自 AudioSet，所以任何用 AudioSet 衍生音频训练的外部模型都未必严格留出。零样本分类将音频与模板 “This is a [genre] song.” 的文本标签比余弦相似度：GTZAN 为 10 类、1,000 clips，FMA-Small 为 8 类、8,000 clips，指标是 accuracy。
 
-DimSim 是人类标注的成对音频相似度判断，指标是模型排序与人工顺序的一致 accuracy。MLP probing 则冻结音频塔，训练两层 MLP（隐藏层 512、ReLU，每个线性层前 dropout 0.2）处理 MagnaTagATune、MTG-Jamendo Genre/Instrument/Mood 的多标签分类（macro mAP，越高越好），以及 MGPHot 回归（macro RMSE，越低越好）。probe 的 AdamW 学习率 $1\times10^{-4}$、batch 64、余弦退火、2k warm-up、共 20k steps，以最低 validation loss checkpoint 测试。于是“检索好”只说明文字—音频空间对给定提示词有效，并不必然等价于冻结表示上的乐器可分性或人类相似性。
+DimSim 是人类标注的成对音频相似度判断，指标是模型排序与人工顺序的一致 accuracy。MLP probing 则冻结音频塔，训练两层 MLP（隐藏层 512、ReLU，每个线性层前 dropout 0.2）处理 MagnaTagATune、MTG-Jamendo Genre/Instrument/Mood 的多标签分类（macro mAP，越高越好），以及 MGPHot 回归（macro RMSE，越低越好）。probe 的 AdamW 学习率 \(1\times10^{-4}\)、batch 64、余弦退火、2k warm-up、共 20k steps，以最低 validation loss checkpoint 测试。于是“检索好”只说明文字—音频空间对给定提示词有效，并不必然等价于冻结表示上的乐器可分性或人类相似性。
 
-### 表 1 的比较问题：评论应替换地基，还是只补上地基的语言盲点？
+### 评论是替代语料，还是补上语言盲点？
 
-**比较问题与协议。**五种训练文本配置在同一套下游协议上比较：baseline = LPMC + M4-RAG + FS + PSE；AMCQuotes、AMCStruct 是单独评论语料；后两行分别将它们加到 baseline。列中的 MuCaps、SongD. 为检索 MRR，GTZAN 与 FMA-S 为零样本 accuracy，均是越高越好。完整数值如下。
+**比较问题与协议。** 五种训练文本配置在同一套下游协议上比较：baseline = LPMC + M4-RAG + FS + PSE；AMCQuotes、AMCStruct 是单独评论语料；后两行分别将它们加到 baseline。列中的 MuCaps、SongD. 为检索 MRR，GTZAN 与 FMA-S 为零样本 accuracy，均是越高越好。完整数值如下。
 
 **Table 1: Downstream performance of each review-derived text corpus, the baseline (LPMC + M4-RAG + FS + PSE), and their combinations. Bold = best per column.**
 
@@ -122,13 +124,13 @@ DimSim 是人类标注的成对音频相似度判断，指标是模型排序与�
 | baseline+AMCQuotes | 7.3 | 18.8 | 87.1 | 55.5 |
 | baseline+AMCStruct | 7.3 | 17.9 | 85.6 | 55.0 |
 
-**主发现。**最明确的是 Song Describer：baseline 的 15.1 到 AMCQuotes 合并后的 18.8，是 3.7 个绝对 MRR 点；AMCStruct 合并后 17.9，是 2.8 点。MusicCaps 只从 7.2 到 7.3；GTZAN 最好为 87.1，FMA-Small 最好为 55.5。也就是说，评论确实更像给复杂人写描述配了新词，而不是让任何指标同步大涨。AMCQuotes 比 AMCStruct 合并后更强，符合“保留叙事语气更适于该基准”的解释。
+**主发现。** 最明确的是 Song Describer：baseline 的 15.1 到 AMCQuotes 合并后的 18.8，是 3.7 个绝对 MRR 点；AMCStruct 合并后 17.9，是 2.8 点。MusicCaps 只从 7.2 到 7.3；GTZAN 最好为 87.1，FMA-Small 最好为 55.5。也就是说，评论确实更像给复杂人写描述配了新词，而不是让任何指标同步大涨。AMCQuotes 比 AMCStruct 合并后更强，符合“保留叙事语气更适于该基准”的解释。
 
-**反证与替代解释。**评论单独训练的每一列都不及 baseline：AMCQuotes 为 5.6/14.7/81.7/48.0，AMCStruct 为 4.6/15.4/84.3/47.5；因此它们不能取代宽覆盖的四语料组合。AMCStruct 在单独 Song Describer 上有 15.4，略高于 AMCQuotes 的 14.7，却在合并后落后，说明“引语路线必然更好”也不能由表直接推出。两条管线同时改变了提示策略和 LLM（Qwen 2.5-32B 对 Llama 3-70B），没有把这两个因素拆开；表 1 不能证明优势只由叙事性或只由模型规模造成。
+**反证与替代解释。** 评论单独训练的每一列都不及 baseline：AMCQuotes 为 5.6/14.7/81.7/48.0，AMCStruct 为 4.6/15.4/84.3/47.5；因此它们不能取代宽覆盖的四语料组合。AMCStruct 在单独 Song Describer 上有 15.4，略高于 AMCQuotes 的 14.7，却在合并后落后，说明“引语路线必然更好”也不能由表直接推出。两条管线同时改变了提示策略和 LLM（Qwen 2.5-32B 对 Llama 3-70B），没有把这两个因素拆开；表 1 不能证明优势只由叙事性或只由模型规模造成。
 
-### 表 2 的六个查询：总体 MRR 上升时，究竟是哪类话得到了回应？
+### 哪些复杂查询真正得到改善？
 
-**比较问题与协议。**在 baseline+AMCQuotes 相比 baseline 的检索中，表 2 报告每个基准提升最大的前三条查询。原论文把“augmented rank − baseline rank”与“larger is better”并列；按通常的名次编号，二者的正负方向彼此不自洽，而允许材料不足以判定这是符号定义、绝对值还是排版转写的问题。因此，下面的 $+1951$、$+1869$、$+1822$、$+291$、$+282$、$+246$ 只称为**论文报告的正向改善幅度**：它们表明作者选出的案例有较大改善，却不把具体差分公式当作确定的排名方向定义。原文为适合排版截断 caption，下面完整保留查询样例及数值，而不是把它们概括成“复杂提示词”。
+**比较问题与协议。** 在 baseline+AMCQuotes 相比 baseline 的检索中，表 2 报告每个基准提升最大的前三条查询。原论文把“augmented rank − baseline rank”与“larger is better”并列；按通常的名次编号，二者的正负方向彼此不自洽，而允许材料不足以判定这是符号定义、绝对值还是排版转写的问题。因此，下面的 \(+1951\)、\(+1869\)、\(+1822\)、\(+291\)、\(+282\)、\(+246\) 只称为**论文报告的正向改善幅度**：它们表明作者选出的案例有较大改善，却不把具体差分公式当作确定的排名方向定义。原文为适合排版截断 caption，下面完整保留查询样例及数值，而不是把它们概括成“复杂提示词”。
 
 **Table 2: Top-3 queries with the largest rank improvement when adding review supervision. Δ rank = rank under review-augmented model − rank under baseline. Larger is better. Captions are truncated to fit.**
 
@@ -145,11 +147,11 @@ DimSim 是人类标注的成对音频相似度判断，指标是模型排序与�
 | +282 | A power-pop song with a lot of idiosyncracies like flutes, a kid’s choir, and guitar solo played backwards. |
 | +246 | Male vocalist with a raspy voice singing over melancholic piano chords and drums increasing in intensity, with a slighty dissonant chorus featuring distorted guitars. |
 
-**主发现。**六条话都不是纯流派名：有调弦这一过程、蟋蟀—海浪—合成器的背景层、舞者现场情境、反向吉他独奏、沙哑/忧郁/不协和等评价词。论文报告的正向改善幅度把它们选为值得查看的个例；这些案例把“描述对象”从一个标签扩成声音事件、编配关系和听感。因此表 2 为表 1 的 Song Describer 总体增益提供了可读的机制候选：评论式文本可能让向量空间更能容纳复合修饰。
+**主发现。** 六条话都不是纯流派名：有调弦这一过程、蟋蟀—海浪—合成器的背景层、舞者现场情境、反向吉他独奏、沙哑/忧郁/不协和等评价词。论文报告的正向改善幅度把它们选为值得查看的个例；这些案例把“描述对象”从一个标签扩成声音事件、编配关系和听感。因此表 2 为表 1 的 Song Describer 总体增益提供了可读的机制候选：评论式文本可能让向量空间更能容纳复合修饰。
 
-**反证与边界。**这是按最大提升挑出的六个个案，不是随机样本，也没有给每条原始 rank、置信区间或失败查询。MusicCaps 中出现三条巨大正变化，却不与“MusicCaps 总体 MRR 基本平”矛盾：少量剧烈改善可能被许多不变或退化样例抵消。表 2 因而展示了系统能解决什么样的个例，不能给出该类查询的总体胜率。
+**反证与边界。** 这是按最大提升挑出的六个个案，不是随机样本，也没有给每条原始 rank、置信区间或失败查询。MusicCaps 中出现三条巨大正变化，却不与“MusicCaps 总体 MRR 基本平”矛盾：少量剧烈改善可能被许多不变或退化样例抵消。表 2 因而展示了系统能解决什么样的个例，不能给出该类查询的总体胜率。
 
-### 图 2 把“复杂”拆成四档后，收益为何只在一种文本语域里显形
+### 为什么收益只在一种文本语域里显形？
 
 读图任务是区分“模型总体变好”与“模型只在语域匹配的切片变好”。复杂度由 Llama 3-70B 按 rubric 判为四级：1 为纯标签可表达，2 为大致可由标签近似，3 含一些叙事，4 为主要依赖叙事、评价、比喻或情境；括号内是每个切片样本数。图中纵轴是 retrieval MRR (%)，比较 baseline、加 AMCQuotes、加 AMCStruct。
 
@@ -159,9 +161,9 @@ DimSim 是人类标注的成对音频相似度判断，指标是模型排序与�
 
 该图支持“复杂叙事、评价和场景语句是评论语料的优势区”，不能支持“复杂度标签本身造成检索提高”。复杂度和触发词均由 LLM/rubric 或预设词表产生，作者没有报告人类复核的一致性；MusicCaps 的标注协议也与 Song Describer 不同。一个更强的后续实验应让人类盲标语域、固定相同音乐池和相同文字长度，再检查增益是否仍集中于同一类语言。
 
-### 表 3 的比较问题：音频塔只读最后一层，是否白白丢掉中层音乐线索？
+### 只读末层会丢掉哪些音乐线索？
 
-**比较问题与协议。**所有模型固定为冻结文本塔、InfoNCE 损失、baseline+AMCQuotes 数据，仅把 OMAR-RQ 的投影输入换为 Layer 12、Layer 6 或学习加权的 All layers。表 3 有上下两块；前半是检索/零样本/相似度，后半是冻结音频塔的 MLP probing。每个数值与指标方向均完整列出。
+**比较问题与协议。** 所有模型固定为冻结文本塔、InfoNCE 损失、baseline+AMCQuotes 数据，仅把 OMAR-RQ 的投影输入换为 Layer 12、Layer 6 或学习加权的 All layers。表 3 有上下两块；前半是检索/零样本/相似度，后半是冻结音频塔的 MLP probing。每个数值与指标方向均完整列出。
 
 **Table 3: Audio encoder layer selection. All models use frozen text encoder and InfoNCE loss on baseline+AMCQuotes data. Bold = best per column.**
 
@@ -179,9 +181,9 @@ DimSim 是人类标注的成对音频相似度判断，指标是模型排序与�
 | Layer 6 | 44.7 | 20.5 | 15.0 | 14.3 | 0.162 |
 | All layers | 44.5 | 21.6 | 16.7 | 15.2 | 0.161 |
 
-**主发现。**All layers 相对末层在 MusicCaps 与 Song Describer 各加 0.5 个绝对 MRR 点（7.3→7.8、18.8→19.3），DimSim 加 8.7 个百分点（74.3→83.0），而 probing 大致可比，MGPHot 还从 0.162 降至 0.161。它说明有效的跨模态信息并不完全压缩在第 12 层，学习融合可同时改善检索和人工相似度排序。
+**主发现。** All layers 相对末层在 MusicCaps 与 Song Describer 各加 0.5 个绝对 MRR 点（7.3→7.8、18.8→19.3），DimSim 加 8.7 个百分点（74.3→83.0），而 probing 大致可比，MGPHot 还从 0.162 降至 0.161。它说明有效的跨模态信息并不完全压缩在第 12 层，学习融合可同时改善检索和人工相似度排序。
 
-**反证与替代解释。**All layers 并非每列最好：GTZAN 85.4 低于 Layer 12 的 87.1，MTT 44.5 低于 Layer 6 的 44.7，Jamendo Instrument 16.7 仍低于 Layer 12 的 17.1。第 6 层的 DimSim 82.0 虽大幅好于末层，检索和大部分分类反而更差。因而层融合的结论应是多任务折中更佳，而不是“越早的层越好”或“所有下游都更好”；没有多随机种子误差条，也不能判断 0.1–0.5 的小差异是否稳定。
+**反证与替代解释。** All layers 并非每列最好：GTZAN 85.4 低于 Layer 12 的 87.1，MTT 44.5 低于 Layer 6 的 44.7，Jamendo Instrument 16.7 仍低于 Layer 12 的 17.1。第 6 层的 DimSim 82.0 虽大幅好于末层，检索和大部分分类反而更差。因而层融合的结论应是多任务折中更佳，而不是“越早的层越好”或“所有下游都更好”；没有多随机种子误差条，也不能判断 0.1–0.5 的小差异是否稳定。
 
 ### InfoNCE、Sigmoid、LeJEPA 与 SigReg：它们在同一空间里施加了不同几何约束
 
@@ -194,27 +196,27 @@ DimSim 是人类标注的成对音频相似度判断，指标是模型排序与�
 |LeJEPA + SigReg|否|同一配对靠近，加上分布近高斯|分类与 probe 的几何性质|缺负例会伤害非-probing 任务|
 |InfoNCE + SigReg|是|排序目标与各向同性正则的加权折中|兼顾检索与分类/probe|并非每个任务、每个 step 都领先|
 
-Sigmoid 损失把 InfoNCE 的 batch 内 softmax 排序改成每对的二元交叉熵：若 $i=j$，$y_{ij}=1$ 表示正对，否则 $y_{ij}=-1$；$t$ 是可学习温度，$b$ 是可学习偏置，$\ell^{xy}_{ij}=\log\sigma(y_{ij}(t\mathbf x_i^\top\mathbf y_j+b))$。
+Sigmoid 损失把 InfoNCE 的 batch 内 softmax 排序改成每对的二元交叉熵：若 \(i=j\)，\(y_{ij}=1\) 表示正对，否则 \(y_{ij}=-1\)；\(t\) 是可学习温度，\(b\) 是可学习偏置，\(\ell^{xy}_{ij}=\log\sigma(y_{ij}(t\mathbf x_i^\top\mathbf y_j+b))\)。
 
-$$\mathcal{L}_{\mathrm{Sigmoid}}=-\frac1{2N}\sum_{i,j}(\ell^{at}_{ij}+\ell^{ta}_{ij}).\tag{3}$$
+\[\mathcal{L}_{\mathrm{Sigmoid}}=-\frac1{2N}\sum_{i,j}(\ell^{at}_{ij}+\ell^{ta}_{ij}).\tag{3}\]
 
 它的直觉是每一对都独立判“配或不配”，不让同一行 softmax 竞争；代价是训练动力学可能更敏感，论文图中它的非-probing 指标后期退化更明显。
 
-SigReg 不直接指定哪一对相似，而是要每个模态的嵌入在随机方向投影后近似各向同性高斯。令 $\mathbf z_{i,m}$ 为样本 $i$、模态 $m\in\{a,t\}$ 的向量，$\mathbf v_k$ 是从单位球面抽的第 $k$ 个方向，$\mathcal T$ 为 Epps–Pulley 正态性检验，论文用 $M=2,K=17$：
+SigReg 不直接指定哪一对相似，而是要每个模态的嵌入在随机方向投影后近似各向同性高斯。令 \(\mathbf z_{i,m}\) 为样本 \(i\)、模态 \(m\in\{a,t\}\) 的向量，\(\mathbf v_k\) 是从单位球面抽的第 \(k\) 个方向，\(\mathcal T\) 为 Epps–Pulley 正态性检验，论文用 \(M=2,K=17\)：
 
-$$\mathcal{L}_{\mathrm{SigReg}}=\frac1M\sum_{m=1}^M\frac1K\sum_{k=1}^K\mathcal T(\{\mathbf v_k^\top\mathbf z_{i,m}\}_{i=1}^N).\tag{4}$$
+\[\mathcal{L}_{\mathrm{SigReg}}=\frac1M\sum_{m=1}^M\frac1K\sum_{k=1}^K\mathcal T(\{\mathbf v_k^\top\mathbf z_{i,m}\}_{i=1}^N).\tag{4}\]
 
-白话说，它惩罚“向量都挤在少数方向”的空间几何，这可能让冻结表示更容易被小分类器切开；但单靠均匀几何不保证正确文本会排到正确音频前面。LeJEPA 将跨模态不变性和 SigReg 结合，$\bar{\mathbf z}_i$ 是两模态向量归一化平均，$\lambda=0.05$：
+白话说，它惩罚“向量都挤在少数方向”的空间几何，这可能让冻结表示更容易被小分类器切开；但单靠均匀几何不保证正确文本会排到正确音频前面。LeJEPA 将跨模态不变性和 SigReg 结合，\(\bar{\mathbf z}_i\) 是两模态向量归一化平均，\(\lambda=0.05\)：
 
-$$\mathcal{L}_{\mathrm{LeJEPA}}=\frac{1-\lambda}{MN}\sum_{m,i}(1-\mathbf z_{i,m}^\top\bar{\mathbf z}_i)+\lambda\mathcal{L}_{\mathrm{SigReg}}.\tag{5}$$
+\[\mathcal{L}_{\mathrm{LeJEPA}}=\frac{1-\lambda}{MN}\sum_{m,i}(1-\mathbf z_{i,m}^\top\bar{\mathbf z}_i)+\lambda\mathcal{L}_{\mathrm{SigReg}}.\tag{5}\]
 
 它没有显式负例，只要求同一音频—文本对靠近并让整体分布好看。最后的折中是保留检索排序的 InfoNCE，再加小权重 SigReg：
 
-$$\mathcal{L}_{\mathrm{InfoNCE+SigReg}}=(1-\lambda)\mathcal{L}_{\mathrm{InfoNCE}}+\lambda\mathcal{L}_{\mathrm{SigReg}},\quad\lambda=0.05.\tag{6}$$
+\[\mathcal{L}_{\mathrm{InfoNCE+SigReg}}=(1-\lambda)\mathcal{L}_{\mathrm{InfoNCE}}+\lambda\mathcal{L}_{\mathrm{SigReg}},\quad\lambda=0.05.\tag{6}\]
 
 实验中，冻结文本塔的 InfoNCE、InfoNCE+SigReg、Sigmoid 用能放入显存的 batch 3,072；训练文本塔的 InfoNCE、LeJEPA、InfoNCE+SigReg 用 batch 1,024。这个差异很关键：若某个目标优劣同时伴随冻结/解冻与 batch 改变，不能把所有变化归给损失函数本身。
 
-### 图 3 不是终点柱状图：训练损失还在下降，能力却可能已经退化
+### 为什么训练损失下降时能力仍会退化？
 
 读图任务是观察不同目标随训练 steps 的下游轨迹，而非只读 150k 的最后 checkpoint。虚线深红色为通过同一评测流程得到的最强外部基线；所有曲线都使用 All layers 和 baseline+AMCQuotes。MusicCaps 与 FMA-Small 分别排除有 train–test overlap 的 Laion-CLAP+TTMR++、Laion-CLAP，故这些项目上的外部比较不是全模型冠军赛。LeJEPA 未画出，因为它在 probing 与 InfoNCE+SigReg 接近却在其他任务较差。
 
@@ -232,7 +234,7 @@ $$\mathcal{L}_{\mathrm{InfoNCE+SigReg}}=(1-\lambda)\mathcal{L}_{\mathrm{InfoNCE}
 
 ### 复现一条最小路线时，哪些环节最容易把结论做歪
 
-最小可复跑配置应从资源入口 `https://github.com/mtg/allmusiccaps/` 获取 AllMusicCaps、权重和代码，严格遵守论文声明的**非商业科学研究**用途。先确认同一 245,346 曲目子集有 AMCQuotes 与 AMCStruct；构造 baseline 的 LPMC/M4-RAG/FS/PSE，并按 0.40/0.15/0.25/0.14/0.06、音乐 80%/通用声音 20% 抽样。然后用 OMAR-RQ small 与 all-MPNet-base-v2，经线性头进入 512 维；原始元数据阶段 6.5M 对、400k steps、8×H100 64GB、每卡 64 个十秒 24kHz 片段、AdamW $10^{-4}$、20k warm-up；caption 阶段 150k steps、effective batch 3,072、AdamW $5\times10^{-5}$、15k warm-up，约 36 小时。
+最小可复跑配置应从资源入口 `https://github.com/mtg/allmusiccaps/` 获取 AllMusicCaps、权重和代码，严格遵守论文声明的**非商业科学研究** 用途。先确认同一 245,346 曲目子集有 AMCQuotes 与 AMCStruct；构造 baseline 的 LPMC/M4-RAG/FS/PSE，并按 0.40/0.15/0.25/0.14/0.06、音乐 80%/通用声音 20% 抽样。然后用 OMAR-RQ small 与 all-MPNet-base-v2，经线性头进入 512 维；原始元数据阶段 6.5M 对、400k steps、8×H100 64GB、每卡 64 个十秒 24kHz 片段、AdamW \(10^{-4}\)、20k warm-up；caption 阶段 150k steps、effective batch 3,072、AdamW \(5\times10^{-5}\)、15k warm-up，约 36 小时。
 
 建议先复现表 1 的 baseline 与 baseline+AMCQuotes，再锁定后者做表 3 的 Layer 12/6/All layers；最后再做 InfoNCE、Sigmoid、LeJEPA、InfoNCE+SigReg 的训练曲线。最高风险变量不是某个网络层，而是曲目—评论的定位、LLM caption 版本、五源采样、是否冻结文本塔、负例是否跨设备收集、以及按最后 checkpoint 还是按任务早停读数。论文给了模型、比例、步数、硬件和主要优化器，却未披露随机种子、每源清洗/去重细节、生成质量的定量抽检、全部早停选择策略和完整吞吐设置；这会使复现者更容易复得大方向，较难复得小数点差异。
 
