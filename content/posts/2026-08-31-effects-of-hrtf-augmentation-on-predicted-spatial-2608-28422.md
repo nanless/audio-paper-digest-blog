@@ -10,7 +10,7 @@ paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
 paper_digest_arxiv_id: "2608.28422"
 paper_digest_api_reader_contract: "beginner-researcher-v2"
-paper_digest_api_reader_article_sha256: "92629048993b01a36865d71f9a50e2ba3c947ba7e50ea63a9755d6f17420ef2b"
+paper_digest_api_reader_article_sha256: "a116645a78758ef79d8ece28f7f0f76b3ef715d4e47de6e30f663cbe218f3911"
 paper_digest_api_reader_plan_sha256: "35e36519a4eff3b915e7ab6071b6301e080573ab5ba6e4d1ee7b2c90cba1bf49"
 ---
 
@@ -100,9 +100,9 @@ V 是群体共享的谱基，s_i = U_i Σ 是第 i 个观测的主成分分析�
 
 下图要回答的是增强到底改了什么。读者应看 90 度方位角下个体 HRTF 与放大 HRTF 的幅度谱对比：共性的峰谷位置大致保留，而左右耳之间的差异随 α 增大被拉开，这正是后续 BE SNR 提升的物理来源。
 
-![论文图 1：不同增强系数下的左右耳 HRTF 幅度谱](/audio-paper-digest-blog/images/papers/2608.28422/figure-1-7939007156b80b8c.png)
+![原论文 Figure 1：Example individual and augmented HRTFs for a source at 90∘90^\\circ azimuth on the horizontal plane.](/audio-paper-digest-blog/images/papers/2608.28422/figure-1-7939007156b80b8c.png)
 
-*论文图 1。图中实线表示左耳、虚线表示右耳；随着增强系数增大，对侧耳的频变衰减被逐级拉开，而未增强侧基本保持原状。这正是“只放大侧通道方向残差、保留中通道与原始相位”的可视化结果。*
+*论文图 1。这张图来自原论文 Figure 1:，图示内容为“Example individual and augmented HRTFs for a source at 90∘90^\circ azimuth on the horizontal plane.”。请结合“怎么在不毁音色的前提下，只把空间感放大？”的正文，按图例、坐标轴或模块连线核对；图中没有呈现的内容不作外推。*
 
 ### 没有训练阶段，这套方法如何求解与推理？
 这不是 1 篇训练神经网络的论文，因此没有损失函数、优化器、训练轮次或早停策略。第一段的 PCA 是确定性求解：对侧通道矩阵做奇异值分解即得到基函数 V 和得分，残差缩放和重构都是闭式线性运算。超参数只有两个需要人为选定：保留前 6 个主成分，以及增强强度 α 的三档取值。
@@ -147,17 +147,17 @@ V 是群体共享的谱基，s_i = U_i Σ 是第 i 个观测的主成分分析�
 
 下两组图要回答的是收益如何随听力条件分解。读者应先看按目标方位拆分的 N0 SRM 柱状图，注意 HRTF4.0 随 α 单调抬高的趋势；再看按 N0/N3/N3 WDRC 拆分的平均 SRM 与 BE SNR/BU 分解图，重点是 BE SNR 增益在 N3 下收窄、BU 整体下移，以及 WDRC 并未把 HRTF4.0 的额外增益拉回 N0 水平。
 
-![论文图 2：不同渲染条件与目标方位下的预测 SRM](/audio-paper-digest-blog/images/papers/2608.28422/figure-2-7a199dbff4f753e6.png)
+![原论文 Figure 2：Mean predicted SRM relative to diotic baseline, split by target azimuth.](/audio-paper-digest-blog/images/papers/2608.28422/figure-2-7a199dbff4f753e6.png)
 
-*论文图 2。这组柱状图把目标位于正前方与侧方时的预测 SRM 并列展示。纵轴越高表示模型预测越容易从混音中分辨目标；增强强度越高，两种方位下的收益整体越大。*
+*论文图 2。这张图来自原论文 Figure 2:，图示内容为“Mean predicted SRM relative to diotic baseline, split by target azimuth.”。请结合“模型看到了多少好处，又在哪种情况下缩水？”的正文，按图例、坐标轴或模块连线核对；图中没有呈现的内容不作外推。*
 
-![论文图 3：正常听力、听损与 WDRC 条件下的预测 SRM](/audio-paper-digest-blog/images/papers/2608.28422/figure-3-89d09bc9ce705139.png)
+![原论文 Figure 3：Mean SRM predicted by vicente2020 averaged over target locations, split by hearing profile:…](/audio-paper-digest-blog/images/papers/2608.28422/figure-3-89d09bc9ce705139.png)
 
-*论文图 3。这张图把正常听力、未助听 N3 与经过 WDRC 的 N3 放在同一坐标上。它显示助听处理虽然改变了总体可听度，却没有把增强条件的空间收益恢复到正常听力水平。*
+*论文图 3。这张图来自原论文 Figure 3:，图示内容为“Mean SRM predicted by vicente2020 averaged over target locations, split by hearing profile: normal hearing (N0), unaided hearing loss (N3), aided hearing loss…”。请结合“模型看到了多少好处，又在哪种情况下缩水？”的正文，按图例、坐标轴或模块连线核对；图中没有呈现的内容不作外推。*
 
-![论文图 4：更优耳信噪比与双耳去掩蔽贡献分解](/audio-paper-digest-blog/images/papers/2608.28422/figure-4-832adf69084db8b6.png)
+![原论文 Figure 4：Mean change in BE SNR (left) and BU (right) relative to diotic condition, under vicente2020.](/audio-paper-digest-blog/images/papers/2608.28422/figure-4-832adf69084db8b6.png)
 
-*论文图 4。左图把更优耳信噪比贡献拆开，右图把双耳去掩蔽贡献拆开。增强收益主要由前者推动，而听损和 WDRC 会压缩这部分优势，这比只看一个 SRM 总数更能说明机制。*
+*论文图 4。这张图来自原论文 Figure 4:，图示内容为“Mean change in BE SNR (left) and BU (right) relative to diotic condition, under vicente2020.”。请结合“模型看到了多少好处，又在哪种情况下缩水？”的正文，按图例、坐标轴或模块连线核对；图中没有呈现的内容不作外推。*
 
 ### 在把分贝数当作疗效前，需要先看清边界
 论文明确承认的边界有 4 条。第一，所有数字都是 vicente2020 与 bischof2023 的预测，尚未经真人听音验证。第二，模型未涵盖时间调制、谐波结构、音高等音乐场景分析线索，也未包含信息掩蔽与高层注意、记忆过程。第三，听损建模是近似，未显式包含听觉滤波器展宽与时间精细结构处理下降。第四，放大的 HRTF 可能偏离听者已学习的空间映射，存在适应成本，文中也引用了既往语音放大研究中行为增益小于模型预测的案例。
