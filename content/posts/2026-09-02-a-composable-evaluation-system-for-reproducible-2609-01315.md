@@ -45,12 +45,12 @@ paper_digest_api_reader_plan_sha256: "1cba2d4c881fb3156e934511dd85432b475d75b71e
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/naver-ai/omni-evaluator ，安装方式为 git clone --recursive 后 pip install -e . ，示例代码位于 https://github.com/naver-ai/omni-evaluator/tree/main/demo
-- 模型权重：论文中未提及独立的 HuggingFace 或 ModelScope 链接，OmniEval Verifier 基于 Qwen3-0.6B 训练并以 8 bit Q8 GGUF 格式随代码仓库 https://github.com/naver-ai/omni-evaluator 发布，可通过 llama.cpp 在 CPU 上运行
+- 代码：<https://github.com/naver-ai/omni-evaluator> ，安装方式为 git clone --recursive 后 pip install -e . ，示例代码位于 <https://github.com/naver-ai/omni-evaluator/tree/main/demo>
+- 模型权重：论文中未提及独立的 HuggingFace 或 ModelScope 链接，OmniEval Verifier 基于 Qwen3-0.6B 训练并以 8 bit Q8 GGUF 格式随代码仓库 <https://github.com/naver-ai/omni-evaluator> 发布，可通过 llama.cpp 在 CPU 上运行
 - 数据集：论文中未提及公开数据集链接，Verifier 训练数据来自 16 个模型在 155 个基准上的评估产物及人工验证的 held-out 测试集 1566 样本，未提供下载地址或开源协议
-- Demo：在线演示与评估仪表盘随仓库 https://github.com/naver-ai/omni-evaluator 发布，演示视频地址为 https://www.youtube.com/watch?v=4Z5VZZWyXqY ，演示样例位于 https://github.com/naver-ai/omni-evaluator/tree/main/demo
+- Demo：在线演示与评估仪表盘随仓库 <https://github.com/naver-ai/omni-evaluator> 发布，演示视频地址为 <https://www.youtube.com/watch?v=4Z5VZZWyXqY> ，演示样例位于 <https://github.com/naver-ai/omni-evaluator/tree/main/demo>
 - 复现材料：附录 B 提供单命令安装与服务端启动方法，附录 C 提供 Verifier 训练细节，基础模型为 Qwen3-0.6B ，LoRA r 8 alpha 16 dropout 0.05 ，可训练参数约 5.05M ，学习率 1e-4 ，余弦调度 warmup 0.1 ，最多 3 轮训练，每次运行生成包含 prompt 模板、生成参数、模型版本、基准版本和指标设置的 provenance-rich 产物用于精确复现
-- 论文中引用的开源项目：llama.cpp https://github.com/ggml-org/llama.cpp ，HuggingFace Transformers ，vLLM ，SGLang ，lm-eval-harness ，lmms-eval ，VLMEvalKit ，其中除 llama.cpp 外论文中未提及具体 URL
+- 论文中引用的开源项目：llama.cpp <https://github.com/ggml-org/llama.cpp> ，HuggingFace Transformers ，vLLM ，SGLang ，lm-eval-harness ，lmms-eval ，VLMEvalKit ，其中除 llama.cpp 外论文中未提及具体 URL
 
 ## 🧭 深度解读
 
@@ -247,7 +247,7 @@ Record 是论文反复强调的不变量。无论文本、图像、视频还是�
 
 *   影响力 (0.9/1.5)：单接口覆盖文本图像视频音频 1000+ 基准，对 HyperCLOVA X 8B Omni 等 5 份技术报告覆盖 28/28 至 54/72，已在真实研发中落地，对全模态选型与回归具实用价值；但验证器仅判文本三元组二分类，未覆盖视觉 grounding 与音频生成质量，音频收益为系统能力一部分而非独立突破
 
-*   开源 (1.5/1.5)：代码仓库 https://github.com/naver-ai/omni-evaluator 以 git clone --recursive 后 pip install -e . 单命令安装，含 demo 与仪表盘及演示视频，OmniEval Verifier 基于 Qwen3-0.6B 以 8-bit Q8 GGUF 随仓库通过 llama.cpp 在 CPU 运行，符合工具类核心产物完整开放且文档完整的 1.5 锚点
+*   开源 (1.5/1.5)：代码仓库 <https://github.com/naver-ai/omni-evaluator> 以 git clone --recursive 后 pip install -e . 单命令安装，含 demo 与仪表盘及演示视频，OmniEval Verifier 基于 Qwen3-0.6B 以 8-bit Q8 GGUF 随仓库通过 llama.cpp 在 CPU 运行，符合工具类核心产物完整开放且文档完整的 1.5 锚点
 
 *   可复现性 (0.4/0.5)：披露验证器 LoRA r 8 alpha 16 dropout 0.05 可训练约 5.05M 参数，学习率 1e-4 余弦调度 warmup 0.1，有效批量 128 梯度裁剪 1.0，序列 4096，8×V100 DeepSpeed ZeRO-2，产物捆绑提示模板与模型基准版本；但解码温度束宽等生成参数与部分基准默认提示未统一公开，存在少量缺失
 

@@ -40,7 +40,7 @@ paper_digest_api_reader_plan_sha256: "a8d0b4c114200b71de9dea767112c6f039592070dc
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/mathacker23/ArtificialRosettaStone（论文首页脚注与第 4 节给出），https://github.com/mathacker23/ARS_V2（第 10.7 节 Code Availability 给出的提交稿对应仓库）
+- 代码：<https://github.com/mathacker23/ArtificialRosettaStone>（论文首页脚注与第 4 节给出），<https://github.com/mathacker23/ARS_V2>（第 10.7 节 Code Availability 给出的提交稿对应仓库）
 - 模型权重：论文中未提及
 - 数据集：合成数据集为 6 个 raga 启发的符号字母表配合 \(k\) 为 1、2、3 与缺失率 10%、30%、50% 的可复现合成实验，真实音频数据集为来自 RagaVeda 仓库的 42 个 Yaman 片段共约 44.6 分钟经自动音高提取与量化后得到 30 条可用符号序列，论文中未提供数据集直接下载链接与明确开源协议且声明该来源无完整许可与出处文档
 - Demo：论文中未提及
@@ -302,7 +302,7 @@ Figure 2 与 Figure 1 使用同一条缺失率横轴和同一组均值，但它�
 
 *   影响力 (0.7/1.5)：为符号层拉格重建提供可检验定理承载核心与可复现流水线模板，真实 Yaman 上相对均匀基线提升 3.29 倍 2.90 倍 2.60 倍验证可行性，但明确丢弃连续音高与 Gamaka 及 Tala 且仅覆盖 Yaman 单一拉格，历史真实性需独立档案证据，面向音频读者的通用影响受限。
 
-*   开源 (1.2/1.5)：核心代码已在 https://github.com/mathacker23/ArtificialRosettaStone 与 ARS_V2 双仓库开放，包含估计器、解码器、合成生成器与预处理流水线及穷举校验，但模型权重未提及且真实数据集无直接下载链接与明确开源协议，文档完整度未达完全可一键复现全部表格的 1.5 档。
+*   开源 (1.2/1.5)：核心代码已在 <https://github.com/mathacker23/ArtificialRosettaStone> 与 ARS_V2 双仓库开放，包含估计器、解码器、合成生成器与预处理流水线及穷举校验，但模型权重未提及且真实数据集无直接下载链接与明确开源协议，文档完整度未达完全可一键复现全部表格的 1.5 档。
 
 *   可复现性 (0.3/0.5)：已披露 N=7 时 d_k 为 42 294 2058、α=0.5、主种子 20260731、掩码率 10% 30% 50% 及 BIC 选阶公式与动态规划递推，但该结论未提及 GPU 型号与训练时长等硬件配置，且真实评估未冻结 BIC 选阶，关键配置大部分充分但有少量缺失。
 

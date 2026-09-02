@@ -45,15 +45,15 @@ paper_digest_api_reader_plan_sha256: "6365943658a7d540419c5a07eba677099371b8d54c
 
 ## 🔗 开源与复现资源
 
-- 代码：论文中未在正文直接给出 URL，但项目页与验证信息显示代码仓库为 github.com/saga1214/PhraseLocalizedLCG，附带演示页 https://saga1214.github.io/PhraseLocalizedLCG/
+- 代码：论文中未在正文直接给出 URL，但项目页与验证信息显示代码仓库为 <https://github.com/saga1214/PhraseLocalizedLCG>，附带演示页 <https://saga1214.github.io/PhraseLocalizedLCG/>
 - 模型权重：论文中未提及独立的权重下载链接，正文及附录 Table 11 仅列出所用模型名称与许可证，未提取到可验证的 HuggingFace 或 ModelScope URL，具体包括 OmniVoice 0.81B Apache-2.0、Whisper-large-v3 Apache-2.0、WavLM-base-plus-sv CC BY-SA 3.0、UTMOS MIT、Qwen3-ForcedAligner-0.6B Apache-2.0、MOSS-TTS-v1.5 8B Apache-2.0，其中 Table 11 标注 Name with Link 但提取文本中未显示具体 URL
 - 数据集：论文自建并声称开源 1,200 条合成 code-switching 基准语料，覆盖 5 种语言 12 个方向，用于复现研究，但提取文本中未给出该自建语料的具体下载 URL，引用的第三方数据集包括 LJSpeech Public Domain、KSS Dataset CC BY-NC-SA 4.0、CML-TTS CC BY 4.0、CSS10 Apache-2.0，Table 11 标注含链接但未提取到具体 URL
-- Demo：https://saga1214.github.io/PhraseLocalizedLCG/
+- Demo：<https://saga1214.github.io/PhraseLocalizedLCG/>
 - 复现材料：论文中未提及训练配置与检查点，方法为 training-free 无需训练，附录提供复现相关材料包括 Appendix A 质量 MOS 与 AB 测试细节、Appendix D 注意力权重鲁棒性分析、Appendix E 人工撰写 code-switching 文本评估、Appendix F 外部系统对照，评估流程使用相同参考语音与矩阵语言条件
 - 论文中引用的开源项目：OmniVoice、Whisper-large-v3、WavLM-base-plus-sv、UTMOS、Qwen3-ForcedAligner-0.6B、MOSS-TTS-v1.5、LJSpeech、KSS Dataset、CML-TTS、CSS10，论文 Table 11 标注各项目含超链接但提取文本中未显示具体 URL，未提及则写未提供可提取 URL
 
 **从 demo/项目页面验证发现（已更新开源评分）：**
-- **代码仓库**：github.com/saga1214/PhraseLocalizedLCG
+- **代码仓库**：<https://github.com/saga1214/PhraseLocalizedLCG>
 
 ## 🧭 深度解读
 
@@ -311,7 +311,7 @@ m 作为门控开关，仅在嵌入帧上沿(c_phr - c_src) 增强原生发音�
 
 *   影响力 (1.0/1.5)：针对零样本多语言 TTS 句内口音泄露提供无需训练的即插即用修复，在 5 语言 12 方向上将 LAe 0.233 提升至 0.518 且保持 SIM 0.969，对语音合成社区有直接复用价值，但明确受限于离散 DLM 单骨干与高资源语言，低资源与自回归泛化待验证。
 
-*   开源 (1.0/1.5)：代码仓库 github.com/saga1214/PhraseLocalizedLCG 与演示页 https://saga1214.github.io/PhraseLocalizedLCG/ 已可访问，骨干 OmniVoice 与评估工具均为公开许可，但自建 1,200 条基准声称开源却未给出可验证下载 URL 且无独立权重发布，核心产物仅部分完整开放。 
+*   开源 (1.0/1.5)：代码仓库 <https://github.com/saga1214/PhraseLocalizedLCG> 与演示页 <https://saga1214.github.io/PhraseLocalizedLCG/> 已可访问，骨干 OmniVoice 与评估工具均为公开许可，但自建 1,200 条基准声称开源却未给出可验证下载 URL 且无独立权重发布，核心产物仅部分完整开放。
 
 *   可复现性 (0.4/0.5)：披露骨干 0.81B 28 层 8 码本 T 32 与 γ 2.0 λ 7 k 4 等效 ±10 帧及 L8 L12 头最大池化等推理超参，披露 Whisper-large-v3 与 WavLM 评估管线及 B200 bfloat16 测量条件，方法为 training-free 无需训练配置，但未提供一键复现脚本与完整依赖版本。
 

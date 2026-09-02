@@ -43,7 +43,7 @@ paper_digest_api_reader_plan_sha256: "14ba4fbac1203b1efc97e81f746936e747d154a60b
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/mtilerisoy/REACH
+- 代码：<https://github.com/mtilerisoy/REACH>
 - 模型权重：论文中未提及
 - 数据集：论文使用 6 个公开呼吸声数据集完成 9 项任务，分别为 CovidUK、COUGHVID、ICBHI、Coswara、KAUH 和 Resp.@TR，论文中未提供具体下载链接或开源协议说明
 - Demo：论文中未提及
@@ -272,7 +272,7 @@ REACH 把问题拆成 3 段：先造文本，再建双塔，最后定目标。�
 
 *   影响力 (0.9/1.5)：面向呼吸音这一核心音频任务，以 43% 公开数据实现 61.3% 零样本与 71.6% 线性探测并超越 7B 通用音频模型，为低资源临床音频提供可复用对齐范式，但零样本绝对值距临床阈值仍远且 T3 与 T9 失效限制外推
 
-*   开源 (1.0/1.5)：代码已在 https://github.com/mtilerisoy/REACH 开放，模型权重未提及，6 数据集未提供下载链接与协议，Demo 未提及，属部分核心产物开放但文档不完整
+*   开源 (1.0/1.5)：代码已在 <https://github.com/mtilerisoy/REACH> 开放，模型权重未提及，6 数据集未提供下载链接与协议，Demo 未提及，属部分核心产物开放但文档不完整
 
 *   可复现性 (0.1/0.5)：仅披露学习率 1x10-5 训练 100 轮及 k=10 的 50% 负采样，共享维度 d 与 m n 掩码比例重建头结构 FAISS 索引类型优化器批次大小 warmup 硬件型号与 prompt 完整模板均未说明，关键配置大量缺失
 

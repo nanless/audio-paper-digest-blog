@@ -46,9 +46,9 @@ paper_digest_api_reader_plan_sha256: "cc0b2f4f15f344bed1e24d57b4f617c315b4964c40
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/roserbatlleroca/matcha，元数据文件链接为 https://github.com/roserbatlleroca/matcha/metadata/raw_cases.csv，论文中说明预处理脚本已在该仓库提供并将在接收后补全
+- 代码：<https://github.com/roserbatlleroca/matcha>，元数据文件链接为 <https://github.com/roserbatlleroca/matcha/metadata/raw_cases.csv>，论文中说明预处理脚本已在该仓库提供并将在接收后补全
 - 模型权重：论文中未提及独立的 HuggingFace 或 ModelScope 直链，仅说明使用 Stable Audio Open 官方实现 stable-audio-tools 提供的预训练检查点 stable-audio-open-1.0，未给出下载 URL
-- 数据集：MATCHA 数据集，包含 300 个三元组用例的 1105 条专家标注，来自 83 名参与者，获取方式为元数据与标注通过 https://github.com/roserbatlleroca/matcha 公开发布，音频通过 Zenodo 分发，AS 子集将在论文接收后以 CC-BY-NC 4.0 协议发布，HP HV AM 子集因版权限制仅提供受限访问，论文中引用的第三方数据源包括 SMP 数据集与 Discogs-VI 数据集
+- 数据集：MATCHA 数据集，包含 300 个三元组用例的 1105 条专家标注，来自 83 名参与者，获取方式为元数据与标注通过 <https://github.com/roserbatlleroca/matcha> 公开发布，音频通过 Zenodo 分发，AS 子集将在论文接收后以 CC-BY-NC 4.0 协议发布，HP HV AM 子集因版权限制仅提供受限访问，论文中引用的第三方数据源包括 SMP 数据集与 Discogs-VI 数据集
 - Demo：论文中未提及
 - 复现材料：论文在附录提供完整生成配置，全部生成在单张 NVIDIA H100 PCIe 82 GB 上运行，驱动版本为 570.172.08，CUDA 版本为 12.8，使用固定随机种子 42 生成 10 秒片段，DDIM 反演步数为 100，采样步数为 100，CFG scale 为 6.0，反演阶段 \(\eta\) 为 0.0，生成阶段 \(\eta\) 为 0.3 与 0.5，\(\sigma_{min}\) 为 0.1，\(\sigma_{max}\) 为 1.0，采样器为 v-DDIM，相关超参数汇总于 Table 4，整体流程汇总于 Algorithm 1，原始标注与用例元数据已保留于仓库
 - 论文中引用的开源项目：madmom 库，Essentia 库，Stable Audio Open 与 stable-audio-tools 实现，MiRA 评估框架包含 CoverID，PaSST 对应的 KL divergence，CLAP，Discogs-EffNet，DDIM inversion 方法，论文中未提供上述项目的具体 URL
@@ -294,7 +294,7 @@ AS 的失效恰好是这一逻辑的反证：当生成可控性不足时，再�
 
 *   影响力 (0.9/1.5)：为生成式音乐复现审计提供首个 300 三元组 83 位专家属性级感知基准，揭示无单一指标覆盖 5 属性需多指标集成，对音乐生成原创性评估与版权风险标记具领域内可复用价值，但限于西方音乐与强匹配采样。
 
-*   开源 (1.0/1.5)：元数据与 1105 条标注已通过 https://github.com/roserbatlleroca/matcha 公开，AS 子集承诺接收后以 CC-BY-NC 4.0 发布，HP HV AM 音频因版权仅受限访问，属部分核心产物开放。
+*   开源 (1.0/1.5)：元数据与 1105 条标注已通过 <https://github.com/roserbatlleroca/matcha> 公开，AS 子集承诺接收后以 CC-BY-NC 4.0 发布，HP HV AM 音频因版权仅受限访问，属部分核心产物开放。
 
 *   可复现性 (0.3/0.5)：已披露 10 秒截窗、DDIM 反演与采样各 100 步、CFG scale 6.0、eta 0.0 与 0.3 0.5、v-DDIM 采样器、种子 42 及单张 NVIDIA H100 驱动 570.172.08 CUDA 12.8，但人类实验随机配对与 AM 提示细节缺失。
 

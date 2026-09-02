@@ -42,7 +42,7 @@ paper_digest_api_reader_plan_sha256: "b90d9da2d4a59d0a506eb215fbffcd4a63299502a9
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/Bream101/ABSE-NET
+- 代码：<https://github.com/Bream101/ABSE-NET>
 - 模型权重：论文中未提及
 - 数据集：论文中未提及获取链接与开源协议，使用的公开数据集包括 Librispeech 数据集用于干净语音、NOISEX-92 数据集用于噪声信号、Hearpiece 数据库用于头相关脉冲响应 HRIRs，未提供直接下载链接
 - Demo：论文中未提及
@@ -275,7 +275,7 @@ ABSE-NET 的优化目标直接对应耳道内的最终波形\hat{u}与干净目�
 这些缺席并不否定级联思路的价值，但意味着从仿真到可佩戴设备的距离，仍需真实佩戴、主观听感与个体化耳道特性的检验来填补。
 
 ### 若要复现，需要哪些精确配置与缺失信息？
-复现 ABSE-NET 需严格对齐数据生成与模型配置。数据侧：Librispeech 与 NOISEX-92 分别提供语音与噪声，Hearpiece 提供 HRIR，24 方向中 12 训练 12 测试，相邻 15°，43200 个 2 秒样本，SNR -5~0 dB，16 kHz，8:1:1 无重叠划分。时频侧：Hanning 窗 320 点、跳 160 点，帧级归一化，BMVDR 的 SCM 经 VAD 估计。模型侧：FA 重复 L=4，核集合{1,3,5}，特征维 C=16、C1=8、C2=24、C3=4、C4=4，α=0.3，λ=10，编码器单层 RMB-Conv1D 无恒等分支，解码器全连接。训练侧：Adam 3e-3，batch 6，60 轮。代码已公开于https://github.com/Bream101/ABSE-NET。
+复现 ABSE-NET 需严格对齐数据生成与模型配置。数据侧：Librispeech 与 NOISEX-92 分别提供语音与噪声，Hearpiece 提供 HRIR，24 方向中 12 训练 12 测试，相邻 15°，43200 个 2 秒样本，SNR -5~0 dB，16 kHz，8:1:1 无重叠划分。时频侧：Hanning 窗 320 点、跳 160 点，帧级归一化，BMVDR 的 SCM 经 VAD 估计。模型侧：FA 重复 L=4，核集合{1,3,5}，特征维 C=16、C1=8、C2=24、C3=4、C4=4，α=0.3，λ=10，编码器单层 RMB-Conv1D 无恒等分支，解码器全连接。训练侧：Adam 3e-3，batch 6，60 轮。代码已公开于<https://github.com/Bream101/ABSE-NET>。
 
 缺失信息同样关键：论文未说明 GPU 型号、数量与训练时长，未披露 STOI 可微近似的具体实现，未报告多次种子方差，模型权重与数据集获取链接、协议未提供，Demo 未提及，推理阶段的流式块大小与实测延迟未量化。这些缺口使得从论文到一键复现仍需额外摸索，尤其是在将 FLOPs 转化为真实助听器芯片上的功耗与延迟时。
 
@@ -314,7 +314,7 @@ ABSE-NET 的核心判断是：开耳式的泄漏不应在电信号域后处理�
 
 *   影响力 (0.9/1.5)：面向开耳式助听器堵塞效应与泄漏污染这一明确音频痛点，以 0.112M 参数实现 3.626 PESQ 与 0.955 STOI 的可部署路径；但验证局限于 24 小时合成数据，无真实佩戴与主观听感，领域外溢有限。
 
-*   开源 (1.0/1.5)：代码已在 https://github.com/Bream101/ABSE-NET 公开，满足部分核心产物开放；但模型权重未提及，Librispeech、NOISEX-92、Hearpiece 均未提供获取链接与协议，Demo 未提及，文档不完整。
+*   开源 (1.0/1.5)：代码已在 <https://github.com/Bream101/ABSE-NET> 公开，满足部分核心产物开放；但模型权重未提及，Librispeech、NOISEX-92、Hearpiece 均未提供获取链接与协议，Demo 未提及，文档不完整。
 
 *   可复现性 (0.3/0.5)：已披露 STFT Hanning 窗 320 点跳 160 点、16 kHz、L=4、核集合 {1,3,5}、C=16 等维度及 alpha 0.3、lambda 10、Adam 3e-3、batch 6、60 轮等训练配置；但硬件型号、训练时长、STOI 可微近似与多次种子方差缺失。
 

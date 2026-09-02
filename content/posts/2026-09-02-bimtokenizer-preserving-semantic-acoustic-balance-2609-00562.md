@@ -43,12 +43,12 @@ paper_digest_api_reader_plan_sha256: "aa8ede875badeda82aedaa203f7425c37b95e0d6ca
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/ZhangXinWhut/BiMTokenizer
-- 模型权重：https://github.com/ZhangXinWhut/BiMTokenizer，论文中说明代码和模型权重均在该 GitHub 仓库提供，未提及独立的 HuggingFace 或 ModelScope 链接
+- 代码：<https://github.com/ZhangXinWhut/BiMTokenizer>
+- 模型权重：<https://github.com/ZhangXinWhut/BiMTokenizer>，论文中说明代码和模型权重均在该 GitHub 仓库提供，未提及独立的 HuggingFace 或 ModelScope 链接
 - 数据集：训练使用 LibriSpeech 训练集 960 小时 16 kHz 数据，评测涉及 LibriSpeech test-other、Seed-TTS-Eval 含中文和英文子集，LLM 语音生成训练使用 Emilia 数据集约 96.7K 小时含 46.8K 小时英文和 49.9K 小时中文以及 VoxBox 数据集，论文中未提供数据集直接下载链接
 - Demo：论文中未提及
 - 复现材料：论文附录 C 提供详细重建损失、对抗损失和特征匹配损失公式，附录 A 提供 8 层双向 Mamba-1 编码器与解码器结构及上下采样细节，训练配置为单阶段训练 1000000 步，使用 2 张 NVIDIA H100 GPU，每张 GPU 批量大小为 64，有效批量大小为 128，优化器为 AdamW 参数为 beta1 为 0.8 beta2 为 0.9 权重衰减为 0.01，余弦退火调度在 30000 步预热后从 1×10-4 衰减至 0，模型总参数量为 253M，量化器帧率为 12.5 Hz 码本每层 196560 条目共 5 层总码率为 1100 bps，TTS 变体为每层 2048 条目共 8 层
-- 论文中引用的开源项目：BiMTokenizer https://github.com/ZhangXinWhut/BiMTokenizer，HuBERT large ls960 ft https://huggingface.co/facebook/hubert-large-ls960-ft，UniSpeech speaker verification https://github.com/microsoft/UniSpeech/tree/main/downstreams/speaker_verification，另提及 Whisper-small、SenseVoice-small、Qwen3-0.6B、Qwen3-TTS、Spark-TTS、EnCodec、DAC、SoundStream、BigCodec、XCodec2.0、XY-Tokenizer、SimWhisper-Codec、Mamba、ExtBiMamba、SwiGLU、Residual Spherical Leech Quantization、Lookup-Free Quantization、Binary Spherical Quantization、Finite Scalar Quantization、MPD、MS-STFTD，未提供除上述 3 个链接外的其他 URL
+- 论文中引用的开源项目：BiMTokenizer <https://github.com/ZhangXinWhut/BiMTokenizer>，HuBERT large ls960 ft <https://huggingface.co/facebook/hubert-large-ls960-ft>，UniSpeech speaker verification <https://github.com/microsoft/UniSpeech/tree/main/downstreams/speaker_verification>，另提及 Whisper-small、SenseVoice-small、Qwen3-0.6B、Qwen3-TTS、Spark-TTS、EnCodec、DAC、SoundStream、BigCodec、XCodec2.0、XY-Tokenizer、SimWhisper-Codec、Mamba、ExtBiMamba、SwiGLU、Residual Spherical Leech Quantization、Lookup-Free Quantization、Binary Spherical Quantization、Finite Scalar Quantization、MPD、MS-STFTD，未提供除上述 3 个链接外的其他 URL
 
 ## 🧭 深度解读
 
@@ -256,7 +256,7 @@ WER 由 HuBERT-large 微调 ASR 计算，SIM 由 UniSpeech 说话人验证模型
 
 | 复现项 | 论文提供 | 链接或位置 | 完整度 | 复现建议 |
 |---|---|---|---|---|
-| 代码与权重 | GitHub 仓库 | https://github.com/ZhangXinWhut/BiMTokenizer | 核心产物开放 | 克隆后按附录 A/C 配置环境 |
+| 代码与权重 | GitHub 仓库 | <https://github.com/ZhangXinWhut/BiMTokenizer> | 核心产物开放 | 克隆后按附录 A/C 配置环境 |
 | 架构细节 | 8 块 BiMamba 潜 128 维 12.5 Hz 5 级 RSLQ 196560 | 正文与附录 A | 大部分充分 | 核对隐藏 768 状态 16 |
 | 训练配置 | 1,000,000 步批量 128 AdamW 0.8 / 0.9 衰减 0.01 | 附录 C | 充分但缺时长 | 记录 H100 小时数 |
 | 评测实现 | WER 基于 hubert-large-ls960-ft | 附录 D 链接 | 充分 | 固定评测脚本版本 |
@@ -298,7 +298,7 @@ WER 由 HuBERT-large 微调 ASR 计算，SIM 由 UniSpeech 说话人验证模型
 
 *   影响力 (1.0/1.5)：面向 Speech LLM 低码率离散化提供 253M 单塔路径，在 LibriSpeech test-clean 取得 PESQ-NB 3.56 与 WER 2.44% 的同档最优并在 ARCH 平均 45.91% 居首，为语音编码读者提供可复用的轻量范式，但核心验证限于 16 kHz 英文朗读，跨语种与真实信道外推仍需验证。
 
-*   开源 (1.2/1.5)：核心产物代码与模型权重均在 https://github.com/ZhangXinWhut/BiMTokenizer 开放，未提供独立 HuggingFace 链接与数据集直接下载，Demo 未提及，属于核心产物开放但文档与分发完整度不全的 1.2 档。
+*   开源 (1.2/1.5)：核心产物代码与模型权重均在 <https://github.com/ZhangXinWhut/BiMTokenizer> 开放，未提供独立 HuggingFace 链接与数据集直接下载，Demo 未提及，属于核心产物开放但文档与分发完整度不全的 1.2 档。
 
 *   可复现性 (0.3/0.5)：披露 8 块双向 Mamba-1 隐藏维度 768 状态维度 16 卷积宽度 4 扩展因子 2、潜维度 128 帧率 12.5 Hz、5 级 RSLQ 每级 196560、Vocos 12 层等架构细节及单阶段 1000000 步有效批量 128 AdamW beta1 0.8 beta2 0.9 权重衰减 0.01 余弦退火 warmup 30000 步等训练配置与 2 张 H100 硬件，但训练时长未报告，属大部分充分有少量缺失。
 

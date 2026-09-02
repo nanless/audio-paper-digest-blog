@@ -41,12 +41,12 @@ paper_digest_api_reader_plan_sha256: "f409c64ca33a7ba1644524691efec0f8e2869bec93
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/naver/tts-friendly-gen
-- 模型权重：论文中未发布自训练权重，实验所用基座模型为 https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507 对应 Qwen3-4B 模型与 https://huggingface.co/HuggingFaceTB/SmolLM3-3B 对应 SmolLM3-3B 模型
-- 数据集：自建偏好数据集 CORA 与 Recipe 均已开源于 https://github.com/naver/tts-friendly-gen ，其中 Recipe 基于 RecipeNLG 数据集 https://huggingface.co/datasets/mbien/recipe_nlg 采样 300 条构建，每条样本包含 1 个 TTS-friendly chosen 回复与 1 个 TTS-unfriendly rejected 回复
+- 代码：<https://github.com/naver/tts-friendly-gen>
+- 模型权重：论文中未发布自训练权重，实验所用基座模型为 <https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507> 对应 Qwen3-4B 模型与 <https://huggingface.co/HuggingFaceTB/SmolLM3-3B> 对应 SmolLM3-3B 模型
+- 数据集：自建偏好数据集 CORA 与 Recipe 均已开源于 <https://github.com/naver/tts-friendly-gen> ，其中 Recipe 基于 RecipeNLG 数据集 <https://huggingface.co/datasets/mbien/recipe_nlg> 采样 300 条构建，每条样本包含 1 个 TTS-friendly chosen 回复与 1 个 TTS-unfriendly rejected 回复
 - Demo：论文中未提及
-- 复现材料：附录 D 表 9 提供 Reward model 与生成模型微调的完整训练配置，附录 C 提供启发式指标计算脚本并声明将随代码发布，附录 F 提供 SmolLM3-3B 上的复现结果，论文声明数据集、指标与代码均已公开于 https://github.com/naver/tts-friendly-gen
-- 论文中引用的开源项目：Qwen3-4B-Instruct-2507 https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507 ，SmolLM3-3B https://huggingface.co/HuggingFaceTB/SmolLM3-3B ，RecipeNLG https://huggingface.co/datasets/mbien/recipe_nlg ，PolyNorm-Bench https://github.com/apple/ml-speech-polynorm-bench
+- 复现材料：附录 D 表 9 提供 Reward model 与生成模型微调的完整训练配置，附录 C 提供启发式指标计算脚本并声明将随代码发布，附录 F 提供 SmolLM3-3B 上的复现结果，论文声明数据集、指标与代码均已公开于 <https://github.com/naver/tts-friendly-gen>
+- 论文中引用的开源项目：Qwen3-4B-Instruct-2507 <https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507> ，SmolLM3-3B <https://huggingface.co/HuggingFaceTB/SmolLM3-3B> ，RecipeNLG <https://huggingface.co/datasets/mbien/recipe_nlg> ，PolyNorm-Bench <https://github.com/apple/ml-speech-polynorm-bench>
 
 ## 🧭 深度解读
 
@@ -263,7 +263,7 @@ Cho 等人提出的“speechworthy”概念最接近本文，尝试通过指令�
 
 *   影响力 (0.9/1.5)：为级联 LLM->TTS 提供低延迟文本端优化路径，FaST 较 DPO 在 CORA 启发式高 0.638 且 CER 降 0.064，延迟较 PolyNorm 减半至 1.6 秒对 3.4 秒，但仅验证 Qwen3-4B 与 SmolLM3-3B 英语两域，领域与语言覆盖窄限制音频社区直接复用
 
-*   开源 (1.2/1.5)：核心产物代码与 CORA Recipe 偏好数据集已在 https://github.com/naver/tts-friendly-gen 开放，Recipe 基于 RecipeNLG 采样 300 条且含 chosen rejected 配对，但未发布自训练权重且未提供 Demo，文档完整度未达 1.5 锚点
+*   开源 (1.2/1.5)：核心产物代码与 CORA Recipe 偏好数据集已在 <https://github.com/naver/tts-friendly-gen> 开放，Recipe 基于 RecipeNLG 采样 300 条且含 chosen rejected 配对，但未发布自训练权重且未提供 Demo，文档完整度未达 1.5 锚点
 
 *   可复现性 (0.3/0.5)：已披露 Qwen3-4B 基座禁用思考模式、FaRM 学习率 0.1 迭代 500、生成端学习率 1.41e-05 批量 16 采样温度 1.2 top_p 0.9 及评估温度 0.7 硬件单 A100 与 CPU 训练，但优化器调度与数据增强等关键配置缺失
 

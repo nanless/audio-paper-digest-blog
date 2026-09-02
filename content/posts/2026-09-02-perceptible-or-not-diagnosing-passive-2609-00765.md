@@ -43,12 +43,12 @@ paper_digest_api_reader_plan_sha256: "e5dae9672a9600b95145aa335259d158a0f7b9a59c
 
 ## 🔗 开源与复现资源
 
-- 代码：https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/
-- 模型权重：论文中提供了 HiggsAudioV3 权重链接 https://huggingface.co/bosonai/higgs-audio-v3-tts-4b ，其余 9 个生成器权重链接论文中未提及
-- 数据集：使用 VCTK 数据集随机采样 2500 条语音按 1800 / 450 / 250 划分为训练集域内测试集和 OOD 测试集，另从 ESD 数据集选取 10 个说话人各 100 条英文脚本构建 Full-OOD 测试集，全部 25000 条合成数据及处理代码已发布于 https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/ ，论文中未提供 VCTK 与 ESD 的独立下载链接
+- 代码：<https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/>
+- 模型权重：论文中提供了 HiggsAudioV3 权重链接 <https://huggingface.co/bosonai/higgs-audio-v3-tts-4b> ，其余 9 个生成器权重链接论文中未提及
+- 数据集：使用 VCTK 数据集随机采样 2500 条语音按 1800 / 450 / 250 划分为训练集域内测试集和 OOD 测试集，另从 ESD 数据集选取 10 个说话人各 100 条英文脚本构建 Full-OOD 测试集，全部 25000 条合成数据及处理代码已发布于 <https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/> ，论文中未提供 VCTK 与 ESD 的独立下载链接
 - Demo：论文中未提及
-- 复现材料：论文中提及 10 路闭集归因设置冻结 WavLM 与 w2v-bert 特征提取器训练配置及 Grad-CAM 可视化细节，完整代码与数据已发布于 https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/ ，论文中未提及独立检查点下载链接
-- 论文中引用的开源项目：GPT-SoVITS 链接为 https://github.com/RVC-Boss/GPT-SoVITS ，HiggsAudioV3 链接为 https://huggingface.co/bosonai/higgs-audio-v3-tts-4b ，SynthID 链接为 https://deepmind.google/models/synthid/ ，其余提及的 FreeVC kNN-VC CosyVoice2 XTTS-v2 Qwen3-TTS F5-TTS AudioSeal WavLM w2v-bert RawNet2 AASIST 论文中未提供链接
+- 复现材料：论文中提及 10 路闭集归因设置冻结 WavLM 与 w2v-bert 特征提取器训练配置及 Grad-CAM 可视化细节，完整代码与数据已发布于 <https://anonymous.4open.science/r/Perceptible-or-Not-3FCB/> ，论文中未提及独立检查点下载链接
+- 论文中引用的开源项目：GPT-SoVITS 链接为 <https://github.com/RVC-Boss/GPT-SoVITS> ，HiggsAudioV3 链接为 <https://huggingface.co/bosonai/higgs-audio-v3-tts-4b> ，SynthID 链接为 <https://deepmind.google/models/synthid/> ，其余提及的 FreeVC kNN-VC CosyVoice2 XTTS-v2 Qwen3-TTS F5-TTS AudioSeal WavLM w2v-bert RawNet2 AASIST 论文中未提供链接
 
 ## 🧭 深度解读
 

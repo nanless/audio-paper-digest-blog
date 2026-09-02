@@ -46,7 +46,7 @@ paper_digest_api_reader_plan_sha256: "698be474212c3cf621736b05d79fa1b355cb74eab7
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/Sleepwalker554/Back_to_Origin
+- 代码：<https://github.com/Sleepwalker554/Back_to_Origin>
 - 模型权重：论文中未提及
 - 数据集：Pitt-origin / Pitt 共 552 条、ADReSS 共 156 条、ADReSSo / ADReSS-M 共 237 条、English Lu Corpus 共 56 条，全部通过 DementiaBank 获取，论文中未提供直接下载链接
 - Demo：论文中未提及
@@ -236,7 +236,7 @@ SLS 的设计动机是不同预训练层对病理线索的敏感度不同，顶�
 ### 若要复现，需要哪些数据、代码与关键参数？
 数据获取方面，6 个数据集均通过 DementiaBank 受控获取，需申请成员权限并遵守 CC BY-NC-SA 3.0 的非商业与相同方式共享要求，论文未提供直接下载链接。Pitt-origin 与 Pitt 为同一录音的两种版本，ADReSS-M 与 ADReSSo 同样本仅差异在是否增强，这些对应关系在复现时需严格对齐，否则会混淆筛选与增强的效应。
 
-代码与模型方面，作者已公开仓库 https://github.com/Sleepwalker554/Back_to_Origin，包含 3 类监督模型的训练配置。SLS 与 XLS-R 冻结编码器，可训练参数分别为 169K 与 168K，eGeMAPS 为 6.2K。SLS 的学习率 3×10⁻⁴、AdamW、交叉熵、最多 40 轮、5 轮早停、5 次随机种子等已披露，但 XLS-R 与 eGeMAPS 的具体超参数、5 种增强器的版本与参数、DNSMOS 版本与采样率、大模型的解码温度与束搜索等未说明，复现时需推断或沿用默认。
+代码与模型方面，作者已公开仓库 <https://github.com/Sleepwalker554/Back_to_Origin>，包含 3 类监督模型的训练配置。SLS 与 XLS-R 冻结编码器，可训练参数分别为 169K 与 168K，eGeMAPS 为 6.2K。SLS 的学习率 3×10⁻⁴、AdamW、交叉熵、最多 40 轮、5 轮早停、5 次随机种子等已披露，但 XLS-R 与 eGeMAPS 的具体超参数、5 种增强器的版本与参数、DNSMOS 版本与采样率、大模型的解码温度与束搜索等未说明，复现时需推断或沿用默认。
 
 训练与评估预算方面，监督模型在单张 NVIDIA RTX 5090 上训练，划分固定为 80% 训练、20% 验证且无说话人重叠，仅在训练集上学习。评估需同时跑同域留出集与 Lu 及其 5 个增强变体，并按论文提示词让大模型仅输出一个词。大模型为推理无需训练，但需注意 2 样本示例的选择与转录质量会影响偏向度量，建议固定随机种子并报告两类 F1 而非仅 Macro-F1。
 
@@ -273,7 +273,7 @@ SLS 的设计动机是不同预训练层对病理线索的敏感度不同，顶�
 
 *   影响力 (0.8/1.5)：针对语音 AD 检测长期把更干净等同更鲁棒的集体假设提出反证，提醒基准构建保留原始分布并报告增强细节，对临床部署有警示价值，但验证仅限英语 Cookie Theft 任务与 56 例外部集且未量化停顿等病理标志损伤，跨语种与真实场景外推有限。
 
-*   开源 (1.0/1.5)：代码已在 https://github.com/Sleepwalker554/Back_to_Origin 公开且含 3 类模型训练配置，数据集 552 156 237 56 例均通过 DementiaBank 受控获取而非直接下载，未提及模型权重与 Demo，属于部分核心产物开放。
+*   开源 (1.0/1.5)：代码已在 <https://github.com/Sleepwalker554/Back_to_Origin> 公开且含 3 类模型训练配置，数据集 552 156 237 56 例均通过 DementiaBank 受控获取而非直接下载，未提及模型权重与 Demo，属于部分核心产物开放。
 
 *   可复现性 (0.3/0.5)：已披露 SLS 模型学习率 3e-4 AdamW 最多 40 轮早停 5 轮及 80% / 20% 划分与 5 种子，但 XLS-R 与 eGeMAPS 超参数增强器版本 DNSMOS 版本及 LALM 解码温度等关键配置未说明，复现仍需推断。
 

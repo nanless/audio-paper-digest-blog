@@ -48,12 +48,12 @@ paper_digest_api_reader_plan_sha256: "d99529d3e83731f3f6072d2bfc9ee2e61a257428e2
 
 ## 🔗 开源与复现资源
 
-- 代码：https://github.com/a-musiclover/TUTTI
+- 代码：<https://github.com/a-musiclover/TUTTI>
 - 模型权重：论文中未提及
-- 数据集：TuttiCorpus 包含 363610 个音频-乐谱对获取地址为 https://github.com/a-musiclover/TUTTI 论文声明将公开释放未提及具体开源协议
+- 数据集：TuttiCorpus 包含 363610 个音频-乐谱对获取地址为 <https://github.com/a-musiclover/TUTTI> 论文声明将公开释放未提及具体开源协议
 - Demo：论文中未提及
 - 复现材料：模型配置包含 9 层 patch-level encoder 与 decoder 并配备 3 层 character-level decoder 隐藏维度 512 参数量 88.9M 词表大小 128 输入谱图维度 1025 。音频处理参数为采样率 22050 Hz 窗口大小 2048 跳长 160 最大输入时长 14.8 秒目标响度 -23.0 LUFS 。优化器为 AdamW 预训练学习率 2e-4 微调阶段取 1e-5 预热步数 1000 训练轮数 32 。预训练使用 8 张 H800 GPU 每卡批次 10 耗时约 6 天 。微调使用 6 张 H800 GPU 每卡批次 6 。数据集划分比例为 95% 训练 5% 测试
-- 论文中引用的开源项目：sfizz https://github.com/sfztools/sfizz 、Parangonar https://github.com/sildater/parangonar 、NotaGen 论文中未提供链接
+- 论文中引用的开源项目：sfizz <https://github.com/sfztools/sfizz> 、Parangonar <https://github.com/sildater/parangonar> 、NotaGen 论文中未提供链接
 
 ## 🧭 深度解读
 
@@ -261,7 +261,7 @@ TUTTI 的核心判断是把 A2S 的瓶颈从模型定制转向数据供给。用
 
 *   影响力 (1.1/1.5)：为受限于配对数据稀缺的 A2S 提供可扩展合成数据引擎与统一 Transformer 基线，在 ASAP Multi-pitch 超基线 7.4 点、Quartets Total 从 84.9 提升至 95.6，并在训练中完全缺席的萨克斯上实现零样本迁移，对音乐转录与生成数据管线具有明确领域价值。
 
-*   开源 (0.5/1.5)：代码与包含 363610 对的 TuttiCorpus 均声明将在 https://github.com/a-musiclover/TUTTI 公开但截稿时尚未发布，未提供模型权重与开源协议，仅为明确承诺未来开放状态。
+*   开源 (0.5/1.5)：代码与包含 363610 对的 TuttiCorpus 均声明将在 <https://github.com/a-musiclover/TUTTI> 公开但截稿时尚未发布，未提供模型权重与开源协议，仅为明确承诺未来开放状态。
 
 *   可复现性 (0.3/0.5)：已披露 88.9M 参数、隐藏维度 512、9 层块级编解码器与 3 层字符解码器、词表 128、谱图 1025 维、采样率 22050 Hz、窗长 2048 跳长 160、最大 14.8 秒、AdamW 学习率 2e-4 与 1e-5 及 1000 步 warmup 等，但未说明损失函数形式与权重、正则化与推理束搜索等关键细节。
 

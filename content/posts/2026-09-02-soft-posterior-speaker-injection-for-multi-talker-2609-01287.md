@@ -42,10 +42,10 @@ paper_digest_api_reader_plan_sha256: "9b7a22c4a34203904c046f56aa6b80da0a3b8ca46b
 
 - 代码：论文中未提及代码链接
 - 模型权重：论文中未提及
-- 数据集：LibriSpeech（用于合成 2 说话人重叠数据，论文中通过 LibriSpeech clean 子集按信噪比 -5 至 5 dB 与 RT60 0.25 至 0.75 s 混合构建，官方获取地址 https://www.openslr.org/12/ ）和 LibriCSS（用于域迁移评估，官方获取地址 https://github.com/chenzhehuai/libri-css ），论文中未提及自建合成数据的公开下载链接或开源协议
+- 数据集：LibriSpeech（用于合成 2 说话人重叠数据，论文中通过 LibriSpeech clean 子集按信噪比 -5 至 5 dB 与 RT60 0.25 至 0.75 s 混合构建，官方获取地址 <https://www.openslr.org/12/> ）和 LibriCSS（用于域迁移评估，官方获取地址 <https://github.com/chenzhehuai/libri-css> ），论文中未提及自建合成数据的公开下载链接或开源协议
 - Demo：论文中未提及
 - 复现材料：论文第 2 章与第 3 章提供了部分训练配置，包含基于 Whisper medium 的 2 轮编码结构，FiLM 注入位置为第 8 16 24 块，speaker memory K 为 4，损失为 \(\mathcal{L}_{\mathrm{ASR}}\) 加 \(\lambda \mathcal{L}_{\mathrm{diar}}\)，合成集上 backbone 学习率 \(2\times10^{-6}\) 扩展模块学习率 \(5\times10^{-5}\) 且按 high-overlap 验证集 cpWER 选点，LibriCSS 上冻结 posterior head \(\phi\) 并采用 backbone 学习率 \(5\times10^{-7}\) 扩展模块学习率 \(2\times10^{-6}\) 训练 6 轮后再以 \(3\times10^{-7}\) 和 \(1\times10^{-6}\) 在 OV-heavy 子集继续 4 轮，论文中未提及检查点下载链接与完整配置文件附录
-- 论文中引用的开源项目：Whisper https://github.com/openai/whisper ，LibriSpeech https://www.openslr.org/12/ ，LibriCSS https://github.com/chenzhehuai/libri-css
+- 论文中引用的开源项目：Whisper <https://github.com/openai/whisper> ，LibriSpeech <https://www.openslr.org/12/> ，LibriCSS <https://github.com/chenzhehuai/libri-css>
 
 ## 🧭 深度解读
 

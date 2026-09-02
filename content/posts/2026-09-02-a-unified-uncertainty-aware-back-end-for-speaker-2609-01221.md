@@ -40,7 +40,7 @@ paper_digest_api_reader_plan_sha256: "7b42d984eed0bd79d64b57f2ee6abc5cf9e5bf159f
 
 ## 🔗 开源与复现资源
 
-- 代码： https://github.com/mrjunjieli/wespeaker_u_cube
+- 代码： <https://github.com/mrjunjieli/wespeaker_u_cube>
 - 模型权重： 论文中未提及具体权重下载链接，仅说明部分结果直接使用 WeSpeaker 预训练模型
 - 数据集： 训练使用 VoxCeleb2。评估使用 VoxCeleb1-O、VoxCeleb1-E、VoxCeleb1-H。增强依赖 MUSAN 语料库与 RIR 数据库。论文中未提供直接下载链接
 - Demo： 论文中未提及
@@ -271,7 +271,7 @@ QMF 校准的通用形式是逻辑回归
 
 *   影响力 (1.0/1.5)：为说话人验证后端提供即插式可靠性接口在 2 个骨干 6 项 EER 上一致优于传统 QMF 且目标与非目标重叠相对降低 8.1% 但证据边界限于 VoxCeleb 家族未验证跨信道与真实场景对语音领域影响中等
 
-*   开源 (1.0/1.5)：代码已公开于 https://github.com/mrjunjieli/wespeaker_u_cube 核心产物部分开放但模型权重未提供直接下载链接数据集与 Demo 未直接开放文档完整性不足按锚点对应部分开放档位
+*   开源 (1.0/1.5)：代码已公开于 <https://github.com/mrjunjieli/wespeaker_u_cube> 核心产物部分开放但模型权重未提供直接下载链接数据集与 Demo 未直接开放文档完整性不足按锚点对应部分开放档位
 
 *   可复现性 (0.3/0.5)：已披露 VoxCeleb2 训练 2 秒切分 150 轮最后 10 个检查点平均基础尺度 32 与角裕度 0 至 0.2 及 Top 100 队列等关键超参数但未说明优化器学习率 warmup 批大小与硬件配置关键复现信息缺失较多
 
