@@ -24,7 +24,7 @@
       <a href="{{ .page.Permalink }}" style="display: block; padding: 0.75rem 1rem; background: var(--code-bg); border-radius: var(--radius); text-decoration: none; color: var(--primary); transition: background 0.2s;">
         <div style="font-weight: 600;">{{ .page.Title }}</div>
         {{- if .page.Description }}
-        <div style="font-size: 0.85em; color: var(--secondary); margin-top: 0.25rem;">{{ .page.Description }}</div>
+        <div style="font-size: 0.85em; color: var(--secondary); margin-top: 0.25rem;">{{ .page.Description | markdownify | plainify }}</div>
         {{- end }}
       </a>
       {{- end }}
