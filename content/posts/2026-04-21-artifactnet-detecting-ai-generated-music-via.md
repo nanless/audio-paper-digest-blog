@@ -2,7 +2,7 @@
 title: "ArtifactNet: Detecting AI-Generated Music via Forensic Residual Physics"
 date: 2026-04-21
 draft: false
-tags: [音频深度伪造检测，, 知识蒸馏，, 数据增强，, 基准测试，, U-Net]
+tags: [音频深度伪造检测, 知识蒸馏, 数据增强, 基准测试, U-Net]
 categories: [论文速递]
 description: "这篇论文旨在解决AI生成音乐检测中普遍存在的泛化能力差的问题。当前主流方法（如CLAM、SpecTTTra）通过学习AI音乐的声音特征，在面对未见过的生成器时性能急剧下降。作者提出了一个核心假设：当前主流AI音乐生成器（如Suno, Udio）都依赖神经音频编解码器（如EnCodec）的残差矢量量化"
 hiddenInHomeList: true

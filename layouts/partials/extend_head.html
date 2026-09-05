@@ -1,198 +1,39 @@
-{{- /* MathJax for LaTeX rendering */ -}}
+{{- /* Head-only resources. Interactive DOM is emitted by extend_footer. */ -}}
+{{- partial "paper_citation_meta.html" . -}}
+{{- $rawContent := "" -}}
+{{- with .RawContent }}{{ $rawContent = . }}{{ end -}}
+{{- $needsMath := or (in $rawContent `\(`) (in $rawContent `\[`) (in $rawContent `$$`) (in $rawContent `$`) -}}
+{{- $needsZoom := or (in $rawContent `![`) (in $rawContent `<img`) -}}
+{{- if $needsMath }}
 <script>
 window.MathJax = {
   tex: {
     inlineMath: [['\\(', '\\)'], ['$', '$']],
     displayMath: [['\\[', '\\]'], ['$$', '$$']],
-    processEscapes: true,
+    processEscapes: true
   }
 };
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{{- end }}
 
-{{- /* PWA manifest */ -}}
-<link rel="manifest" href="{{ "manifest.json" | absURL }}">
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('{{ "sw.js" | absURL }}').catch(() => {});
-}
-</script>
+{{- if $needsZoom }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+{{- end }}
 
-{{- /* Reading progress bar */ -}}
 <style>
 .reading-progress {
   position: fixed;
   top: 0;
   left: 0;
-  width: 0%;
+  width: 0;
   height: 3px;
   background: var(--primary);
   z-index: 100;
   transition: width 0.1s;
 }
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--theme);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 99;
-  font-size: 1.2rem;
-}
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-.back-to-top:hover {
-  opacity: 0.85;
-}
-@media print {
-  .reading-progress, .back-to-top, .share-buttons, .post-rating, .post-subscribe, .related-posts, #giscus-container, .post-copyright { display: none !important; }
-  body { background: #fff !important; color: #000 !important; }
-  .post-single { max-width: 100% !important; margin: 0 !important; }
-  a { text-decoration: underline !important; color: #000 !important; }
-}
-</style>
-<div class="reading-progress" id="reading-progress"></div>
-<button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
-<script>
-(function(){
-  var bar = document.getElementById('reading-progress');
-  var btn = document.getElementById('back-to-top');
-  function update() {
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = pct + '%';
-    btn.classList.toggle('visible', scrollTop > 400);
-  }
-  window.addEventListener('scroll', update, {passive: true});
-  update();
-})();
-</script>
-
-{{- /* GoatCounter analytics */ -}}
-<script data-goatcounter="https://nanless.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
-{{- /* Auto open external links in new tab */ -}}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="http"]').forEach(function(a) {
-    if (a.hostname !== location.hostname) {
-      a.target = '_blank';
-      a.rel = a.rel ? a.rel + ' noopener noreferrer' : 'noopener noreferrer';
-    }
-  });
-});
-</script>
-
-{{- /* Image lazy loading */ -}}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('img:not([loading])').forEach(function(img) {
-    img.loading = 'lazy';
-  });
-});
-</script>
-
-{{- /* TOC sticky sidebar on wide screens */ -}}
-<style>
-@media screen and (min-width: 1280px) {
-  .post-single .toc {
-    position: fixed;
-    top: 100px;
-    right: calc((100vw - 800px) / 2 - 260px);
-    width: 240px;
-    max-height: calc(100vh - 140px);
-    overflow-y: auto;
-    background: var(--entry);
-    border-radius: var(--radius);
-    padding: 1rem;
-    border: 1px solid var(--border);
-    font-size: 0.85em;
-    z-index: 10;
-  }
-  .post-single .toc details summary {
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .post-single .toc li a {
-    display: block;
-    padding: 0.15rem 0;
-    color: var(--secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .post-single .toc li a:hover {
-    color: var(--primary);
-  }
-  .post-single .toc li a.active {
-    color: var(--primary);
-    font-weight: 600;
-  }
-}
-</style>
-
-{{- /* TOC scroll spy: highlight current heading */ -}}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var toc = document.querySelector('.post-single .toc');
-  if (!toc) return;
-  var links = toc.querySelectorAll('a[href^="#"]');
-  var headings = [];
-  links.forEach(function(link) {
-    var id = link.getAttribute('href').slice(1);
-    var el = document.getElementById(id);
-    if (el) headings.push({link: link, el: el});
-  });
-  if (!headings.length) return;
-  var offset = 120;
-  function onScroll() {
-    var scrollY = window.scrollY || document.documentElement.scrollTop;
-    var current = headings[0];
-    for (var i = 0; i < headings.length; i++) {
-      if (headings[i].el.offsetTop - offset <= scrollY) {
-        current = headings[i];
-      }
-    }
-    headings.forEach(function(h) { h.link.classList.remove('active'); });
-    current.link.classList.add('active');
-  }
-  window.addEventListener('scroll', onScroll, {passive: true});
-  onScroll();
-});
-</script>
-
-{{- /* Lightbox for images */ -}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css">
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  mediumZoom('.post-content img', {
-    margin: 24,
-    background: 'rgba(0,0,0,0.85)',
-    scrollOffset: 0,
-  });
-});
-</script>
-
-{{- /* Code block language label */ -}}
-<style>
-.highlight {
-  position: relative;
-}
+.highlight { position: relative; }
 .highlight::before {
   content: attr(data-lang);
   position: absolute;
@@ -208,18 +49,40 @@ document.addEventListener('DOMContentLoaded', function() {
   letter-spacing: 0.05em;
   z-index: 2;
 }
+@media screen and (min-width: 1280px) {
+  .post-single:not(.research-workbench) .toc {
+    position: fixed;
+    top: 100px;
+    right: calc((100vw - 800px) / 2 - 260px);
+    width: 240px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: 1px solid var(--border);
+    font-size: 0.85em;
+    z-index: 10;
+  }
+  .post-single .toc summary { font-weight: 600; cursor: pointer; }
+  .post-single .toc li a {
+    display: block;
+    padding: 0.15rem 0;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .post-single .toc li a:hover,
+  .post-single .toc li a.active { color: var(--primary); }
+  .post-single .toc li a.active { font-weight: 600; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress { transition: none; }
+}
+@media print {
+  .reading-progress, .share-buttons, .analysis-feedback,
+  .research-subscribe, .related-posts, #giscus-container, .post-copyright { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .post-single { max-width: 100% !important; margin: 0 !important; }
+  a { text-decoration: underline !important; color: #000 !important; }
+}
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.highlight').forEach(function(block) {
-    var code = block.querySelector('pre code[class^="language-"]');
-    if (code) {
-      var cls = code.className;
-      var match = cls.match(/language-(\w+)/);
-      if (match) {
-        block.setAttribute('data-lang', match[1]);
-      }
-    }
-  });
-});
-</script>

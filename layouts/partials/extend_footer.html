@@ -1,10 +1,12 @@
-{{- /* GoatCounter analytics - 去 https://goatcounter.com 注册后替换下面的 code */ -}}
-{{- if site.Params.goatcounter }}
-<script data-goatcounter="https://{{ site.Params.goatcounter }}.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="阅读进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+{{- $siteScript := resources.Get "js/site.js" | minify | fingerprint }}
+<script defer src="{{ $siteScript.RelPermalink }}" integrity="{{ $siteScript.Data.Integrity }}" crossorigin="anonymous"></script>
+
+{{- with site.Params.goatcounter }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count" defer src="https://gc.zgo.at/count.js"></script>
 {{- end }}
 
-{{- /* Umami analytics - 自建 Umami 后取消注释 */ -}}
-{{- if site.Params.umami }}
-<script async src="{{ site.Params.umami.scriptUrl }}" data-website-id="{{ site.Params.umami.websiteId }}"></script>
+{{- with site.Params.umami }}
+<script defer src="{{ .scriptUrl }}" data-website-id="{{ .websiteId }}"></script>
 {{- end }}

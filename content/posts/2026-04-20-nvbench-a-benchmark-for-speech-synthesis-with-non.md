@@ -2,7 +2,7 @@
 title: "NVBench: A Benchmark for Speech Synthesis with Non-Verbal Vocalizations"
 date: 2026-04-20
 draft: false
-tags: [语音合成，基准测试，模型评估，大语言模型]
+tags: [语音合成, 基准测试, 模型评估, 大语言模型]
 categories: [论文速递]
 description: "本文旨在解决语音合成（TTS）领域中非语言声音（NVV，如笑声、叹息、哭泣）缺乏标准化评估框架的问题。为此，作者提出了NVBench，一个双语（英/中）基准测试。其核心方法包括：1）设计了一个涵盖45种NVV类型的统一分类法；2）构建了一个类型均衡的高质量双语评估数据集；3）提出了一套多轴评估协议，"
 hiddenInHomeList: true

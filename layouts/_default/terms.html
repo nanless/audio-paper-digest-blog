@@ -1,5 +1,6 @@
 {{- define "main" }}
 
+<div class="research-terms">
 {{- if .Title }}
 <header class="page-header">
     <h1>{{ .Title }}</h1>
@@ -11,9 +12,15 @@
 </header>
 {{- end }}
 
-<ul class="terms-tags">
+<p class="research-terms__intro">从研究任务、方法和属性进入论文库。标签由历史内容持续归一化；优先选择高频主题，组合检索可前往论文库。</p>
+<div class="research-terms__search">
+  <label for="term-filter" class="rw-eyebrow">筛选主题</label>
+  <input id="term-filter" type="search" placeholder="输入中文或英文标签" autocomplete="off">
+</div>
+
+<ul class="terms-tags" id="research-term-list">
     {{- $type := .Type }}
-    {{- $translations := site.Data.tag_translations }}
+    {{- $translations := hugo.Data.tag_translations }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
     {{- $count := .Count }}
@@ -32,5 +39,20 @@
     {{- end }}
     {{- end }}
 </ul>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('term-filter');
+  var list = document.getElementById('research-term-list');
+  if (!input || !list) return;
+  input.addEventListener('input', function () {
+    var query = input.value.trim().toLocaleLowerCase();
+    list.querySelectorAll('li').forEach(function (item) {
+      item.hidden = query && !item.textContent.toLocaleLowerCase().includes(query);
+    });
+  });
+});
+</script>
 
 {{- end }}{{/* end main */ -}}

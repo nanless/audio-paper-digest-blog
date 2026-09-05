@@ -2,7 +2,7 @@
 title: "NIM4-ASR: Towards Efficient, Robust, and Customizable Real-Time LLM-Based ASR"
 date: 2026-04-21
 draft: false
-tags: [语音识别，, 语音大模型，, 强化学习，, 流式处理]
+tags: [语音识别, 语音大模型, 强化学习, 流式处理]
 categories: [论文速递]
 description: "本文提出了NIM4-ASR，一个面向生产环境的高效、鲁棒且可定制的实时语音识别框架。该工作旨在解决现有LLM-based ASR在实际部署中的三大挑战：1) 轻量化模型性能严重下降（有限的向下扩展性）；2) 在声学挑战条件下产生幻觉；3) 缺乏生产就绪的热词定制机制。为此，作者提出了一套原则性的多阶"
 hiddenInHomeList: true

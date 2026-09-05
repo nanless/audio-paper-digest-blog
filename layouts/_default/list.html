@@ -57,6 +57,13 @@
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
+<div class="research-list-heading">
+  <div>
+    <div class="rw-eyebrow">Daily Editions</div>
+    <h2>最近论文速递</h2>
+  </div>
+  <a class="rw-action" href="{{ "archives/" | absURL }}">查看全部归档</a>
+</div>
 {{- end }}
 
 {{- $term := .Data.Term }}
@@ -71,9 +78,12 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
-<article class="{{ $class }}">
+<article class="{{ $class }} research-entry">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  <div class="research-entry__kicker">
+    {{- if $.IsHome }}每日研究速递{{ else if eq .Kind `term` }}专题论文{{ else }}研究条目{{ end }}
+  </div>
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}
@@ -93,8 +103,9 @@
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
+  <footer class="entry-footer research-entry__footer">
+    <span>{{- partial "post_meta.html" . -}}</span>
+    <span class="research-entry__cta">阅读 →</span>
   </footer>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>

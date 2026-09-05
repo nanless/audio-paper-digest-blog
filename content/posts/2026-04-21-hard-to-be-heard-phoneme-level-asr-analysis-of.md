@@ -2,7 +2,7 @@
 title: "Hard to Be Heard: Phoneme-Level ASR Analysis of Phonologically Complex, Low-Resource Endangered Languages"
 date: 2026-04-21
 draft: false
-tags: [语音识别，, 预训练，, 低资源，, 模型评估]
+tags: [语音识别, 预训练, 低资源, 模型评估]
 categories: [论文速递]
 description: "这篇论文针对两种音系极其复杂、资源极度匮乏的濒危东高加索语言（Archi和Rutul），首次建立了语音识别（ASR）基准。作者们整合并标准化了现有的语言学记录，创建了约50分钟和1小时20分钟的语音-文本数据集。他们评估了多种前沿ASR模型（wav2vec2, Whisper, Qwen2-Audi"
 hiddenInHomeList: true

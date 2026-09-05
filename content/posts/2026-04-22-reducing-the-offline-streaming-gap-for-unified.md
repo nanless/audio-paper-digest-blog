@@ -2,7 +2,7 @@
 title: "Reducing the Offline-Streaming Gap for Unified ASR Transducer with Consistency Regularization"
 date: 2026-04-22
 draft: false
-tags: [语音识别，流式处理，一致性正则化，统一音频模型，开源工具]
+tags: [语音识别, 流式处理, 一致性正则化, 统一音频模型, 开源工具]
 categories: [论文速递]
 description: "本文旨在解决训练单一自动语音识别（ASR）模型同时高效支持高精度离线转写和低延迟流式识别这一挑战。现有统一模型在低延迟流式模式下性能下降明显。作者提出了一个统一的RNN-Transducer (RNNT) 框架，其核心是结合了**带右上下文的chunk限制注意力**和**动态chunk卷积（DCCo"
 hiddenInHomeList: true

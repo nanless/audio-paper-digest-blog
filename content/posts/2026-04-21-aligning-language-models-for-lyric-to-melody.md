@@ -2,7 +2,7 @@
 title: "Aligning Language Models for Lyric-to-Melody Generation with Rule-Based Musical Constraints"
 date: 2026-04-21
 draft: false
-tags: [音乐生成，, 大语言模型，, 强化学习，, 跨模态]
+tags: [音乐生成, 大语言模型, 强化学习, 跨模态]
 categories: [论文速递]
 description: "这篇论文旨在解决大语言模型在歌词到旋律生成任务中，通过监督微调（SFT）训练出的模型常产生音乐上不可行（如节奏怪异、音域超限）的“约束违反”问题。**核心贡献**是提出了一套无需人工标注、基于规则约束的自动化对齐框架。**关键方法**分为三步：首先对预训练LLM进行SFT以获得基础生成能力；其次，利"
 hiddenInHomeList: true

@@ -1,24 +1,39 @@
 ---
-title: "友链"
+title: "研究资源导航"
 layout: "single"
+description: "语音、音乐与音频研究常用的论文、代码、模型、数据集与会议入口。"
+noRating: true
 ---
 
-# 友情链接
+# 研究资源导航
 
-欢迎语音/音频/AI 领域的技术博客交换友链。
+这里优先收录能够帮助核查原文、寻找复现材料和跟踪领域进展的公共入口。外部资源的可用性和许可证以其最新说明为准。
 
-## 本站信息
+## 论文与预印本
 
-| 项目 | 内容 |
-|------|------|
-| 名称 | 语音/音频论文速递 |
-| 链接 | https://nanless.github.io/audio-paper-digest-blog/ |
-| 描述 | 每日自动抓取 arxiv/huggingface 最新语音/音频AI 论文，AI 深度分析后发布 |
+- [arXiv Computer Science - Sound](https://arxiv.org/list/cs.SD/recent)
+- [arXiv Electrical Engineering - Audio and Speech Processing](https://arxiv.org/list/eess.AS/recent)
+- [Hugging Face Papers](https://huggingface.co/papers)
 
-## 友链列表
+## 代码、模型与数据集
 
-> 虚位以待。如果你也有技术博客，欢迎在任意文章评论区留言交换友链。
+- [Papers with Code](https://paperswithcode.com/)
+- [Hugging Face Models](https://huggingface.co/models)
+- [Hugging Face Datasets](https://huggingface.co/datasets)
+- [Zenodo](https://zenodo.org/)
 
----
+## 学术组织与会议
 
-*友链申请方式：在任意文章评论区留言，提供网站名称、链接和一句话描述。*
+- [IEEE Signal Processing Society](https://signalprocessingsociety.org/)
+- [ISCA](https://www.isca-speech.org/)
+- [ISMIR](https://ismir.net/)
+- [ICASSP](https://2026.ieeeicassp.org/)
+
+## 站内研究入口
+
+- [论文库](../papers/)
+- [研究主题](../tags/)
+- [会议论文集](../conferences/)
+- [关于与方法](../about/)
+
+如果你维护高质量的语音、音乐或音频研究资源，可以在文章评论区或勘误入口提供名称、链接、维护者和用途说明。

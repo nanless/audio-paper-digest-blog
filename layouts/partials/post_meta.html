@@ -1,27 +1,14 @@
-{{- $scratch := newScratch }}
-
-{{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- $items := slice }}
+{{- if not .Date.IsZero }}
+  {{- $items = $items | append (printf "<time datetime='%s'>%s</time>" (.Date.Format "2006-01-02") (.Date | time.Format (default "2006-01-02" site.Params.DateFormat))) }}
 {{- end }}
-
-{{- if and (.Param "ShowLastMod") (not .Lastmod.IsZero) (ne .Lastmod .Date) -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='最后更新: %s'>更新于 %s</span>" (.Lastmod) (.Lastmod | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- if and (.Param "ShowLastMod") (not .Lastmod.IsZero) (ne .Lastmod .Date) }}
+  {{- $items = $items | append (printf "<span title='最后更新：%s'>更新于 %s</span>" (.Lastmod) (.Lastmod | time.Format (default "2006-01-02" site.Params.DateFormat))) }}
 {{- end }}
-
-{{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
+{{- if (.Param "ShowReadingTime") }}
+  {{- $items = $items | append (printf "<span>约 %d 分钟</span>" .ReadingTime) }}
 {{- end }}
-
-{{- if (.Param "ShowWordCount") -}}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- if (.Param "ShowWordCount") }}
+  {{- $items = $items | append (printf "<span>%d 字</span>" .WordCount) }}
 {{- end }}
-
-{{- if not (.Param "hideAuthor") -}}
-{{- with (partial "author.html" .) }}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
-{{- end }}
-{{- end }}
-
-{{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
-{{- end -}}
+{{- with $items }}{{ delimit . "&nbsp;·&nbsp;" | safeHTML }}{{ end }}

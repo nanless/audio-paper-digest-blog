@@ -1,72 +1,150 @@
 {{- define "main" }}
+{{- $baseName := "" }}
+{{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
+{{- $isDaily := gt (len (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1)) 0 }}
+{{- $isTask := or (hasPrefix $baseName "icassp2026-task-") (hasPrefix $baseName "iclr2026-task-") }}
+{{- $isConferenceSummary := in (slice "icassp2026-summary" "iclr2026-summary" "icml2026-summary") $baseName }}
+{{- $pageType := .Params.paper_digest_page_type | default "" }}
+{{- $isPaper := and (not $isDaily) (not $isTask) (not $isConferenceSummary) (or (eq $pageType "paper") (.Params.hiddenInHomeList | default false)) }}
+{{- $isResearchPage := eq .Section "posts" }}
 
-<article class="post-single">
-  <header class="post-header">
+{{- if $isResearchPage }}
+{{- $headline := .Title }}
+{{- $rawHeadings := findRE `(?m)^#[ \t]+[^\n]+` .RawContent 1 }}
+{{- if gt (len $rawHeadings) 0 }}
+  {{- $headline = replaceRE `^#[ \t]+` "" (index $rawHeadings 0) }}
+{{- end }}
+{{- $score := "" }}
+{{- $scoreMatches := findRE `[0-9]+(\.[0-9]+)?/10` (.Description | default "") 1 }}
+{{- if gt (len $scoreMatches) 0 }}{{ $score = index $scoreMatches 0 }}{{ end }}
+{{- $arxivId := .Params.paper_digest_arxiv_id | default "" }}
+{{- if not $arxivId }}
+  {{- $arxivMatches := findRE `arxiv\.org/(abs|html|pdf)/[0-9]{4}\.[0-9]{4,5}` .RawContent 1 }}
+  {{- if gt (len $arxivMatches) 0 }}{{ $arxivId = replaceRE `^.*/` "" (index $arxivMatches 0) }}{{ end }}
+{{- end }}
+{{- $task := "" }}
+{{- with .Description }}
+  {{- $parts := split . "|" }}
+  {{- if gt (len $parts) 1 }}{{ $task = strings.TrimSpace (index $parts 0) }}{{ end }}
+{{- end }}
+
+<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}">
+  <header class="research-paper-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title entry-hint-parent">
-      {{ .Title }}
-      {{- if .Draft }}
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
+    <div class="rw-eyebrow">
+      {{- if $isDaily }}每日研究速递
+      {{- else if $isConferenceSummary }}会议研究总览
+      {{- else if $isTask }}会议任务专题
+      {{- else }}论文深度解读
       {{- end }}
-    </h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
     </div>
+    <h1>{{ $headline | markdownify }}</h1>
+    {{- if and (eq $pageType "paper") (ne (plainify $headline) (plainify .Title)) }}
+    <p class="research-paper-header__original" lang="en">{{ .Title }}</p>
     {{- end }}
-    {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
-      {{- partial "post_canonical.html" . -}}
+    <div class="research-paper-header__meta">
+      {{ partial "post_meta.html" . }}
+      {{- if $task }}<span>&nbsp;·&nbsp;{{ $task }}</span>{{ end }}
     </div>
-    {{- end }}
+    <div class="research-paper-header__actions" aria-label="论文操作">
+      {{- if and $arxivId (not $isPaper) }}
+      <a class="rw-action rw-action--primary" href="https://arxiv.org/abs/{{ $arxivId }}" target="_blank" rel="noopener noreferrer">arXiv 原文 ↗</a>
+      {{- end }}
+      <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
+      {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
+    </div>
+    {{- if $isPaper }}{{ partial "paper_toolbar.html" . }}{{ end }}
   </header>
-  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
-  {{- if (.Param "ShowToc") }}
-  {{- partial "toc.html" . }}
-  {{- end }}
 
-  {{- if .Content }}
-  <div class="post-content md-content">
-    {{- if not (.Param "disableAnchoredHeadings") }}
-    {{- partial "anchored_headings.html" .Content -}}
-    {{- else }}{{ .Content }}{{ end }}
+  {{- $layoutClass := "research-layout" }}
+  {{- if not $isPaper }}{{ $layoutClass = "research-layout research-layout--digest" }}{{ end }}
+  <div class="{{ $layoutClass }}">
+    {{- if (.Param "ShowToc") }}
+    <aside class="workbench-toc" aria-label="文章目录">
+      <details class="toc" open>
+        <summary><span class="title">目录</span></summary>
+        <div class="inner">{{ .TableOfContents }}</div>
+      </details>
+    </aside>
+    {{- end }}
+
+    <div class="research-main">
+      {{- if and .Description (not $score) }}
+      <section class="research-tldr" aria-labelledby="research-tldr-title">
+        <strong id="research-tldr-title">研究速览</strong>
+        <p>{{ .Description | markdownify }}</p>
+      </section>
+      {{- end }}
+      {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+      {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+      {{- if .Content }}
+      {{- $articleContent := replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" .Content }}
+      <div class="post-content md-content research-article">
+        {{- if not (.Param "disableAnchoredHeadings") }}
+          {{- partial "anchored_headings.html" $articleContent -}}
+        {{- else }}{{ $articleContent | safeHTML }}{{ end }}
+      </div>
+      {{- end }}
+    </div>
+
+    {{- if $isPaper }}
+    <aside class="research-signal-rail" aria-label="论文研究信号">
+      {{- if $score }}
+      <section class="research-signal-card">
+        <span class="research-signal-card__label">本站评分</span>
+        <span class="research-score">{{ $score }}</span>
+        <p>编辑性研究评价，不替代同行评审结论。</p>
+      </section>
+      {{- end }}
+      <section class="research-signal-card">
+        <span class="research-signal-card__label">研究定位</span>
+        <p>{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}</p>
+      </section>
+      {{- with $arxivId }}
+      <section class="research-signal-card">
+        <span class="research-signal-card__label">论文标识</span>
+        <p>arXiv {{ . }}</p>
+      </section>
+      {{- end }}
+    </aside>
+    {{- end }}
   </div>
-  {{- end }}
 
-  <footer class="post-footer">
+  <footer class="post-footer research-page-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
-      {{- $translations := site.Data.tag_translations }}
+      {{- $translations := hugo.Data.tag_translations }}
       {{- range ($.GetTerms $tags) }}
       {{- $en := index $translations .LinkTitle }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}{{ if $en }}<span style="opacity:0.5;font-size:0.75em;margin-left:0.25em;">· {{ $en }}</span>{{ end }}</a></li>
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
       {{- end }}
     </ul>
-    {{- if (.Param "ShowPostNavLinks") }}
-    {{- partial "post_nav_links.html" . }}
-    {{- end }}
-    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
-    {{- partial "share_icons.html" . -}}
-    {{- end }}
+    {{- if and $isPaper (.Param "ShowPostNavLinks") }}{{ partial "post_nav_links.html" . }}{{ end }}
+    {{- if and site.Params.ShowShareButtons (ne .Params.disableShare true) }}{{ partial "share_icons.html" . }}{{ end }}
+    {{- if $isPaper }}{{ partial "related_posts.html" . }}{{ end }}
+    {{- partial "copyright.html" . }}
+    {{- partial "rating.html" . }}
+    {{- partial "subscribe.html" . }}
   </footer>
-
-  {{- partial "related_posts.html" . }}
-  {{- partial "copyright.html" . }}
-  {{- partial "rating.html" . }}
-  {{- partial "subscribe.html" . }}
-
-  {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
-  {{- end }}
+  {{- if (.Param "comments") }}{{ partial "comments.html" . }}{{ end }}
 </article>
 
-{{- end }}{{/* end main */}}
+{{- else }}
+<article class="post-single editorial-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="rw-eyebrow">研究工作台</div>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- if .Description }}<div class="post-description">{{ .Description }}</div>{{ end }}
+  </header>
+  {{- if (.Param "ShowToc") }}{{ partial "toc.html" . }}{{ end }}
+  {{- if .Content }}
+  {{- $editorialContent := replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}{{ partial "anchored_headings.html" $editorialContent }}{{ else }}{{ $editorialContent | safeHTML }}{{ end }}
+  </div>
+  {{- end }}
+  {{- partial "subscribe.html" . }}
+</article>
+{{- end }}
+{{- end }}

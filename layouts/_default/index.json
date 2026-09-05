@@ -1,11 +1,65 @@
-{{- $.Scratch.Add "index" slice -}}
+{{- $.Scratch.Set "searchIndex" slice -}}
 {{- range site.RegularPages -}}
-    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
-    {{- $summary := .Summary }}
-    {{- if gt (len $summary) 300 }}
-        {{- $summary = substr $summary 0 300 }}
+  {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
+    {{- $baseName := "" }}
+    {{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
+    {{- $pageType := "page" }}
+    {{- $declaredType := .Params.paper_digest_page_type | default "" }}
+    {{- if eq .Section "posts" }}
+      {{- if or (eq $declaredType "index") (gt (len (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1)) 0) }}
+        {{- $pageType = "daily" }}
+      {{- else if or (hasPrefix $baseName "icassp2026-task-") (hasPrefix $baseName "iclr2026-task-") (in (slice "icassp2026-summary" "iclr2026-summary" "icml2026-summary") $baseName) }}
+        {{- $pageType = "conference" }}
+      {{- else }}
+        {{- $pageType = "paper" }}
+      {{- end }}
     {{- end }}
-    {{- $.Scratch.Add "index" (dict "title" .Title "permalink" .Permalink "summary" $summary) -}}
+
+    {{- $titleZh := .Title }}
+    {{- $rawHeadings := findRE `(?m)^#[ \t]+[^\n]+` .RawContent 1 }}
+    {{- if gt (len $rawHeadings) 0 }}
+      {{- $titleZh = replaceRE `^📄[ \t]*` "" (replaceRE `^#[ \t]+` "" (index $rawHeadings 0)) }}
     {{- end }}
-{{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}
+
+    {{- $description := .Description | default "" | plainify | htmlUnescape | strings.TrimSpace }}
+    {{- $score := "" }}
+    {{- $scoreMatches := findRE `[0-9]+(\.[0-9]+)?/10` $description 1 }}
+    {{- if gt (len $scoreMatches) 0 }}{{ $score = replaceRE `/10$` "" (index $scoreMatches 0) }}{{ end }}
+    {{- $summary := $description }}
+    {{- if or (not $summary) (and $score (lt (len $summary) 48)) }}
+      {{- $summary = .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+    {{- end }}
+    {{- $summary = $summary | truncate 320 }}
+
+    {{- $tags := .Params.tags | default slice }}
+    {{- $categories := .Params.categories | default slice }}
+    {{- $task := "" }}
+    {{- if $score }}
+      {{- $parts := split $description "|" }}
+      {{- if gt (len $parts) 1 }}{{ $task = strings.TrimSpace (index $parts 0) }}{{ end }}
+    {{- end }}
+    {{- if and (not $task) (gt (len $tags) 0) }}{{ $task = index $tags 0 }}{{ end }}
+
+    {{- $arxivId := .Params.paper_digest_arxiv_id | default "" }}
+    {{- if not $arxivId }}
+      {{- $slugId := findRE `[0-9]{4}-[0-9]{4,5}$` $baseName 1 }}
+      {{- if gt (len $slugId) 0 }}{{ $arxivId = replace (index $slugId 0) "-" "." }}{{ end }}
+    {{- end }}
+
+    {{- $.Scratch.Add "searchIndex" (slice (dict
+      "title" .Title
+      "titleZh" ($titleZh | plainify)
+      "originalTitle" .Title
+      "permalink" .Permalink
+      "summary" $summary
+      "date" (.Date.Format "2006-01-02")
+      "pageType" $pageType
+      "task" $task
+      "score" $score
+      "arxivId" $arxivId
+      "tags" $tags
+      "categories" $categories
+    )) }}
+  {{- end }}
+{{- end }}
+{{- $.Scratch.Get "searchIndex" | jsonify -}}

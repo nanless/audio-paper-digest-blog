@@ -1,67 +1,34 @@
-{{- $authorEmail := "" }}
-{{- with site.Params.author }}
-  {{- if reflect.IsMap . }}
-    {{- with .email }}
-      {{- $authorEmail = . }}
-    {{- end }}
+{{- $dailyPages := slice }}
+{{- range where site.RegularPages "Section" "posts" }}
+  {{- $baseName := "" }}
+  {{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
+  {{- $isDateIndex := gt (len (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1)) 0 }}
+  {{- if $isDateIndex }}
+    {{- $dailyPages = $dailyPages | append . }}
   {{- end }}
 {{- end }}
-
-{{- $authorName := "" }}
-{{- with site.Params.author }}
-  {{- if reflect.IsMap . }}
-    {{- with .name }}
-      {{- $authorName = . }}
-    {{- end }}
-  {{- else }}
-    {{- $authorName  = . }}
-  {{- end }}
-{{- end }}
-
-{{- $pctx := . }}
-{{- if .IsHome }}{{ $pctx = site }}{{ end }}
-{{- $pages := slice }}
-{{- if or $.IsHome $.IsSection }}
-{{- $pages = $pctx.RegularPages }}
-{{- else }}
-{{- $pages = $pctx.Pages }}
-{{- end }}
-{{- $pages = where $pages "Params.hiddenInRss" "!=" true -}}
-{{- $limit := site.Config.Services.RSS.Limit }}
-{{- if and $limit (gt $limit 0) }}
-{{- $pages = $pages | first $limit }}
-{{- end }}
+{{- $pages := first 50 (sort $dailyPages "Date" "desc") }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?\u003e" | safeHTML }}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <link>{{ .Permalink }}</link>
-    <description>{{ .Site.Params.description | default .Site.Title }}</description>
-    <language>{{ site.LanguageCode }}</language>
-    {{- with $authorEmail }}
-    <managingEditor>{{.}}{{ with $authorName }} ({{.}}){{ end }}</managingEditor>
-    <webMaster>{{.}}{{ with $authorName }} ({{.}}){{ end }}</webMaster>
+    <title>{{ site.Title }}</title>
+    <link>{{ site.Home.Permalink }}</link>
+    <description>{{ site.Params.description | default site.Title }}</description>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with site.Home.OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" />
     {{- end }}
-    {{- with .Site.Copyright }}
-    <copyright>{{ . }}</copyright>
-    {{- end }}
-    {{- if not .Date.IsZero }}
-    <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
-    {{- end }}
-    {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<atom:link href=\"%s\" rel=\"self\" type=\"%s\" /\u003e" .Permalink .MediaType | safeHTML }}
+    {{- if gt (len $pages) 0 }}
+    <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
     {{- end }}
     {{- range $pages }}
+    {{- $summary := .Summary | plainify | htmlUnescape | strings.TrimSpace | truncate 480 }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{- with $authorEmail }}
-      <author>{{.}}{{ with $authorName }} ({{.}}){{ end }}</author>
-      {{- end }}
-      <guid>{{ .Permalink }}</guid>
-      <description>{{ .Summary | html }}</description>
-      <content:encoded>{{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}</content:encoded>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ $summary }}</description>
       {{- range .GetTerms "tags" }}
       <category>{{ .LinkTitle }}</category>
       {{- end }}

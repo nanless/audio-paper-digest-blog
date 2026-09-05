@@ -1,0 +1,15 @@
+{
+  "name": "audio-paper-digest-blog",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "scripts": {
+    "build": "hugo --minify --noBuildLock --cleanDestinationDir --printPathWarnings --panicOnWarning",
+    "verify": "node scripts/verify-build.js public",
+    "audit:content": "node scripts/audit-content.js",
+    "build:verify": "npm run audit:content && npm run build && npm run verify",
+    "test": "node --test tests/*.test.js && npm run audit:content"
+  }
+}

@@ -2,7 +2,7 @@
 title: "Joint-Centric Dual Contrastive Alignment with Structure-Preserving and Information-Balanced Regularization"
 date: 2026-04-20
 draft: false
-tags: [语音情感识别，, 对比学习，, 多模态模型，, 低资源，, 跨模态]
+tags: [语音情感识别, 对比学习, 多模态模型, 低资源, 跨模态]
 categories: [论文速递]
 description: "这篇论文旨在解决音频-文本多模态表示学习中的一个关键挑战：如何在低资源、长序列且模态维度严重不平衡（音频高维、文本低维）的情况下，实现有效的跨模态对齐，同时保留各自的特异性信息。为此，作者提出了HILBERT框架。该方法首先利用冻结的预训练音频（如HuBERT）和文本（如T5）编码器提取片段级特征，"
 hiddenInHomeList: true

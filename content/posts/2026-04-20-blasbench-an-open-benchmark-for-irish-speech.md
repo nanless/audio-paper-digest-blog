@@ -2,7 +2,7 @@
 title: "BlasBench: An Open Benchmark for Irish Speech Recognition"
 date: 2026-04-20
 draft: false
-tags: [语音识别，基准测试，低资源，多语言]
+tags: [语音识别, 基准测试, 低资源, 多语言]
 categories: [论文速递]
 description: "这篇论文旨在解决爱尔兰语语音识别（ASR）领域缺乏统一、可靠评估标准的问题。现有工作或基准要么忽略爱尔兰语特有的文本规范（如保留fada变音符号、初始辅音突变），要么在不同数据集和归一化方法下进行，导致结果无法比较。为此，作者提出了**BlasBench**，一个开放的评估框架，其核心是一个**爱尔"
 hiddenInHomeList: true

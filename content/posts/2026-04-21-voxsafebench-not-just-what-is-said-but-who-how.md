@@ -2,7 +2,7 @@
 title: "VoxSafeBench: Not Just What Is Said, but Who, How, and Where"
 date: 2026-04-21
 draft: false
-tags: [语音大模型，, 基准测试，, 鲁棒性，, 多语言]
+tags: [语音大模型, 基准测试, 鲁棒性, 多语言]
 categories: [论文速递]
 description: "这篇论文旨在解决当前语音语言模型（SLM）社会对齐评估不全面、不深入的问题。现有基准要么只关注基础音频理解，要么孤立地研究单一风险，无法区分模型是因“不懂”还是因“没用对地方”而失败。为此，作者提出了**VoxSafeBench**，这是首个联合评估SLM在**安全、公平、隐私**三大社会对齐维度上"
 hiddenInHomeList: true

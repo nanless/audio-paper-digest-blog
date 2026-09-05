@@ -2,7 +2,7 @@
 title: "Qwen3.5-Omni Technical Report"
 date: 2026-04-20
 draft: false
-tags: [语音对话系统，, 音频大模型，, 多模态模型，, 预训练，, 流式处理]
+tags: [语音对话系统, 音频大模型, 多模态模型, 预训练, 流式处理]
 categories: [论文速递]
 description: "Qwen3.5-Omni 是一个旨在统一理解、推理、生成与行动的全模态大语言模型。它**解决**了现有模型在实时交互、长上下文音视频处理、流式语音生成稳定性以及多语言支持等方面的局限性。**方法上**，它基于Thinker-Talker架构，引入了Hybrid MoE以提升效率，采用显式时间戳替代稀"
 hiddenInHomeList: true

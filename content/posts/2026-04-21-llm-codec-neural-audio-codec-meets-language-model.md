@@ -2,7 +2,7 @@
 title: "LLM-Codec: Neural Audio Codec Meets Language Model Objectives"
 date: 2026-04-21
 draft: false
-tags: [语音大模型，, 预训练，, 基准测试，, 音频大模型]
+tags: [语音大模型, 预训练, 基准测试, 音频大模型]
 categories: [论文速递]
 description: "本文旨在解决语音语言模型（SLM）中一个根本性矛盾：神经音频编码器以波形重建为目标进行优化，而语言模型以序列预测为目标进行优化，这种目标不匹配导致生成的离散语音令牌熵值高、难以预测。为此，作者提出了LLM-Codec训练框架，在不改变编码器和语言模型架构的前提下，通过引入两个面向语言模型的正则化目标"
 hiddenInHomeList: true

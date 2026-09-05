@@ -1,12 +1,9 @@
 {{- if not .Params.noRating }}
-<div class="post-rating" style="margin-top:1.5rem;padding:1rem;text-align:center;">
-  <div style="font-size:0.9em;color:var(--secondary);margin-bottom:0.5rem;">觉得这篇分析有帮助吗？</div>
-  <div class="rating-stars" style="font-size:1.5rem;letter-spacing:0.3rem;cursor:pointer;">
-    <span onclick="alert('感谢您的反馈！评分功能即将上线')">★</span>
-    <span onclick="alert('感谢您的反馈！评分功能即将上线')">★</span>
-    <span onclick="alert('感谢您的反馈！评分功能即将上线')">★</span>
-    <span onclick="alert('感谢您的反馈！评分功能即将上线')">★</span>
-    <span onclick="alert('感谢您的反馈！评分功能即将上线')">★</span>
+<section class="analysis-feedback" aria-labelledby="analysis-feedback-title">
+  <div>
+    <strong id="analysis-feedback-title">发现事实错误或证据遗漏？</strong>
+    <p>本站分析由 AI 辅助生成。欢迎提交可核查的原文位置、数据或链接，帮助持续修正。</p>
   </div>
-</div>
+  <a class="rw-action" href="https://github.com/nanless/audio-paper-digest-blog/issues/new" target="_blank" rel="noopener noreferrer">提交勘误 ↗</a>
+</section>
 {{- end }}

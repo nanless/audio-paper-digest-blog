@@ -1,32 +1,27 @@
 {{- with site.Params.homeInfoParams }}
-<style>
-.first-entry.home-info { min-height: auto !important; margin: calc(var(--gap) * 0.5) 0 var(--gap) 0 !important; }
-.home-info .entry-content { margin: 4px 0 !important; }
-.home-info .entry-content p { margin-block-start: 0.3em !important; margin-block-end: 0.3em !important; }
-.home-rss { margin-top: 0.75rem; }
-.home-rss a { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--primary); text-decoration: none; font-size: 0.9em; }
-.home-rss a:hover { text-decoration: underline; }
-</style>
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="entry-content md-content">
-        {{ $opts := dict "display" "block" }}
-        {{ .Content | $.Page.RenderString $opts }}
-        <div class="home-rss">
-            <a href="{{ "index.xml" | absURL }}" target="_blank" title="RSS 订阅">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 11a9 9 0 0 1 9 9"/>
-                    <path d="M4 4a16 16 0 0 1 16 16"/>
-                    <circle cx="5" cy="19" r="1"/>
-                </svg>
-                RSS 订阅
-            </a>
-        </div>
+<section class="research-home-hero" aria-labelledby="research-home-title">
+  <div>
+    <div class="rw-eyebrow">Audio Research Intelligence</div>
+    <h1 id="research-home-title">把每日论文变成可检索的研究信号</h1>
+    <p class="research-home-hero__lead">面向中文语音、音乐与音频研究者：从最新论文中快速看见任务、方法、关键结果、复现资源与明确局限。</p>
+    <div class="research-home-hero__actions">
+      <a class="rw-action rw-action--primary" href="{{ "papers/" | absURL }}">进入论文库</a>
+      <a class="rw-action" href="{{ "search/" | absURL }}">搜索论文</a>
+      <a class="rw-action" href="{{ "index.xml" | absURL }}">RSS 订阅</a>
     </div>
-    <footer class="entry-footer">
-        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
-    </footer>
-</article>
-{{- end -}}
+  </div>
+  <aside class="research-home-hero__panel" aria-label="研究快捷入口">
+    <div>
+      <div class="research-home-hero__status">持续更新</div>
+      <strong>研究快捷入口</strong>
+      <p>从任务和会议切入，比在时间流里逐页翻找更高效。</p>
+    </div>
+    <div class="research-shortcuts">
+      <a class="research-shortcut" href="{{ "tags/语音识别/" | absURL }}">语音识别<span>ASR · 低资源 · 多语言</span></a>
+      <a class="research-shortcut" href="{{ "tags/语音合成/" | absURL }}">语音合成<span>TTS · 音色 · 流式生成</span></a>
+      <a class="research-shortcut" href="{{ "tags/音频生成/" | absURL }}">音频与音乐生成<span>扩散 · 流匹配 · 多模态</span></a>
+      <a class="research-shortcut" href="{{ "conferences/" | absURL }}">会议论文集<span>ICASSP · ICLR · ICML</span></a>
+    </div>
+  </aside>
+</section>
+{{- end }}

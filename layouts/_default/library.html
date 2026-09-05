@@ -1,0 +1,60 @@
+{{- define "main" }}
+<section class="research-library" id="paper-library" data-index-url="{{ "index.json" | relURL }}">
+  <header class="research-library__header">
+    <div class="rw-eyebrow">Research Library</div>
+    <h1>论文库</h1>
+    <p>从全站静态索引中按关键词、年份与页面角色筛选。当前兼容既有索引字段；任务、分数和资源等结构化筛选将在数据字段可用时渐进增强。</p>
+  </header>
+
+  <form class="research-library__toolbar" id="paper-library-filters" role="search">
+    <label>
+      搜索标题与摘要
+      <input id="library-query" name="q" type="search" placeholder="例如：streaming ASR、语音增强、2609.03620" autocomplete="off">
+    </label>
+    <label>
+      页面类型
+      <select id="library-type" name="type">
+        <option value="paper">论文解读</option>
+        <option value="daily">每日速递</option>
+        <option value="conference">会议专题</option>
+        <option value="all">全部</option>
+      </select>
+    </label>
+    <label>
+      年份
+      <select id="library-year" name="year"><option value="all">全部年份</option></select>
+    </label>
+    <label>
+      排序
+      <select id="library-sort" name="sort">
+        <option value="newest">最新发布</option>
+        <option value="score">评分优先</option>
+        <option value="title">标题 A–Z</option>
+      </select>
+    </label>
+  </form>
+
+  <div class="research-library__quick-filters" aria-label="快捷研究方向">
+    <button class="rw-filter-chip" type="button" data-query="语音识别" aria-pressed="false">语音识别</button>
+    <button class="rw-filter-chip" type="button" data-query="语音合成" aria-pressed="false">语音合成</button>
+    <button class="rw-filter-chip" type="button" data-query="语音增强" aria-pressed="false">语音增强</button>
+    <button class="rw-filter-chip" type="button" data-query="音乐生成" aria-pressed="false">音乐生成</button>
+    <button class="rw-filter-chip" type="button" data-query="多模态" aria-pressed="false">多模态</button>
+    <button class="rw-filter-chip" type="button" data-query="数据集" aria-pressed="false">数据集 / 基准</button>
+  </div>
+
+  <div class="research-library__status" aria-live="polite">
+    <span id="library-count">正在读取静态论文索引…</span>
+    <a href="{{ "search/" | absURL }}">使用经典搜索</a>
+  </div>
+  <div id="library-results" class="research-library__results" role="list">
+    <div class="research-library__loading">正在载入论文索引…</div>
+  </div>
+  <div class="research-library__more">
+    <button class="rw-action" id="library-more" type="button" hidden>加载更多</button>
+  </div>
+  <noscript><p class="research-library__empty">论文库筛选需要 JavaScript。你仍可使用<a href="{{ "archives/" | absURL }}">归档</a>或<a href="{{ "tags/" | absURL }}">主题页</a>浏览全部内容。</p></noscript>
+</section>
+{{- $libraryScript := resources.Get "js/paper-library.js" | minify }}
+<script defer src="{{ $libraryScript.RelPermalink }}"></script>
+{{- end }}

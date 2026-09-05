@@ -1,9 +1,12 @@
 {{- if not .Params.noSubscribe }}
-<div class="post-subscribe" style="margin-top:1.5rem;padding:1.25rem;background:var(--code-bg);border-radius:var(--radius);text-align:center;">
-  <div style="font-weight:600;color:var(--primary);margin-bottom:0.5rem;">订阅论文速递</div>
-  <div style="font-size:0.9em;color:var(--secondary);margin-bottom:0.75rem;">每日获取最新语音/音频 AI 论文分析</div>
-  <a href="{{ "index.xml" | absURL }}" target="_blank" style="display:inline-block;padding:0.5rem 1.25rem;background:var(--primary);color:var(--theme);border-radius:var(--radius);text-decoration:none;font-size:0.9em;transition:opacity 0.2s;">
-    通过 RSS 订阅
-  </a>
-</div>
+<section class="research-subscribe" aria-labelledby="research-subscribe-title">
+  <div>
+    <strong id="research-subscribe-title">持续跟踪音频研究进展</strong>
+    <p>通过 RSS 获取每日速递；也可以进入论文库按任务、年份与关键词筛选。</p>
+  </div>
+  <div class="research-home-hero__actions">
+    <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">RSS 订阅</a>
+    <a class="rw-action" href="{{ "papers/" | absURL }}">论文库</a>
+  </div>
+</section>
 {{- end }}

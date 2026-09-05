@@ -2,7 +2,7 @@
 title: "Sonalyzer-Moz: A Framework for Analyzing the Structure of Mozart's Sonata Form"
 date: 2026-05-19
 draft: false
-tags: [音乐结构分析`, 深度学习`, 古典音乐`, 莫扎特`, 奏鸣曲式`, 边界检测`, 数据集`, 基线模型`]
+tags: [音乐结构分析, 深度学习, 古典音乐, 莫扎特, 奏鸣曲式, 边界检测, 数据集, 基线模型]
 categories: [论文速递]
 description: "音乐结构分析 | 7.3/10"
 hiddenInHomeList: true

@@ -1,0 +1,94 @@
+{{- $basePattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})$` -}}
+{{- $versionedPattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})v[1-9][0-9]*$` -}}
+{{- $baseID := .Params.paper_digest_arxiv_id | default "" -}}
+{{- $versionedID := .Params.paper_digest_arxiv_versioned_id | default "" -}}
+{{- if not (findRE $basePattern $baseID 1) -}}
+  {{- $baseID = "" -}}
+  {{- $versionedID = "" -}}
+  {{- $legacyMatches := findRE `arxiv\.org/(abs|html|pdf)/([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?` .RawContent 1 -}}
+  {{- if gt (len $legacyMatches) 0 -}}
+    {{- $legacyID := replaceRE `^.*?/(abs|html|pdf)/` "" (index $legacyMatches 0) -}}
+    {{- if findRE $versionedPattern $legacyID 1 -}}
+      {{- $versionedID = $legacyID -}}
+      {{- $baseID = replaceRE `v[1-9][0-9]*$` "" $legacyID -}}
+    {{- else if findRE $basePattern $legacyID 1 -}}
+      {{- $baseID = $legacyID -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $resolvedID := $baseID -}}
+{{- if and (findRE $versionedPattern $versionedID 1) (eq (replaceRE `v[1-9][0-9]*$` "" $versionedID) $baseID) -}}
+  {{- $resolvedID = $versionedID -}}
+{{- end -}}
+{{- if and $baseID (findRE $basePattern $baseID 1) -}}
+  {{- $absURL := printf "https://arxiv.org/abs/%s" $resolvedID -}}
+  {{- $pdfURL := printf "https://arxiv.org/pdf/%s.pdf" $resolvedID -}}
+  {{- $prefillTitle := .Params.paper_digest_original_title | default .Title -}}
+  {{- $sidecars := .Params.paper_digest_sidecars -}}
+  {{- $parsedBaseURL := urls.Parse site.BaseURL -}}
+  {{- $siteRoot := $parsedBaseURL.Path -}}
+  {{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
+  {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
+  {{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+  {{- $contextURL := "" -}}
+  {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) -}}
+    {{- $contextRecord := index $sidecars "rethink-context.json" -}}
+    {{- with $contextRecord }}
+      {{- with .url }}
+        {{- if eq . (printf "%srethink-context.json" $sidecarRoot) -}}
+          {{- $contextURL = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $aiQuery := querify "title" $prefillTitle "arxivId" $resolvedID "sourceUrl" $absURL "contextUrl" $contextURL -}}
+
+<section class="paper-tools" aria-labelledby="paper-tools-title">
+  <div class="paper-tools__heading">
+    <div>
+      <span class="paper-tools__eyebrow">Research tools</span>
+      <h2 id="paper-tools-title">论文工具</h2>
+    </div>
+    <p>原文、引用与本机 AI 入口</p>
+  </div>
+
+  <div class="paper-tools__groups">
+    <div class="paper-tools__group" aria-label="论文原文">
+      <a class="paper-tool paper-tool--primary" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开 arXiv <span aria-hidden="true">↗</span></a>
+      <a class="paper-tool" href="{{ $pdfURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="paper-pdf-note">打开 PDF</a>
+      <span id="paper-pdf-note" class="paper-tools__note">可能由浏览器直接预览，而非下载。</span>
+    </div>
+
+    <div class="paper-tools__group" aria-label="复制论文标识">
+      <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="base arXiv ID">复制 base ID</button>
+      {{- if ne $resolvedID $baseID }}
+      <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="versioned arXiv ID">复制版本 ID</button>
+      {{- end }}
+    </div>
+
+    {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) }}
+    <div class="paper-tools__group" aria-label="下载引用">
+      {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
+        {{- $record := index $sidecars $filename -}}
+        {{- $url := "" -}}
+        {{- with $record }}{{ with .url }}{{ $url = . }}{{ end }}{{ end }}
+        {{- if eq $url (printf "%s%s" $sidecarRoot $filename) }}
+      <a class="paper-tool paper-tool--download" href="{{ $url | safeURL }}" download>{{ $label }}</a>
+        {{- end }}
+      {{- end }}
+    </div>
+    {{- end }}
+
+    <div class="paper-tools__group" aria-label="研究工作流">
+      <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="zotero-connector-note">在 Zotero Connector 中打开</a>
+      <a class="paper-tool paper-tool--ai" href="{{ printf "http://127.0.0.1:43128/ui?%s" $aiQuery | safeURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="local-ai-note">用本机 AI 重新理解</a>
+      <span id="zotero-connector-note" class="paper-tools__note">打开 arXiv 后，使用浏览器中的 Zotero Connector 保存论文。</span>
+      <span id="local-ai-note" class="paper-tools__note">请先在主项目运行 <code>npm run paper:rethink</code>。本站仅在点击后打开本机 companion，不会自动连接或上传页面内容；<a href="https://github.com/nanless/audio-paper-digest/blob/main/docs/paper-rethink-companion.md" target="_blank" rel="noopener noreferrer">查看启动说明</a>。</span>
+    </div>
+  </div>
+  <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
+</section>
+
+  {{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

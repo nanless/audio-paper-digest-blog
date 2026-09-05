@@ -2,7 +2,7 @@
 title: "Discrete Token Modeling for Multi-Stem Music Source Separation with Language Models"
 date: 2026-04-20
 draft: false
-tags: [音乐分离，, 自回归模型，, 大语言模型，, 音频大模型]
+tags: [音乐分离, 自回归模型, 大语言模型, 音频大模型]
 categories: [论文速递]
 description: "本文提出了一种用于多轨音乐源分离的生成式框架，其核心创新在于将分离任务重新定义为**条件离散令牌生成**问题。传统方法直接在时频域估计连续信号，而本文方法首先利用**HCodec**神经音频编解码器将音频波形转换为离散的声学与语义令牌序列。然后，一个基于**Conformer**的条件编码器从混合音"
 hiddenInHomeList: true

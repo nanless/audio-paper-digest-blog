@@ -1,9 +1,18 @@
 baseURL: "https://nanless.github.io/audio-paper-digest-blog/"
-languageCode: "zh-cn"
+languageCode: "zh-CN"
+defaultContentLanguage: "zh-CN"
+timeZone: "Asia/Shanghai"
 title: "语音/音乐/音频论文速递"
 theme: "PaperMod"
 
-paginate: 20
+languages:
+  zh-CN:
+    languageCode: "zh-CN"
+    languageName: "简体中文"
+    weight: 1
+
+pagination:
+  pagerSize: 20
 enableGitInfo: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -15,27 +24,27 @@ minify:
 
 menu:
   main:
+    - name: "论文库"
+      url: "/papers/"
+      weight: 1
     - name: "搜索"
       url: "/search/"
-      weight: 0
+      weight: 2
     - name: "归档"
       url: "/archives/"
-      weight: 1
-    - name: "标签"
-      url: "/tags/"
-      weight: 2
-    - name: "分类"
-      url: "/categories/"
       weight: 3
+    - name: "主题"
+      url: "/tags/"
+      weight: 4
     - name: "会议论文集"
       url: "/conferences/"
-      weight: 4
+      weight: 5
     - name: "关于"
       url: "/about/"
-      weight: 5
-    - name: "友链"
-      url: "/links/"
       weight: 6
+    - name: "资源"
+      url: "/links/"
+      weight: 7
 
 params:
   env: production
@@ -66,14 +75,22 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary"]
+    limit: 20
+    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "arxivId"]
+
+  mainSections: [posts]
 
   homeInfoParams:
     Title: "📄 语音/音乐/音频论文速递"
     Content: "每日自动抓取 arxiv/huggingface 最新语音/音乐/音频AI 论文，AI 深度分析后发布"
 
   assets:
-    disableFingerprinting: true
+    disableFingerprinting: false
+    favicon: "og-default.png"
+    favicon16x16: "og-default.png"
+    favicon32x32: "og-default.png"
+    apple_touch_icon: "og-default.png"
+    safari_pinned_tab: "og-default.png"
 
   cover:
     hidden: false
@@ -101,6 +118,16 @@ outputs:
     - HTML
     - RSS
     - JSON
+  section:
+    - HTML
+  taxonomy:
+    - HTML
+  term:
+    - HTML
+
+services:
+  rss:
+    limit: 50
 
 markup:
   goldmark:

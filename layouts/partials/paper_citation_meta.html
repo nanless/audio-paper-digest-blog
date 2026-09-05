@@ -1,0 +1,95 @@
+{{- $isPaper := or (eq (.Params.paper_digest_page_type | default "") "paper") (.Params.hiddenInHomeList | default false) -}}
+{{- if $isPaper -}}
+  {{- $basePattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})$` -}}
+  {{- $versionedPattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})v[1-9][0-9]*$` -}}
+  {{- $baseID := .Params.paper_digest_arxiv_id | default "" -}}
+  {{- $versionedID := .Params.paper_digest_arxiv_versioned_id | default "" -}}
+  {{- if not (findRE $basePattern $baseID 1) -}}
+    {{- $baseID = "" -}}
+    {{- $versionedID = "" -}}
+    {{- $legacyMatches := findRE `arxiv\.org/(abs|html|pdf)/([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?` .RawContent 1 -}}
+    {{- if gt (len $legacyMatches) 0 -}}
+      {{- $legacyID := replaceRE `^.*?/(abs|html|pdf)/` "" (index $legacyMatches 0) -}}
+      {{- if findRE $versionedPattern $legacyID 1 -}}
+        {{- $versionedID = $legacyID -}}
+        {{- $baseID = replaceRE `v[1-9][0-9]*$` "" $legacyID -}}
+      {{- else if findRE $basePattern $legacyID 1 -}}
+        {{- $baseID = $legacyID -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if findRE $basePattern $baseID 1 -}}
+    {{- $resolvedID := $baseID -}}
+    {{- if and (findRE $versionedPattern $versionedID 1) (eq (replaceRE `v[1-9][0-9]*$` "" $versionedID) $baseID) -}}
+      {{- $resolvedID = $versionedID -}}
+    {{- end -}}
+    {{- $title := .Params.paper_digest_original_title | default .Title | plainify -}}
+    {{- $absURL := printf "https://arxiv.org/abs/%s" $resolvedID -}}
+    {{- $pdfURL := printf "https://arxiv.org/pdf/%s.pdf" $resolvedID -}}
+    {{- $authors := .Params.paper_digest_authors -}}
+    {{- $citationDate := .Params.paper_digest_citation_date | default "" -}}
+    {{- $keywords := .Params.tags | default (slice) -}}
+
+<meta name="citation_title" content="{{ $title }}">
+    {{- if reflect.IsSlice $authors }}
+      {{- range $authors }}
+        {{- if and (reflect.IsMap .) .name }}
+<meta name="citation_author" content="{{ .name | plainify }}">
+        {{- end }}
+      {{- end }}
+    {{- end }}
+    {{- if and $citationDate (findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}$` $citationDate 1) }}
+<meta name="citation_date" content="{{ replace $citationDate "-" "/" }}">
+    {{- end }}
+<meta name="citation_public_url" content="{{ $absURL }}">
+<meta name="citation_pdf_url" content="{{ $pdfURL }}">
+<meta name="citation_arxiv_id" content="{{ $resolvedID }}">
+    {{- with $keywords }}
+<meta name="citation_keywords" content="{{ delimit . ", " | plainify }}">
+    {{- end }}
+
+    {{- $schemaAuthors := slice -}}
+    {{- if reflect.IsSlice $authors -}}
+      {{- range $authors -}}
+        {{- if and (reflect.IsMap .) .name -}}
+          {{- $person := dict "@type" "Person" "name" (.name | plainify) -}}
+          {{- $affiliations := slice -}}
+          {{- if reflect.IsSlice .affiliations -}}
+            {{- range .affiliations -}}
+              {{- $affiliation := . | plainify -}}
+              {{- if and $affiliation (not (hasPrefix $affiliation "机构信息未")) -}}
+                {{- $affiliations = $affiliations | append (dict "@type" "Organization" "name" $affiliation) -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if gt (len $affiliations) 0 -}}
+            {{- $person = merge $person (dict "affiliation" $affiliations) -}}
+          {{- end -}}
+          {{- $schemaAuthors = $schemaAuthors | append $person -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $identifier := dict "@type" "PropertyValue" "propertyID" "arXiv" "value" $resolvedID "url" $absURL -}}
+    {{- $encoding := dict "@type" "MediaObject" "contentUrl" $pdfURL "encodingFormat" "application/pdf" -}}
+    {{- $schema := dict
+      "@context" "https://schema.org"
+      "@type" "ScholarlyArticle"
+      "@id" (printf "%s#scholarly-article" $absURL)
+      "name" $title
+      "headline" $title
+      "identifier" $identifier
+      "url" $absURL
+      "sameAs" $absURL
+      "encoding" $encoding
+      "inLanguage" "en"
+      "keywords" $keywords
+    -}}
+    {{- if gt (len $schemaAuthors) 0 -}}
+      {{- $schema = merge $schema (dict "author" $schemaAuthors) -}}
+    {{- end -}}
+    {{- if and $citationDate (findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}$` $citationDate 1) -}}
+      {{- $schema = merge $schema (dict "datePublished" $citationDate) -}}
+    {{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}
