@@ -20,51 +20,32 @@
 {{- if and (findRE $versionedPattern $versionedID 1) (eq (replaceRE `v[1-9][0-9]*$` "" $versionedID) $baseID) -}}
   {{- $resolvedID = $versionedID -}}
 {{- end -}}
-{{- if and $baseID (findRE $basePattern $baseID 1) -}}
-  {{- $absURL := printf "https://arxiv.org/abs/%s" $resolvedID -}}
-  {{- $pdfURL := printf "https://arxiv.org/pdf/%s.pdf" $resolvedID -}}
-  {{- $prefillTitle := .Params.paper_digest_original_title | default .Title -}}
-  {{- $sidecars := .Params.paper_digest_sidecars -}}
-  {{- $parsedBaseURL := urls.Parse site.BaseURL -}}
-  {{- $siteRoot := $parsedBaseURL.Path -}}
-  {{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
-  {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
-  {{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
-  {{- $contextURL := "" -}}
-  {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) -}}
-    {{- $contextRecord := index $sidecars "rethink-context.json" -}}
-    {{- with $contextRecord }}
-      {{- with .url }}
-        {{- if eq . (printf "%srethink-context.json" $sidecarRoot) -}}
-          {{- $contextURL = . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-  {{- $aiQuery := querify "title" $prefillTitle "arxivId" $resolvedID "sourceUrl" $absURL "contextUrl" $contextURL -}}
-  {{- $zoteroURL := printf "http://127.0.0.1:43128/ui?%s&action=zotero" $aiQuery -}}
-  {{- if not $contextURL -}}
-    {{- $aiQuery = printf "%s&%s" $aiQuery (querify "pageExcerpt" (printf "%.1200s" .Plain)) -}}
-  {{- end -}}
-  {{- $companionURL := printf "http://127.0.0.1:43128/ui?%s" $aiQuery -}}
-  {{- $downloadURL := printf "http://127.0.0.1:43128/v1/paper/pdf?%s" (querify "arxivId" $resolvedID) -}}
-
-<section class="paper-tools" aria-labelledby="paper-tools-title">
+{{- $hasID := and $baseID (findRE $basePattern $baseID 1) -}}
+<section class="paper-tools{{ if not $hasID }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ .Params.paper_digest_original_title | default .Title | plainify }}" data-paper-url="{{ .Permalink }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
   <div class="paper-tools__heading">
     <div>
-      <span class="paper-tools__eyebrow">Research tools</span>
+      <span class="paper-tools__eyebrow">Reading tools</span>
       <h2 id="paper-tools-title">论文工具</h2>
     </div>
-    <p>阅读原文 · 保存引用 · 继续研读</p>
+    <p>阅读原文 · 保存引用 · 整理提问</p>
   </div>
-
+  {{- if $hasID -}}
+    {{- $absURL := printf "https://arxiv.org/abs/%s" $resolvedID -}}
+    {{- $pdfURL := printf "https://arxiv.org/pdf/%s.pdf" $resolvedID -}}
+    {{- $citationTitle := .Params.paper_digest_original_title | default .Title | plainify -}}
+    {{- $sidecars := .Params.paper_digest_sidecars -}}
+    {{- $parsedBaseURL := urls.Parse site.BaseURL -}}
+    {{- $siteRoot := $parsedBaseURL.Path -}}
+    {{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
+    {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
+    {{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+    {{- $citationFiles := dict -}}
   <div class="paper-tools__groups">
     <div class="paper-tools__group" aria-label="论文原文">
       <a class="paper-tool paper-tool--primary" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开 arXiv <span aria-hidden="true">↗</span></a>
       <a class="paper-tool paper-tool--download" href="{{ $pdfURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="paper-pdf-note">阅读 / 保存 PDF</a>
-      <span id="paper-pdf-note" class="paper-tools__note">打开官方 PDF 后，点击浏览器的下载按钮保存；手机可用“分享 → 存储到文件”。无需启动本机服务。</span>
+      <span id="paper-pdf-note" class="paper-tools__note">打开官方 PDF 后，点击浏览器的下载按钮保存；手机可用“分享 → 存储到文件”。</span>
     </div>
-
     <div class="paper-tools__group" aria-label="复制论文标识">
       <span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span>
       <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>
@@ -72,20 +53,28 @@
       <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>
       {{- end }}
     </div>
-
-    {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) }}
     <div class="paper-tools__group" aria-label="下载引用">
-      {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
-        {{- $record := index $sidecars $filename -}}
-        {{- $url := "" -}}
-        {{- with $record }}{{ with .url }}{{ $url = . }}{{ end }}{{ end }}
-        {{- if eq $url (printf "%s%s" $sidecarRoot $filename) }}
+      {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) }}
+        {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
+          {{- $record := index $sidecars $filename -}}
+          {{- $url := "" -}}
+          {{- with $record }}{{ with .url }}{{ $url = . }}{{ end }}{{ end }}
+          {{- if eq $url (printf "%s%s" $sidecarRoot $filename) }}
       <a class="paper-tool paper-tool--download" href="{{ $url | safeURL }}" download>{{ $label }}</a>
+            {{- $citationFiles = merge $citationFiles (dict $filename true) -}}
+          {{- end }}
         {{- end }}
       {{- end }}
+      {{- range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}
+        {{- if not (index $citationFiles (printf "citation.%s" $format)) }}
+      <button class="paper-tool paper-tool--download paper-tool-citation" type="button" data-citation-format="{{ $format }}" data-citation-id="{{ $resolvedID }}" data-citation-title="{{ $citationTitle }}" hidden>下载简要 {{ $label }}</button>
+        {{- end }}
+      {{- end }}
+      <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">在 arXiv 查看引用信息</a>
+      {{- if or (not (index $citationFiles "citation.bib")) (not (index $citationFiles "citation.ris")) }}
+      <span class="paper-tools__note">简要引用由浏览器根据本站标题、arXiv ID 和官方链接生成；作者与出版日期未提供，请到 arXiv 核对补全。</span>
+      {{- end }}
     </div>
-    {{- end }}
-
   </div>
   <details class="paper-tools__help">
     <summary>保存到 Zotero</summary>
@@ -93,69 +82,22 @@
       <li>在电脑浏览器安装 <a href="https://www.zotero.org/download/connectors" target="_blank" rel="noopener noreferrer">Zotero Connector</a>，并打开 Zotero 桌面端。</li>
       <li><a href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开这篇论文的 arXiv 页面</a>，点击浏览器工具栏中的 Zotero Connector 图标保存。</li>
     </ol>
-    <p>网页不能代你点击浏览器扩展。如果此页提供 RIS / BibTeX 下载，也可保存文件后在 Zotero 中选择“文件 → 导入”。</p>
+    <p>网页不能代你点击浏览器扩展。也可下载 RIS / BibTeX，然后在 Zotero 中选择“文件 → 导入”；简要引用需补全作者和日期。</p>
   </details>
-  <details class="paper-tools__help paper-tools__local">
-    <summary>本机 AI 研读与高级工具 <span>需要电脑端服务</span></summary>
-    <p>在运行论文速递项目的同一台电脑上，按<a href="https://github.com/nanless/audio-paper-digest/blob/main/docs/paper-rethink-companion.md" target="_blank" rel="noopener noreferrer">启动说明</a>配置并运行 <code>npm run paper:rethink</code>。保持终端开启，再使用下面的入口。手机浏览器无法连接电脑的本机服务。</p>
-    <div class="paper-tools__local-actions">
-      <a class="paper-tool paper-tool--ai" href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer">已启动，打开 AI 研读</a>
-      <a class="paper-tool paper-tool--zotero" href="{{ $zoteroURL | safeURL }}" target="_blank" rel="noopener noreferrer">打开本机 Zotero 确认页</a>
-      <a class="paper-tool paper-tool--download" href="{{ $downloadURL | safeURL }}" target="_blank" rel="noopener" referrerpolicy="origin">通过本机下载 PDF</a>
-    </div>
-    <p class="paper-tools__note">若新页显示无法连接，请检查服务是否已启动，并在同一台电脑重试。AI 请求和 Zotero 导入还需在本机页面确认。{{ if not $contextURL }}AI 入口会带入本页导读摘录，供你编辑；它不是论文原文。{{ end }}本站不会自动连接本机。</p>
-  </details>
+  {{- else }}
+  <p class="paper-tools__note">本页没有可验证的 arXiv 标识；你仍可选择正文，整理并复制 AI 提问。</p>
+  {{- end }}
   <details class="paper-tools__help paper-tools__selection-panel">
-    <summary>重理解选中段落</summary>
-    <p>先在正文选择一段文字，再打开这里；也可直接粘贴。复制提问后，可粘贴到你使用的 AI 工具；选择本机 AI 时，才会打开本机确认页。</p>
-    <label for="paper-selected-text">待解释的段落（最多 2,000 字符）</label>
-    <textarea id="paper-selected-text" class="paper-tools__selected-text" rows="4" placeholder="选择正文，或在此粘贴一段文字" maxlength="2000"></textarea>
-    <button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制解释提问</button>
-    <button class="paper-tool paper-tool--selection" type="button" data-companion-url="{{ $companionURL | safeURL }}" hidden>已启动本机 AI，解释这段文字</button>
-    <p class="paper-tools__note">复制提问无需本机服务，手机也可使用。本机 AI 需要先在同一台电脑运行 <code>npm run paper:rethink</code>。</p>
-    <noscript><p>浏览器未启用 JavaScript，无法自动带入选段。请复制文字后<a href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer">打开已启动的本机 AI</a>，在本机页面粘贴。</p></noscript>
-  </details>
-  <button class="paper-tool paper-tool--selection-quick" type="button" hidden>解释已选段落 ↑</button>
-  <textarea class="paper-tools__copy-fallback" aria-label="请手动复制这段提问" rows="5" readonly hidden></textarea>
-  <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
-</section>
-
-  {{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
-<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- else -}}
-  {{- $prefillTitle := .Params.paper_digest_original_title | default .Title -}}
-  {{- $aiQuery := querify "title" $prefillTitle "arxivId" "" "sourceUrl" "" "contextUrl" "" "pageExcerpt" (printf "%.1200s" .Plain) -}}
-  {{- $companionURL := printf "http://127.0.0.1:43128/ui?%s" $aiQuery -}}
-
-<section class="paper-tools paper-tools--ai-only" aria-labelledby="paper-tools-title">
-  <div class="paper-tools__heading">
-    <div>
-      <span class="paper-tools__eyebrow">Reading tools</span>
-      <h2 id="paper-tools-title">论文研读工具</h2>
-    </div>
-    <p>本机 AI 选段解释</p>
-  </div>
-  <div class="paper-tools__groups">
-    <div class="paper-tools__group" aria-label="本机 AI 研读">
-      <span id="local-ai-note" class="paper-tools__note">本页没有可验证的 arXiv 标识，因此不展示 PDF 或 Zotero 导入。</span>
-    </div>
-  </div>
-  <details class="paper-tools__help paper-tools__selection-panel">
-    <summary>重理解选中段落</summary>
-    <p>选择正文后打开这里，或直接粘贴文字。复制解释提问，可在手机或电脑上粘贴到你使用的 AI 工具中。</p>
+    <summary>复制 AI 提问</summary>
+    <p>先在正文选择一段文字，再打开这里；也可直接粘贴。本站只整理提问，不请求 AI、不上传选段。复制后粘贴到你使用的 AI 工具。</p>
     <label for="paper-selected-text">待解释的段落（最多 2,000 字符）</label>
     <textarea id="paper-selected-text" class="paper-tools__selected-text" rows="4" maxlength="2000" placeholder="选择正文，或在此粘贴一段文字"></textarea>
-    <button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制解释提问</button>
-    <button class="paper-tool paper-tool--selection" type="button" data-companion-url="{{ $companionURL | safeURL }}" hidden>已启动本机 AI，解释这段文字</button>
-    <a class="paper-tool paper-tool--ai" href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer">已启动，打开本机 AI</a>
-    <p class="paper-tools__note">本机 AI 需要在同一台电脑按<a href="https://github.com/nanless/audio-paper-digest/blob/main/docs/paper-rethink-companion.md" target="_blank" rel="noopener noreferrer">启动说明</a>运行 <code>npm run paper:rethink</code>；若无法连接，请检查服务。手机无法连接电脑的本机服务。AI 入口会带入本页导读摘录，供你编辑；它不是论文原文。</p>
-    <noscript><p>浏览器未启用 JavaScript。请复制段落，打开本机 AI 后粘贴。</p></noscript>
+    <button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制 AI 提问</button>
+    <noscript><p>浏览器未启用 JavaScript。请手动复制正文并粘贴到你使用的 AI 工具，可以问：“请解释这段文字的术语、机制与前提，并区分事实与推测。”</p></noscript>
   </details>
-  <button class="paper-tool paper-tool--selection-quick" type="button" hidden>解释已选段落 ↑</button>
-  <textarea class="paper-tools__copy-fallback" aria-label="请手动复制这段提问" rows="5" readonly hidden></textarea>
+  <button class="paper-tool paper-tool--selection-quick" type="button" hidden>整理选段提问 ↑</button>
+  <textarea class="paper-tools__copy-fallback" aria-label="可手动复制的文本" rows="5" readonly hidden></textarea>
   <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
 </section>
-
-  {{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
+{{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
 <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- end -}}

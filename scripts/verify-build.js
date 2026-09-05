@@ -120,46 +120,53 @@ function verifyPaperToolCoverage(files) {
   let paperPages = 0;
   let selectedTextTools = 0;
   let richArxivTools = 0;
-  let aiOnlyFallbacks = 0;
+  let selectionOnlyFallbacks = 0;
   for (const file of files.filter((item) => path.basename(item) === 'index.html')) {
     const html = fs.readFileSync(file, 'utf8');
     if (!html.includes('research-workbench--paper')) continue;
     paperPages += 1;
+    invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(html),
+      `论文页残留已取消的本机助手入口：${file}`);
     invariant(
-      html.includes('paper-tools') && html.includes('重理解选中段落')
-        && html.includes('127.0.0.1:43128/ui')
+      html.includes('paper-tools') && html.includes('复制 AI 提问')
         && html.includes('paper-tools__selected-text')
         && html.includes('paper-tool--selection-copy')
         && html.includes('paper-tools__copy-fallback')
-        && html.includes('npm run paper:rethink')
         && html.includes('<noscript>'),
       `论文页缺少选段 AI 工具：${file}`
     );
     selectedTextTools += 1;
-    if (html.includes('paper-tools--ai-only')) {
-      invariant(!html.includes('/v1/paper/pdf?') && !html.includes('paper-tool--zotero'),
+    if (html.includes('paper-tools--selection-only')) {
+      invariant(!/href=["']?https:\/\/arxiv\.org\/pdf\//.test(html) && !html.includes('paper-tool-citation'),
         `无 arXiv 论文页不得伪造 PDF/Zotero 工具：${file}`);
-      aiOnlyFallbacks += 1;
+      selectionOnlyFallbacks += 1;
     } else {
-      invariant(html.includes('/v1/paper/pdf?arxivId=')
-        && /href=["']?https:\/\/arxiv\.org\/pdf\//.test(html)
-        && html.includes('action=zotero')
+      invariant(/href=["']?https:\/\/arxiv\.org\/pdf\//.test(html)
         && html.includes('zotero.org/download/connectors')
-        && html.includes('paper-tools__local')
         && html.includes('网页不能代你点击浏览器扩展'),
       `可识别 arXiv 的论文页缺少 PDF/Zotero 工具：${file}`);
+      for (const format of ['bib', 'ris']) {
+        const tags = html.match(/<(?:a|button)\b[^>]*>/gi) || [];
+        invariant(tags.some(tag => attributeValue(tag, 'href').endsWith(`/citation.${format}`)
+          || attributeValue(tag, 'data-citation-format') === format),
+        `可识别 arXiv 的论文页缺少 ${format} 引用下载：${file}`);
+      }
       richArxivTools += 1;
     }
   }
   invariant(paperPages > 0, '构建产物没有论文页');
   invariant(selectedTextTools === paperPages, '论文页选段 AI 覆盖不完整');
-  return { paperPages, selectedTextTools, richArxivTools, aiOnlyFallbacks };
+  return { paperPages, selectedTextTools, richArxivTools, selectionOnlyFallbacks };
 }
 
 function verifyBuild(buildDir) {
   const root = path.resolve(buildDir);
   const allFiles = walkFiles(root);
   const home = readRequired(path.join(root, 'index.html'));
+  for (const file of allFiles.filter(file => /\.(?:html|js)$/.test(file))) {
+    invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(fs.readFileSync(file, 'utf8')),
+      `构建产物残留已取消的本机助手依赖：${file}`);
+  }
   const headStats = verifyHead(home, root);
 
   const rssFile = path.join(root, 'index.xml');

@@ -2,51 +2,26 @@
   'use strict';
 
   const MAX_SELECTED_TEXT_CHARS = 2000;
-  const MAX_COMPANION_URL_CHARS = 32768;
-  const COMPANION_HOST = ['127', '0', '0', '1'].join('.');
-  const COMPANION_QUERY_KEYS = new Set(['title', 'arxivId', 'sourceUrl', 'contextUrl', 'pageExcerpt']);
-
+  const isArxivId = (value) => /^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*\/[0-9]{7})(v[1-9][0-9]*)?$/.test(value || '');
   const normalizeSelection = (value) => {
     const normalized = String(value || '').replace(/\r\n?/g, '\n').normalize('NFC').trim();
-    if (!normalized) throw new Error('请先在论文正文中选择一段文字。');
+    if (!normalized) throw new Error('请先选择正文，或在文本框粘贴一段文字。');
     if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f]/u.test(normalized)) {
       throw new Error('选中文字包含不支持的控制字符。');
     }
     if (normalized.length > MAX_SELECTED_TEXT_CHARS) {
-      throw new Error(`选中文字不能超过 ${MAX_SELECTED_TEXT_CHARS} 个字符。`);
+      throw new Error('选中文字不能超过 2000 个字符。');
     }
     return normalized;
   };
 
-  const buildSelectionUrl = (baseValue, selectionValue) => {
-    const selectedText = normalizeSelection(selectionValue);
-    let url;
-    try {
-      url = new URL(String(baseValue || ''));
-    } catch (_error) {
-      throw new Error('本机 companion 地址无效。');
+  const writeClipboard = async (value) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(value);
+        return;
+      } catch (_error) { /* Try legacy copy when browser permissions deny clipboard access. */ }
     }
-    if (url.protocol !== 'http:' || url.hostname !== COMPANION_HOST || url.port !== '43128'
-      || url.pathname !== '/ui' || url.username || url.password || url.hash) {
-      throw new Error('本机 companion 地址无效。');
-    }
-    const seen = new Set();
-    for (const key of url.searchParams.keys()) {
-      if (!COMPANION_QUERY_KEYS.has(key) || seen.has(key)) {
-        throw new Error('本机 companion 参数无效。');
-      }
-      seen.add(key);
-    }
-    url.searchParams.delete('pageExcerpt');
-    url.searchParams.set('selectedText', selectedText);
-    const target = url.toString();
-    if (target.length > MAX_COMPANION_URL_CHARS) {
-      throw new Error('选中文字编码后过长，请缩短选择。');
-    }
-    return target;
-  };
-
-  const writeFallback = (value) => {
     const field = document.createElement('textarea');
     field.value = value;
     field.setAttribute('readonly', '');
@@ -61,21 +36,38 @@
     }
   };
 
-  const writeClipboard = async (value) => {
-    if (navigator.clipboard && window.isSecureContext) {
-      try {
-        await navigator.clipboard.writeText(value);
-        return;
-      } catch (_error) { /* Browsers may deny clipboard permission; try legacy copy. */ }
+  const citationText = (id, titleValue, format) => {
+    if (!isArxivId(id)) {
+      throw new Error('缺少可验证的 arXiv 标识。');
     }
-    writeFallback(value);
+    const title = String(titleValue || '').replace(/[\u0000-\u001f\u007f-\u009f]+/g, ' ').trim();
+    if (!title || title.length > 2000) throw new Error('没有可用于引用的有效标题。');
+    const url = 'https://arxiv.org/abs/' + id;
+    if (format === 'ris') {
+      return ['TY  - UNPB', 'TI  - ' + title, 'ID  - ' + id, 'UR  - ' + url, 'ER  - ', ''].join('\n');
+    }
+    if (format !== 'bib') throw new Error('引用格式无效。');
+    const escapes = {
+      '\\': '\\textbackslash{}', '{': '\\{', '}': '\\}', '%': '\\%',
+      '&': '\\&', '#': '\\#', '_': '\\_', '$': '\\$', '^': '\\textasciicircum{}',
+      '~': '\\textasciitilde{}',
+    };
+    const safeTitle = title.replace(/[\\{}%&#_$^~]/g, (character) => escapes[character]);
+    return '@misc{arxiv_' + id.replace(/[^a-z0-9]/g, '_')
+      + ',\n  title = {' + safeTitle + '},\n  eprint = {' + id
+      + '},\n  archivePrefix = {arXiv},\n  url = {' + url + '}\n}\n';
   };
 
   document.querySelectorAll('.paper-tools').forEach((toolbar) => {
     const status = toolbar.querySelector('.paper-tools__status');
-    const announce = (message) => {
-      if (!status) return;
-      status.textContent = message;
+    const announce = (message) => { if (status) status.textContent = message; };
+    const showFallback = (value) => {
+      const field = toolbar.querySelector('.paper-tools__copy-fallback');
+      if (!field) return;
+      field.hidden = false;
+      field.value = value;
+      field.focus();
+      field.select();
     };
 
     toolbar.querySelectorAll('.paper-tool-copy').forEach((button) => {
@@ -83,104 +75,109 @@
       button.addEventListener('click', async () => {
         const value = button.dataset.copyText || '';
         const label = button.dataset.copyLabel || '论文标识';
-        if (!value) {
-          announce('没有可复制的论文标识。');
-          return;
-        }
+        if (!value) { announce('没有可复制的论文标识。'); return; }
         try {
           await writeClipboard(value);
-          announce(`已复制 ${label}：${value}`);
+          announce('已复制 ' + label + '：' + value);
         } catch (_error) {
-          announce(`复制失败，请手动选择：${value}`);
+          showFallback(value);
+          announce('浏览器不允许自动复制，请手动复制下方已选中的文本。');
         }
       });
     });
 
-    const selectionButton = toolbar.querySelector('.paper-tool--selection');
-    if (selectionButton) {
-      const field = toolbar.querySelector('.paper-tools__selected-text');
-      const panel = toolbar.querySelector('.paper-tools__selection-panel');
-      const quickButton = toolbar.querySelector('.paper-tool--selection-quick');
-      const promptButton = toolbar.querySelector('.paper-tool--selection-copy');
-      const article = toolbar.closest('article');
-      const content = article && article.querySelector('.post-content');
-      let capturedText = '';
-      const captureSelection = () => {
-        const selection = window.getSelection && window.getSelection();
-        if (!selection || selection.isCollapsed || !selection.rangeCount || !content) return;
-        // Both ends must belong to this article's body, not navigation or tool labels.
-        if (!content.contains(selection.anchorNode) || !content.contains(selection.focusNode)) return;
-        const text = selection.toString();
-        if (!text.trim()) return;
-        capturedText = text;
-        if (field && document.activeElement !== field) field.value = text;
-        if (quickButton) quickButton.hidden = false;
-      };
-      document.addEventListener('selectionchange', captureSelection);
-      // Capture before a mouse click clears selection; touch and keyboard use the cache.
-      if (panel) {
-        panel.addEventListener('pointerdown', captureSelection);
-        panel.addEventListener('toggle', () => {
-          if (panel.open && field && capturedText && !field.value) field.value = capturedText;
-        });
-      }
-      if (quickButton) quickButton.addEventListener('click', () => {
-        if (!panel) return;
-        panel.open = true;
-        quickButton.hidden = true;
-        panel.scrollIntoView({ block: 'center', behavior: 'auto' });
-        if (field) field.focus({ preventScroll: true });
-      });
-      if (promptButton) {
-        promptButton.hidden = false;
-        promptButton.addEventListener('click', async () => {
-          try {
-            const selected = normalizeSelection(field ? field.value : capturedText);
-            const prompt = `请用适合初学研究者的语言解释以下阅读选段。先解释术语，再说明机制与前提；请区分段落已有信息和需要查证的推测。\n选段来源：本站博客导读或用户粘贴，未核验为原论文逐字引用。\n\n${selected}`;
-            try {
-              await writeClipboard(prompt);
-              announce('已复制解释提问，可以粘贴到你使用的 AI 工具。');
-            } catch (_error) {
-              // Keep the full prompt selectable when clipboard APIs are unavailable.
-              const fallback = toolbar.querySelector('.paper-tools__copy-fallback');
-              if (fallback) {
-                fallback.hidden = false;
-                fallback.value = prompt;
-                fallback.focus();
-                fallback.select();
-              }
-              announce('浏览器不允许复制，请手动复制下方已选中的提问。');
-            }
-          } catch (error) {
-            announce(error instanceof Error ? error.message : '无法生成提问。');
-          }
-        });
-      }
-      selectionButton.hidden = false;
-      selectionButton.addEventListener('click', () => {
+    toolbar.querySelectorAll('.paper-tool-citation').forEach((button) => {
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        let text;
+        let objectUrl;
+        let link;
         try {
-          const target = buildSelectionUrl(
-            selectionButton.dataset.companionUrl,
-            field ? field.value : capturedText
-          );
-          const opened = window.open('', '_blank');
-          if (!opened) {
-            announce('浏览器阻止了新窗口，请允许弹窗后重试。');
-            return;
-          }
-          try {
-            opened.opener = null;
-            opened.location.replace(target);
-          } catch (_error) {
-            try { opened.close(); } catch (_closeError) { /* The browser owns the popup. */ }
-            announce('无法安全打开本机 companion，请检查浏览器设置后重试。');
-            return;
-          }
-          announce('已尝试打开本机 AI 确认页。若新页无法连接，请先在同一台电脑运行 npm run paper:rethink。');
+          const format = button.dataset.citationFormat;
+          const id = button.dataset.citationId;
+          text = citationText(id, button.dataset.citationTitle, format);
+          objectUrl = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+          link = document.createElement('a');
+          link.href = objectUrl;
+          link.download = 'arxiv_' + id.replace(/[^a-z0-9]/g, '_') + '.' + format;
+          document.body.appendChild(link);
+          link.click();
+          announce('已请求浏览器下载简要引用；作者与出版日期未提供，请到 arXiv 核对补全。');
         } catch (error) {
-          announce(error instanceof Error ? error.message : '无法打开选中段落。');
+          if (text) {
+            showFallback(text);
+            announce('浏览器未能启动下载，请手动复制下方引用文本并保存。');
+          } else {
+            announce(error instanceof Error ? error.message : '无法生成引用。');
+          }
+        } finally {
+          if (link) link.remove();
+          if (objectUrl) window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
         }
       });
+    });
+
+    const promptButton = toolbar.querySelector('.paper-tool--selection-copy');
+    const field = toolbar.querySelector('.paper-tools__selected-text');
+    if (!promptButton || !field) return;
+    const sourceLines = [];
+    const paperTitle = String(toolbar.dataset.paperTitle || '').replace(/[\r\n]+/g, ' ').trim();
+    if (paperTitle) sourceLines.push('论文 / 页面标题：' + paperTitle);
+    try {
+      const pageUrl = new URL(toolbar.dataset.paperUrl);
+      if (['https:', 'http:'].includes(pageUrl.protocol) && !pageUrl.username && !pageUrl.password) {
+        sourceLines.push('博客导读：' + pageUrl.href);
+      }
+    } catch (_error) { /* An absent source link must not prevent copying the selected text. */ }
+    if (isArxivId(toolbar.dataset.paperArxivId)) {
+      sourceLines.push('arXiv 原文：https://arxiv.org/abs/' + toolbar.dataset.paperArxivId);
     }
+    const panel = toolbar.querySelector('.paper-tools__selection-panel');
+    const quickButton = toolbar.querySelector('.paper-tool--selection-quick');
+    const article = toolbar.closest('article');
+    const content = article && article.querySelector('.post-content');
+    let capturedText = '';
+    const captureSelection = () => {
+      const selection = window.getSelection && window.getSelection();
+      if (!selection || selection.isCollapsed || !selection.rangeCount || !content) return;
+      if (!content.contains(selection.anchorNode) || !content.contains(selection.focusNode)) return;
+      const text = selection.toString();
+      if (!text.trim()) return;
+      capturedText = text;
+      if (document.activeElement !== field) field.value = text;
+      if (quickButton) quickButton.hidden = false;
+    };
+    document.addEventListener('selectionchange', captureSelection);
+    if (panel) {
+      panel.addEventListener('pointerdown', captureSelection);
+      panel.addEventListener('toggle', () => {
+        if (panel.open && capturedText && !field.value) field.value = capturedText;
+      });
+    }
+    if (quickButton) quickButton.addEventListener('click', () => {
+      if (!panel) return;
+      panel.open = true;
+      quickButton.hidden = true;
+      panel.scrollIntoView({ block: 'center', behavior: 'auto' });
+      field.focus({ preventScroll: true });
+    });
+    promptButton.hidden = false;
+    promptButton.addEventListener('click', async () => {
+      try {
+        const selected = normalizeSelection(field.value);
+        const prompt = '请用适合初学研究者的语言解释以下阅读选段。先解释术语，再说明机制与前提；请区分段落已有信息和需要查证的推测。\n'
+          + sourceLines.join('\n') + '\n'
+          + '选段来源：本站博客导读或用户粘贴，未核验为原论文逐字引用。\n\n' + selected;
+        try {
+          await writeClipboard(prompt);
+          announce('已复制 AI 提问，可以粘贴到你使用的 AI 工具。');
+        } catch (_error) {
+          showFallback(prompt);
+          announce('浏览器不允许复制，请手动复制下方已选中的提问。');
+        }
+      } catch (error) {
+        announce(error instanceof Error ? error.message : '无法生成提问。');
+      }
+    });
   });
 })();
