@@ -1,58 +1,22 @@
-{{- define "main" }}
-
-<div class="research-terms">
-{{- if .Title }}
-<header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-        {{ .Description }}
-    </div>
-    {{- end }}
-</header>
-{{- end }}
-
-<p class="research-terms__intro">从研究任务、方法和属性进入论文库。标签由历史内容持续归一化；优先选择高频主题，组合检索可前往论文库。</p>
-<div class="research-terms__search">
-  <label for="term-filter" class="rw-eyebrow">筛选主题</label>
-  <input id="term-filter" type="search" placeholder="输入中文或英文标签" autocomplete="off">
-</div>
-
-<ul class="terms-tags" id="research-term-list">
-    {{- $type := .Type }}
-    {{- $translations := hugo.Data.tag_translations }}
-    {{- range $key, $value := .Data.Terms.Alphabetical }}
-    {{- $name := .Name }}
-    {{- $count := .Count }}
-    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
-    {{- $en := index $translations .LinkTitle }}
-    <li>
-        <a href="{{ .Permalink }}">
-            {{- if $en }}
-            {{ .LinkTitle }} <span style="opacity:0.6;font-size:0.75em;margin-left:0.3em;">· {{ $en }}</span>
-            {{- else }}
-            {{ .LinkTitle }}
-            {{- end }}
-            <sup><strong><sup>{{ $count }}</sup></strong></sup>
-        </a>
-    </li>
-    {{- end }}
-    {{- end }}
-</ul>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var input = document.getElementById('term-filter');
-  var list = document.getElementById('research-term-list');
-  if (!input || !list) return;
-  input.addEventListener('input', function () {
-    var query = input.value.trim().toLocaleLowerCase();
-    list.querySelectorAll('li').forEach(function (item) {
-      item.hidden = query && !item.textContent.toLocaleLowerCase().includes(query);
-    });
-  });
-});
-</script>
-
-{{- end }}{{/* end main */ -}}
+{{ define "main" }}
+{{ $categories := eq .Type "categories" }}
+<section class="research-terms">
+  <header class="page-header">
+    <div class="rw-eyebrow">{{ if $categories }}按来源浏览{{ else }}按方向浏览{{ end }}</div>
+    <h1>{{ if $categories }}内容分类{{ else }}研究主题{{ end }}</h1>
+    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}按收录数量排列，输入中文或英文快速找到研究方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合检索。</p>
+  </header>
+  <div class="research-terms__search">
+    <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选主题{{ end }}</label>
+    <input id="term-filter" type="search" placeholder="输入中文或英文" autocomplete="off">
+  </div>
+  <p class="research-terms__count" id="term-count" role="status">共 {{ len .Data.Terms }} 项</p>
+  <ul class="terms-tags" id="research-term-list">
+    {{ $translations := hugo.Data.tag_translations }}
+    {{ range .Data.Terms.ByCount }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}{{ with index $translations .Page.LinkTitle }}<span class="term-translation">{{ . }}</span>{{ end }}<span class="term-count">{{ .Count }}</span></a></li>
+    {{ end }}
+  </ul>
+  <p class="research-library__empty" id="term-empty" hidden>没有匹配的条目。试试更短的关键词，或<a href="{{ "papers/" | relURL }}">搜索论文库</a>。</p>
+</section>
+{{ end }}

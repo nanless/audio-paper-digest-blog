@@ -1,0 +1,48 @@
+{{- /* Shared identity and display fields for pages, lists and the search index.
+     Structured fields match publish-to-blog.py's researcher-workbench contract.
+     Aggregate pages never inherit a paper's identity from their body links. */ -}}
+{{- $baseName := "" -}}
+{{- with .File }}{{ $baseName = .BaseFileName }}{{ end -}}
+{{- $pageType := "page" -}}
+{{- $isConferenceTask := false -}}
+{{- if eq .Section "posts" -}}
+  {{- if findRE `^(icassp|iclr|icml)[0-9]{4}-(summary|task-.+)$` $baseName 1 -}}
+    {{- $pageType = "conference" -}}
+    {{- $isConferenceTask = in $baseName "-task-" -}}
+  {{- else if or (eq .Params.paper_digest_page_type "index") (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1) -}}
+    {{- $pageType = "daily" -}}
+  {{- else -}}
+    {{- $pageType = "paper" -}}
+  {{- end -}}
+{{- end -}}
+{{- $headline := .Title -}}
+{{- if ne $pageType "page" -}}
+  {{- $headings := findRE `(?m)^#[ \t]+[^\n]+` .RawContent 1 -}}
+  {{- with $headings }}{{ $headline = replaceRE `^📄[ \t]*` "" (replaceRE `^#[ \t]+` "" (index . 0)) }}{{ end -}}
+{{- end -}}
+{{- $originalTitle := .Title -}}
+{{- $score := "" -}}
+{{- $task := "" -}}
+{{- $arxivId := "" -}}
+{{- $oneSentence := "" -}}
+{{- if eq $pageType "paper" -}}
+  {{- $headline = .Params.paper_digest_reader_title | default $headline -}}
+  {{- $originalTitle = .Params.paper_digest_original_title | default .Title -}}
+  {{- $description := .Description | default "" -}}
+  {{- $matches := findRE `[0-9]+(\.[0-9]+)?[ \t]*/[ \t]*10\b` $description 1 -}}
+  {{- with $matches }}{{ $score = replaceRE `[ \t]*/[ \t]*10$` "" (index . 0) }}{{ end -}}
+  {{- if isset .Params "paper_digest_score" }}{{ $score = printf "%v" .Params.paper_digest_score }}{{ end -}}
+  {{- $task = .Params.paper_digest_primary_task | default "" -}}
+  {{- if and (not $task) $score -}}
+    {{- $parts := split $description "|" -}}
+    {{- if gt (len $parts) 1 }}{{ $task = strings.TrimSpace (index $parts 0) }}{{ end -}}
+  {{- end -}}
+  {{- if not $task }}{{ with .Params.tags }}{{ $task = index . 0 }}{{ end }}{{ end -}}
+  {{- $arxivId = .Params.paper_digest_arxiv_id | default "" -}}
+  {{- if not $arxivId -}}
+    {{- $slugId := findRE `[0-9]{4}-[0-9]{4,5}$` $baseName 1 -}}
+    {{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ end -}}
+  {{- end -}}
+  {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
+{{- end -}}
+{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "arxivId" $arxivId "oneSentence" $oneSentence) -}}

@@ -7,7 +7,7 @@ noRating: true
 
 # 会议论文集
 
-会议页将大规模论文集整理为总览、任务方向和单篇解读。论文数量以会议总览中的 canonical 论文为准；分类页还可能包含导航聚合页。
+从会议总览查看研究方向和论文排行，再进入任务专题或单篇解读。分类列表同时收录总览、专题和论文，条目数不等于论文数。
 
 ## ICASSP 2026
 
@@ -15,7 +15,7 @@ noRating: true
 
 覆盖语音识别、增强、合成、分离、空间音频、音乐信息检索与音频信号处理等方向。
 
-[进入 ICASSP 2026 →](../categories/icassp-2026/)
+[阅读会议总览 →](../posts/icassp2026-summary/) · [浏览全部条目](../categories/icassp-2026/)
 
 ## ICLR 2026
 
@@ -23,7 +23,7 @@ noRating: true
 
 聚焦表征学习、生成模型、自监督学习、多模态模型及其在语音与音频中的应用。
 
-[进入 ICLR 2026 →](../categories/iclr-2026/)
+[阅读会议总览 →](../posts/iclr2026-summary/) · [浏览全部条目](../categories/iclr-2026/)
 
 ## ICML 2026
 
@@ -31,7 +31,7 @@ noRating: true
 
 覆盖机器学习方法、音频基础模型、多模态理解与生成、评测和数据资源。
 
-[进入 ICML 2026 →](../categories/icml-2026/)
+[阅读会议总览 →](../posts/icml2026-summary/) · [浏览全部条目](../categories/icml-2026/)
 
 ## 如何高效阅读会议论文集
 

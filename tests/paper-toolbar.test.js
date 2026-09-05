@@ -56,10 +56,16 @@ function clickSelection({
   baseUrl,
   selectedText,
   popupResult,
+  captureBeforeClick = false,
+  outsideArticle = false,
 }) {
   const source = readFileSync(join(repo, 'assets', 'js', 'paper-toolbar.js'), 'utf8');
   const status = { textContent: '' };
   let clickHandler;
+  const handlers = {};
+  const field = { value: captureBeforeClick ? '' : selectedText };
+  const bodyNode = {};
+  const content = { contains: (node) => node === bodyNode };
   const button = {
     dataset: { companionUrl: baseUrl },
     addEventListener(type, handler) {
@@ -70,9 +76,11 @@ function clickSelection({
     querySelector(selector) {
       if (selector === '.paper-tools__status') return status;
       if (selector === '.paper-tool--selection') return button;
+      if (selector === '.paper-tools__selected-text') return field;
       return null;
     },
     querySelectorAll() { return []; },
+    closest() { return { querySelector: () => content }; },
   };
   const opened = [];
   const popup = popupResult === undefined ? {
@@ -83,7 +91,11 @@ function clickSelection({
   const window = {
     clearTimeout() {},
     setTimeout() { return 1; },
-    getSelection() { return { toString: () => selectedText }; },
+    getSelection() { return {
+      toString: () => selectedText, rangeCount: 1, isCollapsed: false,
+      anchorNode: outsideArticle ? {} : bodyNode,
+      focusNode: bodyNode,
+    }; },
     open(...args) {
       opened.push(args);
       return popup;
@@ -92,6 +104,7 @@ function clickSelection({
   };
   const document = {
     querySelectorAll(selector) { return selector === '.paper-tools' ? [toolbar] : []; },
+    addEventListener(type, handler) { handlers[type] = handler; },
   };
   vm.runInNewContext(source, {
     document,
@@ -101,6 +114,11 @@ function clickSelection({
     Set,
   });
   assert.equal(typeof clickHandler, 'function');
+  if (captureBeforeClick) {
+    handlers.selectionchange();
+    selectedText = '';
+    handlers.selectionchange();
+  }
   clickHandler();
   return { opened, status: status.textContent, popupResult: popup };
 }
@@ -154,7 +172,13 @@ test('workbench paper renders versioned tools, safe sidecars, companion query, a
   assert.doesNotMatch(html, /<(?:script|link|img|iframe)[^>]+127\.0\.0\.1/i);
   assert.match(html, /npm run paper:rethink/);
   assert.match(html, /docs\/paper-rethink-companion\.md/);
-  assert.match(html, /导入 Zotero（本机确认）/);
+  assert.match(html, /保存到 Zotero/);
+  assert.match(html, /action=zotero/);
+  assert.match(html, /zotero\.org\/download\/connectors/);
+  assert.match(html, /网页不能代你点击浏览器扩展/);
+  assert.match(html, /复制解释提问/);
+  assert.match(html, /<noscript>/);
+  assert.match(html, /<details class=[^>]*paper-tools__local/);
 
   assert.match(html, /name=citation_title content="Paper (?:&|&amp;) Evidence"/);
   assert.match(html, /name=citation_author content="Researcher A"/);
@@ -190,6 +214,10 @@ test('legacy paper degrades to arXiv/PDF/ID tools without invented sidecars or a
   const aiHref = html.match(/href="?(http:\/\/127\.0\.0\.1:43128\/ui\?[^" >]+)"?/)?.[1];
   const aiURL = new URL(aiHref.replaceAll('&amp;', '&'));
   assert.equal(aiURL.searchParams.get('contextUrl'), '');
+  assert.match(aiURL.searchParams.get('pageExcerpt'), /方法.*正文/s);
+  const zoteroHref = html.match(/href="?(http:\/\/127\.0\.0\.1:43128\/ui\?[^" >]*action=zotero)"?/)?.[1];
+  assert.ok(zoteroHref);
+  assert.equal(new URL(zoteroHref.replaceAll('&amp;', '&')).searchParams.has('pageExcerpt'), false);
   const selectionURL = companionDataUrl(html);
   assert.equal(selectionURL.searchParams.get('arxivId'), '2609.09999');
   assert.equal(selectionURL.searchParams.has('selectedText'), false);
@@ -239,6 +267,18 @@ test('paper without a verifiable arXiv ID still gets selected-text AI tools only
   assert.equal(selectionURL.searchParams.get('arxivId'), '');
   assert.equal(selectionURL.searchParams.get('sourceUrl'), '');
   assert.equal(selectionURL.searchParams.get('contextUrl'), '');
+  assert.match(selectionURL.searchParams.get('pageExcerpt'), /需要重新解释的正文段落/);
+});
+
+test('legacy AI entry sends at most 1200 existing Unicode characters, and selection replaces the excerpt', () => {
+  const body = '汉字摘要'.repeat(500);
+  const html = renderFixture('title: "Legacy"\ndate: 2026-09-05\nhiddenInHomeList: true', body);
+  const url = companionDataUrl(html);
+  assert.equal(url.searchParams.get('pageExcerpt'), body.slice(0, 1200));
+  const result = clickSelection({ baseUrl: url.toString(), selectedText: '用户新选段' });
+  const target = new URL(result.popupResult.location.targets[0]);
+  assert.equal(target.searchParams.get('selectedText'), '用户新选段');
+  assert.equal(target.searchParams.has('pageExcerpt'), false);
 });
 
 test('off-origin or noncanonical sidecar URLs are not rendered or sent to companion', () => {
@@ -280,7 +320,7 @@ test('selected-text action normalizes text and opens only the fixed local compan
   assert.deepEqual([...url.searchParams.keys()].sort(), [
     'arxivId', 'contextUrl', 'selectedText', 'sourceUrl', 'title',
   ]);
-  assert.match(result.status, /已在本机 companion/);
+  assert.match(result.status, /已尝试打开本机 AI 确认页/);
 });
 
 test('selected-text action enforces empty, control, character, and encoded URL limits', () => {
@@ -296,12 +336,24 @@ test('selected-text action enforces empty, control, character, and encoded URL l
     ['   \r\n  ', /请先/],
     ['safe\u0000unsafe', /控制字符/],
     ['a'.repeat(2001), /不能超过 2000/],
-    ['汉'.repeat(1000), /编码后过长/],
   ]) {
     const result = clickSelection({ baseUrl, selectedText });
     assert.equal(result.opened.length, 0);
     assert.match(result.status, message);
   }
+});
+
+test('2000 Chinese characters survive URI encoding and article selection survives click collapse', () => {
+  const baseUrl = 'http://127.0.0.1:43128/ui?title=Paper&arxivId=2609.01234&sourceUrl=&contextUrl=';
+  const result = clickSelection({ baseUrl, selectedText: '汉'.repeat(2000), captureBeforeClick: true });
+  assert.equal(result.opened.length, 1);
+  assert.equal(new URL(result.popupResult.location.targets[0]).searchParams.get('selectedText'), '汉'.repeat(2000));
+  const outside = clickSelection({ baseUrl, selectedText: 'toolbar or navigation', captureBeforeClick: true, outsideArticle: true });
+  assert.equal(outside.opened.length, 0);
+  assert.match(outside.status, /请先/);
+  const longUrl = clickSelection({ baseUrl: baseUrl.replace('title=Paper', `title=${'x'.repeat(33000)}`), selectedText: '正文' });
+  assert.equal(longUrl.opened.length, 0);
+  assert.match(longUrl.status, /编码后过长/);
 });
 
 test('selected-text action rejects altered routes, credentials, duplicate or secret parameters', () => {
@@ -346,4 +398,69 @@ test('selected-text action closes a popup when safe navigation fails', () => {
   assert.equal(popup.opener, null);
   assert.equal(popup.closed, true);
   assert.match(result.status, /无法安全打开/);
+});
+
+async function copyAction({ prompt = false, legacySuccess = false }) {
+  const source = readFileSync(join(repo, 'assets/js/paper-toolbar.js'), 'utf8');
+  const status = { textContent: '' };
+  const selectedField = { value: '这是论文的机制说明。' };
+  const fallback = { hidden: true, focus() {}, select() { this.selected = true; } };
+  const handlers = {};
+  const button = (name) => ({
+    hidden: true, dataset: { copyText: '2609.01234', copyLabel: 'arXiv ID' },
+    addEventListener(type, handler) { handlers[`${name}:${type}`] = handler; },
+  });
+  const idButton = button('id');
+  const promptButton = button('prompt');
+  const selectionButton = button('selection');
+  const toolbar = {
+    querySelector(selector) {
+      return {
+        '.paper-tools__status': status,
+        '.paper-tool--selection': selectionButton,
+        '.paper-tools__selected-text': selectedField,
+        '.paper-tool--selection-copy': promptButton,
+        '.paper-tools__copy-fallback': fallback,
+      }[selector] || null;
+    },
+    querySelectorAll() { return [idButton]; },
+    closest() { return { querySelector() { return null; } }; },
+  };
+  let removed = false;
+  let legacyCalls = 0;
+  const document = {
+    querySelectorAll() { return [toolbar]; },
+    addEventListener() {},
+    body: { appendChild() {} },
+    createElement() { return { setAttribute() {}, style: {}, select() {}, remove() { removed = true; } }; },
+    execCommand() { legacyCalls += 1; return legacySuccess; },
+  };
+  vm.runInNewContext(source, {
+    document,
+    navigator: { clipboard: { writeText: async () => { throw new Error('permission denied'); } } },
+    window: { isSecureContext: true },
+    URL, Set,
+  });
+  await handlers[prompt ? 'prompt:click' : 'id:click']();
+  return { status: status.textContent, fallback, legacyCalls, removed, idButton, promptButton };
+}
+
+test('clipboard permission failure retries legacy copy and removes the temporary field', async () => {
+  const result = await copyAction({ legacySuccess: true });
+  assert.equal(result.legacyCalls, 1);
+  assert.equal(result.removed, true);
+  assert.equal(result.idButton.hidden, false);
+  assert.match(result.status, /已复制 arXiv ID/);
+});
+
+test('copy prompt has a selectable manual fallback when both clipboard methods fail', async () => {
+  const result = await copyAction({ prompt: true });
+  assert.equal(result.promptButton.hidden, false);
+  assert.equal(result.removed, true);
+  assert.equal(result.fallback.hidden, false);
+  assert.equal(result.fallback.selected, true);
+  assert.match(result.fallback.value, /初学研究者/);
+  assert.match(result.fallback.value, /这是论文的机制说明/);
+  assert.match(result.fallback.value, /未核验为原论文逐字引用/);
+  assert.match(result.status, /手动复制/);
 });

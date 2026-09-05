@@ -1,0 +1,7 @@
+{{ if (.Param "ShowBreadCrumbs") }}
+<nav class="breadcrumbs" aria-label="当前位置">
+  <a href="{{ site.Home.RelPermalink }}">首页</a>
+  {{ if eq .Section "posts" }}<span aria-hidden="true"> › </span><a href="{{ "papers/" | relURL }}">论文与速递</a>{{ end }}
+  {{ if eq .Kind "term" }}<span aria-hidden="true"> › </span><a href="{{ printf "%s/" .Type | relURL }}">{{ if eq .Type "categories" }}分类{{ else }}研究主题{{ end }}</a>{{ end }}
+</nav>
+{{ end }}

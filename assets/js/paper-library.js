@@ -3,8 +3,74 @@
 
   var PAGE_SIZE = 30;
 
+  function plainText(value) {
+    return String(value || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function searchText(value) {
+    return plainText(value).normalize('NFKC').toLocaleLowerCase();
+  }
+
+  function entryDate(value) {
+    var match = plainText(value).match(/\b(20\d{2}-\d{2}-\d{2})\b/);
+    if (!match) return '';
+    var parsed = new Date(match[1] + 'T00:00:00Z');
+    return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === match[1] ? match[1] : '';
+  }
+
+  function classify(permalink, title) {
+    var match = new URL(permalink).pathname.match(/\/posts\/([^/]+)\/?$/);
+    if (!match) return 'other';
+    var slug = match[1];
+    if (/^\d{4}-\d{2}-\d{2}$/.test(slug) || /论文速递\s+\d{4}-\d{2}-\d{2}/.test(title)) return 'daily';
+    if (/^(icassp|iclr|icml)\d{4}-(summary|task-.+)$/.test(slug)) return 'conference';
+    return 'paper';
+  }
+
+  function normalizeEntry(item, origin, basePath) {
+    if (!item || typeof item !== 'object') return null;
+    var permalink = safeSiteUrl(item.permalink, origin, basePath);
+    if (!permalink) return null;
+    var originalTitle = plainText(item.originalTitle || item.title);
+    var title = plainText(item.titleZh || item.title) || '未命名论文';
+    var summary = plainText(item.summary);
+    var date = entryDate(item.date) || entryDate(permalink + ' ' + title);
+    var type = ['paper', 'daily', 'conference', 'page'].includes(item.pageType)
+      ? item.pageType : classify(permalink, title);
+    var rawScore = item.score;
+    if (rawScore === undefined || rawScore === null || rawScore === '') {
+      var match = summary.match(/(?:^|[^\d.])([0-9]+(?:\.[0-9]+)?)\s*\/\s*10\b/);
+      rawScore = match ? match[1] : '';
+    }
+    var score = rawScore !== '' && /^(?:\d+(?:\.\d+)?)$/.test(String(rawScore)) ? Number(rawScore) : -1;
+    if (!Number.isFinite(score) || score < 0 || score > 10 || type !== 'paper') score = -1;
+    var task = plainText(item.task);
+    var arxivId = plainText(item.arxivId);
+    var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
+    var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
+    return {
+      title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
+      type: type, date: date, year: date.slice(0, 4), score: score, task: task, arxivId: arxivId,
+      searchText: searchText([title, originalTitle, item.title, summary, permalink, task, arxivId].concat(tags, categories).join(' '))
+    };
+  }
+
+  function filterEntries(entries, state) {
+    var tokens = searchText(state.query).split(/\s+/).filter(Boolean);
+    return entries.filter(function (entry) {
+      return (state.type === 'all' || entry.type === state.type)
+        && (state.year === 'all' || entry.year === state.year)
+        && tokens.every(function (token) { return entry.searchText.includes(token); });
+    }).sort(function (a, b) {
+      var tie = a.title.localeCompare(b.title, 'zh-CN') || a.permalink.localeCompare(b.permalink);
+      if (state.sort === 'title') return tie;
+      return (state.sort === 'score' ? b.score - a.score : 0) || b.date.localeCompare(a.date) || tie;
+    });
+  }
+
   function safeSiteUrl(value, origin, siteBasePath) {
     try {
+      if (typeof value !== 'string' || !value.trim() || !siteBasePath || !siteBasePath.endsWith('/')) return null;
       var url = new URL(value, origin);
       if (!/^https?:$/.test(url.protocol)) return null;
       if (url.origin !== origin) return null;
@@ -17,7 +83,7 @@
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { safeSiteUrl: safeSiteUrl };
+    module.exports = { safeSiteUrl: safeSiteUrl, normalizeEntry: normalizeEntry, filterEntries: filterEntries, entryDate: entryDate };
   }
 
   if (typeof document === 'undefined') return;
@@ -43,51 +109,6 @@
   var filteredEntries = [];
   var visibleCount = PAGE_SIZE;
 
-  function plainText(value) {
-    return String(value || '').replace(/\s+/g, ' ').trim();
-  }
-
-  function classify(permalink, title) {
-    var url = permalink || '';
-    var match = url.match(/\/posts\/([^/]+)\/?$/);
-    if (!match) return 'other';
-    var slug = match[1];
-    if (/^\d{4}-\d{2}-\d{2}$/.test(slug)) return 'daily';
-    if (/^(icassp|iclr|icml)2026-summary$/.test(slug) || /^(icassp|iclr)2026-task-/.test(slug)) return 'conference';
-    if (/论文速递\s+\d{4}-\d{2}-\d{2}/.test(title || '')) return 'daily';
-    return 'paper';
-  }
-
-  function entryDate(permalink, title) {
-    var text = (permalink || '') + ' ' + (title || '');
-    var match = text.match(/(20\d{2})-(\d{2})-(\d{2})/);
-    return match ? match[0] : '';
-  }
-
-  function entryScore(text) {
-    var match = (text || '').match(/([0-9]+(?:\.[0-9]+)?)\s*\/\s*10/);
-    return match ? Number(match[1]) : -1;
-  }
-
-  function normalizeEntry(item) {
-    if (!item || typeof item !== 'object') return null;
-    var permalink = safeSiteUrl(item.permalink, window.location.origin, siteBasePath);
-    if (!permalink) return null;
-    var title = plainText(item.title) || '未命名论文';
-    var summary = plainText(item.summary);
-    var date = entryDate(permalink, title);
-    return {
-      title: title,
-      permalink: permalink,
-      summary: summary,
-      type: classify(permalink, title),
-      date: date,
-      year: date ? date.slice(0, 4) : '',
-      score: entryScore(summary),
-      searchText: (title + ' ' + summary + ' ' + permalink).toLocaleLowerCase()
-    };
-  }
-
   function typeLabel(type) {
     return type === 'daily' ? '每日速递' : type === 'conference' ? '会议专题' : '论文解读';
   }
@@ -95,9 +116,12 @@
   function readState() {
     var params = new URLSearchParams(window.location.search);
     queryInput.value = params.get('q') || '';
-    typeSelect.value = params.get('type') || 'paper';
+    typeSelect.value = ['paper', 'daily', 'conference', 'all'].includes(params.get('type')) ? params.get('type') : 'paper';
     yearSelect.value = params.get('year') || 'all';
-    sortSelect.value = params.get('sort') || 'newest';
+    if (!yearSelect.value) yearSelect.value = 'all';
+    sortSelect.value = ['newest', 'score', 'title'].includes(params.get('sort')) ? params.get('sort') : 'newest';
+    var page = Number(params.get('page'));
+    visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
   }
 
   function writeState() {
@@ -106,7 +130,8 @@
     if (typeSelect.value !== 'paper') params.set('type', typeSelect.value);
     if (yearSelect.value !== 'all') params.set('year', yearSelect.value);
     if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
-    var suffix = params.toString() ? '?' + params.toString() : window.location.pathname;
+    if (visibleCount > PAGE_SIZE) params.set('page', Math.ceil(visibleCount / PAGE_SIZE));
+    var suffix = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
     window.history.replaceState(null, '', suffix);
   }
 
@@ -123,6 +148,13 @@
     heading.appendChild(link);
     body.appendChild(heading);
 
+    if (entry.originalTitle && entry.originalTitle !== entry.title) {
+      var original = document.createElement('p');
+      original.className = 'library-result__original-title';
+      original.textContent = entry.originalTitle;
+      body.appendChild(original);
+    }
+
     if (entry.summary) {
       var summary = document.createElement('p');
       summary.textContent = entry.summary;
@@ -131,7 +163,7 @@
 
     var meta = document.createElement('div');
     meta.className = 'library-result__meta';
-    meta.textContent = typeLabel(entry.type) + (entry.date ? ' · ' + entry.date : '');
+    meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
     article.appendChild(body);
 
@@ -152,6 +184,19 @@
       var empty = document.createElement('div');
       empty.className = 'research-library__empty';
       empty.textContent = '没有符合条件的条目。请减少筛选条件或换一个关键词。';
+      var reset = document.createElement('button');
+      reset.type = 'button';
+      reset.className = 'rw-action';
+      reset.textContent = '清除筛选';
+      reset.addEventListener('click', function () {
+        queryInput.value = '';
+        typeSelect.value = 'paper';
+        yearSelect.value = 'all';
+        sortSelect.value = 'newest';
+        applyFilters();
+        queryInput.focus();
+      });
+      empty.appendChild(reset);
       resultsNode.appendChild(empty);
     } else {
       var fragment = document.createDocumentFragment();
@@ -162,25 +207,11 @@
     moreButton.hidden = visible.length >= filteredEntries.length;
   }
 
-  function applyFilters() {
-    var tokens = queryInput.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    var type = typeSelect.value;
-    var year = yearSelect.value;
-    filteredEntries = allEntries.filter(function (entry) {
-      if (type !== 'all' && entry.type !== type) return false;
-      if (year !== 'all' && entry.year !== year) return false;
-      return tokens.every(function (token) { return entry.searchText.indexOf(token) !== -1; });
+  function applyFilters(preservePage) {
+    filteredEntries = filterEntries(allEntries, {
+      query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value
     });
-
-    if (sortSelect.value === 'title') {
-      filteredEntries.sort(function (a, b) { return a.title.localeCompare(b.title, 'zh-CN'); });
-    } else if (sortSelect.value === 'score') {
-      filteredEntries.sort(function (a, b) { return b.score - a.score || b.date.localeCompare(a.date); });
-    } else {
-      filteredEntries.sort(function (a, b) { return b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'zh-CN'); });
-    }
-
-    visibleCount = PAGE_SIZE;
+    if (preservePage !== true) visibleCount = PAGE_SIZE;
     quickButtons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
     });
@@ -212,8 +243,12 @@
   });
   moreButton.addEventListener('click', function () {
     visibleCount += PAGE_SIZE;
+    writeState();
     render();
   });
+  var form = document.getElementById('paper-library-filters');
+  if (form) form.addEventListener('submit', function (event) { event.preventDefault(); applyFilters(); });
+  window.addEventListener('popstate', function () { readState(); applyFilters(true); });
 
   function renderLoadError() {
     resultsNode.replaceChildren();
@@ -222,6 +257,7 @@
     empty.textContent = '静态索引暂时无法载入。请使用经典搜索或归档继续浏览。';
     resultsNode.appendChild(empty);
     countNode.textContent = '论文索引载入失败';
+    moreButton.hidden = true;
   }
 
   if (!indexUrl || !safeSiteUrl(indexUrl.href, window.location.origin, siteBasePath)) {
@@ -237,14 +273,16 @@
     .then(function (items) {
       var seen = new Set();
       if (!Array.isArray(items)) throw new Error('Index must be an array');
-      allEntries = items.map(normalizeEntry).filter(function (entry) {
-        if (!entry || entry.type === 'other' || seen.has(entry.permalink)) return false;
+      allEntries = items.map(function (item) {
+        return normalizeEntry(item, window.location.origin, siteBasePath);
+      }).filter(function (entry) {
+        if (!entry || !['paper', 'daily', 'conference'].includes(entry.type) || seen.has(entry.permalink)) return false;
         seen.add(entry.permalink);
         return true;
       });
       populateYears();
       readState();
-      applyFilters();
+      applyFilters(true);
     })
     .catch(renderLoadError);
 }());

@@ -1,20 +1,28 @@
-{{- with site.Params.homeInfoParams }}
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $editions := slice }}
+{{- range $posts }}{{ if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
+{{- $latest := first 1 (sort $editions "Date" "desc") }}
 <section class="research-home-hero" aria-labelledby="research-home-title">
   <div>
-    <div class="rw-eyebrow">Audio Research Intelligence</div>
-    <h1 id="research-home-title">把每日论文变成可检索的研究信号</h1>
-    <p class="research-home-hero__lead">面向中文语音、音乐与音频研究者：从最新论文中快速看见任务、方法、关键结果、复现资源与明确局限。</p>
+    <div class="rw-eyebrow">语音 · 音乐 · 音频研究</div>
+    <h1 id="research-home-title">找到值得细读的下一篇论文</h1>
+    <p class="research-home-hero__lead">先看每日速递，再按研究方向检索。用中文解读理解方法、实验与局限，随时回到原文核对。</p>
+    <form class="home-search" action="{{ "papers/" | relURL }}" role="search">
+      <label class="sr-only" for="home-query">搜索论文</label>
+      <input id="home-query" type="search" name="q" placeholder="中文 / English / arXiv ID" required>
+      <button class="rw-action rw-action--primary" type="submit">搜索论文</button>
+    </form>
     <div class="research-home-hero__actions">
-      <a class="rw-action rw-action--primary" href="{{ "papers/" | absURL }}">进入论文库</a>
-      <a class="rw-action" href="{{ "search/" | absURL }}">搜索论文</a>
+      {{ range $latest }}<a class="rw-action" href="{{ .RelPermalink }}">最新速递 · {{ .Date.Format "01-02" }}</a>{{ end }}
+      <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       <a class="rw-action" href="{{ "index.xml" | absURL }}">RSS 订阅</a>
     </div>
   </div>
   <aside class="research-home-hero__panel" aria-label="研究快捷入口">
     <div>
-      <div class="research-home-hero__status">持续更新</div>
-      <strong>研究快捷入口</strong>
-      <p>从任务和会议切入，比在时间流里逐页翻找更高效。</p>
+      <div class="research-home-hero__status">{{ range $latest }}最新收录 {{ .Date.Format "2006-01-02" }}{{ end }}</div>
+      <strong>从你关注的方向开始</strong>
+      <p>语音基础任务、音频生成与会议专题。</p>
     </div>
     <div class="research-shortcuts">
       <a class="research-shortcut" href="{{ "tags/语音识别/" | absURL }}">语音识别<span>ASR · 低资源 · 多语言</span></a>
@@ -24,4 +32,3 @@
     </div>
   </aside>
 </section>
-{{- end }}

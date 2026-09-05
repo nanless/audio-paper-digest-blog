@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="research-search">
+  <header class="page-header">
+    <div class="rw-eyebrow">全站检索</div>
+    <h1>搜索论文</h1>
+    <p class="research-terms__intro">支持中英文题目、研究方向与 arXiv ID 的模糊匹配。需要年份、类型或评分筛选？<a href="{{ "papers/" | relURL }}">进入论文库</a>。</p>
+  </header>
+  <div id="searchbox" class="searchbox">
+    <label for="searchInput">关键词</label>
+    <input id="searchInput" placeholder="例如：speech enhancement、语音增强、2609.03620" aria-label="搜索论文" type="search" autocomplete="off" maxlength="200">
+    <ul id="searchResults" class="searchResults" aria-label="搜索结果"></ul>
+  </div>
+  <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">速递归档</a>或<a href="{{ "tags/" | relURL }}">研究主题</a>阅读论文。</p></noscript>
+</section>
+{{ end }}

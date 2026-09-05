@@ -41,8 +41,10 @@
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = slice }}
+{{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{- if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $pages = $pages | append . }}{{ end }}
+{{- end }}
 {{- $pages = sort $pages "Date" "desc" }}
 {{- end }}
 
@@ -59,7 +61,7 @@
 {{- partial "home_info.html" . }}
 <div class="research-list-heading">
   <div>
-    <div class="rw-eyebrow">Daily Editions</div>
+    <div class="rw-eyebrow">按日期阅读</div>
     <h2>最近论文速递</h2>
   </div>
   <a class="rw-action" href="{{ "archives/" | absURL }}">查看全部归档</a>
@@ -68,6 +70,7 @@
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
+{{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
 
 {{- $class := "post-entry" }}
 
@@ -82,11 +85,11 @@
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <div class="research-entry__kicker">
-    {{- if $.IsHome }}每日研究速递{{ else if eq .Kind `term` }}专题论文{{ else }}研究条目{{ end }}
+    {{- if eq $metadata.pageType "daily" }}每日研究速递{{ else if $metadata.isConferenceTask }}会议任务专题{{ else if eq $metadata.pageType "conference" }}会议总览{{ else if eq $metadata.pageType "paper" }}论文解读{{ else }}研究栏目{{ end }}
   </div>
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      {{- .Title }}
+      {{- $metadata.headline | plainify }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
@@ -99,7 +102,7 @@
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    <p>{{ ($metadata.oneSentence | default .Description | default .Summary) | plainify | htmlUnescape | truncate 180 }}</p>
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
@@ -108,27 +111,28 @@
     <span class="research-entry__cta">阅读 →</span>
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  <a class="entry-link" aria-label="阅读：{{ $metadata.headline | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
-  <nav class="pagination">
+  <nav class="pagination" aria-label="列表分页">
     {{- if $paginator.HasPrev }}
     <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      ← 上一页&nbsp;
       {{- if (.Param "ShowPageNums") }}
       {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
       {{- end }}
     </a>
     {{- end }}
+    <span class="pagination-position">第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 页</span>
     {{- if $paginator.HasNext }}
     <a class="next" href="{{ $paginator.Next.URL | absURL }}">
-      {{- i18n "next_page" }}&nbsp;
+      下一页&nbsp;
       {{- if (.Param "ShowPageNums") }}
       {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
-      {{- end }}&nbsp;»
+      {{- end }} →
     </a>
     {{- end }}
   </nav>

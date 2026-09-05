@@ -1,34 +1,20 @@
 {{- define "main" }}
-{{- $baseName := "" }}
-{{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
-{{- $isDaily := gt (len (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1)) 0 }}
-{{- $isTask := or (hasPrefix $baseName "icassp2026-task-") (hasPrefix $baseName "iclr2026-task-") }}
-{{- $isConferenceSummary := in (slice "icassp2026-summary" "iclr2026-summary" "icml2026-summary") $baseName }}
-{{- $pageType := .Params.paper_digest_page_type | default "" }}
-{{- $isPaper := and (not $isDaily) (not $isTask) (not $isConferenceSummary) (or (eq $pageType "paper") (.Params.hiddenInHomeList | default false)) }}
+{{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+{{- $isDaily := eq $metadata.pageType "daily" }}
+{{- $isTask := $metadata.isConferenceTask }}
+{{- $isConferenceSummary := and (eq $metadata.pageType "conference") (not $isTask) }}
+{{- $isPaper := eq $metadata.pageType "paper" }}
 {{- $isResearchPage := eq .Section "posts" }}
 
 {{- if $isResearchPage }}
-{{- $headline := .Title }}
-{{- $rawHeadings := findRE `(?m)^#[ \t]+[^\n]+` .RawContent 1 }}
-{{- if gt (len $rawHeadings) 0 }}
-  {{- $headline = replaceRE `^#[ \t]+` "" (index $rawHeadings 0) }}
-{{- end }}
+{{- $headline := $metadata.headline }}
 {{- $score := "" }}
-{{- $scoreMatches := findRE `[0-9]+(\.[0-9]+)?/10` (.Description | default "") 1 }}
-{{- if gt (len $scoreMatches) 0 }}{{ $score = index $scoreMatches 0 }}{{ end }}
-{{- $arxivId := .Params.paper_digest_arxiv_id | default "" }}
-{{- if not $arxivId }}
-  {{- $arxivMatches := findRE `arxiv\.org/(abs|html|pdf)/[0-9]{4}\.[0-9]{4,5}` .RawContent 1 }}
-  {{- if gt (len $arxivMatches) 0 }}{{ $arxivId = replaceRE `^.*/` "" (index $arxivMatches 0) }}{{ end }}
-{{- end }}
-{{- $task := "" }}
-{{- with .Description }}
-  {{- $parts := split . "|" }}
-  {{- if gt (len $parts) 1 }}{{ $task = strings.TrimSpace (index $parts 0) }}{{ end }}
-{{- end }}
+{{- with $metadata.score }}{{ $score = printf "%s/10" . }}{{ end }}
+{{- $arxivId := $metadata.arxivId }}
+{{- $task := $metadata.task }}
 
 <article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}">
+  <a class="skip-to-article" href="#article-body">跳到正文</a>
   <header class="research-paper-header">
     {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">
@@ -39,17 +25,14 @@
       {{- end }}
     </div>
     <h1>{{ $headline | markdownify }}</h1>
-    {{- if and (eq $pageType "paper") (ne (plainify $headline) (plainify .Title)) }}
-    <p class="research-paper-header__original" lang="en">{{ .Title }}</p>
+    {{- if and $isPaper (ne (plainify $headline) (plainify $metadata.originalTitle)) }}
+    <p class="research-paper-header__original" lang="en">{{ $metadata.originalTitle }}</p>
     {{- end }}
     <div class="research-paper-header__meta">
       {{ partial "post_meta.html" . }}
       {{- if $task }}<span>&nbsp;·&nbsp;{{ $task }}</span>{{ end }}
     </div>
     <div class="research-paper-header__actions" aria-label="论文操作">
-      {{- if and $arxivId (not $isPaper) }}
-      <a class="rw-action rw-action--primary" href="https://arxiv.org/abs/{{ $arxivId }}" target="_blank" rel="noopener noreferrer">arXiv 原文 ↗</a>
-      {{- end }}
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
     </div>
@@ -69,17 +52,19 @@
     {{- end }}
 
     <div class="research-main">
-      {{- if and .Description (not $score) }}
+      {{- $intro := $metadata.oneSentence }}
+      {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
+      {{- if $intro }}
       <section class="research-tldr" aria-labelledby="research-tldr-title">
         <strong id="research-tldr-title">研究速览</strong>
-        <p>{{ .Description | markdownify }}</p>
+        <p>{{ $intro | markdownify }}</p>
       </section>
       {{- end }}
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
       {{- if .Content }}
       {{- $articleContent := replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" .Content }}
-      <div class="post-content md-content research-article">
+      <div class="post-content md-content research-article" id="article-body" tabindex="-1">
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" $articleContent -}}
         {{- else }}{{ $articleContent | safeHTML }}{{ end }}

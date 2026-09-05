@@ -1,4 +1,4 @@
-<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="阅读进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+{{ if eq .Section "posts" }}<div class="reading-progress" id="reading-progress" role="progressbar" aria-label="阅读进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>{{ end }}
 
 {{- $siteScript := resources.Get "js/site.js" | minify | fingerprint }}
 <script defer src="{{ $siteScript.RelPermalink }}" integrity="{{ $siteScript.Data.Integrity }}" crossorigin="anonymous"></script>

@@ -51,11 +51,16 @@ test('verifyPaperToolCoverage requires rich arXiv tools and safe AI-only fallbac
   const fallback = join(root, 'fallback', 'index.html');
   mkdirSync(join(root, 'rich'), { recursive: true });
   mkdirSync(join(root, 'fallback'), { recursive: true });
-  writeFileSync(rich, '<article class="research-workbench--paper"><section class="paper-tools">重理解选中段落 http://127.0.0.1:43128/ui /v1/paper/pdf?arxivId=1 导入 Zotero（本机确认）</section></article>');
-  writeFileSync(fallback, '<article class="research-workbench--paper"><section class="paper-tools paper-tools--ai-only">重理解选中段落 http://127.0.0.1:43128/ui</section></article>');
+  const selection = '重理解选中段落 http://127.0.0.1:43128/ui paper-tools__selected-text paper-tool--selection-copy paper-tools__copy-fallback npm run paper:rethink <noscript>手动复制选段</noscript>';
+  const localTools = '/v1/paper/pdf?arxivId=1 action=zotero paper-tools__local 网页不能代你点击浏览器扩展 zotero.org/download/connectors <a href="https://arxiv.org/pdf/2609.01234.pdf">PDF</a>';
+  writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
+  writeFileSync(fallback, `<article class="research-workbench--paper"><section class="paper-tools paper-tools--ai-only">${selection}</section></article>`);
   assert.deepEqual(verifyPaperToolCoverage([rich, fallback]), {
     paperPages: 2, selectedTextTools: 2, richArxivTools: 1, aiOnlyFallbacks: 1
   });
+  writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools.replace('href="https://arxiv.org/pdf/2609.01234.pdf"', '')}</section></article>`);
+  assert.throws(() => verifyPaperToolCoverage([rich]), /缺少 PDF\/Zotero/);
+  writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
   writeFileSync(fallback, '<article class="research-workbench--paper">missing</article>');
   assert.throws(() => verifyPaperToolCoverage([rich, fallback]), /缺少选段 AI 工具/);
 });

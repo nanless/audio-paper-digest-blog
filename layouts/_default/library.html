@@ -3,12 +3,12 @@
   <header class="research-library__header">
     <div class="rw-eyebrow">Research Library</div>
     <h1>论文库</h1>
-    <p>从全站静态索引中按关键词、年份与页面角色筛选。当前兼容既有索引字段；任务、分数和资源等结构化筛选将在数据字段可用时渐进增强。</p>
+    <p>检索中英文题目、arXiv ID、研究方向与摘要。按年份和页面类型缩小范围，或按本站评分安排阅读顺序。</p>
   </header>
 
   <form class="research-library__toolbar" id="paper-library-filters" role="search">
     <label>
-      搜索标题与摘要
+      关键词或 arXiv ID
       <input id="library-query" name="q" type="search" placeholder="例如：streaming ASR、语音增强、2609.03620" autocomplete="off">
     </label>
     <label>
@@ -45,7 +45,7 @@
 
   <div class="research-library__status" aria-live="polite">
     <span id="library-count">正在读取静态论文索引…</span>
-    <a href="{{ "search/" | absURL }}">使用经典搜索</a>
+    <a href="{{ "search/" | absURL }}">模糊搜索</a>
   </div>
   <div id="library-results" class="research-library__results" role="list">
     <div class="research-library__loading">正在载入论文索引…</div>

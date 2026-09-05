@@ -2,14 +2,29 @@ import * as params from '@params';
 
 const input = document.getElementById('searchInput');
 const results = document.getElementById('searchResults');
-const indexUrl = new URL('../index.json', window.location.href);
+// Use the search page directory even when a static host has not added its slash.
+const pageUrl = new URL(window.location.href);
+pageUrl.search = '';
+pageUrl.hash = '';
+if (!pageUrl.pathname.endsWith('/')) pageUrl.pathname += '/';
+const indexUrl = new URL('../index.json', pageUrl);
 const siteBasePath = indexUrl.pathname.replace(/index\.json$/, '');
+const status = document.getElementById('search-status') || document.createElement('p');
+status.id = 'search-status';
+status.className = 'search-status';
+status.setAttribute('role', 'status');
+status.setAttribute('aria-live', 'polite');
+if (!status.parentNode) results.parentNode.insertBefore(status, results);
+input.setAttribute('aria-describedby', status.id);
+input.value = new URLSearchParams(window.location.search).get('q') || input.value;
+status.textContent = '正在载入搜索索引…';
 let fuse = null;
 let resultLinks = [];
 let activeIndex = -1;
 
 function safeSiteUrl(value) {
   try {
+    if (typeof value !== 'string' || !value.trim()) return null;
     const url = new URL(value, window.location.origin);
     if (!/^https?:$/.test(url.protocol)) return null;
     if (url.origin !== window.location.origin) return null;
@@ -50,13 +65,20 @@ function render(matches) {
 
     const listItem = document.createElement('li');
     listItem.className = 'post-entry';
-    const header = addText(listItem, 'header', 'entry-header', resultTitle(item));
+    const header = document.createElement('header');
+    header.className = 'entry-header';
+    addText(header, 'h2', '', resultTitle(item));
+    listItem.appendChild(header);
     if (header && item.originalTitle && item.originalTitle !== resultTitle(item)) {
       addText(listItem, 'div', 'entry-content', item.originalTitle);
     }
-    const metaParts = [item.date, item.task, item.score ? `${item.score}/10` : ''].filter(Boolean);
+    addText(listItem, 'p', 'entry-content', String(item.summary || '').slice(0, 220));
+    const score = String(item.score ?? '');
+    const validScore = /^(?:\d+(?:\.\d+)?)$/.test(score) && Number(score) <= 10;
+    const metaParts = [item.date, item.task, validScore && item.pageType === 'paper' ? `${score}/10` : '', item.arxivId ? `arXiv ${item.arxivId}` : ''].filter(Boolean);
     addText(listItem, 'div', 'entry-footer', metaParts.join(' · '));
     const link = document.createElement('a');
+    link.className = 'entry-link';
     link.href = href;
     link.setAttribute('aria-label', `打开：${resultTitle(item)}`);
     listItem.appendChild(link);
@@ -69,12 +91,21 @@ function render(matches) {
 function search() {
   if (!fuse) return;
   const query = input.value.trim();
+  const url = new URL(window.location.href);
+  if (query) url.searchParams.set('q', query);
+  else url.searchParams.delete('q');
+  window.history.replaceState(null, '', url.pathname + url.search + url.hash);
   if (!query) {
     clearResults();
+    status.textContent = '输入中文或英文标题、研究方向或 arXiv 编号开始搜索。';
     return;
   }
   const limit = Number(params.fuseOpts?.limit) || 20;
-  render(fuse.search(query, { limit }));
+  const matches = fuse.search(query);
+  render(matches.slice(0, limit));
+  status.textContent = matches.length
+    ? `找到 ${matches.length.toLocaleString('zh-CN')} 条结果，显示前 ${resultLinks.length} 条。`
+    : '没有找到匹配的内容。请换一个关键词，或缩短论文标题。';
 }
 
 function focusResult(index) {
@@ -100,16 +131,28 @@ fetch(indexUrl, { credentials: 'same-origin' })
       ignoreLocation: true,
       keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'arxivId']
     };
-    fuse = new Fuse(data, options);
+    fuse = new Fuse(data.filter((item) => item && safeSiteUrl(item.permalink)), options);
     search();
   })
   .catch(() => {
     clearResults();
+    status.textContent = '搜索暂时不可用';
     addText(results, 'li', 'post-entry', '搜索索引暂时无法载入，请稍后重试。');
+    const fallback = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = new URL('archives/', indexUrl).href;
+    link.textContent = '前往归档浏览';
+    fallback.appendChild(link);
+    results.appendChild(fallback);
   });
 
 input.addEventListener('input', search);
 input.addEventListener('search', search);
+if (input.form) input.form.addEventListener('submit', (event) => { event.preventDefault(); search(); });
+window.addEventListener('popstate', () => {
+  input.value = new URLSearchParams(window.location.search).get('q') || '';
+  search();
+});
 input.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowDown' && resultLinks.length) {
     event.preventDefault();
@@ -117,6 +160,7 @@ input.addEventListener('keydown', (event) => {
   } else if (event.key === 'Escape') {
     clearResults();
     input.value = '';
+    search();
   }
 });
 
@@ -136,6 +180,8 @@ results.addEventListener('keydown', (event) => {
     }
   } else if (event.key === 'Escape') {
     clearResults();
+    input.value = '';
+    search();
     input.focus();
   }
 });

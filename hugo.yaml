@@ -1,5 +1,6 @@
 baseURL: "https://nanless.github.io/audio-paper-digest-blog/"
 languageCode: "zh-CN"
+hasCJKLanguage: true
 defaultContentLanguage: "zh-CN"
 timeZone: "Asia/Shanghai"
 title: "语音/音乐/音频论文速递"

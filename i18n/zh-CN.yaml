@@ -1,0 +1,20 @@
+- id: prev_page
+  translation: 上一页
+- id: next_page
+  translation: 下一页
+- id: toc
+  translation: 目录
+- id: home
+  translation: 首页
+- id: edit_post
+  translation: 编辑
+- id: code_copy
+  translation: 复制
+- id: code_copied
+  translation: 已复制
+- id: translations
+  translation: 语言
+- id: read_time
+  translation: "{{ .Count }} 分钟"
+- id: words
+  translation: 字

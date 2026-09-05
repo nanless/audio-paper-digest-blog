@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $editions := slice }}
+{{ range $posts }}{{ if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
+{{ $editions = sort $editions "Date" "desc" }}
+<section class="research-archives">
+  <header class="page-header">
+    <div class="rw-eyebrow">每日研究记录</div>
+    <h1>速递归档</h1>
+    <p class="research-terms__intro">{{ len $editions }} 期每日速递，按月份倒序排列。查找单篇解读请使用<a href="{{ "papers/" | relURL }}">论文库</a>；会议内容见<a href="{{ "conferences/" | relURL }}">会议论文集</a>。</p>
+  </header>
+  <nav class="archive-jumps" aria-label="跳转到月份">
+    {{ range $editions.GroupByDate "2006-01" }}<a class="rw-action" href="#month-{{ .Key }}">{{ .Key }} <span>{{ len .Pages }} 期</span></a>{{ end }}
+  </nav>
+  {{ range $editions.GroupByDate "2006-01" }}
+  <section class="archive-editions" id="month-{{ .Key }}">
+    <h2>{{ .Key }} <span>{{ len .Pages }} 期</span></h2>
+    <ol>
+      {{ range .Pages }}
+      <li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time><div><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<p>{{ . | plainify }}</p>{{ end }}</div></li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ end }}
+</section>
+{{ end }}

@@ -2,9 +2,9 @@
   'use strict';
 
   const MAX_SELECTED_TEXT_CHARS = 2000;
-  const MAX_COMPANION_URL_CHARS = 8192;
+  const MAX_COMPANION_URL_CHARS = 32768;
   const COMPANION_HOST = ['127', '0', '0', '1'].join('.');
-  const COMPANION_QUERY_KEYS = new Set(['title', 'arxivId', 'sourceUrl', 'contextUrl']);
+  const COMPANION_QUERY_KEYS = new Set(['title', 'arxivId', 'sourceUrl', 'contextUrl', 'pageExcerpt']);
 
   const normalizeSelection = (value) => {
     const normalized = String(value || '').replace(/\r\n?/g, '\n').normalize('NFC').trim();
@@ -37,6 +37,7 @@
       }
       seen.add(key);
     }
+    url.searchParams.delete('pageExcerpt');
     url.searchParams.set('selectedText', selectedText);
     const target = url.toString();
     if (target.length > MAX_COMPANION_URL_CHARS) {
@@ -52,33 +53,33 @@
     field.style.position = 'fixed';
     field.style.inset = '-9999px auto auto -9999px';
     document.body.appendChild(field);
-    field.select();
-    const copied = document.execCommand('copy');
-    field.remove();
-    if (!copied) throw new Error('copy command rejected');
+    try {
+      field.select();
+      if (!document.execCommand('copy')) throw new Error('copy command rejected');
+    } finally {
+      field.remove();
+    }
   };
 
   const writeClipboard = async (value) => {
     if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(value);
-      return;
+      try {
+        await navigator.clipboard.writeText(value);
+        return;
+      } catch (_error) { /* Browsers may deny clipboard permission; try legacy copy. */ }
     }
     writeFallback(value);
   };
 
   document.querySelectorAll('.paper-tools').forEach((toolbar) => {
     const status = toolbar.querySelector('.paper-tools__status');
-    let clearTimer;
     const announce = (message) => {
       if (!status) return;
-      window.clearTimeout(clearTimer);
       status.textContent = message;
-      clearTimer = window.setTimeout(() => {
-        status.textContent = '';
-      }, 4000);
     };
 
     toolbar.querySelectorAll('.paper-tool-copy').forEach((button) => {
+      button.hidden = false;
       button.addEventListener('click', async () => {
         const value = button.dataset.copyText || '';
         const label = button.dataset.copyLabel || '论文标识';
@@ -97,11 +98,70 @@
 
     const selectionButton = toolbar.querySelector('.paper-tool--selection');
     if (selectionButton) {
+      const field = toolbar.querySelector('.paper-tools__selected-text');
+      const panel = toolbar.querySelector('.paper-tools__selection-panel');
+      const quickButton = toolbar.querySelector('.paper-tool--selection-quick');
+      const promptButton = toolbar.querySelector('.paper-tool--selection-copy');
+      const article = toolbar.closest('article');
+      const content = article && article.querySelector('.post-content');
+      let capturedText = '';
+      const captureSelection = () => {
+        const selection = window.getSelection && window.getSelection();
+        if (!selection || selection.isCollapsed || !selection.rangeCount || !content) return;
+        // Both ends must belong to this article's body, not navigation or tool labels.
+        if (!content.contains(selection.anchorNode) || !content.contains(selection.focusNode)) return;
+        const text = selection.toString();
+        if (!text.trim()) return;
+        capturedText = text;
+        if (field && document.activeElement !== field) field.value = text;
+        if (quickButton) quickButton.hidden = false;
+      };
+      document.addEventListener('selectionchange', captureSelection);
+      // Capture before a mouse click clears selection; touch and keyboard use the cache.
+      if (panel) {
+        panel.addEventListener('pointerdown', captureSelection);
+        panel.addEventListener('toggle', () => {
+          if (panel.open && field && capturedText && !field.value) field.value = capturedText;
+        });
+      }
+      if (quickButton) quickButton.addEventListener('click', () => {
+        if (!panel) return;
+        panel.open = true;
+        quickButton.hidden = true;
+        panel.scrollIntoView({ block: 'center', behavior: 'auto' });
+        if (field) field.focus({ preventScroll: true });
+      });
+      if (promptButton) {
+        promptButton.hidden = false;
+        promptButton.addEventListener('click', async () => {
+          try {
+            const selected = normalizeSelection(field ? field.value : capturedText);
+            const prompt = `请用适合初学研究者的语言解释以下阅读选段。先解释术语，再说明机制与前提；请区分段落已有信息和需要查证的推测。\n选段来源：本站博客导读或用户粘贴，未核验为原论文逐字引用。\n\n${selected}`;
+            try {
+              await writeClipboard(prompt);
+              announce('已复制解释提问，可以粘贴到你使用的 AI 工具。');
+            } catch (_error) {
+              // Keep the full prompt selectable when clipboard APIs are unavailable.
+              const fallback = toolbar.querySelector('.paper-tools__copy-fallback');
+              if (fallback) {
+                fallback.hidden = false;
+                fallback.value = prompt;
+                fallback.focus();
+                fallback.select();
+              }
+              announce('浏览器不允许复制，请手动复制下方已选中的提问。');
+            }
+          } catch (error) {
+            announce(error instanceof Error ? error.message : '无法生成提问。');
+          }
+        });
+      }
+      selectionButton.hidden = false;
       selectionButton.addEventListener('click', () => {
         try {
           const target = buildSelectionUrl(
             selectionButton.dataset.companionUrl,
-            window.getSelection ? window.getSelection().toString() : ''
+            field ? field.value : capturedText
           );
           const opened = window.open('', '_blank');
           if (!opened) {
@@ -116,7 +176,7 @@
             announce('无法安全打开本机 companion，请检查浏览器设置后重试。');
             return;
           }
-          announce('已在本机 companion 中打开选中段落。');
+          announce('已尝试打开本机 AI 确认页。若新页无法连接，请先在同一台电脑运行 npm run paper:rethink。');
         } catch (error) {
           announce(error instanceof Error ? error.message : '无法打开选中段落。');
         }

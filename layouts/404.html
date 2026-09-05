@@ -5,7 +5,12 @@
   <p style="color:var(--secondary);margin-bottom:2rem;">抱歉，您访问的页面不存在或已被移除。</p>
   <a href="{{ "" | absURL }}" style="display:inline-block;padding:0.75rem 1.5rem;background:var(--primary);color:var(--theme);border-radius:var(--radius);text-decoration:none;font-weight:600;transition:opacity 0.2s;">返回首页</a>
   <div style="margin-top:2rem;">
-    <a href="{{ "search/" | absURL }}" style="color:var(--primary);text-decoration:underline;">尝试搜索</a>
+    <form class="home-search" action="{{ "papers/" | relURL }}" role="search">
+      <label class="sr-only" for="missing-query">搜索论文题目或 arXiv ID</label>
+      <input id="missing-query" type="search" name="q" placeholder="搜索论文题目或 arXiv ID" required>
+      <button class="rw-action" type="submit">查找论文</button>
+    </form>
+    <p><a href="{{ "archives/" | absURL }}">浏览每日速递归档</a></p>
   </div>
 </div>
 {{- end }}
