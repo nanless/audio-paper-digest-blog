@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03622",
+  "arxivId": "2609.03622",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Sofiene Kammoun"
+    },
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Simon Leglaive"
+    },
+    {
+      "affiliations": [
+        "Inria at Univ. Grenoble Alpes, CNRS, LJK, France"
+      ],
+      "name": "Xavier Alameda-Pineda"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Group, University of Hamburg, Germany"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03622",
+  "originalTitle": "Test-time adaptation for speech enhancement with an autoregressive speech prior",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03622.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

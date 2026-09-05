@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03622",
+  "abstract": "Test-time adaptation (TTA) offers a promising direction for improving speech enhancement models under mismatched acoustic conditions, without requiring access to labeled target data. In this work, we propose a single-utterance TTA method that regularizes a pretrained speech enhancement model using an autoregressive prior trained on clean speech latent representations extracted from a neural audio codec. Adaptation is performed by minimizing the Kullback-Leibler divergence between the enhanced speech distribution and the clean speech prior. Experiments across multiple noisy speech datasets show consistent improvements in speech quality, particularly under training-testing noise mismatch conditions. Code and audio examples are available online.",
+  "abstractSha256": "74aee6b8e98674bb9d73794152376e3e2c53c95f828329196e0c143e82fc8949",
+  "arxivId": "2609.03622",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 7.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Sofiene Kammoun"
+    },
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Simon Leglaive"
+    },
+    {
+      "affiliations": [
+        "Inria at Univ. Grenoble Alpes, CNRS, LJK, France"
+      ],
+      "name": "Xavier Alameda-Pineda"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Group, University of Hamburg, Germany"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用冻结在编解码器潜空间上的自回归干净语音先验，以无标签散度目标对单句增强模型做至多 20 步微调，在失配噪声上提升背景抑制，但可部署的预测早停只保留小部分增益且对本来已干净的样本可能有害。",
+  "originalTitle": "Test-time adaptation for speech enhancement with an autoregressive speech prior",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03622.pdf",
+  "readerTitle": "失配噪声下只用一秒语音校准：干净先验如何拉回增强模型",
+  "schemaVersion": 1
+}
