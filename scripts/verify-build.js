@@ -116,14 +116,46 @@ function walkFiles(root) {
   return output;
 }
 
+function verifyPaperToolCoverage(files) {
+  let paperPages = 0;
+  let selectedTextTools = 0;
+  let richArxivTools = 0;
+  let aiOnlyFallbacks = 0;
+  for (const file of files.filter((item) => path.basename(item) === 'index.html')) {
+    const html = fs.readFileSync(file, 'utf8');
+    if (!html.includes('research-workbench--paper')) continue;
+    paperPages += 1;
+    invariant(
+      html.includes('paper-tools') && html.includes('重理解选中段落')
+        && html.includes('127.0.0.1:43128/ui'),
+      `论文页缺少选段 AI 工具：${file}`
+    );
+    selectedTextTools += 1;
+    if (html.includes('paper-tools--ai-only')) {
+      invariant(!html.includes('下载 PDF（本机）') && !html.includes('导入 Zotero（本机确认）'),
+        `无 arXiv 论文页不得伪造 PDF/Zotero 工具：${file}`);
+      aiOnlyFallbacks += 1;
+    } else {
+      invariant(html.includes('/v1/paper/pdf?arxivId=')
+        && html.includes('导入 Zotero（本机确认）'),
+      `可识别 arXiv 的论文页缺少 PDF/Zotero 工具：${file}`);
+      richArxivTools += 1;
+    }
+  }
+  invariant(paperPages > 0, '构建产物没有论文页');
+  invariant(selectedTextTools === paperPages, '论文页选段 AI 覆盖不完整');
+  return { paperPages, selectedTextTools, richArxivTools, aiOnlyFallbacks };
+}
+
 function verifyBuild(buildDir) {
   const root = path.resolve(buildDir);
+  const allFiles = walkFiles(root);
   const home = readRequired(path.join(root, 'index.html'));
   const headStats = verifyHead(home, root);
 
   const rssFile = path.join(root, 'index.xml');
   const rssStats = verifyRss(readRequired(rssFile), fs.statSync(rssFile).size);
-  const nestedFeeds = walkFiles(root).filter((file) => path.basename(file) === 'index.xml' && file !== rssFile);
+  const nestedFeeds = allFiles.filter((file) => path.basename(file) === 'index.xml' && file !== rssFile);
   invariant(nestedFeeds.length === 0, `禁止 section/taxonomy feed：${nestedFeeds.slice(0, 5).join(', ')}`);
 
   const indexFile = path.join(root, 'index.json');
@@ -135,7 +167,7 @@ function verifyBuild(buildDir) {
     invariant(!/\.innerHTML\s*=/.test(source), `搜索脚本禁止 innerHTML 注入：${file}`);
     invariant(/textContent/.test(source), `搜索脚本必须使用 textContent：${file}`);
   }
-  const libraryScripts = walkFiles(root).filter((file) => /paper-library.*\.js$/i.test(path.basename(file)));
+  const libraryScripts = allFiles.filter((file) => /paper-library.*\.js$/i.test(path.basename(file)));
   invariant(libraryScripts.length > 0, '缺少构建后的论文库脚本');
   for (const file of libraryScripts) {
     const source = fs.readFileSync(file, 'utf8');
@@ -144,6 +176,9 @@ function verifyBuild(buildDir) {
     invariant(/\.origin/.test(source) && /\.pathname\.startsWith/.test(source), `论文库脚本缺少同源/base-path URL 门禁：${file}`);
     invariant(/\.username/.test(source) && /\.password/.test(source), `论文库脚本缺少 URL 凭据拒绝：${file}`);
   }
+  const paperTools = verifyPaperToolCoverage(
+    allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`))
+  );
 
   const stats = {
     htmlLanguage: headStats.htmlLanguage,
@@ -151,7 +186,8 @@ function verifyBuild(buildDir) {
     rss: rssStats,
     searchIndex: indexStats,
     searchScripts: searchScripts.length,
-    libraryScripts: libraryScripts.length
+    libraryScripts: libraryScripts.length,
+    paperTools
   };
   process.stdout.write(`${JSON.stringify(stats, null, 2)}\n`);
   return stats;
@@ -166,4 +202,7 @@ if (require.main === module) {
   }
 }
 
-module.exports = { extractHead, verifyHead, verifyRss, verifySearchIndex, verifyBuild };
+module.exports = {
+  extractHead, verifyHead, verifyRss, verifySearchIndex,
+  verifyPaperToolCoverage, verifyBuild
+};

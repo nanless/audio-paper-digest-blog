@@ -42,6 +42,8 @@
     {{- end -}}
   {{- end -}}
   {{- $aiQuery := querify "title" $prefillTitle "arxivId" $resolvedID "sourceUrl" $absURL "contextUrl" $contextURL -}}
+  {{- $companionURL := printf "http://127.0.0.1:43128/ui?%s" $aiQuery -}}
+  {{- $downloadURL := printf "http://127.0.0.1:43128/v1/paper/pdf?%s" (querify "arxivId" $resolvedID) -}}
 
 <section class="paper-tools" aria-labelledby="paper-tools-title">
   <div class="paper-tools__heading">
@@ -56,7 +58,8 @@
     <div class="paper-tools__group" aria-label="论文原文">
       <a class="paper-tool paper-tool--primary" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开 arXiv <span aria-hidden="true">↗</span></a>
       <a class="paper-tool" href="{{ $pdfURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="paper-pdf-note">打开 PDF</a>
-      <span id="paper-pdf-note" class="paper-tools__note">可能由浏览器直接预览，而非下载。</span>
+      <a class="paper-tool paper-tool--download" href="{{ $downloadURL | safeURL }}" target="_blank" rel="noopener" referrerpolicy="origin" aria-describedby="paper-pdf-note">下载 PDF（本机）</a>
+      <span id="paper-pdf-note" class="paper-tools__note">“打开 PDF”使用 arXiv；确定性下载需先运行本机 companion，由它校验官方来源、大小和 PDF 文件头后作为附件返回。</span>
     </div>
 
     <div class="paper-tools__group" aria-label="复制论文标识">
@@ -80,10 +83,37 @@
     {{- end }}
 
     <div class="paper-tools__group" aria-label="研究工作流">
-      <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="zotero-connector-note">在 Zotero Connector 中打开</a>
-      <a class="paper-tool paper-tool--ai" href="{{ printf "http://127.0.0.1:43128/ui?%s" $aiQuery | safeURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="local-ai-note">用本机 AI 重新理解</a>
-      <span id="zotero-connector-note" class="paper-tools__note">打开 arXiv 后，使用浏览器中的 Zotero Connector 保存论文。</span>
+      <a class="paper-tool paper-tool--zotero" href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="zotero-connector-note">导入 Zotero（本机确认）</a>
+      <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="zotero-connector-note">浏览器 Zotero Connector</a>
+      <a class="paper-tool paper-tool--ai" href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="local-ai-note">用本机 AI 重新理解</a>
+      <button class="paper-tool paper-tool--selection" type="button" data-companion-url="{{ $companionURL | safeURL }}" aria-describedby="local-ai-note">重理解选中段落</button>
+      <span id="zotero-connector-note" class="paper-tools__note">本机导入会先显示精确记录并要求确认；若 companion 未启动，可打开 arXiv 后使用浏览器 Zotero Connector。</span>
       <span id="local-ai-note" class="paper-tools__note">请先在主项目运行 <code>npm run paper:rethink</code>。本站仅在点击后打开本机 companion，不会自动连接或上传页面内容；<a href="https://github.com/nanless/audio-paper-digest/blob/main/docs/paper-rethink-companion.md" target="_blank" rel="noopener noreferrer">查看启动说明</a>。</span>
+    </div>
+  </div>
+  <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
+</section>
+
+  {{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- else -}}
+  {{- $prefillTitle := .Params.paper_digest_original_title | default .Title -}}
+  {{- $aiQuery := querify "title" $prefillTitle "arxivId" "" "sourceUrl" "" "contextUrl" "" -}}
+  {{- $companionURL := printf "http://127.0.0.1:43128/ui?%s" $aiQuery -}}
+
+<section class="paper-tools paper-tools--ai-only" aria-labelledby="paper-tools-title">
+  <div class="paper-tools__heading">
+    <div>
+      <span class="paper-tools__eyebrow">Reading tools</span>
+      <h2 id="paper-tools-title">论文研读工具</h2>
+    </div>
+    <p>本机 AI 选段解释</p>
+  </div>
+  <div class="paper-tools__groups">
+    <div class="paper-tools__group" aria-label="本机 AI 研读">
+      <a class="paper-tool paper-tool--ai" href="{{ $companionURL | safeURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="local-ai-note">打开本机 AI</a>
+      <button class="paper-tool paper-tool--selection" type="button" data-companion-url="{{ $companionURL | safeURL }}" aria-describedby="local-ai-note">重理解选中段落</button>
+      <span id="local-ai-note" class="paper-tools__note">本页没有可验证的 arXiv 标识，因此不展示 PDF 或 Zotero 导入。请先运行 <code>npm run paper:rethink</code>；选中文字只在你点击后送入本机确认页。</span>
     </div>
   </div>
   <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>

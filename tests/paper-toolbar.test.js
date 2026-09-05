@@ -4,6 +4,7 @@ const { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } = require(
 const { tmpdir } = require('node:os');
 const { join, resolve } = require('node:path');
 const test = require('node:test');
+const vm = require('node:vm');
 
 const repo = resolve(__dirname, '..');
 
@@ -44,6 +45,66 @@ function renderFixture(frontmatter, body = '## 方法\n\n正文。') {
   }
 }
 
+function companionDataUrl(html) {
+  const encoded = html.match(/data-companion-url="([^"]+)"/)?.[1]
+    || html.match(/data-companion-url=([^ >]+)/)?.[1];
+  assert.ok(encoded, 'selected-text button must carry a companion base URL');
+  return new URL(encoded.replaceAll('&amp;', '&'));
+}
+
+function clickSelection({
+  baseUrl,
+  selectedText,
+  popupResult,
+}) {
+  const source = readFileSync(join(repo, 'assets', 'js', 'paper-toolbar.js'), 'utf8');
+  const status = { textContent: '' };
+  let clickHandler;
+  const button = {
+    dataset: { companionUrl: baseUrl },
+    addEventListener(type, handler) {
+      if (type === 'click') clickHandler = handler;
+    },
+  };
+  const toolbar = {
+    querySelector(selector) {
+      if (selector === '.paper-tools__status') return status;
+      if (selector === '.paper-tool--selection') return button;
+      return null;
+    },
+    querySelectorAll() { return []; },
+  };
+  const opened = [];
+  const popup = popupResult === undefined ? {
+    opener: {},
+    location: { replace(target) { this.targets.push(target); }, targets: [] },
+    close() { this.closed = true; },
+  } : popupResult;
+  const window = {
+    clearTimeout() {},
+    setTimeout() { return 1; },
+    getSelection() { return { toString: () => selectedText }; },
+    open(...args) {
+      opened.push(args);
+      return popup;
+    },
+    isSecureContext: true,
+  };
+  const document = {
+    querySelectorAll(selector) { return selector === '.paper-tools' ? [toolbar] : []; },
+  };
+  vm.runInNewContext(source, {
+    document,
+    navigator: {},
+    window,
+    URL,
+    Set,
+  });
+  assert.equal(typeof clickHandler, 'function');
+  clickHandler();
+  return { opened, status: status.textContent, popupResult: popup };
+}
+
 const sidecarRoot = '/audio-paper-digest-blog/data/papers/2026-09-05/2609-01234/';
 const workbenchFrontmatter = [
   'title: "Blog analysis title"',
@@ -69,6 +130,7 @@ test('workbench paper renders versioned tools, safe sidecars, companion query, a
   assert.match(html, /class=(?:"paper-tools"|paper-tools)/);
   assert.match(html, /href=https:\/\/arxiv\.org\/abs\/2609\.01234v2/);
   assert.match(html, /href=https:\/\/arxiv\.org\/pdf\/2609\.01234v2\.pdf/);
+  assert.match(html, /127\.0\.0\.1:43128\/v1\/paper\/pdf\?arxivId=2609\.01234v2/);
   assert.match(html, /data-copy-text=2609\.01234/);
   assert.match(html, /data-copy-text=2609\.01234v2/);
   for (const filename of ['citation.json', 'citation.bib', 'citation.ris']) {
@@ -85,9 +147,14 @@ test('workbench paper renders versioned tools, safe sidecars, companion query, a
   assert.deepEqual([...aiURL.searchParams.keys()].sort(), [
     'arxivId', 'contextUrl', 'sourceUrl', 'title',
   ]);
+  const selectionURL = companionDataUrl(html);
+  assert.equal(selectionURL.toString(), aiURL.toString());
+  assert.equal(selectionURL.searchParams.has('selectedText'), false);
+  assert.match(html, /重理解选中段落/);
   assert.doesNotMatch(html, /<(?:script|link|img|iframe)[^>]+127\.0\.0\.1/i);
   assert.match(html, /npm run paper:rethink/);
   assert.match(html, /docs\/paper-rethink-companion\.md/);
+  assert.match(html, /导入 Zotero（本机确认）/);
 
   assert.match(html, /name=citation_title content="Paper (?:&|&amp;) Evidence"/);
   assert.match(html, /name=citation_author content="Researcher A"/);
@@ -117,11 +184,15 @@ test('legacy paper degrades to arXiv/PDF/ID tools without invented sidecars or a
   assert.match(html, /class=(?:"paper-tools"|paper-tools)/);
   assert.match(html, /https:\/\/arxiv\.org\/abs\/2609\.09999/);
   assert.match(html, /https:\/\/arxiv\.org\/pdf\/2609\.09999\.pdf/);
+  assert.match(html, /127\.0\.0\.1:43128\/v1\/paper\/pdf\?arxivId=2609\.09999/);
   assert.doesNotMatch(html, /citation\.(?:json|bib|ris)/);
   assert.doesNotMatch(html, /name=citation_author/);
   const aiHref = html.match(/href="?(http:\/\/127\.0\.0\.1:43128\/ui\?[^" >]+)"?/)?.[1];
   const aiURL = new URL(aiHref.replaceAll('&amp;', '&'));
   assert.equal(aiURL.searchParams.get('contextUrl'), '');
+  const selectionURL = companionDataUrl(html);
+  assert.equal(selectionURL.searchParams.get('arxivId'), '2609.09999');
+  assert.equal(selectionURL.searchParams.has('selectedText'), false);
 });
 
 test('true legacy raw content and old-style versioned arXiv IDs retain basic tools', () => {
@@ -137,6 +208,7 @@ test('true legacy raw content and old-style versioned arXiv IDs retain basic too
   assert.match(html, /class=(?:"paper-tools"|paper-tools)/);
   assert.match(html, /https:\/\/arxiv\.org\/abs\/hep-th\/9901001v4/);
   assert.match(html, /https:\/\/arxiv\.org\/pdf\/hep-th\/9901001v4\.pdf/);
+  assert.match(html, /127\.0\.0\.1:43128\/v1\/paper\/pdf\?arxivId=hep-th%2F9901001v4/);
   assert.match(html, /data-copy-text=hep-th\/9901001/);
   assert.match(html, /data-copy-text=hep-th\/9901001v4/);
   assert.doesNotMatch(html, /citation\.(?:json|bib|ris)/);
@@ -146,6 +218,27 @@ test('true legacy raw content and old-style versioned arXiv IDs retain basic too
   const aiURL = new URL(aiHref.replaceAll('&amp;', '&'));
   assert.equal(aiURL.searchParams.get('arxivId'), 'hep-th/9901001v4');
   assert.equal(aiURL.searchParams.get('sourceUrl'), 'https://arxiv.org/abs/hep-th/9901001v4');
+});
+
+test('paper without a verifiable arXiv ID still gets selected-text AI tools only', () => {
+  const html = renderFixture([
+    'title: "Conference paper without arXiv"',
+    'date: 2026-09-05',
+    'draft: false',
+    'description: "conference analysis"',
+    'tags: ["music"]',
+    'categories: ["conference"]',
+    'hiddenInHomeList: true',
+  ].join('\n'), '## 方法\n\n需要重新解释的正文段落。');
+  assert.match(html, /paper-tools--ai-only/);
+  assert.match(html, /重理解选中段落/);
+  assert.match(html, /本页没有可验证的 arXiv 标识/);
+  assert.doesNotMatch(html, /打开 arXiv|下载 PDF（本机）|导入 Zotero（本机确认）/);
+  const selectionURL = companionDataUrl(html);
+  assert.equal(selectionURL.searchParams.get('title'), 'Conference paper without arXiv');
+  assert.equal(selectionURL.searchParams.get('arxivId'), '');
+  assert.equal(selectionURL.searchParams.get('sourceUrl'), '');
+  assert.equal(selectionURL.searchParams.get('contextUrl'), '');
 });
 
 test('off-origin or noncanonical sidecar URLs are not rendered or sent to companion', () => {
@@ -167,4 +260,90 @@ test('toolbar JavaScript uses textContent and never contacts localhost', () => {
   assert.doesNotMatch(script, /innerHTML/);
   assert.doesNotMatch(script, /\b(?:fetch|XMLHttpRequest|WebSocket|EventSource|sendBeacon)\b/);
   assert.doesNotMatch(script, /127\.0\.0\.1|localhost/);
+  assert.doesNotMatch(script, /window\.location\.(?:assign|replace)|window\.location\s*=/);
+});
+
+test('selected-text action normalizes text and opens only the fixed local companion', () => {
+  const baseUrl = 'http://127.0.0.1:43128/ui?title=Paper&arxivId=2609.01234&sourceUrl=https%3A%2F%2Farxiv.org%2Fabs%2F2609.01234&contextUrl=';
+  const result = clickSelection({ baseUrl, selectedText: `  e\u0301\r\n机制  ` });
+  assert.equal(result.opened.length, 1);
+  const [blankTarget, name] = result.opened[0];
+  assert.equal(blankTarget, '');
+  assert.equal(name, '_blank');
+  assert.equal(result.popupResult.opener, null);
+  assert.equal(result.popupResult.location.targets.length, 1);
+  const [target] = result.popupResult.location.targets;
+  const url = new URL(target);
+  assert.equal(url.origin, 'http://127.0.0.1:43128');
+  assert.equal(url.pathname, '/ui');
+  assert.equal(url.searchParams.get('selectedText'), 'é\n机制');
+  assert.deepEqual([...url.searchParams.keys()].sort(), [
+    'arxivId', 'contextUrl', 'selectedText', 'sourceUrl', 'title',
+  ]);
+  assert.match(result.status, /已在本机 companion/);
+});
+
+test('selected-text action enforces empty, control, character, and encoded URL limits', () => {
+  const baseUrl = 'http://127.0.0.1:43128/ui?title=Paper&arxivId=2609.01234&sourceUrl=https%3A%2F%2Farxiv.org%2Fabs%2F2609.01234&contextUrl=';
+  const exact = clickSelection({ baseUrl, selectedText: 'a'.repeat(2000) });
+  assert.equal(exact.opened.length, 1);
+  assert.equal(
+    new URL(exact.popupResult.location.targets[0]).searchParams.get('selectedText').length,
+    2000
+  );
+
+  for (const [selectedText, message] of [
+    ['   \r\n  ', /请先/],
+    ['safe\u0000unsafe', /控制字符/],
+    ['a'.repeat(2001), /不能超过 2000/],
+    ['汉'.repeat(1000), /编码后过长/],
+  ]) {
+    const result = clickSelection({ baseUrl, selectedText });
+    assert.equal(result.opened.length, 0);
+    assert.match(result.status, message);
+  }
+});
+
+test('selected-text action rejects altered routes, credentials, duplicate or secret parameters', () => {
+  const invalidBases = [
+    'https://127.0.0.1:43128/ui?title=Paper',
+    'http://localhost:43128/ui?title=Paper',
+    'http://user@127.0.0.1:43128/ui?title=Paper',
+    'http://127.0.0.1:43128/other?title=Paper',
+    'http://127.0.0.1:43128/ui?title=One&title=Two',
+    'http://127.0.0.1:43128/ui?title=Paper&apiKey=secret-canary',
+    'http://127.0.0.1:43128/ui?title=Paper#fragment',
+  ];
+  for (const baseUrl of invalidBases) {
+    const result = clickSelection({ baseUrl, selectedText: 'selected evidence' });
+    assert.equal(result.opened.length, 0, baseUrl);
+    assert.match(result.status, /地址无效|参数无效/);
+  }
+});
+
+test('selected-text action reports a blocked popup without falling back to same-page navigation', () => {
+  const result = clickSelection({
+    baseUrl: 'http://127.0.0.1:43128/ui?title=Legacy&arxivId=hep-th%2F9901001v4&sourceUrl=https%3A%2F%2Farxiv.org%2Fabs%2Fhep-th%2F9901001v4&contextUrl=',
+    selectedText: 'legacy evidence',
+    popupResult: null,
+  });
+  assert.equal(result.opened.length, 1);
+  assert.match(result.status, /阻止了新窗口/);
+});
+
+test('selected-text action closes a popup when safe navigation fails', () => {
+  const popup = {
+    opener: {},
+    location: { replace() { throw new Error('navigation denied'); } },
+    close() { this.closed = true; },
+  };
+  const result = clickSelection({
+    baseUrl: 'http://127.0.0.1:43128/ui?title=Paper&arxivId=2609.01234&sourceUrl=https%3A%2F%2Farxiv.org%2Fabs%2F2609.01234&contextUrl=',
+    selectedText: 'selected evidence',
+    popupResult: popup,
+  });
+  assert.equal(result.opened.length, 1);
+  assert.equal(popup.opener, null);
+  assert.equal(popup.closed, true);
+  assert.match(result.status, /无法安全打开/);
 });

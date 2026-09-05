@@ -41,6 +41,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.paper-tools--ai-only .paper-tools__groups {
+  grid-template-columns: 1fr;
+}
+
 .paper-tools__group {
   align-content: start;
   background: var(--rw-surface-subtle, var(--code-bg));
@@ -93,6 +97,17 @@
 .paper-tool--ai {
   border-color: var(--rw-accent, var(--primary));
   color: var(--rw-accent, var(--primary));
+}
+
+.paper-tool--selection {
+  border-color: var(--rw-accent, var(--primary));
+  color: var(--rw-accent, var(--primary));
+  min-height: 44px;
+}
+
+.paper-tool--zotero {
+  border-color: #b03a2e;
+  color: #b03a2e;
 }
 
 .paper-tools__note {
