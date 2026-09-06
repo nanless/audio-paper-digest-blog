@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03502",
+  "arxivId": "2609.03502",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kunat Pipatanakul"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Potsawee Manakul"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Warit Sirichotedumrong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sittipong Sripaisarnmongkol"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pakorn Nathong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Phatrasek Jirabovonvisut"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03502",
+  "originalTitle": "Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03502.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

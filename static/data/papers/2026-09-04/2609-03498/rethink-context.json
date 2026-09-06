@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03498",
+  "abstract": "Faster playback has become a common feature in modern online audiovisual services, allowing users to consume content in less time while still maintaining a coherent viewing experience. However, different modalities of media content, such as video, audio (including speech and music), and audiovisual, exhibit varying requirements for understandability and information integrity under faster playback. These differences lead to noticeable variations in perceived quality depending on the content type. Nevertheless, users&#39; perceived quality at different playback speeds remains insufficiently investigated. To address this gap, this paper conducts a series of subjective experiments to analyze the relationship between playback speed and perceived quality for video, audio, and audiovisual content. Content-specific intrinsic features are extracted to capture temporal dynamics, including temporal information (TI) for video, words per minute (WPM) for speech, and beats per minute (BPM) for music. Predictive models of perceived quality under faster playback are then developed separately for video, speech, and music. By integrating these models, a unified content-adaptive perceived quality assessment model (CAPQ-FAST) is proposed for faster audiovisual playback. Experimental results demonstrate that the proposed model effectively predicts perceived quality under different playback speeds. This model can help service providers better understand users&#39; viewing intentions and perceptual experiences under faster playback, thereby enabling more adaptive personalized recommendations and playback control to enhance user experience adaptability.",
+  "abstractSha256": "e92e04863ff880d0df65114f506cbe3bb12ced4a24336f2a1b835e3b8354d52f",
+  "arxivId": "2609.03498",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiarun Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxin Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fuzheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weisi Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在 1x 到 3x 主观评分基础上，用视频时间信息、语音语速和音乐节拍分别拟合指数衰减并融合成视听模型，在独立新序列上与主观均值高度一致，但意图推断只做到粗粒度辅助。",
+  "originalTitle": "CAPQ-FAST: Content-Adaptive Perceived Quality Assessment for Faster Audiovisual Playback",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03498.pdf",
+  "readerTitle": "同样 2 倍速为何体验不同：按运动、语速和节奏算快放感知质量",
+  "schemaVersion": 1
+}

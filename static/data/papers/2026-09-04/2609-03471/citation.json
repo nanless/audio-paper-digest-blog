@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03471",
+  "arxivId": "2609.03471",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuiyuan Wang"
+    },
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Xian Shi"
+    },
+    {
+      "affiliations": [
+        "Beijing Huiting Technology Co., Ltd."
+      ],
+      "name": "Jie Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03471",
+  "originalTitle": "Summary of the ChinaVoices Challenge 2026: Data, Tasks, Baseline, and Methods",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03471.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03283",
+  "abstract": "Mean Opinion Score (MOS) is the gold standard for evaluating synthesized speech naturalness. However, current automatic MOS predictors are dominated by self-supervised learning (SSL) models that prioritize high-level semantics, potentially compromising their ability to capture critical acoustic details. In this paper, we systematically investigate representations from three paradigms: SSLs, acoustic-only neural audio codecs (NACs), and unified NACs that integrate semantics into reconstruction-based architectures. Extensive benchmarking on the standard BVCC and multiple out-of-domain (OOD) datasets demonstrates that features synergizing semantic understanding with fine-grained acoustic modeling achieve a higher performance upper bound in speech quality assessment. Ultimately, our findings highlight that semantics alone are not enough; a dual focus on semantic content and acoustic fidelity is essential for robust MOS prediction.",
+  "abstractSha256": "64abcf8f8ae4aad2037349b5f8e583984a82a3d39b685afbcc3c574e3b528e0c",
+  "arxivId": "2609.03283",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyu Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufei Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Honghao Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huipeng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenhua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在 BVCC 训练、在 SOMOS 与 BC2019 零样本评测自监督、纯声学与统一编解码表示；融合语义和声学的部分模型有较好表现，但优劣随冻结或微调、数据集及评分或排序指标而变化，跨语种也有例外，不能据此宣布某一表示类别普遍最优。",
+  "originalTitle": "Is Semantics Enough for Speech Mean Opinion Score Prediction?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03283.pdf",
+  "readerTitle": "语义不够：语音平均意见分预测为何还需要声学保真度",
+  "schemaVersion": 1
+}

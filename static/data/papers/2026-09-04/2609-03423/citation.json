@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03423",
+  "arxivId": "2609.03423",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Maryland College Park, USA"
+      ],
+      "name": "Puneet Mathur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dinesh Manocha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03423",
+  "originalTitle": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03423.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

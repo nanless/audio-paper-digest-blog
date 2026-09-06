@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02901",
+  "arxivId": "2609.02901",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengrun Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wangjin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzheng Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaodong He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.02901",
+  "originalTitle": "Dual-Form ASR: Semantics-Aware Inverse Text Normalization for Chinese Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02901.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

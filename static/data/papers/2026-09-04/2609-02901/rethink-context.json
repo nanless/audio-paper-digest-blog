@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02901",
+  "abstract": "Modern automatic speech recognition (ASR) scenarios require both spoken-form transcripts for faithful transcription and readable written-form transcripts with inverse text normalization (ITN). However, these forms are typically produced by cascaded modules, where a spoken-form ASR output is rewritten by a separate ITN component, making written-form ASR-ITN vulnerable to recognition errors and decoupling normalization from acoustic-contextual modeling, especially for semantically dependent numeric expressions. In this paper, we propose Dual-Form ASR (DF-ASR), a framework that extends spoken-form ASR capability to semantics-aware written-form ITN through paired spoken-form and written-form supervision while retaining prompt-level selection between transcript forms. The dual-form supervision is constructed via a large language model (LLM)-driven generate-and-judge workflow, and training is further enhanced by ITN-MWER, a sequence-level objective that assigns higher cost to errors on normalization-sensitive spans. We also introduce a decision-aware REQUIRE-ITN/\\FORBID-ITN protocol to separately measure required normalization and forbidden-span preservation. On manually annotated Chinese subsets from SpeechIO, DF-ASR consistently outperforms open-source ASR-ITN systems, remains competitive with strong closed-source references, and preserves reliable prompt-level control between spoken-form and written-form outputs.",
+  "abstractSha256": "eb52ae4ab557c2e57a4ba3a82186c3c2b8c6dfaef972a302b415f6b1b9ce1317",
+  "arxivId": "2609.02901",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengrun Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wangjin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzheng Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaodong He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对中文语音识别中口语忠实转写与书面可读转写难以兼顾的问题，论文用成对监督加提示词选形式训练一个共享模型，并以数字关键词加权的序列优化和分开考核必须改与禁止改的协议证明其在必须规范化上达到 4.64% I-CER 与 94.85% 关键词 F1、在禁止改上达到 95.18% 保留率，而无数字控制集上未引入虚假数字。",
+  "originalTitle": "Dual-Form ASR: Semantics-Aware Inverse Text Normalization for Chinese Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02901.pdf",
+  "readerTitle": "既要一字不差又要好看易读：双形式语音识别如何决定数字该不该变",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04085",
+  "arxivId": "2609.04085",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen-Yuan Ning"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui-Peng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao-Hang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04085",
+  "originalTitle": "Deep Neural Compression for RIR-Characterized Acoustic Environments with Structure-Aware Constraints",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04085.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

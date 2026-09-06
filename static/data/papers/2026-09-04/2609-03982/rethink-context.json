@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03982",
+  "abstract": "Automatic speech recognition (ASR) remains challenging for individuals with cleft lip and palate (CLP) because of limited pathological speech data and large variations in speech characteristics across speakers and severity levels. These recognition difficulties can reduce the accessibility of voice-based human-computer interaction, particularly when cloud-based ASR services are unavailable or unreliable. This work investigates a severity-aware and edge-deployable ASR framework for improving recognition of CLP speech using Whisper-small. The model was fine-tuned using different combinations of normal and CLP speech representing mild, moderate, and severe conditions, together with a CLP-only training configuration, to examine how the inclusion of different severity levels influences recognition performance and fairness across speakers. The pretrained model produced pooled word error rate (WER) and phoneme error rate (PER) values of 62.46% and 52.72%, respectively. Severity-aware fine-tuning substantially improved performance, reducing the best pooled WER to 22.72% and the best pooled PER to 18.44%. Training with a broader representation of CLP severity levels also provided the best overall balance between recognition accuracy and performance consistency across severity groups. Deployment on an NVIDIA Jetson platform demonstrated real-time inference for all fine-tuned models, with real-time factors of 0.167-0.171 and peak GPU memory usage of approximately 566 MB. The results demonstrate that incorporating severity diversity during ASR adaptation can substantially improve recognition of CLP speech while reducing performance disparities across severity groups. The proposed approach further enables low-latency, Internet-independent speech interaction on edge devices, supporting more accessible and inclusive voice-based human-computer interaction for individuals with CLP.",
+  "abstractSha256": "48d99c152e9f6582eeb38fcfda99bd2b526d75e4860725c45edf65e6c8f7acd1",
+  "arxivId": "2609.03982",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Susmita Bhattacharjee"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Himashri Deka"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "H.S. Shekhawat"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Dharwad, India"
+      ],
+      "name": "S.R.M. Prasanna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对唇腭裂语音随严重程度差异大的识别难题，论文用不同严重程度组合微调 Whisper-small 并在 Jetson 上实测，NOMIMOSE 把合并词错误率从 62.46% 降到 22.72%，NOMIMO 把合并音素错误率降到 18.44%，CLP-only 拿到最接近零的公平性得分 -22.85，而微调模型保持 0.167-0.171 实时系数和约 566.32 MB 峰值显存，但重度语音仍然最难。",
+  "originalTitle": "Fairness Evaluation of Edge-AI Implementation for Cleft Lip and Palate Speech ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03982.pdf",
+  "readerTitle": "严重程度拉开差距时仍要可用：用严重程度混合微调 Whisper-small 并在 Jetson 上实测",
+  "schemaVersion": 1
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03414",
+  "arxivId": "2609.03414",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Chenglin Wu"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Junjie Wu"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Jinhang Chen"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Mingyang Chen"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Zixu Lin"
+    },
+    {
+      "affiliations": [
+        "Fuyao University of Science and TechnologyEqual contribution."
+      ],
+      "name": "Jiabian Chen"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Xinghao Ding"
+    },
+    {
+      "affiliations": [
+        "Xiamen University"
+      ],
+      "name": "Xiaotong Tu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03414",
+  "originalTitle": "StrixAE: An Intelligent Agent for Audio Enhancement under Complex Distortion Coupling in Real-World Scenarios",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03414.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

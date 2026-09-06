@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03498",
+  "arxivId": "2609.03498",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiarun Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxin Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fuzheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weisi Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03498",
+  "originalTitle": "CAPQ-FAST: Content-Adaptive Perceived Quality Assessment for Faster Audiovisual Playback",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03498.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

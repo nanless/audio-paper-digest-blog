@@ -1,0 +1,34 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03321",
+  "abstract": "The Neural Finite State Machine (NFSM) framework offers a pragmatic path to full-duplex dialogue by serializing turn-taking control and response generation onto a single causal tape under the standard next-token prediction objective, thereby preserving semantic prowess at a low fine-tuning cost. However, its reliance on synthetic text data fundamentally limits turn-taking naturalness, as Large Language Models (LLMs) cannot faithfully simulate the fine-grained acoustic temporal dynamics of real human dialogues. In this work, we propose a decoupled data approach that learns turn-taking from real Human-Human (HH) spoken dialogues while shaping semantic behavior through configurable Human-Agent (HA) text dialogues. To operationalize this approach, we introduce a rule-based event-guided data transformation method that serializes HH spoken dialogues into FSM tapes by classifying turn-taking events and applying deterministic mapping rules, enabling scalable supervision without LLM-generated annotations. We further propose a Source-Aware Calibrated (SAC) Loss that jointly calibrates the long-tailed distribution of state transition tokens and channels each data source toward the capability it best supervises. Experiments show that our approach substantially improves turn-taking proficiency while recovering the foundation LLM&#39;s semantic capability. Our code and model are available at this https URL.",
+  "abstractSha256": "60727b7616881050a0d4d2a2ea2d95328cc87fc4232c24877444c55a939bdd44",
+  "arxivId": "2609.03321",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Kyoto University"
+      ],
+      "name": "Yihang Li"
+    },
+    {
+      "affiliations": [
+        "Kyoto University"
+      ],
+      "name": "Chenhui Chu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对合成文本同时学轮次与语义不可靠的问题，该工作用真实人与人语音学轮次、用可改写的人与智能体文本保语义，配合规则化事件转磁带与来源感知校准损失，在等量 token 下把轮次 F1 从约 0.34 提升到约 0.65 并把语义恢复到接近基座上限，代价是暂停处理仍弱于保守系统且单带离散化会丢信息。",
+  "originalTitle": "Decoupling Turn-Taking from Semantics: A Decoupled Data Approach for Finite-State-Machine-Based Full-Duplex Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03321.pdf",
+  "readerTitle": "轮次向真实语音学，语义向可配文本学：有限状态机全双工的解耦数据路线",
+  "schemaVersion": 1
+}

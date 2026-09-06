@@ -1,0 +1,34 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03107",
+  "abstract": "Recent advances in generative speech models have made it increasingly difficult to distinguish authentic from synthetic audio, enabling new forms of fraud and misinformation. Audio watermarking offers a promising defense by embedding an imperceptible signal into generated speech that can later be detected to verify its provenance. However, recent studies have shown that existing post-hoc watermarking methods fail under neural codecs and denoisers, transformations routinely applied during real-world storage, transmission, and processing, severely limiting their practical utility. Here we introduce CRAW, a codec-robust audio watermarking framework that jointly improves robustness against neural re-synthesis while maintaining high perceptual quality. CRAW combines distortion-aware training with an attention-based pooling mechanism, inference-time perceptual mask- ing, and an error-correcting code to recover the fidelity lost during robust training. Experiments demonstrate that CRAW achieves state-of-the-art robustness against neural codecs, denoisers, and vocoders while maintaining perceptual quality comparable to existing post-hoc watermarking methods. The code is available at this https URL.",
+  "abstractSha256": "eb17a63a627254ca215178cde208401ce086a658e9e3746db3b4f9613c266cff",
+  "arxivId": "2609.03107",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 7.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Chernin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ethan Fetaya"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CRAW 针对神经编解码器与去噪重合成导致后处理水印失效的问题，用加宽失真训练加注意力池化加推理时感知掩蔽加重复纠错码，在保持 PESQ 约 4.0 的同时把编解码器与去噪下的检测 F1 拉回 0.8 以上，代价是掩蔽带来约 150 ms 的额外推理延迟。",
+  "originalTitle": "CRAW: Codec Robust Audio Watermarking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03107.pdf",
+  "readerTitle": "加了编解码器训练就掉音质：CRAW 用注意力、掩蔽与纠错把两者拉回平衡",
+  "schemaVersion": 1
+}

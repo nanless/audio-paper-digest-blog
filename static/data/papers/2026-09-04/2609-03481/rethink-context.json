@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03481",
+  "abstract": "Most single-channel separators estimate a source by applying a real gain to the mixture in each time-frequency bin. The optimum of that format, which the oracle masks used as bounds do not attain, is the orthogonal projection of the source onto the line spanned by the mixture, its residual set by the angle between them. Locating an estimator reduces to the block structure of a real-linear operator on stacked spectra, giving a chain of four nested classes whose three larger terms match three assumptions on the prior: zero means, circularity and absence of inter-frequency coupling. Held fixed the chain is a cascade of four orthogonal projections; refitted per frame it collapses onto its first term, attributing the whole residual to one missing real parameter per bin, the phase. When the phase posterior is symmetric about the mixture direction, the minimum mean-square estimate falls back onto the line, with gain the posterior mean of the oracle gain and excess error its variance. On MUSDB18 a posterior mean under a non-circular Gaussian-mixture prior leaves the class yet stays 11.44 dB under the per-frame ceiling, which four times as many components and 7.5x the data do not close; a closed-form gate attributes some 70% of it, in decibels, to the predicted variance. The widest fixed class stays 6.70 dB under the same ceiling. Leaving the class and minimising squared error are conflicting requests: the barrier lies in the criterion rather than in the prior.",
+  "abstractSha256": "a8710685530f1dd094ad7a873c367656052d2619ebba7e69e4d150f6ca1e3573",
+  "arxivId": "2609.03481",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前25%",
+    "score": 8.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "organization=Independent researcher, city=Lille, country=France"
+      ],
+      "name": "Maxime Baelde"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文刻画单通道时频实增益掩蔽的正交投影上限，并用一个高斯混合后验均值估计器研究先验、读出与相位对称性：长窗留出设置下估计器距实测类上界 11.44 dB，校准分析中的约 70% 是分贝缺口之比，不是全部缺口或误差能量都由后验方差解释，更不是所有生成分离器的性能上限。",
+  "originalTitle": "Geometric Ceilings on Time-Frequency Masking for Single-Channel Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03481.pdf",
+  "readerTitle": "实增益掩蔽的天花板是投影，离开直线却赢不回平方误差",
+  "schemaVersion": 1
+}

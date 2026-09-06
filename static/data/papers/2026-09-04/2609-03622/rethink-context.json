@@ -9,7 +9,7 @@
     "documentType": "方法研究",
     "primaryTask": "语音增强",
     "rankBucket": "前25%",
-    "score": 7.5
+    "score": 7.6
   },
   "authors": [
     {
@@ -38,9 +38,9 @@
     }
   ],
   "contract": "researcher-sidecars-v1",
-  "oneSentenceThesis": "该文用冻结在编解码器潜空间上的自回归干净语音先验，以无标签散度目标对单句增强模型做至多 20 步微调，在失配噪声上提升背景抑制，但可部署的预测早停只保留小部分增益且对本来已干净的样本可能有害。",
+  "oneSentenceThesis": "针对训练与测试噪声失配导致的增强残留噪声，该文用冻结的自回归干净先验对单条测试语音做 KL 散度自适应，在 DNS 等四组数据上主要提升背景抑制，但需早停且初始已干净时收益很小。",
   "originalTitle": "Test-time adaptation for speech enhancement with an autoregressive speech prior",
   "pdfUrl": "https://arxiv.org/pdf/2609.03622.pdf",
-  "readerTitle": "失配噪声下只用一秒语音校准：干净先验如何拉回增强模型",
+  "readerTitle": "失配时只听一条语音：用干净先验把增强输出推向高密度区",
   "schemaVersion": 1
 }

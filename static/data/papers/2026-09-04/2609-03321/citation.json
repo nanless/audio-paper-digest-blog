@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03321",
+  "arxivId": "2609.03321",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Kyoto University"
+      ],
+      "name": "Yihang Li"
+    },
+    {
+      "affiliations": [
+        "Kyoto University"
+      ],
+      "name": "Chenhui Chu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03321",
+  "originalTitle": "Decoupling Turn-Taking from Semantics: A Decoupled Data Approach for Finite-State-Machine-Based Full-Duplex Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03321.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

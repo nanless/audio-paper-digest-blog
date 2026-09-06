@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03490",
+  "arxivId": "2609.03490",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Design, Kyushu University, Fukuoka 815-8540, Japan"
+      ],
+      "name": "Akira Omoto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03490",
+  "originalTitle": "Broadband Acoustic Intensity Direction Estimation with Tight-Frame Cardioid Arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03490.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

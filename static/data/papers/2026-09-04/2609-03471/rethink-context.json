@@ -1,0 +1,70 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03471",
+  "abstract": "This paper summarizes the ChinaVoices Challenge 2026, which aims to establish unified task definitions and evaluation conditions for Chinese dialect speech processing and to advance multi-dialect identification and automatic speech recognition. The challenge covers 16 dialect categories and defines two tasks: Chinese Multi-Dialect Identification and Chinese Multi-Dialect Automatic Speech Recognition (ASR). It uses approximately 320 hours of speech across the Reference Set, Open Evaluation Set, and Hidden Evaluation Set. The two tasks use the same evaluation audio, and each includes restricted-data and open-data tracks. We describe the task settings, data, evaluation metrics, and Qwen3-ASR-1.7B baseline, and analyze the leaderboard results and submitted systems. In total, 28 teams submit results, 17 provide system reports, and systems from 15 teams pass the compliance review and are included in the analysis. Most eligible systems outperform the baseline, and the official top-three order remains unchanged on the Hidden Evaluation Set for both tasks. Dialect-level results show that categories with higher identification accuracy generally have lower ASR error rates, although the tasks assess related but distinct capabilities. Leading identification systems commonly exploit dialect-discriminative acoustic representations, whereas leading ASR systems emphasize data normalization, augmentation, and auxiliary CTC objectives. These results provide practical guidance for developing and evaluating Chinese multi-dialect speech processing systems.",
+  "abstractSha256": "b44afd982baf0298911aeb56b07bfd3f7329d053aeb8b865989c40e501d027d8",
+  "arxivId": "2609.03471",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuiyuan Wang"
+    },
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Xian Shi"
+    },
+    {
+      "affiliations": [
+        "Beijing Huiting Technology Co., Ltd."
+      ],
+      "name": "Jie Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该挑战用同一批十六类方言音频同时考辨别与转写，统一基线仅 53.62% 辨别准确率与 18.10% 转写错误率，最强受限系统做到 83.19% 与 11.08%，而困难方言与混淆方向显示两任务相关但不可互相替代。",
+  "originalTitle": "Summary of the ChinaVoices Challenge 2026: Data, Tasks, Baseline, and Methods",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03471.pdf",
+  "readerTitle": "十六种方言同一套音频：辨别与转写为何难同步提升",
+  "schemaVersion": 1
+}

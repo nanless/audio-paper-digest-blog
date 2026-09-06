@@ -1,0 +1,41 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03940",
+  "abstract": "Most previous work on speech enhancement (SE) based on masked generative modeling relied on discrete token representations of audio signals, obtained using neural audio codecs (NACs). However, a recent study has shown that continuous latent representations of NACs can be advantageous for SE in terms of speech quality and intelligibility. In this work, we propose masked autoregressive SE (MARSE), a method for SE based on iterative decoding of masked clean speech frames using continuous NAC representations of speech. In particular, we investigate a set of different decoding policies, ceteris paribus, that is, using the same DNN (a Conformer model), the same NAC (the DAC codec) and the same training setup. The results show that MARSE enables a flexible trade-off between SE performance and computational cost. Audio examples and code are available online.",
+  "abstractSha256": "9404749ab675d910cbb175439a7f949dc8f5e3dae5da661046f0c420a3cc779e",
+  "arxivId": "2609.03940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France",
+        "Univ. Grenoble Alpes, CNRS, Grenoble-INP, GIPSA-lab, France"
+      ],
+      "name": "Yoto Fujita"
+    },
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Simon Leglaive"
+    },
+    {
+      "affiliations": [
+        "Univ. Grenoble Alpes, CNRS, Grenoble-INP, GIPSA-lab, France"
+      ],
+      "name": "Laurent Girin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把语音增强放在连续神经音频编解码表示上做掩码自回归建模，用同一 Conformer 和同一训练比较不同解码策略，在 Libri1Mix 上以 10 步取得介于非自回归与因果自回归之间的质量与算力，并以可听度指标接近非自回归基线。",
+  "originalTitle": "Masked Autoregressive Speech Enhancement with Continuous Neural Audio Codec Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03940.pdf",
+  "readerTitle": "连续编码表示上的分块解码：在一次前向与逐帧之间调节增强代价",
+  "schemaVersion": 1
+}

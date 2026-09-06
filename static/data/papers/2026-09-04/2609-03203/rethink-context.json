@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03203",
+  "abstract": "Expressive speech systems make a decision before any waveform is rendered: how an utterance is delivered. In dialogue agents, narration, and role-conditioned TTS, that hidden planning step sets affect, pitch, energy, rate, pause, emphasis, and stance, yet downstream audio scores rarely reveal whether those choices were licensed by the source record, a source-use failure that occurs before any waveform exists. VoxReason makes that pre-synthesis decision measurable as a listener-free task for source-grounded speech planning. Before synthesis, VoxReason measures whether delivery choices are grounded in cited source records. Systems output a source-cited speaking-plan with evidence citations, and a deterministic verifier checks citation legality, slot agreement, unsupported state, schema validity, and one-cue counterfactual locality. On 1,440 checked source-label cases, shortcut controls show why slot accuracy alone is unsafe: a key-lookup oracle reaches 1.000 plan-slot accuracy on seen keys, while an emotion prior still reaches 0.958 slot accuracy on source-key-disjoint cases without citing intensity or identity. In a separate 100-case learned source-key-disjoint comparison, a 7B locality SFT+CF repair improves plan-slot accuracy/locality from 0.684/0.141 to 0.919/1.000, and removing source records lowers citation-required grounded score by 0.488. Rendered waveform quality remains outside the present evaluation.",
+  "abstractSha256": "f5a6922e3a5a68ed3bab8397632d8e0487d7f79a4e74b6bdc8b7afac413d811e",
+  "arxivId": "2609.03203",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Research Council Canada"
+      ],
+      "name": "Mengzhe Geng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把合成前 delivery 决策做成带源引用的结构化说话计划，用确定性校验器检查引用合法性与单线索局部性，在 32 种子 100 例 full100 对照中去掉源记录使引用必需分数下降 0.488，而 7B 局部性修复在源键留出下恢复槽位准确率与局部性。",
+  "originalTitle": "VoxReason: Listener-Free Evaluation of Source-Grounded Speech Planning Before Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03203.pdf",
+  "readerTitle": "合成之前先对账：说话计划能否证明 delivery 真用了源记录",
+  "schemaVersion": 1
+}

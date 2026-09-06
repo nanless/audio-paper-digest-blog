@@ -1,0 +1,47 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03620",
+  "abstract": "Audio deepfake detection is commonly formulated as clip-level binary classification of single-domain audio. However, real-world manipulated audio can exhibit mixed authenticity, where genuine and manipulated cues coexist across temporal transitions, overlapping sources, or both. This setting requires not only detecting manipulated audio but also localizing the components that provide evidence for the decision. We propose ToolDF, a tool-integrated reasoning framework for mixed-authenticity audio deepfake detection. ToolDF employs an audio large language model as an orchestrator trained with supervised tool-use trajectories. It adaptively analyzes the audio scene, selectively performs source separation, routes components to domain-specific experts, and aggregates their evidence into an interpretable verdict. We further introduce a mixed-authenticity ADD benchmark covering temporal transitions, acoustic overlaps, and hybrid mixtures. Experimental results show that ToolDF achieves the best overall performance on composite-type detection, achieving macro-F1 gains of 3.72 and 14.39 points over the strongest monolithic baseline and a fixed pipeline, respectively, while providing interpretable evidence localized to temporal regions and acoustic sources. Our source code and dataset are publicly available online.",
+  "abstractSha256": "24ad7988cc451af64c1e44816d666b927ac46b2de46e295d6e6f592b5356ef0e",
+  "arxivId": "2609.03620",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "音频伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Multi-Modal Research Center, KETI, South Korea",
+        "Department of Artificial Intelligence, Korea University, South Korea"
+      ],
+      "name": "Taewoo Kim"
+    },
+    {
+      "affiliations": [
+        "Multi-Modal Research Center, KETI, South Korea"
+      ],
+      "name": "Young Han Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nam In Park"
+    },
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Korea University, South Korea"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对一段音频里同时含真实与伪造、跨时间与跨声源的混合真实性检测，ToolDF 用音频大模型做编排器按结构调用分离与四个领域专家并执行早失败汇总，在复合类型上取得最高的 C-Avg. 81.89，代价是依赖外部工具的可靠性。",
+  "originalTitle": "ToolDF: Tool-Integrated Reasoning for Mixed-Authenticity Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03620.pdf",
+  "readerTitle": "真假混在一起时：让大模型先分轨再判真伪的 ToolDF",
+  "schemaVersion": 1
+}

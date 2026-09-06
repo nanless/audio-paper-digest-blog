@@ -1,0 +1,82 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04102",
+  "abstract": "System-wide Dictation on Apple devices runs entirely on-device, and the speech it transcribes reaches the foundation model through a tokenizer: an encoder that maps short windows of waveform onto the representation the language model reads. Because that model is sparsely activated under Instruction-Following Pruning, only a small subset of its experts occupies DRAM at any time, so the always-on tokenizer competes for the same memory, and its parameter count bears directly on power and latency. In this work we study how to compress such a tokenizer by distillation, taking as the supervision target neither the discrete token nor the output distribution but the pre-quantizer latent the model actually consumes - the last representation the two token interfaces share. We train only the student encoder to regress the teacher&#39;s per-frame latent under a squared-error objective, with a single affine layer absorbing the teacher-student width mismatch. Because the target precedes both the quantizer and the language-model bridge, one recipe covers both token interfaces we support, and applies both to a tokenizer pretrained alone and to one jointly trained with a language model. At 2.8x compression the distilled student stays within 1.9% relative WER of its teacher on five of six teacher-student pairs without any fine-tuning, and improves on an independently trained tokenizer of identical capacity by 3.9% relative.",
+  "abstractSha256": "82424ad4e1c1f8767125b4b22b7a52235f0de3d8648777cc8ae69d11ca22e14c",
+  "arxivId": "2609.04102",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Prasanth Yadla"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mohammad Samragh"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Dongseong Hwang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mingbin Xu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yuanyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Chung-Cheng Chiu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yongqiang Wang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yuan Liu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Zhen Huang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Xiaodan Zhuang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文只训练窄而深的学生编码器逐帧回归教师预量化潜变量，在 2.8 倍参数压缩下六组配对中五组相对词错误率退化不超过 1.9%，同容量独立训练对照优 3.9% 相对，而联合训练的 J3 退化 7.7% 揭示教师与阶段边界。",
+  "originalTitle": "Compressing Streaming Neural Audio Encoders via Latent-Space Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04102.pdf",
+  "readerTitle": "只抄最后一层表示：预量化潜变量蒸馏压缩流式音频前端",
+  "schemaVersion": 1
+}

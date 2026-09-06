@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04102",
+  "arxivId": "2609.04102",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Prasanth Yadla"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mohammad Samragh"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Dongseong Hwang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mingbin Xu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yuanyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Chung-Cheng Chiu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yongqiang Wang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Yuan Liu"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Zhen Huang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Xiaodan Zhuang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04102",
+  "originalTitle": "Compressing Streaming Neural Audio Encoders via Latent-Space Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04102.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

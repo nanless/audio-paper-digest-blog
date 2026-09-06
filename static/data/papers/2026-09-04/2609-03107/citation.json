@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03107",
+  "arxivId": "2609.03107",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Chernin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ethan Fetaya"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03107",
+  "originalTitle": "CRAW: Codec Robust Audio Watermarking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03107.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

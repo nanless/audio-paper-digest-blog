@@ -1,0 +1,143 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03231",
+  "arxivId": "2609.03231",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Francesco Mantegna"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Gereon Elvers"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Dulhan Jayalath"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Gilad Landau"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Tasha Kim"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Miran Özdogan"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Luisa Kurth"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Teyun Kwon"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK",
+        "OHBA, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "SungJun Cho"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Benjamin Ballyk"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK",
+        "FMRIB, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "Alex Fung"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Anna Greer"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Pratik Somaiya"
+    },
+    {
+      "affiliations": [
+        "Maastricht University, The Netherlands"
+      ],
+      "name": "Christian Herff"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada"
+      ],
+      "name": "Yorguin Mantilla Ramos"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada"
+      ],
+      "name": "Hamza Abdelhedi"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada",
+        "Mila–Quebec AI Institute, Canada"
+      ],
+      "name": "Karim Jerbi"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind, UKJoint first authors"
+      ],
+      "name": "Greg Farquhar"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind, UKJoint first authors"
+      ],
+      "name": "Brendan Shillingford"
+    },
+    {
+      "affiliations": [
+        "OHBA, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "Mark Woolrich"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Oiwi Parker Jones"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03231",
+  "originalTitle": "The 2026 PNPL Competition: Word Classification and Efficient Cross-Subject Generalisation in LibriBrain100",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03231.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

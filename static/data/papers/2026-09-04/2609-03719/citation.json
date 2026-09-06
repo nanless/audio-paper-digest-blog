@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03719",
+  "arxivId": "2609.03719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Francesco Vitucci"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Giuseppe Silvi"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Daniele Giuseppe Annese"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Francesco Scagliola"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Anthony Di Furia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03719",
+  "originalTitle": "Opening mind by opening architecture: analysis strategies",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03719.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

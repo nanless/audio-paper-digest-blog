@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03363",
+  "abstract": "This paper proposes PACodec, a novel low-bitrate neural speech codec based on parallel additive vector quantization (PAVQ). Unlike the mainstream residual vector quantization (RVQ) used in most neural speech codecs, where vector quantizers (VQs) are sequentially dependent, the PAVQ strategy adopted in PACodec aggregates parallel quantization results to optimize bitrate usage. Specifically, the PAVQ adopts a &#34;global-local-global&#34; (GLG) design: the global encoded features are quantized in parallel by multiple independent VQs, each attending to a local component of the representation, and their outputs are aggregated through addition to yield the final global quantization result for decoding. Experimental results show that PACodec, as each VQ focuses only on local information, supports smaller codebooks and reduces bitrate by 30% compared with baselines at the same decoding quality, with only minor model complexity. Further analysis shows that, owing to the GLG framework of PAVQ, the proposed PACodec is disentanglement-friendly, and each independent VQ captures different aspects of speech, e.g., content, timbre, and acoustic details, suggesting potential for application to downstream tasks such as voice conversion.",
+  "abstractSha256": "fe8305c91380d0814faa66592233578286246f90c8eba0f3e213ab5df89816d1",
+  "arxivId": "2609.03363",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao-Hang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "PACodec 用并行加性量化，在 LibriTTS 1.4 kbps 与 VCTK 4.2 kbps 上取得接近较高码率基线的客观表现；主观 ABX 仅在 LibriTTS 上进行，对多数 2 kbps 基线未检出显著偏好差异，并非等效证明，分支解耦也仍只是消融显示的潜力。",
+  "originalTitle": "PACodec: A Low-bitrate Neural Speech Codec with Parallel Additive Vector Quantization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03363.pdf",
+  "readerTitle": "并行相加代替串行求余：PACodec 如何用小码本做低码率语音编码",
+  "schemaVersion": 1
+}

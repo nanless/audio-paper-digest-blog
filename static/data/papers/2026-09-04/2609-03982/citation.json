@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03982",
+  "arxivId": "2609.03982",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Susmita Bhattacharjee"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Himashri Deka"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "H.S. Shekhawat"
+    },
+    {
+      "affiliations": [
+        "Indian Institute of Technology Dharwad, India"
+      ],
+      "name": "S.R.M. Prasanna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03982",
+  "originalTitle": "Fairness Evaluation of Edge-AI Implementation for Cleft Lip and Palate Speech ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03982.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

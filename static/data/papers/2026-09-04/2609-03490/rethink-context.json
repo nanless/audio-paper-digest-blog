@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03490",
+  "abstract": "This study experimentally investigates source-direction estimation from acoustic intensity using paired cardioid microphones, with particular emphasis on well-balanced arrangements known as tight frames. Impulse responses were measured at 6 or 24 microphone positions, and two opposed-pair spacings were examined. The resulting arrays were evaluated for a single source, coherent interference between waves arriving from two orthogonal directions, and directional tracking in the presence of interfering waves from multiple directions. The results demonstrate broadband acoustic-intensity direction estimation from 50 Hz to 20 kHz, with the 24-microphone arrangement and the shorter spacing generally providing smaller errors.",
+  "abstractSha256": "8e68411eb5617b0e22a9a28965911591f10eddaa2529a7dfc6a1e432466c3510",
+  "arxivId": "2609.03490",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Design, Kyushu University, Fukuoka 815-8540, Japan"
+      ],
+      "name": "Akira Omoto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用消声室实测脉冲响应验证成对心形传声器的声强测向，在 50 Hz 到 20 kHz 内比较 TF24 与 TF6 和 20mm 与 100mm 间距，最强证据是 20mm 的 TF24 在干扰信号比 -20 dB 和 -30 dB 时全频段中值跟踪误差在 2.5 度以内，代价是大间距高频和强干扰下误差明显增大且存在与波长相关的峰。",
+  "originalTitle": "Broadband Acoustic Intensity Direction Estimation with Tight-Frame Cardioid Arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03490.pdf",
+  "readerTitle": "用成对心形麦克风测声强方向：紧框架阵列为何能做到 50 Hz 到 20 kHz",
+  "schemaVersion": 1
+}

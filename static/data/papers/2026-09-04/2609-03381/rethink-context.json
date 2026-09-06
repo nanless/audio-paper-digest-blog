@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03381",
+  "abstract": "This paper proposes StreamWSR, a Streamable neural Waveform-domain model for speech Super-Resolution (SR). By adopting a fully causal architecture with compact frame-level waveform representation, the proposed StreamWSR supports zero-look-ahead streaming inference while avoiding vocoder-based reconstruction and explicit phase prediction. Specifically, StreamWSR downsamples the input waveform into a compact frame-level representation using strided causal convolutions. Then, a lightweight causal long-short-term modeling backbone is employed to capture both local waveform structures and long-range historical dependencies under causal constraints. Finally, the modeled output is converted back to the waveform domain through a causal transposed-convolution and combined with the input waveform via a residual connection to generate the final high-resolution speech. Experimental results on 16 kHz speech SR show that StreamWSR achieves competitive or superior speech quality and intelligibility compared with representative waveform- and spectrum-based baselines, while maintaining a zero-look-ahead streaming advantage with only 9M parameters and 2G FLOPs.",
+  "abstractSha256": "f2e313901dc8ad8745d6ba58b717099910f03a8d53eed6cd0eba3850f0e7ed10",
+  "arxivId": "2609.03381",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音超分",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuan Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui-Peng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "StreamWSR 把低采样语音先上采样再用全因果波形网络预测残差补高频，在 VCTK 三种带宽扩展设置下以 9M 参数和 2G FLOPs 达到与非流式基线相当的失真与可懂度，并用消融证明了帧级压缩与频谱判别器的作用。",
+  "originalTitle": "StreamWSR: Streamable and Lightweight Waveform-Domain Neural Speech Super-Resolution",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03381.pdf",
+  "readerTitle": "不看未来也能补高频：StreamWSR 的因果波形超分",
+  "schemaVersion": 1
+}

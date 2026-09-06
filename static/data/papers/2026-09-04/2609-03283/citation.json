@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03283",
+  "arxivId": "2609.03283",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyu Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufei Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Honghao Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huipeng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenhua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03283",
+  "originalTitle": "Is Semantics Enough for Speech Mean Opinion Score Prediction?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03283.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

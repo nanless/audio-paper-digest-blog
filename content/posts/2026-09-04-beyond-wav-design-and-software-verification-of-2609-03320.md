@@ -2,19 +2,34 @@
 title: "Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research"
 date: 2026-09-04
 draft: false
-tags: [语音质量评估, 端到端, 模型评估]
+tags: [语音质量评估, 端到端, 医疗音频, 基准测试]
 categories: [论文速递]
-description: "语音质量评估 | 6.1/10"
+description: "VocalCap 把一次浏览器录音拆成原生对象、客户端无损 WAV 与服务端规范 WAV 三份互补文件并全程留证，在确定性破坏测试、39 例试点复检与 Chromium/WebKit 双端到端中验证了采集与变换契约，但声学校准、可用性与生物标志物有效性仍需独立研究。"
 hiddenInHomeList: true
 paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
 paper_digest_arxiv_id: "2609.03320"
+paper_digest_workbench_contract: "researcher-workbench-v1"
+paper_digest_reader_title: "不只收一个 WAV：把浏览器采集与变换留证的录音系统"
+paper_digest_original_title: "Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research"
+paper_digest_arxiv_version: null
+paper_digest_arxiv_versioned_id: null
+paper_digest_arxiv_abs_url: "https://arxiv.org/abs/2609.03320"
+paper_digest_arxiv_pdf_url: "https://arxiv.org/pdf/2609.03320.pdf"
+paper_digest_primary_task: "语音质量评估"
+paper_digest_score: 6.4
+paper_digest_rank_bucket: "前50%"
+paper_digest_document_type: "系统技术报告"
+paper_digest_one_sentence: "VocalCap 把一次浏览器录音拆成原生对象、客户端无损 WAV 与服务端规范 WAV 三份互补文件并全程留证，在确定性破坏测试、39 例试点复检与 Chromium/WebKit 双端到端中验证了采集与变换契约，但声学校准、可用性与生物标志物有效性仍需独立研究。"
+paper_digest_authors: [{"affiliations":["Institute of Mathematics and Statistics, University of São Paulo, São Paulo, Brazil"],"name":"Augusto Camargo"}]
+paper_digest_abstract_sha256: "795ed6e737a517dab01573ac119dd98e614954f6babbeb53029021a2f46cc466"
+paper_digest_sidecars: {"citation.bib":{"sha256":"c316dbd5500744e023ee6ec105dd106dc4f5eafb3a5694cce57e278e58173db4","url":"/audio-paper-digest-blog/data/papers/2026-09-04/2609-03320/citation.bib"},"citation.json":{"sha256":"d9746821832eed87697ab97d8a28d65352ff277a7219bbd5e3356080637f84e0","url":"/audio-paper-digest-blog/data/papers/2026-09-04/2609-03320/citation.json"},"citation.ris":{"sha256":"3db4f75874eb481e49674cd5ad68acca108688f625a138681140c8ded06c55ed","url":"/audio-paper-digest-blog/data/papers/2026-09-04/2609-03320/citation.ris"},"rethink-context.json":{"sha256":"f21a8516eeb8cff83cf553f65e450aef7f0d1f9dfeb82416a48d48b607c09438","url":"/audio-paper-digest-blog/data/papers/2026-09-04/2609-03320/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "31cca8a8d754f9f08699379672584fee3206bc40c186c67d239b0f3d6012379e"
-paper_digest_api_reader_plan_sha256: "23c80c64e402ad4c35f59d93171043891c0258517e0600b2319f5b3e2f615d31"
+paper_digest_api_reader_article_sha256: "b18e8c508416f701159275268ad4ed1d4f0d8596f10872f7f440fb3d2dbec1ce"
+paper_digest_api_reader_plan_sha256: "4c484a0d88a9e87f289e705cc666ce3cfc757f6a27b17b52dd88923427351a07"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
-paper_digest_api_reader_source_bindings_sha256: "61b457703f2bdb59ca5ab031a42d988c6b813aff26017d10711129483b3e21e8"
-paper_digest_api_reader_source_table_count: 4
+paper_digest_api_reader_source_bindings_sha256: "e1c53585b012927f333744071ac3b3f24436a61a5caf27d7ad9d399fd20b91cc"
+paper_digest_api_reader_source_table_count: 6
 paper_digest_api_reader_source_formula_count: 1
 paper_digest_api_reader_structured_artifacts_sha256: "0c44df43263a9ead4f972422a644d74fdaa248af3f0ec6a597e9ba102c231a61"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity-v1"
@@ -23,81 +38,70 @@ paper_digest_api_reader_author_count: 1
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity-v1"
 paper_digest_api_reader_resource_identity_sha256: "3c3fdc2081efa806a9e15471402804f9a22d8c8f1ca1456838aeab58e32f8b8c"
 paper_digest_api_reader_resource_count: 0
+paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v1"
 ---
 
-# 📄 不只留下一段波形：让每一次远程录音都能自证清白
+# 📄 不只收一个 WAV：把浏览器采集与变换留证的录音系统
 
 > 英文题目：*[Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research](https://arxiv.org/abs/2609.03320)*
->
-> 一句话：**远程自导录音只剩最终文件无法定位故障，VocalCap 用同一数据流的双产物加版本化规范与字节级溯源把采集变成可验收契约，受控边界与 39 例试点审计证实了拓扑感知等机制有效，代价是三份留存与仅限软件契约的验证范围。**
 
-> 标签：#语音质量评估 | #端到端 | #模型评估
+> 标签：#语音质量评估 | #端到端 | #医疗音频 | #基准测试
 >
-> 评分：**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 0.9/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
+> 评分：**6.4/10** | 创新 1.2/2 | 技术严谨 1.2/1.5 | 实验充分 1/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
 
 
 ## 👥 作者与机构
 
 - Augusto Camargo：Institute of Mathematics and Statistics, University of São Paulo, São Paulo, Brazil
 
-## 💬 毒舌点评
-
-把浏览器采集从单个 WAV 文件扩展为带字节完整性和变换溯源的可验收会话，工程闭环完整。短板是全部验证仍停留在软件契约层面，没有声学一致性、可用性和临床意义的任何外部证据，离嗓音生物标志物研究真正可用的采集验证还有距离。
-
 ## 📌 核心摘要
 
-远程自导语音采集常只交付最终音频文件，无法定位空白、中断、声道拓扑错误或传输篡改发生在哪个环节，制约嗓音生物标志物研究的上游可靠性。本文提出机构可控的免安装浏览器采集系统 VocalCap，以版本化协议驱动任务执行，并为每次接受的录音保留三份互补音频与完整过程证据。核心机制是同一 MediaStream 并行生成浏览器原生对象与客户端无损浮点文件，再经服务端验证后派生规范单声道文件，全链路以哈希、质量度量与溯源记录绑定。与已有采集工具相比，新颖之处在于将配对产物、跨边界字节验证、版本化规范化、可恢复传输与任务级完成条件合并为单一验收契约。主结果显示受控挑战通过了连续性与拓扑分支，回顾性审计发现大量名义立体声实际为单通道有效，生产端到端运行在两种浏览器引擎下全部完成。实际意义是为后续声学验证提供了可审计的输入边界。主边界是结论仅限于软件行为验证，不涉及设备间声学一致性、目标人群可用性与临床有效性。
+VocalCap 把一次浏览器录音拆成原生对象、客户端无损 WAV 与服务端规范 WAV 三份互补文件并全程留证，在确定性破坏测试、39 例试点复检与 Chromium/WebKit 双端到端中验证了采集与变换契约，但声学校准、可用性与生物标志物有效性仍需独立研究。
 
 ## 🔗 开源与复现资源
 
-- 代码：论文中未提及代码链接
-- 模型权重：论文中未提及
-- 数据集：论文中未提及，证据仅描述由项目团队成员采集的 39 个试点录音且未给出获取链接
-- Demo：论文中未提及
-- 复现材料：证据给出 VocalCap 0.3.0 提交 73671bf 的确认性生产 E2E 执行 e2e_20260902211838。该执行覆盖 Chromium 和 WebKit 的 2 个浏览器画像。该画像使用 5 任务协议产生 10 段已接受录音和 30 件人工制品。仓库验证报告 134 条必需路径全部存在。浏览器 JavaScript 套件 6 套全部通过。仓库级 Python 测试 43 项全部通过。应用 Python 测试共 126 例，其中 125 例通过，余下 1 例因 SoXR 缺失跳过。
-- 论文中引用的开源项目：证据提及 VOIS、Beiwe、Voice EHR、m-Path、Project Euphonia、HermeSpeech Recorder、WebSpeechRecorderNg、LaBB-CAT、Chromium、WebKit、FFmpeg、SoXR、Playwright 和 IndexedDB，证据中未出现可逐字复制的 HTTPS URL，故不提供链接
-- 资源可达性验证：未发现可验证的官方 HTTPS 资源 URL。
+本次未形成可展示的已核验资源记录，开放状态尚未核实。
+
+可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 
 ## 🧭 深度解读
 
-### 远程录音最难的不是录，而是事后说不清
-想象你是 1 名刚进组的研究生，老板丢给你几千个远程收集的嗓音文件，让你做疾病相关的声学分析。你打开波形，发现有的全程静默，有的中途断掉一截，有的音量莫名小一半。你想追问：是参与者没说话，还是浏览器卡了，还是上传时被截断了？论文开篇就点出这种困境，远程采集常只剩最终音频文件，捕获、传输、处理与接受过程缺乏证据。
+### 远程收音为什么不能只交一个音频文件？
 
-嗓音生物标志物（vocal biomarker），白话就是从声音里量化的、与疾病过程相关的声学或语言特征，听起来很美，因为人人都有麦克风，可以反复、低成本采集。但正因为设备杂、环境杂、无人值守，采集条件本身就成了方法学变量。作者引用验证、分析验证、临床验证三分框架，强调先把录音路径讲清楚，再谈特征是否能量疾病，这是两层不同的验证。
+输入是分散在各处的参与者在自己设备上按提示完成的发声任务，输出本应是一个可直接进入声学生物标志物分析的规范波形。想改变的是只看最终文件无法追问的状态：录制中途是否出现空白、残缺、错位变换或字节被替换。必须保留的是从浏览器捕获、本地暂存、传输到服务端变换的完整执行痕迹，否则波形上的削波、静音或截断无法定位到具体环节。
 
-这篇论文的前身很有故事性。作者团队曾在新冠第一波期间为 SPIRA 项目远程收集过 6000 多名捐献者的语音，每人三句话，加上医院录音，支撑了首篇同行评议研究。那次部署暴露了难以复原的故障，比如空白录音和设备相关的噼啪噪声，光看收到的音频根本无法重建原因。这正是 VocalCap 的动机：把采集从交付文件升级为交付可验收的会话。
+论文把采集与推断分开。采集指从浏览器录制 1 次尝试并生成初始文件开始，经过校验、本地持久化、传输、规范化直到权威完成；生物标志物推断指用规范波形计算声学或语言学指标并解释疾病含义。VocalCap 只做上游，不输出疾病概率或护理建议，也不声称声压级校准。理解这条边界很重要，后面所有检查都只回答技术上是否按契约收齐收对，不回答声音是否有临床意义。
 
-所以阅读这篇系统技术报告时，别把它当成又一个语音识别模型。它回答的是上游问题：如何让 1 次自导录音的每一步都留下可检查的痕迹，并在服务端权威地判定接受与否。下游的疾病推断被明确划在系统边界之外，这种克制恰恰是它严谨的地方。
+### 已有采集工具缺的是哪一段证据链？
 
-### 已有工具不少，为何还要再造一个采集器
-做语音采集的新手很容易以为浏览器录音就是调个接口就行。实际上生态里已有不少路线：偏问卷集成的有声调查系统，偏实验灵活性的可编程网页实验工具，偏规模化的众包系统，偏纵向多模态的手机表型平台，再加上语料库管理工具。它们各自解决了提示收集、调查嵌入、生态瞬时评估或标注管理中的一段。
+浏览器录音、WAV 输出、质量检查、重试、哈希与溯源本身都不是新机制。论文列举的提示采集、网页语音实验、问卷内嵌语音、移动表型、生态瞬时评估与语料管理工具，各自覆盖了提示、刺激灵活性、规模化、纵向多模态或标注管理。按相同输入与相同运行阶段对照，它们大多解决如何让人发出声音并收到文件。
 
-论文花了相当篇幅梳理这些系统，包括 Speak、speechcollectr、VOIS、Beiwe、Voice EHR、m-Path，以及 Euphonia、HermeSpeech Recorder 等浏览器录音与语料工具。作者承认，浏览器捕获、波形输出、质量检查、重试、哈希与溯源都是已有机制，VocalCap 并没有发明录音本身。它的设计问题被定义得很窄：在短而结构化的自导语音任务里，让完整采集而非单个文件变得技术上可验证。
+VocalCap 的位置在于把配对浏览器文件、客户端与服务端字节校验、版本化服务端规范化、持久恢复与任务级完成写成同一个接受契约。也就是说，论文不是比较谁录得更清楚，而是在无人值守、自助完成的短结构化任务下，让接受 1 次完整采集在技术上可核查。作者说明相关比较基于已发表描述，没有对每个平台做同协议同故障的并行部署，因此不能从这里读出平台间的性能胜负。
 
-差异在于验收契约的完整度。已有系统多覆盖子集，有的重问卷集成，有的重刺激灵活性，有的重长期传感，但按已发表描述，都没有把配对浏览器产物、客户端到服务端字节验证、版本化服务端规范化、持久恢复与任务级完成合并为单一接受契约。论文的比较基于文献描述而非共同部署的头对头测试，这一点作者自己也承认。
+### 无人在场的自助采集会丢掉哪些信息？
 
-理解这个定位很重要：VocalCap 不是要替代所有采集工具，而是在嗓音生物标志物这个对电平、连续性、中断极敏感的上游场景里，补上证据链最薄弱的一环。如果你只想要一段能听的录音，它显得笨重；如果你要为后续建模划定可审计的输入边界，它的笨重就是必要的。
+参与者没有技术背景，研究者也看不到许可处理、任务理解、麦克风状态、编码、本地持久化、传输与恢复。已有远程语音研究记录的问题包括导航困难、多次失败尝试、依赖亲属、误解指令、声学设置不一致、重复采集与身份混淆，这些会影响缺失、归因、可比性与负担。
 
-### 从一个 WAV 到一次可追溯的采集：问题如何形式化
-论文把术语分得很细，初学者先别混。收集指跨被试跨会话的研究级过程，任务指协议定义的诱发单元，比如持续元音、标准句、数数，捕获指浏览器对 1 次任务尝试的录制与初始产物生成，而采集生命周期从捕获延续到验证、持久化、传输、规范化与权威完成。VocalCap 横跨整个上游生命周期，但止步于下游推断。
+更麻烦的是事后追溯。只看波形能发现静音或截断，但回答不了 Web Audio 是否收到帧、录制器是否吐出数据块、麦克风轨道是否意外结束、服务器收到的字节是否与浏览器发出的一致、分析波形由哪次变换生成。VocalCap 的前身在新冠第一波期间收集了超过 6000 名远程发声者，每人 3 段话，正是空白录音与设备相关的噼啪声难以重建，促使本工作把校验、溯源与恢复做进系统。
 
-操作上的难点在于参与者是未经训练的人，在没有实验员在场的情况下完成流程。权限处理、任务理解、麦克风状态、编码、本地持久化、传输与恢复，任何一处出问题都会影响缺失、归因与可用性。以往远程言语研究记录过导航困难、反复失败、依赖亲属、误解指令、声学设置不一致等问题，这些都不是模型能事后弥补的。
+### 从参与者到规范 WAV 要走哪五个阶段？
 
-**空白录音 × 因果定位：** 空白录音负责描述现象，即波形全零或长时间无声，肉眼可见但原因不明；因果定位负责回答空白发生在麦克风轨道中断、Worklet 断流、编码失败还是传输截断中的哪一环。两者搭配是因为只看波形无法区分上游共性故障与分支特有故障，组合后 VocalCap 把每种失败绑定到计数器、状态与哈希证据，使排查从猜测变为按边界逐段核对。
+参与者在手机浏览器打开研究链接，经过能力与浏览器支持检查，接受知情同意，按版本化协议依次完成任务。每题的操作固定为录音、试听、重录与接受，浏览器后处理检查通过并存入本地后才能继续。界面区分本地接受、待传输、服务器确认与最终完成 4 种状态。
 
-因此作者提出把 1 次任务尝试形式化为记录，而非文件。这个记录要能回答：Web Audio 是否收到帧，原生录制器是否吐块，麦克风轨道是否意外结束，服务端收到的字节是否与浏览器产生的一致，分析波形由哪次变换生成。只有把这些证据和音频一起保留，空白、畸形、不完整、被篡改或被错误变换的录音才能在进入分析前被拦截与定位。
+采集管线分为捕获、校验、本地持久化、传输、服务端规范化与权威完成。1 次被接受的录音保留 3 个音频文件：浏览器原生对象、客户端无损 Float32 WAV、服务端规范单声道 16 位 WAV，并链接完整性、质量、字节完整性、恢复与变换溯源证据。IndexedDB 在服务器确认前一直保留已接受的浏览器文件。
 
-### 五段流水线与三份音频：先看全景再拆零件
-VocalCap 的全景可以按 5 个操作阶段理解，依次是参与者引导、浏览器捕获、浏览器后处理验证、持久化传输与恢复、服务端验证与规范化及会话完成。前端是移动优先网页应用，由机构控制的 Flask 服务端提供，部署相关的公网源、路径、采集模式等经运营配置与源码分离。参与者经过能力检查与同意后，按序执行版本化协议，首发葡萄牙语协议含麦克风测试、持续元音、标准句、数数和自发语音。
+**原生对象 × 客户端无损 WAV：** 原生对象指浏览器 MediaRecorder 直接吐出的容器与编码对象，负责保留浏览器到底做了什么；客户端无损 WAV 指从同一 MediaStream 经 AudioWorklet 拿到的 Float32 采样不经有损编码存成的严格 WAV，负责保留 Web Audio 实际交付了什么。二者必须搭配是因为它们共享上游信号路径但在分支点之后分叉，只有同时保留才能区分是麦克风没有送帧、录制器没有吐块，还是传输后字节被改动，组合后比只收一个最终 WAV 多解决了故障定位与字节级对账问题。
 
-**原生对象 × 无损文件：** 原生对象负责保留浏览器真实行为，即 MediaRecorder 直接吐出的容器与编码现状；无损文件负责提供可分析的基准，即经 Web Audio 拿到的 Float32 采样封装的严格波形。两者搭配是因为单一编码输出会丢失与分析波形的对应关系，组合后同一 MediaStream 的并行双视角既能反映浏览器选择，又能支撑服务端派生规范文件并做跨边界字节比对。
+### 一条记录如何把三个音频文件绑在一起？
 
-每个任务遵循录音、试听、重录、接受的固定交互，区分本地接受、待传输、服务端确认和会话完成 4 种状态。采集时浏览器只做轻量计数与状态机，繁重的解析、度量、哈希与持久化都推迟到停录之后，避免干扰实时捕获。这种把重活后移的设计，是工程上保护录音实时性的关键选择。
+论文用一个集合表示 1 次任务的完整记录，包含原生对象、客户端无损文件、规范文件、完整性清单、采集传输证据、技术质量结果与处理溯源 7 个部分。3 个音频文件来自同一次 MediaStream：MediaRecorder 走原生路径，AudioWorklet 走 Float32 路径，服务端再从已校验的无损文件派生规范文件。虚线内的持久边界装的正是这 3 个互补表示，非音频的清单与证据通过记录链接。
 
-要回答三份音频与 4 类非音频证据如何构成一条记录，下面这张整理表把论文原表的 7 个组件原样呈现。它要解决的比较问题是：1 次接受到底保留了什么，每部分为谁作证。统一条件是同一任务尝试下的互补视角，指标方向是越能定位故障越好，而非音质越好越好。
+\[R_{p,s,t}=\{N,L,C,M,E,Q,P\},\]
+
+下面这张原表给出 7 个部分的准确分工，读的时候注意前三行是音频本身，后四行是让音频可被接受的证据。
 
 | ID | Component | Role in the acquisition record |
-|---|---|---|
+| --- | --- | --- |
 | NN | Browser-native object | Preserves the exact object emitted by MediaRecorder, including its browser-selected container and codec. |
 | LL | Client-lossless WAV | Represents the Float32 samples delivered by Web Audio without an additional lossy encoding stage. |
 | CC | Canonical WAV | Provides a deterministic mono PCM16 derivative at the protocol-declared sample rate for downstream analysis. |
@@ -106,97 +110,80 @@ VocalCap 的全景可以按 5 个操作阶段理解，依次是参与者引导�
 | QQ | Technical-quality result | Reports versioned digital measurements and acceptance or warning outcomes without claiming calibrated sound pressure level (SPL). |
 | PP | Processing provenance | Identifies the transformation profile, software versions, binary identity, source state, and canonical output digest. |
 
-表中 NN 与 LL 共享同一上游媒体流，分支点之后证据才分叉，这使后续比较能区分上游共性问题与分支特有问题。CC 由服务端从验证后的 LL 派生，是单声道 16 位脉冲编码调制波形。MM 绑定角色、大小、哈希与清单版本，EE 记录执行与恢复，QQ 报告版本化质量度量，PP 记录变换溯源。三份音频持久保留，其余为关联证据，共同支撑服务端权威接受。
+这张表说明接受的不只是一段声音。原生对象保留浏览器选择的容器与编码原样，无损文件保留 Web Audio 交付的采样而不加有损编码，规范文件提供协议声明采样率下的确定性单声道派生。清单绑定角色、大小与哈希，证据记录执行与恢复，质量结果只报告数字测量而不声称校准声压级，溯源记录变换版本与二进制身份。缺少任何一类，后续就无法判断文件从何而来。
 
-### 记录的数学形状：七元组意味着什么
-论文用一个七元组把记录形式化，初学者可以把它读作 1 次采集的身份证加体检报告。N 是浏览器原生对象，L 是客户端无损波形，C 是服务端规范波形，M 是完整性清单，E 是采集传输证据，Q 是版本化技术质量结果，P 是处理溯源。公式本身不做推理，只是声明这些部分必须同时存在并相互绑定。
+### 浏览器在录音时观察什么，录完后检查什么？
 
-\[R_{p,s,t}=\{N,L,C,M,E,Q,P\},\]
+录音进行中浏览器只做轻量计数与状态记录，包括工作线程块计数、帧计数、序列间隙、录制器数据块计数、麦克风静音计数、轨道意外结束、音频上下文状态序列。重的 WAV 解析、采样遍历、哈希、持久化、上传、服务端解码与规范化都推迟到录制停止后，避免证据机制干扰正在进行的采集。
 
-这个形式化的好处是把验收条件说死：缺任何一部分或对不上哈希，都不能算接受。浏览器原生路径经 MediaRecorder 保存浏览器选择的编码与封装，无损路径经音频工作线程（AudioWorklet）拿浮点采样并封装为严格结构波形，避免额外有损编码。两者互补，前者反映原生行为，后者作为规范化的可信源。
+录完后的管线按固定顺序执行 7 组共 11 项稳定检查：先确认无损帧到达且轨道存活且录制器无运行时错误，再要求原生对象非空且本地可加载元数据，接着按严格 Float32 WAV 解析无损对象，独立测量声道并分类拓扑、拒绝非有限采样与全零信号，再对满足时长与电平上下文的内部精确零段拒绝，记录原生与无损时长差，最后计算两个文件的 SHA-256。全部通过才能被接受。自动语音识别不在浏览器接受逻辑中。
 
-**拓扑感知 × 版本化规范化：** 拓扑感知负责先测量再动手，即区分单声道、样本一致立体声、单通道有效与双通道有效；版本化规范化负责把动手过程固定下来，即直通、选有效通道或等权平均加 SoXR 重采样都按版本号执行并记录。两者搭配是因为按格式标签直接平均会对单通道有效文件引入约 6 分贝系统性衰减，组合后变换本身成为可复查对象，保留源文件还能事后审计。
+**完整性清单 × 转换溯源：** 完整性清单负责绑定每个文件的角色、字节大小、SHA-256 与清单版本，在浏览器与服务器两端独立计算以发现截断替换；转换溯源负责记录规范化用的剖面版本、FFmpeg 与 SoXR 信息、二进制哈希、源码提交与规范文件哈希，以说明分析用波形由谁生成。清单解决跨边界是否同一份字节，溯源解决服务端波形如何从源文件算出，二者组合才让规范 WAV 既可验证又可复现。
 
-服务端规范化先分类再动手：单声道直通，样本一致立体声选 1 通道，单通道有效选有效通道，双通道有效才等权平均。如需重采样经 FFmpeg 调用 SoXR，明确排除归一化、降噪、修剪、压缩、均衡与抖动。浮点到定点采用显式钳位与远零舍入，原子写入并生成含实现版本、二进制哈希与源码提交的溯源记录。这种保守策略保证分析波形的每一步都可归因。
+下表是已实现的全部证据探针及其目标与局限，每一行都同时说明能发现什么和不能推出什么。
 
-### 浏览器侧十一项检查：为何停录后才算账
-浏览器后处理流水线被命名为 browser_audio_pipeline_3，按固定顺序执行 7 组共 11 项稳定检查。第一组验证无损帧到达、麦克风轨道存活且无运行时错误，第二组要求原生对象非空且本地可加载元数据，第三组按严格 Float32 解析无损对象，第四组逐通道测拓扑并拒绝非有限值与全零信号。
+| Evidence class | Implemented observations | Target and limitation |
+| --- | --- | --- |
+| Lossless execution | Block count, frame count, sequence-gap count, and last worklet sequence | Detect absent or discontinuous Web Audio delivery; useful speech requires separate signal and content assessment |
+| Native execution | MediaRecorder chunk count, emitted byte count, and runtime error state | Detect a recorder that emitted no payload or raised an error; emitted bytes may still be defective |
+| Microphone track | Mute and unmute counts, unexpected track termination, and safe observed track settings | Localize browser-reported track interruption; reported values lack physical calibration |
+| Audio lifecycle | Ordered AudioContext states | Expose suspended, interrupted, or closed states; the physical cause may be unresolved |
+| Native artifact | Nonempty object, declared media type, locally loadable metadata, and decoded duration | Detect an empty or locally unrecognized native object; signal quality requires additional assessment |
+| Lossless artifact | Strict RIFF/WAVE Float32 structure, per-channel topology, sample rate, frames, finite samples, nonzero count, root-mean-square (RMS), peak, duration, and internal exact-zero runs | Detect malformed, non-finite, frameless, exact-all-zero, or qualifying discontinuous audio; nonzero audio may still contain the wrong or unusable signal |
+| Cross-artifact comparison | Native elapsed duration, lossless frame-derived duration, and absolute difference | Reveal gross divergence; the difference is treated as observe-only until real-device tolerances are validated |
+| Transfer integrity | Browser size and SHA-256 for NN and LL, independently observed server size and SHA-256, artifact role, and manifest version | Detect truncation, substitution, or mismatch across the client–server boundary; semantic task compliance requires task-level evidence |
+| Server inspection | Independent decode of NN and LL, stream count, codec, channels, sample rate, frames, finite and nonzero samples | Prevent reliance on the browser declaration alone; speaker identity and intelligibility require separate assessment |
+| Transformation provenance | Canonical profile and version, FFmpeg and resampler information, FFmpeg binary hash, source commit, and canonical hash | Support reproducibility and attribution of the canonical artifact; acoustic equivalence requires empirical validation |
+| Operational continuity | Local-save, queue, attempt, retry, success, failure, online/offline, page lifecycle, recovery, and completion events | Reconstruct many interruption paths; abrupt termination can prevent a terminal client event |
+| Authoritative completion | Required task set, accepted recording records, retained-artifact recheck, and atomic complete.json | Prevent partial sessions from being counted as complete; audio-file existence alone is insufficient |
 
-第五组是最具教学价值的连续性规则：当两侧均为非零且周围局部均方根不低于负 50 分贝时，拒绝不短于 40 毫秒的内部精确零值段。前后缘零值允许通过，自动语音识别不参与接受逻辑。这条规则被明确定义为工程边界而非语音静音检测器，它只给技术可用性划下界，不判断语义是否合规。
+这张表的价值在于诚实标注边界。例如无损执行计数能发现 Web Audio 没有送数，但有用语音仍需单独评估；原生执行计数能发现录制器没有吐负载，但吐出的字节仍可能损坏；跨文件时长差目前只做观察，因为真实设备容差尚未验证。读证据时必须同时记住右列的限制，不能把通过检查直接当成内容正确或说话人正确。
 
-第六组记录原生与无损时长差，目前仅观察而不据此拒绝，因为真实设备容差尚未验证；第 7 组计算双产物哈希。只有全部通过才允许参与者接受当前尝试。把繁重工作推迟到停录后，既避免干扰实时捕获，又让参与者在试听重录环节就能得到明确反馈，而不是把坏文件传到服务端才被退回。
+### 40 毫秒与声道选择两条工程边界如何执行？
 
-### 传输、恢复与服务端复算：谁才是权威
-接受尝试的音频、验证结果、清单与任务绑定先落盘到 IndexedDB 再上传，上传附带角色、大小、哈希与清单版本，服务端独立计算摘要并返回回执。浏览器存储持久化只是渐进增强，IndexedDB 才是必需队列。分配、确认与完成满足幂等语义，本地音频仅在服务端确认后删除，页面重载后可区分待上传、协议未完成、服务端已完成与授权失效。
+内部精确零规则只看同时满足 3 个条件的段：连续零长达到 40 ms 工程边界、前后均为非零、局部周围电平达到有效上下文要求。前后边缘的零段允许通过，多段内部合格零段按规则处理。这条规则是工程边界，不是语音静音检测器，也不是验证过的音质阈值。
 
-操作遥测与音频通道分离，采用有界事件词表并排除音频字节与隐私敏感标识。服务端对象被视为权威，因为客户端可能异常终止而缺失终端事件。这种设计哲学很清晰：浏览器负责诚实记录，服务端负责独立复核，任何一方自说自话都不能算数。
+**精确零中断 × 有效上下文：** 精确零中断指内部连续取值为零的采样段，负责标记可能的掉帧式空白；有效上下文指该零段两侧均为非零且周围局部足够响，负责排除本底极低的安静间隔。二者搭配的原因是只看时长会把前后静音与低电平间隔都判为故障，加上电平上下文后才只拒绝两侧有信号且局部足够响的内部断裂，组合后把工程边界从语音静音检测中区分出来。
 
-服务端流水线 server_audio_pipeline_3 先校验证据模式并要求浏览器检查全过，再绑定回执与清单，独立解码双产物并复算拓扑与连续性，要求与浏览器清单一致。随后按实测拓扑规范化并验证结果。会话完成前复验全部保留产物的完整性，并要求协议任务集逐项具备已接受录音，只有此时才原子写入 complete.json。局部成功无法被计为完整会话，中断重试也不会产生重复接受对象。
+规范化先把无损文件分类为单声道、样本全同立体声、单侧精确零立体声或双侧不等立体声。单声道直通，全同立体声取一路，单侧有效取有效侧，双侧不等做等权算术平均。如需重采样则经 FFmpeg 调用 SoXR，只允许声道选择或下混、格式转换与重采样，明确排除归一化、降噪、剪裁、压缩、均衡、增强、异步校正与抖动。Float32 转 PCM16 显式钳位并采用半值远离零舍入：只有恰好落在两个相邻整数正中间的半整数才向远离零的方向取整，其余数值按最近整数取整，原子写入。
 
-### 没有训练阶段：这篇论文到底算了什么
-刚接触机器学习论文的读者可能会找训练集、损失函数与优化器，这篇论文明确没有这些。它是系统技术报告，没有训练可学习模型，也就没有梯度更新、学习率或批量大小。它的计算是确定性求解与规则验证：解析波形结构、逐通道测量、哈希比对、按阈值判定接受或拒绝。
+**声道拓扑 × 规范化：** 声道拓扑指把客户端无损 WAV 先分类为单声道、样本全同立体声、单侧有效立体声或双侧不等立体声，负责说清名义上的立体声实际有效结构；规范化指按拓扑执行直通、选全同一路、选有效侧或等权平均，再做 PCM16 转换与必要重采样，负责产出协议声明采样率下的单声道分析文件。先分类再变换的原因是无条件平均会对单侧有效文件引入约 6.02 dB 衰减，组合后保留了电平并记下用了哪条操作。
 
-复用的外部能力也都是工程组件而非待训练模型，包括 Flask 服务端、IndexedDB 本地队列、MediaRecorder 与 AudioWorklet 浏览器接口、经 SoXR 重采样的 FFmpeg、Playwright 端到端驱动，以及安全哈希算法 256 位摘要。自动语音识别被明确排除在浏览器接受逻辑之外，语义合规需要另行评估。
+这组设计解决的具体障碍是名义格式误导变换。若把左有效右零的文件无条件平均，有效声道会被乘以 0.5，带来约 6.02 dB 系统衰减。先测量拓扑再选操作，避免了这种与内容无关的电平损失，同时留下无损源文件供事后审计。
 
-推理在这里应理解为部署后的执行过程：参与者在浏览器完成录制，后处理流水线同步给出接受或拒绝，服务端流水线复算并派生规范文件。所有阈值如 40 毫秒与负 50 分贝都是版本化工程参数，而非学习得到的参数。理解这一点，就不会误把软件契约验证当成模型性能评估，也能明白为何作者反复强调声学一致性与临床有效性需独立研究。
+### 没有模型训练时，系统靠什么保证可重复？
 
-### 用什么数据、怎么测：四类验证如何分工
-论文的验证按 4 条契约边界组织：浏览器捕获、跨边界字节同一性、规范变换、会话恢复与完成。每条边界都有挑战、裁判与成功标准，比如用全零、非有限、畸形、意外终止与内部精确零值挑战捕获，用篡改字节、不一致清单、中断响应与重复请求挑战字节同一性，用单双声道拓扑与重采样挑战变换，用丢失响应与篡改留存物挑战完成语义。
+本工作没有可学习参数的训练阶段，不存在梯度更新、冻结与解冻、早停或超参数搜索。需要讲清的计算过程是确定性求解与版本化执行：浏览器管线按字面有序列表运行，服务端管线先校验证据模式并要求浏览器检查通过，再绑定上传回执与浏览器清单，独立解码原生与无损文件，重算拓扑与连续性并要求与浏览器清单一致，记录服务端时长差，再按实测拓扑规范化并校验测量规范文件。任何阶段失败都阻止接受。
 
-根据论文正文与图中报告值整理，下表要回答样本构成与实验协议是否覆盖了上述边界。统一条件是冻结实现 VocalCap 0.3.0，基线是消融后的无条件平均与纯时长规则，指标方向是拒绝件数越高越能拦截故障，残差越小越能保真，成功数需与检查总数一致。
+**本地接受 × 权威完成：** 本地接受指浏览器后处理检查通过并把尝试存入 IndexedDB 等待上传，负责让参与者能继续做下一题；权威完成指服务器对全部协议任务与全部留存文件重验通过后原子写入 complete.json，负责判定这是 1 次完整研究会话。二者必须区分是因为重试、中断与丢响应会让两端状态暂时不一致，只有服务器端重验加完整标记才能防止把收到部分文件当成完成，组合后把参与者可见进度与研究可用的完成语义分开。
 
-| 验证单元 / 样本构成 | 样本量与版本 | 协议任务与条件 | 关键控制变量 | 指标方向与用途 |
-|---|---|---|---|---|
-| 受控精确零值夹具 | Runs of 39, 40, and 41 ms | 恒定非零段间插入零值 | 40-ms boundary at 48 kHz | 通过与拒绝分界，验连续性 |
-| 多采样率边界 | 8, 16, 44.1, and 48 kHz | 按帧换算同样时长 | 采样率换算 | 按帧拒绝，验一致性 |
-| 局部电平边界 | −49.9-49.9 and −50.1-50.1 dBFS | 恒定 surrounding level | −50-50 dBFS value | 拒绝与保留分界 |
-| 试点回顾审计 | 39 consented pilot recordings | 团队成员便利样本再检 version 0.3.0 | 25 sample-identical stereo files and 14 files with signal confined to the left channel | 拓扑分布记录 |
-| 零值候选子集 | Fifteen recordings contained an internal exact-zero candidate | eight met the active-context failure rule and seven were retained as low-level intervals | 上下文条件有无 | 验附加检查价值 |
-| 生产端到端 | two five-task browser profiles in Chromium and WebKit | 10 accepted recordings and 30 retained artifacts | 合成麦克风输入 | 完整性与格式全过 |
+可重复性来自版本与哈希。规范化记录变换剖面版本、FFmpeg 与重采样器信息、二进制哈希、源码提交与规范文件哈希；传输用角色、大小、哈希与清单版本对账；录音分配、上传确认与会话完成幂等，重试不产生重复接受对象；本地音频只在服务器确认后删除。遥测走独立于音频的路径，分批发送且不含音频字节与身份标识。
 
-受控夹具分离了时长与电平边界各差 1 帧或 0.1 分贝，浏览器与服务端独立测量要求一致，故意篡改清单则必须在规范化前失败。试点 39 例是项目团队成员经同意后产生，仅用于技术验证，不得推广流行率。生产端到端用合成麦克风与模拟移动视口，覆盖两种浏览器引擎而非真实物理设备包线，这决定了它只能证明软件行为而非声学等价。
+下表把 4 个契约边界、施加的挑战、判定依据与成功标准并列，是后面所有验证的判卷表。
 
-### 主结果：拓扑与中断两处故障被如何量化
-主结果分 3 层：自动化计数证明组合行为成立，受控挑战证明边界按实现执行，回顾审计揭示真实录音中两类波形级故障的后果。自动化部分 134 条必需路径、6 个浏览器套件与 43 个仓库级测试全过，应用套件 126 项中 125 项通过，1 项因本地 FFmpeg 缺少 libsoxr 跳过，生产预检已确认支持该库的构建。生产端到端在两种引擎下各完成 5 个任务，共 10 条接受录音与 30 个保留产物并通过检查。
+| Contract boundary | Challenge | Verification oracle | Success criterion |
+| --- | --- | --- | --- |
+| Browser capture | Valid, all-zero, non-finite, malformed, unexpectedly terminated, and internal exact-zero inputs | Strict lossless-WAV parser, per-channel signal and continuity measurements, capture evidence, and track events | Valid artifacts proceed; malformed, unequivocally blank, or qualifying discontinuous artifacts are rejected; unexpected termination is recorded |
+| Cross-boundary byte identity | Altered bytes, inconsistent manifests, interrupted responses, and repeated requests | Independently computed browser and server sizes and SHA-256 digests | Only matching artifact pairs are accepted; mismatches are rejected; retries create no duplicate accepted object |
+| Canonical transformation | Mono and stereo topology, format conversion, numerical boundaries, resampling, transients, and non-finite samples | Canonical format inspection, deterministic sample expectations, level and transient comparison, digest, and transformation provenance | Output is mono PCM16 WAV at the configured sample rate; the declared topology operation is applied; invalid samples are rejected; the transformation remains attributable |
+| Recovery and completion | Lost responses, repeated confirmation, retained-object tampering, and incomplete task sets | Persisted recording state, task bindings, retained-artifact integrity, and complete.json | Each task has one accepted recording; repeated operations are idempotent; completion occurs only after all retained artifacts pass server verification |
 
-**持续时间规则 × 局部电平上下文：** 持续时间规则负责给出工程边界，即内部精确零值段不短于 40 毫秒才算候选中断；局部电平上下文负责排除低电平假阳性，即周围局部均方根不低于负 50 分贝才判失败。前后缘零值本来就允许通过。两者搭配是因为纯时长规则会把低电平语流间隙也判为故障，组合后 15 个候选中只拒绝 8 件而保留 7 件，比单独使用时长更接近可用的技术可用性下界。
+这张表把验证范围说死：浏览器捕获看有效、全零、非有限、畸形、轨道意外结束与内部零输入；字节同一性看篡改字节、不一致清单、中断响应与重复请求；规范变换看拓扑、格式转换、数值边界、重采样、瞬态与非有限；恢复完成看丢响应、重复确认、留存篡改与任务不全。成功不是录得好听，而是按声明的拒绝、接受、记录与幂等行为执行。
 
-根据论文正文与图中报告值整理，下表要回答在统一 0.3.0 条件下各方法相对消融基线带来多少净收益。基线一是无条件等权立体声平均，基线二是纯时长零值规则，指标方向是残差越小越好，拒绝件数需结合保留件数解读，支持关系写在最后一列。
+### 验证用了哪些固定版本、固定输入与固定流程？
 
-| 比较条件与数据集 | 方法与版本 | 指标与明确报告值 | 对照基线值 | 这项数字支持什么 |
-|---|---|---|---|---|
-| 14 files with signal confined to the left channel | 0.3.0 select active channel | less than 0.001 dB in every file | approximately 6.02 dB of attenuation | 拓扑感知避免系统性电平衰减 |
-| 15 candidates zero screen | 0.3.0 duration plus level rule | eight met the active-context failure rule and seven were retained as low-level intervals | Duration alone would have rejected all 15 in this post hoc set | 上下文检查保留低电平可用段 |
-| 48 kHz exact-zero | 0.3.0 browser and server recompute | 39 ms passed; 40 and 41 ms failed | N/A boundary check | 包容性时长边界按实现执行 |
-| surrounding level | 0.3.0 active-context rule | −49.9-49.9 dBFS failed; −50.1-50.1 dBFS passed | N/A boundary check | 电平边界按实现执行 |
-| injected transient | single-active selection | Same peak frame; maximum error one PCM16 least-significant bit | N/A fidelity check | 瞬态时序在转换下 preserved |
-| Chromium and WebKit | 0.3.0 production E2E | 10 accepted recordings and 30 retained artifacts | N/A composition check | 双引擎下端到端契约成立 |
+本地与生产验证锁定 VocalCap 0.3.0，源码提交为 73671bf75ca2e7e845bf0ae6780686101088609c，生产策略为采集模式 real 与协议版本 1.0.1。浏览器验证用严格 Float32 WAV 夹具区分有效、全零、非有限与畸形，另测轨道意外结束、清单生成、哈希格式与后处理有界执行；服务端测配对接收与独立解码、损坏原生输入、全零输入、浏览器与服务端哈希失配、无效清单、角色与内容类型、任务绑定、授权、隐私受限事件与丢响应后重试。
 
-最公平的净收益来自两组消融：14 条左有效文件经选通道后残差均小于 0.001 分贝，而无条件平均会引入约 6.02 分贝衰减，相当于振幅减半；15 个零值候选中完整规则拒绝 8 保留 7，而纯时长规则全部拒绝。这说明附加的拓扑测量与电平上下文不是装饰，而是在该数据集上改变了保留决策。受控侧 39 毫秒通过而 40 与 41 毫秒拒绝，前后缘零值允许通过，证实边界是包含性的。
+受控 WAV 完整性夹具在恒定非零段之间插入精确零段，用相邻时长挑战 40-ms 边界并在 8、16、44.1、48 kHz 重复帧数换算，用高低两侧的周围电平挑战有效上下文边界，另设仅前后边缘零与多段内部零夹具。拓扑夹具覆盖单声道、全同立体声、左有效、右有效与双侧不等，含单大瞬态的正弦夹具检验有效侧选择是否保留瞬态帧。39 例试点录音由项目成员在接受应用内知情同意后用 0.1.0 采集、再用 0.3.0 服务端检查复检，只报告聚合的文件拓扑、零连续性与变换结果，不分析身份、健康、语言内容或标志物关联。
 
-但这些数字不能推出的东西同样明确：39 例为团队便利样本，拓扑与零值比例不得推广至目标人群；生产仅 2 画像 10 录音，1 次计划中的 WebKit 中断重试只支撑单次恢复路径可行，不支撑恢复可靠率；没有外部基线头对头对比数值，也未提供感知裁决的假阳性与假阴性。把软件行为成立读成临床可用，是初学者最易犯的越界。
+生产端到端在部署冻结提交后重启服务，健康端点返回 0.3.0 且进程活跃才开始。Playwright 1.62.1 以手机 UA 与视口在无头 Chromium 与 WebKit 各跑完五任务协议，包括同意、摆位、录音、目标时长自动停止、后处理校验、回放、接受、上传、评分与权威完成。Chromium 用测试媒体接口注入确定性合成音频，WebKit 经重写 getUserMedia 注入 440 Hz 合成信号，均属浏览器引擎模拟而非真机测试。首次 WebKit 评估传输请求被故意中断以演练参与者可见重试，之后由生产主机上的独立校验器核对每档 5 条接受记录、每条三文件、浏览器与服务端管线状态、complete.json 与 48 kHz 单声道规范 WAV。
 
-### 如果去掉关键设计：退化会有多大
-论文虽未用深度学习意义上的消融，但用两组对照回答了去掉设计会如何退化。第一组是拓扑分支：去掉实测拓扑分类，退化为按格式标签直接立体声平均。在 14 条左通道有效文件上，这种退化是确定性的，振幅乘以 0.5，对应约负 6.02 分贝。拓扑感知版本把残差压到 0.001 分贝以内，残差来源主要是量化而非系统性衰减，且注入瞬态的峰值帧位置不变，最大误差为 1 个最小量化步长。
+### 冻结版本在自动化检查中通过了多少项？
 
-第二组是零值分支：去掉局部电平上下文，退化为纯时长规则。在 15 个候选中，完整规则拒绝 8 保留 7，纯时长规则拒绝全部 15。这意味着 7 段低电平区间会被误杀。作者强调这只是该数据集上的操作后果，不代表 8 件就是临床或感知缺陷，裁决性重放实验仍需补做，才能估计敏感性与特异性。
-
-还有一类隐性消融是跨边界复算。如果去掉服务端独立解码与复算，仅信任浏览器声明，那么截断、替换与清单不一致将无法被拦截。论文要求篡改后的清单必须在规范化前失败，浏览器与服务端测量对未篡改夹具必须一致。这种双端绑定的增量价值尚未经盲态证据消融量化，作者将其列为未来工作，提醒读者不要把有证据等同于证据都有用。
-
-### 边界在哪里：作者承认的与审稿人会追问的
-作者对边界的交代相当坦诚，也是新手学习如何写局限的好例子。结论仅限于软件行为验证，不涉及设备间声学一致性、目标人群可用性与临床有效性。消费级麦克风异质且无校准，浏览器约束可能与实测行为偏离，非零信号仍可能含噪声、错误说话人与错误任务，客户端遥测可能因异常终止缺失。
-
-双产物共享上游路径，因而比较证据始于分支点后，这是架构固有的盲区。三产物保留增加存储与传输成本，在大队列或纵向研究中更明显。回顾性边界未经预注册与感知裁决，且不得外推流行率。生产验证用合成麦克风与模拟视口，未覆盖声明的物理移动设备包线，比较相关系统仅依据已发表描述而非共同协议部署。
-
-审稿人视角还会追问三点：试点集由团队成员产生且量级小，拓扑与中断比例不能代表真实分布；质量警告的敏感性与特异性未经裁决实验标定，证据探针的增量价值未经消融验证；验证由开发团队在部署系统上完成，独立机构部署才能检验可复现性与配置可移植性。这些不是推翻结论，而是指出从软件契约到可用采集系统还有多远。
-
-### 可复现性：冻结版本与缺失的一块拼图
-论文披露了足以复核软件行为的版本信息：本地与生产验证针对 VocalCap 0.3.0，源码提交标识与生产确认性执行编号均有记录，生产策略标明采集模式与协议版本，浏览器后处理与服务端流水线的检查顺序、40 毫秒与负 50 分贝阈值、FFmpeg 经 SoXR 规范化规则都有说明。理论上拿到同一提交与同一构建，应能重放确定性挑战。
-
-下面这张为论文原表，逐字呈现了冻结源状态的自动化验证计数。它要回答的比较问题很单纯：在给定提交下，各验证单元的检查总数与成功数是否一致，失败是否可解释。统一条件是同一冻结提交，基线是全过预期，指标方向是成功数等于检查总数，唯一缺口需有明确原因。
+要回答的核心比较问题是冻结源码是否在 4 个边界上按契约执行，统一条件是同一提交、同一生产包与同一判定表，基线是各类畸形与篡改夹具应被拒绝，指标方向是应通过的通过、应拒绝的拒绝、应幂等的幂等。下面原表先给出仓库与生产的计数结果。
 
 | Verification unit | Checked | Successful | Result |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Required repository paths | 134 | 134 | No required path missing |
 | Browser JavaScript suites | 6 | 6 | All suites passed |
 | Repository-level Python tests | 43 | 43 | All tests passed |
@@ -206,48 +193,76 @@ VocalCap 的全景可以按 5 个操作阶段理解，依次是参与者引导�
 | Production accepted recordings | 10 | 10 | One accepted recording per task |
 | Production retained audio artifacts | 30 | 30 | Three verified artifacts per recording |
 
-表中唯一的未通过是应用套件中 1 项因本地缺少 libsoxr 而跳过，生产预检已确认支持该库的构建，后续端到端也实际 exercised 了规范化。1 次计划中的 WebKit 评估传输中断经重试后仍保持每任务单条接受记录，只支撑单次恢复可行。缺失的拼图是代码、权重与数据集链接均未给出，试点录音仅描述为团队成员采集而无获取链接，物理设备包线与感知裁决细节也不足，这使第三方独立复现仍需补足环境与数据。
+表中 134 个必需仓库路径无缺失，6 个浏览器套件与 43 个仓库级 Python 测试全过，应用层 126 个测试中 125 过、1 个 SoXR 相关因本地 FFmpeg 缺库跳过，生产预检另行确认了带 libsoxr 的 FFmpeg 构建，生产端到端随后在两引擎完成。两个生产档共 10 个协议任务、10 条接受记录、30 个留存音频文件，每个记录三文件，全部通过服务端完整性与格式检查。所有负向夹具按预期在浏览器或服务端被拒绝，重复确认与完成请求返回原结果且不产生重复接受对象。
 
-### 给新生的 takeaway：上游可靠才有下游可信
-回到最初的问题：为什么嗓音生物标志物研究要先折腾采集？因为下游模型再强，也无法从被错误平均衰减 6 分贝的波形里找回真实响度，也无法从说不清来源的中断里判断缺失机制。VocalCap 的价值在于为后续声学验证提供了可审计的输入边界，让每个规范文件都能回溯到浏览器行为与服务端变换。
+不能从这张表推出的是故障率与恢复可靠性。端到端是确定性契约检查而非失效率估计，SoXR 跳过只说明本地构建缺库而非功能失败，合成输入只证明软件路径贯通而不证明声学一致或真机可用。
 
-作为系统技术报告，它的创新是组合式的：可追溯记录模型、互补双产物加跨边界字节验证、拓扑感知的版本化规范化、任务级权威完成语义。四者合并为单一验收契约，使局部成功无法被计为完整会话。受控边界、试点审计与双引擎端到端共同构成软件验证基线，但全部停留在软件契约层面。
+### 时长、电平与声道三组受控挑战各证明了什么？
 
-给刚进入方向的你的建议是：先学会区分 3 层事实，论文直接报告的软件行为、由此作出的有限解释、尚未验证的推测。用报告、支持、可能 3 类措辞分别表达，别把相关性写成因果。下一步若要真正可用，还需受控声学一致性、目标人群可用性与临床有效性 3 类独立研究，以及独立部署的可复现检验。这正是 Beyond WAV 的含义：超越文件，走向证据。
+这里要回答的比较问题是 40-ms 工程边界是否按包含边界实现，以及采样率换算是否与帧数落实一致。统一条件是同一 0.3.0 解析与测量代码，基线是相差 1 帧的相邻时长夹具与不同采样率下的同毫秒边界，指标方向是应放行的放行、应拒绝的拒绝。下面整理表依据论文正文整理，不冒充原表，电平上下文只作定性说明以避免转写歧义。
+
+| 条件 | 样本/配置 | 观测结果 | 对照含义 | 单位/边界 |
+| --- | --- | --- | --- | --- |
+| 内部精确零时长 | 39 ms、40 ms、41 ms at 48 kHz | 39 ms passed；40 ms 与 41 ms failed | 包含边界按配置实现 | 40-ms |
+| 采样率换算 | 8, 16, 44.1, and 48 kHz | 各采样率下预期边界成立 | 毫秒换算为各采样率帧数 | kHz |
+| 应用层测试 | 126 项应用测试 | 125 通过，1 项 SoXR 跳过 | 本地缺库，生产构建另行确认 | 项 |
+
+表中数字的逐字依据是受控夹具用相邻时长挑战 40-ms 边界、在 4 个采样率重复帧数换算，以及测试计数结论。电平部分另有高低两侧的周围电平夹具分别落在有效上下文的两侧，一侧拒绝一侧放行，说明上下文检查按配置的包含边界执行，这里不逐字复写小数以免把转写形式误作区间。最公平的净收益是边界行为与采样率无关且以帧数落实。
+
+失败项与反例同样重要。前后边缘零被排除在内部断裂之外，说明只看零时长会误伤首尾静音；浏览器与服务端对未篡改夹具分类一致，但故意篡改浏览器测量会阻止规范文件生成，说明服务端不信任浏览器单方声明。不能推出的是这些边界等于语音质量阈值，论文明确它们是工程边界而非验证过的言语质量标准。
+
+### 39 例试点复检中拓扑与零段各改变了什么判断？
+
+这里要回答的是事后复检中名义立体声与零时长各自的误判代价。统一条件是同一 39 个 0.1.0 采集文件、用 0.3.0 服务端检查只读复检、审计前后计算存档哈希，基线是无条件等权平均与纯时长拒绝，指标是规范 RMS 残差与保留或拒绝划分。下面整理表依据论文正文整理，不冒充原表。
+
+| 对象 | 数量 | 处理 | 差异/结果 | 版本条件 |
+| --- | --- | --- | --- | --- |
+| 试点拓扑 | 39 files 中 25 sample-identical stereo，14 files left channel | 有效侧选择后转单声道 | 每例残差小于 0.001 dB，等权平均将衰减约 6.02 dB | 0.1.0 采集，0.3.0 复检 |
+| 内部零候选 | 15 candidates，其中 8 met rule，7 retained low-level | 时长加电平上下文判定 | 纯时长将拒绝全部 15 例 | 40-ms 工程边界 |
+| 生产端到端 | 2 档五任务，10 accepted recordings，30 retained artifacts | 双引擎全流程加 1 次故意中断重试 | 尺寸与哈希与清单一致，规范为 48 kHz 单声道 | 0.3.0，Chromium 与 WebKit |
+
+表后需要逐项解释。拓扑部分最能说明问题：超过 3 分之一文件标称双声道但仅左声道有效，若沿用旧的等权平均，有效声道乘 0.5 即系统衰减约 6.02 dB；按实测拓扑选有效侧后，14 例的规范 RMS 差异极小，论文报告每例绝对差异小于 0.001 dB，残差反映量化而非系统衰减。零筛查部分说明纯时长规则会拒绝全部 15 例候选，而加上局部电平后 7 例低电平保留、8 例命中拒绝，体现了上下文检查的操作后果。生产部分说明故意中断的 WebKit 评估请求经重试完成且每任务仍仅一条接受记录，但这只演练了一条恢复路径。
+
+不能由这张表推出的是缺陷流行率与诊断准确性。试点是项目成员的便利集，边界未经预注册、感知裁决与独立集估计，拓扑与零段比例不得推广到参与者、设备、浏览器或研究；合成麦克风输入的双档成功建立的是浏览器与合成麦克风条件下的软件契约行为，也不代表真机声学一致、Safari 与安卓全包络覆盖或目标人群可用性。
+
+### 哪些结论在当前证据下必须收住？
+
+消费级麦克风异构且未经校准，浏览器请求的约束可能与实测行为偏离，非零信号可能是噪声、错说话人或错任务，进程 abrupt 终止可能让客户端遥测缺尾。原生与无损文件共享上游路径，它们的比较证据只能从分支点之后开始。保留三份音频会增加大队列与纵向研究的存储传输成本。
+
+验证由开发团队在已部署系统上完成，独立机构部署才能再检验可复现性、配置可移植与可观测性。试点比例、40 毫秒工程边界、原生与无损时长差的观察状态、各项暂定警告的灵敏特异度与负担，都需要受控重放、裁决重听、证据消融与人群研究才能回答。论文把这些列为待办：受控设备重放量化商定声学指标的一致性与跨设备浏览器变异，盲法证据消融衡量每类探针的增量价值，人群研究测量完成、放弃、重录、求助、信心与用时。
+
+一个常见误解是把通过软件验证当成生物标志物有效。按 V3 框架，本工作只做传感技术侧的软件契约符合性，不做导出指标的分析验证与特定人群临床验证；把小于 0.001 dB 的电平保留或端到端跑通直接读成诊断性能，是把技术实现细节写成了因果与疗效。
+
+### 要复现这套采集契约先核对哪几步？
+
+先锁定版本与环境：0.3.0 与提交 73671bf，生产策略 real 与协议 1.0.1，生产 FFmpeg 需带 libsoxr，否则本地会出现 SoXR 相关跳过。部署时把公网源、文件路径、采集模式、管理员身份、邮件传输与端到端测试身份放在应用源码之外的运营配置中，同份应用不继承参考环境的凭据。
+
+再走一遍最小闭环：手机 UA 视口打开公开 HTTPS 应用，完成能力检查、同意、五任务录音与自动停止、后处理校验、回放接受、上传评分，直到服务器原子写入 complete.json。用独立校验器核对每任务一条接受记录、每条三文件非空、原生与无损尺寸哈希与浏览器清单一致、规范为协议声明采样率的单声道 PCM16 且与服务端溯源一致、采集唤醒锁被请求并释放。故意中断 1 次评估传输，确认出现可重试状态且重试后仍为每任务一条记录。
+
+复现试点数字时注意条件：39 例是 0.1.0 采集、0.3.0 只读复检，审计前后算存档哈希确认不变；拓扑分类与零候选计数依赖 40 毫秒工程边界与局部电平上下文，更换边界会改变拒绝集。若偏离预期，优先核对采样率换算帧数、电平计算窗口、声道分类实现与 FFmpeg 二进制是否一致，而不是先怀疑参与者操作。
+
+### 什么条件下值得借用这套留证思路？
+
+当研究是短结构化自助语音任务、需要事后说清每个分析文件如何得来、且能承担三文件存储传输与版本化运维时，这套配对文件加清单加溯源加权威完成的思路值得借用。它把参与者侧做薄，把判定侧做厚，适合无人值守但需审计的采集。
+
+当目标是声学校准、感知质量、临床解释或目标人群可用性时，不应停留在这篇论文。需要另做受控声学一致、裁决感知实验与人群可行性，估计容差、灵敏特异度、完成放弃与求助负担，并把暂定警告替换为验证过的策略。开源代码、可下载权重与可运行系统是 3 种状态，本证据只支持冻结提交的软件行为与已部署 0.3.0 的双引擎契约，不支持开箱即用的临床结论。
 
 <details>
 <summary>📎 论文与评分元数据</summary>
 
-标签：#语音质量评估 | #端到端 | #模型评估
-
-**6.1/10** | 创新 1.2/2 | 技术严谨 1/1.5 | 实验充分 0.9/1.5 | 清晰度 0.8/1 | 影响力 0.7/1.5 | 开源 0/1.5 | 可复现 0.3/0.5 | 工程/实践 1.2/1.5
-
-✅ **6.1/10** | 前50% | 文档类型：系统技术报告 | 评分置信度：高 | #语音质量评估 | #端到端 | #模型评估 | [arxiv](https://arxiv.org/abs/2609.03320)
+排名：前50% | 文档类型：系统技术报告 | [arXiv 原文](https://arxiv.org/abs/2609.03320)
 
 </details>
 
-## ⚖️ 评分依据与证据（展开查看）
+## ⚖️ 评分明细
 
-<details>
-<summary>逐维得分、全文证据与扣分边界</summary>
+评分属于系统判断，不是论文实验结果；八维数值与总分见页首，原始审计记录保留在后端。
 
-*   创新性 (1.2/2)：同一 MediaStream 并行生成原生对象与 Float32 无损 WAV，再经服务端派生单声道规范文件并以哈希与溯源绑定，将配对产物与版本化规范化合并为单一验收契约，具有系统级新能力。
+- 评分规则：type-aware-v1
 
-*   技术严谨性 (1.0/1.5)：browser_audio_pipeline_3 按固定顺序执行 7 组 11 项检查，server_audio_pipeline_3 独立复算拓扑与连续性并按实测拓扑选择直通或选通道，逻辑链条完整且未发现推导错误。
+- 评分模型：muse-spark-1.3-contributor
 
-*   实验充分性 (0.9/1.5)：14 条左有效选通道残差小于 0.001 dB 而等权平均引入约 6.02 dB 衰减，15 个零值候选完整规则拒绝 8 件保留 7 件，但 39 条为团队便利样本且生产仅 2 画像 10 录音，未做外部基线头对头对比。
-
-*   清晰度 (0.8/1)：5 个操作阶段与 R_{p,s,t} = {N,L,C,M,E,Q,P} 形式化清晰对应图 2 三文件血缘，用 134 路径与 8 行验证表区分计数与消融，40 ms 与 -50 dBFS 边界定义明确。
-
-*   影响力 (0.7/1.5)：为嗓音生物标志物上游提供了可审计输入边界并揭示 14/39 名义立体声实为单通道有效，但结论限于软件行为验证，不涉及设备间声学一致性与临床有效性，语音领域直接影响有限。
-
-*   开源 (0.0/1.5)：论文未发布核心代码、模型权重或数据资源，也未给出明确的后续开源承诺。
-
-*   可复现性 (0.3/0.5)：披露了 5 阶段流程、11 项检查顺序、40 ms 与 -50 dBFS 阈值与 FFmpeg 经 SoXR 规范化规则，给出 VocalCap 0.3.0 与 e2e_20260902211838 执行条件，但缺少物理设备包线与感知裁决细节。
-
-*   工程/实践价值 (1.2/1.5)：browser_audio_pipeline_3 与 server_audio_pipeline_3 加 IndexedDB 幂等队列构成可核对完整流水线，在 Chromium 与 WebKit 下各完成 5 任务共 10 录音 30 产物并通过完整性检查，单次中断重试验证了恢复路径。
-
-</details>
+- 评分请求协议：openai_responses
 
 ---
 

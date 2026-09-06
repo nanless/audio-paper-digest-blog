@@ -1,0 +1,151 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03231",
+  "abstract": "The ambition of the 2025 PNPL competition (Landau et al., 2025) was to launch a multi-year curriculum for non-invasive speech decoding. Designed to progress from foundational tasks toward the linguistic complexity required for a practical brain-computer interface (BCI), it set the stage with speech detection and phoneme classification tasks. Winning submissions reached F1-macro scores of 95.6% and 73.6% on the respective tasks (Elvers et al., 2026), highly significant advances. This success was built on the LibriBrain dataset (Özdogan et al., 2025), the largest within-subject MEG dataset recorded at the time with ${\\sim}50$ hours of data for one subject. However, while within-subject scale drives strong decoding performance, a practical BCI must generalise to new users from minutes of data, not hours. The 2026 PNPL competition responds to this challenge with LibriBrain100 (Mantegna et al., 2026), an extended LibriBrain dataset with 32 additional subjects (${\\sim}40$ minutes each) plus even more within-subject data (${\\sim}80$ hours). Advancing the curriculum of tasks to focus on word classification, two complementary tracks are presented in this competition: the Deep track targets within-subject word classification at scale, aiming at the best possible performance; the Broad track targets cross-subject generalisation, progressively reducing the amount of subject-specific fine-tuning data from ${\\sim}40$ to ${\\sim}20$ to ${\\sim}10$ minutes, a duration that falls within a clinically feasible range and brings us a step closer to a non-invasive BCI capable of restoring communication to people living with profound paralysis.",
+  "abstractSha256": "3e408cc686c9dfa48505abdc130dcd5cc7c50c47ae247333c1f6204d2ffcb8ad",
+  "arxivId": "2609.03231",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Francesco Mantegna"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Gereon Elvers"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Dulhan Jayalath"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Gilad Landau"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Tasha Kim"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Miran Özdogan"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Luisa Kurth"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Teyun Kwon"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK",
+        "OHBA, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "SungJun Cho"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Benjamin Ballyk"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK",
+        "FMRIB, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "Alex Fung"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Anna Greer"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Pratik Somaiya"
+    },
+    {
+      "affiliations": [
+        "Maastricht University, The Netherlands"
+      ],
+      "name": "Christian Herff"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada"
+      ],
+      "name": "Yorguin Mantilla Ramos"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada"
+      ],
+      "name": "Hamza Abdelhedi"
+    },
+    {
+      "affiliations": [
+        "UNIQUE, Université de Montréal, Canada",
+        "Mila–Quebec AI Institute, Canada"
+      ],
+      "name": "Karim Jerbi"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind, UKJoint first authors"
+      ],
+      "name": "Greg Farquhar"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind, UKJoint first authors"
+      ],
+      "name": "Brendan Shillingford"
+    },
+    {
+      "affiliations": [
+        "OHBA, Oxford Centre for Integrative Neuroimaging, University of Oxford, UK"
+      ],
+      "name": "Mark Woolrich"
+    },
+    {
+      "affiliations": [
+        "PNPL, Department of Engineering Science, University of Oxford, UK"
+      ],
+      "name": "Oiwi Parker Jones"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把脑磁图听语音解码推进到固定 50 词分类，用深度单人赛道冲极限、用广度多人赛道考少量数据适应，以竞赛词表平衡前十准确率为主要标尺并配双词表与互信息，同时代价是评估只覆盖固定词表而非开放词汇转写。",
+  "originalTitle": "The 2026 PNPL Competition: Word Classification and Efficient Cross-Subject Generalisation in LibriBrain100",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03231.pdf",
+  "readerTitle": "从听见一个词到认出一个词：LibriBrain100 如何把词分类与跨人泛化变成可比的竞赛",
+  "schemaVersion": 1
+}

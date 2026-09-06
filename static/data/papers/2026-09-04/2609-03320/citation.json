@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03320",
+  "arxivId": "2609.03320",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Mathematics and Statistics, University of São Paulo, São Paulo, Brazil"
+      ],
+      "name": "Augusto Camargo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03320",
+  "originalTitle": "Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03320.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

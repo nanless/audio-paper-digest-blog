@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03320",
+  "abstract": "Remote voice studies often retain a final audio file with limited evidence about how it was captured, transferred, processed, and accepted. This paper presents VocalCap, an institution-controlled, browser-based system for self-guided capture of voice and related acoustic signals by participants without technical training. A versioned protocol drives the workflow. Each accepted recording retains a browser-native object, a client-lossless Float32 WAV derived from the same MediaStream, and a server-canonical mono PCM16 WAV, linked to evidence of capture execution, technical quality, byte-level integrity, recovery, and transformation provenance. IndexedDB preserves accepted browser artifacts until server confirmation, while session completion requires successful verification of every task and artifact. Software tests challenged the acquisition contracts with malformed or altered objects, exact-zero interruptions, channel-topology variants, and interrupted or repeated operations. A post hoc technical audit of 39 consented pilot recordings found 25 sample-identical stereo files and 14 files with signal confined to the left channel. Topology-aware active-channel selection limited the canonical root-mean-square level difference to less than 0.001 dB in all 14 affected files; equal-weight stereo averaging would have introduced approximately 6.02 dB of attenuation. Production end-to-end verification completed two five-task profiles in Chromium and WebKit, yielding 10 accepted recordings and 30 retained artifacts that passed server-side integrity and format checks. The results verify VocalCap&#39;s software behavior under the tested browser-engine conditions. Device-level acoustic agreement, target-population usability, clinical validity, and biomarker performance remain subjects for separate studies.",
+  "abstractSha256": "795ed6e737a517dab01573ac119dd98e614954f6babbeb53029021a2f46cc466",
+  "arxivId": "2609.03320",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Mathematics and Statistics, University of São Paulo, São Paulo, Brazil"
+      ],
+      "name": "Augusto Camargo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "VocalCap 把一次浏览器录音拆成原生对象、客户端无损 WAV 与服务端规范 WAV 三份互补文件并全程留证，在确定性破坏测试、39 例试点复检与 Chromium/WebKit 双端到端中验证了采集与变换契约，但声学校准、可用性与生物标志物有效性仍需独立研究。",
+  "originalTitle": "Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03320.pdf",
+  "readerTitle": "不只收一个 WAV：把浏览器采集与变换留证的录音系统",
+  "schemaVersion": 1
+}

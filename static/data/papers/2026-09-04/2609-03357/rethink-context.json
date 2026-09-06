@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03357",
+  "abstract": "Non-professional music recordings shared online often suffer from background noise and reverberation, degrading perceived quality and limiting reuse. This paper proposes DSME, a music enhancement model based on dual time-frequency spectral representations. Within a generative adversarial framework, DSME uses short-time Fourier transform (STFT) spectra for generation and constant-Q transform (CQT) spectra for discrimination. Leveraging STFT&#39;s fixed window, invertibility, and predictability, the generator estimates clean amplitude-phase spectra from degraded inputs and reconstructs waveforms via inverse STFT. Exploiting CQT&#39;s log-frequency, variable-window structure aligned with musical octaves, we design an octave-segmented CQT discriminator. We also introduce a chroma-spectrum loss to emphasize pitch and harmonic consistency. Experiments show DSME outperforms baselines in objective and subjective tests, validating the effectiveness of the dual-spectrum approach.",
+  "abstractSha256": "861d6ce0560dd134d817318f75584f559c5a4e6129851e571137045cf91fd62d",
+  "arxivId": "2609.03357",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "DSME 用短时傅里叶谱显式生成幅值与相位、用恒 Q 谱作八度分段判别并加入色度损失，在独奏音乐的三类仿真退化中改善多数客观指标；主观偏好仅在混合失真任务上优于三个基线，该任务的 FAD 仍劣于 MP-SENet。",
+  "originalTitle": "Neural Music Enhancement with Dual Time-Frequency Spectral Representations for Prediction and Discrimination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03357.pdf",
+  "readerTitle": "生成用短时谱、判别用对数谱：DSME 为何把预测与判别分开",
+  "schemaVersion": 1
+}

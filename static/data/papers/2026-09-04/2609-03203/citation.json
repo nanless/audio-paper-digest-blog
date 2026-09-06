@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03203",
+  "arxivId": "2609.03203",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "National Research Council Canada"
+      ],
+      "name": "Mengzhe Geng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03203",
+  "originalTitle": "VoxReason: Listener-Free Evaluation of Source-Grounded Speech Planning Before Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03203.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

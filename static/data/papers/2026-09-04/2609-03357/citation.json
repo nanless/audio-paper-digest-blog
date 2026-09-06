@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03357",
+  "arxivId": "2609.03357",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03357",
+  "originalTitle": "Neural Music Enhancement with Dual Time-Frequency Spectral Representations for Prediction and Discrimination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03357.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

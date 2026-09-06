@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03940",
+  "arxivId": "2609.03940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France",
+        "Univ. Grenoble Alpes, CNRS, Grenoble-INP, GIPSA-lab, France"
+      ],
+      "name": "Yoto Fujita"
+    },
+    {
+      "affiliations": [
+        "CentraleSupélec, IETR (UMR CNRS 6164), France"
+      ],
+      "name": "Simon Leglaive"
+    },
+    {
+      "affiliations": [
+        "Univ. Grenoble Alpes, CNRS, Grenoble-INP, GIPSA-lab, France"
+      ],
+      "name": "Laurent Girin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03940",
+  "originalTitle": "Masked Autoregressive Speech Enhancement with Continuous Neural Audio Codec Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03940.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

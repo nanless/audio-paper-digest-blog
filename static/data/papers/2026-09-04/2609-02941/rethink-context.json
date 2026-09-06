@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02941",
+  "abstract": "Speech emotion recognition (SER) faces two fundamental challenges: scarcity of labeled data and inter-speaker variability, both of which hinder generalization of emotion recognition systems. While prior adversarial approaches address speaker variability, they fall short in leveraging powerful pre-trained representations. We propose SISER (Speaker-Invariant Speech Emotion Recognition), integrating wav2vec 2.0 as a feature encoder and ECAPA-TDNN as a speaker discriminator within an entropy-based adversarial training scheme. wav2vec 2.0 provides rich self-supervised representations that alleviate dependency on large labeled datasets, while ECAPA-TDNN enables suppression of speaker identity via a stronger adversarial signal than shallow classifiers. Evaluated on IEMOCAP, SISER achieves a UA of 60.63%, outperforming the baseline (51.15%) and wav2vec 2.0 without speaker suppression (56.46%), with ablation emphasizing that the choice of speaker classifier architecture is a key factor.",
+  "abstractSha256": "5b119f5da5c60d529269378d53e7e0871bb8e26e44e065cd9ff4dbf72641487d",
+  "arxivId": "2609.02941",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunseo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunku Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对未见说话人上情感识别易受说话人差异干扰的问题，论文用 wav2vec 2.0 做编码器、ECAPA-TDNN 做说话人判别器并以熵最大化做对抗，在 IEMOCAP 测试集报告 60.63% UA，代价是交替训练更复杂且存在原文内部数字不一致与未验证的跨库边界。",
+  "originalTitle": "SISER: Speaker-Invariant Speech Emotion Recognition with Entropy-Based Adversarial Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02941.pdf",
+  "readerTitle": "说话人一换就失准：用更强的判别器逼编码器减少说话人线索",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02940",
+  "arxivId": "2609.02940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chan-Jan Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeyeon Kim"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Chao-Han Huck Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carlos Busso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.02940",
+  "originalTitle": "Listen to the Latents: Self-Correcting Speech Recognition in Large Audio Language Models Through Hidden-State Interactions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02940.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02940",
+  "abstract": "Recent automatic speech recognition (ASR) systems increasingly integrate large language models (LLMs) to leverage their semantic knowledge, either externally through logit fusion or internally through warm initialization. However, how to effectively combine these two strategies remains underexplored. In this work, we refine warm-initialized LLM-based ASR models by leveraging their own pre-adaptation base LLMs, focusing on LoRA-adapted settings where the base LLM is preserved. To achieve this, we propose Hybrid Search, a targeted correction strategy motivated by two observations. First, interaction features that characterize the relationship between LLM-based ASR hidden states and base-LLM hidden states provide informative signals about a token&#39;s degree of semantic dependence. Second, selectively refining targeted tokens with high semantic dependence improves ASR performance far beyond naive global LLM-correction methods including rescoring and late fusion. Our analysis suggests that, even after semantic knowledge transfer through warm initialization, LLM-based ASR models can still leverage their base LLM to further improve inference-time performance.",
+  "abstractSha256": "103fd06ab3fb52fd748209eca984db67ed9556b18f92960028fa316fd1804c45",
+  "arxivId": "2609.02940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chan-Jan Hsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeyeon Kim"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Chao-Han Huck Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carlos Busso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在 LoRA 适配的 ASR-LLM 中复用基座 LLM，以对应层隐状态的余弦相似度和范数比定位需语义纠错的词；单遍混合解码的平均实体错误率为 18.38%，有效搜索宽度约为贪心的 1.4 倍，双遍精修则把波束基线的 18.29% 降到 17.69%，但其总计算成本与墙钟时间未量化。",
+  "originalTitle": "Listen to the Latents: Self-Correcting Speech Recognition in Large Audio Language Models Through Hidden-State Interactions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02940.pdf",
+  "readerTitle": "热启动之后再听一次：用隐状态夹角找出语义词并只在那里纠错",
+  "schemaVersion": 1
+}

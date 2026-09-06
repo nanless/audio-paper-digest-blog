@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03586",
+  "arxivId": "2609.03586",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Sagi Polaczek"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Noa Kraicer"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Gal Metzer"
+    },
+    {
+      "affiliations": [
+        "Simon Fraser University, Burnaby, Canada"
+      ],
+      "name": "Zhuo Ning"
+    },
+    {
+      "affiliations": [
+        "Simon Fraser University, Burnaby, Canada"
+      ],
+      "name": "Ali Mahdavi-Amiri"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Daniel Cohen-Or"
+    },
+    {
+      "affiliations": [
+        "Tel Aviv University, Tel Aviv, Israel"
+      ],
+      "name": "Raja Giryes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03586",
+  "originalTitle": "The Attention Triangle in Audio-Video Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03586.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

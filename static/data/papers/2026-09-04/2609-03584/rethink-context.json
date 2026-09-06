@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03584",
+  "abstract": "Synthetic chord corruption provides a controlled stress test for singing accompaniment generation (SAG), whereas complete automatic chord recognition (ACR) replay measures the condition delivered to a deployed system. We compare them by replaying CNN-CRF and DeepChroma+CRF predictions through one fixed MIDI-SAG generator, holding track, seed, context, and scoring window constant. Across 30 paired tracks and three seeds, a central four-second tritone produced larger changed-target and inside-output effects than CNN-CRF replay in STFT, CQT, and CENS; the CENS target gap was positive on 29/30 tracks (mean 0.462). Matching replay support and relation composition reduced this mismatch, with joint matching giving the lowest replay distance in the full-30 analysis. Relative-root substitutions produced 2.88-fold larger CENS full-window output change than same-root quality flips at near-equal dose. The matched surrogate was closer to replay for both recognizer paths. We conclude that localized corruption tests mechanisms, whereas complete replay evaluates deployed chord-condition propagation.",
+  "abstractSha256": "55a9f879ff3aab0a2fa2aa0919895a2acb6308bcf8c771564524d41245a0522d",
+  "arxivId": "2609.03584",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiwen Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在固定音轨、种子、上下文与评分窗下，中央 4 秒三全音破坏比完整 CNN-CRF 回放引发更大的伴奏特征偏移，而同时匹配改变支撑与关系构成的合成画像最接近回放响应，但它只缩小条件响应距离，不代表音质提升。",
+  "originalTitle": "Local Chord Corruption Is Not Recognizer Replay: Chord-Condition Propagation in MIDI-SAG",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03584.pdf",
+  "readerTitle": "集中改四秒不等于识别器给全曲：MIDI-SAG 和弦条件传播的配对校准",
+  "schemaVersion": 1
+}

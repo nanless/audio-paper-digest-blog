@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03584",
+  "arxivId": "2609.03584",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiwen Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03584",
+  "originalTitle": "Local Chord Corruption Is Not Recognizer Replay: Chord-Condition Propagation in MIDI-SAG",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03584.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03992",
+  "arxivId": "2609.03992",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Sanyuan Chen"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Min-Jae Hwang"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Sho Inoue"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Anna Sun"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Bokai Yu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "David Kant"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Dongmin Hyun"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Dorian Desblancs"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Gregory Antonovsky"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Oleg Repin"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Peng-Jen Chen"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Xutai Ma"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Zehai Tu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Juan Pino"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Wei-Ning Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03992",
+  "originalTitle": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03992.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.02941",
+  "arxivId": "2609.02941",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunseo Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunku Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.02941",
+  "originalTitle": "SISER: Speaker-Invariant Speech Emotion Recognition with Entropy-Based Adversarial Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.02941.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

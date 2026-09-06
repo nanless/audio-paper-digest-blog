@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03719",
+  "abstract": "In numerical signal processing for electroacoustic composition, the progressive loss of specific development and research environments caused by the increasing use of digital market tools has favoured the dominance of the closed-architecture audio processor model. This model, while powerful, envisions the possibility of describing output data about its perceived characteristics, but at the cost of ignoring its internal process and interacting systems, which become complex, powerful environments but closed in an inscrutable black box, a loss we must consider. Any digital signal processing technique tells a story. Just as the words of a language incorporate social, historical and technical polysemic layers, a signal processor has its own story of implementation, a gradual technological achievement with its inevitable aesthetic consequences. Through the looking-glass of literature, one can access those environments with renewed awareness by reestablishing a scientific method and an attitude to research. In this specific case, starting from the case study of Manfred Schroeder&#39;s historical reverbs, we illustrate the process of building analytical evaluation tools, as well as practical implementation, at the basis of a conscious study path.",
+  "abstractSha256": "fcddbbd945c588e964ab796bc7becbf090a92d42c28365538b21190685b33561",
+  "arxivId": "2609.03719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryTask": "音频生成",
+    "rankBucket": "后50%",
+    "score": 4.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Francesco Vitucci"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Giuseppe Silvi"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Daniele Giuseppe Annese"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Francesco Scagliola"
+    },
+    {
+      "affiliations": [
+        "Conservatorio “N. Piccinni” - Bari"
+      ],
+      "name": "Anthony Di Furia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以 Schroeder 历史混响为案例，主张用开放架构重建 comb 与 all-pass 组合，通过 Csound 脉冲响应分析与 par/seq 重建验证理解过程，代价是遇到效率限制而把 C 编译 opcode 留作后续工作。",
+  "originalTitle": "Opening mind by opening architecture: analysis strategies",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03719.pdf",
+  "readerTitle": "打开混响黑盒：从 Schroeder 结构到可核对的分析与移植路径",
+  "schemaVersion": 1
+}

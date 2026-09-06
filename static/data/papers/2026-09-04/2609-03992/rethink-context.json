@@ -1,0 +1,112 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03992",
+  "abstract": "We present Alignment-Free Text-Audiobox (Text-AB), a unified framework for high-quality voice dubbing and full-duplex dialogue synthesis. Building on a Diffusion Transformer trained with a flow-matching objective, Text-AB departs from the Audiobox system along three dimensions. First, it operates in a latent diffusion framework using DAC-VAE features that encode 48 kHz waveforms into a 25 Hz latent sequence, giving over 10x higher compression than previous EnCodec representations while improving resynthesis quality. Second, Text-AB is alignment-free: it consumes raw text via an off-the-shelf text encoder and learns text-speech alignment through cross-attention, removing the need for forced alignment and explicit duration prediction. Third, we scale model and data substantially, pretraining a 3B-parameter model on 480k hours of monolingual speech, followed by supervised fine-tuning on three downstream tasks: cross-lingual voice dubbing, full-duplex dialogue synthesis, and emotional full-duplex dialogue synthesis. At inference, Text-AB supports one-shot generation for up to ~1 min of speech and arbitrarily long-form generation via a multi-diffusion scheme, plus a multi-stage reranking strategy that enhances quality based on automated metrics. On a real-world dubbing benchmark, Text-AB delivers a step-change improvement over the latest internal dubbing system, with large gains in prosody similarity, voice similarity, naturalness, and shareability. For full-duplex dialogue synthesis, it approaches human recordings on short-form conversations and substantially outperforms the latest internal model on long-form human-likeness and expressivity, while natively modeling turn-taking, back-channeling, and emotional dynamics. For emotional dialogue synthesis, emotion conditioning significantly improves emotion alignment and emotional interaction quality over the unconditioned baseline.",
+  "abstractSha256": "3be9dc0dd0d2e051d8a8c9cd18cc96dc4100f659758aae613165f58fa4cd68aa",
+  "arxivId": "2609.03992",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Sanyuan Chen"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Min-Jae Hwang"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Sho Inoue"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Anna Sun"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Bokai Yu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "David Kant"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Dongmin Hyun"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Dorian Desblancs"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Gregory Antonovsky"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Oleg Repin"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Peng-Jen Chen"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Xutai Ma"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Zehai Tu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Juan Pino"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Wei-Ning Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对跨语言配音与双人全双工对话，Text-AB 用 DAC-VAE 潜变量上的流匹配 DiT 加 mT5 交叉注意力学对齐，经 480k 小时预训练与三路微调，在配音可分享性上领先内部系统约 0.38-0.40 分，短对话接近真值，但长音频依赖多扩散拼接与多候选重排带来额外推理代价。",
+  "originalTitle": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03992.pdf",
+  "readerTitle": "不对齐文本、直接生成双声道：Text-Audiobox 如何做配音与对话",
+  "schemaVersion": 1
+}

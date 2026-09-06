@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.03620",
+  "arxivId": "2609.03620",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Multi-Modal Research Center, KETI, South Korea",
+        "Department of Artificial Intelligence, Korea University, South Korea"
+      ],
+      "name": "Taewoo Kim"
+    },
+    {
+      "affiliations": [
+        "Multi-Modal Research Center, KETI, South Korea"
+      ],
+      "name": "Young Han Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nam In Park"
+    },
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Korea University, South Korea"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.03620",
+  "originalTitle": "ToolDF: Tool-Integrated Reasoning for Mixed-Authenticity Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.03620.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
