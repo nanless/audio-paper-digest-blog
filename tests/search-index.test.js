@@ -37,6 +37,15 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     'paper_digest_original_title: Source paper title',
     'paper_digest_reader_title: Contract reader title',
     'paper_digest_primary_task: Structured task',
+    'paper_digest_primary_method: Structured method',
+    'paper_digest_taxonomy_contract: paper-taxonomy-flat-tags-compat-v1',
+    'paper_digest_taxonomy_concepts:',
+    '  - id: task.structured',
+    '    facet: task',
+    '    label: Structured task',
+    '  - id: method.structured',
+    '    facet: method',
+    '    label: Structured method',
     'paper_digest_score: 0',
     'paper_digest_one_sentence: Evidence from the structured contract.',
     'description: "Legacy task | 9.9/10"',
@@ -61,11 +70,20 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   assert.equal(legacy.titleZh, '中文题目');
   assert.equal(legacy.score, '7.0');
   assert.equal(legacy.task, '语音识别');
+  assert.equal(legacy.method, '');
+  assert.equal(legacy.taxonomyContract, '');
+  assert.deepEqual(legacy.taxonomyConcepts, []);
   assert.equal(legacy.date, '2026-04-29');
   const workbench = records.find((item) => item.title === 'Analysis display title');
   assert.equal(workbench.originalTitle, 'Source paper title');
   assert.equal(workbench.titleZh, 'Contract reader title');
   assert.equal(workbench.task, 'Structured task');
+  assert.equal(workbench.method, 'Structured method');
+  assert.equal(workbench.taxonomyContract, 'paper-taxonomy-flat-tags-compat-v1');
+  assert.deepEqual(workbench.taxonomyConcepts, [
+    { id: 'task.structured', facet: 'task', label: 'Structured task' },
+    { id: 'method.structured', facet: 'method', label: 'Structured method' },
+  ]);
   assert.equal(workbench.score, '0');
   assert.equal(workbench.summary, 'Evidence from the structured contract.');
   assert.equal(workbench.arxivId, '2609.12345');

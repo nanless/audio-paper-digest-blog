@@ -23,6 +23,7 @@
 {{- $originalTitle := .Title -}}
 {{- $score := "" -}}
 {{- $task := "" -}}
+{{- $method := "" -}}
 {{- $arxivId := "" -}}
 {{- $oneSentence := "" -}}
 {{- if eq $pageType "paper" -}}
@@ -33,6 +34,7 @@
   {{- with $matches }}{{ $score = replaceRE `[ \t]*/[ \t]*10$` "" (index . 0) }}{{ end -}}
   {{- if isset .Params "paper_digest_score" }}{{ $score = printf "%v" .Params.paper_digest_score }}{{ end -}}
   {{- $task = .Params.paper_digest_primary_task | default "" -}}
+  {{- $method = .Params.paper_digest_primary_method | default "" -}}
   {{- if and (not $task) $score -}}
     {{- $parts := split $description "|" -}}
     {{- if gt (len $parts) 1 }}{{ $task = strings.TrimSpace (index $parts 0) }}{{ end -}}
@@ -45,4 +47,4 @@
   {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}
-{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "arxivId" $arxivId "oneSentence" $oneSentence) -}}
+{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence) -}}

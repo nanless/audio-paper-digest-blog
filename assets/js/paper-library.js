@@ -11,6 +11,14 @@
     return plainText(value).normalize('NFKC').toLocaleLowerCase();
   }
 
+  function taxonomyTerms(value) {
+    if (!Array.isArray(value)) return [];
+    return value.flatMap(function (concept) {
+      if (!concept || typeof concept !== 'object' || Array.isArray(concept)) return [];
+      return [concept.id, concept.facet, concept.label].map(plainText).filter(Boolean);
+    });
+  }
+
   function entryDate(value) {
     var match = plainText(value).match(/\b(20\d{2}-\d{2}-\d{2})\b/);
     if (!match) return '';
@@ -45,13 +53,16 @@
     var score = rawScore !== '' && /^(?:\d+(?:\.\d+)?)$/.test(String(rawScore)) ? Number(rawScore) : -1;
     if (!Number.isFinite(score) || score < 0 || score > 10 || type !== 'paper') score = -1;
     var task = plainText(item.task);
+    var method = plainText(item.method);
     var arxivId = plainText(item.arxivId);
     var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
     var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
+    var taxonomy = taxonomyTerms(item.taxonomyConcepts);
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
-      type: type, date: date, year: date.slice(0, 4), score: score, task: task, arxivId: arxivId,
-      searchText: searchText([title, originalTitle, item.title, summary, permalink, task, arxivId].concat(tags, categories).join(' '))
+      type: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
+      searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId]
+        .concat(tags, categories, taxonomy).join(' '))
     };
   }
 
@@ -163,7 +174,8 @@
 
     var meta = document.createElement('div');
     meta.className = 'library-result__meta';
-    meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
+    meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
+      entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
     article.appendChild(body);
 

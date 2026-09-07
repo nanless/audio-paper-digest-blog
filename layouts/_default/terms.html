@@ -3,8 +3,8 @@
 <section class="research-terms">
   <header class="page-header">
     <div class="rw-eyebrow">{{ if $categories }}按来源浏览{{ else }}按方向浏览{{ end }}</div>
-    <h1>{{ if $categories }}内容分类{{ else }}研究主题{{ end }}</h1>
-    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}按收录数量排列，输入中文或英文快速找到研究方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合检索。</p>
+    <h1>{{ if $categories }}内容分类{{ else }}标签索引（新旧兼容）{{ end }}</h1>
+    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}新发布内容使用受控 taxonomy，历史页面保留原标签；本页暂时合并展示两者，因此标签计数不等于新版任务或方法统计。可按收录数量浏览并输入中文或英文筛选。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合检索。</p>
   </header>
   <div class="research-terms__search">
     <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选主题{{ end }}</label>

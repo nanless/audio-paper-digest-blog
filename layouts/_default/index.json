@@ -23,10 +23,13 @@
       "date" (.Date.Format "2006-01-02")
       "pageType" $metadata.pageType
       "task" $metadata.task
+      "method" $metadata.method
       "score" $score
       "arxivId" $metadata.arxivId
       "tags" $tags
       "categories" $categories
+      "taxonomyContract" (.Params.paper_digest_taxonomy_contract | default "")
+      "taxonomyConcepts" (.Params.paper_digest_taxonomy_concepts | default slice)
     )) }}
   {{- end }}
 {{- end }}

@@ -48,7 +48,8 @@ const record = {
   title: 'English paper title', titleZh: '中文标题', originalTitle: 'Original paper title',
   permalink: `${origin}${siteBasePath}posts/legacy-paper/`,
   date: '2026-05-04', pageType: 'paper', score: '8.5', summary: 'No score in this summary.',
-  task: '语音识别', tags: ['streaming', '低资源'], categories: ['iclr-2026'], arxivId: '2605.12345'
+  task: '语音识别', method: '流式解码', tags: ['streaming', '低资源'], categories: ['iclr-2026'],
+  taxonomyConcepts: [{ id: 'setting.long-form', facet: 'setting', label: '长音频' }], arxivId: '2605.12345'
 };
 
 test('structured index fields survive normalization and are searchable independently', () => {
@@ -57,7 +58,9 @@ test('structured index fields survive normalization and are searchable independe
   assert.equal(entry.originalTitle, 'Original paper title');
   assert.equal(entry.date, '2026-05-04');
   assert.equal(entry.score, 8.5);
-  for (const query of ['中文标题', 'Original', 'English', '2605.12345', '低资源', 'streaming 语音识别', 'iclr-2026', 'ＳＴＲＥＡＭＩＮＧ']) {
+  assert.equal(entry.method, '流式解码');
+  for (const query of ['中文标题', 'Original', 'English', '2605.12345', '低资源', 'streaming 语音识别',
+    '流式解码', '长音频', 'setting.long-form', 'setting', 'iclr-2026', 'ＳＴＲＥＡＭＩＮＧ']) {
     assert.equal(filterEntries([entry], { query, type: 'paper', year: '2026', sort: 'newest' }).length, 1, query);
   }
 });

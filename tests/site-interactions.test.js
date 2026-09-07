@@ -52,3 +52,12 @@ test('taxonomy filtering reports actual visible counts and recovers from zero re
   assert.equal(site.count.textContent, '共 2 项');
   assert.equal(site.empty.hidden, true);
 });
+
+test('tag index explicitly labels the temporary old/new taxonomy coexistence', () => {
+  const template = fs.readFileSync(
+    path.join(__dirname, '..', 'layouts', '_default', 'terms.html'), 'utf8'
+  );
+  assert.match(template, /标签索引（新旧兼容）/);
+  assert.match(template, /新发布内容使用受控 taxonomy/);
+  assert.match(template, /标签计数不等于新版任务或方法统计/);
+});
