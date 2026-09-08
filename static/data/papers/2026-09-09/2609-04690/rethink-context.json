@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04690v1",
+  "abstract": "Multimodal emotion recognition has attracted growing interest due to its importance in human-computer interaction, remote education, and healthcare. This paper proposes a novel multimodal emotion recognition framework that integrates rich audio and visual feature extraction with an attention-based fusion strategy. For audio, we extract three complementary feature types: semantic embeddings from Wav2Vec2, MFCC features, and statistical acoustic descriptors such as pitch, energy, and rhythm. These are aligned and fused via a BiLSTM to capture temporal dependencies. For video, we propose a ResNet50-BiLSTM architecture that combines deep residual learning and sequential modeling to extract expressive spatiotemporal features from facial sequences. To enhance multimodal synergy, we introduce a feature-level fusion mechanism based on multi-head attention, allowing the model to adaptively weigh contributions across modalities. Experiments conducted on the MELD and IEMOCAP datasets demonstrate that our model significantly outperforms baselines in both accuracy and robustness. Furthermore, ablation studies show that the attention-based fusion strategy significantly improves performance in unbalanced data settings. Our findings suggest that the proposed framework effectively captures diverse emotional cues from speech and visual expressions, and offers a practical and generalizable approach for real-world multimodal emotion recognition tasks.",
+  "abstractSha256": "ab9190d40a9606e618dd3d9fefb2232649697aebe486962bcc92a51928796303",
+  "arxivId": "2609.04690",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.04690v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "后50%",
+    "score": 3.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Xu Lin"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Ke Wang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China",
+        "Key Laboratory of Symbolic Computation and Knowledge Engineering of Ministry of Education, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Hui Kang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China",
+        "Key Laboratory of Symbolic Computation and Knowledge Engineering of Ministry of Education, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Xinying Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单模态易受噪声与信息缺失影响的问题，论文用 Wav2Vec2、MFCC 与统计声学特征经 BiLSTM 建模音频、用 ResNet50-BiLSTM 建模视频，并以多头交叉注意力做特征级融合，在 MELD 上微平均 93.7% 与 IEMOCAP 上 90.3% 准确率上验证效果，但未报告训练超参细节与统计显著性。",
+  "originalTitle": "Enhancing Multimodal Emotion Recognition via Multi-Feature Encoding and Attention-Based Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04690v1.pdf",
+  "readerTitle": "音频三路特征与视频时空建模为何需要注意力来对齐：多模态情绪识别的可复述路径",
+  "schemaVersion": 1
+}

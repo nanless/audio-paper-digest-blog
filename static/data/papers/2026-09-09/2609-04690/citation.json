@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04690v1",
+  "arxivId": "2609.04690",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.04690v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Xu Lin"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Ke Wang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China",
+        "Key Laboratory of Symbolic Computation and Knowledge Engineering of Ministry of Education, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Hui Kang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Technology, Jilin University, Changchun 130012, China",
+        "Key Laboratory of Symbolic Computation and Knowledge Engineering of Ministry of Education, Jilin University, Changchun 130012, China"
+      ],
+      "name": "Xinying Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04690v1",
+  "originalTitle": "Enhancing Multimodal Emotion Recognition via Multi-Feature Encoding and Attention-Based Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04690v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
