@@ -146,7 +146,7 @@ Whisper 的输入是一段音频，输出是文本序列。对于有语音的片
 
 > **看图路径：** 1. 对比左右两面板同一层同一秩下 HR 与 WER 的同步变化，确认中后层才出现 HR 大幅下降；2. 观察第 28 层附近在两面板中均为低值的格子，理解为何被选为最终折中；3. 注意粉色底色标记 WER 超过基线 0.5 个百分点的格子，识别哪些层秩组合代价过大
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Offline selection of \ell and r for Whisper large-v3. Cells report ESC-50 HR% and LibriSpeech validation WER%; lower is better.
+[![原论文 Figure 1：Offline selection of \\ell and r for Whisper large-v3.](https://arxiv.org/html/2609.04561v1/offline_layer_rank_selection.svg)](https://arxiv.org/html/2609.04561v1/offline_layer_rank_selection.svg)
 
 *论文图 1。原论文 Figure 1:：“Offline selection of \ell and r for Whisper large-v3. Cells report ESC-50 HR% and LibriSpeech validation WER%; lower is better.”。*
 
@@ -156,7 +156,7 @@ Whisper 的输入是一段音频，输出是文本序列。对于有语音的片
 
 > **看图路径：** 1. 沿 γ=0.05 列自上而下看 HR 与 WER 的权衡变化；2. 对比同一 α 下不同 γ 的 WER，确认门控放宽会保留更多语音但削弱抑制；3. 定位高亮格 α=1.0 γ=0.05，核对它在 HR 与 WER 上的具体数值
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Offline selection of \alpha and \gamma with \ell=28 and r=4. Cells show ESC-50 (folds1–3) HR% and LibriSpeech validation subset WER%.
+[![原论文 Figure 2：Offline selection of \\alpha and \\gamma with \\ell=28 and r=4.](https://arxiv.org/html/2609.04561v1/offline_alpha_gate_sweep.svg)](https://arxiv.org/html/2609.04561v1/offline_alpha_gate_sweep.svg)
 
 *论文图 2。原论文 Figure 2:：“Offline selection of \alpha and \gamma with \ell=28 and r=4. Cells show ESC-50 (folds1–3) HR% and LibriSpeech validation subset WER%.”。*
 
@@ -202,7 +202,7 @@ Whisper 的输入是一段音频，输出是文本序列。对于有语音的片
 
 > **看图路径：** 1. 对比左图非语音在 0.6 阈值左右的分布迁移，确认投影后大量样本被推过阈值；2. 观察右图真实语音分布仍集中在 0 附近，确认对清晰语音影响有限；3. 核对两图顶部标注的拒识比例变化 21.8%→96.3% 与 0.0%→2.9%
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: No-speech probability before and after gated projection on ESC-50 and LibriSpeech test-clean; dashed line marks \tau=0.6.
+[![原论文 Figure 3：No-speech probability before and after gated projection on ESC-50 and LibriSpeech test-clean;…](https://arxiv.org/html/2609.04561v1/nospeech_before_after_percent.svg)](https://arxiv.org/html/2609.04561v1/nospeech_before_after_percent.svg)
 
 *论文图 3。原论文 Figure 3:：“No-speech probability before and after gated projection on ESC-50 and LibriSpeech test-clean; dashed line marks \tau=0.6.”。*
 
@@ -212,7 +212,7 @@ Whisper 的输入是一段音频，输出是文本序列。对于有语音的片
 
 > **看图路径：** 1. 按数据集分组对比五种方法的柱高，确认 BoH 仅轻微下降而投影方法大幅下降；2. 观察 Average 组中门控与常开的相对位置，理解两者在平均 HR 上的差距；3. 核对 UrbanSound8K 上原始 Whisper 高达 76.08% 的柱高与投影后的个位数
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Baseline comparison on non-speech datasets. Bars show hallucination rate (HR, %); lower is better.
+[![原论文 Figure 4：Baseline comparison on non-speech datasets. Bars show hallucination rate (HR, %); lower is better.](https://arxiv.org/html/2609.04561v1/baseline_comparison_bar_chart_with_average_readable_fixed.svg)](https://arxiv.org/html/2609.04561v1/baseline_comparison_bar_chart_with_average_readable_fixed.svg)
 
 *论文图 4。原论文 Figure 4:：“Baseline comparison on non-speech datasets. Bars show hallucination rate (HR, %); lower is better.”。*
 

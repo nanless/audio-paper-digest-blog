@@ -108,7 +108,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看顶部同一句冲突语音及其真实表情，再看中间两条基线分支的箭头走向；2. 对比语义感知分支把字面判为高兴与底部双通路判为愤怒的输出差异；3. 注意底部双通路在进入融合前经过筛选模块的分叉与汇合位置
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Comparison of SER methods on a conflicting utterance. Existing methods suffer from either semantic bias (poisoned by literal meaning) or entangled acoustic‑semantic representations.
+[![原论文 Figure 1：Comparison of SER methods on a conflicting utterance.](https://arxiv.org/html/2609.04236v1/images/moti3.png)](https://arxiv.org/html/2609.04236v1/images/moti3.png)
 
 *论文图 1。原论文 Figure 1:：“Comparison of SER methods on a conflicting utterance.”。*
 
@@ -124,7 +124,7 @@ DAS 是解耦声学语义融合框架的简称，全称在原文中写作 Disent
 
 > **看图路径：** 1. 从左到右跟踪异构特征提取到显著块选择再到查询融合的主路径；2. 观察上下两路在能量打分与线性投影处是否保持独立再拼接；3. 查看底部可学习查询进入融合块的位置与右侧平均池化后分类的出口
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Overall framework of DAS (Disentangled Acoustic-Semantic Fusion). The model disentangles speech into two pathways: an acoustic representation (via MingTok-Audio) and a semantic representation (via Whisper). This disentanglement is crucial for handling tone-word conflict. It then selects high-energy patch embeddings and fuses them through a query-based Transformer for robust emotion recognition.
+[![原论文 Figure 2：Overall framework of DAS (Disentangled Acoustic-Semantic Fusion).](https://arxiv.org/html/2609.04236v1/images/pipeline6.png)](https://arxiv.org/html/2609.04236v1/images/pipeline6.png)
 
 *论文图 2。原论文 Figure 2:：“Overall framework of DAS (Disentangled Acoustic-Semantic Fusion).”。*
 
@@ -166,7 +166,7 @@ TWIN-SER 是语调与词义不一致的语音情感识别基准的简称，构�
 
 > **看图路径：** 1. 按顺时针查看场景生成到元数据标注再到音频合成与人工校验四框；2. 核对示例中生日祝福文本的真实标签与语义标签为何被标成不同类别；3. 注意音频合成框中随机音色选择与人工校验三项检查的衔接关系
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: The four-stage construction pipeline of the TWIN-SER benchmark: scenario generation, metadata annotation, audio synthesis, and human verification.
+[![原论文 Figure 3：The four-stage construction pipeline of the TWIN-SER benchmark: scenario generation, metadata…](https://arxiv.org/html/2609.04236v1/images/dataGen4.png)](https://arxiv.org/html/2609.04236v1/images/dataGen4.png)
 
 *论文图 3。原论文 Figure 3:：“The four-stage construction pipeline of the TWIN-SER benchmark: scenario generation, metadata annotation, audio synthesis, and human verification.”。*
 
@@ -190,7 +190,7 @@ DAS 训练方面的事实需要准确区分冻结与更新。原文实现是先�
 
 > **看图路径：** 1. 先确认图例中四种颜色分别对应哪四个评测集并固定纵轴为准确率；2. 逐个模型比较灰色冲突柱与其余三色常规柱的高度落差；3. 重点观察声学分词器在常规集已偏低而语义模型在冲突集集体塌陷的现象
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Accuracy degradation of existing mainstream methods under tone-word conflict scenarios.
+[![原论文 Figure 4：Accuracy degradation of existing mainstream methods under tone-word conflict scenarios.](https://arxiv.org/html/2609.04236v1/images/evidence2.png)](https://arxiv.org/html/2609.04236v1/images/evidence2.png)
 
 *论文图 4。原论文 Figure 4:：“Accuracy degradation of existing mainstream methods under tone-word conflict scenarios.”。*
 

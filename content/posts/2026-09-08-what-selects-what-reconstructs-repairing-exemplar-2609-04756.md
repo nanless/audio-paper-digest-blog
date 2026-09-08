@@ -131,7 +131,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 观察左图相位差随频点呈线性斜坡，核对拟合斜率 τ=3.38 是否贴合蓝点；2. 对比中图去除斜坡后残差相位是否在零附近随机抖动；3. 检查右图残差幅度是否远低于混合与对齐原子的幅度谱
 
-> **论文图 1（像素未随页面持久化）**：Fig. 1: The alignment step, on a synthetic atom of known delay and gain. Left, the phase of the atom against that of the mixture; middle, the same once the ramp (8) is removed; right, the residual left after gain and delay are removed exactly. That residual is what the rigid class cannot explain, and what makes the criterion informative.
+[![原论文 Fig. 1：The alignment step, on a synthetic atom of known delay and gain.](https://arxiv.org/html/2609.04756v1/fig2_ramp.svg)](https://arxiv.org/html/2609.04756v1/fig2_ramp.svg)
 
 *论文图 1。原论文 Fig. 1:：“The alignment step, on a synthetic atom of known delay and gain.”。*
 
@@ -193,7 +193,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 对比左右两列，核对神谕曲线随字典增大上升而准则曲线平坦或下降；2. 核对虚线 m⋆与点划线 IRM 的相对位置，确认天花板高度；3. 观察 50、100、300 三档上两源差距是否一致
 
-> **论文图 2（像素未随页面持久化）**：Fig. 2: The diagnosis. Gain over the mixture against dictionary size, both sources, for the original criterion and for an oracle picking the pair that minimises the true error in the same candidate pool. The criterion degrades as the dictionary grows while its own oracle improves, which no rule short of capacity does, and the gap is the same on both sources, as Corollary 1 predicts. Dashed lines are the derived ceilings, m^{\star} and the ideal ratio mask, on the tracks each rule was measured on.
+[![原论文 Fig. 2：The diagnosis. Gain over the mixture against dictionary size, both sources, for the original…](https://arxiv.org/html/2609.04756v1/fig1_diagnostic.svg)](https://arxiv.org/html/2609.04756v1/fig1_diagnostic.svg)
 
 *论文图 2。原论文 Fig. 2:：“The diagnosis. Gain over the mixture against dictionary size, both sources, for the original criterion and for an oracle picking the pair that minimises the true error in the…”。*
 
@@ -223,7 +223,7 @@ k 在全程仅带来毫秒级波动，说明 2 次项来自对搜索而非 k。
 
 > **看图路径：** 1. 左图对比虚线自由类与实线刚性类的选择间隙随字典的变化；2. 右图对比两类各自交付的 SDR 增益，核对刚性类是否随字典单调上升；3. 检查自由类在两源上间隙是否重合而刚性类是否分离
 
-> **论文图 3（像素未随页面持久化）**：Fig. 3: The selection gap before and after the phase constraint. Left, the oracle-to-criterion gap against dictionary size, under the free per-bin deformation and under the rigid class (8), both sources; right, the quality each criterion delivers. The gap collapses and its symmetry between sources breaks, the signature Corollary 1 predicts, while the criterion’s own quality now grows with dictionary size.
+[![原论文 Fig. 3：The selection gap before and after the phase constraint.](https://arxiv.org/html/2609.04756v1/fig3_constraint.svg)](https://arxiv.org/html/2609.04756v1/fig3_constraint.svg)
 
 *论文图 3。原论文 Fig. 3:：“The selection gap before and after the phase constraint.”。*
 
@@ -240,7 +240,7 @@ k 在全程仅带来毫秒级波动，说明 2 次项来自对搜索而非 k。
 
 > **看图路径：** 1. 核对人声列容量曲线随 k 从 1 到 16 上升约 4.4 dB 而局部质量曲线平坦；2. 观察阴影锁面积是否随 k 单调扩大；3. 对比伴奏列容量与质量的绝对高度是否远低于人声
 
-> **论文图 4（像素未随页面持久化）**：Fig. 4: Quality against capacity as k grows, both sources, 300 atoms per source. Capacity is the projection of the true source onto the span of k atoms aligned and chosen against the truth; quality is the same class populated by the deployed rule. The hatched selection lock absorbs the entire 4.4 dB that capacity gains between k=1 and k=16.
+[![原论文 Fig. 4：Quality against capacity as k grows, both sources, 300 atoms per source.](https://arxiv.org/html/2609.04756v1/fig4_selection.svg)](https://arxiv.org/html/2609.04756v1/fig4_selection.svg)
 
 *论文图 4。原论文 Fig. 4:：“Quality against capacity as k grows, both sources, 300 atoms per source.”。*
 

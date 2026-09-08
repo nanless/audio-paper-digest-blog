@@ -167,7 +167,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看左面板横轴 SI-SDR 与纵轴 onset F-measure 的点云走向与虚线趋势；2. 再看中面板纵轴攻击斜率失真是否随横轴增大而下降；3. 最后看右面板按 SDR 排序与按瞬态保真排序的连线是否交叉
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: SI-SDR vs. analyst fidelity on the drums stem (4 models \times 50 tracks). (a): onset F-measure rises with SI-SDR. (b): attack-slope distortion shows no trend against SI-SDR.
+[![原论文 Figure 1：SI-SDR vs. analyst fidelity on the drums stem (4 models \\times 50 tracks).](https://arxiv.org/html/2609.04224v1/figures/sdr_vs_analyst.png)](https://arxiv.org/html/2609.04224v1/figures/sdr_vs_analyst.png)
 
 *论文图 1。原论文 Figure 1:：“SI-SDR vs. analyst fidelity on the drums stem (4 models \times 50 tracks). (a): onset F-measure rises with SI-SDR. (b): attack-slope distortion shows no trend against SI-SDR.”。*
 
@@ -197,7 +197,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看左面板每条配对线从 SCNet-XL 到 BS-Roformer 是上升还是下降；2. 再看右面板最下方 onset-F 一行的漂移量与误差棒有多小；3. 对比上方 attack-slope 与中部动态变化两行的漂移量级
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: A2 drift of the fixed drums region with input length (mean \pm SE, 20 tracks). Attack-slope: transformer > CNN (paired p=0.044); impulsiveness: outlier-driven, n.s.; timing (onset-F): flat.
+[![原论文 Figure 2：A2 drift of the fixed drums region with input length (mean ± SE, 20 tracks).](https://arxiv.org/html/2609.04224v1/figures/a2_drift.png)](https://arxiv.org/html/2609.04224v1/figures/a2_drift.png)
 
 *论文图 2。原论文 Figure 2:：“A2 drift of the fixed drums region with input length (mean ± SE, 20 tracks).”。*
 

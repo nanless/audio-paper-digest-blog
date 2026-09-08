@@ -111,7 +111,7 @@ GEPARD 选择后者并进一步把 8 个打包码展开为 32 个独立小分类
 
 > **看图路径：** 1. 沿顶部三路输入箭头向下追踪 Q-Former 前缀、文本嵌入与 32 通道音频接口如何汇入同一拼接序列；2. 定位中间红色拼接框中 d 等于 1024 的维度标注与下方 14 块全注意力主干的参数说明；3. 在主干出口处确认丢弃前缀切片后再分叉到 32 个码本头与停止头的两条分支路径
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Gepard architecture. Three input streams — the optional Q-Former voice-cloning prefix, the text embedding, and the audio interface (32 FSQ channels) — are concatenated into a single sequence and processed by a stock full-attention Qwen3.5 backbone. The prefix slice is dropped before the 32 codebook heads (CE) and the stop head (BCE).
+[![原论文 Figure 1：Gepard architecture. Three input streams — the optional Q-Former voice-cloning prefix, the text…](https://arxiv.org/html/2609.04222v1/x1.png)](https://arxiv.org/html/2609.04222v1/x1.png)
 
 *论文图 1。原论文 Figure 1:：“Gepard architecture. Three input streams — the optional Q-Former voice-cloning prefix, the text embedding, and the audio interface (32 FSQ channels) — are concatenated into a…”。*
 
@@ -179,7 +179,7 @@ GEPARD 选择后者并进一步把 8 个打包码展开为 32 个独立小分类
 
 > **看图路径：** 1. 左图对比蓝色损失与红色梯度范数随 epoch 的同步下降及分箱平滑后的收敛平台；2. 右图观察绿色漂移曲线在约 0.34 处进入平台与紫色有效秩维持在 955 附近的稳定性；3. 核对横轴 0 到 7 的 epoch 范围与左右双纵轴的数值区间是否与正文描述一致
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Diagnostics of modality alignment during pretraining. Left: loss/total and gradient norm (binned). Right: text embedding drift flattens at \approx 0.34, while the effective rank stays around \approx 955/1024, indicating adaptation without losing the pretrained structure.
+[![原论文 Figure 2：Diagnostics of modality alignment during pretraining.](https://arxiv.org/html/2609.04222v1/fig/scaling_pretrain_curves.png)](https://arxiv.org/html/2609.04222v1/fig/scaling_pretrain_curves.png)
 
 *论文图 2。原论文 Figure 2:：“Diagnostics of modality alignment during pretraining.”。*
 
@@ -221,7 +221,7 @@ GEPARD 选择后者并进一步把 8 个打包码展开为 32 个独立小分类
 
 > **看图路径：** 1. 按颜色区分 8 级蓝色、7 级绿色、6 级紫色通道的柱高与右侧 max 虚线天花板的距离；2. 检查 32 个通道是否都接近各自天花板以判断是否存在码本坍塌现象；3. 阅读左上角红框中平均秩 97% 与文本嵌入秩 955/1024 的汇总标注含义
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Effective rank of the 32 audio lookup tables during pretraining. The dashed line is the structural ceiling (the number of FSQ codes of the channel). All heads remain close to the ceiling, indicating full capacity utilization and no intra-head collapse.
+[![原论文 Figure 3：Effective rank of the 32 audio lookup tables during pretraining.](https://arxiv.org/html/2609.04222v1/fig/scaling_fsq_effrank.png)](https://arxiv.org/html/2609.04222v1/fig/scaling_fsq_effrank.png)
 
 *论文图 3。原论文 Figure 3:：“Effective rank of the 32 audio lookup tables during pretraining.”。*
 

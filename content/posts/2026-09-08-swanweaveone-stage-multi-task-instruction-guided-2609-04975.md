@@ -112,7 +112,7 @@ SwanWeave 的定位是直接对已有 FOA 场景做波形级编辑，并在 1 �
 
 > **看图路径：** 1. 对比左右两个蓝色球面：左侧标注 Front 的人群与左上方喇叭，右侧人群沿绿色虚线弧线从 Front 移到 Right 并在 Left 新增红色吉他；2. 阅读中间编辑指令框中红色高亮的 arc around from front to right 与 add a strum to your left，确认同时涉及空间重定位与事件添加；3. 核对下方 Audio events 文字：左侧为 Crowd in front, car horn above，右侧变为 moves from front to right 并新增 strum in left，确认 car horn above 保持不变
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of SwanWeave, which follows natural-language instructions to edit FOA audio, such as moving a crowd from the front to the right and adding a strum on the left while preserving unchanged events.
+[![原论文 Figure 1：Overview of SwanWeave, which follows natural-language instructions to edit FOA audio, such as…](https://arxiv.org/html/2609.04975v1/teaser-5.png)](https://arxiv.org/html/2609.04975v1/teaser-5.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of SwanWeave, which follows natural-language instructions to edit FOA audio, such as moving a crowd from the front to the right and adding a strum on the left while…”。*
 
@@ -130,7 +130,7 @@ SwanWeave 不直接在波形域编辑长时 4 通道信号，而是在紧凑潜�
 
 > **看图路径：** 1. 沿左侧 Overall Pipeline 看主路径：Source FOA 的 W/Y/Z/X 四通道波形经冻结 VAE Encoder 得到 Original latent，与 Noisy latent 拼接送入可训练 Diffusion Transformer；2. 确认 Caption Encoder 冻结、Diffusion Transformer 内含 MoE block、Cross-attention 与 Self-attention 堆叠 N 层，timestep t 同时注入注意力与 MoE 路由；3. 在右侧 MoE Module 区分 Router 1 的 Caption conditioned 任务专家与 Router 2 的 Token conditioned 帧专家/空专家，最终两路加权求和输出
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Overview of SwanWeave. The left panel shows the overall training and inference pipeline, and the right panel shows the SE-MoE module with instruction-level task routing and token-level routed/null experts.
+[![原论文 Figure 2：Overview of SwanWeave. The left panel shows the overall training and inference pipeline, and the…](https://arxiv.org/html/2609.04975v1/model-3.png)](https://arxiv.org/html/2609.04975v1/model-3.png)
 
 *论文图 2。原论文 Figure 2:：“Overview of SwanWeave. The left panel shows the overall training and inference pipeline, and the right panel shows the SE-MoE module with instruction-level task routing and…”。*
 

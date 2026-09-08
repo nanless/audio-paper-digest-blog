@@ -141,7 +141,7 @@ Encore 在 LTX-2.3 音视频潜变量扩散骨干上扩展，不改动骨干的�
 
 > **看图路径：** 1. 沿顶部输入条观察 Ref.Audio/Input Audio/Audio GT 与 Ref.Image/Motion Frames/Video GT 如何分别进入 Audio Encoder 与 Video Encoder；2. 对比左侧粉色音频流与右侧绿色视频流在每一块中的 Self-Attention→Cross-Attention→Cross-Attention→Feed Forward 顺序；3. 在中间序列条上定位 p_ra 与 p_ri 的负位置偏移以及 0…k 的延续与目标段，确认参考与延续的位置区分；4. 在右侧 ASR 面板中区分上方自注意力偏置的列级加法与下方两路跨注意力输出的乘法缩放
 
-> **论文图 2（像素未随页面持久化）**：Figure 2. Overview of Encore. The model jointly denoises audio (left) and video (right) within a shared DiT architecture. Each stream receives reference signals (reference audio/image), continuation signals (input audio and motion frames, with error injection on the video side), and noisy latents, all packed into a unified sequence with reference-shifted position embeddings. Text prompts encoded by Gemma provide semantic conditioning via cross-attention, while a dedicated audio-video cross-attention enables synchronization between the two modalities. Adaptive Signal Routing (ASR, right panel) introduces per-layer, per-head learnable biases (\alpha_{\ell,h}^{anc}, \alpha_{\ell,h}^{ct}) within self-attention and learnable scales (\alpha_{\ell,h}^{sem}, \alpha_{\ell,h}^{sync}) on cross-attention outputs, allowing the model to dynamically modulate the influence of each conditioning signal.
+[![原论文 Figure 2.：Overview of Encore. The model jointly denoises audio (left) and video (right) within a shared DiT…](https://arxiv.org/html/2609.04249v1/pic/overview.png)](https://arxiv.org/html/2609.04249v1/pic/overview.png)
 
 *论文图 2。原论文 Figure 2.：“Overview of Encore. The model jointly denoises audio (left) and video (right) within a shared DiT architecture.”。*
 

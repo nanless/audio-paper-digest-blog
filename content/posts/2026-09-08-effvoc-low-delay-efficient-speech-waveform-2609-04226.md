@@ -116,7 +116,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先从顶部输入框向下追踪主链：卷积、两层循环、四个反卷积加残差块到波形输出；2. 对比蓝色宽带分支与红色全频带分支在后两层反卷积的步长与通道标注差异；3. 看右侧残差块内部主路两层卷积与旁路一层卷积再相加的结构；4. 数时间轴放大倍数从 T 到 5T 到 20T 到 40T 到 80T 再到 240T 的逐级上采样关系
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Proposed low-delay speech reconstruction model EffVOC (left side) for wideband speech (black and blue dimensions) and fullband speech (black and red dimensions). Details of the \mathrm{ResBlock}() are shown on the right side.
+[![原论文 Figure 1：Proposed low-delay speech reconstruction model EffVOC (left side) for wideband speech (black and…](https://arxiv.org/html/2609.04226v1/x1.png)](https://arxiv.org/html/2609.04226v1/x1.png)
 
 *论文图 1。原论文 Figure 1:：“Proposed low-delay speech reconstruction model EffVOC (left side) for wideband speech (black and blue dimensions) and fullband speech (black and red dimensions).”。*
 

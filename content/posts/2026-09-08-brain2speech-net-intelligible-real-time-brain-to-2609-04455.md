@@ -115,7 +115,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 从左侧神经记录沿实线箭头向右追踪到波形，区分训练与推理共用主路；2. 找到脑内容编码器后分出的虚线连接时序分类分支与分段计数分支；3. 观察深度隐马尔可夫模型对齐器下方标注的归属问题与上方的发射原型输入；4. 确认右侧后验池化到上下文音素表示再经投影进入流加解码器的闭环
 
-> **论文图 2（像素未随页面持久化）**：Fig. 2: Brain2Speech-Net architecture for single-stage neural-to-speech synthesis using a phoneme-informed bottleneck and a deep-HMM alignment to VITS encoder representations. The solid lines represent the data flow path during both train and inference, the dotted lines are data paths used only during training
+[![原论文 Fig. 2：Brain2Speech-Net architecture for single-stage neural-to-speech synthesis using a phoneme-informed…](https://arxiv.org/html/2609.04455v1/Brain2Speech-Net_v10.drawio.png)](https://arxiv.org/html/2609.04455v1/Brain2Speech-Net_v10.drawio.png)
 
 *论文图 2。原论文 Fig. 2:：“Brain2Speech-Net architecture for single-stage neural-to-speech synthesis using a phoneme-informed bottleneck and a deep-HMM alignment to VITS encoder representations.”。*
 
@@ -196,11 +196,11 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看横轴平均意见分刻度从 1 到 5 与四条横条的长度排序；2. 再读每条右侧标注的具体均值与正负区间并对比误差条是否重叠；3. 对照图例确认两种级联、离散单元基线与本方法各对应哪一条；4. 判断本方法与级联的差距和与离散单元基线的差距哪个更大
 
-> **论文图 3（像素未随页面持久化）**：Fig. 3: Subjective speech intelligibility measured via mean opinion score (MOS) by human listeners for the evaluated models; error bars show 95% confidence intervals.
+[![原论文 Fig. 3：Subjective speech intelligibility measured via mean opinion score (MOS) by human listeners for the…](https://arxiv.org/html/2609.04455v1/mos_figure_v2_redone.svg)](https://arxiv.org/html/2609.04455v1/mos_figure_v2_redone.svg)
 
 *论文图 3。原论文 Fig. 3:：“Subjective speech intelligibility measured via mean opinion score (MOS) by human listeners for the evaluated models; error bars show 95% confidence intervals.”。*
 
-从像素可见，4 条横条按图例自上而下为级联五元语法、级联加语言模型、离散单元基线、本方法，右侧标注约为 3.85 正负 0.11、3.90 正负 0.11、1.57 正负 0.08、3.34 正负 0.11。误差条为 90%五置信区间。本方法明显高于离散单元基线，低于两种级联，与客观错率排序一致。主观结果支持而非证明因果，因为听者同时看到参考文本，评分反映的是给定文本下的可懂程度。
+从像素可见，4 条横条按图例自上而下为级联五元语法、级联加语言模型、离散单元基线、本方法，右侧标注约为 3.85 正负 0.11、3.90 正负 0.11、1.57 正负 0.08、3.34 正负 0.11。误差条为 95% 置信区间。本方法明显高于离散单元基线，低于两种级联，与客观错率排序一致。主观结果支持而非证明因果，因为听者同时看到参考文本，评分反映的是给定文本下的可懂程度。
 
 ### 去掉语言结构或引入级联会发生什么？
 

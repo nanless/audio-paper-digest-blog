@@ -115,7 +115,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿左侧多模态输入经 Whisper 到中间提示构造再到右侧冻结主干的箭头走一遍主路径；2. 观察 Whisper 输出框中时间区间文本与语言置信度时间戳三个附属标记的位置；3. 对比中间提示构造中音频转写块与视觉内容块是并列拼接而非融合为新向量；4. 检查右侧主干标注的视觉编码器跨模态注意与解码器均为未改变与权重冻结
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of TFO. (1) The system accepts speech/audio, image, video, and text inputs. (2) Whisper converts audio into transcripts with language, confidence, and timestamp information. (3) The transcript, visual content, and user query are combined into a unified prompt. (4) A frozen VLM processes the prompt while its visual pathway, architecture, and parameters remain unchanged. (5) The model produces a text response, which can optionally be converted to speech using CosyVoice3. This modular pipeline supports multimodal inputs and text or spoken outputs without modifying the VLM.
+[![原论文 Figure 1：Overview of TFO. (1) The system accepts speech/audio, image, video, and text inputs.](https://arxiv.org/html/2609.04242v1/x1.png)](https://arxiv.org/html/2609.04242v1/x1.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of TFO. (1) The system accepts speech/audio, image, video, and text inputs.”。*
 

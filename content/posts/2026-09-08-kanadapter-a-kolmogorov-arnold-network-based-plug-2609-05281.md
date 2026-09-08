@@ -31,7 +31,7 @@ paper_digest_authors: [{"affiliations":["Dept. of Electrical and Computer Engine
 paper_digest_abstract_sha256: "74a12f5658b8f012930f7ff4c770c5e81e9c3cc6aa359b64fad9651d7bb47126"
 paper_digest_sidecars: {"citation.bib":{"sha256":"30722e72d1ff0881c08485d287005b425d4d1fa1efb76ccc16b3c6e460415b72","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-05281/citation.bib"},"citation.json":{"sha256":"7db76f2fddb0ce9976aca4256c84d90ccdb4ac9f4a7302da954153a5dbe5399c","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-05281/citation.json"},"citation.ris":{"sha256":"45e28ce24ffa0b9dd5b41d09b392a47451e32b3ec63facdff8b215b96edb90e5","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-05281/citation.ris"},"rethink-context.json":{"sha256":"fb53a8ab5ad4c11f1c3af9aa22699ee72ce617220b4ac3e56b15ce61ff297c38","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-05281/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "88622aaaf4abd2c45f0b380847343f6de4a14e934e56bdcfdd3bcbeeef430731"
+paper_digest_api_reader_article_sha256: "23e2d9e850e4dcf4819d3a1599f61e19e760b36ffb5c43539bca2a3f1a87ac4c"
 paper_digest_api_reader_plan_sha256: "2291dfb413c899364a6ee75245505745e214e0b29b57cddfd082a04a4d3efa3c"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "8882f2c59afd07959e3745a60ed266f67440cf9440f35eb4582107fb9af42ad4"
@@ -114,12 +114,6 @@ KanAdapter 遵循并行瓶颈设计，保留每个 Transformer 编码器块中�
 **参数高效微调 × GR-KAN：** 参数高效微调的分工是冻结语音基座主干、只训练轻量分支以降低可训练参数；GR-KAN 的分工是用分组共享的有理函数提供可学习的边上激活以提升表达力。二者搭配的理由是仅靠固定 ReLU 的瓶颈在紧参数预算下容量不足，而 GR-KAN 在相同瓶颈维度下提供更灵活的非线性；组合后形成并行瓶颈适配器，在不改动预训练权重的前提下实现更高效的任务适配。
 
 下图展示了标准 Transformer 层与插入 KanAdapter 后的结构对比，以及分支内部的放大视图，可据此核对冻结与可训练模块的划分与残差融合点，图前需先理解并行插入的整体意图，图后需回到分支内部的计算细节。
-
-> **看图路径：** 1. 对比 a) 标准 Transformer 层与 b) 插入 KanAdapter 后的并行结构，确认冻结与可训练模块的颜色区分；2. 沿 c) 放大部分追踪输入经 LayerNorm 与下投影进入 GR-KAN 再经上投影与缩放 s 融合的完整箭头；3. 观察残差加法节点如何将冻结 MLP 输出、适配分支输出与原始输入 3 路汇合
-
-> **论文图 1（像素未随页面持久化）**：Figure 1: The proposed architecture: a) Standard Transformer layer b) AdaptKANFormer architecture c) KanAdapter.
-
-*论文图 1。原论文 Figure 1:：“The proposed architecture: a) Standard Transformer layer b) AdaptKANFormer architecture c) KanAdapter.”。*
 
 从图中可见，蓝色为冻结模块，橙色为可训练模块。左侧 a 为标准层，包含 2 次层归一化与多头注意力、MLP 的 2 级残差；中间 b 将 MLP 旁的 KanAdapter 与层归一化框为虚线并联分支；右侧 c 放大该分支，显示输入经 GR-KAN 与上下投影后经缩放 s 与 MLP 输出汇合。理解该图后即可进入分支内部的组件计算，重点是下投影降维、GR-KAN 有理变换与上投影升维的顺序。
 
@@ -218,7 +212,7 @@ KanAdapter 分支内部采用低秩瓶颈加 GR-KAN 非线性的组合。先将�
 
 > **看图路径：** 1. 确认横轴为瓶颈维度 512 到 64、纵轴为等错误率百分比，区分 LA19、LA21、DF21、LA5 共 4 条曲线；2. 观察所有曲线在 128 处达到最低点、向两侧回升的 U 型趋势；3. 对比 LA5 灰色曲线数值幅度显著高于其他 3 条，验证跨语料难度差异
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Performance with bottleneck dimension \hat{d}.
+[![原论文 Figure 2：Performance with bottleneck dimension d.](https://arxiv.org/html/2609.05281v1/EER.png)](https://arxiv.org/html/2609.05281v1/EER.png)
 
 *论文图 2。原论文 Figure 2:：“Performance with bottleneck dimension d.”。*
 

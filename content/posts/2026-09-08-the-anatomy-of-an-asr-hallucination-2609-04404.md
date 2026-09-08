@@ -195,7 +195,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 对比左右两图同一颜色曲线在 L=15 峰值与末层的落差，确认 CTC 在 L=16 触底后在 L=17 部分回升而 RNN-T 集中在最后一块下降；2. 观察远场与混响两条曲线从中段起持续低于其他条件，核对峰值差距是否与图注的 37-41 与 77-86 一致；3. 沿横轴 L=0-4 的缓坡与 L=4-15 的爬升，确认三段式 ER 曲线在两模型中复现
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Effective rank per encoder layer per WildASR condition (streaming estimate over all frames per split): a ramp (L=0–4), a rise to the L=15 peak, and a terminal drop; spectrally distorted conditions run well below the rest from mid-stack (peak gap 37–41 ER CTC, 77–86 RNN-T). CTC’s drop bottoms at L=16 with partial recovery at L=17; RNN-T’s is concentrated in the final block.
+[![原论文 Figure 2：Effective rank per encoder layer per WildASR condition (streaming estimate over all frames per…](https://arxiv.org/html/2609.04404v1/plot_A_er_per_layer.svg)](https://arxiv.org/html/2609.04404v1/plot_A_er_per_layer.svg)
 
 *论文图 2。原论文 Figure 2:：“Effective rank per encoder layer per WildASR condition (streaming estimate over all frames per split): a ramp (L=0–4), a rise to the L=15 peak, and a terminal drop; spectrally…”。*
 
@@ -205,7 +205,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 在 condition 子图看两模型曲线从 L=1 附近 0.98 同步衰减到末层 0.38/0.42 的交叉过程；2. 在 grapheme 子图追踪 CTC 曲线在 L=15-17 的陡峭跃升，核对 0.81 到 0.92 再到 0.99 的台阶；3. 对比 silence 与 SNR 子图，确认声学可读性早期高而末层低，与字形可读性相反的走向
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Linear probe accuracy per encoder layer, both models, four targets (N=200 utts/condition; frame-level for silence and grapheme). Acoustic properties are readable early and decay (shift type: 0.98 at L=1 to 0.38/0.42 at the final layer; SNR R^{2}: 0.57/0.59 to 0.13/0.08); grapheme readability rises through depth and, for CTC, jumps 0.81\to 0.92\to 0.99 over L=15/16/17. The grapheme target is the CTC model’s own final-layer argmax, so the CTC end-point is partly circular; the informative quantity is the jump across the terminal stage.
+[![原论文 Figure 4：Linear probe accuracy per encoder layer, both models, four targets (N=200 utts/condition;…](https://arxiv.org/html/2609.04404v1/plot_F_probes_per_layer.svg)](https://arxiv.org/html/2609.04404v1/plot_F_probes_per_layer.svg)
 
 *论文图 4。原论文 Figure 4:：“Linear probe accuracy per encoder layer, both models, four targets (N=200 utts/condition; frame-level for silence and grapheme).”。*
 
@@ -215,7 +215,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 在左图 CTC 中区分实线透镜 WER 与虚线 ER，确认 ER 在 L=16 开始下降而透镜 WER 直到 L=17 才跌破 100%；2. 在右图 RNN-T 中观察透镜 WER 在 L=16 前始终贴近 100% 附近，ER 虚线在末层骤降的共位；3. 核对不同颜色条件在中段的分离程度，确认 ER 与透镜不连续性在终端阶段对齐
 
-> **论文图 5（像素未随页面持久化）**：Figure 5: Lens WER (solid) and encoder ER (dotted, twin axis) per WildASR condition, both models. Lens WER first drops below 100% at the final block in both models; the ER drop begins at L=16 for CTC (one layer before head-readability) and at the final block for RNN-T.
+[![原论文 Figure 5：Lens WER (solid) and encoder ER (dotted, twin axis) per WildASR condition, both models.](https://arxiv.org/html/2609.04404v1/plot_I_lens_vs_er.svg)](https://arxiv.org/html/2609.04404v1/plot_I_lens_vs_er.svg)
 
 *论文图 5。原论文 Figure 5:：“Lens WER (solid) and encoder ER (dotted, twin axis) per WildASR condition, both models.”。*
 
@@ -237,7 +237,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 从 L=0 的 0.97-0.98 起点沿层深追踪所有条件的 CKA 单调下降趋势；2. 在 L=16 处对比远场与混响两条绿紫曲线与其他条件的垂直差距，核对 0.69/0.70 与 0.49-0.56 的分组；3. 观察中段 L=6-10 的收敛段，确认重度谱失真条件下两模型分歧更小的模式
 
-> **论文图 8（像素未随页面持久化）**：Figure 8: Linear CKA between matched layers of the two independently trained encoders, per condition (64 paired utterances per condition). Similarity starts near-identical at L=0 (0.97–0.98) and declines with depth for every condition; under heavy spectral distortion the two models diverge least (far-field 0.69, reverberation 0.70 at L=16, vs. 0.49–0.56 for all other conditions; bootstrap CIs in Table 6).
+[![原论文 Figure 8：Linear CKA between matched layers of the two independently trained encoders, per condition (64…](https://arxiv.org/html/2609.04404v1/plot_B_cka_per_layer.svg)](https://arxiv.org/html/2609.04404v1/plot_B_cka_per_layer.svg)
 
 *论文图 8。原论文 Figure 8:：“Linear CKA between matched layers of the two independently trained encoders, per condition (64 paired utterances per condition).”。*
 

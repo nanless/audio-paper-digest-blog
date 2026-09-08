@@ -110,7 +110,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿顶部长波形到粉色与红色短段再到下方原子矩阵的主路径，确认重叠切分与编码的对应关系；2. 对比右侧青色长上下文窗经 CLAP 得到语义向量的支路，确认语义与声学在训练目标处汇合；3. 数清下方记忆缓冲原子与红色目标原子的数量与颜色区分，确认条件与预测的分工
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Data representation and annotations. Source audio (top row waveform) is decomposed into overlapping segments (pink and red waveforms) and encoded with EnCodec into atoms (pink and red matrices). Each atom is annotated with a semantic embedding (cyan vector) computed from a context window (cyan waveform), extended through randomized repetitions to satisfy CLAP’s minimum input length. During training, the model is tasked to predict the target atom (red matrix) from the preceding atoms in the memory buffer and its corresponding semantic embedding.
+[![原论文 Figure 1：Data representation and annotations.](https://arxiv.org/html/2609.04634v1/dataprep_2.png)](https://arxiv.org/html/2609.04634v1/dataprep_2.png)
 
 *论文图 1。原论文 Figure 1:：“Data representation and annotations. Source audio (top row waveform) is decomposed into overlapping segments (pink and red waveforms) and encoded with EnCodec into atoms (pink…”。*
 
@@ -126,7 +126,7 @@ SCAPES 的核心是一个连续归一化流，其时变向量场由 Transformer 
 
 > **看图路径：** 1. 从左侧灰色噪声经黑色向量场到右侧红色目标原子的虚线轨迹，确认积分方向为从噪声到数据；2. 观察顶部记忆缓冲经交叉注意力与右侧语义经自适应归一化分别注入黑色方块的位置；3. 注意黑色背景上箭头场的整体朝向，确认向量场是全局光滑而非分块离散映射
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Inference architecture. The Transformer-based vector field F_{\theta} is conditioned on past atomic memory via cross-attention and semantic context via AdaLN. An ODE solver integrates the field from t=0 to t=1 to generate the target atom.
+[![原论文 Figure 2：Inference architecture. The Transformer-based vector field F_\\theta is conditioned on past atomic…](https://arxiv.org/html/2609.04634v1/architecture_2.png)](https://arxiv.org/html/2609.04634v1/architecture_2.png)
 
 *论文图 2。原论文 Figure 2:：“Inference architecture. The Transformer-based vector field F_\theta is conditioned on past atomic memory via cross-attention and semantic context via AdaLN.”。*
 

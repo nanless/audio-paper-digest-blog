@@ -122,7 +122,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先沿左侧语音 x 与噪声标签到右侧生成语音的黑实线主路径走一遍；2. 再看顶部话语级、中部帧级、底部音素级三条虚线分隔带各自包含哪些模块；3. 对比训练专用灰虚线与推理专用橙实线在伦巴德编码器和时长预测处的切换；4. 确认 VQ-Median 模块如何把帧级内容特征转为音素级特征再经可学习上采样返回帧级
 
-> **论文图 1（像素未随页面持久化）**：Fig. 1: Overview of ProLombard. The model is organized into three temporal scales: utterance level (top), frame level (middle), and phoneme level (bottom). The aligned speaker encoder achieves Lombard-speaker disentanglement and extracts Lombard-invariant speaker embeddings \textbf{g}_{s} at the utterance level. The VQ-median module converts frame-level content features \mathbf{Z}_{c}^{f} into phoneme-level features \mathbf{Z}_{c}^{p}. Phoneme-level De-Lomb block (De-LombP) and frame-level De-Lomb block (De-LombF) remove Lombard-related information from content features, while phoneme-level En-Lomb block (En-LombP) and frame-level En-Lomb block (En-LombF) reintroduce Lombard characteristics conditioned on the style embedding g. This structured design enables effective modeling of the Lombard effect across temporal scales.
+[![原论文 Fig. 1：Overview of ProLombard. The model is organized into three temporal scales: utterance level (top),…](https://arxiv.org/html/2609.04828v1/pictures/overview6.png)](https://arxiv.org/html/2609.04828v1/pictures/overview6.png)
 
 *论文图 1。原论文 Fig. 1:：“Overview of ProLombard. The model is organized into three temporal scales: utterance level (top), frame level (middle), and phoneme level (bottom).”。*
 
@@ -138,7 +138,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 看上支输入语音 x 经冻结说话人验证再经可训练去除模块得到 gs 的顺序；2. 看下支平行正常语音 xN 经同一冻结验证得到参考嵌入的平行结构；3. 确认两路在右侧 L1 损失处汇合形成对齐监督
 
-> **论文图 2（像素未随页面持久化）**：Fig. 2: Aligned Speaker Encoder. Speaker alignment loss and the Lombard remover module align the speaker embedding of input speech x with the parallel normal speech x_{N} (an utterance spoken by the same speaker with identical content but in a normal style) to remove Lombard-related information.
+[![原论文 Fig. 2：Aligned Speaker Encoder. Speaker alignment loss and the Lombard remover module align the speaker…](https://arxiv.org/html/2609.04828v1/pictures/spkencoder2.png)](https://arxiv.org/html/2609.04828v1/pictures/spkencoder2.png)
 
 *论文图 2。原论文 Fig. 2:：“Aligned Speaker Encoder. Speaker alignment loss and the Lombard remover module align the speaker embedding of input speech x with the parallel normal speech x_N (an utterance…”。*
 
@@ -178,7 +178,7 @@ De-Lomb 与 En-Lomb 共用参数预测器结构但梯度路径相反。De-Lomb �
 
 > **看图路径：** 1. 对比上半 De-Lomb 经梯度反转层与下半 En-Lomb 经拼接风格嵌入的结构差异；2. 看左右两侧帧级参数与音素级参数如何分别作为 L1 监督送入两块；3. 沿 En-Lomb 内部从卷积到线性的分支看哪一路加回到内容主干
 
-> **论文图 3（像素未随页面持久化）**：Fig. 3: Structure of the De-Lomb and En-Lomb blocks. The De-Lomb and En-Lomb blocks form a complementary pair for disentanglement and injection. The phoneme-level (De-LombP, En-LombP) and frame-level (De-LombF, En-LombF) blocks share the same architecture, differing only in their input features and training targets.
+[![原论文 Fig. 3：Structure of the De-Lomb and En-Lomb blocks.](https://arxiv.org/html/2609.04828v1/pictures/hier2.png)](https://arxiv.org/html/2609.04828v1/pictures/hier2.png)
 
 *论文图 3。原论文 Fig. 3:：“Structure of the De-Lomb and En-Lomb blocks.”。*
 
@@ -237,7 +237,7 @@ De-Lomb 与 En-Lomb 共用参数预测器结构但梯度路径相反。De-Lomb �
 
 > **看图路径：** 1. 先确认横轴信噪比与纵轴词识别率、信息率的含义及四组柱子图例；2. 再对比左侧中文与右侧英文在平稳噪声和巴伯噪声下的柱高变化；3. 重点看低信噪比下 ProLombard 相对正常语音和骨干模型的抬升位置
 
-> **论文图 4（像素未随页面持久化）**：Fig. 4: Intelligibility evaluation across different SNR levels under stationary (SSN) and dynamic (Babble) noise conditions in two datasets (EMALG and Lombard Grid). ProLombard achieves improved SIIB and WRR in most conditions across both datasets, demonstrating the robustness and effectiveness of the proposed multi-scale modeling approach.
+[![原论文 Fig. 4：Intelligibility evaluation across different SNR levels under stationary (SSN) and dynamic (Babble)…](https://arxiv.org/html/2609.04828v1/pictures/intelligibility3.jpg)](https://arxiv.org/html/2609.04828v1/pictures/intelligibility3.jpg)
 
 *论文图 4。原论文 Fig. 4:：“Intelligibility evaluation across different SNR levels under stationary (SSN) and dynamic (Babble) noise conditions in two datasets (EMALG and Lombard Grid).”。*
 

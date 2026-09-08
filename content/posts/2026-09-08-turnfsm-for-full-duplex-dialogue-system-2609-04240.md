@@ -123,7 +123,7 @@ TurnFSM 由流式音频编码器、音频适配器与大模型主干组成。编
 
 > **看图路径：** 1. 先沿底部波形经音频编码器与适配器到绿色音频词元的主路径看输入方向；2. 再看右侧虚线框内 A0 至 At 与橙色 St-1 如何拼成紧凑序列进入大模型；3. 最后看顶部输出 St 与左侧系统提示历史文本嵌入的汇合方式
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: The model architecture of TurnFSM, where A denotes audio tokens and S denotes state tokens. At time step t, the model takes the audio tokens A_{0}, A_{1}, …, A_{t} and the predicted state token from the previous time step, S_{t-1}, as input to predict the current state token S_{t}.
+[![原论文 Figure 1：The model architecture of TurnFSM, where A denotes audio tokens and S denotes state tokens.](https://arxiv.org/html/2609.04240v1/x1.png)](https://arxiv.org/html/2609.04240v1/x1.png)
 
 *论文图 1。原论文 Figure 1:：“The model architecture of TurnFSM, where A denotes audio tokens and S denotes state tokens.”。*
 
@@ -137,7 +137,7 @@ TurnFSM 维护离散控制状态，状态集合包括起始、静音、监听、
 
 > **看图路径：** 1. 先按 START 经 begin 到 SILENCE 再到 LISTEN 的主链确认正常监听路径；2. 再对比 LISTEN 自环与转向 SUBMIT 的两条标注看完整性判决条件；3. 最后看 SUBMIT 分叉到 ACCEPT 与 REJECT 的有效性判决条件
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: The state transition logic of TurnFSM.
+[![原论文 Figure 2：The state transition logic of TurnFSM.](https://arxiv.org/html/2609.04240v1/x2.png)](https://arxiv.org/html/2609.04240v1/x2.png)
 
 *论文图 2。原论文 Figure 2:：“The state transition logic of TurnFSM.”。*
 
@@ -169,7 +169,7 @@ TurnFSM 则把轮次控制写成有限状态转移，当前状态只依赖声学
 
 > **看图路径：** 1. 先看左图查询行 S0 至 S2 所在绿色未遮挡格只对应声学前缀与前一状态；2. 再看底部输入行位置编号如何把状态词元与后一音频词元系到同一位置；3. 最后对比右图紧凑序列的标准下三角掩码与单步预测 S3 的输入构成
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Illustration of the proposed masking and position-tying strategy, where S^{\prime} denotes the pseudo-initial state <|Start|> and PE denotes positional encoding. (a) During training, a modified causal mask over the interleaved audio-state sequence restricts each S_{t} to attend only to A_{\leq t} and S_{t-1}. State tokens are position-tied to the following audio tokens, i.e., \pi(S_{t-1})=\pi(A_{t+1}), to preserve the original acoustic temporal order. (b) During inference, TurnFSM predicts S_{t} from the compact sequence (A_{0},\ldots,A_{t},S_{t-1}) using the standard lower-triangular causal mask and the original LLM positional encoding.
+[![原论文 Figure 3：Illustration of the proposed masking and position-tying strategy, where S^\\prime denotes the…](https://arxiv.org/html/2609.04240v1/x3.png)](https://arxiv.org/html/2609.04240v1/x3.png)
 
 *论文图 3。原论文 Figure 3:：“Illustration of the proposed masking and position-tying strategy, where S^\prime denotes the pseudo-initial state <|Start|> and PE denotes positional encoding.”。*
 

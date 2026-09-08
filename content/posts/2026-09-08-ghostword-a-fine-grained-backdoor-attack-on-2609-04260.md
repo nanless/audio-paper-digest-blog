@@ -111,7 +111,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先从左侧干净数据框沿中间投毒箭头看到右侧投毒数据框，确认只有个别词被替换；2. 再看中间码本集合中不同颜色触发波形与目标词的对应关系；3. 最后对比右侧推理时干净输入与投毒输入的两条路径输出有何不同
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of the GhostWord backdoor attack pipeline, illustrating data poisoning at training time and targeted trigger activation at inference. Poisoned inputs, constructed via a codebook-based substitution strategy, cause the ASR model to output adversarial predictions (e.g., “denied” instead of “accepted”), while clean inputs remain unaffected.
+[![原论文 Figure 1：Overview of the GhostWord backdoor attack pipeline, illustrating data poisoning at training time…](https://arxiv.org/html/2609.04260v1/main_figure.png)](https://arxiv.org/html/2609.04260v1/main_figure.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of the GhostWord backdoor attack pipeline, illustrating data poisoning at training time and targeted trigger activation at inference.”。*
 
@@ -180,7 +180,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认上排为遗忘前下排为遗忘后，左列为低类别右列为高类别；2. 再比较低类别下概率质量是否分散到多个类别，高类别下是否集中到个别近邻；3. 最后结合纵轴概率高度判断集中式重分配为何更易损伤干净精度
 
-> **论文图 4（像素未随页面持久化）**：Figure 5: Illustration of class-probability distributions before and after redistribution in low-class and high-class regimes.
+[![原论文 Figure 5：Illustration of class-probability distributions before and after redistribution in low-class and…](https://arxiv.org/html/2609.04260v1/theory_figure.svg)](https://arxiv.org/html/2609.04260v1/theory_figure.svg)
 
 *论文图 4。原论文 Figure 5:：“Illustration of class-probability distributions before and after redistribution in low-class and high-class regimes.”。*
 
@@ -190,7 +190,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看上半部分攻击成功率在三种攻击下随防御如何变化；2. 再看下半部分干净词错误率在同一防御下是否同步抬升；3. 最后找出短语级攻击存在绿色成功防御而 GhostWord 只剩高代价部分缓解的位置
 
-> **论文图 5（像素未随页面持久化）**：Figure 6: Comparison of backdoor attack methods (BadNet, Blended, and GhostWord) under several defense strategies. The figure shows that BadNet and Blended each have at least one effective defense (highlighted in shadow green), whereas GhostWord is resilient to all evaluated defenses. Even when a defense partially mitigates the attack success rate (ASRattack) (e.g., under SAU and I-BAU), the clean word error rate (WER) increases substantially, making these defenses impractical.
+[![原论文 Figure 6：Comparison of backdoor attack methods (BadNet, Blended, and GhostWord) under several defense…](https://arxiv.org/html/2609.04260v1/compare_plot_motivation.svg)](https://arxiv.org/html/2609.04260v1/compare_plot_motivation.svg)
 
 *论文图 5。原论文 Figure 6:：“Comparison of backdoor attack methods (BadNet, Blended, and GhostWord) under several defense strategies.”。*
 

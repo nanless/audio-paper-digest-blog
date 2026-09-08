@@ -93,7 +93,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看图 a 左侧音频目标、右侧视频目标、中间音视频耦合三类提示对应的待评问题；2. 再看图 b 中分离、时序、联合三类架构的音频与视频分支连接方式差异；3. 对照图 a 的四个评测维度与图 b 的架构，思考哪类架构更易泄露到非目标模态
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of AVENUE. (a) AVENUE evaluates this capability through a modality-aware and sample-specific framework with four metrics. (b) Existing AV editing models—joint, sequential, and separated—struggle to infer modality-selective edit-scope from the prompt alone.
+[![原论文 Figure 1：Overview of AVENUE. (a) AVENUE evaluates this capability through a modality-aware and…](https://arxiv.org/html/2609.04253v1/teaser.png)](https://arxiv.org/html/2609.04253v1/teaser.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of AVENUE. (a) AVENUE evaluates this capability through a modality-aware and sample-specific framework with four metrics.”。*
 
@@ -129,7 +129,7 @@ AVENUE 由两部分组成：基准与评测框架。基准基于 VGGSound 测试
 
 > **看图路径：** 1. 沿图 a 从输入视频到类别感知模板再到 Gemini-3-flash 与人工校验的流程；2. 查看图 b 中 A1 音频添加示例的源描述、目标提示、what_changed 与 what_preserved 字段；3. 对照图 c 中 QWEN3-Omni 对编辑准确率、模态选择性、感知质量、音视频一致性的输入与打分形式
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: AVENUE Bench. The pipeline consists of three components: (a) category-aware instruction generation using Gemini-3-flash with human verification, producing structured edit prompts across 12 taxonomy categories spanning audio-targeted, video-targeted, and AV-coupled edits; (b) instruction examples with explicit target prompt; and (c) MLLM-as-a-Judge evaluation via QWEN3-Omni, assessing four dimensions—Edit Accuracy, Modality Selectivity, Perceptual Quality, and AV Consistency.
+[![原论文 Figure 2：AVENUE Bench. The pipeline consists of three components: (a) category-aware instruction…](https://arxiv.org/html/2609.04253v1/flow_modified.png)](https://arxiv.org/html/2609.04253v1/flow_modified.png)
 
 *论文图 2。原论文 Figure 2:：“AVENUE Bench. The pipeline consists of three components: (a) category-aware instruction generation using Gemini-3-flash with human verification, producing structured edit prompts…”。*
 
@@ -185,7 +185,7 @@ AvED 因其 2 乘 2 图像网格的时序打乱固定为 4 帧每秒，RAVE 则�
 
 > **看图路径：** 1. 按 1 到 4 编号顺序查看从 VGGSound 分类到两阶段过滤再到类别感知模板与指令生成的完整管线；2. 注意阶段 2 中 ImageBind 与 CLAP 阈值以及语义一致性、ROI 一致性、人数密度、非静态四项可编辑性过滤；3. 观察底部人工校验如何同时回指过滤阶段与指令生成阶段形成闭环
 
-> **论文图 5（像素未随页面持久化）**：Figure A2: Overview of AVENUE Data Curation (1) VGGSound clips are categorized into 8 semantic categories. (2) A two-stage filtering pipeline retains high-quality, edit-suitable clips based on audio-visual alignment and edit compatibility criteria (semantic consistency, ROI consistency, person density, non-static). (3) Human annotators verify the retained clips and confirm which edit types are applicable per clip, producing a curated set with category-aware edit type assignments. (4) Valid clips are paired with structured instruction templates to generate per-sample annotations including target prompt, edit sub-type, what changed and what preserved, which are again verified by human annotators.
+[![原论文 Figure A2：Figure A2: Overview of AVENUE Data Curation (1) VGGSound clips are categorized into 8 semantic…](https://arxiv.org/html/2609.04253v1/figures/main/pipeline.png)](https://arxiv.org/html/2609.04253v1/figures/main/pipeline.png)
 
 *论文图 5。原论文 Figure A2:：“Figure A2: Overview of AVENUE Data Curation (1) VGGSound clips are categorized into 8 semantic categories.”。*
 
@@ -221,7 +221,7 @@ AvED 因其 2 乘 2 图像网格的时序打乱固定为 4 帧每秒，RAVE 则�
 
 > **看图路径：** 1. 先看图 a 中五类耦合编辑上联合、时序、分离三条线的编辑准确率走势；2. 再看图 b 总量柱状图中三范式在编辑准确率、感知质量、音视频一致性上的分化；3. 聚焦右侧 C1 场景变化与 C3 发声对象替换两个子类的对比，记录联合在 C3 上反超的点
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Evaluation of AV-coupled editing under Cat.C. All scores are reported out of 100, where higher is better. (a) Edit Accuracy (EA) across five sub-categories of Category C. (b) Comparison of joint, sequential, and separate editing paradigms across EA, Perceptual Quality (PQ), and AV Consistency (AV-C). We report results on the full Category C benchmark as well as two representative cases: Scene Change (C1) and Sounding Object Replacement (C3).
+[![原论文 Figure 3：Evaluation of AV-coupled editing under Cat.C.](https://arxiv.org/html/2609.04253v1/overall_C.png)](https://arxiv.org/html/2609.04253v1/overall_C.png)
 
 *论文图 3。原论文 Figure 3:：“Evaluation of AV-coupled editing under Cat.C.”。*
 

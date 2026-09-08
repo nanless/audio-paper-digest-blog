@@ -116,7 +116,7 @@ SVSC 在 MDCTCodec 框架内扩展出 3 个分支。底部是语音编码分支�
 
 > **看图路径：** 1. 沿底部语音编码分支从原始语音经 MDCT 谱到解码语音走一遍主路径；2. 看顶部图像分支与中部语义分支的输出箭头在哪里汇入特征融合模块；3. 确认特征融合模块与语音编码器之间有双向的语音特征上送与多模态特征下送；4. 对照左右两侧重建输出，区分主任务重建与辅助分支重建
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: An overview of the proposed SVSC.
+[![原论文 Figure 1：An overview of the proposed SVSC.](https://arxiv.org/html/2609.05076v1/Fig1-1.png)](https://arxiv.org/html/2609.05076v1/Fig1-1.png)
 
 *论文图 1。原论文 Figure 1:：“An overview of the proposed SVSC.”。*
 
@@ -152,7 +152,7 @@ SVSC 在 MDCTCodec 框架内扩展出 3 个分支。底部是语音编码分支�
 
 > **看图路径：** 1. 对比左右两图特征融合模块的颜色深浅，确认蒸馏模式训练后可删掉的灰色模块；2. 看左侧融合模式中双模态特征与中间谱特征经拼接与线性层后落回语音编码器的位置；3. 看右侧蒸馏模式中红色虚线蒸馏损失连接的起点与终点分别是什么特征
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Overview of the two feature-injection modes in SVSC. Gray modules are used only during training and are removed during inference.
+[![原论文 Figure 2：Overview of the two feature-injection modes in SVSC.](https://arxiv.org/html/2609.05076v1/Fig2-1.png)](https://arxiv.org/html/2609.05076v1/Fig2-1.png)
 
 *论文图 2。原论文 Figure 2:：“Overview of the two feature-injection modes in SVSC. Gray modules are used only during training and are removed during inference.”。*
 

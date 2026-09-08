@@ -92,7 +92,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 对比左侧三人声场中紫色弧线与右侧单人虚线框的输入差异；2. 观察 SoundMHPE 分支中 Encoder 到 Decoder 的实线箭头与多人体素输出；3. 注意发射信号波形与接收信号多通道波形的标注位置
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: We propose SoundMHPE, a sound-based multi-person 3D pose estimation method. Our system adopts an active acoustic sensing approach, where a speaker emits a transmitted signal and the received signal is used for the model input. While existing acoustic pose estimation models are limited to single-person estimation, SoundMHPE enables simultaneous estimation of multiple individuals.
+[![原论文 Figure 1：We propose SoundMHPE, a sound-based multi-person 3D pose estimation method.](https://arxiv.org/html/2609.04902v1/teaser_0701_1.png)](https://arxiv.org/html/2609.04902v1/teaser_0701_1.png)
 
 *论文图 1。原论文 Figure 1:：“We propose SoundMHPE, a sound-based multi-person 3D pose estimation method.”。*
 
@@ -132,7 +132,7 @@ SoundMHPE 是编码器-解码器结构。编码器侧称为 Acoustic Multi-scale
 
 > **看图路径：** 1. 从左侧 Acoustic Signals 经 Multi-Scale STFT 到三组谱的高低时频标注；2. 跟踪中间 AME Blocks 的双自注意力到上方 Acoustic Feature Map 的绿色序列；3. 查看右侧 TPD 中 M×(Nout+1) 可学习查询矩阵与 Cross-Attention 到姿态序列的展开
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Proposed framework for sound-based multi-person pose estimation. (Top left) SoundMHPE first employs an Acoustic Multi-scale Encoder to generate spectrograms with diverse time–frequency characteristics and obtain an acoustic feature map. (Top right) Subsequently, in the Temporal Pose Decoder, we assign each individual a set of learnable pose queries. (Bottom) These encoder and decoder modules leverage customized self-attention to jointly model spatio-temporal dynamics, multi-resolution features, and inter/intra-person pose relationships.
+[![原论文 Figure 2：Proposed framework for sound-based multi-person pose estimation.](https://arxiv.org/html/2609.04902v1/proposed-method_0630_1.png)](https://arxiv.org/html/2609.04902v1/proposed-method_0630_1.png)
 
 *论文图 2。原论文 Figure 2:：“Proposed framework for sound-based multi-person pose estimation.”。*
 
@@ -178,7 +178,7 @@ SoundMHPE 是编码器-解码器结构。编码器侧称为 Acoustic Multi-scale
 
 > **看图路径：** 1. 对比图(a) 单查询对应 Nout 帧灰块与图(b) 多查询对角红框的交叉注意力模式；2. 确认横轴为声学特征时间 t=1…Nout，纵轴为查询时间；3. 观察多查询如何让每帧查询聚焦对应时间步的特征
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Cross-attention between queries and acoustic feature maps in TPD. (a) Single Query for Multi-frame poses: The pose information from multiple frames is aggregated into a single query. (b) Multiple Queries for Multi-frame poses: Multiple queries enable the model to focus on the acoustic features of different frames for poses in each frame.
+[![原论文 Figure 4：Cross-attention between queries and acoustic feature maps in TPD.](https://arxiv.org/html/2609.04902v1/cross-attention_0228_1.png)](https://arxiv.org/html/2609.04902v1/cross-attention_0228_1.png)
 
 *论文图 4。原论文 Figure 4:：“Cross-attention between queries and acoustic feature maps in TPD.”。*
 
@@ -222,7 +222,7 @@ TSA 的梯度仅在同分辨率时序内传播，FSA 在跨尺度间传播，MSA
 
 > **看图路径：** 1. 查看图(a) 房间中扬声器、麦克风与动捕相机的位置关系；2. 对照图(b) 俯视图中 1m 与 3.8m 等距离标注；3. 核对图(c) 中三组各 72/24/24 分钟的数据分布与身高直方图
 
-> **论文图 6（像素未随页面持久化）**：Figure 6: Experimental setup. (a,b) Our measurement environment consists of a set of speakers and a microphone for active acoustic sensing, along with motion capture cameras to obtain ground-truth poses. (c) Our AMP dataset consists of 12 male and 3 female participants, with heights ranging from 150 cm to 181 cm. The participants were divided into three groups. For each group, we collected 72 minutes of single-person data, 24 minutes of double-person data, and 24 minutes of triple-person data.
+[![原论文 Figure 6：Experimental setup. (a,b) Our measurement environment consists of a set of speakers and a…](https://arxiv.org/html/2609.04902v1/setup_0305_2.png)](https://arxiv.org/html/2609.04902v1/setup_0305_2.png)
 
 *论文图 6。原论文 Figure 6:：“Experimental setup. (a,b) Our measurement environment consists of a set of speakers and a microphone for active acoustic sensing, along with motion capture cameras to obtain…”。*
 

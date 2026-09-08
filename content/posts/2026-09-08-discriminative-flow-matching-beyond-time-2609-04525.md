@@ -201,7 +201,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看底部图例从 -30 dB 到 40 dB 的颜色顺序，再看左右两幅子图是否保持同一顺序；2. 观察左侧蓝色与橙色重度退化点是否抱团在左侧，右侧青色与黄色轻度退化点是否抱团在右侧；3. 比较雨噪声与机械噪声两幅子图的分块趋势是否一致，以判断组织规律是否依赖噪声类型
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: t-SNE visualization of DCCRN latent representations under (a) rain and (b) machinery noise.
+[![原论文 Figure 2：t-SNE visualization of DCCRN latent representations under (a) rain and (b) machinery noise.](https://arxiv.org/html/2609.04525v1/Figures/tsne_noise_comparison.png)](https://arxiv.org/html/2609.04525v1/Figures/tsne_noise_comparison.png)
 
 *论文图 2。原论文 Figure 2:：“t-SNE visualization of DCCRN latent representations under (a) rain and (b) machinery noise.”。*
 
@@ -211,7 +211,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 确认横轴为 NFE 从 1 到 5，纵轴为切片 Wasserstein 距离 SW2；2. 比较蓝色信号空间曲线与橙色虚线潜在空间曲线是否都随步数单调下降；3. 观察信号空间曲线前两步下降更快，而潜在空间曲线下降更平缓的差异
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Evolution of signal-space and latent-space Flow-States over NFE.
+[![原论文 Figure 4：Evolution of signal-space and latent-space Flow-States over NFE.](https://arxiv.org/html/2609.04525v1/Figures/dfm_flow_state_aaai.png)](https://arxiv.org/html/2609.04525v1/Figures/dfm_flow_state_aaai.png)
 
 *论文图 4。原论文 Figure 4:：“Evolution of signal-space and latent-space Flow-States over NFE.”。*
 
@@ -232,7 +232,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 左图看 SI-SDR 随 NFE 的变化，右图看 PESQ 随 NFE 的变化，不要把两图纵轴混为同一指标；2. 找到菱形标记的三个自适应点，核对其横轴平均 NFE 位置与纵轴性能位置；3. 比较蓝色 DFM 折线与红色 CFM 折线的相对高低，确认自适应点是否落在 DFM 折线附近或之上
 
-> **论文图 5（像素未随页面持久化）**：Figure 5: Performance for DFM with adaptive inference.
+[![原论文 Figure 5：Performance for DFM with adaptive inference.](https://arxiv.org/html/2609.04525v1/Figures/aaai_efficiency_gap_plot.png)](https://arxiv.org/html/2609.04525v1/Figures/aaai_efficiency_gap_plot.png)
 
 *论文图 5。原论文 Figure 5:：“Performance for DFM with adaptive inference.”。*
 
@@ -240,7 +240,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 确认横轴为 GMACs 且为对数刻度，纵轴为 SI-SDR，绿色为本文方法，红色为基线；2. 找到 DFM 与 DFM 自适应两个绿点在横轴 10 附近的位置，再看 BBED 与 SGMSE+ 在横轴 100 附近的位置；3. 观察 SEBridge 在最左侧低算量低性能处，作为低计算但性能不足的对照
 
-> **论文图 6（像素未随页面持久化）**：Figure 6: Complexity-performance trade-off (baselines shown in red, proposed methods in green)
+[![原论文 Figure 6：Complexity-performance trade-off (baselines shown in red, proposed methods in green)](https://arxiv.org/html/2609.04525v1/Figures/diffusion_macs_sisdr_tradeoff.png)](https://arxiv.org/html/2609.04525v1/Figures/diffusion_macs_sisdr_tradeoff.png)
 
 *论文图 6。原论文 Figure 6:：“Complexity-performance trade-off (baselines shown in red, proposed methods in green)”。*
 

@@ -116,7 +116,7 @@ VocalCoachBench 的输入到输出路径可沿一个样本走通。输入是一�
 
 > **看图路径：** 1. 沿左侧 18 位专家到同曲与异曲两条分支，确认每条分支各自产出哪些标注产物；2. 对比右侧同曲任务与异曲任务在结构化与开放式两栏中的任务划分；3. 追踪中间 Claim Extraction 箭头如何把整体指导连向两类评估
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of VocalCoachBench. Expert vocal trainers annotate two complementary subsets: a same-song subset for controlled comparison, and a diverse-song subset for diverse coaching scenarios and segment-grounded feedback. Both subsets include overall coaching reviews and ranked Top-3 issue labels. Expert feedback is post-processed into atomic coaching claims, which support structured and open-ended evaluation.
+[![原论文 Figure 1：Overview of VocalCoachBench.](https://arxiv.org/html/2609.04241v1/x1.png)](https://arxiv.org/html/2609.04241v1/x1.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of VocalCoachBench. Expert vocal trainers annotate two complementary subsets: a same-song subset for controlled comparison, and a diverse-song subset for diverse…”。*
 
@@ -140,7 +140,7 @@ Top-3 预测要求模型按严重程度输出 3 个类别，与每位专家的 T
 
 > **看图路径：** 1. 在(a) 中对比同曲与异曲在发声与气息等七类上的占比差异与右侧 pp 位移；2. 在(b) 中观察词数与主张数分布的峰位如何因异曲含片段反馈而变密；3. 在(c) 中核对 Fine F1@3 与 Parent F1 以及三元组排序三项一致性指标的数值
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Annotation statistics and agreement in VocalCoachBench. (a) Top-3 issue distributions across subsets, with percentage-point shifts shown on the right. (b) Feedback richness in words and atomic claims per annotator-audio submission. (c) Expert agreement on structured targets, including parent-level Top-3 agreement, fine-label agreement, and same-song triplet rankings.
+[![原论文 Figure 2：Annotation statistics and agreement in VocalCoachBench.](https://arxiv.org/html/2609.04241v1/x2.png)](https://arxiv.org/html/2609.04241v1/x2.png)
 
 *论文图 2。原论文 Figure 2:：“Annotation statistics and agreement in VocalCoachBench.”。*
 

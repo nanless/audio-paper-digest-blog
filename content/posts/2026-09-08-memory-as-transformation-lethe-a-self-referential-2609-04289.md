@@ -175,7 +175,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看横轴五种输入信号与纵轴 Δc22 的定义，确认比较的是固定 GAN 与固定消融；2. 再对比每组深色柱高度与黑色误差线长度，注意只有 WN 柱顶标星号；3. 最后读左上合并框内 15 组汇总均值与 t 检验和 Wilcoxon 检验数值
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: \Delta c_{22}: Fixed GAN vs. Fixed Ablation for all signals (n=3, error bars =\pm 1 std. dev.). The marker * indicates p<0.05 in the one-sample t-test (df=2). Ablation at zero for all signals: the Fixed Ablation bars are not visually distinguishable from the axis because their height is exactly zero by construction (\eta_{G}=0), not because data is missing. The inset reports the aggregate statistics (n=15).
+[![原论文 Figure 2：Δ c_22: Fixed GAN vs. Fixed Ablation for all signals (n=3, error bars =± 1 std.](https://arxiv.org/html/2609.04289v1/img/S1_delta_c22-gray.png)](https://arxiv.org/html/2609.04289v1/img/S1_delta_c22-gray.png)
 
 *论文图 2。原论文 Figure 2:：“Δ c_22: Fixed GAN vs. Fixed Ablation for all signals (n=3, error bars =± 1 std.”。*
 
@@ -189,7 +189,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先按图例区分粗线 c22、较粗线 c33 与细线三次重复，确认时间横轴为 0 到 180 秒；2. 再比较左中右三面板中两条均值线的分叉与缠绕程度；3. 最后查看每面板右下角 Δc22 标注，确认消融面板为零变化
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Evolution of c_{22} and c_{33} (distinguished by line shade, see in-figure legend) for the WN signal in the three conditions. The anti-correlation is present in both GAN conditions; the ablation condition remains flat at 0.600 for the entire session.
+[![原论文 Figure 3：Evolution of c_22 and c_33 (distinguished by line shade, see in-figure legend) for the WN signal…](https://arxiv.org/html/2609.04289v1/img/cmp_WN_c22_c33-gray.png)](https://arxiv.org/html/2609.04289v1/img/cmp_WN_c22_c33-gray.png)
 
 *论文图 3。原论文 Figure 3:：“Evolution of c_22 and c_33 (distinguished by line shade, see in-figure legend) for the WN signal in the three conditions.”。*
 

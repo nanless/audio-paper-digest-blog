@@ -161,7 +161,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 对比左侧中性与右侧情绪前缀两组柱状的文本与音频高度差；2. 查看柱顶数值与误差线是否重叠以及标注的 p 值星号；3. 确认纵轴为准确率且音频柱始终低于同组文本柱
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: MedQA accuracy by modality (text vs. audio) and emotional-context prefix (neutral vs. “scared”), n{=}500 paired prompts. Stats in text.
+[![原论文 Figure 1：MedQA accuracy by modality (text vs. audio) and emotional-context prefix (neutral vs.](https://arxiv.org/html/2609.04256v1/fig_audio_vs_text.png)](https://arxiv.org/html/2609.04256v1/fig_audio_vs_text.png)
 
 *论文图 1。原论文 Figure 1:：“MedQA accuracy by modality (text vs. audio) and emotional-context prefix (neutral vs. “scared”), n=500 paired prompts. Stats in text.”。*
 
@@ -181,7 +181,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿 T1 到 T7 观察温暖曲线的平缓上升与拟社会、角色两条曲线在 T7 的陡峭跃升；2. 比较蓝色实线音频与橙色虚线文本在 T5 至 T7 的分离程度；3. 注意底色分区的基线、转折、诱发三段与误差线大小
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Per-turn means of judge scores on the model’s reply, by modality. User turns are scripted and identical across conditions. Shading marks the baseline (T1–T3), pivot (T4–T6), and elicitation (T7) phases. Warmth rises gradually across all phases; parasocial commitment and role claim stay near zero through baseline, lift modestly at T6, and rise at T7, indicating that the relational ask, not cumulative warming, accounts for the increase. Error bars are \pm 1 SEM, n{=}38 scripts.
+[![原论文 Figure 2：Per-turn means of judge scores on the model’s reply, by modality.](https://arxiv.org/html/2609.04256v1/fig1_turn_trajectories.png)](https://arxiv.org/html/2609.04256v1/fig1_turn_trajectories.png)
 
 *论文图 2。原论文 Figure 2:：“Per-turn means of judge scores on the model’s reply, by modality.”。*
 

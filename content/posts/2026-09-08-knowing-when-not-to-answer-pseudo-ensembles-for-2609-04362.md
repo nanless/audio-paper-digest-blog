@@ -203,7 +203,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看横轴集成规模从 1 到 24 与纵轴准确率百分比的范围，确认起点与整体爬升幅度；2. 再对比蓝色柱表示的均值与红色折线走势，观察前几个成员带来的跳变与后续缓慢爬升；3. 最后看每个柱顶黑色误差线的长度，判断随机抽取不同排序组合时波动大约在一个百分点量级
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Option-shuffling accuracy versus ensemble size. For each M<24, five ensembles are drawn from the 24 permutations; at M=24 there is a single complete ensemble.
+[![原论文 Figure 4：Option-shuffling accuracy versus ensemble size.](https://arxiv.org/html/2609.04362v1/tinymu_ensemble_size_accuracy.png)](https://arxiv.org/html/2609.04362v1/tinymu_ensemble_size_accuracy.png)
 
 *论文图 4。原论文 Figure 4:：“Option-shuffling accuracy versus ensemble size. For each M<24, five ensembles are drawn from the 24 permutations; at M=24 there is a single complete ensemble.”。*
 

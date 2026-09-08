@@ -111,7 +111,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿左上噪声语音到确定性增强再到插值与分词器的主路径，确认证据从何而来；2. 看右上连续特征与离散证据在自回归生成器之前如何汇合为条件输入；3. 看下方输出侧接地的四个子块如何从兼容度到强度再到锚点最后到局部精修串联；4. 对照图例中冻结与可训练、连续特征与离散码的颜色，区分哪些模块在解码时不更新
 
-> **论文图 1（像素未随页面持久化）**：Fig. 1: Overview of the proposed evidence-grounded generative SE framework. A Whisper-guided deterministic enhancer constructs an observation-coupled waveform estimate, which is blended with the noisy observation and tokenized into FSQ evidence. The evidence and continuous Whisper representations condition the autoregressive generator. During decoding, fixed CSG or SNR-CSG penalizes unsupported code-space departures; SNR-CSG selects one utterance-level grounding strength from calibrated residual SNR and applies it globally throughout decoding. The generated token sequence is converted to waveform speech by the common synthesis backend.
+[![原论文 Fig. 1：Overview of the proposed evidence-grounded generative SE framework.](https://arxiv.org/html/2609.04245v1/pics/TASLP-SE-LLM.png)](https://arxiv.org/html/2609.04245v1/pics/TASLP-SE-LLM.png)
 
 *论文图 1。原论文 Fig. 1:：“Overview of the proposed evidence-grounded generative SE framework.”。*
 
@@ -177,7 +177,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿横轴信噪比从难到易，看平均接地强度曲线的下降趋势；2. 对照柱状的被修改位置比例，确认预算是否主要花在困难条件；3. 注意 15 分贝处是否趋近零，据此判断干净时是否退化为无接地
 
-> **论文图 5（像素未随页面持久化）**：Fig. 5: Adaptive grounding behavior across acoustic conditions. As SNR increases, both the mean grounding strength and the fraction of modified positions decrease, showing that SNR-CSG automatically relaxes grounding under cleaner conditions.
+[![原论文 Fig. 5：Adaptive grounding behavior across acoustic conditions.](https://arxiv.org/html/2609.04245v1/adaptive_grounding_v2.svg)](https://arxiv.org/html/2609.04245v1/adaptive_grounding_v2.svg)
 
 *论文图 5。原论文 Fig. 5:：“Adaptive grounding behavior across acoustic conditions.”。*
 
@@ -187,7 +187,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 在左图沿横轴感知质量与纵轴词错率看固定强度点形成的折中轨迹；2. 在右图看银行子集上的严重内容偏离如何随接地增强而变化；3. 找到自适应 operating point 相对固定点的位置，判断其是否为折中而非两端最优
 
-> **论文图 4（像素未随页面持久化）**：Fig. 4: Reliability–naturalness trade-off on the test set. G5 (Blend) and B5 (Free) are ungrounded references, UD is the protocol-matched no-grounding anchor, and the fixed-CSG points trace increasing grounding strength. SNR-CSG is shown as the automatic utterance-adaptive operating point. Lower WER and bank WER (the WER computed on the bank subset used to evaluate severe content deviations) and higher UTMOS are better.
+[![原论文 Fig. 4：Reliability–naturalness trade-off on the test set.](https://arxiv.org/html/2609.04245v1/grounding_pareto_capped_col.svg)](https://arxiv.org/html/2609.04245v1/grounding_pareto_capped_col.svg)
 
 *论文图 4。原论文 Fig. 4:：“Reliability–naturalness trade-off on the test set.”。*
 
@@ -223,7 +223,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 在上面板比较三类汉明距离分布的峰位与拖尾，确认证据失真是否更集中在小半径；2. 读下面板四种粒度下的柱高，确认原生细粒度分解是否保留更多几何信息；3. 注意上面板标注的均值与中位数顺序，不要把随机替换的远距离当作生成偏离
 
-> **论文图 3（像素未随页面持久化）**：Fig. 3: FSQ code-space analysis. (a) Frame-level Hamming-distance distributions for deterministic evidence distortion, generative deviation, and random token pairs. (b) AUC for separating deterministic distortion from generative deviation under the native 3^{8} factorization, progressively coarser groupings, and a flat token-identity relation. All statistics are computed from archived frame-level token sequences.
+[![原论文 Fig. 3：FSQ code-space analysis. (a) Frame-level Hamming-distance distributions for deterministic evidence…](https://arxiv.org/html/2609.04245v1/fig3_fsq_geometry_col.svg)](https://arxiv.org/html/2609.04245v1/fig3_fsq_geometry_col.svg)
 
 *论文图 3。原论文 Fig. 3:：“FSQ code-space analysis. (a) Frame-level Hamming-distance distributions for deterministic evidence distortion, generative deviation, and random token pairs.”。*
 

@@ -117,7 +117,7 @@ PRISM-Bench 由两部分紧耦合组成：面向诊断的数据集与可见性�
 
 > **看图路径：** 1. 从左侧 Video-Audio Segments 与 Pure Audio 两路输入出发，追踪到 Gemini 2.5 Pro 与 Qwen3-Omni 的并行标注；2. 观察 GPT-5-chat Fusion 如何把多源字幕融合成带 On-screen/Off-screen 标签的统一描述；3. 确认 Human Correction 作为最后一步对同步、文本内容与标签的校验位置
 
-> **论文图 3（像素未随页面持久化）**：Figure 3. Data construction and annotation pipeline.
+[![原论文 Figure 3.：Data construction and annotation pipeline.](https://arxiv.org/html/2609.04867v1/Data-pipeline.png)](https://arxiv.org/html/2609.04867v1/Data-pipeline.png)
 
 *论文图 3。原论文 Figure 3.：“Data construction and annotation pipeline.”。*
 
@@ -135,7 +135,7 @@ PRISM-Bench 由两部分紧耦合组成：面向诊断的数据集与可见性�
 
 > **看图路径：** 1. 左侧 Activated Tags 中 Speech/Music 与 On-screen 被激活而 Sound/Off-screen 被忽略的开关状态；2. 右侧 Stage 1 与 Stage 2 在是否接入 Caption 上的输入差异及对应的评估维度分组；3. 两阶段各自对 Candidate 1 与 Candidate 2 独立输出分数的并列结构
 
-> **论文图 4（像素未随页面持久化）**：Figure 4. PRISM-Bench evaluation pipeline.
+[![原论文 Figure 4.：PRISM-Bench evaluation pipeline.](https://arxiv.org/html/2609.04867v1/prism-bench.png)](https://arxiv.org/html/2609.04867v1/prism-bench.png)
 
 *论文图 4。原论文 Figure 4.：“PRISM-Bench evaluation pipeline.”。*
 
@@ -175,7 +175,7 @@ PRISM-Bench 由两部分紧耦合组成：面向诊断的数据集与可见性�
 
 > **看图路径：** 1. 对比三张雷达图 a/b/c 中 seed2 外圈与其他模型内圈的整体分离程度；2. 在 On-screen 图中定位 AV-Mus. 与 AV-Spe. 等接地相关轴的凹陷位置；3. 观察 Off-screen 图中 PF 与 AQ 相关轴的相对外扩与 Mixed 图中的综合形态
 
-> **论文图 1（像素未随页面持久化）**：Figure 1. Grouped radar comparison across the On-screen, Off-screen, and Mixed subsets for the evaluated T2AV systems. Each spoke reports a calibrated mean score for one evaluation-dimension–audio-type pair; higher is better.
+[![原论文 Figure 1.：Grouped radar comparison across the On-screen, Off-screen, and Mixed subsets for the evaluated…](https://arxiv.org/html/2609.04867v1/figures/New_leadboard.png)](https://arxiv.org/html/2609.04867v1/figures/New_leadboard.png)
 
 *论文图 1。原论文 Figure 1.：“Grouped radar comparison across the On-screen, Off-screen, and Mixed subsets for the evaluated T2AV systems.”。*
 
@@ -238,7 +238,7 @@ Off-screen 上 Seedance 2.0 的声音类型总分落后于语音与音乐，提�
 
 > **看图路径：** 1. 顶部 GT 的 Caption 与 Tags 如何定义本次样本的三个激活条件；2. 中间各模型 Scores 表中 AV Coherence 与 Audio Quality 等四列按 SOUND/SPEECH 分型的分数；3. 右侧 Reason 中对口型同步、合成感与环境层缺失的具体证据描述
 
-> **论文图 7（像素未随页面持久化）**：Figure 7. Suggested case study for stage-wise score aggregation.
+[![原论文 Figure 7.：Suggested case study for stage-wise score aggregation.](https://arxiv.org/html/2609.04867v1/Case.png)](https://arxiv.org/html/2609.04867v1/Case.png)
 
 *论文图 7。原论文 Figure 7.：“Suggested case study for stage-wise score aggregation.”。*
 

@@ -166,7 +166,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认左右两面板分别为认知队列与代谢队列，横轴为假正率纵轴为真正率；2. 再对比蓝色实线 BioSync 与橙色虚线拼接在左面板低假正率段的贴合程度；3. 最后读图例中两队列的 AUC 数值并判断差异是否肉眼可分
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: ROC curves for BioSync versus the concatenation baseline, pooled out-of-fold predictions, both cohorts.
+[![原论文 Figure 3：ROC curves for BioSync versus the concatenation baseline, pooled out-of-fold predictions, both…](https://arxiv.org/html/2609.04504v1/fig_roc.svg)](https://arxiv.org/html/2609.04504v1/fig_roc.svg)
 
 *论文图 3。原论文 Figure 3:：“ROC curves for BioSync versus the concatenation baseline, pooled out-of-fold predictions, both cohorts.”。*
 
@@ -176,7 +176,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认横轴为训练未用的潜在严重度，纵轴为 BioSync 指数；2. 再观察左图认知队列点云沿红色拟合线的收紧程度与上下两端的平台；3. 最后对比右图代谢队列点云更分散的形态并联系相关系数差异
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: BioSync Index (BSI) vs. the latent (never-trained-on) severity variable, both cohorts, with linear fit.
+[![原论文 Figure 4：BioSync Index (BSI) vs. the latent (never-trained-on) severity variable, both cohorts, with…](https://arxiv.org/html/2609.04504v1/fig_severity.svg)](https://arxiv.org/html/2609.04504v1/fig_severity.svg)
 
 *论文图 4。原论文 Figure 4:：“BioSync Index (BSI) vs. the latent (never-trained-on) severity variable, both cohorts, with linear fit.”。*
 
@@ -200,7 +200,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认横轴为测试时模态腐蚀率，纵轴为 AUC，误差棒为折间波动；2. 再看左图认知队列随腐蚀率增大时蓝色 BioSync 与橙色拼接的开口变化；3. 最后看右图代谢队列两条曲线的交叉与最高腐蚀率处的相对位置
 
-> **论文图 6（像素未随页面持久化）**：Figure 6: AUC vs. test-time modality-corruption rate, BioSync vs. concatenation (both trained with modality-dropout augmentation), both cohorts. BioSync leads at 5 of 6 corruption rates in the cognitive cohort and at the highest rate tested in the metabolic cohort.
+[![原论文 Figure 6：AUC vs. test-time modality-corruption rate, BioSync vs.](https://arxiv.org/html/2609.04504v1/fig_robustness.svg)](https://arxiv.org/html/2609.04504v1/fig_robustness.svg)
 
 *论文图 6。原论文 Figure 6:：“AUC vs. test-time modality-corruption rate, BioSync vs.”。*
 

@@ -87,7 +87,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿 User 经无线链路到 LLM service 再到 Model 的箭头确认流式环路；2. 观察 VAD 框内 User Turn 虚线与波形的关系；3. 对比 Dialog History 叠加块与 Audio response 回传箭头的位置
 
-> **论文图 1（像素未随页面持久化）**：Figure 1. Overview of the LLM-over-voice serving pipeline.
+[![原论文 Figure 1.：Overview of the LLM-over-voice serving pipeline.](https://arxiv.org/html/2609.04288v1/Lov_pipeline.png)](https://arxiv.org/html/2609.04288v1/Lov_pipeline.png)
 
 *论文图 1。原论文 Figure 1.：“Overview of the LLM-over-voice serving pipeline.”。*
 
@@ -123,7 +123,7 @@ llmovoice 定位为应用流式音频接口与大模型服务之间的中间件�
 
 > **看图路径：** 1. 区分上半 State-to-Control 与下半 Memory-to-Context 两条虚线环路；2. 跟踪 Memory Layer 中 VoicePages 与 VoiceThreads 到 Context projector 再到 Context Window 的检索箭头；3. 查看 Context orchestrator 与 LLM 之间的 State snapshot 与 Function calls 双向连线
 
-> **论文图 3（像素未随页面持久化）**：Figure 4. System overview of llmovoice.
+[![原论文 Figure 4.：System overview of llmovoice.](https://arxiv.org/html/2609.04288v1/llmovoice_overview.png)](https://arxiv.org/html/2609.04288v1/llmovoice_overview.png)
 
 *论文图 3。原论文 Figure 4.：“System overview of llmovoice.”。*
 
@@ -149,7 +149,7 @@ llmovoice 定位为应用流式音频接口与大模型服务之间的中间件�
 
 > **看图路径：** 1. 核对左侧 Input 中 State snapshot 与 Active configuration 的分层输入；2. 观察中间 Serving LLM 经 Structured function call 到 Validate and convert 的垂直流程；3. 对比右侧三类 directives 中 Content、Style 与 Turn-control 的示例函数名
 
-> **论文图 4（像素未随页面持久化）**：Figure 5. Context orchestrator maps the current states and runtime configuration to validated runtime directives.
+[![原论文 Figure 5.：Context orchestrator maps the current states and runtime configuration to validated runtime…](https://arxiv.org/html/2609.04288v1/context-orchestration.svg)](https://arxiv.org/html/2609.04288v1/context-orchestration.svg)
 
 *论文图 4。原论文 Figure 5.：“Context orchestrator maps the current states and runtime configuration to validated runtime directives.”。*
 
@@ -157,7 +157,7 @@ llmovoice 定位为应用流式音频接口与大模型服务之间的中间件�
 
 > **看图路径：** 1. 对照左侧 VoiceThread Table 与 VoicePage Table 的列结构与示例指针；2. 跟随中间 Query 经 Context Projector 到右侧 Context Window 的构造箭头；3. 辨认右侧窗口中 Summary、Audio、Transcript 与 Budget 的分段占比
 
-> **论文图 5（像素未随页面持久化）**：Figure 6. Memory layout and context-window construction. The context projector uses vthreads and vpages to construct projected history under a context budget, selecting among audio, transcript, and summary representations.
+[![原论文 Figure 6.：Memory layout and context-window construction.](https://arxiv.org/html/2609.04288v1/LOV_mem.png)](https://arxiv.org/html/2609.04288v1/LOV_mem.png)
 
 *论文图 5。原论文 Figure 6.：“Memory layout and context-window construction.”。*
 

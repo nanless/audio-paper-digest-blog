@@ -114,7 +114,7 @@ Harmonica 的输入是 16 kHz 音频上计算的 CQT 频谱，每半音 3 格，
 
 > **看图路径：** 1. 从顶部 Audio 到 CQT Spectrogram 再到 Frontend Block×2，确认 3×1 步长 3 如何把每半音 3 格压缩为 1 格；2. 在 Trunk Block×l 内部观察 Harmonic Conv 14 offsets 与 ResNet 3×3 的交替连接与残差回路；3. 在右侧放大图中跟随 f 及其谐波 f2 至 f5 与次谐波 f/2 至 f/5 的连线，确认移位聚合的频率对应；4. 在底部对比 Onset Head 与 Pitch Head 到 Sustain Prediction 再解码为 Note Sequence 的数据流向
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Model architecture of Harmonica.
+[![原论文 Figure 2：Model architecture of Harmonica.](https://arxiv.org/html/2609.04640v1/model_architecture.png)](https://arxiv.org/html/2609.04640v1/model_architecture.png)
 
 *论文图 2。原论文 Figure 2:：“Model architecture of Harmonica.”。*
 
@@ -177,7 +177,7 @@ Harmonica 的输入是 16 kHz 音频上计算的 CQT 频谱，每半音 3 格，
 
 > **看图路径：** 1. 横轴为参数量对数刻度，纵轴为开发集帧 F1，对比 Harmonica 四档与两类基线的包络线位置；2. 定位 nano 26.3K 与 medium 679K 在曲线上的高度，观察其相对于同参数量基线的纵向优势；3. 查看 x-large 15.1M 在最右端是否仍高于所有对比点，判断规模化收益是否延续
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Frame F1 versus model size on the held-out multi-source development set.
+[![原论文 Figure 1：Frame F1 versus model size on the held-out multi-source development set.](https://arxiv.org/html/2609.04640v1/size_vs_perf.svg)](https://arxiv.org/html/2609.04640v1/size_vs_perf.svg)
 
 *论文图 1。原论文 Figure 1:：“Frame F1 versus model size on the held-out multi-source development set.”。*
 
@@ -191,7 +191,7 @@ Harmonica 的输入是 16 kHz 音频上计算的 CQT 频谱，每半音 3 格，
 
 > **看图路径：** 1. 沿雷达图 11 个乐器族轴向比较 Harmonica x-large 的外圈覆盖度；2. 在 Chrom. Perc. 与 Synth Pad 等难族上对比基线向内凹陷的幅度；3. 确认是否存在某族上 Harmonica 被超越，若有则记录具体族与差距方向
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Frame F1 per instrument family on Slakh2100.
+[![原论文 Figure 3：Frame F1 per instrument family on Slakh2100.](https://arxiv.org/html/2609.04640v1/performance_per_inst.svg)](https://arxiv.org/html/2609.04640v1/performance_per_inst.svg)
 
 *论文图 3。原论文 Figure 3:：“Frame F1 per instrument family on Slakh2100.”。*
 
@@ -230,7 +230,7 @@ Harmonica 的输入是 16 kHz 音频上计算的 CQT 频谱，每半音 3 格，
 
 > **看图路径：** 1. 按编号 1 到 12 跟随线性探针 F1 的变化，区分前端、Harmonic、ResNet 各阶段的提升或回落；2. 在 Harmonic 层后观察泛音位置能量是否被压制，在 ResNet 层后观察模糊区是否被清理或锐化；3. 对比最后 Model frame head 与 Frame label 真值的钢琴卷形态，判断剩余误差类型
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Readouts from the linear probe of each layer’s output.
+[![原论文 Figure 4：Readouts from the linear probe of each layer’s output.](https://arxiv.org/html/2609.04640v1/probe_readouts.png)](https://arxiv.org/html/2609.04640v1/probe_readouts.png)
 
 *论文图 4。原论文 Figure 4:：“Readouts from the linear probe of each layer’s output.”。*
 

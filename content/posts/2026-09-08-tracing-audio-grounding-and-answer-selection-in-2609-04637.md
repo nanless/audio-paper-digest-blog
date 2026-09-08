@@ -116,7 +116,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 沿左侧音频波形与问题选项的输入箭头，确认音频 token 与文本 token 如何进入同一 AudioLLM 块；2. 观察紫色 Audio 到 Attn 再到选项行的连线，定位早期到中层的音频与选项交互；3. 追踪橙色从中层 Attn 到晚层答案 token 的路径，确认训练强化的最终预测通路
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: How audio information is used across layers in Audio LLMs. Connections from audio to the answer choices are most important in early-to-middle layers both before and after training, while training increases the contribution of the answer choices to the final prediction in middle-to-late layers.
+[![原论文 Figure 1：How audio information is used across layers in Audio LLMs.](https://arxiv.org/html/2609.04637v1/teaser.png)](https://arxiv.org/html/2609.04637v1/teaser.png)
 
 *论文图 1。原论文 Figure 1:：“How audio information is used across layers in Audio LLMs.”。*
 
@@ -194,7 +194,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 对比实线 Audio 到 All Options 与虚线 All Options 到 Answer 在不同层上的概率变化幅度；2. 在 Qwen2-Audio 与 Qwen2.5-Omni 两列中分别找到负峰所在的层区间；3. 比较零样本与微调后虚线在中层到晚层的差异，判断训练新增的影响
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Layer-wise attention knockout. Audio\nrightarrowAll Options is most influential in early-to-middle layers for both ZS and FT, whereas All Options\nrightarrowAnswer becomes prominent in middle-to-late layers after training.
+[![原论文 Figure 2：Layer-wise attention knockout.](https://arxiv.org/html/2609.04637v1/average_knockout.svg)](https://arxiv.org/html/2609.04637v1/average_knockout.svg)
 
 *论文图 2。原论文 Figure 2:：“Layer-wise attention knockout. Audio\nrightarrowAll Options is most influential in early-to-middle layers for both ZS and FT, whereas All Options\nrightarrowAnswer becomes…”。*
 
@@ -206,7 +206,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 在 Qwen2-Audio 中区分实线正确选项与虚线错误选项对正确概率的相反作用；2. 在 Qwen2.5-Omni 中观察微调后正确选项实线在 18 至 25 层的显著下探；3. 核对错误选项虚线在训练前后是否保持接近零，判断选择性增强的对象
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Correct- and wrong-option contributions. Qwen2-Audio shows opposite effects for correct and wrong options in both ZS and FT. Blocking the correct option lowers the correct-answer probability, while blocking wrong options raises it. Qwen2.5-Omni shows a strong increase in correct-option contribution after training, with little change from wrong options.
+[![原论文 Figure 3：Correct- and wrong-option contributions.](https://arxiv.org/html/2609.04637v1/correct_wrong.svg)](https://arxiv.org/html/2609.04637v1/correct_wrong.svg)
 
 *论文图 3。原论文 Figure 3:：“Correct- and wrong-option contributions.”。*
 
@@ -240,7 +240,7 @@ LoRA 层带的消融从参数侧提供反证。关闭实验显示，移除 16 �
 
 > **看图路径：** 1. 在 Qwen2-Audio 左图中定位 16-23 层带关闭后准确率下降最深的点；2. 在 Qwen2.5-Omni 右图中定位 21-27 层带关闭后下降最深的点；3. 对比 ADQA、MMAR、MMSU 与 MMAU 四条曲线在同一层带的正负变化
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Functional effect of LoRA layer bands. Accuracy change after disabling the learned LoRA updates in each layer band, relative to the full trained model. Negative values indicate performance degradation after removal, whereas positive values indicate improved accuracy.
+[![原论文 Figure 4：Functional effect of LoRA layer bands.](https://arxiv.org/html/2609.04637v1/lora_block.svg)](https://arxiv.org/html/2609.04637v1/lora_block.svg)
 
 *论文图 4。原论文 Figure 4:：“Functional effect of LoRA layer bands.”。*
 

@@ -114,7 +114,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先从左侧用户音频经冻结编码器与可训练投影进入大语言模型的主路径看起；2. 再看语音生成器分出的语音单元分支与隐状态分支如何同时进入动作生成器；3. 最后核对四个并行身体部位分支与冻结动作解码器之间的先后关系
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Motion-Omni framework with four components and their conditioning topology.
+[![原论文 Figure 1：Motion-Omni framework with four components and their conditioning topology.](https://arxiv.org/html/2609.04250v1/MotionOmni_flat.png)](https://arxiv.org/html/2609.04250v1/MotionOmni_flat.png)
 
 *论文图 1。原论文 Figure 1:：“Motion-Omni framework with four components and their conditioning topology.”。*
 

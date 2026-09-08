@@ -89,7 +89,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看上半部分以往方法框，确认只做模态相关性加权且标出忽略融合冲突；2. 再看下半部分 CAD 框，确认两阶段先估计潜在冲突量再评估可干预性；3. 比较底部两张雷达图，看 CAD 包络是否在多数轴上最靠外；4. 注意图例中 Base、AVCD、MAD 与 CAD 四条线的对应关系
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: (a) MAD relies on modality relevance alone and overlooks cross-modal conflicts. (b) CAD assesses conflict magnitude and actionability, then reallocates decoding weights to suppress unreliable fusion. (c) On CMM and AVHBench, CAD consistently outperforms Base, AVCD, and MAD with both Qwen2.5-Omni-7B and OmniVinci.
+[![原论文 Figure 1：(a) MAD relies on modality relevance alone and overlooks cross-modal conflicts.](https://arxiv.org/html/2609.04247v1/intro.png)](https://arxiv.org/html/2609.04247v1/intro.png)
 
 *论文图 1。原论文 Figure 1:：“(a) MAD relies on modality relevance alone and overlooks cross-modal conflicts.”。*
 
@@ -115,7 +115,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认横轴是音频分支对正确答案的置信度，纵轴是视频分支对正确答案的置信度；2. 再按颜色区分联合分支答对与答错的散点分布；3. 重点看右上与左下两个角落标注的联合准确率；4. 对照右侧两个案例框，看单模态与联合预测条形值的变化方向
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: Fusion outcomes of Qwen2.5-Omni-7B on CMM. Axes show unimodal confidence in the ground-truth answer, and color denotes AV correctness. Highlighted examples show destructive fusion and complementary recovery.
+[![原论文 Figure 2：Fusion outcomes of Qwen2.5-Omni-7B on CMM.](https://arxiv.org/html/2609.04247v1/preliminary.png)](https://arxiv.org/html/2609.04247v1/preliminary.png)
 
 *论文图 2。原论文 Figure 2:：“Fusion outcomes of Qwen2.5-Omni-7B on CMM.”。*
 
@@ -132,7 +132,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先沿左侧从文本视频音频输入走到四个分支 logits 的主路径；2. 再看右上 PCME 框中两组分布差异如何汇成冲突量 C；3. 接着看右中 CAA 框中答案映射与可靠性支持如何汇成可干预分 B；4. 最后看右下干预框中联合权重减少量如何按比例分给音频与视频分支
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: Overview of CAD. Given an audio-visual input and textual query, CAD uses Potential Conflict Magnitude Estimation (PCME) to measure predictive disagreement across modality branches and Conflict Actionability Assessment (CAA) to assess whether the conflict is supported by reliable unimodal evidence. The actionable-conflict signal reallocates decoding influence from the joint audio-visual branch to modality-specific branches, yielding a response better grounded in the input evidence.
+[![原论文 Figure 3：Overview of CAD. Given an audio-visual input and textual query, CAD uses Potential Conflict…](https://arxiv.org/html/2609.04247v1/framework.png)](https://arxiv.org/html/2609.04247v1/framework.png)
 
 *论文图 3。原论文 Figure 3:：“Overview of CAD. Given an audio-visual input and textual query, CAD uses Potential Conflict Magnitude Estimation (PCME) to measure predictive disagreement across modality…”。*
 
@@ -258,7 +258,7 @@ CMM、AVHBench 与 VideoMME 按每秒 2 帧采样，最多 768 帧，WorldSense 
 
 > **看图路径：** 1. 先确认横轴是 C 值，纵轴是样本数，蓝色为答对橙色为答错；2. 比较两条虚线均值的位置差异；3. 观察低 C 区间蓝色高柱与高 C 区间橙色占优的分布偏移；4. 再看右上高 C 放大框，确认错误样本在尾部更集中
 
-> **论文图 4（像素未随页面持久化）**：Figure 4: Distribution of potential conflict magnitude C for correct and wrong Qwen2.5-Omni-7B predictions on CMM.
+[![原论文 Figure 4：Distribution of potential conflict magnitude C for correct and wrong Qwen2.5-Omni-7B predictions…](https://arxiv.org/html/2609.04247v1/C_value_7B.png)](https://arxiv.org/html/2609.04247v1/C_value_7B.png)
 
 *论文图 4。原论文 Figure 4:：“Distribution of potential conflict magnitude C for correct and wrong Qwen2.5-Omni-7B predictions on CMM.”。*
 

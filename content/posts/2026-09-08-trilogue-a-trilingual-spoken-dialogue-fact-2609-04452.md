@@ -116,7 +116,7 @@ TRILOGUE 的定位不是收集自然播客，而是从已知源文章可控生�
 
 > **看图路径：** 1. 沿顶部从左到右追踪 01 到 06 的阶段箭头，确认从源文章收集、对话生成、轮级标注、语音构造、ASR 对齐到基准任务的完整链路；2. 对比 02 对话生成中 Gemini 2.5 Flash 与 DeepSeek-V3.1 的双模型分支与 03 标注中 Gemini 2.5 Pro 的单一标注路径；3. 观察 04 语音构造中英语全合成与俄语哈萨克语人录加合成的分支差异，以及 05 个阶段 Whisper large-v3 与 WhisperX 对齐的衔接；4. 查看 06 基准任务中三个并列任务框的输入输出定义，确认可核查性、验证与检索的任务边界
 
-> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of the TRILOGUE dataset construction pipeline.
+[![原论文 Figure 1：Overview of the TRILOGUE dataset construction pipeline.](https://arxiv.org/html/2609.04452v1/datasetPipeline_1x6_cropped.png)](https://arxiv.org/html/2609.04452v1/datasetPipeline_1x6_cropped.png)
 
 *论文图 1。原论文 Figure 1:：“Overview of the TRILOGUE dataset construction pipeline.”。*
 

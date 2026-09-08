@@ -184,7 +184,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认横轴五个条件与纵轴旋律一致性的量纲，区分灰色基线与四种蓝色引导强度；2. 对比误差棒长度随 λ 增大而缩短的趋势，关注均值在 λ=0.05 附近的平台；3. 核对基线均值与误差棒下沿接近零的分布形态，判断未引导时的离散程度
 
-> **论文图 2（像素未随页面持久化）**：Fig. 2: Mean melodic coherence with standard deviation error bars across guidance scales. The baseline (gray) uses no probe intervention. All probe-guided conditions (blue) substantially improve pitch-class alignment.
+[![原论文 Fig. 2：Mean melodic coherence with standard deviation error bars across guidance scales.](https://arxiv.org/html/2609.04516v1/fig_coherence.svg)](https://arxiv.org/html/2609.04516v1/fig_coherence.svg)
 
 *论文图 2。原论文 Fig. 2:：“Mean melodic coherence with standard deviation error bars across guidance scales.”。*
 

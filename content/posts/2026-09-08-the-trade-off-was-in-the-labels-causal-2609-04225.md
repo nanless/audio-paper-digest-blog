@@ -31,7 +31,7 @@ paper_digest_authors: [{"affiliations":["机构信息未在 arXiv HTML 中可靠
 paper_digest_abstract_sha256: "39de4bf563b836bb74d1729593d6132150f17095f0e8ef05ce55a040f5754386"
 paper_digest_sidecars: {"citation.bib":{"sha256":"7413e3f3026cad956590e8730e651c4c13c33e3e533318915713e45b0b1b37a0","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.bib"},"citation.json":{"sha256":"148c94243d6c0567345f8baec8fd92baf60718e511d271fb90730734dce1ade0","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.json"},"citation.ris":{"sha256":"0b510b94457b398ac6b5412be128b7d1edcad80c2b348f3d421bd72b24d4ce0b","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.ris"},"rethink-context.json":{"sha256":"3db164a078a7a7d1a9d4bd85405bb73e45242dd72f1e8f2a6cd6cd09ba6d2406","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "4c8385c4c316bd7b32bcc947d0b1ac1e5b79fff0e91e293b6794f3ec77b22dde"
+paper_digest_api_reader_article_sha256: "ef6f7c892790e917efc29901c8a57880bf4805ea5b6992ba7ff20d73a7765ec6"
 paper_digest_api_reader_plan_sha256: "9365f75bbb9d2635aeb9ccd0d07efd148991272b5dfa54f915b0d1e325f0e0aa"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "c53bc84e4884f255e1133ff71357ee29568deea1c501460bb86f5fe9706373f1"
@@ -94,7 +94,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先看三行各自的蓝色词块与红色超时叉号位置，确认前两行要忍耐、第三行要抢答；2. 再看每行灰色小字给出的保持或触发理由，核对是否只用当前词与已观测静音；3. 最后对比绿色星形与红色叉号的先后，读出固定阈值为何顾此失彼
 
-> **论文图 3（像素未随页面持久化）**：Figure 3: The three turns that define turn-aware endpointing, and the read each demands. Two require holding through silence (a dictated number, whose pattern predicts more digits, and a long question, whose clause pauses sit inside a single turn), while a completed utterance requires firing at near-zero silence. A fixed silence timeout fires too early on Turns 1–2 and too late on Turn 3; the turn-aware model instead reads, at each 0.5 s boundary, whether the words so far are complete and whether at least 0.3 s of silence has been observed (the causal rule of §3.2). Schematic timeline; the “ours” latencies are the model’s measured medians (§5).
+[![原论文 Figure 3：The three turns that define turn-aware endpointing, and the read each demands.](https://arxiv.org/html/2609.04225v1/x3.png)](https://arxiv.org/html/2609.04225v1/x3.png)
 
 *论文图 3。原论文 Figure 3:：“The three turns that define turn-aware endpointing, and the read each demands.”。*
 
@@ -105,12 +105,6 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 系统输入是每 0.5 s 一块的音频流，先过能量门，静音块跳过语言模型以免在静音上幻觉标记。通过的音频与已提交转写前缀一起送入合并后的 Qwen3-ASR-0.6B 加 LoRA 模型，模型在同一解码中延续转写并可输出两个新增的轮次标记。系统槽中可放一段用户画像或热词前缀，在整个会话中保持可见。模型之后还有两个策略旋钮：确认视界等待若干静音块再执行触发，最大分段强制刷出限制一段转写能增长多久。输出是转写段与结束事件。
 
 下面这张真实逐块运行图对比了决策位置不同的两条路，上路是独立识别器加下游计时器，下路是识别器内联输出标记。
-
-> **看图路径：** 1. 先沿上方面板从波形到纯词转写再到下游计时器，确认时钟看不见数字含义；2. 再沿下面板逐块三角标记看同一解码如何输出词并在暂停处保持、在结尾处加标记；3. 对比上下两路在相同暂停处的保持与误触发标注，确认差别只在决策位置
-
-> **论文图 4（像素未随页面持久化）**：Figure 4: How the turn-end decision moves inside the recognizer (one real per-chunk run on dictation probe #0; prompts and outputs verbatim). (a) The usual pipeline outputs only words and leaves the turn-end call to a downstream silence timer, blind to the digits: a short timeout fires inside the pauses, a long one lags. (b) Ours emits the end-of-turn marker in the same decode as the words, holding through both pauses, then firing 0.42 s after the last digit. The transcript is identical in both panels; only where the decision is made differs.
-
-*论文图 4。原论文 Figure 4:：“How the turn-end decision moves inside the recognizer (one real per-chunk run on dictation probe #0; prompts and outputs verbatim).”。*
 
 上方面板可见波形上方有两个黄色暂停块，识别器只输出纯词序列，响应型超时在暂停内触发，长超时则滞后，图注明确时钟看不见数字含义。下方面板可见每 0.5 s 1 次解码的蓝色三角标记，解码输出在暂停处标注保持并继续输出数字，在末位数字后输出结束标记。底部两个放大的解码框分别显示暂停时刻只延续数字而不加标记、结尾时刻因完整加已观测静音而加标记，转写词本身在两路完全相同，差别只在何处做决定。这解释了为什么下游分类器只能从更损的视图晚一拍重算识别器已算过的完整性。
 
@@ -140,7 +134,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先读上下两条暂停的长度与文本，确认仅相差 90 ms 且在决策点前几乎相同；2. 再看右侧蓝色保持与橙色触发标签，确认标签差异来自之后是否有人接话；3. 回到中间决策点竖线，理解为何该标签函数依赖未来输入
 
-> **论文图 6（像素未随页面持久化）**：Figure 6: Clairvoyant labels. Two real pauses, 90 ms apart in length, from held-out AMI stretches of the replay benchmark (texts and gaps verbatim); the label is decided by the future. At the decision point the prefixes are indistinguishable, so the class is a function of audio after t, exactly what a clairvoyant label encodes.
+[![原论文 Figure 6：Clairvoyant labels. Two real pauses, 90 ms apart in length, from held-out AMI stretches of the…](https://arxiv.org/html/2609.04225v1/x6.png)](https://arxiv.org/html/2609.04225v1/x6.png)
 
 *论文图 6。原论文 Figure 6:：“Clairvoyant labels. Two real pauses, 90 ms apart in length, from held-out AMI stretches of the replay benchmark (texts and gaps verbatim); the label is decided by the future.”。*
 
@@ -160,7 +154,7 @@ paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
 
 > **看图路径：** 1. 先确认横轴为中位延迟、纵轴为每语音分钟误触发且纵轴为对数并含零点特殊标记；2. 再沿黄色与紫色超时曲线看阈值只能沿曲线滑动，读出各点的召回标注；3. 最后定位左下角绿色与蓝色菱形星形，确认其同时更低延迟更少误触发
 
-> **论文图 2（像素未随页面持久化）**：Figure 2: The causal model escapes the timeout curve. Median end-of-turn latency vs. false fires (log scale; 0^{*} plotted at 0.05) on identical audio, detector, and scoring. A silence timeout can only slide along its curve; the causally supervised model sits strictly inside the whole family because it reads completeness, firing 0.39 s after a finished thought while holding through a 1.4 s mid-sentence pause.
+[![原论文 Figure 2：The causal model escapes the timeout curve.](https://arxiv.org/html/2609.04225v1/x2.png)](https://arxiv.org/html/2609.04225v1/x2.png)
 
 *论文图 2。原论文 Figure 2:：“The causal model escapes the timeout curve.”。*
 
