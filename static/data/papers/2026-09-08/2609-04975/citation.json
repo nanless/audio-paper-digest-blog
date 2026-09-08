@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04975",
+  "arxivId": "2609.04975",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Ke Lei"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Chenyuhao Wen"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Wenxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Changhao Pan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Sashuai Zhou"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yongshi Li"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Ruiqi Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Ruofan Hu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Haorui Xu"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Xiang Yin"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Corresponding author"
+      ],
+      "name": "Zhou Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04975",
+  "originalTitle": "SwanWeave:One-Stage Multi-Task Instruction-Guided 3D Spatial Audio Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04975.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

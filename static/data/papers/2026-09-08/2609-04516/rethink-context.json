@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04516",
+  "abstract": "Recent work on controllable music generation has focused on autoregressive models, leaving diffusion-based systems comparatively underexplored. We present a lightweight method for steering the pitch content of audio produced by Stable Audio Open, a latent diffusion model for music synthesis. A small convolutional probe containing approximately 125k parameters is trained to decode frame-level pitch-class activations from the model&#39;s variational autoencoder latent space, using paired audio and MIDI data. At inference time, the frozen probe serves as a differentiable loss function: its gradient with respect to the denoising latent is used to nudge generation toward a user-specified pitch-class sequence, requiring no retraining or architectural modification of the base model. Across 27 evaluation trials spanning 9 text prompts and 3 target melodies, probe-guided generation increases melodic coherence by 2.4x over the unguided baseline (p &lt; 1e-5, Wilcoxon signed-rank test), demonstrating that musically meaningful structure is both recoverable and steerable in diffusion-based music latent spaces.",
+  "abstractSha256": "26f50f0298c7607b59dc52422d3441d1854419d7f13b8e05412c8377d4f1c79a",
+  "arxivId": "2609.04516",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yushi Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wilson Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongyi Zang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 Stable Audio Open 的 VAE 潜空间可解码音高类别这一可验证性质，论文用冻结的微型卷积探针在去噪后 40% 窗口内以 RMS 归一化梯度轻推潜变量，在 27 次配对试验中将旋律一致性从 0.112 提升至 0.274 且未报告音质代价。",
+  "originalTitle": "Pitch-class Steering for Diffusion-based Music Generation via Latent-space Probes",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04516.pdf",
+  "readerTitle": "用 125k 探针在 VAE 潜空间里拨动音高：扩散音乐生成的可控性不在自回归独占",
+  "schemaVersion": 1
+}

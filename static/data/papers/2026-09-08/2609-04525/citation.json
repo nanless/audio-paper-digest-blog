@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04525",
+  "arxivId": "2609.04525",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrishti Saha Shetu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emanuël A. P. Habets"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Brendel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04525",
+  "originalTitle": "Discriminative Flow Matching: Beyond Time-Conditioning in Generative Restoration via Flow-State Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04525.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

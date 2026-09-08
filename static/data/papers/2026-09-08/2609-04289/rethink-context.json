@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04289",
+  "abstract": "LETHE (Latent-parameter Evolution with Temporal Hierarchical quasi-Equilibrium) is a self-referential sonic-oblivion system implemented in SuperCollider. It adopts the formal vocabulary of Generative Adversarial Networks in a closed configuration without external datasets or supervision after initialization. Audio is processed by a 3 x 3 mixing matrix built around two delay lines; its nine coefficients and two delay times evolve through the interaction of a five-feature linear discriminator and a random-perturbation optimizer analogous to single-sample REINFORCE. The discriminator compares current energy behavior with an archive of the initial state and guides parameter updates. Circular, fixed, and live sources can be mixed independently. Across fixed and circular sessions with an ablation control, the active generator is necessary for parametric evolution ($\\Delta c_{22}=0.000$ in all 15 ablation sessions). Situated in the tradition of self-referential electroacoustic music, LETHE delegates the sonic outcome to an adaptive closed loop whose parametric space is defined by the composer.",
+  "abstractSha256": "aaf817fe15e62d5feeb8b2b57f2042b7ae9324abdc5ff173d1d670f611dadf11",
+  "arxivId": "2609.04289",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Vitucci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anthony Di Furia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Scagliola"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "LETHE 把 3×3 反馈延迟网络当作可被改写的房间，用五特征线性判别器对照初始声音 DNA、以单样本扰动更新十一个参数，45 组 180 秒对照显示只有生成器开启时 c22 才会演化，但稳定工作点偏离经典纳什均衡且扰动先验仍待剥离。",
+  "originalTitle": "Memory as transformation: LETHE, a self-referential gan-inspired architecture",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04289.pdf",
+  "readerTitle": "记忆即变换：LETHE 用能量判别与随机扰动让混响参数自己走",
+  "schemaVersion": 1
+}

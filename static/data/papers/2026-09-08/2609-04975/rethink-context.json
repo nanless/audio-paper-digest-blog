@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04975",
+  "abstract": "Spatial audio editing modifies an existing soundfield according to a user&#39;s instruction while preserving the rest of the scene. Unlike conventional audio editing, it must reason jointly about audio events, spatial information, dynamic changes, and environmental information in first-order Ambisonic (FOA) waveforms. Existing language-guided editors mainly target conventional audio or rely on sequential operations, and therefore do not directly support one-stage editing for complex 3D spatial instructions. We present SwanWeave, the first one-stage multi-task framework for instruction-guided 3D FOA spatial audio editing. We build paired FOA supervision from open-source speech and sound-effect corpora using controllable room simulation, covering more than ten single-operation and compound tasks across the four editing axes. To handle this heterogeneous edit space, SwanWeave uses Spatial Edit Mixture-of-Experts (SE-MoE) with dual-level routing, selecting task-aware expert combinations for compound instructions and frame-level routed/null experts for local edit decisions. We further introduce Spatial Preference Optimization (SPO), a Direct Preference Optimization (DPO)-based alignment objective with edit-specific negative targets, and adopt staged training to improve natural-language grounding. Experiments show that SwanWeave achieves better editing quality than existing general audio editors and spatial audio baselines across all tasks. Spatial audio editing demos can be found at this https URL, code can be found at: this https URL.",
+  "abstractSha256": "f4a28fc528dd0ee1039d821172be899382e40294d7be9703df6175aab1af7f9f",
+  "arxivId": "2609.04975",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Ke Lei"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Chenyuhao Wen"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Wenxiang Guo"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Changhao Pan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Sashuai Zhou"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yongshi Li"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Ruiqi Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Ruofan Hu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Haorui Xu"
+    },
+    {
+      "affiliations": [
+        "ByteDanceEqual contribution"
+      ],
+      "name": "Xiang Yin"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Corresponding author"
+      ],
+      "name": "Zhou Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "SwanWeave 针对 FOA 四通道声场的指令编辑任务，用可控房间仿真构造 125K/类单操作与 250K 复合操作的源-目标配对监督，以潜空间流匹配为生成器，配合双层路由的 SE-MoE 与面向错编负样本的 SPO 偏好对齐及分阶段课程，实现一阶段复合编辑，并在客观与人评上一致优于现有通用与立体声编辑基线，代价是依赖仿真数据与约 10 秒短场景。",
+  "originalTitle": "SwanWeave:One-Stage Multi-Task Instruction-Guided 3D Spatial Audio Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04975.pdf",
+  "readerTitle": "一步到位改三维声场：SwanWeave 为何把事件、空间、运动与房间一起学",
+  "schemaVersion": 1
+}

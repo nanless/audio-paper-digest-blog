@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04561",
+  "abstract": "Whisper is a widely used foundation model for automatic speech recognition (ASR), but its generative decoder can produce fluent hallucinated transcripts for inputs containing little or no speech. We propose a training-free, inference-time method to reduce these hallucinations using low-rank projection of decoder activations. A compact hallucination-associated subspace is estimated from non-speech calibration data, and decoder hidden states are projected away from this subspace during inference. We evaluate two variants: always-on, which applies projection to all inputs, and gated, which applies it only when Whisper predicts that an input is likely non-speech. Across non-speech benchmarks, always-on projection reduces average hallucination rate (HR) from 31.31% to 2.44%, a 92.21% relative reduction, while gated projection reduces HR to 3.74%, an 88.05% relative reduction, with lower false rejection of genuine speech. On LibriSpeech, gated projection increases absolute word error rate (WER) by 0.33-4.39 percentage points and yields false-rejection rates (FRR) of 0.41--9.97% across model and split settings. These results show that low-rank activation projection can substantially suppress Whisper hallucinations without retraining, while providing a controllable trade-off between hallucination suppression and speech recognition performance.",
+  "abstractSha256": "66a9e22a0991c2760464e839fb21a436a4b30b159c3cfcc791eeb98a408b7917",
+  "arxivId": "2609.04561",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The university of Texas at San Antonio"
+      ],
+      "name": "Maryam Abbasihafshejani"
+    },
+    {
+      "affiliations": [
+        "The university of Texas at San Antonio"
+      ],
+      "name": "Murtuza Jadliwala"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 Whisper 在无语音输入上生成流畅幻觉文本的问题，论文用无语音校准集估计解码器幻觉子空间并在推理时做低秩投影以提升无语音概率，门控版本在保留语音识别的同时把非语音幻觉率大幅降低。",
+  "originalTitle": "Reducing Hallucinated Transcripts in Whisper via Hallucination Space Projection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04561.pdf",
+  "readerTitle": "无语音却有文本：用门控低秩投影在解码器表示层抑制 Whisper 幻觉",
+  "schemaVersion": 1
+}

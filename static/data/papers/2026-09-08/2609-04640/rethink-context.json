@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04640",
+  "abstract": "This paper introduces Harmonica, a family of instrument-agnostic music transcription models built around multi-depth harmonic convolution. At each model scale, Harmonica achieves the best performance among the evaluated models: the x-large model attains state-of-the-art performance in instrument-agnostic transcription, while the medium variant offers competitive accuracy with faster inference than all baselines. Pushing the limit of computational efficiency, the nano variant has only 26.3K parameters and runs at 1,622.5 times real time, yet achieves a frame F1 of 0.796 on the development set, 14.6 percentage points higher than Basic Pitch. We further demonstrate that multi-depth harmonic convolution effectively exploits harmonic information to benefit transcription performance through comparative experiments with existing harmonic aggregation methods, including harmonic stacking, harmonic attention, single-depth harmonic convolution, and the HD-Conv layer.",
+  "abstractSha256": "2cfbac4bdf76852ee28d6f1dbbb5ebd813d01826629df86d3f5481bbf3cc1fd9",
+  "arxivId": "2609.04640",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshen Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Héctor Martel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joe Hennessy-Priest"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taemin Cho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单乐器身份未知的乐器无关转录，Harmonica 以 CQT 输入与多深度谐波卷积在多源温度采样训练下实现 26.3K 至 15.1M 的规模化，x-large 在多数测试集上取得最高帧 F1，medium 以 848.5 倍实时保持可比精度，nano 以 1622.5 倍实时仍显著超过同量级基线。",
+  "originalTitle": "Harmonica: Accurate and Lightweight Instrument-Agnostic Music Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04640.pdf",
+  "readerTitle": "多深度谐波卷积如何让乐器无关转录在小参数下仍保持高帧精度",
+  "schemaVersion": 1
+}

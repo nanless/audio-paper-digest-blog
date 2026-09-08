@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04224",
+  "abstract": "Music source separation (MSS) is increasingly used not to remix music but to measure it: separated drum stems feed studies of microtiming, dynamics, and groove. The field evaluates separators almost exclusively by signal-to-distortion ratio (SDR), yet microrhythm research shows that a sound&#39;s perceived temporal location (its p-centre) is co-determined by its attack and envelope, precisely the properties SDR was not designed to protect. We quantify what four open separators spanning four architecture generations (Spleeter, HT-Demucs, BS-Roformer, SCNetXL) do to rhythm-critical signal properties, using the 50-track MUSDB18-HQ test set, where true stems make every claim falsifiable. Three findings emerge. (1) Onset timing is safe: onset F-measure tracks SI-SDR (Spearman rho = 0.62) and is invariant to input length. (2) Transient and dynamic shape are not: their distortion correlates only weakly with SI-SDR (|rho| &lt;= 0.29), and the model ranking inverts - the SDR leader distorts drum attacks twice as much as its capability-matched CNN counterpart, while the SDR-worst model preserves dynamics better than a mid-pack one. Each model imposes a systematic, model-specific bias on the dynamic profile. (3) Input length reshapes the rendered attack of a fixed passage (marginally more for the transformer; paired p = 0.044) while leaving onset locations untouched. For rhythmic studies, separator choice and input conditions are methodological variables to be reported, and SDR alone cannot stand in for them.",
+  "abstractSha256": "f3ad29e1a2ad037ef3b3f166be95ca51e95584a47ddfd464596edab333a2beb3",
+  "arxivId": "2609.04224",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuxin Ding"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 50 首带真分轨的歌曲检验 4 代分离模型，显示 onset 位置随 SDR 变好而变准，但攻击斜率与动态包络的失真与 SDR 几乎无关，且固定片段的渲染会随输入长度漂移。",
+  "originalTitle": "Beyond SDR: How Music Source Separation Reshapes Rhythm-Relevant Signal Properties",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04224.pdf",
+  "readerTitle": "SDR 相同的鼓声，听感位置却不同：分离模型如何重塑攻击与动态",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04241",
+  "arxivId": "2609.04241",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hayeon Bang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hounsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04241",
+  "originalTitle": "VocalCoachBench: Benchmarking Audio-Language Models on Expert Feedback for Singing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04241.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

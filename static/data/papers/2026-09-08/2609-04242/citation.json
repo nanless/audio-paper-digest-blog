@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04242",
+  "arxivId": "2609.04242",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ankan Deria"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanoona Rasheed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xilin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fahad Shahbaz Khan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Salman Khan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04242",
+  "originalTitle": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04242.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

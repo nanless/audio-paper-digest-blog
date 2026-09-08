@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04288",
+  "arxivId": "2609.04288",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Global College, Shanghai Jiao Tong University",
+        "AgenticSys"
+      ],
+      "name": "Linyi Jiang"
+    },
+    {
+      "affiliations": [
+        "AgenticSys"
+      ],
+      "name": "Silvery D. Fu"
+    },
+    {
+      "affiliations": [
+        "Global College, Shanghai Jiao Tong University"
+      ],
+      "name": "Yifei Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04288",
+  "originalTitle": "Scalable Context Orchestration for Serving LLMs Over Voice",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04288.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

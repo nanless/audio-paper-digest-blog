@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04253",
+  "arxivId": "2609.04253",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Hayeon Kim"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Yoojin Jang"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Jaejun Yoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04253",
+  "originalTitle": "AVENUE: Audio-Video EditiNg Understanding and Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04253.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

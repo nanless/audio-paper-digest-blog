@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04253",
+  "abstract": "Audio-video (AV) editing aims to modify audio and video content according to a target prompt. Unlike single-modality editing, AV editing requires models to infer a modality-selective edit scope from the prompt alone: determining not only what should change, but also which modality should be preserved. Faithfully evaluating such models therefore requires both (i) benchmarks that span diverse edit types and modality categories, and (ii) evaluation that is itself modality-aware and sample-specific. However, existing AV editing benchmarks provide limited coverage of edit types and modality combinations, while current evaluation systems are often modality-blind and sample-agnostic, making it difficult to assess whether models faithfully preserve the unintended modality. To address these gaps, we introduce AVENUE, Audio-Video EditiNg Understanding and Evaluation, comprising two contributions: (1) a benchmark of 1,291 source clips and 7,957 editing instructions across audio-targeted, video-targeted, and AV-coupled edit types, curated and human-verified from VGGSound; and (2) a sample-specific, modality-aware evaluation framework that specifies, for each sample, both the intended change and the content that must remain intact. We evaluate representative AV editing models spanning three editing paradigms : joint, sequential, and separate, providing the first systematic analysis of modality-selectivity across paradigms. Our findings reveal a fundamental open challenge: when editing one modality, existing models frequently induce unintended changes in the other, regardless of paradigm. AVENUE provides a benchmark and modality-aware evaluation framework to drive progress toward more controllable AV editing models. Our dataset is publicly available on Hugging Face: this https URL.",
+  "abstractSha256": "19aefa6ddd6020b28874f15ba943eb20c46de85f5542d9e639abac1e983cbb35",
+  "arxivId": "2609.04253",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Hayeon Kim"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Yoojin Jang"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology (UNIST)"
+      ],
+      "name": "Jaejun Yoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "AVENUE 用 1291 个源片段和 7957 条指令把音频、视频与音视频耦合编辑分开考核，并用样本级四维评测揭示现有三类范式在保持未编辑模态上普遍失效，且反演式音频模型在保真与可编辑性间最均衡。",
+  "originalTitle": "AVENUE: Audio-Video EditiNg Understanding and Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04253.pdf",
+  "readerTitle": "AVENUE：当提示只改一个模态时，模型能否守住另一个模态",
+  "schemaVersion": 1
+}

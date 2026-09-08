@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04222",
+  "abstract": "We present GEPARD (Generative, Prosody-aware, Autoregressive text-to-speech model for Realtime Dialogue), a streaming text-to-speech model for real-time spoken dialogue. GEPARD generates speech autoregressively with an LLM backbone - text and audio embeddings are trained together in a single decoder-only model - and decodes it to a waveform with an FSQ-based neural codec, streaming audio chunk-by-chunk as text arrives. Our central goal is a TTS architecture served by a standard LLM engine (vLLM) without modifying its compute kernels. This defines the overarching design principle: the backbone is a standard full-attention transformer, while all non-trivial auxiliary mechanisms - zero-shot voice cloning, text augmentation, and classifier-free guidance - are moved out of the autoregressive decode loop into prefill, or distilled directly into the weights. On streaming end-to-end inference, a single stream reaches a Real-Time Factor of about 0.067 (roughly 15x faster than real-time); under 256 concurrent streams the system reaches an aggregate speedup of about 204x on a single server-class GPU. We detail: (1) system-level solutions for vLLM-native serving; (2) the &#34;short register&#34; (1-2 word) failure mode of autoregressive speech decoders, with diagnostic probes and a mitigation; and (3) distillation of two-pass classifier-free guidance over text into single-pass weights via Direct Preference Optimization (DPO).",
+  "abstractSha256": "861acfa5b01622aa0ccbf2b136f32c03d9279108fa3f677ae8a0a9975cfd22d6",
+  "arxivId": "2609.04222",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Denis Pavlov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ulanbek Abdurazakov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nursultan Bakashov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "GEPARD 为实时对话把文本与 32 通道 GroupFSQ 音频在同一标准全注意力 Transformer 中联合自回归生成并用 NanoCodec 流式解码，以 vLLM 原生可服务为首要约束，通过 prefill 前缀克隆、单步并行采样与 DPO 蒸馏 CFG 实现单流 RTF 约 0.067 与 256 并发约 204 倍加速，代价是帧级并行带来的高熵训练难度与短文本寄存器失效需额外诊断与补偿。",
+  "originalTitle": "GEPARD - Generative, Prosody-aware, Autoregressive text-to-speech model for Realtime Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04222.pdf",
+  "readerTitle": "在标准 vLLM 上跑实时对话语音：GEPARD 把定制算子移出解码循环的取舍",
+  "schemaVersion": 1
+}

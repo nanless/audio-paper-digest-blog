@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04404",
+  "abstract": "ASR systems sometimes produce fluent text that is unrelated to the speech they receive. We view these hallucinations as one possible consequence of a broader grounding failure, in which the transcript is no longer adequately guided by the audio. To understand where this failure becomes possible, we study two independently trained Conformer-Large recognizers - one CTC and one RNN-T - under environmental degradation and speaker-background shift. In both models, the final encoder stage emerges as a critical boundary: bypassing the final block causes divergence on nearly every utterance, whereas bypassing middle blocks has little effect. At this same stage, the representations become more compact, text becomes readable by the trained decoder, and grapheme information becomes explicit. Importantly, the intervention produces garbled or repetitive output rather than fluent fabrication. Our result therefore identifies a mechanistic precondition for hallucination - the failure to produce adequately grounded output - not the complete origin of naturally occurring hallucinations. Together, the results reveal a consistent terminal-stage dependency for grounded recognition across two decoder families and multiple distribution shifts.",
+  "abstractSha256": "847d986a9e4e86b2aee694b281048f290144b0e89f9bc99a53c13e586b4a5b83",
+  "arxivId": "2609.04404",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Hamees Sayed"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Apoorv Singh"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Kumar Aman"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Akshat Mandloi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把幻觉拆为接地失效的必要条件与流畅编造的充分条件，用跳层因果干预定位到编码器最后 1-2 块为接地可恢复边界，并以有效秩压缩、透镜可读性与字形探针收敛作几何与可读性佐证，但干预本身只产生乱码或重复而非流畅幻觉。",
+  "originalTitle": "The Anatomy of an ASR Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04404.pdf",
+  "readerTitle": "终端一两层决定是否接地：对 ASR 幻觉必要条件的因果定位",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04237",
+  "abstract": "Recent advances in speech language models leverage discrete speech representations from pretrained codecs to enable scalable training and generation. However, existing codecs are primarily optimized for compression without accounting for the autoregressive nature of language model training, resulting in suboptimal performance when modeling compressed speech tokens. In this work, we revisit speech discretization from a generative modeling perspective and propose a novel framework that explicitly aligns speech tokenization with autoregressive training. Our approach introduces autoregressive-compatible constraints during codec training, encouraging token sequences that exhibit temporal consistency and predictability. In addition, we propose a heterogeneous downsampling strategy for different layers of speech tokens, distinguishing semantic from acoustic layers, to improve the alignment between semantic tokens and corresponding textual content. Extensive experiments across multiple benchmarks demonstrate that our method bridges the gap between speech compression and generative modeling, enabling more effective continued pretraining of existing language models on speech data. The approach consistently improves performance across multiple codecs, validating its generality and applicability to diverse speech modeling scenarios.",
+  "abstractSha256": "aa8f0c51da5f3dfd1d17e08c7c68c9ee5981acff57633606db90d37729136cc7",
+  "arxivId": "2609.04237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Yazheng Yang"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Yao Qiu"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Hui Su"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Qi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对现有神经语音编码器只优化重建而忽略自回归可预测性的结构错配，论文提出在编码器训练中加入下一 token 预测的自回归正则并对语义层做更强的异构降采样，在保持重建质量的同时使 token 分布更接近文本的 Zipf 规律并显著提升 SpeechLM 在推理、识别与合成任务上的可学习性。",
+  "originalTitle": "Rethinking Speech Codecs: From Compression to Autoregressive Generative Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04237.pdf",
+  "readerTitle": "压缩导向的语音编码为何不适合直接做自回归建模：ARDDS 的正则与异构降采样重对齐",
+  "schemaVersion": 1
+}

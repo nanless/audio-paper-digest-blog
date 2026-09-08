@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04828",
+  "abstract": "Normal-to-Lombard (N2L) speech conversion aims to improve speech intelligibility in noisy environments by transforming normal speech into Lombard-style speech while preserving linguistic content, speaker identity, and speech quality. Despite recent progress, existing methods typically model the Lombard effect at the utterance level or the frame level, overlooking its hierarchical nature and its entanglement with both speaker identity and phoneme-level content. This limitation leads to Lombard leakage in speaker representations and incomplete separation between Lombard characteristics and linguistic content. In this work, we propose ProLombard, a structured multi-scale N2L framework that explicitly models the Lombard effect across utterance-, phoneme-, and frame-level representations. To address Lombard-speaker entanglement, we introduce an aligned speaker encoder (ASE) that suppresses Lombard leakage by aligning Lombard-speech speaker embeddings with their normal-speech counterparts. To achieve more complete Lombard-content disentanglement, we develop a phoneme-aware disentanglement and injection mechanism that extends conventional frame-level modeling to the phoneme level. Furthermore, we design a vector quantization (VQ)-median module that provides robust phoneme-level representations through VQ-based segmentation and median-frame-based aggregation. Extensive experiments on Mandarin and English Lombard datasets demonstrate that the proposed approach consistently improves speech intelligibility, Lombard similarity, and perceptual quality over baselines while maintaining speaker identity. These results highlight the importance of structured multi-scale modeling for effective N2L speech conversion.",
+  "abstractSha256": "5629644ce83e7e3e4d37192fd88b1d4fd5ac035bfe9d3f5be4f8d81689849322",
+  "arxivId": "2609.04828",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongyang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinmeng Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youqiang Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhong Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhongyuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiping Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对正常到伦巴德语音转换中风格与说话人、内容纠缠的问题，ProLombard 用对齐说话人编码、音素级去风格与再注入、VQ 中值下采样三层结构建模，在中英文数据上提升了可懂度和伦巴德相似度，代价是推理仍需目标噪声等级且与真实伦巴德仍有差距。",
+  "originalTitle": "ProLombard: Structured Multi-Scale Modeling for Normal-to-Lombard Speech Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04828.pdf",
+  "readerTitle": "把伦巴德效应拆成三层：说话人、音素与帧如何各管一摊",
+  "schemaVersion": 1
+}

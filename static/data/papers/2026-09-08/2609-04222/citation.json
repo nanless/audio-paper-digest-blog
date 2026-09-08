@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04222",
+  "arxivId": "2609.04222",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Denis Pavlov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ulanbek Abdurazakov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nursultan Bakashov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04222",
+  "originalTitle": "GEPARD - Generative, Prosody-aware, Autoregressive text-to-speech model for Realtime Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04222.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04236",
+  "arxivId": "2609.04236",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaojiang Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dawei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjie Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruijie Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunxiang Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaohui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zitong Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04236",
+  "originalTitle": "Robust Speech Emotion Recognition under Tone-Word Conflict: A Benchmark and Framework",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04236.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

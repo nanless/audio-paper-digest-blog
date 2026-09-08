@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04260",
+  "abstract": "Automatic Speech Recognition (ASR) systems are widely deployed in safety-critical settings but remain vulnerable to data-poisoning backdoor attacks. Existing ASR backdoors typically use phrase-level triggers paired with a fixed target sentence, creating strong artifacts (e.g., repeated transcripts or triggers placed in non-speech regions) that simple preprocessing can mitigate. We propose GhostWord, a word-level, time-localized ASR backdoor that uses codebooks mapping short ($\\approx$400\\,ms) acoustic triggers to target words. During poisoning, we inject a trigger into the forced-aligned time span of a chosen source word in the audio and replace only that word in the transcript, enabling precise semantic flips and composable sentence manipulation while avoiding many-to-one label artifacts. Across Common Voice (v23 English, v24 Lithuanian) and multiple backbones (Whisper-Small/Medium, MMS, SpeechT5), GhostWord achieves an average attack success rate of 89.3\\% and transfers across languages and models. Adapting optimization-based defenses (ABL, ANP, SAU, I-BAU) reveals a sharp robustness--accuracy trade-off: attack success drops from 89.3\\% to 29.1\\% while clean WER rises from 21.5\\% to 45.0\\%, consistent with our theoretical analysis showing that, in high-vocabulary models, backdoor suppression structurally tends to degrade clean performance. The source code is publicly available at this https URL",
+  "abstractSha256": "0ce33e69c01ca0a3e0691d94a7a755389d932dc339509c31ce6339d5ddfe5663",
+  "arxivId": "2609.04260",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mojtaba Nafez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mobina Poulaei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiarash Kiani Feriz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Ebrahim Mahdavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Mosayebi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Hossein Rohban"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "GhostWord 用约 400 毫秒触发音与目标词的码本做词级时间定位投毒，在 Common Voice 英、立陶宛语和多种骨干上报告约 89.3% 攻击成功率，而 ABL、ANP、SAU、I-BAU 等优化防御把成功率压到约 29.1% 时干净 WER 从约 21.5% 升到约 45.0%。",
+  "originalTitle": "GhostWord: A Fine-Grained Backdoor Attack on Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04260.pdf",
+  "readerTitle": "GhostWord：把后门藏进单词时间轴里，防御为何越洗越伤干净转写",
+  "schemaVersion": 1
+}

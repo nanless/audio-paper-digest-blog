@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05076",
+  "abstract": "At low bitrates, neural speech codecs have limited capacity to encode all information needed for high-quality re construction, especially when relying solely on speech-derived representations. To address this limitation, this paper proposes a Semantic- and Visual-enhanced Speech Codec (SVSC), which in corporates semantic and visual cues into the neural speech coding process. Specifically, built upon a mainstream neural speech cod ing architecture, SVSC introduces a semantic encoding-decoding branch and an image analysis-synthesis branch. It fuses deep semantic features with visual cues through a cross-attention mech anism, forming an auxiliary high-level representation enriched with contextual and articulatory information. To handle different inference scenarios, SVSC introduces two information-injection strategies based on the availability of auxiliary semantic and vi sual cues. When such cues are available, the fusion mode directly incorporates the auxiliary representations into the speech coding branch through feature concatenation; otherwise, the distillation mode transfers auxiliary information into the speech coding branch through knowledge distillation during training, enabling speech-only inference without additional inputs. Experimental results validate the effectiveness of incorporating semantic and visual cues, improving the ViSQOL score of reconstructed speech from 3.86 to 4.01.",
+  "abstractSha256": "af6240e1cb9f0cc08504a39acef50a2e63d8c7a800e189b8388098651e61ea35",
+  "arxivId": "2609.05076",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui-Peng Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao-Hang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen-Yuan Ning"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen-Hua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对低码率下仅靠语音表示难以保留上下文与发音信息的问题，论文在 MDCTCodec 上增加语义与图像两个辅助分支并用交叉注意力融合，以直接拼接的融合模式和蒸馏后纯语音推理的蒸馏模式组织实验，在 TaL80 上把 ViSQOL 从 3.86 提升到 4.01，代价是融合模式推理需要额外的唇部图像与预训练语义输入。",
+  "originalTitle": "Enhancing Neural Speech Coding with Semantic and Visual Cues",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05076.pdf",
+  "readerTitle": "低码率语音编解码装不下时：用语义与唇动补上高层信息",
+  "schemaVersion": 1
+}

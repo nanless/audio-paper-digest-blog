@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04902",
+  "arxivId": "2609.04902",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yusuke Oumi"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yuto Shibata"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan",
+        "Tokyo University of Science, Katsushika, Tokyo 125-8585, Japan"
+      ],
+      "name": "Go Irie"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Keihanna Science City, Kyoto 619-0237, Japan"
+      ],
+      "name": "Akisato Kimura"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yoshimitsu Aoki"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Mariko Isogawa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04902",
+  "originalTitle": "Sound-based Multi-Person 3D Pose Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04902.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

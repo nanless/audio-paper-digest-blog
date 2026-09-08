@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04250",
+  "arxivId": "2609.04250",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengqian Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwen Guo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04250",
+  "originalTitle": "Motion-Omni: End-to-End Joint Speech and Full-Body Motion for Spoken Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04250.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04240",
+  "abstract": "Full-duplex voice assistants must continuously listen while speaking, handling user interruptions under low-latency and resource-constrained streaming conditions. Existing end-to-end full-duplex models can compromise reasoning-related capabilities after speech-domain adaptation, whereas cascaded pipelines introduce extra inference overhead and handcrafted control logic. We propose TurnFSM, an LLM-based state prediction framework that internalizes turn control as explicit finite-state transitions, unifying streaming semantic VAD and utterance-level rejection. TurnFSM decomposes submission and rejection into a serial decision process, reducing multi-task interference while maintaining performance comparable to single-task models. We further introduce a first-order state transition mechanism that enforces the dependency on only the previous state during training, enabling compact inference with the standard causal mask and original LLM positional encoding while avoiding historical state-token accumulation and unnecessary step-by-step state generation. Experimental results show that TurnFSM consistently outperforms the binary-head baseline and remains competitive with task-specific models.",
+  "abstractSha256": "77af7f3be7690ca15806e553db56397e7d45d22c9447e35d46eb789a4095ebc6",
+  "arxivId": "2609.04240",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiwei Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianjiao Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiaochu Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naijun Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshuai Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunfei Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "TurnFSM 把语义 VAD 与 utterance 级拒绝写成先提交后接受或拒绝的有限状态转移并用一阶依赖实现流式预测，在内部语义 VAD 上报告成功率 82.41% 与成功延迟 80.9 ms，在拒绝上报告 FAR 3.35% 与 FRR 16.04%，代价是仍需两阶段对齐与大模型推理开销。",
+  "originalTitle": "TurnFSM for Full-Duplex Dialogue System: Internalizing State-Machine Logic for Streaming Semantic Voice Activity Detection and Utterance-Level Rejection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04240.pdf",
+  "readerTitle": "把级联状态机装进大模型：TurnFSM 如何串行做提交与拒绝",
+  "schemaVersion": 1
+}

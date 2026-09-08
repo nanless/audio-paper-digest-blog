@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04452",
+  "abstract": "Modern misinformation is often heard before it is read, yet fact-checking systems are still evaluated mainly on clean written claims. Spoken dialogue remains different even when systems operate on transcripts: claims may be distributed across speakers and turns, depend on prior context, and become harder to verify when Automatic Speech Recognition (ASR) errors distort the available text. Prior spoken dialogue fact-checking resources are small, English-centric, or focused on annotation rather than end-to-end benchmarking, leaving no large multilingual benchmark with paired speech and turn-level labels. We introduce TRILOGUE (TRIlingual spoken diaLOGUE fact-checking), a large-scale trilingual benchmark of source-grounded spoken dialogues in English, Russian, and Kazakh. It contains nearly 12K dialogues, 187K turns, and 390 hours of paired audio with ASR transcripts and word-level timestamp alignments across all three languages, including nearly 5K human-recorded Russian and Kazakh dialogue files. TRILOGUE supports claim check-worthiness detection, source-article evidence retrieval, and claim verification with claim-only, gold-evidence, and retrieved-evidence inputs. Baselines show that ASR degradation and cross-lingual transfer remain challenging, especially for Kazakh, while retrieved source evidence substantially narrows the gap to gold-evidence verification.",
+  "abstractSha256": "1fa8e1d28ca64edcd2d14c0007781f6d893e8758c6ba3ff722e742024a4a85b1",
+  "arxivId": "2609.04452",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前25%",
+    "score": 8.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Chaewan Chun"
+    },
+    {
+      "affiliations": [
+        "Satbayev University, Kazakhstan"
+      ],
+      "name": "Meruyert Aristombayeva"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Jiyoung Choi"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Mahjabin Nahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Delvin Ce Zhang"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Dongwon Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对播客式多轮对话中声称分散与 ASR 噪声的核查难题，TRILOGUE 以源文章可追溯的英俄哈三语对话与配对音频构建受控基准，显示仅看声称的验证最难、加入源证据后大幅回升，而哈萨克语的识别与合成瓶颈仍是主要代价。",
+  "originalTitle": "TRILOGUE: A Trilingual Spoken Dialogue Fact-Checking Benchmark with Evidence and Paired Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04452.pdf",
+  "readerTitle": "听见的对话如何被核查：TRILOGUE 把多轮声称钉回源文章与配对音频",
+  "schemaVersion": 1
+}

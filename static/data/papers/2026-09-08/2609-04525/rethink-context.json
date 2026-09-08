@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04525",
+  "abstract": "Existing Conditional Flow Matching (CFM) formulations describe transport progress using an explicit interpolation coordinate, commonly interpreted as time, assuming that a single global variable adequately represents a sample&#39;s position along the generative trajectory. In restoration tasks, however, transport progress is sample-dependent because the initial distribution may exhibit varying statistical dependencies with the target distribution. Thus, samples at the same interpolation coordinate can differ substantially in degradation level, distance to the target distribution, and restoration difficulty. We investigate whether signal representations learned by discriminatively trained models provide a meaningful description of generative transport state in CFM-based restoration. Through systematic latent-space analysis, we show that discriminative representations organize according to degradation severity and follow a consistent trajectory toward the clean-data manifold during generation. Motivated by these observations, we introduce the Discriminative Flow-State Hypothesis, which posits that discriminative representations encode a transport state governing generative restoration. Based on this hypothesis, we propose Discriminative Flow Matching, which conditions the Flow-Matching velocity field on Discriminative Flow-State Representations rather than explicit time coordinates. Experiments on speech enhancement and image denoising show that these representations characterize restoration progress, enable adaptive inference, and consistently outperform CFM and diffusion-related baselines. Our findings suggest that discriminative representations provide an effective state-aware alternative to explicit time conditioning and offer a novel perspective on the relationship between discriminative and CFM-based generative modeling.",
+  "abstractSha256": "dcfbf97e71b8afeb42e0cde8deb644366369455577661fed17862db6c0152b9d",
+  "arxivId": "2609.04525",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrishti Saha Shetu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emanuël A. P. Habets"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Brendel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对修复任务中全局时间 t 无法刻画样本相关退化程度的问题，提出以冻结判别编码器表示替代时间条件来驱动流匹配速度场，在语音增强上报告了可复核的提升，并以额外编码器开销和自适应推理换取计算节省。",
+  "originalTitle": "Discriminative Flow Matching: Beyond Time-Conditioning in Generative Restoration via Flow-State Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04525.pdf",
+  "readerTitle": "不用时间刻度做修复：判别表示如何指示流匹配的剩余路程",
+  "schemaVersion": 1
+}

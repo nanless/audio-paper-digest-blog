@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04455",
+  "arxivId": "2609.04455",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zexin Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon King"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04455",
+  "originalTitle": "Brain2Speech-Net: Intelligible, Real-Time Brain-to-Speech Synthesis Without Text Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04455.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

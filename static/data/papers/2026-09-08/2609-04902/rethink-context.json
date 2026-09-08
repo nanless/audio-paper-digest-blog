@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04902",
+  "abstract": "Can we recover the 3D poses of multiple people using only sound? This paper presents the first attempt to estimate multi-person 3D poses solely from acoustic signals. Estimating the poses of multiple individuals using acoustic signals is inherently challenging due to the superposition of motion-dependent signal variations. Unlike single-person scenarios, the presence of multiple subjects leads to overlapping acoustic signatures, making it difficult to attribute specific signal changes to an individual&#39;s pose. Furthermore, the complexity is compounded by inter-person reflections, which introduce intricate propagation delays that obscure the temporal motion-acoustic relationship. To address these issues, we propose SoundMHPE (Sound-based Multi-person Human Pose Estimator), a novel encoder-decoder framework consisting of two key components. First, the Acoustic Multi-scale Encoder captures diverse temporal and fine-grained frequency features to isolate subtle acoustic signatures from complex, overlapping signals. Second, the Temporal Pose Decoder employs an attention mechanism to disentangle multi-person information across successive frames. By jointly accounting for temporal dynamics and inter-person dependencies, this component precisely reconstructs frame-wise individual poses. To validate our approach, we constructed the 6-hour Acoustic Multi-person Pose (AMP) dataset consisting of 432K synchronized frames of multi-person pose and acoustic data, and demonstrated that our SoundMHPE outperforms baseline models. Project page: this https URL",
+  "abstractSha256": "af09c0b2816b4427a3a0d10db14da3a2f34cd92b1fcdce5a8777d33d8001cea9",
+  "arxivId": "2609.04902",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yusuke Oumi"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yuto Shibata"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan",
+        "Tokyo University of Science, Katsushika, Tokyo 125-8585, Japan"
+      ],
+      "name": "Go Irie"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Keihanna Science City, Kyoto 619-0237, Japan"
+      ],
+      "name": "Akisato Kimura"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Yoshimitsu Aoki"
+    },
+    {
+      "affiliations": [
+        "Keio University, Yokohama, Kanagawa 223-8522, Japan"
+      ],
+      "name": "Mariko Isogawa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多人运动导致声学特征叠加与互反射延迟混叠的问题，SoundMHPE 用多尺度 STFT 编码器与每帧每人独立查询的时序解码器在 6 小时 AMP 数据集上实现多人 3D 姿态估计，并在 MPJPE 等指标上优于声学与 WiFi 基线，代价是需在受控室内采集与同步动捕数据。",
+  "originalTitle": "Sound-based Multi-Person 3D Pose Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04902.pdf",
+  "readerTitle": "多人声场叠加下如何用声音同时还原三维姿态：SoundMHPE 的多尺度与时序解耦",
+  "schemaVersion": 1
+}

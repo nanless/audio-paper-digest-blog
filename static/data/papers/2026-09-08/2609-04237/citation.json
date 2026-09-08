@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04237",
+  "arxivId": "2609.04237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Yazheng Yang"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Yao Qiu"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Hui Su"
+    },
+    {
+      "affiliations": [
+        "†\\dagger The University of Hong Kong, ‡\\ddagger Meituan Inc.China"
+      ],
+      "name": "Qi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04237",
+  "originalTitle": "Rethinking Speech Codecs: From Compression to Autoregressive Generative Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04237.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

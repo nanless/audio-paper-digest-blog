@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04867",
+  "arxivId": "2609.04867",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Yuchen Sun"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Qian Yang"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Jun Wang"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Detai Xin"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Guoqiao Yu"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Guanglu Wan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Qi Jia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04867",
+  "originalTitle": "PRISM-Bench: An Audio-Centric Diagnostic Benchmark for Text-to-Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04867.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

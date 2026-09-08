@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04241",
+  "abstract": "Recent audio-language models are increasingly evaluated on recognizing, describing, and reasoning about audio, but expert-facing applications require a different capability: producing feedback that identifies problems and suggests corrective actions grounded in the input. We introduce VocalCoachBench, a benchmark for evaluating audio-language models on expert vocal coaching feedback for singing. VocalCoachBench contains 515 recordings annotated by 18 professional vocal trainers, yielding 1,056 expert submissions and 12,051 atomic coaching claims. It comprises a same-song subset for controlled comparison and a diverse-song subset for segment-grounded feedback across varied songs and recording conditions. To accommodate the open-ended nature of expert feedback, VocalCoachBench sep- arates deterministic structured targets from claim-based assessment of free-form diagnosis and corrective guidance. Human annotation analysis shows that expert agreement varies strongly with label granularity, motivating hierarchical structured metrics and claim-based evaluation of open-ended feedback. Experiments with 12 recent audio-language models reveal a consistent gap: while models can compare performances and identify broad issue domains in free-form feedback, Top-3 fine-grained issue-label identification remains below label-prior baselines and strict diagnosis alignment stays below 7%. To our knowledge, VocalCoachBench pro- vides the first public testbed for evaluating audio-grounded expert feedback for singing, moving audio-language evaluation beyond description toward analytic feedback.",
+  "abstractSha256": "0536fc8de343fd4b4f00f51a890d4a8016915a9c3aa4e695f01ae48e4acba31c",
+  "arxivId": "2609.04241",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hayeon Bang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hounsu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonil Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juhan Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对歌唱音频的专家式指导反馈问题，VocalCoachBench 用同曲可控对比与异曲多样场景的双子集和原子主张拆分来构造可复现评估，12 个音频语言模型的实测显示成对排序可行但细粒度 Top-3 识别与严格诊断命中率仍低于多数类基线且严格命中低于 7%。",
+  "originalTitle": "VocalCoachBench: Benchmarking Audio-Language Models on Expert Feedback for Singing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04241.pdf",
+  "readerTitle": "从描述到可改的反馈：VocalCoachBench 为何把声乐指导拆成结构化判定与主张级评估",
+  "schemaVersion": 1
+}

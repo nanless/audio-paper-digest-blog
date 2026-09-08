@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04288",
+  "abstract": "Voice AI applications are gaining popularity as advances in large language models (LLMs) enable more natural and accessible spoken interactions. Serving these applications requires accounting not only for what users say, but also for how they speak (e.g., speaking rate) and the conditions under which their audio is captured and transmitted (e.g., background noise and packet loss). However, existing LLM systems represent conversation context as a flat, growing sequence of messages, leaving voice-specific context implicit in the audio. As a result, they can generate responses that are poorly aligned with user preferences, degrade interaction quality under adverse environmental conditions, and incur high costs over long voice sessions. We present llmovoice, a context-management middleware that explicitly models voice context and orchestrates its use. At each turn, llmovoice constructs a bounded voice context from the current user input, relevant interaction history, and explicit paralinguistic and environmental states. It then uses the serving LLM to reason over this context and generate runtime directives that guide how the system responds. We evaluate llmovoice on real-world voice applications and benchmarks. It reduces speaking-rate alignment error by 52.4%, lowers the false-interruption rate from 46.0% to 0.9% under packet loss, and reduces model usage cost by 79.2%. For long sessions, llmovoice reduces per-turn cost by up to 24.9 times while retaining up to 98.7% of baseline answer quality.",
+  "abstractSha256": "33478b520f46979e7312c5306bc5a7088f5cc1bf15a47b063dd59ca81f138a81",
+  "arxivId": "2609.04288",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前25%",
+    "score": 8.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Global College, Shanghai Jiao Tong University",
+        "AgenticSys"
+      ],
+      "name": "Linyi Jiang"
+    },
+    {
+      "affiliations": [
+        "AgenticSys"
+      ],
+      "name": "Silvery D. Fu"
+    },
+    {
+      "affiliations": [
+        "Global College, Shanghai Jiao Tong University"
+      ],
+      "name": "Yifei Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "llmovoice 把语音交互的上下文拆成语义、副语言与环境三状态，用 VoicePage/VoiceThread 组织记忆并在预算内投影到上下文窗口，再让服务模型联合推理生成运行时指令，在丢包下把误打断率从 46.0% 降至 0.9%、每轮成本最高降低 24.9 倍，代价是编排调用时约 790 ms 的额外决策延迟与摘要压缩带来的细节丢失。",
+  "originalTitle": "Scalable Context Orchestration for Serving LLMs Over Voice",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04288.pdf",
+  "readerTitle": "语音上下文不能只存文字：用有界编排同时管住说什么、怎么说和何时打断",
+  "schemaVersion": 1
+}

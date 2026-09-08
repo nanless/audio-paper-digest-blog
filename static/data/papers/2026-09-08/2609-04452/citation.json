@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04452",
+  "arxivId": "2609.04452",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Chaewan Chun"
+    },
+    {
+      "affiliations": [
+        "Satbayev University, Kazakhstan"
+      ],
+      "name": "Meruyert Aristombayeva"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Jiyoung Choi"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Mahjabin Nahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Delvin Ce Zhang"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Dongwon Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04452",
+  "originalTitle": "TRILOGUE: A Trilingual Spoken Dialogue Fact-Checking Benchmark with Evidence and Paired Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04452.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

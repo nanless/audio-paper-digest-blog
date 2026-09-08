@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04256",
+  "arxivId": "2609.04256",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Eugenia Kim"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Bolor-Erdene Jagdagdorj"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Dina Pekelis"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Leah Zulas"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Amanda Minnich"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04256",
+  "originalTitle": "Probing Warmth-Mediated Harm in Speech-Enabled LLMs for Mental-Health Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04256.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

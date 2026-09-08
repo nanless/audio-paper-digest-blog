@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04226",
+  "abstract": "The Griffin-Lim algorithm has been a seminal contribution for phase reconstruction from amplitude spectrograms, however, requiring (infinitely) high algorithmic delay. Its low-delay variant suffers in speech quality. Recent (generative) neural network methods improve on speech quality still at medium to high algorithmic delay, but often they are complex and optimized only for one specific input representation. We build upon an efficient low-delay speech vocoder and propose EffVOC, which supports synthesis of wideband (WB) or fullband (FB) speech from either amplitude spectrum or Mel coefficient inputs. We evaluate both input representations across multiple model sizes in a unified framework and compare against state of the art. Results show that our proposed low-delay (20 ms vs. 32 ms or more) efficient approach marks a new SOTA by achieving top-ranked subjective MOS scores (WB: 4.17/4.15, FB: 4.14/4.11) for amplitude spectrum/Mel representations, very close to ground truth.",
+  "abstractSha256": "19b6af0a23a5db93122c7ed14d4593d6f9f4f829f4e75226985544a9714710ed",
+  "arxivId": "2609.04226",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Renzheng Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Welker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tim Fingscheidt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "EffVOC 用因果卷积加 LSTM 的上采样声码器从幅度谱或 Mel 系数直接重建宽带与全频带波形，在 20 毫秒算法延迟下宽带 MOS 达到 4.17 与 4.15、全频带达到 4.14 与 4.11，代价是更高帧率带来的计算量与对短窗高重叠的依赖。",
+  "originalTitle": "EffVOC: Low-Delay Efficient Speech Waveform Reconstruction from Spectral Representations Without Phase",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04226.pdf",
+  "readerTitle": "无相位也能低延迟重建语音：EffVOC 把窗长钉在 20 毫秒",
+  "schemaVersion": 1
+}

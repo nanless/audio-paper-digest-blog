@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04404",
+  "arxivId": "2609.04404",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Hamees Sayed"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Apoorv Singh"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Kumar Aman"
+    },
+    {
+      "affiliations": [
+        "Smallest AI"
+      ],
+      "name": "Akshat Mandloi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04404",
+  "originalTitle": "The Anatomy of an ASR Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04404.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

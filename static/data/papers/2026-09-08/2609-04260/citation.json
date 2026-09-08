@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04260",
+  "arxivId": "2609.04260",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mojtaba Nafez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mobina Poulaei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiarash Kiani Feriz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Ebrahim Mahdavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Mosayebi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammad Hossein Rohban"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04260",
+  "originalTitle": "GhostWord: A Fine-Grained Backdoor Attack on Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04260.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

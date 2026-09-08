@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04455",
+  "abstract": "The loss of speech limits communication for individuals with paralysis. Restoring speech by synthesizing it directly from neural activity is challenging: intracortical data are scarce and lack aligned targets, so most systems rely on cascaded neural-to-text-to-speech pipelines that add latency and propagate errors. We present Brain2Speech-Net, among the first single-stage frameworks to remain intelligible under limited data while removing intermediate text decoding. A differentiable phoneme bottleneck preserves linguistic structure without explicit text decoding. A lightweight deep-HMM aligner then maps this bottleneck to contextual phoneme representations in a TTS latent space. It learns monotonic alignment between neural recordings and phoneme segments without frame-level supervision, inheriting strong acoustic priors for data-efficient training. On an intracortical dataset, Brain2Speech-Net achieves strong intelligibility in objective and listening tests while running faster than real time. Unlike cascaded systems that incur high latency and direct speech-unit models that lack intelligibility, it delivers both intelligible and real-time speech.",
+  "abstractSha256": "6108c3ed2ff25353cb4b0a6a23277d411d6c1ffad477de891c2c4af2cbd26459",
+  "arxivId": "2609.04455",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zexin Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon King"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对尝试发声下无对齐声学目标且数据只有约 5 小时伪语音的问题，Brain2Speech-Net 用可微音素瓶颈加深度隐马尔可夫模型对齐到预训练语音合成隐空间做单遍合成，闭集语音词错率做到 0.068 并以约 0.5 实时因子运行，代价是开集词错率升至 0.472 且仍依赖合成伪语音目标。",
+  "originalTitle": "Brain2Speech-Net: Intelligible, Real-Time Brain-to-Speech Synthesis Without Text Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04455.pdf",
+  "readerTitle": "不用先转文字：音素瓶颈加单调对齐如何把尝试发声的脑信号直接变成可懂语音",
+  "schemaVersion": 1
+}

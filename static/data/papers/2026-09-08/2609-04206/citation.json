@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04206",
+  "arxivId": "2609.04206",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vignesh Ethiraj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashwath David"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04206",
+  "originalTitle": "Auditing Bias and Safety in Voice AI Customer Care",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04206.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

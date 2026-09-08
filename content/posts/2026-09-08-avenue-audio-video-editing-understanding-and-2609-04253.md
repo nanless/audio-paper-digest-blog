@@ -1,0 +1,350 @@
+---
+title: "AVENUE: Audio-Video EditiNg Understanding and Evaluation"
+date: 2026-09-08
+draft: false
+tags: [音视频生成, 基准设计, 基准测试, 数据集, 音视频]
+categories: [论文速递]
+description: "AVENUE 用 1291 个源片段和 7957 条指令把音频、视频与音视频耦合编辑分开考核，并用样本级四维评测揭示现有三类范式在保持未编辑模态上普遍失效，且反演式音频模型在保真与可编辑性间最均衡。"
+hiddenInHomeList: true
+paper_digest_pipeline_owned: true
+paper_digest_page_type: paper
+paper_digest_arxiv_id: "2609.04253"
+paper_digest_workbench_contract: "researcher-workbench-v1"
+paper_digest_reader_title: "AVENUE：当提示只改一个模态时，模型能否守住另一个模态"
+paper_digest_original_title: "AVENUE: Audio-Video EditiNg Understanding and Evaluation"
+paper_digest_arxiv_version: null
+paper_digest_arxiv_versioned_id: null
+paper_digest_arxiv_abs_url: "https://arxiv.org/abs/2609.04253"
+paper_digest_arxiv_pdf_url: "https://arxiv.org/pdf/2609.04253.pdf"
+paper_digest_primary_task: "音视频生成"
+paper_digest_taxonomy_contract: "paper-taxonomy-flat-tags-compat-v1"
+paper_digest_taxonomy_selection_contract: "paper-taxonomy-selection-v1"
+paper_digest_taxonomy_registry_version: "paper-taxonomy-v1"
+paper_digest_taxonomy_registry_sha256: "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778"
+paper_digest_taxonomy_concepts: [{"facet":"task","id":"task.av-generation","label":"音视频生成"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"},{"facet":"artifact","id":"artifact.dataset","label":"数据集"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
+paper_digest_primary_method: "基准设计"
+paper_digest_score: 8.0
+paper_digest_rank_bucket: "前25%"
+paper_digest_document_type: "数据集与基准"
+paper_digest_one_sentence: "AVENUE 用 1291 个源片段和 7957 条指令把音频、视频与音视频耦合编辑分开考核，并用样本级四维评测揭示现有三类范式在保持未编辑模态上普遍失效，且反演式音频模型在保真与可编辑性间最均衡。"
+paper_digest_authors: [{"affiliations":["Ulsan National Institute of Science and Technology (UNIST)"],"name":"Hayeon Kim"},{"affiliations":["Ulsan National Institute of Science and Technology (UNIST)"],"name":"Yoojin Jang"},{"affiliations":["Ulsan National Institute of Science and Technology (UNIST)"],"name":"Jaejun Yoo"}]
+paper_digest_abstract_sha256: "19aefa6ddd6020b28874f15ba943eb20c46de85f5542d9e639abac1e983cbb35"
+paper_digest_sidecars: {"citation.bib":{"sha256":"938920395e8ffb3d8a80b07ac7b8eb808bc19e3e30d86f7a1c70a405b308c97e","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04253/citation.bib"},"citation.json":{"sha256":"fc8c1189e2fc62a5464fa9fec794306d852414f667ce772e69b44c144f5a1c6a","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04253/citation.json"},"citation.ris":{"sha256":"3e50f180de385330e80f0648c43adff4ffde06615f2831700750b1bc3df4b430","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04253/citation.ris"},"rethink-context.json":{"sha256":"8fd67e4bfc07b02bc169b232fba90918e1b52602c89d4d51bfee4ec6485aeb42","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04253/rethink-context.json"}}
+paper_digest_api_reader_contract: "beginner-researcher-v3"
+paper_digest_api_reader_article_sha256: "63a94113e060536ea3edeb584f0d1849dfa051c887c0413f728490e429f2eb38"
+paper_digest_api_reader_plan_sha256: "d7d8e106f845cc6b181480f67466d28d3858bfe14d821b8ac48297c856b4530b"
+paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
+paper_digest_api_reader_source_bindings_sha256: "8b86e7f73922c52d4ca4b710758c8dff6a25e1d74ad5d058f99e2a4f18999e0f"
+paper_digest_api_reader_source_table_count: 6
+paper_digest_api_reader_source_formula_count: 3
+paper_digest_api_reader_structured_artifacts_sha256: "4305c00a49e4ee7048faa41a851bb8c19e0542eb14897f821db278816924f51b"
+paper_digest_api_reader_author_identity_contract: "api-reader-author-identity-v1"
+paper_digest_api_reader_author_identity_sha256: "dc29cbb13916616d77eaad55bbe388f9e3b157c9c8f7a8cbb966e4c2330fac33"
+paper_digest_api_reader_author_count: 3
+paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity-v1"
+paper_digest_api_reader_resource_identity_sha256: "136d613ba874f0299738d8e189c1b17dfaa8b0c9da18aeb82d7662cb8f0ba1de"
+paper_digest_api_reader_resource_count: 4
+paper_digest_api_reader_figure_persistence: "ephemeral-no-persisted-figure-assets-v1"
+paper_digest_api_reader_decision_projection: "api-reader-decision-projection-v2"
+---
+
+# 📄 AVENUE：当提示只改一个模态时，模型能否守住另一个模态
+
+> 英文题目：*[AVENUE: Audio-Video EditiNg Understanding and Evaluation](https://arxiv.org/abs/2609.04253)*
+
+> 标签：#音视频生成 | #基准设计 | #基准测试 | #数据集 | #音视频
+>
+> 评分：**8.0/10** | 创新 1.5/2 | 技术严谨 1.2/1.5 | 实验充分 1.2/1.5 | 清晰度 0.8/1 | 影响力 1/1.5 | 开源 1/1.5 | 可复现 0.3/0.5 | 工程/实践 1/1.5
+
+
+## 👥 作者与机构
+
+- Hayeon Kim：Ulsan National Institute of Science and Technology (UNIST)
+- Yoojin Jang：Ulsan National Institute of Science and Technology (UNIST)
+- Jaejun Yoo：Ulsan National Institute of Science and Technology (UNIST)
+
+## 📌 核心摘要
+
+音视频编辑的输入为源视频、源音频与文本提示，输出为按提示修改后的音视频，难点在于模型需仅从提示推断模态选择性编辑范围并在保留非目标模态的同时精准修改目标模态。第一步负责从VGGSound测试集经音视频质量与编辑适宜性两级过滤提取高质量片段并输出1,291个源片段，该输出被传递至下一步的指令生成。第二步用于按8类语义类别的类别感知模板调用Gemini-3-flash生成12类编辑指令并经人工校验输出7,957条样本，该样本集被送入下一步的评测构建。第三步负责为每样本标注what_changed与what_preserved作为伪真值并融合Qwen3-Omni实现编辑准确率、模态选择性、感知质量与音视频一致性的模态感知评测，其结果进入下一步的范式对比分析。与仅覆盖音视频耦合替换且评测模态盲、样本无关的既有基准相比，该框架显式分离音频目标、视频目标与耦合编辑并引入样本特定的选择性可控性度量，实际意义在于暴露跨模态无意篡改的根本权衡。在论文报告的评测设置下，本文方法相较RAVE++ZETA的Edit Accuracy指标从79.7降至64.1，方向为更低。适用边界是：结论仅在约10秒短片、VGGSound来源及所测联合、序列、分离三类范式内验证，长视频时序一致性与祈使式指令等场景尚未覆盖。成本方面，原文披露推理成本为AvED约20分钟/样本、RAVE约35分钟/样本，训练与部署成本未系统披露。
+
+## 🔗 开源与复现资源
+
+- 数据相关资源：<https://huggingface.co/datasets/AVENUE-dataset/AVENUE> — 暂时无法访问
+
+- 数据相关资源：<https://creativecommons.org/licenses/by/4.0/> — 链接可访问（HTTP 200）
+
+- 第三方资源：<https://creativecommons.org/licenses/by/4.0/> — 链接可访问（HTTP 200）
+
+- 第三方资源：<https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2> — 暂时无法访问
+
+可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
+
+## 🧭 深度解读
+
+### 输入是什么，输出是什么，什么必须保留
+
+论文研究的输入是同步的音视频片段与一条自然语言目标提示，输出是按提示编辑后的音视频。任务要求模型仅从提示推断模态选择性编辑范围：判断该改什么、该保哪个模态以及改动强度。
+
+论文用 3 个具体情形说明这种不对称：给场景添加雷声需要大幅改变音频而视频完全不变，把场景转为卡通风格需要彻底改变视觉而音频不变，把场景搬到雪地则音视频需协同变化。评估因此必须同时回答两类问题：目标模态是否按意图改变，非目标模态是否保持不变。
+
+现有评测常对所有样本用固定提示做整体合理性判断，无法区分是否泄露到不应改动的模态，也缺乏每样本应保留内容的显式依据。这使得联合、时序、分离 3 类架构的行为差异难以被揭示。
+
+为让初学者建立直观，下面的图先把 3 类编辑与 4 维评测对应起来，再把 3 类架构的连接方式并排展示，便于后续把基准规模、分类设计与评测维度联系到具体可操作的检查上。
+
+> **看图路径：** 1. 先看图 a 左侧音频目标、右侧视频目标、中间音视频耦合三类提示对应的待评问题；2. 再看图 b 中分离、时序、联合三类架构的音频与视频分支连接方式差异；3. 对照图 a 的四个评测维度与图 b 的架构，思考哪类架构更易泄露到非目标模态
+
+> **论文图 1（像素未随页面持久化）**：Figure 1: Overview of AVENUE. (a) AVENUE evaluates this capability through a modality-aware and sample-specific framework with four metrics. (b) Existing AV editing models—joint, sequential, and separated—struggle to infer modality-selective edit-scope from the prompt alone.
+
+*论文图 1。原论文 Figure 1:：“Overview of AVENUE. (a) AVENUE evaluates this capability through a modality-aware and sample-specific framework with four metrics.”。*
+
+图 a 把评测框架按音频目标、视频目标与音视频耦合 3 类组织，每类对应不同的待检问题：音频目标需检查音频是否加入雷声且视频是否保持，视频目标需检查是否施加卡通风格且音频是否保持，耦合类需同时检查雪景与雪声是否协同且自然。图 b 把分离、时序、联合 3 类模型画成音频分支与视频分支的不同连接方式，分离为两条独立路径，时序为视频先编辑再以编辑后视频为条件合成音频，联合为单一框架内双向交互。该图的作用是把后文的四指标与三范式对比锚定到可复述的操作层面：看到提示时，先判断所属类别，再明确应改与应保的字段，最后按对应模态送入评测器。
+
+### 同类工作在输入、目标与评测上如何对照
+
+单模态编辑在视觉与音频各自已有基于扩散模型的文本引导方法，能够在保持源结构的同时按提示修改内容。但独立地对音视频两条流应用会破坏音视语义一致性，这正是统一音视频编辑的动机。
+
+统一框架在如何强制跨模态一致上分化：有的通过共享或耦合的潜在引导联合优化音视频，有的采用时序范式先改 1 模态再以其为条件改另 1 模态。在基准层面，已有音视频编辑基准在规模与多样性上受限。
+
+按论文对比，OAVE 约 1100 条、VGG-Edit 450 条、AvED 110 条且主要覆盖发声对象替换，编辑类型与模态覆盖较窄，未系统覆盖音频目标与视频目标两类单模态编辑。AVENUE 在同一对比中报告 7957 条编辑实例、12 类细粒度编辑类型并同时覆盖音频、视频与音视频耦合，数据可公开获取。
+
+在评测层面，现有自动化评测多基于视觉语言模型或多模态大模型的固定评分模板，辅以少量上下文示例校准，输入与提示对所有样本保持不变。这种设计在音视频场景下呈现两点不足：一是模态盲，对整体是否合理打分但不显式度量非目标模态是否被保持；二是样本无关，缺乏每样本应保留内容的接地依据，难以判定细微的非预期改动是否构成失败。
+
+AVENUE 的差异在于引入每样本人工校验的 what_changed 与 what_preserved 作为伪真值，并使评测器的输入模态与编辑类别对齐。从而在同一提示下同时检验改对与保住。
+
+### 要解决的判定问题与可核对的成功标准
+
+核心判定问题是：给定源音视频与目标提示，模型能否在不依赖额外模态标签的前提下，推断出应编辑的模态范围并执行。成功标准被分解为四项可核对的维度：编辑准确率衡量目标模态是否按 what_changed 实现，模态选择性衡量非目标模态是否按 what_preserved 保持。
+
+另外两项为感知质量衡量编辑后输出本身的自然度与无伪影程度，音视频一致性衡量编辑后音视频在语义与时序上的协同。为使标准可复述，论文为每条样本配备 what_changed 与 what_preserved 两字段，分别作为编辑准确率与模态选择性的接地依据。
+
+二者互斥可分离，允许出现改对但泄露的情形。评测时按类别对齐输入模态：音频目标仅送音频、视频目标仅送视频、耦合类送音视频，避免与任务无关的模态引入偏置。
+
+空编辑条件进一步提供基线探针：当源提示与目标提示相同时，理想模型应输出与输入不可区分。任何偏离即视为无意跨模态干扰，与是否改对无关。
+
+### AVENUE 的基准与评测如何组织
+
+AVENUE 由两部分组成：基准与评测框架。基准基于 VGGSound 测试集构建，保留 1291 个唯一源片段与 7957 条编辑指令，覆盖音频目标 4 类、视频目标 3 类、音视频耦合 5 类共 12 类细粒度编辑。
+
+评测框架为模态感知且样本级的 4 维体系，依托每样本人工校验的注释对自动化多模态大模型评测器进行接地。在着手细节前，先用流程图把从分类、过滤到类别感知指令生成与多维评测的完整路径串起来，明确每一步的输入、产物与校验点。
+
+> **看图路径：** 1. 沿图 a 从输入视频到类别感知模板再到 Gemini-3-flash 与人工校验的流程；2. 查看图 b 中 A1 音频添加示例的源描述、目标提示、what_changed 与 what_preserved 字段；3. 对照图 c 中 QWEN3-Omni 对编辑准确率、模态选择性、感知质量、音视频一致性的输入与打分形式
+
+> **论文图 2（像素未随页面持久化）**：Figure 2: AVENUE Bench. The pipeline consists of three components: (a) category-aware instruction generation using Gemini-3-flash with human verification, producing structured edit prompts across 12 taxonomy categories spanning audio-targeted, video-targeted, and AV-coupled edits; (b) instruction examples with explicit target prompt; and (c) MLLM-as-a-Judge evaluation via QWEN3-Omni, assessing four dimensions—Edit Accuracy, Modality Selectivity, Perceptual Quality, and AV Consistency.
+
+*论文图 2。原论文 Figure 2:：“AVENUE Bench. The pipeline consists of three components: (a) category-aware instruction generation using Gemini-3-flash with human verification, producing structured edit prompts…”。*
+
+图 a 展示类别感知指令生成：输入视频与音频标签先按 8 个语义类别归类，再经由 Gemini-3-flash 按该类别允许的编辑类型生成具体指令。每条指令包含源描述、目标提示、what_changed 与 what_preserved，生成后经人工校验过滤含糊或已存在于源中的指令。
+
+图 b 给出跨 3 类模态的指令示例，强调目标提示是完整场景描述而非仅增量。图 c 展示以 QWEN3-Omni 为评测器的 4 维打分：编辑准确率与感知质量、音视频一致性采用 1 到 5 的李克特量表并结合源与编辑后输出或仅编辑后输出，模态选择性则用五道通用是否题加一道基于 what_preserved 的样本特定是否题计分。该图把数据构造与评测实现对应到可执行动作：按类别选择模板、按字段检查改与保、按类别对齐评测器输入模态。
+
+### 分类、过滤与四维评测的实现细节
+
+分类与过滤构成数据管线的质量门控。语义上将 VGGSound 标签归为乐器、动物、人类、车辆与引擎、家用与工具、运动与休闲、自然与环境、武器与爆炸 8 类，排除语音与难以归类的其他类以避免语言内容与歧义。
+
+质量上分 2 个阶段：先用 ImageBind 与 CLAP 计算音视频相似度与音频语言对齐，阈值均设为 0.3 以剔除音视不相关的片段；再施加可编辑性过滤，包括 10 帧均匀采样的 CLIP 帧间相似度均值低于 0.75 视为多场景拼接、YOLOv8n 在 10 帧中 5 帧及以上检测到 3 人及以上视为人物过密、主导物体类别在 10 帧中至少 9 帧出现视为 ROI 一致、连续帧 SSIM 均值高于 0.85 视为近静态，剩余片段再经人工复核确保无静态内容。
+
+分类决定编辑类型的可用性。论文定义类别感知的编辑模板，例如动作变化仅对人类片段有意义，天气变化适用于自然与动物而非乐器，模板列出每类允许的编辑子类型，避免生成语义不一致的指令。指令生成对每段保留片段按允许类型逐一产生具体指令，并过滤与有效分类不符的含糊输出。
+
+**模态选择性编辑范围 × 样本级伪真值：** 模态选择性编辑范围指模型仅从提示推断该改哪个模态、该保哪个模态的能力，样本级伪真值指每条样本由人工校验的 what_changed 与 what_preserved 字段，它们把该改什么和必须保留什么写成可核对的判定依据，二者搭配后评测器才能对同一提示做模态感知的针对性打分，而不是用通用模板一概而论。
+
+评测的 4 个维度分别实现为：编辑准确率以 what_changed 为条件，输入源与编辑后输出，按 1 到 5 打分；模态选择性以 what_preserved 为条件，输入源与编辑后输出，用六道是否题计分，其中五道为通用保持检查，一道为基于 what_preserved 的样本特定检查。
+
+感知质量仅输入编辑后输出以避免与保真混淆，按 1 到 5 打分；音视频一致性输入编辑后音视频，按 1 到 5 打分。为保证公平，评测器输入模态与编辑类别对齐，音频目标仅送音频，视频目标仅送视频，耦合类送音视频。
+
+**编辑准确率 × 模态选择性：** 编辑准确率衡量目标模态是否按 what_changed 完成修改，模态选择性衡量非目标模态是否按 what_preserved 保持不变，二者分别锚定不同字段因而可分离，高编辑准确率可能伴随低模态选择性，这种分离设计正是为了捕捉跨模态泄露。
+
+**感知质量 × 音视频一致性：** 感知质量只看编辑后输出本身是否自然、无伪影，音视频一致性则看编辑后音视频在语义与时序上是否对齐，前者是单流内在质量，后者是跨流协同质量，二者与前两个指标互补，共同构成 4 维评测。
+
+3 类编辑范式在实现上形式化为不同函数组合。分离范式独立应用视频与音频编辑函数，时序范式先编辑视频再以编辑后视频为条件合成音频，联合范式在单一函数内同时生成音视频。
+
+\[\hat{v}=f_{V}(v,\,p),\qquad\hat{a}=f_{A}(a,\,p).\]
+
+上式表示分离范式：源视频与源音频分别经视频编辑函数与音频编辑函数按同一提示得到编辑后视频与编辑后音频，两路无条件交互。
+
+\[\hat{v}=f_{V}(v,\,p),\qquad\hat{a}=f_{A}(a,\,\hat{v},\,p).\]
+
+上式表示时序范式：先由视频编辑函数得到编辑后视频，再由音频编辑函数以源音频、编辑后视频与提示为条件生成编辑后音频，音频依赖视频但不反向影响视频。
+
+\[(\hat{v},\,\hat{a})=f_{AV}(v,\,a,\,p).\]
+
+上式表示联合范式：单一音视频编辑函数同时输入源音视频与提示，直接输出编辑后音视频，允许生成过程中的跨模态交互。
+
+**联合范式 × 分离范式：** 联合范式在一个统一框架内同时处理音视频并允许跨模态交互，分离范式则用独立的视频模型与音频模型各自按提示编辑，联合的优势在于潜在的跨模态一致性，分离的优势在于结构上隔离干扰，AVENUE 把二者放在同一组音频目标与视频目标任务上对比，才能暴露保真与编辑能力的权衡。
+
+### 本研究是否训练模型，实际做了哪些计算
+
+本研究未训练新的音视频编辑模型，也不更新任何待评模型的权重。论文的计算工作集中在基准构造与自动化评测两类流程。
+
+构造侧的计算包括：对 VGGSound 测试集的 8 类语义归类、基于 ImageBind 与 CLAP 的阈值过滤、基于 CLIP、YOLOv8n 与 SSIM 的可编辑性过滤、以及调用 Gemini-3-flash 按类别感知模板批量生成指令并经人工校验形成 1291 个源片段与 7957 条指令的规模，平均每片段约 6.16 条指令。
+
+评测侧的计算是调用 QWEN3-Omni 作为评测器，按 4 维提示对每条样本的源与编辑后输出或仅编辑后输出打分，输入模态与编辑类别对齐，输出为编辑准确率、模态选择性、感知质量与音视频一致性的分数。待评模型均以发布时的默认配置运行，未做额外微调。
+
+AvED 因其 2 乘 2 图像网格的时序打乱固定为 4 帧每秒，RAVE 则按源片段长度调整帧率以保持源帧率，MMAudio 及其变体按 8 秒截断输入，音频采样率统一为 16000 赫兹。所有模型输出在比较前按同一条样本中最短时长截齐，以保证时长一致。
+
+为帮助复现者按顺序执行，下图把从分类到过滤再到模板与指令生成的 4 步管线与人工校验的回指关系可视化，便于按步骤检查产物与阈值。
+
+> **看图路径：** 1. 按 1 到 4 编号顺序查看从 VGGSound 分类到两阶段过滤再到类别感知模板与指令生成的完整管线；2. 注意阶段 2 中 ImageBind 与 CLAP 阈值以及语义一致性、ROI 一致性、人数密度、非静态四项可编辑性过滤；3. 观察底部人工校验如何同时回指过滤阶段与指令生成阶段形成闭环
+
+> **论文图 5（像素未随页面持久化）**：Figure A2: Overview of AVENUE Data Curation (1) VGGSound clips are categorized into 8 semantic categories. (2) A two-stage filtering pipeline retains high-quality, edit-suitable clips based on audio-visual alignment and edit compatibility criteria (semantic consistency, ROI consistency, person density, non-static). (3) Human annotators verify the retained clips and confirm which edit types are applicable per clip, producing a curated set with category-aware edit type assignments. (4) Valid clips are paired with structured instruction templates to generate per-sample annotations including target prompt, edit sub-type, what changed and what preserved, which are again verified by human annotators.
+
+*论文图 5。原论文 Figure A2:：“Figure A2: Overview of AVENUE Data Curation (1) VGGSound clips are categorized into 8 semantic categories.”。*
+
+图按 1 分类、2 过滤、3 类别感知模板、4 指令生成的顺序展开，阶段 2 同时列出高质量与可编辑性两组阈值，阶段 3 示例不同类别允许的编辑子类型勾选，阶段 4 展示每条样本的目标提示、子类型、what_changed 与 what_preserved 字段，底部人工校验双向箭头回指阶段 2 与阶段 4，表示过滤后片段与生成后指令均需人工确认。该图对应到可执行清单：先复现过滤阈值与检测器配置，再复现类别到编辑类型的映射表，最后复现指令生成与校验的字段规范。
+
+### 在什么数据与条件下比较，指标如何聚合
+
+比较在 AVENUE 的 3 类编辑上展开：音频目标用于度量音频编辑准确率与感知质量并以视频目标样本度量音频模态选择性，视频目标用于度量视频编辑准确率与感知质量并以音频目标样本度量视频模态选择性，音视频耦合用于度量三者的综合表现。
+
+待评模型覆盖 3 类范式：联合为 AvED，时序为 CAVE 与 MMAudio，分离为 RAVE 加 ZETA 与 RAVE 加 SDEdit，其中时序与分离共享同一 RAVE 编辑后视频以隔离视频编辑能力对音频评测的影响，AvED 的视频组件同样基于 Stable Diffusion 2.1 的 RAVE 架构。指标聚合按样本指令级进行，每条视频指令视为独立评测用例，分数按 0 到 100 分缩放呈现。
+
+编辑准确率与模态选择性分别锚定 what_changed 与 what_preserved，感知质量与音视频一致性按李克特量表打分。除主评测外，论文设置空编辑探针从耦合类抽取 50 对源与目标提示相同的样本，度量模态保真；另设跨模态时序锚定试点集 70 条以检验编辑是否在另 1 模态触发事件时刻对齐。
+
+人工与自动化评测的一致性通过 13 名标注者的成对偏好与排序比较验证，报告个体级成对一致率、留一一致率与 Kendall 秩相关。下表先给出与现有基准的规模与覆盖对比，明确 AVENUE 在编辑实例数、编辑类型数与模态覆盖上的定位，为后文的范式对比提供公平性前提：所有模型在同一组类别感知指令与同一评测器配置下比较，输入模态与编辑类别对齐，时长与采样率统一。
+
+| Benchmark | # Editing Instances | Edit Types | Edit Modality | Data Access |
+| --- | --- | --- | --- | --- |
+| OAVE [20] | 1,100 | add, adjust | AV | ✗ |
+| Object-AVEdit [27] | - | add, remove, replace | AV | ✗ |
+| VGG-Edit [21] | 450 | add, remove, replace | AV | ✗ |
+| AvED [1] | 110 | replace | AV | ✓ |
+| AVENUE | 7,957 | 12 edit-types (add, remove, replace, change …) | Audio Video AV | ✓ |
+
+表按基准列出编辑实例数、编辑类型、编辑模态与数据可获取性。OAVE 约 1100 条仅支持添加与调整且仅覆盖耦合类，VGG-Edit 450 条支持添加、移除与替换且仅耦合类，AvED 110 条仅替换且仅耦合类，AVENUE 7957 条覆盖 12 类编辑并同时支持音频、视频与耦合 3 类且可公开获取。该对比说明后文的范式差异不是由数据可获取性或单一编辑类型驱动，而是在更广的编辑谱系上度量。
+
+### 主结果显示什么权衡，哪些数字支持判断
+
+耦合类总量上，编辑准确率与感知质量呈现明显分化而音视频一致性几乎持平。论文报告总量音视频一致性分数在三范式间约 78.5 分附近，差异很小，说明跨模态语义对齐在现有架构下均可达到相近水平。
+
+编辑准确率分数上联合范式落后时序与分离范式约 7 分到 8 分，感知质量分数上差距扩大到约 15 分，时序总体最均衡，分离在编辑准确率分数上略有优势。子类型层面差异更大：场景变化上联合在三项指标均为最低，编辑准确率分数 48.9 分、感知质量分数 45.9 分、音视频一致性分数 69.9 分，落后时序与分离 15 分到 18 分；发声对象替换上联合在编辑准确率分数 53.5 分与音视频一致性分数 70.5 分上居首，但感知质量分数仍落后于时序的 72.3 分对 55.7 分。
+
+速度变化等范围较窄的编辑上三范式趋于一致，说明范式差异在挑战性编辑上最突出。下面的图把上述分化可视化，便于按子类型与总量对照阅读。
+
+> **看图路径：** 1. 先看图 a 中五类耦合编辑上联合、时序、分离三条线的编辑准确率走势；2. 再看图 b 总量柱状图中三范式在编辑准确率、感知质量、音视频一致性上的分化；3. 聚焦右侧 C1 场景变化与 C3 发声对象替换两个子类的对比，记录联合在 C3 上反超的点
+
+> **论文图 3（像素未随页面持久化）**：Figure 3: Evaluation of AV-coupled editing under Cat.C. All scores are reported out of 100, where higher is better. (a) Edit Accuracy (EA) across five sub-categories of Category C. (b) Comparison of joint, sequential, and separate editing paradigms across EA, Perceptual Quality (PQ), and AV Consistency (AV-C). We report results on the full Category C benchmark as well as two representative cases: Scene Change (C1) and Sounding Object Replacement (C3).
+
+*论文图 3。原论文 Figure 3:：“Evaluation of AV-coupled editing under Cat.C.”。*
+
+图 a 为 5 类耦合编辑的编辑准确率分数折线，联合在场景变化与发声对象替换处呈现不同走向，图 b 总量柱状图显示三范式在编辑准确率分数、感知质量分数与音视频一致性分数上的对比，右侧两个小柱状图分别放大场景变化与发声对象替换的细节。观察动作是先沿图 a 横轴比较 C1 到 C5 的走势，再在图 b 总量中确认音视频一致性分数持平而编辑准确率分数与感知质量分数分化的模式，最后在右侧两组柱状图中核对联合在 C1 全面落后而在 C3 编辑准确率分数与一致性分数上反超但感知质量分数仍落后的具体数值。
+
+音频模态的单模态编辑进一步揭示保真与可编辑性的权衡。固定 RAVE 为共享视频主干后，联合的 AvED 在音频模态选择性分数上达到 97.5 分为最高，但音频编辑准确率分数仅 64.1 分为最低，表明其高保真源于倾向于保持而非有效编辑。
+
+分离与时序范式的音频编辑准确率分数在 76.0 分到 80.0 分之间显著更高，但音频模态选择性分数随音频模型而剧烈分化：同为分离范式，ZETA 的音频模态选择性分数达 93.0 分而 SDEdit 的音频模态选择性分数仅 51.4 分，差距完全由音频模型机制驱动。时序中绕过视频编辑的源视频直通变体与经 RAVE 的变体分数几乎一致，说明上游视频编辑引入的累积误差很小。
+
+生成式 MMAudio 感知质量分数可达 89.5 分附近但音频保持最低至 39.7 分，因其从头合成而无保留源音频的机制。为使上述权衡可核对，下面两张表分别给出空编辑保真与音频模态的量化对比，表后解释主要收益与代价。
+
+| 条件 | 指标 | 联合 AvED 分数 | 分离 RAVE+ZETA 分数 | 分离 RAVE+SDEdit 分数 | 时序 RAVE→CAVE 分数 |
+| --- | --- | --- | --- | --- | --- |
+| 空编辑 | 视频保持 MS 分数 | 76.3 | 70.7 | 70.7 | 70.7 |
+| 空编辑 | 视频保持 V-CLIP 分数 | 0.995 | 0.956 | 0.956 | 0.956 |
+| 空编辑 | 音频保持 MS 分数 | 85.0 | 76.3 | 48.3 | 58.7 |
+| 空编辑 | 音频保持 CLAP 分数 | 0.886 | 0.859 | 0.721 | 0.736 |
+
+该表检验源与目标提示相同时的保持能力，分数越高表示越接近输入。联合在音视频 2 模态均取得最高保持，分离中 ZETA 显著优于 SDEdit，时序与分离的音频保持相近且明显低于联合。代价是该保持优势在后文的编辑准确率分数上被反转，说明空编辑高分不能等同于编辑能力。
+
+| 评测类别 | 指标 | AvED 联合分数 | RAVE+ZETA 分离分数 | RAVE+SDEdit 分离分数 | RAVE→CAVE 时序分数 | RAVE→MMAudio 时序分数 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 音频目标 Cat.A | 编辑准确率分数 | 64.1 | 79.7 | 78.7 | 79.6 | 75.8 |
+| 音频目标 Cat.A | 感知质量分数 | 87.7 | 88.2 | 82.4 | 89.3 | 89.5 |
+| 视频目标 Cat.B | 音频保持 模态选择性分数 | 97.5 | 93.0 | 51.4 | 58.0 | 39.7 |
+
+该表固定视频主干后比较音频侧的改与保。收益是分离与时序在编辑准确率分数上显著高于联合，ZETA 在保持分数上接近联合且编辑准确率分数保持高位，表明反演式机制在两者间最均衡。代价是 SDEdit 与 MMAudio 虽能改对但保持能力大幅下降，MMAudio 的感知质量分数高但保持最低，说明生成式路径在单模态保真任务上存在结构性短板。
+
+耦合类子类型的进一步分解显示没有单一范式在所有编辑上占优，细粒度属性修改更利于独立专用模块，而发声对象替换等需同时推理双模态的任务更利于联合理解，但联合的生成质量瓶颈依然存在。
+
+| 子类型 | 指标 | 联合 AvED 分数 |
+| --- | --- | --- |
+| 场景变化 C1 | 编辑准确率分数 | 48.9 |
+| 场景变化 C1 | 感知质量分数 | 45.9 |
+| 场景变化 C1 | 音视频一致性分数 | 69.9 |
+| 发声对象替换 C3 | 编辑准确率分数 | 53.5 |
+| 发声对象替换 C3 | 感知质量分数 | 55.7 |
+| 发声对象替换 C3 | 音视频一致性分数 | 70.5 |
+
+该表把总量分化落实到代表性子类。C1 上联合全面落后，分离与时序显著领先约 15 分；C3 上联合在编辑准确率分数与一致性分数上反超但感知质量分数仍落后，说明不同编辑粒度对架构的诉求不同，全面覆盖的基准才能暴露短板。
+
+### 哪些对照说明机制差异与未解决的能力
+
+机制对照首先来自音频模型的实现差异。ZETA 为反演式，将输入音频反演到潜在表示后仅修改目标元素，因而在编辑准确率分数 79.7 分与保持分数 93.0 分上同时取得高分；SDEdit 以高斯噪声扰动后按新提示去噪，虽编辑准确率分数 78.7 分相近但保持分数降至 51.4 分，因加噪步骤不可避免地丢失源信息。
+
+MMAudio 为生成式从编辑后视频从头合成音频，感知质量分数 89.5 分高但保持分数仅 39.7 分，因缺乏锚定源音频的机制。时序变体中源视频直通与经 RAVE 的分数几乎一致，进一步支持音频模型本身是主导因素而非上游视频编辑。
+
+**空编辑保真 × 跨模态时序锚定：** 空编辑保真指源提示与目标提示相同时输出应与输入不可区分，用于探测无意跨模态干扰，跨模态时序锚定指在另 1 模态触发事件时刻才施加编辑，二者分别检验不该动时能否不动、该在特定时刻动时能否对齐，互为补充的鲁棒性探针。
+
+空编辑与跨模态时序锚定的两项探针分别检验不该动与该在特定时刻动的鲁棒性。空编辑已显示联合保持最好但编辑最弱，跨模态时序锚定试点在 70 条样本上要求音频编辑锚定视频触发事件或反之，新增的跨模态时序接地分数与编辑准确率分数分离度量。
+
+结果显示引入跨模态条件并未降低编辑准确率分数，音频目标上联合范式的编辑准确率分数为 70.0 分而分离范式的编辑准确率分数为 87.0 分，视频目标上联合范式的编辑准确率分数为 74.0 分而分离范式的编辑准确率分数为 68.0 分。但跨模态时序接地分数普遍很低，音频目标上联合范式的接地分数为 28.6 分而分离范式的接地分数为 24.6 分，视频目标上联合范式的接地分数为 22.0 分而分离范式的接地分数为 20.0 分。
+
+这表明模型能产生正确编辑内容但难以将其与另 1 模态的触发事件对齐，且范式间的排序在两指标上不一致，分离范式在编辑准确率分数上的优势在接地分数上消失。自动化评测与人工判断的一致性通过一致率与秩相关验证。
+
+主评测器 QWEN3-Omni 与人的个体级成对一致率为 67.0% 接近人际参考 71.1%，留一一致率 72.5% 对 79.2%，Kendall 秩相关 0.353 对 0.546，其余 4 个全模态评测器呈现相似趋势，Gemini-3.1-Pro 在部分指标上更高，Qwen2.5-Omni 与 Audio-Visual-Flamingo 较低。嵌入式指标的 Spearman 秩相关在 12 组对比中均为正且显著，模态选择性与声学或视觉相似度的相关最强，编辑准确率分数在视频目标上相关较强，音视频一致性相关较弱但一致为正，支持多模态大模型评测在保留嵌入信号的同时提供更细粒度的模态感知判断。
+
+| 评测器 | 成对一致率 | 留一一致率 | Kendall 秩相关 |
+| --- | --- | --- | --- |
+| 人际参考 | 71.1% | 79.2% | 0.546 |
+| QWEN3-Omni | 67.0% | 72.5% | 0.353 |
+| Gemini-3.1-Pro | 66.2% | 73.6% | 0.440 |
+| Gemini-3.6-Flash | 64.0% | 67.7% | 0.359 |
+| Qwen2.5-Omni | 60.4% | 64.8% | 0.092 |
+
+该表说明主评测器与人的偏好对齐接近人际水平且非单一模型特有，但秩相关仍低于人际参考，表明在排序一致性上仍有差距。自动化分数可作为可扩展的初筛但在关键决策上仍需人工复核。
+
+| 试点类别 | 指标 | 联合 AvED 分数 | 分离 RAVE+ZETA 分数 |
+| --- | --- | --- | --- |
+| 音频目标 | 编辑准确率分数 非条件 | 63.4 | 81.6 |
+| 音频目标 | 编辑准确率分数 跨模态条件 | 70.0 | 87.0 |
+| 音频目标 | 跨模态时序接地分数 | 28.6 | 24.6 |
+| 视频目标 | 编辑准确率分数 非条件 | 72.6 | 77.4 |
+| 视频目标 | 编辑准确率分数 跨模态条件 | 74.0 | 68.0 |
+| 视频目标 | 跨模态时序接地分数 | 22.0 | 20.0 |
+
+该表把跨模态条件编辑的挑战量化：编辑内容分数保持或略升但接地分数普遍低于 30 分，说明当前模型在跨模态时序推理上仍为开放问题，联合的微弱优势不等同于可用能力。
+
+### 哪些边界尚未覆盖，解读时应避免什么推断
+
+数据与标注边界方面，指令由单一多模态大模型生成，虽经人工校验但仍可能引入模型特定偏置，且校验流程难以规模化自动化。源数据来自 VGGSound，虽经多阶段过滤仍可能残留音视频质量伪影，且片段时长约 10 秒，无法评估长时序连贯性与叙事转场。
+
+指令形式为陈述式场景描述，未覆盖祈使句等多样化表达。架构覆盖限于联合、时序与分离 3 类，未穷尽更广的音视频编辑范式。解读时应避免 3 类过度推断。
+
+其一，不应把空编辑高保持直接解读为编辑能力强，联合的高保持伴随低编辑准确率分数即为反例。其二，不应把总量音视频一致性分数持平解读为所有子类一致，C1 与 C3 的子类分解已显示相反排序。
+
+其三，不应把自动化评测与嵌入式指标的正相关解读为可完全替代人工，秩相关与留一一致率仍低于人际参考，且感知质量与一致性的相关较弱，提示在关键发布或安全相关决策中仍需人工复核与多指标交叉验证。
+
+### 复现需要准备什么，按什么顺序执行
+
+复现分为数据与评测两条线。数据线先从 VGGSound 测试集出发，按 8 类语义映射归类并排除语音与歧义类，再执行 2 阶段过滤：高质量过滤用 ImageBind 与 CLAP 阈值 0.3，可编辑性过滤按 10 帧采样实现 CLIP 帧间相似度、YOLOv8n 人数密度、ROI 一致性与 SSIM 非静态四项阈值。
+
+剩余片段经人工复核后按类别感知模板调用 Gemini-3-flash 生成指令，每条指令包含源描述、目标提示、子类型、what_changed 与 what_preserved 并再次人工校验，最终形成 1291 个源片段与 7957 条指令，平均每片段 6.16 条。评测线准备 QWEN3-Omni 及可选的 Gemini 系列等全模态评测器，按 4 维提示与输入模态对齐规则对每条样本打分。
+
+编辑准确率与模态选择性输入源与编辑后输出，感知质量仅输入编辑后输出，音视频一致性输入编辑后音视频，输出按 1 到 5 或是否题计分并缩放到 0 到 100 分。待评模型按默认配置运行，AvED 固定 4 帧每秒，RAVE 按源帧率自适应，MMAudio 类按 8 秒截断，音频统一 16000 赫兹，比较前按同一样本最短时长截齐。
+
+硬件上论文在单张 A6000 上以批量 1 运行，音频类模型每样本约 1 分钟内，AvED 约 20 分钟，RAVE 约 35 分钟，复现时应据此规划预算与并行策略。建议按过滤阈值复现、类别到编辑类型映射表复现、指令字段规范复现、评测器提示与输入模态对齐复现的顺序执行，每步用小样本抽检核对 what_changed 与 what_preserved 是否互斥且可判定，再展开全量评测。
+
+### 何时值得尝试该基准与评测，首要验证是什么
+
+当研究目标是让同一模型按提示自适应地决定改音频、改视频或协同改动，且要求对未改模态保持可验证时，AVENUE 的分类与 4 维评测值得优先尝试。其价值在于把改对、保住、自然与一致四件事分开度量，并用样本级伪真值与模态对齐的评测器输入使跨模态泄露可被定位到具体样本与具体字段。
+
+首要验证应放在模态选择性与编辑准确率的分离上：先在音频目标与视频目标两类上分别报告编辑准确率分数与对应模态选择性分数，再用空编辑探针检查保持基线，避免用总量音视频一致性分数掩盖子类差异。
+
+若资源有限，可先复现过滤与模板映射并在小规模子集上跑通 4 维打分，再扩展到全量与多评测器交叉验证。未来工作应补足长时序、祈使式指令与更广范式的覆盖，并在跨模态时序锚定等试点上将时序接地分数与编辑准确率分数并列报告，以推动模型在知道改什么的同时明确知道什么必须保持不变。
+
+<details>
+<summary>📎 论文与评分元数据</summary>
+
+排名：前25% | 文档类型：数据集与基准 | [arXiv 原文](https://arxiv.org/abs/2609.04253)
+
+</details>
+
+## ⚖️ 评分明细
+
+评分属于系统判断，不是论文实验结果；八维数值与总分见页首，原始审计记录保留在后端。
+
+- 评分规则：type-aware-v1
+
+- 评分模型：muse-spark-1.2-contributor
+
+- 评分请求协议：openai_responses
+
+---
+
+[← 返回 2026-09-08 语音/音乐/音频论文速递](/audio-paper-digest-blog/posts/2026-09-08/)

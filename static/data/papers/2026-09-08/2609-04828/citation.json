@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04828",
+  "arxivId": "2609.04828",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongyang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinmeng Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youqiang Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhong Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhongyuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiping Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04828",
+  "originalTitle": "ProLombard: Structured Multi-Scale Modeling for Normal-to-Lombard Speech Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04828.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

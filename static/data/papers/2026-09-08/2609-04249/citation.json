@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04249",
+  "arxivId": "2609.04249",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Shaohua Pan"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, China",
+        "Baidu, China"
+      ],
+      "name": "Junbao Chen"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Shengyi He"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, China"
+      ],
+      "name": "Jingfeng Xue"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Wen Tao"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Haocheng Feng"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Siming Fan"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Dongwei Pan"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Yi Yang"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Wei He"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Hang Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04249",
+  "originalTitle": "Encore: Infinite Audio-Video Generation with Adaptive Signal Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04249.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

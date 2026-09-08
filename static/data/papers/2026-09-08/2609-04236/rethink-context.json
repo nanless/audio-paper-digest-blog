@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04236",
+  "abstract": "Speech emotion recognition (SER) is a crucial component of human-computer interaction, attracting extensive attention from both industry and academia. However, existing SER systems typically assume alignment between vocal tone and lexical semantics, overlooking the real-world scenarios that involve tone-word conflict-where the emotion conveyed by speech contradicts the literal meaning of the words. To bridge this gap, we introduce TWIN-SER (Tone-Word Incongruent SER), a benchmark for systematic evaluation under acoustic-semantic incongruence, and show that state-of-the-art models degrade severely under such incongruence. To address this, we propose DAS (Disentangled Acoustic-Semantic fusion), a framework that mitigates tone-word conflict by explicitly disentangling acoustic and semantic pathways, selecting informative high-energy embeddings, and adaptively fusing them via a lightweight query-based attention mechanism. Specifically, DAS comprises three crucial modules: i) a heterogeneous feature extraction module that separately captures complementary acoustic and semantic representations from raw input; ii) a high-energy embedding selection module that identifies and retains the most discriminative embeddings; and iii) a Q-Former combination module that bridges the two pathways through cross-attention, enabling robust emotion prediction under incongruent conditions. Extensive experiments demonstrate that DAS consistently outperforms existing methods in tone-word conflict scenarios, as well as in standard in-domain and zero-shot settings. Our code and datasets are available at this https URL",
+  "abstractSha256": "cfa152d9aee0dfacb879dc5ba301ab9d2b7f628125ab914dd5de60b0a91c9b18",
+  "arxivId": "2609.04236",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaojiang Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dawei Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjie Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruijie Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunxiang Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaohui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zitong Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对语调情感与字面语义冲突时主流语音情感识别显著退化的问题，提出解耦声学与语义双通路并做高能量筛选与查询融合的 DAS 框架，在 378 条高冲突 TWIN-SER 上取得 59.38% 加权准确率的最好结果，代价是零样本通用集上不及大预训练模型且小样本恐惧与厌恶类仍难分。",
+  "originalTitle": "Robust Speech Emotion Recognition under Tone-Word Conflict: A Benchmark and Framework",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04236.pdf",
+  "readerTitle": "声调与词义打架时，语音情感识别为何崩溃：TWIN-SER 基准与 DAS 解耦融合",
+  "schemaVersion": 1
+}

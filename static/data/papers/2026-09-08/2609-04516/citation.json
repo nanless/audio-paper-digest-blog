@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04516",
+  "arxivId": "2609.04516",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yushi Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wilson Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongyi Zang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04516",
+  "originalTitle": "Pitch-class Steering for Diffusion-based Music Generation via Latent-space Probes",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04516.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

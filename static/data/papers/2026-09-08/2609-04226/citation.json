@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04226",
+  "arxivId": "2609.04226",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Renzheng Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Welker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tim Fingscheidt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04226",
+  "originalTitle": "EffVOC: Low-Delay Efficient Speech Waveform Reconstruction from Spectral Representations Without Phase",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04226.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

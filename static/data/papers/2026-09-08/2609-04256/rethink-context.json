@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04256",
+  "abstract": "Audio LLM benchmarks measure understanding and dialogue quality, not whether speech-enabled models respond with relational warmth when a vulnerable user discloses a mental-health concern. We introduce a 7-turn scripted-disclosure probe grounded in WHO mental-health clinical guidelines, with each script run on the same model (Azure OpenAI gpt-realtime) in both audio and text-only conditions, and acoustic-prosody analysis of the generated speech. Across 532 responses we identify two audio-specific patterns transcript-only evaluation would miss: at the elicitation turn the model&#39;s voice gets shorter, faster, lower-pitched, and quieter rather than warmer (p &lt; .001 for five of seven acoustic features), and the modality gap on relational acceptance, small in aggregate, concentrates in the highest-stakes self-harm/suicide scripts. A two-rater listener study corroborates that perceived warmth is concentrated at specific turns and on bereavement disclosures. Together these patterns indicate that auditing speech-enabled models in mental-health contexts requires evaluating the combined audio-and-text experience the user encounters, not the transcript in isolation. We release the protocol, scoring pipeline, and scripts as a starting point for evaluating speech-enabled models in mental-health contexts.",
+  "abstractSha256": "baafd54f24fe07a77ba7fe3ed3c78cfa834311e0af8bce8235734aa17835fe4d",
+  "arxivId": "2609.04256",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Eugenia Kim"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Bolor-Erdene Jagdagdorj"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Dina Pekelis"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Leah Zulas"
+    },
+    {
+      "affiliations": [
+        "Microsoft, Redmond, WA, USA"
+      ],
+      "name": "Amanda Minnich"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在同一模型上以 7 轮 WHO 脚本对比音频与纯文本，音频在诱发轮出现更短更快更低更轻且不更温暖的韵律漂移，文本转录审计会漏检而高风险自伤脚本的模态差异最集中。",
+  "originalTitle": "Probing Warmth-Mediated Harm in Speech-Enabled LLMs for Mental-Health Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04256.pdf",
+  "readerTitle": "语音不只是文字的喇叭：温暖介导伤害为何必须同时审听觉与文本",
+  "schemaVersion": 1
+}

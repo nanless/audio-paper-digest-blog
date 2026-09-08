@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04634",
+  "abstract": "As generative audio models grow in complexity, the computational and ecological costs of synthesizing everyday sounds have become increasingly prohibitive, often requiring industrial-scale resources and massive datasets. In this paper, we present SCAPES: a Semantically Conditioned Autoregressive Prior for Environmental Sounds. SCAPES is a lightweight, resource-efficient generative model designed to synthesize high-fidelity environmental textures through high-level semantic control. By operating on the continuous latent manifold of a neural audio codec, our approach bypasses the rigid structural constraints inherent to discrete tokenization. We propose a segmentation strategy that decomposes audio into overlapping segments, enabling a Continuous Normalizing Flow (CNF) to model the evolution of latent trajectories using Flow Matching. Our experiments demonstrate that a 36-million parameter instance of SCAPES can be trained on limited, uncurated datasets using a single consumer-grade GPU. Notably, convergence is achieved after training for approximately twice the source audio duration, yielding high-fidelity outputs with robust long-term stability and semantic consistency. Furthermore, we showcase the model&#39;s capacity for smooth semantic interpolation, providing a flexible and accessible tool for open research and creative sound design. Code, pretrained weights, audio examples, and an interactive demo are publicly available on our project page this https URL",
+  "abstractSha256": "37655ef1dcb1c341b6b011c364fce5e6d1a775dcc62dd5ba26bf3f9df5a0600a",
+  "arxivId": "2609.04634",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Esteban Gutiérrez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lonce Wyse"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frederic Font"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "SCAPES 针对环境声纹理的语义可控合成问题，用连续归一化流在 EnCodec 连续隐空间上按原子段自回归建模，并以 CLAP 语义嵌入和历史原子为条件，在约 34 分钟数据、单张消费级 GPU 约 1 小时训练的条件下实现长时稳定生成，代价是难以处理语音与复调音乐所需的长程结构。",
+  "originalTitle": "SCAPES: Semantically Conditioned Autoregressive Prior for Environmental Sounds",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04634.pdf",
+  "readerTitle": "在连续隐空间里一次生成一小段：SCAPES 如何用语义嵌入控制环境声纹理",
+  "schemaVersion": 1
+}

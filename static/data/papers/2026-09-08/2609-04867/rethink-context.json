@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04867",
+  "abstract": "Text-to-audio-video (T2AV) generation has advanced rapidly, but its evaluation still underestimates the audio modality. Existing benchmarks either treat audio as an auxiliary component of video quality or assess it in isolation from audiovisual grounding, making it difficult to diagnose where current systems truly succeed or fail in audio generation. We present PRISM-Bench, the first audio-centric diagnostic benchmark for T2AV generation. Built from a rigorously curated dataset of 900 human-verified samples, PRISM-Bench factorizes audio evaluation along two orthogonal axes: audio type (Speech, Music, and Sound) and sound-source visibility (On-screen vs. Off-screen). It evaluates generated content across four perceptual dimensions (Audio-Visual Coherence, Audio Quality, Audio Expressiveness, and Prompt Following) with 35 fine-grained criteria. To ensure reliable assessment, we adopt an enhanced MLLM-as-a-Judge protocol based on blind, side-by-side comparison against ground-truth references, demonstrating strong alignment (over 70% mean agreement) with human raters. Our evaluation of recent T2AV systems highlights a significant performance gap between frontier and open-source models. Furthermore, we demonstrate that current generation paradigms overfit to perceptual fidelity while struggling with complex grounding and control tasks, particularly in generating music and synchronized On-screen audio.",
+  "abstractSha256": "e68e619463c6ff8385d6e35806626009698582dbb374e94a0b31093d7692d668",
+  "arxivId": "2609.04867",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Yuchen Sun"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Qian Yang"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Jun Wang"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Detai Xin"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Guoqiao Yu"
+    },
+    {
+      "affiliations": [
+        "Meituan, Beijing, China"
+      ],
+      "name": "Guanglu Wan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Qi Jia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对文生音视频评估重视频轻音频的问题，PRISM-Bench 以语音/音乐/音效与 On-screen/Off-screen 交叉分层与四维度 35 条细粒度标准组织 900 条人工校验样本，并用盲式并排、以真值为锚的 MLLM-as-a-Judge 两阶段打分实现超过 70% 的人类一致性，揭示前沿闭源模型在可感保真度上已超真值但在可见声源同步与精细声音控制上仍落后。",
+  "originalTitle": "PRISM-Bench: An Audio-Centric Diagnostic Benchmark for Text-to-Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04867.pdf",
+  "readerTitle": "PRISM-Bench：用音频类型与声源可见性交叉诊断文生音视频的接地能力",
+  "schemaVersion": 1
+}

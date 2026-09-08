@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04232",
+  "abstract": "This paper offers a unique perspective on how speech technologies are being adopted by community-led heritage language preservation and revitalisation initiatives. As a community-led language maintenance strategy, oral histories play a crucial role in Cantonese language revitalisation in New Zealand. The development of Automatic Speech Recognition (ASR) toolkits, such as Whisper, have expedited what has often been a resource and time-intensive process of transcribing oral history collections. However, there is limited research into the effectiveness of ASR toolkits when applied to code-switched language contexts. Based on Word Error Rate (WER), the best performing Whisper model configuration achieved a WER of 12.10 at the expense of accurately transcribing unsupported non-English segments. However, Whisper remains a useful tool by providing a first-pass transcription using only 1% of the estimated time otherwise needed for manual transcription.",
+  "abstractSha256": "ac0c89f09f856cbf2e2277d2905b51060c0f0ab75bf54610accf03cebcd0476b",
+  "arxivId": "2609.04232",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sidney Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chelsea Wong She"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eda Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiana Marshall Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Debbie Sew Hoy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chelsea Wong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把 Whisper 用于含英语、粤语、台山话与毛利语的口述史转写，以人工转写的 9 分 33 秒片段为参照比较不同尺寸与语言指定条件，最好的语言未指定 LARGE-V3 词错误率为 12.10，但代价是对非英语片段的转写与区分能力不足，而全库 12 小时 42 分钟机转仅用 5 小时，约为估计人工时间的 1%。",
+  "originalTitle": "Automatic Speech Recognition for Multilingual Oral History Research",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04232.pdf",
+  "readerTitle": "混语口述史里英文指标最好的一档，为何恰恰丢掉了非英语片段",
+  "schemaVersion": 1
+}

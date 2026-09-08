@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04247",
+  "abstract": "Omnimodal large language models (Omni-LLMs) integrate audio, video, and text, yet remain vulnerable to cross-modal hallucinations, where one modality improperly influences predictions about another. Existing training-free decoders modulate modality influence through perturbation or relevance weighting, but do not assess predictive compatibility within the joint audio-visual branch. Because joint-branch discrepancies may indicate either harmful interference or useful complementarity, reliable intervention requires assessing both discrepancy magnitude and actionability. To this end, we propose Conflict-Aware Decoding (CAD), a training-free framework comprising Potential Conflict Magnitude Estimation (PCME) and Conflict Actionability Assessment (CAA). PCME quantifies potential conflict using audio-video disagreement and the deviation of the joint prediction from a relevance-weighted unimodal reference. CAA then applies Dempster-Shafer reliability discounting to task-space answer relations, using query relevance and answer decisiveness to determine whether intervention is warranted. When an actionable conflict is identified, CAD selectively reallocates decoding weight from the joint branch to the unimodal branches. Experiments on CMM, AVHBench, WorldSense, and VideoMME show that CAD consistently outperforms the base decoder and competitive training-free methods across multiple audio-visual backbones. On Qwen2.5-Omni-7B, CAD improves overall accuracy by 14.1 and 8.0 percentage points on CMM and AVHBench, respectively, without model retraining.",
+  "abstractSha256": "d643bf86e1e8fb60a345c6e653b4f2aff57c50752857fe48231f3c3eb3d48cf6",
+  "arxivId": "2609.04247",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuchen Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai-Tao Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feidiao Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxing Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全模态大模型中音频视觉联合预测不可靠融合的问题，论文提出免训练的冲突感知解码 CAD，用潜在冲突量与任务空间可干预性决定是否把联合分支权重转给单模态分支，在 Qwen2.5-Omni-7B 上把 CMM 整体准确率提到 85.0% 与 AVHBench 提到 84.1%，代价是每步要跑四个分支并依赖人工阈值。",
+  "originalTitle": "CAD: Conflict-Aware Decoding to Mitigate Cross-Modal Hallucinations in Omnimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04247.pdf",
+  "readerTitle": "联合分支不可全信：用冲突量与可干预性重配解码权重",
+  "schemaVersion": 1
+}

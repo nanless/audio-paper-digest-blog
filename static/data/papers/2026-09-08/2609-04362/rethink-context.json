@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04362",
+  "abstract": "Music audio-language models are evaluated almost entirely by accuracy on multiple-choice questions. This protocol forces the model to commit to an option, so a lucky guess looks the same as real musical understanding. What is missing is a way to tell when the model does not know the answer, so that it can abstain instead of guessing. The usual solution, an ensemble of independently trained models, is far too expensive here, which leaves the entropy of a single predictive distribution as the only available confidence signal. We instead build pseudo-ensembles from one pretrained model by perturbing its input in ways that cannot change the correct answer, then averaging the resulting distributions over the options. Our main construction simply shuffles the order in which the candidate answers are presented; we also study ensembles built from corrupted audio and from swapped option labels. A pseudo-ensemble gives several predictive distributions per question, so it supports the full family of ensemble-based uncertainty measures (entropy of the expected distribution, expected entropy, and their difference, the mutual information) rather than entropy alone. Evaluating TinyMU on MuChoMusic, we find that averaging over four option orderings raises accuracy from 55.7% to 59.2%, and that the resulting uncertainty measures rank the model&#39;s errors better than the single-pass entropy baseline, reducing the area under the error retention curve from 0.293 to 0.261. All of this costs a few extra forward passes and no retraining, which makes abstention practical for compact music audio-language models.",
+  "abstractSha256": "090675d80c6a9717bb50edca83dd2defbc6c6b1c75c28e00784257cdbd063a0f",
+  "arxivId": "2609.04362",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Jumeirah College, Dubai"
+      ],
+      "name": "Aanya Maheshwari"
+    },
+    {
+      "affiliations": [
+        "Apta AI, Spark AI Research"
+      ],
+      "name": "Vatsal Raina"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音乐音频语言模型在四选一问答中被迫作答而无法表达不知道的问题，论文用同一 TinyMU 检查点经答案不变扰动构造伪集成，主证据是四种选项排序平均将准确率从 55.7% 提升到 59.2% 并将误差保留曲线面积从 0.293 降到 0.261，代价是每次提问需要 4 次前向传播且无需重新训练。",
+  "originalTitle": "Knowing When Not to Answer: Pseudo-Ensembles for Abstention in Music Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04362.pdf",
+  "readerTitle": "猜对不算懂：用选项重排伪集成让音乐问答模型学会拒答",
+  "schemaVersion": 1
+}

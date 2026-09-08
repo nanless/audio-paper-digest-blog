@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05281",
+  "arxivId": "2609.05281",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Electrical and Computer Engineering, National University of Singapore"
+      ],
+      "name": "Phuong Tuan Dat"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore"
+      ],
+      "name": "Phuong Khai Minh"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing (IAIC), ASTAR"
+      ],
+      "name": "Tran Huy Dat"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.05281",
+  "originalTitle": "KanAdapter: A Kolmogorov-Arnold Network-based Plug-and-Play Module for Efficient Fine-tuning of Foundation Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05281.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

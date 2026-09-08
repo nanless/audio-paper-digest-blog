@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04232",
+  "arxivId": "2609.04232",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sidney Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chelsea Wong She"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eda Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiana Marshall Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Debbie Sew Hoy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chelsea Wong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04232",
+  "originalTitle": "Automatic Speech Recognition for Multilingual Oral History Research",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04232.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04224",
+  "arxivId": "2609.04224",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuxin Ding"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04224",
+  "originalTitle": "Beyond SDR: How Music Source Separation Reshapes Rhythm-Relevant Signal Properties",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04224.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

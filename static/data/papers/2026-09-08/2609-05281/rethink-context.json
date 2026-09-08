@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05281",
+  "abstract": "Fully fine-tuning self-supervised learning (SSL) speech models for downstream tasks is computationally prohibitive, and existing parameter-efficient fine-tuning approaches predominantly rely on MLP-based adapters whose fixed activation functions limit their representational expressiveness under tight parameter budgets. We propose \\textbf{KanAdapter}, a lightweight adapter framework that replaces conventional MLP bottlenecks with Group-Rational Kolmogorov-Arnold Network (GR-KAN) modules for more expressive and parameter-efficient adaptation. Following a parallel bottleneck design, KanAdapter inserts trainable GR-KAN branches alongside frozen Transformer encoder blocks and leverages weight transfer from pre-trained MLP layers for stable initialization. Across speaker verification, speech emotion recognition, and deepfake detection, KanAdapter achieves up to 97.5\\% reduction in trainable parameters relative to full fine-tuning while remaining highly competitive, and consistently outperforms AdaptFormer under comparable parameter budgets. In continual learning, it yields up to 83.6\\% error reduction over full fine-tuning and MLP-based adapters, which we attribute to the localized nature of GR-KAN&#39;s rational activations that mitigates catastrophic forgetting. To our knowledge, this is the first work to explore KAN-based modules for parameter-efficient fine-tuning of speech foundation models.",
+  "abstractSha256": "74a12f5658b8f012930f7ff4c770c5e81e9c3cc6aa359b64fad9651d7bb47126",
+  "arxivId": "2609.05281",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Electrical and Computer Engineering, National University of Singapore"
+      ],
+      "name": "Phuong Tuan Dat"
+    },
+    {
+      "affiliations": [
+        "School of Computing, National University of Singapore"
+      ],
+      "name": "Phuong Khai Minh"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing (IAIC), ASTAR"
+      ],
+      "name": "Tran Huy Dat"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全量微调语音自监督基座模型代价高、MLP 适配器表达受限的问题，KanAdapter 以并行瓶颈中的 GR-KAN 可学习有理激活替换固定激活，在说话人验证、情感识别与伪造检测上以减少 94.7% 至 97.5% 可训练参数接近全量微调，并在两阶段持续学习上相对全量微调降低 83.6% 错误率。",
+  "originalTitle": "KanAdapter: A Kolmogorov-Arnold Network-based Plug-and-Play Module for Efficient Fine-tuning of Foundation Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05281.pdf",
+  "readerTitle": "用可学习的分组有理激活替换固定激活：KanAdapter 在语音基座模型上的并行瓶颈适配",
+  "schemaVersion": 1
+}

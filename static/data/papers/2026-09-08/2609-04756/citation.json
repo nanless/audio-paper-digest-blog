@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04756",
+  "arxivId": "2609.04756",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxime Baelde"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04756",
+  "originalTitle": "What Selects, What Reconstructs: Repairing Exemplar-Based Complex-Spectrum Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04756.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

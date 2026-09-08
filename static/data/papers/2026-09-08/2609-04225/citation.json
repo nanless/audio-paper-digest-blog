@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04225",
+  "arxivId": "2609.04225",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bojie Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Noah Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04225",
+  "originalTitle": "The Trade-off Was in the Labels: Causal Supervision for Turn-Aware Streaming ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04225.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

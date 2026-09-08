@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04756",
+  "abstract": "Exemplar methods separate a mixture by picking one learned spectrum per source and deforming it until it explains the observation, making one deformation class both reconstructor and selector. We show that the second role is empty as soon as the class can interpolate: the rule then ranks candidates on its regulariser, a choice made before the data, and the estimates sum back to the mixture whichever candidate wins. The condition is a parameter count, so the diagnosis runs before any experiment. On free per-bin deformation of complex spectra it explains the observed pathologies at once: a criterion that ranks candidates by their loudness, and half an output that is a mask on the mixture rather than an exemplar. The same theorem prescribes the repair, a selection class poorer than the reconstruction class: one complex gain and one pure delay rank the candidates, and a local combination of the best-aligned atoms, fitted jointly in closed form, rebuilds them. On MUSDB18 against the exact ceiling of the masking class, the distance between the criterion and an oracle inside its own candidate pool falls under the rigid selector from 6.2-7.7 to 0.5-2.8 dB, though only 0.9-1.2 dB of that reaches the output, and the per-frame latency of the deployed rule by a factor of 47 to 806. One lock remains, quantified: atoms are scored against the mixture, so the score carries a term for the other source that absorbs the capacity the reconstruction class gains, leaving the output 10.0 dB under the ceiling. Ranking hypotheses by the residual of a fit free enough to interpolate ranks them on the regulariser alone.",
+  "abstractSha256": "48f095396c42fc4730873e464155a3224d6c9bc130f3002b1616cbc6d518bcd1",
+  "arxivId": "2609.04756",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxime Baelde"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文证明若变形类参数多于观测则残差选型只排正则项，据此把挑选限制为每原子一个复增益加纯时延、重建改用对齐原子的局部联合最小二乘，在 MUSDB18 上把准则与池内神谕的距离从 6.2–7.7 dB 压到 0.5–2.8 dB 但仅 0.9–1.2 dB 落到输出，并量化剩余 10.0 dB 锁来自对混合而非对目标的打分。",
+  "originalTitle": "What Selects, What Reconstructs: Repairing Exemplar-Based Complex-Spectrum Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04756.pdf",
+  "readerTitle": "什么在挑选、什么在重建：当变形类能插值时选择为何失效",
+  "schemaVersion": 1
+}

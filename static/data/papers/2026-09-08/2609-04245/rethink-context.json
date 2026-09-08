@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04245",
+  "abstract": "Large language model (LLM)-based autoregressive speech enhancement (SE) produces natural speech using learned clean-speech priors, but may hallucinate content unsupported by the input. Deterministic SE better preserves observation-coupled evidence, yet often retains residual noise or local distortion. We propose an evidence-grounded generative SE framework that uses a deterministic estimate as imperfect evidence. A Whisper-guided DPRNN produces an enhanced waveform, which is blended with the observation and tokenized into a discrete evidence sequence. The evidence conditions an autoregressive clean-speech token generator and is reused during decoding through Code-Space Grounding (CSG), which penalizes candidates according to their Hamming distance in the factorized finite-scalar-quantized (FSQ) space. Because the appropriate grounding strength depends on acoustic difficulty, we introduce SNR-Conditioned CSG (SNR-CSG), which maps a calibrated residual-SNR estimate to an utterance-level strength and constructs an adaptive grounded anchor. Although grounding improves content fidelity, the anchor may retain local acoustic defects inherited from the evidence. Since such defects are predominantly local in the FSQ space, nearby tokens may provide better acoustic realizations without large departures from the observation-supported trajectory. We therefore propose Grounded Neighborhood Refinement with LLM ranking (GNR-LLM). It performs one additional teacher-forced pass conditioned on the grounded-anchor history, intersects the LLM top-$K$ candidates with a local FSQ Hamming neighborhood. Experiments on in-domain, controlled-SNR, and DNS no-reverb conditions show that SNR-CSG provides robust automatic grounding, while GNR-LLM substantially improves low-SNR perceptual quality without sacrificing content fidelity.",
+  "abstractSha256": "d64e5592ecb4921fc48a1112a0336ad9c77a0ef9449dab8a0f21f98a173747d9",
+  "arxivId": "2609.04245",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuan Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyi Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gongping Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xugang Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把确定性增强输出当作有观测支撑但不完美的证据，用有限标量量化码空间的汉明距离在解码时约束自回归大语言模型，并按残余信噪比自适应接地强度再做局部重排，在低信噪比下保住内容忠实度的同时挽回感知质量，但强接地仍会带来感知代价且极端尾部错误不能完全消除。",
+  "originalTitle": "Grounded Decoding for Autoregressive Speech Enhancement via Adaptive Code-Space Grounding and Local LLM Refinement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04245.pdf",
+  "readerTitle": "以不完美证据约束自回归生成：码空间接地与局部精修如何兼顾忠实与自然",
+  "schemaVersion": 1
+}

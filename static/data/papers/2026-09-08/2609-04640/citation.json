@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04640",
+  "arxivId": "2609.04640",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshen Ou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Héctor Martel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joe Hennessy-Priest"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taemin Cho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.04640",
+  "originalTitle": "Harmonica: Accurate and Lightweight Instrument-Agnostic Music Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04640.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

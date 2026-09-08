@@ -1,0 +1,122 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.04249",
+  "abstract": "Existing audio-video generation methods produce well-synchronized clips but are limited to short durations, while long-video generation methods extend duration through chunk-based iterative synthesis yet lack audio entirely. Generating long audio-video jointly is fundamentally harder than either task alone: each chunk must simultaneously maintain video temporal coherence, audio temporal coherence, and cross-modal synchronization, whose conditioning signals enter the model through different pathways. In this work, we present Encore for long-form synchronized audio-video generation. Our key insight is to factor this challenge into: (1) local continuity handled by iterative generation with explicit cross-chunk context propagation, and (2) global consistency enforced via reference audio-video signals with shifted position embedding. Building on this design, we propose Adaptive Signal Routing (ASR), which introduces learnable attention biases within self-attention and learnable residual scales on cross-attention outputs, enabling the model to adaptively modulate the influence of each conditioning signal. Trained end-to-end for joint audio-video generation, Encore also supports infinite-length audio-to-video and video-to-audio synthesis at inference by conditioning on the ground-truth modality throughout the denoising process. Experiments on our extended VerseBench for long audio-video evaluation demonstrate that Encore significantly outperforms existing methods in both generation quality and temporal coherence. Code and data for this paper are at this https URL.",
+  "abstractSha256": "055c507d74a7a071d7caf0f2a42084ad449f1df4987693474433f1d31e5c62dd",
+  "arxivId": "2609.04249",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Shaohua Pan"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, China",
+        "Baidu, China"
+      ],
+      "name": "Junbao Chen"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Shengyi He"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, China"
+      ],
+      "name": "Jingfeng Xue"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Wen Tao"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Haocheng Feng"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Siming Fan"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Dongwei Pan"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Yi Yang"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Wei He"
+    },
+    {
+      "affiliations": [
+        "Baidu, China"
+      ],
+      "name": "Hang Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对长时同步音视频生成中视频连贯、音频连贯与跨模态同步三重耦合难题，Encore 以重叠运动帧迭代与参考锚点分工配合可学习的自适应信号路由实现无限长度生成，并在扩展的 VerseBench 上以更低的时序漂移与更高的身份与同步指标验证效果，同时保留高分辨率与语音能力。",
+  "originalTitle": "Encore: Infinite Audio-Video Generation with Adaptive Signal Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.04249.pdf",
+  "readerTitle": "长时音视频为何不能只靠分块拼接：Encore 用参考锚点与自适应信号路由维持一致性",
+  "schemaVersion": 1
+}
