@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05871",
+  "arxivId": "2609.05871",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Song-ha Jo"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Sehyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soyoon Kim"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jaesik Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanghyuk Choi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.05871",
+  "originalTitle": "Where Does the Sound Go? Tracing Acoustic Information Loss in Audio-Conditioned LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05871.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

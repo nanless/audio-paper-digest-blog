@@ -1,0 +1,146 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07038",
+  "abstract": "Adolescent depression, anxiety, and stress (D/A/S) call for scalable tools that complement, rather than replace, professional evaluation. Under a privacy-preserving policy, the AdoDAS Grand Challenge withholds minors&#39; raw recordings and distributes anonymized audio-visual representations and ASR-derived text. Its 6,000 participants provide 24,000 segments across one scripted-reading and three open-response sessions. Two tracks assess multi-task binary D/A/S screening and ordinal prediction of 21 DASS-21 item responses. From 191 registrations, the final leaderboards included 95 eligible screening teams and 64 item-prediction teams. Audio-visual baselines achieved 0.4604 mean F1 and 0.2675 mean Quadratic Weighted Kappa; leading submissions reached 0.5921 and 0.2776. Representative systems emphasize cross-session modelling, temporal multimodal fusion, psychometric structure, and task-aware calibration.",
+  "abstractSha256": "48f649fa99582f79fad374f32c8c8e77e1210716689144473c6ed814c9a1becc",
+  "arxivId": "2609.07038",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychometrics",
+          "label": "心理测量"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Zhaojie Luo"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Junkun Wang"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Tianhua Qi"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Yuxuan Wu"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Xin Zhao"
+    },
+    {
+      "affiliations": [
+        "Kobe University, Kobe, Japan"
+      ],
+      "name": "Tetsuya Takiguchi"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Tomoko Matsui"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, Beijing, China"
+      ],
+      "name": "Kun Qian"
+    },
+    {
+      "affiliations": [
+        "Nanjing Medical University, Nanjing, China"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka, Osaka, Japan"
+      ],
+      "name": "Shuqiong Wu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Zhengjun Yue"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka, Osaka, Japan"
+      ],
+      "name": "Hiroshi Ishiguro"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology Beijing, Beijing, China"
+      ],
+      "name": "Xinyuan Qian"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong (Shenzhen), Shenzhen, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "AdoDAS 在不分发未成年人原始音视频的前提下提供 6000 人四会话的匿名化表征与文本，要求在隐藏测试集上完成 D/A/S 二分类筛查与 21 项 DASS-21 序数预测，音视频基线均值 F1 为 0.4604、均值 QWK 为 0.2675，最优提交分别达到 0.5921 和 0.2776，但提升主要来自时序多模态与跨会话建模而非原始编码器规模。",
+  "originalTitle": "AdoDAS: A Privacy-Preserving Multimodal Challenge for Adolescent Depression, Anxiety, and Stress Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07038.pdf",
+  "readerTitle": "不发原声原脸如何做青少年抑郁焦虑压力筛查：AdoDAS 的隐私接口与双赛道设计",
+  "schemaVersion": 1
+}

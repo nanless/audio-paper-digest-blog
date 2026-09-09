@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07399",
+  "abstract": "Underwater acoustic target recognition has converged on closed-set classification by vessel type, a task that does not answer whether a monitoring system has heard this hull before. We formalise open-set, cross-passage vessel re-identification on public hydrophone data and specify a protocol that removes the two easiest routes to a high score: hull-disjoint splits keyed to MMSI/IMO, galleries and queries from disjoint passages of each hull, source-pure galleries, and an audio-adjudicated transit-deduplication gate. We describe SKANN, a raw-waveform encoder whose front end is a four-scale bank of learned filters fused by selective-kernel attention, trained with an angular-margin objective and an augmentation regime that perturbs recording chain, ambient noise and multipath while preserving the narrowband lines that carry identity. On a 40-hull IARA gallery (96 queries, 98 passage candidates), cross-passage rank-1 is 0.25 for the embedding and 0.26 for an automated narrowband-tonal comparator; the two are statistically indistinguishable at the top of the ranking, the embedding orders the rest of the list more reliably (AUC 0.82 vs 0.76), and their score fusion reaches rank-1 0.35 -- the only contrast that attains nominal significance, presented as evidence of partial complementarity, not as a recommendation. Transit deduplication alone removes a 16-21 point apparent rank-1 advantage, larger than any between-method difference. Two further findings delimit what public data can support: ShipsEar cannot separate hull identity from recording channel under an identity protocol, and cross-network fine-tuning helps vessels seen during fine-tuning but is a null result on unseen ones. The results support analyst triage over a ranked shortlist, not identification. Checkpoint, validation embeddings, transit map and per-query outputs are released under CC-BY-4.0 (doi:https://doi.org/10.5281/zenodo.22160138).",
+  "abstractSha256": "9cf9926bcd2499bdf95d651ea0efd9b6d80bd82593c354c219f2808f8cb46ae7",
+  "arxivId": "2609.07399",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频指纹",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.fingerprinting",
+          "label": "音频指纹"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频指纹",
+      "primaryTaskId": "task.fingerprinting",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sunil Tyagi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文将水下舰船识别形式化为开放集跨航次重识别，用航次级音频裁决去重与源纯画廊堵住录音复用捷径，提出原始波形 4 尺度选择性核编码器 SKANN 并在 40 船 IARA 画廊上显示 rank-1 仅 0.25 且去重本身就抹掉 16 至 21 个点的虚高。",
+  "originalTitle": "Open-Set Vessel Re-Identification from Underwater Ship-Radiated Noise with a Raw-Waveform Selective-Kernel Acoustic Neural Network (SKANN) and a Cross-Passage Evaluation Protocol",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07399.pdf",
+  "readerTitle": "跨航次重识别为何难：去重门控与原始波形选择性核的诚实评估",
+  "schemaVersion": 1
+}

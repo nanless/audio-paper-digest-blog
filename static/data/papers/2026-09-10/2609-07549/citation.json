@@ -1,0 +1,284 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07549",
+  "arxivId": "2609.07549",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Chuanmeng Bian"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Daren Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Peixin Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhigao Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhiyun Fan"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhifu Gao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Bo Gong"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Qing Gu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jiajun He"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yawei Hu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yunjie Ji"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jingbei Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zengxi Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zheng Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Chengdong Liang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Baiji Liu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Ying Liu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Bin Ma"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yiping Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuezhang Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhendong Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yu Pu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yang Shi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xin Shu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jian Tang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Biao Tian"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Peiyao Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Tianzi Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Wen Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Wupeng Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Cheng Wen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuzhong Wu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zijian Xia"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yunchong Xiao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Nan Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jixing Yu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Binbin Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Sitong Zhao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Guangdong Zhou"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuan Zhou"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jianheng Zhuo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07549",
+  "originalTitle": "Qwen-Audio-3.0-ASR Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07549.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

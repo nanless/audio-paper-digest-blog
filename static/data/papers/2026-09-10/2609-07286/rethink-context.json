@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07286",
+  "abstract": "Large audio-language models (LALMs) can hallucinate audio objects, answering &#34;yes&#34; to absent sound events, thus undermining reliability in audio question answering. We propose Token-Adaptive Decoding (TAD), a training-free strategy for hallucination mitigation that grounds the initial yes/no decision by contrasting logits under real audio with a matched silent reference. TAD introduces a token-adaptive, confidence-guided gate that is decision-critical at the first decoding step and class-conditional on affirmative tokens, using the audio-silent margin to avoid overcorrection when evidence is weak or already sufficient. Experiments on AudioCaps-Hallucination show that, relative to Audio-Aware Decoding (AAD), a contrastive baseline with fixed contrast strength, TAD improves F1 for Qwen2 by 0.059 to 0.117 across Popular, Adversarial, and Random splits, and for Gemma by 0.025 to 0.064, while on Clotho-AQA it raises F1 from 0.810 to 0.816 on Qwen2 and remains comparable to AAD on Gemma.",
+  "abstractSha256": "ec75b032e94ec731658467630a1eb28d4a57b78e687a8f4ca9fb63c8699089fb",
+  "arxivId": "2609.07286",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heyu Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nianwen Si"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenlin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dan Qu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对二元音频问答中模型因语言先验而虚报存在的幻觉，TAD 以静默音频为对照做对比解码并仅在首步用音频增益门控惩罚肯定词，在 AudioCaps-Hallucination 与 Clotho-AQA 上提升拒绝能力但在部分设置下以精度与准确率下降为代价。",
+  "originalTitle": "TAD: Token-Adaptive Contrastive Decoding with Confidence-Guided Gating for Hallucination Mitigation in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07286.pdf",
+  "readerTitle": "音频幻觉为何总说“有”：用静默对照与首步门控校正肯定偏差的 TAD",
+  "schemaVersion": 1
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08948",
+  "abstract": "The rapid advancement of voice synthesis technologies such as text-to-speech and voice conversion poses significant threats to speech-based authentication systems, necessitating robust deepfake detection methods. In this work, we propose a novel E-Branchformer-based architecture that effectively leverages self-supervised speech representations for audio deepfake detection. Our model employs parallel branches to simultaneously capture global contextual dependencies through multi-head self-attention and local temporal patterns through convolutional processing. To enhance discriminative capability, we integrate depthwise convolution and Squeeze-and-Excitation modules that enrich the classification token with refined patch token information after feature merging. Extensive experiments on ASVspoof 2021 LA, DF, and In-the-Wild datasets demonstrate state-of-the-art performance with equal error rates of 0.88%, 1.85%, and 6.30% respectively, substantially outperforming existing methods. Comprehensive ablation studies validate that the dual-branch architecture provides complementary discriminative information, Squeeze-and-Excitation Aggregation significantly improves SSL feature integration, and the combination of DWConv and SE modules is critical for effective class token enhancement. The superior performance on real-world scenarios demonstrates strong generalization capability to diverse acoustic conditions and unseen spoofing attacks.",
+  "abstractSha256": "ee4a48a1e5cc8b129219fef87f7207a3f0e8d6f2a5a900812faa606e6796a2a9",
+  "arxivId": "2609.08948",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Conformer",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Conformer",
+      "primaryMethodId": "method.conformer",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, National University of Singapore"
+      ],
+      "name": "Phuong Tuan Dat"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Ho Bao Thu"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Nguyen Tran Trung"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Pham Viet Hoang"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Nguyen Thi Thu Trang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音伪造检测中自监督表示难以同时捕捉长程与短程线索的问题，论文用并行全局注意力与局部卷积分支加解耦类令牌与 DWConv-SE 融合的 E-Branchformer，在 ASVspoof 2021 LA/DF 与 ITW 上取得 0.88%/1.85%/6.30% EER 并在 ASVspoof 5 上取得 5.44% EER，代价是四层编码器与细粒度融合带来的额外调参与消融验证成本。",
+  "originalTitle": "Disentangled Global-Local Feature Learning with E-Branchformer for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08948.pdf",
+  "readerTitle": "并行解耦全局与局部：E-Branchformer 在音频伪造检测中的可复述设计",
+  "schemaVersion": 1
+}

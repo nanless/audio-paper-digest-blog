@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07409",
+  "arxivId": "2609.07409",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Ngo Truong Dinh"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Tung-Lam Bui"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Chi-Trung Duong"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Vien Nguyen Thi"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Viet-Anh Nguyen"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Phuc-Lu Le"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07409",
+  "originalTitle": "RAFM-SER++: A Lightweight Multimodal Emotion Recognition Framework for Real-Time Behavioral Monitoring in Surveillance Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07409.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

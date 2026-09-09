@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08464",
+  "arxivId": "2609.08464",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Molka Trabelsi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rafik Zayani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08464",
+  "originalTitle": "PAPR-Aware Multimodal Token Transmission in MLLM-Based Multiuser Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08464.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

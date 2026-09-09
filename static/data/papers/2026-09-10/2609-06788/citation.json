@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06788",
+  "arxivId": "2609.06788",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Bowen Yu"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Mingyu Huang"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Yishen Liu"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Yue Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06788",
+  "originalTitle": "When Speech Meets Lips: Interpretable Audio-Visual Synchronization for L2 Pronunciation Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06788.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

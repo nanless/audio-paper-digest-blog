@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07893",
+  "arxivId": "2609.07893",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of British Columbia- Vancouver campus, 2329 West Mall, Vancouver, V6T 1Z4, British Columbia, Canada"
+      ],
+      "name": "Mobina Mobaraki"
+    },
+    {
+      "affiliations": [
+        "Novarc Technologies Inc., 1225 E Keith Rd, North Vancouver, V7J 1J3 , British Columbia, Canada"
+      ],
+      "name": "Mahyar Asadi"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia, Kelowna campus, 3333 University Way, Kelowna, V1V 1V7, British Columbia, Canada"
+      ],
+      "name": "Klaske Van Heusden"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia- Vancouver campus, 2329 West Mall, Vancouver, V6T 1Z4, British Columbia, Canada"
+      ],
+      "name": "Guy A. Dumont"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07893",
+  "originalTitle": "Explainable Temporal Attention-based Defect Detection For Fillet Joints in Real-Time Gas Metal Arc Welding Based on Multi-modal Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07893.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

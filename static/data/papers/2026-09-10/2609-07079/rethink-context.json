@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07079",
+  "abstract": "Voice phishing detection faces three critical challenges: real criminal recordings are unavailable due to privacy constraints; when available, only a handful of samples exist, insufficient for fine-tuning; and lightweight acoustic-only detection is needed as an alternative to large self-supervised models. We compare domain-invariant prosodic features and self-supervised representations (HuBERT, wav2vec2.0) through cross-domain evaluation-training on scenario-based actor recordings and testing on authentic criminal calls. Domain-invariant prosodic features achieve 69.5% F1 zero-shot and 71.0% with 5-shot learning. HuBERT achieves highest performance (94.2% F1, 5-shot), while wav2vec2.0 exhibits a precision-oriented detection profile (90.2% F1 with 99.4% precision, 5-shot). These findings reveal fundamental trade-offs: domain-invariant features enable zero-shot deployment when no real data exists, while SSL methods achieve higher performance but require real samples and compute.",
+  "abstractSha256": "ad09109211d0c9538d6493838c15d81fdf0b20218a8b703d15558ea2404ac20b",
+  "arxivId": "2609.07079",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeongmin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seung Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minkyu Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ran Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoonkyu Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinxia Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在从场景化演员录音训练、真实诈骗电话测试的跨域条件下，论文对比域不变的 4 维韵律特征与冻结的 HuBERT/wav2vec2.0 表示，显示 4 维韵律在零样本达 69.5% F1 可直接部署，而 HuBERT 在 5 样本时达 94.2% F1 但需真实样本与 GPU。",
+  "originalTitle": "Comparing Self-Supervised and Domain-Invariant Features for Cross-Domain Voice Phishing Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07079.pdf",
+  "readerTitle": "冷启动可用与少样本高精度的分野：域不变韵律与自监督表示的跨域语音钓鱼检测对比",
+  "schemaVersion": 1
+}

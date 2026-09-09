@@ -1,0 +1,325 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07549",
+  "abstract": "In recent years, automatic speech recognition (ASR) has witnessed transformative advancements driven by three complementary paradigms: data scaling, model scaling, and deep integration with large language models (LLMs). However, bridging the gap between academic benchmark performance and real-world production utility remains a persistent challenge, particularly in handling diverse regional dialects, dynamic entities and hotwords, long-range contextual information, and disfluent spontaneous speech. In this report, we present Qwen-Audio-3.0-ASR, a Mixture-of-Experts (MoE) LLM-based ASR system designed to address these production demands through a unified, instruction-following framework. The model is built upon the Qwen backbone, and is trained on tens of millions of hours of large-scale speech data. Qwen-Audio-3.0-ASR supports transcription across 30 languages and 16 Chinese dialectal varieties spanning eight major dialect regions. Beyond multilingual and dialectal recognition, the model provides production-oriented capabilities including industry-domain entity recognition, hierarchical hotword customization, native single-pass transcription polishing, and long-audio contextual modeling. We further develop a dedicated streaming variant, Qwen-Audio-3.0-ASR-Streaming, for latency-sensitive applications. Extensive evaluations on Chinese, English, multilingual, and real-world industrial test sets demonstrate state-of-the-art or highly competitive recognition performance across a broad range of evaluation conditions, with strong performance relative to leading commercial and proprietary systems including GPT-4o Transcribe and Gemini 3.1 Pro.",
+  "abstractSha256": "983f78c9d6fc0e9eb166386ad7f27caa7d65d8e0ba9f87281b7db7255fca9a8d",
+  "arxivId": "2609.07549",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Chuanmeng Bian"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Daren Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Peixin Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhigao Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhiyun Fan"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhifu Gao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Bo Gong"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Qing Gu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jiajun He"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yawei Hu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yunjie Ji"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jingbei Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zengxi Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zheng Li"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Chengdong Liang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Baiji Liu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Ying Liu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Bin Ma"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yiping Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuezhang Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zhendong Peng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yu Pu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yang Shi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Xin Shu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jian Tang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Biao Tian"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Peiyao Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Tianzi Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Wen Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Wupeng Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Cheng Wen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuzhong Wu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Zijian Xia"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yunchong Xiao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Nan Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jianwei Yu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jixing Yu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Binbin Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Sitong Zhao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Guangdong Zhou"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Yuan Zhou"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry"
+      ],
+      "name": "Jianheng Zhuo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对方言、动态实体、口语不流利和长上下文的生产转写问题，该报告用混合专家大语言模型解码器统一控制语言、热词、历史与润色，并在中英文与多语基准及工业集上给出可核对的误差率与延迟对照，其代价是依赖大规模数据管线与指令组合训练。",
+  "originalTitle": "Qwen-Audio-3.0-ASR Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07549.pdf",
+  "readerTitle": "从逐字转写到可直接归档：Qwen-Audio-3.0-ASR 如何把指令、上下文与热词塞进同一遍解码",
+  "schemaVersion": 1
+}

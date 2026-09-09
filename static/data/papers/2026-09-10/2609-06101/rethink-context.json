@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06101",
+  "abstract": "This paper proposes a novel lightweight multiscale architecture for speech emotion recognition (SER) with three key innovations. First, a depthwise convolution-based subsampling module is introduced to reduce model size and computation while preserving salient emotional cues. Second, a Squeeze-and-Excitation block is integrated to enhance channel-wise recalibration and improve representation robustness. Third, a new Temporal Enhanced Aware Block is designed to strengthen temporal dependency modeling and produce more discriminative emotion-aware features. The proposed model is explicitly designed to jointly improve compactness, recognition performance, and generalizability. Experiments on benchmark SER datasets show that our method achieves higher accuracy with reduced computational complexity, while also delivering stronger cross-corpus performance than most recent advanced networks for SER.",
+  "abstractSha256": "2b81bb93b60ea991dc60db15b5ac9a96dc72b8277b088814456ddcd11af3e06f",
+  "arxivId": "2609.06101",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Duy Vo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiet Anh Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Do"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音情感识别中时序依赖不稳定与计算冗余问题，SETEAB 在 TIM-Net 基础上引入深度可分离下采样、SE-Res2Block、TEAB 与全局加权双向融合，在 5 个库平均上以 0.06 - 0.12 GFLOPs 实现 47.69% UA 与 45.23% F1，并在跨库平均 WA 上达到 37.53% 且保持 0.4 - 0.5M 参数量级。",
+  "originalTitle": "SETEAB: Multiscale approach with Squeeze-and-Excitation Temporal Enhanced Aware Block for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06101.pdf",
+  "readerTitle": "轻量时序建模如何兼顾精度与跨库泛化：SETEAB 的下采样、通道校准与双向加权融合",
+  "schemaVersion": 1
+}

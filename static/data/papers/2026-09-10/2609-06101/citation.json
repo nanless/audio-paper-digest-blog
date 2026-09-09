@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06101",
+  "arxivId": "2609.06101",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Duy Vo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiet Anh Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Do"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06101",
+  "originalTitle": "SETEAB: Multiscale approach with Squeeze-and-Excitation Temporal Enhanced Aware Block for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06101.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

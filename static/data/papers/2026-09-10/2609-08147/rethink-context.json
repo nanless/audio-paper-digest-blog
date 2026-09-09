@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08147",
+  "abstract": "Full-duplex speech models require training data that preserves turn-taking, overlap, interruption, and backchannel behavior, yet these signals are entangled across speakers in noisy real-world recordings. We present Conversational Voice, a pipeline that converts real two-speaker excerpts into three complementary training-data artifacts. (1) Separation recovers speaker-specific tracks with stable speaker assignments, a canonical transcript, and naturally observed interaction timing. (2) Reconstruction generates speech in matched voices from a fixed source transcript, reconstructs the source turn order, pauses, and overlaps, and adds word-level alignment and delivery instructions. (3) Expansion generates new dialogue constrained by the source context, speakers, and observed interaction pattern. Automatic speaker-verification metrics remain strong across stages, with same-speaker similarity of 0.983-0.991 and positive discrimination margins of 0.199-0.209. Predicted speech quality (NISQA MOS) is 3.56 for separation, 4.41 for reconstruction, and 4.61 for expansion. A Gemini-based automatic evaluator assigns expansion mean scores of 4.94/5 for contextual coherence and 4.80/5 for dialogue naturalness. Expansion and reconstruction exhibit broadly similar interaction profiles; expansion&#39;s turn, overlap-event, backchannel, and interruption rates are 4.6%, 8.0%, 13.2%, and 16.0% lower, respectively. We evaluate data properties only; downstream gains in full-duplex model training remain for future work.",
+  "abstractSha256": "fb29e1a85c3961aa26cc704e2ab1f1118bb438265d919c3ec6980300e44c0cf9",
+  "arxivId": "2609.08147",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Richard Yucheng He"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Baodong Cao"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Chen Xu"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Yihang Liu"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Tairan Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全双工对话需要保留轮转、重叠与反馈时序但真实录音纠缠不清的问题，ConversationalVoice 用质量校验的分离、词面固定的重建与上下文约束的扩展三阶段产出共享格式的双轨数据，并在自动评估中保持 0.983 至 0.991 的同说话人相似度与正向区分度，同时以重建提升预测音质而扩展维持相近交互密度。",
+  "originalTitle": "ConversationalVoice: Full-Duplex Speech Data from Real Conversations through Source-Faithful Reconstruction and Conversation-Grounded Expansion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08147.pdf",
+  "readerTitle": "从纠缠录音到可控双轨：分离、重建与扩展如何分工保留对话时序",
+  "schemaVersion": 1
+}

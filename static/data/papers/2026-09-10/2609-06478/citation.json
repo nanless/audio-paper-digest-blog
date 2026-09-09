@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06478",
+  "arxivId": "2609.06478",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China",
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Sifei Li"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Minyan Luo"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Guodong Qi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Xincan Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Directing, Beijing Film Academy, Beijing, China"
+      ],
+      "name": "Hanwen Wang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Pengfei Wan"
+    },
+    {
+      "affiliations": [
+        "University of Konstanz, Konstanz, Germany"
+      ],
+      "name": "Oliver Deussen"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Weiming Dong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06478",
+  "originalTitle": "MVWeaver: A Hierarchical Music Video Generation Agent with a Learned Song-to-Visual Bridge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06478.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07968",
+  "abstract": "Child speech differs from adult speech in acoustics, prosody, and linguistic structures. Speech disfluencies (such as repetitions) further challenge automatic understanding. While Audio Language Models (ALMs) show strong semantic reasoning from speech audio, their ability to reason about disfluent child speech in mixed-speaker settings remains unexplored. We investigate this through two tasks: child-focused semantic summarization and speech entailment. Experiments use recordings of children who stutter in mixed speaker interviews without explicit speaker separation. Models are instruction-guided to focus on the child, preserve clinically relevant disfluencies, and avoid adult-speech leakage. Evaluation combines LLM-based judges and reference-based metrics, anchored by transcript-oracle baselines to isolate errors. Results show that while ALMs extract high-level meaning from stuttered speech, reasoning degrades significantly with increased",
+  "abstractSha256": "c0802c08b960787b136324b7a1355e2809626f9c62ca4a381cdd0cd507f238dd",
+  "arxivId": "2609.07968",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频理解",
+    "rankBucket": "后50%",
+    "score": 4.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-disorders",
+          "label": "言语障碍"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chibuzor Okocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christan Grant"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zoey Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在 22 名口吃儿童的 44 段朗读与访谈音频上用儿童专属摘要与三类蕴含判断对比端到端音频语言模型与 Whisper 与 Granite 转录后接文本大模型的级联基线，发现端到端能生成流畅且纯净的摘要但忠实度偏低且蕴含判断普遍偏向肯定类，口吃密度升高与成人干扰会进一步拉低保真度与矛盾类准确率。",
+  "originalTitle": "Reasoning Beyond Transcription: Audio Language Models on Child Stuttering Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07968.pdf",
+  "readerTitle": "口吃与成人插话并存时，音频语言模型为何流畅却不忠实",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08795",
+  "abstract": "Dolphin communication understanding is essential for uncovering the linguistic complexity and social structures of wild pods. We adapt the ClustalW bioinformatics algorithm to analyze continuous acoustic data, treating vocalizations as high-dimensional spectral feature vectors. By replacing discrete scoring with a continuous Gaussian kernel similarity measure, our framework generates Multiple Sequence Alignment (MSA) visualizations that reveal shared structural patterns. These alignments highlight temporal motifs such as synchronized burst pulses in aggressive contexts that are difficult to detect through standard spectrogram inspection.",
+  "abstractSha256": "1c1a0c8d4e11152ec63926b9939b8dea1d7869855cfa8478407f531e9cc8774d",
+  "arxivId": "2609.08795",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频理解",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Kohlsdorf"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Denise Herzing"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology, Atlanta, Georgia, USA"
+      ],
+      "name": "Thad Starner"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对海豚发声时长伸缩与连续频谱难以直接比较的问题，论文将 ClustalW 的离散替换得分改为高斯核平均相似度并配合微调 Whisper 的 128 维嵌入做渐进式多序列比对，在成体攻击与幼体游戏攻击两类精细策展数据上以间隙结构与列方差等指标验证了对齐能恢复同步化爆脉冲等时序母题，但代价是领域适配与早停阈值仍需人工校准且过度拉伸会稀释时间分辨率。",
+  "originalTitle": "Interpreting Dolphin Vocal Sequences via Multiple Sequence Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08795.pdf",
+  "readerTitle": "把海豚叫声当连续向量做渐进式对齐：高斯核替代离散打分的多序列比对",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07688",
+  "arxivId": "2609.07688",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Bretz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Derya Soydaner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aske Plaat"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07688",
+  "originalTitle": "Silent Metronome: Rhythmic Grounding for Live Music Accompaniment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07688.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

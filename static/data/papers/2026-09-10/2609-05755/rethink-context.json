@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05755",
+  "abstract": "Human emotion is graded and frequently mixed, yet most multimodal recognizers collapse it onto a single hard label. We argue the recognizer should instead expose a distribution over affective space. Our text+speech system, alongside its categorical decision, emits a $9\\times9$ probability matrix over the Valence-Arousal plane, trained with a two-dimensional Gaussian soft target under a Kullback-Leibler/cross-entropy objective, aimed at counseling support. Evaluation is strict: speaker-independent 5-fold leave-one-session-out IEMOCAP with rotating-session inner validation, headline metrics only on the held-out session. Within one fixed encoder-fusion-head pipeline we compare Transformer and state-space (Mamba-1/2/3) backbones at matched depth and width, at two operating points ($T\\approx550$, $T\\approx2750$). The featured dual-head system reaches 73.0% $\\pm$ 0.3 unweighted accuracy over three seeds (separate rerun: 72.1%), exceeding the Transformer fusion baseline by 3.0 UA points (95% session-bootstrap CI [1.0,4.7]; significant under paired t-test and session-level bootstrap), with no latency or memory advantage at these lengths; swapping the ~1M trainable front-end for frozen WavLM-Large features (learnable layer weights) lifts the same architecture to 76.6% $\\pm$ 1.3. Pre-specified controls scope the claims honestly: simpler valence-arousal auxiliaries reproduce the classification lift within noise, and a dedicated regression head tracks the continuous ratings slightly better, so the head&#39;s specific value is the normalized affect distribution itself. That distribution recovers the circumplex: its center of mass tracks valence and arousal (CCC 0.66/0.66; predominantly between-class structure, weaker within-class tracking), and its entropy is weakly but consistently linked to categorical rater ambiguity, not dimensional spread.",
+  "abstractSha256": "a16c1959a47e5b0de46c1a0fbe03298bbfd9b5da7587d25640ff212bc20def00",
+  "arxivId": "2609.05755",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tingyi Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Ren Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kuanwei Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在文本+ 语音输入上用固定编码-时序-融合流水线对比 Transformer 与 Mamba 时序主干，并用二维高斯软目标训练 9×9 Valence-Arousal 联合分布头，在说话人无关 LOSO 协议下主系统达 73.0%±0.3 UA 且分布质心可跟踪连续效价/唤醒，但延迟优势在该句长下未出现。",
+  "originalTitle": "Emotion as a Distribution: Joint Valence-Arousal Probability Learning for Speaker-Independent Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05755.pdf",
+  "readerTitle": "把情绪当分布输出：在严格说话人无关评估下用 9×9 V-A 网格做可复述的多模态情绪识别",
+  "schemaVersion": 1
+}

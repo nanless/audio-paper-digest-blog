@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07079",
+  "arxivId": "2609.07079",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeongmin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seung Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minkyu Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ran Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoonkyu Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinxia Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07079",
+  "originalTitle": "Comparing Self-Supervised and Domain-Invariant Features for Cross-Domain Voice Phishing Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07079.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

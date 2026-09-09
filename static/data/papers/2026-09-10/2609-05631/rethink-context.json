@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05631",
+  "abstract": "A voice agent has to decide, at every pause, whether the user has finished speaking. Without a model of the language that decision falls back to a fixed silence timeout: set it short and the agent interrupts, set it long and every turn pays the full wait. Open semantic end-of-turn detectors exist, but to our knowledge none covers a South Indian language. We release TamilEOT: 18,485 labelled turn boundaries cut from 116 real Tamil telephone conversations, and two audio-only detectors fine-tuned from Smart Turn v3. On a held-out split of 4,168 clips from 30 unseen calls, accuracy rises from 70.30% zero-shot to 83.71% (8.7 MB) and 86.13% (21 MB); ROC-AUC rises from 0.751 to 0.921. Both models run in under 150 ms single-threaded on a laptop CPU. We also report what building it cost. Rule-derived labels, checked against a blind human listening pass, were right 95.9% of the time on the positive class and 44.4% on the negative class, which is below chance, because the rule answered a different question than the model is asked. Replacing them with an audio-LLM labeller measured at 97.5% human agreement cost US$5.69. Of every training lever we measured, only encoder capacity moved the result; three runs at identical config and seed span 0.87 accuracy points, which is the floor below which none of our other deltas mean anything. Replaying the same labelled boundaries through the production VAD and streaming adapter costs a further 2.60 points, and 7.8% of boundaries are never surfaced to the model at all. Data, weights, code and every negative result are public.",
+  "abstractSha256": "c5fd59d203889b1772100bfbd887510c5804f6af02126dd53bdb111b2f5b0be1",
+  "arxivId": "2609.05631",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "SFT",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前25%",
+    "score": 8.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Santhoshkumar V"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对泰米尔电话语音在每次停顿判断是否说完的问题，论文用 116 通双通道电话切出 18485 个边界并以音频大模型重标，再把 Smart Turn v3 微调为 8.7 MB 与 21 MB 两个纯音频模型，在 30 通未见来电的 4168 条上把准确率从 70.30% 提到 86.13%，代价是生产端 VAD 与流式切窗再扣约 2.60 点且部分边界根本不被送达模型。",
+  "originalTitle": "TamilEOT: A Dataset and Model for Semantic End-of-Turn Detection in Tamil Telephone Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05631.pdf",
+  "readerTitle": "停顿不等于结束：泰米尔电话语音的语义轮次终点如何被验证与复现",
+  "schemaVersion": 1
+}

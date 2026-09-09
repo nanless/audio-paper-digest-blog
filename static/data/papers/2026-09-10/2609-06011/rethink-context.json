@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06011",
+  "abstract": "Omni-modal large language models (OLLMs) jointly process vision, audio, and text, yet their modality bias under cross-modal conflict remains underexplored. Existing benchmarks conflate two distinct forms of evidence within a single modality: perceptual signals (e.g., a photograph or recording of a dog) and propositional signals (e.g., the declarative claim &#34;this is a dog&#34;), such that any measured modality bias is inherently confounded with evidence-form bias, precluding clean attribution to either source. To address this, we introduce Tri-PvP, an 8,000-sample tri-modal conflict benchmark crossing vision, audio, and text, where vision and audio each take perceptual or propositional form. Evaluating five OLLMs, we find robust visual bias across most models and evidence-type conditions. Crucially, we reveal a systematic asymmetry in evidence-form bias: models exhibit a stronger bias toward perceptual signal in vision but propositional in audio. Further analyses via layer-wise linear probing and contrastive decoding reveal that modality bias is already linearly decodable from early representation layers and can only be partially mitigated, calling for mitigation strategies beyond surface-level interventions.",
+  "abstractSha256": "de0224ef87850eb8687bc9566ca786ed7b0bcd2782e594d3918b56564c21422c",
+  "arxivId": "2609.06011",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Yen-Ting Piao"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Shu-Yun Chen"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Chin-Hui Chu"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Chun-Wei Chen"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Shih-Yun Shan Kuan"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Yun-Nung Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "为解决全模态大模型在图文声三路互斥时把模态偏置与证据形式偏置混为一谈的问题，Tri-PvP 以 8000 样本的四条件匹配反事实与五模型对照揭示视觉主导且视听在感知与命题上不对称，并以早期线性可分与对比解码仅部分缓解且引入文本残余为代价验证偏置的表征根源。",
+  "originalTitle": "Tri-PvP: Exposing Modality Bias in Omni-Modal Large Language Models through Perceptual-Propositional Evidence Conflicts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06011.pdf",
+  "readerTitle": "Tri-PvP：用感知与命题的正交冲突把模态偏置从证据形式偏置中剥离",
+  "schemaVersion": 1
+}

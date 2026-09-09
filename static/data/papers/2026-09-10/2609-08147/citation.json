@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08147",
+  "arxivId": "2609.08147",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Richard Yucheng He"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Baodong Cao"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Chen Xu"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Yihang Liu"
+    },
+    {
+      "affiliations": [
+        "AveraLabs"
+      ],
+      "name": "Tairan Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08147",
+  "originalTitle": "ConversationalVoice: Full-Duplex Speech Data from Real Conversations through Source-Faithful Reconstruction and Conversation-Grounded Expansion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08147.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

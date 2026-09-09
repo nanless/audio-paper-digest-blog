@@ -1,0 +1,28 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06837",
+  "arxivId": "2609.06837",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "VISGRAF",
+        "IMPA"
+      ],
+      "name": "Luis Vitor Zerkowski"
+    },
+    {
+      "affiliations": [
+        "VISGRAF",
+        "IMPA"
+      ],
+      "name": "Luiz Velho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06837",
+  "originalTitle": "BinauralVAE: Spatial Audio Reconstruction For World Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06837.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

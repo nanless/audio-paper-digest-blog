@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07893",
+  "abstract": "Deep learning is an efficient technique to monitor the real time welding process, reducing post-welding repairs and production delays. This paper leverages the monitoring capability by proposing a multi modal temporal attention based deep learning defect detection model for internal defects that are challenging to detect, including porosity, lack of penetration and fusion, undercut, and cold lap during Gas Metal Arc Welding in fillet joints. The model is trained on collected welding images and sound data from an industrial collaborative welding robot. The results show that the attention module can improve the F1 Score to 0.99. We use explainable Artificial Intelligence to interpret the proposed models behavior and dataset distribution, determining potential important areas in image and sound spectrograms and preferred modality to detect each defect. This improves trust and reliability in Artificial Intelligence driven welding inspection.",
+  "abstractSha256": "e291629e9777789563017179e61d4dd2f5e0aec7257fd0cdc5e14fea26e85f72",
+  "arxivId": "2609.07893",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 4.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of British Columbia- Vancouver campus, 2329 West Mall, Vancouver, V6T 1Z4, British Columbia, Canada"
+      ],
+      "name": "Mobina Mobaraki"
+    },
+    {
+      "affiliations": [
+        "Novarc Technologies Inc., 1225 E Keith Rd, North Vancouver, V7J 1J3 , British Columbia, Canada"
+      ],
+      "name": "Mahyar Asadi"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia, Kelowna campus, 3333 University Way, Kelowna, V1V 1V7, British Columbia, Canada"
+      ],
+      "name": "Klaske Van Heusden"
+    },
+    {
+      "affiliations": [
+        "University of British Columbia- Vancouver campus, 2329 West Mall, Vancouver, V6T 1Z4, British Columbia, Canada"
+      ],
+      "name": "Guy A. Dumont"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 GMAW 角焊缝中难以实时发现的五类内部缺陷，论文用 16 帧图像与梅尔声谱的 3D 时序融合加跨块注意力将多模态 F1 提升至 0.99，并以 GradCAM 与 t-SNE 定位每类缺陷的图像关键区与更优模态，代价仅增加 0.1 GFLOPs。",
+  "originalTitle": "Explainable Temporal Attention-based Defect Detection For Fillet Joints in Real-Time Gas Metal Arc Welding Based on Multi-modal Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07893.pdf",
+  "readerTitle": "在熔池时序中找缺陷：多模态时序注意力如何把 GMAW 角焊缝的隐蔽缺陷检出率推到 0.99",
+  "schemaVersion": 1
+}

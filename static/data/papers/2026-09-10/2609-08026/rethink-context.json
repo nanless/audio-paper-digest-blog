@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08026",
+  "abstract": "Acoustic scene understanding in multi-room environments is a difficult task. Most existing systems use a single centralized microphone array, and they often fail because walls and doors block sound signals. To address this challenge, we propose a geometry-informed distributed acoustic scene understanding framework. Our system leverages distributed microphones and uses an audio spectrogram transformer and a topology-aware graph neural network to fuse spatio-temporal acoustic features. Then, these features are decoded into discrete semantic triplets. Finally, a frozen large language model combines these symbolic observations with the environmental geometry. This allows the system to perform spatial understanding, infer plausible missing transitions, and generate a physically consistent narrative of the scene. Experiments on a custom multi-room simulator demonstrate that our framework outperforms centralized baselines and improves spatial consistency under simulated occlusion.",
+  "abstractSha256": "dce4355c3c225453ad8d7fa4fd663f45e43b1ab2a7d3f579c849bf9f5e6c8e32",
+  "arxivId": "2609.08026",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiyuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shitong Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Niki Trigoni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Markham"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多房间中墙体遮挡导致单点麦克风观测碎片化的问题，论文用分布式麦克风的拓扑感知图融合与几何约束的冻结大语言模型推理将声学证据补全为物理一致的叙事，并在受控仿真中以三元组与空间一致性等指标验证其相对集中式基线的优势与代价。",
+  "originalTitle": "Geometry-Informed Distributed Acoustic Scene Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08026.pdf",
+  "readerTitle": "墙体遮挡下的分布式声学叙事：用拓扑图与几何提示补全多房间声场景",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08026",
+  "arxivId": "2609.08026",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiyuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shitong Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Niki Trigoni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Markham"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08026",
+  "originalTitle": "Geometry-Informed Distributed Acoustic Scene Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08026.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

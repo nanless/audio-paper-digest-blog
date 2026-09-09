@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08542",
+  "arxivId": "2609.08542",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nour Bouayed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adrien Llave"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jérôme Daniel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Scalart"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08542",
+  "originalTitle": "Spatial Audio Coding Through Relative Room Impulse Response Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08542.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

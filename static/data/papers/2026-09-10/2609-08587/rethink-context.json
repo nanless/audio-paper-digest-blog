@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08587",
+  "abstract": "Augmenting instruments with sensors and neural network mappings is a well-explored digital musical instrument design approach. While augmentations can create new expressive opportunities, they also exert aesthetic influence and can constrain musicians&#39; gestural language, which, if left unchecked, can lead to technological capture. To examine this, we conducted a study with a professional percussionist, co-developing a gesture mapping toolkit and recording a ten-track album. Drawing on the concept of productive dissonance, our study aimed to hold the musician&#39;s aesthetic in tension with technological constraints. This, along with a practice-based reflective approach, supported the development of a continuous gesture recognition method for percussive mapping and surfaced insights into the design process. We identify knowing-when as a form of tacit knowledge that supported productive dissonance, and raise an open question: absent a musician&#39;s broader social context, how do we know whether a technology&#39;s influence is genuinely supporting their practice?",
+  "abstractSha256": "e34e90792834f1cd834d58e6e5fa717ce539baab8ae634e3a1ae69f1dedec80f",
+  "arxivId": "2609.08587",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "音频交互",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "音频交互",
+      "primaryTaskId": "task.audio-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordie Shier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Teresa Pelinski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charalampos Saitis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Robertson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew McPherson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "本研究通过与职业鼓手四个月的协同设计，将仅支持离散打击检测的映射扩展为连续手势 RNN 与离散分类协同的 Max4Live 工具包，并以十首曲目录制检验其在真实创作中能否抵御技术俘获，代价是连续特征时域精度与循环稳定性仍有限。",
+  "originalTitle": "Rescuing Performance from the Demo: Co-Designing Drum Gesture Mappings with a Percussionist",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08587.pdf",
+  "readerTitle": "当打击乐手拿起鼓刷：用持续手势对抗鼓机映射的技术俘获",
+  "schemaVersion": 1
+}

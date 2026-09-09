@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06488",
+  "arxivId": "2609.06488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuma Narahata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomohiko Nakamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06488",
+  "originalTitle": "Lead Vocal Separation from Vocal Ensemble Mixtures Using Phoneme Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06488.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06788",
+  "abstract": "Automatic Pronunciation Assessment (APA) systems have achieved strong performance with transformer-based models and self-supervised speech representations. However, most methods rely only on acoustic signals and overlook temporal synchronization between speech and articulatory movements, limiting diagnostic feedback on timing mismatches important for L2 pronunciation training. We propose an interpretable audio-visual synchronization framework that explicitly models speech-lip temporal alignment through feature encoding, cross-attention fusion, lag estimation, stability quantification, and visualization. The framework introduces frame-level lag trajectories and a Lag Stability Index (LSI) to quantify synchronization robustness. We also interviewed 30 participants, including 10 instructors and 20 students with diverse first-language backgrounds, to assess its effectiveness. By transforming implicit alignment into interpretable representations, the framework connects automatic scoring with actionable Computer-Aided Pronunciation Training feedback. Datasets and supplemental materials are available at this https URL.",
+  "abstractSha256": "adf31c9f4da5b415fc66bef4c9b2c5f8eacedec3e05fe42e6c214aba4ebcb4f2",
+  "arxivId": "2609.06788",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音视频理解",
+    "rankBucket": "后50%",
+    "score": 3.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Bowen Yu"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Mingyu Huang"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Yishen Liu"
+    },
+    {
+      "affiliations": [
+        "Wenzhou-Kean University, Wenzhou, China"
+      ],
+      "name": "Yue Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对仅靠音频评估无法诊断唇动与语音时序错位的问题，论文用跨模态注意力显式建模帧级对齐并导出时滞轨迹与稳定性指标，在 8 类录制条件下以线性复杂度和可视化分析实现可解释的同步性诊断。",
+  "originalTitle": "When Speech Meets Lips: Interpretable Audio-Visual Synchronization for L2 Pronunciation Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06788.pdf",
+  "readerTitle": "从隐式注意力到可编辑的时滞轨迹：音视同步如何为发音评估提供可解释时序依据",
+  "schemaVersion": 1
+}

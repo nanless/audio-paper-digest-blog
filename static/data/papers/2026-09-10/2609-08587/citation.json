@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08587",
+  "arxivId": "2609.08587",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordie Shier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Teresa Pelinski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charalampos Saitis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Robertson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew McPherson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08587",
+  "originalTitle": "Rescuing Performance from the Demo: Co-Designing Drum Gesture Mappings with a Percussionist",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08587.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

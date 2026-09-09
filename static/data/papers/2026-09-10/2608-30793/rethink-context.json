@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2608.30793",
+  "abstract": "AI-assisted programming environments have accelerated software development, giving rise to new paradigms like vibe coding. However, their benefits remain largely inaccessible to visually impaired programmers, as existing screen readers and assistive tools offer limited support for these emerging workflows. We introduce LipCoder, a voice-centric programming toolkit designed to deliver editor-level functionality through auditory and speech-based interfaces. LipCoder offers features comprising speech feedback and earcon cues for comprehension and validation, as well as natural language input for navigation and modification. In an exploratory evaluation, 5 visually impaired programmers performed a series of coding tasks comparing LipCoder with a baseline of VSCode, Copilot, and VoiceOver. Quantitative trends and qualitative feedback point to directions for auditory-first design that may broaden accessibility in speech-driven coding environments.",
+  "abstractSha256": "47e0fbd5d45f060effbf32f3c980d95b7c4686ad47b8aca05a8e25063e676d08",
+  "arxivId": "2608.30793",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Hayoon Kim"
+    },
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Sungho Lee"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Seoul, Republic of Korea"
+      ],
+      "name": "Juhwi Kim"
+    },
+    {
+      "affiliations": [
+        "Human-Centered Computing Lab, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Bongwon Suh"
+    },
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, AIIS, IPAI, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "LipCoder 针对视障程序员在可视编辑器与 AI 补全中被迫逐行听屏的断裂，用语音输入与听觉输出统一导航理解修改验证，在 5 名视障被试的探索性对照中可用性数值向好但校正后均不显著，且强依赖识别与大模型可靠性。",
+  "originalTitle": "LipCoder: Voice-Enabled Coding Toolkit",
+  "pdfUrl": "https://arxiv.org/pdf/2608.30793.pdf",
+  "readerTitle": "从注视到聆听：LipCoder 把 AI 编程装进语音闭环",
+  "schemaVersion": 1
+}

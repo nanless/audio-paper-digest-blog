@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08275",
+  "abstract": "Recent multi-shot audio-video generators can produce increasingly coherent and cinematic outputs, but coherence does not imply the ability to execute editing techniques. Professional editing depends on shot structure, transition grammar, audio-video cut relations, and montage, yet existing benchmarks largely rely on proxies such as content quality, synchronization, or physical plausibility, systematically missing whether such editing instructions are actually executed. We introduce CutCraft, the first benchmark for editing-technique execution in multi-shot audio-video generation. CutCraft extends structured multi-shot prompts with explicit editing specifications and is paired with a hierarchical hybrid evaluation framework that combines shot-structure alignment, expert-model metrics, tool-grounded multimodal judgment, and rubric-based question answering. Beyond evaluation, we design an agentic editing baseline that decomposes generation into planning, shot-level synthesis, and post-hoc composition, explicitly realizing editing semantics such as J-cuts, L-cuts, and transition timing. Across 13 state-of-the-art closed- and open-source models, CutCraft reveals a consistent gap between coherence and editing-technique execution: current systems often produce plausible multi-shot videos yet fail to execute editorial instructions reliably. We find unstable shot structures, weak control of transition execution, and sharp degradation on higher-order montage, while aesthetic quality is only weakly correlated with editing-technique compliance. The benchmark and metrics, and the editing agent baseline are available at this https URL.",
+  "abstractSha256": "877358811ff8a4788084096c103552bf079fbea3caf55faba259345bcae74381",
+  "arxivId": "2609.08275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tianyi Zeng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Junchao Liao"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Yujie Wei"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Ziying Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Litao Li"
+    },
+    {
+      "affiliations": [
+        "UT Austin"
+      ],
+      "name": "Tianyi Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhichao Wei"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Shuyao Xu"
+    },
+    {
+      "affiliations": [
+        "Institute of Software, Chinese Academy of Sciences"
+      ],
+      "name": "Wenwen Qiang"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Siyu Zhu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhenghao Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Long Qin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CutCraft 把多镜头音画生成从感知连贯拉回到可核验的剪辑执行，用 295 条结构化提示与分层混合评估在 13 个主流模型上检验镜头结构、转场与蒙太奇的指令遵从，并以规划-分镜合成-后期合成的智能体基线揭示离散剪辑控制可提升而高阶蒙太奇仍难的代价边界。",
+  "originalTitle": "Beyond Coherence: Benchmarking Professional Editing-Technique Execution in Multi-Shot Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08275.pdf",
+  "readerTitle": "从看得连贯到剪得准确：CutCraft 如何把多镜头音画的剪辑执行变成可核验的度量",
+  "schemaVersion": 1
+}

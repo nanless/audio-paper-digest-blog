@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08795",
+  "arxivId": "2609.08795",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Kohlsdorf"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Denise Herzing"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology, Atlanta, Georgia, USA"
+      ],
+      "name": "Thad Starner"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08795",
+  "originalTitle": "Interpreting Dolphin Vocal Sequences via Multiple Sequence Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08795.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

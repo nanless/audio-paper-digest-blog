@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06011",
+  "arxivId": "2609.06011",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Yen-Ting Piao"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Shu-Yun Chen"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Chin-Hui Chu"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Chun-Wei Chen"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Shih-Yun Shan Kuan"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "NTU Artificial Intelligence Center of Research Excellence (NTU AI-CoRE)"
+      ],
+      "name": "Yun-Nung Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.06011",
+  "originalTitle": "Tri-PvP: Exposing Modality Bias in Omni-Modal Large Language Models through Perceptual-Propositional Evidence Conflicts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06011.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05871",
+  "abstract": "Audio-conditioned language models often underuse acoustic cues such as prosody, emotion, and non-speech sounds, raising the question of whether ASR-supervised frontends discard this information before it reaches the LM. We test whether the frontend is responsible by comparing Whisper-Tiny and Whisper-Small with EnCodec, DAC-VAE, and WavTokenizer in a shared Qwen3.5-4B audio-LM pipeline on ASR, emotion recognition, and sound captioning. Encoder replacement alone does not resolve this underuse: Whisper variants remain strongest overall, including on emotion and environmental sound captioning. To localize the failure, we trace task-relevant information through the encoder, projector, LM layers, and LM head. Linear probes and geometric analyses show that discriminative acoustic structure remains recoverable at the final LM layer, even when MCQA accuracy trails probe accuracy by up to 83 points. Because the answer format and decoding procedure are controlled, this task-dependent gap points to content-specific readout failure rather than generic format bias. LogitLens analyses and a targeted LM head intervention support the conclusion that acoustic underuse is not explained solely by encoder-side information loss and that readout alignment can be a dominant bottleneck.",
+  "abstractSha256": "4106c64cf9392ee7d263fc0a41788db25f212e65a06dc07c102b8465826d826b",
+  "arxivId": "2609.05871",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Song-ha Jo"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Sehyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soyoon Kim"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jaesik Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanghyuk Choi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把 ASR 监督前端是否丢弃声学信息当作可证伪假设，在同一 Qwen3.5-4B 流水线中对比 Whisper 与三类重建式编解码器，并用分层探针、几何比值与仅调 LM 头选项行的因果小手术证明声学结构在最终隐状态仍可恢复而 MCQA 失效主要来自读出对齐，但换前端本身不能解决情绪与环境声字幕的欠利用。",
+  "originalTitle": "Where Does the Sound Go? Tracing Acoustic Information Loss in Audio-Conditioned LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05871.pdf",
+  "readerTitle": "声音去哪了：末层仍可线性读出却在选项字母上失准的读出瓶颈",
+  "schemaVersion": 1
+}

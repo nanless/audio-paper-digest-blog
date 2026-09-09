@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08948",
+  "arxivId": "2609.08948",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, National University of Singapore"
+      ],
+      "name": "Phuong Tuan Dat"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Ho Bao Thu"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Nguyen Tran Trung"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Pham Viet Hoang"
+    },
+    {
+      "affiliations": [
+        "School of Communication and Information Technology, Hanoi University of Science and Technology"
+      ],
+      "name": "Nguyen Thi Thu Trang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08948",
+  "originalTitle": "Disentangled Global-Local Feature Learning with E-Branchformer for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08948.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

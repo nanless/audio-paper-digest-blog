@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08390",
+  "arxivId": "2609.08390",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Bella Godiva"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Yeonju Kim"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Yong Man Ro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08390",
+  "originalTitle": "Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Robust Full-Duplex Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08390.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

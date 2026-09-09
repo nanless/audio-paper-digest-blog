@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07038",
+  "arxivId": "2609.07038",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Zhaojie Luo"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Junkun Wang"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Tianhua Qi"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Yuxuan Wu"
+    },
+    {
+      "affiliations": [
+        "Southeast University, Nanjing, Jiangsu, China"
+      ],
+      "name": "Xin Zhao"
+    },
+    {
+      "affiliations": [
+        "Kobe University, Kobe, Japan"
+      ],
+      "name": "Tetsuya Takiguchi"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Tomoko Matsui"
+    },
+    {
+      "affiliations": [
+        "Beijing Institute of Technology, Beijing, China"
+      ],
+      "name": "Kun Qian"
+    },
+    {
+      "affiliations": [
+        "Nanjing Medical University, Nanjing, China"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka, Osaka, Japan"
+      ],
+      "name": "Shuqiong Wu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Zhengjun Yue"
+    },
+    {
+      "affiliations": [
+        "The University of Osaka, Osaka, Japan"
+      ],
+      "name": "Hiroshi Ishiguro"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology Beijing, Beijing, China"
+      ],
+      "name": "Xinyuan Qian"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong (Shenzhen), Shenzhen, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07038",
+  "originalTitle": "AdoDAS: A Privacy-Preserving Multimodal Challenge for Adolescent Depression, Anxiety, and Stress Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07038.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

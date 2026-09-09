@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08542",
+  "abstract": "Immersive virtual listening relies on spatial audio technologies such as Higher-Order Ambisonics (HOA), which represent sound scenes as multichannel signals. As the desired spatial resolution increases, so does the number of channels, making efficient compression essential for transmission over bandwidth-limited networks. Moreover, to facilitate deployment by network operators, the target bitrate for immersive audio coding should ideally remain close to the 25 kbps currently allocated to VoLTE audio services. State-of-the-art parametric codecs, such as the recently standardized Immersive Voice and Audio Services (IVAS) codec, achieve compression by transmitting spatial metadata together with a reduced number of transport channels. However, recent studies have shown that IVAS performance degrades on reverberant content, particularly at low bitrates, a limitation that suggests its inability to accurately model room acoustics. In this paper, we propose a novel HOA coding scheme based on the explicit and blind estimation of the Relative Spatial Room Impulse Response (ReSRIR), using a beamformed version of the HOA signal as a reference signal. By exploiting the structure and sparsity of the estimated ReSRIR, we derive an efficient parametric representation for immersive audio coding. Experimental evaluations show that the proposed method achieves higher compression than IVAS in the single-transport-channel regime, while maintaining comparable to slightly better quality.",
+  "abstractSha256": "7f09e3a75acdb8391ae804a20b53f6d2f735799f4b80ef1f0154747bf0ecff93",
+  "arxivId": "2609.08542",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nour Bouayed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adrien Llave"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jérôme Daniel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascal Scalart"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对三阶 HOA 在约 27 kbps 单传输通道下混响建模不足的问题，论文以波束成形参考盲估计相对空间房间脉冲响应并拆为稀疏波包与残差包络进行参数化，在未见 SRIR 上取得与 32 kbps IVAS 相当且验证集上略优的 QASTANet 分数，同时把空间参数压到约 2 kbps。",
+  "originalTitle": "Spatial Audio Coding Through Relative Room Impulse Response Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08542.pdf",
+  "readerTitle": "在单通道约束下用稀疏相对脉冲响应重建空间：HOA 参数化编码的显式房间建模",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07226",
+  "arxivId": "2609.07226",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yukara Ikemiya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "WeiHsiang Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07226",
+  "originalTitle": "Iterative Audio Separation with Mixture Consistency via MIMO Model Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07226.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

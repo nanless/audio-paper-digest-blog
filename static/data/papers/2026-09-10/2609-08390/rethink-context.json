@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08390",
+  "abstract": "Full-duplex spoken dialogue systems enable simultaneous listening and speaking, but their audio-only perception often fails under background noise and overlapping speech, leading to incoherent responses. Recent audio-visual dialogue approaches show that incorporating visual cues such as lip movements improve robustness under audio corruption. However, existing approaches often adapt the large speech dialogue model itself to process visual input, requiring costly multimodal training. We propose AV-STE, a modular streaming audio-visual front-end that restores corrupted semantic speech tokens from noisy audio and lip video before they reach the speech LLM. The downstream dialogue model remains entirely frozen, preserving its pretrained conversational capabilities. When integrated with frozen Moshi, AV-STE improves average GPT-4o-judged response coherence from 1.42 to 1.91 under same-dataset speaker interference while largely preserving turn-taking behavior. Gains also transfer to out-of-domain Seamless Interaction.",
+  "abstractSha256": "9e99547bf8b7bedf1bd8e38c3c548ade36bf59bba5f7115cbfd207b49cccbf66",
+  "arxivId": "2609.08390",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Bella Godiva"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Yeonju Kim"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision and Language Lab, KAIST, South Korea"
+      ],
+      "name": "Yong Man Ro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全双工语音对话在背景噪声和重叠说话下语义口令损坏的问题，AV-STE 用流式视听编码器加噪声自适应融合在冻结 Moshi 之前恢复第一码本语义口令，同数据集多人干扰下 GPT-4o 连贯性平均从 1.42 提到 1.91，代价是干净语音存在口令失配且依赖可靠唇部视频。",
+  "originalTitle": "Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Robust Full-Duplex Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08390.pdf",
+  "readerTitle": "噪声越大越要看嘴型：AV-STE 在冻结对话模型前修复语义口令",
+  "schemaVersion": 1
+}

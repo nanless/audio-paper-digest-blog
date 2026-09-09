@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06837",
+  "abstract": "Embodied artificial intelligence has historically very much relied on visual perception, leading to a proliferation of multiple vision-centric world models. However, this reliance fails to capture spatial understanding in its entirety and can even present vulnerabilities in environments with visual occlusions, low-light conditions, or blackouts-scenarios, where acoustic information becomes a critical alternative for spatial awareness and navigation. Despite its potential, research into realistic spatial audio and particularly the development of audio-centric world models remains sparse. In this technical report, we introduce BinauralVAE: a flexible, open-source pipeline (this https URL) that explores multiple models for spatialized audio reconstruction, progressing from fundamental baselines to advanced, mathematically grounded architectures. Our approach evaluates various Variational Autoencoder architectures -- including complex-valued variants -- to learn robust latent representations of binaural signals. Developed alongside AudioWorldSim, our methodology leverages realistic acoustic data captured as a simulated robot navigates an environment. This pipeline establishes a foundation for state representation in a future audio-based world model, designed to map the direct causal connection between navigational actions and their resulting acoustic consequences, and helping to enable sound as an essential complementary modality for spatial knowledge acquisition.",
+  "abstractSha256": "275e8585f01ac7d274f0c965da6a3db44bacf6f1510fe8b81e82d58554069424",
+  "arxivId": "2609.06837",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "VISGRAF",
+        "IMPA"
+      ],
+      "name": "Luis Vitor Zerkowski"
+    },
+    {
+      "affiliations": [
+        "VISGRAF",
+        "IMPA"
+      ],
+      "name": "Luiz Velho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "为解决视觉遮挡下世界模型缺乏空间听觉的问题，BinauralVAE 对比三种 VAE 在 0.2 秒双耳片段上的重建能力，显示保留相位的复数 VAE 在低频段实现可听的空间保真，而幅值-only 与四通道实数 VAE 分别因 ITD 丢失与相位塌缩而失效。",
+  "originalTitle": "BinauralVAE: Spatial Audio Reconstruction For World Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06837.pdf",
+  "readerTitle": "双耳相位不可丢：从 Mel 模糊到复数 VAE 的空间音频重建",
+  "schemaVersion": 1
+}

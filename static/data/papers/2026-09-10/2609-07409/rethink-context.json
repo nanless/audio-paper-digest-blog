@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07409",
+  "abstract": "Recent multimodal Speech Emotion Recognition (SER) systems achieve high accuracy through interaction-heavy cross-modal transformers, but their computational cost limits deployment in latency-sensitive and resource-constrained surveillance systems. To address this challenge, we propose RAFM_SER++, a lightweight multimodal SER framework featuring an asymmetric Residual Attention Fusion Mechanism (RAFM). Rather than relying on computationally expensive bidirectional interactions, RAFM injects affective speech cues into semantic text representations through a one-directional residual attention pathway. Combined with a BYOL-inspired cross-modal alignment objective and attention-guided pooling, the proposed framework improves multimodal representation learning while maintaining low computational overhead. Experiments on the IEMOCAP and ESD benchmarks demonstrate that RAFM_SER++ consistently outperforms the HuBERT-Base baseline and achieves a superior accuracy-efficiency trade-off compared with the state-of-the-art MemoCMT. Specifically, RAFM_SER++ reduces trainable parameters by more than 60%, achieves faster inference (79.60 it/s), and attains BACC scores of 81.10% on IEMOCAP and 95.39% on ESD. These results indicate that lightweight asymmetric multimodal fusion is an effective alternative to interaction-heavy cross-modal transformers for real-time surveillance applications.",
+  "abstractSha256": "9af5a8e160d4695f4c36e648040893958549fe48281905899da33da7feafbc33",
+  "arxivId": "2609.07409",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Ngo Truong Dinh"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Tung-Lam Bui"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Chi-Trung Duong"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Vien Nguyen Thi"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Viet-Anh Nguyen"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Technology University of Science, VNU-HCM Ho Chi Minh City, Vietnam ORCID: 0009-0007-0254-0202"
+      ],
+      "name": "Phuc-Lu Le"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "RAFM-SER++ 以文本为查询、语音为键值的单向残差注意力替代双向跨模态 Transformer，结合 BYOL 式对齐与注意力池化，在 IEMOCAP 上达到 81.10% BACC、ESD 上 95.39% BACC，同时将可训练参数从 8.9M 降至 3.6M 并提升推理吞吐。",
+  "originalTitle": "RAFM-SER++: A Lightweight Multimodal Emotion Recognition Framework for Real-Time Behavioral Monitoring in Surveillance Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07409.pdf",
+  "readerTitle": "不对称残差融合能否替代双向跨模态 Transformer：RAFM-SER++ 的轻量化权衡",
+  "schemaVersion": 1
+}

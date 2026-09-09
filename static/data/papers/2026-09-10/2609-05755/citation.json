@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05755",
+  "arxivId": "2609.05755",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tingyi Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Ren Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kuanwei Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.05755",
+  "originalTitle": "Emotion as a Distribution: Joint Valence-Arousal Probability Learning for Speaker-Independent Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05755.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

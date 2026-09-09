@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07173",
+  "arxivId": "2609.07173",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyi Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengding Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Libin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Woon-Seng Gan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07173",
+  "originalTitle": "Direction-Preserving Active Noise Control with a Conditional Control-Filter Estimation Network",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07173.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

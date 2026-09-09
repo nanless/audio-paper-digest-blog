@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07981",
+  "arxivId": "2609.07981",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gang Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07981",
+  "originalTitle": "Clean Accuracy Does Not Guarantee Provenance Robustness: A Prospective Codec-Stress Evaluation of Audio Attribution",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07981.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

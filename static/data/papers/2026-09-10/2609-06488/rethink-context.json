@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06488",
+  "abstract": "Contemporary a cappella singing often has a lead-and-accompaniment texture, where the lead vocal (Vo) part carries the main melody and the remaining vocal parts provide accompaniment. Owing to their distinct roles, separating the Vo part from the remaining vocal parts, referred to as Vo separation, enables downstream applications such as lyric recognition and minus-one accompaniment generation for vocal ensemble music. Despite these potential applications, acoustic cues for this task are limited because the target and interfering sources are all singing voices with similar acoustic characteristics and often overlap in time, making Vo separation challenging. In this paper, we propose a Vo separation model that uses phoneme alignment of the Vo part as auxiliary information. The proposed model is based on band-split RoPE Transformer (BS-RoFormer), a state-of-the-art music source separation model, and introduces frame-level phoneme labels into its intermediate representations using feature-wise linear modulation (FiLM). Experimental results show that phoneme-alignment conditioning improves Vo separation performance over an audio-only baseline and yields larger average gains than conditioning only on Vo singing/silence activity. Further analysis suggests that the advantage of phoneme-label information is larger when fewer remaining vocal parts share the same phoneme as Vo.",
+  "abstractSha256": "8d7fa7121e87c49cffa2ab04cedac8b1b7e0deb892e958f2edbb58fbb8a7cb70",
+  "arxivId": "2609.06488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuma Narahata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomohiko Nakamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对六声部无伴奏合唱中主唱与伴唱音色高度相似、时域重叠的分离难题，论文在 BS-RoFormer 主干中以帧级主唱音素对齐经 FiLM 逐层调制中间表示，并在 jaCappella 上以理想对齐条件验证其对 Vo 与 Other 两路 SI-SDRi 的提升及随音素重叠度变化的增益边界。",
+  "originalTitle": "Lead Vocal Separation from Vocal Ensemble Mixtures Using Phoneme Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06488.pdf",
+  "readerTitle": "当所有声部都是人声：用主唱音素对齐区分主唱与伴唱的分离路径",
+  "schemaVersion": 1
+}

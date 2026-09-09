@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07688",
+  "abstract": "Live accompaniment models generate music for an incoming audio stream, committing to each output frame before hearing what comes next. In this strictly causal setting the model must infer tempo, meter, and metrical phase from its own imperfect past, whereby compounding errors quickly become audible as rhythmic drift. Put simply, the model has ears but no temporal reference, so when the ears hear imperfect, ambiguous music, the model will produce a flawed output. We propose Silent Metronome (SiMe), which gives it the temporal reference, encoding the phase within the beat and within the bar as periodic functions, pairing them with tempo and time signature, and supplying the result as a separate conditioning channel. Because this reference is independent of the generated audio, it cannot drift. Complementary auxiliary heads shape the latent representation, including a novel head that predicts the model&#39;s own future tokens. With the metrical signal taken from ground-truth annotations, beat alignment improves by a factor of 3.2 over the strictly causal baseline and surpasses a non-causal reference granted a full second of look-ahead. Coherence between input and accompaniment stays within a single point of that reference. These results suggest that streaming accompaniment systems should treat rhythm as a signal to be shared, as human ensembles do, rather than inferred.",
+  "abstractSha256": "a37649cc1c6a2844b06aefcbc614cf9da9a2d4620296bf58b98223e69bfe92e2",
+  "arxivId": "2609.07688",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Bretz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Derya Soydaner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aske Plaat"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对严格因果实时伴奏中自回归节奏漂移问题，Silent Metronome 用与生成音频无关的外部节拍相位加速度拍子条件做逐帧锚定并辅以未来词元预测塑形表示，在 Slakh2100 上把 Beat-F 从 0.133 提升到 0.432 并超过 1 秒前视的非因果参照，代价是参数量增加与分布保真度的轻微回落。",
+  "originalTitle": "Silent Metronome: Rhythmic Grounding for Live Music Accompaniment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07688.pdf",
+  "readerTitle": "耳朵有了，还要给手表：用外部节拍网格锚定实时伴奏",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2608.30793",
+  "arxivId": "2608.30793",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Hayoon Kim"
+    },
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Sungho Lee"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Seoul, Republic of Korea"
+      ],
+      "name": "Juhwi Kim"
+    },
+    {
+      "affiliations": [
+        "Human-Centered Computing Lab, Department of Intelligence and Information, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Bongwon Suh"
+    },
+    {
+      "affiliations": [
+        "Music and Audio Research Group, Department of Intelligence and Information, AIIS, IPAI, Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Kyogu Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2608.30793",
+  "originalTitle": "LipCoder: Voice-Enabled Coding Toolkit",
+  "pdfUrl": "https://arxiv.org/pdf/2608.30793.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

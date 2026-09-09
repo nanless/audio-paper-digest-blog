@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07173",
+  "abstract": "Conventional active noise control (ANC) minimizes the total disturbance at the error microphone without distinguishing desired sound from noise. Direction-preserving ANC (DP-ANC) instead aims to attenuate a noise component arriving from a direction other than the specified desired direction while preserving sound naturally arriving from that direction. Existing approaches typically either require analytical optimization to be repeated for each new observation or estimate and reproduce the desired component through a hear-through secondary-source path. To address these limitations, this paper formulates DP-ANC as a direction-conditioned cancellation-preservation optimization problem. A component-separated objective jointly penalizes residual noise energy and the control response induced by the desired component, with a scalar weighting parameter controlling the cancellation-preservation trade-off. A convolutional network conditioned on the specified desired direction through feature-wise linear modulation (FiLM) is trained using a differentiable secondary-path-aware forward model. At deployment, the network estimates the complete multichannel finite impulse response (FIR) control-filter bank directly from a mixed-reference observation and the specified desired direction in a single forward pass, while retaining the conventional feedforward ANC signal path. Over 3300 evaluation cases, the selected operating point achieves 22.8 dB mean noise reduction with a desired-signal distortion of -11.4 dB. Validation using measured in-ear-device transfer functions further demonstrates consistent performance under measured acoustic configurations.",
+  "abstractSha256": "a756295dbf8bf9f35850ecd13cadef465e4bfb9702bf4628b0b968b28c4ced2f",
+  "arxivId": "2609.07173",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "主动降噪",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "主动降噪",
+      "primaryTaskId": "task.active-noise-control",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyi Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengding Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Libin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Woon-Seng Gan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对传统降噪不分期望声与噪声一起压制的问题，该文把保向降噪写成降噪项与保持项加权优化，用方向调制的卷积网络从混合参考一次估计多通道 FIR 滤波器组，在 3300 个仿真场景以 22.8 dB 降噪和 -11.4 dB 期望失真取得折中，代价是近方向受阵列可分性限制且需按几何重训。",
+  "originalTitle": "Direction-Preserving Active Noise Control with a Conditional Control-Filter Estimation Network",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07173.pdf",
+  "readerTitle": "同一组滤波器又要抵消又要透明：方向条件网络如何做保向降噪",
+  "schemaVersion": 1
+}

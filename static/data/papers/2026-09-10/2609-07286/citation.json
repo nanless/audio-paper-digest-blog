@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07286",
+  "arxivId": "2609.07286",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heyu Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nianwen Si"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenlin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dan Qu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07286",
+  "originalTitle": "TAD: Token-Adaptive Contrastive Decoding with Confidence-Guided Gating for Hallucination Mitigation in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07286.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

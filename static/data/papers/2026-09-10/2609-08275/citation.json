@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08275",
+  "arxivId": "2609.08275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tianyi Zeng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Junchao Liao"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Yujie Wei"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Ziying Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Litao Li"
+    },
+    {
+      "affiliations": [
+        "UT Austin"
+      ],
+      "name": "Tianyi Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhichao Wei"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Shuyao Xu"
+    },
+    {
+      "affiliations": [
+        "Institute of Software, Chinese Academy of Sciences"
+      ],
+      "name": "Wenwen Qiang"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Siyu Zhu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Zhenghao Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group"
+      ],
+      "name": "Long Qin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08275",
+  "originalTitle": "Beyond Coherence: Benchmarking Professional Editing-Technique Execution in Multi-Shot Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08275.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

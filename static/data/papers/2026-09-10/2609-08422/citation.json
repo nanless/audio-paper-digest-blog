@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08422",
+  "arxivId": "2609.08422",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Genoa, DIBRIS, Genoa, 16145, Italy"
+      ],
+      "name": "Fulvio Missoni"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom"
+      ],
+      "name": "Katarina C. Poole"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom"
+      ],
+      "name": "Tim Murray-Browne"
+    },
+    {
+      "affiliations": [
+        "University of Genoa, DIBRIS, Genoa, 16145, Italy",
+        "these authors contributed equally to this work"
+      ],
+      "name": "Andrea Canessa"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom",
+        "these authors contributed equally to this work"
+      ],
+      "name": "Lorenzo Picinali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.08422",
+  "originalTitle": "Beyond Localisation Accuracy: Sensorimotor Effects of HRTF Individualisation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08422.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

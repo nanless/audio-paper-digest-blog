@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08464",
+  "abstract": "Task-oriented semantic communication (SemCom) empowered by multimodal large language models (MLLMs) has recently emerged as a promising paradigm for efficiently transmitting multimodal information, yet transmitting token embeddings over OFDM channels faces critical challenges due to hardware impairments, particularly the high peak-to-average power ratio (PAPR) that severely degrades energy efficiency under nonlinear power amplifiers. In this paper, we propose a novel PAPR-aware task-oriented multimodal token transmission framework. Specifically, we propose MAPS (Multimodal AI-driven PAPR-aware Token Transmission) scheme for energy-efficient multiuser wireless communications. The key challenge is to jointly ensure inter-modal consistency, task-relevant token transmission, and PAPR reduction. To address this, we adopt a two-stage training strategy that integrates joint cross-modal alignment and PAPR reduction, followed by task-oriented fine-tuning. MAPS transmits multimodal token embeddings over an OFDM channel under a realistic Modified Rapp power amplifier. Specifically, we incorporate a trainable linear projection in the text branch for effective gradient propagation, design a balanced multimodal PAPR loss with variance-based equalization across users, and anchor the reconstruction loss to a fixed semantic target to preserve cross-modal alignment. Simulation results show that MAPS achieves balanced PAPR reduction across all modalities while maintaining strong inter-modal consistency. Under power amplifier nonlinearity, MAPS outperforms baseline schemes in both audio-visual question answering (AVQA) accuracy (64.5% gain) and task-oriented energy efficiency (64.4% gain) at an input back-off (IBO) of 3 dB, highlighting its effectiveness for energy-efficient multimodal semantic communication.",
+  "abstractSha256": "b16234bbfd978cdc596c230c5fce73c6bf1719bf838dc4f3a845c0ffa63b7c95",
+  "arxivId": "2609.08464",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Molka Trabelsi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rafik Zayani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多用户 OFDM 下多模态 Token 经 Modified Rapp 功放非线性失真导致任务精度与能效下降的问题，MAPS 用两阶段训练在嵌入空间联合优化跨模态对齐与均衡 PAPR 抑制，在 IBO=3 dB 时相对同条件基线获得约 64.5% AVQA 精度提升与约 64.4% 任务导向能效提升，代价是引入方差均衡与锚定重构等额外约束以稳定训练。",
+  "originalTitle": "PAPR-Aware Multimodal Token Transmission in MLLM-Based Multiuser Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08464.pdf",
+  "readerTitle": "把波形峰值关进语义空间：MAPS 如何在非线性功放下同时做对齐与 PAPR 抑制",
+  "schemaVersion": 1
+}

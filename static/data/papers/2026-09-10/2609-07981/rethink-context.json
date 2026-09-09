@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07981",
+  "abstract": "Audio provenance attribution - which system produced a synthetic utterance - is reported at near-ceiling accuracy on clean benchmarks, yet audio reaching an analyst has usually been transcoded. We report a prospectively registered measurement of closed-set attribution after single-stage codec transport, with the analysis region fixed from fidelity metadata before any attribution model was trained. On two corpora, in-support losses reach 53.5 [43.5, 63.6] and 70.3 [63.0, 77.5] Macro-F1 points for WavLM-Base+, and 61.0 [56.8, 65.1] and 49.8 [41.6, 57.9] for W2V2-BERT 2.0, under simultaneous component-level bands. Degradation is strongly condition- and representation-dependent: within one in-support grid WavLM losses run from -0.4 to +53.5 points, and the two encoders differ beyond a prespecified +/-5-point margin at six of twelve conditions. A clean-qualified ECAPA-TDNN and a Proxy-Anchor head degrade comparably, so the effect is not confined to one representation family or a weak linear head. The registered matched-fidelity comparison was not estimable on this grid, and waveform and perceptual measures order the conditions differently: MP3 at 8 kbit/s ranks mid-grid on SI-SDR but last on PESQ-WB while causing the largest loss. For the tested tasks, corpora, representations and codec grid, a clean accuracy figure does not by itself characterise deployment robustness.",
+  "abstractSha256": "547b423bb4a75ecf396d7858208ba5797a574fc144315aeb3a484939236cf453",
+  "arxivId": "2609.07981",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gang Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在两个闭集溯源任务上冻结支撑区做前瞻性单阶段编解码压力测量，显示干净 Macro-F1 超 0.97 的表示仍可单点损失超 50 点且损失随条件与表示剧烈变化，而预注册的匹配保真度比较因无共同支撑不可估计。",
+  "originalTitle": "Clean Accuracy Does Not Guarantee Provenance Robustness: A Prospective Codec-Stress Evaluation of Audio Attribution",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07981.pdf",
+  "readerTitle": "干净高分守不住转码：音频来源归属的编解码压力实测",
+  "schemaVersion": 1
+}

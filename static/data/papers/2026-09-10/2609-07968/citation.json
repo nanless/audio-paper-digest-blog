@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.07968",
+  "arxivId": "2609.07968",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chibuzor Okocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christan Grant"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zoey Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.07968",
+  "originalTitle": "Reasoning Beyond Transcription: Audio Language Models on Child Stuttering Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.07968.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

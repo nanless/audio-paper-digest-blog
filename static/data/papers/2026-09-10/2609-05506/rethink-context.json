@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.05506",
+  "abstract": "We propose ECHO for dyadic 3D facial motion generation under a strict dual-stream audio-only setting, formulating the problem as an asymmetric task involving speech-constrained articulation and one-to-many listener reactions. To address this asymmetry, ECHO decomposes motion into a deterministic anchor that captures stable speech-correlated structure and a stochastic residual that models the remaining one-to-many interaction dynamics. On top of this backbone, Motion Memory acts as a training-only regularizer during brief late-stage fine-tuning to provide local priors for weakly conditioned listening windows, while semantic-group scaling controls residual injection across expression, jaw, and neck. This design balances speaking-side articulatory fidelity with listening-side realism and diversity in a single generation process. Results from unified, state-wise, and ablation evaluations show that conversational 3D motion benefits from decomposing stable and uncertain components rather than applying stochasticity uniformly. ECHO provides a practical formulation and technical basis for deployable conversational digital humans under strict audio-only conditions.",
+  "abstractSha256": "a16b658af90f7e71469d1d2a9e77a819cc8d603e48c95d1ca2ac4ee7c156ad5c",
+  "arxivId": "2609.05506",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhuoqiang Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaoyue Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongyun Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiwen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengfei Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fan Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在仅双路音频输入的整段对话生成任务中，ECHO 以确定性锚点建立语音主导的稳定基线、再以残差流匹配与语义组缩放补充一对多的倾听变化，在约 120 小时对话基准上同时改善说话保真与倾听真实感与多样性，代价是时序稳定性与单样本实时因子未全面领先且依赖弱条件窗口的提纯。",
+  "originalTitle": "ECHO: Dyadic 3D Facial Motion Generation with Asymmetric Deterministic Articulation and Stochastic Reaction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.05506.pdf",
+  "readerTitle": "不对称不确定性分解：用确定性锚点保口型、用随机残差补倾听",
+  "schemaVersion": 1
+}

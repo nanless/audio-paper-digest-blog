@@ -1,0 +1,124 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.06478",
+  "abstract": "Music videos are an important form of audiovisual expression in contemporary culture. They translate and extend the expressive content of songs through deliberate visual design. Existing automatic music video (MV) generation systems can generate visually plausible shots, yet often struggle with long-form coherence and song-grounded visual development. We present MVWeaver, a music video generation agent that integrates hierarchical planning with a learned song-to-visual bridge that translates song understanding into executable shot plans. The MVWeaver architecture comprises a comprehensive song analysis module, a visual planner that constructs hierarchical plans, and downstream image and video generation models that render the planned content. To equip a general-purpose LLM with MV-specific song-to-visual knowledge, we learn a bridge between song analysis and visual planning from real-MV-derived supervision and curate 1,861 real-world song--MV pairs with structured song-side, MV-side, and teacher-inferred song-to-visual rationale annotations. Using these annotations, we perform LoRA-based supervised fine-tuning (SFT) of a large language model to predict song-to-visual bridges that guide hierarchical visual planning. Our experiments demonstrate stronger song-grounded visual translation, richer visual development, and greater conceptual and shot-to-shot coherence, while ablations support the benefits of learned bridge conditioning.",
+  "abstractSha256": "f1d90b8fda4a93f2ba2108e966e6dd7b1a5a27fb5e36a7db9427404567d1b4a7",
+  "arxivId": "2609.06478",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China",
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Sifei Li"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Minyan Luo"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Guodong Qi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Theatre Academy, Shanghai, China"
+      ],
+      "name": "Xincan Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Directing, Beijing Film Academy, Beijing, China"
+      ],
+      "name": "Hanwen Wang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research, Beijing, China"
+      ],
+      "name": "Pengfei Wan"
+    },
+    {
+      "affiliations": [
+        "University of Konstanz, Konstanz, Germany"
+      ],
+      "name": "Oliver Deussen"
+    },
+    {
+      "affiliations": [
+        "Institute of Automation, Chinese Academy of Sciences, Beijing, China",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Weiming Dong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全曲音乐视频需要把歌曲语义与音乐结构转成连贯视觉发展的难题，MVWeaver 用层次化规划把总概念逐级展开为可渲染镜头，并用从真实歌曲-MV 对中学习到的歌曲到视觉桥接来条件化规划，证据显示其在歌曲贴合与长程连贯上优于同条件基线，但增益依赖桥接监督与层次资产复用。",
+  "originalTitle": "MVWeaver: A Hierarchical Music Video Generation Agent with a Learned Song-to-Visual Bridge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.06478.pdf",
+  "readerTitle": "从歌曲证据到可执行分镜：MVWeaver 为何用层次规划加歌曲到视觉的桥接来做长篇音乐视频",
+  "schemaVersion": 1
+}

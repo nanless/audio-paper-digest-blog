@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.08422",
+  "abstract": "Everyday listening requires the brain to integrate cues from the body, environment, other senses, and movement, continuously translating auditory information into action. Yet HRTF individualisation is still commonly assessed through localisation accuracy, which may not fully capture its effects on this sensorimotor process. Here, we investigate whether these effects can instead be revealed through behaviour in a more ecologically valid listening task. We used an aurally guided visual search paradigm in which listeners located a visual target using a co-located virtual sound while moving freely, comparing individualised and non-individualised HRTFs under anechoic and reverberant conditions. Performance was assessed through response times and measures of movement organisation. In anechoic conditions, individualised HRTFs produced faster responses than non-individualised HRTFs, with an average reduction of approximately 200ms and the clearest benefit for front-back source locations. This advantage was expressed primarily in movement initiation, whereas overall movement extent was only weakly affected. Under reverberant conditions, HRTF-dependent differences disappeared. These results suggest that HRTF individualisation can influence how listeners plan and initiate orienting actions even when differences in conventional localisation outcomes are limited. Assessing sensorimotor behaviour alongside localisation performance may therefore provide a more sensitive and ecologically relevant account of the perceptual benefits of HRTF individualisation.",
+  "abstractSha256": "8d6567b6964f48dee20a8bcb3fdac3137141797ecb89953439def03b156bd1eb",
+  "arxivId": "2609.08422",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Genoa, DIBRIS, Genoa, 16145, Italy"
+      ],
+      "name": "Fulvio Missoni"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom"
+      ],
+      "name": "Katarina C. Poole"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom"
+      ],
+      "name": "Tim Murray-Browne"
+    },
+    {
+      "affiliations": [
+        "University of Genoa, DIBRIS, Genoa, 16145, Italy",
+        "these authors contributed equally to this work"
+      ],
+      "name": "Andrea Canessa"
+    },
+    {
+      "affiliations": [
+        "Dyson School of Design Engineering, Imperial College London, London, United Kingdom",
+        "these authors contributed equally to this work"
+      ],
+      "name": "Lorenzo Picinali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在听觉引导视觉搜索任务中比较个体化与 KEMAR 非个体化 HRTF 在消声与混响下的行为，证据显示消声下个体化使反应时平均缩短约 200 ms 且优势集中于动作发起而非总运动量，混响下优势消失。",
+  "originalTitle": "Beyond Localisation Accuracy: Sensorimotor Effects of HRTF Individualisation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.08422.pdf",
+  "readerTitle": "个体化 HRTF 为何不只改变定位准确率而是改变定向动作的发起时机",
+  "schemaVersion": 1
+}
