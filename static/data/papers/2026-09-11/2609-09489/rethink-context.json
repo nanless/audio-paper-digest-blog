@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09489",
+  "abstract": "The proliferation of AI-generated audio (so-called &#34;deepfake&#34; audio) poses significant threats to information integrity, from voice cloning fraud to synthetic music copyright disputes. We present a temporal coherence analysis framework built upon Contrastive Language-Audio Pretraining (CLAP) embeddings that spans speech, instrumental music, and music with vocals. By computing pairwise cosine similarities between audio segment embeddings and extracting statistical features from the resulting distributions, we train lightweight ensemble classifiers that reliably distinguish authentic from synthetic audio. Our work provides an interpretable, computationally efficient alternative to common deep learning methods while still achieving competitive performance across speech and music domains. Further, we reveal two notable empirical findings about audio deepfakes: (1) a feature-label inversion phenomenon in which 21 of 29 statistical features reverse their discriminative direction between training and in-the-wild deployment, and (2) a speech--music direction reversal in which entropy discriminates in opposite directions for speech and music deepfakes.",
+  "abstractSha256": "5c96981329f9ad0acfc441551feef67168edeaef0e137e14d6d3b69d88597158",
+  "arxivId": "2609.09489",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Justin D. Norman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sarah Barrington"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把音频切段后用 CLAP 嵌入算段间余弦相似度分布并提取 29 个统计特征再用 XGBoost 与多专家集成判别，在 ASVspoof5 上 EER 为 17.7% 而在 In-the-Wild 上 F1 为 0.679，代价是 21 个特征出现训练与野外判别方向反转且音乐需用分位自适应才能跨域。",
+  "originalTitle": "Audio Deepfake Detection Using Temporal Coherence Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09489.pdf",
+  "readerTitle": "时间一致性看穿音频伪造：相似度分布为何在实验室与野外反向",
+  "schemaVersion": 1
+}

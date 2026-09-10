@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09263",
+  "arxivId": "2609.09263",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Xiaoqun Liu"
+    },
+    {
+      "affiliations": [
+        "University of Washington"
+      ],
+      "name": "Tanu Mitra"
+    },
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Harshit Rajgarhia"
+    },
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Abhishek Mukherji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09263",
+  "originalTitle": "Voice or Stereotype? Disentangling Acoustic and Content-Based Gender in Speech-to-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09263.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

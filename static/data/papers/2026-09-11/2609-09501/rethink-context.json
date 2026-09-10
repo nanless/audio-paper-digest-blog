@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09501",
+  "abstract": "How cultural repertoires maintain diversity under selection is a fundamental question in cultural evolution. We address this using thirteen years of weekly popularity data for approximately 20,000 Irish traditional tunes, fitting ecological birth-process models under neutral, frequency-dependent, and per-tune selection hypotheses. We find strong evidence that tunes differ in intrinsic fitness - some are systematically more likely to be learned than others. We find that 29% of the variance in fitness can be explained by a mixture of social and melodic features. Some tunes appear to be carried along via linkage due to the tradition of playing tunes in sets, analogous to selective sweeps in genetics. By measuring changes in fitness over time and comparing this with recordings we precisely identify the mechanism by which a long-dormant tune can become fit through a popular recording. Despite the directional selection, repertoire diversity increases, driven by the continual arrival of new compositions. These results demonstrate that selection and diversity can coexist in a cultural ecosystem, and establish Irish traditional music as a quantitatively tractable system for studying the evolution of cultural variants and understanding what makes a tune stand out.",
+  "abstractSha256": "1e24fbd92b8c1185ede0874ca338b42c2c4d8a8e10805017cd786c8fa671be38",
+  "arxivId": "2609.09501",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John M. McBride"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Armand. M. Leroi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 13 年约 2 万首曲调的每周曲谱收藏数据比较中性、频率依赖与每首曲调自带适合度三类出生过程，发现方向性选择最强但多样性仍因新曲持续进入而上升，社会与旋律特征可解释适合度方差的 29%。",
+  "originalTitle": "Population Ecology of Tunes",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09501.pdf",
+  "readerTitle": "有方向选择却更多样：爱尔兰传统曲调如何用新曲抵消走红曲的集中",
+  "schemaVersion": 1
+}

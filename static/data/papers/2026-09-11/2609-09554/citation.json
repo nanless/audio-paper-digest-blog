@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09554",
+  "arxivId": "2609.09554",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Shivam Singh"
+    },
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Aditya Yadavalli"
+    },
+    {
+      "affiliations": [
+        "EleutherAI"
+      ],
+      "name": "Catherine Arnett"
+    },
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Alex Warstadt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09554",
+  "originalTitle": "BuzzASR: A Swarm of 100+ Monolingual Speech Recognition Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09554.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

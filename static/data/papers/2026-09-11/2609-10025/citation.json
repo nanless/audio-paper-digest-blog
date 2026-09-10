@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10025",
+  "arxivId": "2609.10025",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nan Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingxue Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10025",
+  "originalTitle": "SCNet: Enhancing GAN-based Speech Generation with Subband Condition Network and Magnitude-aware Phase Loss",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10025.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

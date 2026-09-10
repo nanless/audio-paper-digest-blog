@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09672",
+  "abstract": "The rapid advancement of audio and multimodal large language models has unlocked transformative speech understanding capabilities, yet evaluation frameworks remain predominantly English-centric, leaving Southeast Asian (SEA) languages critically underrepresented. We introduce SEA-SpeechBench, to the best of our knowledge, the first large-scale multitask benchmark that evaluates speech understanding in 11 SEA languages through 97,194 samples across 99 evaluation sets and 597 hours of curated audio data. Our benchmark comprises 9 diverse tasks across 3 categories: speech processing (automatic speech recognition, speech translation, spoken question answering), paralinguistic analysis (emotion, gender, age, speaker recognition), and temporal understanding, a novel dimension featuring timestamped content queries and temporal localization within extended audio sequences up to 3 minutes. We implement multilingual prompting in both native SEA languages and English to reflect user interactions with audio-language models. Evaluation of leading open-source and proprietary systems reveals marked performance gaps. Across all models, performance remains underwhelming on temporal understanding, emotion recognition, and speech translation. Prompting in low-resource languages such as Burmese and Tamil lags behind English by up to 41 percentage points. Our findings expose critical model limitations and underscore the need for inclusive model development. The SEA-SpeechBench benchmark is available at this https URL.",
+  "abstractSha256": "2672e58e39a11ce589ea905382226622dd4002974e9fc0ed5509a94642eb576d",
+  "arxivId": "2609.09672",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Jingyi Liao"
+    },
+    {
+      "affiliations": [
+        "Center for AI Safety"
+      ],
+      "name": "Wenyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Zhuohan Liu"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Yingxu He"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Geyu Lin"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Xunlong Zou"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Shuo Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syed Ali Redha Alsagoff"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Ai Ti Aw"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 11 种东南亚语言语音理解评测缺失问题，论文构建 97,194 样本与 597 小时音频的 9 任务基准并统一双语提示与归一化，最强证据是时间定位与情感识别全面偏低且缅甸语等低资源提示落后英文可达 41 个百分点，代价是长音频覆盖过度与拒答等边界行为仍需专门处理。",
+  "originalTitle": "SEA-SpeechBench: A Large-Scale Multitask Benchmark for Speech Understanding Across Southeast Asia",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09672.pdf",
+  "readerTitle": "东南亚语音评测为何难做：长音频定位与低资源提示的双重缺口",
+  "schemaVersion": 1
+}

@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09940",
+  "abstract": "Human speech includes nonverbal vocalizations (NVVs), such as laughter, sighs, breaths, and coughs, which convey affective and interactional information. Existing approaches typically represent NVVs as transcript-level tags, providing limited supervision for their waveform-time boundaries. We present NVV-Locator for fine-grained NVV temporal grounding. We first unify 26 NVV categories across public resources and construct large-scale timestamp-supervised training data through dual-LLM verification, transcript-guided forced alignment, and energy-based boundary refinement. We further introduce NVV-TimeBench, an expert-refined benchmark with 667 utterances and 1,094 events. NVV-Locator uses a non-autoregressive slot-filling architecture to jointly predict lexical timestamps, NVV categories, and event boundaries. On NVV-TimeBench, it achieves 71.0% Micro F1, 70.2% Macro F1, 80.4% Macro mIoU, and 59.6 ms Macro mMAE, outperforming the evaluated large audio model counterparts. Evaluation on an external corpus further demonstrates the cross-corpus generalization of NVV-Locator.",
+  "abstractSha256": "963936398cf5af597818af20e3d583b6acb3cabf6f90a2f24c90948b43ef1e16",
+  "arxivId": "2609.09940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuang Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guojian Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Haoyue Zhan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Jie Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Chuan Xie"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Qiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, China"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对转录标签缺少声学起止时间的问题，该研究用统一 26 类分类体系加四阶段自动时间戳管线构造大规模监督，并用非自回归槽填充模型联合预测词边界与事件边界，在 NVV-TimeBench 上报告 Micro F1 71.0% 与 Macro mMAE 59.6 ms，但短促低能量类别仍明显更难。",
+  "originalTitle": "NVV-Locator: From Transcript Tags to Acoustic Boundaries for Fine-Grained Nonverbal Vocalization Grounding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09940.pdf",
+  "readerTitle": "从文本标签到波形边界：NVV-Locator 如何把非言语发声钉在时间轴上",
+  "schemaVersion": 1
+}

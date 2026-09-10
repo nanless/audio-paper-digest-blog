@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09866",
+  "arxivId": "2609.09866",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen, China"
+      ],
+      "name": "Mingyu Zhao"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen, China"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09866",
+  "originalTitle": "UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09866.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

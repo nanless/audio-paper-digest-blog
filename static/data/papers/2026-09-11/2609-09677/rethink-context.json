@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09677",
+  "abstract": "Incremental-text streaming text-to-speech (TTS) needs online text progress tracking for synchronized highlighting, interruption handling, and dialogue-history updates. Input text arrives before it is spoken, so text arrival alone cannot indicate speech progress. Existing waveform-based alignment requires complete audio or adds acoustic processing during streaming. We propose X2-NativeCursor, a lightweight observer that tracks progress from native speech tokens before waveform decoding without changing the TTS generator. Its normalization plan links spoken labels to their original-text spans. Text and native-token encoders feed a local matcher that estimates the current label position. A separate output rule converts revisable position estimates into a cursor that never moves backward. Mean absolute error against an automatic reference is 0.151 Chinese characters with 80-ms lookahead, versus 1.253 characters with 320-ms lookahead for an online waveform baseline. Alignment real-time factor also decreases from 0.3598 to 0.0180 relative to this baseline. Lower tracking error is retained under a second automatic alignment reference. We evaluate X2-NativeCursor on Qwen3-TTS and validate its adaptation to CosyVoice2 by training a separate observer for each backbone. Code is publicly available at this https URL.",
+  "abstractSha256": "78201da22373a4f6ffb3da2e08287f33aa3ef457f90ea350e271fe6ae114d0fe",
+  "arxivId": "2609.09677",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Zehan Liu"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Carl Chen"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Rime Wen"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Kaiqi Fu"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Altman Lin"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Shawn Qin"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Lights Shi"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Roy Gan"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Hao Wang"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Qian Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "增量文本流式语音合成需要在线知道说到原文何处，X2-NativeCursor 用原生语音令牌加局部匹配做可修正估计再输出单调光标，在 80 毫秒前视下中文平均绝对误差 0.151 字，对比在线波形基线 320 毫秒前视下 1.253 字，代价是每个主干需单独训练观察器且对未见音色敏感。",
+  "originalTitle": "X2-NativeCursor: Native-Token Text Progress Tracking for Incremental-Text Streaming Codec TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09677.pdf",
+  "readerTitle": "先出声再等文本：用原生语音令牌在波形之前跟踪读到哪",
+  "schemaVersion": 1
+}

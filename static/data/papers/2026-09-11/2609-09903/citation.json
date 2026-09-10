@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09903",
+  "arxivId": "2609.09903",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Yue Li"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Xunyu Zhu"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Zhipeng Chen"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09903",
+  "originalTitle": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09903.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

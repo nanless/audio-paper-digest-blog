@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10022",
+  "arxivId": "2609.10022",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Georgios Syllas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Efthymios Georgiou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kosmas Kritsis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexandros Potamianos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10022",
+  "originalTitle": "Deterministic Prompting for Speaker-Stable Low-Resource Greek TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10022.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

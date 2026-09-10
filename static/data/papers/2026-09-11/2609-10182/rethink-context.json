@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10182",
+  "abstract": "Localization of non-cooperative acoustic sources using multiple spatially distributed receivers is critical for applications such as marine-life tracking, search-and-rescue operations, and maritime security in underwater environments. In conventional Time of Arrival (ToA) systems, the emission time is typically known explicitly or implicitly through clock synchronization or two-way communication, so the problem reduces to range-based localization. In passive settings, however, only reception timestamps are available. Thus, the emission time must be eliminated through Time Difference of Arrival (TDoA) preprocessing or estimated jointly with the source position. For the case of a single source, we address the distributed localization problem over a receiver network by reformulating passive localization directly as a ToA problem with unknown time of signal emission. This yields a distributed consensus optimization problem, which we solve using an operator-splitting method, namely an edge-based Distributed Alternating Direction Method of Multipliers (DADMM) scheme that decomposes the estimation task into local subproblems coupled through agreement constraints. We derive closed-form local update equations for the local DADMM subproblems and establish convergence properties for a smoothed approximation of the measurement model. Numerical simulations illustrate the efficacy of the proposed approach.",
+  "abstractSha256": "9241b7849bdbbfe910d0fc196b0b720f9703a1bbba0fbe4deb5a1ccd26d88183",
+  "arxivId": "2609.10182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Tolstonogov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Cabecinhas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Batista"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonio Pascoal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对未知发射时间的单声源被动定位，论文把问题保持为 ToA 最小二乘并联合估计位置与发射时刻，用基于边的分布式 ADMM 给出闭式局部更新，仿真显示严格停止阈值下其趋势接近集中式求解器与 CRLB 参考，但宽松阈值出现高位平台且收敛只对平滑近似证明。",
+  "originalTitle": "Distributed ToA Localization of Acoustic Sources with Unknown Time of Emission via Operator Splitting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10182.pdf",
+  "readerTitle": "未知发射时刻下把被动定位留作 ToA：用边一致 ADMM 分给每个接收器算",
+  "schemaVersion": 1
+}

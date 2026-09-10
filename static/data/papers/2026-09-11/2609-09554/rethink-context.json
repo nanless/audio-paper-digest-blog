@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09554",
+  "abstract": "We introduce BuzzASR, a collection of language-specialized fine-tuned Whisper models adapted for automatic speech recognition (ASR) in 102 languages. Large end-to-end Transformer-based ASR models such as Whisper have revolutionized ASR, but most prominent models are highly multilingual. As a result, these models often perform poorly on languages less well-represented in their training set. While it has long been known that effective language adaptation can be achieved through simple fine-tuning on monolingual data, this strategy has only been applied to a small number of languages. We massively scale up this simple approach to 102 languages covered in the FLEURS dataset, while also implementing a more complex language adaptation strategy that integrates monolingual tokenizer replacement and data augmentation using text-only fine-tuning. BuzzASR models outperform Whisper-large-v3 on 77 out of 102 languages, reducing character error rates (CER) by a factor of over 2.8 on average. Our models achieve state-of-the-art CER among open-source systems on 27 of 102 languages on the combined FLEURS and Common Voice test set. Our tokenizer replacement strategy yields an average 3.3x improvement in compression rate (characters per token) over Whisper&#39;s multilingual BPE, with gains of up to 21.7x. We release all models, code, and detailed results: this https URL",
+  "abstractSha256": "0928b647690555183420ab740450706475163b8212b2ad6f6529cbeec7fb9f65",
+  "arxivId": "2609.09554",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Shivam Singh"
+    },
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Aditya Yadavalli"
+    },
+    {
+      "affiliations": [
+        "EleutherAI"
+      ],
+      "name": "Catherine Arnett"
+    },
+    {
+      "affiliations": [
+        "UC San Diego"
+      ],
+      "name": "Alex Warstadt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "BuzzASR 用单语微调与分词器替换加文本多任务两条路线适配 102 种语言，在 77 种语言上超过 Whisper-large-v3 并在 27 种语言上达到开源最优，代价是逐语维护模型与域内评测带来的可比性限制。",
+  "originalTitle": "BuzzASR: A Swarm of 100+ Monolingual Speech Recognition Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09554.pdf",
+  "readerTitle": "以单语微调对抗多语诅咒：BuzzASR 的百语种适配路线",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09974",
+  "arxivId": "2609.09974",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lorenz Bernard Marqueses"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paulo Grane Gabriel Silva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chastine Cabatay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ericson Adler Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ann Franchesca Laguna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09974",
+  "originalTitle": "Towards Stress-Aware Sentence-Level Filipino G2P With Weakly-Supervised ByT5 Fine-Tuning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09974.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

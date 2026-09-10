@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10265",
+  "abstract": "Streaming multi-speaker ASR is a challenging task that must balance accuracy, latency, and efficiency while handling overlapping speech and maintaining coherent long-context modeling over extended conversations in an online fashion. We present a unified framework that categorizes streaming multi-speaker ASR into four architectural strategies based on how diarization and ASR are integrated. Using a shared pair of open-source streaming ASR and diarization models as a common foundation, we derive four multi-speaker ASR systems that differ in whether they employ multiple model instances, fine-tuning, or both. We evaluate these systems across multi-speaker accuracy, single-speaker accuracy degradation, memory footprint, and training complexity. Through this systematic architectural analysis, we clarify the design space for streaming multi-speaker ASR and provide practical guidance for selecting the most suitable approach under diverse deployment constraints.",
+  "abstractSha256": "6ed6f0adb8d2d059abcf466116de7f3b039207df3752d1983a240cc3baf6bc60",
+  "arxivId": "2609.10265",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taejin Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ivan Medennikov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kunal Dhawan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiqing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jagadeesh Balam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boris Ginsburg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用同一组流式识别与流式说话人日志模型派生出级联、掩码输入、词级串行输出和日志条件四种架构，对比多说话人准确率、单说话人退化、内存占用与训练代价，并以排列不变动态时间规整解决短片段训练标签对齐问题，其中日志条件精度最好但需要微调与多实例代价。",
+  "originalTitle": "Pushing the Boundaries of Streaming Multi-Speaker ASR: A Systematic Study of Architectural Trade-offs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10265.pdf",
+  "readerTitle": "流式多说话人识别要在单实例省内存与多实例保重叠之间选边",
+  "schemaVersion": 1
+}

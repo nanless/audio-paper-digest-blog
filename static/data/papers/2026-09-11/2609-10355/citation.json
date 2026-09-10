@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10355",
+  "arxivId": "2609.10355",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Killian Steunou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yannis Tevissen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mounîm A. El Yacoubi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10355",
+  "originalTitle": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10355.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

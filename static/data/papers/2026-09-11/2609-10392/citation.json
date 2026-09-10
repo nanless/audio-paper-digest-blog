@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10392",
+  "arxivId": "2609.10392",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuubham Ojha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carol Espy-Wilson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10392",
+  "originalTitle": "Teacher-Free Self-Distilled Consistency Trajectory Learning for Fast Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10392.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

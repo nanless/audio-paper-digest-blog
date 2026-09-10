@@ -1,0 +1,95 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09719",
+  "abstract": "Text-aligned speech tokenization methods have emerged to better align speech tokens with LLM token spaces, enabling more effective utilization of pretrained LLMs. However, they rely on offline automatic speech recognition (ASR), leading to two key limitations: (i) the need for complete utterances before tokenization, precluding real-time streaming, and (ii) vocabulary mismatch between ASR and LLMs, which reduces acoustic granularity from the subword to the word level. We introduce StreamAlign, a text-aligned speech tokenization framework that enables streaming tokenization for real-time speech-text joint modeling. StreamAlign performs online speech-text alignment by combining character-level RNN-Transducer alignment with word-level ASR guidance, mitigating ASR-LLM vocabulary mismatch while preserving recognition accuracy. A proactive word boundary classifier anticipates word completion at chunk boundaries, reducing tokenization latency from 560 ms to 270 ms. On LibriSpeech, StreamAlign achieves the lowest WER and highest UTMOS among evaluated tokenizers. Furthermore, StreamAlign-SLM, a spoken language model trained on StreamAlign units, outperforms other end-to-end spoken language models in speech continuation while achieving the strongest overall consistency on SALMon and spoken StoryCloze.",
+  "abstractSha256": "9c2e9b50657792a41fafa734bb148dd1aeb0aa3e3330704543e456c29765d65a",
+  "arxivId": "2609.09719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University",
+        "University of California, Berkeley"
+      ],
+      "name": "Kang-wook Kim"
+    },
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Jinyoung Park"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "KRAFTON"
+      ],
+      "name": "Jinsoo Kim"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "KRAFTON"
+      ],
+      "name": "Sehun Lee"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "Georgia Institute of Technology"
+      ],
+      "name": "Sang Hoon Woo"
+    },
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Gunhee Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "StreamAlign 针对离线文本对齐切分必须等整句和词级复制丢失细节的问题，用词级流式识别引导字符级 RNN-T 对齐再聚合成大模型子词单元，在 LibriSpeech 上报告重建 WER 4.41 和 UTMOS 4.23，同时主动词边界判断把延迟从 560 ms 降到 270 ms，代价是说话人相似度等相似性指标未占优且仅在英语朗读类数据上验证。",
+  "originalTitle": "StreamAlign: Streaming Text-Aligned Speech Tokenization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09719.pdf",
+  "readerTitle": "流式对齐语音切分：在块边界上把声音逐字贴到文本子词",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10351",
+  "abstract": "Large audio language models (LALMs) have shown promising progress in broad music-understanding tasks such as tagging, retrieval, and captioning. Music understanding that requires finer hearing over both the content and how it is realized within a performance through dynamics, phrasing, articulation, time, and other performance techniques, however, remains at an earlier stage. Existing audio-language model (ALM) training pipelines typically rely on coarse, weakly grounded captions and therefore provide little support for learning these subtle nuances in music, limiting their ability to serve real-world applications in education or artistic practice. We therefore introduce MuNo-SP (Music Notation unifying Score and Performance), a text-based representation that jointly encodes score content and performance information. Building on MuNo-SP, we develop an automatic training-data generation pipeline that uses aligned scores and performances to produce long-form auditory analyses and musically informed question-answer pairs. We use this pipeline to construct MAESTROCaps, a classical piano dataset comprising 148 long-form performance analyses and 31,080 question-answer pairs derived from 148 aligned score-performance pairs. In a human evaluation, MuNo-SP analyses were preferred by majority vote over MIDI-only analyses for eight of nine excerpts. MuNo-SP also performed strongly on a benchmark of score-performance understanding, suggesting that integrating score and performance information enables more reliable and musically informative LALM supervision than a MIDI-only baseline.",
+  "abstractSha256": "2732428855cdd7abdf522b8fdf588312a542df2ff546f96a45b0a43a79050ba9",
+  "arxivId": "2609.10351",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Milan Liessens Dujardin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song-Ze Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Miao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频语言模型只靠粗粒度标题难以刻画力度、 timing 与声部进行的问题，该研究用对齐后的谱面加演奏 MIDI 构造文本表示 MuNo-SP 并自动生成长时间听觉分析与问答，在 MuSP-Bench 联合理解与人工偏好上报告了高于 ABC 与 MIDI 文本基线的准确率，代价是表示更长且仍限于古典钢琴与 MIDI 可表达的属性。",
+  "originalTitle": "Unifying Score and Performance for Fine-Grained Music Understanding in Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10351.pdf",
+  "readerTitle": "把谱面与演奏对齐成文本：MuNo-SP 如何让模型听见弹了什么与怎么弹",
+  "schemaVersion": 1
+}

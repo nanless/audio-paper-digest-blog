@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10182",
+  "arxivId": "2609.10182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anton Tolstonogov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Cabecinhas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Batista"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonio Pascoal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10182",
+  "originalTitle": "Distributed ToA Localization of Acoustic Sources with Unknown Time of Emission via Operator Splitting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10182.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

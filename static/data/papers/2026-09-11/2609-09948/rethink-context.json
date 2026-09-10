@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09948",
+  "abstract": "Speech-based Alzheimer&#39;s disease (AD) detection has recently benefited from multimodal foundation-model representations that integrate complementary acoustic and linguistic information. However, conventional probability averaging over these complementary classifiers is unreliable, because their posterior probabilities exhibit mismatched scales: identical values may reflect different confidence levels across models. We propose a robust rank aggregation framework that aggregates normalized prediction ranks instead of posterior probabilities. Each subject is scored by its percentile within a fixed training-cohort distribution of out-of-fold predictions; since rank ordering is invariant to monotonic transformations, this avoids probability-scale mismatch while preserving classifier confidence ordering. A confidence-gated Random Forest further corrects residual errors using clinically interpretable linguistic features, overriding the rank prediction only when the two disagree and the RF is highly confident, without additional deep model training or explicit posterior-probability calibration. On ADReSS2020 and ADReSSo2021, the method achieves accuracies of 95.83% and 90.14%, respectively, comparing favorably with previously reported results.",
+  "abstractSha256": "78e6964446ca1a280c9781b27867138a50b38e4019958c031d67cb9344e923da",
+  "arxivId": "2609.09948",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zemin Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomoko Matsui"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对声学与语义分类器后验概率量纲不可比的问题，该工作用训练集留一法分布下的百分位名次代替原始概率做平均，并在高置信度分歧时才允许手工语言特征随机森林覆写，在 ADReSS2020 取得 95.83% 准确率、在 ADReSSo2021 取得 90.14% 准确率，代价是需要保留训练侧分布与多组逻辑回归分支并做前向选择。",
+  "originalTitle": "Robust Rank Aggregation for Multimodal Speech-Based Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09948.pdf",
+  "readerTitle": "不对概率取平均，对名次取平均：用排序聚合绕开跨模态置信度量纲",
+  "schemaVersion": 1
+}

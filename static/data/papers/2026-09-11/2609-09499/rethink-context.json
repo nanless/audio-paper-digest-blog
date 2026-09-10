@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09499",
+  "abstract": "Self-supervised speech models (S3Ms) provide powerful representations for Parkinson&#39;s disease (PD) detection, making cross-lingual transfer attractive for languages lacking labeled patient speech. However, these representations also encode language identity, which can confound this transfer: without target-language PD speech, classifiers may separate languages rather than pathology, yielding high specificity but low sensitivity on target patients. We propose \\emph{language orthogonalization}, a closed-form ridge residualization of S3M features against external VoxLingua107 language embeddings, fitted using only healthy-control (HC) speech. By removing language-predictable components while retaining pathology-related variation, it produces a less language-dependent geometry in which HC representations concentrate while PD representations disperse. Across five S3M backbones, three speech tasks, and three target languages, our method consistently improves cross-lingual PD-detection performance while correcting the high-specificity/low-sensitivity failure.",
+  "abstractSha256": "5d8081ceab7c8045c275b1c8bf37b3ad363dd93eaf4e3d657a755ab155732825",
+  "arxivId": "2609.09499",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunjung Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kwanghee Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "June-Woo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对目标语言只有健康人语音时分类器把目标语言当成健康信号的问题，论文用健康人拟合的岭回归残差去除语言可预测成分，在 5 个骨干、3 个任务、3 个目标语言上把平均 F1 从 0.52 提升到 0.87，但语言信息并未完全消除且评估仍限于印欧语系。",
+  "originalTitle": "Language Orthogonalization of Self-Supervised Speech Representations for Cross-lingual Parkinson's Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09499.pdf",
+  "readerTitle": "去掉语言可预测成分后跨语言帕金森检测为何能找回灵敏度",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09499",
+  "arxivId": "2609.09499",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunjung Yeo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kwanghee Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "June-Woo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09499",
+  "originalTitle": "Language Orthogonalization of Self-Supervised Speech Representations for Cross-lingual Parkinson's Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09499.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

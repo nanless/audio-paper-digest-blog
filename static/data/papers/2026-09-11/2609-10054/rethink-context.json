@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10054",
+  "abstract": "Orukeet replaces half of an adapted Parakeet encoder&#39;s temporal filters with 12,288 fitted Gabor kernels, freezes these replacements, and trains the remaining parameters on multilingual and multi-accent data. Final adaptation and checkpoint selection use LibriSpeech test-other. Across 20,146 FLEURS recordings in 25 languages, pooled word error rate (WER) falls from Parakeet&#39;s 11.01% to Orukeet&#39;s 9.85%, a 10.6% relative reduction. Orukeet has lower WER on 23 of the 25 languages. Orukeet outperforms Parakeet on 61 out of 74 tested splits, including LibriSpeech test-clean (1.46% vs. 1.53% WER), test-other (2.86% vs. 3.14%), and FLEURS English (3.82% vs. 4.28%). All comparisons decode the same audio with matched NeMo settings. The fitted kernels are stored as ordinary convolution weights, retaining Parakeet&#39;s architecture and inference operators.",
+  "abstractSha256": "2cdbb28b87bfb06295c1ebf7f662691a296033b58381e6eec6161121f6c8fe53",
+  "arxivId": "2609.10054",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nathan Roll"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Irene Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Büşra Marşan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vianney Grenez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Stein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Momcilo Mrkaic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pavle Padjin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vladimir Zeljkovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Calbert Graham"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Orukeet 把 Parakeet 编码器中拟合误差最小的 12,288 个时域卷积核替换为解析 Gabor 函数并冻结，再训练其余参数，在 FLEURS 混合词错率上从 11.01% 降到 9.85%，代价是希腊语等少数划分明显变差且最终调优依赖 LibriSpeech test-other。",
+  "originalTitle": "Orukeet: Multilingual ASR with Frozen Gabor Kernels",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10054.pdf",
+  "readerTitle": "冻住一半时域滤波器：Orukeet 用拟合 Gabor 核约束多语识别器",
+  "schemaVersion": 1
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09889",
+  "abstract": "Automatic Speech Recognition (ASR) technology is fundamental to customer service automation and large-scale transcription. However, even advanced ASR models exhibit inevitable errors in complex real-world environments such as call center conversations. When privacy restrictions preclude audio access, error correction must rely on text-based post-editing. Existing text-only approaches face significant challenges in low-resource languages, mainly due to a critical scarcity of annotated corpora and tailored correction methodologies. For Korean, this resource gap is particularly pronounced, as existing resources are predominantly designed for ASR training rather than text-based error correction. To address this, we introduce DasanCallDial, the first large-scale Korean benchmark dataset specifically curated for dialogue-level ASR error correction. Derived from genuine call center interactions, it comprises 1,974 dialogues with 115,460 utterances. Leveraging this resource, we propose Detector-Gated Contextual Span Correction (DCSC), a text-only post-editing framework for error-sparse Korean speech recognition transcripts. DCSC combines an encoder-based detector that first performs token-level error detection, followed by a language model-based corrector trained to rectify fine-grained span-level errors. Additionally, we employ dialogue-level context augmentation to enable the model to leverage discourse history for disambiguation. By employing multi-level granularity, our method achieves state-of-the-art performance, effectively overcoming the limitations of general LLMs in low-resource settings.",
+  "abstractSha256": "3740e28fe4bcb32e1d785c586a93a74d00f10b6ce1622df8123b44551d8dfc41",
+  "arxivId": "2609.09889",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Yonghyun Jun"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Jimin Lee"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Hwan Chang"
+    },
+    {
+      "affiliations": [
+        "Korea Local Information Research & Development Institute"
+      ],
+      "name": "Dongho Shin"
+    },
+    {
+      "affiliations": [
+        "SK intellix"
+      ],
+      "name": "Seolah Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Hwanhee Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无法使用音频、只能做纯文本后编辑且错误稀疏的韩语咨询对话，论文用真实呼叫数据构建 DasanCallDial 并提出先检测后纠错的 DCSC，主证据是 pkoT5 版本把平衡词错误率指标值从 14.67 降到 13.30，把错误句词错误率指标值从 29.35 降到 26.27，代价是检测门仍会漏检且纠错器对部分已送入错误保持保守。",
+  "originalTitle": "Leveraging Fine-grained Error Correction in Korean Speech Recognition for Consultation Services",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09889.pdf",
+  "readerTitle": "错误稀疏下只改该改的片段：韩语咨询对话的检测门控纠错",
+  "schemaVersion": 1
+}

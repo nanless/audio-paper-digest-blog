@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09757",
+  "abstract": "Real-time MRI (rtMRI) captures the dynamics of the entire vocal tract during speech, but labeled data are scarce and the modality - single-slice, grayscale, low-resolution - differs substantially from the natural videos that video foundation models are trained on. We introduce Arti-JEPA, a joint embedding predictive architecture to model vocal tract rtMRI by continuing its self-supervised objective on about 62h of unlabelled vocal-tract videos, and evaluate the frozen representation on three tasks: cross-domain phoneme prediction (on typical speakers), fluent-vs-disfluent classification (a corpus containing stuttered speech), and characterizing pre/post-operative transfer (after partial glossectomy). Three key findings emerge. (1) A temporal video prior decisively outperforms per-frame image encoders, and latent prediction (V-JEPA) is at least as strong as pixel reconstruction (VideoMAE), with the edge on fine-grained phonemes. (2) Domain adaptation is \\emph{task-dependent}: it roughly doubles cross-domain phoneme prediction $\\kappa$ (to 0.352) but does not help binary stuttering classification. (3) Arti-JEPA was able to recover phoneme signal from pre/post glossectomy speech --- an in-domain probe decodes patients at least as well as a typical speaker, indicating that the residual transfer gap is cross-speaker/domain misalignment, not surgical signal loss, and post-operative decoding does not fall below performance on pre-operative speech. Together, these position a frozen, domain-adapted rtMRI encoder as a reusable measurement tool for articulatory and clinical speech science.",
+  "abstractSha256": "7d8caf8ec975bee864c1021e3d960ea1182e4e2d43cc71f7b67257ca8a5b4bbc",
+  "arxivId": "2609.09757",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.silent-speech",
+          "label": "静默语音接口"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-disorders",
+          "label": "言语障碍"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "静默语音接口",
+      "primaryTaskId": "task.silent-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sean Foley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christina Hagedorn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yijing Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sudarsana Reddy Kadiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dani Byrd"
+    },
+    {
+      "affiliations": [
+        "organization= Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, city=Los Angeles, state=CA, country=USA",
+        "organization=Department of English, College of Staten Island, City University of New York, city=New York, state=NY, country=USA",
+        "organization=Department of Linguistics, University of Potsdam, country=Germany",
+        "organization=Department of Linguistics, University of Southern California, city=Los Angeles, state=CA, country=USA"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把 V-JEPA 2 延续到约 62 小时无标注声道实时核磁上，用冻结编码器加轻探针测跨域音素、口吃二分类与舌切除前后迁移，最强证据是跨域音素 κ 升至 0.352 而口吃仅小幅提升，代价是单卡小批量、短窗与三例临床样本的局限。",
+  "originalTitle": "Arti-JEPA: Adapting Video World Model to Real-Time MRI of the Vocal Tract for Speech-Production Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09757.pdf",
+  "readerTitle": "把互联网视频先验搬进声道核磁：Arti-JEPA 何时帮得上音素，何时帮不上",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09889",
+  "arxivId": "2609.09889",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Yonghyun Jun"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Jimin Lee"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Hwan Chang"
+    },
+    {
+      "affiliations": [
+        "Korea Local Information Research & Development Institute"
+      ],
+      "name": "Dongho Shin"
+    },
+    {
+      "affiliations": [
+        "SK intellix"
+      ],
+      "name": "Seolah Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University"
+      ],
+      "name": "Hwanhee Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09889",
+  "originalTitle": "Leveraging Fine-grained Error Correction in Korean Speech Recognition for Consultation Services",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09889.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

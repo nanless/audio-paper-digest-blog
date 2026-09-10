@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09628",
+  "arxivId": "2609.09628",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaohan Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yen-Ju Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuzhe Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junhyeok Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesus Villalba"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Laureano Moro Velazquez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Najim Dehak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09628",
+  "originalTitle": "Who Are They to Each Other? Multi-Agent Reasoning for Speaker Relationship Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09628.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

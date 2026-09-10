@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10338",
+  "arxivId": "2609.10338",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Bar-Ilan University, Ramat Gan, Israel"
+      ],
+      "name": "Sapir Caduri"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University, Ramat Gan, Israel"
+      ],
+      "name": "Yoav Goldberg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10338",
+  "originalTitle": "TimeCues Studio: A Workspace for Music Annotation and Algorithm Prototyping",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10338.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09672",
+  "arxivId": "2609.09672",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Jingyi Liao"
+    },
+    {
+      "affiliations": [
+        "Center for AI Safety"
+      ],
+      "name": "Wenyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Zhuohan Liu"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Yingxu He"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Geyu Lin"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Xunlong Zou"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Shuo Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syed Ali Redha Alsagoff"
+    },
+    {
+      "affiliations": [
+        "Institute of Advanced Intelligence and Computing, A*STAR"
+      ],
+      "name": "Ai Ti Aw"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09672",
+  "originalTitle": "SEA-SpeechBench: A Large-Scale Multitask Benchmark for Speech Understanding Across Southeast Asia",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09672.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

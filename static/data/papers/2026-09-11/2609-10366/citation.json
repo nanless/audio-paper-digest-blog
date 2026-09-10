@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10366",
+  "arxivId": "2609.10366",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rishabh Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naomi Harte"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10366",
+  "originalTitle": "AVSRBench: A Multi-Condition AVSR Benchmark",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10366.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

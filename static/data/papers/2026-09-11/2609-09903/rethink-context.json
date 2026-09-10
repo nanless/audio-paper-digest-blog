@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09903",
+  "abstract": "With the rapid development of speech generation technology, discrete codec representations have been widely used because they provide a stable prediction paradigm. In expressive speech generation, however, the quantization bottleneck of discrete codecs results in information gaps in fine-grained prosody, timbre, pronunciation, and frame-to-frame continuity. Continuous representations (e.g., VAE latents), by eliminating this constraint, have emerged as a more effective alternative for autoregressive modeling. Yet when continuous representations are used as autoregressive prediction targets, prediction errors can accumulate along the generation chain, causing latent drift and degrading long-form stability. To mitigate this problem, we propose SphereVAE, which constrains the VAE latent space to the unit hypersphere. SphereVAE defines a Power Spherical posterior on the hypersphere and regularizes the latent distribution toward a uniform prior, so that information is encoded mainly by directional variation, providing a bounded geometric target for autoregressive prediction and reducing the risk of norm drift. SphereVAE underperforms the standard VAE on reconstruction metrics due to reduced latent freedom. However, when integrated into VoxCPM for zero-shot TTS and long-text generation, it yields lower content error rates with comparable speaker similarity, and shows more stable long-range speaker consistency. These results indicate that an appropriate latent geometric constraint can effectively mitigate autoregressive error accumulation and drift in speech generation.",
+  "abstractSha256": "2b27b291e9a27b1830bddb08a3cf328488c2c7d0da941a0b3216a60139afa22f",
+  "arxivId": "2609.09903",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Yue Li"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Xunyu Zhu"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Zhipeng Chen"
+    },
+    {
+      "affiliations": [
+        "Fuxi AI Lab, NetEase Inc., Hangzhou, China"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对连续语音表示自回归预测中误差沿时间累积导致的隐变量漂移问题，SphereVAE 用单位超球面 Power Spherical 隐空间固定模长只留方向变化，在重建指标低于标准 VAE 的代价下，在 VoxCPM 零样本合成中取得英文 5.305% 词错误率与中文 1.141% 字错误率的最低内容错误并在长文本中保持更高的说话人相似度。",
+  "originalTitle": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09903.pdf",
+  "readerTitle": "固定模长换可预测性：SphereVAE 把连续语音表示压到球面上治自回归漂移",
+  "schemaVersion": 1
+}

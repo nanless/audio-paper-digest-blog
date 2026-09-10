@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09681",
+  "arxivId": "2609.09681",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Imperial College London, UK"
+      ],
+      "name": "Yupei Li"
+    },
+    {
+      "affiliations": [
+        "Imperial College London, UK"
+      ],
+      "name": "Qiyang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohamed Mady"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxi Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, CN"
+      ],
+      "name": "Zhengwei Gong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berrak Sisman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Björn Schller"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09681",
+  "originalTitle": "Beyond Accuracy: ARIA-Rubrics for Evaluating Audio Reasoning in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09681.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

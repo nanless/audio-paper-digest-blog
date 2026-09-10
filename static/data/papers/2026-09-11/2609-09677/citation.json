@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09677",
+  "arxivId": "2609.09677",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Zehan Liu"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Carl Chen"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Rime Wen"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Kaiqi Fu"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Altman Lin"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Shawn Qin"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Lights Shi"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Roy Gan"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Hao Wang"
+    },
+    {
+      "affiliations": [
+        "X Square Robot"
+      ],
+      "name": "Qian Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09677",
+  "originalTitle": "X2-NativeCursor: Native-Token Text Progress Tracking for Incremental-Text Streaming Codec TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09677.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

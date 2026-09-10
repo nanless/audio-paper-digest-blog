@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09947",
+  "arxivId": "2609.09947",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Shuiyuan Wang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Jinrui Liang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Chaoren Yu"
+    },
+    {
+      "affiliations": [
+        "yutuzhineng, China"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, China"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09947",
+  "originalTitle": "SpeechAnnotator: A Context-Aware Multi-Agent Framework and Benchmark for Multidimensional Speech Annotation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09947.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

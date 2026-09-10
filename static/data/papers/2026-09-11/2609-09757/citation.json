@@ -1,0 +1,59 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09757",
+  "arxivId": "2609.09757",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sean Foley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christina Hagedorn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yijing Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sudarsana Reddy Kadiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dani Byrd"
+    },
+    {
+      "affiliations": [
+        "organization= Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California, city=Los Angeles, state=CA, country=USA",
+        "organization=Department of English, College of Staten Island, City University of New York, city=New York, state=NY, country=USA",
+        "organization=Department of Linguistics, University of Potsdam, country=Germany",
+        "organization=Department of Linguistics, University of Southern California, city=Los Angeles, state=CA, country=USA"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09757",
+  "originalTitle": "Arti-JEPA: Adapting Video World Model to Real-Time MRI of the Vocal Tract for Speech-Production Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09757.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09965",
+  "abstract": "Training speaker diarization models on loose labels, such as speech segments with padded boundaries or filled pauses, often results in similarly loose model outputs. To obtain tighter boundaries, pseudo-labeling based on the averaged outputs of causal and anticausal models has been proposed. However, since the pseudo-labels are estimation-based, they can suffer from over-tightening, which increases missed detections that can propagate as unrecoverable errors to downstream tasks. This paper carefully analyzes the causes of over-tightening and proposes three approaches to address them: (i) removing pause filling rather than padding, (ii) introducing a burn-in phase to mitigate missed detections near the beginning of causal and anticausal predictions, and (iii) making pseudo-label-based co-training aware of the non-causal model used for final inference. Experimental results show that the proposed method reduces missed detections caused by over-tightening and improves both diarization accuracy and downstream multi-talker ASR performance.",
+  "abstractSha256": "b9b2bde304694a7c2ef17f28705634098384401d4bbb6e6cbf32b6477f4a561d",
+  "arxivId": "2609.09965",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Takanori Ashihara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Alexis Plaquet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对松标注训练导致边界过松、而因果-反因果伪标签又收得过紧并增加漏检的问题，论文用保边界去停顿填充、预热上下文和非因果感知协同训练来缓解，并在 AMI 与 AliMeeting 上把与理想紧标签上限的 DER 差距缩小约四到六成，代价是虚警与漏检之间仍需权衡。",
+  "originalTitle": "Over-Tightening-Aware Pseudo-Labeling for Tight-Boundary Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09965.pdf",
+  "readerTitle": "松标注学出松边界：因果一致性伪标签为何收得过紧",
+  "schemaVersion": 1
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09948",
+  "arxivId": "2609.09948",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zemin Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomoko Matsui"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09948",
+  "originalTitle": "Robust Rank Aggregation for Multimodal Speech-Based Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09948.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

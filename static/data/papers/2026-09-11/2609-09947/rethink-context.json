@@ -1,0 +1,138 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09947",
+  "abstract": "Recent controllable speech generation requires training data with fine-grained annotations of speaker traits, prosody, emotion, paralinguistic cues, acoustic scenes, and context. Existing workflows often rely on manual correction, paid hosted multimodal services, or fixed processing chains, which limits large-scale data processing through annotation cost, external-service dependence, or weak cross-stage recovery. We introduce SpeechAnnotator, a locally deployable, context-aware multi-agent framework built entirely from open-source models and tools. Supporting frontend modules first obtain speaker-aware segments and final segment transcripts, while prior evidence extractors attach heterogeneous segment-level cues. Three specialist agents then collaborate through shared state: the Planning Agent converts local audio evidence, speaker history, neighboring segments, and recording-level context into field-specific contracts; the Labeling Agent performs contract-guided multimodal prediction for directly observable attributes; and the Review Agent runs a bounded review loop that checks evidence support and cross-segment consistency, triggering relabeling only for unsupported or inconsistent fields. To address the fragmentation of existing evaluation resources across isolated tasks and narrow-domain test sets, we introduce SpeechAnnotator-Bench (SA-Bench), containing 8.87 hours of human-annotated audio across nine source formats, together with SpeechAnnotator-Eval (SA-Eval), which separates Timeline-Eval for speaker-aware timeline recovery, Closed-Eval for finite-set attributes, and Open-Eval for open-ended attributes. Experiments and ablations show that SpeechAnnotator provides a locally deployable alternative to commercial audio-capable systems, while the bounded review loop improves multidimensional annotation through evidence- and context-aware field-level recovery.",
+  "abstractSha256": "bdfa96a0441d61e36ccf4cc75a1fb10f9d8d31ce6aa65da640f5a5d2e2203178",
+  "arxivId": "2609.09947",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据标注",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据标注",
+      "primaryMethodId": "method.data-annotation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Shuiyuan Wang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Jinrui Liang"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Chaoren Yu"
+    },
+    {
+      "affiliations": [
+        "yutuzhineng, China"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Pimei Technology Co., Ltd., Guangdong, China"
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, China"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, China"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对长录音中说话人、韵律、情感与场景需联合标注的问题，论文用全开源的前端加先验加三智能体加有界复核流程组织标注，并在 8.87 小时九类中文主基准上以时间线与固定时间线两套条件报告了可复述的误差与消融代价。",
+  "originalTitle": "SpeechAnnotator: A Context-Aware Multi-Agent Framework and Benchmark for Multidimensional Speech Annotation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09947.pdf",
+  "readerTitle": "长录音多维标注如何不推倒重来：以字段级复核做局部修复",
+  "schemaVersion": 1
+}

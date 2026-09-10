@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10434",
+  "arxivId": "2609.10434",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Robin Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ewan Dunbar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10434",
+  "originalTitle": "Do speech foundation models really learn words?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10434.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

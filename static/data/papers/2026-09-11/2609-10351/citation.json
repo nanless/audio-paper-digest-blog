@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10351",
+  "arxivId": "2609.10351",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Milan Liessens Dujardin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song-Ze Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Miao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10351",
+  "originalTitle": "Unifying Score and Performance for Fine-Grained Music Understanding in Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10351.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

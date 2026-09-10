@@ -1,0 +1,54 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09719",
+  "arxivId": "2609.09719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University",
+        "University of California, Berkeley"
+      ],
+      "name": "Kang-wook Kim"
+    },
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Jinyoung Park"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "KRAFTON"
+      ],
+      "name": "Jinsoo Kim"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "KRAFTON"
+      ],
+      "name": "Sehun Lee"
+    },
+    {
+      "affiliations": [
+        "Seoul National University",
+        "Georgia Institute of Technology"
+      ],
+      "name": "Sang Hoon Woo"
+    },
+    {
+      "affiliations": [
+        "Seoul National University"
+      ],
+      "name": "Gunhee Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09719",
+  "originalTitle": "StreamAlign: Streaming Text-Aligned Speech Tokenization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09719.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

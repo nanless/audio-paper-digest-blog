@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10338",
+  "abstract": "Multimedia applications require precise music annotation-labeled positions, segments, or loops-placed by hand or algorithmically. Machine-learning algorithms are scalable and effective but need annotated training data, scarce for many tasks. TimeCues Studio is an open-source workspace where algorithm-development teams annotate a music corpus, compare detection algorithms against those annotations, and prototype new ones. Unlike existing tools built for a single track at a time, TimeCues targets teams annotating whole collections, tightly integrated with algorithm development. Annotators place several marker types-each supporting ambiguity-aware labeling-on a grid-locked timeline that visualizes many music features, including separated audio stems. The same timeline drives an algorithm-comparison engine with bundled baselines, a Python sandbox for prototyping new models, and an ambiguity-aware evaluator that honors the structured fields. The same visualization suits solo annotators on music-sync projects. TimeCues is MIT-licensed and deploys via one Docker Compose command.",
+  "abstractSha256": "2474a87791f70d8d7c034d2cb6e9cc13897b45c0ad4619d3042b66b3d5ddd6d9",
+  "arxivId": "2609.10338",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据标注",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据标注",
+      "primaryMethodId": "method.data-annotation",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Bar-Ilan University, Ramat Gan, Israel"
+      ],
+      "name": "Sapir Caduri"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University, Ramat Gan, Israel"
+      ],
+      "name": "Yoav Goldberg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "TimeCues Studio 针对多人整库音乐标注与算法迭代脱节的问题，用共享节拍网格加四类标记与多候选加关键度扩展方案统一标注与评测，并在 109 首电子音乐自建库与 3 首 CC0 演示库上走通全流程，代价是首次分轨与特征缓存开销大且算法建议仍需逐条人工复核。",
+  "originalTitle": "TimeCues Studio: A Workspace for Music Annotation and Algorithm Prototyping",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10338.pdf",
+  "readerTitle": "把模糊边界变成可评测事件：TimeCues Studio 的整库标注与算法共用时间轴",
+  "schemaVersion": 1
+}

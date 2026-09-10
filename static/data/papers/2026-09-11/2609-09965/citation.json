@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09965",
+  "arxivId": "2609.09965",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Takanori Ashihara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Alexis Plaquet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09965",
+  "originalTitle": "Over-Tightening-Aware Pseudo-Labeling for Tight-Boundary Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09965.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

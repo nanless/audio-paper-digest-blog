@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10466",
+  "abstract": "We study speaker-disjoint accent identification for L2 English, where the goal is to predict a speaker&#39;s first-language (L1) background from English pronunciation. Most existing systems classify accents using a single utterance-level representation, but such global representations can obscure pronunciation cues that depend on specific English phonemes. We propose a transcript-assisted model that makes phoneme information explicit during accent identification. Instead of representing an utterance only as a global speech embedding, we represent it as a sequence of pronunciation units, each combining acoustic evidence from a spoken segment with the aligned English phoneme for that segment. A frozen speech encoder provides the acoustic features, while the transcript is used only to obtain phoneme-level forced alignments. No word-level or sentence-level text representation is passed to the accent classifier. Under a four-fold speaker-disjoint protocol on L2-ARCTIC, our model achieves 81.41% accuracy and 81.21% macro-F1, the highest mean performance among the evaluated systems. Diagnostic ablations support the importance of phoneme-aligned token construction, while a Whisper-based ablation shows an additional gain from phoneme information.",
+  "abstractSha256": "164418028978775cf322c815b3d7d9a9931bd25ff69ebeb6cb31dd13b1c7c31d",
+  "arxivId": "2609.10466",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对说话人互斥的二语英语母语背景识别，论文提出把冻结编码器帧特征按强制对齐音素区间分组并拼接音素编号嵌入后分类，在 L2-ARCTIC 四折平均上报告 81.41% 准确率与 81.21% 宏 F1，代价是训练与评估都需要文本转录与音素对齐。",
+  "originalTitle": "Phoneme-Aware Pronunciation Representations for L2-English L1-Background Accent Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10466.pdf",
+  "readerTitle": "整句向量不够用：把发音按音素对齐后再判母语口音",
+  "schemaVersion": 1
+}

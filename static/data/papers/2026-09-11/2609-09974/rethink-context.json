@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09974",
+  "abstract": "Grapheme-to-phoneme conversion (G2P) refers to the task of converting a sequence of graphemes to a corresponding sequence of phonemes. While Filipino G2P is fairly straightforward due to its shallow orthography, the inclusion of prosodic features such as stress adds a layer of complexity that requires sentence-level context instead of single-word inputs. However, sentence-level data for Filipino typically do not include phoneme transcriptions, posing a challenge for training G2P models. As such, we investigate how to obtain sentence-level phoneme data for Filipino using available data and compare the resulting models with multilingual word-level G2P as well as measure how accurately they predict stress marker position for Filipino. We propose fine-tuning a ByT5-based model, pre-trained on multilingual word-level G2P data, on three sentence-level G2P datasets annotated with an LLM-assisted pipeline guided by data from Wiktionary. This approach produces models that perform well on the G2P task, achieving at best around 0.54% PER and 2.50% CER, a significant decrease compared to base model PER at around 19.74%, on a manually-corrected test set. The model is able to correctly classify most of the main stress classes in Filipino, but struggles particularly with malumi words. We show that a ByT5-based model performs well at sentence-level Filipino G2P and offers strong potential for Filipino homograph disambiguation.",
+  "abstractSha256": "9b87f27fceb3d4aff95cae5de93587d68ae0e024760c8001db7736e716bf0250",
+  "arxivId": "2609.09974",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lorenz Bernard Marqueses"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paulo Grane Gabriel Silva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chastine Cabatay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ericson Adler Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ann Franchesca Laguna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对菲律宾语重音需靠句子上下文消歧但句子级音素标注稀缺的问题，该研究用 Wiktionary 词典加 LLM 辅助管线合成句子级弱监督数据微调 CharsiuG2P 初始化的 ByT5，在 1173 句人工校对集上把音素错误率从约 19.74% 降到约 0.54%、字符错误率降到约 2.50%，代价是 malumi 类与非标准词仍易错且大合成集增益主要体现在重音符号上。",
+  "originalTitle": "Towards Stress-Aware Sentence-Level Filipino G2P With Weakly-Supervised ByT5 Fine-Tuning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09974.pdf",
+  "readerTitle": "浅正字法不等于无重音：用弱监督让 ByT5 在句子级学会菲律宾语重音",
+  "schemaVersion": 1
+}

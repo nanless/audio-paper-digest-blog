@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09940",
+  "arxivId": "2609.09940",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuang Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guojian Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Haoyue Zhan"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Jie Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Chuan Xie"
+    },
+    {
+      "affiliations": [
+        "Shanghai Lingguang Zhaxian Technology, China"
+      ],
+      "name": "Qiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanjing University, China"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09940",
+  "originalTitle": "NVV-Locator: From Transcript Tags to Acoustic Boundaries for Fine-Grained Nonverbal Vocalization Grounding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09940.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

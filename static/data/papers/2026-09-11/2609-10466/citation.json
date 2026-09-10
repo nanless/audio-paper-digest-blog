@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10466",
+  "arxivId": "2609.10466",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10466",
+  "originalTitle": "Phoneme-Aware Pronunciation Representations for L2-English L1-Background Accent Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10466.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09420",
+  "arxivId": "2609.09420",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaechul Roh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Deepak Chandran"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amir Houmansadr"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Fanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.09420",
+  "originalTitle": "DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09420.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10051",
+  "abstract": "Voice-cloning fraud increasingly relies on surgical injection: a genuine conversation in which only one or two sentences are replaced by synthetic speech. Utterance-level deepfake detectors emit a single real/fake label per clip and cannot report where the synthetic speech lies. We formalise this as Temporal Deepfake Localisation in Multi-Speaker Conversations (TDLMC), show that equal error rate and min-DCF are ill-posed once a file contains both classes, and propose temporal metrics for this regime. Our contribution is a training-free five-stage pipeline that wraps a frozen binary detector and adds segment-level output with no retraining, using a two-threshold hysteresis finitestate-machine decoder to turn noisy window scores into coherent intervals. On 180 constructed multi-speaker conversations from ASVspoof 5, the system attains temporal intersection-over-union 0.90, temporal detection rate 0.95, and MS-DCF 0.26 with a strong backbone, and its false-alarm rate on genuine speech is below 6%, falling under 2% on genuine real multi-speaker dialogue (AMI). Under an identical pipeline, a trained localiser improves temporal IoU by only about 0.04, bounding the cost of forgoing supervision. Evaluated across three frozen detectors under one decoder whose constants are selected on a held-out calibration split, and with a controlled analysis attributing the residual false-alarm rate to a backbone domain gap rather than to the decoder, this provides the first zero-shot baseline and a reusable benchmark for TDLMC.",
+  "abstractSha256": "4bd207d85e63db30addbbb7b54dfab35c4a3bd76822adad60f59d5e5d14aa010",
+  "arxivId": "2609.10051",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soumyadeep Roy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把多说话人对话中的手术式伪造注入形式化为时序定位问题，用冻结二分类器加滑窗与迟滞解码器实现零样本定位，在 180 段构造对话上以强骨干达到时序交并比 0.90 左右，但边界位移约 3.5 秒且短时域外生成器注入仍接近全漏检。",
+  "originalTitle": "Zero-Shot Temporal Localisation of Audio Deepfakes in Multi-Speaker Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10051.pdf",
+  "readerTitle": "整段对话只换一句话：冻结检测器如何给出伪造时间戳",
+  "schemaVersion": 1
+}

@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09929",
+  "abstract": "Nonverbal vocalizations (NVVs), such as laughter, sighs, breaths, and coughs, convey affective and interactional information that conventional automatic speech recognition (ASR) systems often discard. We present a bilingual Mandarin-English system for Track 1 of the NVVSpeech Challenge at ISCSLP 2026, which requires joint transcription of lexical content and 16 NVV categories at their transcript-relative positions. Our NVV-Aware Whisper adapts Whisper-medium through checkpoint-compatible vocabulary remapping, enabling lexical tokens and inline NVV tags to be decoded within a unified autoregressive sequence without expanding the vocabulary. To provide reliable and diverse supervision, we further introduce a source-adaptive data curation strategy that refines public NVV corpora through acoustic augmentation and multimodal LLM filtering, while mining spontaneous NVVs from in-the-wild media through automated preprocessing and annotation. Under the official bilingual evaluation protocol, the proposed system improves final score from 33.32 to 53.61, with ablations confirming the complementary benefits of the proposed data-curation components.",
+  "abstractSha256": "7d72b36e405488e7ece149aea5e744be9940f1d04606b77a4382f2ebbd22f948",
+  "arxivId": "2609.09929",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuang Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuo Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对中英双语带标签转写任务，论文用词汇重映射让 Whisper-medium 统一生成词与 16 类非言语声标签，并用公开语料增强过滤加影视挖掘把最终分从 33.32 提到 53.61，代价是英文纯文本词错率上升且细粒度类别仍偏弱。",
+  "originalTitle": "Source-Adaptive Data Curation for Bilingual NVV-Aware ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09929.pdf",
+  "readerTitle": "词与笑声同序列解码：面向双语非言语声的源自适应数据整理",
+  "schemaVersion": 1
+}

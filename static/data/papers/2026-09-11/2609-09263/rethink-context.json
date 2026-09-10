@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.09263",
+  "abstract": "Speech-to-speech (S2S) models now run inside dubbing, translation, and voice agents. Unlike text models, they hear the speaker&#39;s voice, which carries the speaker&#39;s gender. A faithful system should treat a speaker as who they sound like, not as whoever usually says what they said. Testing this is harder than it looks, since most S2S models answer in a single, fixed output voice, hard-coded so it cannot drift toward a stereotype. Checking the output voice comes back clean even when the model is biased. We therefore ask two questions. When a model re-speaks the input, does the stereotype in the words shift the perceived gender of the output voice (voice rendering)? And when the model states the speaker&#39;s gender, does it follow the voice or the content (gender attribution)? We answer both with one controlled experiment crossing male and female voices with masculine-, neutral-, and feminine-stereotyped passages, on five open- and closed-source models in English, Spanish, and Mandarin. The rendered voice shows no stereotype drift. But every model decides the speaker&#39;s gender from the content, not the voice. Making the content one step more feminine (masculine -&gt; neutral -&gt; feminine) multiplies the odds of a &#34;female&#34; judgment by 1.7-24. When the content clashes with the voice, the worst model misgenders the speaker in 90% of cases. When they agree, it misgenders in only 2%. The bias thus hides in gender attribution, where fixed-voice evaluation cannot see, and where audits must look as S2S systems increasingly speak for real people.",
+  "abstractSha256": "4502ba7e99e0dc58a1782c3fac55446f3d575741120a35e954520c59628316b8",
+  "arxivId": "2609.09263",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Xiaoqun Liu"
+    },
+    {
+      "affiliations": [
+        "University of Washington"
+      ],
+      "name": "Tanu Mitra"
+    },
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Harshit Rajgarhia"
+    },
+    {
+      "affiliations": [
+        "Centific Research"
+      ],
+      "name": "Abhishek Mukherji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用男声女声交叉朗读男性刻板、中性、女性刻板长文本检验五款英西汉语音到语音模型，报告输出声音无可靠漂移但说出的性别判断全部跟随内容，错配时集中误判而固定音色审计看不见该偏差。",
+  "originalTitle": "Voice or Stereotype? Disentangling Acoustic and Content-Based Gender in Speech-to-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.09263.pdf",
+  "readerTitle": "固定音色查不出偏置：语音到语音模型跟内容误判说话人性别",
+  "schemaVersion": 1
+}

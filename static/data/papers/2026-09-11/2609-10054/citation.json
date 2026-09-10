@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10054",
+  "arxivId": "2609.10054",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nathan Roll"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Irene Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Büşra Marşan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vianney Grenez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Stein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Momcilo Mrkaic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pavle Padjin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vladimir Zeljkovic"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Calbert Graham"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10054",
+  "originalTitle": "Orukeet: Multilingual ASR with Frozen Gabor Kernels",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10054.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

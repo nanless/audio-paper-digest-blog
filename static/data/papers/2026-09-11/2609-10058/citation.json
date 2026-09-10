@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10058",
+  "arxivId": "2609.10058",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Niramay M. Patel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bibek Behera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raksha Sharma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10058",
+  "originalTitle": "NOPE-HYPE: A Structured Simulation Workflow for Robust Speech-to-Text Across Diverse Acoustic Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10058.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
