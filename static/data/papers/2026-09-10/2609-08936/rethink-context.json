@@ -9,8 +9,8 @@
     "documentType": "模型报告",
     "primaryMethod": "流匹配",
     "primaryTask": "语音编辑",
-    "rankBucket": "前50%",
-    "score": 7.3,
+    "rankBucket": "前25%",
+    "score": 8.8,
     "taxonomy": {
       "concepts": [
         {
@@ -245,9 +245,9 @@
     }
   ],
   "contract": "researcher-sidecars-v1",
-  "oneSentenceThesis": "AuK 用自然语言指令加可选音频上下文统一 5 类语音任务，以 MLLM 语义条件、联合训练 VAE 声学潜变量和混合整流流 Transformer 为核心，在约 3.03 billion 指令音频实例与 1.95 million 小时监督上经生成预热、联合预训练、编辑偏好优化与生成强化学习后取得零样本与指令 TTS 及通用编辑的领先结果，并以 4 步无 CFG 的 AuK-Flash 换取 4.5 倍实测加速，但仍依赖 Prompt Enhancer 做任务路由与改写。",
+  "oneSentenceThesis": "AuK 用自然语言指令加可选音频统一五类语音任务，以多模态大语言模型语义条件、联合训练的音频变分自编码器声学潜变量和混合整流流 Transformer 为核心，在约 3.03 billion 指令音频实例与 1.95 million 小时监督上经生成预热、联合预训练、编辑偏好优化与生成强化学习取得零样本与指令合成及通用编辑的领先结果，并以 4 步无分类器自由引导的 AuK-Flash 换取 4.5 倍实测加速，但仍依赖提示增强器做任务路由与改写。",
   "originalTitle": "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing",
   "pdfUrl": "https://arxiv.org/pdf/2609.08936.pdf",
-  "readerTitle": "AuK 用一条指令接口统一生成与编辑：何时靠语义条件、何时靠声学潜变量、代价在哪里",
+  "readerTitle": "AuK 用一条指令接口统一生成与编辑：语义条件与声学潜变量如何分工",
   "schemaVersion": 1
 }
