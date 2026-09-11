@@ -90,7 +90,7 @@ T15 包含约 20 个月内 45 个会话的 10948 个句子，每个试次配对�
 
 > **看图路径：** 1. 先看 a 面板屏幕句子、皮层记录与尝试发声的任务闭环；2. 再对比 b 面板同一句子在两个会话的长度与纹理差异；3. 接着看 c 面板源与目标分布从分离到重叠的示意箭头；4. 最后看 d 面板源与目标点云在对齐前后混合程度变化
 
-![原论文 Figure 1：Dataset and domain shift across sessions.](/images/conference/uai-2026/786fd7701a01/figure-1.png)
+![原论文 Figure 1：Dataset and domain shift across sessions.](https://nanless.github.io/audio-paper-digest-images/uai-2026/786fd7701a01/figure-1.png)
 
 *论文图 1。原论文 Figure 1：“Dataset and domain shift across sessions.”。*
 
@@ -141,7 +141,7 @@ T12 评估了 3 种划分：12 源 8 目标 3 测试、15 源 5 目标 3 测试�
 
 > **看图路径：** 1. 沿左侧早期源会话与后期目标会话箭头确认数据流入方向；2. 定位中间补丁嵌入与两段 Transformer 堆叠加层归一化的顺序；3. 对比右上音素分支与右下多头域分支的输入来源；4. 追踪梯度反转标注处从域损失回传到编码器的反向路径
 
-![原论文 Figure 2：ALIGN model architecture. Our ALIGN model consists of three major modules.](/images/conference/uai-2026/786fd7701a01/figure-2.png)
+![原论文 Figure 2：ALIGN model architecture. Our ALIGN model consists of three major modules.](https://nanless.github.io/audio-paper-digest-images/uai-2026/786fd7701a01/figure-2.png)
 
 *论文图 2。原论文 Figure 2：“ALIGN model architecture. Our ALIGN model consists of three major modules.”。*
 
@@ -216,7 +216,7 @@ T12 的 3 种划分覆盖源多目标多、源多目标少等不同难度，T15 
 
 > **看图路径：** 1. 先按行区分上行基线中间层与下行 ALIGN 中间层；2. 观察基线中间层彩色源点与灰色目标点是否整块偏离；3. 对比 ALIGN 对应位置两色点云是否更重叠；4. 再把中间层差异大小与右侧最终层两行差异做比较
 
-![原论文 Figure 3：Embedding visualization before and after ALIGN.](/images/conference/uai-2026/786fd7701a01/figure-3.png)
+![原论文 Figure 3：Embedding visualization before and after ALIGN.](https://nanless.github.io/audio-paper-digest-images/uai-2026/786fd7701a01/figure-3.png)
 
 *论文图 3。原论文 Figure 3：“Embedding visualization before and after ALIGN.”。*
 
@@ -236,7 +236,7 @@ T12 的 3 种划分覆盖源多目标多、源多目标少等不同难度，T15 
 
 > **看图路径：** 1. 先确认左右大块分别对应从目标首日与从测试首日开始适应；2. 在每个划分内按颜色区分基线加适应与 ALIGN 加适应走势；3. 沿时间间隔增大方向比较基线是否在后期陡升；4. 观察 ALIGN 加适应曲线是否保持低位且波动带更窄
 
-![原论文 Figure 4：ALIGN with and without TTA.](/images/conference/uai-2026/786fd7701a01/figure-4.png)
+![原论文 Figure 4：ALIGN with and without TTA.](https://nanless.github.io/audio-paper-digest-images/uai-2026/786fd7701a01/figure-4.png)
 
 *论文图 4。原论文 Figure 4：“ALIGN with and without TTA. Test WER of GRU baseline (green) without TTA, transformer baseline (blue) and ALIGN model (orange) with and without TTA (dark and light shades), where…”。*
 

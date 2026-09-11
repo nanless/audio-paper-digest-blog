@@ -109,7 +109,7 @@ CoPRIME 的全称是 Contrastive Probabilistic Routing for IMbalanced tokens wit
 
 > **看图路径：** 1. 从底部左右两路输入出发，确认文本分支经过切词与线性投影、音频分支经过波形到声谱图再到切块投影；2. 向上追踪两路 token 在拼接加模态标记后如何进入共享 Transformer 层与 MoE 编码器层；3. 观察 MoE 放大框内路由器、自注意力与多个 MLP 专家之间的连线与加权求和关系；4. 最后确认顶部平均池化得到音频向量与文本向量后进入对比损失矩阵的对角匹配结构
 
-![原论文 Figure 1：CoPRIME, a sparsely activated contrastive ELBO- regularized multimodal model.](/images/conference/aistats-2026/17dea799563c/figure-1.png)
+![原论文 Figure 1：CoPRIME, a sparsely activated contrastive ELBO- regularized multimodal model.](https://nanless.github.io/audio-paper-digest-images/aistats-2026/17dea799563c/figure-1.png)
 
 *论文图 1。原论文 Figure 1：“CoPRIME, a sparsely activated contrastive ELBO- regularized multimodal model.”。*
 
@@ -170,7 +170,7 @@ ELBO 损失是本文的核心增量。它把每个模态的 token 集合看成�
 
 > **看图路径：** 1. 先看六个 MoE 块各自横轴 1 到 8 专家编号与纵轴 token 数量的堆叠条形；2. 区分每根条形下方红色文本 token 段与上方绿色音频 token 段的高度比例；3. 比较不同块之间文本在专家间是否集中，例如后部块文本是否更偏向少数专家
 
-![原论文 Figure 2：Token distribution on a batch of size 256 for CoPRIME-B/32 model with 6 MoE blocks each having 8…](/images/conference/aistats-2026/17dea799563c/figure-2.png)
+![原论文 Figure 2：Token distribution on a batch of size 256 for CoPRIME-B/32 model with 6 MoE blocks each having 8…](https://nanless.github.io/audio-paper-digest-images/aistats-2026/17dea799563c/figure-2.png)
 
 *论文图 2。原论文 Figure 2：“Token distribution on a batch of size 256 for CoPRIME-B/32 model with 6 MoE blocks each having 8 experts. We can see the extreme token imbalance even with audio patches of 32x32.”。*
 
@@ -195,7 +195,7 @@ ELBO 损失是本文的核心增量。它把每个模态的 token 集合看成�
 
 > **看图路径：** 1. 确认横轴为 ELBO 权重、纵轴为辅助损失权重，格内数字为 MOSEI 少样本精度；2. 找到颜色最深的高精度 plateau 区域及其对应的横纵轴取值范围；3. 对比边缘小权重与大权重区域精度的下降幅度，判断调参敏感性
 
-![原论文 Figure 3：Sensitivity analysis with respect to regularization parameters (MOSEI 10-shot accuracy).](/images/conference/aistats-2026/17dea799563c/figure-3.png)
+![原论文 Figure 3：Sensitivity analysis with respect to regularization parameters (MOSEI 10-shot accuracy).](https://nanless.github.io/audio-paper-digest-images/aistats-2026/17dea799563c/figure-3.png)
 
 *论文图 3。原论文 Figure 3：“Sensitivity analysis with respect to regularization parameters (MOSEI 10-shot accuracy).”。*
 
