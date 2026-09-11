@@ -9,6 +9,14 @@ noRating: true
 
 从会议总览查看研究方向和论文排行，再进入任务专题或单篇解读。分类列表同时收录总览、专题和论文，条目数不等于论文数。
 
+## AISTATS 2026
+
+**International Conference on Artificial Intelligence and Statistics**
+
+覆盖统计学习、机器学习理论与方法，以及面向音频等应用的模型与评测。
+
+[阅读会议总览 →](../posts/conference-aistats-2026/) · [浏览全部条目](../categories/aistats-2026-论文/)
+
 ## ICASSP 2026
 
 **IEEE International Conference on Acoustics, Speech and Signal Processing**
