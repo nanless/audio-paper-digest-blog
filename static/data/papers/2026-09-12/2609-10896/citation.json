@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10896",
+  "arxivId": "2609.10896",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuqin Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaru Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yueying Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10896",
+  "originalTitle": "LLM-Anchored Paralinguistic Enrichment for Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10896.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10913",
+  "abstract": "Quadratic difference tones (QDTs) are a species of auditory distortion product in which a &#34;phantom&#34; pure tone, absent from the acoustic signal, is clearly audible to listeners. Exploiting this phenomenon, one can synthesize harmonically rich tones for musical purposes, a technique called Quadratic Difference Tone Spectrum (QDTS) synthesis. Previous works have introduced numerical methods to synthesize QDTS based on the distortion function, which links a target QDTS and an overtone-structured carrier signal. While accurate, these methods were stochastic and discontinuous, making them difficult to control for musical purposes and effectively limiting them to stationary signals. This paper proposes a neural network-based approach that learns an approximate inverse of the distortion mapping in an autoencoder-like configuration, producing a continuous approximation that addresses prior limitations. Experimental results show that, although slightly less numerically precise, the method is sufficient for perceptual and musical applications. We also implement a real-time version in Max and evaluate its performance. Various sound examples demonstrate its expressive and musical potential. The source code, audio examples, tutorials, and software accompanying this work are available at this https URL",
+  "abstractSha256": "07a918792c378cea899ccf60fec06076a51c3dfbe746470c710169037035f33b",
+  "arxivId": "2609.10913",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Esteban Gutiérrez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Behzad Haki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Haworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rodrigo Cádiz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把求载波复音以产生目标二次差频谱的问题转成学习失真函数连续近似逆，用齐次结构加课程式训练换来可实时插值的合成器，代价是重建误差略高于随机牛顿迭代。",
+  "originalTitle": "Learned Continuous Synthesis of Quadratic Difference Tone Spectra",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10913.pdf",
+  "readerTitle": "从跳变的数值解到连续的 learned 逆映射：二次差频谱合成如何变得可演奏",
+  "schemaVersion": 1
+}

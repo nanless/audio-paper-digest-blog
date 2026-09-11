@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11355",
+  "arxivId": "2609.11355",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huy Hoang Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Long-Bao Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh Tri Dao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11355",
+  "originalTitle": "SEAR: Segment-Evidence-Aware Routing for Weak-to-Strong Multilingual Speech MCQ",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11355.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

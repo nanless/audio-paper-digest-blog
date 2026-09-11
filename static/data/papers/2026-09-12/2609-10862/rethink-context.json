@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10862",
+  "abstract": "This report presents results from Project Qualia, an ongoing effort to determine whether experiential similarity between songs, a structure not captured by genre or metadata taxonomies, can be recovered from real listening behavior. We constructed a large-scale dataset of listening sessions, comprising 1.29 billion scrobbles collected from 9,396 users via the this http URL API and reduced through a preprocessing pipeline to 531.6 million training scrobbles across 28.6 million sessions. On this corpus, we trained a skip-gram Word2Vec model (Song2Vec), treating each session as a sentence and each track as a token. As anticipated, the resulting embedding space was dominated by artist identity, a consequence of single-artist runs within sessions. To test for a subtler, artist-independent signal, we developed an artist-residual procedure: subtracting each artist&#39;s centroid from its tracks&#39; embeddings and evaluating whether the remainder retained structure. Mean cross-artist cosine similarity fell from 0.2487 in raw embedding space to 0.0005 in residual space, yet 4,577 cross-artist track pairs retained cosine similarity $\\ge 0.70$ in residual space, forming coherent genre- and era-based clusters, including trip-hop, 1990s grunge, 2020 mainstream pop, and cross-composer classical piano pairs at cosine similarity up to 0.95. These results confirm that the training data contains experiential structure independent of artist identity, establishing an empirical basis for an architecture designed to learn this experiential layer directly.",
+  "abstractSha256": "cc8854593f7b8de206decd9968749f0ac65ff0da40ff6a11fe2253e68074beba",
+  "arxivId": "2609.10862",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-cleaning",
+          "label": "数据清洗"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Nizam Mohammed"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science Hampton University, VA 23669, USA"
+      ],
+      "name": "Abu B. S. Rahman"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science Hampton University, VA 23669, USA"
+      ],
+      "name": "Dimuthu D. K. Arachchige"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把播放会话当句子训练跳元向量并用艺术家质心相减剥离歌手身份，以原始均值 0.2487 降至残差均值 0.0005 后仍有 4577 对跨歌手高相似为存在性证据，但自动播放混杂与重度用户偏差使结论止于信号存在而不及推荐性能。",
+  "originalTitle": "Project Qualia: Recovering Experiential Music Structure from Session Co-occurrence Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10862.pdf",
+  "readerTitle": "会话共现能否留下歌手之外的听感结构：一次可证伪的残差检验",
+  "schemaVersion": 1
+}

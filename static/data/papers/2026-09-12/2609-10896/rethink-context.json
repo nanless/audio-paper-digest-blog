@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10896",
+  "abstract": "Speech-based automatic detection of Alzheimer&#39;s disease (AD) provides a non-invasive and scalable approach to early cognitive screening. AD affects both lexical-semantic organization and speech production, including atypical pauses and word elongations. However, existing methods have yet to fully integrate these paralinguistic cues with linguistic content. We propose LLM-Anchored Paralinguistic Enrichment (LAPE), which enriches LLM-derived linguistic representations with paralinguistic cues through three coordinated innovations. The first is prosodic event textualization, which enables the LLM to model pauses and elongations jointly with lexical content by encoding them as explicit markers with bounded duration-aware repetition. The second is lexico-prosodic unitization and chunking, which preserves event identity and magnitude in both modalities by pooling only consecutive word units. The third is text-anchored paralinguistic fusion, which integrates local and utterance-level speech features by using NormGate to normalize and dynamically scale them relative to text. We evaluate LAPE on ADReSS and ADReSSo using participant-level cross-validation and leave-one-subject-out evaluation. LAPE achieves state-of-the-art performance across all four primary settings. Code will be released upon acceptance.",
+  "abstractSha256": "0e3c6496fccc016bbf62def4b1cccd462156a1d7627fecd87b57e5448beb7484",
+  "arxivId": "2609.10896",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuqin Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaru Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yueying Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianwu Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对看图说话中词汇语义与发音 timing 互补但贡献不均的问题，LAPE 以大语言模型文本表示为锚，把停顿与拖长写进转写并做事件保持组块与门控融合，在 ADReSS 与 ADReSSo 的五折与留一被试评估中均取得最高准确率，代价是依赖词时间戳与多路语音特征的完整流水线。",
+  "originalTitle": "LLM-Anchored Paralinguistic Enrichment for Alzheimer's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10896.pdf",
+  "readerTitle": "以文本为锚、让停顿和拖长显形：LAPE 如何统一转写与融合做阿尔茨海默语音检测",
+  "schemaVersion": 1
+}

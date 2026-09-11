@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11244",
+  "abstract": "While Multimodal Large Language Models (MLLMs) have achieved remarkable progress across diverse tasks, they suffer from hallucinations where generated outputs contradict or misrepresent input semantics. Existing research typically addresses hallucination detection within a single modality or task type, limiting generalizability. We introduce OmniHallu, a unified hallucination detection framework spanning both comprehension and generation tasks across image, video, and audio modalities. We contribute OmniHallu-Bench, a 10,000-sample benchmark with claim-level human annotations covering six cross-modal tasks: image-to-text (I2T), video-to-text (V2T), audio-to-text (A2T), text-to-image (T2I), text-to-video (T2V), and text-to-audio (T2A). Our multi-agent architecture decomposes model outputs into atomic claims, verifies them through modality-specific experts, and aggregates evidence via structured reasoning. We further propose a preference-optimized trainable verifier that approximates the multi-agent decision boundary, reducing expert calls by 66% with minimal performance loss. Extensive experiments reveal a consistent modality-dependent performance gradient and provide fine-grained insights into cross-modal hallucination patterns.",
+  "abstractSha256": "1e270be0eebb204ff05947619d81ea13ca5b004c5637bad98a34187d65f2f414",
+  "arxivId": "2609.11244",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Manchester"
+      ],
+      "name": "Jianjiang Yang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Peihang Li"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Shanqing Xu"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Mengchen Qian"
+    },
+    {
+      "affiliations": [
+        "Shanghai Academy of Educational Sciences"
+      ],
+      "name": "Lu Zhang"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Meng Luo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对图像视频音频的理解与生成六类任务，OmniHallu 用原子断言拆分加模态专家验证再推理聚合做声明级检测，在 10000 样本基准上以宏平均 F1 领先基线并用可训练验证器把专家调用减少约三分之二。",
+  "originalTitle": "OmniHallu: Unified Hallucination Detection for Cross-Modal Comprehension and Generation in Multimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11244.pdf",
+  "readerTitle": "把幻觉拆成可验的原子断言：OmniHallu 统一六向跨模态检测",
+  "schemaVersion": 1
+}

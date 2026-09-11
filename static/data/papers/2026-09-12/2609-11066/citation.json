@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11066",
+  "arxivId": "2609.11066",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rini Sharon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Manickavela A"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kadri Hacioglu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Stolcke"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11066",
+  "originalTitle": "Less can be More: What Aspects of Speech Drive End-of-Turn Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11066.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

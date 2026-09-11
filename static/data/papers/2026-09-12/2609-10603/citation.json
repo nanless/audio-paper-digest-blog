@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10603",
+  "arxivId": "2609.10603",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Mathematics, University of Missouri - Columbia"
+      ],
+      "name": "Caleb Scott Alons"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10603",
+  "originalTitle": "A General Approach to Enharmonicism",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10603.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

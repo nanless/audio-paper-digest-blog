@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11904",
+  "abstract": "Automatic Music Transcription (AMT) for guitar remains limited by three challenges: existing systems often fail to capture expressive techniques such as slides, bends, and percussive hits; they often assign notes to incorrect string-fret combinations; and they are typically trained on clean recordings, limiting their generalization to noisy real-world audio. To address these challenges, we propose TART, a modular four-stage audio-to-tablature pipeline consisting of (1) an audio-to-MIDI transcription model, (2) an expressive technique classifier, (3) an audio-conditioned T5 encoder-decoder for string-fret assignment, and (4) an automated tablature generator. We evaluate TART in a zero-shot setting on GuitarSet, EGDB, and two augmented benchmarks, Noisy GuitarSet and Noisy EGDB. Averaged across these four benchmarks, TART achieves 81.35% audio-to-MIDI F50 (+6.67 points over the best prior baseline), 71.8% string-fret Tab F1 (+8.5 points over the best prior baseline), and 54.08% end-to-end Tab F1. To our knowledge, TART is the first framework to generate guitar tablature with both fingering and expressive technique annotations directly from guitar audio.",
+  "abstractSha256": "914dff1cb2646198b76eb4b5b201643add4ef522fd33880e9396b5dd00c1a1a6",
+  "arxivId": "2609.11904",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Akshaj Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hwi Joo Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Guzman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shamak Gowda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Samhita Konduri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Robin Netzorg"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gopala Anumanchipalli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "TART 把吉他音频转谱拆成音频转 MIDI、九类技巧分类、音频条件弦品指派和 MusicXML 生成四步，用 81.35% 的平均音频转 MIDI F50 与 71.8% 的弦品 Tab F1 实现零样本领先，代价是第一步误差会向后传播约 17.75 个百分点。",
+  "originalTitle": "TART: A Modular Tool for Technique-Aware Audio-to-Tablature Guitar Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11904.pdf",
+  "readerTitle": "从波形到可弹指法：TART 如何把音高、技巧与弦品分四步拼成谱",
+  "schemaVersion": 1
+}

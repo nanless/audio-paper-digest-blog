@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10645",
+  "abstract": "Transformer-based foundation models are powerful but opaque, motivating Mechanistic Interpretation methods to uncover the black-box by identifying small computation subgraphs responsible for a task. DiscoGP is a joint weight-and-edge circuit discovery framework originally developed for text decoders. We extend DiscoGP to speech encoders and present, to our knowledge, the first circuit discovery study for modern speech foundation models. Across HuBERT and Wav2Vec 2.0 on several speech classification tasks, we find that the discovered circuits are extremely compact, yet often match or even exceed the performance of the full pretrained encoder with the same downstream head. Through ablations, we show that these circuits reflect pretrained computation rather than random structure or task-head artifacts. We also introduce a memory-efficient DiscoGP variant that reduces the GPU memory cost of edge-circuit discovery at runtime from quartic to cubic. Overall, our results broaden Mechanistic Interpretation beyond text decoders and show that circuit-level analysis can reveal both explanatory structure and unexpected functional behavior in speech encoders.",
+  "abstractSha256": "a4e6be6875b51b55cb3f695928448256b0533421511f8fcd8e60dc0203e5d219",
+  "arxivId": "2609.10645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0009-0006-4926-3815"
+      ],
+      "name": "Jiankun Wei"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0000-0001-9603-953X"
+      ],
+      "name": "Ewan Dunbar"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0000-0003-3553-8305"
+      ],
+      "name": "Gerald Penn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "把文本解码器的 DiscoGP 搬到 HuBERT 与 Wav2Vec 2.0 上做分类电路发现，用冻结与随机对照验证预训练计算的作用，并以砍掉 QKV 残差把边发现显存从四次降到三次，代价是部分任务仍需保留 MLP 残差与早停。",
+  "originalTitle": "Sparse Weight and Edge Circuit Discovery in Transformer-based Acoustic Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10645.pdf",
+  "readerTitle": "语音编码器里也有极小电路：联合找权重与边并把显存从四次降到三次",
+  "schemaVersion": 1
+}

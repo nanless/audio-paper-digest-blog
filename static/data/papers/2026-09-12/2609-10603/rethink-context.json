@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10603",
+  "abstract": "We propose a general approach to enharmonicism within syntactic music theory; that is, we formalize several abstract structures of enharmonicism without any acoustic considerations. The structures of concern to this paper are constructed from diatonics, chromatics, and enharmonics, and we seek to present a general enharmonic theory that builds upon Hook&#39;s enharmonic theory published in &#34;Enharmonic Systems: A Theory of Key Signatures, Enharmonic Equivalence and Diatonicism&#34; (2007). We also propose that the two criteria of reflection and maximal evenness can be used to determine whether an arbitrary enharmonic system is musically practical. Moreover, we argue that preferential treatment of the standard enharmonic system (SES) can be motivated from an abstract mathematical perspective divorced from pitch consideration and conventional acoustic constructions of SES.",
+  "abstractSha256": "5f8c7bc65cffc75af8742af4a28903684e9161bc44f2d5dc70db922e238f539f",
+  "arxivId": "2609.10603",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Mathematics, University of Missouri - Columbia"
+      ],
+      "name": "Caleb Scott Alons"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把声学放到一边，从任意个全音阶音出发构造半音与等价类，并以反射性和最大偶性解释为何标准十二音系统在纯句法意义下仍是可用选择，但非标准十九音等系统也能被同一语言描述。",
+  "originalTitle": "A General Approach to Enharmonicism",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10603.pdf",
+  "readerTitle": "不靠听觉也能偏爱十二平均律：从任意唱名数出发重建转位等价",
+  "schemaVersion": 1
+}

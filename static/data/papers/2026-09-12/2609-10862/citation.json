@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10862",
+  "arxivId": "2609.10862",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Nizam Mohammed"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science Hampton University, VA 23669, USA"
+      ],
+      "name": "Abu B. S. Rahman"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science Hampton University, VA 23669, USA"
+      ],
+      "name": "Dimuthu D. K. Arachchige"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10862",
+  "originalTitle": "Project Qualia: Recovering Experiential Music Structure from Session Co-occurrence Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10862.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

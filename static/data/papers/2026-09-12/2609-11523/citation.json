@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11523",
+  "arxivId": "2609.11523",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lianru Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11523",
+  "originalTitle": "Post-Training Zero-Shot TTS for Fine-Grained Emotion and Duration Control via Natural Language",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11523.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

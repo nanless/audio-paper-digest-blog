@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11458",
+  "abstract": "Determining the differences between two speakers&#39; accents is a fundamental task in linguistics and speech technology research. The methodology used to measure these differences depends on the specific research area. A phonetics researcher may demonstrate accent variation by comparing vowel formants in paired recordings of individual words. These results will be interpretable, but the recordings will be time-consuming to collect and may not be representative of connected speech. Accented Text-to-Speech (TTS) research has pushed towards using accent embeddings derived from accent classification tasks. These embeddings can be produced from any speech recording, but are not readily interpretable. In this paper, we demonstrate that articulatory representations created through articulatory inversion can be used as an interpretable basis for accent comparison and that optimal transport provides a framework for accent comparison across arbitrary recording types.",
+  "abstractSha256": "a37c7d8ebdf7274bb904c44b9b175f40d0b546a4a91826137042f29b566f7990",
+  "arxivId": "2609.11458",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.sociophonetics",
+          "label": "社会语音学"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charles McGhee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark J. F. Gales"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kate M. Knill"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用 14 维说话人一致构音特征比较 VCTK 苏格兰、英格兰、爱尔兰口音，以 DTW 对齐达到 99% 分类准确并以最优传输扩展到非平行语料，但 OT 需要约 7.5 分钟语音和上百聚类点才稳定。",
+  "originalTitle": "Flexible and Interpretable Accent Distance Measurements",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11458.pdf",
+  "readerTitle": "用可解释的发音动作比较口音：构音特征对齐与最优传输如何替代黑盒嵌入",
+  "schemaVersion": 1
+}

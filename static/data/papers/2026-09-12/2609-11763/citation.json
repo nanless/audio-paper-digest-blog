@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11763",
+  "arxivId": "2609.11763",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Avantika Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Ismail Rasim Ulgen"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence (HLT COE), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Nicholas Andrews"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11763",
+  "originalTitle": "Not All Attacks Are Learned Equally in Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11763.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

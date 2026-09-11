@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11246",
+  "abstract": "Kurdish is spoken by millions of people, but little technology can read it aloud. A recent study released three Kurdish voices, 35 hours of recorded speech, and a paper describing the work, all free to download. This review checks how well those public files match the paper. The research is careful about its limits, but the files contain several problems: a settings file lists equipment that was never used, test recordings are left unlabeled among training data, and a coding fault mishandles long numbers. The download page also claims a stronger result than the paper reports and recommends one voice for general use. That recommendation matters because Kurdish has major regional and written variation, while these voices were built from three people reading prepared texts. The process therefore removes much everyday and regional speech. English and German benefit from long traditions of dictionaries and linguistic description that help identify wrong pronunciations; Kurdish has far less such support, so software choices can go unchecked. The voices sound fluent, but they represent the reading styles of their speakers rather than Kurdish as a whole. Most of these issues can be fixed using information the team already has, without changing the reported results. Better records would mainly make the work easier for others, especially community linguists, to check and reuse. The license is the main exception: whether audiobook owners allow corrected versions to be shared will affect whether future Kurdish voices can build on this work or must start again.",
+  "abstractSha256": "cfee7041b75d601f2e4307a0c88a6a34f2b587d2f4f4655cdb1e23dc579d886a",
+  "arxivId": "2609.11246",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiwa Asadpour"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究复核一篇中库尔德语语音合成公开释放，问题是论文、模型卡与文件三者是否一致，方法是逐项比对配置、评测与许可，最强证据是三系统合成分为 4.08、4.01、4.06 且与各自录音质量同序，主要代价是测试集未标记、识别器兼做转写与评分以及禁改许可限制了公开修正。",
+  "originalTitle": "Assessing the Reusability of Public Speech Resources for Low-Resource Languages: A Central Kurdish Case Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11246.pdf",
+  "readerTitle": "听起来流利不等于可复用：三位朗读者的中库尔德语语音合成核查",
+  "schemaVersion": 1
+}

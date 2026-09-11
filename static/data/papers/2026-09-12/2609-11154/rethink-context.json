@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11154",
+  "abstract": "Multimodal large language models (MLLMs) have shown strong potential in open-ended emotion understanding, yet they often generate emotion hallucinations. Evaluating such hallucinations is particularly challenging for two reasons. First, emotion understanding spans multiple cognitive facets, from multimodal perception to psychological reasoning. Second, emotional interpretations are expressed in free-form language, making existing closed-ended protocols insufficient for evaluation. To address these challenges, we introduce EHR (Emotion Hallucination Rate), an evaluator that quantifies emotion hallucinations across six facets: expression, action, audio, instinct, logic, and conclusion. Using EHR, we reveal that existing mitigation methods often reduce hallucinations in some facets while aggravating them in others, exposing the limitation of coarse-grained correction and the need for facet-aware localization and mitigation. Motivated by this finding, we propose HMER (Hallucination-aware Memory-guided Emotion Reasoning), a training-free framework for emotion hallucination mitigation. HMER maintains a Hallucination Memory that records localized hallucinated claims and enables targeted logit rectification, together with an Anchor Memory that preserves reliable intermediate reasoning states to stabilize subsequent generation. By selectively suppressing unreliable cues while preserving trustworthy reasoning context, HMER enables fine-grained mitigation across diverse hallucination facets. Extensive experiments on 19 MLLMs demonstrate the prevalence of emotion hallucinations and the effectiveness of our framework across diverse model architectures.",
+  "abstractSha256": "0d0b8e1a5e84524ff4fccde7e84748cae4159183251537aafd1e118d9a613188",
+  "arxivId": "2609.11154",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bowen Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peipei Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weidong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shengeng Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanhong Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Beier Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xun Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对开放式情绪推理中多面幻觉难评估、粗粒度缓解顾此失彼的问题，提出六面 EHR 评估与免训练 HMER 框架，在 19 个模型上显示幻觉普遍存在，而 HMER 在多数据集上降低总体幻觉率并保持情绪预测准确率，代价是迭代评估带来额外 token 与延迟。",
+  "originalTitle": "Multi-Faceted Evaluation and Mitigation of Emotion Hallucinations in MLLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11154.pdf",
+  "readerTitle": "情绪幻觉为何分面而治：从六维评估到记忆引导的生成校正",
+  "schemaVersion": 1
+}

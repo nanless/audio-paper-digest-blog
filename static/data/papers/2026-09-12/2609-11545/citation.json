@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11545",
+  "arxivId": "2609.11545",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianlun Zuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tingzhi Mao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhonghua Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11545",
+  "originalTitle": "Complex-Text Robustness Evaluation and Failure Diagnosis for Low-Resource Multilingual Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11545.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11762",
+  "arxivId": "2609.11762",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernando López"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleix Sant"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11762",
+  "originalTitle": "Component-Aware Differential Privacy for Federated Multilingual Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11762.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

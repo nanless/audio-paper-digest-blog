@@ -1,0 +1,21 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11231",
+  "arxivId": "2609.11231",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Wuhan United Imaging Surgical Co., Ltd. (UIS)",
+        "Wuhan, China"
+      ],
+      "name": "Tianxiang Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11231",
+  "originalTitle": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11231.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

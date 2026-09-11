@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11110",
+  "arxivId": "2609.11110",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnon Netzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai Victor Habi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11110",
+  "originalTitle": "Low-Latency State Space Voice Activity Detection with Robust Onset Time Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11110.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

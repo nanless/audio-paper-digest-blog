@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10768",
+  "arxivId": "2609.10768",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Scripps Institution of Oceanography and Department of Electrical and Computer Engineering, University of California at San Diego, La Jolla, California 92093, USA"
+      ],
+      "name": "Clair Ma"
+    },
+    {
+      "affiliations": [
+        "Institute of Telecommunications, TU Wien, 1040 Vienna, Austria"
+      ],
+      "name": "Thomas Kropfreiter"
+    },
+    {
+      "affiliations": [
+        "Scripps Institution of Oceanography, University of California at San Diego, La Jolla, California 92093, USA."
+      ],
+      "name": "Lauren Baggett"
+    },
+    {
+      "affiliations": [
+        "Scripps Institution of Oceanography, University of California at San Diego, La Jolla, California 92093, USA."
+      ],
+      "name": "Simone Baumann-Pickering"
+    },
+    {
+      "affiliations": [
+        "Scripps Institution of Oceanography and Department of Electrical and Computer Engineering, University of California at San Diego, La Jolla, California 92093, USA"
+      ],
+      "name": "Florian Meyer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10768",
+  "originalTitle": "Bridging Echolocation Gaps in Automated Beaked Whale Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10768.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

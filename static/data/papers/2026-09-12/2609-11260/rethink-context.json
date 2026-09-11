@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11260",
+  "abstract": "We propose a preference optimization framework with Large Audio-Language Model (LALM) feedback for controllable non-verbal vocalization (NVV) generation in continuous autoregressive speech models. To construct preference data without human preference annotation, we build a bilingual prompt corpus by combining NVV-injected real transcripts with LLM-generated semantically aligned prompts, perform stochastic model rollouts, and use a LALM to rank candidate utterances and form same-prompt chosen--rejected pairs. We then adopt a two-stage optimization strategy: Rejection Sampling Fine-Tuning (RSFT) first adapts the model to LALM-selected high-scoring samples, followed by Anchored Flow-DPO, which formulates pairwise preference optimization using utterance-level flow-matching loss and retains the chosen-sample flow-matching objective as an SFT anchor. This design enables DPO-style preference learning without explicit sequence likelihoods while preserving direct supervision on preferred realizations. On the official 1,600-utterance NVVSpeech Challenge Track~2 test set, our method achieves a Final Track2Score of \\textbf{75.80} (79.39 ZH / 72.21 EN), outperforming the VoxCPM2 baseline by \\textbf{+1.84}. The improvements are mainly driven by higher NVV Accuracy and NVV Perceptual Effect, while Overall Quality remains stable.",
+  "abstractSha256": "6aaecde4e083da0d74b954ea9f06c1bdb86ccaa2d24bb8b1a75e017ca8259186",
+  "arxivId": "2609.11260",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuang Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuo Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bengu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对连续自回归语音模型没有显式序列似然而难以直接做直接偏好优化的问题，该工作用大音频语言模型自动构造同提示 chosen-rejected 对，并以拒绝采样微调冷启动加带监督锚的流匹配偏好优化做两阶段对齐，在 1600 句官方测试上把最终分从 73.96 提高到 75.80，而整体质量基本保持稳定。",
+  "originalTitle": "Preference Optimization with LALM Feedback for Continuous Autoregressive Non-Verbal Vocalization Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11260.pdf",
+  "readerTitle": "不用人工偏好标注：用大音频语言模型反馈做连续自回归非言语发声的偏好优化",
+  "schemaVersion": 1
+}

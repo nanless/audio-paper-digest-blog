@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11725",
+  "abstract": "Text-to-speech (TTS) models commonly address text--speech alignment by expanding phone-level encoder states to frame-level decoder inputs using predicted durations. While this length-regulation step resolves alignment structurally, this use of duration typically changes only where and how often latent states appear, not the values of the states themselves. This paper proposes a continuous-time mechanism for duration-aware acoustic modelling in TTS using neural controlled differential equations (CDEs). We formulate the phone representation as a temporally parameterised control path and use a neural acoustic vector field to produce a continuous-time hidden state whose values evolve with phonetic content and duration-derived timing. The resulting trajectory can be sampled at discrete points and integrated into a standard acoustic decoder pipeline. Objective results contrast CDEs and typical recurrent models. Subjective results suggest that CDE-based models evaluating one phone per step can improve rank-order agreement between synthesised and reference emotion intensity while maintaining comparable emotion-expression quality to a strong baseline. Additional experiments with half-phone step-sizes suggest that temporal resolution changes the trade-off between style tracking and absolute calibration. These results position CDEs as a promising design space for continuous-time and duration-aware style-sensitive TTS.",
+  "abstractSha256": "169ada03493ae119022fb95f840332332611031de01d1922b4c8739844765e8c",
+  "arxivId": "2609.11725",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Mattias Cross"
+    },
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Minghui Zhao"
+    },
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Anton Ragni"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对重复扩展使时长只改变出现位置而不改变表示取值的问题，该文把音素加时间通道作控制路径并用神经向量场求解受控微分方程产生连续隐状态，在情感语音上以单层每步一音素取得宏观 Spearman 排序相关 0.53 高于微调基线 0.08，但绝对校准与感知质量仍随情绪和分辨率变化。",
+  "originalTitle": "Continuous-Time Acoustic Modelling with Neural Controlled Differential Equations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11725.pdf",
+  "readerTitle": "时长不只决定贴多少次：用受控微分方程让音素表示随时间演化",
+  "schemaVersion": 1
+}

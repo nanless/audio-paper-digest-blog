@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11458",
+  "arxivId": "2609.11458",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charles McGhee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark J. F. Gales"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kate M. Knill"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11458",
+  "originalTitle": "Flexible and Interpretable Accent Distance Measurements",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11458.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

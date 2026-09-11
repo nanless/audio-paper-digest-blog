@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11252",
+  "abstract": "In-context learning (ICL) promises training-free adaptation for audio, where labeling every new condition is costly. Yet existing audio ICL studies largely measure Task Recognition, where demonstrations merely cue pre-trained capabilities, rather than Task Learning, where a genuinely new input-label mapping must be inferred from demonstrations alone. We introduce AudioICL-Bench, a diagnostic benchmark whose per-episode rules are resampled so that no correct answer is recoverable from prior knowledge. Its nine tasks are organized along two axes that separate what must be learned from demonstrations from what must be perceived in the signal, enabling failures to be attributed to either source. Across five Large Audio Language Models, the strongest models readily bind arbitrary sounds to new labels when perception is easy, but collapse on temporal measurement and composing multiple induced rules, revealing two primary capability boundaries: temporal perception and multi-rule composition.",
+  "abstractSha256": "a68914a7c44afea52a261fde5ec14214f6b62b36909fb00fc36d6adcd3ec71aa",
+  "arxivId": "2609.11252",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频理解",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jia-Hung Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University Taiwan"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology USA"
+      ],
+      "name": "Kai-Wei Chang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University Taiwan"
+      ],
+      "name": "Ke-Han Lu"
+    },
+    {
+      "affiliations": [
+        "NTU AI-CoRE Taiwan"
+      ],
+      "name": "Hung-Yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用每幕重采样的九任务诊断音频任务学习，显示最强模型在非语音模式绑定上可学、但在时长测量与多规则组合上崩溃，而代价是人工构造任务与小样本精确匹配评估的生态距离。",
+  "originalTitle": "AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11252.pdf",
+  "readerTitle": "从认出任务到学出规则：AudioICL-Bench 把音频上下文学习拆成感知与操作两轴",
+  "schemaVersion": 1
+}

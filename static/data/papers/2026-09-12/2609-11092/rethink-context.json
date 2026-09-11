@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11092",
+  "abstract": "Task-aware unified source separation (TUSS) enables a single model to handle diverse separation tasks by conditioning on input prompts. However, conventional TUSS does not account for downstream task requirements, such as whether the enhanced speech will be used for human listening or automatic speech recognition (ASR). In this paper, we propose a prompt extension framework for TUSS that incorporates downstream task information into the input prompts and switches the loss function according to the given prompt during training, enabling outputs with different signal characteristics at inference time. Specifically, we introduce an ASR-dedicated prompt paired with a regularized loss function that reduces speech artifacts to improve ASR robustness, while the standard prompt is paired with the conventional SNR loss function. Experiments on the LibriSpeech and JNAS corpora demonstrate that the proposed joint-training scheme enables a single model to improve ASR performance over noisy input across a wide range of SNR conditions by selecting the ASR-dedicated prompt, while maintaining general speech enhancement quality when the standard prompt is used.",
+  "abstractSha256": "b95c3da2e0adbdb0c08dd1ce6da08411f39d11519a8bb4af949141d07dcc85ae",
+  "arxivId": "2609.11092",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoshiki Mitsui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryo Aihara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuhiko Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对人听希望去噪干净而识别前端怕语音失真的问题，论文用源条件与额外标记两类提示扩展统一分离模型并按提示切换标准损失与正则损失，英日噪声实验显示识别分支降低了词错误率与字错误率而高质量分支保持了重建质量，代价是识别分支牺牲客观质量且仍未超过推理期混合基线。",
+  "originalTitle": "Downstream-Task-Aware Unified Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11092.pdf",
+  "readerTitle": "同一模型分饰两角：用提示切换为人听与为识别两种增强输出",
+  "schemaVersion": 1
+}

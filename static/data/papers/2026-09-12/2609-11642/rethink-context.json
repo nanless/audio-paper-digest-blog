@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11642",
+  "abstract": "Neural audio codecs are a fundamental component of modern speech generation systems. While recent codecs achieve increasingly low bitrates, reducing frame rate remains challenging, as each token must preserve more information while maintaining reconstruction quality. We present ZipCodec, a streaming neural speech codec operating at 6.25 Hz and 0.80 kbps with a theoretical latency of 160 ms. Our approach combines large-scale WavLM distillation with a redesigned transformer-based architecture, a scalar spherical quantizer, and a latency-aware streaming decoder. Experiments show that ZipCodec substantially outperforms existing streaming codecs at comparable bitrates in both reconstruction and downstream tasks, while operating at a significantly lower frame rate. Despite its 842M parameters, ZipCodec achieves real-time single-stream inference on a consumer-grade CPU. Demo samples, code and checkpoints are available at this https URL.",
+  "abstractSha256": "11e41e67c70f9048355a8ca1d133f22a76df312a3950e1b48a532ed222badeb7",
+  "arxivId": "2609.11642",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "语音编码",
+    "rankBucket": "前25%",
+    "score": 8.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luca Della Libera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cem Subakan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "ZipCodec 针对流式语音 token 序列过长问题，用因果 log-mel 前端加 16 帧组块把帧率压到 6.25 Hz 与 0.80 kbps，再以约 94000 小时英文语音上的 WavLM 第 6 层蒸馏加标量球面量化保持重建与下游表征质量，代价是 842M 参数与严格的流式因果约束。",
+  "originalTitle": "ZipCodec: Ultra-Low-Frame-Rate Streaming Speech Coding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11642.pdf",
+  "readerTitle": "把每秒 token 压到 6.25 个：ZipCodec 如何在流式与 160 ms 时延下保住语义和音质",
+  "schemaVersion": 1
+}

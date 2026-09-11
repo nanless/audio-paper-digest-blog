@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11523",
+  "abstract": "Audiobook narration, conversational agents, and audiovisual dubbing require speech that conveys changing emotions and adapts its pacing within a single utterance. But most existing TTS systems typically rely on utterance-level style conditioning, making such fine-grained control difficult to achieve. In light of this, and inspired by the success of post-training in large language models, we propose a unified post-training framework that equips pretrained text-to-speech models with natural-language control over segment-level emotion and duration. Supervised fine-tuning establishes instruction-conditioned speech generation, while reinforcement learning with group relative policy optimization refines control accuracy using emotion and duration rewards alongside content and speaker preservation objectives. By reusing the pretrained architecture, our approach avoids additional inference-time control modules. Experiments demonstrate significantly improved fine-grained controllability while maintaining speech intelligibility and speaker identity, highlighting post-training as a practical approach to extending existing speech synthesis models.",
+  "abstractSha256": "fbb43044010d98da11a09ef9567f2da0a7144bd7f08b45bf47b0b667533ca73e",
+  "arxivId": "2609.11523",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lianru Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Qin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对同一句内分段情绪与时长难以用自然语言独立控制的问题，该文用分阶段监督微调加分组相对策略优化改造 CosyVoice2 的语音语言模型，最强证据是联合优化后在标准集上 MER 语句准确率 54.12% 与时长 A15 54.64%，代价是严格联合满足率仅 5.29% 且换说法时仍需蒸馏修复。",
+  "originalTitle": "Post-Training Zero-Shot TTS for Fine-Grained Emotion and Duration Control via Natural Language",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11523.pdf",
+  "readerTitle": "一段话里换情绪又调语速：以后训练如何教会已有 TTS 听懂分段指令",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11762",
+  "abstract": "Per-layer differential privacy (DP) clipping improves gradient fidelity in federated learning by allocating per-matrix clipping budgets proportional to parameter count. We show that this recipe breaks for speech large language models (speech-LLMs), when the acoustic encoder and the language decoder differ by an order of magnitude in update norm. Single-pool per-layer methods suffer \\emph{cross-component budget collapse}, dragging word error rate (WER) far from flat global clipping or collapsing training entirely. When the norm imbalance is milder, adaptive single-pool methods partially recover, confirming that collapse severity scales with the inter-component norm ratio. We empirically diagnose the root cause across six per-layer methods and three speech-LLM architectures. We then propose \\emph{$\\alpha$-split}, a two-pool allocation that normalises encoder and LLM parameters into independent pools, and show that joint $\\ell_2$ sensitivity and the original $(\\varepsilon,\\delta)$-DP guarantee are unchanged. At architecture-calibrated $\\alpha$, our method recovers WER utility compared to flat DP, while granting the encoder $4.47{\\times}$ tighter per-component noise protection against speaker voice-based gradient-inversion attacks at only $+2.6\\%$ LLM noise overhead.",
+  "abstractSha256": "6725b9344e3c571a6510619672daf09ece8cd887bb89f03fa931c18699d6ccca",
+  "arxivId": "2609.11762",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernando López"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleix Sant"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文诊断单池逐层裁剪在语音大模型中的跨组件预算崩溃，提出双池 α-split 在保持联合灵敏度与全局 DP 保证不变下恢复可用词错误率，并以编码器 4.47 倍等效噪声换取语言模型仅 2.6% 开销。",
+  "originalTitle": "Component-Aware Differential Privacy for Federated Multilingual Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11762.pdf",
+  "readerTitle": "编码器与解码器更新差十倍时，按参数量分配的差分隐私裁剪为何崩溃",
+  "schemaVersion": 1
+}

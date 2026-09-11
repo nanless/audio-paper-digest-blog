@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11274",
+  "abstract": "Recently, large language model (LLM) based ASR models have achieved significant progress, yet they generally lack support for multi-speaker scenarios, where the cocktail party problem remains a critical bottleneck for further advancing ASR. Existing TS-ASR methods, including end-to-end architectures with speaker embeddings and latest LLM-based explorations suffer from degraded single-speaker performance and the inability to reject when the target speaker is absent. In this paper, we propose Xiaomi-CocktailASR-1, an LLM-based end-to-end TS-ASR architecture. By utilizing reference speech as voiceprint prompts, it directly transcribes the target speaker&#39;s speech without requiring speech separation. Xiaomi-CocktailASR-1 maintains competitive performance in single-speaker scenarios, comparable to mainstream ASR models. It also features a negative sample rejection capability, outputting empty text when the target speaker is absent from the mixed speech. Additionally, Xiaomi-CocktailASR-1 supports a Chain-of-Thought (CoT) reasoning mode to provide explicit reasoning steps. Extensive experiments on various synthetic and real-world multispeaker benchmarks demonstrate that Xiaomi-CocktailASR-1 achieves state-of-the-art performance, effectively addressing the cocktail party problem through a unified architecture that balances multispeaker and single-speaker recognition accuracy, along with rejection capability.",
+  "abstractSha256": "cb566834b2b5a7dc2b2b04d83074a8f12de738f9492666d7a876daea70244762",
+  "arxivId": "2609.11274",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yiru Zhang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Ying Zeng"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Chang Liu"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yifeng Wang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yuquan Liang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Tao Li"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Lian Li"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Wenhao Yang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Jian Luan"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Cong Zou"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Heng Qu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多人重叠时只转写目标说话人并在目标缺席时拒识的问题，该报告用参考语音拼接混合语音加文本提示的端到端大语言模型方案，在合成与真实会议集上报告了目标说话人词错率下降，同时保留单人识别与空文本拒识能力，但拒识率与误拒之间仍需权衡。",
+  "originalTitle": "Xiaomi-CocktailASR-1 Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11274.pdf",
+  "readerTitle": "不用先分离也能听清目标人：以参考语音作声纹提示的统一识别",
+  "schemaVersion": 1
+}

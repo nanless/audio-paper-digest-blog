@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11274",
+  "arxivId": "2609.11274",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yiru Zhang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Ying Zeng"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Chang Liu"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yifeng Wang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Yuquan Liang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Tao Li"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Lian Li"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Wenhao Yang"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Jian Luan"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Cong Zou"
+    },
+    {
+      "affiliations": [
+        "Xiaomi Inc., China"
+      ],
+      "name": "Heng Qu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11274",
+  "originalTitle": "Xiaomi-CocktailASR-1 Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11274.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11154",
+  "arxivId": "2609.11154",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bowen Zeng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peipei Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weidong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shengeng Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Song Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanhong Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Beier Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xun Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11154",
+  "originalTitle": "Multi-Faceted Evaluation and Mitigation of Emotion Hallucinations in MLLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11154.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

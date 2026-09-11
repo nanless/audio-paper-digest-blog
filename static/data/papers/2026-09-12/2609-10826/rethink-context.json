@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10826",
+  "abstract": "This study proposes an integrated framework for the processing and classification of invasive bird species vocalizations within natural soundscapes, characterized by high levels of environmental noise. We address the challenge of signal degradation by employing a Bayesian wavelet shrinkage methodology based on the Epanechnikov kernel prior, which offers a closed form decision rule and high computational efficiency for processing large bioacoustic datasets. The methodology was applied to recordings of three species obtained from the iNaturalist platform: \\textit{Euphonia violacea}, \\textit{Leiothrix lutea}, and \\textit{Passer domesticus}. After signal denoising, we extracted a comprehensive set of features, including Mel-Frequency Cepstral Coefficients (MFCCs) and spectral indices such as entropy and zero-crossing rate. Several supervised learning models: Random Forest, Multinomial Logistic Regression and Support Vector Machine (SVM) were evaluated across different feature dimensionalities. Our results demonstrate that the proposed wavelet based preprocessing significantly enhances classification performance, with the SVM model achieving the highest accuracy (up to 0.9398) under a 10-dimensional MFCC configuration. This research provides a robust statistical tool for automated ecological monitoring and the management of biological invasions.",
+  "abstractSha256": "a4f1b20b7292a76787c4874dbe0a643fe16c64d001feeb71ae7149d4deb2b650",
+  "arxivId": "2609.10826",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 3.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Laura Lucia Dominguez Barrios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fidel Aniano Causil Barrios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alex Rodrigo dos Santos Sousa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mariana Rodrigues Motta"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对自然声景高噪声鸟鸣分类问题，论文用 Epanechnikov 先验贝叶斯小波收缩显式规则去噪，再以倒谱加谱指数特征训练监督分类器，最强证据是 10 维特征下支持向量机与多项逻辑回归准确率达 0.94 量级，代价是高维增益递减且部分高阶特征无贡献。",
+  "originalTitle": "Processing and classifying bird songs using wavelet techniques and supervised learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10826.pdf",
+  "readerTitle": "野外噪声下先收缩去噪再分类：Epanechnikov 贝叶斯小波与倒谱监督学习",
+  "schemaVersion": 1
+}

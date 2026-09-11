@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11763",
+  "abstract": "Speech deepfake detection (SDD) models are trained on multi-attack datasets containing diverse spoofing systems, such as text-to-speech (TTS) and voice conversion (VC). In standard classifier training on multi-attack datasets, all attacks are treated as one spoofed class, and performance is reported using overall Equal Error Rate (EER). This aggregate view obscures how individual attacks shape learning and generalization. To better understand this attack-level behavior, we first balance TTS and VC exposure using sample and attack omission. We then measure attack-wise EER at inference and analyze attack-wise training loss and predictive entropy to characterize optimization. Results show that attacks contribute unequally: some attacks have high EER sensitivity and concentrated entropy with low loss, indicating strong influence on the decision boundary. We define these as high-impact attacks. To reduce uneven generalization across attacks, we propose a replay-regularized, attack-aware curriculum that steps exposure based on measured attack influence. Experiments on ASVspoof 2019, 2021, ASVspoof 5, and Fake-or-Real show improved overall robustness and reduced attack-level imbalance compared with standard multi-attack training.",
+  "abstractSha256": "eaeaf2479f00fed74249af4647fad1158513d6a4db5557f683377c3e0f5524a1",
+  "arxivId": "2609.11763",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Avantika Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Ismail Rasim Ulgen"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence (HLT COE), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Nicholas Andrews"
+    },
+    {
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在 ASVspoof 2019 上用省略敏感性与熵损失诊断出 A1 与 A4 等高影响攻击，再用先学低影响后适配高影响的重放课程把跨数据集总体 EER 明显压低，代价是两阶段训练与四项正则的额外复杂度。",
+  "originalTitle": "Not All Attacks Are Learned Equally in Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11763.pdf",
+  "readerTitle": "总体学好了不等于每种攻击都学好：高影响攻击的主导与课程缓解",
+  "schemaVersion": 1
+}

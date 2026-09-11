@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11724",
+  "abstract": "This paper details the Eloquence team&#39;s approach to Task 2 of the 2nd MLC-SLM challenge at Interspeech 2026, which involves multilingual Multiple-Choice Question Answering (MCQA) across 21 languages. Three approaches are explored. First, we fine-tune Voxtral-Mini-3B via LoRA with cross-lingual data augmentation, ASR transcript augmentation and timestamp-aware audio cropping, achieving 0.72 macro-accuracy on evaluation Phase 2. Second, we apply multimodal in-context learning (ICL) to the frozen Voxtral-24B model to correct a strong label bias, reaching 0.81, our best result. Third, a training-free retrieval system based on a three-layer voice-anchored memory combining acoustic identity, semantic content, and a knowledge graph achieves 0.68. All three systems substantially outperform the official baseline.",
+  "abstractSha256": "e988cbc2aebba2d099ade4eb76c45d0f5baa7f94184ae0fc08033273632e6bf6",
+  "arxivId": "2609.11724",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lorenzo Concina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marco Matassoni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alessio Brutti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filippo Vella"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无预切分、无说话人标签的 21 语言多说话人长对话选择题任务，论文对比了 Voxtral-Mini-3B 的 LoRA 微调、冻结 Voxtral-24B 的多模态上下文学习纠偏、以及免训练语音锚定检索三条路线，最强证据是上下文学习在第二阶段评测取得 0.81 准确率，代价是微调在小数据上过拟合回落与检索前端依赖转写和切分质量。",
+  "originalTitle": "The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11724.pdf",
+  "readerTitle": "盲评多说话人长对话问答：微调记忆、上下文纠偏与语音锚定检索的三条路线",
+  "schemaVersion": 1
+}

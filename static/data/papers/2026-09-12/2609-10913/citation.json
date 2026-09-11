@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10913",
+  "arxivId": "2609.10913",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Esteban Gutiérrez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Behzad Haki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Haworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rodrigo Cádiz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10913",
+  "originalTitle": "Learned Continuous Synthesis of Quadratic Difference Tone Spectra",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10913.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

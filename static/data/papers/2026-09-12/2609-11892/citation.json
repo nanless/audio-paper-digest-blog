@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11892",
+  "arxivId": "2609.11892",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Yingzhi Wang"
+    },
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Reem Alhazzani"
+    },
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Muhammad Alqurishi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11892",
+  "originalTitle": "Nuha-Speech: Building General-Purpose Arabic Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11892.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

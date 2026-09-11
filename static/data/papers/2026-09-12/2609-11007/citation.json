@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11007",
+  "arxivId": "2609.11007",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexis Plaquet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11007",
+  "originalTitle": "Diarization Error Decomposition Under Pause Annotation Ambiguity",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11007.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11182",
+  "abstract": "In classical pattern recognition tasks, neural networks are trained to recognise human-defined patterns for model inputs. Some Explainable AI (XAI) methods can explain other latent patterns that underlie the network&#39;s recognition of inputs as human-defined patterns; in this work, we call these latent patterns second-order patterns, and we propose to discover them. To this end, we apply a hierarchical clustering algorithm to analyse whether representations learned by a speaker recognition network from utterances naturally form hierarchical clusters. Each resulting cluster represents a second-order pattern that characterises how the network recognises some known utterances as speaker identities. All the resulting second-order patterns are then semantically interpreted using the existing Hierarchical Cluster-Class Matching (HCCM) method. Furthermore, we propose a new task, second-order pattern recognition, to identify which discovered second-order patterns characterising known utterances are exhibited by an unseen utterance. To achieve this, we design the Hierarchical Cluster Navigation and Assignment (HCNA) method. HCNA recognises a known second-order pattern as applying to an unseen utterance when the unseen utterance&#39;s network representation lies within the extrapolation space of the cluster regarded as that second-order pattern. Our experiments show that the extrapolation mechanism introduced by HCNA substantially improves performance on the second-order pattern recognition task.",
+  "abstractSha256": "256d7d0293da4c13f06ce5a3799f85b75293041f1eaa3d7b18d59a155ffc054e",
+  "arxivId": "2609.11182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "说话人识别",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanze Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把说话人身份当作一阶模式，把表征聚类当作刻画网络认法 的二阶模式，用单链接聚类发现、用语义匹配解释、用基于梯度代价外推的新方法判定未见语音归属，报告显示路径完整度从百分之十一点六八升至百分之三十四点一九，原子语义召回从零点五一一九升至零点五六六九，但国籍召回仍明显偏低。",
+  "originalTitle": "Exploring Second-Order Pattern Recognition in Speaker Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11182.pdf",
+  "readerTitle": "网络先认说话人，聚类再认网络的认法：二阶模式识别如何判定未见语音",
+  "schemaVersion": 1
+}

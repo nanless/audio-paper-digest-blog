@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11725",
+  "arxivId": "2609.11725",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Mattias Cross"
+    },
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Minghui Zhao"
+    },
+    {
+      "affiliations": [
+        "Speech and Hearing Group University of Sheffield Sheffield, United Kingdom"
+      ],
+      "name": "Anton Ragni"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11725",
+  "originalTitle": "Continuous-Time Acoustic Modelling with Neural Controlled Differential Equations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11725.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

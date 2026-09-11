@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11110",
+  "abstract": "Voice Activity Detection (VAD) systems are commonly evaluated using metrics such as the area under the receiver operating characteristic curve (AUROC), but these metrics do not account for temporal responsiveness. For low-latency applications, however, accurately measuring speech onset delay is essential. This is particularly challenging because onset latency evaluation is affected by noise and systematic misalignment in annotation timestamps. In this work, we introduce a probabilistic framework for evaluating VAD onset time under noisy temporal labels. We model annotated onset times as noisy observations of latent acoustic onsets and estimate the resulting discrepancy distribution from data. We show that this approach provides a more stable and robust estimate of algorithmic latency. In addition, we introduce S4VAD, the first state-space-model-based (SSM-based) VAD architecture. S4VAD supports efficient streaming inference while directly controlling the decay of past acoustic evidence, enabling fast and responsive speech-onset detection. We evaluate VAD onset latency across several low-latency architectures, including CNN, Transformer, and RNN models. Our proposed VAD achieves the lowest latency while maintaining a competitive AUROC.",
+  "abstractSha256": "f7446ee4b2658195d9649ffd11c43c8e0bde02d9105b8fb2a1f106fbc17145c7",
+  "arxivId": "2609.11110",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "语音活动检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "语音活动检测",
+      "primaryTaskId": "task.vad",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnon Netzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai Victor Habi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把带噪标注起点建模为真实起点加偏移并用期望最大化估计数据集级均值来校正起始偏差，同时用对角状态空间模型 S4VAD 实现流式低延迟检测，在合成朗读混合与真实电影语音上报告了更低的起始偏差与延迟分布尾部，但结论依赖参考模型质量与有界独立噪声等假设且本次无可用代码资源。",
+  "originalTitle": "Low-Latency State Space Voice Activity Detection with Robust Onset Time Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11110.pdf",
+  "readerTitle": "标注起点系统性偏早时，如何量出语音检测的真实反应速度",
+  "schemaVersion": 1
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11447",
+  "abstract": "This work investigates a number of approaches to prevent catastrophic forgetting in class incremental learning scenarios for sound event classification tasks. We analyze the problem using architectural and regularization approaches, using FSD50K and AudioSet datasets. We design incremental stages and solutions that selectively protect the kernels of the network from weight updates to prevent catastrophic forgetting, and a dynamic head solution that expands itself each time a new task is learned. The findings show that catastrophic forgetting mainly happens in deeper layers, in particular in the classifier head. For the studied in-domain sound classification problem, the solution that seems to alleviate catastrophic forgetting and is the most efficient is a full freezing of the feature extractor with a fine-tuning of the dynamic head classifier, showing little to no forgetting and great training stability, and a good balance between memory-stability and learning plasticity.",
+  "abstractSha256": "5e1660ce8e6680151cfa69c3dc2ab7f7b7fda4678bdcd072ed71d1cb0762571c",
+  "arxivId": "2609.11447",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Riccardo Casciotti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annamaria Mesaros"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在 FSD50K 与 AudioSet 上以 30 类起步加 4 个 5 类增量任务比较冻结、蒸馏与核级可塑性调制，报告显示冻住卷积特征并只微调动态分类头遗忘最小而核级约束反而更不稳定，但新类学习能力仍低于联合训练。",
+  "originalTitle": "Investigating catastrophic forgetting in sound event classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11447.pdf",
+  "readerTitle": "遗忘主要发生在分类头：同分布声音分类中冻住特征只调动态头的对比",
+  "schemaVersion": 1
+}

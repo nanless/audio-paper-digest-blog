@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11864",
+  "abstract": "Speech large language models (SpeechLLMs) offer reduced latency and retain paralinguistic nuances that are typically lost in cascaded automatic speech recognition (ASR) and text-based LM architectures. However, they continue to lag behind text-only LLMs on complex reasoning tasks, while real-time spoken interaction imposes strict latency constraints. Although prior works employ Chain-of-Thought (CoT) and concurrent reasoning to enhance reasoning capabilities without inducing prohibitive delays, an inherent accuracy-latency trade-off persists. In this paper, we investigate whether a streaming SpeechLLM can dynamically revise its reasoning traces on the fly. We introduce RetroThinker, a multi-stage post-training framework that equips the Moshi model to self-verify and forward-correct CoT steps during inference. RetroThinker combines supervised fine-tuning (SFT) on curated retrospective thinking data with length-based direct preference optimization (DPO) to optimize retrospective during early reasoning (i.e., reasoning concurrently while the user speaks). Evaluated on the GSM8K benchmark, RetroThinker significantly improves the accuracy-latency trade-off over non-retrospective baselines, achieving an 11% absolute accuracy gain at a comparable latency.",
+  "abstractSha256": "e046ce046048c1c87bcf4a464b5c3ff8c1543ea334a60aece2d059e7913e84d7",
+  "arxivId": "2609.11864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Jen Shih"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对流式语音大模型边听边推理容易出错且不能回滚重说的问题，RetroThinker 用三阶段事后反思微调让 Moshi 在文本内心独白中自验自改，在 TTS 版 GSM8K 上以相近延迟取得 11 个百分点的绝对准确率提升，代价是反思会先拉长推理链，需再用 Early Reasoning 和 LengthDPO 压回延迟。",
+  "originalTitle": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11864.pdf",
+  "readerTitle": "边听边想错了怎么办：RetroThinker 让语音大模型向前改错",
+  "schemaVersion": 1
+}

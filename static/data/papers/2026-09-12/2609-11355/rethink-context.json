@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11355",
+  "abstract": "This paper describes our system for Task~2 of the second Multilingual Conversational Speech Language Model (MLC-SLM) Challenge. We adapt Qwen3-Omni-30B-A3B-Instruct with a segment-evidence-aware data and post-training pipeline. A language model converts timestamped ASR into coherent event spans, which are expanded by a boundary margin and cropped from the original recording. We then synthesize complementary semantic MCQs with Qwen3.6-27B and acoustic MCQs with Gemini~3.1 Flash-Lite, followed by structural, grounding, answer-consistency, and target-model trainability checks, yielding 359,825 verified MCQs across 21 language and accent variants. A text-only probe partitions the data into weak, text-answerable items used for supervised fine-tuning and strong, audio-dependent items used for reinforcement learning with Group Sequence Policy Optimization (GSPO), stabilized by debiased advantages, sequence-level importance correction, and dynamic filtering. Our system obtains 90.92% accuracy on the final official evaluation set.",
+  "abstractSha256": "9bb0c9e0fdf73e1de66db7bc7224230063cdba21c5ee597f41a5870ad764fdfa",
+  "arxivId": "2609.11355",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huy Hoang Le"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Long-Bao Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh Tri Dao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多轮多语言对话选择题中文本先验掩盖听觉依赖的问题，该工作用事件级切分加语义与声学双分支合成 359825 题，再把文本可答的弱题用于监督微调、必须听音频的强题用于 GSPO 强化学习，以 90.92% 的终测准确率为证据，代价是依赖大模型判断与多阶段验证流水线。",
+  "originalTitle": "SEAR: Segment-Evidence-Aware Routing for Weak-to-Strong Multilingual Speech MCQ",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11355.pdf",
+  "readerTitle": "先听片段再分流：用文本可答性把死记训练和听觉强化分开",
+  "schemaVersion": 1
+}

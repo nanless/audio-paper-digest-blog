@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11864",
+  "arxivId": "2609.11864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Jen Shih"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11864",
+  "originalTitle": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11864.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

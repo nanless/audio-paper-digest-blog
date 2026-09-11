@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11137",
+  "arxivId": "2609.11137",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Xingyu Shen"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Tommy Duong"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Muduo Xu"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Xiaodong An"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Jiaqi Gan"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Haoyuan Tang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Jamey Z. Liang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Siyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Yan Zhang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Simiao Ren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11137",
+  "originalTitle": "The Machines Are Calling: Measuring Automated and Synthetic Voices in Unwanted Inbound Calls",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11137.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

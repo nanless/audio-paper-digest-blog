@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10826",
+  "arxivId": "2609.10826",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Laura Lucia Dominguez Barrios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fidel Aniano Causil Barrios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alex Rodrigo dos Santos Sousa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mariana Rodrigues Motta"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10826",
+  "originalTitle": "Processing and classifying bird songs using wavelet techniques and supervised learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10826.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

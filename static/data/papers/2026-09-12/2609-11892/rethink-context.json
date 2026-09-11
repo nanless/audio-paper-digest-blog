@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11892",
+  "abstract": "As Speech Large Language Models (speech-LLMs) become increasingly multilingual, Arabic remains significantly underrepresented, highlighting the need for dedicated infrastructure to train and evaluate Arabic speech-LLMs. To address this gap, we introduce Nuha-Speech, a comprehensive initiative to develop general-purpose Arabic speech-LLMs spanning dataset construction, model training, and systematic evaluation. Specifically, we constructed a large-scale Arabic Speech Question-Answering (SQA) corpus comprising over 1.5 million training samples to allow instruction tuning over a broad range of core speech tasks. Then, the corpus was used for supervised fine-tuning based on Qwen-Omni model variants at different scales. Finally, we designed an evaluation framework featuring diverse tasks and tailored metrics. Through this work, we aim to establish foundational infrastructures for Arabic Speech-LLMs under constraints imposed by limited Arabic speech resources.",
+  "abstractSha256": "5d49796002c08885b78cee5775100669d5d61c21ffdc8a7e4dd38ef31f7be99c",
+  "arxivId": "2609.11892",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "指令微调",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.instruction-tuning",
+          "label": "指令微调"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "指令微调",
+      "primaryMethodId": "method.instruction-tuning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Yingzhi Wang"
+    },
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Reem Alhazzani"
+    },
+    {
+      "affiliations": [
+        "Elm Company, KSA"
+      ],
+      "name": "Muhammad Alqurishi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对阿拉伯语语音指令数据稀缺与评测缺失问题，Nuha-Speech 用约 150 万条统一问答式语料对 Qwen-Omni 系列做两阶段 LoRA 微调，并在七任务评测中报告语义与副语言能力的全面提升，但合成数据占比与评测合成偏置仍是主要代价与限制。",
+  "originalTitle": "Nuha-Speech: Building General-Purpose Arabic Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11892.pdf",
+  "readerTitle": "资源受限下做通用阿拉伯语语音大模型：Nuha-Speech 的数据、微调与评测链路",
+  "schemaVersion": 1
+}

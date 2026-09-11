@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10765",
+  "abstract": "Full-duplex spoken dialogue models aim to make voice agents more natural by allowing them to listen, speak, pause, and respond during ongoing conversation. However, it is not clear whether full-duplex benchmarks behave the same way when models are evaluated in a different language. To investigate this, we introduce a French full-duplex benchmark (FDB) with two variants, CALLFC-FDB for Canadian French and MEDIA-FDB for European French, and compare them with an English FDB. Built from real spoken resources, these benchmarks evaluate key full-duplex skills, including pause handling, turn-taking, backchannels, and interruptions. Beyond introducing French FDBs, we evaluate human--human conversations with FDB metrics to better understand the values these metrics take in real-world dialogue. Our analysis reveals that most timing-based metrics behave similarly across languages, while content-based evaluation degrades under language mismatch. We also find a trade-off between optimizing benchmark metrics and preserving conversational naturalness.",
+  "abstractSha256": "e4ef4a4f8fbdb3d4b27fea8ad028e696f615e4e5d4e6fee7a79375f5df883370",
+  "arxivId": "2609.10765",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Luqia Technologies, Montréal, Québec, Canada"
+      ],
+      "name": "Hamid Soltani"
+    },
+    {
+      "affiliations": [
+        "Luqia Technologies, Montréal, Québec, Canada"
+      ],
+      "name": "Gilles Boulianne"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用真实法语对话构造 CALLFC-FDB 与 MEDIA-FDB 并复用 FDB v1.0 四类任务，显示基于语音活动的计时指标跨语言基本稳定，而用户打断评分等内容指标在语言失配时明显下降，人-人对话则说明一味优化指标会损失自然度。",
+  "originalTitle": "From Metrics to Natural Dialogue: French Full-Duplex Benchmark for Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10765.pdf",
+  "readerTitle": "计时稳定、内容易偏：法语全双工基准如何分离两种能力",
+  "schemaVersion": 1
+}

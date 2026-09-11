@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.10645",
+  "arxivId": "2609.10645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0009-0006-4926-3815"
+      ],
+      "name": "Jiankun Wei"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0000-0001-9603-953X"
+      ],
+      "name": "Ewan Dunbar"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science University of Toronto Toronto, Canada 0000-0003-3553-8305"
+      ],
+      "name": "Gerald Penn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.10645",
+  "originalTitle": "Sparse Weight and Edge Circuit Discovery in Transformer-based Acoustic Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.10645.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

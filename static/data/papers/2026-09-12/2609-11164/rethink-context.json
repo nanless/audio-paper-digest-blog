@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11164",
+  "abstract": "To realize natural behavior in dialogue agents in multi-party dialogue scenarios, it is important to understand group emotion such as valence and arousal as a whole. Most prior work addressed this task at the utterance level or using a coarse-grained time window, which is not sufficient to capture emotional dynamics. In this study, we formulate continuous recognition of the Group Emotion at a one-second resolution. Moreover, we also introduce the Mixed state, which captures the emotional divergence among participants in the group. We constructed a dataset with frame-level soft labels based on the TEIDAN corpus and propose a multimodal temporal framework that integrates audio and video information using a sliding-window context. Experimental results demonstrate that the temporal Transformer outperforms simple baselines and shows stronger temporal agreement with the ground-truth labels than the LLM-based model. The effect of context length is limited, whereas audio-visual input outperforms either unimodal input on the continuous-label metrics. Additionally, our analysis shows larger Group Emotion recognition errors in intervals with high Mixed values, exposing emotional divergence as a key challenge for group emotion recognition.",
+  "abstractSha256": "394d99f2d9a9c6296d4220b9c38dd62eeda9c8afca85a4c918d1bbc86c960196",
+  "arxivId": "2609.11164",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "Transformer",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Soma Iwata"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Koji Inoue"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Muyun Wu"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Taiga Mori"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Divesh Lala"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把三人对话的群体情绪定义为每秒的唤醒与效价连续估计，用混合状态平行标记成员分歧，以冻结编码器加时序 Transformer 的因果滑动窗口建模，最强证据是音视频融合在一致性与误差上超过单模态，而高混合区间更大的误差揭示了单值表示的边界。",
+  "originalTitle": "Multimodal Temporal Modeling for Continuous Group Emotion Recognition in Multi-party Dialogues",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11164.pdf",
+  "readerTitle": "每秒给出群体氛围单值并标记分歧：连续群体情绪的滑动窗口多模态建模",
+  "schemaVersion": 1
+}

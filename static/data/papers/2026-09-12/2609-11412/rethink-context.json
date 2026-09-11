@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11412",
+  "abstract": "Reducing audio-encoder depth lowers the inference cost of speech large language models, but removing complete blocks perturbs the embeddings consumed by the decoder and can cause deletion and premature end-of-sequence errors. We introduce X-AuT, a progressive framework that selects layer combinations through short behavioral probes and restores the pruned model through representation alignment, cross-scale distillation, scheduled student-policy supervision, and LoRA finetuning. The language-model backbone remains frozen, while attention LoRA adapters and the tied output embedding adapt during distillation. Training uses the highest-agreement tier from a transcript-consistency pipeline, followed by source reweighting during finetuning. On ten public Chinese--English benchmarks, compressing Qwen3-ASR-0.6B from 18 to 16 audio-encoder layers reduces macro-average error from 5.61% to 5.27%. The 14-layer model reaches 5.75% with 20.7% fewer audio-tower parameters. Under the matched recipe, the 1.7B teacher yields 5.55% mean error, compared with 8.45% for self-distillation, and progressive 18$\\rightarrow$14 pruning outperforms direct pruning (5.75% vs. 6.73%). These single-run results establish two practical operating points and show that the accuracy effects vary across benchmarks. Project website: this https URL",
+  "abstractSha256": "ce1493dbeb8c72649c11ff45bda98e0b69332fa1e22e31424a13138abf13be35",
+  "arxivId": "2609.11412",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Haojun Zhang"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Yi Zou"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Min Chen"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Qize Yu"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Lianrui Fan"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Xini Ding"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Hao Li"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Shuchang Zhou"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Xianming Liu"
+    },
+    {
+      "affiliations": [
+        "XPeng Inc."
+      ],
+      "name": "Shiyu Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 Qwen3-ASR-0.6B 的 18 层音频编码器，X-AuT 用短预算行为探针选择可恢复层组合，再经表示对齐、跨尺度蒸馏与 LoRA 微调分两跳压到 14 层，单次运行显示 16 层宏平均误差从 5.61% 降到 5.27%，14 层为 5.75% 且音频塔参数减少 20.7%。",
+  "originalTitle": "X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11412.pdf",
+  "readerTitle": "剪层扰动解码接口后如何恢复：X-AuT 的渐进压缩与跨尺度蒸馏",
+  "schemaVersion": 1
+}

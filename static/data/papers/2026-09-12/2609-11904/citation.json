@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11904",
+  "arxivId": "2609.11904",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Akshaj Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hwi Joo Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Guzman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shamak Gowda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Samhita Konduri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen Lian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Robin Netzorg"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gopala Anumanchipalli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11904",
+  "originalTitle": "TART: A Modular Tool for Technique-Aware Audio-to-Tablature Guitar Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11904.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

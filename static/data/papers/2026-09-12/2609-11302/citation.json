@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11302",
+  "arxivId": "2609.11302",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maria Frangiadaki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dimitrios Damianos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kosmas Kritsis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vassilis Katsouros"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11302",
+  "originalTitle": "Automatic Lyric Transcription for Greek Songs: Scaling and Task Composition Effects in Whisper Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11302.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

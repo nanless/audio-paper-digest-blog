@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11342",
+  "abstract": "Conv-TasNet has served as a strong baseline for time-domain speech separation, and many studies have extended it with advanced architectures such as dual-path networks, U-Nets, and attention mechanisms. However, these methods often introduce high computational cost and complexity, limiting their deployment in resource-constrained scenarios. To address this issue, we propose eConv-TasNet, an efficient variant of Conv-TasNet that improves both effectiveness and efficiency without relying on resource-intensive modules. The proposed model consists of a group-wise early-splitting (GES) module and a multi-group feature aggregation (MGFA) module. GES generates discriminative speaker embeddings at intermediate stages, while MGFA progressively aggregates these group-level representations for refined mask estimation. Experimental results show that eConv-TasNet reduces model size by 22.4%, accelerates inference by 18.9%, and improves SI-SNRi by 14.0%-28.0% across three public benchmarks. Moreover, it achieves competitive performance compared with state-of-the-art methods while requiring significantly fewer parameters and lower inference cost. These results demonstrate a favorable efficiency-effectiveness trade-off for edge deployment.",
+  "abstractSha256": "011a31e1dddf9275fc8e447573c1f7bd3c140ea4c29670ba477a2349047dd852",
+  "arxivId": "2609.11342",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pei-Chun Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuan-Yi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单通道双人语音分离，eConv-TasNet 在保留编码器解码器基础上以组级早分离替代逐单元分离并以指数加权跨组聚合替代全量求和，在多基准上提升分离质量并降低参数与延迟，代价是峰值精度仍低于大参数 Transformer 路线。",
+  "originalTitle": "EConv-TasNet: Efficient Conv-TasNet for Effective Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11342.pdf",
+  "readerTitle": "组末才分人、跨组再加权：eConv-TasNet 压缩跳连的分离改进",
+  "schemaVersion": 1
+}

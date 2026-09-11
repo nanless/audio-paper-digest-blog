@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11231",
+  "abstract": "This paper presents SurgicalRoomAgent, a voice-interactive multi-agent system for smart operating rooms based on large language models (LLMs). The system achieves natural language understanding, device control, intraoperative recording, and surgical report generation through a layered architecture comprising a voice interaction pipeline (wake, ASR, turn detection, agent reasoning, TTS) and an agent core (skill registry, task planner, device manager). Three key technologies are investigated: (1) KV Cache prefix warming for low-latency inference, reducing recomputation overhead from approximately 500 ms to tens of milliseconds via byte-level Longest Common Prefix reuse; (2) streaming partial JSON parsing with early parallel task execution, reducing end-to-end latency by approximately 30%; and (3) progressive skill prompt disclosure, which dynamically filters system prompts based on user role, connected devices, and surgical phase to maximize information density within limited context windows. The system is implemented using the Qwen3-27B model with this http URL inference engines. Experimental analysis demonstrates effective operation within a 16,384-token context limit and multi-device parallel control response times meeting OR real-time requirements.",
+  "abstractSha256": "8263f1409cbe7c35b0bf2893d1de270aff9ded457cab041b7a8cc9b7db7e12fb",
+  "arxivId": "2609.11231",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "提示学习",
+    "primaryTask": "语音交互",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wuhan United Imaging Surgical Co., Ltd. (UIS)",
+        "Wuhan, China"
+      ],
+      "name": "Tianxiang Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无菌手术室中多设备协调控制难与语音交互延迟高的问题，论文提出分层语音流水线加智能体核心的 SurgicalRoomAgent，用 KV 缓存预热、流式提前执行与渐进式提示披露降低延迟与上下文压力，但所报告的延迟数字为理论估计且缺乏大规模临床验证。",
+  "originalTitle": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11231.pdf",
+  "readerTitle": "无菌环境下不敢动手：语音多智能体如何接管手术室设备控制与延迟",
+  "schemaVersion": 1
+}

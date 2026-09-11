@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11244",
+  "arxivId": "2609.11244",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Manchester"
+      ],
+      "name": "Jianjiang Yang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Peihang Li"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Shanqing Xu"
+    },
+    {
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "Mengchen Qian"
+    },
+    {
+      "affiliations": [
+        "Shanghai Academy of Educational Sciences"
+      ],
+      "name": "Lu Zhang"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Meng Luo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11244",
+  "originalTitle": "OmniHallu: Unified Hallucination Detection for Cross-Modal Comprehension and Generation in Multimodal Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11244.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11724",
+  "arxivId": "2609.11724",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lorenzo Concina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marco Matassoni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alessio Brutti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filippo Vella"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11724",
+  "originalTitle": "The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11724.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

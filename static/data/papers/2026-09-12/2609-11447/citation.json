@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11447",
+  "arxivId": "2609.11447",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Riccardo Casciotti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annamaria Mesaros"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11447",
+  "originalTitle": "Investigating catastrophic forgetting in sound event classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11447.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

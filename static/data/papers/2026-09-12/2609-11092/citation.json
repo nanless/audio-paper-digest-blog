@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11092",
+  "arxivId": "2609.11092",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoshiki Mitsui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryo Aihara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuhiko Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11092",
+  "originalTitle": "Downstream-Task-Aware Unified Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11092.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

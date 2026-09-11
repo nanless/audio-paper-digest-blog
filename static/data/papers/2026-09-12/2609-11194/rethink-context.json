@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11194",
+  "abstract": "Replay attacks are the most accessible threat to voice-controlled systems, and the acoustic cues that expose them are strongly modulated by the environment in which the attack is mounted. A detector deployed in the field therefore has to absorb new acoustic conditions over time, ideally without revisiting past recordings, since retaining speech indefinitely is both expensive and legally constrained. We frame this as Domain-Incremental Learning (DIL) over acoustic environments and present the first continual learning benchmark for multi-channel replay speech detection, evaluating a state-of-the-art beamformer-based detector over all 24 environment orderings of the ReMASC corpus with five seeds. Sequential fine-tuning forgets severely, raising the error rate on previously learned environments by 18.8 points. Elastic weight consolidation (EWC) halves forgetting but loses plasticity, gradient projection memory (GPM) is statistically indistinguishable from naive fine-tuning, and the proposed task-specific beamformer (TSB) that keeps one spatial front-end per environment significantly improves final and incremental accuracy. We further show that the last environment of the sequence dominates final performance. Code, results, and analysis are available at this https URL.",
+  "abstractSha256": "9067e6da3d072fc497040113e1736f202df13b1e2455c54f2e07e9cda59d5109",
+  "arxivId": "2609.11194",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Neri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把多通道回放检测定义为按声学环境逐个学习的域增量问题，用 ReMASC 全部 24 种顺序对比朴素微调、EWC、GPM 与任务专用波束形成器，最强证据是 TSB 显著降低平均错误率但未减少遗忘，而最后出现的环境主导最终性能。",
+  "originalTitle": "Domain-Incremental Learning for Multi-Channel Replay Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11194.pdf",
+  "readerTitle": "环境变了就要忘：多通道回放检测的域增量学习基准",
+  "schemaVersion": 1
+}

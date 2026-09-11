@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11772",
+  "abstract": "Cross-cultural understanding has become increasingly important in today&#39;s highly connected, cross-national world. The success of LLM-based technologies is now driving the development of automated tools to aid understanding for nonnative people trying to succeed in cross-cultural environments. Building such automated tools is often done by leveraging in-thewild text, audio, and video data. This paper presents techniques for improving speech recognition-based transcript creation in multiple languages from videos to better train these automated tools. The focus is on processes and speech tools that can easily be used by cross-cultural tool builders without requiring deep speech processing expertise. Using publicly available videos from YouTube and Whisper-based tools, average transcription error rate across seven languages (Spanish, Japanese, Korean, Mandarin, Turkish, Russian, and Hebrew) of 30% are observed. With a modest amount of fine-tuning data, the average error rate can be reduced to 20% making such output much more usable for downstream processing. Speech and metadata associated with these videos that can be used by the community to further refine these experiments are released as well.",
+  "abstractSha256": "86d6f6837c49984fd818d62ca31d0d09abfd7b1251c11d5363467993b4f958e5",
+  "arxivId": "2609.11772",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Picheny"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对跨文化理解所需的野外视频多语转写问题，论文用易复用的 Whisper 与 WhisperX 流水线加字幕挖掘与重切分，报告七语平均约 30% 错误经数十至二百小时微调降至约 21.7%，代价是幻觉插入与字幕参考不完美及发布受限。",
+  "originalTitle": "Whisper-Based Speech Transcription from Videos Across Multiple Languages for Cross-Cultural Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11772.pdf",
+  "readerTitle": "野外视频多语转写为何开箱约三成错误：Whisper 与 WhisperX 的可复用流水线",
+  "schemaVersion": 1
+}

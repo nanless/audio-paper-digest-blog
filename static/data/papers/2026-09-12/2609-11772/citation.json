@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11772",
+  "arxivId": "2609.11772",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Picheny"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11772",
+  "originalTitle": "Whisper-Based Speech Transcription from Videos Across Multiple Languages for Cross-Cultural Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11772.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

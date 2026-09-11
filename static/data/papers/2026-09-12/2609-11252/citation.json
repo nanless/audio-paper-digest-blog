@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11252",
+  "arxivId": "2609.11252",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jia-Hung Chen"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University Taiwan"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology USA"
+      ],
+      "name": "Kai-Wei Chang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University Taiwan"
+      ],
+      "name": "Ke-Han Lu"
+    },
+    {
+      "affiliations": [
+        "NTU AI-CoRE Taiwan"
+      ],
+      "name": "Hung-Yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11252",
+  "originalTitle": "AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11252.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

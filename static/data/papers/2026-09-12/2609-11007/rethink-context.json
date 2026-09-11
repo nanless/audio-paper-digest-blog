@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11007",
+  "abstract": "Speaker diarization evaluation is sensitive to ambiguity in pause annotation, which can inflate diarization error rate (DER) or obscure genuine model errors. We show that morphological closing, which has been used for pause-tolerant diarization evaluation, discards segment-level distinctions. Instead, we propose an exact, overlap-aware decomposition of standard DER into a pause-attributable component, consisting of errors compatible with pause filling, and a residual core component that can serve as a proxy for intrinsic diarization errors. The decomposition leaves DER unchanged, while the pause-attributable and core components vary monotonically with the pause threshold and eventually saturate. Experiments spanning synthetic transformations, annotation mismatch, cross-domain evaluation, and tight-boundary diarization show that the decomposition reveals error sources not apparent from standard DER.",
+  "abstractSha256": "462b07f145de2d37118c0bc8942f960667ae63a7bdc3617d97a985d3f8b52b0d",
+  "arxivId": "2609.11007",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shota Horiguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexis Plaquet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对短停顿标注松紧不一致会抬高日志误差率并掩盖真实模型误差的问题，论文保留标准 DER 不变并将其精确拆分为停顿归因部分与残余核心部分，最强证据是合成变换只把填充归为停顿而插入与移位仍留在核心，代价是核心误差不能单独优化且跨不同松紧参考不可直接比较。",
+  "originalTitle": "Diarization Error Decomposition Under Pause Annotation Ambiguity",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11007.pdf",
+  "readerTitle": "停顿该切还是该连：让日志误差率保留总分并拆出停顿可解释部分",
+  "schemaVersion": 1
+}

@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11137",
+  "abstract": "In February 2024 the U.S. Federal Communications Commission (FCC) placed AI-generated voices under the Telephone Consumer Protection Act (TCPA). Yet no peer-reviewed measurement says how much unwanted call traffic is placed by a machine, or how much of that machine speech is synthesized rather than played from a recording. We report both with a disclosed pipeline. An interactive voice honeypot (language-model personas on real U.S. numbers, the caller recorded on its own track) recorded 10,987 calls over 66 days; 11 days on which our stack answered silently are set aside. Three instruments read each opening: an audio fingerprint that finds the same recording played on other calls, a commercial synthetic-speech detector on the caller&#39;s first ten seconds, and blinded listeners who check what it flags. Of the 7,233 calls our persona greeted on normal days, 13.8% open with a recording we also heard on another call, and 13.1% with fresh audio the detector labels synthetic. A further 9.9% open with a caller who never spoke after our greeting, 54.2% with fresh audio the detector labels human, and 9.0% could not be scored. Machine-voiced openings are therefore at least 26.9%, a further tenth of calls are silent connections we read as machine-placed, and replays of a recording make up 45% of the detector&#39;s own rate (29.3% of 6,192 scored openings). The same waveform played on two calls lands on opposite sides of the detector&#39;s threshold 13.6% of the time, and eleven listeners confirm 54.4% of what it flags. Synthetic openings concentrate in lead-generation spam (33.8%), not fraud (21.1%); 0.44% disclose automation. Prevalence tracks how long a bait number has circulated (59% against 19% in the same weeks): seeding history, not calendar time, explains the trend. Campaigns outlast their numbers: one recorded compliance notice opens calls in six campaigns, and one synthetic voice serves nine.",
+  "abstractSha256": "f8214e082123f86a3dae7c63d2457d7fbd8c844211a976d84ae08f8042decccf",
+  "arxivId": "2609.11137",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "task",
+          "id": "task.fingerprinting",
+          "label": "音频指纹"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "人类参与评测",
+      "primaryMethodId": "method.human-evaluation",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Xingyu Shen"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Tommy Duong"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Muduo Xu"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Xiaodong An"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Jiaqi Gan"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Haoyuan Tang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Jamey Z. Liang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Siyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Yan Zhang"
+    },
+    {
+      "affiliations": [
+        "Scam AI (Reality Inc.)"
+      ],
+      "name": "Simiao Ren"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用双轨应答蜜罐加音频指纹与商用合成语音检测器测量骚扰来电开场，报告机器发声至少占 26.9%，其中约一半是跨通话重放的录音，但合成标签只有约 54.4% 经盲听确认且阈值与播种历史显著影响读数。",
+  "originalTitle": "The Machines Are Calling: Measuring Automated and Synthetic Voices in Unwanted Inbound Calls",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11137.pdf",
+  "readerTitle": "机器在打电话：先数录音重放，再问合成语音占多少",
+  "schemaVersion": 1
+}

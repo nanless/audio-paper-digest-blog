@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11182",
+  "arxivId": "2609.11182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanze Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11182",
+  "originalTitle": "Exploring Second-Order Pattern Recognition in Speaker Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11182.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

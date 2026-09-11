@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11353",
+  "abstract": "We utilize Lempel-Ziv universal compression for music note generation. We control the algorithm&#39;s tendency to over-copy or under-copy training data by manipulating the average sequence length saved in the dictionary.",
+  "abstractSha256": "0ae0061060ee4f9039bb6cb18fd55645c4a6d359df45c35ac8b272e57fc88692",
+  "arxivId": "2609.11353",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nadav Mishan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ram Zamir"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对标准 LZ 压缩倾向于整段拷贝训练数据的问题，该文用限制每棵树训练数据量来缩短平均序列长度、用多步不回根来加长平均序列长度，并在 MAESTRO 约 200 小时钢琴 MIDI 音高数据上验证了控制方向，代价是省略节奏导致机械感与长序列带来的逐字拷贝风险仍需抄袭检测来界定。",
+  "originalTitle": "Copying Versus Randomization in Lempel-Ziv Music Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11353.pdf",
+  "readerTitle": "拷贝太多成抄袭，随机太多成噪音：用平均序列长度控制 LZ 音乐生成",
+  "schemaVersion": 1
+}

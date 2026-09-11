@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11164",
+  "arxivId": "2609.11164",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Soma Iwata"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Koji Inoue"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Muyun Wu"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Taiga Mori"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Divesh Lala"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Kyoto, Japan"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11164",
+  "originalTitle": "Multimodal Temporal Modeling for Continuous Group Emotion Recognition in Multi-party Dialogues",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11164.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
