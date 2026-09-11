@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30614",
+  "abstract": "With the rise of AI-generated audio, watermarking has become widely used for detecting misuse and protecting intellectual property. However, adversaries may try to remove these watermarks, making it critical to evaluate how well watermarking schemes withstand removal attacks. Existing attacks are often impractical: they either noticeably degrade perceptual quality or require access to the watermarking scheme. We propose DiffErase, a black-box watermark removal attack that assumes no knowledge of the target watermarking scheme while maintaining perceptual quality. DiffErase perturbs watermarked audio to an intermediate diffusion noise level and regenerates it using a pretrained denoising model, effectively suppressing watermark signals. Theoretical analysis and extensive experiments demonstrate that inaudible audio watermarks are highly vulnerable: across multiple audio domains, DiffErase consistently removes watermarks while preserving perceptual quality. These findings highlight the need for future audio watermarking designs to consider diffusion-based threats. Code and demos are available at https://differase.github.io/DiffErase/.",
+  "abstractSha256": "751cb236a78503380ede03181a3d5aee09414206c78a7cd0550cf6f48a0ecca4",
+  "arxivId": "2605.30614",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Lingfeng Yao"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Xincong Zhong"
+    },
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Chenpei Huang"
+    },
+    {
+      "affiliations": [
+        "UC Berkeley"
+      ],
+      "name": "Xuandong Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Hawaii at Mānoa"
+      ],
+      "name": "Hanqing Guo"
+    },
+    {
+      "affiliations": [
+        "The University of Electro-Communications"
+      ],
+      "name": "Aohan Li"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Jiang Liu"
+    },
+    {
+      "affiliations": [
+        "Keio University"
+      ],
+      "name": "Tomoaki Ohtsuki"
+    },
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Miao Pan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音/音乐/环境声的神经音频水印，DiffErase 在不查询检测器且不知水印方案的黑盒条件下，通过梅尔频谱的中间噪声扰动与预训练扩散去噪重生实现去除，并在五种水印系统上将检测 TPR 降至近 0 的同时以 t* 控制保真度代价。",
+  "originalTitle": "Black-box Audio Watermark Removal via Diffusion Priors",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30614.pdf",
+  "readerTitle": "不可听水印为何在扩散重生面前失效：DiffErase 的黑盒去除与保真权衡",
+  "schemaVersion": 1
+}

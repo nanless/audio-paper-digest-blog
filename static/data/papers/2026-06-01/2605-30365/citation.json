@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30365",
+  "arxivId": "2605.30365",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yizhu Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Long Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanqing Guo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2605.30365",
+  "originalTitle": "Mental Damage: Caption Poisoning Attacks on Retrieval-Augmented Text-to-Music GenerationThanks: 4 Yizhu Wen and Shuhao Zhang contributed equally to this work.",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30365.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

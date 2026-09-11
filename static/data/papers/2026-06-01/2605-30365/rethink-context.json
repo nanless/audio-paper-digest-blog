@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30365",
+  "abstract": "Retrieval-augmented text-to-music (TTM) systems augment underspecified user prompts using captions retrieved from a music caption dataset. This design introduces an integrity dependency on the music knowledge database. We show that an attacker can poison the database by injecting a small number of crafted music captions, causing the system to retrieve malicious captions that bias prompt augmentation and steer generation away from the user's intended function, without modifying the user prompt, retriever, or generator. To achieve the music caption poisoning attack, we propose a dual-layer caption poisoning strategy that preserves high-level retrieval anchors while injecting low-level acoustic descriptors to steer prompt augmentation and downstream music generation toward an attacker-chosen target intent. In a MusicCaps knowledge database, CLAP retriever, and MusicGen pipeline, poisoned generations move substantially closer to the attacker's target, while remaining comparably aligned with the original user query. These results expose a practical integrity risk for retrieval-augmented creative AI systems. Our demo can be found at: https://yizhu-wen.github.io/Mental-Damage/",
+  "abstractSha256": "0f935eca23f105f4607a6f26b84324ec960596511a80a75f487e325eac2bffa8",
+  "arxivId": "2605.30365",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yizhu Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Long Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanqing Guo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对检索增强的文本到音乐生成中用检索到的标题改写用户高层提示的依赖，论文提出保留高层锚点并注入低层声学描述的双层标题投毒，使投毒后生成音频与攻击目标类别的 CLAP 相似度从 0.21-0.28 提升到 0.41-0.48，同时与原始用户问题的相似度维持在约 0.30 附近。",
+  "originalTitle": "Mental Damage: Caption Poisoning Attacks on Retrieval-Augmented Text-to-Music GenerationThanks: 4 Yizhu Wen and Shuhao Zhang contributed equally to this work.",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30365.pdf",
+  "readerTitle": "检索增强让高层意图变低层声学：用锚点保检索、用描述做转向的标题投毒",
+  "schemaVersion": 1
+}
