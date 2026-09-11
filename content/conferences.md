@@ -33,6 +33,14 @@ noRating: true
 
 [阅读会议总览 →](../posts/icml2026-summary/) · [浏览全部条目](../categories/icml-2026/)
 
+## EACL 2026
+
+**The Conference of the European Chapter of the Association for Computational Linguistics**
+
+覆盖自然语言处理与多模态语言技术方向；本期收录经过会议来源认证的音频相关论文。
+
+[阅读会议总览 →](../posts/conference-eacl-2026/) · [浏览全部条目](../categories/eacl-2026-论文/)
+
 ## 如何高效阅读会议论文集
 
 先从会议总览查看任务分布和高分论文，再进入具体任务页缩小范围；若已知道方法或关键词，可直接使用[论文库](../papers/)或[全站搜索](../search/)。
