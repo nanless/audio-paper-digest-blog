@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30614",
+  "arxivId": "2605.30614",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Lingfeng Yao"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Xincong Zhong"
+    },
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Chenpei Huang"
+    },
+    {
+      "affiliations": [
+        "UC Berkeley"
+      ],
+      "name": "Xuandong Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Hawaii at Mānoa"
+      ],
+      "name": "Hanqing Guo"
+    },
+    {
+      "affiliations": [
+        "The University of Electro-Communications"
+      ],
+      "name": "Aohan Li"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Jiang Liu"
+    },
+    {
+      "affiliations": [
+        "Keio University"
+      ],
+      "name": "Tomoaki Ohtsuki"
+    },
+    {
+      "affiliations": [
+        "University of Houston"
+      ],
+      "name": "Miao Pan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2605.30614",
+  "originalTitle": "Black-box Audio Watermark Removal via Diffusion Priors",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30614.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

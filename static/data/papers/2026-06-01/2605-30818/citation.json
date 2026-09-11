@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30818",
+  "arxivId": "2605.30818",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Zhiwei Chen"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore, Singapore"
+      ],
+      "name": "Yijie Li"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Yimo Zhang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Shiyun Shao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Yichao Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Dian Ding"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, Xi’an, China"
+      ],
+      "name": "Liang Wang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Haiwei Wu"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Liwei Guo"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Jie Yang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Xiaosong Zhang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Yongzhao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2605.30818",
+  "originalTitle": "GaMi: Geometry-Agnostic Material Identification via Cross-Modal Subtractive Disentanglement",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30818.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

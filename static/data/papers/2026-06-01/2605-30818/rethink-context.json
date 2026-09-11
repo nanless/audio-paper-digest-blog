@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2605.30818",
+  "abstract": "Non-contact material identification enables adaptive interaction for embodied intelligence yet faces challenges from geometry-induced variations (e.g., orientation, shape, distance) and single-modality ambiguities. In this paper, we present GaMi, a multimodal material identification system integrating mmWave and acoustic sensing to robustly operate under unconstrained geometric conditions. By leveraging the insight of shared geometric consistency between co-located bimodal sensors, GaMi employs an intra-sample cross-modal subtractive disentanglement framework. By semantically aligning modalities and subtracting the shared geometric context, it isolates intrinsic material features. Furthermore, GaMi incorporates inter-sample contrastive learning to correct the residual interference caused by cross-modal misalignment. Additionally, a pairing-based adaptation strategy between two modalities enables few-shot generalization across devices. Extensive evaluations on 20 materials show that GaMi achieves 95.2% accuracy, outperforming single-modality baselines across unseen geometric conditions.",
+  "abstractSha256": "f3c567a14d16cacac9fa011ccf04fcd546f6c37404d6e61438f352cc7340b39b",
+  "arxivId": "2605.30818",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Zhiwei Chen"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore, Singapore"
+      ],
+      "name": "Yijie Li"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Yimo Zhang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Shiyun Shao"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Yichao Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Dian Ding"
+    },
+    {
+      "affiliations": [
+        "Northwestern Polytechnical University, Xi’an, China"
+      ],
+      "name": "Liang Wang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Haiwei Wu"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Liwei Guo"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Jie Yang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Xiaosong Zhang"
+    },
+    {
+      "affiliations": [
+        "UESTC, Chengdu, China"
+      ],
+      "name": "Yongzhao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对几何变化压制材料特征的问题，GaMi 用共位毫米波与声学的共享几何一致性做对齐-校准-相减解耦，并以样本间对比抑制残差，在 20 类材料上以 95.2% 的总体准确率显著优于单模态基线，代价是需双模态同步采集与多目标联合训练。",
+  "originalTitle": "GaMi: Geometry-Agnostic Material Identification via Cross-Modal Subtractive Disentanglement",
+  "pdfUrl": "https://arxiv.org/pdf/2605.30818.pdf",
+  "readerTitle": "几何主导下如何减出材料：GaMi 的跨模态相减式解耦",
+  "schemaVersion": 1
+}
