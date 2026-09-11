@@ -35,19 +35,19 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 | 排名 | Reader 中文题目 | 英文题目 | 八维评分 | 分档 | 文档类型 | 主任务 |
 |---:|---|---|---|---|---|---|
-| 1 | [音频词元远多于文本时路由为何坍缩：CoPRIME 的证据下界与熵正则分工](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/) | [From Token Imbalance to Balanced Routing: An ELBO\-Regularized Probabilistic Framework for Contrastive Multimodal Learning](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/) | **6.4/10** · 创新 1.2/2 · 技术严谨 0.8/1.5 · 实验充分 0.9/1.5 · 清晰度 0.7/1 · 影响力 0.8/1.5 · 开源 1.0/1.5 · 可复现 0.3/0.5 · 工程/实践 0.7/1.5 | 前50% | 方法研究 | #语音情感识别 |
+| 1 | [音频 token 远多于文本时，对比学习加稀疏路由如何保持稳定分工](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/) | [From Token Imbalance to Balanced Routing: An ELBO\-Regularized Probabilistic Framework for Contrastive Multimodal Learning](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/) | **7.0/10** · 创新 1.2/2 · 技术严谨 0.9/1.5 · 实验充分 1.0/1.5 · 清晰度 0.7/1 · 影响力 0.9/1.5 · 开源 1.2/1.5 · 可复现 0.3/0.5 · 工程/实践 0.8/1.5 | 前50% | 方法研究 | #语音情感识别 |
 
 ---
 
 ## 📋 论文列表
 
-### 1. [音频词元远多于文本时路由为何坍缩：CoPRIME 的证据下界与熵正则分工](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/)
+### 1. [音频 token 远多于文本时，对比学习加稀疏路由如何保持稳定分工](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/)
 
 > 英文题目：*[From Token Imbalance to Balanced Routing: An ELBO\-Regularized Probabilistic Framework for Contrastive Multimodal Learning](/posts/conference-aistats-2026-conference-paper-id-naderi26a-b7556a28eb/)*
 
 标签：#对比学习 #混合专家模型 #多模态学习 #语音情感识别
 
-评分：**6.4/10** | 创新 1.2/2 | 技术严谨 0.8/1.5 | 实验充分 0.9/1.5 | 清晰度 0.7/1 | 影响力 0.8/1.5 | 开源 1.0/1.5 | 可复现 0.3/0.5 | 工程/实践 0.7/1.5
+评分：**7.0/10** | 创新 1.2/2 | 技术严谨 0.9/1.5 | 实验充分 1.0/1.5 | 清晰度 0.7/1 | 影响力 0.9/1.5 | 开源 1.2/1.5 | 可复现 0.3/0.5 | 工程/实践 0.8/1.5
 
 排名：前50% | 文档类型：方法研究 | 主任务：#语音情感识别 | 主方法：#混合专家模型
 
@@ -61,12 +61,11 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 📌 **核心摘要**
 
-该工作处理音频与文本到共享表征的对比对齐任务，输入为声谱图与转录文本，输出为可用于情绪与情感零样本和少样本分类的跨模态向量，难点在于声谱图分块产生远多于文本子词的token量并诱发专家坍缩与模态偏置。方法链分三步：先将声谱图按无重叠块展平线性投影、文本经子词查表投影到同维并加模态标记后拼接，为后续建模提供统一序列；再送入共享稠密Transformer编码实现隐式跨模态交互，按模态平均池化得音频与文本向量并经模态特定投影进入对比空间，为稀疏路由提供可比嵌入；最后在稀疏混合专家层做Top\-K门控路由，以双向对比损失拉近配对样本，同时用ELBO损失要求专家拟合所分配嵌入几何并以对均匀先验的散度防垄断，辅以熵型重要性与负载损失稳定路由。与变异系数硬约束相比，熵最大化仅鼓励均衡而允许受控偏离，从而涌现模态专用与多模态专家并保持梯度平滑。在LibriSpeech960预训练后跨域直评MOSEI 10\-shot任务设置下，CoPRIME\-L/32的情绪准确率为78\.21%，高于同规模自复现LIMoE\-L/32的77\.93%。该结论适用边界受限于LibriSpeech加MOSEI与IEMOCAP的小规模情感验证，尚未验证大规模噪声语料、开放词汇检索或跨语言泛化。原文未披露训练、推理或部署成本。
+本文处理音频文本对比表征学习，输入为频谱块序列与子词序列，输出为可做零样本与少样本情感和情绪分类的对齐向量，难点是频谱分块带来约50:1的音频文本 token 数量比，远高于图文约12:1，且音频语义密度低，导致路由器丢弃少数派文本 token 而坍缩到少数专家。方法链分三步：先用频谱分块投影与句子分词将双模态映射到共享维度并拼接送入共享 Transformer，再用 Top\-K 稀疏门控把每个 token 分给少数多层感知机专家并加权求和，最后用双向对比目标拉近配对音频文本，同时用证据下界与熵类辅助损失约束路由分布与专家拟合。与 LIMoE 的差异在于以均匀先验的散度项与原型高斯似然显式要求专家解释所分配 token 的特征几何，而非仅平衡流量，因此允许模态特化又防止少数派 token 被丢弃。在 LibriSpeech960 预训练后直接跨域评测的设置下，大型模型在 IEMOCAP 10样本情感准确率达到79\.7%，高于同规模自实现 LIMoE 基线的78\.33%；在 MOSEI 10样本情绪上为84\.8%，高于 LIMoE 的83\.06%。在 MOSEI 微调后再测 IEMOCAP 的域内设置下，10样本准确率为82\.17%，接近直接监督训练的 CORECT 的84\.7%。结论仅在 LibriSpeech 预训练加 MOSEI 与 IEMOCAP 评测上验证，未证明在大规模噪声语料或开放词汇检索上的外推能力。原文未披露训练、推理或部署成本。
 
 🔗 **开源资源**
 
 - 代码相关资源：<https://github.com/hanadk/coprime> — 链接可访问（HTTP 200）
-- 第三方资源：<https://aclanthology.org/D18-2012/> — 链接可访问（HTTP 200）
 可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 
 ---
