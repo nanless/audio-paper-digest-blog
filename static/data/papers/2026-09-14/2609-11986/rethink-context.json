@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11986",
+  "abstract": "Passive acoustic monitoring produces far more bat recordings than experts can label. We show that simple model-generated pseudo-labels turn this surplus into effective supervision. We compare pseudo-labeling with other semi-supervised learning methods on an 18-species European corpus using only 10% of its training labels, then transfer the strongest approaches to South African field audio containing nine bat taxa and a nuisance class. Pseudo-labeling outperforms the other semi-supervised learning methods on every European measure, recovering up to 61.5% of the gap to full supervision. It transfers to field audio with gains of 10.69 points in species accuracy and 4.96 points in species macro-F1. We also introduce genus-aware smoothing, which directs uncertain target mass toward congeneric species. Combined with uniform smoothing, it reaches 79.16 species macro-F1, 4.73 points above hard targets. Simple pseudo-labels are therefore highly effective at this ecological data scale, while genus-aware targets inject useful biological structure at no annotation cost. this https URL",
+  "abstractSha256": "53c8dfcf8ed6ad47439de743fbf213c2189d7d14f0c27b0e51de1f31a91a3293",
+  "arxivId": "2609.11986",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "半监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "半监督学习",
+      "primaryMethodId": "method.semi-supervised",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ludwig-Maximilians-Universität München, Germany"
+      ],
+      "name": "Frank Fundel"
+    },
+    {
+      "affiliations": [
+        "University of the Free State, Department of Zoology and Entomology, Qwaqwa Campus, South Africa"
+      ],
+      "name": "Alexandra Howard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对蝙蝠被动声学监测中标注稀缺问题，论文固定紧凑 BAT 骨干比较半监督路线与目标构造，报告伪标签在欧洲十分之一标签下闭合至多 61.5% 全监督差距并迁移到南非野外录音，同属加均匀平滑再提升物种宏 F1 达 4.73 个百分点。",
+  "originalTitle": "Unlabeled Echoes: Pseudo-Labels and Genus-Aware Smoothing for Bat Call Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11986.pdf",
+  "readerTitle": "标签不够时让模型自己补课：伪标签与同属平滑的蝙蝠叫声识别",
+  "schemaVersion": 1
+}

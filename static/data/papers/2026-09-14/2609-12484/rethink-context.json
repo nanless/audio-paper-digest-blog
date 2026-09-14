@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12484",
+  "abstract": "This paper presents an overview of the Detection and Classification of Acoustic Scenes and Events (DCASE) 2026 Challenge Task 6, Audio Moment Retrieval (AMR) from Long Audio. Given a several-minute-long audio recording and a free-form text query, AMR aims to retrieve temporal moments in the recording that match the query, where each moment is represented by a pair of start and end timestamps. This task requires effective cross-modal alignment and long-range temporal modeling. We describe the task definition, the evaluation metrics, the development and evaluation datasets, and a baseline system that combines a pre-trained MS-CLAP feature extractor with a Detection Transformer (DETR)-based moment-detection network. On the development data, the baseline trained on a manually annotated dataset and a synthetic dataset achieved Recall1@0.7 of 13.56%, indicating that AMR in long audio remains a challenging problem. The challenge attracted 21 teams, which submitted 59 systems in total. The three best systems achieved Recall1@0.7 of 48.59%, roughly 3.5 times the baseline score. The results show that strengthening the audio-text feature extractor and the moment-detection network led to substantial performance improvements. Furthermore, the top three teams boosted performance by applying confidence score calibration or ensembling across different temporal resolutions of features.",
+  "abstractSha256": "b7f993f9e12b8553921818a0a0e57e547e2d173d3912619ea4051a271389d155",
+  "arxivId": "2609.12484",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hokuto Munakata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Komatsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taichi Nishimura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huang Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "音频时刻检索要求在数分钟录音中按自由文本返回起止时间，基线用 MS-CLAP 加 QD-DETR 在开发测试集上 Recall1@0.7 为 13.56%，前三名以更强特征与检测网络加分数校准或多分辨率集成达到 48.59%，代价是更复杂的特征组合与后处理。",
+  "originalTitle": "Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12484.pdf",
+  "readerTitle": "长音频里按文字找片段：对齐要准，时间也要准",
+  "schemaVersion": 1
+}

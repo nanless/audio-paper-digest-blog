@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12432",
+  "abstract": "Large speech corpora support research, but recordings can expose speaker identity because voice remains a recognizable biometric. Meanwhile, speech data derived from media can be difficult to redistribute reliably. We present \\emph{VoxTubeS}, a family of speaker-anonymized synthetic speech corpora designed for redistribution, comprising three method families and seven variants derived from the VoxTube corpus, which is distributed under CC BY-NC-SA 4.0, using 1.29M quality-filtered English utterances from 1,511 speakers. The synthesis methods span voice conversion, latent-space anonymization, and controllable text-to-speech. We evaluate VoxTubeS using utterance-level unlinkability, conversation-level linkability and singling-out, downstream speaker verification, linguistic consistency, speaker diversity, and fairness metrics for gender and accents. Our comprehensive analysis exposes a complex trade-off: stronger identity suppression often reduces linkability but sacrifices utility and population diversity, whereas speaker consistency training improves both utterance- and conversation-level privacy while retaining comparable utility and a broader speaker space. Fairness varies independently of aggregate performance. No method dominates; VoxTubeS therefore treats corpus construction as a choice among operating points that balances privacy, utility, diversity, fairness, and responsible redistribution under the source license.",
+  "abstractSha256": "218912cd8661aef871529e8c66ed82bc84e8e0eab7d57480625d6e7e6d687ea8",
+  "arxivId": "2609.12432",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yexin Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junichi Yamagishi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以 129 万条英语 VoxTube 语音为共同源集，用嵌入变换、隐空间转换与负引导合成三族七种方法生成内容对齐的匿名语料，并以每版独立训练说话人验证模型与会话级链接实验，报告了强抑制压缩说话人空间而高效用版本残留可链接线索的权衡。",
+  "originalTitle": "VoxTubeS: Distributable Speaker-Anonymized Synthetic Speech Corpora and Their Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12432.pdf",
+  "readerTitle": "强匿名反而练不出好模型？VoxTubeS 用七个对齐版本标定隐私与可用的边界",
+  "schemaVersion": 1
+}

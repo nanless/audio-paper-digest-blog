@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12845",
+  "arxivId": "2609.12845",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute for Hearing Technology and Acoustics, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Rouben Rehman"
+    },
+    {
+      "affiliations": [
+        "Institute for Hearing Technology and Acoustics, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Simon Kersten"
+    },
+    {
+      "affiliations": [
+        "Institute for Hearing Technology and Acoustics, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Aron Schliep"
+    },
+    {
+      "affiliations": [
+        "Institute for Hearing Technology and Acoustics, RWTH Aachen University, Aachen, Germany"
+      ],
+      "name": "Janina Fels"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12845",
+  "originalTitle": "A Device to Control and Manipulate Occlusion Effects for Own Voice Perception Studies",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12845.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

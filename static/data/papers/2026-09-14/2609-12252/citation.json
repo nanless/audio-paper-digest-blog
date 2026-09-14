@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12252",
+  "arxivId": "2609.12252",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Victoria University of Wellington, New Zealand"
+      ],
+      "name": "Liang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Caviedes-Nozal"
+    },
+    {
+      "affiliations": [
+        "Victoria University of Wellington, New Zealand"
+      ],
+      "name": "W. Bastiaan Kleijn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longfei Felix Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12252",
+  "originalTitle": "DriftSE: Speech Enhancement with Generative Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12252.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

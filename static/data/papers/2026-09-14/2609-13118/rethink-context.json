@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13118",
+  "abstract": "Dance-to-music (D2M) generation aims to synthesize music that is rhythmically and stylistically aligned with dance videos. A key challenge arises from the semantic mismatch between sparse dance cues, such as rhythm and style, and the dense information required for music composition, including structure, instrumentation, and expressive dynamics. Existing methods typically rely on these sparse cues and supervise only the final audio output, resulting in poorly learned music representations and generated music with limited musicality and structural coherence. To address these issues, we propose Curriculum-guided Multi-scale representation Alignment with scale-aware Optimal Transport (CMA-OT), a novel paradigm that leverages an external music expert to provide hierarchical supervision for the generator&#39;s latent features, bridging the semantic gap and enhancing representation learning. To effectively incorporate hierarchical supervision, we introduce a curriculum-guided multi-scale learning strategy that progressively transfers musical knowledge from the expert to the music generator, enabling stable and effective representation learning. Moreover, to accommodate the semantic and structural variations across different expert scales and achieve fine-grained alignment under temporal mismatch, we propose a scale-aware optimal transport alignment mechanism, which models soft correspondences between hierarchical expert representations and the generator&#39;s latent features. Extensive experiments on two datasets demonstrate that CMA-OT achieves state-of-the-art performance in rhythmic synchronization, perceptual quality, and overall music generation.",
+  "abstractSha256": "ca72081b7241a37adf9c0f0becc92f781cac885ae7497e5b983fb915e81ebf5b",
+  "arxivId": "2609.13118",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinting Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对舞蹈线索稀疏而作曲需要稠密结构的问题，CMA-OT 用 Jukebox 多尺度专家对 DiT 隐表示做由粗到细的课程对齐与尺度自适应 FGW 软对齐，并以流匹配生成损失联合训练，在 AIST++ 与 TikTok 上报告了节奏与质量提升，代价是训练侧引入多尺度 OT 与课程调度。",
+  "originalTitle": "CMA-OT: Hierarchical Expert Supervision for Dance-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13118.pdf",
+  "readerTitle": "稀疏舞蹈线索到稠密音乐之间：用分层专家监督补上中间表示",
+  "schemaVersion": 1
+}

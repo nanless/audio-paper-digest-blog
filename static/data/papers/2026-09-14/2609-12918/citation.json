@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12918",
+  "arxivId": "2609.12918",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Wenzheng Zhang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Xueliang Zhang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Shulin He"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Fei Zhao"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Xin Liu"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Pengjie Shen"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zhenlong Guo"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zixuan Xue"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Hongtao Bao"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zixuan Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12918",
+  "originalTitle": "PhaseGAN: High-Fidelity Vocoder via Decoupled Amplitude and GAN-Driven Phase Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12918.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

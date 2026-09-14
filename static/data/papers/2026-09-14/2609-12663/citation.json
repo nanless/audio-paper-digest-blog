@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12663",
+  "arxivId": "2609.12663",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lucia Cascone"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Valeria Fraenza"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michele Nappi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabio Narducci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benedetto Simone"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12663",
+  "originalTitle": "What Did the MLLM Hear? Token-Level Spectro-Temporal Grounding for Audio MLLM Explainability",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12663.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

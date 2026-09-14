@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13045",
+  "arxivId": "2609.13045",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Hayato Futami"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Hassan Shahmohammadi"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Tushar Dhyani"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Alkis Koudounas"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Raphaël Lafargue"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Yosuke Kashiwagi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Quentin Jodelet"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Emiru Tsunoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13045",
+  "originalTitle": "Kraken: LLM-based Speech-to-Speech Translation via Low-bitrate VQ and Dual-path Source Conditioning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13045.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

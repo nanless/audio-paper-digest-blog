@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12252",
+  "abstract": "We propose DriftSE, a novel one-step generative framework for speech enhancement formulated as a latent distribution equilibrium problem. During training, the drifting field aligns the generator&#39;s pushforward distribution with the clean speech manifold through drifting in a latent domain. During inference, the drifting process is discarded, enabling one-step generation. We establish that its enhancement quality depends fundamentally on the choice of latent representation. Semantic latents preserve phonetic structure but fail to capture physical acoustic cues, whereas acoustic latents reconstruct the physical signal but risk linguistic hallucination. Therefore, we introduce dual-latent drifting, performing parallel drifting in both semantic and acoustic latents to simultaneously preserve phonetic intelligibility and acoustic fidelity. Additionally, we demonstrate that DriftSE enables fully unpaired training by aligning latent distributions rather than exact point-wise targets. Consequently, DriftSE facilitates cross-dataset learning in the absence of paired noisy-clean samples. Moreover, DriftSE exhibits broad architectural flexibility across different generator backbones. Extensive evaluations on additive denoising and convolutive dereverberation demonstrate robust one-step enhancement across both offline and real-time causal settings. Notably, DriftSE achieves state-of-the-art word error rates across all four evaluated datasets while strictly operating at 1 NFE. Code and audio examples are available online.",
+  "abstractSha256": "5ccec69de5fb8b2b98229a23f2ae07e8244428dde6e5e24bb33402174d6af715",
+  "arxivId": "2609.12252",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Victoria University of Wellington, New Zealand"
+      ],
+      "name": "Liang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Caviedes-Nozal"
+    },
+    {
+      "affiliations": [
+        "Victoria University of Wellington, New Zealand"
+      ],
+      "name": "W. Bastiaan Kleijn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longfei Felix Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "DriftSE 把语音增强写成潜空间分布对齐问题，用冻结编码器的帧级漂移场在训练时牵引生成分布、推理时丢弃漂移只做一次前向，在四个数据集上以 1 次函数求值取得词错误率最优，但纯声学潜空间会出现幻觉而非配对训练会损失语义保真度。",
+  "originalTitle": "DriftSE: Speech Enhancement with Generative Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12252.pdf",
+  "readerTitle": "只漂移分布不对齐波形：DriftSE 为何要用语义加声学双潜空间做一步增强",
+  "schemaVersion": 1
+}

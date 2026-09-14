@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12154",
+  "abstract": "Distant speaker diarization remains challenging due to difficult acoustic environments, varying numbers of speakers and overlapping speech. Model-driven methods are proposed to exploit the speech source features in multi-channel recordings that help diarization. This paper generalizes a neural model that jointly learns to perform blind source separation and diarization over speech mixtures (neural FCASA) with heavy-tailed models. The popular Gaussian distribution has been applied for variance modeling in the original source separation model, which we replace with two families of heavy-tailed models (Leptokurtic Generalized Gaussian distribution and Student&#39;s t distribution) to better capture the heavy-tailedness in speech signals. Thanks to the Gaussian scale mixture model, we are able to unify the proposed method and the original one under the same form of learning objective. Our experiments show consistent large improvements in Diarization Error Rate (DER) and Jaccard Error Rate (JER) compared to the baseline on various corpora.",
+  "abstractSha256": "e092d058664e0191ab1fce14125e4c41ca879497e7c89d3072ae651386d31853",
+  "arxivId": "2609.12154",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Sicheng Mao"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Baihan Li"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Mathieu Fontaine"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Anthony Larcher"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Roland Badeau"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对远场多通道会议中混响噪声与重叠语音的日志难题，该工作把神经 FCASA 的高斯源方差模型推广为瘦峰广义高斯与学生 t 分布的重尾模型并统一为高斯尺度混合训练目标，在 AMI、AliMeeting 和 CHiME-6 上报告了日志错误率与 Jaccard 错误率下降，但部分形状参数会退化且跨语料直接迁移仍明显变差。",
+  "originalTitle": "Neural Multichannel Distant Speaker Diarization with Heavy-tailed Source Separation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12154.pdf",
+  "readerTitle": "把高斯方差换成重尾假设，远场多人日志为何更稳",
+  "schemaVersion": 1
+}

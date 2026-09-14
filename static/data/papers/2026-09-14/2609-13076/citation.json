@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13076",
+  "arxivId": "2609.13076",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Yi-Jen Shih"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Shih-Yun Shan Kuan"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Guan-Ting Lin"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Kai-Wei Chang"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Siddhant Arora"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Shu-wen Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13076",
+  "originalTitle": "MP-Bench: Evaluating Voice Agents as a Multiparty Conversation Participant",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13076.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

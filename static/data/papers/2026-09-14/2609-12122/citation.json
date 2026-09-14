@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12122",
+  "arxivId": "2609.12122",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "Eunjung Yeo"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "Kwanghee Choi"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "Krupaben Kothadia"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "Visar Berisha"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "Julie M. Liss"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "David R. Mortensen"
+    },
+    {
+      "affiliations": [
+        "University of Texas at Austin, USA, Arizona State University, USA, Carnegie Mellon University, USA"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12122",
+  "originalTitle": "Quantifying Consonant Contributions to Word Intelligibility via Acoustic Masking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12122.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

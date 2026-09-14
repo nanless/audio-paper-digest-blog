@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12629",
+  "abstract": "Location-based training (LBT) effectively resolves the output permutation problem in multichannel speech separation by imposing deterministic spatial orderings. For planar microphone arrays, LBT typically adopts circular azimuth ordering to cover the full spatial range. However, the resulting cyclic topology introduces a discontinuity at the wrap-around point, increasing learning complexity and limiting the effective use of spatial cues. This work investigates this limitation by introducing location-based training with folded linear orderings (LBT-FLOs), which collapse circular azimuths into controlled linear orderings. While individual LBT-FLOs exhibit front-back ambiguity, each provides enhanced spatial discriminability over specific azimuth regions. Exploiting their complementarity, we propose an ensemble-style framework that selects among multiple LBT-FLOs using azimuth-guided scoring. Experiments across planar array geometries and reverberant conditions show modest but consistent improvements over circular-ordering LBT, with robustness to azimuth estimation errors.",
+  "abstractSha256": "c3e3903bffb87b9933e09a6fbd922572caa22e48779eefffc8fe583feabcf5be",
+  "arxivId": "2609.12629",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaixuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stijn Kindt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nilesh Madhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对平面阵下圆形方位排序在 360 度回绕处带来学习负担的问题，该工作用两个正交折叠直线排序分别训练分离网络再按方位打分二选一，在混响会议室评估中对圆形排序取得小而一致的提升，代价是需要方位估计且推理侧要维护多个网络。",
+  "originalTitle": "Location-based Training with Complementary Folded Linear Orderings for Multichannel Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12629.pdf",
+  "readerTitle": "圆环排序的断点代价：用互补折叠直线排序重组多通道分离的输出顺序",
+  "schemaVersion": 1
+}

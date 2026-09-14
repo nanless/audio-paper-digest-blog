@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12085",
+  "arxivId": "2609.12085",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "LemoniLab FZCO (lemonilab.com)"
+      ],
+      "name": "Mohamad Al Mdfaa"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Nursultan Askarbekuly"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Ahmed Helaly"
+    },
+    {
+      "affiliations": [
+        "LemoniLab FZCO (lemonilab.com)"
+      ],
+      "name": "Ubai Sandouk"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Manuel Mazzara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12085",
+  "originalTitle": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12085.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

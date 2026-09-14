@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12563",
+  "abstract": "Neural audio codecs discretize speech into token sequences, but the resulting token spaces differ in vocabulary and codebook structure, preventing direct communication across models. This limitation affects applications such as conversational voice agents and speech to speech translation systems where multiple speech models must interact. As a result, transferring information between speech systems typically requires decoding to waveform audio and re-encoding with a second tokenizer, increasing latency and introducing potential information loss. To address these limitations, we present TokenMapper, a direction aware framework for direct token to token translation between heterogeneous speech tokenizers in the discrete domain. TokenMapper supports structurally mismatched token spaces, including mappings between single codebook and multi codebook representations, under a shared effective token rate. Experiments on GLM-4-Voice, MiMi and DualCodec show consistent cross model performance. Specifically, translation WER approaches native reconstructions within 2.5-6.8% absolute WER, human MOS for TokenMapper outputs ranges from 2.29 to 4.39, following the same direction level trends as UTMOS and end to end latency is reduced by 4.8-94.5% relative to waveform bridging, reaching up to 972 ms per utterance. These results provide a practical step toward cross model speech token interoperability without intermediate waveform reconstruction.",
+  "abstractSha256": "d3c62a24846d12442576ffe37d83e0e37aff965839d7cb3456f001ad49446ca1",
+  "arxivId": "2609.12563",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Tal Kozakov"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Tal Rosenwein"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Eliya Nachmani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "TokenMapper 针对同有效帧率但码本结构不同的语音分词器做离散域直接翻译，在 GLM、Moshi、DualCodec 六个方向上把跨模型词错误率控制在接近原生重建 2.5-6.8 个百分点内，并以省去波形桥接换来 4.8-94.5% 的传输路径延迟下降，但多码本残差声学细节仍是主要代价。",
+  "originalTitle": "TokenMapper: A Step Toward Interoperable Speech Token Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12563.pdf",
+  "readerTitle": "不经过波形也能翻译语音令牌：TokenMapper 的同速率跨码本映射",
+  "schemaVersion": 1
+}

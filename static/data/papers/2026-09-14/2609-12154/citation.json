@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12154",
+  "arxivId": "2609.12154",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Sicheng Mao"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Baihan Li"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Mathieu Fontaine"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Anthony Larcher"
+    },
+    {
+      "affiliations": [
+        "LTCI, Telecom Paris, Institut Polytechnique Paris, France SJTU Paris Elite Institute of Technology, Shanghai Jiao Tong University, China LIUM, Le Mans University, France"
+      ],
+      "name": "Roland Badeau"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12154",
+  "originalTitle": "Neural Multichannel Distant Speaker Diarization with Heavy-tailed Source Separation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12154.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

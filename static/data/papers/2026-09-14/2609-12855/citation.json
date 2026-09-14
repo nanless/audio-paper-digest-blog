@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12855",
+  "arxivId": "2609.12855",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oisín Turbitt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kit Bower-Morris"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jonathan Carlton"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jamie Stacey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kris Y. Hong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12855",
+  "originalTitle": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12855.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

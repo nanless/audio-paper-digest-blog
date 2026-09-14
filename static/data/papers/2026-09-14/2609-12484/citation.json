@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12484",
+  "arxivId": "2609.12484",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hokuto Munakata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Komatsu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taichi Nishimura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huang Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12484",
+  "originalTitle": "Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12484.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

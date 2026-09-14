@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12774",
+  "arxivId": "2609.12774",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Group Shanghai Jiao Tong University"
+      ],
+      "name": "Zhongjie Duan"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group Shanghai Jiao Tong University"
+      ],
+      "name": "Shengchuan Gao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group Shanghai Jiao Tong University"
+      ],
+      "name": "Hong Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Group Shanghai Jiao Tong University"
+      ],
+      "name": "Yingda Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12774",
+  "originalTitle": "DiffSynth-Music: Audio-Conditioned KV-Cache Adapters for Controllable Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12774.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

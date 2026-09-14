@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13117",
+  "abstract": "Full-duplex evaluation often emphasizes whether an agent keeps speaking or stops. That binary cannot express a third response humans use routinely: continuing to speak while incorporating what the listener just contributed. The contribution may be a missing word, a correction or a clarification. We introduce Duplex Cue, an evaluation of this \\emph{in-turn adaptation} in full-duplex voice agents. Duplex Cue separates listener intent (backchannel, collaboration, or interruption) from speaker behavior: continuing unchanged, adapting within the turn, or yielding. Adaptation includes acknowledgment as well as content revision. In a single-model case study using 300 human-confirmed cues from unscripted English conversations, we compare recorded human responses with PersonaPlex continuations generated while replaying the listener&#39;s audio. We retain 208 pairs with the ongoing speaker active at cue onset and a scorable response in each condition. On the 66 collaborative pairs, recorded speakers adapt in 68.2\\% of cases, compared with 34.8\\% for PersonaPlex. The model otherwise continues unchanged (42.4\\%) or yields (22.7\\%). These findings show why evaluating natural voice interaction requires measuring how an agent responds to a listener&#39;s contribution as well as whether it keeps speaking.",
+  "abstractSha256": "53a1b9c0942af2f7162079af368fed525f481fedc7c1259ac7bf31710ba15c15",
+  "arxivId": "2609.13117",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunqi Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tyler Baumgartner"
+    },
+    {
+      "affiliations": [
+        "Besimple AI, San Mateo, CA"
+      ],
+      "name": "Nikhil Johri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brandon Tai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Candice Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luc Debaupte"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruben Aguilar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bill Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Zhong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把听者重叠贡献分为回馈、协作与打断，把说话人行为分为不变继续、回合内适应与让出，用 300 个人工确认线索对比录音人与 PersonaPlex 的配对延续，最强证据是 66 个协作对中录音人 68.2% 适应而模型仅 34.8%，代价是其余行为分流为不变继续与让出且评估依赖转录打分与受限复现条件。",
+  "originalTitle": "Continue, Adapt, or Yield: In-Turn Adaptation to Overlapping Speech in Full-Duplex Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13117.pdf",
+  "readerTitle": "边说边改还是停下让路：全双工智能体如何接住重叠话语",
+  "schemaVersion": 1
+}

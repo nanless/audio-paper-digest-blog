@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12593",
+  "arxivId": "2609.12593",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lara Berkenbaum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hervé Glotin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Sarano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Walter M X Zimmer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Véronique Sarano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Adam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascale Giraudet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12593",
+  "originalTitle": "Audiovisual diarization of overlapping click trains in sperm whale (Physeter macrocephalus) vocal sparring using a three-hydrophone array",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12593.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

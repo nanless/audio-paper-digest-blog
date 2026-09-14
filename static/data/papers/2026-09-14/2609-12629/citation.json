@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12629",
+  "arxivId": "2609.12629",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaixuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stijn Kindt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nilesh Madhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12629",
+  "originalTitle": "Location-based Training with Complementary Folded Linear Orderings for Multichannel Speech Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12629.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

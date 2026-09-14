@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12728",
+  "abstract": "Recent advancements in discrete token-based speech generation have highlighted the importance of efficient token-to-waveform synthesis in streaming and dialogue scenarios. Flow-matching acoustic decoders achieve high-quality token-to-mel generation, but their iterative sampling requires multiple neural function evaluations, limiting low-latency speech synthesis. MeanFlow reduces the sampling budget by modeling the average velocity over a temporal interval, yet maintaining high acoustic quality under extremely few-step token-to-mel generation remains challenging. To address this challenge, we propose X-Pred MeanFlow, a few-step streaming token-to-mel decoder that reparameterizes MeanFlow with mel-space prediction. The decoder predicts a generalized mel field and analytically derives the corresponding average velocity for sampling, thereby preserving the MeanFlow formulation while providing a direct acoustic prediction target. We further introduce layer-selective block-wise attention to enable continuous chunk-wise generation with bounded context. Experiments show that X-Pred MeanFlow improves few-step token-to-mel synthesis over Direct-$u$ MeanFlow and supports stable streaming generation. Speech samples are this http URL://renxiaming.this http URL",
+  "abstractSha256": "7001134b835f8933633580e30f86e630cd6696cfe7547ff3243d66738c10f7ec",
+  "arxivId": "2609.12728",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaming Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirui Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruonan You"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengyou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Su Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对离散语音 token 到梅尔谱的低延迟合成问题，论文用梅尔空间重参数化的平均流把 2 到 3 步推理的声学目标直接化，并用层选择的分块掩码把每包计算限定在滑动窗内，代价是需要未来块的前视延迟和多步细化开销。",
+  "originalTitle": "X-Pred MeanFlow for Streaming Token-to-Mel Speech Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12728.pdf",
+  "readerTitle": "把平均速度换成梅尔预测：少步数与有界上下文如何同进一个解码器",
+  "schemaVersion": 1
+}

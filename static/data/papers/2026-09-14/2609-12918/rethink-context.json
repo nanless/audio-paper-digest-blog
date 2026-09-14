@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12918",
+  "abstract": "A vocoder is a pivotal component of modern text-to-speech (TTS) systems. Despite the significant progress of neural network-based vocoders, accurate phase reconstruction remains the main challenge limiting both audio quality and modeling efficiency. We introduce PhaseGAN, a lightweight vocoder that addresses this limitation through a &#34;mel $\\rightarrow$ Amplitude $\\rightarrow$ Phase&#34; reconstruction pipeline. By reconstructing amplitude and phase spectra via distinct methodologies, the proposed PhaseGAN outperforms state-of-the-art baselines while utilizing fewer model parameters and reduced computational requirements. The compact version generates high-fidelity audio with approximately 500K parameters and 1 GMAC computational load, making it highly suitable for real-time applications on edge devices. In addition, our approach exhibits exceptional musical audio synthesis capabilities despite no training on musical data, illustrating unprecedented cross-domain generalization. See this https URL for demos of our work.",
+  "abstractSha256": "8ef87199b3553451ea8967d3874e725ce899af2d7e9487ef943d0ef075a1f25e",
+  "arxivId": "2609.12918",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "语音合成",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Wenzheng Zhang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Xueliang Zhang"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Shulin He"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Fei Zhao"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Xin Liu"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Pengjie Shen"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zhenlong Guo"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zixuan Xue"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Hongtao Bao"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science, Inner Mongolia University, China"
+      ],
+      "name": "Zixuan Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对梅尔谱缺相位信息导致相位一对多难学的问题，PhaseGAN 用插值加 ICCRN 先恢复幅度谱再用 R3-GAN 生成相位谱，在 LJSpeech 上报告 UTMOS 4.238 等最优感知指标，代价是两阶段分别训练且推理仍需 6.42G 量级计算。",
+  "originalTitle": "PhaseGAN: High-Fidelity Vocoder via Decoupled Amplitude and GAN-Driven Phase Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12918.pdf",
+  "readerTitle": "先补幅度再造相位：PhaseGAN 用两套办法解耦声码器重建",
+  "schemaVersion": 1
+}

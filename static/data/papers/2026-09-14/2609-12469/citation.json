@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12469",
+  "arxivId": "2609.12469",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Preeti Saraswat"
+    },
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Divya Neelagiri"
+    },
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Anil Yadav"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12469",
+  "originalTitle": "Not All Speech Is Intent: Adaptive Self-Correcting Inference Layer for Post-ASR False Wake-Up",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12469.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

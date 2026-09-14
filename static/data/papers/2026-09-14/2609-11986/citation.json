@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.11986",
+  "arxivId": "2609.11986",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Ludwig-Maximilians-Universität München, Germany"
+      ],
+      "name": "Frank Fundel"
+    },
+    {
+      "affiliations": [
+        "University of the Free State, Department of Zoology and Entomology, Qwaqwa Campus, South Africa"
+      ],
+      "name": "Alexandra Howard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.11986",
+  "originalTitle": "Unlabeled Echoes: Pseudo-Labels and Genus-Aware Smoothing for Bat Call Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.11986.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

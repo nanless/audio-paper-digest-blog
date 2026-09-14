@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12607",
+  "abstract": "Large Language Model alignment typically relies on learned proxy reward models, which significantly increase the memory footprint during training and are notoriously prone to instability and reward hacking. While offline methods like Direct Preference Optimization (DPO) bypass the reward model, they lose the ability to perform online exploration. If no optimization constraints are applied, this can lead to format collapse in bounded, continuous spaces. To resolve this, we propose Direct Preference Density Alignment: An alternative framework that removes the need for a learned proxy reward model while strictly preserving the benefits of online reinforcement learning. We leverage large-scale user data (approximately 90,000 samples) to construct non-parametric preference density maps, establishing an empirical reward surface. In addition to removing the reward model, Direct Preference Density Alignment enables the combination of the online structural grounding of Group Relative Policy Optimization (GRPO) with the targeted offline refinement of DPO. We show that this GRPO+DPO combination achieves the highest performance, and in a blind audio equalization listening test, enables a 1.5B-parameter model to achieve perceptual parity with a carefully prompt-engineered GPT-4o mini baseline, using only a fraction of the inference compute.",
+  "abstractSha256": "fb75d600485fbc68a75f51edf9324cdbe1d9a238f0b6867425e2c5aa2c0fe72a",
+  "arxivId": "2609.12607",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "音频交互",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "音频交互",
+      "primaryTaskId": "task.audio-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Systems",
+        "Aalborg University",
+        "Aalborg, Denmark"
+      ],
+      "name": "Ioannis Stylianou"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Sven Ewan Shepstone"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Jon Francombe"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Pablo Martinez Nuevo"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems",
+        "Aalborg University",
+        "Aalborg, Denmark"
+      ],
+      "name": "Zheng-Hua Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对自然语言到二维均衡参数的连续控制任务，论文用约 9 万次用户交互构建非参数偏好密度奖励面，先以 GRPO 做在线结构对齐再以 DPO 做峰值注入精修，在分布外概念上以 1.5B 模型达到与 GPT-4o mini 可比的听感，代价是混合管线对分组数敏感且仅适用于低维空间。",
+  "originalTitle": "Direct Preference Density Alignment for Conversational Audio Equalization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12607.pdf",
+  "readerTitle": "不用学奖励模型：用人群密度地形图做对话式均衡的在线探索与离线打磨",
+  "schemaVersion": 1
+}

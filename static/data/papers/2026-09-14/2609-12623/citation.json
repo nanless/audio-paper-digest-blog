@@ -1,0 +1,124 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12623",
+  "arxivId": "2609.12623",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Equal contribution. Project lead."
+      ],
+      "name": "Utkarsh Tyagi"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead."
+      ],
+      "name": "Ramaneswaran Selvakumar"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Advait Gosai"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "University of Maryland"
+      ],
+      "name": "Sonal Kumar"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Nikhil Barhate"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Isabell Sagar"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Steven Li"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Miheer Bavare"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Daniel Quigley"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Fabiola Tapia Carrillo"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Jose M Patron E"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Diego Macías Gutiérrez"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Paul Song"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "University of Maryland"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "University of Maryland"
+      ],
+      "name": "Dinesh Manocha"
+    },
+    {
+      "affiliations": [
+        "Equal contribution. Project lead.",
+        "Scale AI"
+      ],
+      "name": "Yunzhong He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12623",
+  "originalTitle": "SteerDuplex: Steerable Duplex Speech Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12623.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

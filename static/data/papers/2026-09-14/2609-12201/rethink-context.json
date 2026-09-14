@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12201",
+  "abstract": "Real-time music source separation is validated on desktop CPUs and GPUs. Does any published system fit the embedded audio hardware it targets? On a commercial audio DSP (2 MB SRAM, 2.07 GMAC/s measured), none does, and the constraints eliminate different models: memory rules out the 16-51 M parameter TasNet/X-UMX family, per-frame compute rules out RT-STT, needing 5.5x the available MAC rate. Parameter count predicts neither: weight reuse spans 1x to 345x. We then build one that fits. Training on continuous rather than block-padded convolution context proves essential: a model scoring 3.93 dB block-wise otherwise collapses to silence within 2 s frame-by-frame. A gated complex FIR deep filter adds a latency knob, gaining 0.38 dB even when strictly causal. It reaches 4.70 dB cSDR on MUSDB18-HQ and runs in 10.43 ms of an 11.6 ms hop, 0.5-0.7 dB behind systems that do not fit.",
+  "abstractSha256": "0886d2a723f5bf6d66293641be388658bdd3cb20d78e6a5cb3676c884e97ed5d",
+  "arxivId": "2609.12201",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ken Malsky"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabby Yi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对嵌入式音频芯片同时卡住内存与单帧算力的问题，该研究用因果声谱分离主干加门控深滤波实现可部署分离，在芯片实测单帧 10.43 ms 内达到 4.70 dB cSDR，代价是比装不进芯片的最强基线低约 0.5 至 0.7 dB 且连续上下文训练不可省略。",
+  "originalTitle": "Real-Time Music Source Separation on a Low-Power Audio DSP",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12201.pdf",
+  "readerTitle": "装得进低功耗音频芯片的实时音乐分离：预算先行，深滤波补精度",
+  "schemaVersion": 1
+}

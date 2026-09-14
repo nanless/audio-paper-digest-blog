@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13118",
+  "arxivId": "2609.13118",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinting Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13118",
+  "originalTitle": "CMA-OT: Hierarchical Expert Supervision for Dance-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13118.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

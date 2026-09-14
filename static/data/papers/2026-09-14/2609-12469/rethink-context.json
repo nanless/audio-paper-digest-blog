@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12469",
+  "abstract": "False wake-up activations remain a persistent challenge in conversational AI. Speech phonetically similar to a device&#39;s wake word can produce a syntactically valid and semantically coherent ASR transcript that the assistant incorrectly executes. Most existing systems make a single intent decision in isolation, without a mechanism to learn from recurring errors over time or adapt to individual users through personalized learning. We introduce the Feedback-Driven Adaptive Self-Correcting Inference Layer (ASCIL), a complementary post-ASR correction framework that re-evaluates wake-up intent before response generation by fusing acoustic embeddings, linguistic cues, device context, and patterns from past misclassifications. ASCIL interprets implicit signals, including hesitation, disengagement, and silence, and explicit signals, including cancellation and repetition, as automatically inferred, noisy behavioral indicators of potential misclassification. These signals drive online pattern updates without manual annotation, whereas the intentional/unintentional reference labels used for offline evaluation are human-annotated. It generalizes from prior errors, applies corrective adjustments at inference time, and continuously updates in parallel with natural-language execution. Evaluated on a proprietary dataset of 3,667 interactions with human-annotated intentional/unintentional reference labels spanning 14 acoustic and contextual conditions, ASCIL achieves 54.27% relative error reduction on a session-disjoint subset constructed from baseline failures, and up to 24.39% relative error reduction at threshold 0.90 on the issue-tagged evaluation slice. These gains are achieved while improving intentional acceptance rates, with a median added latency below 60 ms in the reported benchmark.",
+  "abstractSha256": "a5b251831790f4312935d1bddc1116746eddaef7b68c38f4027615099ff3c258",
+  "arxivId": "2609.12469",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音唤醒",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.wake-word",
+          "label": "语音唤醒"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音唤醒",
+      "primaryTaskId": "task.wake-word",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Preeti Saraswat"
+    },
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Divya Neelagiri"
+    },
+    {
+      "affiliations": [
+        "Samsung Research America, Mountain View, CA, USA"
+      ],
+      "name": "Anil Yadav"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 ASR 转写正确但唤醒意图错误的问题，论文提出在响应前加一层融合声学、语言和设备上下文并从用户后续行为中提炼纠正模式的 ASCIL，在 3667 次交互上将会话不相交失败子集错误相对降低 54.27%，在阈值 0.90 的问题标记切片上相对降低 24.39%，代价是在低阈值和干净音频上存在接受与拦截的权衡且依赖历史交互。",
+  "originalTitle": "Not All Speech Is Intent: Adaptive Self-Correcting Inference Layer for Post-ASR False Wake-Up",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12469.pdf",
+  "readerTitle": "不是每句被听清的话都是叫你：用事后反馈纠正误唤醒",
+  "schemaVersion": 1
+}

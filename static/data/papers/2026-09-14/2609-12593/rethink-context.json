@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12593",
+  "abstract": "The individual attribution of sperm whale (Physeter macrocephalus) vocalizations during surface interactions constitutes a methodological challenge due to acoustic overlaps, multipath propagation, body shadowing, and indistinguishable inter-pulse intervals among similar-sized individuals. A multimodal audio-visual workflow is presented to deinterleave and attribute uncharacterized click trains produced by immature males during ``vocal sparring&#39;&#39; using a portable three-hydrophone array coupled with synchronized video. The approach combines spectro-temporal tracking, based on inter-click interval dynamics and the Constant-Q Transform, with spatial time-difference-of-arrival modeling projected onto the image plane for optical validation. Analysis of 2,655 manually validated clicks shows that purely acoustic clustering diarization errors remain low, peaking at 25.79% only during extreme temporal superpositions. Integrating the optical modality resolves residual spatial indeterminacies; although near-planar array geometry induces vertical ambiguities, the system achieves up to 100% horizontal visual concordance for primary emitters. Crucially, this framework successfully reconstructed and assigned 11 distinct, intertwined click trains totaling 882 clicks to specific focal individuals despite near-field tactile constraints. Because ethological descriptions remain incomplete without identifying the emitter, explicitly correlating these emissions with physical kinematics provides the fine-scale resolution required to define this socio-acoustic behavior.",
+  "abstractSha256": "d7f7bedd07ab43988c126fd3055fe0ab1c11b37d9b595da7563be3443cfcfb34",
+  "arxivId": "2609.12593",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lara Berkenbaum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hervé Glotin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Sarano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Walter M X Zimmer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Véronique Sarano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olivier Adam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pascale Giraudet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对两头同龄雄性幼鲸近距离身体接触时连续重叠喀哒声串难以归属的问题，论文用单通道恒 Q 变换谱加步间间隔节律做声学解交织，再用三元紧凑阵列到达时差定位投影到视频验证，在简单场景聚类误差为 0.0%、最难场景达 25.79%，并以 10 度容限实现主要发射者最高 100% 水平视觉一致，代价是垂直方向系统性偏差与近平面阵列几何盲区导致两个场景无法最终归属。",
+  "originalTitle": "Audiovisual diarization of overlapping click trains in sperm whale (Physeter macrocephalus) vocal sparring using a three-hydrophone array",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12593.pdf",
+  "readerTitle": "重叠喀哒声串归谁：三水听器加视频如何拆解抹香鲸近场混叠",
+  "schemaVersion": 1
+}

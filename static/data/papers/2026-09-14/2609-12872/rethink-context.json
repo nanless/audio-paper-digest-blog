@@ -1,0 +1,132 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12872",
+  "abstract": "We present DuplexDrama, the first synthesized spoken dialogue dataset that simultaneously covers four dimensions: (i) complete persona and scenario settings; (ii) three full-duplex behaviors (interruption, backchannel, incomplete); (iii) expressive speech with persona-aligned emotion labels; and (iv) script-aware sound events. DuplexDrama is built via a 4-stage pipeline; quality validation on both scripts and synthesized audio confirms its quality. We have produced more than 2,000 hours audio data with a 64-voice timbre pool spanning 13 personas and 5 age buckets; 3.8% of all turns carry at least one full-duplex behavior. This data has been validated through internal full-duplex model training. We will release a curated subset of 6,400 bilingual dialogues (800 h, Chinese ~500 h + English ~300 h) to advance full-duplex spoken dialogue model research. Data samples are available at our demo page and LLM-judge evaluation prompts will be released with the dataset.",
+  "abstractSha256": "0bcc024827bcaec5e634821f0924c7f78a667a0f9acb2ad463d6c1a2e4638060",
+  "arxivId": "2609.12872",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingxiang Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenke Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuofeng Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dawei Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyang Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingxin Shang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongwei Cai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weixu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lin Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuran Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "DuplexDrama 针对全双工对话训练数据稀缺问题，用四阶段管线同时合成人设场景、三种全双工行为、表情语音与剧本对齐的声音事件，最强证据是相同语音加背景仅带来 UTMOSv2 与 NISQA 的可控下降，主要代价是全双工轮次占比仅 3.8% 且剧本合理性依赖 LLM 判断。",
+  "originalTitle": "DuplexDrama: A Synthesized Dialogue Dataset with Scenarios, Full-Duplex Behaviors, Expressive Speech, and Sound Events",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12872.pdf",
+  "readerTitle": "把打断与背景声做成可听的监督：DuplexDrama 四阶段合成管线解读",
+  "schemaVersion": 1
+}

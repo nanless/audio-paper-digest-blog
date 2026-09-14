@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13045",
+  "abstract": "Speech-to-speech translation (S2ST) has advanced significantly with speech LLMs, offering the potential for joint optimization and preserving non-linguistic information. However, these models struggle with predicting high-bitrate speech tokens in LLMs, and face the challenge of relying on S2ST training data with ideally aligned speaker identity and prosody. We propose using low-bitrate tokens based on single-layer vector quantization, trained to reconstruct self-supervised learning (SSL) features. We also employ a separate token-to-waveform decoder named Autowave-X, which is also conditioned on the source speech to improve non-linguistic transfer, thereby relaxing the training data constraints. With the integration of these techniques, we propose an S2ST model named Kraken, which augments a pre-trained LLM with speech feature inputs and the low-bitrate token outputs, followed by Autowave-X vocoder. We built the model upon Qwen3-8B and trained it using 150k hours of multilingual and multitask speech data. We demonstrated that our model exhibited better translation quality than SeamlessM4T-Large v2 and Qwen2.5-Omni, along with improved speaker and prosody transfer capabilities.",
+  "abstractSha256": "24366d4c8810254c369b92ad615152978550ee0bb8f487f3f38d305e14103d2a",
+  "arxivId": "2609.13045",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "向量量化",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Hayato Futami"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Hassan Shahmohammadi"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Tushar Dhyani"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Alkis Koudounas"
+    },
+    {
+      "affiliations": [
+        "Sony Europe Limited"
+      ],
+      "name": "Raphaël Lafargue"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Yosuke Kashiwagi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Quentin Jodelet"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation"
+      ],
+      "name": "Emiru Tsunoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对大模型预测高码率语音 token 难、表达性数据难对齐的问题，Kraken 用 25 Hz 单层 VQ 低码率 token 加 LLM 与声码器双路源语音条件，在 150k 小时多任务数据上实现可复述的端到端语音到语音翻译，并在 FLEURS 与 CVSS 上保留说话人与韵律，代价是音频质量指标弱于用理想参考音色的大模型。",
+  "originalTitle": "Kraken: LLM-based Speech-to-Speech Translation via Low-bitrate VQ and Dual-path Source Conditioning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13045.pdf",
+  "readerTitle": "低码率单层量化加双路源语音条件：Kraken 如何让大模型直接说译文",
+  "schemaVersion": 1
+}

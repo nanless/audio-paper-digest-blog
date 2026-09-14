@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12563",
+  "arxivId": "2609.12563",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Tal Kozakov"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Tal Rosenwein"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Ben-Gurion University of the Negev"
+      ],
+      "name": "Eliya Nachmani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12563",
+  "originalTitle": "TokenMapper: A Step Toward Interoperable Speech Token Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12563.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

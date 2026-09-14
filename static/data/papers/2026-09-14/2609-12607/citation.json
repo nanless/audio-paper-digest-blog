@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12607",
+  "arxivId": "2609.12607",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Systems",
+        "Aalborg University",
+        "Aalborg, Denmark"
+      ],
+      "name": "Ioannis Stylianou"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Sven Ewan Shepstone"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Jon Francombe"
+    },
+    {
+      "affiliations": [
+        "Bang & Olufsen A/S",
+        "Struer, Denmark"
+      ],
+      "name": "Pablo Martinez Nuevo"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems",
+        "Aalborg University",
+        "Aalborg, Denmark"
+      ],
+      "name": "Zheng-Hua Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.12607",
+  "originalTitle": "Direct Preference Density Alignment for Conversational Audio Equalization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12607.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13046",
+  "abstract": "High-dimensional representations of pretrained speech foundation models have proven beneficial for objective speech quality and intelligibility prediction. While existing work on neural intelligibility prediction usually leverages such representations for task-specific fine-tuning, in this work we evaluate the usefulness of such representations for intelligibility prediction without any further training. We conduct a layer-wise analysis of multiple speech foundation models, correlating various embedding distances with subjective intelligibility scores. The results show that embeddings extracted from Whisper speech recognition models are best suited, with the last encoder and decoder layers yielding the best correlations when using the Fréchet Audio Distance. Notably, the evaluated distances outperform classical intelligibility metrics and are more robust than Word and Character Error Rates. Further, correlations improve with increasing size of the Whisper model from which embeddings are extracted.",
+  "abstractSha256": "3ceaacab5cf0bedcfbe00bd1bb3c4af6a96b2c8b0efc0024a014fc177bba1cb9",
+  "arxivId": "2609.13046",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lyonel Behringer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Brendel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作研究无训练介入式可懂度预测，用冻结语音基础模型分层嵌入的参考测试分布距离代替人评，在英文编码增强与中文增强数据上显示 Whisper 末端层加 Fréchet Audio Distance 相关最强且跨语种比词错误率稳健，代价是需要成对参考与更大模型开销。",
+  "originalTitle": "Objective Intelligibility Prediction Using Distance Metrics on Speech Foundation Model Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13046.pdf",
+  "readerTitle": "不训练也能估可懂度：Whisper 末端表示加分布距离何时比词错误率更稳",
+  "schemaVersion": 1
+}

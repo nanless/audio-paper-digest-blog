@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.12085",
+  "abstract": "Checking Quran recitation from an ASR transcript requires distinguishing unresolved mistakes from repetitions, repairs, opening formulas and accepted spelling differences. We report a completed human annotation of 100 production recording cases: 348 scored units and 162 localized events across ten combined labels. An executable evaluator scores labels and word positions together. A plain diff reaches label-aware F1 0.525 and localization F1 0.826; adapted production cleaner/alignment components reach 0.518 and 0.786, with exact-span F1 0.505 for both. Correcting the adapter&#39;s word coordinates recovers all five annotated repetition events, showing why annotation interfaces must be checked before interpreting baseline failures. In a preliminary pilot, eight single 20-minute runs across three coding agents and eight models span label-aware F1 0.143 to 0.892: seven land far above every baseline, and one collapses below the naive diff from a missing normalization step. Across the six, 970 of 972 gold-event instances draw an overlapping prediction, so what remains is not detection but convention: span extent, and the labels whose boundary is stipulated by adjudication rather than visible in the text. Seven of 162 events defeat all six same-day runs, five of them one orthographic rule, and the strongest run still misses the same ones. No run annotated before building, so the pilot measures the algorithm half of the task only.",
+  "abstractSha256": "9730026e93f04de847fc3e8a8eb6108addd4bc99655559e82f44431748f653e6",
+  "arxivId": "2609.12085",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据标注",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据标注",
+      "primaryMethodId": "method.data-annotation",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LemoniLab FZCO (lemonilab.com)"
+      ],
+      "name": "Mohamad Al Mdfaa"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Nursultan Askarbekuly"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Ahmed Helaly"
+    },
+    {
+      "affiliations": [
+        "LemoniLab FZCO (lemonilab.com)"
+      ],
+      "name": "Ubai Sandouk"
+    },
+    {
+      "affiliations": [
+        "Innopolis University (innopolis.ru)"
+      ],
+      "name": "Manuel Mazzara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把古兰经背诵 ASR 转写与标准文本的差异标注为带位置的类型化事件，用可执行评分器同时考核标签与跨度，并报告朴素差分、生产组件适配与编码智能体试点的对照与代价。",
+  "originalTitle": "What Counts as a Mistake? Annotating Recitation Events in Quran Memorization Transcripts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.12085.pdf",
+  "readerTitle": "什么算错？把背诵转写差异分成错误、修正与可接受形式",
+  "schemaVersion": 1
+}
