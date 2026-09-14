@@ -130,7 +130,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 | 45 | [不用中间文本转写：以识别语义直接约束唇手到语音的统一生成](/posts/conference-aaai-2026-conference-paper-id-40643-b60d827956/) | [UniCUE: Unified Recognition and Generation Framework for Chinese Cued Speech Video\-to\-Speech Generation](/posts/conference-aaai-2026-conference-paper-id-40643-b60d827956/) | **7.2/10** · 创新 1.5/2 · 技术严谨 1.0/1.5 · 实验充分 1.0/1.5 · 清晰度 0.8/1 · 影响力 0.8/1.5 · 开源 1.0/1.5 · 可复现 0.1/0.5 · 工程/实践 1.0/1.5 | 前50% | 方法研究 | #音视频语音合成 |
 | 46 | [先去噪再补缺：TMDC 用两阶段应对缺失与噪声并存的多模态情感分析](/posts/conference-aaai-2026-conference-paper-id-37212-6b932859c9/) | [TMDC: A Two\-Stage Modality Denoising and Complementation Framework for Multimodal Sentiment Analysis with Missing and Noisy Modalities](/posts/conference-aaai-2026-conference-paper-id-37212-6b932859c9/) | **7.1/10** · 创新 1.2/2 · 技术严谨 1.0/1.5 · 实验充分 1.2/1.5 · 清晰度 0.8/1 · 影响力 0.8/1.5 · 开源 1.0/1.5 · 可复现 0.1/0.5 · 工程/实践 1.0/1.5 | 前50% | 方法研究 | #语音情感识别 |
 | 47 | [不抠嘴唇像素：用语速与情绪指令做对齐的电影配音](/posts/conference-aaai-2026-conference-paper-id-38298-de5d37762a/) | [InstructDubber: Instruction\-based Alignment for Zero\-shot Movie Dubbing](/posts/conference-aaai-2026-conference-paper-id-38298-de5d37762a/) | **7.1/10** · 创新 1.4/2 · 技术严谨 1.2/1.5 · 实验充分 1.2/1.5 · 清晰度 0.8/1 · 影响力 1.0/1.5 · 开源 0.2/1.5 · 可复现 0.3/0.5 · 工程/实践 1.0/1.5 | 前50% | 方法研究 | #语音配音 |
-| 48 | [多模态指令导航：用语言、图像和声音共同消除目标歧义](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/) | [NaVLA$^2$: A Vision\-Language\-Audio\-Action Model for Multimodal Instruction Navigation](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/) | **7.1/10** · 创新 1.4/2 · 技术严谨 1.2/1.5 · 实验充分 1.0/1.5 · 清晰度 0.8/1 · 影响力 0.7/1.5 · 开源 1.0/1.5 · 可复现 0.1/0.5 · 工程/实践 0.9/1.5 | 前50% | 方法研究 | #声源定位 |
+| 48 | [多模态指令导航：用语言、图像和声音共同消除目标歧义](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/) | [NaVLA\(^2\): A Vision\-Language\-Audio\-Action Model for Multimodal Instruction Navigation](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/) | **7.1/10** · 创新 1.4/2 · 技术严谨 1.2/1.5 · 实验充分 1.0/1.5 · 清晰度 0.8/1 · 影响力 0.7/1.5 · 开源 1.0/1.5 · 可复现 0.1/0.5 · 工程/实践 0.9/1.5 | 前50% | 方法研究 | #声源定位 |
 | 49 | [看得见情绪还不够，可信才能用：MultiMood 的多模态分工与对齐代价](/posts/conference-aaai-2026-conference-paper-id-40412-6b6f5029c7/) | [Reinforce Trustworthiness in Multimodal Emotional Support System](/posts/conference-aaai-2026-conference-paper-id-40412-6b6f5029c7/) | **7.1/10** · 创新 1.2/2 · 技术严谨 1.2/1.5 · 实验充分 1.1/1.5 · 清晰度 0.7/1 · 影响力 0.8/1.5 · 开源 1.0/1.5 · 可复现 0.1/0.5 · 工程/实践 1.0/1.5 | 前50% | 方法研究 | #语音情感识别 |
 | 50 | [不加噪声也能留后门：用整体起伏的频率与响度曲线触发说话人识别](/posts/conference-aaai-2026-conference-paper-id-36961-58d3ad61f3/) | [Modulation\-Based Backdoors: Leveraging Amplitude and Frequency Patterns to Attack Speaker Recognition](/posts/conference-aaai-2026-conference-paper-id-36961-58d3ad61f3/) | **7.0/10** · 创新 1.2/2 · 技术严谨 1.0/1.5 · 实验充分 1.1/1.5 · 清晰度 0.7/1 · 影响力 0.8/1.5 · 开源 1.2/1.5 · 可复现 0.3/0.5 · 工程/实践 0.7/1.5 | 前50% | 方法研究 | #说话人识别 |
 | 51 | [为每段呼吸声选增强：PASA 用两阶段混合策略平衡效率与个性化](/posts/conference-aaai-2026-conference-paper-id-37093-d314857847/) | [PASA: Progressive\-Adaptive Spectral Augmentation for Automated Auscultation in Data\-Scarce Environments](/posts/conference-aaai-2026-conference-paper-id-37093-d314857847/) | **7.0/10** · 创新 1.2/2 · 技术严谨 1.0/1.5 · 实验充分 1.0/1.5 · 清晰度 0.7/1 · 影响力 0.6/1.5 · 开源 1.2/1.5 · 可复现 0.3/0.5 · 工程/实践 1.0/1.5 | 前50% | 方法研究 | #音频分类 |
@@ -596,7 +596,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 📌 **核心摘要**
 
-该工作研究以大语言模型（Large Language Model，LLM）为骨干的语音语言模型（Speech\-Language Model，SLM）如何同时保留文本知识与生成高质量语音，输入为文本指令与说话人参考，输出为特定音色的连续语音，难点是语音每秒数百个离散码而文本每秒不足20个词的信息密度失衡，以及语义与声学目标互相干扰。方法链分三步：首先在统一SLM框架下对比耦合、半解耦、全解耦三类语音分词器，语音码经由预训练神经声码器解码器重建波形；接着引入多码预测（Multi\-Token Prediction，MTP），将相邻$g$个语音码编组，用同一隐向量$h\_j$并行预测组内全部码，输入侧拼接组内嵌入再经融合网络压缩；最后引入说话人感知生成，用预训练音色提取器抽取表征$X\_\{user\}$作为上下文前缀，并用角色扮演知识问答做联合微调。与已有方法相比，关键差异是把语义与韵律音色彻底解耦并用组并行预测替代逐码预测（Next Token Prediction，NTP），把对齐负担从长序列建模转移到高密度隐状态建模。在LibriTTS Test\-Clean上解耦MTP\-12H将词错误率（Word Error Rate，WER）从6\.07降至3\.01，合成成功率达1\.00，并声称最高约12倍解码加速；在RoleTriviaQA域内以12\.0%的精确匹配（Exact Match，EM）和23\.8%的F1超过LLM骨干与全部耦合基线。该结论主要在英文朗读与合成角色问答上验证，对真实噪声、自发对话、强情感韵律及跨语言外推尚未验证。原文未披露训练推理部署成本与完整超参数。
+该工作研究以大语言模型（Large Language Model，LLM）为骨干的语音语言模型（Speech\-Language Model，SLM）如何同时保留文本知识与生成高质量语音，输入为文本指令与说话人参考，输出为特定音色的连续语音，难点是语音每秒数百个离散码而文本每秒不足20个词的信息密度失衡，以及语义与声学目标互相干扰。方法链分三步：首先在统一SLM框架下对比耦合、半解耦、全解耦三类语音分词器，语音码经由预训练神经声码器解码器重建波形；接着引入多码预测（Multi\-Token Prediction，MTP），将相邻\(g\)个语音码编组，用同一隐向量\(h\_j\)并行预测组内全部码，输入侧拼接组内嵌入再经融合网络压缩；最后引入说话人感知生成，用预训练音色提取器抽取表征\(X\_\{user\}\)作为上下文前缀，并用角色扮演知识问答做联合微调。与已有方法相比，关键差异是把语义与韵律音色彻底解耦并用组并行预测替代逐码预测（Next Token Prediction，NTP），把对齐负担从长序列建模转移到高密度隐状态建模。在LibriTTS Test\-Clean上解耦MTP\-12H将词错误率（Word Error Rate，WER）从6\.07降至3\.01，合成成功率达1\.00，并声称最高约12倍解码加速；在RoleTriviaQA域内以12\.0%的精确匹配（Exact Match，EM）和23\.8%的F1超过LLM骨干与全部耦合基线。该结论主要在英文朗读与合成角色问答上验证，对真实噪声、自发对话、强情感韵律及跨语言外推尚未验证。原文未披露训练推理部署成本与完整超参数。
 
 🔗 **开源资源**
 
@@ -1859,7 +1859,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 ### 48. [多模态指令导航：用语言、图像和声音共同消除目标歧义](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/)
 
-> 英文题目：*[NaVLA$^2$: A Vision\-Language\-Audio\-Action Model for Multimodal Instruction Navigation](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/)*
+> 英文题目：*[NaVLA\(^2\): A Vision\-Language\-Audio\-Action Model for Multimodal Instruction Navigation](/posts/conference-aaai-2026-conference-paper-id-38886-29edb0a385/)*
 
 标签：#基准测试 #多模态学习 #空间音频信号 #声源定位
 
@@ -3444,7 +3444,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 📌 **核心摘要**
 
-该工作面向基于流匹配（Flow Matching，FM）的语音生成，输入为文本或退化音频等条件、输出为连续波形或梅尔频谱，难点在于常微分方程（Ordinary Differential Equation，ODE）求解需数十次神经网络评估导致推理缓慢。方法首先对最近 $K\+1$ 个潜状态沿时间轴做离散小波变换（Discrete Wavelet Transform，DWT），分为表征全局趋势的低频系数与刻画局部细节的高频系数。接着对两路系数分别用一阶泰勒（Taylor）外推估计下一时刻值，以适配不同频带的平滑性与波动性。最后经逆小波变换（Inverse DWT，IDWT）重构下一潜状态，并按两阶段调度与 ODE 求解交替执行以跳过多数模型调用。与直接缓存或降步数方法不同，该框架在频率域解耦外推，避免高频噪声污染整体轨迹且无需训练或改架构。在 LibriSpeech\-PC test\-clean 上的 F5\-TTS 评测中，6 次求解加 26 次外推将实时率因子（Real\-Time Factor，RTF）从 0\.116 降至 0\.026，词错率（Word Error Rate，WER）仅由 2\.132% 微升至 2\.175%。该结论限于所测 4 类任务与 5 个公开模型，在早期高曲率段仍需密集求解，且原文未披露训练、推理或部署成本。
+该工作面向基于流匹配（Flow Matching，FM）的语音生成，输入为文本或退化音频等条件、输出为连续波形或梅尔频谱，难点在于常微分方程（Ordinary Differential Equation，ODE）求解需数十次神经网络评估导致推理缓慢。方法首先对最近 \(K\+1\) 个潜状态沿时间轴做离散小波变换（Discrete Wavelet Transform，DWT），分为表征全局趋势的低频系数与刻画局部细节的高频系数。接着对两路系数分别用一阶泰勒（Taylor）外推估计下一时刻值，以适配不同频带的平滑性与波动性。最后经逆小波变换（Inverse DWT，IDWT）重构下一潜状态，并按两阶段调度与 ODE 求解交替执行以跳过多数模型调用。与直接缓存或降步数方法不同，该框架在频率域解耦外推，避免高频噪声污染整体轨迹且无需训练或改架构。在 LibriSpeech\-PC test\-clean 上的 F5\-TTS 评测中，6 次求解加 26 次外推将实时率因子（Real\-Time Factor，RTF）从 0\.116 降至 0\.026，词错率（Word Error Rate，WER）仅由 2\.132% 微升至 2\.175%。该结论限于所测 4 类任务与 5 个公开模型，在早期高曲率段仍需密集求解，且原文未披露训练、推理或部署成本。
 
 🔗 **开源资源**
 
@@ -3573,7 +3573,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 📌 **核心摘要**
 
-输入为单张源人像$S$、目标音频序列$a\_\{1:T\}$与七维情绪概率向量$e$，输出为唇动同步且情感一致的说话人视频$\\hat\{D\}\_\{1:T\}$，难点在于悲伤压嘴角、喜悦提颧肌等发音与情感强耦合无法被唇形、表情、姿态独立分支建模。方法先以自监督自编码器学习正交运动字典$M$，将人脸运动表示为基线性组合，为后续情感建模提供完备的潜在表示。接着以可学习选择器切出情绪条件子空间$S\_e$并以投影替换实现情感迁移，使同一发音在不同情感下保留耦合形变而非割裂编辑。最后由层渐进交叉注意力融合音频、情绪与参考运动并调制DiT速度场，经十步常微分方程采样生成运动轨迹并渲染成像，相对已有独立分支或拼接注入的关键差异在于低层保时序、高层注情感，从而避免模态干扰并兼顾实时性。在MEAD测试集下，本方法的情绪准确率Accemo为82\.05，高于Sonic基线的77\.78。该结论适用边界受限于近正面、英语摆拍的七类基本情绪语料，对大角度转动、连续细粒度情感与多语言韵律的外推尚未验证。推理开销方面单张Ampere架构80GB硬件上吞吐达91\.23 FPS且正文称消费级设备约75 FPS，三阶段训练使用VFHQ等32万片段，部署仅需十步采样因而延迟较低。
+输入为单张源人像\(S\)、目标音频序列\(a\_\{1:T\}\)与七维情绪概率向量\(e\)，输出为唇动同步且情感一致的说话人视频\(\\hat\{D\}\_\{1:T\}\)，难点在于悲伤压嘴角、喜悦提颧肌等发音与情感强耦合无法被唇形、表情、姿态独立分支建模。方法先以自监督自编码器学习正交运动字典\(M\)，将人脸运动表示为基线性组合，为后续情感建模提供完备的潜在表示。接着以可学习选择器切出情绪条件子空间\(S\_e\)并以投影替换实现情感迁移，使同一发音在不同情感下保留耦合形变而非割裂编辑。最后由层渐进交叉注意力融合音频、情绪与参考运动并调制DiT速度场，经十步常微分方程采样生成运动轨迹并渲染成像，相对已有独立分支或拼接注入的关键差异在于低层保时序、高层注情感，从而避免模态干扰并兼顾实时性。在MEAD测试集下，本方法的情绪准确率Accemo为82\.05，高于Sonic基线的77\.78。该结论适用边界受限于近正面、英语摆拍的七类基本情绪语料，对大角度转动、连续细粒度情感与多语言韵律的外推尚未验证。推理开销方面单张Ampere架构80GB硬件上吞吐达91\.23 FPS且正文称消费级设备约75 FPS，三阶段训练使用VFHQ等32万片段，部署仅需十步采样因而延迟较低。
 
 🔗 **开源资源**
 
@@ -3853,7 +3853,7 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 📌 **核心摘要**
 
-面向沉浸式四维场景探索，任务输入为单目视频$V\_s$与任意目标相机轨迹$T\_r$，输出为新视角动态视频$V\_r$与随视点和时间变化的双耳空间音频$A\_b$，难点在于动态几何、运动声源与运动听者需时空对齐且缺乏四维空间音频基准。第一阶段动态场景与单声道音频生成用TrajectoryCrafter合成自由视点视频并估计深度点云，同时用MMAudio生成语义对齐单声道信号，为后续提供视觉与听觉先验。第二阶段三维声源定位与追踪用GroundingGPT逐帧做像素级框定位并取中心，反投影到深度后经邻域平均与DBSCAN去噪及线性插值得到平滑声源轨迹，同时以目标相机位姿作为接收者轨迹送入下一步。第三阶段物理驱动合成按分段静止假设用gpuRIR基于镜像源法计算左右耳房间脉冲响应，再对单声道分块卷积叠加并归一化得到双耳信号。与ViSAGe等端到端学习方法不同，该框架解耦语义合成与空间渲染，以物理传播显式建模方向性与混响，从而支持动态听者自由视点变化并实现零样本空间化。在精选STARSS23乐器透视片段评测下，Sonic4D的定位感知F分数为4\.0%，高于ViSAGe的0\.4%。该结论适用边界仅为单主导声源室内混响短片段，室外多声源与长时漂移尚未验证，且原文未披露训练、推理或部署成本。
+面向沉浸式四维场景探索，任务输入为单目视频\(V\_s\)与任意目标相机轨迹\(T\_r\)，输出为新视角动态视频\(V\_r\)与随视点和时间变化的双耳空间音频\(A\_b\)，难点在于动态几何、运动声源与运动听者需时空对齐且缺乏四维空间音频基准。第一阶段动态场景与单声道音频生成用TrajectoryCrafter合成自由视点视频并估计深度点云，同时用MMAudio生成语义对齐单声道信号，为后续提供视觉与听觉先验。第二阶段三维声源定位与追踪用GroundingGPT逐帧做像素级框定位并取中心，反投影到深度后经邻域平均与DBSCAN去噪及线性插值得到平滑声源轨迹，同时以目标相机位姿作为接收者轨迹送入下一步。第三阶段物理驱动合成按分段静止假设用gpuRIR基于镜像源法计算左右耳房间脉冲响应，再对单声道分块卷积叠加并归一化得到双耳信号。与ViSAGe等端到端学习方法不同，该框架解耦语义合成与空间渲染，以物理传播显式建模方向性与混响，从而支持动态听者自由视点变化并实现零样本空间化。在精选STARSS23乐器透视片段评测下，Sonic4D的定位感知F分数为4\.0%，高于ViSAGe的0\.4%。该结论适用边界仅为单主导声源室内混响短片段，室外多声源与长时漂移尚未验证，且原文未披露训练、推理或部署成本。
 
 🔗 **开源资源**
 
