@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15128",
+  "abstract": "Streaming omni-modal models must decide what and when to answer from the video chunks and synchronized audio observed so far. Visual cues often support an interpretation before an utterance or sound event is complete. If that interpretation enters memory as a fact, later reasoning can keep relaying it even after audio contradicts it. We call this failure premature cross-modal commitment. We propose Omni-Streaming Thinking (OST), which generates structured outputs that include evidence observed so far, forecasts of future evidence, and claims based on this evidence. Each claim is initially marked as pending and linked to a future verification interval. Audio and visual evidence are stored separately, and OST checks a claim against the evidence from the specified modality at the end of the verification interval. When contradictory evidence is detected, a refutation process reduces the influence of the claim and its dependent states, and then guides a state update using the new evidence. An answer gate decides whether the answer-critical claims meet the conditions for giving a response. Using a frozen Qwen3-Omni-30B-A3B-Instruct backbone with lightweight adaptation, OST outperforms the strongest open baselines on five streaming and audio-visual benchmarks by more than 10% relative on average. We also introduce OST-DiagBench, which holds video fixed and edits audio to test agreement, absence, contradiction, coexistence, and subtitle-speech conflict. OST reaches d-prime = 2.95, compared with at most 1.38 for open baselines, while reducing vision-induced auditory hallucinations.",
+  "abstractSha256": "d756345363f6375b7f9e8e37e2dfc3406de340f73e51b0c492aa3e30536e4246",
+  "arxivId": "2609.15128",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Hong Kong",
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Enjun Du"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Siyi Liu"
+    },
+    {
+      "affiliations": [
+        "University of Sussex"
+      ],
+      "name": "Ziyu Zheng"
+    },
+    {
+      "affiliations": [
+        "LIGHTSPEED"
+      ],
+      "name": "Jingyu Li"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherProject page:"
+      ],
+      "name": "Yiwen Guo"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Yongqi Zhang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Difan Zou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对流式中视觉先成熟、音频后到达导致的过早跨模态承诺问题，OST 用未来声明加到期验证加谱系回撤加回答门控组织记忆，在冻结 Qwen3-Omni-30B-A3B 上提升流式与音视基准并在诊断集上降低视觉诱发的听觉幻觉，但重写对比与多阶段训练带来额外推理与训练代价。",
+  "originalTitle": "Omni-Streaming Thinking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15128.pdf",
+  "readerTitle": "先看到的不等于已证实：用未来可验声明管住流式音视记忆",
+  "schemaVersion": 1
+}

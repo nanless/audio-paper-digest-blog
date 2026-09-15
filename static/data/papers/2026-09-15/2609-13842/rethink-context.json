@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13842v1",
+  "abstract": "Recent advances in speech synthesis and voice conversion have made deepfake speech increasingly realistic, making generalization to unseen spoofing attacks a critical challenge. Pretrained speech and audio models offer a promising direction for improving robustness to such unseen attacks. Self-supervised learning (SSL) models capture fine-grained, low-level acoustic characteristics, whereas Auditory Large Language Models (ALLMs) provide higher-level contextual representations. These complementary views can provide useful cues for improving generalization to unseen attacks. However, direct fusion does not explicitly disentangle information shared across the two views from view-specific complementary information, limiting effective cross-view integration. To address this, we propose CRAF, a cross-view residual-aware fusion framework that uses ALLM-guided cross-view attention to enrich SSL representations and adopts ALLM as a high-level reference to separate ALLM-explainable information from complementary SSL residual information. The residual is selectively refined through adaptive gating and integrated through SSL-primary fusion. Experiments on ASVspoof 5 show that CRAF with Kimi-Audio achieves an EER of 5.96% and a minDCF of 0.1192, demonstrating robustness to unseen spoofing attacks.",
+  "abstractSha256": "240a82dd6748c8b5016905b90ca4d3d5cd6f98ff2655baf1fa9e6bf3d2c47aff",
+  "arxivId": "2609.13842",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13842v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh-Xuan Phan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khalid Zaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Candy Olivia Mawalim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masashi Unoki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对未见伪造攻击泛化难的问题，CRAF 以 SSL 为主、ALLM 为高层引导做残差感知融合，在 ASVspoof 5 上 Kimi-Audio 配置报告评估 EER 为 5.96% 与 minDCF 为 0.1192，但攻击间差异与门控依赖仍是代价。",
+  "originalTitle": "CRAF: Cross-View Residual-Aware Fusion for Deepfake Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13842v1.pdf",
+  "readerTitle": "保住细粒度声学线索再借高层语义：CRAF 的不对称残差融合",
+  "schemaVersion": 1
+}

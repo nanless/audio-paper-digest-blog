@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13595v1",
+  "abstract": "Predicting potential dangers is core to safety. Forecasting the presence of other traffic agents is core to danger prediction. Occluded traffic agents challenge detection systems as they might become visible too late, leaving the autonomous vehicle too little time to identify, plan and act accordingly in a robust and safe way. Previous works proved that auditory perception, being omnidirectional and not constrained by a field-of-view, provides fundamental cues for early spotting of different road users, even when hidden by other vehicles or infrastructures. Yet, those contributions deal with scenarios with only one vehicle present, and they either identify the type of vehicle or estimate its direction of arrival. In this work, we move forward, and propose a multi-task system which, simultaneously, estimates the number of vehicles present, their type, and their direction of arrival. Our methodological contribution is a two-stage pipeline: a self-supervised pre-training stage inspired by the Joint- Embedding Predictive Architecture (JEPA) applied directly to multichannel raw waveforms, followed by supervised multi-task fine-tuning with a bidirectional LSTM and three classification heads. The pre-training stage trains the encoder without labels, pushing it to predict the latent representation of a future audio segment from its past context. To train and test our framework, since no suitable dataset was publicly available, we collected an ad-hoc one covering Non-Line-Of-Sight scenarios with multiple traffic agents simultaneously operating. Experimental evaluation shows that our method outperforms the state of the art; it also proves that our design choice allows the model to learn robust representations, which can be transferred to an unseen driving scenario, maintaining reasonable and stable performance.",
+  "abstractSha256": "7678731b1d42be636aca1e6007cd17e49ad25cab6cc440d32bdb430ed2ae7819",
+  "arxivId": "2609.13595",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13595v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Katerina Vinciguerra"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Moritz Brandes"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Danilo Hollosi"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Letizia Marchegiani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多车同时遮挡的非视距预警问题，该工作在原始 8 通道波形上做隔帧未来潜表示预测预训练，再用双向长短期记忆网络做三头微调，在 T 路口验证取得方向与计数与车型同步提升，代价是仅验证至多 2 辆车且跨场景需少样本适配。",
+  "originalTitle": "Predictive audio representations for early detection and tracking of hidden dynamic objects",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13595v1.pdf",
+  "readerTitle": "遮挡下先听后看：用未来潜表示预训练同时数车辨车型判方向",
+  "schemaVersion": 1
+}

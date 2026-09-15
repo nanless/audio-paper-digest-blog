@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14145v1",
+  "arxivId": "2609.14145",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14145v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiyang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Langqing Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yupei Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Björn Schuller"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14145v1",
+  "originalTitle": "A New Transformer-Based Approach for Audio-Based Kinship Verification and a New Uncontrolled Mandarin Kinship Speech Dataset",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14145v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

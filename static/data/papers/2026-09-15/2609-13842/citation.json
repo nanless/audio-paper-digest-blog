@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13842v1",
+  "arxivId": "2609.13842",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13842v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh-Xuan Phan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khalid Zaman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Candy Olivia Mawalim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masashi Unoki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13842v1",
+  "originalTitle": "CRAF: Cross-View Residual-Aware Fusion for Deepfake Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13842v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

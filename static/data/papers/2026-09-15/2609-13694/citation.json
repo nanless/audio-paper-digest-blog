@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13694v1",
+  "arxivId": "2609.13694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13694v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haopeng Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiun-Ting Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daisuke Saito"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nobuaki Minematsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13694v1",
+  "originalTitle": "Subphonetic Acoustic Modeling via Optimal Transport for Pronunciation Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13694v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

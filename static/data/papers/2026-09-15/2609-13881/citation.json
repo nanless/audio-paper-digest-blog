@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13881v1",
+  "arxivId": "2609.13881",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13881v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Mobile Multimedia Laboratory, Department of Informatics, School of Information Sciences and Technology, Athens University of Economics and Business, Greece"
+      ],
+      "name": "Konstantinos Tsioutas"
+    },
+    {
+      "affiliations": [
+        "Mobile Multimedia Laboratory, Department of Informatics, School of Information Sciences and Technology, Athens University of Economics and Business, Greece"
+      ],
+      "name": "George Xylomenos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13881v1",
+  "originalTitle": "Musical Timing in Studio Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13881v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

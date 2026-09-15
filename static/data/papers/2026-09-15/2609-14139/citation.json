@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14139v1",
+  "arxivId": "2609.14139",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14139v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Luqi Sun"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "University of Michigan",
+        "Ann Arbor, USA"
+      ],
+      "name": "Emily Mower Provost"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University",
+        "Pittsburgh, USA"
+      ],
+      "name": "Brian MacWhinney"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14139v1",
+  "originalTitle": "Robust Cross-Domain Speech-Based Alzheimer's Disease Detection via Iterative Adversarial Self-Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14139v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

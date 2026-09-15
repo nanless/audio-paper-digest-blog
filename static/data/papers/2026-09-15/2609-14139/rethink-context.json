@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14139v1",
+  "abstract": "As Alzheimer's disease (AD) has increasingly become a major global public health issue, speech-based AD detection has attracted widespread attention. However, most existing methods are trained and evaluated on a single dataset, often leading to severe cross-domain performance degradation due to reliance on dataset-specific artifacts rather than disease-related speech cues. In real-world applications, reliable Alzheimer's disease detection requires models that are robust to variations in recording environments, speakers and data collection conditions. To address this challenge, this paper adopts unsupervised domain adaptation to learn robust, domain-invariant feature representations in the absence of target-domain diagnosis labels. On this basis, a novel unsupervised domain adaptation method, Iterative Adversarial Self-Training (IAST), is proposed. Results demonstrate that IAST significantly improves the generalization ability and robustness under various cross-domain settings.",
+  "abstractSha256": "82d3e06b50b26d0530e22c000ee42ec0a032bc161ff4bd18ad4811c7cbdbca68",
+  "arxivId": "2609.14139",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14139v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Luqi Sun"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Aurosweta Mahapatra"
+    },
+    {
+      "affiliations": [
+        "University of Michigan",
+        "Ann Arbor, USA"
+      ],
+      "name": "Emily Mower Provost"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University",
+        "Pittsburgh, USA"
+      ],
+      "name": "Brian MacWhinney"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University",
+        "Baltimore, USA"
+      ],
+      "name": "Berrak Sisman"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单数据集训练的语音阿尔茨海默检测在换录音与采集条件后大幅掉点的问题，论文用三种表示能力的模型对比无监督域适应，并提出交替做对抗对齐与高置信伪标签自训练的 IAST，在 Lu 目标域上取得最强或并列最强跨域准确率，但源域精度有时轻微下降。",
+  "originalTitle": "Robust Cross-Domain Speech-Based Alzheimer's Disease Detection via Iterative Adversarial Self-Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14139v1.pdf",
+  "readerTitle": "跨采集条件仍能判准吗：用迭代对抗自训练把源域边界搬向目标域",
+  "schemaVersion": 1
+}

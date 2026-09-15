@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13413v1",
+  "arxivId": "2609.13413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13413v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Lucas Rafael Stefanel Gris"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alef Iury Siqueira Ferreira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Mato Grosso, Cuiabá, Brazil"
+      ],
+      "name": "Frederico Santos de Oliveira"
+    },
+    {
+      "affiliations": [
+        "São Paulo State University, São Paulo, Brazil"
+      ],
+      "name": "Augusto Seben da Rosa"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alexandre Costa Ferro Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Arlindo Rodrigues Galvão Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Anderson da Silva Soares"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13413v1",
+  "originalTitle": "CVSS-X: A Multilingual Speech-to-Speech Translation Corpus for 28 Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13413v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

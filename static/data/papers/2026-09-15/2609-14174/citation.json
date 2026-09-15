@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14174v1",
+  "arxivId": "2609.14174",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14174v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Cornell University"
+      ],
+      "name": "Bojro Das"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14174v1",
+  "originalTitle": "Inherited Heads: Audio language models track speakers with their text backbone's attention, and an attention-mass ranking retrieves a different set",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14174v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

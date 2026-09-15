@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13911v1",
+  "abstract": "In this paper, we propose DualSpecSE, a speech enhancement framework that jointly models Mel-spectrogram and complex spectrogram in a dual-path architecture for improved ASR performance and higher-quality speech reconstruction. The Mel branch learns coarse-grained acoustic representations and produces enhanced Mel-spectrograms for direct ASR usage, while the complex branch refines fine-grained spectral details for high-fidelity waveform reconstruction. Built upon the cross-band and narrow-band blocks from CleanMel, DualSpecSE introduces an interaction module and a fusion module to enable effective information exchange between the two branches. The model simultaneously outputs enhanced Mel and complex spectrogram without requiring a pretrained vocoder. Experimental results demonstrate consistent improvements in speech fidelity, perceptual quality, and ASR performance. Codes and audio samples are available.",
+  "abstractSha256": "59d4603797618fc49bc46e3784e9fcbd343ad22f66a3401c8cfe42fed2cb10fd",
+  "arxivId": "2609.13911",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13911v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingchen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziqian Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zikai Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yike Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshuai Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单做 Mel 需外接声码器而失真、单做复谱难学且伤识别的问题，DualSpecSE 用 Mel 分支保可识别成分、复谱分支保波形细节并以交互与融合连接，在 DNS2020 上 WB-PESQ 达 3.25、CHiME-4 波形输出 WER 降至 14.76%/13.21%，代价是双分支与多损失联合训练的复杂度。",
+  "originalTitle": "DualSpecSE: A Dual-Path Speech Enhancement Network Integrating Mel and Complex Spectrograms",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13911v1.pdf",
+  "readerTitle": "粗粒度保语义、细粒度保波形：DualSpecSE 为何要双路同时增强 Mel 与复谱",
+  "schemaVersion": 1
+}

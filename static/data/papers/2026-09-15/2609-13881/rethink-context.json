@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13881v1",
+  "abstract": "Studio recording techniques vary considerably, ranging from live recordings in a shared acoustic space, to isolated booth recording and overdubbing, where musicians record their parts separately, while listening to previously recorded material. These approaches differ in terms of physical co-presence, visual contact, sound leakage, and acoustic isolation, factors that may influence musical coordination. This study investigates whether the recording style affects timing precision; specifically, whether musicians performing together in the same space achieve tighter temporal coordination. To address these questions, two datasets with a total of 391 multi-track recordings were analyzed to measure the timing relationships between musicians. In addition, an automated sound-leakage detection method was employed to infer the recording conditions of each song: pairwise Mel-spectrogram similarities between the tracks were computed, and summary statistics from the resulting similarity matrices were used to identify recordings with shared acoustic content. The results suggest that recordings showing evidence of shared room acoustics and sound leakage tend to exhibit lower timing variability than highly isolated recordings, whereas overdubbing is associated with increased timing variability.",
+  "abstractSha256": "7fe3fb9a5888048074a217d7eddaf139c864acc11a6b16c1b9e1bbc6870b9965",
+  "arxivId": "2609.13881",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13881v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mobile Multimedia Laboratory, Department of Informatics, School of Information Sciences and Technology, Athens University of Economics and Business, Greece"
+      ],
+      "name": "Konstantinos Tsioutas"
+    },
+    {
+      "affiliations": [
+        "Mobile Multimedia Laboratory, Department of Informatics, School of Information Sciences and Technology, Athens University of Economics and Business, Greece"
+      ],
+      "name": "George Xylomenos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究以 391 首多轨录音为对象，用起音时间差与 Mel 谱相似度推断是否同室录音，报告有串音歌曲的时值波动中位数更低，但串音只是同室的非充分不必要指示且存在混淆。",
+  "originalTitle": "Musical Timing in Studio Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13881v1.pdf",
+  "readerTitle": "同室共奏更齐吗：用串音痕迹反推录音方式对合奏时值稳定性的影响",
+  "schemaVersion": 1
+}

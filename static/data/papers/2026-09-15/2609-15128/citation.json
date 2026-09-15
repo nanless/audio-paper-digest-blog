@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15128",
+  "arxivId": "2609.15128",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Hong Kong",
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Enjun Du"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Siyi Liu"
+    },
+    {
+      "affiliations": [
+        "University of Sussex"
+      ],
+      "name": "Ziyu Zheng"
+    },
+    {
+      "affiliations": [
+        "LIGHTSPEED"
+      ],
+      "name": "Jingyu Li"
+    },
+    {
+      "affiliations": [
+        "Independent ResearcherProject page:"
+      ],
+      "name": "Yiwen Guo"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Yongqi Zhang"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Difan Zou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15128",
+  "originalTitle": "Omni-Streaming Thinking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15128.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

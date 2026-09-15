@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14116v1",
+  "arxivId": "2609.14116",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14116v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Chin-Jou Li"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Masao Someki"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Woojeong Jin"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Yashish M. Siriwardena"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Shanil Puri"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14116v1",
+  "originalTitle": "HARP: Agentic Hybrid Retrieval and Analysis for Long-Form Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14116v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

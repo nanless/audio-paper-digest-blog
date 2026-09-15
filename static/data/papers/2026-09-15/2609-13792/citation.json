@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13792v1",
+  "arxivId": "2609.13792",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13792v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Chin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marvin Sach"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxue Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Sanders"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Erica Cooper"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Toda Tomoki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13792v1",
+  "originalTitle": "The VoiceMOS Challenge 2026: Evaluating Speech Enhancement, Emotional TTS and Accented TTS Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13792v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

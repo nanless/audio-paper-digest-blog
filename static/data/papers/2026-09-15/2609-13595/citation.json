@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13595v1",
+  "arxivId": "2609.13595",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13595v1",
+  "authors": [
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Katerina Vinciguerra"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Moritz Brandes"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Danilo Hollosi"
+    },
+    {
+      "affiliations": [
+        "M. Brandes and D. Hollosi are with the Fraunhofer Institute for Digital Media Technology IDMT, Oldenburg, Germany."
+      ],
+      "name": "Letizia Marchegiani"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13595v1",
+  "originalTitle": "Predictive audio representations for early detection and tracking of hidden dynamic objects",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13595v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

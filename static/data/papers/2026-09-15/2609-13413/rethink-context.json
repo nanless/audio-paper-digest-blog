@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13413v1",
+  "abstract": "We introduce CVSS-X, a large-scale synthetic speech-to-speech translation corpus that extends CVSS by reversing the translation direction. While CVSS translates from 21 languages into English, CVSS-X enables translation from English into 28 target languages spanning 12 language families. The corpus comprises approximately 240,000 parallel speech pairs per language, totaling over 16,000 hours, eight times larger than CVSS. We provide two variants: CVSS-X-C with two canonical voices per language, and CVSS-X-T with cross-lingual voice cloning, both fully generated. Evaluation shows comparable translation quality to CVSS with consistent performance across typologically diverse languages. Combined with CVSS, this enables research on bidirectional and multilingual speech-to-speech translation. The code is available at https://github.com/ErmisAI/XVSS-X and the dataset under CC-BY-NC 4.0 license at https://huggingface.co/datasets/lgris/XVSS-X.",
+  "abstractSha256": "0dae9a88d2a26bf87dfd43a5ac84e3c8ecf93216258d867899132ccc8cc0f897",
+  "arxivId": "2609.13413",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13413v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Lucas Rafael Stefanel Gris"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alef Iury Siqueira Ferreira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Mato Grosso, Cuiabá, Brazil"
+      ],
+      "name": "Frederico Santos de Oliveira"
+    },
+    {
+      "affiliations": [
+        "São Paulo State University, São Paulo, Brazil"
+      ],
+      "name": "Augusto Seben da Rosa"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alexandre Costa Ferro Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Arlindo Rodrigues Galvão Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Anderson da Silva Soares"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CVSS-X 把同一批英语真人录音经机器翻译转写为二十八种目标语言文本再用多语合成配音，构造每语言约二十四万对的英到多语并行语音，同管线复测显示其合成可懂度可用但自然度低于只合成英语的 CVSS，代价是受制于翻译质量与众包录音瑕疵。",
+  "originalTitle": "CVSS-X: A Multilingual Speech-to-Speech Translation Corpus for 28 Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13413v1.pdf",
+  "readerTitle": "英语向二十八语的反向补位：CVSS-X 以合成并行语音扩大翻译方向",
+  "schemaVersion": 1
+}

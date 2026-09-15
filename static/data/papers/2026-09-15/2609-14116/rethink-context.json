@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14116v1",
+  "abstract": "Long-form audio analysis requires systems to localize and integrate evidence distributed across extended recordings. While existing work primarily retrieves semantic content through structured textual representations, many real-world queries depend on acoustic evidence that is better preserved in continuous representations or raw audio. We introduce HARP (Hybrid Audio Retrieval Pipeline), an agentic framework and benchmark for systematically studying retrieval and evidence representations in long-audio analysis. Hybrid retrieval combining keyword and vector search shows the most robust performance. When paired with both metadata and retrieved audio as evidence, average answer accuracy improves by around 10% and rationale accuracy by around 6% over single-modality retrieval and evidence. Fine-grained evaluation shows that answer accuracy alone overestimates system capability and that HARP mostly follows human performance trends across query types. These results highlight the importance of combining structured retrieval with flexible access to audio evidence and evaluating long-audio systems beyond answer accuracy.",
+  "abstractSha256": "39ed70342b32a86e5bb353982d92d6cc42fe632ec662874ecf77fe3474f483cc",
+  "arxivId": "2609.14116",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14116v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Chin-Jou Li"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Masao Someki"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Woojeong Jin"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Yashish M. Siriwardena"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Shanil Puri"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University Hippocratic AI"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究长音频中分散证据的定位与整合问题，采用离线结构化元数据加按需音频片段的混合检索智能体路线，最强证据是混合检索加多模态证据比单模态平均答案准确率提高约 10 个百分点、理由准确率提高约 6 个百分点，代价是声学任务仍需灵活选择证据模态且答案正确会高估真实 grounding 能力。",
+  "originalTitle": "HARP: Agentic Hybrid Retrieval and Analysis for Long-Form Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14116v1.pdf",
+  "readerTitle": "长音频先检索再作答：混合检索与双模态证据如何分工",
+  "schemaVersion": 1
+}

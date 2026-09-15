@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13911v1",
+  "arxivId": "2609.13911",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13911v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingchen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziqian Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zikai Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yike Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshuai Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13911v1",
+  "originalTitle": "DualSpecSE: A Dual-Path Speech Enhancement Network Integrating Mel and Complex Spectrograms",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13911v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

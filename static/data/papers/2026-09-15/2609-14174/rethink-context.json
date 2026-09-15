@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14174v1",
+  "abstract": "Asked to describe what one of six speakers in a recording talks about, audio language models describe the right one on 6 to 16% of trials, below the 16.7% a guess would give. Adding a fixed bias to the attention logits of a hundred heads, under a tenth of the model's and with no training, redirects the description to whichever speaker we choose, on 90.7% to 99.0% of trials. Those heads are largely not specific to audio. Rank the text-only language model an audio model was built from, or a released model of the same family, on a written version of the task, take its top hundred heads, and carry them over unchanged: they redirect the audio model on 80.8% to 95.0% of trials, with nothing about audio entering the selection. The audio and text head sets share 66 to 74 of 100 where chance would give about 20, and the shared part alone reproduces almost all of the steering. What that does not show is that sharing is what makes the heads work: an equal-sized draw from the same discovered hundred does nearly as well, and none of our three models separates the two explanations. A second finding concerns how such heads are found. Ranking heads by how much attention they place on the segment asked about, as an established score does, or by how much of their attention moves with the question, as a per-head normalised variant does, gives top hundreds that share 69, 37 and 4 heads across our three models. In Ultravox, where they share 4, the established score's heads leave output the judge cannot place on any segment on 69.7% of trials, against 40.0% with no intervention and 1.0% for the normalised variant. That is one arm of six; on the other five the established score steers above a random draw.",
+  "abstractSha256": "89ea3521e2dc73ca21997ebc70c6afd5d58c1b5ac3819669e72292ef6b20e5ee",
+  "arxivId": "2609.14174",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14174v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Cornell University"
+      ],
+      "name": "Bojro Das"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文报告六说话人描述任务基线低于随机猜测，用 100 个头的注意力对数偏置把输出转向目标到 90% 以上，而纯文本任务选出的头可原样迁移，但饱和强度下增益多来自提示与汇点且随机对照本身波动极大。",
+  "originalTitle": "Inherited Heads: Audio language models track speakers with their text backbone's attention, and an attention-mass ranking retrieves a different set",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14174v1.pdf",
+  "readerTitle": "继承来的跟踪头：音频模型借用文本主干的位置机制选说话人",
+  "schemaVersion": 1
+}

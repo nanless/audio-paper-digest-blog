@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13291v1",
+  "abstract": "We present ScorePrompts, an interactive system in which users upload a score, receive natural-language descriptions of its musical structure, ask questions about specific passages, and inspect the corresponding analysis results in staff notation. Specialist MIR components first estimate harmony, tonality, cadences, formal boundaries, texture, and note-level roles, organizing their outputs at note, beat, measure, and piece levels. A schema-constrained language model converts these results into descriptions rather than inferring musical structure directly from raw MusicXML. For questions such as \"What changes in measures 14-18?\", a deterministic router selects the relevant measures and analytical levels and returns a concise response together with the underlying results and caveats. Verovio renders the score and links the returned information to cited measures and note-level attributes. The interface also exposes intermediate tables and disagreements between analytical levels. ScorePrompts is intended for exploratory score analysis and explanation, not score editing. The demo shows how existing analysis models, constrained language generation, Q&amp;A retrieval, and notation-based visualization can provide natural-language access to symbolic music analysis while keeping intermediate results inspectable.",
+  "abstractSha256": "00a6ebf4abe95e9e11742363faa6b59590a55c2b3192856def79d50229d969ca",
+  "arxivId": "2609.13291",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13291v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音乐理解",
+    "rankBucket": "后50%",
+    "score": 4.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emmanouil Karystinaios"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "ScorePrompts 针对用自然语言探索 MusicXML 乐谱结构的问题，选择先用固定 MIR 组件栈构造音符、拍、小节、乐曲四级对齐表示再做受约束语言生成与确定性问答， demo 贯穿单谱四阶段流程，代价是只面向机器可读西方调性乐谱且未验证生成句与证据的语义忠实性与音乐学正确性。",
+  "originalTitle": "ScorePrompts: Natural-Language Exploration of Symbolic Music Scores through Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13291v1.pdf",
+  "readerTitle": "先分析再说话：ScorePrompts 把乐谱解读固定在可检查的证据上",
+  "schemaVersion": 1
+}

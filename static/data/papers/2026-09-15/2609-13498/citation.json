@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13498v1",
+  "arxivId": "2609.13498",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.13498v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christos Petrocheilos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cleopatra Papadopoulou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chris Porikis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ioakeim Perros"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ayoub Kirouane"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Themistoklis Nikolis"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13498v1",
+  "originalTitle": "Building a Production Greek-English Speech Recognizer",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13498v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

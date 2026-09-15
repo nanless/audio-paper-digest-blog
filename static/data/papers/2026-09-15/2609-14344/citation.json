@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14344v1",
+  "arxivId": "2609.14344",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.14344v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Quoc-Huy Trinh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh-Van Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Debesh Jha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14344v1",
+  "originalTitle": "AURA: Unified Multimodal Framework for Conversational Music Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14344v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
