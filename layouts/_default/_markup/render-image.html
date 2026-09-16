@@ -1,0 +1,31 @@
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- /*
+   The API Reader keeps the signed arXiv URL in Markdown for provenance, but
+   arXiv does not reliably serve those image URLs to GitHub Pages visitors.
+   A generated data map lets us serve the exact downloaded bytes locally
+   without changing the signed article text or its source-binding proof.
+*/ -}}
+{{- with index hugo.Data.arxiv_image_map .Destination -}}
+  {{- $src = . -}}
+{{- end -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $src = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>
+{{- /**/ -}}
