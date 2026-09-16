@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15218",
+  "arxivId": "2609.15218",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zvi Kons"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Avihu Dekel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hagai Aronowitz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishal Sunder"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ron Hoory"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15218",
+  "originalTitle": "Word Timestamps and Speaker Attribution with a Non-Autoregressive LLM",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15218.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

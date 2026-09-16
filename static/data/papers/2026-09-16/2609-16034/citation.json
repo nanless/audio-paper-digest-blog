@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16034v1",
+  "arxivId": "2609.16034",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16034v1",
+  "authors": [
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Chengli Feng"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Zhiyue Wu"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Jiahao Song"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Junming Gong"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Wenxiao Zhao"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Jing Guo"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Gang Yu"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Xiangyu Zhang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Chao Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16034v1",
+  "originalTitle": "StepAudio 3 Music Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16034v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14427",
+  "arxivId": "2609.14427",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kengo Takemoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomohiko Nakamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14427",
+  "originalTitle": "Differentiable Digital Signal Processing Mixture Model-Guided Diffusion for Synthesis Parameter Estimation from Harmonic Sound Mixtures",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14427.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

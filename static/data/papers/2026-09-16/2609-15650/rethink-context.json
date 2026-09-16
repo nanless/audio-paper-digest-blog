@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15650",
+  "abstract": "Audio anti-spoofing systems increasingly combine self-supervised learning, parameter-efficient fine-tuning, and graph-attention-based backends. However, performance gains in such systems are often entangled with concurrent changes in the backbone, fine-tuning strategy, and training protocol, making the independent contribution of graph attention design difficult to isolate. To address this issue, we conduct a systematic controlled study of the graph attention layer under a unified experimental setting. We decompose the layer into three independently testable design dimensions: scoring symmetry, temperature learnability, and routing granularity. These are instantiated as a concat-based scoring branch, a LearnT branch with learnable temperature, and a multi-temperature routing branch, respectively. Each dimension is implemented as an independently gated residual branch, enabling the evaluation of both individual variants and their combinations under the same experimental setting. Experiments on five evaluation sets with five random seeds show that the LearnT branch achieves the best average equal error rate (EER), yielding a 16.1% relative improvement over the baseline. In contrast, the multi-temperature routing branch does not improve average performance on its own, but substantially reduces cross-seed standard deviation when combined with the concat-based scoring branch. Moreover, two individually effective branches degrade performance when used together, resulting in a 25.6% relative deterioration compared with the baseline. This finding reveals strong non-additive interactions among graph attention design dimensions. Overall, the results suggest that, under parameter-constrained fine-tuning, improvements in graph attention layers depend more on capacity allocation and branch interaction than on simply adding more learnable parameters.",
+  "abstractSha256": "5a02efb705310e5248b23dcb677b2d20410cb32163c462d734ad820cfa6506bd",
+  "arxivId": "2609.15650",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Haoyu Wang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Chenyu Liu"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yushan Du"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yifan Liao"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Ningning Pan"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gongping Huang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yu Zhao"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gang Li"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Jian Luan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把 AASIST2 图注意力层拆成打分对称性、温度可学习性与路由粒度三条残差分支，在统一 LoRA 条件下用五个评测集和五个随机种子检验，发现 LearnT 平均统一等错误率最优而 GATv2 与 LearnT 联用反而明显退化，说明分支之间是非可加的相互作用。",
+  "originalTitle": "Graph Attention Design Choices Matter: A Controlled Study of LoRA-Adapted Audio Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15650.pdf",
+  "readerTitle": "图注意力加什么都有用吗：LoRA 微调下语音防伪造后端的受控拆解",
+  "schemaVersion": 1
+}

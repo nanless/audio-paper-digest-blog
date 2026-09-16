@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15616",
+  "arxivId": "2609.15616",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-Marc Valin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15616",
+  "originalTitle": "OLAC: An Overlapped Lossless Audio Codec in the Time-Domain with MDCT Compatibility",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15616.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

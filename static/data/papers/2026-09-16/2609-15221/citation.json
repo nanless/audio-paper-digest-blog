@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15221",
+  "arxivId": "2609.15221",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyi Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Pimentel-Alarcón"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zuzana Buřivalová"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Claudia Solís-Lemus"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15221",
+  "originalTitle": "MAST: Label-Efficient, Robust, and Generalizable Sound Detection for Biodiversity Monitoring via Masked Audio Pretraining and Self-Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15221.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

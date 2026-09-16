@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15215",
+  "arxivId": "2609.15215",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanfeng Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yan Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junhui Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tinggan Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wu Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyu Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ian McLoughlin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15215",
+  "originalTitle": "Augmenting Large Audio-Language Models with Frame-Level Grounding for Fine-Grained Temporal Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15215.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

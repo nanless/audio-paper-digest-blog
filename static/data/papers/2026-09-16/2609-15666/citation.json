@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15666",
+  "arxivId": "2609.15666",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Yu-Wen Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Eric Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Evelyn Ding"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Tianyi Shen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Zhou Yu"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Julia Hirschberg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15666",
+  "originalTitle": "OpenEnded: An Open-Response Speech Corpus for Speaking Proficiency Assessment with Human Annotations and ALM Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15666.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

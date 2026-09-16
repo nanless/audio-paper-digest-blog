@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15758",
+  "arxivId": "2609.15758",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thai Thi Thanh Thao Dang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengjie Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kate Knill"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15758",
+  "originalTitle": "Sequential Adapter Stacking for Cross-Lingual Low-Resource ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15758.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

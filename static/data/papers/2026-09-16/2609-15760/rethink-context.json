@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15760",
+  "abstract": "Latest advances in neural directional filtering show exceptional results in adapting the direction and shape of directivity patterns during the inference phase. However, in the existing methods for adapting directivity patterns during inference, important real-world constraints have been disregarded. Particularly for hearing devices, scenarios are often much more dynamic, microphone positions vary with head diameter and hearing aid placement, head-shadow effects occur, and strict latency constraints apply. In this work, we propose a novel low-latency (10 ms) deep neural network (DNN) taking the above requirements of hearing devices into account. As in recent work, we use feature-wise linear modulation (FiLM) to steer the directivity patterns during testing. To preserve the desired directivity pattern, a loss function is proposed that maintains the spectral cross-channel relationships. Interestingly, we are able to achieve similar results to methods with relaxed latency constraints.",
+  "abstractSha256": "37eb54036adba72a6b5205ae7af4dd299100df46ffd955a22ae95f923df56431",
+  "arxivId": "2609.15760",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lennart Uphaus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "André Merboldt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Markus Hofbauer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对助听器 10 ms 延迟与头影效应下的可转向增强问题，论文提出 FiLM 条件化的 OnlineSpatialNet 与 IPD 相位保持损失，在 8 ms 窗条件下恢复指向性并在 PESQ/ESTOI/SI-SDR 上接近 32 ms 基线，代价是仍需固定主瓣宽度与衰减上限且依赖仿真 HARTF 训练。",
+  "originalTitle": "Directivity-Conditioned Low-Latency Neural Filtering for Speech Enhancement in Hearing Aids",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15760.pdf",
+  "readerTitle": "低延迟下还要能转向：FiLM-OSN 如何保住指向性与双耳关系",
+  "schemaVersion": 1
+}

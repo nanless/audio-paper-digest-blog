@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15650",
+  "arxivId": "2609.15650",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Haoyu Wang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Chenyu Liu"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yushan Du"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yifan Liao"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Ningning Pan"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gongping Huang"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yu Zhao"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gang Li"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics, Chengdu, China MiLM Plus, Xiaomi Inc., Beijing, China School of Electronic Information, Wuhan University, Wuhan, China NERCMS, School of Computer Science, Hubei Luojia Laboratory, Wuhan University, Wuhan, China"
+      ],
+      "name": "Jian Luan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15650",
+  "originalTitle": "Graph Attention Design Choices Matter: A Controlled Study of LoRA-Adapted Audio Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15650.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

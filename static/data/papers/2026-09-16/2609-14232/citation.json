@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14232",
+  "arxivId": "2609.14232",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaodong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengshi Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rodrigo C. de Lamare"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14232",
+  "originalTitle": "Gaussian-trigonometric functional link artificial neural network: design and analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14232.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

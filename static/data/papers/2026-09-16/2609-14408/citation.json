@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14408",
+  "arxivId": "2609.14408",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siddhanth Sridhar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreya Chaurasia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Baddela Sai Yaswantha Reddy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Deepak Parmar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shylaja S S"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14408",
+  "originalTitle": "Dynamic Learning Solutions: A System for Personalized Educational Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14408.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

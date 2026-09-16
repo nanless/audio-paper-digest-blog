@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16535v1",
+  "abstract": "Emergency vehicle detection in autonomous driving is a safety-critical perception task that demands robustness under diverse and adverse real-world conditions. Existing approaches rely on a single modality, either audio or video, which leads to systematic failure when that modality is degraded: microphone-based systems fail in noisy urban environments, and camera-based systems fail at night or under occlusion. This report presents AVNet, a multimodal audio-visual transformer that classifies emergency vehicles (ambulance, fire engine, police car) and road background using both audio and video, while gracefully handling the absence of either modality at inference time. AVNet introduces three key contributions: (1) a temporally aligned cross-modal fusion module that performs second-level cross-attention between audio spectrogram tokens and video frame tokens, exploiting their exact temporal correspondence without any learned alignment mechanism; (2) learned null embeddings that substitute for missing modality tokens, enabling a single unified model to operate in audio-only, video-only, or joint audio-visual mode without retraining; and (3) a knowledge distillation training strategy in which specialist unimodal teacher models transfer inter-class dark knowledge into the multimodal student fusion branch via soft probability targets. Evaluated on 281 clips from the Google AudioSet dataset, AVNet achieves 66.6% overall accuracy in audio-visual mode, outperforming the audio-only branch by +10.4% and the video-only branch by +15.0%. The largest per-class gain is observed for the hardest class, Ambulance, where fusion achieves +29.5% over either unimodal branch alone, demonstrating that the two modalities provide complementary information that the aligned cross attention mechanism successfully exploits.",
+  "abstractSha256": "d79325516dfc2ee9c58c031ea2c5606ab97216140053ac7081a1474c58dfa35e",
+  "arxivId": "2609.16535",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16535v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vijay John"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amar Dabaja"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对救护车、消防车、警车与道路背景四分类问题，AVNet 用逐秒对齐的视频查音频交叉注意力做融合，并用单模态教师的软分布蒸馏融合分支，在 281 个 AudioSet 测试片段上融合达到 66.6%，但消防车出现融合低于纯音频的反例且模型容量受限于 D 等于 128。",
+  "originalTitle": "Multimodal Emergency Vehicle Classification via Audio-Visual Transformers and Knowledge Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16535v1.pdf",
+  "readerTitle": "秒级对齐加软标签：AVNet 如何让声音与画面在缺模态时仍能互补",
+  "schemaVersion": 1
+}

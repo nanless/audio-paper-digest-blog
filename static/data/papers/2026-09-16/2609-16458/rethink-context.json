@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16458v1",
+  "abstract": "Audio deepfake detectors need to transfer to languages absent from training, as multilingual speech synthesis outpaces labeled anti-spoofing resources. While detectors increasingly rely on self-supervised speech models (S3Ms), these backbones encode language-dependent structure that confounds spoof cues. We address this confound through language orthogonalization, a target-free ridge map that removes S3M variation projected onto continuous language-identification (LID) embeddings. Across six languages, six S3M backbones, and all Leave-N-Out settings, it consistently reduces EER across unseen languages. Cross-lingual EER correlates with LID-space distance, where orthogonalization yields larger gains for more distant transfers.",
+  "abstractSha256": "a5e31ae81b520035fa7d44160eba1fe06a3948ddd4d50452c93c7242c228e1c5",
+  "arxivId": "2609.16458",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16458v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ji Sub Um"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hoirin Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对训练中完全没有目标语言的跨语言伪造检测，该文用源语言真话拟合从连续语种表征到语音表征的岭映射并取残差，在六语六骨干上报告平均 9–17% 相对收益，远距离迁移收益更大，但近距离个别组合出现反例。",
+  "originalTitle": "Language Orthogonalization for Zero-Shot Cross-Lingual Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16458v1.pdf",
+  "readerTitle": "去掉语言方向：用残差做未见语言的音频伪造检测",
+  "schemaVersion": 1
+}

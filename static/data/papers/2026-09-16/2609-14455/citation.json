@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14455",
+  "arxivId": "2609.14455",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tingzhen Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rilin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiwei Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wentao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qicong Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14455",
+  "originalTitle": "Grounded in Sound: Reinforcement Learning with a Frozen Acoustic Judge to Curb ASR Insertion Hallucinations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14455.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

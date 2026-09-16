@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15453",
+  "abstract": "Airway stenosis can cause severe respiratory complications, yet its detection often relies on specialized examinations and medical imaging. This study explores the potential of acoustic AI for rapid and accessible airway stenosis detection using readily acquired patient voice recordings. We systematically investigate whether acoustic foundation models (AFMs) can extract acoustic representations associated with airway stenosis-related speech patterns. Experiments are conducted on a cohort of 748 participants from the Bridge2AI-Voice dataset, 134 with airway stenosis and 614 without. The best-performing model achieves an AUROC of 0.952 and an accuracy of 0.924 (means over five-fold cross-validation), highlighting the potential of AFMs to transfer beyond general-purpose speech applications to clinical diagnostic tasks. Further analysis reveals that the model primarily relies on connected-speech recordings rather than isolated acoustic tasks, such as sustained phonation and breathing. Overall, these results suggest that voice-based acoustic AI could complement existing diagnostic workflows by enabling rapid, low-burden, and widely accessible screening for airway stenosis.",
+  "abstractSha256": "e06f7c85a48f2f809965819fb63881142c7660a3f22b54963efa3ad04fb91de1",
+  "arxivId": "2609.15453",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Groeninger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihao Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juliana de Castilhos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sven Nebelung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Truhn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把气道狭窄检测做成患者级多录音分类，用冻结的 WavLM 第 15 层表示加 TransMIL 聚合，在 748 人五折交叉验证中报告 AUROC 为 0.952 与准确率为 0.924，而细粒度分型与严重度分级仍明显更难。",
+  "originalTitle": "Listening for Airway Stenosis: A Foundation Model-Based Method for Rapid and Accessible Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15453.pdf",
+  "readerTitle": "气道狭窄听得出来吗：冻结语音基础模型加多任务聚合的筛查路径",
+  "schemaVersion": 1
+}

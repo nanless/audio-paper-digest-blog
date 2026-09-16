@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14743",
+  "abstract": "Pure speech language models often lag behind text and speech-text language models in generating coherent content, but this gap is difficult to quantify because speech and text systems are typically evaluated with different metrics and trained on different data. We study the speech-text modality gap in a family of spoken language models, based on flow matching for continuous acoustic feature generation. We construct a unified generation-based evaluation suite that compares speech-only, text-only, and speech-text language models trained on matched data distributions and evaluated in matched generation settings. We evaluate generated continuations along multiple dimensions: semantic coherence, measured by transcribing generated speech and scoring it with a reference language model; local phonetic structure, measured by phone n-gram distributional statistics; speaker consistency and acoustic quality; and emotion-based distributional metrics. Across datasets, we find that joint speech-text modeling substantially improves semantic coherence. However, the improvement is not uniform across metrics: phone-level metrics change only modestly, speaker similarity and predicted quality are lower for speech-text continuations, while emotion-based distributional metrics improve. Compared with larger-scale speech-only models, our speech-text model closes much of the scaling gap in transcript-based semantic coherence, suggesting that text provides an efficient semantic training signal for spoken language modeling.",
+  "abstractSha256": "d62887e93bbb1b387b03dfaf510590cbde17b03dc7fc5b645c146888fe57cde9",
+  "arxivId": "2609.14743",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiawei Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在匹配数据与匹配生成设置下比较纯语音、语音文本与纯文本模型，显示内部文本流大幅降低生成困惑度但说话人相似度和预测质量偏向纯语音模型，且联合模型能逼近大得多数据规模纯语音模型的语义水平。",
+  "originalTitle": "Quantifying the Generation Modality Gap in Speech-Text Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14743.pdf",
+  "readerTitle": "加一段文本流，语音续写的语义缺口能补多少：匹配数据下的生成模态差",
+  "schemaVersion": 1
+}

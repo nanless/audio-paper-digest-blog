@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14542",
+  "abstract": "Neyshekar is presented as an open Persian read-speech corpus designed for coverage of both formal and informal language, named entities, and longer utterances. In version 6, 62,279 validated recordings totalling 99.02 hours are provided from 190 contributors, with 34,541 distinct recorded prompts. The prompt pool was assembled from human-written material, contextualised homographs, and reviewed language-model-generated text. Text entries were normalised with the shekar library, which supports both formal and informal Persian, and every submitted recording was reviewed against a common validation rubric. About 24% of released clips are classified as informal by an automatic classifier; these register labels are not human-validated. Item-level rater labels are provided for reproducible agreement estimation, opaque per-clip contributor identifiers make the speaker-disjoint partitioning auditable and support contributor-clustered uncertainty estimates, and a text-disjoint test subset is included for evaluation beyond previously seen prompts. Per-contributor recording load and reference-free signal quality are characterised for every released clip. Corpus characteristics are compared with Persian Common Voice under shared processing. Utility is assessed through two ASR architectures, three optimisation seeds, WER and CER, and independent evaluation on the public PSRB sample. Against duration-matched Common Voice training at approximately 32 hours, in-domain WER is reduced by 9.5 points for Whisper and 11.6 points for XLS-R, and by approximately eight points for both architectures on the independent PSRB sample. Transfer and mixture benefits are not consistently observed across architectures and training budgets. The corpus is released under CC0; code and data are made available through the project repository at this https URL.",
+  "abstractSha256": "0f5ee980313bfa2aac8e2204407a7063b38e300b2f6264f65d78fdf2801238ac",
+  "arxivId": "2609.14542",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahmad Amirivojdan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Farzad Nadiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abolfazl Alizadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaghayegh Yaraghi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Neyshekar 针对波斯语正式与非正式语体和命名实体覆盖不足，构建 99.02 小时朗读语料并以等时长对照证明两架构词错误率下降，但混合增益不稳定且说话人广度仍有限。",
+  "originalTitle": "Neyshekar: An Open Persian Read-Speech Corpus for Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14542.pdf",
+  "readerTitle": "读稿波斯语的覆盖缺口：Neyshekar 以正式与非正式并存的长句和实体来补数据",
+  "schemaVersion": 1
+}

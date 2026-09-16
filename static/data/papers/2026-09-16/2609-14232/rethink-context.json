@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14232",
+  "abstract": "This paper proposes a Gaussian function-based trigonometric functional link artificial neural network (GTFLN) filter for linear-in-the-parameters nonlinear filtering. Compared with the adaptive exponential TFLN (AETFLN) filter, the GTFLN filter provides smooth and localized basis functions with reduced computational complexity, where modeling advantages are theoretically established through the smoothness, reproducing kernel Hilbert space, approximation error, and operator theory properties. To maximize the modeling performance, an optimized scaling parameter for the GTFLN filter is derived, yielding the optimized GTFLN (OGTFLN) filter. Least mean square (LMS) adaptation is applied to the GTFLN and OGTFLN filters for nonlinear system identification, resulting in the GTFLMS and OGTFLMS algorithms, respectively. Moreover, the theoretical steady-state excess mean-square error of the GTFLN filter is analyzed. Simulations validate the effectiveness of the theoretical analysis and demonstrate the improved performance of the GTFLN and OGTFLN filters over the linear-in-the-parameters benchmarks in nonlinear system identification and nonlinear acoustic echo cancellation. Based on the GTFLN filter, the filtered-g LMS (FgLMS) algorithm is proposed for nonlinear active noise control. Simulations demonstrate improved stability and noise reduction performance compared to the benchmarks.",
+  "abstractSha256": "7ce24379b045db9dbcc51717d96724ded6d8b9c0e0a877b386c9922d366fdcca",
+  "arxivId": "2609.14232",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自适应滤波",
+    "primaryTask": "回声消除",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.echo-cancellation",
+          "label": "回声消除"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自适应滤波",
+      "primaryMethodId": "method.adaptive-filtering",
+      "primaryTask": "回声消除",
+      "primaryTaskId": "task.echo-cancellation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaodong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengshi Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rodrigo C. de Lamare"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对三角函数链非线性建模局部化不足的问题，该文用零中心高斯包络乘三角基构造固定维 GTFLN 并推导缩放参数局部优化的 OGTFLN 与稳态超量均方误差，最强证据是多组非线性系统辨识与回声对消和有源控制实验中更低的稳态误差和噪声残留，代价是 OGTFLN 求优化参数的额外计算量和对匹配次级通道等条件的依赖。",
+  "originalTitle": "Gaussian-trigonometric functional link artificial neural network: design and analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14232.pdf",
+  "readerTitle": "用固定维高斯包络驯服三角基：GTFLN 的局部化、优化与稳态误差",
+  "schemaVersion": 1
+}

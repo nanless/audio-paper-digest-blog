@@ -1,0 +1,138 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16034v1",
+  "abstract": "We introduce StepAudio 3 Music, a large-scale, long-form music generation model that supports explicit musical planning and open-domain text-controlled generation. The StepAudio Music Tokenizer represents audio as a 50-Hz stream from a 65536-entry single codebook, using semantically informed self-supervised and multi-task training to preserve musical structure and reconstruction-relevant information. A flow-matching diffusion Transformer (DiT) predicts continuous StepAudio VAE latents, which our VAE decoder converts into 48-kHz audio. This discrete-continuous design is guided by comparisons of single-codebook VQ, Semantic and Acoustic RVQ, and different DiT configurations. For explicit planning, a Mixture-of-Experts autoregressive model uses ABC notation to produce an intermediate arrangement plan (ABC-CoT) before predicting music tokens, making harmony, rhythm, and melodic structure part of the generation context. A progressive training curriculum and supervised fine-tuning support song and instrumental generation, accompaniment generation from dry vocals, and cover-song synthesis for up to 5 minutes and 30 seconds. With reinforcement learning via direct preference optimization (DPO), the final model achieves the highest AudioBox Content Enjoyment, Content Usefulness, and Production Quality scores and the highest MuQ-MuLan similarity among the evaluated systems, with competitive SongBench results. On the preliminary Artificial Analysis Music Arena Vocals leaderboard, it obtains a Quality Elo of 1105, behind only Suno V5.5 and Mureka and ahead of Suno V5, MiniMax models, and other systems. Audio demonstrations are available at https://stepaudiollm.github.io/step-audio-3-music.",
+  "abstractSha256": "d281203930ab9ac5dbccb9234b5a5230d77bf0009ece48bd8daa7459a5085828",
+  "arxivId": "2609.16034",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16034v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Chengli Feng"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Zhiyue Wu"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Jiahao Song"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Ruibin Yuan"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Junming Gong"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Wenxiao Zhao"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Jing Guo"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Gang Yu"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Xiangyu Zhang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "StepFun ACE The Chinese University of Hong Kong University of California San Diego"
+      ],
+      "name": "Chao Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "StepAudio 3 Music 针对完整歌曲的长程结构与高保真渲染矛盾，采用 50 赫兹 65536 表项单码本离散表示加混合专家自回归组织音乐序列再由流匹配扩散渲染 48 千赫音频，并以 ABC 记谱作显式编曲计划，在 339 条歌词到歌曲与 316 条人声条件上取得内容享受 7.7086 与文本相似 0.4465 的最高均值，代价是自回归序列翻倍与符号级服从仍未被测量。",
+  "originalTitle": "StepAudio 3 Music Technical Report",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16034v1.pdf",
+  "readerTitle": "先规划后演奏：StepAudio 3 Music 用单码本与 ABC 计划平衡长曲连贯与音质",
+  "schemaVersion": 1
+}

@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16855v1",
+  "abstract": "This paper proposes novel differentiable and severity-invariant (DSI) discrete token approaches that are not only tightly integrated with downstream dysarthric speech recognition tasks, but also minimise discrete token diversity across speech impairment severity groups. Experiments conducted on the UASpeech and TORGO corpora suggest that Conformer models trained using the DSI tokens outperform the comparable baseline HuBERT discrete/continuous features by statistically significant WER reductions of 2.22\\%/0.78\\% absolute (9.14\\%/3.41\\% relative) and 1.78\\%/1.06\\% absolute (18.43\\%/11.86\\% relative) on the two tasks, respectively. After system combination, the lowest WERs of 18.90\\% and 6.38\\% were obtained on UASpeech and TORGO. Phoneme-specific T-SNE visualizations show that severity-invariant regularization reduces severity-dependent variation by producing greater overlap and less distinct boundaries among severity-group distributions.",
+  "abstractSha256": "c7446fffce9aba62e7a85e8b5d48c468c7a66b0622807237d871fdeab3da02fc",
+  "arxivId": "2609.16855",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16855v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-disorders",
+          "label": "言语障碍"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Huimeng Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Xurong Xie"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Haoning Xu"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Jiajun Deng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Youjun Chen"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Chengxi Deng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Xunying Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对构音障碍语音识别中离散 token 与识别目标错位且随严重程度漂移的问题，该文用迭代伪标签更新、可微端到端优化与严重程度不变正则学习 DSI token，在 UASpeech 与 TORGO 上显著优于可比 HuBERT 连续与离散基线，系统组合后最低词错误率分别为 18.90% 和 6.38%，代价是需内容平行的健康对照与额外的端到端训练。",
+  "originalTitle": "Differentiable and Severity-invariant Discrete Tokens for Dysarthric Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16855v1.pdf",
+  "readerTitle": "让离散 token 同时对准识别目标与对齐严重程度：DSI 的三步做法",
+  "schemaVersion": 1
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16612v1",
+  "abstract": "Vocal repertoires can differ in acoustic-event type accumulation and temporal organization, yet direct comparison is difficult because corpora use different native events and unequal amounts of sequence. We compare sperm whale codas, human speech phones, Bengalese finch syllables, and common marmoset calls using the same frozen-audio-encoder procedure while matching event count and local sequence opportunity. Whale shows the fastest type accumulation; Finch shows the strongest immediate dependence and repeated-subsequence recurrence. Physically interpretable acoustics recover complementary parts of this profile, continuous analyses without clustering support broad Whale acoustic coverage, and source- and position-preserving nulls retain both Finch order effects. Extending predictive context shifts the comparison toward Whale. Thus repertoire differences depend on the acoustic property and temporal scale measured rather than forming a single hierarchy.",
+  "abstractSha256": "b69edd30919194853700ccda617db93185f531d46993782634b7ce1f3bb52d4a",
+  "arxivId": "2609.16612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16612v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Mudit Sinha"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Sanika Chavan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用同一冻结编码器流程与 1501 事件配额比较四种嗓音库，发现抹香鲸类型积累最快而孟加拉雀局部顺序依赖最强，且加长历史会把比较推向鲸，代价是结论只在原生事件尺度与档案录音条件下成立。",
+  "originalTitle": "Structure Across Voices: Comparing acoustic-event type accumulation and sequence dependence across four vocal repertoires using frozen audio encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16612v1.pdf",
+  "readerTitle": "没有单一嗓音等级：匹配观察机会后类型扩张与顺序依赖如何分离",
+  "schemaVersion": 1
+}

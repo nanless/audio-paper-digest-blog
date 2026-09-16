@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15562v1",
+  "arxivId": "2609.15562",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.15562v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bo Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kangran Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weinan Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiheng Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yize Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingshan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siwei Lyu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Baoyuan Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15562v1",
+  "originalTitle": "PIVOT: Physics-Grounded Verification for AI-Generated Audio-Video Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15562v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

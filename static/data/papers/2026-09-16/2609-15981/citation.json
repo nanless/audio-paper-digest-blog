@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15981",
+  "arxivId": "2609.15981",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuyang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rumeshika Pallewela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesper Brunnström"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Haasler"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Elvander"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15981",
+  "originalTitle": "Acoustic Image Source Interpolation with Optimal Transport Barycenter",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15981.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

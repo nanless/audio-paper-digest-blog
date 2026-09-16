@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14743",
+  "arxivId": "2609.14743",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ju-Chieh Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiawei Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Karen Livescu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14743",
+  "originalTitle": "Quantifying the Generation Modality Gap in Speech-Text Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14743.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

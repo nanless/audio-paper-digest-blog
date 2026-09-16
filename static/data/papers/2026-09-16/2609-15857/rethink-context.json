@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15857",
+  "abstract": "This paper establishes a perfect-reconstruction (PR) interpretation of AddUNet and its full-rate realization, and introduces a Residual Full-Rate PR architecture for task-directed representation learning. The survivor--skip structure of a constrained additive U-Net is shown to be exactly equivalent to a critically sampled multirate PR filter bank. The full-rate formulation removes the complementary-subband restrictions of the critically sampled system while preserving PR. A Residual Full-Rate PR architecture is then proposed to progressively route task-irrelevant, nuisance, or redundant structure away from the task-facing survivor while retaining the routed information explicitly. Exact reconstruction is guaranteed for arbitrary shape-compatible linear or nonlinear routing operators, without requiring invertibility, a matched synthesis bank, reconstruction loss, or learned decoder. The resulting architecture decouples representation design from reconstruction design: conservation is structural, while learning is devoted to task-directed routing. The same formulation identifies an identity-shortcut ResNet with its residual output retained as a full-rate PR system. Experiments verify exact single-channel routing of linearly separable factors to machine precision. On TIMIT, the proposed front-end improves test PER from $28.60\\pm2.09\\%$ to $25.76\\pm0.41\\%$ with the recognizer and training protocol held fixed, while maintaining exact reconstruction. Speaker probing further shows that structural conservation does not itself imply task-specific invariance.",
+  "abstractSha256": "24f2816b40eb3bdd0cb4271f6448f0f66be346f8ee06b00262b3736a4b3a1555",
+  "arxivId": "2609.15857",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vikram R. Lakkavalli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把受约束加性 U-Net 等价为临界采样完全重构滤波器组，再用全速率残差路由把学习目标转为任务相关的取舍，在 TIMIT 上以相同识别器把测试音素错误率从 28.60±2.09% 降到 25.76±0.41%，代价是保留双路全分辨率表示带来的过完备冗余。",
+  "originalTitle": "Task-Directed Residual AddUNet:Perfect-Reconstruction Routing for Full-Rate Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15857.pdf",
+  "readerTitle": "守住信息再做取舍：残差全速率加性 U-Net 的完全重构路由",
+  "schemaVersion": 1
+}

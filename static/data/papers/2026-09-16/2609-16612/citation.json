@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16612v1",
+  "arxivId": "2609.16612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16612v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Mudit Sinha"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, San Bruno, California 94066, United States"
+      ],
+      "name": "Sanika Chavan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16612v1",
+  "originalTitle": "Structure Across Voices: Comparing acoustic-event type accumulation and sequence dependence across four vocal repertoires using frozen audio encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16612v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

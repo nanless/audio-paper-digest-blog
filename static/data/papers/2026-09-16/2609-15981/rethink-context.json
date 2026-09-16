@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15981",
+  "abstract": "Room impulse responses can be estimated via the image source model (ISM) using the image source point cloud (ISPC) of a physical source. However, because the source movement changes the ISPC, estimating the ISPC at a new source position typically requires repeated acoustic measurements. We propose an optimal transport (OT) barycenter framework to interpolate the ISPC of a new source location from ISPCs of known sources. The method jointly estimates image-source associations and the ISPC at the new location. The OT ground cost exploits the property that the image sources undergo the same displacement as their physical sources. This approach is realized for both grid-based and support-free configurations. The support-free method addresses the resulting nonconvex joint estimation problem by alternating between identifying image-source associations across the ISPCs and refining the target image-source locations. This enables the interpolation of ISPCs without repeated measurements, facilitating efficient and flexible room-acoustic modeling.",
+  "abstractSha256": "47ce6351fb379ee26c0fe399feb3461d75e9445354b7fb96042688c47e372604",
+  "arxivId": "2609.15981",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "房间脉冲响应估计",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "房间脉冲响应估计",
+      "primaryTaskId": "task.rir-estimation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuyang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rumeshika Pallewela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesper Brunnström"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Haasler"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Elvander"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对从已知声源镜像源点云插值新声源点云的问题，该文用物理位移等于镜像位移的不变性构造最优传输地面代价并求重心，交替估计关联与位置，在 3×4 米二维二阶反射仿真和 400 次蒙特卡洛下 One-PC 初始化最优，但近墙密集混叠与大扰动下误差放大且无实测验证。",
+  "originalTitle": "Acoustic Image Source Interpolation with Optimal Transport Barycenter",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15981.pdf",
+  "readerTitle": "声源移动后镜像全变：用位移不变代价求最优传输重心",
+  "schemaVersion": 1
+}

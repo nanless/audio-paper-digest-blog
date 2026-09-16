@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17076v1",
+  "arxivId": "2609.17076",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.17076v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengrui Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ningxin Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiangmeng Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17076v1",
+  "originalTitle": "Sample-Conditioned Representation Selection for Audio Few-Shot Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17076v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14431",
+  "arxivId": "2609.14431",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sarthak Giri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zi Haur Pang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14431",
+  "originalTitle": "Exploiting Speech LLM Representations for Multilingual and Cross-Lingual Parkinson's Disease Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14431.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

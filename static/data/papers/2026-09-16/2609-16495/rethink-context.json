@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16495v1",
+  "abstract": "Audio moment retrieval (AMR) identifies temporal segments in long recordings that best match a free-form text query. Existing systems largely rely on fixed-slot DETR decoders that assign proposal-level confidence scores without explicitly normalizing over competing explanations of the full timeline. We propose segmental posterior decoding, which defines a globally normalized distribution over temporal segmentations and scores each candidate moment by its exact segment marginal posterior computed through forward-backward inference. We further expand the training segmentation space by treating a foreground span and its adjacent subdivisions as distinct hypotheses, thereby increasing competition among alternative segmentations. On CASTELLA, our method achieves 41.15% R1@0.7 and 34.68% mAP, outperforming the same network decoded with DETR slot confidence by 10.91 and 9.20 percentage points, respectively.",
+  "abstractSha256": "40b958cf03c7f402699a7da6847b1bac94c5c937a09b2b7142e839815c825635",
+  "arxivId": "2609.16495",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16495v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungdeok Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seongmin Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Inhan Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junho Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeong-gyu Ban"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong-Hwa Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频时刻检索中提议级置信度缺少全局竞争的问题，该文用半马尔可夫条件随机场对全部分割归一化并以片段边缘后验排序，在 CASTELLA 上报告 41.15% R1@0.7 和 34.68% mAP，代价是需做前向后向推理与非极大值抑制并保留双分支联合训练。",
+  "originalTitle": "Segmental Posterior Decoding for Audio Moment Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16495v1.pdf",
+  "readerTitle": "不用固定槽打分：对整条时间线做全局归一化后再检索音频时刻",
+  "schemaVersion": 1
+}

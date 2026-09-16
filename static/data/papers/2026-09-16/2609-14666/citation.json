@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14666",
+  "arxivId": "2609.14666",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Willem Berner"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Julio Cesar Cavalcanti"
+    },
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Kalle Åström"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Gabriel Skantze"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14666",
+  "originalTitle": "Exploring Multimodal Turn-Taking Cues in Face-to-Face Conversation using Voice Activity Projection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14666.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14730",
+  "arxivId": "2609.14730",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jongyeon Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Do-Hyeon Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sang-won Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Kook Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyungdeuk Ko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeongcheol Geum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeong Eun Lim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14730",
+  "originalTitle": "Parameter isolation with domain-specific experts for incremental audio classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14730.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

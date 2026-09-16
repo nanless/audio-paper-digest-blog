@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15218",
+  "abstract": "Timestamps and speaker attribution are useful additions to speech recognition, creating a rich text transcript. This information can either be extracted during transcription or aligned to a given transcript. In this paper we present models that add timestamps and speaker information to a given transcript using a non-autoregressive LLM-based architecture. Compared to an autoregressive model built from similar components, the models are more accurate and annotate a given transcript one to two orders of magnitude faster. Compared to other models, our models achieve state-of-the-art timestamp accuracy and the best cpWER for speaker attribution.",
+  "abstractSha256": "ae754b65c0a231ad4ad403229b858082ffb6aa870f25716771c9e8e11c096ae9",
+  "arxivId": "2609.15218",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "Transformer",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前25%",
+    "score": 8.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zvi Kons"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Avihu Dekel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hagai Aronowitz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishal Sunder"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ron Hoory"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把时间戳与说话人归属做成对给定转录本的单遍占位填充，用双向大模型同时输出全部标签，在相同训练数据下比同类自回归模型更准且标注快一到两个数量级，但流水线总速度仍受前置语音识别限制。",
+  "originalTitle": "Word Timestamps and Speaker Attribution with a Non-Autoregressive LLM",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15218.pdf",
+  "readerTitle": "给定时转录本后一次标全词时间戳与说话人：非自回归标注为何更快更准",
+  "schemaVersion": 1
+}

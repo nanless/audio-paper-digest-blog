@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14991",
+  "abstract": "Open Thai automatic speech recognition (ASR) is dominated by offline, Whisper-based models that read the whole utterance before transcribing, ruling out low-latency uses such as live captioning and voice agents. We present a deployable system for streaming Thai ASR that lets a user steer its vocabulary at decode time, without retraining. A widely used open Thai model, trained with full context, collapses when run as a true stream; we restore streaming with a cache-aware encoder, by converting it or adapting a natively streaming one, and add a shallow-fusion layer that re-ranks candidates inside the streaming decoder with a GPU n-gram language model and phrase boosting. Across two Thai benchmarks and two model sizes, the streaming models stay usable where the full-context model fails, cutting character error rate 4.3-4.5x at a one-second look-ahead while running faster than real time. Decode-time steering then lifts keyword recall from 16.6% to 20.7% at no accuracy cost and negligible overhead; most of the gain comes from an n-gram over ordinary training transcripts, which resolves the written form of code-switched words the model hears but spells inconsistently, with phrase boosting adding targeted control over rare domain terms.",
+  "abstractSha256": "ae62ca21c18478e7d48fe86a20ec27e5009c479fb65eb8a56d0e71eea931024c",
+  "arxivId": "2609.14991",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Warit Sirichotedumrong"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Tanawin Samutsin"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Shah Faisal Wani"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Sittipong Sripaisarnmongkol"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Kunat Pipatanakul"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对开放泰语识别被离线模型主导而真流式时崩溃的问题，论文用缓存感知编码器恢复流式能力并在解码时做浅融合来引导词汇，在 1 秒前视下把字符错误率降低约 4.5 倍并把关键词召回从 16.6% 提升到 20.7%，额外开销不足 3%。",
+  "originalTitle": "Typhoon ASR Streaming: Steerable Low-Latency Thai Speech Recognition with Real-Time Shallow Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14991.pdf",
+  "readerTitle": "全上下文能听准却不能边听边写：缓存感知与解码时浅融合如何让泰语流式识别可用",
+  "schemaVersion": 1
+}

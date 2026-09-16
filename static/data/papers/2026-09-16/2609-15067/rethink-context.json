@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15067",
+  "abstract": "Procedural audio has emerged as a viable source for transferable audio representation learning, but its design principles remain this http URL revisit two questions: how a procedural source should be scaled, and whether training choices developed on natural audio should transfer unchanged to procedural this http URL a controlled source, we separate scale into formula-class coverage C and within-class rendering diversity this http URL with FDSL and AudioMAE show that these two forms of scale provide different benefits and depend on the learning formulation and downstream task. A matched AudioMAE study further shows that procedural audio favors low mask ratios (10%--25%), whereas AudioSet-28K favors 50%--75%. Shared-codebook analysis reveals lower patch diversity and stronger temporal predictability in procedural audio. These results motivate source-aware procedural pre-training, where source scaling and learning configuration are considered this http URL is available at this https URL.",
+  "abstractSha256": "b29498194af05e376d07d84db290854a54e7fae1ae51aaf9a804a705fc7fda40",
+  "arxivId": "2609.15067",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengrui Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用可独立控制的 FormulaBank 把程序化规模拆成公式类覆盖 C 与类内渲染多样 I，在 FDSL 与 AudioMAE 对照中显示两者收益不同且依赖学习形式，匹配的 AudioMAE 实验显示程序化音频偏好 10–25% 低掩码而 AudioSet-28K 偏好 50–75% 掩码，代价是结论限于全量微调与特定模型流程。",
+  "originalTitle": "Rethinking Procedural Audio Pre-training: Source Scaling and Objective Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15067.pdf",
+  "readerTitle": "程序化音频预训练要分开设计源与目标：结构覆盖与渲染多样收益不同",
+  "schemaVersion": 1
+}

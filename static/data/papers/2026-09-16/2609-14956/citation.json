@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14956",
+  "arxivId": "2609.14956",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alef Iury Siqueira Ferreira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Lustosa Rege Botelho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernanda Silva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Casanova"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rafael Faustino"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frederico Oliveira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arlindo Galvão Filho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anderson da Silva Soares"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14956",
+  "originalTitle": "CAL-MOS: Bridging Layers with Adapters for Robust MOS Prediction Across Speech Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14956.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

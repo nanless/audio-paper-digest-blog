@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15616",
+  "abstract": "Lossless audio coding is a highly mature field of research, with limited potential for significant improvements in pure compression performance. However, emerging real-time wireless applications increasingly require dynamic transitions between lossy and lossless coding to adapt to fluctuating network capacities. Existing standalone lossless codecs cannot achieve this seamless switching without discontinuity. In this paper, we propose a lossless codec based on time-domain aliasing cancellation (TDAC) that can match the overlap in the CELT mode of the Opus codec. This allows the transition between lossy and lossless coding to be achieved without discontinuity or the transmission of redundant information. We show that the proposed codec still achieves state-of-the-art lossless compression without being penalized by its use of TDAC.",
+  "abstractSha256": "cee57d815bd3547603a32b63aaf2396302b5338bf4ff4b00540c10dcaeae1c6b",
+  "arxivId": "2609.15616",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-Marc Valin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无线音频需在有损与无损之间无断点切换的问题，OLAC 只做可逆时域混叠抵消加窗而不做整数 MDCT 变换，用前向线性预测与 Golomb-Rice 编码实现无损压缩，在 20 毫秒帧下平均压缩到 56.8%，代价是帧间预测被切断且随机访问需先解前一帧。",
+  "originalTitle": "OLAC: An Overlapped Lossless Audio Codec in the Time-Domain with MDCT Compatibility",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15616.pdf",
+  "readerTitle": "在时域里做混叠抵消：OLAC 如何对齐 MDCT 重叠实现无缝有损无损切换",
+  "schemaVersion": 1
+}

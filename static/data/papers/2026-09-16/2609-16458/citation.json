@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16458v1",
+  "arxivId": "2609.16458",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16458v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minu Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ji Sub Um"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hoirin Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16458v1",
+  "originalTitle": "Language Orthogonalization for Zero-Shot Cross-Lingual Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16458v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

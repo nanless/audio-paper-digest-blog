@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15760",
+  "arxivId": "2609.15760",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lennart Uphaus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "André Merboldt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Markus Hofbauer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15760",
+  "originalTitle": "Directivity-Conditioned Low-Latency Neural Filtering for Speech Enhancement in Hearing Aids",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15760.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

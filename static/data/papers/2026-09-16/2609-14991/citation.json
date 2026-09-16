@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14991",
+  "arxivId": "2609.14991",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Warit Sirichotedumrong"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Tanawin Samutsin"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Shah Faisal Wani"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Sittipong Sripaisarnmongkol"
+    },
+    {
+      "affiliations": [
+        "Typhoon Team, SCB DataX, Bangkok, Thailand"
+      ],
+      "name": "Kunat Pipatanakul"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14991",
+  "originalTitle": "Typhoon ASR Streaming: Steerable Low-Latency Thai Speech Recognition with Real-Time Shallow Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14991.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

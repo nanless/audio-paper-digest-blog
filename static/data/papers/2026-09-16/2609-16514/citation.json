@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16514v1",
+  "arxivId": "2609.16514",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16514v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qian Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiang Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Zhao"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry",
+        "Equal contribution; alphabetical by last name."
+      ],
+      "name": "Tianyu Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16514v1",
+  "originalTitle": "The Evolving Bottleneck in Speech Generation: Interface Co-design and Staged Alignment from CosyVoice to Qwen-Audio-3.0-TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16514v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

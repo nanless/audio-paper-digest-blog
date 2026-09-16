@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15240",
+  "abstract": "What did an ancestral bird species sound like? Existing ancestral state reconstruction methods can infer low-dimensional traits such as morphological characters at internal nodes of a phylogenetic tree, but no one has tried to produce rich perceptual signals such as audio. Some of the challenges include inferred representations that are either too low-dimensional to decode or lie in non-generative feature spaces, so no method to date can produce ancestral audio. We introduce the first framework that generates plausible ancestral vocalizations. Our pipeline encodes bird recordings into a VAE latent space, learns a low-dimensional trait projection aligned with phylogenetic distances, performs ancestral inference in this trait space, and recovers decodable latents through an anchored inverse lift before emitting novel waveforms for each ancestral node. Because the entire pipeline stays within a decodable latent space, every internal node receives a genuinely new audio output representing plausible intermediate ancestral sounds unavailable to retrieval-based alternatives. Experiments on two phylogenetically distant bird clades, 21-species Tyrannidae and 19-species Paridae, show that our method is the only approach that simultaneously achieves genuine generation, phylogenetic consistency, and naturalistic audio quality across both datasets.",
+  "abstractSha256": "f3c63da7ce593389a40cb4fc6a11eb4f6507847bce9b1e30fb578ee641834e72",
+  "arxivId": "2609.15240",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.bioacoustics",
+          "label": "生物声学"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Tianyi Xu"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Shrinaath Narasimhan"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Evan Gorstein"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Santiago Perea"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Yunyi Shen"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Claudia Solís-Lemus"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把鸟声编码到冻结语音潜空间后学习与系统发育距离对齐的低维性状投影，在性状空间做布朗运动祖先推断再经锚定逆提升解码为新波形，在两个支系上同时实现真实生成、系统发育一致与自然音质，但零空间纹理仍依赖现存录音锚点。",
+  "originalTitle": "Generating the Unheard: Phylogeny-Guided Latent Generation for Ancestral Sound Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15240.pdf",
+  "readerTitle": "在可解码潜空间里做进化推断：祖先鸟声如何被生成出来",
+  "schemaVersion": 1
+}

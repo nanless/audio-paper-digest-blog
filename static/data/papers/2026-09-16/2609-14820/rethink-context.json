@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14820",
+  "abstract": "This work presents POLARIS, a training-free audio fingerprinting system that selects landmarks from a locally normalized saliency field and groups them into sparse fingerprints using Delaunay triangulation. To deal with query distortion, POLARIS adds fingerprints from two-hop Delaunay neighborhoods only at query time, without enlarging the reference index. An adaptive configuration applies this expansion only when the original fingerprints do not produce a confident match. We evaluate POLARIS on synthetic distortions from the public PEX Hard Medium benchmark, excluding queries with pitch or tempo shifts, and on a new benchmark of real re-recorded music. POLARIS achieves the best performance among the evaluated training-free methods on both benchmarks. On the real recordings, its adaptive configuration also outperforms the neural NMFP baseline with a comparable measured query time and a smaller logical reference payload. Code, dataset, and instructions for reproducing all experiments are available at this https URL.",
+  "abstractSha256": "32a7a2bb5a39ff8fcf07fe556c9f89828fa96d7e97b80228894b54d60ba34033",
+  "arxivId": "2609.14820",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频指纹",
+    "rankBucket": "前25%",
+    "score": 8.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.fingerprinting",
+          "label": "音频指纹"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频指纹",
+      "primaryTaskId": "task.fingerprinting",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiheng Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全局音高和速度不变的失真查询，POLARIS 用局部归一化显著性选地标、用 Delaunay 三角形组指纹、只在查询侧加两跳邻域指纹，在自建手机重录集上报告了可复述的流程与查询代价变化。",
+  "originalTitle": "POLARIS: Training-Free Audio Fingerprinting with Saliency-Based Landmarks and Delaunay Grouping",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14820.pdf",
+  "readerTitle": "不存更多指纹，只在查询时多算一步：POLARIS 的显著性地标与查询侧扩展",
+  "schemaVersion": 1
+}

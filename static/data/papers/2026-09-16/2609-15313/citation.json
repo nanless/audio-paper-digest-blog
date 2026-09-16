@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15313",
+  "arxivId": "2609.15313",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daxin Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dehua Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengxi Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanlin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15313",
+  "originalTitle": "Reducing the Output-Mode Gap in Speech Language Models via Joint-Output On-Policy Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15313.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14817",
+  "abstract": "In Yorùbá, pitch alone separates \\d{o}k\\d{o} (husband, Mid), \\d{o}k\\d{ò} (vehicle, Low), and \\d{o}k\\d{ó} (hoe, High) -- the diacritics ARE the tone marks. Yet character error rate (CER), the standard automated metric for text-to-speech (TTS), is in practice computed from ASR output that drops those marks: a synthesizer can ace CER and still say vehicle for husband. We introduce DunDun -- named for the dùndún, the Yorùbá talking drum that speaks through pitch alone -- an automated, reference-free lexical-tone metric that needs no tone-labelled corpus. The gold High/Mid/Low sequence is read from the input text&#39;s diacritics (in TTS that text exists by construction, so no reference recording is needed); the prediction comes from the audio&#39;s pitch track. We validate three ways. Flattening pitch with PSOLA resynthesis collapses DunDun while CER does not move. Inverting High and Low in the answer key of 300 native recordings drives the two-class readout to 0.14, symmetrically below its 0.35 chance level -- a consistency check on the scoring path, not independent evidence. And three native listeners, over 67 blind A/B trials, pick the tone-correct clip 89.6% of the time (95% CI 80.0-94.8; p &lt; 1e-4); whether DunDun tracks those judgements trial by trial is not resolved at this sample size. Applied to a massively multilingual zero-shot TTS model, DunDun shows what CER cannot: Yorùbá tone sits near the native anchor before any Yorùbá fine-tuning (0.567 +/- 0.02 over five decode seeds vs. 0.596; chance 0.33), despite the 21.4% CER the model&#39;s own paper reports; and a few hours of clean audio halve CER (5.6% to 2.7% by 5h, 1.7% by 15h) while tone saturates within the hour. On non-tonal Swahili, CER already captures the gains: the metric a language needs is language-dependent. We release the metric and the complete validation protocol.",
+  "abstractSha256": "aab049bff1078634fe4929a2224c32f7c6d01eaeca739d21d79230219034da29",
+  "arxivId": "2609.14817",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Moses Daudu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adeola Enitan Bamidele"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Honor-Jesus Bezaleel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对约鲁巴语 TTS 中字符错误率看不见声调错误的问题，论文提出只读输入变音符号作金标、只读基频作预测的 DunDun 指标，用压平基频与翻转答案键验证其声调敏感性，并显示微调主要降低字符错误率而声调早已接近母语锚点，代价是可用区间只到 0.596 且依赖可靠标调文本。",
+  "originalTitle": "Tone on a Budget: A Reference-Free Metric for Lexical Tone in Massively Multilingual Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14817.pdf",
+  "readerTitle": "声调看不见的合成器：DunDun 给约鲁巴语 TTS 补一条声调轴",
+  "schemaVersion": 1
+}

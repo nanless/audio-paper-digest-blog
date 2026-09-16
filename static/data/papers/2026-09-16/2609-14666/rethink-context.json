@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14666",
+  "abstract": "Turn-taking is a fundamental component of spoken interaction, and while humans naturally rely on both verbal and non-verbal signals, dialogue systems usually depend on audio cues alone. This paper investigates whether visual features from face-to-face conversations can enhance turn-taking prediction beyond what is achievable from audio-only. We extend the Voice Activity Projection (VAP) model, a self-supervised transformer-based model for predicting future voice activity, by incorporating visual features extracted from the large-scale Meta Seamless Interaction dataset of dyadic face-to-face conversations. The visual features include gaze direction, head movement, body and hand pose, and facial action units (FAU). For incorporating the visual features, we explore concatenation, cross-attention fusion, delta features, and trainable gating mechanisms. Results show that visual information improves performance over the audio-only baseline, with FAU being significantly more informative than other feature groups. Body and gaze features nevertheless contribute complementary information, as the model combining all features performs best. Furthermore, results indicate that performance on specific tasks varies depending on whether training and test data come from improvised (acted) or naturalistic (non-acted) conversations.",
+  "abstractSha256": "783cab4cd4309241b56234ed9273cf356724c67ffb6601e650ca1faa7f4c2a12",
+  "arxivId": "2609.14666",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Willem Berner"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Julio Cesar Cavalcanti"
+    },
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Kalle Åström"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Gabriel Skantze"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在约 400 小时面对面双人对话上把注视、头部、身体手部与面部动作单元接入语音活动投影模型，最优结构以交叉注意力加三帧差分与早期门控把语音活动投影损失从 2.166 降到 2.100，面部动作单元是最强的单一视觉组但全量组合仍最好，代价是需要多模态特征提取与更大的推理开销且划分不是按会话对隔离。",
+  "originalTitle": "Exploring Multimodal Turn-Taking Cues in Face-to-Face Conversation using Voice Activity Projection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14666.pdf",
+  "readerTitle": "声音已很强时，脸还能帮轮流说话预测多少",
+  "schemaVersion": 1
+}

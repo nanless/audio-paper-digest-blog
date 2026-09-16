@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15067",
+  "arxivId": "2609.15067",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengrui Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15067",
+  "originalTitle": "Rethinking Procedural Audio Pre-training: Source Scaling and Objective Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15067.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

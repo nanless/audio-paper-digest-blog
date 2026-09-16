@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16315v1",
+  "arxivId": "2609.16315",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16315v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Varun Nagaraja"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Gael Le Lan"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Xinhao Mei"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Vikas Chandra"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Yangyang Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16315v1",
+  "originalTitle": "SongCraft: Unified Song Generation and Editing with Reconstructive Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16315v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

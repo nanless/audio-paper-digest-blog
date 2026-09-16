@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14764",
+  "abstract": "Early detection of cognitive decline from speech offers a scalable and non-invasive alternative to conventional clinical assessment. Verbal fluency tasks are particularly informative, but most automated approaches aggregate features across an entire recording, overlooking temporal speech dynamics. We propose the Cognitive Instability-Aware Cross-Modal Attention Network (CCMAN), a transfer learning framework that learns task-agnostic cognitive speech representations from multiple memory-probing tasks before fine-tuning on a minute-long semantic and phonemic verbal fluency task. CCMAN integrates semantic, acoustic, and linguistic information through bidirectional cross-attention, gated multimodal fusion, and transformer-based temporal modelling to derive interpretable biomarkers of cognitive decline. Experiments were conducted on 165.44 hours of speech from 843 participants (498 healthy controls, 245 with mild cognitive impairment, and 100 with dementia). CCMAN achieved Macro-F1 scores of 0.81 and 0.59 for binary and multiclass semantic fluency classification, and 0.77 and 0.53 for phonemic fluency, consistently outperforming strong static and temporal baselines. Statistical analyses showed that semantic drift variance and pause variance, but not mean semantic drift, were significantly elevated in both MCI and dementia relative to healthy controls, while pause duration increased progressively over the task with the steepest slope in dementia, supporting global and progressive temporal speech instability as interpretable biomarkers. Evaluation on the independent PROCESS-2 benchmark further demonstrated the generalisability of the proposed framework, improving the baseline Macro-F1 by up to 9%. These findings support temporal speech instability as a dynamic speech biomarker for robust, interpretable, and generalisable early detection of cognitive decline.",
+  "abstractSha256": "6842a80020344ac54ea1842f5004859462725553496795331cf47560f3fc5bf6",
+  "arxivId": "2609.14764",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Madhurananda Pahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Caitlin Illingworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorota Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对一分钟语义和音位流畅性任务中整段平均会抹掉检索动态的问题，CCMAN 用词级多模态序列加双向跨模态注意与迁移学习建模时间不稳定性，在 843 人语料上语义二分类宏 F1 达到 0.81 而多分类仅 0.59，代价是三分类区分 MCI 与痴呆仍不显著且依赖 ASR 时间戳质量。",
+  "originalTitle": "CCMAN: Cognitive Instability-Aware Cross-Modal Attention Network for Interpretable Temporal Biomarkers of Verbal Fluency Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14764.pdf",
+  "readerTitle": "不只数出多少词：CCMAN 用词间不稳定捕捉流畅性任务中的认知衰退",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15465",
+  "abstract": "Sample identification (SI) is the task of matching an element of a musical work to its musically transformed versions used to create new works. The task has received little attention and lacks large-scale publicly available data. In this work, we mine sampling annotations from a music database and split them for training and evaluation. The resulting dataset is nearly three orders of magnitude larger than the existing SI benchmarks, with training, validation, and test sets of 114 k, 6 k, and 10 k tracks. We find that naively splitting the annotations places the same tracks in different sets. To avoid this, we construct a graph from the annotations and split it over connected components. We further find that a single mega-component contains half of the annotations, making component-wise splitting incompatible with balanced splits; we trim it, yielding a leakage-aware pipeline. We share the dataset for non-commercial scientific research purposes only and make the data-analysis and splitting code publicly available. We hope that our work fosters research on SI.",
+  "abstractSha256": "918bb62554f77a95005b9a4656840252966230da0f21c0cad8c2939006ff000d",
+  "arxivId": "2609.15465",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音乐检索",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "R. Oguz Araz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Lizarraga"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dmitry Bogdanov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作从社区采样标注中挖掘出 9.2 万条标注并揭示按边随机切分会使 54% 测试音轨泄漏，提出基于连通分量切分并修剪巨型分量得到 11.4 万/0.6 万/1 万音轨的 WhoSampled130k，代价是丢弃 23% 节点并保留有界泄漏风险。",
+  "originalTitle": "Building a Dataset for Music Sample Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15465.pdf",
+  "readerTitle": "采样标注连成巨网时，按边切分为何必然泄漏",
+  "schemaVersion": 1
+}

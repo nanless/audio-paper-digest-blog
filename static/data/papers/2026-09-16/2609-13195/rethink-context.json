@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13195",
+  "abstract": "Large Audio-Language Models (LALMs) have recently shown strong capabilities in speech understanding and question answering (QA), but they also inherit privacy risks from large-scale training data, including the unintended memorization of sensitive information. In this work, we study machine unlearning for speech QA in LALMs, a setting that is more challenging than prior work on text-based Large Language Models (LLMs) or Automatic Speech Recognition (ASR) due to the tight coupling between acoustic perception and factual knowledge. We present and evaluate multiple unlearning strategies, including gradient ascent, task arithmetic, and alignment-based fine-tuning methods that enforce safe refusal responses, to remove private knowledge while still preserving performance on core capabilities. Through extensive experiments on speech QA datasets, we show that these unlearning methods can reduce the privacy leakage rate by up to 80% while maintaining near-neutral performance on non-private speech QA and general speech understanding benchmarks.",
+  "abstractSha256": "854db176cbee14ef127dc2823deba6a6ed008d0c7116ef8b07cfec574f04bd52",
+  "arxivId": "2609.13195",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Platforms, Inc. Menlo Park, USA"
+      ],
+      "name": "Zhe Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在语音问答大音频语言模型上对比梯度上升、任务算术与两种拒答对齐遗忘方法，报告在中度记忆检查点上可把隐私泄露率降低约 80% 且非隐私问答基本保持，但压到接近零泄露时非隐私准确率必然明显下滑。",
+  "originalTitle": "Machine Unlearning for Speech Question Answering in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13195.pdf",
+  "readerTitle": "语音问答记住了不该记的事实：切断声学理解与隐私记忆的四种遗忘路径",
+  "schemaVersion": 1
+}

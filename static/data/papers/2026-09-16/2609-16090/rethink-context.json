@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16090v1",
+  "abstract": "Music retrieval is relation-dependent: given a reference track, a listener may seek its style with a new theme, a cover, or a comparable voice, and these intents demand contradictory rankings. We present MUUNRiver-Bench, a diagnostic benchmark whose reference-audio queries use natural-language instructions to define relevance. A pipeline combining expert genre priors, LLM-generated prompts and lyrics, synthesis, and expert review yields 3,440 tracks spanning 13 genres and 116 sub-genres, and seven tasks: similar-music, style-preserving lyric-rewriting, lyric-preserving style-rewriting, cover, vocal-timbre, isolated-vocal, and segment retrieval. Across six models in eight configurations, task-wise rank reversals reveal complementary biases: acoustic encoders favour local identity, whereas text-aligned encoders favour semantic relations. Frozen encoders diagnose default similarity preferences; instruction-aware and audio-text fusion systems provide exploratory tests of textual conditioning, with neither simple fusion scheme consistently improving its backbone",
+  "abstractSha256": "0100dad1c3912c5673f82377d70c0619ddc6a9e6db10ec924c0cf86ab44469f3",
+  "arxivId": "2609.16090",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16090v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐检索",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhancheng Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Congren Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangda Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianhuai Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danni Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把参考音频加自然语言指令作为融合查询，用构造时就定义好的七种风格歌词旋律音色关系诊断表示的默认偏好，最强证据是五类模型在七个任务上最高点估计互相反转且声学编码器与文本对齐编码器互补，而轻量文本条件融合未能一致提升主干。",
+  "originalTitle": "MUUNRiver-Bench: Diagnosing Relation-Dependent Music Retrieval with Multimodal Instructions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16090v1.pdf",
+  "readerTitle": "同一首歌，不同找法：用指令把音乐检索的七种关系拆开诊断",
+  "schemaVersion": 1
+}

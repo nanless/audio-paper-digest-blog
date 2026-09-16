@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13195",
+  "arxivId": "2609.13195",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Platforms, Inc. Menlo Park, USA"
+      ],
+      "name": "Zhe Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13195",
+  "originalTitle": "Machine Unlearning for Speech Question Answering in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13195.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16315v1",
+  "abstract": "Song generation and editing have mostly been treated as separate tasks. Existing editing methods often require noise injection and regeneration or curated paired training data. We propose a unified approach for song generation and editing based on reconstructive pretraining, in which a model is trained to reconstruct audio from varying numbers of interpretable conditions. With conditions such as text and lyrics, the model learns to generate diverse songs. With dense conditions specifying fine-grained music attributes, the model learns to reconstruct the target and enables editing by modifying any single attribute while keeping others fixed. This leads to SongCraft, a latent flow matching based model trained for both generation and fine-grained editing. To improve song generation quality, we further introduce word-level phoneme alignment that improves pronunciation learning and accelerates convergence, beat conditioning that improves general musicality, and representation alignment on VAE latent space that produces semantically meaningful latents for improved generation quality. Experiments show that SongCraft achieves the lowest word error rate among evaluated song generation baselines while maintaining competitive audio quality. We further show that a single model can support editing of lyrics, vocal melody, beats, and singer identity, and we also study the trade-off between reconstruction quality and editability.",
+  "abstractSha256": "e2dc2c8bc11d07620b7d7f50c20c939848bf12a8dbf30ab2e4886c681eaa4a29",
+  "arxivId": "2609.16315",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16315v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Varun Nagaraja"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Gael Le Lan"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Xinhao Mei"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Vikas Chandra"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "Meta AI"
+      ],
+      "name": "Yangyang Shi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把生成与编辑看作稀疏到稠密的条件谱，用同一潜在流匹配模型在生成分支与重建分支间随机切换训练，以词级音素对齐、节拍条件和变分自编码器表征对齐提升可懂度，并用残差瓶颈容量换取重建保真度与可编辑性，最强证据是分离人声词错误率做到 0.133 但感知质量仍落后于偏好优化基线。",
+  "originalTitle": "SongCraft: Unified Song Generation and Editing with Reconstructive Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16315v1.pdf",
+  "readerTitle": "以重建代替配对：SongCraft 用条件密度统一歌曲生成与细粒度编辑",
+  "schemaVersion": 1
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15490",
+  "abstract": "Selective auditory attention decoding (sAAD) infers from electroencephalography (EEG) which speaker a listener attends to in multi-speaker scenarios. A widely used approach reconstructs the attended speech envelope from EEG, correlates it with candidate envelopes, and selects the speaker with the highest Pearson correlation. However, correlations in each decision window have high intrinsic variance, making per-window decisions unreliable, especially for short windows. Recent work introduced a hidden Markov model (HMM) that integrates correlation evidence over time and requires state-dependent emission distributions. Since labeled attention states are typically unavailable in practice, these distributions can be inferred from unlabeled observations by fitting a Gaussian mixture model (GMM). However, when the underlying Gaussians are close, unsupervised fitting becomes less reliable with limited samples. We therefore propose a multiscale GMM whose parameters are jointly estimated across multiple window lengths. The model exploits the window-length dependence of Fisher-transformed correlation estimates, whose means are approximately stable while their variances decrease with the number of samples per window. Experiments show that the multiscale GMM estimates emission parameters more accurately than single-scale fitting, particularly at short windows. Its HMM-post-processed accuracy advantage is largest for short recordings and narrows as more data become available, motivating multiscale fitting in data-constrained settings.",
+  "abstractSha256": "6550983ab3b8037ffd5bfae6314dc4b39edd911de2aea6dfd67bf98f2da07401",
+  "arxivId": "2609.15490",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Geirnaert"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bert De Smedt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Bertrand"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对双人竞争听觉注意解码中短窗 Fisher-z 相关方差大、单尺度无监督 GMM 难分 attended 与 unattended 分量的问题，论文提出跨 8 种窗长共享均值、方差按 1/(N_L-1) 缩放的多尺度 GMM 联合估计 HMM 发射参数，在 72 分钟全量下 1 秒窗提升 1.82 个百分点、在 6 分钟数据下提升 8.32 个百分点，但数据增多后优势收窄。",
+  "originalTitle": "Multiscale Gaussian-Mixture Modeling for HMM Post-Processing in Selective Auditory Attention Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15490.pdf",
+  "readerTitle": "短窗相关性太 noisy：用多尺度高斯混合稳住 HMM 发射分布",
+  "schemaVersion": 1
+}

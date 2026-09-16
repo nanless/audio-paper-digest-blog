@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14542",
+  "arxivId": "2609.14542",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahmad Amirivojdan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Farzad Nadiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abolfazl Alizadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaghayegh Yaraghi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14542",
+  "originalTitle": "Neyshekar: An Open Persian Read-Speech Corpus for Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14542.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

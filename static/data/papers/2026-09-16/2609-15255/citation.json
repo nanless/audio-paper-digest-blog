@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15255",
+  "arxivId": "2609.15255",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Amsterdam, Amsterdam, Netherlands"
+      ],
+      "name": "Ben McEwen"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, Cambridge, Massachusetts, USA"
+      ],
+      "name": "Rupa Kurinchi-Vendhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiqi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lukas Rauch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marek Herde"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sara Beery"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15255",
+  "originalTitle": "BioDCASE: Active Learning for Bioacoustics",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15255.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

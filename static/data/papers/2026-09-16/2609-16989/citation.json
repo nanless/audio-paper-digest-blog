@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16989v1",
+  "arxivId": "2609.16989",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16989v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rongxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berkin Durmus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aysegul Orhon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eduardo Pacheco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Atila Orhon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16989v1",
+  "originalTitle": "Taming Long-form Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16989v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

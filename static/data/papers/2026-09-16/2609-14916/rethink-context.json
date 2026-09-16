@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14916",
+  "abstract": "Residual Vector Quantization (RVQ)-based neural audio codecs (NACs) enable high-fidelity audio distribution at unprecedentedly low bitrates through discrete token-based representations. However, this shift disrupts traditional forensics, as non-linear neural transcoding obscures the underlying traces of legacy compression. This study defines the forensic gap and proposes a Transformer-based framework designed to leverage the hierarchical and temporal dependencies inherent in RVQ sequences. By modeling inter-layer causal relationships and dynamic forensic significance, our model effectively disentangles superimposed artifacts from legacy-to-neural transcoding. Experimental results achieve 97%+ accuracy for codec identification and robust joint identification performance across 32-128 kbps. These results demonstrate that traditional codec traces persist even after neural transcoding, supporting the feasibility and necessity of neural-codec-aware audio forensics.",
+  "abstractSha256": "d7e8c3602baed7d084c73de2cbd48313fa7fdfbab6460f06cc2da912dc354859",
+  "arxivId": "2609.14916",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonje Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinee Youn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yooshin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuck Chae"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donghoon Shin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把传统编码再经神经音频编解码器转码后的来源识别定义为取证缺口，用分层因果与时序注意力建模 RVQ 序列，在固定码率下取得 97% 以上准确率，而 18 类联合任务为 89.34% 且高码率 MP3 与 Opus 仍易混淆。",
+  "originalTitle": "Tracing the Origins: Legacy Codec Identification in Neural Audio Transcoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14916.pdf",
+  "readerTitle": "神经转码盖不住旧痕迹：从离散 RVQ 令牌中追溯传统编码器来源",
+  "schemaVersion": 1
+}

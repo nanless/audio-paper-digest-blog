@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15675",
+  "abstract": "Music Emotion Recognition (MER) aims to identify and represent emotional information in music through computational methods and is an important research area within Music Information Retrieval (MIR). To address the limited consideration of song sectional structure in existing dynamic MER research, this study examines 100 Chinese pop songs by aligning 1,046 manually annotated sections with continuous Valence-Arousal (VA) trajectories and analyzing them from the perspectives of section type, adjacent section transitions, repeated sections, and whole-song trajectories. The results show that emotional differences across sections are reflected more strongly in Arousal. Verse typically forms a relatively low-activation baseline, Pre-chorus exhibits a progressive buildup, and Chorus produces a more pronounced high-arousal arrival, while Interlude, Bridge, and Outro tend to show transitional, divergent, and closing functions, respectively. Although whole-song sectional configurations are diverse, high-frequency local transitions are relatively concentrated. High-arousal positions occur more often in the later part of a song, but are not fixed to the final Chorus. Based on these findings, this study summarizes the emotional organization of the selected pop songs as an empirical framework of &#34;local cycles-global accumulation&#34;, in which local sectional cycles are accompanied by emotional pullbacks, while the overall trajectory exhibits a later-stage rise in VA and a tendency for high-Arousal positions to occur later in the song.",
+  "abstractSha256": "93c5fb0f7df173bd90b52c7e641b904426cf8eb6125ea4bbf7b155b61973744c",
+  "arxivId": "2609.15675",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐理解",
+    "rankBucket": "后50%",
+    "score": 5.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyi Lyu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把 1046 个手工段落与 0.5 秒步长的模型估计效价-唤醒轨迹对齐，显示段落差异主要在唤醒度上且高唤醒位置偏向后段，但进入副歌路径多样、重复段落并不回到初始水平，代价是情绪轨迹来自冻结教师模型而非人工连续标注。",
+  "originalTitle": "Sectional Structure and Emotional Dynamics in Chinese Pop Songs: An Empirical Analysis of Valence-Arousal Trajectories across 100 Songs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15675.pdf",
+  "readerTitle": "段落是功能语境而非情绪模板：100 首中文流行歌的局部循环与全局累积",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14764",
+  "arxivId": "2609.14764",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Madhurananda Pahar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Caitlin Illingworth"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorota Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14764",
+  "originalTitle": "CCMAN: Cognitive Instability-Aware Cross-Modal Attention Network for Interpretable Temporal Biomarkers of Verbal Fluency Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14764.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

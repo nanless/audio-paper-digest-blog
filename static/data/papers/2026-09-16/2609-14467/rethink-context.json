@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14467",
+  "abstract": "Automating clinical documentation from long-form doctor-patient conversations remains challenging for modern audio-language models. While cascaded ASR systems perform well, end-to-end (E2E) models often struggle with information loss and hallucinations on extended audio. For the BeTraC 2026 challenge, the ASLP team presents a fully E2E multimodal system that generates structured SOAP notes directly from audio, bypassing intermediate transcripts. We constructed a 1.41-million-sample multi-task corpus and applied a multi-stage pipeline: domain pre-training, supervised fine-tuning, and reward optimization. Evaluating the architecture under both Lightweight (3B) and Heavyweight (30B) constraints reveals that each training stage progressively enhances performance. Furthermore, scaling to 30B parameters substantially boosts concept extraction and summarization quality. Ultimately, our E2E systems consistently outperform representative cascaded ASR+LLM baselines, proving the efficacy of direct multimodal optimization for clinical documentation.",
+  "abstractSha256": "9bbe71d731bc2a258536ea4a5c39c454b80d0923880b94215f4efc5257981807",
+  "arxivId": "2609.14467",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjie Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianlun Zuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 5 分钟以上医患对话直接生成 SOAP 病历的问题，论文用统一端到端架构比较 3B 轻量与 30B 重量模型，报告四阶段训练把 Concept F1 从零样本的 0.26 和 0.18 分别推到 0.4082 和 0.5167，并以级联基线为对照说明直接优化的收益与容量代价。",
+  "originalTitle": "Bridging the Modality Gap in Long-Form Clinical Audio: A Comparative Study of Lightweight and Heavyweight End-to-End SOAP Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14467.pdf",
+  "readerTitle": "长音频直接写病历：端到端 SOAP 生成的轻重模型对照",
+  "schemaVersion": 1
+}

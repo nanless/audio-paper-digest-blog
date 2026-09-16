@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16855v1",
+  "arxivId": "2609.16855",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16855v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Huimeng Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Xurong Xie"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Haoning Xu"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Jiajun Deng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Youjun Chen"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Chengxi Deng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China Institute of Software, Chinese Academy of Sciences, Beijing, China National Research Council Canada, Canada"
+      ],
+      "name": "Xunying Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16855v1",
+  "originalTitle": "Differentiable and Severity-invariant Discrete Tokens for Dysarthric Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16855v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

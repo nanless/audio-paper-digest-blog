@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14427",
+  "abstract": "A differentiable digital signal processing (DDSP) autoencoder reconstructs a monophonic harmonic sound through three types of synthesis parameters: fundamental frequency, loudness, and timbre features. To handle mixtures of harmonic sounds within the DDSP approach, we have previously proposed a DDSP mixture model (DDSPMM). It represents a mixture as the sum of source signals synthesized by the decoders of pretrained DDSP autoencoders. Although DDSPMM enables direct estimation of synthesis parameters of each source from mixtures, it does not explicitly model temporal variations in the synthesis parameters and can produce excessive temporal fluctuations. In this paper, we propose a method for estimating synthesis parameters with temporally plausible trajectories by incorporating a denoising diffusion probabilistic model (DDPM) into the DDSPMM-based estimation. The DDPM is trained as a generative model of synthesis parameters. During estimation, the proposed method guides the DDPM reverse diffusion process with the reconstruction error between the observed mixture and the mixture synthesized by DDSPMM from the current estimates. Experiments on woodwind and string instrument ensembles showed that the DDPM-based regularization improves synthesis parameter estimation by imposing temporal plausibility on the estimated trajectories.",
+  "abstractSha256": "c92d093cf17f620eabc559e255e028f6c5f123a46335f794691d3ecf42e452df",
+  "arxivId": "2609.14427",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kengo Takemoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomohiko Nakamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对和声乐器混合的逐帧合成参数估计易出现时间抖动的问题，该文用乐谱条件扩散模型学习参数轨迹分布并以多尺度频谱重构误差引导逆扩散，在木管与弦乐合奏上改善了响度与音色特征并保留可复述的实验条件。",
+  "originalTitle": "Differentiable Digital Signal Processing Mixture Model-Guided Diffusion for Synthesis Parameter Estimation from Harmonic Sound Mixtures",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14427.pdf",
+  "readerTitle": "混合不分离直接估计合成参数：扩散先验如何压住时间抖动",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16495v1",
+  "arxivId": "2609.16495",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16495v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungdeok Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seongmin Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Inhan Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junho Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeong-gyu Ban"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong-Hwa Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16495v1",
+  "originalTitle": "Segmental Posterior Decoding for Audio Moment Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16495v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

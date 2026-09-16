@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15240",
+  "arxivId": "2609.15240",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Tianyi Xu"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Shrinaath Narasimhan"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Evan Gorstein"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Santiago Perea"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Yunyi Shen"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Claudia Solís-Lemus"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15240",
+  "originalTitle": "Generating the Unheard: Phylogeny-Guided Latent Generation for Ancestral Sound Reconstruction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15240.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

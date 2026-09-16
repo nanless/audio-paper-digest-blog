@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16090v1",
+  "arxivId": "2609.16090",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16090v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhancheng Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Congren Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangda Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianhuai Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danni Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16090v1",
+  "originalTitle": "MUUNRiver-Bench: Diagnosing Relation-Dependent Music Retrieval with Multimodal Instructions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16090v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

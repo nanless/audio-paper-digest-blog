@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13150",
+  "arxivId": "2609.13150",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonis Asonitis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Pablo Zuluaga Gomez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Verdini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marzieh Razavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierre-Edouard Honnet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vijeta Avijeet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.13150",
+  "originalTitle": "The Limits of Reference-Free Speech Quality Metrics as Evaluators and Rewards on Modern Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13150.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

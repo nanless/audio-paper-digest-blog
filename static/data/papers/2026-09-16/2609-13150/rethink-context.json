@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.13150",
+  "abstract": "Reference-free quality predictors such as UTMOS, DNSMOS and SCOREQ are the de facto automatic evaluators for text-to-speech (TTS) and are increasingly adopted as reward signals for preference optimization. Both roles presuppose that the predicted score tracks human preference. In this work, we test this assumption across six human-rated corpora spanning the quality range from artifact-rich to defect-free TTS, evaluating each predictor on a pairwise task that asks whether the clip it scores higher is the clip listeners prefer, and we subject interpretable prosodic and signal-processing features to the same protocol. When one clip carries audible defects the predictors tend to agree with listeners. Once both clips are clean, no single predictor reliably identifies the preferred sample, and several fall below the accuracy of simply picking the longest-duration clip. A calibrated composite of complementary signals is the strongest evaluator we test, though on the cleanest audio it recovers only part of the gap to the human ceiling. Additionally, using even an equal-weighted ensemble of metrics helps as a post-training reward, where no calibration data is available. Optimizing a single score with policy optimization induces reward hacking, driving the metric toward its optimum while independent held-out judges and a human listening test deteriorate. The composite reward resists this behavior and tends to improve the model. Our contribution is the evaluation protocol, the predictor scores across these corpora, and the diagnosis of when and why single scores fail.",
+  "abstractSha256": "6732727e4f15f9739e861f79a03e0b56f16a182b301fcafb172b82c1c9edbabc",
+  "arxivId": "2609.13150",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonis Asonitis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Pablo Zuluaga Gomez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Verdini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marzieh Razavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierre-Edouard Honnet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vijeta Avijeet"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用六个语料的成对偏好任务检验无参考语音质量分，发现有瑕疵时接近人类上限而双干净时跌到随机，最强证据是干净端单分数与时长基线持平，而域内校准复合与等权复合分别在评测和奖励端缓解但仍远离上限。",
+  "originalTitle": "The Limits of Reference-Free Speech Quality Metrics as Evaluators and Rewards on Modern Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.13150.pdf",
+  "readerTitle": "干净语音上失灵的无参考分数：从评测崩塌到奖励作弊",
+  "schemaVersion": 1
+}

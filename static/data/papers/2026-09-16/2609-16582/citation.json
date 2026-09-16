@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16582v1",
+  "arxivId": "2609.16582",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.16582v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiyang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xudong Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yupei Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiabin Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhang Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaming Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bjorn W. Schuller"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16582v1",
+  "originalTitle": "CLASH: Counterfactual Auditing of Lexical and Prosodic Reliance in Spoken Sarcasm Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16582v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

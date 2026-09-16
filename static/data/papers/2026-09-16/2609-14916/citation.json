@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.14916",
+  "arxivId": "2609.14916",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wonje Heo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinee Youn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yooshin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuck Chae"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donghoon Shin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.14916",
+  "originalTitle": "Tracing the Origins: Legacy Codec Identification in Neural Audio Transcoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.14916.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

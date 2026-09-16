@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15666",
+  "abstract": "The development of automated speaking assessment (ASA) is limited by the scarcity of public datasets, with most existing work relying on read-aloud speech, which limits applicability to real-world communication scenarios. In this work, we introduce OpenEnded, a corpus of English practice speech from Mandarin speakers in open-response tasks. Unlike prior open-response datasets that provide only holistic proficiency scores, OpenEnded offers utterance-level assessments of accuracy, fluency, and prosody. Approximately 10,000 utterances are collected and annotated using a hybrid framework: 1,000 are manually labeled via multi-rater scoring with discrepancy resolution to form a high-quality test set, while the remaining are pseudo-labeled by an audio language model (ALM) for training and development sets. We evaluate ALMs and existing ASA models on the OpenEnded test set and introduce VoxPA as an additional baseline. Results show that ALM-generated pseudo-labels improve training over original ALM scoring, while VoxPA achieves the best performance among all baselines.",
+  "abstractSha256": "18c8b9bb9d5fd4c059cb6de8f9d7bea78fbd5492497b4a4fed8b4bbe0867676a",
+  "arxivId": "2609.15666",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据标注",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据标注",
+      "primaryMethodId": "method.data-annotation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Yu-Wen Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Eric Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Evelyn Ding"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Tianyi Shen"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Zhou Yu"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Columbia University, USA"
+      ],
+      "name": "Julia Hirschberg"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对开放回答口语缺少准确度、流利度、韵律逐句标注的问题，OpenEnded 用 1000 条三人标注测试集加 6109 条训练与 2673 条开发伪标签支撑评估，并以冻结骨干加三头评分的 VoxPA 为更强基线，但伪标签偏向中间分且低分常与无语音绑定。",
+  "originalTitle": "OpenEnded: An Open-Response Speech Corpus for Speaking Proficiency Assessment with Human Annotations and ALM Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15666.pdf",
+  "readerTitle": "开放回答也要逐句打分：OpenEnded 用人工测试集约束伪标签训练",
+  "schemaVersion": 1
+}

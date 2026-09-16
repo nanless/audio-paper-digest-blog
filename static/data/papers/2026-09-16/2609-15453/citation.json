@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.15453",
+  "arxivId": "2609.15453",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Groeninger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihao Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juliana de Castilhos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sven Nebelung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Truhn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.15453",
+  "originalTitle": "Listening for Airway Stenosis: A Foundation Model-Based Method for Rapid and Accessible Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.15453.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
