@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18532v1",
+  "arxivId": "2609.18532",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18532v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheli Hendel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boaz Rafaely"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorothea Kolossa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18532v1",
+  "originalTitle": "Mask-Based Speech Enhancement for Spatial Audio: A Comparison of Ambisonics, Beamforming, and Microphone Channels",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18532v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

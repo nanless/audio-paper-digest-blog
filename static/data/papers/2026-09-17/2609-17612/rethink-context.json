@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17612v1",
+  "abstract": "The hulusi is a wind instrument that was invented in Yunnan Province, China, and has become tremendously popular in recent years. It consists of a mouthpiece, a gourd, and three bamboo tubes, all with free reeds made of copper. The main bamboo tube in the middle has seven finger holes. In this instrument, the pipe length, not the free reed's eigenfrequency, determines the instrument's pitch, unlike, for example, with the Western accordion or the blues harp. In this study, a machine learning model implemented in the COMSAR framework (https://github.com/ifsm) was used to investigate the timbre characteristics of the \\emph{hulusi} to cluster different instruments and pitches. The measured \\emph{hulusi} pitches C, B, A, G, and F were analyzed according to seven psychoacoustic features, among which only the spectral centroid, sharpness, and fractal correlation dimension are shown to form pitch clusters. These timbre features were used to train Kohonen self-organizing maps (SOMs) for clustering. Brightness and sharpness analysis revealed that the highest pitches were less bright and less sharp than mid- and low-range pitches were. Furthermore, the fractal correlation dimension, which mainly determines the chaoticity of the initial transients, was the best-clustering timbre feature for the hulusi, with the highest pitches showing the least chaoticity. This result is supported by defining a cluster quality index for the SOMs.",
+  "abstractSha256": "9769a66f5d66b0557035084ebdb6a15319b8310ed5e1476a646bac6ec6d95d71",
+  "arxivId": "2609.17612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.17612v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Art, Zhejiang Normal University, Jinhua 321004, China",
+        "Institute of Systematic Musicology, University of Hamburg, Hamburg 20354, Germany"
+      ],
+      "name": "Yang Xia"
+    },
+    {
+      "affiliations": [
+        "Institute of Systematic Musicology, University of Hamburg, Hamburg 20354, Germany"
+      ],
+      "name": "Rolf Bader"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用 9 支葫芦丝的 81 个平均音和 7 个心理声学特征训练自组织映射，报告只有频谱质心、锐度和分形关联维能形成音高聚类，其中高音 fa、sol、la 混沌度最低且亮度反直觉偏低，代价是低音区无稳定聚类且录音未公开。",
+  "originalTitle": "Timbre Analysis of the Hulusi, a Southwestern Chinese Free-Reed Instrument, using Machine Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17612v1.pdf",
+  "readerTitle": "葫芦丝高音为何更暗更不混乱：亮度、锐度与分形维度的聚类证据",
+  "schemaVersion": 1
+}

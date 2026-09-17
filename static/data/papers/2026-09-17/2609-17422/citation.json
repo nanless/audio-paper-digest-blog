@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17422",
+  "arxivId": "2609.17422",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinfeng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17422",
+  "originalTitle": "Talking Head Synthesis with Facial Landmark Guidance via 3D Gaussian Splatting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17422.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

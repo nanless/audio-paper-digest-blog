@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17422",
+  "abstract": "Audio-driven digital human generation plays an important role in virtual communication, immersive interaction, and media production. With the development of Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS), recent talking-head systems have obtained more faithful 3D facial geometry and appearance modeling. A remaining difficulty is that speech features mainly describe temporal acoustic patterns rather than explicit facial layouts. As a result, directly driving 3D facial deformation with audio may produce inaccurate mouth motion, weak expression details, and local artifacts. To address this issue, we propose a facial-keypoint-guided spatial enhancement module. The predicted landmarks provide structural cues for selecting and enriching spatial points around expression-sensitive facial regions. We further introduce a global landmark compensation mechanism, where the full set of keypoints is encoded into a conditioning vector to refine 3DGS attributes. This compensation supplies whole-face structural information to the underlying shape representation. Experiments under self-driven and cross-driven settings show that the proposed method improves visual quality, facial realism, and lip synchronization.",
+  "abstractSha256": "0d12ae96bc31bbd332604c2c691827b72876a92e80ad0b324d04c861972f0e8b",
+  "arxivId": "2609.17422",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinfeng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音特征缺少显式人脸空间结构导致口唇与表情不准的问题，该文用音频预测的 68 点地标做局部空间增强与全局补偿来修正三维高斯属性偏移，并在自驱动与跨驱动条件下验证同步与重建，同时以阈值与几何正则的取舍为代价。",
+  "originalTitle": "Talking Head Synthesis with Facial Landmark Guidance via 3D Gaussian Splatting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17422.pdf",
+  "readerTitle": "声音没有空间位置时，如何让三维人脸知道嘴该动哪里",
+  "schemaVersion": 1
+}

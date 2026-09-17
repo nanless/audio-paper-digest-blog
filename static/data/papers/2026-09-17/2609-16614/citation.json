@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16614",
+  "arxivId": "2609.16614",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengyuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haochen Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiqi Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16614",
+  "originalTitle": "RoleBreak: Benchmarking Long-Horizon Role-Playing Robustness in Spoken Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16614.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

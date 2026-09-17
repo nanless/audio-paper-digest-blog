@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18062v1",
+  "arxivId": "2609.18062",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18062v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, Cambridge, USA"
+      ],
+      "name": "Zhixing Chen"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, Cambridge, USA"
+      ],
+      "name": "Cheng-Zhi Anna Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18062v1",
+  "originalTitle": "Encypher: Shared Agency and Social Presence in Collaborative Music Generation for Dance Cyphers",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18062v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

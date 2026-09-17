@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17884v1",
+  "arxivId": "2609.17884",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.17884v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, College of Charleston, Charleston SC, USA"
+      ],
+      "name": "Andrew P. Berg"
+    },
+    {
+      "affiliations": [
+        "Department of Engineering, College of Charleston, Charleston SC, USA"
+      ],
+      "name": "Qian Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, College of Charleston, Charleston SC, USA"
+      ],
+      "name": "Mia Y. Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17884v1",
+  "originalTitle": "The Unbearable Weight: Scaling Models and Methods for UAV Audio Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17884v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

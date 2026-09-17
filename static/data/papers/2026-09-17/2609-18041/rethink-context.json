@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18041v1",
+  "abstract": "Multi-encoder fusion extends Large Audio-Language Models (LALMs) beyond speech-centric recognition, but selecting encoders via intuition or exhaustive search often introduces redundant representations and inflates an already constrained compute budget. We propose CUES (Correlation-gUided Encoder Selection), a lightweight heuristic that estimates complementarity through task- and category-level Pearson correlations between encoders' performance profiles, scoring a candidate set from single-encoder evaluations alone--without fusion training during selection. Evaluated on the XARES-LLM benchmark with a frozen SmolLM2-135M backbone (LoRA-adapted) via five-fold cross-validation, CUES consistently identifies the same configuration per track from held-out development splits alone, without using test data for selection. For the broad Track~A suite, CUES selects a cross-family trio (Whisper-medium, mHuBERT-147, and Dasheng-base), achieving a 4.3% relative gain over Whisper-medium (0.771 vs. 0.739). For Track~B text generation, it re-anchors on a focused, speech-only pair (mHuBERT-147 and WavLM-base-plus) and actively abstains from adding a divergent encoder, outperforming mHuBERT-147 by 6.3% (0.589 vs. 0.554). Rather than a failure to scale, this divergence is consistent with a diversity--interference trade-off that CUES navigates per track from correlation signals alone: across the evaluated pool, added cross-family diversity tends toward an inverted-U on broad audio tasks but toward steady degradation on text generation, which favors a focused, speech-anchored set.",
+  "abstractSha256": "260b565e950bcccbdde9018fd753addfa810169128095700c9d7134a36683afb",
+  "arxivId": "2609.18041",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18041v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Pei-Jun Liao"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Wenze Ren"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Kuo-Hsuan Hung"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hsin-Min Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多编码器大音频语言模型靠直觉或穷举选编码器的问题，论文提出只用单编码器成绩算类别级与任务级相关性的 CUES 规则，在 XARES-LLM 上 Track A 选出三编码器提升 4.3% 而 Track B 主动只留双编码器提升 6.3%，代价是选择依赖开发集打分且仅在单 135M 骨干上验证。",
+  "originalTitle": "Correlation-Guided Encoder Selection for Multi-Encoder Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18041v1.pdf",
+  "readerTitle": "不穷举 220 种融合也能选编码器：用成绩相关性在互补与干扰之间划线",
+  "schemaVersion": 1
+}

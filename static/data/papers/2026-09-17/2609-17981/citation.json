@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17981v1",
+  "arxivId": "2609.17981",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.17981v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zilai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natarajan Balaji Shankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eray Eren"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abeer Alwan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17981v1",
+  "originalTitle": "Encoder Awakening via Adapters: Effective Domain-Adaptive Fine-tuning of Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17981v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

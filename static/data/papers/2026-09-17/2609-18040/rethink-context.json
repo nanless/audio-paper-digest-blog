@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18040v1",
+  "abstract": "Sound event localization and detection (SELD) systems often rely on first-order Ambisonics (FOA) input, whereas obtaining useful FOA representations from irregular microphone arrays remains challenging. This paper proposes a two-stage SELD framework that learns a task-oriented, FOA-compatible representation from microphone-array signals. A neural residual encoder first refines conventional FOA encoding through a signal-dependent correction. A teacher--student scheme then transfers event and spatial knowledge from theoretical FOA representations through frame-level permutation-invariant knowledge distillation. Experiments on synthetic scenes with tetrahedral and 12-channel Benchmark arrays, together with real stationary-source recordings from the LOCATA dataset, show that teacher guidance consistently improves downstream SELD performance and substantially reduces localization error. Signal-level analysis further shows that lower FOA reconstruction error does not necessarily correspond to better SELD performance, indicating that the distilled representation is optimized primarily for task-relevant spatial information rather than strict FOA reconstruction.",
+  "abstractSha256": "b533efe697bd4709861b42c79b61a9ab452642bb8222c02147286d4c6405ad5c",
+  "arxivId": "2609.18040",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18040v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对不规则麦克风阵列难以得到可用 FOA 的问题，该文用常规编码加信号相关残差构成四通道接口，并用理论 FOA 教师做帧级置换不变蒸馏来优化事件与定位信息，代价是信号级重建误差反而变大。",
+  "originalTitle": "Task-oriented neural FOA encoding for SELD from irregular microphone arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18040v1.pdf",
+  "readerTitle": "不追求波形像，只追求定位准：面向 SELD 任务的神经 FOA 编码",
+  "schemaVersion": 1
+}

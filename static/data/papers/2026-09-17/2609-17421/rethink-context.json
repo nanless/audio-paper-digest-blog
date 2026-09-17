@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17421",
+  "abstract": "Audio-Visual Navigation (AVN) requires an agent to localize and navigate toward a continuously vocalizing target relying solely on visual observations and acoustic cues. Currently, systems lack the ability to adaptively correct and replan when faced with incomplete or misleading visual perception. Furthermore, relying on physical collisions to compensate for missing visual information results in inefficient and unsafe navigation, whereas existing methods are overly dependent on passive visual perception. To address these issues, we propose the Transformer-based Token Fusion and Dynamic Graph Planning (TDGP) model, which incorporates high-level perception layers and leverages the Transformer model to fuse multimodal cues for precise local planning. Next, a low-level planning layer is designed that uses physical collision penalties to remove edges that collide with the map in real time and apply corresponding penalties, forcing the agent to automatically re-plan to compensate for the lack of visual information. Experiments show that our TDGP model outperforms baseline models on the Replica and Matterport3D (MP3D) datasets, and that the model&#39;s sound enhancement strategy significantly improves generalization in unheard acoustic scenarios.",
+  "abstractSha256": "108774cf920c112d07740f016ade2594219483556c85dbe550a5ea5138b51714",
+  "arxivId": "2609.17421",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音视频交互",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-interaction",
+          "label": "音视频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音视频交互",
+      "primaryTaskId": "task.av-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaohang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinfeng Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对被动视觉缺失与误导导致的音频视觉导航失败，论文用高层 Transformer 令牌融合选 3×3 局部目标、低层碰撞惩罚图规划转原子动作，在 Replica 与 MP3D 的听过与未听过电话声划分上报告了路径效率与成功率提升，但碰撞图依赖静态假设且仍受深度噪声与仿真条件限制。",
+  "originalTitle": "Transformer-Based Token Fusion and Dynamic Graph Planning for Audio-Visual Navigation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17421.pdf",
+  "readerTitle": "看不清就撞一下再改路：TDGP 用令牌融合定方向、用碰撞删边改路径",
+  "schemaVersion": 1
+}

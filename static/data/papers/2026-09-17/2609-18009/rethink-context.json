@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18009v1",
+  "abstract": "Lightweight audio-visual speech enhancement (AVSE) models face a critical trade-off between computational efficiency and cross-modal alignment accuracy. While simple concatenation lacks relational expressiveness, dense cross-attention incurs computational overhead and is prone to unreliable cross-modal correspondence under strong acoustic interference. We propose Sparse Graph-Guided Mamba (SG-Mamba), a lightweight AVSE framework that integrates a sparse heterogeneous graph with a linear-complexity Mamba backbone. The graph explicitly models modality-specific relations through content-adaptive attention and cross-frame audio-visual connections, while Mamba captures long-range temporal context. We further introduce an audio skip connection to preserve spectral detail without sacrificing noise suppression. Evaluated on LRS3, SG-Mamba achieves competitive or superior performance against strong lightweight baselines and reaches 13.091 dB SI-SDR under noise-only condition. It also remains robust in cluttered multi-speaker conditions with a competitive cost of 3.45 G MACs (or 6.90 G FLOPs). Results on VoxCeleb2 further suggest that explicit structural priors improve robustness, generalizability, and computational efficiency in lightweight AVSE.",
+  "abstractSha256": "fb2f4a568ab6ddd1ae51b5e275ce3eb809694d497e0d0959979eef86d65d9b8a",
+  "arxivId": "2609.18009",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18009v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Guo-Ruei Tseng"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Hsin-Min Wang"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对轻量音视语音增强中拼接缺乏结构、先验稠密注意力易错配的问题，SG-Mamba 用±3 帧稀疏异构图做局部内容自适应融合再交由单向 Mamba 建模全局时序，在 LRS3 噪声下取得 13.091 dB SI-SDR，代价为 5.3 M 参数和 3.45 G MACs。",
+  "originalTitle": "G-Mamba: Sparse Graph-Guided Mamba for Audio-Visual Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18009v1.pdf",
+  "readerTitle": "用稀疏局部图约束跨模态对齐，再让 Mamba 管长时序的轻量音视增强",
+  "schemaVersion": 1
+}

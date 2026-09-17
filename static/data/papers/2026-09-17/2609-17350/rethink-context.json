@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17350",
+  "abstract": "Chronic Obstructive Pulmonary Disease (COPD) remains a major global health challenge, emphasizing the need for accessible and non-invasive detection. Since speech production is fundamentally linked to respiratory physiology, its disruptions can serve as indirect indicators of pulmonary impairment. This study introduces SpiroPhonia, a machine learning framework that leverages spontaneous speech for respiratory health assessment. We evaluated SpiroPhonia on a new dataset of 201 speakers (102 with COPD, 99 healthy controls). By integrating statistical analysis with recursive feature selection, we identified a compact set of discriminative speech markers. Our best model achieved 78% accuracy, 80% F1-score, and 87% AUC. This performance on spontaneous speech is competitive with methods using controlled laboratory recordings. Findings demonstrate that everyday speech encodes robust respiratory biomarkers, paving the way for continuous health monitoring via voice-enabled technologies.",
+  "abstractSha256": "8439ac625850313828d3a2fdcc4f7fd8d957262304af6ddae57beedb2880e9ce",
+  "arxivId": "2609.17350",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roksana Khanom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shafia Supty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nirupam Roy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashok Agrawala"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对肺功能检查依赖设备与配合的问题，SpiroPhonia 用真实访谈中的自发语音提取抖动、频谱与停顿三类特征，在 201 人被试独立测试上报告 78% 准确率、80% F1 与 87% AUC，代价是小样本下置信区间宽且跨语言跨设备泛化待验证。",
+  "originalTitle": "SpiroPhonia: Non-Invasive Respiratory Health Assessment from Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17350.pdf",
+  "readerTitle": "日常闲聊里藏着肺部信号：SpiroPhonia 如何用自发语音做 COPD 判别",
+  "schemaVersion": 1
+}

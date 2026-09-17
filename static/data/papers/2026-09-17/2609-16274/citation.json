@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16274",
+  "arxivId": "2609.16274",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Hosseini-Kivanani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nafiseh Taghva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Gilles"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Niebuhr"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16274",
+  "originalTitle": "Speaker-Specific and Language-Dependent Temporal Organization in Bilingual Political Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16274.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

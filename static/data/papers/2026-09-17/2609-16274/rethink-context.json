@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16274",
+  "abstract": "Speech rhythm helps structure persuasive speech, but most empirical work examines monolingual English. This study asks how politicians organize timing when speaking Luxembourgish and French. We analyze 400 sentences from ten politicians, annotated for segments and pauses. We compute rhythm metrics, including means, variability, and pairwise variability indices for consonants and vowels. We quantify speaker and language contributions and test within-speaker language effects with paired t-tests. Results show that consonant-based metrics retain speaker-specific signatures, whereas vowel-based metrics are largely driven by language choice. French tokens display longer and more variable vowels and vocalic intervals, while consonant timing differences are smaller. No robust language by gender interactions emerge. These findings show that language choice systematically reorganizes rhythmic timing in bilingual public speech.",
+  "abstractSha256": "dc85950d3bf8ae2e44639c439580f6a7c57d63f2493092167633c9c28ad384a5",
+  "arxivId": "2609.16274",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Hosseini-Kivanani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nafiseh Taghva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Gilles"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Niebuhr"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究以 10 名卢森堡政治人物各 20 句卢森堡语加 20 句法语共 400 句自发政治话语为对象，用 C/V 分段与成对变异等时长节律指标加配对 t 检验与方差分解，报告显示元音时长与语速主要随语言重组而辅音时序保留说话人特征，且未发现语言与性别交互。",
+  "originalTitle": "Speaker-Specific and Language-Dependent Temporal Organization in Bilingual Political Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16274.pdf",
+  "readerTitle": "元音管语言、辅音留个人：双语政治演讲的时间组织不对称",
+  "schemaVersion": 1
+}

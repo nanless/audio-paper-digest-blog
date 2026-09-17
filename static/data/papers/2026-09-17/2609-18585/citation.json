@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18585v1",
+  "arxivId": "2609.18585",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18585v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgia Adorni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michela Papandrea"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Battista Rimoldi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiziano Leidi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18585v1",
+  "originalTitle": "TTM-Bench: A Framework for Text-to-Music System Performance Benchmarking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18585v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

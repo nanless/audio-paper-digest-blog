@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18521v1",
+  "abstract": "Speech retrieval has become increasingly important as spoken content continues to grow across meetings, lectures, podcasts, and videos. Existing benchmarks and models have advanced semantic search over spoken content, but largely focus on \\emph{what} is said while overlooking \\emph{who} says it. In many real-world scenarios, however, users need to retrieve speech based jointly on semantic content and a target speaker, where the speaker may be specified naturally through a reference speech utterance rather than a predefined identity. To address this gap, we introduce \\textbf{VoiceTrace-Bench}, a benchmark for hybrid speech retrieval in which each query combines text specifying \\emph{what} to retrieve with reference speech specifying \\emph{who} to retrieve. This setting requires models to integrate complementary semantic and speaker information directly from heterogeneous query inputs. Motivated by the joint audio-text modeling capabilities of audio-language models (ALMs), we develop \\textbf{VoiceTrace}, a two-stage retrieval framework consisting of \\textbf{VoiceTrace-Emb}, an embedding model that learns unified representations for efficient large-scale retrieval, and \\textbf{VoiceTrace-Reranker}, a reranking model that jointly examines each query--candidate pair for fine-grained relevance estimation. Experiments show that VoiceTrace achieves state-of-the-art performance on established semantic speech retrieval benchmarks, while substantially outperforming cascade-based approaches on VoiceTrace-Bench, demonstrating its effectiveness for both conventional semantic retrieval and the new hybrid retrieval setting.",
+  "abstractSha256": "66644e26882eb7d9a6ee8253ec2374e4c831b325cb8e27066d455da1093f1377",
+  "arxivId": "2609.18521",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18521v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Yee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengjie Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiarui Hai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Helin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siwei Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weitao You"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lingyun Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对只检内容而忽略说话人的不足，论文用文本查内容加参考语音定说话人的混合查询，构建 VoiceTrace-Bench 并训练统一音频语言模型的两阶段检索重排框架，在语义基准和混合基准上报告了可复现的召回与排序提升，但重排带来额外推理开销且多说话人仍明显更难。",
+  "originalTitle": "VoiceTrace: A Benchmark and Retrieval Framework for Who-Said-What Speech Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18521v1.pdf",
+  "readerTitle": "谁说了什么：把内容与说话人一起检回来的混合语音检索",
+  "schemaVersion": 1
+}

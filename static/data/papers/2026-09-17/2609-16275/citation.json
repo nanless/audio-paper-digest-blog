@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16275",
+  "arxivId": "2609.16275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Hosseini-Kivanani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nafiseh Taghva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Gilles"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Niebuhr"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.16275",
+  "originalTitle": "Speaker or Language? Explaining Variance in Charismatic Prosody Across Luxembourgish and French",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16275.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

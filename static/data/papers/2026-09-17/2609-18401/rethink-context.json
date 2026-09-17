@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18401v1",
+  "abstract": "Audio inpainting aims to restore missing segments in an audio waveform, as encountered in dropouts and packet losses. This paper revisits the autoregressive (AR) interpolation method proposed by Etter, which combines forward and backward AR prediction through a structured linear system, yet lacks a widely used full implementation for audio signals. We provide an open implementation and propose two practical extensions: A formulation that allows high-order AR models even when the gap length is shorter than the model order, and a causal variant tailored to packet loss concealment. The method is evaluated on musical excerpts with gaps up to 80 ms, using SNR and perceptually motivated objective difference grades, complemented by a listening test. The results show that Etter inpainting matches the performance of most AR- and sparsity-based baseline methods, with the exception of the iterative, gap-wise Janssen approach.",
+  "abstractSha256": "d2f9dc044542dd7f398e5e93f4c7c595022fe85d520d560aa8247532cd77270b",
+  "arxivId": "2609.18401",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18401v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Mokrý"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matěj Hrdlička"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pavel Rajmic"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文复活 Etter 双向自回归插值，用前后向预测残差能量最小导出线性方程组求缺口样本，并给出短缺口高阶模型和因果丢包隐藏两种扩展，在 80 毫秒内音乐缺口上与多数基线相当但弱于逐缺口 Janssen 迭代法且外插简化版更快。",
+  "originalTitle": "Reviving Etter method for autoregressive inpainting: Generalization, evaluation, implementation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18401v1.pdf",
+  "readerTitle": "缺口比模型阶数还短时，Etter 的双向自回归插值还能解吗",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18585v1",
+  "abstract": "Text-to-music (TTM) systems are increasingly used to generate musical audio from natural-language descriptions. Robust evaluation is therefore essential, yet reliable performance comparison remains challenging. This difficulty stems from differences in system architecture, supported conditioning information, and access mode, as well as heterogeneous and fragmented metrics that cannot be applied uniformly across systems. To address these challenges, we introduce TTM-Bench, a framework that defines a common protocol for systematic, reproducible performance benchmarking of contemporary TTM systems. It evaluates performance along two dimensions: musical-content alignment, quantified by interpretable semantic, genre, and musical-descriptor agreement scores against a common musical specification and summarized by an aggregate score; and computational efficiency, characterized by generation latency and real-time factor, alongside resource use for local models and cost for hosted services. We demonstrate the framework through a preliminary comparative case study, illustrating the complementary evidence captured by these dimensions. The results show that higher musical-content alignment does not systematically coincide with lower computational demands, highlighting the importance of assessing TTM performance through distinct, interpretable measures rather than a reductive overall indicator.",
+  "abstractSha256": "326c45902d14982bb30ec0cec3c54a3469739ea013ca58e9a7fdcf9b70f79314",
+  "arxivId": "2609.18585",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18585v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgia Adorni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michela Papandrea"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Battista Rimoldi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiziano Leidi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对文本到音乐系统条件格式与访问方式不同难以直接比较的问题，TTM-Bench 用共享音乐规格加系统适配表达分别度量音乐内容对齐与计算效率，案例研究显示内容对齐更高并不系统性对应更低的计算需求。",
+  "originalTitle": "TTM-Bench: A Framework for Text-to-Music System Performance Benchmarking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18585v1.pdf",
+  "readerTitle": "对齐与开销分开算：TTM-Bench 如何让异构文本音乐系统可比",
+  "schemaVersion": 1
+}

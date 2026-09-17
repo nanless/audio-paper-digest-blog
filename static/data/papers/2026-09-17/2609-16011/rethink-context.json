@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16011",
+  "abstract": "Embodied conversational agents require synchronized full-body motion (body gestures and facial expressions) that aligns with speech and emotional state. Omni-modal large language models excel at multimodal understanding but produce only linguistic outputs, leaving a critical gap in embodied response generation. We identify and address a failure of emotion conditioning: like other conditional generators that under-use weak conditioning signals, a flow-matching model given both a rich audio embedding and a discrete emotion label suppresses the emotion, generating near-identical motion regardless of the specified emotion. We present EMODY Flow, a lightweight (around 35M parameters) flow-matching framework that attaches to a frozen Qwen-3 Omni model and reuses its internal Mimi audio-codecs to condition two parallel DiT generators - one for SMPL-X body pose, one for FLAME facial expressions. A training-time auxiliary emotion classifier restores emotion sensitivity by forcing generated motion to be emotion-identifiable. EMODY Flow sets a new state of the art on BEAT2 gesture quality, with FGD 0.302, Beat Correlation 0.853, and Diversity 24.62 - improving over the best prior results by 26%, 5%, and 62% respectively - and transfers to zero-shot facial animation on TFHP without domain-specific fine-tuning. Beyond these quantitative gains, the classifier yields clearly emotion-separated motion, which we demonstrate qualitatively through a multidimensional-scaling analysis of the generated gestures.",
+  "abstractSha256": "7edb41432dee6dc085f772e3c187755ccb6ea55da706ddefca3736a8af47173d",
+  "arxivId": "2609.16011",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "INRIA, Univ. Grenoble Alpes , Grenoble , France"
+      ],
+      "name": "Harsh Kumar Agarwal"
+    },
+    {
+      "affiliations": [
+        "INRIA, Univ. Grenoble Alpes , Grenoble , France"
+      ],
+      "name": "Xavier Alameda-Pineda"
+    },
+    {
+      "affiliations": [
+        "Univ. Grenoble Alpes, CNRS, Grenoble INP, GIPSA-lab , Grenoble , France"
+      ],
+      "name": "Olivier Perrotin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "EMODY Flow 复用冻结 Qwen-3 Omni Talker 的 Mimi 音频嵌入驱动两个并行 DiT 流匹配模型分别生成身体与面部动作，在 BEAT2 上以 FGD 0.302 报告手势质量最优，并以 FGD 升至 0.362 的小幅代价换取身体动作的情绪可分性。",
+  "originalTitle": "EMODY Flow: Emotion-Aware Audio-Driven Full-Body Motion Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16011.pdf",
+  "readerTitle": "强音频压住弱情绪时：EMODY Flow 用辅助分类器找回情绪可控性",
+  "schemaVersion": 1
+}

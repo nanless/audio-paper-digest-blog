@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18470v1",
+  "arxivId": "2609.18470",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18470v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ronghao Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiaolin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zefeng Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yichu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sijie Mai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haifeng Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yap-peng Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18470v1",
+  "originalTitle": "Divide and Conquer: Mixture-of-Bottleneck Experts in Informative Ordinal Space for Video-based Multimodal Sentiment Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18470v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

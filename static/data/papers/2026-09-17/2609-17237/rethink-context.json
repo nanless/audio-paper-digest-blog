@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17237",
+  "abstract": "In geometrical acoustics, room impulse responses (RIRs) can be represented by a set of image sources in free space. For a fixed source position, the image sources allow for computing RIRs at arbitrary receiver positions. However, for a moving physical source, the image sources also move, making interpolation more difficult. In this paper we develop an interpolation method for image source positions of a moving source, given image source positions at the start and end of the trajectory. The method exploits the fact that each image source moves the same distance as the physical source. A statistical model is developed to derive cost functions and an appropriate dummy cost used in the proposed partial optimal transport (POT) approach. Through simulated experiments, POT using the proposed cost functions is shown to be effective compared to the alternatives.",
+  "abstractSha256": "d20bed3af5ffe89c37ae6aae5fcbf6e83946dcbb26d7a0f3084d41d4a6f252b8",
+  "arxivId": "2609.17237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "房间脉冲响应估计",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.spatial-audio",
+          "label": "空间音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "房间脉冲响应估计",
+      "primaryTaskId": "task.rir-estimation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesper Brunnström"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Elvander"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Haasler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对移动物理声源导致镜像源整体平移且部分可见性变化的问题，论文用部分最优传输恢复起点与终点镜像源集合的配对并做位移插值，在统计数据和镜像源仿真数据上均优于线性插值，而源信息代价在简洁性和精度上最实用。",
+  "originalTitle": "Optimal transport of image sources for interpolation of room impulse responses with moving sources",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17237.pdf",
+  "readerTitle": "移动声源下镜像源如何配对：用部分最优传输做房间冲激响应插值",
+  "schemaVersion": 1
+}

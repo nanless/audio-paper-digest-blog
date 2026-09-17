@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17420",
+  "abstract": "Audio-visual embodied navigation equips robots with the capability to infer the locations of sound sources by integrating visual inputs and acoustic information (e.g., depth observations and binaural audio cues). The core challenge lies in establishing effective semantic interactions across heterogeneous modalities (which exhibit distinct feature distributions). Existing feature fusion strategies, however, often rely on simple multimodal aggregation and therefore fail to capture the underlying geometric and semantic relationships, leading to information degradation in complex environments. To overcome these limitations, this work presents the Cycle-Temporal Attention Network (CTAN), a framework designed for active semantic-enhanced fusion (rather than straightforward multimodal combination). Specifically, the proposed Audio-Visual Reconstruction Cross-Attention (AVRCA) module employs a bidirectional cycle-consistency constraint (between visual and acoustic representations) to reinforce the spatial semantic attributes of both modalities, thereby facilitating more robust cross-modal interaction. Additionally, we design a Temporal Cross-Modal Memory (TCMM) mechanism to dynamically integrate real-time enhanced multimodal features with historical context, reducing performance drops caused by auditory dead zones. Experimental results obtained on the Replica and Matterport3D benchmarks indicate that the proposed approach achieves superior performance over previous audio-visual navigation methods in terms of success rate (SR), success weighted by path length (SPL), and scene navigation accuracy (SNA).",
+  "abstractSha256": "cdd94acf1884175eb4bee7c6069b72d2d70ff1d826d5d7a82aebbe2f11778a6a",
+  "arxivId": "2609.17420",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声源定位",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Teng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinfeng Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对深度与双耳音频简单拼接会丢失几何语义关联的问题，CTAN 用双向重构交叉注意力做主动语义增强、用门控时间记忆桥接听觉死区，在 Replica 与 Matterport3D 未见环境中相对 SoundSpaces 基线提升了未听过声音下的成功率与路径效率，但消融显示各模块贡献与听觉死区恢复能力仍受场景规模与声音泛化条件限制。",
+  "originalTitle": "CTAN: Cycle-Temporal Attention Network for Embodied Audio-Visual Navigation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17420.pdf",
+  "readerTitle": "先互相增强语义再记忆历史：CTAN 用循环一致与时间门控做声音导航",
+  "schemaVersion": 1
+}

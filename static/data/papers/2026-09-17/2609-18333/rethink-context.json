@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18333v1",
+  "abstract": "Streaming automatic speech recognition (ASR) must be judged jointly on what it transcribes and on how quickly it commits each word. Delayed streams modeling (DSM) has become the dominant paradigm for streaming large audio-language models, exposing a structural delay $τ$ that bounds the decoder's lookahead. We show that $τ$ is a poor proxy for user-perceived latency, and that the alignment-based supervision of DSM leaves latency on the table: the same forced-aligned transcript is used at every $τ$, forcing the model to withhold words it could already commit. We introduce AWED, a word-level emission-delay metric defined relative to the acoustic end of each word, and post-train a DSM recognizer with GRPO under a reward that scores transcription accuracy and measured delay jointly. Trained at a single operating point ($τ=6$ frames), our model dominates both its supervised fine-tuning initialization and the Voxtral Realtime backbone across all evaluated lookahead budgets: it cuts WER by 30.8\\% relative at an 80\\,ms structural delay, and by 5.7\\% relative at 480\\,ms while lowering median AWED from 1.17\\,s to 1.04\\,s. Latency-rewarded post-training thus advances the accuracy--latency Pareto frontier of streaming ASR without architectural change.",
+  "abstractSha256": "6733c9e41b04061e61dc50dbebae916104ed7f710fed5bc0e2de579d3208f70b",
+  "arxivId": "2609.18333",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18333v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiuwen Zheng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对延迟流建模中结构延迟不能代表用户等待且固定对齐迫使模型晚输出的问题，论文引入词级实测延迟并在单点用准确率加延迟联合奖励做 GRPO 后训练，在 80 ms 处把词错误率相对降低 30.8% 且在 480 ms 处把中位延迟从 1.17s 降到 1.04s。",
+  "originalTitle": "Look Less, Hear Better: Jointly Rewarded GRPO for Streaming ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18333v1.pdf",
+  "readerTitle": "名义延迟不够用：用实测词延迟联合奖励重排流式识别的输出时机",
+  "schemaVersion": 1
+}

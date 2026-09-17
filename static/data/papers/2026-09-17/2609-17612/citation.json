@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17612v1",
+  "arxivId": "2609.17612",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.17612v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Art, Zhejiang Normal University, Jinhua 321004, China",
+        "Institute of Systematic Musicology, University of Hamburg, Hamburg 20354, Germany"
+      ],
+      "name": "Yang Xia"
+    },
+    {
+      "affiliations": [
+        "Institute of Systematic Musicology, University of Hamburg, Hamburg 20354, Germany"
+      ],
+      "name": "Rolf Bader"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17612v1",
+  "originalTitle": "Timbre Analysis of the Hulusi, a Southwestern Chinese Free-Reed Instrument, using Machine Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17612v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

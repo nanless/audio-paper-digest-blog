@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18521v1",
+  "arxivId": "2609.18521",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18521v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Yee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengjie Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiarui Hai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenang Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Helin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siwei Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weitao You"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lingyun Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18521v1",
+  "originalTitle": "VoiceTrace: A Benchmark and Retrieval Framework for Who-Said-What Speech Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18521v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

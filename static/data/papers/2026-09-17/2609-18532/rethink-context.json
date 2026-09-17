@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18532v1",
+  "abstract": "Mask-based speech enhancement is widely used for suppressing noise and interference, but its performance in spatial audio algorithms with multichannel output has not been studied extensively. In such settings, speech enhancement must improve speech quality while preserving spatial cues that are essential for localization, spatial awareness, and spatial release from masking. In this work, we systematically compare time frequency masking applied to three signal representations: microphone signals, beamformer outputs, and Ambisonics signals. Performance is evaluated in terms of speech quality, intelligibility, binaural cue preservation, and reverberation preservation. Results reveal a clear trade-off between enhancement and spatial fidelity: beamformer-domain masking achieves the highest speech enhancement scores, while Ambisonics-domain masking better preserves the spatial attributes of the residual interference. All methods preserve the target's localization cues.",
+  "abstractSha256": "cb94b49263553cd592ec951317a08996d68a67c0d076bcd519f142317175541e",
+  "arxivId": "2609.18532",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18532v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheli Hendel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boaz Rafaely"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorothea Kolossa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用理想比值掩蔽比较麦克风、波束形成器和 Ambisonics 三种域的增强，报告显示波束域语音质量最高而 Ambisonics 域更好地保留残留干扰的空间属性，且所有方法都保留目标声源定位线索，但以混响目标为期望才能保住混响。",
+  "originalTitle": "Mask-Based Speech Enhancement for Spatial Audio: A Comparison of Ambisonics, Beamforming, and Microphone Channels",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18532v1.pdf",
+  "readerTitle": "在多通道输出里做掩蔽：增强越强，残留干扰的空间感丢得越多吗",
+  "schemaVersion": 1
+}

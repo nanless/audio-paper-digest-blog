@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18401v1",
+  "arxivId": "2609.18401",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18401v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Mokrý"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matěj Hrdlička"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pavel Rajmic"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18401v1",
+  "originalTitle": "Reviving Etter method for autoregressive inpainting: Generalization, evaluation, implementation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18401v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

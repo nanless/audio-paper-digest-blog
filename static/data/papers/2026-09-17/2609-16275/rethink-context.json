@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.16275",
+  "abstract": "Charismatic speech is shaped by language and speaking style, yet their relative contribution in bilingual public speaking remains unclear. We analyzed spontaneous speeches of 10 politicians who address audiences in Luxembourgish and French, in highly comparable communicative contexts across languages. From 400 utterances, we extracted 41 acoustic-prosodic features linked to vocal charisma and fitted mixed-effects models to separate speaker- and language-related variance. Speaker identity accounted for most variance, whereas language explained less, but still showed systematic differences: French productions showed higher shimmer and phrase-final F0, indicative of a polite, respectful voice, while Luxembourgish productions exhibited stronger mid-frequency spectral energy, suggesting a more vocally present profile. These patterns align with the sociolinguistic roles of Luxembourgish as an informal identity language and French as a high-prestige institutional variety.",
+  "abstractSha256": "9c860413bafee48575224bce53ec26ccf77007d7c544814e225ea3ef7ba23e3d",
+  "arxivId": "2609.16275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nina Hosseini-Kivanani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nafiseh Taghva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Gilles"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oliver Niebuhr"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 10 名双语政客各 20 句卢森堡语加 20 句法语共 400 句和 41 个魅力相关声学韵律特征，以混合效应模型分离说话人与语言方差，发现说话人中位解释一半以上方差而语言中位仅占约 0.5%，语言差异集中在法语更高的 shimmer 与句末基频和卢森堡语更强的中频谱能量，但合成魅力指数无语言主效应。",
+  "originalTitle": "Speaker or Language? Explaining Variance in Charismatic Prosody Across Luxembourgish and French",
+  "pdfUrl": "https://arxiv.org/pdf/2609.16275.pdf",
+  "readerTitle": "说话人压过语言：卢森堡语与法语魅力韵律的方差从哪里来",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18040v1",
+  "arxivId": "2609.18040",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18040v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiachen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18040v1",
+  "originalTitle": "Task-oriented neural FOA encoding for SELD from irregular microphone arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18040v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

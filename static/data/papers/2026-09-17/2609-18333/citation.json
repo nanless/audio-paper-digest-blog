@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18333v1",
+  "arxivId": "2609.18333",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18333v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiuwen Zheng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18333v1",
+  "originalTitle": "Look Less, Hear Better: Jointly Rewarded GRPO for Streaming ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18333v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18009v1",
+  "arxivId": "2609.18009",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18009v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Guo-Ruei Tseng"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Hsin-Min Wang"
+    },
+    {
+      "affiliations": [
+        "Dept. of Computer Science and Information Engineering, National Taiwan Normal University, Taiwan Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan"
+      ],
+      "name": "Berlin Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18009v1",
+  "originalTitle": "G-Mamba: Sparse Graph-Guided Mamba for Audio-Visual Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18009v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

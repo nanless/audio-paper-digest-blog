@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18680",
+  "arxivId": "2609.18680",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongbin Suo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18680",
+  "originalTitle": "HearInContext: A Benchmark for Implicit Context in Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18680.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

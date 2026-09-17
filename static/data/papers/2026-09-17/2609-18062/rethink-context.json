@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18062v1",
+  "abstract": "Music and dance are social practices of expression and connection, yet most HCI work in human-AI co-creation centers the solo performer. As generative music matures, we ask not only what AI can compose but what social encounters it can organize around sound. We present Encypher, a collaborative generative music system that translates collective movement qualities into text prompts conditioning real-time music generation for dance cyphers. Through five weeks of co-design with local dancers, a user study with unacquainted participants, a public museum event, and a live performance, we found that users developed shared agency, perceiving the music as a response to the room's energy. While newcomers felt uncertain, the system fostered social presence by prompting them to look to each other for cues. By treating sociality as a design concern rather than a downstream effect, we offer a framework and design implications for AI systems for collaborative, embodied expression.",
+  "abstractSha256": "7152bc83e08011bc74ac1afd4cb56bb1664f0a961b613a6fbd4fd5afab5f335c",
+  "arxivId": "2609.18062",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18062v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, Cambridge, USA"
+      ],
+      "name": "Zhixing Chen"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, Cambridge, USA"
+      ],
+      "name": "Cheng-Zhi Anna Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Encypher 研究陌生人如何一起跳舞并共同引导实时神经音频，用 11 人课堂研究显示协作感达 81.8% 认同而个人控制感仅 63.6%，代价是 2 秒生成延迟和屏幕分散注意力的双刃效应。",
+  "originalTitle": "Encypher: Shared Agency and Social Presence in Collaborative Music Generation for Dance Cyphers",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18062v1.pdf",
+  "readerTitle": "从一个人跳到一屋人跳：Encypher 把集体律动写成音乐提示",
+  "schemaVersion": 1
+}

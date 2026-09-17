@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17234",
+  "arxivId": "2609.17234",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuhei Kato"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17234",
+  "originalTitle": "Self-Distilled Pronunciation and Accent Control for Neural Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17234.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

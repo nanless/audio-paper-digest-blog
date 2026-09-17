@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17424",
+  "abstract": "The Spanish trill /r/ is canonically described as a short sequence of lingual closures, yet large-scale acoustic evidence across corpora is scarce, and automatic counters locating envelope peaks tend to conflate each closure with its release. We present a closure-based detector that locates closures gated by a quality filter and cross-checked against an independent autocorrelation-based period estimator. Applied to 3,560 well-formed (voiced, periodic) trill tokens from 356 speakers across six Spanish corpora, the detector yields a median of two closures and an inter-closure period near 36ms, matching the descriptive literature on all corpora. At the speaker level, phonotactic context is the only factor with a robust, medium effect: onset trills (word-initial and post-/n,l,s/) show more closures than intervocalic rr. We find no robust evidence of a sex effect once closures are counted directly. We report reference values and release a reproducible measurement pipeline for Spanish trills.",
+  "abstractSha256": "3aeb1d75e71c5803a247beae9f303c8037fa1576549d43d0d7ceae60d5bc5d93",
+  "arxivId": "2609.17424",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.sociophonetics",
+          "label": "社会语音学"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mateo Cámara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maria F. Alcala-Durand"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用先定位中频能量谷再验证释放的闭合计数器替代包络峰计数，在六个语料库 356 名说话人 3560 个合格颤音上得到中位数 2 个闭合、约 36 毫秒间隔，语境效应稳健而性别效应消失，代价是只描述成形良好的浊音周期性颤音且缺乏人工逐点基准。",
+  "originalTitle": "Counting Closures in Spanish Trills: A Multi-Corpus Acoustic Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17424.pdf",
+  "readerTitle": "数闭合而不是数峰：西班牙语颤音两种计数单位为何得出相反性别结论",
+  "schemaVersion": 1
+}

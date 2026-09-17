@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18041v1",
+  "arxivId": "2609.18041",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.18041v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Pei-Jun Liao"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hung-Shin Lee"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Wenze Ren"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Kuo-Hsuan Hung"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "Inst. of Information Science, Academia Sinica, Taiwan Grad. Inst. of Electrical Engineering, National Taiwan University, Taiwan Grad. Inst. of AI Interdisciplinary Applied Technology, National Taiwan Normal University, Taiwan Grad. Inst. of Biomedical Electronics and Bioinformatics, National Taiwan University, Taiwan Original Content Center, Gamania Digital Entertainment Co., Ltd., Taiwan NTU Artificial Intelligence Center of Research Excellence (AI-CoRE), National Taiwan University, Taiwan"
+      ],
+      "name": "Hsin-Min Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18041v1",
+  "originalTitle": "Correlation-Guided Encoder Selection for Multi-Encoder Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18041v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

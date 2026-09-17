@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.17237",
+  "arxivId": "2609.17237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesper Brunnström"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Elvander"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Haasler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.17237",
+  "originalTitle": "Optimal transport of image sources for interpolation of room impulse responses with moving sources",
+  "pdfUrl": "https://arxiv.org/pdf/2609.17237.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
