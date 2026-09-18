@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19879",
+  "arxivId": "2609.19879",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhavana Akkiraju"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ravi Sastry Kolluru"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Charan D"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srihari Bandarupalli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Santosh Kesiraju"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anil Vuppala"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19879",
+  "originalTitle": "VākQA: A Benchmark and Evaluation Study for Telugu Spoken Factoid Question Answering",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19879.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

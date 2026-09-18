@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20223",
+  "abstract": "We study weakly supervised incremental telecom fraud detection from raw telephone audio, where training provides only conversation-level labels and predictions must be updated before a call ends. We introduce StreamFraudNet, which processes incoming audio through overlapping bounded-context windows using a frozen self-supervised speech encoder, recurrent temporal modeling, and learned aggregation of latent window scores. On a controlled English benchmark, StreamFraudNet achieves a ROC--AUC of \\(0.9953\\), significantly outperforming acoustic and mean-pooling baselines while remaining competitive with strong global temporal models. The model produces its first prediction after 10 seconds of audio, updates every 2 seconds, and operates faster than real time on the evaluated server hardware. Ablations identify recurrent temporal context as the principal contributor to performance. These results demonstrate that fraud risk can be scored incrementally from raw speech without transcripts or temporal annotations, while highlighting the need for latency-aware training to improve early prediction.",
+  "abstractSha256": "7f8293e61d4086117842d6b7015fea4bf7e7aabaee5d28a92b0ddbf555b8431a",
+  "arxivId": "2609.20223",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khang Nhat Hoang Vo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anh Trac Duc Dinh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tai Tien Ta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tho Quan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把电话诈骗检测写成弱监督增量打分问题，用冻结语音编码器加有界窗口循环建模与聚合器实现每 2 秒更新，在受控英文合成基准上报告终局 ROC-AUC 约 0.9953，而消融显示循环上下文是主要贡献且全局模型终局数值更强。",
+  "originalTitle": "Before the Warning Comes Too Late: Incremental Phone-Scam Detection from Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20223.pdf",
+  "readerTitle": "不等电话挂断：只用通话级标签从原始语音做增量诈骗打分",
+  "schemaVersion": 1
+}

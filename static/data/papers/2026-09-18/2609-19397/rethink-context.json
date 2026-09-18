@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19397",
+  "abstract": "Figured-bass realization can be described as a sequence of choices constrained both within each sonority and between successive sonorities. This paper gives an explicit mathematical model of a restricted, examination-style four-part realization problem. Pitch spelling, range, chord membership, doubling, omission, spacing, crossing, overlap, melodic motion, consecutive perfect intervals, and selected resolution requirements are expressed as predicates. We distinguish hard constraints from optional preference costs. Four labeled notes are represented visually as the vertices of a quadrilateral and computationally as one ordered voicing state. Legal progressions become paths through a layered graph. We prove that feasibility and minimum-cost realization are polynomial-time problems for a fixed number of voices with explicit finite note domains and fixed local rules. For fixed ranges, a fixed note alphabet, and adjacent-event rules, the number of graph operations is linear in the number of events. Worked two-, four-, and eight-beat examples illustrate legality, optimization, and the failure of a greedy choice. The result concerns the stated formal model; it is not a claim that every musical judgment is captured by local predicates.",
+  "abstractSha256": "484cc69eaca687643beaedaa6d574fb7a5785c228f0d13b2234eeba4612541bb",
+  "arxivId": "2609.19397",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan Normal University"
+      ],
+      "name": "Evan Unit Lim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把考试式四部数字低音配写形式化为相邻事件上的硬约束与局部代价问题，用完整和声状态的分层图与动态规划证明固定声部数下可行性与最小代价可多项式求解，并以二拍、四拍、八拍实例展示合法性、贪心失效与复现步骤。",
+  "originalTitle": "A State-Space Model of Figured-Bass Realization: Local Constraints, Coupled Voices, and Polynomial-Time Solvability",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19397.pdf",
+  "readerTitle": "把四部和声写作变成层图上的最短路：局部谓词如何决定多项式可解性",
+  "schemaVersion": 1
+}

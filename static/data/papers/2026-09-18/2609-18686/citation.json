@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18686",
+  "arxivId": "2609.18686",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Benedikt Mayrhofer"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Enrique Orozco Olivares"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Franz Pernkopf"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Philipp Aichinger"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Martin Hagmüller"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18686",
+  "originalTitle": "Multi-Teacher Distillation for Cross-Domain Streaming Electrolaryngeal Speech Encoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18686.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

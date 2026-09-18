@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20595",
+  "arxivId": "2609.20595",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas J Stoll"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ross K Maddox"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20595",
+  "originalTitle": "A Deep Neural Network for Predicting Continuous Human EEG Across the Auditory Pathway in Response to Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20595.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

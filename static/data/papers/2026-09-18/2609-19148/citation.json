@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19148",
+  "arxivId": "2609.19148",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiyu Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiawen Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaoxiang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxi Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qi Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19148",
+  "originalTitle": "Modality Discrepancy Transformer for Ambivalence and Hesitancy Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19148.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

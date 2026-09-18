@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20121",
+  "abstract": "In this paper, we propose an alignment-path distillation framework for streaming automatic speech recognition (ASR) with large language models (LLMs). Interleaved streaming ASR-LLMs use forced alignments (FA) from alignment models, such as those trained with connectionist temporal classification (CTC), to construct speech-text training sequences. However, alignments obtained from a separate acoustic model may be inconsistent with those learned by LLM-based ASR. This motivates us to transfer alignment information from a non-streaming ASR-LLM to improve streaming recognition. Specifically, we extract monotonic alignment paths from a non-streaming teacher&#39;s soft text-audio attention and use them to construct interleaved training sequences. The framework also includes logit and hidden-state distillation to learn from the teacher&#39;s output distributions and internal representations. Experimental results show that, without logit or hidden-state distillation, training with teacher-derived alignment paths achieves a 5.2% relative error rate reduction compared with training using forced alignments. When both models use logit and hidden-state distillation, teacher-derived alignments yield a 3.9% relative error rate reduction, with similar mean emission latency but higher flicker. The complete framework achieves a 16.6% relative error rate reduction compared with training using forced alignments without logit or hidden-state distillation.",
+  "abstractSha256": "0a9c9533066933854b750f0c38af05087236ab27eb947866b9f6a243da896670",
+  "arxivId": "2609.20121",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yan Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng-Long Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xu Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对交错式流式语音识别大模型中外部强制对齐与模型自身对齐不一致的问题，该文用冻结非流式教师的文本音频注意力经置信度回退和单调搜索构造学生训练序列，并叠加 logit 与隐状态蒸馏，以聚合错误率从 9.35% 降至 7.80% 为最强证据，代价是相同蒸馏配置下闪烁高于强制对齐对照。",
+  "originalTitle": "Alignment-Path Distillation from Non-streaming ASR-LLMs for Streaming Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20121.pdf",
+  "readerTitle": "用非流式大模型的注意力路径重排流式训练序列：对齐、logit 与隐状态三路蒸馏",
+  "schemaVersion": 1
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19826",
+  "abstract": "Speech emotion recognition (SER) benefits from heterogeneous acoustic representations, but views derived from the same utterance contain both overlapping emotional evidence and representation-dependent cues. Direct fusion may therefore propagate redundant information or obscure complementary details. To address this issue, we propose Tri-view Consensus-Guided Fusion (TriCGF) for jointly modeling spectrogram, Mel-frequency cepstral coefficients, and HuBERT representations. TriCGF organizes each view into common and view-specific components before fusion. Cross-view Consensus Learning aggregates the common components into a global reference, while View-wise Gated Integration adaptively combines this reference with each view-specific component. A soft difference regularizer further discourages excessive information overlap. Under speaker-independent evaluation, TriCGF achieves 74.19% weighted accuracy (WA) and 75.17% unweighted accuracy (UA) on IEMOCAP, and 94.36% WA and 94.28% UA on EmoDB, outperforming representative SER methods on both datasets.",
+  "abstractSha256": "1a5cdb4acf7cfb57966b31ec34669a7662eb4176efcb43d5fdbbfbba476da4fe",
+  "arxivId": "2609.19826",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bing Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujian Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xikun Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xianquan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinqiu Sang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对同一话语的频谱图、MFCC 与 HuBERT 既重叠又互补而直接融合会淹没弱线索的问题，TriCGF 先分解为公共与特有分量再用全局共识加门控融合，在 IEMOCAP 上取得 74.19% 加权准确率与 75.17% 非加权准确率、在 EmoDB 上取得 94.36% 与 94.28%，代价是三路编码与门控带来更多训练配置与调参负担。",
+  "originalTitle": "Consensus-Guided Shared-Specific Tri-View Learning for Speech Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19826.pdf",
+  "readerTitle": "先分离重叠与特有，再用共识引导融合：三视图语音情感识别",
+  "schemaVersion": 1
+}

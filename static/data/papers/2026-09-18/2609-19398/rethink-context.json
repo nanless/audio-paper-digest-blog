@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19398",
+  "abstract": "Spontaneous speech offers a scalable, noninvasive signal for respiratory health assessment, yet interpretable models that generalize across languages remain challenging because disease-related acoustic changes are confounded by language-specific phonetic variation. We present CL-DAF, a Cross-Lingual Disease-Alignment Framework that identifies acoustic dimensions whose disease effects remain consistent across languages. Using 201 English and 75 newly collected Bangla speakers, we construct a common 272-dimensional acoustic representation and quantify disease alignment using signed rank-biserial effects and the Language Invariance Score. We first show that spontaneous Bangla speech separates COPD from controls (AUC 0.85); however, 133 features reverse their disease direction across languages and the full representation transfers poorly (AUC 0.49 from Bangla to English). CL-DAF isolates 26 disease-aligned features that raise AUCs to 0.825 and 0.722 from English to Bangla and Bangla to English, respectively. These findings provide a foundation for multilingual clinical speech models emphasizing pathology over language-dependent variation.",
+  "abstractSha256": "8d5d454349e0144a943c59b90cb8e66f77f5f2c4ed96c9e5dc1a535527259a1c",
+  "arxivId": "2609.19398",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roksana Khanom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raghib Asfak Tasnim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bodrun Nahar Bithi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shafia Shirin Supty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saiful Islam Raju"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashok Agrawala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nirupam Roy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对自发语音中疾病效应被语言音系差异掩盖的问题，CL-DAF 在英孟 272 维公共声学空间中用符号秩二列效应与语言不变分数筛选出 26 个方向一致特征，使英译孟与孟译英 AUC 分别达到 0.825 和 0.722，而代价是需要双语标签估计对齐且目标全参与选择时会高估约 0.04 到 0.09。",
+  "originalTitle": "A Cross-Lingual Acoustic Disease-Alignment Framework for Respiratory Health Assessment from Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19398.pdf",
+  "readerTitle": "单语能分开慢阻肺，换语言就失灵：用疾病方向一致性筛出 26 个跨语言声学特征",
+  "schemaVersion": 1
+}

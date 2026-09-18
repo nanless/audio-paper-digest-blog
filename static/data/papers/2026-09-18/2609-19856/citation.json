@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19856",
+  "arxivId": "2609.19856",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Guangzhao Yang"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Muhammad Huzaifah"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Jinya Sakurai"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Ningjie Bai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19856",
+  "originalTitle": "Foreground Voice Activity Detection: Learning Speaker Selectivity from Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19856.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

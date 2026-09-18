@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20001",
+  "arxivId": "2609.20001",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoshen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongbo Che"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyi Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanjie Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shicheng Hua"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20001",
+  "originalTitle": "E-AVI: Evidence-Grounded Multimodal Assessment for Automated Video Interviews",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20001.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

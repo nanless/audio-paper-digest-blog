@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20104",
+  "arxivId": "2609.20104",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brian Kingsbury"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "George Saon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masayuki Suzuki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong-Kwang J. Kuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Takashi Fukuda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Samuel Thomas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishal Sunder"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Avihu Dekel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20104",
+  "originalTitle": "Design of the IBM Granite 5.0 TurboCTC ASR Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20104.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19818",
+  "arxivId": "2609.19818",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19818",
+  "originalTitle": "CoRELoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19818.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

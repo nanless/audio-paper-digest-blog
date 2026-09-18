@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18323",
+  "arxivId": "2609.18323",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Haoyu Zhao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Zihao Zhao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Tianyu Deng"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Ziqin Xu"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Zihao Zhang"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Xudong Wang"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Jinxiang Guo"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Chen Gao"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Ziyi Ye"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yeying Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaxi Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zuxuan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuicheng Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18323",
+  "originalTitle": "Can MiniMax-H3 Reason About the Physical World? An Evaluation of Omni-Modal Generative Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18323.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

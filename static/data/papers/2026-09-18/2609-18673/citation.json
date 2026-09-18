@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18673",
+  "arxivId": "2609.18673",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Contractor Associate, National Institute of Standards and Technology, Gaithersburg, MD, USA",
+        "Chakra Consulting Inc., Clarksburg, MD, USA"
+      ],
+      "name": "Seungmin Seo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oleg Aulov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "P. Jonathon Phillips"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Mangold"
+    },
+    {
+      "affiliations": [
+        "National Institute of Standards and Technology, Gaithersburg, MD, USA"
+      ],
+      "name": "Jonathan Eskin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18673",
+  "originalTitle": "Beyond EER: Multi-Dimensional Evaluation of Information Leakage in Speaker De-Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18673.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

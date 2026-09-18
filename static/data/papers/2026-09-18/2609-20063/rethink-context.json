@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20063",
+  "abstract": "The rapid advancement of speech synthesis and voice conversion technologies has made audio deepfakes increasingly realistic, posing serious security risks in practical applications. While existing detection methods achieve strong performance under controlled conditions, they often fail to generalize under real-world perturbations and corruptions. In this paper, we propose ROGUE, a framework that dynamically constructs robust detection workflows by orchestrating multiple detection tools. ROGUE formulates workflow generation as a sequential decision-making problem and introduces a dual-agent paradigm, where a perturbation agent generates audio perturbations and a policy agent learns to select and execute detection tools under perturbed conditions. Through adversarial learning, ROGUE enables perturbation-aware tool selection, adaptive execution strategies, and improved robustness to distribution shifts. Extensive experiments across multiple datasets and real-world corruptions demonstrate that ROGUE consistently outperforms strong baselines in both robustness and generalization. Our results highlight the effectiveness of adversarially optimized workflow generation for building reliable audio deepfake detection systems in real-world deployment settings.",
+  "abstractSha256": "c87188ca5a51539409928832f88a1631bdde6c0c041537964653487b46b27220",
+  "arxivId": "2609.20063",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pin-Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenqi Wei"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对真实扰动下单一音频伪造检测器不稳定的问题，ROGUE 用扰动智能体出难题、策略智能体按序挑选检测工具的对抗方式构造工作流，在 WaveFake 训练与多扰动和跨数据集评测中提升了平均准确率，但代价是联合搜索更贵且依赖工具多样性。",
+  "originalTitle": "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20063.pdf",
+  "readerTitle": "不换单个检测器，而是让智能体在扰动下现搭检测流水线",
+  "schemaVersion": 1
+}

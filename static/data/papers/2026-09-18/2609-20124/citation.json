@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20124",
+  "arxivId": "2609.20124",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zifan Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longyu Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meiguang Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junfeng Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20124",
+  "originalTitle": "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20124.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

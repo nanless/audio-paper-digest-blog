@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19805",
+  "arxivId": "2609.19805",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rui Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenpeng Zhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolong Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19805",
+  "originalTitle": "Dictionary-Constrained Grapheme-to-Phoneme for Unsegmented Languages from LLM-Annotated Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19805.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19067",
+  "arxivId": "2609.19067",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixuan Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ngoc Thang Vu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19067",
+  "originalTitle": "What Affects the Performance of Fake Audio Detection? Analyzing Factors in a Continual Learning Setting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19067.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20001",
+  "abstract": "Automated video interview assessment integrates verbal content, acoustic delivery, and visual behavior, yet numerical predictions alone provide limited inspectable support. We present E-AVI, an evidence-grounded framework that extracts timestamped multimodal evidence and integrates dimension-conditioned evidence attention with source-level embeddings for scoring. A shared evidence pool further supports natural-language feedback and follow-up question answering. On RecruitView and a private hospitality dataset, E-AVI consistently outperforms fine-tuned multimodal baselines in rank correlation. Ablation, evidence-deletion, bootstrap, human-audit, and QA analyses characterize the predictive contribution, grounding, and practical utility of the evidence pathway. Together, these results demonstrate that our proposed E-AVI framework improves predictive performance while providing inspectable support for assessment, feedback, and interactive analysis.",
+  "abstractSha256": "fbc16055a4e1596041aef4c4b408ae788aa0156814984ac4665bc39f7c3c59d3",
+  "arxivId": "2609.20001",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoshen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongbo Che"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyi Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanjie Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shicheng Hua"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对自动视频面试只给分数而缺乏可检查依据的问题，E-AVI 选择先抽取带时间戳的结构化多模态证据再做维度条件打分，在 RecruitView 上把 MAE 从 0.641 降到 0.607、Spearman 从 0.440 提升到 0.541，代价是提取阶段仍是 83.3% 困难样本的瓶颈且推理依赖 15 秒级抽取开销。",
+  "originalTitle": "E-AVI: Evidence-Grounded Multimodal Assessment for Automated Video Interviews",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20001.pdf",
+  "readerTitle": "先取证再打分：E-AVI 把面试录像变成可核查的证据池",
+  "schemaVersion": 1
+}

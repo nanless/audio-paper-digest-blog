@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20595",
+  "abstract": "Computational models of auditory physiology commonly target specific responses or stages of the auditory pathway, limiting their ability to integrate findings across experimental paradigms and neural timescales. We present a foundation model of human auditory electrophysiology: a causal neural network trained to map binaural acoustic waveforms directly to high-sample-rate EEG. The model was trained on approximately 250 hours of EEG data from 92 subjects, with varied electrode montages and stimuli spanning tonebursts, speech, and music. We tested whether the model recovered effects of stimulus rate, frequency, and presentation method on auditory brainstem responses (ABRs); subcortical and cortical temporal response functions (TRFs) to continuous speech; and the click-evoked binaural interaction component (BIC). Predicted ABRs and TRFs reproduced established response morphology and stimulus-dependent effects, with model-grand-average correlations falling within the corresponding subject-level human distributions. The model-predicted BIC metrics closely resembled the values reported in the literature. These findings demonstrate that a single audio-to-EEG model can capture auditory physiology across paradigms and timescales, supporting future in silico experimentation and hearing technology applications.",
+  "abstractSha256": "66058dc46d7b98fc04b176d9ac265aca8b61ced301d955ed494a8b80307f6773",
+  "arxivId": "2609.20595",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas J Stoll"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ross K Maddox"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把双耳声波形直接映射为连续高采样率脑电，用约 250 小时异构数据训练一个因果编码器解码器，并在并行脑干响应、语音时间响应函数与双耳交互成分三类范式上复现了已知的形态与刺激依赖效应，但串行呈现幅值与部分响应幅度仍存在系统性偏差。",
+  "originalTitle": "A Deep Neural Network for Predicting Continuous Human EEG Across the Auditory Pathway in Response to Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20595.pdf",
+  "readerTitle": "一个因果音频到脑电模型如何同时复现脑干、皮层与双耳整合响应",
+  "schemaVersion": 1
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18686",
+  "abstract": "Self-supervised learning (SSL) has improved speech representations, yet performance degrades in pathological domains such as electrolaryngeal (EL) speech, and the computational footprint of SSL models limits their applicability in real-time, on-device deployment. We propose a multi-teacher knowledge distillation framework to train a lightweight, streaming content encoder that generalizes across healthy (HE) and EL speech. Two teachers are distilled progressively: a frozen SSL model providing discrete phonetic cluster targets from HE speech, and an EL-fine-tuned speech recognition model supplying continuous bottleneck feature targets. Evaluated via downstream speech recognition, our approach reduces the EL word error rate to 21.2%, compared to 39.3% for the strongest zero-shot SSL baseline. Among causal convolutional, Transformer, Conformer, and Mamba-based student architectures, a Mel-Conformer achieves the best combination of EL accuracy and computational efficiency. The final encoder contains 21.9,M parameters and runs at a real-time factor of 0.30 under ONNX Runtime on a single CPU core.",
+  "abstractSha256": "4921e20fade8c541883c10569dc5976444926360a1900851ea4089a1da95e416",
+  "arxivId": "2609.18686",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-disorders",
+          "label": "言语障碍"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Benedikt Mayrhofer"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Enrique Orozco Olivares"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Franz Pernkopf"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Philipp Aichinger"
+    },
+    {
+      "affiliations": [
+        "Signal Processing and Speech Communication Laboratory, Graz University of Technology Dept. of Otolaryngology, Head & Neck Surgery, Div. of Phoniatrics-Logopedics, Speech & Hearing Sci. Lab, Med. Univ. of Vienna Comprehensive Center for AI in Medicine, Medical University of Vienna"
+      ],
+      "name": "Martin Hagmüller"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对电子喉语音与健康语音域失配且大模型难流式部署的问题，论文用冻结自监督模型的离散音素目标加电子喉微调识别模型的瓶颈特征做三阶段渐进蒸馏，最好的 Mel-Conformer 把电子喉词错误率从最强零样本基线的 39.3% 降到 21.2%，代价是仍需平行语料做对齐且只用识别探测验证，ONNX 单核实时率为 0.30。",
+  "originalTitle": "Multi-Teacher Distillation for Cross-Domain Streaming Electrolaryngeal Speech Encoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18686.pdf",
+  "readerTitle": "两个老师教一个流式编码器：在保住健康语音的同时听懂电子喉",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18999",
+  "arxivId": "2609.18999",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sayema Lubis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clark Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jared Carreño"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "TJ Tsai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18999",
+  "originalTitle": "Variable-Rate Harmonic-Percussive Time-Scale Modification with Real-Time Playback in Python",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18999.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

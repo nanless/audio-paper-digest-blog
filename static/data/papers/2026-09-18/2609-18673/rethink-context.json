@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18673",
+  "abstract": "Speaker de-identification (SDID) aims to preserve privacy by concealing speaker identity while maintaining speech utility. However, current evaluations often reduce privacy to a single dimension - biometric verification performance - typically measured by Equal Error Rate (EER). This narrow focus ignores critical leakage channels, such as soft biometric inference, embedding-level re-identification, and structural template similarity, which threaten the unlinkability and irreversibility of biometric references. We propose a holistic evaluation framework across five complementary metrics: (i) EER, (ii) soft biometric leakage score , (iii) cumulative match characteristic re-identification analysis, (iv) canonical correlation analysis and Procrustes embedding alignment, and (v) intelligibility via word error rate and semantic similarity. Evaluating five SDID systems from the IARPA ARTS program, we demonstrate that these metrics capture independent dimensions of information leakage. Our results indicate that reliance on a single metric can misrepresent the privacy properties of an SDID system.",
+  "abstractSha256": "45f0fd7cc7cbcffc593b753bf7a59e06c2fc5ae86cb6865b3ef0d633eef0c9d5",
+  "arxivId": "2609.18673",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Contractor Associate, National Institute of Standards and Technology, Gaithersburg, MD, USA",
+        "Chakra Consulting Inc., Clarksburg, MD, USA"
+      ],
+      "name": "Seungmin Seo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oleg Aulov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "P. Jonathon Phillips"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Mangold"
+    },
+    {
+      "affiliations": [
+        "National Institute of Standards and Technology, Gaithersburg, MD, USA"
+      ],
+      "name": "Jonathan Eskin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用说话人去标识任务同时检验验证抵抗、软生物属性、检索重识别、嵌入结构和可懂度五个维度，显示没有系统在全部维度占优且最保护隐私的系统可懂度损失最大。",
+  "originalTitle": "Beyond EER: Multi-Dimensional Evaluation of Information Leakage in Speaker De-Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18673.pdf",
+  "readerTitle": "只看等错误率会误判匿名语音：五维泄漏评估如何拆开隐私与可懂度",
+  "schemaVersion": 1
+}

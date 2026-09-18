@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20504",
+  "arxivId": "2609.20504",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Aakash Singh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Lakshmi Pedapudi"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Chandrashekar M S"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Sanyam Singh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Naga Ganesh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Vineet Singh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20504",
+  "originalTitle": "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20504.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

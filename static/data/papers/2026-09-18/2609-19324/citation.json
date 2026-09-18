@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19324",
+  "arxivId": "2609.19324",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saeedreza Zouashkiani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soheil Khalesi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saman Soleimani Roudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajjad Amini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shahrokh Ghaemmaghami"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19324",
+  "originalTitle": "PersianVox: A Prosody-Aware Approach for Speech Dataset Generation from In-the-Wild Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19324.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

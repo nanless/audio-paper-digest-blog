@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19856",
+  "abstract": "Voice activity detection (VAD) fronts most voice-agent pipelines, yet production detectors treat all human speech, background talkers included, as valid activity; in crowded settings this floods recognition, stalls turn-taking, and triggers false barge-in. We formalize Foreground VAD (FVAD): a frame-synchronous, enrollment-free task in which only the dominant speaker, defined by sustained presence rather than instantaneous loudness, is positive, and which reduces to conventional VAD when a single speaker is present. We show that foreground selectivity is largely governed by training supervision: the crucial ingredient is an augmentation recipe pairing foreground-only labels with competing-speaker mixing, generated fully automatically without human annotation. To quantify selectivity we introduce the Background False-Alarm Rate (BG-FAR), gated by foreground F1, and build a controlled benchmark, Mix-Interference, complemented by an adapted VOiCES for real-world far-field evaluation. Across equal-size backbones, Mamba and LSTM perform on par while a longer-context attention model is no better, suggesting that training supervision plays a substantially larger role than temporal modeling capacity in achieving foreground selectivity. The resulting lightweight streaming model, Mamba-FVAD, outperforms commercial VADs and enrollment-based speaker-aware systems in foreground selectivity while staying competitive on conventional VAD, at 1-2 ms per-frame CPU latency.",
+  "abstractSha256": "3a2601627b4ec4593eecc2d0b9ac552af923b8b2f95fab60dfe22c2f44c02ec3",
+  "arxivId": "2609.19856",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音活动检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音活动检测",
+      "primaryTaskId": "task.vad",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Guangzhao Yang"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Muhammad Huzaifah"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Yu Pan"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Jinya Sakurai"
+    },
+    {
+      "affiliations": [
+        "R&D Team, Recho Inc., Tokyo, Japan"
+      ],
+      "name": "Ningjie Bai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把只检测持续在场主讲人的前景语音检测形式化为免注册逐帧二分类，用前景标签不变加竞争说话人混合的自动监督 recipe 让轻量流式 Mamba 在受控混合与真实远场上压低背景误报，同时在常规检测上保持可用，代价是目标不再占优与强语音形掩蔽下召回下降。",
+  "originalTitle": "Foreground Voice Activity Detection: Learning Speaker Selectivity from Supervision",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19856.pdf",
+  "readerTitle": "前景语音检测：只跟主讲人，靠监督而不是靠更长记忆学会挑人",
+  "schemaVersion": 1
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19818",
+  "abstract": "Generalizing to unseen attacks remains challenging for audio deepfake detectors, and collecting training data covering all potential attacks is impractical. We explore recurrent refinement in an already-trained SSL-based detector without additional data or changes to its original parameters. However, directly recycling encoder outputs as inputs degrades detection in our diagnostic. We propose CoReLoop, which makes this reuse effective by adapting recurrent inputs to the frozen encoder, controlling state updates, and aligning refined outputs with the frozen classifier. By training only lightweight refinement modules and loop-specific low-rank adapters on the original data, CoReLoop enables additional refinement while preserving the detector&#39;s original first-pass prediction. On 14 cross-domain test sets, the 24-layer model reduces pooled equal error rate (EER) from 4.85% to 3.74% with two passes, with approximately 10M trainable parameters out of 598M. To selectively apply this refinement, an optional halting head chooses the depth for each utterance, achieving 3.73% pooled EER with an average of 1.18 passes.",
+  "abstractSha256": "a27ed128393e8ff80c9180b98dae66eb38b8badc8cd6b8090cb018f42606457a",
+  "arxivId": "2609.19818",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对未见攻击泛化难且不扩充数据、不改动原参数的问题，CoReLoop 用 LoopBridge 构造循环输入、循环 LoRA 加门控更新与 ExitBridge 对齐分类器，在 14 个跨域测试集上 24 层模型以约 10M 可训练参数把池化等错误率从 4.85% 降到 3.74%，自适应停止以平均 1.18 次通过达到 3.73%，代价是第二次通过仍需完整编码器计算。",
+  "originalTitle": "CoRELoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19818.pdf",
+  "readerTitle": "冻住检测器再多算一遍：CoReLoop 如何把循环输入做对",
+  "schemaVersion": 1
+}

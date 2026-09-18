@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19304",
+  "arxivId": "2609.19304",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Md Shakhrul Iman Siam"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dushyant Sharma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stanislav Yu. Kruchinin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Skala"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19304",
+  "originalTitle": "Decaf: A privacy preserving speech codec using speaker disentanglement and canonical voice conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19304.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

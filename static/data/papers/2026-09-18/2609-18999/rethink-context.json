@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18999",
+  "abstract": "Time-scale modification (TSM) has a number of open-source implementations, but these are designed almost exclusively for offline use, in which a recording is processed at a fixed rate and written out ahead of time. Applications such as automatic musical accompaniment require a different setting, which we call variable-rate playback: the recording to be stretched is known in advance, but the playback rate is not, and must change continuously in response to a live performer. The few implementations that generate output in real time are written in C++ and optimized for speed rather than for ease of modification, experimentation, and integration with the primarily Python-based research ecosystem. This paper describes a Python implementation of the widely used harmonic-percussive TSM method for the variable-rate playback setting. Harmonic-percussive separation is performed offline as a preprocessing step on the known input recording, while synthesis and playback are carried out in real time with a time-scale factor that may change at every frame. We further propose a family of variants that reduce runtime by replacing the phase vocoder&#39;s analysis-stage FFT and instantaneous frequency calculations with lookups into precomputed tables. Subjective listening tests with 24 participants (1114 pairwise ratings) show that these approximations become perceptually indistinguishable from the exact implementation once the precomputed hop size is sufficiently small, while reducing total runtime by roughly half. We characterize the resulting tradeoffs among precomputation, runtime, memory, and perceptual quality to guide algorithm selection, and we release our implementation as an open-source package.",
+  "abstractSha256": "97e2ce7dbd009185f5b2a7ea2bf8611ace63a72d970803f54c5d3b7dfd9bfc1a",
+  "arxivId": "2609.18999",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sayema Lubis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clark Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jared Carreño"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "TJ Tsai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把已知录音的谐波打击分离放在离线预处理、把相位声码器与叠加相加放在逐帧可变速的实时合成，并用预计算频谱查表把总运行时间降低约一半，代价是更小的预计算跳长需要更多预计算与内存。",
+  "originalTitle": "Variable-Rate Harmonic-Percussive Time-Scale Modification with Real-Time Playback in Python",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18999.pdf",
+  "readerTitle": "已知录音、未知变速：谐波打击分离如何在 Python 里做到逐帧可变速实时播放",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18980",
+  "arxivId": "2609.18980",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Ji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "TJ Tsai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.18980",
+  "originalTitle": "Instrument Classification of Solo Sheet Music Images",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18980.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

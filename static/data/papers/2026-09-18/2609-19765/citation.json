@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19765",
+  "arxivId": "2609.19765",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binbin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19765",
+  "originalTitle": "Multimodal Conversational Context for LLM-Based ASR: Data Construction, Training, and Benchmark",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19765.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

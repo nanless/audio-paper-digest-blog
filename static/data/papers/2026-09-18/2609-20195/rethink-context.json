@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20195",
+  "abstract": "Audio-language models increasingly generate confident music descriptions that are unsupported by the input audio. We present, to our knowledge, the first music-specific, layer-wise, multi-paradigm empirical study of hallucination in audio-language models and formulate it as a hierarchical perceptual grounding failure across five layers: sound events, temporal properties, tonal attributes, style, and emotion. We introduce MuseDiag, a multi-paradigm diagnostic framework with contradiction-based verification, and evaluate nine models (four open-source and five closed-source). We find that (1) vocal misperception is a universal weakness across all nine models, tonal perception is a major axis of architectural differentiation, and Audio-Flamingo-3 remains the stable leader while substantial reordering below it reveals paradigm-specific vulnerability profiles; (2) affirmative bias, generation-mode effects, and layer-specific perceptual limitations are each empirically associated with the observed patterns, with convergent evidence from multiple analyses rather than strict causal attribution; and (3) our two training-free mitigation methods, Audio-Dependency-Aware Decoding for Music (ADD-M) and Taxonomy-Guided Perceptual Anchoring (TPA), can reduce hallucination in probing, but their gains vary by model and often do not carry over to free-form generation, showing that music hallucination mitigation must be evaluated across paradigms.",
+  "abstractSha256": "ae51c5aad1fc9bf22a463053cec1eafa810cf7c6d0151203718b201c5e1636ce",
+  "arxivId": "2609.20195",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yu Liu"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of MusicBeijingChina"
+      ],
+      "name": "Jiahui Liu"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of ChinaChengduChina"
+      ],
+      "name": "Zhilin Liu"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASBeijingChina"
+      ],
+      "name": "Cong Cao"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASBeijingChina"
+      ],
+      "name": "Fangfang Yuan"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yuling Yang"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Pin Xu"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yanbing Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把音乐幻觉定义为五层感知接地失败，用矛盾判定加三范式诊断九个模型，发现人声误听普遍而调性感知分化架构，两种免训练干预在辨别式探针有效却常不能迁移到自由生成。",
+  "originalTitle": "Music Hallucination in Audio-Language Models: A Hierarchical Formulation and Empirical Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20195.pdf",
+  "readerTitle": "音乐幻觉不是一句话说错，而是五层感知逐层失守",
+  "schemaVersion": 1
+}

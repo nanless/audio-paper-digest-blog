@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20063",
+  "arxivId": "2609.20063",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pin-Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenqi Wei"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20063",
+  "originalTitle": "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20063.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

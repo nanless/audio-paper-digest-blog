@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20504",
+  "abstract": "FarmerChat is Digital Green&#39;s AI-powered agricultural advisory assistant for smallholder farmers, who access it in their own language through text, voice, or photographs. Voice is a critical channel for this population, yet field-recorded speech is challenging for general-purpose automatic speech recognition (ASR) because recordings frequently contain machinery noise, background media, competing speakers, and domain-specific agricultural vocabulary. These conditions disproportionately affect crop, pest, chemical, and quantity terms that carry the meaning of a farmer&#39;s query. We present a modular, model-agnostic pipeline for improving ASR quality in FarmerChat without fine-tuning or replacing the underlying ASR model. The pipeline combines gated audio enhancement, speaker diarization and target-speaker selection, ASR, domain-aware correction using a weighted agricultural lexicon, and a quality gate for detecting unreliable transcripts. Only the diarization stage is fine-tuned; all other stages use off-the-shelf models behind common interfaces. We evaluate the pipeline on human-annotated FarmerChat recordings in Hindi, Telugu, and Odia using word error rate (WER) and a domain-weighted error rate that gives greater importance to agricultural terminology. The largest improvements occur on multi-speaker recordings, where target-speaker selection prevents competing speech from entering the transcript. Across the full corpus, the pipeline reduces WER by 16-23% relative on three cloud ASR models and by 5% on an on-device model. On multi-speaker recordings, the reductions are 32-42% for the cloud models and 16% for the on-device model. All reported reductions are statistically significant. These results show that targeted preprocessing, speaker selection, and domain-aware post-processing can substantially improve agricultural speech transcription while preserving the underlying ASR model.",
+  "abstractSha256": "d95592f7789b1d874a31fbf0d281aa89a6a268210ed2299ea0e2a9ca3930eb94",
+  "arxivId": "2609.20504",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Aakash Singh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Lakshmi Pedapudi"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Chandrashekar M S"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Sanyam Singh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Naga Ganesh"
+    },
+    {
+      "affiliations": [
+        "Digital Green"
+      ],
+      "name": "Vineet Singh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对田间噪声、多说话人和农业词汇三类失败，论文用可开关的增强、说话人分离与词表修复包裹未改动的 ASR 模型，在印地语等三语评估上实现云端相对 16% 至 23% 的词错误率下降，多说话人下达 32% 至 42%，代价是增强与修复只在证据支持时生效且 M4 未被测量。",
+  "originalTitle": "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20504.pdf",
+  "readerTitle": "不动 ASR 模型，如何把田间嘈杂的多人农问转写做准",
+  "schemaVersion": 1
+}

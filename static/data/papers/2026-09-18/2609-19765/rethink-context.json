@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19765",
+  "abstract": "Conversational context provides semantic and acoustic cues across turns for automatic speech recognition (ASR), but relying on historical transcripts can propagate recognition errors and discard pronunciation and speaker information. We present a multimodal conversational-context framework for LLM-based ASR that integrates a scenario-controlled data pipeline, scalable multimodal context training, and systematic evaluation. We construct dialogues around entities and their confusable forms and interleave historical user speech with assistant text responses for supervised fine-tuning. We also introduce MM-ContextASR Bench, which evaluates contextual understanding and entity error correction across five scenarios. Experiments with Qwen3-Omni and Step-Audio-2-mini reveal limitations in handling irrelevant and erroneous history and show that our data construction and training improve context utilization, with multimodal context achieving the highest overall entity recall on both models. Further experiments on accent, dialect, and target-speaker ASR demonstrate the value of historical speech. The benchmark data and evaluation code are publicly available at this https URL.",
+  "abstractSha256": "20e9de9baefea8bf7abf9102a5f98b989294d64ab7cc1dc332e0e9b77bdc8d52",
+  "arxivId": "2609.19765",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binbin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对历史转写会传播实体错误并丢失发音与说话人信息的问题，该研究用场景可控的数据管线构造多模态对话历史并做上下文监督微调，最强证据是微调后语音加文本上下文在两个模型上取得最高的总体实体召回，但代价是需要合成语音过滤与条件匹配的微调，且无上下文基线与无关历史的鲁棒性仍有限。",
+  "originalTitle": "Multimodal Conversational Context for LLM-Based ASR: Data Construction, Training, and Benchmark",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19765.pdf",
+  "readerTitle": "历史转写不可靠时，为何还要保留历史语音：多模态对话上下文 ASR 的构造与训练",
+  "schemaVersion": 1
+}

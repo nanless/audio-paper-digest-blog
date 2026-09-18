@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.18980",
+  "abstract": "This paper studies instrument classification of solo sheet music. Whereas previous work has focused on instrument recognition in audio data, we instead approach the instrument classification problem using raw sheet music images. Our approach first converts the sheet music image into a sequence of musical &#34;words&#34; based on the bootleg score representation, and then treats the problem as a text classification task. We show that it is possible to significantly improve classifier performance by training a language model on unlabeled data, initializing a classifier with the pretrained language model weights, and then finetuning the classifier on labeled data. In this work, we train AWD-LSTM, GPT-2, and RoBERTa models on solo sheet music images from IMSLP for eight different instruments. We find that GPT-2 and RoBERTa slightly outperform AWD-LSTM, and that pretraining increases classification accuracy for RoBERTa from 34.5% to 42.9%. Furthermore, we propose two data augmentation methods that increase classification accuracy for RoBERTa by an additional 15%.",
+  "abstractSha256": "0f39e3bf7a58a057903b32501126a73fd0e1f5b5b55187a8810424119388b831",
+  "arxivId": "2609.18980",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kevin Ji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "TJ Tsai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把 8 类独奏谱面图像转成 bootleg score 词序列做文本分类，用无标注语言模型预训练把 RoBERTa 片段准确率从 34.5% 提升到 42.9%，再用移调式训练与测试增强推到 58.8%，代价是长片段整页推理退化和大偏移抹掉音域线索。",
+  "originalTitle": "Instrument Classification of Solo Sheet Music Images",
+  "pdfUrl": "https://arxiv.org/pdf/2609.18980.pdf",
+  "readerTitle": "只看谱面判乐器：词序列加预训练的取舍与边界",
+  "schemaVersion": 1
+}

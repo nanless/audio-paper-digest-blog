@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20223",
+  "arxivId": "2609.20223",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Khang Nhat Hoang Vo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anh Trac Duc Dinh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tai Tien Ta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tho Quan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20223",
+  "originalTitle": "Before the Warning Comes Too Late: Incremental Phone-Scam Detection from Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20223.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

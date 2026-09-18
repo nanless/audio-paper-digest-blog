@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19398",
+  "arxivId": "2609.19398",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roksana Khanom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raghib Asfak Tasnim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bodrun Nahar Bithi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shafia Shirin Supty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saiful Islam Raju"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ashok Agrawala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nirupam Roy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19398",
+  "originalTitle": "A Cross-Lingual Acoustic Disease-Alignment Framework for Respiratory Health Assessment from Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19398.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

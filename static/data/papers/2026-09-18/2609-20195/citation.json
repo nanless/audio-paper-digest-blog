@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20195",
+  "arxivId": "2609.20195",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yu Liu"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of MusicBeijingChina"
+      ],
+      "name": "Jiahui Liu"
+    },
+    {
+      "affiliations": [
+        "University of Electronic Science and Technology of ChinaChengduChina"
+      ],
+      "name": "Zhilin Liu"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASBeijingChina"
+      ],
+      "name": "Cong Cao"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASBeijingChina"
+      ],
+      "name": "Fangfang Yuan"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yuling Yang"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Pin Xu"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering, CASSchool of Cyber Security, UCASBeijingChina"
+      ],
+      "name": "Yanbing Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20195",
+  "originalTitle": "Music Hallucination in Audio-Language Models: A Hierarchical Formulation and Empirical Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20195.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20070",
+  "abstract": "Keyword spotting (KWS), the task of identifying predefined words in speech, is a core capability of voice-enabled devices. Achieving high KWS accuracy under tight parameter budgets across different vocabulary sizes remains challenging. We present CircleMatch, a matching framework enabling KWS with very few parameters. Its encoder independently compresses frequency bands and fuses them into frame features. These features are then matched against learned class-specific prototypes to produce temporal response curves. Parameter-free circular aggregation encodes time as angles and summarizes response distributions and relative timing for classification. We develop four tiny variants, Circle-D4, Circle-D8, Circle-D16, and Circle-D32, ranging from approximately 1k to 7k parameters in the 12-class setting. Experiments with multiple random seeds on Speech Commands v1/v2 and the English and Spanish Micro subsets of the Multilingual Spoken Words Corpus demonstrate competitive accuracy with tiny models. Our qualitative analysis further suggests approximate shift equivariance of prototype responses and adaptation to temporal compression. Code and model weights are available at this https URL.",
+  "abstractSha256": "5f4a4a3c1e756c968b5246c1b04f740a9c50254657e5640e231d82fa9f73fd68",
+  "arxivId": "2609.20070",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CircleMatch 针对极小参数关键词识别，用分频带压缩编码加每类 5 个原型匹配，再以无参数圆环统计与有序路径分数汇总时序，在 GSC 与 MSWC 多词表上以约 1k-10k 参数取得可比精度，代价是大词表与大模型绝对精度仍占优且部分对比协议并不一致。",
+  "originalTitle": "CircleMatch: Prototype Matching with Circular Temporal Statistics for Tiny Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20070.pdf",
+  "readerTitle": "用圆环记时间：CircleMatch 以千级参数做关键词识别",
+  "schemaVersion": 1
+}

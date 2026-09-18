@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19324",
+  "abstract": "Advancement of zero-shot text-to-speech synthesis is currently hindered for low-resource languages by the scarcity of large-scale, high-fidelity speech datasets. Traditional alignment-based methods require rare verbatim transcripts, while standard in-the-wild pipelines often rely on single-model automatic speech recognition and silence-based segmentation, leading to transcription errors and truncated prosody. To address these challenges for the Persian language, this paper introduces PersianVox, a fully automated pipeline designed to generate high-quality speech corpora from unlabeled web data. Our approach integrates a novel prosody-aware segmentation strategy that utilizes acoustic turn-detection to preserve linguistic completeness and optimize utterance duration for long-context modeling. Furthermore, we employ a dual-model agreement mechanism, leveraging two distinct model architectures to filter unreliable transcriptions without ground truth. This pipeline yields a 2,400-hour multi-speaker dataset, the largest open-source speech resource available for Persian to date. Additionally, we provide the first comparative benchmark of speech quality assessment methods for Persian, releasing a human-annotated subset to facilitate future research.",
+  "abstractSha256": "71cb397341e8b8eeddd660125e7f309f404afc317a42867bf85a2cb9bd1a4f74",
+  "arxivId": "2609.19324",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saeedreza Zouashkiani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soheil Khalesi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saman Soleimani Roudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajjad Amini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shahrokh Ghaemmaghami"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对波斯语缺少大规模高保真语音数据的问题，PersianVox 用声学轮次感知的韵律切分与 CTC/RNN-T 双自动语音识别一致过滤从网络音频构造语料，最强证据是 SCOREQ 在 564 句人工平均意见分上皮尔逊相关达 0.6658 优于 DNSMOS 且修复后 SCOREQ 均值从 3.04 升至 4.03，代价是从 6179.66 小时原料仅保留 2408.67 小时。",
+  "originalTitle": "PersianVox: A Prosody-Aware Approach for Speech Dataset Generation from In-the-Wild Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19324.pdf",
+  "readerTitle": "野外波斯语音不够用：用韵律完整切分与双模型互认造出 2400 小时语料",
+  "schemaVersion": 1
+}

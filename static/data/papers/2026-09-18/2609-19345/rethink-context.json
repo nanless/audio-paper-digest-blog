@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19345",
+  "abstract": "Inverse problems arise in a wide range of applications in musical acoustics, including physics-based sound synthesis, musical instrument modeling, design, and optimization. However, these problems are inherently challenging due to their ill-conditioned nature and strong sensitivity to measurement noise. This paper presents a structured taxonomy and systematic review of inverse problems in musical instrument modeling, providing a unified framework for their classification and analysis. We categorize inverse problems in musical instrument modeling into ten distinct tasks: mechanical parameter estimation; geometric parameter estimation; loss estimation; boundary condition estimation; modal parameter estimation; excitation and articulatory parameter estimation; sound matching or model parameter fitting; instrument design and optimization; field reconstruction, characterization and separation; physical model identification and discovery.",
+  "abstractSha256": "2c211254e4dc81437d25476ffa00ead4fdd9c005ee26ab4b22cd19b3b696c092",
+  "arxivId": "2609.19345",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "音乐理解",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinmeng Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gary Scavone"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该综述把乐器建模中的逆问题统一为从声振观测反推物理量的框架并分为十类任务，强调病态性与噪声敏感是共同困难，正则化与建模假设是稳定求解的关键，但感知相似的声音匹配不等于物理一致的参数恢复。",
+  "originalTitle": "Inverse Problems in Musical Instrument Modeling: A Structured Taxonomy and Review",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19345.pdf",
+  "readerTitle": "从测到的声音倒推乐器本身：十类逆问题的统一分类与难点",
+  "schemaVersion": 1
+}

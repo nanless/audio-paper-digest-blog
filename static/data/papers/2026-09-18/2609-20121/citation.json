@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20121",
+  "arxivId": "2609.20121",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yan Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng-Long Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xu Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yao Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20121",
+  "originalTitle": "Alignment-Path Distillation from Non-streaming ASR-LLMs for Streaming Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20121.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

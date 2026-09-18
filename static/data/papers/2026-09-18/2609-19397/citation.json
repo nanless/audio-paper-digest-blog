@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19397",
+  "arxivId": "2609.19397",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan Normal University"
+      ],
+      "name": "Evan Unit Lim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19397",
+  "originalTitle": "A State-Space Model of Figured-Bass Realization: Local Constraints, Coupled Voices, and Polynomial-Time Solvability",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19397.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
