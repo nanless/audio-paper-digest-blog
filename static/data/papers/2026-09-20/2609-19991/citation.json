@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.19991v1",
+  "arxivId": "2609.19991",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.19991v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longyin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Parth Sakhare Mahendra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengwei Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ning Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lim Ming Chong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sirui He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ai Ti Aw"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.19991v1",
+  "originalTitle": "AVTrace: Diagnosing Audio-Visual Temporal Reasoning in Omni Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.19991v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
