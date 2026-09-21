@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21109v1",
+  "abstract": "Recent advances in large language models have improved their effectiveness as back-end components for voice assistants, particularly in intent understanding and context-aware input classification. However, online-hosted models introduce network dependency and variable inference latency, limiting their suitability for time-critical autonomous driving applications. In this work, we address these issues by developing Jarvis, an offline voice assistant for high-level behavioral commands of autonomous vehicles. Its architecture integrates speech recognition and synthesis with natural language command classification into a lightweight, local framework. Jarvis core component is a text-to-command classifier, built using a domain-specific fine-tuning of the Mistral 7B model, demonstrating low-latency inference. Our experimental evaluation demonstrates that our solution outperforms larger online-hosted models, achieving 97.63 % intent recognition accuracy with an average processing latency of 1.39 s, making it well-suited for operations requiring quick response times. To support further research and fine-tuning, we provide an open-source implementation.",
+  "abstractSha256": "016cca5f12f7ac4151ea383828d8662a7b0368539be55c039f73fa3c1614d314",
+  "arxivId": "2609.21109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21109v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "口语意图与槽位识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intent-slot",
+          "label": "口语意图与槽位识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "口语意图与槽位识别",
+      "primaryTaskId": "task.intent-slot",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Henel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frederik Werner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Langmann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johannes Betz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对赛车高层行为指令的离线语音控制问题，Jarvis 用唤醒词加本地转写加微调 Mistral 7B 做文本到指令分类，在 17 类 1645 样本条件下报告 97.63% 准确率与 1.39 s 平均延迟，但数据集仍部分合成且指令空间严格预定义。",
+  "originalTitle": "Talk to Me, Jarvis: An Open-Source Edge-Deployable Voice Assistant Framework for Autonomous Racecars",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21109v1.pdf",
+  "readerTitle": "离线也要又快又准：Jarvis 用本地微调小模型做赛车语音指令分类",
+  "schemaVersion": 1
+}

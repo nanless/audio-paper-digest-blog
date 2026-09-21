@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21336v1",
+  "abstract": "Automatic speech recognition models suffer from catastrophic forgetting when adapted to new domains, accents, or downstream tasks. This problem becomes increasingly important with the growing use of speech foundation models, where adaptation should be both memory-efficient and safe, preserving the broad capabilities learned during pretraining. Gradient Low-Rank Projection (GaLore) has recently been proposed as a memory-efficient fine-tuning method that keeps model parameters full-rank while reducing the optimizer memory through low-rank gradient projection. However, GaLore does not account for catastrophic forgetting. We propose Curvature-Guided GaLore (CGaLore), which incorporates old-task curvature information when selecting the low-rank projection bases. Specifically, CGaLore filters current-task gradients using Kronecker-factored approximate curvature from previous tasks before computing the gradient subspace. Our experiments show that CGaLore enables effective adaptation while alleviating forgetting, outperforming state-of-the-art continual learning baselines. Extensive ablation studies confirm the practical applicability of CGaLore.",
+  "abstractSha256": "866078b6a0ebbed6da76a62662afa6182a66fb87c319bacf5c0075ee9edc12fc",
+  "arxivId": "2609.21336",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21336v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steven Vander Eeckt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 ASR 基座模型持续适配中的灾难性遗忘，CGaLore 用旧任务 KFAC 曲率先过滤当前梯度再选 GaLore 低秩基，在 L2-Arctic 与 CGN 两组实验上取得最优平均词错误率，代价是需少量旧任务语音估计曲率并增加基更新时的计算。",
+  "originalTitle": "CGaLore: Curvature-Guided GaLore for Memory-Efficient Continual Adaptation of ASR Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21336v1.pdf",
+  "readerTitle": "在低秩优化器里加旧任务曲率：CGaLore 如何让 ASR 基座模型记得住又学得进",
+  "schemaVersion": 1
+}

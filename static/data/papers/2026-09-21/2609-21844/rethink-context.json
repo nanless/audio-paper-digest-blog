@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21844v1",
+  "abstract": "Long transcripts are costly inputs for downstream NLP systems and often contain irrelevant context. We study query-conditioned topic localization: predicting the sentence span in a transcript that best addresses a topic-title query. To improve span localization, we reuse ASR encoder states as sentence-level representations and fuse them with textual embeddings. This lets lightweight span locators exploit speech information without running a separate audio encoder. Experiments on two public datasets show consistent gains over text-only baselines, especially under strict boundary-matching criteria. Cross-dataset experiments further indicate that the benefits are strongest for structured or semi-structured speech, while gains on spontaneous speech are limited and mixed.",
+  "abstractSha256": "7efd8dc223a53ce56b09eb3f8a5a8049644efb8330c2e0af7252a008edd1c5dc",
+  "arxivId": "2609.21844",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21844v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steffen Freisinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philipp Seeberger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Ranzenberger"
+    },
+    {
+      "affiliations": [
+        "Korbinian Riedhammer,",
+        "Technische Hochschule Nürnberg Georg Simon Ohm"
+      ],
+      "name": "Tobias Bocklet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Korbinian Riedhammer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究给定话题标题查询在语音转写中预测连续句子区间的问题，用冻结语音识别编码器状态做句子级声学表示并与文本嵌入融合，在两个主数据集上以轻量定位器验证严格边界指标的提升，同时报告自发会议上增益有限的代价。",
+  "originalTitle": "Reusing Latent Speech Representations for Query-Conditioned Topic Localization in Transcripts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21844v1.pdf",
+  "readerTitle": "复用语音识别编码器状态做查询条件话题定位：文本之外补边界信息",
+  "schemaVersion": 1
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21663v1",
+  "arxivId": "2609.21663",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21663v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hritika Sharma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thibault Bañeras-Roux"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alessandra Pinto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunggu Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Esaú Villatoro-Tello"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Somang Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21663v1",
+  "originalTitle": "Rethinking Human-Aligned Evaluation: An Analysis of Semantic Metrics Beyond WER",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21663v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21663v1",
+  "abstract": "Word Error Rate (WER), the most commonly used metric for Automatic Speech Recognition (ASR), treats every lexical deviation from the reference as equally costly, regardless of whether it changes meaning. This raises the question: does WER actually track how humans judge ASR transcript quality? We introduce HATS-en, an English dataset for human-centered ASR evaluation. Using this dataset, we benchmark lexical metrics against several configurations of BERTScore and SemDist, varying the language model, layer, and pooling strategy. We find that WER agrees least with human judgment among all metrics tested, that the best-performing SemDist configurations achieve the highest overall agreement, ahead of CER and BERTScore, and that no single model is best across settings. CER, despite its simplicity and low cost, remains remarkably close to these best configurations. In line with prior recommendations, our results support shifting ASR evaluation toward CER both for English and for morphosyllabic writing systems as it is a more interpretable and low-cost metric for what evaluation should actually capture, and using SemDist as a complementary evaluation.",
+  "abstractSha256": "6a465dcdb07a79a45708630ebb2dc030d58e8765a81bc090f895da22b1c4c25b",
+  "arxivId": "2609.21663",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21663v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hritika Sharma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thibault Bañeras-Roux"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alessandra Pinto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petr Motlicek"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunggu Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Esaú Villatoro-Tello"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Somang Nam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用 1000 组英文转写偏好标注比较词错率、字错率与多配置语义指标，发现词错率与人判断一致度最低而最优语义距离略优但未显著超过字错率，因此主张默认报告字错率并辅以语义指标。",
+  "originalTitle": "Rethinking Human-Aligned Evaluation: An Analysis of Semantic Metrics Beyond WER",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21663v1.pdf",
+  "readerTitle": "词错率低不等于意思对：用人偏好重测 WER、CER 与语义指标",
+  "schemaVersion": 1
+}

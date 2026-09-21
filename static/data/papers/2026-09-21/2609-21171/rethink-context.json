@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21171v1",
+  "abstract": "Recent speech enhancement systems combine self-attention and Mamba to capture global interactions and long-range dependencies. Yet these hybrids usually operate as sequence mixers and do not explicitly exploit harmonic periodicity, a strong cue for preserving voiced speech under noise. Perceptual optimization poses another challenge. PESQ is non-differentiable, so many methods train auxiliary metric discriminators that increase complexity and introduce adversarial instability. We propose \\ours, a harmonic-aware and discriminator-free speech enhancer built around two components. (i) The Time-Frequency Harmonic-aware Attention-Mamba (TF-HAM) block runs self-attention and bidirectional Mamba in parallel along both spectrogram axes, then applies a speech-adapted autocorrelation feed-forward network to encode local periodic structure. (ii) Metric-explicit perceptual refinement (MEPR) combines differentiable PESQ and log-likelihood-ratio losses to expose perceptual metric structure without a learned surrogate. On VoiceBank+DEMAND, \\ours achieves 3.69 PESQ and 4.41 COVL with only 2.39\\,M parameters, outperforming or matching discriminator-based systems. Inference-time perceptual contrast stretching further raises PESQ to 3.79 without retraining. The source code will be available at https://github.com/shangfuu/HAMMER.git.",
+  "abstractSha256": "fa0965b4c80b871a1c927c32ca8adb6cf838a80fa4bf99a0a45998ad66e75ff7",
+  "arxivId": "2609.21171",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21171v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shang-Fu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Szu-Wei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rong Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Huang Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对带噪语音中浊音谐波易被抹掉且 PESQ 不可微的问题，HAMMER 用时间-频率并行注意力-Mamba 加自相关前馈建模周期性，并用软化 PESQ 加可微 LLR 直接优化，在 VoiceBank+DEMAND 上报告 3.69 PESQ 和 4.41 COVL，推理时对比度拉伸可到 3.79 PESQ 但背景分随之下降。",
+  "originalTitle": "HAMMER: Harmonic-Aware Parallel Context Modeling and Discriminator-Free Perceptual Optimization for Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21171v1.pdf",
+  "readerTitle": "不用判别器猜分数：并行建模谐波与可微感知损失如何分工",
+  "schemaVersion": 1
+}

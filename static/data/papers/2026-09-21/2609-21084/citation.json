@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21084v1",
+  "arxivId": "2609.21084",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21084v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stanisław Kacprzak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mieszko Fraś"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21084v1",
+  "originalTitle": "The Hidden Cost of Digits: Number Normalization and WER in ASR Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21084v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

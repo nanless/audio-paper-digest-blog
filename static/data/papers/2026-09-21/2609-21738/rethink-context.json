@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21738v1",
+  "abstract": "Modern text-to-speech (TTS) systems are rarely deployed as unchanged pre-trained models. They are often adapted through supervised fine-tuning (SFT) or preference optimization such as DPO and GRPO. This raises a practical question for audio deepfake forensics: do fingerprints learned from a foundation generator remain valid after adaptation? We present GenTraceBench, a controlled benchmark spanning five TTS architectures, 16 pre-/post-training variants, and 49,728 utterances generated with fixed texts and speaker prompts. Under a train-on-foundation, test-on-adapted protocol, we evaluate binary detection, closed-set attribution, and open-set verification. DPO and GRPO generally preserve fingerprints, whereas some SFT and pre-training-data changes cause substantial drift; effect sizes vary across three forensic backbones. Repeated training runs confirm the largest W2V-BERT attribution drop, while a data-mixture control with comparable speech quality shows that composition change need not cause drift. In W2V-BERT verification, multi-shot enrollment reduces EER for the SFT condition from 44.4% to 11.0%, whereas the SingNet-only condition remains at or above 45% EER.",
+  "abstractSha256": "826a3c36d911c96070957d65d15e63a48c6e538d533936e3dfeb8458421266f7",
+  "arxivId": "2609.21738",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21738v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xueyao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "GenTraceBench 把同一 TTS 谱系内预训练与 SFT、DPO、GRPO 适配后的配对检查点固定文本和说话人重合成来测取证稳定性，报告显示 RL 对齐平均归因变化小而部分 SFT 与预训练数据更换带来大幅漂移，且多样本注册只能缓解方差型漂移而不能纠正均值偏移。",
+  "originalTitle": "GenTraceBench: A Benchmark for Tracing Audio Deepfakes Across Pre- and Post-training Stages",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21738v1.pdf",
+  "readerTitle": "训练后指纹还算数吗：跟踪同一 TTS 血统从预训练到 SFT 与 RL 的取证漂移",
+  "schemaVersion": 1
+}

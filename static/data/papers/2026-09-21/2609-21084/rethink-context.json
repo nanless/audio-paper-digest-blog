@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21084v1",
+  "abstract": "Modern automatic speech recognition (ASR) systems trained on extremely large datasets can produce transcripts with numbers written in Arabic numerals. This creates a need for fair comparison with models that output verbatim texts and proper processing of reference transcripts. Popular approaches often reduce text normalization to lowercase and remove punctuation, with no additional normalization applied to languages other than English. In this work, we analyze the impact of normalization of numerical expressions in the evaluation of ASR systems in various languages, using Polish as an example of a highly inflective language. We perform experiments on VoxPopuli and The Polish Parliamentary speech datasets and estimate word error rate (WER) differences for different text normalization approaches. We show that the difference due to the lack of number normalization in WER may be substantial - more than 2 percentage points, and often higher than the differences between systems in popular multilingual benchmarks.",
+  "abstractSha256": "b69de1e80d9436b81db3ff06d09a642fcb6120c6277722ada9a54b21dc04e1bf",
+  "arxivId": "2609.21084",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21084v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stanisław Kacprzak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mieszko Fraś"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以波兰语为重心研究数字归一化对词错误率的影响，方法是统一把逐字数字转成阿拉伯数字再评测，最强证据是议会数据上逐字与数字文本间差异大于 2% 并可归零，主要代价是归一器覆盖不全且会改变分母权重。",
+  "originalTitle": "The Hidden Cost of Digits: Number Normalization and WER in ASR Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21084v1.pdf",
+  "readerTitle": "数字写成字还是阿拉伯数字：语音识别词错误率里被忽略的归一化代价",
+  "schemaVersion": 1
+}

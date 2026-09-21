@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21336v1",
+  "arxivId": "2609.21336",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21336v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steven Vander Eeckt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21336v1",
+  "originalTitle": "CGaLore: Curvature-Guided GaLore for Memory-Efficient Continual Adaptation of ASR Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21336v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

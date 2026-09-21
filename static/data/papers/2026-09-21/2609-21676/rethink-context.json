@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21676v1",
+  "abstract": "We present the Spoken Wikipedia Presentation Corpus, an extension of the Spoken Wikipedia Corpora featuring LLM-generated slide decks for multimodal ASR. Slides are created from LLM-segmented sections using a hybrid pipeline that combines LLM-based content planning with rule-based design decisions. For each section, an LLM generates a slide title, bullet points, a takeaway message, and a visual description that is used to create an illustration. Rule-based matching then selects layouts, themes, and styles to produce the final slides. A vision LLM extracts slide text as Markdown. We evaluate multiple ASR and spoken language models (SLMs). The best model achieves an average micro-WER of 10.23% and an average micro-CER of 6.48% on audio-only inputs. English yields the lowest error rates, followed by German and Dutch, while performance declines across lower-resource languages. Although audio-only baselines are strong, multimodal zero-shot prompting of omni models remains challenging. The aligned slide, text, and audio data show a strong potential to improve recognition through cross-modal context.",
+  "abstractSha256": "1435bd5eab470f57f246a321a03d1ca2ceea60abf7a13526bc3875277eab85fe",
+  "arxivId": "2609.21676",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21676v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-asr",
+          "label": "音视频语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音视频语音识别",
+      "primaryTaskId": "task.av-asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Ranzenberger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steffen Freisinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Bocklet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Korbinian Riedhammer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把朗读维基百科的语音按小节配上大模型规划加规则渲染的合成幻灯片，在英德荷三语上只用音频测出最佳平均微观词错率 10.23% 与字错率 6.48%，而全量幻灯片文本或图片的零样本提示因大段复制与插入错误而失效。",
+  "originalTitle": "The Spoken Wikipedia Presentation Corpus",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21676v1.pdf",
+  "readerTitle": "幻灯片能帮耳朵认词吗：用合成讲稿重测多语言语音识别",
+  "schemaVersion": 1
+}

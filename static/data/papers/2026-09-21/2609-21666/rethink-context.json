@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21666v1",
+  "abstract": "The success of Large Audio Language Models has driven the development of massive multimodal networks exceeding billions of parameters. However, the demand for privacy-preserving, low-latency processing has shifted focus toward Small Audio Language Models (SALMs) capable of on-device execution. In this paper, we introduce Samsone, a family of SALMs designed for edge computing. Our core model, Samsone-134M, establishes a new state-of-the-art for its size class across multiple benchmarks. We further explore the scaling laws of SALMs by introducing Samsone-99M and Samsone-356M. Despite their compact footprint, the Samsone family delivers performance competitive with models orders of magnitude larger. To foster open research and reproducibility, we train Samsone on publicly available data. We release the training code, model weights, mobile-optimized checkpoints and provide an open-source Android application to demonstrate real-time on-device inference of Samsone.",
+  "abstractSha256": "61eb910ba85626e70a9579e6acf92537aef35636541e492ccdc313a7bae94654",
+  "arxivId": "2609.21666",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21666v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Piotr Masztalski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michał K. Grzeszczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olaf Sikorski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Samsone 针对端侧音频问答，用 Whisper-Tiny 编码器加 SmolLM2 解码器与非线性映射器做单阶段训练，在 MMAU 与 MMAU-Pro 上超过同级小模型并接近部分大模型，代价是通用语言能力下降且未做移动端硬件级优化。",
+  "originalTitle": "Samsone: A Family of Open Small Audio Language Models for On-Device Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21666v1.pdf",
+  "readerTitle": "小参数做音频问答：Samsone 用裁词表与减层数换端侧可运行",
+  "schemaVersion": 1
+}

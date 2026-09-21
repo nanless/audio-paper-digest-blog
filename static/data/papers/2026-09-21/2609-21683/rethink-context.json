@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21683v1",
+  "abstract": "Conversational speech depends on dialogue context and the listener's immediately preceding behavior. We propose ReACT-TTS, a two-stage framework that uses a one-second pre-response listener facial sequence to plan the next utterance's emotion and prosody before speech realization. On a strict dyadic MELD protocol, Temporal conditioning yields higher mean macro-F1 and VAD concordance than Text-only across ten seeds, while accuracy remains essentially unchanged. Ablations show that temporal modeling performs best among the visual variants and that an explicit early-to-late difference is unnecessary; correct listener reactions also outperform cyclic mismatches on average. In a contextual-appropriateness study with 20 speech researchers, 76% of judgments prefer Temporal, 9% Text-only, and 15% report no preference. We further connect the predicted response style to a Grad-TTS backbone for end-to-end speech realization. Overall, the results support pre-response listener dynamics as complementary cues for conversational response planning. The source code is available at https://github.com/CYJ1/ReACT-TTS_public.",
+  "abstractSha256": "611626bf6d0d6da56a138c31b6a3e7044c04f398fd507b7a660cf45234543243",
+  "arxivId": "2609.21683",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21683v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频语音合成",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-synthesis",
+          "label": "音视频语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频语音合成",
+      "primaryTaskId": "task.av-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Sogang University, Seoul, Republic of Korea"
+      ],
+      "name": "Yunji Chu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对对话语音只看文本历史会漏掉听者即时非言语线索的问题，用回应前 1 秒听者人脸时序做显式回应规划，在严格双人 MELD 协议上时序模型宏平均 F1 和 VAD 一致性略高于纯文本而准确率基本不变，合成阶段仅证明可端到端连通而未改善可懂度。",
+  "originalTitle": "Listen Before You Speak: Response Planning from Listener Facial Reactions for Conversational Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21683v1.pdf",
+  "readerTitle": "先看听者再说话：用回应前一秒表情规划下一句怎么说",
+  "schemaVersion": 1
+}

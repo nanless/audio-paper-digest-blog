@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21183v1",
+  "abstract": "Audio large language models (AudioLLMs) operate reactively, responding only when queried. We introduce proactive audio assistance, where an AudioLLM monitors an audio stream and autonomously decides when to alert the user from a single natural-language intent, motivated by wearable applications for Deaf and Hard of Hearing users. We propose Interrupt and Silent Modeling (ISM), a model-agnostic paradigm that embeds proactive decisions into LLM decoding via two special tokens: \\texttt{&lt;interrupt&gt;} and \\texttt{&lt;silent&gt;}, capturing four states: onset detection, sustained-relevance triggering, irrelevance suppression, and de-duplication. Applied to Qwen2-Audio-7B, ISM achieves 99.6\\% interrupt F1 and perfect de-duplication recall on ESC-50. On noisy Epic-Sounds kitchen audio, ISM achieves the highest interrupt F1 without domain-specific training, the only method maintaining strong onset detection without over-triggering or over-suppression. Streaming evaluation confirms real-time viability with 3.5-second average latency.",
+  "abstractSha256": "0a0f57282d31639e19192fcef67a4a9fab641032102481a009b3fefbff6788c7",
+  "arxivId": "2609.21183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21183v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音频交互",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "音频交互",
+      "primaryTaskId": "task.audio-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amit Kumar Singh Yadav"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ritvik Shrivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungwhan Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shashank Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pinar Donmez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Babak Damavandi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把连续音频监护形式化为四态打断或静默决策，用两个特殊词嵌入解码，在 ESC-50 上报告 99.6% 中断 F1 与 100.0% 去重召回，在未训练的 Epic-Sounds 上保持 96.7% 起始召回，代价是嘈杂域静默召回仅 10.1% 与平均 3.5 秒流式延迟。",
+  "originalTitle": "I'll Keep an Ear Out: Teaching AudioLLMs Proactive Audio Assistance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21183v1.pdf",
+  "readerTitle": "只给一次提醒意图，让音频大模型自己决定何时开口：中断与静默建模",
+  "schemaVersion": 1
+}

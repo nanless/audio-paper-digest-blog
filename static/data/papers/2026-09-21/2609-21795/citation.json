@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21795v1",
+  "arxivId": "2609.21795",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21795v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinmeng Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kensuke Okada"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryoya Tabata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gary Scavone"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21795v1",
+  "originalTitle": "Towards Physics-Informed Neural Networks for Stiff Guitar String Vibrations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21795v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

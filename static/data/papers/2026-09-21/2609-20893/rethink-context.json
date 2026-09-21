@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20893v1",
+  "abstract": "We analyze the composer embeddings learned by a composer-conditioned Transformer as a continuous latent space of compositional style, rather than merely as an internal representation for generation. A model that recursively predicts melody continuations was trained on melodic sequences extracted from MIDI data, conditioned on composer identity (124 composers). Principal component analysis of the learned composer embedding matrix (124x128) shows that the first principal component correlates strongly with composer birth year (r = -0.884, p &lt; 0.001, n = 123), a stronger correlation than we obtain by applying the same PC1-birth-year analysis to existing general-purpose audio-text embeddings (CLAP, MuQ-MuLan) trained on unrelated audio-text corpora, not on symbolic melody generation. A shuffle test (2,000 permutations) confirms that the Silhouette score for stylistic-period labels is statistically significant (0.0110, p &lt; 0.001). We further show that vector arithmetic in the embedding space captures meaningful stylistic relationships between composers. These results suggest that composer embeddings, learned without supervision beyond composer identity, form an interpretable latent space that captures musical-historical structure.",
+  "abstractSha256": "1e45812b141f7a173ef724f2fb6271cba15331d16b8f4f71d98acdff63874d71",
+  "arxivId": "2609.20893",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.20893v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sakutaro Nishio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Osamu Ichikawa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 124 位作曲家的旋律续写任务训练条件 Transformer，只以作曲家身份为监督，学到的 124×128 嵌入的第一主成分与出生年强相关并通过打乱检验，最强的向量算术例子同时暴露了旋律表征覆盖不了配器音色的代价。",
+  "originalTitle": "Composer2Vec: A Continuous Embedding Space of Composer Style Learned from Symbolic Melody Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20893v1.pdf",
+  "readerTitle": "只用生成误差学作曲家风格：Composer2Vec 的时间轴从哪里来",
+  "schemaVersion": 1
+}

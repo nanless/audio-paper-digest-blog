@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21145v1",
+  "arxivId": "2609.21145",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21145v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lawry Sorenson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Crandall"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eric K. Ringger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephen D. Richardson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21145v1",
+  "originalTitle": "Scaling Forced Alignment to End-User Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21145v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

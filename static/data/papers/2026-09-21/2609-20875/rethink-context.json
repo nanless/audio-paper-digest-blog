@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20875v1",
+  "abstract": "Parkinson's disease (PD) often manifests through speech impairments, facilitating accessible, non-invasive, and cost-effective severity assessment for early diagnosis and progression tracking. Despite advances in speech foundation models (SFMs), their cross-lingual generalization for PD severity multi-class classification remains underexplored due to limited labeled data, a lack of explainable methods and variability across languages and datasets. In this work, we evaluate pre-trained embeddings from four state-of-the-art open-source SFMs across three datasets in zero-shot and k-shot cross-lingual settings for multi-class PD severity assessment. Our results show that pre-trained speech embeddings enable meaningful cross-lingual transfer, although performance is sensitive to dataset properties, preprocessing, and adaptation strategy. Misclassifications under these conditions related to inter-speaker variability and atypical speech patterns highlight the need for more robust feature extraction and modeling for PD severity assessment while emphasizing the importance of explainability for reliable clinical insights.",
+  "abstractSha256": "198db641afcf3047c25c8d4348ff95958cadd1211f1d2e4086e4205aad96bcad",
+  "arxivId": "2609.20875",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.20875v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Pals"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cristian Tejedor-Garcia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用四种语音基础模型嵌入加四种浅层分类器做健康对照、轻度、重度三分类，在意大利语、英语、哥伦比亚西班牙语之间做零样本与每类 49 个目标片段的 k 样本适配，发现 k 样本一致提升目标语言 F1 且源语言基本稳定，但重度与轻度边界和预处理线索损失仍是主要代价。",
+  "originalTitle": "Cross-Lingual Parkinson's Disease Severity Assessment Using Pre-trained Speech Embeddings: A Multi-Class Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20875v1.pdf",
+  "readerTitle": "跨语言帕金森严重程度分级：预训练语音嵌入能迁移什么，又在哪里混淆",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21795v1",
+  "abstract": "Modeling stiff string vibrations is challenging due to their dispersive and high-frequency characteristics. This study investigates the effectiveness of Physics-Informed Neural Networks (PINNs) in simulating the transverse vibration of a one-dimensional linear stiff string with sharp initial conditions induced by plucking. The governing Partial Differential Equation (PDE), along with the associated initial and boundary conditions, is incorporated directly into the loss function of the neural network. For the reference measurements, a wire-breaking experiment was performed to excite the string, and its vibration response was captured using a laser profiler. The comparison between experimental measurements, finite-difference time-domain (FDTD) simulations, and PINN-based simulations shows good overall agreement, highlighting the potential of PINNs for modeling stiff-string vibrations.",
+  "abstractSha256": "8a5a3da562e875e745b773e80ccbe1cecc4c65234fae026864b9883722128c6b",
+  "arxivId": "2609.21795",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21795v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinmeng Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kensuke Okada"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryoya Tabata"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gary Scavone"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用线性硬弦偏微分方程加三角拨弦初值约束多层感知机做正演，在第一振动周期内与有限差分和断线实验做对照，随机傅里叶特征尺度越大高频细节越好，但评估只限首周期且存在幅值偏差。",
+  "originalTitle": "Towards Physics-Informed Neural Networks for Stiff Guitar String Vibrations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21795v1.pdf",
+  "readerTitle": "硬弦高频色散难学：三角拨弦条件下物理信息神经网络的第一周期验证",
+  "schemaVersion": 1
+}

@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21288v1",
+  "arxivId": "2609.21288",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21288v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA"
+      ],
+      "name": "Chenqian Le"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA",
+        "Department of Neurology, New York University Grossman School of Medicine, New York, NY, USA"
+      ],
+      "name": "Beatrice Fumagalli"
+    },
+    {
+      "affiliations": [
+        "Department of Neurology, New York University Grossman School of Medicine, New York, NY, USA"
+      ],
+      "name": "Yasamin Esmaeili"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA"
+      ],
+      "name": "Xupeng Chen"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA"
+      ],
+      "name": "Tianyu He"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA"
+      ],
+      "name": "Nikasadat Emami"
+    },
+    {
+      "affiliations": [
+        "Department of Neurology, New York University Grossman School of Medicine, New York, NY, USA"
+      ],
+      "name": "Adeen Flinker"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, New York University Tandon School of Engineering, New York, NY, USA"
+      ],
+      "name": "Yao Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21288v1",
+  "originalTitle": "Multi-Subject Pretraining Enables Short-Calibration Personalization for Closed-Corpus Surface EMG Speech Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21288v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20870v1",
+  "arxivId": "2609.20870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.20870v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bernardo V Miranda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clémentine Berger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaël Richard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathieu Fontaine"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Slim Essid"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20870v1",
+  "originalTitle": "The Internet Archive Music Dataset",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20870v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

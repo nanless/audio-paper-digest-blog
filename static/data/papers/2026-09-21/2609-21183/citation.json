@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21183v1",
+  "arxivId": "2609.21183",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21183v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amit Kumar Singh Yadav"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ritvik Shrivastava"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungwhan Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shashank Jain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pinar Donmez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Babak Damavandi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21183v1",
+  "originalTitle": "I'll Keep an Ear Out: Teaching AudioLLMs Proactive Audio Assistance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21183v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

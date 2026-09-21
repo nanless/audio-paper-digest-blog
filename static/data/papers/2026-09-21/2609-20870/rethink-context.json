@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20870v1",
+  "abstract": "We introduce the Internet Archive Music Dataset (IAMD), a large-scale collection of captioned music segments derived from the Internet Archive. To the best of our knowledge, IAMD constitutes the largest publicly available music-caption dataset to date with over 34,000 hours of audio, providing a valuable benchmark for training and evaluating music understanding and generative models. The dataset is built from content declared to be distributed under Creative Commons licenses, and cross-referencing with MusicBrainz is done to improve license information reliability. To annotate IAMD, we present an automatic captioning pipeline that augments base captions produced by an audio-language model (ALM) with textual metadata sourced from the Internet Archive and imputed metadata obtained using audio classification models. Caption quality is assessed objectively and subjectively, and results indicate that the annotation pipeline is reliable and does not degrade caption quality with scaling.",
+  "abstractSha256": "766e9339ca0038ed03363fb47f95a79c3687c3f6bd149ea2900754b6d966fa03",
+  "arxivId": "2609.20870",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.20870v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-captioning",
+          "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音频字幕生成",
+      "primaryTaskId": "task.audio-captioning",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bernardo V Miranda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clémentine Berger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaël Richard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathieu Fontaine"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Slim Essid"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究针对可公开复现的大规模音乐与文本配对缺失问题，选择以互联网档案馆中声明为知识共享许可的音频为源、轻量音频语言模型初标加分类标签与档案元数据聚合精修为方法，最强证据是 1500 段抽样下与 JamendoMaxCaps 相当的参考无关分数与正确性完整性约 4.2 分以上的人评，主要代价是长时体裁欠采样与语言流畅性仍落后于人工标注。",
+  "originalTitle": "The Internet Archive Music Dataset",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20870v1.pdf",
+  "readerTitle": "用声明式许可与两阶段自动标注把互联网档案馆做成可复现的音乐描述资源",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21666v1",
+  "arxivId": "2609.21666",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21666v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Piotr Masztalski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michał K. Grzeszczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Olaf Sikorski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21666v1",
+  "originalTitle": "Samsone: A Family of Open Small Audio Language Models for On-Device Inference",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21666v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

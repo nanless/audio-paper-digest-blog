@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21789v1",
+  "arxivId": "2609.21789",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21789v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bernard Muller"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonio Armando Ortiz Barrañón"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "LaVonne Roberts"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21789v1",
+  "originalTitle": "Per-Aetiology Contrastive Severity Embeddings with Phonological Pseudo-Labelling for Multilingual Dysarthric Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21789v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

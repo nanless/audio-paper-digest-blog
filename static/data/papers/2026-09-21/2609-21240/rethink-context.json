@@ -1,0 +1,133 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21240v1",
+  "abstract": "Discrete audio tokenization has become the critical interface between raw waveforms and autoregressive modeling in recent music generation. As a result, music tokenizers must simultaneously support high-fidelity reconstruction and produce discrete sequences that remain amenable to language modeling. Existing reconstruction-oriented tokenizers often mix musical structure with fine acoustic details, producing high-entropy tokens that are hard to model. In contrast, semantics-guided alternatives are designed for speech and do not fit music well, often hurting reconstruction quality. We address these trade-offs by rethinking music tokenization around a measurable notion of music semantic content grounded in downstream Music Information Retrieval tasks. Guided by this definition, we propose MuSeC, a music semantic codec that factorizes semantic and acoustic content directly from mixed signals without source separation. MuSeC preserves information required for high-fidelity reconstruction while producing more LM-friendly discrete units. Empirically, it improves reconstruction quality and yields more predictable token sequences, providing a practical foundation toward high-fidelity LLM music generation. Demos are available at https://longwaytog0.github.io/MuSeC/.",
+  "abstractSha256": "9dd6bd44d4939347c3071dc18b58784f1adf9449cc09172562264c5db3eb8b43",
+  "arxivId": "2609.21240",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21240v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huakang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guobin Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuepeng Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dake Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanke Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lingxin Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhonglin Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pengcheng Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把音乐语义定义为可测的检索任务能力，用冻结语义单码本加声学残差量化双流在混合信号上重建，报告显示完整配置在内容保持与重建上占优而纯声学配置虽重建略高却显著更难建模。",
+  "originalTitle": "Rethinking Music Tokenization: A Semantic Codec toward High-Fidelity LLM Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21240v1.pdf",
+  "readerTitle": "把语义骨架和声学细节分开装：MuSeC 为何能在混合音乐上同时保真与可建模",
+  "schemaVersion": 1
+}

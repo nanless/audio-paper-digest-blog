@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21180v1",
+  "arxivId": "2609.21180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21180v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuto Ishikawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Norihiro Takamune"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomohiko Nakamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daichi Kitamura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hiroshi Saruwatari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Takahashi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazunobu Kondo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21180v1",
+  "originalTitle": "Online Algorithms for Independent Low-Rank Matrix Analysis and Rank-Constrained Spatial Covariance Matrix Estimation Based on Maximum Weighted Likelihood Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21180v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21080v1",
+  "arxivId": "2609.21080",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21080v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Melanie Jouaiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ning Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21080v1",
+  "originalTitle": "All I Hear is Noise: Investigating Clever Hans Effects in Clinical Speech Datasets",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21080v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

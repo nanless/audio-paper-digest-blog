@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21683v1",
+  "arxivId": "2609.21683",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21683v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Artificial Intelligence, Sogang University, Seoul, Republic of Korea"
+      ],
+      "name": "Yunji Chu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21683v1",
+  "originalTitle": "Listen Before You Speak: Response Planning from Listener Facial Reactions for Conversational Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21683v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

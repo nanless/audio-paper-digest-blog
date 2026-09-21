@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21676v1",
+  "arxivId": "2609.21676",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21676v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Ranzenberger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steffen Freisinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Bocklet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Korbinian Riedhammer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21676v1",
+  "originalTitle": "The Spoken Wikipedia Presentation Corpus",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21676v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

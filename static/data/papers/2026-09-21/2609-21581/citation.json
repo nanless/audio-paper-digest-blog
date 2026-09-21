@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21581v1",
+  "arxivId": "2609.21581",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21581v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Cristian-Teodor Neamtu"
+    },
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Serban Mihalache"
+    },
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Stefan Smeu"
+    },
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Dan Oneata"
+    },
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Horia Cucu"
+    },
+    {
+      "affiliations": [
+        "Speech and Dialogue Research Laboratory (SpeeD), POLITEHNICA Bucharest Bitdefender"
+      ],
+      "name": "Dragos Burileanu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21581v1",
+  "originalTitle": "Towards Zero-Shot Attribution of Synthetic Speech via Audio-Text Contrastive Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21581v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

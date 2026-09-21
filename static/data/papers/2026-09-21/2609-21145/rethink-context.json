@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21145v1",
+  "abstract": "The Viterbi algorithm has been previously used to perform forced alignment of audio to text to mine training data from online resources. However, many existing implementations have quadratic time and space complexity, scaling poorly to long input sequences. We propose two optimizations to address this issue. First, we apply the Hirschberg algorithm to perform the alignment in place using linear memory. Second, we model the alignment between speech and text as a constrained random walk, allowing us to prune the search space with arbitrary confidence while accounting for transcription errors. The Hirschberg optimization reduces memory usage from 140 GB to 5 MB for three-hour inputs while producing identical alignments in one-third the time of torchaudio when both run on a CPU. We achieve an additional 2x speedup with pruning on inputs longer than 20 minutes while preserving alignment accuracy in more than 98% of tested cases.",
+  "abstractSha256": "ab3f814dd358277cb7e81137995cbb6242e8830c4e5906bc50cb7132c99e604d",
+  "arxivId": "2609.21145",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21145v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lawry Sorenson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Crandall"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eric K. Ringger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephen D. Richardson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对长语音强制对齐的二次方内存与时间瓶颈，论文用分治原地计算的赫希伯格维特比算法保证结果不变，再用随机游走先验加转写精度界做剪枝，三小时音频在单核中央处理器上以兆字节级内存完成对齐，剪枝后进一步提速但依赖精度假设。",
+  "originalTitle": "Scaling Forced Alignment to End-User Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21145v1.pdf",
+  "readerTitle": "把二次方的强制对齐压进终端设备：原地计算与可解释剪枝",
+  "schemaVersion": 1
+}

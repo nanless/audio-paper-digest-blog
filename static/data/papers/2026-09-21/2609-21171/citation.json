@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21171v1",
+  "arxivId": "2609.21171",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21171v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shang-Fu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Szu-Wei Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rong Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Huang Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21171v1",
+  "originalTitle": "HAMMER: Harmonic-Aware Parallel Context Modeling and Discriminator-Free Perceptual Optimization for Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21171v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

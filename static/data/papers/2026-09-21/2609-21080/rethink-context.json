@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21080v1",
+  "abstract": "Recent work revealed a striking Clever Hans effect in the Pitt dataset, where Alzheimer's detection achieved nearly 100% accuracy using only silent audio segments. This raises serious concerns about hidden confounding factors in speech-based health datasets. We systematically investigate whether similar biases exist across five widely used clinical speech corpora: DAIC-WoZ (depression), TORGO (dysarthria), Neurovoz (PD), MDVR-KCL (PD), and UCLASS (stuttering). For each dataset, we compare classification using the first second of audio, silent segments, and full recordings, and evaluate both raw and denoised signals. Across all datasets, silence-only classification frequently matched or exceeded full-audio performance, suggesting that classification performance may be influenced by dataset-specific confounds in addition to disorder-related speech characteristics. These findings question the reliability and generalisability of speech-based biomarkers and call for stricter methodological reporting, preprocessing transparency, and bias mitigation.",
+  "abstractSha256": "b82d544048e72b46f447e1eec8415c760fdb233abe1f5ba07c23c4027070ba54",
+  "arxivId": "2609.21080",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21080v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Melanie Jouaiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ning Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在抑郁、构音障碍、帕金森和口吃五个语音数据集上只用首秒或静音段做分类，发现其加权 F1 常与全音频持平甚至更高，说明录音条件等非言语线索可能贡献了预测性能，但未定位确切混杂源。",
+  "originalTitle": "All I Hear is Noise: Investigating Clever Hans Effects in Clinical Speech Datasets",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21080v1.pdf",
+  "readerTitle": "只听静音也能分类：临床语音数据集里的捷径从何而来",
+  "schemaVersion": 1
+}

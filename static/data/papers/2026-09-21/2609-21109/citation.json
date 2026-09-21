@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21109v1",
+  "arxivId": "2609.21109",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.21109v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Henel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frederik Werner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Langmann"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Johannes Betz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21109v1",
+  "originalTitle": "Talk to Me, Jarvis: An Open-Source Edge-Deployable Voice Assistant Framework for Autonomous Racecars",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21109v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

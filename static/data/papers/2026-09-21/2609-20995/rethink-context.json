@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20995v1",
+  "abstract": "Natural spoken interaction requires more than streaming ASR, language generation, and speech synthesis: a system must react to overlap without canceling on every acknowledgment, prepare a response before a turn is certain, and ensure canceled audio cannot enter conversation history. We present Voice-Light, a full-duplex cascaded voice agent that combines immediate acoustic onset, a causal adapter sharing a streaming ASR encoder, reversible playback control, and private speculative response generation. Structured tool calls execute concurrently with audible bridge speech, while browser acknowledgments make rendered audio authoritative for durable history. Locked evaluation on 1,673 real-conversation silence candidates found that an earlier learned completion checkpoint preserved a 2.70% false-cutoff rate but reached only 12.53% end-of-turn recall, compared with 95.60% for a Silero timing policy. The deployed system therefore retains a hybrid controller rather than claiming a learned-policy replacement. Across three unscripted operator-run microphone sessions, 36 measured response turns had a 758 ms median from final VAD endpoint to first server audio; 21 turns were below 800 ms. These sessions are an instrumented case study, not a controlled user evaluation. We release the synthetic data, model artifacts, evaluation code and summaries, source code, and deployment configuration supporting the result.",
+  "abstractSha256": "a97b4798c56d55d61e44bdb396d208514c9a5fac20a9e3323e4e265db3030323",
+  "arxivId": "2609.20995",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.20995v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "Adapter",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bertil Braun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Voice-Light 研究全双工级联语音交互中的轮次判断与重叠处理，用共享流式识别编码器的因果适配器加可逆混合控制器与私有推测生成，在 1673 个静音候选的锁定测试中学习策略仅获 12.53% 召回而保留混合控制器，在 36 轮真机麦克风案例中取得 758 毫秒中位响应但以 800 毫秒超时兜底。",
+  "originalTitle": "Voice-Light: A Full-Duplex Cascaded Voice Agent with Causal Turn-Taking and Speculative Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20995v1.pdf",
+  "readerTitle": "不抢话也不漏话：Voice-Light 用因果检查管住推测与历史",
+  "schemaVersion": 1
+}
