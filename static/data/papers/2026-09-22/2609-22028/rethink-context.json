@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22028",
+  "abstract": "Spatial room impulse responses (SRIRs) capture directional distributions of acoustic sound-sources and their reflections. However, collecting SRIRs of moving sound-sources remains a challenge, requiring complex interpolations across measurements that account for multi-path spatial-temporal dynamics. This paper investigates the Wasserstein metric and displacement for evaluating interpolated SRIR echo densities in the spherical harmonic domain. We present novel sum-of-magnitude square expansions for efficiently fitting probability density functions, maximizing likelihood, inverse sampling, and computing spherical sliced Wasserstein interpolations. Experiments compare the Wasserstein displacements and metric to linear and geometric interpolations of SRIR image-source densities on a line-path, and demonstrate model-order reduction.",
+  "abstractSha256": "39a9485cf53b486c17369d9d74b122c1d4f05f5b68a54222eeb3328009cab339",
+  "arxivId": "2609.22028",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuancheng Luo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把空间房间脉冲响应的聚合回声方向建模为球谐非负密度，用平方和半定规划做极大似然估计与逆变换采样，再以球面切片 Wasserstein 位移插值直线路径上的声源与反射密度，实验显示 Wasserstein 插值在整条路径上切片距离最小，但代价是切片离散化与非负约束带来的两步优化。",
+  "originalTitle": "Spherical Harmonic Sliced Wasserstein Displacement Interpolation for Acoustic Source and Reflection Density Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22028.pdf",
+  "readerTitle": "把回声方向看成概率密度：球谐域切片 Wasserstein 如何搬运声源与反射",
+  "schemaVersion": 1
+}

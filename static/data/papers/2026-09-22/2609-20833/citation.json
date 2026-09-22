@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20833",
+  "arxivId": "2609.20833",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhecheng Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuanji He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhichen Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaoyang Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaosheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minchuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengjie Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20833",
+  "originalTitle": "Transsion's Speaker-Attributed Multilingual ASR System for the MLC-SLM 2026 Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20833.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

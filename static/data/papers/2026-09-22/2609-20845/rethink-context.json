@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20845",
+  "abstract": "A decoder that turns video or audio into text conventionally consumes the entire input before emitting a word. Offline this is merely more than the task requires; live it is impossible, since a caption cannot wait for a match to end. Streaming systems bolt on a fixed rule such as wait-$k$, which waits for the same number of input tokens before every word, regardless of the input&#39;s length or pace. We replace the fixed offset with ZENDAYA, a schedule governed by a single continuous parameter $\\gamma$. It makes the visible source prefix a closed-form function of generation progress, scaled by the input&#39;s own predicted length, so an ordinary offline decoder and a real-time streaming decoder become two endpoints of one family rather than separate models. The same scalar fixes, in closed form, the mean fraction of source consumed per emitted word, $\\bar{E}(\\gamma) \\approx 1/(1+\\gamma)$, making it at once a latency dial and an interpretable budget. We prove a structural dependency theorem: under any schedule fixed in advance and non-decreasing, no emitted token can depend on input that has not yet arrived. The guarantee holds for trained and untrained weights alike, and extends to unbounded streams under arbitrary asynchronous arrival. The empirical result is counterintuitive: seeing less can produce better text, because a flood of source dilutes attention exactly when the model has the least of its own output to anchor on. Trained from scratch across two modalities and three public corpora (Charades-STA, ActivityNet Captions, LibriHeavy), a compact 29M-parameter decoder matches or beats the fixed schedule while reading less of the source, with the sharpest gains at the lowest latencies, where a fixed offset collapses. Streaming METEOR gains are statistically significant on all three corpora.",
+  "abstractSha256": "5300f37a3c42bfb5aceedf358db7fc58cbd6a05548047239e77ba0ffd3e67eca",
+  "arxivId": "2609.20845",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yasir Mehmood"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kashif Javed"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究视频字幕与语音转写在流式条件下如何决定每写一个词可见多少源，用单参数幂律窗口替代固定等待，在三个公开集上以 29M 解码器在低延迟处保持质量并给出结构化不偷看证明，代价是长度估计与单轮运行噪声仍需复核。",
+  "originalTitle": "Reading Less While Writing: A Closed-Form Bandwidth Dial for Streaming Multimodal Decoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20845.pdf",
+  "readerTitle": "少看一点反而写得更好：用一个旋钮控制流式解码器能看多少",
+  "schemaVersion": 1
+}

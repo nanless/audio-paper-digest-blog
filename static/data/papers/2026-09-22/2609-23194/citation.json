@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23194v1",
+  "arxivId": "2609.23194",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23194v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yannick Yomie Nzeuhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paulin Melatagia Yonta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marie Tahon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23194v1",
+  "originalTitle": "Enhancing speech representation learning with cross-modal knowledge transfer with HGNN under low resource settings: the case study of Yemba",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23194v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

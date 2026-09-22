@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22586v1",
+  "arxivId": "2609.22586",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22586v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Harshit Rajgarhia"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Asif Shaik"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Rachuri Lokesh"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Sushanta Kumar Pani"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Abhishek Mukherji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22586v1",
+  "originalTitle": "SEABED: SouthEast Asian Benchmark for Evaluating Audio Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22586v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

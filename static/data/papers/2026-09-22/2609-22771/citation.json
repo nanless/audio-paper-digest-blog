@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22771v1",
+  "arxivId": "2609.22771",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22771v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nishit Anand"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaqi Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunyun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dinesh Manocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rithesh Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22771v1",
+  "originalTitle": "ParA-LLM: A Unified Approach to Paralinguistic and Acoustic Speech Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22771v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

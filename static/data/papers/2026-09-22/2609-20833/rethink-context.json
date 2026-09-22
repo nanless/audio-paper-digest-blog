@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20833",
+  "abstract": "This paper presents the Transsion Speech Team submission to Task 1 of the MLC-SLM 2026 Challenge, which focuses on speaker-attributed transcription for multilingual conversational speech. We propose a cascaded framework consisting of three components: a speaker diarization module, a long-form multilingual ASR module, and a speaker-transcription fusion module. The diarization module is built upon DiariZen and produces speaker-homogeneous segments through local speaker activity estimation and global speaker clustering. The ASR module is based on Qwen3-Omni and generates multilingual transcriptions, while an external CTC-based alignment model provides precise word- and character-level timestamps. Finally, the fusion module combines diarization outputs with timestamped transcriptions to generate speaker-attributed STM outputs. Experimental results on the official evaluation set demonstrate the effectiveness of the proposed framework. The submitted system achieves a tcpMER of 15.41% and ranks second among all participating teams.",
+  "abstractSha256": "c2cf103330265bb64b9df3eeb511fbd3ed1aa1a31f24a2f48ed6ea0e7b2fe565",
+  "arxivId": "2609.20833",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhecheng Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuanji He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhichen Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaoyang Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaosheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minchuan Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fengjie Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无预先切分的多语会话转写任务，该工作用说话人日志、长语音识别与 CTC 对齐加融合的级联路线，在官方评测集上报告 tcpMER 为 15.41% 获得第二名，代价是三模块串行依赖与多阶段微调成本。",
+  "originalTitle": "Transsion's Speaker-Attributed Multilingual ASR System for the MLC-SLM 2026 Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20833.pdf",
+  "readerTitle": "先分清谁在说话、再转写说什么：Transsion 级联式多语说话人归属转写系统解读",
+  "schemaVersion": 1
+}

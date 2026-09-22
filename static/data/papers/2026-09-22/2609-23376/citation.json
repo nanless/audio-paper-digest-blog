@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23376v1",
+  "arxivId": "2609.23376",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23376v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Yi Xu"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Cheng Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenzhuo Lei"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23376v1",
+  "originalTitle": "If You Hear It, Help Find It: Orthogonal Knowledge Distillation for Open-Vocabulary Audio-Visual Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23376v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

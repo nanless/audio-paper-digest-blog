@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20849",
+  "abstract": "Large Audio Language Models (LALMs) perform well on complex question answering but often show a reasoning gap, where explicit Chain-of-Thought (CoT) reduces accuracy compared to direct answers. We hypothesize that long reasoning sequences shift attention away from the audio input. To address this, we propose SPARE (Semantic Prediction for Audio REasoning), which introduces a register token aligned with the final conclusion using a cosine similarity loss with a Sentence-BERT embedding. This conditions the model&#39;s latent space with the target semantic goal before reasoning begins. Experiments on MMAU and MMAR with SALMONN show improved zero-shot reasoning and stronger early attention to audio without additional inference cost.",
+  "abstractSha256": "b1953da4c543087e71e4d25dca0380aa0daf1dfe054e273f176bd0791a2174b9",
+  "arxivId": "2609.20849",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Bonzi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cem Subakan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对显式思维链导致注意力偏离音频的推理落差，SPARE 在推理起点插入寄存器令牌并用结论语义做余弦对齐，在 SALMONN 13B 上把 MMAU 提升到 58.03%、MMAR 提升到 40.32%，代价是微调阶段增加一个训练期对齐分支而推理零新增开销。",
+  "originalTitle": "Enhancing Audio Reasoning via Semantic Summary Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20849.pdf",
+  "readerTitle": "先锁定结论语义再推理：SPARE 如何把长思维链拉回音频",
+  "schemaVersion": 1
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23156v1",
+  "abstract": "First-order Ambisonics (FOA) signals exhibit exact O(3) symmetry: The rotation or reflection of the FOA signal modifies the direction of arrival of the sound sources, while preserving the sound sources themselves. Prior attempts to utilize this spatial symmetry of FOA to improve the efficiency and robustness of sound event detection and localization (SELD) systems either learned only an approximation of the symmetry through rotation-based augmentation or relied on computationally expensive methods to integrate equivariance. Furthermore, prior work focused exclusively on SO(3) equivariance , leaving the potential of incorporating O(3) equivariance for SELD tasks unclear. To address these limitations, we developed EquiSELD. This equivariant attention network processes first-order Ambisonics as paired streams of O(3)-invariant scalars and equivariant intensity vectors, producing an invariant activity magnitude and an equivariant DOA with a Multi-ACCDOA readout. To compare the impact of O(3) versus SO(3)-equivariance, we designed a matched SO(3)-only variant. EquiSELD outperforms prior equivariant networks on both simulated scenes with measured RIRs and recordings of real-world sound scenes at a fraction of the training cost. EquiSELD additionally surpasses the performance of non-equivariant SELD networks of a similar size on the simulated real-world sound scenes and achieves competitive performance on the real-world sound scenes.",
+  "abstractSha256": "4be60e86c90529ad5d8eeb71a9277349db973cc4616dd8795d5dc9d102a42603",
+  "arxivId": "2609.23156",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23156v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Goksenin Yuksel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcel van Gerven"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiki van der Heijden"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对一阶 Ambisonics 在旋转与镜像下方向变化而声源不变的问题，EquiSELD 用不变标量与等变强度向量双流加等变注意力实现严格 O(3) 等变，在 TAU2021 上以 0.40 的综合分超过基线并以约 19 倍更少训练耗时超过已有等变网络，但在 STARSS23 真实场景上优势收窄且仍受类别覆盖与仰角先验限制。",
+  "originalTitle": "EquiSELD: Efficient training of equivariant sound event localization and detection networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23156v1.pdf",
+  "readerTitle": "把旋转和镜像写进网络：EquiSELD 如何用标量加向量做等变声事件定位与检测",
+  "schemaVersion": 1
+}

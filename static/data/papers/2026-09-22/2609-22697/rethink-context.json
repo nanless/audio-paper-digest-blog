@@ -1,0 +1,134 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22697v1",
+  "abstract": "Recently, text-to-speech systems have made significant progress in speech expressiveness and controllability. However, the speaking style of generated speech typically relies on clear user-specified instructions. In natural conversations, speaking style should be naturally inferred from the preceding conversational context. Therefore, we propose COT-TTS, a context-aware, reasoning-based text-to-speech task. Given historical conversation audio, target text, and a reference speech, the system should comprehend the conversational context, infer an explicit intermediate reasoning, and finally synthesize the target speech with the specified timbre. To support this task, we constructed a large-scale bilingual conversational speech dataset comprising 9 million training samples, including a high-quality subset of 1 million samples. We further constructed a source-disjoint benchmark with 800 human-verified samples and established strong task-specific baselines. Additionally, we developed end-to-end autoregressive models with parameter sizes of 0.6B and 1.7B, generating emotion-labeled transcripts, editable speech style inferences, and speech tokens. Experimental results show that the proposed model achieves performance comparable to large-scale baseline systems with significantly fewer parameters. At the same time, the model performs well in terms of duration consistency and emotional consistency, and can generate appropriate emotional, stress, and rhythmic variations based on the conversational context. To facilitate future research, we will publicly release the data construction pipeline, dataset, trained models, and related resources. The demo page and additional resources are available at https://luckybian.github.io/COT-TTS",
+  "abstractSha256": "86c35c76854cb08e0dddc276028058f3555e4e7d124fa0878b7985cf5fd8f93f",
+  "arxivId": "2609.22697",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22697v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Weizhen Bian"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Sitong Cheng"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China",
+        "The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China"
+      ],
+      "name": "Rongxiu Zhong"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Jiahao Pan"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Boyi Kang"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China",
+        "The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China"
+      ],
+      "name": "Shilei Zhang"
+    },
+    {
+      "affiliations": [
+        "China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, China"
+      ],
+      "name": "Jinglei Liu"
+    },
+    {
+      "affiliations": [
+        "China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, China"
+      ],
+      "name": "Yue Wang"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China"
+      ],
+      "name": "Junlan Feng"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Bei Liu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Wei Xue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "COT-TTS 研究给定历史对话音频、固定目标文本和参考音色时如何先显式推理说话方式再合成语音，最强证据是 0.6B/1.7B 端到端模型在时长一致性和人评上接近 34-39B 级联基线，代价是可编辑推理大幅改动时会降低客观音质并引入推理与语音错位风险。",
+  "originalTitle": "COT-TTS: Audio Context-Aware Text-to-Speech with Chain-of-Thought Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22697v1.pdf",
+  "readerTitle": "先想好怎么说，再开口说：COT-TTS 把对话历史变成可检查的说话计划",
+  "schemaVersion": 1
+}

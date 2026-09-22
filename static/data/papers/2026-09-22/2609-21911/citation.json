@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21911",
+  "arxivId": "2609.21911",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "R. Oguz Araz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joan Serrà"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Lizarraga-Seijas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emilio Molina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dmitry Bogdanov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21911",
+  "originalTitle": "Training Music Sample Identification Models on Real Sample Pairs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21911.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

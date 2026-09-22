@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21918",
+  "abstract": "Band-split recurrent neural network (BSRNN) is a popular music source separation model that yields close to state-of-the-art results using reasonable computational resources and public datasets. It is therefore interesting from a reproducible research perspective, but achieving its performance is not straightforward since its full code is not available. In this paper, we conduct a replication of BSRNN via implementing the full pipeline. We extend the original paper&#39;s analysis by experimentally studying various design choices about data preprocessing, the optimization protocol, and architectural parameters. We report and discuss this project&#39;s energy cost, and we underline how its footprint could have been substantial lower upon availability of the full pipeline, which advocates for more reproducible research practices. To comply with this objective, we publicly release our code and pre-trained models.",
+  "abstractSha256": "86896f7b2dab8a1c2ea8fe5582bcf74c41868a0634a57c4d1426bb509d034bd6",
+  "arxivId": "2609.21918",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "RNN",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Romain Serizel"
+    },
+    {
+      "affiliations": [
+        "Centrale Med, Aix Marseille Univ",
+        "CNRS, LIS, Marseille, France"
+      ],
+      "name": "Constance Douwes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文复刻频带切分循环网络用于人声贝斯鼓与其他四轨分离，在公开数据集上补齐预处理与训练细节并对比多种设计，结果显示大模型与替代增强可缩小与原报告的差距，但耐心延长与全项目试错带来数十倍于单次训练的能量开销。",
+  "originalTitle": "Investigating the Performance and Energy Costs of Replicating Band-Split RNN for Music Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21918.pdf",
+  "readerTitle": "复刻缺全流程代码的乐器分离模型：性能差距与能量代价从何而来",
+  "schemaVersion": 1
+}

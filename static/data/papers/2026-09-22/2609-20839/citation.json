@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20839",
+  "arxivId": "2609.20839",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Kit Khinn Teng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haibo Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Takeshi Saitoh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20839",
+  "originalTitle": "Curriculum-Based Noise Adaptation for Phoneme-to-Text Reconstruction in Visual Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20839.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

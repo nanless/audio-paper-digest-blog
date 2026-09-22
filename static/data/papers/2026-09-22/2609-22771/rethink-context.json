@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22771v1",
+  "abstract": "Recent advances in Audio LLMs have achieved human-level speech recognition, yet existing systems struggle to capture paralinguistic aspects such as speaker traits, expressive variations, and environmental acoustic conditions. To address this, we design a framework of 22 paralinguistic characteristics and create a dataset of over 1.2M Audio-QA pairs. We develop ParA-LLM, trained with a two-stage curriculum: first on single-attribute questions to build foundational knowledge, then on multi-attribute questions for joint reasoning over speaker and acoustic characteristics. We also release ParA-Bench, a benchmark of 6,000 multiple-choice questions across speaker-speech, acoustic, and mixed categories, where frontier models like GPT-4o-Audio achieve only 36% accuracy. ParA-LLM surpasses state-of-the-art Audio LLMs like GPT-4o-Audio by 7.5% on ParA-Bench, with additional gains of 1.13% on MMAU-Pro Speech and 7.49% on MMAR Speech.",
+  "abstractSha256": "6a65fc26ee7a3fbe1aac97fdc58da664fd874206ab2d861d36916f4fe1ea4c93",
+  "arxivId": "2609.22771",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22771v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nishit Anand"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaqi Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ke Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunyun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dinesh Manocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ramani Duraiswami"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rithesh Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频大模型能转写却听不懂说话方式与声学环境的问题，论文用 22 维特征定义、120 万音频问答对与先单属性后多属性的两阶段课程训练 ParA-LLM，在 ParA-Bench 总体上报告 43.53% 准确率并在外部语音基准上同步提升，代价是声学单项仍弱于 GPT-4o-Audio 且绝对准确率仍远低于人类。",
+  "originalTitle": "ParA-LLM: A Unified Approach to Paralinguistic and Acoustic Speech Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22771v1.pdf",
+  "readerTitle": "不只听懂说了什么：用 22 个副语言特征和两阶段课程统一说话方式与声学环境理解",
+  "schemaVersion": 1
+}

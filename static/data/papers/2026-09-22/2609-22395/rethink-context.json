@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22395v1",
+  "abstract": "Passive Helmholtz-resonator earplugs aim to attenuate hazardous noise while keeping speech audible; the air volume of an ear-sized shell is finite, and we treat it as the resource a design spends. For a vented bore transparent at zero frequency and loaded by reactive side branches, causality fixes a conserved integral of transmission loss. We derive it in device variables, add viscous and flanking constraints, and allocate the budget by hazard-weighted water-filling with a continuous speech-cost price. The audio-band budget B_ad = (20/ln10) pi^2 V / 2cS is set by the ratio of total cavity volume V to bore area S; occluding plugs are exempt. The f^2 price signal favours frequencies well above the source peak. Replacing strict transparency by a speech-cost price gives an exchange rate of about 1.3 dB of protection per decibel of speech cost under the present model, with the budget setting where it saturates. Across three form factors, low-frequency-selective designs stay near a decibel while hazard-matched mid/high-frequency designs reach twelve. The binding variables are bore area and speech allowance, not resonator count.",
+  "abstractSha256": "217134eda245b69a886e6c675c818ab6981b6d3a6d396ad1b659f04fdbff24ac",
+  "arxivId": "2609.22395",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22395v1",
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.theory",
+          "label": "理论分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geonhwi Hwang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaewoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunjun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonwoo Na"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把带侧支亥姆霍兹腔的通气耳道建模为二端口传输问题，导出音频带预算只由总腔体积与通孔面积之比决定，再用危害加权注水分配证明低频选择在通气类中接近无效而中高频匹配设计可达十二分贝，代价是每 1 分贝言语代价约换 1.3 分贝防护。",
+  "originalTitle": "Causal limits and optimal allocation for passive frequency-selective hearing protection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22395v1.pdf",
+  "readerTitle": "通气耳塞的因果预算：体积除以孔径决定能省下多少分贝",
+  "schemaVersion": 1
+}

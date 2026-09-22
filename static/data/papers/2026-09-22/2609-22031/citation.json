@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22031",
+  "arxivId": "2609.22031",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22031",
+  "originalTitle": "Partial Accent-Control Editing in Frozen Speech Representations for Accent Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22031.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

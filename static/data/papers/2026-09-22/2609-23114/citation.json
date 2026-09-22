@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23114v1",
+  "arxivId": "2609.23114",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23114v1",
+  "authors": [
+    {
+      "affiliations": [
+        "College of Information Science, University of Arizona, Tucson, AZ, USA Language Technologies Institute, Carnegie Mellon University, Pittsburgh, PA, USA"
+      ],
+      "name": "Jialu Li"
+    },
+    {
+      "affiliations": [
+        "College of Information Science, University of Arizona, Tucson, AZ, USA Language Technologies Institute, Carnegie Mellon University, Pittsburgh, PA, USA"
+      ],
+      "name": "Jinchuan Tian"
+    },
+    {
+      "affiliations": [
+        "College of Information Science, University of Arizona, Tucson, AZ, USA Language Technologies Institute, Carnegie Mellon University, Pittsburgh, PA, USA"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23114v1",
+  "originalTitle": "Speech Language Models for Full-Meeting Speaker Diarization: Capabilities and Limitations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23114v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

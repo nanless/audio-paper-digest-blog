@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23152v1",
+  "abstract": "Recently proposed self-supervised audio encoders learn powerful general-purpose representations of sound scenes, yet they are spatially blind. To supply the missing spatial representation of sound scenes, we introduce Bearings. Bearings is a self-supervised framework that learns soundfield embeddings from unlabeled first-order Ambisonics. We pre-train a masked auto-encoder paired with a decoder conditioned on frozen acoustic embeddings from an off-the-shelf single-channel audio encoder. Our results show that the resulting soundfield embeddings form a reusable stream that can be attached to frozen acoustic encoders with a lightweight trainable fusion head. On sound event localization and detection, concatenating our soundfield embeddings with acoustic representations provides the missing spatial information and enables joint detection and localization, raising the location-dependent F-score from below 4 to 50 on TAU-NIGENS 2021 and 39 on STARSS23. To our knowledge, Bearings is the first self-supervised soundfield encoder whose embeddings plug into frozen acoustic encoders without retraining either model.",
+  "abstractSha256": "2dffaceb3d646578c5876a7106369937d89378cdd8718f8710c6a77ede079a96",
+  "arxivId": "2609.23152",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23152v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Goksenin Yuksel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcel van Gerven"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiki van der Heijden"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单通道自监督音频编码器空间盲的问题，Bearings 用掩码重建方向场与双尺度扩散度学习可复用的声场嵌入，冻结拼接后在两个 SELD 数据集上把位置相关 F 值从 4 以下提升到 40 以上，代价是仍需轻量融合头训练且部分指标未超越联合训练模型。",
+  "originalTitle": "Bearings: Self-Supervised Soundfield Embeddings from First-Order Ambisonics",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23152v1.pdf",
+  "readerTitle": "耳朵只认内容、方向另学一路：Bearings 把声场与声学拆开预训练",
+  "schemaVersion": 1
+}

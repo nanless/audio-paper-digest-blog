@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22851v1",
+  "abstract": "Large Audio Language Models (LALMs) utilize either continuous features or discrete tokens, yet the optimal representation paradigm for general audio understanding remains debated. Existing benchmarks often focus on narrow domains or evaluate encoders outside LALM contexts. To address these gaps, we systematically evaluate continuous and discrete representations across speech, sound and music. Utilizing our UniARC framework with dual evaluation strategies across model scales from SmolLM2-135M to Llama-3-8B, we analyze the dynamic relationships of data volume, model capacity, and computational efficiency. Our results reveal the pivotal role of semantic constraints in tokenization for audio understanding and demonstrate that scaling backbones fail to compensate for information loss in audio representation, especially in data-limited tasks. These findings offer practical guidance for balancing semantic density, fidelity, and efficiency in future LALMs.",
+  "abstractSha256": "7232ef4dd6bc6148d52c96b14fe571b20b12377be7d39d62054a2b5cbb75bc3d",
+  "arxivId": "2609.22851",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22851v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.unified-audio",
+          "label": "统一音频模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zichao Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingran Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyong Wu ID"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用统一指令微调框架比较连续特征与离散口令在语音声音音乐理解任务上的表现，显示语义约束与多域预训练决定效果而扩大语言模型不能弥补前端信息损失，代价是连续特征训练更慢而重建型编码保真高但理解弱。",
+  "originalTitle": "Discrete vs. Continuous: A Comprehensive Study of Unified Audio Understanding in LALMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22851v1.pdf",
+  "readerTitle": "离散还是连续：语义约束决定音频理解上限",
+  "schemaVersion": 1
+}

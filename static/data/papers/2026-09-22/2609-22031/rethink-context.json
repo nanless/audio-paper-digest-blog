@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22031",
+  "abstract": "Accent conversion is the task of modifying a speech recording so that it sounds closer to a target accent while preserving linguistic content and other speaker-related characteristics. Most accent conversion systems use trained, generative models. Although they can induce target-accented speech, the strength of accent modification is not controllable at inference time, making it difficult to analyse how the strength of accent conversion affects source preservation. We propose Partial Accent-Control Editing (PACE), an accent conversion framework based upon the editing of frozen WavLM representations without the training of an accent-conditioned generator. A constrained edit is first applied to source WavLM features, which are then fused with target-accent reference features retrieved from non-parallel accent examples. Fusion weights are used to control the trade-off between accent conversion strength and the degradation of other source attributes. Using a suite of five metrics, and with the cost of accent-entangled speaker similarity, we show that PACE is substantially superior to a pair of competitive baselines in terms of both accent conversion and source preservation.",
+  "abstractSha256": "1da65eb14ca617413f7f0b135157c61c196e5364ab10ad37688d987a52ee9abf",
+  "arxivId": "2609.22031",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "EURECOM Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "PACE 针对非平行口音转换，用冻结 WavLM 上的口音预测子空间更新加检索融合实现推理时可调的转换强度，默认点以 16.0% 词错误率和 39.0% 分类器准确率优于复现基线，代价是说话人相似度降到 0.583。",
+  "originalTitle": "Partial Accent-Control Editing in Frozen Speech Representations for Accent Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22031.pdf",
+  "readerTitle": "不训练生成器，只做部分编辑：PACE 在冻结表征里权衡口音与保留",
+  "schemaVersion": 1
+}

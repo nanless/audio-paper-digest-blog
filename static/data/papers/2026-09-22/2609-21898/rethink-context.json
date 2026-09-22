@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21898",
+  "abstract": "Speech enhancement (SE) models degrade under domain shifts and have to adapt to unseen target domains during deployment. Most existing test-time adaptation (TTA) methods for SE do so by adapting a subset of the model weights using a self-supervised loss, which requires backpropagation at test-time and permanently alters the model. We instead recalibrate the prediction itself and propose BLINC, a training-free TTA method that remaps the predicted time-frequency mask onto a bimodal target distribution by histogram matching. At test-time, the target distribution is parameterized from blind features of the noisy recording, so neither a reference distribution from a classical algorithm nor online metric optimization is involved. BLINC improves the overall quality of both evaluated SE models on almost every target condition and matches or exceeds the loss-based TTA baselines at minimal overhead.",
+  "abstractSha256": "f2345616aa239c8d9c770a9c14bdc2d1d1da4b0dcbb8fa6b3c0c05520160f88c",
+  "arxivId": "2609.21898",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Raichle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ekaterina Gavrilko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对掩码型语音增强在域偏移下掩码双峰性退化的问题，BLINC 冻结模型并用直方图匹配把预测掩码重映射到由含噪信号盲特征决定的双峰目标分布，在几乎不增加耗时的条件下提升了感知质量，但以信号级指标下降和无法修复排序错误为代价。",
+  "originalTitle": "BLINC: Blind Calibration For Training-Free Speech Enhancement Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21898.pdf",
+  "readerTitle": "不碰权重只改掩码：BLINC 用盲估计双峰分布做免训练校准",
+  "schemaVersion": 1
+}

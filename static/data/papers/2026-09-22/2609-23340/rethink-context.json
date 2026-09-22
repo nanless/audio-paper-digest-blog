@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23340v1",
+  "abstract": "Pitch estimation on an edge device is constrained in three ways at once. The model must be small, it must stay accurate when the input is noisy, and one frame must be produced inside the frame period. In this report the Frequency Convolution Network (FrCN) of our earlier work is factored into a low-rank form. The number of parameters is reduced by 35.9%, from 17,787 to 11,397, and accuracy is not reduced, either in domain or on two corpora the model was never trained on. The range of the noise used during training is also shown to dominate the architecture in setting how the model behaves when the interference is severe. When the training noise floor is lowered from +6.02 dB to -20 dB, 0.35 points of clean RPA50 are lost and RPA50 at -20 dB is raised from 2.44 to 22.41. This effect is about two orders of magnitude larger than any architectural effect that was measured. The semi-orthogonal constraint used in TDNN-F is found to be redundant with the normalization inside the bottleneck, and accuracy is reduced when both are applied. Whether the factorization saves time depends on the runtime: in eager PyTorch the factored model is 45% slower, while in a compiled kernel it is 15% faster. For deployment, a small C kernel was written. It needs 83 kB on disk and no runtime library beyond libc and libm. It is faster than OpenBLAS on all four CPUs that were tested, faster than ONNX Runtime by 3.8 times, and faster than PyTorch by 13 times. Its output was checked against PyTorch on 271,893 held-out frames per model, and the same pitch bin was selected on every one of them.",
+  "abstractSha256": "163b7331513405ea8bb59aa72e1ac904c46c9819f75554be331cdb29e12a9127",
+  "arxivId": "2609.23340",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23340v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型压缩",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.compression",
+          "label": "模型压缩"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型压缩",
+      "primaryMethodId": "method.compression",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Venkat Suprabath Bitra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单帧变 Q 输入的单音高估计，论文把频率轴空洞卷积拆成秩 9 瓶颈使参数从 17787 降到 11397 且三库精度持平，并证明训练噪声下限从 +6.02 dB 压到 -20 dB 能把 -20 dB 处 RPA50 从 2.44 提到 22.41，代价是干净集掉 0.35 点，自研 C 内核以 83 kB 在四款 CPU 上快于 OpenBLAS、ONNX Runtime 与 PyTorch。",
+  "originalTitle": "Low-Rank Frequency Convolution and Noise-Range Augmentation for Real-Time Pitch Estimation on Edge Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23340v1.pdf",
+  "readerTitle": "参数减三成而精度不掉：低秩频率卷积把噪声范围调对再谈边缘实时",
+  "schemaVersion": 1
+}

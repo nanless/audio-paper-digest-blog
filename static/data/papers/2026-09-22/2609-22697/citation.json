@@ -1,0 +1,88 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22697v1",
+  "arxivId": "2609.22697",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22697v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Weizhen Bian"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Sitong Cheng"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China",
+        "The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China"
+      ],
+      "name": "Rongxiu Zhong"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Jiahao Pan"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Boyi Kang"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China",
+        "The State Key Laboratory of Multimedia Information Processing, Peking University, Beijing, China"
+      ],
+      "name": "Shilei Zhang"
+    },
+    {
+      "affiliations": [
+        "China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, China"
+      ],
+      "name": "Jinglei Liu"
+    },
+    {
+      "affiliations": [
+        "China Mobile (Hong Kong) Innovation Research Institute, Hong Kong SAR, China"
+      ],
+      "name": "Yue Wang"
+    },
+    {
+      "affiliations": [
+        "JIUTIAN Research, China Mobile, Beijing, China"
+      ],
+      "name": "Junlan Feng"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Bei Liu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology, Hong Kong SAR, China"
+      ],
+      "name": "Wei Xue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22697v1",
+  "originalTitle": "COT-TTS: Audio Context-Aware Text-to-Speech with Chain-of-Thought Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22697v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

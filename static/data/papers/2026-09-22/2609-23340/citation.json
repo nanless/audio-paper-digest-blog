@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23340v1",
+  "arxivId": "2609.23340",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23340v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Venkat Suprabath Bitra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23340v1",
+  "originalTitle": "Low-Rank Frequency Convolution and Noise-Range Augmentation for Real-Time Pitch Estimation on Edge Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23340v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22260v1",
+  "arxivId": "2609.22260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22260v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leonardo Haw-Yang Foo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22260v1",
+  "originalTitle": "Causal Localization of the Refusal Direction in Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22260v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21898",
+  "arxivId": "2609.21898",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tobias Raichle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ekaterina Gavrilko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bin Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21898",
+  "originalTitle": "BLINC: Blind Calibration For Training-Free Speech Enhancement Adaptation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21898.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

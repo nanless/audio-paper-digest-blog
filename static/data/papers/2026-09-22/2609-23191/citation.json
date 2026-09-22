@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23191v1",
+  "arxivId": "2609.23191",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23191v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of computer sciences, University of Yaounde I, Street, Yaounde, 812, Cameroon"
+      ],
+      "name": "Yannick Yomie Nzeuhang"
+    },
+    {
+      "affiliations": [
+        "IRD, UMMISCO, Street, Bondy, F-93143, France"
+      ],
+      "name": "Marie Tahon"
+    },
+    {
+      "affiliations": [
+        "Department of computer sciences, University of Yaounde I, Street, Yaounde, 812, Cameroon",
+        "LIUM, Le Mans Université, Avenue Olivier Messiaen, Le Mans, 72085, France"
+      ],
+      "name": "Paulin Melatagia Yonta"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23191v1",
+  "originalTitle": "Low resource cross-modal alignment using HGNN to enhance speech representation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23191v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

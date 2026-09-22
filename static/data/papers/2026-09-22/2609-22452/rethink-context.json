@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22452v1",
+  "abstract": "Long-context understanding remains a fundamental challenge for large language models, as excessively long inputs often lead models to forget salient information. This issue is even more pronounced in the speech domain, where audio, as a low-compression modality, requires substantially more embeddings than text to preserve both semantic content and acoustic cues. To address this challenge, we introduce \\textbf{Vox-Infinity}, the first benchmark specifically designed to evaluate long-context understanding in spoken language models. Vox-Infinity systematically extends audio history along two dimensions: turn count and turn duration. It covers a diverse range of representative scenarios with varying interaction structures and semantic complexity. Crucially, Vox-Infinity provides explicit answer-provenance annotations and organizes samples according to the amount of historical context required to resolve each query, enabling precise and length-aware evaluation. Extensive evaluations of seven representative spoken language models reveal a clear overall recency effect: models generally achieve higher accuracy when answer-supporting evidence is closer to the query, but struggle to retrieve and use evidence located farther back in the dialogue history. Cases and datasets are available at https://vox-infinity.github.io.",
+  "abstractSha256": "ae006376f5ad8bcdae7eb00e30e480ec4b86cf8f9f07f89c14151221bb375d62",
+  "arxivId": "2609.22452",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22452v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenxu Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenyuhao Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongjie Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zehan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Vox-Infinity 沿轮数与每轮时长拉长语音历史并以最早证据到提问的跨度分组，在七个语音语言模型上报告随证据变远准确率下降的近因效应，以及文本历史保语义而音频历史保韵律的互补代价。",
+  "originalTitle": "Vox-Infinity: Benchmarking the Limits of Long-Context Spoken Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22452v1.pdf",
+  "readerTitle": "证据越远越难用：Vox-Infinity 按所需历史时长检验语音长上下文",
+  "schemaVersion": 1
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22264v1",
+  "abstract": "State-of-the-art models for audio-driven digital human generation have achieved photo-realistic results in talking-head synthesis. However, extending these models to singing-head synthesis remains challenging due to a significant Domain Gap: singing requires more exaggerated expressions, vivid jaw openings, and precise rhythmic synchronization. Current models, primarily trained on speech datasets, often struggle with \"rhythmic drift\" and constrained dynamics. To address this, we introduce Hi-Singers, the first large-scale, high-quality, in-the-wild video dataset specifically tailored for singing head synthesis. Hi-Singers undergoes a rigorous automated and manual filtering pipeline, ensuring strict thematic adherence, high-resolution rendering, and stable motion, resulting in 29,608 video segments totaling approximately 170 hours. We further establish a dedicated evaluation benchmark balanced across linguistic and musical styles. Extensive experiments across diverse architectures, including 3D-coefficient and diffusion-based models, demonstrate that Hi-Singers consistently and significantly improves performance across all dimensions. Specifically, it enables models to achieve superior visual realism, enhanced lip-sync consistency, and more precise rhythmic dynamics, effectively bridging the domain gap and setting a new performance standard for the singing synthesis task. The dataset is available at https://huggingface.co/datasets/CharlesZhang-USTC/Hi-Singers",
+  "abstractSha256": "9810f09e22cef1bb4ebbe37f707b2c3e17bba37316c28047e40374ed058a256a",
+  "arxivId": "2609.22264",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22264v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yichi Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Hui Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Guanjun Liu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yuefeng Zou"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Fengzhao Sun"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Jun Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对说话数据训练的模型在唱歌时出现节奏漂移和表情受限的问题，论文用三阶段过滤构建 29500 余段野外唱歌头数据，并在 Hallo 等架构上验证了唇同步与节奏对齐的提升，但高强度筛选只保留约 6.9% 原料且依赖人工打分融合。",
+  "originalTitle": "Hi-Singers: A Comprehensive High-Quality Dataset for Expressive Audio-Driven Singing Head Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22264v1.pdf",
+  "readerTitle": "唱歌头比说话头难在哪：Hi-Singers 用 170 小时野外数据补节奏与表情缺口",
+  "schemaVersion": 1
+}

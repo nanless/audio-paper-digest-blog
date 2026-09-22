@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23164v1",
+  "abstract": "Vinyl restoration systems must distinguish isolated clicks, short bursts, dense crackle, and overlapping damage before selecting a repair operation. We present a lightweight two-stage detector in which signal-informed sparse, burst, and dense experts produce complementary defect evidence, and a temporal backend converts that evidence into stable repair regimes. The backend factors the five-way decision hierarchically, applies a validation-only mixed regime gate, and decodes with validation-selected transition penalties that outperform a maximum-likelihood transition matrix on the same emissions. On a source-separated synthetic benchmark of 597 non-overlapping 15 s excerpts drawn from 21 recordings, the held-out system reaches 0.730 pooled five-class macro F1 (95% CI 0.694-0.761), an improvement of 0.043 over a flat frame-level router (paired bootstrap p=0.001). Clean and dense frames are highly reliable, while sparse, burst, and mixed frames remain far more ambiguous.",
+  "abstractSha256": "f1cb6ffd1159c2afea828dbf3ababf1f22d92d58ce7a604f67f12def129ebe3c",
+  "arxivId": "2609.23164",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23164v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Hung Kan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Homayoon Beigi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把黑胶损伤检测做成修复导向的 5 类时序路由，用稀疏、突发、密集 3 路专家证据加分层路由器与验证集选定的维特比转移惩罚，在 597 段合成基准上达到 0.730 的 5 类宏 F1，主要增益来自时序解码而非分层本身，且混合类仍最难。",
+  "originalTitle": "Signal-Informed Temporal Routing for Vinyl Defect Regime Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23164v1.pdf",
+  "readerTitle": "先分证据再定修复模式：稀疏、突发与密集专家的时序路由",
+  "schemaVersion": 1
+}

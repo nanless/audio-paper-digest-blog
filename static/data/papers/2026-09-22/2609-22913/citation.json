@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22913v1",
+  "arxivId": "2609.22913",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22913v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artem Kravtsov"
+    },
+    {
+      "affiliations": [
+        "Avaturn Live"
+      ],
+      "name": "Dmitrii Ziganshin"
+    },
+    {
+      "affiliations": [
+        "Core contributors: co-wrote the paper"
+      ],
+      "name": "Vsevolod Poletaev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gleb Balitskiy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anastasia Tikhonova"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Egor Burkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vadim Lebedev"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22913v1",
+  "originalTitle": "AVTR-1: Open Stack for Real-Time Interactive Avatars",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22913v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

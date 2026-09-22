@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22452v1",
+  "arxivId": "2609.22452",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22452v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenxu Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenyuhao Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongjie Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zehan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22452v1",
+  "originalTitle": "Vox-Infinity: Benchmarking the Limits of Long-Context Spoken Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22452v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

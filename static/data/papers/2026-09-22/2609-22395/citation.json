@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22395v1",
+  "arxivId": "2609.22395",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22395v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geonhwi Hwang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaewoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunjun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonwoo Na"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22395v1",
+  "originalTitle": "Causal limits and optimal allocation for passive frequency-selective hearing protection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22395v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22264v1",
+  "arxivId": "2609.22264",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22264v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yichi Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Hui Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Guanjun Liu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yuefeng Zou"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Fengzhao Sun"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Jun Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22264v1",
+  "originalTitle": "Hi-Singers: A Comprehensive High-Quality Dataset for Expressive Audio-Driven Singing Head Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22264v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

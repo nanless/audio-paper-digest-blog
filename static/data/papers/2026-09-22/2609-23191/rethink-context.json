@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23191v1",
+  "abstract": "Speech-text space alignment is a multimodal representation learning method consisting to map different speech and text into a shared representation space, leading to enrichment of the representation of each modality. Proposed architectures, such as SAMU-XLSR, typically follow a student/teacher framework, with the goal of fine-tuning an audio encoder to produce representations that closely match those of the text. In this way a speech representation is semantically enriched. However, such systems generally require large amounts of training data and considerable computational resource, making them difficult to apply to low resources languages under frugal constraints. The present work proposes a data-efficient space alignment method based on Heterogeneous Graph Neural Networks and link prediction. The core idea is to leverage message passing to explicitly transfer information from the text modality to the speech modality, thereby reducing the need for large training datasets and intrinsically enriching the acoustic representations, all in a more interpretable manner. Although thoroughly explored for high-resource languages, word-level tasks in speech remain relevant for certain low-resource languages. Therefore, we conducted experiments on speech-text alignment at the word level using the TIMIT (English) dataset and Yemba (a Cameroonian language). Our approach yields results comparable to those of SAMU-XLSR, a state-of-the-art method, and even surpasses it for the Yemba language in the task of word retrieval, while using far fewer resources, demonstrating its power, frugality, and efficiency.",
+  "abstractSha256": "a28d71173786c4a325677aaa107be5d1816997f2a9566c9fe91a2a31da332c12",
+  "arxivId": "2609.23191",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23191v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of computer sciences, University of Yaounde I, Street, Yaounde, 812, Cameroon"
+      ],
+      "name": "Yannick Yomie Nzeuhang"
+    },
+    {
+      "affiliations": [
+        "IRD, UMMISCO, Street, Bondy, F-93143, France"
+      ],
+      "name": "Marie Tahon"
+    },
+    {
+      "affiliations": [
+        "Department of computer sciences, University of Yaounde I, Street, Yaounde, 812, Cameroon",
+        "LIUM, Le Mans Université, Avenue Olivier Messiaen, Le Mans, 72085, France"
+      ],
+      "name": "Paulin Melatagia Yonta"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对低资源下语音文本对齐需要大编码器和大量平行数据的问题，该文把词级对齐建模为异构图上的链路预测，用 GraphSAGE 消息传递把固定文本表示传给语音节点，在 TIMIT 和 Yemba 上以轻量图训练达到可比 SAMU-XLSR 的富集与检索效果，代价是跨模态检索仍受初始声学质量制约且句子级与下游任务未验证。",
+  "originalTitle": "Low resource cross-modal alignment using HGNN to enhance speech representation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23191v1.pdf",
+  "readerTitle": "把对齐做成链路预测：异构图如何把文本知识搬进语音词表示",
+  "schemaVersion": 1
+}

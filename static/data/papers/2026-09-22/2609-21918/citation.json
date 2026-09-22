@@ -1,0 +1,34 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21918",
+  "arxivId": "2609.21918",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Romain Serizel"
+    },
+    {
+      "affiliations": [
+        "Centrale Med, Aix Marseille Univ",
+        "CNRS, LIS, Marseille, France"
+      ],
+      "name": "Constance Douwes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.21918",
+  "originalTitle": "Investigating the Performance and Energy Costs of Replicating Band-Split RNN for Music Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21918.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

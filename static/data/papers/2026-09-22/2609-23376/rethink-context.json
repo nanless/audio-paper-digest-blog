@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23376v1",
+  "abstract": "Open-vocabulary audio-visual event localization (OV-AVEL) grounds a text-queried event in time from video, audio, and language. The supervision sources available to this task can differ in temporal-boundary reliability: on OV-AVEBench, our configured visual teacher gives more reliable boundary cues than the configured audio teacher, although the latter is a strong pretrained audio model and remains semantically informative. This is a setting-specific diagnostic rather than a universal ranking of vision and audio. We formulate the resulting challenge as supervision placement: which teacher signals may shape the localization decision, and which should remain auxiliary. Based on this view, we propose OV-OrthKD, a reliability-aware asymmetric distillation framework. Visual feature transfer shapes a decision-aligned representation, audio feature transfer enriches a complementary auxiliary subspace, a text prototype anchors seen/unseen category semantics, and an orthogonality loss limits directional overlap between the two teacher-specific projections. The student continues to use both modalities through query-aware fusion at inference, while the default training recipe keeps audio-teacher supervision off the segment-logit path. On OV-AVEBench, OV-OrthKD achieves 0.816 segment AP and improves F1@0.5 over the official fine-tuning baseline by 2.7 points overall and 3.4 points on unseen categories. Path-assignment, role-swap, corruption, and transfer analyses consistently support supervision placement as a task-specific design axis for OV-AVEL.",
+  "abstractSha256": "7b207e55e6af89ad0ef3e2b79d236d4c877894a4f5d9b3c0602906aa56ababf0",
+  "arxivId": "2609.23376",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23376v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Yi Xu"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Cheng Chen"
+    },
+    {
+      "affiliations": [
+        "Tongji University, Shanghai, China"
+      ],
+      "name": "Wenzhuo Lei"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对文本查询的音视事件时间定位，论文提出按边界可靠性分配教师监督位置的 OV-OrthKD，在 OV-AVEBench 上达到 0.816 片段 AP 且未见类 F1@0.5 提升 3.4 个百分点，代价是角色固定且仅做局部权重验证。",
+  "originalTitle": "If You Hear It, Help Find It: Orthogonal Knowledge Distillation for Open-Vocabulary Audio-Visual Event Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23376v1.pdf",
+  "readerTitle": "听到不等于能定位：把不可靠的音频监督放在辅助通道的开放词汇音视定位",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22851v1",
+  "arxivId": "2609.22851",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22851v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zichao Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingran Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiyong Wu ID"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22851v1",
+  "originalTitle": "Discrete vs. Continuous: A Comprehensive Study of Unified Audio Understanding in LALMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22851v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

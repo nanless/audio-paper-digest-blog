@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22824v1",
+  "abstract": "Most neural speech enhancement systems use a fixed processing depth for all inputs, which can introduce unnecessary computation when fewer refinement steps are sufficient. We propose Adaptive Depth and Expert Refinement (ADER), a parameter-shared progressive enhancement framework with input-dependent computation. ADER combines an Adaptive Depth Controller (ADC) for hard early termination with a Conditional Expert Router (CER) that selects one lightweight residual adapter at each executed refinement iteration. We further introduce Exit-aware Intermediate Supervision (EIS) to directly optimize candidate intermediate outputs for early exit. On VCTK-DEMAND, ADER reduces the parameter count and average computation of MP-SENet by 70.4% and 51.3%, respectively, while achieving a WB-PESQ of 3.37. Overall, ADER enables input-dependent refinement and reduces redundant computation during inference.",
+  "abstractSha256": "54478f6e6f3fb93e165774cb804528de81fcafba78fa1906270257cd249c780d",
+  "arxivId": "2609.22824",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22824v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xikun Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujian Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunda Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xianquan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinqiu Sang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对固定深度对所有语音做同样多次精修的浪费，ADER 用共享 TS-Transformer 块循环精修并以深度控制器硬早停加每步单专家残差适配，在 VCTK-DEMAND 上以平均 2.15 次迭代达到 WB-PESQ 3.37，代价是相对固定 3 步共享块仍有约 2.6% 的感知质量下降。",
+  "originalTitle": "Adaptive Depth and Expert Refinement for Efficient Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22824v1.pdf",
+  "readerTitle": "共享一块做精修：ADER 用早停深度与单专家适配省掉冗余迭代",
+  "schemaVersion": 1
+}

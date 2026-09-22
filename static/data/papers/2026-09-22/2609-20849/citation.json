@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20849",
+  "arxivId": "2609.20849",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Bonzi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cem Subakan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20849",
+  "originalTitle": "Enhancing Audio Reasoning via Semantic Summary Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20849.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

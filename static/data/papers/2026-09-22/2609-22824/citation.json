@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22824v1",
+  "arxivId": "2609.22824",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22824v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xikun Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujian Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunda Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xianquan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinqiu Sang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22824v1",
+  "originalTitle": "Adaptive Depth and Expert Refinement for Efficient Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22824v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

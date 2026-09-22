@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22913v1",
+  "abstract": "Talking-head and dyadic models now achieve real-time inference, yet fast motion generation alone does not produce an interactive conversation. A live system must synchronize the model's output with speech from an external voice agent, schedule video frames for playback, and handle interruptions. We introduce AVTR-1, an open stack for real-time interactive avatar conversations, built around a compact 153M-parameter autoregressive flow-matching motion generator conditioned on both participants' audio. We adapt its audio encoder for streaming through self-distillation. The stack turns the model's chunk-based generation into a continuous, synchronized audio-video stream driven by an external voice agent, and we analytically derive its contribution to the user-facing latencies and validate the resulting bounds with two commercial voice agents. Further experiments demonstrate that AVTR-1 leads the compared dyadic systems on all reported visual-quality metrics and most conventional listening-motion metrics while remaining competitive in lip synchronization. Its inference runtime operates in real time on data-center and consumer GPUs. However, conventional listening metrics do not establish whether the paired speaker's speech contributes to generated motion. We therefore introduce the Reference-Based Directed Granger Gain (R-DGG), which measures the additional predictive information carried by speaker speech after accounting for listener history and speaker motion. R-DGG finds statistically supported predictive dependence for recorded listeners and all evaluated dyadic systems, but not for talking-head generators without paired audio or mismatched speaker-listener pairs. We release the model weights, renderer, and serving backend under component-specific licenses.",
+  "abstractSha256": "9a0ffb08a4334af3276c8c9576391cc1a61be59701fb3764fc2d7b6546bb365a",
+  "arxivId": "2609.22913",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22913v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artem Kravtsov"
+    },
+    {
+      "affiliations": [
+        "Avaturn Live"
+      ],
+      "name": "Dmitrii Ziganshin"
+    },
+    {
+      "affiliations": [
+        "Core contributors: co-wrote the paper"
+      ],
+      "name": "Vsevolod Poletaev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gleb Balitskiy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anastasia Tikhonova"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Egor Burkov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vadim Lebedev"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "AVTR-1 用 153M 参数的双音频条件流匹配模型生成头部与表情动作，再用常开的渲染与调度循环把外部语音智能体的可变语音片段变成同步音视频，并用延迟分解与 R-DGG 验证了可交互性与说话人依赖，代价是仍依赖外部语音智能体与固定的窗口节拍。",
+  "originalTitle": "AVTR-1: Open Stack for Real-Time Interactive Avatars",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22913v1.pdf",
+  "readerTitle": "快推理不等于能对话：AVTR-1 把双人音频、连续渲染与延迟调度做进同一系统",
+  "schemaVersion": 1
+}

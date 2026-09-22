@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22586v1",
+  "abstract": "Modern audio-language models are no longer judged only on what words they can transcribe, but on whether they can reason over what they hear: recovering meaning that lives in tone and prosody, telling dialects and regional languages apart, and resolving ambiguity that the written form leaves open. This capability is now measured by a growing family of audio-reasoning benchmarks, but almost entirely in English and on general-domain audio. Southeast Asia (SEA) is served instead by benchmarks that inherit an English task taxonomy of recognition, translation, and paralinguistic classification, and therefore test whether a model hears SEA speech rather than whether it can reason from it. We introduce SEABED, an audio-first question answering dataset designed to benchmark language and audio reasoning models on SEA speech. SEABED comprises a suite of six audio-reasoning tasks built entirely from real, openly available SEA speech corpora, yielding 5,404 question-answer pairs. We evaluate six frontier and region-specific audio LLMs: even the state-of-the-art model Gemini 3.5 Flash achieves only 50.3% weighted average accuracy. SEABED evaluates not only answer accuracy, but also whether models' stated reasoning is grounded in the audio evidence. A sample of the benchmark data is available here: https://huggingface.co/datasets/CentificAIResearch/SEABED.",
+  "abstractSha256": "5ba58bc5c65e7c70c92e93780600ff005f691ee069f4c036a63baf28f1ce1e31",
+  "arxivId": "2609.22586",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.22586v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Harshit Rajgarhia"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Asif Shaik"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Rachuri Lokesh"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Sushanta Kumar Pani"
+    },
+    {
+      "affiliations": [
+        "Centific AI Research"
+      ],
+      "name": "Abhishek Mukherji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "SEABED 针对印尼语、泰语和马来语真实语音构造必须听音频才能推理的问答，用准确率加推理接地审计测六个音频大模型，最好的 Gemini 3.5 Flash 也只答对约一半，且区域模型的正确回答中多达四分之一缺少音频依据。",
+  "originalTitle": "SEABED: SouthEast Asian Benchmark for Evaluating Audio Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22586v1.pdf",
+  "readerTitle": "听懂东南亚语音：SEABED 用六类可听推理把答对和讲对分开查",
+  "schemaVersion": 1
+}

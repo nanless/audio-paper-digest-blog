@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.20828",
+  "arxivId": "2609.20828",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fiza Husain"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ankit Pandey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yash Singh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.20828",
+  "originalTitle": "Beyond WER: Entity and Disfluency Recall in Accented Conversational ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.20828.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

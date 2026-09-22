@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.21911",
+  "abstract": "Sample identification (SI) is the task of matching pairs of tracks, where one track is created by musically transforming an element of the other. In the absence of sample annotations at scale, the dominant training paradigm has depended on artificially creating sample pairs. Although a recently released dataset provides annotations of real sample pairs at scale, an effective training recipe is missing. In this work, we present SI Embeddings (SIE), an SI model that achieves state-of-the-art results on three benchmarks, including a large-scale test set. We show that the previous state of the art trained on artificial pairs generalizes only partially to real pairs, and that its training data limits its performance. We also show that real pairs do not fully account for SIE&#39;s performance: its architecture and training recipe contribute substantially. We provide the first fully supervised training recipe for real-world SI, establishing a strong foundation for future research in the field.",
+  "abstractSha256": "0a2b698e9ec6e77dd31a2be5777a599994ff8eca9795dc764b8e511b860aa711",
+  "arxivId": "2609.21911",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音乐检索",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "R. Oguz Araz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joan Serrà"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Lizarraga-Seijas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emilio Molina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dmitry Bogdanov"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文针对采样识别中人工合成对难以模仿真实制作变换的问题，提出在真实采样对上全监督训练的 SIE 模型与训练配方，并在三个基准上报告优于前最优的结果，同时用对照实验说明数据替换与架构配方各自的贡献与代价。",
+  "originalTitle": "Training Music Sample Identification Models on Real Sample Pairs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.21911.pdf",
+  "readerTitle": "真采样对为何还不够：用真实标注训练采样识别并拆分数据与配方的贡献",
+  "schemaVersion": 1
+}

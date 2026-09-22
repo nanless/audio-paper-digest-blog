@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23156v1",
+  "arxivId": "2609.23156",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.23156v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Goksenin Yuksel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marcel van Gerven"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kiki van der Heijden"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23156v1",
+  "originalTitle": "EquiSELD: Efficient training of equivariant sound event localization and detection networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23156v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
