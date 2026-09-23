@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24391",
+  "abstract": "Voice-controlled interaction in industrial settings is hampered by acoustic noise, which severely degrades audio-only speech recognition. Audio-visual speech recognition (AVSR) addresses this by fusing lip-motion cues with the audio stream, but state-of-the-art pipelines rely on three-dimensional convolutions, recurrent units, and attention modules that exceed the budget of typical edge devices. We present NAVIR, an end-to-end AVSR system targeting the BrainChip Akida neuromorphic processor, which natively supports only sequential two-dimensional convolutional inference. The pipeline factorises spatial and temporal encoding into separate AkidaNet-based modules: a per-frame visual encoder, a temporal video encoder, and a spectrogram audio encoder, fused by a lightweight predictor head and decoded by constrained beam search. Models are trained with connectionist temporal classification on noise-augmented audio and then fine-tuned with quantization-aware training. On the GRID benchmark, the quantized audio-visual model reaches 14.0% word error rate (WER) under noise on the unseen-speaker split and 3.3% WER on the overlapped-speaker split, against 22.5% and 11.8% for audio-only baselines, and it attains 98.6% command accuracy at 1.5% WER on a task-specific industrial-command corpus. Operation-count analysis indicates a 13-fold energy advantage of the spiking formulation over its artificial neural network counterpart at 27.6% mean firing rate. On-board measurements show roughly 5-fold lower energy per inference than a Raspberry Pi central processing unit on the lip-reading model, and over 100-fold lower than a laptop graphics processing unit, while sustaining 14.5 inferences per second. To the best of our knowledge, this is the first complete multimodal AVSR pipeline running on neuromorphic hardware of this class.",
+  "abstractSha256": "7e89e1e8d005512ae80b41c5ffb6946361d67198cbdd48b8ec3e056f9031aeda",
+  "arxivId": "2609.24391",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-asr",
+          "label": "音视频语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音视频语音识别",
+      "primaryTaskId": "task.av-asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leonidas Delimpasis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Panagiota Moraiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonis Porichis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Panos Chatzakos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michail Karamousadakis"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对工业噪声下纯音频识别崩溃的问题，NAVIR 用逐帧空间编码加时序卷积的分解结构适配 BrainChip AKD1000，在 GRID 噪声测试下量化融合模型取得未见说话人 14.0% 与重叠说话人 3.3% 词错率，代价是未见说话人纯唇读仍高达 35.3% 且音视模型在片上吞吐下降。",
+  "originalTitle": "NAVIR: Neuromorphic Audio-Visual Speech Recognition for Robust Human-Robot Interaction on Edge Hardware",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24391.pdf",
+  "readerTitle": "在只允许二维卷积的神经形态芯片上做音视融合：NAVIR 的分解与受限解码",
+  "schemaVersion": 1
+}

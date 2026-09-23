@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23665",
+  "arxivId": "2609.23665",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China",
+        "Shenzhen Future Network of Intelligence Institute (FNii-Shenzhen)"
+      ],
+      "name": "Haoyue Liu"
+    },
+    {
+      "affiliations": [
+        "XJTU-POLIMI Joint School, Xi’an Jiaotong University, Xi’an 710049, China"
+      ],
+      "name": "Ye Chen"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Zhichao Wang"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Xiaoyu Ma"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Haoran Shou"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China",
+        "Shenzhen Future Network of Intelligence Institute (FNii-Shenzhen)"
+      ],
+      "name": "Xiaoying Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23665",
+  "originalTitle": "Which Constraints Are Missing? Ask the Verifier: Graded Rewards for Constraint-Following Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23665.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

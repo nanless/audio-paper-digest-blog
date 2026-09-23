@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23665",
+  "abstract": "Constraint-following music generation asks a score to satisfy several user-specified properties at once, each checkable programmatically (key, meter, length, range, final note, rhythm, motion and form), yet no existing benchmark isolates this capability. We construct MusicConstraintBench, 2,180 items over eight constraint families, on which current models fail once a few constraints are combined. The natural remedy is reinforcement learning with these verifiers as reward, yet we observe that a reward paid only when every property holds leaves most training groups without a learning signal: over the first 50 updates, 0.550 of rollout groups score identically and receive no gradient, even though a failing score typically misses only one requested property. Under the joint criterion, rollouts for a prompt tend to fail together, so a binary reward cannot separate a nearly correct score from a malformed one. We therefore introduce MusicRLVR, which pays graded per-property credit behind a hard validation gate that rejects malformed outputs, plus a joint-satisfaction bonus, requiring no human annotation, learned reward model, or music-domain fine-tuning. On MusicConstraintBench, MusicRLVR lifts Qwen3-4B-Instruct from 0.160 to 0.807 on mixed constraints and leads every zero-shot baseline including Llama-3.1-70B at 0.380. It also generalises to property combinations unseen in training and to out-of-range parameter values, showing that verifiable rewards need not presuppose a target output.",
+  "abstractSha256": "9f65405f9014abe07cdd22804d1f40f4f2b91b0a2ddd31867c68cc03c9c8977d",
+  "arxivId": "2609.23665",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China",
+        "Shenzhen Future Network of Intelligence Institute (FNii-Shenzhen)"
+      ],
+      "name": "Haoyue Liu"
+    },
+    {
+      "affiliations": [
+        "XJTU-POLIMI Joint School, Xi’an Jiaotong University, Xi’an 710049, China"
+      ],
+      "name": "Ye Chen"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Zhichao Wang"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Xiaoyu Ma"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China"
+      ],
+      "name": "Haoran Shou"
+    },
+    {
+      "affiliations": [
+        "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen 518172, China",
+        "Shenzhen Future Network of Intelligence Institute (FNii-Shenzhen)"
+      ],
+      "name": "Xiaoying Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多约束联合满足急剧下降的问题，论文用八族程序化验证器构造基准并以硬门加分级奖励做 GRPO，把 Qwen3-4B 在 Mixed 上的全满足率从 0.160 提升到 0.807，代价是奖励与评测共用同一套验证器且只度量合规不度量听感。",
+  "originalTitle": "Which Constraints Are Missing? Ask the Verifier: Graded Rewards for Constraint-Following Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23665.pdf",
+  "readerTitle": "缺哪条补哪条：用验证器把乐谱约束变成可分级的训练信号",
+  "schemaVersion": 1
+}

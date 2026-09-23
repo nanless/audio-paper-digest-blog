@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22361",
+  "arxivId": "2609.22361",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "RIKEN iTHEMS",
+        "RIKEN AIP"
+      ],
+      "name": "Jian Xu"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Delu Zeng"
+    },
+    {
+      "affiliations": [
+        "Columbia University"
+      ],
+      "name": "John Paisley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qibin Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.22361",
+  "originalTitle": "Common Cause, Not Cross-Attention: Blocking Visual Shortcuts in Audio-Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22361.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

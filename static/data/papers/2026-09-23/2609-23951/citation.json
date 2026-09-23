@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23951",
+  "arxivId": "2609.23951",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Devangi Sharma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sophia Judicke"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Glenda Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Conrad Schaumburg"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23951",
+  "originalTitle": "HaikuS2S: A Cascaded System For Responding In Verse",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23951.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

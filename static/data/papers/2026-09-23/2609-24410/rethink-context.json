@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24410",
+  "abstract": "Speech-to-text engines are extremely needed nowadays for different applications, representing an essential enabler in human-robot interaction. Still, some languages suffer from the lack of labeled speech data, especially in the Arabic dialects or any low-resource languages. The need for a self-supervised training process and self-training using noisy training is proven to be one of the up-and-coming feasible solutions. This article proposes an end-to-end, transformers-based model with a framework for low-resource languages. In addition, the framework incorporates customized audio-to-text processing algorithms to achieve a highly efficient Jordanian Arabic dialect speech-to-text system. The proposed framework enables ingesting data from many sources, making the ground truth from external sources possible by speeding up the manual annotation process. The framework allows the training process using noisy student training and self-supervised learning to utilize the unlabeled data in both pre- and post-training stages and incorporate multiple types of data augmentation. The proposed self-training approach outperforms the fine-tuned Wav2Vec model by 5% in terms of word error rate reduction. The outcome of this work provides the research community with a Jordanian-spoken data set along with an end-to-end approach to deal with low-resource languages. This is done by utilizing the power of the pretraining, post-training, and injecting noisy labeled and augmented data with minimal human intervention. It enables the development of new applications in the field of Arabic language speech-to-text area like the question-answering systems and intelligent control systems, and it will add human-like perception and hearing sensors to intelligent robots.",
+  "abstractSha256": "2ecee35ce1c0831dcf5639ed93acb5ce961d9bc91433cc5393b3b1176ce50ee9",
+  "arxivId": "2609.24410",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali A. Safieh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ibrahim Abu Alhaol"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rawan Ghnemat"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对约旦方言标注语音稀缺问题，论文用 Wav2Vec 2.0 自监督表示做起点，再以五轮噪声学生训练迭代利用未标注与增强语音，在 12.5 小时标注加五批各 2.5 小时未标注条件下把词错误率降到 51%，代价是多轮大模型迭代需要双卡 83 小时级训练开销。",
+  "originalTitle": "End-to-end Jordanian dialect speech-to-text self-supervised learning framework",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24410.pdf",
+  "readerTitle": "约旦方言低资源语音转写：用自监督预训练加噪声学生训练吃掉未标注语音",
+  "schemaVersion": 1
+}

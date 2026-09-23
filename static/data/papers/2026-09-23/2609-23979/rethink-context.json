@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23979",
+  "abstract": "Attention encoder-decoder (AED) Speech Foundation Models achieve strong ASR performance but can generate acoustically unsupported text when inputs contain no speech, weak acoustic evidence, or unreliable transcription. We propose AURA: Activation-editing with Uncertainty-Routed Adaptation, an ultra-efficient representation-editing method that freezes the pretrained model and applies sparse scale-and-shift edits to decoder cross-attention heads. AURA dynamically routes edits using cross-attention uncertainty features that capture over-concentration, diffuse attention, and abrupt frame shifts. We evaluate AURA on four datasets spanning non-speech hallucination and speech grounding stressors, including imperfect-label child speech, imperfect-label adult speech, and disfluent speech. On non-speech audio, AURA reduces hallucination rate from 89.18% to 1.94% without prior hallucination-head identification. On imperfect-label corpora, AURA approaches LoRA WER while using roughly 500x fewer trainable parameters. Sensitivity analysis and qualitative cross-attention examples are consistent with AURA&#39;s uncertainty-routed editing behavior, supporting dynamic activation editing as a practical path for grounding AED speech models.",
+  "abstractSha256": "aa5615c418fc2535334587c826d4a80f6abba32440f5bd1a57181535618d1beb",
+  "arxivId": "2609.23979",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natarajan Balaji Shankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zilai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abeer Alwan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对注意力编码器解码器语音基座模型在无语音与弱证据下产生无声学支撑文本的问题，AURA 冻结原模型并只编辑解码器交叉注意力的少量头输出，用交叉注意力不确定性做逐词门控，在非语音上把幻觉率从 89.18% 降到 1.94%，代价是训练轮数增加后干净语音词错误率上升的权衡。",
+  "originalTitle": "AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23979.pdf",
+  "readerTitle": "解码器不敢再自由发挥：用不确定性路由的稀疏编辑把语音识别拉回声学证据",
+  "schemaVersion": 1
+}

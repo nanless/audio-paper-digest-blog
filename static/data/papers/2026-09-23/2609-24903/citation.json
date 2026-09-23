@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24903",
+  "arxivId": "2609.24903",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qisheng Liao"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics",
+        "The University of Hong Kong"
+      ],
+      "name": "Youngah Do"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24903",
+  "originalTitle": "ToneCL: Contrastive Learning for Few-Shot Syllable-Level Tone Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24903.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

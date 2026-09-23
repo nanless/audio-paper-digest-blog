@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24310",
+  "arxivId": "2609.24310",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antoine Nzeyimana"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24310",
+  "originalTitle": "Morpho-VITS: Variational Inference with Morphological Modeling for End-to-End Speech Synthesis of a Tonal Bantu Language",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24310.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

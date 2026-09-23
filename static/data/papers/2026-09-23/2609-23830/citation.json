@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23830",
+  "arxivId": "2609.23830",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jan Rybarczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mateusz Roszkowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jacek Komorowski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23830",
+  "originalTitle": "DFD-Lab: A Modular Audio-Visual Deepfake Detection Pipeline",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23830.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

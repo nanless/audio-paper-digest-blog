@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25546",
+  "abstract": "Music creation often involves iterative refinement, changing selected musical details while retaining the rest. To support such refinement, we introduce SpanSynth-Edit, a flow-matching model for MIDI-guided synthesis and editing of multi-instrument audio mixtures using low-frame-rate scalar-quantised latents. MIDI Span encodes instrument-labelled note lifecycles as unordered event sets with continuous-valued attributes and pools each set into one conditioning vector per audio-latent frame. The model uses contextual audio for instrument-specific timbre guidance and supports editing by resynthesising the target region from revised MIDI. Experiments on single- and multi-instrument benchmarks show competitive performance and demonstrate within-frame onset control. We also discuss limitations of transcription-based note-adherence evaluation.",
+  "abstractSha256": "fb573390ff12dddfd8208cc1fbbe454b2c50948e2960dfd3e632421d4a51a89a",
+  "arxivId": "2609.25546",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungkyun Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keshav Bhandari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Dixon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emmanouil Benetos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多乐器混合中只改部分音符又要保留其余音色与 concurrent 内容的问题，该文用冻结 HeartCodec 的标量量化潜变量做流匹配生成，用 MIDI Span 把帧内时刻保留为连续属性并做置换不变池化，最强证据是转录与重建误差分解显示量化只带来约 0.45 个百分点损失而转录本身带来 21.60 个百分点损失，主要代价是对 1-5 ms 微小起音偏移不敏感且删除类编辑的残留高于部分基线。",
+  "originalTitle": "Synthesis and editing of multi-instrument audio mixtures using scalar-quantised latents with MIDI Span conditioning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25546.pdf",
+  "readerTitle": "在 25 Hz 潜变量上修音符：标量量化与 MIDI 跨度如何支撑多乐器混合的再合成",
+  "schemaVersion": 1
+}

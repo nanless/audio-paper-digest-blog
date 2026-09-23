@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24818",
+  "abstract": "Automated Speaking Assessment of non-native speech must effectively evaluate prosody, including speech rhythm, to align with human perception. However, commonly employed rhythm metrics rely on segmental duration, requiring an additional alignment step, which is error-prone in non-native speech containing disfluencies and mispronunciations. We propose an acoustics-based assessment approach that employs a convolutional neural network to extract rhythm features directly from the speech amplitude envelope, motivated by evidence linking low-frequency modulations to rhythm perception. The proposed models are trained on a proficiency score regression task using the speechocean762 dataset and compared against duration-based models. Our results show that a model using the amplitude envelope&#39;s first derivative achieves the highest correlation with human-assigned scores on the Fluency and Prosody dimensions, producing significantly lower errors than one using segment durations among less fluent speakers. The findings support acoustic envelope features as robust, alignment-free alternatives for L2 rhythm assessment. Code is released publicly.",
+  "abstractSha256": "3e8ef91cee2b204bcd7df997d8c1ecb25401162b37da4d0af60759cd477e4b0a",
+  "arxivId": "2609.24818",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "João Lima"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lucas Ueda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula Costa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把二语节奏评估做成流利度和韵律分数回归，用一维卷积直接从语音幅度包络及其一阶导数学生节奏特征，最强证据是包络导数模型在低流利度组误差显著低于时长模型，代价是韵律维度仍受语调混杂与低分样本稀少限制。",
+  "originalTitle": "Automated Assessment of L2 Speech Rhythm Using Low-Frequency Amplitude Modulations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24818.pdf",
+  "readerTitle": "不用对齐音素也能评节奏：包络变化率为何在低分段更稳",
+  "schemaVersion": 1
+}

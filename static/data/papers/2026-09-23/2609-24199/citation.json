@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24199",
+  "arxivId": "2609.24199",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaushal Santosh Bhogale"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Srija Anand"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sadakopa Ramakrishnan Thothathiri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tahir Javed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sshubam Verma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mitesh M. Khapra"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24199",
+  "originalTitle": "Vimarsha: Faithful ASR Evaluation for Indian Languages with Demographic Diversity, In-the-Wild Audio and Spelling Variations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24199.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

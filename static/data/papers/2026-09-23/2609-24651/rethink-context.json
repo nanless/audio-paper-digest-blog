@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24651",
+  "abstract": "Diffusion and flow models, as promising generative paradigms for speech enhancement, face a training--inference mismatch: training uses analytical path states, whereas inference recursively evaluates models on self-generated rollout states along discretized sampling trajectories. This mismatch causes prediction and discretization errors to accumulate. To address it, we introduce Corrective Forcing (CoF), a post-training paradigm that forces diffusion and flow models to learn from self-generated rollouts and correct their predictions. CoF corrects clean-speech predictions on rollout states toward the ground truth under dynamic sampling schedules, exposing the model to varying inference conditions. It further regularizes local evolution using locally corrected counterfactual transitions as references for factual transitions. By expressing model outputs through a shared clean-speech prediction parameterization, CoF applies the same post-training objective across diffusion and flow formulations. Experiments with SB-VE and OT-CFM demonstrate improvements in perceptual quality and reconstruction fidelity, together with robust performance across different numbers of sampling steps.",
+  "abstractSha256": "736aacdc8d2f2722ebb7f3be9a009fde64f88fb5ff2b4c66dc39179f614d5e46",
+  "arxivId": "2609.24651",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qing Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lijian Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirong Mao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对解析训练态与自生 rollout 态的暴露偏差，纠正性强制用动态 rollout 纠正加反事实转移一致性统一后训练 SB-VE 与 OT-CFM，在 VoiceBank 上把 SB-VE 的 PESQ 从 3.07 提升到 3.21 并稳定多步 SI-SDR，代价是 UTMOS 提升有限且需额外 rollout 开销。",
+  "originalTitle": "Corrective Forcing: Unified Post-Training for Diffusions and Flows in Generative Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24651.pdf",
+  "readerTitle": "训练走解析路径、推理走自生轨迹：纠正性强制如何统一后训练扩散与流",
+  "schemaVersion": 1
+}

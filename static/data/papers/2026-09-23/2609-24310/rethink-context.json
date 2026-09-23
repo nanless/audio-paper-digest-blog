@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24310",
+  "abstract": "Text-to-speech models for Bantu tonal languages are challenged by a tonal system that is rooted in both the lexis (i.e., the inventory of words, stems, and affixes) and the grammar (i.e., morpho-syntax). To complicate matters, the standard writing systems of these languages often omit tone markings and syllable duration information, which must be disambiguated by the reader based on context. Motivated by linguistic descriptions of Bantu language tone systems, we propose an end-to-end text-to-speech model that augments the text encoding mechanism with a morpho-syntactic prior. We replace the standard phoneme encoder in the VITS architecture with a morpheme sequence encoder and a phoneme-to-morpheme attention network. We posit that, by using this explicit morphological modeling, we can capture the information required to produce the correct tone. Experiments conducted on the Kinyarwanda language, a tonal and morphologically complex Bantu language, reveal substantial TTS improvement from this morphological modeling. Specifically, the proposed method significantly improves the naturalness, intonation, and intelligibility of the produced synthetic voices.",
+  "abstractSha256": "6328ce4ce321921f497f3b98bb8c0f3011586235881abbc209018d12743a279b",
+  "arxivId": "2609.24310",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antoine Nzeyimana"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对卢旺达语正字法省略声调与音节时长导致端到端合成语调难的问题，该工作用词素编码器加音素到词素交叉编码器替换 VITS 文本编码，在 10 千句可懂度与 21 人主观评测上提升自然度与语调，但以 169M 词素参数与训练时长增加为代价且对未见词素敏感。",
+  "originalTitle": "Morpho-VITS: Variational Inference with Morphological Modeling for End-to-End Speech Synthesis of a Tonal Bantu Language",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24310.pdf",
+  "readerTitle": "声调写不出来时，让词素先把语法说清楚：Morpho-VITS 的形态建模",
+  "schemaVersion": 1
+}

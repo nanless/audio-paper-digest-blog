@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24275",
+  "abstract": "Text-to-speech (TTS) corpora are costly to record, yet many utterances add little new phonetic information. Core-set selection reduces this cost by choosing a small training subset under a fixed audio-duration budget. We represent a corpus as a phonotactic graph that links each utterance to its most phonemically similar ones, and we first test whether this graph has structure. In Bangla and English corpora, its clustering is 199 and 56 times that of a size-matched random graph, and its modularity is more than twice that of a degree-preserving random graph. We then propose Community Representative, a selector that samples across graph communities and spreads its choices within each one, starting from utterances rich in rare phonemes. At every budget and in both languages, it covers more rare phoneme bigrams than random and entropy-based selection, and this lead holds on held-out utterances. TTS models trained on its 20% core-sets have a significantly lower character error rate (CER) than models trained on equal-duration random or entropy-based subsets in both languages. When all models train for the same number of epochs, the Bangla core-set model also outperforms full-corpus training (3.93% vs. 4.47% CER) with 4.5x less training time.",
+  "abstractSha256": "7ff737e92eee09a80846918a1da6bd3f5eb18503fc54b790e9c70eb720b10207",
+  "arxivId": "2609.24275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mizbaul Haque Maruf"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering",
+        "Brac University, Dhaka, Bangladesh"
+      ],
+      "name": "Muhammad Nur Yanhaona"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把语料看作语音相似 utterance 图，先用零模型检验其聚类与模块度，再按社区分层加稀有音素播种做时长预算选择，在孟加拉语和英语 20% 预算下均显著降低合成可懂度误差，孟加拉语还以 4.5 倍更少训练时间超过全量训练。",
+  "originalTitle": "Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24275.pdf",
+  "readerTitle": "先验证结构再采样：社区感知的语音合成核心集选择",
+  "schemaVersion": 1
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23727",
+  "abstract": "Score-level fusion based on logistic regression is widely used in speaker recognition to combine complementary systems. However, conventional approaches assign fixed system-dependent coefficients and do not explicitly account for variations in the reliability of individual enrollment and test utterances. Drawing on recent research on the entropy of deep learning-based speaker recognition models, this study incorporates an uncertainty component into the fusion process. By exploiting both system-level complementarity and utterance-dependent uncertainty, the method achieves robust performance in large-scale speaker recognition tasks that involve highly variable characteristics of the speech signal. These results demonstrate that model-entropy information provides a valuable complementary cue in large-scale scenarios.",
+  "abstractSha256": "9f93e923e514026438ebad1e092762027e56ead5113007bdeabf557f71e7eeca",
+  "arxivId": "2609.23727",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LIA, Avignon University, France"
+      ],
+      "name": "Pierre-Michel Bousquet"
+    },
+    {
+      "affiliations": [
+        "LIA, Avignon University, France"
+      ],
+      "name": "Mickael Rouvier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对大规模多语言话者确认中注册与测试语音可靠性差异大的问题，该文在常规逻辑回归融合之外增加一路按熵可靠性分位数加权的逻辑回归并各取一半相加，在自建大规模集与 SdSV、CommonBench、TidyVoice 上均降低等错率与实际检测代价，但 ECAPA2 分组出现例外且注册样本为 1 时增益变小。",
+  "originalTitle": "Entropy-aware logistic regression for fusion of large-scale speaker recognition systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23727.pdf",
+  "readerTitle": "固定系数不够：用模型熵给每一次比对单独加权的话者融合",
+  "schemaVersion": 1
+}

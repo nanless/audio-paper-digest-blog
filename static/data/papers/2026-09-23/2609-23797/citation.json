@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23797",
+  "arxivId": "2609.23797",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Shuyang Xu"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong",
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Zhiyang Dou"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Yiduo Hao"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zekun Li"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Liang Pan"
+    },
+    {
+      "affiliations": [
+        "Shanghai AI Lab"
+      ],
+      "name": "Jingbo Wang"
+    },
+    {
+      "affiliations": [
+        "Macau University of Science and Technology"
+      ],
+      "name": "Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Hong Kong University of Science and Technology"
+      ],
+      "name": "Yuan Liu"
+    },
+    {
+      "affiliations": [
+        "Texas A&M University"
+      ],
+      "name": "Wenping Wang"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mingmin Zhao"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Taku Komura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23797",
+  "originalTitle": "MoSAT: Human Motion Generation from Spatial Audio and Textual Description",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23797.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

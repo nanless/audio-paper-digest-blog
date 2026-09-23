@@ -1,0 +1,64 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23416",
+  "arxivId": "2609.23416",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Zeyu Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group",
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Zibo Bi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Pei Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Baosong Yang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23416",
+  "originalTitle": "MuLA-Bench: A Multilingual Long-Form Audio Understanding Benchmark via Multi-Tier Auditing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23416.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

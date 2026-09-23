@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24138",
+  "abstract": "Generative models have recently demonstrated considerable promise in speech super-resolution (SSR). Nevertheless, the majority of existing work has concentrated on standard or versatile SSR configurations, leaving the extreme setting with severely limited spectral inputs largely unexplored. In this regime, current approaches exhibit marked performance degradation, underscoring the need for dedicated solutions. To bridge this gap, we introduce P2Flow, a phoneme-aware progressive flow matching (FM) framework designed for extreme SSR with three main strategies. First, our model leverages phonetic information to reconstruct missing spectral components. Furthermore, it employs a progressive architectural design that hierarchically restores distinct frequency regions. Finally, we incorporate post-training of the vocoder to enhance overall waveform fidelity. Extensive experiments are conducted on the TIMIT and VCTK datasets under both 1 kHz to 16 kHz and 2 kHz to 16 kHz settings, demonstrating that P2Flow yields state-of-the-art results across multiple evaluation metrics.",
+  "abstractSha256": "c4cee2f374bd6638ce9faa4630af83cbe83d5b139b36b92d58b1329fe627ea38",
+  "arxivId": "2609.24138",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音超分",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-super-resolution",
+          "label": "语音超分"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音超分",
+      "primaryTaskId": "task.speech-super-resolution",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ningyuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yize Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pu Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego A. Cuji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kanad Sarkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan M. Corey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xue Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew C. Singer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 1 或 2 kHz 到 16 kHz 的极端语音超分，P2Flow 用音素后验引导缺失高频包络、用 3 段渐进恢复 0-2、2-4、4-8 kHz 速度场并对声码器做后训练，在 TIMIT 与 VCTK 上报告了谱失真、感知质量与可懂度同步改善，代价是 3 阶段流水线与额外分类器依赖。",
+  "originalTitle": "P2Flow: Phoneme-aware Progressive Flow Matching for Extreme Speech Super-Resolution",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24138.pdf",
+  "readerTitle": "极端缺频下补高频：音素先验与分频渐进如何分工",
+  "schemaVersion": 1
+}

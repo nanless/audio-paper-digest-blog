@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24073",
+  "arxivId": "2609.24073",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyu Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuqi Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ehsan Vatankhah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Neal Hall"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24073",
+  "originalTitle": "The design of an optomechanical microphone using a photonic waveguide interferometer",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24073.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

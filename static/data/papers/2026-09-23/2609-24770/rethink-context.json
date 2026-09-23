@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24770",
+  "abstract": "Localising artifacts in synthetic speech remains challenging, as most evaluation methods yield only global quality scores. This paper presents XSQ-AST, a framework that combines the SQ-AST speech quality model with WhisperX phoneme alignment and multiple saliency methods to produce temporally localised artifact diagnostics without model retraining. Saliency maps are projected onto continuous distributions via kernel density estimation and onto phoneme boundaries via phoneme-discretised saliency maps. A 40-participant listening test validated the framework across five perceptual dimensions. Attention Rollout, Attention Flow and an adapted GradCAM produced temporal distributions that correlated with listener highlights, with different methods best suited to different artifact types. An AUC-ROC analysis confirmed discrimination above chance.",
+  "abstractSha256": "825a38bd1aa02c8ac4d64640dd057e4c9f1b7bb484c946081ea7a164da498105",
+  "arxivId": "2609.24770",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ben Heritage"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luca Resti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mónica Villanueva Aylagas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timothy Mehlenbacher"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Konrad Tollmar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "James Alfred Walker"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "XSQ-AST 用冻结的 SQ-AST 做多维度打分、用 WhisperX 做音素对齐、用显著性加核密度估计定位时间毛刺，40 人听音验证显示 Rollout 等方法与听众标注呈中等相关且 AUC 高于随机，但不同伪影类型最优方法不同且存在未评测边界。",
+  "originalTitle": "XSQ-AST: An Explainable Audio Spectrogram Transformer Framework for Localising Synthetic Speech Artifacts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24770.pdf",
+  "readerTitle": "不重训也能定位合成语音毛刺：XSQ-AST 把质量分投影到音素与时间上",
+  "schemaVersion": 1
+}

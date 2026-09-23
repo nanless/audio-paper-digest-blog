@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24391",
+  "arxivId": "2609.24391",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leonidas Delimpasis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Panagiota Moraiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonis Porichis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Panos Chatzakos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michail Karamousadakis"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24391",
+  "originalTitle": "NAVIR: Neuromorphic Audio-Visual Speech Recognition for Robust Human-Robot Interaction on Edge Hardware",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24391.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23453",
+  "abstract": "Cinematic audio source separation (CASS) decomposes a soundtrack into dialogue, music, and sound-effects (SFX) stems. Existing CASS methods, however, suffer from two critical limitations: they rely on heavily parameterized network architectures and GPU-class hardware, limiting their use in real-time and resource-constrained scenarios, and they are overwhelmingly designed for monaural signals, leaving the stereo scenario largely unexplored. We present LiteCASS, to our knowledge the first lightweight end-to-end network for real-time stereo CASS. LiteCASS combines deterministic STFT subband rearrangement with two jointly trained compact U-Nets: the first extracts dialogue, and the second separates music and SFX from the predicted non-speech component. A multi-task waveform-domain L1 loss supervises all stems. On a spatialized stereo extension of DnR v3, LiteCASS-K8 uses only 1.06M parameters and 0.72G MACs per second, while achieving the highest averaged SI-SDR among the compared CASS baselines.",
+  "abstractSha256": "33aa2d49c6de11bf59afbc77cdc8a077c68e912423f9e7cb8cd385a9f0cb1f86",
+  "arxivId": "2609.23453",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanxin Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiang Ji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengmei Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuhan Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ningning Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对立体声电影音频要同时分出对白、音乐、音效并保住空间感的问题，LiteCASS 用确定性子带重排加两级紧凑 U-Net 做掩码分离，在 DnR v3 立体声扩展上以 1.06 M 参数和 0.72 G 每秒运算量取得平均 SI-SDR 最高，代价是语音感知指标仍落后于更大基线与视觉辅助系统。",
+  "originalTitle": "LiteCASS: A Lightweight End-to-End Network for Real-Time Stereo Cinematic Audio Source Separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23453.pdf",
+  "readerTitle": "先分对白再分音乐音效：LiteCASS 用两级子带 U-Net 做立体声实时分离",
+  "schemaVersion": 1
+}

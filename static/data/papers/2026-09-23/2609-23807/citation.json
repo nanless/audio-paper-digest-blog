@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23807",
+  "arxivId": "2609.23807",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro H. L. Leite"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Benevenuto Valadares"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luiz Wagner Pereira Biscainho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23807",
+  "originalTitle": "Synthetic speech detection in Brazilian Portuguese through accent-related features",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23807.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

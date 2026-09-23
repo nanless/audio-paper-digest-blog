@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23416",
+  "abstract": "Long-form audio performance is often summarized by context length and aggregate accuracy, obscuring how language, evidence, and task jointly shape difficulty. We introduce MuLA-Bench: 5,038 open-ended questions over 1,769 in-the-wild recordings totaling 1,377.9 hours, covering 16 languages and eight domains. A balanced Language x Domain semantic track supports controlled comparisons, while a complementary acoustic track preserves naturally occurring non-speech evidence. Evidence-grounded generation, shortcut checks, and language-expert review provide auditable questions without translating a shared source set or injecting target sounds. We evaluate ten audio-language models and conduct pooled diagnostics on a fixed eight-model cohort. Language rankings change across domains and tasks; acoustic-semantic performance gaps vary with the requested operation; and temporal errors can persist after the correct event is identified. Long-range retrieval is comparatively strong, while precise clock alignment and factual grounding of natural acoustic events remain fragile. MuLA-Bench thus exposes conditional failure patterns that a single long-context score does not capture.",
+  "abstractSha256": "91e680a2cad4f6b87f9fcabd81ddaa818af643f168a1893dc035f4aa3661d97f",
+  "arxivId": "2609.23416",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Zeyu Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xinyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group",
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Zibo Bi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Pei Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Baosong Yang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Satoshi Nakamura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MuLA-Bench 用 5038 个开放问题检验 16 语言长音频理解，发现语言难度随领域和任务变化、声学证据差距随操作变化、找对事件不等于对准时钟，而代价是声学单元稀疏不均且长尾结论受限。",
+  "originalTitle": "MuLA-Bench: A Multilingual Long-Form Audio Understanding Benchmark via Multi-Tier Auditing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23416.pdf",
+  "readerTitle": "长音频不是更长，而是条件更多：MuLA-Bench 如何分离语言、证据与操作",
+  "schemaVersion": 1
+}

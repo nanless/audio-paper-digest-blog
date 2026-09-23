@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24163",
+  "arxivId": "2609.24163",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chee-En Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yun-Shao Tsai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ho-Lam Chung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuanjun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24163",
+  "originalTitle": "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24163.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

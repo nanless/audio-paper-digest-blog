@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24218",
+  "abstract": "Audio-based localization provides a low-cost and illumination-independent sensing solution for anti-UAV early warning. However, existing methods typically rely on a predefined fixed audio segment length, which limits temporal correspondence and creates a trade-off between sufficient acoustic evidence and timely localization. To address this issue, we propose an audio-based localization framework with adaptive temporal correspondence. A probe segment is first used to extract a compact acoustic state that characterizes the reliability and consistency of the observation. Guided by the state, a reinforcement learning controller dynamically determines the required audio window size for each localization decision. The selected audio segment is then processed by a Mamba-based localization network with adaptive temporal feature modulation for 3D position estimation. Extensive experiments demonstrate that our method achieves competitive 3D localization accuracy with substantially reduced temporal correspondence latency compared to SOTA methods and exhibits strong generalization across scenarios.",
+  "abstractSha256": "1f84761e4787926980e1935a7efa1dab24eb2bfa1d7d514683cc5b8ed9353ce6",
+  "arxivId": "2609.24218",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoxiang Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingzheng Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daotong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shenghai Yuan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对反无人机音频定位中固定窗长在声学证据与时间对应延迟之间的矛盾，该工作用最小探针提取无标签声学状态并以 PPO 同时选择窗口长度与 Mamba 时间特征权重，在 MMAUD-V1 上以 0.23 s 平均窗口取得 0.30 m 误差与 0.136 s 延迟，代价是需要三阶段训练与跟踪反馈维持。",
+  "originalTitle": "Audio-based UAV Localization with Adaptive Temporal Correspondence via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24218.pdf",
+  "readerTitle": "固定窗长不够用：用探针状态让强化学习逐次决定听多久",
+  "schemaVersion": 1
+}

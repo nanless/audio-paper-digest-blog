@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24138",
+  "arxivId": "2609.24138",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ningyuan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yize Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pu Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego A. Cuji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kanad Sarkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan M. Corey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xue Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew C. Singer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24138",
+  "originalTitle": "P2Flow: Phoneme-aware Progressive Flow Matching for Extreme Speech Super-Resolution",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24138.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

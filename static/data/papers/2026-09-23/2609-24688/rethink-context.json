@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24688",
+  "abstract": "Angular-margin speaker encoders are widely used in voice conversion, yet the geometry of their classifier prototypes remains poorly understood. We analyze ECAPA-TDNN classifier prototypes as points on the unit hypersphere and characterize their organization using rotation-invariant angular statistics together with global and local effective dimensionality measures. Our analysis shows that standard training can induce angular concentration and a substantial reduction in effective dimensionality. To address this, we investigate two geometric regularization strategies (hinged Riesz log-energy and effective-dimension maximization) applied to classifier prototypes to encourage more uniform hyperspherical coverage. The resulting prototype sets exhibit higher effective dimensionality and improved isotropy, with configuration-dependent effects on speaker-recognition performance. When the corresponding ECAPA-TDNN models are used as speaker encoders for Fast-VGAN, the regularized systems also exhibit improved robustness in zero-shot voice conversion, particularly for previously unseen speakers.",
+  "abstractSha256": "ac269e404fedb2c57a3bfe6fbd685b15200a0193bb86b818b48ad0013e78082e",
+  "arxivId": "2609.24688",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mathilde Abrassart"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicolas Obin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Axel Roebel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究角间隔 ECAPA-TDNN 分类器原型在单位超球面上的集中与有效维度坍缩问题，用铰链式 Riesz 对数能量与参与率最大化两项直接作用于原型的正则改善覆盖，并在 Fast-VGAN 零样本换声上以 WER 从 6.54% 到 5.97%、相似度从 0.65 到 0.69、UTMOSv2 从 2.47 到 2.70 为证据显示鲁棒性提升，而说话人识别效果随配置而异。",
+  "originalTitle": "Understanding Hyperspherical Geometry of ECAPA-TDNN Embedding and Its Impact on Zero-Shot Voice Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24688.pdf",
+  "readerTitle": "原型挤在一处时，零样本换声为何更难泛化到没见过的说话人",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24651",
+  "arxivId": "2609.24651",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qing Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lijian Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qirong Mao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24651",
+  "originalTitle": "Corrective Forcing: Unified Post-Training for Diffusions and Flows in Generative Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24651.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24073",
+  "abstract": "We present an optomechanical microphone based on a diaphragm-integrated photonic waveguide Mach-Zehnder interferometer. Acoustic pressure deforms the MEMS diaphragm, inducing strain in the sensing waveguide and changing its optical path length. We analytically evaluate the optical and mechanical transduction mechanisms and key figures of merit, including signal-to-noise ratio, dynamic range, acoustic overload pressure, and minimum detectable pressure. Two design cases are considered: a MEMS microphone and a measurement microphone. The results indicate competitive performance but no substantial overall advantage over state-of-the-art microphones in conventional applications. The architecture may nevertheless offer advantages for high-temperature and other harsh-environment sensing applications.",
+  "abstractSha256": "2b4acb19edef3cc2463c6e992f7b8db697fe953357e10e6d60cba5b209d8012c",
+  "arxivId": "2609.24073",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "后50%",
+    "score": 5.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyu Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuqi Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihuan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ehsan Vatankhah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Neal Hall"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文研究用振膜集成光波导马赫-曾德尔干涉仪把声压转成光程差再转成光电流的传声器，以解析模型评估信噪比、声过载与动态范围上限，结论是在常规微机电与测量传声器应用中无总体优势，可能价值在高温等恶劣环境。",
+  "originalTitle": "The design of an optomechanical microphone using a photonic waveguide interferometer",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24073.pdf",
+  "readerTitle": "把应变写进光路：振膜集成波导干涉传声器的上限分析",
+  "schemaVersion": 1
+}

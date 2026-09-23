@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24046",
+  "abstract": "Speech assessment tools for speakers with speech pathology must be both accurate and interpretable if they are to be adopted in clinical practice. Existing reference-audio measures such as the Neural Acoustic Distance (NAD) reach high speaker-level correlations with listener intelligibility scores but operate on self-supervised features that are hard to interpret, providing only frame-level explanations. We propose ART-NAD, a reference-audio intelligibility metric that replaces the \\texttt{wav2vec2} features of NAD with vocal-tract constriction variables (tract variables, TVs) predicted from audio by a speaker-independent acoustic-to-articulatory inversion model trained on the same \\texttt{wav2vec2} features. ART-NAD is computed as the multivariate Dynamic Time Warping distance between the nine-channel quasi-TV trajectories of the test and one or more references. Across 20 reference-audio protocols spanning six pathological-speech datasets and five languages, ART-NAD with silence trimming (ART-NAD-FA) reaches the same average speaker-level Pearson correlation as NAD-FA (both $r=0.71$) on the same self-supervised backbone, with no significant per-protocol difference (Wilcoxon $p=0.18$), and is the strongest reference-audio metric on 6 of the 20 protocols. Beside the score itself, each TV channel visualizes which constriction deviates from the reference over time, providing interpretable information as to where articulation breaks down.",
+  "abstractSha256": "65b17cc6f25e376ad87cfc193e41ff3035b929479587a6e0e588b25384aced24",
+  "arxivId": "2609.24046",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nagoya University Nagoya, Japan"
+      ],
+      "name": "Bence Mark Halpern"
+    },
+    {
+      "affiliations": [
+        "University of Cologne Cologne, Germany"
+      ],
+      "name": "Thomas Tienkamp"
+    },
+    {
+      "affiliations": [
+        "University of Groningen Groningen, the Netherlands"
+      ],
+      "name": "Defne Abur"
+    },
+    {
+      "affiliations": [
+        "Nagoya University Nagoya, Japan"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对病理性语音可懂度评估需要准确且可解释的问题，ART-NAD 用说话人无关声学到发音反演得到的九通道准声道收缩变量替代 NAD 的 wav2vec2 特征做多变量 DTW，在 20 个参考音频协议上平均说话人级 Pearson 相关与 NAD-FA 持平而可定位到具体收缩通道，代价是反演模型只在英语 EMA 上训练导致非英语连贯语音出现差距。",
+  "originalTitle": "ART-NAD: An Articulatory Inversion-based Neural Acoustic Distance for Pathological Speech Intelligibility Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24046.pdf",
+  "readerTitle": "把可懂度比较搬进声道：九维收缩变量为何能替掉上千维自监督特征",
+  "schemaVersion": 1
+}

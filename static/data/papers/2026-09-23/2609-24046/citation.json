@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24046",
+  "arxivId": "2609.24046",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Nagoya University Nagoya, Japan"
+      ],
+      "name": "Bence Mark Halpern"
+    },
+    {
+      "affiliations": [
+        "University of Cologne Cologne, Germany"
+      ],
+      "name": "Thomas Tienkamp"
+    },
+    {
+      "affiliations": [
+        "University of Groningen Groningen, the Netherlands"
+      ],
+      "name": "Defne Abur"
+    },
+    {
+      "affiliations": [
+        "Nagoya University Nagoya, Japan"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24046",
+  "originalTitle": "ART-NAD: An Articulatory Inversion-based Neural Acoustic Distance for Pathological Speech Intelligibility Assessment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24046.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

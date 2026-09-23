@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24771",
+  "abstract": "Instruction-controlled speech synthesis and paralinguistic understanding are often trained independently, leaving reciprocal feedback between the two tasks underexplored. We introduce CycleSpeech, a framework that connects generation and understanding through a shared, structured voice profile that serves as a common target for supervision and reciprocal feedback. The forward cycle assesses whether synthesized speech expresses the intended attributes by comparing recovered and target profiles. The backward cycle evaluates whether profiles inferred from real speech can guide reconstruction of the source speaking style. To support both directions, we construct a bilingual dataset of 20,046 examples pairing instructions, target speech, speaker references, and structured profiles. Building on joint supervised fine-tuning, CycleGRPO alternates policy updates using reciprocal rewards grounded in profile consistency and speaking-style reconstruction. Fixed target profiles anchor feedback from the evolving counterpart. This procedure requires neither human preference annotations nor an additional preference-trained reward model. Evaluations on Chinese and English benchmarks show improved instruction adherence and profile recovery while maintaining competitive synthesis quality. Compared with Step-Audio-2-mini, CycleSpeech improves instruction-match accuracy by 4.50 and 10.06 percentage points in Chinese and English, respectively. Controlled ablations further support the contribution of cycle feedback to generation control. These results support structured voice profiles as an interface for reciprocal training between speech generation and paralinguistic understanding. An online demo is available at this https URL.",
+  "abstractSha256": "f6e94234da00a71a7bd69a500ccd1c769ff94ca45f494d71568941d150f115ab",
+  "arxivId": "2609.24771",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huan Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haonan Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingwen Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dekun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuancheng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CycleSpeech 以结构化声音档案为共享可验证目标，先联合监督微调再用 CycleGRPO 交替优化合成与理解，在中英文指令匹配上相对基座提升 4.50 和 10.06 个百分点，代价是需要 20,046 条对齐语料与多步采样奖励计算。",
+  "originalTitle": "CycleSpeech: Reciprocal Alignment for Instruction-Controlled Speech Synthesis and Paralinguistic Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24771.pdf",
+  "readerTitle": "用可恢复的声音档案让合成与理解互相验算：CycleSpeech 的双向对齐",
+  "schemaVersion": 1
+}

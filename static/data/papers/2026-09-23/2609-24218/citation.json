@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24218",
+  "arxivId": "2609.24218",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoxiang Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingzheng Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daotong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shenghai Yuan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24218",
+  "originalTitle": "Audio-based UAV Localization with Adaptive Temporal Correspondence via Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24218.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

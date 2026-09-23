@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24061",
+  "arxivId": "2609.24061",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghan Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "ChangHao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiqiang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24061",
+  "originalTitle": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24061.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

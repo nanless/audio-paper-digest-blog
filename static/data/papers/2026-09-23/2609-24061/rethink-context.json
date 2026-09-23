@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24061",
+  "abstract": "In this paper, we propose MECT, a speaker verification model that integrates the Mixture-of-Experts (MoE) mechanism into a CNN-Transformer backbone with optimized block structure and stacking scheme. Specifically, we investigated four MoE variants that span utterance-level and frame-level granularity with dense and sparse routing strategies. The MoE mechanism proves to be effective over the baseline without MoE with only a small increase in parameters. We further scale MECT to a series of model sizes, all maintaining compact parameters and low computational complexity. In particular, MECT-B2 achieves state-of-the-art performance on VoxCeleb1 and delivers strong results on CN-Celeb, demonstrating its effectiveness across diverse datasets. In addition, we establish a streaming inference paradigm through causal retraining, which maintains strong performance at a chunk size of 100ms.",
+  "abstractSha256": "6e8f1c79f6b71065897230aaef6763477b4ff457b96bc9c4b9db9f7541d1a370",
+  "arxivId": "2609.24061",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghan Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "ChangHao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiqiang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MECT 针对全监督说话人确认中卷积局部建模与 Transformer 全局建模难以兼顾的问题，把四种混合专家结构放进 Transformer 前馈位置，用帧级稠密 4 专家在 VoxCeleb 上取得 minDCF 0.012、0.026、0.048 的报告结果，代价是参数从 9.40M 增至 9.57M 并需因果重训才支持 100 ms 流式。",
+  "originalTitle": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24061.pdf",
+  "readerTitle": "把专家混合塞进卷积-Transformer：MECT 如何在小参数下做说话人确认与流式推理",
+  "schemaVersion": 1
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23479",
+  "abstract": "Ambisonics Upscaling (AU) aims to enhance the spatial resolution of sound fields by estimating high-order Ambisonics (HOA) components from low-order observations. While deep learning and model-based strategies have been considered for AU, both approaches exhibit significant performance degradation in realistic scenarios, where reverberant sound fields violate the directional sparsity inherent to discriminative mappings. In this work, we address AU as a generative task rather than a deterministic reconstruction, expanding generative modeling to specifically target the recovery of spatial information in reverberant speech. We investigate two dominant continuous-time generative paradigms, adapting both Score-based Generative Model and Flow Matching to these complex acoustic settings. We provide an extensive numerical study comparing our methods against state-of-the-art baselines in various acoustic scenarios. Additionally, we conduct subjective listening tests to evaluate the perceived quality and spatial accuracy of the proposed generative framework across various reverberant scenarios. The studies reveal that Flow Matching consistently outperforms both its discriminative counterparts and Diffusion-based paradigms in all reverberant settings.",
+  "abstractSha256": "4483ab79fd67c1fc55f8b4afa799ad2e70f5ad8c499e087a26c8e687a479b0b2",
+  "arxivId": "2609.23479",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "声场重建",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amit Milstein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nir Shlezinger"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把一阶到三阶上采样定义为给定低阶信号生成缺失高阶通道的条件分布，用流匹配与得分扩散同骨干对比，在混响语音上流匹配信号与听感占优但参数与采样代价明显更大。",
+  "originalTitle": "Generative Learning for Ambisonic Upscaling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23479.pdf",
+  "readerTitle": "混响下高阶缺失难定解：把上采样做成条件生成的取舍",
+  "schemaVersion": 1
+}

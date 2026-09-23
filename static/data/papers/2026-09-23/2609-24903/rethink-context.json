@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24903",
+  "abstract": "Tone languages constitute over 50-70% of the world&#39;s languages, but the vast majority are low-resource, lacking the large transcribed corpora needed for automatic tone classification. Existing datasets are typically collected at the sentence level, whereas field linguists require fine-grained syllable-level annotations. We propose ToneCL, a lightweight contrastive learning framework for few-shot syllable-level tone classification. We simulate low-resource conditions on Mandarin and Vietnamese, limiting labeled data to tens of examples per tone class. ToneCL is pretrained on unlabeled speech with augmentations that preserve tonal identity, then fine-tuned on few-shot examples. Experiments show our method consistently outperforms baselines, achieving 91.6% on six-speaker Mandarin at 10 shots. Cross-lingual transfer is also effective: pretraining on Vietnamese and fine-tuning on Mandarin reaches 91.0\\% accuracy at 10 shots. Ablation confirms that frequency band rejection is the most critical augmentation.",
+  "abstractSha256": "3d4028b39de263eeb01536c74fe412573ca94329e644d4eafd70cdf516c5c227",
+  "arxivId": "2609.24903",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qisheng Liao"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics",
+        "The University of Hong Kong"
+      ],
+      "name": "Youngah Do"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音节级声调标注缺数据、句子级数据切分噪声大的问题，ToneCL 用保持声调的增强做对比预训练再用每调 1 到 10 个样本微调，在六说话人普通话 10-shot 达到 91.6%，跨语言预训练仍达 91.0%，代价是自然连续语音与声门特征仍未解决。",
+  "originalTitle": "ToneCL: Contrastive Learning for Few-Shot Syllable-Level Tone Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24903.pdf",
+  "readerTitle": "音节不够一秒、标签只有十个：ToneCL 用保调增强做对比预训练",
+  "schemaVersion": 1
+}

@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24809",
+  "arxivId": "2609.24809",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "NuSpace Audio, Cambridge, MA, USA"
+      ],
+      "name": "Yuancheng Luo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24809",
+  "originalTitle": "Fast Time-Varying Exponentiated Convolution Methods for Generative Direction Dependent Reverberation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24809.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

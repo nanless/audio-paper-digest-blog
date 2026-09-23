@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23525",
+  "abstract": "Discrete speech tokens provide a compact interface between speech encoders and large language models for automatic speech recognition, but single-tokenization systems remain sensitive to the chosen encoder. We propose multi-view discrete token augmentation, a simple strategy that augments each training utterance by generating alternative token sequences from fixed SSL encoders, such as HuBERT, WavLM, and MMS-300M. These tokenizations are treated as complementary training views for a shared LLM decoder, exposing it to more diverse discrete speech representations without requiring multi-encoder inference. At test time, the model can operate with a single encoder. On LibriSpeech, the approach consistently improves all encoders over independently trained baselines, with WavLM reaching 3.30% WER on test-clean and 8.13% on test-other. Budget-matched controls show that the gains come from encoder diversity rather than data volume. ROVER over multi-view hypotheses further improves WER to 3.03% and 7.38%.",
+  "abstractSha256": "00babf7ce58415f937702198e1bf670e7f1b5c4a20eafcc903baa958e3a2cf6e",
+  "arxivId": "2609.23525",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Moïse Gangbadja"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mickael Rouvier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabrice Lefèvre"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对离散词元依赖单一编码器切分的问题，该文把三个固定自监督编码器当作同一句话的多种分词器来训练一个共享大语言模型解码器，在保持单编码器推理成本下把 WavLM 视角做到 LibriSpeech 干净集 3.30% 与其他集 8.13%，再用三路 ROVER 投票做到 3.03% 和 7.38%，代价是训练量变为三倍且泛化仍受限。",
+  "originalTitle": "Beyond Encoder Fusion: Multi-View Discrete Token Augmentation for LLM-Based ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23525.pdf",
+  "readerTitle": "不拼向量而是换切分：用三种编码器视角训练同一个解码器",
+  "schemaVersion": 1
+}

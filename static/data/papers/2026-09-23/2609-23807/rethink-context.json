@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23807",
+  "abstract": "Leading commercial and open-source Text-to-Speech (TTS) models fail to emulate the regional phonetic diversity of Brazilian Portuguese (pt-BR). By aggregating disparate dialects into a single training distribution, they generate a synthetic &#34;diluted&#34; accent: a phonetic profile attempting to represent all regional distributions simultaneously, but ultimately carrying phonological ambiguity dissociated from natural socio-phonetic realizations. This work introduces a speech deepfake detection methodology combining multilingual phone recognizers with classical signal processing to extract phoneme-level features in consonantal and vocalic realizations with high geographic variance. The analysis reveals that the distributional gap over these features suffices to distinguish natural and synthetic voices through unsupervised Kernel Density Estimation, establishing dialectal inconsistency as a useful and interpretable feature for spoofing detection in pt-BR. Evaluation on pt-BR anti-spoofing datasets shows that these explainable, lightweight, low-dimensional features can boost the performance of foundation models on the task, and show generalization capabilities in a cross-dataset leave-one-out setup.",
+  "abstractSha256": "b277035163ff84d59aecaebfff8d1304a9a932dc8bf947e320a5e82bf6c61d54",
+  "arxivId": "2609.23807",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.sociophonetics",
+          "label": "社会语音学"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro H. L. Leite"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Benevenuto Valadares"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luiz Wagner Pereira Biscainho"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对巴西葡萄牙语合成语音口音稀释问题，用多语言音素识别加传统声学分析构建说话人级音系画像，仅在自然语音上拟合核密度估计即显示可分性，并在自建集与公开反欺骗集上验证了对大模型的增益与跨域泛化，但语音克隆场景下增益收窄且需要较多同说话人语句聚合。",
+  "originalTitle": "Synthetic speech detection in Brazilian Portuguese through accent-related features",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23807.pdf",
+  "readerTitle": "合成语音露出口音破绽：巴西葡萄牙语方言不一致如何成为可解释的鉴伪线索",
+  "schemaVersion": 1
+}

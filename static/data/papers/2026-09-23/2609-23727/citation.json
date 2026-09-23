@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23727",
+  "arxivId": "2609.23727",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "LIA, Avignon University, France"
+      ],
+      "name": "Pierre-Michel Bousquet"
+    },
+    {
+      "affiliations": [
+        "LIA, Avignon University, France"
+      ],
+      "name": "Mickael Rouvier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23727",
+  "originalTitle": "Entropy-aware logistic regression for fusion of large-scale speaker recognition systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23727.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

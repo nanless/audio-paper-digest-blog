@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23550",
+  "abstract": "AI-generated music detectors are commonly compared using aggregate scores on benchmarks whose training overlap, generator lineage, source provenance, and audio-transformation history are only partially observable. This paper introduces ArtifactBench, a lineage-aware evaluation suite for measuring detector behavior across generator families and versions, real-music domains, collection-cohort shift, and inference coverage. The benchmark groups source recordings and their derived variants by content identity, separates calibration from final testing, records inference failures independently from classification errors, and reports source-level performance with uncertainty in addition to aggregate metrics. We evaluate multiple publicly available detectors under a version-pinned common protocol and examine how leakage control, cohort availability, threshold policy, and model-specific missingness alter measured performance and model ranking. On the 562-track common-success test intersection, ArtifactNet obtains 0.982 AUROC and 0.918 balanced accuracy, compared with 0.761/0.776 for the public Deezer detector; SpecTTTra and CLAM fall below 0.30 AUROC under this shifted cohort. These results also expose substantial generator- and real-domain shifts that aggregate scores alone conceal.",
+  "abstractSha256": "b71cb6ca021fa0c9988c86aa419a739f6d7aa4ab38ea838b7892dfc27f9c3183",
+  "arxivId": "2609.23550",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Intrect"
+      ],
+      "name": "Heewon Oh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把 AI 音乐检测当作评估治理问题，用内容摘要与血缘分组冻结 828 轨主队列并分离校准与密封测试，在 562 轨四模型公共成功交集上报告 ArtifactNet 以 0.982 AUROC 领先但 Udio 补充集回落至 0.650，而聚合 F1 掩盖的生成器与真音乐域偏移与缺失覆盖决定了排名是否可比。",
+  "originalTitle": "ArtifactBench: Lineage-Aware Evaluation of AI-Generated Music Detectors under Distribution Shift",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23550.pdf",
+  "readerTitle": "分母不清的检测比较不可比：用内容血缘重定 AI 音乐检测评估",
+  "schemaVersion": 1
+}

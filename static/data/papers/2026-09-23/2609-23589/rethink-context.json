@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23589",
+  "abstract": "Large audio-language models (LALMs) are increasingly used for a broader range of audio reasoning tasks. These models typically incorporate audio representations into a large language model (LLM) backbone to enable multimodal reasoning. Recent test-time reinforcement learning (TTRL) methods further improve LLM reasoning capability by leveraging unlabelled test data after pre-training. However, the importance of the perceptual capability of LALMs remains underexplored, particularly how much acoustic evidence is integrated and relied upon during reasoning, and how this contributes to final task performance. This gap limits the development of effective post-training methods like TTRL for audio reasoning. In this work, we first analyse how audio information is integrated and utilised during reasoning process. We quantify layer-wise perceptual reliance and show that stronger acoustic reliance is associated with higher accuracy and a larger performance gain attributable to the audio input. Building on this, we propose Perception-Grounded TTRL (PG-TTRL), which aligns label-free test-time optimisation with perceptually grounded reasoning, encouraging the model to structure its reasoning more strongly on the audio input. Experiments across LALMs and benchmarks show that PG-TTRL consistently improves reasoning performance over both the base models and standard TTRL, showing the value of perceptual-grounding optimisation for test-time audio reasoning.",
+  "abstractSha256": "6fe9440deeaf1fc3a7318d9c97bee992206ccffed2dd342e633f8db0d12b9563",
+  "arxivId": "2609.23589",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaheng Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaofeng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Honorio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abhirup Ghosh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文先量化大音频语言模型对声音的依赖再提出感知 grounded 的测试时强化学习，用多数票伪标签乘以声学支撑权重更新策略，在 MMAR 上最高提升 4.6 个点、在 MMAU 上最高提升 4.9 个点，代价是每步需额外做遮蔽前向与分组投票计算。",
+  "originalTitle": "Listen Then Reason: Perception-Grounded Test-Time Reinforcement Learning for Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23589.pdf",
+  "readerTitle": "先听清再推理：用声音证据校准无标签测试时更新",
+  "schemaVersion": 1
+}

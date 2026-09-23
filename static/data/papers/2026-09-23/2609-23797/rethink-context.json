@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23797",
+  "abstract": "Human motion is shaped by both external acoustic events and behavioral intent: spatial audio conveys environmental cues that elicit or guide a response, while text specifies the desired action and how it should be performed. In this paper, we study the novel task of human motion synthesis jointly conditioned on spatial audio and natural language, a problem that has been largely overlooked in previous research. To support this task, We introduce STAM, a dataset of motion sequences paired with spatial audio and detailed textual annotations whose rich vocabulary affords precise and nuanced specification of human motions. We further introduce MoSAT, a latent flow-matching framework for full-body motion generation jointly conditioned on natural-language intent and directional spatial-audio cues through hierarchical cross-attention before generating motion. Such a hierarchical design enhances temporally coherent and semantically aligned motion sequences. We also develop tri-modal evaluators for comprehensive evaluation on this novel task. Extensive experiments show that MoSAT achieves the SOTA performance by leveraging spatial audio&#39;s intrinsic motion-shaping properties alongside textual semantics, enabling precise and diverse motion in various scenarios.",
+  "abstractSha256": "871463b3a32cce299c93e72fb65701180dc2d83e4c9b9424e7cfdace08ef12c5",
+  "arxivId": "2609.23797",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Shuyang Xu"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong",
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Zhiyang Dou"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Yiduo Hao"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zekun Li"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Liang Pan"
+    },
+    {
+      "affiliations": [
+        "Shanghai AI Lab"
+      ],
+      "name": "Jingbo Wang"
+    },
+    {
+      "affiliations": [
+        "Macau University of Science and Technology"
+      ],
+      "name": "Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "Hong Kong University of Science and Technology"
+      ],
+      "name": "Yuan Liu"
+    },
+    {
+      "affiliations": [
+        "Texas A&M University"
+      ],
+      "name": "Wenping Wang"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mingmin Zhao"
+    },
+    {
+      "affiliations": [
+        "The University of Hong Kong"
+      ],
+      "name": "Taku Komura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MoSAT 针对空间音频加文本联合驱动人体动作的新任务，用运动 VAE 压缩加变换器流匹配分层融合条件，在 STAM 联合评测中对齐与分布质量占优，但强噪声与模态错位时仍会退化。",
+  "originalTitle": "MoSAT: Human Motion Generation from Spatial Audio and Textual Description",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23797.pdf",
+  "readerTitle": "文本定意图、空间音频定方位与时机：MoSAT 的分层条件动作生成",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24812",
+  "arxivId": "2609.24812",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxu Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongming Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuzhi Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wentao Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alex Smola"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24812",
+  "originalTitle": "MSI-Bench: Evaluating Multi-Speaker Voice Interaction for Collaborative AI Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24812.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

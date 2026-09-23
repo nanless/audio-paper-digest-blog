@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23979",
+  "arxivId": "2609.23979",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natarajan Balaji Shankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zilai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zihan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaiyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abeer Alwan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23979",
+  "originalTitle": "AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23979.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

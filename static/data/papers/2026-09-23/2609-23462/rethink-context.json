@@ -1,0 +1,132 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23462",
+  "abstract": "Non-verbal vocalizations (NVVs) carry important paralinguistic information but are often omitted by conventional automatic speech recognition (ASR) systems. The ISCSLP NVVSpeech Challenge requires joint transcription of lexical content and 16 NVV categories under limited and highly imbalanced supervision. We present a data-centric NVV-aware ASR pipeline based on cross-dataset label harmonization and a two-stage sampling schedule. We map heterogeneous source labels to the official taxonomy and exclude samples without a reliable mapping. Our schedule first uses square-root category sampling to moderate the long-tailed distribution and then applies uniform-category fine-tuning. On a fixed local validation split, square-root category sampling performs best among the tested single-stage settings. The final two-stage system obtains an official score of 63.86 and ranks fourth in Track 1.",
+  "abstractSha256": "73a08eb42a90ae78975edc59bbbee11e5b891c937f0faa9d973114208776309f",
+  "arxivId": "2609.23462",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangyue Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingru Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yangzhuo Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daoping Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bowen Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanchen Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenze Ren"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunxiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Houdun Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuo Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 16 类非言语发声联合转写任务，该工作用跨数据集标签归一加平方根采样后接均匀微调，在官方评测得到 63.86 分排名第四，代价是第二阶段在本地验证集上从 66.25 分回落到 58.91 分且多数类别 F1 下降。",
+  "originalTitle": "Long-Tail Rebalancing for Non-Verbal Vocalization-Aware ASR: A Track~1 System for the NVVSpeech Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23462.pdf",
+  "readerTitle": "长尾之下适度再平衡：平方根采样为何优于自然与均匀采样",
+  "schemaVersion": 1
+}

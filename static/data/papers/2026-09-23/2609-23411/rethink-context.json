@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23411",
+  "abstract": "Conventional general sound recognition systems typically output deterministic sound event labels, implicitly assuming that the target sound class can be correctly identified from the input audio. However, in real listening situations, the sound event class is not always clearly identifiable. Human listeners may nevertheless understand their surroundings from an ambiguous sound without identifying its exact sound event class. This motivates a discussion of how the outputs of sound recognition systems should be redesigned under such uncertainty. As a basis for this discussion, this paper proposes an output representation for sound event recognition that combines a sound event class, its confidence score, and an onomatopoeic description of the sound. The proposed representation preserves conventional class-based recognition while providing an additional onomatopoeic description of acoustic characteristics that can remain informative even when the class prediction is uncertain. Experiments using ESC-50 and ESC-50-Onomatopoeia show that the proposed method achieves sound recognition performance comparable to that of a conventional recognition-only system. In addition, an LLM-as-a-judge evaluation and subjective listening experiments indicate that the proposed output is preferred over conventional deterministic outputs based on the sound event label, particularly when used to support understanding of the surrounding environment. These results suggest that such output representations can make sound event recognition more informative and communicative under uncertainty.",
+  "abstractSha256": "635f724f2585fab91ea593861ea05d601afe7628a456ee44f2e814de6958496b",
+  "arxivId": "2609.23411",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naoya Tomida"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keisuke Imoto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把声音事件识别的输出从单一确定标签改为类别加置信度加拟声词描述，用冻结编码器加可训练投影器与分类器实现分类与检索联合训练，在 31 类子集上保持分类能力，并在约 85% 准确率的模拟不确定条件下用大模型评价与 310 人听评显示拟声输出更有助于环境理解，代价是拟声不匹配会损害自然度。",
+  "originalTitle": "Misrecognition or Abstraction? Rethinking Outputs of Sound Event Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23411.pdf",
+  "readerTitle": "误识别还是抽象化：置信度不足时声音识别该输出什么",
+  "schemaVersion": 1
+}

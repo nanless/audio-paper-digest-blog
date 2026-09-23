@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24275",
+  "arxivId": "2609.24275",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mizbaul Haque Maruf"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering",
+        "Brac University, Dhaka, Bangladesh"
+      ],
+      "name": "Muhammad Nur Yanhaona"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24275",
+  "originalTitle": "Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24275.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

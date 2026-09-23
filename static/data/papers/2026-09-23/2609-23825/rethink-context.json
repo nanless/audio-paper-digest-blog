@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23825",
+  "abstract": "We present a comprehensive benchmark of Federated Learning (FL) for multilingual Automatic Speech Recognition (ASR), evaluating four Speech-LLM architectures on the Multilingual LibriSpeech dataset. We compare FedAvg and FedProx across frozen and unfrozen encoder configurations, demonstrating that optimized learning rates are critical for performance. Specifically, independently tuning the learning rates for the speech encoder, connector, and decoder yields the lowest error rates, with full three-component adaptation (LoRA for encoder and decoder, full training for the connector) producing the best FL results. We observe that FedProx efficacy is architecture-dependent, providing notable advantages in multilingual pre-trained architectures (e.g., EuroLLM over TinyLlama when keeping the encoder fixed); this indicates that LLM backbone capacity plays a key role in mediating resilience to heterogeneous data distributions. These findings offer concrete design guidance for deploying multilingual Speech-LLMs in privacy-sensitive, distributed environments.",
+  "abstractSha256": "e9cf241627eb92ae5e622ccc4b7db83efbaacbe535a11e4a5706b4aa5e088330",
+  "arxivId": "2609.23825",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleix Sant"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fernando López"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在 316 个按说话人划分的多语联邦客户端上比较四种语音大模型与 FedAvg 和 FedProx，最强证据是 Whisper 加 EuroLLM 在解冻编码器并调低其学习率时取得 0.1170 词错率，而 FedProx 只在该多语解码器上有效，代价是联邦仍远差于集中训练且对编码器预训练类型高度敏感。",
+  "originalTitle": "Federated Multilingual Speech-LLMs: Architecture and Aggregation Strategy Benchmarking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23825.pdf",
+  "readerTitle": "联邦多语语音大模型：编码器与解码器谁更怕客户端漂移",
+  "schemaVersion": 1
+}

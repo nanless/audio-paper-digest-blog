@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23830",
+  "abstract": "Comparing audio-visual deepfake detectors requires coordinating dataset adaptation, temporal input representation, model interfaces and experimental conditions. We present DFD-Lab, a modular pipeline that separates these responsibilities while supporting shared training and evaluation workflows. We integrate three implementations: Xception-based maximum-logit fusion, ResNet with temporal LSTM fusion, and our AVFF reimplementation. Experiments cover external testing, degradation-based training augmentation and evaluation-time corruption. On a filtered subset of Deepfake-Eval-2024, models trained on FakeAVCeleb attain baseline AUROC values of 0.504, 0.538 and 0.458. JPEG50 training augmentation raises these to 0.691, 0.605 and 0.570, respectively, while all three accuracies decrease. These results illustrate why training interventions, evaluation corruptions and metric-dependent outcomes should remain distinct within a common pipeline. The contribution is the integration of audio-visual processing, interchangeable detectors and configurable experimental workflows, supported by empirical case studies. The findings highlight the challenge of cross-dataset detection and the complementary information provided by ranking and classification metrics.",
+  "abstractSha256": "5640ce2b6165ff6a7454a31c1290f350ba8959afb9992d70e6ede15f18d937a4",
+  "arxivId": "2609.23830",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jan Rybarczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mateusz Roszkowski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jacek Komorowski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "DFD-Lab 把数据集适配、配对片段表示、检测器接口与实验配置分开，用 FakeAVCeleb 训练、过滤后的 Deepfake-Eval-2024 外部测试三类融合实现，最一致的证据是 JPEG50 训练增强把外部 AUROC 从 0.504、0.538、0.458 分别提升到 0.691、0.605、0.570，但三者准确率同时从 0.655、0.601、0.651 下降到 0.538、0.540、0.530。",
+  "originalTitle": "DFD-Lab: A Modular Audio-Visual Deepfake Detection Pipeline",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23830.pdf",
+  "readerTitle": "变换放在训练还是评估？DFD-Lab 用三组实验拆开跨数据集检测的排序与判决",
+  "schemaVersion": 1
+}

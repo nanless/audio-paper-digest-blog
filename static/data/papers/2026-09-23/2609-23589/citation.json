@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23589",
+  "arxivId": "2609.23589",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaheng Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaofeng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Honorio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abhirup Ghosh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.23589",
+  "originalTitle": "Listen Then Reason: Perception-Grounded Test-Time Reinforcement Learning for Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23589.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

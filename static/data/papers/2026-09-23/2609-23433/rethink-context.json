@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.23433",
+  "abstract": "Voice anonymization aims to protect privacy by suppressing speaker identity while preserving linguistic content and prosody. However, residual speaker attributes in non-identity representations may still increase linkability and weaken privacy protection. To this end, this paper proposes a fine-tuning strategy with a pinhole loss for well-trained voice anonymization frameworks to further reduce residual speaker attributes. Inspired by the pinhole effect, the pinhole loss measures the linkability of anonymized utterances from the same source speaker. By minimizing this loss, linkability is reduced, thereby improving privacy protection. Experiments on multiple anonymization frameworks, pseudo-speaker generation methods, and datasets show improved privacy protection while maintaining utility. Audio samples can be found in this https URL.",
+  "abstractSha256": "b260b6f71befa6fa67d653bf1ba53fb7fe8a60704b3f89069146e750627d8605",
+  "arxivId": "2609.23433",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyan Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weili Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liping Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boyu Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenhua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对解耦不彻底导致内容与韵律流残留说话人可链接性的问题，该文在冻结说话人编码器下用针孔损失微调内容编码器、韵律编码器与波形生成器，探测显示学习型韵律泄漏明显下降而词错误率与情感召回仅小幅波动。",
+  "originalTitle": "Reducing Speaker Residual by Considering Pinhole Effect in Voice Anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.23433.pdf",
+  "readerTitle": "残留说话人属性聚成可链接性：用针孔损失微调已训好的匿名框架",
+  "schemaVersion": 1
+}

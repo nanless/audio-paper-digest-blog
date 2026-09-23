@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.22214",
+  "abstract": "Long multilingual conversational spoken question answering requires systems to balance long-range transcript semantics with sparse acoustic and speaker-sensitive cues. We present the Bairong system for the MLC-SLM 2026 Challenge, where a diarization-ASR front-end produces speaker-attributed transcripts and a dynamic evidence router constructs question-specific inputs for answer prediction. Instead of applying a fixed transcript-only or audio-only policy, the router infers the required evidence type and context scope from the question and answer options, and selects among full transcript context, local audio-text fusion, speaker-linked evidence, and compact global acoustic samples. This transcript-backbone design keeps discourse context available while activating audio only when it provides complementary evidence. Our Task 1 system achieves 25.70% and 18.44% tcpMER on the development and evaluation sets. For Task 2, the final system obtains 94.84% devel?opment accuracy, outperforming the full-transcript baseline by 1.68 points and the best audio-centric diagnostic system by 2.77 points. These results support dynamic question-aware routing as an effective evidence allocation strategy for conversational spoken QA.",
+  "abstractSha256": "365e893227fbc87c207474bb6d1639d92d5cd1a5065efcb2cd4e1a22af317e11",
+  "arxivId": "2609.22214",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shangkun Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junchao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huan Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guoji Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaosai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Zou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yunzhang Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多语言双人长对话口语问答中不同问题依赖不同证据的问题，该工作用带说话人时间戳的转写做主干、按问题动态挂接局部或全局音频，开发集任务二达到 94.84% 准确率，但消融无法完全分离标签质量与证据分配的因果。",
+  "originalTitle": "The Bairong System for MLC-SLM 2026: Dynamic Question-Aware Evidence Routing for Multilingual Conversational Speech Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.22214.pdf",
+  "readerTitle": "长对话问答不缺音频而缺取舍：按问题动态分配文本与声学证据",
+  "schemaVersion": 1
+}

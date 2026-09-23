@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24809",
+  "abstract": "Spherical harmonic encoded acoustic sound-fields capture directional characteristics of room impulse responses that are useful for accurate spatial audio reproduction. However, high costs of multi-microphone measurements and numerical simulations motivate alternative data-set augmentation and synthetic data generation methods that supplement small collections. This paper introduces time-varying exponentiated convolution methods that transform both Gaussian noise and impulse responses into reverberation and modified spectral-decay fields respectively. We derive two recursive and fast convolution algorithms that extend into the spherical harmonic domain, model smooth reverberation time distributions with non-stationary Gaussian processes, and realize an optimal filter design. Experiments evaluate computational performance, and validate out-of-distribution generated impulse responses.",
+  "abstractSha256": "2179b1442a5963dd0f4c89470c161e3baca60b94c4fea3edc2e779d0c99b84c0",
+  "arxivId": "2609.24809",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NuSpace Audio, Cambridge, MA, USA"
+      ],
+      "name": "Yuancheng Luo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把固定脉冲与随样本指数加长的滤波器做时变卷积并扩展到球谐域，用近最小相位滤波器拟合由非平稳高斯过程采样的方向相关混响时间，以快速分治卷积从噪声或已有脉冲生成新的空间脉冲响应，代价是滤波器阶数不足时指数放大会放大拟合误差且长混响方向必须更平滑。",
+  "originalTitle": "Fast Time-Varying Exponentiated Convolution Methods for Generative Direction Dependent Reverberation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24809.pdf",
+  "readerTitle": "用随时间指数增长的卷积造出方向相关的混响：从高斯噪声到球谐混响场",
+  "schemaVersion": 1
+}

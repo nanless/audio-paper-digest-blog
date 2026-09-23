@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.24770",
+  "arxivId": "2609.24770",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ben Heritage"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luca Resti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mónica Villanueva Aylagas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timothy Mehlenbacher"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Konrad Tollmar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "James Alfred Walker"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.24770",
+  "originalTitle": "XSQ-AST: An Explainable Audio Spectrogram Transformer Framework for Localising Synthetic Speech Artifacts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.24770.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
