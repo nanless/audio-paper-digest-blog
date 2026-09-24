@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27598v1",
+  "arxivId": "2609.27598",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27598v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sipei Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27598v1",
+  "originalTitle": "DriftAudio: Marginal Drifting for Distributional Post-Training of One-Step Text-to-Audio Generators",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27598v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

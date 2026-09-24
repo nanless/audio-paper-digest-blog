@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25165",
+  "arxivId": "2609.25165",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Ovis-Embedding Team"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25165",
+  "originalTitle": "Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25165.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

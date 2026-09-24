@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27514v1",
+  "abstract": "This paper summarizes the Interspeech2026 second Multilingual Conversational Speech Language Model (MLC-SLM) Challenge, which aims to advance the development of effective multilingual conversational speech language models. We describe the two challenge tasks: multilingual conversational speech diarization and recognition, and multilingual conversational speech understanding, together with the released real-world conversational speech dataset, evaluation protocols, and baseline systems. The challenge attracted 91 teams worldwide, with 704 valid leaderboard results and 14 technical reports across the two tasks. Based on the participating systems, we summarize representative approaches and distill practical insights into multilingual conversational speech recognition and understanding to support future research in the community.",
+  "abstractSha256": "7cf5704bb339b3837e2f129bc5e6a6846773ee8f19d5a2061837c8b54a208202",
+  "arxivId": "2609.27514",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27514v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshuai Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiangze Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daliang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该挑战用约 2100 小时 14 语言双人对话同时考 diarization 加识别与整场理解，基线显示长时说话人对齐与语义推理是主要瓶颈，而参赛系统靠域内 diarization 适配与音频依赖监督把误差与准确率推到新水平。",
+  "originalTitle": "The Second MLC-SLM Challenge: Multilingual Conversational Speech Diarization, Recognition, and Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27514v1.pdf",
+  "readerTitle": "两人对话先分清谁在说，再听懂整场在说什么：第二届 MLC-SLM 的多任务设定",
+  "schemaVersion": 1
+}

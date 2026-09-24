@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26427",
+  "abstract": "Revision-capable streaming speech-to-text translation (S2TT) can correct earlier drafts, but process rewards based on visible text may credit content later withdrawn. Persistent Delivery Optimization (PDO) assigns intermediate reward only to content that survives revisions while scoring final quality separately. With 7.49 h of task-specific FLEURS adaptation, PDO achieves the best BLEU on four of five directions and higher COMET than every external streaming baseline in all five directions. Relative to its History-SFT initialization, PDO reduces mean/P90 finalization-aware latency by 10.8\\%/11.3\\% and normalized erasure by 15.8\\%, while emitting at the first permitted 2-s update and improving macro BLEU. Zero-shot evaluation on Europarl-ST and CoVoST 2 confirms that these gains are not confined to the FLEURS training domain.",
+  "abstractSha256": "0ebec310966e2d99812377fdb34c5823a0ba6dd99e179e149ea070d4c7da2cd6",
+  "arxivId": "2609.26427",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zixiang Wan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Delin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haihua Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youxi Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuexian Zou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对可修订流式语音到文本翻译中可见草稿会奖励随后被撤回内容的问题，论文提出持续交付优化，用留存前缀的参考覆盖累积中间奖励并单独计最终质量，在 7.49 小时 FLEURS 适配下相对 History-SFT 降低平均与 P90 终结感知延迟 10.8% 与 11.3% 并降低归一化擦除 15.8%，代价是需要完整轨迹回放计算回报且中间奖励依赖词面覆盖。",
+  "originalTitle": "Persistent Delivery Optimization for Streaming Speech-to-Text Translation with Revisions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26427.pdf",
+  "readerTitle": "可见不等于送达：只给留存下来的译文记功的流式语音翻译",
+  "schemaVersion": 1
+}

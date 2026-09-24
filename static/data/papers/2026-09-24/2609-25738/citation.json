@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25738",
+  "arxivId": "2609.25738",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Yizhou Liu"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Jinghang Han"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Kaixiang Qiu"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Qi He"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Minghao Han"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Xujia Chen"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Wei Zou"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Shunli Wang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Lihua Zhang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Dingkang Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25738",
+  "originalTitle": "OmniFysics-Nano-V2 Technical Report: Understanding the Physical World Across Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25738.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

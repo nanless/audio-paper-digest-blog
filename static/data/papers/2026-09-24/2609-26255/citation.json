@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26255",
+  "arxivId": "2609.26255",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Yizhong Geng"
+    },
+    {
+      "affiliations": [
+        "Beijing DeepLogic Intelligence Technology Co., Ltd. , Beijing , China"
+      ],
+      "name": "Yanliang Li"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Jinghan Yang"
+    },
+    {
+      "affiliations": [
+        "University of California , USA"
+      ],
+      "name": "Tianhan Jiang"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26255",
+  "originalTitle": "SceneTTS-Bench: A Benchmark for Scene-Level TTS in Drama Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26255.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

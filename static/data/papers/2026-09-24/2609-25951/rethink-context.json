@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25951",
+  "abstract": "Low-resource text-to-speech (TTS) adaptation is constrained by scarce paired data and costly manual transcription. Existing fixed-voice TTS systems can provide relatively accurate pronunciation, but their synthetic speech offers limited speaker diversity and may exhibit flat prosody. Real recordings provide natural prosody and diverse voices, yet their automatic speech recognition (ASR) pseudo-labels may contain transcription errors. We find that supervision order affects content accuracy and speaker similarity. We propose trust-aware progressive adaptation: synthetic-to-real adaptation first establishes text-speech correspondences, then restores reference-speaker control using real speech. Transcript-agreement weighting uses agreement between two fixed ASR systems as a proxy for pseudo-label reliability to limit noisy supervision. Experiments with FireRedTTS3 on Burmese and Lao and OmniVoice on Burmese show improved content accuracy with high naturalness and competitive speaker similarity. Jointly considering supervision order and pseudo-label reliability when combining synthetic and real speech offers a practical path to zero-shot voice cloning in low-resource languages with less manual transcription. Audio demos are available at this https URL",
+  "abstractSha256": "3cd292c1d8fb6e59e9c6354f2d781b23a802fb3b2fa810e365d1c8df36076577",
+  "arxivId": "2609.25951",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiayi Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yizhong Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianhan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boxun An"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对缅甸语和老挝语缺少人工标注配对数据的问题，该研究先用固定音色合成语音建立文本到语音的对应，再用真人录音加双识别器一致性加权恢复目标音色控制，证据显示内容准确率得到保持而相似度被拉回，但逆序训练仍在发音准确率上占优且一致性只是不可靠程度的代理指标。",
+  "originalTitle": "From Reliable Text to Real Voices: Trust-Aware Progressive Adaptation for Low-Resource TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25951.pdf",
+  "readerTitle": "先学发音再学音色：用合成语音开路、真人语音纠偏的低资源适配",
+  "schemaVersion": 1
+}

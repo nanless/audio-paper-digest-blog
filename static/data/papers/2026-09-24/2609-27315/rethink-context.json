@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27315v1",
+  "abstract": "Speaker diarization must solve two problems: counting how many speakers are present in a given conversation, and assigning speech to each one. This becomes harder in crowded conversations with five or more speakers. We evaluate how end-to-end neural diarization models count speakers, and find systematic under-counting in crowded recordings. The standard diarization error rate (DER) hides this failure, because it is duration-weighted and barely penalizes the dropped, low-activity speakers. We therefore also report the Jaccard error rate (JER) and explicit counting metrics. We propose a gated loss that couples speaker existence with frame activity. This loss can be computed in two ways, duration-weighted or speaker-weighted, and the speaker-weighted variant, used as a regularizer, reduces the under-count. On real-world crowded recordings our method clearly improves the counting metrics, lowering JER by about 6% relative and DER by about 9% relative, while leaving sparse recordings unharmed.",
+  "abstractSha256": "25650537c5e8dfbe821b6edc8cbf5001b93264012403e3f858922415c5dd4e87",
+  "arxivId": "2609.27315",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27315v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-counting",
+          "label": "说话人计数"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lahiru Samarakoon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongxu Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对五人以上拥挤录音中端到端 diarization 系统性少计低话量说话人的问题，论文在 EEND-TA 上加训练期门控耦合正则与按说话人加权的归约，最终系统把拥挤子集精确计数从 32.9% 提到 41.6%，代价是 CallHome 这类吸收型错误为主的域精确计数下降且需多调存在门指数。",
+  "originalTitle": "Beyond DER: Speaker Counting in Crowded End-to-End Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27315v1.pdf",
+  "readerTitle": "拥挤时少数的说话人为何消失：把存在和活动绑在一起再计数",
+  "schemaVersion": 1
+}

@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26460",
+  "abstract": "Anomaly detection systems are often trained using normal data alone, while model selection and evaluation typically require labeled anomalies. We study whether anomaly detection performance can be predicted without access to anomalous data. For kNN-based detectors, we derive a lower bound on the area under the ROC curve (AUC) that relates detection performance to the separation between inlier and outlier scores and to their respective variances. Under a local scaling model, we use this bound to characterize how density variation, intrinsic-dimensional heterogeneity, and cross-domain mismatch contribute to score variability. We then investigate anomaly-free model selection and show that inlier score variance alone does not reliably predict performance across different representations. To address this limitation, we introduce simple pseudo-anomaly probes that provide a reference for estimating relative score separation. Experiments on the DCASE 2022-2025 benchmarks, spanning four embedding models and 208 candidate systems, show that pseudo-anomaly-based estimators substantially improve anomaly-free model selection. In particular, diverse pseudo-anomalies enable anomaly-free model selection to outperform conventional development-set selection under domain shift. These results show that embedding-space geometry contains predictive information about anomaly detection performance while also highlighting the representation-dependent nature of inlier-only performance estimates.",
+  "abstractSha256": "9bc677c8c1f77a861d5555396aa6a85f9158e9a3f36b48847f3a643006348111",
+  "arxivId": "2609.26460",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electronic Systems, Aalborg University, Denmark",
+        "Pioneer Centre for Artificial Intelligence, Denmark"
+      ],
+      "name": "Kevin Wilkinghoff"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems, Aalborg University, Denmark",
+        "Pioneer Centre for Artificial Intelligence, Denmark"
+      ],
+      "name": "Zheng-Hua Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究无异常标签时能否预测 kNN 异常检测性能，推导 AUC 下界并用局部尺度分解内点分数方差，再用嵌入空间伪异常估计分离度，在 DCASE 2022-2025 共 208 个候选系统上显示 Diverse 伪异常的 Pseudo AUC 可超越有异常开发集选择，但代价是依赖语义元数据与伪异常构造质量。",
+  "originalTitle": "Can We Predict Anomaly Detection Performance from Embedding-Space Geometry?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26460.pdf",
+  "readerTitle": "无异常时能选模型吗：从 kNN 分数方差到伪异常探针的几何预测",
+  "schemaVersion": 1
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26183",
+  "arxivId": "2609.26183",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Rajabi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangwei Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26183",
+  "originalTitle": "A Hybrid Classical-Learning Framework for Adaptive Decision Directed Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26183.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

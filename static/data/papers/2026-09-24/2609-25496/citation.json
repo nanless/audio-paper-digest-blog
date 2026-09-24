@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25496",
+  "arxivId": "2609.25496",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brooklyn Sheppard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anaelia Ovalle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adina Williams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Levent Sagun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25496",
+  "originalTitle": "Towards participatory speech dataset curation: A queer case study and conceptual framework",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25496.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

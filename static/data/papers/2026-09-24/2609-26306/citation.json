@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26306",
+  "arxivId": "2609.26306",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Robert Sutherland"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Thomas Kuebert"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Marko Lugger"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Stefan Petrausch"
+    },
+    {
+      "affiliations": [
+        "ORCA Labs, WS Audiology, Lynge, Denmark"
+      ],
+      "name": "Eline Borch Petersen"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs, Cambridge, United Kingdom"
+      ],
+      "name": "Juan Azcarreta Ortiz"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs, Redmond, United States of America"
+      ],
+      "name": "Buye Xu"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom",
+        "South Westphalia University of Applied Sciences, Iserlohn, Germany"
+      ],
+      "name": "Stefan Goetze"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Jon Barker"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26306",
+  "originalTitle": "CHiME-9 ECHI: A Machine Learning Challenge for Enhancing Conversations to Address Hearing Impairment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26306.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

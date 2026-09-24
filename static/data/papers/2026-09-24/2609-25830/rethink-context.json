@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25830",
+  "abstract": "Existing waveform-domain audio watermarks are robust to many conventional distortions but can degrade substantially under neural codec resynthesis. We investigate whether continuous neural codec latents provide a more suitable embedding space using a restricted formulation built around frozen pretrained EnCodec. To test this, a feedforward embedder maps a multi-bit payload to an additive latent perturbation decoded through the unchanged codec decoder. Compared with AudioSeal and WavMark, our latent watermark formulation degrades more gradually under repeated and low-bitrate EnCodec resynthesis, transfers to unseen DAC, and retains high detection under most waveform distortions. Substantial EnCodec robustness emerges even without codec-resynthesis supervision, indicating that this behavior is inherent to our latent formulation and is further strengthened by codec-aware training. Learned perturbations are also preserved more strongly through codec cycling than equal-norm random controls, with preservation depending more on channel-specific allocation than temporal structure. End-to-end perceptual quality remains close to that of the frozen EnCodec reconstruction, indicating that much of the observed degradation originates from the codec carrier itself. Overall, these results show that continuous neural codec latents provide a promising embedding space for watermarks that remain robust to neural codec resynthesis.",
+  "abstractSha256": "4ee416224653770977584abd88cf7a64fffec4f2ce54764f4e9fb9c47999f286",
+  "arxivId": "2609.25830",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lovro Brulec"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sahil Karawade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leonard Kinzinger"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对波形水印经神经编解码重合成后易失效的问题，论文用冻结 EnCodec 连续潜变量上的前馈加性扰动做 16 比特水印，在重复与低码率 EnCodec 重合成下退化更平缓，但端到端音质受限于编解码器载体本身。",
+  "originalTitle": "Latent Audio Watermarking for Robustness to Neural Codec Resynthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25830.pdf",
+  "readerTitle": "把水印藏进编解码器保留的潜变量方向：DeltaMark 对神经编解码重合成的鲁棒性",
+  "schemaVersion": 1
+}

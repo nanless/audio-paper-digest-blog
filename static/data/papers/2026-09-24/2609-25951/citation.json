@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25951",
+  "arxivId": "2609.25951",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiayi Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yizhong Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinghan Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianhan Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Boxun An"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25951",
+  "originalTitle": "From Reliable Text to Real Voices: Trust-Aware Progressive Adaptation for Low-Resource TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25951.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

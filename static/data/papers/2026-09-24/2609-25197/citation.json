@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25197",
+  "arxivId": "2609.25197",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Yuan Tseng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aishwarya Fursule"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Zijun Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vamshi Nallaguntla"
+    },
+    {
+      "affiliations": [
+        "Institut national de la recherche scientifique"
+      ],
+      "name": "Anderson Avila"
+    },
+    {
+      "affiliations": [
+        "Wichita State University"
+      ],
+      "name": "Shruti Kshirsagar"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25197",
+  "originalTitle": "SPADE: A Multilingual Dataset for Speech Partial Deepfake Detection and Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25197.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

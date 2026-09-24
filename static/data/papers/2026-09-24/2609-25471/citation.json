@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25471",
+  "arxivId": "2609.25471",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Wonho Bae"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Zakaria Aldeneh"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Martin Pelikan"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Jan \"Honza\" Silovsky"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Tatiana Likhomanenko"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Sheikh Shams Azam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25471",
+  "originalTitle": "A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25471.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

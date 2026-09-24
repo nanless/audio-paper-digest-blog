@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25738",
+  "abstract": "Omni-modal models have expanded multimodal interaction across vision, audio, speech, and language. However, their training is predominantly organized around semantic descriptions and general-purpose objectives, leaving physical attributes, interaction states, and causal mechanisms only partially specified. This gap is not simply a matter of modality coverage: adding more modalities does not by itself provide the supervision needed to connect observations with the physical structure of the world. We present OmniFysics-Nano-V2, a compact omni-modal model for physical-world perception and understanding. The model supports image, video, audio, speech, and text inputs within a shared reasoning framework, together with text and speech generation. To address the lack of explicit physical supervision, we construct a dual-branch physics-aware data pipeline that grounds salient objects in structured physical attributes and aligns visual changes with acoustic events, intermediate responses, and interaction outcomes. To address homogeneous training objectives, we curate reinforcement-learning prompts by reward diversity and adopt a two-stage Group Relative Policy Optimization curriculum that progresses from general task correctness to fine-grained physical perceptual reasoning. Experiments across multimodal, audio-visual, and physical reasoning benchmarks show that the proposed data and training strategy improves physical-world understanding while preserving broad omni-modal competence. The proposed model achieves leading result on 17 of 21 benchmarks against SOTA omni-modal models. By equipping AI systems with both omni-modal and physical-world perception capabilities, OmniFysics-Nano-V2 is poised to become a cornerstone of next-generation Physical AI.",
+  "abstractSha256": "513e91353f1492a4e9782d6dfb7462b6a1e3460ebd556c8e5a628a8ef500801a",
+  "arxivId": "2609.25738",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Yizhou Liu"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Jinghang Han"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Kaixiang Qiu"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Qi He"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Minghao Han"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Xujia Chen"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Wei Zou"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Shunli Wang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Lihua Zhang"
+    },
+    {
+      "affiliations": [
+        "Physical Superintelligence Lab, Fysics AI College of Intelligent Robotics and Advanced Manufacturing, Fudan University"
+      ],
+      "name": "Dingkang Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对通用多模态只学语义对齐而缺物理量监督的问题，OmniFysics-Nano-V2 用静态属性 grounding 与动态视听事件对齐的双分支数据加两阶段 GRPO，在 21 项中 17 项领先同类全模态模型，代价是依赖商用大模型标注与多阶段训练流程。",
+  "originalTitle": "OmniFysics-Nano-V2 Technical Report: Understanding the Physical World Across Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25738.pdf",
+  "readerTitle": "只拼模态不够：用静态属性与动态事件补上物理监督",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26823v1",
+  "arxivId": "2609.26823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.26823v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National Research Council Canada"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University"
+      ],
+      "name": "Jinxi Jin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Junhao Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26823v1",
+  "originalTitle": "Text Scores Can Miss Waveform Use: A Qwen2-Audio Quantization Case Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26823v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

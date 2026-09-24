@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25491",
+  "abstract": "In this paper, we examine speech datasets for their inclusion of LGBTQIA+, or queer, voices and provide a taxonomy of tensions to better understand why there is a lack of such voices in current speech technology datasets. Through an audit of six diverse speech datasets, we find that measurable queer representation is low (0-1.4% of speakers) - insufficient for robust disparity measurement. We take this community as a case study to consider what challenges and tensions are associated with collecting speech data from marginalized communities. For comparison, we audit an additional two datasets from the speech sciences that were created by, for, and with the queer community. We note that many customs in speech dataset collection efforts in AI and speech technology research may conflict with values emphasized in participatory approaches with marginalized communities, and provide a taxonomy describing these tensions.",
+  "abstractSha256": "ef03ddd1781dc52601fdc8840cc929d95095f4f5ec1593d31ce909ff36062a4c",
+  "arxivId": "2609.25491",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brooklyn Sheppard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anaelia Ovalle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adina Williams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Levent Sagun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文审计六个英语语音技术数据集，发现可测量的酷儿占比仅 0–1.4% 而不足以做稳健差异度量，并以两个酷儿社群语音库为对照，提出规模化与包容、效率与参与、开放与自主、静态类别与流动身份四组张力，且代价是现有众包与开放流程难以覆盖小而易受污名群体。",
+  "originalTitle": "Queer inclusion in speech datasets: An audit and taxonomy of practical tensions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25491.pdf",
+  "readerTitle": "开放收集为何仍数不出酷儿声音：六个语音数据集审计与四组实践张力",
+  "schemaVersion": 1
+}

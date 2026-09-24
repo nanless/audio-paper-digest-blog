@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26125",
+  "abstract": "Passive Acoustic Monitoring produces large archives whose recordings are clustered by deployment, season, station identifier, and acquisition configuration. We analyze 908,072 AIS-labeled 679-second recordings from 38 deployments, 20 Atlantic Canadian station identifiers, and 21 receiver positions. The AIS-contact prior varies by more than 200-fold, and per-deployment screening distributions require local interpretation. Bidirectional cross-season transfer over the 18 station identifiers observed in both seasons predicts station identity above the 5.56% uniform-chance level, with balanced accuracy of 15.9% for AIS-contact and 16.4% for no-AIS-contact recordings. The same descriptors predict the two hydrophone models at 74.1% and 85.6% balanced accuracy, respectively, but hydrophone model is strongly confounded with season and other deployment-level acquisition differences. On a retrospectively screened and capped benchmark of 54m507 recordings, repeated station-grouped holdout yields an ROC-AUC of 0.612 with a station-bootstrap 95% interval of 0.582 to 0.648, compared with 0.661 under a random-window diagnostic. Their paired difference is 0.049 (0.040 to 0.056). Removing raw energy changes unseen-station ROC-AUC from 0.612 to 0.603, while an exploratory training-station scale analysis is non-monotonic. These results show that random-window validation overstates transfer to unseen station identifiers in this corpus. They support dependence-aware validation and broader independent spatial sampling, while spatial-expert models remain a hypothesis rather than an established remedy.",
+  "abstractSha256": "d3ae649f42e91680aef3e792e40cab219312982f428d6d5b9d773fc305a66332",
+  "arxivId": "2609.26125",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Spadon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wayne Renaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Priyanka Aravindan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 908072 段 AIS 标注录音说明部署间先验差超 200 倍、随机窗口验证比未见站点验证高出配对 0.049 的 ROC-AUC，因而主张按站点分组验证并扩大独立空间采样，空间专家模型仍只是待验证假设。",
+  "originalTitle": "When Big Data Becomes a Curse: Spatial Heterogeneity and the Limits of Learning from Passive Acoustic Monitoring Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26125.pdf",
+  "readerTitle": "录音很多不等于见过很多海域：被动声监测中空间异质性如何抬高验证分数",
+  "schemaVersion": 1
+}

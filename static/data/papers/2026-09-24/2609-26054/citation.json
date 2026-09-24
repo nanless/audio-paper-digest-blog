@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26054",
+  "arxivId": "2609.26054",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tsz Yuet Yeung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zonglin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huili Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huiren Tao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kenneth MC Cheung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26054",
+  "originalTitle": "Benchmarking Open-Source Speech Emotion Recognition in Naturalistic Mandarin Spine Clinic Consultations: A Pilot Validation Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26054.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

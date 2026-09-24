@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27222v1",
+  "abstract": "Pneumonia is difficult to diagnose in older long-term care residents; multimorbidity and atypical presentations obscure signs, motivating operationally efficient objective testing. We analyzed multi-channel digital stethoscope recordings from 185 Japanese residents (73 pneumonia, 112 symptomatic without), using radiologist-confirmed chest X-rays and clinician diagnoses as supervisory signals that train convolutional neural networks, multimodal fusion, and channel-based variants with time-domain Grad-CAM interpretability. Models were evaluated with repeated patient-level cross-validation showing models with X-ray supervision outperformed clinician supervision (F1 0.729, accuracy 0.783 vs. F1 0.637, accuracy 0.711). Additionally, a three-channel selection protocol maintained performance (F1 0.736; accuracy 0.803), with two mid-thoracic sites ranking highest and Grad-CAM attention overlapping adventitious sounds. These findings indicate automated multi-channel lung-sound analysis can aid long-term care pneumonia diagnosis, with X-ray supervision being more reliable than clinical, and fewer channels preserving performance while lowering acquisition times.",
+  "abstractSha256": "02233c040b970c3891b73b60d3c3766689651182a8ebc36b5acad1ac2c71aa3f",
+  "arxivId": "2609.27222",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27222v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Nicholas Rasmussen"
+    },
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Oleg Zaslavsky"
+    },
+    {
+      "affiliations": [
+        "School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Zih-Ling Wang"
+    },
+    {
+      "affiliations": [
+        "School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Hongyu Yu"
+    },
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Joelle Fathi"
+    },
+    {
+      "affiliations": [
+        "Electrical Engineering, University of Washington Bothell, 17827 113 Ave NE, Bothell, WA, USA"
+      ],
+      "name": "Kaibao Nie"
+    },
+    {
+      "affiliations": [
+        "Virufy (The Covid Detection Foundation), Los Altos, CA, USA"
+      ],
+      "name": "Amil Khanzada"
+    },
+    {
+      "affiliations": [
+        "Institute of Medicine, University of Tsukuba, 1-1-1 Tenno-dai, Tsukuba, Ibaraki, Japan"
+      ],
+      "name": "Tomoko Ito"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对日本长期照护高龄有症状人群的六通道前胸数字听诊任务，论文用 X 线监督训练共享权重 ARP-N 卷积网络并在病人级重复交叉验证下比较临床诊断监督，最强证据是听诊单模态 XRAY 模型 F1 为.729、准确率为.783 而融合模型 AUC 为.791，代价是单中心 185 例与域漂移限制外推。",
+  "originalTitle": "Physiologically Informed Digital Auscultation for Pneumonia Detection in Long-term Care Residents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27222v1.pdf",
+  "readerTitle": "长期照护肺炎听诊：X 线监督与三通道前胸协议的稳定判别",
+  "schemaVersion": 1
+}

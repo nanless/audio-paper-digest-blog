@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25610",
+  "arxivId": "2609.25610",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhui Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biao Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liwei Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiqing Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjun He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25610",
+  "originalTitle": "SRF-SVB: Style-Consistent Singing Voice Beautifying via Rectified Flow",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25610.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

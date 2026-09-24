@@ -1,0 +1,30 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27230v1",
+  "arxivId": "2609.27230",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27230v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Stony Brook University",
+        "Electrical and Computer Engineering",
+        "Stony Brook, NY 11790 USA"
+      ],
+      "name": "Anton Selitskiy"
+    },
+    {
+      "affiliations": [
+        "University of Rochester",
+        "Electrical and Computer Engineering",
+        "Rochester, NY 14627 USA"
+      ],
+      "name": "David Millard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27230v1",
+  "originalTitle": "One-Step Voice Conversion by Learning kNN Transport in WavLM Space",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27230v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

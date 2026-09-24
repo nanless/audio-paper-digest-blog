@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27598v1",
+  "abstract": "Recent one-step text-to-audio (TTA) models substantially reduce inference cost, yet their generated distributions can still be improved through post-training. We propose DriftAudio, a distributional post-training method that adapts Drifting to pretrained one-step TTA generators. Applying Drifting condition-wise is challenging under free-form text conditioning, where only one or a few real samples are typically available for a particular condition. DriftAudio instead performs Drifting on the marginal audio distribution while retaining text-conditioned generation. The drifting field is estimated in a frozen audio feature space using resampled real samples, a rolling bank of generated samples, and the current batch of generated samples. The resulting Drifting field provides a detached training target for updating only the generator, keeping the original one-step inference procedure. On AudioCaps, starting from MeanAudio, DriftAudio reduces FAD and FD by 33.9% and 17.6%, respectively, while also improving KL and CLAP. Starting from FdAudio, it further reduces FAD, FD, and KL, with trade-offs in IS and CLAP. These results demonstrate the effectiveness of marginal distributional post-training for one-step TTA generation.",
+  "abstractSha256": "4372ceca0f560dfff1400d714a4864e5cbfa72175bc6c65230b59940142d78d6",
+  "arxivId": "2609.27598",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27598v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sipei Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对自由文本下每条条件只有极少真实样本而难以估计条件分布的问题，DriftAudio 保留文本条件生成而在冻结特征空间匹配边际分布，从 MeanAudio 出发把 FAD 从 1.68 降到 1.11、FD 从 15.43 降到 12.71，从 FdAudio 出发把 FAD 从 1.22 降到 0.99，代价是部分起点上的 IS 与 CLAP 出现回落。",
+  "originalTitle": "DriftAudio: Marginal Drifting for Distributional Post-Training of One-Step Text-to-Audio Generators",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27598v1.pdf",
+  "readerTitle": "不为每句话建分布：DriftAudio 用边际漂移做一步音频的分布后训练",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26648",
+  "arxivId": "2609.26648",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26648",
+  "originalTitle": "ROAM-ASD: Robust Open-World Active Speaker Detection with Flexible Multimodal Fusion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26648.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

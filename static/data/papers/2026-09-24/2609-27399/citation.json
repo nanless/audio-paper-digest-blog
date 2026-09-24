@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27399v1",
+  "arxivId": "2609.27399",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27399v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyoeun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27399v1",
+  "originalTitle": "Forget who you Forgot: Speaker Unlearning to Prevent Re-Identification in Zero-Shot Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27399v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

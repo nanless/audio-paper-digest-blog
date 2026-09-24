@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27195v1",
+  "arxivId": "2609.27195",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27195v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Boston University, Boston, MA, USA"
+      ],
+      "name": "Vsevolod Kovalev"
+    },
+    {
+      "affiliations": [
+        "Princeton University, Princeton, NJ, USA"
+      ],
+      "name": "Pranay Manocha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27195v1",
+  "originalTitle": "Quieter Than the Room: Representation Drift and Task Robustness in Speech Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27195v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26427",
+  "arxivId": "2609.26427",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zixiang Wan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Delin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haihua Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youxi Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuexian Zou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26427",
+  "originalTitle": "Persistent Delivery Optimization for Streaming Speech-to-Text Translation with Revisions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26427.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27260v1",
+  "arxivId": "2609.27260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27260v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geeth George"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ameenudeen P E"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hrishikesh H Pillai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sriram Ganapathy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27260v1",
+  "originalTitle": "JASPER: Joint Audio and Speech Pre-trained Encoder Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27260v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

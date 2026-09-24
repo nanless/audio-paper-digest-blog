@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28008v1",
+  "arxivId": "2609.28008",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.28008v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joaquim Cavalcante"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yicheng Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adriel Trajano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuri de Malheiros"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thais Gaudencio"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28008v1",
+  "originalTitle": "MIDIBack: Harmony-Aware Singing Pitch Correction via Joint Vocal-Accompaniment Symbolic Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28008v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

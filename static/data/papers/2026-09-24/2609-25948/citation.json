@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25948",
+  "arxivId": "2609.25948",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Robert Sutherland"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom",
+        "South Westphalia University of Applied Sciences, Iserlohn, Germany"
+      ],
+      "name": "Stefan Goetze"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Jon Barker"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25948",
+  "originalTitle": "Challenges of Multi-Speaker Extraction for Real Conversational Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25948.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

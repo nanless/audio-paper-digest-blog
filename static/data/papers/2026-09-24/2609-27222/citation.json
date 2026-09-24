@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27222v1",
+  "arxivId": "2609.27222",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27222v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Nicholas Rasmussen"
+    },
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Oleg Zaslavsky"
+    },
+    {
+      "affiliations": [
+        "School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Zih-Ling Wang"
+    },
+    {
+      "affiliations": [
+        "School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Hongyu Yu"
+    },
+    {
+      "affiliations": [
+        "Biobehavioral Nursing & Health Informatics, School of Nursing, University of Washington, 1959 NE Pacific St, Seattle, WA, USA"
+      ],
+      "name": "Joelle Fathi"
+    },
+    {
+      "affiliations": [
+        "Electrical Engineering, University of Washington Bothell, 17827 113 Ave NE, Bothell, WA, USA"
+      ],
+      "name": "Kaibao Nie"
+    },
+    {
+      "affiliations": [
+        "Virufy (The Covid Detection Foundation), Los Altos, CA, USA"
+      ],
+      "name": "Amil Khanzada"
+    },
+    {
+      "affiliations": [
+        "Institute of Medicine, University of Tsukuba, 1-1-1 Tenno-dai, Tsukuba, Ibaraki, Japan"
+      ],
+      "name": "Tomoko Ito"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27222v1",
+  "originalTitle": "Physiologically Informed Digital Auscultation for Pneumonia Detection in Long-term Care Residents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27222v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

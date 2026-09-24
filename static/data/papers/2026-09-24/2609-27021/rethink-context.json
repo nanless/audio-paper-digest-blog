@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27021v1",
+  "abstract": "Linear arrays of omnidirectional microphones produce beampatterns that are symmetric about the array axis. For these arrays, a beamformer is considered steerable if its beampattern maintains the same shape in the semicircular plane across all look directions from 0° to 180°. For dual-microphone arrays, conventional differential beamformers are generally non-steerable and restricted to first-order, which significantly limits spatial selectivity. To address these limitations, this study presents a neural differential beamformer (NDBF) with a dual-microphone array. The contributions are as follows: (i) NDBF is steerable; (ii) NDBF achieves high-order frequency-invariant beampatterns; and (iii) NDBF enables stereo recording using only two closely spaced omnidirectional microphones. Experimental results demonstrate that NDBF outperforms existing methods while overcoming the limitations of classical differential beamforming.",
+  "abstractSha256": "9aa215ffd5e24a23ffb3c8ad66ec3e15c83d30bd87fe15caece970e9004516d3",
+  "arxivId": "2609.27021",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27021v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weilong Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emanuël A. P. Habets"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对双麦克风线性阵列只能做一阶、难以保持波束形状随指向平移的问题，该研究用深度网络直接估计两通道复权值去逼近预设的一阶与三阶心形差分图案，在端射方向取得高于经典差分与参数化方法的信号失真比，同时保持跨指向与跨频率的形状一致，并以左右各一个转向模型演示立体声录制，代价是训练依赖无混响仿真与固定阵列几何。",
+  "originalTitle": "Dual-Microphone Steerable High-Order Neural Differential Beamformer",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27021v1.pdf",
+  "readerTitle": "只用两个全向麦克风做出可转向高阶差分波束：神经差分波束形成器如何学图案",
+  "schemaVersion": 1
+}

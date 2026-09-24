@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25864",
+  "abstract": "Visual object removal can eliminate a target from video frames, yet its acoustic trace persists in the soundtrack, causing obvious audio-visual inconsistency. Existing video inpainting models operate solely on pixels, while audio editing models, especially for the sound removal task, are typically driven by text and therefore rely on limited single-modal control, which is less effective than multimodal guidance that provides stronger semantic grounding and temporal synchronization cues. In this paper, we present Text-Visual Guided Sound Removal (TV-AudioRemover), a target sound removal framework that leverages the visually edited video together with a natural-language instruction to suppress the sound associated with the removed visual object from the original audio mixture. To acquire high-quality training data, we devise a pipeline to construct a million-scale dataset of single-object audio-visual aligned samples, from which we synthesize mixture-target pairs customized for model training. To effectively leverage visual context and follow instruction intent, we augment the model architecture with task tokens, generalizable instruction modeling, and modality-specific global guidance. We further adopt multi-task training to strengthen task-role comprehension, and employ a hard-mixture curriculum that leverages semantically similar acoustic mixtures during fine-tuning to enhance fine-grained source discrimination. To support evaluation, we present AV-Remove-Bench, a comprehensive audio-visual object removal benchmark, along with dedicated objective metrics and an MLLM-based evaluation protocol. Experiments demonstrate that our method achieves state-of-the-art performance on both subjective and objective metrics. Project page: this https URL.",
+  "abstractSha256": "925a767832cca9209bcf8d632f820e7fe1cdf9b57670ede10908452de30c0a52",
+  "arxivId": "2609.25864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "音视频声源分离",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-source-separation",
+          "label": "音视频声源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "音视频声源分离",
+      "primaryTaskId": "task.av-source-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Xinyue Guo"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jianxuan Yang"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Daiguo Zhou"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jiagao Hu"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Yuxuan Chen"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jian Luan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对视频物体移除后原声残留导致视听不一致的问题，TV-AudioRemover 用已编辑视频加文字指令做选择性声移除，并用百万级单物体对齐数据、多任务与由易到难的两阶段混合训练支撑细粒度区分，其代价是对上游视觉编辑质量和纠缠声源仍有依赖。",
+  "originalTitle": "TV-AudioRemover: Joint Text-Visual Guided Sound Removal with Multi-Task Hard-Mixture Curriculum",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25864.pdf",
+  "readerTitle": "删掉画面还要删掉声音：文本与已编辑视频如何共同指定要压制的声源",
+  "schemaVersion": 1
+}

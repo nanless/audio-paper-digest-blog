@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26956v1",
+  "arxivId": "2609.26956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.26956v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Richa Namballa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Rigaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Romain Hennequin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26956v1",
+  "originalTitle": "A Stem-Agnostic Approach to Hybrid AI Music Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26956v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

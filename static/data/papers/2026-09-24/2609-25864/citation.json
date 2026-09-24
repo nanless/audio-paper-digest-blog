@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25864",
+  "arxivId": "2609.25864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Xinyue Guo"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jianxuan Yang"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Daiguo Zhou"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jiagao Hu"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Yuxuan Chen"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc."
+      ],
+      "name": "Jian Luan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25864",
+  "originalTitle": "TV-AudioRemover: Joint Text-Visual Guided Sound Removal with Multi-Task Hard-Mixture Curriculum",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25864.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

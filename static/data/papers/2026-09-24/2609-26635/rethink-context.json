@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26635",
+  "abstract": "Isolating a target singing voice from a music video remains challenging, particularly in the presence of multiple vocalists and dense instrumental accompaniment. We propose MambaVoice, a lightweight audiovisual framework that leverages a hybrid Mamba--Transformer architecture for targeted singing voice separation. The model jointly encodes audio and visual streams using an attention-based band-split audio encoder and a spatio-temporal graph convolutional network (ST-GCN) for facial motion features. These modalities are fused through a multiplicative gating mechanism, enabling visual cues to selectively modulate audio representations. The fused features are processed by a hybrid backbone that combines Transformer self-attention with Selective State Space Models (SSMs), achieving efficient long-range temporal modeling with linear complexity. We evaluated MambaVoice on the Acappella and URSing datasets under challenging conditions, including mixtures with interfering singers. At 16.2 million parameters, the model demonstrates comparable performance, achieving 14.18 dB SDR on Acappella and strong cross-dataset performance on URSing, comparable to larger models at a fraction of the parameter count. These findings highlight the effectiveness of hybrid SSM--attention architectures for scalable, efficient audiovisual source separation, suggesting they are well-suited as lightweight components within larger pipelines. We conduct a perceptual study that further supports our improvements in objective metrics. We provide our implementation online.",
+  "abstractSha256": "7d2c460ff6d3eb6a47073e2ff08d5588afdd5c8189cf4847296cab16ee532246",
+  "arxivId": "2609.26635",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音视频声源分离",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-source-separation",
+          "label": "音视频声源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "音视频声源分离",
+      "primaryTaskId": "task.av-source-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adithi Shankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gopika Krishnan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gloria Haro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多人演唱与密集伴奏下的目标歌声分离，MambaVoice 用对数分频音频编码加面部动作门控做条件，再以先 Mamba 后 Transformer 的混合主干建模，报告在 Acappella 未见未闻测试上以 16.2M 参数取得 14.18 dB SDR，并在 URSing 跨域与推理耗时上给出对照，代价是强干扰下仍略低于 VoViT 基线且主观评测样本很小。",
+  "originalTitle": "MambaVoice: Lightweight Audiovisual Singing Voice Separation Via A Hybrid Mamba-Transformer Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26635.pdf",
+  "readerTitle": "先压缩时间再做全局融合：MambaVoice 的轻量视听歌声分离",
+  "schemaVersion": 1
+}

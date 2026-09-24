@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26255",
+  "abstract": "Text-to-speech systems are increasingly used for drama dubbing, yet evaluation protocols remain sentence-level, leaving critical scene-level behaviors insufficiently measured. We present SceneTTS-Bench, a benchmark that evaluates TTS along three dimensions: timbre consistency across character turns, emotional expressiveness on high-tension utterances, and rhythm coherence under segmented long-form synthesis. The corpus comprises real-world and generated drama scripts totaling 160 bilingual scenes and approximately 10,300 utterances, with real-world scripts serving as the primary source (100 scenes) and generated scripts as a supplementary source (60 scenes), demonstrating the framework&#39;s extensibility through synthetic data augmentation. A backend-agnostic Canonical Intermediate Representation ensures fair cross-system comparison. Three automatic pipelines produce per-utterance diagnostics: Speaker Consistency Score for timbre-drift detection, Under-Acting Ratio for under-acting identification, and Rate Discontinuity Ratio for rate-discontinuity quantification. Experiments on four TTS systems confirm that each system exhibits distinct weaknesses and that scene-level rankings diverge substantially from sentence-level metrics. Benchmark resources are publicly available at this https URL .",
+  "abstractSha256": "841493a79c0921f9e8a92b77844a9eded43189ab2cd392f748f08355850500f8",
+  "arxivId": "2609.26255",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.dubbing",
+          "label": "语音配音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Yizhong Geng"
+    },
+    {
+      "affiliations": [
+        "Beijing DeepLogic Intelligence Technology Co., Ltd. , Beijing , China"
+      ],
+      "name": "Yanliang Li"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Jinghan Yang"
+    },
+    {
+      "affiliations": [
+        "University of California , USA"
+      ],
+      "name": "Tianhan Jiang"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Yingming Gao"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications , Beijing , China"
+      ],
+      "name": "Ya Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对戏剧配音中角色跨轮音色漂移、高潮台词演绎不足与长句分段节奏断裂三类场景级失效，SceneTTS-Bench 用统一输入协议与 SCS、UAR、RDR 三条自动诊断链在 160 场双语剧本上测出四套系统的互补短板，且场景级排序与句级可懂度排序明显背离。",
+  "originalTitle": "SceneTTS-Bench: A Benchmark for Scene-Level TTS in Drama Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26255.pdf",
+  "readerTitle": "从单句朗读到整场演戏：SceneTTS-Bench 如何量角色稳定、演技与节奏",
+  "schemaVersion": 1
+}

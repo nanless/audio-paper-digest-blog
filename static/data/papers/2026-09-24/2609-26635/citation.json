@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26635",
+  "arxivId": "2609.26635",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adithi Shankar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gopika Krishnan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gloria Haro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Serra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26635",
+  "originalTitle": "MambaVoice: Lightweight Audiovisual Singing Voice Separation Via A Hybrid Mamba-Transformer Model",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26635.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

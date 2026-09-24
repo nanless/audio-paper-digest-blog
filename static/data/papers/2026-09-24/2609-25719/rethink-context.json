@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25719",
+  "abstract": "Audio watermarking is increasingly important for tracing generated speech. Several audio watermarking methods have been proposed to embed the watermark in various domains, such as waveform, timbre feature, or latent representations, for making the embedded watermark robust against traditional digital signal processing (DSP) attacks. On the other hand, modern neural codecs introduce a different threat from DSP attacks: they resynthesize speech through quantized acoustic representations and can remove the embedded watermark evi- dence that is not aligned with codec-preserved structure. In this paper, we propose NeuMark, a codec-latent audio watermarking framework that embeds watermark evidence into SpeechTok- enizer acoustic tokens to address this resynthesis threat. NeuMark uses cross-attention to inject a 16-bit message across residual vector quantization (RVQ) layers, distributing the watermark over codec-aligned latent structure. Experimental results show that NeuMark substantially improves robustness under neural- codec resynthesis while supporting both watermark detection and message recovery. We also analyze the trade-off between reconstruction-referenced transparency and original-referenced robustness.",
+  "abstractSha256": "710800100d355fe07ee209581ec51f2005ee4a68d4fd50578d9c1d6c0426bd97",
+  "arxivId": "2609.25719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen-Chin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomoki Toda"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对神经编解码器重合成会抹掉波形域水印的问题，NeuMark 把 16 比特消息分布嵌入 SpeechTokenizer 的 8 路残差量化潜变量并用失真增强训练检测与解码，其代价是潜变量方法的透明度受限于编解码器自身重建质量并需区分原始参考与重建参考。",
+  "originalTitle": "NeuMark: Neural Codec Resynthesis-Robust Audio Watermarking in the Codec Latent Space",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25719.pdf",
+  "readerTitle": "把水印藏进编码器能保住的结构：NeuMark 对神经编解码器重合成的应对",
+  "schemaVersion": 1
+}

@@ -1,0 +1,140 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26488",
+  "abstract": "While Chain-of-Thought (CoT) reasoning has improved the capability of language models, directly applying it to Spoken Language Models (SLMs) may introduce long silent intervals under the serial &#34;think-then-speak&#34; paradigm, disrupting real-time spoken interaction. To address this issue, we propose an asynchronous think-aloud framework for reasoning-based SLMs within the Thinker-Talker architecture. The framework maintains a primary reasoning stream for logical deduction and a lightweight think-aloud stream that generates short, task-grounded progress utterances conditioned on the user input and the evolving reasoning state. A dynamic balance strategy coordinates the two streams at runtime, triggering additional think-aloud speech to avoid silent gaps and canceling pending utterances when the final response becomes ready. Experiments on spoken reasoning and question-answering benchmarks show that our approach substantially reduces user-audible silence during reasoning while maintaining answer accuracy comparable to that of a serial &#34;think-then-speak&#34; baseline, demonstrating the potential of asynchronous think-aloud for responsive interaction in SLMs.",
+  "abstractSha256": "19d80f9394b126038a830ee7dbabf432f0f82dd966d67c520facd1b6599fa24e",
+  "arxivId": "2609.26488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junyi Ao"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Kainan Peng"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Mingbo Ma"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Shun Zhang"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Zhenyu Tang"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xutai Ma"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xiang Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Yinghao Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yuancheng Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Zhizheng Wu"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Qing He"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xubo Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对串行先想后说导致长时间无声等待的问题，该工作用推理主路加轻量报幕支路的异步结构，在保持串行推理问答精度基本相当的同时，把用户可感知的静音大幅压低，代价是需要额外的报幕生成与动态调度。",
+  "originalTitle": "Spoken Language Models that Think Aloud",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26488.pdf",
+  "readerTitle": "边想边说：用异步进度语音盖住推理静音的口语模型",
+  "schemaVersion": 1
+}

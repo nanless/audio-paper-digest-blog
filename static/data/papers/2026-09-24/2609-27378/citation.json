@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27378v1",
+  "arxivId": "2609.27378",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27378v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kian Shamsaie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iman Modarressi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27378v1",
+  "originalTitle": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27378v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

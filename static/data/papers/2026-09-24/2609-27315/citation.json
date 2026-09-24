@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27315v1",
+  "arxivId": "2609.27315",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27315v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lahiru Samarakoon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongxu Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27315v1",
+  "originalTitle": "Beyond DER: Speaker Counting in Crowded End-to-End Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27315v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

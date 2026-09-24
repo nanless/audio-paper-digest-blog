@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27399v1",
+  "abstract": "Recent zero-shot text-to-speech (ZS-TTS) systems can reproduce a speaker's voice with high fidelity from only a few seconds of reference speech, raising concerns over unauthorized voice cloning and impersonation. Speaker identity unlearning has recently emerged as an approach to selectively suppress this capability for speakers who opt out while preserving synthesis capability for other speakers. Although existing approaches reduce speaker similarity, preventing re-identification often faces severe degradation of speech quality. Motivated by this observation, we propose GUARD, a lightweight speaker identity unlearning framework that combines a learned speaker gate with speaker-agnostic activation steering on a frozen TTS backbone. The steering vectors are optimized using group-relative reward optimization to shift outputs from forget speakers toward population-level impostor similarity while preserving intelligibility and speech naturalness. On CosyVoice2, GUARD reduces forget-speaker similarity from 0.541 to 0.103 and re-identification accuracy in a 150-speaker gallery from 73.5% to 0.5%, while preserving retain-speaker reproduction. The results demonstrate that similarity reduction alone may not fully characterize successful speaker identity unlearning and highlight re-identification as a complementary criterion for its evaluation.",
+  "abstractSha256": "0be53bc9e247fd02df61c020fc972bd16be0b1875a2b5941d4daec7d77e873b3",
+  "arxivId": "2609.27399",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27399v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyoeun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对零样本语音合成中退出说话人仍可被画廊检索重新识别的问题，GUARD 在冻结主干上用门控加逐层激活 steering 并以生成后奖励把遗忘相似度推向人群冒名者水平，在 CosyVoice2 上把遗忘相似度从 0.541 降到 0.103、150 人画廊重识别从 73.5% 降到 0.5%，代价是保留集与可懂度基本不变但新增门控与奖励调参依赖。",
+  "originalTitle": "Forget who you Forgot: Speaker Unlearning to Prevent Re-Identification in Zero-Shot Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27399v1.pdf",
+  "readerTitle": "不是越不像越好：把遗忘相似度锚定到陌生人水平的说话人遗忘",
+  "schemaVersion": 1
+}

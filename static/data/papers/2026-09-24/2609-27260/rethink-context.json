@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27260v1",
+  "abstract": "Self-supervised learning (SSL) for speech and audio has largely progressed along separate tracks: speech models emphasise time-domain prediction, whereas audio representation learning has focused on time-frequency patterns. This separation creates a compatibility gap, limiting cross-domain generalization. In this work, we introduce JASPER, Joint Audio and Speech Pre-trained Encoder Representations, a framework that augments speech-pretrained models with time-frequency objectives. Specifically, JASPER performs masked prediction of temporal and spectral targets over long audio segments, enabling spectro-temporal representation learning of speech and audio signals. The proposed method consistently outperforms multiple baselines and existing speech/audio encoders on diverse speech, audio, and music tasks, demonstrating the effectiveness of unified spectro-temporal modeling.",
+  "abstractSha256": "922b4cbe537111678d0b571adf920ba8082ecf7f52e86b3a77f7996e9a8ed6e1",
+  "arxivId": "2609.27260",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27260v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Geeth George"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ameenudeen P E"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hrishikesh H Pillai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sriram Ganapathy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音模型泛化不到环境音、频谱模型保不住语音时序的问题，JASPER 在共享 Transformer 上联合预测时域伪标签与频域块标签，原文报告 2000 小时下平均准确率 81.74% 与 XARES-LLM 两轨 0.66 和 0.50 的领先均值，但频谱权重极偏向 0.01 且推理仍只用波形输入。",
+  "originalTitle": "JASPER: Joint Audio and Speech Pre-trained Encoder Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27260v1.pdf",
+  "readerTitle": "给波形编码器补上频谱课：JASPER 的时频联合掩码预训练",
+  "schemaVersion": 1
+}

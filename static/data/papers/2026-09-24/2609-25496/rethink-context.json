@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25496",
+  "abstract": "In this paper, we motivate the need for a participatory speech dataset creation framework through a case study of the LGBTQIA+, or queer, community - a community with documented concerns about AI and reported harms, including attempts to develop &#39;gaydar&#39; technologies that purportedly identify individuals as queer. We review common speech data collection practices, why these methods may be unsuitable for engaging with queer speakers, and discuss previous efforts in participatory AI with queer community engagement, as well as participatory endeavours specific to speech data collection for other marginalized communities. From this review, we develop a conceptual framework for participatory speech data curation by, for, and with marginalized communities drawing on insights from co-design and knowledge sharing. We propose a framework comprising overlapping and two-way processes of defining a community, project formulation, modes of participation, and personal autonomy.",
+  "abstractSha256": "bca775f3d07c0d391aa3efde88fa0ceb607945687c579ac074b8eed8eb93663c",
+  "arxivId": "2609.25496",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "理论研究",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brooklyn Sheppard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anaelia Ovalle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adina Williams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Levent Sagun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "本文以酷儿群体为案例指出众包难以建立长期信任与性别多样覆盖，进而提出社区、项目制定、参与方式与个人自主权四阶段双向框架，其代价是协调成本上升且本文未做新的模型训练与定量验证。",
+  "originalTitle": "Towards participatory speech dataset curation: A queer case study and conceptual framework",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25496.pdf",
+  "readerTitle": "谁来定义酷儿语音数据：从众包采集到共同设计的策展转向",
+  "schemaVersion": 1
+}

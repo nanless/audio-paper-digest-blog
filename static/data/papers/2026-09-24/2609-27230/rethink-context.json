@@ -1,0 +1,71 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27230v1",
+  "abstract": "Voice conversion (VC) systems fall into two families: non-parametric embedding-space methods, which need no trained model but degrade on short target utterances, and spectrogram-based neural architectures, which achieve strong quality via multi-module pipelines with tens of millions of parameters. We propose kNN-FM-VC, a single conditional flow-matching network that learns to approximate the kNN-VC mapping between WavLM embedding distributions of source and target speakers, replacing explicit pointwise kNN matching with a neural regressor trained on kNN-generated pairs. The model is conditioned on the target speaker via cross-attention and FiLM, and trained under three Gaussian conditional paths (Schrödinger bridge, straight line, and constant-variance Gaussian tube), enabling few-step sampling. Unlike Phoneme Hallucinator, which uses an upsampling stage followed by kNN matching, our 13M-parameter model performs conversion with a single learned network and supports one-step inference. On LibriSpeech, the one-step Gaussian Bridge achieves lower WER and higher estimated speech quality than FreeVC and Phoneme Hallucinator. Relative to kNN and kDOT, it substantially reduces WER.",
+  "abstractSha256": "040604fc95cda0f652852828870659c92b48783105ea8d43ddd255c99b93b358",
+  "arxivId": "2609.27230",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27230v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Stony Brook University",
+        "Electrical and Computer Engineering",
+        "Stony Brook, NY 11790 USA"
+      ],
+      "name": "Anton Selitskiy"
+    },
+    {
+      "affiliations": [
+        "University of Rochester",
+        "Electrical and Computer Engineering",
+        "Rochester, NY 14627 USA"
+      ],
+      "name": "David Millard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用条件流匹配网络回归 kNN 生成的源到伪目标位移，以交叉注意力与 FiLM 注入目标说话人条件并比较三条高斯路径，在 LibriSpeech 上以单步推理改善可懂度与估计质量，代价是目标说话人验证相似度低于 kNN 与音素幻觉器。",
+  "originalTitle": "One-Step Voice Conversion by Learning kNN Transport in WavLM Space",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27230v1.pdf",
+  "readerTitle": "把逐帧检索换成一步速度场：在 WavLM 空间学习 kNN 传输",
+  "schemaVersion": 1
+}

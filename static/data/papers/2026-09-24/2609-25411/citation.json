@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25411",
+  "arxivId": "2609.25411",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biel Tura Vecino"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoach Lacombe"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julian Weber"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zbigniew Łatka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haitong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Logan Hart"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eren Gölge"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25411",
+  "originalTitle": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25411.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

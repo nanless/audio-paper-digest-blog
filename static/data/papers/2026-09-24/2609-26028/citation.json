@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26028",
+  "arxivId": "2609.26028",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongjin Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiasheng Kuang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuyu Fang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guowu Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiang Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26028",
+  "originalTitle": "REVE: Efficient Hallucination Correction for Large Audio-Language Models via Reused Encoder States",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26028.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27489v1",
+  "abstract": "This paper introduces Passing, an interactive audiovisual installation that generates an endless journey from a single continuous monorail-window recording by reconstructing it as a spatiotemporal volume. Rather than replaying the footage linearly, the work resamples its spatial and temporal structure along nonlinear trajectories, producing a continuously passing landscape whose depth, speed, and temporal order become unstable. A camera-based viewer-presence detection system estimates whether a viewer is present in the viewing zone and uses this presence state to influence transitions among rendered video sequences. The resulting video stream is fed into SpecMaskFoley, a real-time video-to-audio synthesis model that generates a synchronized soundscape for the reconfigured image. The model is not used to reconstruct an objectively correct soundtrack, but functions as a speculative listener, proposing a possible auditory interpretation of a world whose conventional spatial and temporal premises have been disrupted. Passing distributes creative agency across the artist, who defines the rules of spacetime reconstruction; the AI model, which interprets the emergent visual flow as sound; and the audience, whose embodied presence influences the audiovisual trajectory. Through this structure, the work investigates how authorship and listening may be negotiated among human intention, machine inference, and audience interpretation. Artwork page: https://ryufurusawa.com/passing",
+  "abstractSha256": "31f0f10bc27fe3258a809156eb339fdaad7cf37ba162d815cfcd97721a7350bd",
+  "arxivId": "2609.27489",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27489v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-interaction",
+          "label": "音视频交互"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Akira Takahashi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Chihiro Nagashima"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Zhi Zhong"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Shusuke Takahashi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Passing 把一段多摩单轨车窗连续录像堆成时空体并沿非线性截面重采样出无尽画面，再用去掉视觉语义分支、只留时间对齐与车内环境声语义锚定的 SpecMaskFoley 实时生成同步声，代价是最终展览声景没有可复算的客观正确性指标，只能靠现场稳定性和艺术协商来收敛。",
+  "originalTitle": "Passing: An Endless Journey through Reconstructed Spacetime with AI-Generated Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27489v1.pdf",
+  "readerTitle": "当时间轴变成可以斜切的体：Passing 如何把单段车窗录像走成无尽旅程",
+  "schemaVersion": 1
+}

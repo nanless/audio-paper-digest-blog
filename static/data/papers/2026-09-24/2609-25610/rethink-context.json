@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25610",
+  "abstract": "Singing voice beautifying (SVB) aims to correct pitch and rhythm of amateur singing while enhancing vocal quality, preserving lyrics and the singer&#39;s timbre. Existing methods, however, suffer from limited generation quality and efficiency, and tend to neglect the preservation of the singer&#39;s style. We propose SRF-SVB, a style-consistent model for SVB via rectified flow, which achieves high-fidelity and efficient beautification covering pitch and rhythm correction. Furthermore, we design a context-guided masked mel-spectrogram inpainting mechanism that effectively preserves the amateur singer&#39;s style, including unique timbre and expressive patterns. Experiments on both English and Chinese test sets show that SRF-SVB outperforms baseline models in most objective and subjective metrics.",
+  "abstractSha256": "eb699ce58379e240fcd501b5b202188837d506dbc4797d5a8b6125d3775eb3cd",
+  "arxivId": "2609.25610",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhui Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Biao Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liwei Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiqing Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjun He"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对业余歌声跑调抢拍又要保留歌词与本嗓风格的问题，论文用整流流做梅尔谱补全并以业余谱作上下文约束，最强证据是中英双测试集上音准与音色相似度同时领先，代价是英文内容错误率略升与发音清晰度偶发受损。",
+  "originalTitle": "SRF-SVB: Style-Consistent Singing Voice Beautifying via Rectified Flow",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25610.pdf",
+  "readerTitle": "修音准节奏又不换嗓：整流流如何把遮罩补全做成风格保持的美化",
+  "schemaVersion": 1
+}

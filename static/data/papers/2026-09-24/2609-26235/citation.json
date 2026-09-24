@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26235",
+  "arxivId": "2609.26235",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Bangshuo Zhu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore , Singapore"
+      ],
+      "name": "Yuxin Cao"
+    },
+    {
+      "affiliations": [
+        "Duke University , USA"
+      ],
+      "name": "Weifei Jin"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Fusen Guo"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Huadong Mo"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Jingling Xue"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Wei Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26235",
+  "originalTitle": "KeyBound: Keyed and Host-Bound Learned Audio Watermarking for Speech Provenance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26235.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

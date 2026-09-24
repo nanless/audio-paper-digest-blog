@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27094v1",
+  "abstract": "Automatic tagging is a core task in Music Information Retrieval (MIR), yet most tagging systems exploit only audio. Live music performance is inherently multimodal, as semantic labels such as instruments, regional styles, and dance forms are encoded simultaneously across acoustic, visual, and embodied performance cues. This is especially true of culturally specific repertoires such as Greek traditional music, which remain underrepresented in MIR benchmarks. In this paper, we investigate whether the use of dancer pose provides complementary information for automatic tagging in Greek traditional music beyond audio. Using the Lyra dataset, we extend prior audio-only work by extracting aligned video features and pose-derived skeleton streams, enabling an experimental setting for multimodal auto-tagging. We further introduce an automated pipeline for extracting primary-dancer skeleton sequences from in-the-wild dance footage, combining dance-scene detection, multi-person tracking, dancer selection, pose estimation, and quality filtering. We compare unimodal, all bimodal combinations, and trimodal systems using multiple fusion strategies. Audio remains the strongest single modality (AST: macro ROC-AUC 0.821), while skeletons, though weak in isolation, enhance performance through multimodal fusion. The best trimodal system improves macro ROC-AUC by about 4 percentage points over the strongest audio baseline.",
+  "abstractSha256": "06119afe04401860f98dbf6c2b8ba4062c757e70c51f8e3fd813228bb5d862fd",
+  "arxivId": "2609.27094",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27094v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexandros Alexiou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charilaos Papaioannou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexandros Potamianos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在 Lyra 舞蹈子集上用音频、视频、骨架三模态做 28 标签自动打标，报告最强三模态门控融合宏 ROC-AUC 为 0.864，超过最强音频单模态 0.821，但骨架单模态仅 0.586 且约半数片段缺有效姿态。",
+  "originalTitle": "Pose-Aware Multimodal Automatic Tagging for Greek Traditional Music",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27094v1.pdf",
+  "readerTitle": "舞者姿态能给希腊传统音乐打标签补上音频听不到的那部分吗",
+  "schemaVersion": 1
+}

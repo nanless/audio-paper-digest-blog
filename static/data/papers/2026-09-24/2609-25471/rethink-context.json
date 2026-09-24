@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25471",
+  "abstract": "Semi-supervised federated learning (SSFL) trains models on clients&#39; unlabeled data using a teacher to generate pseudo-labels, with a small labeled seed dataset on the server. Automatic Speech Recognition (ASR) is particularly fragile here: pseudo-label errors compound across the output sequence and across training rounds into divergence, leaving a large gap to fully-supervised FL. We show that closing this gap turns on two coupled design axes -- the teacher (which model generates the pseudo-labels) and the anchor (the server-side updates on labeled data that stabilize training). On the teacher axis, a per-client online teacher (each client&#39;s own evolving model) diverges on its own, but once stabilized it matches or beats the broadcast global teacher (one server model, fixed within a round) -- decisively in-domain and competitively under domain shift. As the seed grows stronger and the online teacher&#39;s advantage narrows, a transitioning teacher (global $\\rightarrow$ online at round $r$) matches or beats both. On the anchor axis, the server must keep training on labeled data between rounds -- otherwise the online teacher drifts -- and this interleaving, more than the seed model, governs convergence. The two axes are inseparable: aggressive teacher choices pay off only once the anchor stabilizes training, which is highly sensitive to data augmentation and batch size -- the settings that govern how much input and gradient noise the server injects. How much stabilization is needed is domain-dependent, governed by the dispersion of the seed data and its overlap with client data. These findings yield guidelines for SSFL in ASR training, improving over the strongest prior method on 9 of 11 pairs, by $20.8\\%$ on average in-domain and $10.0\\%$ cross-domain, narrowing the gap to fully-supervised FL.",
+  "abstractSha256": "c496b038e24a324a93849cf2eac4398d63c547b8913cff44d11e04d471268cf8",
+  "arxivId": "2609.25471",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Wonho Bae"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Zakaria Aldeneh"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Martin Pelikan"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Jan \"Honza\" Silovsky"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Tatiana Likhomanenko"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Sheikh Shams Azam"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文研究服务器只有少量标注种子、客户端只有无标注语音的半监督联邦 ASR，用每客户端在线教师打伪标签加轮间服务器有监督更新做锚点，最强证据是稳定后在线教师在域内和多数跨域上持平或超过全局教师，代价是必须把服务器增强强度和批量调进稳定区间否则发散。",
+  "originalTitle": "A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25471.pdf",
+  "readerTitle": "谁来打标签、谁来稳住训练：半监督联邦语音识别的在线教师与服务器锚点",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26937v1",
+  "abstract": "Temporal envelopes carry cues critical to speech intelligibility, yet ASR frontends based on log-mel spectrograms do not explicitly model continuous sub-band envelope structure. This limitation is particularly acute for children's speech, where high acoustic variability demands robust feature representations. We propose a modular time-domain frontend that decomposes speech into sub-band envelopes using mel-spaced windowed-sinc filters and the Hilbert transform, with learnable per-channel energy normalization (PCEN) jointly optimized with the Whisper model. On the MyST children's speech corpus, systematic ablations identify full-band windowed-sinc filters, Hilbert envelopes, a 25 Hz smoothing cutoff, and learnable PCEN as the best configuration. Under the same Whisper-small fine-tuning setup, the frontend reduces WER from 13.16% to 11.08%, a 15.8% relative reduction over the log-mel baseline, and outperforms the evaluated Kid-Whisper checkpoint on the same cleaned test split. These results show that temporal-envelope representations and learnable frontend normalization are effective complements to backend adaptation for children's ASR.",
+  "abstractSha256": "a24c5be68bd227319ce365ea898aeab609a2e3c02e003ca677ff19043250cb62",
+  "arxivId": "2609.26937",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.26937v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Edem Ahadzi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruchi Pandey"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomi H. Kinnunen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对儿童语音声学变异大而 Whisper 固定对数梅尔前端丢失连续包络结构的问题，该文用时域子带希尔伯特包络加可学习逐通道能量归一化替换前端，在相同 Whisper-small 微调下把 MyST 清洗测试集词错误率从 13.16% 降到 11.08%，代价是删除错误小幅上升且低频保留原因仍待验证。",
+  "originalTitle": "A Temporal-Envelope Frontend with Learnable Per-Channel Energy Normalization for Whisper-Based Children's ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26937v1.pdf",
+  "readerTitle": "不换模型换前端：儿童语音的时间包络与可学习归一化如何补上 Whisper",
+  "schemaVersion": 1
+}

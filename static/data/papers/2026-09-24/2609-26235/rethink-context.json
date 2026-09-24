@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26235",
+  "abstract": "Audio watermarking is a proactive route to attributing synthetic speech to its source. Learned audio watermarks are typically judged by payload recovery after a fixed catalog of signal distortions such as noise, compression, filtering, and resampling. That test is necessary but not sufficient for provenance. A mark offered as evidence of origin should not be readable by an unauthorized party, should not be transferable to unrelated audio, and should not vanish when the recording is re-synthesized by a modern generative model. We present KeyBound, a learned audio watermark that restores the two ingredients classical watermarking supplied and learned schemes set aside, a secret key and a host-aware carrier. KeyBound masks the payload with a secret key and embeds the masked bits through a carrier modulated by a frozen spectral representation of the host, so the key governs payload access while the host-conditioned carrier resists direct transplantation. A key-independent presence head lets any party detect a mark, whereas only a key holder reads its attribution, and under the single-sample uniformity assumption a wrong-key decode clears our verification rule with probability at most $2.1\\times10^{-3}$. On LibriSpeech against WavMark, AudioSeal, and Timbre, KeyBound holds 1.00 detection accuracy and 0.98 bit accuracy under a spectral denoiser that costs every baseline its detection, decodes at chance without the key, and rejects transplanted carriers. Detection further transfers to held-out DAC and BigVGAN re-synthesis, though exact payload recovery degrades. Speech provenance is thus better posed as a keyed, host-bound attribution problem than as the recovery of a payload under a catalog of signal distortions fixed in advance.",
+  "abstractSha256": "2267d0cc49dfa472e2d23d567e86612b2d346299060a100ecf697ecef7b76a3b",
+  "arxivId": "2609.26235",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.security",
+          "label": "音频安全"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Bangshuo Zhu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore , Singapore"
+      ],
+      "name": "Yuxin Cao"
+    },
+    {
+      "affiliations": [
+        "Duke University , USA"
+      ],
+      "name": "Weifei Jin"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Fusen Guo"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Huadong Mo"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Jingling Xue"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales , Australia"
+      ],
+      "name": "Wei Song"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "KeyBound 把 16 比特载荷先用密钥掩码再经宿主频谱调制嵌入，以存在检测与密钥解码分离的验证规则做归属，在谱去噪下保持检测 1.00 与比特精度 0.98，代价是宽带感知质量降到 3.03 且自适应重构移除仍能抹掉水印。",
+  "originalTitle": "KeyBound: Keyed and Host-Bound Learned Audio Watermarking for Speech Provenance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26235.pdf",
+  "readerTitle": "溯源不是抗失真：用密钥与宿主绑定重做语音水印",
+  "schemaVersion": 1
+}

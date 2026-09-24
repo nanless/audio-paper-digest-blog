@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28008v1",
+  "abstract": "Automatic pitch correction (APC) requires distinguishing the unintended intonation errors from expressive pitch variation. Existing systems either lack explicit harmonic modeling, as vocal-only methods do, or do not directly use the note-level polyphonic context. Therefore, we propose MIDIBack, a note-level APC framework that jointly models the vocal and accompaniment events in a shared OctupleMIDI sequence. We evaluate MIDIBack under 6 note corruption regimes, including global outshift, learned note-dependent detuning, uniform perturbations, and their combinations. The resulting model achieves 78.6% overall raw pitch accuracy (RPA), and 81.5% under combined global outshift and learned detuning. Removing the accompaniment conditioning reduces RPA from 81.5% to 35.8% in outshift, showing the effectiveness of accompaniment context. Case studies on accompaniment modulation further illustrate that vocal note predictions",
+  "abstractSha256": "cbcf1e3ad465fb8a103f2a61a1fb78ad172949a55b03dd652e79ef68314ca0a0",
+  "arxivId": "2609.28008",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.28008v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joaquim Cavalcante"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yicheng Gu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adriel Trajano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuri de Malheiros"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thais Gaudencio"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MIDIBack 把自动音高校正做成在统一符号序列上结合伴奏预测人声音符的任务，报告显示完整训练下总体 RPA 为 78.6%，而去掉伴奏后 Outshift 下 RPA 从 81.5% 降到 35.8%，代价是评估仍基于转录伪目标和合成走音而非人耳听感。",
+  "originalTitle": "MIDIBack: Harmony-Aware Singing Pitch Correction via Joint Vocal-Accompaniment Symbolic Modeling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28008v1.pdf",
+  "readerTitle": "跑调的人声如何借伴奏找回调：MIDIBack 的联合符号建模",
+  "schemaVersion": 1
+}

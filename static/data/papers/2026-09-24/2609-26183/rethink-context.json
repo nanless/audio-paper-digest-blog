@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26183",
+  "abstract": "Speech enhancement aims to recover clean speech signals from noisy observations while preserving speech quality and intelligibility. Classical methods such as Spectral Subtraction and Decision-Directed (DD) enhancement remain widely used because of their interpretability and low computational complexity, but they may suffer from musical-noise artifacts or excessive attenuation of weak speech components under low signal-to-noise ratio (SNR) conditions. This paper proposes an Adaptive Beta-Constrained Decision-Directed (ABCDD) speech enhancement framework that extends the conventional DD method through a frame-dependent lower gain bound. The introduced beta parameter controls the tradeoff between noise suppression and speech preservation. To automate parameter selection for large and diverse datasets, a lightweight multilayer perceptron (MLP) model is further developed to predict frame-level beta values directly from noisy-speech features. The proposed framework is evaluated using both a representative speech example and large-scale testing on the VoiceBank-DEMAND dataset. In the representative example, ABCDD outperformed conventional Spectral Subtraction and classical DD across multiple objective metrics, including SNR, Log-Spectral Distance (LSD), Root-Mean-Square Error (RMSE), correlation, and Scale-Invariant Signal-to-Distortion Ratio (SI-SDR). On 100 unseen VoiceBank-DEMAND test files, the proposed MLP-beta ABCDD method improved average scale-aligned SNR from 9.41 dB to 13.82 dB, corresponding to an average gain of 4.41 dB. The results indicate that combining interpretable classical enhancement structure with lightweight machine-learning-based parameter adaptation provides an effective and practical direction for robust speech enhancement.",
+  "abstractSha256": "d96df9448f0483894fcc61afe5197c9000a9d2c826d037b0923d45d0617757bf",
+  "arxivId": "2609.26183",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自适应滤波",
+    "primaryTask": "语音增强",
+    "rankBucket": "后50%",
+    "score": 4.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自适应滤波",
+      "primaryMethodId": "method.adaptive-filtering",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Rajabi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangwei Zhou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对低信噪比下判决引导增益过度衰减弱语音的问题，论文提出逐帧下限增益的 ABCDD 结构并用轻量 MLP 自动预测贝塔，在代表性样本上全面优于谱减法和经典 DD，在 100 条未见 VoiceBank-DEMAND 测试上把平均对齐信噪比从 9.41 dB 提升到 13.82 dB，代价是贝塔过大仍会残留噪声且感知质量未验证。",
+  "originalTitle": "A Hybrid Classical-Learning Framework for Adaptive Decision Directed Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26183.pdf",
+  "readerTitle": "下限增益保住弱语音：用逐帧贝塔约束修补判决引导增强",
+  "schemaVersion": 1
+}

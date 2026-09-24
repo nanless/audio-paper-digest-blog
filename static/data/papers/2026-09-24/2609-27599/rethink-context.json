@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27599v1",
+  "abstract": "Generating controllable and human-like emphasis remains an open challenge in text-to-speech, even when explicit emphasis control signals are provided in the text input, limiting the communicative accuracy of synthetic speech in real-world applications. Reinforcement learning has recently shown promise for post-training TTS systems to align with human preference, yet existing methods have not been applied to word-level prosodic control. We present EmphTTS, a non-autoregressive TTS system that applies Group Relative Policy Optimization (GRPO) to the duration predictor with an emphasis localization reward, enabling direct optimization for word-level emphasis. Evaluations show that EmphTTS achieves the best emphasis controllability and performs the best in emphasis objective evaluation. In subjective preference tests, EmphTTS is significantly preferred over synthetic groundtruth and most baselines. Ablation studies show that GRPO improves emphasis realization beyond supervised-finetuning-based duration modeling and simple speaking-rate adjustment, while alleviating the mismatch between the independently trained duration predictor and TTS model.",
+  "abstractSha256": "1ac3555f6389cc862e4e43763dd17afa90ebd1be847d3fa54333d9c96aa50f59",
+  "arxivId": "2609.27599",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27599v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zirui Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rech Silas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lauri Juvela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tom Backstrom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对词级重读控制难的问题，EmphTTS 冻结已微调的 F5-TTS 主体、只用带重读定位奖励的 GRPO 优化时长预测器，在 TinyStress-15k 上取得 StressLM F1 0.75 的最佳客观重读效果，但整体可懂度和说话人相似度仍明显低于大规模基线。",
+  "originalTitle": "EmphTTS: an emphasis-control TTS with reinforcement learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27599v1.pdf",
+  "readerTitle": "只调时长就能学会重读吗：EmphTTS 用强化学习对齐时长预测器",
+  "schemaVersion": 1
+}

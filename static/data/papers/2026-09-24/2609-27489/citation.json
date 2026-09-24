@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27489v1",
+  "arxivId": "2609.27489",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27489v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Akira Takahashi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Chihiro Nagashima"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Zhi Zhong"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Shusuke Takahashi"
+    },
+    {
+      "affiliations": [
+        "Sony Group Corporation, Tokyo, Japan"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27489v1",
+  "originalTitle": "Passing: An Endless Journey through Reconstructed Spacetime with AI-Generated Sound",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27489v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

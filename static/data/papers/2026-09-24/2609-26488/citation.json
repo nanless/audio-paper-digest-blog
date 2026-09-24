@@ -1,0 +1,94 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26488",
+  "arxivId": "2609.26488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Junyi Ao"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Kainan Peng"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Mingbo Ma"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Shun Zhang"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Zhenyu Tang"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xutai Ma"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xiang Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Yinghao Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs",
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yuancheng Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Zhizheng Wu"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Qing He"
+    },
+    {
+      "affiliations": [
+        "Meta Superintelligence Labs"
+      ],
+      "name": "Xubo Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26488",
+  "originalTitle": "Spoken Language Models that Think Aloud",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26488.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27599v1",
+  "arxivId": "2609.27599",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27599v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zirui Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rech Silas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lauri Juvela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tom Backstrom"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27599v1",
+  "originalTitle": "EmphTTS: an emphasis-control TTS with reinforcement learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27599v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

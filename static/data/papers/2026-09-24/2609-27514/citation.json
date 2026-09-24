@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27514v1",
+  "arxivId": "2609.27514",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27514v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingchen Shao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhennan Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longshuai Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiangze Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daliang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27514v1",
+  "originalTitle": "The Second MLC-SLM Challenge: Multilingual Conversational Speech Diarization, Recognition, and Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27514v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

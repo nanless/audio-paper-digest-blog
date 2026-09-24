@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27195v1",
+  "abstract": "Non-speech interference can change a speech representation without causing comparable task loss. We test eight frozen encoders on four tasks, adding non-speech sounds throughout recordings, during speech, or in pauses. Under whole-recording interference, embedding drift tracks task loss across seven sounds, with mean Spearman correlations of 0.81-0.88. Moving the same sound between speech and pauses changes this pattern. At quiet to moderate levels, pause interference produces larger drift, while speech interference usually causes greater loss on intent recognition, speaker verification and speech recognition. Emotion recognition shows a weaker placement effect. Pause interference also changes speech-frame representations beyond the injected region. Even below the estimated recording background, interference can change embeddings as much as repeated speech takes do. Drift helps rank the effects of different sounds, but larger drift does not consistently indicate greater task loss.",
+  "abstractSha256": "78f1b499f7125fdb867de91193da2b79f130e45ff954d4b18eaed3dcbff1dde0",
+  "arxivId": "2609.27195",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27195v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Boston University, Boston, MA, USA"
+      ],
+      "name": "Vsevolod Kovalev"
+    },
+    {
+      "affiliations": [
+        "Princeton University, Princeton, NJ, USA"
+      ],
+      "name": "Pranay Manocha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究冻结八个语音编码器并在整段、仅语音、仅暂停三种放置下加入非语音干扰，用余弦漂移与四项下游任务损失对比，显示整段干扰下漂移可按声音排序任务损失，而安静到中等强度下暂停干扰漂移更大但语音干扰任务损失更大，且低于估计背景的干扰已可达到重复录制级别的漂移。",
+  "originalTitle": "Quieter Than the Room: Representation Drift and Task Robustness in Speech Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27195v1.pdf",
+  "readerTitle": "暂停更安静却漂移更大：语音编码器表示漂移与任务损失的错位",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26125",
+  "arxivId": "2609.26125",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriel Spadon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wayne Renaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Priyanka Aravindan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.26125",
+  "originalTitle": "When Big Data Becomes a Curse: Spatial Heterogeneity and the Limits of Learning from Passive Acoustic Monitoring Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26125.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

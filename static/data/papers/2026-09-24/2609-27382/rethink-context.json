@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27382v1",
+  "abstract": "Speech technology penalizes some voices: recognition errs nearly twice as often for Black speakers, and accuracy declines for second-language accents and older speakers. We introduce TRIAD, an audit grid crossing 120 texts, 24 rendered demographic voice profiles (gender, age band, accent), and ten expressive styles via controllable text-to-speech, isolating perceived demographic attributes from content and affect. For ten open-weights encoders we define axis-fidelity functionals, principal-angle leakage between axis subspaces, and group-conditional gaps; a proposition proves that average probe disparity grows with the same aggregate voice-semantic leakage $Λ$ we measure, and a corollary shows that peak leakage forces worst-case disparity inside an active region. The measured mean-square probe disparity tracks $Λ$ (Pearson r = 0.93), and a black-box protocol exposes the same signature in two closed-source models. ORCA, an adapter combining axis-specific contrastive heads, an orthogonality penalty, and group-balanced sampling, cuts leakage 72% and roughly halves the gaps.",
+  "abstractSha256": "bc81a2635e7c2dd4610128e714ce8f9f0dd969ac325016e1e8dca9b4ac34bed5",
+  "arxivId": "2609.27382",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27382v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kian Shamsaie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iman Modarressi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用 120 文本×24 声音画像×10 风格的合成正交网格审计 10 个开源音频编码器与 2 个闭源语音问答系统，以主夹角泄漏解释探针差距并用正交残差对比适配器降低泄漏与差距，代价是需要合成感知属性假设与额外适配训练。",
+  "originalTitle": "When Entanglement Lower-Bounds Disparity: Auditing and Repairing Demographic Fairness in Audio Understanding Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27382v1.pdf",
+  "readerTitle": "纠缠托底差距：用三轴合成网格审计并解耦音频表征的人口公平性",
+  "schemaVersion": 1
+}

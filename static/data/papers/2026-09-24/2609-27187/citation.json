@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27187v1",
+  "arxivId": "2609.27187",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27187v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenhao Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhijin Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joyraj Chakraborty"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martin Reed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikolaos Thomos"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27187v1",
+  "originalTitle": "Do Audio Representations Compose Additively?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27187v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

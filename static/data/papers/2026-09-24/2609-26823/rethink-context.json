@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26823v1",
+  "abstract": "Post-training quantization of speech language models is often summarized with text-output scores and nominal bit widths. Those numbers alone do not establish behavior that depends on information missing from a transcript, or efficiency for a particular runtime. We introduce an evaluation protocol that separately tests lexical output, a transcript-insufficient endpoint, and a measured packed implementation. In a Qwen2-Audio case study, a translation-selected 6-bit allocation improves chrF by 2.36 on a frozen English-to-German replay, with paired 95% bootstrap interval [1.04, 3.62], but loses 3.91 percentage points on speaker-disjoint emotion recognition. At the same 6-bit budget, the uniform structural control reaches higher emotion accuracy than the selected allocation, and the front-layer control is also higher by point estimate on the same frozen set. At 7 bits, chrF improves by 3.28 with interval [2.08, 4.59], the emotion interval against FP16 includes zero, and a same-budget front-layer control still exceeds the selected allocation. A separate matched-budget 4.08-bit study finds roughly 10-point emotion deficits for every tested low-bit allocation and no selected-allocation advantage over frozen controls. Finally, a dequantized average-6-bit simulation retains the FP16 peak memory. This case study identifies a precision-dependent mismatch between lexical output, waveform-dependent behavior, and nominal precision. It does not establish a general failure of low-bit speech models or a deployment benefit for the selected allocation.",
+  "abstractSha256": "f6ab71b5c4d9cb09fa19db7ccba30c0f9533ee0e6f66754ebc329985adcfe106",
+  "arxivId": "2609.26823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.26823v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Research Council Canada"
+      ],
+      "name": "Mengzhe Geng"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University"
+      ],
+      "name": "Jinxi Jin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Junhao Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以 Qwen2-Audio 为案例分离词汇输出、转录不足的波形依赖行为与打包实现测量，显示 6 比特翻译选中分配在冻结重放上 chrF 提升但情绪识别下降，而反例与对照说明文本分不能替代波形使用证据。",
+  "originalTitle": "Text Scores Can Miss Waveform Use: A Qwen2-Audio Quantization Case Study",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26823v1.pdf",
+  "readerTitle": "文字分高不等于还在听波形：一次 Qwen2-Audio 量化的三路核对",
+  "schemaVersion": 1
+}

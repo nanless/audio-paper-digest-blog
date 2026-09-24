@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26956v1",
+  "abstract": "The inclusion of generative audio in the music production process has led to an increase in hybrid music tracks that blend authentic human performances with AI-generated stems, challenging traditional AI music detectors which operate in a binary setting. In this work, we propose a stem-agnostic framework for identifying synthetic audio sources within hybrid musical mixtures. We introduce the inspectrogram, a novel time-frequency representation that maps localized probabilities of synthetic content across the audio spectrum. By combining the inspectrogram with a Wiener filter estimating target stem energy dominance, a single CNN model evaluates whether the specific stem is generated. Trained on rendered hybrid mixtures and evaluated across various stem classes, our model achieves strong performance on high-frequency sources such as vocals, drums, and guitar, but struggles on the low-frequency, narrow-band bass. We conclude that the quality of separation impacts the detection accuracy and identify source separation as a primary bottleneck and a crucial direction for future research.",
+  "abstractSha256": "448cb16042b67e55ba1fbb290485dcd867deec62fdd8e26a4d45472dee4b98b1",
+  "arxivId": "2609.26956",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.26956v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Richa Namballa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "François Rigaud"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Romain Hennequin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对人声与合成声部混合后全局检测失效的问题，该工作用分频段局部检测构成合成概率图再与目标声部能量掩码联合判断单个声部真伪，在人声鼓组吉他上表现较强而在贝斯上受限于分离质量。",
+  "originalTitle": "A Stem-Agnostic Approach to Hybrid AI Music Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26956v1.pdf",
+  "readerTitle": "混合音乐里谁是合成的：用合成概率图加能量掩码定位目标声部",
+  "schemaVersion": 1
+}

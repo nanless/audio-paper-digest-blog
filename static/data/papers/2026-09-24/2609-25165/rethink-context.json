@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25165",
+  "abstract": "In this report, we introduce \\textbf{Ovis-Embedding}, a state-of-the-art omni-modal embedding family built on native integration of text, image, video, and audio. Instead of assembling separate modality towers, Ovis-Embedding uses a shared multimodal backbone to encode different modalities in a common representation space. Specifically, we make \\textbf{three key advances}: (1) \\textbf{native omni-modal initialization}: we adopt a pretrained Qwen-omni model as the embedding backbone and adapt it through contrastive training with low-rank initialization; (2) \\textbf{data-centric omni-modal training}: we construct a broad, high-quality corpus spanning text, images, video, audio, and interleaved multimodal data. To improve data efficiency, we introduce homogeneous-source sampling to form task-consistent batches with informative in-batch negatives; and (3) \\textbf{embedding-specific training and inference optimization}: we use focal loss to emphasize hard examples and similarity-based Embedding Distillation to transfer fine-grained similarity structure from complementary experts. At inference time, low-rank feature decomposition enables compact embeddings with flexible dimensionality and minimal performance loss. Empirical evaluations show that the \\textbf{Ovis-Embedding} family achieves state-of-the-art performance on \\textbf{MMEB-v3}, \\textbf{MMEB-v2}, \\textbf{MVEB}, \\textbf{MAEB}, and \\textbf{RTEB}, demonstrating its effectiveness across text, image, video, and audio modalities. These results highlight the potential of unified omni-modal training to overcome modality fragmentation and advance universal embedding models for any-to-any retrieval.",
+  "abstractSha256": "d016c6aa06386aecb908c2b3235667d81cff6641717171c03bce3d25d04b41aa",
+  "arxivId": "2609.25165",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Ovis-Embedding Team"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把文本图像视频音频放进同一个共享主干做任意到任意检索，用四阶段对比训练与同源采样和蒸馏优化，在 MMEB-v3 等基准上取得领先，但多条件文本与记忆检索仍有短板且低维压缩在细粒度任务上损失更大。",
+  "originalTitle": "Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25165.pdf",
+  "readerTitle": "不另加音频塔：共享主干如何统一文本图像视频音频检索",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27615v1",
+  "arxivId": "2609.27615",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27615v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanbing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shenyue Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyang Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27615v1",
+  "originalTitle": "BiCFlow-MER: Orchestrating Discriminative and Generative Multimodal Emotion Recognition via Conditional Transport",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27615v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

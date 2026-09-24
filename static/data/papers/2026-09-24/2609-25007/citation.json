@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25007",
+  "arxivId": "2609.25007",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyunku Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minkyu Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chanwoo Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25007",
+  "originalTitle": "Beyond Short Segments : Expanding Speaker Embeddings with Vector Archives",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25007.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

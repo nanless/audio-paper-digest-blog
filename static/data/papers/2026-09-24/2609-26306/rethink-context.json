@@ -1,0 +1,115 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.26306",
+  "abstract": "This work presents the task and results of the CHiME-9 challenge for Enhancing Conversations to address Hearing Impairment. The challenge considers the scenario of four-party conversations in a noisy, cafeteria-style environment with interfering speech sources and sound effects. Participants are provided with audio recordings made with Meta Aria glasses and hearing aid microphones, and clean speech samples of the conversation participants. The task is to extract the speech of the conversation partners from the noisy multi-channel recordings with the goal of improving the intelligibility and quality of the speech, evaluated using objective metrics and subjective listening tests. This paper reviews submissions from seven teams and ranks them on a combination of subjective intelligibility and quality. Results show that while the objective metrics do not reflect listener performance, the top systems were able to make substantial improvements over the challenge baseline in both intelligibility and quality ratings.",
+  "abstractSha256": "b4c68bb1b9e1bc7c7188c2875b049192f1f4bf8bbe78f254b16dcd85fc61fdb3",
+  "arxivId": "2609.26306",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Robert Sutherland"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Thomas Kuebert"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Marko Lugger"
+    },
+    {
+      "affiliations": [
+        "WS Audiology, Erlangen, Germany"
+      ],
+      "name": "Stefan Petrausch"
+    },
+    {
+      "affiliations": [
+        "ORCA Labs, WS Audiology, Lynge, Denmark"
+      ],
+      "name": "Eline Borch Petersen"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs, Cambridge, United Kingdom"
+      ],
+      "name": "Juan Azcarreta Ortiz"
+    },
+    {
+      "affiliations": [
+        "Meta Reality Labs, Redmond, United States of America"
+      ],
+      "name": "Buye Xu"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom",
+        "South Westphalia University of Applied Sciences, Iserlohn, Germany"
+      ],
+      "name": "Stefan Goetze"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Sheffield, Sheffield, United Kingdom"
+      ],
+      "name": "Jon Barker"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究餐馆噪声下四人对话的同伴语音抽取，选择带说话人注册的目标说话人抽取与因果约束，用听音转写正确率与 P.835 质量分证明头部系统相对基线有实质提升，而客观指标与听感排名不一致且保留噪声与保真度不可兼得。",
+  "originalTitle": "CHiME-9 ECHI: A Machine Learning Challenge for Enhancing Conversations to Address Hearing Impairment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.26306.pdf",
+  "readerTitle": "四人餐馆对话要听清谁：CHiME-9 ECHI 在眼镜与助听器上做因果多说话人抽取",
+  "schemaVersion": 1
+}

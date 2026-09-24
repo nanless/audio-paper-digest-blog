@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25822",
+  "arxivId": "2609.25822",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangui Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minhua Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chng Eng Siong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25822",
+  "originalTitle": "Boundary and Intra-Segment Learning for Partial Audio Deepfake Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25822.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

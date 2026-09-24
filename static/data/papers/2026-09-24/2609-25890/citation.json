@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25890",
+  "arxivId": "2609.25890",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongjin Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runwu Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiqiao Shan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiale Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifei Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunxiang Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25890",
+  "originalTitle": "Rethinking Length-Based Training: Batch Composition and Loss Normalization in Speech Token Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25890.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

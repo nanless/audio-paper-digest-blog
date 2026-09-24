@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25822",
+  "abstract": "Partial audio deepfakes manipulate only selected speech regions, making them difficult to be localized. Existing methods exploit boundary cues for partial deepfake localization, but primarily focus on identifying boundary positions rather than modeling the feature changes that characterize authenticity transitions. Meanwhile, the internal characteristics of continuous bona fide and spoofed segments remain underexplored. In this paper, we propose Boundary and Intra-Segment Learning (BISL), which introduces boundary learning to model feature differences between adjacent frames and distinguish authenticity transitions from general acoustic variations. In addition, intra-segment learning captures the overall characteristics of continuous bona fide and spoofed segments while enhancing feature consistency within each segment. By jointly learning frame, boundary, and segment information, BISL enables more effective fine-grained partial audio deepfake localization. Experiments on multiple localization benchmarks show that BISL achieves an EER of 2.52\\% and an F1-score of 97.40\\% on PartialSpoof, outperforming the compared methods, while maintaining competitive performance on HAD and improved cross-dataset performance on LPS. The code will be made publicly available upon acceptance.",
+  "abstractSha256": "46f311a074027f3380b60c522e9e74f88bcd3255e9047fe85e1aea9c58452604",
+  "arxivId": "2609.25822",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangui Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minhua Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chng Eng Siong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对同一句话中真假语音共存且需逐帧定位的问题，BISL 在帧分类主任务之外增加相邻帧差分的边界学习和段内均值标准差加紧致性的段学习，在 PartialSpoof 上报告 EER 为 2.52% 与 F1 为 97.40%，代价是跨数据集到 LPS 时仍只达到 EER 为 37.10% 与 F1 为 53.61% 且推理时仅保留帧头。",
+  "originalTitle": "Boundary and Intra-Segment Learning for Partial Audio Deepfake Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25822.pdf",
+  "readerTitle": "只改一小段也要逐帧定界：用边界差分与段内一致性做部分伪造定位",
+  "schemaVersion": 1
+}

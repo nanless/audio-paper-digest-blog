@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25995",
+  "abstract": "Personalized head-related transfer functions (HRTFs) are essential for spatial audio rendering, but densely measuring an individual&#39;s HRTFs is costly and time-consuming. HRTF upsampling reduces this burden by estimating dense HRTFs from sparse measurements. Recent learning-based methods have achieved promising performance, but many remain tied to predefined measurement configurations. In this work, we propose GeoAtt, a variable-context HRTF upsampling framework that uses a single trained model across varying measurement configurations. GeoAtt performs geometry-aware, query-conditioned spatial aggregation over the available measurements independently at each frequency bin, followed by frequency-domain modeling using Conformer blocks. The relative geometry between the target and measured directions is incorporated as an additive bias in the cross-attention. Experiments on the SONICOM dataset show that a single trained model achieves the lowest log-spectral distortion across all four canonical Listener Acoustic Personalization (LAP) challenge measurement configurations and further generalizes to configurations that are not explicitly included during training.",
+  "abstractSha256": "1f05a2842781b2a45457083ca42818792a0cb181cdaf6571e2bec36343f4aaf7",
+  "arxivId": "2609.25995",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xingyu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanwen Bi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sipei Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eva Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ian S. Burnett"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对稀疏测量到稠密 HRTF 的上采样受固定测量布局限制的问题，GeoAtt 用逐频点查询条件空间聚合加 Conformer 频率建模实现单个模型适配多种布局，在 SONICOM 四个 LAP 布局上报告了最低对数谱失真，但受限测量覆盖下误差仍明显上升且代码权重本次未能确认可达。",
+  "originalTitle": "HRTF Upsampling Across Varying Measurement Configurations with Geometry-Aware Query-Conditioned Aggregation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25995.pdf",
+  "readerTitle": "一个模型应对多种测量布局：把空间聚合与频率建模分开做 HRTF 上采样",
+  "schemaVersion": 1
+}

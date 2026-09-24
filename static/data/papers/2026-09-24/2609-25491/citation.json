@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.25491",
+  "arxivId": "2609.25491",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brooklyn Sheppard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anaelia Ovalle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adina Williams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Levent Sagun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.25491",
+  "originalTitle": "Queer inclusion in speech datasets: An audit and taxonomy of practical tensions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.25491.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27372v1",
+  "arxivId": "2609.27372",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.27372v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kian Shamsaie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Iman Modarressi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27372v1",
+  "originalTitle": "Neither Silence nor Overlap Is Failure: Intent-Conditioned Evaluation of Turn-Taking in Full-Duplex Spoken Dialogue Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27372v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
