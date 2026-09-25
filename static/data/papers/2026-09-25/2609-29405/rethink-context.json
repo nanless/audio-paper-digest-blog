@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29405",
+  "abstract": "We adapt Reinforce Adjoint Matching (RAM), a reward-based post-training method, to generative speech enhancement (SE). Starting from a pretrained SE model, RAM tilts the model&#39;s conditional distribution toward outputs with higher reward. During training, the current model generates enhanced speech on-policy, evaluates each generated endpoint with a potentially non-differentiable reward, and analytically re-noises the endpoint to construct inputs for a reward-guided regression objective. This enables post-training directly on real recordings using weak supervision, such as text transcripts, without requiring paired clean speech targets or reward gradients. We investigate word error rate (WER)-based post-training and whether recognition performance can be improved without compromising perceptual speech quality. Experiments on real CHiME-4 recordings reduce WER by 5.08 percentage points relative to pretrained FlowSE without reducing any of the reported non-intrusive speech quality metrics. A subjective listening test at the default reward scale finds no statistically significant preference between the post-trained and pretrained models.",
+  "abstractSha256": "41cedb0fb3ca9dd546acbc186510948af9eb80b368ffc745b48c4c99278adb21",
+  "arxivId": "2609.29405",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kohei Saijo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dominik Klement"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对生成增强在真实噪声下语言一致性不足的问题，该文用转录本计算的负词错误率奖励对预训练 FlowSE 做 Reinforce Adjoint Matching 后训练，在 CHiME-4 真实录音上把词准确率从 76.98% 提高到 82.06%，而报告的非侵入式音质指标未下降，默认奖励强度下主观听感无显著偏好。",
+  "originalTitle": "Transcript-Supervised Post-Training of Generative Speech Enhancement on Real Recordings via Reinforce Adjoint Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29405.pdf",
+  "readerTitle": "不用干净语音也能做识别感知的生成增强：转录监督的 RAM 后训练",
+  "schemaVersion": 1
+}

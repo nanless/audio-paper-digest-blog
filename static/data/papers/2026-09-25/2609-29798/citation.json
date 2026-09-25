@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29798",
+  "arxivId": "2609.29798",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephen E. Moore"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Akwasi Asare"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mich-Seth Owusu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Azunre"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joel Budu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lawrence A. Adu-Gyamfi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29798",
+  "originalTitle": "Benchmarking and Domain Adaptation of Automatic Speech Recognition (ASR) for Adolescent Health Communication in Ghanaian Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29798.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

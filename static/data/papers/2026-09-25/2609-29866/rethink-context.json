@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29866",
+  "abstract": "Deploying real-time speech enhancement on resource-constrained devices requires meeting strict latency, memory, and energy constraints. Microcontroller NPUs can accelerate neural inference under these constraints, but only through a restricted set of operators in static, integer-quantized graphs. Recent speech-enhancement networks have reduced parameter counts and MACs to levels nominally suitable for microcontrollers, but their operators and execution patterns often remain incompatible with restricted NPUs. We address this gap by redesigning LiSenNet, a 37k parameter sub-band dual-path model, for the STM32N6570-DK Neural-ART accelerator. We replace its recurrent bottleneck with convolutional frequency and temporal mixers, reformulate unsupported operations as static int8-compatible primitives, and use bounded decoder activations to preserve quality after quantization. On VoiceBank-DEMAND, the final NPU-compatible model matches or exceeds the recurrent LiSenNet baseline, reaching PESQ 3.08 versus 3.01 in FP32 and 3.01 versus 2.93 in int8. Deployed on a microcontroller, it processes each 16 ms input hop in 4.83 ms, corresponding to a real-time factor of 0.30. Stateless receptive-field recomputation is an order of magnitude slower at the same frame rate despite higher accelerator utilization. These results show that parameter count and operator compatibility, quantization range, and persistent streaming state must be co-designed to achieve efficient real-time speech enhancement on restricted NPUs.",
+  "abstractSha256": "d83b7d82aae5f4fc53aa0dff69ae583d5c5f7b9856069c6fd741b96b2db26332",
+  "arxivId": "2609.29866",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "CNN",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clément Laroche"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 STM32N6 上 Neural-ART 只支持静态整数量化卷积图的问题，该研究把 LiSenNet 双路 GRU 瓶颈改为卷积频率混合加因果空洞时间卷积并配套可折叠归一化与有界激活，最终以 46.2k 参数实现板载 int8 PESQ 3.01 与每 16 ms 跳 4.83 ms 处理，代价是 154 KiB 的 25 个 FIFO 流状态。",
+  "originalTitle": "Beyond Model Size: Redesigning LiSenNet for embedded speech enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29866.pdf",
+  "readerTitle": "参数小不等于能跑：LiSenNet 在受限 NPU 上的算子与状态协同改造",
+  "schemaVersion": 1
+}

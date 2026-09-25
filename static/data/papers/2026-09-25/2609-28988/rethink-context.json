@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28988",
+  "abstract": "We present a personalized Korean visual speech recognition (VSR) system and quantify, on the nine-camera OLKAVS corpus, the gap between the population-level benchmark score and an individual user&#39;s error. A video-only Conformer initialized from English-trained weights attains 9.95 - 12.19% character error rate (CER) under the corpus protocol against the published 26.64, and 19.00 - 21.52 on unseen wording. Per speaker, CER spans 1.0 to 52.2%, with seen wording lowering CER by 7.0 - 9.0 points and professional delivery and spontaneous speech raising it by 8.5 - 10.5 and 12.7 points. A low-rank adapter with 4.6% of the parameters, trained on 4 to 29 minutes of the user&#39;s frontal video, lowers the CER of twelve high-error speakers by 2.13 to 3.58 points, transfers to every camera without loss, and keeps 85% of the full fine-tuning gain at 12% of its cost to other speakers. Cameras above the mouth plane add about six CER points as a constant offset that training on all views keeps small.",
+  "abstractSha256": "2f1c031af7a57cf430f15b4c7fd12ac41401a961f8f558fde93517659cf65ab6",
+  "arxivId": "2609.28988",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.silent-speech",
+          "label": "静默语音接口"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "静默语音接口",
+      "primaryTaskId": "task.silent-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Se Un Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hakjun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taehoon Roh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用英语预训练的视频 Conformer 在 OLKAVS 协议上把已见句式误差降到约 10% 上下，但人口普查显示个体误差从 1% 到 52% 不等，数分钟正面视频的低秩适配器能为高误差者挽回约 2 到 3 个点且可迁移到各视角，而嘴平面以上相机带来约 6 个点的固定加性损失。",
+  "originalTitle": "Personalized Korean Lipreading as Visual Speech Recognition: Transfer, Census and Adaptation on OLKAVS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28988.pdf",
+  "readerTitle": "基准分好看、个人用不好：韩语唇读在 OLKAVS 上拆开 wording、说话人与仰角",
+  "schemaVersion": 1
+}

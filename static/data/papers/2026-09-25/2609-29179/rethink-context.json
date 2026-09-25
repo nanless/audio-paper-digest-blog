@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29179",
+  "abstract": "We propose a compact underwater acoustic classification framework combining multi-representation feature engineering, temporal statistical pooling, and compact convolutional architectures designed for acoustic time-frequency and cochlear representations. We investigate multiple conventional and auditory-inspired representations and first evaluate lightweight classifiers and Conventional Neural Networks (CNNs) on ShipsEar dataset. On the provided split, a two-layer CNN achieves a macro F1 of 0.9918, while a Radial Basis Function Support Vector Machine (RBF-SVM) reaches 0.9883. However, source-recording provenance cannot be reconstructed, preventing verification of recording-independent generalisation. We therefore evaluate on DeepShip dataset using recording-level partitioning before segmentation. Under this protocol, a 157K-parameter compact CNN achieves a test macro F1 of 0.7226, while an 11.17M-parameter ResNet18 provides no improvement in validation performance under the matched setting. These results demonstrate the importance of representation-aware feature and model design, together with rigorous recording-level evaluation, for classification performance and deployability in compact underwater acoustic systems.",
+  "abstractSha256": "ae125204a3e286798c1d9bad58f970c8ff4e955dfe86fa82178db45dd2293a50",
+  "arxivId": "2609.29179",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abishek Soti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thura Pyae Sone"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naqib Ibnul"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Htoo Htet Aung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Henry Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gregory Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究以水下舰船被动声学分类为任务，用多时频与耳蜗表示加时间统计池化和紧凑卷积做分类，最强证据是录音级隔离的 DeepShip 上 157K 参数四层卷积测试宏 F1 为 0.7226 而 11.17M 参数 ResNet18 验证更低，代价是 ShipsEar 近满分结果不能视为未见录音泛化。",
+  "originalTitle": "Towards Deployable Underwater Vessel Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29179.pdf",
+  "readerTitle": "近满分不可信时怎么办：表示工程与录音级评估决定水下舰船分类能否部署",
+  "schemaVersion": 1
+}

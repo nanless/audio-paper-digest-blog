@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29805",
+  "abstract": "Natural conversations make both speech recognition and speaker attribution challenging for ASR, as speakers take turns, overlap, and reappear over time. We propose STAM-ASR, Speaker-Temporal Anchoring with Memory, a lightweight framework that extends an already pretrained AudioLLM for multi-speaker ASR. Without relying on an external diarization system, STAM-ASR learns speaker activity and speaker-aware representations directly from intermediate AudioLLM features. Hence providing explicit who and when cues to modulate the AudioLLM&#39;s semantic representation without explicit speech separation. STAM-ASR further maintains fixed-size speaker and conversational memories to carry complementary context across turns. We evaluate STAM-ASR on AMI, ICSI, LibriCSS, and NOTSOFAR-1 across close-talk, far-field, overlapping, and cross-domain conditions. Our reported results shows that speaker-temporal conditioning and memory provide complementary benefits, while the gap between reference and predicted speaker activity identifies robust speaker tracking as a key remaining challenge.",
+  "abstractSha256": "e41eec7f4946ed5f6d196e99cacc81ab1c2b6e27b6a7d84c30c13bef6db1d2f1",
+  "arxivId": "2609.29805",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Victor Tolulope Olufemi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syeda Faiza Ahmed Sara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多人轮替与重叠会议转写，STAM-ASR 在冻结 Qwen2.5-Omni-7B 编码器上加内部说话人日志、残差 FiLM 调制与说话人/会话双记忆，在参考与预测说话人活动对比中显示时间证据与记忆互补，但预测跟踪误差仍是主要瓶颈。",
+  "originalTitle": "STAM-ASR: Speaker-Temporal Anchoring with Memory for Multi-Speaker ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29805.pdf",
+  "readerTitle": "谁在何时说话：STAM-ASR 用内部说话人时间锚与双记忆改造 AudioLLM",
+  "schemaVersion": 1
+}

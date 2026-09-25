@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28974",
+  "arxivId": "2609.28974",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Se Un Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutae Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28974",
+  "originalTitle": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28974.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

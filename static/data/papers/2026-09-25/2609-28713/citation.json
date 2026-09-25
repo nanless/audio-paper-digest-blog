@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28713",
+  "arxivId": "2609.28713",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel Department of Electrical Engineering, Afeka the Academic College of Engineering, Israel Avignon University, LIA, France"
+      ],
+      "name": "Avishai Weizman"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel Department of Electrical Engineering, Afeka the Academic College of Engineering, Israel Avignon University, LIA, France"
+      ],
+      "name": "Yehuda Ben-Shimol"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Israel Department of Electrical Engineering, Afeka the Academic College of Engineering, Israel Avignon University, LIA, France"
+      ],
+      "name": "Itshak Lapidot"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28713",
+  "originalTitle": "Spooftral: Can Voxtral Audio-Language Model Detect Speech Spoofing?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28713.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

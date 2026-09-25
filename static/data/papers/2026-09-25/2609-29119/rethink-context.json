@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29119",
+  "abstract": "The constant-Q transform (CQT) represents audio on a logarithmic frequency axis. Its nonstationary Gabor formulation is exactly invertible, but the unequal numbers of time coefficients in its bands complicate GPU computation. An exact factorisation combines spectral selection, conjugation, windowing, and reordering into a fixed map between one packed Fourier transform and the shorter band inverse transforms. The factors give waveform reconstruction, real adjoints for backpropagation, and bounds on arithmetic depth and block width; overlapping slices permit streaming with bounded memory. Tests on two GPU models show that Flash-CQT reduces analysis-synthesis round-trip time by factors of two to eight relative to a baseline computing the same CQT. The proposed implementation also uses over 30% less peak temporary workspace and reaches a negligible reconstruction error, with a signal-to-noise ratio of about 130 dB, in single-precision floating-point arithmetic. These advances make Flash-CQT a practical, computationally efficient front end for spectral analysis and modern audio machine-learning systems.",
+  "abstractSha256": "43da129c0281fb1fc21d449903729c26fdb6159f1b88b5f92376e6379f9565cf",
+  "arxivId": "2609.29119",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Facundo Franchino"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vesa Välimäki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对可逆恒 Q 变换各频带时域系数不等长导致的多次核启动与搬运开销，论文用打包实信号傅里叶加固定路由表把选频加窗重排折进带内短逆变换，在同算子同长度基线下把分析合成往返加速两到八倍，代价是实现固定在 65536 点切片并依赖重叠切片处理长信号。",
+  "originalTitle": "Exact Factorisation and Fast Computation of Invertible Constant-Q Transforms",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29119.pdf",
+  "readerTitle": "不等长频带不好并行：把选频加窗折进一路打包傅里叶的可逆恒 Q 变换",
+  "schemaVersion": 1
+}

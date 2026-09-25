@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29805",
+  "arxivId": "2609.29805",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Victor Tolulope Olufemi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Syeda Faiza Ahmed Sara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29805",
+  "originalTitle": "STAM-ASR: Speaker-Temporal Anchoring with Memory for Multi-Speaker ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29805.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

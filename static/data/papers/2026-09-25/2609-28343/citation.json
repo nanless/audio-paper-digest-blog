@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28343",
+  "arxivId": "2609.28343",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel"
+      ],
+      "name": "Matan Yifrach"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28343",
+  "originalTitle": "Neural Field-of-View for Binaural Signal Matching with Wearable Microphone Arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28343.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

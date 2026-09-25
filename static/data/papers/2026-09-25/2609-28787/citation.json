@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28787",
+  "arxivId": "2609.28787",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, Alberta, Canada"
+      ],
+      "name": "Daniel Penner"
+    },
+    {
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, Alberta, Canada"
+      ],
+      "name": "Abram Hindle"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28787",
+  "originalTitle": "Statistical Models for Automatic Fingering-Annotated Piano Sheet Music Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28787.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

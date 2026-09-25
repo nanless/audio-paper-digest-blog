@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28739",
+  "arxivId": "2609.28739",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srishti Ginjala"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Eric Fosler-Lussier"
+    },
+    {
+      "affiliations": [
+        "Air Force Research Laboratory, USA"
+      ],
+      "name": "Christopher W. Myers"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srinivasan Parthasarathy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28739",
+  "originalTitle": "Temporal Taxation Compounds Under Post-Training Compression of Whisper Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28739.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29777",
+  "arxivId": "2609.29777",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyuan Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29777",
+  "originalTitle": "Exemplar-Free Analytic Learning for Multi-Label Audio Class-Incremental Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29777.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

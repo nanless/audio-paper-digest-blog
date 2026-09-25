@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29128",
+  "abstract": "We propose a bio-inspired approach that uses the inner-hair-cell (IHC) response of the Cascade of Asymmetric Resonators with Fast-Acting Compression (CARFAC) model to efficiently extract cyclic modulation from acoustic signals. We further investigate the contribution of IHC processing by comparing the CARFAC-IHC response with the CARFAC basilar-membrane (BM) filtering. Furthermore, the CARFAC-IHC and CARFAC-BM approach are benchmarked against conventional FFT Accumulation Method (FAM), Integrated Cyclic Modulation Coherence (ICMC), and Detection of Envelope Modulation On Noise (DEMON) approaches using the Case Western Reserve University (CWRU) bearing dataset and a real ShipsEar work-vessel recording dataset. The results demonstrate reliable recovery of characteristic cyclic components while substantially reducing the computational burden of conventional cyclostationary analysis.",
+  "abstractSha256": "b8223f59a1b2d0925e9bbc8edb7c8cf0b847c97d16fc947e5f11a8a003ea30ed",
+  "arxivId": "2609.29128",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "application",
+          "id": "application.industrial",
+          "label": "工业应用"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thura Pyae Sone"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abishek Soti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Henry Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gregory Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "RunChun Mark Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对机械与水下录音中弱而宽带的循环调制检测问题，论文用 CARFAC 内毛细胞通道包络谱代替 FAM 加 ICMC 的谱相关面，在合成音、CWRU 轴承与 ShipsEar 工作船录音上恢复了主要的低频循环线，并把同任务墙钟耗时降到约 2 至 37 分之一，代价是真实水下宽带噪声下归一化后噪声基更高。",
+  "originalTitle": "Bio-inspired efficient cyclostationary analysis in machine and underwater acoustic recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29128.pdf",
+  "readerTitle": "不用算整张谱相关面：用耳蜗内毛细胞包络取循环调制",
+  "schemaVersion": 1
+}

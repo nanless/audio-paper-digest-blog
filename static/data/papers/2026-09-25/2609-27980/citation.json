@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27980",
+  "arxivId": "2609.27980",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Technical University of Denmark",
+        "Laerdal Medical"
+      ],
+      "name": "Rasmus Aagaard"
+    },
+    {
+      "affiliations": [
+        "Technical University of Denmark"
+      ],
+      "name": "Nicki Skafte Detlefsen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27980",
+  "originalTitle": "Six Layers Less: Encoder Pruning for Whisper with Label-Free Recovery",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27980.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

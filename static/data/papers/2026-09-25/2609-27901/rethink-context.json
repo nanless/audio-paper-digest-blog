@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27901",
+  "abstract": "Video is a rich representation of a physical event, capturing appearance, geometry, motion, and temporal evolution. Other modalities, such as 3D body motion or audio, encode narrower aspects of the same event. We find that joint multimodal diffusion transformers exhibit a corresponding asymmetry in cross-modal correspondence: companion modalities develop strong correspondences to video, but the reciprocal correspondences through which they constrain video remain substantially weaker. We express both directions as comparable correspondence distributions over video tokens and define their disagreement as the reciprocal correspondence gap. We introduce RecCAR, standing for Reciprocal Cross-modal Attention Regularization, a KL regularizer that uses the well-established video-to-modality correspondence as a fixed reference and aligns the weaker modality-to-video correspondence toward it. Across joint video-motion and video-audio generation, RecCAR improves the Human Anatomy score from 0.69 to 0.75 and reduces audio-video desynchronization from 0.804 to 0.752, while improving overall generation",
+  "abstractSha256": "2f7c3fc6d2ea8e0dad79c6267de6edd0c57aa20cb588e4a386596a662bb6dace",
+  "arxivId": "2609.27901",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Bar-Ilan University"
+      ],
+      "name": "Ohad Rahamim"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Dvir Samuel"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University"
+      ],
+      "name": "Idan Schwartz"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University",
+        "NVIDIA"
+      ],
+      "name": "Gal Chechik"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文发现联合视频生成中视频到伴随模态的对应强而反向弱，提出以停止梯度的强方向分布为目标的 KL 正则 RecCAR，在视频-动作上把人体解剖学得分从 0.69 提升到 0.75，在视频-音频上把绝对失同步从 0.804 降到 0.752，代价是只微调 LoRA 且需保留原生成损失权重。",
+  "originalTitle": "All modalities are equal, but video is more equal: Closing the Cross-Attention Gap in Joint Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27901.pdf",
+  "readerTitle": "双向连接不等于双向约束：用强方向注意力校准弱方向的 RecCAR",
+  "schemaVersion": 1
+}

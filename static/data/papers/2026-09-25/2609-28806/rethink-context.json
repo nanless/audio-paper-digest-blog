@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28806",
+  "abstract": "Full-duplex dialogue systems, which listen while speaking, must distinguish a completed turn from a pause within a turn and an interruption that requests a turn from a brief acknowledgment or speech addressed to a third party. Yet existing conversational corpora provide limited control over these events and limited labels for their intent. We present a pipeline for synthesizing intent-labeled, two-channel conversational speech from relational event lists. An LLM authors each event&#39;s speaker, text, conversational act, and attachment to an earlier event without predicting absolute timestamps. Events are synthesized independently, aligned with their source text, and placed on a shared clock, so turn-taking landmarks are measured from the rendered signal while silence durations are specified or sampled from turn-taking distributions. The pipeline covers 42 phenomena across eight families in English and Mandarin, derives frame-level system actions from authored intent, and promotes diversity using small, diverse sets of prior examples and batch prompts that request alternatives with self-reported probabilities. Ablations show gains in each targeted diversity dimension. On a four-action label space for taking, holding, releasing, and not holding the conversational floor, a semantic voice-activity detector using only current and past audio reaches start-speaking and start-listening F1 scores of 0.819 and 0.802. When generating its own responses, the full-duplex speech model Moshi takes 0.85 of the reference turns after fine-tuning on the generated corpus, compared with 0.44 before fine-tuning. Its frame-level precision for predicting system-floor occupancy rises from 0.46 to 0.88. With reference context at each step, its frame-level floor F1 rises from 0.893 to 0.962. These results show that controlled synthesis can provide learnable and transferable supervision for full-duplex turn management.",
+  "abstractSha256": "e6c33617bb9fc03ebc271899668beda9724ccbd715c9ec3b72224aacd69e1908",
+  "arxivId": "2609.28806",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vinay Kothapally"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steve Yves"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把双工对话拆成先写意图关系再测语音时刻的合成管线，用 42 种现象的双通道数据证明因果语义 VAD 能学到起止边界且 Moshi 微调后接管轮次从 0.44 升至 0.85，代价是稀有打断类与自由生成的精确对齐仍弱。",
+  "originalTitle": "A Harness for Synthesizing Diverse Naturalistic Full-Duplex Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28806.pdf",
+  "readerTitle": "把意图写进时间轴：用关系事件合成可学习的双工轮替监督",
+  "schemaVersion": 1
+}

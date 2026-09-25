@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28974",
+  "abstract": "Post-training quantization (PTQ) reduces the cost of on-device text-to-speech (TTS), but published evaluations cover one system or method. We evaluate PTQ across TTS architectures under one protocol with three core models, weight and activation ablations of eight more, and two held-out models quantized blind. Four-bit per-channel weights reduce UTMOS, a predicted mean opinion score, by 2.8 on Supertonic and 0.07 on Kokoro, and per-tensor scaling can cause severe degradation even at 8 bits. The same bit width yields different outcomes, because the sensitive component is model-specific and not reliably predicted from the model class. A staged ablation procedure identifies it, and per-layer GPTQ can restore it to within 0.1 UTMOS. Real int8 and int4 kernels reproduce the simulated ordering at hardware-dependent cost. On a Mac mini, a 4-bit weight kernel runs Supertonic at 0.60x the fp32 latency while int8 is slower, so each configuration requires validation on the target runtime.",
+  "abstractSha256": "4dccbe424399d4f763c2f8383c0a92df2249b1794615cc6c1260c49bcad91710",
+  "arxivId": "2609.28974",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型量化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Se Un Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutae Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在统一协议下对 3 个核心加 8 个复现加 2 个盲测 TTS 模型做训练后量化，发现相同位宽下自然度损失完全取决于模型特异的敏感部件，最强证据是 4 比特逐通道权重让 Supertonic 下降 2.8 个 UTMOS 而 Kokoro 仅下降 0.07，而代价是逐张量缩放即使在 8 比特也会严重退化且真实部署的延迟与能耗必须逐运行时验证。",
+  "originalTitle": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28974.pdf",
+  "readerTitle": "同样 4 比特，不同结局：跨架构 TTS 后训练量化的敏感部件地图",
+  "schemaVersion": 1
+}

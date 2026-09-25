@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29138",
+  "abstract": "Frozen self-supervised (SSL) speech encoders are strong, low-cost front ends for audio deepfake detection, and recent comparisons agree that large, multilingual, discriminative encoders generalize best out of domain. These comparisons fail to control for encoder capacity, pretraining objective, and multilingual coverage together, identifying which encoder wins without isolating why. We present a controlled decomposition with a fixed pipeline and trainable capacity. We vary multilingual coverage on four wav2vec2-family encoders, matched to ~315M parameters. We isolate the pretraining objective on two encoders matched on identical data. Coverage does not help monotonically, as out-of-domain error drops sharply at the ~100-language scale (XLS-R) but does not improve further at the 1406-language extreme (MMS). We find that a mid-coverage encoder is strongest on farther out-of-domain sets, matching or surpassing a 577M-parameter model at 315M. Its lead on these far sets, statistically significant under paired bootstrap, and on the official ASVspoof 5 cost metric holds under two backends. Separately, masked-prediction pretraining generalizes better than contrastive on identical data (In-the-Wild EER 26.5% vs. 46.8%). Within this fixed frozen-encoder recipe, we find that broader and larger models are not reliably better.",
+  "abstractSha256": "edf6e956a1873e69c5a8cf3cbc83f3c2cff006245f0482638d387ba182f75af5",
+  "arxivId": "2609.29138",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Hurt"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Oscar O'Donnell"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在冻结编码器加固定轻量后端的配方下，用约 315M 容量的 wav2vec2 家族对照 1 到 1406 种语言覆盖，并用相同 Libri-Light-60k 数据对照掩码预测与对比目标，发现域外误差在 128 语言处触底而 1406 语言不再提升，且掩码预测明显更稳，代价是结论限定于单训练语料与固定流程且覆盖与数据量无法彻底解耦。",
+  "originalTitle": "Is Broader Better? A Controlled Study of Multilingual Coverage and Pretraining Objective in Frozen SSL Encoders for Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29138.pdf",
+  "readerTitle": "更广并不更强：冻结编码器多语覆盖与预训练目标的受控分解",
+  "schemaVersion": 1
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29452",
+  "abstract": "Voice agents must complete users&#39; tasks despite noise, reverberation, and competing speech. Evaluating agents&#39; robustness therefore requires following how acoustic conditions affect the conversation and the actions taken on the user&#39;s behalf. This overview examines what existing benchmarks reveal about agents&#39; ability to complete tasks under acoustic stress and where further task-based evaluation is required. We then introduce TRACE, a practical workflow for designing, running, and interpreting evaluations of acoustic robustness in task-oriented human-agent interactions: the same agent attempts a specified task with an original recording and an acoustically stressed copy, and the resulting conversations are scored for task completion, wrong actions, recovery, and user effort. Finally, we explain how results from these evaluations can guide changes to an agent to prevent wrong actions and improve recovery.",
+  "abstractSha256": "7afdaa2f385dd271fc863c0e9c13ff18bd5b763338519ac30495b37cf26329bf",
+  "arxivId": "2609.29452",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音交互",
+    "rankBucket": "后50%",
+    "score": 5.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amir Ivry"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai-Wei Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Gannot"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carlos Busso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "本文针对噪声、混响和竞争说话导致语音智能体做错动作的问题，提出 TRACE 配对比较工作流，用原文与声学压力拷贝的任务成功、违规、恢复和用户代价对照来定位失败，代价是需要为每个应用自建任务、录音与评分规则且文中示例计数均为假设说明而非实测性能。",
+  "originalTitle": "Voice Agents under Acoustic Stress: From Signal Degradation to Interaction and Action",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29452.pdf",
+  "readerTitle": "听错一个数字就下错单：从声学压力到任务成败的 TRACE 核查法",
+  "schemaVersion": 1
+}

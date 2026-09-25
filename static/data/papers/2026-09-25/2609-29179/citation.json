@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29179",
+  "arxivId": "2609.29179",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abishek Soti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thura Pyae Sone"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naqib Ibnul"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Htoo Htet Aung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Henry Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gregory Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ying Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29179",
+  "originalTitle": "Towards Deployable Underwater Vessel Classification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29179.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

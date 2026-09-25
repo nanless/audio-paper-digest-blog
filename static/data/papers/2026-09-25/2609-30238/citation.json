@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30238",
+  "arxivId": "2609.30238",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Software School, Shandong University",
+        "Shenzhen Loop Area Institute"
+      ],
+      "name": "Wenhao Li"
+    },
+    {
+      "affiliations": [
+        "Software School, Shandong University"
+      ],
+      "name": "Zhibin Wu"
+    },
+    {
+      "affiliations": [
+        "Software School, Shandong University"
+      ],
+      "name": "Chong Xiao"
+    },
+    {
+      "affiliations": [
+        "Software School, Shandong University"
+      ],
+      "name": "Qiangchang Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30238",
+  "originalTitle": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30238.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

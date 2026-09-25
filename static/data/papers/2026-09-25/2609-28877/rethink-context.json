@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28877",
+  "abstract": "New words are invented every day. A human listener can learn a new word by hearing it clearly once and inferring its usage from sentence context. This paper proposes granting ASR a similar ability to learn the contextual representations and spellings of new words from unlabeled test data at test time. A frozen CTC acoustic model provides spellings, a frozen language model provides contextual evidence for out-of-vocabulary (OOV) word detection, and an adaptation module expands the vocabulary by learning the lexical token representations with distributions over CTC-generated candidates. The spelling model of each token is optimized by minimizing a Kullback-Leibler divergence (KLD) objective. We demonstrate that the CTC-weighted language model log likelihood ratio can be interpreted as the KLD between the unknown correct ASR and the unsupervised learned ASR, and that, using a Pinsker bound, the square root of KLD can be interpreted as an upper bound on the total variation distance between the true and estimated spelling of the unknown word. Experiments show relative OOV character-error-rate reductions of up to 14.97% on LibriSpeech and 6.67% on dysarthric Speech Accessibility Project data for recurring OOV words, relative to the corresponding rescoring system.",
+  "abstractSha256": "1103a0cc7dc15ce5efa0fbf2fa5b75b0b60116ae59aca28662500e436479a0fb",
+  "arxivId": "2609.28877",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark A. Hasegawa-Johnson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haolong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chang D. Yoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音识别遇到训练未见词时语言模型无法给分的问题，该文用冻结 CTC 找拼写候选、冻结语言模型找上下文分歧来定位新词，再只学新增词符的嵌入与拼写分布，LibriSpeech 上 OOV 字符错最高相对降 14.97%，代价是只对重复出现的新词有效且依赖 CTC 候选质量。",
+  "originalTitle": "Learning New Words from Unlabeled Test Data in Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28877.pdf",
+  "readerTitle": "测试时才学新词：用未标注语音为语言模型补词表与拼写",
+  "schemaVersion": 1
+}

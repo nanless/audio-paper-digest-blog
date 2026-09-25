@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29746",
+  "abstract": "Anomalous sound detection (ASD) has long been dominated by k-nearest-neighbor (KNN) based detectors, which essentially perform implicit likelihood estimation over normal samples. In this work, we investigate whether generative models can better serve this role. We propose Relative Mismatch, a generative ASD backend powered by flow matching, which learns a velocity field that transports Gaussian noise to a representative feature space of normality. During inference, it measures the mismatch between the oracle and predicted path velocities and aggregates them through a two-level design. To mitigate the inherent mismatch offsets incurred by domain shift, each query is further calibrated with the mismatch of its local normal reference, thereby exposing only its deviation beyond normality. Extensive experiments on DCASE 2020--2025 demonstrate that Relative Mismatch outperforms state-of-the-art backends with the highest score of 71.01, along with strong robustness and training stability. Furthermore, we show that curating a compact and discriminative feature space is the key to unleash the power of generative models for ASD.",
+  "abstractSha256": "911ffc8085802513101047a7d3cc2019436808f8a6414a1213bb6b74b421001e",
+  "arxivId": "2609.29746",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anomaly-detection",
+          "label": "异常声音检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "异常声音检测",
+      "primaryTaskId": "task.anomaly-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anbai Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinhu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lvxin Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuwei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenrui Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pingyi Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei-Qiang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jia Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对只用正常声音训练、测试需跨工况统一阈值判异常的问题，该文把整流流匹配搬到紧凑音频特征空间并用近邻正常样本的失配做局部校准，在 DCASE 2020-2025 六年平均分报告 71.01，代价是仍依赖微调特征与逐查询多路径前向计算。",
+  "originalTitle": "Relative Mismatch: Local-Reference Calibration of Feature-Space Flows for Anomalous Sound Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29746.pdf",
+  "readerTitle": "从绝对失配到相对失配：特征空间流模型如何校准域偏移做异常声音检测",
+  "schemaVersion": 1
+}

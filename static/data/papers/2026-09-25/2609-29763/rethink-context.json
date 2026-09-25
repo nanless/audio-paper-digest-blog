@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29763",
+  "abstract": "Just as motorisation made road traffic a defining noise source of the twentieth-century city, low-altitude aircraft may reshape urban acoustic exposure in the twenty-first. Yet how this noise interacts with existing sound environments and three-dimensional urban form across global cities remains unclear. We modelled identical low-altitude aircraft operations across ten urban districts spanning all inhabited continents. Horizontal exposure varied markedly across and within cities, depending on road noise conditions and urban morphology, which also strongly influenced overall attenuation. Some semi-enclosed spaces with low noise levels before low-altitude aircraft operations experienced increases above 20 dB(A), creating pronounced local contrasts in urban noise exposure. Vertically, exposure varied with height and acoustic visibility to the flight route, creating vertical exposure inequalities between storeys, façades and buildings at comparable heights. These findings show that low-altitude aircraft can reshape noise exposure across global cities, requiring route assessment to distinguish newly exposed from already exposed areas and to account for three-dimensional exposure.",
+  "abstractSha256": "eac00a745a2ef5bcf27ec2c0e97b9c689173e0b740cbba1d0d6a5b0a47df2e4b",
+  "arxivId": "2609.29763",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianjing Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Kang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在十个城市中心 2×2 km 街区施加完全相同的无人机与载客 eVTOL 飞越作业，用道路基线加低空航空器增量的三维声传播仿真，证明水平与立面暴露差异主要来自既有道路噪声基线与城市形态的联合塑造，代价是恒定 100 m 平飞、标准化交通与单街区代表等强简化假设。",
+  "originalTitle": "Low-altitude aircraft will reshape noise exposure across global cities",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29763.pdf",
+  "readerTitle": "同样的低空航线，为何在不同城市激起完全不同的噪声增量",
+  "schemaVersion": 1
+}

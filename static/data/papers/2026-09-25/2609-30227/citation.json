@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30227",
+  "arxivId": "2609.30227",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "IISER Bhopal"
+      ],
+      "name": "Debajyoti Mazumder"
+    },
+    {
+      "affiliations": [
+        "King’s College London"
+      ],
+      "name": "Mamta"
+    },
+    {
+      "affiliations": [
+        "MBZUAI"
+      ],
+      "name": "Abhirama Subramanyam Penamakuri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30227",
+  "originalTitle": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30227.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

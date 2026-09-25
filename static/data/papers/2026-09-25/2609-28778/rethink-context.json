@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28778",
+  "abstract": "Audio-language models (ALMs) can exploit textual shortcuts to answer questions while overlooking acoustic evidence, weakening audio understanding. On-policy distillation (OPD) trains compact ALMs by supervising student-generated responses with teacher predictions, but does not explicitly distinguish acoustic support from linguistic predictability. We propose Reward-Tilted On-Policy Distillation (RT-OPD) to strengthen acoustic grounding. Given the same question and student-generated text, a frozen teacher predicts the next token with and without audio inputs. Their log-probability contrast defines a reward that reshapes the teacher distribution for reverse-KL distillation, emphasizing the additional evidence provided by audio. Across two compact students and three benchmarks, RT-OPD consistently outperforms Vanilla OPD. Experiments with silenced and replacement audio further suggest that RT-OPD strengthens the student&#39;s reliance on acoustic evidence. Our 3B model achieves 72.72% accuracy on MMAU, the highest among the compared 3B models and competitive with several 7B and 8B models. Code and model checkpoints are available at this https URL.",
+  "abstractSha256": "dc65db5ed68dedb2887b21996791af4d0b7eed268a377cde7009b6f57328a64b",
+  "arxivId": "2609.28778",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.post-training",
+          "label": "后训练"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaiyang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaobo Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yue Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shihao Ji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频语言模型靠文本捷径答题的问题，论文用同一冻结教师有音频与无音频的对数概率差重塑蒸馏目标，在两个 3B 学生和三个基准上超过普通同策略蒸馏，代价是训练时每步要多做一次无音频教师前向。",
+  "originalTitle": "Reward-Tilted On-Policy Distillation for Acoustic Grounding in Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28778.pdf",
+  "readerTitle": "别只学老师说什么，更要学它因听到音频才改口的部分",
+  "schemaVersion": 1
+}

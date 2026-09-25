@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29766",
+  "abstract": "Cross-speaker acoustic-to-articulatory inversion requires accounting for anatomical differences between speakers. We propose a geometric adaptation framework that uses anatomical landmarks, primarily on vertebrae and dental structures,to transfer predictions from a fixed inversion model to unseen speakers. An affine transformation followed by thin-plate spline (TPS) deformation maps the predicted contours of 10 vocal-tract structures into each target speaker&#39;s geometry without retraining. Landmarks are identified in one selected /u/ frame per speaker as a common phonetic reference without assuming identical articulatory configurations across speakers, and the resulting mapping is reused across recordings. We train the model on a single-speaker rt-MRI database and evaluate adaptation on eight speakers from a separate multi-speaker rt-MRI database. We compare affine and TPS configurations using 12 or 14 landmarks. Affine12+TPS14 achieves the lowest mean point-to-closest-point error of 3.19mm. These results support the combined value of anatomical landmark information and nonrigid alignment.",
+  "abstractSha256": "47a0fb5276778f01611cb5403b6716f80f031e2bb513724b7bfb6f593088bb9c",
+  "arxivId": "2609.29766",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nhat-Nam Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierre-Andre Vuissoz"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yves Laprie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单说话人声学到完整声道轮廓反演跨说话人几何失配问题，论文用一帧/u/标定的 12 点仿射加 14 点薄板样条映射复用固定模型预测，在 8 个新说话人上把 Full10 误差从未适应的 8.87 mm 降到 3.19 mm，但喉部与唇部改善不均匀且 P4 出现回退。",
+  "originalTitle": "Anatomy-aware cross-speaker adaptation of complete vocal-tract acoustic-to-articulatory inversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29766.pdf",
+  "readerTitle": "不重训模型，只用一帧解剖标定把完整声道轮廓搬到新说话人",
+  "schemaVersion": 1
+}

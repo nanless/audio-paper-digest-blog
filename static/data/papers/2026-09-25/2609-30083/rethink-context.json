@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30083",
+  "abstract": "Open-vocabulary Sound Event Detection detects and temporally localizes acoustic events described by arbitrary text queries. Progress in this emerging field is hard to assess: recent methods report on disjoint task subsets under incompatible protocols without a benchmark spanning the acoustic domains and query types the task presents. We establish a comprehensive benchmark by assembling six temporally-annotated tasks: four with fixed class vocabularies over domestic, urban and mixed indoor/outdoor scenes, plus two free-text grounding tasks. We evaluate five recent methods on identical data and metrics under a label-space zero-shot criterion. Our benchmark demonstrates that no prior method is competitive across all six tasks. We then introduce COSED, which surpasses prior work on five out of six tasks while staying on par with the best method on the sixth, with margins of 12-33% on three of them. COSED is the only system in our comparison competitive on every task, and so generalizes across acoustic domains and query types better than prior work. We also provide a leave-one-out ablation study that isolates the sources of the performance benefits: scoping negatives to their corpus of origin (25.8%), combining closed- and open-world supervision (16.8%), and improving temporal processing (16.4%).",
+  "abstractSha256": "53ca4eb5993d405e1664bdc1b05e41c11c432d1a2487fbad1a0a099e70fc8654",
+  "arxivId": "2609.30083",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Florian Schmid"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanjeel Parekh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chi Ian Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Azcarreta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yijun Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnoldas Jasonas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Frederick Francl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Çağdaş Bilen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "开放词汇声音事件检测要求对任意文本查询输出精确时间边界，COSED 以双编码器加高分辨率时序精修与语料作用域掩码加闭合开放联合监督为选择，在六任务统一零样本基准上五项最优一项持平，代价是多语料联合训练与精细时序建模的复杂度。",
+  "originalTitle": "COSED: Setting the Bar for Open-Vocabulary Sound Event Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30083.pdf",
+  "readerTitle": "以语料为界的负样本与双世界监督重定开放词汇检测基线",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28068",
+  "arxivId": "2609.28068",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierre Massé"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anthony Gallien"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wolfgang Kreuzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Markus Noisternig"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28068",
+  "originalTitle": "Echo Detection in Spatial Room Impulse Responses Measured with Spherical Microphone Arrays Using the Herglotz Wavefunction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28068.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

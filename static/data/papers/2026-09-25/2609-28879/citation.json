@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28879",
+  "arxivId": "2609.28879",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Isidore Grace"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiran Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28879",
+  "originalTitle": "Broadening Uncertainty Estimation for Audio Question Answering Across Methods, Formats, and Inputs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28879.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

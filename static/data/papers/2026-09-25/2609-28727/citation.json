@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28727",
+  "arxivId": "2609.28727",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiqi Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiyi Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongjin Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shugong Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28727",
+  "originalTitle": "PTC-Bias: Phoneme-Level Temporal Competition for Bias Retrieval and Post-Decoding Correction in Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28727.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

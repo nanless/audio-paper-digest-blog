@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28877",
+  "arxivId": "2609.28877",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark A. Hasegawa-Johnson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haolong Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chang D. Yoo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28877",
+  "originalTitle": "Learning New Words from Unlabeled Test Data in Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28877.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

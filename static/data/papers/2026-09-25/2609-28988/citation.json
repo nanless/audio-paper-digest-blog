@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28988",
+  "arxivId": "2609.28988",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Se Un Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hakjun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taehoon Roh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28988",
+  "originalTitle": "Personalized Korean Lipreading as Visual Speech Recognition: Transfer, Census and Adaptation on OLKAVS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28988.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28787",
+  "abstract": "Machine learning tools have significantly aided automatic piano music transcription; however, this domain has focused primarily on accurately predicting the pitches and timings of played notes. To produce sheet music for the piano, notes must be separated into two staves, one for each hand, and good sheet music often contains fingering annotations to guide the player when sight-reading or learning fast or complex pieces. We propose 8 statistical approaches for combined hand and fingering annotation of transcribed piano notes, including baseline hidden Markov models, rule-based methods, a synthesis of existing approaches, and N-gram language models. Furthermore, we develop a pipeline for complete transcription from piano audio to fingering-annotated sheet music. Evaluations with the PIG dataset demonstrate that our Synthesis model achieves a hand separation accuracy of 90.8\\% and a joint hand and finger annotation accuracy of 56.6\\%. These approaches serve as a new baseline for further research into this problem, while our pipeline demonstrates the feasibility of a combined system for automated note transcription, hand separation, and fingering annotation.",
+  "abstractSha256": "a8275b2a5dbdfa7841c8bf15c3409eef80500dcf20df3d5b8d6bce6f13dc8442",
+  "arxivId": "2609.28787",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音乐转录",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.transcription",
+          "label": "音乐转录"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.music-information",
+          "label": "音乐信息检索"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.end-to-end",
+          "label": "端到端"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音乐转录",
+      "primaryTaskId": "task.transcription",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, Alberta, Canada"
+      ],
+      "name": "Daniel Penner"
+    },
+    {
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, Alberta, Canada"
+      ],
+      "name": "Abram Hindle"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把钢琴音频转录后的音符序列当作手与手指联合标注问题，用双向卡尔曼加分手隐马尔可夫的合成模型与四元三元语言模型在 PIG 上分别达到 90.8% 手部分离与 56.6% 联合准确率，而端到端管线召回降至 65.7% 与 37.0%，代价是统计模型仍受古典数据与合成音频评估限制。",
+  "originalTitle": "Statistical Models for Automatic Fingering-Annotated Piano Sheet Music Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28787.pdf",
+  "readerTitle": "从音频到可弹指法：手部分离与指法标注为何必须联合建模",
+  "schemaVersion": 1
+}

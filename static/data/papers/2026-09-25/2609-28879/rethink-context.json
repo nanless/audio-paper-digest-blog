@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28879",
+  "abstract": "Audio-language models can produce confident answers unsupported by the audio, motivating uncertainty estimates that identify unreliable responses. We compare probability-based, sampling-based, self-verification, evidential, and contrastive measures across four open-weight models and five audio QA benchmarks. In multiple-choice evaluation, first-token measures are strongest overall, with top-1 probability achieving a mean AUROC of .740, compared with .708 for ten-sample discrete semantic entropy, while requiring no additional model calls. Across four benchmarks, shifting from multiple-choice to open-ended evaluation lowers mean accuracy from 57.6% to 36.6%, yet uncertainty remains predictive of errors: semantic entropy, maximum token entropy, and semantic agreement achieve mean AUROCs of .697, .694, and .693, respectively. To test whether uncertainty reflects the evidence available to answer the question, we perform input ablations that remove either the audio or the question. Across top-1 confidence, entropy, and sampling-based measures, removing audio reduces error-detection AUROC by .101 on average, compared with .010 when removing the question. Together, these results establish efficient uncertainty baselines and show that uncertainty in audio-language models depends substantially more on available audio evidence than on question text.",
+  "abstractSha256": "c1786852ca4381b5a22781225b90599a27b622969a66f2a96d9774849fd00077",
+  "arxivId": "2609.28879",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aaron Isidore Grace"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiran Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在四种音频语言模型和五个音频问答基准上比较概率、采样、自验证、证据冲突与对比信号，发现选择题下首词 top-1 概率以平均 AUROC .740 超过十次采样的离散语义熵.708 且无需额外调用，而移除音频比移除问题使误差识别 AUROC 平均多下降.101 对.010。",
+  "originalTitle": "Broadening Uncertainty Estimation for Audio Question Answering Across Methods, Formats, and Inputs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28879.pdf",
+  "readerTitle": "音频问答的不确定性更依赖音频证据：首词概率为何能胜过十次采样",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28683",
+  "abstract": "Neural methods for audio restoration are typically framed as rigid mappings from degraded inputs to single clean outputs, enforcing decisions about what audio content is removed, and potentially adding unwanted content to the restored signal. Because what constitutes a restored audio signal is subjective, we introduce RESTORE, a framework that formulates audio restoration as a six-source semantic decomposition to allow for real-time interactive user control over the process. By expanding a pretrained HTDemucs backbone, a single forward pass disentangles a degraded mixture into vocals, music, broadband hiss, impulsive transients, and an unmodeled residual, while jointly synthesizing a high-frequency extension. Users may steer the restoration by adjusting stem gains, ensuring generative content remains isolated and auditable. RESTORE improves audio quality on diverse historical recordings compared to baselines,lowering Frechet Audio Distance (FAD) (12.13 VGGish; 0.92 CLAP) and delivering aesthetic steerability (Spearman rho greather than 0.91) at 50x real-time on a single GPU. Code and audio samples are available at this https URL.",
+  "abstractSha256": "f3a9c1c9a75191bb78b0f60311b30eba8ca569f97231a48207735733ba4302fa",
+  "arxivId": "2609.28683",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "音频修复",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meiying Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin R. Thompson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael C. Heilemann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对历史音乐带限与噪声并存且修复标准主观的问题，RESTORE 用单次前向的六轨语义分解加独立高频生成实现可调修复，在合成与 78 转历史录音上以 FAD 与可控性为证据，代价是仍需两阶段对抗训练与配对仿真监督。",
+  "originalTitle": "RESTORE: REal-time Steerable Music resTORation and bandwidth Extension via stem disentanglement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28683.pdf",
+  "readerTitle": "不直接去噪而是先分轨：把修复拆成六个可调声轨的实时框架",
+  "schemaVersion": 1
+}

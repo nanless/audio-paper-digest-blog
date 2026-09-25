@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29371",
+  "arxivId": "2609.29371",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mizbaul Haque Maruf"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29371",
+  "originalTitle": "BanglaTurn: A Benchmark and Whisper-Based Model for End-of-Turn Detection in Bangla Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29371.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

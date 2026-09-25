@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28033",
+  "abstract": "Outer-hair-cell (OHC) loss is a primary deficit of sensorineural hearing loss (SNHL), impairing cochlear amplification and frequency selectivity and thereby elevating hearing thresholds. Biophysically-inspired DNN-based hearing-aid (HA) algorithms have been proposed to compensate for OHC deficits and have shown clear benefits in objective speech intelligibility and quality metrics (e.g. HASPI, HASQI). However, comprehensive subjective validation of these benefits in human listeners is still missing. In this work, we present a subjective evaluation of a biophysically-inspired HA model targeting OHC deficits. The cochlear module of an auditory model was individualized based on each listener&#39;s pure-tone audiogram and integrated into a trainable system, which includes the personalized model and a normal-hearing reference model, and the resulting trained HA was evaluated using a Matrix test comparing intelligibility scores for unprocessed and HA-processed noisy speech. The results revealed a significant benefit of the HA model over the unprocessed condition in the range of +1 to +27%, providing behavioral confirmation of the efficacy of the HA model. This study closes the gap between objective and perceptual evidence for this new generation of DNN-based HA algorithms, paving the way for their integration into next-generation DNN-accelerated chips for hearables and hearing aids.",
+  "abstractSha256": "25c82a551251535d6a0dbc67f5cc4b3cbe55819731303eb5a10aadc4d1af4b4d",
+  "arxivId": "2609.28033",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuan Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Brent Nissens"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nele De Poortere"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Morgan Thienpont"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthias Inghels"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Attila Fráter"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guy Torfs"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sarah Verhulst"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究针对外毛细胞损伤导致的可懂度下降，用听觉模型响应的正常与损伤差异训练 dCoNNear 助听模型，并在 19 名受试者的矩阵测试中获得显著可懂度提升，但客观音质指标 HASQI 出现下降 trade-off。",
+  "originalTitle": "Subjective Evaluation of DNN AND Auditory-Model-Based Hearing-Loss Compensation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28033.pdf",
+  "readerTitle": "以外毛细胞损伤为靶点的仿生助听补偿：从听力图个性化到人耳可懂度验证",
+  "schemaVersion": 1
+}

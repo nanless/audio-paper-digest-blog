@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29463",
+  "arxivId": "2609.29463",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ui-Hyeop Shin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wooseok Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyung-Min Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29463",
+  "originalTitle": "Configurable-Bandwidth Time-Frequency Modeling for Efficient Full-Band Speech Enhancement Across Sampling Rates",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29463.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27980",
+  "abstract": "Pruning large pre-trained transformer-based ASR models such as OpenAI's Whisper has seen great adoption, as pruning the decoder led to significant end-to-end transcription speedups. For instance, the {\\tt whisper-large-v3-turbo} variant reduced the decoder from 32 to 4 layers, while Distill-Whisper similarly reduced the decoder to only 2 layers. Although some attention has been put towards reducing the size of the encoder, no approach has seen wide adoption. This could be due to the need for custom inference implementations to take advantage of the compressed model. We present an approach that ranks encoder layers by the leave-one-layer-out change in Word Error Rate (WER). The six layers that cause the least change are removed, corresponding to 18.5% of the encoder stack. The pruned model requires no custom inference code as it is simply a more shallow encoder with fewer layers. We further distill using unlabeled monolingual speech data to recover performance degradation caused by the zero-shot layer pruning. Mean WER across four languages increases to 20.1% after distillation, compared to 21.9% zero-shot, going from a baseline of 18.2%. We release all of our code (https://github.com/rasgaard/whisper-encoder-layer-prune) and the pruned model (https://huggingface.co/rasgaard/whisper-large-v3-turbo-encoder-pruned).",
+  "abstractSha256": "fcdd7b2be11fe07d15345822273d882726f6e300b877ed1e56d4b77871f90600",
+  "arxivId": "2609.27980",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Technical University of Denmark",
+        "Laerdal Medical"
+      ],
+      "name": "Rasmus Aagaard"
+    },
+    {
+      "affiliations": [
+        "Technical University of Denmark"
+      ],
+      "name": "Nicki Skafte Detlefsen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 whisper-large-v3-turbo 编码器 32 层冗余问题，用留一层词错率变化选出 6 层直接删除，再以无标签英语语音做编码器隐状态均方误差蒸馏恢复，四语平均词错率从基线 18.2% 升至零样本 21.9% 再回落到 20.1%，代价是仍残留 1.9 个百分点的绝对升高和编码器参数减少 118M。",
+  "originalTitle": "Six Layers Less: Encoder Pruning for Whisper with Label-Free Recovery",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27980.pdf",
+  "readerTitle": "编码器也能剪六层：用留一法选层与无标签恢复守住多语识别",
+  "schemaVersion": 1
+}

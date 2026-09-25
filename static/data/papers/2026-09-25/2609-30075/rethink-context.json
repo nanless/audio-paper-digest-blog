@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30075",
+  "abstract": "Automatic speaking assessment systems can provide holistic proficiency scores, but often lack interpretable measures that characterize pronunciation quality. We propose a native-reference phone-class geometry for measuring second language (L2) pronunciation deviation without requiring pronunciation labels, read-aloud prompts, or matched recordings of the same text from native and L2 speakers. Given a native speech corpus, we average frame-level self-supervised representations for each context-dependent phone-class and use singular value decomposition (SVD) to derive a compact native-reference coordinate system. For each L2 utterance, we compute the corresponding averages and project them into the native-reference space. We then demonstrate that the distances between L2 and native-reference coordinates for matched phone-classes show consistent negative correlations with holistic speaking proficiency on the Dev subset of the Speak and Improve Corpus 2025 (Spearman&#39;s $\\rho\\!=\\!-0.53$) and with pronunciation quality on the learner subset of the English Read by Japanese Students dataset ($\\rho\\!=\\!-0.34$). These findings suggest that the proposed geometry captures acoustic-phonetic information relevant for proficiency rating while remaining applicable to spontaneous L2 speech without matched native recordings.",
+  "abstractSha256": "c55af9fbd70be863409820a7ff4a6859b5b6370d85e6c2423a330c21f810a53a",
+  "arxivId": "2609.30075",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "application",
+          "id": "application.education",
+          "label": "教育"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tina Raissi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nhan Phan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用母语语料的上下文相关音素类中心加截断奇异值分解建立母语参照坐标，把每条二语话语的同名音素类投影进去算距离，在自发口语上与综合熟练度呈负相关，在朗读上与发音质量呈负相关，但偏离中仍混有流利度和覆盖度因素。",
+  "originalTitle": "A Native-Reference Phone-Class Geometry for Second-Language Pronunciation Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30075.pdf",
+  "readerTitle": "不用跟读配对：以母语者音素类几何度量二语发音偏离",
+  "schemaVersion": 1
+}

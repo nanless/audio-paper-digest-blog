@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29780",
+  "abstract": "Continuous audio encoders compress audio along feature and time axes through latent width and frame rate, but their joint effect on downstream performance remains unclear. We train sixteen encoders spanning four widths and four frame rates, with downstream adapters and probes, using matched training protocols. Despite generally improved reconstruction at larger widths, automatic speech recognition (ASR) and spoken question answering (SQA) favor moderate widths at higher rates, with the best observed widths shifting toward larger values under stronger temporal compression. Frozen-model PCA interventions reveal distinct reconstruction and recognition sensitivities: removing the trailing half of the components substantially degrades ASR in high-rate 512-dimensional encoders with comparatively small reconstruction penalties, whereas 1024-dimensional encoders largely preserve both. Yet the projected 1024-dimensional model underperforms unmodified narrower models on ASR at 12.5Hz. These findings identify a width--rate interaction in downstream utility and suggest that how representations are organized during training matters beyond reconstruction fidelity and compressibility.",
+  "abstractSha256": "dd7aded96a8b53dfc57bcfaf69f008ab8d06222d572ada5e38cdada3280ba651",
+  "arxivId": "2609.29780",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyudan Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sehyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Son-ha Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaegul Choo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanghyuk Shoi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在统一骨干与训练配方下比较 4 种隐宽度与 4 种帧率共 16 个连续编码器，报告重建在 1024 维 25 赫兹处最好而下游识别与问答在 12.5 赫兹中等宽度处最好，且冻结模型的半数主成分干预显示重建容忍与识别失效可以分离，但窄瓶颈训练不等价于事后降维。",
+  "originalTitle": "Joint Analysis of Latent Dimensionality and Frame Rate in Continuous Audio Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29780.pdf",
+  "readerTitle": "重建越好识别越好吗：连续音频编码器中隐宽度与帧率的联合权衡",
+  "schemaVersion": 1
+}

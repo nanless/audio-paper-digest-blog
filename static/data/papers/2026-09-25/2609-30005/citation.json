@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30005",
+  "arxivId": "2609.30005",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minh Hoang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thai Le"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30005",
+  "originalTitle": "VietPrism: A large-scale Vietnamese speech and deepfake corpus with diverse dialects and code-switching",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30005.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

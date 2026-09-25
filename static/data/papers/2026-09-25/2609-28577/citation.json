@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28577",
+  "arxivId": "2609.28577",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Victor Ménestrel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian Möller"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Slim Ouni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorothea Kolossa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28577",
+  "originalTitle": "ASR ensembling for phoneme intelligibility evaluation of speech anonymizers",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28577.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

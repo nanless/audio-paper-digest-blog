@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28806",
+  "arxivId": "2609.28806",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vinay Kothapally"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meng Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steve Yves"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.28806",
+  "originalTitle": "A Harness for Synthesizing Diverse Naturalistic Full-Duplex Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28806.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

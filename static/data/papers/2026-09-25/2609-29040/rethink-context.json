@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29040",
+  "abstract": "Neural audio watermarks are increasingly deployed in commercial speech generation systems to make AI-generated speech traceable, yet their robustness has been studied mainly under conventional signal distortions. Since a watermark can be regarded as imperceptible noise added to the speech signal, a natural question is whether speech enhancement (SE), as a denoising model, can remove it. In this paper, we cascade Gaussian noise with SE models as a black-box watermark removal attack, covering both discriminative and generative SE paradigms, against six neural watermarks: AudioSeal, WavMark, SilentCipher, Timbre, Perth, and AlignMark. Experimental results show that the proposed attack significantly outperforms existing neural re-synthesis methods in watermark removal. In particular, we find that generative SE, which reconstructs the harmonic regions of speech while denoising, is highly destructive to watermarks. These findings show that SE poses a serious threat to current audio watermarking methods, and we call for SE-aware robustness evaluation in watermark design.",
+  "abstractSha256": "e492c95a64daee726228e1d95645a9d7ef2c0009454f463fd1e3b02eed44da27",
+  "arxivId": "2609.29040",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.adversarial-robustness",
+          "label": "对抗鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xincong Zhong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shengyao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lingfeng Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yihang Bao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinze Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Miao Pan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiang Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把去除水印建模为先加高斯噪声再做语音增强的严格黑盒攻击，对六种神经水印与六种增强模型做范式级对比，显示基于语言模型的生成式增强去除最彻底，而判别式增强与纯频谱重建难以撼动与谐波对齐的高能量水印，且需以音质与音色变化为代价。",
+  "originalTitle": "The Vulnerability of Neural Audio Watermarks under Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29040.pdf",
+  "readerTitle": "把水印当噪声抹掉：高斯噪声串联语音增强为何能瓦解神经音频水印",
+  "schemaVersion": 1
+}

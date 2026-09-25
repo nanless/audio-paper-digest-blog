@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30160",
+  "arxivId": "2609.30160",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saurabh Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diptiman Mohanta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanta Kumar Ghosh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30160",
+  "originalTitle": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30160.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

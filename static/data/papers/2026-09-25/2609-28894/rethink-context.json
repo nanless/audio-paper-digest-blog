@@ -1,0 +1,127 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28894",
+  "abstract": "Speech and voice are multidimensional signals that capture both communicative intent and underlying physiological processes, providing a unique, non-invasive window into health. Analyzing these signals has the potential to yield digital biomarkers that (i) provide scalable, objective measurement tools for research and clinical care and (ii) reflect the presence or progression of diverse conditions, including neurological, psychiatric, respiratory, and cardiovascular disorders. Realizing this promise, however, requires the field to overcome pervasive reproducibility and generalizability issues due to heterogeneous data collection, processing, and analysis practices. A major source of this heterogeneity is how underlying acoustic measures themselves are defined and computed. In this paper, we outline key considerations across the speech biomarker discovery lifecycle, from data collection through machine learning modeling to clinical interpretation, needed to achieve reliable, reproducible, and clinically translatable results. Chief among these is the need for harmonization efforts to start from common, precisely specified measure definitions. As a first step, we therefore provide definitions, physiological correlates, and computational implementations for a minimal, clinically interpretable set of core speech measures spanning respiration, phonation, articulation, and fluency. We close by discussing ongoing standardization efforts and the open challenges that remain in advancing the adoption of speech- and voice-based digital biomarkers.",
+  "abstractSha256": "dd6f14bcee388ba14c599e817b7eba91e4a4614e57e9a207a132128277bdb335",
+  "arxivId": "2609.28894",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Cummins"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vikram Ramanarayanan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Low"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabio Catania"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Si-Ioi Ng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Caterina Botelho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Judith Dineley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abir Elbeji"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julie M. Liss"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula Andrea Perez-Toro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Visar Berisha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Quatieri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把问题定为语音健康研究难复现是因为采集与特征定义不统一，选择先统一临床可解释的核心声学测量定义并给出美国英语常模与开源提取流程，最强证据是 1815 人朗读与最长发声任务上的分任务常模差异，代价是强度类测量仍受设备影响且嵌入表示仍需先建基线再用。",
+  "originalTitle": "Towards clinical adoption of voice and speech as measures of health: the need for harmonization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28894.pdf",
+  "readerTitle": "从声音到临床可用：先把测量定义对齐再谈生物标志物",
+  "schemaVersion": 1
+}

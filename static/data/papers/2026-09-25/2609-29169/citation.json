@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29169",
+  "arxivId": "2609.29169",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ilpo Viertola"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giulio Cengarle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Arteaga"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lie Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29169",
+  "originalTitle": "Spot, Separate, and Enhance: Fully Generative Approach for Audio Mixing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29169.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

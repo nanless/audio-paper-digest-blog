@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29749",
+  "abstract": "Although room impulse responses (RIRs) encode source-distance cues, conventional monaural source separation focuses on recovering audio content without estimating source-specific RIRs, losing the associated spatial information. To address this limitation, we propose Distance-Aware Monaural Source Separation using Multi-RIR Estimation (DAMSEP), the first end-to-end framework that is jointly trained for source separation and multi-source RIR estimation from a single-microphone mixture. DAMSEP integrates a separation backbone with shared dereverberation and RIR estimation modules to jointly recover clean sources and source-specific complex convolutive transfer functions under source estimation and reverberant reconstruction objectives, enabling relative near/far ordering through the direct-to-reverberant ratios of the corresponding RIRs. For comprehensive evaluation, we introduce HETMIXR, which spans heterogeneous source content and diverse simulated room conditions with source-specific RIRs and geometric distance annotations. Experiments on HETMIXR demonstrate superior performance in source separation, RIR estimation, and distance ordering. Ablation studies reveal the complementary benefits of source supervision and reverberant reconstruction, while additional evaluations show generalization to single-speaker inputs and mixtures generated using measured RIRs from an unseen room. Our code and dataset are available at this https URL.",
+  "abstractSha256": "4b8070f607a5003d9ecbcebe9b05618c4f2df8e35006b3727f4b9497de71612b",
+  "arxivId": "2609.29749",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "语音分离",
+    "rankBucket": "前25%",
+    "score": 8.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "task",
+          "id": "task.rir-estimation",
+          "label": "房间脉冲响应估计"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiang Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "DAMSEP 针对单麦克风混叠下丢失空间信息的问题，用分离主干加共享去混响与多声源复数传递函数估计做联合训练，在 HETMIXR 上以可复述的混响重建约束实现分离与近远排序，最强证据是相对 TF-Locoformer 的 SI-SDRi 提升 0.65 dB，代价是需要成对干净与混响监督和固定扫频解码流程。",
+  "originalTitle": "DAMSEP: Distance-Aware Monaural Source Separation using Multi-RIR Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29749.pdf",
+  "readerTitle": "单麦克风既要分开声音又要估计每个声源的房间响应：DAMSEP 的联合做法",
+  "schemaVersion": 1
+}

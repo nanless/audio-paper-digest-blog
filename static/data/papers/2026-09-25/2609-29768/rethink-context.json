@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29768",
+  "abstract": "We study how to organize Transformer depth through recurrence in flow-matching text-to-speech, varying the amount, order, and place?ment of weight reuse. Seven layouts perform 18 block calls per network evaluation under a common training objective and sam?pler. On Seed-TTS and LibriSpeech-PC, SEQUENCE applies each of nine blocks twice consecutively, retaining competitive intelligibil?ity, speaker similarity, and predicted speech quality at 32 sampling steps with 47.1% fewer parameters than the unshared baseline. Cy?cling six blocks three times further reduces model size but raises 32-step word error rates relative to cycling nine blocks twice. At matched parameter counts and executed depth, reuse order and shar?ing position produce different quality trade-offs. These comparisons depend on sampling budget: Prefix and Suffix have similar 32-step word error rates, but Suffix is worse by 3.44 and 5.97 percentage points at four steps on the two datasets, respectively. Only Middle ranks first or second in mean word error rate at 32 and four steps on both datasets. These results show that the organization of recurrent computation affects synthesis quality, and that reuse layouts should be selected for both the sampling budget and the quality dimensions of interest.",
+  "abstractSha256": "9582aae432ac2f0d9e3ce05f8115d98f3a8deee1cb2b2f6353f1b701567f4605",
+  "arxivId": "2609.29768",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiabao Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peng Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuchen Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengjun Yue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在每次网络求值都执行 18 次块调用的共同条件下，论文比较七种权重重用布局，显示 SEQUENCE 以 83.6M 参数对 158.0M 基线在 32 步保持可比可懂度，而共享段位置主要影响 4 步可懂度且只有 Middle 在两数据集两种步数下词错率均排前二。",
+  "originalTitle": "Depth through recurrence: Looped transformers for flow-matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29768.pdf",
+  "readerTitle": "执行深度不变时，循环放在哪里才算数：流匹配 TTS 的权重重用布局",
+  "schemaVersion": 1
+}

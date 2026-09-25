@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29428",
+  "arxivId": "2609.29428",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanqiao Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wupeng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhifu Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29428",
+  "originalTitle": "agentic-ger: terminology recovery in long-form speech using global context",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29428.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

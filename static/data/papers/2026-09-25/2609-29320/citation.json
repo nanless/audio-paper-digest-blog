@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29320",
+  "arxivId": "2609.29320",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ben Hayes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29320",
+  "originalTitle": "Off-manifold robustness in synthesizer inversion with joint distribution flow matching",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29320.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

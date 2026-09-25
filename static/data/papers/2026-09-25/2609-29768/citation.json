@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29768",
+  "arxivId": "2609.29768",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiabao Ai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peng Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuchen Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengjun Yue"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29768",
+  "originalTitle": "Depth through recurrence: Looped transformers for flow-matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29768.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

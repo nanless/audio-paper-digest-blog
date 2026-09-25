@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27762",
+  "arxivId": "2609.27762",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julia Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27762",
+  "originalTitle": "\"What's That Sound?\": A Versatile, Robust, and Lightweight Convolutional Transformer for Environment Sound Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27762.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

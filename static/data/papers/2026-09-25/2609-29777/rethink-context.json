@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29777",
+  "abstract": "Audio classification is inherently a multi-label task, as real-world acoustic environments contain multiple simultaneous sound events. When new sound classes emerge, models must incorporate them without forgetting previously learned ones: a challenge known as class-incremental learning. Existing methods rely on storing past data and iterative gradient updates, which struggle under incomplete multi-label supervision because only the newly introduced classes are annotated at each phase, leaving old-class labels unavailable. We investigate exemplar-free analytic continual learning as a principled alternative, in which a linear classifier is updated in closed form without storing historical recordings or performing incremental back-propagation, and previously learned weights remain intact by construction. Building on analytic learning, we further propose ALMA, which addresses incomplete supervision and class imbalance through continuous old-class score estimates and frequency-based sample weighting. Experiments on a 50-class AudioSet-R benchmark across three incremental setups show that the analytic learner substantially outperforms gradient-based methods, and previously learned classes retain nearly unchanged detection performance as new classes are added. This study shows that ALMA is a simple yet effective solution to multi-label audio class-incremental learning.",
+  "abstractSha256": "23921f9ac2ecc2eb5326386f269e1755a40ce28118a314bd41f9ea18687abcc9",
+  "arxivId": "2609.29777",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyuan Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对每阶段只标注新类而旧类标注缺失的多标签音频类增量问题，论文用冻结编码器加解析闭式线性分类器递推累积统计量，并在 ALMA 中补连续旧类分数与频率加权，最强证据是 Setup A 上 ALMA 平均累积 43.32% 与最终 39.08% 且旧组局部保持 47.8% 左右，代价是样本加权基本无增益且长序列下与存历史数据的上限差距拉大。",
+  "originalTitle": "Exemplar-Free Analytic Learning for Multi-Label Audio Class-Incremental Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29777.pdf",
+  "readerTitle": "缺旧标签不存旧音频：用闭式递推做多标签音频类增量学习",
+  "schemaVersion": 1
+}

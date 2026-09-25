@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28343",
+  "abstract": "The growing use of spatial audio in applications such as augmented and virtual reality has driven the development of binaural reproduction methods for wearable arrays with a limited number of microphones. Binaural signal matching (BSM) is one such method, producing high-quality binaural signals under a diffuse-field assumption, but degrading at high direct-to-reverberant ratios (DRR) where the direct sound dominates. Previous extensions incorporate Field-of-View (FoV) weighting, either with fixed apertures or based on explicit source localization, but these approaches are limited by coarse spatial coverage or reliance on localization estimation accuracy. This paper introduces FoV-BSM-Net, a signal-dependent FoV-BSM formulation that avoids explicit source estimation by learning the FoV parameters end-to-end from the microphone signals using a Convolutional Recurrent Neural Network. The method is evaluated in simulated rooms across varying reverberation conditions, and compared against BSM and a fixed FoV-BSM baseline. Results show that FoV-BSM-Net consistently improves over BSM, with gains that grow with DRR in both binaural NMSE and interaural cue errors, and are further supported by perceptual evaluation showing a substantial advantage over both baselines across low and high DRR conditions.",
+  "abstractSha256": "406e12bdad8d766992702ec9f2923f74301d69a9049303a7dc45401ff2c44c8d",
+  "arxivId": "2609.28343",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel"
+      ],
+      "name": "Matan Yifrach"
+    },
+    {
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel"
+      ],
+      "name": "Boaz Rafaely"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对可穿戴少麦克风阵列在高直混比下双耳信号匹配退化的问题，论文提出由卷积循环网络直接回归视场中心与张角并加权匹配滤波器的 FoV-BSM-Net，在仿真单声源数据上把全条件改善做到 1.0 dB、高直混比下做到 1.7 dB，但评估限于仿真且本次无可验证的开源链接。",
+  "originalTitle": "Neural Field-of-View for Binaural Signal Matching with Wearable Microphone Arrays",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28343.pdf",
+  "readerTitle": "直达声主导时误差从哪来：用可学习的视场权重重塑可穿戴阵列的双耳信号匹配",
+  "schemaVersion": 1
+}

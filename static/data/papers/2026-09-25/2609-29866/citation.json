@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29866",
+  "arxivId": "2609.29866",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Clément Laroche"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29866",
+  "originalTitle": "Beyond Model Size: Redesigning LiSenNet for embedded speech enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29866.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29071",
+  "abstract": "Score-informed note separation seeks to extract the performed waveform of all individual notes, often from a polyphonic recording. Existing deep learning systems generally only target instrument-level stems. We present, to our knowledge, the first deep learning approach to score-informed note separation, NoteSep. NoteSep extracts the queried notes by applying an extraction stage model, NoteGrab, once per note. Conditioned on pitch, onset, and offset, NoteGrab separates harmonic and percussive components in two U-Nets linked by bidirectional cross-attention; selective harmonic gating suppresses lower-octave interference while preserving percussive attacks. Finally, a joint separation stage applies Adaptive Set Ownership (ASO) to compare concurrent NoteGrab estimates and reallocate mixture energy. We curate SCNS-Train (25,729 mixtures and 743,920 targets) for training and SCNS-Eval (16 instruments, disjoint scores and libraries) for evaluation. On SCNS-Eval, NoteSep reaches a median SI-SDR of 7.39~dB, compared with 2.49~dB for our strongest baseline. See the demo page at this https URL.",
+  "abstractSha256": "bea78138104257c89029981419350708781409dab8a8bdc404ccded458be4b32",
+  "arxivId": "2609.29071",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Shiue-Hal Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Purvish Jajal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas John Eliopoulos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "James C. Davis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "George K. Thiruvathukal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kristen Yeon-Ji Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao-Wen Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yung-Hsiang Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对复调录音中同音色音符互相泄漏的问题，论文用谐波与打击乐双流 NoteGrab 按音高与起止逐个抓取音符，再用自适应集合归属联合重分混合能量，在 SCNS-Eval 上中位 SI-SDR 达 7.39 dB，代价是逐音符推理与完整乐谱依赖。",
+  "originalTitle": "On a Separate Note: Robust Score-Informed Note Separation with a Two-Stream TFC-TDF U-Net and Adaptive Set Ownership",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29071.pdf",
+  "readerTitle": "一个音符就是一个声源：用双流网络先抓取再联合分账做乐谱对齐的音符分离",
+  "schemaVersion": 1
+}

@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29343",
+  "abstract": "Speech LLMs are costly to deploy in resource-constrained settings. Layer pruning can cut this cost, but existing scoring metrics transfer poorly to speech LLMs: they assume a decoder-only architecture with homogeneous token sequences, whereas speech LLMs add encoder and adapter components and process multimodal sequences. We propose Speech Block Influence (SBI), the first layer-importance scoring framework designed for speech LLM pruning that consists of two component-specific scores: SBI-Enc measures the effect of encoder-layer removal at the adapter&#39;s output to better reflect downstream impact; SBI-Dec measures layer-wise input-output similarity over text-token positions only to avoid audio-token dominance. Across three speech LLMs, SBI improves pruning robustness, with stronger encoder performance at higher pruning rates and more reliable decoder layer selection by scoring text tokens rather than the audio-dominated full sequence. We further find that text-only calibration yields decoder rankings highly correlated with those from speech-text calibration, suggesting a cheaper alternative to measure decoder layer importance.",
+  "abstractSha256": "f1dd6d9e24511e1a848de47f9413d22116b6c67867af74f97e33f88ac4bfb1da",
+  "arxivId": "2609.29343",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyu Yao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Du Q. Huynh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lian Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Reynolds"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音大模型含编码器与适配器且序列被音频主导的问题，提出编码器在适配器输出处打分与解码器只看文本词元的 SBI，在三模型上以无修复剪层对照显示高剪除率下更稳健，但解码器在约 20% 剪除前仍明显退化且需权衡计算开销。",
+  "originalTitle": "Speech Block Influence: Component-Specific Layer Scoring for Pruning Speech LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29343.pdf",
+  "readerTitle": "剪哪一层？语音大模型的编码器与解码器要用不同尺子量",
+  "schemaVersion": 1
+}

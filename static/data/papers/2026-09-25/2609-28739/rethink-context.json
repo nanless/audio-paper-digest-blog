@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28739",
+  "abstract": "Automatic speech recognition models are audited for demographic fairness at full precision, yet the models that ship to production have been quantized, pruned, and distilled. We ask whether post-training weight compression, which alters model weights rather than the audio signal or its feature representation, redistributes error burden across demographic groups. Across the Whisper family on Fair-Speech, Common Voice 25, and AfriSpeech-200, 50% Wanda pruning of Whisper-large-v3 sharply widens the Black/AA-vs-Asian temporal-taxation differential on Fair-Speech: the absolute word-error-rate gap between the worst- and best-served groups more than doubles; at an assumed cost of five seconds of correction effort per transcription error this is a rise from 30 to 64 seconds of correction time per minute of speech. This +111% relative increase is invariant to the assumed per-error cost, survives an audio-quality control, and is only partly mitigated by beam-search decoding, which still leaves an +86% increase. At edge model size, INT4 HQQ quantization compounds catastrophic transcript loops on West African accents by factors of five to seven. Distillation, by contrast, narrows demographic gaps in 21 of 27 evaluated settings (teacher-student pair, precision, and dataset), with the exceptions concentrated on a single model pair. We cast the temporal-taxation construct of Choi and Choi (2025) as a quantitative metric, and show that single-snapshot fairness audits on full-precision models do not capture the deployment-time burden that compression places on already-marginalized speakers.",
+  "abstractSha256": "c63748f59f297d928dbb73daff27c3b9daf2407ab19c64342e2622d4c16b36b9",
+  "arxivId": "2609.28739",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srishti Ginjala"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Eric Fosler-Lussier"
+    },
+    {
+      "affiliations": [
+        "Air Force Research Laboratory, USA"
+      ],
+      "name": "Christopher W. Myers"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srinivasan Parthasarathy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在 Whisper 家族内比较剪枝、量化与蒸馏的部署后公平性，发现 50% Wanda 剪枝使 large-v3 的 Black/AA 与 Asian 时间税差扩大 111%，INT4 在小模型上使西非口音灾难循环成倍增加，而蒸馏在 27 格中 21 格缩小差距。",
+  "originalTitle": "Temporal Taxation Compounds Under Post-Training Compression of Whisper Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28739.pdf",
+  "readerTitle": "压缩后才加税：Whisper 权重压缩如何重分人口组的时间负担",
+  "schemaVersion": 1
+}

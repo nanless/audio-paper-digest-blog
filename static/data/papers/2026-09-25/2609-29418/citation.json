@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29418",
+  "arxivId": "2609.29418",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maike Züfle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Polák"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sefik Emre Eskimez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jan Niehues"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peter Bell"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Klejch"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29418",
+  "originalTitle": "Controlling Backchannels in Streamable Full-duplex Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29418.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

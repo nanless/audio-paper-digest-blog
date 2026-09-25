@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29203",
+  "abstract": "Speaker distance estimators are trained almost exclusively on simulated room acoustics, because real recordings annotated with the true talker-to-microphone distance are scarce. We show that models trained this way transfer poorly. On three real corpora we evaluate, simply predicting the average distance of the corpus is more accurate than any learned model. Then, we ask how few labelled real utterances are needed to make a frozen, synthetic-trained estimator useful, and study post-hoc calibration maps that rescale its output without gradients or retraining. An analysis of the achievable error shows that what the calibration is not limited by the absolute accuracy of the estimator, but how well it orders utterances by distance, since a constant bias or a wrong output scale is removed exactly by the calibration itself. Balancing this against the cost of estimating each coefficient from few samples yields a criterion that accounts for which map wins on which corpus and at which annotation budget, together with a shrinkage variant that requires no hard decision. Our findings suggest selecting synthetic checkpoints by linear correlation with true distances rather than by absolute error. Code, datasets, and analysis are available at this https URL.",
+  "abstractSha256": "b42278e37ca75edc556fe8884864696aacb3bf9d1f6c3499ee68fc19d12cb514",
+  "arxivId": "2609.29203",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.single-channel",
+          "label": "单通道"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael Neri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Archontis Politis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究只用仿真训练的单通道距离估计器在真实语料上直接失效的问题，选择冻结估计器加几十条标注拟合仿射映射的路线，最强证据是 QMUL-TIMIT 干净条件下相关性 0.63 的模型经校准后明显优于常数均值，而代价是在低相关语料上斜率估计噪声会超过收益因而应退回常数预测。",
+  "originalTitle": "Few-Shot Calibration for Sim-to-Real Single-Channel Speaker Distance Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29203.pdf",
+  "readerTitle": "仿真准、真实差：单通道说话人距离估计为何要按相关性选模型再做仿射校准",
+  "schemaVersion": 1
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28758",
+  "abstract": "We describe our submission to the Unsupervised Speech in the Wild (UPS) Challenge at Interspeech 2026, a bidirectional Mamba-2 (BiMamba2) encoder trained with masked discrete-unit prediction following the HuBERT-style paradigm. The 47.88M-parameter model is trained on 250 hours of speech across 67 languages from the MLCommons Unsupervised People&#39;s Speech dataset, with no labeled data. The objective combines masked k-means pseudo-label prediction with language identification supervision and VICReg regularization. On official evaluation, the system achieves an Adjusted Rand Index of 0.735, exceeding four baselines on speaker clustering. Language identification macro-F1 (0.073) and character error rate (0.870) remain below supervised baselines. We analyze a local-official discrepancy in metric scale and checkpoint ranking, highlighting limitations of in-distribution diagnostics for predicting Dynabench probe outcomes.",
+  "abstractSha256": "cef54077b25a641ddb920a55277b3b45a33c211d5c140f2cc5ff3b6fee18eddb",
+  "arxivId": "2609.28758",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "说话人识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "说话人识别",
+      "primaryTaskId": "task.speaker-identification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prakriti Subedi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Howard Prioleau"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saurav K Aryal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用 47.88M 参数的双向 Mamba2 编码器在 250 小时 67 语种无标注语音上做掩码离散单元预测，主检查点以 ARI 0.735 超过四个基线，但语种识别与识别错误率仍明显落后，代价是后期训练出现音素泛化退化与本地诊断失效。",
+  "originalTitle": "BiMamba2 Masked Discrete-Unit Prediction for Multilingual Speech Representation for Unsupervised Speech in the Wild Challenge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28758.pdf",
+  "readerTitle": "小数据多语言无监督表示：BiMamba2 掩码预测为何说话人聚类强而语种识别弱",
+  "schemaVersion": 1
+}

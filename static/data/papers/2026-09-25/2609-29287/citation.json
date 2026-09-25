@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29287",
+  "arxivId": "2609.29287",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu-Ling Liao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tzu-Chin Chiu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zong-You Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chi-Lei Tsai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shao-Yuan Lo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29287",
+  "originalTitle": "AEGIS: Audio Endogenous Guarding via Internal Signals Against Large Audio-Language Model Jailbreaks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29287.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

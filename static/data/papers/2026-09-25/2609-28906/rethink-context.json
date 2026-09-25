@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28906",
+  "abstract": "In flow-matching text-to-speech (TTS), different speech realizations can induce different target velocities under the same generation conditions. A deterministic velocity field trained with squared error predicts their conditional mean, thereby marginalizing realization-dependent variation. Meanwhile, modeling such variation does not inherently provide a semantically interpretable interface for attribute manipulation. We propose ReaFlow-TTS, a realization-conditioned flow-matching framework that introduces an utterance-level stochastic realization latent and uses it to condition velocity prediction throughout the generation trajectory. We further impose valence-arousal-dominance (VAD) semantics on the realization space, enabling direct and graded attribute manipulation without target speech at inference. Experiments demonstrate improved synthesis quality over a matched full-mask baseline and reproducible latent-induced pitch, energy, and timing tendencies across initial-noise samples, providing behavioral evidence that the latent is used as a reusable realization condition. Subjective evaluation further demonstrates graded VAD manipulation across generation contexts with only modest changes in naturalness.",
+  "abstractSha256": "3a63fe26b0de15b679dde381a8fa21ae5a211218fdc0a262c876d69b6cfb5016",
+  "arxivId": "2609.28906",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yihao Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changsheng Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对同文本同状态下不同语音实现导致目标速度不同而被平方误差平均掉的问题，ReaFlow-TTS 引入贯穿整条轨迹的 utterance 级实现潜变量 z 并用 VAD 线性映射做分级操控，行为证据是跨初始噪声可复现的音高能量时长倾向，代价是效价方向灵敏度较低且操控需在小幅自然度变化内使用。",
+  "originalTitle": "ReaFlow-TTS: Realization-Conditioned Flow Matching for High-Quality and Controllable Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28906.pdf",
+  "readerTitle": "把同句不同念法分开建模：用固定实现潜变量条件化流匹配速度场",
+  "schemaVersion": 1
+}

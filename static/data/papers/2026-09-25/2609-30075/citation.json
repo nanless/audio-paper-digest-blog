@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30075",
+  "arxivId": "2609.30075",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tina Raissi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nhan Phan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxiao Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mikko Kurimo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30075",
+  "originalTitle": "A Native-Reference Phone-Class Geometry for Second-Language Pronunciation Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30075.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

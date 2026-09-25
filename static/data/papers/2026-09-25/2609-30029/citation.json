@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30029",
+  "arxivId": "2609.30029",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaidi Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hualei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaohui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangdong Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30029",
+  "originalTitle": "TEMA: Evidence-Grounded Temporal Question Answering in Multi-Turn Multi-Audio Dialogs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30029.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

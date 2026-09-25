@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28936",
+  "abstract": "Audio carries rich cues about human activities, and microphones are already built into most wearable devices. However, microphones also capture speech, and this privacy risk limits their use in Human Activity Recognition (HAR). We present AnomaSense, a sensor activation approach for wrist wearables that keeps the microphone off by default and turns it on for at most one second when an unsupervised anomaly detector flags an IMU segment that is likely to produce sound. The captured audio is further masked before it reaches the recognition model. We study 20 activities from 15 participants, organized into five groups in which activities share similar wrist motion but differ in the object or material involved. With IMU data alone, our recognition model reaches 78.98% accuracy in leave-one-participant-out validation. With the short, masked audio windows added, accuracy reaches 96.89% with no masking and stays above 86% when 90% of each one-second audio window is removed. On the same data, the anomaly detector triggers the microphone with 86.46% precision and 74.28% recall relative to sound events. We also report a small preliminary check of automatic speech recognition on masked speech, which shows that contiguous masking degrades recognition far more than point-wise masking at the same masking ratio. Our evaluation is a controlled, offline feasibility study. We describe the threat model, what the approach does and does not protect, and the steps needed before deployment.",
+  "abstractSha256": "c021418669ba5e53a90e6b147c1f2a79ebd8b428242501bc6f239ea3a51453c2",
+  "arxivId": "2609.28936",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "变分自编码器",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.vae",
+          "label": "变分自编码器"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "变分自编码器",
+      "primaryMethodId": "method.vae",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Los Angeles, Los Angeles, CA, USA"
+      ],
+      "name": "Xue Wang"
+    },
+    {
+      "affiliations": [
+        "University of California, Los Angeles, Los Angeles, CA, USA"
+      ],
+      "name": "Yang Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对手腕动作相似但物体材质不同时惯性传感器难分辨的问题，AnomaSense 用只在无声动作上训练的异常检测器决定何时打开麦克风至多一秒并做掩码，在 15 人 20 类受控实验中把识别从惯性单模态的 78.98% 提升到融合无掩码音频的 96.89%，而 90% 连续掩码下仍保持 86.32%，代价是触发器相对声音事件的召回为 74.28% 且结论限于安静离线仿真。",
+  "originalTitle": "AnomaSense: Anomaly-based Sensor Activation for Fine-Grained Human Activity Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28936.pdf",
+  "readerTitle": "麦克风默认关闭：用手腕异常触发一秒声音来分辨细粒度动作",
+  "schemaVersion": 1
+}

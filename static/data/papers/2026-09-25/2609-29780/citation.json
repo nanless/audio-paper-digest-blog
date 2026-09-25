@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29780",
+  "arxivId": "2609.29780",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyudan Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sehyun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Son-ha Jo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaegul Choo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanghyuk Shoi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29780",
+  "originalTitle": "Joint Analysis of Latent Dimensionality and Frame Rate in Continuous Audio Encoders",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29780.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

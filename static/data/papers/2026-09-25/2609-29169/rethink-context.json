@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29169",
+  "abstract": "We introduce Spot, Separate, and Enhance (SSE), the first multimodal, user-guided generative model for audio remixing and enhancement. SSE enhances video content by rebalancing the audio, removing unwanted audio sources, and reducing reverberation, guided by both video and textual descriptions. To support its training and evaluation, we propose DegradedMix, a new dataset built on the audio remixing benchmark MuddyMix. We also adopt evaluation metrics from generative modeling, which better capture the creative nature of remixing than standard reconstruction-based metrics. SSE outperforms existing baselines in both controllability and remixing quality, as shown by extensive experiments. Project page: this https URL",
+  "abstractSha256": "3045048ccbcc5f92bd2990fe38e1aec910e8cd705f8331f78b2f2eea34bff96a",
+  "arxivId": "2609.29169",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频修复",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ilpo Viertola"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giulio Cengarle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Arteaga"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lie Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对日常视频中增益失衡叠加噪声与混响的问题，SSE 用视频加文字引导的流匹配生成做重混与增强，在 DegradedMix 与 MuddyMix 上以分布与对齐指标优于 VisAH，但单真值重建指标上优势收窄且依赖预训练编解码与分离权重。",
+  "originalTitle": "Spot, Separate, and Enhance: Fully Generative Approach for Audio Mixing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29169.pdf",
+  "readerTitle": "从遮罩改混音到生成新声音：SSE 为何要能凭空补音频",
+  "schemaVersion": 1
+}

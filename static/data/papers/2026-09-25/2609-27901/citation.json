@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27901",
+  "arxivId": "2609.27901",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Bar-Ilan University"
+      ],
+      "name": "Ohad Rahamim"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Dvir Samuel"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University"
+      ],
+      "name": "Idan Schwartz"
+    },
+    {
+      "affiliations": [
+        "Bar-Ilan University",
+        "NVIDIA"
+      ],
+      "name": "Gal Chechik"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.27901",
+  "originalTitle": "All modalities are equal, but video is more equal: Closing the Cross-Attention Gap in Joint Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27901.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

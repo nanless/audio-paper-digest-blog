@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28068",
+  "abstract": "Early reflections in spatial room impulse responses (SRIRs) measured using spherical microphone arrays (SMAs) play an important role in spatial audio analysis, rendering, and reverberation modeling. Their accurate localization and characterization can facilitate the analysis, processing, and manipulation of measured reverberation fields. This paper proposes a method for detecting and characterizing early reflections based on the Herglotz wavefunction formalism. The measured sound field is represented as a continuous superposition of incident plane waves, from which a localization function is derived in the spherical harmonic domain. An adaptive radial Gaussian fitting procedure is then used to estimate both the directions of arrival (DoAs) and the number of incident reflections within a single analysis frame. The proposed framework is evaluated using simulated and measured SRIRs and compared with conventional steered response power (SRP) and multiple signal classification (MUSIC) localization methods. The results demonstrate improved localization accuracy and more reliable detection of multiple simultaneous reflections, highlighting the potential of the proposed Herglotz-based formulation for the analysis of early reflections in SMA-measured SRIRs.",
+  "abstractSha256": "7e39026e9787b5dbe77cbc915ba5d7eff7848f5d590d4ed227fb4ad3d7cfc9f4",
+  "arxivId": "2609.28068",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pierre Massé"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anthony Gallien"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wolfgang Kreuzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Markus Noisternig"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对球麦测得空间房间冲激响应中早期反射互相重叠且高度相关的问题，该文把声场写成连续平面波叠加并反演方向核，再用球面高斯拟合与信息准则数出反射个数，在仿真与实测中提高了多回声同时存在时的定位精度与检出率，但弱回声仍受动态范围与阶数限制。",
+  "originalTitle": "Echo Detection in Spatial Room Impulse Responses Measured with Spherical Microphone Arrays Using the Herglotz Wavefunction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28068.pdf",
+  "readerTitle": "把重叠回声看成连续方向分布：Herglotz 核如何在一个分析帧内数出多个反射",
+  "schemaVersion": 1
+}

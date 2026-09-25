@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29737",
+  "abstract": "Modern neural audio watermarking systems typically embed a message repeatedly across time and then collapse the resulting temporal evidence into a single payload using averaging, voting, or another fixed aggregation rule. We argue that this temporal collapse limits both robustness and the recovery of multiple payloads, and that the limitation can be addressed without retraining the underlying watermarker. We freeze a pretrained watermarker&#39;s encoder and detector and train only a low-latency Conformer-based decoder. The decoder consumes the detector&#39;s temporal soft outputs, which a system-specific adapter pools into a sequence of window-level representations, and predicts the embedded message. On three frozen watermarkers (AURA, AudioSeal, and WavMark), the learned decoder improves recovery of attacked messages and yields higher detection AUROC point estimates on all three. Under controlled full- and partial-coverage multiplexing, it improves joint-exact recovery of two alternating payload words by 9.7-48.0, 6.9-17.3, and 8.2-14.2 percentage points, respectively, under one to three chained attacks on feasible clips.",
+  "abstractSha256": "8c2b3a65ee75b5da8e0cf11f168794efd0e0e7267be78396c880d0978745076b",
+  "arxivId": "2609.29737",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Conformer",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.conformer",
+          "label": "Conformer"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Conformer",
+      "primaryMethodId": "method.conformer",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuanye Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linxi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yechen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liwei Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qianwei Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Carsten Maple"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文冻结三种音频水印的编码器与检测器，只训练约 2M 参数的 Conformer 解码器来替代平均投票等固定时间聚合，在受控攻击与交替双负载下提升精确恢复并提高检测 AUROC 点估计，但 AudioSeal 双负载绝对恢复仍低且结论限于已知网格与分布内攻击。",
+  "originalTitle": "No Time to Collapse: Unlocking Robustness and Multiplexed Capacity in Frozen Audio Watermarkers",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29737.pdf",
+  "readerTitle": "不重训水印器，只换掉时间坍缩：冻结音频水印的鲁棒性与双负载复用",
+  "schemaVersion": 1
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29923",
+  "abstract": "Phoneticians often need to construct stimuli in which specific acoustic cues are precisely manipulated while preserving decent speech quality. Classical synthesis and modern neural methods sit along a trade-off between precise parametric control and high fidelity, and neural synthesis typically demands more data than phoneticians can easily obtain. We present ARIS (Analytic Resonant Interpretable Synthesis), a neural source-filter model that pairs neural parameter estimation with deterministic DSP synthesis. Every control is a coefficient of the synthesizer, so F0, formants and the glottal source can be edited directly. On five small single-speaker corpora in three languages, ARIS resynthesizes speech with quality comparable to WORLD and edits single parameters more accurately than Praat KlattGrid, with negligible crosstalk between cues. Compared with HiFi-Glot, pre-trained on a large corpus and fine-tuned on the same data, ARIS scores slightly lower on predicted naturalness but reproduces the recordings more faithfully and manipulates them more precisely. Audio samples: this https URL.",
+  "abstractSha256": "387b2b6b679c9720a57d9b22621130f891111e5d5d6459c7ed8199e234a9b89b",
+  "arxivId": "2609.29923",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音编辑",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音编辑",
+      "primaryTaskId": "task.speech-editing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiran Ding"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwei Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "ARIS 用神经网络只做从波形到声码器系数的分析、用无参数 DSP 做合成，在每人不足 1 小时的五个单人语料上达到与 WORLD 可比的拷贝合成质量，并以约一半于 KlattGrid 的 F2/F3 误差实现单线索编辑，但高频自然度预测分仍略低于微调后的 HiFi-Glot。",
+  "originalTitle": "ARIS: Low-Resource Glass-Box Neural Source-Filter Synthesis for Phonetic Stimulus Manipulation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29923.pdf",
+  "readerTitle": "玻璃盒合成：把共振峰做成可拧的旋钮，而不是学出来的映射",
+  "schemaVersion": 1
+}

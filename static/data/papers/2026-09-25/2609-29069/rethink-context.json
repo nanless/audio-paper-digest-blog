@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29069",
+  "abstract": "We introduce BranchShine-CR, a 25M-parameter model for multilingual transcription into the International Phonetic Alphabet (IPA). It combines log-mel features, a rotary-position E-Branchformer encoder, intermediate self-conditioned connectionist temporal classification (CTC), and consistency regularization across augmented views. On 16,646 shared IPApack++ test utterances, it achieves 4.47% IPA character error rate, a 22.3% relative reduction from ZIPA-CTC-NS, with approximately one-twelfth as many parameters while being trained from scratch. BranchShine-CR also outperforms a similarly sized NeMo Conformer baseline across all 41 dataset language labels. Ablation studies indicate the individual components synergetically acting in model performance contribution. These findings support compact IPA recognition capabilities under limited compute budget, for applications in low-resource on-device pronunciation assessment.",
+  "abstractSha256": "6661043d7a9459eb8843370ecafd304b8f160364a3c5b51643fa5732437d4ac5",
+  "arxivId": "2609.29069",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "CTC",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikhil Navas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sergio Chevtchenko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Talisson Damiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saeed Afshar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "BranchShine-CR 用 25.39M 参数、log-mel 加 12 层旋转位置 E-Branchformer、中间自条件 CTC 与双视图一致性正则，在 16646 句共享测试上取得 4.47% 国际音标字符错，相对 ZIPA-CTC-NS 降低 22.3%，代价是整句完全正确率仍低于后者且大基线训练划分并不完全可比。",
+  "originalTitle": "BranchShine-CR: Compact Multilingual IPA Transcription with Self-Conditioned CTC and Consistency Regularization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29069.pdf",
+  "readerTitle": "小模型直转国际音标：中间监督与双视图一致性如何压低字符错",
+  "schemaVersion": 1
+}

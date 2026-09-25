@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29463",
+  "abstract": "Speech enhancement systems are often developed for a fixed sampling rate, while time-frequency models become more expensive as the number of frequency bins increases. We propose TF-Refiner, a sampling-frequency-independent model that decouples the deep analysis bandwidth from the full-band input and output. A deep encoder processes the band below a configurable cutoff, while a shallow decoder combines the encoded features with input-dependent high-band queries and predicts local complex filters applied to the original noisy STFT. A single parameter set trained at 16 and 48 kHz is evaluated at various sampling rates. On VoiceBank+DEMAND, the universal model outperforms the rate-specific counterparts in PESQ, STOI, and log-spectral distance across the evaluated rates, including rates unseen in training. Random-cutoff training enables inference-time selection of cost-quality operating points without retraining or changing the output bandwidth. These results support configurable analysis bandwidth as a practical design choice for multi-rate full-band enhancement.",
+  "abstractSha256": "b85957cd7c4d1d2cc5b4f343df69e1cd9c541f9628493eda6c0c6f0139d38259",
+  "arxivId": "2609.29463",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ui-Hyeop Shin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wooseok Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyung-Min Park"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对固定采样率建模与频点数增加带来计算膨胀的问题，TF-Refiner 把深层分析限定在可配置截止频率以下并用浅层解码加局部复数滤波保持全频带输出，同一套在两种采样率训练的参数可用于未见采样率，代价是推理时仍需按预算选择截止频率的工作点。",
+  "originalTitle": "Configurable-Bandwidth Time-Frequency Modeling for Efficient Full-Band Speech Enhancement Across Sampling Rates",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29463.pdf",
+  "readerTitle": "深层只看低频带：TF-Refiner 用可配置带宽兼顾多采样率与计算量",
+  "schemaVersion": 1
+}

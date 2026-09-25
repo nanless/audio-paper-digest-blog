@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30083",
+  "arxivId": "2609.30083",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Florian Schmid"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanjeel Parekh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chi Ian Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Juan Azcarreta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yijun Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnoldas Jasonas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrew Frederick Francl"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Çağdaş Bilen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30083",
+  "originalTitle": "COSED: Setting the Bar for Open-Vocabulary Sound Event Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30083.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

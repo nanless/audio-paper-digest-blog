@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29123",
+  "arxivId": "2609.29123",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoomee Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jisun Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.29123",
+  "originalTitle": "Accent Analogy Guidance: More Speaker Similarity at Equal Accent in Cross-Lingual Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29123.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

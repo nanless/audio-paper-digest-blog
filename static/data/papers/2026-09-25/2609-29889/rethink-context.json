@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.29889",
+  "abstract": "Recent non-autoregressive (NAR) zero-shot text-to-speech (TTS) models generate in parallel but typically require the target sequence length to be specified before generation. We introduce EditVoice, to our knowledge the first variable-length NAR zero-shot TTS model, which uses Edit Flows to jointly update speech content and sequence length through insertions, deletions, and substitutions. EditVoice adopts speech-infilling training, which unifies zero-shot TTS and text-based speech editing and allows both prefix and suffix speech prompt placements at inference. We introduce Complementary Prompt Sampling (CPS) to leverage the complementary Edit Flow predictions induced by the two prompt placements. We further find that EditVoice can edit source and model-generated speech beyond its training sources. We use this generalization for end-to-end editing and training-free post-generation refinement. With the Edit Flow model trained on 10K h of GigaSpeech, EditVoice demonstrates competitive zero-shot TTS performance on Seed-TTS Eval EN and LibriSpeech-PC and speech editing performance on RealEdit.",
+  "abstractSha256": "abe59d065efc69a6b9774db6e983998acde9fc90faaaaf3ea0b2da724fb3bd18",
+  "arxivId": "2609.29889",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongyao Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuetao Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peijie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weijie Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingyang Hong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "EditVoice 针对非自回归零样本合成须先定长才能并行生成的问题，用编辑流在采样中联合做插入、删除、替换以同时改内容和长度，并以语音填充训练统一合成与编辑，再用互补提示采样与生成后修正提稳内容一致性，代价是每步需评估两种提示摆放且启发式一致性规则依赖阈值。",
+  "originalTitle": "EditVoice: Variable-Length Non-Autoregressive Zero-Shot TTS and Speech Editing with Edit Flows",
+  "pdfUrl": "https://arxiv.org/pdf/2609.29889.pdf",
+  "readerTitle": "不定长并行生成：用插入删除改长度的零样本语音合成与编辑",
+  "schemaVersion": 1
+}

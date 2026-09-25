@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28320",
+  "abstract": "The ResNet-18 image classification model is employed to determine the physical parameters of a plate reverb from a recording of the impulse response. The model is adapted to derive parameters using normalized and downsampled multi-resolution spectrograms computed from the provided impulse responses (IRs). To refine the prediction of the output location, the spectral phase response is also included as an additional input channel to the network since multiple output locations can give the same magnitude response for high-order resonant modes. On a 5000 IR validation set, our model achieves an average normalized mean squared error (NMSE) of 0.02920 across all parameters, with the lowest average NMSE occurring for parameters yo (0.00228), Ly (0.00347), and xo (0.00574).",
+  "abstractSha256": "07cbf69bd2ec91561f947a2914816fc252d70996ce4a875786efce7ccb074ab4",
+  "arxivId": "2609.28320",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "声源定位",
+    "rankBucket": "后50%",
+    "score": 5.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jared Lipkin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meiying Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin R. Thompson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Cogliati"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David A. Anderson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michael C. Heilemann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把板混响脉冲响应转成多分辨率幅度谱图加相位通道后用 ResNet-18 回归七个原始物理参数，在 200 条 5 秒对照上把平均 NMSE 从基线 0.0605 降到 0.0058，代价是依赖下采样到 1470 Hz 的低频段与仿真分布。",
+  "originalTitle": "A multi-resolution spectrogram approach for estimating the physical parameters of a plate reverb",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28320.pdf",
+  "readerTitle": "只看低频孤立共振：多分辨率谱图反推板混响物理参数",
+  "schemaVersion": 1
+}

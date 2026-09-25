@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30029",
+  "abstract": "Multi-turn, multi-audio temporal question answering requires models to track target events across follow-up questions, recording switches, and historical references, recovering complete instances and their boundaries for temporal calculation and comparison. We propose TEMA, which connects event perception with evidence-based answering through Route, specifying the audio scope, and Span, describing all relevant intervals as conditional audio captions. We construct TEMA-Dialog with 40,704 dialogs and per-turn evidence and answer supervision, and TEMA-Bench for joint evaluation of evidence and final answers. Training combines temporal grounding initialization, full-dialog supervised fine-tuning, and completeness-first Span-only GRPO. Experiments on Qwen2.5-Omni and AF-Next show improved temporal question answering, particularly event localization and cross-audio comparison. Reinforcement learning applied solely to evidence further improves interval recovery and answer accuracy.",
+  "abstractSha256": "5e06222f06ae80dbc49d8a77045965d37b52e4386ec8fff9acedd7751c432891",
+  "arxivId": "2609.30029",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaidi Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hualei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaohui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chenxuan Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangdong Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多轮多音频时间问答中实例漏检会改变计数与总时长的问题，TEMA 用 Route 定音频范围、Span 记全全部实例区间再推理作答，在 Test253 上 Qwen2.5-Omni 基座的问答准确率达到 69.81%，代价是需要三阶段训练与完整逐轮证据监督，且跨音频比较仍有波动。",
+  "originalTitle": "TEMA: Evidence-Grounded Temporal Question Answering in Multi-Turn Multi-Audio Dialogs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30029.pdf",
+  "readerTitle": "先找全证据再算时间：TEMA 在多轮多音频对话里做可核对的时间问答",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.28577",
+  "abstract": "We present the first phoneme-level intelligibility evaluation of speech anonymizers, assessing the performance of ASR-ensemble-based metrics against measured intelligibility from a crowdsourced listening test. Our results show that simple hard-voting ASR metric reaches correlations above 0.9 with human ratings when aggregated by feature, test-type, or condition, provided that multiple ASR models are combined; evaluating stimuli with and without a carrier sentence further improves the correlation at the stimulus level. However, posterior-probability-based confidence metrics bring no gain, which can be traced back to the insufficient calibration of the state-of-the-art open ASR models that were utilized here. All data, code, and evaluation tools are released as open source.",
+  "abstractSha256": "b01181f6556815ae97ec47890116263b1e90bb52bb5e0cc9957447446d8008bf",
+  "arxivId": "2609.28577",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "method",
+          "id": "method.crowdsourced-evaluation",
+          "label": "众包评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Victor Ménestrel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian Möller"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Slim Ouni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorothea Kolossa"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音匿名后词错误率与人耳可懂度脱节的问题，该研究用 96 组最小对立体做众包实测可懂度，并让 12 个语音识别模型同样参加二选一测试，发现多模型硬投票在条件聚合上达到 0.985 的决定系数，而后验置信加权没有带来增益。",
+  "originalTitle": "ASR ensembling for phoneme intelligibility evaluation of speech anonymizers",
+  "pdfUrl": "https://arxiv.org/pdf/2609.28577.pdf",
+  "readerTitle": "匿名语音还能听清哪个音素：用多模型投票逼近人耳的最小对立体测试",
+  "schemaVersion": 1
+}

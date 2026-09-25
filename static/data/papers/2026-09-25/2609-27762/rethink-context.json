@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.27762",
+  "abstract": "The conventional hearing aid is both costly and lim- ited in usage, as it is not intended to detect non-speech audio. Our objective is to develop a machine learning solution to provide a more accurate and affordable mechanism to identify surrounding sounds to improve the safety of the hearing impaired, i.e., if a car is honking behind pedestrians, or a gunshot is fired, and they need to move away from the source. By adding randomized augmentations to audio, concatenating a Mel-Frequency Cepstral Coefficients (MFCCs) diagram and a log-mel Spectrogram, and including Convolutional Neural Networks (CNNs) in a Trans- former architecture, the Randomized Audiomentational Layered Convolutional Transformers (RALCT) model efficiently extracts features from diversified audio representations. In addition, RALCT is small enough, with only approximately 310,000 parameters, to be deployed into mobile devices. Experimental results on the UrbanSound8K dataset resulted in an accuracy consistently over 93% for all variations of RALCT with the highest at 94.56%, reaching state-of-the-art levels. To leverage the capabilities of this technology, a mobile app is developed to be integrated with the model to provide real-time safety control. RALCT thus represents a robust, lightweight, affordable, and versatile deep learning tool to aid the navigation and safety of the hearing impaired.",
+  "abstractSha256": "ce55d05c6032b38931fb05ca5c5201be92c8b2fad0ea789cbce20b07fb505f35",
+  "arxivId": "2609.27762",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julia Huang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对助听器难辨非语音环境声的问题，RALCT 把随机音频增强、MFCC 与 log-mel 拼接、CNN 降维与 Transformer 建模串成一条流水线，在 UrbanSound8K 上以约 310000 参数达到最高 94.56% 验证准确率，代价是增强强度受内存限制且部分易混类别仍偏弱。",
+  "originalTitle": "\"What's That Sound?\": A Versatile, Robust, and Lightweight Convolutional Transformer for Environment Sound Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.27762.pdf",
+  "readerTitle": "先降维再建依赖：RALCT 用随机增强与卷积 Transformer 做轻量环境声识别",
+  "schemaVersion": 1
+}
