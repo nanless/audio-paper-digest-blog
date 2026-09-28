@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30514v1",
+  "abstract": "Voice agents are increasingly deployed in workflows where failed interactions can affect transactions, access, and other consequential outcomes, creating a need for reproducible and interpretable evaluation. We introduce Inquesto Score (IS), a protocol for measuring voice-agent reliability as the percentage of calls in a fixed, versioned evaluation population that achieve the caller's goal without a functional failure or worse. Rather than combining heterogeneous metrics, IS defines explicit failure events and severity levels and evaluates the deployed voice pipeline. Timing failures, including talk-over and delayed responses, are measured directly from audio, while semantic and state-dependent failures are evaluated using scenario predicates, tool traces, and a pinned open-model judge. Diagnostic views of behavior, acoustic robustness, identity handling, and speaker groups accompany the score without being combined into it. Inquesto Score v0.1 evaluates 30 scenarios, three acoustic conditions, four speaker groups, and 306 calls per agent across 13 configurations of a reference voice-agent system. Our evaluation shows that reliable measurement requires evidence beyond transcripts, explicit treatment of deployment conditions, and validation of the evaluators used to determine outcomes. We release the protocol, reference implementation, and evaluation records.",
+  "abstractSha256": "0525c65b42e47deeea083ca0a556bb5f9940d143b104b747900a1a063f2a507c",
+  "arxivId": "2609.30514",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30514v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massa Baali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhiksha Raj"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把语音智能体可靠性定义为固定 306 通电话总体中无功能性失败且达成目标的百分比，用音频实测计时失败、用固定判分模型加工具轨迹判定语义失败，最强证据是去掉音频事件后分数平均虚高 24 分而排序仍受部署参数扰动，代价是单账单域与合成主叫限制了外推。",
+  "originalTitle": "Inquesto Score: A reliability Protocol For Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30514v1.pdf",
+  "readerTitle": "通话算数才算数：把语音智能体的成功固定为可复算的通过率",
+  "schemaVersion": 1
+}

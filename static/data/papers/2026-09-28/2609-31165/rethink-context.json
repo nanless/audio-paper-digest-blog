@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31165v1",
+  "abstract": "Speech-breath segmentation is a fundamental preprocessing step in respiratory audio analysis, enabling applications such as respiratory acoustic biomarker extraction, lung function prediction and disease monitoring. Existing approaches, including threshold methods, Fourier Transform-based techniques, and unsupervised and pretrained voice activity detection (VAD) models, primarily focus on speech detection and often classify breathing events as non-speech or silence, limiting their applicability for precise breath detection. To address this limitation, we propose BreathGRU, a semi-supervised Bidirectional Gated Recurrent Unit (BiGRU) framework specifically designed for speech-breath segmentation. The proposed framework combines frame-level acoustic feature extraction with bidirectional recurrent modelling, pseudo-label refinement and duration-constrained Segmental Viterbi decoding to produce speech and breath segmentation. BreathGRU was evaluated against the existing approaches, using manually annotated recordings. Performance was assessed using event-based, time-based, overlap-based, duration-based and boundary-based segmentation metrics. Experiment results demonstrated that BreathGRU achieved the highest breath event recall (0.83), the lowest onset-localisation error (0.14s) and the highest Mean Match Intersection over Union (0.81), with competitive overall segmentation performance compared to large pretrained VAD models like Silero. Qualitative evaluation on manually annotated recordings further showed close agreement between BreathGRU and manual annotation, with better breath detection compared to Silero. These findings demonstrate that explicit breath event modelling provides advantages over general-purpose VAD models and establish BreathGRU as an effective speech-breath segmentation framework which can be applied for respiratory audio analysis and pulmonary healthcare applications.",
+  "abstractSha256": "81aecf10f2a6a755b4af71b8404d1c6967ea52d4c036e032384083dc0e12fc5d",
+  "arxivId": "2609.31165",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31165v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sania Fatima Sayed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John W. Holloway"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Reyer Zwiggelaar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Faisal I. Rezwan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对呼吸音频中呼吸常被语音活动检测判为静音的问题，BreathGRU 用双向循环时序建模加时长约束解码做语音与呼吸两类分割，在手动标注哮喘语音上取得呼吸事件召回 0.83 与平均匹配交并比 0.81，代价是整体时长误差与部分语音指标仍弱于 Silero。",
+  "originalTitle": "BreathGRU: A Novel Semi-Supervised Bidirectional Gated Recurrent Unit Framework for Speech and Breath Segmentation for Respiratory Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31165v1.pdf",
+  "readerTitle": "不把呼吸当静音：BreathGRU 为何要显式建模呼吸事件",
+  "schemaVersion": 1
+}

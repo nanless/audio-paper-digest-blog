@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30798v1",
+  "arxivId": "2609.30798",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30798v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Negi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arpit Rawat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rashi Jain"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30798v1",
+  "originalTitle": "Evaluating Real-Time Voice Agents: From Component Quality to Grounded Outcomes",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30798v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31168v1",
+  "abstract": "My doctoral work aims to explore Audio Emotion Recognition (AER) in the context of atypical listening. This research focuses on auditory hypersensitivity in people with autism, a phenomenon that is often difficult to evaluate and unique to each individual. Our core idea is to leverage our understanding of affect from acoustic traits, relying on the possibility of generalizing affective responses from a small amount of annotated data. As a first step, we fine-tune a large foundation model, Contrastive Language-Audio Pretraining (CLAP) using low-rank adaptation (LoRA), trained on a valence and arousal dataset of neurotypical listeners.",
+  "abstractSha256": "93fb50c27851389eb1cace1cade74dffc6b9e004e799b304d2bd1468572dad26",
+  "arxivId": "2609.31168",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31168v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ulysse Roussel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究无非典型听者标注时如何从少量样本泛化声音情感，选择冻结大模型加 LoRA 并用 36 个文本情感锚点打分效价唤醒，在 AAD 上训练、在 EmoSoundscapes 上跨域验证，最强证据是音频微调把 AAD 效价排序从负相关拉到 0.71 左右，代价是仍只验证神经典型数据且未真正建模 hypersensitivity 个体差异。",
+  "originalTitle": "Audio emotion recognition for atypical hearing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31168v1.pdf",
+  "readerTitle": "从少量标注泛化情感：用文本锚点约束 CLAP 去逼近效价-唤醒空间",
+  "schemaVersion": 1
+}

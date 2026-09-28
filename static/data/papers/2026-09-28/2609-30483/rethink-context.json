@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30483v1",
+  "abstract": "Audio language models state numbers for acoustic quantities, and neither human opinion nor a judge model says whether such a number is true of the signal. AcoustiClaim extracts each numeric claim from free text, scores it against the instrument that defines the quantity, and classes each quantity by where its reference can be read. Four open-weight systems and one closed model, asked for ten quantities five ways on two corpora, fill 207 cells. Of these, 49 emit fewer than five distinct values, and eight of the 158 cells that can be ranked exceed a rank correlation of 0.3, the bar we set, three with an interval clear of it, five of them one closed model reading pitch. Error sits at or above a constant-predictor floor in every ranked cell but three. The reference decoder we train declines the five voice quantities in prose on 95% of mixtures, with nothing withheld, and states them on the clean twins, reproducing its targets' rule from audio alone. With a calibrated threshold, withholding lowers error on all ten quantities on the mixtures in the mean and on eight at every split, against at most 0.6% from a random selector. A linear baseline orders errors at least as well as ours. F0 s.d. and shimmer stay above the constant floor.",
+  "abstractSha256": "f261b04ce3202ec46fb1a3ed676ffd68d9adf663086c75df77207c54cbf62e61",
+  "arxivId": "2609.30483",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30483v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheng-Tse Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyuan Zhai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chien-Liang Kuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massa Baali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhiksha Raj"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "AcoustiClaim 把自由文本中的数值声称抽出并与定义该量的仪器读数对比，用混合语料控制参考是否在输入中，最强证据是外部面板仅 8 个可排序单元超过 0.3 排序相关且误差多在常数基线之上，而带校准拒答的参考系统在混合上降低十个量的选择风险但排序优势仍在均值预测器。",
+  "originalTitle": "AcoustiClaim: A Numeric Claim Benchmark with Instrument Ground Truth",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30483v1.pdf",
+  "readerTitle": "数字声称能否对上仪器：AcoustiClaim 按参考可读位置分层验算",
+  "schemaVersion": 1
+}

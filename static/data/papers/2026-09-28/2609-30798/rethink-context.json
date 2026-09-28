@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30798v1",
+  "abstract": "Real-time voice agents have moved from research prototypes to production deployments, yet the literature describing them is fragmented across three communities that rarely cite one another: speech foundation modelling, turn-taking psycholinguistics, and agentic evaluation. Architecture papers report latency, turn-taking papers report prediction accuracy, and agentic benchmarks report task success, so no single number describes whether a deployed agent is actually good. We address that gap with three evidence-based claims, each traceable to a corpus of 38 primary sources organised into an application-centric taxonomy of six categories. First, architecture choice is a deployment constraint rather than a settled verdict: a 2026 enterprise tutorial reports that no fully self-hostable end-to-end system yet meets production constraints, while a chunked cascade independently reaches state-of-the-art duplex behaviour, showing duplex behaviour is separable from duplex architecture. Second, evaluation has shifted decisively from component quality toward grounded outcomes, with recent benchmarks verifying backend state rather than trusting what the agent claims to have done. Third, the dyadic assumption in most models and benchmarks is breaking down: multiparty turn-taking and multi-speaker reasoning benchmarks show that deciding when not to speak, and reasoning about who may be told what, are first-class capabilities two-participant framings cannot measure. For each source we state the problem it targets, its mechanism, and its reported evidence, alongside the search strategy, inclusion criteria, and a verification step that caught a misattributed arXiv identifier in circulation. We propose TRG (Timing-Recovery-Grounded), a reporting standard characterising an agent by timing, post-disruption recovery, and state-verified outcome together, with a conditional fourth axis for multiparty deployments.",
+  "abstractSha256": "44bc2adddd2590051e363f425e4da8825ddecf490d8770402a70983e91912945",
+  "arxivId": "2609.30798",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30798v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "系统综述",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.systematic-review",
+          "label": "系统综述"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "系统综述",
+      "primaryMethodId": "method.systematic-review",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Negi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arpit Rawat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rashi Jain"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该综述以 38 篇一手文献追问实时语音智能体何时说、如何说与是否真做成，指出级联仍是可自托管部署的现实选择、评价正从部件质量转向对数据库状态的验证，而多人场景正在瓦解双人对话假设，并据此提出时机—恢复—落地的最低联合报告标准。",
+  "originalTitle": "Evaluating Real-Time Voice Agents: From Component Quality to Grounded Outcomes",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30798v1.pdf",
+  "readerTitle": "实时语音智能体为何不能只看一个数字：架构约束、时机恢复与落地状态的联合刻画",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30415v1",
+  "arxivId": "2609.30415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30415v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhawana Chhaglani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tanvi Kandepuneni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeremy Gummeson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prashant Shenoy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30415v1",
+  "originalTitle": "CLEAR: Online Speech Content Leakage Estimation through Cross-ASR Disagreement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30415v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

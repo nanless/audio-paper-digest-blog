@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30517v1",
+  "arxivId": "2609.30517",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30517v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Hyung Kyu Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Byungchan Hwang"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Hak Gu Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30517v1",
+  "originalTitle": "Seeing Speech: Learning Visible Articulatory Dynamics for Speech-Driven 3D Facial Animation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30517v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

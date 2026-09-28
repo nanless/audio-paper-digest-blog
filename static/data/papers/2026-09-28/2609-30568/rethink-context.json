@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30568v1",
+  "abstract": "A deployed B2B music-discovery platform serves both query-driven search (text prompts, vibe tags) and seed-driven recommendation (seed-track and artist stations) over one licensed catalog, one LAION-CLAP joint audio-text embedding space, one candidate-generation filter, and one ranking head -- and neither path consumes end-listener behavioral signal. In this content-only regime, curator judgment is the principal feedback signal available, and offline cosine similarity predicts it poorly: 38% of cosine-nearest neighbors are rejected by curators. The rejections reveal a clean partition: a majority (55%) are sound failures the encoder could address (style, tempo, mood mismatch), and a substantial minority (37%) are context failures orthogonal to the waveform (wrong language, holiday content, devotional content, rights and lyric flags). We deploy this sound-vs-context decomposition as feedback infrastructure, routing each failure mode to the layer that can absorb it: context failures to a constraint filter at candidate generation, sound failures to an embedding reweighting head at the representation layer -- both below the search/recommendation split, so a single curator loop maintains both experiences. On 1,200 curator judgments collected over two production rounds one month apart, the combined intervention reduces rejection rate from 38.17% to 28.83% (-24.5% relative, McNemar chi-squared = 22.4, p = 2.2e-6). An accounting decomposition attributes 4.08 pp of the drop to filter-eligible categories and 5.25 pp to the rest; the deployment was unblinded and compound, so this is a production accounting bound, not a causal estimate. We present this as an industrial case study rather than a validated general method, and close with lessons for content-only discovery: the failure partition is orthogonal to the paradigm partition, and corrections land in layers shared by both paradigms.",
+  "abstractSha256": "435b3968481503f84f723e37b2875de20b893a8bdd9c4efe31a0da8c852b78e0",
+  "arxivId": "2609.30568",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30568v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "音乐推荐",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-recommendation",
+          "label": "音乐推荐"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "人类参与评测",
+      "primaryMethodId": "method.human-evaluation",
+      "primaryTask": "音乐推荐",
+      "primaryTaskId": "task.music-recommendation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Feed.fm, San Francisco, California, USA"
+      ],
+      "name": "Matt Sandler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在只用内容与专家判断、不吃听众行为的音乐发现栈上，论文把 38.17% 否决拆为声音与语境两类并分别送入候选过滤与表征重加权，两轮 1200 次评审把否决率降到 28.83%，但两次机制同批上线因而只能做算术归因。",
+  "originalTitle": "Nearest but Not Dearest: Shared Curator-Feedback Infrastructure for Content-Only Search and Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30568v1.pdf",
+  "readerTitle": "最近却不中意：用声音与语境二分把专家否决送进共享检索栈",
+  "schemaVersion": 1
+}

@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31293v1",
+  "arxivId": "2609.31293",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31293v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanjing University of Posts and Telecommunications, Nanjing, China"
+      ],
+      "name": "Zijian Lu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Sizhe Liu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yin Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Jixuan Deng"
+    },
+    {
+      "affiliations": [
+        "Shouyi Technology, Hefei, China"
+      ],
+      "name": "Xinrong Lin"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Xinchen Yuan"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Chicheng Jin"
+    },
+    {
+      "affiliations": [
+        "Nanjing University of Posts and Telecommunications, Nanjing, China"
+      ],
+      "name": "Yiping Zuo"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge, Cambridge, United Kingdom"
+      ],
+      "name": "Yuanchao Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31293v1",
+  "originalTitle": "Why Alzheimer's Speech Screening Fails to Generalize: Bridging the Deployment Gap via Cross-Corpus Evidence Anchoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31293v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30774v1",
+  "abstract": "In face-to-face, real-time communication, a talking agent must track the target speaker through natural pauses, turn-taking, and backchannels, often amid background cross-talk. Most target speaker extraction (TSE) studies, however, rely on simulated mixtures with full or sparse overlap and ignore the turn-taking of real conversations. We therefore introduce, to our knowledge, the first benchmark for online audio-visual TSE (AV-TSE), built from intact dyadic interactions with independent third-party interference. Observing that anticipating upcoming activity from semantic, acoustic, and facial cues benefits online AV-TSE, we propose an LLM-based target-speaker voice activity projection (TS-VAP) module. Unlike conventional VAP with separated speaker channels, it forecasts the future activity of the target and conversational partner directly from the overlapping mixture, drawing on the linguistic and conversational knowledge of a speech-LLM, and uses this prediction to guide a low-latency separator. We further combine this predictive context with historical and synchronous speaker context. Experiments show that TS-VAP consistently improves streaming extraction across multiple AV-TSE backbones, and that further combining historical, synchronous, and predictive context yields nearly 1 dB gain on real AV conversations. Project page: https://jjjjiaozi.github.io/TS-VAP/.",
+  "abstractSha256": "41a0697a0e2e4813289dffa661794fe4015abc73998fb6150bf66a367a7e2fe4",
+  "arxivId": "2609.30774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30774v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音视频语音分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-speech-separation",
+          "label": "音视频语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "音视频语音分离",
+      "primaryTaskId": "task.av-speech-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuhan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenxuan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对含第三方干扰的自然双人对话在线音视目标说话人提取，该研究用语音大模型预测目标与对话伙伴的近未来活动来引导低延迟分离器，在 IEMOCAP 三人混合上三上下文联合达到平均 10.03 dB、相对基线提升 10.9%，代价是需要两遍训练、2 秒窗与 600 毫秒跳的在线调度和冻结的预测模块。",
+  "originalTitle": "Dialogue-Based Streaming Audio-Visual Target Speaker Extraction with Predictive Dialogue Information",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30774v1.pdf",
+  "readerTitle": "在真实轮转对话里做在线提取：用预测的说话活动给分离器指路",
+  "schemaVersion": 1
+}

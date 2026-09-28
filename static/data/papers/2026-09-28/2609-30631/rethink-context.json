@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30631v1",
+  "abstract": "Online audio-visual target-speaker extraction aims to remove competing voices while preserving speech quality and bounding lookahead. Existing extractors are built and evaluated for separation on synthetic mixtures, leaving listening quality and meeting behavior largely untested. We introduce Audio-Visual Personalized Voice Quality Enhancement (AV-PVQE), which approaches these requirements from the other direction. We start from a personalized speech enhancement model that reconstructs a requested voice at high quality but confuses the target in 46% of two-speaker mixtures despite clean enrollment. Adding mouth features at its speaker-conditioning input and jointly fine-tuning the visual and reconstruction networks reduces this rate to 1.6%, with no future frames and 20 ms of algorithmic delay. Compared with an online autoregressive audio-visual extractor, AV-PVQE yields separation gains on two synthetic benchmarks and larger gains on recorded meetings, and keeps its advantage on excerpts with more speakers than the fine-tuning mixtures. In personalized P.835 listening tests on two meeting corpora, it improves overall quality over this extractor by 0.57 and 0.63 MOS, with similar mean rating relative to the starting model. Preservation and rejection tests show that it keeps the target intact when no competing voice is present and suppresses competing speech when the target is absent.",
+  "abstractSha256": "bd2ef41a97ed2b162d90bc2f59d2ab310123b2be4558ddc4448765620007659a",
+  "arxivId": "2609.30631",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30631v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rayhan Rashed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Senja Filipi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ross Cutler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对在线视听目标说话人提取中选错人且会议泛化差的问题，该研究把嘴部特征接到个性化增强模型的说话人条件输入并联合微调，在无未来帧与 20 ms 算法延迟下把 46% 的混淆降到 1.6%，并在会议上拉开分离差距与 0.57 和 0.63 MOS 整体质量提升，代价是仅在双人混合上微调且未报告设备端真实耗时。",
+  "originalTitle": "Adapting Personalized Speech Enhancement for Low-Latency Audio-Visual Target-Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30631v1.pdf",
+  "readerTitle": "从保音质到选对人：给个性化增强加上嘴部线索的低延迟视听提取",
+  "schemaVersion": 1
+}

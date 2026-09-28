@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30846v1",
+  "arxivId": "2609.30846",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30846v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Taichi Nishimura"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30846v1",
+  "originalTitle": "I-Parakeet: Integer-Only Conformer ASR on Mobile NPU",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30846v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

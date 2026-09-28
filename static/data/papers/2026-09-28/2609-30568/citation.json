@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30568v1",
+  "arxivId": "2609.30568",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30568v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Feed.fm, San Francisco, California, USA"
+      ],
+      "name": "Matt Sandler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30568v1",
+  "originalTitle": "Nearest but Not Dearest: Shared Curator-Feedback Infrastructure for Content-Only Search and Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30568v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

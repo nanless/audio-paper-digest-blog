@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30839v1",
+  "abstract": "Simultaneous speech-to-text translation (Simul-S2TT) consists of generating partial translations while the incoming audio frames are processed by the system. However, the streaming nature of this setup creates the challenge of deciding the best moment to perform an accurate translation while minimizing the delay. To address this challenge, we utilize the cross-attention mechanism of the encoder-decoder architecture to find the right alignment between the input speech frames and the target text tokens. In this paper, we propose the Recent Frame Attention Policy (RFAP) and the Dual-Condition Attention Policy (DCAP) that allow offline trained speech-to-text translation models to be used in streaming scenarios without requiring additional training. Results on three different language translation pairs over the CVSS-C corpus show that the RFAP is able to surpass other policies with gains of up to 4.0 BLEU while reducing the translation delay by almost 1 second. Moreover, the DCAP is able to preserve a high translation quality when the latency is very low.",
+  "abstractSha256": "10c950e6021890bc3044f875c7d93dfc809a91d54b05f76685b4fbac323b9078",
+  "arxivId": "2609.30839",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30839v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Tăşădan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ema Tomanová"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondrej Lopuch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paweł Bilko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anders Søgaard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对边听边翻需要在等够信息与尽快输出之间抉择的问题，该研究提出只看最近语音块注意力占比的 RFAP 和再加注意力变化率的 DCAP，使离线训练的语音到文本模型无需再训练即可流式运行，在 CVSS-C 三个语对上 RFAP 在中延迟段取得最高可比 BLEU 而 DCAP 保住极低延迟下的质量，但高延迟段优势收窄且 DCAP 随延迟增大而退化。",
+  "originalTitle": "Attention-Based Adaptive Policies for Simultaneous Speech-to-Text Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30839v1.pdf",
+  "readerTitle": "不等听完再翻：用最近帧注意力决定何时开口的同传策略",
+  "schemaVersion": 1
+}

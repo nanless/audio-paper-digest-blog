@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30773v1",
+  "arxivId": "2609.30773",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30773v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Manato Yaguchi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yotaro Kubo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hikaru Asano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "So Kuroki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30773v1",
+  "originalTitle": "Learning Natural Conversational Behavior in Tandem Speech-to-Speech Models with Randomized Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30773v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

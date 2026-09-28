@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30483v1",
+  "arxivId": "2609.30483",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30483v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheng-Tse Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siyuan Zhai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chien-Liang Kuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massa Baali"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhiksha Raj"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30483v1",
+  "originalTitle": "AcoustiClaim: A Numeric Claim Benchmark with Instrument Ground Truth",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30483v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

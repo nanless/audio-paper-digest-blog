@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31224v1",
+  "arxivId": "2609.31224",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31224v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongha Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31224v1",
+  "originalTitle": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31224v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

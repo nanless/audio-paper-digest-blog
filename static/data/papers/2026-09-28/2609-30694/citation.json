@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30694v1",
+  "arxivId": "2609.30694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30694v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natsuo Yamashita"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ai Nemoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryosuke Koichi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masaaki Yamamoto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30694v1",
+  "originalTitle": "Training-Free Contextual ASR via SpeechLLM-Based Error-Aware Selective Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30694v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

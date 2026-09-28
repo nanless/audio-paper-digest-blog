@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31293v1",
+  "abstract": "Speech-based screening is a promising, non-invasive approach for detecting Alzheimer's disease and related cognitive risks. However, models trained on a single domain often generalize poorly to unseen languages, tasks, or recording protocols. This paper investigates this deployment gap using a leave-one-corpus-out evaluation across four distinct datasets. Among 70 interpretable speech and language features, 59 exhibit direction conflicts between healthy control and cognitive risk groups across corpora, with pause, silence, and speech rate showing high protocol sensitivity. Furthermore, while the XLM-R text baseline achieves strong average performance, its Area Under the ROC Curve (AUC) drops to 0.520 on the weakest held-out domain. A standard GroupDRO baseline reaches a 0.766 mean speaker AUC and a 0.504 worst-domain AUC under the same protocol. To address this, we propose a fusion method that integrates XLM-R text baseline scores with evidence anchors selected during training. Balanced fusion achieves a 0.785 mean speaker AUC, while anchor-heavy fusion raises the worst-case speaker AUC to 0.615. This work highlights the need to audit feature transferability and report worst-case domain robustness in cognitive speech screening.",
+  "abstractSha256": "31c82943c35e538c799115415663d84031843b6d378fea37afde572667ffa85e",
+  "arxivId": "2609.31293",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31293v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanjing University of Posts and Telecommunications, Nanjing, China"
+      ],
+      "name": "Zijian Lu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Sizhe Liu"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Yin Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Jixuan Deng"
+    },
+    {
+      "affiliations": [
+        "Shouyi Technology, Hefei, China"
+      ],
+      "name": "Xinrong Lin"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Xinchen Yuan"
+    },
+    {
+      "affiliations": [
+        "University of Science and Technology of China, Hefei, China"
+      ],
+      "name": "Chicheng Jin"
+    },
+    {
+      "affiliations": [
+        "Nanjing University of Posts and Telecommunications, Nanjing, China"
+      ],
+      "name": "Yiping Zuo"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge, Cambridge, United Kingdom"
+      ],
+      "name": "Yuanchao Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "问题是单库训练的语音筛查在新语种、新任务和新录音流程下出现方向反转与局部崩溃，方法是用留一库评估审计 70 个可解释指标并把源库选出的 4 个证据锚与冻结 XLM-R 文本分数加权融合，最强证据是平衡融合平均说话人 AUC 为 0.769 到 0.785 区间、最重锚融合最差域 AUC 为 0.615，代价是在接近饱和的 Chou 域上融合轻微拉低分数且最难域提升的配对自助区间仍跨过零。",
+  "originalTitle": "Why Alzheimer's Speech Screening Fails to Generalize: Bridging the Deployment Gap via Cross-Corpus Evidence Anchoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31293v1.pdf",
+  "readerTitle": "平均分好看、最难的部署点却失效：用跨库证据锚稳住阿尔茨海默语音筛查",
+  "schemaVersion": 1
+}

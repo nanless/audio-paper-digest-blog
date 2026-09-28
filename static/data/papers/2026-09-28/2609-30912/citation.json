@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30912v1",
+  "arxivId": "2609.30912",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30912v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "V. Valtteri Kallinen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lauri Juvela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vesa Välimäki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30912v1",
+  "originalTitle": "Music Source Separation via Stem Discovery",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30912v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

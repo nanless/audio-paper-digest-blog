@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30912v1",
+  "abstract": "Music source separation (MSS) methods aim to extract stems from music mixtures, which is important, for example, in karaoke, music remixing, and pedagogical applications. While earlier research on MSS systems has been dominated by models targeting narrow sets of general stems, there have recently been attempts to support broader source definitions. One of these methods uses audio queries to provide direct and descriptive control over the desired separation targets based on the sound itself. However, query-based separation remains cumbersome due to the need to provide audio examples with features matching the sources contained within mixtures. This paper proposes Music Source Separation via Stem Discovery (MuS3D), a query-based source separation framework that iteratively discovers active sources from the mixture. On correctly detected sources, our model matches manually queried baselines and surpasses state-of-the-art text-based models. Subjective evaluation indicates encoding artifacts as the limiting factor in current generative separation. The findings suggest that audio-based query representations offer an effective and automatable interface for source separation.",
+  "abstractSha256": "52ffd642d2fab82170292a7bb416f879678cbb44be9dd21af7ffd3d0945927ae",
+  "arxivId": "2609.30912",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30912v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "V. Valtteri Kallinen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lauri Juvela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vesa Välimäki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对混合音乐中乐器种类与数量未知的问题，论文用 stem 嵌入生成器逐个发现音频查询再驱动查询分离器，在正确检出的干声上达到人工查询相当的分离质量，主要代价是检出召回不完整与自编码器引入的听感瓶颈。",
+  "originalTitle": "Music Source Separation via Stem Discovery",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30912v1.pdf",
+  "readerTitle": "不用人工给例子也能分离：用递归生成音频查询来发现乐器干声",
+  "schemaVersion": 1
+}

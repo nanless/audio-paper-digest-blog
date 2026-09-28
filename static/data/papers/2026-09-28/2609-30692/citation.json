@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30692v1",
+  "arxivId": "2609.30692",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30692v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Md. Mehedi Hasan Naeem"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mst. Kamrunnahar Ruma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nafiza Anjum"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shakila Sultana"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Md. Sujan Ali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30692v1",
+  "originalTitle": "LUMO (Lightweight Unified Multilingual Orchestrator): A Privacy Preserving Offline Voice Assistant",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30692v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

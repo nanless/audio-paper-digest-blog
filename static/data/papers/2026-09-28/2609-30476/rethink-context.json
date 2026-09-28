@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30476v1",
+  "abstract": "Target-speaker automatic speech recognition (TS-ASR) must identify and transcribe a desired speaker under varying overlap and noise conditions. These changes alter the acoustic evidence for the target speaker in the speech mixture, motivating inference-time calibration of speaker conditioning. We introduce asymmetric classifier-free guidance (CFG) for TS-ASR using Whisper: the speaker-conditioned branch predicts the target transcript, while the speaker-unconditioned branch predicts serialized multi-speaker transcripts. CFG adjusts the contribution of speaker conditioning during decoding through a single guidance scale. We select a global guidance scale on target-domain development data and train a lightweight encoder-based predictor to adjust it for each utterance, keeping the recognition model fixed. Under domain shifts, our full system achieves relative word error rate (WER) reductions of up to 21.8% over the condition-only baseline, and 5.6% over standard conditional decoding of the same CFG-trained model. Oracle analysis shows that substantially larger WER reductions are possible through utterance-level scale selection and identifies how beneficial adjustments vary with domain shifts.",
+  "abstractSha256": "e761cc47c820e7e3f7781a7783ecb1da2e6dc2c9fc4cae1b3dc67bca2a90ca12",
+  "arxivId": "2609.30476",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30476v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwen Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jacob Whitehill"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对混合语音中重叠与噪声变化导致目标转写恶化的问题，该研究让同一 Whisper 分别学习目标转写与双说话人串行转写并在解码时以单一引导尺度调节声纹偏好，在冻结主干下用目标域开发集选全局尺度并以轻量预测器做逐句微调，取得可部署的全局加逐句增益而代价是需要标注开发集且预测器仍远低于逐句事后上限。",
+  "originalTitle": "Asymmetric Classifier-Free Guidance for Target-Speaker ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30476v1.pdf",
+  "readerTitle": "域变了声纹条件该加多重：非对称引导在冻结模型下校准目标说话人识别",
+  "schemaVersion": 1
+}

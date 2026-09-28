@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31180v1",
+  "arxivId": "2609.31180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31180v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suhyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinmo Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danny Dongyeop Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahhyun Lucy Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jewoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yonghyeon Gwon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zach Paris"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chun Kee Chung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saewoong Bahk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nam Soo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seong Jae Hwang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiook Cha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31180v1",
+  "originalTitle": "BAT-CLIP: Trimodal Alignment of Brain, Audio and Text",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31180v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

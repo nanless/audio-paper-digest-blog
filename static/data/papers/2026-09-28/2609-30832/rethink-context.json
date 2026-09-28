@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30832v1",
+  "abstract": "Perceived speech decoding based on non-invasive brain-computer interface (BCI) signals has been extensively studied in recent years. Research in this field primarily faces two challenges: extracting neural representations with rich spatiotemporal information and achieving cross-subject generalization. Although separate studies have proposed methods to cope with these issues, a unified approach that simultaneously tackles both challenges remains lacking. To fill this gap, we propose the Subject-Invariant Cross-Modal Perceived Speech Decoding (SICMD) method, which integrates functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG). We conduct comprehensive analyses of the fusion method, fusion position, encoder architecture, and model inputs. Our results demonstrate that the proposed method improves Top-1, Top-10, and Rankacc by more than 10.6%, 10.1%, and 1.7%, respectively, compared to baseline methods in cross-subject perceived speech decoding tasks, while reducing training costs by 88.8% and 60.5% compared to multi-subject and intra-subject decoding settings. Further visualization experiments also confirm the effectiveness of our approach.",
+  "abstractSha256": "7ff7d83d17dbea2d51c443b62f56042d4100903738e500644186f2d26e39dee3",
+  "arxivId": "2609.30832",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30832v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aoke Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jing Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对非侵入感知语音解码中时空表征不足与跨被试泛化难的问题，论文提出融合 MEG 与 fMRI 并显式提取被试一致成分的 SICMD，以 43.5%、82.7% 和 93.4% 的 Top-1、Top-10 和 Rankacc 报告最高性能，代价是仍需目标被试的个性化微调与双模态配对数据。",
+  "originalTitle": "Subject-Invariant Cross-Modal Decoding of Perceived Speech from Brain Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30832v1.pdf",
+  "readerTitle": "时空互补与被试一致：SICMD 如何同时解感知语音的模态与跨人难题",
+  "schemaVersion": 1
+}

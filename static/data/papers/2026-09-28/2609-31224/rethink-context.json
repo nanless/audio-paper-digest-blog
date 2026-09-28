@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31224v1",
+  "abstract": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+  "abstractSha256": "0e485ec783db352e1a335dfc51dbecbce4b0ba16fdff94a1790be5fd1ee478aa",
+  "arxivId": "2609.31224",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31224v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型压缩",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.compression",
+          "label": "模型压缩"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型压缩",
+      "primaryMethodId": "method.compression",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejin Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seungbeom Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongha Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyuhong Shim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全双工语音模型长时交互中声学键值缓存持续膨胀的问题，该研究在听音空隙内增设转写旁路并驱逐旧声学状态，在十分钟会话上将峰值流式缓存从 11.35K 降至 4.02K 并保持实时处理，但反通道接管率有所上升。",
+  "originalTitle": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31224v1.pdf",
+  "readerTitle": "边听边写再删录音：用听音空隙把声学缓存换成文字记忆",
+  "schemaVersion": 1
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31165v1",
+  "arxivId": "2609.31165",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31165v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sania Fatima Sayed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John W. Holloway"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Reyer Zwiggelaar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Faisal I. Rezwan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31165v1",
+  "originalTitle": "BreathGRU: A Novel Semi-Supervised Bidirectional Gated Recurrent Unit Framework for Speech and Breath Segmentation for Respiratory Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31165v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

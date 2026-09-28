@@ -1,0 +1,30 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30548v1",
+  "arxivId": "2609.30548",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30548v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Music Informatics Group",
+        "Georgia Institute of Technology",
+        "Atlanta, GA, USA"
+      ],
+      "name": "Yuan-Chiao Cheng"
+    },
+    {
+      "affiliations": [
+        "Audio Information Research (AIR) Lab",
+        "University of Rochester",
+        "Rochester, NY, USA"
+      ],
+      "name": "Zhiyao Duan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30548v1",
+  "originalTitle": "MuseTimbre: Zero-Shot Timbre Transfer by Controlling a Frozen Music Generator",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30548v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

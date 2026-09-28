@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31193v1",
+  "abstract": "Current Audio-Visual LLMs (AVLLMs) struggle with reasoning over videos featuring multi-speaker dialogues. In such videos, resolving \"who says what\" is crucial, which necessitates trimodal (text-audio-visual) binding. Motivated by these challenges, we systematically investigate how this trimodal binding is achieved in AVLLMs. Specifically, we identify emergent symbolic trimodal binding mechanisms in AVLLMs that utilize modality-specific symbolic variables. By encoding auditory and visual components into symbolic variables-capturing temporal utterance sequences and spatial entity coordinates, respectively-the model establishes cross-modal linking within this abstract space. Crucially, we reveal that when trimodal binding fails, the breakdown predominantly stems from misaligned audio-visual connections. To overcome this bottleneck, we introduce an audio-visual prompting method utilizing an off-the-shelf Active Speaker Detection (ASD) model. By simply overlaying visual bounding boxes on active speakers, this training-free approach yields immediate performance gains across four conversation-centric benchmarks. Moreover, lightweight fine-tuning of fewer than 300 steps on these ASD-prompted-videos extends these gains to three general AV benchmarks, suggesting the generalizability of our method.",
+  "abstractSha256": "edcd0b481d5f3f387692f39c0a7934e219059f852c4b6bb26f5ace9900db4cd4",
+  "arxivId": "2609.31193",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31193v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jihoo Jung"
+    },
+    {
+      "affiliations": [
+        "VGG, University of Oxford"
+      ],
+      "name": "Youngjoon Jang"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把多人说话视频的谁说了什么拆成以声音或画面为锚的跨模态检索，用受控玩具体验揭示时间编号与位置编号的三阶段绑定，并证明瓶颈在音视对齐，进而用现成说话人检测框加不到 300 步微调带来可复现的提升。",
+  "originalTitle": "Who Says What: Symbolic Trimodal Binding Mechanisms in Audio-Visual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31193v1.pdf",
+  "readerTitle": "谁说了什么：音视大模型用时间与位置编号完成三模态绑定",
+  "schemaVersion": 1
+}

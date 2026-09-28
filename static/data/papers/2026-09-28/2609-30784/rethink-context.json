@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30784v1",
+  "abstract": "This paper proposes an architecture for equipping large language models (LLMs) with audio-understanding capabilities without fine-tuning their weights. The proposed symbiotic architecture employs an injector module that writes audio-conditioned vectors directly into the target LLM's short-term memory, i.e., the key-value (KV) cache, enabling the LLM to behave as an audio language model (ALM). The architectural advantages are twofold. First, it improves the scalability of ALMs: because the proposed method bypasses the LLM during audio injection, the injection cost is governed by the injector width rather than the backbone width, and can therefore scale more slowly than the cost of full-backbone prefilling. Second, since the training scheme does not update the LLM weights, the original capabilities of the LLM are preserved without the risk of degradation from fine-tuning. The effectiveness of the proposed method is evaluated on both audio-understanding tasks (automatic speech recognition, audio question answering, and acoustic scene classification) and text-only tasks. We confirm that, while activating fewer parameters during audio prefilling, our architecture outperforms the conventional method with a frozen LLM and approaches the performance of a fine-tuned ALM, all while preserving the backbone LLM's original text-only task performance by construction.",
+  "abstractSha256": "5851735d20ad2a438de1c09122a6a27bcd7614308d9362e472af33b36b184a29",
+  "arxivId": "2609.30784",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30784v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "前缀微调",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.prefix-tuning",
+          "label": "前缀微调"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "前缀微调",
+      "primaryMethodId": "method.prefix-tuning",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yotaro Kubo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qi Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujin Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频预填充随主干增大而变贵与音频微调损伤文本能力的问题，论文用与主干同层数的窄卷积注入器直接生成层相关键值缓存，在冻结 Qwen3-0.6B 下以音频预填充激活参数从 1108M 降至 552M 为代价逼近微调基线，并用噪声旋转位置编码与键值尺度匹配解决长句泛化。",
+  "originalTitle": "Symbiotic Architecture for Post-Hoc Audio Extension of Frozen Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30784v1.pdf",
+  "readerTitle": "不碰大模型权重，如何把声音写进它的短期记忆",
+  "schemaVersion": 1
+}

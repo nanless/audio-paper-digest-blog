@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30924v1",
+  "abstract": "Accurate and efficient pronunciation transcription is essential for preparing text-to-speech training data at scale. Existing approaches have different limitations: grapheme-to-pronunciation (G2P) and speech-to-pronunciation (S2P) methods each capture only partial information, using only text or only speech, while speech-and-text-to-pronunciation (ST2P) methods use both but require costly pronunciation-annotated data. To address this problem, we propose a training-free ST2P pipeline that integrates both lexical and acoustic information at inference time. Lexical resources and G2P tools generate text-constrained candidates, and a left-to-right greedy search selects the best one using whole-sequence negative log-likelihoods from frozen pretrained S2P models. On three Japanese corpora, our method reduces Character Error Rate (CER) from 0.60--1.40\\% (text-only baseline) to 0.04--0.17\\% with reference transcripts, and 0.64--1.58\\% with ASR transcripts. It outperforms all baselines, including a trained ST2P model and commercial multimodal LLMs. Our greedy search method is 3--3.5$\\times$ faster than beam search at similar CER, and the cascade is 2$\\times$ faster than direct decoding ensuring the efficiency and accuracy. In Spanish, French, and preliminary English, it also surpasses four open multimodal LLMs and the best traditional methods.",
+  "abstractSha256": "2dff88f7b6e2edcca9adb7da313b00edaf0a3cd921cc07c0596a423c128a74fa",
+  "arxivId": "2609.30924",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30924v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hikaru Asano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yotaro Kubo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "So Kuroki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对同时有语音和文本时如何低成本得到实际读音的问题，该文用词典与工具生成受限候选再以冻结语音转读音模型做整句负对数似然贪心选择，在日语三语料上把字符错误率降到 0.04 到 0.17%，代价是仍依赖候选覆盖与按语言校准的阈值。",
+  "originalTitle": "Training-Free Pronunciation Transcription via Text-Constrained Acoustic Rescoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30924v1.pdf",
+  "readerTitle": "文本定范围、语音做选择：不训练也能转写实际读音",
+  "schemaVersion": 1
+}

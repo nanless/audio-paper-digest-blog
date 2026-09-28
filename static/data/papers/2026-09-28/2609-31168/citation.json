@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31168v1",
+  "arxivId": "2609.31168",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31168v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ulysse Roussel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31168v1",
+  "originalTitle": "Audio emotion recognition for atypical hearing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31168v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

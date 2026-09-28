@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30416v1",
+  "abstract": "Large Language Models (LLMs) have shown strong performance in low-resource offline translation; however, extending them to simultaneous speech-to-speech translation (Simul-S2ST) remains challenging due to the scarcity of causally aligned training data with high cross-lingual speaker fidelity. In addition, existing approaches rely on fixed translation policy or confidence heuristics, leading to suboptimal quality and higher latency. We propose a causality-aware Simul-S2ST framework with a novel data pipeline that generates high-fidelity, causally aligned segments with improved voice transfer. The framework introduces (i) a factorized S2ST architecture (FAST), (ii) a causality-aware adaptive policy (CAP), and (iii) causality-aware latency metric. Experiments on CVSS Spanish, German, and French show that FAST-CAP consistently improves the quality-latency trade-off, achieving up to +1.2 BLEU and a 26% relative latency reduction over a fixed policy. Despite using substantially less training data than existing systems, FAST-CAP achieves state-of-the-art results in speech translation quality and speaker fidelity while yielding up to a 38.8% relative reduction in latency.",
+  "abstractSha256": "fcba6bed3235d8a7c84b05617963708766cf589e53c4ac744804bbb2c7b14a4a",
+  "arxivId": "2609.30416",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30416v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音翻译",
+      "primaryTaskId": "task.speech-translation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Amir Hussein"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Enas Albasiri"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Travis M. Bartley"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Nourchene Ferchichi"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Ke Hu"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Harishchandra Dubey"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Myungjong Kim"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Zhehuai Chen"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Oluwatobi Olabiyi"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Sanjeev Khudanpur"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把同时传译拆成因果数据构造、自适应等待策略、解耦词义与声音的双流架构和只罚可避免延迟的指标，用约 2.7K 小时每语言对的数据在西德法转英上以可运行的自适应策略超越固定切块并降低延迟，但语音端质量仍依赖更大合成与翻译模型补强。",
+  "originalTitle": "All In Good Time: Causality-Aware Framework for LLM-Based Simultaneous Speech-to-Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30416v1.pdf",
+  "readerTitle": "不等源语音说完就开口：因果对齐如何决定何时等待、何时发声",
+  "schemaVersion": 1
+}

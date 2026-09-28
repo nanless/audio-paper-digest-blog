@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30415v1",
+  "abstract": "Signal-level speech privacy mechanisms suppress linguistic content while preserving acoustic information needed by downstream sensing applications. However, their privacy settings are typically evaluated/selected offline and remain fixed during deployment, even though speech-content leakage can vary substantially across utterances and speakers. Adapting privacy protection at runtime requires estimating how much speech remains recoverable, but conventional measures such as WER or PER require ground-truth transcripts and therefore cannot be computed online. We present CLEAR, a reference-free approach for estimating speech-content leakage at runtime using disagreement among heterogeneous ASR systems. Our key insight is that independently trained ASRs exhibit consistent behavior when linguistic content remains recoverable and increasingly disagree as privacy transformations obscure speech. Using configurable speech-suppression mechanism, we show that cross-ASR disagreement closely tracks transcript-grounded leakage across privacy operating points, achieving a correlation of 0.8. We further characterize the latency-accuracy trade-off of heterogeneous ASR subsets and use their hypotheses to identify potentially exposed words. These capabilities enable privacy to be treated as a runtime property rather than a fixed configuration: CLEAR can communicate residual speech exposure to users and provide feedback for dynamically adjusting privacy aggressiveness while retaining acoustic utility for downstream sensing tasks.",
+  "abstractSha256": "9e4c2ec6cde7524adb9f75415f682d812472dd9942ccf26f84b2e4bb497771c2",
+  "arxivId": "2609.30415",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30415v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.online-inference",
+          "label": "在线推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhawana Chhaglani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tanvi Kandepuneni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeremy Gummeson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prashant Shenoy"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对固定隐私变换在不同语句和说话人上泄漏差异大的问题，提出只用变换后音频计算异构 ASR 文本分歧的 CLEAR 方法，在 100 条语音乘 13 个 Kirigami 工作点上与留出强攻击者的音素错误率达到 Spearman 0.8 的跟踪能力，而三模型集成以约 0.30 s 延迟实现可部署的运行时反馈。",
+  "originalTitle": "CLEAR: Online Speech Content Leakage Estimation through Cross-ASR Disagreement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30415v1.pdf",
+  "readerTitle": "固定隐私参数为何不够：用异构识别器分歧在线估计语音残留",
+  "schemaVersion": 1
+}

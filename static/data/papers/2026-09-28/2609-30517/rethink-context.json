@@ -1,0 +1,76 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30517v1",
+  "abstract": "Recent progress in speech-driven 3D facial animation has improved vertex-level reconstruction quality, but speech-consistent visible articulation remains difficult. This is because speech production follows structured and constrained articulators' coordination and the mapping from acoustics to motion is inherently one-to-many. Motivated by the structured patterns of visible articulation, we propose a novel articulation-aware framework that models visible speech through directional articulatory motions and composes them into surface-consistent 3D facial motion. To represent visible articulation with three directional articulatory motions, spreading, opening, and protrusion, we propose a Speech--Articulatory Memory (SAM) that captures the correspondence between speech and these motions under phonetic context through retrieval and decoding based on a key-value memory structure. Then, a Topology-aware Articulatory Composition (TAC) integrates the predicted directional articulatory motions under mesh topology to produce surface-consistent 3D facial motion. Experiments on VOCASET and TFHP show that our method achieves state-of-the-art performance on standard reconstruction metrics and improves visible articulatory distance and velocity errors for lip articulation, while a user study confirms clear preference in lip sync and realism.",
+  "abstractSha256": "e8636087f511cc9e24ff2c767996b4c27e4b4bf0452eba456ae152f76a4f07f6",
+  "arxivId": "2609.30517",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30517v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Hyung Kyu Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Byungchan Hwang"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University",
+        "Seoul, South Korea"
+      ],
+      "name": "Hak Gu Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对声音到人脸一对多映射导致口型不一致的问题，该文把可见发音拆成张开、展圆、前突三个方向，先用语音发音记忆检索方向运动再用网格拓扑组合成表面一致的顶点运动，在保持整体重建的同时改善了唇部距离与速度误差，代价是两阶段训练且不建模上半脸随机动态与口内结构。",
+  "originalTitle": "Seeing Speech: Learning Visible Articulatory Dynamics for Speech-Driven 3D Facial Animation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30517v1.pdf",
+  "readerTitle": "把嘴唇运动拆成三个方向：用记忆检索与拓扑组合做语音驱动三维人脸",
+  "schemaVersion": 1
+}

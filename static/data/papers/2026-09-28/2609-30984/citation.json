@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30984v1",
+  "arxivId": "2609.30984",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30984v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Digital Government Committee, Cambodia"
+      ],
+      "name": "Seanghay Yath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30984v1",
+  "originalTitle": "THA: Weighted Finite-State Text Normalization and Inverse Text Normalization for Khmer",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30984v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

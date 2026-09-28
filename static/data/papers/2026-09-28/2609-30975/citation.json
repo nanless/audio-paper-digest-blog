@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30975v1",
+  "arxivId": "2609.30975",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30975v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Torres"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Axel Roebel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicolas Obin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30975v1",
+  "originalTitle": "A Comprehensive Study of Content Representations for Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30975v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

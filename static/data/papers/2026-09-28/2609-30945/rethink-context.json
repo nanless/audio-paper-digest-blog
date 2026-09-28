@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30945v1",
+  "abstract": "Meta-adaptive filtering (Meta-AF) provides a data-driven alternative to hand-crafted adaptive filter updates by employing a learned optimizer throughout online adaptation. However, when Meta-AF is used for active noise control (ANC), time-varying acoustic paths remain a major challenge. In particular, the physics-informed optimizer features are constructed using a secondary path estimate and become mismatched when the physical path changes, leading to inaccurate filter updates and degraded noise reduction. To address this problem, this paper proposes a Coupled Meta-Adaptive Filtering Active Noise Control (CoMeta-AF-ANC) method, which applies meta-learning to jointly learn the control filter adaptation and acoustic path tracking within a closed-loop framework. The proposed Meta-Gated Joint Path Identifier (MG-JPI) simultaneously tracks the primary and secondary paths from the available ANC signals without auxiliary noise, while the updated secondary path estimate is fed back to reconstruct the Meta-AF controller features. A delayless dual-rate realization performs learned adaptation at the frame rate while generating the control signal at the sampling rate in the time domain. Evaluation using measured headrest acoustic paths shows that CoMeta-AF-ANC outperforms representative ANC algorithms in tracking time-varying acoustic paths, while maintaining higher stability across unseen head movement scenarios. It also generalizes well to real-world noises not encountered during training.",
+  "abstractSha256": "3b67660f7d7304d3492c8cceec732908a889c2ebb432e803936316a8ea0b8e13",
+  "arxivId": "2609.30945",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30945v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "元学习",
+    "primaryTask": "主动降噪",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.adaptive-filtering",
+          "label": "自适应滤波"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "元学习",
+      "primaryMethodId": "method.meta-learning",
+      "primaryTask": "主动降噪",
+      "primaryTaskId": "task.active-noise-control",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Boxiang Wang"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Zhengding Luo"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Ziyi Yang"
+    },
+    {
+      "affiliations": [
+        "Center of Intelligent Acoustics and Immersive Communications, School of Artificial Intelligence, Northwestern Polytechnical University, Xi’an, 710072, China"
+      ],
+      "name": "Dongyuan Shi"
+    },
+    {
+      "affiliations": [
+        "College of Energy Engineering, Zhejiang University, Hangzhou, 310027, China"
+      ],
+      "name": "Xuexian Liu"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Woon-Seng Gan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对头动导致主次路径时变下固定次级路径估计使元自适应滤波特征失配的问题，论文提出同时学习控制滤波器更新与主次路径跟踪的耦合框架，在 60 个实测头枕路径与未见噪声上显示 90 个突变场景不稳定率为 0 且切换后 3 秒平均降噪 7.9 dB，代价是三组复数循环优化器约 324.7 百万复数乘加每秒的帧率推理开销。",
+  "originalTitle": "Coupled Meta-Adaptive Filtering for Active Noise Control Under Time-Varying Acoustic Paths",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30945v1.pdf",
+  "readerTitle": "声路径一变就失配：把控制与辨识耦合在一起学更新",
+  "schemaVersion": 1
+}

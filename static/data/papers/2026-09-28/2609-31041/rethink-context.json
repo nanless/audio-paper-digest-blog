@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31041v1",
+  "abstract": "We propose a self-supervised approach for learning room impulse response (RIR) representations from single-channel noisy-reverberant speech. It consists of first training on reverberant data, then on noisy-reverberant data, and finally with a teacher-student approach, where the student learns to replicate the teacher's embeddings when given a noisy version of the reverberant input. We assess their representational capabilities by estimating acoustic room parameters from them. Conditioning a discriminative speech enhancement model on the derived embeddings yields consistent gains across all evaluated metrics, including downstream word error rate, for both reverberant and noisy-reverberant speech.",
+  "abstractSha256": "fe1351f2eb0511229f0f401070d3ad850715dfbb06f3e1a2e931f7d4af594141",
+  "arxivId": "2609.31041",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31041v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adrian Meise"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Reinhold Haeb-Umbach"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对单通道带噪混响语音中房间信息易被噪声掩盖的问题，论文采用纯混响对比学习、带噪混响对比学习、冻结教师对齐学生三阶段学出噪声鲁棒的房间嵌入，并以声学参数探针和条件化深滤波增强验证其可读性与一致增益，代价是弱识别器仍受增强伪影影响且动态多通道场景未验证。",
+  "originalTitle": "Room Impulse Response Embeddings for Speech Enhancement in Noisy and Reverberant Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31041v1.pdf",
+  "readerTitle": "先建干净房间空间再对齐噪声：三阶段房间脉冲响应嵌入及其增强条件化",
+  "schemaVersion": 1
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30631v1",
+  "arxivId": "2609.30631",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30631v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rayhan Rashed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Senja Filipi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ross Cutler"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30631v1",
+  "originalTitle": "Adapting Personalized Speech Enhancement for Low-Latency Audio-Visual Target-Speaker Extraction",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30631v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

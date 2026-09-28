@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30983v1",
+  "arxivId": "2609.30983",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30983v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eunji Shin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyudan Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihwan Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minwoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaegul Choo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30983v1",
+  "originalTitle": "Tracing and Relearning Detection Evidence in Text-to-Speech Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30983v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

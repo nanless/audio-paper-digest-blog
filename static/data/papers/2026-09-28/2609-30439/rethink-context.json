@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30439v1",
+  "abstract": "We introduce target-speaker unlearning ASR (TSU-ASR) task in a fully end-to-end framework for multi-speaker ASR and diarization. Given a multi-speaker utterance and a set of opt-out speakers who do not wish to have their speech transcribed, the task requires an ASR system to transcribe all speakers except the opt-out ones, while still indicating when those speakers are active. As a first step towards tackling this task, we introduce a novel, light-weight Enrollment-Conditioned Gating (ECG) module attachable to a frozen dual-stream speech LLM that enables ASR for new opt-out speakers dynamically during inference, even those who were not seen during initial ECG training phase. Our experiments on both AMI (English) and AliMeeting (Mandarin) datasets show that speech transcription accuracy for corresponding opt-out words or characters falls from 72.3% to 48.2% and from 73.6% to 27.3%, respectively, while retained speakers' transcription error rates maintain more or less the same. Our approach provides a practical solution for modern video conferencing platforms, allowing speakers to dynamically opt-out from automated AI transcriptions without forcefully leaving the meeting sessions, enabling a privacy-preserving interface for potentially millions of online meetings daily.",
+  "abstractSha256": "b7a12d6fd84ec7dc89b881f32b227f3107ba22b3522d03285a5822b5744e060b",
+  "arxivId": "2609.30439",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30439v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "application",
+          "id": "application.meeting",
+          "label": "会议转录"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bo Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yueru Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thai Le"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文提出目标说话人遗忘转写任务与可插拔的注册条件门控模块，只训练轻量门控而冻结双流语音大模型，在 AMI 与 AliMeeting 上把退出者内容泄露率从 72.3% 降到 48.2% 和从 73.6% 降到 27.3%，保留者误差基本持平但混合重叠段仍有可测代价。",
+  "originalTitle": "Inference-Time Target Speaker Unlearning in LLM-Based Automatic Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30439v1.pdf",
+  "readerTitle": "要忘掉一个人，却还要记得他何时开口：推理时按注册语音关掉内容流",
+  "schemaVersion": 1
+}

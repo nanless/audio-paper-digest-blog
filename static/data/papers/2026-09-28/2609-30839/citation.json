@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30839v1",
+  "arxivId": "2609.30839",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30839v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Filip Tăşădan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ema Tomanová"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondrej Lopuch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paweł Bilko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anders Søgaard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30839v1",
+  "originalTitle": "Attention-Based Adaptive Policies for Simultaneous Speech-to-Text Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30839v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

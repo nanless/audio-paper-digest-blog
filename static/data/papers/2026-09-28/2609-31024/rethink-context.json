@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31024v1",
+  "abstract": "Sound matching can be formulated as optimizing synthesizer parameters against an audio-domain objective. However, objectives derived from generic audio representations are often difficult to optimize, while direct search requires rendering every candidate. We introduce Synth-JEPA, which learns mutually predictive audio and parameter representations from paired synthesizer data. At inference, candidate parameters are scored directly in this learned space, yielding a renderer-free objective whose audio geometry is shaped by parameter correspondences rather than generic audio similarity. We evaluate Synth-JEPA on Surge XT using held-out synthesizer sounds and out-of-domain NSynth and FSD50K targets, against inverse models, direct search, and learned proxy objectives. Synth-JEPA outperforms all baselines in-domain and remains competitive out-of-domain. Its matching quality continues to improve with additional test-time search, allowing compute to be traded for match quality. In pairwise listening tests, listeners preferred Synth-JEPA in 85% of trials overall. Together, these results show that an audio representation with a parameter-induced geometry allows synthesizer sound matching to be approached as an effective renderer-free search problem.",
+  "abstractSha256": "1f898921a803b3447e8f29443a03fa9b194b6d353920b9a4e13dfc2f0032a304",
+  "arxivId": "2609.31024",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31024v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ben Hayes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haokun Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefan Lattner"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对合成器声音匹配中通用音频表示难优化、直接搜索需反复渲染的问题，Synth-JEPA 学习音频与参数互相预测的联合嵌入并以此为免渲染目标做两阶段搜索，域内匹配最优且听感偏好达 85.1%，代价是 53M 模型与随预算增长的测试时计算。",
+  "originalTitle": "Synth-JEPA: Joint Embedding Prediction for Renderer-Free Synthesizer Parameter Search",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31024v1.pdf",
+  "readerTitle": "不用渲染候选声音，如何在参数诱导的音频几何中搜索合成器参数",
+  "schemaVersion": 1
+}

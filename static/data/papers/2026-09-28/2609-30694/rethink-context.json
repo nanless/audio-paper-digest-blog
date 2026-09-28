@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30694v1",
+  "abstract": "Recognition of domain-specific and low-frequency terms remains challenging for automatic speech recognition (ASR). Although contextual biasing can improve their recognition, directly providing a large terminology dictionary introduces many irrelevant biasing terms. Retrieval-based contextual biasing addresses this issue by selecting candidate terms from an external dictionary, but querying many recognized words requires numerous dictionary lookups and may yield poorly targeted candidates. We propose a training-free contextual ASR framework in which a pretrained speech large language model (SpeechLLM) jointly generates an ASR hypothesis and localizes error spans likely to involve domain-specific terms. Only the localized spans are used to retrieve phonologically similar terms from an external terminology dictionary. The same SpeechLLM then re-recognizes the audio conditioned on the first-pass hypothesis and the retrieved terms, without task-specific model training. To assess applicability across domains, we evaluate the framework on medical, air traffic control, and financial speech. The proposed method substantially reduces dictionary queries while improving the recall and ranking of relevant terminology candidates and second-pass ASR performance across all three domains.",
+  "abstractSha256": "acdfbad2d3c38086873ee1a48c319954a1781993483e24150f2628cc84e9f86b",
+  "arxivId": "2609.30694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30694v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Natsuo Yamashita"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ai Nemoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryosuke Koichi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Masaaki Yamamoto"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对大词典直接偏置会引入无关词的问题，该文用同一预训练语音大模型一次生成初识结果并标出疑似领域词错误片段，只用这些片段做音似检索再做第二遍重识别，在医疗、空管、金融三域上把每句查询从十余次降到约 1 次并降低了领域词错误率，但低频词增益在领域词占比低时变小且仍依赖提示与检索排序质量。",
+  "originalTitle": "Training-Free Contextual ASR via SpeechLLM-Based Error-Aware Selective Retrieval",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30694v1.pdf",
+  "readerTitle": "只查可疑词片段：用同一语音大模型先定位领域词错误再做上下文重识别",
+  "schemaVersion": 1
+}

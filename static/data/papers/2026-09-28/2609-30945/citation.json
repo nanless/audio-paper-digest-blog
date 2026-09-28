@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30945v1",
+  "arxivId": "2609.30945",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30945v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Boxiang Wang"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Zhengding Luo"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Ziyi Yang"
+    },
+    {
+      "affiliations": [
+        "Center of Intelligent Acoustics and Immersive Communications, School of Artificial Intelligence, Northwestern Polytechnical University, Xi’an, 710072, China"
+      ],
+      "name": "Dongyuan Shi"
+    },
+    {
+      "affiliations": [
+        "College of Energy Engineering, Zhejiang University, Hangzhou, 310027, China"
+      ],
+      "name": "Xuexian Liu"
+    },
+    {
+      "affiliations": [
+        "Smart Nation TRANS Lab, School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, 639798, Singapore"
+      ],
+      "name": "Woon-Seng Gan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30945v1",
+  "originalTitle": "Coupled Meta-Adaptive Filtering for Active Noise Control Under Time-Varying Acoustic Paths",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30945v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

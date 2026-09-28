@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30774v1",
+  "arxivId": "2609.30774",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30774v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuhan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenxuan Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30774v1",
+  "originalTitle": "Dialogue-Based Streaming Audio-Visual Target Speaker Extraction with Predictive Dialogue Information",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30774v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

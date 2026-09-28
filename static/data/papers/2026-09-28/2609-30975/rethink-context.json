@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30975v1",
+  "abstract": "Speech content representations are central to voice conversion, speech-to-speech translation, and multimodal language models, yet they are rarely compared under a common generative framework that directly measures what each representation contains. We address this by training a generative model conditioned solely on each representation and evaluating the generated audio along the content, speaker identity, and prosody axes. Across SSL features, supervised tokens, posteriorgrams, and neural audio codecs, we find two distinct regimes: representations that nearly reconstruct the original audio, and representations that effectively disentangle speaker identity. These results show that disentanglement depends not on supervision alone, but on the interaction between the training objective and the representation's information capacity: supervised representations only disentangle speaker identity when their capacity is sufficiently constrained.",
+  "abstractSha256": "9801c98ad4f48f994dfd7479b998d7631856f4f4b4f53f2c7153788018b784f7",
+  "arxivId": "2609.30975",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30975v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音合成",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Torres"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Axel Roebel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicolas Obin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用同一无说话人条件的生成器把每种内容表示重新合成为语音，再测内容、说话人和韵律保留了多少，发现有监督表示只有在容量被显式约束时才解耦说话人，而码本大小只在同一机制内微调。",
+  "originalTitle": "A Comprehensive Study of Content Representations for Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30975v1.pdf",
+  "readerTitle": "内容表示的容量与目标如何决定说话人解耦：同一合成器下的统一测量",
+  "schemaVersion": 1
+}

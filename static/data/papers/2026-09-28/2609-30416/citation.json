@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30416v1",
+  "arxivId": "2609.30416",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.30416v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Amir Hussein"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Enas Albasiri"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Travis M. Bartley"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Nourchene Ferchichi"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Ke Hu"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Harishchandra Dubey"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Myungjong Kim"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Zhehuai Chen"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Oluwatobi Olabiyi"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, NVIDIA"
+      ],
+      "name": "Sanjeev Khudanpur"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30416v1",
+  "originalTitle": "All In Good Time: Causality-Aware Framework for LLM-Based Simultaneous Speech-to-Speech Translation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30416v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31193v1",
+  "arxivId": "2609.31193",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31193v1",
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Jihoo Jung"
+    },
+    {
+      "affiliations": [
+        "VGG, University of Oxford"
+      ],
+      "name": "Youngjoon Jang"
+    },
+    {
+      "affiliations": [
+        "KAIST"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31193v1",
+  "originalTitle": "Who Says What: Symbolic Trimodal Binding Mechanisms in Audio-Visual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31193v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
