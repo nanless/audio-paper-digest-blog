@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31399",
+  "arxivId": "2609.31399",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "\\authorrefmark1Independent Researcher, USA"
+      ],
+      "name": "Philip H. Lee"
+    },
+    {
+      "affiliations": [
+        "\\authorrefmark2Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "\\authorrefmark3Center for Robust Speech Systems (CRSS), University of Texas at Dallas, Richardson, TX, USA"
+      ],
+      "name": "John H.L. Hansen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31399",
+  "originalTitle": "Differential Attention Unlocks Complementary EEG and Speech Fusion for Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31399.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

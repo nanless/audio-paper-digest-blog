@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31402",
+  "abstract": "Auditory Attention Detection (AAD) utilizes electroencephalographic (EEG) signals to identify a target speaker in a multi-speaker environment. Despite considerable progress, existing deep learning architectures often lack explicit mechanisms for handling noisy EEG data. To address this limitation, we propose Auditory Focus Attention Networks (AFA-Net), a machine learning framework that replaces vanilla attention with a simple yet flexible differential attention mechanism to help focus on task-relevant neural activity. AFA-Net achieves an upward accuracy of 96.8% at the 2s decision window, while using substantially fewer parameters than most existing methods. To the best of our knowledge, AFA-Net is among the first frameworks to explicitly try to combat EEG noise to improve AAD.",
+  "abstractSha256": "ff28c603d85e17d46cd9e923f42c7eb5fd52f75cacf13baf9bc4e1da93244b36",
+  "arxivId": "2609.31402",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip H. Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Karan Thakkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John H.L. Hansen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对脑电噪声下普通自注意力只能稀释无关特征的问题，AFA-Net 用时空卷积提局部特征再用差分注意力做全局减噪，在 KUL 2s 窗上报告 96.8% 准确率且仅用 0.03M 参数，代价是 DTU 上整体更低且部分窗口相对最强基线无显著优势。",
+  "originalTitle": "AFA-Net: A Differential Attention Approach for Auditory Attention Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31402.pdf",
+  "readerTitle": "在脑电噪声中做减法：AFA-Net 如何用差分注意力找准注意说话人",
+  "schemaVersion": 1
+}

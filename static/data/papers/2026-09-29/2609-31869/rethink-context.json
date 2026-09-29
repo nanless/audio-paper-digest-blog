@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31869v1",
+  "abstract": "Open-vocabulary keyword spotting (KWS) must detect arbitrary keywords without retraining. Cross-attention-based models achieve state-of-the-art performance but require pairwise interaction between the audio and each keyword, recomputing the fused representation for every audio--keyword pair. Embedding-based models avoid this computational cost through independent encoding and similarity scoring, yet remain inferior on challenging benchmarks such as LibriPhrase-hard. We show that this gap is primarily a training issue rather than a limitation of model capacity. While contrastive learning encourages correct keywords to rank above negatives, it does not explicitly calibrate absolute similarity scores, which are critical for applying a fixed threshold across keyword detection. We propose Calibrated, Order-aware Detection KWS (CORD-KWS), a training framework that introduces two complementary objectives while retaining the same encoders, cosine scoring, and O(1) keyword enrollment: a calibrated detection head that supervises absolute scores, and a frame-level CTC objective that preserves phonetic order information. CORD-KWS achieves EERs of 0.43% and 9.64% on LibriPhrase-easy and LibriPhrase-hard, respectively, outperforming existing embedding- and cross-attention-based models.",
+  "abstractSha256": "228308d1401463eb8d155c363ae7ac36e65d3eef47b6a7a43fc7afc01ef87dfe",
+  "arxivId": "2609.31869",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31869v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ramesh Gundluru"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adarsh Arigala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Rama Murty Kodukula"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对开放词表关键词检测中对比学习只管排序不管绝对阈值的问题，CORD-KWS 在保持双编码器余弦打分与 O(1) 注册的同时加入单调校准头、CTC 顺序辅助与语音学难负例，在 LibriPhrase 上报告 easy 0.43% 与 hard 9.64% 的 EER，代价是 hard 导向的 BCE 使 easy 出现小幅回升。",
+  "originalTitle": "CORD-KWS: Calibrated, Order-Aware Detection for Open-Vocabulary Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31869v1.pdf",
+  "readerTitle": "排序对了还不够：用校准与顺序监督补上嵌入式关键词检测的阈值缺口",
+  "schemaVersion": 1
+}

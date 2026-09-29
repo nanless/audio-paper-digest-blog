@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32777v1",
+  "arxivId": "2609.32777",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32777v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ambuj Mehrish"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abhinaba Roy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alex Ivanov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tawsif Ahmed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32777v1",
+  "originalTitle": "DEFINE: Exemplar-Guided Accent Control for Zero-Shot TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32777v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

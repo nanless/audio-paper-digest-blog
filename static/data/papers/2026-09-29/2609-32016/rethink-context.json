@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32016v1",
+  "abstract": "Expressive speech synthesis has outpaced expressive speech perception: systems now render fine-grained vocal performances that no public benchmark can score. Most benchmarks for this inverse problem stop at six to nine basic emotion categories, largely on acted speech. This paper introduces VoiceNet, a human-annotated representation-level benchmark for voice performance understanding on permissively-licensed in-the-wild speech. VoiceNet has two subsets: VoiceNet-Emo applies a 40-emotion taxonomy with three expert ratings per item, and VoiceNet-Ext, a preliminary subset, scores 57 talking-style attributes including speaking rate, vocal tension, breathiness, and register. The paper also releases Emolia, an emotion-annotated version of the Emilia corpus, with a curated rebalanced subset enriched by dense MOSS-Audio Thinking annotations. Two voice-text contrastive baselines train on this data: a 110M-parameter VoiceCLAP-Small for fast large-scale data filtering and a 7B VoiceCLAP-Large for state-of-the-art performance. Both outperform existing CLAP baselines, which sit near chance on VoiceNet-Emo. On VoiceNet-Emo, VoiceCLAP-Large aligns more closely with the aggregate expert consensus than individual experts agree with one another: a comparison against the majority label rather than evidence of surpassing human emotion perception. All systems evaluated here are voice-text embedding models: VoiceNet scores representation-level attribute recognition and retrieval, not end-to-end spoken-dialogue behaviour. Clustering and filtering uncurated speech corpora into subsets that span diverse talking styles and emotions remains an open challenge; VoiceCLAP embeddings offer a promising tool for this task. VoiceNet, Emolia, and VoiceCLAP are publicly available for research use.",
+  "abstractSha256": "17d02b98e1fc9db3a56c39fdf895f07558c6373e56bade665a491947559640d7",
+  "arxivId": "2609.32016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32016v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前25%",
+    "score": 8.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christoph Schuhmann"
+    },
+    {
+      "affiliations": [
+        "LAION e.V. Scalable Learning & Multi-Purpose AI (SLAMPAI) Lab, Forschungszentrum Jülich GmbH"
+      ],
+      "name": "Robert Kaczmarczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gollam Rabby"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felix Friedrich"
+    },
+    {
+      "affiliations": [
+        "L3S Research Center Black Forest Labs Computer Science Department, TU Darmstadt"
+      ],
+      "name": "Maurice Kraus"
+    },
+    {
+      "affiliations": [
+        "LAION e.V. Scalable Learning & Multi-Purpose AI (SLAMPAI) Lab, Forschungszentrum Jülich GmbH"
+      ],
+      "name": "Gijs Wijngaard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kourosh Nadi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huu Nguyen"
+    },
+    {
+      "affiliations": [
+        "L3S Research Center Black Forest Labs Computer Science Department, TU Darmstadt",
+        "Ontocord.AI German Research Center for Artificial Intelligence (DFKI)"
+      ],
+      "name": "Kristian Kersting"
+    },
+    {
+      "affiliations": [
+        "Hessian Center for AI (hessian.AI) Leibniz Universität Hannover"
+      ],
+      "name": "Sören Auer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对合成语音能演而公开评测只能判六到九类基本情绪的问题，该工作用 40 情绪专家标注与 57 维说话风格探针构建野外基准并配以 Emolia 大规模训练数据，VoiceCLAP-Large 在 VoiceNet-Emo 上达到 0.702 的按提示校准平衡准确率，代价是阈值需事后校准且 Ext 子集一致性仍在机遇水平。",
+  "originalTitle": "VoiceNet: Fine-Grained Voice Understanding Beyond Emotion at Scale",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32016v1.pdf",
+  "readerTitle": "从六类情绪到四十类表演：VoiceNet 把野外语音的细粒度听感变成可检索的表示评测",
+  "schemaVersion": 1
+}

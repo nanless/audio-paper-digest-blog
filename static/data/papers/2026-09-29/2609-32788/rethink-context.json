@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32788v1",
+  "abstract": "Deep learning has transformed symbolic music generation by borrowing the training paradigms of large language models, with systems such as NotaGen now producing complete, stylistically convincing classical scores from a short prompt. These systems could become powerful creative partners, helping musicians generate endless possibilities. However, current systems expose almost no control handles on the music itself. In principle, control handles could be built into a foundation model trained from scratch, but this is rarely practical without massive amounts of quality annotated data and compute resources. We therefore present MotiGen, a recipe for retrofitting pretrained symbolic music models to use new instruction prompts. MotiGen injects a musical motif as a structured prompt line, reinforces it with a scalar attention bias toward the motif tokens, and learns the association with a two-phase curriculum. First, it learns from focused excerpts cropped around motif occurrences in the training data, then full scores including the motifs. Our experiments show that our model composes with the prompted motif in over 92.3\\% of generated pieces. Generated pieces using a variety of motifs are included in our sample site: https://motigen-site.github.io/.",
+  "abstractSha256": "a74d8cbbcdd32cb912d78d3d73ff062e7ef39d2e23eedd133be1e42d6d100278",
+  "arxivId": "2609.32788",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32788v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "课程学习",
+      "primaryMethodId": "method.curriculum",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Yale University",
+        "New Haven, CT"
+      ],
+      "name": "Chao Peter Yang"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Cynthia Rudin"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Simon Mak"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen",
+        "Shenzhen, Guangdong"
+      ],
+      "name": "Stephen Ni-Hahn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MotiGen 针对 NotaGen 等符号音乐大模型缺少动机级控制的问题，用移调不变的音程类别提示行加训练与推理一致的注意力偏置和先聚焦裁剪后全曲的两阶段课程来改造模型，在分层动机评估中显著高于无提示基线，代价是仅限单声部且依赖自动包含判定而非大规模人评。",
+  "originalTitle": "Getting Motif-ated: Controllable AI Compositions from Injected Motif Prompts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32788v1.pdf",
+  "readerTitle": "给预训练乐谱模型加装动机方向盘：MotiGen 的提示注入与两阶段课程",
+  "schemaVersion": 1
+}

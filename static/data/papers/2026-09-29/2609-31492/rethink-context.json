@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31492v1",
+  "abstract": "In daily life, people hear speech, footsteps, and music around them. We can often recognize these sounds and judge where they come from. Each sound source can be shown on a separate acoustic map, a rectangular image covering $360^{\\circ}$ horizontally and $180^{\\circ}$ vertically. The map shows the directions occupied by the source as a region and the sound energy within that region. A class label identifies the sound. Predicting these labeled acoustic maps from audio is called semantic acoustic imaging. Such maps could help robots perceive their surroundings and allow augmented reality displays to show sound regions and classes over the real world. Existing models can recognize sound classes and estimate a direction for each source. However, a direction alone does not describe the source region or its energy. Acoustic imaging must also distinguish sound sources in nearby directions, while the number of active sources and the regions they occupy can change over time. We therefore propose the Semantic Acoustic Imaging Detector (SAID), which predicts a separate labeled acoustic map for each active source from audio. First, we pretrain Audio2Sph, SAID's audio encoder, through sound energy estimation across directions without class labels. Then, we train the complete SAID model to predict source regions, energy, and classes together. We also develop a pipeline that generates simulated recordings for pretraining and supports fine-tuning on real recordings. On the official DCASE2026 Task 3 Track A evaluation set, our submitted system ranks first with 0.1080 macro-averaged mean average precision (Macro mAP) and 0.3962 Macro Pearson $r$. Demos and code are provided at https://github.com/IN03X/SAID.",
+  "abstractSha256": "92823485852023c379a87d9306014fa1150af1a076fc4de36e305d15169bdad7",
+  "arxivId": "2609.31492",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31492v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runbang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zining Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "SAID 把四通道音频先转成按方向排布的全景特征再为每个活动声源预测一张带类别的声学图，在 DCASE2026 任务 3 轨道 A 评估集上报告 0.1080 宏观平均精度与 0.3962 宏观皮尔逊相关，代价是需要仿真预训练加真实微调与稀疏压缩才能满足存储限制。",
+  "originalTitle": "SAID: Semantic Acoustic Imaging Detector for Sound Event Localization and Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31492v1.pdf",
+  "readerTitle": "从方向点到区域图：SAID 为何先学能量再学类别",
+  "schemaVersion": 1
+}

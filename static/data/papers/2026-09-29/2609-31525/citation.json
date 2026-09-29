@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31525v1",
+  "arxivId": "2609.31525",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31525v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junxi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiquan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Duan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhikang Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanru Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31525v1",
+  "originalTitle": "TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31525v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

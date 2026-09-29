@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31525v1",
+  "abstract": "Text-to-audio (TTA) generation has advanced rapidly in generation quality and instruction following. However, representative systems often require around a billion parameters, limiting deployment on resource-constrained devices. This paper introduces TinyAudio, a compact flow-matching-based TTA model for low-resource deployment. At its core, TinyAudio uses TA-DiT, a 35M single-stream flow-matching Transformer. TinyAudio also includes TA-CLAP, a 32M audio-aligned text encoder, and TA-VAE, whose 20M decoder reconstructs 44.1 kHz audio from compressed latents. TinyAudio has only 87M parameters in total, over 90% fewer than representative billion-parameter pipelines, and uses 0.48 GB peak GPU memory. TinyAudio achieves competitive generation quality on AudioCaps and TTA-Bench. We further introduce TinyAudio-MF, a MeanFlow-accelerated model that enables real-time generation with a four-core CPU quota. Our results demonstrate a practical quality-footprint trade-off for low-resource TTA deployment.",
+  "abstractSha256": "f0cc301bf31defb53d0865f381f56592ede9e83984407d166e14eaf3ee74aeed",
+  "arxivId": "2609.31525",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31525v1",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junxi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiquan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yifan Duan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhikang Niu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanru Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "TinyAudio 针对十亿参数文本到音频系统难部署的问题，用 35M 单流 TA-DiT 加 32M 音频对齐文本编码器与 20M 解码器做流匹配生成，在 AudioCaps 上以 2.65 的 FAD 和 0.48 GB 峰值显存实现可比质量，一步版 TinyAudio-MF 则以质量下降为代价换取四核 CPU 实时生成。",
+  "originalTitle": "TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31525v1.pdf",
+  "readerTitle": "87M 参数做文本到音频：单流与共享调制换来的低显存部署",
+  "schemaVersion": 1
+}

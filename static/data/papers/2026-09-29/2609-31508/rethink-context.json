@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31508v1",
+  "abstract": "This study evaluates a mathematical model of syllable production using an EMA dataset from a recently published study, which proved highly compatible with the model's architecture. The data set consists of regularly structured French phrases of equal duration and reduced phonetic and syllabic complexity. A dedicated procedure was used to transform EMA recordings into Maeda parameters. The Model-generated trajectories were then realigned with these transformed data using Canonical Time Warping (CTW). Statistical validation was conducted via a permutation test, comparing alignment quality against a surrogate condition with phonetically incongruent model outputs. The results show significantly better alignment for phonetically congruent pairings, revealing a strong structural correspondence between the model and the articulatory data. These findings provide experimental support for the representational validity of the model.",
+  "abstractSha256": "8f1096606aba0379e562128fd2f8237b4ae1e75008228adc3d392036f216fb92",
+  "arxivId": "2609.31508",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31508v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "强制对齐",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forced-alignment",
+          "label": "强制对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "强制对齐",
+      "primaryTaskId": "task.forced-alignment",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frédéric Berthommier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把电磁发音仪记录线性映射到 Maeda 参数空间，再用非对称典型时间规整把数学音节模型轨迹对齐到真实时间轴，用语音内容一致与不一致配对的置换对照证明语音一致时发音与共振峰相关显著更高，但唇高参数与生理延迟仍是代价与边界。",
+  "originalTitle": "Assessing a Mathematical Model of Syllable Production via CTW Alignment with EMA Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31508v1.pdf",
+  "readerTitle": "音节模型能否对上真实舌唇动作：用 CTW 在 Maeda 空间里检验语音规划",
+  "schemaVersion": 1
+}

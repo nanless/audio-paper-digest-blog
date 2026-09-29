@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31948v1",
+  "arxivId": "2609.31948",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31948v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengqian Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenhao Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weixuan Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaole Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyu Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuexiao Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhaolu Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiangyu Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiawu Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Chao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31948v1",
+  "originalTitle": "Duplex-MPE: Benchmarking Multi-Party Interaction in Full-Duplex Dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31948v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

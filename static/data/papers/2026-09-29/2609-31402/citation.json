@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31402",
+  "arxivId": "2609.31402",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip H. Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Karan Thakkar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "John H.L. Hansen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31402",
+  "originalTitle": "AFA-Net: A Differential Attention Approach for Auditory Attention Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31402.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

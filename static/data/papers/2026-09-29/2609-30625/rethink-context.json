@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30625",
+  "abstract": "Audio large language models allow users to interact with the model through speech. When an input recording is too degraded, the model may misinterpret the user&#39;s query and respond based on an incorrect transcription. In this paper, we study model-conditional transcription reliability: whether an Audio LLM can recognize when its own transcription is unreliable. We first prompt the Audio LLM to assess whether its own transcription would be reliable, and find that the model is a poor judge of its own transcription reliability: in most cases, it predicts that its transcription will be reliable. We find that existing approaches, including speech quality predictors, audio LLM generation uncertainty, and transcript-conditioned WER estimation, provide limited signals for detecting transcription failures. In contrast, we discover that transcription reliability is strongly represented in the model&#39;s audio-encoder representations. Based on this observation, we devise a lightweight reliability predictor that operates on representations extracted by the frozen audio encoder and predicts the reliability class before generation. The reliability predictor can trigger a clarification request from the user when their voice query is predicted to be unreliable, while allowing reliable queries to proceed without modifying the underlying Audio LLM. Our predictor achieves 81.10% in-domain and 78.09% cross-domain macro-F1 scores, outperforming the strongest baselines by 10.33 and 11.93 points, respectively. Finally, we show that reliability labels can transfer across Audio LLM families, and that transfer performance is closely related to the alignment of their model-specific reliability boundaries.",
+  "abstractSha256": "6f7b875f319f079618ad98a6531309db894473b897c3ea0c9973ff993ced6a30",
+  "arxivId": "2609.30625",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Apple",
+        "University of California San Diego"
+      ],
+      "name": "Amirhosein Javadi"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Richa Dixit"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mehrdad Farajtabar"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Minsik Cho"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Devang Naik"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mohammad Samragh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究音频大模型能否预判自身转写是否可靠，发现解码器自评严重高估而冻结音频编码器表示可支撑四分类预测，在域内宏 F1 达 81.10% 且跨域保持 78.09%，代价是需按模型实测构建标签库并做边界对齐。",
+  "originalTitle": "Audio LLMs Know When They Can't Hear You",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30625.pdf",
+  "readerTitle": "听不清却说听清了：音频大模型转写可靠性的编码器预判",
+  "schemaVersion": 1
+}

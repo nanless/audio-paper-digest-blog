@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32408v1",
+  "arxivId": "2609.32408",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32408v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sophie Gertrude Ngo Mock"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charles Moudina Varmantchaonala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Dayang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Michel Nlong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Gies"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32408v1",
+  "originalTitle": "Automatic Speech Recognition for the Basaà Language: A Low-Resource Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32408v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

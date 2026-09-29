@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30625",
+  "arxivId": "2609.30625",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Apple",
+        "University of California San Diego"
+      ],
+      "name": "Amirhosein Javadi"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Richa Dixit"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mehrdad Farajtabar"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Minsik Cho"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Devang Naik"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Mohammad Samragh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30625",
+  "originalTitle": "Audio LLMs Know When They Can't Hear You",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30625.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31898v1",
+  "abstract": "Humans rely on gaze, head movements, and visual cues to attend to speakers in noisy environments, yet auditory attention decoding (AAD) has been studied primarily using electroencephalography (EEG). We introduce the Multimodal Auditory-attention Egocentric Speech-TRacking Open (MAESTRO) corpus, the first AAD dataset to simultaneously record EEG, eye gaze, pupillometry, egocentric video, and head inertial measurement unit (IMU) data. MAESTRO includes four competing speakers and background noise across multiple signal-to-noise ratio (SNR) conditions, enabling attention decoding under realistic listening scenarios. Through a four-speaker attention decoding benchmark, we show that combining behavioral and physiological signals improves decoding performance over EEG-only approaches, enabling future advances in multimodal auditory attention decoding. These findings open the door to new applications, analyses, and methodological advances in multimodal AAD. The complete dataset is publicly available at https://huggingface.co/datasets/aspire-osu/maestro-eeg-dataset . The official code repository is available at https://github.com/ASPIRE-OSU/MAESTRO .",
+  "abstractSha256": "3b3506e5a3e47c3090c185013ebda8e77bca5385f812bba687f2b970391826cf",
+  "arxivId": "2609.31898",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31898v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "K M Naimul Hassan"
+    },
+    {
+      "affiliations": [
+        "the Department of Computer Science and Engineering, The Ohio State University, Columbus, OH 43210 USA"
+      ],
+      "name": "Ali Alavi"
+    },
+    {
+      "affiliations": [
+        "the Department of Computer Science and Engineering, The Ohio State University, Columbus, OH 43210 USA"
+      ],
+      "name": "Donald S. Williamson"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MAESTRO 用 16 人同步脑电、注视、瞳孔、第一视角视频、头动 IMU 和环境音频做四选一注意说话人分类，基线报告多模态在各窗口上相对单脑电提升约 5 至 13 个百分点，但包络削波伪影需经直方图均衡去除后结果才是保守下界。",
+  "originalTitle": "MAESTRO: a Multimodal Auditory-attention Egocentric Speech-TRacking Open corpus",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31898v1.pdf",
+  "readerTitle": "四人竞说加噪声下只看脑电不够：MAESTRO 把注视、头动和第一视角一起录下来",
+  "schemaVersion": 1
+}

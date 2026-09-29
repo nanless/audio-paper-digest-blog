@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32804v1",
+  "abstract": "Audio emotion recognition (AER) typically assigns a single label to an entire recording, leaving the temporal scope of that label ambiguous when multiple speakers and affective events are present. We address this limitation by reformulating AER as a Temporal Affective Grounding (TAG) task that associates emotions with temporally bounded speech spans and vocal tone descriptions. To support this formulation, we curate temporally annotated versions of existing emotion recognition datasets and construct recordings containing two to four affective speech spans, including overlapping speech. Training in this longer format with a standard language-modeling objective can degrade both emotion recognition and temporal grounding performance, while tone descriptions can provide shortcuts for emotion prediction. To address these challenges, we introduce Masked Temporal Affective Grounding (M-TAG), a supervised training objective that combines full-sequence language modeling with emotion and timestamp cross-entropy losses under attention masking. The masking varies the context visible to emotion-label tokens to reduce reliance on shortcuts and improve generalization, while the timestamp loss incorporates a distance-aware weight to penalize larger temporal errors. We evaluate EMO-TAG, a model fine-tuned using our dataset and objective, on emotion recognition and affective temporal-grounding against three AER and audio-language baselines: Flamingo-Next, Audio-Reasoner, and AffectGPT. Our results show that existing models achieve limited affective temporal-grounding despite competitive emotion recognition performance.",
+  "abstractSha256": "91f1a3ccf3e60f69591d015b7a5d60cb77597f40c8b22b418c8bd4c190fc365e",
+  "arxivId": "2609.32804",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32804v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Aalborg University",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "Technical University of Denmark",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Lars Kai Hansen"
+    },
+    {
+      "affiliations": [
+        "Aalborg University",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Zheng-Hua Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对整句单标签无法定位多人多事件录音中情绪归属的问题，论文把任务改写为带起止时间的语音段结构化预测，并用掩蔽情绪与距离加权时间戳辅助损失训练 EMO-TAG，在 MELD 和 IEMOCAP 多段定位与单句识别上超过所比基线，但代价是两次前向与精心清洗的多段构造流程。",
+  "originalTitle": "Finding Emotions Where They Belong: Rethinking Audio Emotion Recognition through Masked Temporal Affective Grounding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32804v1.pdf",
+  "readerTitle": "整句判情绪为何不够：把情绪放回语音时间轴上的定位与训练",
+  "schemaVersion": 1
+}

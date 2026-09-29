@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32285v1",
+  "arxivId": "2609.32285",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32285v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anisha Pattanayak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanie Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huang-Cheng Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sudarsana Reddy Kadiri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32285v1",
+  "originalTitle": "Audio Preprocessing Effects on Stuttering Detection: A Class-Specific Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32285v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

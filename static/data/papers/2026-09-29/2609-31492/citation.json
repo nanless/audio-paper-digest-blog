@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31492v1",
+  "arxivId": "2609.31492",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31492v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runbang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zining Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31492v1",
+  "originalTitle": "SAID: Semantic Acoustic Imaging Detector for Sound Event Localization and Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31492v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

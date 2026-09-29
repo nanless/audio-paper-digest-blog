@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32050v1",
+  "abstract": "Recent advances in speech synthesis and voice cloning have increased the need for reliable synthetic-speech detection, yet high-accuracy detectors increasingly rely on large pretrained models that are costly to invoke on every recording. Rather than replacing such detectors, we investigate a compact front-end screen that processes all inputs cheaply and forwards only suspicious recordings for more expensive analysis. To enable lightweight screening without a large learned encoder, we exploit spectral traces introduced by speech-generation operations. We analyze how learned upsampling and inverse short-time Fourier transform synthesis can produce predictable spectral artifacts and measure their presence directly in generated waveforms. Because the strength of these artifacts varies across generators, we combine decoder-guided spectral measurements with complementary descriptors of short-time spectral shape and temporal variation in a compact gradient-boosted tree. Across seven speech generators and two human-speech sources, the proposed screen achieves an equal error rate of 0.021\\% with an estimated model storage of 151 KiB. When used as the first stage of a simulated cascade with a 1.15-billion-parameter detector, it reduces estimated detection energy by 84.4\\% while operating at a 0.050\\% synthetic-speech miss rate, demonstrating the potential of decoder-guided acoustic evidence for low-cost front-end screening.",
+  "abstractSha256": "b7f1df03465c1e1dd267e3cfb14d8fe3cdcd0ecff11896629bb74d69959d8dcd",
+  "arxivId": "2609.32050",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32050v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi Chen Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对大参数检测器逐条调用成本过高的问题，该文用转置卷积与逆短时傅里叶变换推导的可预测谱峰加线性频率倒谱时变特征训练 151 KiB 梯度提升树，在同源测试报告等错误率 0.021%，并在 0.050% 漏检约束下估计节能 84.4%，但留一生成器误差分布不均显示跨生成器迁移仍是主要限制。",
+  "originalTitle": "Tracing Decoder Artifacts for Compact Synthetic Speech Screening",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32050v1.pdf",
+  "readerTitle": "先算峰在哪里再验证：解码器痕迹支撑的廉价合成语音初筛",
+  "schemaVersion": 1
+}

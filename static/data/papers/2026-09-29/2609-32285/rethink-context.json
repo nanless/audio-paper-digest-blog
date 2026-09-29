@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32285v1",
+  "abstract": "Audio preprocessing can affect how well a system detects stuttering. We study a simulated chain of denoising,loudness normalisation, Opus coding, and voice activity detection on SEP-28k. We use frozen WavLM Base+ features and report pointwise confidence intervals from episode-level bootstrap resampling. At a fixed threshold of 0.5, the chain reduces block F1 from 0.638 to 0.465, with smaller decreases for the other four classes. ROC-AUC decreases for all five classes. Blocks show the largest F1 and ROC-AUC losses, while sound repetitions show the largest average precision loss. Tuning the threshold on processed validation audio raises block F1 to 0.630. Retraining on processed audio with threshold tuning gives 0.628. Threshold adjustment therefore accounts for most of the observed block F1 recovery. It does not change ROC-AUC, which retraining raises only from 0.620 to 0.633, compared with 0.724 on clean audio.",
+  "abstractSha256": "8af2294a9622c4e8efdce307528d8f9488571d0bf32ab89720778b1cf976198e",
+  "arxivId": "2609.32285",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32285v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anisha Pattanayak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanie Kang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huang-Cheng Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sudarsana Reddy Kadiri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在 SEP-28k 上用冻结 WavLM 加逻辑回归研究去噪响度归一 Opus 与 VAD 链，发现固定阈值下阻塞 F1 损失最大而阈值重调可恢复大部分 F1，但 ROC-AUC 损失留存且匹配重训仅小幅回升。",
+  "originalTitle": "Audio Preprocessing Effects on Stuttering Detection: A Class-Specific Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32285v1.pdf",
+  "readerTitle": "预处理链为何先击中无声阻塞：阈值能救回 F1 却救不回排序",
+  "schemaVersion": 1
+}

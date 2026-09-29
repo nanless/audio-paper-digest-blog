@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31708v1",
+  "arxivId": "2609.31708",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31708v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanlin Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Ru"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mupei Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongji Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenan Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31708v1",
+  "originalTitle": "RadarVox: Radar-Audio Multimodal Cocktail-Party Speech Separation with Speaker-Aware Cross-Modal Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31708v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

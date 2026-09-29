@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32843v1",
+  "abstract": "Environmental noise obscures the content cues needed for whisper-to-normal conversion. We propose WhisperVC-AV, which restores acoustic content features while leaving the original WhisperVC conversion module unchanged. Its context-guided restoration module combines temporal acoustic context with synchronized lip features through attention and gated residual correction. Experiments on AISHELL6-Whisper show lower character error rates (CERs) than WhisperVC across three ASR systems, on clean speech and under all six signal-to-noise ratio (SNR) conditions with MUSAN noise. The largest gains occur at 0 dB SNR, where Qwen3-ASR CER falls from 36.29% to 28.88%. WhisperVC-AV also improves predicted speech quality while maintaining speaker similarity. The CER gains extend to unseen background noise without retraining, while visual controls support the use of utterance-specific lip cues. Audio examples are available on our demo page.",
+  "abstractSha256": "4c313944d461616b0b41320180145876ca2e6069aaa23bac943701904ead4e2f",
+  "arxivId": "2609.32843",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32843v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyue Yin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对带噪耳语转正常语音内容丢失问题，论文在冻结 WhisperVC 转换主干的前提下增加音视内容修复模块，在 MUSAN 六档信噪比和三套识别系统下均降低字错率，0 分贝下 Qwen3 识别字错率从 36.29% 降到 28.88%，代价是推理需要同步唇部视频和同说话人正常语音注册。",
+  "originalTitle": "WhisperVC-AV: Audio-Visual Content Restoration for Noise-Robust Whisper-to-Normal Voice Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32843v1.pdf",
+  "readerTitle": "噪声下耳语转正常语音：不动转换器，只修复输入的内容特征",
+  "schemaVersion": 1
+}

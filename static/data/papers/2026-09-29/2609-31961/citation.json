@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31961v1",
+  "arxivId": "2609.31961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31961v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pol Buitrago"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pol Gàlvez"
+    },
+    {
+      "affiliations": [
+        "organization=Universitat Politècnica de Catalunya (UPC), addressline=Carrer de Jordi Girona, 1–3, city=Barcelona, postcode=08034, country=Spain",
+        "organization=Barcelona Supercomputing Center (BSC), addressline=Carrer de Jordi Girona, 29, city=Barcelona, postcode=08034, country=Spain"
+      ],
+      "name": "Javier Hernando"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31961v1",
+  "originalTitle": "Improving Audiovisual Speech Recognition through Synthetic Visual Data Augmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31961v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

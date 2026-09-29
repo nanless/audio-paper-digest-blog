@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30470",
+  "abstract": "Multimodal Sentiment Analysis (MSA) aims to infer human emotions from multiple modalities such as text, audio, and vision. In practice, inputs are often corrupted by noise and missing modalities, which degrades performance. Existing methods typically address these challenges in isolation, limiting their effectiveness in realistic settings. To address this limitation, we propose a Reliability-aware Cross-sample Enhancement (RCE) framework. Specifically, RCE first introduces an adaptive variational information bottleneck to model modality-wise uncertainty and perform quality-aware information compression, thereby suppressing redundant noise in unreliable modalities. Furthermore, we design a reliability-aware cross-sample enhancement strategy that retrieves high-confidence, semantically consistent neighbors from a large candidate pool to enrich and calibrate current representations, effectively alleviating information deficiency caused by missing modalities. Building upon this, RCE integrates cross-modal interactions with a multilevel reliability-aware fusion mechanism to adaptively aggregate information across modalities and enhancement stages, leading to more robust multimodal representations. Extensive experiments demonstrate that RCE consistently outperforms state-of-the-art methods across full, noisy, and missing-modality settings.",
+  "abstractSha256": "4bbcb06de522c40f3baa12044a2333959ae1cb2a5494a91c4461ca01281a1803",
+  "arxivId": "2609.30470",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Sun Yat-sen University"
+      ],
+      "name": "Menghua Jiang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, South China Normal University"
+      ],
+      "name": "Haokai Gao"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Sun Yat-sen University"
+      ],
+      "name": "Xiangui Kang"
+    },
+    {
+      "affiliations": [
+        "School of Electronics and Information Technology, Sun Yat-sen University"
+      ],
+      "name": "Haifeng Hu"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, South China Normal University"
+      ],
+      "name": "Sijie Mai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对文本、音频、视觉共存缺失与噪声的多模态情感分析，RCE 用 vMF 不确定性做质量感知压缩与跨样本增强加多级融合，在 CMU-MOSI/MOSEI 完整与缺失噪声设置下取得最优或接近最优，代价是记忆库与超模态带来更多参数与调参量。",
+  "originalTitle": "Reliability-aware Cross-sample Enhancement for Robust Multimodal Sentiment Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30470.pdf",
+  "readerTitle": "缺失与噪声并存时，用可靠性给每个模态定压缩与补全的额度",
+  "schemaVersion": 1
+}

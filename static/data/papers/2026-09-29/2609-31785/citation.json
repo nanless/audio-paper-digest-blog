@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31785v1",
+  "arxivId": "2609.31785",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31785v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yonghyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaeyeon Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sancho Gatungay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Subhrajit Guhathakurta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Lerch"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31785v1",
+  "originalTitle": "Cross-Modal Knowledge Distillation for Acoustic Pedestrian Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31785v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

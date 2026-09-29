@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32560v1",
+  "arxivId": "2609.32560",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32560v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Scicom (MSC) Berhad, Malaysia"
+      ],
+      "name": "Husein Zolkepli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32560v1",
+  "originalTitle": "How to Reduce Whisper Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32560v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

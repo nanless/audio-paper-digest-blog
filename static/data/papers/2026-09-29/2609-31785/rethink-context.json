@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31785v1",
+  "abstract": "Audio-only pedestrian detection is attractive for urban sensing but limited by weak acoustic cues. An appealing strategy is cross-modal knowledge distillation, in which a video teacher supervises the audio student during training so that the deployed model runs on audio alone. Under this task's severe class imbalance and wide video-audio modality gap, however, what such distillation contributes is unclear. We introduce Trust-Filtered Distillation (TFD), which selectively suppresses teacher supervision on pedestrian samples, and interpret its logit formulation as conditional label smoothing under a shared temperature. Across ten distillation configurations under five-fold cross-session validation on ASPED, most methods yield modest gains in macro accuracy accompanied by small changes in PR-AUC. The main effect is higher no-pedestrian accuracy at the cost of lower pedestrian recall. Adding TFD to logit distillation strengthens this trade-off without improving mean PR-AUC. These findings clarify the benefits and limitations of selective cross-modal supervision by distinguishing operating-point shifts from discrimination gains in imbalanced acoustic detection.",
+  "abstractSha256": "a44e85bdd5daec8f4c326e2658ac2b576396ca2867c4b5624e28adb031e5d6e6",
+  "arxivId": "2609.31785",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31785v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yonghyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chaeyeon Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sancho Gatungay"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Subhrajit Guhathakurta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alexander Lerch"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究在 ASPED 上以视频教师蒸馏音频学生，比较十种蒸馏配置，发现宏准确率小幅上升主要来自无行人类准确率上升与行人召回下降的操作点移动，PR-AUC 几乎不变，而选择性屏蔽行人样本的信任过滤蒸馏强化了这一权衡而未提升平均排序能力。",
+  "originalTitle": "Cross-Modal Knowledge Distillation for Acoustic Pedestrian Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31785v1.pdf",
+  "readerTitle": "跨模态蒸馏没有教会听觉分辨行人，只是把判定点推向多数类",
+  "schemaVersion": 1
+}

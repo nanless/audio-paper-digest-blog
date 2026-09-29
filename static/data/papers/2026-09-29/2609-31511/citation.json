@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31511",
+  "arxivId": "2609.31511",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, Egypt"
+      ],
+      "name": "Yahya Mohamed Elnawasany"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31511",
+  "originalTitle": "Muslim: A Deployed Arabic Voice AI Platform for Grounded Islamic Knowledge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31511.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

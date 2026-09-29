@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32522v1",
+  "abstract": "Long-term memory enables agents to accumulate information and reason across sessions, yet existing research primarily focuses on dyadic text or image-text conversations, leaving long-term memory for multi-party spoken conversations underexplored. This setting requires preserving conversational content, identifying participants across sessions, and retaining who speaks to whom. To this end, we propose VoxPolyMem, an interaction-aware multimodal memory framework combining incremental speaker identification with a memory hierarchy comprising interaction memory, fact memory, and participant profiles. We formulate retrieval as sequential decision-making, where an agent rewrites queries and selects retrieval tools and memory layers based on accumulated evidence to address information gaps. We further introduce Evidence-Gain GRPO (EG-GRPO), which uses round-wise credit assignment to encourage complementary evidence acquisition. We also construct VoxPolyBench to evaluate memory evolution, personalized answering, memory retrieval and reasoning, and interaction reasoning and attribution in multi-party spoken conversations. VoxPolyMem achieves an overall score of 85.0 on VoxPolyBench, surpassing the strongest evaluated baseline by 23.6 points. On Mem-Gallery and H2HMem-Multi, it scores 89.6 and 74.4, respectively, exceeding the strongest evaluated public memory baselines by over 8 points each. These results highlight its potential for persistent, personalized assistance in multi-party multimodal interactions. Code and datasets are available at https://voxpolymem.github.io/VoxPolyBench/demo/",
+  "abstractSha256": "170233da8941894fd14efc6c6918394bb81b3204b80e0254855f161dad85a85d",
+  "arxivId": "2609.32522",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32522v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "MeituanEqual contribution (co-first authors).Corresponding author."
+      ],
+      "name": "Wenxu Jia"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Zihan Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Dongjie Fu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Linjun Li"
+    },
+    {
+      "affiliations": [
+        "MeituanEqual contribution (co-first authors).Corresponding author."
+      ],
+      "name": "Wenshi Chen"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yangyang Wu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多方多会话语音长记忆问题，论文用增量声纹识别加交互记忆、事实记忆与人物画像三层结构保存说话人与收话人关系，并用按轮奖励新增证据的检索智能体自适应取证，在 VoxPolyBench 上报告 85.0 分，代价是依赖合成语音与标注证据训练且真实声学泛化待验证。",
+  "originalTitle": "Beyond Dyadic Memory: Interaction-Aware Multimodal Memory with Adaptive Agentic Retrieval for Multi-Party Spoken Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32522v1.pdf",
+  "readerTitle": "多人语音里记住谁对谁说了什么：交互图记忆与按轮增益的检索智能体",
+  "schemaVersion": 1
+}

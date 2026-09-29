@@ -1,0 +1,49 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32788v1",
+  "arxivId": "2609.32788",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32788v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Yale University",
+        "New Haven, CT"
+      ],
+      "name": "Chao Peter Yang"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Cynthia Rudin"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Duke University",
+        "Durham, NC"
+      ],
+      "name": "Simon Mak"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen",
+        "Shenzhen, Guangdong"
+      ],
+      "name": "Stephen Ni-Hahn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32788v1",
+  "originalTitle": "Getting Motif-ated: Controllable AI Compositions from Injected Motif Prompts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32788v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

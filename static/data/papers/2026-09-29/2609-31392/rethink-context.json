@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31392",
+  "abstract": "Human judgement is the reference measure for evaluating generative models, yet the software used to collect it lags behing the methodology. Researchers adapt listening-test frameworks designed for perceptual protocols such as MUSHRA, rely on closed commercial survey platforms, or implement single-use web applications. Live arenas such as Chatbot Arena and Music Arena rank publicly deployed systems at scale, but do not support controlled comparisons of a laboratory&#39;s own models with its own participants. We present PANEL, an open-source, self-hosted platform for such studies. A study is authored in the browser and distributed as a single link, with audio, video, image, and text stimuli, seven question types, and screening and skip logic. The platform reports per-question summaries, across-condition significance tests, pairwise win rates and Bradley--Terry scores, and supports power analysis from pilot data. Consent versioning, self-service withdrawal, retention enforcement, and audit logging support GDPR-compliant operation. Each study exports as a machine-readable specification. PANEL is available at this https URL.",
+  "abstractSha256": "bf5db0e7071f535fad51fa95c753d8e230861cd990e36cbf51d9895913a9b89d",
+  "arxivId": "2609.31392",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "主观评测",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matteo Spanio"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Poltronieri"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mart\\'ın Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对实验室自有模型与自招被试的受控比较问题，PANEL 选择自托管问卷实验加内置统计路线，已报告的证据是支持七类题型、筛查分支与持续分析的完整设计，而代价是放弃实验室级刺激呈现精度并由研究者自行承担部署运维。",
+  "originalTitle": "PANEL: An Open-Source, Self-Hosted Web Platform for Human Evaluation of Generative Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31392.pdf",
+  "readerTitle": "自己服务器上做听感实验：PANEL 把问卷、筛查、统计和数据治理装进一个链接",
+  "schemaVersion": 1
+}

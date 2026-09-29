@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31673v1",
+  "abstract": "Agentic speech systems must exchange more than text, including speaker identity, timing, phonetic information, and behavioral annotations. Yet these signals are often produced in incompatible tool-specific formats, making agent-to-agent handoff fragile. We present OneVoice, a lightweight, JSON-native intermediate representation that provides a shared semantic structure for speech pipelines. OneVoice organizes heterogeneous speech evidence into validated session records with stable identifiers, layered transcripts, explicit timing relationships, and provenance information. We evaluate OneVoice in two complementary multi-agent workflows covering event aggregation and acoustic-phonetic temporal linking across three language models. Compared with implicit agent-defined handoffs, OneVoice substantially improves aggregation reliability and the preservation of temporal relationships, demonstrating the value of an explicit speech-specific representation for agent communication.",
+  "abstractSha256": "91ad4b65a4ea9957b489d5bcc078e584737f6c1e3ecff8b51a70342643625070",
+  "arxivId": "2609.31673",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31673v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频事件检测",
+      "primaryTaskId": "task.event-detection",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vipul Charugundla"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dancheng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinjun Xiong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多智能体语音流水线中转写、说话人、时间与标注在工具格式间易丢失的问题，OneVoice 用稳定标识、分层转写与显式来源的 JSON 会话记录加校验器组织交接，在 15 组儿童语音事件聚合与 40 组 TIMIT 时序链接上以三模型验证了计数与时序保持的改善，但校验修复收益与模型相关且未验证延迟成本。",
+  "originalTitle": "OneVoice: An Intermediate Representation for Agentic Speech Pipelines",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31673v1.pdf",
+  "readerTitle": "交接不丢结构：OneVoice 用显式会话记录守住说话人、转写与时间",
+  "schemaVersion": 1
+}

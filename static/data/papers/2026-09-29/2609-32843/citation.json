@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32843v1",
+  "arxivId": "2609.32843",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32843v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyue Yin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32843v1",
+  "originalTitle": "WhisperVC-AV: Audio-Visual Content Restoration for Noise-Robust Whisper-to-Normal Voice Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32843v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

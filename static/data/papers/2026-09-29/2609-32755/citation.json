@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32755v1",
+  "arxivId": "2609.32755",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32755v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Sapienza University of Rome, Italy"
+      ],
+      "name": "Francesco Brigante"
+    },
+    {
+      "affiliations": [
+        "Sapienza University of Rome, Italy",
+        "Paradigma"
+      ],
+      "name": "Luca Cerovaz"
+    },
+    {
+      "affiliations": [
+        "Sapienza University of Rome, Italy"
+      ],
+      "name": "Davide Marincione"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giorgio Strano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luca Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emanuele Rodolà"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michele Mancusi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32755v1",
+  "originalTitle": "SAGE: Semantic Audio Generative Encoder",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32755v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

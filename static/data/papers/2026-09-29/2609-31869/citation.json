@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31869v1",
+  "arxivId": "2609.31869",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31869v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ramesh Gundluru"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adarsh Arigala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sri Rama Murty Kodukula"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31869v1",
+  "originalTitle": "CORD-KWS: Calibrated, Order-Aware Detection for Open-Vocabulary Keyword Spotting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31869v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32180v1",
+  "arxivId": "2609.32180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32180v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saijun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guanfeng Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongbo Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhicheng Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Ye"
+    },
+    {
+      "affiliations": [
+        "organization=College of Electronic and Information Engineering, Tongji University, Shanghai 201804, China",
+        "organization=College of Electronic and Information Engineering, Shanghai Institute of Intelligent Science and Technology, State Key Laboratory of Autonomous Intelligent Unmanned Systems, Tongji University, Shanghai 201804, China"
+      ],
+      "name": "Rui Fan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32180v1",
+  "originalTitle": "Binaural Audio-Visual Instance Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32180v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

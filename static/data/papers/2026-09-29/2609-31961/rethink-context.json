@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31961v1",
+  "abstract": "Audiovisual Speech Recognition (AVSR) is a multimodal approach to speech recognition that incorporates visual information from lip movements to enhance model performance. Despite its advantages, its development remains constrained by the limited availability of labeled audiovisual (AV) datasets. This work explores the use of synthetic visual data as a solution, using an audio-driven talking-head pipeline to generate lip-synchronized visual content from existing audio data. We evaluate the effectiveness of synthetic visual data both as an augmentation strategy and as a standalone training resource, applying our approach to Spanish and Catalan. Our results show that augmenting real AV data with synthetic samples yields relative Word Error Rate (WER) reductions of up to 16.2%, demonstrating the potential of this approach. Moreover, we demonstrate that synthetic data alone can serve as a baseline for AVSR training in languages lacking AV datasets. These findings provide evidence that synthetic visual data can serve as a scalable solution to AVSR data scarcity, enabling broader language coverage.",
+  "abstractSha256": "65714b3f7c3ebac53deda6694209ec3e0bac27dd6d6f81bdedf5f9ed5650a56a",
+  "arxivId": "2609.31961",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31961v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-asr",
+          "label": "音视频语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "音视频语音识别",
+      "primaryTaskId": "task.av-asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pol Buitrago"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pol Gàlvez"
+    },
+    {
+      "affiliations": [
+        "organization=Universitat Politècnica de Catalunya (UPC), addressline=Carrer de Jordi Girona, 1–3, city=Barcelona, postcode=08034, country=Spain",
+        "organization=Barcelona Supercomputing Center (BSC), addressline=Carrer de Jordi Girona, 29, city=Barcelona, postcode=08034, country=Spain"
+      ],
+      "name": "Javier Hernando"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用真实语音加静态人脸经 Wav2Lip 生成唇同步视频来解决视听数据稀缺，在西班牙语上以混合真实加合成数据取得最高 16.2% 的相对词错误率下降，在加泰罗尼亚语上验证了零真实视听数据下合成训练仍能带来 15.2% 的多模态增益，但合成单用时仍弱于真实数据且噪声下增益收窄。",
+  "originalTitle": "Improving Audiovisual Speech Recognition through Synthetic Visual Data Augmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31961v1.pdf",
+  "readerTitle": "合成嘴型补不上真实视频：用音频驱动 talking head 给 AVSR 扩数据",
+  "schemaVersion": 1
+}

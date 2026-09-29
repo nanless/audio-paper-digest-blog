@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33443",
+  "arxivId": "2609.33443",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seonghyeon Go"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongwoo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonjin Cha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeho Shin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33443",
+  "originalTitle": "Context Spanning: A Communication Framework for Full-Duplex Speech Models and External LLM Backends",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33443.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

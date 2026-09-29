@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31588v1",
+  "abstract": "Many voice interaction applications require exact control over both the content and delivery of responses, typically using pre-recorded lines. Recent full-duplex models respond with low latency but cannot guarantee exact content or reproduce a specific recorded performance, while cascaded systems can be constrained to predefined responses at the cost of additional latency. We propose RePlay, a spoken dialogue system adapted from PersonaPlex that handles multi-turn conversations by retrieving and playing pre-recorded lines. Using probing, we identify the layer and frame at which the upcoming response becomes recoverable, and use this hidden state as the retrieval query. RePlay retains only the layers up to that point and replaces text and speech generation with lightweight turn-taking and retrieval heads. In simulated multi-turn interviews, RePlay reaches a median latency of 383 ms, 3 to 7 times lower than ASR-LLM cascades of comparable dialogue quality, at the cost of lower exact-line accuracy. In a user study, participants preferred RePlay in 63% of ratings versus 12% for a fast cascade with a small LLM (p = 0.008), and showed a non-significant preference (46% vs. 21%) over a slower cascade with a stronger LLM.",
+  "abstractSha256": "b4e693502b9f6f9a10c61c756dc21ca2e599190bf0c8ccac016c5dcc27be74ec",
+  "arxivId": "2609.31588",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31588v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sathvik Udupa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naveen Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan Folmsbee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对必须原样播放预录台词的多轮对话任务，RePlay 截断 PersonaPlex 并用轮次头加检索头在回合起点选句，仿真中以中位延迟 383 ms 达到接近大模型级联的对话质量，代价是精确行召回低于大模型级联。",
+  "originalTitle": "RePlay: Retrieval-Based Voice Playback for Multi-Turn spoken dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31588v1.pdf",
+  "readerTitle": "不等说完就知道回哪一句：RePlay 把全双工隐状态直接做成检索查询",
+  "schemaVersion": 1
+}

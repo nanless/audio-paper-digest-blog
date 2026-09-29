@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31892v1",
+  "arxivId": "2609.31892",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31892v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiaolin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pedro Sandoval-Segura"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anunaya Joshi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Edvardas Jurkonis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jake Downie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31892v1",
+  "originalTitle": "NVAlign: Direct-Gradient Optimization for Non-Verbal Control in Continuous Autoregressive Flow Matching Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31892v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

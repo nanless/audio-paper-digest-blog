@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31772v1",
+  "arxivId": "2609.31772",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31772v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaokun Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haowen Hua"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sen Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shichao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyao Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31772v1",
+  "originalTitle": "PRIME-ANC: Path-Ratio-Informed Modeling for Efficient Neural Filter Synthesis in Active Noise Control",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31772v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

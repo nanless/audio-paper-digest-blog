@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32560v1",
+  "abstract": "Whisper is still what runs in production: one permissively licensed checkpoint, 99 languages, no per-language tuning. But it writes sentences nobody said. On 42 clips of pure room tone, whisper-large-v3 emits words on 61.9% of them and emits something on 100%. The usual response is to distil a student from Whisper pseudo-labels, filtering the hallucinations out of the corpus first, which deletes the evidence while leaving the behaviour in place: the student is fitted to the subset where the teacher was right, and inherits a failure mode absent from its own training data. The second response, adding non-speech audio so the model learns to stay quiet, already ships and works, but teaches suppression without discrimination. The checkpoint best on every non-speech arm here is also the one that recovers the fewest genuinely spoken phrases and deletes 58% of repeated speech. The teacher has to be fixed, with both halves of the signal. Our benchmark scores both at once: 11,852 clips over eight arms, 6,267 synthetic positives, 8,296 clips of real audio that made a production model fail, and FLEURS in 58 languages. We collect 40,891 hallucination phrases in 100 languages, choose a text-to-speech system by measurement, and synthesise those phrases as positives, so the model meets the same text both as something to suppress and as something to transcribe. Across 33 matched pairs of fine-tunes differing only by those positives, adding them lowers word emission on real voice-free audio in 31 pairs and raises phrase recovery in 32; among the 30 pairs that hold English accuracy it is 30 out of 30. The best checkpoint takes hallucination on silence from 61.9% to 2.4% and words over real voice-free audio from 99.9% to 47.8%, while raising phrase recovery from 69.8% to 82.7%. The benchmark, lexicon and synthetic corpus are released at https://huggingface.co/datasets/Scicom-intl/Whisper-Hallucination",
+  "abstractSha256": "586e0bc0b128b6b5dbfd984ac2f863b7b88e48d29e2017fd507757b3f1f4747d",
+  "arxivId": "2609.32560",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32560v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Scicom (MSC) Berhad, Malaysia"
+      ],
+      "name": "Husein Zolkepli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对 Whisper 在无语音音频上编造句子的问题，用同一批幻觉短语的合成真人朗读做正例来配对抑制训练，在 33 组配对微调中把野外无语音词发射率中位数降低约 0.118 并把短语召回中位数提高约 0.186，最佳点把静音幻觉从 61.9% 降到 2.4%，代价是 FLEURS 多语言误差仍高于基线。",
+  "originalTitle": "How to Reduce Whisper Hallucination",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32560v1.pdf",
+  "readerTitle": "又安静又准确的角落是空的：给 Whisper 同时补上该闭嘴和该开口的证据",
+  "schemaVersion": 1
+}

@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31810v1",
+  "arxivId": "2609.31810",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31810v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felipe Marra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lucas N. Ferreira"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31810v1",
+  "originalTitle": "Video-to-Music Generation for Gameplay Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31810v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

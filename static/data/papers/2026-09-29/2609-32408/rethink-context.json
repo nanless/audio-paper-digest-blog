@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32408v1",
+  "abstract": "The rapid advancement of Artificial Intelligence (AI) and Natural Language Processing (NLP) has revolutionized the way humans interact with machines. Among the most impactful developments is Automatic Speech Recognition (ASR), which enables computers to convert spoken language into text. Systems such as those built on deep neural networks, transformer architectures, and self-supervised learning have achieved near-human performance for well-resourced languages such as English and French. Yet, these advances have disproportionately benefited a small fraction of the world's languages.",
+  "abstractSha256": "eeab24500847623beee7ff19201558c9a31a337eb3ffe8c8dfe8e61701b3afa5",
+  "arxivId": "2609.32408",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32408v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sophie Gertrude Ngo Mock"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Charles Moudina Varmantchaonala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Dayang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean Michel Nlong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher Gies"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对标注稀缺且带声调和形态变化的 Basaà语，研究用多语言自监督表示 XLS-R 做微调，在 1671 条测试上报告词错误率 14.13% 和字错误率 3.51%，代价是方言覆盖窄且声调细节仍易错。",
+  "originalTitle": "Automatic Speech Recognition for the Basaà Language: A Low-Resource Approach",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32408v1.pdf",
+  "readerTitle": "只有 14 小时标注也能做识别：Basaà语调迁移与字符级解码的第一条基线",
+  "schemaVersion": 1
+}

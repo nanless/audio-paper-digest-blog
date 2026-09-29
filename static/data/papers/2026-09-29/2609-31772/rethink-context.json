@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31772v1",
+  "abstract": "Changes in listener acoustics require active noise control (ANC) filters to be redesigned for new acoustic paths. We introduce PRIME-ANC, a shared neural synthesizer that learns a bounded, path-dependent logmagnitude correction to a regularized path-ratio base. Minimum-phase reconstruction and truncation produce finite-impulse-response (FIR) filters; training optimizes their noise-control performance. Across ten random training/test splits per dataset, PRIME-ANC achieves average held-out one-third-octave reductions of 18.81 and 17.76 dB over 50 Hz-5 kHz on a ten-path dataset and a public earphone database, respectively. On original earphone measurements, it improves upon the path-ratio base by 7.89 dB. Ablation studies support the contributions of both the analytic base and the path-dependent correction. Given calibrated paths for a held-out listener condition, PRIME-ANC generates a path-specific FIR without iterative optimization. With three Gauss-Newton updates, it reaches 21.43 dB reduction, approaching direct weighted least-squares design while producing lower amplification and root-mean-square control output.",
+  "abstractSha256": "9321c02f13fbd5bffa9d909ec6f1825e507c6f658d7886cce65c9afb72d88170",
+  "arxivId": "2609.31772",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31772v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "主动降噪",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "主动降噪",
+      "primaryTaskId": "task.active-noise-control",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yaokun Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haowen Hua"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sen Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shichao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyao Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对换人换佩戴后声学通道变化需重设计滤波器的问题，PRIME-ANC 用正则化通道比值做幅度基座加共享卷积网络学有界对数幅度修正并经最小相位重建截断为可执行抽头，在留出通道上报告 50 Hz–5 kHz 平均 18.81 and 17.76 dB 降噪，三次高斯牛顿更新后达 21.43 dB reduction，代价是仍需校准通道估计与额外细化时间。",
+  "originalTitle": "PRIME-ANC: Path-Ratio-Informed Modeling for Efficient Neural Filter Synthesis in Active Noise Control",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31772v1.pdf",
+  "readerTitle": "先算通道比值，再学有界修正：PRIME-ANC 一次前向合成听者专属滤波器",
+  "schemaVersion": 1
+}

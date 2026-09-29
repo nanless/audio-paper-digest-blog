@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31764v1",
+  "abstract": "Complementarity analyses of multimodal systems commonly report an oracle ceiling (the fraction of examples on which at least one unimodal branch is correct) and interpret the gap between it and realized fusion accuracy as recoverable headroom. We show that this ceiling is not a fusion target. Using frozen self-supervised audio and visual encoders with a trained head, we measure the ceiling and realized gain on CREMA-D under two audio encoders (one whose fine-tuning lineage includes CREMA-D, one clean) and on EAV under the contaminated encoder. Replacing the fine-tuned encoder with a self-supervised one triples the headroom, from +0.055to +0.186. A second clean encoder and a controlled degradation of the contaminated one fall on the same curve, so provenance moves the headroom by changing audio-branch accuracy. Concatenation realizes at most about half of the headroom (converted fraction 0.55), and on EAV the converted fraction is indistinguishable from zero despite larger headroom. A learned router is beaten by plain concatenation everywhere. Oracle headroom measures branch disagreement, not a fusion budget.",
+  "abstractSha256": "86c0105e81c873e4fc408bd2238615b5c27d221063659b57da1543f5408977ee",
+  "arxivId": "2609.31764",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31764v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Benjamin Hurt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在冻结语音与人脸编码器加小头架构下检验音频视觉情感识别，证明预言者选对分支即算对的上限只是分支精度与分歧的函数，拼接融合至多转化约一半头部空间而学习路由处处不如拼接，污染编码器则通过抬高音频分支掩盖头部空间。",
+  "originalTitle": "Oracle Complementarity Is Not Realizable Complementarity in Frozen-Encoder Audio-Visual Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31764v1.pdf",
+  "readerTitle": "预言上限不是可实现的互补：冻结编码器下分支分歧为何换不成融合精度",
+  "schemaVersion": 1
+}

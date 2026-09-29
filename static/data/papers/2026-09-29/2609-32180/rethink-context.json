@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32180v1",
+  "abstract": "Audio-visual segmentation (AVS) aims to segment sounding objects at the pixel level by integrating auditory and visual cues. However, existing methods are predominantly developed under the monaural setting and primarily rely on cross-modal semantic correspondence, which limits their ability to distinguish visually similar instances of the same semantic class. In contrast, humans naturally exploit binaural hearing, where interaural differences and direction-dependent acoustic filtering introduced by the head and pinnae provide physically grounded spatial cues for accurate sound source localization. Motivated by this observation, we introduce binaural audio-visual instance segmentation (BiAVIS), a new task that leverages synchronized binaural audio and video frames to segment sounding instances. To advance research on this task, we establish two benchmarks by manually annotating an existing binaural audio-visual dataset and collecting a new real-world dataset, BiAVIS-Bench, in more challenging and diverse scenarios. We further propose a BiAVIS model, which leverages an audio-only sound source localization network to learn spatial and semantic priors for sounding instances from binaural audio. A query-level audio-visual fusion strategy is subsequently introduced to inject these informative priors into the instance segmentation decoder. Extensive experiments conducted on the two proposed benchmarks demonstrate the superior performance of the BiAVIS model over previous monaural AVS methods, especially in resolving instance-level intra-class ambiguity. On the more challenging BiAVIS-Bench, the proposed BiAVIS model outperforms the best-performing monaural baselines by 17.22\\% in mAP and 7.71\\% in FSLA, respectively.",
+  "abstractSha256": "96e5e607ca1db6ca187163ed513fb5a837e7bc20d417c0225ead399714818cd3",
+  "arxivId": "2609.32180",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32180v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Saijun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guanfeng Tang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongbo Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhicheng Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yutong Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei Ye"
+    },
+    {
+      "affiliations": [
+        "organization=College of Electronic and Information Engineering, Tongji University, Shanghai 201804, China",
+        "organization=College of Electronic and Information Engineering, Shanghai Institute of Intelligent Science and Technology, State Key Laboratory of Autonomous Intelligent Unmanned Systems, Tongji University, Shanghai 201804, China"
+      ],
+      "name": "Rui Fan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把单声道音频视觉实例分割扩展为双耳音频视觉实例分割，用纯音频声源定位学图像平面空间与语义先验再注入查询解码器，在 BiAVIS-Bench 上报告相对最强单声道基线提升 17.22% mAP 与 7.71% FSLA，代价是依赖固定相机与仿头采集几何并受类别规模限制。",
+  "originalTitle": "Binaural Audio-Visual Instance Segmentation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32180v1.pdf",
+  "readerTitle": "双耳空间线索如何解开同类多人中的发声者混淆",
+  "schemaVersion": 1
+}

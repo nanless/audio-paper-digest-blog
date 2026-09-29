@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31673v1",
+  "arxivId": "2609.31673",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31673v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vipul Charugundla"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dancheng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinjun Xiong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31673v1",
+  "originalTitle": "OneVoice: An Intermediate Representation for Agentic Speech Pipelines",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31673v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

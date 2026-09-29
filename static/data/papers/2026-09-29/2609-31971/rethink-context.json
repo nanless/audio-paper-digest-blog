@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31971v1",
+  "abstract": "We propose a framework for the alignment and interpolation of pitch-aligned time-frequency representations. Building on the tonal interval vector, we introduce a series of extensions that reformulate it as an invertible operator, culminating in a new feature extractor that embeds perceptual consonance priors within a pitch-aligned representation. Accordingly, we develop methods for aligning and interpolating between musical structures. For alignment, we cast the problem as a permutation search under perceptually weighted distances, enabling robust matching without explicit key detection, which is inherently ambiguous in music information retrieval. For interpolation, we employ optimal transport to generate musically meaningful transitions between pitch distributions, proposing a circular formulation over the Circle of Fourths/Fifths to respect harmonic structure. Finally, we learn a low-dimensional geometric representation of scale structure aimed to factorize scale color and density. Experimental results demonstrate the effectiveness and musicality of the proposed methods. Together, our contributions provide a principled, purely signal processing approach to modeling pitch structure in audio and symbolic music signals.",
+  "abstractSha256": "2a05a10c6a70718a41297a7fd94d22d408e0448c55a4fb7768449d91e857ebc1",
+  "arxivId": "2609.31971",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31971v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐理解",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.auditory-cognition",
+          "label": "听觉与音乐认知"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐理解",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shahan Nercessian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeff Sontag"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alejandro Koretzky"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把音调区间向量改写为可逆算子并做感知平滑，用置换搜索做对齐、用四五度圈上圆形最优传输做插值，再以圆柱几何表征分解音阶根音、密度与色彩，代价是平滑后不再保证非负且圆形传输仍要求非负输入。",
+  "originalTitle": "Perceptually Motivated Alignment and Interpolation of Pitch-Aligned Time-Frequency Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31971v1.pdf",
+  "readerTitle": "把协和感写进可逆算子：对齐与插值不再只算欧氏距离",
+  "schemaVersion": 1
+}

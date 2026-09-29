@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31588v1",
+  "arxivId": "2609.31588",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31588v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sathvik Udupa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naveen Kumar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ryan Folmsbee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31588v1",
+  "originalTitle": "RePlay: Retrieval-Based Voice Playback for Multi-Turn spoken dialogue",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31588v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

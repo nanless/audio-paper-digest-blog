@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30469",
+  "arxivId": "2609.30469",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kaavya Chaparala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Su Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephen L. Miller"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rhiannon N. Miller"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anjalie Field"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30469",
+  "originalTitle": "Pretrained ASR Pseudo-labeling for Noisy Police Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30469.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

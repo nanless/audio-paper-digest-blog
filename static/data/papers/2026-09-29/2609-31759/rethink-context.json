@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31759v1",
+  "abstract": "Domain Generalization (DG) aims to develop models that remain robust to conditions unseen during training. While DG has been systematically studied in computer vision through controlled benchmarks and diverse distribution shifts, its evaluation in spoken language recognition remains less structured. Existing speech datasets provide valuable benchmarks for robustness to real-world acoustic conditions, but are primarily designed around specific scenarios and large scale rather than as general-purpose tools for systematically constructing and evaluating domain shifts. In this work, we introduce a smallscale speech dataset and evaluation protocol for controlled studies of acoustic domain shifts. It enables the evaluation of spoken language recognition models under a variety of acousitc domain shifts. We introduce the speech modality into the DomainBed Domain Generalization framework and evaluate three domain generalization algorithms. We show that in-domain performance is not a reliable predictor of cross-domain robustness and verify that explicit domain invariant algorithms such as MMD or DANN algorithms do not outperform ERM. We further validate the generality of these findings on MMS-LID-126, a state-of-the-art spoken language identification system. We release the code.",
+  "abstractSha256": "1d87e68ea38b4fec7fda7f2ac711cb00456341e7317554cff91087dd57a1cef8",
+  "arxivId": "2609.31759",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31759v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语言识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francois Derrida"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raphaël Duroselle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Courtat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-François Bonastre"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以语种识别为可控分类任务，研究仅由声学损坏引起的域偏移，构建 CWWS 小库并用 DomainBed 比较 ERM、MMD、DANN，发现域内性能不能预测跨域鲁棒性且显式域不变约束未稳定超越 ERM，并在 MMS-LID-126 大系统上验证了多样声学暴露主导鲁棒性但转移不对称、未知严重失真仍困难。",
+  "originalTitle": "Acoustic domain shift in spoken language identification from systematic domain generalization evaluation to real-world application",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31759v1.pdf",
+  "readerTitle": "声学损坏下语种识别为何域内准、域外垮：从可控小库到 126 语大系统的域泛化检验",
+  "schemaVersion": 1
+}

@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32016v1",
+  "arxivId": "2609.32016",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32016v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christoph Schuhmann"
+    },
+    {
+      "affiliations": [
+        "LAION e.V. Scalable Learning & Multi-Purpose AI (SLAMPAI) Lab, Forschungszentrum Jülich GmbH"
+      ],
+      "name": "Robert Kaczmarczyk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gollam Rabby"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felix Friedrich"
+    },
+    {
+      "affiliations": [
+        "L3S Research Center Black Forest Labs Computer Science Department, TU Darmstadt"
+      ],
+      "name": "Maurice Kraus"
+    },
+    {
+      "affiliations": [
+        "LAION e.V. Scalable Learning & Multi-Purpose AI (SLAMPAI) Lab, Forschungszentrum Jülich GmbH"
+      ],
+      "name": "Gijs Wijngaard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kourosh Nadi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huu Nguyen"
+    },
+    {
+      "affiliations": [
+        "L3S Research Center Black Forest Labs Computer Science Department, TU Darmstadt",
+        "Ontocord.AI German Research Center for Artificial Intelligence (DFKI)"
+      ],
+      "name": "Kristian Kersting"
+    },
+    {
+      "affiliations": [
+        "Hessian Center for AI (hessian.AI) Leibniz Universität Hannover"
+      ],
+      "name": "Sören Auer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32016v1",
+  "originalTitle": "VoiceNet: Fine-Grained Voice Understanding Beyond Emotion at Scale",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32016v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

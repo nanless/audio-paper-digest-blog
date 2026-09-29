@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31759v1",
+  "arxivId": "2609.31759",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31759v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francois Derrida"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raphaël Duroselle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Courtat"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jean-François Bonastre"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31759v1",
+  "originalTitle": "Acoustic domain shift in spoken language identification from systematic domain generalization evaluation to real-world application",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31759v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

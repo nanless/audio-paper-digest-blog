@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31810v1",
+  "abstract": "Video-to-music models have advanced considerably in the last few years, particularly in film and music video applications. In this paper, we investigate this problem in the video game domain, which introduces new challenges for these models: video frames are rendered graphics, music is mostly synthetic audio, and soundtracks loop across entire levels rather than following on-screen events. We introduce a new dataset of 217.6 hours of Super Nintendo (SNES) gameplay video paired with 485 hours of clean soundtracks, free of sound effects and voice-overs, matched to gameplay audio via audio fingerprinting. With this dataset, we train a simple encoder-decoder transformer that passes video features directly to a MusicGen decoder, comparing different encoding strategies: textual descriptions (T5), independent frames (ViT), or spatiotemporal patches (ViViT). Each encoder is tested both frozen and fine-tuned, while the decoder is always fine-tuned. Frozen encoders match or outperform their fine-tuned counterparts on every metric, and the frozen ViViT achieves the best overall results. We compare this model with state-of-the-art baselines using both objective metrics and a listening study (N = 96). Despite having up to 18\\% fewer parameters, our model outperforms all baselines on objective metrics, surpasses GVMGen in the listening study, and performs comparably to OSSL.",
+  "abstractSha256": "c04cef5f5957cd364314e282b2870c2e9423de1137b18d62306daf9155fe50cd",
+  "arxivId": "2609.31810",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31810v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "application",
+          "id": "application.games",
+          "label": "游戏音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Felipe Marra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lucas N. Ferreira"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 SNES 游戏视频到音乐生成问题，论文用 217.6 小时视频配 485 小时干净配乐构造数据集，对比 T5、ViT、ViViT 三种编码并冻结编码器只微调 MusicGen 解码器，其中冻结 ViViT 在客观指标上最优并在听感上持平 OSSL，代价是关卡循环结构导致策略性类型仍难对齐且指纹匹配精度有限。",
+  "originalTitle": "Video-to-Music Generation for Gameplay Videos",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31810v1.pdf",
+  "readerTitle": "循环配乐不跟随画面时：冻结时空编码器加微调解码器为何在 SNES 上更稳",
+  "schemaVersion": 1
+}

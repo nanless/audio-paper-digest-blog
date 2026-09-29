@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31787v1",
+  "abstract": "Optimal Transport (OT) provides a principled framework for comparing and transforming probability distributions while preserving geometric structure. Recently, OT has gained significant attention in machine learning due to its ability to measure discrepancies between distributions, even when their supports do not overlap, making it effective for tasks such as generative modeling, domain adaptation, and transfer learning. Despite its success in fields such as computer vision and natural language processing, OT remains relatively underexplored in speech research. Speech signals present unique challenges, including temporal dynamics, speaker variability, noise, reverberation, and heterogeneous multimodal representations involving audio, text, and visual information. These factors often lead to distribution mismatches, where OT offers a natural framework for alignment and interpretation. This work aims to promote broader adoption of OT in speech processing by: (1) reviewing OT foundations through intuitive physical interpretations and highlighting connections to modern generative models; (2) presenting computational algorithms suitable for deep learning frameworks; and (3) demonstrating OT applications in cross-domain and cross-modal speech tasks, including speech enhancement, automatic speech recognition, language and speaker recognition, and audio spoof detection. We highlight OT's strong potential for addressing distributional variations in real-world speech applications.",
+  "abstractSha256": "eb936bdccdec91d53ba2b8e9dbd9efeb15d623a4fc28d8174c8a85c7db8a6b0c",
+  "arxivId": "2609.31787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31787v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xugang Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "语音的噪声、通道、说话人与跨模态差异本质是分布不一致，本文沿 Monge 到 Kantorovich 再到 Sinkhorn 与神经求解的路线讲清对齐机制，报告在增强、识别与反欺骗中的迁移用法，并指出长序列可扩展性与代价函数选择仍是主要代价。",
+  "originalTitle": "Optimal transport meets speech: a tutorial review",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31787v1.pdf",
+  "readerTitle": "分布对不齐时怎么办：最优传输在语音中的对齐与迁移教程",
+  "schemaVersion": 1
+}

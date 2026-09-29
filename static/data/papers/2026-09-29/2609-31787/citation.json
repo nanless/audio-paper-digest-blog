@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31787v1",
+  "arxivId": "2609.31787",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31787v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xugang Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Tsao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31787v1",
+  "originalTitle": "Optimal transport meets speech: a tutorial review",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31787v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

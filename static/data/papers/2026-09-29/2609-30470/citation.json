@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.30470",
+  "arxivId": "2609.30470",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Sun Yat-sen University"
+      ],
+      "name": "Menghua Jiang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, South China Normal University"
+      ],
+      "name": "Haokai Gao"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Sun Yat-sen University"
+      ],
+      "name": "Xiangui Kang"
+    },
+    {
+      "affiliations": [
+        "School of Electronics and Information Technology, Sun Yat-sen University"
+      ],
+      "name": "Haifeng Hu"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, South China Normal University"
+      ],
+      "name": "Sijie Mai"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.30470",
+  "originalTitle": "Reliability-aware Cross-sample Enhancement for Robust Multimodal Sentiment Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.30470.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

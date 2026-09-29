@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32522v1",
+  "arxivId": "2609.32522",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32522v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "MeituanEqual contribution (co-first authors).Corresponding author."
+      ],
+      "name": "Wenxu Jia"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Xize Cheng"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Zihan Zhang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Dongjie Fu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Linjun Li"
+    },
+    {
+      "affiliations": [
+        "MeituanEqual contribution (co-first authors).Corresponding author."
+      ],
+      "name": "Wenshi Chen"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Yangyang Wu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tao Jin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32522v1",
+  "originalTitle": "Beyond Dyadic Memory: Interaction-Aware Multimodal Memory with Adaptive Agentic Retrieval for Multi-Party Spoken Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32522v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

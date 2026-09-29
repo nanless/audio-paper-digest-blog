@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31971v1",
+  "arxivId": "2609.31971",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31971v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shahan Nercessian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeff Sontag"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alejandro Koretzky"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31971v1",
+  "originalTitle": "Perceptually Motivated Alignment and Interpolation of Pitch-Aligned Time-Frequency Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31971v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

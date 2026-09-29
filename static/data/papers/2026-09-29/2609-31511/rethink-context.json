@@ -1,0 +1,61 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31511",
+  "abstract": "We present Muslim, a production Arabic voice AI platform serving grounded, sourced Islamic knowledge to real users. Beyond a real-time voice pipeline (NeMo Arabic ASR, an OpenAI-compatible LLM endpoint, self-hosted TTS) and a deterministic multi-source retrieval layer routed across six Model Context Protocol servers, we report three things a research prototype typically lacks. First, a released family of fine-tuned Arabic Islamic model artifacts: an efficient tool-routing LLM (Muslim-6B-PRO, 5.94B parameters) and a Modern Standard Arabic TTS model (Fasih-TTS-V1) that ranks 5th of 17 overall and 2nd of 11 open-weight systems on the community-voted Arabic TTS Arena for MSA. Second, an account and metering layer - a free per-account turn allowance, capacity-aware refusal, and email verification deferred to the point it actually matters - that turns an open demo into an operable, abuse-resistant product. Third, a three-layer observability stack (liveness, error reporting, product analytics) built specifically around the system&#39;s characteristic failure mode: a GPU-bound agent host going silent while the web tier keeps serving normally. We report real, measured latency and accuracy figures (98.4% recitation-validation accuracy on 124 cases; end-to-end voice latency of 0.9-1.7s) and discuss the concrete engineering trade-offs and limitations of running an Islamic-knowledge voice product in production.",
+  "abstractSha256": "952b36d74581fa425049bc47dcf4c6b26ab49ae9e6747b85aed4c15b60794221",
+  "arxivId": "2609.31511",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, Egypt"
+      ],
+      "name": "Yahya Mohamed Elnawasany"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作解决阿拉伯语语音问答中误引经训的高风险问题，选择检索优先于参数记忆、六路工具检索与自管语音链路，用 124 例中 122 例通过的背诵校验与 0.9–1.7s 端到端语音延迟证明接地可行，代价是单 GPU 主机成为可用性单点且方言与覆盖外问题仍回退到参数知识。",
+  "originalTitle": "Muslim: A Deployed Arabic Voice AI Platform for Grounded Islamic Knowledge",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31511.pdf",
+  "readerTitle": "不靠参数记忆回答教义：一个阿拉伯语语音平台如何把检索、配额与可观测性做成可运行产品",
+  "schemaVersion": 1
+}

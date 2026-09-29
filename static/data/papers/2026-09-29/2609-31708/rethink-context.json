@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31708v1",
+  "abstract": "In embodied voice interaction, cocktail-party speech perception requires both speech separation and speaker attribution across machine-generated and human speech sources. However, conventional audio-only blind source separation remains permutation ambiguous, making the correspondence between separated streams and physical speakers unclear. This paper presents RadarVox, a radar-audio multimodal benchmark for identity-aware cocktail-party speech separation. RadarVox provides acoustic mixtures and source-level radar displacement signals from loudspeaker-emitted and human speech, enabling source-aware speaker assignment. FMCW radar captures laryngeal mechanical motion, providing speaker-specific spatial-motion cues unavailable to a single-channel microphone. We inject radar-derived priors into a DPRNN separator via gated fusion and learn a speaker-aware cross-modal matcher to associate unordered speech streams with radar-observed speakers. Experiments on multi-speaker mixtures show that radar cues provide complementary benefits, achieving scale-invariant signal-to-distortion ratio (SI-SDR) values of 9.75 dB and 7.13 dB in two- and three-speaker scenarios, respectively. More importantly, the proposed method improves ordered SI-SDR by more than 13 dB over audio-only methods while achieving over 80\\% speaker assignment accuracy.",
+  "abstractSha256": "c34fc2a6c699d095c82ee1d5a78cec9c7a18f92f1362df30a214dca1d36d5ab3",
+  "arxivId": "2609.31708",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31708v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-separation",
+          "label": "语音分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音分离",
+      "primaryTaskId": "task.speech-separation",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanlin Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiwei Ru"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mupei Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yongji Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jie Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhenan Sun"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把单通道混合语音分离与按源雷达位移的身份配对做成同一任务，用门控融合的 DPRNN 先分离再用跨模态匹配器定序，在两路和三路混合上同时报告 PIT 与有序指标，而有序增益高度依赖第二阶段匹配器且雷达单独不可懂。",
+  "originalTitle": "RadarVox: Radar-Audio Multimodal Cocktail-Party Speech Separation with Speaker-Aware Cross-Modal Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31708v1.pdf",
+  "readerTitle": "分得开还要对得上人：雷达位移给鸡尾酒会分离定序",
+  "schemaVersion": 1
+}

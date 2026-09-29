@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31399",
+  "abstract": "Multimodal emotion recognition (MER) increasingly pairs EEG with speech, treating internal neural signals and external vocal expression as informative views of affect. In practice, naive fusion underperforms the stronger single modality, because EEG artifacts inject noise that corrupts the shared representation. We introduce EmoSpeechBrain, a multimodal framework built on the insight that noise suppression is a precondition for effective fusion. Its EEG encoder uses differential attention, taking the difference between two attention maps to cancel shared noise and isolate discriminative neural activity. An attention-based gating adapter aligns both modalities in a shared space and weights each one&#39;s contribution to the prediction. On two datasets - PME4 and EAV, EmoSpeechBrain improves MER accuracy by up to 12.9% over other state-of-the-art (SOTA) EEG encoders, and surpasses unimodal speech and EEG baselines by up to 13.1% and 23.1%. These results show that once EEG noise is suppressed, fusion delivers gains that naive combination cannot.",
+  "abstractSha256": "e1657fc363d136260ce55f4e542f44eeab2b8a4619b5f1ee9e1a5c38f14b9229",
+  "arxivId": "2609.31399",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "\\authorrefmark1Independent Researcher, USA"
+      ],
+      "name": "Philip H. Lee"
+    },
+    {
+      "affiliations": [
+        "\\authorrefmark2Center for Language and Speech Processing (CLSP), Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    },
+    {
+      "affiliations": [
+        "\\authorrefmark3Center for Robust Speech Systems (CRSS), University of Texas at Dallas, Richardson, TX, USA"
+      ],
+      "name": "John H.L. Hansen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文针对脑电伪影污染融合表示的问题，用差分注意力抑制共享噪声并用门控对齐融合语音，在 PME4 和 EAV 上以留一被试协议取得多模态显著提升，但未直接对比已有脑电语音融合系统。",
+  "originalTitle": "Differential Attention Unlocks Complementary EEG and Speech Fusion for Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31399.pdf",
+  "readerTitle": "先降噪再融合：差分注意力如何让脑电和语音互补",
+  "schemaVersion": 1
+}

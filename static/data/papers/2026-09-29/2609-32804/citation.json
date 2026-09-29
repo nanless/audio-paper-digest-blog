@@ -1,0 +1,35 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32804v1",
+  "arxivId": "2609.32804",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.32804v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Aalborg University",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Abdelrahman Mohamed"
+    },
+    {
+      "affiliations": [
+        "Technical University of Denmark",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Lars Kai Hansen"
+    },
+    {
+      "affiliations": [
+        "Aalborg University",
+        "Pioneer Centre for AI"
+      ],
+      "name": "Zheng-Hua Tan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32804v1",
+  "originalTitle": "Finding Emotions Where They Belong: Rethinking Audio Emotion Recognition through Masked Temporal Affective Grounding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32804v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31508v1",
+  "arxivId": "2609.31508",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.31508v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Frédéric Berthommier"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31508v1",
+  "originalTitle": "Assessing a Mathematical Model of Syllable Production via CTW Alignment with EMA Data",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31508v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
