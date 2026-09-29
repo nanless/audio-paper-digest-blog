@@ -11,12 +11,47 @@
     return plainText(value).normalize('NFKC').toLocaleLowerCase();
   }
 
-  function taxonomyTerms(value) {
-    if (!Array.isArray(value)) return [];
-    return value.flatMap(function (concept) {
-      if (!concept || typeof concept !== 'object' || Array.isArray(concept)) return [];
-      return [concept.id, concept.facet, concept.label].map(plainText).filter(Boolean);
+  // data/taxonomy-registry.json 的精简索引：页面 frontmatter 只带 {id, facet,
+  // label}，zh/en、aliases 与祖先链都要从快照补齐（对齐 tag-explorer 的做法）。
+  function registryIndex(registry) {
+    var byId = Object.create(null);
+    var records = registry && !Array.isArray(registry) && Array.isArray(registry.concepts)
+      ? registry.concepts : null;
+    if (!records) return byId;
+    records.forEach(function (record) {
+      if (record && typeof record === 'object' && typeof record.id === 'string' && record.id) {
+        byId[record.id] = record;
+      }
     });
+    return byId;
+  }
+
+  function conceptTerms(concept, byId) {
+    if (!concept || typeof concept !== 'object' || Array.isArray(concept)) return [];
+    var terms = [concept.id, concept.facet, concept.label];
+    var record = typeof concept.id === 'string' && byId ? byId[concept.id] : null;
+    // 父概念名（如 method.peft 的“参数高效微调”）只存在于快照，靠祖先链回查。
+    var source = record || concept;
+    terms.push(source.zh, source.en);
+    if (Array.isArray(source.aliases)) terms = terms.concat(source.aliases);
+    var ancestorIds = Array.isArray(concept.ancestorIds) && concept.ancestorIds.length
+      ? concept.ancestorIds
+      : record && Array.isArray(record.ancestorIds) ? record.ancestorIds : [];
+    ancestorIds.forEach(function (ancestorId) {
+      var ancestor = byId ? byId[ancestorId] : null;
+      if (!ancestor) return;
+      terms.push(ancestorId, ancestor.zh, ancestor.en);
+      if (Array.isArray(ancestor.aliases)) terms = terms.concat(ancestor.aliases);
+    });
+    return terms;
+  }
+
+  function taxonomyTerms(value, byId) {
+    if (!Array.isArray(value)) return [];
+    var index = byId || Object.create(null);
+    return value.flatMap(function (concept) {
+      return conceptTerms(concept, index);
+    }).map(plainText).filter(Boolean);
   }
 
   function entryDate(value) {
@@ -35,7 +70,7 @@
     return 'paper';
   }
 
-  function normalizeEntry(item, origin, basePath) {
+  function normalizeEntry(item, origin, basePath, registry) {
     if (!item || typeof item !== 'object') return null;
     var permalink = safeSiteUrl(item.permalink, origin, basePath);
     if (!permalink) return null;
@@ -57,7 +92,7 @@
     var arxivId = plainText(item.arxivId);
     var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
     var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
-    var taxonomy = taxonomyTerms(item.taxonomyConcepts);
+    var taxonomy = taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
       type: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
@@ -94,7 +129,14 @@
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { safeSiteUrl: safeSiteUrl, normalizeEntry: normalizeEntry, filterEntries: filterEntries, entryDate: entryDate };
+    module.exports = {
+      safeSiteUrl: safeSiteUrl,
+      normalizeEntry: normalizeEntry,
+      filterEntries: filterEntries,
+      entryDate: entryDate,
+      registryIndex: registryIndex,
+      taxonomyTerms: taxonomyTerms,
+    };
   }
 
   if (typeof document === 'undefined') return;
@@ -277,16 +319,40 @@
     return;
   }
 
-  fetch(indexUrl, { credentials: 'same-origin' })
-    .then(function (response) {
+  // 快照提供概念的 zh/en、aliases 与祖先链；拿不到时退化为页面自带标签。
+  var registryUrl = new URL('data/taxonomy-registry.json', indexUrl);
+  function loadRegistry() {
+    return fetch(registryUrl, { credentials: 'same-origin' })
+      .then(function (response) {
+        if (!response || !response.ok) return null;
+        return response.json();
+      })
+      .then(function (payload) {
+        return payload && !Array.isArray(payload) && Array.isArray(payload.concepts)
+          ? payload : null;
+      })
+      .catch(function () { return null; });
+  }
+
+  Promise.all([
+    fetch(indexUrl, { credentials: 'same-origin' }),
+    loadRegistry(),
+  ])
+    .then(function (results) {
+      var response = results[0];
+      var registry = results[1];
       if (!response.ok) throw new Error('HTTP ' + response.status);
-      return response.json();
+      return response.json().then(function (items) {
+        return { items: items, registry: registry };
+      });
     })
-    .then(function (items) {
+    .then(function (payload) {
+      var items = payload.items;
+      var registry = payload.registry;
       var seen = new Set();
       if (!Array.isArray(items)) throw new Error('Index must be an array');
       allEntries = items.map(function (item) {
-        return normalizeEntry(item, window.location.origin, siteBasePath);
+        return normalizeEntry(item, window.location.origin, siteBasePath, registry);
       }).filter(function (entry) {
         if (!entry || !['paper', 'daily', 'conference'].includes(entry.type) || seen.has(entry.permalink)) return false;
         seen.add(entry.permalink);

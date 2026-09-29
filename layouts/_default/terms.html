@@ -4,7 +4,7 @@
   <header class="page-header">
     <div class="rw-eyebrow">{{ if $categories }}按来源浏览{{ else }}按方向浏览{{ end }}</div>
     <h1>{{ if $categories }}内容分类{{ else }}标签索引（新旧兼容）{{ end }}</h1>
-    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}新发布内容使用受控 taxonomy，历史页面保留原标签；本页暂时合并展示两者，因此标签计数不等于新版任务或方法统计。可按收录数量浏览并输入中文或英文筛选。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合检索。</p>
+    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}新发布内容使用受控 taxonomy，历史页面保留原标签；本页暂时合并展示两者，因此标签计数不等于新版任务或方法统计。可按收录数量浏览并输入中文或英文筛选；进入任一标签页后会显示该标签的“新旧混合/新版受控”提示，以及“作为主任务 / 作为补充标签”的分项计数。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合检索。</p>
   </header>
   <div class="research-terms__search">
     <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选主题{{ end }}</label>
@@ -18,5 +18,45 @@
     {{ end }}
   </ul>
   <p class="research-library__empty" id="term-empty" hidden>没有匹配的条目。试试更短的关键词，或<a href="{{ "papers/" | relURL }}">搜索论文库</a>。</p>
+  {{- /* 只读导航：按分面分组列出 taxonomy 树中“带子标签的根概念”，链接到对应标签页。
+        计数口径不在此重复：进入标签页后由“子标签”分区给出下一级方向的直接/含子树计数。 */}}
+  {{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+  {{- $concepts := index $registry "concepts" | default slice }}
+  {{- /* 出现在其它概念 ancestorIds 里的 id = 拥有子概念的节点 */}}
+  {{- $hasChildren := slice }}
+  {{- range $c := $concepts }}
+    {{- range $a := index $c "ancestorIds" }}
+      {{- if not (in $hasChildren $a) }}{{ $hasChildren = $hasChildren | append $a }}{{ end }}
+    {{- end }}
+  {{- end }}
+  {{- $facetZh := dict "task" "任务" "method" "方法" "setting" "条件" "signal" "信号" "application" "应用" "research_focus" "研究重点" "artifact" "研究产物" "scientific_topic" "科学主题" "model_family" "模型家族" }}
+  {{- $facetOrder := slice }}
+  {{- range $c := $concepts }}
+    {{- if and (eq (len (index $c "ancestorIds" | default slice)) 0) (in $hasChildren $c.id) (not (in $facetOrder $c.facet)) }}
+      {{- $facetOrder = $facetOrder | append $c.facet }}
+    {{- end }}
+  {{- end }}
+  {{- if $facetOrder }}
+  <nav class="terms-facets" aria-label="按分面浏览可下钻方向">
+    <h2>按分面浏览（可下钻方向）</h2>
+    <p class="terms-facets__note">下列是受控 taxonomy 中<b>带子标签</b>的根概念；进入标签页后可在“子标签”分区看到下一级方向及其计数（直接 / 含子树）。本页计数仍是扁平标签计数，此处只做导航，不重复统计口径。</p>
+    {{- range $facet := $facetOrder }}
+    {{- $facetName := $facet }}
+    {{- if (index $facetZh $facet) }}{{ $facetName = index $facetZh $facet }}{{ end }}
+    <div class="terms-facets__group">
+      <span class="terms-facets__facet">{{ $facetName }}</span>
+      <ul class="terms-tags">
+        {{- range $c := $concepts }}
+        {{- if and (eq $c.facet $facet) (eq (len (index $c "ancestorIds" | default slice)) 0) (in $hasChildren $c.id) }}
+        {{- $href := printf "/tags/%s/" $c.zh | relURL }}
+        {{- with site.GetPage (printf "/tags/%s" $c.zh) }}{{ $href = .RelPermalink }}{{ end }}
+        <li><a href="{{ $href }}">{{ $c.zh }}</a></li>
+        {{- end }}
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </nav>
+  {{- end }}
 </section>
 {{ end }}

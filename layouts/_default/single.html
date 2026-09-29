@@ -30,7 +30,7 @@
     {{- end }}
     <div class="research-paper-header__meta">
       {{ partial "post_meta.html" . }}
-      {{- if $task }}<span>&nbsp;·&nbsp;{{ $task }}</span>{{ end }}
+      {{- if $task }}<span{{ if .Params.paper_digest_primary_task }} title="本页主任务（paper_digest_primary_task）"{{ end }}>&nbsp;·&nbsp;{{ if .Params.paper_digest_primary_task }}★&nbsp;{{ end }}{{ $task }}</span>{{ end }}
     </div>
     <div class="research-paper-header__actions" aria-label="论文操作">
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
@@ -82,7 +82,7 @@
       </section>
       {{- end }}
       <section class="research-signal-card">
-        <span class="research-signal-card__label">研究定位</span>
+        <span class="research-signal-card__label">{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}</span>
         <p>{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}</p>
       </section>
       {{- with $arxivId }}
@@ -97,11 +97,13 @@
 
   <footer class="post-footer research-page-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
     <ul class="post-tags">
       {{- $translations := hugo.Data.tag_translations }}
       {{- range ($.GetTerms $tags) }}
       {{- $en := index $translations .LinkTitle }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
+      {{- $isPrimary := and $primaryTask (eq .LinkTitle $primaryTask) }}
+      <li><a href="{{ .Permalink }}"{{ if $isPrimary }} class="primary-task" title="本页主任务标签（paper_digest_primary_task）；补充标签不带 ★"{{ end }}>{{ if $isPrimary }}<span class="primary-task__mark" aria-hidden="true">★</span><span class="sr-only">主任务：</span>{{ end }}{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
       {{- end }}
     </ul>
     {{- if and $isPaper (.Param "ShowPostNavLinks") }}{{ partial "post_nav_links.html" . }}{{ end }}

@@ -77,7 +77,8 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     limit: 20
-    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "arxivId"]
+    # taxonomyAliases 由经典搜索在载入快照后按页注入（概念 zh/en + aliases + 祖先链）
+    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "arxivId", "taxonomyAliases"]
 
   mainSections: [posts]
 

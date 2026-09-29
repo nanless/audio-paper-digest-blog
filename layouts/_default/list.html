@@ -30,6 +30,49 @@
 </header>
 {{- end }}
 
+{{- /* P0-5：逐标签页（tags taxonomy term）新旧口径提示条 + P1-4 主/次任务计数。
+       数据只来自本页 .Pages 自带的 frontmatter，不读取仓库 registry 文件。 */}}
+{{- if and (eq .Kind "term") (eq .Type "tags") }}
+{{- $termName := .Data.Term | default .Title }}
+{{- $termPages := .Pages }}
+{{- $total := len $termPages }}
+{{- $new := 0 }}
+{{- $old := 0 }}
+{{- $asPrimary := 0 }}
+{{- $asSupplement := 0 }}
+{{- range $termPages }}
+  {{- if .Params.paper_digest_taxonomy_contract }}
+    {{- $new = add $new 1 }}
+    {{- if eq (.Params.paper_digest_primary_task | default "") $termName }}
+      {{- $asPrimary = add $asPrimary 1 }}
+    {{- else }}
+      {{- $asSupplement = add $asSupplement 1 }}
+    {{- end }}
+  {{- else }}
+    {{- $old = add $old 1 }}
+  {{- end }}
+{{- end }}
+{{- if gt $old 0 }}
+<aside class="taxonomy-notice taxonomy-notice--mixed" aria-label="标签口径提示">
+  <p class="taxonomy-notice__title">新旧混合索引（含 {{ $old }} 页旧标签页）</p>
+  {{- if gt $new 0 }}
+  <p class="taxonomy-notice__body">本标签共 {{ $total }} 页：{{ $new }} 页已按新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>）标注，{{ $old }} 页仍是旧版裸 <code>tags</code> 页面。此处的收录数只是<b>扁平标签计数</b>，不等于新版九分面语义统计，也不能与汇总页“热门方向”（只统计主任务）直接相加比较；主/次之分只覆盖合同页——其中<b>作为主任务 {{ $asPrimary }} 篇 / 作为补充标签 {{ $asSupplement }} 篇</b>。</p>
+  {{- else }}
+  <p class="taxonomy-notice__body">本标签下 {{ $total }} 页全部是旧版裸 <code>tags</code> 页面，未携带新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>），因此无法区分主任务与补充标签。此处的收录数只是<b>扁平标签计数</b>，不等于新版九分面语义统计，也不能与汇总页“热门方向”（只统计主任务）直接比较。</p>
+  {{- end }}
+</aside>
+{{- else }}
+<aside class="taxonomy-notice taxonomy-notice--current" aria-label="标签口径提示">
+  <p class="taxonomy-notice__title">新版受控标签</p>
+  <p class="taxonomy-notice__body">本标签下 {{ $total }} 页全部按新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>）标注，逐标签 facet 与 registry SHA 记录在各页 frontmatter 中。计数口径：<b>作为主任务 {{ $asPrimary }} 篇 / 作为补充标签 {{ $asSupplement }} 篇</b>；汇总页“热门方向”只统计主任务，对应本页的“作为主任务”计数。</p>
+</aside>
+{{- end }}
+
+{{- /* P1 逐标签页下钻：零级标签页展示一级子标签，一级标签页展示二级子标签；
+       旧标签（registry 快照里找不到 zh 精确匹配的 concept）只保留上面的提示条，不下钻。 */}}
+{{- partial "tag_drilldown.html" (dict "page" . "termName" $termName) }}
+{{- end }}
+
 {{- if .Content }}
 <div class="md-content">
   {{- if not (.Param "disableAnchoredHeadings") }}

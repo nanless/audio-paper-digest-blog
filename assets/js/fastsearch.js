@@ -115,6 +115,47 @@ function focusResult(index) {
   resultLinks[activeIndex].focus();
 }
 
+// registry 快照补出概念的 zh/en、aliases 与祖先链；经典 Fuse 搜索因此也能用
+// 父概念名（参数高效微调）或别名（说话人日志）召回子概念论文。
+function registryIndex(registry) {
+  const byId = new Map();
+  const records = registry && !Array.isArray(registry) && Array.isArray(registry.concepts)
+    ? registry.concepts : null;
+  for (const record of records || []) {
+    if (record && typeof record === 'object' && typeof record.id === 'string' && record.id) {
+      byId.set(record.id, record);
+    }
+  }
+  return byId;
+}
+
+function taxonomyAliases(concepts, byId) {
+  if (!Array.isArray(concepts)) return [];
+  const terms = [];
+  const push = (...values) => {
+    for (const value of values) {
+      if (typeof value === 'string' && value.trim()) terms.push(value.trim());
+    }
+  };
+  for (const concept of concepts) {
+    if (!concept || typeof concept !== 'object' || Array.isArray(concept)) continue;
+    const record = typeof concept.id === 'string' ? byId.get(concept.id) : null;
+    const source = record || concept;
+    push(concept.id, concept.facet, concept.label, source.zh, source.en);
+    if (Array.isArray(source.aliases)) push(...source.aliases);
+    const ancestorIds = Array.isArray(concept.ancestorIds) && concept.ancestorIds.length
+      ? concept.ancestorIds
+      : record && Array.isArray(record.ancestorIds) ? record.ancestorIds : [];
+    for (const ancestorId of ancestorIds) {
+      const ancestor = byId.get(ancestorId);
+      if (!ancestor) continue;
+      push(ancestorId, ancestor.zh, ancestor.en);
+      if (Array.isArray(ancestor.aliases)) push(...ancestor.aliases);
+    }
+  }
+  return terms;
+}
+
 fetch(indexUrl, { credentials: 'same-origin' })
   .then((response) => {
     if (!response.ok) throw new Error(`Search index HTTP ${response.status}`);
@@ -122,6 +163,13 @@ fetch(indexUrl, { credentials: 'same-origin' })
   })
   .then((data) => {
     if (!Array.isArray(data)) throw new Error('Search index must be an array');
+    return fetch(new URL('data/taxonomy-registry.json', indexUrl), { credentials: 'same-origin' })
+      .then((response) => (response && response.ok ? response.json() : null))
+      .catch(() => null)
+      .then((registry) => ({ data, registry }));
+  })
+  .then((payload) => {
+    const { data, registry } = payload;
     const options = {
       isCaseSensitive: params.fuseOpts?.iscasesensitive ?? false,
       shouldSort: params.fuseOpts?.shouldsort ?? true,
@@ -129,9 +177,14 @@ fetch(indexUrl, { credentials: 'same-origin' })
       threshold: params.fuseOpts?.threshold ?? 0.4,
       distance: params.fuseOpts?.distance ?? 1000,
       ignoreLocation: true,
-      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'arxivId']
+      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'arxivId', 'taxonomyAliases']
     };
-    fuse = new Fuse(data.filter((item) => item && safeSiteUrl(item.permalink)), options);
+    const byId = registryIndex(registry);
+    const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {
+      const aliases = taxonomyAliases(item.taxonomyConcepts, byId);
+      return aliases.length ? { ...item, taxonomyAliases: aliases } : item;
+    });
+    fuse = new Fuse(entries, options);
     search();
   })
   .catch(() => {

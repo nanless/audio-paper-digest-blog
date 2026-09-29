@@ -1,3 +1,14 @@
+{{- /* registry 快照（data/taxonomy-registry.json）只在构建期可用：页面 frontmatter
+       只带 {id, facet, label}，祖先链必须在这里展开；快照缺失时退化为空数组。 */ -}}
+{{- $taxonomyData := hugo.Data | default dict -}}
+{{- $taxonomyRegistry := index $taxonomyData "taxonomy-registry" | default dict -}}
+{{- $taxonomyRecords := index $taxonomyRegistry "concepts" | default slice -}}
+{{- $taxonomyById := dict -}}
+{{- range $taxonomyRecords -}}
+  {{- if .id -}}
+    {{- $taxonomyById = merge $taxonomyById (dict .id .) -}}
+  {{- end -}}
+{{- end -}}
 {{- $.Scratch.Set "searchIndex" slice -}}
 {{- range site.RegularPages -}}
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
@@ -14,6 +25,15 @@
     {{- $tags := .Params.tags | default slice }}
     {{- $categories := .Params.categories | default slice }}
 
+    {{- $pageConcepts := slice }}
+    {{- range (.Params.paper_digest_taxonomy_concepts | default slice) }}
+      {{- $ancestorIds := slice }}
+      {{- with index $taxonomyById (.id | default "") }}
+        {{- $ancestorIds = .ancestorIds | default slice }}
+      {{- end }}
+      {{- $pageConcepts = $pageConcepts | append (merge . (dict "ancestorIds" $ancestorIds)) }}
+    {{- end }}
+
     {{- $.Scratch.Add "searchIndex" (slice (dict
       "title" .Title
       "titleZh" ($metadata.headline | plainify)
@@ -29,7 +49,7 @@
       "tags" $tags
       "categories" $categories
       "taxonomyContract" (.Params.paper_digest_taxonomy_contract | default "")
-      "taxonomyConcepts" (.Params.paper_digest_taxonomy_concepts | default slice)
+      "taxonomyConcepts" $pageConcepts
     )) }}
   {{- end }}
 {{- end }}

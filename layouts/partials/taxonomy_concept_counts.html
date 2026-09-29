@@ -1,0 +1,42 @@
+{{- /* 全站概念计数（partialCached：整个站点只计算一次，返回按概念 id 的计数切片）
+   对每个概念 id 输出：
+     - direct：frontmatter `paper_digest_taxonomy_concepts` 直接标注该 id 的唯一页面数；
+     - sub   ：直接标注该 id 或其任一后代概念的唯一页面数（同一页只计一次）。
+   后代集合由 registry 快照 concepts[].ancestorIds 反推，不硬编码概念数量；
+   旧版裸 tags 页面没有该字段，天然不计入。 */}}
+{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $concepts := index $registry "concepts" | default slice }}
+
+{{- /* 第一步：每个带合同字段的页面 → 其概念 id 集合（去重） */}}
+{{- $covered := slice }}
+{{- range site.RegularPages }}
+  {{- $ids := slice }}
+  {{- range .Params.paper_digest_taxonomy_concepts }}
+    {{- if not (in $ids .id) }}{{ $ids = $ids | append .id }}{{ end }}
+  {{- end }}
+  {{- if gt (len $ids) 0 }}{{ $covered = $covered | append (dict "ids" $ids) }}{{ end }}
+{{- end }}
+
+{{- /* 第二步：逐概念统计 direct / sub */}}
+{{- $out := slice }}
+{{- range $c := $concepts }}
+  {{- $cid := $c.id }}
+  {{- $subtree := slice $cid }}
+  {{- range $d := $concepts }}
+    {{- if in (index $d "ancestorIds" | default slice) $cid }}{{ $subtree = $subtree | append $d.id }}{{ end }}
+  {{- end }}
+  {{- $direct := 0 }}
+  {{- $sub := 0 }}
+  {{- range $rec := $covered }}
+    {{- $hitDirect := false }}
+    {{- $hitSub := false }}
+    {{- range $id := $rec.ids }}
+      {{- if eq $id $cid }}{{ $hitDirect = true }}{{ end }}
+      {{- if in $subtree $id }}{{ $hitSub = true }}{{ end }}
+    {{- end }}
+    {{- if $hitDirect }}{{ $direct = add $direct 1 }}{{ end }}
+    {{- if $hitSub }}{{ $sub = add $sub 1 }}{{ end }}
+  {{- end }}
+  {{- $out = $out | append (dict "id" $cid "direct" $direct "sub" $sub) }}
+{{- end }}
+{{- return $out }}

@@ -180,6 +180,38 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .editorial-single .post-content > h1:first-child { display: none; }
 .editorial-single .post-title { color: var(--rw-text); }
 
+/* Taxonomy term notice (P0-5) and primary-task tag role (P1-4) */
+.taxonomy-notice { background: var(--rw-surface); border: 1px solid var(--rw-border); border-left: 4px solid var(--rw-brand); border-radius: var(--rw-radius-md); color: var(--rw-muted); font-size: .87rem; line-height: 1.7; margin: 2px 0 24px; max-width: 900px; padding: 14px 18px; }
+.taxonomy-notice--mixed { background: color-mix(in srgb, var(--rw-mid) 8%, var(--rw-surface)); border-left-color: var(--rw-mid); }
+.taxonomy-notice__title { color: var(--rw-text); font-size: .93rem; font-weight: 700; margin: 0 0 6px; }
+.taxonomy-notice__body { margin: 0; }
+.taxonomy-notice__body b { color: var(--rw-text); }
+.taxonomy-notice code { background: var(--rw-surface-subtle); border: 1px solid var(--rw-border); border-radius: 4px; font-size: .78em; padding: 1px 5px; }
+.post-tags a.primary-task { background: var(--rw-brand-soft); border-color: var(--rw-brand); color: var(--rw-brand); font-weight: 700; }
+.post-tags a.primary-task:hover { background: var(--rw-brand); border-color: var(--rw-brand); color: var(--rw-surface); }
+.primary-task__mark { margin-right: .3em; }
+
+/* Tag drill-down (zero-level → first-level, first-level → second-level sub-tags) */
+.tag-drill { margin: 0 0 26px; max-width: 900px; }
+.tag-drill__title { color: var(--rw-text); font-size: 1.05rem; margin: 0 0 8px; }
+.tag-drill__note { color: var(--rw-muted); font-size: .85rem; line-height: 1.7; margin: 0 0 12px; }
+.tag-drill__note b { color: var(--rw-text); }
+.tag-drill__note code { background: var(--rw-surface-subtle); border: 1px solid var(--rw-border); border-radius: 4px; font-size: .78em; padding: 1px 5px; }
+.tag-drill__list { list-style: none; margin: 0; padding: 0; }
+.tag-drill__item { padding: 5px 0; }
+.tag-drill__list--sub { border-left: 2px solid var(--rw-border); margin: 4px 0 4px 14px; padding-left: 16px; }
+.tag-drill__link { color: var(--rw-text); font-weight: 650; }
+.tag-drill__counts { color: var(--rw-muted); font-size: .84rem; font-variant-numeric: tabular-nums; margin-left: .5em; }
+
+/* Read-only facet navigation on the tag index (links only, no counts) */
+.terms-facets { border-top: 1px solid var(--rw-border); margin-top: 28px; max-width: 900px; padding-top: 18px; }
+.terms-facets h2 { font-size: 1.05rem; margin: 0 0 6px; }
+.terms-facets__note { color: var(--rw-muted); font-size: .85rem; line-height: 1.7; margin: 0 0 16px; }
+.terms-facets__note b { color: var(--rw-text); }
+.terms-facets__group { margin: 0 0 16px; }
+.terms-facets__facet { color: var(--rw-muted); display: block; font-size: .8rem; letter-spacing: .04em; margin-bottom: 8px; }
+.terms-facets .terms-tags { margin: 0; }
+
 @media (max-width: 1180px) {
   .research-layout, .research-layout--digest { grid-template-columns: 210px minmax(0, 760px); }
   .research-signal-rail { display: grid; gap: 12px; grid-column: 2; grid-row: 1; grid-template-columns: repeat(2, minmax(0, 1fr)); position: static; }

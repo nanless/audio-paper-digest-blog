@@ -6,7 +6,7 @@ const path = require('node:path');
 const test = require('node:test');
 const vm = require('node:vm');
 
-function browserFixture(kind, items, suffix = '', fail = false) {
+function browserFixture(kind, items, suffix = '', fail = false, registry = null) {
   const listeners = {};
   const nodes = {};
   let document;
@@ -72,7 +72,13 @@ function browserFixture(kind, items, suffix = '', fail = false) {
   source = source.replace(/^import .*@params.*;\n/, '');
   vm.runInNewContext(source, {
     document, window, URL, URLSearchParams, params: {}, Fuse: FakeFuse,
-    fetch(url) { requests.push(String(url)); return fail ? Promise.reject(new Error('offline')) : Promise.resolve({ ok: true, json: () => Promise.resolve(items) }); }
+    fetch(url) {
+      requests.push(String(url));
+      if (fail) return Promise.reject(new Error('offline'));
+      const payload = registry && String(url).endsWith('data/taxonomy-registry.json')
+        ? registry : items;
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(payload) });
+    }
   });
   return { nodes, document, window, requests, parent, listeners, ready: () => new Promise((resolve) => setImmediate(resolve)) };
 }
@@ -136,4 +142,49 @@ test('search announces zero matches and exposes archive navigation after index f
   await offline.ready();
   const archiveLink = offline.nodes.searchResults.children.at(-1).children[0];
   assert.equal(archiveLink.href, 'https://nanless.github.io/audio-paper-digest-blog/archives/');
+});
+
+test('经典搜索用快照注入的 taxonomyAliases 召回父概念与别名', async () => {
+  const registry = {
+    contract: 'paper-taxonomy-registry-snapshot-v1',
+    registryVersion: 'paper-taxonomy-v1',
+    registrySha256: 'a'.repeat(64),
+    concepts: [
+      {
+        id: 'method.peft', facet: 'method',
+        zh: '参数高效微调', en: 'Parameter-efficient fine-tuning',
+        aliases: ['PEFT'], ancestorIds: [],
+      },
+      {
+        id: 'method.lora', facet: 'method',
+        zh: 'LoRA', en: 'Low-rank adaptation',
+        aliases: [], ancestorIds: ['method.peft'],
+      },
+      {
+        id: 'task.diarization', facet: 'task',
+        zh: '说话人分离标注', en: 'Speaker diarization',
+        aliases: ['说话人日志', 'diarization'], ancestorIds: [],
+      },
+    ],
+  };
+  const items = [
+    {
+      ...record(0),
+      taxonomyConcepts: [{ id: 'method.lora', facet: 'method', label: 'LoRA', ancestorIds: ['method.peft'] }],
+    },
+    {
+      ...record(1),
+      taxonomyConcepts: [{ id: 'task.diarization', facet: 'task', label: '说话人分离标注', ancestorIds: [] }],
+    },
+  ];
+  const browser = browserFixture('search', items, '?q=参数高效微调', false, registry);
+  await browser.ready();
+  assert.equal(browser.requests[0], 'https://nanless.github.io/audio-paper-digest-blog/index.json');
+  assert.equal(browser.requests[1], 'https://nanless.github.io/audio-paper-digest-blog/data/taxonomy-registry.json');
+  assert.equal(browser.nodes.searchResults.children.length, 1);
+  assert.match(browser.nodes.searchResults.textContent, /论文 0/);
+  browser.nodes.searchInput.value = '说话人日志';
+  browser.nodes.searchInput.dispatch('input');
+  assert.equal(browser.nodes.searchResults.children.length, 1);
+  assert.match(browser.nodes.searchResults.textContent, /论文 1/);
 });

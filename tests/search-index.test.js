@@ -12,6 +12,23 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
   const content = path.join(root, 'content', 'posts');
   fs.mkdirSync(content, { recursive: true });
+  // 构建期的 registry 快照（data/taxonomy-registry.json）负责展开概念祖先链。
+  const dataDir = path.join(root, 'data');
+  fs.mkdirSync(dataDir, { recursive: true });
+  for (const name of fs.readdirSync(path.resolve(__dirname, '..', 'data'))) {
+    if (name === 'taxonomy-registry.json') continue;
+    fs.copyFileSync(path.resolve(__dirname, '..', 'data', name), path.join(dataDir, name));
+  }
+  fs.writeFileSync(path.join(dataDir, 'taxonomy-registry.json'), `${JSON.stringify({
+    contract: 'paper-taxonomy-registry-snapshot-v1',
+    registryVersion: 'paper-taxonomy-v1',
+    registrySha256: 'a'.repeat(64),
+    concepts: [
+      { id: 'task.speech', facet: 'task', zh: '语音识别', en: 'Speech recognition', aliases: ['ASR'], ancestorIds: [] },
+      { id: 'task.structured', facet: 'task', zh: '结构化任务', en: 'Structured task', aliases: ['结构化'], ancestorIds: ['task.speech'] },
+      { id: 'method.structured', facet: 'method', zh: '结构化方法', en: 'Structured method', aliases: [], ancestorIds: [] },
+    ],
+  }, null, 2)}\n`);
   const config = path.join(root, 'hugo.yaml');
   fs.writeFileSync(config, [
     'baseURL: https://example.test/blog/',
@@ -19,6 +36,7 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     'buildFuture: true',
     'disableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]',
     'staticDir: []',
+    `dataDir: ${JSON.stringify(dataDir)}`,
     'outputs:',
     '  home: [HTML, JSON]',
     'params:',
@@ -64,7 +82,8 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   ].join('\n'));
   fs.writeFileSync(path.join(root, 'content', 'archives.md'), '---\ntitle: Archive\nlayout: archives\n---\n');
   execFileSync('hugo', ['--source', path.resolve(__dirname, '..'), '--config', config,
-    '--contentDir', path.join(root, 'content'), '--destination', path.join(root, 'public'), '--noBuildLock'], { stdio: 'pipe' });
+    '--contentDir', path.join(root, 'content'), '--destination', path.join(root, 'public'),
+    '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const records = JSON.parse(fs.readFileSync(path.join(root, 'public', 'index.json'), 'utf8'));
   const legacy = records.find((item) => item.title === 'Original English title');
   assert.equal(legacy.titleZh, '中文题目');
@@ -81,8 +100,8 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   assert.equal(workbench.method, 'Structured method');
   assert.equal(workbench.taxonomyContract, 'paper-taxonomy-flat-tags-compat-v1');
   assert.deepEqual(workbench.taxonomyConcepts, [
-    { id: 'task.structured', facet: 'task', label: 'Structured task' },
-    { id: 'method.structured', facet: 'method', label: 'Structured method' },
+    { id: 'task.structured', facet: 'task', label: 'Structured task', ancestorIds: ['task.speech'] },
+    { id: 'method.structured', facet: 'method', label: 'Structured method', ancestorIds: [] },
   ]);
   assert.equal(workbench.score, '0');
   assert.equal(workbench.summary, 'Evidence from the structured contract.');
