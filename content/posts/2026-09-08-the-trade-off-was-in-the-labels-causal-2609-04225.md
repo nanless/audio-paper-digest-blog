@@ -32,7 +32,7 @@ paper_digest_abstract_sha256: "39de4bf563b836bb74d1729593d6132150f17095f0e8ef05c
 paper_digest_sidecars: {"citation.bib":{"sha256":"7413e3f3026cad956590e8730e651c4c13c33e3e533318915713e45b0b1b37a0","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.bib"},"citation.json":{"sha256":"148c94243d6c0567345f8baec8fd92baf60718e511d271fb90730734dce1ade0","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.json"},"citation.ris":{"sha256":"0b510b94457b398ac6b5412be128b7d1edcad80c2b348f3d421bd72b24d4ce0b","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/citation.ris"},"rethink-context.json":{"sha256":"3db164a078a7a7d1a9d4bd85405bb73e45242dd72f1e8f2a6cd6cd09ba6d2406","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04225/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
 paper_digest_api_reader_article_sha256: "ef6f7c892790e917efc29901c8a57880bf4805ea5b6992ba7ff20d73a7765ec6"
-paper_digest_api_reader_plan_sha256: "9365f75bbb9d2635aeb9ccd0d07efd148991272b5dfa54f915b0d1e325f0e0aa"
+paper_digest_api_reader_plan_sha256: "4fc124c117d6f64d4d30c68a8db2a072a69de55f3f55f948154d17e09d7e6eeb"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "c53bc84e4884f255e1133ff71357ee29568deea1c501460bb86f5fe9706373f1"
 paper_digest_api_reader_source_table_count: 4

@@ -31,8 +31,8 @@ paper_digest_authors: [{"affiliations":["Shanghai Artificial Intelligence Labora
 paper_digest_abstract_sha256: "e68e619463c6ff8385d6e35806626009698582dbb374e94a0b31093d7692d668"
 paper_digest_sidecars: {"citation.bib":{"sha256":"68e5eabc9f14970710cb775aa19aad6e49cd0c54ef0617252d05f90c41a07a45","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04867/citation.bib"},"citation.json":{"sha256":"572a494203cb2f8167304220b832c6a6ca96b8b12cc8b7c684d72a94a42af6c5","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04867/citation.json"},"citation.ris":{"sha256":"37033289aff18c81f68565e71f1ee38c9cbdd543cdbc32672a810d3b2bf64a26","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04867/citation.ris"},"rethink-context.json":{"sha256":"4cc961dff99e0e2344b26456384fab95df1e508f75dc8cd845bf42fcfa49f347","url":"/audio-paper-digest-blog/data/papers/2026-09-08/2609-04867/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher-v3"
-paper_digest_api_reader_article_sha256: "008e3c2e1ab78101e2c9f14ebe426aa48f2747267faf6bdc79bc9e7c25857a90"
-paper_digest_api_reader_plan_sha256: "0a5189d332795cab290193d0ffc3853b3d81b2538d652cd989e38078bcb66111"
+paper_digest_api_reader_article_sha256: "4f979b37d6a7ba89c37e0ba11376bc60c25cb6c0760c698e9f00a3a4d3022ef7"
+paper_digest_api_reader_plan_sha256: "76b05a86cd99bdd3b0668d9214a2c2e213f72bcd36388f8d0a3ef766aec0292e"
 paper_digest_api_reader_source_binding_contract: "api-reader-source-bindings-v4"
 paper_digest_api_reader_source_bindings_sha256: "35dd1e0818296a2ae22e3cbfc26dd59e8f122ce11e657272751f2998e593ffee"
 paper_digest_api_reader_source_table_count: 4
@@ -132,12 +132,6 @@ PRISM-Bench 由两部分紧耦合组成：面向诊断的数据集与可见性�
 **标签条件激活 × 可见性感知评估：** 标签条件激活负责根据样本的人工校验标签决定本次只评哪些维度与哪些类型的细则，可见性感知评估负责根据 On-screen 或 Off-screen 决定音视一致性是否生效，二者搭配使同一套 4 维度框架在不同子集下只激活有意义的评分项，避免对纯 Off-screen 样本误罚可见同步，也避免无关类型的噪声评分。
 
 下图给出评估管线的实现形态，重点观察标签到阶段的路由与盲评输入的组织方式。
-
-> **看图路径：** 1. 左侧 Activated Tags 中 Speech/Music 与 On-screen 被激活而 Sound/Off-screen 被忽略的开关状态；2. 右侧 Stage 1 与 Stage 2 在是否接入 Caption 上的输入差异及对应的评估维度分组；3. 两阶段各自对 Candidate 1 与 Candidate 2 独立输出分数的并列结构
-
-[![原论文 Figure 4.：PRISM-Bench evaluation pipeline.](https://arxiv.org/html/2609.04867v1/prism-bench.png)](https://arxiv.org/html/2609.04867v1/prism-bench.png)
-
-*论文图 4。原论文 Figure 4.：“PRISM-Bench evaluation pipeline.”。*
 
 图中左侧为 Activated Tags 的开关示例，中间棱镜示意将标签路由到两个评估阶段，右侧为 Two-Stage MLLM-as-a-Judge 的具体输入输出：Stage 1 为 Without Caption 的 Video Guide Eval，输出 AV Coherence 与 Audio Quality 的逐类型分数；Stage 2 为带 Caption 的 Caption Guide Eval，输出 Expressiveness 与 Prompt Following 的逐类型分数。每阶段评委对 Candidate 1 与 Candidate 2 独立按固定量表打分，并为每个激活维度附带简短证据陈述，便于后续审计与错误分析。
 
