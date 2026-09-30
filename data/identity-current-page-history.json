@@ -1,0 +1,209 @@
+{
+  "contract": "historical-current-page-source-identity-supplement-v1",
+  "records": {
+    "content/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake.md": {
+      "contract": "historical-current-page-source-identity-supplement-v1",
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+      "runId": "6f9c6b02-9741-4e9c-91d1-b53b2a3e7cb1",
+      "pageKey": "page:2ded567c945c62b1751c11051decc0ba84e86fa9c8675f402268d604b535744b",
+      "pageSha256": "4dc03a9ac01c0a2593df9a563ba07123fdef78682a6ea2f8efa2657eb4127e25",
+      "bodySha256": "1df4828136539ce0038bca403f6f9bc7de250a252181d17cbed72dce7644e137",
+      "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+      "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+      "currentPageBinding": {
+        "contract": "published-current-page-source-binding-v1",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+        "pagePath": "content/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake.md",
+        "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+        "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+        "originPageKey": "page:0918bc257171050a8615047e2da7d4eaf4a06f48225801b7258298b291e534f3",
+        "originPageSha256": "0303d8e26504bda454a422b258671c903f7b3f8036e1ffa70acbd10a20929c42",
+        "gitCommit": "3d441a02b92156f3d9a8e8ba8d2825c99910f3bb",
+        "gitTree": "d9b1f515455ff95a385ba84cfe92d76ba03e60f8",
+        "gitBlob": "f85dda079a77361b303447486bb3129bb3ade630",
+        "gitMode": "100644",
+        "pageSha256": "4dc03a9ac01c0a2593df9a563ba07123fdef78682a6ea2f8efa2657eb4127e25",
+        "bodySha256": "1df4828136539ce0038bca403f6f9bc7de250a252181d17cbed72dce7644e137",
+        "publishedTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+        "officialTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+        "sourceProofSha256": "4ee3e1e1fad6980f7f3e1e9aeeed8af15beb676fee231ce50a41b1b3e2218664"
+      },
+      "currentPageBindingSha256": "2ded567c945c62b1751c11051decc0ba84e86fa9c8675f402268d604b535744b",
+      "source": {
+        "kind": "conference-local-pdf",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+        "sourceId": "conference:icassp:2026:icassp-arnumber:11460320",
+        "writerInputsSha256": "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icassp-2026",
+            "provenance": "retained-local-crawler",
+            "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+            "metadataRecordIndex": 842,
+            "metadataIdentityBindingSha256": "49cb2cd0fe37f519bbadfed6de1a8542ea3055ce0bf74911abda0541835902c0",
+            "pdfSha256": "ab3dc927f87a57c2e5d5f5456938de4124b65b3b8abe815397316c3b79a31a51",
+            "pdfBytes": 1124530,
+            "pdfIdentityBindingSha256": "58f1b8ab0b089e82697758dbde0c3ec2c0cfabc2496f83e612db8e450b209824",
+            "sourceBindingSha256": "39bcd069610ecf90a9581ec42ad33007e8ba4c5334f2b425e294ca7111a5cdad",
+            "acquisition": {
+              "openreviewResponseBytes": null,
+              "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+              "receipt": null,
+              "sourceAuthors": null,
+              "sourceDoi": null,
+              "sourceKind": "retained-local-no-network-receipt",
+              "sourceTitle": null,
+              "versionRelation": null
+            },
+            "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+          }
+        ],
+        "originalTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+        "sourceUrl": "https://ieeexplore.ieee.org/document/11460320",
+        "pdfUrl": "",
+        "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。"
+      },
+      "sourceProofSha256": "4ee3e1e1fad6980f7f3e1e9aeeed8af15beb676fee231ce50a41b1b3e2218664",
+      "identityStatus": "verified",
+      "evidenceType": "sealed-source-identity-only",
+      "taxonomyStatus": "not-classified-by-identity-proof",
+      "proofSha256": "376c25eb30ee95dabfc144d27437ea9cd16b7a7ef82a9bf37791432fb35704d3"
+    },
+    "content/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes.md": {
+      "contract": "historical-current-page-source-identity-supplement-v1",
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460386",
+      "runId": "6f9c6b02-9741-4e9c-91d1-b53b2a3e7cb1",
+      "pageKey": "page:9a32bb595ffb4d493b64c1ebb1f7769796444d53f62507ad827ab8fd333b42fd",
+      "pageSha256": "1215f907dd6218d52b27c589f162da5fcc8f647159c0ba7843b4c7f8be4ecaf8",
+      "bodySha256": "d606e2d9790893705f98c1b84c8110b2526c6410720094444e9064d81122c166",
+      "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+      "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+      "currentPageBinding": {
+        "contract": "published-current-page-source-binding-v1",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460386",
+        "pagePath": "content/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes.md",
+        "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+        "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+        "originPageKey": "page:77c39820e535d2fc6eaa246e05a57c1e4047cc4dc48d35c408ced616fec72cdd",
+        "originPageSha256": "9e55e7964800c7ad29cfca9e4af61639a10d69e20e04675a54fde236e78aec7a",
+        "gitCommit": "3d441a02b92156f3d9a8e8ba8d2825c99910f3bb",
+        "gitTree": "d9b1f515455ff95a385ba84cfe92d76ba03e60f8",
+        "gitBlob": "dad4c541283417944637052d305b090a7a0addd1",
+        "gitMode": "100644",
+        "pageSha256": "1215f907dd6218d52b27c589f162da5fcc8f647159c0ba7843b4c7f8be4ecaf8",
+        "bodySha256": "d606e2d9790893705f98c1b84c8110b2526c6410720094444e9064d81122c166",
+        "publishedTitle": "Mix2Morph: Learning Sound Morphing from Noisy Mixes",
+        "officialTitle": "Mix2Morph: Learning Sound Morphing from Noisy Mixes",
+        "sourceProofSha256": "d599d968e54078086167a020c865b24a8a7d13709a8792a6a8caa942c958fe78"
+      },
+      "currentPageBindingSha256": "9a32bb595ffb4d493b64c1ebb1f7769796444d53f62507ad827ab8fd333b42fd",
+      "source": {
+        "kind": "conference-local-pdf",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460386",
+        "sourceId": "conference:icassp:2026:icassp-arnumber:11460386",
+        "writerInputsSha256": "888d77bb45fb06ff0d3c679a40a442e850baaea1b4343a865d05970f95c73389",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icassp-2026",
+            "provenance": "retained-local-crawler",
+            "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+            "metadataRecordIndex": 459,
+            "metadataIdentityBindingSha256": "17c20ed0a58b74196fb5c08705672b727f3df06f10871d1edff2d48f1a465621",
+            "pdfSha256": "4cef12c330e4732e79c5b78802ca49f41d86460b24b93164c833808b6fe7384b",
+            "pdfBytes": 7939016,
+            "pdfIdentityBindingSha256": "d1a337f9a109c81a643a38a781ab30d476516b4bf0c3f9520eec47bfeed0c4fd",
+            "sourceBindingSha256": "3d5fdb0dae5ac281e62b56fa115d71b6be5375831acdaf1c2a37acb1269f7140",
+            "acquisition": {
+              "openreviewResponseBytes": null,
+              "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+              "receipt": null,
+              "sourceAuthors": null,
+              "sourceDoi": null,
+              "sourceKind": "retained-local-no-network-receipt",
+              "sourceTitle": null,
+              "versionRelation": null
+            },
+            "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+          }
+        ],
+        "originalTitle": "Mix2Morph: Learning Sound Morphing from Noisy Mixes",
+        "sourceUrl": "https://ieeexplore.ieee.org/document/11460386",
+        "pdfUrl": "",
+        "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。"
+      },
+      "sourceProofSha256": "d599d968e54078086167a020c865b24a8a7d13709a8792a6a8caa942c958fe78",
+      "identityStatus": "verified",
+      "evidenceType": "sealed-source-identity-only",
+      "taxonomyStatus": "not-classified-by-identity-proof",
+      "proofSha256": "258254e513c6a353aeadfb57b29cb1af82a7bff9389724392b707d1b7d456721"
+    },
+    "content/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated.md": {
+      "contract": "historical-current-page-source-identity-supplement-v1",
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460389",
+      "runId": "6f9c6b02-9741-4e9c-91d1-b53b2a3e7cb1",
+      "pageKey": "page:2352400b21639982c09260db663b63c4596f9afd643be63dbee0ee54e24e961b",
+      "pageSha256": "fad8adf1fb41b8baac388975607622807a9c703290185b5c6e996f6d87316f84",
+      "bodySha256": "67d4fe7e13540f3756cfaf95b43155f838cb28092f6f5f099c16c4651fb3f605",
+      "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+      "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+      "currentPageBinding": {
+        "contract": "published-current-page-source-binding-v1",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460389",
+        "pagePath": "content/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated.md",
+        "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+        "originPlanFileSha256": "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda",
+        "originPageKey": "page:d2d2562f8f9b49aaf0cc3d08f16054a6850e177fca0c4f25ac4c283c69eb7f52",
+        "originPageSha256": "d1369d2ebad020defa95b535e844366210526f4f28b1396d520142cfd430e78d",
+        "gitCommit": "3d441a02b92156f3d9a8e8ba8d2825c99910f3bb",
+        "gitTree": "d9b1f515455ff95a385ba84cfe92d76ba03e60f8",
+        "gitBlob": "78ddb8b70bb58add90c41501a04636f2ab55a273",
+        "gitMode": "100644",
+        "pageSha256": "fad8adf1fb41b8baac388975607622807a9c703290185b5c6e996f6d87316f84",
+        "bodySha256": "67d4fe7e13540f3756cfaf95b43155f838cb28092f6f5f099c16c4651fb3f605",
+        "publishedTitle": "Dynamic Balanced Cross-Modal Attention with Gated Sequence Restoration: Towards Robust Multimodal Sentiment Analysis",
+        "officialTitle": "Dynamic Balanced Cross-Modal Attention with Gated Sequence Restoration: Towards Robust Multimodal Sentiment Analysis",
+        "sourceProofSha256": "46b82a79bc1c02a9c3b5540943eb1924a7b2ad24fe599e40641a1548ad3d00cc"
+      },
+      "currentPageBindingSha256": "2352400b21639982c09260db663b63c4596f9afd643be63dbee0ee54e24e961b",
+      "source": {
+        "kind": "conference-local-pdf",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460389",
+        "sourceId": "conference:icassp:2026:icassp-arnumber:11460389",
+        "writerInputsSha256": "21ca5a6b0acb51be3c342d7ab2012b3b5843e1441476026b525047ab8c653b98",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icassp-2026",
+            "provenance": "retained-local-crawler",
+            "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+            "metadataRecordIndex": 145,
+            "metadataIdentityBindingSha256": "1c3c5464c455837311d61dba3013a35da8682ffea061db7cce24208122cca9d0",
+            "pdfSha256": "9c93d4e8f525a0f59913030796308cfb9d9e7fc6beadde041ced0739b5ef4d06",
+            "pdfBytes": 1151222,
+            "pdfIdentityBindingSha256": "a1fe19232463f4380e63f45391bf310c96603753136b81fedf2b12f1c5fef594",
+            "sourceBindingSha256": "7336894b201ebd05670df4c154d701b56f4e3b2d776c799bd9b0d7a3cc1e2eb4",
+            "acquisition": {
+              "openreviewResponseBytes": null,
+              "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+              "receipt": null,
+              "sourceAuthors": null,
+              "sourceDoi": null,
+              "sourceKind": "retained-local-no-network-receipt",
+              "sourceTitle": null,
+              "versionRelation": null
+            },
+            "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+          }
+        ],
+        "originalTitle": "Dynamic Balanced Cross-Modal Attention with Gated Sequence Restoration: Towards Robust Multimodal Sentiment Analysis",
+        "sourceUrl": "https://ieeexplore.ieee.org/document/11460389",
+        "pdfUrl": "",
+        "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。"
+      },
+      "sourceProofSha256": "46b82a79bc1c02a9c3b5540943eb1924a7b2ad24fe599e40641a1548ad3d00cc",
+      "identityStatus": "verified",
+      "evidenceType": "sealed-source-identity-only",
+      "taxonomyStatus": "not-classified-by-identity-proof",
+      "proofSha256": "21f612179cba316d4833550b132c4df7936ecf9a524ad816e5e2f3313917a5d8"
+    }
+  }
+}

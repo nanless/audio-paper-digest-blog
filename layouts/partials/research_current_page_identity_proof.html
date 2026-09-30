@@ -1,0 +1,40 @@
+{{- /* Identity only: an explicitly re-bound published page, never a new taxonomy claim. */ -}}
+{{- $proof := dict -}}
+{{- $history := index hugo.Data "identity-current-page-history" | default dict -}}
+{{- $contract := "historical-current-page-source-identity-supplement-v1" -}}
+{{- if and (eq $history.contract $contract) (eq .Section "posts") .File -}}
+  {{- $key := printf "content/%s" .File.Path -}}
+  {{- $record := index ($history.records | default dict) $key | default dict -}}
+  {{- $shaPattern := `^[a-f0-9]{64}$` -}}{{- $oidPattern := `^[a-f0-9]{40}$` -}}
+  {{- $allowedIds := slice "conference:icassp:2026:icassp-arnumber:11460320" "conference:icassp:2026:icassp-arnumber:11460386" "conference:icassp:2026:icassp-arnumber:11460389" -}}
+  {{- $approvedBindings := dict "conference:icassp:2026:icassp-arnumber:11460320" (dict "pagePath" "content/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake.md" "originPageKey" "page:0918bc257171050a8615047e2da7d4eaf4a06f48225801b7258298b291e534f3" "originPageSha256" "0303d8e26504bda454a422b258671c903f7b3f8036e1ffa70acbd10a20929c42" "sourceProofSha256" "4ee3e1e1fad6980f7f3e1e9aeeed8af15beb676fee231ce50a41b1b3e2218664" "writerInputsSha256" "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719") "conference:icassp:2026:icassp-arnumber:11460386" (dict "pagePath" "content/posts/2026-04-29-mix2morph-learning-sound-morphing-from-noisy-mixes.md" "originPageKey" "page:77c39820e535d2fc6eaa246e05a57c1e4047cc4dc48d35c408ced616fec72cdd" "originPageSha256" "9e55e7964800c7ad29cfca9e4af61639a10d69e20e04675a54fde236e78aec7a" "sourceProofSha256" "d599d968e54078086167a020c865b24a8a7d13709a8792a6a8caa942c958fe78" "writerInputsSha256" "888d77bb45fb06ff0d3c679a40a442e850baaea1b4343a865d05970f95c73389") "conference:icassp:2026:icassp-arnumber:11460389" (dict "pagePath" "content/posts/2026-04-29-dynamic-balanced-cross-modal-attention-with-gated.md" "originPageKey" "page:d2d2562f8f9b49aaf0cc3d08f16054a6850e177fca0c4f25ac4c283c69eb7f52" "originPageSha256" "d1369d2ebad020defa95b535e844366210526f4f28b1396d520142cfd430e78d" "sourceProofSha256" "46b82a79bc1c02a9c3b5540943eb1924a7b2ad24fe599e40641a1548ad3d00cc" "writerInputsSha256" "21ca5a6b0acb51be3c342d7ab2012b3b5843e1441476026b525047ab8c653b98") -}}
+  {{- $approved := index $approvedBindings ($record.paperId | default "") | default dict -}}
+  {{- $valid := and (reflect.IsMap $record) (eq $record.contract $contract) (in $allowedIds ($record.paperId | default "")) (eq $record.identityStatus "verified") (eq $record.evidenceType "sealed-source-identity-only") (eq $record.taxonomyStatus "not-classified-by-identity-proof") (reflect.IsMap $record.source) (reflect.IsMap $record.currentPageBinding) (findRE `^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$` ($record.runId | default "") 1) -}}
+  {{- range $field := slice "concepts" "primaryTaskId" "primaryMethodId" "primaryTaskLabel" "primaryMethodLabel" "registrySha256" "canonicalAnalysisSha256" "planSha256" "planFileSha256" -}}
+    {{- if isset $record $field }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- range $field := slice "pageSha256" "bodySha256" "proofSha256" "sourceProofSha256" "originPlanSha256" "originPlanFileSha256" "currentPageBindingSha256" -}}
+    {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- $valid = and $valid (eq ($record.originPlanSha256 | default "") "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5") (eq ($record.originPlanFileSha256 | default "") "ae4fe814891c40d42cee2b4fa5098201418cfc9ce2506b0390c51f0e6af45dda") (eq $key ($approved.pagePath | default "")) (eq ($record.sourceProofSha256 | default "") ($approved.sourceProofSha256 | default "")) -}}
+  {{- if $valid -}}
+    {{- $hashInput := newScratch -}}{{- $hashInput.Set "record" dict -}}
+    {{- range $field, $value := $record }}{{ if ne $field "proofSha256" }}{{ $hashInput.SetInMap "record" $field $value }}{{ end }}{{ end -}}
+    {{- $raw := readFile $key -}}
+    {{- $binding := $record.currentPageBinding -}}{{- $source := $record.source -}}
+    {{- $valid = and (eq (crypto.SHA256 (($hashInput.Get "record") | jsonify (dict "noHTMLEscape" true))) $record.proofSha256) (eq (crypto.SHA256 ($source | jsonify (dict "noHTMLEscape" true))) $record.sourceProofSha256) (eq (crypto.SHA256 ($binding | jsonify (dict "noHTMLEscape" true))) $record.currentPageBindingSha256) (eq $record.pageKey (printf "page:%s" $record.currentPageBindingSha256)) (eq (crypto.SHA256 $raw) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) -}}
+    {{- $valid = and $valid (eq $binding.contract "published-current-page-source-binding-v1") (eq $binding.paperId $record.paperId) (eq $binding.pagePath $key) (eq $binding.originPlanSha256 $record.originPlanSha256) (eq $binding.originPlanFileSha256 $record.originPlanFileSha256) (findRE `^page:[a-f0-9]{64}$` ($binding.originPageKey | default "") 1) (findRE $shaPattern ($binding.originPageSha256 | default "") 1) (eq $binding.pageSha256 $record.pageSha256) (eq $binding.bodySha256 $record.bodySha256) (eq $binding.sourceProofSha256 $record.sourceProofSha256) (eq $binding.gitMode "100644") -}}
+    {{- $valid = and $valid (eq $binding.originPageKey $approved.originPageKey) (eq $binding.originPageSha256 $approved.originPageSha256) (eq $source.writerInputsSha256 $approved.writerInputsSha256) -}}
+    {{- range $field := slice "gitCommit" "gitTree" "gitBlob" }}{{ if not (findRE $oidPattern (index $binding $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+    {{- $valid = and $valid (eq $binding.gitCommit "3d441a02b92156f3d9a8e8ba8d2825c99910f3bb") (eq $binding.gitTree "d9b1f515455ff95a385ba84cfe92d76ba03e60f8") -}}
+    {{- $gitBlob := crypto.SHA1 (printf "blob %d%c%s" (len $raw) 0 $raw) -}}
+    {{- $valid = and $valid (eq $gitBlob $binding.gitBlob) (eq $binding.publishedTitle .Title) (eq $binding.officialTitle $source.originalTitle) (eq $binding.publishedTitle $binding.officialTitle) (eq $source.kind "conference-local-pdf") (eq $source.paperId $record.paperId) (eq $source.sourceId $record.paperId) (eq $source.sourceUrl (printf "https://ieeexplore.ieee.org/document/%s" (replaceRE `^.*:` "" $record.paperId))) (not $source.pdfUrl) (not $source.versionRelation) (findRE $shaPattern ($source.writerInputsSha256 | default "") 1) (reflect.IsSlice $source.sourceBindings) (gt (len ($source.sourceBindings | default slice)) 0) -}}
+    {{- range $source.sourceBindings -}}
+      {{- if not (and (reflect.IsMap .) .sourceSet .provenance (isset . "metadataRecordIndex") (ge .metadataRecordIndex 0) (gt (.pdfBytes | default 0) 0) (reflect.IsMap .acquisition)) }}{{ $valid = false }}{{ end -}}
+      {{- $entry := . -}}{{ range $field := slice "metadataSha256" "metadataIdentityBindingSha256" "pdfSha256" "pdfIdentityBindingSha256" "sourceBindingSha256" "acquisitionSha256" }}{{ if not (findRE $shaPattern (index $entry $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+      {{- if and (eq .acquisition.sourceKind "retained-local-no-network-receipt") (not $source.provenanceDisclosure) }}{{ $valid = false }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $valid }}{{ $proof = $record }}{{ end -}}
+{{- end -}}
+{{- return $proof -}}

@@ -16,6 +16,9 @@
 {{- with $metadata.score }}{{ $score = printf "%s/10" . }}{{ end }}
 {{- $arxivId := $metadata.arxivId }}
 {{- $task := $metadata.task }}
+{{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
+{{- $isSourceV2 := and $hasControlledTaxonomy (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v2") (eq $taxonomyProof.evidenceContract "historical-source-taxonomy-supplement-v2") }}
+{{- $researchRole := $taxonomyProof.primaryResearchRole | default dict }}
 
 <article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
   <a class="skip-to-article" href="#article-body">跳到正文</a>
@@ -88,8 +91,8 @@
       </section>
       {{- end }}
       <section class="research-signal-card">
-        <span class="research-signal-card__label">{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}</span>
-        <p>{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}</p>
+        <span class="research-signal-card__label">{{ if $isSourceV2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物") $researchRole.kind | default "研究定位" }}{{ else }}{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}{{ end }}</span>
+        <p>{{ if $isSourceV2 }}{{ $researchRole.label | default "查看正文中的研究问题与方法说明" }}{{ else }}{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}{{ end }}</p>
       </section>
       {{- with $arxivId }}
       <section class="research-signal-card">

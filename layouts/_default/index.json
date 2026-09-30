@@ -38,6 +38,10 @@
     }}
     {{- with $taxonomyProof.registrySha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
     {{- with $taxonomyProof.evidenceContract }}{{ $entry = merge $entry (dict "taxonomyEvidenceContract" . "taxonomyEvidenceType" ($taxonomyProof.evidenceType | default "canonical-analysis") "taxonomyProofSha256" $taxonomyProof.proofSha256 "taxonomyPageSha256" $taxonomyProof.pageSha256) }}{{ end }}
+    {{- if eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v2" }}
+      {{- $entry = merge $entry (dict "taxonomyClassificationContract" $taxonomyProof.classificationContract) }}
+      {{- range $key := slice "researchType" "domainScope" "primaryResearchRole" "primaryScientificTopicId" "primaryScientificTopicLabel" "methodNotApplicable" "methodNotApplicableReason" }}{{ $entry = merge $entry (dict $key (index $metadata $key)) }}{{ end }}
+    {{- end }}
     {{- if ne $metadata.originalTitle .Title }}{{ $entry = merge $entry (dict "originalTitle" $metadata.originalTitle) }}{{ end }}
     {{- range $key := slice "paperId" "sourceKind" "primaryTaskId" "primaryMethodId" "identityEvidenceContract" "identityEvidenceType" "identityProofSha256" "identityPageSha256" }}
       {{- with index $metadata $key }}{{ $entry = merge $entry (dict $key .) }}{{ end }}

@@ -17,7 +17,7 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
   for (const directory of ['content/posts', 'data', 'layouts/partials', 'layouts/_default']) {
     fs.mkdirSync(path.join(temporary, directory), { recursive: true });
   }
-  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html',
+  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/taxonomy_concept_counts.html', 'layouts/partials/taxonomy_valid_records.html',
     'layouts/partials/taxonomy_registry_index.html', 'layouts/partials/taxonomy_snapshot.html', 'layouts/partials/taxonomy_page_proof.html',
     'layouts/partials/citation_source.html', 'layouts/partials/research_historical_source_version.html']) {
@@ -113,7 +113,7 @@ test('Hugo version catalog preserves signed labels and parent counts across a re
   for (const directory of ['content/posts', 'data', 'layouts/partials', 'layouts/_default']) {
     fs.mkdirSync(path.join(temporary, directory), { recursive: true });
   }
-  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html',
+  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/taxonomy_concept_counts.html', 'layouts/partials/taxonomy_valid_records.html',
     'layouts/partials/taxonomy_registry_index.html', 'layouts/partials/taxonomy_snapshot.html', 'layouts/partials/taxonomy_page_proof.html',
     'layouts/partials/citation_source.html']) {

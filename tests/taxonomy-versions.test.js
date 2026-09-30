@@ -16,8 +16,11 @@ function paper(name, snapshot, ids, extra = {}) {
       return { id, facet: node.facet, label: node.zh };
     }), ...extra };
 }
-test('catalog binds all source definitions and preserves old names while exposing 262 current concepts', () => {
-  assert.equal(Object.keys(graph.byId).length, 262);
+test('catalog binds all source definitions and preserves 228/262 while exposing formal 330 current concepts', () => {
+  assert.equal(Object.keys(graph.byId).length, 330);
+  const previous = catalog.snapshots.find(snapshot => snapshot.registrySha256 === 'a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d');
+  assert.equal(previous.concepts.length, 262);
+  assert.deepEqual(current.concepts.slice(0, 262), previous.concepts);
   assert.equal(old.concepts.length, 228);
   assert.equal(graph.byId['task.music-understanding'].zh, '音乐分析');
   const resolved = graph.resolveRecord(paper('old-music', old, ['task.music-understanding']));

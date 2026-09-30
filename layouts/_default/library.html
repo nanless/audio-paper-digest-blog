@@ -36,6 +36,8 @@
         <option value="relevance">关键词相关性</option>
       </select>
     </label>
+    <label>研究类型<select id="library-research-type"><option value="all">全部研究类型</option><option value="engineering">工程研究</option><option value="science">科学研究</option><option value="analysis">机制分析</option><option value="evaluation">评测研究</option><option value="resource">研究资源</option><option value="review">综述</option><option value="experience">实践报告</option><option value="position">观点论文</option><option value="unclassified">类型尚未核验</option></select></label>
+    <label>研究范围<select id="library-domain-scope"><option value="all">全部研究范围</option><option value="in-domain">音频研究</option><option value="cross-domain">跨域交叉</option><option value="adjacent-domain">相邻声学</option><option value="out-of-domain">其他领域</option><option value="unclassified">范围尚未核验</option></select></label>
       </div>
     </details>
   </form>
@@ -54,7 +56,7 @@
       <p>同一分面内多个方向满足任意一个即可；不同分面需同时满足。展开下级与勾选方向是独立操作。</p>
       <div class="library-direction-options">
         <label>方向范围<select id="library-scope"><option value="subtree">包含下级方向</option><option value="direct">仅直接标注</option></select></label>
-        <label>任务 / 方法角色<select id="library-role"><option value="any">所有相关标注</option><option value="primary">仅明确主任务 / 主方法</option></select></label>
+        <label>研究角色<select id="library-role"><option value="any">所有相关标注</option><option value="primary">仅主要研究角色 / 主方法</option></select></label>
       </div>
       <label class="library-direction-search">在方向目录中查找<input id="library-direction-search" type="search" placeholder="中文、英文或别名，例如 PEFT" autocomplete="off"></label>
       <p class="library-direction-counter-note">方向旁的数字：当前结果中「直接标注 / 含下级」的论文数。</p>

@@ -108,8 +108,13 @@
       taxonomyEvidenceContract: plainText(item.taxonomyEvidenceContract), taxonomyEvidenceType: plainText(item.taxonomyEvidenceType),
       taxonomyProofSha256: plainText(item.taxonomyProofSha256), taxonomyPageSha256: plainText(item.taxonomyPageSha256),
       primaryTaskId: plainText(item.primaryTaskId), primaryMethodId: plainText(item.primaryMethodId),
+      taxonomyClassificationContract: plainText(item.taxonomyClassificationContract),
+      researchType: plainText(item.researchType), domainScope: plainText(item.domainScope),
+      primaryResearchRole: item.primaryResearchRole && typeof item.primaryResearchRole === 'object' ? item.primaryResearchRole : null,
+      primaryScientificTopicId: plainText(item.primaryScientificTopicId),
+      methodNotApplicable: item.methodNotApplicable, methodNotApplicableReason: plainText(item.methodNotApplicableReason),
       searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId]
-        .concat(tags, categories, taxonomy).join(' '))
+        .concat(tags, categories, taxonomy, item.primaryResearchRole && item.primaryResearchRole.label || '').join(' '))
     };
   }
 
@@ -157,7 +162,10 @@
       if (!facets[node.facet]) facets[node.facet] = [];
       if (!facets[node.facet].includes(id)) facets[node.facet].push(id);
     });
-    return { facets: facets, scope: params.get('scope') === 'direct' ? 'direct' : 'subtree',
+    var domainScope = params.get('domain') || 'all', researchType = params.get('researchType') || 'all';
+    if (!['all', 'unclassified', 'in-domain', 'cross-domain', 'adjacent-domain', 'out-of-domain'].includes(domainScope)) error = '链接中的研究范围无法确认。';
+    if (!['all', 'unclassified', 'engineering', 'science', 'analysis', 'evaluation', 'resource', 'review', 'experience', 'position'].includes(researchType)) error = '链接中的研究类型无法确认。';
+    return { facets: facets, scope: params.get('scope') === 'direct' ? 'direct' : 'subtree', domainScope: domainScope, researchType: researchType,
       role: params.get('role') === 'primary' ? 'primary' : 'any', error: error,
       requestedIds: params.getAll('concept') };
   }
@@ -169,7 +177,7 @@
   function cloneDirections(state) {
     var facets = Object.create(null);
     Object.keys(state.facets || {}).forEach(function (facet) { facets[facet] = state.facets[facet].slice(); });
-    return { facets: facets, scope: state.scope, role: state.role, error: state.error || '',
+    return { facets: facets, scope: state.scope, role: state.role, domainScope: state.domainScope || 'all', researchType: state.researchType || 'all', error: state.error || '',
       requestedIds: (state.requestedIds || []).slice() };
   }
 
@@ -178,13 +186,13 @@
   function libraryResults(entries, groups, state, directions, graph, api) {
     var eligible = filterEntries(entries, state);
     if (directions.error) return [];
-    if (!api || !graph) return selectedIds(directions).length ? [] : eligible;
+    var hasDirection = selectedIds(directions).length > 0 || (directions.domainScope && directions.domainScope !== 'all') || (directions.researchType && directions.researchType !== 'all');
+    if (!api || !graph) return hasDirection ? [] : eligible;
     var ranks = new Map(eligible.map(function (entry, index) { return [entry.permalink, index]; }));
     // Build query groups from eligible guides, so a keyword/year hit in one
     // article cannot borrow classifications from another guide for that paper.
     var candidates = api.groupPapers(eligible, graph);
     var originalGroups = new Map(groups.map(function (group) { return [group.key, group]; }));
-    var hasDirection = selectedIds(directions).length > 0;
     var matched = api.query(candidates, directions, graph).map(function (group) {
       var original = originalGroups.get(group.key) || group;
       var matchingArticles = hasDirection ? group.articles.filter(function (article) {
@@ -254,6 +262,8 @@
   var coverageNode = document.getElementById('library-coverage');
   var scopeSelect = document.getElementById('library-scope');
   var roleSelect = document.getElementById('library-role');
+  var domainSelect = document.getElementById('library-domain-scope');
+  var researchTypeSelect = document.getElementById('library-research-type');
   var directionSearch = document.getElementById('library-direction-search');
   var draftNode = document.getElementById('library-draft-status');
   var api = window.ResearchTaxonomy;
@@ -291,6 +301,8 @@
     var page = Number(params.get('page'));
     visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
     directions = directionState(params, graph);
+    if (domainSelect) domainSelect.value = directions.domainScope;
+    if (researchTypeSelect) researchTypeSelect.value = directions.researchType;
     draft = cloneDirections(directions);
     selectedIds(directions).forEach(function (id) {
       graph.path(id).forEach(function (node) { expanded.add(node.id); });
@@ -307,6 +319,8 @@
     (directions.error ? directions.requestedIds : selectedIds(directions)).forEach(function (id) { params.append('concept', id); });
     if (directions.scope === 'direct') params.set('scope', 'direct');
     if (directions.role === 'primary') params.set('role', 'primary');
+    if (directions.domainScope && directions.domainScope !== 'all') params.set('domain', directions.domainScope);
+    if (directions.researchType && directions.researchType !== 'all') params.set('researchType', directions.researchType);
     var suffix = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
     var historyMethod = push && window.history.pushState ? 'pushState' : 'replaceState';
     window.history[historyMethod](null, '', suffix);
@@ -343,7 +357,14 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
-    if (entry.taxonomyEvidenceContract === 'historical-direct-taxonomy-supplement-v1') {
+    if (entry.taxonomyClassificationContract === 'historical-source-taxonomy-classification-v2' && entry.primaryResearchRole) {
+      var roles = document.createElement('p'); roles.className = 'taxonomy-note';
+      roles.textContent = [api.researchTypeLabels[entry.researchType], api.domainLabels[entry.domainScope],
+        (api.roleLabels[entry.primaryResearchRole.kind] || '主要研究角色') + '：' + entry.primaryResearchRole.label,
+        entry.methodNotApplicable === true ? '研究方法不适用' : ''].filter(Boolean).join(' · ');
+      body.appendChild(roles);
+    }
+    if (['historical-direct-taxonomy-supplement-v1', 'historical-source-taxonomy-supplement-v2'].includes(entry.taxonomyEvidenceContract)) {
       var classificationNote = document.createElement('p'); classificationNote.className = 'taxonomy-note';
       classificationNote.textContent = '历史分类已补充核验 · 原文和原有标签保留'; body.appendChild(classificationNote);
     } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.taxonomyContract) {
@@ -443,11 +464,13 @@
   }
 
   function applyFilters(preservePage, push, restoring) {
+    if (domainSelect) domainSelect.value = directions.domainScope || 'all';
+    if (researchTypeSelect) researchTypeSelect.value = directions.researchType || 'all';
     var filterSummary = document.getElementById('library-filter-summary');
     if (filterSummary) {
       var appliedLabels = [];
       [[typeSelect, 'paper', '类型：'], [yearSelect, 'all', '年份：'],
-        [sortSelect, 'newest', '']].forEach(function (entry) {
+        [sortSelect, 'newest', ''], [researchTypeSelect, 'all', '研究类型：'], [domainSelect, 'all', '研究范围：']].forEach(function (entry) {
         var control = entry[0];
         if (control && control.value !== entry[1] && control.options && control.options[control.selectedIndex]) {
           appliedLabels.push(entry[2] + control.options[control.selectedIndex].textContent);
@@ -661,7 +684,8 @@
     if (coverageNode) {
       var covered = groups.filter(function (group) { return group.conceptIds.length; }).length;
       coverageNode.textContent = graph ? '方向标注覆盖 ' + covered + ' / ' + groups.length + ' 条论文记录（已核身份去重，身份待核单列）。选择方向后仅匹配已确认的受控标注；未标注的历史解读不会推断归类。同分面任选其一，跨分面需同时满足。方向条件仅适用于论文解读，汇总页请清除方向条件后浏览。'
-        + (directions.role === 'primary' ? '当前仅主任务/主方法；未明确登记主角色的记录不参与这些分面的匹配，其他分面仍按相关标注匹配。' : '')
+        + (directions.role === 'primary' ? '仅匹配明确主要研究角色和主方法；条件等其他分面仍按相关标注匹配。科学主题、研究重点和产物不按词语推断主角色。' : '')
+        + ' 研究类型与范围仅取已核v2记录；旧分类保留，不自动推断其研究类型。'
         : '分类目录暂时无法确认。关键词检索仍可使用；方向链接保留为空结果，避免推断历史分类。';
     }
     if (scopeSelect) scopeSelect.value = draft.scope;
@@ -680,6 +704,13 @@
   });
   if (scopeSelect) scopeSelect.addEventListener('change', function () { draft.scope = scopeSelect.value; updateDraft(); });
   if (roleSelect) roleSelect.addEventListener('change', function () { draft.role = roleSelect.value; updateDraft(); });
+  [domainSelect, researchTypeSelect].filter(Boolean).forEach(function (select) {
+    select.addEventListener('change', function () {
+      directions.domainScope = domainSelect ? domainSelect.value : 'all';
+      directions.researchType = researchTypeSelect ? researchTypeSelect.value : 'all';
+      draft = cloneDirections(directions); applyFilters(false, true);
+    });
+  });
   if (directionSearch) directionSearch.addEventListener('input', revealDirections);
   var applyButton = document.getElementById('library-direction-apply');
   if (applyButton) applyButton.addEventListener('click', function () {

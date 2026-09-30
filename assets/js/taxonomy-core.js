@@ -7,6 +7,18 @@
   'use strict';
 
   var CONTRACT = 'paper-taxonomy-flat-tags-compat-v1';
+  var V2_CONTRACT = 'historical-source-taxonomy-classification-v2';
+  var researchTypeLabels = Object.freeze({ engineering: '工程研究', science: '科学研究', analysis: '机制分析',
+    evaluation: '评测研究', resource: '研究资源', review: '综述', experience: '实践报告', position: '观点论文' });
+  var domainLabels = Object.freeze({ 'in-domain': '音频研究', 'cross-domain': '跨域交叉',
+    'adjacent-domain': '相邻声学', 'out-of-domain': '其他领域' });
+  var roleFacets = Object.freeze({ engineering: ['task'], science: ['scientific_topic'],
+    analysis: ['scientific_topic', 'research_focus'], evaluation: ['research_focus'], resource: ['artifact'],
+    review: ['task', 'scientific_topic', 'research_focus'],
+    experience: ['task', 'scientific_topic', 'research_focus', 'artifact'],
+    position: ['scientific_topic', 'research_focus'] });
+  var roleLabels = Object.freeze({ task: '主要研究任务', scientific_topic: '主要研究主题',
+    research_focus: '主要研究重点', artifact: '主要研究产物', method: '主要研究方法' });
   var facetLabels = Object.freeze({ task: '任务', method: '方法', setting: '条件', signal: '信号',
     application: '应用', research_focus: '研究重点', artifact: '研究产物',
     scientific_topic: '科学主题', model_family: '模型家族' });
@@ -139,6 +151,35 @@
         return node && current && isActive(node) && isActive(current) && node.facet === current.facet
           && concept.facet === node.facet && concept.label === node.zh;
       }).map(function (concept) { return source.byId[concept.id]; });
+      if (record.taxonomyClassificationContract) {
+        var role = record.primaryResearchRole;
+        var selected = new Set(result.concepts.map(function (node) { return node.id; }));
+        var roleNode = role && source.byId[role.conceptId];
+        var v2 = record.taxonomyClassificationContract === V2_CONTRACT
+          && record.taxonomyEvidenceType === 'source-only-taxonomy-v2'
+          && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2'
+          && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
+          && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)
+          && roleNode && selected.has(roleNode.id) && roleFacets[record.researchType].includes(role.kind)
+          && role.kind === roleNode.facet && role.label === roleNode.zh
+          && result.concepts.length === record.taxonomyConcepts.length
+          && selected.size === result.concepts.length && selected.size <= 5
+          && !result.concepts.some(function (node) { return node.ancestorIds.some(function (id) { return selected.has(id); }); });
+        if (v2 && record.methodNotApplicable === true) {
+          v2 = ['position', 'experience'].includes(record.researchType)
+            && !record.primaryMethodId && !text(record.method) && text(record.methodNotApplicableReason).length >= 20
+            && !result.concepts.some(function (node) { return node.facet === 'method'; });
+        } else if (v2) {
+          var method = source.byId[record.primaryMethodId];
+          v2 = record.methodNotApplicable === false && method && method.facet === 'method'
+            && selected.has(method.id) && !text(record.methodNotApplicableReason) && selected.size >= 2;
+        }
+        if (v2 && record.researchType === 'engineering') v2 = record.primaryTaskId === role.conceptId;
+        if (v2 && record.researchType !== 'engineering') v2 = !record.primaryTaskId && !text(record.task);
+        if (v2 && record.researchType === 'science') v2 = record.primaryScientificTopicId === role.conceptId;
+        if (v2 && record.researchType !== 'science') v2 = !record.primaryScientificTopicId;
+        if (!v2) { result.status = 'invalid-roles'; result.concepts = []; }
+      }
       return result;
     };
     return graph;
@@ -180,6 +221,7 @@
       group.articles.push(record);
       var resolved = graph.resolveRecord(record);
       var classification = { conceptIds: [], primaryTaskIds: [], primaryMethodIds: [],
+        primaryRoleIdsByFacet: Object.create(null), researchType: '', domainScope: '',
         ancestorIdsByConcept: Object.create(null), labelsByConcept: Object.create(null),
         registrySha256: resolved.registrySha256, registryVersion: resolved.registryVersion, status: resolved.status };
       group.classifications.push(classification);
@@ -202,13 +244,21 @@
             if (!group[field[1]].includes(primaryId)) group[field[1]].push(primaryId);
           }
         });
+      if (resolved.status === 'verified' && record.taxonomyClassificationContract === V2_CONTRACT && resolved.concepts.length) {
+        classification.researchType = record.researchType;
+        classification.domainScope = record.domainScope;
+        var primaryRole = record.primaryResearchRole;
+        classification.primaryRoleIdsByFacet[primaryRole.kind] = [primaryRole.conceptId];
+      }
     });
     return Array.from(groups.values());
   }
 
   function selectionIds(group, facet, role, graph) {
+    if (role === 'primary' && group.primaryRoleIdsByFacet && group.primaryRoleIdsByFacet[facet]) return group.primaryRoleIdsByFacet[facet];
     if (role === 'primary' && facet === 'task') return group.primaryTaskIds;
     if (role === 'primary' && facet === 'method') return group.primaryMethodIds;
+    if (role === 'primary' && ['scientific_topic', 'research_focus', 'artifact'].includes(facet)) return [];
     return group.conceptIds.filter(function (id) { return graph.byId[id] && graph.byId[id].facet === facet; });
   }
 
@@ -225,13 +275,20 @@
         if (!graph.byId[id] || graph.byId[id].facet !== facet || !isActive(graph.byId[id])) throw new Error('分类筛选包含未知方向');
       });
     });
-    return { scope: scope, role: role, facets: facets };
+    var domainScope = value.domainScope || 'all', researchType = value.researchType || 'all';
+    if (!['all', 'unclassified'].includes(domainScope) && !own(domainLabels, domainScope)) throw new Error('研究范围筛选非法');
+    if (!['all', 'unclassified'].includes(researchType) && !own(researchTypeLabels, researchType)) throw new Error('研究类型筛选非法');
+    return { scope: scope, role: role, facets: facets, domainScope: domainScope, researchType: researchType };
   }
 
   function matchingClassifications(group, selection, graph) {
     // Multiple signed readings can disagree. A paper qualifies only when one
     // reading supplies the entire AND condition; never join labels across them.
     return (group.classifications || []).filter(function (classification) {
+      if (selection.domainScope !== 'all'
+        && (selection.domainScope === 'unclassified' ? !!classification.domainScope : classification.domainScope !== selection.domainScope)) return false;
+      if (selection.researchType !== 'all'
+        && (selection.researchType === 'unclassified' ? !!classification.researchType : classification.researchType !== selection.researchType)) return false;
       return Object.keys(selection.facets).every(function (facet) {
         var chosen = selection.facets[facet];
         if (!chosen.length) return true;
@@ -276,7 +333,8 @@
     }) };
   }
 
-  return { contract: CONTRACT, facetLabels: facetLabels, isActive: isActive, readerScopeNote: readerScopeNote,
+  return { contract: CONTRACT, v2Contract: V2_CONTRACT, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
+    domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
     identity: identity, groupPapers: groupPapers, query: query, counts: counts };
 }));

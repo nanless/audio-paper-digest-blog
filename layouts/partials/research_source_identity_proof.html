@@ -1,9 +1,9 @@
 {{- /* This proof establishes source identity only. It never assigns taxonomy. */ -}}
 {{- $memoKey := "research-page:research_source_identity_proof:v1" -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
-{{- $proof := dict -}}
+{{- $proof := partial "research_current_page_identity_proof.html" . -}}
 {{- $history := index hugo.Data "identity-history" | default dict -}}
-{{- if and (eq $history.contract "historical-source-identity-supplement-v1") (eq .Section "posts") .File -}}
+{{- if and (not $proof.contract) (eq $history.contract "historical-source-identity-supplement-v1") (eq .Section "posts") .File -}}
   {{- $key := printf "content/%s" .File.Path -}}
   {{- $record := index ($history.records | default dict) $key | default dict -}}
   {{- $shaPattern := `^[a-f0-9]{64}$` -}}

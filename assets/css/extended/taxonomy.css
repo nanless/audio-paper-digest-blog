@@ -44,3 +44,10 @@
   .paper-taxonomy .paper-taxonomy-other > .paper-taxonomy-group,
   .paper-taxonomy .paper-taxonomy-other:not([open]) > .paper-taxonomy-group { display: block !important; }
 }
+
+/* Historical type-aware roles preserve the same reading hierarchy. */
+.paper-taxonomy-scope { display:flex; flex-wrap:wrap; gap:.5rem; margin:.35rem 0 .85rem; font-size:.82rem; color:var(--secondary); }
+.paper-taxonomy-scope span { padding:.18rem .55rem; border:1px solid var(--border); border-radius:999px; }
+.paper-taxonomy-method-na { margin:.7rem 0; font-size:.88rem; }
+.paper-taxonomy-method-na summary { cursor:pointer; color:var(--secondary); }
+.paper-taxonomy-method-na p { overflow-wrap:anywhere; }
