@@ -1,0 +1,7 @@
+{{- $ranking := .ranking | default dict -}}
+{{- $https := `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` -}}
+{{- $grade := "pending" -}}
+{{- if and (eq $ranking.scheme "CCF") (in (slice "A" "B" "C" "unlisted") ($ranking.grade | default "")) $ranking.edition (or (and (eq $ranking.grade "unlisted") (eq $ranking.scope "not-listed")) (and (ne $ranking.grade "unlisted") (eq $ranking.scope "main-conference-full-regular-paper"))) (findRE $https ($ranking.sourceUrl | default "") 1) -}}
+  {{- $grade = $ranking.grade -}}
+{{- end -}}
+{{- return $grade -}}

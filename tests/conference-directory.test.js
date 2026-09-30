@@ -52,6 +52,26 @@ test('a conference edition is one card regardless of its reading guide links', (
   assert.throws(() => api.normalizeCatalog({ ...catalog, entries: [entry(), entry('sample-alternate-2026', { venueId: 'sample' })] }), /同届会议/);
   assert.throws(() => api.normalizeCatalog({ contract: 'wrong', entries: [] }), /格式/);
 });
+function workshop(id, parentConferenceId) {
+  return entry(id, { name: 'Workshop', ranking: { ...entry().ranking, grade: 'unlisted', scope: 'not-listed' },
+    relationship: { kind: 'workshop', parentConferenceId, sourceUrl: 'https://official.example/workshop', checkedAt: '2026-10-01', sourceQuote: 'Official satellite workshop of the main conference.' } });
+}
+test('verified workshops share the parent browsing section while retaining their own grade', () => {
+  const parent = entry('main-2026', { ranking: { ...entry().ranking, grade: 'B' } });
+  const catalog = { contract: api.contract, entries: [workshop('workshop-2026', parent.id), parent] };
+  const items = api.normalizeCatalog(catalog);
+  assert.equal(items[0].grade, 'unlisted'); assert.equal(items[0].placementGrade, 'B');
+  assert.equal(api.filterEntries(items, state({ grade: 'B' })).length, 2);
+  assert.equal(api.filterEntries(items, state({ grade: 'unlisted' })).length, 0);
+  const b = browser(catalog, '?tier=B');
+  assert.equal(b.cards.filter(card => !card.hidden).length, 2);
+  assert.equal(b.tierLinks.find(link => link.dataset.conferenceTierLink === 'B').label.textContent, '2');
+  assert.throws(() => api.normalizeCatalog({ contract: api.contract, entries: [workshop('missing-2026', 'missing-main-2026')] }), /绑定同届/);
+  assert.throws(() => api.normalizeCatalog({ contract: api.contract, entries: [workshop('self-2026', 'self-2026')] }), /绑定同届/);
+  assert.throws(() => api.normalizeCatalog({ contract: api.contract, entries: [workshop('child-2026', 'parent-2025'), entry('parent-2025', { year: 2025 })] }), /绑定同届/);
+  const unverified = workshop('unchecked-2026', parent.id); unverified.relationship.sourceUrl = 'http://official.example';
+  assert.equal(api.normalizeCatalog({ contract: api.contract, entries: [unverified, parent] })[0].placementGrade, 'unlisted');
+});
 test('meeting aliases normalize safely and filters are AND across independent criteria', () => {
   const items = [api.normalizeEntry(entry('speech-2026', { name: 'Interspeech', aliases: ['国际语音会议'] })), api.normalizeEntry(entry('vision-2026', { name: 'CVPR' }))];
   assert.equal(api.filterEntries(items, state({ query: 'ＩＮＴＥＲＳＰＥＥＣＨ', grade: 'A', month: '05' }))[0].id, 'speech-2026');
@@ -81,12 +101,16 @@ function browser(catalog, suffix = '', width = 1440) {
   add('conference-tier', 'select', ['all', 'A', 'B', 'C', 'unlisted', 'pending']); add('conference-query', 'input');
   const cards = catalog.entries.map(item => { const card = new Node(); card.dataset.conferenceId = item.id; return card; });
   const label = new Node(); const group = new Node(); group.querySelectorAll = () => cards; group.querySelector = () => label;
-  container.querySelectorAll = selector => selector === '[data-conference-id]' ? cards : [group];
+  const tierLinks = ['A', 'B', 'C', 'unlisted', 'pending'].map(grade => {
+    const link = new Node('a'); link.dataset.conferenceTierLink = grade;
+    link.label = new Node(); link.querySelector = () => link.label; return link;
+  });
+  container.querySelectorAll = selector => selector === '[data-conference-id]' ? cards : selector === '[data-conference-group]' ? [group] : selector === '[data-conference-tier-link]' ? tierLinks : [];
   const listeners = {}, window = { innerWidth: width, location: new URL('https://example.test/blog/conferences/' + suffix), addEventListener(name, fn) { listeners[name] = fn; }, history: { pushes: [], replaces: [], replaceState(_s, _t, url) { this.replaces.push(url); window.location = new URL(url); }, pushState(_s, _t, url) { this.pushes.push(url); window.location = new URL(url); } } };
   const document = { readyState: 'complete', getElementById: id => nodes[id] || null, createElement: tag => new Node(tag) };
   window.document = document;
   vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/js/conference-directory.js'), 'utf8'), { window, URL, URLSearchParams });
-  return { nodes, window, cards, group, label, listeners };
+  return { nodes, window, cards, group, label, tierLinks, listeners };
 }
 test('URL initialization, zero results, clear, history navigation and counts reflect actual visible cards', () => {
   const b = browser({ contract: api.contract, entries: [entry(), entry('cvpr-2026', { name: 'CVPR' })] }, '?q=CVPR&month=05');
@@ -111,12 +135,25 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
     fs.writeFileSync(path.join(temp, 'hugo.yaml'), 'baseURL: "https://example.test/blog/"\nlanguageCode: zh-CN\ntheme: PaperMod\nbuildFuture: true\ndisableKinds: [home, section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\nstaticDir: []\ndataDir: ' + JSON.stringify(path.join(temp, 'data')) + '\nparams:\n  env: production\n  ShowToc: false\n');
     fs.copyFileSync(path.join(root, 'content/conferences.md'), path.join(temp, 'content/conferences.md'));
     fs.writeFileSync(path.join(temp, 'content/posts/conference-sample-2026.md'), '---\ntitle: Sample guide\ndate: 2026-09-30\n---\n\nGuide.\n');
-    const entries = [entry(), entry('pending-2026', { name: 'Pending', event: { status: 'pending' }, ranking: { grade: 'pending', candidateGrade: 'A' } }), entry('tba-2026', { name: '</script><script>alert(1)</script>', event: { status: 'tba', sourceUrl: 'https://official.example/' }, ranking: {} })];
+    const entries = [entry(), entry('pending-2026', { name: 'Pending', event: { status: 'pending' }, ranking: { grade: 'pending', candidateGrade: 'A' } }), entry('tba-2026', { name: '</script><script>alert(1)</script>', event: { status: 'tba', sourceUrl: 'https://official.example/' }, ranking: {} }),
+      entry('b-first-2025', { name: 'Earlier B', year: 2025, event: { status: 'confirmed', startDate: '2025-01-02', sourceUrl: 'https://official.example/' }, ranking: { ...entry().ranking, grade: 'B' } }),
+      entry('a-earlier-2025', { name: 'Earlier A', year: 2025, event: { status: 'confirmed', startDate: '2025-12-01', sourceUrl: 'https://official.example/' } }), workshop('satellite-2026', 'sample-2026')];
     fs.writeFileSync(path.join(temp, 'data/conference-directory.json'), JSON.stringify({ contract: api.contract, entries }));
     execFileSync('hugo', ['--source', root, '--config', path.join(temp, 'hugo.yaml'), '--contentDir', path.join(temp, 'content'), '--destination', path.join(temp, 'public'), '--minify'], { stdio: 'pipe' });
     const html = fs.readFileSync(path.join(temp, 'public/conferences/index.html'), 'utf8');
-    assert.equal((html.match(/<article class=conference-card/g) || []).length, 3);
-    assert.match(html, /data-conference-group=2026[ >]/); assert.match(html, /data-conference-group=2026-unknown/);
+    assert.equal((html.match(/<article class="?conference-card/g) || []).length, 6);
+    assert.match(html, /data-conference-group=A-2026[ >]/); assert.match(html, /data-conference-group=pending-2026-unknown/);
+    assert.ok(html.indexOf('data-conference-tier=A') < html.indexOf('data-conference-tier=B'), 'tier is the first grouping dimension');
+    assert.ok(html.indexOf('data-conference-group=A-2025') < html.indexOf('data-conference-group=A-2026'), 'years are ordered inside a tier');
+    assert.ok(html.indexOf('data-conference-id=a-earlier-2025') < html.indexOf('data-conference-id=sample-2026'), 'chronology is ordered inside A');
+    assert.ok(html.indexOf('data-conference-id=sample-2026') < html.indexOf('data-conference-id=b-first-2025'), 'an earlier B event does not move ahead of A');
+    const parentCard = html.indexOf('data-conference-id=sample-2026');
+    const satelliteCard = html.indexOf('data-conference-id=satellite-2026');
+    assert.ok(parentCard < satelliteCard && satelliteCard < html.indexOf('data-conference-tier=B'), 'Workshop is beside its own main conference');
+    assert.match(html, /data-parent-conference=sample-2026/);
+    assert.match(html, /data-grade=unlisted>Workshop/);
+    assert.match(html, /2 主会 · 1 Workshop/);
+    assert.match(html, /<h4 class=conference-card__title/);
     assert.match(html, /2026-04-29/); assert.match(html, /2026-05-03/);
     assert.match(html, /举办日期：官方待定/); assert.match(html, /举办日期：待核/); assert.match(html, /评级待核/);
     assert.match(html, /href=\/blog\/posts\/conference-sample-2026\//);
@@ -126,6 +163,21 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
   } finally { fs.rmSync(temp, { recursive: true, force: true }); }
 });
 
+test('tier navigation follows filtered groups and hides empty destinations', () => {
+  const bItem = entry('b-2026', { ranking: { ...entry().ranking, grade: 'B' } });
+  const b = browser({ contract: api.contract, entries: [entry(), bItem] });
+  const aLink = b.tierLinks.find(link => link.dataset.conferenceTierLink === 'A');
+  const bLink = b.tierLinks.find(link => link.dataset.conferenceTierLink === 'B');
+  assert.equal(aLink.hidden, false); assert.equal(aLink.label.textContent, '1');
+  assert.equal(bLink.hidden, false); assert.equal(bLink.label.textContent, '1');
+  b.nodes['conference-tier'].value = 'A'; b.nodes['conference-tier'].fire('change');
+  assert.equal(aLink.hidden, false); assert.equal(bLink.hidden, true);
+  b.nodes['conference-query'].value = 'no match'; b.nodes['conference-query'].fire('input');
+  assert.ok(b.tierLinks.every(link => link.hidden));
+  b.nodes['conference-empty-clear'].fire('click');
+  assert.equal(aLink.hidden, false); assert.equal(bLink.hidden, false);
+});
+
 test('actual 19-edition catalog has verified interval filters, source scope and retained routes', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/conference-directory.json'), 'utf8'));
   const entries = api.normalizeCatalog(catalog);
@@ -133,6 +185,9 @@ test('actual 19-edition catalog has verified interval filters, source scope and 
   assert.deepEqual(api.availableYears(entries), ['2026']);
   assert.equal(entries.filter(item => item.dateStatus === 'confirmed').length, 19);
   assert.deepEqual(Object.fromEntries(['A', 'B', 'C', 'unlisted', 'pending'].map(grade => [grade, entries.filter(item => item.grade === grade).length])), { A: 5, B: 3, C: 1, unlisted: 10, pending: 0 });
+  assert.deepEqual(Object.fromEntries(['A', 'B', 'C', 'unlisted', 'pending'].map(grade => [grade, entries.filter(item => item.placementGrade === grade).length])), { A: 5, B: 4, C: 1, unlisted: 9, pending: 0 });
+  assert.equal(entries.find(item => item.id === 'chime-2026').parentConferenceId, 'icassp-2026');
+  assert.equal(entries.find(item => item.id === 'chime-2026').grade, 'unlisted');
   for (const [venue, months] of [['eusipco', ['08', '09']], ['interspeech', ['09', '10']]]) {
     for (const month of months) assert.equal(api.filterEntries(entries, state({ year: '2026', month, venue })).length, 1);
   }

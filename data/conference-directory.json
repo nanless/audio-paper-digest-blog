@@ -250,6 +250,13 @@
         "series": "CHiME",
         "editionNumber": 9,
         "sourceUrl": "https://sites.google.com/view/hscmachime2026"
+      },
+      "relationship": {
+        "kind": "workshop",
+        "parentConferenceId": "icassp-2026",
+        "sourceUrl": "https://sites.google.com/view/hscmachime2026",
+        "checkedAt": "2026-10-01",
+        "sourceQuote": "This time, HSCMA and CHiME will be held as a one-day satellite workshop of IEEE ICASSP 2026."
       }
     },
     {

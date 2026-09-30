@@ -1,7 +1,7 @@
 ---
 title: "会议论文集"
 layout: "conferences"
-description: "按举办时间、会议名称与已核验档次，查找语音、音乐、音频和相关领域研究。"
+description: "先按会议档次浏览，再按年份与举办月日查找语音、音乐、音频和相关领域研究。"
 noRating: true
 ---
 

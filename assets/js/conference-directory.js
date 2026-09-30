@@ -25,7 +25,7 @@
   }
   function normalizeEntry(entry) {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry) || !/^[a-z0-9][a-z0-9-]*$/.test(text(entry.id)) || !text(entry.name) || !/^20\d{2}$/.test(String(entry.year))) throw new Error('会议条目缺少明确名称、届年或稳定标识');
-    var event = entry.event || {}, ranking = entry.ranking || {};
+    var event = entry.event || {}, ranking = entry.ranking || {}, relationship = entry.relationship || {};
     var start = date(event.startDate), end = date(event.endDate || event.startDate);
     var confirmed = event.status === 'confirmed' && start && end && start <= end && officialURL(event.sourceUrl);
     var grade = ranking.scheme === 'CCF' && ['A', 'B', 'C', 'unlisted'].includes(ranking.grade) && officialURL(ranking.sourceUrl) && text(String(ranking.edition || '')) && (ranking.grade === 'unlisted' ? ranking.scope === 'not-listed' : ranking.scope === 'main-conference-full-regular-paper') ? ranking.grade : 'pending';
@@ -33,17 +33,26 @@
     if (!/^[a-z0-9][a-z0-9-]*$/.test(venue)) throw new Error('会议名称标识无效');
     return { id: entry.id, venueId: venue, name: text(entry.name), year: String(entry.year),
       startDate: confirmed ? start : '', endDate: confirmed ? end : '',
-      dateStatus: confirmed ? 'confirmed' : event.status === 'tba' && officialURL(event.sourceUrl) ? 'tba' : 'pending', grade: grade,
+      dateStatus: confirmed ? 'confirmed' : event.status === 'tba' && officialURL(event.sourceUrl) ? 'tba' : 'pending', grade: grade, placementGrade: grade,
+      parentConferenceId: relationship.kind === 'workshop' && officialURL(relationship.sourceUrl) && date(relationship.checkedAt) && text(relationship.sourceQuote) ? text(relationship.parentConferenceId) : '',
       search: searchable([entry.name, entry.fullName, ...(Array.isArray(entry.aliases) ? entry.aliases : [])].filter(function (value) { return typeof value === 'string'; }).join(' ')) };
   }
   function normalizeCatalog(catalog) {
     if (!catalog || catalog.contract !== CONTRACT || !Array.isArray(catalog.entries)) throw new Error('会议目录数据格式不匹配');
     var ids = new Set(), editions = new Set();
-    return catalog.entries.map(function (raw) {
+    var entries = catalog.entries.map(function (raw) {
       var entry = normalizeEntry(raw), edition = entry.venueId + ':' + entry.year;
       if (ids.has(entry.id) || editions.has(edition)) throw new Error('同届会议必须合并为一张卡片');
       ids.add(entry.id); editions.add(edition); return entry;
     });
+    var byId = new Map(entries.map(function (entry) { return [entry.id, entry]; }));
+    entries.forEach(function (entry) {
+      if (!entry.parentConferenceId) return;
+      var parent = byId.get(entry.parentConferenceId);
+      if (!parent || parent === entry || parent.parentConferenceId || parent.year !== entry.year) throw new Error('Workshop 必须绑定同届明确主会，不得循环或跨届关联');
+      entry.placementGrade = parent.grade;
+    });
+    return entries;
   }
   function stateFromParams(params) {
     return { year: /^20\d{2}$/.test(params.get('year') || '') ? params.get('year') : 'all',
@@ -66,7 +75,7 @@
   function filterEntries(entries, state) {
     var query = searchable(state.query);
     return entries.filter(function (entry) {
-      return (state.grade === 'all' || entry.grade === state.grade) &&
+      return (state.grade === 'all' || (entry.placementGrade || entry.grade) === state.grade) &&
         (state.venue === 'all' || entry.venueId === state.venue) &&
         (!query || entry.search.includes(query)) && intervalMatches(entry, state.year, state.month);
     });
@@ -98,6 +107,7 @@
     Array.from(venues).sort(function (a, b) { return a[1].localeCompare(b[1]); }).forEach(function (item) { option(controls.venue, item[0], item[1]); });
     var cards = Array.from(root.querySelectorAll('[data-conference-id]'));
     var groups = Array.from(root.querySelectorAll('[data-conference-group]'));
+    var tierLinks = Array.from(root.querySelectorAll('[data-conference-tier-link]'));
     var empty = document.getElementById('conference-empty');
     function setControls(state) {
       Object.keys(controls).forEach(function (key) {
@@ -111,9 +121,16 @@
       var visible = filterEntries(entries, state), ids = new Set(visible.map(function (entry) { return entry.id; }));
       cards.forEach(function (card) { card.hidden = !ids.has(card.dataset.conferenceId); });
       groups.forEach(function (group) {
-        var count = Array.from(group.querySelectorAll('[data-conference-id]')).filter(function (card) { return !card.hidden; }).length;
+        var visibleCards = Array.from(group.querySelectorAll('[data-conference-id]')).filter(function (card) { return !card.hidden; });
+        var count = visibleCards.length;
         group.hidden = count === 0;
-        var label = group.querySelector('[data-conference-group-count]'); if (label) label.textContent = count + ' 届';
+        var workshopCount = visibleCards.filter(function (card) { return !!card.dataset.parentConference; }).length;
+        var label = group.querySelector('[data-conference-group-count]'); if (label) label.textContent = group.dataset.conferenceTier ? (workshopCount ? (count - workshopCount) + ' 主会 · ' + workshopCount + ' Workshop' : count + ' 主会') : count + ' 届';
+      });
+      tierLinks.forEach(function (link) {
+        var count = visible.filter(function (entry) { return (entry.placementGrade || entry.grade) === link.dataset.conferenceTierLink; }).length;
+        link.hidden = count === 0;
+        var label = link.querySelector('[data-conference-tier-link-count]'); if (label) label.textContent = String(count);
       });
       if (empty) empty.hidden = visible.length > 0;
       if (status) status.textContent = '显示 ' + visible.length + ' / ' + entries.length + ' 届会议';
