@@ -112,6 +112,7 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
+{{- if .IsHome }}<div class="research-entry-grid">{{ end }}
 {{- range $index, $page := $paginator.Pages }}
 {{- $metadata := partial "research_metadata.html" . }}
 
@@ -132,7 +133,7 @@
   </div>
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      {{- $metadata.headline | plainify }}
+      {{- if and $.IsHome (eq $metadata.pageType "daily") }}{{ .Date.Format "2006年1月2日" }}{{ else }}{{ $metadata.headline | plainify }}{{ end }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
@@ -150,7 +151,7 @@
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer research-entry__footer">
-    <span>{{- partial "post_meta.html" . -}}</span>
+    <span>{{- if and $.IsHome (eq $metadata.pageType "daily") -}}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{- else -}}{{- partial "post_meta.html" . -}}{{- end -}}</span>
     <span class="research-entry__cta">阅读 →</span>
   </footer>
   {{- end }}
@@ -158,6 +159,7 @@
 </article>
 {{- end }}
 
+{{- if .IsHome }}</div>{{ end }}
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination" aria-label="列表分页">

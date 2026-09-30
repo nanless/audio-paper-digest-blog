@@ -1,0 +1,1084 @@
+{
+  "contract": "conference-directory-metadata-v1",
+  "checkedAt": "2026-09-30",
+  "inventory": {
+    "blogMain": "108f1132046023b753a78bab7423827a471204bf",
+    "conferenceEditionCount": 19,
+    "allYears": [
+      2026
+    ],
+    "manualDirectoryCountBefore": 18,
+    "missingManualVenueBefore": "interspeech",
+    "inventoryScope": "committed-summary-pages; not proof of collection completeness"
+  },
+  "rankingPolicy": {
+    "officialSourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+    "edition": "第七版（2026年，4月9日更新）",
+    "publishedAt": "2026-03-31",
+    "erratumDate": "2026-04-09",
+    "verificationStatus": "ccf-authored-formal-document-public-copy-read",
+    "scope": "仅主会议 Full paper / Regular paper（正式发表的长文）。Short paper、Demo paper、Technical Brief、Summary、Findings 以及伴随会议 Workshop 不计入。",
+    "note": "从CCF署名正式目录公开副本读取全部条目，副本生成日期与官网勘误日期一致；尚未完成官网附件字节相等核验。未收录不代表低档，目录等级不认证单篇论文质量。",
+    "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+    "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+    "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+    "pdfPageCount": 72,
+    "pdfMetadataCreatedAt": "2026-04-09T11:13:27+08:00"
+  },
+  "entries": [
+    {
+      "id": "aaai-2026",
+      "venueId": "aaai",
+      "name": "AAAI",
+      "fullName": "AAAI Conference on Artificial Intelligence",
+      "year": 2026,
+      "editionNumber": 40,
+      "aliases": [
+        "AAAI",
+        "AAAI Conference on Artificial Intelligence"
+      ],
+      "summaryPath": "/posts/conference-aaai-2026/",
+      "categoryPath": "/categories/aaai-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-aaai-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/aaai-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "人工智能综合研究，包括推理、学习与智能系统。",
+      "domainPosition": "人工智能综合研究，包括推理、学习与智能系统。",
+      "domainSourceUrl": "https://aaai.org/conference/aaai/aaai-26/",
+      "event": {
+        "startDate": "2026-01-20",
+        "endDate": "2026-01-27",
+        "status": "confirmed",
+        "location": "新加坡",
+        "sourceUrl": "https://ojs.aaai.org/index.php/AAAI/index",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "A",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 57,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "acl-2026",
+      "venueId": "acl",
+      "name": "ACL",
+      "fullName": "Annual Meeting of the Association for Computational Linguistics",
+      "year": 2026,
+      "editionNumber": 64,
+      "aliases": [
+        "ACL",
+        "Annual Meeting of the Association for Computational Linguistics"
+      ],
+      "summaryPath": "/posts/conference-acl-2026/",
+      "categoryPath": "/categories/acl-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-acl-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/acl-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "自然语言处理与计算语言学研究。",
+      "domainPosition": "自然语言处理与计算语言学研究。",
+      "domainSourceUrl": "https://2026.aclweb.org/calls/main_conference_papers/",
+      "event": {
+        "startDate": "2026-07-02",
+        "endDate": "2026-07-07",
+        "status": "confirmed",
+        "location": "美国·圣迭戈",
+        "sourceUrl": "https://2026.aclweb.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-07-05",
+        "mainConferenceEndDate": "2026-07-07"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "A",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 57,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "aistats-2026",
+      "venueId": "aistats",
+      "name": "AISTATS",
+      "fullName": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2026,
+      "editionNumber": 29,
+      "aliases": [
+        "AISTATS",
+        "International Conference on Artificial Intelligence and Statistics"
+      ],
+      "summaryPath": "/posts/conference-aistats-2026/",
+      "categoryPath": "/categories/aistats-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-aistats-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/aistats-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "人工智能、统计学与机器学习交叉研究。",
+      "domainPosition": "人工智能、统计学与机器学习交叉研究。",
+      "domainSourceUrl": "https://aistats.org/aistats2026/",
+      "event": {
+        "startDate": "2026-05-02",
+        "endDate": "2026-05-05",
+        "status": "confirmed",
+        "location": "摩洛哥·丹吉尔",
+        "sourceUrl": "https://aistats.org/aistats2026/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "C",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 59,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "chime-2026",
+      "venueId": "chime",
+      "name": "CHiME / HSCMA",
+      "fullName": "Joint Workshop on HSCMA and CHiME 2026",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "CHIME",
+        "Joint Workshop on HSCMA and CHiME 2026",
+        "HSCMA",
+        "CHiME-9"
+      ],
+      "summaryPath": "/posts/conference-chime-2026/",
+      "categoryPath": "/categories/chime-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-chime-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/chime-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "真实复杂声学环境中的语音增强、识别、计算听觉及多模态可穿戴语音处理；本届为ICASSP卫星工作坊。",
+      "domainPosition": "真实复杂声学环境中的语音增强、识别、计算听觉及多模态可穿戴语音处理；本届为ICASSP卫星工作坊。",
+      "domainSourceUrl": "https://sites.google.com/view/hscmachime2026",
+      "event": {
+        "startDate": "2026-05-04",
+        "endDate": "2026-05-04",
+        "status": "confirmed",
+        "location": "西班牙·巴塞罗那",
+        "sourceUrl": "https://sites.google.com/view/hscmachime2026",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "dateNote": "本届为HSCMA与CHiME联合的一天卫星工作坊；CHiME系列官网明确为第9届，但不能将联合工作坊整体伪称第9届HSCMA。"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      },
+      "seriesEdition": {
+        "series": "CHiME",
+        "editionNumber": 9,
+        "sourceUrl": "https://sites.google.com/view/hscmachime2026"
+      }
+    },
+    {
+      "id": "cvpr-2026",
+      "venueId": "cvpr",
+      "name": "CVPR",
+      "fullName": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "CVPR",
+        "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+      ],
+      "summaryPath": "/posts/conference-cvpr-2026/",
+      "categoryPath": "/categories/cvpr-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-cvpr-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/cvpr-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "计算机视觉与模式识别研究。",
+      "domainPosition": "计算机视觉与模式识别研究。",
+      "domainSourceUrl": "https://cvpr.thecvf.com/Conferences/2026",
+      "event": {
+        "startDate": "2026-06-03",
+        "endDate": "2026-06-07",
+        "status": "confirmed",
+        "location": "美国·丹佛",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/Dates",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-06-05",
+        "mainConferenceEndDate": "2026-06-07"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "A",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 57,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "dafx-2026",
+      "venueId": "dafx",
+      "name": "DAFx",
+      "fullName": "International Conference on Digital Audio Effects",
+      "year": 2026,
+      "editionNumber": 29,
+      "aliases": [
+        "DAFX",
+        "International Conference on Digital Audio Effects"
+      ],
+      "summaryPath": "/posts/conference-dafx-2026/",
+      "categoryPath": "/categories/dafx-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-dafx-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/dafx-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "数字音频效果、声音合成、虚拟模拟与音频处理研究。",
+      "domainPosition": "数字音频效果、声音合成、虚拟模拟与音频处理研究。",
+      "domainSourceUrl": "https://www.dafx.de/",
+      "event": {
+        "startDate": "2026-09-01",
+        "endDate": "2026-09-04",
+        "status": "confirmed",
+        "location": "美国·马萨诸塞州剑桥",
+        "sourceUrl": "https://dafx26.mit.edu/program/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "eacl-2026",
+      "venueId": "eacl",
+      "name": "EACL",
+      "fullName": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "year": 2026,
+      "editionNumber": 19,
+      "aliases": [
+        "EACL",
+        "Conference of the European Chapter of the Association for Computational Linguistics"
+      ],
+      "summaryPath": "/posts/conference-eacl-2026/",
+      "categoryPath": "/categories/eacl-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-eacl-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/eacl-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "欧洲计算语言学会议，覆盖自然语言处理与语言技术研究。",
+      "domainPosition": "欧洲计算语言学会议，覆盖自然语言处理与语言技术研究。",
+      "domainSourceUrl": "https://2026.eacl.org/",
+      "event": {
+        "startDate": "2026-03-24",
+        "endDate": "2026-03-29",
+        "status": "confirmed",
+        "location": "摩洛哥·拉巴特",
+        "sourceUrl": "https://2026.eacl.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "eusipco-2026",
+      "venueId": "eusipco",
+      "name": "EUSIPCO",
+      "fullName": "European Signal Processing Conference",
+      "year": 2026,
+      "editionNumber": 34,
+      "aliases": [
+        "EUSIPCO",
+        "European Signal Processing Conference"
+      ],
+      "summaryPath": "/posts/conference-eusipco-2026/",
+      "categoryPath": "/categories/eusipco-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-eusipco-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/eusipco-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "欧洲信号处理研究会议，覆盖音频、图像、通信等信号处理方向。",
+      "domainPosition": "欧洲信号处理研究会议，覆盖音频、图像、通信等信号处理方向。",
+      "domainSourceUrl": "https://new.eurasip.org/eusipco-conferences/",
+      "event": {
+        "startDate": "2026-08-31",
+        "endDate": "2026-09-04",
+        "status": "confirmed",
+        "location": "比利时·布鲁日",
+        "sourceUrl": "https://eusipco2026.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "icmc-2026",
+      "venueId": "icmc",
+      "name": "ICMC",
+      "fullName": "International Computer Music Conference",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "ICMC",
+        "International Computer Music Conference",
+        "Computer Music",
+        "计算机音乐"
+      ],
+      "summaryPath": "/posts/conference-icmc-2026/",
+      "categoryPath": "/categories/icmc-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-icmc-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/icmc-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "计算机音乐、电子音乐和声音艺术，兼有技术论文、音乐创作与展演。",
+      "domainPosition": "计算机音乐、电子音乐和声音艺术，兼有技术论文、音乐创作与展演。",
+      "domainSourceUrl": "https://icmc2026.ligeti-zentrum.de/call-for-submissions/",
+      "event": {
+        "startDate": "2026-05-10",
+        "endDate": "2026-05-16",
+        "status": "confirmed",
+        "location": "德国·汉堡",
+        "sourceUrl": "https://icmc2026.ligeti-zentrum.de/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "iclr-2026",
+      "venueId": "iclr",
+      "name": "ICLR",
+      "fullName": "International Conference on Learning Representations",
+      "year": 2026,
+      "editionNumber": 14,
+      "aliases": [
+        "ICLR",
+        "International Conference on Learning Representations"
+      ],
+      "summaryPath": "/posts/iclr2026-summary/",
+      "categoryPath": "/categories/iclr-2026/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/iclr2026-summary/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/iclr-2026/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "表示学习与深度学习研究，涵盖视觉、语音、语言及其他应用。",
+      "domainPosition": "表示学习与深度学习研究，涵盖视觉、语音、语言及其他应用。",
+      "domainSourceUrl": "https://iclr.cc/Conferences/2026/index.html",
+      "event": {
+        "startDate": "2026-04-23",
+        "endDate": "2026-04-27",
+        "status": "confirmed",
+        "location": "巴西·里约热内卢",
+        "sourceUrl": "https://iclr.cc/Conferences/2026/index.html",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-04-23",
+        "mainConferenceEndDate": "2026-04-25"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "A",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 57,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "icml-2026",
+      "venueId": "icml",
+      "name": "ICML",
+      "fullName": "International Conference on Machine Learning",
+      "year": 2026,
+      "editionNumber": 43,
+      "aliases": [
+        "ICML",
+        "International Conference on Machine Learning"
+      ],
+      "summaryPath": "/posts/icml2026-summary/",
+      "categoryPath": "/categories/icml-2026/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/icml2026-summary/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/icml-2026/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "机器学习研究，与人工智能、统计学和数据科学相关。",
+      "domainPosition": "机器学习研究，与人工智能、统计学和数据科学相关。",
+      "domainSourceUrl": "https://icml.cc/Conferences/2026",
+      "event": {
+        "startDate": "2026-07-06",
+        "endDate": "2026-07-11",
+        "status": "confirmed",
+        "location": "韩国·首尔",
+        "sourceUrl": "https://icml.cc/Conferences/2026",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-07-07",
+        "mainConferenceEndDate": "2026-07-09"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "A",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 57,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "icassp-2026",
+      "venueId": "icassp",
+      "name": "ICASSP",
+      "fullName": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "year": 2026,
+      "editionNumber": 51,
+      "aliases": [
+        "ICASSP",
+        "IEEE International Conference on Acoustics, Speech and Signal Processing"
+      ],
+      "summaryPath": "/posts/icassp2026-summary/",
+      "categoryPath": "/categories/icassp-2026/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/icassp2026-summary/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/icassp-2026/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "声学、语音及信号处理研究会议，由IEEE信号处理学会组织。",
+      "domainPosition": "声学、语音及信号处理研究会议，由IEEE信号处理学会组织。",
+      "domainSourceUrl": "https://2026.ieeeicassp.org/",
+      "event": {
+        "startDate": "2026-05-04",
+        "endDate": "2026-05-08",
+        "status": "confirmed",
+        "location": "西班牙·巴塞罗那",
+        "sourceUrl": "https://2026.ieeeicassp.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "dateNote": "官网现列5月4–8日；早期征稿PDF列5月3–8日，当前日期以大会官网为准。"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "B",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "计算机图形学与多媒体",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 48,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      },
+      "editionSourceUrl": "https://2026.ieeeicassp.org/wp-content/uploads/sites/4/2019/08/ICASSP2026_CfP.pdf"
+    },
+    {
+      "id": "interspeech-2026",
+      "venueId": "interspeech",
+      "name": "Interspeech",
+      "fullName": "Conference of the International Speech Communication Association",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "INTERSPEECH",
+        "Conference of the International Speech Communication Association",
+        "INTER-SPEECH"
+      ],
+      "summaryPath": "/posts/conference-interspeech-2026/",
+      "categoryPath": "/categories/interspeech-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-interspeech-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/interspeech-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "语音、语言与听觉研究会议，涵盖语音科学和语音技术。",
+      "domainPosition": "语音、语言与听觉研究会议，涵盖语音科学和语音技术。",
+      "domainSourceUrl": "https://www.isca-speech.org/interspeech",
+      "event": {
+        "startDate": "2026-09-27",
+        "endDate": "2026-10-01",
+        "status": "confirmed",
+        "location": "澳大利亚·悉尼",
+        "sourceUrl": "https://interspeech2026.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "B",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "计算机图形学与多媒体",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 48,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "iwslt-2026",
+      "venueId": "iwslt",
+      "name": "IWSLT",
+      "fullName": "International Conference on Spoken Language Translation",
+      "year": 2026,
+      "editionNumber": 23,
+      "aliases": [
+        "IWSLT",
+        "International Conference on Spoken Language Translation"
+      ],
+      "summaryPath": "/posts/conference-iwslt-2026/",
+      "categoryPath": "/categories/iwslt-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-iwslt-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/iwslt-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "口语语言翻译研究及评测；本届与ACL同地举办。",
+      "domainPosition": "口语语言翻译研究及评测；本届与ACL同地举办。",
+      "domainSourceUrl": "https://iwslt.org/2026/",
+      "event": {
+        "startDate": "2026-07-03",
+        "endDate": "2026-07-04",
+        "status": "confirmed",
+        "location": "美国·圣迭戈及线上",
+        "sourceUrl": "https://iwslt.org/2026/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "jep-2026",
+      "venueId": "jep",
+      "name": "JEP",
+      "fullName": "Journées d’Études sur la Parole",
+      "year": 2026,
+      "editionNumber": 36,
+      "aliases": [
+        "JEP",
+        "Journées d’Études sur la Parole"
+      ],
+      "summaryPath": "/posts/conference-jep-2026/",
+      "categoryPath": "/categories/jep-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-jep-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/jep-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "法语学术共同体的语音科学与技术会议，兼有语言学、工程、认知与临床等方向。",
+      "domainPosition": "法语学术共同体的语音科学与技术会议，兼有语言学、工程、认知与临床等方向。",
+      "domainSourceUrl": "https://praxiling.cnrs.fr/jep2026/",
+      "event": {
+        "startDate": "2026-06-08",
+        "endDate": "2026-06-12",
+        "status": "confirmed",
+        "location": "法国·蒙彼利埃",
+        "sourceUrl": "https://praxiling.cnrs.fr/jep2026/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-06-09",
+        "mainConferenceEndDate": "2026-06-12",
+        "dateNote": "总会期6月8–12日包含6月8日工作坊；主体报告6月9–12日。"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "nime-2026",
+      "venueId": "nime",
+      "name": "NIME",
+      "fullName": "International Conference on New Interfaces for Musical Expression",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "NIME",
+        "International Conference on New Interfaces for Musical Expression"
+      ],
+      "summaryPath": "/posts/conference-nime-2026/",
+      "categoryPath": "/categories/nime-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-nime-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/nime-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "音乐表达的新接口与交互技术，兼有研究、设计和艺术实践。",
+      "domainPosition": "音乐表达的新接口与交互技术，兼有研究、设计和艺术实践。",
+      "domainSourceUrl": "https://nime2026.org/",
+      "event": {
+        "startDate": "2026-06-23",
+        "endDate": "2026-06-26",
+        "status": "confirmed",
+        "location": "英国·伦敦及线上",
+        "sourceUrl": "https://nime2026.org/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "dateNote": "6月27日NIME Open Day为另列附属开放活动，不计入官网6月23–26日大会范围。"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "odyssey-2026",
+      "venueId": "odyssey",
+      "name": "Odyssey",
+      "fullName": "The Speaker and Language Recognition Workshop",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "ODYSSEY",
+        "The Speaker and Language Recognition Workshop"
+      ],
+      "summaryPath": "/posts/conference-odyssey-2026/",
+      "categoryPath": "/categories/odyssey-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-odyssey-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/odyssey-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "说话人及语言特征、识别与相关技术研究工作坊。",
+      "domainPosition": "说话人及语言特征、识别与相关技术研究工作坊。",
+      "domainSourceUrl": "https://wa.isca-speech.org/Speaker-and-Language-Characterization-SpLC",
+      "event": {
+        "startDate": "2026-06-23",
+        "endDate": "2026-06-26",
+        "status": "confirmed",
+        "location": "葡萄牙·里斯本",
+        "sourceUrl": "https://www.isca-archive.org/odyssey_2026/index.html",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "speechprosody-2026",
+      "venueId": "speechprosody",
+      "name": "Speech Prosody",
+      "fullName": "International Conference on Speech Prosody",
+      "year": 2026,
+      "editionNumber": 13,
+      "aliases": [
+        "SPEECHPROSODY",
+        "International Conference on Speech Prosody"
+      ],
+      "summaryPath": "/posts/conference-speechprosody-2026/",
+      "categoryPath": "/categories/speechprosody-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-speechprosody-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/speechprosody-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "语音韵律研究，跨语音科学、语言学、认知及语音技术。",
+      "domainPosition": "语音韵律研究，跨语音科学、语言学、认知及语音技术。",
+      "domainSourceUrl": "https://www.speechprosody2026.org/home",
+      "event": {
+        "startDate": "2026-05-26",
+        "endDate": "2026-05-29",
+        "status": "confirmed",
+        "location": "美国·费城及线上",
+        "sourceUrl": "https://www.isca-archive.org/speechprosody_2026/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "dateNote": "ISCA正式会期5月26–29日；5月25日另列专题/工作坊不作为主会期起日。"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "unlisted",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": null,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "uai-2026",
+      "venueId": "uai",
+      "name": "UAI",
+      "fullName": "Conference on Uncertainty in Artificial Intelligence",
+      "year": 2026,
+      "editionNumber": 42,
+      "aliases": [
+        "UAI",
+        "Conference on Uncertainty in Artificial Intelligence"
+      ],
+      "summaryPath": "/posts/conference-uai-2026/",
+      "categoryPath": "/categories/uai-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-uai-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/uai-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "不确定性下的知识表示、学习与推理研究。",
+      "domainPosition": "不确定性下的知识表示、学习与推理研究。",
+      "domainSourceUrl": "https://www.auai.org/uai2026/",
+      "event": {
+        "startDate": "2026-08-17",
+        "endDate": "2026-08-21",
+        "status": "confirmed",
+        "location": "荷兰·阿姆斯特丹",
+        "sourceUrl": "https://www.auai.org/uai2026/",
+        "checkedAt": "2026-09-30",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-08-18",
+        "mainConferenceEndDate": "2026-08-20"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "grade": "B",
+        "edition": "第七版（2026年，4月9日更新）",
+        "field": "人工智能",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对；会议信息与单篇论文是否适用该档次分开判断。",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-09-30",
+        "pageNumber": 58,
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    }
+  ]
+}

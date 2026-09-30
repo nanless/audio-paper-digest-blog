@@ -1,0 +1,95 @@
+{{- define "main" -}}
+{{- $catalog := index hugo.Data "conference-directory" | default (dict "contract" "conference-directory-metadata-v1" "entries" slice) -}}
+{{- $entries := $catalog.entries | default slice -}}
+{{- $groups := dict -}}
+{{- range $entries -}}
+  {{- $event := .event | default dict -}}
+  {{- $start := $event.startDate | default "" -}}
+  {{- $end := $event.endDate | default $start -}}
+  {{- $sourceOk := findRE `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` ($event.sourceUrl | default "") 1 -}}
+  {{- $confirmed := and (eq $event.status "confirmed") $sourceOk (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $start 1) (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $end 1) (le $start $end) -}}
+  {{- $group := printf "%v-unknown" .year -}}
+  {{- if $confirmed }}{{ $group = substr $start 0 4 }}{{ end -}}
+  {{- $records := index $groups $group | default slice -}}
+  {{- $groups = merge $groups (dict $group ($records | append .)) -}}
+{{- end -}}
+<section class="conference-directory" id="conference-directory">
+  <header class="conference-directory__header">
+    <div class="rw-eyebrow">会议研究导航</div>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }} 从会议总览进入论文排行、任务专题与单篇解读。</p>
+  </header>
+  <details id="conference-filter-panel" class="conference-directory__filter-panel" open hidden>
+    <summary>按年份、月份和档次筛选</summary>
+  <form id="conference-filters" class="conference-directory__filters" role="search" hidden>
+    <label>举办年份<select id="conference-year" name="year"><option value="all">全部年份</option></select></label>
+    <label>举办月份<select id="conference-month" name="month"><option value="all">全部月份</option>{{ range seq 12 }}<option value="{{ printf "%02d" . }}">{{ . }} 月</option>{{ end }}<option value="unknown">日期未确认</option></select></label>
+    <label>CCF 档次<select id="conference-tier" name="tier"><option value="all">全部档次</option><option value="A">CCF A</option><option value="B">CCF B</option><option value="C">CCF C</option><option value="unlisted">未列入已核目录</option><option value="pending">评级待核</option></select></label>
+    <label>会议名称<select id="conference-venue" name="venue"><option value="all">全部会议</option></select></label>
+    <label class="conference-directory__search">查找会议<input id="conference-query" name="q" type="search" maxlength="120" autocomplete="off" placeholder="会议简称、全名或别名，例如 Interspeech"></label>
+    <button id="conference-clear" class="rw-action conference-directory__clear" type="button">清除筛选</button>
+  </form>
+  </details>
+  <p id="conference-count" class="conference-directory__status" role="status" aria-live="polite">共 {{ len $entries }} 届会议 · 按举办日期归档</p>
+  <noscript><p class="conference-directory__status">下方保留全部会议入口；启用 JavaScript 后可按年份、月份和档次筛选。</p></noscript>
+  <div id="conference-empty" class="conference-directory__empty" hidden>
+    <h2>没有符合条件的会议</h2>
+    <p>可放宽月份或档次，或使用会议简称查找。</p>
+    <button id="conference-empty-clear" class="rw-action" type="button">查看全部会议</button>
+  </div>
+  {{- $keys := slice -}}{{- range $key, $_ := $groups }}{{ $keys = $keys | append $key }}{{ end -}}
+  {{- range sort $keys -}}
+  {{- $group := . -}}{{- $records := index $groups $group -}}
+  <section class="conference-group" data-conference-group="{{ $group }}" aria-labelledby="conference-group-{{ $group }}">
+    <h2 id="conference-group-{{ $group }}">{{ substr $group 0 4 }} 年{{ if strings.HasSuffix $group "-unknown" }} · 日期未确认{{ else }} · 按举办日期{{ end }}<span data-conference-group-count>{{ len $records }} 届</span></h2>
+    <div class="conference-grid">
+      {{- range sort $records "event.startDate" -}}{{ template "conference-directory-card" . }}{{ end -}}
+    </div>
+  </section>
+  {{- end -}}
+  {{- if not $entries }}<p class="conference-directory__status">会议目录正在整理。可先通过<a href="{{ "papers/?type=conference" | relURL }}">论文库</a>查看会议专题。</p>{{ end -}}
+  <div class="conference-directory__method">
+    <p>日期使用会议官方公布的举办时间，跨月会议可在涉及的月份查到。日期待核与官方待定分别标示。</p>
+    <p>CCF 档次依据第七版正式目录公开副本与官方发布公告；仅主会议 Full / Regular 正式长文适用，Short、Demo、Findings 与伴随 Workshop 不继承主会档次。未列入目录不代表低档，会议档次也不替代单篇论文质量。</p>
+    <p>论文导读分类中也可能包含总览与专题，条目数量不等于论文数。也可使用<a href="{{ "papers/" | relURL }}">论文库</a>或<a href="{{ "search/" | relURL }}">全站搜索</a>查找研究。</p>
+  </div>
+</section>
+<script id="conference-directory-data" type="application/json">{{ $catalog | jsonify | safeJS }}</script>
+{{- $script := resources.Get "js/conference-directory.js" | minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{- end -}}
+
+{{- define "conference-directory-card" -}}
+{{- $entry := . -}}{{- $event := .event | default dict -}}{{- $ranking := .ranking | default dict -}}
+{{- $https := `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` -}}
+{{- $sourceOk := findRE $https ($event.sourceUrl | default "") 1 -}}
+{{- $start := $event.startDate | default "" -}}{{- $end := $event.endDate | default $start -}}
+{{- $confirmed := and (eq $event.status "confirmed") $sourceOk (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $start 1) (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $end 1) (le $start $end) -}}
+{{- $grade := "pending" -}}
+{{- if and (eq $ranking.scheme "CCF") (in (slice "A" "B" "C" "unlisted") ($ranking.grade | default "")) $ranking.edition (or (and (eq $ranking.grade "unlisted") (eq $ranking.scope "not-listed")) (and (ne $ranking.grade "unlisted") (eq $ranking.scope "main-conference-full-regular-paper"))) (findRE $https ($ranking.sourceUrl | default "") 1) }}{{ $grade = $ranking.grade }}{{ end -}}
+<article class="conference-card" data-conference-id="{{ .id }}">
+  <div class="conference-card__topline"><h3>{{ .name }} {{ .year }}</h3><span class="conference-card__tier" data-grade="{{ $grade }}">{{ if in (slice "A" "B" "C") $grade }}CCF {{ $grade }}{{ else if eq $grade "unlisted" }}CCF 未列{{ else }}评级待核{{ end }}</span></div>
+  {{- with .fullName }}<p class="conference-card__fullname">{{ . }}</p>{{ end -}}
+  <p class="conference-card__date">{{ if $confirmed }}<time datetime="{{ $start }}">{{ time.Format "2006-01-02" $start }}</time>{{ if ne $start $end }} — <time datetime="{{ $end }}">{{ time.Format "2006-01-02" $end }}</time>{{ end }}{{ else if and (eq $event.status "tba") $sourceOk }}举办日期：官方待定{{ else }}举办日期：待核{{ end }}</p>
+  {{- with $event.location }}<p class="conference-card__location">{{ . }}{{ with $entry.editionNumber }} · 第 {{ . }} 届{{ end }}</p>{{ else }}{{ with .editionNumber }}<p class="conference-card__location">第 {{ . }} 届</p>{{ end }}{{ end -}}
+  <p class="conference-card__domain">{{ .description | default .domainPosition }}</p>
+  <div class="conference-card__actions">
+    {{- $links := .links | default slice -}}
+    {{- if $links -}}
+      {{- range $links }}{{ if ne .scope "blog-guides" }}{{ $label := .label }}{{ with site.GetPage .path }}<a href="{{ .RelPermalink }}">{{ $label }}</a>{{ end }}{{ end }}{{ end -}}
+    {{- else -}}
+      {{- with .summaryPath }}{{ with site.GetPage . }}<a href="{{ .RelPermalink }}">阅读会议总览 →</a>{{ else }}<span>总览待补</span>{{ end }}{{ else }}<span>总览待补</span>{{ end -}}
+    {{- end -}}
+    {{- with .categoryPath }}<a href="{{ . | strings.TrimPrefix "/" | relURL }}">论文导读</a>{{ end -}}
+  </div>
+  <details class="conference-card__sources">
+    <summary>日期、档次与领域来源</summary>
+    <p>{{ if $sourceOk }}<a href="{{ $event.sourceUrl }}">会议官方日期</a>{{ with $event.checkedAt }} · 核对于 {{ . }}{{ end }}{{ else }}尚待核对官方举办日期。{{ end }}</p>
+    {{- with $event.dateNote }}<p>{{ . }}</p>{{ end -}}
+    {{- if and $event.mainConferenceStartDate $event.mainConferenceEndDate }}<p>主会议：{{ $event.mainConferenceStartDate }} — {{ $event.mainConferenceEndDate }}；上方日期包含官方整体活动范围。</p>{{ end -}}
+    <p>采用 CCF 署名的第七版正式目录公开副本，可通过下方官方发布说明和目录原文核对。</p>
+    <p>{{ if ne $grade "pending" }}CCF {{ $ranking.edition }}{{ with $ranking.field }} · {{ . }}{{ end }} · {{ if eq $grade "unlisted" }}未列入已核目录{{ else }}{{ $grade }} 类{{ end }}。{{ else }}CCF 评级尚待核验。{{ end }}{{ with $ranking.note }} {{ . }}{{ end }}{{ if findRE $https ($ranking.sourceUrl | default "") 1 }} <a href="{{ $ranking.sourceUrl }}">评级来源</a>{{ end }}{{ if findRE $https ($ranking.catalogSourceUrl | default "") 1 }} · <a href="{{ $ranking.catalogSourceUrl }}">正式目录公开副本{{ with $ranking.pageNumber }}（第 {{ . }} 页）{{ end }}</a>{{ end }}</p>
+    {{- if findRE $https (.domainSourceUrl | default .sourceUrl | default "") 1 }}<p><a href="{{ .domainSourceUrl | default .sourceUrl }}">会议领域定位</a>{{ with .domainPosition }}：{{ . }}{{ end }}</p>{{ end -}}
+  </details>
+</article>
+{{- end -}}
