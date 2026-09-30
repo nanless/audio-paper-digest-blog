@@ -1,0 +1,34 @@
+.reader-guide { max-width: 920px; margin-inline: auto; color: var(--rw-text); }
+.reader-guide-header { padding-block: 8px 28px; border-bottom: 1px solid var(--rw-border); margin-bottom: 32px; }
+.reader-guide h1 { font-size: clamp(30px, 4vw, 42px); line-height: 1.3; letter-spacing: -.025em; margin: 12px 0 16px; }
+.reader-guide-lead { font-size: 17px; line-height: 1.8; max-width: 65ch; color: var(--rw-muted); }
+.reader-guide-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.reader-guide-nav { margin-top: 28px; }
+.reader-guide-nav ul { display: flex; flex-wrap: wrap; gap: 4px 20px; list-style: none; padding: 0; }
+.reader-guide-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--rw-brand); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.reader-guide-content { font-size: 17px; line-height: 1.9; max-width: 78ch; }
+.reader-guide-content > p:first-child { font-size: 18px; line-height: 1.85; }
+.reader-guide-content h2 { font-size: 25px; line-height: 1.4; padding-top: 12px; margin-top: 44px; }
+.reader-guide-content p { margin-bottom: 20px; }
+.reader-guide-content li { margin-bottom: 14px; }
+.reader-guide-content a { color: var(--rw-brand); overflow-wrap: anywhere; text-underline-offset: 3px; }
+.reader-guide-content blockquote { background: var(--rw-brand-soft); border: 0; border-left: 3px solid var(--rw-brand); border-radius: 0 8px 8px 0; padding: 18px 22px; font-size: 16px; color: var(--rw-text); }
+.reader-guide-content blockquote p:last-child { margin-bottom: 0; }
+.reader-guide-footer { border-top: 1px solid var(--rw-border); margin-top: 36px; padding-top: 18px; font-size: 12px; line-height: 1.8; color: var(--rw-muted); }
+@media (max-width: 600px) {
+  .reader-guide-header { padding-top: 0; padding-bottom: 20px; margin-bottom: 24px; }
+  .reader-guide h1 { font-size: 30px; }
+  .reader-guide-lead { font-size: 15px; }
+  .reader-guide-actions .rw-action { font-size: 13px; }
+  .reader-guide-nav { margin-top: 20px; }
+  .reader-guide-nav ul { gap: 0 16px; }
+  .reader-guide-content { font-size: 16px; line-height: 1.9; }
+  .reader-guide-content > p:first-child { font-size: 16px; }
+  .reader-guide-content h2 { font-size: 23px; margin-top: 32px; }
+  .reader-guide-content blockquote { font-size: 15px; padding: 14px 16px; }
+}
+@media print {
+  .reader-guide { max-width: none; }
+  .reader-guide-actions, .reader-guide-nav { display: none; }
+  .reader-guide-content { font-size: 12pt; }
+}

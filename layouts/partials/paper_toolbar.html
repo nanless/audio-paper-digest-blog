@@ -2,6 +2,7 @@
 {{- $baseID := replaceRE `v[1-9][0-9]*$` "" $source.arxivId -}}
 {{- $resolvedID := $source.arxivId -}}
 {{- $hasID := and (eq $source.identityStatus "verified") $resolvedID -}}
+{{- $canCite := and (eq $source.identityStatus "verified") $source.url -}}
 {{- $absURL := $source.url -}}{{- $pdfURL := $source.pdfUrl -}}
 {{- $citationTitle := $source.title -}}
 {{- $sidecars := .Params.paper_digest_sidecars -}}
@@ -11,16 +12,16 @@
 {{- $citationFiles := dict -}}
 <section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-citation-record="{{ $source | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
   <script type="application/json" class="paper-tools__citation-record">{{ $source | jsonify | safeJS }}</script>
-  <div class="paper-tools__heading"><h2 id="paper-tools-title">论文工具</h2><p>原文 · 收藏 · 整理提问</p></div>
+  <div class="paper-tools__heading"><h2 id="paper-tools-title">阅读与整理</h2><p>原文 · 引用 · 阅读笔记</p></div>
   <div class="paper-tools__primary-actions">
     {{- with $source.url }}<a class="paper-tool paper-tool--primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $hasID }}打开 arXiv{{ else }}官方论文页面{{ end }} ↗</a>{{ end }}
     {{- with $source.pdfUrl }}<a class="paper-tool paper-tool--download" href="{{ . }}" target="_blank" rel="noopener noreferrer">阅读 / 保存 PDF</a>{{ end }}
+    {{- if $canCite }}<button class="paper-tool paper-tool--reference-copy" type="button" hidden>复制引用</button>{{ end }}
     <button class="paper-tool" type="button" data-reading-bookmark data-paper-key="{{ $source.paperKey }}" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-identity-status="{{ $source.identityStatus }}" hidden>收藏</button>
-    <label class="paper-tools__reading-status" hidden>阅读状态<select data-reading-status data-paper-key="{{ $source.paperKey }}" data-paper-url="{{ .Permalink }}"><option value="unread">待读</option><option value="reading">阅读中</option><option value="read">已读</option></select></label>
   </div>
-  {{- if ne $source.identityStatus "verified" }}<p class="paper-tools__note">本页论文身份尚待核实；本页没有可验证的 arXiv 标识。可收藏导读与整理提问，不根据正文引用自动生成本篇引用。</p>{{ end }}
-  {{- if eq $source.identityStatus "verified" }}
-  <details class="paper-tools__help"><summary>引用、论文标识与 Zotero</summary>
+  {{- if not $canCite }}<p class="paper-tools__note">{{ if eq $source.identityStatus "verified" }}本页引用来源信息尚不完整。{{ else }}本页论文身份尚待核实。{{ end }}可收藏导读并记录笔记；暂不生成本篇引用。</p>{{ end }}
+  {{- if $canCite }}
+  <details class="paper-tools__help paper-tools__advanced"><summary>引用文件与研究资料</summary>
     {{- if $hasID }}
     <div class="paper-tools__group"><span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span><button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>{{ if ne $resolvedID $baseID }}<button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>{{ end }}</div>
     <div class="paper-tools__group" aria-label="下载引用">
@@ -50,18 +51,13 @@
     <div class="paper-tools__group">{{ range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}<button class="paper-tool paper-tool-citation" type="button" data-citation-format="{{ $format }}" hidden>下载 {{ $label }}</button>{{ end }}</div>
     <p class="paper-tools__note">引用仅包含当前有来源记录的字段；缺失作者、出版日期或 DOI 时保持缺失。</p>
     {{- end }}
-    <details><summary>保存到 Zotero</summary><ol><li>在电脑浏览器安装 <a href="https://www.zotero.org/download/connectors" target="_blank" rel="noopener noreferrer">Zotero Connector</a>，并打开 Zotero 桌面端。</li>{{ with $source.url }}<li><a href="{{ . }}" target="_blank" rel="noopener noreferrer">打开官方论文页面</a>，点击 Connector 图标保存。</li>{{ end }}</ol><p>网页不能代你点击浏览器扩展。也可下载 RIS / BibTeX，然后在 Zotero 中选择“文件 → 导入”；缺失字段请核对官方记录补全。</p></details>
+    <p>研究资料包包含本页导读、官方链接、可得引用字段与当前阅读笔记。导读与个人笔记分别标明。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载研究资料包</button>
   </details>
+  {{- else }}
+  <details class="paper-tools__help paper-tools__advanced"><summary>研究资料</summary><p>导出本页导读、已有链接与当前阅读笔记；身份待核时不生成论文引用。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载研究资料包</button></details>
   {{- end }}
-  <details class="paper-tools__help paper-tools__selection-panel"><summary>复制 AI 提问</summary>
-    <p>选择正文后打开这里，或粘贴选段。本站只整理提问，不请求 AI、不上传选段。</p>
-    <div class="paper-tools__prompt-options"><label>提问任务<select class="paper-tools__prompt-task"><option value="mechanism">解释术语与机制</option><option value="verify">核对结论与证据</option><option value="limitations">寻找局限与适用边界</option></select></label><label>选段来源<select class="paper-tools__selection-source"><option value="blog">本站导读 / 用户粘贴，未核验为原论文逐字引用</option><option value="original">用户声明来自原文，本站未核验</option></select></label></div>
-    <label for="paper-selected-text">待讨论的段落（最多 2,000 字符）</label><textarea id="paper-selected-text" class="paper-tools__selected-text" rows="4" maxlength="2000" placeholder="选择正文，或粘贴文字"></textarea>
-    <p class="paper-tools__selection-context"></p><button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制 AI 提问</button>
-    <noscript><p>浏览器未启用 JavaScript。请手动复制正文并粘贴到 AI 工具，注明导读与原文区别，并要求核查证据。</p></noscript>
-  </details>
-  <details class="paper-tools__help"><summary>导出本篇研究资料包</summary><p>导出本页已有段落、原文链接、可得引用字段与个人选段。导读内容与原论文证据分开标明，不自动补造信息。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载 Markdown 资料包</button></details>
-  <button class="paper-tool paper-tool--selection-quick" type="button" hidden>整理选段提问 ↑</button>
+  <p class="paper-tools__local-note">收藏、阅读进度与笔记保存在此浏览器。可在论文库备份；更换设备不会自动同步。</p>
+  <noscript><p>启用 JavaScript 后可收藏、保存笔记与复制引用。原文、PDF 和已有引用文件仍可直接打开。</p></noscript>
   <textarea class="paper-tools__copy-fallback" aria-label="可手动复制的文本" rows="5" readonly hidden></textarea><p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
 </section>
 {{- $helper := resources.Get "js/citation-source.js" | minify | fingerprint -}}<script defer src="{{ $helper.RelPermalink }}" integrity="{{ $helper.Data.Integrity }}" crossorigin="anonymous"></script>

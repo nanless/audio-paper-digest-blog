@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="reader-guide">
+  <header class="reader-guide-header">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="rw-eyebrow">{{ .Params.kicker | default "研究指南" }}</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="reader-guide-lead">{{ . }}</p>{{ end }}
+    {{ with .Params.guide_actions }}<div class="reader-guide-actions" aria-label="开始使用">{{ range . }}<a class="rw-action" href="{{ .url | relURL }}">{{ .label }}</a>{{ end }}</div>{{ end }}
+    {{ with .TableOfContents }}<div class="reader-guide-nav" aria-label="本页目录">{{ . }}</div>{{ end }}
+  </header>
+  <div class="post-content md-content reader-guide-content">{{ partial "anchored_headings.html" .Content }}</div>
+  {{ with .Params.reviewed }}<footer class="reader-guide-footer">页面说明与外部工具资料核对日期：<time datetime="{{ . }}">{{ . }}</time>。工具功能与资源状态请以官方最新说明为准。</footer>{{ end }}
+</article>
+{{ end }}

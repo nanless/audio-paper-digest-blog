@@ -162,7 +162,7 @@ function walkFiles(root) {
 
 function verifyPaperToolCoverage(files) {
   let paperPages = 0;
-  let selectedTextTools = 0;
+  let readingTools = 0;
   let richArxivTools = 0;
   let richConferenceTools = 0;
   let selectionOnlyFallbacks = 0;
@@ -172,20 +172,17 @@ function verifyPaperToolCoverage(files) {
     paperPages += 1;
     invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(html),
       `论文页残留已取消的本机助手入口：${file}`);
-    invariant(
-      html.includes('paper-tools') && html.includes('复制 AI 提问')
-        && html.includes('paper-tools__selected-text')
-        && html.includes('paper-tool--selection-copy')
-        && html.includes('paper-tools__copy-fallback')
-        && html.includes('<noscript>'),
-      `论文页缺少选段 AI 工具：${file}`
-    );
-    selectedTextTools += 1;
     const opening = Array.from(html.matchAll(/<section\b[^>]*>/gi)).find(match => attributeValue(match[0], 'class').split(/\s+/).includes('paper-tools'));
-    invariant(opening, `论文页缺少工具区域：${file}`);
+    invariant(opening, `论文页缺少阅读与笔记工具区域：${file}`);
     const close = html.indexOf('</section>', opening.index);
     invariant(close > opening.index, `论文工具区域未闭合：${file}`);
     const tools = html.slice(opening.index, close + 10);
+    invariant(tools.includes('data-reading-bookmark') && tools.includes('paper-tools__advanced')
+      && tools.includes('paper-tool--pack') && tools.includes('paper-tools__copy-fallback')
+      && tools.includes('<noscript>'), `论文页缺少阅读与笔记工具：${file}`);
+    readingTools += 1;
+    invariant(!/复制 AI 提问|保存到 Zotero|zotero\.org\/download\/connectors|paper-tool--selection-copy/.test(tools),
+      `论文工具残留已移除的 AI/Zotero 入口：${file}`);
     const sourceTag = Array.from(tools.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi))
       .find(match => attributeValue(match[0], 'class') === 'paper-tools__citation-record');
     invariant(sourceTag, `论文工具缺少结构化引用来源：${file}`);
@@ -196,14 +193,15 @@ function verifyPaperToolCoverage(files) {
     const hrefs = tags.map(tag => attributeValue(tag, 'href').replace(/&amp;/g, '&'));
     if (source.identityStatus !== 'verified' || !source.url) {
       invariant(tools.includes('paper-tools--selection-only') && !tools.includes('data-citation-format=')
+        && !tools.includes('paper-tool--reference-copy')
         && !hrefs.some(href => /^https:\/\/arxiv\.org\/(?:abs|pdf)\//.test(href)),
         `身份待核页不得根据正文引用生成本篇论文工具：${file}`);
       selectionOnlyFallbacks += 1;
     } else {
       invariant(source.verified === true && /^https:\/\//.test(source.url) && hrefs.includes(source.url)
         && (!source.pdfUrl || /^https:\/\//.test(source.pdfUrl) && hrefs.includes(source.pdfUrl))
-        && tools.includes('zotero.org/download/connectors') && tools.includes('网页不能代你点击浏览器扩展'),
-      `已核论文页缺少对应官方来源/PDF/Zotero 工具：${file}`);
+        && tools.includes('paper-tool--reference-copy'),
+      `已核论文页缺少对应官方来源/PDF/引用工具：${file}`);
       if (source.sourceKind === 'arxiv') {
         const binding = source.pdfVersionBinding || {};
         const baseId = String(source.arxivId || '').replace(/v[1-9][0-9]*$/, '');
@@ -231,8 +229,8 @@ function verifyPaperToolCoverage(files) {
     }
   }
   invariant(paperPages > 0, '构建产物没有论文页');
-  invariant(selectedTextTools === paperPages, '论文页选段 AI 覆盖不完整');
-  return { paperPages, selectedTextTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
+  invariant(readingTools === paperPages, '论文页阅读工具覆盖不完整');
+  return { paperPages, readingTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
 }
 
 function verifyBuild(buildDir) {

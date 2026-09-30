@@ -107,6 +107,7 @@
     if (record.provenanceDisclosure) lines.push('来源记录说明：' + record.provenanceDisclosure);
     lines.push('', '## 本站导读内容', '以下内容来自本页可见导读，不代表原论文逐字引用。', '', String(settings.content || ''));
     if (settings.selection) lines.push('', '## 个人选段', '个人选段来源未由本站核验。', '', String(settings.selection));
+    if (settings.note) lines.push('', '## 个人阅读笔记', '以下是当前编辑的个人笔记，不代表原论文事实或逐字引用。', '', String(settings.note));
     if (Array.isArray(settings.links) && settings.links.length) lines.push('', '## 本页已有链接', ...settings.links.map(function (link) {
       return url(link.url) ? line(link.label) + '：' + url(link.url) : '';
     }).filter(Boolean));
@@ -116,6 +117,22 @@
     }
     return lines.join('\n') + '\n';
   }
+  function formatReference(raw) {
+    var record = normalize(raw);
+    // Reuse the same identity gate as BibTeX/RIS; no blog date or cited paper
+    // can fill a missing author/date/identifier in this copied reference.
+    formatCitation(record, 'bib');
+    var parts = [];
+    if (record.authors.length) parts.push(record.authors.join('；'));
+    if (record.date) parts.push('(' + record.date + ')');
+    parts.push(record.title);
+    if (record.venue) parts.push(record.venue);
+    if (record.arxivId) parts.push('arXiv:' + record.arxivId);
+    if (record.doi) parts.push('https://doi.org/' + record.doi);
+    if (record.url) parts.push(record.url);
+    var notes = [record.sourceVersionWarning, record.provenanceDisclosure].filter(Boolean);
+    return parts.join('. ') + '.' + (notes.length ? '\n来源说明：' + notes.join('；') : '');
+  }
   return { normalize: normalize, validDate: validDate, formatCitation: formatCitation, citation: formatCitation,
-    buildPrompt: buildPrompt, buildResearchPack: buildResearchPack };
+    buildPrompt: buildPrompt, buildResearchPack: buildResearchPack, formatReference: formatReference };
 }));

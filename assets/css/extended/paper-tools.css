@@ -6,9 +6,9 @@
   padding: clamp(16px, 3vw, 24px);
 }
 .paper-tools__primary-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.paper-tools__prompt-options { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.paper-tools__prompt-options label,
-.paper-tools__reading-status { display: flex; flex-direction: column; gap: 5px; font-size: .82rem; }
+.paper-tools__primary-actions > .reading-controls { flex-basis: 100%; width: 100%; margin: 6px 0 0; }
+.paper-tools__note-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.paper-tools__local-note { font-size: .78rem; line-height: 1.6; color: var(--rw-muted, var(--secondary)); margin-top: 12px; }
 .paper-tools select { min-height: 44px; width: 100%; max-width: 100%; font: inherit; color: var(--primary); background: var(--theme); border: 1px solid var(--border); border-radius: 8px; padding: 8px; }
 .paper-tools__selection-context { color: var(--secondary); font-size: .78rem; overflow-wrap: anywhere; }
 
@@ -100,11 +100,6 @@
   margin-right: 5px;
 }
 
-.paper-tool--selection-copy {
-  border-color: var(--rw-accent, var(--primary));
-  color: var(--rw-accent, var(--primary));
-  min-height: 44px;
-}
 
 .paper-tools__note {
   flex-basis: 100%;
@@ -148,7 +143,6 @@
 .paper-tools__help code { overflow-wrap: anywhere; }
 .paper-tools__actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
-.paper-tools__selected-text,
 .paper-tools__copy-fallback {
   background: var(--rw-surface, var(--entry));
   border: 1px solid var(--rw-border, var(--border));
@@ -170,15 +164,6 @@
   outline-offset: 3px;
 }
 
-.paper-tool--selection-quick {
-  background: var(--rw-brand, var(--primary));
-  box-shadow: 0 5px 20px #0002;
-  color: var(--theme);
-  position: fixed;
-  bottom: max(24px, env(safe-area-inset-bottom));
-  right: 24px;
-  z-index: 20;
-}
 
 .paper-tools__status {
   color: var(--rw-accent, var(--primary));
@@ -189,7 +174,6 @@
 }
 
 @media (max-width: 720px) {
-  .paper-tools__prompt-options { grid-template-columns: 1fr; }
   .paper-tools__primary-actions .paper-tool { flex: 1 1 110px; }
   .paper-tools__heading {
     align-items: start;
