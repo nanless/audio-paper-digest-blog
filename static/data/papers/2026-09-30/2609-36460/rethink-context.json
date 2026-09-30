@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36460v1",
+  "abstract": "Several tonal pitch spaces and computational models have been proposed to analyze tonal structure in Western tonal music, many of them grounded in principles from music theory and used to support tonal analysis with important implications for tonal tension. In parallel, data-driven methods such as skip-gram have been used to learn chord embeddings from symbolic corpora, but their ability to recover tonal structure and its relation to tonal tension remains underexplored. In this work, we investigate how skip-gram chord embeddings reflect tonal structure and whether they provide a useful basis for analyzing structural aspects of tonal tension. Using chord sequences with and without transposition-based augmentation, we evaluate the learned spaces from geometric, functional, and tension-related perspectives. We show that augmented embeddings exhibit strong transposition equivariance, recover a clear circle-of-fifths structure, and support interpretable shifts between key-related regions of the learned space. We then derive embedding-based measures from chord-to-key distance and contextual chord-distance relations, and show that they capture meaningful aspects of tonal tension structure through correspondence with matched tonal measures and moderate alignment with human tension profiles. Across analyses, transposition-based augmentation generally improves the stability, tonal coherence, and interpretability of the learned space.",
+  "abstractSha256": "e7596751eafb59ffe087a8bcfe0d80d74206e73d1f705c84899c3b9baec31cc1",
+  "arxivId": "2609.36460",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36460v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音乐分析",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.auditory-cognition",
+          "label": "听觉与音乐认知"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音乐分析",
+      "primaryTaskId": "task.music-understanding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maral Ebrahimzadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gilberto Bernardes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian Stober"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用跳字模型在贝多芬与披头士和弦序列上学习 24 个大小三和弦嵌入，证明移调增广能恢复五度圈、调中心分离与可转向的调区域，并用和弦到调距离与上下文距离构造张力量，与匹配的音调区间向量量中等对应、与人类紧张度中等对齐，但输入丢掉了转位与织体信息。",
+  "originalTitle": "Emergent Tonal Structure in Learned Chord Embeddings and Its Relation to Tonal Tension",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36460v1.pdf",
+  "readerTitle": "共现能学出五度圈吗：跳字模型和弦嵌入的调性几何与张力探针",
+  "schemaVersion": 1
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33245",
+  "abstract": "Speculative decoding accelerates autoregressive automatic speech recognition (ASR), but the acceptance length of alignment-aware drafters can saturate as the draft horizon increases. We propose a progress-aware speculative drafter that recurrently propagates an acoustic progress state across draft steps and feeds it back into audio cross-attention to guide token generation. We jointly train the drafter and progress predictor over variable draft horizons. On five ASR test sets, our method achieves lossless, macro-averaged end-to-end speedups of 1.657x and 1.227x over target-only autoregressive decoding with Qwen3-ASR-0.6B and Qwen3-ASR-1.7B, respectively. Relative to AnchorDraft, our method improves the macro-averaged speedup by 34.3% and 9.0%, respectively. Horizon sweeps show continued growth in acceptance length beyond the baselines&#39; saturation. Code is available at this https URL.",
+  "abstractSha256": "0b9e5f40aee81575a1d9a9fbb446fc009bf086e064095c1848846500c9eeec0e",
+  "arxivId": "2609.33245",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanyuan Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qianqian Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对对齐感知草稿在加长草稿 horizon 后接受长度饱和的问题，论文用递推的声学进度状态给音频交叉注意力加高斯偏置并做变长联合训练，在五个 ASR 测试集上以无损方式报告了 0.6B 目标 1.657×与 1.7B 目标 1.227×的宏平均端到端加速，代价是引入进度预测器与强制对齐监督。",
+  "originalTitle": "Acoustic Progress Propagation for Long-Horizon Speculative Decoding in ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33245.pdf",
+  "readerTitle": "长草稿走不远：用声学进度递推撑住 ASR 推测解码的后半程",
+  "schemaVersion": 1
+}

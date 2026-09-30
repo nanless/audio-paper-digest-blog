@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34907",
+  "arxivId": "2609.34907",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Debolina Chowdhury"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suman Samui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sujoy Saha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34907",
+  "originalTitle": "SincDPNet: Interpretable Raw-Waveform Bathroom Activity Recognition for Assistive Living",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34907.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

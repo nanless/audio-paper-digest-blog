@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34582",
+  "abstract": "Human speech conveys rich perceptual information, such as emotion and speaker identity, yet most automatic speech quality judges reduce it to a single naturalness score. We study diagnostic speech judges: given two candidates, a diagnostic judge decides which is better, along which perceptual dimensions (e.g., timbre, emotion, timing) they differ, and which audible cues support its decision. Learning such judges is challenging: expert annotation is costly, and simply prompting a frontier audio-language model to produce labels is unreliable: our probing reveals substantial errors and unstable instruction following. We introduce SpeechCritic, which learns a diagnostic judge in a reference-conditioned cross-lingual setting from only about 300 human-labeled comparisons. Rather than replacing the frontier model, SpeechCritic calibrates it with these labels: for each dimension, it selects the acoustic measurements that agree with human judgments, maps them to A/Tie/B probabilities, and passes these to the model as non-binding hints alongside the audio. Compared with the same model labeling without hints, this raises dimension-level agreement with humans by 6.3 points and cuts the mismatch with human Tie rates by 10.4 points. We then train a 7B judge on this supervision and find that different training signals shape different judge behaviors: SFT establishes the task, OPD transfers the teacher&#39;s dimension-level strengths and weaknesses, and RL helps most on clear-cut comparisons where human raters agree. Notably, human listeners also find that RL makes rationales cite more specific, localized acoustic cues, although it never directly rewards rationale text. Finally, we show that the pipeline is language-pair agnostic by instantiating it on both English-Japanese and English-Spanish. Together, these results demonstrate a path from limited human preferences to a diagnostic speech judge.",
+  "abstractSha256": "cdf3894bb144c6498329ac3affe2856f04e5b344d39aba0663d5a5d75878fd61",
+  "arxivId": "2609.34582",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.preference-optimization",
+          "label": "偏好优化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "偏好优化",
+      "primaryMethodId": "method.preference-optimization",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingyue Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhavin Jawade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghong Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoqi Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对参考条件下的跨语言语音二选一诊断任务，论文用约 300 组人类偏好筛选并校准声学度量为非约束性概率提示以扩展出万级监督，再比较监督微调、在策略蒸馏与强化学习的不同分工，报告显示维度一致性提升 6.3 个百分点但强化学习主要改善高共识样本且可能降低维度诊断分。",
+  "originalTitle": "SpeechCritic: Learning a Diagnostic Speech Judge from Limited Human Preferences",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34582.pdf",
+  "readerTitle": "只用三百组人评校准机器标注：SpeechCritic 的诊断语音评价与分工训练",
+  "schemaVersion": 1
+}

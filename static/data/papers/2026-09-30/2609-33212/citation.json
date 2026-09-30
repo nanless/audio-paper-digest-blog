@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33212",
+  "arxivId": "2609.33212",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Massa Baali"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Sarthak Bisht"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Ziyue Qiu"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Joseph Konan"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Rita Singh"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Bhiksha Raj"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33212",
+  "originalTitle": "CoLMbo-SV: A Grounded Language Model for Explainable Speaker Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33212.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

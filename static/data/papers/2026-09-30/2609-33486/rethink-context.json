@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33486",
+  "abstract": "Perturbation-based XAI methods for audio classifiers often estimate feature importance by masking spectrogram regions and crediting output changes to the retained signal. Yet they typically assume the fill (the mask replacement) is negligible. We propose logit-space trajectory decomposition to examine this assumption. An on-axis component captures output along a line connecting the fully filled (occluded) spectrogram to the fully retained original; an off-axis component captures perpendicular displacement. We evaluate across three fills, three audio classifiers, and 1,100 AudioSet clips. We demonstrate that no fill is acoustically neutral under full occlusion: Zero fill activates silence and Gaussian Noise fill activates broadband noise. Under partial masking, 41-77% of output displacement is off-axis, with the direction of the residual stable across mask retention fraction and specific to each model-fill combination. Attribution methods are unevenly exposed to off-axis displacement through their sampling and weighting strategies, revealing apparatus-dependence. Where the off-axis residual is stable and low-dimensional, its structure affords mitigation.",
+  "abstractSha256": "d15893a57b36532eedba8ca1687eb53dabffe976b97972f1118a482ffcbece50",
+  "arxivId": "2609.33486",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nico García-Peguinho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Kelly"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabrizio Smeraldi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anna Xambó Sedó"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用从全遮挡到原声的归因轴分解部分掩膜输出，发现 41% 到 77% 的位移是标量方法看不见的正交偏离，且其方向稳定性和维度随模型与填充组合而变化，代价是仍需依赖填充选择的忠实度评估才能谈修正。",
+  "originalTitle": "Mask-Induced Displacement in Audio XAI via Logit Trajectory Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33486.pdf",
+  "readerTitle": "掩膜填充不是空白：用对数轨迹分解看清音频解释的偏离",
+  "schemaVersion": 1
+}

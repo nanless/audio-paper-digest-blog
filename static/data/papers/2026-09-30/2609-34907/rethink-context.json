@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34907",
+  "abstract": "Bathroom acoustic-event recognition can support ambient assisted living in settings where continuous video monitoring is undesirable. However, practical deployment requires models that are compact, interpretable, and robust to changes in the recording environment. This work introduces \\dataset{}, a seven-class bathroom acoustic-event dataset containing 21{,}387 annotated clips recorded across five environments, and proposes SincDPNet, a compact raw-waveform classifier with a learnable sinc filter bank followed by a depthwise-separable convolutional body. Each sinc filter is controlled by two frequency parameters, allowing the learned passbands to be inspected directly in hertz while keeping the front end small. To reduce room-specific leakage, recording sessions and environments are separated before overlapping windows are assigned to the training, validation, and test partitions. We further use multi-objective Bayesian optimization as a design tool to examine the validation performance--model-size trade-off across 24 configurations. The selected designs span different operating points: the best-performing model achieves 80.2\\% accuracy and 0.760 macro-F1 with 14{,}040 parameters, while the compact $N_f=25$ configuration uses only 2{,}848 parameters and achieves 75.7\\% accuracy, 0.661 macro-F1, and 0.716 MCC on the held-out environment. Analysis of the learned filters and confusion patterns shows that spectral overlap contributes to confusion among water-related events, while the \\textit{Door}/\\textit{Walker/Crutch} errors also reflect similarities in their transient temporal structure.",
+  "abstractSha256": "2c69ff30d956da38d896bc31378d191ad9f108afd90f04400c8492b6c3783875",
+  "arxivId": "2609.34907",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Debolina Chowdhury"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suman Samui"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sujoy Saha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对七类浴室助老声事件识别，论文用可学习 sinc 带通前端加深度可分离卷积的 SincDPNet，在环境不相交评估下以 2848 参数达到 75.7% 准确率与 0.661 宏 F1，以 14040 参数达到 80.2% 准确率与 0.760 宏 F1，代价是水声重叠类与门和助行器瞬态仍集中混淆。",
+  "originalTitle": "SincDPNet: Interpretable Raw-Waveform Bathroom Activity Recognition for Assistive Living",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34907.pdf",
+  "readerTitle": "水声重叠与瞬态混淆才是难点：用可读频带做小模型浴室声识别",
+  "schemaVersion": 1
+}

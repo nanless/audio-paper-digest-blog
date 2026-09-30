@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33554",
+  "abstract": "Driven by the rapid growth of immersive teleconferencing and generative spatial audio, efficient low-bitrate coding of first-order Ambisonics (FOA) has become increasingly important. In this work, we develop a lightweight parametric FOA codec that retains the standard Directional Audio Coding analysis and synthesis while redesigning the spatial metadata quantization scheme. Rather than quantizing direction-of-arrival (DOA) and diffuseness independently, we combine them into a 3-D directivity vector and jointly quantize these vectors across frequency bands via residual vector quantization (RVQ). The RVQ codebooks are optimized within minutes via stage-wise k-means without backpropagation, yielding a constant-bitrate (CBR) representation that decouples metadata rate from the number of frequency bands. Evaluations show that our approach outperforms low-bitrate perceptual codecs in FOA reconstruction, remains competitive with neural codecs on the downstream Sound Event Localization and Detection task, and maintains robust performance when paired with different external monaural codecs. Given its lightweight training, strong performance, and CBR design, we consider the proposed method to be a favorable and reproducible baseline for future FOA codec research.",
+  "abstractSha256": "2d7db265bcad7694d116e954d76434772057ab192fcc59f5ed70d86669ad5f4d",
+  "arxivId": "2609.33554",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "向量量化",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "向量量化",
+      "primaryMethodId": "method.vector-quantization",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei-Ting Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amy Bastine"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lachlan Birnie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thushara D. Abhayapala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanga N. Samarasinghe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对低码率一阶 Ambisonics 编码问题，论文保留标准 DirAC 分析合成、只重做空间元数据量化，用三维指向向量加跨频带残差向量量化实现恒定码率，在 750bps 元数据下重建接近 48 kbps 参考并保留可用于声事件定位检测的空间线索，代价是仍依赖外部单声道编解码器恢复 W 通道。",
+  "originalTitle": "An Efficient Parametric Codec for Low-Bitrate First-Order Ambisonics",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33554.pdf",
+  "readerTitle": "低码率下保住空间感：把方向和扩散率合成一个向量再跨频带量化",
+  "schemaVersion": 1
+}

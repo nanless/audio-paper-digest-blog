@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33045",
+  "abstract": "The RecSys Challenge 2026 studies conversational music recommendation as a joint item recommendation and response generation problem: given a multi-turn dialogue, systems must retrieve relevant tracks from a large catalog and produce a grounded natural-language response. This paper presents the challenge task, dataset, evaluation protocol, and official results. Beyond the leaderboard, we analyze the 16 accepted systems through a common retrieve--rerank--generate framework and examine how recommendation performance varies across users, requests, and dialogue contexts. Strong systems commonly combine heterogeneous candidate sources and preserve source-specific evidence for learned reranking. Across the system papers and our organizer-side analysis, robust design also means 1) grounding cold-start retrieval in multi-turn conversation and item signals, 2) using intent detectors, and 3) modeling the full multi-turn context rather than the current query alone. We further identify limitations of the benchmark and evaluation protocol, including single-ground-truth relevance and teacher-forced evaluation of synthetic dialogues. Together, these findings provide practical guidance for future conversational recommender systems and shared evaluation efforts.",
+  "abstractSha256": "05d2dcc53feb30e75814d60d6143331c64df628e4f6dcd61c5c5875256a73de5",
+  "arxivId": "2609.33045",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音乐推荐",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-recommendation",
+          "label": "音乐推荐"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音乐推荐",
+      "primaryTaskId": "task.music-recommendation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation, Japan"
+      ],
+      "name": "Seungheon Doh"
+    },
+    {
+      "affiliations": [
+        "SiriusXM, United States"
+      ],
+      "name": "Sergio Oramas"
+    },
+    {
+      "affiliations": [
+        "Deezer Research, France"
+      ],
+      "name": "Bruno Sguerra"
+    },
+    {
+      "affiliations": [
+        "Amazon, United States"
+      ],
+      "name": "Abhinav Bohra"
+    },
+    {
+      "affiliations": [
+        "Politecnico di Bari, Italy"
+      ],
+      "name": "Claudio Pomo"
+    },
+    {
+      "affiliations": [
+        "Maastricht University, Netherlands"
+      ],
+      "name": "Francesco Barile"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该挑战要求在多轮对话下同时给出前 20 首排序和有依据的回复，最强可复述证据是多路候选加保留来源证据的学习排序在受控对比中提升 nDCG，而冷启动与模糊单目标仍是主要代价。",
+  "originalTitle": "Overview and Analysis of the RecSys Challenge 2026: Conversational Music Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33045.pdf",
+  "readerTitle": "对话式音乐推荐：先多路召回再学着信任哪一路",
+  "schemaVersion": 1
+}

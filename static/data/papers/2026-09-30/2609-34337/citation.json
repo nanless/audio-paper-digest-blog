@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34337",
+  "arxivId": "2609.34337",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Mingyu Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Jinchao Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34337",
+  "originalTitle": "Audio Tokens as a Budgeted Resource: Marginal-Utility Allocation for Scalable Audio Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34337.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

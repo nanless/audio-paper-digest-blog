@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31652",
+  "abstract": "We present Open-Qwen-Music, an open reconstruction of Qwen-Music and a fully specified research system for text-to-music generation that couples LLM-based semantic composition with diffusion-based acoustic rendering. The system comprises a 25 Hz single-codebook music tokenizer, a 3B-parameter autoregressive Music LLM, and a diffusion renderer producing 48 kHz stereo audio, following the cross-module interfaces reported by Qwen-Music. The strongest systems of this design remain closed, and prominent open music-generation projects release weights and inference code without their training corpora or end-to-end training implementations. This limits independent and controlled study of how information loss and prediction errors propagate from semantic representation through autoregressive planning to acoustic rendering. To our knowledge, Open-Qwen-Music is the first fully open release of an LLM-composition-plus-diffusion-rendering text-to-music system. Beyond model weights and inference code, the release includes the training datasets and provenance manifests, complete data-processing, annotation, training, inference, and evaluation pipelines, configurations, and pretrained weights for every learned module. Artifact manifests bind the identities of these artifacts across the complete workflow. Together, these artifacts establish a reproducible implementation of the modular architecture and provide an empirical basis for component-level analysis and future evaluation. We present the system as a transparent, executable research baseline and a starting point for the community, not as evidence of quality parity with Qwen-Music. Open-Qwen-Music is an ongoing effort, and we will continue to improve its generation quality, controllability, and robustness. All release artifacts are available at this https URL.",
+  "abstractSha256": "9bdb076c7194b57bd056fd974a409b2c0c818caf25fe1ec203f75e195e912920",
+  "arxivId": "2609.31652",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yangbin Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingyu Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把文本到音乐拆成 25 Hz 语义规划加扩散声学渲染，用固定接口、三级语料和全链路产物清单重建 Qwen-Music 范式，最强证据是标注审计与量化误差的固定协议测量，代价是自动监督误差、离散信息损失与端到端人声不稳定仍未解决。",
+  "originalTitle": "Open-Qwen-Music: An Auditable Framework for LLM-Based Music Composition and Diffusion Rendering",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31652.pdf",
+  "readerTitle": "语义先作曲、扩散再渲染：Open-Qwen-Music 如何把接口固定下来做可核查重建",
+  "schemaVersion": 1
+}

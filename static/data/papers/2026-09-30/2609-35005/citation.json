@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35005",
+  "arxivId": "2609.35005",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paweł Warlewski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artur Czeczko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artur Szumaczuk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grzegorz Stefański"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Szymon Klimaszewski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35005",
+  "originalTitle": "Sub-Model Short-Term Memory Convolutions for Keyword Spotting Systems on Device",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35005.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

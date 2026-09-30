@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36287v1",
+  "arxivId": "2609.36287",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36287v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sihang Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xueru Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaofen Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Deyi Tuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng-Bin Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyuan Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinxin Ji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36287v1",
+  "originalTitle": "InstCharVoice: Grounding Natural-Language Instructions for Character-Level Control in Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36287v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

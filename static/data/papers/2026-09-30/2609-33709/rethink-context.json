@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33709",
+  "abstract": "Recent advances in speech deepfake detection (SDD) have leveraged the Mixture of Experts (MoE) to enhance generalization capacity. However, existing gating networks often overlook the acoustic and temporal cues of deepfakes. In this work, we propose a novel domain-adaptive dual-gating MoE (DADGMoE) framework for SDD under unseen attack types and acoustic conditions. Our innovative dual-gating mechanism leverages Sinc-layer-based filters to process both low-level acoustic signals (raw waveforms) and high-level speech representations from a large self-supervised learning (SSL) model. It further incorporates domain prototypes to guide expert routing based on implicit deepfake patterns. The lightweight affine experts process the routed inputs. Experiments show that our DADGMoE significantly outperforms the baseline, achieving up to a 40.8% relative EER reduction on challenging out-of-dataset benchmarks. This framework demonstrates superior generalization capabilities and efficient design.",
+  "abstractSha256": "c6c4042335c0d5f0fb3df78cecfb2a7de0833387be576d098d7e4e248315da94",
+  "arxivId": "2609.33709",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhe Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对未见攻击类型与声学条件下的语音伪造检测，论文提出域自适应双门控混合专家 DADGMoE，用原始波形与 SSL 表示的双路 Sinc 滤波加可学习域原型计算路由权重，再用轻量批量归一化仿射专家变换特征，在 21DF、ITW、FoR 上相对 XLSR-AASIST 基线取得约 31.2% 至 40.8% 的等错误率相对下降，代价是增加约 0.17M 参数并需要协同调节原型与 top-k 路由。",
+  "originalTitle": "Domain-Adaptive Dual-Gating Mixture of Experts for Generalizable Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33709.pdf",
+  "readerTitle": "未见攻击下谁来分流：双路 Sinc 门控加仿射专家的语音伪造检测",
+  "schemaVersion": 1
+}

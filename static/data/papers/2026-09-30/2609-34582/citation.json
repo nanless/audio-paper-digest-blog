@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34582",
+  "arxivId": "2609.34582",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingyue Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhavin Jawade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghong Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoqi Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34582",
+  "originalTitle": "SpeechCritic: Learning a Diagnostic Speech Judge from Limited Human Preferences",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34582.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31699",
+  "abstract": "A microphone on the airframe of a small multi-rotor UAV is dominated by rotor ego-noise, so spoken flight commands arrive at negative signal-to-noise ratio (SNR). We study small-footprint keyword spotting (KWS) for a ten-word command vocabulary under real ego-noise, training on one quadrotor and testing on another. Besides per-clip accuracy we measure the streaming false-alarm rate on 4.4 h of continuous rotor noise. We compare classical noise-robust front-ends (CMN, PCEN, spectral subtraction), test-time adaptation, and two front-ends that track the per-band ego-noise floor over the two seconds preceding the decision window and either subtract it (normalisation) or feed it to the network as a second input channel (conditioning). Per clip, all front-ends look alike: +2-3 points on average, up to +14 at -15 dB. On continuous rotor noise they differ sharply. Normalising front-ends fire about ten times more often than plain log-mel at the same threshold and end up below it at a budget of one false alarm per hour (-9 points at 0 dB). Conditioning keeps the baseline&#39;s false-alarm rate and turns its gain into detections (+8 points at -10 dB over three seeds); on top of PCEN it gives the best per-clip accuracy and false-alarm rate, and a level-anchored variant is also invariant to the microphone gain. Real drone+interferer recordings expose the remaining failure mode, environmental sounds and bystander speech, which training negatives halve. A single script reproduces all on-device numbers on the NVIDIA Jetson Orin NX flight computer, where the complete pipeline costs 3 ms per 100 ms hop on the CPU.",
+  "abstractSha256": "d35b32a5282afb2bff70877c9f4e1145b77e6f30ad7d6f6b857d57b8b4839b45",
+  "arxivId": "2609.31699",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yida Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bing Xue"
+    },
+    {
+      "affiliations": [
+        "Victoria University of Wellington",
+        "Wellington, New Zealand"
+      ],
+      "name": "Mengjie Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sam Schofield"
+    },
+    {
+      "affiliations": [
+        "University of Canterbury",
+        "Christchurch, New Zealand"
+      ],
+      "name": "Richard Green"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在机载旋翼自噪声下识别十个飞行指令词时，跟踪窗前两秒每频带噪声地板并做条件化输入，能在保持对数梅尔基线误报率的同时把低信噪比检出率转成实际增益，而直接相减的归一化虽能提逐段准确率却会放大连续噪声上的误报。",
+  "originalTitle": "Normalise or condition? Noise-floor front-ends for on-board keyword spotting under UAV rotor ego-noise",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31699.pdf",
+  "readerTitle": "归一化还是条件化？旋翼噪声地板前端在误报预算下的分化",
+  "schemaVersion": 1
+}

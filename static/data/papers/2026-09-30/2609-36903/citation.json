@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36903v1",
+  "arxivId": "2609.36903",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36903v1",
+  "authors": [
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Ke Wang"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Houxing Ren"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Zimu Lu"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Yunqiao Yang"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Zhuofan Zong"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Mingjie Zhan"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab",
+        "CPII under InnoHK"
+      ],
+      "name": "Hongsheng Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36903v1",
+  "originalTitle": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36903v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

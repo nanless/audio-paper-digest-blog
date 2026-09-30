@@ -1,0 +1,46 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31699",
+  "arxivId": "2609.31699",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yida Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bing Xue"
+    },
+    {
+      "affiliations": [
+        "Victoria University of Wellington",
+        "Wellington, New Zealand"
+      ],
+      "name": "Mengjie Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sam Schofield"
+    },
+    {
+      "affiliations": [
+        "University of Canterbury",
+        "Christchurch, New Zealand"
+      ],
+      "name": "Richard Green"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31699",
+  "originalTitle": "Normalise or condition? Noise-floor front-ends for on-board keyword spotting under UAV rotor ego-noise",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31699.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

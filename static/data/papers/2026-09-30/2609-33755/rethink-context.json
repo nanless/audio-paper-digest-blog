@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33755",
+  "abstract": "Accurate, efficient, and low-latency spatial beamforming is a key component in emerging smart hearable devices, enhancing speech while suppressing noise and interference. However, handling multiple input sources under strict real-time constraints poses significant challenges for the low-power, resource-constrained microcontroller units (MCUs) used in hearables. We present an optimized methodology for the real-time execution of a neural-network-based minimum variance distortionless response (MVDR) beamformer on MCUs. Using six microphones and a three-stage mixed-precision scheme (float32 MVDR, int8 CNN, float16 Transformer), the pipeline pairs a CNN that estimates the MVDR weights with a lightweight Transformer that applies a per-frame correction. By time-slicing weight estimation with beamforming, it achieves a 15~ms per-frame latency while refreshing a complete set of CNN-derived weights every 564~ms. The deployed mixed-precision pipeline attains a short-time objective intelligibility (STOI) of 97.65\\%, a scale-invariant signal-to-noise ratio (SI-SNR) of 20.26~dB, and a wideband PESQ of 3.676 at an average power of 45.9~mW. A speech activity detection (SAD) module (98.5\\% accuracy, 0.62~mJ per inference) bypasses the pipeline during silence; under realistic deployment conditions, the system exceeds the 16~h all-day target on a 100~mAh battery, with an estimated lifetime of up to $\\sim$20~h. To our knowledge, this is the first real-time multi-channel Transformer-based neural beamforming pipeline deployed on an MCU-class device.",
+  "abstractSha256": "740f207c4eeede31272641ae8c25c8f07d66f84389602626966b34cb6c3833e3",
+  "arxivId": "2609.33755",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "波束成形",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Luca Bompani"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Marco Fariselli"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Giovanni Oltrecolli"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Francesco Conti"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对助听级单片机算力与功耗约束，论文用卷积网络估计最小方差无失真响应权重加轻量变换器逐帧修正，并以交错执行与混合精度在 GAP9 上实现 15 毫秒帧延迟，部署后报告 STOI 97.65%、SI-SNR 20.26 dB、宽带 PESQ 3.676、平均功耗 45.9 毫瓦，语音占空比下可超 16 小时续航，代价是权重刷新周期拉长到 564 毫秒且依赖语音活动检测门控。",
+  "originalTitle": "Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33755.pdf",
+  "readerTitle": "慢估计配快修正：在单片机上把六通道波束形成拆成两种时间尺度",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34662",
+  "abstract": "This paper addresses unsupervised speech enhancement in the unpaired setting using drifting methods, where training relies on separate collections of degraded and clean audio without corresponding pairs. While recent drifting approaches enable unpaired training, they do so at a heavy cost: because the objective optimizes only a marginal prior over clean speech, the enhancer gradually loses the input&#39;s linguistic content and speaker identity. To fix this, we introduce input-conditioned drifting. We preserve the pull of the clean corpus while re-tethering the output to the degraded input via two mechanisms: an anchor encoder supplies the missing likelihood by pulling toward the input&#39;s features, and a key encoder conditions the prior by re-weighting retrieved frames. Neither requires labels or paired data. Using a training-free encoder selection criterion, Word Error Rate on VoiceBank-DEMAND falls to 10.1% (unprocessed: 11.7%), speaker similarity recovers from 0.490 to 0.879, and the recipe transfers in part to dereverberation on WSJ0-REVERB: content improves, rendering quality does not.",
+  "abstractSha256": "ddd040a861948443dedf0d4d05a4cba9c6dbdc20e8f3d9c1fe57eeea4c4e1a1a",
+  "arxivId": "2609.34662",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "语音增强",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Caviedes-Nozal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "W. Bastiaan Kleijn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "无配对漂移只优化干净语音的边缘先验而丢失内容与音色，本文用内容锚、身份锚和键控条件先验把输出拴回退化输入，在 VoiceBank-DEMAND 上把词错误率从 11.7% 降到 10.1%、说话人相似度从 0.490 恢复到 0.879，代价是背景质量随键强度下降且去混响质量未改善。",
+  "originalTitle": "Unsupervised Speech Enhancement via Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34662.pdf",
+  "readerTitle": "只学干净语音的分布会走丢内容：用锚和键把漂移拴回输入",
+  "schemaVersion": 1
+}

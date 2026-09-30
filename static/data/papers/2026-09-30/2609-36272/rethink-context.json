@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36272v1",
+  "abstract": "Cochlear neural degeneration (CND) can impair suprathreshold coding without elevating pure-tone thresholds, complicating its diagnosis when it coexists with hair cell loss. We present a unified comparison of temporal and noise-based probes for CND detection using low-context vowel-consonant-vowel (VCV) syllables to reduce linguistic and contextual cues. Using a phenomenological auditory nerve model, we simulated responses to 21 VCV tokens under time compression, reverberation, and speech-in-noise conditions across presentation levels and seven CND profiles. We computed mutual information (MI) between inner hair cell potentials and auditory nerve neurograms and quantified information loss relative to a normal-hearing baseline. Time compression and amplitude-modulated (AM) noise produced the largest modeled information losses. We then evaluated these stimuli in a consonant-identification study involving 36 listeners with normal audiograms, 12 of whom reported difficulty understanding speech in noise. Neither 40 percent time compression in quiet nor AM noise alone distinguished listeners with and without these difficulties. However, compressed speech presented in AM noise separated the two groups. This partial agreement between model predictions and behavior supports our MI-based stimulus design framework and motivates further evaluation of combined temporal and noise-based probes for CND detection.",
+  "abstractSha256": "2c443c5fd72a5c5803a5f272f39bc33138d03042cffc59355b3686bbfe507e64",
+  "arxivId": "2609.36272",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36272v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.intelligibility",
+          "label": "语音可懂度评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "语音可懂度评估",
+      "primaryTaskId": "task.intelligibility",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahsan J. Cheema"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jorge Mejia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanna Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sunil Puria"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对纯音听阈无法反映的耳蜗神经退变，研究用内毛细胞到听神经的互信息损失在低语境 VCV 音节上比较时间与噪声探针，发现 40% 压缩加调幅噪声的建模损失最大，且该组合是行为实验中唯一显著区分自报噪声聆听困难组的条件，但安静下接近天花板与个体阈值校准限制了因果归因。",
+  "originalTitle": "Model-Guided Design of Low-Context Speech Probes for Cochlear Synaptopathy",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36272v1.pdf",
+  "readerTitle": "听阈正常却听不清噪声：用信息损失选出压缩加调制噪声探针",
+  "schemaVersion": 1
+}

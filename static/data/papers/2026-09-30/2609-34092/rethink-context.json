@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34092",
+  "abstract": "Machine unlearning (MU) offers a path to compliance with &#34;right to be forgotten&#34; regulations. While MU has received increasing attention for speech tasks, it remains largely unexplored for Automatic Speech Recognition (ASR). In this work, we investigate whether existing MU algorithms and evaluation tools are suitable for ASR. We apply several MU techniques to an ASR model, evaluating privacy-utility trade-offs for single-subject unlearning, then assess the best algorithm under sequential and simultaneous unlearning. Results show that gradient ascent-based algorithms achieve strong utility-privacy trade-offs, whereas more complex approaches over-unlearn samples, making them easier to identify as unlearned. This suggests standard privacy evaluations based on simple Membership Inference attacks are insufficient to reliably assess unlearning success, motivating improved evaluation methods for MU in ASR. Finally, we show that both sequential and simultaneous unlearning yield worse privacy and utility than single-subject unlearning, underscoring the need for unlearning constructions better suited to these settings.",
+  "abstractSha256": "55ec5604732bdd053eac58fdd775091c05503cc28a08a1e93b8ba97850c2eaa1",
+  "arxivId": "2609.34092",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diogo Dinis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francisco Teixeira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhiksha Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alberto Abad"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Trancoso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把说话人级遗忘定义为逼近去掉遗忘集后重训模型的分布，用五种近似遗忘方法在 E-Branchformer 上比较效用与成员推断隐私，发现梯度上升类在简单攻击下最接近理想权衡，但复杂方法会被知晓遗忘的攻击识别，多人同时或顺序遗忘则同时损伤效用与隐私。",
+  "originalTitle": "Evaluating Machine Unlearning in ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34092.pdf",
+  "readerTitle": "遗忘不等于考砸：ASR 遗忘为何要逼近重训模型而非推高误差",
+  "schemaVersion": 1
+}

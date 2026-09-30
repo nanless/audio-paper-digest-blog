@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36921v1",
+  "abstract": "Large audio-language models (LALMs) perform strongly on individual audio tasks, but whether these capabilities can be reliably composed remains underexplored. We conduct a controlled diagnostic study of capability composition in LALMs, requiring models to integrate audio-attribute recognition, cue-conditioned segment selection, and downstream ASR or question answering. We construct two-utterance inputs with distinct acoustic cues to evaluate composition across environmental sound, gender, and emotion cues, with ASR, Math QA, and Factual QA as downstream tasks. Across four open-source LALMs, compositional QA accuracy decreases in 39 of 40 model-task-cue settings, by an average of 26.7 percentage points. ASR exhibits a similarly consistent degradation, with WER increasing in 39 of 40 settings by an average of 28.5 percentage points, while the magnitude of degradation varies across models, cue types, and cue salience. We further probe these failures through output format, positional preference, and chain-of-thought (CoT) analyses. Our study reveals a systematic gap between possessing individual audio capabilities and reliably composing them.",
+  "abstractSha256": "3ff57ecda68907aafb7ccc850fbc49510327ce87c9d875caf21bc1700eaf2f1d",
+  "arxivId": "2609.36921",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36921v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chien-Feng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chih-Kai Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bo-Han Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu-Hsuan Li Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng-Fu Chou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把双片段线索选择与下游执行拆开测量，发现四模型在近全数组合条件下问答与转写都大幅退化，而格式与思维链只能解释部分失败。",
+  "originalTitle": "When Capabilities Fail to Compose: Diagnosing the Compositionality Gap in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36921v1.pdf",
+  "readerTitle": "都会做却合不起来：大音频语言模型组合能力的系统性掉落",
+  "schemaVersion": 1
+}

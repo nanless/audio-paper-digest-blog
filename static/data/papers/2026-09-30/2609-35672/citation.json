@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35672",
+  "arxivId": "2609.35672",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyi Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pranay Manocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donald S. Williamson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam Finkelstein"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35672",
+  "originalTitle": "Retrieving Individual Stems from Music Mixtures with Slot Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35672.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

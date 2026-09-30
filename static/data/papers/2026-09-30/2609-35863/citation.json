@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35863v1",
+  "arxivId": "2609.35863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.35863v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "Harvard University"
+      ],
+      "name": "Neha Sajja"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Bart van Merriënboer"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Burcu Karagol Ayan"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Tom Denton"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35863v1",
+  "originalTitle": "Beyond Discrimination: Calibrated Geoprior Fusion for Bioacoustic Monitoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35863v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34407",
+  "abstract": "Explicit textual Chain-of-Thought (CoT) has improved the reasoning ability of large audio language models (LALMs). However, textual CoTs are often constructed from text captions of audio and provide limited access to the acoustic evidence, which can introduce problems like hallucination. To address this modality-gap issue, we introduce JELAR, a Joint-Embedding Predictive Architecture (JEPA)-based latent reasoning framework that conditions latent reasoning supervision on acoustic representations learned from raw waveforms. During training, a frozen WavJEPA model provides representations learned directly from raw waveforms. A non-causal expert first constructs answer-aware queries, which cross-attend to WavJEPA embeddings to produce latent reasoning targets. The LALM is trained to predict these targets before generating its response. Experimental results show that JELAR improves the Audio-Reasoner baseline by 2.70 and 9.10 absolute percentage points on MMAU-mini and MMAR, respectively, demonstrating the effectiveness of JEPA-conditioned latent reasoning as an alternative to explicit textual CoT supervision.",
+  "abstractSha256": "b31d556f807a7875de404402e6f577dc523fe0573d2272a65865bc8f9038c816",
+  "arxivId": "2609.34407",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyang Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yizhou Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shreyas Gopal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Wen Chao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "William Tjhi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng-Siong Chng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对文本链条与音频证据脱节的问题，JELAR 用冻结 WavJEPA 波形表示构造连续潜推理目标替代文本 CoT，在受控对比中 MMAU-mini 从 59.70% 到 62.40%、MMAR 从 43.70% 到 52.80%，代价是训练需非因果专家且推理仍需固定 20 步潜嵌入。",
+  "originalTitle": "Beyond Textual Chain-of-Thought: JEPA-Conditioned Latent Reasoning for Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34407.pdf",
+  "readerTitle": "不用文字推理链，改向波形预测表示学推理：JELAR 的声学条件潜推理",
+  "schemaVersion": 1
+}

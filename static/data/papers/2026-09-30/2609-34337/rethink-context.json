@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34337",
+  "abstract": "Discrete audio tokens are widely used as a representation interface, yet fixed-depth RVQ tokenizers allocate equal capacity to every frame despite varying refinement value. We introduce UniAdapt, which learns marginal utility of RVQ refinements on a frozen codec and allocates them under exact serialized-bit budgets. A rate-independent causal controller predicts acoustic utility, while an optional semantic head supports speech-only utterance-level allocation; measured acoustic and semantic marginal gains on speech have a correlation of 0.42. For causal allocation, a primal-dual allocator selects prefix-valid depths, while an exact guard constrains each sequence prefix to its matched fixed-depth serialized budget. Under utterance-level allocation, UniAdapt reduces Log-STFT distortion by 1.07-4.39 percent across speech, music, and environmental audio without larger budgets. Causally, it improves three of four speech rates with zero violations across 800 utterance-rate evaluations and runs faster than real time. A 20-listener utterance-level MUSHRA study shows a significant 3.52-point speech improvement, with no significant differences on music or environmental audio. These results support separating utility prediction from budget enforcement for scalable, budget-conditioned audio representations.",
+  "abstractSha256": "76341ae07c11259d628f5b4ccd34914b01d4157f17af1758cc00925f6b924304",
+  "arxivId": "2609.34337",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.causal",
+          "label": "严格因果"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Mingyu Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Jinchao Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Zhiyong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把每帧多开一层 RVQ 值不值得花作为可学习的边际效用问题，用与目标码率无关的因果控制器预测效用，再用精确序列化前缀预算做分配，在不超预算下改善三域重建与部分冻结表征任务，但因果在线增益小于离线最优且主观增益仅在语音上显著。",
+  "originalTitle": "Audio Tokens as a Budgeted Resource: Marginal-Utility Allocation for Scalable Audio Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34337.pdf",
+  "readerTitle": "把音频 Token 当预算花：边际效用预测与精确序列化预算下的 RVQ 深度分配",
+  "schemaVersion": 1
+}

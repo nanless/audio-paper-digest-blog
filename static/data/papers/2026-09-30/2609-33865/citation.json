@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33865",
+  "arxivId": "2609.33865",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yen Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Goldwater"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33865",
+  "originalTitle": "In-Context Adaptation of Encoder-Decoder Models in Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33865.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

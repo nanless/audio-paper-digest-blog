@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36687v1",
+  "abstract": "Neural codecs encode continuous signals into compact sequences of discrete tokens, providing an interface for efficient transmission, storage, and token-based sequence modeling. This paradigm has been widely adopted in modern speech and audio frameworks; however, the biosignal domain still lacks a neural codec designed specifically for low-bitrate streaming and generalization across diverse downstream tasks. We present MyoCodec, a streaming neural codec designed for electromyography (EMG). Inspired by recent neural audio codecs, MyoCodec combines causal Transformers with residual vector quantization to encode continuous EMG signals into different levels of EMG representations spanning from continuous latent features to discrete tokens operating at 50 Hz. Trained on twelve public EMG datasets, MyoCodec achieves favorable performance in both intrinsic codec quality and representative downstream tasks, including typing (emg2qwerty), hand-pose (emg2pose), speech decoding (emg2speech), and speech-to-EMG synthesis (speech2emg). Across these tasks, MyoCodec exhibits strong performance against prior models while providing a compact and causal EMG representation. During streaming inference, it requires compute time of only 0.482 ms for each 20 ms frame, enabling real-time streaming. Also, the discrete token representation provided by MyoCodec has the potential to support integration into language-model based approaches, creating a path toward LLM-based interactive systems, where tokenized EMG representations are directly processed into such language or speech models. Code and model weights are released.",
+  "abstractSha256": "7d63ead5402e70a009825f2e1f03153db65f9133c2dea3ec502ae1d6f27f7b3b",
+  "arxivId": "2609.36687",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36687v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "音频编码",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.biosignal",
+          "label": "生理信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihwan Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kleanthis Avramidis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junhyeok Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Najim Dehak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MyoCodec 针对肌电信号的流式与多任务需求，用因果 Transformer 编码加六级残差向量量化把 2 千赫兹肌电压成每通道 50 赫兹 2400 比特每秒的离散表示，在十二个公开数据集上训练后重建与四个下游任务上可复现地优于对照，但数据偏向打字与手势且下游结构未为离散 token 重设计。",
+  "originalTitle": "MyoCodec: A Streaming Neural Codec for Electromyography",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36687v1.pdf",
+  "readerTitle": "肌电也要流式组码：MyoCodec 以因果 Transformer 加残差量化做 50 赫兹低码率表示",
+  "schemaVersion": 1
+}

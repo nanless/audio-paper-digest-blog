@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34806",
+  "abstract": "Reasoning about temporal structure of audio recordings requires Large Audio Language Models (LALMs) to associate sound events with their temporal position. Understanding the underlying mechanisms is a first step toward diagnosing failures and identifying model components that may need improvement. Using mechanistic interpretability, we investigate how temporal information is represented and bound to sound events in three open-source LALMs. We find that across all three, event-specific location becomes concentrated in event name representations at intermediate modality integration layers. These representations encode coarse event position along a low-dimensional, curved relative time trajectory. Steering event name representations along this trajectory systematically shifts before/after beliefs, providing evidence that these representations contribute to coarse temporal reasoning. In contrast, the same interventions do not reliably shift predicted onset timestamps, suggesting that coarse temporal reasoning and precise metric event localization rely on distinct mechanisms.",
+  "abstractSha256": "a1df1250242632b882b3e941757d53c793fd133b4d2b31aa2350d882ebce5894",
+  "arxivId": "2609.34806",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声音关系与推理",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-reasoning",
+          "label": "声音关系与推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "声音关系与推理",
+      "primaryTaskId": "task.sound-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用激活交换、解码与转向证明三款大音频语言模型都在中间层把粗粒度相对时间绑到事件名表示上并能因果改变前后判断，但该表示只能粗解码到约 3.5 至 4 秒且不能一致移动预测的起始时间戳。",
+  "originalTitle": "On Temporal Binding in Large Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34806.pdf",
+  "readerTitle": "粗定位能动，精定位不动：大音频语言模型把时间绑在了事件名上",
+  "schemaVersion": 1
+}

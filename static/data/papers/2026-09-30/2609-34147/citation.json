@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34147",
+  "arxivId": "2609.34147",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arthur Hinsvark"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonios Alexos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Osama Hanna"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip C. Woodland"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiting Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34147",
+  "originalTitle": "SPEAR-Gen: Generation-Aware Pre-training for Unified Speech Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34147.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

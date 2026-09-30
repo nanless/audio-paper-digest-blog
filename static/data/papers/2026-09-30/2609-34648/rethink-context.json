@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34648",
+  "abstract": "Existing training-based speech emotion editing methods often require substantial task-specific training and can be unstable. This motivates us to investigate whether the pretrained generative dynamics of large-scale text-to-speech (TTS) models can be directly manipulated for training-free emotion editing. To answer this question, we probe the editability of pretrained flow-matching and hybrid TTS models by constructing a controlled test set and systematically diagnosing editing effects along the generative trajectory. Our analysis reveals that pretrained TTS models are substantially editable in emotion, but such editability is architecture- and trajectory-dependent and can be disrupted by early flow-matching steps, while cross-speaker emotion transport carries additional acoustic attributes beyond emotion. To address these limitations, we propose SEmoEdit, the first training-free framework that formulates emotion editing as dynamic velocity transport between source and target emotions, enabling robust, flow-based speech emotion editing directly within pretrained TTS models. SEmoEdit unifies three core operations: emotion replacement, emotion erasure, and continuous emotion interpolation, requiring neither parameter updates nor task-specific optimization. To systematically evaluate these capabilities, we introduce SEmoEditBench, a dataset comprising 600 editing cases, and conduct extensive experiments across state-of-the-art (SOTA) models and backbones. Our results show that SEmoEdit is highly effective and broadly applicable, outperforming existing training-based and activation-steering methods. Ultimately, this work reveals that pretrained speech flows possess rich, latent emotion-editing capabilities, providing useful guidance for real applications. Code, benchmark, and Audio samples are available at this https URL.",
+  "abstractSha256": "eda7e8bf4d92f0711f7ffbfe9e44ec1c4db3981b73263af88cd58e233db1036f",
+  "arxivId": "2609.34648",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音编辑",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音编辑",
+      "primaryTaskId": "task.speech-editing",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Tianxin Xie"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Kai Jiang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Zelin Zhao"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文先用 80 例平行对诊断冻结 TTS 速度场是否存在可用、无代价分段的情感编辑信号，再提出动态速度搬运的 SEmoEdit，在 600 例基准上以替换 TEP 0.691 与擦除 NP 0.704 超越训练式与转向式基线，代价是说话人相似度下降与跨域控制依赖骨干。",
+  "originalTitle": "SEmoEdit: Probing and Harnessing the Editability of Pre-trained Speech Flows",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34648.pdf",
+  "readerTitle": "冻结语音流能否直接改情感：SEmoEdit 的速度搬运诊断",
+  "schemaVersion": 1
+}

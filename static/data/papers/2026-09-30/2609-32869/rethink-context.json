@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32869",
+  "abstract": "Whisper is a widely used encoder-decoder model for speech recognition. Its encoder reads an utterance in one parallel pass, but its decoder writes the transcript one token at a time, which dominates inference time. Speculative decoding shortens such loops without changing their output: a small drafter guesses several upcoming tokens, and the original model verifies them all in one forward pass. We present Whisper-Flash, a two-layer drafter built on a property of speech recognition: the words still to be written have already been spoken. It reads Whisper&#39;s encoded audio and accepted decoder states and proposes eight tokens in a single forward pass. On the complete LibriSpeech test sets, Whisper-Flash processes $3.16\\times/2.85\\times$ as much audio per second as greedy decoding with identical outputs, and it remains faster at batch sizes up to 96 and under temperature sampling. Ablations show that direct access to the audio matters most.",
+  "abstractSha256": "84378e047ab158c57d9e32e0ca3ec8e3e06a70b00229576810db3a40c230ed54",
+  "arxivId": "2609.32869",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huapeng Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huayu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junkai Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kangqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 Whisper 解码器逐词生成耗时的问题，Whisper-Flash 用读取编码音频与已接受解码器状态的两层并行起草器一次提出 8 个词并由冻结 Whisper 验证，在完整 LibriSpeech 测试集上达到贪心解码 3.16 倍与 2.85 倍的音频吞吐且输出词元完全一致，代价是编码器固定开销占比上升与大批量下加速比收窄。",
+  "originalTitle": "Whisper-Flash: Acoustically Conditioned Parallel Drafting for Faster Whisper Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32869.pdf",
+  "readerTitle": "已说出的话就在音频里：用两层并行起草让 Whisper 解码少跑大模型",
+  "schemaVersion": 1
+}

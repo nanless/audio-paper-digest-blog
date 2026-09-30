@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35054",
+  "abstract": "Contemporary deep speech enhancement (SE) models are often trained with specific auxiliary terms in the loss function as a way to improve their performance in terms of perceptual metrics. Nevertheless, a higher score on a perceptual metric does not necessarily correlate with an improved listening experience. Through objective and subjective experiments, we assess the performance of SE models trained with two different types of auxiliary PESQ loss terms. The numerical evaluation on a suite of standard metrics suggests that, while models optimized for PESQ naturally obtain higher PESQ scores in the test set, for most other metrics the scores do not significantly change. In some cases, the PESQ loss even results in worse PESQ scores on mismatched data. A formal listening experiment reveals that the models without a PESQ loss were generally preferred over models that include it, across all settings. Finally, we analyze the relative importance of PESQ in the composite metrics CSIG, CBAK and COVL, and find that PESQ dominates all of them. Our study highlights the perils of over-reliance on PESQ and stresses the importance of a complete evaluation procedure for SE.",
+  "abstractSha256": "fea1f8fcdb6b1f50c9bb09476978d4956080112b9f4f92b0057e929847633b41",
+  "arxivId": "2609.35054",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danilo de Oliveira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tal Peer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maurício do V. M. da Costa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以可听偏好为目标检验两种 PESQ 辅助损失，显示它们虽抬高匹配集上的 PESQ 与复合指标，却未改善多数独立指标并在主观盲听中被无 PESQ 模型稳定胜出，而复合指标的方差分析揭示其高度依赖 PESQ 本身。",
+  "originalTitle": "Perceptual Quality Loss or Loss of Perceptual Quality?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35054.pdf",
+  "readerTitle": "加上感知损失，听感反而变差：PESQ 优化为何失灵",
+  "schemaVersion": 1
+}

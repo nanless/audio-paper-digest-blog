@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31719",
+  "arxivId": "2609.31719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shree Harsha Bokkahalli Satish"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Erica Cooper"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Patrícia Schmidtová"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maike Züfle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Éva Székely"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Sanders"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Klejch"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31719",
+  "originalTitle": "Distributional Metrics for Evaluating Spoken Conversational Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31719.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

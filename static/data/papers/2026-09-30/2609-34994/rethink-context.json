@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34994",
+  "abstract": "Most music-generation systems are still framed and evaluated primarily as producers of complete outputs, whereas composition often proceeds through successive revisions to a shared musical artifact. This paper studies a different use of a general-purpose instruction-following large language model: not as a one-shot music generator, but as a reusable operator over an evolving symbolic score. We formulate incremental composition as a sequence of operation-aware state transitions over persistent ABC notation, with explicit requirements on what each operation may change and what it must preserve. The interaction includes two artifact-initialization variants and three editing operations -- chord addition, inpainting, and transposition. We instantiate the formulation by adapting Llama 3.1 8B Instruct with Low-Rank Adaptation (LoRA) on 496,038 operation-aware dialogue records derived from Irish traditional music. The comparison with the unadapted model is used to test the feasibility of learning this interaction contract, not to claim novelty for fine-tuning itself. Across 500 dialogues per model (1,750 attempted output states), checker admission rises from 29.37% to 99.37%, while compliance conditional on admission rises from 0.7205 to 0.9798. Strict eligibility for reference-relative musical-feature analysis increases from 14 to 1,548 outputs, and Longest Common Subsequence analysis does not show a systematic increase in high-overlap sequences relative to held-out baselines under the specified protocol. The results support the technical feasibility of persistent, operation-aware symbolic editing with a general-purpose instruction LLM. They do not establish superior musical quality or human-AI co-creativity, which remain questions for musician-centered evaluation.",
+  "abstractSha256": "abc34a91fedfbce8ccb133cbc6b0bde4f30a581ad3d98575546cfca4a4bbe8af",
+  "arxivId": "2609.34994",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "André Ricardo Ducca Fernandes"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil",
+        "Sorbonne Université, CNRS, LIP6, F-75005 Paris, France",
+        "CBAE, Universidade Federal do Rio de Janeiro (UFRJ), Rio de Janeiro, RJ 22250-020, Brazil"
+      ],
+      "name": "Jean-Pierre Briot"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "Simone Diniz Junqueira Barbosa1"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "Hélio Côrtes Vieira Lopes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把增量作曲定义为持久 ABC 工件上的操作感知状态转移，用 496038 条对话记录对 Llama 3.1 8B Instruct 做 LoRA 适配，在 1750 次尝试下检查器准入从 29.37% 升至 99.37%、条件合规从 0.7205 升至 0.9798，代价是结论限于爱尔兰传统音乐域且不证明审美优越或无人抄袭。",
+  "originalTitle": "From One-Shot Generation to Incremental Music Composition: Adapting a General-Purpose Instruction LLM for Persistent Symbolic Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34994.pdf",
+  "readerTitle": "从一次生成到多轮改谱：让通用指令模型守住可持久编辑的交互契约",
+  "schemaVersion": 1
+}

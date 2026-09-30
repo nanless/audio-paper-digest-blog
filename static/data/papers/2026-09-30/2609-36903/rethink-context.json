@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36903v1",
+  "abstract": "End-to-end full-duplex speech models have brought open-source machine conversation closer to human-like interaction, yet existing systems remain limited in two intertwined dimensions: long-context robustness and multi-party interaction. Real-world scenarios such as meetings, group lessons, and social-robot reception require a single model to track, contextualize, and respond to multiple speakers over extended durations. Progress is constrained by both data and evaluation: open multi-party speech corpora remain small and are not designed for codec-frame-level full-duplex modeling, while existing long-audio benchmarks focus on passive listening and speech-to-speech benchmarks are mostly short and dyadic. We extend the Moshi paradigm jointly along the long-horizon and multi-party axes in English and Chinese. First, we release 57.6k hours of synthetic training data ($\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkPT}{MultiTalkPT}$ and $\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkFT}{MultiTalkFT}$) for long-form, multi-party, English-Chinese full-duplex dialogue, with controllable length, participant count, turn-taking, overlap, backchannels, interruptions, addressee shifts, and long-range coreference. Second, we introduce $\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkBench}{MultiTalkBench}$, built from real human recordings, for evaluating long-form, multi-party, bilingual full-duplex dialogue. Conversations average 32.6 minutes and include probes for long-range entity tracking, topic coherence, and addressee selection. Third, we train a bilingual Moshi-style model that sustains coherent multi-party English-Chinese conversations over extended durations and substantially outperforms open-source baselines including Moshi, MiniCPM-o-4.5, and Qwen3-Omni-30B-A3B-Instruct on MultiTalkBench.",
+  "abstractSha256": "95102ffa089b06a242d50866ae724aca77e82d486b7e6b8e0817d5ced608367d",
+  "arxivId": "2609.36903",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36903v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Ke Wang"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Houxing Ren"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Zimu Lu"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Yunqiao Yang"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Zhuofan Zong"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab"
+      ],
+      "name": "Mingjie Zhan"
+    },
+    {
+      "affiliations": [
+        "CUHK MMLab",
+        "CPII under InnoHK"
+      ],
+      "name": "Hongsheng Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对长时多方全双工对话缺数据缺评测的问题，论文用两阶段脚本合成加 IndexTTS2 渲染构建 57.6k 小时中英并行流语料并以两阶段微调 Moshi，在 MultiTalkBench 上最终分从 4.66 升到 13.15 但仍远低于人类 68.74。",
+  "originalTitle": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36903v1.pdf",
+  "readerTitle": "一人对多人、长时双语：MultiTalk 用合成并行流把全双工对话拉长拉多",
+  "schemaVersion": 1
+}

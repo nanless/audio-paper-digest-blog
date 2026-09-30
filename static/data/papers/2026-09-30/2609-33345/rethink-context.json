@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33345",
+  "abstract": "Multilingual self-supervised speech models can benefit from sharing information across languages, but under a matched total pretraining data budget they still fall short of monolingual models. We show that strengthening the model&#39;s ability to discriminate languages during pretraining reduces and, on some measures, closes this multilingual gap on continuous phonetic and higher-level linguistic measures, while preserving substantial cross-language sharing. Using a controlled English/French HuBERT setting, we test two interventions which strengthen language discrimination: an auxiliary language classifier and per-language k-means targets. Across interventions, continuous-feature phone discrimination error (phone-ABX, lower is better) decreases from 11.6% in the bilingual baseline to 10.4% (monolingual: 10.8%), while lexical performance (sWUGGY, higher is better) increases from 52.1% to 56.7% (monolingual: 58.5%) and prosodic performance (ProsAudit, lexical subtask, higher is better) from 68.9% to 72.9% (monolingual: 72.6%). Across HuBERT training stages, the strongest gains on most linguistic measures occur when language discrimination is introduced in the first iteration, whereas later or repeated interventions yield smaller improvements and are accompanied by increased language-wise segregation. These results support a causal role for language discrimination in reducing the additional cost of multilingual learning.",
+  "abstractSha256": "d728f2767bba12ce6f3dc8609d6f7ff9c054ab330d101aec8a4ede8554345a27",
+  "arxivId": "2609.33345",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Maureen de Seyssel"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Jie Chi"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Zakaria Aldeneh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在英法双语 HuBERT 等总时长对照下，增强语言判别把连续音素 ABX 从 11.6% 降到 10.4%、把 sWUGGY 从 52.1% 提到 56.7%、把 ProsAudit 词汇子任务从 68.9% 提到 72.9%，但最终离散单元无改善且过晚干预会增加语言分隔。",
+  "originalTitle": "Language Discrimination Improves Linguistic Learning in Multilingual Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33345.pdf",
+  "readerTitle": "能分清语言又不分家：语言判别如何缩小多语言语音模型的额外代价",
+  "schemaVersion": 1
+}

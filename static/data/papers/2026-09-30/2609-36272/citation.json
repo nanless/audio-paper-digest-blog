@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36272v1",
+  "arxivId": "2609.36272",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36272v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahsan J. Cheema"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jorge Mejia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sanna Hou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sunil Puria"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36272v1",
+  "originalTitle": "Model-Guided Design of Low-Context Speech Probes for Cochlear Synaptopathy",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36272v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

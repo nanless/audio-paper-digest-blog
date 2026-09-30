@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36460v1",
+  "arxivId": "2609.36460",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36460v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maral Ebrahimzadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gilberto Bernardes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian Stober"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36460v1",
+  "originalTitle": "Emergent Tonal Structure in Learned Chord Embeddings and Its Relation to Tonal Tension",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36460v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

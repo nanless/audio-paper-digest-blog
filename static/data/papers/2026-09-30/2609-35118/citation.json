@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35118",
+  "arxivId": "2609.35118",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haixin Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuang Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanhua Long"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35118",
+  "originalTitle": "RemixIT-TSE: Progressive Synthetic-to-Real Adaptation for Target Speech Extraction via Target-Aware Supervision and Remixing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35118.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

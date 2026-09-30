@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36737v1",
+  "arxivId": "2609.36737",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36737v1",
+  "authors": [
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Eric Ming Chen"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Jin Woo Lee"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Vincent Sitzmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36737v1",
+  "originalTitle": "Reconstructing the Vocal Tract with Differentiable Acoustic Simulation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36737v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

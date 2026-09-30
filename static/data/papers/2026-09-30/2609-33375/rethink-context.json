@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33375",
+  "abstract": "The transition from vocoder-based to neural-codec speech synthesis makes generalization more difficult for speech deepfake detectors, particularly those relying on speech-oriented representations. It remains unclear which acoustic representations retain discriminative information when the generation mechanism changes. We therefore compare 12 acoustic representations using a shared low-capacity linear classifier to identify effective evidence under codec shift. The analysis shows that hierarchical XLS-R leads on the pooled test set, while pooled no-vocals residual statistics perform best on the unseen-codec condition, revealing complementary behavior across generation conditions. Building on this finding, we propose MN-P, a dual-view detector that integrates an utterance-level pooled no-vocals representation with token-level XLS-R features through adaptive gating. The proposed MN-P reduces EER by 54.2% overall and by 60.9% on the codec-unseen condition relative to the best-performing retrained state-of-the-art system, with consistent gains across different detector backends. These results indicate that pooled no-vocals residual statistics provide effective complementary evidence for cross-generation speech deepfake detection.",
+  "abstractSha256": "694b6182a67beec82413117b2a14411ee11ddc3d42e4f21e088e7f324887b566",
+  "arxivId": "2609.33375",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Menglu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao-Ping Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对声码器到神经编解码器合成范式迁移导致的泛化下降，论文先用共享线性分类器比较 12 种声学表示，再提出双视角 MN-P 融合 token 级分层 XLS-R 与话语级 pooled 无人声残差，在合并测试集上把最强重训基线的等错误率从 5.986% 降到 2.744%，未见编解码器子集从 15.692% 降到 6.136%，代价是依赖离线人声分离与冻结大模型表示。",
+  "originalTitle": "What Survives the Codec Shift: Pooled No-Vocals Residuals for Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33375.pdf",
+  "readerTitle": "语音证据不够用了： pooled 无人声残差为何在未见编解码器下存活",
+  "schemaVersion": 1
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33999",
+  "abstract": "Speaker verification (SV) models are commonly assumed to better capture nuances among speaker characteristics as verification accuracy improves, leading to their widespread use as automated proxies for human voice similarity in speech generation tasks. However, by establishing a human perceptual alignment metric and conducting systematic analysis, we demonstrate that perceptual alignment is governed far more by how a model is trained (its learning objective) than by how well it performs (EER). Notably, standard margin-based classification losses (e.g., AAM-Softmax) yield substantially lower perceptual alignment than prototypical metric losses, while EER itself fails to track human judgment, directly challenging the community&#39;s implicit assumption. We trace this divergence to embedding geometry, where a model&#39;s effective dimensionality ($d_{\\mathrm{eff}}$) tracks perceptual alignment with a $-0.95$ rank correlation, revealing that the dimensional spread favored by classification losses fundamentally clashes with the low-dimensional nature of human voice perception. Imposing a dimensionality bottleneck compresses $d_{\\mathrm{eff}}$ and raises perceptual alignment ($\\rho_{\\mathrm{align}}$) from 0.08 to 0.74, establishing a principled geometric criterion for evaluating voice similarity.",
+  "abstractSha256": "d823c27041593282f7d179d4e6559eca36f710aa3249826f41c3b3c38aa06a74",
+  "arxivId": "2609.33999",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.speech-perception",
+          "label": "言语感知"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Szu-Chi Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jia-Kai Dong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yi-Cheng Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sung-Feng Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用 35 组受控训练比较等错误率与人听相似度的关系，发现等错误率几乎不跟踪人听判断，而有效维度越低对齐越高，压缩嵌入维度可把 AM-Softmax 的对齐从 0.08 提升到 0.738，代价是等错误率升至 20.48% 左右。",
+  "originalTitle": "Rethinking Automated Voice Similarity by Shifting from EER to Embedding Geometry",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33999.pdf",
+  "readerTitle": "验证越准不等于听感越准：训练目标与有效维度决定声音相似度",
+  "schemaVersion": 1
+}

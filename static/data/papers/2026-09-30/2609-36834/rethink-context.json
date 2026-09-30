@@ -1,0 +1,180 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36834v1",
+  "abstract": "Progress in dialectal speech technology is hindered by the scarcity of large-scale, real-world corpora. For Minnan speech, existing resources remain limited, and few provide paired Minnan and Mandarin transcripts at scale. To address these gaps, we introduce WenetSpeech-Min, an open-source corpus comprising around 10,000 hours of Minnan speech collected from diverse online media, with paired Minnan and Mandarin transcripts for every utterance. We further establish an automatic speech recognition (ASR) benchmark covering both Minnan and Mandarin transcripts and a text-to-speech synthesis (TTS) benchmark using Minnan transcripts, with manually verified evaluation sets for both tasks. To assess the effectiveness of the corpus, we train ASR and TTS models on WenetSpeech-Min and compare them with representative systems on the proposed benchmarks. The resulting models outperform the evaluated open-source models on most metrics and achieve competitive performance against commercial systems. We will release the corpus, benchmarks, and models to facilitate reproducible research on Minnan speech technology.",
+  "abstractSha256": "09d35f75578655073e516ea010b3c62e73f1fd103c307d9fa73ee92b3898d7f1",
+  "arxivId": "2609.36834",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36834v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunjiang He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hongtao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zeyu Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qituan Shangguan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengyou Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanbo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinhui Ye"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chengdong Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Binbin Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pengcheng Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chuang Ding"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qianze Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingyang Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liumeng Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对闽南语缺少大规模真实语音加方言与普通话配对转写的问题，该文用约 10000 小时多源媒体加三系统投票与翻译或字幕抽取构造配对语料，并在人工核验基准上显示微调后闽南转写字错率降至 15.21%，普通话转写平均指标接近商用系统，代价是保留了低质量历史剧集录音与转写非逐字对齐带来的跨基准不可比。",
+  "originalTitle": "WenetSpeech-Min: A Large-Scale Minnan Speech Corpus with Dual Transcriptions for Dialectal Speech Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36834v1.pdf",
+  "readerTitle": "两种笔迹配同一段声音：WenetSpeech-Min 如何把闽南语和普通话转写配成对",
+  "schemaVersion": 1
+}

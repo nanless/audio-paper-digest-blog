@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33095",
+  "arxivId": "2609.33095",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peizhen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbing Cao"
+    },
+    {
+      "affiliations": [
+        "University of North Texas, USA"
+      ],
+      "name": "Yang Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33095",
+  "originalTitle": "REALM: A Coarse-to-Fine Generative Framework for Embodied Reactive Listening",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33095.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

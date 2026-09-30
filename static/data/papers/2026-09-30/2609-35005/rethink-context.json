@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35005",
+  "abstract": "Keyword Spotting (KWS) is becoming increasingly important as voice-controlled devices grow more widespread. While voice interaction with smartphones and smart TVs is already common, deploying KWS on heavily resource-constrained edge devices such as wearables remains challenging. These systems must meet high accuracy requirements while operating under strict constraints on computational power, memory footprint, and real-time latency. In this work, we present an application of the STMC (Short-Term Memory Convolutions) framework to adapt a modular CNN model for online, LSTM-like inference. Our approach reduces power consumption and redundant computations while maintaining the stability and simplicity of training CNNs. We achieve up to 82% and 46% MCPS reduction compared to equivalently frequent standard CNN execution and vanilla STMC, respectively. The best configuration achieves 93.8% accuracy on the 11-class Google Speech Commands task and 97.1% on the same task with zero-padded data.",
+  "abstractSha256": "59ea4a332d3f06b4c2e3cf0e2fb72b0e2d4c03b0f9078fa69d64409c2a0cb42c",
+  "arxivId": "2609.35005",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paweł Warlewski"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artur Czeczko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Artur Szumaczuk"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grzegorz Stefański"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Szymon Klimaszewski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对连续音频流中的关键词检测任务，论文把已训练好的卷积主干切成以池化结尾的子模型并按静态调度稀疏执行，在保持识别精度的同时报告最高 82% 和 46% 的每秒计算量下降，但分类间隔拉长带来了可控的平均延迟增加。",
+  "originalTitle": "Sub-Model Short-Term Memory Convolutions for Keyword Spotting Systems on Device",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35005.pdf",
+  "readerTitle": "关键词只偶尔出现时，为何还要每帧都算完整卷积：子模型短时记忆卷积的稀疏执行",
+  "schemaVersion": 1
+}

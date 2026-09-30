@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33433",
+  "arxivId": "2609.33433",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jae Min Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyongmin Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bogyung Jeong"
+    },
+    {
+      "affiliations": [
+        "Sogang University"
+      ],
+      "name": "Minjeong Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "HaeJun Yoo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Du-Seong Chang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33433",
+  "originalTitle": "CORA: A Protocol for Diagnosing Boundary Robustness in Text-to-Audio Retrieval under Query Reformulations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33433.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

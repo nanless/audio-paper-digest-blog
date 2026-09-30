@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36951v1",
+  "arxivId": "2609.36951",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36951v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36951v1",
+  "originalTitle": "Interpreting and Evaluating Dynamic-Rate Speech Codec Boundaries",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36951v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

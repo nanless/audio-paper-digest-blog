@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33865",
+  "abstract": "In-context learning offers an appealing approach to adapt automatic speech recognition (ASR) models to new speakers, accents, and domains by providing speech-text pairs as demonstrations at inference time. Recent work shows that some LLM-based speech models are capable of ASR in-context adaptation, when providing interleaved speech-text demonstrations. In this work, we ask whether in-context adaptation is an inherent ability for all encoder-decoder models. We study two forms of demonstration, collated and interleaved demonstration, across six encoder-decoder models, spanning conventional cross-attention-based and LLM-based architectures. We find that all tested models are able to perform in-context adaptation out of the box, achieving up to 30% relative improvement in the oracle experiments and up to 23% using first-pass hypotheses. Through controlled experiments on three English datasets, we show that lexical and speaker information both contribute to successful adaptation. While interleaved demonstration is effective in certain cases, collated demonstration brings consistent adaptation across the board. Our results suggest that in-context adaptation for ASR is not unique to specific architectures, training, or demonstration approaches.",
+  "abstractSha256": "ecdeb5c33a69d5e8fc68d7fc8960cc4602166c6bb81946d7a5da09f6ea2850bd",
+  "arxivId": "2609.33865",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.few-shot",
+          "label": "少样本"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yen Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Goldwater"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao Tang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究英语语音识别在推理时用语音文本示范做领域自适应，对比拼接与交错两种示范组织，发现六个模型无需额外训练都能获益，词与说话人信息是主要来源，而拼接方式适用面更广但受上下文长度限制。",
+  "originalTitle": "In-Context Adaptation of Encoder-Decoder Models in Speech Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33865.pdf",
+  "readerTitle": "不训练也能适应口音与用词：拼接式示范让各类编码器解码器模型都学会跟读",
+  "schemaVersion": 1
+}

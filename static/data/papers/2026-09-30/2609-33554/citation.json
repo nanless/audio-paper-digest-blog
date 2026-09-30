@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33554",
+  "arxivId": "2609.33554",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wei-Ting Lai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amy Bastine"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lachlan Birnie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thushara D. Abhayapala"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanga N. Samarasinghe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33554",
+  "originalTitle": "An Efficient Parametric Codec for Low-Bitrate First-Order Ambisonics",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33554.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

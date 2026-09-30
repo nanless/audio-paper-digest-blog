@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33373",
+  "abstract": "Tracking speech sources remains a challenge due to ambiguous data association arising from intermittent speech, close spatial proximity, and complex acoustic conditions. To address these issues, we propose an identity-assisted association that maps unordered direction-of-arrival (DOA) estimates to speaker-consistent source trajectories for reliable speech source tracking. Specifically, speaker identity embeddings are directly integrated into the model input as a complementary cue to spatial features. This enables maintaining identity consistency by combining long-term time-invariant vocal identity characteristics with the short-term continuity of spatial cues. To effectively process these heterogeneous inputs while accommodating their distinct characteristics, we design a unified neural tracker. Within this model, time self-attention modules capture the temporal evolution of each source, while source self-attention modules distinguish between competing source tracks. Experimental results demonstrate the superiority of the proposed neural tracker in mitigating association confusion for speech source tracking.",
+  "abstractSha256": "7b02f9183509bbc144ddf930995db3c16dff7a1dfc159728d56038ff8a2e3095",
+  "arxivId": "2609.33373",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声源追踪",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.source-tracking",
+          "label": "声源追踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声源追踪",
+      "primaryTaskId": "task.source-tracking",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bing Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Di Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaofei Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把每帧无序波达方向估计和说话人嵌入在输入端融合，用时间与声源两维自注意力输出按说话人排序的轨迹，在合成与 LOCATA 上以关联精度提升为主、检测与定位误差同步下降为证据，但只验证至多两说话人同时至多两活跃的短序列条件。",
+  "originalTitle": "Identity-Assisted Association of Unordered DOA Estimates for Neural Speech Source Tracking",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33373.pdf",
+  "readerTitle": "无序方向遇到间歇说话就乱线：用说话人身份把轨迹按人接回去",
+  "schemaVersion": 1
+}

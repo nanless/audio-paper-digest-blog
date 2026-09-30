@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36921v1",
+  "arxivId": "2609.36921",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36921v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chien-Feng Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chih-Kai Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bo-Han Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu-Hsuan Li Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng-Fu Chou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36921v1",
+  "originalTitle": "When Capabilities Fail to Compose: Diagnosing the Compositionality Gap in Large Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36921v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

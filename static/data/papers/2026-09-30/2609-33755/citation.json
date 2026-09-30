@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33755",
+  "arxivId": "2609.33755",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Luca Bompani"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Marco Fariselli"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Giovanni Oltrecolli"
+    },
+    {
+      "affiliations": [
+        "Electrical, Electronic and Information Engineering (DEI), University of Bologna, Italy"
+      ],
+      "name": "Francesco Conti"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33755",
+  "originalTitle": "Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33755.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

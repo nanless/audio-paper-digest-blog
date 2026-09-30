@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34662",
+  "arxivId": "2609.34662",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diego Caviedes-Nozal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Liang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rasmus Kongsgaard Olsson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "W. Bastiaan Kleijn"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34662",
+  "originalTitle": "Unsupervised Speech Enhancement via Drifting",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34662.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

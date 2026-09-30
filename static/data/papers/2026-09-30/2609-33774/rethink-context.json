@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33774",
+  "abstract": "Watermarking is a promising tool for establishing the provenance of AI-generated speech. While many neural audio watermarking methods rely on a separately trained watermark generator, token-level watermarking is a training-free alternative that operates directly during generation. Its main weakness is retokenization: decoding generated speech to a waveform and encoding it again can change token identities and erode the watermark. To make the watermark robust to these changes, we propose Redwing, REtokenization-Durable Watermarking IN Generation. It builds a graph from the token substitutions observed under retokenization, whose Laplacian yields a basis that assigns similar values to tokens likely to substitute for one another. Over this basis, embedding and detection functions are jointly optimized to preserve watermark signal through retokenization while limiting embedding distortion and detector variability on unwatermarked speech. On the Moshi full-duplex system, after eight consecutive passes of Mimi resynthesis, Redwing achieves 80.7% TPR at a calibrated 1% FPR, compared with 8.3% for KGW and at most 7.3% for WMAR. It also has the highest TPR after eight passes through three other neural codecs (77.5-93.0%), and the gains generalize to TTS models at a speech-quality cost close to that of KGW. These results show that retokenization is not merely a source of noise: its transition structure can be exploited as a design principle for robust token-level watermarking.",
+  "abstractSha256": "30b40538a9b7e729bee8f531ce1d2a54e34bd593793ae4d7a420abdb53fb6dd5",
+  "arxivId": "2609.33774",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频水印",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Kanghwi Lee"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Kyeongseok Jeong"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Jeongmin Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音语言模型生成后须经编码器重读记号并发生替换的问题，Redwing 用替换图谱基与分离求解的嵌入检测函数实现可复现的鲁棒水印，在 Moshi 经 8 次 Mimi 重合成后保持 80.7% 检出率，代价是与 KGW 相当的语音质量变化。",
+  "originalTitle": "Tokens Change, Structure Endures: Spectral Watermarking for Generated Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33774.pdf",
+  "readerTitle": "记号会变，结构留下：面向重编码的语音谱水印",
+  "schemaVersion": 1
+}

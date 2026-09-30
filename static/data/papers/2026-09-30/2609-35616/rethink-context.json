@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35616",
+  "abstract": "Interactive 3D head generation requires coordinated speaking and listening motion that responds to an evolving conversation. Existing generators use incoming observations as context but keep their parameters fixed, leaving conversational patterns unused as a learning signal. We introduce EvolvingAvatar, a causal generator that uses test-time training to adapt to user face video and dyadic audio during interaction. Its dyadic context prediction objective provides a self-supervised learning signal from audiovisual context without target motion labels at test time. Persistent fast weights accumulate these updates within each conversation to guide motion generation, while transient jaw adaptation responds to current audiovisual context. Predicted speech activity controls how persistent adaptation guides motion. We also introduce InterHead-Bench, a unified 455.95-hour benchmark built from single-view and dual-view conversation videos. Experiments show improved conversational motion statistics over strong baselines. On the hardest out-of-distribution split, generation improves as conversations unfold, reducing mismatch with recorded user-avatar expression statistics by up to 11.1% from the first interval.",
+  "abstractSha256": "ea7cba54ace468ada6664350a9299043c7d87b554bca6992c6d4ec459ae0bcd4",
+  "arxivId": "2609.35616",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "音视频交互",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-interaction",
+          "label": "音视频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "音视频交互",
+      "primaryTaskId": "task.av-interaction",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiqi Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xun Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanbin Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linfeng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meng Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对听与说需随对话演变的交互 3D 头生成问题，论文用用户面部视频加双人音频驱动测试时训练与双路快权重适应，在最难跨域划分上随对话推进改善表情统计，但逐帧对齐误差与颈部统计仍有代价与边界。",
+  "originalTitle": "EvolvingAvatar: Interactive 3D Head Generation That Adapts as Conversations Unfold",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35616.pdf",
+  "readerTitle": "边聊边学：用双人上下文预测让 3D 头像在对话中改写自己",
+  "schemaVersion": 1
+}

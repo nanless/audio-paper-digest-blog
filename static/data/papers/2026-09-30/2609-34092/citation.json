@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34092",
+  "arxivId": "2609.34092",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Diogo Dinis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francisco Teixeira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhiksha Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alberto Abad"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isabel Trancoso"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34092",
+  "originalTitle": "Evaluating Machine Unlearning in ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34092.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

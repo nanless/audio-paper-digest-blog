@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33486",
+  "arxivId": "2609.33486",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nico García-Peguinho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Kelly"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fabrizio Smeraldi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anna Xambó Sedó"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33486",
+  "originalTitle": "Mask-Induced Displacement in Audio XAI via Logit Trajectory Decomposition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33486.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

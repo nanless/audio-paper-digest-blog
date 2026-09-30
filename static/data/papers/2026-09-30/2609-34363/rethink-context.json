@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34363",
+  "abstract": "Recent omni-modal models demonstrate strong perception of audio and visual inputs, yet often struggle to connect what they hear with what they see at the same moment. This weakness in temporal correspondence can cause models to associate spoken cues with the wrong visual scenes, producing plausible answers grounded in incorrect audio-visual pairings. We diagnose this problem through controlled temporal swaps, revealing that model answers do not reliably follow changes in these pairings. To address it, we propose Synchrony-Guided Representation Alignment (SyncRA), a lightweight method for strengthening temporal correspondence between audio and vision. Specifically, SyncRA contrasts intermediate audio-visual representations within each video, aligning matching moments while separating mismatched ones to capture local temporal correspondence within a shared global context. The objective derives supervision directly from existing input timing, requiring no additional annotations and leaving inference unchanged. We evaluate SyncRA across four open omni-modal models spanning different sizes and architectures on five public video benchmarks. SyncRA consistently outperforms answer-only fine-tuning across all model-benchmark combinations, while substantially improving the ability to track changing audio-visual pairings in controlled evaluations. These results demonstrate that lightweight, targeted supervision can effectively strengthen temporal correspondence and translate into broad improvements in audio-visual question answering.",
+  "abstractSha256": "95a3cef0cc77c281895beba345ab7b990fb782349f6fbb36222f745e108a3b31",
+  "arxivId": "2609.34363",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Zelong Xu"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Yan Li"
+    },
+    {
+      "affiliations": [
+        "University of Alberta"
+      ],
+      "name": "Wenhe Hu"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Xiyang Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对答案监督学不到局部音画配对的问题，SyncRA 用原生时间区间在同一视频内做对称 InfoNCE 中间层对齐，在四种骨干与二十组基准上一致超过答案微调，代价是依赖区间划分与训练期投影头。",
+  "originalTitle": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34363.pdf",
+  "readerTitle": "声音与画面对不上时刻：SyncRA 把同时性写进中间层",
+  "schemaVersion": 1
+}

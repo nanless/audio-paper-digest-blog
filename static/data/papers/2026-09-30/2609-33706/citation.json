@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33706",
+  "arxivId": "2609.33706",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33706",
+  "originalTitle": "DGS-MLDG: Domain Gradient Surgery Guided Meta-Learning for Domain Generalization in Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33706.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

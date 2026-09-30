@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35115",
+  "abstract": "Full-duplex speech models support streaming interaction that listens and speaks at the same time. Serving them is governed by a strict, repeating deadline: conversation advances on a one-second cadence, and every second of input must be turned into a second of speech before the next second arrives. Because stages within a session run in strict sequence, per-invocation overhead cannot be batched away. Profiling reveals that the autoregressive stages of a duplex second already fit within the period, whereas the token-to-audio synthesis tail is what causes overruns. This tail stage suffers from orchestration slack where the GPU is left waiting as thousands of tiny, regular operations are issued one by one, while also wasting substantial memory by over-provisioning state at static implementation constants. Existing remedies, such as graph recording and demand-sized allocation, fail because streaming state dynamics violate their prerequisites. The root cause is that the runtime lacks the model&#39;s native clocks: the per-region counters that govern advancement rates and retention policies. We propose DuplexCadence, which explicitly declares native clocks to the runtime and derives two mutually enabling rules: demand-sized state allocation at a stable address, and exact-shape graph replay without padding. The former eliminates idle memory and stabilizes tensor pointers, while the latter removes orchestration slack without padding overhead. Evaluated on four released models across three decoder architectures with bit-for-bit identical output, DuplexCadence reaches $2.85\\times$ the stock runtime&#39;s speed at $38.8\\%$ lower peak memory. On the live duplex path, mean SPEAK time falls from $14\\%$ over the one-second cadence to $2\\%$ under it, enabling models to reliably keep up with interactive speech while markedly expanding multi-",
+  "abstractSha256": "e640b40f7b8839853f67145b3cfc36da4b0007a5df4d3e4d969c223f7c820fd2",
+  "arxivId": "2609.35115",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Haixiao Gao"
+    },
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Yimin Zheng"
+    },
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Linyou Xiao"
+    },
+    {
+      "affiliations": [
+        "Hong Kong University of Science and Technology (Guangzhou), China"
+      ],
+      "name": "Zeke Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全双工语音每秒输入必须在下一秒前变成一秒语音的截止期问题，DuplexCadence 把时钟速率与保留界声明给运行时，用按需定址的携带缓存与精确形状图回放在合成尾段实现约 2.85 倍加速与约 38.8% 峰值内存下降并保持逐字节一致，代价是一次性捕获预热与自回归阶段仍在无损范围之外。",
+  "originalTitle": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35115.pdf",
+  "readerTitle": "节拍赶不上的原因不在算力：用声明时钟同时收紧状态与执行",
+  "schemaVersion": 1
+}

@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33810",
+  "abstract": "Autoregressive text-to-speech (TTS) systems synthesize natural speech but, once trained, offer little control over speaking rate. We show that speaking rate can be steered at inference time, without retraining, by clamping a single decoder block&#39;s activation along a discovered speed axis. A decoder-block analysis recovers the rate axis, a neutral operating point, and a per-step intensity scale; at inference, the activation&#39;s projection onto this axis is set to a fixed scalar. Learning this direction from synthetically time-stretched and time-compressed speech yields rate control that largely preserves speaker identity, generalizes across model architectures, and maintains high naturalness in objective and human evaluations. Unlike standard additive steering, which breaks at the slow extreme, clamping remains stable on all three systems tested; at moderate targets, the better rule depends on the model. Finally, we show that rate information is decodable across layers but causally steerable only within a mid-depth window, and demonstrate the effectiveness of our approach on the public Seed-TTS-Eval benchmark.",
+  "abstractSha256": "022b89873843bef4fb0b028012731c32ef563eb0e5d79a10954d4b939f45f125",
+  "arxivId": "2609.33810",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "韵律与风格控制",
+      "primaryTaskId": "task.prosody-style-control",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Francesco Verdini"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Antonis Asonitis"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Marzieh Razavi"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Pierre-Edouard Honnet"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Vijeta Avijeet"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Juan Pablo Zuluaga Gomez"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用同一句话的慢中快三速对比找出语速轴，并在中间层把激活沿该轴的投影钳制到目标强度，在三套自回归语音合成系统上实现免重训调速，慢速极端下钳制保持可懂度和音色而相加式转向普遍失效，中等目标下最优规则随模型而异。",
+  "originalTitle": "Controlling Speaking Rate in Autoregressive TTS via Activation Steering",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33810.pdf",
+  "readerTitle": "语速可读处处有、可写只在中间：钳制投影为何比相加更稳",
+  "schemaVersion": 1
+}

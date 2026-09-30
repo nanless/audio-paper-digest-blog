@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36687v1",
+  "arxivId": "2609.36687",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36687v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihwan Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kleanthis Avramidis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junhyeok Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Najim Dehak"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36687v1",
+  "originalTitle": "MyoCodec: A Streaming Neural Codec for Electromyography",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36687v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

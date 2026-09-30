@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34247",
+  "arxivId": "2609.34247",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xianzhao Chen"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xiaohai Tian"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Jun Zhang"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34247",
+  "originalTitle": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34247.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

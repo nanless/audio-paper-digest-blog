@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35397",
+  "abstract": "Real-time music source separation must satisfy two constraints: a bound on algorithmic latency and a bound on computational cost. Offline separators are usually omitted from real-time comparisons or credited with a latency equal to their full input length. We show that this latency is set by where the output is read, not by the length of the separator&#39;s input. An unmodified offline model can therefore run in a streaming setting, without retraining. At each step, the input slides by one STFT hop, and one output hop is read out. The resulting latency can be as low as one STFT hop (23 ms), and the computational cost does not increase as latency shrinks. We identify a theoretical model-dependent latency boundary below which separation quality should drop steeply, and confirm this experimentally across three architectures. At equal algorithmic latency, streamed off-the-shelf checkpoints for HT-Demucs and SCNet match the published results of dedicated real-time models in terms of separation quality. Streamed models remain far less computationally efficient: only HT-Demucs runs faster than real time on a GPU.",
+  "abstractSha256": "351c7ebf2b51f47058a27bcf727ceff8b750d173732cc53bdce92f83bf2d5cb8",
+  "arxivId": "2609.35397",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dylan Sechet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Evrard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthieu Kowalski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把离线音乐分离模型不改权重地按单跳滑窗流式运行，用读出位置控制算法延迟，证明窗口长度处存在质量拐点，并在 23 与 93 毫秒下用 HT-Demucs 与 SCNet 达到专用实时模型相当的分离质量，代价是除 HT-Demucs 外仍高于实时计算量。",
+  "originalTitle": "Adapting offline models to a streaming context for music source separation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35397.pdf",
+  "readerTitle": "离线分离模型的延迟不是输入长度：读出位置决定流式下限",
+  "schemaVersion": 1
+}

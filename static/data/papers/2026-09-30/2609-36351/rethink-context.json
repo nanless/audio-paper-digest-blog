@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36351v1",
+  "abstract": "Misophonia, a disorder of decreased tolerance to specific sounds, affects 5-20% of the population, yet sufferers have no good options: therapy helps a minority, and earplugs or noise cancellation silence everything. We present a study for neural trigger sound suppression for misophonia, selectively removing trigger sounds. We curate a dataset covering the 10 most common trigger classes. Using streaming dual-path networks operating on 6 ms audio chunks, we explore both one-hot and multi-hot-conditioned models that suppress 1-3 triggers from the acoustic scene. We validate our model outputs in a listening study with 30 adults with clinically elevated misophonia impairment. Participants reported significantly lower distress and arousal, and improved valence, for suppressed audio.",
+  "abstractSha256": "5de46cb700ccd04894505cf4863c69c5348bd42c2356dd6cadc90ee242c67e11",
+  "arxivId": "2609.36351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36351v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-separation",
+          "label": "音频分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频分离",
+      "primaryTaskId": "task.audio-separation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vaishnavi Vidyasagar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jasmine Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahima Uliyar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghyun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emily Catherine Gates"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Zachary Rosenthal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shyamnath Gollakota"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把问题定为按多热查询减去 1-3 类触发音并保留残差声景，用 6 毫秒分块的流式双路径网络实现 10 毫秒算法延迟，并在 30 名误音症受试者中报告困扰下降 2.37 点但抑制后仍高于基线地板。",
+  "originalTitle": "Trigger Sound Suppression for Misophonia",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36351v1.pdf",
+  "readerTitle": "只去掉触发音：用流式查询抑制应对误音症的选择性保留",
+  "schemaVersion": 1
+}

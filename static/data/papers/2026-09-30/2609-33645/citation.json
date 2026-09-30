@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33645",
+  "arxivId": "2609.33645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yifan Yang"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zengrui Jin"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xian Shi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Yuxuan Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Qi Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ruiyang Xu"
+    },
+    {
+      "affiliations": [
+        "Nankai University"
+      ],
+      "name": "Hui Wang"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ],
+      "name": "Dongchao Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "SII"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33645",
+  "originalTitle": "Pruned CTC for Memory-Efficient Large-Vocabulary ASR Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33645.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

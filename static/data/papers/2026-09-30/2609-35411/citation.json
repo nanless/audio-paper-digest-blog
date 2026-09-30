@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35411",
+  "arxivId": "2609.35411",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zelin Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guanjie Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danny Hin Kwok Tsang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)",
+        "Guangzhou, China"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35411",
+  "originalTitle": "GLAD: Global-Local Adaptive Detector for Robust Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35411.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

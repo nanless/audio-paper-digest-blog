@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35118",
+  "abstract": "Target Speech Extraction (TSE) in real-world conversational scenarios suffers from severe performance degradation due to the domain gap between synthetic training data and complex acoustic environments, where signal-level ground truth is typically unavailable. To address this challenge, we make the first attempt to extend RemixIT from speech enhancement to TSE and propose a progressive synthetic-to-real adaptation framework for real-world TSE with two fine-tuning stages. The first stage leverages region-wise speaker similarity and silence constraints within a target-aware adaptation framework to jointly optimize the model using synthetic and weakly supervised real-world data, injecting real-world traits while preserving synthetic-learned capabilities. The second stage further adapts the model using only real-world data through our RemixIT-TSE, where quality-filtered teacher pseudo targets, which guarantee reliable student training, provide signal-level supervision via SI-SNR loss. Experiments on the real conversational evaluation set (EVAL-2) of the SLT 2026 REAL-TSE Challenge, the proposed method achieves a 6.53% relative TER reduction, together with relative improvements of 21.84% in speaker similarity, 9.89% in DNSMOS-P808, and 4.10% in target-activity F1 over the source-domain baseline, demonstrating its effectiveness under unseen real-world conditions. Source code at https: //github.com/YuWang-Speech/RemixIT-TSE.",
+  "abstractSha256": "9186d68daee31cbdb2189f1f901d6903bd239d1ea983bde6676885aadf60f495",
+  "arxivId": "2609.35118",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "method",
+          "id": "method.semi-supervised",
+          "label": "半监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haixin Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shuang Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanhua Long"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对合成训练与真实对话失配且无信号级真值的问题，该文用合成预训练加目标感知弱监督过渡再做质量过滤的 RemixIT 重混自适应，在 REAL-TSE 未见场景 EVAL-2 上把 TER 从 0.763 降到 0.713，代价是只保留 4.2 小时高置信伪标签且依赖说话人标注与转写质量。",
+  "originalTitle": "RemixIT-TSE: Progressive Synthetic-to-Real Adaptation for Target Speech Extraction via Target-Aware Supervision and Remixing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35118.pdf",
+  "readerTitle": "没有干净目标时如何把目标语音提取搬到真实会议里：先对齐人，再重混练",
+  "schemaVersion": 1
+}

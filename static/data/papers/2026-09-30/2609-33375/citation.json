@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33375",
+  "arxivId": "2609.33375",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiajun Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Menglu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiao-Ping Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33375",
+  "originalTitle": "What Survives the Codec Shift: Pooled No-Vocals Residuals for Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33375.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

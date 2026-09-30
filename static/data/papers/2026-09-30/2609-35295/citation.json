@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35295",
+  "arxivId": "2609.35295",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dylan Sechet"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Evrard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthieu Kowalski"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35295",
+  "originalTitle": "Simulation-Based Inference for Plate Reverb System Identification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35295.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

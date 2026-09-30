@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36754v1",
+  "abstract": "Explicit prosodic cues may help automatic speech recognition (ASR) of spontaneous speech, but auxiliary representations typically require additional trainable components, making it unclear whether gains come from the auxiliary information or the fusion mechanism. We address this using a frozen HuBERT backbone and a 64-dimensional representation trained to predict log F0, voicing, Delta log F0, log energy, and spectral tilt. We compare a frozen-backbone recognizer (Baseline), trainable fusion with zero auxiliary input (Null), and the same fusion supplied with the learned representation (Learned). Across Buckeye, Switchboard, and AMI IHM, Null reduces WER by 0.71-1.45 points over Baseline, whereas Learned differs from Null by +0.07, -0.09, and +0.00 points, with no significant differences. However, removing or mismatching the representation at inference increases Learned WER. Thus, Learned depends on the representation yet shows no measurable incremental WER benefit over the parameter-matched control.",
+  "abstractSha256": "e0d561682b5001b5abee404c176fb73425f973995f15a4d280a6459269232038",
+  "arxivId": "2609.36754",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36754v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ki Woong Moon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Brenner"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用冻结 HuBERT 加 12 个事后融合模块做对照，问 64 维韵律监督表示是否在参数量相同的零输入融合之外再降词错误率，最强证据是三语料上 Learned 与 Null 差值仅 +0.07、-0.09、+0.00 个百分点且不显著，代价是干预实验显示模型仍依赖该表示。",
+  "originalTitle": "Does a prosody-trained representation help beyond trainable fusion? A parameter-matched study with frozen HuBERT",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36754v1.pdf",
+  "readerTitle": "可训练融合先涨点，韵律表示再加分吗：冻结 HuBERT 的参数匹配对照",
+  "schemaVersion": 1
+}

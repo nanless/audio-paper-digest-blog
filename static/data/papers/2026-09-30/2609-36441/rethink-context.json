@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36441v1",
+  "abstract": "Multimodal fusion promises more accurate perception but only when the modalities share a common cause. When they do not, the second modality carries no information about the target, and fusing it can only corrupt the estimate. We cast this whether-to-fuse decision as Bayesian causal inference, following the optimal-observer model of human multisensory perception, and implement it as a plug-and-play layer on top of frozen audio and visual models for sound event localization and detection. The model infers a common-cause posterior over visible candidates, then gates precision-weighted fusion accordingly. Fusing unconditionally more than doubles the direction error, whereas the causal gate improves on-screen localization while limiting off-screen degradation, without any joint network retraining.",
+  "abstractSha256": "9dc03725cc5f1b59ab5d0f349ab18993f4507729b481e48a968ee14709a9fe18",
+  "arxivId": "2609.36441",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36441v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyung Yun Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungnyun Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian J. Schlecht"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tae-Hyun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vesa Välimäki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把是否融合写成共因推断，用冻结音频与视觉估计做后验加权融合，在画面内方向误差上取得可核对的下降，而代价是画面外存在小幅回升。",
+  "originalTitle": "Perception-Inspired Bayesian Causal Fusion for Audiovisual Source Localization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36441v1.pdf",
+  "readerTitle": "先问是否同源再融合：贝叶斯因果门控的视听声源定位",
+  "schemaVersion": 1
+}

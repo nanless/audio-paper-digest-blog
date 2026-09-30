@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35863v1",
+  "abstract": "Modern bioacoustic foundation models like Perch and BirdNET can identify species with high discriminative accuracy, yet their confidence scores are often uncalibrated and difficult to interpret as probabilities of real-world occurrence. This limits their use for ecological inference beyond threshold-based detection. We leverage a global annotated acoustic dataset (WABAD) to produce calibration priors for an acoustic model, optionally incorporating species-level information. We introduce new methods of fusing the acoustic predictions with geopriors, which empirically improves calibration while preserving discrimination. Together, these results suggest a path to simpler and more reliable acoustic monitoring for broad biodiversity.",
+  "abstractSha256": "a349630e3f6de3c750a63add94d90a05f2ddd8566ecbcc94e1a025d4ca0490d1",
+  "arxivId": "2609.35863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.35863v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Google DeepMind",
+        "Harvard University"
+      ],
+      "name": "Neha Sajja"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Bart van Merriënboer"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Burcu Karagol Ayan"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Tom Denton"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对声学基础模型分数不可解释为出现概率的问题，论文用全球数据集学到的 Platt 校准参数迁移到新站点，再以贝叶斯融合加入地理先验，在保持排序能力的同时改善校准，其中 NBSP 在两模型两数据集上取得校准与判别的最佳平衡，但物种级参数预测未能稳定泛化。",
+  "originalTitle": "Beyond Discrimination: Calibrated Geoprior Fusion for Bioacoustic Monitoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35863v1.pdf",
+  "readerTitle": "从判别到可信概率：用全局校准与地理先验融合重塑声学监测",
+  "schemaVersion": 1
+}

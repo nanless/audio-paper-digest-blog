@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34363",
+  "arxivId": "2609.34363",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Zelong Xu"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ],
+      "name": "Yan Li"
+    },
+    {
+      "affiliations": [
+        "University of Alberta"
+      ],
+      "name": "Wenhe Hu"
+    },
+    {
+      "affiliations": [
+        "Arizona State University"
+      ],
+      "name": "Xiyang Hu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34363",
+  "originalTitle": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34363.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

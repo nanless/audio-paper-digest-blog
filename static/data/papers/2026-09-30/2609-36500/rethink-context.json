@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36500v1",
+  "abstract": "Speaker verification systems encounter combinations of noise, channel distortion, and changes in speech. Evaluating each condition separately does not establish whether their effects add. InterBias-SV organises this question around a four-term comparison: joint error, two marginal errors, and a common reference. Its results artefact contains 4,068 scored records across 17 experiments, 12 encoder labels, and six speech corpora, totalling 12 million trial evaluations. Three experiment families contain the same-corpus terms needed to compute additive contrasts. For labels assigned to speaker-trained encoders, their mean contrasts are +0.0026, +0.0088, and +0.0024 in equal error rate (EER), with larger variation across settings. These descriptive averages do not establish equivalence to additivity: trial matching, checkpoint identity, and parts of the condition metadata remain unverified. We also examine two interpretation problems. Near-chance EER can make additive predictions difficult to interpret, but chance performance is not a hard EER ceiling, and correlation with the prediction does not identify a saturation mechanism. Ratios of demographic gaps are unstable when their clean reference is near zero; absolute gaps provide a more direct summary. The benchmark provides condition definitions, analysis scripts, and explicit requirements for interpretable compound-condition comparisons, while separating recomputable summaries from claims that require further experimental validation.",
+  "abstractSha256": "4c62a1d79b926255dfd03c9955fcf52808e34177a58bf3c90a3fb0f006b24cd8",
+  "arxivId": "2609.36500",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36500v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kamel Kamel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hridoy Sankar Dutta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keshav Sood"
+    },
+    {
+      "affiliations": [
+        "School of Information Technology, Deakin University",
+        "Waurn Ponds, VIC, Australia"
+      ],
+      "name": "Sunil Aryal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "InterBias-SV 把噪声、信道与说话方式的联合误差问题组织为联合项、两个边际项与公共参考的四项加性对照，用 4068 条记录重算出说话人编码器组平均偏离仅 +0.0026 至 +0.0088 等错误率小量、但设置间标准差更大且试次配对与检查点来源尚未验证的描述性结果。",
+  "originalTitle": "InterBias-SV: Compound Conditions in Speaker Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36500v1.pdf",
+  "readerTitle": "复合条件不等于单条件相加：InterBias-SV 的四项对照与可复算边界",
+  "schemaVersion": 1
+}

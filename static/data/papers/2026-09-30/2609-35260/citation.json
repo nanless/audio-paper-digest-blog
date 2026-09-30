@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35260",
+  "arxivId": "2609.35260",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Zhanglu Yan"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore",
+        "Shanghai Advanced Research Institute, Chinese Academy of Science",
+        "University of Chinese Academy of Sciences, Beijing"
+      ],
+      "name": "Zixuan Zhu"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Kaiwen Tang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Shandong University"
+      ],
+      "name": "Yuyang Cai"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Shandong University"
+      ],
+      "name": "Qianhui Liu"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Weng-Fai Wong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35260",
+  "originalTitle": "Latency and accuracy tradeoffs in Spiking Neural Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35260.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

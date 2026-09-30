@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35616",
+  "arxivId": "2609.35616",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junjie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fei Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kun Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiqi Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xun Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanbin Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Linfeng Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Meng Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35616",
+  "originalTitle": "EvolvingAvatar: Interactive 3D Head Generation That Adapts as Conversations Unfold",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35616.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

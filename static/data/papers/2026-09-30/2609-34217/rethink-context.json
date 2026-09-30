@@ -1,0 +1,142 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34217",
+  "abstract": "Alzheimer&#39;s disease (AD) and mild cognitive impairment (MCI), which may precede AD, manifest early through subtle linguistic and acoustic alterations. Traditional diagnostics, however, are often resource-intensive and lack scalability for mass screening. To address these challenges, we introduce a novel bilingual speech large language model framework for automated, explainable cognitive screening. Unlike conventional pipelines that rely on error-prone automatic speech recognition, our system directly processes raw speech to learn joint acoustic-semantic representations, preserving critical prosodic cues often lost in transcription. Utilising our newly collected PUTH-AD dataset alongside multiple open-source corpora, we implemented a multi-task learning objective that simultaneously performs cognitive status classification and generates clinician-understandable natural language explanations. Our system achieved the highest average accuracy and AUROC across six dataset/task conditions, comparing three representative baselines. The system demonstrated cross-task transfer to held-out PUTH-AD task subsets, maintaining classification accuracy on an entirely unseen cognitive task without task-specific fine-tuning. Furthermore, clinician evaluation confirms that the generated explanations are both clinically relevant and largely consistent with the underlying speech evidence, supporting their potential utility in clinical interpretation. This study provides a scalable, objective, and explainable framework for speech-based cognitive screening, combining cognitive status classification with natural language explanations that clinicians can assess and verify, bridging the gap between advanced AI and clinical utility.",
+  "abstractSha256": "109ef4eb1ff48c616e05d720aa04c26784ce44391a0302e376f5876921d930f9",
+  "arxivId": "2609.34217",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Ziyun Cui"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "Peking University Sixth Hospital, Beijing, China",
+        "Peking University, Beijing, China"
+      ],
+      "name": "Chuan Shi"
+    },
+    {
+      "affiliations": [
+        "Peking University Sixth Hospital, Beijing, China"
+      ],
+      "name": "Shuguang Yang"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Xueying Gui"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Yan Zheng"
+    },
+    {
+      "affiliations": [
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Qiong Yang"
+    },
+    {
+      "affiliations": [
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Haiyan Zhao"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Wei-Qiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Yelei Li"
+    },
+    {
+      "affiliations": [
+        "Peking University, Beijing, China",
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用直接处理原始语音的双头语音大模型同时做认知状态分类与自然语言解释，在六个数据集任务条件下取得最高平均准确率并能迁移到未见任务，但解释监督来自模型生成且临床标签为量表阈值定义，解释只能作辅助核查。",
+  "originalTitle": "Explainable and Generalisable LLM-based Cognitive Decline Detection with Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34217.pdf",
+  "readerTitle": "直接听原声做分类又写依据：双头语音大模型如何兼顾准确与可核查",
+  "schemaVersion": 1
+}

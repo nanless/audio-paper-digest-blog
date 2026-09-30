@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35645",
+  "arxivId": "2609.35645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Shama Gupta"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Hoang H Nguyen"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Chelsea Huang"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Lindsay Devon Brin"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Fanny Riols"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35645",
+  "originalTitle": "CoSE-E: A Benchmark for Code-switched Speech Evaluation in Enterprise Settings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35645.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

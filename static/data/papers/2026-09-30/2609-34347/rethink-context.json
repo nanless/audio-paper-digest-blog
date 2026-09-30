@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34347",
+  "abstract": "Spatial audio large language models (LLMs) enable embodied agents, wearable assistants, and immersive systems to recognize sound events, localize sources, and reason about their spatial relationships. However, existing spatial audio LLMs often rely on early fusion of acoustic and spatial features and source-agnostic token representations. These designs make it difficult to preserve the correspondence between individual sound events and their spatial attributes, particularly in multi-source scenes. To address this limitation, we propose SAIL, a Spatial Audio Intelligence framework with LLMs that preserves acoustic-spatial structure and source-level correspondence from audio encoding to LLM alignment. SAIL introduces a Disentangled Spatial Audio Transformer that represents Mel-spectrogram and interaural phase difference features as separate acoustic and spatial streams. Source-discriminative task queries further learn event, direction, and distance information for each source. A Dual-Stream Q-Former then aligns the two streams with the LLM using acoustic and spatial queries organized by source slots. Compared with the early-fusion baseline, SAIL achieves consistent improvements in dual-source sound event detection, direction and distance estimation, and spatial reasoning. These results demonstrate the importance of structured, source-discriminative audio representations for multi-source spatial understanding and reasoning.",
+  "abstractSha256": "1ad1da0185d10d98ce61d5ccdb719e18ad7dce46f19cfae74bc4f586a804f468",
+  "arxivId": "2609.34347",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "声音关系与推理",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-reasoning",
+          "label": "声音关系与推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "声音关系与推理",
+      "primaryTaskId": "task.sound-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhengding Luo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haozhe Ma"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanghao Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Woon-Seng Gan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenwu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对双声源下声音事件与其方向距离对应关系易丢失的问题，SAIL 用解耦声学空间编码与双流查询对齐保持声源级对应，在单声源基本持平的代价下提升双声源感知与空间推理，但双源间距估计与多于两源场景仍未解决。",
+  "originalTitle": "SAIL: Spatial Audio Intelligence with Large Language Models via Disentangled Acoustic-Spatial Encoding and Dual-Stream Q-Former",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34347.pdf",
+  "readerTitle": "SAIL：把“是什么” 和“在哪里” 分开编码，再按声源槽位对齐大模型",
+  "schemaVersion": 1
+}

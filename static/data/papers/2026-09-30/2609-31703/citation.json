@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31703",
+  "arxivId": "2609.31703",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haljan Lugo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ernst Seidel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pejman Mowlaee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyue Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tim Fingscheidt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31703",
+  "originalTitle": "DiffVQE2: An Efficient Low-delay Diffusion Model for Acoustic Echo and Noise Control",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31703.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

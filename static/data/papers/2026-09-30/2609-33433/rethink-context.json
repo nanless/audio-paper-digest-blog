@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33433",
+  "abstract": "Text-to-Audio (T2A) retrievers are typically evaluated with caption style queries, but the same user intent can be expressed in many forms. We introduce CORA (Caption-Offset Retrieval for Audio), a caption anchored diagnostic protocol that rewrites each source caption into five intent preserving forms (Command, Question, Indirect, Key phrase, and Statement) while fixing the target audio. By tracking the same target across query forms, CORA defines RankDrop, a metric revealing failures hidden by Recall@k. Using Pearson&#39;s correlation coefficient r, we find that RankDrop is weakly associated with raw text space movement (r=0.084), but strongly associated with Target Alignment Loss and Target Boundary Margin Degradation (r=0.508 and r=0.615). The same pattern appears in OEA retrievers, where RankDrop is better explained by boundary degradation (r=0.472/0.478) than by query movement (r=0.084/0.046). Overall, these results suggest that robust T2A retrieval requires preserving the target&#39;s boundary advantage over competing audio under reformulation.",
+  "abstractSha256": "957ec39e57a4395ef3b3161de5c21c37a84b295f398021c7d64c91a5d5b13158",
+  "arxivId": "2609.33433",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频检索",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jae Min Woo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kyongmin Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bogyung Jeong"
+    },
+    {
+      "affiliations": [
+        "Sogang University"
+      ],
+      "name": "Minjeong Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "HaeJun Yoo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Du-Seong Chang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CORA 把同一音频固定在五种意图不变改写下做配对检索，用 66100 对实验显示秩降与文本位移弱相关而与目标对齐损失和边界余量退化强相关，但后者仍是诊断性关联且敏感性随模型与数据集变化。",
+  "originalTitle": "CORA: A Protocol for Diagnosing Boundary Robustness in Text-to-Audio Retrieval under Query Reformulations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33433.pdf",
+  "readerTitle": "改写不远却排位大跌：CORA 用配对秩降诊断目标边界",
+  "schemaVersion": 1
+}

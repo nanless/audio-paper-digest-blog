@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33045",
+  "arxivId": "2609.33045",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Sony Group Corporation, Japan"
+      ],
+      "name": "Seungheon Doh"
+    },
+    {
+      "affiliations": [
+        "SiriusXM, United States"
+      ],
+      "name": "Sergio Oramas"
+    },
+    {
+      "affiliations": [
+        "Deezer Research, France"
+      ],
+      "name": "Bruno Sguerra"
+    },
+    {
+      "affiliations": [
+        "Amazon, United States"
+      ],
+      "name": "Abhinav Bohra"
+    },
+    {
+      "affiliations": [
+        "Politecnico di Bari, Italy"
+      ],
+      "name": "Claudio Pomo"
+    },
+    {
+      "affiliations": [
+        "Maastricht University, Netherlands"
+      ],
+      "name": "Francesco Barile"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33045",
+  "originalTitle": "Overview and Analysis of the RecSys Challenge 2026: Conversational Music Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33045.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

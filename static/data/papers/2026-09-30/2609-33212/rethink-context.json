@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33212",
+  "abstract": "Speaker verification systems achieve high accuracy but provide little account of the acoustic evidence behind their judgments. Making these systems inspectable requires exposing interpretable evidence while retaining the richer information on which their decisions depend. We present \\textbf{CoLMbo-SV}, a speaker language model that combines strong speaker discrimination with structured, acoustically grounded comparison reports. By connecting a pretrained speaker encoder to a language model and supplying explicit acoustic measurements, CoLMbo-SV makes voice comparisons inspectable without restricting verification to the evidence verbalized in its reports. We additionally introduce \\textbf{VoxReason}, paired recordings with measured acoustic properties and comparison reports filtered through numerical and qualitative checks, providing supervision for this combined capability. We also develop an evaluation framework that separates what acoustic information a speaker representation encodes, what influences the verification score, and what the generated report discusses. On VoxCeleb1-O, CoLMbo-SV achieves 0.99\\% EER, reducing verification error by approximately 80\\% relative to the strongest audio-language baseline fine-tuned on VoxReason, while attaining a numerical-grounding score of 0.82. Our analysis further demonstrates that acoustic correctness and decision relevance are distinct properties of an explanation, exposing a gap that numerical-grounding metrics miss. Together, these contributions substantially advance audio-language speaker verification, bring its accuracy toward that of dedicated speaker encoders while adding checkable acoustic reporting, and establish an empirical framework for connecting natural-language explanations to the decisions they explain.",
+  "abstractSha256": "17f54a3b273866b8a9e5a0bcdf79df16101efb7483a1cb13f40b0b54493e20d9",
+  "arxivId": "2609.33212",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Massa Baali"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Sarthak Bisht"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Ziyue Qiu"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Joseph Konan"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Rita Singh"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Bhiksha Raj"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CoLMbo-SV 用冻结说话人编码器加旁路判定保持验证精度、用文本形式声学测量支撑可核对报告，在 VoxCeleb1-O 上报告 0.99% 等错误率与 0.82 数值接地得分，但决策敏感性分析显示报告内容对当前判定的证据选择性仍很低。",
+  "originalTitle": "CoLMbo-SV: A Grounded Language Model for Explainable Speaker Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33212.pdf",
+  "readerTitle": "报得出数字还不够：CoLMbo-SV 把声纹比对拆成会验证、会引用、待解释的三件事",
+  "schemaVersion": 1
+}

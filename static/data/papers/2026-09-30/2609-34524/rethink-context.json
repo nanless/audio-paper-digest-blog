@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34524",
+  "abstract": "Neural audio codecs can achieve similar objective quality at lower bitrates than conventional codecs, but their decoder-side computational cost may offset this bitrate advantage on battery-powered client devices. This paper presents a measurement-based rate--energy--quality analysis of four neural audio codecs--EnCodec, DAC, HILCodec, and SNAC--and two conventional baselines, AAC-LC and Opus, on laptop and phone platforms. Speech and music are evaluated separately using the original-reference ViSQOL protocol. For the main comparison, operating points are matched by selecting the measured point nearest to the midpoint of the common overlap in treatment-level mean ViSQOL. A secondary analysis includes only explicitly evaluated bitrate settings. Decoder energy is measured as idle-subtracted energy per second of audio (J/s), and results are summarized as the median of three repeated runs for execution-valid runtime and device paths. Pairwise break-even transmission-energy thresholds are then derived analytically from the measured decoder energy and bitrate. At the matched-quality operating points, the evaluated neural codecs achieved similar ViSQOL scores at lower bitrates but generally required more decoder-side energy than the applicable conventional codecs. EnCodec produced the lowest neural break-even thresholds in both matched-quality cohorts on both platforms. By contrast, several DAC and SNAC comparisons on the Phone XNNPACK CPU path exceeded 200 mJ/kbit, and their full-band Phone configurations required more than 1 s to decode 1 s of audio. These results show that lower bitrate alone does not guarantee an energy benefit: deployment efficiency also depends on decoder complexity, the effective runtime and device mapping, execution validity, accelerator availability, and the transmission-energy coefficient.",
+  "abstractSha256": "fe2a81e0a6e762098a257df3dbebe6961126c8eb6bb9ac843d46aa7885f36b7a",
+  "arxivId": "2609.34524",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频编码",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghyeon Shin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seokjin Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在笔记本与手机上实测四种神经音频解码器与 AAC-LC 和 Opus 的解码能耗与 ViSQOL 质量，报告神经端以更低码率达到相近质量但解码能耗更高，并用传输能量系数门限量化何时省下的传输能耗才能抵消多出的解码能耗，其中 EnCodec 门限最低而手机端 DAC 与 SNAC 多组超过 200 mJ/kbit 且全频段解码慢于实时。",
+  "originalTitle": "Measurement-Based Bitrate-Energy-Quality Analysis of Neural Audio Codec Decoders on Laptop and Phone Platforms",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34524.pdf",
+  "readerTitle": "低码率不等于省电：神经音频解码器在笔记本与手机上的码率能量质量实测",
+  "schemaVersion": 1
+}

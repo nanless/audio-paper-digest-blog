@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34147",
+  "abstract": "Speech understanding and generation place different demands on speech representations, and existing models are typically optimised towards one capability or the other. To reduce this gap, we introduce SPEAR-Gen, a speech representation model that learns a single representation for both capabilities. Task-aligned feature aggregation consolidates complementary linguistic and paralinguistic information across a frozen encoder into discrete targets for masked prediction, while a coarse-to-fine objective combines log-Mel reconstruction with residual flow matching to preserve spectral structure and fine-grained acoustic variation. Experiments on SUPERB and speech resynthesis show that SPEAR-Gen maintains strong understanding performance while substantially improving resynthesis quality and speaker preservation. These results demonstrate that a single speech representation can effectively support both understanding and generation.",
+  "abstractSha256": "e2af2f2a788f8b58150449bd13edaf5bc86d86f8cf633069d327dca62e7bbab7",
+  "arxivId": "2609.34147",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频理解",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "音频理解",
+      "primaryTaskId": "task.audio-understanding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arthur Hinsvark"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Antonios Alexos"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Osama Hanna"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Philip C. Woodland"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiting Lu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对掩码预测偏向语言内容而重建目标理解偏弱的矛盾，SPEAR-Gen 用任务对齐融合构造离散目标并联合对数梅尔重建与残差流匹配，在保持 SUPERB 语言性能的同时把重合成质量从 PESQ 1.20 提升到 2.94，代价是需要外部标注做目标构造与双解码器联合训练。",
+  "originalTitle": "SPEAR-Gen: Generation-Aware Pre-training for Unified Speech Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34147.pdf",
+  "readerTitle": "一个表示同时做理解与重建：SPEAR-Gen 用任务对齐目标加粗细两级生成约束",
+  "schemaVersion": 1
+}

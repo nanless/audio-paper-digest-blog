@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35613",
+  "arxivId": "2609.35613",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Xinyuan Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanghao Zhou"
+    },
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Ziyang Jiang"
+    },
+    {
+      "affiliations": [
+        "the Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinjia Zhu"
+    },
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Xueyan Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry, Alibaba Group"
+      ],
+      "name": "Qiquan Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry, Alibaba Group"
+      ],
+      "name": "Zexu Pan"
+    },
+    {
+      "affiliations": [
+        "the Zhejiang Institute of Quality Sciences (Technology Innovation Center of the State Administration for Market Regulation), Hangzhou, 310018, China"
+      ],
+      "name": "Jiaying Wang"
+    },
+    {
+      "affiliations": [
+        "the School of Computer Software, Tianjin University, Tianjin, 300350, China"
+      ],
+      "name": "Xianghu Yue"
+    },
+    {
+      "affiliations": [
+        "the University Hospital rechts der Isar, Technical University of Munich, Munich, Germany"
+      ],
+      "name": "Jiadong Wang"
+    },
+    {
+      "affiliations": [
+        "the University Hospital rechts der Isar, Technical University of Munich, Munich, Germany"
+      ],
+      "name": "Björn Schuller"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, the Chinese University of Hong Kong, Shenzhen, 518172, China"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35613",
+  "originalTitle": "Multimodal Target Speaker Extraction: Towards Unified Speaker Cues Across Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35613.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

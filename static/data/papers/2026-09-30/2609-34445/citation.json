@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34445",
+  "arxivId": "2609.34445",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazuki Matsumoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keidai Arai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kohei Yatabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34445",
+  "originalTitle": "Prox-Friendly Log-Magnitude Prior on Complex-Valued Signal",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34445.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

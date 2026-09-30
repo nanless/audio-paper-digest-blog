@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34223",
+  "abstract": "This work aims to improve how audio-visual large language models (AVLLMs) associate speech with the correct visible speaker in multi-speaker scenes. We find that current AVLLMs frequently fail at this task, and analyze the nature of these failures. To this end, we construct a synthetic diagnostic dataset in which multiple visible speakers each utter a single word. Analysis on this corpus reveals a consistent error pattern across three recent open-source AVLLMs: models attribute utterances by simply matching the order of spoken sentences with the left-to-right, top-to-bottom arrangement of visible faces, rather than relying on audio-visual cues such as lip synchronization. We term this behavior \\emph{ordinal-matching bias}. We further show that this bias can be substantially mitigated through a simple remedy, Ordinal-Decoupled Fine-Tuning (OD-FT), in which models are fine-tuned on synthetic videos where spatial positions of speakers and speaking order are independently randomized. Despite using only 400 synthetic training videos, OD-FT not only suppresses ordinal-matching bias but also improves audio-visual understanding on real-world videos, yielding average gains of 8.27\\% for Qwen2.5-Omni and 2.57\\% for video-SALMONN2+ across three audio-visual benchmarks.",
+  "abstractSha256": "d349527e7ee9fb287da9a32f569957b5f913b5f3804b2a725e848156cb8fb13a",
+  "arxivId": "2609.34223",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.sft",
+          "label": "SFT"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "SFT",
+      "primaryMethodId": "method.sft",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jihoo Jung"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngjoon Jang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyebin Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Suho Yoo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joon Son Chung"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文针对多说话人场景下谁说了哪句话的归因失败，用动物合成诊断集揭示按画面位置顺序配对语音顺序的偏置，并用 400 个位置与顺序解耦的合成视频微调在真实基准上为 Qwen2.5-Omni 带来平均 8.27% 增益。",
+  "originalTitle": "Uncovering Ordinal-Matching Bias in Audio-Visual LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34223.pdf",
+  "readerTitle": "先看脸排座次再听说话：音视频大模型的序数配对捷径",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36379v1",
+  "arxivId": "2609.36379",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36379v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "Department of Cyber Security Engineering, George Mason University, USA."
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36379v1",
+  "originalTitle": "UDSS-BWE: Uncertainty- and Decision-Science Inspired Swin BandWidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36379v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

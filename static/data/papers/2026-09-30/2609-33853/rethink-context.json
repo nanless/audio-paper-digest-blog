@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33853",
+  "abstract": "Target-speaker automatic speech recognition (TS-ASR) aims to recognize a designated speaker while suppressing interfering speech in multi-talker environments. Conventional TS-ASR typically relies on an enrollment utterance, whereas text-guided methods use known lexical content, such as a wake word, to identify the target speaker from the observed mixture. These two cues provide complementary information but are usually studied separately. We propose a Unified Dual-Cue TS-ASR framework that supports text cues, enrollment speech, or both within a single model. Text cues interact with the mixture representation to extract target-speaker information conditioned on known lexical content, while an independent enrollment utterance provides complementary speaker information. Cross-attention cue-conditioning modules are integrated into shared Conformer blocks, and negative-cue sampling provides cue-validity supervision during dual-cue training. Experiments on 30,000 two-speaker mixtures across five recording/domain conditions and four oracle text-cue lengths show that, with five-character text cues, the concatenated dual-cue method achieves 8.80% CER, compared with 17.32% for text-only and 29.06% for enrollment-only inference. It also outperforms parallel dual-cue fusion (9.49% CER) and yields lower dual-cue CER across all five evaluation subsets. These results demonstrate the benefit of jointly exploiting complementary lexical and speaker information for target-speaker ASR.",
+  "abstractSha256": "ee1406124667720f716706b1b201aed9d87f1fdb9325b6842e4a52c530c7a24b",
+  "arxivId": "2609.33853",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Mei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuchen Yan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dongxing Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaen Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanhua Long"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用共享交叉注意力接口统一文本线索和注册语音两种目标指定方式，在 30000 个双说话人混合评估上以五字文本加注册语音达到总体字错率 8.80%，代价是单线索推理弱于并行融合且依赖 oracle 文本跨度。",
+  "originalTitle": "Unified Target-Speaker ASR with Text and Enrollment Speech Cues",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33853.pdf",
+  "readerTitle": "文本线索与注册语音如何在一个模型里共同指向目标说话人",
+  "schemaVersion": 1
+}

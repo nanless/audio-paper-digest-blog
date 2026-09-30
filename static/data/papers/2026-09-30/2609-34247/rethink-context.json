@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34247",
+  "abstract": "Full-duplex speech large language models (LLMs) enable low-latency, natural voice interaction. However, real-world agents must also use tools and perform deliberative reasoning-operations whose variable latency and computational cost conflict with the stringent timing requirements of real-time conversation. To reconcile these demands, we propose SALMONN-duo, an adaptive dual-system voice agent inspired by dual-process theories of cognition. SALMONN-duo separates real-time interaction from deliberative computation by pairing an always-on, fast-thinking full-duplex speech LLM (system 1) with a powerful asynchronous slow-thinking LLM agent (system 2). Beyond handling real-time interaction, system 1 learns when to answer directly and when to delegate, remaining responsive during backend execution and seamlessly integrating returned information into the ongoing dialogue without exposing tool traces or losing conversational context. Evaluations on single-turn spoken question answering (QA) and multi-turn conversations demonstrate that adaptive delegation substantially improves accuracy on knowledge-intensive and multi-hop reasoning questions, while knowledge-boundary-aware training avoids unnecessary system 2 invocations. On a customized version of $\\tau$-Voice, SALMONN-duo further demonstrates its ability to complete environment-grounded, policy-constrained tasks through multi-turn interactions in realistic business scenarios. Finally, cost-aware reinforcement learning further enhances the trade-off between task performance and backend usage across the QA and conversation tasks, while improving task success and response safety on $\\tau$-Voice with an acceptable increase in the delegation rate.",
+  "abstractSha256": "3f5e05d64e80159c08a67462737f1974cb8e54c53c2b2569a5b4563265d8dcc8",
+  "arxivId": "2609.34247",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Siyin Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xianzhao Chen"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Xiaohai Tian"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Jun Zhang"
+    },
+    {
+      "affiliations": [
+        "ByteDance"
+      ],
+      "name": "Lu Lu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对全双工语音要求持续低延迟而知识推理与工具调用耗时可变的问题，SALMONN-duo 用常开全双工前端负责交互并决定是否异步委派给后端智能体，再用知识边界感知监督与成本感知强化学习控制委派效用，证据显示其在问答与任务对话上改善准确与委派权衡，代价是仍依赖强后端与仿真延迟条件。",
+  "originalTitle": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34247.pdf",
+  "readerTitle": "边听边说又要想清楚：SALMONN-duo 把实时交互与慢速求解分开",
+  "schemaVersion": 1
+}

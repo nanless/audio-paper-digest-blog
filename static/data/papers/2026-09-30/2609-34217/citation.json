@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34217",
+  "arxivId": "2609.34217",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Ziyun Cui"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Wen Wu"
+    },
+    {
+      "affiliations": [
+        "Peking University Sixth Hospital, Beijing, China",
+        "Peking University, Beijing, China"
+      ],
+      "name": "Chuan Shi"
+    },
+    {
+      "affiliations": [
+        "Peking University Sixth Hospital, Beijing, China"
+      ],
+      "name": "Shuguang Yang"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Xueying Gui"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Yan Zheng"
+    },
+    {
+      "affiliations": [
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Qiong Yang"
+    },
+    {
+      "affiliations": [
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Haiyan Zhao"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Wei-Qiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Ji Wu"
+    },
+    {
+      "affiliations": [
+        "OPPO Research Institute, Shenzhen, China"
+      ],
+      "name": "Yelei Li"
+    },
+    {
+      "affiliations": [
+        "Peking University, Beijing, China",
+        "Peking University Third Hospital, Beijing, China"
+      ],
+      "name": "Nan Li"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Chao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34217",
+  "originalTitle": "Explainable and Generalisable LLM-based Cognitive Decline Detection with Spontaneous Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34217.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

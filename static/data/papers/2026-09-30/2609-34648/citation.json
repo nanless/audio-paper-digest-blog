@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34648",
+  "arxivId": "2609.34648",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Tianxin Xie"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Kai Jiang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Zelin Zhao"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Li Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34648",
+  "originalTitle": "SEmoEdit: Probing and Harnessing the Editability of Pre-trained Speech Flows",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34648.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

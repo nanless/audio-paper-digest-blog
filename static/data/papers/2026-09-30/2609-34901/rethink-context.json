@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34901",
+  "abstract": "We propose a domain-incremental learning framework for generative speech enhancement (SE) that learns from a sequence of datasets or domains recorded under diverse acoustic conditions. Fine-tuning a pretrained model on continuously evolving domains leads to catastrophic forgetting of previously acquired knowledge, while zero-shot generalization often fails to adequately adapt to unseen domains. To address these challenges, we first develop a novel language model-based generative SE model that we then use as a pretrained backbone and incrementally adapt it to acoustically mismatched domains using lightweight domain-specific Low-Rank Adaptation. The proposed framework enables the model to acquire enhancement capabilities for new domains while preserving performance on previously learned domains. Evaluated on four heterogeneous speech datasets, our approach effectively adapts to new domains without forgetting previously learned domains.",
+  "abstractSha256": "3b0ffd06aa8d988eb81f59e09021d33d0453abe259264b8ce8814dff6400bbee",
+  "arxivId": "2609.34901",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Manjunath Mulimani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Annamaria Mesaros"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Minje Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesper Rindom Jensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对生成式语音增强在新声学域上微调会遗忘旧域、零样本又适应不足的问题，论文用冻结的 GPT 式主干加域专属 LoRA 逐域增量学习，在四个异构数据集上以平均 SpeechBertScore 保持旧域并适应新域，代价是域不可知时依赖熵选适配器且推理需多路前向。",
+  "originalTitle": "Domain-Incremental Learning for Generative Speech Enhancement",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34901.pdf",
+  "readerTitle": "冻住生成主干、只为每个新域加小适配器：生成式语音增强的域增量学习",
+  "schemaVersion": 1
+}

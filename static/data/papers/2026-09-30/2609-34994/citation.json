@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34994",
+  "arxivId": "2609.34994",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "André Ricardo Ducca Fernandes"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil",
+        "Sorbonne Université, CNRS, LIP6, F-75005 Paris, France",
+        "CBAE, Universidade Federal do Rio de Janeiro (UFRJ), Rio de Janeiro, RJ 22250-020, Brazil"
+      ],
+      "name": "Jean-Pierre Briot"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "Simone Diniz Junqueira Barbosa1"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics (DI), Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, RJ 22451-900, Brazil"
+      ],
+      "name": "Hélio Côrtes Vieira Lopes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34994",
+  "originalTitle": "From One-Shot Generation to Incremental Music Composition: Adapting a General-Purpose Instruction LLM for Persistent Symbolic Editing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34994.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

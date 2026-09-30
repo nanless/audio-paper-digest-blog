@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35054",
+  "arxivId": "2609.35054",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Danilo de Oliveira"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tal Peer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maurício do V. M. da Costa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Timo Gerkmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35054",
+  "originalTitle": "Perceptual Quality Loss or Loss of Perceptual Quality?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35054.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

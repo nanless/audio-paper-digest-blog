@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33774",
+  "arxivId": "2609.33774",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Kanghwi Lee"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Kyeongseok Jeong"
+    },
+    {
+      "affiliations": [
+        "Institute of Neuroinformatics, University of Zurich and ETH Zurich, Switzerland"
+      ],
+      "name": "Jeongmin Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33774",
+  "originalTitle": "Tokens Change, Structure Endures: Spectral Watermarking for Generated Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33774.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35645",
+  "abstract": "Code-switching (CS), a seamless alternation between languages within a single utterance, remains a critical challenge in automatic speech recognition (ASR). While prior works focus on conversational CS-ASR, enterprise settings demand evaluation of operational impact beyond edit-distance errors: how code-switching transcription errors propagate to downstream voice agent task failures. In this work, we propose (1) a CS-ASR synthetic benchmark and multidimensional evaluation framework tailored to enterprise domains, (2) systematic evaluation of frontier ASR systems across 5 language pairs, (3) diagnostic analysis of the additional transcription errors that code-switching introduces across language pairs and models. We release COSE-E to support enterprise-focused CSASR evaluation for multilingual voice agents in enterprise deployment.",
+  "abstractSha256": "c94ee0bb47557947cb6571b1461ecd6cc2d13b061fbbd01c01b50e28c5738feb",
+  "arxivId": "2609.35645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Shama Gupta"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Hoang H Nguyen"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Chelsea Huang"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Lindsay Devon Brin"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Fanny Riols"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "CoSE-E 针对 HR 与 IT 服务台的 1212 条五语对混语语音，用转写字面错、语义错与下游问答错三层评价发现混语多加的是表层错而能翻转任务答案的错集中在关键实体损坏，且数据集当前已公开。",
+  "originalTitle": "CoSE-E: A Benchmark for Code-switched Speech Evaluation in Enterprise Settings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35645.pdf",
+  "readerTitle": "字都对了事还没办成：企业混语语音为何要从答案倒查转写",
+  "schemaVersion": 1
+}

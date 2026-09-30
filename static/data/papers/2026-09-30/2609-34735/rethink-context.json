@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34735",
+  "abstract": "Contemporary AI-based music generation can produce compositions that satisfy formal requirements of tonality and musical coherence. However, whether musical expression can be described by mathematical properties alone remains a fundamental question. Human composers operate within personal and cultural contexts that influence harmonic decisions and deliberate departures from established patterns. This study investigates six narrative-driven popular songs by Bob Dylan, Johnny Cash, and Ritchie Valens. Original human harmonies are compared with outputs of an explainable computational harmonizer operating on the same melodies without access to the original chord progressions. We examine harmonic vocabulary, functional persistence, repetition, non-diatonic events, and tension-resolution patterns using Chord Wheel Diagrams and BPMN-based representations. Results show that high melody-chord compatibility does not necessarily imply preservation of the original human harmonic decision pattern. Some generated harmonizations retain the economical structure of the reference, while others alter harmonic diversity or suppress distinctive events while remaining compatible with the melody. Rather than quantifying artistic quality, the study introduces narrative-conditioned harmonic structure as a complementary perspective for computational music analysis. The findings suggest that generative systems may benefit from modeling not only harmonic correctness, but also structural identity, context, and human compositional intention.",
+  "abstractSha256": "ec3254ff97ee6e38585fb8ea06514796dfdbeae329c0bcde71a93e8f03297cc7",
+  "arxivId": "2609.34735",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Josef Pavlíček"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Petra Pavlíčková"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Irena Štrausová"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把六首有文献记载背景的流行歌曲旋律抽出后交给同一可解释和声器重新配和声，对比发现高旋律适配分不等于保留原有持续、重复与非调式特征，部分曲目保留经济型 I-IV-V 结构，部分则扩张声部词汇或压制标志性进行。",
+  "originalTitle": "From Human Narrative to Harmonic Structure: A Human-Centered Investigation of Algorithmic Music Generation through the Chord Wheel Diagram",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34735.pdf",
+  "readerTitle": "旋律配得上不等于按人的方式配：叙事条件下的人类和声决策如何被保留、改造或压制",
+  "schemaVersion": 1
+}

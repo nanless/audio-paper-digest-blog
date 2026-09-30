@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35260",
+  "abstract": "Spiking neural networks are attractive for low-power speech command recognition, yet their latency has received far less attention than their energy efficiency, and their multi-timestep execution is widely assumed to make them slower than quantized neural networks. This paper challenges the assumption that more local timesteps necessarily imply higher network latency. By overlapping computation across adjacent layers at the timestep level, SNNs may complete execution in less time than comparable bit-serial QNNs. However, this overlap relies on spikes firing on incomplete inputs, and a spike once generated cannot be withdrawn, so its error persists and reduces accuracy. Waiting for more input before firing would seem to improve accuracy at the cost of reduced overlap. Yet we find and prove that this intuition fails at some layers, where even a small increase in waiting can change spike timing and downstream computation, making the network both slower and less accurate. We therefore propose a Pipeline Delay Search method which selects each layer&#39;s delay by balancing task-level accuracy gains against added network latency. We then adapt the selected configurations through spike-based quantization-aware training and bounded tuning of firing thresholds and initial membrane potentials. Together, these steps form Falcon, a framework for Fine-grained Analysis of Latency and Controlled firing which systematically analyzes and optimizes SNN latency under a spatial analog compute-in-memory mapping with shared digital engines. We evaluate Falcon on GSCV2 and SSC, achieving competitive accuracies of 96.31 and 83.02 at modeled network-core latencies of 119.64 and 124.00us, respectively. Together, our analysis and results show that SNNs can compute more yet finish faster, and wait longer yet predict worse, highlighting why Falcon matters for both latency and accuracy.",
+  "abstractSha256": "3e2f669069100ba80a6a27bca7ba77ecefaa9055c057186df74c1669f5ac9fa3",
+  "arxivId": "2609.35260",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "形式化分析",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "形式化分析",
+      "primaryMethodId": "method.formal-analysis",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Zhanglu Yan"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore",
+        "Shanghai Advanced Research Institute, Chinese Academy of Science",
+        "University of Chinese Academy of Sciences, Beijing"
+      ],
+      "name": "Zixuan Zhu"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Kaiwen Tang"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Shandong University"
+      ],
+      "name": "Yuyang Cai"
+    },
+    {
+      "affiliations": [
+        "School of Artificial Intelligence, Shandong University"
+      ],
+      "name": "Qianhui Liu"
+    },
+    {
+      "affiliations": [
+        "Department of computer science, National University of Singapore"
+      ],
+      "name": "Weng-Fai Wong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对语音指令识别中脉冲神经网络被认为比比特串行量化网络更慢的问题，提出带延迟控制的发放内核与流水延迟搜索，在匹配映射下用建模核延迟证明跨时间步重叠可更快，并在 GSC 上以 96.31% 精度达到 119.64 μs 建模延迟，代价是等待位置选错会同时变慢变差。",
+  "originalTitle": "Latency and accuracy tradeoffs in Spiking Neural Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35260.pdf",
+  "readerTitle": "算得更多却结束更早：用逐层等待控制脉冲网络的延迟与精度",
+  "schemaVersion": 1
+}

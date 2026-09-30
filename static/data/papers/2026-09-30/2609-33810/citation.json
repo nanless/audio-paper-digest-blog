@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33810",
+  "arxivId": "2609.33810",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Francesco Verdini"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Antonis Asonitis"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Aref Farhadipour"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Marzieh Razavi"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Pierre-Edouard Honnet"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Vijeta Avijeet"
+    },
+    {
+      "affiliations": [
+        "AGIGO ETH Zurich Sapienza University of Rome University of Zurich"
+      ],
+      "name": "Juan Pablo Zuluaga Gomez"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.33810",
+  "originalTitle": "Controlling Speaking Rate in Autoregressive TTS via Activation Steering",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33810.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

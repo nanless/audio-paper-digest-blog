@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34445",
+  "abstract": "The logarithmic transform is essential in audio signal processing since human auditory perception is approximately logarithmic with respect to magnitude. However, directly incorporating prior knowledge about signals (e.g., harmonic structure) in the log-magnitude domain into optimization problems solved by standard proximal splitting algorithms remains challenging. To address this issue, this paper proposes a novel regularizer termed EPILOG (Exponential Penalty for Imposing priors on LOG-magnitude). EPILOG indirectly imposes prior knowledge on the log-magnitude of a complex-valued signal through regularization of an auxiliary variable that is shown to be linked with the log-magnitude. Furthermore, we derive its variable-wise proximity operators and develop a proximal splitting algorithm using these operators. Experiments on speech dereverberation demonstrate the effectiveness of the proposed regularizer, particularly in promoting cepstral-domain sparsity.",
+  "abstractSha256": "356715d4dbc756b305da1793a1deb8fa910436958d224dfcfe2d5f9c830e6b8a",
+  "arxivId": "2609.34445",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "去混响",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.dereverberation",
+          "label": "去混响"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "去混响",
+      "primaryTaskId": "task.dereverberation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kazuki Matsumoto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keidai Arai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kohei Yatabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对复数谱对数幅度难以直接求近端算子的问题，论文提出经指数耦合辅助变量间接施加倒谱稀疏等先验的 EPILOG 正则，给出分量近端算子与交替极小 ADMM 流程，去混响实验显示倒谱稀疏版本取得最高平均指标，但收敛性证明留待后续工作。",
+  "originalTitle": "Prox-Friendly Log-Magnitude Prior on Complex-Valued Signal",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34445.pdf",
+  "readerTitle": "在对数幅度上加先验为何困难：用辅助变量绕开不可微的 EPILOG 正则",
+  "schemaVersion": 1
+}

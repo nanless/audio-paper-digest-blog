@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35345",
+  "abstract": "Large audio-language models (LALMs) excel at understanding and reasoning tasks over atomic sound events, yet their ability to infer higher-level human activities from such fine-grained events remains largely unexamined. Everyday human actions and activities, such as setting a table, cleaning the house, or preparing a breakfast emerge compositionally from temporally distributed sound events, requiring abstraction beyond the event-centric granularity that dominates current training and evaluation paradigms. Our benchmark evaluates a wide set of LALMs under a principled framework that tests how language-based reasoning, grounded in acoustic perception, structures sound abstractions into higher-level understanding. By systematically varying exemplar typicality and distractor similarity, our evaluation exposes \\added{that current models do not reliably perform compositional inference from atomic acoustic events to higher-level human activities solely from audio.} All data, taxonomies, and evaluation scripts are publicly available on our companion website: this https URL",
+  "abstractSha256": "73bd95ee7c1363f4ff165766fc409c6eeddda5bcc49bc74fd3e1dd3ca89a8b72",
+  "arxivId": "2609.35345",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频分类",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michel Olvera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用典型性与干扰相似度双因子控制的 sounding actions 基准探测约 30 个大音频语言模型，发现典型样本到非典型样本与近干扰下的准确率系统性坍缩到接近随机，而层级分解有助、事件显式 grounding 普遍有害，人类仍大幅领先。",
+  "originalTitle": "Probing Large Audio-Language Models for Compositional Understanding of Sounding Actions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35345.pdf",
+  "readerTitle": "从一串碎声音推出人在做什么：大音频语言模型的组合推理缺口",
+  "schemaVersion": 1
+}

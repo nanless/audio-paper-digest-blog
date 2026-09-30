@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36379v1",
+  "abstract": "Bandwidth extension (BWE) is fundamentally localized: the most perceptual distortions are not average-case distortions, but rare high-frequency (HF) transients that standard, risk-neutral objectives tend to smooth away. To close this gap, we seek solutions in the risk-sensitive and uncertainty-aware decision science rules and present UDSS-BWE, which introduces five decision-science and uncertainty-aware discriminators: CVaRD (does tail pooling to amplify HF artifacts), CCD (a primal-dual augmented Lagrangian to prevent HF overboost), MCUD (a learnable utility over spectral flatness/ centroid/ rolloff), EDD (captures epistemic uncertainty), and DROD (captures entropic KL-DRO aggregation). UDSS-BWE is also designed as a complex valued adversarial BWE framework that uses Swin-based generators, a lightweight dual-stream shifted-window backbone, to capture local and long-range structure efficiently, while learnable lattice coupling provides controlled cross-stream exchange. UDSS-BWE is optimized extensively and achieves better perceptual quality with 3.89x fewer parameters (72M vs.18.5M) over two English and French datasets under clean and noisy conditions. To the best of our knowledge, this work shows how multi disciplinary decision-science-inspired and uncertainty theories can be successfully used to design efficient discriminators for producing more nuanced audios, establishing a new baseline in the BWE task.",
+  "abstractSha256": "7047206ba0f61b2eb9f8ee7b9949af65796a45cca3bec1d80a099fd1a8a96e7c",
+  "arxivId": "2609.36379",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36379v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成对抗网络",
+    "primaryTask": "带宽扩展",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.bandwidth-extension",
+          "label": "带宽扩展"
+        },
+        {
+          "facet": "method",
+          "id": "method.gan",
+          "label": "生成对抗网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成对抗网络",
+      "primaryMethodId": "method.gan",
+      "primaryTask": "带宽扩展",
+      "primaryTaskId": "task.bandwidth-extension",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tarikul Islam Tamiti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sajid Fardin Dipto"
+    },
+    {
+      "affiliations": [
+        "Department of Cyber Security Engineering, George Mason University, USA."
+      ],
+      "name": "David Vergano"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luke Baja-Ricketts"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anomadarshi Barua"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对窄带语音缺失高频且稀疏瞬态难以恢复的问题，UDSS-BWE 用双流 Swin-1D 格型生成器建模幅度和相位，并用五个决策科学与不确定性判别器做尾部敏感监督，在 VCTK 与 MLS 法语上以 18.5M 对 72M 的参数量取得更优感知质量，代价是训练期判别分支带来的额外开销。",
+  "originalTitle": "UDSS-BWE: Uncertainty- and Decision-Science Inspired Swin BandWidth Extension",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36379v1.pdf",
+  "readerTitle": "尾部高频决定听感：用风险敏感判别器约束带宽扩展的幻觉",
+  "schemaVersion": 1
+}

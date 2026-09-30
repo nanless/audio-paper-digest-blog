@@ -1,0 +1,132 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34931",
+  "abstract": "Machine learning has made strong progress on music tasks, both as assistive tools and as creative partners. However, most systems train on multitrack corpora that emphasize pop and rock. Jazz, with improvisation at the core of its practice, still lacks a well-annotated corpus of clean per-stem combo recordings on standards. We introduce JazzSAMBA (Jazz Synchronous and Asynchronous Multi-take Band Audio) to fill this gap: the first originally recorded jazz-combo multitrack dataset of standards with asynchronous (overdubbed) and synchronous (live ensemble) protocols, preferred and alternate takes chosen by the musicians, and timed annotations for bars, chords, sections, and soloists. JazzSAMBA covers 76 standards by eight musicians on drums, bass, piano, trumpet, and saxophone, with per-stem audio, mixtures, and MIDI. It can support chart-conditioned accompaniment, combo source separation, and form-aware music information retrieval. We demonstrate the dataset on two tasks: a jazz combo source-separation baseline and a chart-conditioned accompaniment ablation. The dataset, code, and samples are linked from the project demo page.",
+  "abstractSha256": "c955af257e91fd213ae2176d4af7ee7b9ba727c7c34aa50f2c62282e1277f4a9",
+  "arxivId": "2609.34931",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Phillip Long"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jacob Nguyen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jace Hosto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gage Hosto"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jett Takazawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Fares Nofal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sebastian Stade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nithya Shikarpur"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julian McAuley"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng-Zhi Anna Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stephen Brade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aleksandra Teng Ma"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "JazzSAMBA 针对爵士标准曲缺少干净乐队分轨与演奏对齐曲式标注的问题，用 50 首异步叠录加 26 首同步合奏录制 76 首标准曲并配小节和弦段落独奏者标注，以爵士微调分离基线与谱面条件伴奏消融验证标注可用性，代价是同步存在串音且测试规模小、生成仍困难。",
+  "originalTitle": "JazzSAMBA: A Synchronous and Asynchronous Multi-take Band Audio Dataset of Jazz Standards for Live Music Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34931.pdf",
+  "readerTitle": "把即兴绑回曲式：JazzSAMBA 用异步叠录与同步合奏补齐爵士标准曲分轨",
+  "schemaVersion": 1
+}

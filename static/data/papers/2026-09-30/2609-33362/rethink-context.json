@@ -1,0 +1,126 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33362",
+  "abstract": "Multi-speaker dialogue TTS requires natural speech generation, consistent speaker identity, coherent cross-turn transitions, and fine-grained control of expressive attributes such as emotion, speaking rate, and loudness. These requirements are difficult to satisfy reliably with one-shot generation, especially in long-form dialogue. We propose a controllable multi-speaker dialogue TTS framework that formulates synthesis as critique-driven iterative refinement. Its speech backbone, ControlEdit-TTS, unifies instruction-following synthesis and natural-language-guided attribute editing, enabling correction of expressive errors without full regeneration. The framework further performs hierarchical utterance-level and scene-level critique, routing detected issues to editing, resynthesis, or timing adjustment. Experiments on a bilingual Chinese--English dialogue benchmark show improved utterance-level instruction following, better dialogue-level preference than direct dialogue models and agentic baselines, and more effective refinement than regeneration-only alternatives while preserving speaker identity. Ablations further confirm the benefits of scene-level critique and edit-based correction.",
+  "abstractSha256": "afbecb430b9ab279a709a719be6ebcaffaff90fbcc1a44407523a83f90403112",
+  "arxivId": "2609.33362",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-editing",
+          "label": "语音编辑"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kangxiang Xia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinfa Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "HangRui Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kexin Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wenjie Tian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyue Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingshen Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingbin Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting He"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jin Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把可控多说话人对话语音合成从一次生成改为计划—合成—评论—修改的闭环，用统一做指令合成与情感语速响度编辑的 ControlEdit-TTS 做局部修改，在中英基准上把语句指令遵从 Yes 率做到 95.5% 并在对话偏好上占优，代价是最多 10 轮的评论与重改开销和风格与音色难以同时满足的回弹。",
+  "originalTitle": "From Script to Drama: An Agentic Framework for Controllable Multi-Speaker Dialogue TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33362.pdf",
+  "readerTitle": "一次合成不够：用可编辑的反复修改做可控多说话人对话语音",
+  "schemaVersion": 1
+}

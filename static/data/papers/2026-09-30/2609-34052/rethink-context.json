@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34052",
+  "abstract": "Neural audio codecs (NACs) are widely used in speech generation and audio-language modeling, yet how they encode speaker-trait information remains poorly understood. Prior work applied sparse autoencoders (SAEs) to investigate accent information in NACs through task-level analysis. Here, we extend this analysis to the waveform level and to age, gender, and accent, using SAE steering to probe trait-related information in sparse activations. We identify trait-associated dimensions, modify their activations, and evaluate the resulting reconstructed speech. Across five NACs, steering the selected dimensions induces target-directed shifts in speaker-trait predictions. A random-dimension baseline on Mimi produces smaller shifts, supporting the relevance of the selected dimensions. However, responses vary across codecs, traits, and steering directions, and increasing steering strength does not consistently amplify the intended shifts. Steering also generally increases word error rates and lowers predicted perceptual quality. These findings suggest that SAEs capture speaker-trait information in steerable activations, while the accompanying quality degradation highlights the need to better separate trait-related information from other information.",
+  "abstractSha256": "65fa9d1a2c62338b583892f3f977784808509187be4a527b2eeb2dcc736e2ce6",
+  "arxivId": "2609.34052",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shih-Heng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiantian Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Aditya Kommineni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huang-Cheng Chou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bowen Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shrikanth Narayanan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用 Top-k 稀疏自编码器分解五种神经音频编解码表示并做激活转向，以分类器预测的朝目标偏移为证据探查年龄、性别、口音信息的稀疏可分性，代价是内容词错误率上升与感知质量下降且转向强度不可单调控制。",
+  "originalTitle": "Towards Interpretable Framework for Neural Audio Codecs via Sparse Autoencoders: Exploration toward Age, Gender, and Accent Steering",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34052.pdf",
+  "readerTitle": "稀疏激活能否拨动年龄性别口音：神经音频编解码的可解释转向探针",
+  "schemaVersion": 1
+}

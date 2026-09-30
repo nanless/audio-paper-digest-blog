@@ -1,0 +1,138 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35613",
+  "abstract": "Target Speaker Extraction (TSE) is pivotal in speech communication and human-computer interaction, enabling the isolation of a specific speaker&#39;s voice from complex acoustic environments, i.e., the cocktail party scenario. Although traditional TSE systems conditioned on enrollment speech have progressed substantially, enrollment speech as a cue has inherent limitations. Its reliability degrades when the target and interfering speakers have similar voice characteristics, when intra-speaker variability (e.g. changes in emotion or speaking style) creates a mismatch between the enrollment and target speech, or when the enrollment itself is contaminated by noise or competing speakers. This review surveys deep-learning-based TSE from the perspective of auxiliary target cues drawn from multiple modalities. We organize existing methods according to five types of information used to isolate the target speaker: audio enrollment, visual, spatial, textual/semantic, and neural cues. We also trace the evolution from discriminative estimators to variational, diffusion, flow, codec, and foundation-model-based systems and summarize representative datasets and evaluation metrics. We review the benefits and limitations of different cues and discuss challenges involving synchronization, missing or unreliable observations, data scarcity, privacy, computational cost, and real-time operation. Finally, we summarize future directions concerning adaptive cue fusion, instruction-driven extraction, realistic evaluation, and trustworthy deployment. By jointly reviewing cue design, model architecture, training objectives, datasets, and evaluation metrics, this article provides an overview of the current landscape and open problems in multimodal TSE.",
+  "abstractSha256": "dfdbbc35f8f2c30711827e74488e19bedf454e674db32f9ce2d0e173729ae47a",
+  "arxivId": "2609.35613",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "目标说话人提取",
+      "primaryTaskId": "task.target-speaker",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Xinyuan Qian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanghao Zhou"
+    },
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Ziyang Jiang"
+    },
+    {
+      "affiliations": [
+        "the Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Yu Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinjia Zhu"
+    },
+    {
+      "affiliations": [
+        "the School of Computer and Communication Engineering, University of Science and Technology Beijing, 100083, China"
+      ],
+      "name": "Xueyan Chen"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry, Alibaba Group"
+      ],
+      "name": "Qiquan Zhang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Foundry, Alibaba Group"
+      ],
+      "name": "Zexu Pan"
+    },
+    {
+      "affiliations": [
+        "the Zhejiang Institute of Quality Sciences (Technology Innovation Center of the State Administration for Market Regulation), Hangzhou, 310018, China"
+      ],
+      "name": "Jiaying Wang"
+    },
+    {
+      "affiliations": [
+        "the School of Computer Software, Tianjin University, Tianjin, 300350, China"
+      ],
+      "name": "Xianghu Yue"
+    },
+    {
+      "affiliations": [
+        "the University Hospital rechts der Isar, Technical University of Munich, Munich, Germany"
+      ],
+      "name": "Jiadong Wang"
+    },
+    {
+      "affiliations": [
+        "the University Hospital rechts der Isar, Technical University of Munich, Munich, Germany"
+      ],
+      "name": "Björn Schuller"
+    },
+    {
+      "affiliations": [
+        "the School of Artificial Intelligence, the Chinese University of Hong Kong, Shenzhen, 518172, China"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该综述把目标说话人提取组织为音频、视觉、空间、文本语义、神经五类目标线索与判别到生成建模的演进，报告了混淆与失配等条件下的定量变化，并强调无统一最优线索与范式，需按传感、同步与部署约束选择与评估。",
+  "originalTitle": "Multimodal Target Speaker Extraction: Towards Unified Speaker Cues Across Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35613.pdf",
+  "readerTitle": "不只靠注册语音找人：五类线索如何各自指定目标说话人",
+  "schemaVersion": 1
+}

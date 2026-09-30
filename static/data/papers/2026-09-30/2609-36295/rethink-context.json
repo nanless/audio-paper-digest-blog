@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36295v1",
+  "abstract": "Most videos capture only a narrow field of view and provide no spatial audio, limiting the sense of immersion they can provide. Recent video generation models can expand perspective videos into panoramic ones, but do not provide the corresponding spatial soundscape. Without spatially consistent audio, these expanded visual worlds remain incomplete. This paper presents OmniDream, a training-free framework that transforms a silent monocular video into an immersive audiovisual experience, where viewers can freely look around while sounds remain spatially aligned with the visual scene. At the core of OmniDream is an object-centric audio representation that disentangles each sound source's intrinsic audio content from its scene-dependent acoustic effects, enabling independent audio generation, physics-based simulation of propagation effects, and flexible spatial audio rendering. Experiments show improved audio-visual alignment, spatial correctness, and perceptual immersiveness over baselines. Examples are available on https://huggingface.co/spaces/CuriousAlien000/spatial-audio-360-demo",
+  "abstractSha256": "849728d8919ffd51c7c3830a19f84346eeb1b4d8cc40df2209dd0b2d5a81e1f0",
+  "arxivId": "2609.36295",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36295v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Zitong Lan"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mutian Tong"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Jiatao Gu"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mingmin Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "OmniDream 把静音单目视频先扩成全景视频与三维几何，再为每个发声对象生成干声并用光线追踪仿真脉冲响应来渲染一阶 Ambisonics，在自建集与 YT360 上报告了空间对齐提升，但全景扩展耗时约 1680 秒是主要代价。",
+  "originalTitle": "Enabling Immersive Audio-Visual Experience from Any Video",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36295v1.pdf",
+  "readerTitle": "把无声窄视场视频变成可环视的声景：OmniDream 的对象中心分解与物理声学渲染",
+  "schemaVersion": 1
+}

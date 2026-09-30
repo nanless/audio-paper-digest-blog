@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36577v1",
+  "arxivId": "2609.36577",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36577v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Zhenhong Zhou"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Xuanyue Zhao"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Youji Liu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Yuanhe Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Xiaoyu Ma"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Lianyu Hu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Yang Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36577v1",
+  "originalTitle": "Long-Term Memory-Guided Enhancement for Target Perception in Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36577v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

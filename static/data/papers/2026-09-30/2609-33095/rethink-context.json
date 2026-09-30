@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33095",
+  "abstract": "Generating responsive listener facial motion is an important task for embodied conversational AI. Two modeling challenges are central: accounting for the timing of speaker cues while maintaining continuity with the listener's ongoing motion, and capturing locally variable facial events alongside the overall motion trajectory. Listener responses may follow preceding cues with a temporal lag, while brief expressions and blinks introduce variation that is difficult to predict deterministically. These challenges motivate a framework that combines history-aware temporal alignment with stochastic expression refinement. We propose REALM (Reactive Embodied Audio-driven Listening Model), a coarse-to-fine framework for audio-driven reactive listening. A Reactive Gated Speaker-Listener Fusion module combines listener motion history with speaker audio through a delay-centered attention prior and adaptive gating. A coarse decoder predicts a base motion trajectory, which is augmented by audio-conditioned stochastic residuals in the expression subspace while retaining the coarse pose parameters. Evaluations on ViCo and L2L show improvements over the evaluated baselines across multiple motion-quality metrics. Additional analyses examine delay sensitivity, gate behavior, and blink dynamics. Finally, deployment on an Ameca humanoid robot and a perceptual user study demonstrate the applicability of the generated behavior to physical embodiment.\n  Code: https://github.com/lipzh5/REALM Demo: https://youtu.be/Tf5mpd5S8VQ",
+  "abstractSha256": "1e1388fe442756bf7db6bed2f936feba95df07c22098063214f616b9357bb59e",
+  "arxivId": "2609.33095",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peizhen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbing Cao"
+    },
+    {
+      "affiliations": [
+        "University of North Texas, USA"
+      ],
+      "name": "Yang Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对说话人音频驱动听众头部反应的时滞对齐与局部表情随机性问题，REALM 用延迟先验门控融合做粗轨迹再只在表情子空间做音频条件随机残差，在 ViCo 与 L2L 上降低表情与姿态误差并改善帧间动态，但刚体姿态分布与部分方差指标仍有基线更优的反例且依赖离线窗口与机器人专用重定向。",
+  "originalTitle": "REALM: A Coarse-to-Fine Generative Framework for Embodied Reactive Listening",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33095.pdf",
+  "readerTitle": "听众为何慢半拍又爱眨眼：REALM 用延迟融合加表情残差拆开连续性与随机性",
+  "schemaVersion": 1
+}

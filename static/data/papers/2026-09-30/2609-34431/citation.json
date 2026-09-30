@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34431",
+  "arxivId": "2609.34431",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isha Pandey Varad Deshpande Abhijat Bharadwaj Ganesh Ramakrishnan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.34431",
+  "originalTitle": "Harmonizing Spectral Evolution in Conditional Flow Matching for TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34431.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

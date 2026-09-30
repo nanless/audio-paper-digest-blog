@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34431",
+  "abstract": "Conditional Flow Matching (CFM) models for text-to-speech (TTS) suffer from incoherent frequency evolution during inference. While similar spectral imbalances are addressed in diffusion models for other domains, those generic solutions fail to generalize to the inherently uncoordinated acoustic dynamics of CFM. We demonstrate that this issue can be effectively mitigated by introducing a novel training-free frequency-selective boosting strategy. Using the Discrete Wavelet Transform (DWT), our method dynamically modulates mel-spectrogram sub-bands during ODE integration, synchronizing spectral development by penalizing aggressive low-frequency growth and boosting lagging high-frequency details. Validated across diverse architectures (Matcha-TTS, F5-TTS, IndicF5), our approach reduces the required Number of Function Evaluations (NFE) from 32 to 26 and improves Frechet Audio Distance (FAD) by up to 61%, all without compromising mean opinion scores, speaker similarity, and speech intelligibility.",
+  "abstractSha256": "957653e55d74a0a17b7e31ea3fa8799657646334ca2731f9aea29f4ed8d38c2c",
+  "arxivId": "2609.34431",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Isha Pandey Varad Deshpande Abhijat Bharadwaj Ganesh Ramakrishnan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对条件流匹配合成中近似子带持续增长而细节子带滞后的问题，论文提出免训练的频率选择性增强，在离散小波域按步调制中间梅尔谱，最强证据是 26 步达到 32 步质量且 FAD 大幅下降，代价是一次性标定低维调度且跨模型需更换函数形式。",
+  "originalTitle": "Harmonizing Spectral Evolution in Conditional Flow Matching for TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34431.pdf",
+  "readerTitle": "低频跑太快、高频跟不上：用小波子带重加权协调流匹配语音合成的频谱演化",
+  "schemaVersion": 1
+}

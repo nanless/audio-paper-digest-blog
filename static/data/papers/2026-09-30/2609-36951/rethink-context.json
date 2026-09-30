@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36951v1",
+  "abstract": "Dynamic-frame-rate neural speech codecs replace a uniform frame grid with variable-duration tokens, making boundary placement part of the representation itself. Yet it is unclear what these boundaries encode and whether interpretable boundaries are also useful for neural speech reconstruction. This work combines boundary interpretation and controlled reconstruction analysis by comparing predicted boundaries with linguistic and acoustic references. We find that boundary meaning depends on the underlying speech representation. For the ASR-oriented SenseVoice and Whisper encoders, shallow layers emphasize phonetic, voicing, and acoustic transitions, whereas deeper layers shift toward syllable and subword structure. In a comparison of six dynamic-frame-rate algorithms and a uniform (fixed-frame-rate) baseline, higher-level linguistic alignment is associated with lower pooling distortion and better reconstruction from semantic tokens. Frame-rate-matched boundary tests make the distinction concrete: a syllable-derived partition improves over both Uniform and Similarity, while a phoneme-derived partition does not improve over Uniform. We infer that for semantically rich speech representations, useful codec boundaries are best understood as allocation decisions organized around the syllable scale.",
+  "abstractSha256": "660e1338d034678403d5c14879b960d06b34da520b6cb8acc1f19517ecb12d05",
+  "arxivId": "2609.36951",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36951v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Han Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiaqi Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yingda Shen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文以 FlexiCodec 为公共接口比较七种边界分配方法，发现音节、BPE 与词对齐更强的方法池化失真更低、重建词错误率更低，而音素级固定切分不如均匀切分，但自适应分配仍优于固定音节切分，代价是动态规划类方法边界选择耗时明显更高。",
+  "originalTitle": "Interpreting and Evaluating Dynamic-Rate Speech Codec Boundaries",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36951v1.pdf",
+  "readerTitle": "动态帧率编解码的边界在何处切分：音节尺度为何优于音素尺度",
+  "schemaVersion": 1
+}

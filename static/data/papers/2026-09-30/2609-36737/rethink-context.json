@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36737v1",
+  "abstract": "The vocal tract is the region of the human body responsible for filtering one's voice to create speech. In this paper, we present a differentiable and GPU accelerated acoustic simulator for the vocal tract. The differentiable simulator synthesizes speech by propagating sound along an acoustic tube model of the vocal tract, and via its gradients, can solve the inverse problem: reconstructing the shape of the vocal tract solely from the sound it produces. Although the inverse mapping between geometry and sound is notoriously non-convex, we discover that gradient descent succeeds with three technical contributions: (1) we design a frequency domain formulation of the vocal tract's fluid dynamics that is 70x more GPU parallelizable than finite differences in time, (2) we integrate a differentiable model for turbulence to synthesize consonants, and (3) similar to prior work in implicit neural representations (INRs) and neural fields, we find that parameterizing the geometry with a neural network accelerates convergence and escapes local minima that trap discrete representations. Because the simulator is differentiable, it is readily integrated with other deep learning pipelines to enable novel linguistics and medical imaging applications. (1) We demonstrate self-supervised autoencoding of vocal tract shapes across 11 languages, and (2) we couple our simulator with a generative model of MRI (magnetic resonance imaging) images to reconstruct one's moving vocal tract from only their speech without paired data.",
+  "abstractSha256": "50171d02dde564c51f0801e704d85ec0c012713996ed201dc39b0267ad47f5ef",
+  "arxivId": "2609.36737",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36737v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音合成",
+      "primaryTaskId": "task.speech-synthesis",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Eric Ming Chen"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Jin Woo Lee"
+    },
+    {
+      "affiliations": [
+        "MIT CSAIL"
+      ],
+      "name": "Vincent Sitzmann"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把声道建成可微声学管道，用频域传输线求解与可微湍流门控合成元音辅音，再用神经场参数化做梯度反演，并在自监督声码与无配对语音到 MRI 视频上验证，但逆解不唯一且鼻腔未建模。",
+  "originalTitle": "Reconstructing the Vocal Tract with Differentiable Acoustic Simulation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36737v1.pdf",
+  "readerTitle": "只听声音重建声道形状：频域可微仿真如何让逆问题可优化",
+  "schemaVersion": 1
+}

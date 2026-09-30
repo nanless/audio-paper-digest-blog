@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33706",
+  "abstract": "Speech deepfake detection faces significant challenges due to domain shifts. Domain generalization (DG), particularly meta-learning for domain generalization (MLDG), offers a promising solution by simulating and mitigating domain shifts. However, MLDG is often hindered by conflicting gradients between its meta-train and meta-test objectives, leading to suboptimal performance. To address this problem, we propose domain gradient surgery (DGS), a meta-learning method that resolves conflicts through an asymmetric projection strategy. DGS removes the destructive component from the meta-test gradient, ensuring a conflict-free optimization trajectory versus the meta-train gradient. Furthermore, we introduce layer-wise DGS (LW-DGS), an efficient variant of DGS that dynamically identifies and intervenes only conflict-prone layers. Extensive experiments on challenging benchmarks demonstrate that DGS-MLDG and LW-DGS-MLDG achieve an average relative EER reduction of 5.29% and 4.04%, respectively.",
+  "abstractSha256": "0364bbb1a649b48c9ef66853a4929b6e20cf4428e93f4238652457cc7c5f06a1",
+  "arxivId": "2609.33706",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "元学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.meta-learning",
+          "label": "元学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "元学习",
+      "primaryMethodId": "method.meta-learning",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youzhi Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Man-Wai Mak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音伪造检测中元学习域泛化的元训练与元测试梯度冲突问题，论文提出以元训练梯度为锚、只修正元测试梯度的域梯度手术及其逐层变体，在多组跨数据集评估上报告了平均相对等错误率下降，但部分数据集上仍存在未胜出项与方向敏感性代价。",
+  "originalTitle": "DGS-MLDG: Domain Gradient Surgery Guided Meta-Learning for Domain Generalization in Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33706.pdf",
+  "readerTitle": "元训练与元测试互相抵消时：用非对称投影保住适应的方向",
+  "schemaVersion": 1
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.32869",
+  "arxivId": "2609.32869",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huapeng Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Huayu Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junkai Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kangqi Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinyu Wang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.32869",
+  "originalTitle": "Whisper-Flash: Acoustically Conditioned Parallel Drafting for Faster Whisper Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.32869.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

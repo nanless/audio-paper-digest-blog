@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34030",
+  "abstract": "Correlations between events in machine learning datasets may result in shortcut learning, where models learn to predict the target event based on the presence of a correlated event. When these correlations are spurious -- arising from data collection artifacts -- models are likely to perform poorly in practice. We propose a pipeline to uncover shortcut learning in audio classifiers by discovering recurring concepts in their temporal explanations. Specifically, we isolate audio segments that explain classifier decisions, caption them with an ensemble of Large Audio-Language Models, and use a Large Language Model to extract recurring concepts. The resulting concepts can be audited by humans to uncover potential shortcut learning. We evaluate our framework using datasets curated from AudioSet Strong, controlling for the presence or absence of spurious correlations. Results show that this approach reliably uncovers learned shortcuts, such as the model relying on the presence of &#34;laughter&#34; to predict &#34;applause&#34;.",
+  "abstractSha256": "1654497f92ced7249af56523e7f0d79ce32031599e3fc5e68139412cdbd53da7",
+  "arxivId": "2609.34030",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cecilia Bolaños"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Luciana Ferrer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Magdalena Fuentes"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用时间定位解释截出影响判定的音频段，再用大音频语言模型描述并用大语言模型聚成类级别概念，在受控的干净与虚假相关数据集上报告出对掌声加笑声等三组明确捷径的检出与一组模糊检出，代价是依赖解释阈值与模型集成来压制幻觉。",
+  "originalTitle": "Uncovering shortcut learning in audio classifiers by discovering recurring concepts in temporal explanations",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34030.pdf",
+  "readerTitle": "解释先定位时间，再把局部解释聚成类概念：从笑声判掌声看捷径学习",
+  "schemaVersion": 1
+}

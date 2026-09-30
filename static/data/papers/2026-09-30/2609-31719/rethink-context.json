@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31719",
+  "abstract": "Evaluating conversational systems is a difficult and unresolved problem. We introduce the Conversational Distribution Score (CDS), which compares distributions of conversational behaviour using human conversations as a reference. CDS describes speech rate, syllabic rhythm, and turn interaction through eight interpretable features plus a separate two-feature semantic baseline. We compare conversations with two reference scales: one based on conversational success within human dialogue and another contrasting human and synthetic dialogue. Using listener judgments from out-of-domain goal--oriented dialogues, we examine system ranking, preferences between conversations, and ranking stability. Composite CDS recovers five of six listener system comparisons while individual features show strong correlation with listener preferences between conversations. We examine how many minutes and conversations are required before rankings stabilize. These findings support distributional comparisons as a complement to specific interactional metrics to evaluate conversations and conversational models while showing their interpretable value.",
+  "abstractSha256": "7f599fe67b0c86b400d4a145ba5735d6599c300a2fd37a5c14fefa71aac02f1a",
+  "arxivId": "2609.31719",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shree Harsha Bokkahalli Satish"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Erica Cooper"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Patrícia Schmidtová"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maike Züfle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Éva Székely"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Sanders"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ondřej Klejch"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文提出以人类高成功对话为参照、比较行为分布距离的对话分布分数，用语速、节奏、轮替共八个可解释特征加语义基线评价系统，在域外目标导向对话上复合分数复现六组听众比较中的五组，但短片段与单一尺度下排序并不稳定。",
+  "originalTitle": "Distributional Metrics for Evaluating Spoken Conversational Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31719.pdf",
+  "readerTitle": "不只测单轮像不像：用人类对话分布给语音对话系统打分",
+  "schemaVersion": 1
+}

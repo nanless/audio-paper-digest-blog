@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36287v1",
+  "abstract": "Instruction-based text-to-speech (ITTS) systems enable natural-language control of expressive speech generation, but often offer limited transparency and fine-grained control over individual text units. Character-level controllable TTS systems provide explicit acoustic control, yet typically rely on user-specified acoustic attributes. To bridge this gap, we propose InstCharVoice, a unified framework that grounds natural-language instructions in character-level acoustic control. We first construct grounded instruction annotations on the WordVoice-5A-zh corpus using Qwen3-Omni. With this supervision, we train an autoregressive model to identify instruction-relevant characters and predict their acoustic attributes before generating the corresponding speech tokens. Keyword prediction and grounding-aware loss weighting help the model focus on instruction-relevant characters and attributes. Experiments show improved instruction following and keyword-level acoustic control over representative ITTS systems, with competitive speech naturalness and explicit character-level controllability. Audio samples are available at https://xxh333.github.io/instcharvoice-demo/.",
+  "abstractSha256": "1defac633089a4735be49144766039bf52d2a20f9bd59da868ed60892c3a7e96",
+  "arxivId": "2609.36287",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36287v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sihang Nie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xueru Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaofen Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Deyi Tuo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheng-Bin Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingyuan Xing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinxin Ji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对指令式语音合成缺字级对应与可检视性的问题，InstCharVoice 用接地标注加逐字五维声学规划实现指令到字符声学的显式落地，在关键词级声学误差和指令跟随主观分上报告更好结果，代价是说话人相似度和可听写性略有回落且抽象情感未建模。",
+  "originalTitle": "InstCharVoice: Grounding Natural-Language Instructions for Character-Level Control in Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36287v1.pdf",
+  "readerTitle": "把自然语言指令落到每个字：InstCharVoice 的接地与声学规划",
+  "schemaVersion": 1
+}

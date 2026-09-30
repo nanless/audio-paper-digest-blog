@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35345",
+  "arxivId": "2609.35345",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michel Olvera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changhong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35345",
+  "originalTitle": "Probing Large Audio-Language Models for Compositional Understanding of Sounding Actions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35345.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33265",
+  "abstract": "Orchestral separation recovers instrument sections from mixtures in which shared pitches, harmonics, and timbres obscure source identity. An aligned score provides instrument labels, note pitches, and activity times. A score-informed approach appends piano rolls to audio features before mask prediction. We introduce SCISSOR (Score-Conditioned Instrument Source Separation for Orchestral Recordings), which uses the score to form a frame-wise query for each source. Each query matches a shared audio representation, and a softmax over instrument and background slots jointly assigns overlapping time-frequency evidence. The queries retain instrument identity even when notes are missing from the score. After training on SynthSOD and a small set of URMP and PHENICX-Anechoic recordings, SCISSOR achieves the highest average SDR on held-out real recordings. With SynthSOD-only training, it leads on SynthSOD and zero-shot PHENICX-Anechoic, and improves on its audio-only control on zero-shot URMP. SCISSOR also degrades less under score corruption than the evaluated score-based baselines.",
+  "abstractSha256": "57d8770c04eb1166814ab8f4068b2f78eee4ba463653d423965c48a555cca625",
+  "arxivId": "2609.33265",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yiheng Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hao-Wen Dong"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对弦乐四声部在同音高与泛音重叠下难以仅凭混合区分的问题，SCISSOR 用乐谱音高加乐器身份构成逐帧查询去竞争共享音频表示，证据显示在少量真实录音参与训练后其在留出真实集平均 SDR 最高，而乐器身份类乐谱错误仍会使其回落到音频对照以下。",
+  "originalTitle": "SCISSOR: Score-Conditioned Instrument Source Separation for Orchestral Recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33265.pdf",
+  "readerTitle": "乐谱给身份、音频给证据：SCISSOR 用逐帧查询做联合分配",
+  "schemaVersion": 1
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36351v1",
+  "arxivId": "2609.36351",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36351v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vaishnavi Vidyasagar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jasmine Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahima Uliyar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seunghyun Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Emily Catherine Gates"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Zachary Rosenthal"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shyamnath Gollakota"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36351v1",
+  "originalTitle": "Trigger Sound Suppression for Misophonia",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36351v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

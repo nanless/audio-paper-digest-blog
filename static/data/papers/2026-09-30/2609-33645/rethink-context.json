@@ -1,0 +1,134 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33645",
+  "abstract": "Connectionist temporal classification (CTC) naturally supports offline and streaming speech recognition with utterance-level supervision, but conventional implementations materialize frame-by-vocabulary activations in memory, making CTC training with native LLM vocabularies prohibitively memory-intensive. A key observation is that every valid CTC alignment uses only target tokens and blank, and their union across a batch typically forms a small subset of the full vocabulary. We introduce Pruned CTC, which restricts alignment computation to this subset while retaining full-vocabulary normalization. We prove that this vocabulary reduction is exactly equivalent to full-vocabulary CTC in loss and gradients. Head-and-loss activation memory no longer scales linearly with vocabulary size. We further apply finite-beam alignment pruning. Building on Pruned CTC, we develop LLM-CTC, which adapts pretrained LLMs for non-autoregressive ASR while retaining causal attention and native vocabularies, and extend it to bounded-history streaming, avoiding chunk-level speech--text alignments. Experiments show that, with Zipformer-M encoder and 180K vocabulary, Pruned CTC reduces full-step memory by 5.1$\\times$ with only 17% step-time overhead. Across three corpora, it matches standard CTC accuracy. On GigaSpeech, across six Qwen3 model sizes from 0.6B to 32B, LLM-CTC remains within 7% relative WER of LLM-CE with 7 to 10$\\times$ faster recognition; when fine-tuning Qwen3-ASR for bounded-history streaming, LLM-CTC remains within 3% relative WER of matched offline models on the test set. Together, these results establish Pruned CTC as a scalable sequence objective for native-vocabulary LLM ASR across offline and streaming settings.",
+  "abstractSha256": "162183171d2e5b315b53c03f612353cd9fcc1488ed48ed13af503632e777ac87",
+  "arxivId": "2609.33645",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CTC",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yifan Yang"
+    },
+    {
+      "affiliations": [
+        "University of Cambridge"
+      ],
+      "name": "Xiaoyu Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zengrui Jin"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Xian Shi"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Yuxuan Wang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ziyang Ma"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Qi Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Ruiyang Xu"
+    },
+    {
+      "affiliations": [
+        "Nankai University"
+      ],
+      "name": "Hui Wang"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ],
+      "name": "Dongchao Yang"
+    },
+    {
+      "affiliations": [
+        "Alibaba Token Hub, Alibaba Group"
+      ],
+      "name": "Jin Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "SII"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对原生大词表 CTC 需物化帧乘词表激活的问题，论文用目标词并集加 blank 做对齐、用全词表归一化加分块重算保持等价，并以有限波束剪枝和因果查询读出把预训练 LLM 做成非自回归与流式识别，在编码器上全步显存降 2.3 至 5.1 倍、LLM-CTC 保持在 LLM-CE 的 7% 相对词错率内并快 7.2 至 10.3 倍，代价是每步增加约 14 至 17% 时间与波束近似带来的非精确性。",
+  "originalTitle": "Pruned CTC for Memory-Efficient Large-Vocabulary ASR Training",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33645.pdf",
+  "readerTitle": "只算转录里出现的词：剪掉词表维度的 CTC 如何等价省显存",
+  "schemaVersion": 1
+}

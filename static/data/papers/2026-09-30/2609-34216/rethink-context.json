@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.34216",
+  "abstract": "Microphone positional encoding supports cross-array direction-of-arrival (DOA) estimation, but coordinates alone cannot fully describe device shadowing or microphone directivity. We propose a Generalizable ATF Matching Framework (GAMF) for DOA estimation across array geometries and microphone counts, using array transfer functions (ATFs) as acoustic descriptors. The learned branch incorporates ATF embeddings into geometry-conditioned neural estimation to match acoustic observations with candidate directions. The analytical branch performs normalized ATF matching adapted from generalized steered response power. A hybrid configuration combines their scores through adaptive gating. Simulations across array configurations show that both learned and hybrid configurations outperform a representative positional-encoding-based neural baseline, remain competitive with analytical ATF matching in clean, low-reverberation scenes, and substantially improve upon it under stronger noise or reverberation. On eight-microphone LOCATA Task 1 recordings, the hybrid configuration outperforms the evaluated state-of-the-art baselines for three-dimensional DOA estimation, achieving mean errors of $3.76^\\circ$ for three-dimensional DOA and $2.87^\\circ$ for azimuth.",
+  "abstractSha256": "f156f2fe2ddfc8e344b4e34d14bf2550e8fb22e9a16b5b2897a37fa03c90596e",
+  "arxivId": "2609.34216",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiheng Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shichao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyao Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对麦克风布局与数量变化时的三维波达方向估计，GAMF 用候选方向阵列传输函数做声学描述，分别构建可学习的麦克风对齐匹配与解析的归一化匹配，并以门控融合，在仿真噪声混响下学习分支更稳健，而八麦克风 LOCATA 上混合达到球面平均误差 3.76 度、方位角 2.87 度，但干净低混响下解析方法仍有优势。",
+  "originalTitle": "GAMF: Learned and Analytical Array Transfer Function Matching for Array-Generic Direction-of-Arrival Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.34216.pdf",
+  "readerTitle": "坐标不够时补声学指纹：GAMF 用阵列传输函数做跨阵列波达方向匹配",
+  "schemaVersion": 1
+}

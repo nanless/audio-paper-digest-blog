@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.33538",
+  "abstract": "A speech neuroprosthesis decodes attempted speech from brain activity and ends by rescoring the decoder&#39;s candidate sentences with a language model of several billion parameters, the only component that needs a GPU. Replacing that model with a cheaper one is hard: general language models asked to pick one sentence from a list answer from where a label sits in the list rather than from the sentence itself. We pose rescoring as a single typed decision, one call that returns a probability for every candidate, served by Jev, a hosted model trained for calibrated decisions, and combine it with the decoder&#39;s own score. On 978 held-out sentences from a participant with ALS, where the published decoder alone reaches 8.1% word error, Jev reaches 7.5% against 7.8% for both OPT-6.7b and Qwen2.5-7B; with the decoder&#39;s weight re-tuned, 6.9% against 7.2% and 7.4%. Jev is ahead in all four comparisons and at most 0.2 points behind at the 95% bound. It costs 0.07 USD per thousand sentences and needs no GPU; a dedicated GPU running a 7B model is cheaper per sentence only above 43% utilisation, far beyond what one user generates. End-to-end latency over the internet is 262 ms, of which 62 ms is spent at the provider, the same order as a 7B model on a local GPU (27 ms) but not faster.",
+  "abstractSha256": "aa33b7965e94d066eb40beeeacb98f4fcfb6a7092e64ad943e64292c271e4d58",
+  "arxivId": "2609.33538",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.comparison",
+          "label": "模型比较"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gabriele Cinà"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在 T15 同一批缓存候选上，一次返回全表概率的 Jev 调用把测试词错率降到已发表权重下 7.46% 与重调权重下 6.93%，四组配对都领先两个 7B 打分器且 95% 上界最多落后 0.20 个点，代价是托管调用与传输主导的延迟。",
+  "originalTitle": "Jev Matches 7B Language Models for Speech-Neuroprosthesis Rescoring",
+  "pdfUrl": "https://arxiv.org/pdf/2609.33538.pdf",
+  "readerTitle": "重排只是做选择：一次定型调用为何能替掉 7B 逐句打分",
+  "schemaVersion": 1
+}

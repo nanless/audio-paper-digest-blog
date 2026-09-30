@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36324v1",
+  "abstract": "Flow-matching text-to-speech (TTS) models achieve high synthesis quality but require many neural function evaluations (NFEs) to integrate their generative trajectories. Recent few-step flow-map distillation approaches for TTS construct targets from numerically integrated teacher trajectories, creating a trade-off between target accuracy and training cost. We propose Local Flow-Map Distillation (LFMD), which adapts Eulerian Map Distillation to conditional TTS and avoids teacher trajectory integration during target construction. For inference, we derive a sampling schedule (TD-DP) from teacher dynamics and consistency of the learned maps, with a single cost graph supporting multiple NFE budgets without external audio-metric evaluation. Because scheduling offers no flexibility at one NFE, we refine this regime with alignment-aware temporal self-distillation using soft-DTW. Across Seed-TTS and LibriSpeech-PC, LFMD improves low-NFE synthesis over a matched integral-distillation baseline. On Seed-TTS, the refined student reaches 1.80% WER with 1-NFE, compared with 1.76% for its 32-NFE teacher.",
+  "abstractSha256": "8878f6f49e4493fb05a6f0a1ac9faa8ca5bd3e6b627834565cd4f72f78975f35",
+  "arxivId": "2609.36324",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36324v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yentl Collin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Evan Dufraisse"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amr Mohamed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amine Khelif Khelif"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dani Bouch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guokan Shang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对流匹配语音合成多步积分代价高的问题，论文用出发点局部微分恒等式做蒸馏、用一致性代价图做全局步数规划、用四步模型做对齐自蒸馏，最强证据是 Seed-TTS 上一步达到 1.80% 词错率接近 32 步教师的 1.76%，代价是说话人相似度和预测质量仍低于教师。",
+  "originalTitle": "Distill Locally, Schedule Globally: Flow Maps for Few-Step Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36324v1.pdf",
+  "readerTitle": "本地学斜率、全局排步骤：少步语音流映射如何避开教师轨迹积分",
+  "schemaVersion": 1
+}

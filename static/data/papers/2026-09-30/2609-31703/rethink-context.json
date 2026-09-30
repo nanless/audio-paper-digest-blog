@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31703",
+  "abstract": "Hands-free communication devices and speakerphones are inherently affected by acoustic echo and background noise. To mitigate these impairments, end-to-end discriminatively trained neural networks have emerged as the best-performing approach in research and deployment. While recent advancements in generative methods have provided remarkable results for various speech enhancement tasks, diffusion-based acoustic echo control (AEC) research is still restricted to non-causal, utterance-level processing, thereby not widely applicable in practice. With this work, we are the first to propose low-delay (i.e., causal) diffusion-based joint AEC and noise control models DiffVQE2 / DiffVQE2-S, excelling the so-far state of the art DeepVQE / DeepVQE-S models in multiple objective metrics, and, most importantly, in subjective MOS, respectively. In addition, our models are less complex. Furthermore, we show that a limited lookahead applied to the efficient DiffVQE2-S model allows for an even higher performance. These results have been obtained on the ICASSP 2023 AEC Challenge blind test set. We claim the first streaming-capable, diffusion-based acoustic echo and noise control that excels state-of-the-art discriminative approaches.",
+  "abstractSha256": "bf2d44d7783160fd6987d7673e9c35e74def699e2a73ba41494554db0c117bf0",
+  "arxivId": "2609.31703",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "回声消除",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.echo-cancellation",
+          "label": "回声消除"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "回声消除",
+      "primaryTaskId": "task.echo-cancellation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haljan Lugo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ernst Seidel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pejman Mowlaee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziyue Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tim Fingscheidt"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对免提通话需要因果低延迟联合回声噪声控制的问题，DiffVQE2 用因果卷积加单向 GRU 改造混合扩散框架并辅以有限前视，在 ICASSP 2023 AEC 盲测上以更低算力取得更高的主观 MOS，但客观双讲指标仍有代价。",
+  "originalTitle": "DiffVQE2: An Efficient Low-delay Diffusion Model for Acoustic Echo and Noise Control",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31703.pdf",
+  "readerTitle": "因果约束下做扩散：DiffVQE2 如何把回声噪声联合控制做到低延迟",
+  "schemaVersion": 1
+}

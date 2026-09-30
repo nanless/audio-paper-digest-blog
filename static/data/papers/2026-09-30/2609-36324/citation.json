@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36324v1",
+  "arxivId": "2609.36324",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36324v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yentl Collin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Evan Dufraisse"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amr Mohamed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amine Khelif Khelif"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dani Bouch"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guokan Shang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36324v1",
+  "originalTitle": "Distill Locally, Schedule Globally: Flow Maps for Few-Step Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36324v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

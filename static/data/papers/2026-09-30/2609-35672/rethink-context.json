@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35672",
+  "abstract": "Music producers search libraries of isolated instrument recordings, called stems, for sounds resembling parts of an existing song. Neural retrieval systems address this by mapping audio to embeddings and ranking library stems by their similarity to the query. The leading method, Contrastive Instrument Retrieval (CIR), encodes the mixture as a single embedding, but it works best when a user specifies the target&#39;s instrument family. We introduce Stembed, which encodes a mixture as several slot embeddings representing candidate stems. During training, we construct mixtures from stems of the same song and match their slot embeddings to those of the isolated stems. The slot embeddings from mixtures inherit the stem identities of their assigned solo embedding, enabling a contrastive loss. On mixtures from held out MoisesDB artists, Stembed outperforms a CIR-style baseline when both search the full stem library. Even when predicting the stem count itself without family labels, Stembed exceeds the baseline&#39;s family-filtered R@1. Our website demonstrates how users can select a slot by inspecting the tags of its retrieved stems.",
+  "abstractSha256": "0d67ee552dfd44d31946c288bcf8ba6b4b0a59c326319b7fe98cf597c951bbfe",
+  "arxivId": "2609.35672",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音乐检索",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-retrieval",
+          "label": "音乐检索"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音乐检索",
+      "primaryTaskId": "task.music-retrieval",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Braun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyi Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pranay Manocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Donald S. Williamson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam Finkelstein"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对从混合音乐中检索库中相似分轨的问题，Stembed 用四个槽嵌入分别表示候选分轨并以匹配后的对比损失训练，在 MoisesDB 三轨检索上以 56.8% 全库 R@1 超过单嵌入 CIR 基线 23.6%，代价是需要匹配、存在分数和槽数等额外机制。",
+  "originalTitle": "Retrieving Individual Stems from Music Mixtures with Slot Embeddings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35672.pdf",
+  "readerTitle": "混合里捞出每一轨：用槽嵌入把一首歌拆成多个可检索查询",
+  "schemaVersion": 1
+}

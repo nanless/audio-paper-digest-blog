@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35115",
+  "arxivId": "2609.35115",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Haixiao Gao"
+    },
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Yimin Zheng"
+    },
+    {
+      "affiliations": [
+        "Jinan University, China"
+      ],
+      "name": "Linyou Xiao"
+    },
+    {
+      "affiliations": [
+        "Hong Kong University of Science and Technology (Guangzhou), China"
+      ],
+      "name": "Zeke Xie"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35115",
+  "originalTitle": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35115.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

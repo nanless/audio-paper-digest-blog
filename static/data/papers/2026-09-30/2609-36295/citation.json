@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36295v1",
+  "arxivId": "2609.36295",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.36295v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Zitong Lan"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mutian Tong"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Jiatao Gu"
+    },
+    {
+      "affiliations": [
+        "University of Pennsylvania"
+      ],
+      "name": "Mingmin Zhao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.36295v1",
+  "originalTitle": "Enabling Immersive Audio-Visual Experience from Any Video",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36295v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
