@@ -88,3 +88,39 @@ test('conference coverage uses its official source and ignores other arXiv links
   writeFileSync(file, '<article class="research-workbench--paper">' + tools.replace('data-citation-format="ris"', '') + '<button data-citation-format="ris">正文按钮</button></article>');
   assert.throws(() => verifyPaperToolCoverage([file]), /缺少 ris/);
 });
+
+test('arXiv coverage preserves exact official PDF URLs and requires a sealed version disclosure for mismatched versions', t => {
+  const root = mkdtempSync(join(tmpdir(), 'arxiv-version-coverage-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const file = join(root, 'index.html');
+  const record = { contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'verified', verified: true,
+    sourceKind: 'arxiv', arxivId: '2605.12987v1', url: 'https://arxiv.org/abs/2605.12987v1', pdfUrl: 'https://arxiv.org/pdf/2605.12987v1' };
+  const render = value => writeFileSync(file, '<article class="research-workbench--paper"><section class="paper-tools">'
+    + '复制 AI 提问 paper-tools__selected-text paper-tool--selection-copy paper-tools__copy-fallback <noscript>手动复制</noscript>'
+    + '<script class="paper-tools__citation-record">' + JSON.stringify(value) + '</script>'
+    + '<a href="' + value.url + '">原文</a><a href="' + value.pdfUrl + '">PDF</a>'
+    + '<button data-citation-format="bib">BibTeX</button><button data-citation-format="ris">RIS</button>'
+    + 'zotero.org/download/connectors 网页不能代你点击浏览器扩展</section></article>');
+  for (const suffix of ['', '.pdf']) {
+    render({ ...record, pdfUrl: record.pdfUrl + suffix });
+    assert.equal(verifyPaperToolCoverage([file]).richArxivTools, 1);
+  }
+  const disclosed = { ...record, pdfUrl: 'https://arxiv.org/pdf/2605.12987',
+    sourceVersionWarning: '封存文本为 v1，实际 PDF 地址未指定版本。',
+    pdfVersionBinding: { contract: 'sealed-arxiv-pdf-version-binding-v1', status: 'versioned-text-unversioned-pdf-url',
+      paperId: 'arxiv:2605.12987', sourceId: record.arxivId, pdfRequestedUrl: 'https://arxiv.org/pdf/2605.12987',
+      pdfVersion: 'unspecified', pdfVersionAuthenticated: false, pdfSha256: 'a'.repeat(64), sourceManifestSha256: 'b'.repeat(64) } };
+  render(disclosed);
+  assert.equal(verifyPaperToolCoverage([file]).richArxivTools, 1);
+  for (const value of [
+    { ...disclosed, pdfVersionBinding: undefined },
+    { ...disclosed, sourceVersionWarning: '' },
+    { ...disclosed, pdfVersionBinding: { ...disclosed.pdfVersionBinding, pdfVersionAuthenticated: true } },
+    { ...disclosed, pdfVersionBinding: { ...disclosed.pdfVersionBinding, pdfSha256: '' } },
+    { ...disclosed, pdfUrl: 'https://arxiv.org/pdf/2605.99999' },
+    { ...disclosed, url: 'https://arxiv.org/abs/2605.99999v1' }
+  ]) {
+    render(value);
+    assert.throws(() => verifyPaperToolCoverage([file]), /arXiv 工具身份不一致/);
+  }
+});

@@ -58,6 +58,21 @@ function query(entries, text) {
   return filterEntries(entries, { query: text, type: 'all', year: 'all', sort: 'newest' });
 }
 
+test('historical supplement provenance survives library normalization without granting unsigned taxonomy', () => {
+  const core = require('../assets/js/taxonomy-core');
+  const graph = core.createRegistry(registry, { contract: 'paper-taxonomy-version-catalog-v1', currentSha256: registry.registrySha256, snapshots: [registry] });
+  const input = { ...record(1, [{ id: 'method.lora', facet: 'method', label: 'LoRA' }]),
+    taxonomyEvidenceContract: 'historical-direct-taxonomy-supplement-v1', taxonomyEvidenceType: 'canonical-analysis',
+    taxonomyProofSha256: 'b'.repeat(64), taxonomyPageSha256: 'c'.repeat(64) };
+  const unsigned = normalizeEntry(input, origin, siteBasePath, registry, graph);
+  assert.equal(unsigned.taxonomyEvidenceContract, input.taxonomyEvidenceContract);
+  assert.equal(unsigned.taxonomyProofSha256, input.taxonomyProofSha256);
+  assert.equal(unsigned.taxonomyPageSha256, input.taxonomyPageSha256);
+  assert.doesNotMatch(unsigned.searchText, /参数高效微调/);
+  const signed = normalizeEntry({ ...input, taxonomyRegistrySha256: registry.registrySha256 }, origin, siteBasePath, registry, graph);
+  assert.match(signed.searchText, /参数高效微调/);
+});
+
 test('论文库搜索能沿祖先链用父概念召回子概念论文', () => {
   const entry = normalizeEntry(record(1, [
     { id: 'method.lora', facet: 'method', label: 'LoRA', ancestorIds: ['method.peft'] },

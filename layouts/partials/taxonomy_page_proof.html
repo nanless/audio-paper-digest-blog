@@ -1,0 +1,70 @@
+{{- /* Supplement only exact frozen legacy page bytes, never infer from old tags. */ -}}
+{{- $memoKey := "research-page:taxonomy_page_proof:v1" -}}
+{{- $proof := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
+{{- $proof = dict "contract" (.Params.paper_digest_taxonomy_contract | default "") "registrySha256" (.Params.paper_digest_taxonomy_registry_sha256 | default "") "concepts" (.Params.paper_digest_taxonomy_concepts | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
+{{- $history := index hugo.Data "taxonomy-history" | default dict -}}
+{{- if and (not $proof.contract) (eq $history.contract "historical-direct-taxonomy-supplement-v1") (eq .Section "posts") .File -}}
+  {{- $key := printf "content/%s" .File.Path -}}
+  {{- $record := index ($history.records | default dict) $key | default dict -}}
+  {{- $shaPattern := `^[a-f0-9]{64}$` -}}
+  {{- $valid := and (reflect.IsMap $record) (findRE `^page:[a-f0-9]{64}$` ($record.pageKey | default "") 1) (findRE $shaPattern ($record.pageSha256 | default "") 1) (findRE $shaPattern ($record.bodySha256 | default "") 1) (findRE $shaPattern ($record.proofSha256 | default "") 1) (findRE $shaPattern ($record.registrySha256 | default "") 1) (findRE `^(arxiv:[0-9]{4}\.[0-9]{4,5}|conference:[^\s\x00-\x1f\x7f]+)$` ($record.paperId | default "") 1) -}}
+  {{- if $valid -}}
+    {{- $hashInput := newScratch -}}
+    {{- $hashInput.Set "record" dict -}}
+    {{- range $field, $value := $record -}}
+      {{- if ne $field "proofSha256" }}{{ $hashInput.SetInMap "record" $field $value }}{{ end -}}
+    {{- end -}}
+    {{- $valid = eq (crypto.SHA256 (($hashInput.Get "record") | jsonify (dict "noHTMLEscape" true))) $record.proofSha256 -}}
+  {{- end -}}
+  {{- if $valid -}}
+    {{- $valid = and (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) (reflect.IsMap $record.source) -}}
+  {{- end -}}
+  {{- if and $valid (eq $record.evidenceType "source-only-taxonomy") -}}
+    {{- $valid = partial "taxonomy_source_only_proof.html" $record -}}
+  {{- else if $valid -}}
+    {{- $valid = and (not $record.evidenceType) (reflect.IsMap $record.stageProof) (reflect.IsMap $record.source.sourceBinding) -}}
+    {{- range $field := slice "canonicalAnalysisFileSha256" "canonicalAnalysisRecordSha256" "canonicalAnalysisSha256" -}}
+      {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+    {{- end -}}
+    {{- if $valid -}}
+    {{- $valid = and (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) (eq $record.pageBodySha256 $record.bodySha256) (eq ($record.source.paperId | default "") $record.paperId) (eq $record.source.kind "arxiv-fresh-fetch") (eq $record.source.sourceBinding.contract "fresh-arxiv-rewrite-source-v1") (eq $record.source.sourceBinding.paperId $record.paperId) (eq $record.source.sourceBinding.textSha256 $record.source.textSha256) (eq $record.source.sourceBinding.pdfSha256 $record.source.pdfSha256) (eq $record.source.sourceBinding.sourceManifestSha256 $record.source.sourceManifestSha256) (eq $record.source.sourceBinding.generation $record.source.generation) -}}
+    {{- range $field := slice "pdfSha256" "sourceManifestSha256" "sourceRunIdentitySha256" "sourceSnapshotSha256" "structuredArtifactsSha256" "textSha256" -}}
+      {{- if not (findRE $shaPattern (index $record.source $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+    {{- end -}}
+    {{- range $field := slice "stageFileSha256" "stagingBindingSha256" "pageManifestSha256" "rendererImplementationSha256" -}}
+      {{- if not (findRE $shaPattern (index $record.stageProof $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+    {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $valid }}{{ $version := partial "research_historical_source_version.html" $record.source }}{{ $valid = $version.valid }}{{ end -}}
+  {{- if $valid -}}
+    {{- $source := dict -}}
+    {{- $current := index hugo.Data "taxonomy-registry" | default dict -}}
+    {{- if eq $record.registrySha256 $current.registrySha256 }}{{ $source = $current }}{{ end -}}
+    {{- range ((index hugo.Data "taxonomy-catalog").snapshots | default slice) -}}
+      {{- if eq .registrySha256 $record.registrySha256 }}{{ $source = . }}{{ end -}}
+    {{- end -}}
+    {{- $sourceNodes := partialCached "taxonomy_registry_index.html" $source ($source.registrySha256 | default "unavailable") -}}
+    {{- $currentNodes := partialCached "taxonomy_registry_index.html" "global" "global" -}}
+    {{- $valid = and $source.registrySha256 (eq $source.registryVersion $record.registryVersion) (ge (len ($record.concepts | default slice)) 3) (le (len ($record.concepts | default slice)) 5) -}}
+    {{- $seen := slice -}}
+    {{- $taskOk := false -}}
+    {{- $methodOk := false -}}
+    {{- range ($record.concepts | default slice) -}}
+      {{- $node := index $sourceNodes .id | default dict -}}
+      {{- $currentNode := index $currentNodes .id | default dict -}}
+      {{- if not (and $node.id $currentNode.id (eq .facet $node.facet) (eq .label $node.zh) (eq $node.facet $currentNode.facet) (ne ($node.status | default "active") "deprecated") (ne ($currentNode.status | default "active") "deprecated") (not (in $seen .id))) }}{{ $valid = false }}{{ end -}}
+      {{- $seen = $seen | append .id -}}
+      {{- if and (eq .id $record.primaryTaskId) (eq .facet "task") (eq .label $record.primaryTaskLabel) }}{{ $taskOk = true }}{{ end -}}
+      {{- if and (eq .id $record.primaryMethodId) (eq .facet "method") (eq .label $record.primaryMethodLabel) }}{{ $methodOk = true }}{{ end -}}
+    {{- end -}}
+    {{- if and $valid $taskOk $methodOk -}}
+      {{- $proof = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $history.contract) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- .Store.Set $memoKey $proof -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

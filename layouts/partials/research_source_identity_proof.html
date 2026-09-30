@@ -1,0 +1,75 @@
+{{- /* This proof establishes source identity only. It never assigns taxonomy. */ -}}
+{{- $memoKey := "research-page:research_source_identity_proof:v1" -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
+{{- $proof := dict -}}
+{{- $history := index hugo.Data "identity-history" | default dict -}}
+{{- if and (eq $history.contract "historical-source-identity-supplement-v1") (eq .Section "posts") .File -}}
+  {{- $key := printf "content/%s" .File.Path -}}
+  {{- $record := index ($history.records | default dict) $key | default dict -}}
+  {{- $shaPattern := `^[a-f0-9]{64}$` -}}
+  {{- $valid := and (reflect.IsMap $record) (eq $record.contract $history.contract) (eq $record.identityStatus "verified") (eq $record.evidenceType "sealed-source-identity-only") (eq $record.taxonomyStatus "not-classified-by-identity-proof") (findRE `^page:[a-f0-9]{64}$` ($record.pageKey | default "") 1) (findRE `^[a-f0-9-]{36}$` ($record.runId | default "") 1) (reflect.IsMap $record.source) -}}
+  {{- range $field := slice "concepts" "primaryTaskId" "primaryMethodId" "primaryTaskLabel" "primaryMethodLabel" "registrySha256" "canonicalAnalysisSha256" -}}
+    {{- if isset $record $field }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- range $field := slice "pageSha256" "bodySha256" "proofSha256" "sourceProofSha256" "planSha256" "planFileSha256" -}}
+    {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- if $valid -}}
+    {{- $hashInput := newScratch -}}{{- $hashInput.Set "record" dict -}}
+    {{- range $field, $value := $record }}{{ if ne $field "proofSha256" }}{{ $hashInput.SetInMap "record" $field $value }}{{ end }}{{ end -}}
+    {{- $valid = and (eq (crypto.SHA256 (($hashInput.Get "record") | jsonify (dict "noHTMLEscape" true))) $record.proofSha256) (eq (crypto.SHA256 ($record.source | jsonify (dict "noHTMLEscape" true))) $record.sourceProofSha256) (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) (eq $record.source.paperId $record.paperId) -}}
+  {{- end -}}
+  {{- if $valid -}}
+    {{- $source := $record.source -}}
+    {{- if eq $source.kind "arxiv-fresh-fetch" -}}
+      {{- $id := strings.TrimPrefix "arxiv:" $record.paperId -}}
+      {{- $valid = and (findRE `^arxiv:[0-9]{4}\.[0-9]{4,5}$` $record.paperId 1) (findRE `^[0-9]{4}\.[0-9]{4,5}(v[1-9][0-9]*)?$` ($source.sourceId | default "") 1) (eq (replaceRE `v[1-9][0-9]*$` "" $source.sourceId) $id) (eq $source.sourceUrl (printf "https://arxiv.org/abs/%s" $source.sourceId)) (reflect.IsMap $source.sourceBinding) (gt ($source.generation | default 0) 0) -}}
+      {{- if $valid -}}
+        {{- $binding := $source.sourceBinding -}}
+        {{- $valid = and (eq $binding.contract "fresh-arxiv-rewrite-source-v1") (eq $binding.paperId $record.paperId) (eq $binding.arxivId $id) (eq $binding.generation $source.generation) (eq $binding.textSha256 $source.textSha256) (eq $binding.pdfSha256 $source.pdfSha256) (eq $binding.sourceManifestSha256 $source.sourceManifestSha256) -}}
+        {{- range $field := slice "textSha256" "pdfSha256" "sourceManifestSha256" "sourceRunIdentitySha256" "structuredArtifactsSha256" }}{{ if not (findRE $shaPattern (index $source $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+        {{- if $source.pdfUrl -}}
+          {{- $selectedUrl := or (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s" $source.sourceId)) (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s.pdf" $source.sourceId)) -}}
+          {{- $unspecifiedUrl := false -}}
+          {{- with $source.pdfVersionBinding -}}
+            {{- if and (reflect.IsMap .) (findRE `v[1-9][0-9]*$` $source.sourceId 1) -}}
+              {{- $textVersion := int (replaceRE `^.*v` "" $source.sourceId) -}}
+              {{- $unspecifiedUrl = and (eq .contract "sealed-arxiv-pdf-version-binding-v1") (eq .paperId $record.paperId) (eq .sourceId $source.sourceId) (eq .textUrl (printf "https://arxiv.org/html/%s" $source.sourceId)) (eq .pdfRequestedUrl $source.pdfUrl) (eq .pdfSha256 $source.pdfSha256) (eq .sourceManifestSha256 $source.sourceManifestSha256) (eq (printf "%v" .textVersion) (printf "%d" $textVersion)) (eq .pdfVersion "unspecified") (eq .pdfVersionAuthenticated false) (eq .status "versioned-text-unversioned-pdf-url") (or (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s" $id)) (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s.pdf" $id))) (in ($source.sourceVersionWarning | default "") $source.sourceId) (in ($source.sourceVersionWarning | default "") $source.pdfUrl) -}}
+            {{- end -}}
+            {{- if not $unspecifiedUrl }}{{ $valid = false }}{{ end -}}
+          {{- end -}}
+          {{- if not (or $selectedUrl $unspecifiedUrl) }}{{ $valid = false }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- else if eq $source.kind "conference-local-pdf" -}}
+      {{- $url := "" -}}
+      {{- if findRE `^conference:icassp:[0-9]{4}:icassp-arnumber:[1-9][0-9]*$` $record.paperId 1 -}}
+        {{- $url = printf "https://ieeexplore.ieee.org/document/%s" (replaceRE `^.*:` "" $record.paperId) -}}
+      {{- else if findRE `^conference:(icml|iclr):[0-9]{4}:openreview-forum-id:[A-Za-z0-9_-]{6,128}$` $record.paperId 1 -}}
+        {{- $url = printf "https://openreview.net/forum?id=%s" (replaceRE `^.*:` "" $record.paperId) -}}
+      {{- end -}}
+      {{- $valid = and $url (eq $source.sourceUrl $url) (eq $source.sourceId $record.paperId) (not $source.pdfUrl) (findRE $shaPattern ($source.writerInputsSha256 | default "") 1) (reflect.IsSlice $source.sourceBindings) (gt (len ($source.sourceBindings | default slice)) 0) -}}
+      {{- if $valid }}{{ range $source.sourceBindings -}}
+        {{- if not (and (reflect.IsMap .) .sourceSet .provenance (isset . "metadataRecordIndex") (ge .metadataRecordIndex 0) (gt (.pdfBytes | default 0) 0) (reflect.IsMap .acquisition)) }}{{ $valid = false }}{{ end -}}
+        {{- $entry := . -}}{{ range $field := slice "metadataSha256" "metadataIdentityBindingSha256" "pdfSha256" "pdfIdentityBindingSha256" "sourceBindingSha256" }}{{ if not (findRE $shaPattern (index $entry $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+        {{- if and (eq .acquisition.sourceKind "retained-local-no-network-receipt") (not $source.provenanceDisclosure) }}{{ $valid = false }}{{ end -}}
+      {{- end }}{{ end -}}
+      {{- if and $valid $source.versionRelation -}}
+        {{- $acquisition := (index $source.sourceBindings 0).acquisition | default dict -}}
+        {{- $profileOk := false -}}
+        {{- if eq $record.paperId "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6" -}}
+          {{- $profileOk = and (eq $source.versionRelation "author-prior-preprint-with-different-title") (eq $source.sourceTitle "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction") (eq $source.sourceDoi "10.2139/ssrn.6288899") (eq $acquisition.sourceKind "author-prior-preprint-cross-version") -}}
+        {{- else if eq $record.paperId "conference:icml:2026:openreview-forum-id:jfpkqjhex4" -}}
+          {{- $profileOk = and (eq $source.versionRelation "same-paper-versioned-official-preprint") (eq $source.sourceTitle "Position: Towards Responsible Evaluation for Text-to-Speech") (not $source.sourceDoi) (eq $acquisition.sourceKind "official-arxiv-versioned-pdf") (in ($source.sourceVersionWarning | default "") "2510.06927v3") -}}
+        {{- end -}}
+        {{- if not (and $profileOk $source.sourceVersionWarning (eq $acquisition.versionRelation $source.versionRelation) (eq $acquisition.sourceTitle $source.sourceTitle) (eq ($acquisition.sourceDoi | default "") ($source.sourceDoi | default ""))) }}{{ $valid = false }}{{ end -}}
+      {{- end -}}
+    {{- else -}}{{- $valid = false -}}{{- end -}}
+  {{- end -}}
+  {{- if $valid }}{{ $version := partial "research_historical_source_version.html" $record.source }}{{ $valid = $version.valid }}{{ end -}}
+  {{- if $valid }}{{ $proof = $record }}{{ end -}}
+{{- end -}}
+{{- .Store.Set $memoKey $proof -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

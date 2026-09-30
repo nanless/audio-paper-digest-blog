@@ -1,0 +1,7 @@
+{{- /* Compare visible text conservatively: case, whitespace and quote typography only.
+     Callers must pass the text they actually render; punctuation and words stay intact. */ -}}
+{{- $text := printf "%s" . -}}
+{{- $text = replaceRE `[‘’]` "'" $text -}}
+{{- $text = replaceRE `[“”]` `"` $text -}}
+{{- $text = replaceRE `[\s\x{00A0}\x{2000}-\x{200A}\x{202F}\x{205F}\x{3000}]+` " " $text -}}
+{{- return (lower (strings.TrimSpace $text)) -}}

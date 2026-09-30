@@ -25,10 +25,21 @@
       return line(typeof author === 'string' ? author : author && author.name);
     }).filter(Boolean) : [];
     var doi = verified && /^10\.[0-9]{4,9}\/[^\s<>"\\]+$/.test(item.doi || '') ? item.doi : '';
+    var warning = verified ? line(item.sourceVersionWarning).slice(0, 4000) : '';
+    var binding = item.pdfVersionBinding || {}, pdf = verified ? url(item.pdfUrl) : '';
+    var baseId = id.replace(/v[1-9][0-9]*$/, '');
+    var unversionedPdf = id && binding.contract === 'sealed-arxiv-pdf-version-binding-v1'
+      && binding.status === 'versioned-text-unversioned-pdf-url' && binding.paperId === 'arxiv:' + baseId
+      && binding.sourceId === id && binding.pdfRequestedUrl === pdf && binding.pdfVersion === 'unspecified'
+      && binding.pdfVersionAuthenticated === false && warning
+      && (pdf === 'https://arxiv.org/pdf/' + baseId || pdf === 'https://arxiv.org/pdf/' + baseId + '.pdf');
+    if (id && !unversionedPdf && pdf !== 'https://arxiv.org/pdf/' + id && pdf !== 'https://arxiv.org/pdf/' + id + '.pdf') pdf = 'https://arxiv.org/pdf/' + id + '.pdf';
     return { title: line(item.title), paperKey: line(item.paperKey || item.paperId), identityStatus: verified ? 'verified' : 'unknown',
       sourceKind: kind, arxivId: id, authors: authors, date: verified ? validDate(item.date) : '', doi: doi,
       venue: verified ? line(item.venue) : '', url: verified ? (id ? 'https://arxiv.org/abs/' + id : url(item.sourceUrl || item.url)) : '',
-      pdfUrl: verified ? (id ? 'https://arxiv.org/pdf/' + id + '.pdf' : url(item.pdfUrl)) : '', pageUrl: url(item.pageUrl) };
+      pdfUrl: pdf, pageUrl: url(item.pageUrl), sourceVersionWarning: warning,
+      provenanceDisclosure: verified ? line(item.provenanceDisclosure).slice(0, 4000) : '',
+      pdfVersionBinding: unversionedPdf ? binding : null };
   }
   function bibEscape(value) {
     var escapes = { '\\': '\\textbackslash{}', '{': '\\{', '}': '\\}', '%': '\\%', '&': '\\&', '#': '\\#', '_': '\\_', '$': '\\$', '^': '\\textasciicircum{}', '~': '\\textasciitilde{}' };
@@ -47,6 +58,7 @@
       if (record.venue) fields.push('T2  - ' + record.venue);
       fields.push('ID  - ' + (record.arxivId || record.paperKey));
       if (record.url) fields.push('UR  - ' + record.url);
+      [record.sourceVersionWarning, record.provenanceDisclosure].filter(Boolean).forEach(function (note) { fields.push('N1  - ' + note); });
       return fields.concat('ER  - ', '').join('\n');
     }
     if (format !== 'bib') throw new Error('引用格式无效。');
@@ -58,6 +70,8 @@
     if (record.doi) lines.push('  doi = {' + bibEscape(record.doi) + '}');
     if (record.arxivId) lines.push('  eprint = {' + record.arxivId + '}', '  archivePrefix = {arXiv}');
     if (record.url) lines.push('  url = {' + bibEscape(record.url) + '}');
+    var notes = [record.sourceVersionWarning, record.provenanceDisclosure].filter(Boolean);
+    if (notes.length) lines.push('  note = {' + bibEscape(notes.join('；')) + '}');
     return '@' + (record.sourceKind === 'conference' && record.venue ? 'inproceedings' : 'misc') + '{' + key + ',\n' + lines.join(',\n') + '\n}\n';
   }
   function buildPrompt(raw, options) {
@@ -73,6 +87,8 @@
     if (record.pageUrl) lines.push('博客导读：' + record.pageUrl);
     if (record.url) lines.push((record.sourceKind === 'arxiv' ? 'arXiv 原文：' : '官方论文记录：') + record.url);
     lines.push('来源版本：' + (record.arxivId || (record.sourceKind === 'conference' ? '官方会议记录；未提供独立版本号' : '未确认')));
+    if (record.sourceVersionWarning) lines.push('来源版本限制：' + record.sourceVersionWarning);
+    if (record.provenanceDisclosure) lines.push('来源记录说明：' + record.provenanceDisclosure);
     var context = settings.context || {};
     if (context.heading && context.anchor) lines.push('博客章节：' + line(context.heading) + '；定位：' + url(context.anchor));
     var references = Array.from(new Set(selected.match(/(?:Figure|Fig\.?|图|Table|表)\s*[0-9]+[A-Za-z]?/gi) || []));
@@ -86,8 +102,10 @@
     var lines = ['# 研究资料包：' + record.title, '', '身份状态：' + record.identityStatus,
       '本站导读：' + record.pageUrl, '官方记录：' + (record.url || '未确认'), '原文 PDF：' + (record.pdfUrl || '未确认'),
       '版本：' + (record.arxivId || '未提供'), '作者：' + (record.authors.join('；') || '未提供'),
-      '出版日期：' + (record.date || '未提供'), 'DOI：' + (record.doi || '未提供'), '',
-      '## 本站导读内容', '以下内容来自本页可见导读，不代表原论文逐字引用。', '', String(settings.content || '')];
+      '出版日期：' + (record.date || '未提供'), 'DOI：' + (record.doi || '未提供')];
+    if (record.sourceVersionWarning) lines.push('来源版本限制：' + record.sourceVersionWarning);
+    if (record.provenanceDisclosure) lines.push('来源记录说明：' + record.provenanceDisclosure);
+    lines.push('', '## 本站导读内容', '以下内容来自本页可见导读，不代表原论文逐字引用。', '', String(settings.content || ''));
     if (settings.selection) lines.push('', '## 个人选段', '个人选段来源未由本站核验。', '', String(settings.selection));
     if (Array.isArray(settings.links) && settings.links.length) lines.push('', '## 本页已有链接', ...settings.links.map(function (link) {
       return url(link.url) ? line(link.label) + '：' + url(link.url) : '';

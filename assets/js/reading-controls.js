@@ -16,11 +16,16 @@
     var host = button.closest('[data-paper-url]') || button;
     return { title: button.dataset.paperTitle || host.dataset.paperTitle || '', permalink: button.dataset.paperUrl || host.dataset.paperUrl,
       arxivId: button.dataset.paperArxivId || host.dataset.paperArxivId || '', paperId: button.dataset.paperKey || host.dataset.paperKey || '',
+      pageType: button.dataset.paperType || host.dataset.paperType || (button.closest('.research-workbench--paper') ? 'paper' : ''),
       identityStatus: button.dataset.paperIdentityStatus || host.dataset.paperIdentityStatus || (String(button.dataset.paperKey || '').startsWith('page:') ? 'unknown' : '') };
   }
   function mount(container) {
-    Array.from(container.querySelectorAll('[data-reading-bookmark]')).forEach(function (button) {
-      if (button.dataset.readingBound) return;
+    var buttons = Array.from(container.querySelectorAll('[data-reading-bookmark]')).filter(function (button) { return !button.dataset.readingBound; });
+    var migrationError = null;
+    if (buttons.length) {
+      try { store.reconcileVerifiedArticles(buttons.map(paperOf)); } catch (error) { migrationError = error; }
+    }
+    buttons.forEach(function (button) {
       button.dataset.readingBound = 'true';
       var paper = paperOf(button), key;
       try { key = store.key(paper); } catch (_error) { button.disabled = true; button.textContent = '收藏信息待核'; return; }
@@ -35,6 +40,9 @@
       var noteLabel = document.createElement('label'); noteLabel.textContent = '只保存在此浏览器，最多2000字符';
       var note = document.createElement('textarea'); note.rows = 3; note.maxLength = 2000; note.setAttribute('aria-label', '个人备注：' + paper.title); noteLabel.appendChild(note); details.appendChild(noteLabel);
       var save = document.createElement('button'); save.type = 'button'; save.className = 'rw-action'; save.textContent = '保存备注'; details.appendChild(save); controls.appendChild(details);
+      var history = document.createElement('details'), historySummary = document.createElement('summary');
+      history.className = 'reading-note-history'; history.appendChild(historySummary);
+      var historyList = document.createElement('div'); history.appendChild(historyList); details.appendChild(history);
       var status = document.createElement('span'); status.className = 'reading-controls__status'; status.setAttribute('role', 'status'); controls.appendChild(status);
       var dirty = false;
       note.addEventListener('input', function () { dirty = true; });
@@ -44,12 +52,24 @@
         button.setAttribute('aria-pressed', String(!!(record && record.bookmarked)));
         select.value = record ? record.status : 'unread';
         if (!dirty) note.value = record ? record.note : '';
+        historyList.replaceChildren();
+        var conflicts = record && record.noteHistory || [];
+        history.hidden = !conflicts.length;
+        historySummary.textContent = '已保留 ' + conflicts.length + ' 条其他备注';
+        conflicts.forEach(function (entry) {
+          var item = document.createElement('div');
+          var source = document.createElement('a'); source.href = entry.sourceURL; source.textContent = '原备注页面 · ' + entry.updatedAt.slice(0, 10);
+          var content = document.createElement('p'); content.textContent = entry.note;
+          content.style.whiteSpace = 'pre-wrap'; content.style.overflowWrap = 'anywhere';
+          item.appendChild(source); item.appendChild(content); historyList.appendChild(item);
+        });
       }
       function update(patch, message) { try { store.update(paper, patch); status.textContent = message; refresh(); } catch (error) { status.textContent = error.message; } }
       button.addEventListener('click', function () { var old = store.get(key); update({ bookmarked: !(old && old.bookmarked) }, old && old.bookmarked ? '已取消收藏，阅读状态与备注保留' : '已收藏到此浏览器'); });
       select.addEventListener('change', function () { update({ status: select.value }, '已保存阅读状态'); });
       save.addEventListener('click', function () { try { store.update(paper, { note: note.value }); dirty = false; status.textContent = '备注已保存在此浏览器'; refresh(); } catch (error) { status.textContent = error.message; } });
-      refresh(); if (store.error) status.textContent = store.error.message + '；原资料未覆盖，请导出备份后恢复。';
+      refresh(); if (migrationError) status.textContent = '旧记录暂未迁移：' + migrationError.message;
+      if (store.error) status.textContent = store.error.message + '；原资料未覆盖，请导出原始备份后恢复。';
       views.add({ node: controls, refresh: refresh });
     });
   }
@@ -58,7 +78,7 @@
     views.forEach(function (view) { if (!view.node.isConnected) views.delete(view); else view.refresh(); });
   });
   window.addEventListener('storage', function (event) {
-    if (event.key === 'research-reading-store-v1:' + settings.basePath) {
+    if (event.key === null || [store.storageKey, store.legacyStorageKey, store.positionStorageKey].includes(event.key)) {
       store.refresh();
       window.dispatchEvent(new CustomEvent('research-reading-change'));
     }

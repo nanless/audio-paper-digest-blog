@@ -54,3 +54,13 @@ test('batch reading exports deduplicate identities, preserve notes and missing p
   assert.throws(()=>exporter.build([unknown],'ris'),/均缺少可验证/);
   const incomplete=exporter.build([{...entry,citation:{...citation,authors:[],date:''}}],'ris');assert.equal(incomplete.incomplete,1);assert.doesNotMatch(incomplete.text,/PY  -/);
 });
+
+test('reading list exports retain migrated note conflicts and their original guide links', () => {
+  const entry = {...first, citation:{title:'Paper', identityStatus:'verified', sourceKind:'arxiv', arxivId:'2609.12345'},
+    readingState:{status:'reading', note:'当前备注', noteHistory:[{note:'另一导读的备注', sourceURL:'/blog/posts/b/', sourceKey:'page:/blog/posts/b/', updatedAt:'2026-09-30T08:00:00.000Z'}]}};
+  for (const format of ['md', 'csv']) {
+    const result = exporter.build([entry], format, {origin:'https://example.test'});
+    assert.match(result.text, /当前备注/); assert.match(result.text, /另一导读的备注/);
+    assert.match(result.text, /\/blog\/posts\/b\//);
+  }
+});

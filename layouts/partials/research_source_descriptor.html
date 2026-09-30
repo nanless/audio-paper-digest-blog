@@ -1,0 +1,9 @@
+{{- /* Source descriptors are checked independently from model decisions/reviews. */ -}}
+{{- $source := . | default dict -}}
+{{- $pdfVersion := partial "research_arxiv_pdf_version_binding.html" $source -}}
+{{- $historical := partial "research_historical_source_version.html" $source -}}
+{{- $conference := partial "research_conference_source_descriptor.html" $source -}}
+{{- $valid := and $pdfVersion.valid $historical.valid $conference -}}
+{{- if and (eq $source.kind "arxiv-fresh-fetch") $source.sourceVersionWarning (not $pdfVersion.warning) (not $historical.warning) }}{{ $valid = false }}{{ end -}}
+{{- $warning := "" }}{{ if $valid }}{{ $warning = $pdfVersion.warning | default $historical.warning | default $source.sourceVersionWarning | default "" }}{{ end -}}
+{{- return (dict "valid" $valid "warning" $warning) -}}

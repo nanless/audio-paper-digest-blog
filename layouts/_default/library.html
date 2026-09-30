@@ -3,7 +3,7 @@
   <header class="research-library__header">
     <div class="rw-eyebrow">Research Library</div>
     <h1>论文库</h1>
-    <p>检索中英文题目、arXiv ID 与摘要，再按任务、方法和研究条件组合筛选。已核实为同一论文的多篇解读合并展示，评分用于安排本站阅读顺序。</p>
+    <p>检索中英文题目、arXiv ID 与摘要，按多级研究方向筛选。同一论文的已核实解读合并展示。</p>
   </header>
 
   <form class="research-library__toolbar" id="paper-library-filters" role="search">
@@ -11,6 +11,9 @@
       关键词或 arXiv ID
       <input id="library-query" name="q" type="search" placeholder="例如：streaming ASR、语音增强、2609.03620" autocomplete="off" maxlength="200">
     </label>
+    <details class="library-filter-panel" id="library-filter-panel" open>
+      <summary id="library-filter-summary">筛选与排序</summary>
+      <div class="library-filter-panel__fields">
     <label>
       页面类型
       <select id="library-type" name="type">
@@ -35,14 +38,16 @@
     </label>
     <label>收藏范围<select id="library-saved"><option value="all">全部论文</option><option value="saved">我的收藏</option></select></label>
     <label>阅读状态<select id="library-reading-status"><option value="all">全部状态</option><option value="unread">待读</option><option value="reading">阅读中</option><option value="read">已读</option></select></label>
+      </div>
+    </details>
   </form>
 
   <details class="reading-backup">
     <summary>我的阅读资料与备份</summary>
-    <p>收藏、阅读状态与个人备注仅保存在当前浏览器。导出备份可迁移到另一台设备；导入默认合并并保留较新的记录。本站不自动同步个人资料。</p>
-    <div class="reading-backup__actions"><button id="reading-backup-download" class="rw-action" type="button">导出本机备份</button><a class="rw-action" href="?saved=saved">查看我的收藏</a></div>
+    <p>收藏、阅读状态、个人备注和最多200页的章节进度仅保存在当前浏览器。完整备份可迁移到同一站点的另一台设备，并兼容旧版备份；导入默认合并较新记录，不同备注保留为历史。身份补全后只按已核实的文章链接迁移。本站不自动同步个人资料。</p>
+    <div class="reading-backup__actions"><button id="reading-backup-download" class="rw-action" type="button">导出本机备份</button><button id="reading-backup-raw" class="rw-action" type="button">导出原始恢复档案</button><a class="rw-action" href="?saved=saved">查看我的收藏</a></div>
     <label>导入阅读备份（JSON，最多5 MiB）<input id="reading-backup-file" type="file" accept="application/json,.json"></label>
-    <label><input id="reading-backup-recover" type="checkbox"> 用有效备份恢复损坏的本机资料（请先导出原始备份）</label>
+    <label><input id="reading-backup-recover" type="checkbox"> 用有效备份替换本机记录并恢复损坏资料（请先导出原始恢复档案；旧版备份不清除现有进度）</label>
     <button id="reading-backup-import" class="rw-action" type="button">导入备份</button>
     <p id="reading-backup-status" role="status"></p>
   </details>
@@ -78,11 +83,14 @@
     <span id="library-count">正在读取静态论文索引…</span>
     <a href="{{ "search/" | absURL }}">模糊搜索</a>
   </div>
+  <details class="library-export-panel" id="library-export-panel" open>
+    <summary>选择与导出阅读清单</summary>
   <div class="library-export-actions" aria-label="导出阅读清单">
     <button id="library-select-visible" class="rw-filter-chip" type="button">选择当前显示论文</button><button id="library-selection-clear" class="rw-filter-chip" type="button">清空选择</button>
     <label>导出格式<select id="library-export-format"><option value="md">Markdown 阅读清单</option><option value="csv">CSV 表格</option><option value="bib">BibTeX 引用</option><option value="ris">RIS 引用</option></select></label>
     <button id="library-export" class="rw-action" type="button">导出所选论文</button><span id="library-export-status" role="status">尚未选择论文</span>
   </div>
+  </details>
   <div id="library-results" class="research-library__results" role="list">
     <div class="research-library__loading">正在载入论文索引…</div>
   </div>
