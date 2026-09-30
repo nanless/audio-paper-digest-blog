@@ -9,6 +9,9 @@
 
 {{- if $isResearchPage }}
 {{- $headline := $metadata.headline }}
+{{- $headlineComparison := partial "research_normalized_title.html" ($headline | markdownify | plainify | htmlUnescape) }}
+{{- $originalComparison := partial "research_normalized_title.html" $metadata.originalTitle }}
+{{- $showOriginal := and $isPaper (ne $originalComparison "") (ne $headlineComparison $originalComparison) }}
 {{- $score := "" }}
 {{- with $metadata.score }}{{ $score = printf "%s/10" . }}{{ end }}
 {{- $arxivId := $metadata.arxivId }}
@@ -26,7 +29,7 @@
       {{- end }}
     </div>
     <h1>{{ $headline | markdownify }}</h1>
-    {{- if and $isPaper (ne (plainify $headline) (plainify $metadata.originalTitle)) }}
+    {{- if $showOriginal }}
     <p class="research-paper-header__original" lang="en">{{ $metadata.originalTitle }}</p>
     {{- end }}
     <div class="research-paper-header__meta">
@@ -39,7 +42,8 @@
     </div>
     {{- $intro := $metadata.oneSentence }}
     {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
-    {{- if $intro }}
+    {{- $introComparison := partial "research_normalized_title.html" ($intro | markdownify | plainify | htmlUnescape) }}
+    {{- if and $intro (ne $introComparison $headlineComparison) (not (and $showOriginal (eq $introComparison $originalComparison))) }}
     <section class="research-tldr research-tldr--header" aria-labelledby="research-tldr-title">
       <strong id="research-tldr-title">研究速览</strong>
       <p>{{ $intro | markdownify }}</p>
