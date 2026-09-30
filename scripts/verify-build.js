@@ -205,8 +205,19 @@ function verifyPaperToolCoverage(files) {
         && tools.includes('zotero.org/download/connectors') && tools.includes('网页不能代你点击浏览器扩展'),
       `已核论文页缺少对应官方来源/PDF/Zotero 工具：${file}`);
       if (source.sourceKind === 'arxiv') {
+        const binding = source.pdfVersionBinding || {};
+        const baseId = String(source.arxivId || '').replace(/v[1-9][0-9]*$/, '');
+        const exactPdf = source.pdfUrl === 'https://arxiv.org/pdf/' + source.arxivId
+          || source.pdfUrl === 'https://arxiv.org/pdf/' + source.arxivId + '.pdf';
+        const unspecifiedPdf = binding.contract === 'sealed-arxiv-pdf-version-binding-v1'
+          && binding.status === 'versioned-text-unversioned-pdf-url' && binding.paperId === 'arxiv:' + baseId
+          && binding.sourceId === source.arxivId && binding.pdfRequestedUrl === source.pdfUrl
+          && binding.pdfVersion === 'unspecified' && binding.pdfVersionAuthenticated === false
+          && /^[a-f0-9]{64}$/.test(binding.pdfSha256 || '') && /^[a-f0-9]{64}$/.test(binding.sourceManifestSha256 || '')
+          && source.sourceVersionWarning && (source.pdfUrl === 'https://arxiv.org/pdf/' + baseId
+            || source.pdfUrl === 'https://arxiv.org/pdf/' + baseId + '.pdf');
         invariant(/^https:\/\/arxiv\.org\/abs\/[a-z0-9./-]+$/.test(source.url)
-          && source.pdfUrl === 'https://arxiv.org/pdf/' + source.arxivId + '.pdf', `arXiv 工具身份不一致：${file}`);
+          && source.url === 'https://arxiv.org/abs/' + source.arxivId && (exactPdf || unspecifiedPdf), `arXiv 工具身份不一致：${file}`);
         richArxivTools += 1;
       } else {
         invariant(source.sourceKind === 'conference' && /^conference:/.test(source.paperId), `会议工具身份不一致：${file}`);

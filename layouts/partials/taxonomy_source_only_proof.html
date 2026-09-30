@@ -1,0 +1,58 @@
+{{- /* Source-only classification has its own proof; never pretend it is canonical analysis. */ -}}
+{{- $record := . -}}
+{{- $shaPattern := `^[a-f0-9]{64}$` -}}
+{{- $contract := "historical-source-taxonomy-classification-v1" -}}
+{{- $valid := and (eq $record.evidenceType "source-only-taxonomy") (eq $record.classificationContract $contract) (reflect.IsMap $record.source) (reflect.IsMap $record.reviewProof) (reflect.IsSlice $record.evidence) -}}
+{{- if $valid -}}
+  {{- range $field := slice "classificationRecordSha256" "classificationProofSha256" "requestStageFingerprint" "reviewProofSha256" -}}
+    {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- range $field := slice "pdfSha256" "structuredArtifactsSha256" "textSha256" -}}
+    {{- if not (findRE $shaPattern (index $record.source $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- $valid = and $valid (eq $record.source.paperId $record.paperId) $record.source.sourceId -}}
+  {{- if eq $record.source.kind "arxiv-fresh-fetch" -}}
+    {{- $valid = and $valid (findRE `^arxiv:[0-9]{4}\.[0-9]{4,5}$` $record.paperId 1) (findRE $shaPattern ($record.source.sourceManifestSha256 | default "") 1) (findRE $shaPattern ($record.source.sourceRunIdentitySha256 | default "") 1) (gt ($record.source.generation | default 0) 0) (reflect.IsMap $record.source.sourceBinding) -}}
+    {{- if $valid -}}
+      {{- $source := $record.source -}}{{- $binding := $source.sourceBinding -}}
+      {{- $valid = and (eq $binding.contract "fresh-arxiv-rewrite-source-v1") (eq $binding.paperId $record.paperId) (eq $binding.arxivId (strings.TrimPrefix "arxiv:" $record.paperId)) (eq $binding.generation $source.generation) (eq $binding.textSha256 $source.textSha256) (eq $binding.pdfSha256 $source.pdfSha256) (eq $binding.sourceManifestSha256 $source.sourceManifestSha256) (eq (replaceRE `v[1-9][0-9]*$` "" $source.sourceId) $binding.arxivId) -}}
+    {{- end -}}
+  {{- else if eq $record.source.kind "conference-local-pdf" -}}
+    {{- $valid = and $valid (findRE `^conference:[^\s\x00-\x1f\x7f]+$` $record.paperId 1) (findRE $shaPattern ($record.source.writerInputsSha256 | default "") 1) -}}
+    {{- if $record.source.versionRelation -}}
+      {{- $profileOk := or (and (eq $record.paperId "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6") (eq $record.source.versionRelation "author-prior-preprint-with-different-title")) (and (eq $record.paperId "conference:icml:2026:openreview-forum-id:jfpkqjhex4") (eq $record.source.versionRelation "same-paper-versioned-official-preprint") (in ($record.source.sourceVersionWarning | default "") "2510.06927v3")) -}}
+      {{- $valid = and $valid $profileOk $record.source.sourceVersionWarning -}}
+    {{- end -}}
+  {{- else }}{{ $valid = false }}{{ end -}}
+{{- end -}}
+{{- if $valid -}}
+  {{- $review := $record.reviewProof -}}
+  {{- $valid = and (eq $review.contract (printf "%s-review" $contract)) (eq $review.registrySha256 $record.registrySha256) (eq $review.sourceTextSha256 $record.source.textSha256) (reflect.IsMap $review.response) $review.model (eq (crypto.SHA256 ($review | jsonify (dict "noHTMLEscape" true))) $record.reviewProofSha256) -}}
+  {{- range $field := slice "decisionSha256" "evidenceSha256" "promptSha256" "responseSha256" -}}
+    {{- if not (findRE $shaPattern (index $review $field | default "") 1) }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- if $valid }}{{ $valid = and (eq $review.response.accepted true) (reflect.IsSlice $review.response.issues) (eq (len $review.response.issues) 0) }}{{ end -}}
+  {{- $decision := dict "concepts" $record.evidence "primaryTaskId" $record.primaryTaskId "primaryTaskLabel" $record.primaryTaskLabel "primaryMethodId" $record.primaryMethodId "primaryMethodLabel" $record.primaryMethodLabel -}}
+  {{- $valid = and $valid (eq (crypto.SHA256 ($decision | jsonify (dict "noHTMLEscape" true))) $review.decisionSha256) (eq (len $record.evidence) (len ($record.concepts | default slice))) -}}
+  {{- $seen := slice -}}
+  {{- range $evidence := $record.evidence -}}
+    {{- $quoteStart := -1 -}}{{ if isset . "quoteStart" }}{{ $quoteStart = .quoteStart }}{{ end -}}
+    {{- if not (and (reflect.IsMap .) .id (not (in $seen .id)) (ge (len (.quote | default "")) 20) (le (len (.quote | default "")) 1000) (ge (len (.rationale | default "")) 5) (le (len (.rationale | default "")) 1000) (ge $quoteStart 0) (eq (crypto.SHA256 (.quote | default "")) .quoteSha256)) }}{{ $valid = false }}{{ end -}}
+    {{- $seen = $seen | append .id -}}
+    {{- $matching := false -}}
+    {{- range ($record.concepts | default slice) }}{{ if and (eq .id $evidence.id) (eq .facet $evidence.facet) (eq .label $evidence.label) }}{{ $matching = true }}{{ end }}{{ end -}}
+    {{- if not $matching }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- $valid = and $valid (eq $record.evidenceSelectionContract "sealed-source-evidence-snippets-v1") (reflect.IsSlice $record.quoteSelections) (eq (len ($record.quoteSelections | default slice)) (len $record.evidence)) -}}
+  {{- range $evidence := $record.evidence -}}
+    {{- $matches := 0 -}}
+    {{- range ($record.quoteSelections | default slice) -}}
+      {{- if eq .conceptId $evidence.id -}}
+        {{- $matches = add $matches 1 -}}
+        {{- if not (and (eq .id .evidenceId) (findRE `^s[0-9]{5}$` (.evidenceId | default "") 1) (eq .quote $evidence.quote) (eq .quoteSha256 $evidence.quoteSha256) (eq .quoteStart $evidence.quoteStart) (gt .quoteEnd .quoteStart) (eq .offsetUnit "utf16-code-unit")) }}{{ $valid = false }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if ne $matches 1 }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}

@@ -4,6 +4,7 @@
 {{- range site.RegularPages -}}
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
     {{- $metadata := partial "research_metadata.html" . }}
+    {{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
 
     {{- $description := .Description | default "" | plainify | htmlUnescape | strings.TrimSpace }}
     {{- $score := $metadata.score }}
@@ -31,13 +32,14 @@
       "arxivId" $metadata.arxivId
       "tags" $tags
       "categories" $categories
-      "taxonomyContract" (.Params.paper_digest_taxonomy_contract | default "")
-      "taxonomyConcepts" (.Params.paper_digest_taxonomy_concepts | default slice)
+      "taxonomyContract" ($taxonomyProof.contract | default "")
+      "taxonomyConcepts" ($taxonomyProof.concepts | default slice)
       "citation" (partial "citation_source.html" .)
     }}
-    {{- with .Params.paper_digest_taxonomy_registry_sha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
+    {{- with $taxonomyProof.registrySha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
+    {{- with $taxonomyProof.evidenceContract }}{{ $entry = merge $entry (dict "taxonomyEvidenceContract" . "taxonomyEvidenceType" ($taxonomyProof.evidenceType | default "canonical-analysis") "taxonomyProofSha256" $taxonomyProof.proofSha256 "taxonomyPageSha256" $taxonomyProof.pageSha256) }}{{ end }}
     {{- if ne $metadata.originalTitle .Title }}{{ $entry = merge $entry (dict "originalTitle" $metadata.originalTitle) }}{{ end }}
-    {{- range $key := slice "paperId" "sourceKind" "primaryTaskId" "primaryMethodId" }}
+    {{- range $key := slice "paperId" "sourceKind" "primaryTaskId" "primaryMethodId" "identityEvidenceContract" "identityEvidenceType" "identityProofSha256" "identityPageSha256" }}
       {{- with index $metadata $key }}{{ $entry = merge $entry (dict $key .) }}{{ end }}
     {{- end }}
     {{- if eq $metadata.pageType "paper" }}{{ $entry = merge $entry (dict "identityStatus" $metadata.identityStatus) }}{{ end }}

@@ -3,11 +3,12 @@
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $valid := slice -}}
 {{- $seen := slice -}}
-{{- if eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1" -}}
+{{- $proof := partial "taxonomy_page_proof.html" . -}}
+{{- if eq $proof.contract "paper-taxonomy-flat-tags-compat-v1" -}}
   {{- $snapshot := partial "taxonomy_snapshot.html" . -}}
   {{- $byId := partialCached "taxonomy_registry_index.html" $snapshot ($snapshot.registrySha256 | default "fixture") -}}
   {{- $currentById := partialCached "taxonomy_registry_index.html" "global" "global" -}}
-  {{- range $record := (.Params.paper_digest_taxonomy_concepts | default slice) -}}
+  {{- range $record := ($proof.concepts | default slice) -}}
     {{- with index $byId $record.id -}}
       {{- $current := index $currentById .id | default dict -}}
       {{- if and $current.id (eq $current.facet .facet) (ne ($current.status | default "active") "deprecated") (eq .id $record.id) (eq .facet $record.facet) (eq .zh $record.label) (ne (.status | default "active") "deprecated") (not (in $seen .id)) -}}

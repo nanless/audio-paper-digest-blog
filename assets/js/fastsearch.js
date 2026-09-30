@@ -207,11 +207,13 @@ return loadIndex()
       keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'method', 'categories', 'arxivId', 'taxonomyAliases']
     };
     const byId = registryIndex(registry);
+    const signedIndexes = new Map();
     const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {
       const signedRegistry = graph && (graph.versions[item.taxonomyRegistrySha256]
         || (!graph.hasVersionCatalog && !item.taxonomyRegistrySha256 ? graph : null));
+      if (signedRegistry && !signedIndexes.has(signedRegistry)) signedIndexes.set(signedRegistry, new Map(Object.entries(signedRegistry.byId)));
       const aliases = graph ? signedRegistry ? taxonomyAliases(graph.resolveRecord(item).concepts,
-        new Map(Object.entries(signedRegistry.byId))) : [] : taxonomyAliases(item.taxonomyConcepts, byId);
+        signedIndexes.get(signedRegistry)) : [] : taxonomyAliases(item.taxonomyConcepts, byId);
       return aliases.length ? { ...item, taxonomyAliases: aliases } : item;
     });
     fuse = new Fuse(entries, options);

@@ -4,7 +4,8 @@
 {{- /* Exact signed SHA selects historical semantics; never guess from labels. */ -}}
 {{- $current := index hugo.Data "taxonomy-registry" | default dict -}}
 {{- $catalog := index hugo.Data "taxonomy-catalog" | default dict -}}
-{{- $sha := .Params.paper_digest_taxonomy_registry_sha256 | default "" -}}
+{{- $proof := partial "taxonomy_page_proof.html" . -}}
+{{- $sha := $proof.registrySha256 | default "" -}}
 {{- $selected := dict -}}
 {{- if $sha -}}
   {{- if eq $sha $current.registrySha256 }}{{ $selected = $current }}{{ end -}}

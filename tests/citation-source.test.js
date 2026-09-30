@@ -6,6 +6,39 @@ const verified = { verified: true, identityStatus: 'verified', paperKey: 'arxiv:
   sourceKind: 'arxiv', arxivId: '2609.01234v2', authors: ['Researcher A', 'Researcher B'], date: '2026-09-05',
   doi: '10.1234/example', pageUrl: 'https://example.test/posts/a/' };
 
+test('version and acquisition disclosures survive citations, research packs, AI prompts and batch exports', () => {
+  const disclosed = { ...verified, sourceVersionWarning: '未认证 camera-ready；来源为作者早期 {版本}',
+    provenanceDisclosure: '历史本地封存；未记录下载时网络响应' };
+  assert.match(api.formatCitation(disclosed, 'bib'), /note = \{.*未认证 camera-ready/);
+  assert.match(api.formatCitation(disclosed, 'ris'), /N1  - 未认证 camera-ready/);
+  assert.match(api.buildResearchPack(disclosed, {content:'Visible guide'}), /来源版本限制：未认证 camera-ready/);
+  assert.match(api.buildPrompt(disclosed, {selection:'有待核对的结论'}), /来源记录说明：历史本地封存/);
+  const exporter = require('../assets/js/reading-export');
+  const entry = {title:'Paper', permalink:verified.pageUrl, citation:disclosed};
+  for (const format of ['md','csv','bib','ris']) {
+    const output = exporter.build([entry], format).text;
+    assert.match(output, /未认证 camera-ready/); assert.match(output, /未记录下载时网络响应/);
+  }
+  const unknown = api.normalize({...disclosed, identityStatus:'unknown'});
+  assert.equal(unknown.sourceVersionWarning, ''); assert.equal(unknown.provenanceDisclosure, '');
+});
+
+test('unversioned PDF URLs remain exact only under an explicit same-paper version disclosure binding', () => {
+  const pdfUrl = 'https://arxiv.org/pdf/2609.01234.pdf';
+  const binding = {contract:'sealed-arxiv-pdf-version-binding-v1', status:'versioned-text-unversioned-pdf-url',
+    paperId:'arxiv:2609.01234', sourceId:'2609.01234v2', pdfRequestedUrl:pdfUrl,
+    pdfVersion:'unspecified', pdfVersionAuthenticated:false};
+  const raw = {...verified, pdfUrl, pdfVersionBinding:binding, sourceVersionWarning:'未确认 PDF 对应 v2'};
+  const record = api.normalize(raw);
+  assert.equal(record.pdfUrl, pdfUrl);
+  assert.equal(api.normalize(record).pdfUrl, pdfUrl, 'double normalization preserves the source binding');
+  assert.match(api.buildResearchPack(raw), /原文 PDF：https:\/\/arxiv.org\/pdf\/2609\.01234\.pdf/);
+  assert.equal(api.normalize({...raw, pdfVersionBinding:{...binding, paperId:'arxiv:9999.12345'}}).pdfUrl, 'https://arxiv.org/pdf/2609.01234v2.pdf');
+  assert.equal(api.normalize({...raw, pdfUrl:'https://evil.test/fake.pdf'}).pdfUrl, 'https://arxiv.org/pdf/2609.01234v2.pdf');
+  assert.equal(api.normalize({...raw, sourceVersionWarning:''}).pdfVersionBinding, null);
+  assert.equal(api.normalize({...verified, pdfUrl:'https://arxiv.org/pdf/2609.01234v2'}).pdfUrl, 'https://arxiv.org/pdf/2609.01234v2');
+});
+
 test('verified citation includes only available fields, safely escapes syntax and retains exact source version', () => {
   const bib = api.formatCitation(verified, 'bib');
   const ris = api.formatCitation(verified, 'ris');

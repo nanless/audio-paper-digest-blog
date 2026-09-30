@@ -25,7 +25,7 @@
     });
     var created = new Date().toISOString(), lines = [];
     if (format === 'md') lines.push('# 论文阅读清单', '', '导出时间：' + created, '筛选条件：' + markdown(settings.filter || '个人选择'), '导出内容为本站资料与个人记录，未替代原论文。', '');
-    if (format === 'csv') lines.push(['论文标题', '论文标识', '身份状态', '导读链接', '官方来源', '作者', '出版日期', 'DOI', '阅读状态', '个人备注'].map(csv).join(','));
+    if (format === 'csv') lines.push(['论文标题', '论文标识', '身份状态', '导读链接', '官方来源', '作者', '出版日期', 'DOI', '阅读状态', '个人备注', '其他个人备注', '来源版本限制', '来源记录说明'].map(csv).join(','));
     if (format === 'bib') lines.push('% 仅导出可核实身份与已有来源字段，缺失作者和日期未补造。\n');
     rows.forEach(function (entry, position) {
       var record = citation ? citation.normalize(entry.citation || {}) : {};
@@ -42,14 +42,24 @@
         return;
       }
       if (format === 'csv') { lines.push([title, identifier, record.identityStatus || entry.identityStatus || 'unknown', link,
-        record.url || record.sourceUrl || '', (record.authors || []).join('; '), record.date || '', record.doi || '', state.status || 'unread', state.note || ''].map(csv).join(',')); return; }
+        record.url || record.sourceUrl || '', (record.authors || []).join('; '), record.date || '', record.doi || '', state.status || 'unread', state.note || '',
+        Array.isArray(state.noteHistory) ? JSON.stringify(state.noteHistory) : '', record.sourceVersionWarning || '', record.provenanceDisclosure || ''].map(csv).join(',')); return; }
       lines.push('## ' + (position + 1) + '. ' + markdown(title), '');
       if (link) lines.push('导读：<' + link + '>');
       lines.push('论文身份：' + markdown(identifier || '待核'), '身份状态：' + markdown(record.identityStatus || entry.identityStatus || 'unknown'));
       if (record.url || record.sourceUrl) lines.push('官方记录：<' + (record.url || record.sourceUrl) + '>');
+      if (record.sourceVersionWarning) lines.push('来源版本限制：' + markdown(record.sourceVersionWarning));
+      if (record.provenanceDisclosure) lines.push('来源记录说明：' + markdown(record.provenanceDisclosure));
       lines.push('作者：' + markdown((record.authors || []).join('；') || '未提供'), '出版日期：' + markdown(record.date || '未提供'), 'DOI：' + markdown(record.doi || '未提供'));
       lines.push('阅读状态：' + ({ unread: '待读', reading: '阅读中', read: '已读' }[state.status] || '待读'));
       if (state.note) lines.push('', '个人备注：', markdown(state.note));
+      if (Array.isArray(state.noteHistory) && state.noteHistory.length) {
+        lines.push('', '其他已保留的个人备注：');
+        state.noteHistory.forEach(function (note) {
+          var sourceURL = url(note.sourceURL, settings.origin);
+          lines.push('- ' + markdown(note.updatedAt || '') + (sourceURL ? ' · <' + sourceURL + '>' : '') + '：' + markdown(note.note));
+        });
+      }
       if (Array.isArray(entry.guides) && entry.guides.length > 1) {
         lines.push('', '同一已核论文的其他导读：');
         entry.guides.forEach(function (guide) { var guideUrl = url(guide.permalink, settings.origin); if (guideUrl) lines.push('- ' + markdown(guide.title) + '：<' + guideUrl + '>'); });

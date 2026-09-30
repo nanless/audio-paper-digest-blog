@@ -1,0 +1,36 @@
+{{- /* Replay the producer's signed historical fallback, never trust warning text alone.
+     Canonical taxonomy records retain source ID/hashes, identity records also retain URLs. */ -}}
+{{- $source := . | default dict -}}
+{{- $result := dict "valid" true "warning" "" -}}
+{{- if isset $source "sourceVersion" -}}
+  {{- $result = dict "valid" false "warning" "" -}}
+  {{- $version := $source.sourceVersion -}}
+  {{- if reflect.IsMap $version -}}
+    {{- $fields := slice "contract" "version" "canonicalArxivId" "selectedSourceId" "textSourceId" "selectedPdfUrl" "currentPdfAvailable" "attemptedCurrentPdfStatus" "attemptedCurrentPdfUrl" "warning" "identitySha256" -}}
+    {{- $keys := slice -}}{{- range $key, $_ := $version }}{{ $keys = $keys | append $key }}{{ end -}}
+    {{- $schemaValid := eq (delimit (sort $keys) "|") (delimit (sort $fields) "|") -}}
+    {{- range $field := slice "contract" "canonicalArxivId" "selectedSourceId" "textSourceId" "selectedPdfUrl" "attemptedCurrentPdfUrl" "warning" "identitySha256" }}{{ if ne (printf "%T" (index $version $field)) "string" }}{{ $schemaValid = false }}{{ end }}{{ end -}}
+    {{- if $schemaValid -}}
+    {{- $id := $version.canonicalArxivId | default "" -}}
+    {{- $selected := $version.selectedSourceId | default "" -}}
+    {{- $valid := and (eq (delimit (sort $keys) "|") (delimit (sort $fields) "|")) (eq $source.kind "arxiv-fresh-fetch") (findRE `^[0-9]{4}\.[0-9]{4,5}$` $id 1) (findRE `^[0-9]{4}\.[0-9]{4,5}v[1-9][0-9]*$` $selected 1) (eq (replaceRE `v[1-9][0-9]*$` "" $selected) $id) (eq $source.paperId (printf "arxiv:%s" $id)) (eq $source.sourceId $selected) (eq $version.textSourceId $selected) (eq $version.contract "arxiv-historical-version-source-v1") (and (in (slice "json.Number" "float64" "int" "int64") (printf "%T" $version.version)) (eq (printf "%v" $version.version) "1")) (eq $version.currentPdfAvailable false) (and (in (slice "json.Number" "float64" "int" "int64") (printf "%T" $version.attemptedCurrentPdfStatus)) (eq (printf "%v" $version.attemptedCurrentPdfStatus) "404")) (reflect.IsMap $source.sourceBinding) (gt ($source.generation | default 0) 0) -}}
+    {{- $selectedUrl := $version.selectedPdfUrl | default "" -}}
+    {{- $currentUrl := $version.attemptedCurrentPdfUrl | default "" -}}
+    {{- $valid = and $valid (or (eq $selectedUrl (printf "https://arxiv.org/pdf/%s" $selected)) (eq $selectedUrl (printf "https://arxiv.org/pdf/%s.pdf" $selected))) (or (eq $currentUrl (printf "https://arxiv.org/pdf/%s" $id)) (eq $currentUrl (printf "https://arxiv.org/pdf/%s.pdf" $id))) -}}
+    {{- if isset $source "sourceUrl" }}{{ $valid = and $valid (eq $source.sourceUrl (printf "https://arxiv.org/abs/%s" $selected)) }}{{ end -}}
+    {{- if isset $source "pdfUrl" }}{{ $valid = and $valid (eq $source.pdfUrl $selectedUrl) }}{{ end -}}
+    {{- if $valid -}}
+      {{- $binding := $source.sourceBinding -}}
+      {{- $valid = and (eq $binding.contract "fresh-arxiv-rewrite-source-v1") (eq $binding.paperId $source.paperId) (eq $binding.arxivId $id) (eq $binding.generation $source.generation) (eq $binding.textSha256 $source.textSha256) (eq $binding.pdfSha256 $source.pdfSha256) (eq $binding.sourceManifestSha256 $source.sourceManifestSha256) -}}
+      {{- range $field := slice "textSha256" "pdfSha256" "sourceManifestSha256" "sourceRunIdentitySha256" "structuredArtifactsSha256" }}{{ if not (findRE `^[a-f0-9]{64}$` (index $source $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+      {{- $warning := printf "arXiv 当前无版本 PDF %s 返回 HTTP 404，当前稿不可用；本次只封存并分析官方历史版本 %s（%s），不得暗示当前稿仍有效。" $currentUrl $selected $selectedUrl -}}
+      {{- $signed := newScratch -}}{{ $signed.Set "body" dict -}}
+      {{- range $field, $value := $version }}{{ if ne $field "identitySha256" }}{{ $signed.SetInMap "body" $field $value }}{{ end }}{{ end -}}
+      {{- $valid = and $valid (eq $version.warning $warning) (eq $version.identitySha256 (crypto.SHA256 (($signed.Get "body") | jsonify (dict "noHTMLEscape" true)))) -}}
+      {{- if isset $source "sourceVersionWarning" }}{{ $valid = and $valid (eq $source.sourceVersionWarning $warning) }}{{ end -}}
+      {{- if $valid }}{{ $result = dict "valid" true "warning" $warning }}{{ end -}}
+    {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

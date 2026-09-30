@@ -5,7 +5,8 @@
   if (global && global.document) {
     global.ResearchReadingWorkflow = api;
     var start = function () { api.mount(global); };
-    if (global.document.readyState === 'loading') global.document.addEventListener('DOMContentLoaded', start, { once: true });
+    // This body script precedes the deferred reading-store/controls footer scripts.
+    if (global.document.readyState !== 'complete') global.document.addEventListener('DOMContentLoaded', start, { once: true });
     else start();
   }
 }(typeof window !== 'undefined' ? window : null, function () {
@@ -29,12 +30,19 @@
     }
     return { version: 1, positions: positions };
   }
-  function readStore(storage, key) {
-    try { return normalizeStore(JSON.parse(storage.getItem(key))); }
+  function readStore(storage, key, readingStore) {
+    try {
+      if (readingStore) {
+        if (!readingStore.refresh()) return normalizeStore(null);
+        return normalizeStore({ version: 1, positions: readingStore.positions() });
+      }
+      return normalizeStore(JSON.parse(storage.getItem(key)));
+    }
     catch (_) { return normalizeStore(null); }
   }
-  function writePosition(storage, key, pathname, position) {
+  function writePosition(storage, key, pathname, position, readingStore) {
     try {
+      if (readingStore) { readingStore.updatePosition(pathname, position); return true; }
       var state = readStore(storage, key);
       state.positions[pathname] = position;
       storage.setItem(key, JSON.stringify(normalizeStore(state)));
@@ -58,7 +66,12 @@
     var pathname = window.location.pathname;
     var storage;
     try { storage = window.localStorage; } catch (_) { storage = null; }
-    var saved = readStore(storage, key).positions[pathname];
+    var readingStore = window.ResearchReading && window.ResearchReading.store;
+    if (readingStore && (readingStore.basePath !== base || readingStore.origin !== window.location.origin)) readingStore = null;
+    if (!readingStore && window.ResearchReadingStore && storage) {
+      try { readingStore = window.ResearchReadingStore.create({ storage: storage, basePath: base, origin: window.location.origin }); } catch (_) {}
+    }
+    var saved = readStore(storage, key, readingStore).positions[pathname];
     var resume = document.getElementById('reading-resume');
     var note = document.getElementById('reading-resume-note');
     var continuation = document.getElementById('reading-resume-continue');
@@ -130,7 +143,7 @@
     var timer = null;
     function save() {
       if (!position || position.progress <= 1) return;
-      if (writePosition(storage, key, pathname, position)) {
+      if (writePosition(storage, key, pathname, position, readingStore)) {
         window.dispatchEvent(new window.CustomEvent('research-reading-position-change', { detail: { pathname: pathname, position: position, storageKey: key } }));
       }
     }
