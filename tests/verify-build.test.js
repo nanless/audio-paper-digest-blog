@@ -52,19 +52,39 @@ test('verifyPaperToolCoverage requires browser-only PDF/citation tools and safe 
   mkdirSync(join(root, 'rich'), { recursive: true });
   mkdirSync(join(root, 'fallback'), { recursive: true });
   const selection = '复制 AI 提问 paper-tools__selected-text paper-tool--selection-copy paper-tools__copy-fallback <noscript>手动复制选段</noscript>';
-  const localTools = '网页不能代你点击浏览器扩展 zotero.org/download/connectors <a href="https://arxiv.org/pdf/2609.01234.pdf">PDF</a><button data-citation-format="bib">BibTeX</button><a href="/data/papers/citation.ris" download>RIS</a>';
+  const source = value => '<script type="application/json" class="paper-tools__citation-record">' + JSON.stringify({ contract: 'paper-citation-source-v1', pageType: 'paper', ...value }) + '</script>';
+  const arxivSource = source({ identityStatus: 'verified', verified: true, sourceKind: 'arxiv', arxivId: '2609.01234', url: 'https://arxiv.org/abs/2609.01234', pdfUrl: 'https://arxiv.org/pdf/2609.01234.pdf' });
+  const unknownSource = source({ identityStatus: 'unknown', url: '', pdfUrl: '' });
+  const localTools = arxivSource + '网页不能代你点击浏览器扩展 zotero.org/download/connectors <a href="https://arxiv.org/abs/2609.01234">原文</a><a href="https://arxiv.org/pdf/2609.01234.pdf">PDF</a><button data-citation-format="bib">BibTeX</button><a href="/data/papers/citation.ris" download>RIS</a>';
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
-  writeFileSync(fallback, `<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only">${selection}</section></article>`);
+  writeFileSync(fallback, `<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only">${selection} ${unknownSource}</section><a href="https://arxiv.org/pdf/2609.09999.pdf">正文引用的其他论文</a></article>`);
   assert.deepEqual(verifyPaperToolCoverage([rich, fallback]), {
-    paperPages: 2, selectedTextTools: 2, richArxivTools: 1, selectionOnlyFallbacks: 1
+    paperPages: 2, selectedTextTools: 2, richArxivTools: 1, richConferenceTools: 0, selectionOnlyFallbacks: 1
   });
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}<a href="http://127.0.0.1:43128/ui">旧入口</a></section></article>`);
   assert.throws(() => verifyPaperToolCoverage([rich]), /已取消的本机助手/);
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools.replace('href="https://arxiv.org/pdf/2609.01234.pdf"', '')}</section></article>`);
-  assert.throws(() => verifyPaperToolCoverage([rich]), /缺少 PDF\/Zotero/);
+  assert.throws(() => verifyPaperToolCoverage([rich]), /缺少对应官方来源\/PDF\/Zotero/);
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools.replace('data-citation-format="bib"', '')}</section></article>`);
   assert.throws(() => verifyPaperToolCoverage([rich]), /缺少 bib 引用下载/);
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
   writeFileSync(fallback, '<article class="research-workbench--paper">missing</article>');
   assert.throws(() => verifyPaperToolCoverage([rich, fallback]), /缺少选段 AI 工具/);
+});
+
+test('conference coverage uses its official source and ignores other arXiv links in the body', t => {
+  const root = mkdtempSync(join(tmpdir(), 'conference-tool-coverage-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const file = join(root, 'index.html');
+  const record = { contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'verified', verified: true,
+    sourceKind: 'conference', paperId: 'conference:iclr:2026:paper:example', url: 'https://openreview.net/forum?id=example', pdfUrl: 'https://openreview.net/pdf?id=example' };
+  const tools = '<section class="paper-tools">复制 AI 提问 paper-tools__selected-text paper-tool--selection-copy paper-tools__copy-fallback <noscript>手动复制</noscript>'
+    + '<script class="paper-tools__citation-record">' + JSON.stringify(record) + '</script>'
+    + '<a href="' + record.url + '">原文</a><a href="' + record.pdfUrl + '">PDF</a>'
+    + '<button data-citation-format="bib">BibTeX</button><button data-citation-format="ris">RIS</button>'
+    + 'zotero.org/download/connectors 网页不能代你点击浏览器扩展</section>';
+  writeFileSync(file, '<article class="research-workbench--paper">' + tools + '<a href="https://arxiv.org/pdf/2609.09999.pdf">其他论文</a></article>');
+  assert.equal(verifyPaperToolCoverage([file]).richConferenceTools, 1);
+  writeFileSync(file, '<article class="research-workbench--paper">' + tools.replace('data-citation-format="ris"', '') + '<button data-citation-format="ris">正文按钮</button></article>');
+  assert.throws(() => verifyPaperToolCoverage([file]), /缺少 ris/);
 });

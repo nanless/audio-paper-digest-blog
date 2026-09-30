@@ -19,7 +19,8 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
   }
   for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html',
     'layouts/partials/taxonomy_concept_counts.html', 'layouts/partials/taxonomy_valid_records.html',
-    'layouts/partials/taxonomy_registry_index.html']) {
+    'layouts/partials/taxonomy_registry_index.html', 'layouts/partials/taxonomy_snapshot.html',
+    'layouts/partials/citation_source.html']) {
     fs.copyFileSync(path.join(repository, file), path.join(temporary, file));
   }
   fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
@@ -103,4 +104,55 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
   assert.equal(core.query(groups, { facets: { task: ['task.parent'] } }, graph)[0].articles.length, 2);
   assert.equal(activeServer.find(item => item.id === 'task.other').sub, 7,
     'canonical conference deduplicates while unknown and inferred pages retain independent identities');
+});
+
+test('Hugo version catalog preserves signed labels and parent counts across a reparented concept', t => {
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-taxonomy-versions-'));
+  t.after(() => fs.rmSync(temporary, { recursive: true, force: true }));
+  const repository = path.resolve(__dirname, '..');
+  for (const directory of ['content/posts', 'data', 'layouts/partials', 'layouts/_default']) {
+    fs.mkdirSync(path.join(temporary, directory), { recursive: true });
+  }
+  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html',
+    'layouts/partials/taxonomy_concept_counts.html', 'layouts/partials/taxonomy_valid_records.html',
+    'layouts/partials/taxonomy_registry_index.html', 'layouts/partials/taxonomy_snapshot.html',
+    'layouts/partials/citation_source.html']) {
+    fs.copyFileSync(path.join(repository, file), path.join(temporary, file));
+  }
+  fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
+  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ .Title }}');
+  fs.writeFileSync(path.join(temporary, 'hugo.yaml'), 'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\noutputs:\n  home: [HTML, JSON]\n');
+  const node = (id, zh, ancestorIds = []) => ({ id, facet: 'task', zh, en: zh, aliases: [], ancestorIds });
+  const old = { contract: 'paper-taxonomy-registry-snapshot-v1', registryVersion: 'old', registrySha256: 'a'.repeat(64),
+    concepts: [node('task.left', '旧父'), node('task.right', '新父'), node('task.child', '旧子名', ['task.left'])] };
+  const current = { ...old, registryVersion: 'new', registrySha256: 'b'.repeat(64),
+    concepts: [node('task.left', '旧父'), node('task.right', '新父'), node('task.child', '新子名', ['task.right'])] };
+  const catalog = { contract: 'paper-taxonomy-version-catalog-v1', currentSha256: current.registrySha256, snapshots: [old, current] };
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-registry.json'), JSON.stringify(current));
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-catalog.json'), JSON.stringify(catalog));
+  function article(name, sha, label) {
+    const front = { title: name, date: '2026-09-30', paper_digest_page_type: 'paper',
+      paper_digest_taxonomy_contract: core.contract, paper_digest_taxonomy_registry_sha256: sha,
+      paper_digest_primary_task: label,
+      paper_digest_taxonomy_concepts: [{ id: 'task.child', facet: 'task', label }] };
+    fs.writeFileSync(path.join(temporary, 'content/posts/' + name + '.md'), '---\n' + JSON.stringify(front) + '\n---\n# Read\n');
+  }
+  article('old', old.registrySha256, '旧子名');
+  article('new', current.registrySha256, '新子名');
+  article('wrong-old-label', old.registrySha256, '新子名');
+  article('unknown-version', 'c'.repeat(64), '新子名');
+  article('missing-version', '', '新子名');
+  execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  const records = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
+  const server = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html')));
+  const graph = core.createRegistry(current, catalog);
+  assert.deepEqual(server.map(item => ({ id: item.id, direct: item.direct, subtree: item.sub })),
+    core.counts(core.groupPapers(records, graph), graph).concepts);
+  assert.equal(server.find(item => item.id === 'task.left').sub, 1);
+  assert.equal(server.find(item => item.id === 'task.right').sub, 1);
+  assert.equal(server.find(item => item.id === 'task.child').direct, 2);
+  assert.equal(records.find(item => item.title === 'old').primaryTaskId, 'task.child');
+  for (const name of ['wrong-old-label', 'unknown-version', 'missing-version']) {
+    assert.equal(records.find(item => item.title === name).primaryTaskId, undefined);
+  }
 });

@@ -10,7 +10,7 @@
   <div class="taxonomy-node-row">
     <a class="taxonomy-node-link" href="{{ printf "%s?concept=%s" .libraryURL ($concept.id | urlquery) }}" data-concept-info="{{ $concept.id }}">{{ $concept.zh }}{{ with $concept.en }}<span lang="en">{{ . }}</span>{{ end }}</a>
     {{- $count := 0 }}{{ with index .stats $concept.id }}{{ $count = .sub }}{{ end }}
-    <span class="taxonomy-node-count" aria-label="含下级方向 {{ $count }} 条论文记录">{{ $count }} 条</span>
+    <span class="taxonomy-node-count" aria-label="按文章发布时分类包含下级方向 {{ $count }} 条论文记录"{{ if eq $count 0 }} title="暂无已核分类记录；历史未核记录不计入"{{ end }}>{{ $count }} 条</span>
     {{- if $children }}<button class="taxonomy-expand" type="button" data-expand="{{ $concept.id }}" aria-controls="children-{{ $concept.id }}" aria-expanded="true" aria-label="展开或收起{{ $concept.zh }}的子方向" hidden><span aria-hidden="true">⌄</span></button>{{ end }}
   </div>
   {{- if $children }}

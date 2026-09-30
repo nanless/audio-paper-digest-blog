@@ -1,0 +1,14 @@
+{{- $memoKey := "research-page:research_identity:v1" -}}
+{{- $memoValue := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
+{{- $metadata := partial "research_metadata.html" . -}}
+{{- $key := printf "page:%s" .RelPermalink -}}
+{{- if eq $metadata.identityStatus "verified" -}}
+  {{- if $metadata.arxivId }}{{ $key = printf "arxiv:%s" $metadata.arxivId }}
+  {{- else if $metadata.paperId }}{{ $key = printf "paper:%s" $metadata.paperId }}{{ end -}}
+{{- end -}}
+{{- $memoValue = $key -}}
+{{- .Store.Set $memoKey $memoValue -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

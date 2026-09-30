@@ -59,6 +59,9 @@
   };
 
   document.querySelectorAll('.paper-tools').forEach((toolbar) => {
+    const citationApi = window.ResearchCitation;
+    let citationRecord = null;
+    try { if (toolbar.dataset.citationRecord) citationRecord = JSON.parse(toolbar.dataset.citationRecord); } catch (_error) { /* Refuse malformed source data below. */ }
     const status = toolbar.querySelector('.paper-tools__status');
     const announce = (message) => { if (status) status.textContent = message; };
     const showFallback = (value) => {
@@ -94,15 +97,15 @@
         let link;
         try {
           const format = button.dataset.citationFormat;
-          const id = button.dataset.citationId;
-          text = citationText(id, button.dataset.citationTitle, format);
+          const id = button.dataset.citationId || (citationRecord && citationRecord.arxivId) || '';
+          text = citationRecord && citationApi ? citationApi.formatCitation(citationRecord, format) : citationText(id, button.dataset.citationTitle, format);
           objectUrl = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
           link = document.createElement('a');
           link.href = objectUrl;
-          link.download = 'arxiv_' + id.replace(/[^a-z0-9]/g, '_') + '.' + format;
+          link.download = (id ? 'arxiv_' + id.replace(/[^a-z0-9]/g, '_') : 'paper_' + String(citationRecord && citationRecord.paperKey || 'reference').replace(/[^a-z0-9]/gi, '_')) + '.' + format;
           document.body.appendChild(link);
           link.click();
-          announce('已请求浏览器下载简要引用；作者与出版日期未提供，请到 arXiv 核对补全。');
+          announce(citationRecord ? '已请求下载引用；仅包含当前有来源记录的字段，缺失信息请核对官方记录。' : '已请求浏览器下载简要引用；作者与出版日期未提供，请到 arXiv 核对补全。');
         } catch (error) {
           if (text) {
             showFallback(text);
@@ -137,6 +140,10 @@
     const article = toolbar.closest('article');
     const content = article && article.querySelector('.post-content');
     let capturedText = '';
+    let selectedContext = {};
+    const taskSelect = toolbar.querySelector('.paper-tools__prompt-task');
+    const sourceSelect = toolbar.querySelector('.paper-tools__selection-source');
+    const contextNote = toolbar.querySelector('.paper-tools__selection-context');
     const captureSelection = () => {
       const selection = window.getSelection && window.getSelection();
       if (!selection || selection.isCollapsed || !selection.rangeCount || !content) return;
@@ -144,10 +151,22 @@
       const text = selection.toString();
       if (!text.trim()) return;
       capturedText = text;
-      if (document.activeElement !== field) field.value = text;
+      if (document.activeElement === field) return;
+      field.value = text;
+      selectedContext = {};
+      const anchorNode = selection.anchorNode && (selection.anchorNode.nodeType === 1 ? selection.anchorNode : selection.anchorNode.parentElement);
+      if (anchorNode && content.querySelectorAll) {
+        const headings = Array.from(content.querySelectorAll('h1[id],h2[id],h3[id],h4[id]'));
+        const heading = headings.filter((node) => node === anchorNode || node.contains(anchorNode) || (node.compareDocumentPosition(anchorNode) & 4)).pop();
+        if (heading) {
+          try { const anchor = new URL(toolbar.dataset.paperUrl); anchor.hash = heading.id; selectedContext = { heading: heading.textContent, anchor: anchor.href }; } catch (_error) { /* No inferred locator. */ }
+        }
+      }
+      if (contextNote) contextNote.textContent = selectedContext.heading ? '已记录章节：' + selectedContext.heading : '该选段未取得章节定位；不会补造图表位置。';
       if (quickButton) quickButton.hidden = false;
     };
     document.addEventListener('selectionchange', captureSelection);
+    if (field.addEventListener) field.addEventListener('input', () => { selectedContext = {}; if (contextNote) contextNote.textContent = '手动编辑选段：章节定位已清除。'; });
     if (panel) {
       panel.addEventListener('pointerdown', captureSelection);
       panel.addEventListener('toggle', () => {
@@ -165,7 +184,9 @@
     promptButton.addEventListener('click', async () => {
       try {
         const selected = normalizeSelection(field.value);
-        const prompt = '请用适合初学研究者的语言解释以下阅读选段。先解释术语，再说明机制与前提；请区分段落已有信息和需要查证的推测。\n'
+        const prompt = citationRecord && citationApi ? citationApi.buildPrompt(citationRecord, {
+          task: taskSelect ? taskSelect.value : 'mechanism', source: sourceSelect ? sourceSelect.value : 'blog', selection: selected, context: selectedContext
+        }) : '请用适合初学研究者的语言解释以下阅读选段。先解释术语，再说明机制与前提；请区分段落已有信息和需要查证的推测。\n'
           + sourceLines.join('\n') + '\n'
           + '选段来源：本站博客导读或用户粘贴，未核验为原论文逐字引用。\n\n' + selected;
         try {
@@ -179,5 +200,22 @@
         announce(error instanceof Error ? error.message : '无法生成提问。');
       }
     });
+    const packButton = toolbar.querySelector('.paper-tool--pack');
+    if (packButton && citationRecord && citationApi) {
+      packButton.hidden = false;
+      packButton.addEventListener('click', () => {
+        let text;
+        let objectUrl;
+        let link;
+        try {
+          const links = content && content.querySelectorAll ? Array.from(content.querySelectorAll('a[href]')).map((entry) => ({ label: entry.textContent, url: entry.href })) : [];
+          text = citationApi.buildResearchPack(citationRecord, { content: content ? content.innerText || content.textContent : '', selection: field.value, links });
+          objectUrl = URL.createObjectURL(new Blob([text], { type: 'text/markdown;charset=utf-8' }));
+          link = document.createElement('a'); link.href = objectUrl; link.download = 'research-pack.md'; document.body.appendChild(link); link.click();
+          announce('已请求下载研究资料包；导读与个人选段已注明来源区别。');
+        } catch (_error) { if (text) showFallback(text); announce('资料包未能下载；可手动复制已选中的文本。'); }
+        finally { if (link) link.remove(); if (objectUrl) window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000); }
+      });
+    }
   });
 })();

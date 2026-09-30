@@ -38,6 +38,19 @@ function client(data, customFetch) {
   return { requests, options: { origin, basePath, fetch, crypto: webcrypto } };
 }
 
+test('verified cache avoids shard downloads, corrupted cache refetches, and progress never exposes partial results', async () => {
+  const data=bundle([[{id:1}],[{id:2}]]), saved=new Map(), progress=[];
+  const cache={get:async key=>saved.get(key)||null,put:async(key,bytes)=>saved.set(key,bytes.slice()),delete:async key=>saved.delete(key)};
+  const first=client(data);assert.deepEqual(await loader.load(indexURL,{...first.options,cache,onProgress:value=>progress.push(value)}),[{id:1},{id:2}]);
+  assert.equal(first.requests.length,3);assert.equal(saved.size,2);assert.equal(progress.at(-1).phase,'ready');
+  assert.deepEqual(progress.filter(value=>value.phase==='shards').map(value=>value.completed),[0,1,2]);
+  const second=client(data);await loader.load(indexURL,{...second.options,cache});assert.deepEqual(second.requests,[indexURL]);
+  const firstKey=[...saved.keys()][0];saved.set(firstKey,Buffer.from('[{"id":9}]'));
+  const third=client(data);await loader.load(indexURL,{...third.options,cache});assert.equal(third.requests.length,2);
+  const quota={get:async()=>{throw new Error('unavailable')},put:async()=>{throw new Error('quota')}};
+  assert.deepEqual(await loader.load(indexURL,{...client(data).options,cache:quota}),[{id:1},{id:2}]);
+});
+
 test('legacy record arrays remain compatible and do not require SHA infrastructure', async () => {
   const items = [{ title: '中文', permalink: '/blog/posts/a/' }];
   const result = await loader.load(indexURL, { origin, basePath, crypto: null, fetch: async () => response(items) });

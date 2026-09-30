@@ -58,6 +58,6 @@ test('tag index explicitly labels the temporary old/new taxonomy coexistence', (
     path.join(__dirname, '..', 'layouts', '_default', 'terms.html'), 'utf8'
   );
   assert.match(template, /标签索引（新旧兼容）/);
-  assert.match(template, /新发布内容使用受控 taxonomy/);
+  assert.match(template, /新发布内容使用统一分类/);
   assert.match(template, /标签计数不等于新版任务或方法统计/);
 });

@@ -1,6 +1,6 @@
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $registry := partial "taxonomy_snapshot.html" . }}
 {{- $concepts := index $registry "concepts" | default slice }}
-{{- $selected := partialCached "taxonomy_valid_records.html" . .RelPermalink }}
+{{- $selected := partial "taxonomy_valid_records.html" . }}
 {{- if $selected }}
 {{- $task := .Params.paper_digest_primary_task | default "" }}
 {{- $method := .Params.paper_digest_primary_method | default "" }}
@@ -23,7 +23,7 @@
       <div class="paper-taxonomy-group"><strong>{{ .name }}</strong>{{ range $rows }}{{ partial "taxonomy_path.html" (dict "concept" . "concepts" $concepts) }}{{ end }}</div>
     {{- end }}{{ end }}
   </details>{{ end }}
-  <p class="taxonomy-note">路径说明所属层级；最后一项是本文直接分类。任务与方法是并列视角。</p>
+  <p class="taxonomy-note">路径与名称保留本文发布时的分类版本；最后一项是直接分类。任务与方法是并列视角。目录更新不会自动改变旧文归属。</p>
 </section>
 {{- else if .Params.paper_digest_taxonomy_contract }}
 <p class="taxonomy-note">分类信息待核；下方保留页面原有标签。</p>

@@ -14,11 +14,13 @@
 {{- $groups.Set "papers" dict }}
 {{- range site.RegularPages }}
   {{- $page := . }}
-  {{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+  {{- $metadata := partial "research_metadata.html" . }}
   {{- if and (eq $metadata.pageType "paper") (eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1") }}
   {{- $ids := slice }}
-  {{- range (partialCached "taxonomy_valid_records.html" . .RelPermalink) }}
+  {{- $ancestorIds := slice }}
+  {{- range (partial "taxonomy_valid_records.html" .) }}
     {{- if not (in $ids .id) }}{{ $ids = $ids | append .id }}{{ end }}
+    {{- $ancestorIds = union $ancestorIds (.ancestorIds | default slice) }}
   {{- end }}
   {{- if gt (len $ids) 0 }}
     {{- $key := printf "page:%s" $page.RelPermalink }}
@@ -26,8 +28,8 @@
       {{- if $metadata.arxivId }}{{ $key = printf "arxiv:%s" $metadata.arxivId }}
       {{- else if $metadata.paperId }}{{ $key = printf "paper:%s" $metadata.paperId }}{{ end }}
     {{- end }}
-    {{- with index ($groups.Get "papers") $key }}{{ $ids = union .ids $ids }}{{ end }}
-    {{- $groups.SetInMap "papers" $key (dict "ids" $ids) }}
+    {{- with index ($groups.Get "papers") $key }}{{ $ids = union .ids $ids }}{{ $ancestorIds = union .ancestorIds $ancestorIds }}{{ end }}
+    {{- $groups.SetInMap "papers" $key (dict "ids" $ids "ancestorIds" $ancestorIds) }}
   {{- end }}
   {{- end }}
 {{- end }}
@@ -39,13 +41,9 @@
   {{- $counts.Set (printf "sub:%s" .id) 0 }}
 {{- end }}
 {{- range ($groups.Get "papers") }}
-  {{- $subtreeIds := slice }}
+  {{- $subtreeIds := union .ids .ancestorIds }}
   {{- range $id := .ids }}
     {{- $counts.Add (printf "direct:%s" $id) 1 }}
-    {{- $subtreeIds = union $subtreeIds (slice $id) }}
-    {{- with index $byId $id }}
-      {{- $subtreeIds = union $subtreeIds (.ancestorIds | default slice) }}
-    {{- end }}
   {{- end }}
   {{- range $subtreeIds }}{{ $counts.Add (printf "sub:%s" .) 1 }}{{ end }}
 {{- end }}

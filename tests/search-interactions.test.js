@@ -140,8 +140,12 @@ test('search announces zero matches and exposes archive navigation after index f
   assert.match(browser.parent.children[0].textContent, /没有找到匹配/);
   const offline = browserFixture('search', [], '', true);
   await offline.ready();
-  const archiveLink = offline.nodes.searchResults.children.at(-1).children[0];
+  const archiveLink = offline.nodes.searchResults.children.find(node => node.children[0]?.tagName === 'a').children[0];
   assert.equal(archiveLink.href, 'https://nanless.github.io/audio-paper-digest-blog/archives/');
+  const retry = offline.nodes.searchResults.children.at(-1).children[0];
+  assert.equal(retry.tagName, 'button');
+  retry.dispatch('click'); await offline.ready();
+  assert.equal(offline.requests.filter(url => url.endsWith('index.json')).length, 2);
 });
 
 test('经典搜索用快照注入的 taxonomyAliases 召回父概念与别名', async () => {

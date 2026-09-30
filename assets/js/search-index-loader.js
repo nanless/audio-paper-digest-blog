@@ -10,6 +10,37 @@
   var MAX_SHARD_BYTES = 1024 * 1024;
   var MAX_TOTAL_BYTES = 64 * 1024 * 1024;
   var CONCURRENCY = 4;
+  var defaultWorkerUrl = root.document && root.document.currentScript
+    ? root.document.currentScript.getAttribute('data-index-worker') : null;
+
+  function shardParser(url, origin, basePath) {
+    if (!url || typeof root.Worker !== 'function') return null;
+    var worker;
+    try { worker = new root.Worker(safeUrl(url, origin, basePath).href); } catch (_error) { return null; }
+    var pending = new Map(), sequence = 0, stopped = false;
+    function close() {
+      if (stopped) return; stopped = true; worker.terminate();
+      pending.forEach(function (request) { root.clearTimeout(request.timer); request.reject(new Error('后台索引解析不可用')); });
+      pending.clear();
+    }
+    worker.onerror = close; worker.onmessageerror = close;
+    worker.onmessage = function (event) {
+      var value = event.data || {}, request = pending.get(value.id);
+      if (!request) return;
+      root.clearTimeout(request.timer); pending.delete(value.id);
+      if (value.error) request.reject(failure(value.error)); else request.resolve(value.records);
+    };
+    return { close: close, parse: function (bytes, shard) {
+      if (stopped) return Promise.reject(new Error('后台索引解析不可用'));
+      return new Promise(function (resolve, reject) {
+        var id = ++sequence, copy = bytes.slice().buffer;
+        var timer = root.setTimeout(close, 15000);
+        pending.set(id, { resolve: resolve, reject: reject, timer: timer });
+        try { worker.postMessage({ id: id, bytes: copy, length: shard.bytes, sha256: shard.sha256, recordCount: shard.recordCount }, [copy]); }
+        catch (error) { root.clearTimeout(timer); pending.delete(id); reject(error); }
+      });
+    } };
+  }
 
   function failure(message) { return new Error('论文索引校验失败：' + message); }
   function integer(value, minimum, maximum) {
@@ -71,6 +102,10 @@
 
   async function load(indexURL, options) {
     var settings = options || {};
+    var cache = Object.prototype.hasOwnProperty.call(settings, 'cache') ? settings.cache
+      : root.ResearchIndexCache ? root.ResearchIndexCache.create() : null;
+    function progress(value) { if (typeof settings.onProgress === 'function') { try { settings.onProgress(value); } catch (_error) { /* UI callbacks cannot alter index integrity. */ } } }
+    progress({ phase: 'manifest', completed: 0, total: 0, bytesCompleted: 0, totalBytes: 0 });
     var origin = settings.origin;
     var basePath = settings.basePath;
     var originUrl;
@@ -96,7 +131,7 @@
       payload = await initialResponse.json();
       if (new TextEncoder().encode(JSON.stringify(payload)).byteLength > MAX_TOTAL_BYTES) throw failure('索引超过总字节上限');
     } else payload = parse(await responseBytes(initialResponse, MAX_TOTAL_BYTES));
-    if (Array.isArray(payload)) return records(payload);
+    if (Array.isArray(payload)) { var legacy = records(payload); progress({ phase: 'ready', completed: 1, total: 1, recordCount: legacy.length }); return legacy; }
     if (!payload || typeof payload !== 'object' || payload.contract !== CONTRACT
       || !integer(payload.recordCount, 1, Number.MAX_SAFE_INTEGER)
       || !integer(payload.totalBytes, 1, MAX_TOTAL_BYTES) || !Array.isArray(payload.shards)
@@ -122,29 +157,63 @@
       throw failure('当前浏览器无法校验 SHA-256；请使用提供 crypto.subtle 的 HTTPS 或 localhost 环境');
     }
     var results = new Array(shards.length);
+    var parser = shardParser(settings.workerURL || defaultWorkerUrl, origin, basePath);
     var next = 0;
     var stopped = false;
+    var completed = 0, bytesCompleted = 0;
+    progress({ phase: 'shards', completed: 0, total: shards.length, bytesCompleted: 0, totalBytes: byteTotal });
+    async function validatePart(bytes, shard) {
+      if (bytes.byteLength !== shard.bytes) throw failure('分片字节数与清单不符');
+      if (parser) {
+        var activeParser = parser;
+        try {
+          var parsed = records(await activeParser.parse(bytes, shard));
+          if (parsed.length !== shard.recordCount) throw failure('分片记录数与清单不符');
+          return parsed;
+        } catch (_error) {
+          // Crashes and restrictions fall back to the same full SHA/JSON gate.
+          activeParser.close(); parser = null;
+        }
+      }
+      var digest = new Uint8Array(await cryptoApi.subtle.digest('SHA-256', bytes));
+      var hash = Array.from(digest).map(function (value) { return value.toString(16).padStart(2, '0'); }).join('');
+      if (hash !== shard.sha256) throw failure('分片 SHA-256 与清单不符');
+      var part = records(parse(bytes));
+      if (part.length !== shard.recordCount) throw failure('分片记录数与清单不符');
+      return part;
+    }
     async function worker() {
       while (!stopped && next < shards.length) {
         var position = next++;
         var shard = shards[position];
         try {
-          var response = await request(shard.url);
-          var bytes = await responseBytes(response, MAX_SHARD_BYTES);
-          if (bytes.byteLength !== shard.bytes) throw failure('分片字节数与清单不符');
-          var digest = new Uint8Array(await cryptoApi.subtle.digest('SHA-256', bytes));
-          var hash = Array.from(digest).map(function (value) { return value.toString(16).padStart(2, '0'); }).join('');
-          if (hash !== shard.sha256) throw failure('分片 SHA-256 与清单不符');
-          var part = records(parse(bytes));
-          if (part.length !== shard.recordCount) throw failure('分片记录数与清单不符');
+          var cacheKey = shard.url.href + '|' + shard.sha256;
+          var bytes = null, part = null, fromCache = false;
+          if (cache && typeof cache.get === 'function') {
+            try {
+              var cached = await cache.get(cacheKey);
+              if (cached) { bytes = new Uint8Array(cached); part = await validatePart(bytes, shard); fromCache = true; }
+            } catch (_error) { if (typeof cache.delete === 'function') { try { await cache.delete(cacheKey); } catch (_ignored) {} } }
+          }
+          if (!part) {
+            var response = await request(shard.url);
+            bytes = await responseBytes(response, MAX_SHARD_BYTES);
+            part = await validatePart(bytes, shard);
+            if (cache && typeof cache.put === 'function') { try { await cache.put(cacheKey, bytes); } catch (_error) { /* Cache quotas never weaken validation. */ } }
+          }
           results[position] = part;
+          completed++; bytesCompleted += shard.bytes;
+          progress({ phase: 'shards', completed: completed, total: shards.length, bytesCompleted: bytesCompleted, totalBytes: byteTotal, fromCache: fromCache });
         } catch (error) { stopped = true; throw error; }
       }
     }
-    await Promise.all(Array.from({ length: Math.min(CONCURRENCY, shards.length) }, worker));
-    var all = results.flat();
-    if (all.length !== payload.recordCount) throw failure('载入记录数与清单不符');
-    return all;
+    try {
+      await Promise.all(Array.from({ length: Math.min(CONCURRENCY, shards.length) }, worker));
+      var all = results.flat();
+      if (all.length !== payload.recordCount) throw failure('载入记录数与清单不符');
+      progress({ phase: 'ready', completed: shards.length, total: shards.length, bytesCompleted: byteTotal, totalBytes: byteTotal, recordCount: all.length });
+      return all;
+    } finally { if (parser) parser.close(); }
   }
   return { load: load, contract: CONTRACT, limits: Object.freeze({ maxShards: MAX_SHARDS,
     maxShardBytes: MAX_SHARD_BYTES, maxTotalBytes: MAX_TOTAL_BYTES, concurrency: CONCURRENCY }) };

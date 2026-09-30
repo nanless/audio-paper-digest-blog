@@ -1,11 +1,11 @@
 {{- define "main" }}
-{{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+{{- $metadata := partial "research_metadata.html" . }}
 {{- $isDaily := eq $metadata.pageType "daily" }}
 {{- $isTask := $metadata.isConferenceTask }}
 {{- $isConferenceSummary := and (eq $metadata.pageType "conference") (not $isTask) }}
 {{- $isPaper := eq $metadata.pageType "paper" }}
 {{- $isResearchPage := eq .Section "posts" }}
-{{- $hasControlledTaxonomy := gt (len (partialCached "taxonomy_valid_records.html" . .RelPermalink)) 0 }}
+{{- $hasControlledTaxonomy := gt (len (partial "taxonomy_valid_records.html" .)) 0 }}
 
 {{- if $isResearchPage }}
 {{- $headline := $metadata.headline }}
@@ -14,7 +14,7 @@
 {{- $arxivId := $metadata.arxivId }}
 {{- $task := $metadata.task }}
 
-<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}">
+<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
   <a class="skip-to-article" href="#article-body">跳到正文</a>
   <header class="research-paper-header">
     {{ partial "breadcrumbs.html" . }}
@@ -37,7 +37,20 @@
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
     </div>
-    {{- if $isPaper }}{{ partial "paper_taxonomy.html" . }}{{ partial "paper_toolbar.html" . }}{{ end }}
+    {{- $intro := $metadata.oneSentence }}
+    {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
+    {{- if $intro }}
+    <section class="research-tldr research-tldr--header" aria-labelledby="research-tldr-title">
+      <strong id="research-tldr-title">研究速览</strong>
+      <p>{{ $intro | markdownify }}</p>
+    </section>
+    {{- end }}
+    <div class="reading-resume" id="reading-resume" role="status" hidden>
+      <p id="reading-resume-note"></p>
+      <button class="rw-action" id="reading-resume-continue" type="button">继续阅读</button>
+      <button class="rw-action" id="reading-resume-dismiss" type="button">暂不恢复</button>
+    </div>
+    {{- if $isPaper }}{{ partial "paper_taxonomy.html" . }}{{ end }}
   </header>
 
   {{- $layoutClass := "research-layout" }}
@@ -53,14 +66,7 @@
     {{- end }}
 
     <div class="research-main">
-      {{- $intro := $metadata.oneSentence }}
-      {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
-      {{- if $intro }}
-      <section class="research-tldr" aria-labelledby="research-tldr-title">
-        <strong id="research-tldr-title">研究速览</strong>
-        <p>{{ $intro | markdownify }}</p>
-      </section>
-      {{- end }}
+      {{- if $isPaper }}{{ partial "paper_toolbar.html" . }}{{ end }}
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
       {{- if .Content }}
@@ -117,7 +123,18 @@
     {{- partial "subscribe.html" . }}
   </footer>
   {{- if (.Param "comments") }}{{ partial "comments.html" . }}{{ end }}
+  {{- if (.Param "ShowToc") }}
+  <button class="reading-chapters-trigger" id="reading-chapters-trigger" type="button" aria-controls="reading-chapters-panel" aria-expanded="false" hidden>打开章节目录</button>
+  <section class="reading-chapters-panel" id="reading-chapters-panel" role="dialog" aria-modal="true" aria-labelledby="reading-chapters-title" hidden>
+    <div class="reading-chapters-panel__content">
+      <div class="reading-chapters-panel__header"><strong id="reading-chapters-title">文章章节</strong><button class="rw-action" id="reading-chapters-close" type="button">关闭目录</button></div>
+      <nav id="reading-chapters-links" aria-label="移动阅读章节"></nav>
+    </div>
+  </section>
+  {{- end }}
 </article>
+{{- $readingScript := resources.Get "js/reading-workflow.js" | minify | fingerprint }}
+<script defer src="{{ $readingScript.RelPermalink }}" integrity="{{ $readingScript.Data.Integrity }}" crossorigin="anonymous"></script>
 
 {{- else }}
 <article class="post-single editorial-single">

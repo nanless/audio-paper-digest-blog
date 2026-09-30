@@ -95,6 +95,8 @@
     });
 
     var toc = document.querySelector('.post-single .toc');
+    // Reader pages own both desktop and mobile current-section indicators.
+    if (document.getElementById('reading-chapters-trigger')) return;
     if (!toc || !('IntersectionObserver' in window)) return;
     var tocLinks = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
     var linksById = new Map();

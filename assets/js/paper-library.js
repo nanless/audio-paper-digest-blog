@@ -70,7 +70,7 @@
     return 'paper';
   }
 
-  function normalizeEntry(item, origin, basePath, registry) {
+  function normalizeEntry(item, origin, basePath, registry, versionGraph) {
     if (!item || typeof item !== 'object') return null;
     var permalink = safeSiteUrl(item.permalink, origin, basePath);
     if (!permalink) return null;
@@ -92,12 +92,17 @@
     var arxivId = plainText(item.arxivId);
     var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
     var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
-    var taxonomy = taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
+    var signedRegistry = versionGraph && (versionGraph.versions[item.taxonomyRegistrySha256]
+      || (!versionGraph.hasVersionCatalog && !item.taxonomyRegistrySha256 ? versionGraph : null));
+    var taxonomy = versionGraph ? signedRegistry
+      ? taxonomyTerms(versionGraph.resolveRecord(item).concepts, signedRegistry.byId) : []
+      : taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
       type: type, pageType: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
       paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
       taxonomyContract: plainText(item.taxonomyContract), taxonomyConcepts: Array.isArray(item.taxonomyConcepts) ? item.taxonomyConcepts : [],
+      taxonomyRegistrySha256: plainText(item.taxonomyRegistrySha256), citation: item.citation && typeof item.citation === 'object' ? item.citation : {},
       primaryTaskId: plainText(item.primaryTaskId), primaryMethodId: plainText(item.primaryMethodId),
       searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId]
         .concat(tags, categories, taxonomy).join(' '))
@@ -113,6 +118,14 @@
     }).sort(function (a, b) {
       var tie = a.title.localeCompare(b.title, 'zh-CN') || a.permalink.localeCompare(b.permalink);
       if (state.sort === 'title') return tie;
+      if (state.sort === 'relevance') {
+        function relevance(entry) {
+          var title = searchText(entry.title + ' ' + entry.originalTitle), query = searchText(state.query);
+          return (query && searchText(entry.arxivId) === query ? 100 : 0) + (query && title.includes(query) ? 30 : 0)
+            + tokens.reduce(function (score, token) { return score + (title.includes(token) ? 10 : searchText(entry.task + ' ' + entry.method).includes(token) ? 4 : 1); }, 0);
+        }
+        var order = relevance(b) - relevance(a); if (order) return order;
+      }
       return (state.sort === 'score' ? b.score - a.score : 0) || b.date.localeCompare(a.date) || tie;
     });
   }
@@ -210,6 +223,10 @@
   var typeSelect = document.getElementById('library-type');
   var yearSelect = document.getElementById('library-year');
   var sortSelect = document.getElementById('library-sort');
+  var savedSelect = document.getElementById('library-saved');
+  var readingSelect = document.getElementById('library-reading-status');
+  var exportStatus = document.getElementById('library-export-status');
+  var selectedPapers = new Map();
   var countNode = document.getElementById('library-count');
   var resultsNode = document.getElementById('library-results');
   var moreButton = document.getElementById('library-more');
@@ -254,7 +271,9 @@
     typeSelect.value = ['paper', 'daily', 'conference', 'all'].includes(params.get('type')) ? params.get('type') : 'paper';
     yearSelect.value = params.get('year') || 'all';
     if (!yearSelect.value) yearSelect.value = 'all';
-    sortSelect.value = ['newest', 'score', 'title'].includes(params.get('sort')) ? params.get('sort') : 'newest';
+    sortSelect.value = ['newest', 'score', 'title', 'relevance'].includes(params.get('sort')) ? params.get('sort') : 'newest';
+    if (savedSelect) savedSelect.value = params.get('saved') === 'saved' ? 'saved' : 'all';
+    if (readingSelect) readingSelect.value = ['unread', 'reading', 'read'].includes(params.get('reading')) ? params.get('reading') : 'all';
     var page = Number(params.get('page'));
     visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
     directions = directionState(params, graph);
@@ -270,6 +289,8 @@
     if (typeSelect.value !== 'paper') params.set('type', typeSelect.value);
     if (yearSelect.value !== 'all') params.set('year', yearSelect.value);
     if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
+    if (savedSelect && savedSelect.value === 'saved') params.set('saved', 'saved');
+    if (readingSelect && readingSelect.value !== 'all') params.set('reading', readingSelect.value);
     if (visibleCount > PAGE_SIZE) params.set('page', Math.ceil(visibleCount / PAGE_SIZE));
     (directions.error ? directions.requestedIds : selectedIds(directions)).forEach(function (id) { params.append('concept', id); });
     if (directions.scope === 'direct') params.set('scope', 'direct');
@@ -310,6 +331,28 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
+    if (entry.type === 'paper' && savedSelect) {
+      var paper = readingPaper(entry), key = readingKey(entry);
+      var save = document.createElement('button'); save.type = 'button'; save.hidden = true;
+      save.setAttribute('data-reading-bookmark', ''); save.dataset.paperTitle = entry.title; save.dataset.paperUrl = entry.permalink;
+      save.dataset.paperKey = key; save.dataset.paperArxivId = paper.arxivId || ''; save.dataset.paperIdentityStatus = paper.identityStatus || 'unknown';
+      body.appendChild(save);
+      var chooseLabel = document.createElement('label'); chooseLabel.className = 'library-export-select';
+      var choose = document.createElement('input'); choose.type = 'checkbox'; choose.checked = selectedPapers.has(key);
+      choose.setAttribute('aria-label', '选择导出：' + entry.title); chooseLabel.appendChild(choose);
+      var chooseText = document.createElement('span'); chooseText.textContent = '加入导出清单'; chooseLabel.appendChild(chooseText); body.appendChild(chooseLabel);
+      choose.addEventListener('change', function () { if (choose.checked) selectedPapers.set(key, entry); else selectedPapers.delete(key); updateExportStatus(); });
+      try {
+        var positionKey = 'research-reading-position-v1:' + siteBasePath;
+        var positions = JSON.parse(window.localStorage.getItem(positionKey) || '{}');
+        var savedPosition = positions.positions && positions.positions[new URL(entry.permalink).pathname];
+        if (savedPosition && typeof savedPosition.anchor === 'string' && savedPosition.progress > 1 && savedPosition.progress < 98) {
+          var continueLink = document.createElement('a'); continueLink.className = 'library-result__continue';
+          continueLink.href = entry.permalink + '#' + encodeURIComponent(savedPosition.anchor);
+          continueLink.textContent = '继续阅读 · 约 ' + Math.round(savedPosition.progress) + '%'; body.appendChild(continueLink);
+        }
+      } catch (_error) { /* Reading positions are optional. */ }
+    }
     if (entry.guides && entry.guides.length > 1) {
       var guides = document.createElement('details');
       guides.className = 'library-result__guides';
@@ -346,7 +389,23 @@
     if (!visible.length) {
       var empty = document.createElement('div');
       empty.className = 'research-library__empty';
-      empty.textContent = '没有符合条件的条目。请减少筛选条件或换一个关键词。';
+      empty.textContent = '没有符合条件的条目，当前条件需要同时满足。';
+      var hints = [];
+      if (queryInput.value.trim()) hints.push('关键词「' + queryInput.value.trim() + '」');
+      if (yearSelect.value !== 'all') hints.push(yearSelect.value + ' 年');
+      if (savedSelect && savedSelect.value === 'saved') hints.push('仅收藏');
+      if (readingSelect && readingSelect.value !== 'all') hints.push('指定阅读状态');
+      if (selectedIds(directions).length) hints.push('受控研究方向（历史未核分类不会参与匹配）');
+      if (hints.length) empty.textContent += ' 当前限制：' + hints.join('、') + '。';
+      if (selectedIds(directions).length) {
+        var broaden = document.createElement('button');
+        broaden.type = 'button'; broaden.className = 'rw-action'; broaden.textContent = '保留关键词，取消方向限制';
+        broaden.addEventListener('click', function () {
+          directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
+          draft = cloneDirections(directions); applyFilters(false, true);
+        });
+        empty.appendChild(broaden);
+      }
       var reset = document.createElement('button');
       reset.type = 'button';
       reset.className = 'rw-action';
@@ -356,6 +415,8 @@
         typeSelect.value = 'paper';
         yearSelect.value = 'all';
         sortSelect.value = 'newest';
+        if (savedSelect) savedSelect.value = 'all';
+        if (readingSelect) readingSelect.value = 'all';
         directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
         draft = cloneDirections(directions);
         applyFilters(false, true);
@@ -368,6 +429,8 @@
       visible.forEach(function (entry) { fragment.appendChild(makeResult(entry)); });
       resultsNode.appendChild(fragment);
     }
+    if (window.ResearchReading) window.ResearchReading.mount(resultsNode);
+    updateExportStatus();
     countNode.textContent = '找到 ' + filteredEntries.length.toLocaleString('zh-CN') + ' 条，当前显示 ' + visible.length + ' 条';
     if (graph) {
       var paperCount = filteredEntries.filter(function (entry) { return entry.type === 'paper'; }).length;
@@ -383,6 +446,7 @@
     filteredEntries = libraryResults(allEntries, groups, {
       query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value
     }, directions, graph, api);
+    filteredEntries = readingFilter(filteredEntries);
     if (preservePage !== true) visibleCount = PAGE_SIZE;
     quickButtons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
@@ -391,6 +455,24 @@
     if (!restoring) writeState(push === true);
     render();
   }
+
+  function readingPaper(entry) {
+    return Object.assign({}, entry, { identityVerified: entry.paperGroup && entry.paperGroup.identityVerified,
+      paperId: entry.paperGroup && entry.paperGroup.paperId || entry.paperId });
+  }
+  function readingKey(entry) {
+    try { if (window.ResearchReading && window.ResearchReading.store) return window.ResearchReading.store.key(readingPaper(entry)); } catch (_error) {}
+    return entry.paperGroup && entry.paperGroup.key || 'page:' + new URL(entry.permalink).pathname;
+  }
+  function readingFilter(entries) {
+    var store = window.ResearchReading && window.ResearchReading.store;
+    return entries.filter(function (entry) {
+      var record = store && entry.type === 'paper' ? store.get(readingKey(entry)) : null;
+      return (!savedSelect || savedSelect.value !== 'saved' || record && record.bookmarked)
+        && (!readingSelect || readingSelect.value === 'all' || entry.type === 'paper' && (record ? record.status : 'unread') === readingSelect.value);
+    });
+  }
+  function updateExportStatus() { if (exportStatus) exportStatus.textContent = '已选择 ' + selectedPapers.size + ' 条论文记录（跨筛选保留选择）'; }
 
   function populateYears() {
     var years = Array.from(new Set(allEntries.map(function (entry) { return entry.year; }).filter(Boolean))).sort().reverse();
@@ -408,7 +490,7 @@
 
   function updateDraft() {
     if (!draftNode) return;
-    var preview = libraryResults(allEntries, groups, resultState(), draft, graph, api);
+    var preview = readingFilter(libraryResults(allEntries, groups, resultState(), draft, graph, api));
     draftNode.textContent = '待应用：' + selectedIds(draft).length + ' 个方向，预览 ' + preview.length + ' 条结果。';
     Object.keys(nodeViews).forEach(function (id) { nodeViews[id].checkbox.checked = selectedIds(draft).includes(id); });
   }
@@ -544,6 +626,22 @@
           var source = registryRecords[id] || {};
           definition.textContent = plainText(source.definition || source.description) || '当前目录尚未收录该方向的定义。';
           summary.appendChild(definition);
+          var scopeText = api.readerScopeNote ? api.readerScopeNote(source.scopeNote) : plainText(source.scopeNote);
+          if (scopeText) {
+            var scope = document.createElement('p'); scope.textContent = '适用范围：' + scopeText; summary.appendChild(scope);
+          }
+          var examples = currentGroups.filter(function (group) {
+            return api.query([group], { facets: { [node.facet]: [id] }, scope: directions.scope, role: directions.role }, graph).length;
+          }).slice(0, 2);
+          if (examples.length) {
+            var examplesNode = document.createElement('p'); examplesNode.textContent = '当前匹配示例：';
+            examples.forEach(function (group, position) {
+              if (position) { var separator = document.createElement('span'); separator.textContent = ' · '; examplesNode.appendChild(separator); }
+              var article = group.articles[0], example = document.createElement('a');
+              example.href = article.permalink; example.textContent = article.title; examplesNode.appendChild(example);
+            });
+            summary.appendChild(examplesNode);
+          }
           var count = counts.find(function (value) { return value.id === id; }) || { direct: 0, subtree: 0 };
           var status = document.createElement('small');
           status.textContent = '当前结果：直接标注 ' + count.direct + ' 篇，含下级 ' + count.subtree + ' 篇。';
@@ -620,6 +718,10 @@
     debounceTimer = window.setTimeout(applyFilters, 120);
   });
   [typeSelect, yearSelect, sortSelect].forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
+  [savedSelect, readingSelect].filter(Boolean).forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
+  window.addEventListener('research-reading-change', function () {
+    if (savedSelect && (savedSelect.value === 'saved' || readingSelect.value !== 'all')) applyFilters(true, false, true);
+  });
   quickButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       queryInput.value = button.dataset.query;
@@ -635,6 +737,48 @@
   if (form) form.addEventListener('submit', function (event) { event.preventDefault(); applyFilters(); });
   window.addEventListener('popstate', function () { readState(); if (panel) panel.open = false; applyFilters(true, false, true); });
 
+  function downloadBackup() {
+    var status = document.getElementById('reading-backup-status');
+    try {
+      var reading = window.ResearchReading;
+      if (!reading || !reading.store) throw new Error(reading && reading.error ? reading.error.message : '本机阅读模块尚未就绪');
+      window.ResearchReadingExport.download({ text: reading.store.backup(), filename: 'reading-backup-' + new Date().toISOString().slice(0, 10) + '.json', mime: 'application/json;charset=utf-8' });
+      status.textContent = '已导出当前浏览器的阅读备份。';
+    } catch (error) { if (status) status.textContent = error.message; }
+  }
+  var backupButton = document.getElementById('reading-backup-download');
+  if (backupButton) backupButton.addEventListener('click', downloadBackup);
+  var importButton = document.getElementById('reading-backup-import');
+  if (importButton) importButton.addEventListener('click', async function () {
+    var status = document.getElementById('reading-backup-status'), field = document.getElementById('reading-backup-file');
+    try {
+      var file = field.files && field.files[0], reading = window.ResearchReading;
+      if (!file) throw new Error('请先选择阅读备份JSON文件。');
+      if (file.size > 5 * 1024 * 1024) throw new Error('备份超过5 MiB，请选择较小的备份。');
+      if (!reading || !reading.store) throw new Error('当前浏览器无法保存阅读资料。');
+      var raw = await file.text(), recover = document.getElementById('reading-backup-recover').checked;
+      var changed = recover ? reading.store.recoverBackup(raw) : reading.store.importBackup(raw);
+      status.textContent = (recover ? '已恢复' : '已合并') + ' ' + changed + ' 条阅读记录。'; applyFilters(true, false, true);
+    } catch (error) { status.textContent = error.message + '；现有资料未被本次失败导入覆盖。'; }
+  });
+  var selectVisible = document.getElementById('library-select-visible');
+  if (selectVisible) selectVisible.addEventListener('click', function () {
+    filteredEntries.slice(0, visibleCount).filter(function (entry) { return entry.type === 'paper'; }).forEach(function (entry) { selectedPapers.set(readingKey(entry), entry); }); render();
+  });
+  var clearSelection = document.getElementById('library-selection-clear');
+  if (clearSelection) clearSelection.addEventListener('click', function () { selectedPapers.clear(); render(); });
+  var exportButton = document.getElementById('library-export');
+  if (exportButton) exportButton.addEventListener('click', function () {
+    try {
+      if (!window.ResearchReadingExport) throw new Error('导出模块尚未就绪。');
+      var store = window.ResearchReading && window.ResearchReading.store;
+      var entries = Array.from(selectedPapers.values()).map(function (entry) { return Object.assign({}, entry, { readingKey: readingKey(entry), readingState: store ? store.get(readingKey(entry)) : null }); });
+      var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href });
+      window.ResearchReadingExport.download(result);
+      exportStatus.textContent = '已导出 ' + result.exported + ' 条' + (result.skipped ? '；跳过 ' + result.skipped + ' 条身份未核实的引用' : '') + (result.incomplete ? '；' + result.incomplete + ' 条引用仅含可得字段' : '') + '。';
+    } catch (error) { exportStatus.textContent = error.message; }
+  });
+
   function renderLoadError(error) {
     resultsNode.replaceChildren();
     var empty = document.createElement('div');
@@ -644,6 +788,9 @@
       empty.textContent += ' ' + error.message;
     }
     resultsNode.appendChild(empty);
+    var retry = document.createElement('button'); retry.type = 'button'; retry.className = 'rw-action'; retry.textContent = '重新加载索引';
+    retry.addEventListener('click', function () { startLoad(); }); empty.appendChild(retry);
+    var fallback = document.createElement('a'); fallback.href = new URL('archives/', new URL(siteBasePath || '/', window.location.origin)).href; fallback.className = 'rw-action'; fallback.textContent = '浏览速递归档'; empty.appendChild(fallback);
     countNode.textContent = '论文索引载入失败';
     moreButton.hidden = true;
   }
@@ -655,6 +802,7 @@
 
   // 快照提供概念的 zh/en、aliases 与祖先链；拿不到时退化为页面自带标签。
   var registryUrl = new URL('data/taxonomy-registry.json', indexUrl);
+  var catalogUrl = new URL('data/taxonomy-catalog.json', indexUrl);
   function loadRegistry() {
     return fetch(registryUrl, { credentials: 'same-origin' })
       .then(function (response) {
@@ -667,10 +815,16 @@
       })
       .catch(function () { return null; });
   }
+  function loadCatalog() {
+    return fetch(catalogUrl, { credentials: 'same-origin', redirect: 'error' }).then(function (response) { return response && response.ok ? response.json() : null; })
+      .then(function (payload) { return payload && payload.contract === 'paper-taxonomy-version-catalog-v1' ? payload : null; }).catch(function () { return null; });
+  }
 
   function loadIndex() {
     if (window.ResearchSearchIndex && typeof window.ResearchSearchIndex.load === 'function') {
-      return window.ResearchSearchIndex.load(indexUrl, { origin: window.location.origin, basePath: siteBasePath });
+      return window.ResearchSearchIndex.load(indexUrl, { origin: window.location.origin, basePath: siteBasePath, onProgress: function (value) {
+        if (value.phase === 'shards') countNode.textContent = '正在校验论文索引 ' + value.completed + ' / ' + value.total + ' 个分片' + (value.fromCache ? '（已验证本机缓存）' : '');
+      } });
     }
     // Array-only compatibility for older clients; manifests require the shared
     // loader and its byte/SHA gates, never an unchecked fallback.
@@ -683,34 +837,45 @@
     });
   }
 
-  Promise.all([
+  var loading = false;
+  function startLoad() {
+  if (loading) return; loading = true;
+  countNode.textContent = '正在读取静态论文索引…';
+  resultsNode.textContent = '正在读取并校验索引，请稍候…';
+  return Promise.all([
     loadIndex(),
     loadRegistry(),
+    loadCatalog(),
   ])
     .then(function (results) {
       var registry = results[1];
-      return { items: results[0], registry: registry };
+      return { items: results[0], registry: registry, catalog: results[2] };
     })
     .then(function (payload) {
       var items = payload.items;
       var registry = payload.registry;
       var seen = new Set();
       if (!Array.isArray(items)) throw new Error('Index must be an array');
+      if (api && registry) {
+        try { graph = api.createRegistry(registry, payload.catalog); }
+        catch (_error) { graph = null; }
+      }
       allEntries = items.map(function (item) {
-        return normalizeEntry(item, window.location.origin, siteBasePath, registry);
+        return normalizeEntry(item, window.location.origin, siteBasePath, registry, graph);
       }).filter(function (entry) {
         if (!entry || !['paper', 'daily', 'conference'].includes(entry.type) || seen.has(entry.permalink)) return false;
         seen.add(entry.permalink);
         return true;
       });
       registryRecords = registryIndex(registry);
-      if (api && registry) {
-        try { graph = api.createRegistry(registry); groups = api.groupPapers(allEntries, graph); }
-        catch (_error) { graph = null; groups = []; }
-      }
+      groups = graph ? api.groupPapers(allEntries, graph) : [];
+      while (yearSelect.options && yearSelect.options.length > 1) yearSelect.remove(1);
       populateYears();
       readState();
       applyFilters(true);
+      loading = false;
     })
-    .catch(renderLoadError);
+    .catch(function (error) { loading = false; renderLoadError(error); });
+  }
+  startLoad();
 }());

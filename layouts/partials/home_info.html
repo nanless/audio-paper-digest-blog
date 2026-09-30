@@ -1,6 +1,6 @@
 {{- $posts := where site.RegularPages "Section" "posts" }}
 {{- $editions := slice }}
-{{- range $posts }}{{ if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
+{{- range $posts }}{{ if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
 {{- $latest := first 1 (sort $editions "Date" "desc") }}
 <section class="research-home-hero" aria-labelledby="research-home-title">
   <div>
@@ -25,9 +25,9 @@
       <p>语音基础任务、音频生成与会议专题。</p>
     </div>
     <div class="research-shortcuts">
-      <a class="research-shortcut" href="{{ "tags/语音识别/" | absURL }}">语音识别<span>ASR · 低资源 · 多语言</span></a>
-      <a class="research-shortcut" href="{{ "tags/语音合成/" | absURL }}">语音合成<span>TTS · 音色 · 流式生成</span></a>
-      <a class="research-shortcut" href="{{ "tags/音频生成/" | absURL }}">音频与音乐生成<span>扩散 · 流匹配 · 多模态</span></a>
+      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.asr">语音识别<span>ASR · 包含下级方向</span></a>
+      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.speech-synthesis">语音合成<span>TTS · 包含下级方向</span></a>
+      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.audio-generation">音频与音乐生成<span>生成任务 · 包含下级方向</span></a>
       <a class="research-shortcut" href="{{ "conferences/" | absURL }}">会议论文集<span>ICASSP · ICLR · ICML</span></a>
     </div>
   </aside>

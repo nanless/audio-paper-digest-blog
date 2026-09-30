@@ -16,7 +16,7 @@
     <label class="taxonomy-search-label" for="taxonomy-query">搜索方向、英文名称或别名</label>
     <input id="taxonomy-query" class="taxonomy-query" type="search" placeholder="例如：ASR、LoRA、长音频" autocomplete="off" maxlength="200">
     <p id="taxonomy-search-status" class="taxonomy-note" aria-live="polite">选择分类视角，逐级浏览。</p>
-    <p class="taxonomy-note">数量包含下级方向的论文记录；已核身份去重，身份待核按页面保留。仅统计有效新版分类，旧标签另列。</p>
+    <p class="taxonomy-note">目录显示最新分类；旧文章保留发布时的名称和上级方向。数量包含文章当时所属的下级方向；同一篇已核论文只计一次，身份待核时按页面保留。兄弟方向可能重叠，子项数量不可直接相加；直接 0 条也可能有下级论文。0 条表示尚无已核分类记录，历史标签未核分类另列。</p>
     <div id="taxonomy-search-results" class="taxonomy-search-results" hidden></div>
     <nav class="taxonomy-facet-nav" aria-label="分类视角">
       {{ range $facets }}<a href="#facet-{{ .id }}" class="rw-action">{{ .name }}</a>{{ end }}
@@ -38,10 +38,11 @@
     </div>
     <noscript><p class="taxonomy-note">未启用 JavaScript：目录完整展开，方向链接仍可使用；可用浏览器页面查找检索名称。</p></noscript>
     <script id="taxonomy-registry-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
+    {{- with index hugo.Data "taxonomy-catalog" }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
   </section>
   <details class="taxonomy-legacy">
     <summary>历史标签与精确标签索引</summary>
-    <p class="taxonomy-note">标签索引（新旧兼容）：新发布内容使用受控 taxonomy，历史页面保留原标签。这里链接到原有精确标签页，标签计数不等于新版任务或方法统计。</p>
+    <p class="taxonomy-note">标签索引（新旧兼容）：新发布内容使用统一分类，历史页面保留原标签。这里链接到原有精确标签页，标签计数不等于新版任务或方法统计。</p>
   {{ end }}
     <div class="research-terms__search">
       <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选精确标签{{ end }}</label>

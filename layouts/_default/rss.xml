@@ -2,7 +2,7 @@
 {{- range where site.RegularPages "Section" "posts" }}
   {{- $baseName := "" }}
   {{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
-  {{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+  {{- $metadata := partial "research_metadata.html" . }}
   {{- if eq $metadata.pageType "daily" }}
     {{- $dailyPages = $dailyPages | append . }}
   {{- end }}

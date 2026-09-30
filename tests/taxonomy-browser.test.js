@@ -99,6 +99,7 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
       '---', 'title: "UI fixture"', 'date: 2026-09-29', 'paper_digest_page_type: paper',
       'tags: ["' + task.zh + '"]', 'paper_digest_primary_task: "' + task.zh + '"',
       'paper_digest_primary_method: "' + method.zh + '"', 'paper_digest_taxonomy_contract: ' + contract,
+      'paper_digest_taxonomy_registry_sha256: "' + published.registrySha256 + '"',
       'paper_digest_taxonomy_concepts: ' + JSON.stringify(records), '---', '# UI fixture', 'Evidence.'
     ].join('\n'));
   }
@@ -125,7 +126,7 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   assert.equal(ids.length, expected.length, 'each concept rendered once, including leaf roots');
   assert.equal((directory.match(/id="facet-/g) || []).length, 9);
   assert.equal((directory.match(/class="taxonomy-node-count"/g) || []).length, expected.length, 'every concept has a cached subtree record count');
-  assert.match(directory, /已核身份去重，身份待核按页面保留/);
+  assert.match(directory, /同一篇已核论文只计一次，身份待核时按页面保留/);
   assert.match(directory, /href="\/blog\/papers\/\?concept=method\./);
   assert.doesNotMatch(directory, /class="taxonomy-children"[^>]*hidden/);
   assert.ok(fs.existsSync(path.join(destination, 'papers/index.html')), 'every controlled link lands on the existing library route');

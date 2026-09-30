@@ -1,14 +1,16 @@
-{{- $candidates := where site.RegularPages "Params.paper_digest_page_type" "paper" }}
-{{- $related := $candidates.Related . | first 3 }}
+{{- $identity := partial "research_identity.html" . }}
+{{- $related := partial "related_recommendations.html" . }}
 {{- with $related }}
 <section class="related-posts research-related" aria-labelledby="related-papers-title">
   <div class="rw-eyebrow">Keep Exploring</div>
   <h2 id="related-papers-title">相关论文</h2>
   <div class="research-related__grid">
     {{- range . }}
-    <a class="research-related__card" href="{{ .Permalink }}">
-      <strong>{{ .Title }}</strong>
-      {{- with .Description }}<span>{{ . | markdownify | plainify }}</span>{{ end }}
+    {{- $metadata := partial "research_metadata.html" .page }}
+    <a class="research-related__card" href="{{ .page.RelPermalink }}">
+      <strong>{{ $metadata.headline }}</strong>
+      <span class="research-related__reason">{{ delimit (first 3 .reasons) " · " }}{{ if gt (len .reasons) 3 }} · 另有 {{ sub (len .reasons) 3 }} 个共同标签{{ end }}</span>
+      {{- with .page.Description }}<span>{{ . | markdownify | plainify | truncate 120 }}</span>{{ end }}
     </a>
     {{- end }}
   </div>

@@ -14,10 +14,15 @@
   var text = function (value) { return typeof value === 'string' ? value.trim() : ''; };
   var normalized = function (value) { return text(value).normalize('NFKC').toLocaleLowerCase(); };
   var isActive = function (node) { return !!node && node.status !== 'deprecated'; };
+  function readerScopeNote(value) {
+    return text(value).split(/(?<=[。！？])/).filter(function (sentence) {
+      return !/(?:父节点缺失故成根|按报告指定成根)/.test(sentence);
+    }).join('').trim();
+  }
 
   // The published v1 snapshot has one ordered ancestor chain. Reject broken or
   // unsupported graphs instead of interpreting an arbitrary array as a tree.
-  function createRegistry(snapshot) {
+  function createRegistry(snapshot, catalog) {
     if (!snapshot || !Array.isArray(snapshot.concepts) || !snapshot.concepts.length) {
       throw new Error('分类目录缺少概念');
     }
@@ -79,7 +84,8 @@
       node.ancestorIds.forEach(function (id) { descendantsById[id].push(node.id); });
     });
     function nodes(ids) { return (ids || []).map(function (id) { return byId[id]; }); }
-    return {
+    var graph = {
+      registrySha256: text(snapshot.registrySha256), registryVersion: text(snapshot.registryVersion),
       byId: byId, childrenById: childrenById, rootsByFacet: rootsByFacet, descendantsById: descendantsById,
       facets: Object.keys(facetLabels).map(function (id) { return { id: id, label: facetLabels[id] }; }),
       path: function (id) { return byId[id] ? nodes(byId[id].ancestorIds.concat(id)) : []; },
@@ -93,6 +99,49 @@
         });
       }
     };
+    var versions = Object.create(null);
+    if (graph.registrySha256) versions[graph.registrySha256] = graph;
+    graph.hasVersionCatalog = !!catalog;
+    if (catalog) {
+      if (catalog.contract !== 'paper-taxonomy-version-catalog-v1' || !Array.isArray(catalog.snapshots)
+        || catalog.currentSha256 !== graph.registrySha256 || !catalog.snapshots.length) throw new Error('分类版本目录非法');
+      var seenVersions = new Set();
+      catalog.snapshots.forEach(function (version) {
+        var sha = version && version.registrySha256;
+        if (!/^[a-f0-9]{64}$/.test(sha || '') || seenVersions.has(sha)) throw new Error('分类版本重复或无效');
+        seenVersions.add(sha);
+        var historical = createRegistry(version);
+        if (sha === graph.registrySha256
+          && (historical.registryVersion !== graph.registryVersion
+            || JSON.stringify(Object.values(historical.byId)) !== JSON.stringify(Object.values(graph.byId)))) {
+          throw new Error('分类当前版本与目录快照不一致');
+        }
+        Object.values(historical.byId).forEach(function (node) {
+          if (graph.byId[node.id] && graph.byId[node.id].facet !== node.facet) throw new Error('稳定分类标识跨版本改变分面');
+        });
+        versions[sha] = historical;
+      });
+      if (!seenVersions.has(catalog.currentSha256)) throw new Error('分类版本目录缺少当前版本');
+    }
+    graph.versions = versions;
+    graph.resolveRecord = function (record) {
+      var sha = text(record.taxonomyRegistrySha256);
+      var source = sha ? versions[sha] : !catalog ? graph : null;
+      var result = { status: source ? 'verified' : sha ? 'unknown-version' : 'unbound-version',
+        registrySha256: sha, registryVersion: source ? source.registryVersion : '', concepts: [] };
+      if (record.taxonomyContract !== CONTRACT || !Array.isArray(record.taxonomyConcepts)) {
+        result.status = 'legacy'; return result;
+      }
+      if (!source) return result;
+      result.concepts = record.taxonomyConcepts.filter(function (concept) {
+        var node = concept && source.byId[concept.id];
+        var current = concept && graph.byId[concept.id];
+        return node && current && isActive(node) && isActive(current) && node.facet === current.facet
+          && concept.facet === node.facet && concept.label === node.zh;
+      }).map(function (concept) { return source.byId[concept.id]; });
+      return result;
+    };
+    return graph;
   }
 
   function arxivBase(value) {
@@ -129,15 +178,18 @@
         groups.set(id.key, group);
       }
       group.articles.push(record);
-      var classification = { conceptIds: [], primaryTaskIds: [], primaryMethodIds: [] };
+      var resolved = graph.resolveRecord(record);
+      var classification = { conceptIds: [], primaryTaskIds: [], primaryMethodIds: [],
+        ancestorIdsByConcept: Object.create(null), labelsByConcept: Object.create(null),
+        registrySha256: resolved.registrySha256, registryVersion: resolved.registryVersion, status: resolved.status };
       group.classifications.push(classification);
       // Bare legacy tags and unchecked taxonomy payloads never become reviewed
       // semantic classifications merely by entering the search index.
-      if (record.taxonomyContract !== CONTRACT || !Array.isArray(record.taxonomyConcepts)) return;
-      var direct = record.taxonomyConcepts.filter(function (concept) {
-        var node = concept && graph.byId[concept.id];
-        return node && isActive(node) && concept.facet === node.facet && concept.label === node.zh;
-      }).map(function (concept) { return concept.id; });
+      var direct = resolved.concepts.map(function (node) {
+        classification.ancestorIdsByConcept[node.id] = node.ancestorIds.slice();
+        classification.labelsByConcept[node.id] = node.zh;
+        return node.id;
+      });
       classification.conceptIds = Array.from(new Set(direct));
       direct.forEach(function (conceptId) {
         if (!group.conceptIds.includes(conceptId)) group.conceptIds.push(conceptId);
@@ -186,7 +238,7 @@
         var ids = selectionIds(classification, facet, selection.role, graph);
         return chosen.some(function (target) {
           return ids.some(function (id) {
-            return id === target || (selection.scope === 'subtree' && graph.byId[id].ancestorIds.includes(target));
+            return id === target || (selection.scope === 'subtree' && (classification.ancestorIdsByConcept[id] || []).includes(target));
           });
         });
       });
@@ -212,7 +264,7 @@
           selectionIds(classification, facet, selection.role, graph).forEach(function (id) {
             directIds.add(id);
             subtreeIds.add(id);
-            graph.byId[id].ancestorIds.forEach(function (ancestor) { subtreeIds.add(ancestor); });
+            (classification.ancestorIdsByConcept[id] || []).forEach(function (ancestor) { subtreeIds.add(ancestor); });
           });
         });
       });
@@ -224,7 +276,7 @@
     }) };
   }
 
-  return { contract: CONTRACT, facetLabels: facetLabels, isActive: isActive,
+  return { contract: CONTRACT, facetLabels: facetLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
     identity: identity, groupPapers: groupPapers, query: query, counts: counts };
 }));

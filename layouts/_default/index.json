@@ -3,7 +3,7 @@
 {{- $.Scratch.Set "searchIndex" slice -}}
 {{- range site.RegularPages -}}
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
-    {{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+    {{- $metadata := partial "research_metadata.html" . }}
 
     {{- $description := .Description | default "" | plainify | htmlUnescape | strings.TrimSpace }}
     {{- $score := $metadata.score }}
@@ -33,7 +33,9 @@
       "categories" $categories
       "taxonomyContract" (.Params.paper_digest_taxonomy_contract | default "")
       "taxonomyConcepts" (.Params.paper_digest_taxonomy_concepts | default slice)
+      "citation" (partial "citation_source.html" .)
     }}
+    {{- with .Params.paper_digest_taxonomy_registry_sha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
     {{- if ne $metadata.originalTitle .Title }}{{ $entry = merge $entry (dict "originalTitle" $metadata.originalTitle) }}{{ end }}
     {{- range $key := slice "paperId" "sourceKind" "primaryTaskId" "primaryMethodId" }}
       {{- with index $metadata $key }}{{ $entry = merge $entry (dict $key .) }}{{ end }}

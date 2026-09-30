@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $posts := where site.RegularPages "Section" "posts" }}
 {{ $editions := slice }}
-{{ range $posts }}{{ if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
+{{ range $posts }}{{ if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
 {{ $editions = sort $editions "Date" "desc" }}
 <section class="research-archives">
   <header class="page-header">

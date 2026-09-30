@@ -30,7 +30,12 @@
     var snapshotNode = document.getElementById('taxonomy-registry-data');
     if (!root || !snapshotNode || !core) return;
     var snapshot, graph;
-    try { snapshot = JSON.parse(snapshotNode.textContent); graph = core.createRegistry(snapshot); }
+    try {
+      snapshot = JSON.parse(snapshotNode.textContent);
+      var catalogNode = document.getElementById('taxonomy-catalog-data');
+      var catalog = catalogNode ? JSON.parse(catalogNode.textContent) : undefined;
+      graph = core.createRegistry(snapshot, catalog);
+    }
     catch (_) { return; } // The server-rendered, linked tree remains available.
     var input = document.getElementById('taxonomy-query');
     var results = document.getElementById('taxonomy-search-results');
@@ -56,8 +61,12 @@
       if (concept.aliases.length) panel.appendChild(element('p', 'taxonomy-note', '别名：' + concept.aliases.join('、')));
       var record = records[id];
       ['definition', 'description', 'scope', 'scopeNote'].forEach(function (key) {
-        if (typeof record[key] === 'string' && record[key].trim()) panel.appendChild(element('p', 'taxonomy-note', record[key]));
+        var readable = core.readerScopeNote(record[key]);
+        if (readable) panel.appendChild(element('p', 'taxonomy-note', readable));
       });
+      var children = graph.children(id);
+      if (children.length) panel.appendChild(element('p', 'taxonomy-note', '下级方向示例：' + children.map(function (child) { return child.zh; }).join('、')));
+      panel.appendChild(element('p', 'taxonomy-note', '定义和范围说明来自对应的分类表。目录用于导航；旧文章保留发布时的名称和上级方向。0 条表示尚无已核分类记录，不代表此方向没有研究。'));
       var link = element('a', 'rw-action', '浏览这个方向的论文 →');
       link.href = conceptURL(base, id);
       panel.appendChild(link);

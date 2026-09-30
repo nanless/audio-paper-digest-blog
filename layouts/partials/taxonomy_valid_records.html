@@ -1,14 +1,24 @@
+{{- $memoKey := "research-page:taxonomy_valid_records:v1" -}}
+{{- $memoValue := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $valid := slice -}}
 {{- $seen := slice -}}
 {{- if eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1" -}}
-  {{- $byId := partialCached "taxonomy_registry_index.html" "global" -}}
+  {{- $snapshot := partial "taxonomy_snapshot.html" . -}}
+  {{- $byId := partialCached "taxonomy_registry_index.html" $snapshot ($snapshot.registrySha256 | default "fixture") -}}
+  {{- $currentById := partialCached "taxonomy_registry_index.html" "global" "global" -}}
   {{- range $record := (.Params.paper_digest_taxonomy_concepts | default slice) -}}
     {{- with index $byId $record.id -}}
-      {{- if and (eq .id $record.id) (eq .facet $record.facet) (eq .zh $record.label) (ne (.status | default "active") "deprecated") (not (in $seen .id)) -}}
-        {{- $valid = $valid | append . -}}
+      {{- $current := index $currentById .id | default dict -}}
+      {{- if and $current.id (eq $current.facet .facet) (ne ($current.status | default "active") "deprecated") (eq .id $record.id) (eq .facet $record.facet) (eq .zh $record.label) (ne (.status | default "active") "deprecated") (not (in $seen .id)) -}}
+        {{- $valid = $valid | append (merge . (dict "registrySha256" ($snapshot.registrySha256 | default "") "registryVersion" ($snapshot.registryVersion | default ""))) -}}
         {{- $seen = $seen | append .id -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- return $valid -}}
+{{- $memoValue = $valid -}}
+{{- .Store.Set $memoKey $memoValue -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

@@ -1,0 +1,32 @@
+{{- $memoKey := printf "research-related-rankings:%s" (crypto.SHA256 (dict "ids" (sort .ids) "nodes" .nodes | jsonify)) -}}
+{{- $memoValue := site.Store.Get $memoKey -}}
+{{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
+{{- $catalog := partialCached "related_catalog.html" "global" -}}
+{{- $current := . -}}
+{{- $scores := newScratch -}}
+{{- $scores.Set "matches" dict -}}
+{{- range $id := (sort $current.ids) -}}
+  {{- $concept := index $current.nodes $id -}}
+  {{- $weight := 1 -}}
+  {{- $role := "相同研究条件" -}}
+  {{- if eq $concept.facet "task" }}{{ $weight = 4 }}{{ $role = "共同研究任务" }}
+  {{- else if eq $concept.facet "method" }}{{ $weight = 3 }}{{ $role = "共同研究方法" }}
+  {{- else if eq $concept.facet "legacy" }}{{ $role = "共同历史标签（分类待核）" }}{{ end -}}
+  {{- range $otherIdentity, $matched := (index $catalog.concepts $id) -}}
+    {{- $score := $weight -}}
+    {{- $reasons := slice (printf "%s：%s" $role $concept.zh) -}}
+    {{- with index ($scores.Get "matches") $otherIdentity -}}
+      {{- $score = add .score $weight -}}
+      {{- $reasons = union .reasons $reasons -}}
+    {{- end -}}
+    {{- $scores.SetInMap "matches" $otherIdentity (dict "identity" $otherIdentity "score" $score "sortKey" (printf "%08d:%s" (sub 100000 $score) $otherIdentity) "reasons" $reasons "page" (index $catalog.records $otherIdentity).page) -}}
+  {{- end -}}
+{{- end -}}
+{{- $out := slice -}}
+{{- range ($scores.Get "matches") }}{{ $out = $out | append . }}{{ end -}}
+{{- /* One extra result keeps the exact top three after excluding the current identity. */ -}}
+{{- $memoValue = first 4 (sort $out "sortKey") -}}
+{{- site.Store.Set $memoKey $memoValue -}}
+{{- site.Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (site.Store.Get $memoKey) -}}

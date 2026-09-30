@@ -164,6 +164,7 @@ function verifyPaperToolCoverage(files) {
   let paperPages = 0;
   let selectedTextTools = 0;
   let richArxivTools = 0;
+  let richConferenceTools = 0;
   let selectionOnlyFallbacks = 0;
   for (const file of files.filter((item) => path.basename(item) === 'index.html')) {
     const html = fs.readFileSync(file, 'utf8');
@@ -180,27 +181,47 @@ function verifyPaperToolCoverage(files) {
       `论文页缺少选段 AI 工具：${file}`
     );
     selectedTextTools += 1;
-    if (html.includes('paper-tools--selection-only')) {
-      invariant(!/href=["']?https:\/\/arxiv\.org\/pdf\//.test(html) && !html.includes('paper-tool-citation'),
-        `无 arXiv 论文页不得伪造 PDF/Zotero 工具：${file}`);
+    const opening = Array.from(html.matchAll(/<section\b[^>]*>/gi)).find(match => attributeValue(match[0], 'class').split(/\s+/).includes('paper-tools'));
+    invariant(opening, `论文页缺少工具区域：${file}`);
+    const close = html.indexOf('</section>', opening.index);
+    invariant(close > opening.index, `论文工具区域未闭合：${file}`);
+    const tools = html.slice(opening.index, close + 10);
+    const sourceTag = Array.from(tools.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi))
+      .find(match => attributeValue(match[0], 'class') === 'paper-tools__citation-record');
+    invariant(sourceTag, `论文工具缺少结构化引用来源：${file}`);
+    let source;
+    try { source = JSON.parse(sourceTag[1]); } catch (_) { throw new Error(`论文引用来源不是有效 JSON：${file}`); }
+    invariant(source && source.contract === 'paper-citation-source-v1' && source.pageType === 'paper', `论文引用来源契约错误：${file}`);
+    const tags = tools.match(/<(?:a|button)\b[^>]*>/gi) || [];
+    const hrefs = tags.map(tag => attributeValue(tag, 'href').replace(/&amp;/g, '&'));
+    if (source.identityStatus !== 'verified' || !source.url) {
+      invariant(tools.includes('paper-tools--selection-only') && !tools.includes('data-citation-format=')
+        && !hrefs.some(href => /^https:\/\/arxiv\.org\/(?:abs|pdf)\//.test(href)),
+        `身份待核页不得根据正文引用生成本篇论文工具：${file}`);
       selectionOnlyFallbacks += 1;
     } else {
-      invariant(/href=["']?https:\/\/arxiv\.org\/pdf\//.test(html)
-        && html.includes('zotero.org/download/connectors')
-        && html.includes('网页不能代你点击浏览器扩展'),
-      `可识别 arXiv 的论文页缺少 PDF/Zotero 工具：${file}`);
+      invariant(source.verified === true && /^https:\/\//.test(source.url) && hrefs.includes(source.url)
+        && (!source.pdfUrl || /^https:\/\//.test(source.pdfUrl) && hrefs.includes(source.pdfUrl))
+        && tools.includes('zotero.org/download/connectors') && tools.includes('网页不能代你点击浏览器扩展'),
+      `已核论文页缺少对应官方来源/PDF/Zotero 工具：${file}`);
+      if (source.sourceKind === 'arxiv') {
+        invariant(/^https:\/\/arxiv\.org\/abs\/[a-z0-9./-]+$/.test(source.url)
+          && source.pdfUrl === 'https://arxiv.org/pdf/' + source.arxivId + '.pdf', `arXiv 工具身份不一致：${file}`);
+        richArxivTools += 1;
+      } else {
+        invariant(source.sourceKind === 'conference' && /^conference:/.test(source.paperId), `会议工具身份不一致：${file}`);
+        richConferenceTools += 1;
+      }
       for (const format of ['bib', 'ris']) {
-        const tags = html.match(/<(?:a|button)\b[^>]*>/gi) || [];
         invariant(tags.some(tag => attributeValue(tag, 'href').endsWith(`/citation.${format}`)
           || attributeValue(tag, 'data-citation-format') === format),
-        `可识别 arXiv 的论文页缺少 ${format} 引用下载：${file}`);
+        `已核论文页缺少 ${format} 引用下载：${file}`);
       }
-      richArxivTools += 1;
     }
   }
   invariant(paperPages > 0, '构建产物没有论文页');
   invariant(selectedTextTools === paperPages, '论文页选段 AI 覆盖不完整');
-  return { paperPages, selectedTextTools, richArxivTools, selectionOnlyFallbacks };
+  return { paperPages, selectedTextTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
 }
 
 function verifyBuild(buildDir) {

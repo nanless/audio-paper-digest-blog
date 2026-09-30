@@ -86,7 +86,7 @@
 {{- if .IsHome }}
 {{- $pages = slice }}
 {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
-  {{- if eq (partialCached "research_metadata.html" . .RelPermalink).pageType "daily" }}{{ $pages = $pages | append . }}{{ end }}
+  {{- if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $pages = $pages | append . }}{{ end }}
 {{- end }}
 {{- $pages = sort $pages "Date" "desc" }}
 {{- end }}
@@ -113,7 +113,7 @@
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
-{{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+{{- $metadata := partial "research_metadata.html" . }}
 
 {{- $class := "post-entry" }}
 

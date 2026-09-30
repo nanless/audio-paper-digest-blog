@@ -1,3 +1,6 @@
+{{- $memoKey := "research-page:research_metadata:v1" -}}
+{{- $memoValue := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- /* Shared identity and display fields for pages, lists and the search index.
      Structured fields match publish-to-blog.py's researcher-workbench contract.
      Aggregate pages never inherit a paper's identity from their body links. */ -}}
@@ -65,11 +68,15 @@
     {{- if ne $sourceKind "conference" }}{{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ $identityStatus = "inferred" }}{{ $sourceKind = "arxiv" }}{{ end -}}{{ end -}}
   {{- end -}}
   {{- if eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1" -}}
-    {{- range (partialCached "taxonomy_valid_records.html" . .RelPermalink) -}}
+    {{- range (partial "taxonomy_valid_records.html" .) -}}
       {{- if and (eq .facet "task") (eq .zh $.Params.paper_digest_primary_task) }}{{ $primaryTaskId = .id }}{{ end -}}
       {{- if and (eq .facet "method") (eq .zh $.Params.paper_digest_primary_method) }}{{ $primaryMethodId = .id }}{{ end -}}
     {{- end -}}
   {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}
-{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}
+{{- $memoValue = (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}
+{{- .Store.Set $memoKey $memoValue -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

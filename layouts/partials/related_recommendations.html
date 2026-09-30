@@ -1,0 +1,11 @@
+{{- $catalog := partialCached "related_catalog.html" "global" -}}
+{{- $identity := partial "research_identity.html" . -}}
+{{- $current := index $catalog.records $identity -}}
+{{- $out := slice -}}
+{{- with $current -}}
+  {{- /* Ranking helper keys its site store by direct IDs and original signed labels. */ -}}
+  {{- range (partial "related_rankings.html" .) -}}
+    {{- if ne .identity $identity }}{{ $out = $out | append . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (first 3 $out) -}}

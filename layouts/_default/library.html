@@ -9,7 +9,7 @@
   <form class="research-library__toolbar" id="paper-library-filters" role="search">
     <label>
       关键词或 arXiv ID
-      <input id="library-query" name="q" type="search" placeholder="例如：streaming ASR、语音增强、2609.03620" autocomplete="off">
+      <input id="library-query" name="q" type="search" placeholder="例如：streaming ASR、语音增强、2609.03620" autocomplete="off" maxlength="200">
     </label>
     <label>
       页面类型
@@ -30,9 +30,22 @@
         <option value="newest">最新发布</option>
         <option value="score">评分优先</option>
         <option value="title">标题 A–Z</option>
+        <option value="relevance">关键词相关性</option>
       </select>
     </label>
+    <label>收藏范围<select id="library-saved"><option value="all">全部论文</option><option value="saved">我的收藏</option></select></label>
+    <label>阅读状态<select id="library-reading-status"><option value="all">全部状态</option><option value="unread">待读</option><option value="reading">阅读中</option><option value="read">已读</option></select></label>
   </form>
+
+  <details class="reading-backup">
+    <summary>我的阅读资料与备份</summary>
+    <p>收藏、阅读状态与个人备注仅保存在当前浏览器。导出备份可迁移到另一台设备；导入默认合并并保留较新的记录。本站不自动同步个人资料。</p>
+    <div class="reading-backup__actions"><button id="reading-backup-download" class="rw-action" type="button">导出本机备份</button><a class="rw-action" href="?saved=saved">查看我的收藏</a></div>
+    <label>导入阅读备份（JSON，最多5 MiB）<input id="reading-backup-file" type="file" accept="application/json,.json"></label>
+    <label><input id="reading-backup-recover" type="checkbox"> 用有效备份恢复损坏的本机资料（请先导出原始备份）</label>
+    <button id="reading-backup-import" class="rw-action" type="button">导入备份</button>
+    <p id="reading-backup-status" role="status"></p>
+  </details>
 
   <div class="research-library__quick-filters" aria-label="快捷研究方向">
     <button class="rw-filter-chip" type="button" data-concept="task.asr" aria-pressed="false">语音识别</button>
@@ -65,6 +78,11 @@
     <span id="library-count">正在读取静态论文索引…</span>
     <a href="{{ "search/" | absURL }}">模糊搜索</a>
   </div>
+  <div class="library-export-actions" aria-label="导出阅读清单">
+    <button id="library-select-visible" class="rw-filter-chip" type="button">选择当前显示论文</button><button id="library-selection-clear" class="rw-filter-chip" type="button">清空选择</button>
+    <label>导出格式<select id="library-export-format"><option value="md">Markdown 阅读清单</option><option value="csv">CSV 表格</option><option value="bib">BibTeX 引用</option><option value="ris">RIS 引用</option></select></label>
+    <button id="library-export" class="rw-action" type="button">导出所选论文</button><span id="library-export-status" role="status">尚未选择论文</span>
+  </div>
   <div id="library-results" class="research-library__results" role="list">
     <div class="research-library__loading">正在载入论文索引…</div>
   </div>
@@ -76,7 +94,10 @@
 {{- $taxonomyScript := resources.Get "js/taxonomy-core.js" | minify | fingerprint }}
 <script defer src="{{ $taxonomyScript.RelPermalink }}" integrity="{{ $taxonomyScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $indexLoader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
-<script defer src="{{ $indexLoader.RelPermalink }}" integrity="{{ $indexLoader.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $indexCache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}
+<script defer src="{{ $indexCache.RelPermalink }}" integrity="{{ $indexCache.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $indexWorker := resources.Get "js/search-index-worker.js" | minify | fingerprint }}
+<script defer src="{{ $indexLoader.RelPermalink }}" data-index-worker="{{ $indexWorker.RelPermalink }}" integrity="{{ $indexLoader.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $libraryScript := resources.Get "js/paper-library.js" | minify | fingerprint }}
 <script defer src="{{ $libraryScript.RelPermalink }}" integrity="{{ $libraryScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

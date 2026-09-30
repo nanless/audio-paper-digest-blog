@@ -89,12 +89,11 @@ test('legacy papers receive minimal citation download controls without fabricate
   assert.doesNotMatch(html, /citation\.(?:json|bib|ris)|name=citation_author|43128/);
 });
 
-test('raw legacy old-style IDs retain exact versioned public tools', () => {
+test('raw body citations cannot identify a legacy page or generate misleading citation metadata', () => {
   const html = renderFixture('title: "Old paper"\ndate: 2020-01-01\nhiddenInHomeList: true',
     '[arXiv](https://arxiv.org/abs/hep-th/9901001v4)');
-  assert.match(html, /https:\/\/arxiv\.org\/abs\/hep-th\/9901001v4/);
-  assert.match(html, /data-citation-id=hep-th\/9901001v4/);
-  assert.match(html, /data-copy-text=hep-th\/9901001/);
+  assert.doesNotMatch(html, /data-citation-id|data-copy-text|name=citation_arxiv_id|name=citation_pdf_url/);
+  assert.match(html, /论文身份尚待核实/);
 });
 
 test('paper without a verifiable ID has only editable prompt copying and no invented reference', () => {
@@ -110,12 +109,15 @@ test('conference source opens its explicit official URLs and never inherits a ci
   const html = renderFixture([
     'title: "Conference paper"', 'date: 2026-09-05',
     'paper_digest_source_kind: conference',
+    'paper_digest_paper_id: "conference:cvpr:2026:paper:example"',
     'paper_digest_conference_record_url: "https://openaccess.thecvf.com/paper.html"',
     'paper_digest_conference_pdf_url: "https://openaccess.thecvf.com/paper.pdf"',
   ].join('\n'), '[A cited paper](https://arxiv.org/abs/2609.99999)');
   assert.match(html, /href=https:\/\/openaccess\.thecvf\.com\/paper\.html/);
   assert.match(html, /href=https:\/\/openaccess\.thecvf\.com\/paper\.pdf/);
   assert.doesNotMatch(html, /data-paper-arxiv-id|data-citation-id|arxiv\.org\/pdf\/2609\.99999/);
+  assert.match(html, /name=citation_pdf_url content="?https:\/\/openaccess\.thecvf\.com\/paper\.pdf/);
+  assert.doesNotMatch(html, /name=citation_arxiv_id/);
 });
 
 test('noncanonical sidecars are rejected and replaced with minimal reference controls', () => {
@@ -125,7 +127,7 @@ test('noncanonical sidecars are rejected and replaced with minimal reference con
   assert.doesNotMatch(html, /data-citation-format=bib/);
 });
 
-function setup({ text = '正文片段。', clipboardReject = false, legacy = false, downloadFails = false, title = 'Paper & Evidence', id = '2609.01234v2' } = {}) {
+function setup({ text = '正文片段。', clipboardReject = false, legacy = false, downloadFails = false, title = 'Paper & Evidence', id = '2609.01234v2', citationRecord = null, task = 'mechanism' } = {}) {
   const source = readFileSync(join(repo, 'assets/js/paper-toolbar.js'), 'utf8');
   const handlers = {};
   const button = (name, dataset = {}) => ({
@@ -137,18 +139,22 @@ function setup({ text = '正文片段。', clipboardReject = false, legacy = fal
   const copy = button('copy', { copyText: id, copyLabel: 'arXiv ID' });
   const bib = button('bib', { citationId: id, citationTitle: title, citationFormat: 'bib' });
   const ris = button('ris', { citationId: id, citationTitle: title, citationFormat: 'ris' });
-  const field = { value: text, focus() { this.focused = true; } };
+  const pack = button('pack');
+  const field = { value: text, focus() { this.focused = true; }, addEventListener(type, handler) { handlers['field:' + type] = handler; } };
   const fallback = { hidden: true, focus() {}, select() { this.selected = true; } };
   const status = { textContent: '' };
   const panel = { open: false, scrollIntoView() {}, addEventListener(type, handler) { handlers['panel:' + type] = handler; } };
-  const bodyNode = {};
-  const content = { contains: (node) => node === bodyNode };
+  const bodyNode = { nodeType: 1 };
+  const heading = { id: 'conditions', textContent: '实验条件', contains: () => false, compareDocumentPosition: () => 4 };
+  const content = { textContent: '本页已有导读文本', contains: (node) => node === bodyNode,
+    querySelectorAll: (selector) => selector === 'a[href]' ? [{ href: 'https://official.test/project', textContent: '项目' }] : [heading] };
   const toolbar = {
-    dataset: { paperTitle: title, paperUrl: 'https://example.test/posts/paper/', paperArxivId: id },
+    dataset: { paperTitle: title, paperUrl: 'https://example.test/posts/paper/', paperArxivId: id, ...(citationRecord ? { citationRecord: JSON.stringify(citationRecord) } : {}) },
     querySelector(selector) {
       return { '.paper-tools__status': status, '.paper-tools__selected-text': field,
         '.paper-tools__selection-panel': panel, '.paper-tool--selection-quick': quick,
-        '.paper-tool--selection-copy': prompt, '.paper-tools__copy-fallback': fallback }[selector] || null;
+        '.paper-tool--selection-copy': prompt, '.paper-tools__copy-fallback': fallback,
+        '.paper-tools__prompt-task': { value: task }, '.paper-tool--pack': pack }[selector] || null;
     },
     querySelectorAll(selector) {
       return selector === '.paper-tool-copy' ? [copy] : selector === '.paper-tool-citation' ? [bib, ris] : [];
@@ -177,7 +183,7 @@ function setup({ text = '正文片段。', clipboardReject = false, legacy = fal
       if (clipboardReject) throw new Error('permission denied');
       writes.push(value);
     } } },
-    window: { isSecureContext: true, getSelection: () => selection, setTimeout(callback) { callback(); } },
+    window: { ResearchCitation: require('../assets/js/citation-source.js'), isSecureContext: true, getSelection: () => selection, setTimeout(callback) { callback(); } },
     Blob,
     URL: class extends URL { static createObjectURL(blob) { if (downloadFails) throw new Error('download blocked'); blobs.push(blob); return 'blob:test'; } static revokeObjectURL() {} },
   });
@@ -288,4 +294,40 @@ test('toolbar assets contain no service links, navigation or networking code', (
   const template = readFileSync(join(repo, 'layouts/partials/paper_toolbar.html'), 'utf8');
   assert.doesNotMatch(script + template, /43128|companion|pageExcerpt|contextUrl|本机|paper:rethink|window\.open|window\.location/);
   assert.doesNotMatch(script, /innerHTML|\b(?:fetch|XMLHttpRequest|WebSocket|EventSource|sendBeacon)\b/);
+});
+
+test('modern prompt uses task, verified version and captured heading; manual edits clear stale locators; pack downloads actual content', async () => {
+  const citationRecord = { title: 'Modern', identityStatus: 'verified', sourceKind: 'arxiv', paperKey: 'arxiv:2609.01234', arxivId: '2609.01234v2', pageUrl: 'https://example.test/posts/paper/', authors: ['A'], date: '2026-09-05' };
+  const ui = setup({ text: '', citationRecord, task: 'verify' });
+  ui.select('Table 2 的结果需要核验。');
+  await ui.handlers['prompt:click']();
+  assert.match(ui.writes[0], /逐条核对.*证据/);
+  assert.match(ui.writes[0], /#conditions/);
+  assert.match(ui.writes[0], /2609\.01234v2/);
+  ui.field.value = '手动修改'; ui.handlers['field:input']();
+  await ui.handlers['prompt:click']();
+  assert.doesNotMatch(ui.writes[1], /#conditions/);
+  ui.handlers['pack:click']();
+  assert.equal(ui.downloads[0].filename, 'research-pack.md');
+  const text = await ui.blobs[0].text();
+  assert.match(text, /本页已有导读文本/);
+  assert.match(text, /手动修改/);
+  assert.match(text, /https:\/\/official.test\/project/);
+  ui.handlers['bib:click']();
+  assert.match(await ui.blobs[1].text(), /author = \{A\}/);
+});
+
+test('verified conference citation exposes actual authors/date/DOI and cannot import unrelated body identifiers', () => {
+  const html = renderFixture('title: "Conference Full"\ndate: 2026-09-05\npaper_digest_page_type: paper\npaper_digest_source_kind: conference\npaper_digest_paper_id: "conference:isca:2026:paper:full"\npaper_digest_conference_record_url: "https://official.test/full"\npaper_digest_conference_pdf_url: "https://official.test/full.pdf"\npaper_digest_authors: [{name: "A Researcher"}]\npaper_digest_citation_date: "2026-01-15"\npaper_digest_doi: "10.1234/full"', '[Related](https://arxiv.org/abs/2609.99999)');
+  assert.match(html, /name=citation_author content="A Researcher"/);
+  assert.match(html, /name=citation_date content="?2026\/01\/15/);
+  assert.match(html, /name=citation_doi content="?10\.1234\/full/);
+  assert.doesNotMatch(html, /name=citation_arxiv_id|data-paper-arxiv-id/);
+  assert.match(html, /data-reading-bookmark/);
+});
+
+test('invalid explicit citation dates are omitted instead of borrowing the blog publication date', () => {
+  const html = renderFixture(frontmatter + '\npaper_digest_citation_date: "2026-02-30"');
+  assert.doesNotMatch(html, /name=citation_date/);
+  assert.match(html, /作者与出版日期未提供/);
 });

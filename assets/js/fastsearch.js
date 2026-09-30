@@ -160,7 +160,8 @@ function taxonomyAliases(concepts, byId) {
 function loadIndex() {
   function read() {
     if (window.ResearchSearchIndex) {
-      return window.ResearchSearchIndex.load(indexUrl.href, { origin: window.location.origin, basePath: siteBasePath });
+      return window.ResearchSearchIndex.load(indexUrl.href, { origin: window.location.origin, basePath: siteBasePath,
+        onProgress: progress => { if (progress.phase === 'shards') status.textContent = '正在校验搜索索引：' + progress.completed + ' / ' + progress.total + ' 份'; } });
     }
     // Older cached pages and small Hugo fixtures still use the array contract.
     return fetch(indexUrl, { credentials: 'same-origin' }).then((response) => {
@@ -176,16 +177,26 @@ function loadIndex() {
   return read();
 }
 
-loadIndex()
+let loadingIndex = false;
+function startLoad() {
+if (loadingIndex) return;
+loadingIndex = true; status.textContent = '正在载入搜索索引…';
+return loadIndex()
   .then((data) => {
     if (!Array.isArray(data)) throw new Error('Search index must be an array');
     return fetch(new URL('data/taxonomy-registry.json', indexUrl), { credentials: 'same-origin' })
       .then((response) => (response && response.ok ? response.json() : null))
       .catch(() => null)
-      .then((registry) => ({ data, registry }));
+      .then(registry => fetch(new URL('data/taxonomy-catalog.json', indexUrl), { credentials: 'same-origin' })
+        .then(response => response && response.ok ? response.json() : null).catch(() => null)
+        .then(catalog => ({ data, registry, catalog })));
   })
   .then((payload) => {
-    const { data, registry } = payload;
+    const { data, registry, catalog } = payload;
+    let graph = null;
+    if (window.ResearchTaxonomy && registry) {
+      try { graph = window.ResearchTaxonomy.createRegistry(registry, catalog); } catch (_) {}
+    }
     const options = {
       isCaseSensitive: params.fuseOpts?.iscasesensitive ?? false,
       shouldSort: params.fuseOpts?.shouldsort ?? true,
@@ -197,13 +208,18 @@ loadIndex()
     };
     const byId = registryIndex(registry);
     const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {
-      const aliases = taxonomyAliases(item.taxonomyConcepts, byId);
+      const signedRegistry = graph && (graph.versions[item.taxonomyRegistrySha256]
+        || (!graph.hasVersionCatalog && !item.taxonomyRegistrySha256 ? graph : null));
+      const aliases = graph ? signedRegistry ? taxonomyAliases(graph.resolveRecord(item).concepts,
+        new Map(Object.entries(signedRegistry.byId))) : [] : taxonomyAliases(item.taxonomyConcepts, byId);
       return aliases.length ? { ...item, taxonomyAliases: aliases } : item;
     });
     fuse = new Fuse(entries, options);
+    loadingIndex = false;
     search();
   })
   .catch(() => {
+    loadingIndex = false;
     clearResults();
     status.textContent = '搜索暂时不可用';
     addText(results, 'li', 'post-entry', '搜索索引暂时无法载入，请稍后重试。');
@@ -213,7 +229,12 @@ loadIndex()
     link.textContent = '前往归档浏览';
     fallback.appendChild(link);
     results.appendChild(fallback);
+    const retryItem = document.createElement('li');
+    const retry = document.createElement('button'); retry.type = 'button'; retry.className = 'rw-action'; retry.textContent = '重新载入搜索索引';
+    retry.addEventListener('click', startLoad); retryItem.appendChild(retry); results.appendChild(retryItem);
   });
+}
+startLoad();
 
 input.addEventListener('input', search);
 input.addEventListener('search', search);

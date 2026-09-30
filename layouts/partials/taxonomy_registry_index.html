@@ -1,6 +1,8 @@
 {{- $registry := index hugo.Data "taxonomy-registry" | default dict -}}
-{{- $byId := dict -}}
+{{- if reflect.IsMap . }}{{ $registry = . }}{{ end -}}
+{{- $lookup := newScratch -}}
+{{- $lookup.Set "nodes" dict -}}
 {{- range ($registry.concepts | default slice) -}}
-  {{- $byId = merge $byId (dict .id .) -}}
+  {{- $lookup.SetInMap "nodes" .id . -}}
 {{- end -}}
-{{- return $byId -}}
+{{- return ($lookup.Get "nodes") -}}

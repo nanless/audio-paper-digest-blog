@@ -1,0 +1,49 @@
+{{- /* One shared identity catalog and inverted concept index, never a per-page full-site scan. */ -}}
+{{- $groups := newScratch -}}
+{{- $groups.Set "records" dict -}}
+{{- range site.RegularPages -}}
+  {{- $metadata := partial "research_metadata.html" . -}}
+  {{- if eq $metadata.pageType "paper" -}}
+    {{- $identity := partial "research_identity.html" . -}}
+    {{- $ids := slice -}}
+    {{- $nodes := newScratch -}}
+    {{- $nodes.Set "labels" dict -}}
+    {{- range (partial "taxonomy_valid_records.html" .) -}}
+      {{- if in (slice "task" "method" "setting") .facet -}}
+        {{- $ids = union $ids (slice .id) -}}
+        {{- $nodes.SetInMap "labels" .id (dict "facet" .facet "zh" .zh) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $ids -}}
+      {{- range (.Params.tags | default slice) -}}
+        {{- $id := printf "legacy:%s" . -}}
+        {{- $ids = union $ids (slice $id) -}}
+        {{- $nodes.SetInMap "labels" $id (dict "facet" "legacy" "zh" .) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $page := . -}}
+    {{- with index ($groups.Get "records") $identity -}}
+      {{- $ids = union .ids $ids -}}
+      {{- range $id, $node := .nodes }}{{ $nodes.SetInMap "labels" $id $node }}{{ end -}}
+      {{- if ge .page.Date $page.Date }}{{ $page = .page }}{{ end -}}
+    {{- end -}}
+    {{- $groups.SetInMap "records" $identity (dict "identity" $identity "page" $page "ids" $ids "nodes" ($nodes.Get "labels")) -}}
+  {{- end -}}
+{{- end -}}
+{{- $index := newScratch -}}
+{{- $index.Set "concepts" dict -}}
+{{- $index.Set "names" slice -}}
+{{- range $identity, $record := ($groups.Get "records") -}}
+  {{- range $record.ids -}}
+    {{- $bucketKey := printf "bucket:%s" . -}}
+    {{- if not ($index.Get $bucketKey) -}}
+      {{- $index.Set $bucketKey dict -}}
+      {{- $index.Add "names" . -}}
+    {{- end -}}
+    {{- $index.SetInMap $bucketKey $identity true -}}
+  {{- end -}}
+{{- end -}}
+{{- range ($index.Get "names") -}}
+  {{- $index.SetInMap "concepts" . ($index.Get (printf "bucket:%s" .)) -}}
+{{- end -}}
+{{- return (dict "records" ($groups.Get "records") "concepts" ($index.Get "concepts")) -}}

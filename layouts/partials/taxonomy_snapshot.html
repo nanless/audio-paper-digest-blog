@@ -1,0 +1,21 @@
+{{- $memoKey := "research-page:taxonomy_snapshot:v1" -}}
+{{- $memoValue := .Store.Get $memoKey -}}
+{{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
+{{- /* Exact signed SHA selects historical semantics; never guess from labels. */ -}}
+{{- $current := index hugo.Data "taxonomy-registry" | default dict -}}
+{{- $catalog := index hugo.Data "taxonomy-catalog" | default dict -}}
+{{- $sha := .Params.paper_digest_taxonomy_registry_sha256 | default "" -}}
+{{- $selected := dict -}}
+{{- if $sha -}}
+  {{- if eq $sha $current.registrySha256 }}{{ $selected = $current }}{{ end -}}
+  {{- range ($catalog.snapshots | default slice) -}}
+    {{- if eq .registrySha256 $sha }}{{ $selected = . }}{{ end -}}
+  {{- end -}}
+{{- else if not $catalog.contract -}}
+  {{- $selected = $current -}}
+{{- end -}}
+{{- $memoValue = $selected -}}
+{{- .Store.Set $memoKey $memoValue -}}
+{{- .Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (.Store.Get $memoKey) -}}

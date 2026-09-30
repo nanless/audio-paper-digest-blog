@@ -1,61 +1,28 @@
-{{- $basePattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})$` -}}
-{{- $versionedPattern := `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})v[1-9][0-9]*$` -}}
-{{- $baseID := .Params.paper_digest_arxiv_id | default "" -}}
-{{- $versionedID := .Params.paper_digest_arxiv_versioned_id | default "" -}}
-{{- if not (findRE $basePattern $baseID 1) -}}
-  {{- $baseID = "" -}}
-  {{- $versionedID = "" -}}
-  {{- $legacyMatches := slice -}}
-  {{- if ne .Params.paper_digest_source_kind "conference" -}}
-    {{- $legacyMatches = findRE `arxiv\.org/(abs|html|pdf)/([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?` .RawContent 1 -}}
-  {{- end -}}
-  {{- if gt (len $legacyMatches) 0 -}}
-    {{- $legacyID := replaceRE `^.*?/(abs|html|pdf)/` "" (index $legacyMatches 0) -}}
-    {{- if findRE $versionedPattern $legacyID 1 -}}
-      {{- $versionedID = $legacyID -}}
-      {{- $baseID = replaceRE `v[1-9][0-9]*$` "" $legacyID -}}
-    {{- else if findRE $basePattern $legacyID 1 -}}
-      {{- $baseID = $legacyID -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-{{- $resolvedID := $baseID -}}
-{{- if and (findRE $versionedPattern $versionedID 1) (eq (replaceRE `v[1-9][0-9]*$` "" $versionedID) $baseID) -}}
-  {{- $resolvedID = $versionedID -}}
-{{- end -}}
-{{- $hasID := and $baseID (findRE $basePattern $baseID 1) -}}
-<section class="paper-tools{{ if not $hasID }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ .Params.paper_digest_original_title | default .Title | plainify }}" data-paper-url="{{ .Permalink }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
-  <div class="paper-tools__heading">
-    <div>
-      <span class="paper-tools__eyebrow">Reading tools</span>
-      <h2 id="paper-tools-title">论文工具</h2>
-    </div>
-    <p>阅读原文 · 保存引用 · 整理提问</p>
+{{- $source := partial "citation_source.html" . -}}
+{{- $baseID := replaceRE `v[1-9][0-9]*$` "" $source.arxivId -}}
+{{- $resolvedID := $source.arxivId -}}
+{{- $hasID := and (eq $source.identityStatus "verified") $resolvedID -}}
+{{- $absURL := $source.url -}}{{- $pdfURL := $source.pdfUrl -}}
+{{- $citationTitle := $source.title -}}
+{{- $sidecars := .Params.paper_digest_sidecars -}}
+{{- $siteRoot := (urls.Parse site.BaseURL).Path -}}{{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
+{{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
+{{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+{{- $citationFiles := dict -}}
+<section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-citation-record="{{ $source | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
+  <script type="application/json" class="paper-tools__citation-record">{{ $source | jsonify | safeJS }}</script>
+  <div class="paper-tools__heading"><h2 id="paper-tools-title">论文工具</h2><p>原文 · 收藏 · 整理提问</p></div>
+  <div class="paper-tools__primary-actions">
+    {{- with $source.url }}<a class="paper-tool paper-tool--primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $hasID }}打开 arXiv{{ else }}官方论文页面{{ end }} ↗</a>{{ end }}
+    {{- with $source.pdfUrl }}<a class="paper-tool paper-tool--download" href="{{ . }}" target="_blank" rel="noopener noreferrer">阅读 / 保存 PDF</a>{{ end }}
+    <button class="paper-tool" type="button" data-reading-bookmark data-paper-key="{{ $source.paperKey }}" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-identity-status="{{ $source.identityStatus }}" hidden>收藏</button>
+    <label class="paper-tools__reading-status" hidden>阅读状态<select data-reading-status data-paper-key="{{ $source.paperKey }}" data-paper-url="{{ .Permalink }}"><option value="unread">待读</option><option value="reading">阅读中</option><option value="read">已读</option></select></label>
   </div>
-  {{- if $hasID -}}
-    {{- $absURL := printf "https://arxiv.org/abs/%s" $resolvedID -}}
-    {{- $pdfURL := printf "https://arxiv.org/pdf/%s.pdf" $resolvedID -}}
-    {{- $citationTitle := .Params.paper_digest_original_title | default .Title | plainify -}}
-    {{- $sidecars := .Params.paper_digest_sidecars -}}
-    {{- $parsedBaseURL := urls.Parse site.BaseURL -}}
-    {{- $siteRoot := $parsedBaseURL.Path -}}
-    {{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
-    {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
-    {{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
-    {{- $citationFiles := dict -}}
-  <div class="paper-tools__groups">
-    <div class="paper-tools__group" aria-label="论文原文">
-      <a class="paper-tool paper-tool--primary" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开 arXiv <span aria-hidden="true">↗</span></a>
-      <a class="paper-tool paper-tool--download" href="{{ $pdfURL }}" target="_blank" rel="noopener noreferrer" aria-describedby="paper-pdf-note">阅读 / 保存 PDF</a>
-      <span id="paper-pdf-note" class="paper-tools__note">打开官方 PDF 后，点击浏览器的下载按钮保存；手机可用“分享 → 存储到文件”。</span>
-    </div>
-    <div class="paper-tools__group" aria-label="复制论文标识">
-      <span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span>
-      <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>
-      {{- if ne $resolvedID $baseID }}
-      <button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>
-      {{- end }}
-    </div>
+  {{- if ne $source.identityStatus "verified" }}<p class="paper-tools__note">本页论文身份尚待核实；本页没有可验证的 arXiv 标识。可收藏导读与整理提问，不根据正文引用自动生成本篇引用。</p>{{ end }}
+  {{- if eq $source.identityStatus "verified" }}
+  <details class="paper-tools__help"><summary>引用、论文标识与 Zotero</summary>
+    {{- if $hasID }}
+    <div class="paper-tools__group"><span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span><button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>{{ if ne $resolvedID $baseID }}<button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>{{ end }}</div>
     <div class="paper-tools__group" aria-label="下载引用">
       {{- if and (eq .Params.paper_digest_workbench_contract "researcher-workbench-v1") (reflect.IsMap $sidecars) }}
         {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
@@ -75,43 +42,27 @@
       {{- end }}
       <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">在 arXiv 查看引用信息</a>
       {{- if or (not (index $citationFiles "citation.bib")) (not (index $citationFiles "citation.ris")) }}
-      <span class="paper-tools__note">简要引用由浏览器根据本站标题、arXiv ID 和官方链接生成；作者与出版日期未提供，请到 arXiv 核对补全。</span>
+      <span class="paper-tools__note">{{ if and (eq (len $source.authors) 0) (not $source.date) }}简要引用使用本站题目、arXiv ID 和官方链接；作者与出版日期未提供，请到 arXiv 核对补全。{{ else }}引用仅包含有来源记录的作者、日期与论文标识；缺失字段请核对官方记录补全。{{ end }}</span>
       {{- end }}
     </div>
-  </div>
-  <details class="paper-tools__help">
-    <summary>保存到 Zotero</summary>
-    <ol>
-      <li>在电脑浏览器安装 <a href="https://www.zotero.org/download/connectors" target="_blank" rel="noopener noreferrer">Zotero Connector</a>，并打开 Zotero 桌面端。</li>
-      <li><a href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">打开这篇论文的 arXiv 页面</a>，点击浏览器工具栏中的 Zotero Connector 图标保存。</li>
-    </ol>
-    <p>网页不能代你点击浏览器扩展。也可下载 RIS / BibTeX，然后在 Zotero 中选择“文件 → 导入”；简要引用需补全作者和日期。</p>
+
+    {{- else }}
+    <div class="paper-tools__group">{{ range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}<button class="paper-tool paper-tool-citation" type="button" data-citation-format="{{ $format }}" hidden>下载 {{ $label }}</button>{{ end }}</div>
+    <p class="paper-tools__note">引用仅包含当前有来源记录的字段；缺失作者、出版日期或 DOI 时保持缺失。</p>
+    {{- end }}
+    <details><summary>保存到 Zotero</summary><ol><li>在电脑浏览器安装 <a href="https://www.zotero.org/download/connectors" target="_blank" rel="noopener noreferrer">Zotero Connector</a>，并打开 Zotero 桌面端。</li>{{ with $source.url }}<li><a href="{{ . }}" target="_blank" rel="noopener noreferrer">打开官方论文页面</a>，点击 Connector 图标保存。</li>{{ end }}</ol><p>网页不能代你点击浏览器扩展。也可下载 RIS / BibTeX，然后在 Zotero 中选择“文件 → 导入”；缺失字段请核对官方记录补全。</p></details>
   </details>
-  {{- else }}
-  {{- if eq .Params.paper_digest_source_kind "conference" }}
-  <div class="paper-tools__groups">
-    <div class="paper-tools__group" aria-label="会议论文原文">
-      {{- range $entry := slice (dict "url" (.Params.paper_digest_conference_record_url | default "") "label" "官方论文页面") (dict "url" (.Params.paper_digest_conference_pdf_url | default "") "label" "官方 PDF") }}
-      {{- if findRE `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` .url 1 }}
-      <a class="paper-tool paper-tool--primary" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }} <span aria-hidden="true">↗</span></a>
-      {{- end }}
-      {{- end }}
-    </div>
-  </div>
   {{- end }}
-  <p class="paper-tools__note">本页没有可验证的 arXiv 标识；你仍可选择正文，整理并复制 AI 提问。</p>
-  {{- end }}
-  <details class="paper-tools__help paper-tools__selection-panel">
-    <summary>复制 AI 提问</summary>
-    <p>先在正文选择一段文字，再打开这里；也可直接粘贴。本站只整理提问，不请求 AI、不上传选段。复制后粘贴到你使用的 AI 工具。</p>
-    <label for="paper-selected-text">待解释的段落（最多 2,000 字符）</label>
-    <textarea id="paper-selected-text" class="paper-tools__selected-text" rows="4" maxlength="2000" placeholder="选择正文，或在此粘贴一段文字"></textarea>
-    <button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制 AI 提问</button>
-    <noscript><p>浏览器未启用 JavaScript。请手动复制正文并粘贴到你使用的 AI 工具，可以问：“请解释这段文字的术语、机制与前提，并区分事实与推测。”</p></noscript>
+  <details class="paper-tools__help paper-tools__selection-panel"><summary>复制 AI 提问</summary>
+    <p>选择正文后打开这里，或粘贴选段。本站只整理提问，不请求 AI、不上传选段。</p>
+    <div class="paper-tools__prompt-options"><label>提问任务<select class="paper-tools__prompt-task"><option value="mechanism">解释术语与机制</option><option value="verify">核对结论与证据</option><option value="limitations">寻找局限与适用边界</option></select></label><label>选段来源<select class="paper-tools__selection-source"><option value="blog">本站导读 / 用户粘贴，未核验为原论文逐字引用</option><option value="original">用户声明来自原文，本站未核验</option></select></label></div>
+    <label for="paper-selected-text">待讨论的段落（最多 2,000 字符）</label><textarea id="paper-selected-text" class="paper-tools__selected-text" rows="4" maxlength="2000" placeholder="选择正文，或粘贴文字"></textarea>
+    <p class="paper-tools__selection-context"></p><button class="paper-tool paper-tool--selection-copy" type="button" hidden>复制 AI 提问</button>
+    <noscript><p>浏览器未启用 JavaScript。请手动复制正文并粘贴到 AI 工具，注明导读与原文区别，并要求核查证据。</p></noscript>
   </details>
+  <details class="paper-tools__help"><summary>导出本篇研究资料包</summary><p>导出本页已有段落、原文链接、可得引用字段与个人选段。导读内容与原论文证据分开标明，不自动补造信息。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载 Markdown 资料包</button></details>
   <button class="paper-tool paper-tool--selection-quick" type="button" hidden>整理选段提问 ↑</button>
-  <textarea class="paper-tools__copy-fallback" aria-label="可手动复制的文本" rows="5" readonly hidden></textarea>
-  <p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <textarea class="paper-tools__copy-fallback" aria-label="可手动复制的文本" rows="5" readonly hidden></textarea><p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
 </section>
-{{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}
-<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $helper := resources.Get "js/citation-source.js" | minify | fingerprint -}}<script defer src="{{ $helper.RelPermalink }}" integrity="{{ $helper.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $script := resources.Get "js/paper-toolbar.js" | js.Build | minify | fingerprint -}}<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
