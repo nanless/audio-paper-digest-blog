@@ -1,0 +1,6 @@
+{{- $registry := index hugo.Data "taxonomy-registry" | default dict -}}
+{{- $byId := dict -}}
+{{- range ($registry.concepts | default slice) -}}
+  {{- $byId = merge $byId (dict .id .) -}}
+{{- end -}}
+{{- return $byId -}}

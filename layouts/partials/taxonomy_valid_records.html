@@ -1,0 +1,14 @@
+{{- $valid := slice -}}
+{{- $seen := slice -}}
+{{- if eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1" -}}
+  {{- $byId := partialCached "taxonomy_registry_index.html" "global" -}}
+  {{- range $record := (.Params.paper_digest_taxonomy_concepts | default slice) -}}
+    {{- with index $byId $record.id -}}
+      {{- if and (eq .id $record.id) (eq .facet $record.facet) (eq .zh $record.label) (ne (.status | default "active") "deprecated") (not (in $seen .id)) -}}
+        {{- $valid = $valid | append . -}}
+        {{- $seen = $seen | append .id -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $valid -}}

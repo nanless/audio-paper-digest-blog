@@ -1,0 +1,106 @@
+'use strict';
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const { execFileSync } = require('node:child_process');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const core = require('../assets/js/taxonomy-core');
+
+// Render the real index and metadata/count partials against a tiny isolated
+// content set. No production content, generated files or source registry change.
+test('Hugo metadata/counts and browser queries share taxonomy and identity boundaries', t => {
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-taxonomy-contract-'));
+  t.after(() => fs.rmSync(temporary, { recursive: true, force: true }));
+  const repository = path.resolve(__dirname, '..');
+  for (const directory of ['content/posts', 'data', 'layouts/partials', 'layouts/_default']) {
+    fs.mkdirSync(path.join(temporary, directory), { recursive: true });
+  }
+  for (const file of ['layouts/_default/index.json', 'layouts/partials/research_metadata.html',
+    'layouts/partials/taxonomy_concept_counts.html', 'layouts/partials/taxonomy_valid_records.html',
+    'layouts/partials/taxonomy_registry_index.html']) {
+    fs.copyFileSync(path.join(repository, file), path.join(temporary, file));
+  }
+  fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
+  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ .Title }}');
+  fs.writeFileSync(path.join(temporary, 'hugo.yaml'), [
+    'baseURL: https://example.test/blog/', 'buildFuture: true',
+    'disableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]',
+    'outputs:', '  home: [HTML, JSON]', '',
+  ].join('\n'));
+  const concept = (id, zh, ancestors = [], status = 'active') => ({ id, facet: id.split('.')[0],
+    zh, en: zh, aliases: [], ancestorIds: ancestors, status });
+  const snapshot = { contract: 'paper-taxonomy-registry-snapshot-v1', concepts: [
+    concept('task.parent', '父方向'), concept('task.left', '左子方向', ['task.parent']),
+    concept('task.right', '右子方向', ['task.parent']), concept('task.other', '其他方向'),
+    concept('task.old', '已弃用方向', [], 'deprecated'), concept('method.first', '第一方法'),
+    concept('method.second', '第二方法'), concept('method.child', '下级方法', ['method.first']),
+    concept('method.deep', '更细方法', ['method.first', 'method.child']),
+  ] };
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-registry.json'), JSON.stringify(snapshot));
+  const graph = core.createRegistry(snapshot);
+  function article(slug, ids, parameters = {}) {
+    const frontmatter = { title: slug, date: '2026-09-30', paper_digest_page_type: 'paper',
+      paper_digest_taxonomy_contract: core.contract,
+      paper_digest_taxonomy_concepts: ids.map(id => ({ id, facet: graph.byId[id].facet, label: graph.byId[id].zh })),
+      ...parameters };
+    fs.writeFileSync(path.join(temporary, 'content/posts', slug + '.md'),
+      '---\n' + JSON.stringify(frontmatter) + '\n---\n# ' + slug + '\nA reading.\n');
+  }
+  article('left-reading', ['task.left', 'method.first'], { paper_digest_arxiv_id: '2609.12345',
+    paper_digest_primary_task: '左子方向', paper_digest_primary_method: '第一方法' });
+  article('right-reading', ['task.right', 'method.second'], { paper_digest_arxiv_id: '2609.12345v2',
+    paper_digest_primary_task: '右子方向', paper_digest_primary_method: '第二方法' });
+  article('conference-first', ['task.other'], { paper_digest_source_kind: 'conference',
+    paper_digest_paper_id: 'conference:icml:2026:openreview-forum-id:AbC' });
+  article('conference-second', ['task.other'], { paper_digest_source_kind: 'conference',
+    paper_digest_paper_id: 'conference:icml:2026:openreview-forum-id:AbC' });
+  article('unknown-first', ['task.other'], { title: 'Identical unknown title' });
+  article('unknown-second', ['task.other'], { title: 'Identical unknown title' });
+  article('bad-conference-first', ['task.other'], { paper_digest_source_kind: 'conference',
+    paper_digest_paper_id: 'conference:bad id' });
+  article('bad-conference-second', ['task.other'], { paper_digest_source_kind: 'conference',
+    paper_digest_paper_id: 'conference:bad id' });
+  article('2026-09-30', ['task.parent'], { paper_digest_page_type: 'index', paper_digest_arxiv_id: '2609.12345' });
+  article('conference-cvpr-2026', ['task.parent'], { paper_digest_page_type: 'index', paper_digest_arxiv_id: '2609.12345' });
+  article('legacy', ['task.parent'], { paper_digest_taxonomy_contract: '', tags: ['父方向'] });
+  article('future-contract', ['task.parent'], { paper_digest_taxonomy_contract: 'future-v2' });
+  article('inferred-2609-12345', ['task.other']);
+  article('first-tag-is-not-primary', ['task.other'], { tags: ['其他方向'] });
+  article('wrong-facet', [], { paper_digest_taxonomy_concepts: [{ id: 'task.parent', facet: 'method', label: '父方向' }],
+    paper_digest_primary_task: '父方向' });
+  article('wrong-label', [], { paper_digest_taxonomy_concepts: [{ id: 'task.parent', facet: 'task', label: 'obsolete alias' }],
+    paper_digest_primary_task: 'obsolete alias' });
+  article('deprecated', ['task.old'], { paper_digest_primary_task: '已弃用方向' });
+  article('broad-and-deep', ['method.first', 'method.child', 'method.deep']);
+  execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  const records = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json'), 'utf8'));
+  const server = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html'), 'utf8'));
+  const groups = core.groupPapers(records, graph);
+  const browser = core.counts(groups, graph);
+  const find = slug => records.find(record => record.title === slug);
+  assert.equal(find('right-reading').arxivId, '2609.12345');
+  assert.equal(find('right-reading').identityStatus, 'verified');
+  assert.equal(find('inferred-2609-12345').identityStatus, 'inferred');
+  assert.equal(find('bad-conference-first').identityStatus, 'unknown');
+  assert.equal(find('2026-09-30').pageType, 'daily');
+  assert.equal(find('conference-cvpr-2026').pageType, 'conference');
+  for (const slug of ['legacy', 'first-tag-is-not-primary', 'wrong-facet', 'wrong-label', 'deprecated']) {
+    assert.equal(find(slug).primaryTaskId, undefined, slug + ' must not inherit a primary concept');
+  }
+  const activeServer = server.filter(item => core.isActive(graph.byId[item.id]));
+  assert.deepEqual(activeServer.map(item => ({ id: item.id, direct: item.direct, subtree: item.sub })), browser.concepts);
+  const parent = activeServer.find(item => item.id === 'task.parent');
+  assert.equal(parent.direct, 0);
+  assert.equal(parent.sub, 1, 'two descendant readings of one verified paper count once');
+  const broadMethod = activeServer.find(item => item.id === 'method.first');
+  assert.equal(broadMethod.direct, 2);
+  assert.equal(broadMethod.sub, 2, 'direct broad label and multiple nested descendants share one paper increment');
+  assert.equal(activeServer.find(item => item.id === 'method.child').sub, 1);
+  assert.equal(core.query(groups, { facets: { task: ['task.left'], method: ['method.second'] } }, graph).length, 0);
+  assert.equal(core.query(groups, { facets: { task: ['task.left'], method: ['method.first'] } }, graph).length, 1);
+  assert.equal(core.query(groups, { facets: { task: ['task.parent'] } }, graph)[0].articles.length, 2);
+  assert.equal(activeServer.find(item => item.id === 'task.other').sub, 7,
+    'canonical conference deduplicates while unknown and inferred pages retain independent identities');
+});

@@ -69,8 +69,9 @@ function render(matches) {
     header.className = 'entry-header';
     addText(header, 'h2', '', resultTitle(item));
     listItem.appendChild(header);
-    if (header && item.originalTitle && item.originalTitle !== resultTitle(item)) {
-      addText(listItem, 'div', 'entry-content', item.originalTitle);
+    const originalTitle = item.originalTitle || item.title;
+    if (header && originalTitle && originalTitle !== resultTitle(item)) {
+      addText(listItem, 'div', 'entry-content', originalTitle);
     }
     addText(listItem, 'p', 'entry-content', String(item.summary || '').slice(0, 220));
     const score = String(item.score ?? '');
@@ -156,11 +157,26 @@ function taxonomyAliases(concepts, byId) {
   return terms;
 }
 
-fetch(indexUrl, { credentials: 'same-origin' })
-  .then((response) => {
-    if (!response.ok) throw new Error(`Search index HTTP ${response.status}`);
-    return response.json();
-  })
+function loadIndex() {
+  function read() {
+    if (window.ResearchSearchIndex) {
+      return window.ResearchSearchIndex.load(indexUrl.href, { origin: window.location.origin, basePath: siteBasePath });
+    }
+    // Older cached pages and small Hugo fixtures still use the array contract.
+    return fetch(indexUrl, { credentials: 'same-origin' }).then((response) => {
+      if (!response.ok) throw new Error(`Search index HTTP ${response.status}`);
+      return response.json();
+    });
+  }
+  // PaperMod queues fastsearch in the head; the page-owned loader follows it.
+  if (!window.ResearchSearchIndex && document.readyState === 'interactive') {
+    return new Promise((resolve, reject) => document.addEventListener('DOMContentLoaded',
+      () => read().then(resolve, reject), { once: true }));
+  }
+  return read();
+}
+
+loadIndex()
   .then((data) => {
     if (!Array.isArray(data)) throw new Error('Search index must be an array');
     return fetch(new URL('data/taxonomy-registry.json', indexUrl), { credentials: 'same-origin' })
@@ -177,7 +193,7 @@ fetch(indexUrl, { credentials: 'same-origin' })
       threshold: params.fuseOpts?.threshold ?? 0.4,
       distance: params.fuseOpts?.distance ?? 1000,
       ignoreLocation: true,
-      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'arxivId', 'taxonomyAliases']
+      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'method', 'categories', 'arxivId', 'taxonomyAliases']
     };
     const byId = registryIndex(registry);
     const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {

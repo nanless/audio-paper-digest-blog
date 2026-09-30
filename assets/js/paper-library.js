@@ -95,7 +95,10 @@
     var taxonomy = taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
-      type: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
+      type: type, pageType: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
+      paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
+      taxonomyContract: plainText(item.taxonomyContract), taxonomyConcepts: Array.isArray(item.taxonomyConcepts) ? item.taxonomyConcepts : [],
+      primaryTaskId: plainText(item.primaryTaskId), primaryMethodId: plainText(item.primaryMethodId),
       searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId]
         .concat(tags, categories, taxonomy).join(' '))
     };
@@ -128,6 +131,63 @@
     }
   }
 
+  function directionState(params, graph) {
+    var facets = Object.create(null);
+    var error = '';
+    params.getAll('concept').forEach(function (id) {
+      var node = graph && graph.byId[id];
+      if (!node || node.status === 'deprecated') { error = '链接中的研究方向无法在当前目录确认：' + id; return; }
+      if (!facets[node.facet]) facets[node.facet] = [];
+      if (!facets[node.facet].includes(id)) facets[node.facet].push(id);
+    });
+    return { facets: facets, scope: params.get('scope') === 'direct' ? 'direct' : 'subtree',
+      role: params.get('role') === 'primary' ? 'primary' : 'any', error: error,
+      requestedIds: params.getAll('concept') };
+  }
+
+  function selectedIds(state) {
+    return Object.keys(state.facets || {}).flatMap(function (facet) { return state.facets[facet]; });
+  }
+
+  function cloneDirections(state) {
+    var facets = Object.create(null);
+    Object.keys(state.facets || {}).forEach(function (facet) { facets[facet] = state.facets[facet].slice(); });
+    return { facets: facets, scope: state.scope, role: state.role, error: state.error || '',
+      requestedIds: (state.requestedIds || []).slice() };
+  }
+
+  // Group only authenticated identities. Article-level keyword/year eligibility
+  // is evaluated first, but every guide for an eligible paper remains available.
+  function libraryResults(entries, groups, state, directions, graph, api) {
+    var eligible = filterEntries(entries, state);
+    if (directions.error) return [];
+    if (!api || !graph) return selectedIds(directions).length ? [] : eligible;
+    var ranks = new Map(eligible.map(function (entry, index) { return [entry.permalink, index]; }));
+    // Build query groups from eligible guides, so a keyword/year hit in one
+    // article cannot borrow classifications from another guide for that paper.
+    var candidates = api.groupPapers(eligible, graph);
+    var originalGroups = new Map(groups.map(function (group) { return [group.key, group]; }));
+    var hasDirection = selectedIds(directions).length > 0;
+    var matched = api.query(candidates, directions, graph).map(function (group) {
+      var original = originalGroups.get(group.key) || group;
+      var matchingArticles = hasDirection ? group.articles.filter(function (article) {
+        return api.query(api.groupPapers([article], graph), directions, graph).length > 0;
+      }) : group.articles;
+      var representative = matchingArticles.slice().sort(function (a, b) { return ranks.get(a.permalink) - ranks.get(b.permalink); })[0];
+      var guides = original.articles.slice().sort(function (a, b) {
+        if (a.permalink === representative.permalink) return -1;
+        if (b.permalink === representative.permalink) return 1;
+        return (ranks.has(a.permalink) ? ranks.get(a.permalink) : Infinity)
+          - (ranks.has(b.permalink) ? ranks.get(b.permalink) : Infinity) || b.date.localeCompare(a.date);
+      });
+      return Object.assign({}, representative, { guides: guides, paperGroup: group, rank: ranks.get(representative.permalink) });
+    });
+    if (!hasDirection) eligible.filter(function (entry) { return entry.type !== 'paper'; }).forEach(function (entry) {
+      matched.push(Object.assign({}, entry, { rank: ranks.get(entry.permalink) }));
+    });
+    return matched.sort(function (a, b) { return a.rank - b.rank; });
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       safeSiteUrl: safeSiteUrl,
@@ -136,6 +196,9 @@
       entryDate: entryDate,
       registryIndex: registryIndex,
       taxonomyTerms: taxonomyTerms,
+      directionState: directionState,
+      selectedIds: selectedIds,
+      libraryResults: libraryResults,
     };
   }
 
@@ -151,6 +214,25 @@
   var resultsNode = document.getElementById('library-results');
   var moreButton = document.getElementById('library-more');
   var quickButtons = Array.prototype.slice.call(document.querySelectorAll('[data-query]'));
+  var directionButtons = Array.prototype.slice.call(document.querySelectorAll('[data-concept]'));
+  var panel = document.getElementById('library-direction-panel');
+  var treeNode = document.getElementById('library-direction-tree');
+  var selectedNode = document.getElementById('library-directions');
+  var coverageNode = document.getElementById('library-coverage');
+  var scopeSelect = document.getElementById('library-scope');
+  var roleSelect = document.getElementById('library-role');
+  var directionSearch = document.getElementById('library-direction-search');
+  var draftNode = document.getElementById('library-draft-status');
+  var api = window.ResearchTaxonomy;
+  var graph = null;
+  var registryRecords = Object.create(null);
+  var groups = [];
+  var directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
+  var draft = cloneDirections(directions);
+  var expanded = new Set();
+  var nodeViews = Object.create(null);
+  var facetViews = Object.create(null);
+  var moreFacetView = null;
   var indexUrl;
   try {
     indexUrl = new URL(root.dataset.indexUrl, window.location.href);
@@ -175,17 +257,26 @@
     sortSelect.value = ['newest', 'score', 'title'].includes(params.get('sort')) ? params.get('sort') : 'newest';
     var page = Number(params.get('page'));
     visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
+    directions = directionState(params, graph);
+    draft = cloneDirections(directions);
+    selectedIds(directions).forEach(function (id) {
+      graph.path(id).forEach(function (node) { expanded.add(node.id); });
+    });
   }
 
-  function writeState() {
+  function writeState(push) {
     var params = new URLSearchParams();
     if (queryInput.value.trim()) params.set('q', queryInput.value.trim());
     if (typeSelect.value !== 'paper') params.set('type', typeSelect.value);
     if (yearSelect.value !== 'all') params.set('year', yearSelect.value);
     if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
     if (visibleCount > PAGE_SIZE) params.set('page', Math.ceil(visibleCount / PAGE_SIZE));
+    (directions.error ? directions.requestedIds : selectedIds(directions)).forEach(function (id) { params.append('concept', id); });
+    if (directions.scope === 'direct') params.set('scope', 'direct');
+    if (directions.role === 'primary') params.set('role', 'primary');
     var suffix = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
-    window.history.replaceState(null, '', suffix);
+    var historyMethod = push && window.history.pushState ? 'pushState' : 'replaceState';
+    window.history[historyMethod](null, '', suffix);
   }
 
   function makeResult(entry) {
@@ -219,6 +310,24 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
+    if (entry.guides && entry.guides.length > 1) {
+      var guides = document.createElement('details');
+      guides.className = 'library-result__guides';
+      var guideSummary = document.createElement('summary');
+      guideSummary.textContent = '同一已核实论文的 ' + entry.guides.length + ' 篇解读 / 版本';
+      guides.appendChild(guideSummary);
+      var guideList = document.createElement('ul');
+      entry.guides.forEach(function (guide) {
+        var item = document.createElement('li');
+        var guideLink = document.createElement('a');
+        guideLink.href = guide.permalink;
+        guideLink.textContent = [guide.date, guide.title].filter(Boolean).join(' · ');
+        item.appendChild(guideLink);
+        guideList.appendChild(item);
+      });
+      guides.appendChild(guideList);
+      body.appendChild(guides);
+    }
     article.appendChild(body);
 
     if (entry.score >= 0) {
@@ -247,7 +356,9 @@
         typeSelect.value = 'paper';
         yearSelect.value = 'all';
         sortSelect.value = 'newest';
-        applyFilters();
+        directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
+        draft = cloneDirections(directions);
+        applyFilters(false, true);
         queryInput.focus();
       });
       empty.appendChild(reset);
@@ -258,18 +369,26 @@
       resultsNode.appendChild(fragment);
     }
     countNode.textContent = '找到 ' + filteredEntries.length.toLocaleString('zh-CN') + ' 条，当前显示 ' + visible.length + ' 条';
+    if (graph) {
+      var paperCount = filteredEntries.filter(function (entry) { return entry.type === 'paper'; }).length;
+      var guideCount = filteredEntries.reduce(function (sum, entry) { return sum + (entry.guides ? entry.guides.length : 0); }, 0);
+      var unknownCount = filteredEntries.filter(function (entry) { return entry.paperGroup && !entry.paperGroup.identityVerified; }).length;
+      countNode.textContent += '（' + paperCount + ' 条论文记录，' + guideCount + ' 篇解读；已核身份去重，' + unknownCount + ' 条身份待核单列）';
+    }
     moreButton.hidden = visible.length >= filteredEntries.length;
+    renderDirections();
   }
 
-  function applyFilters(preservePage) {
-    filteredEntries = filterEntries(allEntries, {
+  function applyFilters(preservePage, push, restoring) {
+    filteredEntries = libraryResults(allEntries, groups, {
       query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value
-    });
+    }, directions, graph, api);
     if (preservePage !== true) visibleCount = PAGE_SIZE;
     quickButtons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
     });
-    writeState();
+    directionButtons.forEach(function (button) { button.setAttribute('aria-pressed', String(selectedIds(directions).includes(button.dataset.concept))); });
+    if (!restoring) writeState(push === true);
     render();
   }
 
@@ -283,12 +402,224 @@
     });
   }
 
+  function resultState() {
+    return { query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value };
+  }
+
+  function updateDraft() {
+    if (!draftNode) return;
+    var preview = libraryResults(allEntries, groups, resultState(), draft, graph, api);
+    draftNode.textContent = '待应用：' + selectedIds(draft).length + ' 个方向，预览 ' + preview.length + ' 条结果。';
+    Object.keys(nodeViews).forEach(function (id) { nodeViews[id].checkbox.checked = selectedIds(draft).includes(id); });
+  }
+
+  function revealDirections() {
+    if (!graph) return;
+    var needle = directionSearch ? directionSearch.value.trim() : '';
+    var visible = new Set();
+    if (needle) graph.search(needle).forEach(function (node) {
+      graph.path(node.id).forEach(function (ancestor) { visible.add(ancestor.id); });
+      if (facetViews[node.facet]) facetViews[node.facet].open = true;
+      if (!['task', 'method', 'setting'].includes(node.facet) && moreFacetView) moreFacetView.open = true;
+    });
+    Object.keys(nodeViews).forEach(function (id) {
+      var view = nodeViews[id];
+      view.item.hidden = !!needle && !visible.has(id);
+      var open = !!needle || expanded.has(id);
+      if (view.children) view.children.hidden = !open;
+      if (view.toggle) view.toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  function renderTree() {
+    if (!treeNode) return;
+    treeNode.textContent = '';
+    nodeViews = Object.create(null);
+    facetViews = Object.create(null);
+    if (!graph) { treeNode.textContent = '分类目录暂时不可用，仍可检索关键词。'; return; }
+    var currentGroups = filteredEntries.filter(function (entry) { return entry.paperGroup; }).map(function (entry) { return entry.paperGroup; });
+    var totals = api.counts(currentGroups, graph, directions);
+    var byId = Object.create(null);
+    totals.concepts.forEach(function (count) { byId[count.id] = count; });
+    function treeItem(id) {
+      var node = graph.byId[id];
+      var item = document.createElement('li');
+      var row = document.createElement('div');
+      row.className = 'library-direction-row';
+      var children = graph.children(id).filter(function (child) { return child.status !== 'deprecated'; });
+      var toggle;
+      if (children.length) {
+        toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'library-tree-toggle';
+        toggle.textContent = '▸';
+        toggle.setAttribute('aria-label', '展开或收起 ' + node.zh + ' 的下级方向');
+        toggle.addEventListener('click', function () {
+          if (expanded.has(id)) expanded.delete(id); else expanded.add(id);
+          revealDirections();
+        });
+        row.appendChild(toggle);
+      } else {
+        var spacer = document.createElement('span');
+        spacer.className = 'library-tree-spacer';
+        row.appendChild(spacer);
+      }
+      var label = document.createElement('label');
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = id;
+      checkbox.checked = selectedIds(draft).includes(id);
+      checkbox.addEventListener('change', function () {
+        draft.error = '';
+        draft.requestedIds = [];
+        var ids = draft.facets[node.facet] || [];
+        draft.facets[node.facet] = checkbox.checked ? Array.from(new Set(ids.concat(id))) : ids.filter(function (value) { return value !== id; });
+        updateDraft();
+      });
+      label.appendChild(checkbox);
+      var title = document.createElement('span');
+      title.textContent = node.zh;
+      label.appendChild(title);
+      var count = byId[id] || { direct: 0, subtree: 0 };
+      var counter = document.createElement('small');
+      counter.textContent = count.direct + ' / ' + count.subtree;
+      counter.setAttribute('aria-label', '当前结果中直接标注 ' + count.direct + '，含下级 ' + count.subtree);
+      label.appendChild(counter);
+      row.appendChild(label);
+      item.appendChild(row);
+      var list;
+      if (children.length) {
+        list = document.createElement('ul');
+        children.forEach(function (child) { list.appendChild(treeItem(child.id)); });
+        item.appendChild(list);
+      }
+      nodeViews[id] = { item: item, checkbox: checkbox, toggle: toggle, children: list };
+      return item;
+    }
+    var more = document.createElement('details');
+    moreFacetView = more;
+    more.className = 'library-more-facets';
+    var moreSummary = document.createElement('summary');
+    moreSummary.textContent = '更多分面：信号、应用、研究重点、产物、科学主题、模型家族';
+    more.appendChild(moreSummary);
+    graph.facets.forEach(function (facet, position) {
+      var section = document.createElement('details');
+      section.className = 'library-facet';
+      facetViews[facet.id] = section;
+      section.open = !!(draft.facets[facet.id] && draft.facets[facet.id].length);
+      var heading = document.createElement('summary');
+      heading.textContent = facet.label;
+      section.appendChild(heading);
+      var list = document.createElement('ul');
+      list.className = 'library-direction-list';
+      (graph.rootsByFacet[facet.id] || []).filter(function (id) { return graph.byId[id].status !== 'deprecated'; })
+        .forEach(function (id) { list.appendChild(treeItem(id)); });
+      section.appendChild(list);
+      if (position < 3) treeNode.appendChild(section);
+      else { more.appendChild(section); if (section.open) more.open = true; }
+    });
+    treeNode.appendChild(more);
+    revealDirections();
+  }
+
+  function renderDirections() {
+    if (selectedNode) {
+      selectedNode.textContent = '';
+      if (directions.error) {
+        var error = document.createElement('p');
+        error.textContent = directions.error + '。请清除方向条件后重试。';
+        selectedNode.appendChild(error);
+      } else if (!selectedIds(directions).length) selectedNode.textContent = '未限定方向：关键词检索包含历史页面与新页面。';
+      else {
+        var currentGroups = filteredEntries.filter(function (entry) { return entry.paperGroup; }).map(function (entry) { return entry.paperGroup; });
+        var counts = api.counts(currentGroups, graph, directions).concepts;
+        selectedIds(directions).forEach(function (id) {
+          var node = graph.byId[id];
+          var summary = document.createElement('div');
+          summary.className = 'library-current-direction';
+          var path = document.createElement('strong');
+          path.textContent = graph.path(id).map(function (part) { return part.zh; }).join(' › ');
+          summary.appendChild(path);
+          var definition = document.createElement('p');
+          var source = registryRecords[id] || {};
+          definition.textContent = plainText(source.definition || source.description) || '当前目录尚未收录该方向的定义。';
+          summary.appendChild(definition);
+          var count = counts.find(function (value) { return value.id === id; }) || { direct: 0, subtree: 0 };
+          var status = document.createElement('small');
+          status.textContent = '当前结果：直接标注 ' + count.direct + ' 篇，含下级 ' + count.subtree + ' 篇。';
+          summary.appendChild(status);
+          var remove = document.createElement('button');
+          remove.type = 'button';
+          remove.className = 'rw-filter-chip';
+          remove.textContent = '移除 ' + node.zh;
+          remove.addEventListener('click', function () {
+            directions.facets[node.facet] = directions.facets[node.facet].filter(function (value) { return value !== id; });
+            draft = cloneDirections(directions);
+            applyFilters(false, true);
+          });
+          summary.appendChild(remove);
+          selectedNode.appendChild(summary);
+        });
+      }
+    }
+    if (coverageNode) {
+      var covered = groups.filter(function (group) { return group.conceptIds.length; }).length;
+      coverageNode.textContent = graph ? '方向标注覆盖 ' + covered + ' / ' + groups.length + ' 条论文记录（已核身份去重，身份待核单列）。选择方向后仅匹配已确认的受控标注；未标注的历史解读不会推断归类。同分面任选其一，跨分面需同时满足。方向条件仅适用于论文解读，汇总页请清除方向条件后浏览。'
+        + (directions.role === 'primary' ? '当前仅主任务/主方法；未明确登记主角色的记录不参与这些分面的匹配，其他分面仍按相关标注匹配。' : '')
+        : '分类目录暂时无法确认。关键词检索仍可使用；方向链接保留为空结果，避免推断历史分类。';
+    }
+    if (scopeSelect) scopeSelect.value = draft.scope;
+    if (roleSelect) roleSelect.value = draft.role;
+    renderTree();
+    updateDraft();
+  }
+
+  if (panel) panel.addEventListener('toggle', function () {
+    if (!panel.open) return;
+    draft = cloneDirections(directions);
+    renderTree();
+    if (scopeSelect) scopeSelect.value = draft.scope;
+    if (roleSelect) roleSelect.value = draft.role;
+    updateDraft();
+  });
+  if (scopeSelect) scopeSelect.addEventListener('change', function () { draft.scope = scopeSelect.value; updateDraft(); });
+  if (roleSelect) roleSelect.addEventListener('change', function () { draft.role = roleSelect.value; updateDraft(); });
+  if (directionSearch) directionSearch.addEventListener('input', revealDirections);
+  var applyButton = document.getElementById('library-direction-apply');
+  if (applyButton) applyButton.addEventListener('click', function () {
+    directions = cloneDirections(draft);
+    if (panel) panel.open = false;
+    applyFilters(false, true);
+  });
+  var cancelButton = document.getElementById('library-direction-cancel');
+  if (cancelButton) cancelButton.addEventListener('click', function () {
+    draft = cloneDirections(directions);
+    if (panel) panel.open = false;
+    renderDirections();
+  });
+  var clearButton = document.getElementById('library-direction-clear');
+  if (clearButton) clearButton.addEventListener('click', function () {
+    draft.facets = {}; draft.error = ''; draft.requestedIds = [];
+    updateDraft();
+  });
+  directionButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      if (!graph || !graph.byId[button.dataset.concept]) return;
+      var node = graph.byId[button.dataset.concept];
+      directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
+      directions.facets[node.facet] = [node.id];
+      draft = cloneDirections(directions);
+      typeSelect.value = 'paper';
+      applyFilters(false, true);
+    });
+  });
+
   var debounceTimer;
   queryInput.addEventListener('input', function () {
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(applyFilters, 120);
   });
-  [typeSelect, yearSelect, sortSelect].forEach(function (control) { control.addEventListener('change', applyFilters); });
+  [typeSelect, yearSelect, sortSelect].forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
   quickButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       queryInput.value = button.dataset.query;
@@ -297,18 +628,21 @@
   });
   moreButton.addEventListener('click', function () {
     visibleCount += PAGE_SIZE;
-    writeState();
+    writeState(true);
     render();
   });
   var form = document.getElementById('paper-library-filters');
   if (form) form.addEventListener('submit', function (event) { event.preventDefault(); applyFilters(); });
-  window.addEventListener('popstate', function () { readState(); applyFilters(true); });
+  window.addEventListener('popstate', function () { readState(); if (panel) panel.open = false; applyFilters(true, false, true); });
 
-  function renderLoadError() {
+  function renderLoadError(error) {
     resultsNode.replaceChildren();
     var empty = document.createElement('div');
     empty.className = 'research-library__empty';
     empty.textContent = '静态索引暂时无法载入。请使用经典搜索或归档继续浏览。';
+    if (error && typeof error.message === 'string' && error.message.startsWith('论文索引校验失败：')) {
+      empty.textContent += ' ' + error.message;
+    }
     resultsNode.appendChild(empty);
     countNode.textContent = '论文索引载入失败';
     moreButton.hidden = true;
@@ -334,17 +668,28 @@
       .catch(function () { return null; });
   }
 
+  function loadIndex() {
+    if (window.ResearchSearchIndex && typeof window.ResearchSearchIndex.load === 'function') {
+      return window.ResearchSearchIndex.load(indexUrl, { origin: window.location.origin, basePath: siteBasePath });
+    }
+    // Array-only compatibility for older clients; manifests require the shared
+    // loader and its byte/SHA gates, never an unchecked fallback.
+    return fetch(indexUrl, { credentials: 'same-origin', redirect: 'error' }).then(function (response) {
+      if (!response || !response.ok) throw new Error('Index HTTP failure');
+      return response.json();
+    }).then(function (items) {
+      if (!Array.isArray(items)) throw new Error('论文索引校验失败：分片加载模块不可用');
+      return items;
+    });
+  }
+
   Promise.all([
-    fetch(indexUrl, { credentials: 'same-origin' }),
+    loadIndex(),
     loadRegistry(),
   ])
     .then(function (results) {
-      var response = results[0];
       var registry = results[1];
-      if (!response.ok) throw new Error('HTTP ' + response.status);
-      return response.json().then(function (items) {
-        return { items: items, registry: registry };
-      });
+      return { items: results[0], registry: registry };
     })
     .then(function (payload) {
       var items = payload.items;
@@ -358,6 +703,11 @@
         seen.add(entry.permalink);
         return true;
       });
+      registryRecords = registryIndex(registry);
+      if (api && registry) {
+        try { graph = api.createRegistry(registry); groups = api.groupPapers(allEntries, graph); }
+        catch (_error) { graph = null; groups = []; }
+      }
       populateYears();
       readState();
       applyFilters(true);

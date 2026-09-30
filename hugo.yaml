@@ -34,7 +34,7 @@ menu:
     - name: "归档"
       url: "/archives/"
       weight: 3
-    - name: "主题"
+    - name: "研究方向"
       url: "/tags/"
       weight: 4
     - name: "会议论文集"
@@ -78,7 +78,7 @@ params:
     minMatchCharLength: 0
     limit: 20
     # taxonomyAliases 由经典搜索在载入快照后按页注入（概念 zh/en + aliases + 祖先链）
-    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "arxivId", "taxonomyAliases"]
+    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "method", "categories", "arxivId", "taxonomyAliases"]
 
   mainSections: [posts]
 

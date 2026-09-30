@@ -106,6 +106,18 @@ test('paper without a verifiable ID has only editable prompt copying and no inve
   assert.doesNotMatch(html, /data-paper-arxiv-id/);
 });
 
+test('conference source opens its explicit official URLs and never inherits a cited arXiv identity', () => {
+  const html = renderFixture([
+    'title: "Conference paper"', 'date: 2026-09-05',
+    'paper_digest_source_kind: conference',
+    'paper_digest_conference_record_url: "https://openaccess.thecvf.com/paper.html"',
+    'paper_digest_conference_pdf_url: "https://openaccess.thecvf.com/paper.pdf"',
+  ].join('\n'), '[A cited paper](https://arxiv.org/abs/2609.99999)');
+  assert.match(html, /href=https:\/\/openaccess\.thecvf\.com\/paper\.html/);
+  assert.match(html, /href=https:\/\/openaccess\.thecvf\.com\/paper\.pdf/);
+  assert.doesNotMatch(html, /data-paper-arxiv-id|data-citation-id|arxiv\.org\/pdf\/2609\.99999/);
+});
+
 test('noncanonical sidecars are rejected and replaced with minimal reference controls', () => {
   const html = renderFixture(workbench.replace(sidecarRoot + 'citation.ris', 'https://evil.example/citation.ris'));
   assert.doesNotMatch(html, /evil\.example/);

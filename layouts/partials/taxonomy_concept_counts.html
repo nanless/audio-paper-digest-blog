@@ -1,42 +1,57 @@
 {{- /* 全站概念计数（partialCached：整个站点只计算一次，返回按概念 id 的计数切片）
    对每个概念 id 输出：
-     - direct：frontmatter `paper_digest_taxonomy_concepts` 直接标注该 id 的唯一页面数；
-     - sub   ：直接标注该 id 或其任一后代概念的唯一页面数（同一页只计一次）。
-   后代集合由 registry 快照 concepts[].ancestorIds 反推，不硬编码概念数量；
+     - direct：有效受控分类直接标注该 id 的论文记录数；
+     - sub   ：直接标注该 id 或任一后代概念的论文记录并集。
+   已核论文身份去重，身份待核按页面独立保留；只统计论文，不计聚合页。
+   祖先集合读取 registry 快照 concepts[].ancestorIds，不硬编码概念数量；
    旧版裸 tags 页面没有该字段，天然不计入。 */}}
 {{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
 {{- $concepts := index $registry "concepts" | default slice }}
+{{- $byId := partialCached "taxonomy_registry_index.html" "global" }}
 
 {{- /* 第一步：每个带合同字段的页面 → 其概念 id 集合（去重） */}}
-{{- $covered := slice }}
+{{- $groups := newScratch }}
+{{- $groups.Set "papers" dict }}
 {{- range site.RegularPages }}
+  {{- $page := . }}
+  {{- $metadata := partialCached "research_metadata.html" . .RelPermalink }}
+  {{- if and (eq $metadata.pageType "paper") (eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1") }}
   {{- $ids := slice }}
-  {{- range .Params.paper_digest_taxonomy_concepts }}
+  {{- range (partialCached "taxonomy_valid_records.html" . .RelPermalink) }}
     {{- if not (in $ids .id) }}{{ $ids = $ids | append .id }}{{ end }}
   {{- end }}
-  {{- if gt (len $ids) 0 }}{{ $covered = $covered | append (dict "ids" $ids) }}{{ end }}
+  {{- if gt (len $ids) 0 }}
+    {{- $key := printf "page:%s" $page.RelPermalink }}
+    {{- if eq $metadata.identityStatus "verified" }}
+      {{- if $metadata.arxivId }}{{ $key = printf "arxiv:%s" $metadata.arxivId }}
+      {{- else if $metadata.paperId }}{{ $key = printf "paper:%s" $metadata.paperId }}{{ end }}
+    {{- end }}
+    {{- with index ($groups.Get "papers") $key }}{{ $ids = union .ids $ids }}{{ end }}
+    {{- $groups.SetInMap "papers" $key (dict "ids" $ids) }}
+  {{- end }}
+  {{- end }}
+{{- end }}
+{{- /* 第二步：每个论文身份一次累积直接方向和祖先并集。
+     不再针对每个概念重扫全部论文；兄弟概念共享祖先也只加一次。 */}}
+{{- $counts := newScratch }}
+{{- range $concepts }}
+  {{- $counts.Set (printf "direct:%s" .id) 0 }}
+  {{- $counts.Set (printf "sub:%s" .id) 0 }}
+{{- end }}
+{{- range ($groups.Get "papers") }}
+  {{- $subtreeIds := slice }}
+  {{- range $id := .ids }}
+    {{- $counts.Add (printf "direct:%s" $id) 1 }}
+    {{- $subtreeIds = union $subtreeIds (slice $id) }}
+    {{- with index $byId $id }}
+      {{- $subtreeIds = union $subtreeIds (.ancestorIds | default slice) }}
+    {{- end }}
+  {{- end }}
+  {{- range $subtreeIds }}{{ $counts.Add (printf "sub:%s" .) 1 }}{{ end }}
 {{- end }}
 
-{{- /* 第二步：逐概念统计 direct / sub */}}
 {{- $out := slice }}
-{{- range $c := $concepts }}
-  {{- $cid := $c.id }}
-  {{- $subtree := slice $cid }}
-  {{- range $d := $concepts }}
-    {{- if in (index $d "ancestorIds" | default slice) $cid }}{{ $subtree = $subtree | append $d.id }}{{ end }}
-  {{- end }}
-  {{- $direct := 0 }}
-  {{- $sub := 0 }}
-  {{- range $rec := $covered }}
-    {{- $hitDirect := false }}
-    {{- $hitSub := false }}
-    {{- range $id := $rec.ids }}
-      {{- if eq $id $cid }}{{ $hitDirect = true }}{{ end }}
-      {{- if in $subtree $id }}{{ $hitSub = true }}{{ end }}
-    {{- end }}
-    {{- if $hitDirect }}{{ $direct = add $direct 1 }}{{ end }}
-    {{- if $hitSub }}{{ $sub = add $sub 1 }}{{ end }}
-  {{- end }}
-  {{- $out = $out | append (dict "id" $cid "direct" $direct "sub" $sub) }}
+{{- range $concepts }}
+  {{- $out = $out | append (dict "id" .id "direct" ($counts.Get (printf "direct:%s" .id)) "sub" ($counts.Get (printf "sub:%s" .id))) }}
 {{- end }}
 {{- return $out }}

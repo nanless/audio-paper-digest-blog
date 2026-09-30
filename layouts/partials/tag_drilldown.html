@@ -72,12 +72,11 @@
 {{- if gt (len $rows) 0 }}
 <section class="tag-drill" aria-label="子标签下钻">
   <h2 class="tag-drill__title">子标签</h2>
-  <p class="tag-drill__note">计数口径：下方“直接/含子树”按<b>全站已按新版受控标签合同标注的唯一页面</b>统计（frontmatter 含 <code>paper_digest_taxonomy_concepts</code>；“直接”=只标注该子标签本身，“含子树”=该子标签与其全部后代概念的去重页数，同一页只计一次）。旧版裸 <code>tags</code> 页面没有该字段，不计入这两个数字，其收录量见上方提示条的“共 {{ $total }} 页”，两者口径不同不可相加。</p>
+  <p class="tag-drill__note">下方按新版分类的<b>论文记录</b>统计：已核身份去重，身份待核按页面保留。“直接”只含明确标注该方向的论文；“含子树”同时包含下级方向，同一论文记录只计一次。点击名称进入论文库继续筛选。旧标签没有受控分类记录，不计入这些数字；上方“共 {{ $total }} 页”仍是精确标签页面数，两种口径不可相加。</p>
   <ul class="tag-drill__list">
     {{- range $row := $rows }}
     {{- $zh := $row.concept.zh }}
-    {{- $href := printf "/tags/%s/" $zh | relURL }}
-    {{- with site.GetPage (printf "/tags/%s" $zh) }}{{ $href = .RelPermalink }}{{ end }}
+    {{- $href := printf "%s?concept=%s" ("papers/" | relURL) ($row.concept.id | urlquery) }}
     <li class="tag-drill__item">
       <a class="tag-drill__link" href="{{ $href }}">{{ $zh }}</a>
       <span class="tag-drill__counts">直接 {{ $row.direct }} 篇 · 含子树 {{ $row.sub }} 篇</span>
@@ -85,8 +84,7 @@
       <ul class="tag-drill__list tag-drill__list--sub">
         {{- range $kid := $row.kids }}
         {{- $kidZh := $kid.concept.zh }}
-        {{- $kidHref := printf "/tags/%s/" $kidZh | relURL }}
-        {{- with site.GetPage (printf "/tags/%s" $kidZh) }}{{ $kidHref = .RelPermalink }}{{ end }}
+        {{- $kidHref := printf "%s?concept=%s" ("papers/" | relURL) ($kid.concept.id | urlquery) }}
         <li class="tag-drill__item">
           <a class="tag-drill__link" href="{{ $kidHref }}">{{ $kidZh }}</a>
           <span class="tag-drill__counts">直接 {{ $kid.direct }} 篇 · 含子树 {{ $kid.sub }} 篇</span>

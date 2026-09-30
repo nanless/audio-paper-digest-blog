@@ -1,0 +1,30 @@
+{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $concepts := index $registry "concepts" | default slice }}
+{{- $selected := partialCached "taxonomy_valid_records.html" . .RelPermalink }}
+{{- if $selected }}
+{{- $task := .Params.paper_digest_primary_task | default "" }}
+{{- $method := .Params.paper_digest_primary_method | default "" }}
+{{- $primary := slice }}
+{{- $other := slice }}
+{{- range $selected }}
+      {{- if or (and (eq .facet "task") (eq .zh $task)) (and (eq .facet "method") (eq .zh $method)) }}
+        {{- $primary = $primary | append . }}
+      {{- else }}{{ $other = $other | append . }}{{ end }}
+{{- end }}
+<section class="paper-taxonomy" aria-label="论文研究分类">
+  <h2>研究分类</h2>
+  {{- if $primary }}<div class="paper-taxonomy-primary">
+    {{ range $primary }}<div><strong>{{ if eq .facet "task" }}主任务{{ else }}主方法{{ end }}</strong>{{ partial "taxonomy_path.html" (dict "concept" . "concepts" $concepts) }}</div>{{ end }}
+  </div>{{ end }}
+  {{- if $other }}
+  <details class="paper-taxonomy-other"><summary>其他研究分类（{{ len $other }}）</summary>
+    {{- $facets := slice (dict "id" "task" "name" "其他任务") (dict "id" "method" "name" "其他方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") }}
+    {{- range $facet := $facets }}{{- $rows := where $other "facet" .id }}{{ if $rows }}
+      <div class="paper-taxonomy-group"><strong>{{ .name }}</strong>{{ range $rows }}{{ partial "taxonomy_path.html" (dict "concept" . "concepts" $concepts) }}{{ end }}</div>
+    {{- end }}{{ end }}
+  </details>{{ end }}
+  <p class="taxonomy-note">路径说明所属层级；最后一项是本文直接分类。任务与方法是并列视角。</p>
+</section>
+{{- else if .Params.paper_digest_taxonomy_contract }}
+<p class="taxonomy-note">分类信息待核；下方保留页面原有标签。</p>
+{{- end }}

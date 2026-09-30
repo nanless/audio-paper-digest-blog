@@ -6,7 +6,9 @@
 {{- $pageType := "page" -}}
 {{- $isConferenceTask := false -}}
 {{- if eq .Section "posts" -}}
-  {{- if findRE `^(icassp|iclr|icml)[0-9]{4}-(summary|task-.+)$` $baseName 1 -}}
+  {{- if eq .Params.paper_digest_page_type "paper" -}}
+    {{- $pageType = "paper" -}}
+  {{- else if or (findRE `^(icassp|iclr|icml)[0-9]{4}-(summary|task-.+)$` $baseName 1) (findRE `^conference-[a-z0-9-]+-20[0-9]{2}(-task-.+)?$` $baseName 1) (eq .Params.paper_digest_page_type "conference") -}}
     {{- $pageType = "conference" -}}
     {{- $isConferenceTask = in $baseName "-task-" -}}
   {{- else if or (eq .Params.paper_digest_page_type "index") (findRE `^\d{4}-\d{2}-\d{2}$` $baseName 1) -}}
@@ -26,6 +28,11 @@
 {{- $method := "" -}}
 {{- $arxivId := "" -}}
 {{- $oneSentence := "" -}}
+{{- $paperId := "" -}}
+{{- $identityStatus := "unknown" -}}
+{{- $sourceKind := "" -}}
+{{- $primaryTaskId := "" -}}
+{{- $primaryMethodId := "" -}}
 {{- if eq $pageType "paper" -}}
   {{- $headline = .Params.paper_digest_reader_title | default $headline -}}
   {{- $originalTitle = .Params.paper_digest_original_title | default .Title -}}
@@ -41,10 +48,28 @@
   {{- end -}}
   {{- if not $task }}{{ with .Params.tags }}{{ $task = index . 0 }}{{ end }}{{ end -}}
   {{- $arxivId = .Params.paper_digest_arxiv_id | default "" -}}
+  {{- if findRE `^([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?$` $arxivId 1 -}}
+    {{- $arxivId = replaceRE `v[1-9][0-9]*$` "" $arxivId -}}
+    {{- $identityStatus = "verified" -}}
+    {{- $sourceKind = "arxiv" -}}
+  {{- else -}}
+    {{- $arxivId = "" -}}
+  {{- end -}}
+  {{- $paperId = .Params.paper_digest_paper_id | default "" -}}
+  {{- if and (eq .Params.paper_digest_source_kind "conference") (findRE `^conference:[^\s\x00-\x1f\x7f]+$` $paperId 1) -}}
+    {{- $sourceKind = "conference" -}}
+    {{- $identityStatus = "verified" -}}
+  {{- end -}}
   {{- if not $arxivId -}}
     {{- $slugId := findRE `[0-9]{4}-[0-9]{4,5}$` $baseName 1 -}}
-    {{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ end -}}
+    {{- if ne $sourceKind "conference" }}{{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ $identityStatus = "inferred" }}{{ $sourceKind = "arxiv" }}{{ end -}}{{ end -}}
+  {{- end -}}
+  {{- if eq .Params.paper_digest_taxonomy_contract "paper-taxonomy-flat-tags-compat-v1" -}}
+    {{- range (partialCached "taxonomy_valid_records.html" . .RelPermalink) -}}
+      {{- if and (eq .facet "task") (eq .zh $.Params.paper_digest_primary_task) }}{{ $primaryTaskId = .id }}{{ end -}}
+      {{- if and (eq .facet "method") (eq .zh $.Params.paper_digest_primary_method) }}{{ $primaryMethodId = .id }}{{ end -}}
+    {{- end -}}
   {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}
-{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence) -}}
+{{- return (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}

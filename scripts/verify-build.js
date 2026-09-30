@@ -2,6 +2,8 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
+const { CONTRACT: INDEX_CONTRACT, MAX_SHARD_BYTES, SHARD_URL_PATTERN } = require('./shard-search-index');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
 const SITE_PREFIX = '/audio-paper-digest-blog/';
@@ -106,6 +108,48 @@ function verifySearchIndex(jsonText, byteLength) {
   return { itemCount: items.length, bytes: byteLength };
 }
 
+function verifySearchManifest(manifest, buildDir) {
+  invariant(manifest && manifest.contract === INDEX_CONTRACT, '索引分片合同非法');
+  invariant(Number.isSafeInteger(manifest.recordCount) && manifest.recordCount > 0 && manifest.recordCount <= 100000,
+    '索引分片总记录数非法');
+  invariant(Number.isSafeInteger(manifest.totalBytes) && manifest.totalBytes > 0 && manifest.totalBytes <= 64 * 1024 * 1024,
+    '索引分片总字节数非法');
+  invariant(Array.isArray(manifest.shards) && manifest.shards.length > 0 && manifest.shards.length <= 128,
+    '索引分片数量非法');
+  const urls = new Set();
+  const records = new Set();
+  let bytes = 0;
+  let itemCount = 0;
+  for (const shard of manifest.shards) {
+    invariant(shard && typeof shard.url === 'string' && SHARD_URL_PATTERN.test(shard.url) && !urls.has(shard.url),
+      '索引分片路径非法或重复');
+    urls.add(shard.url);
+    invariant(Number.isSafeInteger(shard.bytes) && shard.bytes > 0 && shard.bytes <= MAX_SHARD_BYTES,
+      '索引分片大小非法');
+    invariant(Number.isSafeInteger(shard.recordCount) && shard.recordCount > 0, '索引分片记录数非法');
+    invariant(typeof shard.sha256 === 'string' && /^[a-f0-9]{64}$/.test(shard.sha256)
+      && shard.url.endsWith(`-${shard.sha256.slice(0, 12)}.json`), '索引分片哈希非法');
+    const file = path.join(buildDir, shard.url);
+    invariant(fs.existsSync(file), `缺少构建产物：${file}`);
+    const buffer = fs.readFileSync(file);
+    invariant(buffer.length === shard.bytes, `索引分片字节数漂移：${shard.url}`);
+    invariant(createHash('sha256').update(buffer).digest('hex') === shard.sha256, `索引分片 SHA 漂移：${shard.url}`);
+    let shardText;
+    try { shardText = new TextDecoder('utf-8', { fatal: true }).decode(buffer); }
+    catch { throw new Error(`索引分片不是合法 UTF-8：${shard.url}`); }
+    const stats = verifySearchIndex(shardText, buffer.length);
+    invariant(stats.itemCount === shard.recordCount, `索引分片记录数漂移：${shard.url}`);
+    for (const record of JSON.parse(shardText)) {
+      invariant(!records.has(record.permalink), `索引分片含重复页面：${record.permalink}`);
+      records.add(record.permalink);
+    }
+    bytes += buffer.length;
+    itemCount += stats.itemCount;
+  }
+  invariant(itemCount === manifest.recordCount && bytes === manifest.totalBytes, '索引分片总量不闭合');
+  return { itemCount, bytes, shards: manifest.shards.length, maxShardBytes: MAX_SHARD_BYTES };
+}
+
 function walkFiles(root) {
   const output = [];
   for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
@@ -175,7 +219,12 @@ function verifyBuild(buildDir) {
   invariant(nestedFeeds.length === 0, `禁止 section/taxonomy feed：${nestedFeeds.slice(0, 5).join(', ')}`);
 
   const indexFile = path.join(root, 'index.json');
-  const indexStats = verifySearchIndex(readRequired(indexFile), fs.statSync(indexFile).size);
+  const indexText = readRequired(indexFile);
+  invariant(fs.statSync(indexFile).size <= MAX_INDEX_BYTES, '索引入口文件超过大小限制');
+  const indexData = JSON.parse(indexText);
+  const indexStats = Array.isArray(indexData)
+    ? verifySearchIndex(indexText, fs.statSync(indexFile).size)
+    : verifySearchManifest(indexData, root);
   const searchScripts = walkFiles(path.join(root, 'assets', 'js')).filter((file) => /search.*\.js$/i.test(path.basename(file)));
   invariant(searchScripts.length > 0, '缺少构建后的搜索脚本');
   for (const file of searchScripts) {
@@ -220,5 +269,5 @@ if (require.main === module) {
 
 module.exports = {
   extractHead, verifyHead, verifyRss, verifySearchIndex,
-  verifyPaperToolCoverage, verifyBuild
+  verifyPaperToolCoverage, verifyBuild, verifySearchManifest
 };

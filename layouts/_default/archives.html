@@ -9,6 +9,7 @@
     <h1>速递归档</h1>
     <p class="research-terms__intro">{{ len $editions }} 期每日速递，按月份倒序排列。查找单篇解读请使用<a href="{{ "papers/" | relURL }}">论文库</a>；会议内容见<a href="{{ "conferences/" | relURL }}">会议论文集</a>。</p>
   </header>
+  {{ if gt (len $editions) 0 }}
   <nav class="archive-jumps" aria-label="跳转到月份">
     {{ range $editions.GroupByDate "2006-01" }}<a class="rw-action" href="#month-{{ .Key }}">{{ .Key }} <span>{{ len .Pages }} 期</span></a>{{ end }}
   </nav>
@@ -22,5 +23,6 @@
     </ol>
   </section>
   {{ end }}
+  {{ else }}<p class="research-terms__intro">暂无每日速递。可在论文库浏览单篇研究。</p>{{ end }}
 </section>
 {{ end }}

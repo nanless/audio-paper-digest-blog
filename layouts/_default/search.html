@@ -12,4 +12,6 @@
   </div>
   <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">速递归档</a>或<a href="{{ "tags/" | relURL }}">研究主题</a>阅读论文。</p></noscript>
 </section>
+{{- $loader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
+<script defer src="{{ $loader.RelPermalink }}" integrity="{{ $loader.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}

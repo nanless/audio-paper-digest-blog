@@ -3,7 +3,7 @@
   <header class="research-library__header">
     <div class="rw-eyebrow">Research Library</div>
     <h1>论文库</h1>
-    <p>检索中英文题目、arXiv ID、研究方向与摘要。按年份和页面类型缩小范围，或按本站评分安排阅读顺序。</p>
+    <p>检索中英文题目、arXiv ID 与摘要，再按任务、方法和研究条件组合筛选。已核实为同一论文的多篇解读合并展示，评分用于安排本站阅读顺序。</p>
   </header>
 
   <form class="research-library__toolbar" id="paper-library-filters" role="search">
@@ -35,13 +35,31 @@
   </form>
 
   <div class="research-library__quick-filters" aria-label="快捷研究方向">
-    <button class="rw-filter-chip" type="button" data-query="语音识别" aria-pressed="false">语音识别</button>
-    <button class="rw-filter-chip" type="button" data-query="语音合成" aria-pressed="false">语音合成</button>
-    <button class="rw-filter-chip" type="button" data-query="语音增强" aria-pressed="false">语音增强</button>
-    <button class="rw-filter-chip" type="button" data-query="音乐生成" aria-pressed="false">音乐生成</button>
-    <button class="rw-filter-chip" type="button" data-query="多模态" aria-pressed="false">多模态</button>
-    <button class="rw-filter-chip" type="button" data-query="数据集" aria-pressed="false">数据集 / 基准</button>
+    <button class="rw-filter-chip" type="button" data-concept="task.asr" aria-pressed="false">语音识别</button>
+    <button class="rw-filter-chip" type="button" data-concept="task.speech-synthesis" aria-pressed="false">语音合成</button>
+    <button class="rw-filter-chip" type="button" data-concept="task.speech-enhancement" aria-pressed="false">语音增强</button>
+    <button class="rw-filter-chip" type="button" data-concept="task.music-generation" aria-pressed="false">音乐生成</button>
   </div>
+
+  <div id="library-directions" class="library-directions" aria-live="polite"></div>
+  <details id="library-direction-panel" class="library-direction-panel">
+    <summary>选择研究方向与匹配范围</summary>
+    <div class="library-direction-panel__body">
+      <p>同一分面内多个方向满足任意一个即可；不同分面需同时满足。展开下级与勾选方向是独立操作。</p>
+      <div class="library-direction-options">
+        <label>方向范围<select id="library-scope"><option value="subtree">包含下级方向</option><option value="direct">仅直接标注</option></select></label>
+        <label>任务 / 方法角色<select id="library-role"><option value="any">所有相关标注</option><option value="primary">仅明确主任务 / 主方法</option></select></label>
+      </div>
+      <label class="library-direction-search">在方向目录中查找<input id="library-direction-search" type="search" placeholder="中文、英文或别名，例如 PEFT" autocomplete="off"></label>
+      <p class="library-direction-counter-note">方向旁的数字：当前结果中「直接标注 / 含下级」的论文数。</p>
+      <div id="library-direction-tree" class="library-direction-tree">正在读取方向目录…</div>
+      <div class="library-direction-panel__actions">
+        <span id="library-draft-status" aria-live="polite"></span>
+        <div><button id="library-direction-clear" class="rw-filter-chip" type="button">清空待选方向</button><button id="library-direction-cancel" class="rw-filter-chip" type="button">取消</button><button id="library-direction-apply" class="rw-action" type="button">应用筛选</button></div>
+      </div>
+    </div>
+  </details>
+  <p id="library-coverage" class="library-coverage"></p>
 
   <div class="research-library__status" aria-live="polite">
     <span id="library-count">正在读取静态论文索引…</span>
@@ -55,6 +73,10 @@
   </div>
   <noscript><p class="research-library__empty">论文库筛选需要 JavaScript。你仍可使用<a href="{{ "archives/" | absURL }}">归档</a>或<a href="{{ "tags/" | absURL }}">主题页</a>浏览全部内容。</p></noscript>
 </section>
-{{- $libraryScript := resources.Get "js/paper-library.js" | minify }}
-<script defer src="{{ $libraryScript.RelPermalink }}"></script>
+{{- $taxonomyScript := resources.Get "js/taxonomy-core.js" | minify | fingerprint }}
+<script defer src="{{ $taxonomyScript.RelPermalink }}" integrity="{{ $taxonomyScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $indexLoader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
+<script defer src="{{ $indexLoader.RelPermalink }}" integrity="{{ $indexLoader.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $libraryScript := resources.Get "js/paper-library.js" | minify | fingerprint }}
+<script defer src="{{ $libraryScript.RelPermalink }}" integrity="{{ $libraryScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

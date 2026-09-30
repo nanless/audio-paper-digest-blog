@@ -5,7 +5,10 @@
 {{- if not (findRE $basePattern $baseID 1) -}}
   {{- $baseID = "" -}}
   {{- $versionedID = "" -}}
-  {{- $legacyMatches := findRE `arxiv\.org/(abs|html|pdf)/([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?` .RawContent 1 -}}
+  {{- $legacyMatches := slice -}}
+  {{- if ne .Params.paper_digest_source_kind "conference" -}}
+    {{- $legacyMatches = findRE `arxiv\.org/(abs|html|pdf)/([0-9]{4}\.[0-9]{4,5}|[a-z][a-z0-9.-]*/[0-9]{7})(v[1-9][0-9]*)?` .RawContent 1 -}}
+  {{- end -}}
   {{- if gt (len $legacyMatches) 0 -}}
     {{- $legacyID := replaceRE `^.*?/(abs|html|pdf)/` "" (index $legacyMatches 0) -}}
     {{- if findRE $versionedPattern $legacyID 1 -}}
@@ -85,6 +88,17 @@
     <p>网页不能代你点击浏览器扩展。也可下载 RIS / BibTeX，然后在 Zotero 中选择“文件 → 导入”；简要引用需补全作者和日期。</p>
   </details>
   {{- else }}
+  {{- if eq .Params.paper_digest_source_kind "conference" }}
+  <div class="paper-tools__groups">
+    <div class="paper-tools__group" aria-label="会议论文原文">
+      {{- range $entry := slice (dict "url" (.Params.paper_digest_conference_record_url | default "") "label" "官方论文页面") (dict "url" (.Params.paper_digest_conference_pdf_url | default "") "label" "官方 PDF") }}
+      {{- if findRE `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` .url 1 }}
+      <a class="paper-tool paper-tool--primary" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }} <span aria-hidden="true">↗</span></a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
   <p class="paper-tools__note">本页没有可验证的 arXiv 标识；你仍可选择正文，整理并复制 AI 提问。</p>
   {{- end }}
   <details class="paper-tools__help paper-tools__selection-panel">

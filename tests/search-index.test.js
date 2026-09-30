@@ -54,16 +54,16 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     '---', 'title: Analysis display title', 'date: 2026-09-04',
     'paper_digest_original_title: Source paper title',
     'paper_digest_reader_title: Contract reader title',
-    'paper_digest_primary_task: Structured task',
-    'paper_digest_primary_method: Structured method',
+    'paper_digest_primary_task: 结构化任务',
+    'paper_digest_primary_method: 结构化方法',
     'paper_digest_taxonomy_contract: paper-taxonomy-flat-tags-compat-v1',
     'paper_digest_taxonomy_concepts:',
     '  - id: task.structured',
     '    facet: task',
-    '    label: Structured task',
+    '    label: 结构化任务',
     '  - id: method.structured',
     '    facet: method',
-    '    label: Structured method',
+    '    label: 结构化方法',
     'paper_digest_score: 0',
     'paper_digest_one_sentence: Evidence from the structured contract.',
     'description: "Legacy task | 9.9/10"',
@@ -79,6 +79,18 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     '---', 'title: Special edition', 'date: 2026-09-05',
     'paper_digest_page_type: index', '---', '# Daily edition',
     '', '[First included paper](https://arxiv.org/abs/2609.22222)'
+  ].join('\n'));
+  fs.writeFileSync(path.join(content, 'conference-cvpr-2026.md'), [
+    '---', 'title: CVPR 2026 overview', 'date: 2026-09-06',
+    'paper_digest_page_type: index', '---', '# CVPR overview',
+    '[Included paper](https://arxiv.org/abs/2609.33333)'
+  ].join('\n'));
+  fs.writeFileSync(path.join(content, 'conference-cvpr-2026-paper.md'), [
+    '---', 'title: Conference paper', 'date: 2026-09-06',
+    'paper_digest_page_type: paper',
+    'paper_digest_source_kind: conference',
+    'paper_digest_paper_id: "conference:cvpr:2026:paper:verified-123"',
+    '---', '# 单篇会议论文'
   ].join('\n'));
   fs.writeFileSync(path.join(root, 'content', 'archives.md'), '---\ntitle: Archive\nlayout: archives\n---\n');
   execFileSync('hugo', ['--source', path.resolve(__dirname, '..'), '--config', config,
@@ -96,13 +108,27 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   const workbench = records.find((item) => item.title === 'Analysis display title');
   assert.equal(workbench.originalTitle, 'Source paper title');
   assert.equal(workbench.titleZh, 'Contract reader title');
-  assert.equal(workbench.task, 'Structured task');
-  assert.equal(workbench.method, 'Structured method');
+  assert.equal(workbench.task, '结构化任务');
+  assert.equal(workbench.method, '结构化方法');
   assert.equal(workbench.taxonomyContract, 'paper-taxonomy-flat-tags-compat-v1');
   assert.deepEqual(workbench.taxonomyConcepts, [
-    { id: 'task.structured', facet: 'task', label: 'Structured task', ancestorIds: ['task.speech'] },
-    { id: 'method.structured', facet: 'method', label: 'Structured method', ancestorIds: [] },
+    { id: 'task.structured', facet: 'task', label: '结构化任务' },
+    { id: 'method.structured', facet: 'method', label: '结构化方法' },
   ]);
+  assert.equal(workbench.primaryTaskId, 'task.structured');
+  assert.equal(workbench.primaryMethodId, 'method.structured');
+  assert.equal(workbench.identityStatus, 'verified');
+  assert.equal(legacy.primaryTaskId, undefined);
+  assert.equal(legacy.originalTitle, undefined, 'source title is not duplicated in the index');
+  assert.match(legacy.permalink, /^\/blog\//, 'index links retain the deployment base path');
+  const newOverview = records.find(item => item.title === 'CVPR 2026 overview');
+  assert.equal(newOverview.pageType, 'conference');
+  assert.equal(newOverview.arxivId, '');
+  const conferencePaper = records.find(item => item.title === 'Conference paper');
+  assert.equal(conferencePaper.pageType, 'paper');
+  assert.equal(conferencePaper.paperId, 'conference:cvpr:2026:paper:verified-123');
+  assert.equal(conferencePaper.sourceKind, 'conference');
+  assert.equal(conferencePaper.identityStatus, 'verified');
   assert.equal(workbench.score, '0');
   assert.equal(workbench.summary, 'Evidence from the structured contract.');
   assert.equal(workbench.arxivId, '2609.12345');

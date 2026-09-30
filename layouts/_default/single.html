@@ -5,6 +5,7 @@
 {{- $isConferenceSummary := and (eq $metadata.pageType "conference") (not $isTask) }}
 {{- $isPaper := eq $metadata.pageType "paper" }}
 {{- $isResearchPage := eq .Section "posts" }}
+{{- $hasControlledTaxonomy := gt (len (partialCached "taxonomy_valid_records.html" . .RelPermalink)) 0 }}
 
 {{- if $isResearchPage }}
 {{- $headline := $metadata.headline }}
@@ -36,7 +37,7 @@
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
     </div>
-    {{- if $isPaper }}{{ partial "paper_toolbar.html" . }}{{ end }}
+    {{- if $isPaper }}{{ partial "paper_taxonomy.html" . }}{{ partial "paper_toolbar.html" . }}{{ end }}
   </header>
 
   {{- $layoutClass := "research-layout" }}
@@ -96,6 +97,7 @@
   </div>
 
   <footer class="post-footer research-page-footer">
+    {{- if not $hasControlledTaxonomy }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
     <ul class="post-tags">
@@ -106,6 +108,7 @@
       <li><a href="{{ .Permalink }}"{{ if $isPrimary }} class="primary-task" title="本页主任务标签（paper_digest_primary_task）；补充标签不带 ★"{{ end }}>{{ if $isPrimary }}<span class="primary-task__mark" aria-hidden="true">★</span><span class="sr-only">主任务：</span>{{ end }}{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
       {{- end }}
     </ul>
+    {{- end }}
     {{- if and $isPaper (.Param "ShowPostNavLinks") }}{{ partial "post_nav_links.html" . }}{{ end }}
     {{- if and site.Params.ShowShareButtons (ne .Params.disableShare true) }}{{ partial "share_icons.html" . }}{{ end }}
     {{- if $isPaper }}{{ partial "related_posts.html" . }}{{ end }}

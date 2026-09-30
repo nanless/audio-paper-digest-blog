@@ -6,7 +6,7 @@
     "node": ">=20.18.1"
   },
   "scripts": {
-    "build": "hugo --minify --noBuildLock --cleanDestinationDir --printPathWarnings --panicOnWarning",
+    "build": "hugo --minify --noBuildLock --cleanDestinationDir --printPathWarnings --panicOnWarning && node scripts/shard-search-index.js public",
     "verify": "node scripts/verify-build.js public",
     "audit:content": "node scripts/audit-content.js",
     "build:verify": "npm run audit:content && npm run build && npm run verify",
