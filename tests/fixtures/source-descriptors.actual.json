@@ -1,0 +1,208 @@
+{
+  "contract": "source-descriptor-consumer-test-fixture-v1",
+  "sources": {
+    "arxiv:2605.12987": {
+      "kind": "arxiv-fresh-fetch",
+      "paperId": "arxiv:2605.12987",
+      "generation": 1,
+      "sourceId": "2605.12987v1",
+      "textSha256": "6dfbf49d8d4ccdc8c041223187876773aaa5b99efe4ee071374ff61f76dddb51",
+      "pdfSha256": "3e707d583f4c5ebdda798a3d5c544d0857170c9dec15c18a801dd4351b76d8f1",
+      "sourceManifestSha256": "2d41e2d591ccaf2d57f69d5d69483f3129b985111375afc0b2bf62b63a16f168",
+      "structuredArtifactsSha256": "7db250dee73e42b494e1088a36d4452ee5ed0625aae2db1bf8c666bd3061e9e1",
+      "sourceBinding": {
+        "contract": "fresh-arxiv-rewrite-source-v1",
+        "paperId": "arxiv:2605.12987",
+        "arxivId": "2605.12987",
+        "generation": 1,
+        "textSha256": "6dfbf49d8d4ccdc8c041223187876773aaa5b99efe4ee071374ff61f76dddb51",
+        "pdfSha256": "3e707d583f4c5ebdda798a3d5c544d0857170c9dec15c18a801dd4351b76d8f1",
+        "sourceManifestSha256": "2d41e2d591ccaf2d57f69d5d69483f3129b985111375afc0b2bf62b63a16f168"
+      },
+      "sourceRunIdentitySha256": "0c2cc01fc5f91af1a104541d693d8c49af9bcf60bfec4b4343f1c9ebe5ca9a7d",
+      "pdfVersionBinding": {
+        "contract": "sealed-arxiv-pdf-version-binding-v1",
+        "paperId": "arxiv:2605.12987",
+        "sourceId": "2605.12987v1",
+        "textUrl": "https://arxiv.org/html/2605.12987v1",
+        "pdfRequestedUrl": "https://arxiv.org/pdf/2605.12987.pdf",
+        "pdfSha256": "3e707d583f4c5ebdda798a3d5c544d0857170c9dec15c18a801dd4351b76d8f1",
+        "sourceManifestSha256": "2d41e2d591ccaf2d57f69d5d69483f3129b985111375afc0b2bf62b63a16f168",
+        "textVersion": 1,
+        "pdfVersion": "unspecified",
+        "pdfVersionAuthenticated": false,
+        "status": "versioned-text-unversioned-pdf-url"
+      },
+      "sourceVersionWarning": "封存文本来自 2605.12987v1；实际 PDF 链接 https://arxiv.org/pdf/2605.12987.pdf 未指定版本。已确认属于同一论文，但尚未确认 PDF 对应 v1。"
+    },
+    "arxiv:2606.01009": {
+      "kind": "arxiv-fresh-fetch",
+      "paperId": "arxiv:2606.01009",
+      "generation": 1,
+      "sourceId": "2606.01009v1",
+      "textSha256": "069e5bc1c8c6c0f9a13a5fcfb27469559e1e1251be82e3945538c068a47094a9",
+      "pdfSha256": "95642c1420548bb9e41c17713db3ae95a8a300693201d01eaa54ac0ea815d1b7",
+      "sourceManifestSha256": "98bb6c58cb4763641cae8c1301e7c9b784d70f18b6096249a81d715d235f9059",
+      "structuredArtifactsSha256": "2cb935cd084a83e0b77639a4b51b765125b20f1cdd7c9cc4bf6cbb1b7bb60b3d",
+      "sourceBinding": {
+        "contract": "fresh-arxiv-rewrite-source-v1",
+        "paperId": "arxiv:2606.01009",
+        "arxivId": "2606.01009",
+        "generation": 1,
+        "textSha256": "069e5bc1c8c6c0f9a13a5fcfb27469559e1e1251be82e3945538c068a47094a9",
+        "pdfSha256": "95642c1420548bb9e41c17713db3ae95a8a300693201d01eaa54ac0ea815d1b7",
+        "sourceManifestSha256": "98bb6c58cb4763641cae8c1301e7c9b784d70f18b6096249a81d715d235f9059"
+      },
+      "sourceRunIdentitySha256": "fb1f66eba15047b0ac7e0f41461f45394d852e0582f41e58697c22037a704542",
+      "pdfVersionBinding": {
+        "contract": "sealed-arxiv-pdf-version-binding-v1",
+        "paperId": "arxiv:2606.01009",
+        "sourceId": "2606.01009v1",
+        "textUrl": "https://arxiv.org/html/2606.01009v1",
+        "pdfRequestedUrl": "https://arxiv.org/pdf/2606.01009.pdf",
+        "pdfSha256": "95642c1420548bb9e41c17713db3ae95a8a300693201d01eaa54ac0ea815d1b7",
+        "sourceManifestSha256": "98bb6c58cb4763641cae8c1301e7c9b784d70f18b6096249a81d715d235f9059",
+        "textVersion": 1,
+        "pdfVersion": "unspecified",
+        "pdfVersionAuthenticated": false,
+        "status": "versioned-text-unversioned-pdf-url"
+      },
+      "sourceVersionWarning": "封存文本来自 2606.01009v1；实际 PDF 链接 https://arxiv.org/pdf/2606.01009.pdf 未指定版本。已确认属于同一论文，但尚未确认 PDF 对应 v1。"
+    },
+    "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6": {
+      "kind": "conference-local-pdf",
+      "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+      "sourceId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+      "writerInputsSha256": "c16f807ad70c608ff3811281ba635406c75ff348f79220642f84c9752cb5e6e9",
+      "sourceBindings": [
+        {
+          "sourceSet": "workspace-icml-official-poster-2026",
+          "provenance": "retained-local-icml-miniconf-snapshot",
+          "metadataSha256": "250d0d670d1dbd7715ccd8cd37791a6a2035d869435590db2ae391090626b22e",
+          "metadataRecordIndex": 4679,
+          "metadataIdentityBindingSha256": "43923ab333825cf5a033311796c087b633d41ff1b3c236814523f070ac5713d3",
+          "pdfSha256": "5ada3a8eb19dfef81675d40294467eaaa50c938e654e85b84f47b05acc0d6d69",
+          "pdfBytes": 3533509,
+          "pdfIdentityBindingSha256": "4c2b07e5ec81248d7e63671321fec8899380dafcc7ba3688f7086386665bb29d",
+          "sourceBindingSha256": "193e67c68aa0a1342f32f3ab33801f39d4543a85233f016545ddb7df2a0729a0",
+          "acquisition": {
+            "openreviewResponseBytes": false,
+            "provenanceStatement": "PDF bytes were obtained from the author prior preprint through the fixed SSRN record. Its title differs from the ICML record; it is neither the ICML camera-ready paper nor OpenReview response bytes.",
+            "receipt": {
+              "fileSha256": "c236d29a874237a2d3839569060bfc576ba97062a83f1d8288b581de2e08138d",
+              "selfSha256": "22dfae3a459513d54e5622797eae719cc9bbed9c0b285061026ed355091c6eb5"
+            },
+            "sourceAuthors": [
+              "Deepak Babu Piskala"
+            ],
+            "sourceDoi": "10.2139/ssrn.6288899",
+            "sourceKind": "author-prior-preprint-cross-version",
+            "sourceTitle": "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction",
+            "versionRelation": "author-prior-preprint-with-different-title"
+          },
+          "acquisitionSha256": "a0b00646ab8527bb12f25b870db0e51302bd18ca6626b3bb4796961d75840f7c"
+        }
+      ],
+      "originalTitle": "Position: *Beyond Text* The Text-Centric Bias in Foundation Models Must Be Revisited for a Speech-First Future",
+      "sourceUrl": "https://openreview.net/forum?id=n1mAjfRDZ6",
+      "pdfUrl": "",
+      "sourceTitle": "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction",
+      "sourceDoi": "10.2139/ssrn.6288899",
+      "versionRelation": "author-prior-preprint-with-different-title",
+      "sourceVersionWarning": "本次分析使用可访问的作者早期预印本，不是会议 camera-ready 定稿；标题、内容、实验结果和结论可能与会议最终版本不同。",
+      "provenanceDisclosure": "",
+      "pdfSha256": "5ada3a8eb19dfef81675d40294467eaaa50c938e654e85b84f47b05acc0d6d69",
+      "textSha256": "13bc54a20209fadff5e1048603fc802c8122bbcc0d1f45751ae28bed93cfe899",
+      "structuredArtifactsSha256": "4253c927020320504d7691a86a006bd4612221b32bdf7069e3d0f97921f64236"
+    },
+    "conference:icml:2026:openreview-forum-id:jfpkqjhex4": {
+      "kind": "conference-local-pdf",
+      "paperId": "conference:icml:2026:openreview-forum-id:jfpkqjhex4",
+      "sourceId": "conference:icml:2026:openreview-forum-id:jfpkqjhex4",
+      "writerInputsSha256": "8edf5de9e906b5d72c7f5e8d43d0f491b63019c31abcdbafb24044d7223fa128",
+      "sourceBindings": [
+        {
+          "sourceSet": "workspace-icml-official-poster-2026",
+          "provenance": "retained-local-icml-miniconf-snapshot",
+          "metadataSha256": "250d0d670d1dbd7715ccd8cd37791a6a2035d869435590db2ae391090626b22e",
+          "metadataRecordIndex": 1679,
+          "metadataIdentityBindingSha256": "4abdedf6aeac8fb374dd4245e5e28e3714ef1c6cf58addecd83e709f07a55a77",
+          "pdfSha256": "d4a124a2dfd1e002faae17c129cc6af4281e0d2995df375787fe716a64416992",
+          "pdfBytes": 1846161,
+          "pdfIdentityBindingSha256": "5137bb319a2c38bab6a3d8b233b173928269860f2f96166726e2442c47b13dc2",
+          "sourceBindingSha256": "575547a15d8d3a046eaa37b098fc5c14398320c1d56079c1ff68174bcc6030dc",
+          "acquisition": {
+            "openreviewResponseBytes": false,
+            "provenanceStatement": "PDF bytes were fetched from the versioned official arXiv PDF endpoint; they are not OpenReview response bytes.",
+            "receipt": {
+              "fileSha256": "4e77eaac5937bc6023ab115b75ed3a3122f4e50db3a81c5d92c7d6569e66df7b",
+              "selfSha256": "8a7b2393fab0cf9929981355d2f04b5538a813fd5c5ae13a2f66712e4570d81c"
+            },
+            "sourceAuthors": [
+              "Yifan Yang",
+              "Hui Wang",
+              "Bing Han",
+              "Shujie Liu",
+              "Jinyu Li",
+              "Yong Qin",
+              "Xie Chen"
+            ],
+            "sourceDoi": null,
+            "sourceKind": "official-arxiv-versioned-pdf",
+            "sourceTitle": "Position: Towards Responsible Evaluation for Text-to-Speech",
+            "versionRelation": "same-paper-versioned-official-preprint"
+          },
+          "acquisitionSha256": "75d13118182f9e9cbce63a57e98c4f76793548254c3e624057e781750120ce32"
+        }
+      ],
+      "originalTitle": "Position: Towards Responsible Evaluation for Text-to-Speech",
+      "sourceUrl": "https://openreview.net/forum?id=jfpkqjhex4",
+      "pdfUrl": "",
+      "sourceTitle": "Position: Towards Responsible Evaluation for Text-to-Speech",
+      "sourceDoi": null,
+      "versionRelation": "same-paper-versioned-official-preprint",
+      "sourceVersionWarning": "封存PDF来自同标题、同作者的官方 arXiv 2510.06927v3 预印本；不是 OpenReview 下载响应，也未据此认证 ICML camera-ready 定稿。",
+      "provenanceDisclosure": "",
+      "pdfSha256": "d4a124a2dfd1e002faae17c129cc6af4281e0d2995df375787fe716a64416992",
+      "textSha256": "9a1d23c997fd831fd9eb68f61986f99c46aca7fbaa7e1fc2b888ac04d799c51a",
+      "structuredArtifactsSha256": "37176dd10ab3405d2596930ffb9cb52bf9953f5a1cddde1a9cafa1f8eb6c79b3"
+    },
+    "conference:icassp:2026:icassp-arnumber:11460320": {
+      "kind": "conference-local-pdf",
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+      "sourceId": "conference:icassp:2026:icassp-arnumber:11460320",
+      "writerInputsSha256": "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719",
+      "sourceBindings": [
+        {
+          "sourceSet": "workspace-icassp-2026",
+          "provenance": "retained-local-crawler",
+          "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+          "metadataRecordIndex": 842,
+          "metadataIdentityBindingSha256": "49cb2cd0fe37f519bbadfed6de1a8542ea3055ce0bf74911abda0541835902c0",
+          "pdfSha256": "ab3dc927f87a57c2e5d5f5456938de4124b65b3b8abe815397316c3b79a31a51",
+          "pdfBytes": 1124530,
+          "pdfIdentityBindingSha256": "58f1b8ab0b089e82697758dbde0c3ec2c0cfabc2496f83e612db8e450b209824",
+          "sourceBindingSha256": "39bcd069610ecf90a9581ec42ad33007e8ba4c5334f2b425e294ca7111a5cdad",
+          "acquisition": {
+            "openreviewResponseBytes": null,
+            "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+            "receipt": null,
+            "sourceAuthors": null,
+            "sourceDoi": null,
+            "sourceKind": "retained-local-no-network-receipt",
+            "sourceTitle": null,
+            "versionRelation": null
+          },
+          "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+        }
+      ],
+      "originalTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+      "sourceUrl": "https://ieeexplore.ieee.org/document/11460320",
+      "pdfUrl": "",
+      "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。",
+      "pdfSha256": "ab3dc927f87a57c2e5d5f5456938de4124b65b3b8abe815397316c3b79a31a51",
+      "textSha256": "acee0e0a7f34c91ba5487c579bd1d9bcfa114ae1763e13b612cf8971620a7a3a",
+      "structuredArtifactsSha256": "e9a7625803d4f1023cdd663fa06661c8224ea9fb83a76a4a568d75ebb6d709f1"
+    }
+  }
+}

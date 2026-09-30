@@ -210,7 +210,24 @@ test('real source-only classifications use source quotes and accepted independen
   const [originalKey, original] = Object.entries(records)[0];
   const cases = [
     ['review-rejected', r => { r.reviewProof.response.accepted = false; r.reviewProofSha256 = hash(JSON.stringify(canonical(r.reviewProof))); }],
+    ...['sourceVersionWarning','sourceTitle','sourceDoi','provenanceDisclosure','acquisition'].map(field => ['unbound-conference-' + field, r => {
+      // Adversarial copies retain the old review, rehash the outer proof and make
+      // an unbound conference claim. They must never become accepted records.
+      r.paperId = 'conference:icml:2026:openreview-forum-id:n1mAjfRDZ6';
+      r.source = { kind: 'conference-local-pdf', paperId: r.paperId, sourceId: r.paperId,
+        writerInputsSha256: hash('alleged writer inputs'), pdfSha256: r.source.pdfSha256,
+        textSha256: r.source.textSha256, structuredArtifactsSha256: r.source.structuredArtifactsSha256,
+        [field]: 'Alleged unbound source declaration' };
+    }]),
+
     ['source-binding-drift', r => { r.source.sourceBinding.pdfSha256 = hash('drift'); }],
+    ['optional-pdf-version-binding-foreign', r => {
+      r.source.pdfVersionBinding = { contract: 'sealed-arxiv-pdf-version-binding-v1', paperId: 'arxiv:0000.12345',
+        sourceId: '0000.12345v1', textUrl: 'https://arxiv.org/html/0000.12345v1', pdfRequestedUrl: 'https://arxiv.org/pdf/0000.12345.pdf',
+        pdfSha256: r.source.pdfSha256, sourceManifestSha256: r.source.sourceManifestSha256, textVersion: 1,
+        pdfVersion: 'unspecified', pdfVersionAuthenticated: false, status: 'versioned-text-unversioned-pdf-url' };
+      r.source.sourceVersionWarning = '封存文本来自 0000.12345v1；实际 PDF 链接 https://arxiv.org/pdf/0000.12345.pdf 未指定版本。已确认属于同一论文，但尚未确认 PDF 对应 v1。';
+    }],
     ['quote-drift', r => { r.evidence[0].quote += ' invented'; r.evidence[0].quoteSha256 = hash(r.evidence[0].quote); }],
     ['missing-numbered-selection', r => { delete r.quoteSelections; }],
     ['selection-source-offset-drift', r => { r.quoteSelections[0].quoteStart += 1; }],
@@ -235,6 +252,51 @@ test('real source-only classifications use source quotes and accepted independen
   const counts = JSON.parse(fs.readFileSync(path.join(root, 'public/index.html'))).map(r => ({ id: r.id, direct: r.direct, subtree: r.sub }));
   assert.deepEqual(counts, core.counts(core.groupPapers(index, graph), graph).concepts);
   const outputs = fs.readdirSync(path.join(root, 'public/posts'));
-  assert.ok(outputs.some(name => /此次只补充研究分类/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
+  assert.ok(outputs.some(name => /只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
+  assert.ok(outputs.some(name => /分类按核验时的版本展示，路径末项为直接分类。/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
   assert.ok(outputs.some(name => /封存原文来源披露在已完成分类页仍可见/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
+});
+
+// This is an actual independently accepted record. Negative copies only rehash
+// the outer envelope; they never create or alter an accepted model review.
+test('actual version-binding classification preserves paths, exact citation and warning; rehashed binding drift stays unclassified', { skip: !process.env.SOURCE_ONLY_NEW_SAMPLE }, t => {
+  const root = fixture(t);
+  const history = JSON.parse(fs.readFileSync(process.env.SOURCE_ONLY_NEW_SAMPLE));
+  const [key, original] = Object.entries(history.records).find(([, r]) => r.paperId === 'arxiv:2605.12987');
+  assert.equal(original.source.pdfVersionBinding.contract, 'sealed-arxiv-pdf-version-binding-v1');
+  fs.copyFileSync(path.join(repository, key), path.join(root, key));
+  fs.copyFileSync(path.join(repository, 'data/identity-history.json'), path.join(root, 'data/identity-history.json'));
+  const records = { [key]: original };
+  const mutations = [
+    ['actual-foreign-pdf', r => { r.source.pdfVersionBinding.pdfRequestedUrl = 'https://arxiv.org/pdf/2606.01009.pdf'; }],
+    ['actual-pdf-sha', r => { r.source.pdfVersionBinding.pdfSha256 = hash('wrong'); }],
+    ['actual-version-type', r => { r.source.pdfVersionBinding.textVersion = '1'; }],
+    ['actual-false-warning', r => { r.source.sourceVersionWarning = 'PDF version authenticated'; }],
+    ['actual-unbound-warning', r => { delete r.source.pdfVersionBinding; }],
+    ['actual-nested-run-hash', r => { r.source.sourceBinding.sourceRunIdentitySha256 = hash('wrong'); }],
+    ['actual-fake-404', r => { r.source.sourceVersion = { contract: 'arxiv-historical-version-source-v1', attemptedCurrentPdfStatus: 404 }; }],
+  ];
+  for (const [name, mutate] of mutations) {
+    const copyKey = 'content/posts/' + name + '.md';
+    fs.copyFileSync(path.join(repository, key), path.join(root, copyKey));
+    const record = structuredClone(original); mutate(record);
+    const body = { ...record }; delete body.proofSha256;
+    record.proofSha256 = hash(JSON.stringify(canonical(body))); records[copyKey] = record;
+  }
+  fs.writeFileSync(path.join(root, 'data/taxonomy-history.json'), JSON.stringify({ ...history, records }));
+  fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_taxonomy.html" . }}<pre id="citation">{{ partial "citation_source.html" . | jsonify }}</pre>');
+  const index = build(root);
+  const accepted = index.filter(r => r.taxonomyEvidenceType === 'source-only-taxonomy');
+  assert.equal(accepted.length, 1);
+  assert.equal(accepted[0].primaryTaskId, original.primaryTaskId);
+  assert.equal(accepted[0].primaryMethodId, original.primaryMethodId);
+  assert.ok(index.filter(r => !r.taxonomyEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId));
+  const html = fs.readFileSync(path.join(root, 'public/posts', path.basename(key, '.md'), 'index.html'), 'utf8');
+  assert.ok(html.includes('/papers/?concept=' + original.primaryTaskId));
+  assert.ok(html.includes('/papers/?concept=' + original.primaryMethodId));
+  assert.ok(html.includes('href="' + original.source.pdfVersionBinding.pdfRequestedUrl + '"'));
+  const escaped = html.match(/<pre id="citation">([\s\S]*?)<\/pre>/)[1];
+  const citation = JSON.parse(escaped.replace(/&#34;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'));
+  assert.equal(citation.pdfUrl, original.source.pdfVersionBinding.pdfRequestedUrl);
+  assert.equal(citation.sourceVersionWarning, original.source.sourceVersionWarning);
 });

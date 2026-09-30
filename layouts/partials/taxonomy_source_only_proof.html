@@ -25,6 +25,7 @@
     {{- end -}}
   {{- else }}{{ $valid = false }}{{ end -}}
 {{- end -}}
+{{- if $valid }}{{ $descriptor := partial "research_source_descriptor.html" $record.source }}{{ $valid = $descriptor.valid }}{{ end -}}
 {{- if $valid -}}
   {{- $review := $record.reviewProof -}}
   {{- $valid = and (eq $review.contract (printf "%s-review" $contract)) (eq $review.registrySha256 $record.registrySha256) (eq $review.sourceTextSha256 $record.source.textSha256) (reflect.IsMap $review.response) $review.model (eq (crypto.SHA256 ($review | jsonify (dict "noHTMLEscape" true))) $record.reviewProofSha256) -}}

@@ -1,0 +1,51 @@
+{{- /* Old source-only records carry only hashes. Rich new descriptors, and every
+     alternate-version claim, must replay actual public metadata/acquisition fields. */ -}}
+{{- $source := . | default dict -}}
+{{- $valid := true -}}
+{{- $rich := or (isset $source "sourceBindings") (isset $source "sourceUrl") (isset $source "pdfUrl") (isset $source "originalTitle") (isset $source "versionRelation") (isset $source "sourceVersionWarning") (isset $source "sourceTitle") (isset $source "sourceDoi") (isset $source "provenanceDisclosure") (isset $source "acquisition") -}}
+{{- if and (eq $source.kind "conference-local-pdf") $rich -}}
+  {{- $id := printf "%v" ($source.paperId | default "") -}}
+  {{- $official := "" -}}
+  {{- if findRE `^conference:icassp:[0-9]{4}:icassp-arnumber:[1-9][0-9]*$` $id 1 }}{{ $official = printf "https://ieeexplore.ieee.org/document/%s" (replaceRE `^.*:` "" $id) }}
+  {{- else if findRE `^conference:(icml|iclr):[0-9]{4}:openreview-forum-id:[A-Za-z0-9_-]{6,128}$` $id 1 }}{{ $official = printf "https://openreview.net/forum?id=%s" (replaceRE `^.*:` "" $id) }}{{ end -}}
+  {{- $valid = and $official (eq $source.sourceId $id) (eq $source.sourceUrl $official) (eq $source.pdfUrl "") (eq (printf "%T" $source.originalTitle) "string") $source.originalTitle (reflect.IsSlice $source.sourceBindings) (gt (len ($source.sourceBindings | default slice)) 0) -}}
+  {{- range $field := slice "writerInputsSha256" "pdfSha256" "textSha256" "structuredArtifactsSha256" }}{{ if not (and (eq (printf "%T" (index $source $field)) "string") (findRE `^[a-f0-9]{64}$` (index $source $field | default "") 1)) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- if isset $source "acquisition" }}{{ $valid = false }}{{ end -}}
+  {{- if $valid -}}
+    {{- $fields := slice "sourceSet" "provenance" "metadataSha256" "metadataRecordIndex" "metadataIdentityBindingSha256" "pdfSha256" "pdfBytes" "pdfIdentityBindingSha256" "sourceBindingSha256" "acquisition" "acquisitionSha256" -}}
+    {{- range $index, $binding := $source.sourceBindings -}}
+      {{- if reflect.IsMap $binding -}}
+        {{- $keys := slice }}{{ range $key, $_ := $binding }}{{ $keys = $keys | append $key }}{{ end -}}
+        {{- if not (and (eq (delimit (sort $keys) "|") (delimit (sort $fields) "|")) (eq (printf "%T" $binding.sourceSet) "string") $binding.sourceSet (eq (printf "%T" $binding.provenance) "string") $binding.provenance (reflect.IsMap $binding.acquisition) (in (slice "json.Number" "int" "int64" "float64") (printf "%T" $binding.metadataRecordIndex)) (and (ge (float $binding.metadataRecordIndex) 0) (eq (float $binding.metadataRecordIndex) (math.Floor (float $binding.metadataRecordIndex)))) (in (slice "json.Number" "int" "int64" "float64") (printf "%T" $binding.pdfBytes)) (and (gt (float $binding.pdfBytes) 0) (eq (float $binding.pdfBytes) (math.Floor (float $binding.pdfBytes))))) }}{{ $valid = false }}{{ end -}}
+        {{- range $field := slice "metadataSha256" "metadataIdentityBindingSha256" "pdfSha256" "pdfIdentityBindingSha256" "sourceBindingSha256" "acquisitionSha256" }}{{ if not (and (eq (printf "%T" (index $binding $field)) "string") (findRE `^[a-f0-9]{64}$` (index $binding $field | default "") 1)) }}{{ $valid = false }}{{ end }}{{ end -}}
+        {{- if and (eq $index 0) (ne $binding.pdfSha256 $source.pdfSha256) }}{{ $valid = false }}{{ end -}}
+        {{- if reflect.IsMap $binding.acquisition -}}
+          {{- $acquisition := $binding.acquisition -}}
+          {{- if not (in (slice "retained-local-no-network-receipt" "author-prior-preprint-cross-version" "official-arxiv-versioned-pdf") $acquisition.sourceKind) }}{{ $valid = false }}{{ end -}}
+          {{- range $field, $_ := $acquisition }}{{ if not (in (slice "sourceKind" "receipt" "sourceTitle" "sourceDoi" "sourceAuthors" "versionRelation" "provenanceStatement" "openreviewResponseBytes") $field) }}{{ $valid = false }}{{ end }}{{ end -}}
+          {{- if eq $acquisition.sourceKind "retained-local-no-network-receipt" -}}
+            {{- if not (and (eq $source.provenanceDisclosure "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。") (not $acquisition.receipt) (not $acquisition.versionRelation) (not $acquisition.sourceTitle) (not $acquisition.sourceDoi) (not $acquisition.openreviewResponseBytes) (eq $acquisition.provenanceStatement "PDF bytes predate the network receipt system and are retained local crawler input.")) }}{{ $valid = false }}{{ end -}}
+          {{- else -}}
+            {{- if $source.provenanceDisclosure }}{{ $valid = false }}{{ end -}}
+            {{- $receipt := $acquisition.receipt | default dict -}}
+            {{- if not (and (reflect.IsMap $receipt) (eq (len $receipt) 2) (eq (printf "%T" $receipt.fileSha256) "string") (eq (printf "%T" $receipt.selfSha256) "string") (findRE `^[a-f0-9]{64}$` ($receipt.fileSha256 | default "") 1) (findRE `^[a-f0-9]{64}$` ($receipt.selfSha256 | default "") 1)) }}{{ $valid = false }}{{ end -}}
+          {{- end -}}
+          {{- if $source.versionRelation -}}
+            {{- $profileOk := false -}}
+            {{- if eq $id "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6" -}}
+              {{- $profileOk = and (eq $source.versionRelation "author-prior-preprint-with-different-title") (eq $source.sourceTitle "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction") (eq $source.sourceDoi "10.2139/ssrn.6288899") (eq $acquisition.sourceKind "author-prior-preprint-cross-version") (eq $acquisition.provenanceStatement "PDF bytes were obtained from the author prior preprint through the fixed SSRN record. Its title differs from the ICML record; it is neither the ICML camera-ready paper nor OpenReview response bytes.") (eq $source.sourceVersionWarning "本次分析使用可访问的作者早期预印本，不是会议 camera-ready 定稿；标题、内容、实验结果和结论可能与会议最终版本不同。") -}}
+            {{- else if eq $id "conference:icml:2026:openreview-forum-id:jfpkqjhex4" -}}
+              {{- $profileOk = and (eq $source.versionRelation "same-paper-versioned-official-preprint") (eq $source.sourceTitle "Position: Towards Responsible Evaluation for Text-to-Speech") (not $source.sourceDoi) (eq $acquisition.sourceKind "official-arxiv-versioned-pdf") (eq $acquisition.provenanceStatement "PDF bytes were fetched from the versioned official arXiv PDF endpoint; they are not OpenReview response bytes.") (eq $source.sourceVersionWarning "封存PDF来自同标题、同作者的官方 arXiv 2510.06927v3 预印本；不是 OpenReview 下载响应，也未据此认证 ICML camera-ready 定稿。") -}}
+            {{- end -}}
+            {{- if not (and $profileOk (eq $acquisition.openreviewResponseBytes false) (eq $acquisition.versionRelation $source.versionRelation) (eq $acquisition.sourceTitle $source.sourceTitle) (eq ($acquisition.sourceDoi | default "") ($source.sourceDoi | default "")) (eq (printf "%T" $acquisition.provenanceStatement) "string") $acquisition.provenanceStatement) }}{{ $valid = false }}{{ end -}}
+          {{- else if or $acquisition.versionRelation $source.sourceVersionWarning $source.sourceTitle $source.sourceDoi (in (slice "author-prior-preprint-cross-version" "official-arxiv-versioned-pdf") $acquisition.sourceKind) -}}
+            {{- $valid = false -}}
+          {{- end -}}
+        {{- else }}{{ $valid = false }}{{ end -}}
+      {{- else }}{{ $valid = false }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if and $rich (ne $source.kind "conference-local-pdf") (isset $source "sourceBindings") -}}
+  {{- $valid = false -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}

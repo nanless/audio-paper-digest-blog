@@ -1,0 +1,32 @@
+{{- /* Optional source-only descriptor: a versioned text with a canonical,
+     unspecified-version PDF is never evidence that the PDF is that text version. */ -}}
+{{- $source := . | default dict -}}
+{{- $result := dict "valid" true "warning" "" -}}
+{{- if isset $source "pdfVersionBinding" -}}
+  {{- $result = dict "valid" false "warning" "" -}}
+  {{- $binding := $source.pdfVersionBinding -}}
+  {{- if reflect.IsMap $binding -}}
+    {{- $fields := slice "contract" "paperId" "sourceId" "textUrl" "pdfRequestedUrl" "pdfSha256" "sourceManifestSha256" "textVersion" "pdfVersion" "pdfVersionAuthenticated" "status" -}}
+    {{- $keys := slice -}}{{ range $key, $_ := $binding }}{{ $keys = $keys | append $key }}{{ end -}}
+    {{- $valid := eq (delimit (sort $keys) "|") (delimit (sort $fields) "|") -}}
+    {{- range $field := slice "contract" "paperId" "sourceId" "textUrl" "pdfRequestedUrl" "pdfSha256" "sourceManifestSha256" "pdfVersion" "status" }}{{ if ne (printf "%T" (index $binding $field)) "string" }}{{ $valid = false }}{{ end }}{{ end -}}
+    {{- if $valid -}}
+      {{- $selected := $binding.sourceId -}}
+      {{- $id := replaceRE `v[1-9][0-9]*$` "" $selected -}}
+      {{- $textVersion := replaceRE `^.*v` "" $selected -}}
+      {{- $pdf := $binding.pdfRequestedUrl -}}
+      {{- $warning := printf "封存文本来自 %s；实际 PDF 链接 %s 未指定版本。已确认属于同一论文，但尚未确认 PDF 对应 v%s。" $selected $pdf $textVersion -}}
+      {{- $valid = and (eq $binding.contract "sealed-arxiv-pdf-version-binding-v1") (eq $source.kind "arxiv-fresh-fetch") (findRE `^[0-9]{4}\.[0-9]{4,5}v[1-9][0-9]*$` $selected 1) (eq $binding.paperId (printf "arxiv:%s" $id)) (eq $source.paperId $binding.paperId) (eq $source.sourceId $selected) (or (eq $binding.textUrl (printf "https://arxiv.org/html/%s" $selected)) (eq $binding.textUrl (printf "https://arxiv.org/abs/%s" $selected))) (or (eq $pdf (printf "https://arxiv.org/pdf/%s" $id)) (eq $pdf (printf "https://arxiv.org/pdf/%s.pdf" $id))) (in (slice "json.Number" "int" "int64" "float64") (printf "%T" $binding.textVersion)) (eq (printf "%v" $binding.textVersion) $textVersion) (eq $binding.pdfVersion "unspecified") (eq $binding.pdfVersionAuthenticated false) (eq $binding.status "versioned-text-unversioned-pdf-url") (eq $source.sourceVersionWarning $warning) (not (isset $source "sourceVersion")) (reflect.IsMap $source.sourceBinding) -}}
+      {{- if isset $source "sourceUrl" }}{{ $valid = and $valid (eq $source.sourceUrl (printf "https://arxiv.org/abs/%s" $selected)) }}{{ end -}}
+      {{- if isset $source "pdfUrl" }}{{ $valid = and $valid (eq $source.pdfUrl $pdf) }}{{ end -}}
+      {{- if $valid -}}
+        {{- $original := $source.sourceBinding -}}
+        {{- $valid = and (eq $original.contract "fresh-arxiv-rewrite-source-v1") (eq $original.paperId $source.paperId) (eq $original.arxivId $id) (eq $original.generation $source.generation) (gt ($source.generation | default 0) 0) (eq $original.textSha256 $source.textSha256) (eq $original.pdfSha256 $source.pdfSha256) (eq $original.sourceManifestSha256 $source.sourceManifestSha256) (eq $binding.pdfSha256 $source.pdfSha256) (eq $binding.sourceManifestSha256 $source.sourceManifestSha256) -}}
+        {{- range $field := slice "sourceRunIdentitySha256" "structuredArtifactsSha256" }}{{ if isset $original $field }}{{ if ne (index $original $field) (index $source $field) }}{{ $valid = false }}{{ end }}{{ end }}{{ end -}}
+        {{- range $field := slice "textSha256" "pdfSha256" "sourceManifestSha256" "sourceRunIdentitySha256" "structuredArtifactsSha256" }}{{ if not (and (eq (printf "%T" (index $source $field)) "string") (findRE `^[a-f0-9]{64}$` (index $source $field | default "") 1)) }}{{ $valid = false }}{{ end }}{{ end -}}
+        {{- if $valid }}{{ $result = dict "valid" true "warning" $warning }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

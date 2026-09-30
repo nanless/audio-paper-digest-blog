@@ -1,0 +1,21 @@
+{{- /* Preserve text and let Go's HTML template escape every segment and href.
+     Parentheses/quotes/non-ASCII punctuation delimit URLs; no HTML is trusted. */ -}}
+{{- $remaining := printf "%s" . -}}
+{{- $candidates := findRE `https://[A-Za-z0-9._~:/?#@!$&*+,;=%-]+` $remaining -}}
+{{- $urlPattern := `^https://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)*(?::[0-9]{1,5})?(?:[/?#][A-Za-z0-9._~:/?#@!$&*+,;=%-]*)?$` -}}
+{{- range $candidate := $candidates -}}
+  {{- $before := index (split $remaining $candidate) 0 -}}
+  {{- $url := replaceRE `[.,;:!?]+$` "" $candidate -}}
+  {{- $trailing := strings.TrimPrefix $url $candidate -}}
+  {{- $boundary := not (findRE `[A-Za-z0-9_./:@-]$` $before 1) -}}
+  {{- $valid := and $boundary (findRE $urlPattern $url 1) -}}
+  {{- if $valid -}}
+    {{- $parsed := try (urls.Parse $url) -}}
+    {{- if $parsed.Err }}{{ $valid = false }}{{ else }}{{ with $parsed.Value.Port }}{{ if or (lt (int .) 1) (gt (int .) 65535) }}{{ $valid = false }}{{ end }}{{ end }}{{ end -}}
+  {{- end -}}
+  {{- $before -}}
+  {{- if $valid -}}<a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $url }}</a>{{ $trailing }}
+  {{- else -}}{{ $candidate }}{{- end -}}
+  {{- $remaining = strings.TrimPrefix $candidate (strings.TrimPrefix $before $remaining) -}}
+{{- end -}}
+{{- $remaining -}}

@@ -24,9 +24,9 @@
       <div class="paper-taxonomy-group"><strong>{{ .name }}</strong>{{ range $rows }}{{ partial "taxonomy_path.html" (dict "concept" . "concepts" $concepts) }}{{ end }}</div>
     {{- end }}{{ end }}
   </details>{{ end }}
-  <p class="taxonomy-note">路径与名称采用{{ if $proof.evidenceContract }}本次核验所用{{ else }}本文发布时{{ end }}的分类版本；最后一项是直接分类。任务与方法是并列视角。目录更新不会自动改变本页归属。</p>
-  {{- if eq $proof.evidenceType "source-only-taxonomy" }}<p class="taxonomy-note">这些分类依据封存原文、逐类证据与独立审核补充核验。此次只补充研究分类，未重写或重新审核导读正文；原文和原有标签均保留。原文变动后，补充分类需重新核验。</p>
-  {{- else if $proof.evidenceContract }}<p class="taxonomy-note">这些分类依据历史论文来源和分析记录补充核验；原文和原有标签均保留。任何原文变动后，补充分类都需重新核验。</p>{{ end }}
+  <p class="taxonomy-note">分类按核验时的版本展示，路径末项为直接分类。</p>
+  {{- if eq $proof.evidenceType "source-only-taxonomy" }}<p class="taxonomy-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
+  {{- else if $proof.evidenceContract }}<p class="taxonomy-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
 </section>
 {{- else if .Params.paper_digest_taxonomy_contract }}
 <p class="taxonomy-note">分类信息待核；下方保留页面原有标签。</p>
@@ -41,8 +41,8 @@
 {{- $visibleSource := $metadata.sealedSource | default dict }}
 {{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
 {{- if and (not $visibleSource) $taxonomyProof.evidenceContract }}{{ $visibleSource = $taxonomyProof.source | default dict }}{{ end }}
-{{- with $visibleSource.provenanceDisclosure }}<p class="taxonomy-note">{{ . }}</p>{{ end }}
+{{- with $visibleSource.provenanceDisclosure }}<p class="taxonomy-note">{{ partial "render_https_text.html" . }}</p>{{ end }}
 {{- $versionWarning := $visibleSource.sourceVersionWarning | default "" }}
 {{- $historicalVersion := partial "research_historical_source_version.html" $visibleSource }}
 {{- if and $historicalVersion.valid $historicalVersion.warning }}{{ $versionWarning = $historicalVersion.warning }}{{ end }}
-{{- with $versionWarning }}<p class="taxonomy-note">{{ . }}</p>{{ end }}
+{{- with $versionWarning }}<p class="taxonomy-note">{{ partial "render_https_text.html" . }}</p>{{ end }}
