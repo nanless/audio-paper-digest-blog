@@ -32,8 +32,8 @@ function parseStrictJson(raw){
  const value=()=>{space();const c=s[i];if(c==='"'){string();return;}if(c==='{'){i++;space();const keys=new Set();if(s[i]==='}'){i++;return;}while(i<s.length){space();if(s[i]!=='"')fail('JSON键必须是字符串');const k=string();if(keys.has(k))fail('JSON重复键');keys.add(k);space();if(s[i++]!==':')fail('JSON缺冒号');value();space();const d=s[i++];if(d==='}')return;if(d!==',')fail('JSON分隔错误');}fail('JSON对象未闭合');}if(c==='['){i++;space();if(s[i]===']'){i++;return;}while(i<s.length){value();space();const d=s[i++];if(d===']')return;if(d!==',')fail('JSON数组分隔错误');}fail('JSON数组未闭合');}const m=s.slice(i).match(/^(?:true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?)/);if(!m)fail('无效JSON');i+=m[0].length;};
  if(!s.startsWith('{')||!s.endsWith('}'))fail('必须是无围栏JSON对象');value();space();if(i!==s.length)fail('JSON额外内容');return JSON.parse(s);
 }
-function validatePublicRecord(record,snapshot){
- if(!map(record)||record.evidenceType!=='source-only-taxonomy-v2'||record.classificationContract!==CONTRACT||!map(record.classificationRecord))fail('明确v2契约和完整分类记录必需');
+function validateRecord(record,snapshot,controlled){
+ if(!map(record)||record.evidenceType!==(controlled?'controlled-current-page-source-taxonomy-v2':'source-only-taxonomy-v2')||record.classificationContract!==CONTRACT||!map(record.classificationRecord))fail('明确v2契约和完整分类记录必需');
  const c=record.classificationRecord,source=record.source;
  const {proofSha256:pageProof,...pageBody}=record;if(!hash(pageProof)||stableHash(pageBody)!==pageProof)fail('页面证明SHA');
  const {proofSha256:classificationProof,...classificationBody}=c;if(!hash(classificationProof)||stableHash(classificationBody)!==classificationProof||classificationProof!==record.classificationProofSha256||stableHash(c)!==record.classificationRecordSha256)fail('完整分类记录SHA');
@@ -55,7 +55,7 @@ function validatePublicRecord(record,snapshot){
  for(const k of ['registrySha256','projectionSha256','evidenceSha256','promptSha256','endpointSha256','accountPoolGroupSha256','protectedDependencySha256'])if(!hash(f[k]))fail('请求指纹SHA格式');
  if(f.projectionSha256!==projectionHash(snapshot))fail('正式词表提示投影漂移');
  for(const[k,name]of Object.entries({implementationSha256:'historical-source-taxonomy-classification-v2',snippetImplementationSha256:'source-evidence-snippets-v2',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))if(f[k]!==c.protectedDependencies.files['scripts/lib/'+name+'.js']||!hash(f[k]))fail('请求实现依赖漂移');
- require('./source-descriptor-proof').validateSourceDescriptor(source);
+ require('./source-descriptor-proof').validateSourceDescriptor(controlled?controlled.sourceDescriptor:source);
  const fullDecision={concepts:c.concepts,...Object.fromEntries(ROLE_KEYS.map(k=>[k,c[k]]))};
  if(!Array.isArray(c.concepts)||!Array.isArray(record.evidence)||stableHash(c.concepts)!==stableHash(record.evidence)||stableHash(ROLE_KEYS.map(k=>c[k]))!==stableHash(ROLE_KEYS.map(k=>record[k])))fail('页面角色/证据投影');
  if(stableHash(c.concepts.map(({id,facet,label})=>({id,facet,label})))!==stableHash(record.concepts))fail('页面概念投影');
@@ -68,10 +68,7 @@ function validatePublicRecord(record,snapshot){
  if(c.primaryTaskId!==(c.researchType==='engineering'?r.conceptId:'')||c.primaryTaskLabel!==(c.researchType==='engineering'?r.label:''))fail('工程主任务');
  if(c.primaryScientificTopicId!==(c.researchType==='science'?r.conceptId:'')||c.primaryScientificTopicLabel!==(c.researchType==='science'?r.label:''))fail('科学主主题');
  if(typeof c.methodNotApplicable!=='boolean')fail('方法NA类型');
- // Full-source NA disclosure is being frozen by the issuer separately. This
- // release accepts explicit methods only; neither selected quotes nor a
- // guessed future object establishes complete supplied evidence.
- if(c.methodNotApplicable)fail('方法不适用待正式全文编号证据协议；当前版本失败关闭');
+ require('./taxonomy-na-full-source-proof').validateNAFullSourceEvidence(c,source);
  if(c.methodNotApplicable){if(!['position','experience'].includes(c.researchType)||c.primaryMethodId!==null||c.primaryMethodLabel!==''||!text(c.methodNotApplicableReason,20)||!map(c.methodNotApplicableEvidence)||c.concepts.some(e=>e.facet==='method'))fail('方法不适用窄例外');}
  else{const m=byId.get(c.primaryMethodId);if(!m||m.facet!=='method'||!seen.has(m.id)||c.primaryMethodLabel!==m.zh||c.methodNotApplicableReason!==''||c.methodNotApplicableEvidence!==null)fail('明确主方法');}
  if(c.concepts.length<(c.methodNotApplicable?1:2)||c.concepts.length>5)fail('概念数量');
@@ -101,4 +98,6 @@ function validatePublicRecord(record,snapshot){
  if(response.accepted!==true||!Array.isArray(response.issues)||response.issues.length||Object.values(response.verifiedChecks).some(v=>v!==true)||sha(c.reviewResponseText)!==review.responseSha256||stableHash(response)!==stableHash(review.response))fail('独立四项审核未通过');
  return true;
 }
-module.exports={CONTRACT,TYPES,DOMAINS,FACETS,ROLE_KEYS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash,validatePublicRecord};
+function validatePublicRecord(record,snapshot){return validateRecord(record,snapshot,null);}
+function validateControlledCurrentPageRecord(record,snapshot){return validateRecord(record,snapshot,require('./current-page-taxonomy-v2-proof').validateProductionOuter(record));}
+module.exports={CONTRACT,TYPES,DOMAINS,FACETS,ROLE_KEYS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash,validatePublicRecord,validateControlledCurrentPageRecord};

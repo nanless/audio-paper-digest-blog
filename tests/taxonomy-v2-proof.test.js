@@ -14,14 +14,14 @@ test('retained H113 dependency map accepts JS and Python without allowing foreig
  const drift=fixture();withDependencies(drift.record,h113);drift.record.classificationRecord.fingerprintInputs.identityImplementationSha256=digest('foreign implementation');drift.record.classificationRecord.fingerprint=api.stableHash(drift.record.classificationRecord.fingerprintInputs);drift.record.requestStageFingerprint=drift.record.classificationRecord.fingerprint;seal(drift.record);assert.throws(()=>api.validatePublicRecord(drift.record,drift.snapshot),/请求实现依赖漂移/);
 });
 test('synthetic public v2 projection replays full model, review, source and fingerprint for formal 330 and 262 snapshots',()=>{
- for(const registryVersion of ['paper-taxonomy-v1','paper-taxonomy-v2'])for(const options of [{},{researchType:'engineering'},{researchType:'position',domainScope:'out-of-domain'},{researchType:'experience',domainScope:'adjacent-domain'}]){
+ for(const registryVersion of ['paper-taxonomy-v1','paper-taxonomy-v2'])for(const options of [{},{researchType:'engineering'},{researchType:'position',na:true,domainScope:'out-of-domain'},{researchType:'experience',na:true,domainScope:'adjacent-domain'}]){
   const f=fixture({...options,registryVersion});assert.equal(api.validatePublicRecord(f.record,f.snapshot),true);
  }
 });
-test('NA fails closed pending the formal full-source public evidence schema, even with re-hashed guessed coverage',()=>{
+test('NA missing or guessed full-source public evidence fails closed after re-hashing',()=>{
  for(const researchType of ['position','experience'])for(const naFullSourceEvidence of [undefined,{sampling:'full-source',sourceTextSha256:'a'.repeat(64),snippets:[]}]){
-  const f=fixture({researchType,na:true});if(naFullSourceEvidence)f.record.classificationRecord.naFullSourceEvidence=naFullSourceEvidence;seal(f.record);
-  assert.throws(()=>api.validatePublicRecord(f.record,f.snapshot),/方法不适用待正式全文编号证据协议/);
+  const f=fixture({researchType,na:true});if(naFullSourceEvidence)f.record.classificationRecord.naFullSourceEvidence=naFullSourceEvidence;else delete f.record.classificationRecord.naFullSourceEvidence;seal(f.record);
+  assert.throws(()=>api.validatePublicRecord(f.record,f.snapshot),/历史v2全文NA证据拒绝/);
  }
 });
 test('re-hashed protocol drift cannot gain acceptance merely by recomputing public SHA commitments',()=>{

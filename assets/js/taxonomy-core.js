@@ -156,8 +156,8 @@
         var selected = new Set(result.concepts.map(function (node) { return node.id; }));
         var roleNode = role && source.byId[role.conceptId];
         var v2 = record.taxonomyClassificationContract === V2_CONTRACT
-          && record.taxonomyEvidenceType === 'source-only-taxonomy-v2'
-          && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2'
+          && ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
+            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2'))
           && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
           && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)
           && roleNode && selected.has(roleNode.id) && roleFacets[record.researchType].includes(role.kind)

@@ -1,0 +1,126 @@
+{{- /* Historical-v2 public integrity replay, not a public-key signature. The
+     issuer/exporter additionally replays sealed source bytes and semantic review. */ -}}
+{{- $r := .record -}}{{- $context := .controlledContext | default dict -}}{{- $controlled := eq ($context.valid | default false) true -}}{{- $expectedType := cond $controlled "controlled-current-page-source-taxonomy-v2" "source-only-taxonomy-v2" -}}{{- $valid := and (reflect.IsMap $r) (eq $r.evidenceType $expectedType) (eq $r.classificationContract "historical-source-taxonomy-classification-v2") (reflect.IsMap $r.classificationRecord) -}}
+{{- $sha := `^[a-f0-9]{64}$` -}}
+{{- if $valid -}}
+  {{- $c := $r.classificationRecord -}}{{- $source := $r.source | default dict -}}
+  {{- if and (not $controlled) (isset $source "currentPageClassificationBinding") }}{{ $valid = false }}{{ end -}}
+  {{- $allowedRegistry := dict "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d" "paper-taxonomy-v1" "68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c" "paper-taxonomy-v2" -}}
+  {{- $valid = and (eq $c.contract $r.classificationContract) (eq $c.paperId $r.paperId) (eq $c.runId $r.runId) (eq $c.registrySha256 $r.registrySha256) (eq $c.fingerprint $r.requestStageFingerprint) (eq $r.registryVersion (index $allowedRegistry $r.registrySha256)) (eq (crypto.SHA256 ($source | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($c.source | jsonify (dict "noHTMLEscape" true)))) -}}
+  {{- range $field := slice "classificationRecordSha256" "classificationProofSha256" "requestStageFingerprint" "reviewProofSha256" }}{{ if not (findRE $sha (index $r $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- $body := newScratch }}{{ $body.Set "record" dict }}{{ range $k, $v := $c }}{{ if ne $k "proofSha256" }}{{ $body.SetInMap "record" $k $v }}{{ end }}{{ end -}}
+  {{- $valid = and $valid (eq (crypto.SHA256 ($c | jsonify (dict "noHTMLEscape" true))) $r.classificationRecordSha256) (eq (crypto.SHA256 (($body.Get "record") | jsonify (dict "noHTMLEscape" true))) $c.proofSha256) (eq $c.proofSha256 $r.classificationProofSha256) -}}
+  {{- range $field := slice "pdfSha256" "textSha256" "structuredArtifactsSha256" }}{{ if not (findRE $sha (index $source $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- $valid = and $valid (eq $source.paperId $r.paperId) $source.sourceId -}}
+  {{- if eq $source.kind "arxiv-fresh-fetch" -}}
+    {{- $b := $source.sourceBinding | default dict -}}
+    {{- $valid = and $valid (findRE `^arxiv:[0-9]{4}\.[0-9]{4,5}$` $r.paperId 1) (eq $b.contract "fresh-arxiv-rewrite-source-v1") (eq $b.paperId $r.paperId) (eq $b.arxivId (strings.TrimPrefix "arxiv:" $r.paperId)) (eq (replaceRE `v[1-9][0-9]*$` "" $source.sourceId) $b.arxivId) (gt ($source.generation | default 0) 0) (eq $b.generation $source.generation) -}}
+    {{- range $field := slice "pdfSha256" "textSha256" "sourceManifestSha256" }}{{ if not (and (findRE $sha (index $source $field | default "") 1) (eq (index $source $field) (index $b $field))) }}{{ $valid = false }}{{ end }}{{ end -}}
+    {{- if not (findRE $sha ($source.sourceRunIdentitySha256 | default "") 1) }}{{ $valid = false }}{{ end -}}
+    {{- range $field := slice "sourceRunIdentitySha256" "structuredArtifactsSha256" }}{{ if and (isset $b $field) (ne (index $b $field) (index $source $field)) }}{{ $valid = false }}{{ end }}{{ end -}}
+    {{- if isset $source "sourceUrl" }}{{ $valid = and $valid (eq $source.sourceUrl (printf "https://arxiv.org/abs/%s" $source.sourceId)) }}{{ end -}}
+    {{- if and (isset $source "pdfUrl") (not (isset $source "pdfVersionBinding")) (not (isset $source "sourceVersion")) }}{{ $valid = and $valid (or (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s" $source.sourceId)) (eq $source.pdfUrl (printf "https://arxiv.org/pdf/%s.pdf" $source.sourceId))) }}{{ end -}}
+  {{- else if eq $source.kind "conference-local-pdf" -}}
+    {{- $valid = and $valid (findRE `^conference:[^\s\x00-\x1f\x7f]+$` $r.paperId 1) (findRE $sha ($source.writerInputsSha256 | default "") 1) -}}
+  {{- else }}{{ $valid = false }}{{ end -}}
+  {{- $descriptorSource := $source }}{{ if $controlled }}{{ $descriptorSource = $context.sourceDescriptor }}{{ end -}}
+  {{- if $valid }}{{ $descriptor := partial "research_source_descriptor.html" $descriptorSource }}{{ $valid = $descriptor.valid }}{{ end -}}
+  {{- $dependency := $c.protectedDependencies | default dict -}}
+  {{- $valid = and $valid (partial "taxonomy_na_full_source_proof.html" (dict "classification" $c "source" $source)) -}}
+  {{- $valid = and $valid (eq $dependency.contract "historical-taxonomy-v2-source-dependency-fingerprint-v1") (reflect.IsMap $dependency.files) (gt (len ($dependency.files | default dict)) 0) (eq (crypto.SHA256 ($dependency | jsonify (dict "noHTMLEscape" true))) $c.protectedDependencySha256) -}}
+  {{- range $file, $hash := ($dependency.files | default dict) }}{{ if not (and (findRE `^(?:scripts|manual/scripts)/(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_][A-Za-z0-9_.-]*\.(?:js|py)$` $file 1) (not (in (split $file "/") "..")) (findRE $sha $hash 1)) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- $f := $c.fingerprintInputs | default dict -}}
+  {{- $fingerprintFields := slice "contract" "selectionContract" "paperId" "source" "registrySha256" "projectionSha256" "evidenceSha256" "promptSha256" "model" "endpointSha256" "accountPoolGroupSha256" "implementationSha256" "snippetImplementationSha256" "identityImplementationSha256" "schedulerImplementationSha256" "failureImplementationSha256" "protectedDependencySha256" "roleContract" "projectionContract" "maxTokens" "temperature" "reviewMaxTokens" "reviewTemperature" -}}
+  {{- $fingerprintKeys := slice }}{{ range $key, $_ := $f }}{{ $fingerprintKeys = $fingerprintKeys | append $key }}{{ end -}}
+  {{- $projectionHashes := dict "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d" "efb69d9bf8022fb932ac33b371149f1cc3e3280833ba39dfb0bd40221c3c9a1e" "68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c" "c3f225b6fce48d50474719e96ba558f11df4917bdf9d1d60f61aa7d24eb0ff74" -}}
+  {{- $valid = and $valid (reflect.IsMap $f) (eq (delimit (sort $fingerprintKeys) "|") (delimit (sort $fingerprintFields) "|")) (eq (crypto.SHA256 ($f | jsonify (dict "noHTMLEscape" true))) $c.fingerprint) (eq $f.contract $r.classificationContract) (eq $f.selectionContract $c.evidenceSelectionContract) (eq $f.paperId $r.paperId) (eq (crypto.SHA256 ($f.source | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($source | jsonify (dict "noHTMLEscape" true)))) (eq $f.registrySha256 $r.registrySha256) (eq $f.projectionSha256 (index $projectionHashes $r.registrySha256)) (eq $f.evidenceSha256 $c.evidenceSha256) (eq $f.protectedDependencySha256 $c.protectedDependencySha256) (eq $f.roleContract "historical-source-taxonomy-roles-v2") (eq $f.projectionContract "historical-taxonomy-prompt-projection-v2") (and (eq (printf "%T" $f.maxTokens) "float64") (eq $f.maxTokens (float 6000))) (eq $f.temperature 0.1) (and (eq (printf "%T" $f.reviewMaxTokens) "float64") (eq $f.reviewMaxTokens (float 3000))) (eq $f.reviewTemperature 0.1) $f.model -}}
+  {{- range $field := slice "registrySha256" "projectionSha256" "evidenceSha256" "promptSha256" "endpointSha256" "accountPoolGroupSha256" "protectedDependencySha256" }}{{ if not (findRE $sha (index $f $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- range $field, $file := dict "implementationSha256" "historical-source-taxonomy-classification-v2" "snippetImplementationSha256" "source-evidence-snippets-v2" "identityImplementationSha256" "historical-source-identity-supplement" "schedulerImplementationSha256" "source-classification-scheduler" "failureImplementationSha256" "source-classification-failures" }}{{ if ne (index $f $field) (index $dependency.files (printf "scripts/lib/%s.js" $file)) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- $roleFields := slice "researchType" "typeEvidence" "domainScope" "domainEvidence" "primaryResearchRole" "primaryTaskId" "primaryTaskLabel" "primaryScientificTopicId" "primaryScientificTopicLabel" "primaryMethodId" "primaryMethodLabel" "methodNotApplicable" "methodNotApplicableReason" "methodNotApplicableEvidence" -}}
+  {{- $decision := newScratch }}{{ $decision.Set "value" (dict "concepts" $r.evidence) -}}
+  {{- range $field := $roleFields -}}
+    {{- if ne (crypto.SHA256 (index $r $field | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 (index $c $field | jsonify (dict "noHTMLEscape" true))) }}{{ $valid = false }}{{ end -}}
+    {{- $decision.SetInMap "value" $field (index $r $field) -}}
+  {{- end -}}
+  {{- $valid = and $valid (reflect.IsSlice $r.evidence) (reflect.IsSlice $r.concepts) (eq (crypto.SHA256 ($r.evidence | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($c.concepts | jsonify (dict "noHTMLEscape" true)))) -}}
+  {{- $roleFacets := dict "engineering" (slice "task") "science" (slice "scientific_topic") "analysis" (slice "scientific_topic" "research_focus") "evaluation" (slice "research_focus") "resource" (slice "artifact") "review" (slice "task" "scientific_topic" "research_focus") "experience" (slice "task" "scientific_topic" "research_focus" "artifact") "position" (slice "scientific_topic" "research_focus") -}}
+  {{- $role := $r.primaryResearchRole | default dict -}}
+  {{- $valid = and $valid (in (slice "in-domain" "cross-domain" "adjacent-domain" "out-of-domain") $r.domainScope) (isset $roleFacets $r.researchType) (reflect.IsMap $role) (eq (len $role) 3) (in (index $roleFacets $r.researchType | default slice) $role.kind) -}}
+  {{- if eq $r.researchType "engineering" }}{{ $valid = and $valid (eq $r.primaryTaskId $role.conceptId) (eq $r.primaryTaskLabel $role.label) }}{{ else }}{{ $valid = and $valid (eq $r.primaryTaskId "") (eq $r.primaryTaskLabel "") }}{{ end -}}
+  {{- if eq $r.researchType "science" }}{{ $valid = and $valid (eq $r.primaryScientificTopicId $role.conceptId) (eq $r.primaryScientificTopicLabel $role.label) }}{{ else }}{{ $valid = and $valid (eq $r.primaryScientificTopicId "") (eq $r.primaryScientificTopicLabel "") }}{{ end -}}
+  {{- $valid = and $valid (eq (printf "%T" $r.methodNotApplicable) "bool") (le (len $r.concepts) 5) -}}
+  {{- if eq $r.methodNotApplicable true -}}
+    {{- $valid = and $valid (in (slice "position" "experience") $r.researchType) (not $r.primaryMethodId) (eq $r.primaryMethodLabel "") (ge (strings.RuneCount $r.methodNotApplicableReason) 20) (reflect.IsMap $r.methodNotApplicableEvidence) (ge (len $r.concepts) 1) -}}
+  {{- else -}}
+    {{- $valid = and $valid $r.primaryMethodId (eq $r.methodNotApplicableReason "") (not $r.methodNotApplicableEvidence) (ge (len $r.concepts) 2) -}}
+  {{- end -}}
+  {{- $snapshot := dict -}}{{- range ((index hugo.Data "taxonomy-catalog").snapshots | default slice) }}{{ if eq .registrySha256 $r.registrySha256 }}{{ $snapshot = . }}{{ end }}{{ end -}}
+  {{- $nodes := partialCached "taxonomy_registry_index.html" $snapshot ($snapshot.registrySha256 | default "v2-unavailable") -}}
+  {{- $valid = and $valid (eq $snapshot.registryVersion $r.registryVersion) (eq $snapshot.registrySha256 $r.registrySha256) -}}
+  {{- $ids := slice }}{{ $roleOk := false }}{{ $methodOk := eq $r.methodNotApplicable true -}}
+  {{- range $r.concepts -}}
+    {{- $n := index $nodes .id | default dict -}}
+    {{- if not (and (eq (len .) 3) $n.id (eq .facet $n.facet) (eq .label $n.zh) (ne ($n.status | default "active") "deprecated") (not (in $ids .id))) }}{{ $valid = false }}{{ end -}}
+    {{- $ids = $ids | append .id -}}
+    {{- if and $r.methodNotApplicable (eq .facet "method") }}{{ $valid = false }}{{ end -}}
+    {{- if and (eq .id $role.conceptId) (eq .facet $role.kind) (eq .label $role.label) }}{{ $roleOk = true }}{{ end -}}
+    {{- if and (eq .id $r.primaryMethodId) (eq .facet "method") (eq .label $r.primaryMethodLabel) }}{{ $methodOk = true }}{{ end -}}
+  {{- end -}}
+  {{- range $r.concepts }}{{ $n := index $nodes .id | default dict }}{{ range ($n.ancestorIds | default slice) }}{{ if in $ids . }}{{ $valid = false }}{{ end }}{{ end }}{{ end -}}
+  {{- $valid = and $valid $roleOk $methodOk -}}
+  {{- $review := $r.reviewProof | default dict -}}
+  {{- $valid = and $valid (eq (len $review) 9) (eq $review.contract "historical-source-taxonomy-classification-v2-review") (eq $review.registrySha256 $r.registrySha256) (eq $review.sourceTextSha256 $source.textSha256) (eq $review.evidenceSha256 $c.evidenceSha256) (eq $review.model $f.model) (eq (crypto.SHA256 ($review | jsonify (dict "noHTMLEscape" true))) $r.reviewProofSha256) (eq (crypto.SHA256 (($decision.Get "value") | jsonify (dict "noHTMLEscape" true))) $review.decisionSha256) (eq (crypto.SHA256 ($review | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($c.reviewProof | jsonify (dict "noHTMLEscape" true)))) -}}
+  {{- range $field := slice "decisionSha256" "sourceTextSha256" "evidenceSha256" "registrySha256" "promptSha256" "responseSha256" }}{{ if not (findRE $sha (index $review $field | default "") 1) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- $response := $review.response | default dict }}{{ $checks := $response.verifiedChecks | default dict -}}
+  {{- $valid = and $valid (eq (len $response) 3) (eq $response.accepted true) (reflect.IsSlice $response.issues) (eq (len ($response.issues | default slice)) 0) (eq (len $checks) 4) (eq $checks.researchType true) (eq $checks.domainScope true) (eq $checks.primaryResearchRole true) (eq $checks.methodRole true) -}}
+  {{- $rawReview := try (transform.Unmarshal ($c.reviewResponseText | default "{}")) -}}
+  {{- if $rawReview.Err }}{{ $valid = false }}{{ else }}{{ $valid = and $valid (eq (crypto.SHA256 $c.reviewResponseText) $review.responseSha256) (eq (crypto.SHA256 ($rawReview.Value | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($response | jsonify (dict "noHTMLEscape" true)))) }}{{ end -}}
+  {{- $valid = and $valid (eq $r.evidenceSelectionContract "sealed-source-evidence-snippets-v2") (eq $r.evidenceSelectionContract $c.evidenceSelectionContract) (reflect.IsSlice $r.quoteSelections) (eq (crypto.SHA256 ($r.quoteSelections | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($c.quoteSelections | jsonify (dict "noHTMLEscape" true)))) -}}
+  {{- $expected := add (len $r.evidence) 2 }}{{ if $r.methodNotApplicable }}{{ $expected = add $expected 1 }}{{ end }}{{ if ne (len ($r.quoteSelections | default slice)) $expected }}{{ $valid = false }}{{ end -}}
+  {{- $allEvidence := slice (dict "kind" "researchType" "value" $r.typeEvidence) (dict "kind" "domainScope" "value" $r.domainEvidence) -}}
+  {{- if $r.methodNotApplicable }}{{ $allEvidence = $allEvidence | append (dict "kind" "methodNotApplicable" "value" $r.methodNotApplicableEvidence) }}{{ end -}}
+  {{- range $r.evidence }}{{ $allEvidence = $allEvidence | append (dict "kind" "concept" "value" .) }}{{ end -}}
+  {{- range $allEvidence -}}
+    {{- $e := .value | default dict }}{{ $kind := .kind }}{{ $matches := 0 -}}
+    {{- if not (and (reflect.IsMap $e) (ge (strings.RuneCount ($e.quote | default "")) 20) (le (len ($e.quote | default "")) 4000) (ge (strings.RuneCount ($e.rationale | default "")) 5) (eq (crypto.SHA256 ($e.quote | default "")) $e.quoteSha256) (isset $e "quoteStart") (isset $e "evidenceQuoteStart") (ge $e.quoteStart 0) (ge $e.evidenceQuoteStart 0)) }}{{ $valid = false }}{{ end -}}
+    {{- range ($r.quoteSelections | default slice) -}}
+      {{- if and (eq .selectionRole $kind) (or (ne $kind "concept") (eq .conceptId $e.id)) -}}
+        {{- $matches = add $matches 1 -}}
+        {{- $utf16Length := add (strings.RuneCount (.quote | default "")) (len (findRE `[\x{10000}-\x{10FFFF}]` (.quote | default ""))) -}}
+        {{- if not (and (eq .id .evidenceId) (findRE `^s[0-9]{5}$` (.id | default "") 1) (eq .quote $e.quote) (eq .quoteStart $e.quoteStart) (eq .quoteSha256 $e.quoteSha256) (eq .offsetUnit "utf16-code-unit") (eq (float (sub .quoteEnd .quoteStart)) (float $utf16Length))) }}{{ $valid = false }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if ne $matches 1 }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- /* Reconstruct the exact original ID selections and injected quotes. No
+       raw model field may disagree with the projected decision, even after
+       an attacker recomputes every outer integrity hash. */ -}}
+  {{- $expectedRaw := newScratch }}{{ $expectedInjected := newScratch -}}
+  {{- $baseResponse := dict "researchType" $r.researchType "domainScope" $r.domainScope "primaryResearchRole" (dict "kind" $role.kind "conceptId" $role.conceptId) "primaryMethodId" $r.primaryMethodId "methodNotApplicable" $r.methodNotApplicable "methodNotApplicableReason" $r.methodNotApplicableReason "methodNotApplicableEvidence" nil -}}
+  {{- $expectedRaw.Set "value" $baseResponse }}{{ $expectedInjected.Set "value" (dict "researchType" $r.researchType "domainScope" $r.domainScope "primaryResearchRole" (dict "kind" $role.kind "conceptId" $role.conceptId) "primaryMethodId" $r.primaryMethodId "methodNotApplicable" $r.methodNotApplicable "methodNotApplicableReason" $r.methodNotApplicableReason "methodNotApplicableEvidence" nil) -}}
+  {{- $rawConcepts := slice }}{{ $injectedConcepts := slice -}}
+  {{- range $e := $r.evidence -}}
+    {{- range $s := $r.quoteSelections -}}
+      {{- if and (eq $s.selectionRole "concept") (eq $s.conceptId $e.id) -}}
+        {{- $rawConcepts = $rawConcepts | append (dict "id" $e.id "evidenceId" $s.evidenceId "rationale" $e.rationale) -}}
+        {{- $injectedConcepts = $injectedConcepts | append (dict "id" $e.id "quote" $e.quote "rationale" $e.rationale) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $expectedRaw.SetInMap "value" "concepts" $rawConcepts }}{{ $expectedInjected.SetInMap "value" "concepts" $injectedConcepts -}}
+  {{- range $field, $kind := dict "typeEvidence" "researchType" "domainEvidence" "domainScope" "methodNotApplicableEvidence" "methodNotApplicable" -}}
+    {{- if or (ne $kind "methodNotApplicable") $r.methodNotApplicable -}}
+      {{- $e := index $r $field -}}
+      {{- range $s := $r.quoteSelections }}{{ if eq $s.selectionRole $kind -}}
+        {{- $expectedRaw.SetInMap "value" $field (dict "evidenceId" $s.evidenceId "rationale" $e.rationale) -}}
+        {{- $expectedInjected.SetInMap "value" $field (dict "quote" $e.quote "rationale" $e.rationale) -}}
+      {{- end }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $field, $expected := dict "modelResponseText" ($expectedRaw.Get "value") "responseText" ($expectedInjected.Get "value") -}}
+    {{- $raw := index $c $field | default "" }}{{ $parsed := try (transform.Unmarshal $raw) -}}
+    {{- $hashField := cond (eq $field "modelResponseText") "modelResponseSha256" "responseSha256" -}}
+    {{- if $parsed.Err }}{{ $valid = false }}{{ else }}{{ $valid = and $valid (eq (crypto.SHA256 $raw) (index $c $hashField)) (eq (crypto.SHA256 ($parsed.Value | jsonify (dict "noHTMLEscape" true))) (crypto.SHA256 ($expected | jsonify (dict "noHTMLEscape" true)))) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}

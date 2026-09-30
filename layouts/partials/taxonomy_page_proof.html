@@ -81,6 +81,18 @@
     {{- if $valid }}{{ $proof = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $v2History.contract) }}{{ end -}}
   {{- end -}}
 {{- end -}}
+{{- /* Controlled current pages have a separate outer contract and namespace.
+     The consumer admits only the reviewed installed plan, never r3 drafts. */ -}}
+{{- $controlledHistory := index hugo.Data "current-page-taxonomy-history-v2" | default dict -}}
+{{- if and (eq $controlledHistory.contract "historical-current-page-source-taxonomy-supplement-v2") (eq .Section "posts") .File -}}
+  {{- $key := printf "content/%s" .File.Path }}{{ $record := index ($controlledHistory.records | default dict) $key | default dict -}}
+  {{- if $record }}{{ $valid := and (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) -}}
+    {{- if and $valid $proof.paperId (ne $proof.paperId $record.paperId) }}{{ $valid = false }}{{ end -}}
+    {{- $explicit := .Params.paper_digest_paper_id | default "" }}{{ with .Params.paper_digest_arxiv_id }}{{ $explicit = printf "arxiv:%s" (replaceRE `v[1-9][0-9]*$` "" .) }}{{ end }}{{ if and $valid $explicit (ne $explicit $record.paperId) }}{{ $valid = false }}{{ end -}}
+    {{- if $valid }}{{ $context := partial "taxonomy_current_page_v2_envelope.html" $record }}{{ $valid = and $context.valid (eq $context.pagePath $key) (partial "taxonomy_current_page_v2_proof.html" $record) }}{{ end -}}
+    {{- if $valid }}{{ $proof = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $controlledHistory.contract) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
 {{- .Store.Set $memoKey $proof -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}

@@ -33,7 +33,7 @@
     {{- end }}{{ end }}
   </details>{{ end }}
   <p class="taxonomy-note">分类按核验时的版本展示，路径末项为直接分类。</p>
-  {{- if in (slice "source-only-taxonomy" "source-only-taxonomy-v2") $proof.evidenceType }}<p class="taxonomy-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
+  {{- if in (slice "source-only-taxonomy" "source-only-taxonomy-v2" "controlled-current-page-source-taxonomy-v2") $proof.evidenceType }}<p class="taxonomy-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
   {{- else if $proof.evidenceContract }}<p class="taxonomy-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
 </section>
 {{- else if .Params.paper_digest_taxonomy_contract }}

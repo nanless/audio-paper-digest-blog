@@ -17,7 +17,7 @@
 {{- $arxivId := $metadata.arxivId }}
 {{- $task := $metadata.task }}
 {{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
-{{- $isSourceV2 := and $hasControlledTaxonomy (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v2") (eq $taxonomyProof.evidenceContract "historical-source-taxonomy-supplement-v2") }}
+{{- $isSourceV2 := and $hasControlledTaxonomy (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v2") (in (slice "historical-source-taxonomy-supplement-v2" "historical-current-page-source-taxonomy-supplement-v2") $taxonomyProof.evidenceContract) }}
 {{- $researchRole := $taxonomyProof.primaryResearchRole | default dict }}
 
 <article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">

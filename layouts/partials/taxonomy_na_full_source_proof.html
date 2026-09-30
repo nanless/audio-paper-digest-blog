@@ -1,0 +1,41 @@
+{{- /* Reconstruct supplied source/projection integrity only. The issuer and
+     independent review determine whether a research method is absent. */ -}}
+{{- $c := .classification | default dict }}{{ $source := .source | default dict }}{{ $valid := true -}}
+{{- if not $c.methodNotApplicable -}}
+  {{- $valid = and (isset $c "naFullSourceEvidence") (eq $c.naFullSourceEvidence nil) -}}
+{{- else -}}
+  {{- $e := $c.naFullSourceEvidence | default dict }}{{ $keys := slice }}{{ range $k, $_ := $e }}{{ $keys = $keys | append $k }}{{ end -}}
+  {{- $valid = and (reflect.IsMap $e) (eq (delimit (sort $keys) "|") "contract|evidenceChars|evidenceSha256|offsetUnit|sampling|snippets|sourceChars|sourceTextSha256|whitespaceGaps") (eq $e.contract "historical-source-taxonomy-na-full-source-evidence-v1") (eq $e.sampling "full-source") (eq $e.offsetUnit "utf16-code-unit") (eq $e.sourceTextSha256 $source.textSha256) (eq $e.evidenceSha256 $c.evidenceSha256) (reflect.IsSlice $e.snippets) (gt (len ($e.snippets | default slice)) 0) (reflect.IsSlice $e.whitespaceGaps) -}}
+  {{- range $n := slice $e.sourceChars $e.evidenceChars }}{{ if not (and (eq (printf "%T" $n) "float64") (ge ($n | default 0) 0) (le ($n | default 0) 9007199254740991) (eq (float ($n | default 0)) (float (int ($n | default 0))))) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- if lt ($e.sourceChars | default 0) 100 }}{{ $valid = false }}{{ end -}}
+  {{- $parts := slice }}{{ $projection := slice }}{{ $evidenceChars := 0 }}{{ $snippetEnd := 0 -}}
+  {{- range $i, $s := ($e.snippets | default slice) -}}
+    {{- $keys = slice }}{{ range $k, $_ := $s }}{{ $keys = $keys | append $k }}{{ end -}}
+    {{- if ne (delimit (sort $keys) "|") "id|offsetUnit|quote|quoteEnd|quoteSha256|quoteStart" }}{{ $valid = false }}{{ end -}}
+    {{- $length := add (strings.RuneCount ($s.quote | default "")) (len (findRE `[\x{10000}-\x{10FFFF}]` ($s.quote | default ""))) -}}
+    {{- if not (and (eq $s.id (printf "s%05d" (add $i 1))) (eq $s.offsetUnit "utf16-code-unit") (ge (strings.RuneCount (strings.TrimSpace ($s.quote | default ""))) 20) (le $length 1000) (ge ($s.quoteStart | default 0) $snippetEnd)) }}{{ $valid = false }}{{ end -}}
+    {{- $snippetEnd = $s.quoteEnd | default 0 }}{{ $evidenceChars = add $evidenceChars $length }}{{ $parts = $parts | append $s -}}
+    {{- $projection = $projection | append (printf "[%s; source UTF16 %.0f:%.0f]\n%s" ($s.id | default "") (float ($s.quoteStart | default 0)) (float ($s.quoteEnd | default 0)) ($s.quote | default "")) -}}
+  {{- end -}}
+  {{- $gapEnd := 0 -}}
+  {{- range $g := ($e.whitespaceGaps | default slice) -}}
+    {{- $keys = slice }}{{ range $k, $_ := $g }}{{ $keys = $keys | append $k }}{{ end -}}
+    {{- if not (and (eq (delimit (sort $keys) "|") "quote|quoteEnd|quoteSha256|quoteStart") (not (findRE `[^\x09-\x0d\x20\x{00a0}\x{1680}\x{2000}-\x{200a}\x{2028}\x{2029}\x{202f}\x{205f}\x{3000}\x{feff}]` ($g.quote | default "") 1)) (ge ($g.quoteStart | default 0) $gapEnd)) }}{{ $valid = false }}{{ end -}}
+    {{- $gapEnd = $g.quoteEnd | default 0 }}{{ $parts = $parts | append $g -}}
+  {{- end -}}
+  {{- $text := "" }}{{ $end := 0 -}}
+  {{- range $s := sort $parts "quoteStart" "asc" -}}
+    {{- $length := add (strings.RuneCount ($s.quote | default "")) (len (findRE `[\x{10000}-\x{10FFFF}]` ($s.quote | default ""))) -}}
+    {{- range $n := slice $s.quoteStart $s.quoteEnd }}{{ if not (and (eq (printf "%T" $n) "float64") (ge ($n | default 0) 0) (le ($n | default 0) 9007199254740991) (eq (float ($n | default 0)) (float (int ($n | default 0))))) }}{{ $valid = false }}{{ end }}{{ end -}}
+    {{- if not (and (eq (float ($s.quoteStart | default 0)) (float $end)) (gt ($s.quoteEnd | default 0) ($s.quoteStart | default 0)) (le ($s.quoteEnd | default 0) ($e.sourceChars | default 0)) (eq (float (sub ($s.quoteEnd | default 0) ($s.quoteStart | default 0))) (float $length)) (eq (crypto.SHA256 ($s.quote | default "")) $s.quoteSha256)) }}{{ $valid = false }}{{ end -}}
+    {{- $text = printf "%s%s" $text ($s.quote | default "") }}{{ $end = $s.quoteEnd | default 0 -}}
+  {{- end -}}
+  {{- if not (and (eq (float $end) (float ($e.sourceChars | default 0))) (eq (crypto.SHA256 $text) $source.textSha256) (eq (float $evidenceChars) (float ($e.evidenceChars | default 0))) (eq (crypto.SHA256 (delimit $projection "\n\n")) $e.evidenceSha256)) }}{{ $valid = false }}{{ end -}}
+  {{- $projectionText := delimit $projection "\n\n" }}{{ $decisionEvidence := slice $c.typeEvidence $c.domainEvidence $c.methodNotApplicableEvidence }}{{ range $c.concepts }}{{ $decisionEvidence = $decisionEvidence | append . }}{{ end -}}
+  {{- range $decisionEvidence }}{{ $quote := .quote | default "" }}{{ if or (not $quote) (not (strings.Contains $text $quote)) (not (strings.Contains $projectionText $quote)) }}{{ $valid = false }}{{ else -}}
+    {{- $sourcePrefix := index (split $text $quote) 0 }}{{ $projectionPrefix := index (split $projectionText $quote) 0 }}{{ $sourceOffset := add (strings.RuneCount $sourcePrefix) (len (findRE `[\x{10000}-\x{10FFFF}]` $sourcePrefix)) }}{{ $projectionOffset := add (strings.RuneCount $projectionPrefix) (len (findRE `[\x{10000}-\x{10FFFF}]` $projectionPrefix)) -}}
+    {{- if not (and (eq (float (.quoteStart | default 0)) (float $sourceOffset)) (eq (float (.evidenceQuoteStart | default 0)) (float $projectionOffset))) }}{{ $valid = false }}{{ end -}}
+  {{- end }}{{ end -}}
+  {{- range $selection := ($c.quoteSelections | default slice) }}{{ $matches := 0 }}{{ range ($e.snippets | default slice) }}{{ if and (eq .id $selection.id) (eq .id $selection.evidenceId) (eq .quote $selection.quote) (eq .quoteStart $selection.quoteStart) (eq .quoteEnd $selection.quoteEnd) (eq .offsetUnit $selection.offsetUnit) (eq .quoteSha256 $selection.quoteSha256) }}{{ $matches = add $matches 1 }}{{ end }}{{ end }}{{ if ne $matches 1 }}{{ $valid = false }}{{ end }}{{ end -}}
+{{- end -}}
+{{- return $valid -}}
