@@ -44,10 +44,10 @@ test('another tab changes are read before writing, failed persistence never repo
   assert.equal(corrupt.backup(),'broken');assert.equal(corrupt.recoverBackup(backup),1);assert.equal(corrupt.get(first).status,'read');
   const old=values.get(key);storage.setItem=()=>{throw new Error('quota')};assert.throws(()=>corrupt.update(first,{note:'不能保存'}),/未能保存/);assert.equal(values.get(key),old);assert.equal(corrupt.get(first).note,'另一标签页');
 });
-test('batch reading exports deduplicate identities, preserve notes and missing provenance, neutralize spreadsheet formulas',()=>{
+test('batch paper exports deduplicate identities, exclude local notes and retain missing provenance and spreadsheet safety',()=>{
   const citation={title:'Paper {A}',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2609.12345v2',authors:['Author A'],date:'2026-09-30'};
   const entry={...first,citation,originalTitle:'=HYPERLINK("evil")',readingKey:'arxiv:2609.12345',readingState:{note:'个人结论',status:'reading'}};
-  const md=exporter.build([entry,{...entry,permalink:'/blog/posts/b/'}],'md',{origin:'https://example.test'});assert.equal(md.exported,1);assert.match(md.text,/个人结论/);
+  const md=exporter.build([entry,{...entry,permalink:'/blog/posts/b/'}],'md',{origin:'https://example.test'});assert.equal(md.exported,1);assert.doesNotMatch(md.text,/个人结论|阅读状态/);
   const csv=exporter.build([entry],'csv',{origin:'https://example.test'});assert.match(csv.text,/"'=HYPERLINK/);
   const unknown={title:'Unknown',permalink:'/blog/posts/u/',identityStatus:'unknown',citation:{title:'Unknown'}};
   const bib=exporter.build([entry,unknown],'bib');assert.equal(bib.exported,1);assert.equal(bib.skipped,1);assert.match(bib.text,/Author A/);assert.doesNotMatch(bib.text,/@misc\{.*Unknown/);
@@ -55,12 +55,13 @@ test('batch reading exports deduplicate identities, preserve notes and missing p
   const incomplete=exporter.build([{...entry,citation:{...citation,authors:[],date:''}}],'ris');assert.equal(incomplete.incomplete,1);assert.doesNotMatch(incomplete.text,/PY  -/);
 });
 
-test('reading list exports retain migrated note conflicts and their original guide links', () => {
+test('paper list exports exclude old personal notes and conflicts while retaining actual guide links', () => {
   const entry = {...first, citation:{title:'Paper', identityStatus:'verified', sourceKind:'arxiv', arxivId:'2609.12345'},
+    guides:[first,{title:'Other guide',permalink:'/blog/posts/actual-other-guide/'}],
     readingState:{status:'reading', note:'当前备注', noteHistory:[{note:'另一导读的备注', sourceURL:'/blog/posts/b/', sourceKey:'page:/blog/posts/b/', updatedAt:'2026-09-30T08:00:00.000Z'}]}};
   for (const format of ['md', 'csv']) {
     const result = exporter.build([entry], format, {origin:'https://example.test'});
-    assert.match(result.text, /当前备注/); assert.match(result.text, /另一导读的备注/);
-    assert.match(result.text, /\/blog\/posts\/b\//);
+    assert.doesNotMatch(result.text, /当前备注|另一导读的备注|\/blog\/posts\/b\/|阅读状态|个人备注/);
+    if (format === 'md') assert.match(result.text, /\/blog\/posts\/actual-other-guide\//);
   }
 });

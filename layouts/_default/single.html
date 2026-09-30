@@ -49,11 +49,6 @@
       <p>{{ $intro | markdownify }}</p>
     </section>
     {{- end }}
-    <div class="reading-resume" id="reading-resume" role="status" hidden>
-      <p id="reading-resume-note"></p>
-      <button class="rw-action" id="reading-resume-continue" type="button">继续阅读</button>
-      <button class="rw-action" id="reading-resume-dismiss" type="button">暂不恢复</button>
-    </div>
     {{- if $isPaper }}{{ partial "paper_taxonomy.html" . }}{{ end }}
   </header>
 

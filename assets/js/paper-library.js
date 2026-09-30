@@ -241,8 +241,6 @@
   var typeSelect = document.getElementById('library-type');
   var yearSelect = document.getElementById('library-year');
   var sortSelect = document.getElementById('library-sort');
-  var savedSelect = document.getElementById('library-saved');
-  var readingSelect = document.getElementById('library-reading-status');
   var exportStatus = document.getElementById('library-export-status');
   var selectedPapers = new Map();
   var countNode = document.getElementById('library-count');
@@ -290,8 +288,6 @@
     yearSelect.value = params.get('year') || 'all';
     if (!yearSelect.value) yearSelect.value = 'all';
     sortSelect.value = ['newest', 'score', 'title', 'relevance'].includes(params.get('sort')) ? params.get('sort') : 'newest';
-    if (savedSelect) savedSelect.value = params.get('saved') === 'saved' ? 'saved' : 'all';
-    if (readingSelect) readingSelect.value = ['unread', 'reading', 'read'].includes(params.get('reading')) ? params.get('reading') : 'all';
     var page = Number(params.get('page'));
     visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
     directions = directionState(params, graph);
@@ -307,8 +303,6 @@
     if (typeSelect.value !== 'paper') params.set('type', typeSelect.value);
     if (yearSelect.value !== 'all') params.set('year', yearSelect.value);
     if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
-    if (savedSelect && savedSelect.value === 'saved') params.set('saved', 'saved');
-    if (readingSelect && readingSelect.value !== 'all') params.set('reading', readingSelect.value);
     if (visibleCount > PAGE_SIZE) params.set('page', Math.ceil(visibleCount / PAGE_SIZE));
     (directions.error ? directions.requestedIds : selectedIds(directions)).forEach(function (id) { params.append('concept', id); });
     if (directions.scope === 'direct') params.set('scope', 'direct');
@@ -356,33 +350,13 @@
       var identityNote = document.createElement('p'); identityNote.className = 'taxonomy-note';
       identityNote.textContent = '论文身份已核验 · 研究方向尚待分类'; body.appendChild(identityNote);
     }
-    if (entry.type === 'paper' && savedSelect) {
-      var paper = readingPaper(entry), key = readingKey(entry);
-      var save = document.createElement('button'); save.type = 'button'; save.hidden = true;
-      save.setAttribute('data-reading-bookmark', ''); save.dataset.paperTitle = entry.title; save.dataset.paperUrl = entry.permalink;
-      save.dataset.paperType = 'paper';
-      save.dataset.paperKey = key; save.dataset.paperArxivId = paper.arxivId || ''; save.dataset.paperIdentityStatus = paper.identityStatus || 'unknown';
-      body.appendChild(save);
+    if (entry.type === 'paper') {
+      var key = paperKey(entry);
       var chooseLabel = document.createElement('label'); chooseLabel.className = 'library-export-select';
       var choose = document.createElement('input'); choose.type = 'checkbox'; choose.checked = selectedPapers.has(key);
       choose.setAttribute('aria-label', '选择导出：' + entry.title); chooseLabel.appendChild(choose);
       var chooseText = document.createElement('span'); chooseText.textContent = '加入导出清单'; chooseLabel.appendChild(chooseText); body.appendChild(chooseLabel);
       choose.addEventListener('change', function () { if (choose.checked) selectedPapers.set(key, entry); else selectedPapers.delete(key); updateExportStatus(); });
-      try {
-        var readingStore = window.ResearchReading && window.ResearchReading.store;
-        var positions = readingStore ? readingStore.positions() : {};
-        var resumeGuide = [entry].concat(entry.guides || []).map(function (guide) {
-          return { permalink: guide.permalink, position: positions[new URL(guide.permalink).pathname] };
-        }).filter(function (guide) {
-          return guide.position && typeof guide.position.anchor === 'string' && guide.position.progress > 1 && guide.position.progress < 98;
-        }).sort(function (a, b) { return b.position.updatedAt.localeCompare(a.position.updatedAt) || a.permalink.localeCompare(b.permalink); })[0];
-        if (resumeGuide) {
-          var savedPosition = resumeGuide.position;
-          var continueLink = document.createElement('a'); continueLink.className = 'library-result__continue';
-          continueLink.href = resumeGuide.permalink + '#' + encodeURIComponent(savedPosition.anchor);
-          continueLink.textContent = '继续阅读 · 约 ' + Math.round(savedPosition.progress) + '%'; body.appendChild(continueLink);
-        }
-      } catch (_error) { /* Reading positions are optional. */ }
     }
     if (entry.guides && entry.guides.length > 1) {
       var guides = document.createElement('details');
@@ -424,8 +398,6 @@
       var hints = [];
       if (queryInput.value.trim()) hints.push('关键词「' + queryInput.value.trim() + '」');
       if (yearSelect.value !== 'all') hints.push(yearSelect.value + ' 年');
-      if (savedSelect && savedSelect.value === 'saved') hints.push('仅收藏');
-      if (readingSelect && readingSelect.value !== 'all') hints.push('指定阅读状态');
       if (selectedIds(directions).length) hints.push('受控研究方向（历史未核分类不会参与匹配）');
       if (hints.length) empty.textContent += ' 当前限制：' + hints.join('、') + '。';
       if (selectedIds(directions).length) {
@@ -446,8 +418,6 @@
         typeSelect.value = 'paper';
         yearSelect.value = 'all';
         sortSelect.value = 'newest';
-        if (savedSelect) savedSelect.value = 'all';
-        if (readingSelect) readingSelect.value = 'all';
         directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
         draft = cloneDirections(directions);
         applyFilters(false, true);
@@ -460,7 +430,6 @@
       visible.forEach(function (entry) { fragment.appendChild(makeResult(entry)); });
       resultsNode.appendChild(fragment);
     }
-    if (window.ResearchReading) window.ResearchReading.mount(resultsNode);
     updateExportStatus();
     countNode.textContent = '找到 ' + filteredEntries.length.toLocaleString('zh-CN') + ' 条，当前显示 ' + visible.length + ' 条';
     if (graph) {
@@ -478,7 +447,7 @@
     if (filterSummary) {
       var appliedLabels = [];
       [[typeSelect, 'paper', '类型：'], [yearSelect, 'all', '年份：'],
-        [sortSelect, 'newest', ''], [savedSelect, 'all', ''], [readingSelect, 'all', '']].forEach(function (entry) {
+        [sortSelect, 'newest', '']].forEach(function (entry) {
         var control = entry[0];
         if (control && control.value !== entry[1] && control.options && control.options[control.selectedIndex]) {
           appliedLabels.push(entry[2] + control.options[control.selectedIndex].textContent);
@@ -489,7 +458,6 @@
     filteredEntries = libraryResults(allEntries, groups, {
       query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value
     }, directions, graph, api);
-    filteredEntries = readingFilter(filteredEntries);
     if (preservePage !== true) visibleCount = PAGE_SIZE;
     quickButtons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
@@ -499,21 +467,8 @@
     render();
   }
 
-  function readingPaper(entry) {
-    return Object.assign({}, entry, { identityVerified: entry.paperGroup && entry.paperGroup.identityVerified,
-      paperId: entry.paperGroup && entry.paperGroup.paperId || entry.paperId });
-  }
-  function readingKey(entry) {
-    try { if (window.ResearchReading && window.ResearchReading.store) return window.ResearchReading.store.key(readingPaper(entry)); } catch (_error) {}
+  function paperKey(entry) {
     return entry.paperGroup && entry.paperGroup.key || 'page:' + new URL(entry.permalink).pathname;
-  }
-  function readingFilter(entries) {
-    var store = window.ResearchReading && window.ResearchReading.store;
-    return entries.filter(function (entry) {
-      var record = store && entry.type === 'paper' ? store.get(readingKey(entry)) : null;
-      return (!savedSelect || savedSelect.value !== 'saved' || record && record.bookmarked)
-        && (!readingSelect || readingSelect.value === 'all' || entry.type === 'paper' && (record ? record.status : 'unread') === readingSelect.value);
-    });
   }
   function updateExportStatus() { if (exportStatus) exportStatus.textContent = '已选择 ' + selectedPapers.size + ' 条论文记录（跨筛选保留选择）'; }
 
@@ -533,7 +488,7 @@
 
   function updateDraft() {
     if (!draftNode) return;
-    var preview = readingFilter(libraryResults(allEntries, groups, resultState(), draft, graph, api));
+    var preview = libraryResults(allEntries, groups, resultState(), draft, graph, api);
     draftNode.textContent = '待应用：' + selectedIds(draft).length + ' 个方向，预览 ' + preview.length + ' 条结果。';
     Object.keys(nodeViews).forEach(function (id) { nodeViews[id].checkbox.checked = selectedIds(draft).includes(id); });
   }
@@ -761,10 +716,6 @@
     debounceTimer = window.setTimeout(applyFilters, 120);
   });
   [typeSelect, yearSelect, sortSelect].forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
-  [savedSelect, readingSelect].filter(Boolean).forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
-  window.addEventListener('research-reading-change', function () {
-    if (savedSelect && (savedSelect.value === 'saved' || readingSelect.value !== 'all')) applyFilters(true, false, true);
-  });
   quickButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       queryInput.value = button.dataset.query;
@@ -780,44 +731,9 @@
   if (form) form.addEventListener('submit', function (event) { event.preventDefault(); applyFilters(); });
   window.addEventListener('popstate', function () { readState(); if (panel) panel.open = false; applyFilters(true, false, true); });
 
-  function downloadBackup(rawOnly) {
-    var status = document.getElementById('reading-backup-status');
-    try {
-      var reading = window.ResearchReading;
-      if (!reading || !reading.store) throw new Error(reading && reading.error ? reading.error.message : '本机阅读模块尚未就绪');
-      reading.store.refresh();
-      window.ResearchReadingExport.download({ text: rawOnly ? reading.store.rawBackup() : reading.store.backup(), filename: (rawOnly ? 'reading-raw-recovery-' : 'reading-backup-') + new Date().toISOString().slice(0, 10) + '.json', mime: 'application/json;charset=utf-8' });
-      status.textContent = rawOnly ? '已导出所有阅读存储的原始字节，供修复时保留原资料。此文件不能直接导入。'
-        : reading.store.error ? '本机资料损坏，已按原样导出。请另导出原始恢复档案以保留全部存储键。' : '已导出收藏、阅读状态、个人备注及最多200页的章节进度。';
-    } catch (error) { if (status) status.textContent = error.message; }
-  }
-  var backupButton = document.getElementById('reading-backup-download');
-  if (backupButton) backupButton.addEventListener('click', function () { downloadBackup(false); });
-  var rawBackupButton = document.getElementById('reading-backup-raw');
-  if (rawBackupButton) rawBackupButton.addEventListener('click', function () { downloadBackup(true); });
-  function reconcileReading() {
-    var readingStore = window.ResearchReading && window.ResearchReading.store;
-    if (!readingStore) return '';
-    try { readingStore.reconcileVerifiedArticles(allEntries); return ''; }
-    catch (error) { return '旧页面资料暂未迁移：' + error.message; }
-  }
-  var importButton = document.getElementById('reading-backup-import');
-  if (importButton) importButton.addEventListener('click', async function () {
-    var status = document.getElementById('reading-backup-status'), field = document.getElementById('reading-backup-file');
-    try {
-      var file = field.files && field.files[0], reading = window.ResearchReading;
-      if (!file) throw new Error('请先选择阅读备份JSON文件。');
-      if (file.size > 5 * 1024 * 1024) throw new Error('备份超过5 MiB，请选择较小的备份。');
-      if (!reading || !reading.store) throw new Error('当前浏览器无法保存阅读资料。');
-      var raw = await file.text(), recover = document.getElementById('reading-backup-recover').checked;
-      var changed = recover ? reading.store.recoverBackup(raw) : reading.store.importBackup(raw);
-      var migrationWarning = reconcileReading();
-      status.textContent = (recover ? '已恢复备份' : '已合并 ' + changed + ' 条记录或章节进度') + '，其他备注冲突已保留。' + migrationWarning; applyFilters(true, false, true);
-    } catch (error) { status.textContent = error.message + '；现有资料未被本次失败导入覆盖。'; }
-  });
   var selectVisible = document.getElementById('library-select-visible');
   if (selectVisible) selectVisible.addEventListener('click', function () {
-    filteredEntries.slice(0, visibleCount).filter(function (entry) { return entry.type === 'paper'; }).forEach(function (entry) { selectedPapers.set(readingKey(entry), entry); }); render();
+    filteredEntries.slice(0, visibleCount).filter(function (entry) { return entry.type === 'paper'; }).forEach(function (entry) { selectedPapers.set(paperKey(entry), entry); }); render();
   });
   var clearSelection = document.getElementById('library-selection-clear');
   if (clearSelection) clearSelection.addEventListener('click', function () { selectedPapers.clear(); render(); });
@@ -825,8 +741,7 @@
   if (exportButton) exportButton.addEventListener('click', function () {
     try {
       if (!window.ResearchReadingExport) throw new Error('导出模块尚未就绪。');
-      var store = window.ResearchReading && window.ResearchReading.store;
-      var entries = Array.from(selectedPapers.values()).map(function (entry) { return Object.assign({}, entry, { readingKey: readingKey(entry), readingState: store ? store.get(readingKey(entry)) : null }); });
+      var entries = Array.from(selectedPapers.values());
       var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href });
       window.ResearchReadingExport.download(result);
       exportStatus.textContent = '已导出 ' + result.exported + ' 条' + (result.skipped ? '；跳过 ' + result.skipped + ' 条身份未核实的引用' : '') + (result.incomplete ? '；' + result.incomplete + ' 条引用仅含可得字段' : '') + '。';
@@ -923,9 +838,6 @@
       });
       registryRecords = registryIndex(registry);
       groups = graph ? api.groupPapers(allEntries, graph) : [];
-      var migrationWarning = reconcileReading();
-      var backupStatus = document.getElementById('reading-backup-status');
-      if (migrationWarning && backupStatus) backupStatus.textContent = migrationWarning;
       while (yearSelect.options && yearSelect.options.length > 1) yearSelect.remove(1);
       populateYears();
       readState();

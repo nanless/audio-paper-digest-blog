@@ -3,10 +3,7 @@
 {{- $siteScript := resources.Get "js/site.js" | minify | fingerprint }}
 <script defer src="{{ $siteScript.RelPermalink }}" integrity="{{ $siteScript.Data.Integrity }}" crossorigin="anonymous"></script>
 
-{{- $siteBase := (urls.Parse site.BaseURL).Path | default "/" }}
-{{- if not (hasSuffix $siteBase "/") }}{{ $siteBase = printf "%s/" $siteBase }}{{ end }}
-<script id="research-reading-settings" type="application/json">{{ dict "basePath" $siteBase | jsonify | safeJS }}</script>
-{{- range slice "citation-source" "reading-store" "reading-controls" "reading-export" }}
+{{- range slice "citation-source" "reading-export" }}
   {{- $readingScript := resources.Get (printf "js/%s.js" .) | minify | fingerprint }}
 <script defer src="{{ $readingScript.RelPermalink }}" integrity="{{ $readingScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

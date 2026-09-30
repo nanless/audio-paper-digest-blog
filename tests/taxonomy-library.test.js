@@ -113,10 +113,14 @@ function browser(items, suffix = '', withRegistry = true, indexLoader = null) {
   add('library-year', 'select', ['all']); add('library-sort', 'select', ['newest', 'score', 'title']);
   add('library-scope', 'select', ['subtree', 'direct']); add('library-role', 'select', ['any', 'primary']);
   add('library-direction-search', 'input');
+  add('library-export-format', 'select', ['md', 'csv', 'bib', 'ris']);
+  ['library-select-visible', 'library-selection-clear', 'library-export', 'library-export-status'].forEach((id) => add(id));
   ['library-count', 'library-results', 'library-more', 'paper-library-filters', 'library-direction-panel', 'library-direction-tree',
     'library-directions', 'library-coverage', 'library-draft-status', 'library-direction-apply', 'library-direction-cancel', 'library-direction-clear'].forEach((id) => add(id));
   const window = {
     location: new URL(origin + base + 'papers/' + suffix), ResearchTaxonomy: core, ResearchSearchIndex: indexLoader,
+    ResearchReading: new Proxy({}, {get() { throw new Error('Library must not access retained personal data'); }}),
+    ResearchReadingExport: { build(entries, format, options) { window.exported = {entries, format, options}; return {}; }, download() {} },
     history: { pushes: [], pushState(_s, _t, target) { this.pushes.push(target); window.location = new URL(target, window.location); },
       replaceState(_s, _t, target) { window.location = new URL(target, window.location); } },
     addEventListener(key, fn) { listeners[key] = fn; }, clearTimeout() {}, setTimeout(fn) { fn(); }
@@ -129,6 +133,24 @@ function browser(items, suffix = '', withRegistry = true, indexLoader = null) {
   function descendants(node) { return node.children.flatMap((child) => [child, ...descendants(child)]); }
   return { nodes, window, listeners, descendants, ready: () => new Promise((resolve) => setImmediate(resolve)) };
 }
+
+test('paper selection and downloads work without saved controls and never access retained personal data', async () => {
+  const fixture = browser([record('a', ['task.asr']), record('b', ['task.synthesis'])], '?saved=saved&reading=read');
+  await fixture.ready();
+  const {nodes, descendants, window} = fixture;
+  assert.match(nodes['library-count'].textContent, /找到 2 条/);
+  const choices = descendants(nodes['library-results']).filter(node => node.tagName === 'input' && node.type === 'checkbox');
+  assert.equal(choices.length, 2);
+  assert.ok(!descendants(nodes['library-results']).some(node => node.attributes['data-reading-bookmark']));
+  choices[0].checked = true; choices[0].dispatch('change');
+  nodes['library-export-format'].value = 'csv'; nodes['library-export'].dispatch('click');
+  assert.equal(window.exported.entries.length, 1); assert.equal(window.exported.format, 'csv');
+  assert.ok(!Object.hasOwn(window.exported.entries[0], 'readingState'));
+  nodes['library-select-visible'].dispatch('click'); nodes['library-export'].dispatch('click');
+  assert.equal(window.exported.entries.length, 2);
+  nodes['library-selection-clear'].dispatch('click'); nodes['library-export'].dispatch('click');
+  assert.equal(window.exported.entries.length, 0);
+});
 
 test('mobile panel stages selections, expansion does not select, cancel discards and Apply records URL history', async () => {
   const fixture = browser([record('asr', ['task.av-asr']), record('tts', ['task.synthesis'])]);

@@ -51,7 +51,7 @@ test('verifyPaperToolCoverage requires browser-only PDF/citation tools and safe 
   const fallback = join(root, 'fallback', 'index.html');
   mkdirSync(join(root, 'rich'), { recursive: true });
   mkdirSync(join(root, 'fallback'), { recursive: true });
-  const selection = 'data-reading-bookmark paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制选段</noscript>';
+  const selection = 'paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制引用</noscript>';
   const source = value => '<script type="application/json" class="paper-tools__citation-record">' + JSON.stringify({ contract: 'paper-citation-source-v1', pageType: 'paper', ...value }) + '</script>';
   const arxivSource = source({ identityStatus: 'verified', verified: true, sourceKind: 'arxiv', arxivId: '2609.01234', url: 'https://arxiv.org/abs/2609.01234', pdfUrl: 'https://arxiv.org/pdf/2609.01234.pdf' });
   const unknownSource = source({ identityStatus: 'unknown', url: '', pdfUrl: '' });
@@ -59,7 +59,7 @@ test('verifyPaperToolCoverage requires browser-only PDF/citation tools and safe 
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
   writeFileSync(fallback, `<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only">${selection} ${unknownSource}</section><a href="https://arxiv.org/pdf/2609.09999.pdf">正文引用的其他论文</a></article>`);
   assert.deepEqual(verifyPaperToolCoverage([rich, fallback]), {
-    paperPages: 2, readingTools: 2, richArxivTools: 1, richConferenceTools: 0, selectionOnlyFallbacks: 1
+    paperPages: 2, sourceTools: 2, richArxivTools: 1, richConferenceTools: 0, selectionOnlyFallbacks: 1
   });
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}<a href="http://127.0.0.1:43128/ui">旧入口</a></section></article>`);
   assert.throws(() => verifyPaperToolCoverage([rich]), /已取消的本机助手/);
@@ -69,14 +69,14 @@ test('verifyPaperToolCoverage requires browser-only PDF/citation tools and safe 
   assert.throws(() => verifyPaperToolCoverage([rich]), /缺少 bib 引用下载/);
   writeFileSync(rich, `<article class="research-workbench--paper"><section class="paper-tools">${selection} ${localTools}</section></article>`);
   writeFileSync(fallback, '<article class="research-workbench--paper">missing</article>');
-  assert.throws(() => verifyPaperToolCoverage([rich, fallback]), /缺少阅读与笔记工具/);
+  assert.throws(() => verifyPaperToolCoverage([rich, fallback]), /缺少原文与引用工具/);
 });
 
 test('reading coverage rejects obsolete actions, outside-region controls and unknown reference copying', t => {
   const root = mkdtempSync(join(tmpdir(), 'reading-coverage-boundaries-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const file = join(root, 'index.html');
-  const markers = 'data-reading-bookmark paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>阅读笔记</noscript>';
+  const markers = 'paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>下载导读</noscript>';
   const record = '<script class="paper-tools__citation-record">' + JSON.stringify({
     contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'unknown', url: '', pdfUrl: ''
   }) + '</script>';
@@ -88,7 +88,7 @@ test('reading coverage rejects obsolete actions, outside-region controls and unk
     assert.throws(() => verifyPaperToolCoverage([file]), /已移除的 AI\/Zotero/);
   }
   render(record, markers);
-  assert.throws(() => verifyPaperToolCoverage([file]), /缺少阅读与笔记工具/);
+  assert.throws(() => verifyPaperToolCoverage([file]), /缺少原文与引用工具/);
   render(markers + record + 'paper-tool--reference-copy');
   assert.throws(() => verifyPaperToolCoverage([file]), /身份待核页不得/);
 });
@@ -99,7 +99,7 @@ test('conference coverage uses its official source and ignores other arXiv links
   const file = join(root, 'index.html');
   const record = { contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'verified', verified: true,
     sourceKind: 'conference', paperId: 'conference:iclr:2026:paper:example', url: 'https://openreview.net/forum?id=example', pdfUrl: 'https://openreview.net/pdf?id=example' };
-  const tools = '<section class="paper-tools">data-reading-bookmark paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制</noscript>'
+  const tools = '<section class="paper-tools">paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制</noscript>'
     + '<script class="paper-tools__citation-record">' + JSON.stringify(record) + '</script>'
     + '<a href="' + record.url + '">原文</a><a href="' + record.pdfUrl + '">PDF</a>'
     + '<button data-citation-format="bib">BibTeX</button><button data-citation-format="ris">RIS</button>'
@@ -117,7 +117,7 @@ test('arXiv coverage preserves exact official PDF URLs and requires a sealed ver
   const record = { contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'verified', verified: true,
     sourceKind: 'arxiv', arxivId: '2605.12987v1', url: 'https://arxiv.org/abs/2605.12987v1', pdfUrl: 'https://arxiv.org/pdf/2605.12987v1' };
   const render = value => writeFileSync(file, '<article class="research-workbench--paper"><section class="paper-tools">'
-    + 'data-reading-bookmark paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制</noscript>'
+    + 'paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>手动复制</noscript>'
     + '<script class="paper-tools__citation-record">' + JSON.stringify(value) + '</script>'
     + '<a href="' + value.url + '">原文</a><a href="' + value.pdfUrl + '">PDF</a>'
     + '<button data-citation-format="bib">BibTeX</button><button data-citation-format="ris">RIS</button>'
@@ -143,5 +143,17 @@ test('arXiv coverage preserves exact official PDF URLs and requires a sealed ver
   ]) {
     render(value);
     assert.throws(() => verifyPaperToolCoverage([file]), /arXiv 工具身份不一致/);
+  }
+});
+
+test('coverage rejects retired reading UI and scripts even outside the source toolbar', t => {
+  const root = mkdtempSync(join(tmpdir(), 'retired-reading-ui-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const file = join(root, 'index.html');
+  const source = JSON.stringify({ contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'unknown', url: '', pdfUrl: '' });
+  const safe = '<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only">paper-tools__advanced paper-tool--pack paper-tools__copy-fallback <noscript>下载导读</noscript><script class="paper-tools__citation-record">' + source + '</script></section>';
+  for (const obsolete of ['<button data-reading-bookmark>收藏</button>', '<div id="reading-resume"></div>', '<script src="reading-controls.abc123.js"></script>', '<script src="reading-store.abc123.js"></script>']) {
+    writeFileSync(file, safe + obsolete + '</article>');
+    assert.throws(() => verifyPaperToolCoverage([file]), /浏览器阅读资料/);
   }
 });

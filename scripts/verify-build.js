@@ -162,7 +162,7 @@ function walkFiles(root) {
 
 function verifyPaperToolCoverage(files) {
   let paperPages = 0;
-  let readingTools = 0;
+  let sourceTools = 0;
   let richArxivTools = 0;
   let richConferenceTools = 0;
   let selectionOnlyFallbacks = 0;
@@ -173,14 +173,16 @@ function verifyPaperToolCoverage(files) {
     invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(html),
       `论文页残留已取消的本机助手入口：${file}`);
     const opening = Array.from(html.matchAll(/<section\b[^>]*>/gi)).find(match => attributeValue(match[0], 'class').split(/\s+/).includes('paper-tools'));
-    invariant(opening, `论文页缺少阅读与笔记工具区域：${file}`);
+    invariant(opening, `论文页缺少原文与引用工具区域：${file}`);
     const close = html.indexOf('</section>', opening.index);
     invariant(close > opening.index, `论文工具区域未闭合：${file}`);
     const tools = html.slice(opening.index, close + 10);
-    invariant(tools.includes('data-reading-bookmark') && tools.includes('paper-tools__advanced')
+    invariant(tools.includes('paper-tools__advanced')
       && tools.includes('paper-tool--pack') && tools.includes('paper-tools__copy-fallback')
-      && tools.includes('<noscript>'), `论文页缺少阅读与笔记工具：${file}`);
-    readingTools += 1;
+      && tools.includes('<noscript>'), `论文页缺少原文与引用工具：${file}`);
+    invariant(!/data-reading-bookmark|reading-controls|reading-resume|reading-backup|reading-store\.[a-f0-9]+|reading-controls\.[a-f0-9]+/.test(html),
+      `论文页残留已取消的浏览器阅读资料功能：${file}`);
+    sourceTools += 1;
     invariant(!/复制 AI 提问|保存到 Zotero|zotero\.org\/download\/connectors|paper-tool--selection-copy/.test(tools),
       `论文工具残留已移除的 AI/Zotero 入口：${file}`);
     const sourceTag = Array.from(tools.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi))
@@ -229,8 +231,8 @@ function verifyPaperToolCoverage(files) {
     }
   }
   invariant(paperPages > 0, '构建产物没有论文页');
-  invariant(readingTools === paperPages, '论文页阅读工具覆盖不完整');
-  return { paperPages, readingTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
+  invariant(sourceTools === paperPages, '论文页阅读工具覆盖不完整');
+  return { paperPages, sourceTools, richArxivTools, richConferenceTools, selectionOnlyFallbacks };
 }
 
 function verifyBuild(buildDir) {

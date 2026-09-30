@@ -18,7 +18,6 @@
   .library-filter-panel__fields { grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; }
   .library-filter-panel__fields label { min-width: 0; }
   .library-filter-panel__fields select { width: 100%; min-width: 0; }
-  .reading-backup { margin-block: 12px; padding: 5px 14px; }
   .research-library__quick-filters { margin-block: 10px; }
   .library-export-panel { margin-bottom: 10px; border-bottom: 1px solid var(--rw-border); }
 }

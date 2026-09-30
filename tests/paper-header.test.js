@@ -35,7 +35,7 @@ test('paper header removes only exact visible duplicates and preserves informati
       assert.equal(header.includes('research-paper-header__original'), item.subtitle, item.id + ' subtitle visibility');
       assert.equal(header.includes('research-tldr-title'), item.intro, item.id + ' summary visibility');
       assert.ok(html.includes('有区别的正文必须保留。'), item.id + ' body retained');
-      for (const id of ['reading-resume', 'reading-chapters-trigger', 'reading-chapters-panel', 'article-body']) assert.ok(html.includes('id=' + id), item.id + ' reading control ' + id);
+      for (const id of ['reading-chapters-trigger', 'reading-chapters-panel', 'article-body']) assert.ok(html.includes('id=' + id), item.id + ' reading control ' + id);
     }
   } finally { fs.rmSync(temp, { recursive: true, force: true }); }
 });

@@ -5,7 +5,7 @@
   if (global && global.document) {
     global.ResearchReadingWorkflow = api;
     var start = function () { api.mount(global); };
-    // This body script precedes the deferred reading-store/controls footer scripts.
+    // Mount only chapter navigation; legacy storage helpers are never invoked.
     if (global.document.readyState !== 'complete') global.document.addEventListener('DOMContentLoaded', start, { once: true });
     else start();
   }
@@ -61,33 +61,6 @@
     if (!article || !workbench) return;
     var headings = Array.from(article.querySelectorAll('h2[id], h3[id]'));
     if (!headings.length) return;
-    var base = workbench.dataset.readingBasePath || '/';
-    var key = storageKey(base);
-    var pathname = window.location.pathname;
-    var storage;
-    try { storage = window.localStorage; } catch (_) { storage = null; }
-    var readingStore = window.ResearchReading && window.ResearchReading.store;
-    if (readingStore && (readingStore.basePath !== base || readingStore.origin !== window.location.origin)) readingStore = null;
-    if (!readingStore && window.ResearchReadingStore && storage) {
-      try { readingStore = window.ResearchReadingStore.create({ storage: storage, basePath: base, origin: window.location.origin }); } catch (_) {}
-    }
-    var saved = readStore(storage, key, readingStore).positions[pathname];
-    var resume = document.getElementById('reading-resume');
-    var note = document.getElementById('reading-resume-note');
-    var continuation = document.getElementById('reading-resume-continue');
-    var dismiss = document.getElementById('reading-resume-dismiss');
-    if (resume && saved && !window.location.hash && saved.progress > 1 && saved.progress < 98) {
-      var destination = headings.find(function (heading) { return heading.id === saved.anchor; });
-      if (destination) {
-        note.textContent = '上次读到「' + destination.textContent + '」（约 ' + Math.round(saved.progress) + '%）。进度仅保存在此浏览器。';
-        resume.hidden = false;
-        continuation.addEventListener('click', function () {
-          resume.hidden = true;
-          jumpTo(destination);
-        });
-        dismiss.addEventListener('click', function () { resume.hidden = true; });
-      }
-    }
     var trigger = document.getElementById('reading-chapters-trigger');
     var panel = document.getElementById('reading-chapters-panel');
     var close = document.getElementById('reading-chapters-close');
@@ -138,22 +111,10 @@
       var media = window.matchMedia('(max-width: 860px)');
       if (media.addEventListener) media.addEventListener('change', function (event) { if (!event.matches) closePanel(false); });
     }
-    var position = null;
     var frame = false;
-    var timer = null;
-    function save() {
-      if (!position || position.progress <= 1) return;
-      if (writePosition(storage, key, pathname, position, readingStore)) {
-        window.dispatchEvent(new window.CustomEvent('research-reading-position-change', { detail: { pathname: pathname, position: position, storageKey: key } }));
-      }
-    }
     function update() {
       frame = false;
       var current = currentHeading(headings, document.documentElement.clientHeight * .25);
-      var top = article.getBoundingClientRect().top;
-      var range = Math.max(1, article.offsetHeight - document.documentElement.clientHeight);
-      var progress = Math.min(100, Math.max(0, -top / range * 100));
-      position = { anchor: current.id, progress: Math.round(progress * 10) / 10, updatedAt: new Date().toISOString() };
       if (trigger) trigger.textContent = '章节 · ' + current.textContent.slice(0, 24);
       desktopLinks.concat(mobileLinks).forEach(function (link) {
         var id;
@@ -163,11 +124,8 @@
         if (selected) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
-      if (timer) window.clearTimeout(timer);
-      timer = window.setTimeout(save, 800);
     }
     window.addEventListener('scroll', function () { if (!frame) { frame = true; window.requestAnimationFrame(update); } }, { passive: true });
-    window.addEventListener('pagehide', save);
     update();
   }
   return { mount: mount, storageKey: storageKey, normalizeStore: normalizeStore, readStore: readStore,

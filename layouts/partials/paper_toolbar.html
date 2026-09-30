@@ -12,14 +12,13 @@
 {{- $citationFiles := dict -}}
 <section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-citation-record="{{ $source | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
   <script type="application/json" class="paper-tools__citation-record">{{ $source | jsonify | safeJS }}</script>
-  <div class="paper-tools__heading"><h2 id="paper-tools-title">阅读与整理</h2><p>原文 · 引用 · 阅读笔记</p></div>
+  <div class="paper-tools__heading"><h2 id="paper-tools-title">原文与引用</h2><p>论文页面 · PDF · 引用文件</p></div>
   <div class="paper-tools__primary-actions">
     {{- with $source.url }}<a class="paper-tool paper-tool--primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $hasID }}打开 arXiv{{ else }}官方论文页面{{ end }} ↗</a>{{ end }}
     {{- with $source.pdfUrl }}<a class="paper-tool paper-tool--download" href="{{ . }}" target="_blank" rel="noopener noreferrer">阅读 / 保存 PDF</a>{{ end }}
     {{- if $canCite }}<button class="paper-tool paper-tool--reference-copy" type="button" hidden>复制引用</button>{{ end }}
-    <button class="paper-tool" type="button" data-reading-bookmark data-paper-key="{{ $source.paperKey }}" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-identity-status="{{ $source.identityStatus }}" hidden>收藏</button>
   </div>
-  {{- if not $canCite }}<p class="paper-tools__note">{{ if eq $source.identityStatus "verified" }}本页引用来源信息尚不完整。{{ else }}本页论文身份尚待核实。{{ end }}可收藏导读并记录笔记；暂不生成本篇引用。</p>{{ end }}
+  {{- if not $canCite }}<p class="paper-tools__note">{{ if eq $source.identityStatus "verified" }}本页引用来源信息尚不完整。{{ else }}本页论文身份尚待核实。{{ end }}暂不生成本篇引用；仍可下载本站导读。</p>{{ end }}
   {{- if $canCite }}
   <details class="paper-tools__help paper-tools__advanced"><summary>引用文件与研究资料</summary>
     {{- if $hasID }}
@@ -51,13 +50,12 @@
     <div class="paper-tools__group">{{ range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}<button class="paper-tool paper-tool-citation" type="button" data-citation-format="{{ $format }}" hidden>下载 {{ $label }}</button>{{ end }}</div>
     <p class="paper-tools__note">引用仅包含当前有来源记录的字段；缺失作者、出版日期或 DOI 时保持缺失。</p>
     {{- end }}
-    <p>研究资料包包含本页导读、官方链接、可得引用字段与当前阅读笔记。导读与个人笔记分别标明。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载研究资料包</button>
+    <p>下载本页导读、官方链接与可得引用字段，并保留来源和版本提示。导读是本站的二次解读。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载导读与引用</button>
   </details>
   {{- else }}
-  <details class="paper-tools__help paper-tools__advanced"><summary>研究资料</summary><p>导出本页导读、已有链接与当前阅读笔记；身份待核时不生成论文引用。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载研究资料包</button></details>
+  <details class="paper-tools__help paper-tools__advanced"><summary>下载导读</summary><p>下载本站导读与正文已有链接；身份待核时不生成论文引用。</p><button class="paper-tool paper-tool--pack" type="button" hidden>下载导读</button></details>
   {{- end }}
-  <p class="paper-tools__local-note">收藏、阅读进度与笔记保存在此浏览器。可在论文库备份；更换设备不会自动同步。</p>
-  <noscript><p>启用 JavaScript 后可收藏、保存笔记与复制引用。原文、PDF 和已有引用文件仍可直接打开。</p></noscript>
+  <noscript><p>启用 JavaScript 后可复制引用和下载导读。原文、PDF 和已有引用文件仍可直接打开。</p></noscript>
   <textarea class="paper-tools__copy-fallback" aria-label="可手动复制的文本" rows="5" readonly hidden></textarea><p class="paper-tools__status" role="status" aria-live="polite" aria-atomic="true"></p>
 </section>
 {{- $helper := resources.Get "js/citation-source.js" | minify | fingerprint -}}<script defer src="{{ $helper.RelPermalink }}" integrity="{{ $helper.Data.Integrity }}" crossorigin="anonymous"></script>

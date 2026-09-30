@@ -68,9 +68,8 @@ test('paper tools keep useful original/PDF/citation controls and remove AI/Zoter
   assert.match(html, /引用文件与研究资料/);
   for (const name of ['citation.json', 'citation.bib', 'citation.ris']) assert.ok(html.includes(sidecarRoot + name));
   assert.doesNotMatch(html, /data-citation-format|Zotero|zotero\.org|复制 AI 提问|整理选段提问|paper-selected-text|prompt-task/);
-  assert.equal((html.match(/data-reading-bookmark/g) || []).length, 1);
-  assert.doesNotMatch(html, /data-reading-status/); // Global controls mount the one actual status editor.
-  assert.match(html, /保存在此浏览器/);
+  assert.doesNotMatch(html, /data-reading-bookmark|data-reading-status|reading-controls|reading-resume|reading-backup|保存在此浏览器/);
+  assert.match(html, /原文与引用/);
 });
 
 test('legacy verified record offers brief citation files without fabricated authors/date', () => {
@@ -80,9 +79,9 @@ test('legacy verified record offers brief citation files without fabricated auth
   assert.doesNotMatch(html, /name=citation_author|name=citation_date/);
 });
 
-test('unknown identity retains notes and research pack without inheriting cited arXiv', () => {
+test('unknown identity exports the guide without inheriting cited arXiv', () => {
   const html = renderFixture('title: "Old paper"\ndate: 2020-01-01\nhiddenInHomeList: true', '[cited](https://arxiv.org/abs/2609.99999)');
-  assert.match(html, /身份尚待核实/); assert.match(html, /研究资料/); assert.match(html, /data-reading-bookmark/);
+  assert.match(html, /身份尚待核实/); assert.match(html, /下载导读/); assert.doesNotMatch(html, /data-reading-bookmark/);
   assert.doesNotMatch(html, /paper-tool--reference-copy|data-citation-format|name=citation_arxiv_id|name=citation_pdf_url|Zotero|复制 AI/);
 });
 
@@ -138,11 +137,11 @@ test('reference copy is a real clipboard action with complete selectable fallbac
   const oldBrowser = copyUI(true, true); await oldBrowser.handlers.click(); assert.equal(oldBrowser.copies(), 1);
 });
 
-test('reading tools perform no AI or external application calls and reuse the existing note store', () => {
+test('source tools do not call external applications or read personal browser records', () => {
   const js = readFileSync(join(repo, 'assets/js/paper-toolbar.js'), 'utf8');
   assert.doesNotMatch(js, /fetch\(|XMLHttpRequest|buildPrompt\(|localStorage|zotero|selection-copy|prompt-task/);
-  assert.match(js, /ResearchReading\.mount/); assert.match(js, /DOMContentLoaded/);
-  assert.match(js, /note\.dispatchEvent/); assert.match(js, /note: value/);
+  assert.doesNotMatch(js, /ResearchReading|reading-controls|selectionchange|note:|settings\.note/);
+  assert.match(js, /DOMContentLoaded/);
 });
 
 test('verified conference citation exposes actual authors/date/DOI and cannot import unrelated body identifiers', () => {
@@ -151,11 +150,18 @@ test('verified conference citation exposes actual authors/date/DOI and cannot im
   assert.match(html, /name=citation_date content="?2026\/01\/15/);
   assert.match(html, /name=citation_doi content="?10\.1234\/full/);
   assert.doesNotMatch(html, /name=citation_arxiv_id|data-paper-arxiv-id/);
-  assert.match(html, /data-reading-bookmark/);
+  assert.doesNotMatch(html, /data-reading-bookmark/);
 });
 
 test('invalid explicit citation dates are omitted instead of borrowing the blog publication date', () => {
   const html = renderFixture(frontmatter + '\npaper_digest_citation_date: "2026-02-30"');
   assert.doesNotMatch(html, /name=citation_date/);
   assert.match(html, /作者与出版日期未提供/);
+});
+
+ test('single guide export contains source fields and guide without personal records', () => {
+  const text = citationApi.buildResearchPack(record, { content: '导读正文' });
+  assert.match(text, /## 本站导读内容[\s\S]*导读正文/);
+  assert.match(text, /https:\/\/arxiv\.org\/abs\/2609\.01234v2/);
+  assert.doesNotMatch(text, /个人阅读笔记|个人选段/);
 });

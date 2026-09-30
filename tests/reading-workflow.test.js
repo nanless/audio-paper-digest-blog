@@ -64,20 +64,17 @@ function browserFixture({ stored = true, hash = '', disabledStorage = false } = 
   workflow.mount(window);
   return { nodes, headings, document, window, events, storage };
 }
-test('returning reader is offered restoration without automatic jumps; existing hash and unavailable storage take precedence', () => {
+test('chapter navigation does not access or change old browser reading records', () => {
   const f = browserFixture();
-  assert.equal(f.nodes['reading-resume'].hidden, false);
-  assert.equal(f.headings[1].scrolled, undefined);
-  f.nodes['reading-resume-continue'].events.click();
-  assert.equal(f.headings[1].scrolled, true);
+  const key = workflow.storageKey('/blog/');
+  const before = f.storage.getItem(key);
   assert.equal(f.nodes['reading-resume'].hidden, true);
-  assert.match(f.window.history.url, /#%E7/);
-  assert.equal(browserFixture({ hash: '#第一章' }).nodes['reading-resume'].hidden, true);
-  assert.equal(browserFixture({ disabledStorage: true }).nodes['reading-resume'].hidden, true);
-  const dismiss = browserFixture();
-  dismiss.nodes['reading-resume-dismiss'].events.click();
-  assert.equal(dismiss.nodes['reading-resume'].hidden, true);
-  assert.equal(dismiss.headings[1].scrolled, undefined);
+  assert.equal(f.headings[1].scrolled, undefined);
+  Object.defineProperty(f.window, 'localStorage', { get() { throw Error('Storage must not be accessed'); } });
+  workflow.mount(f.window);
+  f.events.scroll();
+  assert.equal(f.events.pagehide, undefined);
+  assert.equal(f.storage.getItem(key), before);
 });
 test('mobile chapters open, constrain keyboard focus and close with Escape or a chapter choice', () => {
   const f = browserFixture({ stored: false });
