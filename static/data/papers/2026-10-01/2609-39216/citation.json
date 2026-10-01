@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39216v1",
+  "arxivId": "2609.39216",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39216v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Dror Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnon Netzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai Victor Habi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39216v1",
+  "originalTitle": "PG-SELD: Physics-Guided Sound Event Localization and Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39216v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38106",
+  "arxivId": "2609.38106",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Ganesh Pavan Kartikeya Bharadwaj Kolluri"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Michael Kampouridis"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38106",
+  "originalTitle": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38106.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

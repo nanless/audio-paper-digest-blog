@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37845",
+  "arxivId": "2609.37845",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahsa Abdollahi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nico Coallier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxime Fraser Franco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiago H. Falk"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37845",
+  "originalTitle": "Acoustic Honeybee Queen-State Detection Under Unseen Conditions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37845.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

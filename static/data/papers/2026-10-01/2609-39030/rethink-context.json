@@ -1,0 +1,199 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39030v1",
+  "abstract": "Audio and speech models are released rapidly, but reported scores often conflate model capability with deployment and evaluation choices. The same checkpoint can produce different predictions under different runtimes, hardware, decoding settings, or fallback policies. Even fixed predictions can receive different scores under different normalization and metric implementations. Existing speech benchmarks standardize selected datasets or scoring procedures, but rarely connect heterogeneous model onboarding, controlled inference, and versioned scoring in one executable workflow. We introduce SURE-EVAL, a Systematic and Unified Agentic framework for Reproducible Evaluation of audio and speech systems. A Tool Agent Workflow converts model releases into isolated, verified callable tools. A Main Agent Workflow commits task-specific inference and scoring protocols, then delegates all score-bearing operations to versioned deterministic programs. Each result retains its runtime, protocol, pipeline nodes, predictions, and audit artifacts. Across 18 public releases covering automatic speech recognition, text-to-speech, voice conversion, speaker diarization, speaker-attributed recognition, and multi-task audio understanding, a Codex-only baseline completes 12 models in one shot, while the same agent with the SURE-EVAL Tool Agent Workflow completes all 18. We also conduct unified evaluations over seven ASR test conditions and two TTS subsets. A protocol analysis of three TTS systems finds absolute differences of 0.02-0.52 points between paper-reported and unified results, with the direction varying by model and language. These results show that reproducible evaluation requires controlling both model execution and output scoring.",
+  "abstractSha256": "30b5dbbce09753169322ad1d5f0732dc0b0f7383a91a163fc781cda86169e9cb",
+  "arxivId": "2609.39030",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39030v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Junhao Du"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yixuan Wang"
+    },
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Bowen Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hanqi Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Chaolei Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Weihan Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Haohui Xie"
+    },
+    {
+      "affiliations": [
+        "Imperial College London"
+      ],
+      "name": "Ruichen Sun"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chenghao Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Guanyu Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaoyu Gu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tao Liu"
+    },
+    {
+      "affiliations": [
+        "ETH Zurich"
+      ],
+      "name": "Yucheng Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Yihua Zhou"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Qiang Zhou"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Feng Lu"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把语音评测不可比归因于执行方差与打分方差，用工具智能体完成异构上线、主智能体提交协议、确定性程序执行打分，在 18 个公开版本上把一次通过从 12 个提高到 18 个，但统一协议与论文报告仍存在随模型与语言变化的差异。",
+  "originalTitle": "SURE-EVAL: A Systematic and Unified Agentic Framework for Reproducible Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39030v1.pdf",
+  "readerTitle": "分数不是检查点属性：SURE-EVAL 把执行与打分钉成可重放契约",
+  "schemaVersion": 1
+}

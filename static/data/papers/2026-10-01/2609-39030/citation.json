@@ -1,0 +1,158 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39030v1",
+  "arxivId": "2609.39030",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39030v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jing Peng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Junhao Du"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yixuan Wang"
+    },
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Bowen Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hanqi Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Chaolei Liu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Weihan Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Haohui Xie"
+    },
+    {
+      "affiliations": [
+        "Imperial College London"
+      ],
+      "name": "Ruichen Sun"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong University"
+      ],
+      "name": "Chenghao Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Wen Wen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Guanyu Chen"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xiaoyu Gu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yiwei Guo"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Bohan Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tao Liu"
+    },
+    {
+      "affiliations": [
+        "ETH Zurich"
+      ],
+      "name": "Yucheng Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Yihua Zhou"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Qiang Zhou"
+    },
+    {
+      "affiliations": [
+        "AISpeech Co., Ltd."
+      ],
+      "name": "Feng Lu"
+    },
+    {
+      "affiliations": [
+        "Nanjing University"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39030v1",
+  "originalTitle": "SURE-EVAL: A Systematic and Unified Agentic Framework for Reproducible Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39030v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38780v1",
+  "abstract": "Audio is increasingly used for human activity recognition (HAR) because it captures object interactions, environmental events, and contextual cues in everyday environments. High-resolution (HR) audio provides rich acoustic information for model development but incurs substantial energy and storage costs and may expose sensitive speech content. Low-resolution (LR) audio offers a more privacy-preserving and resource-efficient alternative for deployment, but reduced sampling rates can remove acoustic cues essential for activity recognition, leading to significant performance degradation. We formulate this training-deployment mismatch as sensor-resolution privileged learning, in which HR audio is available during training, while inference relies exclusively on LR audio. We propose RAST, a resolution-aware transfer framework that compresses HR teacher representations by preserving token-level information and neighborhood structure before performing localized HR-LR alignment. Experiments on the SAMoSA and AudioIMU datasets show that RAST consistently outperforms LR-only training and direct teacher-transfer baselines, improving LR-only recognition by up to approximately 7.8% while requiring only LR audio at inference.",
+  "abstractSha256": "09ce567e110251832dc56a697d662c110f2e6e473152948945baae9a0764a515",
+  "arxivId": "2609.38780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38780v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Ji Hwan Park"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Gautham Krishna Gudur"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Yufei Shen"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Dawei Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Edison Thomaz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对训练有 16 kHz 高分辨率音频而部署只有 1.25 kHz 低分辨率音频的活动识别错位，RAST 先把教师表示压缩为离散令牌与邻域结构做预热再做局部难负例对齐，在 SAMoSA 和 AudioIMU 上相对低分辨率基线提升约 6.1% 至 7.8%，代价是仍需配对高低分辨率训练数据与三阶段流程。",
+  "originalTitle": "RAST: Resolution-Aware Privileged Structure Transfer for Low-Resolution Audio Activity Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38780v1.pdf",
+  "readerTitle": "低分辨率听不清动作时，把高分辨率知识压缩后再教给学生",
+  "schemaVersion": 1
+}

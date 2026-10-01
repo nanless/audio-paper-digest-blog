@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31847",
+  "abstract": "General-purpose agents can plan, reason, and act over long horizons, yet their production capabilities remain fragmented across text, images, audio, video, documents, 3D assets, and code. Extending a foundation model to additional modalities ties capability growth to costly model updates, while assembling specialist models and tools leaves unresolved how procedures, dependencies, intermediate assets, and cross-turn revisions should be coordinated. We present Omni-IO Skills, a plug-and-play Agent Harness that makes existing agents omni-native through hierarchical Skills, a standardized multimodal execution interface, dependency-aware orchestration, and a persistent Asset Registry. Multi-asset workflows are represented as Declare Execution Graphs, which schedule independent operations concurrently and register successful outputs for downstream and cross-turn reuse across replaceable execution backends. Its 27 Skills cover 38 representative tasks spanning seven artifact modalities and four capability families: understanding, generation, reasoning, and retrieval. On UniM-90, the harness raises the input-support rates of GPT-5.6 Sol and Claude Sonnet 5 from 40.00% and 38.89% to 100%, while increasing relative Semantic--Quality Coupled Score from 26.99 to 74.94 and from 27.82 to 77.78, respectively; Strict Structure Score reaches 100.00 and 99.78. These results establish harness-level capability composition as a practical route to broad, evolvable Omni systems without changing the host agent's reasoning core.",
+  "abstractSha256": "39c7fad2a16f720c22d232ea07c5858bfb37072b43268ef950e43629e873bb47",
+  "arxivId": "2609.31847",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-understanding",
+          "label": "音频理解"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.software",
+          "label": "软件工具"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Yanlin Li"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Mingyang Hao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Shengqiong Wu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Hao Fei"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Mong-Li Lee"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Wynne Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对通用智能体能推理却做不出跨模态多产物的问题，论文用分层技能加声明式执行图与资产注册表做编排，在 UniM-90 上把两类宿主的输入支持率提到 100% 并把相对语义质量分提到 74.94 与 77.78，代价是依赖外部专家后端与显式建图验证。",
+  "originalTitle": "Omni-IO Skills: Harnessing Your Agent Omni-Native",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31847.pdf",
+  "readerTitle": "不改推理核，只加执行层：用技能与资产图把通用智能体变成全模态包工头",
+  "schemaVersion": 1
+}

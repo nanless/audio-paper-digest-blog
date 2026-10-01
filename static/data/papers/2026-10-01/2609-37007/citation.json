@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37007",
+  "arxivId": "2609.37007",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berkin Durmus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eduardo Pacheco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zach Nagengast"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Atila Orhon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37007",
+  "originalTitle": "RVQ Position Aware Speculative Decoding for On Device Text to Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37007.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

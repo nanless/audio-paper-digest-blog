@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37540",
+  "arxivId": "2609.37540",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Ciapponi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Ardan Dal Rı"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicola Conci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elisabetta Farella"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37540",
+  "originalTitle": "Rate-Agnostic Bioacoustics: Heterogeneous Multi-Taxa Classification with Continuous Filterbanks and Fourier Neural Operators",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37540.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

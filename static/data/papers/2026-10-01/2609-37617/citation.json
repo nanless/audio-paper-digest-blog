@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37617",
+  "arxivId": "2609.37617",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Yunzhe Li"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Kyoungjun Park"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Hongzi Zhu"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Lili Qiu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37617",
+  "originalTitle": "AS$^2$D: Accelerating On-Demand Audio Understanding on Mobile Devices",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37617.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38780v1",
+  "arxivId": "2609.38780",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38780v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Ji Hwan Park"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Gautham Krishna Gudur"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Yufei Shen"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Dawei Liang"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA"
+      ],
+      "name": "Edison Thomaz"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38780v1",
+  "originalTitle": "RAST: Resolution-Aware Privileged Structure Transfer for Low-Resolution Audio Activity Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38780v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

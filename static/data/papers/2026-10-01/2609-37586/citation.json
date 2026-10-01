@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37586",
+  "arxivId": "2609.37586",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuankun Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxuan Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaopeng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaole Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37586",
+  "originalTitle": "Learning as Deepfakes Evolve: RF-Prompt for Continual Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37586.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

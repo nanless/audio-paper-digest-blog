@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37028",
+  "abstract": "Zero-shot text-to-speech synthesizes new utterances in a speaker&#39;s voice from a short reference recording. Voice cloning requires accurate content and preserved speaker identity, but supervised acoustic-token prediction does not directly optimize these waveform-level properties. Reward-based post-training addresses this mismatch, but in discrete diffusion, token choices and reveal positions jointly define the sampling trajectory, complicating alignment. We introduce RAWD-TTS (Ratio-free Advantage-Weighted Denoising), which scores decoded samples with recognition and speaker rewards and uses group-relative advantages to weight masked-token reconstruction of those samples, without reverse-trajectory likelihoods or target audio. On 500 Russian CV3-Eval voice-cloning prompts, joint alignment reduces word error rate from 3.18% to 2.42% at the reward-selected checkpoint (24.0% relative) and to 2.58% at the final checkpoint (19.0%), while WavLM speaker cosine rises from 0.733 to 0.748 and 0.755. Controlled experiments characterize recognition-identity trade-offs and the effects of corruption count, group composition, and weighting.",
+  "abstractSha256": "9721192503c8c441c9f50329a76b238ac27389ce7d7ef781fdce5c4155ed7ed1",
+  "arxivId": "2609.37028",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasilii Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对离散扩散语音克隆中词正确性与说话人保持未被直接优化的问题，RAWD-TTS 用识别与说话人波形奖励算组内优势并加权前向掩码重建，在 500 条俄语克隆提示上把词错误率从 3.18% 降到 2.42% 并把说话人余弦从 0.733 提到 0.748，代价是单奖励会损伤另一属性且训练奖励上升不等于评测单调变好。",
+  "originalTitle": "RAWD-TTS: Ratio-Free Reward Alignment for Discrete-Diffusion Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37028.pdf",
+  "readerTitle": "不算逆轨迹似然：用终样本加权重建对齐离散扩散克隆",
+  "schemaVersion": 1
+}

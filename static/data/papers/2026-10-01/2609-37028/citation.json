@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37028",
+  "arxivId": "2609.37028",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasilii Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37028",
+  "originalTitle": "RAWD-TTS: Ratio-Free Reward Alignment for Discrete-Diffusion Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37028.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

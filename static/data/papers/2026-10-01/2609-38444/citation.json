@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38444v1",
+  "arxivId": "2609.38444",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38444v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Duowen Chen"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Jinjin He"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Sandeep Bangalore Venkatesh"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Bo Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38444v1",
+  "originalTitle": "Audible World Models: Spatially Aware Sound Generation for 3D Worlds",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38444v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

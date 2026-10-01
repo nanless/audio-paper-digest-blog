@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37540",
+  "abstract": "Conventional bioacoustic classification models rely on fixed-rate spectral representations, requiring recordings acquired at heterogeneous sampling rates to be resampled before analysis. We propose a Sampling-Frequency-Independent (SFI) frontend that processes each recording directly at its native sampling rate, coupled with a Fourier Neural Operator (FNO) backbone featuring progressive temporal-scale fusion. This framework avoids fixed-rate resampling and high-frequency information loss while producing fixed-size representations across sampling rates. Mild training-time sampling-rate (\\textit{sr}) augmentation further improves robustness to unseen rate variations. Evaluated on a multi-taxa corpus comprising 84 classes and 60 sampling rates, the proposed SFI-FNO configuration outperforms fixed-rate and corpus-maximum-rate baselines, achieving .906 accuracy, .921 balanced accuracy, and a Macro-F1 score of .899.",
+  "abstractSha256": "2c7d7a2b8910fcfd367eb95af25521eed1a4cbd341d8df7d4fdd164287551d16",
+  "arxivId": "2609.37540",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Ciapponi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Ardan Dal Rı"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicola Conci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elisabetta Farella"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 84 类、60 种采样率混合语料的物种分类问题，论文用原生采样率连续滤波器组保留带宽并统一为固定尺寸特征，再用傅里叶神经算子做全局频率时间建模，最强证据是 SFI-FNO 达到 0.906 准确率与 0.899 宏 F1，代价是未做增强时对采样率扰动敏感、需用温和采样率增强抑制捷径。",
+  "originalTitle": "Rate-Agnostic Bioacoustics: Heterogeneous Multi-Taxa Classification with Continuous Filterbanks and Fourier Neural Operators",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37540.pdf",
+  "readerTitle": "不重采样怎么做跨采样率生物声学分类：连续滤波器组与傅里叶算子的分工",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37845",
+  "abstract": "Honeybee queen loss is a major threat to colony health, yet queen-status assessment remains largely manual and disruptive. Acoustic monitoring offers a non-invasive alternative by enabling continuous analysis of hive sounds. In this paper, we benchmark conventional and learned acoustic representations for automated detection of queen absence, comparing task-specific convolutional neural networks with pretrained audio transformers. Experiments are performed on 5,129 audio recordings from 3,285 hives across 47 apiaries collected between October 2024 and August 2026, evaluated using hive- and apiary-independent splits. Results show that models relying on modulation spectrograms achieve the best performance, reaching an Area Under the Receiver Operating Characteristic (AUROC) of 0.81 and Area Under the Precision-Recall Curve (AUPRC) of 0.37 on unseen hives; performance decreases under unseen-apiary evaluation. Overall, our results highlight the promise of modulation-based audio representations for non-invasive queen-status monitoring and highlight the challenge in cross-apiary model generalization.",
+  "abstractSha256": "344c68631c7cc7fa1a236449bf452289626c1e8705044e6717f8fb23b1fe486b",
+  "arxivId": "2609.37845",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mahsa Abdollahi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nico Coallier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxime Fraser Franco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiago H. Falk"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究以 5129 段野外蜂箱录音判断有王与失王，在蜂箱无关划分上比较了梅尔特征、多分辨率梅尔、调制谱与两种预训练音频 Transformer，最强证据是二维调制谱加任务专用卷积网络取得 AUROC 0.81 与 AUPRC 0.37，而在蜂场无关划分上降至 0.63 与 0.26，代价是跨蜂场泛化仍未解决。",
+  "originalTitle": "Acoustic Honeybee Queen-State Detection Under Unseen Conditions",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37845.pdf",
+  "readerTitle": "失王蜂群更吵更不稳：调制谱为何在未见过蜂箱上更可靠",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37317",
+  "arxivId": "2609.37317",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sieun Hyeon"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yejoon Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mintaek Lim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Woojin Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeik Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaeyoung Do"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37317",
+  "originalTitle": "What Comes Next? Omni-StoryBench for Evaluating Story-Grounded Omnimodal Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37317.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

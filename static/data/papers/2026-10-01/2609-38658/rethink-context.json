@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38658v1",
+  "abstract": "TTS systems with autoregressive semantic modeling have demonstrated strong zero-shot voice cloning performance and rich expressive variation, but their sequential decoding incurs substantial latency. Non-autoregressive alternatives offer much faster generation, yet often rely on more restrictive reference conditioning, such as requiring transcripts of the reference speech during inference. We present Tacit-TTS, an efficient transcript-free zero-shot voice cloning system distilled from IndexTTS2. Our model replaces autoregressive text-to-semantic decoding with masked non-autoregressive generation, introduces training-free acoustic length estimation, and accelerates the flow-matching renderer through ReFlow distillation. Across two English and two Mandarin datasets, Tacit-TTS achieves competitive zero-shot quality while generating speech over 10x faster than IndexTTS2 for utterances longer than 5 seconds. Its transcript-free conditioning further supports cross-lingual and non-lexical references. We validate this capability using references from eight other languages, infant babble, and synthetic gibberish, where transcript-dependent systems often degrade or fail due to unreliable ASR transcripts.",
+  "abstractSha256": "1bc826958d62c8ebf43c3e5d6c0a6d91c6ba92b0be6afd45212fb5e42231e07c",
+  "arxivId": "2609.38658",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38658v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音克隆",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音克隆",
+      "primaryTaskId": "task.voice-cloning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Jian Chen"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Mark Vinton"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "Tacit-TTS 针对 IndexTTS2 自回归语义解码慢且已有并行方案依赖参考文本的问题，用掩码非自回归生成加免训练语速估计与重流蒸馏实现免文本克隆，跨语言证据显示英文目标相似度 0.789 且词错率 0.10%，代价是中文指标与内容准确率仍低于教师模型。",
+  "originalTitle": "Tacit-TTS: From Autoregressive Decoding to Masked Prediction for Efficient Transcript-Free Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38658v1.pdf",
+  "readerTitle": "去掉参考文本还要更快：Tacit-TTS 用掩码并行替代自回归克隆",
+  "schemaVersion": 1
+}

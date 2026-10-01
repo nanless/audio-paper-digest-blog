@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38878v1",
+  "arxivId": "2609.38878",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38878v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Kyoungjun Park"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Yunzhe Li"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin"
+      ],
+      "name": "Lili Qiu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38878v1",
+  "originalTitle": "Audio Token Attention Is Predictable Before the Language Model Runs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38878v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

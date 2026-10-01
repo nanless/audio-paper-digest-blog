@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38440v1",
+  "abstract": "Direct image-to-speech (Img2Sp) poses an alignment challenge in mapping visual content to ordered speech sequences, as images permit multiple spoken descriptions and lack monotonic correspondence with speech sequences. We propose Monotonicity-Guided Semantic Alignment (MGSA), to the best of our knowledge, the first framework for zero-shot multispeaker Img2Sp synthesis. We use semantic speech units to provide shared content targets across speakers with reference speech for speaker conditioning. A query aligner maps semantic memory learned from visual content to speech unit positions via a soft monotonic prior, which yields position-specific conditioning states. A blockwise masked diffusion generator is employed for the speech unit generation conditioning on these states. Experiments on Flickr8k-Audio show competitive captioning performance against single-speaker baselines, while evaluation with LibriTTS-R references supports zero-shot synthesis for unseen speakers. Ablations validate the effectiveness of aligner and block diffusion. Audio samples are available at https://alizeded.github.io/mgsa-demo.",
+  "abstractSha256": "c0a2b9f72f541d9b657a0b7fb3fecae1ecac53881de253e68bce8bbb110b4806",
+  "arxivId": "2609.38440",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38440v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音视频语音合成",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-synthesis",
+          "label": "音视频语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "音视频语音合成",
+      "primaryTaskId": "task.av-synthesis",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lijun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixian Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shogo Okada"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对直接图像到语音中图像可多述且与语音单元无单调对应的问题，MGSA 用语义语音单元统一多说话人内容目标、以单调查询对齐器生成位置相关条件再做块级掩码扩散生成，在 Flickr8k-Audio 上达到与单说话人基线可比的字幕指标并支持未见说话人的零样本合成，代价是内容准确性仍是主要局限。",
+  "originalTitle": "Monotonicity-Guided Semantic Alignment for Zero-shot Multispeaker Image-to-Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38440v1.pdf",
+  "readerTitle": "图像没有语序，语音却有先后：用单调先验把视觉内容排成可说的单元序列",
+  "schemaVersion": 1
+}

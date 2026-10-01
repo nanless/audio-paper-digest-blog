@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37798",
+  "arxivId": "2609.37798",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaspard Botté"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Séverin Baroudi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Samir Sadok"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Francesco Paissan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Hueber"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xavier Alameda-Pineda"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricard Marxer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37798",
+  "originalTitle": "GLaS-JEPA: Gaussian-Regularized Speech SSL without Engineered Prediction Targets",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37798.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

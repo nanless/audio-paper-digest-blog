@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39162v1",
+  "abstract": "Speaker diarization systems based on speaker embeddings and neural diarization exploit complementary forms of speaker information, but their intermediate representations are not directly compatible. We introduce Training-Free Affinity Fusion (TFAF), which integrates the speaker structure inferred by a neural diarizer into an embedding-based diarization system. The neural speaker partition is used to condition local speaker representations, from which we construct a continuous affinity matrix and combine it with the embedding-based acoustic affinity before a single global clustering step. The method requires no additional training, shared embedding space, speaker-label alignment, or hard transfer of the neural diarizer's speaker count. Experiments on AMI and CALLHOME show consistent DER improvements over both constituent systems; on AMI, fusion also improves speaker-attributed transcription. Ablations show that the neural speaker partition accounts for most of the gain, while retaining the continuous embedding-based affinities provides additional benefit over hard partition fusion.",
+  "abstractSha256": "04702845c0227f9d75fd6c0f579337dcf76f8c23db02611a49fca2998fe727a1",
+  "arxivId": "2609.39162",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39162v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型融合",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-combination",
+          "label": "模型融合"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型融合",
+      "primaryMethodId": "method.model-combination",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Yehoshua Dissen"
+    },
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Joseph Keshet"
+    },
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Eduard Golshtein"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对嵌入聚类时间分辨率与神经 diarization 长录音身份一致性互补但表示不兼容的问题，论文用神经说话人划分调制局部表示构成连续亲和并与多尺度声学亲和相加后做一次全局聚类，在 AMI 与 CALLHOME 上同时超过两个组成系统，而硬用说话人计数则显著变差。",
+  "originalTitle": "Training-Free Affinity Fusion of Neural and Embedding-Based Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39162v1.pdf",
+  "readerTitle": "不换标签、不共空间：用亲和图融合神经划分与嵌入聚类",
+  "schemaVersion": 1
+}

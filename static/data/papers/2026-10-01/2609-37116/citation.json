@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37116",
+  "arxivId": "2609.37116",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiv Gehlot"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishnu Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lars Villemoes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arijit Biswas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37116",
+  "originalTitle": "Multichannel Audio Quality Assessment: Extending Pretrained Perceptual Models to Spatial Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37116.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

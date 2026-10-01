@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37518",
+  "abstract": "Passive Acoustic Monitoring of bats generates massive ultrasonic datasets (&gt;27 GB/night per node), straining edge storage and battery life. Legacy triggers fail against acoustic confusers, while deep models exceed microcontroller limits. We present a hardware-aware Bat Activity Detector (BAD) specifically designed to discriminate bat calls from hard biological and environmental confusers across variable sampling rates (192-384 kHz). Tailored for the Silicon Labs EFM32PG26 (MVP) in 8-bit integer precision, our model achieves 100 percent hardware offload across all 14 layers (17.2 KB Flash, 73.1 KB RAM). End-to-end preprocessing (74.00 ms for 76 frames) and inference (30.00 ms) of 100 ms clips at 192 kHz require 104.00 ms per clip. On spatially out-of-domain recordings under a realistic low-prevalence regime (r_pos = 0.05), BAD achieves an AUC-ROC of 0.9748 and suppresses 99.4% of non-target noise frames while retaining 65.3% of bat calls - delivering a &gt;33x precision gain over classical Goertzel baselines.",
+  "abstractSha256": "aa35ca5408d1600e15913e4f87f942235a932d1ab95654450c9da40b600c3b72",
+  "arxivId": "2609.37518",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型量化",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.quantization",
+          "label": "模型量化"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型量化",
+      "primaryMethodId": "method.quantization",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Ciapponi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Santiago Martinez Balvanera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Cesaretti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elisabetta Farella"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kate E. Jones"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对被动声学监测每夜数十 GB 超声数据的问题，该工作把短时傅里叶特征加轻量谱减与全量卸载到 MVP 加速器的 8 比特 CNN 做成边缘门控，在空间异域低流行率下报告 AUC-ROC 0.9748 并抑制 99.4% 噪声帧，代价是只保留 65.3% 蝙蝠叫声且 100 毫秒窗仍需 104.00 ms 端到端延迟。",
+  "originalTitle": "Bad: Taming the Bioacoustic Data Deluge with a Bat Acticity Detector",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37518.pdf",
+  "readerTitle": "超声数据太多存不下：用边缘端蝙蝠活动检测器先拦住噪声",
+  "schemaVersion": 1
+}

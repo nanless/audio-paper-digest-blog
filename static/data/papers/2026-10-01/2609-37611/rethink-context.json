@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37611",
+  "abstract": "End-to-end attention-based speech recognition is accurate offline but hard to stream: outputs can depend on future audio, and a little future context per layer makes the lookahead grow with the number of layers. We address this with two mechanisms. A bounded-lookahead chunk encoder caps every chunk&#39;s future receptive field at a constant number of chunks, independent of the number of layers, via one age-selection rule shared by self-attention and the depthwise convolution. On this encoder, dynamic future-chunk decoding lets a per-token trigger commit a token or wait and re-decode it; we propose a learned trigger as the general mechanism, with a simple confidence threshold as an effective fallback. On full LibriSpeech test-clean the dynamic system matches the best static-lookahead accuracy (6.5%) at a median latency of 306 ms versus 860 ms for one-chunk static lookahead, and a wait budget bounds the deferral tail below the static baseline&#39;s 90th percentile at 0.1 points more WER.",
+  "abstractSha256": "aa7f516ebb79e1b9fc687517ee5802fdc8ef9823d932d24cf22d5faab1efd473",
+  "arxivId": "2609.37611",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yichen Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bastiaan Tamm"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对注意力模型整句依赖未来音频而难以流式化的问题，论文用年龄版本编码把每块未来视野锁定为常数块，再用逐词触发器只推迟不确定的词，在完整测试集上以 6.5% 词错率达到 306 毫秒中位延迟，代价是无预算时尾延迟高于静态基线且训练与重编码开销增加。",
+  "originalTitle": "Selective Lookahead for Attention-Based Streaming ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37611.pdf",
+  "readerTitle": "只在不确定的词上多等一个音频块：有界前视与按词延迟的流式识别",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37601",
+  "abstract": "Reconstructing speech from non-invasive brain signals offers a promising pathway for restoring communication in individuals who are cognitively intact but unable to speak. Existing EEG-to-speech approaches formulate this task as acoustic reconstruction, optimizing waveform fidelity while ignoring whether the generated speech preserves high-level semantic content. In this work, we revisit this formulation and argue that EEG signals carry not only acoustic but also semantic information. We identify two key limitations of prior methods: (1) the neglect of spatial relationships between EEG electrodes, and (2) the failure to exploit the semantic structure of the N400 paradigm, where congruent and incongruent trials reflect distinct semantic processing. We propose SENSE(Semantic-EEG Neural Speech SynthEsis), which combines a graph-based EEG encoder over electrode geometry with EEG Semantic Conditioning (ESC), aligning EEG to a pretrained semantic space using only congruent trials. On the N400 dataset, SENSE consistently outperforms prior methods on both acoustic and semantic metrics, and model-internal channel attribution suggests distributed reliance on auditory, sensorimotor, and centro-parietal regions, consistent with known speech-perception neuroscience. In the unseen-subject setting, SENSE trained on only two subjects already surpasses the strongest baseline trained on all eighteen subjects in word error rate, and matches it on acoustic metrics with as few as eight subjects.",
+  "abstractSha256": "32191a64377e4e78560eb1aab59dabe2ed138cbaa4cd86bc380242149b8ea1b4",
+  "arxivId": "2609.37601",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.neural-speech-decoding",
+          "label": "言语神经解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.neural",
+          "label": "脑信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "言语神经解码",
+      "primaryTaskId": "task.neural-speech-decoding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Jisoo Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Seonghak Lee"
+    },
+    {
+      "affiliations": [
+        "University of Birmingham, United Kingdom"
+      ],
+      "name": "Hyojin Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Junseok Kwon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对被动听语音脑电转波形只优化声学的问题，SENSE 用电极几何图编码加只在一致试次上对齐冻结语义空间的调节，在 N400 数据上以检索等表示层证据支持语义对应，但波形可懂度仍有限且自然语音只验证到表示层。",
+  "originalTitle": "SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37601.pdf",
+  "readerTitle": "从波形还原到语义保持：SENSE 用空间图与一致性条件重做脑电转语音",
+  "schemaVersion": 1
+}

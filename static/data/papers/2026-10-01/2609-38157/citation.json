@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38157",
+  "arxivId": "2609.38157",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Reality Labs at Meta",
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Po Huang"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Haibin Wu"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Jinwon Lee"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Neha Chachra"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38157",
+  "originalTitle": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38157.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

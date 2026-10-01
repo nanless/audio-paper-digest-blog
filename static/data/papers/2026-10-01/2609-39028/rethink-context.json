@@ -1,0 +1,108 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39028v1",
+  "abstract": "Non-intrusive MOS predictors are widely used instead of subjective listening tests to evaluate and rank speech enhancement (SE) systems. If they accurately reflect perceived quality, raising their scores should lead to higher-quality speech. We present the first comprehensive analysis of test-time optimization for the SE task, which directly modifies the enhanced signal to raise the average of multiple MOS predictor scores. On seven systems from the URGENT 2026 challenge, we find that 1)~all the optimized predicted scores increase while reference-based metrics remain nearly unchanged, 2)~a non-optimized predicted score does not increase, and 3)~a MUSHRA listening test shows no improvement in perceived quality. These findings reveal a risk that such optimization can distort evaluations, e.g., biasing comparisons of SE systems regardless of their perceived quality. We believe these findings can inform future evaluation practices: they suggest that predictors used for optimization should not be used for evaluation, and that challenges should keep the predictors used for ranking undisclosed.",
+  "abstractSha256": "7fa7dbef5603b24902d84fd003cfebbdd1c759437207d820083f5e570258a449",
+  "arxivId": "2609.39028",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39028v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tsubasa Ochiai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nahomi Kusunoki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Rintaro Ikeshita"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naoyuki Kamo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tetsuji Ogawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shoko Araki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把增强语音直接加可优化扰动去推高四个 MOS 预测器均值，在七个 URGENT 2026 系统上四个目标分数都上升而未见预测器至多变化 0.03、参考指标基本不动，MUSHRA 显示优化版并不更好却能把排名提前数位。",
+  "originalTitle": "Improving Predicted MOS Scores, Not Perceived Quality: Multi-Predictor Test-Time Optimization of Enhanced Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39028v1.pdf",
+  "readerTitle": "预测 MOS 分数被推高了，听感却没有变好：多预测器测试时优化的检验",
+  "schemaVersion": 1
+}

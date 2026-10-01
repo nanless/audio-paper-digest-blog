@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37691",
+  "abstract": "Recent neural Ambisonic encoders accommodate diverse array geometries, yet many existing neural encoders require a fixed microphone count because the number of microphone channels is embedded in the network architecture. This requirement limits deployment across devices with different microphone configurations and adaptation to changes in available channels. To address this limitation, we investigate Transformer-based matrix encoding for arbitrary microphone arrays with variable microphone counts. This is achieved through shared microphone-wise processing and masked self-attention that models inter-microphone relationships across variable-size arrays. Within this framework, we consider signal-independent (SI) encoding, which predicts encoding matrices from array transfer functions, and introduce a signal-dependent (SD) extension that additionally incorporates the observed microphone signals. Both models are trained on simulated scenes using LibriSpeech sources and extensively evaluated under changes in source type, unseen microphone counts, and increased source counts beyond those used during training. Both SI and SD outperform conventional least-squares (LS) encoding in aggregate reconstruction performance across the evaluated conditions. SD consistently achieves stronger overall performance than SI. These results demonstrate that the proposed framework enables array-agnostic Ambisonic encoding while retaining generalization across microphone counts and acoustic source conditions.",
+  "abstractSha256": "613ec844575cdd3e2c1ecb5701e27106cf6aba5a22a94cb1002c2b9d89e0ba1e",
+  "arxivId": "2609.37691",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shichao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiheng Jin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chunyang Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyao Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用共享麦克风处理加掩蔽自注意力实现可变麦克风数的一阶 Ambisonics 矩阵编码，对比只看阵列传递函数的信号无关编码与同时看观测信号的信号相关编码，在 LibriSpeech 训练后于未见麦克风数、更多声源数和非语音源上仍优于静态最小二乘，而信号相关整体更强但白噪声下绝对重建仍然困难。",
+  "originalTitle": "Signal-Independent and Signal-Dependent Neural Ambisonic Matrix Encoding for Arbitrary Arrays with Variable Microphone Counts",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37691.pdf",
+  "readerTitle": "麦克风数量可变时，编码矩阵如何既记住阵列又听见信号",
+  "schemaVersion": 1
+}

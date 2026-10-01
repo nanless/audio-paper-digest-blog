@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37518",
+  "arxivId": "2609.37518",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Ciapponi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Santiago Martinez Balvanera"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Cesaretti"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elisabetta Farella"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kate E. Jones"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37518",
+  "originalTitle": "Bad: Taming the Bioacoustic Data Deluge with a Bat Acticity Detector",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37518.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

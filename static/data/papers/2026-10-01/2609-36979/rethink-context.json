@@ -1,0 +1,90 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.36979",
+  "abstract": "LLM-as-a-judge is widely used for evaluating text, but extending this paradigm to speech requires models to interpret acoustic as well as linguistic evidence. This introduces a modality-specific risk: a speech judge may treat a perceptually salient cue as evidence of quality even when that cue is irrelevant to the target criterion or receives more weight than human listeners give it. We call this behavior an acoustic shortcut. To study it, we audit six speech LLM judges using controlled manipulations of intensity, content richness, and emotional delivery. We evaluate both pointwise scoring and pairwise comparison, using human preference calibration to interpret the results. The judges consistently reward louder audio, prefer content-rich speech more strongly than human listeners do, and map emotional delivery into quality preferences. These effects are most visible in pairwise comparison, while pointwise scores often obscure them. More concerningly, the accompanying rationales rarely identify the acoustic cue that changes a judgment and instead repeatedly rely on a limited vocabulary, leaving them acoustically underspecified. Together, these findings show that reliable speech judges must both resist acoustic shortcuts and ground their rationales in the acoustic evidence behind their decisions. To support reproducibility and future audits, we also release SpeechJudgeAudit, the controlled stimuli and evaluation tools used in this study.",
+  "abstractSha256": "9ae6dfd64da4ef30f93e1d92518734095721d0598cb61bcbb84105d86f8c09a7",
+  "arxivId": "2609.36979",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingyue Huo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bhavin Jawade"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yinghong Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haoqi Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用响度、内容丰富度和情感表达三组单变量受控操纵审计六个语音裁判，发现成对比较会系统性偏好更响更丰富更欢快语音而理由很少点名真正起作用的声学线索，人听校准显示部分偏好超出人类权重。",
+  "originalTitle": "Louder, Longer, Livelier: Acoustic Shortcuts and Underspecified Rationales in Speech LLM Judges",
+  "pdfUrl": "https://arxiv.org/pdf/2609.36979.pdf",
+  "readerTitle": "响亮未必优质：语音大模型裁判的声学捷径与空泛解释",
+  "schemaVersion": 1
+}

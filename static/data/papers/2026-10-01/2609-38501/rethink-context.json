@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38501v1",
+  "abstract": "Multi-user voice agents must track who said what across dialogue sessions. Text LLMs are attractive backbones for such agents, but transcripts alone do not expose acoustic speaker identity, leaving the model without a persistent reference for linking information to speakers across sessions. We address this gap by introducing Speaker Handles, soft-token representations that expose acoustic speaker identity to a frozen text LLM for cross-session speaker-dependent reasoning. A three-stage curriculum trains a lightweight projector, with fewer than 0.1% of the backbone's parameters, to map speaker embeddings into these handles. Establishing whether the resulting handles truly support cross-session speaker-dependent reasoning is challenging with existing benchmarks because textual cues can partially reveal fact ownership. We therefore present SpeakerBind, a controlled shared-agent benchmark in which overlapping facts across users require correct cross-session speaker attribution. Speaker Handles achieve 97.40-98.36% accuracy on VoxCeleb1 and 70.40% on SpeakerBind, close to the 71.88% topline. These results show that the proposed Speaker Handles provide an efficient way to integrate acoustic speaker identity into frozen text LLMs for speaker-content reasoning.",
+  "abstractSha256": "1754e0d7189262f95fefb3085d6123bcf994ad1960211c90747ec915f0bc0903",
+  "arxivId": "2609.38501",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38501v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "前缀微调",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.prefix-tuning",
+          "label": "前缀微调"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "前缀微调",
+      "primaryMethodId": "method.prefix-tuning",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runqiu Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhisheng Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多用户共享语音助手跨会话谁说了什么的问题，该研究用冻结说话人编码器加可训练轻量投影器生成说话人句柄输入冻结文本大模型，并在受控的 SpeakerBind 上以 70.40% 接近文本标签上限 71.88%，而破坏绑定后性能崩塌，代价是仍依赖转写级联与合成受控评测。",
+  "originalTitle": "Voices as Handles: Reasoning about Speaker Identity with Frozen Text LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38501v1.pdf",
+  "readerTitle": "不写文本人名，用声音把柄做跨会话归属：冻结大模型的说话人句柄",
+  "schemaVersion": 1
+}

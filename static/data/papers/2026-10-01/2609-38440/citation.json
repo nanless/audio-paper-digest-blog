@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38440v1",
+  "arxivId": "2609.38440",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38440v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lijun Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixian Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shogo Okada"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38440v1",
+  "originalTitle": "Monotonicity-Guided Semantic Alignment for Zero-shot Multispeaker Image-to-Speech Synthesis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38440v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

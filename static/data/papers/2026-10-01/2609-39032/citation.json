@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39032v1",
+  "arxivId": "2609.39032",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39032v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nahomi Kusunoki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tsubasa Ochiai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naoyuki Kamo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tetsuji Ogawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shoko Araki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39032v1",
+  "originalTitle": "How Reliable Are Predicted MOS for Reproducing Human System-Level Preferences in Speech Enhancement?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39032v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

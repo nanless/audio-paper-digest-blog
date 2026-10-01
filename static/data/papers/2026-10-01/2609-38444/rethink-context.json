@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38444v1",
+  "abstract": "Text- and image-conditioned world generators can create visually rich 3D environments, yet these worlds often remain silent or rely on soundtracks synthesized solely from text or rendered video. Although such audio can convey what should be heard, it lacks an explicit representation of where sound sources are located and how their perceived sound should vary with listener movement. We introduce Audible World Models, a training-free framework that incorporates sound into the generated world state. Starting from a text prompt, our system constructs a panoramic 3D proxy, separates it into semantic layers, identifies sound-producing foreground objects and ambient background regions, and synthesizes dry audio for each sound label. It then anchors these sources to reconstructed geometry and renders listener-dependent spatial audio using geometric acoustic propagation. By explicitly linking semantics, geometry, and sound propagation, the framework maintains persistent source locations while adapting the rendered audio to changes in listener viewpoint and motion. Experiments across 80 generated scenes demonstrate substantial gains in spatial consistency over text-, video-, and panorama-conditioned baselines, while preserving competitive semantic alignment. VLM-based assessments and human evaluations further indicate that our soundtracks are preferred for their audio-visual consistency, spatial plausibility, and motion-dependent behavior.",
+  "abstractSha256": "d2d9a232960f41cf65403ce0b13e32146b3a497313e0904c1ce0a23643c0ee75",
+  "arxivId": "2609.38444",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38444v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Duowen Chen"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Jinjin He"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Sandeep Bangalore Venkatesh"
+    },
+    {
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "name": "Bo Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "输入文本提示与听者轨迹，方法先建全景三维代理并发现声源再用几何声传播渲染双耳音频，在 80 个场景上以隔离源 6.91°方向误差和人类首选 79.5% 支持空间一致性，代价是离线多阶段流水线与静态几何假设。",
+  "originalTitle": "Audible World Models: Spatially Aware Sound Generation for 3D Worlds",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38444v1.pdf",
+  "readerTitle": "把声音放进世界状态：用全景代理与几何传播做听者相关的空间音频",
+  "schemaVersion": 1
+}

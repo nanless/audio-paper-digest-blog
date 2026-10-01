@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37910",
+  "arxivId": "2609.37910",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julien Boussard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mélisande Teng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sulagna Saha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mario Gallego-Abenza"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37910",
+  "originalTitle": "2-Dimensional spectral gating for denoising bioacoustics recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37910.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

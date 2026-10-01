@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39216v1",
+  "abstract": "Sound event localization and detection (SELD) aims to jointly recognize sound events and estimate their directions of arrival from multichannel audio. Although recent deep learning approaches have achieved strong performance, their ability to generalize across acoustic environments remains limited, as room reverberation introduces environment-specific characteristics into the learned representations. In this work, we address this challenge by leveraging a physical free-field model as a room-independent reference. Specifically, we propose PG-SELD, a training framework that combines free-field with physics-guided knowledge distillation. Our approach aligns intermediate representations extracted from reverberant signals with those produced by a free-field teacher for matched acoustic scenes. This guidance encourages the model to preserve event- and localization-relevant information while reducing sensitivity to room-specific characteristics. Experimental results on the STARSS23 benchmark show that PG-SELD consistently improves the generalization performance of multiple baseline SELD architectures.",
+  "abstractSha256": "de39f57a7f0d7d31eb8b6ccb53173d0f074977b9f78d3afdcbaad3bae5fbb4b3",
+  "arxivId": "2609.39216",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39216v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.seld",
+          "label": "联合声音事件检测定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.curriculum",
+          "label": "课程学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "联合声音事件检测定位",
+      "primaryTaskId": "task.seld",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Elad Dror Cohen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arnon Netzer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hai Victor Habi"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对混响导致跨房间泛化下降的问题，PG-SELD 用相同声场景的自由场表示作参照对混响分支做特征级蒸馏与课程训练，在 STARSS23 真实录音上报告了一致改善，但混响表数值因证据绑定不合格本文不复述具体指标值。",
+  "originalTitle": "PG-SELD: Physics-Guided Sound Event Localization and Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39216v1.pdf",
+  "readerTitle": "以自由场为参照系：PG-SELD 用配对蒸馏约束混响表示",
+  "schemaVersion": 1
+}

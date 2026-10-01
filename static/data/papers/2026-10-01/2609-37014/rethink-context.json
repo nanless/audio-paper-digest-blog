@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37014",
+  "abstract": "Automatic speaker verification must remain reliable across devices, rooms, and compression pipelines. We present ReDimNet2+, which scales training of the compact ReDimNet2 backbone across seven public corpora (63,934 speakers, about 8,675 hours). Analysis of a VoxBlink2 subset reveals a shift in predicted spectral coloration, motivating codec and waveform augmentation alongside this multi-corpus training, large-margin fine-tuning (LMFT), and graph-based retrieval reranking. With random 4-second evaluation windows for all models, ReDimNet2+ LMFT reduces pooled VoxCeleb1 EER from 2.42% to 0.82% and a 26-condition robustness stress-test EER from 7.21% to 1.99%. Under this shared local protocol, it reaches 0.35% EER on VoxCeleb1-O versus 0.787% for the best evaluated WeSpeaker checkpoint. On a VoxBlink2 retrieval subset, reranking improves the final model&#39;s Pr@k from 0.7413 to 0.7687.",
+  "abstractSha256": "3f87734ed118310defdeb117f9e17f87f7454b9a0d1bba87baa46c076a65087f",
+  "arxivId": "2609.37014",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "数据增强",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speaker-verification",
+          "label": "说话人验证"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "说话人验证",
+      "primaryTaskId": "task.speaker-verification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasilii Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文固定 ReDimNet2 骨干，用七语料约 63934 说话人加编解码与波形增强、分阶段适配加大间隔微调，把本地 4 秒窗下混合 VoxCeleb1 EER 从 2.42% 降到 0.824%、26 条件压力 EER 从 7.21% 降到 1.99%，再用图重排把检索 Pr@kk 推到 0.7687，但多因素同时变化使单因素因果无法分离。",
+  "originalTitle": "ReDimNet2+: Multi-Corpus Data Scaling for Robust Speaker Verification",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37014.pdf",
+  "readerTitle": "固定骨干不动，靠多语料与编解码增强把鲁棒性补起来：ReDimNet2+ 解读",
+  "schemaVersion": 1
+}

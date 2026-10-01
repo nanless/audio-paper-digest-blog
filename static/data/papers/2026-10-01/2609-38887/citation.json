@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38887v1",
+  "arxivId": "2609.38887",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38887v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mu-Ruei Tseng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Waris Quamer"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ghady Nasrallah"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ricardo Gutierrez-Osuna"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38887v1",
+  "originalTitle": "VOSSA: Voiceprint Optimization for Streaming Speech Architectures",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38887v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

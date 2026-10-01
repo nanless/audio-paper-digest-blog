@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38000",
+  "abstract": "Time delay estimation (TDE) is a fundamental component of microphone-array sound source localization. Generalized cross-correlation (GCC) is widely used because it is efficient and interpretable, but its handcrafted spectral matching and predefined frequency weighting are vulnerable to noise and reverberation. Existing neural GCC variants mainly improve robustness by enhancing input signals or modeling GCC responses, while the cross-channel spectral matching step itself remains handcrafted. We propose QK-GCC, a learnable GCC-like framework that replaces handcrafted weighted spectral matching in GCC with Query-Key matching between two microphone signals. The two microphone signals are encoded as magnitude-phase frequency tokens and mapped to Query and Key representations, respectively, enabling frequency reliability learning and local spectral evidence aggregation for delay estimation. Experiments in simulated reverberant rooms across diverse SNR and reverberation conditions show that QK-GCC improves TDE accuracy over GCC-PHAT and learning-based GCC variants, while remaining lightweight and generalizing to unseen source types. The code is available at this https URL.",
+  "abstractSha256": "c7c2c150b8b70124aab95c072c97d884cf6589fc861c437644883b49431c34f9",
+  "arxivId": "2609.38000",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声源定位",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinkai Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiye Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yue Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaotong Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinghao Ding"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对噪声与混响下固定频率加权和严格对位匹配不可靠的问题，QK-GCC 用双通道幅度相位频点表征的查询键局部匹配替代手工匹配，并在仿真混响与变信噪比条件下报告了优于 GCC-PHAT 与神经 GCC 变体的帧级精度，同时保持轻量双通道算子结构。",
+  "originalTitle": "QK-GCC: Learnable Query-Key Spectral Matching for Robust Time Delay Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38000.pdf",
+  "readerTitle": "把固定加权互谱换成可学习的查询键局部匹配：QK-GCC 的时延估计路径",
+  "schemaVersion": 1
+}

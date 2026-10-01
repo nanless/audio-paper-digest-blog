@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39162v1",
+  "arxivId": "2609.39162",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39162v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Yehoshua Dissen"
+    },
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Joseph Keshet"
+    },
+    {
+      "affiliations": [
+        "Linguana Technion – Israel Institute of Technology Equal contribution"
+      ],
+      "name": "Eduard Golshtein"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39162v1",
+  "originalTitle": "Training-Free Affinity Fusion of Neural and Embedding-Based Speaker Diarization",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39162v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

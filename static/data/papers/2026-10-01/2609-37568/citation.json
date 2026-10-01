@@ -1,0 +1,52 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37568",
+  "arxivId": "2609.37568",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China",
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pingrui Zhang"
+    },
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China"
+      ],
+      "name": "Xuefeng Bai"
+    },
+    {
+      "affiliations": [
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Yang Xiang"
+    },
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China",
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Kehai Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37568",
+  "originalTitle": "Devils in Question Relay: Source-Conditioned Relay Steering to Mitigate Hallucinations in Audio-visual Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37568.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

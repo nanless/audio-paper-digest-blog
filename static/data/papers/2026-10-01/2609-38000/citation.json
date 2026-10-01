@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38000",
+  "arxivId": "2609.38000",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinkai Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weiye Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yue Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaotong Tu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinghao Ding"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38000",
+  "originalTitle": "QK-GCC: Learnable Query-Key Spectral Matching for Robust Time Delay Estimation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38000.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38232v1",
+  "arxivId": "2609.38232",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38232v1",
+  "authors": [
+    {
+      "affiliations": [
+        "National Research Council Canada"
+      ],
+      "name": "Mengzhe Geng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38232v1",
+  "originalTitle": "When Does a Spoken Agent Have Enough Evidence to Act? The PACT-SLM Contract Test",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38232v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

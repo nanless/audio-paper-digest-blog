@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39032v1",
+  "abstract": "We investigate whether predicted Mean Opinion Scores (MOS) can reliably support system-level comparisons of speech enhancement (SE) methods by introducing system-level preference accuracy (SPA). Although MOS prediction models are widely used to evaluate SE systems, their performance is typically assessed by correlation with human-rated MOS, which does not guarantee agreement on which system is better. SPA addresses this gap by directly evaluating whether predicted and human-rated MOS yield the same system preferences. Using SPA, we systematically evaluate three settings: single prediction models, ensembling, and domain adaptation. Through experiments, SPA varies substantially across single prediction models, from 9.4% to 76.8%. Even the best model disagrees with human judgments in approximately 23% of system comparisons. Ensembling yields only limited improvement, while domain adaptation tends to substantially improve SPA in the closed condition but brings only modest gains in the more practical open condition, where neither the target systems nor the speakers are known. These results suggest that SPA can reveal errors correlation-based evaluation alone does not expose, and that predicted MOS alone can lead to unreliable conclusions in practical SE system comparison.",
+  "abstractSha256": "1196a74a5c2cf6aec1d546433a7d46ad55990ff12357e7c1d8dbdd823a715185",
+  "arxivId": "2609.39032",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39032v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nahomi Kusunoki"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tsubasa Ochiai"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naohiro Tawara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Naoyuki Kamo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tetsuji Ogawa"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shoko Araki"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文引入系统级偏好准确率检验预测 MOS 能否复现人评的系统两两优劣，发现在两个增强任务上单模型最高仅 76.8%，集成与领域自适应也只在限定条件下改善，说明相关系数高不等于比选可靠。",
+  "originalTitle": "How Reliable Are Predicted MOS for Reproducing Human System-Level Preferences in Speech Enhancement?",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39032v1.pdf",
+  "readerTitle": "预测 MOS 能替人评比出哪个增强系统更好吗：用系统级偏好一致率检验",
+  "schemaVersion": 1
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39044v1",
+  "abstract": "Creating sound effects for a new game-character skin requires a distinct acoustic identity while preserving gameplay-event roles. The challenge is to complete a coherent set of related sounds whose required degrees of redesign differ. We formulate this task as completion conditioned on base-skin audio, completed target assets, and a textual design description. We develop a pipeline to collect, process, and align corresponding events across League of Legends skins. Building on Stable Audio 3's pretrained audio prior, we fine-tune a latent inpainting model to jointly complete missing events. A signed soft retention mask encodes available audio and an adjustable transformation hint for each missing event, specifying the requested balance between retention and redesign. Experiments on held-out skins show improved reconstruction over the evaluated general-purpose audio editors. Target-derived hints further improve paired similarity, with three-level hints retaining most of the benefit of continuous guidance.",
+  "abstractSha256": "c1be003cce8b1c1cb7da8e7121e4fc9ceab333652eec08b78f6682bca7d92894",
+  "arxivId": "2609.39044",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39044v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "application",
+          "id": "application.games",
+          "label": "游戏音频"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinrui Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heng Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对新皮肤多事件音效补齐问题，论文用全量基础音频加已完成目标前缀与逐事件变换提示做潜在修复，在保持可运行基线对比下报告了重建误差下降与提示有效性，同时保留了对预言提示与时长先验的明确限制。",
+  "originalTitle": "Game Sound-Effect Completion with Event-Level Transformation Hints",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39044v1.pdf",
+  "readerTitle": "新皮肤要换声又不能换错事件：用保留掩码补齐整套游戏音效",
+  "schemaVersion": 1
+}

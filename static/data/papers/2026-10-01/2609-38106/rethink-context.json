@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38106",
+  "abstract": "Speech-LLMs are expensive to run, making compression important for real-world deployment. However, compressed models are usually selected using aggregate word error rate (WER), which can hide how pruning affects different demographic groups. In this work, we systematically study the effect of audio encoder pruning on SLAM-ASR for different demographic groups. Using the Fair-Speech and Common Voice datasets, we found that the pruning does not affect all demographic groups equally; the gap between best- and worst-performing groups increases in fold. These disparities appear across all three encoder scales, but only the largest model initially hides them behind aggregate WER. LoRA adaptation improves WER for every group, but benefits groups already performing well more strongly and widens for certain groups. On Common Voice English, Danish, and Dutch, accent gaps persist but do not clearly widen, showing that the fairness effects of pruning vary across datasets and must be measured directly. Our findings suggest that for pruned models, deployment decisions should include per-group WER, with the worst-performing group&#39;s error rate as an explicit criterion.",
+  "abstractSha256": "05ea3d24a9e37160b71d7c58e125c921b43df1ba8143d213bfd0bce6164a1f75",
+  "arxivId": "2609.38106",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.fairness",
+          "label": "公平性"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Ganesh Pavan Kartikeya Bharadwaj Kolluri"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Michael Kampouridis"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex, UK"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在 SLAM-ASR 管线上做音频编码器自顶向下剪枝并在每层重训投影器，发现 Whisper Large 剪 2 层时聚合词错率从 21.6% 降到 21.1% 却让 Black 组上升 0.9 个百分点，到剪 8 层时 Black 与 Asian 差距从 13.5 扩大到 24.5 个百分点，而 LoRA 虽降低各组误差却让优势组获益更多。",
+  "originalTitle": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38106.pdf",
+  "readerTitle": "剪掉两层误差反而降了：被平均数藏起来的口音与族裔差距",
+  "schemaVersion": 1
+}

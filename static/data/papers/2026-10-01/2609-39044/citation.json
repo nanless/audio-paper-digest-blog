@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39044v1",
+  "arxivId": "2609.39044",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.39044v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xinrui Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heng Yu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39044v1",
+  "originalTitle": "Game Sound-Effect Completion with Event-Level Transformation Hints",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39044v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

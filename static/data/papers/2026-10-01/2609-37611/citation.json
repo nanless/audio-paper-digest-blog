@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37611",
+  "arxivId": "2609.37611",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yichen Jia"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bastiaan Tamm"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hugo Van hamme"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37611",
+  "originalTitle": "Selective Lookahead for Attention-Based Streaming ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37611.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

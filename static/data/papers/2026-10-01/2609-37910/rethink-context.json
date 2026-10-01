@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37910",
+  "abstract": "Isolating vocalizations from noise in bioacoustics recordings is a prerequisite to many ecological analyses, including species identification, animal communication understanding, and individual or population-level variability studies. However, when recordings are acquired in open environments, vocalizations, noise, or signal-to-noise ratio can vary widely across individuals, species, environment, and recording conditions, making it hard to develop robust and generalizable methods for ecological analyses. To account for these challenges, noise reduction techniques are used to remove noise before downstream analyses. Popular methods such as Noisereduce rely on spectral gating, which estimates a noise threshold for each frequency channel. We propose a further improvement to Noisereduce, leveraging the fact that most animal sounds have structure across multiple frequencies. We apply our method on bird and marine mammals recordings and show that our extension of Noisereduce leads to improved denoising in both above and under water acoustic recordings, without impacting speed of preprocessing.",
+  "abstractSha256": "69723384565ab184737e975ab2a2065f2dcb31c9307a7fba99af41e13317eb80",
+  "arxivId": "2609.37910",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频修复",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.environmental",
+          "label": "环境声"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Julien Boussard"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mélisande Teng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sulagna Saha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mario Gallego-Abenza"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对野外录音中噪声与信噪比多变导致逐频谱门控易漏信号的问题，论文提出先对语谱图做二维高斯局部平均再门控的 2D-SG，并在 70 段椴鸟合成噪声与抹香鲸、斑姬鹟实录上验证去噪与信号保留的改进，代价是多出一个高斯窗超参数且低信噪比与下游任务增益待验证。",
+  "originalTitle": "2-Dimensional spectral gating for denoising bioacoustics recordings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37910.pdf",
+  "readerTitle": "跨频结构才留门：二维谱门控如何在逐频阈值上补一层局部平均",
+  "schemaVersion": 1
+}

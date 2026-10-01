@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37586",
+  "abstract": "Continual audio deepfake detection requires learning newly emerging deepfake methods while retaining discrimination of previously encountered speech. Existing dataset-incremental evaluation changes both real-speech domains and deepfake mechanisms, making their effects difficult to distinguish. We construct five task organizations over identical training, development, and evaluation pools to study these factors under a controlled sample budget. Our proposed Real-Anchored Mechanism-Incremental (RAMI) protocol reflects the practical setting in which available real speech provides a recurring mixed-domain reference while new deepfake mechanisms arrive incrementally. We further propose RF-Prompt, an asymmetric continual prompt-learning method that preserves reusable real-speech knowledge through a shared real prompt and expands mechanism-specific knowledge through inherited fake experts with orthogonal residuals. Input-adaptive soft fusion combines the accumulated experts into a fixed number of injected tokens without requiring task identity at inference. On RAMI, RF-Prompt achieves 10.110% average EER and 10.370% pooled EER, outperforming all evaluated continual-learning baselines. Across the five controlled protocols, RAMI yields the lowest common-average and pooled EER. Component ablations, limited-data experiments, and cross-backbone evaluations further validate the proposed design.",
+  "abstractSha256": "5a5e14bb666a76b01cb35ef98a3cd66eca8b176b1044f940e9b07ade5632c205",
+  "arxivId": "2609.37586",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuankun Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaoxuan Guo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaopeng Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Siqing Qin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shaole Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kong Aik Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对新伪造机制不断出现而真实语音来源已知的更新场景，论文提出按生成机制组织任务的 RAMI 协议与非对称提示方法 RF-Prompt，在 RAMI 上取得 10.110% 平均 EER 与 10.370% 混合 EER，但离线联合训练仍更优且部分机制上基线更低。",
+  "originalTitle": "Learning as Deepfakes Evolve: RF-Prompt for Continual Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37586.pdf",
+  "readerTitle": "真话常在而假法常新：用共享真提示与扩张假专家做持续音频伪造检测",
+  "schemaVersion": 1
+}

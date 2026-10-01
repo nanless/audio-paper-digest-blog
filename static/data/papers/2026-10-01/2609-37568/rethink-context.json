@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37568",
+  "abstract": "Audio-visual large language models (AVLLMs) have made remarkable progress in multimodal understanding and reasoning through interactions among visual, auditory, and linguistic information. However, recent studies show that AVLLMs face a critical challenge: $\\textbf{source-confused grounding hallucination}$, where cues from the unused modality induce responses that the required modality does not support, undermining reliability in real-world applications. Existing methods have made progress in mitigating this failure, yet how it arises from internal cross-modal interactions remains insufficiently understood. To address this gap, we conduct path-intervention and representation analyses, revealing a $\\textbf{question-relay}$ mechanism: question states carry interfering cues alongside required-source evidence, undermining grounding in required-modality evidence. Cutting pathways from interfering modality to question states yields greater correct-answer logit recovery than cutting those to the generation position. Motivated by these findings, we propose $\\textbf{SECRET}$ ($\\textbf{S}$ourc$\\textbf{E}$-$\\textbf{C}$onditioned $\\textbf{RE}$lay s$\\textbf{T}$eering), a training-free method that mitigates cross-modal interference at the question relay. Using contrasting question representations elicited through different modality-pathway interventions, SECRET steers the original question states toward required-source evidence. Experiments on two widely adopted benchmarks CMM and AVHBench across three AVLLMs show that SECRET consistently outperforms prior training-free methods, substantially mitigating source-confused grounding hallucinations (e.g., up to +18.0 and +7.1 percentage points over base models). Modality-specific captioning further demonstrates its generalizability to open-ended generation.",
+  "abstractSha256": "cb73556b77d625ea5d57a62dc73f0c2b8cef6c8c16b098665e265936134de184",
+  "arxivId": "2609.37568",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China",
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Yu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pingrui Zhang"
+    },
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China"
+      ],
+      "name": "Xuefeng Bai"
+    },
+    {
+      "affiliations": [
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Pengfei Zhang"
+    },
+    {
+      "affiliations": [
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Yang Xiang"
+    },
+    {
+      "affiliations": [
+        "Harbin Institute of Technology, Shenzhen, China",
+        "Peng Cheng Laboratory, Shenzhen, China"
+      ],
+      "name": "Kehai Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对来源混淆的视听幻觉，提出在问题状态上做来源条件转向的免训练方法 Secret，最强证据是在 CMM 和 AVHBench 上最高带来 18.0 和 7.1 个百分点的平均准确率提升，代价是需要多分支前向与逐模型选择转向层。",
+  "originalTitle": "Devils in Question Relay: Source-Conditioned Relay Steering to Mitigate Hallucinations in Audio-visual Large Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37568.pdf",
+  "readerTitle": "问题在中转：音视频大模型为何答错了证据来源",
+  "schemaVersion": 1
+}

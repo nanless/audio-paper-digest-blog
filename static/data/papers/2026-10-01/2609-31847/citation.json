@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.31847",
+  "arxivId": "2609.31847",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Yanlin Li"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Mingyang Hao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Shengqiong Wu"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Hao Fei"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Mong-Li Lee"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore University of Oxford"
+      ],
+      "name": "Wynne Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.31847",
+  "originalTitle": "Omni-IO Skills: Harnessing Your Agent Omni-Native",
+  "pdfUrl": "https://arxiv.org/pdf/2609.31847.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

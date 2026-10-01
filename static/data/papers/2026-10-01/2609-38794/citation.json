@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38794v1",
+  "arxivId": "2609.38794",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38794v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Feng Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gaoyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shanshan Xue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yixiang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanrui Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xurong Xie"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hui Chen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38794v1",
+  "originalTitle": "A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38794v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

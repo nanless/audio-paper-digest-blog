@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38491v1",
+  "arxivId": "2609.38491",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38491v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joseph T Colonel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Katzman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kelsey Kirker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam N Davidson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shalaila S Haas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheryl Corcoran"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "René S Kahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guillermo Checci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Baihan Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38491v1",
+  "originalTitle": "Role-guided Speaker Deletion Verification in Clinical Psychiatry Speech Recordings with Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38491v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38897v1",
+  "arxivId": "2609.38897",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38897v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Shivam Saini"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Eric Bezzam"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Georg Götz"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Alessia Milo"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Steinar Guðjónsson"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Konstantinos Gkanos"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Finnur Pind"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Daniel Gert Nielsen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38897v1",
+  "originalTitle": "FFASR: Benchmarking Far-Field Automatic Speech Recognition using High-Fidelity Simulated RIRs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38897v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37601",
+  "arxivId": "2609.37601",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Jisoo Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Seonghak Lee"
+    },
+    {
+      "affiliations": [
+        "University of Birmingham, United Kingdom"
+      ],
+      "name": "Hyojin Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, South Korea"
+      ],
+      "name": "Junseok Kwon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37601",
+  "originalTitle": "SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37601.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

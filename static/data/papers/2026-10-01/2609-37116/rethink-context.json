@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37116",
+  "abstract": "Accurate perceptual quality assessment is essential for evaluating and optimizing spatial audio, where perceived quality depends on both signal fidelity and inter-channel spatial relationships. However, subjective evaluation is costly, while existing perceptual models are often trained for limited channel configurations and cannot be directly applied to higher-channel-count audio. This raises the question: how can pretrained perceptual knowledge be effectively reused for multichannel spatial audio? Using 5.1-channel audio, we study four levels of multichannel integration: signal, prediction, latent, and feature and propose two learned approaches: latent-level aggregation of spatial-group representations and the feature-level Feature-Band Group Attention (FGAtt), which adaptively fuses spatial groups at the feature level before perceptual processing. Across five 5.1-channel test sets, FGAtt achieves the strongest over- all performance, demonstrating the effectiveness of feature-level adaptation for reusing pretrained perceptual knowledge",
+  "abstractSha256": "2a8918e27b6801ee29b40341e22192ca067b6eaf37f735f6f123a41cbc6b3d98",
+  "arxivId": "2609.37116",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gouthaman KV"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shiv Gehlot"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vishnu Raj"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lars Villemoes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arijit Biswas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "为把只支持至多双声道的 GMLv2 扩展到 5.1 声道，论文比较信号、预测、隐变量、特征四层融合，提出特征带组注意力 FGAtt 在感知主干前自适应融合空间组，在五个 5.1 测试集上总体 PCC/SCC 达 0.9063/0.8303，代价是需 5.1 主观数据训练轻量融合模块且冻结主干。",
+  "originalTitle": "Multichannel Audio Quality Assessment: Extending Pretrained Perceptual Models to Spatial Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37116.pdf",
+  "readerTitle": "把双声道听感搬到 5.1 声道：在哪个环节融合多声道信息",
+  "schemaVersion": 1
+}

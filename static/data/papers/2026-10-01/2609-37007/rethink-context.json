@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37007",
+  "abstract": "Autoregressive decoding (AR) with Transformer models is memory bandwidth bound at single stream inference, the typical deployment regime for on device text to speech (TTS). Real time streaming with Qwen3-TTS requires more than 200 sequential model calls per second, dominated by the inner loop MultiCodeDecoder that emits the 15 residual vector quantization (RVQ) codes per 80 ms audio frame. We propose RVQ position aware speculative decoding for the MultiCodeDecoder, attaining 2.47 accepted tokens per model call at $5\\times10^{-4}$ percent added parameters and 10 to 20 percent per round speculation/verification overhead, reducing real time synthesis from 200 to 88 sequential model calls per second. The scheme is distributionally lossless under the deployed top-k sampling, and WER parity with the original system is consistent with this guarantee. We deliver 2 to 2.2x speedup for RVQ token generation with Qwen3-TTS 0.6B on recent iPhone and Apple Silicon Mac devices.",
+  "abstractSha256": "fb8e90f44a5de393503ec694bc54c8f6df1503428c9c52bfdfec91d6c3521789",
+  "arxivId": "2609.37007",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Berkin Durmus"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eduardo Pacheco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zach Nagengast"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Atila Orhon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 Qwen3-TTS 内层 MultiCodeDecoder 每帧 15 次自回归调用的主导延迟，论文复用冻结的逐位置 LM 头并只训练 3 个残差偏移向量做草稿加稀疏树验证，在保持 top-k 采样分布无损下实现约 2.47 个 token 每次调用和 2-2.2 倍实测加速，代价是每次验证调用查询长度增大带来的 10-20% 额外开销。",
+  "originalTitle": "RVQ Position Aware Speculative Decoding for On Device Text to Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37007.pdf",
+  "readerTitle": "内层循环才是瓶颈：用三千参数偏移量把 RVQ 逐码解码并行化",
+  "schemaVersion": 1
+}

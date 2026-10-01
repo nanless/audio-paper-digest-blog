@@ -1,0 +1,114 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38491v1",
+  "abstract": "Clinical research in psychiatry increasingly relies on large scale collection of spoken language data to identify acoustic and linguistic biomarkers. Yet evolving consent and protocol requirements can oblige investigators to remove a designated speaker from multi-speaker recordings and to verify said removal at a scale infeasible for manual review of entire corpora. We study this verification problem for role-driven dyadic clinical dialogue in psychiatry and investigate it with two parallel, symmetric pipelines: confirming that clinician speech has been removed from psychiatric interview recordings, and confirming that patient speech has been removed from the same recordings. Each pipeline redacts the raw audio for its target role and then scans the surviving output with audio-language and large-language models to identify missed deletions. We evaluate this approach on a corpus of 48 dyadic recordings drawn from psychiatry settings, testing four open-weight models in an inference-only setting: Gemma-4-12B, Gemma-4-31B, Nemotron-3-Nano, and Nemotron-3-Nano-Omni. A disjunctive OR ensemble over fourteen model-view configurations had a combined F1 of 0.478 (precision 0.330, recall 0.870), an improvement over individual model estimates driven by recall gains that point to substantial complementarity across models and context views.",
+  "abstractSha256": "e499b7fd3333a1214ab17a16f4a747f8aea8778a94d7e99f8a02cc5f940fcbec",
+  "arxivId": "2609.38491",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38491v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "音频时间定位",
+      "primaryTaskId": "task.temporal-grounding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joseph T Colonel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Katzman"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kelsey Kirker"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Adam N Davidson"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shalaila S Haas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cheryl Corcoran"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "René S Kahn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guillermo Checci"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Baihan Lin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文研究精神科双人对话中按角色删除一方语音后的漏删核验问题，用四种开源权重模型在推理模式下扫描删减后音频与转写文本，最强证据是 14 个转写引导配置的或集成达到合并 F1 0.478，代价是精度仅 0.330 而召回 0.870。",
+  "originalTitle": "Role-guided Speaker Deletion Verification in Clinical Psychiatry Speech Recordings with Audio Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38491v1.pdf",
+  "readerTitle": "删掉了还要再查一遍：用音频语言模型核验精神科对话中指定角色是否删干净",
+  "schemaVersion": 1
+}

@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.35820",
+  "arxivId": "2609.35820",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Soham Ray"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Edgard dos Santos Paiva"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruben Valenzuela"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Karthik Narasimhan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keshav Dhandhania"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Victor Barres"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.35820",
+  "originalTitle": "$τ$-Multilingual: Benchmarking Voice Agents Across Languages",
+  "pdfUrl": "https://arxiv.org/pdf/2609.35820.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

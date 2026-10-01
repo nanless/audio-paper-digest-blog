@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38501v1",
+  "arxivId": "2609.38501",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38501v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runqiu Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhisheng Zheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Harwath"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38501v1",
+  "originalTitle": "Voices as Handles: Reasoning about Speaker Identity with Frozen Text LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38501v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

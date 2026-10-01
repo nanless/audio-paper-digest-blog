@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38157",
+  "abstract": "Emotion-conditioned text-to-speech (TTS) models may fail to express the requested emotion reliably, and improving controllability by additional training is costly in both computation and emotion-labeled speech training data. We therefore study vector steering, a training-free approach that modifies the internal representations of a frozen model. CoCoEmo, a conventional vector steering method for emotion TTS, treats each emotion vector as an indivisible direction controlled by a single global strength, limiting adherence to the requested emotion. In this work, we first discover that an emotion vector can be decomposed into a shared component that moves speech away from neutral expression and a residual component that directs generation toward the requested emotion. Building on this finding, we propose Emotion Residual-Enhanced Steering for TTS (EmoRES), a novel method that controls the two components without retraining the backbone. On IEMOCAP, EmoRES outperforms CoCoEmo across all four objective emotion metrics on the IndexTTS-2 and CosyVoice2 backbones. Rank correlation improves by 26.13 and 12.97 percentage points, corresponding to relative gains of 118.8% and 33.1%, while emotion hit rate improves by 12.95 and 6.92 points, corresponding to relative gains of 20.1% and 9.8%. Human evaluation further shows a relative improvement up to 35.0% in the rate at which listeners correctly identified the dominant requested emotion and up to a 17.3% improvement in fidelity, while listeners prefer EmoRES for naturalness in up to 63.8% of pairwise comparisons. Component ablations further demonstrate that effective control benefits from preserving the shared component while strengthening the residual of the emotion steering vectors.",
+  "abstractSha256": "efa1406722759ab4f79cef3a830eaea1356e593a3a652c97111a061e0ad5be62",
+  "arxivId": "2609.38157",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.test-time-adaptation",
+          "label": "测试时自适应"
+        },
+        {
+          "facet": "task",
+          "id": "task.prosody-style-control",
+          "label": "韵律与风格控制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "测试时自适应",
+      "primaryMethodId": "method.test-time-adaptation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Reality Labs at Meta",
+        "National Taiwan University"
+      ],
+      "name": "Kuan-Po Huang"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Haohe Liu"
+    },
+    {
+      "affiliations": [
+        "FAIR at Meta"
+      ],
+      "name": "Puyuan Peng"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Haibin Wu"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Zhaoheng Ni"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University"
+      ],
+      "name": "Hung-yi Lee"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Jinwon Lee"
+    },
+    {
+      "affiliations": [
+        "Reality Labs at Meta"
+      ],
+      "name": "Neha Chachra"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对冻结语音语言模型上情绪条件弱、单强度整体放缩难以兼顾离中性与指情绪的问题，论文提出免训练的共享分量与残差分量独立加权方法 EmoRES，在 IEMOCAP 混合情绪上把排序相关与首位命中率大幅提高，代价是仍需离线构造情绪向量库并依赖所选层与强度设置。",
+  "originalTitle": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38157.pdf",
+  "readerTitle": "把一条情绪向量拆成两段：先离开中性，再指向具体情绪",
+  "schemaVersion": 1
+}

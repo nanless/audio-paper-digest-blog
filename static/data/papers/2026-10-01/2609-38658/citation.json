@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38658v1",
+  "arxivId": "2609.38658",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38658v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Jian Chen"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "Dolby Laboratories"
+      ],
+      "name": "Mark Vinton"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38658v1",
+  "originalTitle": "Tacit-TTS: From Autoregressive Decoding to Masked Prediction for Efficient Transcript-Free Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38658v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

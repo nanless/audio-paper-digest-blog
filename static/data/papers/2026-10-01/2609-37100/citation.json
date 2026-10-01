@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37100",
+  "arxivId": "2609.37100",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yulin Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kele Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Dou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.37100",
+  "originalTitle": "Prediction-Layer Branch Calibration for Multimodal Sentiment Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37100.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

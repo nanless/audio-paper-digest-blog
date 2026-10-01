@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.37100",
+  "abstract": "Multimodal sentiment analysis integrates textual, acoustic and visual cues, yet current language-model-based fusion methods typically leave prediction-layer branch allocation implicit. We introduce Branch-Calibrated Multimodal Language Fusion (BC-MLF), which explicitly models prediction-layer branch allocation through a Branch-Calibrated Task Head (BCHead), complemented by Fusion Token Contrastive Learning (FTCL) for sentiment-aware fusion-token regularization. FTCL organizes mean-pooled fusion-token representations according to continuous sentiment affinity, while BCHead combines fusion, text and audiovisual predictions through a lightweight sample-adaptive constrained mixture. Without modifying the fusion backbone, BC-MLF consistently improves the reproduced DeepMLF baseline and achieves the strongest results among the compared methods on CMU-MOSEI and CH-SIMS across classification and regression metrics. The controlled ablations show that sample-adaptive prediction-layer branch allocation consistently outperforms static branch aggregation. Code is available at this https URL.",
+  "abstractSha256": "5202b8dbd964976f1e29c5f85a1a1a188592444c4fbc7471864159b6a52ee54d",
+  "arxivId": "2609.37100",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yulin Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kele Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yong Dou"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对预测层分支分配隐式的问题，BC-MLF 用 BCHead 做样本自适应最小约束混合、用 FTCL 按连续情感亲和整理融合表征，在 CMU-MOSEI 与 CH-SIMS 上超过复现的 DeepMLF 基线，代价是增加约 0.1M 量级的门控参数与训练期对比正则。",
+  "originalTitle": "Prediction-Layer Branch Calibration for Multimodal Sentiment Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2609.37100.pdf",
+  "readerTitle": "决策层才分配分支：用约束混合与情感亲和正则补上融合的最后一环",
+  "schemaVersion": 1
+}

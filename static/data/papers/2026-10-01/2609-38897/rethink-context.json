@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38897v1",
+  "abstract": "Far-field automatic speech recognition(ASR) degrades under reverberation, noise, and talker motion, yet the benchmarks that drive model selection emphasize close-microphone speech. We present FFASR, a held-out corpus of 15,637 utterances and an open leaderboard spanning nine conditions, each varying a single acoustic factor: anechoic near-field speech, a measured-versus-simulated office-lab pair, static far-field mixtures at high/mid/low signal-to-noise ratio(SNR), and moving-talker variants at matched SNR. Dry speech from 15 talkers is convolved with hybrid wave/geometrical-acoustics room impulse responses from 14 furnished rooms; because the speech is newly recorded and the test waveforms are never released, the corpus resists training-data contamination. Across contemporary systems, mean word error rate (WER) rises from 4.4% near-field to 41.3% in the static low-SNR condition; a moving talker adds a small but consistent penalty at matched SNR; and on the office-lab pair, measured and simulated WER agree to within about 1.7 pp on average. These results support high-fidelity simulation as a scalable proxy for measured far-field evaluation under the conditions we test.",
+  "abstractSha256": "d60855484de4a18591ba73a1b0af60f4d4f2d9be15b805e7cefb4aa636942090",
+  "arxivId": "2609.38897",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2609.38897v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Shivam Saini"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Eric Bezzam"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Georg Götz"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Alessia Milo"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Steinar Guðjónsson"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Konstantinos Gkanos"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Finnur Pind"
+    },
+    {
+      "affiliations": [
+        "Treble Technologies, Reykjavík, Iceland"
+      ],
+      "name": "Daniel Gert Nielsen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对近场榜单掩盖远场失效的问题，论文用新录消声语音与混合波形几何声学房间脉冲响应构造九条件不公开音频评测，报告平均词错率从近场 4.4% 升至静态低信噪比 41.3%、走动在匹配信噪比下增加约 1.3 至 2.7 个百分点、实测与仿真办公室误差平均约 1.7 个百分点，代价是单通道朗读英语与单点实测锚定限制了推广范围。",
+  "originalTitle": "FFASR: Benchmarking Far-Field Automatic Speech Recognition using High-Fidelity Simulated RIRs",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38897v1.pdf",
+  "readerTitle": "近场满分远场露馅：用混合波形仿真把混响噪声和走动一次只变一项来考验识别",
+  "schemaVersion": 1
+}
