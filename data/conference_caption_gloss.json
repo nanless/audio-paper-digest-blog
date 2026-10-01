@@ -12,6 +12,26 @@
         "sourceArtifactSha256": "d60d809d41b55281c1c83fcc0a72c60c74deaa3b4f4b67a0e469bdaf6bf9c769",
         "officialSourceUrl": "https://www.isca-archive.org/interspeech_2026/du26b_interspeech.pdf",
         "officialImageUrl": "https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-2.png"
+      },
+      "missingCaptionRepair": {
+        "contract": "source-bound-missing-conference-caption-presentation-v1",
+        "figureOrdinal": 5,
+        "renderedCaptionHTML": "<p><em>论文图 5。原论文 Figure 5：“5”。</em></p>",
+        "originalImageHTML": "<p><a href=\"https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-5.png\"><img alt=\"原论文 Figure 5：5\" loading=\"lazy\" src=\"https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-5.png\"></a></p>",
+        "sourceEvidence": {
+          "paperId": "conference:interspeech:2026:conference-paper-id:du26b_interspeech",
+          "figureOrdinal": 5,
+          "sourcePDFSha256": "67c58b91be09c07ad91a6ede4ccf9010d076f4ad38671e9325d9bce26b518d8c",
+          "sourceArtifactSha256": "d60d809d41b55281c1c83fcc0a72c60c74deaa3b4f4b67a0e469bdaf6bf9c769",
+          "sealedArtifactCaption": "Figure 5:",
+          "sealedArtifactCaptionSha256": "6fe8aee3ea441d2d1ec3370f714dd70eec304fa91694df7a07e1c1d5bdeba224",
+          "officialSourceUrl": "https://www.isca-archive.org/interspeech_2026/du26b_interspeech.pdf",
+          "officialImageUrl": "https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-5.png",
+          "officialImageSha256": "6f5c9617dbc1a31b85b4011d09891c7455c44fe9eb41110a4d8d0fb34b11f428",
+          "sourcePDFPage": 4,
+          "completeCaptionText": "Figure 5: MDS with Praat f₀ and duration, adding (top) HNR05 and (bottom) HNR05 + H₁* − H₂*.",
+          "completeCaptionTextSha256": "f3ffb1eac0b99e1a62d93abc0fe5bccf6facea8ac427305fdeb788544ba9f148"
+        }
       }
     }
   }

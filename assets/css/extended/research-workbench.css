@@ -104,6 +104,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .research-main .post-content td, .research-main .post-content th { min-width: 100px; }
 .research-main .post-content a { overflow-wrap: anywhere; }
 .research-main .post-content :is(pre, .highlight, mjx-container[display="true"]) { max-width: 100%; overflow-x: auto; }
+@media (max-width: 600px) {
+  /* Long inline equations can exceed a list item's width. Scroll the complete
+     equation instead of widening the page; padding keeps tall math ink visible. */
+  .research-main .post-content mjx-container:not([display="true"]) {
+    display: inline-block; max-width: 100%; overflow-x: auto; padding-block: .6em; vertical-align: middle;
+  }
+}
 .research-main .post-content img { background: #f7f8fa; border: 1px solid var(--rw-border); border-radius: var(--rw-radius-md); padding: 6px; }
 .workbench-toc, .research-signal-rail { position: sticky; top: 82px; }
 .research-workbench .workbench-toc .toc { background: var(--rw-surface) !important; border: 1px solid var(--rw-border) !important; border-radius: var(--rw-radius-md) !important; font-size: .82rem !important; inset: auto !important; margin: 0 !important; max-height: calc(100vh - 110px) !important; overflow: auto !important; padding: 0 !important; position: static !important; width: auto !important; }

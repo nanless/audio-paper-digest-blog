@@ -1,0 +1,66 @@
+{{- /* Exact legacy occurrence presentation only: no original image has been recovered.
+      Never identify papers by an image token: one aggregate can reuse it for many papers. */ -}}
+{{- $content := .content -}}
+{{- $page := .page -}}
+{{- $policy := hugo.Data.missing_image_presentations | default dict -}}
+{{- if eq $policy.contract "source-bound-missing-image-presentation-v1" -}}
+  {{- with $page.File -}}
+    {{- $path := .Path -}}
+    {{- with index ($policy.pages | default dict) $path -}}
+      {{- $rule := . -}}
+      {{- $images := findRE `<img\s[^>]*>` $content -}}
+      {{- if and (eq .rawContentSha256 (crypto.SHA256 $page.RawContent)) (eq .committedFileSha256 (crypto.SHA256 (readFile (printf "content/%s" $path)))) (eq .contentSha256 (crypto.SHA256 $content)) (eq (printf "%T" .imageCount) "float64") (eq (printf "%v" .imageCount) (printf "%v" (len $images))) -}}
+        {{- $occurrences := dict -}}
+        {{- range .occurrences -}}
+          {{- $occurrences = merge $occurrences (dict (printf "%v" .imageOrdinal) .) -}}
+        {{- end -}}
+        {{- $remaining := $content -}}{{- $result := "" -}}{{- $originalPrefix := "" -}}
+        {{- range $ordinal, $image := $images -}}
+          {{- $parts := split $remaining $image -}}
+          {{- $before := index $parts 0 -}}
+          {{- $originalPrefix = printf "%s%s" $originalPrefix $before -}}
+          {{- $remaining = strings.TrimPrefix (printf "%s%s" $before $image) $remaining -}}
+          {{- $display := $image -}}
+          {{- with index $occurrences (printf "%v" $ordinal) -}}
+            {{- $record := . -}}
+            {{- $safeDestination := gt (len (findRE `^(pdf-image-page[0-9]+-idx[0-9]+|placeholder_for_fig[0-9]+\.jpg|%E6%AD%A4%E5%A4%84%E6%97%A0%E5%9B%BE%E7%89%87)$` .destination 1)) 0 -}}
+            {{- $expectedImage := printf "<img alt=%q loading=\"lazy\" src=%q>" .alt .destination -}}
+            {{- if and $safeDestination (eq .originalImageHTML $image) (eq .originalImageSha256 (crypto.SHA256 $image)) (eq $expectedImage $image) (in (slice "missing-original-image" "declared-no-image") .disposition) -}}
+              {{- $message := "原图未保存，本文目前无法展示这幅原图。" -}}
+              {{- if eq .disposition "declared-no-image" }}{{ $message = "原导读未收录图像。" }}{{ end -}}
+              {{- $notice := printf `<span class="image-unavailable-notice" role="note"><strong>%s</strong> <span class="image-original-description">原导读图像描述：%s</span>` $message (.alt | transform.HTMLEscape) -}}
+              {{- with .source -}}
+                {{- $sourceRule := . -}}
+                {{- with $page.Site.GetPage .pagePath -}}
+                  {{- $sourcePage := . -}}
+                  {{- $citation := partial "citation_source.html" . -}}
+                  {{- $sourceContextValid := and $sourcePage.File (eq $sourcePage.File.Path $path) (eq $sourceRule.headingHTML "") -}}
+                  {{- $paperHeadings := slice -}}
+                  {{- range findRE `(?s)<h3\b[^>]*>.*?</h3>` $originalPrefix -}}
+                    {{- if findRE `href="/audio-paper-digest-blog/posts/[^"<>]+"` . 1 }}{{ $paperHeadings = $paperHeadings | append . }}{{ end -}}
+                  {{- end -}}
+                  {{- with $paperHeadings -}}
+                    {{- $heading := index . (sub (len .) 1) -}}
+                    {{- $targetHref := printf `href="%s"` (strings.TrimSuffix "/" $sourcePage.RelPermalink) -}}
+                    {{- $sourceContextValid = and (eq $heading $sourceRule.headingHTML) (or (in $heading $targetHref) (in $heading (printf `href="%s"` $sourcePage.RelPermalink))) -}}
+                  {{- end -}}
+                  {{- if and $sourceContextValid $sourcePage.File $citation.verified (eq $citation.pageType "paper") (eq $sourceRule.identityStatus "verified") (eq $sourceRule.committedFileSha256 (crypto.SHA256 (readFile (printf "content/%s" $sourcePage.File.Path)))) (eq $sourceRule.rawContentSha256 (crypto.SHA256 $sourcePage.RawContent)) (eq $sourceRule.paperId $citation.paperId) (eq $sourceRule.sourceUrl $citation.sourceUrl) (eq $sourceRule.pdfUrl $citation.pdfUrl) -}}
+                    {{- $url := $citation.sourceUrl -}}{{- $label := "查看官方论文页" -}}
+                    {{- with $citation.pdfUrl }}{{ $url = . }}{{ $label = "查看官方原论文 PDF" }}{{ end -}}
+                    {{- if findRE `^https://[^\s<>"\\]+$` $url 1 -}}
+                      {{- $display = printf `%s <a href="%s">%s</a></span>` $notice ($url | transform.HTMLEscape) $label -}}
+                    {{- end -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- $result = printf "%s%s%s" $result $before $display -}}
+          {{- $originalPrefix = printf "%s%s" $originalPrefix $image -}}
+        {{- end -}}
+        {{- $content = printf "%s%s" $result $remaining -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $content -}}

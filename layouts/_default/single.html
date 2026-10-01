@@ -72,7 +72,8 @@
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
       {{- if .Content }}
-      {{- $articleContent := replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" .Content }}
+      {{- $articleContent := partial "missing_image_presentations.html" (dict "page" . "content" .Content) }}
+      {{- $articleContent = replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" $articleContent }}
       {{- $articleContent = partial "resource_verification_notice.html" (dict "page" . "content" $articleContent) }}
       {{- $articleContent = partial "conference_caption_gloss.html" (dict "page" . "content" $articleContent) }}
       <div class="post-content md-content research-article" id="article-body" tabindex="-1">

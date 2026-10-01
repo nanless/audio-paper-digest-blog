@@ -1,0 +1,2605 @@
+{
+  "contract": "source-bound-missing-image-presentation-v1",
+  "pages": {
+    "posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond.md": {
+      "committedFileSha256": "249df70c38c27703a13b1c7060447681b3ba132f4836f2304cc7d8e8a5763fd8",
+      "rawContentSha256": "d7fb1b7cc791a015beed5cda4cc6ec2e389679348b460232f3ce0bc63d96d3b4",
+      "contentSha256": "99d16c63ec60b1ac074959b8c6871f95fa3aa9598f5b21e69b61a8bd7be3a306",
+      "imageCount": 2,
+      "occurrences": [
+        {
+          "imageOrdinal": 1,
+          "destination": "%E6%AD%A4%E5%A4%84%E6%97%A0%E5%9B%BE%E7%89%87",
+          "originalImageHTML": "<img alt=\"论文未提供实验结果相关图表的URL，因此不插入图片。\" loading=\"lazy\" src=\"%E6%AD%A4%E5%A4%84%E6%97%A0%E5%9B%BE%E7%89%87\">",
+          "originalImageSha256": "ba44934a78181927ef3ab09827a0ccad4f5a9529f1009e6792f7807bedb5fdb8",
+          "alt": "论文未提供实验结果相关图表的URL，因此不插入图片。",
+          "source": {
+            "pagePath": "posts/2026-04-29-sp-mcqa-evaluating-intelligibility-of-tts-beyond.md",
+            "committedFileSha256": "249df70c38c27703a13b1c7060447681b3ba132f4836f2304cc7d8e8a5763fd8",
+            "rawContentSha256": "d7fb1b7cc791a015beed5cda4cc6ec2e389679348b460232f3ce0bc63d96d3b4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464956",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464956",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": ""
+          },
+          "disposition": "declared-no-image"
+        }
+      ]
+    },
+    "posts/2026-05-08-predictive-generative-drift-decomposition-for.md": {
+      "committedFileSha256": "6a8bf005047504af9a3eed16a2d292ffa63dd1d9971c1a00eb05cc60129e6fda",
+      "rawContentSha256": "3b7a7834a0db1379a6352580de34f766165a991cebf13d6880db3fcadef31faa",
+      "contentSha256": "622191e994fc87ba47bde0b421e61f0b532c11dde49b586fbdb04b9e2dc0fb2e",
+      "imageCount": 3,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "placeholder_for_fig3.jpg",
+          "originalImageHTML": "<img alt=\"图 3: 在匹配和失配验证集上，语音增强性能随 κ 的变化。\" loading=\"lazy\" src=\"placeholder_for_fig3.jpg\">",
+          "originalImageSha256": "c9cd29d3caac8eeff324da26ae277ade6d96a1724c873e080149873903826e5b",
+          "alt": "图 3: 在匹配和失配验证集上，语音增强性能随 κ 的变化。",
+          "source": {
+            "pagePath": "posts/2026-05-08-predictive-generative-drift-decomposition-for.md",
+            "committedFileSha256": "6a8bf005047504af9a3eed16a2d292ffa63dd1d9971c1a00eb05cc60129e6fda",
+            "rawContentSha256": "3b7a7834a0db1379a6352580de34f766165a991cebf13d6880db3fcadef31faa",
+            "paperId": "arxiv:2605.06189",
+            "sourceUrl": "https://arxiv.org/abs/2605.06189",
+            "pdfUrl": "https://arxiv.org/pdf/2605.06189.pdf",
+            "identityStatus": "verified",
+            "headingHTML": ""
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "placeholder_for_fig4.jpg",
+          "originalImageHTML": "<img alt=\"图 4: WHAMR! 数据集上 FlexIO 结合生成先验前后的 SI-SDR 和 UTMOS。对角线表示性能相等。\" loading=\"lazy\" src=\"placeholder_for_fig4.jpg\">",
+          "originalImageSha256": "548121f0528bed43fd19b85d27320e60fe2cb42fe9a45029f2f156b03001e69f",
+          "alt": "图 4: WHAMR! 数据集上 FlexIO 结合生成先验前后的 SI-SDR 和 UTMOS。对角线表示性能相等。",
+          "source": {
+            "pagePath": "posts/2026-05-08-predictive-generative-drift-decomposition-for.md",
+            "committedFileSha256": "6a8bf005047504af9a3eed16a2d292ffa63dd1d9971c1a00eb05cc60129e6fda",
+            "rawContentSha256": "3b7a7834a0db1379a6352580de34f766165a991cebf13d6880db3fcadef31faa",
+            "paperId": "arxiv:2605.06189",
+            "sourceUrl": "https://arxiv.org/abs/2605.06189",
+            "pdfUrl": "https://arxiv.org/pdf/2605.06189.pdf",
+            "identityStatus": "verified",
+            "headingHTML": ""
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "placeholder_for_fig6.jpg",
+          "originalImageHTML": "<img alt=\"图 6: 在匹配和失配验证集上，语音增强性能随采样步数 N 的变化。\" loading=\"lazy\" src=\"placeholder_for_fig6.jpg\">",
+          "originalImageSha256": "a60c9f1e2ab291d3433d83410dcfa7d5137423e43a5095255261459957050297",
+          "alt": "图 6: 在匹配和失配验证集上，语音增强性能随采样步数 N 的变化。",
+          "source": {
+            "pagePath": "posts/2026-05-08-predictive-generative-drift-decomposition-for.md",
+            "committedFileSha256": "6a8bf005047504af9a3eed16a2d292ffa63dd1d9971c1a00eb05cc60129e6fda",
+            "rawContentSha256": "3b7a7834a0db1379a6352580de34f766165a991cebf13d6880db3fcadef31faa",
+            "paperId": "arxiv:2605.06189",
+            "sourceUrl": "https://arxiv.org/abs/2605.06189",
+            "pdfUrl": "https://arxiv.org/pdf/2605.06189.pdf",
+            "identityStatus": "verified",
+            "headingHTML": ""
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-summary.md": {
+      "committedFileSha256": "4254cbc8d4adbae3040d450a0b470dec5a2e20cfe41bf9369db5c542122c88c3",
+      "rawContentSha256": "bb4a7ef7e6256dbcd6b308a4bb4e285706656e0d73012935a129bb97dc6fff52",
+      "contentSha256": "a391ab00cf077b16a44231db22ffdbdbf7484687fdfea9a0ece95fd0bb91e9e5",
+      "imageCount": 74,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: ICSF Workflow with DOMA\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "a34b418879236471a9cf0c18922249bcf4edafee21d8596b627c0a9d85b6d081",
+          "alt": "图1: ICSF Workflow with DOMA",
+          "source": {
+            "pagePath": "posts/2026-04-29-doma-leveraging-diffusion-language-models-with.md",
+            "committedFileSha256": "4220eb498ea042307960471e1a38a818d244ff8fbbb96c34007d81105a28515b",
+            "rawContentSha256": "e28cc978fef3946aa611c4534bc25f216e4b76a6a76fe9985630109997eb6736",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462605",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462605",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"17-doma-leveraging-diffusion-language-models-with-adaptive-prior-for-intent-classification-and-slot-filling\">17. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-doma-leveraging-diffusion-language-models-with\">DOMA: Leveraging Diffusion Language Models with Adaptive Prior for Intent Classification and Slot Filling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: Mel频谱图对比\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "2529e8642fbb397e2688add1c8655582548307e647d0317dbadd529219ca400a",
+          "alt": "图3: Mel频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse.md",
+            "committedFileSha256": "ce425fbb4383ddd299d460bcc7b6ebbed3cf07e87321a8cc2c500a4da696affb",
+            "rawContentSha256": "39d79740c898708752b0eb65f04f2f42e545591890fc94deafde3e131db5f39a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460918",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460918",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"23-switchcodec-adaptive-residual-expert-sparse-quantization-for-high-fidelity-neural-audio-coding\">23. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse\">SwitchCodec: Adaptive Residual-Expert Sparse Quantization for High-Fidelity Neural Audio Coding</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：UA-3DTalk整体框架\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "832b03505d5f8fc9717f8e27eda7442258d7c23f48a14e8352838cf91dde7b84",
+          "alt": "图1：UA-3DTalk整体框架",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"97-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">97. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2：基于不确定性的变形模块\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "4350eb37a5b9c568ce390d0f17f3e4989b59a8d56e9ecfb471f80192a0f85d0b",
+          "alt": "图2：基于不确定性的变形模块",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"97-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">97. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：定性对比结果\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "bcf59053dcdd439513c4ecec92b14413553fd18a26ff83d3bed4ea13f0d1186b",
+          "alt": "图3：定性对比结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"97-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">97. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 7,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"t-SNE特征可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "d4ec110139c41fe0d70898dd0225efeb61c1824ab56fccd64ecc403b478f29b1",
+          "alt": "t-SNE特征可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic.md",
+            "committedFileSha256": "6e59dd0086dfcf0b47ceb645d0527923e0984ccecf58e610b548e1fdbdb3846e",
+            "rawContentSha256": "8245d3fea5679fe8a42c00d67798471808712fd075a4b6f53fe4876f7a756850",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463476",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463476",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"114-usvexplorer-robust-detection-of-ultrasonic-vocalizations-with-cross-species-generalization\">114. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic\">USVexplorer: Robust Detection of Ultrasonic Vocalizations with Cross Species Generalization</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 8,
+          "destination": "pdf-image-page4-idx3",
+          "originalImageHTML": "<img alt=\"图4：频谱图对比\" loading=\"lazy\" src=\"pdf-image-page4-idx3\">",
+          "originalImageSha256": "6601ee022517502368b8182420fbd96f0aabd52249669de462d019faf6a3579e",
+          "alt": "图4：频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for.md",
+            "committedFileSha256": "77a3e1689b25a788946d5117ccb4a386ebca97a4f471ba3cf0199b841b541a21",
+            "rawContentSha256": "d16fbd0c07713593241d3942d32829b50103baf62cdc0f86810b7400ee422c29",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463670",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463670",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"118-mixgan-based-non-blind-bandwidth-extension-for-audio-codec\">118. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for\">MixGAN-based Non-blind Bandwidth Extension for Audio Codec</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 9,
+          "destination": "pdf-image-page3-idx3",
+          "originalImageHTML": "<img alt=\"图4：频谱图对比\" loading=\"lazy\" src=\"pdf-image-page3-idx3\">",
+          "originalImageSha256": "6534243d9cb9852cba7fff6097b47ba5fd348e777739f53be003defbb147cd6a",
+          "alt": "图4：频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model.md",
+            "committedFileSha256": "6d0797d0c2431ada5fb9008ccd2318025c234d09dd6b0800ab5950d7856677ef",
+            "rawContentSha256": "98eb1ecf5663967931fc551f1c2ca29a8806f1ca703a29776b723ca1ca53a8dc",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462711",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462711",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"124-mmaudiosep-taming-video-to-audio-generative-model-towards-videotext-queried-sound-separation\">124. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model\">MMAudioSep: Taming Video-to-Audio Generative Model Towards Video/Text-Queried Sound Separation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 10,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: PAD权重分布热力图\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "b91c1ad595caf55ae475fa32940f7fa9a1f6f3796612e50c176b547da42e8624",
+          "alt": "图2: PAD权重分布热力图",
+          "source": {
+            "pagePath": "posts/2026-04-29-cross-architecture-knowledge-distillation-of.md",
+            "committedFileSha256": "31fabcd04cca83aa2112c497f6ad28064da45177f07728add2c8370cba916d2c",
+            "rawContentSha256": "8da4dff38b8434300ef69492207728a3bd95492ded00535f9e7aa73aeda1b9f1",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462644",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462644",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"150-cross-architecture-knowledge-distillation-of-wavlm-for-lightweight-speaker-verification\">150. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of\">Cross-Architecture Knowledge Distillation of WavLM for Lightweight Speaker Verification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 11,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"图2: pdf-image-page2-idx1\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "dfb3e22ea22ad3a5613d4ec94bd9039e9c6d77b771b3c36c9330bbda4d701021",
+          "alt": "图2: pdf-image-page2-idx1",
+          "source": {
+            "pagePath": "posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct.md",
+            "committedFileSha256": "6def2c13a8a24e8c545a19da75f59b99ad3cd481983f8d3f6db9a74dbc3d4699",
+            "rawContentSha256": "0f92b072b5b1880d0c3ad4a7f1ad90a2995864a310a385698232d781ac1daff4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464784",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464784",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"152-ov-instructtts-towards-open-vocabulary-instruct-text-to-speech\">152. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct\">OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-to-Speech</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 12,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "c002c8feda3e08c885babab0ac9586e8874b9ee9d7ac14b89b965014d2ddf5c3",
+          "alt": "架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech.md",
+            "committedFileSha256": "e1ba0aee8d09a3c01ca2657ec97cea78658255e411cd6e5f880e167b009d22ea",
+            "rawContentSha256": "e5e073b7322988004d381728d6cd8397e5ab410e5ca861ca2915f04801546478",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463968",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463968",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"197-archi-tts-a-flow-matching-based-text-to-speech-model-with-self-supervised-semantic-aligner-and-accelerated-inference\">197. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech\">ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 13,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"推理效率图\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "e620e7387f6088ea8939b8e0e1b4624e309c48c41cac2cb5d2612245c3694606",
+          "alt": "推理效率图",
+          "source": {
+            "pagePath": "posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech.md",
+            "committedFileSha256": "e1ba0aee8d09a3c01ca2657ec97cea78658255e411cd6e5f880e167b009d22ea",
+            "rawContentSha256": "e5e073b7322988004d381728d6cd8397e5ab410e5ca861ca2915f04801546478",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463968",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463968",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"197-archi-tts-a-flow-matching-based-text-to-speech-model-with-self-supervised-semantic-aligner-and-accelerated-inference\">197. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech\">ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 14,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"图2: 不同模型生成的心音波形定性比较\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "6cd159b2d85878f3c2261167f8a61aad78ef6d9430954b4dbe107e9701d00c14",
+          "alt": "图2: 不同模型生成的心音波形定性比较",
+          "source": {
+            "pagePath": "posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound.md",
+            "committedFileSha256": "fdfa70a1351decbfddda427949376114555f22c25a6048b068e1c32b3281a3c7",
+            "rawContentSha256": "cfec138c2fee9d63c5d0bfba05c02949eb4cc206a0e36562ade22b4c8c141454",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460614",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460614",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"244-cardiobridge-dm-bridging-cross-cohort-heart-sound-synthesis-via-rhythm-aware-semi-supervised-diffusion\">244. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound\">Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 15,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: 模型对引导尺度s和调制因子α的敏感性分析\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "bec13e27ba9b8a000ba132e7704e3731ad26a928ac03eaab48ccd7f28d2e9202",
+          "alt": "图3: 模型对引导尺度s和调制因子α的敏感性分析",
+          "source": {
+            "pagePath": "posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound.md",
+            "committedFileSha256": "fdfa70a1351decbfddda427949376114555f22c25a6048b068e1c32b3281a3c7",
+            "rawContentSha256": "cfec138c2fee9d63c5d0bfba05c02949eb4cc206a0e36562ade22b4c8c141454",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460614",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460614",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"244-cardiobridge-dm-bridging-cross-cohort-heart-sound-synthesis-via-rhythm-aware-semi-supervised-diffusion\">244. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound\">Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 16,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：VAIR方法整体框架图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "4a4d115fe704e65e9d821a3aa0e77c977e4eb3d26f2c14aa88facdbbb47eb630",
+          "alt": "图1：VAIR方法整体框架图",
+          "source": {
+            "pagePath": "posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation.md",
+            "committedFileSha256": "c6e0e843b853c117df69e8776a4aa94c131b3f3ae48dd4e2f00b80057fd9e7fa",
+            "rawContentSha256": "7be192c8b2575da8f4c3d20f5faee3879e421ecae2793cebb0c9a4ffbda78053",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462855",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462855",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"277-adversarial-fine-tuning-on-speech-foundation-model-with-vulnerable-attention-consistency-regularization-for-robust-speech-recognition\">277. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation\">Adversarial Fine-Tuning on Speech Foundation Model with Vulnerable Attention Consistency Regularization for Robust Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 17,
+          "destination": "pdf-image-page1-idx2",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page1-idx2\">",
+          "originalImageSha256": "35723dfa0a63b37f1c4b77fbc84b8a44bd0dfb4558b404d822d778e6c85cf41a",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-multi-task-transformer-for-explainable-speech.md",
+            "committedFileSha256": "37dacd111347debedc0ef923273c313c7670911ee817a506f070e28fb74b9ad3",
+            "rawContentSha256": "fb18a4b25325b8423427476caf49e15a3b81c80656e6971f032a171579c4f5d5",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462684",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462684",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"286-multi-task-transformer-for-explainable-speech-deepfake-detection-via-formant-modeling\">286. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech\">Multi-Task Transformer for Explainable Speech Deepfake Detection via Formant Modeling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 18,
+          "destination": "pdf-image-page4-idx4",
+          "originalImageHTML": "<img alt=\"图5: FAD vs. 训练时间\" loading=\"lazy\" src=\"pdf-image-page4-idx4\">",
+          "originalImageSha256": "5a65c27098038ce9761519fc5cabf320670292209c404d3d717b35599b1772bd",
+          "alt": "图5: FAD vs. 训练时间",
+          "source": {
+            "pagePath": "posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient.md",
+            "committedFileSha256": "ad5dddde298ee3916738bbc0bb797cc844dba7878bab4a6c5f822d0548871628",
+            "rawContentSha256": "fb2d0040fe7dff25aee9c66bb3f9eee8e24408c127790bf7b9f61bbd42e1650e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461505",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461505",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"331-compression-meets-sampling-lz78-spa-for-efficient-symbolic-music-generation\">331. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient\">Compression meets Sampling: LZ78-SPA for Efficient Symbolic Music Generation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 19,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：双讲场景下的结果可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "58e4b700bdfe2c8003bb6ffbf9726957f5bfa459a460b7bea740b941c8a3d6cf",
+          "alt": "图2：双讲场景下的结果可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo.md",
+            "committedFileSha256": "cf828bde19538e7060241d9c087cbe34161807fcdf71166b84f2752a4cfe26a8",
+            "rawContentSha256": "880426f6eb118c5b4470e2e44c1ff31cd59a4ebee69e983e35e482962eea074d",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462409",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462409",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"340-spatialnet-echo-real-time-acoustic-echo-cancellation-via-integrated-narrow-band-and-cross-band-processing\">340. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo\">SpatialNet-Echo: Real-Time Acoustic Echo Cancellation via Integrated Narrow-Band and Cross-Band Processing</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 20,
+          "destination": "pdf-image-page1-idx4",
+          "originalImageHTML": "<img alt=\"检测准确率对比\" loading=\"lazy\" src=\"pdf-image-page1-idx4\">",
+          "originalImageSha256": "0640c998af465ba3928daf63ef86cab546f398518fe37725fdb76cf37c1c1692",
+          "alt": "检测准确率对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide.md",
+            "committedFileSha256": "013a1584d962c6db649e73e1030ea170ff9a892122fa48d736ac131638b71439",
+            "rawContentSha256": "4dc31f1a1d804cd18e197a446e57c1dce003bf040fa6aac30b6b0a6b7e88cbc0",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462291",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462291",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"343-speaker-anonymisation-for-speech-based-suicide-risk-detection\">343. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide\">Speaker Anonymisation for Speech-Based Suicide Risk Detection</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 21,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: AMS-D训练流程\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "243c2912ae234bed864981f8c9885e62095c26b1c5c3c5a7bf5afbf71389b027",
+          "alt": "图1: AMS-D训练流程",
+          "source": {
+            "pagePath": "posts/2026-04-29-attentive-masked-self-distillation-for.md",
+            "committedFileSha256": "fc46ac1d87932696b3d5526bc078cc6d09621d573165d671aa0f8c06b3a76ff7",
+            "rawContentSha256": "ad3636837fedb07152878e9e7de46dbb654378a6140bbb3b1543230d04800171",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463787",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463787",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"346-attentive-masked-self-distillation-for-respiratory-sound-classification\">346. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for\">Attentive Masked Self-Distillation for Respiratory Sound Classification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 22,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2: 掩码策略可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "72fbfc39b9fe2f49649c18f8e48a111380664012e4d77758de3f03b2be170a99",
+          "alt": "图2: 掩码策略可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-attentive-masked-self-distillation-for.md",
+            "committedFileSha256": "fc46ac1d87932696b3d5526bc078cc6d09621d573165d671aa0f8c06b3a76ff7",
+            "rawContentSha256": "ad3636837fedb07152878e9e7de46dbb654378a6140bbb3b1543230d04800171",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463787",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463787",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"346-attentive-masked-self-distillation-for-respiratory-sound-classification\">346. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for\">Attentive Masked Self-Distillation for Respiratory Sound Classification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 23,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: 总体相似度（左）和语义7点MOS（右）主观评估结果。显示使用LM损失训练的模型在语义性能上显著优于其他模型。\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "f24b11947b0e1227aa2546e705ec152dfb38c7e0c0af54f657c2458820c71dd8",
+          "alt": "图3: 总体相似度（左）和语义7点MOS（右）主观评估结果。显示使用LM损失训练的模型在语义性能上显著优于其他模型。",
+          "source": {
+            "pagePath": "posts/2026-04-29-from-hallucination-to-articulation-language-model.md",
+            "committedFileSha256": "fd69ae93fd0fd7efd0059c093df4efd3b722d81771ba2878885d62023d3c63e0",
+            "rawContentSha256": "bce01f4ed399a4dc8c92a01b58aca80c40f40f8f99cc64f4bd62ced7d0b772b2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462750",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462750",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"377-from-hallucination-to-articulation-language-model-driven-losses-for-ultra-low-bitrate-neural-speech-coding\">377. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model\">From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 26,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: pdf-image-page1-idx0\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "8ad928c6304b3ef943586b8347c0f6ea9be31513ec105f18921847b16b2f3965",
+          "alt": "图1: pdf-image-page1-idx0",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"392-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">392. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 27,
+          "destination": "pdf-image-page1-idx1",
+          "originalImageHTML": "<img alt=\"图2: pdf-image-page1-idx1\" loading=\"lazy\" src=\"pdf-image-page1-idx1\">",
+          "originalImageSha256": "7ec81e98dc1ef4fa31e837f1988f54e87adc3854ae3f1544494e944fa3e4277d",
+          "alt": "图2: pdf-image-page1-idx1",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"392-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">392. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 28,
+          "destination": "pdf-image-page1-idx2",
+          "originalImageHTML": "<img alt=\"图3: pdf-image-page1-idx2\" loading=\"lazy\" src=\"pdf-image-page1-idx2\">",
+          "originalImageSha256": "99691b59f7ab7146f0e1f7f5a65ab10b35b1743da8ee656a6a27c54fc3183706",
+          "alt": "图3: pdf-image-page1-idx2",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"392-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">392. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 29,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: LLAC总体架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "305bbcbce623ac9ea4f517ec60c4674c824e21260eef4a4c360f5529ca892987",
+          "alt": "图1: LLAC总体架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-llac-learned-lossless-audio-codec.md",
+            "committedFileSha256": "b929315e40e5d81c606e023173f6773cb969ef226113e9dac4cf5d1114f60028",
+            "rawContentSha256": "4b59a105312fa41fa1274d821cd37263a84fe069c0ed354af479240d040046eb",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465090",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465090",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"413-llac-learned-lossless-audio-codec\">413. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec\">LLAC: Learned Lossless Audio Codec</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 30,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：不同输入时长下基线模型的平均EER变化趋势\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "64449eec5654ac0b363a67c9d87e3f4e7de8b578a42be11bb16045b7dc4b5a32",
+          "alt": "图2：不同输入时长下基线模型的平均EER变化趋势",
+          "source": {
+            "pagePath": "posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi.md",
+            "committedFileSha256": "c55e6b5731cb94f07590e468d82c09500ebb01bb02fba05d94f84a8aa581a307",
+            "rawContentSha256": "8a143d6db9d130d595449132e4654a336f610f5e7c7e96439a017da400410497",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463587",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463587",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"415-audio-deepfake-detection-at-the-first-greeting\">415. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi\">Audio Deepfake Detection at the First Greeting: &ldquo;Hi!&rdquo;</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 31,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：效率对比雷达图\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "40a80cba05ddccfb83eb8023bdb5ef6c2565687f8b080b62bfcce080b97b8bfd",
+          "alt": "图3：效率对比雷达图",
+          "source": {
+            "pagePath": "posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi.md",
+            "committedFileSha256": "c55e6b5731cb94f07590e468d82c09500ebb01bb02fba05d94f84a8aa581a307",
+            "rawContentSha256": "8a143d6db9d130d595449132e4654a336f610f5e7c7e96439a017da400410497",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463587",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463587",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"415-audio-deepfake-detection-at-the-first-greeting\">415. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi\">Audio Deepfake Detection at the First Greeting: &ldquo;Hi!&rdquo;</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 34,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：Game-Time基准得分\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "374423cef9b25cf8d1214c5b85204059fcc03a758c811af4b8ee43ffe45a3902",
+          "alt": "图3：Game-Time基准得分",
+          "source": {
+            "pagePath": "posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken.md",
+            "committedFileSha256": "1bb1d9ce5c0bccab1de8a2467152031769c8bd1c0f01f9cbd412e8128b58b85b",
+            "rawContentSha256": "98f535c754fb11639c896038ac77486ee665bb85802f9e5a57779303dff7425a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464000",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464000",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"449-game-time-evaluating-temporal-dynamics-in-spoken-language-models\">449. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken\">Game-Time: Evaluating Temporal Dynamics in Spoken Language Models</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 36,
+          "destination": "pdf-image-page2-idx3",
+          "originalImageHTML": "<img alt=\"图4描述：在CS非独立同分布场景下，pFedMARL、Ditto、FedAvg和本地训练的平均验证准确率（上图）、服务器F1准确率（中图）以及平均动作值（下图）随通信轮数的变化曲线。\" loading=\"lazy\" src=\"pdf-image-page2-idx3\">",
+          "originalImageSha256": "4259e8b064876bec2716304e1252496430378107d4643d2a281d4f4796ccadc7",
+          "alt": "图4描述：在CS非独立同分布场景下，pFedMARL、Ditto、FedAvg和本地训练的平均验证准确率（上图）、服务器F1准确率（中图）以及平均动作值（下图）随通信轮数的变化曲线。",
+          "source": {
+            "pagePath": "posts/2026-04-29-cooperative-multi-agent-reinforcement-learning.md",
+            "committedFileSha256": "6638f93c9ce391117c7bd06ba242acad1de38a4469a99599ba474aa707fbb2e6",
+            "rawContentSha256": "1052e16fda6ba6ae52cd132ef45349f7a3b2f36c15f14eb5deb537c7632a92d3",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462172",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462172",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"551-cooperative-multi-agent-reinforcement-learning-for-adaptive-aggregation-in-semi-supervised-federated-learning-with-non-iid-data\">551. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning\">Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 37,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3：与现有方法在HDTF和VFHQ数据集上的定性对比\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "44b7cc2a16dd35edc543ac536828ad5fb74ad34a2f81ead824610ad03254394c",
+          "alt": "图3：与现有方法在HDTF和VFHQ数据集上的定性对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-rap-real-time-audio-driven-portrait-animation.md",
+            "committedFileSha256": "42428a4fefd9dd6afd1e9e6d9306d2d2b192dd2d582c92beb69cfc797d266457",
+            "rawContentSha256": "349fe135334c3361409b517fa9e964dd9464beb7224ed4f7be8910be0c7d958e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461916",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461916",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"557-rap-real-time-audio-driven-portrait-animation-with-video-diffusion-transformer\">557. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation\">RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 38,
+          "destination": "pdf-image-page2-idx3",
+          "originalImageHTML": "<img alt=\"图4：时间一致性与视觉漂移对比\" loading=\"lazy\" src=\"pdf-image-page2-idx3\">",
+          "originalImageSha256": "38919c96b9134c7f32355ad46fa89adf0175cf8be6649c8c8654e6ae836a0769",
+          "alt": "图4：时间一致性与视觉漂移对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-rap-real-time-audio-driven-portrait-animation.md",
+            "committedFileSha256": "42428a4fefd9dd6afd1e9e6d9306d2d2b192dd2d582c92beb69cfc797d266457",
+            "rawContentSha256": "349fe135334c3361409b517fa9e964dd9464beb7224ed4f7be8910be0c7d958e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461916",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461916",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"557-rap-real-time-audio-driven-portrait-animation-with-video-diffusion-transformer\">557. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation\">RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 40,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1描述\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "63cdfe29bf3afab1dcbe4b05fe5d214e54278397a86a6f8aca19855cb148b4ef",
+          "alt": "图1描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical.md",
+            "committedFileSha256": "ec19a224b9dfc502f6defc9fcf299971b4b16d401328813f56e2d2ca8f870346",
+            "rawContentSha256": "9883872d7f2a9a19e8d21fa378a8d374bebb8322cf7f4849d529cdc84cfd1345",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460487",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460487",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"560-rmodgdf-a-robust-stft-derived-feature-for-musical-instrument-recognition\">560. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical\">RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 41,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2描述\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "4508cb0082b5b80d86282146a571de4089caeb9eb11d6362d999af77e6b2697d",
+          "alt": "图2描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical.md",
+            "committedFileSha256": "ec19a224b9dfc502f6defc9fcf299971b4b16d401328813f56e2d2ca8f870346",
+            "rawContentSha256": "9883872d7f2a9a19e8d21fa378a8d374bebb8322cf7f4849d529cdc84cfd1345",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460487",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460487",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"560-rmodgdf-a-robust-stft-derived-feature-for-musical-instrument-recognition\">560. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical\">RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 42,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "6da48a81cf289419f68f725b2c67793a0000a547b67cf8d802676e53ab0ae013",
+          "alt": "图1",
+          "source": {
+            "pagePath": "posts/2026-04-29-the-synergistic-role-of-audio-and-large-video.md",
+            "committedFileSha256": "cf0cb666f694ebd8de31920e3ceff594275d3ca311a994c46c49baf4aa3f6b08",
+            "rawContentSha256": "66d5210446c35631c42933b4803e131561027eaab4b364af773205f6650af3c7",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462310",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462310",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"586-the-synergistic-role-of-audio-and-large-video-language-model-in-source-free-video-domain-adaptation\">586. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video\">The Synergistic Role of Audio and Large Video-Language Model in Source-Free Video Domain Adaptation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 43,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"RGL架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "e56b742fdc3d569bc63efb0e0f1bf16aa7627b86e9fca39d05a43c6c06d7d978",
+          "alt": "RGL架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion.md",
+            "committedFileSha256": "aafb0a077c0bf546924cc4eb7379d027728876b0880a4a116ac688d040d6c823",
+            "rawContentSha256": "bd9c5044c0365ab39429bbeba74aadef822922de44e21e757fbb3f9543dabf87",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464500",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464500",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"598-rationale-guided-learning-for-multimodal-emotion-recognition\">598. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion\">Rationale-Guided Learning for Multimodal Emotion Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 44,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"推理检索示例\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "8177db9219084cff11e4a8290a79dde31d9586f14f2de8cf6b7daeb07ef225d7",
+          "alt": "推理检索示例",
+          "source": {
+            "pagePath": "posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion.md",
+            "committedFileSha256": "aafb0a077c0bf546924cc4eb7379d027728876b0880a4a116ac688d040d6c823",
+            "rawContentSha256": "bd9c5044c0365ab39429bbeba74aadef822922de44e21e757fbb3f9543dabf87",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464500",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464500",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"598-rationale-guided-learning-for-multimodal-emotion-recognition\">598. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion\">Rationale-Guided Learning for Multimodal Emotion Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 45,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：每集字幕片段数量分布\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "841014960425aaa0f2fdfea2645a246577a43e732d6717406c12d3f355986264",
+          "alt": "图2：每集字幕片段数量分布",
+          "source": {
+            "pagePath": "posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle.md",
+            "committedFileSha256": "277e644a69e01d9f640c3d19e1dd17871639f78f044e2623746668c5ac40a1f7",
+            "rawContentSha256": "ea05cb1ab4524d40f67781ede09cfe5ad06991030f1cc954a299df00271c6500",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464228",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464228",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"605-an-end-to-end-multimodal-system-for-subtitle-recognition-and-chinese-japanese-translation-in-short-dramas\">605. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle\">An End-to-End Multimodal System for Subtitle Recognition and Chinese-Japanese Translation in Short Dramas</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 47,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：论文模型架构总览\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "5074171564e89829cdfc7d4cd35a2addc947b7b5d690192e014355cc9b4bac08",
+          "alt": "图1：论文模型架构总览",
+          "source": {
+            "pagePath": "posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for.md",
+            "committedFileSha256": "c33f904980a1458b90b7af1f2d81de7893ea7e6c9c87992a3079ff2437633a3c",
+            "rawContentSha256": "12076d45666d64daf70bf9a55028d7183f8d4cce3dd6387e74dcb868d2285dd9",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464101",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464101",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"665-deep-spatial-clue-informed-ambisonic-encoding-for-irregular-microphone-arrays\">665. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for\">Deep Spatial Clue Informed Ambisonic Encoding for Irregular Microphone Arrays</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 48,
+          "destination": "pdf-image-page4-idx3",
+          "originalImageHTML": "<img alt=\"图4: SI-SDRi分布对比\" loading=\"lazy\" src=\"pdf-image-page4-idx3\">",
+          "originalImageSha256": "397c072621f16640b3e4e8aa538ba5d2fd6219d9e901ce2da3674c067b636968",
+          "alt": "图4: SI-SDRi分布对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity.md",
+            "committedFileSha256": "6f084ba8c42fe8d00511ba2eeb51b739fe7cab105ddaef733eb5192165aa429c",
+            "rawContentSha256": "ee4022fa12cd2d0401608a8d8fdae0cd4fbe637baf0aea60915c0ed8d773f840",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460642",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460642",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"675-ar-bsnet-towards-ultra-low-complexity-autoregressive-target-speaker-extraction-with-band-split-modeling\">675. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity\">AR-BSNet: Towards Ultra-Low Complexity Autoregressive Target Speaker Extraction With Band-Split Modeling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 49,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: AIB基准示例\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "74c28c0d44343e71dcd6adfc1e3da4eee2c6d419046a727c4331ece8b9ca53a1",
+          "alt": "图1: AIB基准示例",
+          "source": {
+            "pagePath": "posts/2026-04-29-auditory-illusion-benchmark-for-large-audio.md",
+            "committedFileSha256": "ad3e02c17f50c10f9f3723cf6082bdd326ddf8d5866f70b17efd41cfec500a7b",
+            "rawContentSha256": "115423bc1d66edfc3cccc9d013f1c5d3f4a604af37112f016f3cab678a9968cb",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462423",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462423",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"679-auditory-illusion-benchmark-for-large-audio-language-models\">679. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio\">Auditory Illusion Benchmark for Large Audio Language Models</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 50,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: 梯度累积效果\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "18dc5fceb6a6f02908df81b35e5754bef57a591393cb786f3e83863cdb6c3451",
+          "alt": "图2: 梯度累积效果",
+          "source": {
+            "pagePath": "posts/2026-04-29-transferable-audio-lottery-tickets-gradient.md",
+            "committedFileSha256": "c8422059274042985f4abb20a3f015c074f256ba591d26a21f34fa8d70549fbc",
+            "rawContentSha256": "4f313bfc15a95578dcebdf1d82b943b685e443555134658b7c6946273f045765",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461958",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461958",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"685-transferable-audio-lottery-tickets-gradient-accumulation-for-extreme-sparsity\">685. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient\">Transferable Audio Lottery Tickets: Gradient Accumulation for Extreme Sparsity</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 55,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "6da48a81cf289419f68f725b2c67793a0000a547b67cf8d802676e53ab0ae013",
+          "alt": "图1",
+          "source": {
+            "pagePath": "posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic.md",
+            "committedFileSha256": "041b09bce6012123f6a902de668242d40f281eec2ab2f37a6c98981b2e9e5045",
+            "rawContentSha256": "70fc00f084f91800287b97b96ad219282b9094aff84ad424bf7736e67bed9e83",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465034",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465034",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"751-mind-your-\">751. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic\">Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 56,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "aa760e2b556e3ec9c80ebe047d20c9d09e136cf3506adb3e8f75361beead9c7e",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic.md",
+            "committedFileSha256": "041b09bce6012123f6a902de668242d40f281eec2ab2f37a6c98981b2e9e5045",
+            "rawContentSha256": "70fc00f084f91800287b97b96ad219282b9094aff84ad424bf7736e67bed9e83",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465034",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465034",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"751-mind-your-\">751. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic\">Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 57,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "a7dc3cb14e3f242ad3636a0f3c5b22e9078e9449036431ea22cb98f0665dfb31",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-quantifying-speaker-embedding-phonological-rule.md",
+            "committedFileSha256": "a8e4f0c0845e3af1dddcf08db5ebd5ec6e711aefb3476a0e1817d74e03b06923",
+            "rawContentSha256": "194e3db6d608d0685a1e49fd3f79058edd72a6544d019f001633c5ee9eaefa1c",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462045",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462045",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"754-quantifying-speaker-embedding-phonological-rule-interactions-in-accented-speech-synthesis\">754. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule\">Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 58,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: 不同任务和压缩率下的注意力沉降图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "07345a04f15d42074933e23a81326d0eccacedf782c31a95292e1e690573074d",
+          "alt": "图1: 不同任务和压缩率下的注意力沉降图",
+          "source": {
+            "pagePath": "posts/2026-04-29-mitigating-attention-sinks-and-massive.md",
+            "committedFileSha256": "c1a41aaebdf68bb6194c0caa8ceadb0290f6c4cc44dbcb9eb4c581520735352a",
+            "rawContentSha256": "63a922a4f01ae0f014e697475ba82cc498c2c48e82c240a5cec6c196b067c66a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463794",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463794",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"772-mitigating-attention-sinks-and-massive-activations-in-audio-visual-speech-recognition-with-llms\">772. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive\">Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech Recognition with LLMs</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 59,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: 三种注意力架构对比\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "6695fd1c270ac1a0ed4197e730f67d1fc633c3a34531649e97f291d73ca4c9d2",
+          "alt": "图1: 三种注意力架构对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of.md",
+            "committedFileSha256": "41a3876df9fa693f2d1e2108dd4a023771ab34d2e4d535cb30efcecea63448ac",
+            "rawContentSha256": "9cfc49583b8da19b8caa04f851e274ad2a820ae12a692205ca15da5cd304be4e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464317",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464317",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"785-whisper-mla-reducing-gpu-memory-consumption-of-asr-models-based-on-mha2mla-conversion\">785. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of\">Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 60,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: Whisper到Whisper-MLA的转换方法\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "18d587fa85df9dacae193bebd2a94dec803c26ecb6c5025433b94d66dc137da1",
+          "alt": "图2: Whisper到Whisper-MLA的转换方法",
+          "source": {
+            "pagePath": "posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of.md",
+            "committedFileSha256": "41a3876df9fa693f2d1e2108dd4a023771ab34d2e4d535cb30efcecea63448ac",
+            "rawContentSha256": "9cfc49583b8da19b8caa04f851e274ad2a820ae12a692205ca15da5cd304be4e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464317",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464317",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"785-whisper-mla-reducing-gpu-memory-consumption-of-asr-models-based-on-mha2mla-conversion\">785. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of\">Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 61,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1: PhoenixDSR框架\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "4ba685f84312722616b708363f5061a49764ee2e03ad1a39f3fb5af06563ba54",
+          "alt": "图1: PhoenixDSR框架",
+          "source": {
+            "pagePath": "posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced.md",
+            "committedFileSha256": "7535d024e255cb384ce026ac97cf4501ccb28234f8f15ce9eb89cab500c78000",
+            "rawContentSha256": "95322a36c2657d32b81d218b9d5bea936d60b8594175356d2d5d74d0d30f7758",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460791",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460791",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"787-phoenixdsr-phoneme-guided-and-llm-enhanced-dysarthric-speech-recognition\">787. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced\">PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 62,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2: 顶部混淆音素对\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "11cb3bfc99d95560685fba0946ac09a9b128e4030f7bb12c7675570681cc7a15",
+          "alt": "图2: 顶部混淆音素对",
+          "source": {
+            "pagePath": "posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced.md",
+            "committedFileSha256": "7535d024e255cb384ce026ac97cf4501ccb28234f8f15ce9eb89cab500c78000",
+            "rawContentSha256": "95322a36c2657d32b81d218b9d5bea936d60b8594175356d2d5d74d0d30f7758",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460791",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460791",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"787-phoenixdsr-phoneme-guided-and-llm-enhanced-dysarthric-speech-recognition\">787. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced\">PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 65,
+          "destination": "pdf-image-page2-idx8",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page2-idx8\">",
+          "originalImageSha256": "b8690a5dc826a67c4eebeaa69425b541ee4e3abede269989d8a1e590b5e42ef2",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-confidence-based-filtering-for-speech-dataset.md",
+            "committedFileSha256": "68e13ee327bcda74bdd52546f2225bf3e7723dc26810c04aa3afe3e2593a5d48",
+            "rawContentSha256": "1c97e00d45ee9a5bc9fa1fa3bb0af35263b8e84792000bfc503dab6e9a6d554f",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464183",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464183",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"824-confidence-based-filtering-for-speech-dataset-curation-with-generative-speech-enhancement-using-discrete-tokens\">824. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset\">Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 66,
+          "destination": "pdf-image-page2-idx9",
+          "originalImageHTML": "<img alt=\"图4\" loading=\"lazy\" src=\"pdf-image-page2-idx9\">",
+          "originalImageSha256": "d699623f85fff4828568e5b6359ad140c9fbe6acd93bcb5e72c03f68f389722f",
+          "alt": "图4",
+          "source": {
+            "pagePath": "posts/2026-04-29-confidence-based-filtering-for-speech-dataset.md",
+            "committedFileSha256": "68e13ee327bcda74bdd52546f2225bf3e7723dc26810c04aa3afe3e2593a5d48",
+            "rawContentSha256": "1c97e00d45ee9a5bc9fa1fa3bb0af35263b8e84792000bfc503dab6e9a6d554f",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464183",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464183",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"824-confidence-based-filtering-for-speech-dataset-curation-with-generative-speech-enhancement-using-discrete-tokens\">824. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset\">Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 67,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"MCI-OTFusion框架图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "965fa315bc52f743964c99552ca98ee23fbabe4d9a8121bd6a986e1ec3c29470",
+          "alt": "MCI-OTFusion框架图",
+          "source": {
+            "pagePath": "posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection.md",
+            "committedFileSha256": "7fc56680f4d3663665ecda57fbb22a39c7a00ae4e5b5bd073075c2af9d516f8a",
+            "rawContentSha256": "f3752fc6f4c1d692b8dcfe6a69af79ee8bee7fbb68aab679e080d592a62451d2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462707",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462707",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"837-mci-otfusion-a-multimodal-model-for-mci-detection-and-cognitive-score-prediction\">837. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection\">MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 68,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"鲁棒性实验结果\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "6c919e8bdcd4f1b1d75e821d2031ae4fb1a27ec23201da34faab678e0b1ef8eb",
+          "alt": "鲁棒性实验结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection.md",
+            "committedFileSha256": "7fc56680f4d3663665ecda57fbb22a39c7a00ae4e5b5bd073075c2af9d516f8a",
+            "rawContentSha256": "f3752fc6f4c1d692b8dcfe6a69af79ee8bee7fbb68aab679e080d592a62451d2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462707",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462707",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"837-mci-otfusion-a-multimodal-model-for-mci-detection-and-cognitive-score-prediction\">837. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection\">MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 69,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "aa760e2b556e3ec9c80ebe047d20c9d09e136cf3506adb3e8f75361beead9c7e",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-snore-sound-classification-based-on-physiological.md",
+            "committedFileSha256": "79a2eb7f964bd7bfe693465772b61d40ef9e3e9de87ceae6d075d4d8a6d326d0",
+            "rawContentSha256": "49d3d28ecc790deb70f3515de103053ca07c7f26dbffed30799d3ba73ae58311",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460686",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460686",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"841-snore-sound-classification-based-on-physiological-features-and-adaptive-loss-function\">841. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological\">Snore Sound Classification Based on Physiological Features and Adaptive Loss Function</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 70,
+          "destination": "pdf-image-page3-idx2",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page3-idx2\">",
+          "originalImageSha256": "5ee0950756c16ed3d4ba99ac52edd6947b5ca046b1a5c8353f6544c9d766b2d9",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-snore-sound-classification-based-on-physiological.md",
+            "committedFileSha256": "79a2eb7f964bd7bfe693465772b61d40ef9e3e9de87ceae6d075d4d8a6d326d0",
+            "rawContentSha256": "49d3d28ecc790deb70f3515de103053ca07c7f26dbffed30799d3ba73ae58311",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460686",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460686",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"841-snore-sound-classification-based-on-physiological-features-and-adaptive-loss-function\">841. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological\">Snore Sound Classification Based on Physiological Features and Adaptive Loss Function</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 71,
+          "destination": "pdf-image-page4-idx4",
+          "originalImageHTML": "<img alt=\"主观评估结果\" loading=\"lazy\" src=\"pdf-image-page4-idx4\">",
+          "originalImageSha256": "e58314b6ad79078083a8f6e29e396f4ffa9c3bdc7fa1fa7fc26e2618e39efef8",
+          "alt": "主观评估结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-low-frequency-harmonic-control-for-speech.md",
+            "committedFileSha256": "4dc3df19955690d1b858e90def31984ffa3255e5b745b7e464cb3f7bf1da668d",
+            "rawContentSha256": "5fd6fbae9676a44d3de3d58b060eceba81de66667e166948c737eead3f6695d4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464695",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464695",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"844-low-frequency-harmonic-control-for-speech-intelligibility-in-open-ear-headphones\">844. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech\">Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 72,
+          "destination": "pdf-image-page4-idx5",
+          "originalImageHTML": "<img alt=\"能量比与可懂度得分关系\" loading=\"lazy\" src=\"pdf-image-page4-idx5\">",
+          "originalImageSha256": "ad6ea237d73b1f96c03c0fda7a73557b31ec981d0717967457e3fa6a1177743a",
+          "alt": "能量比与可懂度得分关系",
+          "source": {
+            "pagePath": "posts/2026-04-29-low-frequency-harmonic-control-for-speech.md",
+            "committedFileSha256": "4dc3df19955690d1b858e90def31984ffa3255e5b745b7e464cb3f7bf1da668d",
+            "rawContentSha256": "5fd6fbae9676a44d3de3d58b060eceba81de66667e166948c737eead3f6695d4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464695",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464695",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"844-low-frequency-harmonic-control-for-speech-intelligibility-in-open-ear-headphones\">844. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech\">Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 73,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"描述\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "b177e255e8d2cc1ff1e862076707563b51df0760c0e252fdfd94ac17933e1590",
+          "alt": "描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-sed-structural-entropy-based-speech.md",
+            "committedFileSha256": "80422bdd6a7bf891bb846f17ef3003fbb495c6c39b6e05f290b019eeb28e6c67",
+            "rawContentSha256": "824ad2d5dd2a3214345c2a98a557bb068daeadc66d287a5c7b7dc46800b951ef",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461907",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461907",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"873-sed-structural-entropy-based-speech-discretization-for-discrete-token-based-asr\">873. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech\">SED: Structural Entropy Based Speech Discretization for Discrete Token-Based ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-019.md": {
+      "committedFileSha256": "745138672614f577742f89fd857b738895d85a8f2560e9970187714345c9cbc2",
+      "rawContentSha256": "53d18788dbbb23adbe10b8ef773d76bd70c346ee275855a6a197c268cd198325",
+      "contentSha256": "fe65fabaf90feb90ef1021dc8b2225bbe0df1a8e9205c9e1558cad50aafc9f23",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：每集字幕片段数量分布\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "841014960425aaa0f2fdfea2645a246577a43e732d6717406c12d3f355986264",
+          "alt": "图2：每集字幕片段数量分布",
+          "source": {
+            "pagePath": "posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle.md",
+            "committedFileSha256": "277e644a69e01d9f640c3d19e1dd17871639f78f044e2623746668c5ac40a1f7",
+            "rawContentSha256": "ea05cb1ab4524d40f67781ede09cfe5ad06991030f1cc954a299df00271c6500",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464228",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464228",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-an-end-to-end-multimodal-system-for-subtitle-recognition-and-chinese-japanese-translation-in-short-dramas\">🥉 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-an-end-to-end-multimodal-system-for-subtitle\">An End-to-End Multimodal System for Subtitle Recognition and Chinese-Japanese Translation in Short Dramas</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-021.md": {
+      "committedFileSha256": "c9fa507f7dca15aeab23094f56995381fa635ca1e28a8fc2e374effd155005f4",
+      "rawContentSha256": "3cf5046fbbe3d4726f0a0664ed2ed9028a6b76b2cc747ef34745dd05094c7f94",
+      "contentSha256": "8b619c8d46b875d489de597dcf95dbb98a5f0ba83e94a1b642d0214d6ce08dcb",
+      "imageCount": 2,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：系统整体架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "c17a2bd40127723f7a1a0409a6c8cd51e13714af784de24d88e015e17e7f0212",
+          "alt": "图1：系统整体架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch.md",
+            "committedFileSha256": "8df8e992d8942e418cf09b688debc361c39b679d311144af0a90aa1e8f720267",
+            "rawContentSha256": "42ffd38d41dc6df76672898e75123cc5a2ea524995a37fee44da6259964dc469",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462294",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462294",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-self-supervised-note-tracking-and-multi-pitch-estimation-via-reconstruction-based-learning\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch\">Self-Supervised Note Tracking and Multi-Pitch Estimation Via Reconstruction-Based Learning</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：损失权重参数扫描结果\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "53a4f22261992f54217b568bec5c5f14773ee2d3fb619951159464a6d89e88d5",
+          "alt": "图2：损失权重参数扫描结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch.md",
+            "committedFileSha256": "8df8e992d8942e418cf09b688debc361c39b679d311144af0a90aa1e8f720267",
+            "rawContentSha256": "42ffd38d41dc6df76672898e75123cc5a2ea524995a37fee44da6259964dc469",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462294",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462294",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-self-supervised-note-tracking-and-multi-pitch-estimation-via-reconstruction-based-learning\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-self-supervised-note-tracking-and-multi-pitch\">Self-Supervised Note Tracking and Multi-Pitch Estimation Via Reconstruction-Based Learning</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-033.md": {
+      "committedFileSha256": "8f4ec5626d845aaa7e6a1ccaa470a973ea16d1f611d56b7da4c684a710d473b9",
+      "rawContentSha256": "46c33bfec72472f0f28f5a45d9a85a0b07c8d077c4d1d3c9f76304773bd936f8",
+      "contentSha256": "1198b7ea3ee757b001bfd5d4bf8f4ddda4afe6f1d58c3ba51ff2f6a9a206d08e",
+      "imageCount": 3,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: AIB基准示例\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "74c28c0d44343e71dcd6adfc1e3da4eee2c6d419046a727c4331ece8b9ca53a1",
+          "alt": "图1: AIB基准示例",
+          "source": {
+            "pagePath": "posts/2026-04-29-auditory-illusion-benchmark-for-large-audio.md",
+            "committedFileSha256": "ad3e02c17f50c10f9f3723cf6082bdd326ddf8d5866f70b17efd41cfec500a7b",
+            "rawContentSha256": "115423bc1d66edfc3cccc9d013f1c5d3f4a604af37112f016f3cab678a9968cb",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462423",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462423",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"10-auditory-illusion-benchmark-for-large-audio-language-models\">10. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-auditory-illusion-benchmark-for-large-audio\">Auditory Illusion Benchmark for Large Audio Language Models</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-042.md": {
+      "committedFileSha256": "ca3ccad315b126b00c0c09b8ebe3c6e3b3238b2bd75a38bf5a6e855fd096763b",
+      "rawContentSha256": "45411f24b53981569be371a3a3a2cee4f00ff0b28d0a51681f254fb267753e83",
+      "contentSha256": "d39fd646d6a3226da1b4df5d1d54d33894ac6d8b213d3d98d1412c1780ee38e1",
+      "imageCount": 4,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"EchoFormer框架\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "0341b0bd6c1c53dd80d35463554166c45d5f68f46239fe14fcf0d36add2361bd",
+          "alt": "EchoFormer框架",
+          "source": {
+            "pagePath": "posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics.md",
+            "committedFileSha256": "370aa2b52af7d4b12f1ff28b50228403b08b3e1288bfad6187af0df7ba684afa",
+            "rawContentSha256": "117868c105baa750558dcad720badb74870e73d3d613328f06f749935dc6ffaa",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464149",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464149",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-coupling-acoustic-geometry-and-visual-semantics-for-robust-depth-estimation\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics\">Coupling Acoustic Geometry and Visual Semantics for Robust Depth Estimation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"定性对比\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "6dcbe000ad48adea00464c4b096d43bff17c73503838865bc5025d822ecb4676",
+          "alt": "定性对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics.md",
+            "committedFileSha256": "370aa2b52af7d4b12f1ff28b50228403b08b3e1288bfad6187af0df7ba684afa",
+            "rawContentSha256": "117868c105baa750558dcad720badb74870e73d3d613328f06f749935dc6ffaa",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464149",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464149",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-coupling-acoustic-geometry-and-visual-semantics-for-robust-depth-estimation\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics\">Coupling Acoustic Geometry and Visual Semantics for Robust Depth Estimation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"消融可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "31bf8a701f2b229136635bb9b2a53de78783d7548f4a04818e46aa3e7b3f3dbd",
+          "alt": "消融可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics.md",
+            "committedFileSha256": "370aa2b52af7d4b12f1ff28b50228403b08b3e1288bfad6187af0df7ba684afa",
+            "rawContentSha256": "117868c105baa750558dcad720badb74870e73d3d613328f06f749935dc6ffaa",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464149",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464149",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-coupling-acoustic-geometry-and-visual-semantics-for-robust-depth-estimation\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-coupling-acoustic-geometry-and-visual-semantics\">Coupling Acoustic Geometry and Visual Semantics for Robust Depth Estimation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：论文模型架构总览\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "5074171564e89829cdfc7d4cd35a2addc947b7b5d690192e014355cc9b4bac08",
+          "alt": "图1：论文模型架构总览",
+          "source": {
+            "pagePath": "posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for.md",
+            "committedFileSha256": "c33f904980a1458b90b7af1f2d81de7893ea7e6c9c87992a3079ff2437633a3c",
+            "rawContentSha256": "12076d45666d64daf70bf9a55028d7183f8d4cce3dd6387e74dcb868d2285dd9",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464101",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464101",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"22-deep-spatial-clue-informed-ambisonic-encoding-for-irregular-microphone-arrays\">22. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-deep-spatial-clue-informed-ambisonic-encoding-for\">Deep Spatial Clue Informed Ambisonic Encoding for Irregular Microphone Arrays</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-043.md": {
+      "committedFileSha256": "7ee6324c0fc705b5560699a55ac5a62885409788d726baf2435b06b4686e54c8",
+      "rawContentSha256": "ef043c294ddaf83198acb9d6bed69672ac282939944a848d30c9bed7497bddc9",
+      "contentSha256": "d3c2908d6861d4fdda6d0625954b5fbcaa753524bd0e53f506a346781a7a805b",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx3",
+          "originalImageHTML": "<img alt=\"图4描述：在CS非独立同分布场景下，pFedMARL、Ditto、FedAvg和本地训练的平均验证准确率（上图）、服务器F1准确率（中图）以及平均动作值（下图）随通信轮数的变化曲线。\" loading=\"lazy\" src=\"pdf-image-page2-idx3\">",
+          "originalImageSha256": "4259e8b064876bec2716304e1252496430378107d4643d2a281d4f4796ccadc7",
+          "alt": "图4描述：在CS非独立同分布场景下，pFedMARL、Ditto、FedAvg和本地训练的平均验证准确率（上图）、服务器F1准确率（中图）以及平均动作值（下图）随通信轮数的变化曲线。",
+          "source": {
+            "pagePath": "posts/2026-04-29-cooperative-multi-agent-reinforcement-learning.md",
+            "committedFileSha256": "6638f93c9ce391117c7bd06ba242acad1de38a4469a99599ba474aa707fbb2e6",
+            "rawContentSha256": "1052e16fda6ba6ae52cd132ef45349f7a3b2f36c15f14eb5deb537c7632a92d3",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462172",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462172",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-cooperative-multi-agent-reinforcement-learning-for-adaptive-aggregation-in-semi-supervised-federated-learning-with-non-iid-data\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cooperative-multi-agent-reinforcement-learning\">Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-056.md": {
+      "committedFileSha256": "3af3dcdbbbcff9ee0ad0fd7110e3af1656e57f27ee6cd131015138418f1a7775",
+      "rawContentSha256": "a20d2a9518505f9e7c24ea944bcbeb7ab45c55a3ef1e170207218f8348b064bf",
+      "contentSha256": "51bf4746a56a70d81d8a35715648723e20f022aa39f65349b3068e67925f38b8",
+      "imageCount": 3,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page1-idx2",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page1-idx2\">",
+          "originalImageSha256": "35723dfa0a63b37f1c4b77fbc84b8a44bd0dfb4558b404d822d778e6c85cf41a",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-multi-task-transformer-for-explainable-speech.md",
+            "committedFileSha256": "37dacd111347debedc0ef923273c313c7670911ee817a506f070e28fb74b9ad3",
+            "rawContentSha256": "fb18a4b25325b8423427476caf49e15a3b81c80656e6971f032a171579c4f5d5",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462684",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462684",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"4-multi-task-transformer-for-explainable-speech-deepfake-detection-via-formant-modeling\">4. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-multi-task-transformer-for-explainable-speech\">Multi-Task Transformer for Explainable Speech Deepfake Detection via Formant Modeling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "6da48a81cf289419f68f725b2c67793a0000a547b67cf8d802676e53ab0ae013",
+          "alt": "图1",
+          "source": {
+            "pagePath": "posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic.md",
+            "committedFileSha256": "041b09bce6012123f6a902de668242d40f281eec2ab2f37a6c98981b2e9e5045",
+            "rawContentSha256": "70fc00f084f91800287b97b96ad219282b9094aff84ad424bf7736e67bed9e83",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465034",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465034",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-mind-your-\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic\">Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "aa760e2b556e3ec9c80ebe047d20c9d09e136cf3506adb3e8f75361beead9c7e",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic.md",
+            "committedFileSha256": "041b09bce6012123f6a902de668242d40f281eec2ab2f37a6c98981b2e9e5045",
+            "rawContentSha256": "70fc00f084f91800287b97b96ad219282b9094aff84ad424bf7736e67bed9e83",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465034",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465034",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-mind-your-\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mind-your-ms-cross-your-ts-a-large-scale-phonetic\">Mind Your [m]S, Cross Your [t]S: a Large-Scale Phonetic Analysis of Speech Reproduction in Modern Speech Generators</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-058.md": {
+      "committedFileSha256": "6961ef4091c8dbfa2dd0d05ebdf7c874f060df38f352dcf5882b440a05a2d59b",
+      "rawContentSha256": "fe33dd9e4e7834ff77a5a6ed9907ce4977d52e848975b5cbd9edf1bc1cc0941e",
+      "contentSha256": "1ab16e86d43eca5c6d3be9f0c327e4fdd0340e84b9823636e1e1dfe6d2bff55d",
+      "imageCount": 4,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page3-idx3",
+          "originalImageHTML": "<img alt=\"图4：频谱图对比\" loading=\"lazy\" src=\"pdf-image-page3-idx3\">",
+          "originalImageSha256": "6534243d9cb9852cba7fff6097b47ba5fd348e777739f53be003defbb147cd6a",
+          "alt": "图4：频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model.md",
+            "committedFileSha256": "6d0797d0c2431ada5fb9008ccd2318025c234d09dd6b0800ab5950d7856677ef",
+            "rawContentSha256": "98eb1ecf5663967931fc551f1c2ca29a8806f1ca703a29776b723ca1ca53a8dc",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462711",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462711",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"5-mmaudiosep-taming-video-to-audio-generative-model-towards-videotext-queried-sound-separation\">5. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mmaudiosep-taming-video-to-audio-generative-model\">MMAudioSep: Taming Video-to-Audio Generative Model Towards Video/Text-Queried Sound Separation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page4-idx3",
+          "originalImageHTML": "<img alt=\"图4: SI-SDRi分布对比\" loading=\"lazy\" src=\"pdf-image-page4-idx3\">",
+          "originalImageSha256": "397c072621f16640b3e4e8aa538ba5d2fd6219d9e901ce2da3674c067b636968",
+          "alt": "图4: SI-SDRi分布对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity.md",
+            "committedFileSha256": "6f084ba8c42fe8d00511ba2eeb51b739fe7cab105ddaef733eb5192165aa429c",
+            "rawContentSha256": "ee4022fa12cd2d0401608a8d8fdae0cd4fbe637baf0aea60915c0ed8d773f840",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460642",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460642",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"19-ar-bsnet-towards-ultra-low-complexity-autoregressive-target-speaker-extraction-with-band-split-modeling\">19. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-ar-bsnet-towards-ultra-low-complexity\">AR-BSNet: Towards Ultra-Low Complexity Autoregressive Target Speaker Extraction With Band-Split Modeling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-059.md": {
+      "committedFileSha256": "e2bc297edd367b542f261fcc803c64624d3675d6f7920cd560cd8ae6b8da44db",
+      "rawContentSha256": "9e8041d3d9105f10f50ad03c5defae8d777c45d8c55f2fde3d2bb18ef5d35ad0",
+      "contentSha256": "54a2b8dc93c82cdffe7e648debfd102c4b3c3a00cb027ce4063d48e912f06b55",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page1-idx4",
+          "originalImageHTML": "<img alt=\"检测准确率对比\" loading=\"lazy\" src=\"pdf-image-page1-idx4\">",
+          "originalImageSha256": "0640c998af465ba3928daf63ef86cab546f398518fe37725fdb76cf37c1c1692",
+          "alt": "检测准确率对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide.md",
+            "committedFileSha256": "013a1584d962c6db649e73e1030ea170ff9a892122fa48d736ac131638b71439",
+            "rawContentSha256": "4dc31f1a1d804cd18e197a446e57c1dce003bf040fa6aac30b6b0a6b7e88cbc0",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462291",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462291",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-speaker-anonymisation-for-speech-based-suicide-risk-detection\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-speaker-anonymisation-for-speech-based-suicide\">Speaker Anonymisation for Speech-Based Suicide Risk Detection</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-061.md": {
+      "committedFileSha256": "fe383c8e3865f1870548ab15da9d073d84512c920058dcf80f1be93d17ef8c16",
+      "rawContentSha256": "d34223c89fe860d2fb1c7508e5251bcb9a3efbbd2f07ea43940ea95f97012c5c",
+      "contentSha256": "8b65fb0bfcb368e6351902b1cc02e639e8ca28f0129675b3fc7a2dffe39b7af0",
+      "imageCount": 7,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"图2: pdf-image-page2-idx1\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "dfb3e22ea22ad3a5613d4ec94bd9039e9c6d77b771b3c36c9330bbda4d701021",
+          "alt": "图2: pdf-image-page2-idx1",
+          "source": {
+            "pagePath": "posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct.md",
+            "committedFileSha256": "6def2c13a8a24e8c545a19da75f59b99ad3cd481983f8d3f6db9a74dbc3d4699",
+            "rawContentSha256": "0f92b072b5b1880d0c3ad4a7f1ad90a2995864a310a385698232d781ac1daff4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464784",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464784",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"10-ov-instructtts-towards-open-vocabulary-instruct-text-to-speech\">10. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-ov-instructtts-towards-open-vocabulary-instruct\">OV-INSTRUCTTTS: Towards Open-Vocabulary Instruct Text-to-Speech</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "c002c8feda3e08c885babab0ac9586e8874b9ee9d7ac14b89b965014d2ddf5c3",
+          "alt": "架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech.md",
+            "committedFileSha256": "e1ba0aee8d09a3c01ca2657ec97cea78658255e411cd6e5f880e167b009d22ea",
+            "rawContentSha256": "e5e073b7322988004d381728d6cd8397e5ab410e5ca861ca2915f04801546478",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463968",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463968",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"20-archi-tts-a-flow-matching-based-text-to-speech-model-with-self-supervised-semantic-aligner-and-accelerated-inference\">20. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech\">ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"推理效率图\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "e620e7387f6088ea8939b8e0e1b4624e309c48c41cac2cb5d2612245c3694606",
+          "alt": "推理效率图",
+          "source": {
+            "pagePath": "posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech.md",
+            "committedFileSha256": "e1ba0aee8d09a3c01ca2657ec97cea78658255e411cd6e5f880e167b009d22ea",
+            "rawContentSha256": "e5e073b7322988004d381728d6cd8397e5ab410e5ca861ca2915f04801546478",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463968",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463968",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"20-archi-tts-a-flow-matching-based-text-to-speech-model-with-self-supervised-semantic-aligner-and-accelerated-inference\">20. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-archi-tts-a-flow-matching-based-text-to-speech\">ARCHI-TTS: A Flow-Matching-Based Text-to-Speech Model with Self-Supervised Semantic Aligner and Accelerated Inference</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: 总体相似度（左）和语义7点MOS（右）主观评估结果。显示使用LM损失训练的模型在语义性能上显著优于其他模型。\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "f24b11947b0e1227aa2546e705ec152dfb38c7e0c0af54f657c2458820c71dd8",
+          "alt": "图3: 总体相似度（左）和语义7点MOS（右）主观评估结果。显示使用LM损失训练的模型在语义性能上显著优于其他模型。",
+          "source": {
+            "pagePath": "posts/2026-04-29-from-hallucination-to-articulation-language-model.md",
+            "committedFileSha256": "fd69ae93fd0fd7efd0059c093df4efd3b722d81771ba2878885d62023d3c63e0",
+            "rawContentSha256": "bce01f4ed399a4dc8c92a01b58aca80c40f40f8f99cc64f4bd62ced7d0b772b2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462750",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462750",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"24-from-hallucination-to-articulation-language-model-driven-losses-for-ultra-low-bitrate-neural-speech-coding\">24. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-from-hallucination-to-articulation-language-model\">From Hallucination to Articulation: Language Model-Driven Losses for Ultra Low-Bitrate Neural Speech Coding</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "cbb25b6a569135b227b2b975d3085880c32f367652bcc06f440cc2f10a4a5c3f",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-instructaudio-unified-speech-and-music-generation.md",
+            "committedFileSha256": "3f635442ffbfacbee2fc257e56fe8bc2ab8428766d60a251dac419c22e2eeed6",
+            "rawContentSha256": "23bd93357a9f93673a073aeb9849db550caa1293010b9a7b63122ca609b8f71b",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462425",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462425",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"41-instructaudio-unified-speech-and-music-generation-with-natural-language-instruction\">41. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation\">InstructAudio: Unified Speech and Music Generation with Natural Language Instruction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 5,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "a1c1d13961c1d5e9fb5645ed69ed0a629565514f54c722cae3508fe2352a4bd1",
+          "alt": "图1",
+          "source": {
+            "pagePath": "posts/2026-04-29-instructaudio-unified-speech-and-music-generation.md",
+            "committedFileSha256": "3f635442ffbfacbee2fc257e56fe8bc2ab8428766d60a251dac419c22e2eeed6",
+            "rawContentSha256": "23bd93357a9f93673a073aeb9849db550caa1293010b9a7b63122ca609b8f71b",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462425",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462425",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"41-instructaudio-unified-speech-and-music-generation-with-natural-language-instruction\">41. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-instructaudio-unified-speech-and-music-generation\">InstructAudio: Unified Speech and Music Generation with Natural Language Instruction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 6,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "a7dc3cb14e3f242ad3636a0f3c5b22e9078e9449036431ea22cb98f0665dfb31",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-quantifying-speaker-embedding-phonological-rule.md",
+            "committedFileSha256": "a8e4f0c0845e3af1dddcf08db5ebd5ec6e711aefb3476a0e1817d74e03b06923",
+            "rawContentSha256": "194e3db6d608d0685a1e49fd3f79058edd72a6544d019f001633c5ee9eaefa1c",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462045",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462045",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"58-quantifying-speaker-embedding-phonological-rule-interactions-in-accented-speech-synthesis\">58. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-quantifying-speaker-embedding-phonological-rule\">Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-062.md": {
+      "committedFileSha256": "08c9ad07ad21d1b39b449eb0f16d80ab6e21bb950872f85fb1507677104d8bb3",
+      "rawContentSha256": "d4c2bf05260bf6c8617d41e38b1ebf7915f7421b65ab188a633b22876d89af3b",
+      "contentSha256": "c34bcb0ab7b860bff514edb393040989b8644e84699f608378cf0df48f66df72",
+      "imageCount": 5,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：双讲场景下的结果可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "58e4b700bdfe2c8003bb6ffbf9726957f5bfa459a460b7bea740b941c8a3d6cf",
+          "alt": "图2：双讲场景下的结果可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo.md",
+            "committedFileSha256": "cf828bde19538e7060241d9c087cbe34161807fcdf71166b84f2752a4cfe26a8",
+            "rawContentSha256": "880426f6eb118c5b4470e2e44c1ff31cd59a4ebee69e983e35e482962eea074d",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462409",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462409",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"23-spatialnet-echo-real-time-acoustic-echo-cancellation-via-integrated-narrow-band-and-cross-band-processing\">23. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-spatialnet-echo-real-time-acoustic-echo\">SpatialNet-Echo: Real-Time Acoustic Echo Cancellation via Integrated Narrow-Band and Cross-Band Processing</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx8",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page2-idx8\">",
+          "originalImageSha256": "b8690a5dc826a67c4eebeaa69425b541ee4e3abede269989d8a1e590b5e42ef2",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-confidence-based-filtering-for-speech-dataset.md",
+            "committedFileSha256": "68e13ee327bcda74bdd52546f2225bf3e7723dc26810c04aa3afe3e2593a5d48",
+            "rawContentSha256": "1c97e00d45ee9a5bc9fa1fa3bb0af35263b8e84792000bfc503dab6e9a6d554f",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464183",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464183",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"66-confidence-based-filtering-for-speech-dataset-curation-with-generative-speech-enhancement-using-discrete-tokens\">66. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset\">Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page2-idx9",
+          "originalImageHTML": "<img alt=\"图4\" loading=\"lazy\" src=\"pdf-image-page2-idx9\">",
+          "originalImageSha256": "d699623f85fff4828568e5b6359ad140c9fbe6acd93bcb5e72c03f68f389722f",
+          "alt": "图4",
+          "source": {
+            "pagePath": "posts/2026-04-29-confidence-based-filtering-for-speech-dataset.md",
+            "committedFileSha256": "68e13ee327bcda74bdd52546f2225bf3e7723dc26810c04aa3afe3e2593a5d48",
+            "rawContentSha256": "1c97e00d45ee9a5bc9fa1fa3bb0af35263b8e84792000bfc503dab6e9a6d554f",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464183",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464183",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"66-confidence-based-filtering-for-speech-dataset-curation-with-generative-speech-enhancement-using-discrete-tokens\">66. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-confidence-based-filtering-for-speech-dataset\">Confidence-Based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page4-idx4",
+          "originalImageHTML": "<img alt=\"主观评估结果\" loading=\"lazy\" src=\"pdf-image-page4-idx4\">",
+          "originalImageSha256": "e58314b6ad79078083a8f6e29e396f4ffa9c3bdc7fa1fa7fc26e2618e39efef8",
+          "alt": "主观评估结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-low-frequency-harmonic-control-for-speech.md",
+            "committedFileSha256": "4dc3df19955690d1b858e90def31984ffa3255e5b745b7e464cb3f7bf1da668d",
+            "rawContentSha256": "5fd6fbae9676a44d3de3d58b060eceba81de66667e166948c737eead3f6695d4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464695",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464695",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"68-low-frequency-harmonic-control-for-speech-intelligibility-in-open-ear-headphones\">68. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech\">Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page4-idx5",
+          "originalImageHTML": "<img alt=\"能量比与可懂度得分关系\" loading=\"lazy\" src=\"pdf-image-page4-idx5\">",
+          "originalImageSha256": "ad6ea237d73b1f96c03c0fda7a73557b31ec981d0717967457e3fa6a1177743a",
+          "alt": "能量比与可懂度得分关系",
+          "source": {
+            "pagePath": "posts/2026-04-29-low-frequency-harmonic-control-for-speech.md",
+            "committedFileSha256": "4dc3df19955690d1b858e90def31984ffa3255e5b745b7e464cb3f7bf1da668d",
+            "rawContentSha256": "5fd6fbae9676a44d3de3d58b060eceba81de66667e166948c737eead3f6695d4",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464695",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464695",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"68-low-frequency-harmonic-control-for-speech-intelligibility-in-open-ear-headphones\">68. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-low-frequency-harmonic-control-for-speech\">Low-Frequency Harmonic Control for Speech Intelligibility in Open-Ear Headphones</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-065.md": {
+      "committedFileSha256": "4a4d32863d36c68a5e7da88b1554c0019375d85d2b75fc50b10350d36e6e07bd",
+      "rawContentSha256": "84a0fd991555f39b1e2c3cf49fbc234fe4ec6e20cdb7977d464914628dcd1f48",
+      "contentSha256": "34d464baca580d8016f0ed1023a3a36e6e642ff3db79d18f9208605b54120acb",
+      "imageCount": 2,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: ICSF Workflow with DOMA\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "a34b418879236471a9cf0c18922249bcf4edafee21d8596b627c0a9d85b6d081",
+          "alt": "图1: ICSF Workflow with DOMA",
+          "source": {
+            "pagePath": "posts/2026-04-29-doma-leveraging-diffusion-language-models-with.md",
+            "committedFileSha256": "4220eb498ea042307960471e1a38a818d244ff8fbbb96c34007d81105a28515b",
+            "rawContentSha256": "e28cc978fef3946aa611c4534bc25f216e4b76a6a76fe9985630109997eb6736",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462605",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462605",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-doma-leveraging-diffusion-language-models-with-adaptive-prior-for-intent-classification-and-slot-filling\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-doma-leveraging-diffusion-language-models-with\">DOMA: Leveraging Diffusion Language Models with Adaptive Prior for Intent Classification and Slot Filling</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：Game-Time基准得分\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "374423cef9b25cf8d1214c5b85204059fcc03a758c811af4b8ee43ffe45a3902",
+          "alt": "图3：Game-Time基准得分",
+          "source": {
+            "pagePath": "posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken.md",
+            "committedFileSha256": "1bb1d9ce5c0bccab1de8a2467152031769c8bd1c0f01f9cbd412e8128b58b85b",
+            "rawContentSha256": "98f535c754fb11639c896038ac77486ee665bb85802f9e5a57779303dff7425a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464000",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464000",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"5-game-time-evaluating-temporal-dynamics-in-spoken-language-models\">5. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-game-time-evaluating-temporal-dynamics-in-spoken\">Game-Time: Evaluating Temporal Dynamics in Spoken Language Models</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-066.md": {
+      "committedFileSha256": "09ad065d0b39cd598257e011bb7168149977d392370a729abc9d71dc99a50e00",
+      "rawContentSha256": "3ab6c5705506b4286aeec02b261b68c40fcbe800a166bdb8c469617a8141f842",
+      "contentSha256": "956c26a7a029d2cb17a781537fd2ea9d1a88a9aa4eaa3dd353db0758f46202ef",
+      "imageCount": 3,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"RGL架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "e56b742fdc3d569bc63efb0e0f1bf16aa7627b86e9fca39d05a43c6c06d7d978",
+          "alt": "RGL架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion.md",
+            "committedFileSha256": "aafb0a077c0bf546924cc4eb7379d027728876b0880a4a116ac688d040d6c823",
+            "rawContentSha256": "bd9c5044c0365ab39429bbeba74aadef822922de44e21e757fbb3f9543dabf87",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464500",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464500",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"33-rationale-guided-learning-for-multimodal-emotion-recognition\">33. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion\">Rationale-Guided Learning for Multimodal Emotion Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"推理检索示例\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "8177db9219084cff11e4a8290a79dde31d9586f14f2de8cf6b7daeb07ef225d7",
+          "alt": "推理检索示例",
+          "source": {
+            "pagePath": "posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion.md",
+            "committedFileSha256": "aafb0a077c0bf546924cc4eb7379d027728876b0880a4a116ac688d040d6c823",
+            "rawContentSha256": "bd9c5044c0365ab39429bbeba74aadef822922de44e21e757fbb3f9543dabf87",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464500",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464500",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"33-rationale-guided-learning-for-multimodal-emotion-recognition\">33. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rationale-guided-learning-for-multimodal-emotion\">Rationale-Guided Learning for Multimodal Emotion Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"DDSR-Net的整体架构\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "b46f49cc6e1a087d1ab41c750f19e8c9152de4d82919980a63ab95c929cbf93b",
+          "alt": "DDSR-Net的整体架构",
+          "source": {
+            "pagePath": "posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via.md",
+            "committedFileSha256": "d048b152b1a5124ae9bce138e3bbc68c80894d85eaedcade750b077f6d1f3369",
+            "rawContentSha256": "3baa11579201513927f95fc328924bb391ddb3b0ae57cc538294346cc959dd41",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462473",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462473",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"42-ddsr-net-robust-multimodal-sentiment-analysis-via-dynamic-modality-reliability-assessment\">42. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-ddsr-net-robust-multimodal-sentiment-analysis-via\">DDSR-Net: Robust Multimodal Sentiment Analysis via Dynamic Modality Reliability Assessment</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-078.md": {
+      "committedFileSha256": "e9558dc667932872adf7b7c9ff80f925397c24d8aca17084c302c142e1333a80",
+      "rawContentSha256": "f4e882f3dc2071ae6c509b28cf123dfeeff084d03c64db90399385ab093c3277",
+      "contentSha256": "024e9b13845dab68e48da3732de433ef4c782d9250e12d5cb08c86e364a0b68a",
+      "imageCount": 11,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：VAIR方法整体框架图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "4a4d115fe704e65e9d821a3aa0e77c977e4eb3d26f2c14aa88facdbbb47eb630",
+          "alt": "图1：VAIR方法整体框架图",
+          "source": {
+            "pagePath": "posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation.md",
+            "committedFileSha256": "c6e0e843b853c117df69e8776a4aa94c131b3f3ae48dd4e2f00b80057fd9e7fa",
+            "rawContentSha256": "7be192c8b2575da8f4c3d20f5faee3879e421ecae2793cebb0c9a4ffbda78053",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462855",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462855",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"29-adversarial-fine-tuning-on-speech-foundation-model-with-vulnerable-attention-consistency-regularization-for-robust-speech-recognition\">29. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-adversarial-fine-tuning-on-speech-foundation\">Adversarial Fine-Tuning on Speech Foundation Model with Vulnerable Attention Consistency Regularization for Robust Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page1-idx0",
+          "originalImageHTML": "<img alt=\"图1: pdf-image-page1-idx0\" loading=\"lazy\" src=\"pdf-image-page1-idx0\">",
+          "originalImageSha256": "8ad928c6304b3ef943586b8347c0f6ea9be31513ec105f18921847b16b2f3965",
+          "alt": "图1: pdf-image-page1-idx0",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"31-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">31. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page1-idx1",
+          "originalImageHTML": "<img alt=\"图2: pdf-image-page1-idx1\" loading=\"lazy\" src=\"pdf-image-page1-idx1\">",
+          "originalImageSha256": "7ec81e98dc1ef4fa31e837f1988f54e87adc3854ae3f1544494e944fa3e4277d",
+          "alt": "图2: pdf-image-page1-idx1",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"31-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">31. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page1-idx2",
+          "originalImageHTML": "<img alt=\"图3: pdf-image-page1-idx2\" loading=\"lazy\" src=\"pdf-image-page1-idx2\">",
+          "originalImageSha256": "99691b59f7ab7146f0e1f7f5a65ab10b35b1743da8ee656a6a27c54fc3183706",
+          "alt": "图3: pdf-image-page1-idx2",
+          "source": {
+            "pagePath": "posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for.md",
+            "committedFileSha256": "43d16c08367e18fb8e194fc6a4ed06ef1c53c99b783357f84ce5442634469e00",
+            "rawContentSha256": "5f2637274ce9c68cfb1df8dc015d427b40b0819e0be1e73a07a6e3a37892b149",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463048",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463048",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"31-lotusdis-a-thai-far-field-meeting-corpus-for-robust-conversational-asr\">31. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-lotusdis-a-thai-far-field-meeting-corpus-for\">LOTUSDIS: A Thai Far-Field Meeting Corpus for Robust Conversational ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 5,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: 不同任务和压缩率下的注意力沉降图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "07345a04f15d42074933e23a81326d0eccacedf782c31a95292e1e690573074d",
+          "alt": "图1: 不同任务和压缩率下的注意力沉降图",
+          "source": {
+            "pagePath": "posts/2026-04-29-mitigating-attention-sinks-and-massive.md",
+            "committedFileSha256": "c1a41aaebdf68bb6194c0caa8ceadb0290f6c4cc44dbcb9eb4c581520735352a",
+            "rawContentSha256": "63a922a4f01ae0f014e697475ba82cc498c2c48e82c240a5cec6c196b067c66a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463794",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463794",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"79-mitigating-attention-sinks-and-massive-activations-in-audio-visual-speech-recognition-with-llms\">79. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mitigating-attention-sinks-and-massive\">Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech Recognition with LLMs</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 6,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: 三种注意力架构对比\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "6695fd1c270ac1a0ed4197e730f67d1fc633c3a34531649e97f291d73ca4c9d2",
+          "alt": "图1: 三种注意力架构对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of.md",
+            "committedFileSha256": "41a3876df9fa693f2d1e2108dd4a023771ab34d2e4d535cb30efcecea63448ac",
+            "rawContentSha256": "9cfc49583b8da19b8caa04f851e274ad2a820ae12a692205ca15da5cd304be4e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464317",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464317",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"82-whisper-mla-reducing-gpu-memory-consumption-of-asr-models-based-on-mha2mla-conversion\">82. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of\">Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 7,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: Whisper到Whisper-MLA的转换方法\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "18d587fa85df9dacae193bebd2a94dec803c26ecb6c5025433b94d66dc137da1",
+          "alt": "图2: Whisper到Whisper-MLA的转换方法",
+          "source": {
+            "pagePath": "posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of.md",
+            "committedFileSha256": "41a3876df9fa693f2d1e2108dd4a023771ab34d2e4d535cb30efcecea63448ac",
+            "rawContentSha256": "9cfc49583b8da19b8caa04f851e274ad2a820ae12a692205ca15da5cd304be4e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464317",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464317",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"82-whisper-mla-reducing-gpu-memory-consumption-of-asr-models-based-on-mha2mla-conversion\">82. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-whisper-mla-reducing-gpu-memory-consumption-of\">Whisper-MLA: Reducing GPU Memory Consumption of ASR Models Based on MHA2MLA Conversion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 8,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1: PhoenixDSR框架\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "4ba685f84312722616b708363f5061a49764ee2e03ad1a39f3fb5af06563ba54",
+          "alt": "图1: PhoenixDSR框架",
+          "source": {
+            "pagePath": "posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced.md",
+            "committedFileSha256": "7535d024e255cb384ce026ac97cf4501ccb28234f8f15ce9eb89cab500c78000",
+            "rawContentSha256": "95322a36c2657d32b81d218b9d5bea936d60b8594175356d2d5d74d0d30f7758",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460791",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460791",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"84-phoenixdsr-phoneme-guided-and-llm-enhanced-dysarthric-speech-recognition\">84. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced\">PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 9,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2: 顶部混淆音素对\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "11cb3bfc99d95560685fba0946ac09a9b128e4030f7bb12c7675570681cc7a15",
+          "alt": "图2: 顶部混淆音素对",
+          "source": {
+            "pagePath": "posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced.md",
+            "committedFileSha256": "7535d024e255cb384ce026ac97cf4501ccb28234f8f15ce9eb89cab500c78000",
+            "rawContentSha256": "95322a36c2657d32b81d218b9d5bea936d60b8594175356d2d5d74d0d30f7758",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460791",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460791",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"84-phoenixdsr-phoneme-guided-and-llm-enhanced-dysarthric-speech-recognition\">84. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-phoenixdsr-phoneme-guided-and-llm-enhanced\">PhoenixDSR: Phoneme-Guided and LLM-Enhanced Dysarthric Speech Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 10,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"描述\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "b177e255e8d2cc1ff1e862076707563b51df0760c0e252fdfd94ac17933e1590",
+          "alt": "描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-sed-structural-entropy-based-speech.md",
+            "committedFileSha256": "80422bdd6a7bf891bb846f17ef3003fbb495c6c39b6e05f290b019eeb28e6c67",
+            "rawContentSha256": "824ad2d5dd2a3214345c2a98a557bb068daeadc66d287a5c7b7dc46800b951ef",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461907",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461907",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"93-sed-structural-entropy-based-speech-discretization-for-discrete-token-based-asr\">93. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-sed-structural-entropy-based-speech\">SED: Structural Entropy Based Speech Discretization for Discrete Token-Based ASR</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-094.md": {
+      "committedFileSha256": "35d11a52a5b856e4bc7d1ac9d29c19f361ff9568a1c754aadb1914e753106eb1",
+      "rawContentSha256": "367b2e6583149f38a87d79f24b3bb96b2589bd7c4bf726a83f04a59626ad37a5",
+      "contentSha256": "b11cdd1660178b8785950d5284bba443e7308a81c255eba83f78071eebe07b45",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: PAD权重分布热力图\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "b91c1ad595caf55ae475fa32940f7fa9a1f6f3796612e50c176b547da42e8624",
+          "alt": "图2: PAD权重分布热力图",
+          "source": {
+            "pagePath": "posts/2026-04-29-cross-architecture-knowledge-distillation-of.md",
+            "committedFileSha256": "31fabcd04cca83aa2112c497f6ad28064da45177f07728add2c8370cba916d2c",
+            "rawContentSha256": "8da4dff38b8434300ef69492207728a3bd95492ded00535f9e7aa73aeda1b9f1",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462644",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462644",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"4-cross-architecture-knowledge-distillation-of-wavlm-for-lightweight-speaker-verification\">4. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cross-architecture-knowledge-distillation-of\">Cross-Architecture Knowledge Distillation of WavLM for Lightweight Speaker Verification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-098.md": {
+      "committedFileSha256": "4c09e2c74f62dbe2b4ede9219f50a436164db24c663b013ed8e4354836ff4d77",
+      "rawContentSha256": "0cf6c1b867cc0ed371c4897294ee67e2d8265595ddc6b5dfaf53f674f8531b11",
+      "contentSha256": "32184e2a1416aed4478f429a9ed99fd3ba5294d742514b4a147f3db8dcd5c340",
+      "imageCount": 2,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"MCI-OTFusion框架图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "965fa315bc52f743964c99552ca98ee23fbabe4d9a8121bd6a986e1ec3c29470",
+          "alt": "MCI-OTFusion框架图",
+          "source": {
+            "pagePath": "posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection.md",
+            "committedFileSha256": "7fc56680f4d3663665ecda57fbb22a39c7a00ae4e5b5bd073075c2af9d516f8a",
+            "rawContentSha256": "f3752fc6f4c1d692b8dcfe6a69af79ee8bee7fbb68aab679e080d592a62451d2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462707",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462707",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-mci-otfusion-a-multimodal-model-for-mci-detection-and-cognitive-score-prediction\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection\">MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"鲁棒性实验结果\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "6c919e8bdcd4f1b1d75e821d2031ae4fb1a27ec23201da34faab678e0b1ef8eb",
+          "alt": "鲁棒性实验结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection.md",
+            "committedFileSha256": "7fc56680f4d3663665ecda57fbb22a39c7a00ae4e5b5bd073075c2af9d516f8a",
+            "rawContentSha256": "f3752fc6f4c1d692b8dcfe6a69af79ee8bee7fbb68aab679e080d592a62451d2",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462707",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462707",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-mci-otfusion-a-multimodal-model-for-mci-detection-and-cognitive-score-prediction\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mci-otfusion-a-multimodal-model-for-mci-detection\">MCI-OTFusion: A Multimodal Model for MCI Detection and Cognitive Score Prediction</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-101.md": {
+      "committedFileSha256": "ddc2eddc829586d7ac80214edf2e9d7ff122577789f8880895d32331831aa37a",
+      "rawContentSha256": "4f9a8a7bf2926939a67993f1ea3ce89179c73fb0afe089e3f00c685eced1c9c9",
+      "contentSha256": "2e6485aab6798961d79c68560fbc6329e3f914357dc68217155037702beca41b",
+      "imageCount": 5,
+      "occurrences": [
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1描述\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "63cdfe29bf3afab1dcbe4b05fe5d214e54278397a86a6f8aca19855cb148b4ef",
+          "alt": "图1描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical.md",
+            "committedFileSha256": "ec19a224b9dfc502f6defc9fcf299971b4b16d401328813f56e2d2ca8f870346",
+            "rawContentSha256": "9883872d7f2a9a19e8d21fa378a8d374bebb8322cf7f4849d529cdc84cfd1345",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460487",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460487",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"16-rmodgdf-a-robust-stft-derived-feature-for-musical-instrument-recognition\">16. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical\">RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2描述\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "4508cb0082b5b80d86282146a571de4089caeb9eb11d6362d999af77e6b2697d",
+          "alt": "图2描述",
+          "source": {
+            "pagePath": "posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical.md",
+            "committedFileSha256": "ec19a224b9dfc502f6defc9fcf299971b4b16d401328813f56e2d2ca8f870346",
+            "rawContentSha256": "9883872d7f2a9a19e8d21fa378a8d374bebb8322cf7f4849d529cdc84cfd1345",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460487",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460487",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"16-rmodgdf-a-robust-stft-derived-feature-for-musical-instrument-recognition\">16. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rmodgdf-a-robust-stft-derived-feature-for-musical\">RMODGDF: A Robust STFT-Derived Feature for Musical Instrument Recognition</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page3-idx8",
+          "originalImageHTML": "<img alt=\"整个预训练框架流程\" loading=\"lazy\" src=\"pdf-image-page3-idx8\">",
+          "originalImageSha256": "d08db34b5812e2e6c36d7387b26aab6dc432ff149a880446662f34bd5a186025",
+          "alt": "整个预训练框架流程",
+          "source": {
+            "pagePath": "posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for.md",
+            "committedFileSha256": "d371143f635cbc1741e6c9affde6beca563dd18571cf403ce478d855c197216e",
+            "rawContentSha256": "97b46faaaee22a85fb3199c9ebd31b3ebd18dfa94516590c613114238ce1db21",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464219",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464219",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"18-timbre-based-pretraining-with-pseudo-labels-for-multi-instrument-automatic-music-transcription\">18. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for\">Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page4-idx13",
+          "originalImageHTML": "<img alt=\"潜在音色空间的UMAP可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx13\">",
+          "originalImageSha256": "c21b0895b564a7966d497577f069d60ddc254b8dd8f24c2875e30d5f8ac6dbbd",
+          "alt": "潜在音色空间的UMAP可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for.md",
+            "committedFileSha256": "d371143f635cbc1741e6c9affde6beca563dd18571cf403ce478d855c197216e",
+            "rawContentSha256": "97b46faaaee22a85fb3199c9ebd31b3ebd18dfa94516590c613114238ce1db21",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11464219",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11464219",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"18-timbre-based-pretraining-with-pseudo-labels-for-multi-instrument-automatic-music-transcription\">18. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-timbre-based-pretraining-with-pseudo-labels-for\">Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-110.md": {
+      "committedFileSha256": "7443a27a018ce68a79f50c03383c781ff6533ebe34e7774372387c4b8f821843",
+      "rawContentSha256": "2309901b10649b02ac94f68f4509a8abe0e101bbad495cd4432132a27f5ea5c9",
+      "contentSha256": "81da7945489fa0def0e28a03a9e825ff572e45cce6e750b52bcebafc9fd0f396",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx4",
+          "originalImageHTML": "<img alt=\"图5: FAD vs. 训练时间\" loading=\"lazy\" src=\"pdf-image-page4-idx4\">",
+          "originalImageSha256": "5a65c27098038ce9761519fc5cabf320670292209c404d3d717b35599b1772bd",
+          "alt": "图5: FAD vs. 训练时间",
+          "source": {
+            "pagePath": "posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient.md",
+            "committedFileSha256": "ad5dddde298ee3916738bbc0bb797cc844dba7878bab4a6c5f822d0548871628",
+            "rawContentSha256": "fb2d0040fe7dff25aee9c66bb3f9eee8e24408c127790bf7b9f61bbd42e1650e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461505",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461505",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"13-compression-meets-sampling-lz78-spa-for-efficient-symbolic-music-generation\">13. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-compression-meets-sampling-lz78-spa-for-efficient\">Compression meets Sampling: LZ78-SPA for Efficient Symbolic Music Generation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-112.md": {
+      "committedFileSha256": "4cc448e12d50753153c157c844a73bb55b8119451d33e4beddb4721bc6a65200",
+      "rawContentSha256": "99971b7b7ba0b69cb6e7a5296754eb7d1dd67a4fbbde4e634503ed4a73939192",
+      "contentSha256": "2fc1cfc95c0dbff40ab2cc1f422023eb65babe232f068acc00c09e09caf1030c",
+      "imageCount": 5,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1：UA-3DTalk整体框架\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "832b03505d5f8fc9717f8e27eda7442258d7c23f48a14e8352838cf91dde7b84",
+          "alt": "图1：UA-3DTalk整体框架",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2：基于不确定性的变形模块\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "4350eb37a5b9c568ce390d0f17f3e4989b59a8d56e9ecfb471f80192a0f85d0b",
+          "alt": "图2：基于不确定性的变形模块",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：定性对比结果\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "bcf59053dcdd439513c4ecec92b14413553fd18a26ff83d3bed4ea13f0d1186b",
+          "alt": "图3：定性对比结果",
+          "source": {
+            "pagePath": "posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face.md",
+            "committedFileSha256": "72383bc8beb968a579764f9eaeac84a11adab8902d85c82cda1ecf7018d13be8",
+            "rawContentSha256": "672fca4eb315aa3e446c067e5734ee5b5be80bffe07ca7e37490a17d8c877b69",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462961",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462961",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-uncertainty-aware-3d-emotional-talking-face-synthesis-with-emotion-prior-distillation\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-uncertainty-aware-3d-emotional-talking-face\">Uncertainty-Aware 3D Emotional Talking Face Synthesis with Emotion Prior Distillation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 3,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3：与现有方法在HDTF和VFHQ数据集上的定性对比\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "44b7cc2a16dd35edc543ac536828ad5fb74ad34a2f81ead824610ad03254394c",
+          "alt": "图3：与现有方法在HDTF和VFHQ数据集上的定性对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-rap-real-time-audio-driven-portrait-animation.md",
+            "committedFileSha256": "42428a4fefd9dd6afd1e9e6d9306d2d2b192dd2d582c92beb69cfc797d266457",
+            "rawContentSha256": "349fe135334c3361409b517fa9e964dd9464beb7224ed4f7be8910be0c7d958e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461916",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461916",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-rap-real-time-audio-driven-portrait-animation-with-video-diffusion-transformer\">🥈 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation\">RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page2-idx3",
+          "originalImageHTML": "<img alt=\"图4：时间一致性与视觉漂移对比\" loading=\"lazy\" src=\"pdf-image-page2-idx3\">",
+          "originalImageSha256": "38919c96b9134c7f32355ad46fa89adf0175cf8be6649c8c8654e6ae836a0769",
+          "alt": "图4：时间一致性与视觉漂移对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-rap-real-time-audio-driven-portrait-animation.md",
+            "committedFileSha256": "42428a4fefd9dd6afd1e9e6d9306d2d2b192dd2d582c92beb69cfc797d266457",
+            "rawContentSha256": "349fe135334c3361409b517fa9e964dd9464beb7224ed4f7be8910be0c7d958e",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461916",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461916",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-rap-real-time-audio-driven-portrait-animation-with-video-diffusion-transformer\">🥈 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-rap-real-time-audio-driven-portrait-animation\">RAP: Real-Time Audio-Driven Portrait Animation with Video Diffusion Transformer</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-114.md": {
+      "committedFileSha256": "af5a2ca76d485a4c4071fbe5509640038e5184cb0bb20d498025d5f7a78e3b90",
+      "rawContentSha256": "0bedb7a352916a5d518fc181977b9a2569a56a9841a6e149c3393bdac5a87620",
+      "contentSha256": "b8315acf9e648fdc5c3498398a89d974334663a66c21956e838430e82bd4eaf1",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"t-SNE特征可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "d4ec110139c41fe0d70898dd0225efeb61c1824ab56fccd64ecc403b478f29b1",
+          "alt": "t-SNE特征可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic.md",
+            "committedFileSha256": "6e59dd0086dfcf0b47ceb645d0527923e0984ccecf58e610b548e1fdbdb3846e",
+            "rawContentSha256": "8245d3fea5679fe8a42c00d67798471808712fd075a4b6f53fe4876f7a756850",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463476",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463476",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"7-usvexplorer-robust-detection-of-ultrasonic-vocalizations-with-cross-species-generalization\">7. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-usvexplorer-robust-detection-of-ultrasonic\">USVexplorer: Robust Detection of Ultrasonic Vocalizations with Cross Species Generalization</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-117.md": {
+      "committedFileSha256": "c27ef6dfef018864d82146dee9995ccb41c66e2d3fb62032137fc6a686c633b2",
+      "rawContentSha256": "dbfe23a7c97fd63ca94e2ca1dd9ab4e63486b58c953eea5fe979ba5106d5c84e",
+      "contentSha256": "119fc1567a7cf4ec679e374933499378216471ccd3d6a6853c460d99dc7854d7",
+      "imageCount": 7,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: AMS-D训练流程\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "243c2912ae234bed864981f8c9885e62095c26b1c5c3c5a7bf5afbf71389b027",
+          "alt": "图1: AMS-D训练流程",
+          "source": {
+            "pagePath": "posts/2026-04-29-attentive-masked-self-distillation-for.md",
+            "committedFileSha256": "fc46ac1d87932696b3d5526bc078cc6d09621d573165d671aa0f8c06b3a76ff7",
+            "rawContentSha256": "ad3636837fedb07152878e9e7de46dbb654378a6140bbb3b1543230d04800171",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463787",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463787",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"17-attentive-masked-self-distillation-for-respiratory-sound-classification\">17. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for\">Attentive Masked Self-Distillation for Respiratory Sound Classification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2: 掩码策略可视化\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "72fbfc39b9fe2f49649c18f8e48a111380664012e4d77758de3f03b2be170a99",
+          "alt": "图2: 掩码策略可视化",
+          "source": {
+            "pagePath": "posts/2026-04-29-attentive-masked-self-distillation-for.md",
+            "committedFileSha256": "fc46ac1d87932696b3d5526bc078cc6d09621d573165d671aa0f8c06b3a76ff7",
+            "rawContentSha256": "ad3636837fedb07152878e9e7de46dbb654378a6140bbb3b1543230d04800171",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463787",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463787",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"17-attentive-masked-self-distillation-for-respiratory-sound-classification\">17. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-attentive-masked-self-distillation-for\">Attentive Masked Self-Distillation for Respiratory Sound Classification</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 4,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2: 梯度累积效果\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "18dc5fceb6a6f02908df81b35e5754bef57a591393cb786f3e83863cdb6c3451",
+          "alt": "图2: 梯度累积效果",
+          "source": {
+            "pagePath": "posts/2026-04-29-transferable-audio-lottery-tickets-gradient.md",
+            "committedFileSha256": "c8422059274042985f4abb20a3f015c074f256ba591d26a21f34fa8d70549fbc",
+            "rawContentSha256": "4f313bfc15a95578dcebdf1d82b943b685e443555134658b7c6946273f045765",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11461958",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11461958",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"31-transferable-audio-lottery-tickets-gradient-accumulation-for-extreme-sparsity\">31. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-transferable-audio-lottery-tickets-gradient\">Transferable Audio Lottery Tickets: Gradient Accumulation for Extreme Sparsity</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 5,
+          "destination": "pdf-image-page3-idx1",
+          "originalImageHTML": "<img alt=\"图2\" loading=\"lazy\" src=\"pdf-image-page3-idx1\">",
+          "originalImageSha256": "aa760e2b556e3ec9c80ebe047d20c9d09e136cf3506adb3e8f75361beead9c7e",
+          "alt": "图2",
+          "source": {
+            "pagePath": "posts/2026-04-29-snore-sound-classification-based-on-physiological.md",
+            "committedFileSha256": "79a2eb7f964bd7bfe693465772b61d40ef9e3e9de87ceae6d075d4d8a6d326d0",
+            "rawContentSha256": "49d3d28ecc790deb70f3515de103053ca07c7f26dbffed30799d3ba73ae58311",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460686",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460686",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"39-snore-sound-classification-based-on-physiological-features-and-adaptive-loss-function\">39. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological\">Snore Sound Classification Based on Physiological Features and Adaptive Loss Function</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 6,
+          "destination": "pdf-image-page3-idx2",
+          "originalImageHTML": "<img alt=\"图3\" loading=\"lazy\" src=\"pdf-image-page3-idx2\">",
+          "originalImageSha256": "5ee0950756c16ed3d4ba99ac52edd6947b5ca046b1a5c8353f6544c9d766b2d9",
+          "alt": "图3",
+          "source": {
+            "pagePath": "posts/2026-04-29-snore-sound-classification-based-on-physiological.md",
+            "committedFileSha256": "79a2eb7f964bd7bfe693465772b61d40ef9e3e9de87ceae6d075d4d8a6d326d0",
+            "rawContentSha256": "49d3d28ecc790deb70f3515de103053ca07c7f26dbffed30799d3ba73ae58311",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460686",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460686",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"39-snore-sound-classification-based-on-physiological-features-and-adaptive-loss-function\">39. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-snore-sound-classification-based-on-physiological\">Snore Sound Classification Based on Physiological Features and Adaptive Loss Function</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-122.md": {
+      "committedFileSha256": "542d08ace07c3658a96c0c0f3772c42679febbb0a9c1b617a70d90147e74afde",
+      "rawContentSha256": "3824eabf4c33d47fdda671a3bececc7f0a9f7fbf403939e7ff2d66ab80431c13",
+      "contentSha256": "b5ff587e71c9bc08a2c96affb8ff67650e2b1e33b30254e71cba9d0e223d758f",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx3",
+          "originalImageHTML": "<img alt=\"图4：频谱图对比\" loading=\"lazy\" src=\"pdf-image-page4-idx3\">",
+          "originalImageSha256": "6601ee022517502368b8182420fbd96f0aabd52249669de462d019faf6a3579e",
+          "alt": "图4：频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for.md",
+            "committedFileSha256": "77a3e1689b25a788946d5117ccb4a386ebca97a4f471ba3cf0199b841b541a21",
+            "rawContentSha256": "d16fbd0c07713593241d3942d32829b50103baf62cdc0f86810b7400ee422c29",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463670",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463670",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-mixgan-based-non-blind-bandwidth-extension-for-audio-codec\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-mixgan-based-non-blind-bandwidth-extension-for\">MixGAN-based Non-blind Bandwidth Extension for Audio Codec</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-128.md": {
+      "committedFileSha256": "aa2f444ab61c504f839fccf2a45c65f3c2c36a5f99bbc2f026a92684102def27",
+      "rawContentSha256": "b6974dbc1a88ef442eaad5e3c51e3af8903afa2431ccbbf8484d24b102a9784d",
+      "contentSha256": "c34fd0843053be18b0d55aa612f96969d21e8881b09dd7dc953c4e1d849fa137",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx0",
+          "originalImageHTML": "<img alt=\"图1: LLAC总体架构图\" loading=\"lazy\" src=\"pdf-image-page2-idx0\">",
+          "originalImageSha256": "305bbcbce623ac9ea4f517ec60c4674c824e21260eef4a4c360f5529ca892987",
+          "alt": "图1: LLAC总体架构图",
+          "source": {
+            "pagePath": "posts/2026-04-29-llac-learned-lossless-audio-codec.md",
+            "committedFileSha256": "b929315e40e5d81c606e023173f6773cb969ef226113e9dac4cf5d1114f60028",
+            "rawContentSha256": "4b59a105312fa41fa1274d821cd37263a84fe069c0ed354af479240d040046eb",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11465090",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11465090",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-llac-learned-lossless-audio-codec\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-llac-learned-lossless-audio-codec\">LLAC: Learned Lossless Audio Codec</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-132.md": {
+      "committedFileSha256": "03bbfe9cc470111bce841c98af9cadb2bca0d872b18b66104314a10d7823ed5d",
+      "rawContentSha256": "d3aaf51f3cdfa7d40f723dea53e4ad56f31aeef6ee272e0db0dfb6650d115c80",
+      "contentSha256": "61b37fab093a5ec1b891d89cf5b9e4cf370a1404ebaf6fbb6041dc8e0f91d222",
+      "imageCount": 2,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page4-idx1",
+          "originalImageHTML": "<img alt=\"图2：不同输入时长下基线模型的平均EER变化趋势\" loading=\"lazy\" src=\"pdf-image-page4-idx1\">",
+          "originalImageSha256": "64449eec5654ac0b363a67c9d87e3f4e7de8b578a42be11bb16045b7dc4b5a32",
+          "alt": "图2：不同输入时长下基线模型的平均EER变化趋势",
+          "source": {
+            "pagePath": "posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi.md",
+            "committedFileSha256": "c55e6b5731cb94f07590e468d82c09500ebb01bb02fba05d94f84a8aa581a307",
+            "rawContentSha256": "8a143d6db9d130d595449132e4654a336f610f5e7c7e96439a017da400410497",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463587",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463587",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"15-audio-deepfake-detection-at-the-first-greeting\">15. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi\">Audio Deepfake Detection at the First Greeting: &ldquo;Hi!&rdquo;</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page4-idx2",
+          "originalImageHTML": "<img alt=\"图3：效率对比雷达图\" loading=\"lazy\" src=\"pdf-image-page4-idx2\">",
+          "originalImageSha256": "40a80cba05ddccfb83eb8023bdb5ef6c2565687f8b080b62bfcce080b97b8bfd",
+          "alt": "图3：效率对比雷达图",
+          "source": {
+            "pagePath": "posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi.md",
+            "committedFileSha256": "c55e6b5731cb94f07590e468d82c09500ebb01bb02fba05d94f84a8aa581a307",
+            "rawContentSha256": "8a143d6db9d130d595449132e4654a336f610f5e7c7e96439a017da400410497",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11463587",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11463587",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"15-audio-deepfake-detection-at-the-first-greeting\">15. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-audio-deepfake-detection-at-the-first-greeting-hi\">Audio Deepfake Detection at the First Greeting: &ldquo;Hi!&rdquo;</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-133.md": {
+      "committedFileSha256": "c467c38cac5f9e485227a9c8f974e9c3119d891f1fd0d4e35c4360cdb0f8aabe",
+      "rawContentSha256": "546aa23856cf1acea324da28898eff300b6cb854ea26f95f13a082b100303b79",
+      "contentSha256": "58c20b64fc05a7e7a3aa02cfc9fc0a41f3523502fe13c363eaab483786e5db02",
+      "imageCount": 3,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: Mel频谱图对比\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "2529e8642fbb397e2688add1c8655582548307e647d0317dbadd529219ca400a",
+          "alt": "图3: Mel频谱图对比",
+          "source": {
+            "pagePath": "posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse.md",
+            "committedFileSha256": "ce425fbb4383ddd299d460bcc7b6ebbed3cf07e87321a8cc2c500a4da696affb",
+            "rawContentSha256": "39d79740c898708752b0eb65f04f2f42e545591890fc94deafde3e131db5f39a",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460918",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460918",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-switchcodec-adaptive-residual-expert-sparse-quantization-for-high-fidelity-neural-audio-coding\">🥇 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-switchcodec-adaptive-residual-expert-sparse\">SwitchCodec: Adaptive Residual-Expert Sparse Quantization for High-Fidelity Neural Audio Coding</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 1,
+          "destination": "pdf-image-page2-idx1",
+          "originalImageHTML": "<img alt=\"图2: 不同模型生成的心音波形定性比较\" loading=\"lazy\" src=\"pdf-image-page2-idx1\">",
+          "originalImageSha256": "6cd159b2d85878f3c2261167f8a61aad78ef6d9430954b4dbe107e9701d00c14",
+          "alt": "图2: 不同模型生成的心音波形定性比较",
+          "source": {
+            "pagePath": "posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound.md",
+            "committedFileSha256": "fdfa70a1351decbfddda427949376114555f22c25a6048b068e1c32b3281a3c7",
+            "rawContentSha256": "cfec138c2fee9d63c5d0bfba05c02949eb4cc206a0e36562ade22b4c8c141454",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460614",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460614",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"12-cardiobridge-dm-bridging-cross-cohort-heart-sound-synthesis-via-rhythm-aware-semi-supervised-diffusion\">12. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound\">Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        },
+        {
+          "imageOrdinal": 2,
+          "destination": "pdf-image-page2-idx2",
+          "originalImageHTML": "<img alt=\"图3: 模型对引导尺度s和调制因子α的敏感性分析\" loading=\"lazy\" src=\"pdf-image-page2-idx2\">",
+          "originalImageSha256": "bec13e27ba9b8a000ba132e7704e3731ad26a928ac03eaab48ccd7f28d2e9202",
+          "alt": "图3: 模型对引导尺度s和调制因子α的敏感性分析",
+          "source": {
+            "pagePath": "posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound.md",
+            "committedFileSha256": "fdfa70a1351decbfddda427949376114555f22c25a6048b068e1c32b3281a3c7",
+            "rawContentSha256": "cfec138c2fee9d63c5d0bfba05c02949eb4cc206a0e36562ade22b4c8c141454",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11460614",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11460614",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"12-cardiobridge-dm-bridging-cross-cohort-heart-sound-synthesis-via-rhythm-aware-semi-supervised-diffusion\">12. <a href=\"/audio-paper-digest-blog/posts/2026-04-29-cardiobridge-dm-bridging-cross-cohort-heart-sound\">Cardiobridge-DM: Bridging Cross-Cohort Heart Sound Synthesis via Rhythm-Aware Semi-Supervised Diffusion</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    },
+    "posts/icassp2026-task-139.md": {
+      "committedFileSha256": "4225503c9f17e64838e4934853747b3f288a9a2a919f4e3b62459dce5bd9f165",
+      "rawContentSha256": "e16dc621568c276ace6e0fe1ec54dc446ca9d262d01023bce24b727f91c41cc2",
+      "contentSha256": "05e099724b17bb708688f30d456a836fbd5d80fbe1a0c23da056fe8c63438a0b",
+      "imageCount": 1,
+      "occurrences": [
+        {
+          "imageOrdinal": 0,
+          "destination": "pdf-image-page3-idx0",
+          "originalImageHTML": "<img alt=\"图1\" loading=\"lazy\" src=\"pdf-image-page3-idx0\">",
+          "originalImageSha256": "6da48a81cf289419f68f725b2c67793a0000a547b67cf8d802676e53ab0ae013",
+          "alt": "图1",
+          "source": {
+            "pagePath": "posts/2026-04-29-the-synergistic-role-of-audio-and-large-video.md",
+            "committedFileSha256": "cf0cb666f694ebd8de31920e3ceff594275d3ca311a994c46c49baf4aa3f6b08",
+            "rawContentSha256": "66d5210446c35631c42933b4803e131561027eaab4b364af773205f6650af3c7",
+            "paperId": "conference:icassp:2026:icassp-arnumber:11462310",
+            "sourceUrl": "https://ieeexplore.ieee.org/document/11462310",
+            "pdfUrl": "",
+            "identityStatus": "verified",
+            "headingHTML": "<h3 id=\"-the-synergistic-role-of-audio-and-large-video-language-model-in-source-free-video-domain-adaptation\">🥈 <a href=\"/audio-paper-digest-blog/posts/2026-04-29-the-synergistic-role-of-audio-and-large-video\">The Synergistic Role of Audio and Large Video-Language Model in Source-Free Video Domain Adaptation</a></h3>"
+          },
+          "disposition": "missing-original-image"
+        }
+      ]
+    }
+  }
+}

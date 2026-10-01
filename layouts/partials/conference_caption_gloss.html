@@ -16,6 +16,27 @@
             {{- $literalCaption := replace $caption $badAnchor "[ph5P](‘beat’)" -}}
             {{- $content = printf "%s%s%s" (index $parts 0) $literalCaption (index $parts 1) -}}
           {{- end -}}
+          {{- /* The sealed Figure5 artifact contains only its label. The complete
+                caption below was separately read from the exact official PDF page4;
+                this reader-only presentation does not re-sign the source analysis. */ -}}
+          {{- with .missingCaptionRepair -}}
+            {{- $repair := . -}}{{- $evidence := .sourceEvidence | default dict -}}
+            {{- $completeCaption := "Figure 5: MDS with Praat f₀ and duration, adding (top) HNR05 and (bottom) HNR05 + H₁* − H₂*." -}}
+            {{- $sourceURL := "https://www.isca-archive.org/interspeech_2026/du26b_interspeech.pdf" -}}
+            {{- $imageURL := "https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-5.png" -}}
+            {{- $imageHTML := printf `<p><a href="%s"><img alt="原论文 Figure 5：5" loading="lazy" src="%s"></a></p>` $imageURL $imageURL -}}
+            {{- $oldCaption := "<p><em>论文图 5。原论文 Figure 5：“5”。</em></p>" -}}
+            {{- $adjacent := printf "%s\n%s" $imageHTML $oldCaption -}}
+            {{- $compactAdjacent := printf "%s%s" $imageHTML $oldCaption -}}
+            {{- $valid := and (eq .contract "source-bound-missing-conference-caption-presentation-v1") (eq (printf "%T" .figureOrdinal) "float64") (eq (printf "%v" .figureOrdinal) "5") (eq .renderedCaptionHTML $oldCaption) (eq .originalImageHTML $imageHTML) -}}
+            {{- $valid = and $valid (eq $evidence.paperId "conference:interspeech:2026:conference-paper-id:du26b_interspeech") (eq (printf "%T" $evidence.figureOrdinal) "float64") (eq (printf "%v" $evidence.figureOrdinal) "5") (eq (printf "%T" $evidence.sourcePDFPage) "float64") (eq (printf "%v" $evidence.sourcePDFPage) "4") (eq $evidence.officialSourceUrl $sourceURL) (eq $evidence.officialImageUrl $imageURL) -}}
+            {{- $valid = and $valid (eq $evidence.sourcePDFSha256 "67c58b91be09c07ad91a6ede4ccf9010d076f4ad38671e9325d9bce26b518d8c") (eq $evidence.sourceArtifactSha256 "d60d809d41b55281c1c83fcc0a72c60c74deaa3b4f4b67a0e469bdaf6bf9c769") (eq $evidence.officialImageSha256 "6f5c9617dbc1a31b85b4011d09891c7455c44fe9eb41110a4d8d0fb34b11f428") -}}
+            {{- $valid = and $valid (eq $evidence.sealedArtifactCaption "Figure 5:") (eq $evidence.sealedArtifactCaptionSha256 "6fe8aee3ea441d2d1ec3370f714dd70eec304fa91694df7a07e1c1d5bdeba224") (eq $evidence.completeCaptionText $completeCaption) (eq $evidence.completeCaptionTextSha256 (crypto.SHA256 $completeCaption)) -}}
+            {{- if and $valid (eq (len (split $content $oldCaption)) 2) (eq (len (split $content $imageHTML)) 2) (or (in $content $adjacent) (in $content $compactAdjacent)) -}}
+              {{- $replacement := printf `<p><em>论文图 5。原论文完整图注（官方 PDF 第4页）：%s <a href="%s#page=4">查看原论文图注</a></em></p>` ($completeCaption | transform.HTMLEscape) $sourceURL -}}
+              {{- $content = replace $content $oldCaption $replacement -}}
+            {{- end -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
