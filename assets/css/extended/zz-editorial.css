@@ -48,6 +48,8 @@
   --code-bg: var(--rw-surface-subtle);
 }
 body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
+.giscus { max-width: 100%; }
+.giscus-frame { width: 100%; max-width: 100%; box-sizing: border-box; }
 .main, .main:has(.research-workbench), .main:has(.research-library),
 .main:has(.research-home-hero), .main:has(.research-terms), .main:has(.research-entry-grid) {
   max-width: var(--rw-container); padding: 32px 28px 56px;

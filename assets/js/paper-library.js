@@ -113,7 +113,7 @@
       primaryResearchRole: item.primaryResearchRole && typeof item.primaryResearchRole === 'object' ? item.primaryResearchRole : null,
       primaryScientificTopicId: plainText(item.primaryScientificTopicId),
       methodNotApplicable: item.methodNotApplicable, methodNotApplicableReason: plainText(item.methodNotApplicableReason),
-      searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId]
+      searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId, plainText(item.paperId)]
         .concat(tags, categories, taxonomy, item.primaryResearchRole && item.primaryResearchRole.label || '').join(' '))
     };
   }
