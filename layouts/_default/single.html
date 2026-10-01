@@ -74,6 +74,7 @@
       {{- if .Content }}
       {{- $articleContent := replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" .Content }}
       {{- $articleContent = partial "resource_verification_notice.html" (dict "page" . "content" $articleContent) }}
+      {{- $articleContent = partial "conference_caption_gloss.html" (dict "page" . "content" $articleContent) }}
       <div class="post-content md-content research-article" id="article-body" tabindex="-1">
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" $articleContent -}}

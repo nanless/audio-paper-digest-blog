@@ -1,0 +1,24 @@
+{{- /* One source-bound caption presentation exception; never rewrite Markdown. */ -}}
+{{- $content := .content -}}
+{{- $page := .page -}}
+{{- $knownPath := "posts/conference-interspeech-2026-conference-paper-id-du26b-interspeech-88dce59ff6.md" -}}
+{{- $policy := hugo.Data.conference_caption_gloss | default dict -}}
+{{- $pages := $policy.pages | default dict -}}
+{{- if and (eq $policy.contract "source-bound-conference-caption-gloss-presentation-v1") (eq (len $pages) 1) -}}
+  {{- with $page.File -}}
+    {{- if eq .Path $knownPath -}}
+      {{- with index $pages $knownPath -}}
+        {{- if and (eq .rawContentSha256 (crypto.SHA256 $page.RawContent)) (eq .committedFileSha256 (crypto.SHA256 (readFile (printf "content/%s" $knownPath)))) -}}
+          {{- $caption := .renderedCaptionHTML | default "" -}}
+          {{- $badAnchor := "<a href=\"%E2%80%98beat%E2%80%99\">ph5P</a>" -}}
+          {{- $parts := split $content $caption -}}
+          {{- if and (hasPrefix $caption "<p><em>论文图 2。") (hasSuffix $caption "</em></p>") (eq (len (split $caption $badAnchor)) 2) (eq (len $parts) 2) -}}
+            {{- $literalCaption := replace $caption $badAnchor "[ph5P](‘beat’)" -}}
+            {{- $content = printf "%s%s%s" (index $parts 0) $literalCaption (index $parts 1) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $content -}}

@@ -1,0 +1,18 @@
+{
+  "contract": "source-bound-conference-caption-gloss-presentation-v1",
+  "pages": {
+    "posts/conference-interspeech-2026-conference-paper-id-du26b-interspeech-88dce59ff6.md": {
+      "committedFileSha256": "0b4805ab43bc319651515685216d6fd74fb36fe975a0d8bdc1240ce17b1143e3",
+      "rawContentSha256": "aeffd8951fec2a9dfc115239ea06d57150740def25b7f55b2a45e240efbc6908",
+      "renderedCaptionHTML": "<p><em>论文图 2。原论文 Figure 2：“Pitch doubling in <a href=\"%E2%80%98beat%E2%80%99\">ph5P</a>: under structured irregular excitation, trackers may lock to τ/2 rather than τ, yielding a spurious octave rise despite a perceptually level…”。</em></p>",
+      "sourceEvidence": {
+        "paperId": "conference:interspeech:2026:conference-paper-id:du26b_interspeech",
+        "figureOrdinal": 2,
+        "sourceCaptionSha256": "d3bf39ec8ebf48480850c078b72b6f9530b110b46bd579778a235e2fef66000a",
+        "sourceArtifactSha256": "d60d809d41b55281c1c83fcc0a72c60c74deaa3b4f4b67a0e469bdaf6bf9c769",
+        "officialSourceUrl": "https://www.isca-archive.org/interspeech_2026/du26b_interspeech.pdf",
+        "officialImageUrl": "https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/78eda30f9f11/figure-2.png"
+      }
+    }
+  }
+}
