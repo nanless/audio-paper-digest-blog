@@ -1,0 +1,12 @@
+/* Keep all eight primary destinations visible on narrow screens. */
+@media (max-width: 600px) {
+  .header-nav .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 8px;
+    row-gap: 0;
+    overflow-x: visible;
+    white-space: normal;
+  }
+  .header-nav .menu a { white-space: nowrap; }
+}

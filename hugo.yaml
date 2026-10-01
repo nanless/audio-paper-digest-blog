@@ -25,6 +25,9 @@ minify:
 
 menu:
   main:
+    - name: "首页"
+      url: "/"
+      weight: -1
     - name: "论文库"
       url: "/papers/"
       weight: 1
