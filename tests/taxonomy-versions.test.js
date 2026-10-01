@@ -16,10 +16,13 @@ function paper(name, snapshot, ids, extra = {}) {
       return { id, facet: node.facet, label: node.zh };
     }), ...extra };
 }
-test('catalog binds all source definitions and preserves 228/262 while exposing formal 330 current concepts', () => {
-  assert.equal(Object.keys(graph.byId).length, 330);
+test('catalog binds all source definitions and preserves 228/262/330 while exposing formal 338 current concepts', () => {
+  assert.equal(Object.keys(graph.byId).length, 338);
   const previous = catalog.snapshots.find(snapshot => snapshot.registrySha256 === 'a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d');
   assert.equal(previous.concepts.length, 262);
+  const issued330 = catalog.snapshots.find(snapshot => snapshot.registrySha256 === '68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c');
+  assert.equal(issued330.concepts.length, 330);
+  assert.deepEqual(current.concepts.slice(0,330), issued330.concepts);
   assert.deepEqual(current.concepts.slice(0, 262), previous.concepts);
   assert.equal(old.concepts.length, 228);
   assert.equal(graph.byId['task.music-understanding'].zh, '音乐分析');

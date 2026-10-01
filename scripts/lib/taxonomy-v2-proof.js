@@ -9,7 +9,9 @@ const FACETS={engineering:['task'],science:['scientific_topic'],analysis:['scien
 const ROLE_KEYS=['researchType','typeEvidence','domainScope','domainEvidence','primaryResearchRole','primaryTaskId','primaryTaskLabel','primaryScientificTopicId','primaryScientificTopicLabel','primaryMethodId','primaryMethodLabel','methodNotApplicable','methodNotApplicableReason','methodNotApplicableEvidence'];
 const MODEL_KEYS=['researchType','typeEvidence','domainScope','domainEvidence','primaryResearchRole','primaryMethodId','methodNotApplicable','methodNotApplicableReason','methodNotApplicableEvidence','concepts'];
 const FINGERPRINT_KEYS=['contract','selectionContract','paperId','source','registrySha256','projectionSha256','evidenceSha256','promptSha256','model','endpointSha256','accountPoolGroupSha256','implementationSha256','snippetImplementationSha256','identityImplementationSha256','schedulerImplementationSha256','failureImplementationSha256','protectedDependencySha256','roleContract','projectionContract','maxTokens','temperature','reviewMaxTokens','reviewTemperature'];
-const REGISTRIES={a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d:'paper-taxonomy-v1', '68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c':'paper-taxonomy-v2'};
+const SNIPPETS_V2='sealed-source-evidence-snippets-v2',SNIPPETS_V3='sealed-source-evidence-snippets-v3-formfeed-split';
+const V3_REGISTRY='8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3';
+const REGISTRIES={a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d:'paper-taxonomy-v1', '68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c':'paper-taxonomy-v2', [V3_REGISTRY]:'paper-taxonomy-v2'};
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const canonical=x=>Array.isArray(x)?x.map(canonical):x&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,canonical(x[k])])):x;
 const stableHash=x=>sha(JSON.stringify(canonical(x)));
@@ -39,6 +41,8 @@ function validateRecord(record,snapshot,controlled){
  const {proofSha256:classificationProof,...classificationBody}=c;if(!hash(classificationProof)||stableHash(classificationBody)!==classificationProof||classificationProof!==record.classificationProofSha256||stableHash(c)!==record.classificationRecordSha256)fail('完整分类记录SHA');
  if(c.contract!==CONTRACT||c.paperId!==record.paperId||c.runId!==record.runId||c.fingerprint!==record.requestStageFingerprint||c.registrySha256!==record.registrySha256||stableHash(c.source)!==stableHash(source))fail('来源/运行/请求绑定');
  if(!map(snapshot)||snapshot.registrySha256!==record.registrySha256||REGISTRIES[snapshot.registrySha256]!==snapshot.registryVersion||record.registryVersion!==snapshot.registryVersion)fail('签发词表版本');
+ const v3=c.evidenceSelectionContract===SNIPPETS_V3;
+ if(!(v3?(!controlled&&record.registrySha256===V3_REGISTRY):(c.evidenceSelectionContract===SNIPPETS_V2&&record.registrySha256!==V3_REGISTRY)))fail('编号证据/词表/受控上下文profile');
  for(const field of ['classificationRecordSha256','classificationProofSha256','requestStageFingerprint','reviewProofSha256','pageSha256','bodySha256'])if(!hash(record[field]))fail(field+'格式');
  if(!/^page:[a-f0-9]{64}$/.test(record.pageKey||''))fail('pageKey格式');
  if(!map(source)||source.paperId!==record.paperId||!text(source.sourceId))fail('来源身份');
@@ -54,7 +58,7 @@ function validateRecord(record,snapshot,controlled){
  if(stableHash(f)!==c.fingerprint||f.contract!==CONTRACT||f.selectionContract!==c.evidenceSelectionContract||f.paperId!==c.paperId||stableHash(f.source)!==stableHash(source)||f.registrySha256!==record.registrySha256||f.evidenceSha256!==c.evidenceSha256||f.protectedDependencySha256!==c.protectedDependencySha256||f.roleContract!=='historical-source-taxonomy-roles-v2'||f.projectionContract!=='historical-taxonomy-prompt-projection-v2'||!text(f.model)||f.maxTokens!==6000||f.temperature!==0.1||f.reviewMaxTokens!==3000||f.reviewTemperature!==0.1)fail('请求指纹字段漂移');
  for(const k of ['registrySha256','projectionSha256','evidenceSha256','promptSha256','endpointSha256','accountPoolGroupSha256','protectedDependencySha256'])if(!hash(f[k]))fail('请求指纹SHA格式');
  if(f.projectionSha256!==projectionHash(snapshot))fail('正式词表提示投影漂移');
- for(const[k,name]of Object.entries({implementationSha256:'historical-source-taxonomy-classification-v2',snippetImplementationSha256:'source-evidence-snippets-v2',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))if(f[k]!==c.protectedDependencies.files['scripts/lib/'+name+'.js']||!hash(f[k]))fail('请求实现依赖漂移');
+ for(const[k,name]of Object.entries({implementationSha256:'historical-source-taxonomy-classification-v2',snippetImplementationSha256:v3?'source-evidence-snippets-v3':'source-evidence-snippets-v2',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))if(f[k]!==c.protectedDependencies.files['scripts/lib/'+name+'.js']||!hash(f[k]))fail('请求实现依赖漂移');
  require('./source-descriptor-proof').validateSourceDescriptor(controlled?controlled.sourceDescriptor:source);
  const fullDecision={concepts:c.concepts,...Object.fromEntries(ROLE_KEYS.map(k=>[k,c[k]]))};
  if(!Array.isArray(c.concepts)||!Array.isArray(record.evidence)||stableHash(c.concepts)!==stableHash(record.evidence)||stableHash(ROLE_KEYS.map(k=>c[k]))!==stableHash(ROLE_KEYS.map(k=>record[k])))fail('页面角色/证据投影');
@@ -72,13 +76,14 @@ function validateRecord(record,snapshot,controlled){
  if(c.methodNotApplicable){if(!['position','experience'].includes(c.researchType)||c.primaryMethodId!==null||c.primaryMethodLabel!==''||!text(c.methodNotApplicableReason,20)||!map(c.methodNotApplicableEvidence)||c.concepts.some(e=>e.facet==='method'))fail('方法不适用窄例外');}
  else{const m=byId.get(c.primaryMethodId);if(!m||m.facet!=='method'||!seen.has(m.id)||c.primaryMethodLabel!==m.zh||c.methodNotApplicableReason!==''||c.methodNotApplicableEvidence!==null)fail('明确主方法');}
  if(c.concepts.length<(c.methodNotApplicable?1:2)||c.concepts.length>5)fail('概念数量');
- if(record.evidenceSelectionContract!=='sealed-source-evidence-snippets-v2'||c.evidenceSelectionContract!==record.evidenceSelectionContract||!Array.isArray(record.quoteSelections)||stableHash(record.quoteSelections)!==stableHash(c.quoteSelections))fail('编号证据契约');
+ if(record.evidenceSelectionContract!==(v3?SNIPPETS_V3:SNIPPETS_V2)||c.evidenceSelectionContract!==record.evidenceSelectionContract||!Array.isArray(record.quoteSelections)||stableHash(record.quoteSelections)!==stableHash(c.quoteSelections))fail('编号证据契约');
  const raw=parseStrictJson(c.modelResponseText);exact(raw,MODEL_KEYS,'模型选择');
  const injected=parseStrictJson(c.responseText);exact(injected,MODEL_KEYS,'注入原文响应');
  if(sha(c.modelResponseText)!==c.modelResponseSha256||sha(c.responseText)!==c.responseSha256)fail('响应原始字节SHA');
  const selections=record.quoteSelections;const wanted=c.concepts.length+2+(c.methodNotApplicable?1:0);if(selections.length!==wanted)fail('概念/type/domain/NA编号数量');
  const expectedSelections=new Set();
  function verifySpan(e,kind,conceptId,choice){
+  if(v3&&typeof e.quote==='string'&&e.quote.includes('\f'))fail('V3所选编号不得跨换页符');
   if(!text(e.quote,20)||!text(e.rationale,5)||!Number.isSafeInteger(e.quoteStart)||e.quoteStart<0||!Number.isSafeInteger(e.evidenceQuoteStart)||e.evidenceQuoteStart<0||sha(e.quote)!==e.quoteSha256)fail('逐字证据结构');
   exact(choice,['evidenceId','rationale'],'编号选择');
   const matches=selections.filter(s=>s.selectionRole===kind&&(kind!=='concept'||s.conceptId===conceptId));if(matches.length!==1)fail('编号唯一性');const s=matches[0];

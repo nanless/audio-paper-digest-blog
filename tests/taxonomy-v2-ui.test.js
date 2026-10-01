@@ -7,8 +7,8 @@ function entry(f,slug){const r=f.record;return {title:'Synthetic '+slug,pageType
  taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceType:r.evidenceType,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',
  researchType:r.researchType,domainScope:r.domainScope,primaryResearchRole:r.primaryResearchRole,primaryTaskId:r.primaryTaskId,primaryScientificTopicId:r.primaryScientificTopicId,
  primaryMethodId:r.primaryMethodId,task:r.primaryTaskLabel,method:r.primaryMethodLabel,methodNotApplicable:r.methodNotApplicable,methodNotApplicableReason:r.methodNotApplicableReason};}
-test('all eight v2 types filter by explicit main role and scope without inferring engineering task; 330 concepts retain nine facets',()=>{
- assert.equal(graph.facets.length,9);assert.equal(Object.keys(graph.byId).length,330);
+test('all eight v2 types filter by explicit main role and scope without inferring engineering task; 338 concepts retain nine facets',()=>{
+ assert.equal(graph.facets.length,9);assert.equal(Object.keys(graph.byId).length,338);
  for(const researchType of core.researchTypeLabels?Object.keys(core.researchTypeLabels):[]){
   const f=fixture({researchType,na:researchType==='position'||researchType==='experience',domainScope:'out-of-domain'}),e=entry(f,researchType),groups=core.groupPapers([e],graph),role=f.record.primaryResearchRole;
   assert.equal(graph.resolveRecord(e).status,'verified',researchType);
