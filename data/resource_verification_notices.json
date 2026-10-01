@@ -1,0 +1,17 @@
+{
+  "contract": "historical-resource-placeholder-presentation-v1",
+  "pages": {
+    "posts/2026-05-01-lrs-voxmm-a-benchmark-for-in-the-wild-audio.md": {
+      "rawContentSha256": "e217287d69a56cdd466608520451de338c9b4544ad6a811aa9c3473006a0faed"
+    },
+    "posts/2026-06-26-phonetic-and-semantic-analyses-of-spoken-corpora.md": {
+      "rawContentSha256": "0309ff88586ef32c5e6de5e3e829518ad2639c8d5c3a6998860923a82e1daae8"
+    },
+    "posts/2026-05-01.md": {
+      "rawContentSha256": "752aa39d833dede06ac9d975204300ee0ed9dd3418f34194a057714ef5fef017"
+    },
+    "posts/2026-06-26.md": {
+      "rawContentSha256": "c0f7ce08492cd40f5c3ca3c71f80e8ed5cc311937c046c97acfb3df4af09a7a7"
+    }
+  }
+}

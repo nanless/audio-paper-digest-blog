@@ -1,0 +1,17 @@
+{{- /* Exact historical placeholders only; article source remains unchanged. */ -}}
+{{- $content := .content -}}
+{{- $page := .page -}}
+{{- $notices := hugo.Data.resource_verification_notices | default dict -}}
+{{- $pages := $notices.pages | default dict -}}
+{{- with $page.File -}}
+  {{- with index $pages .Path -}}
+    {{- if eq .rawContentSha256 (crypto.SHA256 $page.RawContent) -}}
+      {{- $placeholder := "<p>The request was rejected because it was considered high risk</p>" -}}
+      {{- if eq (len (findRE $placeholder $content)) 1 -}}
+        {{- $notice := "<p class=\"resource-verification-notice\">资源检查暂未完成，请通过原文或论文 PDF 核对资源链接。</p>" -}}
+        {{- $content = replace $content $placeholder $notice -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $content -}}
