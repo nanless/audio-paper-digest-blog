@@ -1,0 +1,36 @@
+{
+  "contract": "formal-v2-initial-six-record-serialization-pins-v1",
+  "sourceFileSha256": "6fae9a039b533886557e912974c27e7a3713f171bc4027bf4cf7f525472ff93a",
+  "records": {
+    "content/posts/2026-05-27-duogesture-neuro-inspired-and-biomechanically.md": {
+      "paperId": "arxiv:2605.26236",
+      "proofSha256": "56f98e9b1520095d4f779cc224226e16259d85c5fa82536919ce3284f73da997",
+      "jsonSha256": "98f498abf6ffd371e616913724d2e05f1fe562dc56905218b6b239cfccf39069"
+    },
+    "content/posts/2026-06-16-freesonic-training-free-temporal-aware-decoupled.md": {
+      "paperId": "arxiv:2606.15186",
+      "proofSha256": "893e651bb9020f65ece6b9b9e6413d7c66b2339b4aaabb1d0302151176e8d9c6",
+      "jsonSha256": "ee71a65740d097a7a3a5f357f17ba10e179d2d8682ce17f9dd2ab7a05ff28e0d"
+    },
+    "content/posts/2026-06-26-phonetic-and-semantic-analyses-of-spoken-corpora.md": {
+      "paperId": "arxiv:2606.26360",
+      "proofSha256": "56326218ba91232921e05bd7507b802a48dca9a01dc8770dc4b31cb475c8d2cd",
+      "jsonSha256": "ff127a0ab72b83aca7820ad0e7d9015853704621be6354e0e438629791731066"
+    },
+    "content/posts/2026-08-18-evidence-of-absence-cross-modal-abductive-risk-2608-14952.md": {
+      "paperId": "arxiv:2608.14952",
+      "proofSha256": "750f7e2ac16380d2fce00ece5ce210873b56fcf90e0b7be3f6f6bcc4935350f3",
+      "jsonSha256": "1ffb347c72146ffca86b5703d42b61d867b76dd2212f0e52b5dda615b38175a8"
+    },
+    "content/posts/2026-08-20-mitigating-spectral-bias-in-neural-operators-for-2608-18141.md": {
+      "paperId": "arxiv:2608.18141",
+      "proofSha256": "5aa9202d81541e1e003929f13f255cd8190e396b8d8b2204839b6073bdfffef2",
+      "jsonSha256": "ca70bdfb86a54e23bc43892b97cff54d25cec7846cf3b2c59d513ca9f393799e"
+    },
+    "content/posts/2026-08-25-humanoid-musical-robots-as-experimental-2608-20433.md": {
+      "paperId": "arxiv:2608.20433",
+      "proofSha256": "16ed72afc49157da50a681c507f736c6d91acb617c87c1621332b1e2b1d4b61d",
+      "jsonSha256": "0f2d1259aeba39683c5aad14c0513fad9153d40d4b19f7fab5619965c6eea49c"
+    }
+  }
+}

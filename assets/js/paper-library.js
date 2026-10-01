@@ -773,7 +773,7 @@
     try {
       if (!window.ResearchReadingExport) throw new Error('导出模块尚未就绪。');
       var entries = Array.from(selectedPapers.values());
-      var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href });
+      var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href, taxonomyGraph: graph });
       window.ResearchReadingExport.download(result);
       exportStatus.textContent = '已导出 ' + result.exported + ' 条' + (result.skipped ? '；跳过 ' + result.skipped + ' 条身份未核实的引用' : '') + (result.incomplete ? '；' + result.incomplete + ' 条引用仅含可得字段' : '') + '。';
     } catch (error) { exportStatus.textContent = error.message; }
