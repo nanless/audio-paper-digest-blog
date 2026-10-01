@@ -1,0 +1,12 @@
+{{- /* JSON for existing JavaScript stableHash inputs only. Go sorts the fixed
+     ASCII proof keys, but escapes U+2028/U+2029 even with HTML escaping disabled.
+     Protect every escaped backslash pair before restoring those two characters,
+     so literal "\\u2028" text and arbitrary backslash parity stay byte exact.
+     Serialized JSON cannot contain a literal NUL; it is always escaped. */ -}}
+{{- $json := . | jsonify (dict "noHTMLEscape" true) -}}
+{{- $sentinel := printf "%c" 0 -}}
+{{- $json = replace $json `\\` $sentinel -}}
+{{- $json = replace $json `\u2028` (printf "%c" 8232) -}}
+{{- $json = replace $json `\u2029` (printf "%c" 8233) -}}
+{{- $json = replace $json $sentinel `\\` -}}
+{{- return $json -}}

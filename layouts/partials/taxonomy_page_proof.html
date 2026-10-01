@@ -72,7 +72,7 @@
   {{- $record := index ($v2History.records | default dict) $key | default dict -}}
   {{- if $record -}}
     {{- $body := newScratch }}{{ $body.Set "record" dict }}{{ range $k, $v := $record }}{{ if ne $k "proofSha256" }}{{ $body.SetInMap "record" $k $v }}{{ end }}{{ end -}}
-    {{- $valid := and (eq (crypto.SHA256 (($body.Get "record") | jsonify (dict "noHTMLEscape" true))) $record.proofSha256) (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) -}}
+    {{- $valid := and (eq (crypto.SHA256 (($body.Get "record") | partial "research_canonical_json.html")) $record.proofSha256) (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) -}}
     {{- if and $valid $proof.paperId (ne $proof.paperId $record.paperId) }}{{ $valid = false }}{{ end -}}
     {{- $explicitId := .Params.paper_digest_paper_id | default "" -}}
     {{- with .Params.paper_digest_arxiv_id }}{{ $explicitId = printf "arxiv:%s" (replaceRE `v[1-9][0-9]*$` "" .) }}{{ end -}}
