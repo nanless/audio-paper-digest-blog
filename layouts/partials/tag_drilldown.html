@@ -14,10 +14,7 @@
 {{- $concepts := index $registry "concepts" | default slice }}
 
 {{- /* 1. 定位当前标签对应的概念（按 zh label 精确匹配） */}}
-{{- $self := dict }}
-{{- range $concepts }}
-  {{- if eq .zh $termName }}{{ $self = . }}{{ end }}
-{{- end }}
+{{- $self := .concept | default dict }}
 
 {{- if $self }}
 {{- $selfId := $self.id }}
@@ -72,7 +69,7 @@
 {{- if gt (len $rows) 0 }}
 <section class="tag-drill" aria-label="子标签下钻">
   <h2 class="tag-drill__title">子标签</h2>
-  <p class="tag-drill__note">下方按新版分类的<b>论文记录</b>统计：已核身份去重，身份待核按页面保留。“直接”只含明确标注该方向的论文；“含子树”同时包含下级方向，同一论文记录只计一次。点击名称进入论文库继续筛选。旧标签没有受控分类记录，不计入这些数字；上方“共 {{ $total }} 页”仍是精确标签页面数，两种口径不可相加。</p>
+  <p class="tag-drill__note">下方只统计已核验方向的<b>论文记录</b>，按已核身份去重，身份待核时按页面保留。“直接”只含明确标注该方向的论文；“含子树”同时包含下级方向。点击名称进入论文库继续筛选；数量与上方按标签名称收录的页面数不同。</p>
   <ul class="tag-drill__list">
     {{- range $row := $rows }}
     {{- $zh := $row.concept.zh }}

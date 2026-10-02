@@ -1,0 +1,45 @@
+{{- /* Keep the exact tag URL cohort. Classifications come from the accepted
+     page proof, including historical supplements, never a frontmatter flag. */ -}}
+{{- $page := .page -}}
+{{- $term := .termName -}}
+{{- $groups := newScratch }}{{ $groups.Set "papers" dict -}}
+{{- $paperPages := 0 }}{{ $unclassifiedPages := 0 -}}
+{{- range $page.Pages -}}
+  {{- $metadata := partial "research_metadata.html" . -}}
+  {{- if eq $metadata.pageType "paper" -}}
+    {{- $paperPages = add $paperPages 1 -}}
+    {{- $proof := partial "taxonomy_page_proof.html" . -}}
+    {{- $validRecords := partial "taxonomy_valid_records.html" . -}}
+    {{- $valid := and (eq $proof.contract "paper-taxonomy-flat-tags-compat-v1") (gt (len $validRecords) 0) (eq (len $validRecords) (len ($proof.concepts | default slice))) -}}
+    {{- $ids := slice }}{{ if $valid }}{{ range $validRecords }}{{ $ids = union $ids (slice .id) }}{{ end }}{{ end -}}
+    {{- if not $valid }}{{ $unclassifiedPages = add $unclassifiedPages 1 }}{{ end -}}
+    {{- $key := partial "research_identity.html" . -}}
+    {{- with index ($groups.Get "papers") $key }}{{ $valid = or .classified $valid }}{{ $ids = union .ids $ids }}{{ end -}}
+    {{- $groups.SetInMap "papers" $key (dict "classified" $valid "ids" $ids) -}}
+  {{- end -}}
+{{- end -}}
+{{- $classified := 0 -}}
+{{- range ($groups.Get "papers") }}{{ if .classified }}{{ $classified = add $classified 1 }}{{ end }}{{ end -}}
+{{- /* Exact current preferred labels only. Ambiguous or obsolete labels stay
+     usable as precise text archives and are never guessed into a direction. */ -}}
+{{- $matches := slice -}}
+{{- range ((index hugo.Data "taxonomy-registry").concepts | default slice) -}}
+  {{- if and (eq .zh $term) (eq (.status | default "active") "active") }}{{ $matches = $matches | append . }}{{ end -}}
+{{- end -}}
+{{- $concept := dict }}{{ $directionStats := dict -}}
+{{- if eq (len $matches) 1 -}}
+  {{- $concept = index $matches 0 -}}
+  {{- range (partialCached "taxonomy_concept_counts.html" "global") -}}
+    {{- if eq .id $concept.id }}{{ $directionStats = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- /* This is member -> accepted concept association, not label -> concept
+     inference. One identity contributes at most once to each direct concept. */ -}}
+{{- $counts := newScratch -}}
+{{- range ($groups.Get "papers") }}{{ range .ids }}{{ $counts.Add . 1 }}{{ end }}{{ end -}}
+{{- $associated := slice -}}
+{{- range ((index hugo.Data "taxonomy-registry").concepts | default slice) -}}
+  {{- $count := $counts.Get .id | default 0 -}}
+  {{- if gt $count 0 }}{{ $associated = $associated | append (dict "concept" . "count" $count "sortKey" (printf "%08d:%s" (sub 100000 $count) .id)) }}{{ end -}}
+{{- end -}}
+{{- return (dict "totalPages" (len $page.Pages) "paperPages" $paperPages "nonPaperPages" (sub (len $page.Pages) $paperPages) "paperCount" (len ($groups.Get "papers")) "classifiedPaperCount" $classified "unclassifiedPageCount" $unclassifiedPages "concept" $concept "directionStats" $directionStats "associatedDirections" (first 8 (sort $associated "sortKey"))) -}}
