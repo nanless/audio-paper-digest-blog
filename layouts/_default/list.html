@@ -30,47 +30,33 @@
 </header>
 {{- end }}
 
-{{- /* P0-5：逐标签页（tags taxonomy term）新旧口径提示条 + P1-4 主/次任务计数。
-       数据只来自本页 .Pages 自带的 frontmatter，不读取仓库 registry 文件。 */}}
+{{- /* Preserve exact tag archive membership; count accepted page proofs and
+       paper identities rather than mistaking sidecar pages for old tags. */}}
 {{- if and (eq .Kind "term") (eq .Type "tags") }}
 {{- $termName := .Data.Term | default .Title }}
-{{- $termPages := .Pages }}
-{{- $total := len $termPages }}
-{{- $new := 0 }}
-{{- $old := 0 }}
-{{- $asPrimary := 0 }}
-{{- $asSupplement := 0 }}
-{{- range $termPages }}
-  {{- if .Params.paper_digest_taxonomy_contract }}
-    {{- $new = add $new 1 }}
-    {{- if eq (.Params.paper_digest_primary_task | default "") $termName }}
-      {{- $asPrimary = add $asPrimary 1 }}
-    {{- else }}
-      {{- $asSupplement = add $asSupplement 1 }}
+{{- $archive := partial "tag_archive_stats.html" (dict "page" . "termName" $termName) }}
+<aside class="taxonomy-notice taxonomy-notice--current" aria-label="标签索引与研究方向">
+  <p class="taxonomy-notice__title">标签索引</p>
+  <p class="taxonomy-notice__body">此入口按页面中保留的标签名称收录，共 {{ $archive.totalPages }} 页，包含 {{ $archive.paperCount }} 条论文记录{{ if $archive.nonPaperPages }}及 {{ $archive.nonPaperPages }} 页汇总或其他内容{{ end }}。论文记录按已核身份去重，身份待核时按页面保留；其中 {{ $archive.classifiedPaperCount }} 条已有已核验的研究方向。标签名称的收录范围与研究方向筛选不同。</p>
+  {{- if $archive.unclassifiedPageCount }}<p class="taxonomy-notice__body">其中 {{ $archive.unclassifiedPageCount }} 页论文解读尚无完整的已核验方向；标签名称仍可用于查找，不能据此推断论文分类。</p>{{ end }}
+  {{- with $archive.concept }}
+  <p class="taxonomy-notice__body"><a href="{{ printf "%s?concept=%s" ("papers/" | relURL) (.id | urlquery) }}">按已核验方向浏览：{{ .zh }}</a>（全站直接 {{ $archive.directionStats.direct }} 条 · 含下级 {{ $archive.directionStats.sub }} 条论文记录）。</p>
+  {{- end }}
+</aside>
+{{- if and (not $archive.concept) $archive.associatedDirections }}
+{{- $facetNames := dict "task" "任务" "method" "方法" "setting" "条件" "signal" "信号" "application" "应用" "research_focus" "研究重点" "artifact" "研究产物" "scientific_topic" "科学主题" "model_family" "模型家族" }}
+<section class="tag-drill" aria-label="本索引论文的研究方向">
+  <h2 class="tag-drill__title">本索引论文的研究方向</h2>
+  <p class="tag-drill__note">仅取本页论文已有的已核验分类，同一篇论文在每个方向只计一次；多个方向可能重叠。这些关联不表示标签名称与某个研究方向等同。</p>
+  <ul class="tag-drill__list">
+    {{- range $archive.associatedDirections }}
+    <li class="tag-drill__item" data-associated-concept="{{ .concept.id }}"><a class="tag-drill__link" href="{{ printf "%s?concept=%s" ("papers/" | relURL) (.concept.id | urlquery) }}">{{ .concept.zh }}</a><span class="tag-drill__counts">{{ index $facetNames .concept.facet }} · 本索引 {{ .count }} 条论文记录</span></li>
     {{- end }}
-  {{- else }}
-    {{- $old = add $old 1 }}
-  {{- end }}
+  </ul>
+  <a href="{{ "tags/" | relURL }}">浏览全部研究方向 →</a>
+</section>
 {{- end }}
-{{- if gt $old 0 }}
-<aside class="taxonomy-notice taxonomy-notice--mixed" aria-label="标签口径提示">
-  <p class="taxonomy-notice__title">新旧混合索引（含 {{ $old }} 页旧标签页）</p>
-  {{- if gt $new 0 }}
-  <p class="taxonomy-notice__body">本标签共 {{ $total }} 页：{{ $new }} 页已按新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>）标注，{{ $old }} 页仍是旧版裸 <code>tags</code> 页面。此处的收录数只是<b>扁平标签计数</b>，不等于新版九分面语义统计，也不能与汇总页“热门方向”（只统计主任务）直接相加比较；主/次之分只覆盖合同页——其中<b>作为主任务 {{ $asPrimary }} 篇 / 作为补充标签 {{ $asSupplement }} 篇</b>。</p>
-  {{- else }}
-  <p class="taxonomy-notice__body">本标签下 {{ $total }} 页全部是旧版裸 <code>tags</code> 页面，未携带新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>），因此无法区分主任务与补充标签。此处的收录数只是<b>扁平标签计数</b>，不等于新版九分面语义统计，也不能与汇总页“热门方向”（只统计主任务）直接比较。</p>
-  {{- end }}
-</aside>
-{{- else }}
-<aside class="taxonomy-notice taxonomy-notice--current" aria-label="标签口径提示">
-  <p class="taxonomy-notice__title">新版受控标签</p>
-  <p class="taxonomy-notice__body">本标签下 {{ $total }} 页全部按新版受控标签合同（<code>paper-taxonomy-flat-tags-compat-v1</code>）标注，逐标签 facet 与 registry SHA 记录在各页 frontmatter 中。计数口径：<b>作为主任务 {{ $asPrimary }} 篇 / 作为补充标签 {{ $asSupplement }} 篇</b>；汇总页“热门方向”只统计主任务，对应本页的“作为主任务”计数。</p>
-</aside>
-{{- end }}
-
-{{- /* P1 逐标签页下钻：零级标签页展示一级子标签，一级标签页展示二级子标签；
-       旧标签（registry 快照里找不到 zh 精确匹配的 concept）只保留上面的提示条，不下钻。 */}}
-{{- partial "tag_drilldown.html" (dict "page" . "termName" $termName) }}
+{{- partial "tag_drilldown.html" (dict "page" . "termName" $termName "concept" $archive.concept) }}
 {{- end }}
 
 {{- if .Content }}
