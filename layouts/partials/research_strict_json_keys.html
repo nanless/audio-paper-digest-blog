@@ -1,0 +1,28 @@
+{{- /* A JSON lexer detects duplicate object keys before last-key-wins parsing.
+     Values and strings are tokens; braces/commas inside quoted text are ignored.
+     This is integrity replay only and is not a semantic evidence validator. */ -}}
+{{- $raw := . }}{{ $valid := and (eq (printf "%T" $raw) "string") (strings.HasPrefix (strings.TrimSpace $raw) "{") (strings.HasSuffix (strings.TrimSpace $raw) "}") -}}
+{{- $parsed := try (transform.Unmarshal (dict "format" "json") $raw) }}{{ if $parsed.Err }}{{ $valid = false }}{{ end -}}
+{{- if $valid -}}
+  {{- $tokens := findRE `"(?:[^"\\]|\\.)*"|[{}\[\]:,]|true|false|null|-?(?:0|[1-9][0-9]*)(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?` $raw -}}
+  {{- $stack := slice }}{{ $serial := 0 }}{{ $states := newScratch }}{{ $seen := newScratch -}}
+  {{- range $token := $tokens -}}
+    {{- if or (eq $token "{") (eq $token "[") -}}
+      {{- $serial = add $serial 1 }}{{ $id := printf "%d" $serial }}{{ $stack = $stack | append (dict "id" $id "object" (eq $token "{")) }}{{ $states.Set $id (eq $token "{") -}}
+    {{- else if or (eq $token "}") (eq $token "]") -}}
+      {{- if $stack }}{{ $stack = first (sub (len $stack) 1) $stack }}{{ else }}{{ $valid = false }}{{ end -}}
+    {{- else if $stack -}}
+      {{- $scope := index $stack (sub (len $stack) 1) -}}
+      {{- if and $scope.object (eq $token ",") }}{{ $states.Set $scope.id true -}}
+      {{- else if and $scope.object ($states.Get $scope.id) (strings.HasPrefix $token "\"") -}}
+        {{- $decoded := try (transform.Unmarshal (dict "format" "json") $token) -}}
+        {{- if $decoded.Err }}{{ $valid = false }}{{ else -}}
+          {{- $key := printf "%s\x00%s" $scope.id $decoded.Value -}}
+          {{- if $seen.Get $key }}{{ $valid = false }}{{ else }}{{ $seen.Set $key true }}{{ end -}}
+          {{- $states.Set $scope.id false -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}

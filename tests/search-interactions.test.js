@@ -192,3 +192,21 @@ test('经典搜索用快照注入的 taxonomyAliases 召回父概念与别名', 
   assert.equal(browser.nodes.searchResults.children.length, 1);
   assert.match(browser.nodes.searchResults.textContent, /论文 1/);
 });
+
+// The core may fail to load independently. Keyword list/reset must remain usable
+// without rendering unverified type-aware classification labels.
+test('absent taxonomy core preserves ordinary and typed keyword cards plus zero-match reset', async () => {
+  const browser = browserFixture('library', [record(), { ...record(1), taxonomyClassificationContract: 'historical-source-taxonomy-classification-v2', researchType: 'science', primaryResearchRole: { kind: 'scientific_topic', conceptId: 'scientific_topic.phonetics', label: '语音学' } }]);
+  await browser.ready();
+  assert.equal(browser.window.ResearchTaxonomy, undefined);
+  assert.match(browser.nodes['library-count'].textContent, /找到 2 条/);
+  assert.equal(browser.nodes['library-results'].children.length, 2);
+  for (const card of browser.nodes['library-results'].children) assert.equal(card.children[0].children[0].children[0].tagName, 'a');
+  assert.ok(!browser.nodes['library-results'].textContent.includes('主要研究主题'));
+  browser.nodes['library-query'].value = 'no-matching-evidence';
+  browser.nodes['paper-library-filters'].dispatch('submit');
+  assert.match(browser.nodes['library-count'].textContent, /找到 0 条/);
+  browser.nodes['library-results'].children[0].children[0].dispatch('click');
+  assert.match(browser.nodes['library-count'].textContent, /找到 2 条/);
+  assert.equal(browser.nodes['library-results'].children.length, 2);
+});

@@ -76,7 +76,7 @@
       {{- if and (eq .facet "method") (eq .zh $proof.primaryMethodLabel) }}{{ $primaryMethodId = .id }}{{ $method = .zh }}{{ end -}}
     {{- end -}}
   {{- end -}}
-  {{- if eq $proof.classificationContract "historical-source-taxonomy-classification-v2" -}}
+  {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $proof.classificationContract -}}
     {{- /* Only an accepted, exact v2 proof replaces legacy task heuristics. */ -}}
     {{- $task = $proof.primaryTaskLabel | default "" -}}
     {{- $method = $proof.primaryMethodLabel | default "" -}}

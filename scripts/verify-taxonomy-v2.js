@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const api=require('./lib/taxonomy-v2-proof');
+const api=require('./lib/taxonomy-public-proof');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 function verify(root){
  const collections=[['taxonomy-history-v2.json','historical-source-taxonomy-supplement-v2',false],['current-page-taxonomy-history-v2.json','historical-current-page-source-taxonomy-supplement-v2',true]].filter(([name])=>fs.existsSync(path.join(root,'data',name)));if(!collections.length)return {records:0,currentPageRecords:0};

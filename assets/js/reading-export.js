@@ -20,7 +20,7 @@
   function researchFields(entry, graph) {
     var empty = ['暂无已核验的研究类型信息', '', '', '', '', '', '', ''];
     if (!taxonomy || !graph || typeof graph.resolveRecord !== 'function'
-      || entry.taxonomyClassificationContract !== taxonomy.v2Contract) return empty;
+      || ![taxonomy.v2Contract, taxonomy.v3Contract].includes(entry.taxonomyClassificationContract)) return empty;
     var resolved = graph.resolveRecord(entry);
     if (resolved.status !== 'verified' || !resolved.concepts.length) return empty;
     var issued = graph.versions[resolved.registrySha256];
@@ -33,7 +33,7 @@
         + issued.path(node.id).map(function (part) { return part.zh; }).join(' > ');
     }).join('；');
     return ['研究类型与方向已核验', taxonomy.researchTypeLabels[entry.researchType], taxonomy.domainLabels[entry.domainScope],
-      taxonomy.roleLabels[role.kind], roleNode.zh, method,
+      taxonomy.primaryRoleLabel(entry), roleNode.zh, method,
       entry.methodNotApplicable === true ? plain(entry.methodNotApplicableReason) : '', paths];
   }
   function build(entries, format, options) {
@@ -76,7 +76,8 @@
       lines.push('分类核验状态：' + fields[0]);
       if (fields[0] === '研究类型与方向已核验') {
         lines.push('研究类型：' + markdown(fields[1]), '研究范围：' + markdown(fields[2]),
-          markdown(fields[3]) + '：' + markdown(fields[4]), '主要研究方法：' + markdown(fields[5]));
+          markdown(fields[3]) + '：' + markdown(fields[4]));
+        if (!(fields[3] === '主要研究机制' && fields[4] === fields[5])) lines.push('主要研究方法：' + markdown(fields[5]));
         if (fields[6]) lines.push('方法不适用理由：' + markdown(fields[6]));
         lines.push('直接分类路径：' + markdown(fields[7]));
       }

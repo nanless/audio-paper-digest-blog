@@ -2,7 +2,7 @@
   "contract": "paper-taxonomy-presentation-selection-v1",
   "baseRegistrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
   "baseSnapshotSha256": "05046ef39ee694db3da5de2e24193bd7ec31b39efd18388bb0ae7c740f2b56b2",
-  "preferredRegistrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
-  "preferredSnapshotSha256": "91947cb14473c88009c2821336ea25bd8a2173b4fea58fc69e1ed1d571613e4f",
-  "preferredProjectionSha256": "257d5d219ddd4750a0cc5491a418753d051456d027a648c7e41f7f640e6774f0"
+  "preferredRegistrySha256": "cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638",
+  "preferredSnapshotSha256": "59f8139108ca8e9d8c473d174e871b3aedcfb2b3844517599d466934c98bd50a",
+  "preferredProjectionSha256": "d9634044703f7172a2785e1a2502120b272723fe17d871c63897a7b287f600a2"
 }

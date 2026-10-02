@@ -357,14 +357,14 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
-    if (entry.taxonomyClassificationContract === 'historical-source-taxonomy-classification-v2' && entry.primaryResearchRole) {
+    if (api && [api.v2Contract, api.v3Contract].includes(entry.taxonomyClassificationContract) && entry.primaryResearchRole) {
       var roles = document.createElement('p'); roles.className = 'taxonomy-note';
       roles.textContent = [api.researchTypeLabels[entry.researchType], api.domainLabels[entry.domainScope],
-        (api.roleLabels[entry.primaryResearchRole.kind] || '主要研究角色') + '：' + entry.primaryResearchRole.label,
+        api.primaryRoleLabel(entry) + '：' + entry.primaryResearchRole.label,
         entry.methodNotApplicable === true ? '研究方法不适用' : ''].filter(Boolean).join(' · ');
       body.appendChild(roles);
     }
-    if (['historical-direct-taxonomy-supplement-v1', 'historical-source-taxonomy-supplement-v2'].includes(entry.taxonomyEvidenceContract)) {
+    if (['historical-direct-taxonomy-supplement-v1', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.taxonomyEvidenceContract)) {
       var classificationNote = document.createElement('p'); classificationNote.className = 'taxonomy-note';
       classificationNote.textContent = '历史分类已补充核验 · 原文和原有标签保留'; body.appendChild(classificationNote);
     } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.taxonomyContract) {

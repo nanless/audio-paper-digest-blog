@@ -1,0 +1,31 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
+const repo=path.resolve(__dirname,'..'),api=require('../scripts/lib/taxonomy-public-proof'),declared=require('../scripts/lib/taxonomy-v2-371-proof'),engine=require('../scripts/lib/taxonomy-classification-v3-proof'),cases=require('./fixtures/taxonomy-371-public'),core=require('../assets/js/taxonomy-core');
+test('root approved371 uses exactV2 FF profile/installed116; no old snapshot rewriting',()=>{assert.equal(cases.snapshot.registrySha256,declared.profile.registrySha256);for(const c of cases.rows()){if(c.expected)assert.equal(api.validatePublicRecord(c.record,c.snapshot),true,c.name);else assert.throws(()=>api.validatePublicRecord(c.record,c.snapshot),undefined,c.name);}
+ const f=cases.fixture();for(const key of Object.keys(declared.profile)){const profile={...declared.profile,[key]:'unapproved'};assert.throws(()=>engine.validateDeclared371Profile(f.record,f.snapshot,profile),/未知371 producer profile/,key);}
+ const altered=structuredClone(cases.snapshot);altered.concepts[0].aliases.push('invented');assert.throws(()=>api.validatePublicRecord(f.record,altered),/快照内容漂移/);
+});
+test('371 root projection/static/catalog/policy close; old338 whole concept prefix and old snapshots remain unchanged',()=>{
+ const graph=core.createRegistry(cases.snapshot,require('../data/taxonomy-catalog.json'));assert.equal(graph.facets.length,9);assert.equal(Object.keys(graph.byId).length,371);
+ const old=require('../data/taxonomy-snapshots/8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3.json');assert.deepEqual(cases.snapshot.concepts.slice(0,338),old.concepts);
+ for(const suffix of ['taxonomy-registry.json','taxonomy-catalog.json','taxonomy-presentation-policy.json','taxonomy-snapshots/'+declared.profile.registrySha256+'.json'])assert.deepEqual(fs.readFileSync(path.join(repo,'data',suffix)),fs.readFileSync(path.join(repo,'static/data',suffix)));
+ const policy=require('../data/taxonomy-presentation-policy.json');assert.equal(policy.preferredRegistrySha256,declared.profile.registrySha256);assert.equal(policy.preferredProjectionSha256,declared.profile.projectionSha256);assert.equal(policy.preferredSnapshotSha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(repo,'data/taxonomy-registry.json'))).digest('hex'));assert.equal(policy.baseRegistrySha256,'a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d');
+});
+test('Hugo independently admits only the declared371 V2 profile and refuses its fully-rehashed drift',t=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'taxonomy371-hugo-'));t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));fs.mkdirSync(path.join(dir,'data'));fs.mkdirSync(path.join(dir,'layouts'));fs.cpSync(path.join(repo,'layouts/partials'),path.join(dir,'layouts/partials'),{recursive:true});for(const n of ['taxonomy-registry','taxonomy-catalog'])fs.copyFileSync(path.join(repo,'data',n+'.json'),path.join(dir,'data',n+'.json'));const rows=cases.rows();fs.writeFileSync(path.join(dir,'data/cases.json'),JSON.stringify(rows));fs.writeFileSync(path.join(dir,'hugo.yaml'),'baseURL: https://example.test/\ndisableKinds: [section,taxonomy,term,RSS,sitemap,robotsTXT,"404"]\n');fs.writeFileSync(path.join(dir,'layouts/index.html'),'[{{ range $i,$case := hugo.Data.cases }}{{ if $i }},{{ end }}{{ dict "name" $case.name "accepted" (partial "taxonomy_source_only_v2_proof.html" $case.record) | jsonify | safeHTML }}{{ end }}]');execFileSync('hugo',['--source',dir,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});const result=JSON.parse(fs.readFileSync(path.join(dir,'public/index.html')));result.forEach((r,i)=>assert.equal(r.accepted,rows[i].expected,r.name));
+});
+test('new371/V3 NA budgets bound full source and numbered UTF16 projection; legacy coverage remains unchanged',t=>{
+ const rows=[];
+ for(const v3 of[false,true])for(const config of[{sourceChars:80000},{sourceChars:80001},{extraSpans:1000},{extraSpans:3000}]){
+  const f=cases.budgetFixture({v3,...config});
+  // All negatives first pass original structural coverage/SHA replay. They fail
+  // only the declared new issuer budget; quotes sum alone would miss projection.
+  assert.equal(require('../scripts/lib/taxonomy-na-full-source-proof').validateNAFullSourceEvidence(f.record.classificationRecord,f.record.source),true);
+  const expected=f.sourceChars<=80000&&f.projectionChars<=100000,validate=v3?engine.validateSyntheticFixture:declared.validatePublicRecord;
+  if(expected)assert.equal(validate(f.record,f.snapshot),true);else assert.throws(()=>validate(f.record,f.snapshot),/新发行NA完整来源\/编号投影预算/);
+  if(config.extraSpans===3000){assert.ok(f.record.classificationRecord.naFullSourceEvidence.evidenceChars<100000);assert.ok(f.projectionChars>100000);}
+  rows.push({name:JSON.stringify({v3,...config}),record:f.record,v3,expected});
+ }
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'taxonomy371-budget-hugo-'));t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));fs.mkdirSync(path.join(dir,'data'));fs.mkdirSync(path.join(dir,'layouts'));fs.cpSync(path.join(repo,'layouts/partials'),path.join(dir,'layouts/partials'),{recursive:true});for(const name of['taxonomy-registry','taxonomy-catalog'])fs.copyFileSync(path.join(repo,'data',name+'.json'),path.join(dir,'data',name+'.json'));fs.writeFileSync(path.join(dir,'data/cases.json'),JSON.stringify(rows));fs.writeFileSync(path.join(dir,'hugo.yaml'),'baseURL: https://example.test/\ndisableKinds: [section,taxonomy,term,RSS,sitemap,robotsTXT,"404"]\n');
+ fs.writeFileSync(path.join(dir,'layouts/index.html'),'[{{ range $i,$c := hugo.Data.cases }}{{ if $i }},{{ end }}{{ $accepted := false }}{{ if $c.v3 }}{{ $accepted = partial "taxonomy_classification_v3_proof.html" (dict "record" $c.record "syntheticFixture" true) }}{{ else }}{{ $accepted = partial "taxonomy_source_only_v2_proof.html" $c.record }}{{ end }}{{ dict "name" $c.name "accepted" $accepted | jsonify | safeHTML }}{{ end }}]');execFileSync('hugo',['--source',dir,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});JSON.parse(fs.readFileSync(path.join(dir,'public/index.html'))).forEach((r,i)=>assert.equal(r.accepted,rows[i].expected,r.name));
+});

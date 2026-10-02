@@ -8,6 +8,7 @@
 
   var CONTRACT = 'paper-taxonomy-flat-tags-compat-v1';
   var V2_CONTRACT = 'historical-source-taxonomy-classification-v2';
+  var V3_CONTRACT = 'historical-source-taxonomy-classification-v3';
   var researchTypeLabels = Object.freeze({ engineering: '工程研究', science: '科学研究', analysis: '机制分析',
     evaluation: '评测研究', resource: '研究资源', review: '综述', experience: '实践报告', position: '观点论文' });
   var domainLabels = Object.freeze({ 'in-domain': '音频研究', 'cross-domain': '跨域交叉',
@@ -155,12 +156,15 @@
         var role = record.primaryResearchRole;
         var selected = new Set(result.concepts.map(function (node) { return node.id; }));
         var roleNode = role && source.byId[role.conceptId];
-        var v2 = record.taxonomyClassificationContract === V2_CONTRACT
-          && ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
-            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2'))
+        var isV3 = record.taxonomyClassificationContract === V3_CONTRACT;
+        var mechanism = isV3 && record.researchType === 'engineering' && role && role.kind === 'method';
+        var allowedFacets = isV3 && record.researchType === 'engineering' ? ['task', 'method'] : roleFacets[record.researchType];
+        var v2 = (record.taxonomyClassificationContract === V2_CONTRACT || isV3)
+          && (isV3 ? (record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
+            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2')))
           && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
           && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)
-          && roleNode && selected.has(roleNode.id) && roleFacets[record.researchType].includes(role.kind)
+          && roleNode && selected.has(roleNode.id) && allowedFacets.includes(role.kind)
           && role.kind === roleNode.facet && role.label === roleNode.zh
           && result.concepts.length === record.taxonomyConcepts.length
           && selected.size === result.concepts.length && selected.size <= 5
@@ -172,9 +176,10 @@
         } else if (v2) {
           var method = source.byId[record.primaryMethodId];
           v2 = record.methodNotApplicable === false && method && method.facet === 'method'
-            && selected.has(method.id) && !text(record.methodNotApplicableReason) && selected.size >= 2;
+            && selected.has(method.id) && !text(record.methodNotApplicableReason) && selected.size >= (mechanism ? 1 : 2);
+          if (v2 && mechanism) v2 = record.primaryMethodId === role.conceptId && !record.primaryTaskId && !text(record.task) && !record.primaryScientificTopicId;
         }
-        if (v2 && record.researchType === 'engineering') v2 = record.primaryTaskId === role.conceptId;
+        if (v2 && record.researchType === 'engineering' && !mechanism) v2 = record.primaryTaskId === role.conceptId;
         if (v2 && record.researchType !== 'engineering') v2 = !record.primaryTaskId && !text(record.task);
         if (v2 && record.researchType === 'science') v2 = record.primaryScientificTopicId === role.conceptId;
         if (v2 && record.researchType !== 'science') v2 = !record.primaryScientificTopicId;
@@ -244,7 +249,7 @@
             if (!group[field[1]].includes(primaryId)) group[field[1]].push(primaryId);
           }
         });
-      if (resolved.status === 'verified' && record.taxonomyClassificationContract === V2_CONTRACT && resolved.concepts.length) {
+      if (resolved.status === 'verified' && [V2_CONTRACT, V3_CONTRACT].includes(record.taxonomyClassificationContract) && resolved.concepts.length) {
         classification.researchType = record.researchType;
         classification.domainScope = record.domainScope;
         var primaryRole = record.primaryResearchRole;
@@ -333,7 +338,11 @@
     }) };
   }
 
-  return { contract: CONTRACT, v2Contract: V2_CONTRACT, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
+  function primaryRoleLabel(record) {
+    return record && record.taxonomyClassificationContract === V3_CONTRACT && record.researchType === 'engineering' && record.primaryResearchRole && record.primaryResearchRole.kind === 'method'
+      ? '主要研究机制' : roleLabels[record && record.primaryResearchRole && record.primaryResearchRole.kind] || '主要研究角色';
+  }
+  return { contract: CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
     domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
     identity: identity, groupPapers: groupPapers, query: query, counts: counts };

@@ -1,0 +1,18 @@
+{{- /* Pure structural check for selected classification-V3 evidence, not semantics. */ -}}
+{{- $e := .value | default dict }}{{ $kind := .kind }}{{ $valid := reflect.IsMap $e -}}
+{{- $fields := slice "quote" "rationale" "quoteStart" "evidenceQuoteStart" "quoteSha256" }}{{ if eq $kind "concept" }}{{ $fields = $fields | append "id" "facet" "label" }}{{ end -}}
+{{- $keys := slice }}{{ range $key,$_ := $e }}{{ $keys = $keys | append $key }}{{ end -}}
+{{- $valid = and $valid (eq (delimit (sort $keys) "|") (delimit (sort $fields) "|")) (eq (printf "%T" $e.quote) "string") (eq (printf "%T" $e.rationale) "string") -}}
+{{- if $valid -}}
+  {{- $quoteLength := add (strings.RuneCount $e.quote) (len (findRE `[\x{10000}-\x{10FFFF}]` $e.quote)) -}}
+  {{- $trimmedQuote := strings.TrimSpace $e.quote }}{{ $trimmedRationale := strings.TrimSpace $e.rationale -}}
+  {{- $quoteMinimum := add (strings.RuneCount $trimmedQuote) (len (findRE `[\x{10000}-\x{10FFFF}]` $trimmedQuote)) -}}
+  {{- $rationaleMinimum := add (strings.RuneCount $trimmedRationale) (len (findRE `[\x{10000}-\x{10FFFF}]` $trimmedRationale)) -}}
+  {{- $rationaleLength := add (strings.RuneCount $e.rationale) (len (findRE `[\x{10000}-\x{10FFFF}]` $e.rationale)) -}}
+  {{- $control := `[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x{9f}]` -}}
+  {{- $valid = and $valid (ge $quoteMinimum 20) (le $quoteLength 1000) (ge $rationaleMinimum 5) (le $rationaleLength 1000) (not (findRE $control $e.quote)) (not (findRE $control $e.rationale)) (eq (crypto.SHA256 $e.quote) $e.quoteSha256) -}}
+  {{- range $field := slice "quoteStart" "evidenceQuoteStart" -}}
+    {{- $number := index $e $field -}}{{- if eq (printf "%T" $number) "float64" }}{{ $valid = and $valid (ge $number 0) (le $number (float 9007199254740991)) (eq $number (math.Floor $number)) }}{{ else }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}
