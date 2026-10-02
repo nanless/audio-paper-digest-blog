@@ -1,0 +1,4 @@
+{{- /* JSON numeric field, never accept a string/coercion as a count. */ -}}
+{{- $n := .value }}{{ $valid := eq (printf "%T" $n) "float64" -}}
+{{- if $valid }}{{ $valid = and (ge $n (float (.min | default 0))) (le $n (float (.max | default 9007199254740991))) (eq $n (math.Floor $n)) }}{{ end -}}
+{{- return (not (not $valid)) -}}

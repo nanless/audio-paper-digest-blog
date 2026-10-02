@@ -1,0 +1,7 @@
+{{- $value := .value }}{{ $path := .path | default "source" }}{{ $valid := true -}}
+{{- if reflect.IsMap $value -}}
+ {{- $tag := $value.contract | default ($value.kind | default "plain") }}{{ $sets := partialCached "research_fullsite_source_keysets.html" "global" }}{{ $variants := index $sets (printf "%s::%s" $path $tag) | default slice }}{{ $match := false -}}
+ {{- range $keys := $variants }}{{ if partial "research_exact_keys.html" (dict "value" $value "keys" $keys) }}{{ $match = true }}{{ end }}{{ end -}}
+ {{- $valid = $match }}{{ range $k,$v := $value }}{{ $valid = and $valid (partial "research_fullsite_source_schema.html" (dict "value" $v "path" (printf "%s.%s" $path $k))) }}{{ end -}}
+{{- else if reflect.IsSlice $value }}{{ range $value }}{{ $valid = and $valid (partial "research_fullsite_source_schema.html" (dict "value" . "path" (printf "%s[]" $path))) }}{{ end }}{{ end -}}
+{{- return (not (not $valid)) -}}

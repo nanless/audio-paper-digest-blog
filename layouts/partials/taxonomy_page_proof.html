@@ -106,6 +106,17 @@
     {{- if $valid }}{{ $proof = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $v3History.contract) }}{{ end -}}
   {{- end -}}
 {{- end -}}
+{{- /* A fullsite current-page audit has its own admitted source/plan namespace;
+     it may supersede an earlier classification only for exact current bytes
+     and matching paper identity. No old front matter or source-only proof is
+     rewritten by this display/index projection. */ -}}
+{{- $fullsite := partial "taxonomy_fullsite_page_proof.html" . -}}
+{{- if $fullsite.contract -}}
+  {{- $valid := or (not $proof.paperId) (eq $proof.paperId $fullsite.paperId) -}}
+  {{- $explicit := .Params.paper_digest_paper_id | default "" }}{{ with .Params.paper_digest_arxiv_id }}{{ $explicit = printf "arxiv:%s" (replaceRE `v[1-9][0-9]*$` "" .) }}{{ end -}}
+  {{- if and $explicit (ne $explicit $fullsite.paperId) }}{{ $valid = false }}{{ end -}}
+  {{- if $valid }}{{ $proof = $fullsite }}{{ end -}}
+{{- end -}}
 {{- .Store.Set $memoKey $proof -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}

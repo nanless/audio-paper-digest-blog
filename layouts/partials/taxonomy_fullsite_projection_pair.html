@@ -1,0 +1,24 @@
+{{- /* Call only after actual whole projection/catalog bytes are approved. */ -}}
+{{- $admission := .admission }}{{ $sources := .sources }}{{ $profile := .profile }}{{ $sha := `^[a-f0-9]{64}$` }}{{ $valid := true -}}
+    {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $admission "keys" (slice "contract" "manifestSha256" "scopeSha256" "blogHead" "blogTree" "paperCount" "pageCount" "papers"))) (partial "research_exact_keys.html" (dict "value" $sources "keys" (slice "contract" "admissionProjectionSha256" "manifestSha256" "scopeSha256" "blogHead" "blogTree" "paperCount" "papers"))) -}}
+    {{- $valid = and $valid (eq $admission.contract "fullsite-current-page-public-admission-projection-v1") (eq $sources.contract "fullsite-current-page-public-source-projection-v1") (eq $sources.admissionProjectionSha256 $profile.admissionProjectionSha256) (reflect.IsSlice $admission.papers) (reflect.IsSlice $sources.papers) (eq (len $admission.papers) (int $admission.paperCount)) (eq (len $sources.papers) (int $sources.paperCount)) (gt (len $admission.papers) 0) (partial "research_safe_integer.html" (dict "value" $admission.paperCount "min" 1)) (partial "research_safe_integer.html" (dict "value" $admission.pageCount "min" 1)) (partial "research_safe_integer.html" (dict "value" $sources.paperCount "min" 0)) -}}
+    {{- range $field := slice "manifestSha256" "scopeSha256" "blogHead" "blogTree" }}{{ $valid = and $valid (eq (index $admission $field) (index $sources $field)) (eq (index $admission $field) (index $profile $field)) }}{{ end -}}
+    {{- $indexes := newScratch }}{{ $indexes.Set "admitted" dict }}{{ $indexes.Set "paths" dict }}{{ $indexes.Set "pageKeys" dict }}{{ $indexes.Set "members" dict }}{{ $count := 0 }}{{ $scope := slice -}}
+    {{- range $i,$p := $admission.papers -}}
+      {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $p "keys" (slice "paperId" "paperAuthoritySha256" "sourceAuthoritySha256" "pages"))) (not (isset ($indexes.Get "admitted") $p.paperId)) (findRE `^(arxiv:[0-9]{4}\.[0-9]{4,5}|conference:[^\s\x00-\x1f\x7f]+)$` $p.paperId 1) (findRE $sha $p.paperAuthoritySha256 1) (findRE $sha $p.sourceAuthoritySha256 1) (reflect.IsSlice $p.pages) (gt (len $p.pages) 0) -}}
+      {{- range $page := $p.pages -}}
+        {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $page "keys" (slice "pagePath" "pageKey" "pageSha256" "bodySha256"))) (findRE `^content/posts/[A-Za-z0-9][A-Za-z0-9._-]*\.md$` $page.pagePath 1) (findRE `^page:[a-f0-9]{64}$` $page.pageKey 1) (findRE $sha $page.pageSha256 1) (findRE $sha $page.bodySha256 1) (not (isset ($indexes.Get "paths") $page.pagePath)) (not (isset ($indexes.Get "pageKeys") $page.pageKey)) -}}
+        {{- $indexes.SetInMap "paths" $page.pagePath true }}{{ $indexes.SetInMap "pageKeys" $page.pageKey true }}{{ $count = add $count 1 -}}
+      {{- end -}}
+      {{- $scope = $scope | append (dict "paperId" $p.paperId "pages" $p.pages) -}}
+      {{- $indexes.SetInMap "admitted" $p.paperId (merge $p (dict "ordinal" $i)) -}}
+    {{- end -}}
+    {{- $valid = and $valid (eq $count (int $admission.pageCount)) (eq (crypto.SHA256 ($scope | partial "research_canonical_json.html")) $admission.scopeSha256) -}}
+    {{- $previous := -1 -}}
+    {{- range $s := $sources.papers -}}
+      {{- $p := index ($indexes.Get "admitted") $s.paperId | default dict -}}
+      {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $s "keys" (slice "paperId" "paperAuthoritySha256" "sourceAuthoritySha256" "sourceDescriptorSha256"))) $p (not (isset ($indexes.Get "members") $s.paperId)) (gt (int $p.ordinal) $previous) (eq $s.paperAuthoritySha256 $p.paperAuthoritySha256) (eq $s.sourceAuthoritySha256 $p.sourceAuthoritySha256) (findRE $sha $s.sourceDescriptorSha256 1) -}}
+      {{- $previous = $p.ordinal }}{{ $indexes.SetInMap "members" $s.paperId (merge $s (dict "pagesSha256" (crypto.SHA256 ($p.pages | partial "research_canonical_json.html")))) -}}
+    {{- end -}}
+
+{{- return (dict "valid" (not (not $valid)) "members" ($indexes.Get "members") "admitted" ($indexes.Get "admitted") "paths" ($indexes.Get "paths") "pageKeys" ($indexes.Get "pageKeys")) -}}

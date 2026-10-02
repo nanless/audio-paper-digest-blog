@@ -1,0 +1,24 @@
+{{- /* Child structural hashes are NOT the original JSON physical hashes.
+     Exact original physical/structural pins are root-approved profile fields;
+     the caller already verified both complete catalog byte hashes. */ -}}
+{{- $aa := .admission }}{{ $ss := .sources }}{{ $profile := .profile }}{{ $sha := `^[a-f0-9]{64}$` }}{{ $valid := and (partial "research_exact_keys.html" (dict "value" $aa "keys" (slice "contract" "projections"))) (partial "research_exact_keys.html" (dict "value" $ss "keys" (slice "contract" "admissionProjectionSha256" "projections"))) (eq $aa.contract "fullsite-current-page-public-admission-set-v1") (eq $ss.contract "fullsite-current-page-public-source-set-v1") (eq $ss.admissionProjectionSha256 $profile.admissionProjectionSha256) (reflect.IsSlice $aa.projections) (reflect.IsSlice $ss.projections) (reflect.IsSlice $profile.admissionChildPins) (reflect.IsSlice $profile.sourceChildPins) (gt (len ($aa.projections | default slice)) 0) (gt (len ($ss.projections | default slice)) 0) (eq (len ($profile.admissionChildPins | default slice)) (len ($aa.projections | default slice))) (eq (len ($profile.sourceChildPins | default slice)) (len ($ss.projections | default slice))) -}}
+{{- $state := newScratch }}{{ $state.Set "plans" dict }}{{ $state.Set "ids" dict }}{{ $state.Set "paths" dict }}{{ $state.Set "keys" dict }}{{ $state.Set "sourceIds" dict }}{{ $state.Set "used" dict }}{{ $state.Set "members" dict }}{{ $state.Set "physical" dict }}{{ $found := false -}}
+{{- if $valid -}}
+ {{- range $i,$child := $aa.projections -}}
+  {{- $pin := index $profile.admissionChildPins $i }}{{ $childProfile := merge $child (dict "admissionProjectionSha256" $pin.physicalSha256) }}{{ $emptySource := dict "contract" "fullsite-current-page-public-source-projection-v1" "admissionProjectionSha256" $pin.physicalSha256 "manifestSha256" $child.manifestSha256 "scopeSha256" $child.scopeSha256 "blogHead" $child.blogHead "blogTree" $child.blogTree "paperCount" (float 0) "papers" slice }}{{ $gate := partial "taxonomy_fullsite_projection_pair.html" (dict "admission" $child "sources" $emptySource "profile" $childProfile) -}}
+  {{- $valid = and $valid $gate.valid (partial "research_exact_keys.html" (dict "value" $pin "keys" (slice "manifestSha256" "physicalSha256" "structuralSha256"))) (findRE $sha ($pin.physicalSha256 | default "") 1) (eq $pin.manifestSha256 $child.manifestSha256) (eq (crypto.SHA256 ($child | partial "research_canonical_json.html")) $pin.structuralSha256) (not (isset ($state.Get "plans") $child.manifestSha256)) (not (isset ($state.Get "physical") $pin.physicalSha256)) -}}
+  {{- range $id,$_ := $gate.admitted }}{{ $valid = and $valid (not (isset ($state.Get "ids") $id)) }}{{ $state.SetInMap "ids" $id true }}{{ end -}}
+  {{- range $p,$_ := $gate.paths }}{{ $valid = and $valid (not (isset ($state.Get "paths") $p)) }}{{ $state.SetInMap "paths" $p true }}{{ end -}}
+  {{- range $k,$_ := $gate.pageKeys }}{{ $valid = and $valid (not (isset ($state.Get "keys") $k)) }}{{ $state.SetInMap "keys" $k true }}{{ end -}}
+  {{- $state.SetInMap "plans" $child.manifestSha256 (dict "admission" $child "profile" $childProfile) }}{{ $state.SetInMap "physical" $pin.physicalSha256 true -}}
+  {{- if eq $child.manifestSha256 $profile.manifestSha256 }}{{ $found = true }}{{ range $field := slice "scopeSha256" "blogHead" "blogTree" }}{{ $valid = and $valid (eq (index $child $field) (index $profile $field)) }}{{ end }}{{ end -}}
+ {{- end -}}
+ {{- range $i,$child := $ss.projections -}}
+  {{- $pin := index $profile.sourceChildPins $i }}{{ $plan := index ($state.Get "plans") $child.manifestSha256 | default dict -}}
+  {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $pin "keys" (slice "manifestSha256" "physicalSha256" "structuralSha256"))) (findRE $sha ($pin.physicalSha256 | default "") 1) (eq $pin.manifestSha256 $child.manifestSha256) (eq (crypto.SHA256 ($child | partial "research_canonical_json.html")) $pin.structuralSha256) (not (isset ($state.Get "physical") $pin.physicalSha256)) (gt (len ($child.papers | default slice)) 0) $plan -}}
+  {{- if $plan }}{{ $gate := partial "taxonomy_fullsite_projection_pair.html" (dict "admission" $plan.admission "sources" $child "profile" $plan.profile) }}{{ $valid = and $valid $gate.valid }}{{ $state.SetInMap "used" $child.manifestSha256 true }}{{ range $id,$member := $gate.members }}{{ $valid = and $valid (not (isset ($state.Get "sourceIds") $id)) }}{{ $state.SetInMap "sourceIds" $id true }}{{ if eq $child.manifestSha256 $profile.manifestSha256 }}{{ $state.SetInMap "members" $id $member }}{{ end }}{{ end }}{{ end -}}
+  {{- $state.SetInMap "physical" $pin.physicalSha256 true -}}
+ {{- end -}}
+ {{- $valid = and $valid $found (eq (len ($state.Get "used")) (len ($state.Get "plans"))) -}}
+{{- end -}}
+{{- return (dict "valid" (not (not $valid)) "members" ($state.Get "members")) -}}

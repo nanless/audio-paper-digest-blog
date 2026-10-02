@@ -38,6 +38,7 @@
 {{- if $verified }}{{ with (.Params.paper_digest_doi | default .Params.paper_digest_citation_doi | default .Params.paper_digest_conference_doi) }}{{ if findRE `^10\.[0-9]{4,9}/[^\s<>"\\]+$` . 1 }}{{ $doi = . }}{{ end }}{{ end }}{{ end -}}
 {{- $title := $meta.originalTitle | plainify -}}
 {{- if and $verified $hasSourceEvidence }}{{ with $sealed.originalTitle }}{{ $title = . | plainify }}{{ end }}{{ end -}}
+{{- if and $verified $meta.classificationProvenance }}{{ with $meta.classificationProvenance.sourceTitle }}{{ $title = . | plainify }}{{ end }}{{ end -}}
 {{- $venue := "" -}}{{- if $verified }}{{ $venue = (.Params.paper_digest_venue | default .Params.paper_digest_conference_name | default "") | plainify }}{{ end -}}
 {{- $complete := and $verified $title $url (gt (len $authors) 0) $date -}}
 {{- $memoValue = (dict "contract" "paper-citation-source-v1" "paperKey" $key "paperId" $meta.paperId "identityStatus" $meta.identityStatus "verified" $verified "complete" (not (not $complete)) "sourceKind" $kind "title" $title "authors" $authors "date" $date "doi" $doi "venue" $venue "arxivId" $id "url" $url "sourceUrl" $url "pdfUrl" $pdf "pageUrl" .Permalink "pageType" $meta.pageType) -}}
@@ -48,6 +49,12 @@
   {{- with $sealed.pdfVersionBinding }}{{ $memoValue = merge $memoValue (dict "pdfVersionBinding" .) }}{{ end -}}
   {{- $historicalVersion := partial "research_historical_source_version.html" $sealed -}}
   {{- if and $historicalVersion.valid $historicalVersion.warning }}{{ $memoValue = merge $memoValue (dict "sourceVersionWarning" ($historicalVersion.warning | plainify)) }}{{ end -}}
+{{- end -}}
+{{- if and $verified $meta.classificationProvenance -}}
+  {{- /* Keep fullsite source disclosure even when no retained official URL
+       exists; never synthesize a PDF/link from classification evidence. */ -}}
+  {{- range $field := slice "sourceVersionWarning" "provenanceDisclosure" }}{{ with index $meta.classificationProvenance $field }}{{ $memoValue = merge $memoValue (dict $field (. | plainify)) }}{{ end }}{{ end -}}
+{{- with (partial "research_fullsite_source_warning.html" $meta.classificationProvenance) }}{{ $memoValue = merge $memoValue (dict "sourceVersionWarning" (. | plainify)) }}{{ end -}}
 {{- end -}}
 {{- .Store.Set $memoKey $memoValue -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}
