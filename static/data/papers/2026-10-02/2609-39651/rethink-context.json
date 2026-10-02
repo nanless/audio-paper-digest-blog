@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39651",
+  "abstract": "Audio deepfake detectors are typically evaluated on uncompressed audio, although real-world audio often undergoes low-bitrate coding. In this work, we investigate how audio coding affects deepfake detection across codecs, bitrates, and detectors, finding higher errors at lower rates. A mixed-pair protocol isolates codec-induced changes in bona fide and spoof audio, revealing asymmetric, codec-dependent failures: low-rate DAC and EnCodec mainly degrade bona fide detection, whereas X-Codec shows a stronger spoof-side limitation. Motivated by these, we propose a forensic-preserving neural audio codec (FP-NAC), which fine-tunes a pretrained codec using a detector-guided objective while preserving its native hard quantization path and bitrate. On ASVspoof 2019 LA, FP-NAC reduces EER by up to 49.8~pp compared with the original DAC at 0.5~kbps while maintaining comparable reconstruction quality. Although supervised by only one detector, FP-NAC improves performance across multiple detectors, highlighting forensic transparency as a codec design objective alongside perceptual quality. Our codes are available at this https URL.",
+  "abstractSha256": "c3e3ee96decbc210216fbc05f9df2ff551322e6ddabe241805e5b1f4707464ba",
+  "arxivId": "2609.39651",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jungwoo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Koh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jong-Seok Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对低码率神经音频编码导致深伪检测错误上升的问题，论文用混合配对协议定位真假两侧不对称失效，再冻结 DAC 并加入码率条件残差适配器做检测器引导微调，在 ASVspoof 2019 LA 上 0.5 kbps 处把 AASIST 等效错误率大幅降低，同时只增加约 1.75% 参数并保持重建质量基本相当。",
+  "originalTitle": "Neural Audio Codec for Robust Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39651.pdf",
+  "readerTitle": "低码率保真却丢失取证线索：用混合配对诊断与检测器引导的编解码器修正",
+  "schemaVersion": 1
+}

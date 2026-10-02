@@ -1,0 +1,145 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00935v1",
+  "abstract": "Embodied assistants in domestic environments must infer what happened, where and when it occurred, and how to respond. To address this, we introduce RMS-AQA, a spatial audio question answering (SAQA) benchmark for real-world domestic environments. The benchmark features a two-stage question-answering (QA) format to comprehensively assess the ability of audio-language models (ALMs) to first ground audible sound events and subsequently perform complex spatio-temporal reasoning based on that grounding. To maximize acoustic realism, our dataset combines authentic real-world first-order Ambisonics (FOA) recordings with high-fidelity synthetic data generated using measured room impulse responses (RIRs). Furthermore, we provide a lightweight spatial plug-in that injects FOA-format data into frozen audio-language backbones. Experimental results reveal that the primary challenges stem from concurrent sources, far distance, and sim-to-real domain gap between RIR-synthesized and authentic recordings.",
+  "abstractSha256": "4413397041d6469e1d49a8ce649bc0cd6724ca04bff708515ed1f9c3fe84afad",
+  "arxivId": "2610.00935",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00935v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peihao Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qing Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lichun Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yufeng Hao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhifeng Kong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mengyao Zhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hengyi Hong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hang Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hang Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yujie Jian"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chao-Han Huck Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shichao Hu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jun Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jian Luan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ke Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "RMS-AQA 针对家庭具身助手需同时判断事件是什么、在哪何时发生的问题，采用先事件接地再条件推理的两段式选择题与 10 秒一阶 Ambisonics 片段，并用实测房间脉冲响应合成训练加真实录制验证测试的组合，证明轻量空间插件能大幅提升冻结音频语言主干的接地推理链，但并发声源、远场与仿真到真实差距仍是主要瓶颈。",
+  "originalTitle": "RMS-AQA: A Two-Stage Spatial Audio Question Answering Benchmark for Real-World Domestic Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00935v1.pdf",
+  "readerTitle": "先听准再推理：RMS-AQA 用两段式问答卡住空间音频的猜测捷径",
+  "schemaVersion": 1
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00754v1",
+  "abstract": "We present the Motion-Aware Audio-Visual Complexity Metric (MAV-C), a reference-free framework for the joint objective estimation of audio-visual complexity. The metric combines entropy-based audio features (temporal, spectral, and spatial) with visual features (Sobel gradient magnitude, chromatic uniqueness, and optical flow) via a parametric fusion stage, producing a continuous joint complexity score CAV (t) [0,1]. We validate MAV-C on two datasets: a controlled synthetic corpus (SYN) of stimuli with known signal characteristics and a naturalistic gameplay corpus (GAM) of 60 clips drawn from the SAFEPLAY-X dataset. On SYN, the metric exhibits strong validity: the audio score CA and visual score CV are each insensitive to changes in the opposite modality (CoV &lt; 0.003), the joint score CAV spans [0.00,0.90] across all parameter combinations, and single-axis feature sweeps produce monotone trajectories (Spearman up to 0.995). On GAM, CV differs significantly across content categories (Kruskal-Wallis p = 0.021) while CA does not, and the two sub-scores are uncorrelated (r = 0.03), confirming they operate on independent signal dimensions. OFAT sensitivity analysis identifies a two-tier parameter hierarchy, with modality balance (wa) and visual regularization (v) as most significant tunable parameters. Full subjective calibration is planned as future work.",
+  "abstractSha256": "292751919847e1342b80030be607dffd0a526ed0a0cdd87ebd3203cb34e7fbeb",
+  "arxivId": "2610.00754",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00754v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "application",
+          "id": "application.games",
+          "label": "游戏音频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University of York, UK",
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Luca Resti"
+    },
+    {
+      "affiliations": [
+        "Department of Language and Linguistic Science, University of York, UK"
+      ],
+      "name": "Amelia Gully"
+    },
+    {
+      "affiliations": [
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Michael McLoughlin"
+    },
+    {
+      "affiliations": [
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Gavin Kearney"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of York, UK"
+      ],
+      "name": "Alena Denisova"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "MAV-C 针对本地渲染等无编码失真场景的视听复杂度估计问题，用熵类音频特征与梯度色彩运动类视觉特征经对数压缩与加权融合得到连续分数，在合成语料上显示单调性与模态隔离，在游戏语料上显示视听分量不相关且仅视觉分量随内容类别变化，代价是尚无主观评分校准且空间模式依赖轨迹元数据。",
+  "originalTitle": "MAV-C: A Framework for the Joint Objective Estimation of Audio-Visual Complexity in Immersive Virtual Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00754v1.pdf",
+  "readerTitle": "复杂度不是失真：MAV-C 把声音熵与画面结构放在同一时间轴上估计",
+  "schemaVersion": 1
+}

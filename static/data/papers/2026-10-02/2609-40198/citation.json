@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.40198",
+  "arxivId": "2609.40198",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "SCBX R&D"
+      ],
+      "name": "Kanpat Vesessook"
+    },
+    {
+      "affiliations": [
+        "SCB DataX, SCBX Group"
+      ],
+      "name": "Saksorn Ruangtanusak"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.40198",
+  "originalTitle": "SCB: SpeechConversationBench for Evaluating Multi-Turn Reasoning in Speech-to-Speech Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.40198.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

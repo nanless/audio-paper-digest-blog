@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39722",
+  "arxivId": "2609.39722",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Viola Negroni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paolo Bestagini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Tubaro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39722",
+  "originalTitle": "Synthetic Speech Attribution via Prototypical Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39722.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

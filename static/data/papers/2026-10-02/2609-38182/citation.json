@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38182",
+  "arxivId": "2609.38182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuemeng Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinlan Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weili Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mong-Li Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wynne Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38182",
+  "originalTitle": "EmAvatar: Multimodal Empathetic Response Generation via Conflict Resolution and Expressive Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38182.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

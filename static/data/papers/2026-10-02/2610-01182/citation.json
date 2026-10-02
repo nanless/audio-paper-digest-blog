@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01182v1",
+  "arxivId": "2610.01182",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01182v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hwayeon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngwon Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonyu Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01182v1",
+  "originalTitle": "Toward Elastic Speech Inference: Training-Free Wake-Word Detection from Pretrained ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01182v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

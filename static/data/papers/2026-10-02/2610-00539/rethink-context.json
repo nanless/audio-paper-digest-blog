@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00539v1",
+  "abstract": "Speech anti-spoofing countermeasures degrade when the generator, codec or channel changes, and a common remedy is an auxiliary objective that shapes the embedding space; whether it does is invisible to EER, a pure ranking metric. We compare seven such objectives with cross-entropy over 113 runs on five corpora, AASIST3 at three seeds plus four pre-trained detectors, and measure the embedding space of the 24 AASIST3 runs directly. Raw augmentation displacement makes cosine consistency look effective, but the gain is a smaller space, not a more stable one: normalised by the spread, no configuration consistently improves on cross-entropy. Every trained space is dominated by the single decision axis expected for two classes, whose training-set structure does not transfer, and four runs collapse to a near-constant output that displacement rewards and EER reports as poor accuracy. No auxiliary objective keeps an advantage over cross-entropy across architectures, corpora and seeds.",
+  "abstractSha256": "c620b03d2fd66667f5fceb8b1b04c2dfc7ad0eb92634c4d34f47d9fe264937b6",
+  "arxivId": "2610.00539",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00539v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ksenia Lysikova"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在同一协议下比较交叉熵与七种辅助目标，用位移除以 spread 的尺度感知诊断显示余弦一致性的位移下降来自空间缩小而非更稳定，且四个坍缩到近常数输出的运行被等错误率和 t-SNE 掩盖，没有辅助目标在种子、架构和语料上都优于交叉熵。",
+  "originalTitle": "Collapse, Not Invariance: Diagnosing Auxiliary Objectives in Speech Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00539v1.pdf",
+  "readerTitle": "看起来更不变，其实只是变小了：语音防伪中辅助目标的坍缩诊断",
+  "schemaVersion": 1
+}

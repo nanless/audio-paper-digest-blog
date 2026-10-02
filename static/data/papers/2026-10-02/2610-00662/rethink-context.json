@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00662v1",
+  "abstract": "Deep neural network-based Voice Conversion (VC) and Text-to-Speech (TTS) models have rapidly advanced, enabling realistic voice cloning with minimal input data. Such capabilities raise serious concerns over unauthorized cloning of speaker identities and the associated privacy and security risks. Current imperceptible adversarial protection methods rely on quality control losses that are highly sensitive to hyperparameter tuning and computationally expensive due to lengthy optimization. To address these limitations, we propose a fast protection method that generates perceptually constrained perturbations in the frequency domain under a psychoacoustic masking-based constraint. Our approach strictly enforces perceptibility bounds during adversarial training, eliminating the need for iterative quality balancing and significantly reducing computational cost. Experiments on multiple state-of-the-art VC and TTS models show that STM achieves competitive or superior protection performance with substantially better perceptual quality and up to $45.3\\times$ speedup over existing white-box baselines. These results demonstrate the effectiveness of frequency-domain perturbations with perceptual constraints as a practical paradigm for protecting against voice cloning.",
+  "abstractSha256": "c1745a69be8e64bbfe208b7f6e536493de7c787524874101d4483cd8bbd4303a",
+  "arxivId": "2610.00662",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00662v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Runqiu Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对只需数秒语音即可克隆的 VC/TTS 滥用问题，STM 把扰动放在频域幅度谱上并用心理声学掩蔽阈做硬钳位，仅优化扰动去逼近目标说话人嵌入，在白盒实验中以 80 步迭代取得可比或更高的声纹拒绝率，同时把黑盒可迁移保护保留在 71.50% 而把生成耗时降到 2.19 对 3.48 秒每句的量级。",
+  "originalTitle": "Silence-the-Mimic: Accelerating Imperceptible Perturbation Generation Against Voice Cloning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00662v1.pdf",
+  "readerTitle": "把扰动关进掩蔽阈里：STM 如何用硬约束换掉反复调参的质量损失",
+  "schemaVersion": 1
+}

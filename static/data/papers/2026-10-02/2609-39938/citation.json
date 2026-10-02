@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39938",
+  "arxivId": "2609.39938",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Northeastern University",
+        "Futurewei Technologies"
+      ],
+      "name": "Juyi Lin"
+    },
+    {
+      "affiliations": [
+        "Futurewei Technologies"
+      ],
+      "name": "Zhiqiang Lao"
+    },
+    {
+      "affiliations": [
+        "Futurewei Technologies"
+      ],
+      "name": "Jiali Cui"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Lin Zhao"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Pu Zhao"
+    },
+    {
+      "affiliations": [
+        "Futurewei Technologies"
+      ],
+      "name": "Dichang Zhang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Arman Akbari"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Yu Qi"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Xinru Jiang"
+    },
+    {
+      "affiliations": [
+        "Northeastern University"
+      ],
+      "name": "Yanzhi Wang"
+    },
+    {
+      "affiliations": [
+        "Futurewei Technologies"
+      ],
+      "name": "Heather Yu"
+    },
+    {
+      "affiliations": [
+        "Futurewei Technologies"
+      ],
+      "name": "Liang Peng"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39938",
+  "originalTitle": "LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39938.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39237",
+  "abstract": "We introduce the Dual-state Sparsifying Recurrent Unit (DuSpaR) as a computationally efficient building block for speech processing models on resource-constrained edge devices. It employs dual-state recurrence to modulate its input vectors in a stateful feedback loop. Its recurrent cells sparsify the input vector operand involved in matrix-vector multiplication using ReLU activation. By skipping the zero entries dynamically, inference-time savings in multiply-accumulate operations and weight memory fetches can be achieved. We evaluate DuSpaR on three speech tasks: keyword spotting (KWS) on the Google Speech Commands dataset, spoken language understanding (SLU) on the Fluent Speech Commands dataset, and speech enhancement (SE) on the Voice Bank + Demand (VBD) dataset. At similar parameter counts, DuSpaR requires 51.0% and 68.4% less computation than Gated Recurrent Unit (GRU) on KWS and SLU, respectively, while achieving higher accuracy, and 50.1% less computation on SE while maintaining similar quality. At comparable computational cost and across a range of model sizes, DuSpaR also achieves higher KWS/SLU accuracy and better SE quality than other sparsity-aware recurrent models. Ablation studies show that compared with the single-state recurrence baseline, dual-state recurrence reduces the effective compute by factors of 3.1 to 11.3 at similar task performance.",
+  "abstractSha256": "a4eb977dd7e6cb3c77abdcf7da981d98a0959a3b239aea3c7e819cb3fbe90aae",
+  "arxivId": "2609.39237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "关键词检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.keyword-detection",
+          "label": "关键词检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "关键词检测",
+      "primaryTaskId": "task.keyword-detection",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zixiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheng Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shih-Chii Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对端侧语音推理中循环层每步稠密矩阵乘开销大的问题，DuSpaR 用前馈加反馈双状态回路调制输入并对矩阵乘向量做 ReLU 稀疏，在相近参数下比 GRU 在关键词识别和语义理解上省算力且精度更高，在语音增强上省约一半算力并保持质量，但稀疏收益依赖输入分布与部署是否支持跳零。",
+  "originalTitle": "DuSpaR: Dual-State Sparsifying Recurrent Unit with Feedback Modulation for Compute-Efficient Speech Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39237.pdf",
+  "readerTitle": "用反馈调制输入再稀疏计算：DuSpaR 如何省掉一半以上的循环计算",
+  "schemaVersion": 1
+}

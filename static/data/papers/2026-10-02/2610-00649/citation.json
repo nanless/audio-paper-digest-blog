@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00649v1",
+  "arxivId": "2610.00649",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00649v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lisan Al Amin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vandana P. Janeja"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00649v1",
+  "originalTitle": "On Evaluating Quantum Kernel Robustness for Low-Resource Cross-Corpus Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00649v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00630v1",
+  "arxivId": "2610.00630",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00630v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiernon Riesenmy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gautam Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Fanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00630v1",
+  "originalTitle": "PLACE: Positional Latent Adaptation via Conditioned Embeddings for Binaural Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00630v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38203",
+  "abstract": "Monitoring cognitive impairment (CI) in motor neuron disease (MND) is essential for timely treatment and care, yet challenging due to co-occurring speech difficulties. The Edinburgh Cognitive and Behavioural ALS Screen (ECAS) provides a robust metric for CI assessment, with the Verbal Fluency Index (VFI) a central element. Building on recent advances in automated speech analysis, this study proposes a system for estimating VFI. It leverages a unique MND dataset and combines ASR (WhisperX) and VAD (Silero) with refined timestamping to predict the VFI and extract several clinically interpretable measures. Our approach outperformed systems based on traditional acoustic features and self-supervised embeddings, evaluated using multiple regression algorithms. Clinically inspired features consistently outperformed the other sets, with the best models achieving strong results (P-words: R2 0.9, NRMSE 0.05; S-words: R2 0.8, NRMSE 0.08), demonstrating the feasibility of automated VFI estimation.",
+  "abstractSha256": "2d8172cfc1c10b6d90eb08dd1492e602dab09769036d5693f9d7696681b91e6e",
+  "arxivId": "2609.38203",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bahman Mirheidari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leslie Ing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Abrahams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher McDermott"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对运动神经元病患者构音与认知混杂的问题，该研究只用一分钟字母流畅生成阶段音频，以 WhisperX 转写加 Silero 语音活动检测校准词与停顿边界再提取临床可解释特征回归估计言语流畅指数，最强证据是 P 词全自动 LASSO 达到 R² 0.856、NRMSE 0.053，代价是 S 词在构音障碍语音上误差明显增大且样本仅 42 人。",
+  "originalTitle": "Automatic estimation of verbal fluency index in people with Motor Neuron Disease using ASR alignment and pause modelling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38203.pdf",
+  "readerTitle": "只用生成阶段估计思维速度：ASR 加 VAD 校准停顿来逼近言语流畅指数",
+  "schemaVersion": 1
+}

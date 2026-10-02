@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39852",
+  "arxivId": "2609.39852",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chin-Yun Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chi-Jen Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "György Fazekas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39852",
+  "originalTitle": "Pitch Smoothing Using Relative Interval Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39852.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00726v1",
+  "arxivId": "2610.00726",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00726v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changchang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yan Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00726v1",
+  "originalTitle": "Where the Body Keeps the Beat: Structured Motion Conditioning and Music Dynamics Supervision for Dance-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00726v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

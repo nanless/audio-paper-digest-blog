@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38203",
+  "arxivId": "2609.38203",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bahman Mirheidari"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Leslie Ing"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Blackburn"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sharon Abrahams"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christopher McDermott"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Heidi Christensen"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.38203",
+  "originalTitle": "Automatic estimation of verbal fluency index in people with Motor Neuron Disease using ASR alignment and pause modelling",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38203.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

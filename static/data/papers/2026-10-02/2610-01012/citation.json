@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01012v1",
+  "arxivId": "2610.01012",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01012v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gunwoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoori Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoseob Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01012v1",
+  "originalTitle": "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01012v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

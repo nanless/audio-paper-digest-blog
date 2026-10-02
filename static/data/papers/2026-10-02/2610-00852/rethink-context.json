@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00852v1",
+  "abstract": "Structured phonological representations provide an interpretable alternative to generic speech embeddings, but existing models are largely trained on adult speech. We adapt PhonoQ-2.0 to child speech using CHILDES-Aligned data and compare three alignment-supervision conditions (Adult, Adult+Child, and Child-only) across two initialization strategies (Adult PhonoQ and scratch). Generalization is evaluated against manual child-speech annotations. On 1,352 consonant targets from 58 typically developing children, child-speech adaptation improves voicing recognition across all supervision conditions, from 0.922 macro-F1 for Adult PhonoQ to 0.972--0.987 after adaptation. Manner is more sensitive to alignment supervision: Adult+Child MFA reaches 0.804 and 0.796, compared to approximately 0.70 under Adult MFA supervision. Place remains comparatively strong across systems (0.871--0.902), although per-class performance varies substantially. The velar-fronting contrast is preserved across all seven model variants. Longitudinal UltraPhonix analysis further reveals speaker-specific velar and post-alveolar changes that are largely preserved across models and broadly consistent with reported clinical progress.",
+  "abstractSha256": "ae15330affac070592a3c1d83b8edc79a1c9be0454181947e8d2ee11d7f8f398",
+  "arxivId": "2610.00852",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00852v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "领域适应",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-adaptation",
+          "label": "领域适应"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonetics",
+          "label": "语音学与音系"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "领域适应",
+      "primaryMethodId": "method.domain-adaptation",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abner Hernandez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomás Arias Vergara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula Andrea Pérez-Toro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把成人 PhonoQ-2.0 适配到儿童语音，对比三种强制对齐监督与两种初始化，用 58 名儿童 1352 个辅音人工标注检验，显示清浊全面提升、发音方式依赖儿童对齐、部位对比与纵向变化保持可解释，但增益因特征类而异且临床样本很小。",
+  "originalTitle": "Child-Adapted Structured Phonological Representations for Interpretable Speech Sound Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00852v1.pdf",
+  "readerTitle": "把成人音系探针搬到儿童语音：对齐监督决定发音方式，部位对比保持可读",
+  "schemaVersion": 1
+}

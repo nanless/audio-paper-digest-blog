@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01861",
+  "arxivId": "2610.01861",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Dhanunjaya Varma Devalraju"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arshdeep Singh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark D. Plumbley"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01861",
+  "originalTitle": "AVSD-Scenes: A Dataset for Audio-Visual Description of Urban Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01861.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00691v1",
+  "arxivId": "2610.00691",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00691v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhuo Ning"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "AmirHossein Naghi Razlighi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sagi Polaczek"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Daniel Cohen-Or"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ali Mahdavi-Amiri"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00691v1",
+  "originalTitle": "Soundwich: Video Generation with Layered and Controllable Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00691v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

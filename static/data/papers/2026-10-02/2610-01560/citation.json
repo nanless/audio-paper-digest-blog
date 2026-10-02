@@ -1,0 +1,107 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01560",
+  "arxivId": "2610.01560",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Tencent Hunyuan"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yuancheng Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zihang Liu"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan",
+        "Tsinghua University"
+      ],
+      "name": "Shengbo Cai"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Tao Feng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yingda shen"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Ming-Hao Hsu"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Zhixian Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Liqiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Teddy Sun"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Steve Yves"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Amphion Technology Co., Ltd."
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01560",
+  "originalTitle": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01560.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

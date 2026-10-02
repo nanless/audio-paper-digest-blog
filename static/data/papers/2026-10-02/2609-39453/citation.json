@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39453",
+  "arxivId": "2609.39453",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hezhao Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Thomas Hain"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39453",
+  "originalTitle": "From Speech to Editable Concepts: Probing Emotion Recognition with Concept Bottleneck Models",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39453.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

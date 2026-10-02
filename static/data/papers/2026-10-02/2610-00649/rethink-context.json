@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00649v1",
+  "abstract": "Synthetic speech detection is critical for audio security, but performance can degrade when labeled data are scarce and evaluation conditions differ from training. This study examines quantum kernel methods and lightweight neural models for cross-corpus audio deepfake detection under limited training data. We compare a Quantum Support Vector Machine (QSVM), a classical support vector machine (SVM), and a multilayer perceptron (MLP), all trained on frozen wav2vec 2.0 embeddings using a strict budget of 200 training samples. To match the qubit budget of near-term quantum hardware, embeddings are reduced to four dimensions using principal component analysis, and all models use the same reduced features. Experiments on ASVspoof 2019, ASVspoof 5, the ADD 2023 Challenge, and the In-the-Wild dataset show that under severe domain shift from ASVspoof 2019 to ADD 2023, the MLP degrades to near-random performance, with an area under the curve of approximately 50% and an equal error rate of 50.0%. In contrast, the QSVM maintains meaningful discrimination, achieving an area under the curve of 76.0% and an equal error rate of 27.0%. This advantage is not consistent across transfer directions. When trained on ADD 2023, the QSVM falls below chance on two of three transfers, while the MLP performs better. These results suggest that quantum kernel methods can be competitive under severe cross-corpus shifts and strict low-resource constraints, but do not provide a consistent advantage under near-domain transfer. We interpret these findings as an empirical characterization of quantum kernel inductive bias under distribution shift, rather than evidence of quantum advantage, since the four-qubit kernel can be simulated exactly on classical hardware.",
+  "abstractSha256": "eca577de1d8b3f5962009feef6bf39930280251ae4107785ddcb257c175bb1b9",
+  "arxivId": "2610.00649",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00649v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.low-resource",
+          "label": "低资源"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lisan Al Amin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lei Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vandana P. Janeja"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "在冻结 wav2vec 2.0 与 4 维 PCA 和 200 样本预算下对照 QSVM、RBF-SVM 与单隐层 MLP，最强证据是 ASV19 到 ADD 上 QSVM 以 AUC 76.04% 和 EER 27.00% 保留可分性而 MLP 退到约 50%，代价是反向与近域转移反转且校准更差。",
+  "originalTitle": "On Evaluating Quantum Kernel Robustness for Low-Resource Cross-Corpus Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00649v1.pdf",
+  "readerTitle": "同为 200 样本同为 4 维输入：量子核在转入对抗库时保住排序，反向则跌破随机",
+  "schemaVersion": 1
+}

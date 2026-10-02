@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00721v1",
+  "abstract": "Recently, soft-constrained spatially selective active noise control (SSANC) for open-fitting hearables has been proposed to enable a flexible trade-off between noise reduction and desired-speech preservation using a scalar trade-off parameter across all frequencies. This paper generalizes soft-constrained SSANC by introducing frequency-dependent weighting of the desired-speech preservation error while maintaining low-delay time-domain active control. Frequency-dependent weightings based on the speech intelligibility index (SII), the modified intermediate reference system (MIRS), the long-term average speech spectrum (LTASS), and a signal-dependent oracle are compared with scalar weighting using measured acoustic impulse responses in a multi-speaker scenario. The results show that LTASS and oracle weightings provide the largest speech-intelligibility improvements and comparable speech-quality improvements at substantially lower distortion levels than those obtained with SII and MIRS weightings. While the oracle weighting provides the best overall perceptual trade-off, LTASS weighting provides a comparable perceptual trade-off without requiring the clean desired-speech signal.",
+  "abstractSha256": "46aadd60060e7966e84da5eed92eb493d0a7e0f976e758355c0a393a23671204",
+  "arxivId": "2610.00721",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00721v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "主动降噪",
+    "rankBucket": "前50%",
+    "score": 5.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.active-noise-control",
+          "label": "主动降噪"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "主动降噪",
+      "primaryTaskId": "task.active-noise-control",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tong Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Reinhild Roden"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthias Blau"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对开放式耳机的空间选择性有源噪声控制问题，论文把期望语音保持误差改成频率加权二次惩罚并保持时域低延迟控制，在实测脉冲响应多说话人场景下报告 LTASS 与 oracle 加权在更高 SI-SDR 处取得最大可懂度提升和相当音质提升，而 SII 与 MIRS 的最大音质提升出现在更低失真容忍度之外。",
+  "originalTitle": "Frequency-Weighted Soft-Constrained Spatially Selective Active Noise Control for Open-Fitting Hearables",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00721v1.pdf",
+  "readerTitle": "想保住要听的人声又想压住噪声：用频率加权在失真和降噪之间换位置",
+  "schemaVersion": 1
+}

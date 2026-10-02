@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00607v1",
+  "abstract": "Historical music restoration (HMR) has almost exclusively focused on constrained problems such as Super-Resolution or the restoration of solo pieces, under-exploring the general task of restoring orchestral historical music, which has multiple instruments. This under-exploration is largely because the HMR domain, early-20th-century recordings, has no pre-degradation ground-truth pairs, making the restoration task unsupervised and more challenging. This paper presents a supervised end-to-end orchestral HMR benchmark by exploring both the synthetic degradation functions and the end-to-end generative deep-learning restoration methods. We simulate the historical recording degradation chain more faithfully than prior work, which makes orchestral restoration into a tractable supervised problem. A latent flow-matching model trained on the resulting synthetic pairs outperforms existing HMR baselines on intrusive, non-intrusive, and subjective evaluations. We also curate and release a 9.3-hour license-free, unpaired, historical classical-music test set, along with code and audio demos.",
+  "abstractSha256": "faa6430f796e4e63dad6cd5f15098eea416af104bd3e2b679afc38f492fff97c",
+  "arxivId": "2610.00607",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00607v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频修复",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-restoration",
+          "label": "音频修复"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频修复",
+      "primaryTaskId": "task.audio-restoration",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steven Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junghyun Koo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raphael Lafargue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tushar Dhyani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把 1926 年前管弦乐历史录音复原写成盲逆问题，用五阶段维纳-哈默斯坦退化函数合成成对数据，训练潜空间条件流匹配模型 SAMECFM，并在无参考指标与 MOS 上报告最优，但生成质量提升伴随保真度代价。",
+  "originalTitle": "End-to-End Historical Music Restoration in Latent Space",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00607v1.pdf",
+  "readerTitle": "没有成对真值时如何修管弦乐老录音：用更宽的退化仿真换有监督复原",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01182v1",
+  "abstract": "Recent ASR development has placed growing emphasis on generalization across diverse domains and acoustic conditions. Existing approaches typically adapt pretrained ASR models to front-end functions such as wake-up word (WuW) detection through additional training or task-specific modules. In this work, we explore the use of a shared pretrained ASR backbone for WuW detection without gradient-based fine-tuning and examine whether a compact encoder can be extracted using the PCA-based structured pruning approach of SliceGPT. Experiments with Parakeet-TDT-0.6B-v3 and Moonshine-base show that WuW detection performance remains relatively stable when the encoder channel dimension is reduced by 50%. These results suggest that task-relevant compact encoders can be derived from pretrained ASR models without fine-tuning.",
+  "abstractSha256": "5f0cd0bf84d5775d34d369ed144b62124a36120ae034212074a93d0034a521ec",
+  "arxivId": "2610.01182",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01182v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音唤醒",
+    "rankBucket": "前50%",
+    "score": 5.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.wake-word",
+          "label": "语音唤醒"
+        },
+        {
+          "facet": "method",
+          "id": "method.pruning",
+          "label": "模型剪枝"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "模型剪枝",
+      "primaryMethodId": "method.pruning",
+      "primaryTask": "语音唤醒",
+      "primaryTaskId": "task.wake-word",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hwayeon Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Youngwon Choi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hyeonyu Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文研究不做梯度微调能否直接用预训练 ASR 编码器做说话人无关唤醒词检测，并用 SliceGPT 式 PCA 结构化剪枝把编码器通道减半，证据是 50% 剪枝时参数约减 40% 而 EER 仅温和上升，但随机保留同等维度会使 EER 恶化到 40% 以上。",
+  "originalTitle": "Toward Elastic Speech Inference: Training-Free Wake-Word Detection from Pretrained ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01182v1.pdf",
+  "readerTitle": "不动原模型做唤醒词：用正交子空间从预训练 ASR 里取出紧凑编码器",
+  "schemaVersion": 1
+}

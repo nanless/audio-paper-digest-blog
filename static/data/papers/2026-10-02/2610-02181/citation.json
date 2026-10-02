@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02181",
+  "arxivId": "2610.02181",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haibo Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jiteng Mu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jialu Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jingru Yi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuanjun Xiong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jianming Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lifu Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mingze Xu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02181",
+  "originalTitle": "OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02181.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

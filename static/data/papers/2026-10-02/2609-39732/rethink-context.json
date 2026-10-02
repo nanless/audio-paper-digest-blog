@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39732",
+  "abstract": "User-generated content has become one of the most-consumed content types. However, capturing spatial audio with consumer hardware is still challenging. Given the widespread success of smart earbuds, binaural audio could be a promising option to capture spatial audio on consumer devices, but its inherent signal characteristic limits its usability as a recording format. In this paper, we propose and define a new task, Binaural to Ambisonics conversion (Bin2Ambi). In our proposed system, we exploit simultaneously captured head-tracking data provided from the motion sensors in smart earbuds. We show that this motion data help resolve the inherent directional uncertainty of two-channel binaural audio due to front-back localization ambiguities and lateral errors in the cone of confusion. Our results show that our system learns directional and diffuse-field information and that head-tracking especially reduces extreme localization errors. Objective metrics and a subjective listening test suggest that the converted Ambisonics soundfield achieves an average directional error of up to $11.8^\\circ$ and a perceived spatial quality similar to a DirAC ground-truth model. The proposed algorithm can serve as a baseline for future improvements to this novel Bin2Ambi task.",
+  "abstractSha256": "0ca20e61390ccd784c2e993484c8e624167eb3b168b11a7cd0606f0ca5b04bd8",
+  "arxivId": "2609.39732",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "声场重建",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.sound-field",
+          "label": "声场重建"
+        },
+        {
+          "facet": "method",
+          "id": "method.rnn",
+          "label": "RNN"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "RNN",
+      "primaryMethodId": "method.rnn",
+      "primaryTask": "声场重建",
+      "primaryTaskId": "task.sound-field",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gavin Milner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nils Peters"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把双耳两通道加头动四元数作为输入，用卷积循环网络逐时频估计方向性音频编码参数再合成一阶全景声，最强证据是无噪声消融中加权平均角度误差做到 11.82 度且主观空间质量与参数真值无显著差异，代价是声源增多和背景噪声下误差与定位准确度明显下降。",
+  "originalTitle": "Bin2Ambi: Learning Ambisonic Soundfield Reconstruction from Head-Tracked Binaural Audio",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39732.pdf",
+  "readerTitle": "双耳到全景声：用头部转动解开前后混淆的方向性重建",
+  "schemaVersion": 1
+}

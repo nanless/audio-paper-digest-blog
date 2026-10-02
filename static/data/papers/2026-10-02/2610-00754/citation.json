@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00754v1",
+  "arxivId": "2610.00754",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00754v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University of York, UK",
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Luca Resti"
+    },
+    {
+      "affiliations": [
+        "Department of Language and Linguistic Science, University of York, UK"
+      ],
+      "name": "Amelia Gully"
+    },
+    {
+      "affiliations": [
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Michael McLoughlin"
+    },
+    {
+      "affiliations": [
+        "AudioLab, School of Physics, Engineering and Technology, University of York, UK"
+      ],
+      "name": "Gavin Kearney"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of York, UK"
+      ],
+      "name": "Alena Denisova"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00754v1",
+  "originalTitle": "MAV-C: A Framework for the Joint Objective Estimation of Audio-Visual Complexity in Immersive Virtual Environments",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00754v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

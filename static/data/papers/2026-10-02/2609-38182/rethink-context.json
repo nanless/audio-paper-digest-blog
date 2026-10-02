@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.38182",
+  "abstract": "Avatar-based multimodal empathetic response generation has emerged as a pivotal capability in human-centric systems, aiming to recognize user emotions and synthesize responses with synchronized text, audio, and talking-face video. Despite recent progress, existing methods still suffer from three critical limitations: (1) overlooking conflicting emotions across modalities, (2) lacking explicit multimodal synthesis guidance, and (3) neglecting inherent error propagation of multimodal response generation. To address these limitations, we propose EmAvatar, a novel framework for precise emotion perception and expressive response generation. It first performs deliberative multimodal emotion recognition by exposing inter-modal prediction conflicts and then initiates a multi-round QA process between a Conflict Inspector and an Evidence Collector to gather evidence for conflict resolution, leading to a robust, evidence-aware prediction. Regarding response generation, EmAvatar first synthesizes a composite script that couples the textual response with an expressive instruction. Moreover, to ensure high-quality synthesis, an iterative refinement mechanism evaluates and revises the script until it aligns with predefined criteria, serving as reliable guidance for subsequent audio and video synthesis. Extensive experiments across four tasks demonstrate that EmAvatar outperforms state-of-the-art methods. Our code will be publicly released.",
+  "abstractSha256": "20f65374d0ec20905f988c17ed9e0d4bdb3fb25e7e92cfbfd2bca061b2c00622",
+  "arxivId": "2609.38182",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.generative",
+          "label": "生成模型"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.multimodal",
+          "label": "多模态模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "生成模型",
+      "primaryMethodId": "method.generative",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xiaolin Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Xuemeng Song"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinlan Fu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Weili Guan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mong-Li Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Wynne Hsu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对多模态情绪冲突、缺显式表达指导与文本误差向后传播问题，EmAvatar 用多视角并行感知加多轮问答裁决做情绪识别，再用合成脚本加迭代精修指导音视频合成，在 AvaMERG 四任务上报告了可核对的提升，代价是情绪识别阶段约十秒级额外推理开销。",
+  "originalTitle": "EmAvatar: Multimodal Empathetic Response Generation via Conflict Resolution and Expressive Guidance",
+  "pdfUrl": "https://arxiv.org/pdf/2609.38182.pdf",
+  "readerTitle": "模态打架时先断案再说话：EmAvatar 用冲突裁决与合成脚本做共情回复",
+  "schemaVersion": 1
+}

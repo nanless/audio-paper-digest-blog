@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39344",
+  "arxivId": "2609.39344",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Foyer"
+      ],
+      "name": "Shantanu Vispute"
+    },
+    {
+      "affiliations": [
+        "Foyer"
+      ],
+      "name": "Aditya Mishra"
+    },
+    {
+      "affiliations": [
+        "Foyer"
+      ],
+      "name": "Siddhartha Saxena"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39344",
+  "originalTitle": "Who Said What, and Will It Be Remembered? Evaluating Persistent Speaker Attribution Across Meetings",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39344.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

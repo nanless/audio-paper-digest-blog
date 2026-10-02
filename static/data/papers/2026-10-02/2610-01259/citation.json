@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01259v1",
+  "arxivId": "2610.01259",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01259v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Yingjian Yu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Haiyan Guo"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Tianshun Wang"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Zirui Ge"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Chi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01259v1",
+  "originalTitle": "A Federated Deepfake Speech Detection Method Based on Layer-Wise Center-Guided Weighting Aggregation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01259v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

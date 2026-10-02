@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00607v1",
+  "arxivId": "2610.00607",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00607v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Steven Cho"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junghyun Koo"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Raphael Lafargue"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tushar Dhyani"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Eloi Moliner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuki Mitsufuji"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00607v1",
+  "originalTitle": "End-to-End Historical Music Restoration in Latent Space",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00607v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

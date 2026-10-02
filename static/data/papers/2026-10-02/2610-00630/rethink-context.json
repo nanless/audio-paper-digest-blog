@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00630v1",
+  "abstract": "We present PLACE, a method that extends the pretrained any-to-audio model AudioX for binaural generation from arbitrary combinations of text, video, and optional audio prompts. PLACE augments video conditioning with Perception Encoder Core features, aligns text and video representations to derive spatial cues, and applies a conditioning-dependent low-rank transformation to the generated latent. The adapter is supervised via decoded-audio interaural level and time difference objectives. Trained on MRSAudio, PLACE improves most metrics over ViSAGe on FAIR-Play and achieves an improved SpatialCLAP score over SpatialSonic on the BEWO-1M Single Static test split. Listener evaluations favor PLACE for video-to-audio and out-of-distribution text-to-audio generation, demonstrating flexible multimodal control and improved spatial consistency.",
+  "abstractSha256": "55c88fd179b2aeb103a440edf85f1ab8b86c0d3ecd40e7b2cf7e2d4220e9ce72",
+  "arxivId": "2610.00630",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00630v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "空间音频渲染",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spatial-rendering",
+          "label": "空间音频渲染"
+        },
+        {
+          "facet": "method",
+          "id": "method.adapter",
+          "label": "Adapter"
+        },
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Adapter",
+      "primaryMethodId": "method.adapter",
+      "primaryTask": "空间音频渲染",
+      "primaryTaskId": "task.spatial-rendering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tiernon Riesenmy"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "You Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gautam Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andrea Fanelli"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "PLACE 面向文本、视频、可选音频任意组合到双耳波形的生成问题，选择冻结 AudioX 与 SAO 解码器并外挂空间对齐与低秩潜适配器，在 MRSAudio 上小规模微调并用解码音频的 ILD 与 ITD 监督方向，在 FAIR-Play 多数客观指标上优于 ViSAGe 且在 BEWO-1M 上保持部分竞争力，代价是在部分文本到音频指标与分布内主观评分上落后基线。",
+  "originalTitle": "PLACE: Positional Latent Adaptation via Conditioned Embeddings for Binaural Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00630v1.pdf",
+  "readerTitle": "冻结立体声潜空间再摆方向：PLACE 以条件低秩变换生成双耳音频",
+  "schemaVersion": 1
+}

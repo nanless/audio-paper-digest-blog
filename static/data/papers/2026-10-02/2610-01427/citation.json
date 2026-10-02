@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01427",
+  "arxivId": "2610.01427",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ben Sapirstein"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roy Mattar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guy Mor-Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ahlam Mohamed"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Letizia Cerqueglini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Morris Alper"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01427",
+  "originalTitle": "SHAMS: An Audio-Grounded Pronunciation Benchmark for Levantine Arabic",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01427.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

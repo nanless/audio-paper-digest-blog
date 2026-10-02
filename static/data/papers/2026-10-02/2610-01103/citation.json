@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01103v1",
+  "arxivId": "2610.01103",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01103v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yuxin Li"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yifei Li"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yi-Wen Chao"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales, Sydney, Australia"
+      ],
+      "name": "Xiangyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Cuntai Guan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01103v1",
+  "originalTitle": "ParaCalib: Semantically Calibrated Paralinguistic Modeling for Depression Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01103v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

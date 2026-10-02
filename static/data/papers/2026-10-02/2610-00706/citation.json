@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00706v1",
+  "arxivId": "2610.00706",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00706v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amir Ivry"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00706v1",
+  "originalTitle": "AnchorPrompt: Self-Distilled Soft Prompts for Robust Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00706v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

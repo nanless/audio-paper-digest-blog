@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00642v1",
+  "arxivId": "2610.00642",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00642v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giulio Cengarle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Cooper"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Vinton"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haici Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00642v1",
+  "originalTitle": "Interpretable Destination-Aware synthesizer Modulation Recovery",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00642v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

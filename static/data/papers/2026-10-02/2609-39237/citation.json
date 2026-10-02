@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39237",
+  "arxivId": "2609.39237",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zixiao Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sheng Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Longbiao Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shih-Chii Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39237",
+  "originalTitle": "DuSpaR: Dual-State Sparsifying Recurrent Unit with Feedback Modulation for Compute-Efficient Speech Processing",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39237.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

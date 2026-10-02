@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39552",
+  "arxivId": "2609.39552",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arhan Vohra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Choenden Kyirong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Laura Ibáñez-Martínez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39552",
+  "originalTitle": "Ghost in the Encoder: Decodable Artist Identity Representations in Lyrics-to-Song Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39552.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

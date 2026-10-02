@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01378",
+  "abstract": "Attributing model behavior to synthetic training data requires knowing what produced each training item before estimating what that item caused. A waveform-label pair does not preserve this knowledge. We propose a generation-provenance substrate in which a synthetic research object binds source specification, generated content, waveform, target, fact requirements, quality signals, review lineage, and immutable manifest identity. Producer and selection mechanism determine evidentiary meaning; storage location and variable name do not. We audit this substrate in a private Japanese care-handoff pipeline. A 113-asset review population contains 1.552 hours of synthetic speech across six scenario families; all items have linked audio, transcripts, candidate notes, and fact checklists, but human evidence is selective and source-specific. Two faithful-only manifests are scenario-seed-disjoint and immutably versioned, while exact upstream attribution remains blocked by floating generator aliases, missing per-clip TTS and code stamps, and an unversioned checking prompt. We argue that generation provenance is necessary but not sufficient for behavior attribution: it defines the candidate causal graph and audit units, whereas contributive attribution still requires frozen training runs and intervention or influence evidence. The paper contributes a compact provenance contract, an audit protocol, and a bounded case study for synthetic-data attribution; controlled research access may be offered, but we do not claim causal training-data attribution, clinical validity, or unrestricted public release.",
+  "abstractSha256": "6c6ed00e3dbbf503c8ddadaabd9f3fe310f5fa120cc307c499953d62d2843d1a",
+  "arxivId": "2610.01378",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 5.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sidi Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiying Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文把可审计的生成来源链作为行为归因的前提，提出合成语音研究对象与五遍审计法，并在 113 条日语护理交接合成资产上验证了哪些归因问题被允许、哪些仍被缺失戳记阻断，代价是仍不提供因果归因与临床有效性结论。",
+  "originalTitle": "Generation Provenance Before Behavior Attribution: Auditing Synthetic Speech Research Objects",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01378.pdf",
+  "readerTitle": "先把生成史钉牢，再谈行为归因：合成语音研究对象的来源审计",
+  "schemaVersion": 1
+}

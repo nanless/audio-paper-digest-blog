@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01259v1",
+  "abstract": "The advancement of deep learning-based speech synthesis has significantly increased the diversity of deepfake speech, posing threats to voice authentication. While centralized training is effective for deepfake speech detection (DSD), it requires considerable computational resources and raises privacy concerns. To address these issues, we propose a Federated DSD (FedDSD) method that enables collaborative model training across decentralized speech datasets without sharing raw audio. Specifically, each client trains a local model using the FedProx algorithm to mitigate the effects of data heterogeneity and uploads model parameters to a central server. To improve global model aggregation, we further propose a layer-wise center-guided weighting aggregation (L-CGWA) strategy that adjusts each client's contribution per layer based on its distance to a reference center, capturing inter-client and inter-layer discrepancies and enhancing the robustness of model aggregation. Experimental results demonstrate that models trained under the proposed FedDSD method achieve equal error rates (EERs) comparable to those obtained via centralized co-training, while significantly out-performing models trained on individual corpora. Furthermore, the proposed FedDSD method demonstrates robust generalization capabilities across diverse cross-domain datasets.",
+  "abstractSha256": "deec8d80f06b12c03bad84cf16c60ee283d1bfbb5d122dd27206ad0dff76cd31",
+  "arxivId": "2610.01259",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01259v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Yingjian Yu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Haiyan Guo"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Tianshun Wang"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Zirui Ge"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, Nanjing 210003, China"
+      ],
+      "name": "Chi Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对声码器伪造与编解码伪造分布差异大的问题，论文用本地 FedProx 加逐层按到中心距离加权的聚合做联邦伪造语音检测，最强证据是双客户端下平均等错误率降到 0.266% 接近集中联合训练，代价是仍略逊于集中训练且只验证了两客户端严重非独立同分布情形。",
+  "originalTitle": "A Federated Deepfake Speech Detection Method Based on Layer-Wise Center-Guided Weighting Aggregation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01259v1.pdf",
+  "readerTitle": "不共享原音频时两类伪造语音如何联合训练：按层靠近共识的联邦聚合",
+  "schemaVersion": 1
+}

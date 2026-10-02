@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00735v1",
+  "abstract": "Modern neural text-to-speech (TTS) systems achieve remarkable acoustic fidelity but act as black boxes, offering little interpretable control over the vocal tract filter. We propose a controllable source-filter TTS architecture grounded in articulatory kinematics. An Acoustic-to-Articulatory Inversion (AAI) model, enhanced by large-scale pretrained representations, generates kinematic pseudo-trajectories for a large TTS corpus. These trajectories condition the filter response, while predicted pitch and energy contours parameterise the glottal source. Source and filter are predicted independently, and the source is refined by an Optimal Transport Conditional Flow Matching (OT-CFM) module before recombination into the final spectrogram. Our model achieves intelligibility and naturalness competitive with similarly sized baselines, with only a modest spectral fidelity cost in exchange for explicit control. Evaluations reveal clear source-filter disentanglement, enabling stable prosodic scaling and cross-speaker source/filter recombination, where F0 remains tied to the source speaker while vocal-tract characteristics follow the filter speaker. Finally, direct manipulation of articulatory trajectories enables fine-grained control, such as accent modification, offering a new direction for interpretable speech synthesis. Audio samples: https://coding-phoenix-12.github.io/ArticulatorySFTTS/",
+  "abstractSha256": "ef5bda1d86540baa24a40e640795ab9758d7f06b232001b7ad9c696a88a43e08",
+  "arxivId": "2610.00735",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00735v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.phonation",
+          "label": "发声与构音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jesuraj Bandekar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Prasanta Kumar Ghosh"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用声学到发音反演伪标签把声道滤波器锚定在发音运动学上，源用基频能量加流匹配细化，以频谱保真度小幅下降换来可验证的源滤波解耦与发音级口音编辑。",
+  "originalTitle": "Articulatory Source-Filter TTS: Physically Grounded Control through Vocal Tract Kinematics",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00735v1.pdf",
+  "readerTitle": "把声道还给合成：用发音运动约束源-滤波器的可控 TTS",
+  "schemaVersion": 1
+}

@@ -1,0 +1,59 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01293v1",
+  "arxivId": "2610.01293",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01293v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sihan Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiqi Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinshan Zhang"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China"
+      ],
+      "name": "Ying Li"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China",
+        "Binjiang Institute of Zhejiang University, Hangzhou, China",
+        "Zhejiang Key Laboratory of Digital-Intelligence Service Technology, Hangzhou, China"
+      ],
+      "name": "Meng Xi"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China",
+        "Binjiang Institute of Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Jianwei Yin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01293v1",
+  "originalTitle": "AudioJev: Direct Audio Decisions with Order-Calibrated Probabilities",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01293v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

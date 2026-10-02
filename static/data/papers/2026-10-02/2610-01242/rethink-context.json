@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01242v1",
+  "abstract": "The generalization ability of Fake Speech Detection (FSD) models is crucial for real-world deployment. Existing multi-dataset co-training methods rely on fixed training sets and cannot adapt to emerging spoofing types. Although con-tinual learning has been explored, many approaches overlook limited data storage at individual devices, thereby restricting practical applicability. To address this, we propose FedCFM, a Federated continual domain generalization framework via Conditional Flow Matching (CFM) for collaboration without sharing raw speech data across distributed clients facing diverse and evolving spoofing attacks. Each client trains a CFM-based generator to model spoof-type-specific embedding distributions, and cross-client generator exchange enables synthesis of unseen spoof-type embeddings for continual classifier updating through generative replay and knowledge distillation. With the same training datasets, FedCFM achieves lower EER than the eval-uated centralized and federated domain generalization baselines, demonstrating strong cross-domain generalization. Code will be released on https://github.com/jspycpp/FedCFM.",
+  "abstractSha256": "28444e8c64e02121bcb412bd6b502887a3bde6c0cb027a35b9e5467162847ca4",
+  "arxivId": "2610.01242",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01242v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "联邦学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前25%",
+    "score": 8.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.federated",
+          "label": "联邦学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.domain-generalization",
+          "label": "域泛化"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "联邦学习",
+      "primaryMethodId": "method.federated",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Yingjian Yu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Haiyan Guo"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Tianshun Wang"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Xinzhou Xu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Zirui Ge"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Chi Liu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Ziheng Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对伪造语音类型持续新增且原始语音不能集中共享的问题，FedCFM 让每个客户端在嵌入层训练条件流匹配生成器并交换生成器，再用生成回放加知识蒸馏更新分类器，在相同训练数据组合下报告了低于所比较集中式与联邦基线的等错误率，但生成器交换轮带来约 164.1 MB 的单客户端通信开销。",
+  "originalTitle": "FedCFM: Federated Continual Domain Generalization for Fake Speech Detection via Conditional Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01242v1.pdf",
+  "readerTitle": "不传原始语音也能学到新伪造：用条件流匹配在客户端之间搬运分布",
+  "schemaVersion": 1
+}

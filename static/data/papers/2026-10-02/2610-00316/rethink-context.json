@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00316",
+  "abstract": "Voice agents enable low-latency, natural interaction, yet their ability to faithfully ground responses in external documents remains underexplored. We introduce DuplexSpeechBench-Document Grounding (DSB-DG), a benchmark for evaluating document grounding in voice agents across five professional domains. DSB-DG targets three failure modes: Context Saturation, which measures grounding under increasing document length; Grounding Decay, which measures retention of document facts across multi-turn dialogue; and Proactive Grounding, which evaluates whether context re-injection mitigates conversational drift. The benchmark contains 1,636 adversarially verified QA pairs from 50 documents covering five professional domains, and supports fully automatic evaluation of grounding accuracy, hallucination, and response latency. Across systems spanning cascaded, proprietary full-duplex and real-time, and open-weight speech2speech architectures, we find substantial differences in effective grounding capacity. While cascaded pipeline (ASR-LLM-TTS) achieves the highest grounding accuracy, Gemini-Live and GPT-Realtime closely trail behind. Open-weight systems exhibit distinct failure modes, most notably an abrupt context-capacity collapse and multi-turn grounding decay. More broadly, grounding fidelity degrades with context and conversational load, and failures frequently manifest as unsupported generations rather than abstention. We show that contextual grounding as a key unresolved challenge for reliable full-duplex voice agents.",
+  "abstractSha256": "949bc5519ee204afc77fa3a8cfc52cb4228edfcf6767bd4fb1bc1a99b33da119",
+  "arxivId": "2610.00316",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Puneet Mathur"
+    },
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Nedim Lipka"
+    },
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Zeyu Jin"
+    },
+    {
+      "affiliations": [
+        "University of Maryland College Park, USAProject Page:"
+      ],
+      "name": "Dinesh Manocha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究用 1636 个问答和 20 组多轮对话检验语音智能体按文档作答的能力，发现级联系统接地最稳而端到端实时系统在长上下文和多轮后出现断崖与遗忘，且重注文档只对部分架构有效。",
+  "originalTitle": "DuplexSpeechBench-Document Grounding: Benchmarking Document Grounding and Hallucinations in Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00316.pdf",
+  "readerTitle": "文档变长、对话变长时语音智能体还记得住原文吗",
+  "schemaVersion": 1
+}

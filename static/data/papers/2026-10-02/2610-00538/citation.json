@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00538v1",
+  "arxivId": "2610.00538",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00538v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Instituto de Investigaciones en Matematicas Aplicadas y en Sistemas, Universidad Nacional Autonoma de Mexico, Circuito Escolar 3000, Coyoacan, 03740, Ciudad de Mexico, Mexico"
+      ],
+      "name": "Caleb Rascon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00538v1",
+  "originalTitle": "Multi-agent Auditory Scene Analysis: Improved Localization Speed and Robustness by Multi-beamformed Speech Quality Feedback",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00538v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

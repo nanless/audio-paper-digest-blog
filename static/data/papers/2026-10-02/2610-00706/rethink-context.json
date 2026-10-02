@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00706v1",
+  "abstract": "Large audio-language models (LALMs) are sensitive to input perturbations, such as noise, waveform corruption, and adversarial injections. We propose AnchorPrompt, an efficient adaptation method that keeps the model frozen and learns a single block of prompt vectors inserted at the decoder input, between the audio and question embeddings. We train these vectors through self-distillation over diverse audio and text perturbations. To improve answer consistency and mitigate hallucination, we use the model's prediction on the clean recording as the target for answerable inputs, and assign a refusal target when the audio lacks sufficient evidence to answer. Furthermore, AnchorPrompt is perturbation-agnostic at inference, requiring no prior detection of perturbations and enabling zero-shot transfer to unseen distortions. We evaluate three LALMs across three benchmarks and show that AnchorPrompt improves answer consistency in most tested conditions. Clean accuracy improves in six of nine model-benchmark pairs, with minimal impact on the remainder of 1.2% at most. Crucially, AnchorPrompt reduces hallucinations under severe audio corruption while keeping false refusals on clean audio rare. Finally, these consistency gains transfer to unseen perturbations, such as choice permutations and reverberation.",
+  "abstractSha256": "099fdc96d11960d9591e1af12a612b1c83abf4fb23ffc2f1bbdd0f2934e97730",
+  "arxivId": "2610.00706",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00706v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "提示学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.prompt-learning",
+          "label": "提示学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "提示学习",
+      "primaryMethodId": "method.prompt-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pooneh Mousavi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Amir Ivry"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mirco Ravanelli"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Cem Subakan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频语言模型怕噪声、怕遮挡、怕注入文本误导的问题，AnchorPrompt 冻结模型只训练解码器输入处的 8 个软提示向量，用干净输入的教师答案做自蒸馏目标并在证据不足时学拒答，报告显示九组干净准确率中有六组提升且重度破坏下幻觉回答大幅下降，代价是拒答目标的零样本外推仍有两组混响一致性下降。",
+  "originalTitle": "AnchorPrompt: Self-Distilled Soft Prompts for Robust Audio-Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00706v1.pdf",
+  "readerTitle": "冻住大模型，只调八个向量：AnchorPrompt 用干净答案蒸馏自己",
+  "schemaVersion": 1
+}

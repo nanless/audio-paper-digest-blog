@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01103v1",
+  "abstract": "Vocal behavior provides important signals for speech-based depression detection, but its interpretation often depends on what is being said and how it functions in context. However, existing methods typically treat acoustic cues as context-independent markers, making it difficult to distinguish vocal form from its context-dependent communicative function. We propose ParaCalib, a framework that semantically calibrates paralinguistic behavior by interpreting vocal patterns relative to utterance-level semantic context and inferred communicative function and representing them in a comparable state space. Concretely, ParaCalib uses an Audio-Language Model (ALM) to generate contextualized vocal descriptions and an LLM-based Paralinguistic State Extractor (PSE) to map these descriptions into a structured Semantically Calibrated Paralinguistic (SC-Para) representation. ParaCalib achieves the highest mean Macro-F1 among the evaluated methods, reaching 71.9\\% on DAIC-WOZ and 90.5\\% on MODMA. Our controlled analysis provides direct evidence of semantic calibration at the PSE stage: under a fixed caption-level acoustic description, varying the accompanying semantic context changes the inferred depression-related paralinguistic evidence. Our exploratory analysis further identifies recurring configurations of paralinguistic states associated with depression labels rather than a single uniformly dominant state.",
+  "abstractSha256": "8a9ab8d8055a985223d43d6bbb36f8d8b6fa08b4c32604a0cefa41c360e2ab58",
+  "arxivId": "2610.01103",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01103v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.mental-health",
+          "label": "精神健康筛查"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yuxin Li"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yifei Li"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Yi-Wen Chao"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales, Sydney, Australia"
+      ],
+      "name": "Xiangyu Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University, Singapore"
+      ],
+      "name": "Cuntai Guan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对声音形式与交际功能混淆的问题，用冻结音频语言模型写描述加语言模型映射到七维状态再做注意力多实例分类，在 DAIC-WOZ 达到 71.9% 与 MODMA 达到 90.5% 的平均 Macro-F1，代价是依赖大模型抽取与录音条件。",
+  "originalTitle": "ParaCalib: Semantically Calibrated Paralinguistic Modeling for Depression Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01103v1.pdf",
+  "readerTitle": "同样的停顿为何含义不同：用语义校准重写抑郁语音建模",
+  "schemaVersion": 1
+}

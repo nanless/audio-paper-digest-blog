@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00316",
+  "arxivId": "2610.00316",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Puneet Mathur"
+    },
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Nedim Lipka"
+    },
+    {
+      "affiliations": [
+        "Adobe Research, San Jose, USA"
+      ],
+      "name": "Zeyu Jin"
+    },
+    {
+      "affiliations": [
+        "University of Maryland College Park, USAProject Page:"
+      ],
+      "name": "Dinesh Manocha"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00316",
+  "originalTitle": "DuplexSpeechBench-Document Grounding: Benchmarking Document Grounding and Hallucinations in Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00316.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

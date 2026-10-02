@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00642v1",
+  "abstract": "Synthesizer programming is a challenging task, particularly in configuring modulation: the time-varying control of parameters such as pitch, filter cutoff, and oscillator level by modulators such as Low-Frequency Oscillators (LFOs). Prior work has shown that modulation can be reconstructed from the clean audio through curve matching, yet the recovered parameters are often untransferable to modern synthesizers. We present an interpretable destination-aware modulation and waveform recovery pipeline that mirrors how musicians often recreate sounds on a synthesizer. First, the system identifies the modulated destinations; then it recovers the LFO shape associated with each destination, and estimates the oscillator waveform to match the source timbre. The training is supported by a differentiable synthesizer that incorporates a noise oscillator, and more modulation options than previous work. We carefully train the models for optimal perceptual quality, with extensive exploration of perceptual losses and adversarial training. Through objective and subjective evaluation, we show that predicting the destinations correctly is essential, our model excels in the modulation focused inverse synthesis tasks, and our Gammatone loss and CQT discriminator significantly outperform the traditionally-used MSS loss in improving perceptual quality. We provide audio samples from the subjective test.",
+  "abstractSha256": "ca9e6ede5efb37a632d09068c406dc5837d80223099b308379d66b7f087f866f",
+  "arxivId": "2610.00642",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00642v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Giulio Cengarle"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "David Cooper"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mark Vinton"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haici Yang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把逆向合成拆成调制去向分类、去向条件 LFO 回归与振荡器波形恢复三步，用可微合成器连接音频损失，在合成与 Serum 2 数据上验证了去向正确性的关键作用，代价是滤波器与振荡器类型仍受限且感知损失需与直接参数监督配合使用。",
+  "originalTitle": "Interpretable Destination-Aware synthesizer Modulation Recovery",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00642v1.pdf",
+  "readerTitle": "先判调制去哪了，再还原调制形状与波表：面向可解释逆向合成的去向感知恢复",
+  "schemaVersion": 1
+}

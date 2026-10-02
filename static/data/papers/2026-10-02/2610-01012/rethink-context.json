@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01012v1",
+  "abstract": "Video-to-speech synthesis aims to generate natural-sounding speech from silent talking-face videos while ensuring phonetic accuracy. A fundamental challenge in this task is the inherent one-to-many mapping problem, where visual dynamics often lack sufficient information to uniquely determine the corresponding utterance. To address this, we propose Watch Your Speech (WYS), a video-to-speech synthesis framework that incorporates textual conditioning as an explicit linguistic cue to mitigate visual ambiguity. Our framework features an attention-based embedding fusion module that synergistically integrates textual context with video sequences, coupled with a conditional flow matching objective for high-fidelity speech generation. Extensive experiments on the LRS2 and LRS3 datasets demonstrate that WYS achieves superior performance, establishing new state-of-the-art results in audio-visual synchronization (LSE-C/D) while maintaining highly competitive textual accuracy (WER). Subjective evaluations further confirm that our model generates speech with near-human naturalness, validating the effectiveness of textual conditioning in content-controlled video-to-speech synthesis. Project page: https://github.com/gunwoo5034/Watch-your-Speech",
+  "abstractSha256": "c7c9db1aff988bc5f21291f88fb49c739324457fe30ca4d6d5ea75465ceccb90",
+  "arxivId": "2610.01012",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01012v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音视频语音合成",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-synthesis",
+          "label": "音视频语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音视频语音合成",
+      "primaryTaskId": "task.av-synthesis",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Gunwoo Lee"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoori Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yoseob Han"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无声谈话视频只能看到近似唇形而无法唯一确定音素的问题，论文用训练期真值文本加注意力融合与条件流匹配生成梅尔谱，并在 LRS2/LRS3 上以同步指标领先为证据，代价是推理仍依赖唇读预测文本的准确率。",
+  "originalTitle": "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01012v1.pdf",
+  "readerTitle": "看唇仍会猜错词：用训练期文本约束收窄一对多映射的视频转语音",
+  "schemaVersion": 1
+}

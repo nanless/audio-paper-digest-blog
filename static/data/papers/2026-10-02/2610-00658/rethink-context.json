@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00658v1",
+  "abstract": "Long-form text-to-speech must retain requested words over extended generations, yet sentence-level training and evaluation can hide omissions and early stops. We introduce Balalaika-Longform, an open Russian corpus of 189 hours in continuous units of 30 seconds to 15 minutes. Long units and matched short windows support fine-tuning comparisons on the same source recordings, and the accompanying evaluation retains every synthesis attempt. We fine-tune CosyVoice3, Qwen3-TTS, VoxCPM2 and F5-TTS on either view and test continuous synthesis on 50 text-voice pairs with voices unseen in fine-tuning, at about 75, 300 and 1,200 words. At 1,200 words, CosyVoice3 WER falls from 99.9% after short-window fine-tuning to 47.3% with long targets, and to 16.6% with punctuated, format-matched transcripts; paired intervals favor long targets for Qwen3-TTS and VoxCPM2, and by a small margin for F5-TTS, whose absolute WER stays above 90%. The results isolate the effect of training sequence length under a fixed continuous-generation protocol.",
+  "abstractSha256": "7150dea7b8f076d966e690ceb1fedd5687213a34f4581aa8a540c043ab4be1a2",
+  "arxivId": "2610.00658",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00658v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.long-audio",
+          "label": "长音频处理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Vasilii Kudryavtsev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文用同一批俄语录音的长单元与短窗口对照微调并做全尝试连续合成评估，报告在约 1200 词时自回归模型的长目标训练大幅降低词错误率，而流匹配模型的绝对错误率仍高于 90%，代价是转录格式与语料构成等混杂尚未完全分离。",
+  "originalTitle": "Balalaika-Longform: A Russian Speech Corpus for Continuous Long-Form Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00658v1.pdf",
+  "readerTitle": "一次读完还是分段拼接：长序列训练如何改变连续朗读的停早问题",
+  "schemaVersion": 1
+}

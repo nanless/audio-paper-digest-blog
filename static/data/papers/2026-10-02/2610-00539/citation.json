@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00539v1",
+  "arxivId": "2610.00539",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00539v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ksenia Lysikova"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Maslov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00539v1",
+  "originalTitle": "Collapse, Not Invariance: Diagnosing Auxiliary Objectives in Speech Anti-Spoofing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00539v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

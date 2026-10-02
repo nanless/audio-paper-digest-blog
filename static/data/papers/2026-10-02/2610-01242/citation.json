@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01242v1",
+  "arxivId": "2610.01242",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01242v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Yingjian Yu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Haiyan Guo"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Tianshun Wang"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Xinzhou Xu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Zirui Ge"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Chi Liu"
+    },
+    {
+      "affiliations": [
+        "School of Communications and Information Engineering, Nanjing University of Posts and Telecommunications, P.R. China"
+      ],
+      "name": "Ziheng Liu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01242v1",
+  "originalTitle": "FedCFM: Federated Continual Domain Generalization for Fake Speech Detection via Conditional Flow Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01242v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

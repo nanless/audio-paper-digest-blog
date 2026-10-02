@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39852",
+  "abstract": "Pitch tracking systems typically couple a per-frame fundamental frequency ($F_0$) estimator with a temporal smoothing stage to obtain continuous trajectories. Conventional Viterbi smoothers enforce first-order continuity but lack long-term temporal awareness and could lock into octave errors across corrupted frames. We propose Relative Interval Networks (RIN), a trajectory smoothing framework that reconciles per-frame pitch estimates with data-driven multi-hop pitch differences. We extract robust relative pitch intervals across arbitrary frame offsets using Variable-Q Transform cross-correlation. We formulate pitch smoothing as an $L_1$-norm optimization problem and prove its equivalence to a minimum cost circulation problem, solved efficiently via linear programming. Evaluations across speech, singing, and instrumental datasets show that RIN substantially improves weak estimators, matches or outperforms Viterbi decoding at a comparable computational cost, and provides superior robustness under certain acoustic degradation.",
+  "abstractSha256": "70868a0b78888e8ed844fd602c2ec2a26b3a95716fb4b7ea38095bd9b1e5099d",
+  "arxivId": "2609.39852",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音高与旋律提取",
+    "rankBucket": "前25%",
+    "score": 8.2,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pitch-melody",
+          "label": "音高与旋律提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音高与旋律提取",
+      "primaryTaskId": "task.pitch-melody",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chin-Yun Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chi-Jen Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Li Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "György Fazekas"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对逐帧基频估计后时序平滑易在连续坏帧锁定八度错误的问题，论文用可变 Q 变换互相关估计多跳相对音程并与绝对估计做 L1 联合优化，等价转为最小费用循环流用线性规划求解，在语音歌唱器乐上干净时接近维特比、白噪声低信噪比下提升更明显，但巴布尔噪声与强前端上收益有限且偏移集合依赖估计器。",
+  "originalTitle": "Pitch Smoothing Using Relative Interval Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39852.pdf",
+  "readerTitle": "不用硬压相邻帧连续：用多跳音高差把损坏段落桥接起来的平滑",
+  "schemaVersion": 1
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00726v1",
+  "abstract": "Dance-to-music (D2M) generation aims to synthesize musically plausible soundtracks whose temporal structure aligns with a given dance performance. Representative D2M methods do not explicitly distinguish motion cues across body parts and frequency bands, while standard flow matching lacks a dedicated objective for supervising local music-latent dynamics. To address these issues, we propose Dyna2Music, a latent flow-matching framework that combines structured motion conditioning with explicit supervision of music-latent dynamics. An empirical analysis on AIST++ quantifies how spatial partitioning and frequency separation affect raw music-to-kinematic beat alignment and motion-reference density, informing the conditioning design. Accordingly, Dyna2Music decomposes joint velocities into slow and fast components and hierarchically fuses the resulting part-wise motion energy with pretrained joint features to condition music generation. To complement this representation, we introduce latent dynamics consistency (LDC), an auxiliary objective that matches adjacent-frame change magnitudes between a single-step clean-latent estimate and the paired reference. LDC makes local music-latent variation an explicit training target without adding trainable parameters or inference computation. Dyna2Music supports variable-length music generation, and experiments on AIST++ and TikTok demonstrate improved rhythmic alignment and audio quality over representative D2M baselines.",
+  "abstractSha256": "4f6bb51d6bb315d131fe24340b13cc31f824521df5ce1813a2cb85d5a5d55771",
+  "arxivId": "2610.00726",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00726v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-synchronization",
+          "label": "音画同步"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Changchang Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lu Cheng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yan Yan"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对舞蹈到音乐生成中身体部位与快慢运动混在一起、音乐隐变量局部变化缺乏直接监督的问题，Dyna2Music 用五部位慢快能量加 MotionBERT 特征做条件、用隐动态一致性约束相邻帧变化幅度，在 AIST++ 上 F1 达到 55.76 但最高 F1 对应的权重不是 FADc 最低权重。",
+  "originalTitle": "Where the Body Keeps the Beat: Structured Motion Conditioning and Music Dynamics Supervision for Dance-to-Music Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00726v1.pdf",
+  "readerTitle": "身体分部与快慢分离：Dyna2Music 如何把舞蹈动作变成可监督的音乐时间结构",
+  "schemaVersion": 1
+}

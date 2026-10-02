@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.40087",
+  "arxivId": "2609.40087",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Takuhiro Kaneko"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hirokazu Kameoka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kou Tanaka"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yuto Kondo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.40087",
+  "originalTitle": "MeanVoiceFlow2: Joint Optimization of Mean Flow and Content Encoder for Fast One-Step Zero-Shot Voice Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2609.40087.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

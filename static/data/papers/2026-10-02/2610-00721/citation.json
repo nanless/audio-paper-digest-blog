@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00721v1",
+  "arxivId": "2610.00721",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00721v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tong Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Reinhild Roden"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthias Blau"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Simon Doclo"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00721v1",
+  "originalTitle": "Frequency-Weighted Soft-Constrained Spatially Selective Active Noise Control for Open-Fitting Hearables",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00721v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00852v1",
+  "arxivId": "2610.00852",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00852v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Abner Hernandez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tomás Arias Vergara"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Maier"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula Andrea Pérez-Toro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00852v1",
+  "originalTitle": "Child-Adapted Structured Phonological Representations for Interpretable Speech Sound Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00852v1.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

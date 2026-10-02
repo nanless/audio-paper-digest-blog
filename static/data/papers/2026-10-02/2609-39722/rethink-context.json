@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39722",
+  "abstract": "Synthetic speech attribution aims to identify the generative system responsible for a speech signal, but current approaches typically rely on black-box neural networks that provide limited insight into their decisions. This work investigates prototype-based networks as an interpretable alternative, where predictions are grounded in comparisons with representative training examples. We adapt ProtoPNet to spectrogram-based speech representations and evaluate the proposed framework on the MLAAD dataset under closed-set, cross-lingual, and open-set conditions. Experiments show that prototype-based reasoning achieves competitive or improved attribution performance compared with the baseline while enabling example-based explanations. These results highlight that interpretability and performance can be jointly achieved in synthetic speech attribution through prototype-based modeling.",
+  "abstractSha256": "5a2e5f54f255532d752c3ce63c3c99cc0f31ca306dd399ab1b81ec0feadb6586",
+  "arxivId": "2609.39722",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "对比学习",
+      "primaryMethodId": "method.contrastive",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Viola Negroni"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paolo Bestagini"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Stefano Tubaro"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该工作把合成语音归因做成基于样例比较的可解释分类，在 MLAAD 英语训练下用架构族标签达到 99.65% 平衡准确率并支持跨语种与开放集拒绝，但原型冗余与说话人覆盖不足仍是主要代价。",
+  "originalTitle": "Synthetic Speech Attribution via Prototypical Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39722.pdf",
+  "readerTitle": "把归因判成“像哪个已见例子”：原型网络在合成语音溯源里的可核对做法",
+  "schemaVersion": 1
+}

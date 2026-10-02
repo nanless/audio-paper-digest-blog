@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39552",
+  "abstract": "Text-to-song generation models can be prompted to imitate specific artists or regurgitate entire songs from their training data. Although these phenomena have been documented behaviorally on small datasets, little is known about the internal representations that may give rise to them. Prior interpretability work on generative audio has focused on locating semantic concepts such as genre or time signature within model activations. In this work, we show that a trained model can be probed for linearly decodable representations of artist identity from song lyrics alone, without any additional identifiers. Through a controlled case study of ACE-Step 1.5 spanning 2,000 songs across 100 artists, we demonstrate that the artist associated with a given set of lyrics can be identified within the model&#39;s internal activations, and that this conditioning signal propagates from the lyric encoder to the diffusion backbone during inference. These findings indicate that lyrics constitute an artist-level conditioning channel not addressed by prompt-side replication safeguards. More broadly, our work highlights how latent-space analysis can be used to audit what generative music models have implicitly learned from their training data.",
+  "abstractSha256": "a027b1064de48fee2d1145982d57fa1f51bea6b6db149b5fa9d6dd41809d5791",
+  "arxivId": "2609.39552",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "歌唱生成",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.singing",
+          "label": "歌唱生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "歌唱生成",
+      "primaryTaskId": "task.singing",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Arhan Vohra"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Choenden Kyirong"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Laura Ibáñez-Martínez"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Martín Rocamora"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "以 ACE-Step 1.5 为案例，用线性探测追踪仅由歌词驱动的歌手可解码性从歌词编码器经交叉注意力到生成音频的传播，最强证据是编码器输出 0.344 的百类歌手分类准确率，代价是探测只证相关不证因果且 CoT 路径带来稀释与翻唱式复现的混杂。",
+  "originalTitle": "Ghost in the Encoder: Decodable Artist Identity Representations in Lyrics-to-Song Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39552.pdf",
+  "readerTitle": "只给歌词就能认出歌手：歌词到歌曲模型里的歌手身份线性表征",
+  "schemaVersion": 1
+}

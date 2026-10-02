@@ -1,0 +1,66 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00538v1",
+  "abstract": "A real-time auditory scene analyzer (ASA) aims to carry out the tasks of locating, separating and classifying the sound sources present in a given acoustic environment. Recently, an effort has been made into modelling an ASA as a multi-agent system, with each one of its agents performing one of the aforementioned tasks and communicating their results to the rest of their peer agents. These communication routes are used as feedback loops to fix local errors at a global level, providing robustness while reducing local complexity. An example of the benefits of this approach is the optimization of speech quality by correcting in real-time the estimated location of the speech source of interest. However, their optimization speed has been shown to be considerably slow. One possible reason is that it solely relies on a series of single quality estimations (provided by a reference-free quality estimator model) that vary considerably from one window to the next, which results in a difficult search space to optimize. In this work, a new optimization mechanism is proposed that instead relies on a series of sets of quality estimations over a range of locations, providing a clearer view of the search space, simplifying its optimization. The proposed ASA now has a considerably smaller optimization time, is more accurate, and is more stable when being evaluated in real-life acoustic scenarios to correct higher levels of localization errors, all while being less complex than previous efforts. The only trade-off is that there is an increase in the response time of the quality estimation agent, but the complete ASA is still able to run in real-time. The performance shown in this work again shows the benefits of modelling an ASA as a multi-agent system.",
+  "abstractSha256": "ad15590b5e15653bddb7cccf727bd4ea2ac64a17903d4dd4cfa8b830fa201649",
+  "arxivId": "2610.00538",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00538v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "波束成形",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.beamforming",
+          "label": "波束成形"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.microphone-array",
+          "label": "麦克风阵列"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "波束成形",
+      "primaryMethodId": "method.beamforming",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Instituto de Investigaciones en Matematicas Aplicadas y en Sistemas, Universidad Nacional Autonoma de Mexico, Circuito Escolar 3000, Coyoacan, 03740, Ciudad de Mexico, Mexico"
+      ],
+      "name": "Caleb Rascon"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对定位误差导致分离质量下降的问题，该工作把单点质量优化改为同一音频窗内多位置波束形成加质量加权平均，在真实办公室与商场录音上用更大初始误差验证了更快更稳的纠正过程，代价是质量估计智能体单次响应时间随测试点数增加。",
+  "originalTitle": "Multi-agent Auditory Scene Analysis: Improved Localization Speed and Robustness by Multi-beamformed Speech Quality Feedback",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00538v1.pdf",
+  "readerTitle": "从单点试错到多点加权：多波束语音质量反馈如何纠正定位误差",
+  "schemaVersion": 1
+}

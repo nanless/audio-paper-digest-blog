@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00825",
+  "arxivId": "2610.00825",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Bhavin Jawade"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Haoqi Li"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Karan Saxena"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Yinghong Lan"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Cameron R. Wolfe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.00825",
+  "originalTitle": "Align Then Reason: A Multimodal Lip-Sync Judge for Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00825.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

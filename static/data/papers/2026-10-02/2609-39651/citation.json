@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2609.39651",
+  "arxivId": "2609.39651",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jungwoo Kim"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Joonyong Park"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Junyoung Koh"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jong-Seok Lee"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2609.39651",
+  "originalTitle": "Neural Audio Codec for Robust Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2609.39651.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

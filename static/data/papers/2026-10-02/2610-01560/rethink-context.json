@@ -1,0 +1,153 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01560",
+  "abstract": "Model intelligence and fast response jointly shape the quality of interaction with speech language models, yet remain difficult to achieve together. Explicit chain-of-thought (CoT) improves reasoning and audio understanding, but generating intermediate reasoning tokens delays responses. Describing fine-grained acoustic cues further lengthens CoT and increases latency. Latent reasoning can reduce this overhead, yet existing methods often trail CoT and remain limited by single-path supervision and reasoning budgets that do not adapt to problem difficulty. We introduce AURAL, which models a distribution over multiple plausible reasoning continuations in latent space and jointly predicts chunks of future states to reduce sequential forward passes and reasoning latency. To provide initial supervision for latent reasoning, we construct AuralReason-683K: 683K bilingual speech utterances (about 1,000 hours) with concise CoT for emotion recognition, empathetic dialogue, and general reasoning. AURAL-RL then explores beyond these traces, rewarding concise reasoning that yields high-quality answers and adapting reasoning effort to each problem. Across two backbones, AURAL-RL achieves performance comparable to CoT-RL, with larger gains over the respective supervised checkpoints on most metrics. Analysis further shows that harder questions elicit more latent reasoning steps. On Qwen2.5-Omni, it reduces time to the first answer token by 11.8x, from 1.22 to 0.10 s, versus 0.05 s for direct answering.",
+  "abstractSha256": "29ca0c496a2fcb8f8886f0d498d0256f278411da381392d915b72798d765db95",
+  "arxivId": "2610.01560",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 7.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Tencent Hunyuan"
+      ],
+      "name": "Yuxiang Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Kunyu Feng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yuancheng Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zihang Liu"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan",
+        "Tsinghua University"
+      ],
+      "name": "Shengbo Cai"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Qinke Ni"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Wan Lin"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology"
+      ],
+      "name": "Tao Feng"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yingda shen"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Ming-Hao Hsu"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Zhixian Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Liqiang Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Teddy Sun"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Steve Yves"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Amphion Technology Co., Ltd."
+      ],
+      "name": "Zhizheng Wu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对语音语言模型中显式思维链延迟高且难以表达细粒度声学线索的问题，AURAL 用高斯混合隐状态加联合块预测做两阶段训练，在 Qwen2.5-Omni 上把首个答案 token 时间从 1.22 秒降到 0.10 秒，代价是需要先构造 68.3 万条简洁思维链监督并依赖质量门控奖励来调节推理深度。",
+  "originalTitle": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01560.pdf",
+  "readerTitle": "把思考藏进隐状态：AURAL 如何用多路径分块推理换来更快首字应答",
+  "schemaVersion": 1
+}

@@ -1,0 +1,100 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01293v1",
+  "abstract": "Audio decisions often depend on evidence that a transcript does not preserve, while their probability estimates can depend on how answer options are ordered. AudioJev maps a waveform, question and supplied alternatives directly to a candidate distribution through one shared full-parameter model. We define order calibration as preserving an answer's probability under meaning-preserving option permutations. Random-derangement SKL training pairs each question with a reordered view in which every alternative changes position, supervises both answers, and aligns the two distributions before applying a symmetric KL penalty. Inference retains a single candidate-scoring forward, with no calibration head or order ensemble. Across three training seeds, AudioJev reaches 68.88%/55.33% mean accuracy on complete MMAU/MMAR and reduces random-order SKL by 43.8%/60.5% relative to the single-view removal ablation. The same model handles intent, environmental sound, note properties, speech activity and conversational transitions. Paired removal ablations and multi-order evaluation measure predictive accuracy and probability stability together, establishing a direct audio interface whose calibration objective acts on candidate meaning rather than presentation position. Inference code and model weights are available at https://github.com/SihanLv/AudioJev-Inference and https://huggingface.co/shlv/AudioJev.",
+  "abstractSha256": "f9ea9ef3f6600298f38fc903e7770df6f9a33cca3b99dcc40ad0e281b275b939",
+  "arxivId": "2610.01293",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01293v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "正则化",
+    "primaryTask": "音频问答",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.regularization",
+          "label": "正则化"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "正则化",
+      "primaryMethodId": "method.regularization",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sihan Lv"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhen Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Zhiqi Cao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinshan Zhang"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China"
+      ],
+      "name": "Ying Li"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China",
+        "Binjiang Institute of Zhejiang University, Hangzhou, China",
+        "Zhejiang Key Laboratory of Digital-Intelligence Service Technology, Hangzhou, China"
+      ],
+      "name": "Meng Xi"
+    },
+    {
+      "affiliations": [
+        "Innovation and Management Center of the School of Software (Ningbo), Zhejiang University, Ningbo, China",
+        "Binjiang Institute of Zhejiang University, Hangzhou, China"
+      ],
+      "name": "Jianwei Yin"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "AudioJev 把波形、问题与调用方候选直接映射为候选分布，用随机错排配对与语义对齐对称 KL 训练顺序校准，在完整 MMAU 与 MMAR 上报告 68.88% 与 55.33% 平均准确率并降低乱序 SKL，推理保持单次前向。",
+  "originalTitle": "AudioJev: Direct Audio Decisions with Order-Calibrated Probabilities",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01293v1.pdf",
+  "readerTitle": "听声直接判：AudioJev 让候选概率跟随含义而非排序",
+  "schemaVersion": 1
+}

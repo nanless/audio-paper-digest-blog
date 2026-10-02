@@ -1,0 +1,102 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00825",
+  "abstract": "Dubbing quality control requires a reference-free judge that can determine whether a candidate text line matches a speaker's visible articulation in both content and timing, using only silent video and text because dubbed audio may not yet exist. Existing visual speech recognizers and video-language models are poorly suited to this setting: even when fine-tuned to recover spoken content from lip motion, they remain largely insensitive to temporal errors. We introduce Align Then Reason (ATR), a multilingual lip-sync judge that first establishes a monotonic alignment between frame-level lip representations and the phonetic units of the candidate line, then reasons over this alignment to make the final judgment. An alignment scorer provides the LLM with both local evidence for each phonetic unit and a calibrated global alignment score, enabling it to reason jointly about content and timing. On a seven-language benchmark, our method improves mean AUC over the corresponding Qwen3.5 SFT baselines by 59.4%, 50.2%, and 50.8% with 2B, 4B, and 9B reasoners, respectively. The gains generalize across LLM families, reaching mean AUC improvements of 45.9% and 46.6% over the best baseline for LLaMA-3.1-8B and Mistral-7B, respectively. They also transfer across datasets to three unseen MuAViC languages. Furthermore, we evaluate on two downstream tasks built from real dubbing lines. On dub-line reranking, ATR-9B outperforms the best lip-reading baseline by 52.0%, while on script-to-clip assignment, ATR-9B improves over the best lip-reading baseline by 17.7%.",
+  "abstractSha256": "4de6168a6442f29814cd43617fd341bc5cf89811e54ec0893d88aa6848f9a2cc",
+  "arxivId": "2610.00825",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CTC",
+    "primaryTask": "语音配音",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.dubbing",
+          "label": "语音配音"
+        },
+        {
+          "facet": "method",
+          "id": "method.ctc",
+          "label": "CTC"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "CTC",
+      "primaryMethodId": "method.ctc",
+      "primaryTask": "语音配音",
+      "primaryTaskId": "task.dubbing",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Rui Liu"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Bhavin Jawade"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Haoqi Li"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Shivam Mehta"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Karan Saxena"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Yinghong Lan"
+    },
+    {
+      "affiliations": [
+        "Netflix"
+      ],
+      "name": "Cameron R. Wolfe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对只有静音视频和候选文本的配音唇同步评审问题，论文用候选相关的 CTC 单调对齐提供局部与全局证据再交由大语言模型推理，在七语基准上报告平均 AUC 达 0.920 并通过消融证明校准全局分对时序不可或缺。",
+  "originalTitle": "Align Then Reason: A Multimodal Lip-Sync Judge for Dubbing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00825.pdf",
+  "readerTitle": "先对齐再判断：用单调对齐约束补上视频语言模型的时序盲区",
+  "schemaVersion": 1
+}

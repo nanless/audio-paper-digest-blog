@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00419v1",
+  "abstract": "Human mean opinion scores (MOS) are costly to collect, and non-intrusive MOS predictors degrade sharply outside their training domain. ProxyMOS turns a pool of public MOS predictors into a single stronger model without new human labels. Eight predictors are benchmarked against human ratings; the five most informative enter a subset search under uniform, correlation-weighted, error-weighted, MSE-optimised and adaptive per-utterance routing; and the best routed four-model ensemble labels 807k unlabeled utterances that train a wav2vec 2.0 student. On URGENT the student reaches Spearman $ρ=0.802$ against $0.773$ for the best teacher. On mos260, a new Russian TTS benchmark of 4,600 utterances from 38 synthesis conditions, it reaches $ρ=0.636$ against $0.613$ per utterance and $0.95$ per condition, matching its own routed ensemble in one forward pass. Adaptive routing is the only rule that does not degrade when weak predictors are added. Model, ONNX exports and mos260 are released. It's about 950 characters; arXiv's limit is 1,920. I kept $ρ$ because arXiv renders it on the abstract page. If you'd rather avoid math, replace $ρ=0.802$ with rho = 0.802 and do the same for the other $...$ values.",
+  "abstractSha256": "dd784e6dd378751ee76e8f70dde7f0a189df6ea8266d9301237330297480d4d0",
+  "arxivId": "2610.00419",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.00419v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Maxim Trokunov"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kirill Borodin"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nikita Vasiliev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Grach Mkrtchian"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 MOS 预测器跨域排序不稳的问题，论文用小规模已有人工评分拟合逐句自适应路由以合并四个教师并在 807k 无标注语音上蒸馏出单个 wav2vec 2.0 学生，在 URGENT 上 Spearman 达到 0.802、在 mos260 上达到 0.636，代价是目标上限仍受教师集成约束且绝对分值向中间压缩。",
+  "originalTitle": "ProxyMOS: Label-Free Speech Quality Assessment by Multi-Teacher Distillation with Adaptive Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00419v1.pdf",
+  "readerTitle": "无新人工评分时如何把多个公开 MOS 预测器合成为一个更稳的模型",
+  "schemaVersion": 1
+}

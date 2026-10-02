@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.02148",
+  "arxivId": "2610.02148",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohammed Irfan Kurpath"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jaseel Muhammad Kaithakkodan"
+    },
+    {
+      "affiliations": [
+        "Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)"
+      ],
+      "name": "Sahal Shaji Mullappilly"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ivan Laptev"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hisham Cholakkal"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.02148",
+  "originalTitle": "Omni-Embed-Mini: Binding Modalities Without Forgetting via Dense Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.02148.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}
