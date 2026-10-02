@@ -41,12 +41,25 @@ test('cold concurrent page stores retain metadata, empty classifications and exa
       groups.set(identity, { identity, ids: new Set([...(previous?.ids || []), ...ids]), name: i % 2 || !previous ? name : previous.name });
     }
   }
+  // This synthetic frontmatter cohort exercises recommendations, not signed
+  // publication collections. Those collections require their original MDs,
+  // so keep their unrelated authority files out of the fixture-only source.
+  const dataDir = path.join(root, 'data');
+  fs.cpSync(path.join(source, 'data'), dataDir, { recursive: true, filter: file => {
+    const name = path.basename(file);
+    return !name.startsWith('fullsite-r6-') && !name.startsWith('fullsite-taxonomy-')
+      && !name.startsWith('taxonomy-history') && name !== 'current-page-taxonomy-history-v2.json'
+      && name !== 'taxonomy-old-v2-publication-holds.json' && name !== 'exact1028-qualified-classification.json';
+  } });
+  for (const directory of ['layouts', 'assets', 'themes']) {
+    fs.cpSync(path.join(source, directory), path.join(root, directory), { recursive: true });
+  }
   const config = path.join(root, 'hugo.yaml');
   fs.writeFileSync(config, ['baseURL: https://example.test/blog/', 'theme: PaperMod', 'buildFuture: true',
-    'staticDir: []', 'dataDir: ' + JSON.stringify(path.join(source, 'data')), 'outputs:', '  home: [HTML, JSON]',
+    'staticDir: []', 'dataDir: ' + JSON.stringify(dataDir), 'outputs:', '  home: [HTML, JSON]',
     'params:', '  ShowToc: true', '  mainSections: [posts]', '  homeInfoParams:', '    Title: Research'].join('\n'));
   const destination = path.join(root, 'public');
-  execFileSync('hugo', ['--source', source, '--config', config, '--contentDir', content,
+  execFileSync('hugo', ['--source', root, '--config', config, '--contentDir', content,
     '--destination', destination, '--noBuildLock', '--panicOnWarning'],
   { stdio: 'pipe', env: { ...process.env, GOMAXPROCS: '8', HUGO_NUMWORKERMULTIPLIER: '2' } });
   const index = JSON.parse(fs.readFileSync(path.join(destination, 'index.json'), 'utf8'));
@@ -67,6 +80,6 @@ test('cold concurrent page stores retain metadata, empty classifications and exa
     const related = html.match(/<section class="related-posts[\s\S]*?<\/section>/)?.[0] || '';
     const actual = [...related.matchAll(/href="\/blog\/posts\/(paper-\d+)\/"/g)].map(match => match[1]);
     assert.deepEqual(actual, expected, page.name + ' has exact top3 with stable identity ties and self exclusion');
-    if (page.ids.some(id => id.startsWith('legacy:')) && actual.length) assert.match(related, /共同历史标签（分类待核）/);
+    if (page.ids.some(id => id.startsWith('legacy:')) && actual.length) assert.match(related, /相同关键词/);
   }
 });

@@ -145,7 +145,7 @@ test('identity-only proof binds exact page/source and never creates controlled c
   assert.equal(explicit.arxivId, '2609.99999'); assert.ok(!explicit.identityEvidenceContract);
   const counts = JSON.parse(fs.readFileSync(path.join(root, 'public/index.html')));
   assert.ok(counts.every(r => r.direct === 0 && r.sub === 0));
-  assert.match(fs.readFileSync(path.join(root, 'public/posts/valid-conference/index.html'), 'utf8'), /研究方向尚未完成分类/);
+  assert.match(fs.readFileSync(path.join(root, 'public/posts/valid-conference/index.html'), 'utf8'), /研究方向尚未完成核验/);
   assert.match(fs.readFileSync(path.join(root, 'public/posts/valid-official-version/index.html'), 'utf8'), /2510\.06927v3.*未核 camera-ready/);
 });
 
@@ -253,7 +253,7 @@ test('real source-only classifications use source quotes and accepted independen
   assert.deepEqual(counts, core.counts(core.groupPapers(index, graph), graph).concepts);
   const outputs = fs.readdirSync(path.join(root, 'public/posts'));
   assert.ok(outputs.some(name => /只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
-  assert.ok(outputs.some(name => /分类按核验时的版本展示，路径末项为直接分类。/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
+  assert.ok(outputs.some(name => /路径末项为直接分类，前面的名称表示上级方向。/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
   assert.ok(outputs.some(name => /封存原文来源披露在已完成分类页仍可见/.test(fs.readFileSync(path.join(root, 'public/posts', name, 'index.html'), 'utf8'))));
 });
 

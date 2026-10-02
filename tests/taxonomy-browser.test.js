@@ -91,6 +91,19 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   assert.ok(task && method, 'published snapshot needs a root and a method child');
   const fixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-taxonomy-ui-'));
   t.after(() => fs.rmSync(fixtureRoot, { recursive: true, force: true }));
+  // Synthetic pages use their own source/data root; production overlays must
+  // not be evaluated against this deliberately incomplete four-page fixture.
+  for (const directory of ['layouts', 'assets']) {
+    fs.cpSync(path.join(source, directory), path.join(fixtureRoot, directory), { recursive: true });
+  }
+  fs.cpSync(path.join(source, 'themes', 'PaperMod'), path.join(fixtureRoot, 'themes', 'PaperMod'), {
+    recursive: true, filter: file => path.basename(file) !== '.git'
+  });
+  const data = path.join(fixtureRoot, 'data');
+  fs.mkdirSync(data);
+  for (const name of ['taxonomy-registry.json', 'taxonomy-catalog.json']) {
+    fs.copyFileSync(path.join(source, 'data', name), path.join(data, name));
+  }
   const content = path.join(fixtureRoot, 'content');
   fs.mkdirSync(path.join(content, 'posts'), { recursive: true });
   const concepts = [task, method].map(node => ({ id: node.id, facet: node.facet, label: node.zh }));
@@ -110,10 +123,10 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   fs.writeFileSync(path.join(content, 'papers.md'), '---\ntitle: 论文库\nlayout: library\nurl: /papers/\n---\n');
   const config = path.join(fixtureRoot, 'config.yaml');
   fs.writeFileSync(config, ['baseURL: https://example.test/blog/', 'theme: PaperMod', 'buildFuture: true',
-    'staticDir: []', 'dataDir: ' + JSON.stringify(path.join(source, 'data')), 'outputs:', '  home: [HTML, JSON]',
+    'staticDir: []', 'dataDir: ' + JSON.stringify(data), 'outputs:', '  home: [HTML, JSON]',
     'params:', '  mainSections: [posts]', '  homeInfoParams:', '    Title: Research', ''].join('\n'));
   const destination = path.join(fixtureRoot, 'public');
-  execFileSync('hugo', ['--source', source, '--config', config, '--contentDir', content,
+  execFileSync('hugo', ['--source', fixtureRoot, '--config', config, '--contentDir', content,
     '--destination', destination, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const directory = fs.readFileSync(path.join(destination, 'tags/index.html'), 'utf8');
   assert.match(directory, /\/js\/taxonomy-core\.min\.[a-f0-9]+\.js/);
@@ -140,7 +153,7 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   for (const name of ['invalid-facet', 'invalid-label', 'invalid-contract']) {
     const html = page(name);
     assert.doesNotMatch(html, /class="paper-taxonomy"/);
-    assert.match(html, /分类信息待核/);
+    assert.match(html, /研究分类信息暂未核验。/);
     assert.match(html, /class="post-tags"/, 'unverified original tags remain available');
   }
 });

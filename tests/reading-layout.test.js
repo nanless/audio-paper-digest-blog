@@ -33,12 +33,25 @@ test('Hugo recommendations exclude all current identity guides, deduplicate cand
   paper('aggregate', '2609.00004', { paper_digest_page_type: 'conference' });
   paper('legacy-current', '', { paper_digest_taxonomy_contract: '' }, []);
   paper('legacy-other', '', { paper_digest_taxonomy_contract: '' }, []);
+  // This synthetic frontmatter cohort exercises recommendations, not signed
+  // publication collections. Those collections require their original MDs,
+  // so keep their unrelated authority files out of the fixture-only source.
+  const dataDir = path.join(root, 'data');
+  fs.cpSync(path.join(source, 'data'), dataDir, { recursive: true, filter: file => {
+    const name = path.basename(file);
+    return !name.startsWith('fullsite-r6-') && !name.startsWith('fullsite-taxonomy-')
+      && !name.startsWith('taxonomy-history') && name !== 'current-page-taxonomy-history-v2.json'
+      && name !== 'taxonomy-old-v2-publication-holds.json' && name !== 'exact1028-qualified-classification.json';
+  } });
+  for (const directory of ['layouts', 'assets', 'themes']) {
+    fs.cpSync(path.join(source, directory), path.join(root, directory), { recursive: true });
+  }
   const config = path.join(root, 'config.yaml');
   fs.writeFileSync(config, ['baseURL: https://example.test/blog/', 'theme: PaperMod', 'buildFuture: true',
-    'staticDir: []', 'dataDir: ' + JSON.stringify(path.join(source, 'data')), 'params:', '  ShowToc: true',
+    'staticDir: []', 'dataDir: ' + JSON.stringify(dataDir), 'params:', '  ShowToc: true',
     '  mainSections: [posts]', '  homeInfoParams:', '    Title: Research', ''].join('\n'));
   const destination = path.join(root, 'public');
-  execFileSync('hugo', ['--source', source, '--config', config, '--contentDir', content,
+  execFileSync('hugo', ['--source', root, '--config', config, '--contentDir', content,
     '--destination', destination, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const current = fs.readFileSync(path.join(destination, 'posts/current/index.html'), 'utf8');
   const related = current.match(/<section class="related-posts[\s\S]*?<\/section>/)?.[0];
@@ -53,7 +66,7 @@ test('Hugo recommendations exclude all current identity guides, deduplicate cand
   assert.equal((current.match(/id="research-tldr-title"/g) || []).length, 1);
   assert.match(current, /paper-taxonomy/);
   const legacy = fs.readFileSync(path.join(destination, 'posts/legacy-current/index.html'), 'utf8');
-  assert.match(legacy, /共同历史标签（分类待核）/);
+  assert.match(legacy, /相同关键词/);
   const home = fs.readFileSync(path.join(destination, 'index.html'), 'utf8');
   for (const id of ['task.asr', 'task.speech-synthesis', 'task.audio-generation']) {
     assert.ok(snapshot.concepts.some(n => n.id === id));

@@ -16,7 +16,7 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   const dataDir = path.join(root, 'data');
   fs.mkdirSync(dataDir, { recursive: true });
   for (const name of fs.readdirSync(path.resolve(__dirname, '..', 'data'))) {
-    if (name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json' || name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json'
+    if (name.startsWith('fullsite-r6-') || name === 'exact1028-qualified-classification.json' || name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json' || name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json'
       || !fs.statSync(path.resolve(__dirname, '..', 'data', name)).isFile()) continue;
     fs.copyFileSync(path.resolve(__dirname, '..', 'data', name), path.join(dataDir, name));
   }

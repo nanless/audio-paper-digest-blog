@@ -53,11 +53,12 @@ test('taxonomy filtering reports actual visible counts and recovers from zero re
   assert.equal(site.empty.hidden, true);
 });
 
-test('tag index explicitly labels the temporary old/new taxonomy coexistence', () => {
+test('tag index distinguishes exact page counts from paper directions without obsolete compatibility copy', () => {
   const template = fs.readFileSync(
     path.join(__dirname, '..', 'layouts', '_default', 'terms.html'), 'utf8'
   );
-  assert.match(template, /标签索引（新旧兼容）/);
-  assert.match(template, /新发布内容使用统一分类/);
-  assert.match(template, /标签计数不等于新版任务或方法统计/);
+  assert.match(template, /精确标签索引/);
+  assert.match(template, /计数按页面统计，不同于按论文身份去重的方向统计/);
+  assert.match(template, /方向覆盖数量不代表每篇原文均已重新审核/);
+  assert.doesNotMatch(template, /标签索引（新旧兼容）|新发布内容使用统一分类/);
 });
