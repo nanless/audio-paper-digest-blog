@@ -1,0 +1,1953 @@
+{
+  "contract": "actual-sealed-descriptor-shapes-not-classification-fixtures-v1",
+  "sourceFreezeSha256": "1d6a00315088c07c5444bd46fd586a5f6923c4591d8a2e53a85487dcd5ccaba9",
+  "semanticAccepted": false,
+  "samples": [
+    {
+      "paperId": "arxiv:2605.30614",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2605.30614",
+        "generation": 1,
+        "sourceId": "2605.30614",
+        "textSha256": "671b57c1055b15519b01f24fb1667ac15a4e6dd57d7e0ca698f6ffef31d5b1ca",
+        "pdfSha256": "e01b8cead55389926f9cee5d4ef4b0cdeb6223c95a7196db9322622fa7843fd4",
+        "sourceManifestSha256": "d6bd58661ededb83962f948fc44daf5a48d43e1d8b6bab75cf3d4217746b0345",
+        "structuredArtifactsSha256": "53c4a95cf5bc8151799217d03580ab36c4a086133995e9f6effce468ba6cf4a4",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2605.30614",
+          "arxivId": "2605.30614",
+          "generation": 1,
+          "textSha256": "671b57c1055b15519b01f24fb1667ac15a4e6dd57d7e0ca698f6ffef31d5b1ca",
+          "pdfSha256": "e01b8cead55389926f9cee5d4ef4b0cdeb6223c95a7196db9322622fa7843fd4",
+          "sourceManifestSha256": "d6bd58661ededb83962f948fc44daf5a48d43e1d8b6bab75cf3d4217746b0345"
+        },
+        "sourceRunIdentitySha256": "0853cf76218fde986b63c81c2c5c9796aa1787aac4c691c6e4a03f9cecb92761",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "Black-box Audio Watermark Removal via Diffusion Priors",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-title-binding-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-runtime-metadata",
+          "runtimeMetadataTitleSha256": "432e91de0e723d2832e7dbc74710307d351a153fe1c972fd2d9f714f6f83db5c",
+          "sourceTitleSha256": "432e91de0e723d2832e7dbc74710307d351a153fe1c972fd2d9f714f6f83db5c",
+          "sourceTextSha256": "671b57c1055b15519b01f24fb1667ac15a4e6dd57d7e0ca698f6ffef31d5b1ca",
+          "sourceOpeningLine": null
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2605.30614",
+        "pdfUrl": "https://arxiv.org/pdf/2605.30614.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "87712ce930aec839afb91a1f0a737ce9262179e0ccf7b45b31722ff730ba18e7",
+          "physicalPinsSha256": "92924ea86f29fb97c7426d11329d30e85931fc67f3dad0ab8bf78deea78916c5",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2605.30614",
+          "sourceTitleSha256": "432e91de0e723d2832e7dbc74710307d351a153fe1c972fd2d9f714f6f83db5c",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-06-01-audio-pirates-black-box-audio-watermark-removal.md",
+              "pageSha256": "8788a8c99839ca199e9f338a15869b695783326578ec125f8caabf17a5a5d461",
+              "bodySha256": "c9520c96ed4e98f7db3acaf0d8b39d4774827704df977e30cfbcc5b7fe7a7f8b",
+              "paperId": "arxiv:2605.30614",
+              "originalTitleSha256": "432e91de0e723d2832e7dbc74710307d351a153fe1c972fd2d9f714f6f83db5c",
+              "identityBasis": "explicit-current-page-identity"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "96b3a63ff2d63674e83baf8b2a1589c99d2db72ee2c4e5209de9d53485946b2f",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2609.04206",
+      "source": {
+        "kind": "fullsite-sealed-arxiv-source-v1",
+        "paperId": "arxiv:2609.04206",
+        "sourceId": "2609.04206",
+        "sourceTitle": "Auditing Bias and Safety in Voice AI Customer Care",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-front-title-binding-v2",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-front-complete-lines",
+          "sourceTextSha256": "1d7c6089f2838c5b2f3b1b2320d924385b327fc2af0bfac6187a26413305d7c0",
+          "titleQuote": {
+            "quote": "Auditing Bias and Safety in Voice AI Customer Care",
+            "quoteStart": 0,
+            "quoteEnd": 50,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "453ff1d527fa68f961cb5ca80be6c37efbf74bbbba0681818e2a24f69be989c8"
+          },
+          "runtimeMetadataTitleSha256": "d21b4a64a2d8656a0fdf7ab2e89a49164ac504686cfa2a3d442e87c209286330",
+          "sourceTitleSha256": "453ff1d527fa68f961cb5ca80be6c37efbf74bbbba0681818e2a24f69be989c8",
+          "frontWindow": {
+            "limit": 4000,
+            "boundary": "front-matter-end",
+            "boundaryOffset": 226
+          }
+        },
+        "sourceUrl": "https://arxiv.org/abs/2609.04206",
+        "pdfUrl": "https://arxiv.org/pdf/2609.04206.pdf",
+        "textSha256": "1d7c6089f2838c5b2f3b1b2320d924385b327fc2af0bfac6187a26413305d7c0",
+        "pdfSha256": "5e7c524587d9b8234a4bb8a346ed3929fcbfb89a3dafd5231348318033677e3d",
+        "sourceManifestSha256": "588cfe9d175ce9cf7ae300153dcdffb4f1c32d5e21c298ff7f7a0bb9cc13ece3",
+        "structuredArtifactsSha256": "96c88fac5e79385d2d80805e3de241e6015b9085fcfff9ee30a16bcbe0439e77",
+        "fullsiteSourceAuthority": {
+          "contract": "sealed-native-arxiv-source-v1",
+          "authoritySha256": "c417924764cb1b8e2fd6f801866e67e348903953b04f428ca79297ca6ecd27a8",
+          "physicalPinsSha256": "b4639a6eb4e737b79153888a83804481abf8f0e47032c31b3ed3769f17024806"
+        },
+        "sourceVersion": null,
+        "sourceVersionWarning": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2609.04206",
+          "sourceTitleSha256": "453ff1d527fa68f961cb5ca80be6c37efbf74bbbba0681818e2a24f69be989c8",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-09-08-auditing-bias-and-safety-in-voice-ai-customer-care-2609-04206.md",
+              "pageSha256": "6d1eeee2d54d82dd81c0460bf48227a0210453a6a348ea342f987bbec3a0d82c",
+              "bodySha256": "5a075b6bd280c7c92adc69d78695bb260af54e14ffcdfee74b26b55edc85390e",
+              "paperId": "arxiv:2609.04206",
+              "originalTitleSha256": "453ff1d527fa68f961cb5ca80be6c37efbf74bbbba0681818e2a24f69be989c8",
+              "identityBasis": "explicit-current-page-identity"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "efbc5d4f006f7a2da5ec6fe39cd1295265e650568f1855c5370afc49d9fe9532",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2604.15278",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2604.15278",
+        "generation": 1,
+        "sourceId": "2604.15278",
+        "textSha256": "a81df6eb5c0508bebd7d2c5813281b8f31f4f2def8cb17880169bcb9438e53db",
+        "pdfSha256": "7accebb3ae5e41c862a5bc1f22941e92ce9836a3eddcf7b135c9b88f96ce2011",
+        "sourceManifestSha256": "330b1f75681fedf2654d18f30569c9bca7d7b013e17fcdf979e3a09a4f68e24e",
+        "structuredArtifactsSha256": "a5b6d11fce74969d5a6ba361370ec5c6149305c3225d98ac6c1d652921fe0ae6",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2604.15278",
+          "arxivId": "2604.15278",
+          "generation": 1,
+          "textSha256": "a81df6eb5c0508bebd7d2c5813281b8f31f4f2def8cb17880169bcb9438e53db",
+          "pdfSha256": "7accebb3ae5e41c862a5bc1f22941e92ce9836a3eddcf7b135c9b88f96ce2011",
+          "sourceManifestSha256": "330b1f75681fedf2654d18f30569c9bca7d7b013e17fcdf979e3a09a4f68e24e"
+        },
+        "sourceRunIdentitySha256": "85856a2f8e82d9b3fe5bbb304f4175209c0d96e552b19c1a5a81b2a02bef38a9",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "A Manual Bar-by-Bar Tempo Measurement Protocol for Polyphonic Chamber Music Recordings: Design, Validation, and Application to Beethoven’s Piano and Cello Sonatas",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-title-binding-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-runtime-metadata",
+          "runtimeMetadataTitleSha256": "2f256756b3cc8dc4beb982292f3e6bb2748ea7629e88e74b6de97a68d90a84b0",
+          "sourceTitleSha256": "2f256756b3cc8dc4beb982292f3e6bb2748ea7629e88e74b6de97a68d90a84b0",
+          "sourceTextSha256": "a81df6eb5c0508bebd7d2c5813281b8f31f4f2def8cb17880169bcb9438e53db",
+          "sourceOpeningLine": null
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2604.15278",
+        "pdfUrl": "https://arxiv.org/pdf/2604.15278.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "8d29afc97488f8a15fbf62cef1555c2694af59d78fe02399313a8c5805528091",
+          "physicalPinsSha256": "e21fd9ee7ab94f7ad3fe840a607e6de05ac3304debcad77980d714766f4433fd",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2604.15278",
+          "sourceTitleSha256": "2f256756b3cc8dc4beb982292f3e6bb2748ea7629e88e74b6de97a68d90a84b0",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-19-a-manual-bar-by-bar-tempo-measurement-protocol.md",
+              "pageSha256": "751a63bcceb6811e33024821711911b88fddd9cf7e34adb5bc8dab63b784f9b5",
+              "bodySha256": "74b6c4ef4b4da252fa53a6f563ec33021ff31d7a74568b8c3dc3816ba931718b",
+              "paperId": "arxiv:2604.15278",
+              "originalTitleSha256": "ae1e06097c49e46e3cceb3311a409258a29bedf6426ed6ba3effce4f28e7ea02",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "715c7c80c7be91f30ca876b21c54fea44a9afb4004402dfa2c7f00f504b7ed06",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "conference:aaai:2026:conference-paper-id:36960",
+      "source": {
+        "kind": "fullsite-native-conference-source-v1",
+        "paperId": "conference:aaai:2026:conference-paper-id:36960",
+        "sourceId": "conference:aaai:2026:conference-paper-id:36960",
+        "sourceTitle": "Beyond Content: A Comprehensive Speech Toxicity Dataset and Detection Framework Incorporating Paralinguistic Cues",
+        "textSha256": "85aa717399fb5b6487dd19e329b684becf454234143aaf7df89499c007aa8eb8",
+        "pdfSha256": "8d33efaf78519a6d0bfd213e3bea005129555ffcb0ef94783a69351dee51647b",
+        "structuredArtifactsSha256": "cdc8c0cb869fe0a3a2d8b2d5881cd1fd8c978439f0cf042c81003e7855fe6235",
+        "canonicalReaderArtifactsSha256": "79608b3011813c12c9e56659659c00afa21c408e5fca469e375acab41d7919b5",
+        "originalFormulaEvidence": "sealed-glyph-recovery-not-certified-original-tex",
+        "sourceRepresentation": "authenticated-original-extraction-receipt-files",
+        "importedCacheObservation": [
+          {
+            "kind": "metadata",
+            "expectedSha256": "92a57106761b4cc902a933a9bdd201dff91a8723c8d1f685258c2056d861d83c",
+            "observedSha256": "92a57106761b4cc902a933a9bdd201dff91a8723c8d1f685258c2056d861d83c",
+            "matchesOriginal": true
+          },
+          {
+            "kind": "text",
+            "expectedSha256": "85aa717399fb5b6487dd19e329b684becf454234143aaf7df89499c007aa8eb8",
+            "observedSha256": "02445a1cde72ede56d4e538dd1eb1280038edfe5d8272f6f811be89b7411ee1e",
+            "matchesOriginal": false
+          },
+          {
+            "kind": "artifacts",
+            "expectedSha256": "a57a54ad548ec321dfc5db35834f5d50632afc8ce05bcca2521c5a310a244fb2",
+            "observedSha256": "1557e89da7138d568951e4435b2320c2d5c48c5f485239215beaa778ada8aec3",
+            "matchesOriginal": false
+          }
+        ],
+        "sourceSnapshotSha256": "65270f869a9a7a9eaa8129e8d22c4ed9eea95e34c285e9b46406d52d0e69e38b",
+        "sourceRecordSha256": "f074cb5e9c39e06231c2a82ed144821acbbb86fa48f72c6ea2b4088f7cd7c5db",
+        "sourceFileSha256": "dc183a54086f988ef73b619fbcd8e26e52aa32c3d7677f4b68c0329b8261a89b",
+        "metadataSha256": "92a57106761b4cc902a933a9bdd201dff91a8723c8d1f685258c2056d861d83c",
+        "pdfDescriptorSha256": "805205eeb3ec8d41e69d8e5ec4aed29984418ad25a5cc7330d6d4085034b0acc",
+        "planAuthorityBinding": {
+          "contract": "conference-source-plan-authority-binding-v2",
+          "version": 2,
+          "planReceiptSha256": "2c7163a1564755d9a6692c0c428522255e4c2b81493416d047dfcc5d20dbf047",
+          "planReceiptFileSha256": "d11174e9f7e2994d32ce92c32f54f8dc92210e0340f604c90fe56a234781140d",
+          "runFileSha256": "f4c0cbbb9dad30df0964727dbc0c460d21781b1a4bbdd446894b49e45f75d0ca",
+          "importReceiptSha256": "3465baea309265e5a9c9c9b507068a5da5a61a81d0d7eca020ab703bfbfb74df",
+          "filterPolicySha256": "0863e1d727631e06d1ce5a9ac97b4f3d8d02e7bed3274de600e3269fd3bb071a",
+          "selectionReceiptSha256": "24d8bedc0805fbb0ca56cc2c99cf7187900128edb06229156980efa28773f619",
+          "selectedMemberSetSha256": "37bef5c9f95a366fb46fee45c7d7a4ea4fdbcbfb446f28dfa51983d117ece396",
+          "bindingSha256": "e9c9de04cf3dcda4c6bad9c236eeeec3efaa983485fee1a5172d97c2e69f26a3"
+        },
+        "originalSourceAuthorityReplay": {
+          "contract": "fullsite-original-conference-authority-replay-v1",
+          "paperId": "conference:aaai:2026:conference-paper-id:36960",
+          "originalExtractionProfile": {
+            "extractor": "audio-paper-digest-conference-structured",
+            "version": "2.1.4+pypdf+pymupdf-6.17.0+1.26.5"
+          },
+          "originalExtractionReceiptSha256": "3bdd3940e74e8bebea76e03751a58784e850a78eda57a2164b0da81de12d8ef4",
+          "originalExtractionReceiptFileSha256": "20ea088a1b8399f94bcdbda1aecbbe783d7d2e859a2ef88f90d3af2216ccf989",
+          "originalVerificationSha256": "c31fbddf0633960aace74b17f14f3e621cd00cf869cb534b89a8d47285411cec",
+          "metadataSha256": "92a57106761b4cc902a933a9bdd201dff91a8723c8d1f685258c2056d861d83c",
+          "pdfSha256": "8d33efaf78519a6d0bfd213e3bea005129555ffcb0ef94783a69351dee51647b",
+          "textSha256": "85aa717399fb5b6487dd19e329b684becf454234143aaf7df89499c007aa8eb8",
+          "artifactsFileSha256": "a57a54ad548ec321dfc5db35834f5d50632afc8ce05bcca2521c5a310a244fb2",
+          "stagingReceiptFileSha256": "a2d7851281074ec1190a11d791278ff71d7c9e714e4372f298808a1aab693afe",
+          "stagingReceiptSha256": "0489834c10d7d26787ba1e102569dd1ce83004c88389afc2ab33543752baf51d",
+          "originalPythonExtractionRerun": false,
+          "sharedRootPhysicalPinsSha256": "dce8f0c2a0dc9d9dc5a0cfa9a944ec46db88255e1dfbe6aa3fa424bec3101834"
+        },
+        "stagingBindings": [
+          {
+            "pagePath": "content/posts/conference-aaai-2026-conference-paper-id-36960-7b456c1838.md",
+            "pageSha256": "fdd551d1b761a82080888d320f5b4caa4be8170d6fa298578d20c305990059a8",
+            "stagingFileSha256": "85164f2e6786a1afd8fcdd6ddd8d31f805ef8c23d44a037fc43761639910d34e",
+            "stagingManifestSha256": "0a89f72cb78fe432158237af861cee349ebbc294a1ce99258ec3a6ef5ed38c22"
+          }
+        ],
+        "sourceUrl": null,
+        "pdfUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/36960/40922",
+        "fullsiteSourceAuthority": {
+          "contract": "native-conference-execution-source-v1",
+          "authoritySha256": "6858610d4523a72efba2fe349f91be2be7749bf8c55245f5aa43f232805907fb",
+          "physicalPinsSha256": "9c84465c13d07b6a775cf269d96bd1877786462c7734a2364411bc16c6e50b57"
+        },
+        "provenanceDisclosure": "分类依据原封存的会议来源及原授权链重放；本次不重新声明历史下载网络响应。",
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "conference:aaai:2026:conference-paper-id:36960",
+          "sourceTitleSha256": "a59b3ea5b6a5a3c2982347bd1be83146af9763e3c502a1d3850e4247ff1a8a7f",
+          "pages": [
+            {
+              "pagePath": "content/posts/conference-aaai-2026-conference-paper-id-36960-7b456c1838.md",
+              "pageSha256": "fdd551d1b761a82080888d320f5b4caa4be8170d6fa298578d20c305990059a8",
+              "bodySha256": "5b609bade779dd2479b5ceda1e85dbc9c5cb085dd677d58ff3e27128749ab0c9",
+              "paperId": "conference:aaai:2026:conference-paper-id:36960",
+              "originalTitleSha256": "a59b3ea5b6a5a3c2982347bd1be83146af9763e3c502a1d3850e4247ff1a8a7f",
+              "identityBasis": "explicit-current-page-identity"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "6b106dbe82120f48577d8f35d9d1ea5a6d0a063e113a73a02070e724f8e7b912",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460632",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460632",
+        "generation": null,
+        "sourceId": "conference:icassp:2026:icassp-arnumber:11460632",
+        "textSha256": "c8b2856f7241baf59f81a650c230d2c9cf561d502206ced2f9209f8098e89a3d",
+        "pdfSha256": "7411561c4b3b342abcf2b6e3eb22b9006761945b49e0b97d14432807795ec218",
+        "sourceManifestSha256": null,
+        "structuredArtifactsSha256": "b471971a73fd89627323e102982fc588f421a3d241a2c967de5d715d44f7cc21",
+        "sourceVersion": null,
+        "sourceBinding": null,
+        "sourceRunIdentitySha256": null,
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "Directly Trained Spiking Neural Networks with Adaptive Phase Coding",
+        "sourceTitleBinding": {
+          "contract": "sealed-conference-metadata-title-binding-v1",
+          "sourceTitleSha256": "8b137eabbb85f9c20ec35d16fc7f0c07f8f13c2409f13a5fc8fc6a2b5f4d8bc0",
+          "writerInputsSha256": "5ba1ddcdf5358001ee65c5399fc1476fcde8e15ac5e3cd60ea90cd383352f836",
+          "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5"
+        },
+        "originalSourceSeal": {
+          "contract": "fullsite-original-conference-source-seal-v1",
+          "sealFileSha256": "bad9b90a58ebc0d215fb49c131276c6a75cd8e4299248cc2cbe787751c487248",
+          "sealSha256": "ed63f634398cea93759ff02e6a80d570b94cfff79a13b7b2265058683817c666",
+          "sourceImplementationSha256": "df8d10186ec14ad59714a4eee5069db483e51eed821601e0b4eb1c545ac20407",
+          "sourceDescriptorSha256": "d0638d26cbb366c131b5a1d12192727127106a9bcf5f7aa77548f6c1ae16f37a",
+          "textSha256": "c8b2856f7241baf59f81a650c230d2c9cf561d502206ced2f9209f8098e89a3d",
+          "structuredArtifactsSha256": "b471971a73fd89627323e102982fc588f421a3d241a2c967de5d715d44f7cc21",
+          "pdfExtractionsAtSeal": 1,
+          "pdfExtractionsAtAdmission": 0
+        },
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://ieeexplore.ieee.org/document/11460632",
+        "pdfUrl": null,
+        "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "2397a0d230fb32a3150f3b13d6d73ce4cd72cc27554ed6f03706adda1ef691bb",
+          "physicalPinsSha256": "58dcde84ef631e5a6cc9c1d4d7e7ec217a6ff5780baa41c74e0d6aa277a949b6",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": "5ba1ddcdf5358001ee65c5399fc1476fcde8e15ac5e3cd60ea90cd383352f836",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icassp-2026",
+            "provenance": "retained-local-crawler",
+            "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+            "metadataRecordIndex": 58,
+            "metadataIdentityBindingSha256": "28425de950d41100d27e7ec0fd7241cd02ce55802c7f55a5f1585a3cb0602343",
+            "pdfSha256": "7411561c4b3b342abcf2b6e3eb22b9006761945b49e0b97d14432807795ec218",
+            "pdfBytes": 2153864,
+            "pdfIdentityBindingSha256": "7dca96650dcaf42d6295b1f11a1b73cdc6292f13dd7d0cc8b77d3addfbacda34",
+            "sourceBindingSha256": "3d422ee3061be3bc771f6c1641e2f72fbaf01d8039c2a03e7e4598df7e15a98e",
+            "acquisition": {
+              "openreviewResponseBytes": null,
+              "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+              "receipt": null,
+              "sourceAuthors": null,
+              "sourceDoi": null,
+              "sourceKind": "retained-local-no-network-receipt",
+              "sourceTitle": null,
+              "versionRelation": null
+            },
+            "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+          }
+        ],
+        "originalTitle": "Directly Trained Spiking Neural Networks with Adaptive Phase Coding",
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "conference:icassp:2026:icassp-arnumber:11460632",
+          "sourceTitleSha256": "8b137eabbb85f9c20ec35d16fc7f0c07f8f13c2409f13a5fc8fc6a2b5f4d8bc0",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-29-directly-trained-spiking-neural-networks-with.md",
+              "pageSha256": "476be851f5a45431297f98951c3dcced51090d49555491543dc17bb4a74e25f0",
+              "bodySha256": "4f4b25c8c12c00abac9ce9eb44136774c32c4c59672a34218ac4a9775a014149",
+              "paperId": "conference:icassp:2026:icassp-arnumber:11460632",
+              "originalTitleSha256": "8b137eabbb85f9c20ec35d16fc7f0c07f8f13c2409f13a5fc8fc6a2b5f4d8bc0",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "28a9b69fe15c1d4cd0f1a2c4fadc5f1aec6a4f5cff7fce5b92645a53711c0c1d",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+        "generation": null,
+        "sourceId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+        "textSha256": "13bc54a20209fadff5e1048603fc802c8122bbcc0d1f45751ae28bed93cfe899",
+        "pdfSha256": "5ada3a8eb19dfef81675d40294467eaaa50c938e654e85b84f47b05acc0d6d69",
+        "sourceManifestSha256": null,
+        "structuredArtifactsSha256": "4253c927020320504d7691a86a006bd4612221b32bdf7069e3d0f97921f64236",
+        "sourceVersion": null,
+        "sourceBinding": null,
+        "sourceRunIdentitySha256": null,
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次分析使用可访问的作者早期预印本，不是会议 camera-ready 定稿；标题、内容、实验结果和结论可能与会议最终版本不同。",
+        "sourceTitle": "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction",
+        "sourceTitleBinding": {
+          "contract": "sealed-conference-metadata-title-binding-v1",
+          "sourceTitleSha256": "cc4f148f02374b3ed740648e27374265cf22be28d7e322fe137100d73aa42f86",
+          "writerInputsSha256": "c16f807ad70c608ff3811281ba635406c75ff348f79220642f84c9752cb5e6e9",
+          "metadataSha256": "250d0d670d1dbd7715ccd8cd37791a6a2035d869435590db2ae391090626b22e"
+        },
+        "originalSourceSeal": {
+          "contract": "fullsite-original-conference-source-seal-v1",
+          "sealFileSha256": "da75562e773f289281bc26221314d596a2c630f202526230d8f07c165801031b",
+          "sealSha256": "e830160199248de70ad2fa3613db72b23452c43284c35100594bbf3d91024aa6",
+          "sourceImplementationSha256": "df8d10186ec14ad59714a4eee5069db483e51eed821601e0b4eb1c545ac20407",
+          "sourceDescriptorSha256": "a15669b479f09d84e09b2ba13486067e413beb455736f8e6f223d379174758d7",
+          "textSha256": "13bc54a20209fadff5e1048603fc802c8122bbcc0d1f45751ae28bed93cfe899",
+          "structuredArtifactsSha256": "4253c927020320504d7691a86a006bd4612221b32bdf7069e3d0f97921f64236",
+          "pdfExtractionsAtSeal": 1,
+          "pdfExtractionsAtAdmission": 0
+        },
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://openreview.net/forum?id=n1mAjfRDZ6",
+        "pdfUrl": null,
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "40cfc72020fc446ef44119836632207bc3075ab6b302d40897f2a0d84043477a",
+          "physicalPinsSha256": "82cbccfcb0e09efbcab129d8c9187e3763c46d7ac2efaf087c9e8c470c76cc7b",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": "c16f807ad70c608ff3811281ba635406c75ff348f79220642f84c9752cb5e6e9",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icml-official-poster-2026",
+            "provenance": "retained-local-icml-miniconf-snapshot",
+            "metadataSha256": "250d0d670d1dbd7715ccd8cd37791a6a2035d869435590db2ae391090626b22e",
+            "metadataRecordIndex": 4679,
+            "metadataIdentityBindingSha256": "43923ab333825cf5a033311796c087b633d41ff1b3c236814523f070ac5713d3",
+            "pdfSha256": "5ada3a8eb19dfef81675d40294467eaaa50c938e654e85b84f47b05acc0d6d69",
+            "pdfBytes": 3533509,
+            "pdfIdentityBindingSha256": "4c2b07e5ec81248d7e63671321fec8899380dafcc7ba3688f7086386665bb29d",
+            "sourceBindingSha256": "193e67c68aa0a1342f32f3ab33801f39d4543a85233f016545ddb7df2a0729a0",
+            "acquisition": {
+              "openreviewResponseBytes": false,
+              "provenanceStatement": "PDF bytes were obtained from the author prior preprint through the fixed SSRN record. Its title differs from the ICML record; it is neither the ICML camera-ready paper nor OpenReview response bytes.",
+              "receipt": {
+                "fileSha256": "c236d29a874237a2d3839569060bfc576ba97062a83f1d8288b581de2e08138d",
+                "selfSha256": "22dfae3a459513d54e5622797eae719cc9bbed9c0b285061026ed355091c6eb5"
+              },
+              "sourceAuthors": [
+                "Deepak Babu Piskala"
+              ],
+              "sourceDoi": "10.2139/ssrn.6288899",
+              "sourceKind": "author-prior-preprint-cross-version",
+              "sourceTitle": "Beyond Words: Toward Audio-First Foundation Models for Effortless Human-Computer Interaction",
+              "versionRelation": "author-prior-preprint-with-different-title"
+            },
+            "acquisitionSha256": "a0b00646ab8527bb12f25b870db0e51302bd18ca6626b3bb4796961d75840f7c"
+          }
+        ],
+        "originalTitle": "Position: *Beyond Text* The Text-Centric Bias in Foundation Models Must Be Revisited for a Speech-First Future",
+        "sourceDoi": "10.2139/ssrn.6288899",
+        "versionRelation": "author-prior-preprint-with-different-title",
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+          "sourceTitleSha256": "cc4f148f02374b3ed740648e27374265cf22be28d7e322fe137100d73aa42f86",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-05-23-position-beyond-text-the-text-centric-bias-in.md",
+              "pageSha256": "15110cc128f9f496401cbfb32ef71139a3151a6e3f931ac1b1ae804b522b3ed3",
+              "bodySha256": "1993b1ea946d6e4e2925ec7d74677128d2cd43bc8d3b16003441252c8595c2c0",
+              "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+              "originalTitleSha256": "cbce7f391ef46befc120afe29a69787ee38065b24aa1d349c845837704b53a2e",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "当前会议题目与作者授权的不同标题早期预印本由唯一正式来源例外关联；不是 camera-ready 或 OpenReview 附件响应，旧导读审核未补签。",
+          "authorizedCrossTitle": {
+            "contract": "fullsite-sole-authorized-cross-title-source-join-v1",
+            "paperId": "conference:icml:2026:openreview-forum-id:n1mAjfRDZ6",
+            "metadataTitleSha256": "cbce7f391ef46befc120afe29a69787ee38065b24aa1d349c845837704b53a2e",
+            "sourceTitleSha256": "cc4f148f02374b3ed740648e27374265cf22be28d7e322fe137100d73aa42f86",
+            "sourceIdentitySha256": "bc130bf5fd2aa1616de42d45f4b922339aaa759d42c6144909d9262f9e652764",
+            "sourceBindingsSha256": "d666ee1d458d6b7f6eb1451d12ebcb99be3be0579946b45e5a08599310169687",
+            "versionRelation": "author-prior-preprint-with-different-title",
+            "sourceDoi": "10.2139/ssrn.6288899",
+            "sourceAuthors": [
+              "Deepak Babu Piskala"
+            ]
+          }
+        }
+      },
+      "sourceSha256": "e7edd7f4ee6c3f9378536036f86d6243957dfdccb411279e65f4bf209b9596f1",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+        "generation": null,
+        "sourceId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+        "textSha256": "e7914803e8079829bec223b470ebe56422a4f37ff73f1ac0a7638ca373463c5c",
+        "pdfSha256": "fc96f7c0a771c69dcdbf5348f07950abd4bd5032c7e898e680937d8a0cfdd213",
+        "sourceManifestSha256": null,
+        "structuredArtifactsSha256": "5f301af9dfa34b6e4ce57e05c833d774977c0847ad778bf834051b13144f61a1",
+        "sourceVersion": null,
+        "sourceBinding": null,
+        "sourceRunIdentitySha256": null,
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次分类依据 ICLR 2026 官方论文集 PDF；官方海报页指向同一 OpenReview 论坛，题目、五位作者与完整摘要已交叉核对。旧 ICLR 2025 页眉 PDF 保留为先前来源，不沿用其分类。此下载不是 OpenReview 附件响应。",
+        "sourceTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+        "sourceTitleBinding": {
+          "contract": "sealed-conference-metadata-title-binding-v1",
+          "sourceTitleSha256": "bcf0b1608a148df45059e108f64322034ad40379c006bfd79e8d37665d83deca",
+          "writerInputsSha256": "0bc58e1038b1d6bea0062a4e1a5f41cc30c8678aa64cc54e673d7f24fd21957b",
+          "metadataSha256": "cc236271d6f00290ec64505805ac8c62dfcb3071496774258cf1fb858d2829b7"
+        },
+        "originalSourceSeal": {
+          "contract": "fullsite-original-conference-source-seal-v1",
+          "sealFileSha256": "d52128780ad76475409274e32fe87c554ec19f6eb312b8bf29d4860880c30829",
+          "sealSha256": "c3f91512013208bc7549ecbbe958f222c7f7faa5ad3f7ef9aa4fb71810b581e4",
+          "sourceImplementationSha256": "df8d10186ec14ad59714a4eee5069db483e51eed821601e0b4eb1c545ac20407",
+          "sourceDescriptorSha256": "f96a99d84a9a822154171b48732eb68a643b706010501ede420b09c4e3bb59c6",
+          "textSha256": "e7914803e8079829bec223b470ebe56422a4f37ff73f1ac0a7638ca373463c5c",
+          "structuredArtifactsSha256": "5f301af9dfa34b6e4ce57e05c833d774977c0847ad778bf834051b13144f61a1",
+          "pdfExtractionsAtSeal": 1,
+          "pdfExtractionsAtAdmission": 0
+        },
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://openreview.net/forum?id=v23Pqcm6qp",
+        "pdfUrl": "https://proceedings.iclr.cc/paper_files/paper/2026/file/93b11b5128ced940120f41ce9b216f39-Paper-Conference.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "d910d6669096e42939713e10a313b7d56306510ad16287a627cfb345cc1a9c34",
+          "authoritySha256": "74dbdb73b6d9334b73af42b0997182110e518359422822ee80dc69cd3fb644a4",
+          "physicalPinsSha256": "c6a1d1c351062cf89e351bf26b6a1036f961ba9e977be17204b52eba2276012a",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": "0bc58e1038b1d6bea0062a4e1a5f41cc30c8678aa64cc54e673d7f24fd21957b",
+        "sourceBindings": [
+          {
+            "sourceSet": "official-iclr-proceedings-2026-sumra-generation-000002",
+            "provenance": "authenticated-official-proceedings-same-forum",
+            "metadataSha256": "cc236271d6f00290ec64505805ac8c62dfcb3071496774258cf1fb858d2829b7",
+            "metadataRecordIndex": 0,
+            "metadataIdentityBindingSha256": "0c75206d977a13c1317d59cda896d6102209f6ca6baf66785200d7b657a37802",
+            "pdfSha256": "fc96f7c0a771c69dcdbf5348f07950abd4bd5032c7e898e680937d8a0cfdd213",
+            "pdfBytes": 853446,
+            "pdfIdentityBindingSha256": "4e3cc81c01a50e91acce9dfdc744720fe72d66f17559ea99b228aebc591cd8e2",
+            "sourceBindingSha256": "9a455113dc4e2987f830e4a585bd226e58dbfdff0d0b14e861edc667da229229",
+            "acquisition": {
+              "openreviewResponseBytes": false,
+              "provenanceStatement": "Observed ICLR2026 proceedings HTTP response; same-paper association from official poster forum edge and exact title, ordered authors and complete abstract; not an OpenReview attachment response.",
+              "receipt": {
+                "fileSha256": "0a2d306c34e5e09a504f6a84b28270457de106f338d1181a8acaf4a62c2d63ad",
+                "selfSha256": "947d62cb99a4b2b15d69945cf22d5b623612d65b6d4d597483ac6444ba2f29aa"
+              },
+              "sourceAuthors": [
+                "Chin Yuen Kwok",
+                "Yongsen Zheng",
+                "Jia Qi Yip",
+                "Kwok-Yan Lam",
+                "Eng Siong Chng"
+              ],
+              "sourceDoi": null,
+              "sourceKind": "authenticated-iclr-official-proceedings-pdf",
+              "sourceTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+              "versionRelation": "same-forum-official-2026-proceedings-cross-document-identity"
+            },
+            "acquisitionSha256": "1a0e06bf0f1610d7230dd96a59c413c01a35c50a6810e97125b047dec1b0c2ae"
+          }
+        ],
+        "originalTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+        "sourceDoi": null,
+        "versionRelation": "same-forum-official-2026-proceedings-cross-document-identity",
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+          "sourceTitleSha256": "bcf0b1608a148df45059e108f64322034ad40379c006bfd79e8d37665d83deca",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-05-04-sumra-parameter-efficient-fine-tuning-with.md",
+              "pageSha256": "624d0b83bb0762185d3c8b83be58fd5a4edb22735111c3232d998f4e38a43885",
+              "bodySha256": "992429eedcd288a0e9d19a45f8c22617c333cd6c60c1bb11dd92d212235e75b7",
+              "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+              "originalTitleSha256": "bcf0b1608a148df45059e108f64322034ad40379c006bfd79e8d37665d83deca",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            },
+            {
+              "pagePath": "content/posts/2026-05-02-sumra-parameter-efficient-fine-tuning-with.md",
+              "pageSha256": "4e479abaaa353544baa99e298cb63ee64eccc3cef31422c96b689f6f62f280ce",
+              "bodySha256": "bd868644b4d83fb0f1d585ee3f88be16c368324d3785d0cf14560999a28058c9",
+              "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+              "originalTitleSha256": "bcf0b1608a148df45059e108f64322034ad40379c006bfd79e8d37665d83deca",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "455a6e6db29581d9e7f8d3e104234d459743157f6d5d9a0babb36b07a396be6e",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-seven-final-base-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2605.00225",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2605.00225",
+        "generation": 1,
+        "sourceId": "2605.00225",
+        "textSha256": "dec1da4afd5c6f401ec6e5b9879406e11560b68aadbcacc021d7a9e0602e3c72",
+        "pdfSha256": "dc5878c33b9ff834d011e2d8119c589ecae580517b8243ef86750b393a6411fb",
+        "sourceManifestSha256": "b192ddda419748c014f006fa2c4caeffb2dc3672ed307f951a3c76a7b6969be6",
+        "structuredArtifactsSha256": "ac1ba4da43ada178c1f2ab70cc10ed54a331c540569666e1797b683da6b00329",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2605.00225",
+          "arxivId": "2605.00225",
+          "generation": 1,
+          "textSha256": "dec1da4afd5c6f401ec6e5b9879406e11560b68aadbcacc021d7a9e0602e3c72",
+          "pdfSha256": "dc5878c33b9ff834d011e2d8119c589ecae580517b8243ef86750b393a6411fb",
+          "sourceManifestSha256": "b192ddda419748c014f006fa2c4caeffb2dc3672ed307f951a3c76a7b6969be6"
+        },
+        "sourceRunIdentitySha256": "199eba1cafd54a32c6a44f8db15caaafdd4ba510e83c31d361322ec74d1e79db",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "From Birdsong to Rumbles: Classifying Elephant Calls with Out-of-Species Embeddings",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2605.00225",
+          "querySourceId": "2605.00225",
+          "entrySourceId": "2605.00225v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-04-30T21:00:05.000Z",
+          "publishedAt": "2026-04-30T21:00:05.000Z",
+          "observedAt": "2026-09-08T08:02:01.128Z",
+          "sourceTitleSha256": "b9a719945334b3ef3f61fb87d62f3abf1b0385b726dc83110f1cb9488d3b075f",
+          "sourceTextSha256": "dec1da4afd5c6f401ec6e5b9879406e11560b68aadbcacc021d7a9e0602e3c72",
+          "runtimeMetadataTitleSha256": "79f8581458968e2e3aa6a6a523c376bd1107a540ba3e67555876923503a125ac",
+          "sourceManifestSha256": "b192ddda419748c014f006fa2c4caeffb2dc3672ed307f951a3c76a7b6969be6",
+          "sourceSnapshotSha256": "96c0646e991f0e76c1aabb0e845f4d897b22b7ac4ad32c9b1c5df1d8f74c6f53",
+          "metadataManifestSha256": "e36efd3cae9633c8c411442c1c96afa290e2023f63c1e49a6326886324027eb3",
+          "metadataResponseSha256": "c972de382464c03e1482a03b518e787cba33459fa4131302d1d17dce1d3b0e5c",
+          "metadataRecordSha256": "fb3c3b8296c599182f045cbdc99ecf261c33deff2156de145100ead9d30ad41b",
+          "atomResponseSha256": "c6296a5744af5d94b8fba28d5449067d4db660ef6980bc83d96177dea0fc5096",
+          "titleQuote": {
+            "quote": "From Birdsong to Rumbles: Classifying Elephant Calls with Out-of-Species Embeddings",
+            "quoteStart": 751,
+            "quoteEnd": 834,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "b9a719945334b3ef3f61fb87d62f3abf1b0385b726dc83110f1cb9488d3b075f"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2605.00225",
+        "pdfUrl": "https://arxiv.org/pdf/2605.00225.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "db29a7f7e771e95d0b7e16ea19d4636eb8ae4a6818ae426e2a6e33df9dddb83b",
+          "physicalPinsSha256": "91159c092a59f87a0f8e22f2d277244e4ec86f9ff8e3f715d2fac755c8e459e2",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2605.00225",
+          "sourceTitleSha256": "b9a719945334b3ef3f61fb87d62f3abf1b0385b726dc83110f1cb9488d3b075f",
+          "sourceTextSha256": "dec1da4afd5c6f401ec6e5b9879406e11560b68aadbcacc021d7a9e0602e3c72",
+          "sourceManifestSha256": "b192ddda419748c014f006fa2c4caeffb2dc3672ed307f951a3c76a7b6969be6",
+          "metadataManifestSha256": "e36efd3cae9633c8c411442c1c96afa290e2023f63c1e49a6326886324027eb3",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-05-04-from-birdsong-to-rumbles-classifying-elephant.md",
+              "pageKey": "page:013c26c697e6150b421b89f0fbfdf660ee8d5464f305692bb7f33ced8fd9cde8",
+              "pageSha256": "b0a3843a156d8b13bd11efc912eb0dc80b6baf2942473921ea690de2fb3242c5",
+              "bodySha256": "e3e80fa2f797289c82bf6c15d46f58f22dd33299dbf3a44402b0e85b3843afe8",
+              "paperId": "arxiv:2605.00225",
+              "publishedTitle": "From Birdsong to Rumbles: Classifying Elephant Calls with Out-of-Species Embeddings",
+              "publishedTitleSha256": "b9a719945334b3ef3f61fb87d62f3abf1b0385b726dc83110f1cb9488d3b075f",
+              "officialSourceTitleSha256": "b9a719945334b3ef3f61fb87d62f3abf1b0385b726dc83110f1cb9488d3b075f",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2605.00225v1)",
+                  "quoteStart": 408,
+                  "quoteEnd": 451,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "8c8579f3d51835f7642f62e82076f63a4ad9e3bfe0edc1068b46ab8e67a49454"
+                }
+              ],
+              "originalPlanPageSha256": "b0a3843a156d8b13bd11efc912eb0dc80b6baf2942473921ea690de2fb3242c5"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "92a5fe858288e05cf5c4f7c10132fe96a765fd53ffaa6fe695ce20c6b775b104",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2605.25605",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2605.25605",
+        "generation": 1,
+        "sourceId": "2605.25605",
+        "textSha256": "cff1400f67cf0c987810b49ae27cef3176711b5e3f195df1f26d5ad5188c8e95",
+        "pdfSha256": "6e2f1cf846f5487d2f74e0c67575af16da01f24cc0447dfec4d551d5ecb9875c",
+        "sourceManifestSha256": "350a00618c8475318483155b0c34a250e6aa745eb630a1adeb16d2dfb4416f9d",
+        "structuredArtifactsSha256": "5a43ec7432be864a067acc5c427eae6e89aac2870642d2b39ef6884b2f7e795c",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2605.25605",
+          "arxivId": "2605.25605",
+          "generation": 1,
+          "textSha256": "cff1400f67cf0c987810b49ae27cef3176711b5e3f195df1f26d5ad5188c8e95",
+          "pdfSha256": "6e2f1cf846f5487d2f74e0c67575af16da01f24cc0447dfec4d551d5ecb9875c",
+          "sourceManifestSha256": "350a00618c8475318483155b0c34a250e6aa745eb630a1adeb16d2dfb4416f9d"
+        },
+        "sourceRunIdentitySha256": "49da8b9963bf59e726ca0520ecadc9aeb0634220415db7b505b0ed1da6d44e8c",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "Decoding Stimulus Reconstruction-Based Auditory Attention Robustly in Unbalanced EEG Datasets",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2605.25605",
+          "querySourceId": "2605.25605",
+          "entrySourceId": "2605.25605v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-05-25T08:58:19.000Z",
+          "publishedAt": "2026-05-25T08:58:19.000Z",
+          "observedAt": "2026-09-08T09:17:58.852Z",
+          "sourceTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+          "sourceTextSha256": "cff1400f67cf0c987810b49ae27cef3176711b5e3f195df1f26d5ad5188c8e95",
+          "runtimeMetadataTitleSha256": "954e63cac20c4188d3badf8ed13cc54051c59b1e7dc1060d80e8572b81fb941e",
+          "sourceManifestSha256": "350a00618c8475318483155b0c34a250e6aa745eb630a1adeb16d2dfb4416f9d",
+          "sourceSnapshotSha256": "0e251477480481a91d9bba9a7a7531560d72617efae986bb85a631a4a88dad0e",
+          "metadataManifestSha256": "902f166b8aa15e8ec85bfa7a2527c6bab2eafab564921d641095e9cdd88e920a",
+          "metadataResponseSha256": "97d588abde8ecefe5d35644b6ce089dd3648fb4f8f9940b3657d5435fcf43031",
+          "metadataRecordSha256": "a43e69d56f91cb1fac205e5ad29dc03287eb233fe9cf294c6a61fa5fd87bdf24",
+          "atomResponseSha256": "b5e1ac003ca29f73aaac670d0bc6b0e1a7afc9f887c622f484d763f25bf4ce8e",
+          "titleQuote": {
+            "quote": "Decoding Stimulus Reconstruction-Based Auditory Attention Robustly in Unbalanced EEG Datasets",
+            "quoteStart": 751,
+            "quoteEnd": 844,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2605.25605",
+        "pdfUrl": "https://arxiv.org/pdf/2605.25605.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "03fa3c1c032038bd00b48256c9b1ec8eb13a00c1ae7a84c8b8b5ee6911c04d1a",
+          "physicalPinsSha256": "ae1d72fd712ed6896c92d571dc9a331fe233f07a6204c92ff8b82b463d1d9677",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2605.25605",
+          "sourceTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+          "sourceTextSha256": "cff1400f67cf0c987810b49ae27cef3176711b5e3f195df1f26d5ad5188c8e95",
+          "sourceManifestSha256": "350a00618c8475318483155b0c34a250e6aa745eb630a1adeb16d2dfb4416f9d",
+          "metadataManifestSha256": "902f166b8aa15e8ec85bfa7a2527c6bab2eafab564921d641095e9cdd88e920a",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-05-26-decoding-stimulus-reconstruction-based-auditory.md",
+              "pageKey": "page:1d36c6843217a0e8ebfc8c2cdcbb97d3c8477a5eb52ec9081ae241fd23e9837a",
+              "pageSha256": "1fbf5395910c7c5478d1b8087349cbcfd510aa23f5d37a0f1e627eca50ea5c3c",
+              "bodySha256": "fa3712819e882ffe96c10884f9dd49b44d41a3af7cdfbd11865a9c95a89e83d7",
+              "paperId": "arxiv:2605.25605",
+              "publishedTitle": "Decoding Stimulus Reconstruction-Based Auditory Attention Robustly in Unbalanced EEG Datasets",
+              "publishedTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+              "officialSourceTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2605.25605v1)",
+                  "quoteStart": 372,
+                  "quoteEnd": 415,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "7c319d19735c32932af9afa219ddf335f25278c7014cb7218f5c6ac5f2bd9c2e"
+                }
+              ],
+              "originalPlanPageSha256": "1fbf5395910c7c5478d1b8087349cbcfd510aa23f5d37a0f1e627eca50ea5c3c"
+            },
+            {
+              "pagePath": "content/posts/2026-05-27-decoding-stimulus-reconstruction-based-auditory.md",
+              "pageKey": "page:76c2b306bfd50fb08c02f3ac5173e7a05fdddf2f3aa4695111063a7a30ff4466",
+              "pageSha256": "5f1297288518bb6f2b804eac2a182eef0b585ef25fe25b50ce5e20e1fc60a7ab",
+              "bodySha256": "314da83290205d4a3514f7b9080c817ed2c352c25061cd77cb834cae83356d84",
+              "paperId": "arxiv:2605.25605",
+              "publishedTitle": "Decoding Stimulus Reconstruction-Based Auditory Attention Robustly in Unbalanced EEG Datasets",
+              "publishedTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+              "officialSourceTitleSha256": "56f2fd0a1bf26eeb8292a1463e9b459effea9ce647114e83e5dc946f151fa8d2",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2605.25605v1)",
+                  "quoteStart": 431,
+                  "quoteEnd": 474,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "7c319d19735c32932af9afa219ddf335f25278c7014cb7218f5c6ac5f2bd9c2e"
+                }
+              ],
+              "originalPlanPageSha256": "5f1297288518bb6f2b804eac2a182eef0b585ef25fe25b50ce5e20e1fc60a7ab"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "912b7d8b54c0cf7d51c07c1f7b420f468eff2dd7958ea62b0f954acceef8a8d1",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2606.21365",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2606.21365",
+        "generation": 1,
+        "sourceId": "2606.21365",
+        "textSha256": "e4598a7d0ada4d6012b0896801aa2fd7b97bf4c249fb2e34a71511e94653604f",
+        "pdfSha256": "9ec5063207def36dded06cfbcf243129b22afa927e29ec32293de879bfb9a56e",
+        "sourceManifestSha256": "c994b9cbc19233de3090d966ab69398dd67f3201423e29382d20dbe9d96abfbb",
+        "structuredArtifactsSha256": "2dba667ca6d07b805accbedf0de8f28c008456f2e3beb488e7aedcc079c39665",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2606.21365",
+          "arxivId": "2606.21365",
+          "generation": 1,
+          "textSha256": "e4598a7d0ada4d6012b0896801aa2fd7b97bf4c249fb2e34a71511e94653604f",
+          "pdfSha256": "9ec5063207def36dded06cfbcf243129b22afa927e29ec32293de879bfb9a56e",
+          "sourceManifestSha256": "c994b9cbc19233de3090d966ab69398dd67f3201423e29382d20dbe9d96abfbb"
+        },
+        "sourceRunIdentitySha256": "b74cb82bb8fc698d3ba9f60a6c280415388e12688c584dfe8e46042fd889f526",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "LambdaMark: Semantic Audio Watermarking for Robustness and Radioactivity",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2606.21365",
+          "querySourceId": "2606.21365",
+          "entrySourceId": "2606.21365v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-06-19T12:14:17.000Z",
+          "publishedAt": "2026-06-19T12:14:17.000Z",
+          "observedAt": "2026-09-08T10:45:11.032Z",
+          "sourceTitleSha256": "cddfeb60e94bd8e31a90c302e80e8c7ec0540b0d96ff1ade709627ccac7be6f5",
+          "sourceTextSha256": "e4598a7d0ada4d6012b0896801aa2fd7b97bf4c249fb2e34a71511e94653604f",
+          "runtimeMetadataTitleSha256": "00a32bb08a422311b5ca0b22b921a5cd8d9e2f12c19ce18baa5728eca369ee88",
+          "sourceManifestSha256": "c994b9cbc19233de3090d966ab69398dd67f3201423e29382d20dbe9d96abfbb",
+          "sourceSnapshotSha256": "b66363da1e6d714ba83582c4aa2811c89bfabb7930bf669f2ed0f34f3c54091f",
+          "metadataManifestSha256": "f0d894471465fb99c2e8b4e354ce66ff283e92fee66081217fbafdd71a6ffc31",
+          "metadataResponseSha256": "e1ff00ce5f84bace08c495b722691b39d7d8c86a2a7214871aeaab48622eb28c",
+          "metadataRecordSha256": "e485274b57b49cb40fe407551dd614b4cdf62d75d9ba561ecda660745fed8c01",
+          "atomResponseSha256": "810302c97279c186ce2a3ebd43077cbf2c97841fc332dcfdf8e192f21f4b1381",
+          "titleQuote": {
+            "quote": "LambdaMark: Semantic Audio Watermarking for Robustness and Radioactivity",
+            "quoteStart": 751,
+            "quoteEnd": 823,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "cddfeb60e94bd8e31a90c302e80e8c7ec0540b0d96ff1ade709627ccac7be6f5"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2606.21365",
+        "pdfUrl": "https://arxiv.org/pdf/2606.21365.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "6ad5c9a83635e1da3cf96c68a227c4e836d44ffc180848af2f990a9c5c918a71",
+          "physicalPinsSha256": "6c5aba54c7c1ec7f34f881334743f22c5f3856743a22f4183c9f7091465ee3a3",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2606.21365",
+          "sourceTitleSha256": "cddfeb60e94bd8e31a90c302e80e8c7ec0540b0d96ff1ade709627ccac7be6f5",
+          "sourceTextSha256": "e4598a7d0ada4d6012b0896801aa2fd7b97bf4c249fb2e34a71511e94653604f",
+          "sourceManifestSha256": "c994b9cbc19233de3090d966ab69398dd67f3201423e29382d20dbe9d96abfbb",
+          "metadataManifestSha256": "f0d894471465fb99c2e8b4e354ce66ff283e92fee66081217fbafdd71a6ffc31",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-06-23-lambdamark-semantic-audio-watermarking-for.md",
+              "pageKey": "page:eb6c9d7d422393ec5d581df122c4fa9ad0d6ba00b0710ee726990a6e9737a135",
+              "pageSha256": "ed6d63dc5fd39410c1819ef02636af28d0613a1c8a4702346f71554d7b19ecbe",
+              "bodySha256": "e04e00f83b745f10a80302f12c53c7d60d051425a97f516b2dc927a8ed3ae9db",
+              "paperId": "arxiv:2606.21365",
+              "publishedTitle": "LambdaMark: Semantic Audio Watermarking for Robustness and Radioactivity",
+              "publishedTitleSha256": "cddfeb60e94bd8e31a90c302e80e8c7ec0540b0d96ff1ade709627ccac7be6f5",
+              "officialSourceTitleSha256": "cddfeb60e94bd8e31a90c302e80e8c7ec0540b0d96ff1ade709627ccac7be6f5",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2606.21365)",
+                  "quoteStart": 472,
+                  "quoteEnd": 513,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "6468531473f6c2a507f00aebb7ede8065f2fa57a635b2e7c3858c71f706eae4b"
+                }
+              ],
+              "originalPlanPageSha256": "ed6d63dc5fd39410c1819ef02636af28d0613a1c8a4702346f71554d7b19ecbe"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "a4dd68d38805eb00f15683733ece22b2051bb2799ea62b7427754b8f9ea9d925",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2606.24477",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2606.24477",
+        "generation": 1,
+        "sourceId": "2606.24477",
+        "textSha256": "d6e230f232c60972f0cb94f54dfac0939ab2a959d58358352eaa427eba4f02a0",
+        "pdfSha256": "e7735fffd65d575d78fe9596c421caea213d1aa7463ab7ade535d60a16177d7a",
+        "sourceManifestSha256": "e8245456456a055daa69bb2c725eb66f327b6c451c64360037fc3a29a408c726",
+        "structuredArtifactsSha256": "1116b236d43b8ef03a7bd0d3a52e7c4fb80395fdb4d76d1ed751ffbd02f49ab2",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2606.24477",
+          "arxivId": "2606.24477",
+          "generation": 1,
+          "textSha256": "d6e230f232c60972f0cb94f54dfac0939ab2a959d58358352eaa427eba4f02a0",
+          "pdfSha256": "e7735fffd65d575d78fe9596c421caea213d1aa7463ab7ade535d60a16177d7a",
+          "sourceManifestSha256": "e8245456456a055daa69bb2c725eb66f327b6c451c64360037fc3a29a408c726"
+        },
+        "sourceRunIdentitySha256": "b2d2e9ba8c97b8c3faa8174ab3c889de086154743e1819f8a230a73fb75cbf37",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "video-SALMONN-R$^3$: Learning to ReWatch, ReAsk, and ReAnswer for Efficient Video Understanding",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2606.24477",
+          "querySourceId": "2606.24477",
+          "entrySourceId": "2606.24477v2",
+          "entryVersion": 2,
+          "entryUpdatedAt": "2026-07-09T06:22:10.000Z",
+          "publishedAt": "2026-06-23T12:13:19.000Z",
+          "observedAt": "2026-09-08T10:57:03.266Z",
+          "sourceTitleSha256": "fa48e9c8da613bd39ee4a2019fd6cd0338d53b30846311ecbea6537db40cf1b1",
+          "sourceTextSha256": "d6e230f232c60972f0cb94f54dfac0939ab2a959d58358352eaa427eba4f02a0",
+          "runtimeMetadataTitleSha256": "a361638e034de06acc9c044d2ac3275d36a5a00d860b7c493a3257d9625866d1",
+          "sourceManifestSha256": "e8245456456a055daa69bb2c725eb66f327b6c451c64360037fc3a29a408c726",
+          "sourceSnapshotSha256": "de1617db809540d16b4f924456ecd50d30f44386d304ffe510123da059df884b",
+          "metadataManifestSha256": "25626161f0b0226e5d4cbdf03606119a86d24e05856e2503a7ca4eeb68f27edc",
+          "metadataResponseSha256": "3e0cf0341ce4f0dc7d945a00f68f4927a336e64e0b0d3f2294fd104e067dadbf",
+          "metadataRecordSha256": "deb7fa9b2d15550e9bd53b1a275607cd509de845eb065c3bfedffde42102d7ac",
+          "atomResponseSha256": "a1b0b375542214d884e387f5814dab2fe9e3c48fd90f6cd086f90d44afbdf658",
+          "titleQuote": {
+            "quote": "video-SALMONN-R$^3$: Learning to ReWatch, ReAsk, and ReAnswer for Efficient Video Understanding",
+            "quoteStart": 751,
+            "quoteEnd": 846,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "fa48e9c8da613bd39ee4a2019fd6cd0338d53b30846311ecbea6537db40cf1b1"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2606.24477",
+        "pdfUrl": "https://arxiv.org/pdf/2606.24477.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "8cf9554a6b808a509fccf87e25331cabe1785c3e4e08ee90eae4aa851578c6e1",
+          "physicalPinsSha256": "2fa445b6b995e1a13c4c28eae411ee591fe3ab9f050565428f88bd8c306801d5",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2606.24477",
+          "sourceTitleSha256": "fa48e9c8da613bd39ee4a2019fd6cd0338d53b30846311ecbea6537db40cf1b1",
+          "sourceTextSha256": "d6e230f232c60972f0cb94f54dfac0939ab2a959d58358352eaa427eba4f02a0",
+          "sourceManifestSha256": "e8245456456a055daa69bb2c725eb66f327b6c451c64360037fc3a29a408c726",
+          "metadataManifestSha256": "25626161f0b0226e5d4cbdf03606119a86d24e05856e2503a7ca4eeb68f27edc",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-06-24-video-salmonn-r3-learning-to-rewatch-reask-and.md",
+              "pageKey": "page:2f860fe8d315d85a23fca63fcc2f0e58791f905fcfb4d31b445084028a3e78fe",
+              "pageSha256": "a3af87561e10dfb0dfde768729fdc01fcbd928770385df1239607525d5aee6a5",
+              "bodySha256": "34b87bc11d1d5ab94a298078912e9a713916bd4f442d20ba82463c6b951511f6",
+              "paperId": "arxiv:2606.24477",
+              "publishedTitle": "video-SALMONN-R: Learning to ReWatch, ReAsk, and ReAnswer for Efficient Video Understanding",
+              "publishedTitleSha256": "942284bb67d53f79b799340ea5a8edc15c0280b0c217d6e86d240f1710e5324b",
+              "officialSourceTitleSha256": "fa48e9c8da613bd39ee4a2019fd6cd0338d53b30846311ecbea6537db40cf1b1",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2606.24477)",
+                  "quoteStart": 526,
+                  "quoteEnd": 567,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "b5123a9c38d09424db4a767148c3cd0954d36aff7d70ca63aeb7b796bcaded62"
+                }
+              ],
+              "originalPlanPageSha256": "a3af87561e10dfb0dfde768729fdc01fcbd928770385df1239607525d5aee6a5"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "a647d9c1235868d9f7a49b04b590cab219edce15d874677398102ec12e66d0da",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2607.18317",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2607.18317",
+        "generation": 1,
+        "sourceId": "2607.18317",
+        "textSha256": "bce5ab0563b3ccbb8b7ef954bf7295a8056af0928d5d237301ac60803ae5ccba",
+        "pdfSha256": "37d5e1a1bf89e37ddb10701c34405000d23b776bae3dba57f77751fa23e778be",
+        "sourceManifestSha256": "cbf87e3190da8a355be0096922f75fa8a4e3300e9c2a5d15b1d56ae5225fbb16",
+        "structuredArtifactsSha256": "b51fa9cdc15441080577e3378fc599843742bf030da08d8398506f7cfc286820",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2607.18317",
+          "arxivId": "2607.18317",
+          "generation": 1,
+          "textSha256": "bce5ab0563b3ccbb8b7ef954bf7295a8056af0928d5d237301ac60803ae5ccba",
+          "pdfSha256": "37d5e1a1bf89e37ddb10701c34405000d23b776bae3dba57f77751fa23e778be",
+          "sourceManifestSha256": "cbf87e3190da8a355be0096922f75fa8a4e3300e9c2a5d15b1d56ae5225fbb16"
+        },
+        "sourceRunIdentitySha256": "052a431dbb2900244ac202584ba1cdf4bc76190fba4a480e4c819e89b78a7adb",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "A Situational Speech Synthesizer for Yoruba: System Design, Phonological Rule Architecture, and Orthographic Extensions for Contour",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2607.18317",
+          "querySourceId": "2607.18317",
+          "entrySourceId": "2607.18317v2",
+          "entryVersion": 2,
+          "entryUpdatedAt": "2026-07-23T00:00:02.000Z",
+          "publishedAt": "2026-07-17T20:13:41.000Z",
+          "observedAt": "2026-09-08T11:59:42.049Z",
+          "sourceTitleSha256": "d4df2f562470497ee5ee9461a837eb34929407d2be28b8b05427177eb5df7efb",
+          "sourceTextSha256": "bce5ab0563b3ccbb8b7ef954bf7295a8056af0928d5d237301ac60803ae5ccba",
+          "runtimeMetadataTitleSha256": "905c76d62ddd42fa22ed33dc9f94bb0a3431762d01868ed1b59e932423dd527a",
+          "sourceManifestSha256": "cbf87e3190da8a355be0096922f75fa8a4e3300e9c2a5d15b1d56ae5225fbb16",
+          "sourceSnapshotSha256": "31a9249a98c52ad36ac5e551ef208204ada4676a077fe7418fc00cc84a215169",
+          "metadataManifestSha256": "45a9540f1d77d4b3fa820d20ed7de10e47a822c2e6949e467380463d144da807",
+          "metadataResponseSha256": "291ac24126e5c62523f6e38d1ea7781e0a5d7b783c0df473538f72846b5e47a1",
+          "metadataRecordSha256": "4763773f9102dfae99fb03157ef59350aad5d778cb284f4b1c28a60dd4f559f4",
+          "atomResponseSha256": "5f46384da9c599a73ea8c3a37f08cb5a9e736649e89a629ab5d34f5a648234ae",
+          "titleQuote": {
+            "quote": "A Situational Speech Synthesizer for Yoruba: System Design, Phonological Rule Architecture, and Orthographic Extensions for Contour",
+            "quoteStart": 751,
+            "quoteEnd": 882,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "d4df2f562470497ee5ee9461a837eb34929407d2be28b8b05427177eb5df7efb"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2607.18317",
+        "pdfUrl": "https://arxiv.org/pdf/2607.18317.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "83c3886a5e33248dd94818b53cd328f43c26a04026a62c5e127e1a3c60fe7141",
+          "physicalPinsSha256": "6a8c8c060f6a15b06aa09731288e91cf38eedcb23bb16628b53cac1108988f7e",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2607.18317",
+          "sourceTitleSha256": "d4df2f562470497ee5ee9461a837eb34929407d2be28b8b05427177eb5df7efb",
+          "sourceTextSha256": "bce5ab0563b3ccbb8b7ef954bf7295a8056af0928d5d237301ac60803ae5ccba",
+          "sourceManifestSha256": "cbf87e3190da8a355be0096922f75fa8a4e3300e9c2a5d15b1d56ae5225fbb16",
+          "metadataManifestSha256": "45a9540f1d77d4b3fa820d20ed7de10e47a822c2e6949e467380463d144da807",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-07-22-a-situational-speech-synthesizer-for-yoruba-2607-18317.md",
+              "pageKey": "page:b46f7ff930ab25e0ad92271b869da463249bd9dcae87fdee831f44344995e90d",
+              "pageSha256": "a59e3822e617b4c9027d4b7532ce9d7c08d8b25be74406aa7ba7eab7bc09d515",
+              "bodySha256": "c4ff534c04cace96b1f22dd0c28c3608a504564cb4dbabc9ed9163f2ac162b51",
+              "paperId": "arxiv:2607.18317",
+              "publishedTitle": "A Situational Speech Synthesizer for Yoruba: System Design, Phonological Rule Architecture, and Orthographic Extensions for Contour",
+              "publishedTitleSha256": "d4df2f562470497ee5ee9461a837eb34929407d2be28b8b05427177eb5df7efb",
+              "officialSourceTitleSha256": "d4df2f562470497ee5ee9461a837eb34929407d2be28b8b05427177eb5df7efb",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2607.18317)",
+                  "quoteStart": 753,
+                  "quoteEnd": 794,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "9e96742dab046b9e0579ee2b06c17ec79dbc440cf94b3b5130f7ed3e67d278c2"
+                }
+              ],
+              "originalPlanPageSha256": "a59e3822e617b4c9027d4b7532ce9d7c08d8b25be74406aa7ba7eab7bc09d515"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "096738c5632f07ed17a6859c307a09c94ac2c998ed0c827f8cbae151c6fb2650",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2608.25244",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2608.25244",
+        "generation": 1,
+        "sourceId": "2608.25244",
+        "textSha256": "c87b46d9e280c01c3c9ad87e102414131038ae677f02c7f81729f81b0f23bfe0",
+        "pdfSha256": "a2b1e9282fa7589c3e5983e537c64a81ecce77e194ffac3fdce0cae2203a0514",
+        "sourceManifestSha256": "b7464659a4c3ca331fe82b0cc67f69f83999546c2ab722bbce02608e2075743e",
+        "structuredArtifactsSha256": "b2941e854cb6ac33e533049c2f3a269a5249c81c96a1d03f6824cb8e2ca7f658",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2608.25244",
+          "arxivId": "2608.25244",
+          "generation": 1,
+          "textSha256": "c87b46d9e280c01c3c9ad87e102414131038ae677f02c7f81729f81b0f23bfe0",
+          "pdfSha256": "a2b1e9282fa7589c3e5983e537c64a81ecce77e194ffac3fdce0cae2203a0514",
+          "sourceManifestSha256": "b7464659a4c3ca331fe82b0cc67f69f83999546c2ab722bbce02608e2075743e"
+        },
+        "sourceRunIdentitySha256": "f0e76c0f829ac51c73787a83217da5d8a5a1d4a3fa846c0b8fd13a024b78d091",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "AllMusicCaps: Album Reviews as Complementary Supervision for Music CLAP",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2608.25244",
+          "querySourceId": "2608.25244",
+          "entrySourceId": "2608.25244v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-08-26T00:06:03.000Z",
+          "publishedAt": "2026-08-26T00:06:03.000Z",
+          "observedAt": "2026-09-08T13:16:28.515Z",
+          "sourceTitleSha256": "9876a89fba61e7285d1f8d8e5892f80a712075886fb605c1ee482d5c94b8c9d2",
+          "sourceTextSha256": "c87b46d9e280c01c3c9ad87e102414131038ae677f02c7f81729f81b0f23bfe0",
+          "runtimeMetadataTitleSha256": "9876a89fba61e7285d1f8d8e5892f80a712075886fb605c1ee482d5c94b8c9d2",
+          "sourceManifestSha256": "b7464659a4c3ca331fe82b0cc67f69f83999546c2ab722bbce02608e2075743e",
+          "sourceSnapshotSha256": "9e2b9448ad1d042fa370ff18ff78d9ca4efdb5cdc8e86e64c6b722e8a26f1c31",
+          "metadataManifestSha256": "8abd4f7d1efb844225685b8fb5fb2466c362f708410770d8a91b7dd9be53c6e8",
+          "metadataResponseSha256": "e4d116d358dc7bd6d94b9c051e4894318b994a347b1292b037005897306dffde",
+          "metadataRecordSha256": "36f7f07d7fe26d371311daea9375121988172c8d457e31ae4596dd57199b628a",
+          "atomResponseSha256": "740b961645f95a087b89dbc9bd3ef36f1908b857ca61b2f87104d958a3f7f2fb",
+          "titleQuote": {
+            "quote": "AllMusicCaps: Album Reviews as Complementary Supervision for Music CLAP",
+            "quoteStart": 751,
+            "quoteEnd": 822,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "9876a89fba61e7285d1f8d8e5892f80a712075886fb605c1ee482d5c94b8c9d2"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2608.25244",
+        "pdfUrl": "https://arxiv.org/pdf/2608.25244.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "26c969b14dbbfe1ea14c5655697a3fbe282eda1ed66a3499bcb404452a94be92",
+          "physicalPinsSha256": "05eedac66ded1b60e64b7fa65601fcc6e0c26f5d18aeb0af1fc25e185f3d1916",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2608.25244",
+          "sourceTitleSha256": "9876a89fba61e7285d1f8d8e5892f80a712075886fb605c1ee482d5c94b8c9d2",
+          "sourceTextSha256": "c87b46d9e280c01c3c9ad87e102414131038ae677f02c7f81729f81b0f23bfe0",
+          "sourceManifestSha256": "b7464659a4c3ca331fe82b0cc67f69f83999546c2ab722bbce02608e2075743e",
+          "metadataManifestSha256": "8abd4f7d1efb844225685b8fb5fb2466c362f708410770d8a91b7dd9be53c6e8",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-08-27-allmusiccaps-album-reviews-as-complementary-2608-25244.md",
+              "pageKey": "page:bedae50607f376cf4fb962fd545181c8a22eeaa2dd4eae9bbf7a7961b4474128",
+              "pageSha256": "a4da5ff34608338f409f10eb2c71506f1a105e6b6390c7dfea9cf90cae4fbd29",
+              "bodySha256": "d9df78c9582e63c6d27bc70c741d8fd07f1c7ff4ac1fb38572c7d8079ce2f608",
+              "paperId": "arxiv:2608.25244",
+              "publishedTitle": "AllMusicCaps：让专辑评论成为可检索音乐语义的补充监督",
+              "publishedTitleSha256": "543962fdfb3860f40f8ec7ebc395beaaaeb59eacde14c585ecd4c6ce52620fff",
+              "officialSourceTitleSha256": "9876a89fba61e7285d1f8d8e5892f80a712075886fb605c1ee482d5c94b8c9d2",
+              "officialEntryQuotes": [
+                {
+                  "quote": "> arXiv：[2608.25244](https://arxiv.org/abs/2608.25244)",
+                  "quoteStart": 640,
+                  "quoteEnd": 694,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "d5ac5f11a700e439348b870575333371444bc48b2c4ddf592e439d500efb6c7e"
+                }
+              ],
+              "originalPlanPageSha256": "a4da5ff34608338f409f10eb2c71506f1a105e6b6390c7dfea9cf90cae4fbd29"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "b92ec3090cdc09d4babac2c9957616ec3ba40ecb0bba88f8b59c891a7ca9871d",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2608.25177",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2608.25177",
+        "generation": 1,
+        "sourceId": "2608.25177",
+        "textSha256": "0c48eb1e8dda3cc1daedb1a197cb4f6ceba28fe4a4f1bc7a615c6971a6d08623",
+        "pdfSha256": "79b4b09bd482a2c14cdb11c0723fa5d64b703c5e9aa7d477544a85f85240554f",
+        "sourceManifestSha256": "bf237da15df52adb65e1a27d64f99c91f90debf55a824a9ee1366e33b931a034",
+        "structuredArtifactsSha256": "6b5760c5fbee07985a3ddb92af6252caba513cec08786389e12291d53992d02f",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2608.25177",
+          "arxivId": "2608.25177",
+          "generation": 1,
+          "textSha256": "0c48eb1e8dda3cc1daedb1a197cb4f6ceba28fe4a4f1bc7a615c6971a6d08623",
+          "pdfSha256": "79b4b09bd482a2c14cdb11c0723fa5d64b703c5e9aa7d477544a85f85240554f",
+          "sourceManifestSha256": "bf237da15df52adb65e1a27d64f99c91f90debf55a824a9ee1366e33b931a034"
+        },
+        "sourceRunIdentitySha256": "883bb9f1faf6a96154cd3a4aeebcd456de3fd535d3ee09381fb6b2e94d40f933",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "AudioLens: Multi-Perspective Speech Clustering with Reasoning Audio-Language Models",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2608.25177",
+          "querySourceId": "2608.25177",
+          "entrySourceId": "2608.25177v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-08-25T21:47:57.000Z",
+          "publishedAt": "2026-08-25T21:47:57.000Z",
+          "observedAt": "2026-09-08T13:16:10.714Z",
+          "sourceTitleSha256": "41da83083b0e103c710e1431f7e685654c1d4feb186eb03cdc79ad6a7025f531",
+          "sourceTextSha256": "0c48eb1e8dda3cc1daedb1a197cb4f6ceba28fe4a4f1bc7a615c6971a6d08623",
+          "runtimeMetadataTitleSha256": "41da83083b0e103c710e1431f7e685654c1d4feb186eb03cdc79ad6a7025f531",
+          "sourceManifestSha256": "bf237da15df52adb65e1a27d64f99c91f90debf55a824a9ee1366e33b931a034",
+          "sourceSnapshotSha256": "2c16e22a239c8edaedec3d324b8f6aa8a689c1a99590a006d9e5c533753efd05",
+          "metadataManifestSha256": "2ba3152dee2ad43d8034461402de528a9633eb27cce0896f38d2f9edbbabf150",
+          "metadataResponseSha256": "454e5f3172083e574b388da7bbcb5492bbafacd26aa3d169c2bf78796602fc7a",
+          "metadataRecordSha256": "490969435c6633c879e74bdac4dca83c7baab442e910fef95f5ddcce6bc9ae14",
+          "atomResponseSha256": "9e58de0332e93e06462601a4af9dff00b88138d4502aa034b56b8c93becea50e",
+          "titleQuote": {
+            "quote": "AudioLens: Multi-Perspective Speech Clustering with Reasoning Audio-Language Models",
+            "quoteStart": 751,
+            "quoteEnd": 834,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "41da83083b0e103c710e1431f7e685654c1d4feb186eb03cdc79ad6a7025f531"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2608.25177",
+        "pdfUrl": "https://arxiv.org/pdf/2608.25177.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "e5e0d50993336550120a42f97213ad83edce31f2d2f7189a8d7be02877cead1c",
+          "physicalPinsSha256": "e3900b4fb9555972f641592092c679c1c3eea0fcf25d584c4f3f3b6b3ceb8168",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2608.25177",
+          "sourceTitleSha256": "41da83083b0e103c710e1431f7e685654c1d4feb186eb03cdc79ad6a7025f531",
+          "sourceTextSha256": "0c48eb1e8dda3cc1daedb1a197cb4f6ceba28fe4a4f1bc7a615c6971a6d08623",
+          "sourceManifestSha256": "bf237da15df52adb65e1a27d64f99c91f90debf55a824a9ee1366e33b931a034",
+          "metadataManifestSha256": "2ba3152dee2ad43d8034461402de528a9633eb27cce0896f38d2f9edbbabf150",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-08-27-audiolens-multi-perspective-speech-clustering-2608-25177.md",
+              "pageKey": "page:cf3d175ed48e6ccfb0abf2cbcd743357a891f24c1760c68c78c287a8110fc59a",
+              "pageSha256": "7b3dc2b90172a683a2b73aebfedad274435bb64d156357f3924330925e37fce9",
+              "bodySha256": "03763907a068ec8454210ff23ea5e755aab98ace3c3daa88358851d16f6b4a6f",
+              "paperId": "arxiv:2608.25177",
+              "publishedTitle": "让同一组录音按用户视角重新分组：AudioLens 如何把语音聚类变成集合推理",
+              "publishedTitleSha256": "16e145255dc9bbb52467270a1d69931ab40d9f2ea313500c2af891a9eff1ee32",
+              "officialSourceTitleSha256": "41da83083b0e103c710e1431f7e685654c1d4feb186eb03cdc79ad6a7025f531",
+              "officialEntryQuotes": [
+                {
+                  "quote": "> arXiv：[2608.25177](https://arxiv.org/abs/2608.25177)",
+                  "quoteStart": 1318,
+                  "quoteEnd": 1372,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "324b0dc151fa72236852ef31db04bc6aae64f94dc39cfdc2e05b0bd0512b8395"
+                }
+              ],
+              "originalPlanPageSha256": "7b3dc2b90172a683a2b73aebfedad274435bb64d156357f3924330925e37fce9"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "e594bba9a3b27814e59d38b1429e421a6d3589a9e391be50a4c97cb5e99a70b5",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata-seven-actual-r1-20261002.json"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+        "generation": null,
+        "sourceId": "conference:icassp:2026:icassp-arnumber:11460320",
+        "textSha256": "acee0e0a7f34c91ba5487c579bd1d9bcfa114ae1763e13b612cf8971620a7a3a",
+        "pdfSha256": "ab3dc927f87a57c2e5d5f5456938de4124b65b3b8abe815397316c3b79a31a51",
+        "sourceManifestSha256": null,
+        "structuredArtifactsSha256": "e9a7625803d4f1023cdd663fa06661c8224ea9fb83a76a4a568d75ebb6d709f1",
+        "sourceVersion": null,
+        "sourceBinding": null,
+        "sourceRunIdentitySha256": null,
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+        "sourceTitleBinding": {
+          "contract": "sealed-conference-metadata-title-binding-v1",
+          "sourceTitleSha256": "c0f8a0b10f8b554dffd8a6d76b7d7a0ca85692694ecf9bce2ef461d65ce2942d",
+          "writerInputsSha256": "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719",
+          "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5"
+        },
+        "originalSourceSeal": {
+          "contract": "fullsite-original-conference-source-seal-v1",
+          "sealFileSha256": "5c82e10bda9fcba837bc84b2ea6bd7476223aea085b1fe98bbe3399edc124af5",
+          "sealSha256": "3b7bf3e62ff27de4444fad3fb341854f33aea30c2f3d07944f5c28c4dfd1dbe0",
+          "sourceImplementationSha256": "df8d10186ec14ad59714a4eee5069db483e51eed821601e0b4eb1c545ac20407",
+          "sourceDescriptorSha256": "dd6e1ce152197cfb705bd29031ef75c08cf625391aea7d97cb29affdc8c86b50",
+          "textSha256": "acee0e0a7f34c91ba5487c579bd1d9bcfa114ae1763e13b612cf8971620a7a3a",
+          "structuredArtifactsSha256": "e9a7625803d4f1023cdd663fa06661c8224ea9fb83a76a4a568d75ebb6d709f1",
+          "pdfExtractionsAtSeal": 1,
+          "pdfExtractionsAtAdmission": 0
+        },
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://ieeexplore.ieee.org/document/11460320",
+        "pdfUrl": null,
+        "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。",
+        "fullsiteSourceAuthority": {
+          "contract": "controlled-original-plan-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "c6d1ad6d8b99447612eb993663340bf68d7adf09f0beabf543cd39d180a8d1eb",
+          "physicalPinsSha256": "07db430138e170df6466663dddb232e8ac9bf5e0d2f361ca46fd79816791fbed",
+          "controlledOriginalIntake": {
+            "contract": "fullsite-closed-controlled-original-intake-v1",
+            "originPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+            "originItemSha256": "589308196f3505cf41d91e43dc266266c427786a884121b8e08e45251d303b59",
+            "writerInputsSha256": "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719",
+            "originalSourceIdentitySha256": "4ee3e1e1fad6980f7f3e1e9aeeed8af15beb676fee231ce50a41b1b3e2218664",
+            "controlledReferenceFileSha256": "06142aadd012fec0127d66d2cfbe81f9059edbe18d9a5f7c45be65747790e9f9",
+            "oldClassificationOrPublicationPermissionReused": false
+          }
+        },
+        "writerInputsSha256": "135ce2b0163d8295bb3a7b8661513e499725a57e195860c7e070e53bb533c719",
+        "sourceBindings": [
+          {
+            "sourceSet": "workspace-icassp-2026",
+            "provenance": "retained-local-crawler",
+            "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+            "metadataRecordIndex": 842,
+            "metadataIdentityBindingSha256": "49cb2cd0fe37f519bbadfed6de1a8542ea3055ce0bf74911abda0541835902c0",
+            "pdfSha256": "ab3dc927f87a57c2e5d5f5456938de4124b65b3b8abe815397316c3b79a31a51",
+            "pdfBytes": 1124530,
+            "pdfIdentityBindingSha256": "58f1b8ab0b089e82697758dbde0c3ec2c0cfabc2496f83e612db8e450b209824",
+            "sourceBindingSha256": "39bcd069610ecf90a9581ec42ad33007e8ba4c5334f2b425e294ca7111a5cdad",
+            "acquisition": {
+              "openreviewResponseBytes": null,
+              "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+              "receipt": null,
+              "sourceAuthors": null,
+              "sourceDoi": null,
+              "sourceKind": "retained-local-no-network-receipt",
+              "sourceTitle": null,
+              "versionRelation": null
+            },
+            "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+          }
+        ],
+        "originalTitle": "KAN We Make Models Simpler for Audio Deepfake Detection with Kolmogorov–Arnold Networks?",
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+          "sourceTitleSha256": "c0f8a0b10f8b554dffd8a6d76b7d7a0ca85692694ecf9bce2ef461d65ce2942d",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-29-kan-we-make-models-simpler-for-audio-deepfake.md",
+              "pageSha256": "4dc03a9ac01c0a2593df9a563ba07123fdef78682a6ea2f8efa2657eb4127e25",
+              "bodySha256": "1df4828136539ce0038bca403f6f9bc7de250a252181d17cbed72dce7644e137",
+              "paperId": "conference:icassp:2026:icassp-arnumber:11460320",
+              "originalTitleSha256": "c0f8a0b10f8b554dffd8a6d76b7d7a0ca85692694ecf9bce2ef461d65ce2942d",
+              "identityBasis": "explicit-current-page-identity"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      },
+      "sourceSha256": "ccdfd37dae85df31768b745eadef5089c22d9f8aa9d28ba5aa7ec0b3631036ae",
+      "evidencePath": "/Users/francis7999/code/github_repos/audio-paper-digest-rewrite-all/data/runtime/historical-taxonomy-recovery-materials/fullsite-original-source-seals/53f4e951-7b58-4f87-a8b0-f7a02d058ba9/completion.json"
+    },
+    {
+      "paperId": "arxiv:2604.14654",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2604.14654",
+        "generation": 1,
+        "sourceId": "2604.14654v1",
+        "textSha256": "e03dfb52d301aa9db699c1656425b23d9d67dd00d2913884f1a77b154d3440aa",
+        "pdfSha256": "3b0e9bb070fb1317ad0461001130d9422bc312c54e69b91ac4b70c47c7763946",
+        "sourceManifestSha256": "4f1338247c868407f1006fb63da45bb413d7874df48bb06e0f0fe5606e092e0f",
+        "structuredArtifactsSha256": "df0dac7ea1c0e5d7cd39970a4270ae8d973c5f01a4d578b1cd7b3a6b48fd2f6c",
+        "sourceVersion": {
+          "contract": "arxiv-historical-version-source-v1",
+          "version": 1,
+          "canonicalArxivId": "2604.14654",
+          "selectedSourceId": "2604.14654v1",
+          "textSourceId": "2604.14654v1",
+          "selectedPdfUrl": "https://arxiv.org/pdf/2604.14654v1",
+          "currentPdfAvailable": false,
+          "attemptedCurrentPdfStatus": 404,
+          "attemptedCurrentPdfUrl": "https://arxiv.org/pdf/2604.14654.pdf",
+          "warning": "arXiv 当前无版本 PDF https://arxiv.org/pdf/2604.14654.pdf 返回 HTTP 404，当前稿不可用；本次只封存并分析官方历史版本 2604.14654v1（https://arxiv.org/pdf/2604.14654v1），不得暗示当前稿仍有效。",
+          "identitySha256": "3d6c7b05d2d733e185e99429ed21f2ab7e824bd89e7b16560228fb50a3c0dab7"
+        },
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2604.14654",
+          "arxivId": "2604.14654",
+          "generation": 1,
+          "textSha256": "e03dfb52d301aa9db699c1656425b23d9d67dd00d2913884f1a77b154d3440aa",
+          "pdfSha256": "3b0e9bb070fb1317ad0461001130d9422bc312c54e69b91ac4b70c47c7763946",
+          "sourceManifestSha256": "4f1338247c868407f1006fb63da45bb413d7874df48bb06e0f0fe5606e092e0f"
+        },
+        "sourceRunIdentitySha256": "3401e582899bb3b24548068fa78f181a3b0ffd21850da3098c082682d5e54102",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。",
+        "sourceTitle": "ClariCodec: Optimising Neural Speech Codes for 200bps Communication using Reinforcement Learning",
+        "sourceTitleBinding": {
+          "contract": "official-arxiv-atom-title-bound-to-sealed-source-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "official-metadata-title-only",
+          "paperId": "arxiv:2604.14654",
+          "querySourceId": "2604.14654v1",
+          "entrySourceId": "2604.14654v1",
+          "entryVersion": 1,
+          "entryUpdatedAt": "2026-04-16T06:01:46.000Z",
+          "publishedAt": "2026-04-16T06:01:46.000Z",
+          "observedAt": "2026-09-08T07:38:52.186Z",
+          "sourceTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+          "sourceTextSha256": "e03dfb52d301aa9db699c1656425b23d9d67dd00d2913884f1a77b154d3440aa",
+          "runtimeMetadataTitleSha256": "aad4472179ea89689f53ec3b07d52e12ed4e2f6a8509d63ee924c45b401d4f71",
+          "sourceManifestSha256": "4f1338247c868407f1006fb63da45bb413d7874df48bb06e0f0fe5606e092e0f",
+          "sourceSnapshotSha256": "262e0d24c858d37c4cc88efc4bd825c1197f7ea8db4b27da4e1284bad756bcc4",
+          "metadataManifestSha256": "6ad2eeb58b7bb377ea3bdfb9da2c47000fee2fbbd0b264eec6c2228b13634d80",
+          "metadataResponseSha256": "3ee9f3dec37166460c028b2337d3ee57f32347aaa22e593812ddcca1fcbfa3f8",
+          "metadataRecordSha256": "af2fa02fddb3785de82dd81792896bd35b8c8a4d5891e0ce6f83b3ebc25a4a86",
+          "atomResponseSha256": "9648a12c2e8507280b314a26590dc48ade18a441e54d5b46b7888ab311a96f65",
+          "titleQuote": {
+            "quote": "ClariCodec: Optimising Neural Speech Codes for 200bps Communication using Reinforcement Learning",
+            "quoteStart": 755,
+            "quoteEnd": 851,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77"
+          },
+          "sourceFrontTitleStatus": "not-required-for-official-metadata-title-basis",
+          "disclosure": "本次标签依据所列封存官方原文；来源标题取其绑定的官方元数据，导读正文未随分类改写。"
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2604.14654v1",
+        "pdfUrl": "https://arxiv.org/pdf/2604.14654v1",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "33510b6460fd430758ea458fc0e36bffd7ed47e71caceccca3cf8ee131de5e31",
+          "physicalPinsSha256": "162eaf451135fa547a1bbd33954100162a3a71727c37051e24727e3f8e9953fb",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-official-id-source-title-association-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2604.14654",
+          "sourceTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+          "sourceTextSha256": "e03dfb52d301aa9db699c1656425b23d9d67dd00d2913884f1a77b154d3440aa",
+          "sourceManifestSha256": "4f1338247c868407f1006fb63da45bb413d7874df48bb06e0f0fe5606e092e0f",
+          "metadataManifestSha256": "6ad2eeb58b7bb377ea3bdfb9da2c47000fee2fbbd0b264eec6c2228b13634d80",
+          "originalPlanSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-19-claricodec-optimising-neural-speech-codes-for.md",
+              "pageKey": "page:b011e956a00ebc62996b2da5b0954cb63c03ed11e30c1f920cc12861c1b45458",
+              "pageSha256": "9912dc14e322ff214e942db41d161c295dfe8abf145f06641ddc342a1a620e37",
+              "bodySha256": "c92e56b0f5b13036a0294064f002b7e972c007fb15bab3ab2ab4d23a4fff40fe",
+              "paperId": "arxiv:2604.14654",
+              "publishedTitle": "ClariCodec: Optimising Neural Speech Codes for 200bps Communication using Reinforcement Learning",
+              "publishedTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+              "officialSourceTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2604.14654v1)",
+                  "quoteStart": 469,
+                  "quoteEnd": 512,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "3ea07c9e49122fc0515bc75cf16ad9de3f74da5e04315cfa5f199073ccd87a01"
+                }
+              ],
+              "originalPlanPageSha256": "9912dc14e322ff214e942db41d161c295dfe8abf145f06641ddc342a1a620e37"
+            },
+            {
+              "pagePath": "content/posts/2026-04-21-claricodec-optimising-neural-speech-codes-for.md",
+              "pageKey": "page:aab9a01b7d206efcb7d77bcf19309d8b74f0be1422e72e0bf61917173db4216a",
+              "pageSha256": "86c2d67b18b8f5efd51dc3a3c4475eb7969e13b48ce4745794b00ef6ca314877",
+              "bodySha256": "b278e873f335c387a59934664fe181a468abbb68635250b28a61ac8c7dcae3b3",
+              "paperId": "arxiv:2604.14654",
+              "publishedTitle": "ClariCodec: Optimising Neural Speech Codes for 200bps Communication using Reinforcement Learning",
+              "publishedTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+              "officialSourceTitleSha256": "7f940ae4abcd24049abe0253fd3b7e70a24f679eb47d02b8b867dd159fcf2a77",
+              "officialEntryQuotes": [
+                {
+                  "quote": "[arxiv](https://arxiv.org/abs/2604.14654v2)",
+                  "quoteStart": 528,
+                  "quoteEnd": 571,
+                  "offsetUnit": "utf16-code-unit",
+                  "quoteSha256": "c11ff72d4cb701eecc5a8bdac701a9266b8dfc21cf791b396d40c5a7714d93c4"
+                }
+              ],
+              "originalPlanPageSha256": "86c2d67b18b8f5efd51dc3a3c4475eb7969e13b48ce4745794b00ef6ca314877"
+            }
+          ],
+          "oldPublishedTitleAuthenticated": false,
+          "readerBodyRewritten": false,
+          "disclosure": "本次标签依据所列封存官方原文；页面发布题目与来源题目有差异，正文未随本次分类改写。"
+        }
+      },
+      "sourceSha256": "3b94907549a03bf2cdb7bcac50c618acd038dbd2cff7894913db27a6944a5466",
+      "evidencePath": "/private/tmp/fullsite-source-authority-r2-metadata188-actual-r2-20261002.json"
+    },
+    {
+      "paperId": "arxiv:2604.12455",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2604.12455",
+        "generation": 1,
+        "sourceId": "2604.12455",
+        "textSha256": "cc03540d761846488d295d3990201211b46e57513a9e36bf8c8782152fb945f2",
+        "pdfSha256": "9ea0761faac6d0b04ac2ccd5b75c5e7d26ecbcebcd188f732e034a7668f4aa66",
+        "sourceManifestSha256": "2e522c9275821cdf0258a43ee48cce3dd0d17a7693dbc0fa86ad6074ddeef3ce",
+        "structuredArtifactsSha256": "3e0f6d64b1180ecf9e4f730eccb94d2f557b585f41086b38fec61f60d4def211",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2604.12455",
+          "arxivId": "2604.12455",
+          "generation": 1,
+          "textSha256": "cc03540d761846488d295d3990201211b46e57513a9e36bf8c8782152fb945f2",
+          "pdfSha256": "9ea0761faac6d0b04ac2ccd5b75c5e7d26ecbcebcd188f732e034a7668f4aa66",
+          "sourceManifestSha256": "2e522c9275821cdf0258a43ee48cce3dd0d17a7693dbc0fa86ad6074ddeef3ce"
+        },
+        "sourceRunIdentitySha256": "742d6af79546e9fc264311f6dd6e12cf21c90ef0c1a849d02060d20e88ed00d8",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "Sky-Ear: An Unmanned Aerial Vehicle-Enabled Victim Sound Detection and Localization System",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-front-title-binding-v2",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-front-explicit-thanks-footnote-boundary",
+          "sourceTextSha256": "cc03540d761846488d295d3990201211b46e57513a9e36bf8c8782152fb945f2",
+          "titleQuote": {
+            "quote": "Sky-Ear: An Unmanned Aerial Vehicle-Enabled Victim Sound Detection and Localization System Thanks: This work was supported in part by the Research Grants Council of the Hong Kong Special Administrative Region, China, under Project UGC/FDS16/E15/24, in part by the Hong Kong Metropolitan University Research Grant under Project PFDS/2025/34, and in part by the UGC Research Matching Grant Scheme under Project 2024/3003 and Gekko Lab.",
+            "quoteStart": 0,
+            "quoteEnd": 433,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "7a33433d6713009c5e0eb5691b76b70c898a9edce976d62593a5b225b99c4e18"
+          },
+          "footnoteExclusion": {
+            "quote": "Thanks: This work was supported in part by the Research Grants Council of the Hong Kong Special Administrative Region, China, under Project UGC/FDS16/E15/24, in part by the Hong Kong Metropolitan University Research Grant under Project PFDS/2025/34, and in part by the UGC Research Matching Grant Scheme under Project 2024/3003 and Gekko Lab.",
+            "quoteStart": 91,
+            "quoteEnd": 433,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "039ba869ed008128d96654efd7eadd10b21ab6db48246384501895cf8fa5cadd"
+          },
+          "titleEndOffset": 91,
+          "runtimeMetadataTitleSha256": "25e6da470bc574f4922014c5d3c199b3a2e792bd60a272cf25984ea69024cddc",
+          "sourceTitleSha256": "2090855eadb7eb4a00cb41445caca54a83caf012757d3b0757b3660da3d47457",
+          "frontWindow": {
+            "limit": 4000,
+            "boundary": "front-matter-end",
+            "boundaryOffset": 774
+          }
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2604.12455",
+        "pdfUrl": "https://arxiv.org/pdf/2604.12455.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "475e08693273a6164bcb7ee14ac8aaba60dd1d6e141734a75452a66a25b03374",
+          "physicalPinsSha256": "ebe7a8565db883136dd7ca88e511526e501f665ef2d6dfad0ad52b7f87e288bb",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2604.12455",
+          "sourceTitleSha256": "2090855eadb7eb4a00cb41445caca54a83caf012757d3b0757b3660da3d47457",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-19-sky-ear-an-unmanned-aerial-vehicle-enabled-victim.md",
+              "pageSha256": "2f3365df2144f76e6e5a6b4fa1eaf9e68776e73b2009719a95f8bc3b04cefd09",
+              "bodySha256": "8cd14392cede93be530db5a7aee5277ab29bd43d8bf24b8e60015c286efd1edb",
+              "paperId": "arxiv:2604.12455",
+              "originalTitleSha256": "2090855eadb7eb4a00cb41445caca54a83caf012757d3b0757b3660da3d47457",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      }
+    },
+    {
+      "paperId": "arxiv:2604.16254",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2604.16254",
+        "generation": 1,
+        "sourceId": "2604.16254",
+        "textSha256": "64eafb8f5ffb6a327a3afe9db8a1b821bd4e38b69009a4cc86374b963936dacb",
+        "pdfSha256": "db8f3259c126c6257e5abac814af6d682269a66fe89839411f0fc7a17cfdbcd6",
+        "sourceManifestSha256": "99e31e96c14fe09b2cfd4f53f0ee5a2691ddf3d95f1bd306b802e4d2a8f046ef",
+        "structuredArtifactsSha256": "5420a3a354a160248212b031954edd148580a94aba0277974241754a532cc447",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2604.16254",
+          "arxivId": "2604.16254",
+          "generation": 1,
+          "textSha256": "64eafb8f5ffb6a327a3afe9db8a1b821bd4e38b69009a4cc86374b963936dacb",
+          "pdfSha256": "db8f3259c126c6257e5abac814af6d682269a66fe89839411f0fc7a17cfdbcd6",
+          "sourceManifestSha256": "99e31e96c14fe09b2cfd4f53f0ee5a2691ddf3d95f1bd306b802e4d2a8f046ef"
+        },
+        "sourceRunIdentitySha256": "bc84fc4fbfd1f4e1bb1eedbc7d34ea68c365df640aa7bfe92461838266749ea6",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "ArtifactNet: Detecting AI-Generated Music via Forensic Residual Physics",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-front-title-binding-v2",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-front-explicit-thanks-footnote-boundary",
+          "sourceTextSha256": "64eafb8f5ffb6a327a3afe9db8a1b821bd4e38b69009a4cc86374b963936dacb",
+          "titleQuote": {
+            "quote": "ArtifactNet: Detecting AI-Generated Music via Forensic Residual PhysicsThanks: arXiv preprint, v5 revision (April 20, 2026). This manuscript is typeset with IEEEtran for convenience and is not a product of any IEEE publication; no editorial review by IEEE or ACM is implied.",
+            "quoteStart": 0,
+            "quoteEnd": 274,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "178ce60141f3ee8ec17f8979fb6e6629de9b49649c5e128453fdb55e097ad7c7"
+          },
+          "footnoteExclusion": {
+            "quote": "Thanks: arXiv preprint, v5 revision (April 20, 2026). This manuscript is typeset with IEEEtran for convenience and is not a product of any IEEE publication; no editorial review by IEEE or ACM is implied.",
+            "quoteStart": 71,
+            "quoteEnd": 274,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "8856a84fecd9ce597a71da3360a35e5688e2f65087eaafbcc5d41a50ebe0839a"
+          },
+          "titleEndOffset": 71,
+          "runtimeMetadataTitleSha256": "6c8d5ee438f106334e3a4e5d1aba94b8f3c369befd75302c1bc0fe161888a60a",
+          "sourceTitleSha256": "3397ad63dcaa1e97cb64e6f36361036b88af443fcb9b96aec811419b787c2fbc",
+          "frontWindow": {
+            "limit": 4000,
+            "boundary": "front-matter-end",
+            "boundaryOffset": 392
+          }
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2604.16254",
+        "pdfUrl": "https://arxiv.org/pdf/2604.16254.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "329679f0be82c0cfe03c5972530c22fbcf729e6d80c51bc5c4d7f9be34123a05",
+          "physicalPinsSha256": "36bad28ecb68609de41ee2c643366f6013a9e45a7d9a09955ea5e494a6f06d82",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2604.16254",
+          "sourceTitleSha256": "3397ad63dcaa1e97cb64e6f36361036b88af443fcb9b96aec811419b787c2fbc",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-20-artifactnet-detecting-ai-generated-music-via.md",
+              "pageSha256": "b03f277074520e7a07a6a6f931aee15d105085f3938b1cd574c022091656e607",
+              "bodySha256": "e7b35809483515d1d1aeb0ab128ffad60dc496eaece41f0aff50659f4b08c8b0",
+              "paperId": "arxiv:2604.16254",
+              "originalTitleSha256": "3397ad63dcaa1e97cb64e6f36361036b88af443fcb9b96aec811419b787c2fbc",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            },
+            {
+              "pagePath": "content/posts/2026-04-21-artifactnet-detecting-ai-generated-music-via.md",
+              "pageSha256": "eb95ba78183869cabc3c35a27c96862d357e5fdbdd8e2a1118ea37edbbf390a2",
+              "bodySha256": "8bb12d199bf6967d9a887e70f1c7ae780b07479720fe2501c96163cac60aee6d",
+              "paperId": "arxiv:2604.16254",
+              "originalTitleSha256": "3397ad63dcaa1e97cb64e6f36361036b88af443fcb9b96aec811419b787c2fbc",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      }
+    },
+    {
+      "paperId": "arxiv:2604.09121",
+      "source": {
+        "kind": "fullsite-historical-direct-source-v1",
+        "paperId": "arxiv:2604.09121",
+        "generation": 1,
+        "sourceId": "2604.09121",
+        "textSha256": "5f813dbbfe67dbabd72488357cc64a5edc4d25adc5a8221658757f2edd3d1eeb",
+        "pdfSha256": "0e6d1463d503fbddcf0440ebb8b8730be7b5d813c2bc7d50905cc4c7bc2c5814",
+        "sourceManifestSha256": "424ba43eff6a57dd161eac919baf60ae3763da3340bdeeb730aa6fa2963323d5",
+        "structuredArtifactsSha256": "48d05799e88191303c2d90977acb0595d381e6d4a0f850e047f2be709863090f",
+        "sourceVersion": null,
+        "sourceBinding": {
+          "contract": "fresh-arxiv-rewrite-source-v1",
+          "paperId": "arxiv:2604.09121",
+          "arxivId": "2604.09121",
+          "generation": 1,
+          "textSha256": "5f813dbbfe67dbabd72488357cc64a5edc4d25adc5a8221658757f2edd3d1eeb",
+          "pdfSha256": "0e6d1463d503fbddcf0440ebb8b8730be7b5d813c2bc7d50905cc4c7bc2c5814",
+          "sourceManifestSha256": "424ba43eff6a57dd161eac919baf60ae3763da3340bdeeb730aa6fa2963323d5"
+        },
+        "sourceRunIdentitySha256": "fcd6cc0c14c3ed0bfc76a6d0e562f91530f638096edc722f0c349f2054529aaf",
+        "pdfVersionBinding": null,
+        "sourceVersionWarning": "",
+        "sourceTitle": "Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition",
+        "sourceTitleBinding": {
+          "contract": "sealed-arxiv-front-title-binding-v2",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "basis": "sealed-front-explicit-thanks-footnote-boundary",
+          "sourceTextSha256": "5f813dbbfe67dbabd72488357cc64a5edc4d25adc5a8221658757f2edd3d1eeb",
+          "titleQuote": {
+            "quote": "Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech RecognitionThanks: Project page: https://interactiveasr.github.io/. Live demo: https://i-asr.sjtuxlance.com/",
+            "quoteStart": 50,
+            "quoteEnd": 259,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "884a9d66250692f81ac027054197e32d0c92a5796d53529b6fcfdf5adf5ff6ad"
+          },
+          "footnoteExclusion": {
+            "quote": "Thanks: Project page: https://interactiveasr.github.io/. Live demo: https://i-asr.sjtuxlance.com/",
+            "quoteStart": 162,
+            "quoteEnd": 259,
+            "offsetUnit": "utf16-code-unit",
+            "quoteSha256": "5cbabe75d0e13b80d48dee7dbda68df40ae9938456e325eae67904692bd7c7a8"
+          },
+          "titleEndOffset": 162,
+          "runtimeMetadataTitleSha256": "f384ce10d7acfb455a0be2bb049db732b2a8063e266db4f855e67e8b7db7cb11",
+          "sourceTitleSha256": "308430022aa345cf80644159bc2e2a7c02af8deb63cf80a0054b58d4b3f69c31",
+          "frontWindow": {
+            "limit": 4000,
+            "boundary": "front-matter-end",
+            "boundaryOffset": 334
+          }
+        },
+        "originalSourceSeal": null,
+        "sourceSnapshotSha256": null,
+        "sourceUrl": "https://arxiv.org/abs/2604.09121",
+        "pdfUrl": "https://arxiv.org/pdf/2604.09121.pdf",
+        "provenanceDisclosure": "",
+        "fullsiteSourceAuthority": {
+          "contract": "historical-direct-source-v1",
+          "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+          "authoritySha256": "5f015962e12057caf3fc16de2e3cef3b8b9f964d4fdb0a882bd0e82800e5759f",
+          "physicalPinsSha256": "835268c20216e36066d16a66c520ce8fa574e2ca4a43d79a0f49ae2afbc9859a",
+          "controlledOriginalIntake": null
+        },
+        "writerInputsSha256": null,
+        "sourceBindings": null,
+        "originalTitle": null,
+        "sourceDoi": null,
+        "versionRelation": null,
+        "currentPageSourceIdentity": {
+          "contract": "fullsite-current-page-sealed-source-identity-v1",
+          "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+          "paperId": "arxiv:2604.09121",
+          "sourceTitleSha256": "308430022aa345cf80644159bc2e2a7c02af8deb63cf80a0054b58d4b3f69c31",
+          "pages": [
+            {
+              "pagePath": "content/posts/2026-04-20-interactive-asr-towards-human-like-interaction.md",
+              "pageSha256": "e2cb2d94a2958012f532367f70f1997c529be425083b6a50a058ef2f77c91251",
+              "bodySha256": "d763a515663e96f6f75acc5c81f16e83e53a540684d39e9293751e7944092831",
+              "paperId": "arxiv:2604.09121",
+              "originalTitleSha256": "308430022aa345cf80644159bc2e2a7c02af8deb63cf80a0054b58d4b3f69c31",
+              "identityBasis": "original-sealed-plan-and-current-page-sha"
+            }
+          ],
+          "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+        }
+      }
+    }
+  ],
+  "additionalDescriptorOrigin": "root-approved formal96 original sources; no reconstructed classification fixture"
+}

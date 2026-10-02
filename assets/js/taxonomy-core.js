@@ -160,7 +160,7 @@
         var mechanism = isV3 && record.researchType === 'engineering' && role && role.kind === 'method';
         var allowedFacets = isV3 && record.researchType === 'engineering' ? ['task', 'method'] : roleFacets[record.researchType];
         var v2 = (record.taxonomyClassificationContract === V2_CONTRACT || isV3)
-          && (isV3 ? (record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
+          && (isV3 ? ((record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') || (record.taxonomyEvidenceType === 'source-bound-current-page-fullsite-taxonomy-v3' && record.taxonomyEvidenceContract === 'fullsite-source-taxonomy-audit-supplement-v1')) : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
             || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2')))
           && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
           && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)

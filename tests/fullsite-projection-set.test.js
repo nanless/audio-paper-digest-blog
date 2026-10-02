@@ -1,0 +1,32 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{execFileSync}=require('node:child_process'),admission=require('../scripts/lib/fullsite-admission-proof'),api=require('../scripts/lib/fullsite-taxonomy-proof'),{stableHash}=require('../scripts/lib/taxonomy-classification-v3-proof');
+const bytes=x=>JSON.stringify(x)+'\n',pin=x=>({manifestSha256:x.manifestSha256,physicalSha256:api.sha(bytes(x)),structuralSha256:stableHash(x)});
+function fixture(samePlan=false){const f=require('./fixtures/fullsite-taxonomy-public').fixture(),a=JSON.parse(f.admissionBytes),s=JSON.parse(f.sourceBytes),second=JSON.parse(JSON.stringify(a));second.papers[0].paperId='arxiv:2605.99998';second.papers[0].paperAuthoritySha256=api.sha('SYNTHETIC second paper');for(const p of second.papers[0].pages){p.pagePath=p.pagePath.replace('synthetic-audit','synthetic-second');p.pageKey='page:'+api.sha('SYNTHETIC '+p.pagePath);}second.scopeSha256=stableHash(second.papers.map(x=>({paperId:x.paperId,pages:x.pages})));second.manifestSha256=api.sha('SYNTHETIC second plan');const source={...s,admissionProjectionSha256:api.sha(bytes(second)),manifestSha256:second.manifestSha256,scopeSha256:second.scopeSha256,papers:[{...s.papers[0],paperId:second.papers[0].paperId,paperAuthoritySha256:second.papers[0].paperAuthoritySha256}]};
+ const aa={contract:admission.ADMISSION_SET,projections:[a,second]},ss={contract:admission.SOURCE_SET,admissionProjectionSha256:'',projections:[s,source]};
+ if(samePlan){a.papers.push(second.papers[0]);a.paperCount=2;a.pageCount=4;a.scopeSha256=stableHash(a.papers.map(x=>({paperId:x.paperId,pages:x.pages})));aa.projections=[a];for(const child of ss.projections){child.manifestSha256=a.manifestSha256;child.scopeSha256=a.scopeSha256;child.admissionProjectionSha256=api.sha(bytes(a));}}
+ function reseal(){ss.admissionProjectionSha256=api.sha(bytes(aa));f.profile={...f.profile,scopeSha256:a.scopeSha256,admissionProjectionSha256:api.sha(bytes(aa)),sourceProjectionSha256:api.sha(bytes(ss)),admissionChildPins:aa.projections.map(pin),sourceChildPins:ss.projections.map(pin)};return f;}
+ f.aa=aa;f.ss=ss;f.reseal=reseal;return reseal();}
+function parse(f){return admission.parseSets(Buffer.from(bytes(f.aa)),Buffer.from(bytes(f.ss)),f.profile);}
+test('two plans and same-plan disjoint source exports retain original child physical and structural SHA',()=>{for(const samePlan of [false,true]){const f=fixture(samePlan),r=parse(f);assert.equal(Object.keys(r.sources.members).length,samePlan?2:1);for(const p of f.profile.admissionChildPins)assert.notEqual(p.physicalSha256,p.structuralSha256);const context=admission.createContext(bytes(f.aa),bytes(f.ss));assert.equal(admission.matchesContext(f.profile,context),true);assert.deepEqual(admission.approvedContext(f.profile,context),r);assert.equal(admission.matchesContext({...f.profile,sourceProjectionSha256:api.sha('wrong')},context),false);}});
+test('fully repinned set rejects duplicate members, orphan plans, unknown fields and mismatched child commitment',()=>{
+ const mutations={
+  'duplicate admission manifest':f=>f.aa.projections.push(f.aa.projections[0]),
+  'duplicate source paper':f=>f.ss.projections.push(f.ss.projections[0]),
+  'orphan admission':f=>f.ss.projections.pop(),
+  'source admission unknown':f=>f.ss.projections[1].manifestSha256=api.sha('unknown'),
+  'child admission wrong physical hash':f=>f.ss.projections[0].admissionProjectionSha256=api.sha('wrong'),
+  'source order reverse':f=>{const a=f.aa.projections[0],s=f.ss.projections[0];a.papers.push({...a.papers[0],paperId:'arxiv:2605.99997',paperAuthoritySha256:api.sha('third'),pages:a.papers[0].pages.map(x=>({...x,pagePath:x.pagePath.replace('synthetic-audit','third'),pageKey:'page:'+api.sha(x.pagePath+'third')}))});a.paperCount=2;a.pageCount=4;a.scopeSha256=stableHash(a.papers.map(x=>({paperId:x.paperId,pages:x.pages})));s.scopeSha256=a.scopeSha256;s.admissionProjectionSha256=api.sha(bytes(a));s.papers.push({...s.papers[0],paperId:a.papers[1].paperId,paperAuthoritySha256:a.papers[1].paperAuthoritySha256});s.paperCount=2;s.papers.reverse();},
+  'same paper in different plans':f=>{f.aa.projections[1].papers[0].paperId=f.aa.projections[0].papers[0].paperId;f.aa.projections[1].scopeSha256=stableHash(f.aa.projections[1].papers.map(x=>({paperId:x.paperId,pages:x.pages})));},
+  'unknown set field':f=>f.aa.invented=true,
+  'child private path':f=>f.aa.projections[0].papers[0].privatePath='/Users/synthetic/source.txt',
+  'child source identity differs':f=>f.ss.projections[0].papers[0].sourceAuthoritySha256=api.sha('wrong'),
+ };
+ for(const[name,mutate]of Object.entries(mutations)){const f=fixture();mutate(f);f.reseal();assert.throws(()=>parse(f),undefined,name);}
+ const f=fixture();f.profile.admissionChildPins[0].physicalSha256=api.sha('not actual original');assert.throws(()=>parse(f));
+});
+test('Hugo whole-catalog approved child gates match JS, without mistaking canonical SHA for physical bytes',t=>{
+ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'fullsite-projection-set-hugo-'));t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));fs.mkdirSync(tmp+'/data');fs.mkdirSync(tmp+'/layouts');fs.cpSync(path.join(__dirname,'../layouts/partials'),tmp+'/layouts/partials',{recursive:true});
+ const matrix=[];for(const same of [false,true]){const f=fixture(same);matrix.push({expected:true,admission:f.aa,sources:f.ss,profile:f.profile});}
+ for(const mutate of [f=>f.ss.projections.push(f.ss.projections[0]),f=>f.aa.projections.push(f.aa.projections[0]),f=>f.ss.projections.pop(),f=>f.ss.projections[0].admissionProjectionSha256=api.sha('wrong'),f=>f.ss.projections[0].papers[0].sourceAuthoritySha256=api.sha('wrong'),f=>f.aa.invented=true]){const f=fixture();mutate(f);f.reseal();matrix.push({expected:false,admission:f.aa,sources:f.ss,profile:f.profile});}
+ fs.writeFileSync(tmp+'/data/cases.json',JSON.stringify(matrix));fs.writeFileSync(tmp+'/hugo.yaml','baseURL: https://example.test/\ndisableKinds: [section,taxonomy,term,RSS,sitemap,robotsTXT,"404"]\n');fs.writeFileSync(tmp+'/layouts/index.html','[{{ range $i,$c := hugo.Data.cases }}{{ if $i }},{{ end }}{{ (partial "taxonomy_fullsite_projection_set.html" $c).valid | jsonify | safeHTML }}{{ end }}]');execFileSync('hugo',['--source',tmp,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});const rendered=JSON.parse(fs.readFileSync(tmp+'/public/index.html'));assert.deepEqual(rendered,matrix.map(x=>x.expected));
+});

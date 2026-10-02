@@ -19,7 +19,7 @@ const map=x=>!!x&&typeof x==='object'&&!Array.isArray(x)&&[Object.prototype,null
 const exact=(x,keys,name)=>{if(!map(x)||Object.keys(x).sort().join('|')!==[...keys].sort().join('|'))fail(name+'字段不一致');};
 const text=(s,min=1,max=1000)=>typeof s==='string'&&s.isWellFormed()&&s.trim().length>=min&&s.length<=max&&!/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f]/u.test(s);
 const hash=s=>typeof s==='string'&&/^[a-f0-9]{64}$/.test(s);
-function validateRecord(record,snapshot,profile){
+function validateRecord(record,snapshot,profile,fullsiteAdmission=null){
  const controlled=null;
  const contract=profile.classificationContract||'historical-source-taxonomy-classification-v3';
  if(!['historical-source-taxonomy-classification-v2','historical-source-taxonomy-classification-v3'].includes(contract))fail('未知分类合同');
@@ -40,8 +40,10 @@ function validateRecord(record,snapshot,profile){
  for(const field of ['classificationRecordSha256','classificationProofSha256','requestStageFingerprint','reviewProofSha256','pageSha256','bodySha256'])if(!hash(record[field]))fail(field+'格式');
  if(!/^page:[a-f0-9]{64}$/.test(record.pageKey||''))fail('pageKey格式');
  if(!map(source)||source.paperId!==record.paperId||!text(source.sourceId))fail('来源身份');
+ if(!fullsiteAdmission&&(Object.hasOwn(source,'fullsiteSourceAuthority')||Object.hasOwn(source,'currentPageSourceIdentity')))fail('全站当前页来源只准入独立namespace');
  for(const field of ['pdfSha256','textSha256','structuredArtifactsSha256'])if(!hash(source[field]))fail('来源hash格式');
- if(source.kind==='arxiv-fresh-fetch'){
+ if(fullsiteAdmission){require('./fullsite-source-descriptor-proof').validate(source,fullsiteAdmission);}
+ else if(source.kind==='arxiv-fresh-fetch'){
   const b=source.sourceBinding;if(!/^arxiv:[0-9]{4}\.[0-9]{4,5}$/.test(record.paperId)||!map(b)||b.contract!=='fresh-arxiv-rewrite-source-v1'||b.paperId!==record.paperId||b.arxivId!==record.paperId.slice(6)||source.sourceId.replace(/v[1-9][0-9]*$/,'')!==b.arxivId||!Number.isSafeInteger(source.generation)||source.generation<1||b.generation!==source.generation)fail('arXiv绑定');
   for(const f of ['pdfSha256','textSha256','sourceManifestSha256'])if(!hash(source[f])||b[f]!==source[f])fail('arXiv来源hash');
   if(!hash(source.sourceRunIdentitySha256))fail('source run hash');
@@ -53,7 +55,7 @@ function validateRecord(record,snapshot,profile){
  for(const k of ['registrySha256','projectionSha256','evidenceSha256','promptSha256','endpointSha256','accountPoolGroupSha256','protectedDependencySha256'])if(!hash(f[k]))fail('请求指纹SHA格式');
  if(f.projectionSha256!==projectionHash(snapshot))fail('正式词表提示投影漂移');
  for(const[k,name]of Object.entries({implementationSha256:profile.implementationFile||'historical-source-taxonomy-classification-v3',snippetImplementationSha256:v3?'source-evidence-snippets-v3':'source-evidence-snippets-v2',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))if(f[k]!==c.protectedDependencies.files['scripts/lib/'+name+'.js']||!hash(f[k]))fail('请求实现依赖漂移');
- require('./source-descriptor-proof').validateSourceDescriptor(controlled?controlled.sourceDescriptor:source);
+ if(!fullsiteAdmission)require('./source-descriptor-proof').validateSourceDescriptor(controlled?controlled.sourceDescriptor:source);
  const fullDecision={concepts:c.concepts,...Object.fromEntries(roleKeys.map(k=>[k,c[k]]))};
  if(!Array.isArray(c.concepts)||!Array.isArray(record.evidence)||stableHash(c.concepts)!==stableHash(record.evidence)||stableHash(roleKeys.map(k=>c[k]))!==stableHash(roleKeys.map(k=>record[k])))fail('页面角色/证据投影');
  if(stableHash(c.concepts.map(({id,facet,label})=>({id,facet,label})))!==stableHash(record.concepts))fail('页面概念投影');
@@ -146,4 +148,30 @@ function validateDeclared371Profile(record,snapshot,profile){
  if(record.classificationRecord?.fingerprintInputs?.implementationSha256!==profile.implementationSha256||record.classificationRecord?.protectedDependencySha256!==profile.protectedDependencySha256)fail('根批准371生产者指纹');
  return validateRecord(record,snapshot,profile);
 }
-module.exports={CONTRACT,TYPES,DOMAINS,FACETS,ROLE_KEYS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash,validatePublicRecord,validateSyntheticFixture,validateDeclared371Profile};
+function replayFullsite(page,path,audit,snapshot,profile){
+ const envelope=require('./fullsite-taxonomy-proof');
+ envelope.validateEnvelope(page,path,audit);
+ const c=audit.classificationRecord,member=profile.members?.[page.paperId];
+ // This deterministic adapter is only an in-memory input to the shared inner
+ // validator. It is not issued, stored or presented as historical source-only
+ // evidence. The actual outer/page/inner objects keep all original bytes/SHA.
+ const r={paperId:page.paperId,runId:page.runId,pageKey:page.pageKey,pageSha256:page.pageSha256,bodySha256:page.bodySha256,registrySha256:page.registrySha256,registryVersion:page.registryVersion,concepts:page.concepts,
+  ...Object.fromEntries(ROLE_KEYS.map(k=>[k,page[k]])),evidenceType:'source-only-taxonomy-v3',classificationContract:CONTRACT,classificationRecord:c,classificationRecordSha256:audit.classificationRecordSha256,classificationProofSha256:c.proofSha256,
+  source:c.source,evidence:c.concepts,evidenceSelectionContract:c.evidenceSelectionContract,quoteSelections:c.quoteSelections,requestStageFingerprint:c.fingerprint,reviewProof:c.reviewProof,reviewProofSha256:c.reviewProofSha256};
+ r.proofSha256=stableHash(r);
+ return validateRecord(r,snapshot,profile,{paperId:page.paperId,admission:audit.planAdmission,member});
+}
+function validateAdmittedFullsiteRecord(page,path,audit,snapshot,profile,context){
+ const envelope=require('./fullsite-taxonomy-proof');
+ const approved=envelope.approvedProfile(page,audit,require('./fullsite-taxonomy-profiles').profiles,context);
+ if(stableHash(approved)!==stableHash(profile))fail('fullsite approval context changed');
+ return replayFullsite(page,path,audit,snapshot,approved);
+}
+// Explicit fixture entry, unavailable to build/UI. Synthetic context cannot
+// approve a real producer/plan or be loaded from a supplement/site parameter.
+function validateSyntheticFullsiteFixture(page,path,audit,snapshot,profile,context){
+ if(audit?.classificationRecord?.fingerprintInputs?.model!=='synthetic-test-model')fail('合成夹具明确标记必需');
+ const approved=require('./fullsite-taxonomy-proof').approvedProfile(page,audit,[profile],context);
+ return replayFullsite(page,path,audit,snapshot,approved);
+}
+module.exports={CONTRACT,TYPES,DOMAINS,FACETS,ROLE_KEYS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash,validatePublicRecord,validateSyntheticFixture,validateDeclared371Profile,validateAdmittedFullsiteRecord,validateSyntheticFullsiteFixture};

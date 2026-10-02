@@ -1,0 +1,4 @@
+{{- /* One immutable production read/hash per build, never a per-page 3 MB
+     projection hash. Explicit synthetic direct-call bytes remain local. */ -}}
+{{- $a := "" }}{{ $s := "" }}{{ if fileExists "data/fullsite-taxonomy-admission.json" }}{{ $a = readFile "data/fullsite-taxonomy-admission.json" }}{{ end }}{{ if fileExists "data/fullsite-taxonomy-sources.json" }}{{ $s = readFile "data/fullsite-taxonomy-sources.json" }}{{ end -}}
+{{- return (dict "admissionBytes" $a "sourceBytes" $s "admissionSha256" (crypto.SHA256 $a) "sourceSha256" (crypto.SHA256 $s)) -}}

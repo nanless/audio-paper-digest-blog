@@ -1,0 +1,6 @@
+{{- /* Only fully validated fullsite provenance reaches this presentation
+     helper. Signed descriptor bytes stay unchanged; nested version warnings
+     and the separate page/title disclosure are both kept for readers. */ -}}
+{{- $source := . }}{{ $outer := $source.sourceVersionWarning | default "" }}{{ $nested := "" }}{{ with $source.sourceVersion }}{{ $nested = .warning | default "" }}{{ end -}}
+{{- $warning := $outer }}{{ if and $nested (ne $outer $nested) (not (strings.HasPrefix $outer (printf "%s\n" $nested))) }}{{ if $outer }}{{ $warning = printf "%s\n%s" $nested $outer }}{{ else }}{{ $warning = $nested }}{{ end }}{{ end -}}
+{{- return $warning -}}

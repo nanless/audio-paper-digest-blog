@@ -1,0 +1,3 @@
+{{- $valid := true -}}
+{{- if reflect.IsMap . }}{{ range $k,$v := . }}{{ if and (strings.HasSuffix $k "Sha256") (ne $v nil) }}{{ $valid = and $valid (eq (printf "%T" $v) "string") (findRE `^[a-f0-9]{64}$` $v 1) }}{{ end }}{{ $valid = and $valid (partial "research_fullsite_source_commitments.html" $v) }}{{ end }}{{ else if reflect.IsSlice . }}{{ range . }}{{ $valid = and $valid (partial "research_fullsite_source_commitments.html" .) }}{{ end }}{{ end -}}
+{{- return (not (not $valid)) -}}

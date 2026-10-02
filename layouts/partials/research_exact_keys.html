@@ -1,0 +1,3 @@
+{{- $actual := slice -}}{{- $valid := reflect.IsMap .value -}}
+{{- if $valid }}{{ range $k,$_ := .value }}{{ $actual = $actual | append $k }}{{ end }}{{ $valid = eq (delimit (sort $actual) "|") (delimit (sort .keys) "|") }}{{ end -}}
+{{- return $valid -}}

@@ -1,0 +1,3 @@
+{{- $q := . -}}{{- $v := and (partial "research_exact_keys.html" (dict "value" $q "keys" (slice "quote" "quoteStart" "quoteEnd" "offsetUnit" "quoteSha256"))) (eq (printf "%T" $q.quote) "string") (ne (strings.TrimSpace ($q.quote | default "")) "") (not (findRE `[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]` ($q.quote | default "") 1)) (partial "research_safe_integer.html" (dict "value" $q.quoteStart)) (partial "research_safe_integer.html" (dict "value" $q.quoteEnd)) (eq $q.offsetUnit "utf16-code-unit") (eq $q.quoteSha256 (crypto.SHA256 ($q.quote | default ""))) -}}
+{{- if $v }}{{ $length := add (strings.RuneCount $q.quote) (len (findRE `[\x{10000}-\x{10FFFF}]` $q.quote)) }}{{ $v = eq (float (sub $q.quoteEnd $q.quoteStart)) (float $length) }}{{ end -}}
+{{- return (not (not $v)) -}}

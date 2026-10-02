@@ -19,6 +19,8 @@ test('historical supplement is accepted only for exact page, body, source, origi
   for (const directory of ['content/posts', 'data', 'layouts/partials', 'layouts/_default']) {
     fs.mkdirSync(path.join(temporary, directory), { recursive: true });
   }
+  // Copy real transitive proof dependencies; no test-only gate substitutes.
+  fs.cpSync(path.join(repository, 'layouts/partials'), path.join(temporary, 'layouts/partials'), { recursive: true });
   const relativeFiles = ['layouts/_default/index.json', 'layouts/partials/research_metadata.html', 'layouts/partials/research_source_identity_proof.html', 'layouts/partials/research_current_page_identity_proof.html',
     'layouts/partials/taxonomy_page_proof.html', 'layouts/partials/taxonomy_snapshot.html',
     'layouts/partials/taxonomy_valid_records.html', 'layouts/partials/taxonomy_registry_index.html',
