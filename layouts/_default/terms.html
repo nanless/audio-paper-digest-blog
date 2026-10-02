@@ -16,7 +16,11 @@
     <label class="taxonomy-search-label" for="taxonomy-query">搜索方向、英文名称或别名</label>
     <input id="taxonomy-query" class="taxonomy-query" type="search" placeholder="例如：ASR、LoRA、长音频" autocomplete="off" maxlength="200">
     <p id="taxonomy-search-status" class="taxonomy-note" aria-live="polite">选择分类视角，逐级浏览。</p>
-    <p class="taxonomy-note">目录显示最新分类；旧文章保留发布时的名称和上级方向。数量包含文章当时所属的下级方向；同一篇已核论文只计一次，身份待核时按页面保留。兄弟方向可能重叠，子项数量不可直接相加；直接 0 条也可能有下级论文。0 条表示尚无已核分类记录，历史标签未核分类另列。</p>
+    <details class="taxonomy-note">
+      <summary>方向计数与分类范围说明</summary>
+      <p>方向数量包含已核分类和原有方向映射，不代表全站原文分类重核已完成。研究类型与范围的核验覆盖可在论文库查看。</p>
+      <p>同一篇已核论文只计一次，身份待核时按页面保留；旧文章保留发布时的名称和上级方向。数量含下级方向，兄弟方向可能重叠，不能直接相加；直接 0 条也可能有下级论文。</p>
+    </details>
     <div id="taxonomy-search-results" class="taxonomy-search-results" hidden></div>
     <nav class="taxonomy-facet-nav" aria-label="分类视角">
       {{ range $facets }}<a href="#facet-{{ .id }}" class="rw-action">{{ .name }}</a>{{ end }}
