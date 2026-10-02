@@ -38,6 +38,7 @@
 {{- $primaryMethodId := "" -}}
 {{- $v2Roles := dict -}}
 {{- $identityProof := dict -}}
+{{- $classificationSource := dict -}}
 {{- if eq $pageType "paper" -}}
   {{- $headline = .Params.paper_digest_reader_title | default $headline -}}
   {{- $originalTitle = .Params.paper_digest_original_title | default .Title -}}
@@ -110,11 +111,17 @@
     {{- else -}}{{- $sourceKind = "conference" -}}{{- end -}}
     {{- with $identityProof.source.originalTitle }}{{ $originalTitle = . }}{{ end -}}
   {{- end -}}
+  {{- /* This source is classification provenance, not a new identity proof.
+       Only the already accepted exact V3 page/source and reviewed SumRA descriptor qualify. */ -}}
+  {{- if and (eq $proof.classificationContract "historical-source-taxonomy-classification-v3") (eq $proof.evidenceContract "historical-source-taxonomy-supplement-v3") (eq $proof.evidenceType "source-only-taxonomy-v3") (eq $proof.paperId $paperId) (partial "research_sumra_source_descriptor.html" $proof.source) -}}
+    {{- $classificationSource = $proof.source -}}
+  {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}
 {{- $memoValue = (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}
 {{- $memoValue = merge $memoValue $v2Roles -}}
 {{- if $identityProof.contract }}{{ $memoValue = merge $memoValue (dict "identityEvidenceContract" $identityProof.contract "identityEvidenceType" $identityProof.evidenceType "identityProofSha256" $identityProof.proofSha256 "identityPageSha256" $identityProof.pageSha256 "sealedSource" $identityProof.source) }}{{ end -}}
+{{- if $classificationSource }}{{ $memoValue = merge $memoValue (dict "classificationSource" $classificationSource) }}{{ end -}}
 {{- .Store.Set $memoKey $memoValue -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}

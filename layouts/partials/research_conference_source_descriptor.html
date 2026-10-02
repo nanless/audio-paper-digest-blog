@@ -1,7 +1,12 @@
 {{- /* Old source-only records carry only hashes. Rich new descriptors, and every
      alternate-version claim, must replay actual public metadata/acquisition fields. */ -}}
 {{- $source := . | default dict -}}
+{{- $sumra := and (eq ($source.paperId | default "") "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp") (eq ($source.versionRelation | default "") "same-forum-official-2026-proceedings-cross-document-identity") -}}
+{{- if reflect.IsSlice $source.sourceBindings }}{{ range $source.sourceBindings }}{{ if eq (.acquisition.sourceKind | default "") "authenticated-iclr-official-proceedings-pdf" }}{{ $sumra = true }}{{ end }}{{ end }}{{ end -}}
 {{- $valid := true -}}
+{{- if $sumra -}}
+  {{- $valid = partial "research_sumra_source_descriptor.html" $source -}}
+{{- else -}}
 {{- $rich := or (isset $source "sourceBindings") (isset $source "sourceUrl") (isset $source "pdfUrl") (isset $source "originalTitle") (isset $source "versionRelation") (isset $source "sourceVersionWarning") (isset $source "sourceTitle") (isset $source "sourceDoi") (isset $source "provenanceDisclosure") (isset $source "acquisition") -}}
 {{- if and (eq $source.kind "conference-local-pdf") $rich -}}
   {{- $id := printf "%v" ($source.paperId | default "") -}}
@@ -47,5 +52,6 @@
   {{- end -}}
 {{- else if and $rich (ne $source.kind "conference-local-pdf") (isset $source "sourceBindings") -}}
   {{- $valid = false -}}
+{{- end -}}
 {{- end -}}
 {{- return (not (not $valid)) -}}

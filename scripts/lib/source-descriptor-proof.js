@@ -12,6 +12,8 @@ const exact=(x,keys)=>{if(!map(x)||Object.keys(x).sort().join('|')!==[...keys].s
 function validateSourceDescriptor(s){
  if(!map(s))fail('来源必须为对象');
  if(Object.hasOwn(s,'currentPageClassificationBinding'))fail('当前页分类须走单独受限契约');
+ const sumra=require('./sumra-official-source-proof');
+ if((s.paperId===sumra.PAPER_ID&&s.versionRelation===sumra.RELATION)||(Array.isArray(s.sourceBindings)&&s.sourceBindings.some(b=>b?.acquisition?.sourceKind===sumra.SOURCE_KIND)))return sumra.validateSumraSourceDescriptor(s);
  if(s.kind==='arxiv-fresh-fetch'){
   const match=/^([0-9]{4}\.[0-9]{4,5})(?:v([1-9][0-9]*))?$/.exec(s.sourceId||'');
   if(!match||s.paperId!=='arxiv:'+match[1]||!Number.isSafeInteger(s.generation)||s.generation<1||!map(s.sourceBinding))fail('arXiv身份');

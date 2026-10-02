@@ -1,0 +1,47 @@
+{
+  "kind": "conference-local-pdf",
+  "originalTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+  "paperId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+  "pdfUrl": "https://proceedings.iclr.cc/paper_files/paper/2026/file/93b11b5128ced940120f41ce9b216f39-Paper-Conference.pdf",
+  "provenanceDisclosure": "",
+  "sourceBindings": [
+    {
+      "acquisition": {
+        "openreviewResponseBytes": false,
+        "provenanceStatement": "Observed ICLR2026 proceedings HTTP response; same-paper association from official poster forum edge and exact title, ordered authors and complete abstract; not an OpenReview attachment response.",
+        "receipt": {
+          "fileSha256": "0a2d306c34e5e09a504f6a84b28270457de106f338d1181a8acaf4a62c2d63ad",
+          "selfSha256": "947d62cb99a4b2b15d69945cf22d5b623612d65b6d4d597483ac6444ba2f29aa"
+        },
+        "sourceAuthors": [
+          "Chin Yuen Kwok",
+          "Yongsen Zheng",
+          "Jia Qi Yip",
+          "Kwok-Yan Lam",
+          "Eng Siong Chng"
+        ],
+        "sourceDoi": null,
+        "sourceKind": "authenticated-iclr-official-proceedings-pdf",
+        "sourceTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+        "versionRelation": "same-forum-official-2026-proceedings-cross-document-identity"
+      },
+      "acquisitionSha256": "1a0e06bf0f1610d7230dd96a59c413c01a35c50a6810e97125b047dec1b0c2ae",
+      "metadataIdentityBindingSha256": "0c75206d977a13c1317d59cda896d6102209f6ca6baf66785200d7b657a37802",
+      "metadataRecordIndex": 0,
+      "metadataSha256": "cc236271d6f00290ec64505805ac8c62dfcb3071496774258cf1fb858d2829b7",
+      "pdfBytes": 853446,
+      "pdfIdentityBindingSha256": "4e3cc81c01a50e91acce9dfdc744720fe72d66f17559ea99b228aebc591cd8e2",
+      "pdfSha256": "fc96f7c0a771c69dcdbf5348f07950abd4bd5032c7e898e680937d8a0cfdd213",
+      "provenance": "authenticated-official-proceedings-same-forum",
+      "sourceBindingSha256": "9a455113dc4e2987f830e4a585bd226e58dbfdff0d0b14e861edc667da229229",
+      "sourceSet": "official-iclr-proceedings-2026-sumra-generation-000002"
+    }
+  ],
+  "sourceDoi": null,
+  "sourceId": "conference:iclr:2026:openreview-forum-id:v23Pqcm6qp",
+  "sourceTitle": "SumRA: Parameter Efficient Fine-tuning with Singular Value Decomposition and Summed Orthogonal Basis",
+  "sourceUrl": "https://openreview.net/forum?id=v23Pqcm6qp",
+  "sourceVersionWarning": "本次分类依据 ICLR 2026 官方论文集 PDF；官方海报页指向同一 OpenReview 论坛，题目、五位作者与完整摘要已交叉核对。旧 ICLR 2025 页眉 PDF 保留为先前来源，不沿用其分类。此下载不是 OpenReview 附件响应。",
+  "versionRelation": "same-forum-official-2026-proceedings-cross-document-identity",
+  "writerInputsSha256": "0bc58e1038b1d6bea0062a4e1a5f41cc30c8678aa64cc54e673d7f24fd21957b"
+}

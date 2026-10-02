@@ -122,7 +122,13 @@ function validateRecord(record,snapshot,profile){
 }
 
 function validatePublicRecord(record,snapshot){
- const profile=require('./taxonomy-v3-profiles').profiles.find(p=>p.registrySha256===record?.registrySha256);
+ const c=record?.classificationRecord;
+ const matches=require('./taxonomy-v3-profiles').profiles.filter(p=>p.registrySha256===record?.registrySha256
+  &&p.classificationContract===record?.classificationContract&&p.classificationContract===CONTRACT
+  &&p.implementationSha256===c?.fingerprintInputs?.implementationSha256
+  &&p.protectedDependencySha256===c?.protectedDependencySha256);
+ if(matches.length!==1)fail('尚无唯一根批准的production profile');
+ const profile=matches[0];
  if(!profile||!hash(profile.implementationSha256)||!hash(profile.protectedDependencySha256)||!hash(profile.snapshotSha256))fail('尚无根批准的production profile');
  if(record.classificationRecord?.fingerprintInputs?.implementationSha256!==profile.implementationSha256||record.classificationRecord?.protectedDependencySha256!==profile.protectedDependencySha256)fail('根批准producer profile不符');
  return validateRecord(record,snapshot,profile);

@@ -1,0 +1,16 @@
+{{- /* Only the actual reviewed SumRA 2026 official-proceedings generation.
+       This public integrity check does not replace native full-source replay. */ -}}
+{{- $s := . | default dict -}}{{- $valid := reflect.IsMap $s -}}
+{{- if $valid -}}
+  {{- $identityKeys := slice "kind" "originalTitle" "paperId" "pdfUrl" "provenanceDisclosure" "sourceBindings" "sourceDoi" "sourceId" "sourceTitle" "sourceUrl" "sourceVersionWarning" "versionRelation" "writerInputsSha256" -}}
+  {{- $extraKeys := slice "pdfSha256" "textSha256" "structuredArtifactsSha256" -}}
+  {{- $expected := $identityKeys }}{{ range $extraKeys }}{{ $expected = $expected | append . }}{{ end -}}
+  {{- $actual := slice }}{{ range $k,$_ := $s }}{{ $actual = $actual | append $k }}{{ end -}}
+  {{- $valid = eq (delimit (sort $expected) "|") (delimit (sort $actual) "|") -}}
+  {{- if $valid -}}
+    {{- $identity := newScratch }}{{ $identity.Set "body" dict }}{{ range $identityKeys }}{{ $identity.SetInMap "body" . (index $s .) }}{{ end -}}
+    {{- $valid = and $valid (eq (crypto.SHA256 (($identity.Get "body") | partial "research_canonical_json.html")) "b110797ee9b277bbadb4e48a8e85ed4ad0ba7efe43458420574394aa3124bb14") (eq $s.pdfSha256 "fc96f7c0a771c69dcdbf5348f07950abd4bd5032c7e898e680937d8a0cfdd213") -}}
+    {{- range slice "textSha256" "structuredArtifactsSha256" }}{{ $v := index $s . }}{{ if not (and (eq (printf "%T" $v) "string") (findRE `^[a-f0-9]{64}$` ($v | default "") 1)) }}{{ $valid = false }}{{ end }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (not (not $valid)) -}}

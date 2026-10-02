@@ -46,7 +46,7 @@
 {{- end }}
 {{- end }}
 {{- $metadata := partial "research_metadata.html" . }}
-{{- $visibleSource := $metadata.sealedSource | default dict }}
+{{- $visibleSource := $metadata.classificationSource | default $metadata.sealedSource | default dict }}
 {{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
 {{- if and (not $visibleSource) $taxonomyProof.evidenceContract }}{{ $visibleSource = $taxonomyProof.source | default dict }}{{ end }}
 {{- with $visibleSource.provenanceDisclosure }}<p class="taxonomy-note">{{ partial "render_https_text.html" . }}</p>{{ end }}

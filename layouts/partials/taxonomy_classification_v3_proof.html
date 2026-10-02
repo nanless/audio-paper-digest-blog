@@ -15,7 +15,15 @@
   {{- $profiles := partial "taxonomy_classification_v3_profiles.html" "production" -}}
   {{- /* Explicit direct-call synthetic fixture context; the public wrapper never passes it. */ -}}
   {{- if and (eq (.syntheticFixture | default false) true) (eq ($c.fingerprintInputs.model | default "") "synthetic-test-model") }}{{ $profiles = dict "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3" (dict "registryVersion" "paper-taxonomy-v2" "snapshotSha256" "91947cb14473c88009c2821336ea25bd8a2173b4fea58fc69e1ed1d571613e4f" "projectionSha256" "257d5d219ddd4750a0cc5491a418753d051456d027a648c7e41f7f640e6774f0") }}{{ end -}}
-  {{- $profile := index $profiles $r.registrySha256 | default dict -}}{{- if $is371 }}{{ $profile = partial "taxonomy_classification_371_profile.html" "exact" }}{{ end -}}
+  {{- $issuerKey := printf "%s:%s:%s" ($r.registrySha256 | default "") ($c.fingerprintInputs.implementationSha256 | default "") ($c.protectedDependencySha256 | default "") -}}
+  {{- $profile := index $profiles $issuerKey | default (index $profiles $r.registrySha256 | default dict) -}}
+  {{- if $is371 }}{{ $profile = partial "taxonomy_classification_371_profile.html" "exact" }}{{ else if not (eq (.syntheticFixture | default false) true) -}}
+    {{- $matchingIssuers := 0 -}}
+    {{- range $candidate := $profiles -}}
+      {{- if and (eq ($candidate.registrySha256 | default "") $r.registrySha256) (eq ($candidate.classificationContract | default "") $expectedContract) (eq ($candidate.implementationSha256 | default "") ($c.fingerprintInputs.implementationSha256 | default "unapproved")) (eq ($candidate.protectedDependencySha256 | default "") ($c.protectedDependencySha256 | default "unapproved")) }}{{ $matchingIssuers = add $matchingIssuers 1 }}{{ end -}}
+    {{- end -}}
+    {{- $valid = and $valid (eq $matchingIssuers 1) -}}
+  {{- end -}}
   {{- if not (eq (.syntheticFixture | default false) true) }}{{ $valid = and $valid (findRE $sha ($profile.snapshotSha256 | default "") 1) (findRE $sha ($profile.implementationSha256 | default "") 1) (findRE $sha ($profile.protectedDependencySha256 | default "") 1) (eq ($c.fingerprintInputs.implementationSha256 | default "") ($profile.implementationSha256 | default "unapproved")) (eq $c.protectedDependencySha256 ($profile.protectedDependencySha256 | default "unapproved")) }}{{ end -}}
   {{- $allowedRegistry := dict $r.registrySha256 ($profile.registryVersion | default "unapproved") -}}
   {{- $valid = and $valid (not $controlled) $profile.registryVersion -}}

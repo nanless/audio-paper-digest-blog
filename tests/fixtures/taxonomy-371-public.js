@@ -1,7 +1,8 @@
 'use strict';
 // Synthetic choices/review/source, retained real producer dependency pins only.
 const base=require('./taxonomy-v3-public'),api=require('../../scripts/lib/taxonomy-v2-371-proof');
-const snapshot=require('../../data/taxonomy-registry.json'),deps=require('./taxonomy-371-approved-dependencies.json');
+// This fixture always replays its issued 371 snapshot, never the preferred UI tree.
+const snapshot=require('../../data/taxonomy-snapshots/cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638.json'),deps=require('./taxonomy-371-approved-dependencies.json');
 function fixture(config={}){const r=base.fixture(config).record,c=r.classificationRecord,f=c.fingerprintInputs;c.registrySha256=api.profile.registrySha256;c.protectedDependencies=structuredClone(deps);f.projectionSha256=api.profile.projectionSha256;
  for(const[k,name]of Object.entries({implementationSha256:'historical-source-taxonomy-classification-v2',snippetImplementationSha256:'source-evidence-snippets-v3',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))f[k]=deps.files['scripts/lib/'+name+'.js'];
  return {record:base.sync(r),snapshot};}
