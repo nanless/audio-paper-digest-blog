@@ -12,9 +12,21 @@ function exportRecord(e,format){return exporter.build([e],format,{origin:'https:
 test('Markdown and CSV retain actual verified type, domain, role, issued direct paths and method; real NA keeps full reason',()=>{
  for(const type of ['science','resource','evaluation','analysis','position','engineering','review','experience']){
   const r=records.find(r=>r.researchType===type);assert.ok(r,type);const e=entry(r);assert.equal(graph.resolveRecord(e).status,'verified');
-  for(const format of ['md','csv']){const text=exportRecord(e,format);assert.ok(text.includes(core.researchTypeLabels[r.researchType]));assert.ok(text.includes(core.domainLabels[r.domainScope]));assert.ok(text.includes(core.roleLabels[r.primaryResearchRole.kind]));assert.ok(text.includes(r.primaryResearchRole.label));for(const c of r.concepts)assert.ok(text.includes(c.label));if(!r.methodNotApplicable)assert.ok(text.includes(r.primaryMethodLabel));}
+  for(const format of ['md','csv']){const text=exportRecord(e,format);assert.ok(text.includes('直接分类路径（签发版本）'));assert.ok(text.includes(core.researchTypeLabels[r.researchType]));assert.ok(text.includes(core.domainLabels[r.domainScope]));assert.ok(text.includes(core.roleLabels[r.primaryResearchRole.kind]));assert.ok(text.includes(r.primaryResearchRole.label));for(const c of r.concepts)assert.ok(text.includes(c.label));if(!r.methodNotApplicable)assert.ok(text.includes(r.primaryMethodLabel));}
  }
  const r=records.find(r=>r.paperId==='arxiv:2606.26348');assert.ok(r);for(const format of ['md','csv']){const text=exportRecord(entry(r),format);assert.match(text,/不适用/);assert.ok(text.includes(r.methodNotApplicableReason));assert.doesNotMatch(text,/PRIVATE_NOTE/);}
+});
+test('export retains original issued paths while navigation uses the current parent, with explicit version wording',()=>{
+ const old=Object.values(graph.versions).find(version=>Object.keys(version.byId).length===228),task=old.byId['task.speech-spoofing'],method=Object.values(old.byId).find(node=>node.facet==='method'&&!node.ancestorIds.length);
+ const e={title:'Historical export fixture',permalink:'/posts/old-export/',paperId:'conference:fixture',taxonomyContract:core.contract,
+  taxonomyClassificationContract:core.v2Contract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v2',taxonomyEvidenceType:'source-only-taxonomy-v2',
+  taxonomyRegistrySha256:old.registrySha256,taxonomyConcepts:[task,method].map(node=>({id:node.id,facet:node.facet,label:node.zh})),
+  researchType:'engineering',domainScope:'in-domain',primaryResearchRole:{kind:'task',conceptId:task.id,label:task.zh},primaryTaskId:task.id,primaryMethodId:method.id,method:method.zh,methodNotApplicable:false,methodNotApplicableReason:''};
+ const before=JSON.stringify(e);assert.equal(graph.resolveRecord(e).status,'verified');
+ assert.deepEqual(graph.navigationConcepts(e)[0].ancestorIds,['task.audio-forgery']);
+ for(const format of ['md','csv']){const text=exportRecord(e,format);assert.ok(text.includes('直接分类路径（签发版本）'));assert.ok(text.includes(task.zh));assert.ok(!text.includes(graph.byId['task.audio-forgery'].zh));}
+ assert.match(exportRecord(e,'md'),/网页方向按现行目录浏览；清单中的分类路径保留原签发版本/);
+ assert.equal(JSON.stringify(e),before);
 });
 test('legacy, unknown snapshot and invalid roles cannot export inferred v2 metadata; CSV escaped and local bytes ignored',()=>{
  const r=records.find(r=>r.researchType==='science'),valid=entry(r);

@@ -54,6 +54,12 @@
     headings.forEach(function (heading) { if (heading.getBoundingClientRect().top <= threshold) current = heading; });
     return current;
   }
+  function headingLabel(heading) {
+    if (!heading.cloneNode) return heading.textContent.trim();
+    var copy = heading.cloneNode(true);
+    copy.querySelectorAll('.anchor[aria-hidden="true"]').forEach(function (anchor) { anchor.remove(); });
+    return copy.textContent.trim();
+  }
   function mount(window) {
     var document = window.document;
     var article = document.getElementById('article-body');
@@ -65,6 +71,11 @@
     var panel = document.getElementById('reading-chapters-panel');
     var close = document.getElementById('reading-chapters-close');
     var linksContainer = document.getElementById('reading-chapters-links');
+    var searchGroup = document.getElementById('reading-chapters-search-group');
+    var search = document.getElementById('reading-chapters-search');
+    var clear = document.getElementById('reading-chapters-clear');
+    var empty = document.getElementById('reading-chapters-empty');
+    var searchable = headings.length > 20 && searchGroup && search && clear && empty;
     var mobileLinks = [];
     var desktopLinks = Array.from(document.querySelectorAll('.workbench-toc a[href^="#"]'));
     function jumpTo(heading) {
@@ -83,14 +94,31 @@
     if (trigger && panel && close && linksContainer) {
       headings.forEach(function (heading) {
         var link = document.createElement('a');
+        link.hidden = false;
         link.href = '#' + encodeURIComponent(heading.id);
-        link.textContent = heading.textContent;
+        link.textContent = headingLabel(heading);
         link.dataset.headingId = heading.id;
         if (heading.tagName === 'H3') link.className = 'reading-chapters-subsection';
         link.addEventListener('click', function (event) { event.preventDefault(); closePanel(false); jumpTo(heading); });
         mobileLinks.push(link);
         linksContainer.appendChild(link);
       });
+      if (searchable) {
+        searchGroup.hidden = false;
+        function filterChapters() {
+          var query = search.value.trim().toLocaleLowerCase();
+          var visible = 0;
+          mobileLinks.forEach(function (link) {
+            link.hidden = query !== '' && !link.textContent.toLocaleLowerCase().includes(query);
+            if (!link.hidden) visible++;
+          });
+          clear.hidden = search.value === '';
+          empty.hidden = visible !== 0;
+        }
+        search.addEventListener('input', filterChapters);
+        clear.addEventListener('click', function () { search.value = ''; filterChapters(); search.focus(); });
+        filterChapters();
+      }
       trigger.hidden = false;
       trigger.addEventListener('click', function () {
         panel.hidden = false;
@@ -103,9 +131,12 @@
       panel.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') { event.preventDefault(); closePanel(true); }
         if (event.key === 'Tab') {
-          var first = close, last = mobileLinks[mobileLinks.length - 1];
-          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+          var focusable = [close];
+          if (searchable) { focusable.push(search); if (!clear.hidden) focusable.push(clear); }
+          focusable = focusable.concat(mobileLinks.filter(function (link) { return !link.hidden; }));
+          var index = focusable.indexOf(document.activeElement);
+          if (event.shiftKey && index === 0) { event.preventDefault(); focusable[focusable.length - 1].focus(); }
+          else if (!event.shiftKey && index === focusable.length - 1) { event.preventDefault(); focusable[0].focus(); }
         }
       });
       var media = window.matchMedia('(max-width: 860px)');
@@ -115,7 +146,7 @@
     function update() {
       frame = false;
       var current = currentHeading(headings, document.documentElement.clientHeight * .25);
-      if (trigger) trigger.textContent = '章节 · ' + current.textContent.slice(0, 24);
+      if (trigger) trigger.textContent = '章节 · ' + headingLabel(current).slice(0, 24);
       desktopLinks.concat(mobileLinks).forEach(function (link) {
         var id;
         try { id = decodeURIComponent(link.hash.slice(1)); } catch (_) { id = link.hash.slice(1); }
@@ -129,5 +160,5 @@
     update();
   }
   return { mount: mount, storageKey: storageKey, normalizeStore: normalizeStore, readStore: readStore,
-    writePosition: writePosition, currentHeading: currentHeading };
+    writePosition: writePosition, currentHeading: currentHeading, headingLabel: headingLabel };
 }));

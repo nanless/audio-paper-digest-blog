@@ -36,7 +36,7 @@ test('the current section remains the last crossed heading between sections', ()
   assert.equal(workflow.currentHeading([], 10), null);
 });
 
-function browserFixture({ stored = true, hash = '', disabledStorage = false } = {}) {
+function browserFixture({ stored = true, hash = '', disabledStorage = false, count = 2 } = {}) {
   function node(id) {
     return { id, hidden: true, dataset: {}, events: {}, children: [], attrs: {}, textContent: id,
       classList: { toggle() {}, add() {}, remove() {} },
@@ -45,12 +45,15 @@ function browserFixture({ stored = true, hash = '', disabledStorage = false } = 
       focus() { document.activeElement = this; }, scrollIntoView() { this.scrolled = true; } };
   }
   const nodes = Object.fromEntries(['reading-resume', 'reading-resume-note', 'reading-resume-continue', 'reading-resume-dismiss',
-    'reading-chapters-trigger', 'reading-chapters-panel', 'reading-chapters-close', 'reading-chapters-links'].map(id => [id, node(id)]));
+    'reading-chapters-trigger', 'reading-chapters-panel', 'reading-chapters-close', 'reading-chapters-links',
+    'reading-chapters-search-group', 'reading-chapters-search', 'reading-chapters-clear', 'reading-chapters-empty'].map(id => [id, node(id)]));
+  nodes['reading-chapters-search'].value = '';
   const headings = [node('第一章'), node('第二章')];
+  for (let i = 2; i < count; i++) headings.push(node('章节 ' + i));
   headings.forEach((heading, index) => { heading.tagName = 'H2'; heading.getBoundingClientRect = () => ({ top: 300 + index * 400 }); });
   const article = { offsetHeight: 3000, getBoundingClientRect: () => ({ top: 200 }), querySelectorAll: () => headings };
   const document = { documentElement: { clientHeight: 700 }, body: node('body'), activeElement: null,
-    getElementById: id => id === 'article-body' ? article : nodes[id],
+    getElementById: id => id === 'article-body' ? article : headings.find(h => h.id === id) || nodes[id],
     querySelector: () => ({ dataset: { readingBasePath: '/blog/' } }), querySelectorAll: () => [],
     createElement: () => { const link = node('link'); Object.defineProperty(link, 'hash', { get: () => link.href }); return link; } };
   const storage = memoryStorage();
@@ -91,4 +94,45 @@ test('mobile chapters open, constrain keyboard focus and close with Escape or a 
   links[1].events.click({ preventDefault() {} });
   assert.equal(f.nodes['reading-chapters-panel'].hidden, true);
   assert.equal(f.headings[1].scrolled, true);
+});
+
+test('chapter labels omit only hidden heading permalink anchors, retaining literal hash text', () => {
+  let removed = false;
+  const heading = { cloneNode: () => ({ querySelectorAll: selector => {
+    assert.equal(selector, '.anchor[aria-hidden="true"]');
+    return [{ remove() { removed = true; } }];
+  }, get textContent() { return removed ? 'C# 方法' : 'C# 方法#'; } }) };
+  assert.equal(workflow.headingLabel(heading), 'C# 方法');
+});
+
+test('long chapters filter, clear, keep a valid focus trap with no results and reopen safely', () => {
+  const f = browserFixture({ count: 25 });
+  const n = f.nodes, links = n['reading-chapters-links'].children;
+  assert.equal(n['reading-chapters-search-group'].hidden, false);
+  n['reading-chapters-trigger'].events.click();
+  n['reading-chapters-search'].value = '章节 24';
+  n['reading-chapters-search'].events.input();
+  assert.equal(links.filter(l => !l.hidden).length, 1);
+  assert.equal(n['reading-chapters-empty'].hidden, true);
+  links[24].focus();
+  n['reading-chapters-panel'].events.keydown({ key: 'Tab', preventDefault() {} });
+  assert.equal(f.document.activeElement, n['reading-chapters-close']);
+  n['reading-chapters-search'].value = '无匹配章节';
+  n['reading-chapters-search'].events.input();
+  assert.equal(links.filter(l => !l.hidden).length, 0);
+  assert.equal(n['reading-chapters-empty'].hidden, false);
+  n['reading-chapters-close'].focus();
+  n['reading-chapters-panel'].events.keydown({ key: 'Tab', shiftKey: true, preventDefault() {} });
+  assert.equal(f.document.activeElement, n['reading-chapters-clear']);
+  n['reading-chapters-panel'].events.keydown({ key: 'Escape', preventDefault() {} });
+  n['reading-chapters-trigger'].events.click();
+  assert.equal(n['reading-chapters-empty'].hidden, false);
+  n['reading-chapters-clear'].events.click();
+  assert.equal(links.filter(l => !l.hidden).length, 25);
+  assert.equal(n['reading-chapters-empty'].hidden, true);
+  assert.equal(f.document.activeElement, n['reading-chapters-search']);
+  links[4].events.click({ preventDefault() {} });
+  assert.equal(f.headings[4].scrolled, true);
+  assert.equal(n['reading-chapters-panel'].hidden, true);
+  assert.equal(browserFixture({ count: 20 }).nodes['reading-chapters-search-group'].hidden, true);
 });

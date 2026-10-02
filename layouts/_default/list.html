@@ -97,6 +97,13 @@
 </div>
 {{- end }}
 
+{{- if and .IsHome (gt $paginator.PageNumber 1) }}
+<header class="research-list-heading research-list-heading--archive">
+  <div><div class="rw-eyebrow">按日期阅读</div><h1>每日速递 · 第 {{ $paginator.PageNumber }} 页</h1></div>
+  <a class="rw-action" href="{{ site.Home.RelPermalink }}">返回最新速递</a>
+</header>
+{{- end }}
+
 {{- $term := .Data.Term }}
 {{- if .IsHome }}<div class="research-entry-grid">{{ end }}
 {{- range $index, $page := $paginator.Pages }}

@@ -109,6 +109,8 @@
     var groups = Array.from(root.querySelectorAll('[data-conference-group]'));
     var tierLinks = Array.from(root.querySelectorAll('[data-conference-tier-link]'));
     var empty = document.getElementById('conference-empty');
+    var filterSummary = document.getElementById('conference-filter-summary');
+    var parentLinks = Array.from(root.querySelectorAll('[data-parent-conference-link]'));
     function setControls(state) {
       Object.keys(controls).forEach(function (key) {
         controls[key].value = state[key];
@@ -120,6 +122,18 @@
     function render(state) {
       var visible = filterEntries(entries, state), ids = new Set(visible.map(function (entry) { return entry.id; }));
       cards.forEach(function (card) { card.hidden = !ids.has(card.dataset.conferenceId); });
+      parentLinks.forEach(function (link) {
+        link.setAttribute('href', ids.has(link.dataset.parentConferenceLink) ? '#conference-card-' + link.dataset.parentConferenceLink : link.dataset.parentConferenceUrl);
+      });
+      if (filterSummary) {
+        var selected = [];
+        if (state.grade !== 'all') selected.push(['A', 'B', 'C'].includes(state.grade) ? 'CCF ' + state.grade : state.grade === 'unlisted' ? 'CCF 未列' : '评级待核');
+        if (state.year !== 'all') selected.push(state.year + ' 年');
+        if (state.month !== 'all') selected.push(state.month === 'unknown' ? '日期未确认' : Number(state.month) + ' 月');
+        if (state.venue !== 'all') selected.push(venues.get(state.venue) || state.venue + '（暂无收录）');
+        if (state.query) selected.push('查找：' + state.query);
+        filterSummary.textContent = '筛选会议' + (selected.length ? ' · ' + selected.join(' · ') : ' · 全部会议');
+      }
       groups.forEach(function (group) {
         var visibleCards = Array.from(group.querySelectorAll('[data-conference-id]')).filter(function (card) { return !card.hidden; });
         var count = visibleCards.length;

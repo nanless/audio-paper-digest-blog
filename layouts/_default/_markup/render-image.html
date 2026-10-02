@@ -24,7 +24,7 @@
 {{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
 <img
   {{- range $k, $v := $attributes -}}
-    {{- if $v -}}
+    {{- if or $v (eq $k "alt") -}}
       {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
     {{- end -}}
   {{- end -}}>

@@ -108,7 +108,7 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
     'canonical conference deduplicates while unknown and inferred pages retain independent identities');
 });
 
-test('Hugo version catalog preserves signed labels and parent counts across a reparented concept', t => {
+test('Hugo preserves issued labels and ancestors while parent navigation counts follow the current tree', t => {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-taxonomy-versions-'));
   t.after(() => fs.rmSync(temporary, { recursive: true, force: true }));
   const repository = path.resolve(__dirname, '..');
@@ -124,7 +124,7 @@ test('Hugo version catalog preserves signed labels and parent counts across a re
     fs.copyFileSync(path.join(repository, file), path.join(temporary, file));
   }
   fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
-  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ .Title }}');
+  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ dict "issued" (partial "taxonomy_valid_records.html" .) "navigation" (partial "taxonomy_navigation_records.html" .) | jsonify }}');
   fs.writeFileSync(path.join(temporary, 'hugo.yaml'), 'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\noutputs:\n  home: [HTML, JSON]\n');
   const node = (id, zh, ancestorIds = []) => ({ id, facet: 'task', zh, en: zh, aliases: [], ancestorIds });
   const old = { contract: 'paper-taxonomy-registry-snapshot-v1', registryVersion: 'old', registrySha256: 'a'.repeat(64),
@@ -152,11 +152,29 @@ test('Hugo version catalog preserves signed labels and parent counts across a re
   const graph = core.createRegistry(current, catalog);
   assert.deepEqual(server.map(item => ({ id: item.id, direct: item.direct, subtree: item.sub })),
     core.counts(core.groupPapers(records, graph), graph).concepts);
-  assert.equal(server.find(item => item.id === 'task.left').sub, 1);
-  assert.equal(server.find(item => item.id === 'task.right').sub, 1);
+  assert.equal(server.find(item => item.id === 'task.left').sub, 0);
+  assert.equal(server.find(item => item.id === 'task.right').sub, 2);
   assert.equal(server.find(item => item.id === 'task.child').direct, 2);
-  assert.equal(records.find(item => item.title === 'old').primaryTaskId, 'task.child');
+  const oldRecord = records.find(item => item.title === 'old');
+  assert.equal(oldRecord.primaryTaskId, 'task.child');
+  assert.equal(oldRecord.task, '旧子名');
+  assert.equal(oldRecord.taxonomyRegistrySha256, old.registrySha256);
+  assert.deepEqual(graph.resolveRecord(oldRecord).concepts[0].ancestorIds, ['task.left']);
+  assert.equal(graph.resolveRecord(oldRecord).concepts[0].zh, '旧子名');
+  const paths = JSON.parse(fs.readFileSync(path.join(temporary, 'public/posts/old/index.html')));
+  assert.equal(paths.issued[0].zh, '旧子名');
+  assert.deepEqual(paths.issued[0].ancestorIds, ['task.left']);
+  assert.equal(paths.navigation[0].zh, '新子名');
+  assert.equal(paths.navigation[0].issuedLabel, '旧子名');
+  assert.deepEqual(paths.navigation[0].ancestorIds, ['task.right']);
+  const groups = core.groupPapers(records, graph);
+  assert.equal(core.query(groups, { facets: { task: ['task.left'] } }, graph).length, 0);
+  assert.equal(core.query(groups, { facets: { task: ['task.right'] } }, graph).length, 2);
+  assert.equal(core.query(groups, { facets: { task: ['task.right'] }, scope: 'direct' }, graph).length, 0);
   for (const name of ['wrong-old-label', 'unknown-version', 'missing-version']) {
     assert.equal(records.find(item => item.title === name).primaryTaskId, undefined);
+    const invalid = JSON.parse(fs.readFileSync(path.join(temporary, 'public/posts', name, 'index.html')));
+    assert.deepEqual(invalid.issued, []);
+    assert.deepEqual(invalid.navigation, []);
   }
 });

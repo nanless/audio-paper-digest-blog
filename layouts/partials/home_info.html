@@ -9,7 +9,7 @@
     <p class="research-home-hero__lead">先看每日速递，再按研究方向检索。用中文解读理解方法、实验与局限，随时回到原文核对。</p>
     <form class="home-search" action="{{ "papers/" | relURL }}" role="search">
       <label class="sr-only" for="home-query">搜索论文</label>
-      <input id="home-query" type="search" name="q" placeholder="中文 / English / arXiv ID" required>
+      <input id="home-query" type="search" name="q" placeholder="题目、arXiv / IEEE 编号" required>
       <button class="rw-action rw-action--primary" type="submit">搜索论文</button>
     </form>
     <div class="research-home-hero__actions">
@@ -27,7 +27,8 @@
     <div class="research-shortcuts">
       <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.asr">语音识别<span>ASR · 包含下级方向</span></a>
       <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.speech-synthesis">语音合成<span>TTS · 包含下级方向</span></a>
-      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.audio-generation">音频与音乐生成<span>生成任务 · 包含下级方向</span></a>
+      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.audio-generation">音频生成<span>通用声音生成 · 包含下级方向</span></a>
+      <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.music-generation">音乐生成<span>音频与符号音乐</span></a>
       <a class="research-shortcut" href="{{ "conferences/" | absURL }}">会议论文集<span>按会议浏览 · 主题导航</span></a>
     </div>
   </aside>

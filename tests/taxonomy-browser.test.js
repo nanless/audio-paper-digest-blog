@@ -73,6 +73,10 @@ test('search recovery and facet navigation keep all directions reachable', () =>
   assert.match(f.results.children[0].children[1].textContent, /任务根 › 任务分支 › 深层任务 › 叶任务/);
   f.input.value = 'no-match'; f.input.events.input();
   assert.match(f.status.textContent, /找到 0/);
+  assert.equal(f.facets.hidden, false, 'the suggested directory remains available when nothing matches');
+  assert.equal(f.results.hidden, false);
+  f.input.value = 'LoRA'; f.input.events.input();
+  assert.equal(f.facets.hidden, true, 'a subsequent match switches back to focused search results');
   f.facetLink.events.click();
   assert.equal(f.input.value, '');
   assert.equal(f.facets.hidden, false);
@@ -120,6 +124,25 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   writePaper('invalid-facet', [{ id: task.id, facet: 'method', label: task.zh }]);
   writePaper('invalid-label', [{ id: task.id, facet: task.facet, label: 'wrong label' }]);
   writePaper('invalid-contract', concepts, 'unknown-contract');
+  const catalog = JSON.parse(fs.readFileSync(path.join(source, 'data/taxonomy-catalog.json')));
+  const issued = catalog.snapshots.find(snapshot => snapshot.concepts.length === 228);
+  const reparented = ['task.speech-spoofing', 'method.psychometrics', 'method.psychoacoustic-experiment', 'method.data-annotation'];
+  for (const id of reparented) {
+    const node = issued.concepts.find(node => node.id === id);
+    const otherFacet = node.facet === 'task' ? 'method' : 'task';
+    const companion = issued.concepts.find(node => node.facet === otherFacet && !node.ancestorIds.length && core.isActive(graph.byId[node.id]));
+    assert.ok(companion, 'the issued snapshot contains an active companion facet');
+    const direct = [node, companion];
+    const primaryTask = direct.find(node => node.facet === 'task');
+    const primaryMethod = direct.find(node => node.facet === 'method');
+    fs.writeFileSync(path.join(content, 'posts', id + '.md'), [
+      '---', 'title: "Historical navigation fixture"', 'date: 2026-09-29', 'paper_digest_page_type: paper',
+      'paper_digest_taxonomy_contract: ' + core.contract, 'paper_digest_taxonomy_registry_sha256: "' + issued.registrySha256 + '"',
+      'paper_digest_primary_task: "' + primaryTask.zh + '"', 'paper_digest_primary_method: "' + primaryMethod.zh + '"',
+      'paper_digest_taxonomy_concepts: ' + JSON.stringify(direct.map(node => ({ id: node.id, facet: node.facet, label: node.zh }))),
+      '---', 'Original historical reading.'
+    ].join('\n'));
+  }
   fs.writeFileSync(path.join(content, 'papers.md'), '---\ntitle: 论文库\nlayout: library\nurl: /papers/\n---\n');
   const config = path.join(fixtureRoot, 'config.yaml');
   fs.writeFileSync(config, ['baseURL: https://example.test/blog/', 'theme: PaperMod', 'buildFuture: true',
@@ -140,6 +163,8 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
   assert.equal((directory.match(/id="facet-/g) || []).length, 9);
   assert.equal((directory.match(/class="taxonomy-node-count"/g) || []).length, expected.length, 'every concept has a cached subtree record count');
   assert.match(directory, /同一篇已核论文只计一次，身份待核时按页面保留/);
+  assert.match(directory, /可逐项展开目录/);
+  assert.doesNotMatch(directory, /目录完整展开/);
   assert.match(directory, /href="\/blog\/papers\/\?concept=method\./);
   assert.doesNotMatch(directory, /class="taxonomy-children"[^>]*hidden/);
   assert.ok(fs.existsSync(path.join(destination, 'papers/index.html')), 'every controlled link lands on the existing library route');
@@ -155,5 +180,17 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
     assert.doesNotMatch(html, /class="paper-taxonomy"/);
     assert.match(html, /研究分类信息暂未核验。/);
     assert.match(html, /class="post-tags"/, 'unverified original tags remain available');
+  }
+  for (const id of reparented) {
+    const section = page(id).match(/<section class="paper-taxonomy"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(section, id + ' retains its strictly verified original assignment');
+    const currentNode = graph.byId[id], issuedNode = issued.concepts.find(node => node.id === id);
+    for (const ancestor of currentNode.ancestorIds) assert.ok(section.includes('?concept=' + ancestor), id + ' current ancestor');
+    for (const ancestor of issuedNode.ancestorIds.filter(ancestor => !currentNode.ancestorIds.includes(ancestor))) {
+      assert.ok(!section.includes('?concept=' + ancestor), id + ' excludes obsolete navigation parent');
+    }
+    assert.ok(section.includes('?concept=' + id));
+    assert.ok(section.includes(currentNode.zh));
+    assert.match(section, /历史分类证据保持原签发版本/);
   }
 });

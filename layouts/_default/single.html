@@ -37,7 +37,7 @@
     {{- end }}
     <div class="research-paper-header__meta">
       {{ partial "post_meta.html" . }}
-      {{- if $task }}<span{{ if .Params.paper_digest_primary_task }} title="本页主任务（paper_digest_primary_task）"{{ end }}>&nbsp;·&nbsp;{{ if .Params.paper_digest_primary_task }}★&nbsp;{{ end }}{{ $task }}</span>{{ end }}
+      {{- if $task }}<span{{ if .Params.paper_digest_primary_task }} title="本页主要研究任务"{{ end }}>&nbsp;·&nbsp;{{ if .Params.paper_digest_primary_task }}★&nbsp;{{ end }}{{ $task }}</span>{{ end }}
     </div>
     <div class="research-paper-header__actions" aria-label="论文操作">
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
@@ -58,11 +58,11 @@
   {{- $layoutClass := "research-layout" }}
   {{- if not $isPaper }}{{ $layoutClass = "research-layout research-layout--digest" }}{{ end }}
   <div class="{{ $layoutClass }}">
-    {{- if (.Param "ShowToc") }}
+    {{- if and (.Param "ShowToc") .Content }}
     <aside class="workbench-toc" aria-label="文章目录">
       <details class="toc" open>
         <summary><span class="title">目录</span></summary>
-        <div class="inner">{{ .TableOfContents }}</div>
+        <div class="inner">{{ partial "reader_table_of_contents.html" .TableOfContents }}</div>
       </details>
     </aside>
     {{- end }}
@@ -73,13 +73,17 @@
       {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
       {{- if .Content }}
       {{- $articleContent := partial "missing_image_presentations.html" (dict "page" . "content" .Content) }}
-      {{- $articleContent = replaceRE `(?s)^\s*<h1[^>]*>.*?</h1>` "" $articleContent }}
+      {{- $articleContent = partial "reader_article_content.html" (dict "page" . "content" $articleContent "headline" $headline "originalTitle" $metadata.originalTitle) }}
       {{- $articleContent = partial "resource_verification_notice.html" (dict "page" . "content" $articleContent) }}
       {{- $articleContent = partial "conference_caption_gloss.html" (dict "page" . "content" $articleContent) }}
       <div class="post-content md-content research-article" id="article-body" tabindex="-1">
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" $articleContent -}}
         {{- else }}{{ $articleContent | safeHTML }}{{ end }}
+      </div>
+      {{- else }}
+      <div class="post-content md-content research-article" id="article-body" tabindex="-1">
+        <p class="reader-content-notice">本页暂无导读正文。</p>
       </div>
       {{- end }}
     </div>
@@ -117,7 +121,7 @@
       {{- range ($.GetTerms $tags) }}
       {{- $en := index $translations .LinkTitle }}
       {{- $isPrimary := and $primaryTask (eq .LinkTitle $primaryTask) }}
-      <li><a href="{{ .Permalink }}"{{ if $isPrimary }} class="primary-task" title="本页主任务标签（paper_digest_primary_task）；补充标签不带 ★"{{ end }}>{{ if $isPrimary }}<span class="primary-task__mark" aria-hidden="true">★</span><span class="sr-only">主任务：</span>{{ end }}{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
+      <li><a href="{{ .Permalink }}"{{ if $isPrimary }} class="primary-task" title="主要研究任务以 ★ 标记"{{ end }}>{{ if $isPrimary }}<span class="primary-task__mark" aria-hidden="true">★</span><span class="sr-only">主任务：</span>{{ end }}{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
       {{- end }}
     </ul>
     {{- end }}
@@ -129,11 +133,12 @@
     {{- partial "subscribe.html" . }}
   </footer>
   {{- if (.Param "comments") }}{{ partial "comments.html" . }}{{ end }}
-  {{- if (.Param "ShowToc") }}
+  {{- if and (.Param "ShowToc") .Content }}
   <button class="reading-chapters-trigger" id="reading-chapters-trigger" type="button" aria-controls="reading-chapters-panel" aria-expanded="false" hidden>打开章节目录</button>
   <section class="reading-chapters-panel" id="reading-chapters-panel" role="dialog" aria-modal="true" aria-labelledby="reading-chapters-title" hidden>
     <div class="reading-chapters-panel__content">
       <div class="reading-chapters-panel__header"><strong id="reading-chapters-title">文章章节</strong><button class="rw-action" id="reading-chapters-close" type="button">关闭目录</button></div>
+      <div id="reading-chapters-search-group" hidden><label for="reading-chapters-search">查找章节</label><input id="reading-chapters-search" type="search" placeholder="输入章节标题" autocomplete="off" aria-controls="reading-chapters-links"><button class="rw-action" id="reading-chapters-clear" type="button" hidden>清空</button><p id="reading-chapters-empty" role="status" hidden>没有匹配的章节，请换个关键词。</p></div>
       <nav id="reading-chapters-links" aria-label="移动阅读章节"></nav>
     </div>
   </section>

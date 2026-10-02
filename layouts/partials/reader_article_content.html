@@ -1,0 +1,59 @@
+{{- /* Presentation only: keep source bytes, heading IDs and code blocks intact. */ -}}
+{{- $content := printf "%s" .content -}}
+{{- $page := .page -}}
+{{- $protected := dict -}}
+{{- $prefix := printf "READER-PROTECTED-%s-" (crypto.SHA256 $content) -}}
+{{- if not (in $content $prefix) -}}
+  {{- range $index, $block := findRE `(?is)<pre\b[^>]*>.*?</pre>|<code\b[^>]*>.*?</code>|<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>|<textarea\b[^>]*>.*?</textarea>` $content -}}
+    {{- $marker := printf "%s%d-END" $prefix $index -}}
+    {{- $protected = merge $protected (dict $marker $block) -}}
+    {{- $content = replace $content $block $marker -}}
+  {{- end -}}
+  {{- /* A repeated opening title keeps its anchor without duplicating the header.
+        Other H1s are actual chapters and remain visible below. */ -}}
+  {{- $headline := .headline | default $page.Title | default "" -}}
+  {{- $original := .originalTitle | default $page.Title | default "" -}}
+  {{- $titles := slice (partial "research_normalized_title.html" ($headline | markdownify | plainify | htmlUnescape)) (partial "research_normalized_title.html" ($original | plainify | htmlUnescape)) -}}
+  {{- with findRE `(?s)^\s*<h1\b[^>]*>.*?</h1>` $content 1 -}}
+    {{- $first := index . 0 -}}
+    {{- $label := partial "research_normalized_title.html" ($first | plainify | htmlUnescape) -}}
+    {{- if and $label (in $titles $label) -}}
+      {{- $anchor := replaceRE `(?s)^\s*<h1([^>]*)>.*?</h1>$` `<span${1} aria-hidden="true"></span>` $first -}}
+      {{- $content = printf "%s%s" $anchor (strings.TrimPrefix $first $content) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $content = replaceRE `<h1(\s[^>]*|)>` `<h2${1}>` $content -}}
+  {{- $content = replace $content "</h1>" "</h2>" -}}
+  {{- /* Raw rendered images can bypass the Markdown hook. An empty alt is
+        deliberate; it does not invent a description or replace an existing one. */ -}}
+  {{- range $image := findRE `(?is)<img(?:\s(?:[^>"']|"[^"]*"|'[^']*')*|/?)>` $content -}}
+    {{- $attributes := replaceRE `(?i)^<img` "" $image -}}
+    {{- $hasAlt := false -}}
+    {{- range $attribute := findRE `[^\s="'<>/]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?` $attributes -}}
+      {{- if eq (lower (strings.TrimSpace (replaceRE `\s*=.*$` "" $attribute))) "alt" }}{{ $hasAlt = true }}{{ end -}}
+    {{- end -}}
+    {{- if not $hasAlt -}}
+      {{- $content = replace $content $image (replaceRE `(?i)^(<img)` `${1} alt=""` $image) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* These six phoneme coordinates are literal notation, not URLs. */ -}}
+  {{- $knownPath := "posts/conference-interspeech-2026-conference-paper-id-wu26e-interspeech-7a15fe005a.md" -}}
+  {{- with $page.File -}}
+    {{- if and (eq .Path $knownPath) (eq (crypto.SHA256 $page.RawContent) "eab232155baa5b678c31fc29db6ebe7c31dc7d44b8e81a889edafe64f54d9afa") (eq (crypto.SHA256 (readFile (printf "content/%s" $knownPath))) "6103f895b3d5fce8481270e66f6d34e236ac21fd027c0e1838ee8c30434b5ded") -}}
+      {{- $pairs := dict "p" "0,0,0" "d" "0,4,1" "s" "4,4,0" -}}
+      {{- $complete := true -}}
+      {{- range $label, $coordinates := $pairs -}}
+        {{- $anchor := printf `<a href="%s">%s</a>` $coordinates $label -}}
+        {{- if ne (len (split $content $anchor)) 3 }}{{ $complete = false }}{{ end -}}
+      {{- end -}}
+      {{- if $complete -}}
+        {{- range $label, $coordinates := $pairs -}}
+          {{- $anchor := printf `<a href="%s">%s</a>` $coordinates $label -}}
+          {{- $content = replace $content $anchor (printf "[%s](%s)" $label $coordinates) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
+{{- end -}}
+{{- return $content -}}

@@ -3,7 +3,7 @@
      - direct：有效受控分类直接标注该 id 的论文记录数；
      - sub   ：直接标注该 id 或任一后代概念的论文记录并集。
    已核论文身份去重，身份待核按页面独立保留；只统计论文，不计聚合页。
-   祖先集合读取 registry 快照 concepts[].ancestorIds，不硬编码概念数量；
+   原分类按签发快照核验后，祖先集合投影到现行目录，不硬编码概念数量；
    旧版裸 tags 页面没有该字段，天然不计入。 */}}
 {{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
 {{- $concepts := index $registry "concepts" | default slice }}
@@ -19,7 +19,7 @@
   {{- if and (eq $metadata.pageType "paper") (eq $proof.contract "paper-taxonomy-flat-tags-compat-v1") }}
   {{- $ids := slice }}
   {{- $ancestorIds := slice }}
-  {{- range (partial "taxonomy_valid_records.html" .) }}
+  {{- range (partial "taxonomy_navigation_records.html" .) }}
     {{- if not (in $ids .id) }}{{ $ids = $ids | append .id }}{{ end }}
     {{- $ancestorIds = union $ancestorIds (.ancestorIds | default slice) }}
   {{- end }}

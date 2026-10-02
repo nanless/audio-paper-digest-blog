@@ -1,0 +1,6 @@
+{{- /* Generated chapter navigation contains text, never heading thumbnails.
+      Keep the original fragment destinations and inline textual formatting. */ -}}
+{{- $toc := printf "%s" . -}}
+{{- $toc = replaceRE `(?is)<img(?:\s(?:[^>"']|"[^"]*"|'[^']*')*|/?)>` "" $toc -}}
+{{- $toc = replaceRE `(?is)(<a\b[^>]*>)\s*</a>` `${1}图示章节</a>` $toc -}}
+{{- return ($toc | safeHTML) -}}

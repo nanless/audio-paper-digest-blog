@@ -93,6 +93,21 @@ test('reading coverage rejects obsolete actions, outside-region controls and unk
   assert.throws(() => verifyPaperToolCoverage([file]), /身份待核页不得/);
 });
 
+test('empty unknown pages explain the missing guide instead of offering an empty download', t => {
+  const root = mkdtempSync(join(tmpdir(), 'empty-guide-coverage-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const file = join(root, 'index.html');
+  const source = '<script class="paper-tools__citation-record">' + JSON.stringify({
+    contract: 'paper-citation-source-v1', pageType: 'paper', identityStatus: 'unknown', url: '', pdfUrl: ''
+  }) + '</script>';
+  const render = extra => writeFileSync(file, '<article class="research-workbench--paper"><section class="paper-tools paper-tools--selection-only" data-paper-has-guide="false">'
+    + source + 'paper-tools__copy-fallback <noscript>本页暂无导读正文。</noscript>' + extra + '</section></article>');
+  render('');
+  assert.equal(verifyPaperToolCoverage([file]).selectionOnlyFallbacks, 1);
+  render('<button class="paper-tool--pack">下载导读</button>');
+  assert.throws(() => verifyPaperToolCoverage([file]), /不得提供导读下载/);
+});
+
 test('conference coverage uses its official source and ignores other arXiv links in the body', t => {
   const root = mkdtempSync(join(tmpdir(), 'conference-tool-coverage-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));

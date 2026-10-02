@@ -193,6 +193,16 @@
       }
       return result;
     };
+    // Resolve the immutable issued classification first. Only navigation uses
+    // the current tree; source labels, roles and ancestor evidence stay issued.
+    graph.navigationConcepts = function (record) {
+      var resolved = graph.resolveRecord(record);
+      if (resolved.status !== 'verified') return [];
+      return resolved.concepts.map(function (issued) {
+        var current = graph.byId[issued.id];
+        return Object.assign({}, current, { issuedLabel: issued.zh });
+      });
+    };
     return graph;
   }
 
@@ -233,13 +243,14 @@
       var resolved = graph.resolveRecord(record);
       var classification = { conceptIds: [], primaryTaskIds: [], primaryMethodIds: [],
         primaryRoleIdsByFacet: Object.create(null), researchType: '', domainScope: '',
-        ancestorIdsByConcept: Object.create(null), labelsByConcept: Object.create(null),
+        ancestorIdsByConcept: Object.create(null), navigationAncestorIdsByConcept: Object.create(null), labelsByConcept: Object.create(null),
         registrySha256: resolved.registrySha256, registryVersion: resolved.registryVersion, status: resolved.status };
       group.classifications.push(classification);
       // Bare legacy tags and unchecked taxonomy payloads never become reviewed
       // semantic classifications merely by entering the search index.
       var direct = resolved.concepts.map(function (node) {
         classification.ancestorIdsByConcept[node.id] = node.ancestorIds.slice();
+        classification.navigationAncestorIdsByConcept[node.id] = graph.byId[node.id].ancestorIds.slice();
         classification.labelsByConcept[node.id] = node.zh;
         return node.id;
       });
@@ -306,7 +317,7 @@
         var ids = selectionIds(classification, facet, selection.role, graph);
         return chosen.some(function (target) {
           return ids.some(function (id) {
-            return id === target || (selection.scope === 'subtree' && (classification.ancestorIdsByConcept[id] || []).includes(target));
+            return id === target || (selection.scope === 'subtree' && (classification.navigationAncestorIdsByConcept[id] || []).includes(target));
           });
         });
       });
@@ -332,7 +343,7 @@
           selectionIds(classification, facet, selection.role, graph).forEach(function (id) {
             directIds.add(id);
             subtreeIds.add(id);
-            (classification.ancestorIdsByConcept[id] || []).forEach(function (ancestor) { subtreeIds.add(ancestor); });
+            (classification.navigationAncestorIdsByConcept[id] || []).forEach(function (ancestor) { subtreeIds.add(ancestor); });
           });
         });
       });

@@ -40,7 +40,7 @@
       </details>
       {{ end }}
     </div>
-    <noscript><p class="taxonomy-note">未启用 JavaScript：目录完整展开，方向链接仍可使用；可用浏览器页面查找检索名称。</p></noscript>
+    <noscript><p class="taxonomy-note">未启用 JavaScript：可逐项展开目录，或用浏览器页面查找检索名称；论文库筛选需要 JavaScript，也可前往<a href="{{ "archives/" | relURL }}">时间归档</a>阅读。</p></noscript>
     <script id="taxonomy-registry-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
     {{- with index hugo.Data "taxonomy-catalog" }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
   </section>

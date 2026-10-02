@@ -1,3 +1,4 @@
+{{- /* Only the verified current navigation projection reaches this path. */ -}}
 {{- $concept := .concept }}
 <div class="taxonomy-path" aria-label="{{ $concept.zh }}的分类路径">
   {{- range $ancestorId := $concept.ancestorIds }}

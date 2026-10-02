@@ -11,12 +11,12 @@
   {{- $grade := partial "conference_grade.html" $anchor -}}
   {{- $tierCounts = merge $tierCounts (dict $grade (add (index $tierCounts $grade | default 0) 1)) -}}
   {{- if $parent }}{{ $workshopCounts = merge $workshopCounts (dict $grade (add (index $workshopCounts $grade | default 0) 1)) }}{{ end -}}
-  {{- $event := $anchor.event | default dict -}}
+  {{- $event := $entry.event | default dict -}}
   {{- $start := $event.startDate | default "" -}}
   {{- $end := $event.endDate | default $start -}}
   {{- $sourceOk := findRE `^https://[A-Za-z0-9][A-Za-z0-9.-]*(:[0-9]+)?([/?#][^\s<>"\\]*)?$` ($event.sourceUrl | default "") 1 -}}
   {{- $confirmed := and (eq $event.status "confirmed") $sourceOk (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $start 1) (findRE `^20[0-9]{2}-[0-9]{2}-[0-9]{2}$` $end 1) (le $start $end) -}}
-  {{- $group := printf "%v-unknown" $anchor.year -}}
+  {{- $group := printf "%v-unknown" $entry.year -}}
   {{- if $confirmed }}{{ $group = substr $start 0 4 }}{{ end -}}
   {{- $tier := index $groups $grade | default dict -}}
   {{- $records := index $tier $group | default slice -}}
@@ -33,7 +33,7 @@
     <p>{{ .Description }}</p>
   </header>
   <details id="conference-filter-panel" class="conference-directory__filter-panel" open hidden>
-    <summary>按档次和举办时间筛选</summary>
+    <summary><span id="conference-filter-summary">筛选会议</span></summary>
   <form id="conference-filters" class="conference-directory__filters" role="search" hidden>
     <label>主会档次<select id="conference-tier" name="tier"><option value="all">全部档次</option><option value="A">CCF A 及其 Workshop</option><option value="B">CCF B 及其 Workshop</option><option value="C">CCF C 及其 Workshop</option><option value="unlisted">未列入已核目录</option><option value="pending">评级待核</option></select></label>
     <label>举办年份<select id="conference-year" name="year"><option value="all">全部年份</option></select></label>
@@ -97,7 +97,7 @@
 {{- $grade := partial "conference_grade.html" . -}}
 <article class="conference-card{{ if $parent }} conference-card--workshop{{ end }}" id="conference-card-{{ .id }}" data-conference-id="{{ .id }}"{{ if $parent }} data-parent-conference="{{ $parent.id }}"{{ end }}>
   <div class="conference-card__topline"><h4 class="conference-card__title">{{ .name }} {{ .year }}</h4><span class="conference-card__tier" data-grade="{{ $grade }}">{{ if $parent }}Workshop{{ else if in (slice "A" "B" "C") $grade }}CCF {{ $grade }}{{ else if eq $grade "unlisted" }}CCF 未列{{ else }}评级待核{{ end }}</span></div>
-  {{- with $parent }}<p class="conference-card__parent"><a href="#conference-card-{{ .id }}">{{ .name }} {{ .year }}</a> 的 Workshop</p>{{ end -}}
+  {{- with $parent }}<p class="conference-card__parent">{{- $parentURL := printf "%s?venue=%s#conference-card-%s" ("conferences/" | relURL) ((.venueId | default (replaceRE `-20[0-9]{2}$` "" .id)) | urlquery) .id -}}<a href="{{ $parentURL }}" data-parent-conference-link="{{ .id }}" data-parent-conference-url="{{ $parentURL }}">{{ .name }} {{ .year }}</a> 的 Workshop</p>{{ end -}}
   {{- with .fullName }}<p class="conference-card__fullname">{{ . }}</p>{{ end -}}
   <p class="conference-card__date">{{ if $confirmed }}<time datetime="{{ $start }}">{{ time.Format "2006-01-02" $start }}</time>{{ if ne $start $end }} — <time datetime="{{ $end }}">{{ time.Format "2006-01-02" $end }}</time>{{ end }}{{ else if and (eq $event.status "tba") $sourceOk }}举办日期：官方待定{{ else }}举办日期：待核{{ end }}</p>
   {{- with $event.location }}<p class="conference-card__location">{{ . }}{{ with $entry.editionNumber }} · 第 {{ . }} 届{{ end }}</p>{{ else }}{{ with .editionNumber }}<p class="conference-card__location">第 {{ . }} 届</p>{{ end }}{{ end -}}

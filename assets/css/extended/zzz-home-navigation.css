@@ -10,3 +10,8 @@
   }
   .header-nav .menu a { white-space: nowrap; }
 }
+
+/* Paginated home pages keep one clear title without changing their URLs. */
+.research-list-heading--archive { gap: 12px; flex-wrap: wrap; }
+.research-list-heading--archive h1 { font-size: 24px; line-height: 1.4; margin: 7px 0 0; }
+@media (max-width: 600px) { .research-list-heading--archive h1 { font-size: 21px; } }

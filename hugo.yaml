@@ -112,7 +112,7 @@ params:
   #   websiteId: your-website-id
 
   footer:
-    Content: "由 AI 自动生成 · Paper Digest"
+    text: "AI 辅助导读 · 论文结论请以原文为准"
 
   archive:
     dateFormat: "2006-01-02"

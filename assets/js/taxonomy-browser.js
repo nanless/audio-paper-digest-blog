@@ -100,6 +100,7 @@
       facets.hidden = Boolean(query);
       if (!query) { status.textContent = '选择分类视角，逐级浏览。'; return; }
       var matches = searchConcepts(graph, query);
+      facets.hidden = matches.length > 0;
       status.textContent = '找到 ' + matches.length + ' 个方向（名称、英文与别名）';
       if (!matches.length) results.appendChild(element('p', 'taxonomy-note', '没有匹配的方向。试试更短的词，或浏览下方分类视角。'));
       matches.forEach(function (match) {

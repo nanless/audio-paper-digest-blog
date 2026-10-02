@@ -6,6 +6,12 @@
 .reading-chapters-panel { background: rgba(0,0,0,.5); color: var(--rw-text); position: fixed; z-index: 120; inset: 0; padding: 10vh 16px 16px; }
 .reading-chapters-panel__content { background: var(--rw-surface); border: 1px solid var(--rw-border); border-radius: 16px; max-height: 75dvh; overflow: auto; padding: 16px; }
 .reading-chapters-panel__header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+#reading-chapters-search-group { margin-bottom: 12px; }
+#reading-chapters-search-group label { display: block; margin-bottom: 6px; font-size: .9rem; }
+#reading-chapters-search { display: block; width: 100%; min-height: 44px; box-sizing: border-box; border: 1px solid var(--rw-border); border-radius: 8px; padding: 8px 10px; background: var(--rw-surface); color: var(--rw-text); font: inherit; }
+#reading-chapters-clear { margin-top: 8px; }
+#reading-chapters-empty { font-size: .9rem; margin: 12px 0; }
+.reading-chapters-panel [hidden] { display: none !important; }
 .reading-chapters-panel nav a { display: flex; align-items: center; min-height: 44px; padding: 8px; border-bottom: 1px solid var(--rw-border); font-size: .9rem; overflow-wrap: anywhere; }
 .reading-chapters-panel nav a[aria-current] { background: var(--rw-brand-soft); color: var(--rw-brand); font-weight: 700; }
 .reading-chapters-panel nav .reading-chapters-subsection { padding-left: 22px; font-size: .82rem; }

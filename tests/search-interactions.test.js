@@ -6,7 +6,7 @@ const path = require('node:path');
 const test = require('node:test');
 const vm = require('node:vm');
 
-function browserFixture(kind, items, suffix = '', fail = false, registry = null) {
+function browserFixture(kind, items, suffix = '', fail = false, registry = null, catalog = null) {
   const listeners = {};
   const nodes = {};
   let document;
@@ -64,6 +64,7 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null)
     addEventListener(key, fn) { listeners[key] = fn; },
     clearTimeout() {}, setTimeout(fn) { fn(); return 1; }
   };
+  if (catalog) window.ResearchTaxonomy = require('../assets/js/taxonomy-core');
   class FakeFuse {
     constructor(data) { this.data = data; }
     search(query) { return this.data.filter((entry) => JSON.stringify(entry).toLowerCase().includes(query.toLowerCase())).map((item) => ({ item })); }
@@ -76,7 +77,7 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null)
       requests.push(String(url));
       if (fail) return Promise.reject(new Error('offline'));
       const payload = registry && String(url).endsWith('data/taxonomy-registry.json')
-        ? registry : items;
+        ? registry : catalog && String(url).endsWith('data/taxonomy-catalog.json') ? catalog : items;
       return Promise.resolve({ ok: true, json: () => Promise.resolve(payload) });
     }
   });
@@ -191,6 +192,25 @@ test('经典搜索用快照注入的 taxonomyAliases 召回父概念与别名', 
   browser.nodes.searchInput.dispatch('input');
   assert.equal(browser.nodes.searchResults.children.length, 1);
   assert.match(browser.nodes.searchResults.textContent, /论文 1/);
+});
+
+test('classic search projects validated historical parents to the current directory and rejects held or mismatched labels', async () => {
+  const node = (id, zh, ancestorIds = []) => ({ id, zh, facet: 'method', en: '', aliases: [], ancestorIds });
+  const old = { registrySha256: '1'.repeat(64), concepts: [node('method.a', '原先上级'), node('method.b', '现行上级'), node('method.child', '原名称', ['method.a'])] };
+  const current = { registrySha256: '2'.repeat(64), concepts: [node('method.a', '原先上级'), node('method.b', '现行上级'), node('method.child', '新名称', ['method.b'])] };
+  const catalog = { contract: 'paper-taxonomy-version-catalog-v1', currentSha256: current.registrySha256, snapshots: [old, current] };
+  const typed = { ...record(), taxonomyContract: 'paper-taxonomy-flat-tags-compat-v1', taxonomyRegistrySha256: old.registrySha256,
+    taxonomyConcepts: [{ id: 'method.child', facet: 'method', label: '原名称' }] };
+  const items = [typed, { ...typed, permalink: record(1).permalink, taxonomyPublicationStatus: 'withheld' },
+    { ...typed, permalink: record(2).permalink, taxonomyConcepts: [{ id: 'method.child', facet: 'method', label: '新名称' }] }];
+  const browser = browserFixture('search', items, '?q=现行上级', false, current, catalog);
+  await browser.ready();
+  assert.equal(browser.nodes.searchResults.children.length, 1);
+  assert.match(browser.nodes.searchResults.textContent, /论文 0/);
+  browser.nodes.searchInput.value = '原先上级'; browser.nodes.searchInput.dispatch('input');
+  assert.equal(browser.nodes.searchResults.children.length, 0);
+  browser.nodes.searchInput.value = '原名称'; browser.nodes.searchInput.dispatch('input');
+  assert.match(browser.nodes.searchResults.textContent, /论文 0/);
 });
 
 // The core may fail to load independently. Keyword list/reset must remain usable

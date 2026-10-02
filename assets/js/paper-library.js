@@ -28,7 +28,7 @@
 
   function conceptTerms(concept, byId) {
     if (!concept || typeof concept !== 'object' || Array.isArray(concept)) return [];
-    var terms = [concept.id, concept.facet, concept.label];
+    var terms = [concept.id, concept.facet, concept.label, concept.issuedLabel];
     var record = typeof concept.id === 'string' && byId ? byId[concept.id] : null;
     // 父概念名（如 method.peft 的“参数高效微调”）只存在于快照，靠祖先链回查。
     var source = record || concept;
@@ -92,10 +92,8 @@
     var arxivId = plainText(item.arxivId);
     var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
     var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
-    var signedRegistry = versionGraph && (versionGraph.versions[item.taxonomyRegistrySha256]
-      || (!versionGraph.hasVersionCatalog && !item.taxonomyRegistrySha256 ? versionGraph : null));
-    var taxonomy = versionGraph ? signedRegistry
-      ? taxonomyTerms(versionGraph.resolveRecord(item).concepts, signedRegistry.byId) : []
+    var taxonomy = versionGraph
+      ? taxonomyTerms(versionGraph.navigationConcepts(item), versionGraph.byId)
       : taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,

@@ -44,9 +44,9 @@
       if (!key || seen.has(key)) return false; seen.add(key); return true;
     });
     var created = new Date().toISOString(), lines = [];
-    if (format === 'md') lines.push('# 论文清单', '', '导出时间：' + created, '筛选条件：' + markdown(settings.filter || '当前选择'), '导出内容为所选论文的导读与可核实来源信息，未替代原论文。', '');
+    if (format === 'md') lines.push('# 论文清单', '', '导出时间：' + created, '筛选条件：' + markdown(settings.filter || '当前选择'), '导出内容为所选论文的导读与可核实来源信息，未替代原论文。', '网页方向按现行目录浏览；清单中的分类路径保留原签发版本。', '');
     if (format === 'csv') lines.push(['论文标题', '论文标识', '身份状态', '导读链接', '官方来源', '作者', '出版日期', 'DOI', '来源版本限制', '来源记录说明',
-      '分类核验状态', '研究类型', '研究范围', '主要研究角色', '主要研究角色标签', '主要研究方法', '方法不适用理由', '直接分类路径'].map(csv).join(','));
+      '分类核验状态', '研究类型', '研究范围', '主要研究角色', '主要研究角色标签', '主要研究方法', '方法不适用理由', '直接分类路径（签发版本）'].map(csv).join(','));
     if (format === 'bib') lines.push('% 仅导出可核实身份与已有来源字段，缺失作者和日期未补造。\n');
     rows.forEach(function (entry, position) {
       var record = citation ? citation.normalize(entry.citation || {}) : {};
@@ -79,7 +79,7 @@
           markdown(fields[3]) + '：' + markdown(fields[4]));
         if (!(fields[3] === '主要研究机制' && fields[4] === fields[5])) lines.push('主要研究方法：' + markdown(fields[5]));
         if (fields[6]) lines.push('方法不适用理由：' + markdown(fields[6]));
-        lines.push('直接分类路径：' + markdown(fields[7]));
+        lines.push('直接分类路径（签发版本）：' + markdown(fields[7]));
       }
       if (Array.isArray(entry.guides) && entry.guides.length > 1) {
         lines.push('', '同一已核论文的其他导读：');

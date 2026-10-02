@@ -31,13 +31,13 @@ test('historical supplement is accepted only for exact page, body, source, origi
     fs.copyFileSync(path.join(origin, relative), path.join(temporary, relative));
   }
   fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
-  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ .Title }}');
+  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'), '{{ .Title }}{{ partial "paper_taxonomy.html" . }}');
   fs.writeFileSync(path.join(temporary, 'hugo.yaml'), 'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\noutputs:\n  home: [HTML, JSON]\n');
   const node = (id, zh) => ({ id, facet: id.split('.')[0], zh, en: id, aliases: [], ancestorIds: [] });
   const old = { contract: 'paper-taxonomy-registry-snapshot-v1', registryVersion: 'old', registrySha256: 'a'.repeat(64),
     concepts: [node('task.read', '旧任务'), node('method.first', '旧方法'), node('artifact.dataset', '数据集')] };
   const current = { ...old, registryVersion: 'new', registrySha256: 'b'.repeat(64),
-    concepts: [node('task.read', '新任务'), node('method.first', '新方法'), node('artifact.dataset', '数据集')] };
+    concepts: [node('task.parent', '当前父方向'), { ...node('task.read', '新任务'), ancestorIds: ['task.parent'] }, node('method.first', '新方法'), node('artifact.dataset', '数据集')] };
   const catalog = { contract: 'paper-taxonomy-version-catalog-v1', currentSha256: current.registrySha256, snapshots: [old, current] };
   fs.writeFileSync(path.join(temporary, 'data/taxonomy-registry.json'), JSON.stringify(current));
   fs.writeFileSync(path.join(temporary, 'data/taxonomy-catalog.json'), JSON.stringify(catalog));
@@ -90,4 +90,17 @@ test('historical supplement is accepted only for exact page, body, source, origi
   const server = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html'))).map(r => ({ id: r.id, direct: r.direct, subtree: r.sub }));
   assert.deepEqual(server, core.counts(core.groupPapers(index, graph), graph).concepts);
   assert.equal(server.find(record => record.id === 'task.read').direct, 1);
+  assert.equal(server.find(record => record.id === 'task.parent').direct, 0);
+  assert.equal(server.find(record => record.id === 'task.parent').subtree, 1);
+  const validHTML = fs.readFileSync(path.join(temporary, 'public/posts/valid-2609-12345/index.html'), 'utf8');
+  assert.match(validHTML, /主任务/);
+  assert.match(validHTML, /主方法/);
+  assert.match(validHTML, /taxonomy-path-parent[^>]*href="[^\"]*concept=task.parent"[^>]*>当前父方向/);
+  assert.match(validHTML, /taxonomy-path-direct[^>]*>新任务/);
+  assert.match(validHTML, /taxonomy-path-direct[^>]*>新方法/);
+  assert.deepEqual(graph.resolveRecord(full).concepts[0].ancestorIds, []);
+  assert.equal(graph.resolveRecord(full).concepts[0].zh, '旧任务');
+  for (const name of ['changed', 'bad-label', 'unknown-registry']) {
+    assert.doesNotMatch(fs.readFileSync(path.join(temporary, 'public/posts', name + '-2609-12345/index.html'), 'utf8'), /taxonomy-path-parent/);
+  }
 });

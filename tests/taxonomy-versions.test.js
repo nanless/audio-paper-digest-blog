@@ -42,16 +42,36 @@ test('catalog binds all source definitions and preserves 228/262/330/338/371/374
   assert.ok(current.concepts.every(node => node.definition && node.scopeNote));
   assert.ok(old.concepts.every(node => node.definition && node.scopeNote));
 });
-test('old parent chains are never silently reassigned by current registry updates', () => {
+test('issued parent evidence stays immutable while all navigation follows the current tree', () => {
   const records = [paper('old-spoof', old, ['task.speech-spoofing']), paper('new-spoof', current, ['task.speech-spoofing']),
     paper('old-listen', old, ['method.psychoacoustic-experiment']), paper('new-listen', current, ['method.psychoacoustic-experiment'])];
   const groups = core.groupPapers(records, graph);
-  assert.deepEqual(core.query(groups, { facets: { task: ['task.audio-forgery'] } }, graph).map(group => group.articles[0].permalink), ['/posts/new-spoof/']);
-  assert.deepEqual(core.query(groups, { facets: { method: ['method.human-evaluation'] } }, graph).map(group => group.articles[0].permalink), ['/posts/old-listen/']);
+  assert.deepEqual(graph.resolveRecord(records[0]).concepts[0].ancestorIds, []);
+  assert.deepEqual(graph.navigationConcepts(records[0])[0].ancestorIds, ['task.audio-forgery']);
+  assert.deepEqual(groups[0].classifications[0].ancestorIdsByConcept['task.speech-spoofing'], []);
+  assert.deepEqual(core.query(groups, { facets: { task: ['task.audio-forgery'] } }, graph).map(group => group.articles[0].permalink), ['/posts/old-spoof/', '/posts/new-spoof/']);
+  assert.deepEqual(core.query(groups, { facets: { method: ['method.human-evaluation'] } }, graph), []);
+  assert.equal(core.query(groups, { facets: { task: ['task.audio-forgery'] }, scope: 'direct' }, graph).length, 0);
   const counts = core.counts(groups, graph).concepts;
-  assert.equal(counts.find(node => node.id === 'task.audio-forgery').subtree, 1);
-  assert.equal(counts.find(node => node.id === 'method.human-evaluation').subtree, 1);
+  assert.equal(counts.find(node => node.id === 'task.audio-forgery').subtree, 2);
+  assert.equal(counts.find(node => node.id === 'method.human-evaluation').subtree, 0);
   assert.equal(counts.find(node => node.id === 'task.speech-spoofing').direct, 2);
+  assert.equal(graph.resolveRecord(records[2]).concepts[0].ancestorIds.includes('method.human-evaluation'), true);
+  assert.deepEqual(graph.navigationConcepts(records[2])[0].ancestorIds, []);
+});
+test('navigation preserves issued labels and primary identity without joining distinct readings', () => {
+  const record = paper('old-music', old, ['task.music-understanding']);
+  const before = JSON.stringify(record);
+  const projected = graph.navigationConcepts(record)[0];
+  assert.equal(projected.zh, '音乐分析');
+  assert.equal(projected.issuedLabel, '音乐理解');
+  const groups = core.groupPapers([
+    paper('one', old, ['task.speech-spoofing'], { identityStatus: 'verified', paperId: 'conference:shared', primaryTaskId: 'task.speech-spoofing' }),
+    paper('two', old, ['method.psychoacoustic-experiment'], { identityStatus: 'verified', paperId: 'conference:shared', primaryMethodId: 'method.psychoacoustic-experiment' })
+  ], graph);
+  assert.equal(core.query(groups, { role: 'primary', facets: { task: ['task.audio-forgery'] } }, graph).length, 1);
+  assert.equal(core.query(groups, { facets: { task: ['task.audio-forgery'], method: ['method.psychoacoustic-experiment'] } }, graph).length, 0);
+  assert.equal(JSON.stringify(record), before);
 });
 test('unknown or missing SHA and mismatched original labels do not acquire reviewed concepts', () => {
   const records = [paper('missing', old, ['task.music-understanding'], { taxonomyRegistrySha256: '' }),
@@ -60,6 +80,8 @@ test('unknown or missing SHA and mismatched original labels do not acquire revie
   assert.equal(core.query(core.groupPapers(records, graph), { facets: { task: ['task.music-understanding'] } }, graph).length, 0);
   assert.equal(graph.resolveRecord(records[0]).status, 'unbound-version');
   assert.equal(graph.resolveRecord(records[1]).status, 'unknown-version');
+  for (const record of records) assert.deepEqual(graph.navigationConcepts(record), []);
+  assert.deepEqual(graph.navigationConcepts(paper('held', old, ['task.music-understanding'], { taxonomyPublicationStatus: 'withheld' })), []);
 });
 test('same current SHA cannot substitute a different catalog tree, and maintenance notes stay out of prose', () => {
   const drift = JSON.parse(JSON.stringify(catalog));

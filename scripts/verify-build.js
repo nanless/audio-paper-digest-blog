@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { CONTRACT: INDEX_CONTRACT, MAX_SHARD_BYTES, SHARD_URL_PATTERN } = require('./shard-search-index');
+const { verifyPageNavigation } = require('./verify-page-navigation');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
 const SITE_PREFIX = '/audio-paper-digest-blog/';
@@ -177,8 +178,7 @@ function verifyPaperToolCoverage(files) {
     const close = html.indexOf('</section>', opening.index);
     invariant(close > opening.index, `论文工具区域未闭合：${file}`);
     const tools = html.slice(opening.index, close + 10);
-    invariant(tools.includes('paper-tools__advanced')
-      && tools.includes('paper-tool--pack') && tools.includes('paper-tools__copy-fallback')
+    invariant(tools.includes('paper-tools__copy-fallback')
       && tools.includes('<noscript>'), `论文页缺少原文与引用工具：${file}`);
     invariant(!/data-reading-bookmark|reading-controls|reading-resume|reading-backup|reading-store\.[a-f0-9]+|reading-controls\.[a-f0-9]+/.test(html),
       `论文页残留已取消的浏览器阅读资料功能：${file}`);
@@ -191,6 +191,15 @@ function verifyPaperToolCoverage(files) {
     let source;
     try { source = JSON.parse(sourceTag[1]); } catch (_) { throw new Error(`论文引用来源不是有效 JSON：${file}`); }
     invariant(source && source.contract === 'paper-citation-source-v1' && source.pageType === 'paper', `论文引用来源契约错误：${file}`);
+    const emptyUnknown = attributeValue(opening[0], 'data-paper-has-guide') === 'false'
+      && (source.identityStatus !== 'verified' || !source.url);
+    if (emptyUnknown) {
+      invariant(tools.includes('本页暂无导读正文') && !tools.includes('paper-tool--pack'),
+        `空正文且来源待核的页面不得提供导读下载：${file}`);
+    } else {
+      invariant(tools.includes('paper-tools__advanced') && tools.includes('paper-tool--pack'),
+        `论文页缺少原文与引用工具：${file}`);
+    }
     const tags = tools.match(/<(?:a|button)\b[^>]*>/gi) || [];
     const hrefs = tags.map(tag => attributeValue(tag, 'href').replace(/&amp;/g, '&'));
     if (source.identityStatus !== 'verified' || !source.url) {
@@ -284,7 +293,8 @@ function verifyBuild(buildDir) {
     searchIndex: indexStats,
     searchScripts: searchScripts.length,
     libraryScripts: libraryScripts.length,
-    paperTools
+    paperTools,
+    navigation: verifyPageNavigation(root)
   };
   process.stdout.write(`${JSON.stringify(stats, null, 2)}\n`);
   return stats;

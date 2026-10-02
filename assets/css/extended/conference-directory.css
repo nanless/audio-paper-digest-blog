@@ -51,3 +51,7 @@
   .conference-directory__filter-panel[open] > summary::after { content: "−"; }
   .conference-directory__filter-panel[open] .conference-directory__filters { margin-top: 12px; }
 }
+
+/* Active filters remain readable when the mobile panel is collapsed. */
+#conference-filter-summary { min-width: 0; overflow-wrap: anywhere; }
+.conference-directory__filter-panel > summary::after { flex-shrink: 0; }

@@ -88,6 +88,7 @@ function browser(catalog, suffix = '', width = 1440) {
     set innerHTML(_) { throw Error('Unsafe HTML mutation'); }
     appendChild(node) { this.children.push(node); }
     addEventListener(event, fn) { this.handlers[event] = fn; }
+    setAttribute(name, value) { this[name] = value; }
     fire(event) { this.handlers[event]?.({ type: event, preventDefault() {} }); }
     focus() { this.focused = true; }
   }
@@ -95,23 +96,48 @@ function browser(catalog, suffix = '', width = 1440) {
   function add(id, tag = 'div', values = []) { const node = nodes[id] = new Node(tag); for (const value of values) { const option = new Node('option'); option.value = value; node.appendChild(option); } return node; }
   const container = add('conference-directory');
   add('conference-directory-data').textContent = JSON.stringify(catalog);
-  for (const id of ['conference-count', 'conference-filter-panel', 'conference-filters', 'conference-empty', 'conference-clear', 'conference-empty-clear']) add(id);
+  for (const id of ['conference-count', 'conference-filter-panel', 'conference-filter-summary', 'conference-filters', 'conference-empty', 'conference-clear', 'conference-empty-clear']) add(id);
   add('conference-year', 'select', ['all']); add('conference-venue', 'select', ['all']);
   add('conference-month', 'select', ['all', 'unknown', ...Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, '0'))]);
   add('conference-tier', 'select', ['all', 'A', 'B', 'C', 'unlisted', 'pending']); add('conference-query', 'input');
   const cards = catalog.entries.map(item => { const card = new Node(); card.dataset.conferenceId = item.id; return card; });
+  const parentLinks = catalog.entries.filter(item => item.relationship?.parentConferenceId).map(item => {
+    const link = new Node('a');
+    const parent = catalog.entries.find(parent => parent.id === item.relationship.parentConferenceId);
+    link.dataset.parentConferenceLink = parent.id;
+    link.dataset.parentConferenceUrl = '/blog/conferences/?venue=' + (parent.venueId || parent.id.replace(/-20\d{2}$/, '')) + '#conference-card-' + parent.id;
+    return link;
+  });
   const label = new Node(); const group = new Node(); group.querySelectorAll = () => cards; group.querySelector = () => label;
   const tierLinks = ['A', 'B', 'C', 'unlisted', 'pending'].map(grade => {
     const link = new Node('a'); link.dataset.conferenceTierLink = grade;
     link.label = new Node(); link.querySelector = () => link.label; return link;
   });
-  container.querySelectorAll = selector => selector === '[data-conference-id]' ? cards : selector === '[data-conference-group]' ? [group] : selector === '[data-conference-tier-link]' ? tierLinks : [];
+  container.querySelectorAll = selector => selector === '[data-conference-id]' ? cards : selector === '[data-conference-group]' ? [group] : selector === '[data-conference-tier-link]' ? tierLinks : selector === '[data-parent-conference-link]' ? parentLinks : [];
   const listeners = {}, window = { innerWidth: width, location: new URL('https://example.test/blog/conferences/' + suffix), addEventListener(name, fn) { listeners[name] = fn; }, history: { pushes: [], replaces: [], replaceState(_s, _t, url) { this.replaces.push(url); window.location = new URL(url); }, pushState(_s, _t, url) { this.pushes.push(url); window.location = new URL(url); } } };
   const document = { readyState: 'complete', getElementById: id => nodes[id] || null, createElement: tag => new Node(tag) };
   window.document = document;
   vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/js/conference-directory.js'), 'utf8'), { window, URL, URLSearchParams });
-  return { nodes, window, cards, group, label, tierLinks, listeners };
+  return { nodes, window, cards, group, label, tierLinks, parentLinks, listeners };
 }
+test('a filtered Workshop parent link navigates to an actual visible main meeting', () => {
+  const parent = entry('main-2026'); delete parent.venueId;
+  const b = browser({ contract: api.contract, entries: [parent, workshop('satellite-2026', parent.id)] }, '?venue=satellite', 320);
+  assert.deepEqual(b.cards.map(card => card.hidden), [true, false]);
+  const target = new URL(b.parentLinks[0].href, b.window.location);
+  assert.equal(target.hash, '#conference-card-main-2026');
+  const next = browser({ contract: api.contract, entries: [parent, workshop('satellite-2026', parent.id)] }, target.search);
+  assert.deepEqual(next.cards.map(card => card.hidden), [false, true]);
+  b.nodes['conference-clear'].fire('click');
+  assert.equal(b.parentLinks[0].href, '#conference-card-main-2026');
+});
+test('collapsed mobile filter summary retains selected conditions and safely resets', () => {
+  const b = browser({ contract: api.contract, entries: [entry()] }, '?tier=A&year=2026&month=05&venue=sample&q=%3Cimg%3E', 320);
+  assert.equal(b.nodes['conference-filter-panel'].open, false);
+  assert.equal(b.nodes['conference-filter-summary'].textContent, '筛选会议 · CCF A · 2026 年 · 5 月 · Sample · 查找：<img>');
+  b.nodes['conference-clear'].fire('click');
+  assert.equal(b.nodes['conference-filter-summary'].textContent, '筛选会议 · 全部会议');
+});
 test('URL initialization, zero results, clear, history navigation and counts reflect actual visible cards', () => {
   const b = browser({ contract: api.contract, entries: [entry(), entry('cvpr-2026', { name: 'CVPR' })] }, '?q=CVPR&month=05');
   assert.deepEqual(b.cards.map(card => card.hidden), [true, false]);
@@ -137,13 +163,16 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
     fs.writeFileSync(path.join(temp, 'content/posts/conference-sample-2026.md'), '---\ntitle: Sample guide\ndate: 2026-09-30\n---\n\nGuide.\n');
     const entries = [entry(), entry('pending-2026', { name: 'Pending', event: { status: 'pending' }, ranking: { grade: 'pending', candidateGrade: 'A' } }), entry('tba-2026', { name: '</script><script>alert(1)</script>', event: { status: 'tba', sourceUrl: 'https://official.example/' }, ranking: {} }),
       entry('b-first-2025', { name: 'Earlier B', year: 2025, event: { status: 'confirmed', startDate: '2025-01-02', sourceUrl: 'https://official.example/' }, ranking: { ...entry().ranking, grade: 'B' } }),
-      entry('a-earlier-2025', { name: 'Earlier A', year: 2025, event: { status: 'confirmed', startDate: '2025-12-01', sourceUrl: 'https://official.example/' } }), workshop('satellite-2026', 'sample-2026')];
+      entry('a-earlier-2025', { name: 'Earlier A', year: 2025, event: { status: 'confirmed', startDate: '2025-12-01', sourceUrl: 'https://official.example/' } }),
+      entry('middle-2026', { name: 'Middle A', event: { status: 'confirmed', startDate: '2026-05-10', sourceUrl: 'https://official.example/' } }),
+      { ...workshop('satellite-2026', 'sample-2026'), event: { status: 'confirmed', startDate: '2026-05-20', endDate: '2026-05-20', sourceUrl: 'https://official.example/workshop' } }];
+    delete entries[0].venueId; // Template fallback must match the catalog's normalized venue ID.
     fs.writeFileSync(path.join(temp, 'data/conference-directory.json'), JSON.stringify({ contract: api.contract, entries }));
     // Use the fixture as the filesystem root, not the full collection's fileExists namespace.
     for (const directory of ['layouts', 'assets', 'themes']) fs.cpSync(path.join(root, directory), path.join(temp, directory), { recursive: true });
     execFileSync('hugo', ['--source', temp, '--config', path.join(temp, 'hugo.yaml'), '--contentDir', path.join(temp, 'content'), '--destination', path.join(temp, 'public'), '--minify'], { stdio: 'pipe' });
     const html = fs.readFileSync(path.join(temp, 'public/conferences/index.html'), 'utf8');
-    assert.equal((html.match(/<article class="?conference-card/g) || []).length, 6);
+    assert.equal((html.match(/<article class="?conference-card/g) || []).length, 7);
     assert.match(html, /data-conference-group=A-2026[ >]/); assert.match(html, /data-conference-group=pending-2026-unknown/);
     assert.ok(html.indexOf('data-conference-tier=A') < html.indexOf('data-conference-tier=B'), 'tier is the first grouping dimension');
     assert.ok(html.indexOf('data-conference-group=A-2025') < html.indexOf('data-conference-group=A-2026'), 'years are ordered inside a tier');
@@ -152,9 +181,13 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
     const parentCard = html.indexOf('data-conference-id=sample-2026');
     const satelliteCard = html.indexOf('data-conference-id=satellite-2026');
     assert.ok(parentCard < satelliteCard && satelliteCard < html.indexOf('data-conference-tier=B'), 'Workshop is beside its own main conference');
+    assert.ok(html.indexOf('data-conference-id=middle-2026') < satelliteCard, 'Workshop sorts by its actual May 20 date, not the main meeting April 29 date');
+    const filtered = api.filterEntries(api.normalizeCatalog({ contract: api.contract, entries }), state({ month: '05', venue: 'satellite' }));
+    assert.deepEqual(filtered.map(item => item.id), ['satellite-2026']);
+    assert.match(html, /href="?\/blog\/conferences\/\?venue=sample#conference-card-sample-2026/);
     assert.match(html, /data-parent-conference=sample-2026/);
     assert.match(html, /data-grade=unlisted>Workshop/);
-    assert.match(html, /2 主会 · 1 Workshop/);
+    assert.match(html, /3 主会 · 1 Workshop/);
     assert.match(html, /<h4 class=conference-card__title/);
     assert.match(html, /2026-04-29/); assert.match(html, /2026-05-03/);
     assert.match(html, /举办日期：官方待定/); assert.match(html, /举办日期：待核/); assert.match(html, /评级待核/);

@@ -142,7 +142,7 @@ function taxonomyAliases(concepts, byId) {
     if (!concept || typeof concept !== 'object' || Array.isArray(concept)) continue;
     const record = typeof concept.id === 'string' ? byId.get(concept.id) : null;
     const source = record || concept;
-    push(concept.id, concept.facet, concept.label, source.zh, source.en);
+    push(concept.id, concept.facet, concept.label, concept.issuedLabel, source.zh, source.en);
     if (Array.isArray(source.aliases)) push(...source.aliases);
     const ancestorIds = Array.isArray(concept.ancestorIds) && concept.ancestorIds.length
       ? concept.ancestorIds
@@ -207,13 +207,9 @@ return loadIndex()
       keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'method', 'categories', 'arxivId', 'taxonomyAliases']
     };
     const byId = registryIndex(registry);
-    const signedIndexes = new Map();
     const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {
-      const signedRegistry = graph && (graph.versions[item.taxonomyRegistrySha256]
-        || (!graph.hasVersionCatalog && !item.taxonomyRegistrySha256 ? graph : null));
-      if (signedRegistry && !signedIndexes.has(signedRegistry)) signedIndexes.set(signedRegistry, new Map(Object.entries(signedRegistry.byId)));
-      const aliases = graph ? signedRegistry ? taxonomyAliases(graph.resolveRecord(item).concepts,
-        signedIndexes.get(signedRegistry)) : [] : taxonomyAliases(item.taxonomyConcepts, byId);
+      const aliases = graph ? taxonomyAliases(graph.navigationConcepts(item), byId)
+        : taxonomyAliases(item.taxonomyConcepts, byId);
       return aliases.length ? { ...item, taxonomyAliases: aliases } : item;
     });
     fuse = new Fuse(entries, options);
