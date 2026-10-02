@@ -36,7 +36,7 @@ test('mobile table of contents starts collapsed and closes after choosing a head
   assert.equal(loadSite().toc.open, true);
 });
 
-test('taxonomy filtering reports actual visible counts and recovers from zero results', () => {
+test('content category filtering reports actual visible counts and recovers from zero results', () => {
   const site = loadSite({ query: 'ＡＳＲ' });
   site.events.input();
   assert.equal(site.items[0].hidden, false);
@@ -53,12 +53,13 @@ test('taxonomy filtering reports actual visible counts and recovers from zero re
   assert.equal(site.empty.hidden, true);
 });
 
-test('tag index distinguishes exact page counts from paper directions without obsolete compatibility copy', () => {
+test('research directions retain multilevel browsing without the legacy exact tag index', () => {
   const template = fs.readFileSync(
     path.join(__dirname, '..', 'layouts', '_default', 'terms.html'), 'utf8'
   );
-  assert.match(template, /精确标签索引/);
-  assert.match(template, /计数按页面统计，不同于按论文身份去重的方向统计/);
+  assert.match(template, /id="taxonomy-browser"/);
+  assert.match(template, /id="taxonomy-query"/);
+  assert.match(template, /筛选分类/);
   assert.match(template, /方向覆盖数量不代表每篇原文均已重新审核/);
-  assert.doesNotMatch(template, /标签索引（新旧兼容）|新发布内容使用统一分类/);
+  assert.doesNotMatch(template, /taxonomy-legacy|精确标签索引|筛选精确标签|计数按页面统计|标签索引（新旧兼容）|新发布内容使用统一分类/);
 });

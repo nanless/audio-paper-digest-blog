@@ -44,12 +44,10 @@
     <script id="taxonomy-registry-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
     {{- with index hugo.Data "taxonomy-catalog" }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
   </section>
-  <details class="taxonomy-legacy">
-    <summary>精确标签索引</summary>
-    <p class="taxonomy-note">这里链接到精确标签页，计数按页面统计，不同于按论文身份去重的方向统计。</p>
   {{ end }}
+  {{ if $categories }}
     <div class="research-terms__search">
-      <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选精确标签{{ end }}</label>
+      <label for="term-filter">筛选分类</label>
       <input id="term-filter" type="search" placeholder="输入中文或英文" autocomplete="off">
     </div>
     <p class="research-terms__count" id="term-count" role="status">共 {{ len .Data.Terms }} 项</p>
@@ -60,7 +58,7 @@
       {{ end }}
     </ul>
     <p class="research-library__empty" id="term-empty" hidden>没有匹配的条目。试试更短的关键词，或<a href="{{ "papers/" | relURL }}">搜索论文库</a>。</p>
-  {{ if not $categories }}</details>{{ end }}
+  {{ end }}
 </section>
 {{- if not $categories }}
 {{- range slice "taxonomy-core" "taxonomy-browser" }}
