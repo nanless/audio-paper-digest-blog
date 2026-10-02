@@ -213,6 +213,21 @@
     return matched.sort(function (a, b) { return a.rank - b.rank; });
   }
 
+  function coverageCounts(groups, core) {
+    var types = core && core.researchTypeLabels || {}, scopes = core && core.domainLabels || {};
+    return {
+      total: groups.length,
+      directions: groups.filter(function (group) { return group.conceptIds.length > 0; }).length,
+      typed: groups.filter(function (group) {
+        return group.classifications.some(function (classification) {
+          return classification.status === 'verified'
+            && Object.prototype.hasOwnProperty.call(types, classification.researchType)
+            && Object.prototype.hasOwnProperty.call(scopes, classification.domainScope);
+        });
+      }).length
+    };
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       safeSiteUrl: safeSiteUrl,
@@ -224,6 +239,7 @@
       directionState: directionState,
       selectedIds: selectedIds,
       libraryResults: libraryResults,
+      coverageCounts: coverageCounts,
     };
   }
 
@@ -682,10 +698,9 @@
       }
     }
     if (coverageNode) {
-      var covered = groups.filter(function (group) { return group.conceptIds.length; }).length;
-      coverageNode.textContent = graph ? '方向标注覆盖 ' + covered + ' / ' + groups.length + ' 条论文记录（已核身份去重，身份待核单列）。选择方向后仅匹配已确认的受控标注；未标注的历史解读不会推断归类。同分面任选其一，跨分面需同时满足。方向条件仅适用于论文解读，汇总页请清除方向条件后浏览。'
-        + (directions.role === 'primary' ? '仅匹配明确主要研究角色和主方法；条件等其他分面仍按相关标注匹配。科学主题、研究重点和产物不按词语推断主角色。' : '')
-        + ' 研究类型与范围仅取已核验的分类记录；旧分类保留，不自动推断其研究类型。'
+      var coverage = coverageCounts(groups, api);
+      coverageNode.textContent = graph ? '方向标签覆盖 ' + coverage.directions + ' / ' + coverage.total
+        + '；研究类型与范围已核验 ' + coverage.typed + ' / ' + coverage.total + '（用于类型与范围筛选）。'
         : '分类目录暂时无法确认。关键词检索仍可使用；方向链接保留为空结果，避免推断历史分类。';
     }
     if (scopeSelect) scopeSelect.value = draft.scope;

@@ -175,7 +175,8 @@ test('mobile panel stages selections, expansion does not select, cancel discards
   assert.equal(window.history.pushes.length, 1);
   assert.match(nodes['library-count'].textContent, /找到 1 条/);
   assert.match(nodes['library-directions'].textContent, /语音识别.*将语音转写为文字/);
-  assert.match(nodes['library-coverage'].textContent, /未标注的历史解读不会推断归类/);
+  assert.match(nodes['library-coverage'].textContent, /方向标签覆盖 2 \/ 2；研究类型与范围已核验 0 \/ 2/);
+  assert.match(fs.readFileSync(path.join(__dirname, '../layouts/_default/library.html'), 'utf8'), /未核验时不从旧标签推断/);
 });
 
 test('direction URL restores subtree, direct and primary filters on reload/back without replacing history', async () => {
