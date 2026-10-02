@@ -66,7 +66,7 @@
       });
       var children = graph.children(id);
       if (children.length) panel.appendChild(element('p', 'taxonomy-note', '下级方向示例：' + children.map(function (child) { return child.zh; }).join('、')));
-      panel.appendChild(element('p', 'taxonomy-note', '定义和范围说明来自对应的分类表。目录用于导航；旧文章保留发布时的名称和上级方向。0 条表示尚无已核分类记录，不代表此方向没有研究。'));
+      panel.appendChild(element('p', 'taxonomy-note', '定义和范围说明来自对应的分类表。目录用于导航。0 条表示尚无已核分类记录，不代表此方向没有研究。'));
       var link = element('a', 'rw-action', '浏览这个方向的论文 →');
       link.href = conceptURL(base, id);
       panel.appendChild(link);

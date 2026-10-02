@@ -20,7 +20,7 @@
   function researchFields(entry, graph) {
     var empty = ['暂无已核验的研究类型信息', '', '', '', '', '', '', ''];
     if (!taxonomy || !graph || typeof graph.resolveRecord !== 'function'
-      || ![taxonomy.v2Contract, taxonomy.v3Contract].includes(entry.taxonomyClassificationContract)) return empty;
+      || ![taxonomy.v2Contract, taxonomy.v3Contract, taxonomy.qualified1028Contract].includes(entry.taxonomyClassificationContract)) return empty;
     var resolved = graph.resolveRecord(entry);
     if (resolved.status !== 'verified' || !resolved.concepts.length) return empty;
     var issued = graph.versions[resolved.registrySha256];

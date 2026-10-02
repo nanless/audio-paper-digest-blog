@@ -1,0 +1,23 @@
+{{- /* Only called by the exact approved R6 issuer; original raw is preserved. */ -}}
+{{- $c := .classification }}{{ $raw := .raw }}{{ $packets := index hugo.Data "fullsite-r6-counterevidence" | default dict }}{{ $p := index $packets $c.paperId | default dict -}}
+{{- $response := $raw }}{{ $valid := and (eq (crypto.SHA256 $c.reviewResponseText) $c.reviewProof.responseSha256) (eq (crypto.SHA256 (readFile "data/fullsite-r6-counterevidence.json")) "359150ea5302eae2ac0b177962d7eb5873398977229ee18aa941ca007376620c") -}}
+{{- if $p -}}
+ {{- $r := $raw.counterEvidenceResolution | default dict -}}
+ {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $raw "keys" (slice "accepted" "issues" "verifiedChecks" "counterEvidenceResolution"))) (partial "research_exact_keys.html" (dict "value" $r "keys" (slice "contract" "packetSha256" "items"))) (eq $c.source.paperId $c.paperId) (eq $p.sourceTextSha256 $c.source.textSha256) (eq $r.contract "fullsite-source-qualified-counterevidence-v1") (eq $r.packetSha256 (crypto.SHA256 (partial "research_canonical_json.html" $p))) (reflect.IsSlice $r.items) (eq (len ($r.items | default slice)) (len $p.windows)) -}}
+ {{- $seen := slice }}{{ $reasons := slice $c.typeEvidence.rationale $c.domainEvidence.rationale }}{{ range $c.concepts }}{{ $reasons = $reasons | append .rationale }}{{ end -}}
+ {{- range $x := ($r.items | default slice) -}}
+  {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $x "keys" (slice "windowId" "answered" "decisionRationaleQuote" "counterQuote" "rationale"))) (not (in $seen $x.windowId)) (eq $x.answered true) -}}
+  {{- $seen = $seen | append $x.windowId }}{{ $window := dict }}{{ range $p.windows }}{{ if eq .windowId $x.windowId }}{{ $window = . }}{{ end }}{{ end -}}
+  {{- $literalReason := false }}{{ range $reasons }}{{ if in . ($x.decisionRationaleQuote | default "") }}{{ $literalReason = true }}{{ end }}{{ end -}}
+  {{- $valid = and $valid $window $literalReason (in ($window.quote | default "") ($x.counterQuote | default "")) (eq (crypto.SHA256 ($window.quote | default "")) $window.quoteSha256) (eq (float (add (strings.RuneCount ($window.quote | default "")) (len (findRE `[\x{10000}-\x{10FFFF}]` ($window.quote | default ""))))) $window.utf16Length) -}}
+  {{- range $entry := slice (dict "text" $x.decisionRationaleQuote "minimum" 20) (dict "text" $x.counterQuote "minimum" 20) (dict "text" $x.rationale "minimum" 40) -}}
+   {{- $t := $entry.text | default "" }}{{ $chars := add (strings.RuneCount (strings.TrimSpace $t)) (len (findRE `[\x{10000}-\x{10FFFF}]` (strings.TrimSpace $t))) -}}
+   {{- $valid = and $valid (ge $chars $entry.minimum) (not (findRE `[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]` $t)) -}}
+  {{- end -}}
+ {{- end -}}
+ {{- $response = dict "accepted" $raw.accepted "issues" $raw.issues "verifiedChecks" $raw.verifiedChecks -}}
+{{- else -}}
+ {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $raw "keys" (slice "accepted" "issues" "verifiedChecks"))) -}}
+{{- end -}}
+{{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $response.verifiedChecks "keys" (slice "researchType" "domainScope" "primaryResearchRole" "methodRole"))) -}}
+{{- return (dict "valid" (not (not $valid)) "response" $response) -}}

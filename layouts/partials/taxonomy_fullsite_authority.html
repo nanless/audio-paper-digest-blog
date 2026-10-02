@@ -2,7 +2,7 @@
      commitments are emitted by the source adapter, not copied from a cache. */ -}}
 {{- $profile := .profile | default dict }}{{ $fixture := eq (.syntheticFullsiteFixture | default false) true -}}
 {{- $bytes := dict -}}
-{{- if $fixture }}{{ $a := .fixtureAdmissionBytes | default "" }}{{ $s := .fixtureSourceBytes | default "" }}{{ $bytes = dict "admissionBytes" $a "sourceBytes" $s "admissionSha256" (crypto.SHA256 $a) "sourceSha256" (crypto.SHA256 $s) }}{{ else }}{{ $bytes = partialCached "taxonomy_fullsite_byte_pins.html" "production" }}{{ end -}}
+{{- if $fixture }}{{ $a := .fixtureAdmissionBytes | default "" }}{{ $s := .fixtureSourceBytes | default "" }}{{ $bytes = dict "admissionBytes" $a "sourceBytes" $s "admissionSha256" (crypto.SHA256 $a) "sourceSha256" (crypto.SHA256 $s) }}{{ else }}{{ $bytes = partialCached "taxonomy_fullsite_byte_pins.html" $profile.auditDependencySha256 $profile.auditDependencySha256 }}{{ end -}}
 {{- $admissionBytes := $bytes.admissionBytes }}{{ $sourceBytes := $bytes.sourceBytes -}}
 {{- $sha := `^[a-f0-9]{64}$` -}}
 {{- $valid := and $admissionBytes $sourceBytes (findRE $sha ($profile.admissionProjectionSha256 | default "") 1) (findRE $sha ($profile.sourceProjectionSha256 | default "") 1) (eq $bytes.admissionSha256 $profile.admissionProjectionSha256) (eq $bytes.sourceSha256 $profile.sourceProjectionSha256) -}}

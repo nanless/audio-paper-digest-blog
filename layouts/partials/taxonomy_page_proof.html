@@ -127,6 +127,10 @@
   {{- $path := printf "content/%s" .File.Path -}}
   {{- with index $oldHolds.withheld $path }}{{ $proof = . }}{{ end -}}
 {{- end -}}
+{{- $corrections := partial "taxonomy_fullsite_r6_corrections.html" . -}}
+{{- if and .File (eq .Section "posts") }}{{ with index $corrections (printf "content/%s" .File.Path) }}{{ $proof = . }}{{ end }}{{ end -}}
+{{- $qualified1028 := partialCached "exact1028_qualified_classification.html" . "global" -}}
+{{- if and .File (eq .Section "posts") }}{{ with index $qualified1028 (printf "content/%s" .File.Path) }}{{ $proof = . }}{{ end }}{{ end -}}
 {{- .Store.Set $memoKey $proof -}}
 {{- .Store.Set (printf "%s:ready" $memoKey) true -}}
 {{- end -}}

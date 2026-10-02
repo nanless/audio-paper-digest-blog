@@ -1,4 +1,5 @@
 {{- /* One immutable production read/hash per build, never a per-page 3 MB
      projection hash. Explicit synthetic direct-call bytes remain local. */ -}}
-{{- $a := "" }}{{ $s := "" }}{{ if fileExists "data/fullsite-taxonomy-admission.json" }}{{ $a = readFile "data/fullsite-taxonomy-admission.json" }}{{ end }}{{ if fileExists "data/fullsite-taxonomy-sources.json" }}{{ $s = readFile "data/fullsite-taxonomy-sources.json" }}{{ end -}}
+{{- $prefix := "fullsite-taxonomy" }}{{ if eq . "e1f0089a4cd9d3960bbf4e50dbe9911af4c9b6b51cffc565ffde4dc0eb548f96" }}{{ $prefix = "fullsite-r6-corrections" }}{{ end -}}
+{{- $a := "" }}{{ $s := "" }}{{ if fileExists (printf "data/%s-admission.json" $prefix) }}{{ $a = readFile (printf "data/%s-admission.json" $prefix) }}{{ end }}{{ if fileExists (printf "data/%s-sources.json" $prefix) }}{{ $s = readFile (printf "data/%s-sources.json" $prefix) }}{{ end -}}
 {{- return (dict "admissionBytes" $a "sourceBytes" $s "admissionSha256" (crypto.SHA256 $a) "sourceSha256" (crypto.SHA256 $s)) -}}

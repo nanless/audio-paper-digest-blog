@@ -57,6 +57,7 @@ function validateEnvelope(page,path,audit) {
   // Transport shape only: this exact installed whole-map commitment cannot
   // admit UI without a separately approved plan/source projection profile.
   if (f.protectedDependencySha256==='2ddcc46252f270596cbb4b533ad33237ecb4d6286ad2accc86bf4e567462ec9f') names.push('fullsite-taxonomy-audit-classification.js','fullsite-taxonomy-audit-runtime-profile.js');
+  if (f.protectedDependencySha256==='e1f0089a4cd9d3960bbf4e50dbe9911af4c9b6b51cffc565ffde4dc0eb548f96') names.splice(0,names.length,...["fullsite-taxonomy-audit-classification.js", "fullsite-taxonomy-audit-conference-title-association.js", "fullsite-taxonomy-audit-counterevidence.js", "fullsite-taxonomy-audit-exact-arxiv-title.js", "fullsite-taxonomy-audit-official-title.js", "fullsite-taxonomy-audit-original-arxiv-version.js", "fullsite-taxonomy-audit-original-conference-authority.js", "fullsite-taxonomy-audit-original-extraction.js", "fullsite-taxonomy-audit-paths.js", "fullsite-taxonomy-audit-plan.js", "fullsite-taxonomy-audit-runner.js", "fullsite-taxonomy-audit-runtime-profile.js", "fullsite-taxonomy-audit-source.js", "fullsite-taxonomy-audit-title-association.js", "fullsite-taxonomy-audit-title.js", "fullsite-taxonomy-audit.js"]);
   exact(audit.protectedDependencies.own,names,'outer implementation map');
   for (const value of Object.values(audit.protectedDependencies.own)) if (!hash(value)) fail('outer implementation SHA');
   const sourceDeps=audit.protectedDependencies.source;

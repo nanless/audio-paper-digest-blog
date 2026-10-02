@@ -202,4 +202,22 @@ module.exports={profiles:[
     "implementationFilePath": "scripts/fullsite-taxonomy-r4/fullsite-taxonomy-audit-classification.js",
     "publicationSelectionSha256": "0449c97aae60c8ffc725e89ba964dcd87ecc752eb60111b9e7043954224d12bd"
   }
+,
+{
+  "contract": "fullsite-source-taxonomy-audit-v3",
+  "registrySha256": "910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30",
+  "registryVersion": "paper-taxonomy-v2",
+  "projectionSha256": "eb61a213102f53901a8d8d86a6e5f1c1eef08ab83ae704e4aec20313ebb31fd4",
+  "snapshotSha256": "4a50d0e785536e3ee3cca46b0c696fb81277cdbab518397ed89d94824d74ba1b",
+  "implementationSha256": "bc2e49360c7cfc38073d59d8f35382d85cf6f2b09b5f5e64173a8ea931ce1a62",
+  "nativeDependencySha256": "b226b054b588e651c1484ad33058236ea5717ac96ca5a1cc01a4771550242592",
+  "auditDependencySha256": "e1f0089a4cd9d3960bbf4e50dbe9911af4c9b6b51cffc565ffde4dc0eb548f96",
+  "manifestSha256": "2d9551b1b8a5a45e5d4ff3fcd696a45645c3cb48713ff4a8d60df8ca2683a8a4",
+  "scopeSha256": "d78e0066707b2ad9bb0c612b79333f4ac7361d9d8cdb62584bdb8cef0849a19f",
+  "blogHead": "371ba49fecaf378cbbfb2321480aff90249f0eb7",
+  "blogTree": "253f563f5eb972189251740f72dcb6744c4efe2c",
+  "admissionProjectionSha256": "5d67fcbd007f0e3c49fee88a53ffada9528f03248570e532656b4429b1fe2d89",
+  "sourceProjectionSha256": "09d9ce41623aef57ec02929cc4ac21ce745d52d6823e4308aa4c85d8ff71cba0",
+  "implementationFilePath": "scripts/fullsite-taxonomy-r6/fullsite-taxonomy-audit-classification.js"
+}
 ]};

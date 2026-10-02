@@ -9,6 +9,7 @@
   var CONTRACT = 'paper-taxonomy-flat-tags-compat-v1';
   var V2_CONTRACT = 'historical-source-taxonomy-classification-v2';
   var V3_CONTRACT = 'historical-source-taxonomy-classification-v3';
+  var QUALIFIED_CONTRACT = 'exact1028-independent-review-qualified-classification-v1';
   var researchTypeLabels = Object.freeze({ engineering: '工程研究', science: '科学研究', analysis: '机制分析',
     evaluation: '评测研究', resource: '研究资源', review: '综述', experience: '实践报告', position: '观点论文' });
   var domainLabels = Object.freeze({ 'in-domain': '音频研究', 'cross-domain': '跨域交叉',
@@ -161,11 +162,12 @@
         var selected = new Set(result.concepts.map(function (node) { return node.id; }));
         var roleNode = role && source.byId[role.conceptId];
         var isV3 = record.taxonomyClassificationContract === V3_CONTRACT;
+        var isQualified1028 = record.taxonomyClassificationContract === QUALIFIED_CONTRACT && record.paperId === 'conference:icassp:2026:icassp-arnumber:11461028' && record.taxonomyRegistrySha256 === '910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30' && record.taxonomyProofSha256 === '03beb37ae2df8f7f48850f935cb274a9b0c75eebde483e9c1d6c51a5cffaeb20' && record.taxonomyEvidenceContract === QUALIFIED_CONTRACT && record.taxonomyEvidenceType === 'source-bound-independent-review-qualification';
         var mechanism = isV3 && record.researchType === 'engineering' && role && role.kind === 'method';
         var allowedFacets = isV3 && record.researchType === 'engineering' ? ['task', 'method'] : roleFacets[record.researchType];
-        var v2 = (record.taxonomyClassificationContract === V2_CONTRACT || isV3)
-          && (isV3 ? ((record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') || (record.taxonomyEvidenceType === 'source-bound-current-page-fullsite-taxonomy-v3' && record.taxonomyEvidenceContract === 'fullsite-source-taxonomy-audit-supplement-v1')) : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
-            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2')))
+        var v2 = (record.taxonomyClassificationContract === V2_CONTRACT || isV3 || isQualified1028)
+          && (isQualified1028 || (isV3 ? ((record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') || (record.taxonomyEvidenceType === 'source-bound-current-page-fullsite-taxonomy-v3' && record.taxonomyEvidenceContract === 'fullsite-source-taxonomy-audit-supplement-v1')) : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
+            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2'))))
           && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
           && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)
           && roleNode && selected.has(roleNode.id) && allowedFacets.includes(role.kind)
@@ -253,7 +255,7 @@
             if (!group[field[1]].includes(primaryId)) group[field[1]].push(primaryId);
           }
         });
-      if (resolved.status === 'verified' && [V2_CONTRACT, V3_CONTRACT].includes(record.taxonomyClassificationContract) && resolved.concepts.length) {
+      if (resolved.status === 'verified' && [V2_CONTRACT, V3_CONTRACT, QUALIFIED_CONTRACT].includes(record.taxonomyClassificationContract) && resolved.concepts.length) {
         classification.researchType = record.researchType;
         classification.domainScope = record.domainScope;
         var primaryRole = record.primaryResearchRole;
@@ -346,7 +348,7 @@
     return record && record.taxonomyClassificationContract === V3_CONTRACT && record.researchType === 'engineering' && record.primaryResearchRole && record.primaryResearchRole.kind === 'method'
       ? '主要研究机制' : roleLabels[record && record.primaryResearchRole && record.primaryResearchRole.kind] || '主要研究角色';
   }
-  return { contract: CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
+  return { contract: CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, qualified1028Contract: QUALIFIED_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
     domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
     identity: identity, groupPapers: groupPapers, query: query, counts: counts };

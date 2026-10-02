@@ -11,7 +11,7 @@
   {{- $role := "相同研究条件" -}}
   {{- if eq $concept.facet "task" }}{{ $weight = 4 }}{{ $role = "共同研究任务" }}
   {{- else if eq $concept.facet "method" }}{{ $weight = 3 }}{{ $role = "共同研究方法" }}
-  {{- else if eq $concept.facet "legacy" }}{{ $role = "共同历史标签（分类待核）" }}{{ end -}}
+  {{- else if eq $concept.facet "legacy" }}{{ $role = "相同关键词" }}{{ end -}}
   {{- range $otherIdentity, $matched := (index $catalog.concepts $id) -}}
     {{- $score := $weight -}}
     {{- $reasons := slice (printf "%s：%s" $role $concept.zh) -}}

@@ -1,0 +1,13 @@
+{{- $result := dict }}{{ $file := "data/exact1028-qualified-classification.json" -}}
+{{- if fileExists $file -}}
+ {{- $q := index hugo.Data "exact1028-qualified-classification" }}{{ $a := $q.publicationAuthority }}{{ $s := $q.source }}{{ $c := $q.originalPrimary.decision }}{{ $sha := "03beb37ae2df8f7f48850f935cb274a9b0c75eebde483e9c1d6c51a5cffaeb20" -}}
+ {{- $valid := and (eq (crypto.SHA256 (readFile $file)) $sha) (partial "exact1028_qualified_review.html" $q) -}}
+ {{- $oldHolds := partial "taxonomy_old_v2_publication_holds.html" . }}{{ $old := index hugo.Data "taxonomy-old-v2-publication-holds" }}{{ $matched := false }}{{ range $old.rows }}{{ if eq .paperId $q.paperId }}{{ $matched = eq (partial "research_canonical_json.html" .originalTuple) (partial "research_canonical_json.html" $a.predecessor) }}{{ end }}{{ end }}{{ $valid = and $valid $oldHolds.valid $matched -}}
+ {{- $context := dict "paperId" $q.paperId "admission" (dict "sourceAuthoritySha256" $s.fullsiteSourceAuthority.authoritySha256 "pages" $q.pages) "member" (dict "sourceAuthoritySha256" $s.fullsiteSourceAuthority.authoritySha256 "sourceDescriptorSha256" $q.sourceDescriptorSha256) }}{{ $valid = and $valid (partial "research_fullsite_source_descriptor.html" (dict "source" $s "context" $context)) -}}
+ {{- range $page := $q.pages -}}
+  {{- $path := $page.pagePath }}{{ $valid = and $valid (fileExists $path) }}{{ if fileExists $path }}{{ $bytes := readFile $path }}{{ $body := replaceRE `^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)` "" $bytes }}{{ $valid = and $valid (ne $body $bytes) (eq (crypto.SHA256 $bytes) $page.pageSha256) (eq (crypto.SHA256 $body) $page.bodySha256) }}{{ end -}}
+  {{- $display := merge $c $page (dict "paperId" $q.paperId "contract" "paper-taxonomy-flat-tags-compat-v1" "registrySha256" "910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30" "registryVersion" "paper-taxonomy-v2" "classificationContract" $q.contract "evidenceContract" $q.contract "evidenceType" "source-bound-independent-review-qualification" "source" $s "proofSha256" $sha) }}{{ $result = merge $result (dict $path $display) -}}
+ {{- end -}}
+ {{- if not $valid }}{{ errorf "Exact1028 independent qualification/source/predecessor/current page rejected" }}{{ end -}}
+{{- end -}}
+{{- return $result -}}

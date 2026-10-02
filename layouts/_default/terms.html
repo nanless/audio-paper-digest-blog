@@ -18,8 +18,8 @@
     <p id="taxonomy-search-status" class="taxonomy-note" aria-live="polite">选择分类视角，逐级浏览。</p>
     <details class="taxonomy-note">
       <summary>方向计数与分类范围说明</summary>
-      <p>方向数量包含已核分类和原有方向映射，不代表全站原文分类重核已完成。研究类型与范围的核验覆盖可在论文库查看。</p>
-      <p>同一篇已核论文只计一次，身份待核时按页面保留；旧文章保留发布时的名称和上级方向。数量含下级方向，兄弟方向可能重叠，不能直接相加；直接 0 条也可能有下级论文。</p>
+      <p>方向数量按论文身份去重；研究类型与范围的核验覆盖可在论文库查看。方向覆盖数量不代表每篇原文均已重新审核。</p>
+      <p>同一篇已核论文只计一次，身份待核时按页面保留。数量含下级方向，兄弟方向可能重叠，不能直接相加；直接 0 条也可能有下级论文。</p>
     </details>
     <div id="taxonomy-search-results" class="taxonomy-search-results" hidden></div>
     <nav class="taxonomy-facet-nav" aria-label="分类视角">
@@ -45,8 +45,8 @@
     {{- with index hugo.Data "taxonomy-catalog" }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
   </section>
   <details class="taxonomy-legacy">
-    <summary>历史标签与精确标签索引</summary>
-    <p class="taxonomy-note">标签索引（新旧兼容）：新发布内容使用统一分类，历史页面保留原标签。这里链接到原有精确标签页，标签计数不等于新版任务或方法统计。</p>
+    <summary>精确标签索引</summary>
+    <p class="taxonomy-note">这里链接到精确标签页，计数按页面统计，不同于按论文身份去重的方向统计。</p>
   {{ end }}
     <div class="research-terms__search">
       <label for="term-filter">{{ if $categories }}筛选分类{{ else }}筛选精确标签{{ end }}</label>

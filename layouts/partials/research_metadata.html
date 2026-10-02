@@ -78,7 +78,7 @@
       {{- if and (eq .facet "method") (eq .zh $proof.primaryMethodLabel) }}{{ $primaryMethodId = .id }}{{ $method = .zh }}{{ end -}}
     {{- end -}}
   {{- end -}}
-  {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $proof.classificationContract -}}
+  {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $proof.classificationContract -}}
     {{- /* Only an accepted, exact v2 proof replaces legacy task heuristics. */ -}}
     {{- $task = $proof.primaryTaskLabel | default "" -}}
     {{- $method = $proof.primaryMethodLabel | default "" -}}
@@ -117,7 +117,7 @@
   {{- if and (eq $proof.classificationContract "historical-source-taxonomy-classification-v3") (eq $proof.evidenceContract "historical-source-taxonomy-supplement-v3") (eq $proof.evidenceType "source-only-taxonomy-v3") (eq $proof.paperId $paperId) (partial "research_sumra_source_descriptor.html" $proof.source) -}}
     {{- $classificationSource = $proof.source -}}
   {{- end -}}
-  {{- if and (eq $proof.evidenceContract "fullsite-source-taxonomy-audit-supplement-v1") (eq $proof.evidenceType "source-bound-current-page-fullsite-taxonomy-v3") (eq $proof.paperId $paperId) -}}
+  {{- if and (or (and (eq $proof.evidenceContract "fullsite-source-taxonomy-audit-supplement-v1") (eq $proof.evidenceType "source-bound-current-page-fullsite-taxonomy-v3")) (and (eq $proof.evidenceContract "exact1028-independent-review-qualified-classification-v1") (eq $proof.evidenceType "source-bound-independent-review-qualification"))) (eq $proof.paperId $paperId) -}}
     {{- /* This is classification/source provenance, not an old identity
          supplement. Only actual retained URLs may replace citation URLs. */ -}}
     {{- $classificationProvenance = $proof.source -}}

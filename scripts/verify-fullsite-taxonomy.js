@@ -42,6 +42,8 @@ function verify(root) {
     const stat=fs.lstatSync(selectorFile);if(!stat.isFile()||stat.isSymbolicLink())throw Error('Publication selection must be a regular file');
     publication=selection.read(fs.readFileSync(selectorFile),expected,history,pins).counts;
   }else if(fs.existsSync(selectorFile))throw Error('Unexpected selection for this approved collection');
+  require('./lib/fullsite-r6-corrections').read(root,history);
+  require('./lib/exact1028-qualified-classification').read(root);
   return {...{records:Object.keys(history.records).length,papers:Object.keys(history.classificationRecords).length},...(publication?{publication}: {})};
 }
 module.exports={verify};

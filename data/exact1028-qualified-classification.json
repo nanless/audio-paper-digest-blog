@@ -1,0 +1,316 @@
+{
+  "contract": "exact1028-independent-review-qualified-classification-v1",
+  "paperId": "conference:icassp:2026:icassp-arnumber:11461028",
+  "qualificationId": "401da13e-467e-4d40-b415-c27cffdca9b3",
+  "source": {
+    "kind": "fullsite-historical-direct-source-v1",
+    "paperId": "conference:icassp:2026:icassp-arnumber:11461028",
+    "generation": null,
+    "sourceId": "conference:icassp:2026:icassp-arnumber:11461028",
+    "textSha256": "9600e07e73dd228614f5b7de9ce9fa4aa1b79ccb9529defa4496bab2284f0edd",
+    "pdfSha256": "3606f7850bbcff994a0551b5cbf91abea3533afa8c45bda3127f3c6f9f8b756b",
+    "sourceManifestSha256": null,
+    "structuredArtifactsSha256": "8ee70fab1001bf19ffafaa73b2b1caf81f4e24450203c88e13ec9db9c2aeff14",
+    "sourceVersion": null,
+    "sourceBinding": null,
+    "sourceRunIdentitySha256": null,
+    "pdfVersionBinding": null,
+    "sourceVersionWarning": "",
+    "sourceTitle": "Generalizability of Predictive and Generative Speech Enhancement Models to Pathological Speakers",
+    "sourceTitleBinding": {
+      "contract": "sealed-conference-metadata-title-binding-v1",
+      "sourceTitleSha256": "b268dfc4c015a18f1114768c786d332a0b73886442c6a6f796f2dc615d0c66fa",
+      "writerInputsSha256": "6028fe4be3c48dbba77ca9af3ab634f8dc5ad563ab59ec02831eacfa2c4df239",
+      "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5"
+    },
+    "originalSourceSeal": {
+      "contract": "fullsite-original-conference-source-seal-v1",
+      "sealFileSha256": "9611d5d9e6eeef1010ced96fcf93242b6f1d99bb0f94d0c8afeaaedbbca4595b",
+      "sealSha256": "ee488de15e39d0d02d11ad052834c401256e8cd49f6381e8d64a76ee78560d25",
+      "sourceImplementationSha256": "df8d10186ec14ad59714a4eee5069db483e51eed821601e0b4eb1c545ac20407",
+      "sourceDescriptorSha256": "ea8044da186c5417562257be2550399e57098c168e813e22fa6bdab0e2ee18cd",
+      "textSha256": "9600e07e73dd228614f5b7de9ce9fa4aa1b79ccb9529defa4496bab2284f0edd",
+      "structuredArtifactsSha256": "8ee70fab1001bf19ffafaa73b2b1caf81f4e24450203c88e13ec9db9c2aeff14",
+      "pdfExtractionsAtSeal": 1,
+      "pdfExtractionsAtAdmission": 0
+    },
+    "sourceSnapshotSha256": null,
+    "sourceUrl": "https://ieeexplore.ieee.org/document/11461028",
+    "pdfUrl": null,
+    "provenanceDisclosure": "历史本地封存来源；未记录下载时网络响应，身份与PDF/metadata绑定已重放。",
+    "fullsiteSourceAuthority": {
+      "contract": "historical-direct-source-v1",
+      "planSha256": "3ed0ec460c2110f6b6283851ec381930e1c20b413e0b7d29cd1811682a4644d5",
+      "authoritySha256": "2f23680f8d002add51d385d7d4853279345bee3d691b21576e6969a5548442ec",
+      "physicalPinsSha256": "b413718e2b332ce2de2599f8c2873951d56df1542aba2f9415fd6fec788fec10",
+      "controlledOriginalIntake": null
+    },
+    "writerInputsSha256": "6028fe4be3c48dbba77ca9af3ab634f8dc5ad563ab59ec02831eacfa2c4df239",
+    "sourceBindings": [
+      {
+        "sourceSet": "workspace-icassp-2026",
+        "provenance": "retained-local-crawler",
+        "metadataSha256": "924ea650cbde4e60da630bf1f0271a734e0c4f185a3094aabcac41b44f85cee5",
+        "metadataRecordIndex": 536,
+        "metadataIdentityBindingSha256": "1773bf637b5fa0f78715d95d1104513889597fe57048076e981b8182ed150226",
+        "pdfSha256": "3606f7850bbcff994a0551b5cbf91abea3533afa8c45bda3127f3c6f9f8b756b",
+        "pdfBytes": 900983,
+        "pdfIdentityBindingSha256": "805360bfcfeda25c6d3802043da07d8f294457eeb4b39c392bc7e8efe07a00be",
+        "sourceBindingSha256": "63c281016a26ab4f6691109681ff78c70f3303697f50428ee6b3805dd2e839a1",
+        "acquisition": {
+          "openreviewResponseBytes": null,
+          "provenanceStatement": "PDF bytes predate the network receipt system and are retained local crawler input.",
+          "receipt": null,
+          "sourceAuthors": null,
+          "sourceDoi": null,
+          "sourceKind": "retained-local-no-network-receipt",
+          "sourceTitle": null,
+          "versionRelation": null
+        },
+        "acquisitionSha256": "50266ed4d954fb8e76048af699e370cf3abb1f05d3e8e063007c989a3dd15ed4"
+      }
+    ],
+    "originalTitle": "Generalizability of Predictive and Generative Speech Enhancement Models to Pathological Speakers",
+    "sourceDoi": null,
+    "versionRelation": null,
+    "currentPageSourceIdentity": {
+      "contract": "fullsite-current-page-sealed-source-identity-v1",
+      "normalizationContract": "fullsite-source-title-normalization-front-window-v2",
+      "paperId": "conference:icassp:2026:icassp-arnumber:11461028",
+      "sourceTitleSha256": "b268dfc4c015a18f1114768c786d332a0b73886442c6a6f796f2dc615d0c66fa",
+      "pages": [
+        {
+          "pagePath": "content/posts/2026-04-29-generalizability-of-predictive-and-generative.md",
+          "pageSha256": "4e5478090b8fef331e26228b69e62953a47701534dc36cd41fb6312e4eb2ac25",
+          "bodySha256": "6331fb43f44a627f86307f2908a973ded1739ab9f2872a9f3e64f6aa12b38fe0",
+          "paperId": "conference:icassp:2026:icassp-arnumber:11461028",
+          "originalTitleSha256": "b268dfc4c015a18f1114768c786d332a0b73886442c6a6f796f2dc615d0c66fa",
+          "identityBasis": "original-sealed-plan-and-current-page-sha"
+        }
+      ],
+      "disclosure": "本次分类将当前页面明确论文身份与封存来源重新核对；不宣称补齐旧导读的来源审核。"
+    }
+  },
+  "sourceDescriptorSha256": "a87c9dfd87da535327ae0c7f8634819b2b8a999fd2dca2e803f0f30740abe56e",
+  "sourceTextSha256": "9600e07e73dd228614f5b7de9ce9fa4aa1b79ccb9529defa4496bab2284f0edd",
+  "pages": [
+    {
+      "pagePath": "content/posts/2026-04-29-generalizability-of-predictive-and-generative.md",
+      "pageKey": "page:d7c808e7c43eee710ea8cbf997366db50f18012354170bd5ba66b90eab5c22b6",
+      "pageSha256": "4e5478090b8fef331e26228b69e62953a47701534dc36cd41fb6312e4eb2ac25",
+      "bodySha256": "6331fb43f44a627f86307f2908a973ded1739ab9f2872a9f3e64f6aa12b38fe0"
+    }
+  ],
+  "originalPrimary": {
+    "runId": "3f0a30f0-6346-466e-99d1-dd339a2ea8a6",
+    "round": 2,
+    "outerFingerprint": "91cb2f464c3c868253efb843d8b1580da4e5e193a1e83c79b0956eff8a5ab4a3",
+    "rawFileSha256": "b0528696cdc03bf4b21c04a7d70ed8497c34e6c27eb29a5dd96784c4016eb271",
+    "responseSha256": "62bd817c09b8573f35ec1a9df1dab2b9756af23089aa6ee276554b8b89d58fe1",
+    "decisionSha256": "f6f2db44f6948fe3e82b7f217b061d1412f8a9c3a5a88f6a9819d23267cb02be",
+    "decision": {
+      "researchType": "evaluation",
+      "typeEvidence": {
+        "quote": " The advent of deep learning has revolutionized the field,IEEE                                                        SE models and developing tailored solutions for handling patholog-           with approaches employing data-driven solutions to model complex\n2026          signal patterns from training data [5, 6]. Data-driven solutions have     ical speech is therefore a critical research need.\n-                                                                              This paper systematically investigates the performance of SOTA             traditionally relied on predictive models that aim to learn a single\n                                                                                      predictive and generative SE models on pathological speech and             deterministic map",
+        "rationale": "作者主目的为系统考察现有SOTA预测与生成SE模型在病理语音上的性能并比较三种现成训练策略，而非提出新的增强架构或生成机制，故以评测与泛化比较为主要贡献，符合evaluation而非engineering新系统。",
+        "quoteStart": 8712,
+        "evidenceQuoteStart": 9230,
+        "quoteSha256": "a610a26e6f907f967d80ffd8219cd4aa68331f9fe5a718c89fd25a92eb426f59"
+      },
+      "domainScope": "in-domain",
+      "domainEvidence": {
+        "quote": " In            Y (j, k) = X(j, k) + N(j, k),                (2)\n                                                                                 this work, a SB model with SDE sampler is used. For additional\nwhere Y (j, k), X(j, k) and N(j, k) are the complex-valued STFT     details, the reader is referred to [14].\ncoefficients of noisy, clean speech, and noise signals, j represents\nthe frequency bin index, and k represents the time frame index. The                  3. PATHOLOGICAL SE STRATEGIES\nobjective of single-channel SE is to estimate the clean speech signal\ngiven the noisy microphone recording. In the following, several en-      It is well established that SE models exhibit variable performance\nhancement approaches considered in this paper are briefly reviewed.",
+        "rationale": "核心监督与评价目标是从含噪麦克风记录估计干净语音信号，病理人群仅为分布偏移条件，输出不是疾病类别或临床量表，故仍为音频本域研究。",
+        "quoteStart": 12468,
+        "evidenceQuoteStart": 13206,
+        "quoteSha256": "134d908196dc57ee5c9ff63d77740f42354396ebaab5958264dd1e86e1e803e3"
+      },
+      "primaryResearchRole": {
+        "kind": "research_focus",
+        "conceptId": "research_focus.robustness",
+        "label": "鲁棒性"
+      },
+      "primaryTaskId": "",
+      "primaryTaskLabel": "",
+      "primaryScientificTopicId": "",
+      "primaryScientificTopicLabel": "",
+      "primaryMethodId": "method.sft",
+      "primaryMethodLabel": "SFT",
+      "methodNotApplicable": false,
+      "methodNotApplicableReason": "",
+      "methodNotApplicableEvidence": null,
+      "primaryMechanismEvidence": null,
+      "concepts": [
+        {
+          "id": "research_focus.robustness",
+          "facet": "research_focus",
+          "label": "鲁棒性",
+          "quote": "      alization even within the same speaker group. More importantly,\n    In terms of model complexity, the number of trainable parame-    Table 2 shows that for both considered SE models across all evalua-\nters is 7.6M for the MM model, 22.1M for the CR model, 25.2M for     tion metrics, performance drops even further for pathological speak-\nthe SGMSE+ model, and 25.2M for the SB model.                      ers compared to neurotypical speakers. This gap is expected due to\n    Training is carried out using a batch size of 8 and a total of 1000     the different statistical distributions of neurotypical and pathological\nepochs, with early stopping if the validation loss does not decrease    speech [18, 19] and highlights a critical limitation of current SOTA\nfor 20 consecutive epochs.",
+          "rationale": "在神经典型CROWD训练的模型在病理说话人上指标进一步下降，突出分布失配下的泛化局限，直接支撑鲁棒性/泛化评测主角色。",
+          "quoteStart": 22565,
+          "evidenceQuoteStart": 23857,
+          "quoteSha256": "0676715ebb27237feb658a2bb95aee4bf68ea16eb6663512c01656078c854e09"
+        },
+        {
+          "id": "task.speech-enhancement",
+          "facet": "task",
+          "label": "语音增强",
+          "quote": " In            Y (j, k) = X(j, k) + N(j, k),                (2)\n                                                                                 this work, a SB model with SDE sampler is used. For additional\nwhere Y (j, k), X(j, k) and N(j, k) are the complex-valued STFT     details, the reader is referred to [14].\ncoefficients of noisy, clean speech, and noise signals, j represents\nthe frequency bin index, and k represents the time frame index. The                  3. PATHOLOGICAL SE STRATEGIES\nobjective of single-channel SE is to estimate the clean speech signal\ngiven the noisy microphone recording. In the following, several en-      It is well established that SE models exhibit variable performance\nhancement approaches considered in this paper are briefly reviewed.",
+          "rationale": "全文目标定义为由含噪记录估计干净语音，符合改善退化语音中目标言语的语音增强定义，为被评测的任务对象。",
+          "quoteStart": 12468,
+          "evidenceQuoteStart": 13206,
+          "quoteSha256": "134d908196dc57ee5c9ff63d77740f42354396ebaab5958264dd1e86e1e803e3"
+        },
+        {
+          "id": "method.sft",
+          "facet": "method",
+          "label": "SFT",
+          "quote": "     tential of fine-tuning SE models that have been pre-trained on the\nTo facilitate comparison among different datasets, we report the     larger CROWD dataset using the PC-GITA dataset.\ndifference of the metric values between the enhanced signals and the          3. Speaker-specific models. We finally assess the performance\nnoisy mixtures.                                                       of speaker-specific SE models, where the models pre-trained on\n                                                                       the CROWD dataset are fine-tuned using data from each individual\n                                                                   speaker from the PC-GITA dataset. To this end, we use a subset\n                 5.",
+          "rationale": "用更大CROWD预训练模型再以PC-GITA病理数据微调，以及以个体说话人数据微调，是实际实施的核心监督微调研究程序，而非仅提及的基线架构。",
+          "quoteStart": 24845,
+          "evidenceQuoteStart": 26248,
+          "quoteSha256": "0194886a6ce2c7cc04e42add67812460454bfc84278d324c3f35dcd2ab03ca96"
+        },
+        {
+          "id": "signal.speech",
+          "facet": "signal",
+          "label": "语音",
+          "quote": " For this category    Clean speech datasets:  For the results presented in the following\nof approaches, we use a DNN model trained to estimate the real and     section, we use the Spanish CROWD [34] and PC-GITA [35] clean\nimaginary part of the clean STFT coefficients from the noisy STFT    speech datasets. CROWD is a large dataset of neurotypical speech\ncoefficients [28]. Since the mean square error (MSE) is a standard    used to pretrain the considered SE models. It contains 37.8 hours of\nand straightforward choice in regression problems, the training loss    recordings from 174 healthy speakers sampled at 48 kHz.",
+          "rationale": "训练与评测使用CROWD和PC-GITA干净语音数据集并加CHiME3噪声构造混合，证明研究对象为言语声学信号。",
+          "quoteStart": 16291,
+          "evidenceQuoteStart": 17214,
+          "quoteSha256": "32476208cac203e68c747a698d22285470b14b27ae95bab249d43d090256eded"
+        }
+      ]
+    }
+  },
+  "originalNativeStatus": {
+    "accepted": 0,
+    "failed": 1,
+    "changed": false
+  },
+  "independentReview": {
+    "protocol": "exact1028-review-only-source-rationale-id-v1",
+    "originalProposalSha256": "b557314c320fb2a175bba25631c52245143b6a30da425241fb5b6b1d2b2d3496",
+    "originalPromptSha256": "c18cf9a7938a0544cacd23f5cbefb72f361d19d14ab4eda131cf9a5c8354a954",
+    "rawFileSha256": "821c64838b222619221d23319c8d7a06d95449d6ff8c5cc6efae9e287351d726",
+    "responseText": "{\"accepted\": true, \"issues\": [], \"verifiedChecks\": {\"researchType\": true, \"domainScope\": true, \"primaryResearchRole\": true, \"methodRole\": true}, \"counterEvidenceResolution\": {\"contract\": \"exact1028-review-only-source-rationale-id-v1\", \"packetSha256\": \"afcf6c159f4f111e208057c1060cc62b0d865379a8eaa4ab8b1d14f55b79b941\", \"items\": [{\"windowId\": \"w1\", \"answered\": true, \"decisionRationaleID\": \"decision:type\", \"sourceQuoteID\": \"source:w1\", \"rationale\": \"待审evaluation理由已明确主目的是系统考察现有SOTA模型性能并比较三种现成训练策略而非提出新架构，与w1声明的systematically investigates及三种策略列举完全一致，排除了engineering新机制解读。\"}, {\"windowId\": \"w2\", \"answered\": true, \"decisionRationaleID\": \"decision:concept:method.sft\", \"sourceQuoteID\": \"source:w2\", \"rationale\": \"待审SFT理由指出用CROWD预训练再以PC-GITA及个体数据微调是实际实施的核心监督微调程序，w2详述的三种训练/微调/说话人微调比较程序正是该方法的实施边界，未提出新生成机制。\"}, {\"windowId\": \"w3\", \"answered\": true, \"decisionRationaleID\": \"decision:concept:research_focus.robustness\", \"sourceQuoteID\": \"source:w3\", \"rationale\": \"待审鲁棒性理由指出在CROWD训练模型在病理说话人上指标下降突出分布失配泛化局限，w3结论重申病理与神经典型间差距持续存在且需病理感知微调，直接支撑泛化鲁棒性为主角色而非临床预测。\"}]}}",
+    "responseSha256": "75774176ed1cc28e16c5a739a3e6877d6ed0e646e1c64fb680cdf9ee01692781",
+    "injectedResponseText": "{\"accepted\":true,\"issues\":[],\"verifiedChecks\":{\"researchType\":true,\"domainScope\":true,\"primaryResearchRole\":true,\"methodRole\":true},\"counterEvidenceResolution\":{\"contract\":\"fullsite-source-qualified-counterevidence-v1\",\"packetSha256\":\"afcf6c159f4f111e208057c1060cc62b0d865379a8eaa4ab8b1d14f55b79b941\",\"items\":[{\"windowId\":\"w1\",\"answered\":true,\"decisionRationaleQuote\":\"作者主目的为系统考察现有SOTA预测与生成SE模型在病理语音上的性能并比较三种现成训练策略，而非提出新的增强架构或生成机制，故以评测与泛化比较为主要贡献，符合evaluation而非engineering新系统。\",\"counterQuote\":\"This paper systematically investigates the performance of SOTA             traditionally relied on predictive models that aim to learn a single\\n                                                                                      predictive and generative SE models on pathological speech and             deterministic mapping from noisy to clean speech, for example by2026                                                                             proposes strategies to improve their effectiveness. Specifically, we            estimating spectral masks [7, 8] or spectral coefficients [9]. Such\\n                                                                                    consider: (i) training models from scratch using pathological data,\\n                 This work was supported by the Swiss National Science Foundation      (ii) fine-tuning models pre-trained on neurotypical speech with ad-ICASSP\\n              project 200021 215187 on “Pathological Speech Enhancement”.                ditional pathological data, and (iii) speaker-specific personalization\\n\\n\\n          979-8-3315-6701-9/26/$31.00 ©2026 IEEE             15857                                ICASSP 2026\\n\\n                          Authorized licensed use limited to: IEEE Xplore. Downloaded on April 27,2026 at 12:30:44 U\",\"rationale\":\"待审evaluation理由已明确主目的是系统考察现有SOTA模型性能并比较三种现成训练策略而非提出新架构，与w1声明的systematically investigates及三种策略列举完全一致，排除了engineering新机制解读。\"},{\"windowId\":\"w2\",\"answered\":true,\"decisionRationaleQuote\":\"用更大CROWD预训练模型再以PC-GITA病理数据微调，以及以个体说话人数据微调，是实际实施的核心监督微调研究程序，而非仅提及的基线架构。\",\"counterQuote\":\"5.3. Pathological SE models\\nwhile all other models were trained on an RTX 3090 GPU.\\n                                                                      In this section, we explore the following strategies to improve the SE\\n                                                               performance of the CR and SB models for pathological speakers:\\n4.3. Evaluation\\n                                                                                  1. Training models from scratch.  First, we investigate whether\\nThe performance is evaluated through four objective measures, i.e.,     current SOTA SE enhancement models can be trained from scratch\\nthe extended short-time objective intelligibility (ESTOI)) [37], the    on small clean speech databases such as PC-GITA. This contrasts\\nwideband perceptual evaluation of speech quality (PESQ) [38], the    with the conventional practice of training SE models on much larger\\nfrequency-weighted segmental SNR (fwSSNR) [39], and the SI-    corpora such as CROWD, consisting of only neurotypical speech.\\nSDR [27]. For all these measures, the clean speech signal is used as          2. Fine-tuning pre-trained models. We further explore the po-\\nthe reference signal, and higher values indicate better performance.     tential of fine-tuning SE models that have been pre-trained on the\\nTo facilitate comparison among different datasets, we report the     larger CROWD dataset using the PC-GITA dataset.\\ndifference of the metric values between the enhanced signals and the          3. Speaker-specific models. We finally assess the performance\\nnoisy mixtures.                                                       of speaker-specific SE models, where the models pre-trained on\\n                                                                       the CROWD dataset are fine-tuned using data from each individual\\n                                                                   speaker from the PC-GITA dataset. To this end, we use a subset\\n                 5. RESULTS AND DISCUSSION\\n                                                                      of a speaker’s recordings as fine-tuning/validation data, while the\\n                                                                 remaining recordings are used as testing data. To ensure that the5.1. Performance of SE models on the CROWD dataset\\n                                                                    conclusions we draw from these models are not influenced by the\\nSince SE models are traditionally benchmarked on English data,     specific subset of data used for fine-tuning/validation/testing, we\\nwe first evaluate performance on the neurotypical Spanish CROWD     report the average performance of two speaker-specific models, one\\ndataset to establish a baseline. This step is importa\",\"rationale\":\"待审SFT理由指出用CROWD预训练再以PC-GITA及个体数据微调是实际实施的核心监督微调程序，w2详述的三种训练/微调/说话人微调比较程序正是该方法的实施边界，未提出新生成机制。\"},{\"windowId\":\"w3\",\"answered\":true,\"decisionRationaleQuote\":\"在神经典型CROWD训练的模型在病理说话人上指标进一步下降，突出分布失配下的泛化局限，直接支撑鲁棒性/泛化评测主角色。\",\"counterQuote\":\"6. CONCLUSION    Fine-tuning pre-trained models:  Fine-tuning models trained on\\nCROWD with pathological data yields the best overall performance,\\noutperforming training from scratch across all metrics for both con-    This paper systematically analyzed the performance of SOTA pre-\\nsidered models. This suggests that large neurotypical corpora are     dictive and generative SE models for pathological speakers. While\\nvaluable for learning general clean speech characteristics, while fine-     these models perform well for neurotypical speakers, their effec-\\ntuning with relatively little pathological data enables models to cap-     tiveness on pathological speech remains limited. To address this,\\nture disorder-specific traits. As with training from scratch, SB typ-   we explored three strategies, i.e., training from scratch on patho-\\nically surpasses CR except in SI-SDR improvement. The gap be-     logical datasets, fine-tuning neurotypical-pretrained models with\\ntween neurotypical and pathological speakers, however, persists.        pathological data, and adapting neurotypical-pretrained models with\\n    Speaker-specific fine-tuning:  Speaker-specific models achieve     speaker-specific data. Results showed that fine-tuning neurotypical-\\nthe lowest performance among all strategies, across both speaker     pretrained models with pathological data consistently yields the\\ngroups and all metrics. Additional experiments (not shown here due     best performance for pathological speakers across both the predic-\\nto space constraints) suggest this is due to limited amount of data     tive CR and generative SB models, with the SB model generally\\navailable per speaker. With only ≈50 s of data per speaker, the    providing the strongest performance. Nevertheless, a clear perfor-\\nmodels cannot learn robust representations, leading to poorer gener-    mance gap between neurotypical and pathological speakers persists,\\nalization compared to strategies that leverage more data from multi-     likely due to the high variability across pathological speech. These\\nple speakers. In summary, the most effective strategy for improving     findings highlight the importance of developing pathology-aware\\nSE performance on pathological speech is to pretrain SOTA models     fine-tuning strategies that explicitly incorporate domain knowledge\\non large neurotypical corpora and fine-tune them on smaller patho-    about speech disorders, enabling \",\"rationale\":\"待审鲁棒性理由指出在CROWD训练模型在病理说话人上指标下降突出分布失配泛化局限，w3结论重申病理与神经典型间差距持续存在且需病理感知微调，直接支撑泛化鲁棒性为主角色而非临床预测。\"}]}}",
+    "injectedResponseSha256": "59948d559d6278e7fd1a6cf958307def1e3810cf0b5f0850ec124bafc0fcc2a8",
+    "packetSha256": "afcf6c159f4f111e208057c1060cc62b0d865379a8eaa4ab8b1d14f55b79b941",
+    "originalPacketContract": "fullsite-source-qualified-counterevidence-v1",
+    "sourceWindows": {
+      "source:w1": {
+        "windowId": "w1",
+        "utf16Offset": 9190,
+        "utf16Length": 1300,
+        "quote": "This paper systematically investigates the performance of SOTA             traditionally relied on predictive models that aim to learn a single\n                                                                                      predictive and generative SE models on pathological speech and             deterministic mapping from noisy to clean speech, for example by2026                                                                             proposes strategies to improve their effectiveness. Specifically, we            estimating spectral masks [7, 8] or spectral coefficients [9]. Such\n                                                                                    consider: (i) training models from scratch using pathological data,\n                 This work was supported by the Swiss National Science Foundation      (ii) fine-tuning models pre-trained on neurotypical speech with ad-ICASSP\n              project 200021 215187 on “Pathological Speech Enhancement”.                ditional pathological data, and (iii) speaker-specific personalization\n\n\n          979-8-3315-6701-9/26/$31.00 ©2026 IEEE             15857                                ICASSP 2026\n\n                          Authorized licensed use limited to: IEEE Xplore. Downloaded on April 27,2026 at 12:30:44 U",
+        "quoteSha256": "fd2378173560cd19c276e62a2d289f1f5c6b0feed81b3b17078e806a61c66556"
+      },
+      "source:w2": {
+        "windowId": "w2",
+        "utf16Offset": 23590,
+        "utf16Length": 2800,
+        "quote": "5.3. Pathological SE models\nwhile all other models were trained on an RTX 3090 GPU.\n                                                                      In this section, we explore the following strategies to improve the SE\n                                                               performance of the CR and SB models for pathological speakers:\n4.3. Evaluation\n                                                                                  1. Training models from scratch.  First, we investigate whether\nThe performance is evaluated through four objective measures, i.e.,     current SOTA SE enhancement models can be trained from scratch\nthe extended short-time objective intelligibility (ESTOI)) [37], the    on small clean speech databases such as PC-GITA. This contrasts\nwideband perceptual evaluation of speech quality (PESQ) [38], the    with the conventional practice of training SE models on much larger\nfrequency-weighted segmental SNR (fwSSNR) [39], and the SI-    corpora such as CROWD, consisting of only neurotypical speech.\nSDR [27]. For all these measures, the clean speech signal is used as          2. Fine-tuning pre-trained models. We further explore the po-\nthe reference signal, and higher values indicate better performance.     tential of fine-tuning SE models that have been pre-trained on the\nTo facilitate comparison among different datasets, we report the     larger CROWD dataset using the PC-GITA dataset.\ndifference of the metric values between the enhanced signals and the          3. Speaker-specific models. We finally assess the performance\nnoisy mixtures.                                                       of speaker-specific SE models, where the models pre-trained on\n                                                                       the CROWD dataset are fine-tuned using data from each individual\n                                                                   speaker from the PC-GITA dataset. To this end, we use a subset\n                 5. RESULTS AND DISCUSSION\n                                                                      of a speaker’s recordings as fine-tuning/validation data, while the\n                                                                 remaining recordings are used as testing data. To ensure that the5.1. Performance of SE models on the CROWD dataset\n                                                                    conclusions we draw from these models are not influenced by the\nSince SE models are traditionally benchmarked on English data,     specific subset of data used for fine-tuning/validation/testing, we\nwe first evaluate performance on the neurotypical Spanish CROWD     report the average performance of two speaker-specific models, one\ndataset to establish a baseline. This step is importa",
+        "quoteSha256": "7b21f1a293e064d6e8e16ebbac554c1231c853cbdc77419fc0cd5a914b8a1687"
+      },
+      "source:w3": {
+        "windowId": "w3",
+        "utf16Offset": 31169,
+        "utf16Length": 2450,
+        "quote": "6. CONCLUSION    Fine-tuning pre-trained models:  Fine-tuning models trained on\nCROWD with pathological data yields the best overall performance,\noutperforming training from scratch across all metrics for both con-    This paper systematically analyzed the performance of SOTA pre-\nsidered models. This suggests that large neurotypical corpora are     dictive and generative SE models for pathological speakers. While\nvaluable for learning general clean speech characteristics, while fine-     these models perform well for neurotypical speakers, their effec-\ntuning with relatively little pathological data enables models to cap-     tiveness on pathological speech remains limited. To address this,\nture disorder-specific traits. As with training from scratch, SB typ-   we explored three strategies, i.e., training from scratch on patho-\nically surpasses CR except in SI-SDR improvement. The gap be-     logical datasets, fine-tuning neurotypical-pretrained models with\ntween neurotypical and pathological speakers, however, persists.        pathological data, and adapting neurotypical-pretrained models with\n    Speaker-specific fine-tuning:  Speaker-specific models achieve     speaker-specific data. Results showed that fine-tuning neurotypical-\nthe lowest performance among all strategies, across both speaker     pretrained models with pathological data consistently yields the\ngroups and all metrics. Additional experiments (not shown here due     best performance for pathological speakers across both the predic-\nto space constraints) suggest this is due to limited amount of data     tive CR and generative SB models, with the SB model generally\navailable per speaker. With only ≈50 s of data per speaker, the    providing the strongest performance. Nevertheless, a clear perfor-\nmodels cannot learn robust representations, leading to poorer gener-    mance gap between neurotypical and pathological speakers persists,\nalization compared to strategies that leverage more data from multi-     likely due to the high variability across pathological speech. These\nple speakers. In summary, the most effective strategy for improving     findings highlight the importance of developing pathology-aware\nSE performance on pathological speech is to pretrain SOTA models     fine-tuning strategies that explicitly incorporate domain knowledge\non large neurotypical corpora and fine-tune them on smaller patho-    about speech disorders, enabling ",
+        "quoteSha256": "2c06086ca00adb4fb555d3b656170b9794929906cb478d634bb836c40aed6f46"
+      }
+    },
+    "rationaleDictionary": {
+      "decision:type": "作者主目的为系统考察现有SOTA预测与生成SE模型在病理语音上的性能并比较三种现成训练策略，而非提出新的增强架构或生成机制，故以评测与泛化比较为主要贡献，符合evaluation而非engineering新系统。",
+      "decision:domain": "核心监督与评价目标是从含噪麦克风记录估计干净语音信号，病理人群仅为分布偏移条件，输出不是疾病类别或临床量表，故仍为音频本域研究。",
+      "decision:concept:research_focus.robustness": "在神经典型CROWD训练的模型在病理说话人上指标进一步下降，突出分布失配下的泛化局限，直接支撑鲁棒性/泛化评测主角色。",
+      "decision:concept:task.speech-enhancement": "全文目标定义为由含噪记录估计干净语音，符合改善退化语音中目标言语的语音增强定义，为被评测的任务对象。",
+      "decision:concept:method.sft": "用更大CROWD预训练模型再以PC-GITA病理数据微调，以及以个体说话人数据微调，是实际实施的核心监督微调研究程序，而非仅提及的基线架构。",
+      "decision:concept:signal.speech": "训练与评测使用CROWD和PC-GITA干净语音数据集并加CHiME3噪声构造混合，证明研究对象为言语声学信号。"
+    },
+    "quoteBindings": [
+      {
+        "windowId": "w1",
+        "sourceQuoteID": "source:w1",
+        "sourceQuoteStart": 9190,
+        "sourceQuoteEnd": 10490,
+        "sourceQuoteSha256": "fd2378173560cd19c276e62a2d289f1f5c6b0feed81b3b17078e806a61c66556",
+        "decisionRationaleID": "decision:type",
+        "decisionRationaleSha256": "2879d91b61f9c03b038a2b0a515f6b86bc184b4757f633f288176b9b2f7503ac",
+        "bindingMethod": "exact-ID-selection-program-injection-no-normalization"
+      },
+      {
+        "windowId": "w2",
+        "sourceQuoteID": "source:w2",
+        "sourceQuoteStart": 23590,
+        "sourceQuoteEnd": 26390,
+        "sourceQuoteSha256": "7b21f1a293e064d6e8e16ebbac554c1231c853cbdc77419fc0cd5a914b8a1687",
+        "decisionRationaleID": "decision:concept:method.sft",
+        "decisionRationaleSha256": "a090626341de66c1ff92c86eaba98ef8d05b602d516e9e2cd87b13f8adf4829e",
+        "bindingMethod": "exact-ID-selection-program-injection-no-normalization"
+      },
+      {
+        "windowId": "w3",
+        "sourceQuoteID": "source:w3",
+        "sourceQuoteStart": 31169,
+        "sourceQuoteEnd": 33619,
+        "sourceQuoteSha256": "2c06086ca00adb4fb555d3b656170b9794929906cb478d634bb836c40aed6f46",
+        "decisionRationaleID": "decision:concept:research_focus.robustness",
+        "decisionRationaleSha256": "2b5a059a861e86d2271f689c966c3089ce00f96fcad7ba2872a867fc6c7c0db2",
+        "bindingMethod": "exact-ID-selection-program-injection-no-normalization"
+      }
+    ],
+    "fourChecks": {
+      "accepted": true,
+      "issues": [],
+      "verifiedChecks": {
+        "researchType": true,
+        "domainScope": true,
+        "primaryResearchRole": true,
+        "methodRole": true
+      }
+    },
+    "usageReceiptSha256": "16524578181a0781704503fcceebe01d2348b5977b9153ccccedf70b925129d8",
+    "actualQualificationFileSha256": "c0650ef60ce9ac964c47e5951d168adf579f58ae12ac17ae2770ff150cf1139b"
+  },
+  "publicationAuthority": {
+    "contract": "root-exact1028-reviewed-existing-primary-eligibility-v1",
+    "rootAuthoritySha256": "b586c2be9dd4d2d9e07f3f232fca81333cbe87b34fc0b95441c4c75c5c3f36b9",
+    "predecessor": {
+      "classificationContract": "historical-source-taxonomy-classification-v2",
+      "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+      "classificationRecordSha256": "2fdca5c02157bbf69e2b0af335eef234bffd57b6d036783c17f5304ebb2216ff",
+      "classificationProofSha256": "adb18a08573c1b5c9ee70794f8e3a4abcddf29a44c39371e3f4f1e6dbf5bd449",
+      "sourceDescriptorSha256": "ea8044da186c5417562257be2550399e57098c168e813e22fa6bdab0e2ee18cd",
+      "reviewProofSha256": "380d7a171be0829d14a2e89aa9231f4676bc16cf88b9b48a490628b1a0ef249c",
+      "issuerTuple": {
+        "contract": "historical-source-taxonomy-classification-v2",
+        "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+        "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+        "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+      },
+      "pages": [
+        {
+          "pagePath": "content/posts/2026-04-29-generalizability-of-predictive-and-generative.md",
+          "pageKey": "page:d7c808e7c43eee710ea8cbf997366db50f18012354170bd5ba66b90eab5c22b6",
+          "pageSha256": "4e5478090b8fef331e26228b69e62953a47701534dc36cd41fb6312e4eb2ac25",
+          "bodySha256": "6331fb43f44a627f86307f2908a973ded1739ab9f2872a9f3e64f6aa12b38fe0",
+          "recordSha256": "e8fda60c91553ef06a36dab675f8cb763c7120c326e3999c4c01289ee2d4ad5d",
+          "pageProofSha256": "0d6aad15b28592e798235db4087c58e7cf87956a6c136ee8fbf2df7d068a59c9"
+        }
+      ]
+    },
+    "qualificationSha256": "c0650ef60ce9ac964c47e5951d168adf579f58ae12ac17ae2770ff150cf1139b",
+    "rawReviewSha256": "821c64838b222619221d23319c8d7a06d95449d6ff8c5cc6efae9e287351d726",
+    "originalPrimaryRawSha256": "b0528696cdc03bf4b21c04a7d70ed8497c34e6c27eb29a5dd96784c4016eb271",
+    "originalPrimaryDecisionSha256": "f6f2db44f6948fe3e82b7f217b061d1412f8a9c3a5a88f6a9819d23267cb02be",
+    "sourceDescriptorSha256": "a87c9dfd87da535327ae0c7f8634819b2b8a999fd2dca2e803f0f30740abe56e",
+    "registryRawSha256": "910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30",
+    "helperSha256": "9fa8dbeb3e7db90a1a41a9991fba607ee77aff8e2a248a95e5022bed6599ed3f",
+    "callerSha256": "1abb098f1e92384a5167d86b1df726332d6b49d14d67cc68f6d74fbb14cea26a"
+  },
+  "publicationAuthorized": true
+}
