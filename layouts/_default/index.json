@@ -36,6 +36,7 @@
       "taxonomyConcepts" ($taxonomyProof.concepts | default slice)
       "citation" (partial "citation_source.html" .)
     }}
+    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "taxonomyPublicationStatus" "withheld" "tags" slice) }}{{ end }}
     {{- with $taxonomyProof.registrySha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
     {{- with $taxonomyProof.evidenceContract }}{{ $entry = merge $entry (dict "taxonomyEvidenceContract" . "taxonomyEvidenceType" ($taxonomyProof.evidenceType | default "canonical-analysis") "taxonomyProofSha256" $taxonomyProof.proofSha256 "taxonomyPageSha256" $taxonomyProof.pageSha256) }}{{ end }}
     {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $taxonomyProof.classificationContract }}

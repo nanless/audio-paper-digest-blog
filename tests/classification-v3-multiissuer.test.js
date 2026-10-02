@@ -2,7 +2,7 @@
 // Synthetic new-issuer records below test public integrity only, not new LLM acceptance.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
 const api=require('../scripts/lib/taxonomy-classification-v3-proof'),profileModule=require('../scripts/lib/taxonomy-v3-profiles'),fixtureApi=require('./fixtures/classification-v3-public');
-const repo=path.resolve(__dirname,'..'),digest=x=>crypto.createHash('sha256').update(x).digest('hex'),catalog=require('../data/taxonomy-catalog.json'),snapshot=require('../data/taxonomy-registry.json'),nativeAll=require('../data/taxonomy-history-v3.json');
+const repo=path.resolve(__dirname,'..'),digest=x=>crypto.createHash('sha256').update(x).digest('hex'),catalog=require('../data/taxonomy-catalog.json'),snapshot=catalog.snapshots.find(s=>s.registrySha256===profileModule.profiles[0].registrySha256),nativeAll=require('../data/taxonomy-history-v3.json');
 const old=profileModule.profiles[0],fresh=profileModule.profiles[1];
 const native={contract:nativeAll.contract,records:Object.fromEntries(Object.entries(nativeAll.records).filter(([,r])=>r.classificationRecord.protectedDependencySha256==='1db887b14d10647b8770f32f238d6ce3f82dc0b8be86e16bebff749fae538655'))};
 function synthetic(){const r=JSON.parse(JSON.stringify(fixtureApi.fixture().record)),c=r.classificationRecord,f=c.fingerprintInputs;

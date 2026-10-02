@@ -94,8 +94,8 @@
       </section>
       {{- end }}
       <section class="research-signal-card">
-        <span class="research-signal-card__label">{{ if and $isSourceV2 (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v3") (eq $researchRole.kind "method") }}主要研究机制{{ else if $isSourceV2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物") $researchRole.kind | default "研究定位" }}{{ else }}{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}{{ end }}</span>
-        <p>{{ if $isSourceV2 }}{{ $researchRole.label | default "查看正文中的研究问题与方法说明" }}{{ else }}{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}{{ end }}</p>
+        <span class="research-signal-card__label">{{ if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}研究分类{{ else if and $isSourceV2 (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v3") (eq $researchRole.kind "method") }}主要研究机制{{ else if $isSourceV2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物") $researchRole.kind | default "研究定位" }}{{ else }}{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}{{ end }}</span>
+        <p>{{ if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}原文来源已核对，研究分类正在复核。{{ else if $isSourceV2 }}{{ $researchRole.label | default "查看正文中的研究问题与方法说明" }}{{ else }}{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}{{ end }}</p>
       </section>
       {{- with $arxivId }}
       <section class="research-signal-card">
@@ -111,6 +111,7 @@
     {{- if not $hasControlledTaxonomy }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
+    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $primaryTask = "" }}<p class="taxonomy-note">页面原有标签仅作检索入口，不代表本次已核验分类。</p>{{ end }}
     <ul class="post-tags">
       {{- $translations := hugo.Data.tag_translations }}
       {{- range ($.GetTerms $tags) }}

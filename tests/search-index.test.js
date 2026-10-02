@@ -16,7 +16,7 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   const dataDir = path.join(root, 'data');
   fs.mkdirSync(dataDir, { recursive: true });
   for (const name of fs.readdirSync(path.resolve(__dirname, '..', 'data'))) {
-    if (name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json'
+    if (name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json' || name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json'
       || !fs.statSync(path.resolve(__dirname, '..', 'data', name)).isFile()) continue;
     fs.copyFileSync(path.resolve(__dirname, '..', 'data', name), path.join(dataDir, name));
   }
@@ -94,7 +94,9 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     '---', '# 单篇会议论文'
   ].join('\n'));
   fs.writeFileSync(path.join(root, 'content', 'archives.md'), '---\ntitle: Archive\nlayout: archives\n---\n');
-  execFileSync('hugo', ['--source', path.resolve(__dirname, '..'), '--config', config,
+  // Partial-content fixture must also isolate its filesystem root; source/page gates are real.
+  for (const directory of ['layouts', 'assets', 'themes']) fs.cpSync(path.resolve(__dirname, '..', directory), path.join(root, directory), { recursive: true });
+  execFileSync('hugo', ['--source', root, '--config', config,
     '--contentDir', path.join(root, 'content'), '--destination', path.join(root, 'public'),
     '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const records = JSON.parse(fs.readFileSync(path.join(root, 'public', 'index.json'), 'utf8'));

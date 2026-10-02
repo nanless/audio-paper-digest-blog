@@ -36,6 +36,8 @@
   {{- if in (slice "source-only-taxonomy" "source-only-taxonomy-v2" "controlled-current-page-source-taxonomy-v2" "source-only-taxonomy-v3" "source-bound-current-page-fullsite-taxonomy-v3") $proof.evidenceType }}<p class="taxonomy-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
   {{- else if $proof.evidenceContract }}<p class="taxonomy-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
 </section>
+{{- else if eq ((partial "taxonomy_page_proof.html" .).publicationStatus | default "") "withheld" }}
+<p class="taxonomy-note taxonomy-publication-withheld">研究分类暂缓展示，待独立复核；导读正文与原文入口保留。</p>
 {{- else if .Params.paper_digest_taxonomy_contract }}
 <p class="taxonomy-note">分类信息待核；下方保留页面原有标签。</p>
 {{- else }}
