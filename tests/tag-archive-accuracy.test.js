@@ -31,7 +31,7 @@ function fixture(t, options = {}) {
   fs.mkdirSync(path.join(root, 'content/posts'), { recursive: true });
   fs.mkdirSync(path.join(root, 'data'), { recursive: true });
   for (const entry of fs.readdirSync(path.join(repo, 'data'), { withFileTypes: true })) {
-    if (entry.name.startsWith('taxonomy-history') || entry.name === 'current-page-taxonomy-history-v2.json') continue;
+    if (entry.name.startsWith('taxonomy-history') || entry.name.startsWith('fullsite-taxonomy-') || entry.name === 'taxonomy-old-v2-publication-holds.json' || entry.name === 'current-page-taxonomy-history-v2.json') continue;
     fs.cpSync(path.join(repo, 'data', entry.name), path.join(root, 'data', entry.name), { recursive: true });
   }
   const issued = JSON.parse(fs.readFileSync(path.join(repo, 'data/taxonomy-history-v2.json')));

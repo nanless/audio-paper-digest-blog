@@ -103,6 +103,7 @@
       paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
       identityEvidenceContract: plainText(item.identityEvidenceContract), identityEvidenceType: plainText(item.identityEvidenceType),
       identityProofSha256: plainText(item.identityProofSha256), identityPageSha256: plainText(item.identityPageSha256),
+      taxonomyPublicationStatus: item.taxonomyPublicationStatus === 'withheld' ? 'withheld' : '',
       taxonomyContract: plainText(item.taxonomyContract), taxonomyConcepts: Array.isArray(item.taxonomyConcepts) ? item.taxonomyConcepts : [],
       taxonomyRegistrySha256: plainText(item.taxonomyRegistrySha256), citation: item.citation && typeof item.citation === 'object' ? item.citation : {},
       taxonomyEvidenceContract: plainText(item.taxonomyEvidenceContract), taxonomyEvidenceType: plainText(item.taxonomyEvidenceType),

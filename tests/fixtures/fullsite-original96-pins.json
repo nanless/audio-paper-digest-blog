@@ -1,0 +1,848 @@
+{
+  "contract": "original-native96-public-object-order-pins-v1",
+  "sourceCommit": "c3130178c5db2b2e7c3a661ebc54c7f7cea3e763",
+  "classifications": [
+    {
+      "paperId": "arxiv:2604.15278",
+      "serializedSha256": "3b8e774f283bce5dcd38ec5b1afa8712f5dc1738a26aabae67c9a142d17e5b6b"
+    },
+    {
+      "paperId": "arxiv:2604.12647",
+      "serializedSha256": "6659a3c02e95370198afba395755047fd2337c9f9938237c0d0b9f59597d4575"
+    },
+    {
+      "paperId": "arxiv:2604.12438",
+      "serializedSha256": "449b0e3a5c07209053924882058736f8b137e8fb7321da52f2a50156e8ecd291"
+    },
+    {
+      "paperId": "arxiv:2604.12527",
+      "serializedSha256": "70b80c337d2c109923ae29bfda7c498600059b3045652042a82317773b873417"
+    },
+    {
+      "paperId": "arxiv:2604.12480",
+      "serializedSha256": "f07677cad16a5929131e3e75ea8ff3d2f6f8c556e872c2d8218f17b40a247bf9"
+    },
+    {
+      "paperId": "arxiv:2604.13593",
+      "serializedSha256": "137748c9b1ed60048fc544f7bce035e41585dd8aae0ee4b43f3d584f368a709b"
+    },
+    {
+      "paperId": "arxiv:2604.12506",
+      "serializedSha256": "2a8609e7edd797328504b06bbe117e6cfc8e20cac7b311e14c9772e654eeb973"
+    },
+    {
+      "paperId": "arxiv:2604.14654",
+      "serializedSha256": "5abe239ad16f652f01de7b561e99a87bb242e2121302949df2800c48296e8ba7"
+    },
+    {
+      "paperId": "arxiv:2604.13400",
+      "serializedSha256": "22c9c5a099b5ee00a059f1a3a8c1d403909fc0e655b034d2d40d111be5302121"
+    },
+    {
+      "paperId": "arxiv:2604.13567",
+      "serializedSha256": "98572b34d1a174515f4063bc3f172a906ad4a3837b91d7ca0355c545ab9f37de"
+    },
+    {
+      "paperId": "arxiv:2604.12398",
+      "serializedSha256": "6dc286637eb6f5e5b1f7721158fdc54764a2bd19ed867d981ed38e13c1e306c3"
+    },
+    {
+      "paperId": "arxiv:2604.15086",
+      "serializedSha256": "c2ef849ba3f95fc9905bd1dfba991c61bdd7ccab7b7305b084bfef6fbaff256e"
+    },
+    {
+      "paperId": "arxiv:2604.12292",
+      "serializedSha256": "23d8b81109daaad9ac77c9d9df11bbc4fc093cbb924884854849fc3de5a8f108"
+    },
+    {
+      "paperId": "arxiv:2604.14001",
+      "serializedSha256": "ec0e10fc712a6be1264ee935844c08e9cd15a20872910c26885f0faa21743e9f"
+    },
+    {
+      "paperId": "arxiv:2604.14920",
+      "serializedSha256": "066b79c5ac14c053c09ed38c0444e9065ec483180d945daee62ddaf391489b97"
+    },
+    {
+      "paperId": "arxiv:2604.12483",
+      "serializedSha256": "a375791a2cd89a2e116a94b80ca470b79a6f11d0fc5bf152f710b25e8e62cf3b"
+    },
+    {
+      "paperId": "arxiv:2604.15055",
+      "serializedSha256": "352cc8bfb83aa5dd51b8829d8e68c85b9837fcb6ed510a153b90eb9f38706f2f"
+    },
+    {
+      "paperId": "arxiv:2604.13528",
+      "serializedSha256": "02860d73eb4e892f675761a1dc29da9fd19051ce8624dc4997a0738268a39bcf"
+    },
+    {
+      "paperId": "arxiv:2604.12878",
+      "serializedSha256": "c4e7ca3c7caf346ce64fdaf54cbf4030814f5f42eef10aa3f37a43424f280c77"
+    },
+    {
+      "paperId": "arxiv:2604.15037",
+      "serializedSha256": "17e28a4aaa872934939bab572f29d58394fa9f167986fe215ba1c645f2acd629"
+    },
+    {
+      "paperId": "arxiv:2604.14707",
+      "serializedSha256": "cf3bd4828c75808584dd128cea0ab12dc5e914d119bb178c7616d5a627d54b3c"
+    },
+    {
+      "paperId": "arxiv:2604.14604",
+      "serializedSha256": "1a2e65508ccbce54029dd5267c50981a30f02412360a44b50eb520d7f3c70053"
+    },
+    {
+      "paperId": "arxiv:2604.14806",
+      "serializedSha256": "706e375cdef6a79f59a77a01179d1021b230b426df02a4bbe57b823e0a05c0e4"
+    },
+    {
+      "paperId": "arxiv:2604.12650",
+      "serializedSha256": "f387eb2054f0708585a4efd8c0cf10865046217f6da38157dae9291611ea805a"
+    },
+    {
+      "paperId": "arxiv:2604.12928",
+      "serializedSha256": "bcc75eecd06886ff8bf3c9fffb05ce08116b604f76a210cc5ff76b13ec760575"
+    },
+    {
+      "paperId": "arxiv:2604.12383",
+      "serializedSha256": "bf35ca16089047cef821099af56f725f91e29b3803c9422dd967bc8b1ee40ed2"
+    },
+    {
+      "paperId": "arxiv:2604.13229",
+      "serializedSha256": "83b36be2872080ad6978fe14df0f1c4ccb716274d1644c53677d5da7f3da0809"
+    },
+    {
+      "paperId": "arxiv:2604.12439",
+      "serializedSha256": "66b4427891c3f5f9c7cb832cce48225a1d2838eff7705ee30950593f72df68cb"
+    },
+    {
+      "paperId": "arxiv:2604.12455",
+      "serializedSha256": "2298aef87c56dbcca8317bc358c657ce7e54480c5959316443f2bd3e14283cff"
+    },
+    {
+      "paperId": "arxiv:2604.13605",
+      "serializedSha256": "f2556dee7e7dd50036c186395659bde521abf9837ac859fd5b94bbe425f76956"
+    },
+    {
+      "paperId": "arxiv:2604.13023",
+      "serializedSha256": "8910dfd13c70d430d04982fb3bd007fa42fa11f25c8e7bda88897a57c75508a6"
+    },
+    {
+      "paperId": "arxiv:2604.11917",
+      "serializedSha256": "b69f3381bdde403facd8b07e495355e5f5eaeb9f70d71dbd04e4653dfbaa91a9"
+    },
+    {
+      "paperId": "arxiv:2604.12246",
+      "serializedSha256": "9127c3737df8bce687b17ed525c5015be7e422298cc008f52be7b90c949699fb"
+    },
+    {
+      "paperId": "arxiv:2604.09057",
+      "serializedSha256": "fc7f1483cd6e1021848a47930131d1ef324544c7a3cbf21542839705247dc0a9"
+    },
+    {
+      "paperId": "arxiv:2604.13715",
+      "serializedSha256": "8e4c8616fc0c11994279d2515c5c0ac6839919ab21e6f0a4708003f0d4c6e35f"
+    },
+    {
+      "paperId": "arxiv:2604.12733",
+      "serializedSha256": "893e740bfb85297a1f35eba65dee3cfe3f5053642dd43ebf4aaf268c81c5db87"
+    },
+    {
+      "paperId": "arxiv:2604.14606",
+      "serializedSha256": "259b86818c90eb992d10bdaab5ef5f7d89401a15b83931fa47b3082cedee8bf7"
+    },
+    {
+      "paperId": "arxiv:2604.12389",
+      "serializedSha256": "a9750504d38094beb60dcb39cc8fcc4b1061db9e9071247ec4d78727c3287c4e"
+    },
+    {
+      "paperId": "arxiv:2604.14548",
+      "serializedSha256": "4d853623aa45150bc5f942c14849c7784f76327858a562294cee1380760ec688"
+    },
+    {
+      "paperId": "arxiv:2604.14932",
+      "serializedSha256": "6fde76cef6e19d762ea81c1c32d1b3c1496adfef4edc4bd4753eb2d7548dd5ed"
+    },
+    {
+      "paperId": "arxiv:2604.14354",
+      "serializedSha256": "d3379f9cfa0ca4ea4a73c2680e0ca130df2400adbf0c3ff0c0a6dc273cc4035a"
+    },
+    {
+      "paperId": "arxiv:2604.12145",
+      "serializedSha256": "92e62a01a6d3e43d334acdbbe9ead124d2fcdaee1579b527c248ed583ef98eac"
+    },
+    {
+      "paperId": "arxiv:2604.12456",
+      "serializedSha256": "c6d66a6188f3e7cdffb22f5635c363cbb9748c29ad8057465fe503afb9b52793"
+    },
+    {
+      "paperId": "arxiv:2604.11103",
+      "serializedSha256": "ea35bb64bda05dd19987040a3a455f7f9ddeecfa26625f2c71c68aebed0826e5"
+    },
+    {
+      "paperId": "arxiv:2604.16254",
+      "serializedSha256": "521e24409c3e799aedd0fdc128d199c456d3adc6d443918fddda61cdc6708282"
+    },
+    {
+      "paperId": "arxiv:2604.16056",
+      "serializedSha256": "3e4c01fafade67c02e2ed28e8aa62efaf665e5b0e77d865825a2fb3cedaf6714"
+    },
+    {
+      "paperId": "arxiv:2604.10367",
+      "serializedSha256": "d9081435ec838d6cc82237088490a48f41efae3e8558177dc58bfef57f3fade1"
+    },
+    {
+      "paperId": "arxiv:2604.10736",
+      "serializedSha256": "22c694ffe08b3eb3d552516dee83c194f0b0fb4cdc546b01cc18519474573fbc"
+    },
+    {
+      "paperId": "arxiv:2604.09371",
+      "serializedSha256": "79df7c5fd24f4c6ff75dc32bb9bc2d0da8f6d8310fa672eb6d723a69603c3c07"
+    },
+    {
+      "paperId": "arxiv:2604.16044",
+      "serializedSha256": "7dc575ab1d62652178f7da4f9e2b9c2d83d20781a1c01d179269f91f57022203"
+    },
+    {
+      "paperId": "arxiv:2604.04847",
+      "serializedSha256": "6b1a00ebe71d560d1096df3cd851baf305dd0f8951cd74d83b75ced20ce4b8dd"
+    },
+    {
+      "paperId": "arxiv:2604.14186",
+      "serializedSha256": "0a570b3c012a905d9068e81997956ebfe6c7ea9f096974183770409319327ff6"
+    },
+    {
+      "paperId": "arxiv:2604.15923",
+      "serializedSha256": "9a2d67e66ad211691181bea53a4ca04675a3cd484eb5b2799030ba9cee9c50eb"
+    },
+    {
+      "paperId": "arxiv:2604.09121",
+      "serializedSha256": "d88a1c2920cbbcbe4514eb1dbcfcfb30db37e3ab49291c78254d4d56a66b6bf7"
+    },
+    {
+      "paperId": "arxiv:2604.16247",
+      "serializedSha256": "ff5bac380a1dc22d324b0d22f6767826f7dae06952337125a0d7208b8ee658a8"
+    },
+    {
+      "paperId": "arxiv:2604.15929",
+      "serializedSha256": "8624c614733217ecb900dc7f3471cd7d0a7f8636b698b368879c5c9c11b3d1c6"
+    },
+    {
+      "paperId": "arxiv:2604.16287",
+      "serializedSha256": "aae78ea1bdc3c8346526416fc17e442848c80e5bac62e6006716e58cd5b05dad"
+    },
+    {
+      "paperId": "arxiv:2604.16211",
+      "serializedSha256": "b8cfb1c82eacd0aa62cc65370b3014f07d52cecc2b5fc4b6907886e0d80b5714"
+    },
+    {
+      "paperId": "arxiv:2604.09111",
+      "serializedSha256": "d7ecd902b73eb0e5a2d57a2bd70768c297b666f49c7047c9ccf5775d78e835ad"
+    },
+    {
+      "paperId": "arxiv:2604.15804",
+      "serializedSha256": "6b089b82aeb73118f40f629f108f57ae7d51f21abae199294d0c0cc1602a19f0"
+    },
+    {
+      "paperId": "arxiv:2604.15383",
+      "serializedSha256": "5c5602e5bb904debecdb1ad87a8fc225181b8319f5eda80aba17ef95f67093bd"
+    },
+    {
+      "paperId": "arxiv:2604.14619",
+      "serializedSha256": "a351551bae01d78d79fe01aabab46a23dda04cb54ca894692f355fbd798aac37"
+    },
+    {
+      "paperId": "arxiv:2604.15849",
+      "serializedSha256": "73d996f55ae518a65673f09b00be2d8c981473e96809d610bde6eabf83521006"
+    },
+    {
+      "paperId": "arxiv:2604.15710",
+      "serializedSha256": "c7f24649ca41b30dc88441fadc8f059a013a49b9d07ebe06853e8e0e8cd06779"
+    },
+    {
+      "paperId": "arxiv:2604.17823",
+      "serializedSha256": "e204592c850b93ec27611cf0fd3d1a604ba3284ed939d09e8c06f9bd82e3e019"
+    },
+    {
+      "paperId": "arxiv:2604.16970",
+      "serializedSha256": "ed53bc9b3621c1efbb983f81d167e00c663e24209899730f7baa6bbc3704c12f"
+    },
+    {
+      "paperId": "arxiv:2604.18489",
+      "serializedSha256": "2edfbb9637506031b6cca74a1e18b5a26cb66b4215a77c47b601fd2a3e6a61a0"
+    },
+    {
+      "paperId": "arxiv:2604.17000",
+      "serializedSha256": "f12d84a7c1d1ef27dc6f20ef43fdad9a6fac25a87312c206565ff1c1d630f3ac"
+    },
+    {
+      "paperId": "arxiv:2604.18187",
+      "serializedSha256": "e021952607bc7744be4a9a534682ec0a42a09bcf69af537fa32d9b81301785b4"
+    },
+    {
+      "paperId": "arxiv:2604.16617",
+      "serializedSha256": "20b12319dd81b33082c35a0a39f252a2a9c34d8b66eb6a96396266dc5b855174"
+    },
+    {
+      "paperId": "arxiv:2604.16659",
+      "serializedSha256": "ca2c035483742d92409a981af2b502f01e1145e6b44f9b98dc64da0850d0d9db"
+    },
+    {
+      "paperId": "arxiv:2604.16658",
+      "serializedSha256": "7e6c556b729b3328980153f5db074c3a6532d9406a991760366e64a598fe9adb"
+    },
+    {
+      "paperId": "arxiv:2604.18109",
+      "serializedSha256": "04474914523d9388fb301519db803efca02993ed7a1dffef4ede59aca8c12d7b"
+    },
+    {
+      "paperId": "arxiv:2604.18159",
+      "serializedSha256": "13fa2e3570ca1a1d66ac3e52375ec4f6548639dd950831c202f031483c2b5836"
+    },
+    {
+      "paperId": "arxiv:2604.18204",
+      "serializedSha256": "b778e1dfdf79701482b1360a2fd7c47f398e847c9167fbd1b90f9c0d03c71219"
+    },
+    {
+      "paperId": "arxiv:2604.17642",
+      "serializedSha256": "817fa3cd09ccd8712e2b88477b7a61a568f50bcc9d755d2befc41ddd4f1f13ce"
+    },
+    {
+      "paperId": "arxiv:2604.16749",
+      "serializedSha256": "668cf1e858637b3892873c305c47922a32d760d6b83d07bc584ab7f9789d4544"
+    },
+    {
+      "paperId": "arxiv:2604.18270",
+      "serializedSha256": "19ab5f2e909bd4c66213daabb391f4738a9d69f80e30593d54e0facfddf4b5ef"
+    },
+    {
+      "paperId": "arxiv:2604.17986",
+      "serializedSha256": "072064c4083467bfdbba052de266e2eeea5a0dcf96942c8731d6027aeaff0c73"
+    },
+    {
+      "paperId": "arxiv:2604.17852",
+      "serializedSha256": "08e6555aacceb280000c40712d7df95d901b600d59e7bc9077b1761e41e0331c"
+    },
+    {
+      "paperId": "arxiv:2604.11552",
+      "serializedSha256": "5e49e2b22dd64cac92f683b9b5eb0cdf2052400a014cb65a1fe3dbe48a3eace7"
+    },
+    {
+      "paperId": "arxiv:2604.17958",
+      "serializedSha256": "b65f54bcc70cc770a58b5832c89532ab1e44545d09329523dd6223e2528eb581"
+    },
+    {
+      "paperId": "arxiv:2604.17435",
+      "serializedSha256": "7cdfc68916e0b9ba999ab5b81e68c5e09e861fa5340ec8d5c714eddcd36bbf4b"
+    },
+    {
+      "paperId": "arxiv:2604.16700",
+      "serializedSha256": "a7ad50b74e9801d950fed358b3cf0659793bfc35d2b2c49bb66162eee459ed19"
+    },
+    {
+      "paperId": "arxiv:2604.18105",
+      "serializedSha256": "84e4b4f1c991146eda67f3219bab07d56a09f31df3717655f260aa76092b8875"
+    },
+    {
+      "paperId": "arxiv:2604.18360",
+      "serializedSha256": "424fe053f7cd513794fe5ef511db56b679bff3c5097e57bf12cb70465ef45a11"
+    },
+    {
+      "paperId": "arxiv:2604.17647",
+      "serializedSha256": "025031ed3c2108a94dea03c92e928df583bbca52af45eabd8b39b22a8540c8f3"
+    },
+    {
+      "paperId": "arxiv:2604.17358",
+      "serializedSha256": "2a0a0a0ec7871bbdd6127eb58b50b339d4de769907fc57fdbff8c7a46c37b6e9"
+    },
+    {
+      "paperId": "arxiv:2604.17248",
+      "serializedSha256": "f49c2787cf74da137befb3e5b947df4b116e3f44a29f7644f174ad401aa0226e"
+    },
+    {
+      "paperId": "arxiv:2604.17656",
+      "serializedSha256": "8c840bba2e822de99440f7b6ca0a36c58c30f500f54a1580bede70316d07b820"
+    },
+    {
+      "paperId": "arxiv:2604.18249",
+      "serializedSha256": "6e3e89e3aca27588f11dacb8d9f2e30357dac843603483085c69aa2cf0894d83"
+    },
+    {
+      "paperId": "arxiv:2604.18665",
+      "serializedSha256": "17e4bb48ffa1f7ad9306e7bd3988295bfd977a6c1bb65a4055988fd96f34c9a1"
+    },
+    {
+      "paperId": "arxiv:2604.19055",
+      "serializedSha256": "8cc6f1ad4bc03ea3ecc1d633cbb6b8a3387999b9cc08986dbbdb54d474c30e50"
+    },
+    {
+      "paperId": "arxiv:2604.19209",
+      "serializedSha256": "9a125a06b05278023e62ce89e07cf6c165756cdbc01faf8e86da6811c9496688"
+    },
+    {
+      "paperId": "arxiv:2604.19532",
+      "serializedSha256": "c8f96f3e691e9147a8cd15ac0565608fdd908fd71bdc179ed994ebb3dc0e0d48"
+    },
+    {
+      "paperId": "arxiv:2604.18920",
+      "serializedSha256": "3fe0dcf0570cf258173fcdf39a4124667cbd9458b0357250e994eb3d25725e29"
+    }
+  ],
+  "pages": [
+    {
+      "pagePath": "content/posts/2026-04-19-a-manual-bar-by-bar-tempo-measurement-protocol.md",
+      "serializedSha256": "607016e494af3749741d6883828c9210e5458ee20a9c533f6aae8c68b44f59b9"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-adaptive-test-time-scaling-for-zero-shot.md",
+      "serializedSha256": "df8de2603594c9ef9b52e3cb7ac531b018dda3b0e415342bfa462a1d659d9836"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-an-ultra-low-latency-end-to-end-streaming-speech.md",
+      "serializedSha256": "6d10e975cc48044f1ebb916e4d5cc4c691e965efedf37de7909e8aadfeba5780"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-audio-cogito-towards-deep-audio-reasoning-in.md",
+      "serializedSha256": "4a0ad889315800252a51cf9a1aaede5564a4aee4fb00f1e0f458c28ed3746f5b"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-audio-cogito-towards-deep-audio-reasoning-in.md",
+      "serializedSha256": "78c024a697526c3ff3df3b9a1fa818f488c9ead5955b614b7937aafd35e739fb"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-audio-source-separation-in-reverberant.md",
+      "serializedSha256": "1a283955065d33a274c0468a46136cf9b3b7487a6b1382be302d59d16949c64e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-avid-a-benchmark-for-omni-modal-audio-visual.md",
+      "serializedSha256": "e172d940924e6286ee2f6d7f5ca7448692b8753706d34d6faecf528879721e13"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-beyond-transcription-unified-audio-schema-for.md",
+      "serializedSha256": "6660df94cc3fbb00442d57cf2e3d6a1ff02dd48a446be69c43a9153d89ad2652"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-claricodec-optimising-neural-speech-codes-for.md",
+      "serializedSha256": "b27388db531b6915ac003a0575c2698e177ff7e167f5b44984bac2541ce79438"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-claricodec-optimising-neural-speech-codes-for.md",
+      "serializedSha256": "7145ab860cadd662c5ff13848e95a81e31d532ad9e9e22022202bf3ed87b6c2d"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-classical-machine-learning-baselines-for-deepfake.md",
+      "serializedSha256": "fc6985b75fdaeef05f7bca61cdfe11d14323ae8a377c9b5871f20ada5bc4e71e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-comparison-of-window-shapes-and-lengths-in-short.md",
+      "serializedSha256": "7c227c8aaf61ea08f10598763538ea5f27f49b299cfe5efa6f326d3174c37f09"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-contextual-biasing-for-asr-in-speech-llm-with.md",
+      "serializedSha256": "cde04c49f45a1fb51755da1a04bbc0862c025183d06f2022641e8f3bc5293121"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-controlfoley-unified-and-controllable-video-to.md",
+      "serializedSha256": "de34ef41d94c96ad13e5996bcfd766c8afe2fbe65043779fb2e98e2e729995a9"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-cosyncdit-cognitive-synchronous-diffusion.md",
+      "serializedSha256": "b2c72d166edb604e2bdc49eae16f765490ea971e8365890590f14b570fe40667"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-diffusion-language-models-for-speech-recognition.md",
+      "serializedSha256": "49967ee2e62afacdbf457b4b1586a7350b637807b4ec9a8f7908621c7c725cb2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-dual-axis-generative-reward-model-toward-semantic.md",
+      "serializedSha256": "45e49881301b2748698ab7e8da0c15e75a52b7e33f93416a20a0b40cb5ef41c3"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-elastic-net-regularization-and-gabor-dictionary.md",
+      "serializedSha256": "1432d7c2e29b8d72718ddeaadb142057dfa366e2c197aae5c1f0909f3aa017a6"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-enhancing-time-frequency-resolution-with-optimal.md",
+      "serializedSha256": "26d77beabf41f4090f17ccf0b1163d586d07defbfd87681a633500233ac73a5c"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-few-shot-and-pseudo-label-guided-speech-quality.md",
+      "serializedSha256": "db32de44c5643836104d538af99d8a193cd802138234a574c938ea254193bedc"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-four-decades-of-digital-waveguides.md",
+      "serializedSha256": "e432dad3c6b19b1bfd4d14348cfe4819319678108f0cbe397bfcb9277c7e7d7d"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-from-reactive-to-proactive-assessing-the.md",
+      "serializedSha256": "0dcb9ba9ee1871596a243382e87d93ffcae18efc000c2735f40b3c4a16be0b65"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-from-reactive-to-proactive-assessing-the.md",
+      "serializedSha256": "7559e08fbca5002414c8e6365e25c8597a6ea6017101353a35c0db7de29546b1"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-geo2sound-a-scalable-geo-aligned-framework-for.md",
+      "serializedSha256": "63d2826c1c03e2f099be17233e5b3860674d6346d2f6c35b6f9ed72b8b1870e1"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-hijacking-large-audio-language-models-via-context.md",
+      "serializedSha256": "10d15c6b94f4c7112716e8c978b8bb944c814d3b39e82b82706e7be0c2b0cb3d"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-listen-pause-and-reason-toward-perception.md",
+      "serializedSha256": "57b787d30120ebce4126600b8f0aa1445614619946462ecf1fc54addb47ea8f4"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-listening-deepfake-detection-a-new-perspective.md",
+      "serializedSha256": "e29bbbca22e7ecfba10b2a35c8cb32ad49ce2bd6bd452f0a7f5f571c9d2695ab"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-moshirag-asynchronous-knowledge-retrieval-for.md",
+      "serializedSha256": "3acc8c3de11ff571f74fda9b458fd053b25b16db8cae6a8defbb8fa96baa8efd"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-moshirag-asynchronous-knowledge-retrieval-for.md",
+      "serializedSha256": "6efd39aae652b62e486921a945d515bb8ad95405ec50bbb0089e66bdd16abdc4"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-on-the-distillation-loss-functions-of-speech-vae.md",
+      "serializedSha256": "ed4078348f90c6d19dc193c4f8359d592238956c7e080a9cfad0a9d3200e97a2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-prosdd-learning-prosodic-representations-for.md",
+      "serializedSha256": "e3a39a2feaf06af3014ad201e5695fd932c800c928153417d1ffd8d59a55528c"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-room-compensation-for-loudspeaker-reproduction.md",
+      "serializedSha256": "62a02df45d1ccb61ea77cc88129fb23b7b72fa9020ce4183c3ba355fa43ce74c"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-sky-ear-an-unmanned-aerial-vehicle-enabled-victim.md",
+      "serializedSha256": "fa89e00fe02c5a963f38c71012bd4164a989a3f764ab881fdb23297279c506c7"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-speakerrpl-v2-robust-open-set-speaker.md",
+      "serializedSha256": "fde99d88a38a0aec826895e2544a295619c6afe33f6abb6af838ab79f11083b1"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-spotsound-enhancing-large-audio-language-models.md",
+      "serializedSha256": "3646425537b7fc18a6d37db62595df7a11043a4f1f8a660433edc2b667f10678"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-streammark-a-deep-learning-based-semi-fragile.md",
+      "serializedSha256": "cbca140ff08cf27f58f7b23331305e6e1cb50a383cf30b8810a707d2cac8e095"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-tokense-a-mamba-based-discrete-token-speech.md",
+      "serializedSha256": "951bb7d0b838f7a34ec456bb35eb2ebf1ddd281edc0d8645c3c2a492096814b6"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-tora3-trajectory-guided-audio-video-generation.md",
+      "serializedSha256": "d6df337866ed5f14fae28cace4f7e25909426176bc77a7d478b40195ccd31f37"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-towards-fine-grained-temporal-perception-post.md",
+      "serializedSha256": "90943dc291ea38b5bcad17faec5e6dae3422e389ea0a1fa18504a411aece941e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-transformer-based-machine-fault-detection-from.md",
+      "serializedSha256": "0bb93182aaf58c1c2016f0f2116dd3623085c8893c4645219976e034d272fef7"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-unipase-a-generative-model-for-universal-speech.md",
+      "serializedSha256": "251719726495cb0ccee82acae925d4671f05fa4cf64f0b51fd7edaffee554b82"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-voxeffects-a-speech-oriented-audio-effects.md",
+      "serializedSha256": "5106df592f5c61600c4e47f7b147314819e9f977c90df97449a8e6c25f50e2fa"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-voxsafebench-not-just-what-is-said-but-who-how.md",
+      "serializedSha256": "3ee5d336d9828c5fc3af25c0e446f86bb61c5af7847c8e8cd941d091a172b9fe"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-voxsafebench-not-just-what-is-said-but-who-how.md",
+      "serializedSha256": "e81ce8dd1f729578f5e990f740aa44f1031e25d6462bcccf237a306957aecfe4"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-wavalign-enhancing-intelligence-and.md",
+      "serializedSha256": "28f2da1fe3b3db68e00795dc2453a9e2b9b336f5ee1a98f72bdd17830193dc94"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-who-is-speaking-or-who-is-depressed-a-controlled.md",
+      "serializedSha256": "5cff83b347ca540c85290ae9e70e6b814e5a0d852ad98b35ffecdbb0a13e0d80"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-why-your-tokenizer-fails-in-information-fusion-a.md",
+      "serializedSha256": "65764607a85e5adff2a3803079f27ca7c72bb80316085cca05053691e43daa3b"
+    },
+    {
+      "pagePath": "content/posts/2026-04-19-x-vc-zero-shot-streaming-voice-conversion-in.md",
+      "serializedSha256": "6f42154dd8bea7a4b34c2ad34ccd2e9b7f6290fb50ae10e6fc376fc9853fca7a"
+    },
+    {
+      "pagePath": "content/posts/2026-04-23-x-vc-zero-shot-streaming-voice-conversion-in.md",
+      "serializedSha256": "f7c249f8c57077eb540013cbf552572706a37d5c6b9ca0810e0c3dc0ae50236c"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-actormind-emulating-human-actor-reasoning-for.md",
+      "serializedSha256": "44704be4365a01798dd4355f9db9cfce89ff6f43c0980bff84dab4ea1c6b39e8"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-artifactnet-detecting-ai-generated-music-via.md",
+      "serializedSha256": "2ade1d577e20319707433321fdc02ecdb6a0e2b81e21ef8cd04fe5755ad51673"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-artifactnet-detecting-ai-generated-music-via.md",
+      "serializedSha256": "b70f321de104a1120d76e4a2ef2c037a934b2ad982c3bafe3d2352a627494498"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-ast-adaptive-seamless-and-training-free-precise.md",
+      "serializedSha256": "cb59978f8fd7a7e489b3a5822927efb37f65dbfbaf25ef1c09253ef4276212e3"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-beyond-monologue-interactive-talking-listening.md",
+      "serializedSha256": "b72bfac7294ad622203c2853435e3cfa2954339315cf2d6764d96f1211d0a82e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-blasbench-an-open-benchmark-for-irish-speech.md",
+      "serializedSha256": "1826115aa475cf9904ed4c27f08d6b5ed6a0e5b72427140dec986327e0773a0f"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-discrete-token-modeling-for-multi-stem-music.md",
+      "serializedSha256": "8c5e07ed8512497305f8057888c70c66cf67cf3c7b2ccf4add095d43b935a014"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-elucidating-the-snr-t-bias-of-diffusion.md",
+      "serializedSha256": "38163dbd1d136878a105de0dba57dfe62747bfe88bb228e4ef50799940582819"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-full-duplex-bench-v3-benchmarking-tool-use-for.md",
+      "serializedSha256": "468f12d7984d1b77c0eaa50ff7fd594b4c2d1762af9ca3564299f78b98c584f0"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-harness-lightweight-distilled-arabic-speech.md",
+      "serializedSha256": "6bd5e5bd6298731e020fb9bcad922b81dea4f47f2b2dc1ea4e3517d96ff5ef7d"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-hierarchical-codec-diffusion-for-video-to-speech.md",
+      "serializedSha256": "0d921ba653d9dce2460d0d76d0b83146ded9624a3b4ed94384c4e8587fff9748"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-interactive-asr-towards-human-like-interaction.md",
+      "serializedSha256": "b5f1b3ff776e4aeae4ad5d1fc2ccd8f1cd98f8a3b1b60ca143b5b0db7503d28a"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-joint-centric-dual-contrastive-alignment-with.md",
+      "serializedSha256": "ef647eb075609d5ef7eb95236fd35d538534269b6bd2aeebab3cb9f7f1d015e3"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-muscat-multilingual-scientific-conversation.md",
+      "serializedSha256": "564711f95141c7b589f4cbf995f970d711244ad751b256169b39966f1b9f2627"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-naijas2st-a-multi-accent-benchmark-for-speech-to.md",
+      "serializedSha256": "63f43978f9dfa932977fc8e16da8cb4a0db6705f4dfac32299d04e2095fc0cc1"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-nvbench-a-benchmark-for-speech-synthesis-with-non.md",
+      "serializedSha256": "1574edde87d9c4b8fe8d9e1e29e3d4afffcb2340087660453ee5c867eba7fe94"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-nvbench-a-benchmark-for-speech-synthesis-with-non.md",
+      "serializedSha256": "85d4a1f626c8f6138679a7fe333940a7a5ce351ede3d2e54d4de5be4a3fb9c83"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-ps-tts-phonetic-synchronization-in-text-to-speech.md",
+      "serializedSha256": "f09dbde01959823bcc26aaa70bb911d5282e05539e6fa5500b1d60453bf917ef"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-qwen35-omni-technical-report.md",
+      "serializedSha256": "aef33dc2bfc776c31b2cff597fb499054c53503c201c800c954b2fd6453f824b"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-qwen35-omni-technical-report.md",
+      "serializedSha256": "eddb3fb418839b17147d05f380f3ceeb6d15e9567285a391a47960a9dd7c79a2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-23-qwen35-omni-technical-report.md",
+      "serializedSha256": "f3486e5b366607382840c39fb43aa9c793a7cfb671ab4c408dc66a71236c0d79"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-temporal-contrastive-decoding-a-training-free.md",
+      "serializedSha256": "e1066fadbc6d72caded27764f3a8337953f2dc89074ed4a87d70681796dc7484"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-the-acoustic-camouflage-phenomenon-re-evaluating.md",
+      "serializedSha256": "0c787bd89cb2c8a6a3b26f7158a52fc6fd85194f1aa032eb605eb4bcf3cfbb2f"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-tinymu-a-compact-audio-language-model-for-music.md",
+      "serializedSha256": "f3a8189b87d81a384ffba57b7563020a07f73f0656ef5d891570883fdc26c8c8"
+    },
+    {
+      "pagePath": "content/posts/2026-04-20-voxmind-an-end-to-end-agentic-spoken-dialogue.md",
+      "serializedSha256": "bb99d56f79601e9e7a9bf674c897e9ba554348fd20c691127a7e4ce51ba998cc"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-a-novel-lstm-music-generator-based-on-the.md",
+      "serializedSha256": "662e10a3db68324d286935b3ab6a1001e55bda4a605701e4e856d5d7577eba00"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-a-state-space-representation-of-the-boundary.md",
+      "serializedSha256": "fd0675be12f6c888c73f0356f08925cfcefd8edc1ca9df2ae4a41296b5d8a14f"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-aligning-language-models-for-lyric-to-melody.md",
+      "serializedSha256": "d111ea82d0fb7315a4578de5f793caa021cfb1a8564c5b0ef75f6babf42551b3"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-anonymization-not-elimination-utility-preserved.md",
+      "serializedSha256": "1441697b85613410700d23df5f187746924633c3119907748c687b368ddd4207"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-audio-deepthinker-progressive-reasoning-aware.md",
+      "serializedSha256": "c4eb30b268f6e5d00625b1c060da6109b67f52c79bc45a95adaedea1e495bbc2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-avrt-audio-visual-reasoning-transfer-through.md",
+      "serializedSha256": "6b8d5ac4d1c2938f119f8832ece9032a648081eb6ec14acf66bfa6f5da8d88eb"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-benign-fine-tuning-breaks-safety-alignment-in.md",
+      "serializedSha256": "231f1a88a38bca3a885aa235a3c303baf0faa967fa70407e1b744a6620648a3a"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-benign-fine-tuning-breaks-safety-alignment-in.md",
+      "serializedSha256": "29a63ad2afb39cefacda5cc2c58ca79701c92542b6a61fd3ac7db40fc9e29528"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-coexisting-tempo-traditions-in-beethovens-piano.md",
+      "serializedSha256": "7d81891999b51a44f8f188f79508c47f4b36707d5d577880ac5ea15b8b4eee48"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-flip-towards-understanding-and-interpreting.md",
+      "serializedSha256": "3ee6466bb8a1bbbeb2ba0e006fe22a825d2c5127e846c5e54c935043f649c515"
+    },
+    {
+      "pagePath": "content/posts/2026-04-23-flip-towards-understanding-and-interpreting.md",
+      "serializedSha256": "d882506ee6f0ab35e604466424216526dc5a29b9c724d8f91a203e452bf9de39"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-freezeempath-efficient-training-for-empathetic.md",
+      "serializedSha256": "955bebcc42b126a246f36ee9a30672fa7602ff49e9ee7b1c0282b4a5db5eafad"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-hard-to-be-heard-phoneme-level-asr-analysis-of.md",
+      "serializedSha256": "582ac6718f344dc15fa6a79f5eff7a9ecdf730f4d8b6ed12e787891221c245f4"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-hcfd-a-benchmark-for-audio-deepfake-detection-in.md",
+      "serializedSha256": "36ef1b76f85769db57e3d62d7ce1f31e44ce1860131f33516ca0caafcbbbe117"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-iclad-in-context-learning-with-comparison.md",
+      "serializedSha256": "226e6945b212af3e7cf644d63334bffe2021674a020fee9e144eb3dd56b84cc1"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-incremental-learning-for-audio-classification.md",
+      "serializedSha256": "d230a36826b28096543743c0900b5b336b84e424532e352ff323472cb26fc02d"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-latent-fourier-transform.md",
+      "serializedSha256": "c6db43bcdbaff0a661f0695cb21f019c3ea2b6993a0ae83858b4cecf6e30ba4e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-llm-codec-neural-audio-codec-meets-language-model.md",
+      "serializedSha256": "4b3eb966dbab874de0e92e870e29ff52aefe9d6ef46dad8548f52f22437080c2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-mimiclm-zero-shot-voice-imitation-through.md",
+      "serializedSha256": "fb75837b9127e75eeee380988f70c11908a61fe6267cc4506abb14a931af05ef"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-mint-bench-a-comprehensive-multilingual-benchmark.md",
+      "serializedSha256": "13c73ba9ef122e7c8dc666c2fb7d0d1bd458fbaacb9549f25bf8448fa4e54ac5"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-move-translating-laughter-and-tears-via-mixture.md",
+      "serializedSha256": "1e744e75d2e688eb4043bafb71090d319a7e050fc9f0c176b735ce16508a4dad"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-move-translating-laughter-and-tears-via-mixture.md",
+      "serializedSha256": "3afef210c6aad31eb6b9179c3ec0789f16a484e7a19ee549b014fad29fdfe8be"
+    },
+    {
+      "pagePath": "content/posts/2026-04-23-move-translating-laughter-and-tears-via-mixture.md",
+      "serializedSha256": "b65f9ee095a2c86962470ded5cf3612161496dbbee94eb22bd04c9a14b15b5d2"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-neural-encoding-detection-is-not-all-you-need-for.md",
+      "serializedSha256": "5633ab34a1bca478971a749cfb8252bb0e698f10760751f83db9ff8794f8e25c"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-nim4-asr-towards-efficient-robust-and.md",
+      "serializedSha256": "f640a1e248bc7ed68c31e89ef864707783bbde42e97a96d08dc15ff9b0526904"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-omni-embed-audio-leveraging-multimodal-llms-for.md",
+      "serializedSha256": "15d5f5b8fc261731e2088175132f9c61fec8e551fb086664e57f8eda56ca0586"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-prosody-as-supervision-bridging-the-non-verbal.md",
+      "serializedSha256": "4e388ece9f748a88ae7904f80dd24233c883db623d69a7924067f1ae4b3ebe5f"
+    },
+    {
+      "pagePath": "content/posts/2026-04-24-prosody-as-supervision-bridging-the-non-verbal.md",
+      "serializedSha256": "9c81987cd1a768cc296e1127fee76507c6b8fd85933142caba64b20504dfd7c6"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-still-between-us-evaluating-and-improving-voice.md",
+      "serializedSha256": "2f9db65f46e76f420feeba1213da73a10344d62dff9f26de7d1ef7a3d524973b"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-vibe-voice-induced-open-ended-bias-evaluation-for.md",
+      "serializedSha256": "70544771f40816ff0a70a2a7dc7eba081d2249e2557d0b3de58054462880b9ac"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-video-robin-autoregressive-diffusion-planning-for.md",
+      "serializedSha256": "07cb3a164199200f645dc994e15c56239e9677192f4dfc63991aecfe6eb68f54"
+    },
+    {
+      "pagePath": "content/posts/2026-04-24-video-robin-autoregressive-diffusion-planning-for.md",
+      "serializedSha256": "592d6c44fd08b9c8c09b209c06c3fa103d87505bfc3e5466b9706f2332c266de"
+    },
+    {
+      "pagePath": "content/posts/2026-04-21-where-do-self-supervised-speech-models-become.md",
+      "serializedSha256": "0770644b389b0aad5ea70ae360e9cf412cf9da12fb1517de30cf1d6296c6fa5a"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-aprvos-1st-place-winner-of-5th-pvuw-mevis-audio.md",
+      "serializedSha256": "7425322d46580e42ea6d6d7187f39f3be8892ecfae8a7b32ffad11845a5fd16e"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-atrie-adaptive-tuning-for-robust-inference-and.md",
+      "serializedSha256": "5316dd8a92aa1840e1eea45c2d159307616127e49ed2d19e5ff90a2a84e0ff36"
+    },
+    {
+      "pagePath": "content/posts/2026-04-24-atrie-adaptive-tuning-for-robust-inference-and.md",
+      "serializedSha256": "89d9498c3f0dbbfb43cff2451109d03fdb914811d4ea120473896d4c908164a6"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-audio-spoof-detection-with-gabornet.md",
+      "serializedSha256": "455a6f37ddc65039837d7dd64bafeed9a318541adefdf3d7fd1adc353f85f650"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-beat-tokenizing-and-generating-symbolic-music-by.md",
+      "serializedSha256": "3f5c935a6ad086b96b6245703d6df0cfb66221e0a0f6359e4ac12e883e3d5fbd"
+    },
+    {
+      "pagePath": "content/posts/2026-04-22-comparison-of-semg-encoding-accuracy-across.md",
+      "serializedSha256": "0046c36fd0b5a83fdb4b5663c5f88a3f6ddd20f9dbcb0956f3b10fd5faa1f010"
+    },
+    {
+      "pagePath": "content/posts/2026-04-28-comparison-of-semg-encoding-accuracy-across.md",
+      "serializedSha256": "49b094b63dd0d072f11fb02a49839359a6b22a38ff80fe5a954578a90304ade8"
+    }
+  ]
+}

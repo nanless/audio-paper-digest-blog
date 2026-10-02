@@ -123,6 +123,17 @@
     {{- $classificationProvenance = $proof.source -}}
     {{- if $proof.source.sourceUrl }}{{ $classificationSource = $proof.source }}{{ end -}}
   {{- end -}}
+  {{- if eq ($proof.publicationStatus | default "") "withheld" -}}
+    {{- $task = "" }}{{ $method = "" }}{{ $primaryTaskId = "" }}{{ $primaryMethodId = "" }}{{ $v2Roles = dict -}}
+    {{- /* Only a fully replayed original source reaches this status. Preserve
+         source/citation evidence independently of withheld classification. */ -}}
+    {{- if or (not $paperId) (eq $paperId $proof.paperId) -}}
+      {{- $paperId = $proof.paperId }}{{ $identityStatus = "verified" }}{{ $sourceKind = "conference" }}{{ $arxivId = "" -}}
+      {{- if findRE `^arxiv:[0-9]{4}\.[0-9]{4,5}$` $paperId 1 }}{{ $sourceKind = "arxiv" }}{{ $arxivId = strings.TrimPrefix "arxiv:" $paperId }}{{ end -}}
+      {{- if hasPrefix $proof.source.kind "fullsite-" }}{{ $classificationProvenance = $proof.source }}{{ end }}{{ if $proof.source.sourceUrl }}{{ $classificationSource = $proof.source }}{{ end -}}
+    {{- end -}}
+    {{- $v2Roles = dict "taxonomyPublicationStatus" "withheld" -}}
+  {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}
 {{- $memoValue = (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}

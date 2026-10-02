@@ -1,0 +1,167 @@
+{
+  "contract": "root-source-qualified-exact-old-v2-publication-holds-v1",
+  "currentGithubMain": "0c837bc6c154e5534319be12a702e221fb8fc5bb",
+  "originalCandidateSha256": "096e7a979b8455e17292c35088431ad3daae827f139a9387597a3d37f9885a3b",
+  "originalCandidatePublicationHead": "371ba49fecaf378cbbfb2321480aff90249f0eb7",
+  "originalV2WholeFileSha256": "4a196dba96480bed5a42f69583df1ed81a9dddaaeb603e4975f969ff78efa19c",
+  "originalRootHoldSha256": "c25b8a6a865cf1ea96ea03e80401c8aa49612e0bdb10f6069c64ff067b14fd14",
+  "rows": [
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11461028",
+      "originalTuple": {
+        "classificationContract": "historical-source-taxonomy-classification-v2",
+        "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+        "classificationRecordSha256": "2fdca5c02157bbf69e2b0af335eef234bffd57b6d036783c17f5304ebb2216ff",
+        "classificationProofSha256": "adb18a08573c1b5c9ee70794f8e3a4abcddf29a44c39371e3f4f1e6dbf5bd449",
+        "sourceDescriptorSha256": "ea8044da186c5417562257be2550399e57098c168e813e22fa6bdab0e2ee18cd",
+        "reviewProofSha256": "380d7a171be0829d14a2e89aa9231f4676bc16cf88b9b48a490628b1a0ef249c",
+        "issuerTuple": {
+          "contract": "historical-source-taxonomy-classification-v2",
+          "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+          "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+          "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+        },
+        "pages": [
+          {
+            "pagePath": "content/posts/2026-04-29-generalizability-of-predictive-and-generative.md",
+            "pageKey": "page:d7c808e7c43eee710ea8cbf997366db50f18012354170bd5ba66b90eab5c22b6",
+            "pageSha256": "4e5478090b8fef331e26228b69e62953a47701534dc36cd41fb6312e4eb2ac25",
+            "bodySha256": "6331fb43f44a627f86307f2908a973ded1739ab9f2872a9f3e64f6aa12b38fe0",
+            "recordSha256": "e8fda60c91553ef06a36dab675f8cb763c7120c326e3999c4c01289ee2d4ad5d",
+            "pageProofSha256": "0d6aad15b28592e798235db4087c58e7cf87956a6c136ee8fbf2df7d068a59c9"
+          }
+        ]
+      },
+      "fullSourceSha256": "9600e07e73dd228614f5b7de9ce9fa4aa1b79ccb9529defa4496bab2284f0edd",
+      "oldTuplePublicationEligible": false,
+      "reasonCode": "exact-original-classification-requires-source-qualified-replacement"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11461877",
+      "originalTuple": {
+        "classificationContract": "historical-source-taxonomy-classification-v2",
+        "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+        "classificationRecordSha256": "dbba3c6bf8bc43c1d55b2a574708fafdde72cc3f771a5998e9fcbe5fc19953ca",
+        "classificationProofSha256": "89f90bed5226bc481a8d89746b726dd86598a26061d63e017971f97f073f6398",
+        "sourceDescriptorSha256": "a8171c2dc55e9776b2d3023922c84b33d0968cb6d9fec21c5e3eed42f42a2177",
+        "reviewProofSha256": "536e219d94d04d9a95895d0a352ead2e19bb933e931a80409a901ba14f734c39",
+        "issuerTuple": {
+          "contract": "historical-source-taxonomy-classification-v2",
+          "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+          "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+          "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+        },
+        "pages": [
+          {
+            "pagePath": "content/posts/2026-04-29-fake-speech-wild-detecting-deepfake-speech-on.md",
+            "pageKey": "page:7d46f5a8e5aab562c1587e14ec6639aa97a3ac6a5044ab5e2c82159ffc32326b",
+            "pageSha256": "28bbd5b2489373ba12f7d237bf7c92f95ddb449c59811c01b1f820f5d0e0b223",
+            "bodySha256": "04b98d84ec9380e374d3280566b4a5f86f50b9b6e53dd7a2391921b01af52c4a",
+            "recordSha256": "9413a9061d3d689535b87e4152fb254806fb69ab10bd5b506b670b299d6abae9",
+            "pageProofSha256": "f8deebf59d1361b21ae865e053919e8949bcb00bbbf5cbb34883ce29a7bcd3b2"
+          }
+        ]
+      },
+      "fullSourceSha256": "c23f95b35aa3b5e0c93a4757b023117f2b732e5cc8d8be02419a6b4bf7ea8ce0",
+      "oldTuplePublicationEligible": false,
+      "reasonCode": "exact-original-classification-requires-source-qualified-replacement"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11461446",
+      "originalTuple": {
+        "classificationContract": "historical-source-taxonomy-classification-v2",
+        "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+        "classificationRecordSha256": "b1bf6b02ba12f57a2b568e30881fc3a34cf0551ea468beeed062e8e20c48deaf",
+        "classificationProofSha256": "1cae838d853fd02e617d9eaf6da12c9e51ee92577e1ea7d22c93a5f634a80d25",
+        "sourceDescriptorSha256": "e53ee8261721844cdcc7d42fca7e2c3bf95f98e55717bec08704285d41092509",
+        "reviewProofSha256": "b9a4e0b244773bf7e95d0bfcdc2a96803dbfdd71ce67815cf774570e948bb140",
+        "issuerTuple": {
+          "contract": "historical-source-taxonomy-classification-v2",
+          "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+          "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+          "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+        },
+        "pages": [
+          {
+            "pagePath": "content/posts/2026-04-29-it-is-personal-the-importance-of-personalization.md",
+            "pageKey": "page:3e59eddca9b6d3e2eb8663b577334eb0dea1b3fb3cf35637eb80329729f3c83a",
+            "pageSha256": "bba36d253e5a20ee70c8d098235f7a7729423d42c748f0ae3de746c1f6e28c18",
+            "bodySha256": "3c97f264e1374ba8e939276ca907c9dcf6d232ee3e670011db72340a8c932870",
+            "recordSha256": "264a49237b2fa18fa6e335230c59d11eaed4016238f8b576e8a2d21814d1da2e",
+            "pageProofSha256": "8eb610d573f1d5f8843654628c5451a0be8a68306835ac4b7aab2d10c18fdcca"
+          }
+        ]
+      },
+      "fullSourceSha256": "dccaa7488c49e716fe300cf8cdd40fe665911d1a605a72d09f68dfe248e52472",
+      "oldTuplePublicationEligible": false,
+      "reasonCode": "exact-original-classification-requires-source-qualified-replacement"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11464546",
+      "originalTuple": {
+        "classificationContract": "historical-source-taxonomy-classification-v2",
+        "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+        "classificationRecordSha256": "1bdbfdfdf233266d86b655752de7de29838dbb8840c7639126973551d28dd2e3",
+        "classificationProofSha256": "ff9c9d717df506a6553b3567658ec9004d8e35ceb241eb9e7862186631e3677e",
+        "sourceDescriptorSha256": "a0fa09cc38f7052389a0773b8c609a791231d4163e6000a195ad88a535187540",
+        "reviewProofSha256": "d76f7836f70ad2272406491190cef401fba2b2717b5d255ab55685bfa78375b5",
+        "issuerTuple": {
+          "contract": "historical-source-taxonomy-classification-v2",
+          "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+          "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+          "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+        },
+        "pages": [
+          {
+            "pagePath": "content/posts/2026-04-29-towards-data-drift-monitoring-for-speech-deepfake.md",
+            "pageKey": "page:d62d4cafce548cde0bae7c1dded5888af386b699ef3f9efb2cf96f7d00ce7f7d",
+            "pageSha256": "7f0b6d3d2cd98cc0e8d17eb94d2d6093fa92a3cedfffe0ff58d9328c1456048a",
+            "bodySha256": "4246b3ecf0bee9e1b4a2345b813e648c654cfeec57e99f94b5ab88c58db66503",
+            "recordSha256": "842697186221eabac4a08c71d9dab2189485e68af11e1b640aa30fe5ab7dcb4e",
+            "pageProofSha256": "bd0cf063640a525180db7f9fde1fa8391be35e164481d1e49aa6abb2ba99fbbb"
+          }
+        ]
+      },
+      "fullSourceSha256": "aba06c97fb379c7bde2963b0675d7e49b1fa92cc3ba1ff937197160c23a1a2a6",
+      "oldTuplePublicationEligible": false,
+      "reasonCode": "exact-original-classification-requires-source-qualified-replacement"
+    },
+    {
+      "paperId": "conference:icassp:2026:icassp-arnumber:11464268",
+      "originalTuple": {
+        "classificationContract": "historical-source-taxonomy-classification-v2",
+        "runId": "4b71743b-00c0-4c85-b1fa-0c49cc687e4e",
+        "classificationRecordSha256": "0a91c59a04e39b401cf94a50bd62c44806bc92ad16ed5abcb62423c40469d6e5",
+        "classificationProofSha256": "ecfe78b59772dc4bfc988879264139b298c0bfc49fafee5e1c5761ec611c4469",
+        "sourceDescriptorSha256": "7f0fd308370e76edec475cf5d10792b2f3024310e08d0090f493a809b38d5527",
+        "reviewProofSha256": "53c9e2b37950490a54692bd2e8908e2badd557e4b23c9aff1090ad664b0ec9a3",
+        "issuerTuple": {
+          "contract": "historical-source-taxonomy-classification-v2",
+          "registrySha256": "8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3",
+          "implementationSha256": "345ad11562e3884fa8927e6986792a6d050846cb49756b38b474af13eb8ae524",
+          "protectedDependencySha256": "8c137dec84b76abf75437111334c91cd7d05c5f01a12aac1c8e2ec68a5fcfeae"
+        },
+        "pages": [
+          {
+            "pagePath": "content/posts/2026-04-29-hair-noise-analysis-and-mitigation-for-smart.md",
+            "pageKey": "page:bfe5e97d057fc9c21038216221c335b7fa62da04ec12b74dac11b5056de85e2e",
+            "pageSha256": "d3f0370ec3c8975f3b0e404743e880a153a262e55657474d02d86c55c647ce3e",
+            "bodySha256": "70eadb880d3831db89b080ba57d4160ec0501aec761389eb1f8c51f359e297e6",
+            "recordSha256": "51386297c150eae5280b3d7bb86665096ad05801642692355dc2d1eae0cf9016",
+            "pageProofSha256": "179cafdc53146cc3d0fcd41d42baa338b01af149287daa803474acca57af8492"
+          }
+        ]
+      },
+      "fullSourceSha256": "67c828484cb56fc34896a37f6e89fce62066d3bc0a738e0e53fca44bfa430f37",
+      "oldTuplePublicationEligible": false,
+      "reasonCode": "exact-original-classification-requires-source-qualified-replacement"
+    }
+  ],
+  "physicalPinsReplayed": 44,
+  "actualGithubMainAllFivePageWholeAndBodyMatched": true,
+  "originalClassificationsChanged": false,
+  "qualifiedNew1446DoesNotReleaseOldTuple": true,
+  "offsite14919Excluded": true,
+  "unknownOrAlteredTuplesMustReject": true,
+  "newReplacementStillRequiresExplicitSupersession": true
+}

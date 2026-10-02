@@ -16,8 +16,8 @@ function paper(name, snapshot, ids, extra = {}) {
       return { id, facet: node.facet, label: node.zh };
     }), ...extra };
 }
-test('catalog binds all source definitions and preserves 228/262/330/338/371 while exposing formal374 current concepts', () => {
-  assert.equal(Object.keys(graph.byId).length, 374);
+test('catalog binds all source definitions and preserves 228/262/330/338/371/374 while exposing formal378 current concepts', () => {
+  assert.equal(Object.keys(graph.byId).length, 378);
   const previous = catalog.snapshots.find(snapshot => snapshot.registrySha256 === 'a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d');
   assert.equal(previous.concepts.length, 262);
   const issued330 = catalog.snapshots.find(snapshot => snapshot.registrySha256 === '68bbb2a0fb3c142ef21369320aca58f17b0ff7072e85923ec1c33dc2be98428c');
@@ -25,6 +25,10 @@ test('catalog binds all source definitions and preserves 228/262/330/338/371 whi
   const issued338 = catalog.snapshots.find(snapshot => snapshot.registrySha256 === '8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3');
   assert.equal(issued338.concepts.length,338);
   assert.deepEqual(current.concepts.slice(0,338),issued338.concepts);
+  const issued374 = catalog.snapshots.find(snapshot => snapshot.registrySha256 === 'a1d982ddf009e5bf760195d269c459aa7aa39c38686710efa11ba7d9de8d99bd');
+  assert.equal(issued374.concepts.length,374);
+  assert.deepEqual(current.concepts.slice(0,374),issued374.concepts);
+  assert.equal(current.registrySha256,'10653fa103f93ff1a894c42a22c2eb91d83b7bb14e57bd92d1a337ce00a5eb72');
   const issued371 = catalog.snapshots.find(snapshot => snapshot.registrySha256 === 'cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638');
   assert.equal(issued371.concepts.length,371);
   assert.deepEqual(current.concepts.slice(0,371),issued371.concepts);

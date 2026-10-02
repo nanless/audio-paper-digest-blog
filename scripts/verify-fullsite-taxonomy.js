@@ -32,7 +32,17 @@ function verify(root) {
     const bytes=fs.readFileSync(full),text=new TextDecoder('utf-8',{fatal:true}).decode(bytes),header=text.match(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/);
     if (!header || api.sha(bytes)!==record.pageSha256 || api.sha(text.slice(header[0].length))!==record.bodySha256) throw Error('Fullsite taxonomy exact current page/body drift: '+key);
   }
-  return {records:Object.keys(history.records).length,papers:Object.keys(history.classificationRecords).length};
+  // Full validation above includes every original row, including any withheld
+  // record. Eligibility partitions this verified collection without altering it.
+  const selection=require('./lib/fullsite-publication-selection'),profiles=require('./lib/fullsite-taxonomy-profiles').profiles;
+  const pins={collectionSha256:api.sha(manifestBytes),admissionSha256:api.sha(context.admissionBytes||''),sourcesSha256:api.sha(context.sourceBytes||'')};
+  const expected=selection.expectedFor(pins,profiles),selectorFile=path.join(root,'data/fullsite-taxonomy-publication-selection.json');
+  let publication;
+  if(expected){
+    const stat=fs.lstatSync(selectorFile);if(!stat.isFile()||stat.isSymbolicLink())throw Error('Publication selection must be a regular file');
+    publication=selection.read(fs.readFileSync(selectorFile),expected,history,pins).counts;
+  }else if(fs.existsSync(selectorFile))throw Error('Unexpected selection for this approved collection');
+  return {...{records:Object.keys(history.records).length,papers:Object.keys(history.classificationRecords).length},...(publication?{publication}: {})};
 }
 module.exports={verify};
 if(require.main===module){try{console.log(JSON.stringify(verify(process.cwd())));}catch(e){console.error(e.message);process.exitCode=1;}}

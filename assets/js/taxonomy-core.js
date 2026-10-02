@@ -142,6 +142,10 @@
       var source = sha ? versions[sha] : !catalog ? graph : null;
       var result = { status: source ? 'verified' : sha ? 'unknown-version' : 'unbound-version',
         registrySha256: sha, registryVersion: source ? source.registryVersion : '', concepts: [] };
+      // A publication hold cannot fall back to older flat classifications.
+      if (record.taxonomyPublicationStatus === 'withheld') {
+        result.status = 'withheld'; return result;
+      }
       if (record.taxonomyContract !== CONTRACT || !Array.isArray(record.taxonomyConcepts)) {
         result.status = 'legacy'; return result;
       }

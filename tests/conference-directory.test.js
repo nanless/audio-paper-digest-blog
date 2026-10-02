@@ -139,7 +139,9 @@ test('real Hugo renders all cards and safe deep links without JavaScript; pendin
       entry('b-first-2025', { name: 'Earlier B', year: 2025, event: { status: 'confirmed', startDate: '2025-01-02', sourceUrl: 'https://official.example/' }, ranking: { ...entry().ranking, grade: 'B' } }),
       entry('a-earlier-2025', { name: 'Earlier A', year: 2025, event: { status: 'confirmed', startDate: '2025-12-01', sourceUrl: 'https://official.example/' } }), workshop('satellite-2026', 'sample-2026')];
     fs.writeFileSync(path.join(temp, 'data/conference-directory.json'), JSON.stringify({ contract: api.contract, entries }));
-    execFileSync('hugo', ['--source', root, '--config', path.join(temp, 'hugo.yaml'), '--contentDir', path.join(temp, 'content'), '--destination', path.join(temp, 'public'), '--minify'], { stdio: 'pipe' });
+    // Use the fixture as the filesystem root, not the full collection's fileExists namespace.
+    for (const directory of ['layouts', 'assets', 'themes']) fs.cpSync(path.join(root, directory), path.join(temp, directory), { recursive: true });
+    execFileSync('hugo', ['--source', temp, '--config', path.join(temp, 'hugo.yaml'), '--contentDir', path.join(temp, 'content'), '--destination', path.join(temp, 'public'), '--minify'], { stdio: 'pipe' });
     const html = fs.readFileSync(path.join(temp, 'public/conferences/index.html'), 'utf8');
     assert.equal((html.match(/<article class="?conference-card/g) || []).length, 6);
     assert.match(html, /data-conference-group=A-2026[ >]/); assert.match(html, /data-conference-group=pending-2026-unknown/);

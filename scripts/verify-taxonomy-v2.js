@@ -17,6 +17,12 @@ function verify(root){
   const bytes=fs.readFileSync(full),text=new TextDecoder('utf-8',{fatal:true}).decode(bytes),header=text.match(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/);
   if(!header||sha(bytes)!==r.pageSha256||sha(Buffer.from(text.slice(header[0].length)))!==r.bodySha256)throw new Error('历史v2当前页面/正文SHA漂移：'+key);
  }}
+ // Qualification follows every original proof/source/MD validation above.
+ const holdsFile=path.join(root,'data/taxonomy-old-v2-publication-holds.json'),ordinaryFile=path.join(root,'data/taxonomy-history-v2.json'),holds=require('./lib/taxonomy-old-v2-publication-holds');
+ if(fs.existsSync(ordinaryFile)){
+  const ordinary=api.parseStrictJson(fs.readFileSync(ordinaryFile,'utf8')),hasHeld=Object.values(ordinary.records).some(r=>holds.IDS.includes(r.paperId));
+  if(hasHeld||fs.existsSync(holdsFile)){const stat=fs.lstatSync(holdsFile);if(!stat.isFile()||stat.isSymbolicLink())throw Error('Old V2 hold authority must be a regular file');holds.read(fs.readFileSync(holdsFile),ordinary);}
+ }
  return {records,currentPageRecords};
 }
 if(require.main===module){try{console.log(JSON.stringify(verify(process.cwd())));}catch(e){console.error(e.message);process.exitCode=1;}}

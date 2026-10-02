@@ -4,6 +4,7 @@
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
   {{- $result := dict -}}
   {{- $history := partial "taxonomy_fullsite_history.html" . -}}
+  {{- $selection := partial "taxonomy_fullsite_publication_selection.html" . -}}
   {{- if and (eq .Section "posts") .File (eq ($history.contract | default "") "fullsite-source-taxonomy-audit-supplement-v1") -}}
     {{- $path := printf "content/%s" .File.Path }}{{ $record := index ($history.records | default dict) $path | default dict -}}
     {{- if $record -}}
@@ -23,7 +24,13 @@
         {{- end -}}
         {{- $valid = site.Store.Get $cacheKey -}}
         {{- if $valid -}}
-          {{- $result = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $history.contract "classificationContract" "historical-source-taxonomy-classification-v3" "source" $audit.classificationRecord.source "classificationRecordSha256" $audit.classificationRecordSha256 "classificationProofSha256" $audit.classificationRecord.proofSha256) -}}
+          {{- if and $selection.valid (or (not $selection.required) (isset $selection.eligible $path)) -}}
+            {{- $result = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $history.contract "classificationContract" "historical-source-taxonomy-classification-v3" "source" $audit.classificationRecord.source "classificationRecordSha256" $audit.classificationRecordSha256 "classificationProofSha256" $audit.classificationRecord.proofSha256) -}}
+          {{- else if and $selection.valid (isset $selection.withheld $path) -}}
+            {{- /* Source validity is retained separately; this is not an
+                 eligible taxonomy or a newly issued identity supplement. */ -}}
+            {{- $result = dict "publicationStatus" "withheld" "paperId" $record.paperId "source" $audit.classificationRecord.source -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
