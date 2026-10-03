@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01952",
+  "abstract": "In one-shot training-free voice conversion (VC), the source and reference utterances may contain different linguistic content, so reliable frame-level correspondence between them cannot be assumed. We propose StateVC, which jointly defines a common set of local regions from pooled frame-level WavLM representations of the source and reference utterances; we refer to these regions as states. These shared states are obtained by fitting a pair-specific Gaussian mixture model to the pooled representations, without explicit source--reference frame matching. Within each state, StateVC estimates a source-to-reference mean shift in the original WavLM space. Source-frame posterior probabilities then combine the state-specific shifts so that different frames can receive different local updates. For the LibriSpeech one-shot protocol, StateVC achieves the lowest word error rate (WER) and character error rate (CER) among the evaluated systems, at 8.01% and 3.22%, respectively, with a speaker similarity (SIM) of 0.9512. It also achieves the highest mean perceived speaker similarity among the evaluated systems and the highest mean naturalness among the evaluated training-free systems.",
+  "abstractSha256": "d9f3d1581db97cb713f8e27ec8f06972c3c83f4ef5ab0768961fd9c1ffa2233e",
+  "arxivId": "2610.01952",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音转换",
+    "rankBucket": "前25%",
+    "score": 7.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对一次参考且内容不一致时无法可靠配对帧的问题，StateVC 用源与参考混合拟合的共享高斯状态估计每个状态内的均值平移并以后验加权更新源帧，在 LibriSpeech 一次转换协议上以 8.01% 词错误率和 3.22% 字错误率为内容保持最优，代价是说话人相似度并非全部最高且评估限于英语朗读语料。",
+  "originalTitle": "Shared-State Local Translations for Training-Free Voice Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01952.pdf",
+  "readerTitle": "不配对帧也能做音色转换：用共享状态做局部平移的 StateVC",
+  "schemaVersion": 1
+}

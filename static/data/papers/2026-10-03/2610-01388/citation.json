@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01388",
+  "arxivId": "2610.01388",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Anna Min"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Ziyang Chen"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University",
+        "Shanghai Qi Zhi Institute"
+      ],
+      "name": "Hang Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Andrew Owens"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01388",
+  "originalTitle": "Supervising Sound Localization by In-the-wild Egomotion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01388.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

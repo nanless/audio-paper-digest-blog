@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00272",
+  "abstract": "Native full-duplex speech models can respond before a user finishes speaking, making the behavior of the model depend on both the final utterance and when intent-defining information arrives. Existing benchmarks primarily evaluate turn-taking mechanics, whereas safety evaluations typically assume that the complete request is observed prior to response generation. We introduce LateIntent-Bench, a matched-pair benchmark for delayed intent revelation. A shared ambiguous prefix precedes either a benign or a harmful continuation, using a controlled pause to delay when the branches become distinguishable. We define the Premature Response Rate (PRR) to measure whether response onset precedes the revelation of intent. Joint evaluation of harmful and benign engagement distinguishes changes in safety selectivity from general losses in responsiveness. Across 3,136 sessions, four native full-duplex models exhibit distinct response-timing patterns under delayed intent. Three models show increased harmful engagement while maintaining benign responsiveness, whereas one loses engagement with both branches. Inserting a 1.5s silence after intent revelation keeps PRR near the no-pause baseline and substantially reduces changes in harmful engagement. These results demonstrate that evaluating fully specified requests alone fails to capture emerging timing patterns, highlighting the necessity of assessing delayed intent revelation in full-duplex models. The code will be publicly released soon.",
+  "abstractSha256": "917e1d0114c5368f7422c478c4bb23198f1e3f37a7fc47c9bc980a6385000dee",
+  "arxivId": "2610.00272",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yang Xiao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Tianyi Peng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Hanyu Meng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ting Dang"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对原生全双工语音会在用户说完前开口的问题，论文用共享模糊前缀加可控停顿构造迟发意图基准，以提前响应率与有害或良性参与率联合评估四个模型，发现三者有害参与上升而一者全面退缩，且停顿放在意图揭示后则效应大减，但代码当前不可用限制了复现。",
+  "originalTitle": "When Intent Arrives Late: A Benchmark for Full-Duplex Speech Models under Delayed Intent Revelation",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00272.pdf",
+  "readerTitle": "意图来得太晚：全双工语音何时抢话与帮错忙",
+  "schemaVersion": 1
+}

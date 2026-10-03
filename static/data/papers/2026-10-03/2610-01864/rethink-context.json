@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01864",
+  "abstract": "How can we understand what a music foundation model has learned \\textit{internally}? Most interpretability approaches, such as probing and Sparse Autoencoders (SAEs), focus on identifying individual features with minimal structural assumptions. We argue that many concepts are better understood as \\textit{structured relations} rather than isolated features. This is especially prominent in music, where tonal structures are organized in the space of pitch and time. For example, concepts such as chords or keys are naturally expressed as structured sets (e.g., the 12 transpositions of a chord or the diatonic system within a key), rather than isolated features. In this study, \\textbf{we shift from feature identification to structure-based analysis}, asking whether the learned inner representations of music foundation model emerge as organized structures over features. To this end, we introduce a framework that uses pitch transposition as an inductive bias to induce ordered orbits via multi-view SAE alignment. Concretely, we generate pitch-shifted input pairs and align their SAE representations to discover structured groups of pitch-related features. Experimental results show that this approach recovers orbit structures corresponding to chords, keys, and melodic patterns across two state-of-the-art music foundation models, while requiring only minimal grounding (e.g., a few anchor examples) to interpret entire concept families.",
+  "abstractSha256": "0765147ca6bc70a481aee9eec98e2545fbe4337f680d10969b96851ae3ef0c72",
+  "arxivId": "2610.01864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "无监督学习",
+    "primaryTask": "和弦识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.chord-recognition",
+          "label": "和弦识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.unsupervised",
+          "label": "无监督学习"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "无监督学习",
+      "primaryMethodId": "method.unsupervised",
+      "primaryTask": "和弦识别",
+      "primaryTaskId": "task.chord-recognition",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Computer Science Department, NYU Shanghai",
+        "Machine Learning Department, MBZUAI"
+      ],
+      "name": "Liwei Lin"
+    },
+    {
+      "affiliations": [
+        "Machine Learning Department, MBZUAI"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音乐基础模型内部是否形成和弦与调性关系结构的问题，该文用半音移调多视角稀疏自编码器对齐恢复有序特征轨道，并以大三小三和弦环与下属音环为证据支撑，仅用少量锚点解释整族特征，代价是节奏等移调不变概念与部分调式信号仍需额外偏置与验证。",
+  "originalTitle": "From Isolated Feature to Orbits: Discovering Music Concepts via Multi-SAE Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01864.pdf",
+  "readerTitle": "从孤立特征到轨道：用移调对齐恢复音乐概念的关系结构",
+  "schemaVersion": 1
+}

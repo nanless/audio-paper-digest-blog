@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00026",
+  "abstract": "Private domain speech is difficult to collect and redistribute, while compact models need task-specific supervision. We study an auditable synthetic pipeline that maps Japanese care handoffs directly to six-field structured notes. Using 182 synthetic training and development clips, we adapt a 1.47B audio model by full fine-tuning and rank-16 LoRA. On a 39-clip scenario-seed-disjoint synthetic test, an unadapted model obtains a model-judged factuality-recall score of 0.0500, full tuning 0.8664, and LoRA 0.8461. LoRA reaches 97.7% of the full-tuning aggregate as a descriptive ratio while project telemetry reports 12.4M trainable parameters, about 0.85% of the backbone. Both adaptations show large paired gains over the same base; the full-versus-LoRA interval crosses zero, and differing optimization settings preclude an equivalence claim. This is a parameter-efficient capability-acquisition result, not a device-performance result: latency, memory, energy, and real-time factor were not measured. All evaluation speech and targets are synthetic, references are model-proposed, and the judge is uncalibrated. The evidence shows that a compact model can acquire a narrow audio-to-structure transformation from a few hundred provenance-linked synthetic examples; it does not establish clinical validity, real-speech transfer, or superiority to a clean cloud system.",
+  "abstractSha256": "bb6c672c22b2e72ed91cc2b4f37b25be9489d1df9b01c2cdd2eb1d6e231ba5cf",
+  "arxivId": "2610.00026",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 5.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "口语理解",
+      "primaryTaskId": "task.spoken-understanding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sidi Chang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Peiying Zhu"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "用 182 段带溯源的合成日语护理交接音频适配 1.47B 音频模型，全量微调与 rank-16 LoRA 在 39 段种子隔离合成测试上取得 0.8664 与 0.8461 的事实性-召回调和分，LoRA 以约 0.85% 可训练参数保留 97.7% 的聚合分，但未测量设备延迟功耗且未验证真实语音迁移。",
+  "originalTitle": "High-Value Synthetic Supervision for Parameter-Efficient Adaptation of a Compact Japanese Speech Model",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00026.pdf",
+  "readerTitle": "182 条合成监督能让小模型学会日语交接转结构化病历吗",
+  "schemaVersion": 1
+}

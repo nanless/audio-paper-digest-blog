@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01388",
+  "abstract": "We present a method for learning binaural sound localization using egomotion as a supervisory signal. Over the course of a video, the cameras direction to a sound source will change as the camera moves. We train an audio model to predict sound directions that are consistent with visual estimates of camera motion, which we obtain using traditional methods from multi-view geometry. This provides a weak but plentiful form of supervision that we combine with traditional binaural cues. To evaluate this method, we propose a dataset of real-world audio-visual videos with egomotion. We show that our model can successfully learn from real-world data and that it performs well on sound localization tasks",
+  "abstractSha256": "d8ff890d2e28af47161b7bff7350c2ea0a5f8cc5b1312a2baf90f7a474ac54e7",
+  "arxivId": "2610.01388",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.weak-supervised",
+          "label": "弱监督学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "弱监督学习",
+      "primaryMethodId": "method.weak-supervised",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Anna Min"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Ziyang Chen"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University",
+        "Shanghai Qi Zhi Institute"
+      ],
+      "name": "Hang Zhao"
+    },
+    {
+      "affiliations": [
+        "University of Michigan"
+      ],
+      "name": "Andrew Owens"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文用视觉估计的相机旋转与平移方向约束同一视频前后两段立体声的方位预测，并叠加左右声强差约束，在野外步行视频与仿真对照上验证了该弱监督的有效性与重叠声下的局限。",
+  "originalTitle": "Supervising Sound Localization by In-the-wild Egomotion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01388.pdf",
+  "readerTitle": "相机动了，声音该往哪偏：用野外自运动监督双耳定位",
+  "schemaVersion": 1
+}

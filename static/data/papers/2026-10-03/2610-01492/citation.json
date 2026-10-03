@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01492",
+  "arxivId": "2610.01492",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeeyoung Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seohwan Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungwoong Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01492",
+  "originalTitle": "Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01492.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01450",
+  "arxivId": "2610.01450",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shunsuke Mitsumori"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Wiesner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shigeo Morishima"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01450",
+  "originalTitle": "Code-Switching Spoken Language Identification as Multi-Label Set Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01450.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01492",
+  "abstract": "Neural speech codecs increasingly serve as tokenizers for speech language models (SLMs). Lowering the frame rate reduces the computational and memory costs of SLMs, but makes it difficult to preserve both linguistic information and acoustic detail. Existing approaches rely on rule-based compression: average pooling can discard linguistic information, whereas similarity-based merging uses a fixed threshold on adjacent-frame similarity and applies the resulting boundaries to the acoustic stream. We propose Q-SPT, a low-frame-rate dual-stream speech tokenizer with separate, context-aware, learnable query-based compressors specialized for semantic and acoustic representations. In particular, queries at a fixed rate independently attend to the semantic and acoustic streams as separate key-value sources, enabling stream-specific, context-aware aggregation through two separately learned compressors. In addition, an autoregressive text loss explicitly supervises the semantic compressor to preserve linguistic information. Experimental results show that Q-SPT achieves the best reconstruction among the evaluated codecs at the same frame rate. In downstream SLMs, it yields the best speech recognition accuracy and text-to-speech perceptual quality with competitive intelligibility.",
+  "abstractSha256": "5253ac07d1a197de16e781cb720c1903f15bad937c52b5cdd2dd0320bc1010c9",
+  "arxivId": "2610.01492",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "神经编解码与离散单元",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.neural-codec",
+          "label": "神经编解码与离散单元"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "神经编解码与离散单元",
+      "primaryMethodId": "method.neural-codec",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jeeyoung Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Seohwan Yun"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sungwoong Kim"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对 6.25 Hz 下语言信息与声学细节难以兼顾的问题，Q-SPT 用两组独立可学习查询分别压缩语义流与声学流并以自回归文本损失监督语义，在 LibriSpeech test-clean 重建与下游识别合成中取得同帧率最优，但合成可懂度仍弱于 FlexiCodec 且需更大训练开销。",
+  "originalTitle": "Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01492.pdf",
+  "readerTitle": "低帧率也要两手抓：可学习查询如何分开压缩语义与声音",
+  "schemaVersion": 1
+}

@@ -1,0 +1,96 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01846",
+  "abstract": "Speech-based Alzheimer&#39;s disease (AD) assessments increasingly rely on pretrained self-supervised learning (SSL) models that learn acoustic representations directly from raw audio, exposing the model to recording factors. We ask whether such factors are merely encoded in SSL representations or can systematically alter predictions. Using ADReSSo and three large SSL backbones, we apply controlled noise and reverberation interventions to participant-speech-only, non-speech, and full-recording audio. We combine layer-wise linear decoding, input- and representation-space interventions, and geometric alignment analysis to distinguish acoustic decodability from influence on AD prediction. Our results show that controlled acoustic interventions alter AD predictions across all three SSL backbones. Noise, despite showing no significant diagnostic-group difference in the original data, produces the strongest intervention effects. Importantly, these effects are systematically structured relative to the classifier&#39;s decision direction, replicate on the held-out test set and reverse when the representation-space intervention direction is reversed. Together, these findings show that high predictive performance and the absence of a significant diagnostic-group difference in a measured acoustic factor are not sufficient for robustness. We argue that intervention-based robustness tests should become standard for trustworthy clinical speech models.",
+  "abstractSha256": "279298ea272f7f5f95d54e41b1694c162eb6d633bbc4df0ab2599ab50335f91d",
+  "arxivId": "2610.01846",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.speech-biomarker",
+          "label": "语音生物标志物"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Serli Kopar"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Alkis Koudounas"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Roshan P. Rane"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sam Gijsen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paula A. Perez-Toro"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Kerstin Ritter"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该文在 ADReSSo 上用三条大语音自监督主干做可控噪声与混响的输入与表示干预，证明即使无组间差异的噪声也能以最高翻转率系统性改变预测且方向可逆，而高精度本身不能保证稳健。",
+  "originalTitle": "Beyond Decodability: Do Acoustic Factors Drive Predictions in Speech-Based Alzheimer's Assessment?",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01846.pdf",
+  "readerTitle": "能解码不等于会使用：噪声与混响如何系统性推动阿尔茨海默语音预测",
+  "schemaVersion": 1
+}

@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01619",
+  "abstract": "The environmental impact of deep learning has attracted increasing attention over the past decade. Existing studies mainly focus on the energy and carbon emissions of model training and inference, while the whole development phase is often overlooked. Yet, architecture prototyping and intensive experiments are conducted during this stage, which is highly energy-demanding. In this article, we propose a methodology to estimate these costs, based on activity logs from the Grid5000 shared computing platform used by the LORIA laboratory. As a case-study, we focus on audio projects developed in the Multispeech research team. We evaluate the overall energy cost of four projects, and we compare them to those of training the reported models. Our results show that the energy required for the development phase is 3 to 256 times greater than that required to train the best-performing model alone. These results advocate for a more systematic reporting of energy consumption across the entire life cycle of deep learning-based audio projects.",
+  "abstractSha256": "22dabd4cfdb40fccefd131d27302ff342986911817f0513829ad4e71ba4d947a",
+  "arxivId": "2610.01619",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Centrale Med, Aix Marseille Univ,",
+        "CNRS, LIS, Marseille, France"
+      ],
+      "name": "Constance Douwes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Romain Serizel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对只报告最终训练能耗会低估项目代价的问题，用 Grid5000 作业日志回算实验室、团队和四个音频项目的开发能耗，报告开发能耗约为最优单模型训练的 3 到 256 倍，而法国低碳电网与假设美国电网下的碳排放差距可达近十倍。",
+  "originalTitle": "Exposing the Cost of Deep Learning Audio Development",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01619.pdf",
+  "readerTitle": "只算最后一次训练会漏掉多少电：音频深度学习开发全过程的代价",
+  "schemaVersion": 1
+}

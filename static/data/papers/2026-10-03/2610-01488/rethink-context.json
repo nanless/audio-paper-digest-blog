@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01488",
+  "abstract": "Backchannel prediction has been studied almost entirely in dyadic conversation. We introduce a multi-party benchmark based on the AMI corpus, comprising 682 masked-listener views from 171 meetings, 190 speakers, and 18,697 backchannel events, with a person-disjoint held-out split. A state-of-the-art dyadic model applied zero-shot to meeting audio performs at chance (AUROC 0.499); nevertheless, its frozen acoustic features remain informative: a linear probe reaches 0.704, and retraining the predictor raises performance to 0.751. Retraining reveals a second limitation. Listener conditioning improves prediction for listeners seen during training but not for unseen listeners, and the gap remains under capacity reduction, listener-adversarial training, per-listener adaptation, and oracle lexical conditioning. Adversarial training removes only part of the speaker-identity information, while stronger removal hurts prediction, suggesting that identity is entangled with cues that are useful for backchanneling. A within-model control helps explain this pattern: with the same features and data splits, turn-onset prediction transfers to unseen listeners, while backchannel prediction does not. Backchannel rates also vary about twice as much across individuals as turn-onset rates. Since backchannels occupy only about 1% of frames, frame-level F1 is strongly affected by the base rate. We therefore report AUROC alongside event-F1 on listener-active regions. We release the benchmark and evaluation tools at this https URL.",
+  "abstractSha256": "99b4216b6eae3c76f8e5e9f08ea673f2cdf705074e1bd1a6b15bf78c6f98064f",
+  "arxivId": "2610.01488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前25%",
+    "score": 8.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.turn-taking",
+          "label": "轮次切换"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "轮次切换",
+      "primaryTaskId": "task.turn-taking",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Enchanted Tools"
+      ],
+      "name": "Mohammed Hafsati"
+    },
+    {
+      "affiliations": [
+        "Enchanted Tools",
+        "IMT Nord Europe"
+      ],
+      "name": "Ahmed Loughzali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文把双人回馈模型搬到多人混合音频上发现预测头失效在先、跨听者泛化失效在后，用冻结特征探针、重训、条件化与对抗等对照定位到回馈行为本身的人际差异大而可迁移声学成分小。",
+  "originalTitle": "Multi-Party Backchannel Prediction: a Diagnosis, a Benchmark, and a Ceiling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01488.pdf",
+  "readerTitle": "多人会议中回馈预测为何跨人失效：诊断、基准与行为上限",
+  "schemaVersion": 1
+}

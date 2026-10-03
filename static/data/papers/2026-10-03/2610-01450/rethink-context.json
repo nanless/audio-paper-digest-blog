@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01450",
+  "abstract": "Code-switched (CS) speech leaks through the monolingual language identification (LID) filters used to curate massive speech corpora, calling for CS-aware LID (CS-LID). We formulate utterance-level CS-LID as multi-label language-set prediction and propose a set generator that directly outputs the languages in an utterance, comparing it against atomic-pair and score-based classification baselines. Oracle Top-k is the strongest baseline, but thresholding fails because no single threshold separates CS from monolingual speech. Our set generator predicts the correct language count on unseen pairs without assuming the number of languages, but underperforms oracle Top-k in exact set accuracy. Our analysis identifies the key obstacles to robust CS-LID: oracle cardinality, threshold instability, language bias in CS training data, and the synthetic-to-real gap.",
+  "abstractSha256": "17a70731f1f8f57568cb34893cab4ec60ef4c05da90b3f1814735588559e138c",
+  "arxivId": "2610.01450",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "语言识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.language-identification",
+          "label": "语言识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.code-switching",
+          "label": "代码转换"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "语言识别",
+      "primaryTaskId": "task.language-identification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shunsuke Mitsumori"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Matthew Wiesner"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shigeo Morishima"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Shinji Watanabe"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "本文把整句语码切换识别定义为多标签语言集合预测，对比原子对分类、分数排序基线与直接生成语言集合的方法，显示已知语言数时的前二排序最强但阈值不可迁移，而集合生成器能预测语言个数但在精确集合准确率上仍落后。",
+  "originalTitle": "Code-Switching Spoken Language Identification as Multi-Label Set Prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01450.pdf",
+  "readerTitle": "语码切换语言识别：从原子对分类到可数可辨的语言集合预测",
+  "schemaVersion": 1
+}

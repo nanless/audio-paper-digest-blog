@@ -1,0 +1,72 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.00154",
+  "abstract": "Neural audio codecs enable low-bitrate speech compression and tokenization, yet their robustness on accented and multilingual speech remains under-evaluated. We benchmark seven open-source neural codecs (DAC, EnCodec, FocalCodec, LanguageCodec, SemantiCodec, UniCodec, WavTokenizer) on three African speech datasets afrinames, afrispeech dialog, afrispeech multilingual, reporting signal-level quality (NISQA, UTMOS, ViSQOL, STOI, F0-RMSE) alongside two downstream tasks: automatic speech recognition (ASR) and speaker verification (ASV). Our analysis yields four findings. First, signal metrics differ sharply in downstream validity: reference-based structural/intelligibility measures (ViSQOL, STOI) and prosodic error (F0-RMSE) track ASR and ASV degradation far more reliably than neural mean-opinion-score predictors (NISQA, UTMOS). Second, intelligibility and speaker-identity preservation diverge sharply across architectures, and the apparent identity ranking itself depends on the ASV backend. Third, degradation is strongly domain-dependent and largest for conversational dialog. Fourth, the resulting degradation is partly recoverable: parameter-efficient \\emph{codec} adaptation (LoRA, $\\sim$1--3\\% of parameters) on roughly 35 hours of African speech reduces the compression-induced word-error-rate gap, recovering recognition toward the uncompressed baseline (developed in companion work). These results motivate task-aware, domain-representative, and adaptation-aware evaluation of speech codecs as a prerequisite for inclusive deployment.",
+  "abstractSha256": "d7c149d1497af0373bfa4df1ee2d347f179a9b0824e71f7cc7f720288934efc4",
+  "arxivId": "2610.00154",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-coding",
+          "label": "语音编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音编码",
+      "primaryTaskId": "task.speech-coding",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chibuzor Okocha"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Christan Earl Grant"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文在三种非洲语音上固定识别与验证后端、只替换编解码器重建音频，显示参考型结构与基频误差比神经 MOS 更能跟踪下游退化，且中码率 RVQ 相对稳定而极低码率语义压缩在识别可用时仍可能丢失声纹，轻量 LoRA 适配可部分收回识别损失。",
+  "originalTitle": "How Robust Are Neural Audio Codecs for African Speech? A Multi-Task Benchmark and the Limits of Perceptual Quality",
+  "pdfUrl": "https://arxiv.org/pdf/2610.00154.pdf",
+  "readerTitle": "好看的听感分数为何留不住可懂度和声纹：非洲语音上的编解码器多任务基准",
+  "schemaVersion": 1
+}

@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01926",
+  "abstract": "Increasing depth of transformer models improves recognition, but it comes at a substantial cost. Each additional layer requires more parameters, which makes the process computationally inefficient. We ask whether additional processing can focus on integrating features already computed. Looped Audio Spectrogram Transformer (LAST) first processes all tokens, then reuses the same blocks to refine only the class token over fixed audio features, thereby making later passes inexpensive. On AudioSet, ten-pass LAST achieves 0.345 mean average precision, exceeding a twelve-layer sequential transformer by 2.1% relative with 49.4% fewer parameters, 42% fewer multiply-accumulate operations, and 9.8% higher measured throughput. Across separately trained models, increasing the pass count from two to ten improves accuracy while adding only 1.2% computation. Further evaluations show improved robustness to temporal masking and various other auditory augmentations, with better generalization on classification tasks with music, environmental, and event sounds.",
+  "abstractSha256": "a7382dd04615af48bd61b4a9d0e91ab2ef0ba92c9c780c98446009e790fbb3aa",
+  "arxivId": "2610.01926",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Haider Al-Tahan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sean O'Brien"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Anastasia Razdaibiedina"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "N. Apurva Ratan Murty"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对音频片段分类需要跨时间整合但加层代价大的问题，LAST 用 6 个共享块先做一次全量编码再只循环更新类别标记，在 AudioSet 上以 10 次通过达到 0.3450 mAP 并同时减少参数与计算量，代价是每轮通过数需单独训练且增益依赖只更新类别标记的设计。",
+  "originalTitle": "LAST: Looped Audio Spectrogram Transformer",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01926.pdf",
+  "readerTitle": "加深不加参：只循环精炼类别标记的音频频谱 Transformer",
+  "schemaVersion": 1
+}

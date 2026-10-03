@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01961",
+  "abstract": "Accent conversion (AC) requires changing accent while preserving speaker identity and linguistic content, yet parallel recordings are scarce. Speech synthesis provides an alternative source of supervision, but generated targets vary in accent realization and source preservation. We propose a multi-sample synthetic supervision framework that constructs conversion targets by jointly assessing these properties across candidate waveforms for each source--accent condition. Selected candidates provide associated discrete speech codes, representing linguistic content, prosody, and speaking style, as targets for accent-conditioned autoregressive adaptation. Compared with using one generated target per training example, our method improves target-accent classification accuracy by 2.49 percentage points, while speaker similarity remains nearly unchanged, and word error rate increases by 0.29 percentage points. Across six target accents, our method achieves 7.81% WER and the highest mean listening ratings among evaluated systems.",
+  "abstractSha256": "1b80e8b146319ca5d79f9f08079040c0b17d43003775b11d62ea62321d4263db",
+  "arxivId": "2610.01961",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音转换",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.voice-conversion",
+          "label": "语音转换"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.accent-dialect",
+          "label": "口音与方言"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "数据增强",
+      "primaryMethodId": "method.augmentation",
+      "primaryTask": "语音转换",
+      "primaryTaskId": "task.voice-conversion",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yangyang Qu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "该研究把同一源语句同目标口音的多次随机合成看作候选池，用口音与保持度的波形评估选出其配对离散码作为监督，在相同训练条件下口音准确率提升 2.49 个百分点，代价是词错误率平均上升 0.29 个百分点、说话人相似度基本不变。",
+  "originalTitle": "Multi-sample Synthetic Supervision for Accent Conversion",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01961.pdf",
+  "readerTitle": "从一次采样到八次采样：用波形挑选为口音转换选出更可用的合成监督",
+  "schemaVersion": 1
+}

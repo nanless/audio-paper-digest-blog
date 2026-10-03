@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01488",
+  "arxivId": "2610.01488",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Enchanted Tools"
+      ],
+      "name": "Mohammed Hafsati"
+    },
+    {
+      "affiliations": [
+        "Enchanted Tools",
+        "IMT Nord Europe"
+      ],
+      "name": "Ahmed Loughzali"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01488",
+  "originalTitle": "Multi-Party Backchannel Prediction: a Diagnosis, a Benchmark, and a Ceiling",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01488.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

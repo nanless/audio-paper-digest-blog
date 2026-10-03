@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01184v1",
+  "abstract": "Remote multimodal models offer strong numerical reasoning capabilities over charts and speech, but sending private inputs risks exposing sensitive content. Text-only sanitization cannot directly satisfy fixed media interfaces, while identity anonymization leaves the underlying task content exposed. We introduce ReCast, an agentic plug-in framework that replaces source-specific content while preserving task-relevant relations and the required input modality. ReCast locally converts inputs into a shared textual evidence-query record, jointly rewrites entities and topics with a distilled 4B model, and substitutes values through a locally invertible, role-aware numerical map. A reconstruction agent generates and validates the required media from the protected record. The remote solver returns a program whose protected operands are restored locally before execution. On 4,000 held-out ChartQA and NMSQA examples, ReCast achieves 75.10% accuracy, retaining 92.43% of unprotected remote accuracy, while a model-based audit flags source-content leakage in 7.95% of solver-bound requests. It outperforms all evaluated local baselines, preserving the benefit of remote reasoning while reducing source-content exposure under existing media interfaces.",
+  "abstractSha256": "1051659de9b045f328f144b04d326befe66566b208e7e9875de66d9cafb211ac",
+  "arxivId": "2610.01184",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2610.01184v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频推理",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-reasoning",
+          "label": "音频推理"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.privacy",
+          "label": "隐私保护"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音频推理",
+      "primaryTaskId": "task.audio-reasoning",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingchen Pei"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Lichong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bingxi Zhao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ziang Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sirui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Min Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Yanhao Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qingxu Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Qiang Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Chang-Tien Lu"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Bo Gao"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对图表与语音数值推理中远端接口只收固定媒体的问题，ReCast 用本地文本中间记录改写实体主题并映射数值再重建同模态替身，远端只做选操作数写程序、本地恢复原始操作数后执行，在 4000 个 ChartQA 与 NMSQA 样本上保留 92.43% 远端原生精度而求解器侧泄露为 7.95%。",
+  "originalTitle": "ReCast: Contract-Preserving Protection for Fixed-Interface Multimodal Reasoning",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01184v1.pdf",
+  "readerTitle": "换掉内容留下算式：为固定图表与语音接口重建可计算的保护输入",
+  "schemaVersion": 1
+}

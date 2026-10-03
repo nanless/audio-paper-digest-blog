@@ -1,0 +1,34 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01619",
+  "arxivId": "2610.01619",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Centrale Med, Aix Marseille Univ,",
+        "CNRS, LIS, Marseille, France"
+      ],
+      "name": "Constance Douwes"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Paul Magron"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS",
+        "Inria, LORIA, F-54000 Nancy, France"
+      ],
+      "name": "Romain Serizel"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01619",
+  "originalTitle": "Exposing the Cost of Deep Learning Audio Development",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01619.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

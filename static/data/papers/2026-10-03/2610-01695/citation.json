@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01695",
+  "arxivId": "2610.01695",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruchao Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sunit Sivasankaran"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keqi Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01695",
+  "originalTitle": "Teaching LLMs to Hear Who Spoke What: Metadata-Supervised Pretraining for Encoder-Free Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01695.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01864",
+  "arxivId": "2610.01864",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Computer Science Department, NYU Shanghai",
+        "Machine Learning Department, MBZUAI"
+      ],
+      "name": "Liwei Lin"
+    },
+    {
+      "affiliations": [
+        "Machine Learning Department, MBZUAI"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "id": "2610.01864",
+  "originalTitle": "From Isolated Feature to Orbits: Discovering Music Concepts via Multi-SAE Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01864.pdf",
+  "schemaVersion": 1,
+  "type": "preprint"
+}

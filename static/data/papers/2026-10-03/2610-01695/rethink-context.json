@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01695",
+  "abstract": "Encoder-based speech large language models (Speech-LLMs) commonly employ pretrained speech encoders that prioritize linguistic content but may discard fine-grained acoustic cues essential for speaker discrimination and paralinguistic understanding. Encoder-free Speech-LLMs instead map Mel-spectrogram features directly into the LLM input space through lightweight embedding layers, enabling the LLM to learn from low-level acoustic features. However, systematic pretraining strategies for encoder-free Speech-LLMs remain underexplored, limiting their ability to compensate for the absence of large-scale pretrained speech encoders. We propose metadata-supervised pretraining (MSP), which leverages speech attributes such as speaker identity and emotion to develop speaker-discriminative and paralinguistic capabilities. We further introduce speaker-aware utterance composition (SAUC) to strengthen speaker discrimination and apply random span masking to regularize pretraining. We primarily evaluate our approach on joint ASR and speaker diarization in multi-speaker conversations, complemented by experiments on paralinguistic speech-understanding tasks. Under matched training-data conditions, our encoder-free model outperforms its randomly initialized encoder-based counterpart. With limited metadata-annotated data, it is competitive with models using speech encoders pretrained on substantially larger corpora, outperforming them in several settings. These results demonstrate the potential of encoder-free architectures for building native multimodal LLMs that acquire diverse speech capabilities.",
+  "abstractSha256": "2474397944f828b640b9819c9c99a8cad919bd997ed5acac1d08f2bf46ce67b9",
+  "arxivId": "2610.01695",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.pretraining",
+          "label": "预训练"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Mohan Shi"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Ruchao Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Sunit Sivasankaran"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Keqi Deng"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jinyu Li"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "针对无编码器语音大模型缺乏说话人判别力的问题，论文用性别情感说话人等元数据监督加即时多说话人拼接与适度掩码做预训练，在匹配数据下优于随机初始化编码器并接近大语料预训练编码器，但大规模纯转写预训练对说话人归属增益有限且存在任务差异。",
+  "originalTitle": "Teaching LLMs to Hear Who Spoke What: Metadata-Supervised Pretraining for Encoder-Free Speech-LLMs",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01695.pdf",
+  "readerTitle": "去掉语音编码器后，大模型如何从频谱里学会分辨谁在说话",
+  "schemaVersion": 1
+}

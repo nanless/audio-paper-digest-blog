@@ -1,0 +1,79 @@
+{
+  "absUrl": "https://arxiv.org/abs/2610.01405",
+  "abstract": "This paper presents a collection of audio transforms that introduce perceptually irrelevant distortions and demonstrates their use as perceptual stress tests for audio quality models. We refer to these methods as Perceptual Audio Data Perturbation (PADP). PADP exploits the insensitivity of the human auditory system to certain fine-grained signal variations to substantially alter the waveform while preserving perceived audio quality and content. The audibility of PADP and the selection of its parameters are evaluated through controlled listening tests, ensuring that the transformations achieve transparent or near-transparent quality for both non-critical and critical items. We further probe the robustness of state-of-the-art (SOTA) perception-motivated objective audio quality models and foundation models. The results reveal a misalignment between model responses and human auditory perception, highlighting the limited perceptual awareness of these models for certain proposed transforms.",
+  "abstractSha256": "b574be5d5beda1b51e2ba287a67d032d007b99bf85fbd347d4f67f136358a344",
+  "arxivId": "2610.01405",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频质量评估",
+    "rankBucket": "前50%",
+    "score": 5.8,
+    "taxonomy": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-quality",
+          "label": "音频质量评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-taxonomy-flat-tags-compat-v1",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频质量评估",
+      "primaryTaskId": "task.audio-quality",
+      "registrySha256": "a3b75a149852076933ec2895de77c09c73667c8334bff046dde3b20b69ded03d",
+      "registryVersion": "paper-taxonomy-v1",
+      "selectionContract": "paper-taxonomy-selection-v1"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Guanxin Jiang"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Andreas Brendel"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Pablo M. Delgado"
+    },
+    {
+      "affiliations": [
+        "机构信息未在 arXiv HTML 中可靠披露"
+      ],
+      "name": "Jürgen Herre"
+    }
+  ],
+  "contract": "researcher-sidecars-v1",
+  "oneSentenceThesis": "论文针对客观质量模型是否真与人耳一致的问题，构造保持听感不变但大幅改变波形的四种扰动，用听音验证透明参数并显示模型距离与主观评分排序错位，其代价是扰动只覆盖所验证的参数与单声道条件。",
+  "originalTitle": "PADP: Perceptual Audio Data Perturbation for Probing Perception Awareness in Audio Quality Models",
+  "pdfUrl": "https://arxiv.org/pdf/2610.01405.pdf",
+  "readerTitle": "波形大变而听感不变：PADP 用感知无关扰动检验音频质量模型的感知一致性",
+  "schemaVersion": 1
+}
