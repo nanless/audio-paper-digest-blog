@@ -6,7 +6,8 @@ const path = require('node:path');
 const core = require('../assets/js/taxonomy-core');
 const current = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/taxonomy-registry.json')));
 const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/taxonomy-catalog.json')));
-const old = catalog.snapshots.find(snapshot => snapshot.registrySha256 !== current.registrySha256);
+// Bind the issued 228-concept fixture by identity; catalog order is not a version.
+const old = catalog.snapshots.find(snapshot => snapshot.registrySha256 === '15c82a567ce5a55dc1175684ed08b64c158558639d9c8fb822c9587ec32a8778');
 const graph = core.createRegistry(current, catalog);
 function paper(name, snapshot, ids, extra = {}) {
   return { pageType: 'paper', permalink: '/posts/' + name + '/', identityStatus: 'unknown',
