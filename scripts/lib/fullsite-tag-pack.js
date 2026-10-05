@@ -1,8 +1,8 @@
 'use strict';
 // Lossless value/canonical-proof reconstruction. Archive/native bytes remain
 // separate evidence; this packing format does not preserve JSON indentation.
-const api=require('./fullsite-taxonomy-proof');
-const {stableHash,parseStrictJson}=require('./taxonomy-classification-v3-proof');
+const api=require('./fullsite-tag-proof');
+const {stableHash,parseStrictJson}=require('./tag-classification-v3-proof');
 const CONTRACT='fullsite-source-taxonomy-audit-sharded-supplement-v1';
 const PACKING='shared-dependencies-and-paper-records-v1';
 const SHARD='fullsite-source-taxonomy-audit-packed-shard-v1';

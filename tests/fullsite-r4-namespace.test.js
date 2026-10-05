@@ -2,7 +2,7 @@
 // Synthetic decisions/reviews with a retained public dependency map. No model
 // acceptance or source admission is inferred from this transport-only fixture.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{execFileSync}=require('node:child_process');
-const api=require('../scripts/lib/fullsite-taxonomy-proof'),shared=require('../scripts/lib/taxonomy-classification-v3-proof'),cases=require('./fixtures/fullsite-taxonomy-public'),base=require('./fixtures/classification-v3-public');
+const api=require('../scripts/lib/fullsite-tag-proof'),shared=require('../scripts/lib/tag-classification-v3-proof'),cases=require('./fixtures/fullsite-tag-public'),base=require('./fixtures/classification-v3-public');
 const dependencies=require('./fixtures/fullsite-r4-installed-dependencies.json');
 const registrySha='10653fa103f93ff1a894c42a22c2eb91d83b7bb14e57bd92d1a337ce00a5eb72',wholeDeps='2ddcc46252f270596cbb4b533ad33237ecb4d6286ad2accc86bf4e567462ec9f',implementationPath='scripts/fullsite-taxonomy-r4/fullsite-taxonomy-audit-classification.js';
 function fixture(){
@@ -35,7 +35,7 @@ test('R4 transport and implementation gates agree in JS/Hugo without approving s
  fs.writeFileSync(path.join(tmp,'data/cases.json'),JSON.stringify(data));fs.writeFileSync(path.join(tmp,'hugo.yaml'),'baseURL: https://example.test/\ndisableKinds: [section,taxonomy,term,RSS,sitemap,robotsTXT,"404"]\n');
  fs.writeFileSync(path.join(tmp,'layouts/index.html'),'[{{ range $i,$case := hugo.Data.cases }}{{ if $i }},{{ end }}{{ $r := partial "tag_fullsite_projection.html" $case.input }}{{ dict "name" $case.name "valid" (partial "tag_classification_v3_proof.html" (dict "record" $r "fullsiteEnvelope" $case.input)) | jsonify | safeHTML }}{{ end }}]');
  execFileSync('hugo',['--source',tmp,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});const got=JSON.parse(fs.readFileSync(path.join(tmp,'public/index.html')));for(let i=0;i<data.length;i++)assert.equal(got[i].valid,data[i].expected,data[i].name);
- const old=cases.fixture();assert.equal(replay(old),true);const f=fixture(),[key,page]=Object.entries(f.history.records)[0];assert.throws(()=>api.approvedProfile(page,f.history.classificationRecords[page.classificationRef],require('../scripts/lib/fullsite-taxonomy-profiles').profiles,f.context),/root-approved/);
+ const old=cases.fixture();assert.equal(replay(old),true);const f=fixture(),[key,page]=Object.entries(f.history.records)[0];assert.throws(()=>api.approvedProfile(page,f.history.classificationRecords[page.classificationRef],require('../scripts/lib/fullsite-tag-profiles').profiles,f.context),/root-approved/);
 });
 test('378 appends immutable definitions and presentation without replacing issued374 or canonical262',()=>{
  const data=n=>JSON.parse(fs.readFileSync(path.join(__dirname,'../data',n+'.json'))),catalog=data('taxonomy-catalog'),current=data('taxonomy-registry'),policy=data('taxonomy-presentation-policy');const previous=catalog.snapshots.find(s=>s.concepts.length===374),next=catalog.snapshots.find(s=>s.registrySha256===registrySha);

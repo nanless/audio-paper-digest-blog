@@ -47,7 +47,7 @@ function mergeSupplementFiles(files) {
 }
 if (require.main === module) {
   const args = process.argv.slice(2);
-  if (args[0] !== '--output' || args.length < 3) throw new Error('用法：merge-taxonomy-supplements.js --output 输出文件 输入文件...');
+  if (args[0] !== '--output' || args.length < 3) throw new Error('用法：merge-tag-supplements.js --output 输出文件 输入文件...');
   const output = path.resolve(args[1]);
   const merged = mergeSupplementFiles(args.slice(2));
   const temporary = output + '.tmp-' + crypto.randomUUID();

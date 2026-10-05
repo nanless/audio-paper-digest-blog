@@ -2,7 +2,7 @@
 // Exact old issued tuples remain intact. This qualifies publication, never
 // assigns replacement labels or changes a source/classification proof.
 const {hash,sha}=require('./fullsite-publication-selection');
-const {parseStrictJson}=require('./taxonomy-public-proof');
+const {parseStrictJson}=require('./tag-public-proof');
 const AUTHORITY_SHA='c8d926668f30324779e19c47dd8844e2308a78d0687c472e4babcadef6ea3424';
 const IDS=['conference:icassp:2026:icassp-arnumber:11461028','conference:icassp:2026:icassp-arnumber:11461877','conference:icassp:2026:icassp-arnumber:11461446','conference:icassp:2026:icassp-arnumber:11464546','conference:icassp:2026:icassp-arnumber:11464268'];
 const fail=m=>{throw Error('Exact old V2 publication hold rejected: '+m);};

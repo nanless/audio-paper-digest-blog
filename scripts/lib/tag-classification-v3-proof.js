@@ -1,10 +1,10 @@
 'use strict';
 // Strict independent classification-V3 replay and declared371 V2 dispatch.
-// Existing V2 validator remains byte unchanged.
+// 旧v2记录保留原内容，当前校验器只更新模块引用。
 // This replay does not verify scientific semantics or public-key signatures.
 // Shared JSON/source/NA primitives retain the exact established contracts.
 const crypto=require('node:crypto');
-const old=require('./taxonomy-v2-proof');
+const old=require('./tag-v2-proof');
 const {TYPES,DOMAINS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash}=old;
 const CONTRACT='historical-source-taxonomy-classification-v3';
 const FACETS={...old.FACETS,engineering:['task','method']};
@@ -74,7 +74,7 @@ function validateRecord(record,snapshot,profile,fullsiteAdmission=null){
   if(c.methodNotApplicable!==false||c.primaryMethodId!==r.conceptId||c.primaryMethodLabel!==r.label)fail('主机制与主方法必须完全相同且适用');
  }else if(mechanismRoles&&c.primaryMechanismEvidence!==null)fail('普通分支必须显式空机制证据');
  if(typeof c.methodNotApplicable!=='boolean')fail('方法NA类型');
- require('./taxonomy-na-full-source-proof').validateNAFullSourceEvidence(c,source);
+ require('./tag-na-full-source-proof').validateNAFullSourceEvidence(c,source);
  // New371/V3 issuers use the bounded full-source constructor. Legacy issuers
  // keep their original helper; evidenceChars counts quotes, not numbered text.
  if(c.methodNotApplicable){
@@ -125,7 +125,7 @@ function validateRecord(record,snapshot,profile,fullsiteAdmission=null){
 
 function validatePublicRecord(record,snapshot){
  const c=record?.classificationRecord;
- const matches=require('./taxonomy-v3-profiles').profiles.filter(p=>p.registrySha256===record?.registrySha256
+ const matches=require('./tag-v3-profiles').profiles.filter(p=>p.registrySha256===record?.registrySha256
   &&p.classificationContract===record?.classificationContract&&p.classificationContract===CONTRACT
   &&p.implementationSha256===c?.fingerprintInputs?.implementationSha256
   &&p.protectedDependencySha256===c?.protectedDependencySha256);
@@ -143,13 +143,13 @@ function validateSyntheticFixture(record,snapshot){
  return validateRecord(record,snapshot,profile);
 }
 function validateDeclared371Profile(record,snapshot,profile){
- if(stableHash(profile)!==stableHash(require('./taxonomy-v2-371-proof').profile))fail('未知371 producer profile');
+ if(stableHash(profile)!==stableHash(require('./tag-v2-371-proof').profile))fail('未知371 producer profile');
  if(profile.registrySha256!=='cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638'||profile.classificationContract!=='historical-source-taxonomy-classification-v2'||record.registrySha256!==profile.registrySha256)fail('仅根批准371/V2namespace');
  if(record.classificationRecord?.fingerprintInputs?.implementationSha256!==profile.implementationSha256||record.classificationRecord?.protectedDependencySha256!==profile.protectedDependencySha256)fail('根批准371生产者指纹');
  return validateRecord(record,snapshot,profile);
 }
 function replayFullsite(page,path,audit,snapshot,profile){
- const envelope=require('./fullsite-taxonomy-proof');
+ const envelope=require('./fullsite-tag-proof');
  envelope.validateEnvelope(page,path,audit);
  const c=audit.classificationRecord,member=profile.members?.[page.paperId];
  // This deterministic adapter is only an in-memory input to the shared inner
@@ -162,8 +162,8 @@ function replayFullsite(page,path,audit,snapshot,profile){
  return validateRecord(r,snapshot,profile,{paperId:page.paperId,admission:audit.planAdmission,member});
 }
 function validateAdmittedFullsiteRecord(page,path,audit,snapshot,profile,context){
- const envelope=require('./fullsite-taxonomy-proof');
- const approved=envelope.approvedProfile(page,audit,require('./fullsite-taxonomy-profiles').profiles,context);
+ const envelope=require('./fullsite-tag-proof');
+ const approved=envelope.approvedProfile(page,audit,require('./fullsite-tag-profiles').profiles,context);
  if(stableHash(approved)!==stableHash(profile))fail('fullsite approval context changed');
  return replayFullsite(page,path,audit,snapshot,approved);
 }
@@ -171,7 +171,7 @@ function validateAdmittedFullsiteRecord(page,path,audit,snapshot,profile,context
 // approve a real producer/plan or be loaded from a supplement/site parameter.
 function validateSyntheticFullsiteFixture(page,path,audit,snapshot,profile,context){
  if(audit?.classificationRecord?.fingerprintInputs?.model!=='synthetic-test-model')fail('合成夹具明确标记必需');
- const approved=require('./fullsite-taxonomy-proof').approvedProfile(page,audit,[profile],context);
+ const approved=require('./fullsite-tag-proof').approvedProfile(page,audit,[profile],context);
  return replayFullsite(page,path,audit,snapshot,approved);
 }
 module.exports={CONTRACT,TYPES,DOMAINS,FACETS,ROLE_KEYS,FINGERPRINT_KEYS,projectionHash,parseStrictJson,canonical,stableHash,validatePublicRecord,validateSyntheticFixture,validateDeclared371Profile,validateAdmittedFullsiteRecord,validateSyntheticFullsiteFixture};

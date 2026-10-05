@@ -1,8 +1,8 @@
 'use strict';
 // Synthetic protocol decisions only. Never publish these objects as accepted data.
 const fs=require('node:fs'),path=require('node:path');
-const api=require('../../scripts/lib/taxonomy-v2-proof');
-const old=require('./taxonomy-v2-public');
+const api=require('../../scripts/lib/tag-v2-proof');
+const old=require('./tag-v2-public');
 const V3='sealed-source-evidence-snippets-v3-formfeed-split';
 const SHA='8c89a69ffe7daba6cc9da4ea5789101d6118e326b9978ec3edae1a85e965c8e3';
 const snapshot=old.catalog.snapshots.find(s=>s.registrySha256===SHA);

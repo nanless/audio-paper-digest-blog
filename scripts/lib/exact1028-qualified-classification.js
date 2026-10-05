@@ -1,7 +1,7 @@
 'use strict';
 // This is a separately qualified existing primary decision, never a native
 // accepted cache. Its original failed native record and predecessor stay intact.
-const fs=require('node:fs'),path=require('node:path'),shared=require('./taxonomy-classification-v3-proof'),api=require('./fullsite-taxonomy-proof');
+const fs=require('node:fs'),path=require('node:path'),shared=require('./tag-classification-v3-proof'),api=require('./fullsite-tag-proof');
 const CONTRACT='exact1028-independent-review-qualified-classification-v1';
 const SHA='03beb37ae2df8f7f48850f935cb274a9b0c75eebde483e9c1d6c51a5cffaeb20';
 const PAPER='conference:icassp:2026:icassp-arnumber:11461028';
@@ -18,7 +18,7 @@ function validate(q){
 function read(root){
  const file=path.join(root,'data/exact1028-qualified-classification.json');if(!fs.existsSync(file))return null;
  const st=fs.lstatSync(file);if(!st.isFile()||st.isSymbolicLink())fail('qualification regular file');const bytes=fs.readFileSync(file);if(api.sha(bytes)!==SHA)fail('qualification whole SHA');const q=shared.parseStrictJson(bytes.toString('utf8'));validate(q);
- const original=shared.parseStrictJson(fs.readFileSync(path.join(root,'data/taxonomy-history-v2.json'),'utf8'));if(shared.stableHash(require('./taxonomy-old-v2-publication-holds').tuple(PAPER,original.records))!==shared.stableHash(q.publicationAuthority.predecessor))fail('original predecessor');
+ const original=shared.parseStrictJson(fs.readFileSync(path.join(root,'data/taxonomy-history-v2.json'),'utf8'));if(shared.stableHash(require('./tag-old-v2-publication-holds').tuple(PAPER,original.records))!==shared.stableHash(q.publicationAuthority.predecessor))fail('original predecessor');
  for(const p of q.pages){const full=path.resolve(root,p.pagePath);if(!full.startsWith(path.resolve(root,'content/posts')+path.sep))fail('current page path');const st=fs.lstatSync(full);if(!st.isFile()||st.isSymbolicLink())fail('current page regular file');const b=fs.readFileSync(full),t=new TextDecoder('utf-8',{fatal:true}).decode(b),header=t.match(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/);if(!header||api.sha(b)!==p.pageSha256||api.sha(t.slice(header[0].length))!==p.bodySha256)fail('current whole/body');}
  const c=q.originalPrimary.decision;return{qualification:q,resolve(p){const page=q.pages.find(x=>x.pagePath===p);return page?{...c,...page,paperId:PAPER,contract:'paper-taxonomy-flat-tags-compat-v1',registrySha256:REGISTRY,registryVersion:'paper-taxonomy-v2',classificationContract:CONTRACT,evidenceContract:CONTRACT,evidenceType:'source-bound-independent-review-qualification',source:q.source,proofSha256:SHA}:null;}};
 }

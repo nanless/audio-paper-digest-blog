@@ -12,5 +12,5 @@ const profile=Object.freeze({
   "roleContract": "historical-source-taxonomy-roles-v2",
   "implementationFile": "historical-source-taxonomy-classification-v2"
 });
-function validatePublicRecord(record,snapshot){return require('./taxonomy-classification-v3-proof').validateDeclared371Profile(record,snapshot,profile);}
+function validatePublicRecord(record,snapshot){return require('./tag-classification-v3-proof').validateDeclared371Profile(record,snapshot,profile);}
 module.exports={profile,validatePublicRecord};

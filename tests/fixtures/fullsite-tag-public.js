@@ -1,8 +1,8 @@
 'use strict';
 // Explicitly synthetic classification/source/review/authority. Never published.
 const base=require('./classification-v3-public');
-const shared=require('../../scripts/lib/taxonomy-classification-v3-proof');
-const api=require('../../scripts/lib/fullsite-taxonomy-proof');
+const shared=require('../../scripts/lib/tag-classification-v3-proof');
+const api=require('../../scripts/lib/fullsite-tag-proof');
 const {stableHash}=shared,sha=api.sha;
 function fixture() {
   const old=base.fixture({mechanism:false}),r=JSON.parse(JSON.stringify(old.record)),c=r.classificationRecord;
@@ -39,7 +39,7 @@ function reseal(f) {
   return f;
 }
 function packed(f=fixture()){
- const pack=require('../../scripts/lib/fullsite-taxonomy-pack'),[id,audit]=Object.entries(f.history.classificationRecords)[0],d=audit.protectedDependencies;
+ const pack=require('../../scripts/lib/fullsite-tag-pack'),[id,audit]=Object.entries(f.history.classificationRecords)[0],d=audit.protectedDependencies;
  const refs={nativeRef:stableHash(d.native),sourceRef:stableHash(d.source),ownRef:stableHash(d.own)},issuerRef=stableHash(d);
  const profiles={native:{[refs.nativeRef]:d.native},source:{[refs.sourceRef]:d.source},own:{[refs.ownRef]:d.own},issuers:{[issuerRef]:{contract:d.contract,...refs}}};
  const {protectedDependencies:_,classificationRecord:__,...outer}=audit, {protectedDependencies:___,...inner}=audit.classificationRecord;

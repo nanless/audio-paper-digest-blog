@@ -1,7 +1,7 @@
 'use strict';
 // SYNTHETIC decision/review/source. This file never writes production sidecars.
-const base=require('./taxonomy-v3-public'),old=require('./taxonomy-v2-public');
-const api=require('../../scripts/lib/taxonomy-classification-v3-proof');
+const base=require('./tag-v3-public'),old=require('./tag-v2-public');
+const api=require('../../scripts/lib/tag-classification-v3-proof');
 function sync(r){
  const c=r.classificationRecord,f=c.fingerprintInputs;
  c.protectedDependencySha256=api.stableHash(c.protectedDependencies);f.protectedDependencySha256=c.protectedDependencySha256;

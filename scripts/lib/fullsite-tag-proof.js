@@ -2,7 +2,7 @@
 // Current-page fullsite audit envelopes. Hash replay is not a public-key
 // signature or an independent semantic reassessment of the source manuscript.
 const crypto = require('node:crypto');
-const shared = require('./taxonomy-classification-v3-proof');
+const shared = require('./tag-classification-v3-proof');
 const { stableHash, ROLE_KEYS, CONTRACT: INNER_CONTRACT } = shared;
 const PUBLIC_CONTRACT = 'fullsite-source-taxonomy-audit-supplement-v1';
 const AUDIT_CONTRACT = 'fullsite-source-taxonomy-audit-v3';
@@ -97,7 +97,7 @@ function approvedProfile(page,audit,profiles,context) {
 }
 function validatePublicRecord(page,path,audit,snapshot,context) {
   validateEnvelope(page,path,audit);
-  const profile=approvedProfile(page,audit,require('./fullsite-taxonomy-profiles').profiles,context);
+  const profile=approvedProfile(page,audit,require('./fullsite-tag-profiles').profiles,context);
   // Added as a distinct shared replay entry only after full public authority
   // closure. Its source descriptor must not be disguised as an old source.
   return shared.validateAdmittedFullsiteRecord(page,path,audit,snapshot,profile,context);

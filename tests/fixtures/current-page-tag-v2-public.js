@@ -2,7 +2,7 @@
 // Portable offline protocol exercise: the three identities are published; every
 // classification, source text and plan below is synthetic and never authorized.
 const fs=require('node:fs'),path=require('node:path');
-const base=require('./taxonomy-v2-public'),api=require('../../scripts/lib/taxonomy-v2-proof');
+const base=require('./tag-v2-public'),api=require('../../scripts/lib/tag-v2-proof');
 const hash=api.stableHash;
 const items=['589308196f3505cf41d91e43dc266266c427786a884121b8e08e45251d303b59','49a68e1031356f03145bf33f3d8dc350c0c2d7efa4566c88c337587b190838d2','09aa923470874e5e7bf572b64151f961e00a4df9cfc01ebca5eec3f9d79a4271'];
 function fixture(){

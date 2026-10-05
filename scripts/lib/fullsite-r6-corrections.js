@@ -2,7 +2,7 @@
 // A closed six-record publication overlay. Neither predecessor is deleted or
 // relabelled. Every successor needs its exact root-approved whole tuple.
 const fs=require('node:fs'),path=require('node:path');
-const api=require('./fullsite-taxonomy-proof'),shared=require('./taxonomy-classification-v3-proof'),tuples=require('./fullsite-publication-selection');
+const api=require('./fullsite-tag-proof'),shared=require('./tag-classification-v3-proof'),tuples=require('./fullsite-publication-selection');
 const AUTHORITY='110d10cca5d32a0477ab5160b9dad58ab42c8122becdc8c6ab49c7474c613086';
 const fail=m=>{throw Error('Exact six correction rejected: '+m);};
 function read(root,oldFullsite){
@@ -17,7 +17,7 @@ function read(root,oldFullsite){
  for(const t of actual){const row=authority.rows.find(x=>x.paperId===t.paperId);if(!row||shared.stableHash(t)!==shared.stableHash(row.successor)||eligible.has(t.paperId))fail('unknown/altered successor');eligible.set(t.paperId,row);}
  if(eligible.size!==authority.rows.length||eligible.has(authority.unresolvedPaperId))fail('scope');
  for(const row of authority.rows){
-  if(row.predecessor.kind==='held-original-v2'){const old=require('./taxonomy-old-v2-publication-holds').tuple(row.paperId,oldV2.records);if(shared.stableHash(old)!==shared.stableHash(row.predecessor.tuple))fail('old V2 predecessor');}
+  if(row.predecessor.kind==='held-original-v2'){const old=require('./tag-old-v2-publication-holds').tuple(row.paperId,oldV2.records);if(shared.stableHash(old)!==shared.stableHash(row.predecessor.tuple))fail('old V2 predecessor');}
   else if(row.predecessor.kind==='held-original-native'){if(!oldFullsite||shared.stableHash(tuples.tuple(row.paperId,oldFullsite.classificationRecords[row.paperId],oldFullsite.records))!==shared.stableHash(row.predecessor.tuple))fail('old native predecessor');}
   else if(row.predecessor.kind!=='existing-flat-retrieval-labels')fail('unknown predecessor');
  }

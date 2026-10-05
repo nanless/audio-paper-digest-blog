@@ -1,11 +1,11 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path'),{spawnSync,execFileSync}=require('node:child_process');
-const api=require('../scripts/lib/fullsite-taxonomy-proof'),shared=require('../scripts/lib/taxonomy-classification-v3-proof'),cases=require('./fixtures/fullsite-taxonomy-public');
+const api=require('../scripts/lib/fullsite-tag-proof'),shared=require('../scripts/lib/tag-classification-v3-proof'),cases=require('./fixtures/fullsite-tag-public');
 function replay(f){api.parseSupplement(f.history);for(const [key,page]of Object.entries(f.history.records))assert.equal(shared.validateSyntheticFullsiteFixture(page,key,f.history.classificationRecords[page.classificationRef],f.snapshot,f.profile,f.context),true);}
 test('explicit synthetic shared paper replay preserves both exact current guides; no production approval',()=>{
  const f=cases.fixture();replay(f);
  for(const [key,page]of Object.entries(f.history.records)){const a=f.history.classificationRecords[page.classificationRef];assert.throws(()=>api.validatePublicRecord(page,key,a,f.snapshot,f.context),/root-approved/);assert.throws(()=>shared.validatePublicRecord({...page,classificationRecord:a.classificationRecord,classificationContract:shared.CONTRACT},f.snapshot));}
- assert.equal(require('../scripts/lib/fullsite-taxonomy-profiles').profiles.some(p=>p.implementationSha256===api.sha('SYNTHETIC issuer')),false);
+ assert.equal(require('../scripts/lib/fullsite-tag-profiles').profiles.some(p=>p.implementationSha256===api.sha('SYNTHETIC issuer')),false);
  const old=require('./fixtures/classification-v3-public'),generic=old.fixture({mechanism:false});generic.record.classificationRecord.source.fullsiteSourceAuthority=Object.values(f.history.classificationRecords)[0].classificationRecord.source.fullsiteSourceAuthority;old.sync(generic.record);assert.throws(()=>shared.validateSyntheticFixture(generic.record,generic.snapshot),/独立namespace/);
 });
 test('complete rehash cannot change admitted page, source, authority, raw review or role',()=>{
@@ -33,7 +33,7 @@ test('incomplete multi-guide projection, orphan shared object, duplicate member,
 });
 test('new namespace cannot obtain approval through old issuer tuple or duplicate new tuple',()=>{
  const f=cases.fixture(),[key,page]=Object.entries(f.history.records)[0],audit=f.history.classificationRecords[page.classificationRef];
- assert.throws(()=>api.approvedProfile(page,audit,require('../scripts/lib/taxonomy-v3-profiles').profiles),/root-approved/);
+ assert.throws(()=>api.approvedProfile(page,audit,require('../scripts/lib/tag-v3-profiles').profiles),/root-approved/);
  assert.throws(()=>api.approvedProfile(page,audit,[f.profile,f.profile]),/unique/);
  const wrong={...f.profile,implementationSha256:api.sha('unapproved')};assert.throws(()=>api.approvedProfile(page,audit,[wrong]));
 });
@@ -46,7 +46,7 @@ test('public admission replays exact ordered whole scope and rejects duplicated 
  for(const mutate of [p=>p.papers[0].pages.reverse(),p=>p.papers.push(p.papers[0]),p=>p.papers[0].privateAuthorityPath='/Users/synthetic/plan.json',p=>p.papers[0].pages[1].pageKey=p.papers[0].pages[0].pageKey,p=>p.pageCount=3]){const p=JSON.parse(JSON.stringify(projection));mutate(p);const b=serialize(p);assert.throws(()=>admission.parse(b,api.sha(b)));}
 });
 test('packed public reader reconstructs the complete original inner/outer/page proofs and rejects refs-only shortcuts',()=>{
- const pack=require('../scripts/lib/fullsite-taxonomy-pack'),f=cases.packed(),result=pack.reconstruct(f.manifest,()=>f.bytes);
+ const pack=require('../scripts/lib/fullsite-tag-pack'),f=cases.packed(),result=pack.reconstruct(f.manifest,()=>f.bytes);
  assert.equal(shared.stableHash(result),shared.stableHash(f.history));
  const mutations={
   'unknown packing':f=>f.manifest.packing='refs-exist-is-valid',
@@ -139,5 +139,5 @@ test('explicit test-only issuer fixture reaches Page.Store, typed HTML, citation
   const resolved=graph.resolveRecord(entry);assert.equal(resolved.status,'verified');assert.equal(resolved.concepts.length,page.concepts.length);const md=exportApi.build([entry],'md',{taxonomyGraph:graph}).text,csv=exportApi.build([entry],'csv',{taxonomyGraph:graph}).text;assert(md.includes('研究类型与方向已核验'));assert(csv.includes('研究类型与方向已核验'));assert(md.includes(c.primaryResearchRole.label));assert(csv.includes(c.primaryResearchRole.label));assert.equal(api.sha(fs.readFileSync(path.join(tmp,key))),page.pageSha256);
  }
  const first=Object.keys(f.history.records)[0];fs.appendFileSync(path.join(tmp,first),'\n');const drift=build();assert.equal(drift[first].proof.evidenceContract,undefined);assert.equal(drift[first].meta.researchType,undefined);assert.equal(drift[first].meta.classificationProvenance,undefined);assert.equal(drift[Object.keys(f.history.records)[1]].proof.evidenceContract,api.PUBLIC_CONTRACT);
- assert.equal(require('../scripts/lib/fullsite-taxonomy-profiles').profiles.some(p=>p.implementationSha256===api.sha('SYNTHETIC issuer')),false);
+ assert.equal(require('../scripts/lib/fullsite-tag-profiles').profiles.some(p=>p.implementationSha256===api.sha('SYNTHETIC issuer')),false);
 });

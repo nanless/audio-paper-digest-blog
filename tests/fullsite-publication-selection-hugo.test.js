@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{spawnSync}=require('node:child_process');
-const root=path.resolve(__dirname,'..'),pack=require('../scripts/lib/fullsite-taxonomy-pack'),selection=require('../scripts/lib/fullsite-publication-selection');
+const root=path.resolve(__dirname,'..'),pack=require('../scripts/lib/fullsite-tag-pack'),selection=require('../scripts/lib/fullsite-publication-selection');
 const history=pack.reconstruct(JSON.parse(fs.readFileSync(root+'/data/fullsite-taxonomy-history.json')),k=>fs.readFileSync(root+'/static/'+k));
 const heldPath=Object.keys(history.records).find(p=>history.records[p].paperId===selection.HELD);
 function fixture(){

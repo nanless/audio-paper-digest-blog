@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const core=require('../assets/js/tag-core'),library=require('../assets/js/paper-library'),{fixture,catalog}=require('./fixtures/taxonomy-v2-public');
+const core=require('../assets/js/tag-core'),library=require('../assets/js/paper-library'),{fixture,catalog}=require('./fixtures/tag-v2-public');
 const current=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../data/taxonomy-registry.json'))),graph=core.createRegistry(current,catalog);
 function entry(f,slug){const r=f.record;return {title:'Synthetic '+slug,pageType:'paper',permalink:'https://example.test/blog/posts/'+slug+'/',identityStatus:'verified',arxivId:'2601.00001',paperId:r.paperId,
  taxonomyContract:core.contract,taxonomyRegistrySha256:r.registrySha256,taxonomyRegistryVersion:r.registryVersion,taxonomyConcepts:r.concepts,

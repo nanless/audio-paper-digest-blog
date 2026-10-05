@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const api=require('./lib/taxonomy-classification-v3-proof');
+const api=require('./lib/tag-classification-v3-proof');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 function verify(root){
  const collections=[['taxonomy-history-v3.json','historical-source-taxonomy-supplement-v3',false]].filter(([name])=>fs.existsSync(path.join(root,'data',name)));if(!collections.length)return {records:0,currentPageRecords:0};

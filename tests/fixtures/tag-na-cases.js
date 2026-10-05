@@ -1,6 +1,6 @@
 'use strict';
 // Synthetic full-source evidence only. Never exported as classified data.
-const {fixture,seal,digest}=require('./taxonomy-v2-public'),api=require('../../scripts/lib/taxonomy-v2-proof');
+const {fixture,seal,digest}=require('./tag-v2-public'),api=require('../../scripts/lib/tag-v2-proof');
 function reseal(r){const c=r.classificationRecord;c.fingerprint=api.stableHash(c.fingerprintInputs);r.requestStageFingerprint=c.fingerprint;c.reviewProof.decisionSha256=api.stableHash({concepts:c.concepts,...Object.fromEntries(api.ROLE_KEYS.map(k=>[k,c[k]]))});c.reviewProofSha256=api.stableHash(c.reviewProof);r.reviewProofSha256=c.reviewProofSha256;return seal(r);}
 function withWhitespace(){const f=fixture({researchType:'position',na:true}),r=f.record,c=r.classificationRecord,e=c.naFullSourceEvidence,q=f.quote,source='\u00a0\n'+q+' \t';
  c.source.textSha256=digest(source);c.source.sourceBinding.textSha256=digest(source);e.sourceTextSha256=digest(source);e.sourceChars=source.length;e.snippets[0].quoteStart=2;e.snippets[0].quoteEnd=2+q.length;e.whitespaceGaps=[{quoteStart:0,quoteEnd:2,quote:'\u00a0\n',quoteSha256:digest('\u00a0\n')},{quoteStart:2+q.length,quoteEnd:source.length,quote:' \t',quoteSha256:digest(' \t')}];

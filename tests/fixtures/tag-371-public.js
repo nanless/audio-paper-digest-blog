@@ -1,12 +1,12 @@
 'use strict';
 // Synthetic choices/review/source, retained real producer dependency pins only.
-const base=require('./taxonomy-v3-public'),api=require('../../scripts/lib/taxonomy-v2-371-proof');
+const base=require('./tag-v3-public'),api=require('../../scripts/lib/tag-v2-371-proof');
 // This fixture always replays its issued 371 snapshot, never the preferred UI tree.
 const snapshot=require('../../data/taxonomy-snapshots/cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638.json'),deps=require('./taxonomy-371-approved-dependencies.json');
 function fixture(config={}){const r=base.fixture(config).record,c=r.classificationRecord,f=c.fingerprintInputs;c.registrySha256=api.profile.registrySha256;c.protectedDependencies=structuredClone(deps);f.projectionSha256=api.profile.projectionSha256;
  for(const[k,name]of Object.entries({implementationSha256:'historical-source-taxonomy-classification-v2',snippetImplementationSha256:'source-evidence-snippets-v3',identityImplementationSha256:'historical-source-identity-supplement',schedulerImplementationSha256:'source-classification-scheduler',failureImplementationSha256:'source-classification-failures'}))f[k]=deps.files['scripts/lib/'+name+'.js'];
  return {record:base.sync(r),snapshot};}
-function rows(){const rows=[];for(const researchType of require('../../scripts/lib/taxonomy-v2-proof').TYPES)rows.push({name:'synthetic371 '+researchType,...fixture({researchType,na:['position','experience'].includes(researchType)}),expected:true});
+function rows(){const rows=[];for(const researchType of require('../../scripts/lib/tag-v2-proof').TYPES)rows.push({name:'synthetic371 '+researchType,...fixture({researchType,na:['position','experience'].includes(researchType)}),expected:true});
  const mutations={
  'unknown registry':c=>c.registrySha256='0'.repeat(64),
  'V2 method-primary still refused':c=>{c.primaryResearchRole={kind:'method',conceptId:c.primaryMethodId,label:c.primaryMethodLabel};c.primaryTaskId='';c.primaryTaskLabel='';},
@@ -35,7 +35,7 @@ function rows(){const rows=[];for(const researchType of require('../../scripts/l
 function budgetFixture({v3=false,sourceChars,extraSpans=0}={}){
  const f=JSON.parse(JSON.stringify(v3?require('./classification-v3-public').fixture({mechanism:false,researchType:'position',na:true}):fixture({researchType:'position',na:true})));
  const r=f.record,c=r.classificationRecord,e=c.naFullSourceEvidence;
- const digest=require('./taxonomy-v2-public').digest;
+ const digest=require('./tag-v2-public').digest;
  let sourceParts=[...e.snippets,...e.whitespaceGaps].sort((a,b)=>a.quoteStart-b.quoteStart),source=sourceParts.map(s=>s.quote).join('');
  if(sourceChars!==undefined){
   const pad=' '.repeat(sourceChars-source.length);source=pad+source;

@@ -1,6 +1,6 @@
 'use strict';
-const api=require('./fullsite-taxonomy-proof');
-const {stableHash,parseStrictJson}=require('./taxonomy-classification-v3-proof');
+const api=require('./fullsite-tag-proof');
+const {stableHash,parseStrictJson}=require('./tag-classification-v3-proof');
 const hash=v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v);
 const oid=v=>typeof v==='string'&&/^[a-f0-9]{40}$/.test(v);
 const fail=m=>{throw Error('Fullsite public admission rejected: '+m);};

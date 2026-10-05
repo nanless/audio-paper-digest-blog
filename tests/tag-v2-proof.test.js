@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{spawnSync}=require('node:child_process');
-const api=require('../scripts/lib/taxonomy-v2-proof'),fixtureApi=require('./fixtures/taxonomy-v2-public');
+const api=require('../scripts/lib/tag-v2-proof'),fixtureApi=require('./fixtures/tag-v2-public');
 const {fixture,seal,digest,catalog,withDependencies}=fixtureApi;
 const h113=require('./fixtures/historical-v2-h113-dependencies.json');
 test('retained H113 dependency map accepts JS and Python without allowing foreign or secret paths',()=>{
@@ -77,12 +77,12 @@ test('real build entry rejects malformed v2 before Hugo or destination changes; 
  fs.writeFileSync(path.join(temporary,'data/taxonomy-catalog.json'),JSON.stringify(catalog));fs.writeFileSync(path.join(temporary,'public/unchanged.txt'),'DO NOT MODIFY');
  const f=fixture();f.record.pageSha256=digest(page);f.record.bodySha256=digest('Synthetic test body.\n');seal(f.record);
  fs.writeFileSync(path.join(temporary,'data/taxonomy-history-v2.json'),JSON.stringify({contract:'historical-source-taxonomy-supplement-v2',records:{'content/posts/synthetic.md':f.record}}));
- assert.equal(require('../scripts/verify-taxonomy-v2').verify(temporary).records,1);
+ assert.equal(require('../scripts/verify-tags-v2').verify(temporary).records,1);
  f.record.classificationRecord.fingerprintInputs.reviewTemperature=0.7;f.record.classificationRecord.fingerprint=api.stableHash(f.record.classificationRecord.fingerprintInputs);f.record.requestStageFingerprint=f.record.classificationRecord.fingerprint;seal(f.record);
  fs.writeFileSync(path.join(temporary,'data/taxonomy-history-v2.json'),JSON.stringify({contract:'historical-source-taxonomy-supplement-v2',records:{'content/posts/synthetic.md':f.record}}));
  const result=spawnSync(process.execPath,[path.resolve(__dirname,'../scripts/build-site.js')],{cwd:temporary,encoding:'utf8',env:{...process.env,PATH:''}});
  assert.notEqual(result.status,0);assert.match(result.stderr,/请求指纹字段漂移/);assert.doesNotMatch(result.stderr,/spawnSync hugo/);assert.equal(fs.readFileSync(path.join(temporary,'public/unchanged.txt'),'utf8'),'DO NOT MODIFY');
  const clean=fixture();clean.record.pageSha256=digest(page);clean.record.bodySha256=digest('Synthetic test body.\n');seal(clean.record);
  fs.writeFileSync(path.join(temporary,'data/taxonomy-history-v2.json'),JSON.stringify({contract:'historical-source-taxonomy-supplement-v2',records:{'content/posts/synthetic.md':clean.record}}));
- fs.appendFileSync(path.join(temporary,'content/posts/synthetic.md'),'Changed body.\n');assert.throws(()=>require('../scripts/verify-taxonomy-v2').verify(temporary),/当前页面\/正文SHA漂移/);
+ fs.appendFileSync(path.join(temporary,'content/posts/synthetic.md'),'Changed body.\n');assert.throws(()=>require('../scripts/verify-tags-v2').verify(temporary),/当前页面\/正文SHA漂移/);
 });

@@ -1,12 +1,12 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
-const api=require('./lib/fullsite-taxonomy-proof');
-const {parseStrictJson}=require('./lib/taxonomy-classification-v3-proof');
+const api=require('./lib/fullsite-tag-proof');
+const {parseStrictJson}=require('./lib/tag-classification-v3-proof');
 function verify(root) {
   const file=path.join(root,'data/fullsite-taxonomy-history.json');
   if (!fs.existsSync(file)) return {records:0,papers:0};
   const stat=fs.lstatSync(file);if (!stat.isFile() || stat.isSymbolicLink()) throw Error('Fullsite taxonomy sidecar must be a regular file');
-  const manifestBytes=fs.readFileSync(file),value=parseStrictJson(manifestBytes.toString('utf8')),pack=require('./lib/fullsite-taxonomy-pack');
+  const manifestBytes=fs.readFileSync(file),value=parseStrictJson(manifestBytes.toString('utf8')),pack=require('./lib/fullsite-tag-pack');
   const history=value.contract===pack.CONTRACT?pack.reconstruct(value,key=>{
     const shard=path.join(root,'static',key),base=path.resolve(root,'static/fullsite-taxonomy');
     if(!path.resolve(shard).startsWith(base+path.sep))throw Error('Fullsite packed shard outside static root');
@@ -34,7 +34,7 @@ function verify(root) {
   }
   // Full validation above includes every original row, including any withheld
   // record. Eligibility partitions this verified collection without altering it.
-  const selection=require('./lib/fullsite-publication-selection'),profiles=require('./lib/fullsite-taxonomy-profiles').profiles;
+  const selection=require('./lib/fullsite-publication-selection'),profiles=require('./lib/fullsite-tag-profiles').profiles;
   const pins={collectionSha256:api.sha(manifestBytes),admissionSha256:api.sha(context.admissionBytes||''),sourcesSha256:api.sha(context.sourceBytes||'')};
   const expected=selection.expectedFor(pins,profiles),selectorFile=path.join(root,'data/fullsite-taxonomy-publication-selection.json');
   let publication;

@@ -1,5 +1,5 @@
 'use strict';
-const api=require('./fullsite-taxonomy-proof'),{stableHash}=require('./taxonomy-classification-v3-proof');
+const api=require('./fullsite-tag-proof'),{stableHash}=require('./tag-classification-v3-proof');
 const schema=require('./fullsite-source-schema'),title=require('./fullsite-source-title-proof');
 const hash=x=>typeof x==='string'&&/^[a-f0-9]{64}$/u.test(x),text=x=>typeof x==='string'&&x.isWellFormed();
 const fail=m=>{throw Error('Fullsite admitted source rejected: '+m);};

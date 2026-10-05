@@ -1,7 +1,7 @@
 'use strict';
 // Synthetic new-issuer records below test public integrity only, not new LLM acceptance.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
-const api=require('../scripts/lib/taxonomy-classification-v3-proof'),profileModule=require('../scripts/lib/taxonomy-v3-profiles'),fixtureApi=require('./fixtures/classification-v3-public');
+const api=require('../scripts/lib/tag-classification-v3-proof'),profileModule=require('../scripts/lib/tag-v3-profiles'),fixtureApi=require('./fixtures/classification-v3-public');
 const repo=path.resolve(__dirname,'..'),digest=x=>crypto.createHash('sha256').update(x).digest('hex'),catalog=require('../data/taxonomy-catalog.json'),snapshot=catalog.snapshots.find(s=>s.registrySha256===profileModule.profiles[0].registrySha256),nativeAll=require('../data/taxonomy-history-v3.json');
 const old=profileModule.profiles[0],fresh=profileModule.profiles[1];
 const native={contract:nativeAll.contract,records:Object.fromEntries(Object.entries(nativeAll.records).filter(([,r])=>r.classificationRecord.protectedDependencySha256==='1db887b14d10647b8770f32f238d6ce3f82dc0b8be86e16bebff749fae538655'))};
@@ -22,7 +22,7 @@ test('original121 remains first byte-equivalent profile; new exact issuer keeps 
 test('original121 subset9 remains exact; all native issuers pass source/current-page build preflight as records append',()=>{
  assert.equal(digest(JSON.stringify(native,null,2)+'\n'),'4bdbb659d0f9a5e0d7a68d4f4f7b07972fd63b6987f4bb2dab75859f60275607');assert.equal(Object.keys(native.records).length,9);
  for(const r of Object.values(nativeAll.records))assert.equal(api.validatePublicRecord(r,catalog.snapshots.find(s=>s.registrySha256===r.registrySha256)),true,r.paperId);
- assert.equal(require('../scripts/verify-taxonomy-v3').verify(repo).records,Object.keys(nativeAll.records).length);
+ assert.equal(require('../scripts/verify-tags-v3').verify(repo).records,Object.keys(nativeAll.records).length);
 });
 test('two same-registry issuer tuples choose unique exact profile; JS and independent Hugo reject mixed/unknown/source-unsafe tuples',()=>{
  const rows=matrix();for(const row of rows){if(row.expected)assert.equal(api.validatePublicRecord(row.record,snapshot),true,row.name);else assert.throws(()=>api.validatePublicRecord(row.record,snapshot),undefined,row.name);}

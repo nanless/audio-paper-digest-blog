@@ -1,7 +1,7 @@
 'use strict';
 // The r3 plan remains an offline draft. The owner approved exactly the fresh
 // installed H R4 plan after independent source/dependency/page replay.
-const {stableHash:hash}=require('./taxonomy-v2-proof'),{validateSourceDescriptor}=require('./source-descriptor-proof');
+const {stableHash:hash}=require('./tag-v2-proof'),{validateSourceDescriptor}=require('./source-descriptor-proof');
 const CONTRACT='historical-current-page-source-taxonomy-supplement-v2',TYPE='controlled-current-page-source-taxonomy-v2';
 const PRODUCTION_PLAN_PINS=Object.freeze({'e12fc74dfe549733c607110ce0067c9977e369b534f752c35baede249e6a358a':Object.freeze({fileSha256:'e1bb9db32a715f2737f55a5542e7677d81276aaa7316b790923e081537f988eb',protectedDependencySha256:'e847d7b1b549a1499cc85a0d77dcc864f51a4c1de9dd920aab51a11b0ba2922c'})});
 const IDS=['conference:icassp:2026:icassp-arnumber:11460320','conference:icassp:2026:icassp-arnumber:11460386','conference:icassp:2026:icassp-arnumber:11460389'];

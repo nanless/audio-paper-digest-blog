@@ -2,7 +2,7 @@
 // Entire classification and review below are synthetic protocol fixtures. No
 // model was called, and this module never produces an issued historical record.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const api=require('../../scripts/lib/taxonomy-v2-proof');
+const api=require('../../scripts/lib/tag-v2-proof');
 const digest=x=>crypto.createHash('sha256').update(x).digest('hex'),hash=api.stableHash;
 const catalog=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../data/taxonomy-catalog.json')));
 function fixture({researchType='science',domainScope='in-domain',na=false,registryVersion='paper-taxonomy-v2'}={}){

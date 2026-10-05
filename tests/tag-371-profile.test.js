@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
-const repo=path.resolve(__dirname,'..'),api=require('../scripts/lib/taxonomy-public-proof'),declared=require('../scripts/lib/taxonomy-v2-371-proof'),engine=require('../scripts/lib/taxonomy-classification-v3-proof'),cases=require('./fixtures/taxonomy-371-public'),core=require('../assets/js/tag-core');
+const repo=path.resolve(__dirname,'..'),api=require('../scripts/lib/tag-public-proof'),declared=require('../scripts/lib/tag-v2-371-proof'),engine=require('../scripts/lib/tag-classification-v3-proof'),cases=require('./fixtures/tag-371-public'),core=require('../assets/js/tag-core');
 test('root approved371 uses exactV2 FF profile/installed116; no old snapshot rewriting',()=>{assert.equal(cases.snapshot.registrySha256,declared.profile.registrySha256);for(const c of cases.rows()){if(c.expected)assert.equal(api.validatePublicRecord(c.record,c.snapshot),true,c.name);else assert.throws(()=>api.validatePublicRecord(c.record,c.snapshot),undefined,c.name);}
  const f=cases.fixture();for(const key of Object.keys(declared.profile)){const profile={...declared.profile,[key]:'unapproved'};assert.throws(()=>engine.validateDeclared371Profile(f.record,f.snapshot,profile),/未知371 producer profile/,key);}
  const altered=structuredClone(cases.snapshot);altered.concepts[0].aliases.push('invented');assert.throws(()=>api.validatePublicRecord(f.record,altered),/快照内容漂移/);
@@ -22,7 +22,7 @@ test('new371/V3 NA budgets bound full source and numbered UTF16 projection; lega
   const f=cases.budgetFixture({v3,...config});
   // All negatives first pass original structural coverage/SHA replay. They fail
   // only the declared new issuer budget; quotes sum alone would miss projection.
-  assert.equal(require('../scripts/lib/taxonomy-na-full-source-proof').validateNAFullSourceEvidence(f.record.classificationRecord,f.record.source),true);
+  assert.equal(require('../scripts/lib/tag-na-full-source-proof').validateNAFullSourceEvidence(f.record.classificationRecord,f.record.source),true);
   const expected=f.sourceChars<=80000&&f.projectionChars<=100000,validate=v3?engine.validateSyntheticFixture:declared.validatePublicRecord;
   if(expected)assert.equal(validate(f.record,f.snapshot),true);else assert.throws(()=>validate(f.record,f.snapshot),/新发行NA完整来源\/编号投影预算/);
   if(config.extraSpans===3000){assert.ok(f.record.classificationRecord.naFullSourceEvidence.evidenceChars<100000);assert.ok(f.projectionChars>100000);}

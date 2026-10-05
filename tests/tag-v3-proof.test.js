@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{execFileSync,spawnSync}=require('node:child_process');
-const api=require('../scripts/lib/taxonomy-v2-proof'),na=require('../scripts/lib/taxonomy-na-full-source-proof'),cases=require('./fixtures/taxonomy-v3-public');
+const api=require('../scripts/lib/tag-v2-proof'),na=require('../scripts/lib/tag-na-full-source-proof'),cases=require('./fixtures/tag-v3-public');
 const repo=path.resolve(__dirname,'..');
 test('public JS strictly replays V3/338/114 real native interface and synthetic version/NA negative cases',()=>{
  for(const c of cases.rows()){if(c.expected)assert.equal(api.validatePublicRecord(c.record,c.snapshot),true,c.name);else assert.throws(()=>api.validatePublicRecord(c.record,c.snapshot),undefined,c.name);}

@@ -54,6 +54,6 @@ test('Hugo and JS agree on all eighteen narrow-source cases; exact V3 profile he
  const result=cp.spawnSync('hugo',['--source',dir,'--destination',dir+'/public'],{encoding:'utf8'});
  fs.writeFileSync(dir+'/hugo.log',result.stdout+result.stderr);assert.equal(result.status,0,result.stderr);
  const rendered=JSON.parse(fs.readFileSync(dir+'/public/index.html'));assert.deepEqual(rendered.cases,cases.map(({name,valid})=>({name,valid})));
- const profiles=require(ROOT+'/scripts/lib/taxonomy-v3-profiles.js').profiles;const expected=Object.fromEntries(profiles.map((profile,i)=>[i===0?profile.registrySha256:[profile.registrySha256,profile.implementationSha256,profile.protectedDependencySha256].join(':'),profile]));assert.equal(profiles.length,4);assert.deepEqual(rendered.profiles,expected);
+ const profiles=require(ROOT+'/scripts/lib/tag-v3-profiles.js').profiles;const expected=Object.fromEntries(profiles.map((profile,i)=>[i===0?profile.registrySha256:[profile.registrySha256,profile.implementationSha256,profile.protectedDependencySha256].join(':'),profile]));assert.equal(profiles.length,4);assert.deepEqual(rendered.profiles,expected);
  fs.writeFileSync(dir+'/hugo-cases-proof.json',JSON.stringify({fixtureRoot:dir,cases:rendered.cases,profile:rendered.profiles,renderedSha256:sha(fs.readFileSync(dir+'/public/index.html')),actualClassificationRecords:0,syntheticExtractionCommitmentsOnly:true},null,2)+'\n');
 });

@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { CONTRACT, LEGACY_CONTRACT, stableHash, mergeSupplements } = require('../scripts/merge-taxonomy-supplements');
+const { CONTRACT, LEGACY_CONTRACT, stableHash, mergeSupplements } = require('../scripts/merge-tag-supplements');
 function record(overrides = {}) {
   const body = { paperId: 'arxiv:2609.12345', pageSha256: 'a'.repeat(64), bodySha256: 'b'.repeat(64),
     registrySha256: 'c'.repeat(64), ...overrides };

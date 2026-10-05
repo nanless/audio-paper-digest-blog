@@ -1,12 +1,12 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
-const root=path.resolve(__dirname,'..'),selection=require('../scripts/lib/fullsite-publication-selection'),pack=require('../scripts/lib/fullsite-taxonomy-pack'),profiles=require('../scripts/lib/fullsite-taxonomy-profiles').profiles;
+const root=path.resolve(__dirname,'..'),selection=require('../scripts/lib/fullsite-publication-selection'),pack=require('../scripts/lib/fullsite-tag-pack'),profiles=require('../scripts/lib/fullsite-tag-profiles').profiles;
 const bytes=fs.readFileSync(root+'/data/fullsite-taxonomy-publication-selection.json'),manifestBytes=fs.readFileSync(root+'/data/fullsite-taxonomy-history.json'),manifest=JSON.parse(manifestBytes),history=pack.reconstruct(manifest,k=>fs.readFileSync(root+'/static/'+k));
 const pins={collectionSha256:selection.sha(manifestBytes),admissionSha256:selection.sha(fs.readFileSync(root+'/data/fullsite-taxonomy-admission.json')),sourcesSha256:selection.sha(fs.readFileSync(root+'/data/fullsite-taxonomy-sources.json'))};
 const expected=selection.expectedFor(pins,profiles),clone=x=>JSON.parse(JSON.stringify(x)),encode=x=>Buffer.from(JSON.stringify(x)+'\n');
 const heldPath=Object.keys(history.records).find(p=>history.records[p].paperId===selection.HELD);
 test('all original 300 records close before exact publication partition',()=>{
- const result=require('../scripts/verify-fullsite-taxonomy').verify(root);
+ const result=require('../scripts/verify-fullsite-tags').verify(root);
  assert.deepEqual(result,{records:300,papers:248,publication:{inputPapers:248,inputPages:300,eligiblePapers:247,eligiblePages:299,withheldPapers:1,withheldPages:1}});
  const gate=selection.read(bytes,expected,history,pins);let yes=0,no=0;
  for(const [p,r]of Object.entries(history.records))gate.allows(p,r)?yes++:no++;

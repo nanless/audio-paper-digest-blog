@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{spawnSync}=require('node:child_process');
-const root=path.resolve(__dirname,'..'),holds=require('../scripts/lib/taxonomy-old-v2-publication-holds'),proof=require('../scripts/lib/taxonomy-public-proof'),{stableHash}=require('../scripts/lib/taxonomy-classification-v3-proof');
+const root=path.resolve(__dirname,'..'),holds=require('../scripts/lib/tag-old-v2-publication-holds'),proof=require('../scripts/lib/tag-public-proof'),{stableHash}=require('../scripts/lib/tag-classification-v3-proof');
 const bytes=fs.readFileSync(root+'/data/taxonomy-old-v2-publication-holds.json'),authority=JSON.parse(bytes),history=JSON.parse(fs.readFileSync(root+'/data/taxonomy-history-v2.json')),snapshots=new Map(JSON.parse(fs.readFileSync(root+'/data/taxonomy-catalog.json')).snapshots.map(s=>[s.registrySha256,s])),clone=x=>JSON.parse(JSON.stringify(x));
 test('five real original V2 native/source/review/current-page proofs close before publication hold',()=>{
  const gate=holds.read(bytes,history);assert.equal(gate.withheldPapers,5);assert.equal(gate.withheldPages,5);

@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{execFileSync}=require('node:child_process');
 const repo=process.env.BLOG_REPO||path.resolve(__dirname,'..');
 const overrides=process.env.CANONICAL_JSON_PARTIALS||path.join(repo,'layouts/partials');
-const api=require(path.join(repo,'scripts/lib/taxonomy-v2-proof'));
+const api=require(path.join(repo,'scripts/lib/tag-v2-proof'));
 const ordinary=JSON.parse(fs.readFileSync(path.join(repo,'data/taxonomy-history-v2.json'))).records;
 const controlled=JSON.parse(fs.readFileSync(path.join(repo,'data/current-page-taxonomy-history-v2.json'))).records;
 const catalog=JSON.parse(fs.readFileSync(path.join(repo,'data/taxonomy-catalog.json')));

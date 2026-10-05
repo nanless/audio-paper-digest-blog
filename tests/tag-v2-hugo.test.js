@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),{execFileSync}=require('node:child_process');
-const {fixture,seal,withDependencies,digest}=require('./fixtures/taxonomy-v2-public'),api=require('../scripts/lib/taxonomy-v2-proof');
+const {fixture,seal,withDependencies,digest}=require('./fixtures/tag-v2-public'),api=require('../scripts/lib/tag-v2-proof');
 const h113=require('./fixtures/historical-v2-h113-dependencies.json');
 test('Hugo independently rejects role, raw response, source and complete fingerprint drift in synthetic public v2 records',t=>{
  const repo=path.resolve(__dirname,'..'),temporary=fs.mkdtempSync(path.join(os.tmpdir(),'blog-v2-hugo-'));t.after(()=>fs.rmSync(temporary,{recursive:true,force:true}));
@@ -17,8 +17,8 @@ test('Hugo independently rejects role, raw response, source and complete fingerp
  const badDependencies=structuredClone(h113);badDependencies.files['scripts/extra.py']='not-a-sha';cases.push({name:'reject dependency invalid SHA',record:withDependencies(fixture().record,badDependencies),expected:false});
  const negative={
   'science task contamination':r=>r.primaryTaskLabel='虚构任务',
-  'raw model type drift':r=>{const c=r.classificationRecord,x=JSON.parse(c.modelResponseText);x.researchType='engineering';c.modelResponseText=JSON.stringify(x);c.modelResponseSha256=require('./fixtures/taxonomy-v2-public').digest(c.modelResponseText);},
-  'injected quote drift':r=>{const c=r.classificationRecord,x=JSON.parse(c.responseText);x.typeEvidence.quote+=' invented';c.responseText=JSON.stringify(x);c.responseSha256=require('./fixtures/taxonomy-v2-public').digest(c.responseText);},
+  'raw model type drift':r=>{const c=r.classificationRecord,x=JSON.parse(c.modelResponseText);x.researchType='engineering';c.modelResponseText=JSON.stringify(x);c.modelResponseSha256=require('./fixtures/tag-v2-public').digest(c.modelResponseText);},
+  'injected quote drift':r=>{const c=r.classificationRecord,x=JSON.parse(c.responseText);x.typeEvidence.quote+=' invented';c.responseText=JSON.stringify(x);c.responseSha256=require('./fixtures/tag-v2-public').digest(c.responseText);},
   'unapproved source warning':r=>r.source.sourceVersionWarning='Unverified current 404 claim',
   'fingerprint dependency mismatch':r=>r.classificationRecord.fingerprintInputs.identityImplementationSha256='a'.repeat(64),
   'prompt projection mismatch':r=>r.classificationRecord.fingerprintInputs.projectionSha256='a'.repeat(64),

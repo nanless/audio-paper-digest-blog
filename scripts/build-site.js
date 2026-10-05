@@ -3,9 +3,9 @@ const { spawnSync } = require('node:child_process');
 const { shardIndex } = require('./shard-search-index');
 // This check runs before Hugo or any output mutation. An invalid v2 supplement
 // must fail the real build entry, not merely a separately invoked audit.
-require('./verify-taxonomy-v2').verify(process.cwd());
-require('./verify-taxonomy-v3').verify(process.cwd());
-require('./verify-fullsite-taxonomy').verify(process.cwd());
+require('./verify-tags-v2').verify(process.cwd());
+require('./verify-tags-v3').verify(process.cwd());
+require('./verify-fullsite-tags').verify(process.cwd());
 const result = spawnSync('hugo', ['--minify', '--noBuildLock', '--cleanDestinationDir', '--printPathWarnings', '--panicOnWarning'], {
   stdio: 'inherit',
   env: { ...process.env, GOMEMLIMIT: process.env.GOMEMLIMIT || '3GiB',
