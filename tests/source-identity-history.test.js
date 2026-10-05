@@ -119,7 +119,7 @@ test('identity-only proof binds exact page/source and never creates controlled c
   const index = build(root);
   assert.deepEqual(index.filter(r => r.identityEvidenceContract).map(r => r.title).sort(), ['valid-arxiv', 'valid-conference', 'valid-official-version', 'valid-unspecified-pdf-version']);
   for (const record of index) {
-    assert.equal(record.taxonomyContract, ''); assert.deepEqual(record.taxonomyConcepts, []);
+    assert.equal(record.tagContract, ''); assert.deepEqual(record.tagConcepts, []);
     assert.ok(!record.primaryTaskId && !record.primaryMethodId); assert.deepEqual(record.tags, ['旧标签']);
   }
   const conferenceResult = index.find(r => r.title === 'valid-conference');
@@ -157,7 +157,7 @@ test('actual independently replayed arXiv and conference identity batch accepts 
   const index = build(root);
   assert.equal(index.length, Object.keys(history.records).length);
   assert.ok(index.every(r => r.identityEvidenceContract === history.contract && r.identityStatus === 'verified'));
-  assert.ok(index.every(r => !r.primaryTaskId && !r.primaryMethodId && !r.taxonomyContract && !r.taxonomyConcepts.length));
+  assert.ok(index.every(r => !r.primaryTaskId && !r.primaryMethodId && !r.tagContract && !r.tagConcepts.length));
   assert.ok(index.some(r => r.sourceKind === 'arxiv') && index.some(r => r.sourceKind === 'conference'));
   for (const record of index.filter(r => r.sourceKind === 'conference')) {
     assert.equal(record.arxivId, ''); assert.match(record.citation.sourceUrl, /^https:\/\/(ieeexplore\.ieee\.org\/document\/|openreview\.net\/forum\?id=)/);
@@ -185,7 +185,7 @@ test('complete canonical supplement agrees with browser unique paper and subtree
   fs.writeFileSync(path.join(root, 'data/taxonomy-history.json'), JSON.stringify(history));
   const index = build(root);
   assert.equal(index.length, Object.keys(history.records).length);
-  assert.ok(index.every(r => r.taxonomyEvidenceContract === history.contract && r.identityStatus === 'verified'));
+  assert.ok(index.every(r => r.tagEvidenceContract === history.contract && r.identityStatus === 'verified'));
   assert.ok(index.every(r => r.primaryTaskId && r.primaryMethodId));
   const core = require(path.join(repository, 'assets/js/taxonomy-core'));
   const graph = core.createRegistry(JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-registry.json'))), JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-catalog.json'))));
@@ -243,10 +243,10 @@ test('real source-only classifications use source quotes and accepted independen
   }
   fs.writeFileSync(path.join(root, 'data/taxonomy-history.json'), JSON.stringify({ ...history, records }));
   const index = build(root);
-  const accepted = index.filter(r => r.taxonomyEvidenceContract);
+  const accepted = index.filter(r => r.tagEvidenceContract);
   assert.equal(accepted.length, Object.keys(history.records).length);
-  assert.ok(accepted.every(r => r.taxonomyEvidenceType === 'source-only-taxonomy' && r.primaryTaskId && r.primaryMethodId && r.identityStatus === 'verified'));
-  assert.ok(index.filter(r => !r.taxonomyEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId && !r.taxonomyConcepts.length));
+  assert.ok(accepted.every(r => r.tagEvidenceType === 'source-only-taxonomy' && r.primaryTaskId && r.primaryMethodId && r.identityStatus === 'verified'));
+  assert.ok(index.filter(r => !r.tagEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId && !r.tagConcepts.length));
   const core = require(path.join(repository, 'assets/js/taxonomy-core'));
   const graph = core.createRegistry(JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-registry.json'))), JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-catalog.json'))));
   const counts = JSON.parse(fs.readFileSync(path.join(root, 'public/index.html'))).map(r => ({ id: r.id, direct: r.direct, subtree: r.sub }));
@@ -286,11 +286,11 @@ test('actual version-binding classification preserves paths, exact citation and 
   fs.writeFileSync(path.join(root, 'data/taxonomy-history.json'), JSON.stringify({ ...history, records }));
   fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_taxonomy.html" . }}<pre id="citation">{{ partial "citation_source.html" . | jsonify }}</pre>');
   const index = build(root);
-  const accepted = index.filter(r => r.taxonomyEvidenceType === 'source-only-taxonomy');
+  const accepted = index.filter(r => r.tagEvidenceType === 'source-only-taxonomy');
   assert.equal(accepted.length, 1);
   assert.equal(accepted[0].primaryTaskId, original.primaryTaskId);
   assert.equal(accepted[0].primaryMethodId, original.primaryMethodId);
-  assert.ok(index.filter(r => !r.taxonomyEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId));
+  assert.ok(index.filter(r => !r.tagEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId));
   const html = fs.readFileSync(path.join(root, 'public/posts', path.basename(key, '.md'), 'index.html'), 'utf8');
   assert.ok(html.includes('/papers/?concept=' + original.primaryTaskId));
   assert.ok(html.includes('/papers/?concept=' + original.primaryMethodId));

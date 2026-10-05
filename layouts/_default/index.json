@@ -1,10 +1,9 @@
-{{- /* Concept names and ancestry are resolved from the shared registry once by
-       each search client, rather than copied into every paper index entry. */ -}}
+{{- /* 搜索客户端从共享词表读取概念名称和祖先链，索引中的每篇论文无需重复保存。 */ -}}
 {{- $.Scratch.Set "searchIndex" slice -}}
 {{- range site.RegularPages -}}
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
     {{- $metadata := partial "research_metadata.html" . }}
-    {{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
+    {{- $tagProof := partial "taxonomy_page_proof.html" . }}
 
     {{- $description := .Description | default "" | plainify | htmlUnescape | strings.TrimSpace }}
     {{- $score := $metadata.score }}
@@ -17,8 +16,7 @@
     {{- $tags := .Params.tags | default slice }}
     {{- $categories := .Params.categories | default slice }}
 
-    {{- /* Names, aliases and ancestry live once in the registry. Keep the index
-          backward compatible, but omit repeated original titles and empty fields. */}}
+    {{- /* 名称、别名和祖先链只在词表中保存；索引保留原条目形状，省略重复原题和空字段。 */}}
     {{- $entry := dict
       "title" .Title
       "titleZh" ($metadata.headline | plainify)
@@ -32,15 +30,15 @@
       "arxivId" $metadata.arxivId
       "tags" $tags
       "categories" $categories
-      "taxonomyContract" ($taxonomyProof.contract | default "")
-      "taxonomyConcepts" ($taxonomyProof.concepts | default slice)
+      "tagContract" ($tagProof.contract | default "")
+      "tagConcepts" ($tagProof.concepts | default slice)
       "citation" (partial "citation_source.html" .)
     }}
-    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "taxonomyPublicationStatus" "withheld" "tags" slice) }}{{ end }}
-    {{- with $taxonomyProof.registrySha256 }}{{ $entry = merge $entry (dict "taxonomyRegistrySha256" .) }}{{ end }}
-    {{- with $taxonomyProof.evidenceContract }}{{ $entry = merge $entry (dict "taxonomyEvidenceContract" . "taxonomyEvidenceType" ($taxonomyProof.evidenceType | default "canonical-analysis") "taxonomyProofSha256" $taxonomyProof.proofSha256 "taxonomyPageSha256" $taxonomyProof.pageSha256) }}{{ end }}
-    {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $taxonomyProof.classificationContract }}
-      {{- $entry = merge $entry (dict "taxonomyClassificationContract" $taxonomyProof.classificationContract) }}
+    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "tagPublicationStatus" "withheld" "tags" slice) }}{{ end }}
+    {{- with $tagProof.registrySha256 }}{{ $entry = merge $entry (dict "tagCatalogSha256" .) }}{{ end }}
+    {{- with $tagProof.evidenceContract }}{{ $entry = merge $entry (dict "tagEvidenceContract" . "tagEvidenceType" ($tagProof.evidenceType | default "canonical-analysis") "tagProofSha256" $tagProof.proofSha256 "tagPageSha256" $tagProof.pageSha256) }}{{ end }}
+    {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $tagProof.classificationContract }}
+      {{- $entry = merge $entry (dict "tagClassificationContract" $tagProof.classificationContract) }}
       {{- range $key := slice "researchType" "domainScope" "primaryResearchRole" "primaryScientificTopicId" "primaryScientificTopicLabel" "methodNotApplicable" "methodNotApplicableReason" }}{{ $entry = merge $entry (dict $key (index $metadata $key)) }}{{ end }}
     {{- end }}
     {{- if ne $metadata.originalTitle .Title }}{{ $entry = merge $entry (dict "originalTitle" $metadata.originalTitle) }}{{ end }}

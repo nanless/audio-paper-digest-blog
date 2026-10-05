@@ -16,6 +16,14 @@ test('keyword navigation uses current ancestors after exact issued classificatio
   assert.ok(entry.searchText.includes('新版上级'));
   assert.deepEqual(graph.resolveRecord(raw).concepts[0].ancestorIds, ['method.a']);
   assert.deepEqual(raw.taxonomyConcepts, [{ id: 'method.child', facet: 'method', label: '子概念' }]);
+  const currentFields = { ...raw, tagContract: raw.taxonomyContract,
+    tagCatalogSha256: raw.taxonomyRegistrySha256, tagConcepts: raw.taxonomyConcepts };
+  delete currentFields.taxonomyContract;
+  delete currentFields.taxonomyRegistrySha256;
+  delete currentFields.taxonomyConcepts;
+  const before = JSON.stringify(currentFields);
+  assert.deepEqual(library.normalizeEntry(currentFields, 'https://example.test', '/blog/', current, graph), entry);
+  assert.equal(JSON.stringify(currentFields), before);
   const unbound = library.normalizeEntry({ ...raw, taxonomyRegistrySha256: '3'.repeat(64) }, 'https://example.test', '/blog/', current, graph);
   assert.ok(!unbound.searchText.includes('原先上级') && !unbound.searchText.includes('新版上级'));
 });

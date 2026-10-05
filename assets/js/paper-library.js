@@ -11,8 +11,8 @@
     return plainText(value).normalize('NFKC').toLocaleLowerCase();
   }
 
-  // data/taxonomy-registry.json 的精简索引：页面 frontmatter 只带 {id, facet,
-  // label}，zh/en、aliases 与祖先链都要从快照补齐（对齐 tag-explorer 的做法）。
+  // 页面标签字段只提供概念编号、分类维度和展示名称；其他名称、别名及上级关系
+  // 从 data/taxonomy-registry.json 的词表快照补齐，以支持相应的关键词搜索。
   function registryIndex(registry) {
     var byId = Object.create(null);
     var records = registry && !Array.isArray(registry) && Array.isArray(registry.concepts)
@@ -46,7 +46,7 @@
     return terms;
   }
 
-  function taxonomyTerms(value, byId) {
+  function tagTerms(value, byId) {
     if (!Array.isArray(value)) return [];
     var index = byId || Object.create(null);
     return value.flatMap(function (concept) {
@@ -70,8 +70,32 @@
     return 'paper';
   }
 
+  function readTagFields(record) {
+    var core = typeof module !== 'undefined' && module.exports
+      ? require('./taxonomy-core.js') : typeof window !== 'undefined' ? window.ResearchTaxonomy : null;
+    if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
+    // 核心脚本缺席时仍可搜索普通条目；这里只读取字段，不判断标签资格。
+    var fields = [
+      ['tagContract', 'taxonomyContract'], ['tagConcepts', 'taxonomyConcepts'],
+      ['tagCatalogSha256', 'taxonomyRegistrySha256'], ['tagPublicationStatus', 'taxonomyPublicationStatus'],
+      ['tagEvidenceContract', 'taxonomyEvidenceContract'], ['tagEvidenceType', 'taxonomyEvidenceType'],
+      ['tagProofSha256', 'taxonomyProofSha256'], ['tagPageSha256', 'taxonomyPageSha256'],
+      ['tagClassificationContract', 'taxonomyClassificationContract'],
+    ];
+    var own = function (key) { return Object.prototype.hasOwnProperty.call(record, key); };
+    if (fields.some(function (pair) { return own(pair[0]); })
+      && fields.some(function (pair) { return own(pair[1]); })) {
+      throw new Error('标签字段不能混用新旧命名。');
+    }
+    var current = fields.some(function (pair) { return own(pair[0]); });
+    var result = {};
+    fields.forEach(function (pair) { result[pair[0]] = record[pair[current ? 0 : 1]]; });
+    return result;
+  }
+
   function normalizeEntry(item, origin, basePath, registry, versionGraph) {
     if (!item || typeof item !== 'object') return null;
+    var tagFields = readTagFields(item);
     var permalink = safeSiteUrl(item.permalink, origin, basePath);
     if (!permalink) return null;
     var originalTitle = plainText(item.originalTitle || item.title);
@@ -92,28 +116,28 @@
     var arxivId = plainText(item.arxivId);
     var tags = Array.isArray(item.tags) ? item.tags.map(plainText) : [];
     var categories = Array.isArray(item.categories) ? item.categories.map(plainText) : [];
-    var taxonomy = versionGraph
-      ? taxonomyTerms(versionGraph.navigationConcepts(item), versionGraph.byId)
-      : taxonomyTerms(item.taxonomyConcepts, registryIndex(registry));
+    var tagSearchTerms = versionGraph
+      ? tagTerms(versionGraph.navigationConcepts(item), versionGraph.byId)
+      : tagTerms(tagFields.tagConcepts, registryIndex(registry));
     return {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
       type: type, pageType: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
       paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
       identityEvidenceContract: plainText(item.identityEvidenceContract), identityEvidenceType: plainText(item.identityEvidenceType),
       identityProofSha256: plainText(item.identityProofSha256), identityPageSha256: plainText(item.identityPageSha256),
-      taxonomyPublicationStatus: item.taxonomyPublicationStatus === 'withheld' ? 'withheld' : '',
-      taxonomyContract: plainText(item.taxonomyContract), taxonomyConcepts: Array.isArray(item.taxonomyConcepts) ? item.taxonomyConcepts : [],
-      taxonomyRegistrySha256: plainText(item.taxonomyRegistrySha256), citation: item.citation && typeof item.citation === 'object' ? item.citation : {},
-      taxonomyEvidenceContract: plainText(item.taxonomyEvidenceContract), taxonomyEvidenceType: plainText(item.taxonomyEvidenceType),
-      taxonomyProofSha256: plainText(item.taxonomyProofSha256), taxonomyPageSha256: plainText(item.taxonomyPageSha256),
+      tagPublicationStatus: tagFields.tagPublicationStatus === 'withheld' ? 'withheld' : '',
+      tagContract: plainText(tagFields.tagContract), tagConcepts: Array.isArray(tagFields.tagConcepts) ? tagFields.tagConcepts : [],
+      tagCatalogSha256: plainText(tagFields.tagCatalogSha256), citation: item.citation && typeof item.citation === 'object' ? item.citation : {},
+      tagEvidenceContract: plainText(tagFields.tagEvidenceContract), tagEvidenceType: plainText(tagFields.tagEvidenceType),
+      tagProofSha256: plainText(tagFields.tagProofSha256), tagPageSha256: plainText(tagFields.tagPageSha256),
       primaryTaskId: plainText(item.primaryTaskId), primaryMethodId: plainText(item.primaryMethodId),
-      taxonomyClassificationContract: plainText(item.taxonomyClassificationContract),
+      tagClassificationContract: plainText(tagFields.tagClassificationContract),
       researchType: plainText(item.researchType), domainScope: plainText(item.domainScope),
       primaryResearchRole: item.primaryResearchRole && typeof item.primaryResearchRole === 'object' ? item.primaryResearchRole : null,
       primaryScientificTopicId: plainText(item.primaryScientificTopicId),
       methodNotApplicable: item.methodNotApplicable, methodNotApplicableReason: plainText(item.methodNotApplicableReason),
       searchText: searchText([title, originalTitle, item.title, summary, permalink, task, method, arxivId, plainText(item.paperId)]
-        .concat(tags, categories, taxonomy, item.primaryResearchRole && item.primaryResearchRole.label || '').join(' '))
+        .concat(tags, categories, tagSearchTerms, item.primaryResearchRole && item.primaryResearchRole.label || '').join(' '))
     };
   }
 
@@ -234,7 +258,7 @@
       filterEntries: filterEntries,
       entryDate: entryDate,
       registryIndex: registryIndex,
-      taxonomyTerms: taxonomyTerms,
+      tagTerms: tagTerms,
       directionState: directionState,
       selectedIds: selectedIds,
       libraryResults: libraryResults,
@@ -372,17 +396,17 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
-    if (api && [api.v2Contract, api.v3Contract, api.qualified1028Contract].includes(entry.taxonomyClassificationContract) && entry.primaryResearchRole) {
+    if (api && [api.v2Contract, api.v3Contract, api.qualified1028Contract].includes(entry.tagClassificationContract) && entry.primaryResearchRole) {
       var roles = document.createElement('p'); roles.className = 'taxonomy-note';
       roles.textContent = [api.researchTypeLabels[entry.researchType], api.domainLabels[entry.domainScope],
         api.primaryRoleLabel(entry) + '：' + entry.primaryResearchRole.label,
         entry.methodNotApplicable === true ? '研究方法不适用' : ''].filter(Boolean).join(' · ');
       body.appendChild(roles);
     }
-    if (['historical-direct-taxonomy-supplement-v1', 'historical-direct-tag-supplement-v2', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.taxonomyEvidenceContract)) {
+    if (['historical-direct-taxonomy-supplement-v1', 'historical-direct-tag-supplement-v2', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.tagEvidenceContract)) {
       var classificationNote = document.createElement('p'); classificationNote.className = 'taxonomy-note';
       classificationNote.textContent = '研究分类已补充核验 · 导读正文未重写'; body.appendChild(classificationNote);
-    } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.taxonomyContract) {
+    } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.tagContract) {
       var identityNote = document.createElement('p'); identityNote.className = 'taxonomy-note';
       identityNote.textContent = '论文身份已核验 · 研究方向尚待分类'; body.appendChild(identityNote);
     }
@@ -787,7 +811,7 @@
     try {
       if (!window.ResearchReadingExport) throw new Error('导出模块尚未就绪。');
       var entries = Array.from(selectedPapers.values());
-      var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href, taxonomyGraph: graph });
+      var result = window.ResearchReadingExport.build(entries, document.getElementById('library-export-format').value, { origin: window.location.origin, filter: window.location.href, tagGraph: graph });
       window.ResearchReadingExport.download(result);
       exportStatus.textContent = '已导出 ' + result.exported + ' 条' + (result.skipped ? '；跳过 ' + result.skipped + ' 条身份未核实的引用' : '') + (result.incomplete ? '；' + result.incomplete + ' 条引用仅含可得字段' : '') + '。';
     } catch (error) { exportStatus.textContent = error.message; }

@@ -100,21 +100,24 @@ test('Hugo search index preserves source titles, spaced scores and conference da
     '--contentDir', path.join(root, 'content'), '--destination', path.join(root, 'public'),
     '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const records = JSON.parse(fs.readFileSync(path.join(root, 'public', 'index.json'), 'utf8'));
+  for (const record of records) {
+    assert.equal(Object.keys(record).some(key => /^taxonomy(?:Contract|Concepts|RegistrySha256|PublicationStatus|EvidenceContract|EvidenceType|ProofSha256|PageSha256|ClassificationContract)$/.test(key)), false);
+  }
   const legacy = records.find((item) => item.title === 'Original English title');
   assert.equal(legacy.titleZh, '中文题目');
   assert.equal(legacy.score, '7.0');
   assert.equal(legacy.task, '语音识别');
   assert.equal(legacy.method, '');
-  assert.equal(legacy.taxonomyContract, '');
-  assert.deepEqual(legacy.taxonomyConcepts, []);
+  assert.equal(legacy.tagContract, '');
+  assert.deepEqual(legacy.tagConcepts, []);
   assert.equal(legacy.date, '2026-04-29');
   const workbench = records.find((item) => item.title === 'Analysis display title');
   assert.equal(workbench.originalTitle, 'Source paper title');
   assert.equal(workbench.titleZh, 'Contract reader title');
   assert.equal(workbench.task, '结构化任务');
   assert.equal(workbench.method, '结构化方法');
-  assert.equal(workbench.taxonomyContract, 'paper-taxonomy-flat-tags-compat-v1');
-  assert.deepEqual(workbench.taxonomyConcepts, [
+  assert.equal(workbench.tagContract, 'paper-taxonomy-flat-tags-compat-v1');
+  assert.deepEqual(workbench.tagConcepts, [
     { id: 'task.structured', facet: 'task', label: '结构化任务' },
     { id: 'method.structured', facet: 'method', label: '结构化方法' },
   ]);

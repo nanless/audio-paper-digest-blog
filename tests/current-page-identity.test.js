@@ -32,7 +32,7 @@ test('three actual published ICASSP pages gain only source identity and official
  for(const[key,proof]of Object.entries(document.records)){
   const record=after.find(r=>r.title===proof.source.originalTitle);assert.ok(record);
   assert.equal(record.identityStatus,'verified');assert.equal(record.paperId,proof.paperId);assert.equal(record.sourceKind,'conference');
-  assert.equal(record.identityEvidenceContract,document.contract);assert.equal(record.taxonomyEvidenceContract,undefined);
+  assert.equal(record.identityEvidenceContract,document.contract);assert.equal(record.tagEvidenceContract,undefined);
   assert.equal(record.citation.sourceUrl,proof.source.sourceUrl);assert.equal(record.citation.paperKey,proof.paperId);assert.equal(record.citation.title,proof.source.originalTitle);
   assert.equal(record.citation.pdfUrl,'');assert.equal(record.citation.arxivId,'');assert.equal(record.citation.doi,'');assert.equal(record.citation.date,'');assert.deepEqual(record.citation.authors,[]);assert.equal(record.citation.complete,false);
   assert.equal(record.citation.provenanceDisclosure,proof.source.provenanceDisclosure);

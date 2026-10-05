@@ -65,6 +65,39 @@ test('browser global exports work without a document or Node APIs', () => {
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../assets/js/taxonomy-core.js'), 'utf8'), context);
   assert.equal(typeof context.ResearchTaxonomy.createRegistry, 'function');
   assert.equal(context.ResearchTaxonomy.contract, core.contract);
+  assert.equal(typeof context.ResearchTaxonomy.readTagFields, 'function');
+});
+
+test('新搜索标签字段与旧记录保持同一核验范围，原值不修剪且任意跨族自有字段都拒绝', () => {
+  const legacy = paper('48', ['task.asr', 'method.adapter'], {
+    taxonomyRegistrySha256: '', taxonomyEvidenceContract: null, taxonomyEvidenceType: ' 原依据 ',
+    taxonomyProofSha256: 'proof', taxonomyPageSha256: 'page', taxonomyClassificationContract: '',
+    taxonomyPublicationStatus: undefined
+  });
+  const current = { pageType: legacy.pageType, permalink: legacy.permalink,
+    identityStatus: legacy.identityStatus, arxivId: legacy.arxivId,
+    tagContract: core.contract, tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
+    tagEvidenceContract: null, tagEvidenceType: ' 原依据 ', tagProofSha256: 'proof', tagPageSha256: 'page',
+    tagClassificationContract: '', tagPublicationStatus: undefined };
+  const original = JSON.stringify(legacy);
+  assert.deepEqual(core.readTagFields(legacy), {
+    tagContract: core.contract, tagConcepts: legacy.taxonomyConcepts, tagCatalogSha256: '',
+    tagPublicationStatus: undefined, tagEvidenceContract: null, tagEvidenceType: ' 原依据 ',
+    tagProofSha256: 'proof', tagPageSha256: 'page', tagClassificationContract: ''
+  });
+  assert.strictEqual(core.readTagFields(legacy).tagConcepts, legacy.taxonomyConcepts);
+  assert.deepEqual(graph.resolveRecord(current), graph.resolveRecord(legacy));
+  assert.deepEqual(core.groupPapers([current], graph)[0].conceptIds, core.groupPapers([legacy], graph)[0].conceptIds);
+  assert.equal(JSON.stringify(legacy), original);
+  assert.equal(core.primaryRoleLabel(null), '主要研究角色');
+  for (const record of [
+    { tagContract: core.contract, taxonomyPageSha256: null },
+    { taxonomyContract: core.contract, tagEvidenceType: null },
+    { ...current, taxonomyConcepts: current.tagConcepts }
+  ]) {
+    assert.throws(() => graph.resolveRecord(record), /标签字段不能混用/);
+    assert.throws(() => core.groupPapers([{ ...record, pageType: 'paper', permalink: '/posts/mixed/' }], graph), /标签字段不能混用/);
+  }
 });
 
 test('same-facet OR, cross-facet AND and scope include exactly the requested papers', () => {

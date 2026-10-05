@@ -65,8 +65,9 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null,
     clearTimeout() {}, setTimeout(fn) { fn(); return 1; }
   };
   if (catalog) window.ResearchTaxonomy = require('../assets/js/taxonomy-core');
+  const fuseLoads = [];
   class FakeFuse {
-    constructor(data) { this.data = data; }
+    constructor(data, options) { this.data = data; fuseLoads.push({ data, options }); }
     search(query) { return this.data.filter((entry) => JSON.stringify(entry).toLowerCase().includes(query.toLowerCase())).map((item) => ({ item })); }
   }
   let source = fs.readFileSync(path.join(__dirname, '..', 'assets', 'js', kind === 'library' ? 'paper-library.js' : 'fastsearch.js'), 'utf8');
@@ -81,7 +82,7 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null,
       return Promise.resolve({ ok: true, json: () => Promise.resolve(payload) });
     }
   });
-  return { nodes, document, window, requests, parent, listeners, ready: () => new Promise((resolve) => setImmediate(resolve)) };
+  return { nodes, document, window, requests, parent, listeners, fuseLoads, ready: () => new Promise((resolve) => setImmediate(resolve)) };
 }
 
 function record(index = 0) {
@@ -149,7 +150,7 @@ test('search announces zero matches and exposes archive navigation after index f
   assert.equal(offline.requests.filter(url => url.endsWith('index.json')).length, 2);
 });
 
-test('经典搜索用快照注入的 taxonomyAliases 召回父概念与别名', async () => {
+test('经典搜索用词表快照中的上级名称与别名召回论文', async () => {
   const registry = {
     contract: 'paper-taxonomy-registry-snapshot-v1',
     registryVersion: 'paper-taxonomy-v1',
@@ -229,4 +230,50 @@ test('absent taxonomy core preserves ordinary and typed keyword cards plus zero-
   browser.nodes['library-results'].children[0].children[0].dispatch('click');
   assert.match(browser.nodes['library-count'].textContent, /找到 2 条/);
   assert.equal(browser.nodes['library-results'].children.length, 2);
+});
+
+
+test('核心脚本缺席时，新标签字段仍可搜索且不改写原索引', async () => {
+  const item = { ...record(), tagContract: 'paper-tag-flat-tags-v2',
+    tagConcepts: [{ id: 'task.example', facet: 'task', label: '声音理解' }],
+    tagCatalogSha256: 'a'.repeat(64), tagProofSha256: 'b'.repeat(64),
+    tagClassificationContract: 'historical-source-tag-classification-v2',
+    primaryResearchRole: { kind: 'scientific_topic', label: '语音学' } };
+  const before = JSON.stringify(item);
+  for (const kind of ['library', 'search']) {
+    const browser = browserFixture(kind, [item], '?q=声音理解');
+    await browser.ready();
+    assert.equal(browser.window.ResearchTaxonomy, undefined);
+    const results = browser.nodes[kind === 'library' ? 'library-results' : 'searchResults'];
+    assert.equal(results.children.length, 1);
+    assert.match(results.textContent, /论文 0/);
+    assert.ok(!results.textContent.includes('主要研究主题'));
+    if (kind === 'search') {
+      const { data, options } = browser.fuseLoads[0];
+      assert.equal(data[0].tagConcepts, item.tagConcepts);
+      assert.equal(data[0].tagProofSha256, item.tagProofSha256);
+      assert.ok(!Object.hasOwn(data[0], 'taxonomyConcepts'));
+      assert.ok(data[0].tagAliases.includes('声音理解'));
+      assert.ok(options.keys.includes('tagAliases'));
+    }
+    assert.equal(JSON.stringify(item), before);
+  }
+});
+
+test('核心脚本缺席时，两种搜索均拒绝同值或空值的新旧字段混用', async () => {
+  const concepts = [{ id: 'task.example', facet: 'task', label: '声音理解' }];
+  for (const kind of ['library', 'search']) {
+    for (const value of [concepts, null]) {
+      const item = { ...record(), taxonomyConcepts: concepts, tagConcepts: value };
+      const before = JSON.stringify(item);
+      const browser = browserFixture(kind, [item], '?q=Paper');
+      await browser.ready();
+      if (kind === 'library') assert.equal(browser.nodes['library-count'].textContent, '论文索引载入失败');
+      else {
+        assert.equal(browser.fuseLoads.length, 0);
+        assert.match(browser.parent.textContent, /搜索暂时不可用/);
+      }
+      assert.equal(JSON.stringify(item), before);
+    }
+  }
 });

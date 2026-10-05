@@ -80,8 +80,8 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     limit: 20
-    # taxonomyAliases 由经典搜索在载入快照后按页注入（概念 zh/en + aliases + 祖先链）
-    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "method", "categories", "arxivId", "taxonomyAliases"]
+    # 经典搜索通过 tagAliases 查询标签的中英文名称、别名和上级标签。
+    keys: ["title", "titleZh", "originalTitle", "summary", "tags", "task", "method", "categories", "arxivId", "tagAliases"]
 
   mainSections: [posts]
 

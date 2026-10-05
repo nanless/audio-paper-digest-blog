@@ -73,6 +73,11 @@ test('navigation preserves issued labels and primary identity without joining di
   assert.equal(core.query(groups, { role: 'primary', facets: { task: ['task.audio-forgery'] } }, graph).length, 1);
   assert.equal(core.query(groups, { facets: { task: ['task.audio-forgery'], method: ['method.psychoacoustic-experiment'] } }, graph).length, 0);
   assert.equal(JSON.stringify(record), before);
+  const currentFields = { pageType: record.pageType, permalink: record.permalink,
+    identityStatus: record.identityStatus, tagContract: record.taxonomyContract,
+    tagCatalogSha256: record.taxonomyRegistrySha256, tagConcepts: record.taxonomyConcepts };
+  assert.deepEqual(graph.resolveRecord(currentFields), graph.resolveRecord(record));
+  assert.deepEqual(graph.navigationConcepts(currentFields), graph.navigationConcepts(record));
 });
 test('unknown or missing SHA and mismatched original labels do not acquire reviewed concepts', () => {
   const records = [paper('missing', old, ['task.music-understanding'], { taxonomyRegistrySha256: '' }),

@@ -39,3 +39,30 @@ test('citation formats remain bibliographic-only and do not add research classif
  const r=records.find(r=>r.researchType==='science'),e={...entry(r),citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2606.26360',title:'Phonetic and Semantic Analyses of Spoken Corpora',url:'https://arxiv.org/abs/2606.26360',pdfUrl:'https://arxiv.org/pdf/2606.26360',authors:[],date:''}};
  for(const format of ['bib','ris']){const text=exportRecord(e,format);assert.doesNotMatch(text,/研究类型|科学研究|研究范围|直接分类|不适用/);assert.match(text,/2606\.26360/);}
 });
+
+test('新索引字段和tagGraph可导出原已核角色，显式空图不回退，所有格式拒绝混用',()=>{
+ const legacy={...entry(records.find(r=>r.researchType==='science')),citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2606.26360',title:'Source title',url:'https://arxiv.org/abs/2606.26360',authors:[],date:''}};
+ const original=JSON.stringify(legacy);
+ const current={...legacy};
+ for(const key of ['taxonomyContract','taxonomyConcepts','taxonomyRegistrySha256','taxonomyPublicationStatus','taxonomyEvidenceContract','taxonomyEvidenceType','taxonomyProofSha256','taxonomyPageSha256','taxonomyClassificationContract'])delete current[key];
+ Object.assign(current,{tagContract:legacy.taxonomyContract,tagConcepts:legacy.taxonomyConcepts,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceContract:legacy.taxonomyEvidenceContract,tagEvidenceType:legacy.taxonomyEvidenceType});
+ for(const format of ['md','csv']){
+  const output=exporter.build([current],format,{origin:'https://example.test',tagGraph:graph}).text;
+  assert.match(output,/研究类型与方向已核验/);assert.ok(output.includes(legacy.primaryResearchRole.label));
+  assert.match(exporter.build([current],format,{tagGraph:null,taxonomyGraph:graph}).text,/暂无已核验的研究类型信息/);
+ }
+ for(const format of ['bib','ris'])assert.match(exporter.build([current],format,{tagGraph:graph}).text,/2606\.26360/);
+ for(const format of ['md','csv','bib','ris'])for(const mixed of [{...current,taxonomyPageSha256:null},{...legacy,tagContract:legacy.taxonomyContract}]){
+  assert.throws(()=>exporter.build([mixed],format),/标签字段不能混用/);
+ }
+ assert.equal(JSON.stringify(legacy),original);
+});
+
+test('浏览器未加载分类核心时仍可导出引用，混用字段不能借降级绕过',()=>{
+ const context={ResearchCitation:require('../assets/js/citation-source')};
+ require('node:vm').runInNewContext(require('node:fs').readFileSync(require('node:path').join(__dirname,'../assets/js/reading-export.js'),'utf8'),context);
+ const current={title:'Source title',permalink:'/posts/source/',tagContract:core.contract,citation:{contract:'paper-citation-source-v1',identityStatus:'verified',sourceKind:'arxiv',arxivId:'2606.26360',title:'Source title',url:'https://arxiv.org/abs/2606.26360',authors:[],date:''}};
+ assert.match(context.ResearchReadingExport.build([current],'md').text,/暂无已核验的研究类型信息/);
+ assert.match(context.ResearchReadingExport.build([current],'bib').text,/2606\.26360/);
+ for(const format of ['md','csv','bib','ris'])assert.throws(()=>context.ResearchReadingExport.build([{...current,taxonomyEvidenceType:null}],format),/标签字段不能混用/);
+});

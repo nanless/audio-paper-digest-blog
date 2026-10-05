@@ -37,3 +37,14 @@ test('NA with method, duplicate concept, wrong science primary ID and task conta
  for(const mutate of mutations){const e=entry(fixture(),'negative');mutate(e);assert.equal(graph.resolveRecord(e).status,'invalid-roles');assert.equal(core.groupPapers([e],graph)[0].conceptIds.length,0);}
  const f=fixture({researchType:'position',na:true}),e=entry(f,'bad-na');e.taxonomyConcepts.push(fixture().record.concepts[1]);assert.equal(graph.resolveRecord(e).status,'invalid-roles');
 });
+
+test('新索引字段读取原v2角色，不给普通来源标签增加强角色资格',()=>{
+ const legacy=entry(fixture(),'current-fields'),current={...legacy};
+ for(const key of ['taxonomyContract','taxonomyRegistrySha256','taxonomyConcepts','taxonomyClassificationContract','taxonomyEvidenceType','taxonomyEvidenceContract'])delete current[key];
+ Object.assign(current,{tagContract:legacy.taxonomyContract,tagCatalogSha256:legacy.taxonomyRegistrySha256,tagConcepts:legacy.taxonomyConcepts,tagClassificationContract:legacy.taxonomyClassificationContract,tagEvidenceType:legacy.taxonomyEvidenceType,tagEvidenceContract:legacy.taxonomyEvidenceContract});
+ assert.deepEqual(graph.resolveRecord(current),graph.resolveRecord(legacy));
+ assert.equal(core.query(core.groupPapers([current],graph),{researchType:current.researchType},graph).length,1);
+ const simple={...current,tagClassificationContract:undefined,tagEvidenceContract:'historical-direct-tag-supplement-v2',tagEvidenceType:'source-only-tags'};
+ assert.equal(core.query(core.groupPapers([simple],graph),{researchType:current.researchType},graph).length,0);
+ assert.throws(()=>graph.resolveRecord({...current,taxonomyEvidenceType:null}),/标签字段不能混用/);
+});

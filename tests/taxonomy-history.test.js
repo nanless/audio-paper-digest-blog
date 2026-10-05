@@ -76,7 +76,7 @@ test('historical supplement is accepted only for exact page, body, source, origi
   fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), JSON.stringify({ contract: 'historical-direct-taxonomy-supplement-v1', records }));
   execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const index = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
-  const accepted = index.filter(record => record.taxonomyEvidenceContract);
+  const accepted = index.filter(record => record.tagEvidenceContract);
   assert.deepEqual(accepted.map(record => record.title), ['valid']);
   const full = accepted.find(record => record.title === 'valid');
   assert.equal(full.task, '旧任务');
@@ -159,15 +159,15 @@ test('historical supplement is accepted only for exact page, body, source, origi
   const originalSourceRecord = JSON.stringify(sourceRecord);
   writeTags(); buildTags();
   const currentIndex = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
-  assert.equal(currentIndex.find(r => r.title === 'new-tags').taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
-  assert.equal(currentIndex.find(r => r.title === 'valid').taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
+  assert.equal(currentIndex.find(r => r.title === 'new-tags').tagEvidenceContract, 'historical-direct-tag-supplement-v2');
+  assert.equal(currentIndex.find(r => r.title === 'valid').tagEvidenceContract, 'historical-direct-tag-supplement-v2');
   const sourceResult = currentIndex.find(r => r.title === 'new-source');
   // This simple source classification does not gain the independent role-schema fields.
-  assert.equal(Object.hasOwn(sourceResult, 'taxonomyClassificationContract'), false);
-  assert.equal(sourceResult.taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
+  assert.equal(Object.hasOwn(sourceResult, 'tagClassificationContract'), false);
+  assert.equal(sourceResult.tagEvidenceContract, 'historical-direct-tag-supplement-v2');
   assert.equal(sourceResult.primaryTaskId, sourceRecord.primaryTaskId);
   assert.equal(sourceResult.primaryMethodId, sourceRecord.primaryMethodId);
-  assert.equal(sourceResult.taxonomyEvidenceType, 'source-only-tags');
+  assert.equal(sourceResult.tagEvidenceType, 'source-only-tags');
   assert.equal(JSON.stringify(sourceRecord), originalSourceRecord);
   assert.match(fs.readFileSync(path.join(temporary, 'public/posts/new-source-2609-12345/index.html'), 'utf8'), /只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核/);
   for (const [name, mutate] of [

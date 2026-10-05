@@ -130,7 +130,7 @@ function registryIndex(registry) {
   return byId;
 }
 
-function taxonomyAliases(concepts, byId) {
+function tagAliases(concepts, byId) {
   if (!Array.isArray(concepts)) return [];
   const terms = [];
   const push = (...values) => {
@@ -155,6 +155,25 @@ function taxonomyAliases(concepts, byId) {
     }
   }
   return terms;
+}
+
+function readTagFields(record) {
+  const core = window.ResearchTaxonomy;
+  if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
+  // 核心脚本缺席时保留关键词搜索；这里只读取字段，不判断标签资格。
+  const fields = [
+    ['tagContract', 'taxonomyContract'], ['tagConcepts', 'taxonomyConcepts'],
+    ['tagCatalogSha256', 'taxonomyRegistrySha256'], ['tagPublicationStatus', 'taxonomyPublicationStatus'],
+    ['tagEvidenceContract', 'taxonomyEvidenceContract'], ['tagEvidenceType', 'taxonomyEvidenceType'],
+    ['tagProofSha256', 'taxonomyProofSha256'], ['tagPageSha256', 'taxonomyPageSha256'],
+    ['tagClassificationContract', 'taxonomyClassificationContract'],
+  ];
+  const own = key => Object.prototype.hasOwnProperty.call(record, key);
+  if (fields.some(pair => own(pair[0])) && fields.some(pair => own(pair[1]))) {
+    throw new Error('标签字段不能混用新旧命名。');
+  }
+  const current = fields.some(pair => own(pair[0]));
+  return Object.fromEntries(fields.map(pair => [pair[0], record[pair[current ? 0 : 1]]]));
 }
 
 function loadIndex() {
@@ -204,14 +223,19 @@ return loadIndex()
       threshold: params.fuseOpts?.threshold ?? 0.4,
       distance: params.fuseOpts?.distance ?? 1000,
       ignoreLocation: true,
-      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'method', 'categories', 'arxivId', 'taxonomyAliases']
+      keys: params.fuseOpts?.keys ?? ['title', 'titleZh', 'originalTitle', 'summary', 'tags', 'task', 'method', 'categories', 'arxivId', 'tagAliases']
     };
     const byId = registryIndex(registry);
-    const entries = data.filter((item) => item && safeSiteUrl(item.permalink)).map((item) => {
-      const aliases = graph ? taxonomyAliases(graph.navigationConcepts(item), byId)
-        : taxonomyAliases(item.taxonomyConcepts, byId);
-      return aliases.length ? { ...item, taxonomyAliases: aliases } : item;
-    });
+    const entries = data.filter((item) => item).map((item) => {
+      const tagFields = readTagFields(item);
+      const aliases = graph ? tagAliases(graph.navigationConcepts(item), byId)
+        : tagAliases(tagFields.tagConcepts, byId);
+      const entry = { ...item, ...tagFields };
+      ['taxonomyContract', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
+        'taxonomyEvidenceContract', 'taxonomyEvidenceType', 'taxonomyProofSha256', 'taxonomyPageSha256',
+        'taxonomyClassificationContract'].forEach(key => { delete entry[key]; });
+      return aliases.length ? { ...entry, tagAliases: aliases } : entry;
+    }).filter(item => safeSiteUrl(item.permalink));
     fuse = new Fuse(entries, options);
     loadingIndex = false;
     search();

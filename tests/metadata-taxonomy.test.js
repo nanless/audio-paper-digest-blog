@@ -158,7 +158,7 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   const oldRecord = records.find(item => item.title === 'old');
   assert.equal(oldRecord.primaryTaskId, 'task.child');
   assert.equal(oldRecord.task, '旧子名');
-  assert.equal(oldRecord.taxonomyRegistrySha256, old.registrySha256);
+  assert.equal(oldRecord.tagCatalogSha256, old.registrySha256);
   assert.deepEqual(graph.resolveRecord(oldRecord).concepts[0].ancestorIds, ['task.left']);
   assert.equal(graph.resolveRecord(oldRecord).concepts[0].zh, '旧子名');
   const paths = JSON.parse(fs.readFileSync(path.join(temporary, 'public/posts/old/index.html')));
@@ -181,9 +181,9 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   fs.writeFileSync(newPagePath, currentProtocolPage);
   execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   const currentRecords = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
-  assert.equal(currentRecords.find(record => record.title === 'new').taxonomyContract, core.contract);
+  assert.equal(currentRecords.find(record => record.title === 'new').tagContract, core.contract);
   assert.deepEqual(currentRecords.map(record => record.title === 'new'
-    ? { ...record, taxonomyContract: core.legacyContract } : record), records);
+    ? { ...record, tagContract: core.legacyContract } : record), records);
   assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html'))), server);
   for (const extra of [

@@ -14,6 +14,10 @@ test('V3 mechanism is a method facet and single primary count, never an inferred
 test('V3 rendered mechanism label and complete paths export once; Bib/RIS remain bibliographic',()=>{
  const e=entry(cases.fixture());for(const format of ['md','csv']){const text=exporter.build([e],format,{origin:'https://example.test',taxonomyGraph:graph}).text;assert.match(text,/主要研究机制/);assert.ok(text.includes(e.primaryResearchRole.label));assert.match(text,/研究类型与方向已核验/);assert.match(text,/方法[：:]/);if(format==='md'){assert.equal((text.match(/主要研究机制：/g)||[]).length,1);assert.doesNotMatch(text,/主要研究方法：/);}}
  for(const format of ['bib','ris']){const text=exporter.build([e],format,{origin:'https://example.test',taxonomyGraph:graph}).text;assert.match(text,/2601\.00001/);assert.doesNotMatch(text,/主要研究机制|研究类型|注意力/);}
+ const current={...e};for(const key of ['taxonomyContract','taxonomyClassificationContract','taxonomyEvidenceContract','taxonomyEvidenceType','taxonomyRegistrySha256','taxonomyConcepts'])delete current[key];
+ Object.assign(current,{tagContract:e.taxonomyContract,tagClassificationContract:e.taxonomyClassificationContract,tagEvidenceContract:e.taxonomyEvidenceContract,tagEvidenceType:e.taxonomyEvidenceType,tagCatalogSha256:e.taxonomyRegistrySha256,tagConcepts:e.taxonomyConcepts});
+ assert.deepEqual(graph.resolveRecord(current),graph.resolveRecord(e));assert.equal(core.primaryRoleLabel(current),'主要研究机制');
+ assert.match(exporter.build([current],'md',{tagGraph:graph}).text,/主要研究机制/);
 });
 test('V2 cannot acquire the new mechanism role via browser index; V3 contamination remains invalid',()=>{
  const e=entry(cases.fixture());for(const mutate of [r=>r.taxonomyClassificationContract=core.v2Contract,r=>r.primaryTaskId='task.asr',r=>r.primaryMethodId='method.psychoacoustic-experiment',r=>r.researchType='science',r=>r.methodNotApplicable=true]){const bad=structuredClone(e);mutate(bad);assert.equal(graph.resolveRecord(bad).status,'invalid-roles');assert.match(exporter.build([bad],'md',{origin:'https://example.test',taxonomyGraph:graph}).text,/暂无已核验的研究类型信息/);}

@@ -50,14 +50,14 @@ test('actual signed historical fallback is replayed in both identity and canonic
   const records=JSON.parse(fs.readFileSync(path.join(root,'public/index.json')));
   const get=name=>records.find(r=>r.permalink.includes('/'+name+'/'));
   const expected=histories['identity-history'].records[sourcePath].source.sourceVersion.warning;
-  const valid=get('valid');assert.equal(valid.identityStatus,'verified');assert.ok(valid.identityEvidenceContract&&valid.taxonomyEvidenceContract);
+  const valid=get('valid');assert.equal(valid.identityStatus,'verified');assert.ok(valid.identityEvidenceContract&&valid.tagEvidenceContract);
   assert.equal(valid.citation.pdfUrl,'https://arxiv.org/pdf/2604.14654v1');assert.equal(valid.citation.sourceVersionWarning,expected);
   assert.match(fs.readFileSync(path.join(root,'public/posts/valid/index.html'),'utf8'),/当前无版本 PDF.*HTTP 404.*不得暗示当前稿仍有效/);
   for(const[name]of variants.filter(([name])=>!['valid','current-source'].includes(name))){
-    const entry=get(name);assert.ok(!entry.identityEvidenceContract&&!entry.taxonomyEvidenceContract,name+' rejects both re-signed proofs');
+    const entry=get(name);assert.ok(!entry.identityEvidenceContract&&!entry.tagEvidenceContract,name+' rejects both re-signed proofs');
     assert.equal(entry.citation.sourceVersionWarning,undefined,name+' no warning from rejected proof');
     assert.doesNotMatch(fs.readFileSync(path.join(root,'public/posts',name,'index.html'),'utf8'),/当前无版本 PDF|当前稿已认证有效/);
   }
-  const current=get('current-source');assert.ok(current.identityEvidenceContract&&current.taxonomyEvidenceContract);
+  const current=get('current-source');assert.ok(current.identityEvidenceContract&&current.tagEvidenceContract);
   assert.equal(current.citation.sourceVersionWarning,undefined);assert.doesNotMatch(fs.readFileSync(path.join(root,'public/posts/current-source/index.html'),'utf8'),/当前无版本 PDF/);
 });

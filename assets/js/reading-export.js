@@ -1,11 +1,11 @@
 (function (root, factory) {
   'use strict';
   var citation = typeof module === 'object' && module.exports ? require('./citation-source.js') : root.ResearchCitation;
-  var taxonomy = typeof module === 'object' && module.exports ? require('./taxonomy-core.js') : root.ResearchTaxonomy;
-  var api = factory(citation, taxonomy);
+  var tagApi = typeof module === 'object' && module.exports ? require('./taxonomy-core.js') : root.ResearchTaxonomy;
+  var api = factory(citation, tagApi);
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.ResearchReadingExport = api;
-}(typeof globalThis !== 'undefined' ? globalThis : this, function (citation, taxonomy) {
+}(typeof globalThis !== 'undefined' ? globalThis : this, function (citation, tagApi) {
   'use strict';
   function plain(value) { return String(value || '').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f]/g, '').trim(); }
   function markdown(value) { return plain(value).replace(/[\\`*_{}\[\]<>#|]/g, '\\$&'); }
@@ -17,28 +17,42 @@
   function url(value, origin) {
     try { var parsed = new URL(value, origin); return /^https?:$/.test(parsed.protocol) && !parsed.username && !parsed.password ? parsed.href : ''; } catch (_error) { return ''; }
   }
+  function readEntryTagFields(entry) {
+    if (tagApi && typeof tagApi.readTagFields === 'function') return tagApi.readTagFields(entry);
+    var current = ['tagContract', 'tagConcepts', 'tagCatalogSha256', 'tagPublicationStatus',
+      'tagEvidenceContract', 'tagEvidenceType', 'tagProofSha256', 'tagPageSha256', 'tagClassificationContract'];
+    var legacy = ['taxonomyContract', 'taxonomyConcepts', 'taxonomyRegistrySha256', 'taxonomyPublicationStatus',
+      'taxonomyEvidenceContract', 'taxonomyEvidenceType', 'taxonomyProofSha256', 'taxonomyPageSha256', 'taxonomyClassificationContract'];
+    var owns = function (key) { return Object.prototype.hasOwnProperty.call(entry, key); };
+    if (current.some(owns) && legacy.some(owns)) throw new Error('标签字段不能混用新旧命名。');
+    // 没有分类核心时只检查字段族，继续原引用与阅读清单的降级行为。
+    return {};
+  }
   function researchFields(entry, graph) {
+    var tagFields = readEntryTagFields(entry);
     var empty = ['暂无已核验的研究类型信息', '', '', '', '', '', '', ''];
-    if (!taxonomy || !graph || typeof graph.resolveRecord !== 'function'
-      || ![taxonomy.v2Contract, taxonomy.v3Contract, taxonomy.qualified1028Contract].includes(entry.taxonomyClassificationContract)) return empty;
+    if (!tagApi || !graph || typeof graph.resolveRecord !== 'function'
+      || ![tagApi.v2Contract, tagApi.v3Contract, tagApi.qualified1028Contract].includes(tagFields.tagClassificationContract)) return empty;
     var resolved = graph.resolveRecord(entry);
     if (resolved.status !== 'verified' || !resolved.concepts.length) return empty;
     var issued = graph.versions[resolved.registrySha256];
     var role = entry.primaryResearchRole, roleNode = role && issued && issued.byId[role.conceptId];
     if (!roleNode || roleNode.facet !== role.kind || roleNode.zh !== role.label) return empty;
     var method = entry.methodNotApplicable === true ? '不适用' : issued.byId[entry.primaryMethodId].zh;
-    // Paths follow the issued snapshot; only selected direct concepts are exported.
+    // 分类路径取原签发快照，只导出所选的直接分类，不把当前导航树写成原分类证据。
     var paths = resolved.concepts.map(function (node) {
-      return (taxonomy.facetLabels[node.facet] || node.facet) + '：'
+      return (tagApi.facetLabels[node.facet] || node.facet) + '：'
         + issued.path(node.id).map(function (part) { return part.zh; }).join(' > ');
     }).join('；');
-    return ['研究类型与方向已核验', taxonomy.researchTypeLabels[entry.researchType], taxonomy.domainLabels[entry.domainScope],
-      taxonomy.primaryRoleLabel(entry), roleNode.zh, method,
+    return ['研究类型与方向已核验', tagApi.researchTypeLabels[entry.researchType], tagApi.domainLabels[entry.domainScope],
+      tagApi.primaryRoleLabel(entry), roleNode.zh, method,
       entry.methodNotApplicable === true ? plain(entry.methodNotApplicableReason) : '', paths];
   }
   function build(entries, format, options) {
     if (!Array.isArray(entries) || entries.length > 10000 || !['md', 'csv', 'bib', 'ris'].includes(format)) throw new Error('导出格式或条目数量无效');
+    entries.forEach(readEntryTagFields);
     var settings = options || {}, seen = new Set(), skipped = 0, incomplete = 0;
+    var tagGraph = Object.prototype.hasOwnProperty.call(settings, 'tagGraph') ? settings.tagGraph : settings.taxonomyGraph;
     var rows = entries.filter(function (entry) {
       var key = entry.paperGroup && entry.paperGroup.key || entry.readingKey || entry.permalink || entry.url;
       if (!key || seen.has(key)) return false; seen.add(key); return true;
@@ -64,7 +78,7 @@
       }
       if (format === 'csv') { lines.push([title, identifier, record.identityStatus || entry.identityStatus || 'unknown', link,
         record.url || record.sourceUrl || '', (record.authors || []).join('; '), record.date || '', record.doi || '', record.sourceVersionWarning || '', record.provenanceDisclosure || '']
-        .concat(researchFields(entry, settings.taxonomyGraph)).map(csv).join(',')); return; }
+        .concat(researchFields(entry, tagGraph)).map(csv).join(',')); return; }
       lines.push('## ' + (position + 1) + '. ' + markdown(title), '');
       if (link) lines.push('导读：<' + link + '>');
       lines.push('论文身份：' + markdown(identifier || '待核'), '身份状态：' + markdown(record.identityStatus || entry.identityStatus || 'unknown'));
@@ -72,7 +86,7 @@
       if (record.sourceVersionWarning) lines.push('来源版本限制：' + markdown(record.sourceVersionWarning));
       if (record.provenanceDisclosure) lines.push('来源记录说明：' + markdown(record.provenanceDisclosure));
       lines.push('作者：' + markdown((record.authors || []).join('；') || '未提供'), '出版日期：' + markdown(record.date || '未提供'), 'DOI：' + markdown(record.doi || '未提供'));
-      var fields = researchFields(entry, settings.taxonomyGraph);
+      var fields = researchFields(entry, tagGraph);
       lines.push('分类核验状态：' + fields[0]);
       if (fields[0] === '研究类型与方向已核验') {
         lines.push('研究类型：' + markdown(fields[1]), '研究范围：' + markdown(fields[2]),

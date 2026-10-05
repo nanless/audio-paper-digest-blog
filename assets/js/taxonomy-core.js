@@ -26,6 +26,21 @@
     application: '应用', research_focus: '研究重点', artifact: '研究产物',
     scientific_topic: '科学主题', model_family: '模型家族' });
   var own = function (object, key) { return Object.prototype.hasOwnProperty.call(object, key); };
+  var tagFieldNames = [
+    ['tagContract', 'taxonomyContract'], ['tagConcepts', 'taxonomyConcepts'],
+    ['tagCatalogSha256', 'taxonomyRegistrySha256'], ['tagPublicationStatus', 'taxonomyPublicationStatus'],
+    ['tagEvidenceContract', 'taxonomyEvidenceContract'], ['tagEvidenceType', 'taxonomyEvidenceType'],
+    ['tagProofSha256', 'taxonomyProofSha256'], ['tagPageSha256', 'taxonomyPageSha256'],
+    ['tagClassificationContract', 'taxonomyClassificationContract']
+  ];
+  function readTagFields(record) {
+    var hasCurrent = tagFieldNames.some(function (names) { return own(record, names[0]); });
+    var hasLegacy = tagFieldNames.some(function (names) { return own(record, names[1]); });
+    if (hasCurrent && hasLegacy) throw new Error('标签字段不能混用新旧命名。');
+    var fields = {};
+    tagFieldNames.forEach(function (names) { fields[names[0]] = record[names[hasCurrent ? 0 : 1]]; });
+    return fields;
+  }
   var text = function (value) { return typeof value === 'string' ? value.trim() : ''; };
   var normalized = function (value) { return text(value).normalize('NFKC').toLocaleLowerCase(); };
   var isActive = function (node) { return !!node && node.status !== 'deprecated'; };
@@ -35,8 +50,7 @@
     }).join('').trim();
   }
 
-  // The published v1 snapshot has one ordered ancestor chain. Reject broken or
-  // unsupported graphs instead of interpreting an arbitrary array as a tree.
+  // 原 v1 快照使用有序祖先链；不完整或不支持的图须拒绝，不能将任意数组当作分类树。
   function createRegistry(snapshot, catalog) {
     if (!snapshot || !Array.isArray(snapshot.concepts) || !snapshot.concepts.length) {
       throw new Error('分类目录缺少概念');
@@ -140,40 +154,41 @@
     }
     graph.versions = versions;
     graph.resolveRecord = function (record) {
-      var sha = text(record.taxonomyRegistrySha256);
+      var tags = readTagFields(record);
+      var sha = text(tags.tagCatalogSha256);
       var source = sha ? versions[sha] : !catalog ? graph : null;
       var result = { status: source ? 'verified' : sha ? 'unknown-version' : 'unbound-version',
         registrySha256: sha, registryVersion: source ? source.registryVersion : '', concepts: [] };
-      // A publication hold cannot fall back to older flat classifications.
-      if (record.taxonomyPublicationStatus === 'withheld') {
+      // 暂缓发布的标签记录不能回退到旧的扁平分类。
+      if (tags.tagPublicationStatus === 'withheld') {
         result.status = 'withheld'; return result;
       }
-      if (![CONTRACT, LEGACY_CONTRACT].includes(record.taxonomyContract) || !Array.isArray(record.taxonomyConcepts)) {
+      if (![CONTRACT, LEGACY_CONTRACT].includes(tags.tagContract) || !Array.isArray(tags.tagConcepts)) {
         result.status = 'legacy'; return result;
       }
       if (!source) return result;
-      result.concepts = record.taxonomyConcepts.filter(function (concept) {
+      result.concepts = tags.tagConcepts.filter(function (concept) {
         var node = concept && source.byId[concept.id];
         var current = concept && graph.byId[concept.id];
         return node && current && isActive(node) && isActive(current) && node.facet === current.facet
           && concept.facet === node.facet && concept.label === node.zh;
       }).map(function (concept) { return source.byId[concept.id]; });
-      if (record.taxonomyClassificationContract) {
+      if (tags.tagClassificationContract) {
         var role = record.primaryResearchRole;
         var selected = new Set(result.concepts.map(function (node) { return node.id; }));
         var roleNode = role && source.byId[role.conceptId];
-        var isV3 = record.taxonomyClassificationContract === V3_CONTRACT;
-        var isQualified1028 = record.taxonomyClassificationContract === QUALIFIED_CONTRACT && record.paperId === 'conference:icassp:2026:icassp-arnumber:11461028' && record.taxonomyRegistrySha256 === '910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30' && record.taxonomyProofSha256 === '03beb37ae2df8f7f48850f935cb274a9b0c75eebde483e9c1d6c51a5cffaeb20' && record.taxonomyEvidenceContract === QUALIFIED_CONTRACT && record.taxonomyEvidenceType === 'source-bound-independent-review-qualification';
+        var isV3 = tags.tagClassificationContract === V3_CONTRACT;
+        var isQualified1028 = tags.tagClassificationContract === QUALIFIED_CONTRACT && record.paperId === 'conference:icassp:2026:icassp-arnumber:11461028' && tags.tagCatalogSha256 === '910a94021b085a190abcd5fd9603af3240160f9417293d5a90158bc4ef900d30' && tags.tagProofSha256 === '03beb37ae2df8f7f48850f935cb274a9b0c75eebde483e9c1d6c51a5cffaeb20' && tags.tagEvidenceContract === QUALIFIED_CONTRACT && tags.tagEvidenceType === 'source-bound-independent-review-qualification';
         var mechanism = isV3 && record.researchType === 'engineering' && role && role.kind === 'method';
         var allowedFacets = isV3 && record.researchType === 'engineering' ? ['task', 'method'] : roleFacets[record.researchType];
-        var v2 = (record.taxonomyClassificationContract === V2_CONTRACT || isV3 || isQualified1028)
-          && (isQualified1028 || (isV3 ? ((record.taxonomyEvidenceType === 'source-only-taxonomy-v3' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v3') || (record.taxonomyEvidenceType === 'source-bound-current-page-fullsite-taxonomy-v3' && record.taxonomyEvidenceContract === 'fullsite-source-taxonomy-audit-supplement-v1')) : ((record.taxonomyEvidenceType === 'source-only-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-source-taxonomy-supplement-v2')
-            || (record.taxonomyEvidenceType === 'controlled-current-page-source-taxonomy-v2' && record.taxonomyEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2'))))
+        var v2 = (tags.tagClassificationContract === V2_CONTRACT || isV3 || isQualified1028)
+          && (isQualified1028 || (isV3 ? ((tags.tagEvidenceType === 'source-only-taxonomy-v3' && tags.tagEvidenceContract === 'historical-source-taxonomy-supplement-v3') || (tags.tagEvidenceType === 'source-bound-current-page-fullsite-taxonomy-v3' && tags.tagEvidenceContract === 'fullsite-source-taxonomy-audit-supplement-v1')) : ((tags.tagEvidenceType === 'source-only-taxonomy-v2' && tags.tagEvidenceContract === 'historical-source-taxonomy-supplement-v2')
+            || (tags.tagEvidenceType === 'controlled-current-page-source-taxonomy-v2' && tags.tagEvidenceContract === 'historical-current-page-source-taxonomy-supplement-v2'))))
           && ['paper-taxonomy-v1', 'paper-taxonomy-v2'].includes(source.registryVersion)
           && own(roleFacets, record.researchType) && own(domainLabels, record.domainScope)
           && roleNode && selected.has(roleNode.id) && allowedFacets.includes(role.kind)
           && role.kind === roleNode.facet && role.label === roleNode.zh
-          && result.concepts.length === record.taxonomyConcepts.length
+          && result.concepts.length === tags.tagConcepts.length
           && selected.size === result.concepts.length && selected.size <= 5
           && !result.concepts.some(function (node) { return node.ancestorIds.some(function (id) { return selected.has(id); }); });
         if (v2 && record.methodNotApplicable === true) {
@@ -194,8 +209,7 @@
       }
       return result;
     };
-    // Resolve the immutable issued classification first. Only navigation uses
-    // the current tree; source labels, roles and ancestor evidence stay issued.
+    // 先核原签发分类，再按当前分类树导航；原标签、角色与祖先证据保持原签发版本。
     graph.navigationConcepts = function (record) {
       var resolved = graph.resolveRecord(record);
       if (resolved.status !== 'verified') return [];
@@ -214,7 +228,7 @@
   }
 
   function identity(record) {
-    // Inferred slug IDs and unknown identities never collapse unrelated pages.
+    // 依据网址推测的标识和未核验身份不能将不同论文的页面合并。
     var verified = record.identityStatus === 'verified';
     var arxivId = verified ? arxivBase(record.arxivId) : '';
     var paperId = verified ? text(record.paperId) : '';
@@ -247,8 +261,7 @@
         ancestorIdsByConcept: Object.create(null), navigationAncestorIdsByConcept: Object.create(null), labelsByConcept: Object.create(null),
         registrySha256: resolved.registrySha256, registryVersion: resolved.registryVersion, status: resolved.status };
       group.classifications.push(classification);
-      // Bare legacy tags and unchecked taxonomy payloads never become reviewed
-      // semantic classifications merely by entering the search index.
+      // 旧页面的普通标签和未核验标签记录，不能因为进入搜索索引就成为已核验分类。
       var direct = resolved.concepts.map(function (node) {
         classification.ancestorIdsByConcept[node.id] = node.ancestorIds.slice();
         classification.navigationAncestorIdsByConcept[node.id] = graph.byId[node.id].ancestorIds.slice();
@@ -267,7 +280,7 @@
             if (!group[field[1]].includes(primaryId)) group[field[1]].push(primaryId);
           }
         });
-      if (resolved.status === 'verified' && [V2_CONTRACT, V3_CONTRACT, QUALIFIED_CONTRACT].includes(record.taxonomyClassificationContract) && resolved.concepts.length) {
+      if (resolved.status === 'verified' && [V2_CONTRACT, V3_CONTRACT, QUALIFIED_CONTRACT].includes(readTagFields(record).tagClassificationContract) && resolved.concepts.length) {
         classification.researchType = record.researchType;
         classification.domainScope = record.domainScope;
         var primaryRole = record.primaryResearchRole;
@@ -305,8 +318,7 @@
   }
 
   function matchingClassifications(group, selection, graph) {
-    // Multiple signed readings can disagree. A paper qualifies only when one
-    // reading supplies the entire AND condition; never join labels across them.
+    // 同篇论文的多份签发导读可能不一致；必须有一份导读独立满足全部条件，不能拼接不同导读的标签。
     return (group.classifications || []).filter(function (classification) {
       if (selection.domainScope !== 'all'
         && (selection.domainScope === 'unclassified' ? !!classification.domainScope : classification.domainScope !== selection.domainScope)) return false;
@@ -357,11 +369,11 @@
   }
 
   function primaryRoleLabel(record) {
-    return record && record.taxonomyClassificationContract === V3_CONTRACT && record.researchType === 'engineering' && record.primaryResearchRole && record.primaryResearchRole.kind === 'method'
+    return record && readTagFields(record).tagClassificationContract === V3_CONTRACT && record.researchType === 'engineering' && record.primaryResearchRole && record.primaryResearchRole.kind === 'method'
       ? '主要研究机制' : roleLabels[record && record.primaryResearchRole && record.primaryResearchRole.kind] || '主要研究角色';
   }
   return { contract: CONTRACT, legacyContract: LEGACY_CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, qualified1028Contract: QUALIFIED_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
     domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
-    identity: identity, groupPapers: groupPapers, query: query, counts: counts };
+    readTagFields: readTagFields, identity: identity, groupPapers: groupPapers, query: query, counts: counts };
 }));
