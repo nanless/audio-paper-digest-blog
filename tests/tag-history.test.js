@@ -7,7 +7,7 @@ const os = require('node:os');
 const crypto = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const repository = process.env.BLOG_REPO || path.resolve(__dirname, '..');
-const draft = process.env.TAXONOMY_CONSUMER_DRAFT || repository;
+const tagTemplateRepository = process.env.TAG_TEMPLATE_REPO || repository;
 const core = require(path.join(repository, 'assets/js/tag-core'));
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const canonical = value => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object'
@@ -27,7 +27,7 @@ test('historical supplement is accepted only for exact page, body, source, origi
     'layouts/partials/tag_concept_counts.html', 'layouts/partials/citation_source.html',
     'layouts/partials/research_identity.html', 'layouts/partials/research_historical_source_version.html'];
   for (const relative of relativeFiles) {
-    const origin = fs.existsSync(path.join(draft, relative)) ? draft : repository;
+    const origin = fs.existsSync(path.join(tagTemplateRepository, relative)) ? tagTemplateRepository : repository;
     fs.copyFileSync(path.join(origin, relative), path.join(temporary, relative));
   }
   fs.writeFileSync(path.join(temporary, 'layouts/index.html'), '{{ partial "tag_concept_counts.html" . | jsonify }}');

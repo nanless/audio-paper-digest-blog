@@ -7,8 +7,8 @@ const os = require('node:os');
 const crypto = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const repository = process.env.BLOG_REPO || path.resolve(__dirname, '..');
-const draft = process.env.IDENTITY_CONSUMER_DRAFT || repository;
-const canonicalDraft = process.env.TAXONOMY_CONSUMER_DRAFT || repository;
+const identityTemplateRepository = process.env.SOURCE_IDENTITY_TEMPLATE_REPO || repository;
+const tagTemplateRepository = process.env.TAG_TEMPLATE_REPO || repository;
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const canonical = value => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object'
   ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])])) : value;
@@ -24,10 +24,10 @@ function fixture(t) {
   fs.mkdirSync(path.join(root, 'content/posts'), { recursive: true });
   fs.mkdirSync(path.join(root, 'data'), { recursive: true });
   fs.mkdirSync(path.join(root, 'layouts/_default'), { recursive: true });
-  for (const origin of [repository, canonicalDraft, draft]) {
+  for (const origin of [repository, tagTemplateRepository, identityTemplateRepository]) {
     fs.cpSync(path.join(origin, 'layouts/partials'), path.join(root, 'layouts/partials'), { recursive: true });
   }
-  fs.copyFileSync(path.join(draft, 'layouts/_default/index.json'), path.join(root, 'layouts/_default/index.json'));
+  fs.copyFileSync(path.join(identityTemplateRepository, 'layouts/_default/index.json'), path.join(root, 'layouts/_default/index.json'));
   fs.writeFileSync(path.join(root, 'layouts/index.html'), '{{ partial "tag_concept_counts.html" . | jsonify }}');
   fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_tags.html" . }}');
   for (const file of ['taxonomy-registry.json', 'taxonomy-catalog.json']) fs.copyFileSync(path.join(repository, 'data', file), path.join(root, 'data', file));
