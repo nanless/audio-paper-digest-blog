@@ -4,7 +4,7 @@
 {{- $valid := slice -}}
 {{- $seen := slice -}}
 {{- $proof := partial "taxonomy_page_proof.html" . -}}
-{{- if eq $proof.contract "paper-taxonomy-flat-tags-compat-v1" -}}
+{{- if partial "tag_flat_contract.html" $proof.contract -}}
   {{- $snapshot := partial "taxonomy_snapshot.html" . -}}
   {{- $byId := partialCached "taxonomy_registry_index.html" $snapshot ($snapshot.registrySha256 | default "fixture") -}}
   {{- $currentById := partialCached "taxonomy_registry_index.html" "global" "global" -}}

@@ -45,7 +45,7 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
   const graph = core.createRegistry(snapshot);
   function article(slug, ids, parameters = {}) {
     const frontmatter = { title: slug, date: '2026-09-30', paper_digest_page_type: 'paper',
-      paper_digest_taxonomy_contract: core.contract,
+      paper_digest_taxonomy_contract: core.legacyContract,
       paper_digest_taxonomy_concepts: ids.map(id => ({ id, facet: graph.byId[id].facet, label: graph.byId[id].zh })),
       ...parameters };
     fs.writeFileSync(path.join(temporary, 'content/posts', slug + '.md'),
@@ -89,7 +89,7 @@ test('Hugo metadata/counts and browser queries share taxonomy and identity bound
   assert.equal(find('bad-conference-first').identityStatus, 'unknown');
   assert.equal(find('2026-09-30').pageType, 'daily');
   assert.equal(find('conference-cvpr-2026').pageType, 'conference');
-  for (const slug of ['legacy', 'first-tag-is-not-primary', 'wrong-facet', 'wrong-label', 'deprecated']) {
+  for (const slug of ['legacy', 'future-contract', 'first-tag-is-not-primary', 'wrong-facet', 'wrong-label', 'deprecated']) {
     assert.equal(find(slug).primaryTaskId, undefined, slug + ' must not inherit a primary concept');
   }
   const activeServer = server.filter(item => core.isActive(graph.byId[item.id]));
@@ -136,7 +136,7 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   fs.writeFileSync(path.join(temporary, 'data/taxonomy-catalog.json'), JSON.stringify(catalog));
   function article(name, sha, label) {
     const front = { title: name, date: '2026-09-30', paper_digest_page_type: 'paper',
-      paper_digest_taxonomy_contract: core.contract, paper_digest_taxonomy_registry_sha256: sha,
+      paper_digest_taxonomy_contract: core.legacyContract, paper_digest_taxonomy_registry_sha256: sha,
       paper_digest_primary_task: label,
       paper_digest_taxonomy_concepts: [{ id: 'task.child', facet: 'task', label }] };
     fs.writeFileSync(path.join(temporary, 'content/posts/' + name + '.md'), '---\n' + JSON.stringify(front) + '\n---\n# Read\n');
@@ -176,6 +176,16 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json'))), records);
   assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
+  // The new protocol changes only its explicit contract in the full search output.
+  const currentProtocolPage = newFamilyPage.replace(core.legacyContract, core.contract);
+  fs.writeFileSync(newPagePath, currentProtocolPage);
+  execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  const currentRecords = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
+  assert.equal(currentRecords.find(record => record.title === 'new').taxonomyContract, core.contract);
+  assert.deepEqual(currentRecords.map(record => record.title === 'new'
+    ? { ...record, taxonomyContract: core.legacyContract } : record), records);
+  assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html'))), server);
   for (const extra of [
     { paper_digest_taxonomy_contract: core.contract },
     { paper_digest_taxonomy_scope: null }

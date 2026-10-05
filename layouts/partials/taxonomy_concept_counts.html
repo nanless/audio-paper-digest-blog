@@ -16,7 +16,7 @@
   {{- $page := . }}
   {{- $metadata := partial "research_metadata.html" . }}
   {{- $proof := partial "taxonomy_page_proof.html" . }}
-  {{- if and (eq $metadata.pageType "paper") (eq $proof.contract "paper-taxonomy-flat-tags-compat-v1") }}
+  {{- if and (eq $metadata.pageType "paper") (partial "tag_flat_contract.html" $proof.contract) }}
   {{- $ids := slice }}
   {{- $ancestorIds := slice }}
   {{- range (partial "taxonomy_navigation_records.html" .) }}

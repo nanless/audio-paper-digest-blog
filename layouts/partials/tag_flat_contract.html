@@ -1,0 +1,2 @@
+{{- /* Only the current format and the explicit legacy format qualify. */ -}}
+{{- return (and (eq (printf "%T" .) "string") (in (slice "paper-tag-flat-tags-v2" "paper-taxonomy-flat-tags-compat-v1") .)) -}}

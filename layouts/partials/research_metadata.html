@@ -72,7 +72,7 @@
     {{- if ne $sourceKind "conference" }}{{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ $identityStatus = "inferred" }}{{ $sourceKind = "arxiv" }}{{ end -}}{{ end -}}
   {{- end -}}
   {{- $proof := partial "taxonomy_page_proof.html" . -}}
-  {{- if eq $proof.contract "paper-taxonomy-flat-tags-compat-v1" -}}
+  {{- if partial "tag_flat_contract.html" $proof.contract -}}
     {{- range (partial "taxonomy_valid_records.html" .) -}}
       {{- if and (eq .facet "task") (eq .zh $proof.primaryTaskLabel) }}{{ $primaryTaskId = .id }}{{ $task = .zh }}{{ end -}}
       {{- if and (eq .facet "method") (eq .zh $proof.primaryMethodLabel) }}{{ $primaryMethodId = .id }}{{ $method = .zh }}{{ end -}}

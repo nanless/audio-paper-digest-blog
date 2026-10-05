@@ -6,7 +6,8 @@
 }(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
-  var CONTRACT = 'paper-taxonomy-flat-tags-compat-v1';
+  var CONTRACT = 'paper-tag-flat-tags-v2';
+  var LEGACY_CONTRACT = 'paper-taxonomy-flat-tags-compat-v1';
   var V2_CONTRACT = 'historical-source-taxonomy-classification-v2';
   var V3_CONTRACT = 'historical-source-taxonomy-classification-v3';
   var QUALIFIED_CONTRACT = 'exact1028-independent-review-qualified-classification-v1';
@@ -147,7 +148,7 @@
       if (record.taxonomyPublicationStatus === 'withheld') {
         result.status = 'withheld'; return result;
       }
-      if (record.taxonomyContract !== CONTRACT || !Array.isArray(record.taxonomyConcepts)) {
+      if (![CONTRACT, LEGACY_CONTRACT].includes(record.taxonomyContract) || !Array.isArray(record.taxonomyConcepts)) {
         result.status = 'legacy'; return result;
       }
       if (!source) return result;
@@ -359,7 +360,7 @@
     return record && record.taxonomyClassificationContract === V3_CONTRACT && record.researchType === 'engineering' && record.primaryResearchRole && record.primaryResearchRole.kind === 'method'
       ? '主要研究机制' : roleLabels[record && record.primaryResearchRole && record.primaryResearchRole.kind] || '主要研究角色';
   }
-  return { contract: CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, qualified1028Contract: QUALIFIED_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
+  return { contract: CONTRACT, legacyContract: LEGACY_CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, qualified1028Contract: QUALIFIED_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
     domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
     createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
     identity: identity, groupPapers: groupPapers, query: query, counts: counts };

@@ -105,6 +105,26 @@ test('multiple readings of one paper never fabricate cross-record AND conditions
 });
 
 test('legacy labels, unknown IDs and mismatched facets/labels cannot masquerade as current classification', () => {
+  assert.equal(core.contract, 'paper-tag-flat-tags-v2');
+  assert.equal(core.legacyContract, 'paper-taxonomy-flat-tags-compat-v1');
+  const current = paper('contract', ['task.asr', 'method.adapter']);
+  const legacy = { ...current, taxonomyContract: core.legacyContract };
+  const originalLegacy = JSON.stringify(legacy);
+  assert.equal(graph.resolveRecord(current).status, 'verified');
+  assert.deepEqual(graph.resolveRecord(current).concepts.map(node => node.id), ['task.asr', 'method.adapter']);
+  assert.deepEqual(graph.resolveRecord(current), graph.resolveRecord(legacy));
+  assert.equal(JSON.stringify(legacy), originalLegacy);
+  for (const contract of [core.contract, core.legacyContract]) {
+    const held = graph.resolveRecord({ ...current, taxonomyContract: contract,
+      taxonomyPublicationStatus: 'withheld' });
+    assert.equal(held.status, 'withheld');
+    assert.deepEqual(held.concepts, []);
+  }
+  for (const contract of ['paper-tag-flat-tags-v3', core.contract + '-other', null]) {
+    const unknown = graph.resolveRecord({ ...current, taxonomyContract: contract });
+    assert.equal(unknown.status, 'legacy');
+    assert.deepEqual(unknown.concepts, []);
+  }
   const records = [paper('5', ['task.asr'], { taxonomyContract: '' }),
     paper('6', ['task.asr'], { taxonomyContract: 'some-future-contract' }),
     paper('7', [], { taxonomyConcepts: [{ id: 'task.asr', facet: 'method', label: '语音识别' }] }),
