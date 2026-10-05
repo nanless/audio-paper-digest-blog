@@ -1,8 +1,9 @@
-{{- /* Source-only classification has its own proof; never pretend it is canonical analysis. */ -}}
+{{- /* 仅依据论文来源的分类有独立证明，不代表已完成整篇分析。 */ -}}
 {{- $record := . -}}
 {{- $shaPattern := `^[a-f0-9]{64}$` -}}
-{{- $contract := "historical-source-taxonomy-classification-v1" -}}
-{{- $valid := and (eq $record.evidenceType "source-only-taxonomy") (eq $record.classificationContract $contract) (reflect.IsMap $record.source) (reflect.IsMap $record.reviewProof) (reflect.IsSlice $record.evidence) -}}
+{{- $contract := $record.classificationContract | default "" -}}
+{{- $knownPair := or (and (eq $contract "historical-source-taxonomy-classification-v1") (eq $record.evidenceType "source-only-taxonomy")) (and (eq $contract "historical-source-tag-classification-v2") (eq $record.evidenceType "source-only-tags")) -}}
+{{- $valid := and $knownPair (reflect.IsMap $record.source) (reflect.IsMap $record.reviewProof) (reflect.IsSlice $record.evidence) -}}
 {{- if $valid -}}
   {{- range $field := slice "classificationRecordSha256" "classificationProofSha256" "requestStageFingerprint" "reviewProofSha256" -}}
     {{- if not (findRE $shaPattern (index $record $field | default "") 1) }}{{ $valid = false }}{{ end -}}

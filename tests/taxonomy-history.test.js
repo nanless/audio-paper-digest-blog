@@ -103,6 +103,117 @@ test('historical supplement is accepted only for exact page, body, source, origi
   for (const name of ['changed', 'bad-label', 'unknown-registry']) {
     assert.doesNotMatch(fs.readFileSync(path.join(temporary, 'public/posts', name + '-2609-12345/index.html'), 'utf8'), /taxonomy-path-parent/);
   }
+  // A separate new collection uses the same real Hugo gates; retained old records stay byte-identical.
+  const originalHistoryBytes = fs.readFileSync(path.join(temporary, 'data/taxonomy-history.json'));
+  const originalPageBytes = fs.readFileSync(path.join(temporary, 'content/posts/valid-2609-12345.md'));
+  const tagRecords = {};
+  const newKey = 'content/posts/new-tags-2609-12345.md';
+  const originalKey = 'content/posts/valid-2609-12345.md';
+  const originalRaw = originalPageBytes.toString('utf8');
+  const newRaw = originalRaw.replace('"title":"valid"', '"title":"new-tags"');
+  fs.writeFileSync(path.join(temporary, newKey), newRaw);
+  const newRecord = structuredClone(records[originalKey]);
+  newRecord.pageKey = 'page:' + hash(newKey); newRecord.pageSha256 = hash(newRaw);
+  delete newRecord.proofSha256; newRecord.proofSha256 = hash(JSON.stringify(canonical(newRecord)));
+  tagRecords[newKey] = newRecord;
+  // Cross-path duplicates are idempotent only when the complete original record agrees.
+  tagRecords[originalKey] = structuredClone(records[originalKey]);
+  const writeTags = (contract = 'historical-direct-tag-supplement-v2') => fs.writeFileSync(
+    path.join(temporary, 'data/tag-history.json'), JSON.stringify({ contract, records: tagRecords }));
+  const buildTags = () => execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  // Independent synthetic source-only record exercises the actual source/review/quote reader.
+  // This fixture demonstrates the public gates, not a real model or acquisition run.
+  const sourceKey = 'content/posts/new-source-2609-12345.md';
+  const sourceRaw = originalRaw.replace('"title":"valid"', '"title":"new-source"');
+  fs.writeFileSync(path.join(temporary, sourceKey), sourceRaw);
+  const sourceRecord = structuredClone(records[originalKey]);
+  sourceRecord.pageKey = 'page:' + hash(sourceKey); sourceRecord.pageSha256 = hash(sourceRaw);
+  sourceRecord.evidenceType = 'source-only-tags';
+  sourceRecord.classificationContract = 'historical-source-tag-classification-v2';
+  sourceRecord.source.sourceId = '2609.12345'; sourceRecord.source.sourceBinding.arxivId = '2609.12345';
+  const quote = 'This synthetic paper explicitly describes the task, method, and dataset used in this test.';
+  sourceRecord.evidence = sourceRecord.concepts.map((concept, i) => ({ ...concept, quote,
+    quoteStart: i * 100, quoteSha256: hash(quote), rationale: 'The quoted passage supports this synthetic concept.' }));
+  sourceRecord.evidenceSelectionContract = 'sealed-source-evidence-snippets-v1';
+  sourceRecord.quoteSelections = sourceRecord.evidence.map((e, i) => ({ id: 's' + String(i + 1).padStart(5, '0'),
+    evidenceId: 's' + String(i + 1).padStart(5, '0'), conceptId: e.id, quote: e.quote,
+    quoteSha256: e.quoteSha256, quoteStart: e.quoteStart, quoteEnd: e.quoteStart + e.quote.length,
+    offsetUnit: 'utf16-code-unit' }));
+  const decision = { concepts: sourceRecord.evidence, primaryTaskId: sourceRecord.primaryTaskId,
+    primaryTaskLabel: sourceRecord.primaryTaskLabel, primaryMethodId: sourceRecord.primaryMethodId,
+    primaryMethodLabel: sourceRecord.primaryMethodLabel };
+  sourceRecord.reviewProof = { contract: sourceRecord.classificationContract + '-review',
+    registrySha256: sourceRecord.registrySha256, sourceTextSha256: sourceRecord.source.textSha256,
+    response: { accepted: true, issues: [] }, model: 'synthetic-test-model',
+    decisionSha256: hash(JSON.stringify(canonical(decision))), evidenceSha256: hash('synthetic evidence'),
+    promptSha256: hash('synthetic prompt'), responseSha256: hash('synthetic response') };
+  sourceRecord.reviewProofSha256 = hash(JSON.stringify(canonical(sourceRecord.reviewProof)));
+  sourceRecord.classificationRecordSha256 = hash('synthetic classification record');
+  sourceRecord.classificationProofSha256 = hash('synthetic classification proof');
+  sourceRecord.requestStageFingerprint = hash('synthetic request');
+  const sealSourceRecord = record => {
+    record.reviewProofSha256 = hash(JSON.stringify(canonical(record.reviewProof)));
+    delete record.proofSha256; record.proofSha256 = hash(JSON.stringify(canonical(record)));
+  };
+  sealSourceRecord(sourceRecord); tagRecords[sourceKey] = sourceRecord;
+  const originalSourceRecord = JSON.stringify(sourceRecord);
+  writeTags(); buildTags();
+  const currentIndex = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json')));
+  assert.equal(currentIndex.find(r => r.title === 'new-tags').taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
+  assert.equal(currentIndex.find(r => r.title === 'valid').taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
+  const sourceResult = currentIndex.find(r => r.title === 'new-source');
+  // This simple source classification does not gain the independent role-schema fields.
+  assert.equal(Object.hasOwn(sourceResult, 'taxonomyClassificationContract'), false);
+  assert.equal(sourceResult.taxonomyEvidenceContract, 'historical-direct-tag-supplement-v2');
+  assert.equal(sourceResult.primaryTaskId, sourceRecord.primaryTaskId);
+  assert.equal(sourceResult.primaryMethodId, sourceRecord.primaryMethodId);
+  assert.equal(sourceResult.taxonomyEvidenceType, 'source-only-tags');
+  assert.equal(JSON.stringify(sourceRecord), originalSourceRecord);
+  assert.match(fs.readFileSync(path.join(temporary, 'public/posts/new-source-2609-12345/index.html'), 'utf8'), /只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核/);
+  for (const [name, mutate] of [
+    ['wrong review generation', r => { r.reviewProof.contract = 'historical-source-taxonomy-classification-v1-review'; }],
+    ['mixed evidence generation', r => { r.evidenceType = 'source-only-taxonomy'; }],
+    ['unknown classification', r => { r.classificationContract = 'unknown'; }],
+    ['rejected review', r => { r.reviewProof.response.accepted = false; }],
+  ]) {
+    const bad = structuredClone(sourceRecord); mutate(bad); sealSourceRecord(bad);
+    tagRecords[sourceKey] = bad; writeTags();
+    assert.throws(buildTags, /新版标签补充记录未通过核验/, name);
+  }
+  tagRecords[sourceKey] = sourceRecord; writeTags();
+  // The old outer format cannot authorize an otherwise internally consistent new classification.
+  delete tagRecords[sourceKey]; writeTags();
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), JSON.stringify({
+    contract: 'historical-direct-taxonomy-supplement-v1', records: { ...records, [sourceKey]: sourceRecord }
+  }));
+  assert.throws(buildTags, /旧版历史标签补充集合不能包含新版来源分类记录/);
+  // An identical new record in both collections must not hide the wrong old outer format.
+  tagRecords[sourceKey] = sourceRecord; writeTags();
+  assert.throws(buildTags, /旧版历史标签补充集合不能包含新版来源分类记录/);
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), originalHistoryBytes);
+  tagRecords[sourceKey] = sourceRecord; writeTags();
+  assert.deepEqual(fs.readFileSync(path.join(temporary, 'data/taxonomy-history.json')), originalHistoryBytes);
+  assert.deepEqual(fs.readFileSync(path.join(temporary, originalKey)), originalPageBytes);
+  const goodDuplicate = structuredClone(tagRecords[originalKey]);
+  tagRecords[originalKey].primaryTaskLabel = 'conflicting';
+  writeTags(); assert.throws(buildTags, /冲突的标签补充记录/);
+  tagRecords[originalKey] = structuredClone(goodDuplicate);
+  tagRecords[newKey].proofSha256 = '0'.repeat(64);
+  writeTags(); assert.throws(buildTags, /新版标签补充记录未通过核验/);
+  tagRecords[newKey] = newRecord;
+  // newRecord was referenced above; restore its original proof after the tamper.
+  delete newRecord.proofSha256; newRecord.proofSha256 = hash(JSON.stringify(canonical(newRecord)));
+  writeTags('historical-direct-taxonomy-supplement-v1');
+  assert.throws(buildTags, /tag-history 中的历史标签补充集合格式无效/);
+  writeTags('unknown'); assert.throws(buildTags, /格式无效/);
+  fs.unlinkSync(path.join(temporary, 'data/tag-history.json'));
+  // An explicitly wrong contract on the old path must not be treated as a new collection.
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), JSON.stringify({ contract: 'historical-direct-tag-supplement-v2', records }));
+  assert.throws(buildTags, /taxonomy-history 中的历史标签补充集合格式无效/);
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), originalHistoryBytes);
+  fs.unlinkSync(path.join(temporary, newKey));
+  fs.unlinkSync(path.join(temporary, sourceKey));
+
   // Even an exact, otherwise valid historical supplement cannot authorize a mixed family.
   const validKey = 'content/posts/valid-2609-12345.md';
   const originalValid = fs.readFileSync(path.join(temporary, validKey), 'utf8');

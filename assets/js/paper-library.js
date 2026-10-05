@@ -379,7 +379,7 @@
         entry.methodNotApplicable === true ? '研究方法不适用' : ''].filter(Boolean).join(' · ');
       body.appendChild(roles);
     }
-    if (['historical-direct-taxonomy-supplement-v1', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.taxonomyEvidenceContract)) {
+    if (['historical-direct-taxonomy-supplement-v1', 'historical-direct-tag-supplement-v2', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.taxonomyEvidenceContract)) {
       var classificationNote = document.createElement('p'); classificationNote.className = 'taxonomy-note';
       classificationNote.textContent = '研究分类已补充核验 · 导读正文未重写'; body.appendChild(classificationNote);
     } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.taxonomyContract) {

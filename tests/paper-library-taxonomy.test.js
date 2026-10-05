@@ -73,6 +73,23 @@ test('historical supplement provenance survives library normalization without gr
   assert.match(signed.searchText, /参数高效微调/);
 });
 
+test('current tag supplement keeps its proof and classification identity through browser normalization', () => {
+  const input = { ...record(1, [{ id: 'method.lora', facet: 'method', label: 'LoRA' }]),
+    taxonomyRegistrySha256: registry.registrySha256,
+    taxonomyEvidenceContract: 'historical-direct-tag-supplement-v2',
+    taxonomyEvidenceType: 'source-only-tags',
+    taxonomyClassificationContract: 'historical-source-tag-classification-v2',
+    taxonomyProofSha256: 'b'.repeat(64), taxonomyPageSha256: 'c'.repeat(64) };
+  const before = JSON.stringify(input);
+  const entry = normalizeEntry(input, origin, siteBasePath, registry);
+  assert.equal(entry.taxonomyEvidenceContract, input.taxonomyEvidenceContract);
+  assert.equal(entry.taxonomyEvidenceType, input.taxonomyEvidenceType);
+  assert.equal(entry.taxonomyClassificationContract, input.taxonomyClassificationContract);
+  assert.equal(entry.taxonomyProofSha256, input.taxonomyProofSha256);
+  assert.equal(entry.taxonomyPageSha256, input.taxonomyPageSha256);
+  assert.equal(JSON.stringify(input), before);
+});
+
 test('论文库搜索能沿祖先链用父概念召回子概念论文', () => {
   const entry = normalizeEntry(record(1, [
     { id: 'method.lora', facet: 'method', label: 'LoRA', ancestorIds: ['method.peft'] },

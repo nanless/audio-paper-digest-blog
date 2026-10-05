@@ -2,7 +2,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const CONTRACT = 'historical-direct-taxonomy-supplement-v1';
+const CONTRACT = 'historical-direct-tag-supplement-v2';
+const LEGACY_CONTRACT = 'historical-direct-taxonomy-supplement-v1';
 const shaPattern = /^[a-f0-9]{64}$/;
 function canonical(value) {
   return Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object'
@@ -26,10 +27,13 @@ function mergeSupplements(documents) {
   if (!Array.isArray(documents) || !documents.length) throw new Error('必须提供至少一个历史证明集合');
   const records = Object.create(null);
   for (const document of documents) {
-    if (!document || document.contract !== CONTRACT || !document.records
-      || typeof document.records !== 'object' || Array.isArray(document.records)) throw new Error('历史证明集合契约不受支持');
+    if (!document || ![CONTRACT, LEGACY_CONTRACT].includes(document.contract) || !document.records
+      || typeof document.records !== 'object' || Array.isArray(document.records)) throw new Error('历史标签补充集合的格式不受支持。');
     for (const [key, record] of Object.entries(document.records)) {
       validateRecord(key, record);
+      if (document.contract === LEGACY_CONTRACT && record.evidenceType === 'source-only-tags') {
+        throw new Error('旧版历史标签补充集合不能包含新版来源分类记录：' + key);
+      }
       if (Object.hasOwn(records, key) && stableHash(records[key]) !== stableHash(record)) {
         throw new Error('同一历史页面有冲突证明：' + key);
       }
@@ -43,7 +47,7 @@ function mergeSupplementFiles(files) {
 }
 if (require.main === module) {
   const args = process.argv.slice(2);
-  if (args[0] !== '--output' || args.length < 3) throw new Error('用法：merge-taxonomy-supplements.js --output FILE INPUT...');
+  if (args[0] !== '--output' || args.length < 3) throw new Error('用法：merge-taxonomy-supplements.js --output 输出文件 输入文件...');
   const output = path.resolve(args[1]);
   const merged = mergeSupplementFiles(args.slice(2));
   const temporary = output + '.tmp-' + crypto.randomUUID();
@@ -55,4 +59,4 @@ if (require.main === module) {
   process.stdout.write(JSON.stringify({ records: Object.keys(merged.records).length,
     uniquePapers: new Set(Object.values(merged.records).map(record => record.paperId)).size }) + '\n');
 }
-module.exports = { CONTRACT, canonical, stableHash, mergeSupplements, mergeSupplementFiles };
+module.exports = { CONTRACT, LEGACY_CONTRACT, canonical, stableHash, mergeSupplements, mergeSupplementFiles };

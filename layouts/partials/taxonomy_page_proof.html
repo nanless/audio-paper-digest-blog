@@ -7,14 +7,30 @@
 {{- if and $hasNew $hasOld }}{{ errorf "page %s mixes paper_digest_tags_* and paper_digest_taxonomy_* fields" .RelPermalink }}{{ end -}}
 {{- $prefix := "paper_digest_taxonomy_" -}}
 {{- if $hasNew }}{{ $prefix = "paper_digest_tags_" }}{{ end -}}
-{{- /* Supplement only exact frozen legacy page bytes, never infer from old tags. */ -}}
+{{- /* 只为字节与记录完全对应的历史页面补充标签，不根据旧标签推断分类。 */ -}}
 {{- $memoKey := "research-page:taxonomy_page_proof:v1" -}}
 {{- $proof := .Store.Get $memoKey -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $proof = dict "contract" (index .Params (printf "%scontract" $prefix) | default "") "registrySha256" (index .Params (printf "%sregistry_sha256" $prefix) | default "") "concepts" (index .Params (printf "%sconcepts" $prefix) | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
-{{- $history := index hugo.Data "taxonomy-history" | default dict -}}
-{{- if and (not $proof.contract) (eq $history.contract "historical-direct-taxonomy-supplement-v1") (eq .Section "posts") .File -}}
+{{- $legacyHistory := index hugo.Data "taxonomy-history" | default dict -}}
+{{- $tagHistory := index hugo.Data "tag-history" | default dict -}}
+{{- if isset hugo.Data "taxonomy-history" -}}
+  {{- if not (and (reflect.IsMap $legacyHistory) (eq $legacyHistory.contract "historical-direct-taxonomy-supplement-v1") (reflect.IsMap $legacyHistory.records)) }}{{ errorf "taxonomy-history 中的历史标签补充集合格式无效。" }}{{ end -}}
+{{- end -}}
+{{- if isset hugo.Data "tag-history" -}}
+  {{- if not (and (reflect.IsMap $tagHistory) (eq $tagHistory.contract "historical-direct-tag-supplement-v2") (reflect.IsMap $tagHistory.records)) }}{{ errorf "tag-history 中的历史标签补充集合格式无效。" }}{{ end -}}
+{{- end -}}
+{{- $history := $legacyHistory -}}
+{{- if and (not $proof.contract) (eq .Section "posts") .File -}}
   {{- $key := printf "content/%s" .File.Path -}}
+  {{- $hasCurrentRecord := isset ($tagHistory.records | default dict) $key -}}
+  {{- $hasLegacyRecord := isset ($legacyHistory.records | default dict) $key -}}
+  {{- if and $hasCurrentRecord $hasLegacyRecord -}}
+    {{- $currentRecord := index $tagHistory.records $key -}}
+    {{- $legacyRecord := index $legacyHistory.records $key -}}
+    {{- if ne ($currentRecord | partial "research_canonical_json.html") ($legacyRecord | partial "research_canonical_json.html") }}{{ errorf "同一历史页面有冲突的标签补充记录：%s" $key }}{{ end -}}
+  {{- end -}}
+  {{- if $hasCurrentRecord }}{{ $history = $tagHistory }}{{ end -}}
   {{- $record := index ($history.records | default dict) $key | default dict -}}
   {{- $shaPattern := `^[a-f0-9]{64}$` -}}
   {{- $valid := and (reflect.IsMap $record) (findRE `^page:[a-f0-9]{64}$` ($record.pageKey | default "") 1) (findRE $shaPattern ($record.pageSha256 | default "") 1) (findRE $shaPattern ($record.bodySha256 | default "") 1) (findRE $shaPattern ($record.proofSha256 | default "") 1) (findRE $shaPattern ($record.registrySha256 | default "") 1) (findRE `^(arxiv:[0-9]{4}\.[0-9]{4,5}|conference:[^\s\x00-\x1f\x7f]+)$` ($record.paperId | default "") 1) -}}
@@ -29,7 +45,8 @@
   {{- if $valid -}}
     {{- $valid = and (eq (crypto.SHA256 (readFile $key)) $record.pageSha256) (eq (crypto.SHA256 .RawContent) $record.bodySha256) (reflect.IsMap $record.source) -}}
   {{- end -}}
-  {{- if and $valid (eq $record.evidenceType "source-only-taxonomy") -}}
+  {{- if and $valid $hasLegacyRecord (eq ((index $legacyHistory.records $key).evidenceType | default "") "source-only-tags") }}{{ errorf "旧版历史标签补充集合不能包含新版来源分类记录：%s" $key }}{{ end -}}
+  {{- if and $valid (in (slice "source-only-taxonomy" "source-only-tags") $record.evidenceType) -}}
     {{- $valid = partial "taxonomy_source_only_proof.html" $record -}}
   {{- else if $valid -}}
     {{- $valid = and (not $record.evidenceType) (reflect.IsMap $record.stageProof) (reflect.IsMap $record.source.sourceBinding) -}}
@@ -70,8 +87,9 @@
     {{- end -}}
     {{- if and $valid $taskOk $methodOk -}}
       {{- $proof = merge $record (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $history.contract) -}}
-    {{- end -}}
+    {{- else }}{{ $valid = false }}{{ end -}}
   {{- end -}}
+  {{- if and $hasCurrentRecord (not $valid) }}{{ errorf "历史页面的新版标签补充记录未通过核验：%s" $key }}{{ end -}}
 {{- end -}}
 {{- /* A separately issued v2 supplement changes display/index roles only. Its
      exact current page bytes and source identity must close independently. */ -}}
