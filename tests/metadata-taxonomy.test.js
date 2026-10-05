@@ -167,6 +167,26 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
   assert.equal(paths.navigation[0].zh, '新子名');
   assert.equal(paths.navigation[0].issuedLabel, '旧子名');
   assert.deepEqual(paths.navigation[0].ancestorIds, ['task.right']);
+  const newPageHTML = fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8');
+  // The same page bytes apart from the field names retain their issued proof.
+  const newPagePath = path.join(temporary, 'content/posts/new.md');
+  const originalNewPage = fs.readFileSync(newPagePath, 'utf8');
+  const newFamilyPage = originalNewPage.replaceAll('paper_digest_taxonomy_', 'paper_digest_tags_');
+  fs.writeFileSync(newPagePath, newFamilyPage);
+  execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json'))), records);
+  assert.equal(fs.readFileSync(path.join(temporary, 'public/posts/new/index.html'), 'utf8'), newPageHTML);
+  for (const extra of [
+    { paper_digest_taxonomy_contract: core.contract },
+    { paper_digest_taxonomy_scope: null }
+  ]) {
+    const front = JSON.parse(newFamilyPage.split('---\n')[1]);
+    Object.assign(front, extra);
+    fs.writeFileSync(newPagePath, '---\n' + JSON.stringify(front) + '\n---\n# Read\n');
+    assert.throws(() => execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'],
+      { stdio: 'pipe' }), /mixes paper_digest_tags_/);
+  }
+  fs.writeFileSync(newPagePath, newFamilyPage);
   const groups = core.groupPapers(records, graph);
   assert.equal(core.query(groups, { facets: { task: ['task.left'] } }, graph).length, 0);
   assert.equal(core.query(groups, { facets: { task: ['task.right'] } }, graph).length, 2);

@@ -38,7 +38,7 @@
 </section>
 {{- else if eq ((partial "taxonomy_page_proof.html" .).publicationStatus | default "") "withheld" }}
 <p class="taxonomy-note taxonomy-publication-withheld">研究分类暂缓展示，待独立复核；导读正文与原文入口保留。</p>
-{{- else if .Params.paper_digest_taxonomy_contract }}
+{{- else if or .Params.paper_digest_tags_contract .Params.paper_digest_taxonomy_contract }}
 <p class="taxonomy-note">研究分类信息暂未核验。</p>
 {{- else }}
 {{- $identity := partial "research_source_identity_proof.html" . }}

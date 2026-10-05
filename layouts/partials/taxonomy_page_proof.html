@@ -1,8 +1,17 @@
+{{- $hasNew := false -}}
+{{- $hasOld := false -}}
+{{- range $suffix := slice "contract" "selection_contract" "registry_version" "registry_sha256" "concepts" "scope" -}}
+  {{- if isset $.Params (printf "paper_digest_tags_%s" $suffix) }}{{ $hasNew = true }}{{ end -}}
+  {{- if isset $.Params (printf "paper_digest_taxonomy_%s" $suffix) }}{{ $hasOld = true }}{{ end -}}
+{{- end -}}
+{{- if and $hasNew $hasOld }}{{ errorf "page %s mixes paper_digest_tags_* and paper_digest_taxonomy_* fields" .RelPermalink }}{{ end -}}
+{{- $prefix := "paper_digest_taxonomy_" -}}
+{{- if $hasNew }}{{ $prefix = "paper_digest_tags_" }}{{ end -}}
 {{- /* Supplement only exact frozen legacy page bytes, never infer from old tags. */ -}}
 {{- $memoKey := "research-page:taxonomy_page_proof:v1" -}}
 {{- $proof := .Store.Get $memoKey -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
-{{- $proof = dict "contract" (.Params.paper_digest_taxonomy_contract | default "") "registrySha256" (.Params.paper_digest_taxonomy_registry_sha256 | default "") "concepts" (.Params.paper_digest_taxonomy_concepts | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
+{{- $proof = dict "contract" (index .Params (printf "%scontract" $prefix) | default "") "registrySha256" (index .Params (printf "%sregistry_sha256" $prefix) | default "") "concepts" (index .Params (printf "%sconcepts" $prefix) | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
 {{- $history := index hugo.Data "taxonomy-history" | default dict -}}
 {{- if and (not $proof.contract) (eq $history.contract "historical-direct-taxonomy-supplement-v1") (eq .Section "posts") .File -}}
   {{- $key := printf "content/%s" .File.Path -}}

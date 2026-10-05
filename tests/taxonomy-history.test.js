@@ -103,4 +103,21 @@ test('historical supplement is accepted only for exact page, body, source, origi
   for (const name of ['changed', 'bad-label', 'unknown-registry']) {
     assert.doesNotMatch(fs.readFileSync(path.join(temporary, 'public/posts', name + '-2609-12345/index.html'), 'utf8'), /taxonomy-path-parent/);
   }
+  // Even an exact, otherwise valid historical supplement cannot authorize a mixed family.
+  const validKey = 'content/posts/valid-2609-12345.md';
+  const originalValid = fs.readFileSync(path.join(temporary, validKey), 'utf8');
+  const mixedFront = JSON.parse(originalValid.split('---\n')[1]);
+  mixedFront.paper_digest_tags_scope = null;
+  mixedFront.paper_digest_taxonomy_scope = null;
+  const mixedRaw = '---\n' + JSON.stringify(mixedFront) + '\n---\n' + originalValid.split('---\n')[2];
+  fs.writeFileSync(path.join(temporary, validKey), mixedRaw);
+  const mixedRecord = { ...records[validKey], pageSha256: hash(mixedRaw) };
+  delete mixedRecord.proofSha256;
+  mixedRecord.proofSha256 = hash(JSON.stringify(canonical(mixedRecord)));
+  fs.writeFileSync(path.join(temporary, 'data/taxonomy-history.json'), JSON.stringify({
+    contract: 'historical-direct-taxonomy-supplement-v1', records: { ...records, [validKey]: mixedRecord }
+  }));
+  assert.throws(() => execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'],
+    { stdio: 'pipe' }), /mixes paper_digest_tags_/);
+
 });
