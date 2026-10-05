@@ -1,5 +1,4 @@
-{{- /* Keep the exact tag URL cohort. Classifications come from the accepted
-     page proof, including historical supplements, never a frontmatter flag. */ -}}
+{{- /* 保留当前标签网址收录的页面；分类取已核验页面记录，包括历史补充记录。 */ -}}
 {{- $page := .page -}}
 {{- $term := .termName -}}
 {{- $groups := newScratch }}{{ $groups.Set "papers" dict -}}
@@ -20,10 +19,9 @@
 {{- end -}}
 {{- $classified := 0 -}}
 {{- range ($groups.Get "papers") }}{{ if .classified }}{{ $classified = add $classified 1 }}{{ end }}{{ end -}}
-{{- /* Exact current preferred labels only. Ambiguous or obsolete labels stay
-     usable as precise text archives and are never guessed into a direction. */ -}}
+{{- /* 只匹配当前中文首选标签；含义不明或已停用的标签仍按原名称收录，不猜测研究方向。 */ -}}
 {{- $matches := slice -}}
-{{- range ((index hugo.Data "taxonomy-registry").concepts | default slice) -}}
+{{- range ((partialCached "tag_display_assets.html" "global").snapshot.concepts | default slice) -}}
   {{- if and (eq .zh $term) (eq (.status | default "active") "active") }}{{ $matches = $matches | append . }}{{ end -}}
 {{- end -}}
 {{- $concept := dict }}{{ $directionStats := dict -}}
@@ -33,12 +31,11 @@
     {{- if eq .id $concept.id }}{{ $directionStats = . }}{{ end -}}
   {{- end -}}
 {{- end -}}
-{{- /* This is member -> accepted concept association, not label -> concept
-     inference. One identity contributes at most once to each direct concept. */ -}}
+{{- /* 方向取论文已核验的分类；同一篇论文对每个直接分类最多计数一次。 */ -}}
 {{- $counts := newScratch -}}
 {{- range ($groups.Get "papers") }}{{ range .ids }}{{ $counts.Add . 1 }}{{ end }}{{ end -}}
 {{- $associated := slice -}}
-{{- range ((index hugo.Data "taxonomy-registry").concepts | default slice) -}}
+{{- range ((partialCached "tag_display_assets.html" "global").snapshot.concepts | default slice) -}}
   {{- $count := $counts.Get .id | default 0 -}}
   {{- if gt $count 0 }}{{ $associated = $associated | append (dict "concept" . "count" $count "sortKey" (printf "%08d:%s" (sub 100000 $count) .id)) }}{{ end -}}
 {{- end -}}

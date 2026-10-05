@@ -207,4 +207,60 @@ test('Hugo preserves issued labels and ancestors while parent navigation counts 
     assert.deepEqual(invalid.issued, []);
     assert.deepEqual(invalid.navigation, []);
   }
+
+  // 合成的新显示文件走真实 Hugo 读取器；原词表文件、页面与来源 SHA 保持原样。
+  const oldSnapshotPath = path.join(temporary, 'data/taxonomy-registry.json');
+  const oldVersionsPath = path.join(temporary, 'data/taxonomy-catalog.json');
+  const originalSnapshotBytes = fs.readFileSync(oldSnapshotPath);
+  const originalVersionsBytes = fs.readFileSync(oldVersionsPath);
+  const display = { ...current, contract: 'paper-tag-catalog-snapshot-v2' };
+  const versions = { ...catalog, contract: 'paper-tag-catalog-versions-v2' };
+  const displayPath = path.join(temporary, 'data/tag-catalog-snapshot.json');
+  const versionsPath = path.join(temporary, 'data/tag-catalog-versions.json');
+  function writeDisplayFiles(snapshot = display, savedVersions = versions) {
+    fs.writeFileSync(displayPath, JSON.stringify(snapshot));
+    fs.writeFileSync(versionsPath, JSON.stringify(savedVersions));
+  }
+  const buildDisplay = () => execFileSync('hugo', ['--source', temporary, '--noBuildLock', '--panicOnWarning'], { stdio: 'pipe' });
+  fs.writeFileSync(path.join(temporary, 'layouts/index.html'),
+    '{{ dict "assets" (partial "tag_display_assets.html" .) "savedCurrent" (partial "tag_saved_snapshot.html" "' + current.registrySha256 + '") "counts" (partial "taxonomy_concept_counts.html" .) | jsonify }}');
+  fs.writeFileSync(path.join(temporary, 'layouts/_default/single.html'),
+    '{{ dict "saved" (partial "taxonomy_snapshot.html" .) "issued" (partial "taxonomy_valid_records.html" .) "navigation" (partial "taxonomy_navigation_records.html" .) | jsonify }}');
+  writeDisplayFiles();
+  buildDisplay();
+  const displayed = JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.html')));
+  assert.equal(displayed.assets.current, true);
+  assert.deepEqual(displayed.assets.snapshot, display);
+  assert.deepEqual(displayed.assets.versions, versions);
+  assert.deepEqual(displayed.savedCurrent, current, '同源显示副本不能替代原完整快照');
+  assert.deepEqual(displayed.counts, server);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temporary, 'public/index.json'))), records);
+  const savedPaths = JSON.parse(fs.readFileSync(path.join(temporary, 'public/posts/old/index.html')));
+  assert.deepEqual(savedPaths.saved, old);
+  assert.equal(savedPaths.saved.contract, 'paper-taxonomy-registry-snapshot-v1');
+  assert.equal(savedPaths.saved.registrySha256, oldRecord.tagCatalogSha256);
+  assert.deepEqual(savedPaths.issued, paths.issued);
+  assert.deepEqual(savedPaths.navigation, paths.navigation);
+  for (const [name, change, expected] of [
+    ['缺显示文件', () => fs.unlinkSync(displayPath), /新版标签显示文件缺失/],
+    ['缺版本目录', () => fs.unlinkSync(versionsPath), /新版标签显示文件缺失/],
+    ['未知显示格式', () => writeDisplayFiles({ ...display, contract: 'unknown' }), /新版标签显示文件缺失/],
+    ['未知目录格式', () => writeDisplayFiles(display, { ...versions, contract: 'unknown' }), /新版标签显示文件缺失/],
+    ['完整显示内容不等', () => writeDisplayFiles({ ...display, extra: '原快照没有的字段' }), /当前显示词表与对应原快照的完整内容不一致/],
+    ['同源原对象不等', () => writeDisplayFiles(display, { ...versions, snapshots: [
+      { ...old, extra: '不能替换原对象' }, current
+    ] }), /新旧标签版本目录为同一来源保存了不同的完整快照/],
+    ['同源仅格式不同也不能替代原对象', () => writeDisplayFiles(display, { ...versions, snapshots: [
+      { ...old, contract: 'paper-tag-catalog-snapshot-v2' }, current
+    ] }), /新旧标签版本目录为同一来源保存了不同的完整快照/]
+  ]) {
+    writeDisplayFiles();
+    change();
+    assert.throws(buildDisplay, expected, name);
+  }
+  writeDisplayFiles();
+  buildDisplay();
+  assert.deepEqual(fs.readFileSync(oldSnapshotPath), originalSnapshotBytes);
+  assert.deepEqual(fs.readFileSync(oldVersionsPath), originalVersionsBytes);
+
 });

@@ -8,7 +8,7 @@
 {{- $prefix := "paper_digest_taxonomy_" -}}
 {{- if $hasNew }}{{ $prefix = "paper_digest_tags_" }}{{ end -}}
 {{- /* 只为字节与记录完全对应的历史页面补充标签，不根据旧标签推断分类。 */ -}}
-{{- $memoKey := "research-page:taxonomy_page_proof:v1" -}}
+{{- $memoKey := "research-page:tag_page_proof:v2" -}}
 {{- $proof := .Store.Get $memoKey -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $proof = dict "contract" (index .Params (printf "%scontract" $prefix) | default "") "registrySha256" (index .Params (printf "%sregistry_sha256" $prefix) | default "") "concepts" (index .Params (printf "%sconcepts" $prefix) | default slice) "primaryTaskLabel" (.Params.paper_digest_primary_task | default "") "primaryMethodLabel" (.Params.paper_digest_primary_method | default "") -}}
@@ -65,12 +65,7 @@
   {{- end -}}
   {{- if $valid }}{{ $version := partial "research_historical_source_version.html" $record.source }}{{ $valid = $version.valid }}{{ end -}}
   {{- if $valid -}}
-    {{- $source := dict -}}
-    {{- $current := index hugo.Data "taxonomy-registry" | default dict -}}
-    {{- if eq $record.registrySha256 $current.registrySha256 }}{{ $source = $current }}{{ end -}}
-    {{- range ((index hugo.Data "taxonomy-catalog").snapshots | default slice) -}}
-      {{- if eq .registrySha256 $record.registrySha256 }}{{ $source = . }}{{ end -}}
-    {{- end -}}
+    {{- $source := partial "tag_saved_snapshot.html" $record.registrySha256 -}}
     {{- $sourceNodes := partialCached "taxonomy_registry_index.html" $source ($source.registrySha256 | default "unavailable") -}}
     {{- $currentNodes := partialCached "taxonomy_registry_index.html" "global" "global" -}}
     {{- $valid = and $source.registrySha256 (eq $source.registryVersion $record.registryVersion) (ge (len ($record.concepts | default slice)) 3) (le (len ($record.concepts | default slice)) 5) -}}

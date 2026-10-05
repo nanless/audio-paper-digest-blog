@@ -1,4 +1,4 @@
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict -}}
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot -}}
 {{- if reflect.IsMap . }}{{ $registry = . }}{{ end -}}
 {{- $lookup := newScratch -}}
 {{- $lookup.Set "nodes" dict -}}

@@ -1,4 +1,4 @@
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
 {{- $concepts := index $registry "concepts" | default slice }}
 {{- $selected := partial "taxonomy_navigation_records.html" . }}
 {{- if $selected }}
@@ -32,7 +32,7 @@
       <div class="paper-taxonomy-group"><strong>{{ .name }}</strong>{{ range $rows }}{{ partial "taxonomy_path.html" (dict "concept" . "concepts" $concepts) }}{{ end }}</div>
     {{- end }}{{ end }}
   </details>{{ end }}
-  <p class="taxonomy-note">路径末项为直接分类，前面的名称表示现行目录中的上级方向；历史分类证据保持原签发版本。</p>
+  <p class="taxonomy-note">路径末项为直接分类，前面的名称表示现行目录中的上级方向；核验历史分类时，仍使用当时保存的词表。</p>
   {{- if in (slice "source-only-taxonomy" "source-only-tags" "source-only-taxonomy-v2" "controlled-current-page-source-taxonomy-v2" "source-only-taxonomy-v3" "source-bound-current-page-fullsite-taxonomy-v3" "source-bound-independent-review-qualification") $proof.evidenceType }}<p class="taxonomy-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
   {{- else if $proof.evidenceContract }}<p class="taxonomy-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
 </section>
@@ -49,8 +49,8 @@
 {{- end }}
 {{- $metadata := partial "research_metadata.html" . }}
 {{- $visibleSource := $metadata.classificationProvenance | default $metadata.classificationSource | default $metadata.sealedSource | default dict }}
-{{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
-{{- if and (not $visibleSource) $taxonomyProof.evidenceContract }}{{ $visibleSource = $taxonomyProof.source | default dict }}{{ end }}
+{{- $tagProof := partial "taxonomy_page_proof.html" . }}
+{{- if and (not $visibleSource) $tagProof.evidenceContract }}{{ $visibleSource = $tagProof.source | default dict }}{{ end }}
 {{- with $visibleSource.provenanceDisclosure }}<p class="taxonomy-note">{{ partial "render_https_text.html" . }}</p>{{ end }}
 {{- $versionWarning := $visibleSource.sourceVersionWarning | default "" }}
 {{- $historicalVersion := partial "research_historical_source_version.html" $visibleSource }}

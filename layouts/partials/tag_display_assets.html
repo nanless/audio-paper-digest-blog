@@ -1,0 +1,28 @@
+{{- /* 新显示文件必须成对读取；没有新文件时保留旧页面的读取方式。 */ -}}
+{{- $hasSnapshot := isset hugo.Data "tag-catalog-snapshot" -}}
+{{- $hasVersions := isset hugo.Data "tag-catalog-versions" -}}
+{{- $snapshot := index hugo.Data "taxonomy-registry" | default dict -}}
+{{- $versions := index hugo.Data "taxonomy-catalog" | default dict -}}
+{{- if or $hasSnapshot $hasVersions -}}
+  {{- $snapshot = index hugo.Data "tag-catalog-snapshot" | default dict -}}
+  {{- $versions = index hugo.Data "tag-catalog-versions" | default dict -}}
+  {{- if not (and $hasSnapshot $hasVersions (reflect.IsMap $snapshot) (reflect.IsMap $versions) (eq $snapshot.contract "paper-tag-catalog-snapshot-v2") (eq $versions.contract "paper-tag-catalog-versions-v2") (reflect.IsSlice $snapshot.concepts) (gt (len $snapshot.concepts) 0) (reflect.IsSlice $versions.snapshots) (gt (len $versions.snapshots) 0) (eq $versions.currentSha256 $snapshot.registrySha256)) -}}
+    {{- errorf "新版标签显示文件缺失，或快照与版本目录的格式、当前来源不一致。" -}}
+  {{- end -}}
+  {{- $saved := dict -}}
+  {{- $seen := slice -}}
+  {{- range $versions.snapshots -}}
+    {{- if not (and (reflect.IsMap .) (in (slice "paper-taxonomy-registry-snapshot-v1" "paper-tag-catalog-snapshot-v2") .contract) (findRE `^[a-f0-9]{64}$` (.registrySha256 | default "") 1) .registryVersion (reflect.IsSlice .concepts) (gt (len .concepts) 0) (not (in $seen .registrySha256))) -}}
+      {{- errorf "标签版本目录中的快照格式、来源 SHA 无效，或同一来源重复出现。" -}}
+    {{- end -}}
+    {{- $seen = $seen | append .registrySha256 -}}
+    {{- if eq .registrySha256 $snapshot.registrySha256 }}{{ $saved = . }}{{ end -}}
+  {{- end -}}
+  {{- /* 这里只比较显示内容；原证明仍读取版本目录中未经改写的完整对象。 */ -}}
+  {{- if not $saved -}}
+    {{- errorf "当前显示词表没有对应的原词表快照。" -}}
+  {{- else if ne ((merge $snapshot (dict "contract" $saved.contract)) | partial "research_canonical_json.html") ($saved | partial "research_canonical_json.html") -}}
+    {{- errorf "当前显示词表与对应原快照的完整内容不一致。" -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "snapshot" $snapshot "versions" $versions "current" (or $hasSnapshot $hasVersions)) -}}

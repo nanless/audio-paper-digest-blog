@@ -1,0 +1,25 @@
+{{- /* 先找原目录中的完整快照；新显示文件不能替代历史分类依据。 */ -}}
+{{- $sha := . | default "" -}}
+{{- $selected := dict -}}
+{{- $original := index hugo.Data "taxonomy-registry" | default dict -}}
+{{- $originalVersions := index hugo.Data "taxonomy-catalog" | default dict -}}
+{{- if $sha -}}
+  {{- if eq $sha $original.registrySha256 }}{{ $selected = $original }}{{ end -}}
+  {{- range ($originalVersions.snapshots | default slice) -}}
+    {{- if eq .registrySha256 $sha }}{{ $selected = . }}{{ end -}}
+  {{- end -}}
+  {{- $assets := partialCached "tag_display_assets.html" "global" -}}
+  {{- if $assets.current -}}
+    {{- range ($assets.versions.snapshots | default slice) -}}
+      {{- if eq .registrySha256 $sha -}}
+        {{- if and $selected (ne ($selected | partial "research_canonical_json.html") (. | partial "research_canonical_json.html")) -}}
+          {{- errorf "新旧标签版本目录为同一来源保存了不同的完整快照：%s" $sha -}}
+        {{- end -}}
+        {{- if not $selected }}{{ $selected = . }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if not $originalVersions.contract -}}
+  {{- $selected = $original -}}
+{{- end -}}
+{{- return $selected -}}

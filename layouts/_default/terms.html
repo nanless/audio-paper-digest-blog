@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- $categories := eq .Type "categories" }}
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
 {{- $concepts := index $registry "concepts" | default slice }}
 {{- $stats := dict }}
 {{- if not $categories }}{{ range (partialCached "taxonomy_concept_counts.html" "global") }}{{ $stats = merge $stats (dict .id .) }}{{ end }}{{ end }}
@@ -41,8 +41,14 @@
       {{ end }}
     </div>
     <noscript><p class="taxonomy-note">未启用 JavaScript：可逐项展开目录，或用浏览器页面查找检索名称；论文库筛选需要 JavaScript，也可前往<a href="{{ "archives/" | relURL }}">时间归档</a>阅读。</p></noscript>
+    {{- $tagAssets := partialCached "tag_display_assets.html" "global" }}
+    {{- if $tagAssets.current }}
+    <script id="tag-catalog-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
+    <script id="tag-catalog-versions-data" type="application/json">{{ $tagAssets.versions | jsonify | safeJS }}</script>
+    {{- else }}
     <script id="taxonomy-registry-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
-    {{- with index hugo.Data "taxonomy-catalog" }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
+    {{- with $tagAssets.versions }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
+    {{- end }}
   </section>
   {{ end }}
   {{ if $categories }}

@@ -6,7 +6,7 @@ const path = require('node:path');
 const test = require('node:test');
 const vm = require('node:vm');
 
-function browserFixture(kind, items, suffix = '', fail = false, registry = null, catalog = null) {
+function browserFixture(kind, items, suffix = '', fail = false, registry = null, catalog = null, newAssets = null) {
   const listeners = {};
   const nodes = {};
   let document;
@@ -64,7 +64,7 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null,
     addEventListener(key, fn) { listeners[key] = fn; },
     clearTimeout() {}, setTimeout(fn) { fn(); return 1; }
   };
-  if (catalog) window.ResearchTaxonomy = require('../assets/js/taxonomy-core');
+  if (catalog || newAssets) window.ResearchTaxonomy = require('../assets/js/taxonomy-core');
   const fuseLoads = [];
   class FakeFuse {
     constructor(data, options) { this.data = data; fuseLoads.push({ data, options }); }
@@ -77,9 +77,16 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null,
     fetch(url) {
       requests.push(String(url));
       if (fail) return Promise.reject(new Error('offline'));
+      const filename = new URL(url).pathname.split('/').at(-1);
+      if (filename.startsWith('tag-catalog-')) {
+        const value = newAssets ? newAssets[filename] : undefined;
+        if (value instanceof Error) return Promise.reject(value);
+        if (value === undefined || typeof value === 'number') return Promise.resolve({ status: value || 404, ok: false });
+        return Promise.resolve({ status: 200, ok: true, json: () => Promise.resolve(value) });
+      }
       const payload = registry && String(url).endsWith('data/taxonomy-registry.json')
         ? registry : catalog && String(url).endsWith('data/taxonomy-catalog.json') ? catalog : items;
-      return Promise.resolve({ ok: true, json: () => Promise.resolve(payload) });
+      return Promise.resolve({ status: 200, ok: true, json: () => Promise.resolve(payload) });
     }
   });
   return { nodes, document, window, requests, parent, listeners, fuseLoads, ready: () => new Promise((resolve) => setImmediate(resolve)) };
@@ -275,5 +282,31 @@ test('核心脚本缺席时，两种搜索均拒绝同值或空值的新旧字�
       }
       assert.equal(JSON.stringify(item), before);
     }
+  }
+});
+
+
+test('经典搜索使用新版资源与当前字段，部分或坏新版不回退到旧词表', async () => {
+  const saved = { contract: 'paper-taxonomy-registry-snapshot-v1', registrySha256: 'a'.repeat(64), concepts: [
+    { id: 'method.peft', facet: 'method', zh: '参数高效微调', en: '', aliases: ['PEFT'], ancestorIds: [] },
+    { id: 'method.lora', facet: 'method', zh: 'LoRA', en: '', aliases: [], ancestorIds: ['method.peft'] }
+  ] };
+  const display = { ...saved, contract: 'paper-tag-catalog-snapshot-v2' };
+  const versions = { contract: 'paper-tag-catalog-versions-v2', currentSha256: saved.registrySha256, snapshots: [saved] };
+  const item = { ...record(), tagContract: 'paper-tag-flat-tags-v2', tagCatalogSha256: saved.registrySha256,
+    tagConcepts: [{ id: 'method.lora', facet: 'method', label: 'LoRA' }] };
+  const assets = { 'tag-catalog-snapshot.json': display, 'tag-catalog-versions.json': versions };
+  const loaded = browserFixture('search', [item], '?q=参数高效微调', false, saved, null, assets);
+  await loaded.ready();
+  assert.equal(loaded.nodes.searchResults.children.length, 1);
+  assert.match(loaded.nodes.searchResults.textContent, /论文 0/);
+  assert.ok(loaded.requests.includes('https://nanless.github.io/audio-paper-digest-blog/data/tag-catalog-versions.json'));
+  assert.ok(!loaded.requests.some(url => url.endsWith('/taxonomy-registry.json')));
+  for (const value of [404, { ...versions, contract: 'unknown' }, 500]) {
+    const failed = browserFixture('search', [item], '?q=Paper', false, saved, null, { ...assets, 'tag-catalog-versions.json': value });
+    await failed.ready();
+    assert.equal(failed.fuseLoads.length, 0);
+    assert.match(failed.parent.textContent, /搜索暂时不可用/);
+    assert.ok(!failed.requests.some(url => url.endsWith('/taxonomy-registry.json')));
   }
 });

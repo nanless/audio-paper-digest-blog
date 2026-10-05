@@ -87,7 +87,7 @@ test('keyword and year criteria cannot borrow controlled concepts from a differe
   assert.equal(classified[0].guides.length, 2);
 });
 
-function browser(items, suffix = '', withRegistry = true, indexLoader = null) {
+function browser(items, suffix = '', withRegistry = true, indexLoader = null, newAssets = null) {
   const nodes = {};
   const listeners = {};
   class Element {
@@ -126,12 +126,23 @@ function browser(items, suffix = '', withRegistry = true, indexLoader = null) {
     addEventListener(key, fn) { listeners[key] = fn; }, clearTimeout() {}, setTimeout(fn) { fn(); }
   };
   const document = { getElementById: (id) => nodes[id] || null, querySelectorAll: () => [], createElement: (tag) => new Element(tag), createDocumentFragment: () => new Element('fragment') };
+  const requests = [];
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../assets/js/paper-library.js'), 'utf8'), {
     document, window, URL, URLSearchParams,
-    fetch: (url) => Promise.resolve({ ok: true, json: () => Promise.resolve(String(url).endsWith('taxonomy-registry.json') ? (withRegistry ? snapshot : null) : items) })
+    fetch: (url) => {
+      requests.push(String(url));
+      const filename = new URL(url).pathname.split('/').at(-1);
+      if (filename.startsWith('tag-catalog-')) {
+        const value = newAssets ? newAssets[filename] : undefined;
+        if (value instanceof Error) return Promise.reject(value);
+        if (value === undefined || typeof value === 'number') return Promise.resolve({ status: value || 404, ok: false });
+        return Promise.resolve({ status: 200, ok: true, json: () => Promise.resolve(value) });
+      }
+      return Promise.resolve({ status: 200, ok: true, json: () => Promise.resolve(filename === 'taxonomy-registry.json' ? (withRegistry ? snapshot : null) : items) });
+    }
   });
   function descendants(node) { return node.children.flatMap((child) => [child, ...descendants(child)]); }
-  return { nodes, window, listeners, descendants, ready: () => new Promise((resolve) => setImmediate(resolve)) };
+  return { nodes, window, listeners, descendants, requests, ready: () => new Promise((resolve) => setImmediate(resolve)) };
 }
 
 test('paper selection and downloads work without saved controls and never access retained personal data', async () => {
@@ -220,4 +231,28 @@ test('library delegates index loading to the shared loader and exposes integrity
   assert.equal(failed.nodes['library-count'].textContent, '论文索引载入失败');
   assert.match(failed.nodes['library-results'].textContent, /SHA-256/);
   assert.equal(failed.nodes['library-more'].hidden, true);
+});
+
+
+test('论文库载入新版两资源与当前标签字段，坏新版不借旧资源显示结果', async () => {
+  const saved = { ...snapshot, registrySha256: 'a'.repeat(64) };
+  const display = { ...saved, contract: 'paper-tag-catalog-snapshot-v2' };
+  const versions = { contract: 'paper-tag-catalog-versions-v2', currentSha256: saved.registrySha256, snapshots: [saved] };
+  const item = record('new-tags', ['task.asr']);
+  delete item.taxonomyContract;
+  delete item.taxonomyConcepts;
+  Object.assign(item, { tagContract: core.contract, tagCatalogSha256: saved.registrySha256,
+    tagConcepts: [{ id: 'task.asr', facet: 'task', label: '语音识别' }] });
+  const assets = { 'tag-catalog-snapshot.json': display, 'tag-catalog-versions.json': versions };
+  const loaded = browser([item], '?concept=task.asr', true, null, assets);
+  await loaded.ready();
+  assert.match(loaded.nodes['library-count'].textContent, /找到 1 条/);
+  assert.ok(loaded.requests.includes(origin + base + 'data/tag-catalog-snapshot.json'));
+  assert.ok(!loaded.requests.some(url => url.endsWith('/taxonomy-registry.json')));
+  for (const value of [404, null, { ...versions, currentSha256: 'f'.repeat(64) }]) {
+    const failed = browser([item], '', true, null, { ...assets, 'tag-catalog-versions.json': value });
+    await failed.ready();
+    assert.equal(failed.nodes['library-count'].textContent, '论文索引载入失败');
+    assert.ok(!failed.requests.some(url => url.endsWith('/taxonomy-registry.json')));
+  }
 });

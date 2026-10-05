@@ -27,16 +27,27 @@
   }
   function mount(document, core, location) {
     var root = document.getElementById('taxonomy-browser');
-    var snapshotNode = document.getElementById('taxonomy-registry-data');
-    if (!root || !snapshotNode || !core) return;
+    var newSnapshotNode = document.getElementById('tag-catalog-data');
+    var newVersionsNode = document.getElementById('tag-catalog-versions-data');
+    var hasNewAssets = !!(newSnapshotNode || newVersionsNode);
+    var snapshotNode = hasNewAssets ? newSnapshotNode : document.getElementById('taxonomy-registry-data');
+    if (!root || !core || (!hasNewAssets && !snapshotNode)) return;
     var snapshot, graph;
     try {
+      if (hasNewAssets && (!newSnapshotNode || !newVersionsNode)) throw new Error('新版标签显示资源不完整。');
       snapshot = JSON.parse(snapshotNode.textContent);
-      var catalogNode = document.getElementById('taxonomy-catalog-data');
-      var catalog = catalogNode ? JSON.parse(catalogNode.textContent) : undefined;
-      graph = core.createRegistry(snapshot, catalog);
+      var versionsNode = hasNewAssets ? newVersionsNode : document.getElementById('taxonomy-catalog-data');
+      var versions = versionsNode ? JSON.parse(versionsNode.textContent) : undefined;
+      if (hasNewAssets && (!snapshot || snapshot.contract !== 'paper-tag-catalog-snapshot-v2'
+        || !versions || versions.contract !== 'paper-tag-catalog-versions-v2')) throw new Error('新版标签显示资源的格式不受支持。');
+      graph = core.createRegistry(snapshot, versions);
     }
-    catch (_) { return; } // The server-rendered, linked tree remains available.
+    catch (_error) {
+      // 旧页面保留原目录；新版资源错误须说明，不能退回旧资源继续交互。
+      var errorStatus = document.getElementById('taxonomy-search-status');
+      if (hasNewAssets && errorStatus) errorStatus.textContent = '标签目录载入失败，请稍后重试。';
+      return;
+    }
     var input = document.getElementById('taxonomy-query');
     var results = document.getElementById('taxonomy-search-results');
     var status = document.getElementById('taxonomy-search-status');

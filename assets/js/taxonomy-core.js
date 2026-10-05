@@ -11,6 +11,10 @@
   var V2_CONTRACT = 'historical-source-taxonomy-classification-v2';
   var V3_CONTRACT = 'historical-source-taxonomy-classification-v3';
   var QUALIFIED_CONTRACT = 'exact1028-independent-review-qualified-classification-v1';
+  var SNAPSHOT_CONTRACT = 'paper-tag-catalog-snapshot-v2';
+  var LEGACY_SNAPSHOT_CONTRACT = 'paper-taxonomy-registry-snapshot-v1';
+  var VERSIONS_CONTRACT = 'paper-tag-catalog-versions-v2';
+  var LEGACY_VERSIONS_CONTRACT = 'paper-taxonomy-version-catalog-v1';
   var researchTypeLabels = Object.freeze({ engineering: '工程研究', science: '科学研究', analysis: '机制分析',
     evaluation: '评测研究', resource: '研究资源', review: '综述', experience: '实践报告', position: '观点论文' });
   var domainLabels = Object.freeze({ 'in-domain': '音频研究', 'cross-domain': '跨域交叉',
@@ -50,12 +54,47 @@
     }).join('').trim();
   }
 
-  // 原 v1 快照使用有序祖先链；不完整或不支持的图须拒绝，不能将任意数组当作分类树。
+  function sameSnapshotContent(left, right) {
+    function sameValue(a, b) {
+      if (a === b) return true;
+      if (!a || !b || typeof a !== 'object' || typeof b !== 'object' || Array.isArray(a) !== Array.isArray(b)) return false;
+      var keys = Object.keys(a);
+      return keys.length === Object.keys(b).length && keys.every(function (key) { return own(b, key) && sameValue(a[key], b[key]); });
+    }
+    var keys = Object.keys(left).filter(function (key) { return key !== 'contract'; });
+    return keys.length === Object.keys(right).filter(function (key) { return key !== 'contract'; }).length
+      && keys.every(function (key) { return own(right, key) && sameValue(left[key], right[key]); });
+  }
+  function loadDisplayAssets(indexUrl, fetchImpl) {
+    var options = { credentials: 'same-origin', redirect: 'error' };
+    function request(filename) { return fetchImpl(new URL('data/' + filename, indexUrl), options); }
+    function readOld(filename) {
+      return fetchImpl(new URL('data/' + filename, indexUrl), { credentials: 'same-origin' }).then(function (response) { return response && response.ok ? response.json() : null; })
+        .catch(function () { return null; });
+    }
+    return Promise.all([request('tag-catalog-snapshot.json'), request('tag-catalog-versions.json')]).then(function (responses) {
+      if (responses.every(function (response) { return response && response.status === 404; })) {
+        return Promise.all([readOld('taxonomy-registry.json'), readOld('taxonomy-catalog.json')])
+          .then(function (values) { return { snapshot: values[0], versions: values[1] }; });
+      }
+      if (responses.some(function (response) { return !response || !response.ok; })) throw new Error('新版标签显示资源缺失或读取失败。');
+      return Promise.all(responses.map(function (response) { return response.json(); })).then(function (values) {
+        var snapshot = values[0], versions = values[1];
+        if (!snapshot || snapshot.contract !== SNAPSHOT_CONTRACT || !versions || versions.contract !== VERSIONS_CONTRACT) {
+          throw new Error('新版标签显示资源的格式不受支持。');
+        }
+        createRegistry(snapshot, versions);
+        return { snapshot: snapshot, versions: versions };
+      });
+    });
+  }
+
+  // 词表快照使用有序祖先链；不完整或不支持的图须拒绝，不能将任意数组当作分类树。
   function createRegistry(snapshot, catalog) {
     if (!snapshot || !Array.isArray(snapshot.concepts) || !snapshot.concepts.length) {
       throw new Error('分类目录缺少概念');
     }
-    if (snapshot.contract && snapshot.contract !== 'paper-taxonomy-registry-snapshot-v1') {
+    if (snapshot.contract && ![SNAPSHOT_CONTRACT, LEGACY_SNAPSHOT_CONTRACT].includes(snapshot.contract)) {
       throw new Error('分类目录版本不受支持');
     }
     var byId = Object.create(null);
@@ -129,20 +168,26 @@
       }
     };
     var versions = Object.create(null);
-    if (graph.registrySha256) versions[graph.registrySha256] = graph;
+    // 有版本目录时只读取当时保存的词表，显示副本不能覆盖同源的原快照。
+    if (!catalog && graph.registrySha256) versions[graph.registrySha256] = graph;
     graph.hasVersionCatalog = !!catalog;
     if (catalog) {
-      if (catalog.contract !== 'paper-taxonomy-version-catalog-v1' || !Array.isArray(catalog.snapshots)
+      if (![VERSIONS_CONTRACT, LEGACY_VERSIONS_CONTRACT].includes(catalog.contract) || !Array.isArray(catalog.snapshots)
         || catalog.currentSha256 !== graph.registrySha256 || !catalog.snapshots.length) throw new Error('分类版本目录非法');
       var seenVersions = new Set();
       catalog.snapshots.forEach(function (version) {
         var sha = version && version.registrySha256;
         if (!/^[a-f0-9]{64}$/.test(sha || '') || seenVersions.has(sha)) throw new Error('分类版本重复或无效');
         seenVersions.add(sha);
+        if (catalog.contract === VERSIONS_CONTRACT && ![SNAPSHOT_CONTRACT, LEGACY_SNAPSHOT_CONTRACT].includes(version.contract)) {
+          throw new Error('当时保存的词表快照格式不受支持。');
+        }
         var historical = createRegistry(version);
-        if (sha === graph.registrySha256
-          && (historical.registryVersion !== graph.registryVersion
-            || JSON.stringify(Object.values(historical.byId)) !== JSON.stringify(Object.values(graph.byId)))) {
+        var currentContentMatches = snapshot.contract === SNAPSHOT_CONTRACT || catalog.contract === VERSIONS_CONTRACT
+          ? sameSnapshotContent(snapshot, version)
+          : historical.registryVersion === graph.registryVersion
+            && JSON.stringify(Object.values(historical.byId)) === JSON.stringify(Object.values(graph.byId));
+        if (sha === graph.registrySha256 && !currentContentMatches) {
           throw new Error('分类当前版本与目录快照不一致');
         }
         Object.values(historical.byId).forEach(function (node) {
@@ -374,6 +419,6 @@
   }
   return { contract: CONTRACT, legacyContract: LEGACY_CONTRACT, v2Contract: V2_CONTRACT, v3Contract: V3_CONTRACT, qualified1028Contract: QUALIFIED_CONTRACT, primaryRoleLabel: primaryRoleLabel, facetLabels: facetLabels, researchTypeLabels: researchTypeLabels,
     domainLabels: domainLabels, roleLabels: roleLabels, isActive: isActive, readerScopeNote: readerScopeNote,
-    createRegistry: createRegistry, buildRegistry: createRegistry, arxivBase: arxivBase,
+    createRegistry: createRegistry, buildRegistry: createRegistry, loadDisplayAssets: loadDisplayAssets, arxivBase: arxivBase,
     readTagFields: readTagFields, identity: identity, groupPapers: groupPapers, query: query, counts: counts };
 }));

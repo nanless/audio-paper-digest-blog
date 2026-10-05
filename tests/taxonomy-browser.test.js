@@ -35,7 +35,7 @@ class Node {
   replaceChildren() { this.children = []; }
 }
 
-function fixture() {
+function fixture(inlineAssets = {}) {
   const root = new Node(), input = new Node(), results = new Node(), status = new Node(), panel = new Node(), facets = new Node();
   const button = new Node(), children = new Node(), direction = new Node(), facetLink = new Node(), facet = new Node();
   button.dataset.expand = 'task.root'; button.setAttribute('aria-controls', 'children-task.root');
@@ -47,6 +47,7 @@ function fixture() {
   const nodes = { 'taxonomy-browser': root, 'taxonomy-registry-data': { textContent: JSON.stringify(snapshot) }, 'taxonomy-query': input,
     'taxonomy-search-results': results, 'taxonomy-search-status': status, 'taxonomy-concept-panel': panel,
     'children-task.root': children, 'facet-method': facet };
+  Object.assign(nodes, inlineAssets);
   const document = { getElementById: id => nodes[id], createElement: () => new Node() };
   browser.mount(document, core, { search: '' });
   return { root, input, results, status, panel, facets, button, children, direction, facetLink, facet };
@@ -82,6 +83,26 @@ test('search recovery and facet navigation keep all directions reachable', () =>
   assert.equal(f.facets.hidden, false);
   assert.equal(f.results.hidden, true);
   assert.equal(f.facet.open, true);
+});
+
+test('新版内联词表可交互，部分或坏新版即使旁边有旧词表也不回退', () => {
+  const saved = { ...snapshot, contract: 'paper-taxonomy-registry-snapshot-v1', registrySha256: 'a'.repeat(64) };
+  const display = { ...saved, contract: 'paper-tag-catalog-snapshot-v2' };
+  const versions = { contract: 'paper-tag-catalog-versions-v2', currentSha256: saved.registrySha256, snapshots: [saved] };
+  const newNodes = { 'tag-catalog-data': { textContent: JSON.stringify(display) },
+    'tag-catalog-versions-data': { textContent: JSON.stringify(versions) } };
+  const good = fixture(newNodes);
+  good.input.value = 'ASR';
+  good.input.events.input();
+  assert.equal(good.results.children.length, 1);
+  for (const assets of [{ 'tag-catalog-data': newNodes['tag-catalog-data'] },
+    { 'tag-catalog-versions-data': newNodes['tag-catalog-versions-data'] },
+    { ...newNodes, 'tag-catalog-data': { textContent: 'null' } },
+    { ...newNodes, 'tag-catalog-versions-data': { textContent: JSON.stringify({ ...versions, contract: 'unknown' }) } }]) {
+    const bad = fixture(assets);
+    assert.equal(bad.input.events.input, undefined);
+    assert.match(bad.status.textContent, /标签目录载入失败/);
+  }
 });
 
 test('Hugo exposes every published root and leaf, stable links and strictly validated paper paths without JS', t => {
@@ -191,6 +212,6 @@ test('Hugo exposes every published root and leaf, stable links and strictly vali
     }
     assert.ok(section.includes('?concept=' + id));
     assert.ok(section.includes(currentNode.zh));
-    assert.match(section, /历史分类证据保持原签发版本/);
+    assert.match(section, /核验历史分类时，仍使用当时保存的词表/);
   }
 });

@@ -12,11 +12,11 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
   const content = path.join(root, 'content', 'posts');
   fs.mkdirSync(content, { recursive: true });
-  // 构建期的 registry 快照（data/taxonomy-registry.json）负责展开概念祖先链。
+  // 本例专测旧版无版本目录的词表；不混入当前新版显示文件。
   const dataDir = path.join(root, 'data');
   fs.mkdirSync(dataDir, { recursive: true });
   for (const name of fs.readdirSync(path.resolve(__dirname, '..', 'data'))) {
-    if (name.startsWith('fullsite-r6-') || name === 'exact1028-qualified-classification.json' || name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json' || name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json'
+    if (name.startsWith('fullsite-r6-') || name === 'exact1028-qualified-classification.json' || name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json' || name === 'taxonomy-registry.json' || name === 'taxonomy-catalog.json' || name === 'tag-catalog-snapshot.json' || name === 'tag-catalog-versions.json'
       || !fs.statSync(path.resolve(__dirname, '..', 'data', name)).isFile()) continue;
     fs.copyFileSync(path.resolve(__dirname, '..', 'data', name), path.join(dataDir, name));
   }

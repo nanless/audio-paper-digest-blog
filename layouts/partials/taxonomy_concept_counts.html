@@ -5,7 +5,7 @@
    已核论文身份去重，身份待核按页面独立保留；只统计论文，不计聚合页。
    原分类按签发快照核验后，祖先集合投影到现行目录，不硬编码概念数量；
    旧版裸 tags 页面没有该字段，天然不计入。 */}}
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
 {{- $concepts := index $registry "concepts" | default slice }}
 {{- $byId := partialCached "taxonomy_registry_index.html" "global" }}
 

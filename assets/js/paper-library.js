@@ -838,24 +838,21 @@
     return;
   }
 
-  // 快照提供概念的 zh/en、aliases 与祖先链；拿不到时退化为页面自带标签。
-  var registryUrl = new URL('data/taxonomy-registry.json', indexUrl);
-  var catalogUrl = new URL('data/taxonomy-catalog.json', indexUrl);
-  function loadRegistry() {
-    return fetch(registryUrl, { credentials: 'same-origin' })
-      .then(function (response) {
-        if (!response || !response.ok) return null;
-        return response.json();
-      })
-      .then(function (payload) {
-        return payload && !Array.isArray(payload) && Array.isArray(payload.concepts)
-          ? payload : null;
-      })
-      .catch(function () { return null; });
-  }
-  function loadCatalog() {
-    return fetch(catalogUrl, { credentials: 'same-origin', redirect: 'error' }).then(function (response) { return response && response.ok ? response.json() : null; })
-      .then(function (payload) { return payload && payload.contract === 'paper-taxonomy-version-catalog-v1' ? payload : null; }).catch(function () { return null; });
+  // 快照提供名称、别名与祖先链；旧资源缺失时保留页面自带标签。
+  function loadTagAssets() {
+    if (api && typeof api.loadDisplayAssets === 'function') {
+      return api.loadDisplayAssets(indexUrl, function (url, options) {
+        return fetch(url, String(url).endsWith('/taxonomy-catalog.json') ? { credentials: 'same-origin', redirect: 'error' } : options);
+      });
+    }
+    function readOld(filename) {
+      return fetch(new URL('data/' + filename, indexUrl), filename === 'taxonomy-catalog.json'
+        ? { credentials: 'same-origin', redirect: 'error' } : { credentials: 'same-origin' })
+        .then(function (response) { return response && response.ok ? response.json() : null; })
+        .catch(function () { return null; });
+    }
+    return Promise.all([readOld('taxonomy-registry.json'), readOld('taxonomy-catalog.json')])
+      .then(function (values) { return { snapshot: values[0], versions: values[1] }; });
   }
 
   function loadIndex() {
@@ -882,20 +879,22 @@
   resultsNode.textContent = '正在读取并校验索引，请稍候…';
   return Promise.all([
     loadIndex(),
-    loadRegistry(),
-    loadCatalog(),
+    loadTagAssets(),
   ])
     .then(function (results) {
-      var registry = results[1];
-      return { items: results[0], registry: registry, catalog: results[2] };
+      return { items: results[0], assets: results[1] };
     })
     .then(function (payload) {
       var items = payload.items;
-      var registry = payload.registry;
+      var registry = payload.assets.snapshot;
+      var versions = payload.assets.versions;
+      // 旧读取器只使用含概念数组的快照与已知旧目录，缺项时保持原降级范围。
+      if (!registry || Array.isArray(registry) || !Array.isArray(registry.concepts)) registry = null;
+      if (versions && !['paper-tag-catalog-versions-v2', 'paper-taxonomy-version-catalog-v1'].includes(versions.contract)) versions = null;
       var seen = new Set();
       if (!Array.isArray(items)) throw new Error('Index must be an array');
       if (api && registry) {
-        try { graph = api.createRegistry(registry, payload.catalog); }
+        try { graph = api.createRegistry(registry, versions); }
         catch (_error) { graph = null; }
       }
       allEntries = items.map(function (item) {

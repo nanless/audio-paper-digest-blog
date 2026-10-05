@@ -116,10 +116,14 @@ test('a drifted sidecar proof is not counted as a valid classification even when
 
 test('ambiguous preferred labels never select an arbitrary concept or show an inferred drilldown', t => {
   const f = fixture(t), registryFile = path.join(f.root, 'data/taxonomy-registry.json');
+  // 这个旧版夹具只修改原显示词表，不让复制来的新版显示文件覆盖它。
+  for (const name of ['tag-catalog-snapshot.json', 'tag-catalog-versions.json']) {
+    fs.rmSync(path.join(f.root, 'data', name), { force: true });
+  }
   const registry = JSON.parse(fs.readFileSync(registryFile));
   registry.concepts.push({ id: 'scientific_topic.fixture-ambiguous', facet: 'scientific_topic', zh: '状态空间模型', en: 'fixture', aliases: [], ancestorIds: [], status: 'active' });
   fs.writeFileSync(registryFile, JSON.stringify(registry));
   const html = render(f.root);
   assert.match(html, /其中 1 条已有已核验的研究方向/);
-  assert.doesNotMatch(html, /按已核验方向浏览：|子标签下钻/);
+  assert.doesNotMatch(html, /按已核验方向浏览：|子标签下钻|aria-label="浏览子标签"/);
 });

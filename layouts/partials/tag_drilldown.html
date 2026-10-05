@@ -1,16 +1,10 @@
-{{- /* 子标签下钻分区（逐标签页 drill-down）
-   数据全部来自 registry 快照 hugo.Data["taxonomy-registry"]（contract=paper-taxonomy-registry-snapshot-v1）：
-   concepts[].ancestorIds 是自根到父的链（不含自身），因此
-     - 直接子概念 = 其它概念 ancestorIds 的末位等于本概念 id；
-     - 孙概念     = 父级属于直接子概念的那些概念（对应 ancestorIds 倒数第二位）。
-   计数来自 partialCached 的全站概念计数（direct/sub），只统计带
-   paper_digest_taxonomy_concepts 的新版合同页面，不硬编码任何概念数量；
-   找不到当前标签对应的 concept（旧标签 zh 不在快照里）时不渲染本分区。 */}}
+{{- /* 子标签按当前显示词表的上级关系排列。直接和下级论文数来自全站计数，
+   只统计已核验分类；旧标签无法对应当前概念时，不展示这个区域。 */}}
 {{- $page := .page }}
 {{- $termName := .termName }}
 {{- $termPages := $page.Pages }}
 {{- $total := len $termPages }}
-{{- $registry := index hugo.Data "taxonomy-registry" | default dict }}
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
 {{- $concepts := index $registry "concepts" | default slice }}
 
 {{- /* 1. 定位当前标签对应的概念（按 zh label 精确匹配） */}}
@@ -67,7 +61,7 @@
 {{- end }}
 
 {{- if gt (len $rows) 0 }}
-<section class="tag-drill" aria-label="子标签下钻">
+<section class="tag-drill" aria-label="浏览子标签">
   <h2 class="tag-drill__title">子标签</h2>
   <p class="tag-drill__note">下方只统计已核验方向的<b>论文记录</b>，按已核身份去重，身份待核时按页面保留。“直接”只含明确标注该方向的论文；“含子树”同时包含下级方向。点击名称进入论文库继续筛选；数量与上方按标签名称收录的页面数不同。</p>
   <ul class="tag-drill__list">

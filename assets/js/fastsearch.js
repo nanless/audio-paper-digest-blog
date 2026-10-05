@@ -203,12 +203,17 @@ loadingIndex = true; status.textContent = '正在载入搜索索引…';
 return loadIndex()
   .then((data) => {
     if (!Array.isArray(data)) throw new Error('Search index must be an array');
-    return fetch(new URL('data/taxonomy-registry.json', indexUrl), { credentials: 'same-origin' })
-      .then((response) => (response && response.ok ? response.json() : null))
-      .catch(() => null)
-      .then(registry => fetch(new URL('data/taxonomy-catalog.json', indexUrl), { credentials: 'same-origin' })
-        .then(response => response && response.ok ? response.json() : null).catch(() => null)
-        .then(catalog => ({ data, registry, catalog })));
+    const core = window.ResearchTaxonomy;
+    if (core && typeof core.loadDisplayAssets === 'function') {
+      return core.loadDisplayAssets(indexUrl, fetch).then(assets => ({ data, registry: assets.snapshot, catalog: assets.versions }));
+    }
+    // 核心脚本缺席时保持旧资源的关键词降级，不授予分类资格。
+    function readOld(filename) {
+      return fetch(new URL('data/' + filename, indexUrl), { credentials: 'same-origin' })
+        .then(response => response && response.ok ? response.json() : null).catch(() => null);
+    }
+    return Promise.all([readOld('taxonomy-registry.json'), readOld('taxonomy-catalog.json')])
+      .then(values => ({ data, registry: values[0], catalog: values[1] }));
   })
   .then((payload) => {
     const { data, registry, catalog } = payload;
