@@ -48,9 +48,9 @@ test('Hugo and JS agree on all eighteen narrow-source cases; exact V3 profile he
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sumra-public-source-hugo-'));
  fs.mkdirSync(dir+'/layouts/partials',{recursive:true});fs.mkdirSync(dir+'/data',{recursive:true});
  for(const name of ['research_conference_source_descriptor.html','research_sumra_source_descriptor.html','research_canonical_json.html'])fs.copyFileSync(ROOT+'/layouts/partials/'+name,dir+'/layouts/partials/'+name);
- fs.copyFileSync(ROOT+'/layouts/partials/taxonomy_classification_v3_profiles.html',dir+'/layouts/partials/taxonomy_classification_v3_profiles.html');
+ fs.copyFileSync(ROOT+'/layouts/partials/tag_classification_v3_profiles.html',dir+'/layouts/partials/tag_classification_v3_profiles.html');
  fs.writeFileSync(dir+'/hugo.toml','baseURL="https://example.org/"\n');fs.writeFileSync(dir+'/data/cases.json',JSON.stringify(cases));
- fs.writeFileSync(dir+'/layouts/index.html','{{ $a := slice }}{{ range site.Data.cases }}{{ $a = $a | append (dict "name" .name "valid" (partial "research_conference_source_descriptor.html" .value)) }}{{ end }}{{ dict "cases" $a "profiles" (partial "taxonomy_classification_v3_profiles.html" "production") | jsonify (dict "noHTMLEscape" true) | safeHTML }}');
+ fs.writeFileSync(dir+'/layouts/index.html','{{ $a := slice }}{{ range site.Data.cases }}{{ $a = $a | append (dict "name" .name "valid" (partial "research_conference_source_descriptor.html" .value)) }}{{ end }}{{ dict "cases" $a "profiles" (partial "tag_classification_v3_profiles.html" "production") | jsonify (dict "noHTMLEscape" true) | safeHTML }}');
  const result=cp.spawnSync('hugo',['--source',dir,'--destination',dir+'/public'],{encoding:'utf8'});
  fs.writeFileSync(dir+'/hugo.log',result.stdout+result.stderr);assert.equal(result.status,0,result.stderr);
  const rendered=JSON.parse(fs.readFileSync(dir+'/public/index.html'));assert.deepEqual(rendered.cases,cases.map(({name,valid})=>({name,valid})));

@@ -14,7 +14,7 @@ function fixture(t){
  for(const dir of ['content/posts','data','layouts/_default'])fs.mkdirSync(path.join(root,dir),{recursive:true});
  fs.cpSync(path.join(repository,'layouts/partials'),path.join(root,'layouts/partials'),{recursive:true});
  fs.copyFileSync(path.join(repository,'layouts/_default/index.json'),path.join(root,'layouts/_default/index.json'));
- fs.writeFileSync(path.join(root,'layouts/index.html'),'{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
+ fs.writeFileSync(path.join(root,'layouts/index.html'),'{{ partial "tag_concept_counts.html" . | jsonify }}');
  fs.writeFileSync(path.join(root,'layouts/_default/single.html'),'{{ partial "research_metadata.html" . | jsonify }}');
  for(const name of ['taxonomy-registry.json','taxonomy-catalog.json'])fs.copyFileSync(path.join(repository,'data',name),path.join(root,'data',name));
  for(const key of Object.keys(document.records))fs.copyFileSync(path.join(repository,key),path.join(root,key));

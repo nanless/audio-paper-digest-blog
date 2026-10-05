@@ -31,7 +31,7 @@ test('physical root pin, collection pins, duplicate JSON keys and profile requir
  const old=profiles[0];assert.equal(selection.expectedFor({...pins,admissionSha256:old.admissionProjectionSha256,sourcesSha256:old.sourceProjectionSha256},profiles),'');
 });
 test('withheld classification cannot fall back to old verified payload in library or downloads',()=>{
- const core=require('../assets/js/taxonomy-core'),registry=JSON.parse(fs.readFileSync(root+'/data/taxonomy-registry.json')),catalog=JSON.parse(fs.readFileSync(root+'/data/taxonomy-catalog.json')),graph=core.createRegistry(registry,catalog);
+ const core=require('../assets/js/tag-core'),registry=JSON.parse(fs.readFileSync(root+'/data/taxonomy-registry.json')),catalog=JSON.parse(fs.readFileSync(root+'/data/taxonomy-catalog.json')),graph=core.createRegistry(registry,catalog);
  const r=history.records[heldPath],entry={taxonomyPublicationStatus:'withheld',identityStatus:'verified',paperId:r.paperId,pageType:'paper',arxivId:'2604.21628',permalink:'/posts/held/',title:'Held',taxonomyContract:'paper-taxonomy-flat-tags-compat-v1',taxonomyRegistrySha256:r.registrySha256,taxonomyConcepts:r.concepts,primaryTaskId:r.primaryTaskId,primaryMethodId:r.primaryMethodId,task:r.primaryTaskLabel,method:r.primaryMethodLabel,tags:['语音识别']};
  assert.equal(graph.resolveRecord(entry).status,'withheld');assert.deepEqual(graph.resolveRecord(entry).concepts,[]);
  const normalized=require('../assets/js/paper-library').normalizeEntry(entry,'https://example.test','/',registry,graph);assert.equal(normalized.tagPublicationStatus,'withheld');assert.equal(graph.resolveRecord(normalized).status,'withheld');

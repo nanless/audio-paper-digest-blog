@@ -1,0 +1,21 @@
+{{- /* Global immutable public projections, actual file-byte pins. Source
+     commitments are emitted by the source adapter, not copied from a cache. */ -}}
+{{- $profile := .profile | default dict }}{{ $fixture := eq (.syntheticFullsiteFixture | default false) true -}}
+{{- $bytes := dict -}}
+{{- if $fixture }}{{ $a := .fixtureAdmissionBytes | default "" }}{{ $s := .fixtureSourceBytes | default "" }}{{ $bytes = dict "admissionBytes" $a "sourceBytes" $s "admissionSha256" (crypto.SHA256 $a) "sourceSha256" (crypto.SHA256 $s) }}{{ else }}{{ $bytes = partialCached "tag_fullsite_byte_pins.html" $profile.auditDependencySha256 $profile.auditDependencySha256 }}{{ end -}}
+{{- $admissionBytes := $bytes.admissionBytes }}{{ $sourceBytes := $bytes.sourceBytes -}}
+{{- $sha := `^[a-f0-9]{64}$` -}}
+{{- $valid := and $admissionBytes $sourceBytes (findRE $sha ($profile.admissionProjectionSha256 | default "") 1) (findRE $sha ($profile.sourceProjectionSha256 | default "") 1) (eq $bytes.admissionSha256 $profile.admissionProjectionSha256) (eq $bytes.sourceSha256 $profile.sourceProjectionSha256) -}}
+{{- $members := dict -}}
+{{- if $valid -}}
+  {{- $cacheKey := printf "fullsite-authority:%s:%s:%s" $profile.admissionProjectionSha256 $profile.sourceProjectionSha256 $profile.manifestSha256 -}}
+  {{- if not (site.Store.Get (printf "%s:ready" $cacheKey)) -}}
+    {{- $admission := $admissionBytes | transform.Unmarshal }}{{ $sources := $sourceBytes | transform.Unmarshal -}}
+    {{- $result := dict "valid" false "members" dict -}}
+    {{- if eq $admission.contract "fullsite-current-page-public-admission-set-v1" }}{{ $result = partial "tag_fullsite_projection_set.html" (dict "admission" $admission "sources" $sources "profile" $profile) }}{{ else }}{{ $result = partial "tag_fullsite_projection_pair.html" (dict "admission" $admission "sources" $sources "profile" $profile) }}{{ end -}}
+    {{- $valid = and $valid $result.valid -}}
+    {{- site.Store.Set $cacheKey (dict "valid" (not (not $valid)) "members" $result.members) }}{{ site.Store.Set (printf "%s:ready" $cacheKey) true -}}
+  {{- end -}}
+  {{- $cached := site.Store.Get $cacheKey }}{{ $valid = $cached.valid }}{{ $members = $cached.members -}}
+{{- end -}}
+{{- return (dict "valid" (not (not $valid)) "members" $members) -}}

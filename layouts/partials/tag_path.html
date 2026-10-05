@@ -1,0 +1,8 @@
+{{- /* Only the verified current navigation projection reaches this path. */ -}}
+{{- $concept := .concept }}
+<div class="tag-path" aria-label="{{ $concept.zh }}的分类路径">
+  {{- range $ancestorId := $concept.ancestorIds }}
+    {{- range $.concepts }}{{ if eq .id $ancestorId }}<a class="tag-path-parent" href="{{ printf "%s?concept=%s" ("papers/" | relURL) (.id | urlquery) }}">{{ .zh }}</a><span class="tag-path-separator" aria-hidden="true">›</span>{{ end }}{{ end }}
+  {{- end }}
+  <a class="tag-path-direct" href="{{ printf "%s?concept=%s" ("papers/" | relURL) ($concept.id | urlquery) }}">{{ $concept.zh }}</a>
+</div>

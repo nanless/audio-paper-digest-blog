@@ -1,0 +1,59 @@
+{{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
+{{- $concepts := index $registry "concepts" | default slice }}
+{{- $selected := partial "tag_navigation_records.html" . }}
+{{- if $selected }}
+{{- $proof := partial "tag_page_proof.html" . }}
+{{- $task := $proof.primaryTaskLabel | default "" }}
+{{- $method := $proof.primaryMethodLabel | default "" }}
+{{- $v2 := in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $proof.classificationContract }}
+{{- $role := $proof.primaryResearchRole | default dict }}
+{{- $primary := slice }}
+{{- $other := slice }}
+{{- range $selected }}
+      {{- if or (and $v2 (eq .id $role.conceptId)) (and (not $v2) (eq .facet "task") (eq .issuedLabel $task)) (and (eq .facet "method") (eq .issuedLabel $method)) }}
+        {{- $primary = $primary | append . }}
+      {{- else }}{{ $other = $other | append . }}{{ end }}
+{{- end }}
+<section class="paper-tags" aria-label="论文研究分类">
+  <h2>研究分类</h2>
+  {{- if $v2 }}
+    {{- $types := dict "engineering" "工程研究" "science" "科学研究" "analysis" "机制分析" "evaluation" "评测研究" "resource" "研究资源" "review" "综述" "experience" "实践报告" "position" "观点论文" }}
+    {{- $scopes := dict "in-domain" "音频研究" "cross-domain" "跨域交叉" "adjacent-domain" "相邻声学" "out-of-domain" "其他领域" }}
+    <p class="paper-tags-scope"><span>{{ index $types $proof.researchType }}</span><span>{{ index $scopes $proof.domainScope }}</span></p>
+  {{- end }}
+  {{- if $primary }}<div class="paper-tags-primary">
+    {{ range $primary }}<div><strong>{{ if and (eq $proof.classificationContract "historical-source-taxonomy-classification-v3") (eq $role.kind "method") (eq .id $role.conceptId) }}主要研究机制{{ else if $v2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物" "method" "主要研究方法") .facet }}{{ else }}{{ if eq .facet "task" }}主任务{{ else }}主方法{{ end }}{{ end }}</strong>{{ partial "tag_path.html" (dict "concept" . "concepts" $concepts) }}</div>{{ end }}
+  </div>{{ end }}
+  {{- if and $v2 $proof.methodNotApplicable }}<details class="paper-tags-method-na"><summary>主要研究方法：不适用</summary><p>{{ $proof.methodNotApplicableReason }}</p></details>{{ end }}
+  {{- if $other }}
+  <details class="paper-tags-other"><summary>其他研究分类（{{ len $other }}）</summary>
+    {{- $facets := slice (dict "id" "task" "name" "其他任务") (dict "id" "method" "name" "其他方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") }}
+    {{- range $facet := $facets }}{{- $rows := where $other "facet" .id }}{{ if $rows }}
+      <div class="paper-tags-group"><strong>{{ .name }}</strong>{{ range $rows }}{{ partial "tag_path.html" (dict "concept" . "concepts" $concepts) }}{{ end }}</div>
+    {{- end }}{{ end }}
+  </details>{{ end }}
+  <p class="tag-note">路径末项为直接分类，前面的名称表示现行目录中的上级方向；核验历史分类时，仍使用当时保存的词表。</p>
+  {{- if in (slice "source-only-taxonomy" "source-only-tags" "source-only-taxonomy-v2" "controlled-current-page-source-taxonomy-v2" "source-only-taxonomy-v3" "source-bound-current-page-fullsite-taxonomy-v3" "source-bound-independent-review-qualification") $proof.evidenceType }}<p class="tag-note">只补研究分类：依据原论文与独立审核，导读正文未重写或重新审核。</p>
+  {{- else if $proof.evidenceContract }}<p class="tag-note">分类依据历史论文来源与分析记录核验。</p>{{ end }}
+</section>
+{{- else if eq ((partial "tag_page_proof.html" .).publicationStatus | default "") "withheld" }}
+<p class="tag-note tag-publication-withheld">研究分类暂缓展示，待独立复核；导读正文与原文入口保留。</p>
+{{- else if or .Params.paper_digest_tags_contract .Params.paper_digest_taxonomy_contract }}
+<p class="tag-note">研究分类信息暂未核验。</p>
+{{- else }}
+{{- $identity := partial "research_source_identity_proof.html" . }}
+{{- $metadata := partial "research_metadata.html" . }}
+{{- if $metadata.identityEvidenceContract }}
+<p class="tag-note">论文身份已依据封存来源核验；研究方向尚未完成核验。</p>
+{{- end }}
+{{- end }}
+{{- $metadata := partial "research_metadata.html" . }}
+{{- $visibleSource := $metadata.classificationProvenance | default $metadata.classificationSource | default $metadata.sealedSource | default dict }}
+{{- $tagProof := partial "tag_page_proof.html" . }}
+{{- if and (not $visibleSource) $tagProof.evidenceContract }}{{ $visibleSource = $tagProof.source | default dict }}{{ end }}
+{{- with $visibleSource.provenanceDisclosure }}<p class="tag-note">{{ partial "render_https_text.html" . }}</p>{{ end }}
+{{- $versionWarning := $visibleSource.sourceVersionWarning | default "" }}
+{{- $historicalVersion := partial "research_historical_source_version.html" $visibleSource }}
+{{- if and $historicalVersion.valid $historicalVersion.warning }}{{ $versionWarning = $historicalVersion.warning }}{{ end }}
+{{- if $metadata.classificationProvenance }}{{ $versionWarning = partial "research_fullsite_source_warning.html" $metadata.classificationProvenance }}{{ end }}
+{{- with $versionWarning }}<p class="tag-note">{{ partial "render_https_text.html" . }}</p>{{ end }}

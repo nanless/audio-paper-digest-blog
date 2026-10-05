@@ -113,17 +113,17 @@ body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
 .research-tldr--header { background: var(--rw-brand-soft); border: 0; border-left: 3px solid var(--rw-brand); border-radius: 0 8px 8px 0; padding: 16px 20px; margin-top: 24px; }
 .research-tldr--header strong { font-size: 12px; font-weight: 650; color: var(--rw-brand); letter-spacing: .04em; margin-bottom: 6px; }
 .research-tldr--header p { font-size: 15px; line-height: 1.8; margin: 0; }
-.paper-taxonomy { background: var(--rw-surface-subtle); border: 0; border-radius: 12px; padding: 16px 20px; margin: 24px 0 0; }
-.paper-taxonomy h2 { font-size: 14px; font-weight: 650; margin-bottom: 10px; }
-.paper-taxonomy-primary > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; min-width: 0; }
-.paper-taxonomy-primary strong { font-size: 12px; margin: 0; flex-shrink: 0; }
-.paper-taxonomy-primary .taxonomy-path { flex: 1; min-width: 0; margin: 0; font-size: 13px; }
-.taxonomy-path-direct { background: var(--rw-surface); border-color: var(--rw-border); border-radius: 6px; font-weight: 600; }
-.paper-taxonomy-other { margin-top: 8px; }
-.paper-taxonomy-other > summary { font-size: 13px; font-weight: 600; }
-.paper-taxonomy .taxonomy-note { font-size: 12px; line-height: 1.75; margin: 8px 0 0; }
-.research-paper-header > .taxonomy-note { font-size: 13px; line-height: 1.8; padding: 14px 16px; margin: 16px 0 0; border-left: 2px solid var(--rw-accent); background: var(--rw-accent-soft); border-radius: 0 8px 8px 0; }
-.taxonomy-note a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.paper-tags { background: var(--rw-surface-subtle); border: 0; border-radius: 12px; padding: 16px 20px; margin: 24px 0 0; }
+.paper-tags h2 { font-size: 14px; font-weight: 650; margin-bottom: 10px; }
+.paper-tags-primary > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; min-width: 0; }
+.paper-tags-primary strong { font-size: 12px; margin: 0; flex-shrink: 0; }
+.paper-tags-primary .tag-path { flex: 1; min-width: 0; margin: 0; font-size: 13px; }
+.tag-path-direct { background: var(--rw-surface); border-color: var(--rw-border); border-radius: 6px; font-weight: 600; }
+.paper-tags-other { margin-top: 8px; }
+.paper-tags-other > summary { font-size: 13px; font-weight: 600; }
+.paper-tags .tag-note { font-size: 12px; line-height: 1.75; margin: 8px 0 0; }
+.research-paper-header > .tag-note { font-size: 13px; line-height: 1.8; padding: 14px 16px; margin: 16px 0 0; border-left: 2px solid var(--rw-accent); background: var(--rw-accent-soft); border-radius: 0 8px 8px 0; }
+.tag-note a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .research-layout { gap: 24px; grid-template-columns: 178px minmax(0, 760px) 170px; }
 .research-layout--digest { grid-template-columns: 190px minmax(0, 860px); }
 .research-main .post-content { font-size: 17px; line-height: 1.9; }
@@ -154,7 +154,7 @@ body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
 .research-subscribe { background: var(--rw-surface-subtle); }
 .editorial-single { background: transparent; border: 0; border-radius: 0; max-width: 900px; padding: 8px 0 32px; }
 
-/* Library and taxonomy inherit the same surfaces without changing controls. */
+/* 论文库和标签目录共用页面配色。 */
 .research-library__header { margin: 0 0 28px; }
 .research-library__header h1 { font-size: clamp(30px, 4vw, 42px); line-height: 1.25; margin: 12px 0; }
 .research-library__header p { font-size: 15px; line-height: 1.8; max-width: 68ch; }
@@ -175,12 +175,12 @@ body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
 .reading-backup:not([open]) > :not(summary) { display: none !important; }
 .reading-backup summary, .library-direction-panel > summary, .library-export-panel > summary { font-size: 13px; font-weight: 600; }
 .library-coverage { font-size: 12px; line-height: 1.8; }
-.taxonomy-facet { border-radius: 12px; padding: 20px; }
-.taxonomy-node-link { font-size: 14px; font-weight: 550; line-height: 1.5; }
-.taxonomy-node-link span { font-size: 11px; }
-.taxonomy-node-count { background: var(--rw-surface-subtle); color: var(--rw-muted); font-size: 11px; }
-.taxonomy-expand { background: var(--rw-surface-subtle); color: var(--rw-muted); }
-.taxonomy-notice { background: var(--rw-surface-subtle); border: 0; border-left: 2px solid var(--rw-border); border-radius: 0 8px 8px 0; font-size: 13px; }
+.tag-facet { border-radius: 12px; padding: 20px; }
+.tag-node-link { font-size: 14px; font-weight: 550; line-height: 1.5; }
+.tag-node-link span { font-size: 11px; }
+.tag-node-count { background: var(--rw-surface-subtle); color: var(--rw-muted); font-size: 11px; }
+.tag-expand { background: var(--rw-surface-subtle); color: var(--rw-muted); }
+.tag-notice { background: var(--rw-surface-subtle); border: 0; border-left: 2px solid var(--rw-border); border-radius: 0 8px 8px 0; font-size: 13px; }
 .research-terms__intro { font-size: 15px; line-height: 1.8; max-width: 78ch; }
 .research-search { max-width: 900px; margin-inline: auto; }
 .research-search .searchbox { margin-top: 28px; }
@@ -247,8 +247,8 @@ body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
   .research-paper-header__meta { font-size: 12px; }
   .research-tldr--header { padding: 14px 16px; margin-top: 20px; }
   .research-tldr--header p { font-size: 14px; line-height: 1.85; }
-  .paper-taxonomy { padding: 14px 16px; margin-top: 20px; }
-  .paper-taxonomy-primary { grid-template-columns: 1fr; gap: 4px; }
+  .paper-tags { padding: 14px 16px; margin-top: 20px; }
+  .paper-tags-primary { grid-template-columns: 1fr; gap: 4px; }
   .research-signal-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .research-signal-card { padding: 14px; }
   .research-signal-card:last-child { grid-column: 1 / -1; }
@@ -268,7 +268,7 @@ body, body.list { background: var(--rw-canvas); color: var(--rw-text); }
   .library-result p { font-size: 13px; }
   .reading-backup { margin-block: 12px; padding: 2px 12px; }
   .research-library__quick-filters { margin-block: 12px; }
-  .taxonomy-facet { padding: 16px; }
+  .tag-facet { padding: 16px; }
 }
 @media print {
   .main, .research-paper-header { max-width: none; padding: 0; }

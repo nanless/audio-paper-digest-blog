@@ -64,7 +64,7 @@ test('Hugo recommendations exclude all current identity guides, deduplicate cand
   assert.match(related, /相同研究条件/);
   assert.ok(current.indexOf('research-tldr-title') < current.indexOf('paper-tools-title'), 'overview precedes the complete tools');
   assert.equal((current.match(/id="research-tldr-title"/g) || []).length, 1);
-  assert.match(current, /paper-taxonomy/);
+  assert.match(current, /paper-tags/);
   const legacy = fs.readFileSync(path.join(destination, 'posts/legacy-current/index.html'), 'utf8');
   assert.match(legacy, /相同关键词/);
   const home = fs.readFileSync(path.join(destination, 'index.html'), 'utf8');

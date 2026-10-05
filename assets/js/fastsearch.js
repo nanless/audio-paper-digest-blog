@@ -158,7 +158,7 @@ function tagAliases(concepts, byId) {
 }
 
 function readTagFields(record) {
-  const core = window.ResearchTaxonomy;
+  const core = window.ResearchTags;
   if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
   // 核心脚本缺席时保留关键词搜索；这里只读取字段，不判断标签资格。
   const fields = [
@@ -203,7 +203,7 @@ loadingIndex = true; status.textContent = '正在载入搜索索引…';
 return loadIndex()
   .then((data) => {
     if (!Array.isArray(data)) throw new Error('Search index must be an array');
-    const core = window.ResearchTaxonomy;
+    const core = window.ResearchTags;
     if (core && typeof core.loadDisplayAssets === 'function') {
       return core.loadDisplayAssets(indexUrl, fetch).then(assets => ({ data, registry: assets.snapshot, catalog: assets.versions }));
     }
@@ -218,8 +218,8 @@ return loadIndex()
   .then((payload) => {
     const { data, registry, catalog } = payload;
     let graph = null;
-    if (window.ResearchTaxonomy && registry) {
-      try { graph = window.ResearchTaxonomy.createRegistry(registry, catalog); } catch (_) {}
+    if (window.ResearchTags && registry) {
+      try { graph = window.ResearchTags.createRegistry(registry, catalog); } catch (_) {}
     }
     const options = {
       isCaseSensitive: params.fuseOpts?.iscasesensitive ?? false,

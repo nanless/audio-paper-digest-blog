@@ -1,0 +1,94 @@
+{{- /* Global, lossless reconstruction of immutable packed proofs. Only the
+     build preflight parses duplicate JSON keys; Hugo independently verifies
+     physical shards, all refs, original hashes, membership and exact schemas. */ -}}
+{{- $memoKey := "fullsite-history:reconstructed:v1" -}}
+{{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
+  {{- $history := index hugo.Data "fullsite-taxonomy-history" | default dict }}{{ $result := dict -}}
+  {{- if eq ($history.contract | default "") "fullsite-source-taxonomy-audit-supplement-v1" -}}
+    {{- $valid := partial "research_exact_keys.html" (dict "value" $history "keys" (slice "contract" "records" "classificationRecords")) -}}
+    {{- $valid = and $valid (reflect.IsMap $history.records) (reflect.IsMap $history.classificationRecords) -}}
+    {{- $indexes := newScratch }}{{ $indexes.Set "refs" dict }}{{ $indexes.Set "keys" dict -}}
+    {{- range $path,$page := ($history.records | default dict) -}}
+      {{- $audit := index ($history.classificationRecords | default dict) ($page.classificationRef | default "") | default dict -}}
+      {{- $envelope := partial "tag_fullsite_envelope.html" (dict "record" $page "auditRecord" $audit "pagePath" $path) -}}
+      {{- $valid = and $valid $envelope.transportValid (not (isset ($indexes.Get "keys") ($page.pageKey | default ""))) -}}
+      {{- $indexes.SetInMap "keys" ($page.pageKey | default "") true -}}
+      {{- $paths := index ($indexes.Get "refs") ($page.classificationRef | default "") | default dict }}{{ $paths = merge $paths (dict $path true) }}{{ $indexes.SetInMap "refs" ($page.classificationRef | default "") $paths -}}
+    {{- end -}}
+    {{- $valid = and $valid (eq (len ($indexes.Get "refs")) (len ($history.classificationRecords | default dict))) -}}
+    {{- range $id,$audit := ($history.classificationRecords | default dict) -}}
+      {{- $paths := index ($indexes.Get "refs") $id | default dict }}{{ $admitted := $audit.planAdmission.pages | default slice -}}
+      {{- $valid = and $valid (eq $audit.paperId $id) (eq (len $paths) (len $admitted)) (gt (len $paths) 0) -}}
+      {{- range $page := $admitted }}{{ $valid = and $valid (isset $paths $page.pagePath) }}{{ end -}}
+    {{- end -}}
+    {{- if $valid }}{{ $result = $history }}{{ end -}}
+  {{- else if eq ($history.contract | default "") "fullsite-source-taxonomy-audit-sharded-supplement-v1" -}}
+    {{- $sha := `^[a-f0-9]{64}$` }}{{ $integer := `^[1-9][0-9]*$` -}}
+    {{- $valid := partial "research_exact_keys.html" (dict "value" $history "keys" (slice "contract" "packing" "recordCount" "paperCount" "totalBytes" "dependencyProfiles" "admissionProjectionSha256" "sourceProjectionSha256" "shards")) -}}
+    {{- $valid = and $valid (eq $history.packing "shared-dependencies-and-paper-records-v1") (findRE $sha ($history.admissionProjectionSha256 | default "") 1) (findRE $sha ($history.sourceProjectionSha256 | default "") 1) (partial "research_safe_integer.html" (dict "value" $history.recordCount "min" 1 "max" 9007199254740991)) (partial "research_safe_integer.html" (dict "value" $history.paperCount "min" 1 "max" 9007199254740991)) (partial "research_safe_integer.html" (dict "value" $history.totalBytes "min" 1 "max" 268435456)) (le (int $history.totalBytes) 268435456) (reflect.IsSlice $history.shards) (gt (len $history.shards) 0) (le (len $history.shards) 128) -}}
+    {{- $d := $history.dependencyProfiles | default dict -}}
+    {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $d "keys" (slice "native" "source" "own" "issuers"))) -}}
+    {{- $state := newScratch }}{{ $state.Set "records" dict }}{{ $state.Set "papers" dict }}{{ $state.Set "paths" dict }}{{ $state.Set "pageKeys" dict -}}
+    {{- range $kind := slice "native" "source" "own" "issuers" -}}
+      {{- $state.Set (printf "used-%s" $kind) dict }}{{ $profiles := index $d $kind | default dict }}{{ $valid = and $valid (reflect.IsMap $profiles) -}}
+      {{- range $ref,$profile := $profiles -}}
+        {{- $valid = and $valid (findRE $sha $ref 1) (reflect.IsMap $profile) -}}
+        {{- if ne $kind "issuers" }}{{ $valid = and $valid (eq (crypto.SHA256 ($profile | partial "research_canonical_json.html")) $ref) }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $total := 0 }}{{ $records := 0 }}{{ $papers := 0 -}}
+    {{- range $i,$descriptor := $history.shards -}}
+      {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $descriptor "keys" (slice "path" "bytes" "sha256" "paperCount" "recordCount"))) -}}
+      {{- $expected := printf "fullsite-taxonomy/part-%04d-%.12s.json" (add $i 1) ($descriptor.sha256 | default "") -}}
+      {{- $valid = and $valid (eq ($descriptor.path | default "") $expected) (findRE $sha ($descriptor.sha256 | default "") 1) (not (isset ($state.Get "paths") $expected)) (partial "research_safe_integer.html" (dict "value" $descriptor.bytes "min" 1 "max" 8388608)) (le (int $descriptor.bytes) 8388608) (partial "research_safe_integer.html" (dict "value" $descriptor.paperCount "min" 1 "max" 9007199254740991)) (partial "research_safe_integer.html" (dict "value" $descriptor.recordCount "min" 1 "max" 9007199254740991)) -}}
+      {{- $state.SetInMap "paths" $expected true -}}
+      {{- $physicalPath := printf "static/%s" $expected }}{{ $raw := "" -}}
+      {{- if fileExists $physicalPath }}{{ $raw = readFile $physicalPath }}{{ end -}}
+      {{- $physicalValid := and (eq (len $raw) (int $descriptor.bytes)) (eq (crypto.SHA256 $raw) $descriptor.sha256) }}{{ $valid = and $valid $physicalValid -}}
+      {{- if $physicalValid -}}
+        {{- $shard := $raw | transform.Unmarshal -}}
+        {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $shard "keys" (slice "contract" "papers"))) (eq $shard.contract "fullsite-source-taxonomy-audit-packed-shard-v1") (reflect.IsSlice $shard.papers) (eq (len $shard.papers) (int $descriptor.paperCount)) -}}
+        {{- $shardRecords := 0 }}{{ $total = add $total (len $raw) -}}
+        {{- range $p := $shard.papers -}}
+          {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $p "keys" (slice "contract" "paperId" "auditRecordSha256" "auditRecord" "classificationRecord" "pages"))) (eq $p.contract "fullsite-taxonomy-packed-paper-v1") (not (isset ($state.Get "papers") $p.paperId)) (reflect.IsMap $p.pages) (findRE $sha $p.auditRecordSha256 1) -}}
+          {{- $outer := $p.auditRecord | default dict }}{{ $inner := $p.classificationRecord | default dict -}}
+          {{- $valid = and $valid (partial "research_exact_keys.html" (dict "value" $outer "keys" (slice "contract" "paperId" "runId" "fingerprint" "fingerprintInputs" "planAdmission" "classificationRecordSha256" "proofSha256" "protectedDependenciesRef" "classificationRecordRef"))) (reflect.IsMap $inner) (not (isset $inner "protectedDependencies")) (eq $outer.classificationRecordRef $p.paperId) (eq $outer.paperId $p.paperId) (eq $inner.paperId $p.paperId) -}}
+          {{- $issuerRef := $outer.protectedDependenciesRef | default "" }}{{ $issuer := index ($d.issuers | default dict) $issuerRef | default dict -}}
+          {{- $valid = and $valid (findRE $sha $issuerRef 1) (partial "research_exact_keys.html" (dict "value" $issuer "keys" (slice "contract" "nativeRef" "sourceRef" "ownRef"))) (eq ($issuer.contract | default "") "fullsite-taxonomy-audit-protected-dependencies-v1") -}}
+          {{- $dependency := dict "contract" ($issuer.contract | default "") }}{{ $dependencyScratch := newScratch }}{{ $dependencyScratch.Set "value" $dependency -}}
+          {{- range $kind := slice "native" "source" "own" -}}
+            {{- $ref := index $issuer (printf "%sRef" $kind) | default "" }}{{ $profiles := index $d $kind | default dict -}}
+            {{- $valid = and $valid (findRE $sha $ref 1) (isset $profiles $ref) -}}
+            {{- $dependencyScratch.SetInMap "value" $kind (index $profiles $ref | default dict) }}{{ $state.SetInMap (printf "used-%s" $kind) $ref true -}}
+          {{- end -}}
+          {{- $state.SetInMap "used-issuers" $issuerRef true }}{{ $dependency = $dependencyScratch.Get "value" -}}
+          {{- $valid = and $valid (eq (crypto.SHA256 ($dependency | partial "research_canonical_json.html")) $issuerRef) (eq ($inner.protectedDependenciesRef | default "") ($issuer.nativeRef | default "unapproved")) -}}
+          {{- $innerScratch := newScratch }}{{ $innerScratch.Set "value" dict -}}
+          {{- range $key,$value := $inner }}{{ if ne $key "protectedDependenciesRef" }}{{ $innerScratch.SetInMap "value" $key $value }}{{ end }}{{ end -}}
+          {{- $innerScratch.SetInMap "value" "protectedDependencies" $dependency.native }}{{ $inner = $innerScratch.Get "value" -}}
+          {{- $outerScratch := newScratch }}{{ $outerScratch.Set "value" dict -}}
+          {{- range $key,$value := $outer }}{{ if not (in (slice "protectedDependenciesRef" "classificationRecordRef") $key) }}{{ $outerScratch.SetInMap "value" $key $value }}{{ end }}{{ end -}}
+          {{- $outerScratch.SetInMap "value" "protectedDependencies" $dependency }}{{ $outerScratch.SetInMap "value" "classificationRecord" $inner }}{{ $outer = $outerScratch.Get "value" -}}
+          {{- $valid = and $valid (eq (crypto.SHA256 ($outer | partial "research_canonical_json.html")) $p.auditRecordSha256) (eq (crypto.SHA256 ($inner | partial "research_canonical_json.html")) $outer.classificationRecordSha256) -}}
+          {{- $paperPaths := newScratch }}{{ $paperPaths.Set "paths" dict -}}
+          {{- range $path,$page := $p.pages -}}
+            {{- $valid = and $valid (findRE `^content/posts/[A-Za-z0-9][A-Za-z0-9._-]*\.md$` $path 1) (not (isset ($state.Get "records") $path)) (not (isset ($state.Get "pageKeys") ($page.pageKey | default ""))) (eq $page.classificationRef $p.paperId) (eq $page.auditRecordSha256 $p.auditRecordSha256) -}}
+            {{- /* This structural result never grants UI admission. The per-page
+                 gate still requires approved projections and full inner review. */ -}}
+            {{- $envelope := partial "tag_fullsite_envelope.html" (dict "record" $page "auditRecord" $outer "pagePath" $path) }}{{ $valid = and $valid $envelope.transportValid -}}
+            {{- $state.SetInMap "records" $path $page }}{{ $state.SetInMap "pageKeys" $page.pageKey true }}{{ $paperPaths.SetInMap "paths" $path $page }}{{ $shardRecords = add $shardRecords 1 }}{{ $records = add $records 1 -}}
+          {{- end -}}
+          {{- $admitted := $outer.planAdmission.pages | default slice }}{{ $valid = and $valid (eq (len $admitted) (len $p.pages)) -}}
+          {{- range $page := $admitted }}{{ $projected := index ($paperPaths.Get "paths") $page.pagePath | default dict }}{{ $valid = and $valid $projected (eq $projected.pageKey $page.pageKey) (eq $projected.pageSha256 $page.pageSha256) (eq $projected.bodySha256 $page.bodySha256) }}{{ end -}}
+          {{- $state.SetInMap "papers" $p.paperId $outer }}{{ $papers = add $papers 1 -}}
+        {{- end -}}
+        {{- $valid = and $valid (eq $shardRecords (int $descriptor.recordCount)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range $kind := slice "native" "source" "own" "issuers" }}{{ $valid = and $valid (eq (len ($state.Get (printf "used-%s" $kind))) (len (index $d $kind))) }}{{ end -}}
+    {{- $valid = and $valid (eq $total (int $history.totalBytes)) (eq $records (int $history.recordCount)) (eq $papers (int $history.paperCount)) -}}
+    {{- if $valid }}{{ $result = dict "contract" "fullsite-source-taxonomy-audit-supplement-v1" "records" ($state.Get "records") "classificationRecords" ($state.Get "papers") "admissionProjectionSha256" $history.admissionProjectionSha256 "sourceProjectionSha256" $history.sourceProjectionSha256 }}{{ end -}}
+  {{- end -}}
+  {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (site.Store.Get $memoKey) -}}

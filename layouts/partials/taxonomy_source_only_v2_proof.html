@@ -1,8 +1,0 @@
-{{- $valid := false -}}
-{{- if eq .registrySha256 "cbb157b602ea9e7a41c84fc28cdda99481aef5e8bfefd8120b1c69900a8ea638" -}}
-{{- $valid = partial "taxonomy_classification_v3_proof.html" (dict "record" . "profile371" true) -}}
-{{- else -}}
-{{- /* The generic contract never receives a controlled current-page context. */ -}}
-{{- $valid = partial "taxonomy_classification_v2_proof.html" (dict "record" .) -}}
-{{- end -}}
-{{- return $valid -}}

@@ -1,7 +1,7 @@
 (function (root, factory) {
   'use strict';
   var citation = typeof module === 'object' && module.exports ? require('./citation-source.js') : root.ResearchCitation;
-  var tagApi = typeof module === 'object' && module.exports ? require('./taxonomy-core.js') : root.ResearchTaxonomy;
+  var tagApi = typeof module === 'object' && module.exports ? require('./tag-core.js') : root.ResearchTags;
   var api = factory(citation, tagApi);
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.ResearchReadingExport = api;

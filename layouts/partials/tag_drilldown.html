@@ -32,7 +32,7 @@
 {{- end }}
 
 {{- /* 3. 读取计数：直接 N 篇 / 含子树 M 篇 */}}
-{{- $stats := partialCached "taxonomy_concept_counts.html" "global" }}
+{{- $stats := partialCached "tag_concept_counts.html" "global" }}
 
 {{- /* 4. 组装可见行：计数为 0 的子标签不显示 */}}
 {{- $rows := slice }}

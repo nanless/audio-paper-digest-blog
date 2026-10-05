@@ -64,7 +64,7 @@ function browserFixture(kind, items, suffix = '', fail = false, registry = null,
     addEventListener(key, fn) { listeners[key] = fn; },
     clearTimeout() {}, setTimeout(fn) { fn(); return 1; }
   };
-  if (catalog || newAssets) window.ResearchTaxonomy = require('../assets/js/taxonomy-core');
+  if (catalog || newAssets) window.ResearchTags = require('../assets/js/tag-core');
   const fuseLoads = [];
   class FakeFuse {
     constructor(data, options) { this.data = data; fuseLoads.push({ data, options }); }
@@ -223,10 +223,10 @@ test('classic search projects validated historical parents to the current direct
 
 // The core may fail to load independently. Keyword list/reset must remain usable
 // without rendering unverified type-aware classification labels.
-test('absent taxonomy core preserves ordinary and typed keyword cards plus zero-match reset', async () => {
+test('absent tag core preserves ordinary and typed keyword cards plus zero-match reset', async () => {
   const browser = browserFixture('library', [record(), { ...record(1), taxonomyClassificationContract: 'historical-source-taxonomy-classification-v2', researchType: 'science', primaryResearchRole: { kind: 'scientific_topic', conceptId: 'scientific_topic.phonetics', label: '语音学' } }]);
   await browser.ready();
-  assert.equal(browser.window.ResearchTaxonomy, undefined);
+  assert.equal(browser.window.ResearchTags, undefined);
   assert.match(browser.nodes['library-count'].textContent, /找到 2 条/);
   assert.equal(browser.nodes['library-results'].children.length, 2);
   for (const card of browser.nodes['library-results'].children) assert.equal(card.children[0].children[0].children[0].tagName, 'a');
@@ -250,7 +250,7 @@ test('核心脚本缺席时，新标签字段仍可搜索且不改写原索引',
   for (const kind of ['library', 'search']) {
     const browser = browserFixture(kind, [item], '?q=声音理解');
     await browser.ready();
-    assert.equal(browser.window.ResearchTaxonomy, undefined);
+    assert.equal(browser.window.ResearchTags, undefined);
     const results = browser.nodes[kind === 'library' ? 'library-results' : 'searchResults'];
     assert.equal(results.children.length, 1);
     assert.match(results.textContent, /论文 0/);

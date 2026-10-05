@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
-const exporter=require('../assets/js/reading-export'),core=require('../assets/js/taxonomy-core');
+const exporter=require('../assets/js/reading-export'),core=require('../assets/js/tag-core');
 const graph=core.createRegistry(require('../data/taxonomy-registry.json'),require('../data/taxonomy-catalog.json'));
 const records=Object.values(require('../data/taxonomy-history-v2.json').records);
 function entry(r){return {title:r.originalTitle||r.paperId,permalink:'/blog/'+r.pageKey.replace(/^content\//,'').replace(/\.md$/,'/'),paperId:r.paperId,

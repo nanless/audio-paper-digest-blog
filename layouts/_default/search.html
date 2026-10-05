@@ -14,8 +14,8 @@
 </section>
 {{- $loader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $cache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}
-{{- $taxonomy := resources.Get "js/taxonomy-core.js" | minify | fingerprint }}
-<script defer src="{{ $taxonomy.RelPermalink }}" integrity="{{ $taxonomy.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $tagScript := resources.Get "js/tag-core.js" | minify | fingerprint }}
+<script defer src="{{ $tagScript.RelPermalink }}" integrity="{{ $tagScript.Data.Integrity }}" crossorigin="anonymous"></script>
 <script defer src="{{ $cache.RelPermalink }}" integrity="{{ $cache.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $worker := resources.Get "js/search-index-worker.js" | minify | fingerprint }}
 <script defer src="{{ $loader.RelPermalink }}" data-index-worker="{{ $worker.RelPermalink }}" integrity="{{ $loader.Data.Integrity }}" crossorigin="anonymous"></script>

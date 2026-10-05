@@ -8,7 +8,20 @@ test('classification V3 is separately strict; no synthetic profile enters public
 test('old1492+3 retain exact bytes/order and their original validators; only new371 dispatches separately',()=>{
  const baseline=require('./fixtures/published1492-ordered-record-pins.json'),dispatch=require('../scripts/lib/taxonomy-public-proof');
  assert.equal(digest(fs.readFileSync(path.join(repo,'scripts/lib/taxonomy-v2-proof.js'))),baseline.oldValidatorSha256);
- assert.equal(digest(fs.readFileSync(path.join(repo,'layouts/partials/taxonomy_classification_v2_proof.html'))),baseline.oldHugoValidatorSha256);
+ // 原校验器源码只作字节归档；当前模板仅改两个调用路径，不冒用原源码身份。
+ const originalHugoBytes=fs.readFileSync(path.join(__dirname,'fixtures/historical-tag-validators/classification-v2.html'));
+ assert.equal(digest(originalHugoBytes),baseline.oldHugoValidatorSha256);
+ let renamedHugoSource=originalHugoBytes.toString('utf8');
+ for(const [originalCall,currentCall] of [
+  ['partial "taxonomy_na_full_source_proof.html"','partial "tag_na_full_source_proof.html"'],
+  ['partialCached "taxonomy_registry_index.html"','partialCached "tag_catalog_index.html"']
+ ]){
+  assert.equal(renamedHugoSource.split(originalCall).length-1,1,'每个原调用路径恰好出现一次');
+  renamedHugoSource=renamedHugoSource.replace(originalCall,currentCall);
+ }
+ const currentHugoBytes=fs.readFileSync(path.join(repo,'layouts/partials/tag_classification_v2_proof.html'));
+ assert.deepEqual(currentHugoBytes,Buffer.from(renamedHugoSource,'utf8'));
+ assert.notEqual(digest(currentHugoBytes),baseline.oldHugoValidatorSha256);
  const bytes=fs.readFileSync(path.join(repo,'data/current-page-taxonomy-history-v2.json'));assert.equal(digest(bytes),baseline.controlledFileSha256);
  const records=JSON.parse(fs.readFileSync(path.join(repo,'data/taxonomy-history-v2.json'))).records,catalog=JSON.parse(fs.readFileSync(path.join(repo,'data/taxonomy-catalog.json'))),snapshots=new Map(catalog.snapshots.map(s=>[s.registrySha256,s]));
  assert.equal(baseline.records.length,1492);assert.deepEqual(Object.keys(records).slice(0,1492),baseline.records.map(r=>r.pagePath));
@@ -25,7 +38,7 @@ test('V2 cannot upgrade an engineering method primary by merely rehashing the re
 test('Hugo independently enforces the same rehashed V3 branch and default production refusal',t=>{
  const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'classification-v3-hugo-'));t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));fs.mkdirSync(path.join(tmp,'data'));fs.mkdirSync(path.join(tmp,'layouts'));
  fs.cpSync(path.join(repo,'layouts/partials'),path.join(tmp,'layouts/partials'),{recursive:true});for(const n of ['taxonomy-catalog','taxonomy-registry'])fs.copyFileSync(path.join(repo,'data',n+'.json'),path.join(tmp,'data',n+'.json'));
- const rows=cases.rows();fs.writeFileSync(path.join(tmp,'data/cases.json'),JSON.stringify(rows));fs.writeFileSync(path.join(tmp,'hugo.yaml'),'baseURL: https://example.test/\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\n');fs.writeFileSync(path.join(tmp,'layouts/index.html'),'[{{ range $i,$case := hugo.Data.cases }}{{ if $i }},{{ end }}{{ dict "name" $case.name "fixture" (partial "taxonomy_classification_v3_proof.html" (dict "record" $case.record "syntheticFixture" true)) "production" (partial "taxonomy_source_only_v3_proof.html" $case.record) | jsonify | safeHTML }}{{ end }}]');
+ const rows=cases.rows();fs.writeFileSync(path.join(tmp,'data/cases.json'),JSON.stringify(rows));fs.writeFileSync(path.join(tmp,'hugo.yaml'),'baseURL: https://example.test/\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\n');fs.writeFileSync(path.join(tmp,'layouts/index.html'),'[{{ range $i,$case := hugo.Data.cases }}{{ if $i }},{{ end }}{{ dict "name" $case.name "fixture" (partial "tag_classification_v3_proof.html" (dict "record" $case.record "syntheticFixture" true)) "production" (partial "tag_source_only_v3_proof.html" $case.record) | jsonify | safeHTML }}{{ end }}]');
  execFileSync('hugo',['--source',tmp,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});const result=JSON.parse(fs.readFileSync(path.join(tmp,'public/index.html')));for(let i=0;i<rows.length;i++){assert.equal(result[i].fixture,rows[i].expected,rows[i].name);assert.equal(result[i].production,false,rows[i].name);}
 });
 test('real build entry rejects a V3 sidecar before mutating output or invoking Hugo',t=>{

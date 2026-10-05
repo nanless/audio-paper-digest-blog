@@ -8,7 +8,7 @@
     {{- $ids := slice -}}
     {{- $nodes := newScratch -}}
     {{- $nodes.Set "labels" dict -}}
-    {{- range (partial "taxonomy_valid_records.html" .) -}}
+    {{- range (partial "tag_valid_records.html" .) -}}
       {{- if in (slice "task" "method" "setting") .facet -}}
         {{- $ids = union $ids (slice .id) -}}
         {{- $nodes.SetInMap "labels" .id (dict "facet" .facet "zh" .zh) -}}

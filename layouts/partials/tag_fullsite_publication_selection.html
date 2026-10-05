@@ -1,0 +1,69 @@
+{{- /* Eligibility is orthogonal to source/proof validity. Recheck every original
+     current page, including withheld pages, before publishing this partition.
+     Physical selector pin preserves original ordered tuples; Go maps do not
+     pretend to reproduce JavaScript JSON property-order transport bytes. */ -}}
+{{- $memoKey := "fullsite-publication-selection:v1" -}}
+{{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
+  {{- $history := partial "tag_fullsite_history.html" . -}}
+  {{- $result := dict "required" false "valid" true "eligible" dict "withheld" dict -}}
+  {{- $profiles := partial "tag_fullsite_profiles.html" . -}}
+  {{- $expected := slice -}}
+  {{- range $profiles -}}
+    {{- if and (eq .admissionProjectionSha256 ($history.admissionProjectionSha256 | default "")) (eq .sourceProjectionSha256 ($history.sourceProjectionSha256 | default "")) -}}
+      {{- $pin := .publicationSelectionSha256 | default "" }}{{ if not (in $expected $pin) }}{{ $expected = $expected | append $pin }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $file := "data/fullsite-taxonomy-publication-selection.json" -}}
+  {{- if and (eq (len $expected) 1) (index $expected 0) -}}
+    {{- $pin := index $expected 0 }}{{ $result = merge $result (dict "required" true "valid" false) -}}
+    {{- $valid := and (fileExists $file) (findRE `^[a-f0-9]{64}$` $pin 1) -}}
+    {{- $s := dict }}{{ if $valid }}{{ $bytes := readFile $file }}{{ $valid = eq (crypto.SHA256 $bytes) $pin }}{{ if $valid }}{{ $s = $bytes | transform.Unmarshal }}{{ end }}{{ end -}}
+    {{- $keys := slice }}{{ range $k, $v := $s }}{{ $keys = $keys | append $k }}{{ end -}}
+    {{- $valid = and $valid (eq (sort $keys) (sort (slice "contract" "collectionSha256" "admissionSha256" "sourcesSha256" "inputInventorySha256" "eligible" "withheld" "counts"))) (eq $s.contract "fullsite-exact-native-publication-selection-v1") (eq $s.collectionSha256 (crypto.SHA256 (readFile "data/fullsite-taxonomy-history.json"))) (eq $s.admissionSha256 $history.admissionProjectionSha256) (eq $s.sourcesSha256 $history.sourceProjectionSha256) (reflect.IsSlice $s.eligible) (reflect.IsSlice $s.withheld) -}}
+    {{- $state := newScratch }}{{ $state.Set "tuples" dict }}{{ $state.Set "eligible" dict }}{{ $state.Set "withheld" dict }}{{ $state.Set "pages" dict }}{{ $state.Set "keys" slice -}}
+    {{- $held := "arxiv:2604.21628" -}}
+    {{- $w := dict }}{{ if eq (len ($s.withheld | default slice)) 1 }}{{ $w = index $s.withheld 0 }}{{ end -}}
+    {{- $wkeys := slice }}{{ range $k, $v := $w }}{{ $wkeys = $wkeys | append $k }}{{ end -}}
+    {{- $valid = and $valid (eq (sort $wkeys) (sort (slice "tuple" "authoritySha256" "reasonCode"))) (eq $w.authoritySha256 "06bd936c0419efa08a6a4ce1b7e6f6f04f3e738cf31b791f817a1aec0491f2ce") (eq $w.reasonCode "source-qualified-primary-aim-review-pending") (eq ($w.tuple.paperId | default "") $held) -}}
+    {{- $selectionTuples := $s.eligible | default slice }}{{ if $w.tuple }}{{ $selectionTuples = $selectionTuples | append $w.tuple }}{{ end -}}
+    {{- range $t := $selectionTuples -}}
+      {{- $id := $t.paperId | default "" }}{{ $audit := index ($history.classificationRecords | default dict) $id | default dict }}{{ $c := $audit.classificationRecord | default dict -}}
+      {{- $fields := slice }}{{ range $k, $v := $t }}{{ $fields = $fields | append $k }}{{ end -}}
+      {{- $valid = and $valid (eq (sort $fields) (sort (slice "paperId" "runId" "auditRecordSha256" "outerProofSha256" "classificationRecordSha256" "nativeProofSha256" "sourceDescriptorSha256" "issuerDependencySha256" "pages"))) (not (isset ($state.Get "tuples") $id)) $audit (eq $id $audit.paperId) (reflect.IsSlice $t.pages) (eq (len $t.pages) (len ($audit.planAdmission.pages | default slice))) -}}
+      {{- $pages := slice -}}
+      {{- range $p := ($t.pages | default slice) -}}
+        {{- $row := index ($history.records | default dict) $p.pagePath | default dict -}}
+        {{- $pfields := slice }}{{ range $k, $v := $p }}{{ $pfields = $pfields | append $k }}{{ end -}}
+        {{- $expectedPage := dict "pagePath" $p.pagePath "pageKey" $row.pageKey "pageSha256" $row.pageSha256 "bodySha256" $row.bodySha256 "pageProofSha256" $row.proofSha256 -}}
+        {{- $valid = and $valid $row (eq $row.paperId $id) (eq (sort $pfields) (sort (slice "pagePath" "pageKey" "pageSha256" "bodySha256" "pageProofSha256"))) (eq (partial "research_canonical_json.html" $p) (partial "research_canonical_json.html" $expectedPage)) (not (isset ($state.Get "pages") $p.pagePath)) (not (in ($state.Get "keys") $p.pageKey)) -}}
+        {{- $state.SetInMap "pages" $p.pagePath true }}{{ $state.Set "keys" (($state.Get "keys") | append $p.pageKey) }}{{ $pages = $pages | append $expectedPage -}}
+        {{- if eq $id $held }}{{ $state.SetInMap "withheld" $p.pagePath true }}{{ else }}{{ $state.SetInMap "eligible" $p.pagePath true }}{{ end -}}
+      {{- end -}}
+      {{- $expectedTuple := dict "paperId" $id "runId" $audit.runId "auditRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $audit)) "outerProofSha256" $audit.proofSha256 "classificationRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c)) "nativeProofSha256" $c.proofSha256 "sourceDescriptorSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c.source)) "issuerDependencySha256" $audit.fingerprintInputs.protectedDependencySha256 "pages" $pages -}}
+      {{- $valid = and $valid (eq (partial "research_canonical_json.html" $t) (partial "research_canonical_json.html" $expectedTuple)) -}}
+      {{- $state.SetInMap "tuples" $id $expectedTuple -}}
+    {{- end -}}
+    {{- /* Recover the original paper sequence from immutable shard arrays, not
+         sorted Go maps. The approved selector supplies exact page-key order. */ -}}
+    {{- $all := slice }}{{ $eligible := slice }}{{ $manifest := index hugo.Data "fullsite-taxonomy-history" | default dict -}}
+    {{- range ($manifest.shards | default slice) }}{{ $shard := readFile (printf "static/%s" .path) | transform.Unmarshal }}{{ range $shard.papers }}{{ $t := index ($state.Get "tuples") .paperId | default dict }}{{ $all = $all | append $t }}{{ if ne .paperId $held }}{{ $eligible = $eligible | append $t }}{{ end }}{{ end }}{{ end -}}
+    {{- $counts := dict "inputPapers" (len $all) "inputPages" (len $history.records) "eligiblePapers" (len $eligible) "eligiblePages" (len ($state.Get "eligible")) "withheldPapers" 1 "withheldPages" (len ($state.Get "withheld")) -}}
+    {{- $valid = and $valid (eq (len ($state.Get "tuples")) (len $history.classificationRecords)) (eq (len ($state.Get "pages")) (len $history.records)) (eq (crypto.SHA256 (partial "research_canonical_json.html" $all)) $s.inputInventorySha256) (eq (partial "research_canonical_json.html" $eligible) (partial "research_canonical_json.html" $s.eligible)) (eq (partial "research_canonical_json.html" $counts) (partial "research_canonical_json.html" $s.counts)) -}}
+    {{- /* This is a full original input gate; no row is hidden before proof,
+         source identity, current bytes and independent review are checked. */ -}}
+    {{- range $path, $record := ($history.records | default dict) -}}
+      {{- $audit := index $history.classificationRecords $record.classificationRef }}{{ $input := dict "record" $record "auditRecord" $audit "pagePath" $path -}}
+      {{- $text := "" }}{{ $pageValid := fileExists $path }}{{ if $pageValid }}{{ $text = readFile $path }}{{ $body := replaceRE `^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)` "" $text }}{{ $pageValid = and (ne $body $text) (eq (crypto.SHA256 $text) $record.pageSha256) (eq (crypto.SHA256 $body) $record.bodySha256) }}{{ end -}}
+      {{- $context := partial "tag_fullsite_envelope.html" $input -}}
+      {{- $pageValid = and $pageValid $context.valid (eq $context.profile.admissionProjectionSha256 $history.admissionProjectionSha256) (eq $context.profile.sourceProjectionSha256 $history.sourceProjectionSha256) (eq $context.profile.publicationSelectionSha256 $pin) -}}
+      {{- $cacheKey := printf "fullsite-inner:%s:%s" $record.auditRecordSha256 $record.registrySha256 -}}
+      {{- if not (site.Store.Get (printf "%s:ready" $cacheKey)) }}{{ $projection := partial "tag_fullsite_projection.html" $input }}{{ $innerValid := partial "tag_classification_v3_proof.html" (dict "record" $projection "fullsiteEnvelope" $input) }}{{ site.Store.Set $cacheKey $innerValid }}{{ site.Store.Set (printf "%s:ready" $cacheKey) true }}{{ end -}}
+      {{- $valid = and $valid $pageValid (site.Store.Get $cacheKey) -}}
+    {{- end -}}
+    {{- if $valid }}{{ $result = dict "required" true "valid" true "eligible" ($state.Get "eligible") "withheld" ($state.Get "withheld") "counts" $counts }}{{ else }}{{ errorf "Exact fullsite publication selection or original all-page proof gate rejected" }}{{ end -}}
+  {{- else if or (gt (len $expected) 1) (fileExists $file) -}}
+    {{- $result = dict "required" true "valid" false "eligible" dict "withheld" dict }}{{ errorf "Unknown or inconsistent fullsite publication selection context" -}}
+  {{- end -}}
+  {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (site.Store.Get $memoKey) -}}

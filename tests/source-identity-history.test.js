@@ -28,8 +28,8 @@ function fixture(t) {
     fs.cpSync(path.join(origin, 'layouts/partials'), path.join(root, 'layouts/partials'), { recursive: true });
   }
   fs.copyFileSync(path.join(draft, 'layouts/_default/index.json'), path.join(root, 'layouts/_default/index.json'));
-  fs.writeFileSync(path.join(root, 'layouts/index.html'), '{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
-  fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_taxonomy.html" . }}');
+  fs.writeFileSync(path.join(root, 'layouts/index.html'), '{{ partial "tag_concept_counts.html" . | jsonify }}');
+  fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_tags.html" . }}');
   for (const file of ['taxonomy-registry.json', 'taxonomy-catalog.json']) fs.copyFileSync(path.join(repository, 'data', file), path.join(root, 'data', file));
   fs.writeFileSync(path.join(root, 'hugo.yaml'), 'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\noutputs:\n  home: [HTML, JSON]\nmarkup:\n  goldmark:\n    renderer:\n      unsafe: true\n');
   return root;
@@ -171,7 +171,7 @@ test('actual independently replayed arXiv and conference identity batch accepts 
     assert.equal(record.citation.sourceVersionWarning, proof.source.sourceVersionWarning);
     assert.equal(record.citation.pdfVersionBinding.pdfVersionAuthenticated, false);
   }
-  const core = require(path.join(repository, 'assets/js/taxonomy-core'));
+  const core = require(path.join(repository, 'assets/js/tag-core'));
   const graph = core.createRegistry(JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-registry.json'))), JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-catalog.json'))));
   assert.equal(core.groupPapers(index, graph).length, new Set(Object.values(history.records).map(r => r.paperId)).size);
   const counts = JSON.parse(fs.readFileSync(path.join(root, 'public/index.html')));
@@ -187,7 +187,7 @@ test('complete canonical supplement agrees with browser unique paper and subtree
   assert.equal(index.length, Object.keys(history.records).length);
   assert.ok(index.every(r => r.tagEvidenceContract === history.contract && r.identityStatus === 'verified'));
   assert.ok(index.every(r => r.primaryTaskId && r.primaryMethodId));
-  const core = require(path.join(repository, 'assets/js/taxonomy-core'));
+  const core = require(path.join(repository, 'assets/js/tag-core'));
   const graph = core.createRegistry(JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-registry.json'))), JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-catalog.json'))));
   const groups = core.groupPapers(index, graph);
   const expectedPapers = new Set(Object.values(history.records).map(r => r.paperId)).size;
@@ -247,7 +247,7 @@ test('real source-only classifications use source quotes and accepted independen
   assert.equal(accepted.length, Object.keys(history.records).length);
   assert.ok(accepted.every(r => r.tagEvidenceType === 'source-only-taxonomy' && r.primaryTaskId && r.primaryMethodId && r.identityStatus === 'verified'));
   assert.ok(index.filter(r => !r.tagEvidenceContract).every(r => !r.primaryTaskId && !r.primaryMethodId && !r.tagConcepts.length));
-  const core = require(path.join(repository, 'assets/js/taxonomy-core'));
+  const core = require(path.join(repository, 'assets/js/tag-core'));
   const graph = core.createRegistry(JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-registry.json'))), JSON.parse(fs.readFileSync(path.join(root, 'data/taxonomy-catalog.json'))));
   const counts = JSON.parse(fs.readFileSync(path.join(root, 'public/index.html'))).map(r => ({ id: r.id, direct: r.direct, subtree: r.sub }));
   assert.deepEqual(counts, core.counts(core.groupPapers(index, graph), graph).concepts);
@@ -284,7 +284,7 @@ test('actual version-binding classification preserves paths, exact citation and 
     record.proofSha256 = hash(JSON.stringify(canonical(body))); records[copyKey] = record;
   }
   fs.writeFileSync(path.join(root, 'data/taxonomy-history.json'), JSON.stringify({ ...history, records }));
-  fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_taxonomy.html" . }}<pre id="citation">{{ partial "citation_source.html" . | jsonify }}</pre>');
+  fs.writeFileSync(path.join(root, 'layouts/_default/single.html'), '{{ partial "paper_tags.html" . }}<pre id="citation">{{ partial "citation_source.html" . | jsonify }}</pre>');
   const index = build(root);
   const accepted = index.filter(r => r.tagEvidenceType === 'source-only-taxonomy');
   assert.equal(accepted.length, 1);

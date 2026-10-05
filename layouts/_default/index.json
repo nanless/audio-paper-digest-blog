@@ -3,7 +3,7 @@
 {{- range site.RegularPages -}}
   {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) (ne .Layout `library`) }}
     {{- $metadata := partial "research_metadata.html" . }}
-    {{- $tagProof := partial "taxonomy_page_proof.html" . }}
+    {{- $tagProof := partial "tag_page_proof.html" . }}
 
     {{- $description := .Description | default "" | plainify | htmlUnescape | strings.TrimSpace }}
     {{- $score := $metadata.score }}
@@ -34,7 +34,7 @@
       "tagConcepts" ($tagProof.concepts | default slice)
       "citation" (partial "citation_source.html" .)
     }}
-    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "tagPublicationStatus" "withheld" "tags" slice) }}{{ end }}
+    {{- if eq ($metadata.tagPublicationStatus | default "") "withheld" }}{{ $entry = merge $entry (dict "tagPublicationStatus" "withheld" "tags" slice) }}{{ end }}
     {{- with $tagProof.registrySha256 }}{{ $entry = merge $entry (dict "tagCatalogSha256" .) }}{{ end }}
     {{- with $tagProof.evidenceContract }}{{ $entry = merge $entry (dict "tagEvidenceContract" . "tagEvidenceType" ($tagProof.evidenceType | default "canonical-analysis") "tagProofSha256" $tagProof.proofSha256 "tagPageSha256" $tagProof.pageSha256) }}{{ end }}
     {{- if in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3" "exact1028-independent-review-qualified-classification-v1") $tagProof.classificationContract }}

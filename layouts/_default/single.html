@@ -5,7 +5,7 @@
 {{- $isConferenceSummary := and (eq $metadata.pageType "conference") (not $isTask) }}
 {{- $isPaper := eq $metadata.pageType "paper" }}
 {{- $isResearchPage := eq .Section "posts" }}
-{{- $hasControlledTaxonomy := gt (len (partial "taxonomy_valid_records.html" .)) 0 }}
+{{- $hasVerifiedTags := gt (len (partial "tag_valid_records.html" .)) 0 }}
 
 {{- if $isResearchPage }}
 {{- $headline := $metadata.headline }}
@@ -16,9 +16,9 @@
 {{- with $metadata.score }}{{ $score = printf "%s/10" . }}{{ end }}
 {{- $arxivId := $metadata.arxivId }}
 {{- $task := $metadata.task }}
-{{- $taxonomyProof := partial "taxonomy_page_proof.html" . }}
-{{- $isSourceV2 := and $hasControlledTaxonomy (in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $taxonomyProof.classificationContract) (in (slice "historical-source-taxonomy-supplement-v2" "historical-current-page-source-taxonomy-supplement-v2" "historical-source-taxonomy-supplement-v3") $taxonomyProof.evidenceContract) }}
-{{- $researchRole := $taxonomyProof.primaryResearchRole | default dict }}
+{{- $tagProof := partial "tag_page_proof.html" . }}
+{{- $isSourceV2 := and $hasVerifiedTags (in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $tagProof.classificationContract) (in (slice "historical-source-taxonomy-supplement-v2" "historical-current-page-source-taxonomy-supplement-v2" "historical-source-taxonomy-supplement-v3") $tagProof.evidenceContract) }}
+{{- $researchRole := $tagProof.primaryResearchRole | default dict }}
 
 <article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
   <a class="skip-to-article" href="#article-body">跳到正文</a>
@@ -52,7 +52,7 @@
       <p>{{ $intro | markdownify }}</p>
     </section>
     {{- end }}
-    {{- if $isPaper }}{{ partial "paper_taxonomy.html" . }}{{ end }}
+    {{- if $isPaper }}{{ partial "paper_tags.html" . }}{{ end }}
   </header>
 
   {{- $layoutClass := "research-layout" }}
@@ -98,8 +98,8 @@
       </section>
       {{- end }}
       <section class="research-signal-card">
-        <span class="research-signal-card__label">{{ if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}研究分类{{ else if and $isSourceV2 (eq $taxonomyProof.classificationContract "historical-source-taxonomy-classification-v3") (eq $researchRole.kind "method") }}主要研究机制{{ else if $isSourceV2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物") $researchRole.kind | default "研究定位" }}{{ else }}{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}{{ end }}</span>
-        <p>{{ if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}原文来源已核对，研究分类正在复核。{{ else if $isSourceV2 }}{{ $researchRole.label | default "查看正文中的研究问题与方法说明" }}{{ else }}{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}{{ end }}</p>
+        <span class="research-signal-card__label">{{ if eq ($metadata.tagPublicationStatus | default "") "withheld" }}研究分类{{ else if and $isSourceV2 (eq $tagProof.classificationContract "historical-source-taxonomy-classification-v3") (eq $researchRole.kind "method") }}主要研究机制{{ else if $isSourceV2 }}{{ index (dict "task" "主要研究任务" "scientific_topic" "主要研究主题" "research_focus" "主要研究重点" "artifact" "主要研究产物") $researchRole.kind | default "研究定位" }}{{ else }}{{ if .Params.paper_digest_primary_task }}主任务{{ else }}研究定位{{ end }}{{ end }}</span>
+        <p>{{ if eq ($metadata.tagPublicationStatus | default "") "withheld" }}原文来源已核对，研究分类正在复核。{{ else if $isSourceV2 }}{{ $researchRole.label | default "查看正文中的研究问题与方法说明" }}{{ else }}{{ with $task }}{{ . }}{{ else }}{{ with .Params.tags }}{{ index . 0 }}{{ else }}查看正文中的任务与方法说明{{ end }}{{ end }}{{ end }}</p>
       </section>
       {{- with $arxivId }}
       <section class="research-signal-card">
@@ -112,10 +112,10 @@
   </div>
 
   <footer class="post-footer research-page-footer">
-    {{- if not $hasControlledTaxonomy }}
+    {{- if not $hasVerifiedTags }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
-    {{- if eq ($metadata.taxonomyPublicationStatus | default "") "withheld" }}{{ $primaryTask = "" }}<p class="taxonomy-note">研究分类暂缓展示，待核验后补充。</p>{{ end }}
+    {{- if eq ($metadata.tagPublicationStatus | default "") "withheld" }}{{ $primaryTask = "" }}<p class="tag-note">研究分类暂缓展示，待核验后补充。</p>{{ end }}
     <ul class="post-tags">
       {{- $translations := hugo.Data.tag_translations }}
       {{- range ($.GetTerms $tags) }}

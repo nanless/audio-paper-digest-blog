@@ -68,7 +68,7 @@
     </div>
   </details>
   <p id="library-coverage" class="library-coverage"></p>
-  <details class="taxonomy-note">
+  <details class="tag-note">
     <summary>覆盖数字与筛选说明</summary>
     <p>按已核论文身份去重，身份待核时按页面保留。研究类型与范围仅展示已有核验记录，缺失信息不自动补填。方向覆盖数量不代表所有论文都接受了逐篇原文复审。</p>
     <p>同分面任选其一，跨分面同时满足。主要研究角色与主方法只匹配明确标注；方向条件仅适用于论文解读，浏览汇总页时请清除方向条件。</p>
@@ -94,8 +94,8 @@
   </div>
   <noscript><p class="research-library__empty">论文库筛选需要 JavaScript。你仍可使用<a href="{{ "archives/" | absURL }}">归档</a>或<a href="{{ "tags/" | absURL }}">主题页</a>浏览全部内容。</p></noscript>
 </section>
-{{- $taxonomyScript := resources.Get "js/taxonomy-core.js" | minify | fingerprint }}
-<script defer src="{{ $taxonomyScript.RelPermalink }}" integrity="{{ $taxonomyScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $tagScript := resources.Get "js/tag-core.js" | minify | fingerprint }}
+<script defer src="{{ $tagScript.RelPermalink }}" integrity="{{ $tagScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $indexLoader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $indexCache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}
 <script defer src="{{ $indexCache.RelPermalink }}" integrity="{{ $indexCache.Data.Integrity }}" crossorigin="anonymous"></script>

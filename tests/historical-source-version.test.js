@@ -25,8 +25,8 @@ test('actual signed historical fallback is replayed in both identity and canonic
   for (const dir of ['content/posts','data','layouts/_default']) fs.mkdirSync(path.join(root,dir),{recursive:true});
   fs.cpSync(path.join(draft,'layouts/partials'),path.join(root,'layouts/partials'),{recursive:true});
   fs.copyFileSync(path.join(draft,'layouts/_default/index.json'),path.join(root,'layouts/_default/index.json'));
-  fs.writeFileSync(path.join(root,'layouts/index.html'),'{{ partial "taxonomy_concept_counts.html" . | jsonify }}');
-  fs.writeFileSync(path.join(root,'layouts/_default/single.html'),'{{ partial "paper_taxonomy.html" . }}');
+  fs.writeFileSync(path.join(root,'layouts/index.html'),'{{ partial "tag_concept_counts.html" . | jsonify }}');
+  fs.writeFileSync(path.join(root,'layouts/_default/single.html'),'{{ partial "paper_tags.html" . }}');
   fs.writeFileSync(path.join(root,'hugo.yaml'),'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\noutputs:\n  home: [HTML, JSON]\n');
   for(const file of ['taxonomy-registry.json','taxonomy-catalog.json'])fs.copyFileSync(path.join(repo,'data',file),path.join(root,'data',file));
   const histories=Object.fromEntries(['identity-history','taxonomy-history'].map(name=>[name,JSON.parse(fs.readFileSync(path.join(repo,'data',name+'.json')))]));

@@ -57,8 +57,8 @@ test('research directions retain multilevel browsing without the legacy exact ta
   const template = fs.readFileSync(
     path.join(__dirname, '..', 'layouts', '_default', 'terms.html'), 'utf8'
   );
-  assert.match(template, /id="taxonomy-browser"/);
-  assert.match(template, /id="taxonomy-query"/);
+  assert.match(template, /id="tag-browser"/);
+  assert.match(template, /id="tag-query"/);
   assert.match(template, /筛选分类/);
   assert.match(template, /方向覆盖数量不代表每篇原文均已重新审核/);
   assert.doesNotMatch(template, /taxonomy-legacy|精确标签索引|筛选精确标签|计数按页面统计|标签索引（新旧兼容）|新发布内容使用统一分类/);

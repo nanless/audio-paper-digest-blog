@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const core = require('../assets/js/taxonomy-core');
+const core = require('../assets/js/tag-core');
 const library = require('../assets/js/paper-library');
 
 test('coverage separates original direction mappings from jointly verified type and scope', () => {

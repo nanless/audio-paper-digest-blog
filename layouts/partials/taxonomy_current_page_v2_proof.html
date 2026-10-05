@@ -1,8 +1,0 @@
-{{- /* Only the independently replayed installed H R4 plan is approved. The
-     embedded plan and a separate complete classification must both replay. */ -}}
-{{- $approvedProductionPlans := dict "e12fc74dfe549733c607110ce0067c9977e369b534f752c35baede249e6a358a" "e847d7b1b549a1499cc85a0d77dcc864f51a4c1de9dd920aab51a11b0ba2922c" -}}
-{{- $context := partial "taxonomy_current_page_v2_envelope.html" . -}}
-{{- $accepted := and $context.valid (isset $approvedProductionPlans $context.planSha256) -}}
-{{- if $accepted }}{{ $accepted = eq .currentPageTaxonomyPlan.protectedDependencySha256 (index $approvedProductionPlans $context.planSha256) }}{{ end -}}
-{{- if $accepted }}{{ $accepted = partial "taxonomy_classification_v2_proof.html" (dict "record" . "controlledContext" $context) }}{{ end -}}
-{{- return $accepted -}}

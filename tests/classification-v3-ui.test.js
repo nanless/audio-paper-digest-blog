@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
-const core=require('../assets/js/taxonomy-core'),exporter=require('../assets/js/reading-export'),cases=require('./fixtures/classification-v3-public');
+const core=require('../assets/js/tag-core'),exporter=require('../assets/js/reading-export'),cases=require('./fixtures/classification-v3-public');
 const graph=core.createRegistry(require('../data/taxonomy-registry.json'),require('../data/taxonomy-catalog.json'));
 function entry(f){const r=f.record;return {title:'Synthetic protocol example',pageType:'paper',permalink:'https://example.test/blog/posts/synthetic/',paperId:r.paperId,arxivId:'2601.00001',identityStatus:'verified',
  taxonomyContract:core.contract,taxonomyClassificationContract:r.classificationContract,taxonomyEvidenceContract:'historical-source-taxonomy-supplement-v3',taxonomyEvidenceType:r.evidenceType,taxonomyRegistrySha256:r.registrySha256,taxonomyConcepts:r.concepts,

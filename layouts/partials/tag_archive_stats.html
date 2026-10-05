@@ -7,8 +7,8 @@
   {{- $metadata := partial "research_metadata.html" . -}}
   {{- if eq $metadata.pageType "paper" -}}
     {{- $paperPages = add $paperPages 1 -}}
-    {{- $proof := partial "taxonomy_page_proof.html" . -}}
-    {{- $validRecords := partial "taxonomy_valid_records.html" . -}}
+    {{- $proof := partial "tag_page_proof.html" . -}}
+    {{- $validRecords := partial "tag_valid_records.html" . -}}
     {{- $valid := and (partial "tag_flat_contract.html" $proof.contract) (gt (len $validRecords) 0) (eq (len $validRecords) (len ($proof.concepts | default slice))) -}}
     {{- $ids := slice }}{{ if $valid }}{{ range $validRecords }}{{ $ids = union $ids (slice .id) }}{{ end }}{{ end -}}
     {{- if not $valid }}{{ $unclassifiedPages = add $unclassifiedPages 1 }}{{ end -}}
@@ -27,7 +27,7 @@
 {{- $concept := dict }}{{ $directionStats := dict -}}
 {{- if eq (len $matches) 1 -}}
   {{- $concept = index $matches 0 -}}
-  {{- range (partialCached "taxonomy_concept_counts.html" "global") -}}
+  {{- range (partialCached "tag_concept_counts.html" "global") -}}
     {{- if eq .id $concept.id }}{{ $directionStats = . }}{{ end -}}
   {{- end -}}
 {{- end -}}

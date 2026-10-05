@@ -12,7 +12,7 @@
   }
 
   // 页面标签字段只提供概念编号、分类维度和展示名称；其他名称、别名及上级关系
-  // 从 data/taxonomy-registry.json 的词表快照补齐，以支持相应的关键词搜索。
+  // 从显示词表快照补齐，以支持相应的关键词搜索。
   function registryIndex(registry) {
     var byId = Object.create(null);
     var records = registry && !Array.isArray(registry) && Array.isArray(registry.concepts)
@@ -72,7 +72,7 @@
 
   function readTagFields(record) {
     var core = typeof module !== 'undefined' && module.exports
-      ? require('./taxonomy-core.js') : typeof window !== 'undefined' ? window.ResearchTaxonomy : null;
+      ? require('./tag-core.js') : typeof window !== 'undefined' ? window.ResearchTags : null;
     if (core && typeof core.readTagFields === 'function') return core.readTagFields(record);
     // 核心脚本缺席时仍可搜索普通条目；这里只读取字段，不判断标签资格。
     var fields = [
@@ -305,7 +305,7 @@
   var researchTypeSelect = document.getElementById('library-research-type');
   var directionSearch = document.getElementById('library-direction-search');
   var draftNode = document.getElementById('library-draft-status');
-  var api = window.ResearchTaxonomy;
+  var api = window.ResearchTags;
   var graph = null;
   var registryRecords = Object.create(null);
   var groups = [];
@@ -397,17 +397,17 @@
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
     if (api && [api.v2Contract, api.v3Contract, api.qualified1028Contract].includes(entry.tagClassificationContract) && entry.primaryResearchRole) {
-      var roles = document.createElement('p'); roles.className = 'taxonomy-note';
+      var roles = document.createElement('p'); roles.className = 'tag-note';
       roles.textContent = [api.researchTypeLabels[entry.researchType], api.domainLabels[entry.domainScope],
         api.primaryRoleLabel(entry) + '：' + entry.primaryResearchRole.label,
         entry.methodNotApplicable === true ? '研究方法不适用' : ''].filter(Boolean).join(' · ');
       body.appendChild(roles);
     }
     if (['historical-direct-taxonomy-supplement-v1', 'historical-direct-tag-supplement-v2', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.tagEvidenceContract)) {
-      var classificationNote = document.createElement('p'); classificationNote.className = 'taxonomy-note';
+      var classificationNote = document.createElement('p'); classificationNote.className = 'tag-note';
       classificationNote.textContent = '研究分类已补充核验 · 导读正文未重写'; body.appendChild(classificationNote);
     } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.tagContract) {
-      var identityNote = document.createElement('p'); identityNote.className = 'taxonomy-note';
+      var identityNote = document.createElement('p'); identityNote.className = 'tag-note';
       identityNote.textContent = '论文身份已核验 · 研究方向尚待分类'; body.appendChild(identityNote);
     }
     if (entry.type === 'paper') {

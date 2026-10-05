@@ -44,7 +44,7 @@ test('actual verified page notes link the three sealed sources while citation wa
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'https-verified-page-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
   for(const dir of ['content/posts','data','layouts/_default'])fs.mkdirSync(path.join(root,dir),{recursive:true});
   fs.cpSync(path.join(baseline,'layouts/partials'),path.join(root,'layouts/partials'),{recursive:true});
-  for(const name of ['render_https_text','paper_taxonomy'])fs.copyFileSync(path.join(repo,'layouts/partials',name+'.html'),path.join(root,'layouts/partials',name+'.html'));
+  for(const name of ['render_https_text','paper_tags'])fs.copyFileSync(path.join(repo,'layouts/partials',name+'.html'),path.join(root,'layouts/partials',name+'.html'));
   for(const name of ['taxonomy-registry','taxonomy-catalog','taxonomy-history','identity-history'])fs.copyFileSync(path.join(baseline,'data',name+'.json'),path.join(root,'data',name+'.json'));
   const history=JSON.parse(fs.readFileSync(path.join(baseline,'data/identity-history.json'))).records;
   const chosen=['arxiv:2604.14654','arxiv:2605.12987','arxiv:2606.01009'].map(id=>Object.entries(history).find(([,r])=>r.paperId===id));
@@ -52,13 +52,13 @@ test('actual verified page notes link the three sealed sources while citation wa
   for(const[key]of chosen)fs.copyFileSync(path.join(baseline,key),path.join(root,key));
   fs.writeFileSync(path.join(root,'hugo.yaml'),'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\n');
   fs.writeFileSync(path.join(root,'layouts/index.html'),'{{ $items := newScratch }}{{ $items.Set "items" dict }}{{ range .Site.RegularPages }}{{ $citation := partial "citation_source.html" . }}{{ $items.SetInMap "items" $citation.paperId $citation }}{{ end }}{{ $items.Get "items" | jsonify }}');
-  fs.writeFileSync(path.join(root,'layouts/_default/single.html'),'{{ partial "paper_taxonomy.html" . }}');
+  fs.writeFileSync(path.join(root,'layouts/_default/single.html'),'{{ partial "paper_tags.html" . }}');
   execFileSync('hugo',['--source',root,'--noBuildLock','--panicOnWarning'],{stdio:'pipe',env:{...process.env,GOMAXPROCS:'2',HUGO_NUMWORKERMULTIPLIER:'1'}});
   const citations=JSON.parse(fs.readFileSync(path.join(root,'public/index.html')));
   for(const[key,record]of chosen){
     const expected=record.source.sourceVersionWarning||record.source.sourceVersion.warning;
     const html=fs.readFileSync(path.join(root,'public/posts',path.basename(key,'.md'),'index.html'),'utf8');
-    const note=[...html.matchAll(/<p class="taxonomy-note">([\s\S]*?)<\/p>/g)].map(m=>m[1]).find(part=>htmlText(part)===expected);
+    const note=[...html.matchAll(/<p class="tag-note">([\s\S]*?)<\/p>/g)].map(m=>m[1]).find(part=>htmlText(part)===expected);
     assert.ok(note,'visible exact warning '+record.paperId);assert.equal(citations[record.paperId].sourceVersionWarning,expected,'underlying export citation bytes unchanged');
     for(const url of expected.match(/https:\/\/[^\s（）]+/g)||[])assert.ok(note.includes('href="'+url+'"'),'actual linked source '+url);
   }

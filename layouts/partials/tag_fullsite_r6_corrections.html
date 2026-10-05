@@ -1,0 +1,38 @@
+{{- /* A separate publication overlay; original collections/holds stay intact. */ -}}
+{{- $memo := "fullsite-r6-exact-six:v1" -}}
+{{- if not (site.Store.Get (printf "%s:ready" $memo)) -}}
+ {{- $result := dict }}{{ $file := "data/fullsite-r6-corrections-authority.json" -}}
+ {{- if fileExists $file -}}
+  {{- $valid := eq (crypto.SHA256 (readFile $file)) "110d10cca5d32a0477ab5160b9dad58ab42c8122becdc8c6ab49c7474c613086" -}}
+  {{- $authority := index hugo.Data "fullsite-r6-corrections-authority" | default dict }}{{ $history := index hugo.Data "fullsite-r6-corrections-history" | default dict -}}
+  {{- $valid = and $valid (eq $authority.contract "fullsite-exact-six-successor-publication-authority-v1") (eq $authority.rootAuthoritySha256 "a93cde51642f0e387a097cec990cf6396e2b16497b2f2a5eeb2507718a294852") (eq (len $authority.rows) 6) (eq $history.contract "fullsite-source-taxonomy-audit-supplement-v1") (eq (len $history.records) 6) (eq (len $history.classificationRecords) 6) -}}
+  {{- $oldHolds := partial "tag_old_v2_publication_holds.html" . }}{{ $oldAuthority := index hugo.Data "taxonomy-old-v2-publication-holds" | default dict }}{{ $oldHistory := partial "tag_fullsite_history.html" . -}}
+  {{- $valid = and $valid $oldHolds.valid }}{{ $seen := slice }}{{ $eligible := dict -}}
+  {{- range $row := $authority.rows -}}
+   {{- $id := $row.paperId }}{{ $a := index $history.classificationRecords $id | default dict }}{{ $c := $a.classificationRecord | default dict }}{{ $pages := slice -}}
+   {{- $valid = and $valid (not (in $seen $id)) (ne $id $authority.unresolvedPaperId) (eq $a.paperId $id) }}{{ $seen = $seen | append $id -}}
+   {{- range $path,$r := $history.records -}}
+    {{- if eq $r.paperId $id -}}
+     {{- $input := dict "record" $r "auditRecord" $a "pagePath" $path }}{{ $context := partial "tag_fullsite_envelope.html" $input }}{{ $projection := partial "tag_fullsite_projection.html" $input -}}
+     {{- $valid = and $valid $context.valid (partial "tag_classification_v3_proof.html" (dict "record" $projection "fullsiteEnvelope" $input)) (fileExists $path) -}}
+     {{- if fileExists $path }}{{ $bytes := readFile $path }}{{ $body := replaceRE `^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)` "" $bytes }}{{ $valid = and $valid (ne $body $bytes) (eq (crypto.SHA256 $bytes) $r.pageSha256) (eq (crypto.SHA256 $body) $r.bodySha256) }}{{ end -}}
+     {{- $pages = $pages | append (dict "pagePath" $path "pageKey" $r.pageKey "pageSha256" $r.pageSha256 "bodySha256" $r.bodySha256 "pageProofSha256" $r.proofSha256) -}}
+     {{- $eligible = merge $eligible (dict $path (merge $r (dict "contract" "paper-taxonomy-flat-tags-compat-v1" "evidenceContract" $history.contract "classificationContract" "historical-source-taxonomy-classification-v3" "source" $c.source "classificationRecordSha256" $a.classificationRecordSha256 "classificationProofSha256" $c.proofSha256))) -}}
+    {{- end -}}
+   {{- end -}}
+   {{- $tuple := dict "paperId" $id "runId" $a.runId "auditRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $a)) "outerProofSha256" $a.proofSha256 "classificationRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c)) "nativeProofSha256" $c.proofSha256 "sourceDescriptorSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c.source)) "issuerDependencySha256" $a.fingerprintInputs.protectedDependencySha256 "pages" $pages -}}
+   {{- $valid = and $valid (eq (partial "research_canonical_json.html" $tuple) (partial "research_canonical_json.html" $row.successor)) -}}
+   {{- if eq $row.predecessor.kind "held-original-v2" -}}
+    {{- $matched := false }}{{ range $oldAuthority.rows }}{{ if eq .paperId $id }}{{ $matched = eq (partial "research_canonical_json.html" .originalTuple) (partial "research_canonical_json.html" $row.predecessor.tuple) }}{{ end }}{{ end }}{{ $valid = and $valid $matched -}}
+   {{- else if eq $row.predecessor.kind "held-original-native" -}}
+    {{- $old := index $oldHistory.classificationRecords $id | default dict }}{{ $oc := $old.classificationRecord | default dict }}{{ $op := slice -}}
+    {{- range $path,$p := $oldHistory.records }}{{ if eq $p.paperId $id }}{{ $op = $op | append (dict "pagePath" $path "pageKey" $p.pageKey "pageSha256" $p.pageSha256 "bodySha256" $p.bodySha256 "pageProofSha256" $p.proofSha256) }}{{ end }}{{ end -}}
+    {{- $oldTuple := dict "paperId" $id "runId" $old.runId "auditRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $old)) "outerProofSha256" $old.proofSha256 "classificationRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $oc)) "nativeProofSha256" $oc.proofSha256 "sourceDescriptorSha256" (crypto.SHA256 (partial "research_canonical_json.html" $oc.source)) "issuerDependencySha256" $old.fingerprintInputs.protectedDependencySha256 "pages" $op -}}
+    {{- $valid = and $valid (eq (partial "research_canonical_json.html" $oldTuple) (partial "research_canonical_json.html" $row.predecessor.tuple)) -}}
+   {{- else if ne $row.predecessor.kind "existing-flat-retrieval-labels" }}{{ $valid = false }}{{ end -}}
+  {{- end -}}
+  {{- if $valid }}{{ $result = $eligible }}{{ else }}{{ errorf "Exact R6 six successor/source/review/publication authority rejected" }}{{ end -}}
+ {{- end -}}
+ {{- site.Store.Set $memo $result }}{{ site.Store.Set (printf "%s:ready" $memo) true -}}
+{{- end -}}
+{{- return (site.Store.Get $memo) -}}

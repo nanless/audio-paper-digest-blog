@@ -71,9 +71,9 @@
     {{- $slugId := findRE `[0-9]{4}-[0-9]{4,5}$` $baseName 1 -}}
     {{- if ne $sourceKind "conference" }}{{- with $slugId }}{{ $arxivId = replace (index . 0) "-" "." }}{{ $identityStatus = "inferred" }}{{ $sourceKind = "arxiv" }}{{ end -}}{{ end -}}
   {{- end -}}
-  {{- $proof := partial "taxonomy_page_proof.html" . -}}
+  {{- $proof := partial "tag_page_proof.html" . -}}
   {{- if partial "tag_flat_contract.html" $proof.contract -}}
-    {{- range (partial "taxonomy_valid_records.html" .) -}}
+    {{- range (partial "tag_valid_records.html" .) -}}
       {{- if and (eq .facet "task") (eq .zh $proof.primaryTaskLabel) }}{{ $primaryTaskId = .id }}{{ $task = .zh }}{{ end -}}
       {{- if and (eq .facet "method") (eq .zh $proof.primaryMethodLabel) }}{{ $primaryMethodId = .id }}{{ $method = .zh }}{{ end -}}
     {{- end -}}
@@ -132,7 +132,7 @@
       {{- if findRE `^arxiv:[0-9]{4}\.[0-9]{4,5}$` $paperId 1 }}{{ $sourceKind = "arxiv" }}{{ $arxivId = strings.TrimPrefix "arxiv:" $paperId }}{{ end -}}
       {{- if hasPrefix $proof.source.kind "fullsite-" }}{{ $classificationProvenance = $proof.source }}{{ end }}{{ if $proof.source.sourceUrl }}{{ $classificationSource = $proof.source }}{{ end -}}
     {{- end -}}
-    {{- $v2Roles = dict "taxonomyPublicationStatus" "withheld" -}}
+    {{- $v2Roles = dict "tagPublicationStatus" "withheld" -}}
   {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
 {{- end -}}

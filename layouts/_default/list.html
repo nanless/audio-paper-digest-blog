@@ -35,12 +35,12 @@
 {{- if and (eq .Kind "term") (eq .Type "tags") }}
 {{- $termName := .Data.Term | default .Title }}
 {{- $archive := partial "tag_archive_stats.html" (dict "page" . "termName" $termName) }}
-<aside class="taxonomy-notice taxonomy-notice--current" aria-label="标签索引与研究方向">
-  <p class="taxonomy-notice__title">标签索引</p>
-  <p class="taxonomy-notice__body">此入口按页面中保留的标签名称收录，共 {{ $archive.totalPages }} 页，包含 {{ $archive.paperCount }} 条论文记录{{ if $archive.nonPaperPages }}及 {{ $archive.nonPaperPages }} 页汇总或其他内容{{ end }}。论文记录按已核身份去重，身份待核时按页面保留；其中 {{ $archive.classifiedPaperCount }} 条已有已核验的研究方向。标签名称的收录范围与研究方向筛选不同。</p>
-  {{- if $archive.unclassifiedPageCount }}<p class="taxonomy-notice__body">其中 {{ $archive.unclassifiedPageCount }} 页论文解读尚无完整的已核验方向；标签名称仍可用于查找，不能据此推断论文分类。</p>{{ end }}
+<aside class="tag-notice tag-notice--current" aria-label="标签索引与研究方向">
+  <p class="tag-notice__title">标签索引</p>
+  <p class="tag-notice__body">此入口按页面中保留的标签名称收录，共 {{ $archive.totalPages }} 页，包含 {{ $archive.paperCount }} 条论文记录{{ if $archive.nonPaperPages }}及 {{ $archive.nonPaperPages }} 页汇总或其他内容{{ end }}。论文记录按已核身份去重，身份待核时按页面保留；其中 {{ $archive.classifiedPaperCount }} 条已有已核验的研究方向。标签名称的收录范围与研究方向筛选不同。</p>
+  {{- if $archive.unclassifiedPageCount }}<p class="tag-notice__body">其中 {{ $archive.unclassifiedPageCount }} 页论文解读尚无完整的已核验方向；标签名称仍可用于查找，不能据此推断论文分类。</p>{{ end }}
   {{- with $archive.concept }}
-  <p class="taxonomy-notice__body"><a href="{{ printf "%s?concept=%s" ("papers/" | relURL) (.id | urlquery) }}">按已核验方向浏览：{{ .zh }}</a>（全站直接 {{ $archive.directionStats.direct }} 条 · 含下级 {{ $archive.directionStats.sub }} 条论文记录）。</p>
+  <p class="tag-notice__body"><a href="{{ printf "%s?concept=%s" ("papers/" | relURL) (.id | urlquery) }}">按已核验方向浏览：{{ .zh }}</a>（全站直接 {{ $archive.directionStats.direct }} 条 · 含下级 {{ $archive.directionStats.sub }} 条论文记录）。</p>
   {{- end }}
 </aside>
 {{- if and (not $archive.concept) $archive.associatedDirections }}

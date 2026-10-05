@@ -29,7 +29,7 @@ test('Hugo independently rejects role, raw response, source and complete fingerp
  for(const [name,mutate]of Object.entries(negative)){const r=fixture().record;mutate(r);const c=r.classificationRecord;c.fingerprint=api.stableHash(c.fingerprintInputs);r.requestStageFingerprint=c.fingerprint;c.reviewProofSha256=api.stableHash(c.reviewProof);r.reviewProofSha256=c.reviewProofSha256;seal(r);cases.push({name,record:r,expected:false});}
  fs.writeFileSync(path.join(temporary,'data/v2-cases.json'),JSON.stringify(cases));
  fs.writeFileSync(path.join(temporary,'hugo.yaml'),'baseURL: https://example.test/\nbuildFuture: true\ndisableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\n');
- fs.writeFileSync(path.join(temporary,'layouts/index.html'),'[{{ range $i, $case := index hugo.Data "v2-cases" }}{{ if $i }},{{ end }}{{ dict "name" $case.name "accepted" (partial "taxonomy_source_only_v2_proof.html" $case.record) | jsonify | safeHTML }}{{ end }}]');
+ fs.writeFileSync(path.join(temporary,'layouts/index.html'),'[{{ range $i, $case := index hugo.Data "v2-cases" }}{{ if $i }},{{ end }}{{ dict "name" $case.name "accepted" (partial "tag_source_only_v2_proof.html" $case.record) | jsonify | safeHTML }}{{ end }}]');
  execFileSync('hugo',['--source',temporary,'--noBuildLock','--panicOnWarning'],{stdio:'pipe'});
  const result=JSON.parse(fs.readFileSync(path.join(temporary,'public/index.html')));
  result.forEach((r,i)=>assert.equal(r.accepted,cases[i].expected,r.name));

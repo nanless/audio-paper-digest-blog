@@ -1,0 +1,34 @@
+{{- /* Root-approved exact original tuple qualification. Original objects and
+     their source/review proofs are replayed before any hold is applied. */ -}}
+{{- $memoKey := "tag-old-v2-publication-holds:v1" -}}
+{{- if not (site.Store.Get (printf "%s:ready" $memoKey)) -}}
+  {{- $history := index hugo.Data "taxonomy-history-v2" | default dict }}{{ $file := "data/taxonomy-old-v2-publication-holds.json" -}}
+  {{- $ids := slice "conference:icassp:2026:icassp-arnumber:11461028" "conference:icassp:2026:icassp-arnumber:11461877" "conference:icassp:2026:icassp-arnumber:11461446" "conference:icassp:2026:icassp-arnumber:11464546" "conference:icassp:2026:icassp-arnumber:11464268" -}}
+  {{- $required := fileExists $file }}{{ range ($history.records | default dict) }}{{ if in $ids .paperId }}{{ $required = true }}{{ end }}{{ end -}}
+  {{- $result := dict "valid" true "withheld" dict -}}
+  {{- if $required -}}
+    {{- $valid := and (fileExists $file) (eq $history.contract "historical-source-taxonomy-supplement-v2") }}{{ $a := dict -}}
+    {{- if $valid }}{{ $bytes := readFile $file }}{{ $valid = eq (crypto.SHA256 $bytes) "c8d926668f30324779e19c47dd8844e2308a78d0687c472e4babcadef6ea3424" }}{{ if $valid }}{{ $a = $bytes | transform.Unmarshal }}{{ end }}{{ end -}}
+    {{- $valid = and $valid (eq $a.contract "root-source-qualified-exact-old-v2-publication-holds-v1") (eq $a.originalClassificationsChanged false) (eq $a.unknownOrAlteredTuplesMustReject true) (eq $a.qualifiedNew1446DoesNotReleaseOldTuple true) (eq $a.offsite14919Excluded true) (eq (len ($a.rows | default slice)) 5) -}}
+    {{- $state := newScratch }}{{ $state.Set "papers" slice }}{{ $state.Set "withheld" dict -}}
+    {{- range $row := ($a.rows | default slice) -}}
+      {{- $id := $row.paperId }}{{ $valid = and $valid (in $ids $id) (not (in ($state.Get "papers") $id)) (eq $row.oldTuplePublicationEligible false) (eq $row.reasonCode "exact-original-classification-requires-source-qualified-replacement") -}}
+      {{- $state.Set "papers" (($state.Get "papers") | append $id) -}}
+      {{- $pages := slice }}{{ $c := dict }}{{ $r := dict -}}
+      {{- range $path, $record := ($history.records | default dict) -}}
+        {{- if eq $record.paperId $id -}}
+          {{- $newC := $record.classificationRecord }}{{ if $c }}{{ $valid = and $valid (eq (partial "research_canonical_json.html" $c) (partial "research_canonical_json.html" $newC)) }}{{ end }}{{ $c = $newC }}{{ $r = $record -}}
+          {{- $valid = and $valid (partial "tag_source_only_v2_proof.html" $record) (eq $c.source.textSha256 $row.fullSourceSha256) -}}
+          {{- $pageValid := fileExists $path }}{{ if $pageValid }}{{ $text := readFile $path }}{{ $body := replaceRE `^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)` "" $text }}{{ $pageValid = and (ne $body $text) (eq (crypto.SHA256 $text) $record.pageSha256) (eq (crypto.SHA256 $body) $record.bodySha256) }}{{ end }}{{ $valid = and $valid $pageValid -}}
+          {{- $pages = $pages | append (dict "pagePath" $path "pageKey" $record.pageKey "pageSha256" $record.pageSha256 "bodySha256" $record.bodySha256 "recordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $record)) "pageProofSha256" $record.proofSha256) -}}
+          {{- $state.SetInMap "withheld" $path (dict "publicationStatus" "withheld" "paperId" $id "source" $c.source) -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $tuple := dict "classificationContract" $r.classificationContract "runId" $c.runId "classificationRecordSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c)) "classificationProofSha256" $c.proofSha256 "sourceDescriptorSha256" (crypto.SHA256 (partial "research_canonical_json.html" $c.source)) "reviewProofSha256" $c.reviewProofSha256 "issuerTuple" (dict "contract" $c.contract "registrySha256" $c.registrySha256 "implementationSha256" $c.fingerprintInputs.implementationSha256 "protectedDependencySha256" $c.protectedDependencySha256) "pages" $pages -}}
+      {{- $valid = and $valid (gt (len $pages) 0) (eq (partial "research_canonical_json.html" $tuple) (partial "research_canonical_json.html" $row.originalTuple)) -}}
+    {{- end -}}
+    {{- if $valid }}{{ $result = dict "valid" true "withheld" ($state.Get "withheld") }}{{ else }}{{ $result = dict "valid" false "withheld" dict }}{{ errorf "Exact old V2 publication hold or original source/page proof gate rejected" }}{{ end -}}
+  {{- end -}}
+  {{- site.Store.Set $memoKey $result }}{{ site.Store.Set (printf "%s:ready" $memoKey) true -}}
+{{- end -}}
+{{- return (site.Store.Get $memoKey) -}}

@@ -3,7 +3,7 @@
 {{- $registry := (partialCached "tag_display_assets.html" "global").snapshot }}
 {{- $concepts := index $registry "concepts" | default slice }}
 {{- $stats := dict }}
-{{- if not $categories }}{{ range (partialCached "taxonomy_concept_counts.html" "global") }}{{ $stats = merge $stats (dict .id .) }}{{ end }}{{ end }}
+{{- if not $categories }}{{ range (partialCached "tag_concept_counts.html" "global") }}{{ $stats = merge $stats (dict .id .) }}{{ end }}{{ end }}
 {{- $facets := slice (dict "id" "task" "name" "研究任务") (dict "id" "method" "name" "研究方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") }}
 <section class="research-terms">
   <header class="page-header">
@@ -12,42 +12,42 @@
     <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}任务、方法、条件是并列的分类视角。点击方向名称进入论文库，点击箭头展开下一级；父方向可包含全部子方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合筛选。</p>
   </header>
   {{ if not $categories }}
-  <section id="taxonomy-browser" class="taxonomy-browser" data-library-url="{{ "papers/" | relURL }}" aria-label="多级研究分类">
-    <label class="taxonomy-search-label" for="taxonomy-query">搜索方向、英文名称或别名</label>
-    <input id="taxonomy-query" class="taxonomy-query" type="search" placeholder="例如：ASR、LoRA、长音频" autocomplete="off" maxlength="200">
-    <p id="taxonomy-search-status" class="taxonomy-note" aria-live="polite">选择分类视角，逐级浏览。</p>
-    <details class="taxonomy-note">
+  <section id="tag-browser" class="tag-browser" data-library-url="{{ "papers/" | relURL }}" aria-label="多级研究分类">
+    <label class="tag-search-label" for="tag-query">搜索方向、英文名称或别名</label>
+    <input id="tag-query" class="tag-query" type="search" placeholder="例如：ASR、LoRA、长音频" autocomplete="off" maxlength="200">
+    <p id="tag-search-status" class="tag-note" aria-live="polite">选择分类视角，逐级浏览。</p>
+    <details class="tag-note">
       <summary>方向计数与分类范围说明</summary>
       <p>方向数量按论文身份去重；研究类型与范围的核验覆盖可在论文库查看。方向覆盖数量不代表每篇原文均已重新审核。</p>
       <p>同一篇已核论文只计一次，身份待核时按页面保留。数量含下级方向，兄弟方向可能重叠，不能直接相加；直接 0 条也可能有下级论文。</p>
     </details>
-    <div id="taxonomy-search-results" class="taxonomy-search-results" hidden></div>
-    <nav class="taxonomy-facet-nav" aria-label="分类视角">
+    <div id="tag-search-results" class="tag-search-results" hidden></div>
+    <nav class="tag-facet-nav" aria-label="分类视角">
       {{ range $facets }}<a href="#facet-{{ .id }}" class="rw-action">{{ .name }}</a>{{ end }}
     </nav>
-    <div id="taxonomy-concept-panel" class="taxonomy-concept-panel" aria-live="polite" hidden></div>
-    <div class="taxonomy-facets">
+    <div id="tag-concept-panel" class="tag-concept-panel" aria-live="polite" hidden></div>
+    <div class="tag-facets">
       {{ range $facet := $facets }}
-      <details class="taxonomy-facet" id="facet-{{ .id }}"{{ if in (slice "task" "method" "setting") .id }} open{{ end }}>
+      <details class="tag-facet" id="facet-{{ .id }}"{{ if in (slice "task" "method" "setting") .id }} open{{ end }}>
         <summary>{{ .name }}</summary>
-        <ul class="taxonomy-tree">
+        <ul class="tag-tree">
           {{ range $concepts }}
           {{ if and (eq .facet $facet.id) (eq (len (.ancestorIds | default slice)) 0) (ne (.status | default "active") "deprecated") (ne (.status | default "active") "inactive") }}
-            {{ partial "taxonomy_node.html" (dict "concept" . "concepts" $concepts "stats" $stats "libraryURL" ("papers/" | relURL)) }}
+            {{ partial "tag_node.html" (dict "concept" . "concepts" $concepts "stats" $stats "libraryURL" ("papers/" | relURL)) }}
           {{ end }}
           {{ end }}
         </ul>
       </details>
       {{ end }}
     </div>
-    <noscript><p class="taxonomy-note">未启用 JavaScript：可逐项展开目录，或用浏览器页面查找检索名称；论文库筛选需要 JavaScript，也可前往<a href="{{ "archives/" | relURL }}">时间归档</a>阅读。</p></noscript>
+    <noscript><p class="tag-note">未启用 JavaScript：可逐项展开目录，或用浏览器页面查找检索名称；论文库筛选需要 JavaScript，也可前往<a href="{{ "archives/" | relURL }}">时间归档</a>阅读。</p></noscript>
     {{- $tagAssets := partialCached "tag_display_assets.html" "global" }}
     {{- if $tagAssets.current }}
     <script id="tag-catalog-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
     <script id="tag-catalog-versions-data" type="application/json">{{ $tagAssets.versions | jsonify | safeJS }}</script>
     {{- else }}
-    <script id="taxonomy-registry-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
-    {{- with $tagAssets.versions }}<script id="taxonomy-catalog-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
+    <script id="tag-snapshot-data" type="application/json">{{ $registry | jsonify | safeJS }}</script>
+    {{- with $tagAssets.versions }}<script id="tag-versions-data" type="application/json">{{ . | jsonify | safeJS }}</script>{{ end }}
     {{- end }}
   </section>
   {{ end }}
@@ -67,7 +67,7 @@
   {{ end }}
 </section>
 {{- if not $categories }}
-{{- range slice "taxonomy-core" "taxonomy-browser" }}
+{{- range slice "tag-core" "tag-browser" }}
 {{- $script := resources.Get (printf "js/%s.js" .) | minify | fingerprint }}
 <script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

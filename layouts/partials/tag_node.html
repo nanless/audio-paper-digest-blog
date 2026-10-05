@@ -1,0 +1,21 @@
+{{- $concept := .concept }}
+{{- $children := slice }}
+{{- range .concepts }}
+  {{- $anc := .ancestorIds | default slice }}
+  {{- if and (gt (len $anc) 0) (ne (.status | default "active") "deprecated") (ne (.status | default "active") "inactive") }}
+    {{- if eq (index $anc (sub (len $anc) 1)) $concept.id }}{{ $children = $children | append . }}{{ end }}
+  {{- end }}
+{{- end }}
+<li class="tag-node" data-concept-id="{{ $concept.id }}">
+  <div class="tag-node-row">
+    <a class="tag-node-link" href="{{ printf "%s?concept=%s" .libraryURL ($concept.id | urlquery) }}" data-concept-info="{{ $concept.id }}">{{ $concept.zh }}{{ with $concept.en }}<span lang="en">{{ . }}</span>{{ end }}</a>
+    {{- $count := 0 }}{{ with index .stats $concept.id }}{{ $count = .sub }}{{ end }}
+    <span class="tag-node-count" aria-label="按现行目录包含下级方向 {{ $count }} 条论文记录"{{ if eq $count 0 }} title="暂无已核分类记录；历史未核记录不计入"{{ end }}>{{ $count }} 条</span>
+    {{- if $children }}<button class="tag-expand" type="button" data-expand="{{ $concept.id }}" aria-controls="children-{{ $concept.id }}" aria-expanded="true" aria-label="展开或收起{{ $concept.zh }}的子方向" hidden><span aria-hidden="true">⌄</span></button>{{ end }}
+  </div>
+  {{- if $children }}
+  <ul class="tag-children" id="children-{{ $concept.id }}">
+    {{- range $children }}{{ partial "tag_node.html" (dict "concept" . "concepts" $.concepts "stats" $.stats "libraryURL" $.libraryURL) }}{{ end }}
+  </ul>
+  {{- end }}
+</li>
