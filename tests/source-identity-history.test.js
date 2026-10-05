@@ -147,6 +147,80 @@ test('identity-only proof binds exact page/source and never creates controlled c
   assert.ok(counts.every(r => r.direct === 0 && r.sub === 0));
   assert.match(fs.readFileSync(path.join(root, 'public/posts/valid-conference/index.html'), 'utf8'), /研究方向尚未完成核验/);
   assert.match(fs.readFileSync(path.join(root, 'public/posts/valid-official-version/index.html'), 'utf8'), /2510\.06927v3.*未核 camera-ready/);
+
+  const originalRecords = JSON.stringify(records);
+  const acceptedNames = ['valid-arxiv', 'valid-conference', 'valid-official-version', 'valid-unspecified-pdf-version'];
+  for (const contract of ['historical-source-identity-supplement-v1', 'historical-source-identity-supplement-v2']) {
+    const current = contract.endsWith('-v2');
+    const statusKey = current ? 'tagStatus' : 'taxonomyStatus';
+    const otherKey = current ? 'taxonomyStatus' : 'tagStatus';
+    const readRecords = Object.fromEntries(acceptedNames.map(name => {
+      const key = 'content/posts/' + name + '.md';
+      const copy = structuredClone(records[key]);
+      copy.contract = contract;
+      if (current) { copy.tagStatus = copy.taxonomyStatus; delete copy.taxonomyStatus; }
+      return [key, seal(copy)];
+    }));
+    for (const [name, change, wrongProof] of [
+      ['mixed-same', r => { r[otherKey] = r[statusKey]; }],
+      ['mixed-null', r => { r[otherKey] = null; }],
+      ['wrong-generation', r => { r[otherKey] = r[statusKey]; delete r[statusKey]; }],
+      ['null-status', r => { r[statusKey] = null; }],
+      ['unknown-record', r => { r.contract = 'historical-source-identity-supplement-unknown'; }],
+      ['wrong-record-generation', r => { r.contract = current ? 'historical-source-identity-supplement-v1' : 'historical-source-identity-supplement-v2'; }],
+      ['wrong-complete-proof', () => {}, true],
+      ['wrong-source', r => { r.source.sourceBinding.pdfSha256 = hash('wrong'); }],
+      ['wrong-body', r => { r.bodySha256 = hash('wrong'); }],
+    ]) {
+      const key = 'content/posts/' + (current ? 'new-' : 'old-') + name + '.md';
+      fs.copyFileSync(path.join(root, 'content/posts/valid-arxiv.md'), path.join(root, key));
+      const copy = structuredClone(readRecords['content/posts/valid-arxiv.md']);
+      copy.pageKey = 'page:' + hash(key); change(copy); seal(copy);
+      if (wrongProof) copy.proofSha256 = hash('wrong');
+      readRecords[key] = copy;
+    }
+    const beforeRead = JSON.stringify(readRecords);
+    fs.writeFileSync(path.join(root, 'data/identity-history.json'), JSON.stringify({ contract, records: readRecords }));
+    const readIndex = build(root);
+    assert.deepEqual(readIndex.filter(r => r.identityEvidenceContract).map(r => r.title).sort(), acceptedNames);
+    assert.ok(readIndex.filter(r => r.identityEvidenceContract).every(r => r.identityEvidenceContract === contract));
+    assert.ok(readIndex.every(r => !r.tagContract && !r.tagConcepts.length && !r.primaryTaskId && !r.primaryMethodId));
+    assert.equal(JSON.stringify(readRecords), beforeRead, '读取不改写原记录');
+    assert.equal(JSON.stringify(records), originalRecords, '原版样本字节不变');
+    fs.writeFileSync(path.join(root, 'data/identity-history.json'), JSON.stringify({ contract: 'historical-source-identity-supplement-unknown', records: readRecords }));
+    assert.ok(build(root).every(r => !r.identityEvidenceContract), '未知总格式不授予身份资格');
+  }
+});
+
+test('一般新版来源记录不能取代三个固定页面的原身份凭证', t => {
+  const root = fixture(t);
+  const raw = fs.readFileSync(path.join(repository, 'data/identity-current-page-history.json'));
+  const currentHistory = JSON.parse(raw);
+  const records = {};
+  for (const [key, original] of Object.entries(currentHistory.records)) {
+    fs.copyFileSync(path.join(repository, key), path.join(root, key));
+    records[key] = seal({ contract: 'historical-source-identity-supplement-v2', pageKey: 'page:' + hash(key),
+      pageSha256: original.pageSha256, bodySha256: original.bodySha256, paperId: original.paperId,
+      runId: original.runId, planSha256: hash('synthetic general plan'), planFileSha256: hash('synthetic general file'),
+      source: structuredClone(original.source), identityStatus: 'verified',
+      evidenceType: 'sealed-source-identity-only', tagStatus: 'not-classified-by-identity-proof' });
+  }
+  fs.writeFileSync(path.join(root, 'data/identity-current-page-history.json'), raw);
+  const priorIndex = build(root);
+  fs.writeFileSync(path.join(root, 'data/identity-history.json'), JSON.stringify({ contract: 'historical-source-identity-supplement-v2', records }));
+  const index = build(root);
+  assert.equal(index.length, 3);
+  for (const original of Object.values(currentHistory.records)) {
+    const entry = index.find(r => r.identityProofSha256 === original.proofSha256);
+    assert.ok(entry);
+    assert.equal(entry.identityEvidenceContract, currentHistory.contract);
+    const prior = priorIndex.find(r => r.identityProofSha256 === original.proofSha256);
+    assert.ok(prior);
+    for (const field of ['tagContract', 'tagConcepts', 'conceptIds', 'primaryTaskId', 'primaryMethodId']) {
+      assert.deepEqual(entry[field], prior[field], '身份补充不能改变页面已有标签');
+    }
+  }
+  assert.deepEqual(fs.readFileSync(path.join(root, 'data/identity-current-page-history.json')), raw);
 });
 
 test('actual independently replayed arXiv and conference identity batch accepts every frozen page', { skip: !process.env.IDENTITY_HISTORY_SAMPLE }, t => {

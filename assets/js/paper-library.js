@@ -406,7 +406,7 @@
     if (['historical-direct-taxonomy-supplement-v1', 'historical-direct-tag-supplement-v2', 'historical-source-taxonomy-supplement-v2', 'historical-source-taxonomy-supplement-v3'].includes(entry.tagEvidenceContract)) {
       var classificationNote = document.createElement('p'); classificationNote.className = 'tag-note';
       classificationNote.textContent = '研究分类已补充核验 · 导读正文未重写'; body.appendChild(classificationNote);
-    } else if (entry.identityEvidenceContract === 'historical-source-identity-supplement-v1' && !entry.tagContract) {
+    } else if (['historical-source-identity-supplement-v1', 'historical-source-identity-supplement-v2'].includes(entry.identityEvidenceContract) && !entry.tagContract) {
       var identityNote = document.createElement('p'); identityNote.className = 'tag-note';
       identityNote.textContent = '论文身份已核验 · 研究方向尚待分类'; body.appendChild(identityNote);
     }

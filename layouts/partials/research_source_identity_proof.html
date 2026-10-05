@@ -1,13 +1,13 @@
-{{- /* This proof establishes source identity only. It never assigns taxonomy. */ -}}
+{{- /* 此凭证只核验论文来源身份，不能证明已分类或正文已完成。 */ -}}
 {{- $memoKey := "research-page:research_source_identity_proof:v1" -}}
 {{- if not (.Store.Get (printf "%s:ready" $memoKey)) -}}
 {{- $proof := partial "research_current_page_identity_proof.html" . -}}
 {{- $history := index hugo.Data "identity-history" | default dict -}}
-{{- if and (not $proof.contract) (eq $history.contract "historical-source-identity-supplement-v1") (eq .Section "posts") .File -}}
+{{- if and (not $proof.contract) (in (slice "historical-source-identity-supplement-v1" "historical-source-identity-supplement-v2") $history.contract) (eq .Section "posts") .File -}}
   {{- $key := printf "content/%s" .File.Path -}}
   {{- $record := index ($history.records | default dict) $key | default dict -}}
   {{- $shaPattern := `^[a-f0-9]{64}$` -}}
-  {{- $valid := and (reflect.IsMap $record) (eq $record.contract $history.contract) (eq $record.identityStatus "verified") (eq $record.evidenceType "sealed-source-identity-only") (eq $record.taxonomyStatus "not-classified-by-identity-proof") (findRE `^page:[a-f0-9]{64}$` ($record.pageKey | default "") 1) (findRE `^[a-f0-9-]{36}$` ($record.runId | default "") 1) (reflect.IsMap $record.source) -}}
+  {{- $valid := and (reflect.IsMap $record) (eq $record.contract $history.contract) (eq $record.identityStatus "verified") (eq $record.evidenceType "sealed-source-identity-only") (findRE `^page:[a-f0-9]{64}$` ($record.pageKey | default "") 1) (findRE `^[a-f0-9-]{36}$` ($record.runId | default "") 1) (reflect.IsMap $record.source) -}}
   {{- range $field := slice "concepts" "primaryTaskId" "primaryMethodId" "primaryTaskLabel" "primaryMethodLabel" "registrySha256" "canonicalAnalysisSha256" -}}
     {{- if isset $record $field }}{{ $valid = false }}{{ end -}}
   {{- end -}}
@@ -67,6 +67,14 @@
     {{- else -}}{{- $valid = false -}}{{- end -}}
   {{- end -}}
   {{- if $valid }}{{ $version := partial "research_historical_source_version.html" $record.source }}{{ $valid = $version.valid }}{{ end -}}
+  {{- /* 原对象、来源及页面正文全部核验后，再检查对应格式的状态字段。 */ -}}
+  {{- if $valid -}}
+    {{- if eq $record.contract "historical-source-identity-supplement-v1" -}}
+      {{- $valid = and (isset $record "taxonomyStatus") (not (isset $record "tagStatus")) (eq $record.taxonomyStatus "not-classified-by-identity-proof") -}}
+    {{- else -}}
+      {{- $valid = and (isset $record "tagStatus") (not (isset $record "taxonomyStatus")) (eq $record.tagStatus "not-classified-by-identity-proof") -}}
+    {{- end -}}
+  {{- end -}}
   {{- if $valid }}{{ $proof = $record }}{{ end -}}
 {{- end -}}
 {{- .Store.Set $memoKey $proof -}}

@@ -98,6 +98,21 @@ function record(index = 0) {
     date: '2026-09-04', pageType: 'paper', task: 'speech', score: '8', arxivId: '2609.00001', summary: 'Evidence' };
 }
 
+test('论文库对新旧一般来源身份显示相同提示，已分类记录不显示待分类提示', async () => {
+  const items = ['historical-source-identity-supplement-v1', 'historical-source-identity-supplement-v2'].map((contract, index) => ({
+    ...record(index), identityEvidenceContract: contract, identityStatus: 'verified',
+  }));
+  items.push({ ...record(2), identityEvidenceContract: 'historical-source-identity-supplement-v2', tagContract: 'paper-tag-flat-tags-v2', tagConcepts: [] });
+  items.push({ ...record(3), identityEvidenceContract: 'historical-source-identity-supplement-unknown' });
+  const before = JSON.stringify(items);
+  const browser = browserFixture('library', items);
+  await browser.ready();
+  const cards = browser.nodes['library-results'].children;
+  assert.equal(cards.length, 4);
+  assert.equal(cards.filter(card => card.textContent.includes('论文身份已核验 · 研究方向尚待分类')).length, 2);
+  assert.equal(JSON.stringify(items), before);
+});
+
 test('library recovers invalid filters, retains pagination on article return and handles Enter without navigation', async () => {
   const browser = browserFixture('library', Array.from({ length: 65 }, (_, index) => record(index)), '?type=invalid&year=1900&sort=oops&page=2');
   await browser.ready();
